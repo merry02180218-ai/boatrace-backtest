@@ -13,8 +13,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Run v9 hit-rate calibrated backtest
-        run: python backtest_v9_hit20.py
+      - name: Run v9b probability-coverage backtest
+        run: python backtest_v9b_hit20.py
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
@@ -23,6 +23,6 @@ jobs:
           [ -f bets_v9.csv ] && git add bets_v9.csv || true
           [ -f races_v9.csv ] && git add races_v9.csv || true
           if ! git diff --cached --quiet; then
-            git commit -m "Run v9 20 percent hit-rate calibrated backtest"
+            git commit -m "Run v9b probability coverage hit-rate backtest"
             git push
           fi
