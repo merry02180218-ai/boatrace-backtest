@@ -13,14 +13,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Run backtest v3
-        run: python backtest_v3.py
+      - name: Run backtest v4
+        run: python backtest_v4.py
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add summary_v3.md candidates_v3.csv
+          git add summary_v4.md candidates_v4.csv
           if ! git diff --cached --quiet; then
-            git commit -m "Run one-month backtest v3"
+            git commit -m "Run one-month backtest v4"
             git push
           fi
