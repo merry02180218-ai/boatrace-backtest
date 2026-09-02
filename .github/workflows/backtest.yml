@@ -13,14 +13,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Run backtest v4
-        run: python backtest_v4.py
+      - name: Run yesterday dual-scenario trial
+        run: python yesterday_v4.py
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add summary_v4.md candidates_v4.csv
+          git add yesterday_v4.md yesterday_v4.csv
           if ! git diff --cached --quiet; then
-            git commit -m "Run one-month backtest v4"
+            git commit -m "Run 9/2 dual-scenario odds trial"
             git push
           fi
