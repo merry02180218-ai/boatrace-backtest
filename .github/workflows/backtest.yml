@@ -14,13 +14,13 @@ jobs:
         with:
           python-version: '3.12'
       - name: Run backtest
-        run: python backtest.py
+        run: python backtest_v2.py
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add summary.md candidates.csv
           if ! git diff --cached --quiet; then
-            git commit -m "Run one-month backtest"
+            git commit -m "Run one-month backtest v2"
             git push
           fi
