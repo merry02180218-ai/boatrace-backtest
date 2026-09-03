@@ -1,0 +1,30 @@
+name: v63-allrace5-set-ev
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'backtest_v63_allrace_5_calibrated_set_ev.py'
+      - '.github/workflows/v63-allrace5-set-ev.yml'
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v63 all-race 5-head calibration
+        run: python backtest_v63_allrace_5_calibrated_set_ev.py
+      - name: Commit v63 results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v63_allrace5_calibrated_set_ev.md analysis_v63_allrace5_set_ev.csv analysis_v63_sensitivity.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Run v63 all-race 5-head calibration"
+            git pull --rebase origin main
+            git push
+          fi
