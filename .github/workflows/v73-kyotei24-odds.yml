@@ -1,0 +1,16 @@
+name: v73-kyotei24-odds
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'probe_v73_kyotei24_odds.py'
+      - '.github/workflows/v73-kyotei24-odds.yml'
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python probe_v73_kyotei24_odds.py
