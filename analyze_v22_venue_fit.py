@@ -16,10 +16,10 @@ def target(rr,m):
     return int(win==5)
 
 def venue_from_code(code):
-    s=str(code or '')
-    return s[:2] if len(s)>=2 else ''
+    # race code format YYYYMMDDJJRR: JJ is venue code.
+    s=str(code or '').strip()
+    return s[8:10] if len(s)>=12 else ''
 
-# Build model-specific venue propensity ONLY from training data, with empirical-Bayes shrinkage.
 counts={m:defaultdict(lambda:[0,0]) for m in MODELS}
 global_counts={m:[0,0] for m in MODELS}
 d=TRAIN_START
@@ -43,11 +43,9 @@ for m in MODELS:
 with open('venue_model_index_v22.csv','w',newline='',encoding='utf-8-sig') as f:
     w=csv.DictWriter(f,fieldnames=['model','venue','train_races','hits','raw_rate','smoothed_rate','venue_index']);w.writeheader();w.writerows(venue_rows)
 
-# Diagnostic on v20 week: add venue index to each model candidate.
 with open('races_v20.csv',encoding='utf-8-sig') as f: r20=list(csv.DictReader(f))
 for r in r20:r['venue_index']=venue_index.get(r['model'],{}).get(str(r.get('venue','')).zfill(2),1.0)
 
-# Separate historical validation for 5-head before discovery week.
 with open('races_v18.csv',encoding='utf-8-sig') as f: r18=[r for r in csv.DictReader(f) if r.get('model')=='5頭展開']
 for r in r18:r['venue_index']=venue_index['5頭展開'].get(str(r.get('venue','')).zfill(2),1.0)
 pre=[r for r in r18 if DEV_START<=date.fromisoformat(r['date'])<=DEV_END]
@@ -69,7 +67,6 @@ cases=[
  ('>=0.65 + 場指数>=1.05',lambda r:(fv(r,key) or 0)>=.65 and r['venue_index']>=1.05),
 ]
 
-# Produce markdown with per-venue ranking and diagnostics.
 L=['# v22 場別適性補正 分析','',
    f'場適性は学習期間 {TRAIN_START}〜{TRAIN_END} の全レースからモデル別に算出。',
    f'各場の発生率は全場平均へ alpha={ALPHA:.0f} で縮約し、場指数=縮約後発生率/全場発生率。1.00が平均。',
@@ -86,7 +83,6 @@ L += ['## 5頭モデル 別期間診断（8/3〜8/26）','',f'使用特徴列: `
 for name,fn in cases:
     rs=[r for r in pre if fn(r)]; n,hh,hp,bh,bp,ret,roi=summary(rs);L.append(f'|{name}|{n}|{hh}|{hp:.1f}%|{bh}|{bp:.1f}%|{ret:,}円|{roi:.1f}%|')
 
-# v20-week descriptive split only
 L += ['','## v20週 5頭候補の場指数別（記述のみ）','|場指数帯|R|頭|頭率|的中|回収率|','|---|---:|---:|---:|---:|---:|']
 for label,lo,hi in [('低 <0.95',-9,.95),('中 0.95-1.05',.95,1.05),('高 >=1.05',1.05,99)]:
     rs=[r for r in r20 if r.get('model')=='5頭展開' and lo<=r['venue_index']<hi]; n,hh,hp,bh,bp,ret,roi=summary(rs);L.append(f'|{label}|{n}|{hh}|{hp:.1f}%|{bh}|{roi:.1f}%|')
