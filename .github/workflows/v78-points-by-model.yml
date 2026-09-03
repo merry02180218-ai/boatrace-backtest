@@ -1,0 +1,29 @@
+name: v78-points-by-model
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v78_points_by_model.py'
+      - '.github/workflows/v78-points-by-model.yml'
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run ticket-count ROI analysis
+        run: python analyze_v78_points_by_model.py
+      - name: Commit summary
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v78_points_by_model.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Add v78 ticket-count ROI summary"
+            git pull --rebase origin main
+            git push
+          fi
