@@ -1,0 +1,30 @@
+name: v52-scenario-tickets
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'backtest_v52_scenario_tickets.py'
+      - '.github/workflows/v52-scenario-tickets.yml'
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v52 scenario ticket backtest
+        run: python backtest_v52_scenario_tickets.py
+      - name: Commit v52 results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v52_scenario_tickets.md analysis_v52_scenario_tickets.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Add v52 scenario ticket backtest results"
+            git pull --rebase origin main
+            git push
+          fi
