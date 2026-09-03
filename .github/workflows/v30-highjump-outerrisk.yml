@@ -1,0 +1,24 @@
+name: v30-highjump-outerrisk
+on:
+  push:
+    paths:
+      - 'analyze_v30_highjump_outerrisk.py'
+      - '.github/workflows/v30-highjump-outerrisk.yml'
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python analyze_v30_highjump_outerrisk.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add summary_v30_highjump_outerrisk.md analysis_v30_highjump_outerrisk.csv
+          git commit -m "Add v30 high-jump outer risk analysis results" || exit 0
+          git push
