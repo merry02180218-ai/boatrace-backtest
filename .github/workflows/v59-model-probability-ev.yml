@@ -1,0 +1,30 @@
+name: v59-model-probability-ev
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'backtest_v59_model_probability_ev.py'
+      - '.github/workflows/v59-model-probability-ev.yml'
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v59 model-probability EV
+        run: python backtest_v59_model_probability_ev.py
+      - name: Commit v59 results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v59_model_probability_ev.md analysis_v59_model_ev.csv bets_v59_model_ev_kelly.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Run v59 model-probability EV backtest"
+            git pull --rebase origin main
+            git push
+          fi
