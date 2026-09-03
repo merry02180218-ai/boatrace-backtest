@@ -1,0 +1,25 @@
+name: v26-final
+on:
+  push:
+    paths:
+      - 'finalize_v26_20260903.py'
+      - '.github/workflows/v26-final.yml'
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python finalize_v26_20260903.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add final_v26_20260903.md final_v26_20260903.csv
+          git commit -m "Finalize Sep 3 preview grading" || exit 0
+          git pull --rebase origin main
+          git push
