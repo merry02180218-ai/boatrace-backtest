@@ -1,0 +1,30 @@
+name: v57-ev-variable-staking
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'backtest_v57_ev_variable_staking.py'
+      - '.github/workflows/v57-ev-variable-staking.yml'
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v57 EV variable staking
+        run: python backtest_v57_ev_variable_staking.py
+      - name: Commit v57 results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v57_ev_variable_staking.md analysis_v57_ev_candidates.csv bets_v57_ev_kelly.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Run v57 EV variable staking backtest"
+            git pull --rebase origin main
+            git push
+          fi
