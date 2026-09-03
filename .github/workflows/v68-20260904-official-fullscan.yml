@@ -1,0 +1,31 @@
+name: v68-20260904-official-fullscan
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'predict_v68_20260904_official_fullscan.py'
+      - '.github/workflows/v68-20260904-official-fullscan.yml'
+  workflow_dispatch:
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install requests beautifulsoup4
+      - name: Run official full scan
+        run: python predict_v68_20260904_official_fullscan.py
+      - name: Commit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add pred_v68_20260904_official_fullscan.csv prediction_v68_20260904_official_fullscan.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate Sep 4 official full-field scan"
+            git pull --rebase origin main
+            git push
+          fi
