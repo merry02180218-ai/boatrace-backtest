@@ -1,0 +1,30 @@
+name: v64-three-month-strict-flow
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'backtest_v64_three_month_strict_flow.py'
+      - '.github/workflows/v64-three-month-strict-flow.yml'
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v64 three-month strict flow
+        run: python backtest_v64_three_month_strict_flow.py
+      - name: Commit v64 results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v64_three_month_strict_flow.md analysis_v64_three_month_strict_flow.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Run v64 three-month strict flow"
+            git pull --rebase origin main
+            git push
+          fi
