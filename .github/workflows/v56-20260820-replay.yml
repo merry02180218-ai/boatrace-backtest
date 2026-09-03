@@ -1,0 +1,30 @@
+name: v56-20260820-replay
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'replay_v56_20260820_current_flow.py'
+      - '.github/workflows/v56-20260820-replay.yml'
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run Aug 20 replay
+        run: python replay_v56_20260820_current_flow.py
+      - name: Commit replay results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v56_20260820_replay.md v56_20260820_pre.csv v56_20260820_direct.csv v56_20260820_settled.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Add Aug 20 current-flow replay results"
+            git pull --rebase origin main
+            git push
+          fi
