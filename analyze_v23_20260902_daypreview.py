@@ -1,5 +1,6 @@
 import csv
 from statistics import mean
+from backtest import rows
 
 DATE='2026-09-02'
 YMD='2026/09/02'
@@ -18,9 +19,7 @@ def rank_score(vals, boat, lower=True):
     return 1-pos/(len(s)-1)
 
 def by_code(path):
-    try:
-        with open(path,encoding='utf-8-sig') as fh:return {r['レースコード']:r for r in csv.DictReader(fh)}
-    except FileNotFoundError:return {}
+    return {r['レースコード']:r for r in rows(path) if r.get('レースコード')}
 
 def venue_map():
     out={}
@@ -31,7 +30,6 @@ def venue_map():
     return out
 
 def venue_score(idx):
-    # capped bonus/penalty: index 0.7=>0.2, 1.0=>0.5, 1.3=>0.8; no hard filtering
     return max(0.0,min(1.0,0.5+(idx-1.0)))
 
 def original_scores(r,boat):
@@ -58,8 +56,7 @@ def preview_for(model,code,venue,tkz,stt,orig,vidx):
     stvals={b:f(sr.get(f'艇{b}_スタート展示')) for b in range(1,7)}
     st=rank_score(stvals,head,True)
     actual_course={b:int(f(sr.get(f'艇{b}_コース')) or 0) for b in range(1,7)}
-    intended=head
-    entry=1.0 if actual_course.get(head)==intended else 0.35
+    entry=1.0 if actual_course.get(head)==head else 0.35
     os=original_scores(orr,head)
     vi=vidx.get((model,str(venue).zfill(2)),1.0); vs=venue_score(vi)
     if model=='3まくり':
@@ -69,13 +66,12 @@ def preview_for(model,code,venue,tkz,stt,orig,vidx):
     elif model=='4カドまくり':
         comp=.25*ex+.25*st+.20*os['straight']+.15*os['avg']+.10*entry+.05*vs
     else:
-        # 5-head: 5's taking power + 4's attack condition. Keep 5 itself slightly dominant.
         ex4=rank_score(exvals,4,True); st4=rank_score(stvals,4,True); o4=original_scores(orr,4)
         e45=1.0 if actual_course.get(4)==4 and actual_course.get(5)==5 else 0.35
         attack4=.30*ex4+.35*st4+.20*o4['straight']+.15*o4['avg']
         take5=.20*ex+.15*st+.25*os['lap']+.25*os['turn']+.15*os['avg']
         comp=.40*attack4+.45*take5+.10*e45+.05*vs
-    adj=(comp-.5)*10.0 # max about +/-5 points, deliberately modest
+    adj=(comp-.5)*10.0
     grade='S' if comp>=.67 else ('A' if comp>=.55 else 'B')
     return {'preview_comp':comp,'preview_adj':adj,'grade':grade,'ex_score':ex,'st_score':st,'entry_score':entry,
             'orig_lap':os['lap'],'orig_turn':os['turn'],'orig_straight':os['straight'],'orig_avg':os['avg'],'venue_index':vi}
