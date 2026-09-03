@@ -1,0 +1,29 @@
+name: v75-raw-head-rates
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v75_raw_head_rates.py'
+      - '.github/workflows/v75-raw-head-rates.yml'
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run raw head-rate analysis
+        run: python analyze_v75_raw_head_rates.py
+      - name: Commit summary
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v75_raw_head_rates.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Add v75 raw head-rate results"
+            git pull --rebase origin main
+            git push
+          fi
