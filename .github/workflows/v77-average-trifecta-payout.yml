@@ -1,0 +1,29 @@
+name: v77-average-trifecta-payout
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v77_average_trifecta_payout.py'
+      - '.github/workflows/v77-average-trifecta-payout.yml'
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Analyze payouts
+        run: python analyze_v77_average_trifecta_payout.py
+      - name: Commit summary
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v77_average_trifecta_payout.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Add v77 average trifecta payout summary"
+            git pull --rebase origin main
+            git push
+          fi
