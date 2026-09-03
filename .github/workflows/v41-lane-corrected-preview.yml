@@ -1,0 +1,24 @@
+name: v41-lane-corrected-preview
+on:
+  push:
+    paths:
+      - 'analyze_v41_lane_corrected_preview.py'
+      - '.github/workflows/v41-lane-corrected-preview.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python analyze_v41_lane_corrected_preview.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add summary_v41_lane_corrected_preview.md analysis_v41_lane_corrected_preview.csv
+          git diff --cached --quiet || git commit -m "Add v41 lane corrected preview results"
+          git push
