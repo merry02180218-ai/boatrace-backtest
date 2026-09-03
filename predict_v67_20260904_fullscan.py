@@ -12,9 +12,9 @@ def main():
         ingest_motor(hist,seen,d)
         if d>=TRAIN_START-timedelta(days=12): ingest_prior_day_preview(cache,d)
         d+=timedelta(days=1)
-    # Walk forward only with information from dates strictly before Sep 4.
+    # Build pre-Sep4 historical state only. No need to calculate old-day features here;
+    # only the prior-exhibition cache and motor history feed today's features.
     while d<D:
-        process_features(d,cache,hist)
         ingest_prior_day_preview(cache,d)
         ingest_motor(hist,seen,d)
         d+=timedelta(days=1)
@@ -35,8 +35,7 @@ def main():
         allrows.append(base)
         for m,rule in RULES.items():
             fr=features(x,s3,s4,dc,m)
-            passed=passes(fr,rule)
-            if not passed: continue
+            if not passes(fr,rule): continue
             head=HEAD[m]; sc=score_for(x,s3,s4,m)
             margins={k:fr.get(k,0)-v for k,v in rule.items()}
             strong=sorted(margins,key=margins.get,reverse=True)
@@ -48,8 +47,6 @@ def main():
             rr.update({k:round(fr[k],3) for k in rule})
             cand.append(rr)
 
-    # Head-first consolidation for display: one row per race/head. For 3-head, if both routes pass,
-    # prefer makuri when its stricter ST+wall thresholds pass; otherwise makuri-sashi.
     grouped=defaultdict(list)
     for r in cand: grouped[(r['race_code'],r['head'])].append(r)
     display=[]
