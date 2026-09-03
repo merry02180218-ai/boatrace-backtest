@@ -5,6 +5,7 @@ on:
     branches: [ main ]
     paths:
       - 'backtest_v51_lane_corrected_tickets.py'
+      - 'backtest_v51_lane_corrected_tickets_fix.py'
       - '.github/workflows/v51-lane-corrected-tickets.yml'
 jobs:
   backtest:
@@ -17,7 +18,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Run v51 lane-corrected ticket backtest
-        run: python backtest_v51_lane_corrected_tickets.py
+        run: python backtest_v51_lane_corrected_tickets_fix.py
       - name: Commit v51 results
         run: |
           git config user.name "github-actions[bot]"
