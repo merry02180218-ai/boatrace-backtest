@@ -1,0 +1,30 @@
+name: v49-20260901-no-leak
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'validate_v49_20260901_no_leak.py'
+      - '.github/workflows/v49-20260901-no-leak.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run strict Sep 1 no-leak validation
+        run: python validate_v49_20260901_no_leak.py
+      - name: Commit validation results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v49_20260901_no_leak.md validation_v49_20260901_no_leak.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Add Sep 1 strict no-leak validation results"
+            git pull --rebase origin main
+            git push
+          fi
