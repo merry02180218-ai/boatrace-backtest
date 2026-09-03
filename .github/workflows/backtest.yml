@@ -17,16 +17,20 @@ jobs:
         run: python backtest_v18_core45.py
       - name: Run v19 split 3-makuri and makurizashi weekly model
         run: python backtest_v19_split3_week.py
+      - name: Run v20 motor-light four-model weekly backtest
+        run: python backtest_v20_week.py
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
-          git add summary_v18.md summary_v19.md
+          git add summary_v18.md summary_v19.md summary_v20.md
           [ -f bets_v18.csv ] && git add bets_v18.csv || true
           [ -f races_v18.csv ] && git add races_v18.csv || true
           [ -f bets_v19.csv ] && git add bets_v19.csv || true
           [ -f races_v19.csv ] && git add races_v19.csv || true
+          [ -f bets_v20.csv ] && git add bets_v20.csv || true
+          [ -f races_v20.csv ] && git add races_v20.csv || true
           if ! git diff --cached --quiet; then
-            git commit -m "Run v18 and v19 backtests"
+            git commit -m "Run v18 v19 and v20 backtests"
             git push
           fi
