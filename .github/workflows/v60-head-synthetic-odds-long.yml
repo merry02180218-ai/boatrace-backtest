@@ -1,0 +1,30 @@
+name: v60-head-synthetic-odds-long
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'backtest_v60_head_synthetic_odds_long.py'
+      - '.github/workflows/v60-head-synthetic-odds-long.yml'
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v60 long head synthetic odds backtest
+        run: python backtest_v60_head_synthetic_odds_long.py
+      - name: Commit v60 results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v60_head_synthetic_odds_long.md analysis_v60_head_synthetic_odds.csv analysis_v60_head_history.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Run v60 long head synthetic odds backtest"
+            git pull --rebase origin main
+            git push
+          fi
