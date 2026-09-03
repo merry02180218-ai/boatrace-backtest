@@ -1,0 +1,30 @@
+name: v62-calibrated-opponent-set-ev
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'backtest_v62_calibrated_opponent_set_ev.py'
+      - '.github/workflows/v62-calibrated-opponent-set-ev.yml'
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v62 calibrated opponent set EV
+        run: python backtest_v62_calibrated_opponent_set_ev.py
+      - name: Commit v62 results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v62_calibrated_opponent_set_ev.md analysis_v62_calibrated_set_ev.csv analysis_v62_sensitivity.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Run v62 calibrated opponent set EV"
+            git pull --rebase origin main
+            git push
+          fi
