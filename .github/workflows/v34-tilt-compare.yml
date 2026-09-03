@@ -1,0 +1,24 @@
+name: v34-tilt-compare
+on:
+  push:
+    paths:
+      - 'backtest_v34_tilt_compare.py'
+      - '.github/workflows/v34-tilt-compare.yml'
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python backtest_v34_tilt_compare.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add summary_v34_tilt_compare.md races_v34_tilt_compare.csv
+          git commit -m "Add v34 tilt comparison results" || exit 0
+          git push
