@@ -1,0 +1,24 @@
+name: v45-last7-allmodels
+on:
+  push:
+    paths:
+      - 'analyze_v45_last7_allmodels.py'
+      - '.github/workflows/v45-last7-allmodels.yml'
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python analyze_v45_last7_allmodels.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add summary_v45_last7_allmodels.md analysis_v45_last7_allmodels.csv
+          git diff --cached --quiet || git commit -m "Add v45 last 7 days results"
+          git push
