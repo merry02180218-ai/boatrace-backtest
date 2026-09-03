@@ -1,0 +1,24 @@
+name: v31-outer4-5chain
+on:
+  push:
+    paths:
+      - 'analyze_v31_outer4_5chain.py'
+      - '.github/workflows/v31-outer4-5chain.yml'
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python analyze_v31_outer4_5chain.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add summary_v31_outer4_5chain.md analysis_v31_outer4_5chain.csv
+          git commit -m "Add v31 outer 4 and 5 chain results" || exit 0
+          git push
