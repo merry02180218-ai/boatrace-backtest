@@ -1,0 +1,24 @@
+name: v36-4tilt-twostage
+on:
+  push:
+    paths:
+      - 'backtest_v36_4tilt_twostage.py'
+      - '.github/workflows/v36-4tilt-twostage.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python backtest_v36_4tilt_twostage.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add summary_v36_4tilt_twostage.md races_v36_4tilt_twostage.csv
+          git diff --cached --quiet || git commit -m "Add v36 4-boat tilt two-stage results"
+          git push
