@@ -13,15 +13,16 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Run v15 ROI strategy comparison
-        run: python backtest_v15_roi_strategies.py
+      - name: Run v16 premise-reset model
+        run: python backtest_v16_premise_reset.py
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
-          git add summary_v15_strategies.md
-          [ -f races_v15_strategies.csv ] && git add races_v15_strategies.csv || true
+          git add summary_v16.md
+          [ -f bets_v16.csv ] && git add bets_v16.csv || true
+          [ -f races_v16.csv ] && git add races_v16.csv || true
           if ! git diff --cached --quiet; then
-            git commit -m "Run v15 ROI strategy comparison"
+            git commit -m "Run v16 premise-reset backtest"
             git push
           fi
