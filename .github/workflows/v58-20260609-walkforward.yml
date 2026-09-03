@@ -5,6 +5,7 @@ on:
     branches: [ main ]
     paths:
       - 'replay_v58_20260609_walkforward.py'
+      - 'replay_v58_20260609_walkforward_fix.py'
       - '.github/workflows/v58-20260609-walkforward.yml'
 jobs:
   backtest:
@@ -17,7 +18,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Run June 9 walk-forward replay
-        run: python replay_v58_20260609_walkforward.py
+        run: python replay_v58_20260609_walkforward_fix.py
       - name: Commit v58 results
         run: |
           git config user.name "github-actions[bot]"
