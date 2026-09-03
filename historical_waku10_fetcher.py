@@ -1,5 +1,6 @@
 from __future__ import annotations
-import csv, io, sys, time, urllib.request
+import csv, io, sys, urllib.request
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 BOATCAST='https://race.boatcast.jp/hp_txt'
@@ -12,7 +13,7 @@ for b in range(1,7):
     HEAD += [f'艇{b}_{x}' for x in SUMMARY]
     for k in range(1,11): HEAD += [f'艇{b}_過去{k}走_{x}' for x in RUN]
 
-def get(url, timeout=20):
+def get(url, timeout=12):
     req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'})
     try:
         with urllib.request.urlopen(req,timeout=timeout) as r:return r.read().decode('utf-8-sig')
@@ -39,25 +40,28 @@ def parse_tsv(body, code, ds, jo, rno):
             vals += [fin,ent,grd]
     return dict(zip(HEAD,vals))
 
-def fetch_day(ds, sleep=0.03):
+def fetch_day(ds, sleep=0.0, workers=16):
     y,m,d=ds.split('-'); ymd=f'{y}/{m}/{d}'
     card_url=RAW+f'data/programs/race_cards/{ymd}.csv'
     s=get(card_url)
     if not s:return []
     cards=list(csv.DictReader(io.StringIO(s)))
-    out=[]
-    seen=set()
+    codes=[]; seen=set()
     for r in cards:
         code=r.get('レースコード','')
-        if not code or code in seen:continue
-        seen.add(code)
+        if code and code not in seen:
+            seen.add(code); codes.append(code)
+    def one(code):
         jo=code[8:10]; rno=code[10:12]
         url=f'{BOATCAST}/{jo}/bc_j_waku10_{y}{m}{d}_{jo}_{rno}.txt'
-        body=get(url)
-        z=parse_tsv(body,code,ds,jo,rno)
-        if z: out.append(z)
-        time.sleep(sleep)
-    return out
+        return code,parse_tsv(get(url),code,ds,jo,rno)
+    got={}
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        fs=[ex.submit(one,c) for c in codes]
+        for fut in as_completed(fs):
+            code,z=fut.result()
+            if z:got[code]=z
+    return [got[c] for c in codes if c in got]
 
 def write_day(ds,path):
     rows=fetch_day(ds)
