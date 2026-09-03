@@ -1,0 +1,29 @@
+name: v76-candidate-vs-noncandidate
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v76_candidate_vs_noncandidate.py'
+      - '.github/workflows/v76-candidate-vs-noncandidate.yml'
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run candidate vs noncandidate analysis
+        run: python analyze_v76_candidate_vs_noncandidate.py
+      - name: Commit summary
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v76_candidate_vs_noncandidate.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Add v76 candidate vs noncandidate results"
+            git pull --rebase origin main
+            git push
+          fi
