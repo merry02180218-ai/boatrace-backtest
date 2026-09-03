@@ -31,11 +31,13 @@ jobs:
         run: python analyze_v24_week_daypreview.py
       - name: Predict Sep 3 pre-exhibition candidates
         run: python predict_v25_20260903_pre.py
+      - name: Run v47 prior week soft-score ROI backtest
+        run: python analyze_v47_week_before_softscore_roi.py
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
-          git add summary_v18.md summary_v19.md summary_v20.md analysis_v20_5head.md validation_v21_5head.md analysis_v22_venue.md venue_model_index_v22.csv analysis_v23_20260902.md races_v23_20260902.csv analysis_v24_week_daypreview.md races_v24_week_daypreview.csv prediction_v25_20260903_pre.md pred_v25_20260903_pre.csv
+          git add summary_v18.md summary_v19.md summary_v20.md analysis_v20_5head.md validation_v21_5head.md analysis_v22_venue.md venue_model_index_v22.csv analysis_v23_20260902.md races_v23_20260902.csv analysis_v24_week_daypreview.md races_v24_week_daypreview.csv prediction_v25_20260903_pre.md pred_v25_20260903_pre.csv summary_v47_week_before_softscore_roi.md analysis_v47_week_before_softscore_roi.csv
           [ -f bets_v18.csv ] && git add bets_v18.csv || true
           [ -f races_v18.csv ] && git add races_v18.csv || true
           [ -f bets_v19.csv ] && git add bets_v19.csv || true
@@ -43,7 +45,7 @@ jobs:
           [ -f bets_v20.csv ] && git add bets_v20.csv || true
           [ -f races_v20.csv ] && git add races_v20.csv || true
           if ! git diff --cached --quiet; then
-            git commit -m "Run Sep 3 pre-exhibition prediction"
+            git commit -m "Run v47 prior week soft-score ROI backtest"
             git pull --rebase origin main
             git push
           fi
