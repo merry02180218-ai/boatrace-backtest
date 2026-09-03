@@ -1,0 +1,24 @@
+name: v44-4corner-prior-weight
+on:
+  push:
+    paths:
+      - 'analyze_v44_4corner_prior_weight.py'
+      - '.github/workflows/v44-4corner-prior-weight.yml'
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python analyze_v44_4corner_prior_weight.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add summary_v44_4corner_prior_weight.md analysis_v44_4corner_prior_weight.csv
+          git diff --cached --quiet || git commit -m "Add v44 4-corner prior weight results"
+          git push
