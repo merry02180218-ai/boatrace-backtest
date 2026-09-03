@@ -7,6 +7,12 @@ MODELS=['3まくり','3まくり差し','4カドまくり','4刺され','5頭展
 HEAD={'3まくり':3,'3まくり差し':3,'4カドまくり':4,'4刺され':4,'5頭展開':5}
 BANDS=['-0.5以下','0','+0.5','+1.0以上']
 
+def q(a,p):
+    a=sorted(a)
+    if not a:return 0.0
+    x=(len(a)-1)*p; lo=int(x); hi=min(lo+1,len(a)-1); w=x-lo
+    return a[lo]*(1-w)+a[hi]*w
+
 def tboat(m):
     return 3 if m.startswith('3') else 4 if m in ('4カドまくり','4刺され') else 5
 
@@ -34,7 +40,6 @@ def raw_score(x,s3,s4,m):
     return score_for(x,s3,s4,m)
 
 def tilt_bonus_table(train_rows):
-    # Learn tilt effects only from 6/1-7/15. Shrink each band toward model base and convert to modest score points.
     out={}
     for m in MODELS:
         a=[z for z in train_rows if z['model']==m]
@@ -45,7 +50,6 @@ def tilt_bonus_table(train_rows):
             h=sum(z['y'] for z in g); n=len(g)
             shr=(h+25*base)/(n+25) if n+25 else base
             rel=(shr-base)/max(base,.03)
-            # cap to support-only adjustment; no hard gates
             pts=max(-3.0,min(3.0,6.0*rel))
             out[m][b]=(pts,n,shr,base)
     return out
@@ -56,7 +60,6 @@ def main():
         ingest_motor(hist,seen,d)
         if d>=TR0-timedelta(days=12):ingest_prior_day_preview(cache,d)
         d+=timedelta(days=1)
-    # training pass: learn c4 Q3, probability calibration, pair distributions, tilt bonus
     raw=[]; c4vals=[]
     d=TR0
     while d<=TR1:
@@ -67,7 +70,6 @@ def main():
             s3=score3v4(x)
             for m in MODELS:
                 fr=get_fr(x,s3,s4,dc,m)
-                # temporary c4 eligibility after Q3 known; save all high-jump rows
                 if m!='4刺され' and not eligible(fr,m,0):continue
                 if m=='4刺され' and fr['3スタート先行度']<.72:continue
                 t=tiltval(tk.get(r['レースコード'],{}).get(f'艇{tboat(m)}_チルト')); b=band(t)
