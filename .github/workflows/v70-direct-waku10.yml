@@ -1,0 +1,30 @@
+name: v70-direct-waku10
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'validate_v70_direct_waku10.py'
+      - 'historical_waku10_fetcher.py'
+      - '.github/workflows/v70-direct-waku10.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate direct BOATCAST historical waku10
+        run: python validate_v70_direct_waku10.py
+      - name: Commit summary
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v70_direct_waku10.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Validate direct BOATCAST historical waku10"
+            git pull --rebase origin main
+            git push
+          fi
