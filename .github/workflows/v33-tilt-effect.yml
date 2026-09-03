@@ -1,0 +1,24 @@
+name: v33-tilt-effect
+on:
+  push:
+    paths:
+      - 'analyze_v33_tilt_effect.py'
+      - '.github/workflows/v33-tilt-effect.yml'
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python analyze_v33_tilt_effect.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add summary_v33_tilt_effect.md analysis_v33_tilt_effect.csv
+          git commit -m "Add v33 tilt effect results" || exit 0
+          git push
