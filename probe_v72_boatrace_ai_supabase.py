@@ -21,11 +21,12 @@ for src in srcs:
     if st==200: blob+='\n'+j
 urls=re.findall(r'https://[a-z0-9]+\.supabase\.co',blob,re.I)
 project=urls[0] if urls else ''
-# Public anon JWT is intentionally embedded in browser code. Do not print it.
+# Supabase may use legacy anon JWT or the newer browser-safe publishable key.
 jwts=re.findall(r'eyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+',blob)
-key=max(jwts,key=len) if jwts else ''
+pubs=re.findall(r'sb_publishable_[A-Za-z0-9_-]+',blob)
+key=(max(jwts,key=len) if jwts else (max(pubs,key=len) if pubs else ''))
 print('project_found',bool(project),project)
-print('public_anon_key_found',bool(key),'length',len(key))
+print('browser_public_key_found',bool(key),'kind',('jwt' if key.startswith('eyJ') else ('publishable' if key.startswith('sb_publishable_') else 'none')),'length',len(key))
 if not project or not key: raise SystemExit(0)
 headers={'apikey':key,'Authorization':'Bearer '+key,'Accept':'application/openapi+json'}
 st,b,h=get(project+'/rest/v1/',headers)
@@ -38,7 +39,6 @@ paths=list(doc.get('paths',{}))
 tables=sorted({p.strip('/').split('?')[0] for p in paths if p.startswith('/') and p.count('/')==1})
 print('table_count',len(tables))
 print('interesting_tables',[t for t in tables if any(x in t.lower() for x in ['race','odd','preview','stadium','entry','result'])])
-# Print schemas/columns for interesting tables only.
 def schema_cols(t):
     defs=doc.get('definitions',{}) or doc.get('components',{}).get('schemas',{})
     z=defs.get(t,{})
@@ -47,12 +47,10 @@ for t in tables:
     if any(x in t.lower() for x in ['race','odd','preview']):
         print('TABLE',t,'cols',schema_cols(t))
 
-# Query likely historical odds tables with a narrow date/race filter if columns exist.
 for t in tables:
     if 'odd' not in t.lower():continue
     cols=schema_cols(t)
     qs=['select=*','limit=3']
-    # choose known date/race field names without assuming exact schema
     for c in ['race_date','date']:
         if c in cols: qs.append(f'{c}=eq.2026-04-01')
     for c in ['stadium_number','stadium_no','stadium_code','place_no']:
