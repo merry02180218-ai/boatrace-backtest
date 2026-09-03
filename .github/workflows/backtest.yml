@@ -23,11 +23,13 @@ jobs:
         run: python analyze_v20_5head.py
       - name: Validate fixed v21 5-head strength rule
         run: python validate_v21_5head.py
+      - name: Analyze v22 venue fit
+        run: python analyze_v22_venue_fit.py
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
-          git add summary_v18.md summary_v19.md summary_v20.md analysis_v20_5head.md validation_v21_5head.md
+          git add summary_v18.md summary_v19.md summary_v20.md analysis_v20_5head.md validation_v21_5head.md analysis_v22_venue.md venue_model_index_v22.csv
           [ -f bets_v18.csv ] && git add bets_v18.csv || true
           [ -f races_v18.csv ] && git add races_v18.csv || true
           [ -f bets_v19.csv ] && git add bets_v19.csv || true
@@ -35,6 +37,6 @@ jobs:
           [ -f bets_v20.csv ] && git add bets_v20.csv || true
           [ -f races_v20.csv ] && git add races_v20.csv || true
           if ! git diff --cached --quiet; then
-            git commit -m "Run v21 fixed 5-head strength validation"
+            git commit -m "Run v22 venue-adjusted analysis"
             git push
           fi
