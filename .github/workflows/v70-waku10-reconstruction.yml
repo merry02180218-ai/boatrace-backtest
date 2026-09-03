@@ -1,0 +1,29 @@
+name: v70-waku10-reconstruction
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'validate_v70_reconstruct_waku10.py'
+      - '.github/workflows/v70-waku10-reconstruction.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate reconstructed waku10
+        run: python validate_v70_reconstruct_waku10.py
+      - name: Commit summary
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v70_waku10_reconstruction.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Validate reconstructed historical waku10"
+            git pull --rebase origin main
+            git push
+          fi
