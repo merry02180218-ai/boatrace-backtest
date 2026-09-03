@@ -1,0 +1,24 @@
+name: v32-route345
+on:
+  push:
+    paths:
+      - 'backtest_v32_route345.py'
+      - '.github/workflows/v32-route345.yml'
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python backtest_v32_route345.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add summary_v32_route345.md races_v32_route345.csv bets_v32_route345.csv
+          git commit -m "Add v32 routed 3-4-5 results" || exit 0
+          git push
