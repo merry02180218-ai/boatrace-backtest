@@ -1,0 +1,30 @@
+name: v67-20260904-fullscan
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'predict_v67_20260904_fullscan.py'
+      - '.github/workflows/v67-20260904-fullscan.yml'
+  workflow_dispatch:
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run full Sep 4 scan
+        run: python predict_v67_20260904_fullscan.py
+      - name: Commit scan result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add pred_v67_20260904_fullscan.csv prediction_v67_20260904_fullscan.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate Sep 4 full-field pre-race scan"
+            git pull --rebase origin main
+            git push
+          fi
