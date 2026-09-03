@@ -1,0 +1,30 @@
+name: v69-venue-lane-correction
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'validate_v69_venue_lane_correction.py'
+      - '.github/workflows/v69-venue-lane-correction.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v69 validation
+        run: python validate_v69_venue_lane_correction.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v69_venue_lane_correction.md venue_lane_correction_v69.csv adopt_v69.txt
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate v69 venue-lane correction validation"
+            git pull --rebase origin main
+            git push
+          fi
