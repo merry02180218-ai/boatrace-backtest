@@ -8,16 +8,16 @@ No-leak boundaries
 - 2026-08-03..09-02: test.
 - Formula/threshold selection NEVER uses payout. Payout is used only after tickets are frozen for ROI reporting.
 - Current exhibition/ST/original exhibition uses existing frame-corrected direct data.
+- Missing individual direct fields are neutral-filled at 0.5; no result data is used for imputation.
 - Actual entry/course and STT course/entry columns are never used.
 """
 import csv, math
 from collections import defaultdict
-from datetime import date
 
 from backtest import rows, race_features
-from analyze_v23_20260902_daypreview import by_code, venue_map
+from analyze_v23_20260902_daypreview import by_code, venue_map, venue_score
 from backtest_v51_lane_corrected_tickets import ff, ii, normkim, tilt_band, learn_st_frame_bias, corrected_direct
-from backtest_v52_scenario_tickets import TILT_BONUS, route_match, preview_comp, ranked_tickets as v52_ranked
+from backtest_v52_scenario_tickets import TILT_BONUS, route_match, ranked_tickets as v52_ranked
 from backtest_v53_pair_and_0902_flow import learn_fit_priors
 
 MODEL='4カドまくり'; HEAD=4
@@ -30,6 +30,8 @@ TUNE_FRACS=[.20,.30,.40,.50,.60]
 VENUE={1:'桐生',2:'戸田',3:'江戸川',4:'平和島',5:'多摩川',6:'浜名湖',7:'蒲郡',8:'常滑',9:'津',10:'三国',11:'びわこ',12:'住之江',13:'尼崎',14:'鳴門',15:'丸亀',16:'児島',17:'宮島',18:'徳山',19:'下関',20:'若松',21:'芦屋',22:'福岡',23:'唐津',24:'大村'}
 
 def clamp(x): return max(0.0,min(1.0,x))
+def dv(d,k): return d.get(k,.5) if d.get(k) is not None else .5
+def ov(os,b,k): return os.get(b,{}).get(k,.5) if os.get(b,{}).get(k) is not None else .5
 
 def wilson(k,n,z=1.281551565545):
     if not n:return 0.0
@@ -39,22 +41,24 @@ def wilson(k,n,z=1.281551565545):
     return (center-adj)/den
 
 def direct_features(ex,st,os):
-    attack4=.30*ex[4]+.34*st[4]+.23*os[4]['straight']+.13*os[4]['avg']
-    wall3=.22*ex[3]+.38*st[3]+.23*os[3]['straight']+.17*os[3]['turn']
-    resist2=.18*ex[2]+.30*st[2]+.18*os[2]['straight']+.34*os[2]['turn']
-    guard1=.15*ex[1]+.22*st[1]+.13*os[1]['straight']+.30*os[1]['turn']+.20*os[1]['avg']
+    e1,e2,e3,e4=[dv(ex,b) for b in (1,2,3,4)]
+    s1,s2,s3,s4=[dv(st,b) for b in (1,2,3,4)]
+    attack4=.30*e4+.34*s4+.23*ov(os,4,'straight')+.13*ov(os,4,'avg')
+    wall3=.22*e3+.38*s3+.23*ov(os,3,'straight')+.17*ov(os,3,'turn')
+    resist2=.18*e2+.30*s2+.18*ov(os,2,'straight')+.34*ov(os,2,'turn')
+    guard1=.15*e1+.22*s1+.13*ov(os,1,'straight')+.30*ov(os,1,'turn')+.20*ov(os,1,'avg')
     inner23=.65*wall3+.35*resist2
     inner231=.55*wall3+.30*resist2+.15*guard1
     gap43=clamp(.5+.5*(attack4-wall3))
     gap423=clamp(.5+.5*(attack4-inner23))
-    stbreak=clamp(.5+.5*(st[4]-(.70*st[3]+.30*st[2])))
-    stretchbreak=clamp(.5+.5*(os[4]['straight']-os[3]['straight']))
+    stbreak=clamp(.5+.5*(s4-(.70*s3+.30*s2)))
+    stretchbreak=clamp(.5+.5*(ov(os,4,'straight')-ov(os,3,'straight')))
     wallweak=1-inner23
     innerweak=1-inner231
     return {'attack4':attack4,'wall3':wall3,'resist2':resist2,'guard1':guard1,
             'gap43':gap43,'gap423':gap423,'stbreak':stbreak,'stretchbreak':stretchbreak,
             'wallweak':wallweak,'innerweak':innerweak,
-            'st_gap_43':st[4]-st[3],'straight_gap_43':os[4]['straight']-os[3]['straight']}
+            'st_gap_43':s4-s3,'straight_gap_43':ov(os,4,'straight')-ov(os,3,'straight')}
 
 def comp(name,f):
     if name=='ABS': return f['attack4']
@@ -70,8 +74,7 @@ def load_source():
         for r in csv.DictReader(f):
             if r.get('model')!=MODEL:continue
             d=r.get('date','')
-            if D0<=d<=TE1:
-                out.append({k:v for k,v in r.items() if k!='target'})
+            if D0<=d<=TE1:out.append({k:v for k,v in r.items() if k!='target'})
         return out
 
 def build_direct(stbias,pri):
@@ -87,8 +90,9 @@ def build_direct(stbias,pri):
         if not card:continue
         ex,st,os=corrected_direct(code,tkz,stt,orig,stbias);x=race_features(card,w10.get(code,{}));tr=tkz.get(code,{})
         hist=ff(r.get('history_adjust'),0) or 0;tilt=ff(tr.get('艇4_チルト'),0) or 0;tb=TILT_BONUS[MODEL][tilt_band(tilt)]
-        oldcomp=preview_comp(MODEL,venue,ex,st,os,vidx);f=direct_features(ex,st,os)
-        ranked=v52_ranked(MODEL,x,ex,st,os,rolepri)
+        vs=venue_score(vidx.get((MODEL,str(venue).zfill(2)),1.0))
+        oldcomp=.28*dv(ex,4)+.30*dv(st,4)+.22*ov(os,4,'straight')+.15*ov(os,4,'avg')+.05*vs
+        f=direct_features(ex,st,os);ranked=v52_ranked(MODEL,x,ex,st,os,rolepri)
         z={'date':d,'race_code':code,'history_adjust':hist,'history_pct':ff(r.get('history_pct'),.5),
            'tilt':tilt,'old_comp':oldcomp,'old_score':100*oldcomp+hist+tb,**f}
         for name in FORMULAS:z[f'score_{name}']=100*comp(name,f)+hist+tb
@@ -132,10 +136,8 @@ def choose_formula(out):
         vals=[]
         for frac in TOP_FRACS:
             rs=top_rows(fit,f'score_{name}',frac);n,hh,mh,hr,mr,wl=basic(rs);vals.append((frac,n,hr,mr,wl))
-        avg=sum(v[4] for v in vals)/len(vals)
-        avg_m=sum(v[3] for v in vals)/len(vals)
-        table.append((name,avg,avg_m,vals))
-        key=(avg,avg_m)
+        avg=sum(v[4] for v in vals)/len(vals);avg_m=sum(v[3] for v in vals)/len(vals)
+        table.append((name,avg,avg_m,vals));key=(avg,avg_m)
         if best is None or key>best[0]:best=(key,name)
     return best[1],table
 
@@ -144,9 +146,7 @@ def choose_threshold(out,name):
     for frac in TUNE_FRACS:
         rs=top_rows(tune,f'score_{name}',frac);n,hh,mh,hr,mr,wl=basic(rs)
         if n<8:continue
-        th=min(z[f'score_{name}'] for z in rs)
-        table.append((frac,th,n,hr,mr,wl))
-        key=(wl,mr,hr,n)
+        th=min(z[f'score_{name}'] for z in rs);table.append((frac,th,n,hr,mr,wl));key=(wl,mr,hr,n)
         if best is None or key>best[0]:best=(key,frac,th)
     if best is None:
         rs=top_rows(tune,f'score_{name}',.5);th=min(z[f'score_{name}'] for z in rs);return .5,th,table
@@ -167,7 +167,6 @@ def write_csv(path,rs):
 
 def main():
     stbias=learn_st_frame_bias();pri,_=learn_fit_priors();direct=build_direct(stbias,pri)
-    # Results are loaded only after every direct score/ticket is frozen.
     out=settle(direct)
     chosen,ftable=choose_formula(out);frac,threshold,ttable=choose_threshold(out,chosen)
     for z in out:
@@ -176,13 +175,12 @@ def main():
 
     L=['# v54 4角まくり相対攻撃モデル','',
        '4号艇の絶対展示だけでなく、3号艇の壁・2号艇の抵抗・1号艇の内抵抗との相対差を評価。',
-       '式は6/1-6/30だけで選択、閾値は7/1-7/15だけで選択。払戻は選択基準に不使用。7/16以降は完全固定。','',
+       '式は6/1-6/30だけで選択、閾値は7/1-7/15だけで選択。払戻は選択基準に不使用。7/16以降は完全固定。',
+       '個別の直前指標欠損は結果を使わず0.5中立補完。','',
        '## FIT: 相対式比較（上位20/30/40%の4まくり成立率を安定性込みで比較）',
        '|式|平均4まくり率|平均Wilson下限|20%|30%|40%|','|---|---:|---:|---|---|---|']
     for name,avg,avgm,vals in ftable:
-        cells=[]
-        for fr,n,hr,mr,wl in vals:cells.append(f'{n}R / {mr:.1f}%')
-        mark=' **選択**' if name==chosen else ''
+        cells=[f'{n}R / {mr:.1f}%' for fr,n,hr,mr,wl in vals];mark=' **選択**' if name==chosen else ''
         L.append(f'|{name}{mark}|{avgm:.1f}%|{100*avg:.1f}%|{cells[0]}|{cells[1]}|{cells[2]}|')
     L+=['',f'選択式: **{chosen}**','',
         '## TUNE: 閾値選択（4まくり成立率、最低8R）','|上位割合|固定score閾値|R|4頭率|4まくり率|Wilson下限|','|---:|---:|---:|---:|---:|---:|']
