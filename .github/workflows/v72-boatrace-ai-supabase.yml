@@ -1,0 +1,16 @@
+name: v72-boatrace-ai-supabase
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'probe_v72_boatrace_ai_supabase.py'
+      - '.github/workflows/v72-boatrace-ai-supabase.yml'
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python probe_v72_boatrace_ai_supabase.py
