@@ -1,0 +1,28 @@
+name: v104-role-value-hybrid
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v104_role_value_hybrid.py'
+      - '.github/workflows/v104-role-value-hybrid.yml'
+permissions:
+  contents: write
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v104 analysis
+        run: python analyze_v104_role_value_hybrid.py
+      - name: Commit results
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v104_role_value_hybrid.csv summary_v104_role_value_hybrid.md
+          git diff --cached --quiet || git commit -m "Add v104 role-value hybrid results"
+          git pull --rebase origin main
+          git push
