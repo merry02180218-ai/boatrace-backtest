@@ -1,0 +1,34 @@
+name: v109-1head-monthly-walkforward
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analyze_v109_1head_monthly_walkforward.py'
+      - 'analysis_v108_1head_feasibility.csv'
+      - '.github/workflows/v109-1head-monthly-walkforward.yml'
+  workflow_dispatch:
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install numpy scikit-learn
+      - name: Run v109 analysis
+        run: python analyze_v109_1head_monthly_walkforward.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v109_1head_monthly_walkforward.csv summary_v109_1head_monthly_walkforward.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate v109 1-head monthly walk-forward results"
+            git pull --rebase origin main
+            git push
+          fi
