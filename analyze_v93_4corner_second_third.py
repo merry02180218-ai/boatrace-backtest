@@ -13,8 +13,6 @@ NO-LEAK
 from __future__ import annotations
 import csv
 from collections import Counter, defaultdict
-from datetime import date
-from statistics import mean, median
 
 from backtest import rows, race_features, grade_score, clamp, pct_motor
 from backtest_v51_lane_corrected_tickets import corrected_direct
@@ -65,11 +63,11 @@ def sel(r,name):
 
 def main():
     raw=[r for r in read_csv(SRC) if r.get('model')=='4カドまくり' and START<=r.get('date','')<=END]
-    preds=[]; outcomes={}; byday=defaultdict(list)
+    outcomes={}; byday=defaultdict(list)
     for idx,r in enumerate(raw):
         key=(r.get('date',''),r.get('race_code',''),idx)
         p={k:v for k,v in r.items() if k not in OUTCOME};p['_key']=key
-        preds.append(p);byday[p['date']].append(p)
+        byday[p['date']].append(p)
         outcomes[key]={k:r.get(k,'') for k in OUTCOME if k in r}
 
     frozen=[]
@@ -87,6 +85,10 @@ def main():
             x=race_features(card,w10.get(code,{}))
             if not x:continue
             ex,_dummy,os=corrected_direct(code,tkz,stt,orig,{b:0.0 for b in range(1,7)})
+            for b in range(1,7):
+                ex.setdefault(b,.5)
+                os.setdefault(b,{'lap':.5,'turn':.5,'straight':.5,'avg':.5})
+                for k in ('lap','turn','straight','avg'):os[b].setdefault(k,.5)
             st={b:ff(z.get(f'st_corr_strength_b{b}'),.5) for b in range(1,7)}
             scored=[]
             for b in (1,2,3,5,6):
@@ -104,8 +106,8 @@ def main():
         key=z.pop('_key');z.update(outcomes.get(key,{}))
         sec=ii(z.get('second'));third=ii(z.get('third'))
         ranked=[ii(x) for x in z.get('ranked_others_v93','').split('-') if x]
-        z['actual_second_rank_v93']= ranked.index(sec)+1 if sec in ranked else 0
-        z['actual_third_rank_v93']= ranked.index(third)+1 if third in ranked else 0
+        z['actual_second_rank_v93']=ranked.index(sec)+1 if sec in ranked else 0
+        z['actual_third_rank_v93']=ranked.index(third)+1 if third in ranked else 0
         z['actual_pair_rank20_v93']=pair_rank(ranked,sec,third)
         final.append(z)
 
@@ -125,19 +127,16 @@ def main():
         n=len(q)
         sr=[ii(r.get('actual_second_rank_v93')) for r in q];tr=[ii(r.get('actual_third_rank_v93')) for r in q]
         def cov(arr,k):return pct(sum(1 for x in arr if 1<=x<=k),len(arr))
-        pair=[]
-        for k in (3,4,5):pair.append(pct(sum(1 for r in q if 1<=ii(r.get('actual_second_rank_v93'))<=2 and 1<=ii(r.get('actual_third_rank_v93'))<=k),n))
+        pair=[pct(sum(1 for r in q if 1<=ii(r.get('actual_second_rank_v93'))<=2 and 1<=ii(r.get('actual_third_rank_v93'))<=k),n) for k in (3,4,5)]
         L.append(f'|{name}|{n}|{cov(sr,1):.1f}%|{cov(sr,2):.1f}%|{cov(sr,3):.1f}%|{cov(tr,1):.1f}%|{cov(tr,2):.1f}%|{cov(tr,3):.1f}%|{cov(tr,4):.1f}%|{pair[0]:.1f}%|{pair[1]:.1f}%|{pair[2]:.1f}%|')
 
     for name in selections:
         q=[r for r in final if ii(r.get('entry_gate_keep'))==1 and ii(r.get('valid_result'))==1 and sel(r,name) and ii(r.get('winner'))==4]
-        L+=['',f'## {name}: 実2着・実3着の艇番分布','',
-            '|艇|2着|3着|','|---:|---:|---:|']
+        L+=['',f'## {name}: 実2着・実3着の艇番分布','', '|艇|2着|3着|','|---:|---:|---:|']
         c2=Counter(ii(r.get('second')) for r in q);c3=Counter(ii(r.get('third')) for r in q)
         for b in (1,2,3,5,6):L.append(f'|{b}|{c2[b]} ({pct(c2[b],len(q)):.1f}%)|{c3[b]} ({pct(c3[b],len(q)):.1f}%)|')
 
-    L+=['','## CORR20 S: 現行順位の詳細','',
-        '|順位|実2着頻度|実3着頻度|','|---:|---:|---:|']
+    L+=['','## CORR20 S: 現行順位の詳細','', '|順位|実2着頻度|実3着頻度|','|---:|---:|---:|']
     qs=[r for r in final if ii(r.get('entry_gate_keep'))==1 and ii(r.get('valid_result'))==1 and sel(r,'CORR20_S') and ii(r.get('winner'))==4]
     s2=Counter(ii(r.get('actual_second_rank_v93')) for r in qs);s3=Counter(ii(r.get('actual_third_rank_v93')) for r in qs)
     for k in range(1,6):L.append(f'|{k}|{s2[k]} ({pct(s2[k],len(qs)):.1f}%)|{s3[k]} ({pct(s3[k],len(qs)):.1f}%)|')
