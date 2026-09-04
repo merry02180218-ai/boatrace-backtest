@@ -15,3 +15,4 @@ txt=re.sub(r'<script.*?</script>|<style.*?</style>',' ',b,flags=re.S|re.I)
 txt=re.sub(r'<[^>]+>','\n',txt)
 txt='\n'.join(x.strip() for x in txt.splitlines() if x.strip())
 print('\nTEXT PREFIX\n',txt[:15000])
+# retrigger after workflow creation
