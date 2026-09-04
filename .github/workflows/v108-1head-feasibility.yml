@@ -1,0 +1,33 @@
+name: v108-1head-feasibility
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analyze_v108_1head_feasibility.py'
+      - '.github/workflows/v108-1head-feasibility.yml'
+  workflow_dispatch:
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install numpy pandas scikit-learn
+      - name: Run v108 analysis
+        run: python analyze_v108_1head_feasibility.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v108_1head_feasibility.csv summary_v108_1head_feasibility.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate v108 1-head feasibility results"
+            git pull --rebase origin main
+            git push
+          fi
