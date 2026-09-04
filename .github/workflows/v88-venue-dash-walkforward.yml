@@ -1,0 +1,30 @@
+name: v88-venue-dash-walkforward
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'backtest_v88_venue_dash_walkforward.py'
+      - '.github/workflows/v88-venue-dash-walkforward.yml'
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v88 prior-only venue dash walk-forward
+        run: python -u backtest_v88_venue_dash_walkforward.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v88_venue_dash_walkforward.md analysis_v88_venue_dash_walkforward.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Add v88 venue dash walk-forward results"
+            git pull --rebase origin main
+            git push
+          fi
