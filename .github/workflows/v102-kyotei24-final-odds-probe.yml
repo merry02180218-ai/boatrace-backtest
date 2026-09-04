@@ -1,0 +1,16 @@
+name: v102-kyotei24-final-odds-probe
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'probe_v102_kyotei24_final_odds.py'
+      - '.github/workflows/v102-kyotei24-final-odds-probe.yml'
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python probe_v102_kyotei24_final_odds.py
