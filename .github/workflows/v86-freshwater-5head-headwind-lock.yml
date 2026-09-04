@@ -1,0 +1,30 @@
+name: v86-freshwater-5head-headwind-lock
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'backtest_v86_freshwater_5head_headwind_lock.py'
+      - '.github/workflows/v86-freshwater-5head-headwind-lock.yml'
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v86 fixed-condition validation
+        run: python -u backtest_v86_freshwater_5head_headwind_lock.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v86_freshwater_5head_headwind_lock.md analysis_v86_freshwater_5head_headwind_lock.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Add v86 fixed-condition validation results"
+            git pull --rebase origin main
+            git push
+          fi
