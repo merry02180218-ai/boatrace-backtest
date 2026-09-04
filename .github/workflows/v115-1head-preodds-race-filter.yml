@@ -1,0 +1,35 @@
+name: v115-1head-preodds-race-filter
+
+on:
+  push:
+    paths:
+      - 'analyze_v115_1head_preodds_race_filter.py'
+      - '.github/workflows/v115-1head-preodds-race-filter.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install numpy scikit-learn
+      - name: Run v115 analysis
+        run: python analyze_v115_1head_preodds_race_filter.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v115_1head_preodds_race_filter.csv summary_v115_1head_preodds_race_filter.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate v115 pre-odds race filter results"
+            git pull --rebase origin main
+            git push
+          fi
