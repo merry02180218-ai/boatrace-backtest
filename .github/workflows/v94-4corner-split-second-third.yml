@@ -1,0 +1,26 @@
+name: v94-4corner-split-second-third
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v94_4corner_split_second_third.py'
+      - '.github/workflows/v94-4corner-split-second-third.yml'
+permissions:
+  contents: write
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v94 split second-third validation
+        run: python analyze_v94_4corner_split_second_third.py
+      - name: Commit results
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v94_4corner_split_second_third.csv summary_v94_4corner_split_second_third.md
+          git diff --cached --quiet || git commit -m 'Add v94 split second-third results'
+          git push
