@@ -12,7 +12,6 @@ Important
 """
 from __future__ import annotations
 import csv, math
-from collections import defaultdict
 
 SRC='analysis_v93_4corner_second_third.csv'
 OUT='analysis_v94_4corner_split_second_third.csv'
@@ -22,7 +21,6 @@ TRAIN_END='2026-05-31'; TEST_START='2026-06-01'
 BOATS=(1,2,3,5,6)
 BASEFEAT=('grade','national','local','motor','waku','nst','direct')
 L2=0.15; ITERS=700; LR=0.22
-
 
 def ff(x,d=0.0):
     try:
@@ -68,7 +66,6 @@ def scalers(tr):
 def xvec(r,b,mu,sd):
     base=rawfeat(r,b)
     z=[(v-mu[j])/sd[j] for j,v in enumerate(base)]
-    # explicit lane identities capture survival/follow patterns after 4 wins.
     z += [1.0 if b==k else 0.0 for k in BOATS]
     return z
 
@@ -123,7 +120,7 @@ def evaluate(q,selname,mode,n2,n3):
             if pair in ts:
                 covered+=1
                 if ii(r.get('valid_payout'))==1:ret+=ii(r.get('payout100'))
-    return {'r':len(qq),'head':head,'cov':covered,'covp':pct(covered,head),'avgpts':ticket_n/len(qq) if qq else 0,'roi':pct(ret,invest),'ret':ret,'inv':invest}
+    return {'r':len(qq),'head':head,'covered':covered,'covp':pct(covered,head),'avgpts':ticket_n/len(qq) if qq else 0,'roi':pct(ret,invest),'ret':ret,'inv':invest}
 
 def topcov(q,selname,which,k,mode):
     qq=[r for r in q if ii(r.get('entry_gate_keep'))==1 and ii(r.get('valid_result'))==1 and selected(r,selname) and ii(r.get('winner'))==4]
