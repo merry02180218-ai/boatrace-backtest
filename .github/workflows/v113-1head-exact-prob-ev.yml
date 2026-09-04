@@ -4,6 +4,7 @@ on:
     branches: [ main ]
     paths:
       - 'analyze_v113_1head_exact_prob_ev.py'
+      - 'analyze_v113b_1head_exact_prob_ev.py'
       - '.github/workflows/v113-1head-exact-prob-ev.yml'
   workflow_dispatch:
 jobs:
@@ -22,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: pip install numpy scikit-learn
       - name: Run v113 analysis
-        run: python analyze_v113_1head_exact_prob_ev.py
+        run: python analyze_v113b_1head_exact_prob_ev.py
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
