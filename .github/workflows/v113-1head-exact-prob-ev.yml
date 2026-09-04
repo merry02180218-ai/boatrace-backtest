@@ -1,0 +1,35 @@
+name: v113-1head-exact-prob-ev
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analyze_v113_1head_exact_prob_ev.py'
+      - '.github/workflows/v113-1head-exact-prob-ev.yml'
+  workflow_dispatch:
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install numpy scikit-learn
+      - name: Run v113 analysis
+        run: python analyze_v113_1head_exact_prob_ev.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v113_1head_exact_prob_ev.csv summary_v113_1head_exact_prob_ev.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate v113 exact-probability EV results"
+            git pull --rebase origin main
+            git push
+          fi
