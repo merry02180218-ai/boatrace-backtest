@@ -1,0 +1,224 @@
+{
+  "version": "v106",
+  "status": "PROSPECTIVE_SHADOW_NOT_PRODUCTION",
+  "prospective_start": "2026-09-05",
+  "training_end": "2026-08-31",
+  "head": 4,
+  "tickets": 7,
+  "boats": [
+    1,
+    2,
+    3,
+    5,
+    6
+  ],
+  "features": [
+    "grade",
+    "national",
+    "local",
+    "motor",
+    "waku",
+    "nst",
+    "direct"
+  ],
+  "role_lambda": 0.1,
+  "value_lambda": 0.15,
+  "role_training_head_hit_rows": 259,
+  "role_l2": 0.15,
+  "role_iters": 700,
+  "role_lr": 0.22,
+  "mu": {
+    "grade": 0.4778455598455598,
+    "national": 0.34873667953667953,
+    "local": 0.35983010115830116,
+    "motor": 0.5422742826254826,
+    "waku": 0.1031418918918919,
+    "nst": 0.48874793745173745,
+    "direct": 0.47574904633204634
+  },
+  "sd": {
+    "grade": 0.23004160965226425,
+    "national": 0.22738018646124847,
+    "local": 0.2624300246470623,
+    "motor": 0.22999920207210686,
+    "waku": 0.24453347137256543,
+    "nst": 0.18273811774141602,
+    "direct": 0.1935385394528457
+  },
+  "weight_labels": [
+    "grade",
+    "national",
+    "local",
+    "motor",
+    "waku",
+    "nst",
+    "direct",
+    "boat_1",
+    "boat_2",
+    "boat_3",
+    "boat_5",
+    "boat_6"
+  ],
+  "w_second": [
+    0.15585269643497884,
+    0.282421176764525,
+    0.14994854090093135,
+    -0.0015476953607618622,
+    0.09951555479583758,
+    0.08394673960074212,
+    0.023566320688643477,
+    0.278757760458982,
+    -0.07248541914764169,
+    0.0017641512207682796,
+    -0.006517822673441512,
+    -0.20151866985866698
+  ],
+  "w_third": [
+    -0.07292535502746972,
+    0.225321641060061,
+    0.14029768574788454,
+    0.08352487430923365,
+    -0.007573875333815838,
+    -0.10323825199811514,
+    0.028452846686379745,
+    0.02116204391218897,
+    0.06629393848554169,
+    -0.3098650628438423,
+    0.17702480011628735,
+    0.0453842803298243
+  ],
+  "price_min_history_n": 15,
+  "price_source_cached_races": 1223,
+  "priced_patterns": 20,
+  "price_patterns": {
+    "4-1-2": {
+      "count": 508,
+      "mean_final_implied_rate": 0.05791515944270752,
+      "value_score": 0.1578947368421053
+    },
+    "4-1-3": {
+      "count": 508,
+      "mean_final_implied_rate": 0.02315648331933952,
+      "value_score": 0.7894736842105263
+    },
+    "4-1-5": {
+      "count": 508,
+      "mean_final_implied_rate": 0.04116160321135872,
+      "value_score": 0.368421052631579
+    },
+    "4-1-6": {
+      "count": 508,
+      "mean_final_implied_rate": 0.03478664456816109,
+      "value_score": 0.42105263157894735
+    },
+    "4-2-1": {
+      "count": 508,
+      "mean_final_implied_rate": 0.06476200825282948,
+      "value_score": 0.10526315789473684
+    },
+    "4-2-3": {
+      "count": 508,
+      "mean_final_implied_rate": 0.032483675214753524,
+      "value_score": 0.5789473684210527
+    },
+    "4-2-5": {
+      "count": 508,
+      "mean_final_implied_rate": 0.027321156095947787,
+      "value_score": 0.6842105263157895
+    },
+    "4-2-6": {
+      "count": 508,
+      "mean_final_implied_rate": 0.019951477593943445,
+      "value_score": 0.8947368421052632
+    },
+    "4-3-1": {
+      "count": 508,
+      "mean_final_implied_rate": 0.024879935754147816,
+      "value_score": 0.736842105263158
+    },
+    "4-3-2": {
+      "count": 508,
+      "mean_final_implied_rate": 0.02074500030032387,
+      "value_score": 0.8421052631578947
+    },
+    "4-3-5": {
+      "count": 508,
+      "mean_final_implied_rate": 0.019943383426472765,
+      "value_score": 0.9473684210526316
+    },
+    "4-3-6": {
+      "count": 508,
+      "mean_final_implied_rate": 0.018948169897437046,
+      "value_score": 1.0
+    },
+    "4-5-1": {
+      "count": 508,
+      "mean_final_implied_rate": 0.100826575996858,
+      "value_score": 0.0
+    },
+    "4-5-2": {
+      "count": 508,
+      "mean_final_implied_rate": 0.05096362706331494,
+      "value_score": 0.26315789473684215
+    },
+    "4-5-3": {
+      "count": 508,
+      "mean_final_implied_rate": 0.031119199999262288,
+      "value_score": 0.631578947368421
+    },
+    "4-5-6": {
+      "count": 508,
+      "mean_final_implied_rate": 0.044516574952150195,
+      "value_score": 0.3157894736842105
+    },
+    "4-6-1": {
+      "count": 508,
+      "mean_final_implied_rate": 0.06930546489880023,
+      "value_score": 0.052631578947368474
+    },
+    "4-6-2": {
+      "count": 508,
+      "mean_final_implied_rate": 0.05459496777322902,
+      "value_score": 0.21052631578947367
+    },
+    "4-6-3": {
+      "count": 508,
+      "mean_final_implied_rate": 0.032728032568343265,
+      "value_score": 0.5263157894736843
+    },
+    "4-6-5": {
+      "count": 508,
+      "mean_final_implied_rate": 0.03458341912978777,
+      "value_score": 0.4736842105263158
+    }
+  },
+  "source_sha256": {
+    "analysis_v93_4corner_second_third.csv": "1afd3122b6352674c65e541f1a357b552b22a45d5ae2f6c6a05630febe51705e",
+    "cache_v104_final_odds.csv": "9ff2ed263167cd679a84d1944681aa73926b4765eacd270125f365db64cd3d44"
+  },
+  "rules": {
+    "head_selection": "UNCHANGED_CURRENT_4C",
+    "candidate_gate": "UNCHANGED",
+    "base_score_and_grade": "UNCHANGED",
+    "corr20_score": "SHADOW_LINEAGE_ONLY",
+    "entry_gate": "target boat 4 must remain exhibition course 4",
+    "wind": "UNCHANGED",
+    "current7": "must be frozen from actual production ticket order before result",
+    "role7": "frozen role layer only",
+    "v106_7": "role layer plus frozen historical value tendency",
+    "target_race_final_odds": "POST_RESULT_EVALUATION_ONLY",
+    "future_update": "NO Sep-05+ outcomes or final odds may update weights/value constants"
+  },
+  "formal_adoption_rule": {
+    "minimum_base_A_settled_races": 100,
+    "minimum_base_A_head_wins": 30,
+    "minimum_base_S_settled_races": 50,
+    "minimum_base_S_head_wins": 15,
+    "both_A_and_S_overall_hit_nonworse_vs_current7": true,
+    "both_A_and_S_head_coverage_nonworse_vs_current7": true,
+    "both_A_and_S_avg_final_composite_rate_reduction_min_pt": 0.5,
+    "minimum_final_odds_coverage_pct": 80.0,
+    "both_A_and_S_roi_diff_floor_pt": -5.0,
+    "decision": "only after all conditions; otherwise shadow continues"
+  }
+}
