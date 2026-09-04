@@ -1,0 +1,30 @@
+name: v83-wind-entry-gate
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'backtest_v83_wind_entry_gate.py'
+      - '.github/workflows/v83-wind-entry-gate.yml'
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run ten-month wind and exhibition-entry validation
+        run: python -u backtest_v83_wind_entry_gate.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v83_wind_entry_gate.md analysis_v83_wind_entry_gate.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Add v83 wind and exhibition-entry validation results"
+            git pull --rebase origin main
+            git push
+          fi
