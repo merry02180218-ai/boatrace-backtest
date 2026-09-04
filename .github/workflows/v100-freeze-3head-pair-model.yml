@@ -1,0 +1,26 @@
+name: v100-freeze-3head-pair-model
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'freeze_v100_3head_pair_model.py'
+      - '.github/workflows/v100-freeze-3head-pair-model.yml'
+permissions:
+  contents: write
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Freeze v100 prospective model
+        run: python freeze_v100_3head_pair_model.py
+      - name: Commit frozen model
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add v100_3head_pair_frozen_20260905.json summary_v100_3head_pair_freeze.md
+          git diff --cached --quiet || git commit -m 'Freeze v100 3-head prospective pair model'
+          git push
