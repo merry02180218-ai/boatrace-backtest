@@ -4,6 +4,7 @@ on:
     branches: [ main ]
     paths:
       - 'analyze_v110_1head_role_tickets.py'
+      - 'analyze_v110b_1head_role_tickets.py'
       - '.github/workflows/v110-1head-role-tickets.yml'
   workflow_dispatch:
 jobs:
@@ -20,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: pip install numpy scikit-learn
       - name: Run v110 analysis
-        run: python analyze_v110_1head_role_tickets.py
+        run: python analyze_v110b_1head_role_tickets.py
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
