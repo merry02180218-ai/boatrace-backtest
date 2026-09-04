@@ -1,0 +1,28 @@
+name: v103-value-aware-opponent-ranking
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v103_value_aware_opponent_ranking.py'
+      - '.github/workflows/v103-value-aware-opponent-ranking.yml'
+permissions:
+  contents: write
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v103 analysis
+        run: python analyze_v103_value_aware_opponent_ranking.py
+      - name: Commit results
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v103_value_aware_opponent_ranking.csv summary_v103_value_aware_opponent_ranking.md
+          git diff --cached --quiet || git commit -m "Add v103 value-aware opponent ranking results"
+          git pull --rebase origin main
+          git push
