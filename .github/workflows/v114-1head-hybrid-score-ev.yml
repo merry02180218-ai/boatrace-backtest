@@ -1,0 +1,35 @@
+name: v114-1head-hybrid-score-ev
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analyze_v114_1head_hybrid_score_ev.py'
+      - '.github/workflows/v114-1head-hybrid-score-ev.yml'
+  workflow_dispatch:
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install numpy scikit-learn
+      - name: Run v114 analysis
+        run: python analyze_v114_1head_hybrid_score_ev.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v114_1head_hybrid_score_ev.csv summary_v114_1head_hybrid_score_ev.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate v114 hybrid-score EV results"
+            git pull --rebase origin main
+            git push
+          fi
