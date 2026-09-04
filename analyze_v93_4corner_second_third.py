@@ -8,7 +8,8 @@ Purpose
 NO-LEAK
 - Selection scores come from v91, already frozen before outcomes.
 - Opponent ranking is rebuilt only from pre-race card/waku + current exhibition/original + v90 prior-only corrected ST strengths.
-- Outcome columns are stripped before ranking is frozen and rejoined only after all rows are ranked.
+- All opponent ranks for all dates are frozen first.
+- Only AFTER ranking is frozen are official daily results loaded and 1st/2nd/3rd boat numbers joined.
 """
 from __future__ import annotations
 import csv
@@ -70,6 +71,7 @@ def main():
         byday[p['date']].append(p)
         outcomes[key]={k:r.get(k,'') for k in OUTCOME if k in r}
 
+    # Phase 1: freeze every pre-result opponent rank first.
     frozen=[]
     for ds in sorted(byday):
         ymd=ds.replace('-','/')
@@ -101,9 +103,23 @@ def main():
             for i,b in enumerate(ranked,1):z[f'rank_b{b}_v93']=i
             frozen.append(z)
 
+    # Phase 2: only now load official outcomes. This preserves strict no-leak ordering.
+    result_maps={}
+    for ds in sorted(byday):
+        ymd=ds.replace('-','/')
+        result_maps[ds]=bycode(rows(f'data/results/realtime/{ymd}.csv'))
+
     final=[]
     for z in frozen:
         key=z.pop('_key');z.update(outcomes.get(key,{}))
+        rr=result_maps.get(z.get('date',''),{}).get(z.get('race_code',''),{})
+        if rr:
+            z['winner']=rr.get('1着_艇番','')
+            z['second']=rr.get('2着_艇番','')
+            z['third']=rr.get('3着_艇番','')
+            z['result_join_v93']='official_realtime'
+        else:
+            z['result_join_v93']='missing'
         sec=ii(z.get('second'));third=ii(z.get('third'))
         ranked=[ii(x) for x in z.get('ranked_others_v93','').split('-') if x]
         z['actual_second_rank_v93']=ranked.index(sec)+1 if sec in ranked else 0
@@ -116,8 +132,10 @@ def main():
         with open(OUT,'w',encoding='utf-8-sig',newline='') as f:
             w=csv.DictWriter(f,fieldnames=fs);w.writeheader();w.writerows(final)
 
+    joined=sum(r.get('result_join_v93')=='official_realtime' for r in final)
     L=['# v93 4カド 2着・3着 10か月検証','',
-       '対象は4カドモデル。相手順位は現行v51式（級別/全国/当地/モーター/枠別/ST/直前展示）を、v90のprior-only枠補正展示STで再構築。結果は順位凍結後に結合。','']
+       '対象は4カドモデル。相手順位は現行v51式（級別/全国/当地/モーター/枠別/ST/直前展示）を、v90のprior-only枠補正展示STで再構築。全順位を凍結した後、公式realtime結果CSVの1着/2着/3着艇番を結合。',
+       f'- official result join: **{joined}/{len(final)}**','']
     selections=['BASE_A','CORR20_A','BASE_S','CORR20_S']
     L+=['## 4号艇が実際に1着だった時の相手順位カバー','',
         '|選別|4頭1着R|2着Top1|2着Top2|2着Top3|3着Top1|3着Top2|3着Top3|3着Top4|2Top2×3Top3|×Top4|×Top5|',
