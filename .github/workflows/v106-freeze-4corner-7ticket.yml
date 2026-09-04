@@ -1,0 +1,28 @@
+name: v106-freeze-4corner-7ticket
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'freeze_v106_4corner_7ticket_value.py'
+      - '.github/workflows/v106-freeze-4corner-7ticket.yml'
+permissions:
+  contents: write
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Freeze v106 prospective model
+        run: python freeze_v106_4corner_7ticket_value.py
+      - name: Commit frozen v106 model
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add v106_4corner_7ticket_frozen_20260905.json summary_v106_4corner_freeze.md
+          git diff --cached --quiet || git commit -m 'Freeze v106 4corner 7-ticket prospective model'
+          git pull --rebase origin main
+          git push
