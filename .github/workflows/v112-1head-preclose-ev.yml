@@ -1,0 +1,33 @@
+name: v112-1head-preclose-ev
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analyze_v112_1head_preclose_ev.py'
+      - '.github/workflows/v112-1head-preclose-ev.yml'
+  workflow_dispatch:
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v112 analysis
+        run: python analyze_v112_1head_preclose_ev.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v112_1head_preclose_ev.csv summary_v112_1head_preclose_ev.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate v112 1-head preclose EV results"
+            git pull --rebase origin main
+            git push
+          fi
