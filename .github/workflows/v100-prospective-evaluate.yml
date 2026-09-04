@@ -1,0 +1,28 @@
+name: v100-prospective-evaluate
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'prospective/v100_3head_pre.csv'
+      - 'prospective/v100_3head_results.csv'
+      - 'evaluate_v100_3head_prospective.py'
+      - '.github/workflows/v100-prospective-evaluate.yml'
+permissions:
+  contents: write
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Evaluate v100 shadow records
+        run: python evaluate_v100_3head_prospective.py
+      - name: Commit prospective summary
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add summary_v100_3head_prospective.md
+          git diff --cached --quiet || git commit -m 'Update v100 prospective shadow summary'
+          git push
