@@ -1,0 +1,23 @@
+name: v80-head-second-place
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v80_head_second_place.py'
+      - '.github/workflows/v80-head-second-place.yml'
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python analyze_v80_head_second_place.py
+      - name: Commit summary
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add summary_v80_head_second_place.md
+          git commit -m 'Add v80 predicted-head second-place survival summary' || exit 0
+          git push
