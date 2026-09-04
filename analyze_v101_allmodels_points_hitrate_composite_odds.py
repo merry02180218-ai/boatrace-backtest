@@ -12,10 +12,15 @@ No-leak odds policy
   is strictly before the race cutoff timestamp.
 - Missing historical pre-close odds stay missing. No final/deadline odds substitution.
 - Odds are used only for descriptive combined-odds statistics, never candidate selection.
+
+Consistency
+- Head hits are recomputed from winner == predicted head instead of trusting a carried
+  head_hit flag. Ticket hits additionally require winner == predicted head, so
+  conditional head coverage can never exceed 100%.
 """
 from __future__ import annotations
 import csv
-from datetime import datetime, date, timedelta
+from datetime import datetime
 from statistics import mean, median
 
 from backtest import rows
@@ -41,8 +46,6 @@ def pct(n,d):return 100*n/d if d else 0.0
 
 def read_csv(path):
     with open(path,encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
-
-def bycode(rs):return {r.get('レースコード',''):r for r in rs if r.get('レースコード')}
 
 def tickets(r):
     return [x.strip() for x in (r.get('tickets20_display') or '').split(';') if x.strip()][:20]
@@ -70,7 +73,6 @@ def combo_odds(orow,ts):
 
 def load_odds_map(candidate_dates):
     om={};leads=[];available_dates=[]
-    # Repository policy/tree currently provides od3 in Jul/Aug inside this 10-month window.
     for ds in sorted(d for d in candidate_dates if '2026-07-01'<=d<='2026-08-31'):
         ymd=ds.replace('-','/')
         rr=rows(f'data/previews/od3/{ymd}.csv')
@@ -87,9 +89,11 @@ def grade_ok(r,g):
     s=ff(r.get('score'),-999)
     return s >= (S if g=='S' else A)
 
+def is_head_win(r):
+    return ii(r.get('winner')) in range(1,7) and ii(r.get('winner'))==ii(r.get('head'))
+
 def main():
     raw=[r for r in read_csv(SRC) if START<=r.get('date','')<=END and r.get('model') in MODELS]
-    # Current operational validity: confirmed entry changes excluded; missing course remains kept.
     base=[r for r in raw if ii(r.get('entry_gate_keep'))==1 and ii(r.get('valid_payout'))==1]
     odds_map,leads,odates=load_odds_map({r.get('date','') for r in base})
 
@@ -97,9 +101,9 @@ def main():
     for g in ('A','S'):
         for m in MODELS:
             q=[r for r in base if r.get('model')==m and grade_ok(r,g) and len(tickets(r))>=20]
-            head_hits=sum(ii(r.get('head_hit'))==1 for r in q)
+            head_hits=sum(is_head_win(r) for r in q)
             for n in range(1,21):
-                hits=[r for r in q if 1<=ii(r.get('actual_rank20'))<=n]
+                hits=[r for r in q if is_head_win(r) and 1<=ii(r.get('actual_rank20'))<=n]
                 hit=len(hits)
                 ret=sum(ii(r.get('payout100')) for r in hits)
                 inv=len(q)*n*100
@@ -131,6 +135,7 @@ def main():
 
     L=['# v101 全モデル 点数別 頭率・総合的中率・平均合成オッズ','',
        f'- 的中率期間: **{START}〜{END}**（現行BASE score + 現行v51 20通り順位 + v83進入変更除外）。',
+       '- 頭率は保存済みhead_hitではなく **winner == 予測head** から再計算。',
        '- 「総合的中率」= 予測頭が1着かつ実3連単が上位N点以内 ÷ 対象レース数。',
        '- 「頭内カバー」= 実3連単が上位N点以内 ÷ 頭的中数。したがって概ね 頭率 × 頭内カバー = 総合的中率。',
        '- 合成オッズ = **1 / Σ(1/各買い目オッズ)**。全N点のod3が正値で、取得日時が締切より前のレースだけ集計。',
@@ -141,7 +146,6 @@ def main():
     else:
         L += ['- pre-close od3利用可能データなし。合成オッズは欠損。','']
 
-    # Full 1..20 tables for every model/grade.
     for g in ('A','S'):
         L += [f'## {g}以上','']
         for m in MODELS:
