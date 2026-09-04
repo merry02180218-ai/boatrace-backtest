@@ -1,0 +1,29 @@
+name: v92-4corner-corr20-payout-shift
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v92_4corner_corr20_payout_shift.py'
+      - '.github/workflows/v92-4corner-corr20-payout-shift.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run v92 payout-shift analysis
+        run: python analyze_v92_4corner_corr20_payout_shift.py
+      - name: Commit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add summary_v92_4corner_corr20_payout_shift.md
+          git diff --cached --quiet || git commit -m "Add v92 4-corner payout-shift results"
+          git push
