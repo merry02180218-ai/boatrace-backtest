@@ -24,4 +24,5 @@ jobs:
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add analysis_v102_allmodels_final_composite_odds.csv summary_v102_allmodels_final_composite_odds.md coverage_v102_final_odds.csv
           git diff --cached --quiet || git commit -m "Add v102 all-model final composite odds results"
+          git pull --rebase origin main
           git push
