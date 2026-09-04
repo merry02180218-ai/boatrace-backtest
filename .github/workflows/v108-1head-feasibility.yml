@@ -4,6 +4,7 @@ on:
     branches: [ main ]
     paths:
       - 'analyze_v108_1head_feasibility.py'
+      - 'analyze_v108b_1head_feasibility.py'
       - '.github/workflows/v108-1head-feasibility.yml'
   workflow_dispatch:
 jobs:
@@ -20,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: pip install numpy pandas scikit-learn
       - name: Run v108 analysis
-        run: python analyze_v108_1head_feasibility.py
+        run: python analyze_v108b_1head_feasibility.py
       - name: Commit results
         run: |
           git config user.name "github-actions[bot]"
