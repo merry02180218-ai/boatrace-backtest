@@ -1,0 +1,15 @@
+name: v82-fallback-third-place
+on:
+  push:
+    paths:
+      - 'analyze_v82_fallback_third_place.py'
+      - '.github/workflows/v82-fallback-third-place.yml'
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python analyze_v82_fallback_third_place.py
