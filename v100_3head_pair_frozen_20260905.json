@@ -1,0 +1,98 @@
+{
+  "version": "v100",
+  "status": "PROSPECTIVE_CANDIDATE_NOT_PRODUCTION",
+  "prospective_start": "2026-09-05",
+  "training_end": "2026-08-31",
+  "training_head_hit_rows": 406,
+  "lambda": 0.2,
+  "head": 3,
+  "boats": [
+    1,
+    2,
+    4,
+    5,
+    6
+  ],
+  "features": [
+    "grade",
+    "national",
+    "local",
+    "motor",
+    "waku",
+    "nst",
+    "direct"
+  ],
+  "l2": 0.15,
+  "iters": 700,
+  "lr": 0.22,
+  "mu": {
+    "grade": 0.4780098522167488,
+    "national": 0.34005024630541875,
+    "local": 0.3543869123152709,
+    "motor": 0.5322092133004925,
+    "waku": 0.11872783251231528,
+    "nst": 0.49159043793103446,
+    "direct": 0.4814967118226601
+  },
+  "sd": {
+    "grade": 0.23174914223695492,
+    "national": 0.22201838879469765,
+    "local": 0.2614061617270623,
+    "motor": 0.22940304347554477,
+    "waku": 0.2512530441228848,
+    "nst": 0.18133240466885667,
+    "direct": 0.19080853327691838
+  },
+  "weight_labels": [
+    "grade",
+    "national",
+    "local",
+    "motor",
+    "waku",
+    "nst",
+    "direct",
+    "boat_1",
+    "boat_2",
+    "boat_4",
+    "boat_5",
+    "boat_6"
+  ],
+  "w_second": [
+    0.05628848178148667,
+    0.2456475010962048,
+    0.05421642550243969,
+    0.10609521432132389,
+    0.14649205452306277,
+    0.04606206943374429,
+    0.07871753302973394,
+    0.5829543780091053,
+    0.04546336225281466,
+    0.0027687658229595753,
+    -0.21960819324277409,
+    -0.4115783128421056
+  ],
+  "w_third": [
+    0.13251993795131622,
+    0.2218669508225658,
+    0.08383558486179594,
+    0.06919500480200551,
+    -0.12424216871133728,
+    -0.018782351743584384,
+    0.06849589097435826,
+    -0.052323986567770014,
+    0.019802328088239642,
+    -0.040394802227861265,
+    0.11613045297228416,
+    -0.04321399226489253
+  ],
+  "source_file": "analysis_v97_3head5head_second_third.csv",
+  "source_sha256": "1f26f7345053f03b7dd12ed6abe85b9d848a019252a7df1aefd904e31fbf9caa",
+  "rules": {
+    "head_selection": "UNCHANGED",
+    "grade_thresholds": "UNCHANGED",
+    "entry_gate": "target boat 3 must remain exhibition course 3",
+    "current_anchor_weight": 0.8,
+    "role_weight": 0.2,
+    "five_head": "UNCHANGED_CURRENT_V51"
+  }
+}
