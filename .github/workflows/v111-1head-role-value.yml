@@ -1,0 +1,35 @@
+name: v111-1head-role-value
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analyze_v111_1head_role_value.py'
+      - '.github/workflows/v111-1head-role-value.yml'
+  workflow_dispatch:
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install numpy scikit-learn
+      - name: Run v111 analysis
+        run: python analyze_v111_1head_role_value.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v111_1head_role_value.csv summary_v111_1head_role_value.md cache_v111_1head_final_odds.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate v111 1-head role value results"
+            git pull --rebase origin main
+            git push
+          fi
