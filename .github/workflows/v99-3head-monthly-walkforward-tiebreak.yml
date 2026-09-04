@@ -1,0 +1,26 @@
+name: v99-3head-monthly-walkforward-tiebreak
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v99_3head_monthly_walkforward_tiebreak.py'
+      - '.github/workflows/v99-3head-monthly-walkforward-tiebreak.yml'
+permissions:
+  contents: write
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run v99 strict monthly walk-forward
+        run: python analyze_v99_3head_monthly_walkforward_tiebreak.py
+      - name: Commit results
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v99_3head_monthly_walkforward_tiebreak.csv summary_v99_3head_monthly_walkforward_tiebreak.md
+          git diff --cached --quiet || git commit -m 'Add v99 3-head monthly walk-forward results'
+          git push
