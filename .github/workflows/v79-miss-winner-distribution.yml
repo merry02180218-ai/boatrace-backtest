@@ -1,0 +1,32 @@
+name: v79-miss-winner-distribution
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v79_miss_winner_distribution.py'
+      - '.github/workflows/v79-miss-winner-distribution.yml'
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Rebuild locked ten-month candidate ledger
+        run: python -u backtest_v74_ten_month_strict_flow.py
+      - name: Analyze miss winners
+        run: python analyze_v79_miss_winner_distribution.py
+      - name: Commit summary
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v79_miss_winner_distribution.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Add v79 miss winner distribution"
+            git pull --rebase origin main
+            git push
+          fi
