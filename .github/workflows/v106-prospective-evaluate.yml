@@ -1,0 +1,29 @@
+name: v106-prospective-evaluate
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'prospective/v106_4corner_pre.csv'
+      - 'prospective/v106_4corner_results.csv'
+      - 'evaluate_v106_4corner_prospective.py'
+      - '.github/workflows/v106-prospective-evaluate.yml'
+permissions:
+  contents: write
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Evaluate v106 shadow records
+        run: python evaluate_v106_4corner_prospective.py
+      - name: Commit prospective summary
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add summary_v106_4corner_prospective.md
+          git diff --cached --quiet || git commit -m 'Update v106 prospective shadow summary'
+          git pull --rebase origin main
+          git push
