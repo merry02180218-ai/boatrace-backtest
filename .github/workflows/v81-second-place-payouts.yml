@@ -1,0 +1,16 @@
+name: v81-second-place-payouts
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v81_second_place_payouts.py'
+      - '.github/workflows/v81-second-place-payouts.yml'
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python analyze_v81_second_place_payouts.py
