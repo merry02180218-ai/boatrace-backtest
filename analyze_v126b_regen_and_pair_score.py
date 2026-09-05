@@ -28,7 +28,6 @@ def metric(rs,a):
  return len(q),100*hit/len(q) if q else 0,100*hit/head if head else 0,100*ret/(len(q)*700) if q else 0
 def main():
  src=read_csv(SRC); hp={(r.get('date'),r.get('race_code')):r.get('p109','') for r in read_csv(HEAD)}
- # prepare_month is frozen v110 role logic; p109 is attached only for selection/metrics, not pair ranking.
  by={}
  for mo in DEV+TEST:
   print('regen',mo,flush=True);by[mo]=prepare_month(src,mo)
@@ -36,7 +35,6 @@ def main():
  dev=sum((by[m] for m in DEV),[]);test=sum((by[m] for m in TEST),[])
  rows=[]
  for a in ALPHAS:rows.append((a,metric(dev,a)))
- # choose by dev coverage, then hit rate, then ROI, then simpler/lower alpha.
  best=max(rows,key=lambda x:(x[1][2],x[1][1],x[1][3],-x[0]))[0]
  b=metric(test,0);v=metric(test,best)
  L=['# v126b clean pair-score validation','', '- Frozen v110 pair orders regenerated chronologically for Mar-Aug.','- Tune only on Mar-May; Jun-Aug evaluated once after alpha freeze.','- v109 p109>=72 gate unchanged; no Sep outcomes used; no odds used in pair ranking.','', '## Mar-May development','|alpha|R|7hit|coverage|ROI|','|---:|---:|---:|---:|---:|']
@@ -46,3 +44,4 @@ def main():
  L += ['',f'- **V126B PAIR SCORE = {"PASS" if passed else "FAIL"}**', '- PASS requires holdout coverage improvement with no hit-rate or ROI deterioration.']
  open(OUT,'w',encoding='utf-8').write('\n'.join(L)+'\n')
 if __name__=='__main__':main()
+# dedicated workflow trigger
