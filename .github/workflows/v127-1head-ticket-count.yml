@@ -1,0 +1,26 @@
+name: v127-1head-ticket-count
+on:
+  push:
+    paths:
+      - 'analyze_v127_1head_ticket_count.py'
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy scikit-learn
+      - name: Run v127
+        run: python analyze_v127_1head_ticket_count.py
+      - name: Commit result
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add summary_v127_1head_ticket_count.md
+          git diff --cached --quiet || git commit -m 'Add v127 ticket count result'
+          git push
