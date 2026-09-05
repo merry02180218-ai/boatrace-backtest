@@ -1,0 +1,31 @@
+name: v124-20260901-04-v123-frozen
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'replay_v124_20260901_04_v123_frozen.py'
+      - '.github/workflows/v124-20260901-04-v123-frozen.yml'
+  workflow_dispatch:
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy scikit-learn requests beautifulsoup4
+      - name: Run v124
+        run: python replay_v124_20260901_04_v123_frozen.py
+      - name: Commit v124 results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add replay_v124_20260901_04_v123_frozen.csv summary_v124_20260901_04_v123_frozen.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate v124 frozen Sep1-4 confirmation"
+            git pull --rebase origin main
+            git push
+          fi
