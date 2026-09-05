@@ -7,6 +7,7 @@ Goal
 - Mar-Aug historical diagnostic + frozen Sep1-4 confirmation are reported separately.
 - No odds are used for selection/ranking.
 """
+# trigger: 2026-09-05 rerun
 import csv
 from collections import Counter
 
@@ -54,7 +55,6 @@ def diag(rs, orderfn, pcol, label):
 
 def main():
     hist=read(HIST); sep=read(SEP)
-    # v110 file is Jun-Aug holdout. Sep v124 file contains frozen PRE-selected rows.
     blocks=[diag(hist,order7_hist,'p109','Jun-Aug v110 holdout'),diag(sep,order7_sep,'p109','Sep1-4 frozen PRE sample')]
     L=['# v125 v110 fixed7 opponent-pair miss diagnostics','',
        '- v109 head gate remains **p109>=72%**.','- v110 baseline remains **lambda=.50 / fixed top7**.',
