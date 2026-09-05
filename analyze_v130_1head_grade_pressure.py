@@ -1,8 +1,8 @@
-"""v130: 1HEAD grade-pressure subsets, exact 7-ticket hit rate + average final composite odds.
+"""v130 corrected: 1HEAD grade-pressure subsets, exact 7-ticket hit rate + average final composite odds.
 
 Requested subsets over same six-month window as v128 (2026-03..08):
-A) boat1=B1 AND boats2,3,4 are all in {A1,A2}
-B) boat1=A2 AND boats2,3,4 are all A1
+A) boat1=B1 AND AT LEAST ONE of boats2,3,4 is in {A1,A2}
+B) boat1=A2 AND AT LEAST ONE of boats2,3,4 is A1
 Also report union A OR B.
 
 Prediction/ticket side is unchanged v109+v110 lambda=.50, exact 7 tickets.
@@ -78,19 +78,19 @@ def build_rows(fmap,grades):
             ds=r.get('date','');code=(r.get('race_code') or '').strip();g=grades.get((ds,code))
             if not g:continue
             g1,g2,g3,g4,_,_=g
-            cond_b1=(g1=='B1' and all(x in ('A1','A2') for x in (g2,g3,g4)))
-            cond_a2=(g1=='A2' and all(x=='A1' for x in (g2,g3,g4)))
+            cond_b1=(g1=='B1' and any(x in ('A1','A2') for x in (g2,g3,g4)))
+            cond_a2=(g1=='A2' and any(x=='A1' for x in (g2,g3,g4)))
             if not (cond_b1 or cond_a2):continue
             co=composite(fmap.get(code,{}),order)
             act=(r.get('actual_combo') or '').strip()
             out.append({'date':ds,'race_code':code,'p109':p,'g1':g1,'g2':g2,'g3':g3,'g4':g4,
-                        'condition':'B1_vs_A1A2x3' if cond_b1 else 'A2_vs_A1x3',
+                        'cond_b1':int(cond_b1),'cond_a2':int(cond_a2),
                         'hit7':int(act in order),'composite_odds7':co})
     return out
 
 def summarize(rows):
     rec=[]
-    subsets=[('B1_vs_A1A2x3',lambda r:r['condition']=='B1_vs_A1A2x3'),('A2_vs_A1x3',lambda r:r['condition']=='A2_vs_A1x3'),('UNION',lambda r:True)]
+    subsets=[('B1_vs_any_A1A2_2to4',lambda r:r['cond_b1']==1),('A2_vs_any_A1_2to4',lambda r:r['cond_a2']==1),('UNION',lambda r:r['cond_b1']==1 or r['cond_a2']==1)]
     for grade,cut in [('A',A_CUT),('S',S_CUT)]:
         for lab,fn in subsets:
             q=[r for r in rows if r['p109']>=cut and fn(r)];ods=[r['composite_odds7'] for r in q if r['composite_odds7'] is not None]
@@ -105,14 +105,14 @@ def main():
     rows=build_rows(fmap,grades);rec=summarize(rows)
     with open(OUT,'w',encoding='utf-8-sig',newline='') as f:
         w=csv.DictWriter(f,fieldnames=list(rec[0].keys()));w.writeheader();w.writerows(rec)
-    L=['# v130 1号艇級別プレッシャー条件 7点的中率 / 平均合成オッズ','',
+    L=['# v130 1号艇級別プレッシャー条件 7点的中率 / 平均合成オッズ（修正版）','',
        '- 期間: **2026-03-01〜2026-08-31**。','- 1号艇モデル: **v109 + v110 λ=.50、7点固定**。',
-       '- 条件①: **1号艇B1 かつ 2・3・4号艇が全てA1またはA2**。',
-       '- 条件②: **1号艇A2 かつ 2・3・4号艇が全てA1**。',
+       '- 条件①: **1号艇B1 かつ 2・3・4号艇のうち少なくとも1艇がA1またはA2**。',
+       '- 条件②: **1号艇A2 かつ 2・3・4号艇のうち少なくとも1艇がA1**。',
        '- UNIONは条件①または②。','- 確定合成オッズは事後評価だけに使用。選択・順位付けには不使用。','',
        '|層|条件|R|7点的中|3連単的中率|平均合成オッズ|中央値|odds R|oddsカバー|',
        '|---|---|---:|---:|---:|---:|---:|---:|---:|']
-    names={'B1_vs_A1A2x3':'① B1 vs 2-4全A1/A2','A2_vs_A1x3':'② A2 vs 2-4全A1','UNION':'①または②'}
+    names={'B1_vs_any_A1A2_2to4':'① B1 + 2-4にA1/A2が1艇以上','A2_vs_any_A1_2to4':'② A2 + 2-4にA1が1艇以上','UNION':'①または②'}
     for x in rec:
         L.append(f"|{x['grade']}|{names[x['subset']]}|{x['races']}|{x['hits7']}|{x['trifecta_hit_rate_pct']:.1f}%|{x['avg_composite_odds7']:.2f}倍|{x['median_composite_odds7']:.2f}倍|{x['odds_races']}|{x['odds_coverage_pct']:.1f}%|")
     open(SUMMARY,'w',encoding='utf-8').write('\n'.join(L)+'\n');print('\n'.join(L),flush=True)
