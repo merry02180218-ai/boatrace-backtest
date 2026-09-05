@@ -1,0 +1,24 @@
+name: live-suminoe10-20260905-1head
+on:
+  push:
+    paths:
+      - 'live_suminoe10_20260905_1head.py'
+      - '.github/workflows/live-suminoe10-20260905-1head.yml'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy pandas scikit-learn requests beautifulsoup4
+      - run: python live_suminoe10_20260905_1head.py
+      - name: Commit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add live_suminoe10_20260905_1head.md
+          if ! git diff --cached --quiet; then git commit -m "Generate Suminoe10 live judgment"; git pull --rebase origin main; git push; fi
