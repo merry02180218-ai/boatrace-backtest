@@ -1,0 +1,27 @@
+name: v131-b1-a1-vs-a2-split
+on:
+  push:
+    paths:
+      - 'analyze_v131_1head_b1_a1_vs_a2_split.py'
+      - '.github/workflows/v131-b1-a1-vs-a2-split.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy pandas scikit-learn requests beautifulsoup4
+      - run: python analyze_v131_1head_b1_a1_vs_a2_split.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v131_1head_b1_a1_vs_a2_split.csv summary_v131_1head_b1_a1_vs_a2_split.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate v131 B1 A1-vs-A2 split results"
+            git pull --rebase origin main
+            git push
+          fi
