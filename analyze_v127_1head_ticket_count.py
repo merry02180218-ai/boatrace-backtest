@@ -1,6 +1,7 @@
 """v127: optimize 1-head ticket count 1..7 using frozen v110 order.
 Development Mar-May uses p1>=72 as in v110 validation; untouched Jun-Aug uses p109>=72.
 No odds in ranking/selection; Sep outcomes unused.
+Triggered after workflow creation.
 """
 from analyze_v110b_1head_role_tickets import read_csv,prepare_month,ff,ii
 SRC='analysis_v108_1head_feasibility.csv'; HEAD='analysis_v109_1head_monthly_walkforward.csv'
@@ -26,8 +27,6 @@ def main():
   for r in by[mo]: r['p109']=hp.get((r.get('date'),r.get('race_code')),'')
  dev=sum((by[m] for m in DEV),[]); test=sum((by[m] for m in TEST),[])
  d={n:metric(dev,n,'dev') for n in range(1,8)}
- # choose practical tradeoff on DEV: maximize geometric mean of hit-rate and ROI normalized by 7pt baselines,
- # with coverage >=70% of 7pt coverage. Tie -> fewer tickets.
  b7=d[7]; cand=[]
  for n,m in d.items():
   if b7[2] and m[2] >= .70*b7[2]:
@@ -41,7 +40,6 @@ def main():
  L += ['',f'選択点数 = **{chosen}点**','', '## Jun-Aug untouched holdout','|点数|R|3連単的中率|①頭時coverage|ROI|','|---:|---:|---:|---:|---:|']
  for n in range(1,8):
   m=t[n]; mark=' **←DEV選択**' if n==chosen else ''; L.append(f'|{n}|{m[0]}|{m[1]:.1f}%|{m[2]:.1f}%|{m[3]:.1f}%|{mark}')
- # monthly stability for chosen and 7pt baseline
  L += ['', '## Jun-Aug 月別安定性（選択点 vs 7点）','|月|点数|R|3連単的中率|coverage|ROI|','|---|---:|---:|---:|---:|---:|']
  for mo in TEST:
   for n in [chosen,7]:
