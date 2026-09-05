@@ -1,0 +1,27 @@
+name: v123-1head-live-feature-skip-filters
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'analyze_v123_1head_live_feature_skip_filters.py'
+      - '.github/workflows/v123-1head-live-feature-skip-filters.yml'
+  workflow_dispatch:
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run v123
+        run: python analyze_v123_1head_live_feature_skip_filters.py
+      - name: Commit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v123_1head_live_feature_skip_filters.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate v123 exhibition-feature skip validation"
+            git pull --rebase origin main
+            git push
+          fi
