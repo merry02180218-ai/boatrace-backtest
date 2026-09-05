@@ -4,7 +4,7 @@
 当日結果・払戻・オッズは読んでいない。LIVE_FINALはTKZ/STT/オリジナル展示が全て公開済みで、1号艇が展示1コースのレースだけ。
 展示未公開レースの neutral-pre は展示系を0.5に置いた「確認優先度」で、正式A/Sではない。展示公開後に必ず再計算する。
 
-- scan JST: **2026-09-05 12:00:59**
+- scan JST: **2026-09-05 12:02:13**
 - historical train: **44,549R** through 2026-08-31
 - prior ST-bias days fetched: **339**
 - today cards: **168R**
