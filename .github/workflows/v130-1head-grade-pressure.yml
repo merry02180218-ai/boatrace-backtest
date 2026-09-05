@@ -1,0 +1,27 @@
+name: v130-1head-grade-pressure
+on:
+  push:
+    paths:
+      - 'analyze_v130_1head_grade_pressure.py'
+      - '.github/workflows/v130-1head-grade-pressure.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy pandas scikit-learn requests beautifulsoup4
+      - run: python analyze_v130_1head_grade_pressure.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v130_1head_grade_pressure.csv summary_v130_1head_grade_pressure.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate v130 1-head grade pressure results"
+            git pull --rebase origin main
+            git push
+          fi
