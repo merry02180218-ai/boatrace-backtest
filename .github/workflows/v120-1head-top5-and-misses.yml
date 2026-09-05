@@ -1,0 +1,27 @@
+name: v120-1head-top5-and-misses
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analyze_v120_1head_top5_and_misses.py'
+      - '.github/workflows/v120-1head-top5-and-misses.yml'
+  workflow_dispatch:
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run v120
+        run: python analyze_v120_1head_top5_and_misses.py
+      - name: Commit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v120_1head_top5_and_misses.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate v120 top5 and miss diagnostics"
+            git pull --rebase origin main
+            git push
+          fi
