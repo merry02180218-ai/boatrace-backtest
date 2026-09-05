@@ -1,0 +1,27 @@
+name: v129-1head-composite-over2
+on:
+  push:
+    paths:
+      - 'analyze_v129_1head_composite_over2.py'
+      - '.github/workflows/v129-1head-composite-over2.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy pandas scikit-learn requests beautifulsoup4
+      - run: python analyze_v129_1head_composite_over2.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v129_1head_composite_over2.csv summary_v129_1head_composite_over2.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate v129 1-head composite over2 results"
+            git pull --rebase origin main
+            git push
+          fi
