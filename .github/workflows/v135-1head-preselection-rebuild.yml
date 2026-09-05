@@ -1,0 +1,29 @@
+name: v135-1head-preselection-rebuild
+on:
+  push:
+    paths:
+      - 'analyze_v135_1head_preselection_rebuild.py'
+      - '.github/workflows/v135-1head-preselection-rebuild.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy pandas scikit-learn requests beautifulsoup4
+      - run: python analyze_v135_1head_preselection_rebuild.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v135_1head_preselection_rebuild.csv summary_v135_1head_preselection_rebuild.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate v135 PRE selection rebuild results"
+            git pull --rebase origin main
+            git push
+          fi
