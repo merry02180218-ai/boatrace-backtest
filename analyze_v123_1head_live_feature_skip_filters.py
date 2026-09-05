@@ -29,14 +29,18 @@ def f(x):
     try:return float(x)
     except:return 0.0
 
+
 def i(x):
     try:return int(float(x))
     except:return 0
 
+
 def pct(a,b):return 100*a/b if b else 0.0
+
 
 def read(path):
     with open(path,encoding='utf-8-sig',newline='') as z:return list(csv.DictReader(z))
+
 
 def metric(rs):
     n=len(rs); h=sum(i(r.get('head_hit')) for r in rs)
@@ -44,14 +48,17 @@ def metric(rs):
     inv=n*700; ret=sum(i(r.get('payout100')) for r in hits)
     return {'n':n,'head':pct(h,n),'hit':pct(len(hits),n),'roi':pct(ret,inv)}
 
+
 def quantile(vals,q):
     a=sorted(vals)
     if not a:return 0.0
     x=(len(a)-1)*q; lo=int(x); hi=min(lo+1,len(a)-1); w=x-lo
     return a[lo]*(1-w)+a[hi]*w
 
+
 def apply(rows,feat,thr):
     return [r for r in rows if f(r.get(feat))>=thr]
+
 
 def main():
     det=read(SRC_DETAIL); full=read(SRC_FULL)
@@ -61,14 +68,12 @@ def main():
         if i(d.get('live_buy'))!=1:continue
         r=dict(key.get((d.get('date'),d.get('race_code')),{}) )
         if not r:continue
-        # settlement/rank values from v121 detail are authoritative for frozen v110 lambda=.50
         r.update({k:d.get(k,'') for k in ['date','month','race_code','head_hit','rank_l50','payout100','p109_live','entry_course']})
         rows.append(r)
     dev=[r for r in rows if r.get('month') in DEV]
     hold=[r for r in rows if r.get('month') in HOLD]
     baseD=metric(dev); baseH=metric(hold)
 
-    # Predeclared lower-tail skip fractions. Threshold itself learned only on DEV.
     qs=[.05,.10,.15,.20,.25,.30,.35,.40]
     candidates=[]
     for feat in FEATURES:
@@ -79,8 +84,6 @@ def main():
             kept=md['n']/baseD['n'] if baseD['n'] else 0
             candidates.append({'feat':feat,'q':q,'thr':thr,'m':md,'kept':kept})
 
-    # Conservative development selection: require >=60% races retained and BOTH hit-rate and ROI not worse than baseline.
-    # Rank by ROI improvement, then hit improvement, then more races, then smaller skip fraction.
     eligible=[c for c in candidates if c['kept']>=.60 and c['m']['roi']>=baseD['roi'] and c['m']['hit']>=baseD['hit']]
     chosen=max(eligible,key=lambda c:(c['m']['roi']-baseD['roi'],c['m']['hit']-baseD['hit'],c['m']['n'],-c['q'])) if eligible else None
 
