@@ -1,0 +1,27 @@
+name: v132-1head-replace-lowest-with-8th
+on:
+  push:
+    paths:
+      - 'analyze_v132_1head_replace_lowest_odds_with_8th.py'
+      - '.github/workflows/v132-1head-replace-lowest-with-8th.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy pandas scikit-learn requests beautifulsoup4
+      - run: python analyze_v132_1head_replace_lowest_odds_with_8th.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v132_1head_replace_lowest_odds_with_8th.csv summary_v132_1head_replace_lowest_odds_with_8th.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate v132 lowest-odds replacement results"
+            git pull --rebase origin main
+            git push
+          fi
