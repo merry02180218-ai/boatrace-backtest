@@ -1,0 +1,33 @@
+name: v116-20260905-1head-live
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'predict_v116_20260905_1head_live.py'
+      - '.github/workflows/v116-20260905-1head-live.yml'
+  workflow_dispatch:
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install numpy pandas scikit-learn
+      - name: Run Sep 5 v109 1-head live scan
+        run: python predict_v116_20260905_1head_live.py
+      - name: Commit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add prediction_v116_20260905_1head_live.csv summary_v116_20260905_1head_live.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate Sep 5 v109 1-head live scan"
+            git pull --rebase origin main
+            git push
+          fi
