@@ -1,0 +1,30 @@
+name: v136-1head-preselection-inner-threats
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analyze_v136_1head_preselection_inner_threats.py'
+      - '.github/workflows/v136-1head-preselection-inner-threats.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy pandas scikit-learn requests beautifulsoup4
+      - run: python analyze_v136_1head_preselection_inner_threats.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v136_1head_preselection_inner_threats.csv summary_v136_1head_preselection_inner_threats.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate v136 inner-threat PRE results"
+            git pull --rebase origin main
+            git push
+          fi
