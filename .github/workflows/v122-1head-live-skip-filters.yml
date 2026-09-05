@@ -1,0 +1,23 @@
+name: v122-1head-live-skip-filters
+on:
+  push:
+    branches: [main]
+    paths: ['analyze_v122_1head_live_skip_filters.py','.github/workflows/v122-1head-live-skip-filters.yml']
+  workflow_dispatch:
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - run: python analyze_v122_1head_live_skip_filters.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v122_1head_live_skip_filters.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate v122 live skip-filter validation"
+            git pull --rebase origin main
+            git push
+          fi
