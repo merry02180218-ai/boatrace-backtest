@@ -1,0 +1,30 @@
+name: live-tsu12-20260905-v51
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'live_tsu12_20260905_v51.py'
+      - '.github/workflows/live-tsu12-20260905-v51.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy scikit-learn requests beautifulsoup4
+      - name: Run live Tsu12 v51
+        run: python live_tsu12_20260905_v51.py
+      - name: Commit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add live_tsu12_20260905_v51.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate live Tsu12 v51 tickets"
+            git pull --rebase origin main
+            git push
+          fi
