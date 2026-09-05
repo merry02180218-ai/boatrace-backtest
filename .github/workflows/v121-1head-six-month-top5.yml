@@ -1,0 +1,33 @@
+name: v121-1head-six-month-top5
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analyze_v121_1head_six_month_top5.py'
+      - '.github/workflows/v121-1head-six-month-top5.yml'
+  workflow_dispatch:
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install numpy scikit-learn
+      - name: Run v121
+        run: python analyze_v121_1head_six_month_top5.py
+      - name: Commit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v121_1head_six_month_top5.md analysis_v121_1head_six_month_top5.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate v121 six-month top5 validation"
+            git pull --rebase origin main
+            git push
+          fi
