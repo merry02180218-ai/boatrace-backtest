@@ -1,0 +1,27 @@
+name: v119-1head-s-probability-bands
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analyze_v119_1head_s_probability_bands.py'
+      - '.github/workflows/v119-1head-s-probability-bands.yml'
+  workflow_dispatch:
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run probability band analysis
+        run: python analyze_v119_1head_s_probability_bands.py
+      - name: Commit result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v119_1head_s_probability_bands.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate v119 1-head S probability bands"
+            git pull --rebase origin main
+            git push
+          fi
