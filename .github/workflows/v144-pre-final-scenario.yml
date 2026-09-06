@@ -19,6 +19,9 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install numpy scikit-learn requests beautifulsoup4
+      - name: Compatibility fix
+        run: |
+          sed -i 's/v142\.fit_mode/v142.fit_model/g' analyze_v144_pre_final_scenario.py
       - run: python analyze_v144_pre_final_scenario.py
       - name: Commit results
         run: |
