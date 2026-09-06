@@ -25,3 +25,5 @@ jobs:
           git add analysis_v155_sep_shadow_direct_policy.csv summary_v155_sep_shadow_direct_policy.md
           git diff --cached --quiet || git commit -m 'Add v155 Sep shadow direct policy results'
           git push
+
+# trigger: 2026-09-06
