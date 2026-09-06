@@ -1,0 +1,27 @@
+name: v156 exhibition ST behavior audit
+on:
+  push:
+    paths:
+      - 'analyze_v156_exhibition_st_behavior.py'
+      - '.github/workflows/v156-exhibition-st-behavior.yml'
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy scikit-learn requests pandas beautifulsoup4
+      - name: Run v156
+        run: python analyze_v156_exhibition_st_behavior.py
+      - name: Commit results
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add analysis_v156_exhibition_st_behavior.csv analysis_v156_player_st_bias.csv summary_v156_exhibition_st_behavior.md
+          git diff --cached --quiet || git commit -m 'Add v156 exhibition ST behavior results'
+          git push
