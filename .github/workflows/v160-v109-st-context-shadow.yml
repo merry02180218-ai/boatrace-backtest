@@ -1,0 +1,33 @@
+name: v160 v109 ST context shadow
+
+on:
+  push:
+    paths:
+      - 'analyze_v160_v109_st_context_shadow.py'
+      - '.github/workflows/v160-v109-st-context-shadow.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-v160:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: pip install numpy scikit-learn pandas requests beautifulsoup4
+      - name: Run v160
+        run: python analyze_v160_v109_st_context_shadow.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v160_v109_st_context_shadow.csv summary_v160_v109_st_context_shadow.md
+          git diff --cached --quiet || git commit -m "Add v160 ST-context shadow results"
+          git push
