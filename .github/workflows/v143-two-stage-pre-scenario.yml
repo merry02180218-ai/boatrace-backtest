@@ -1,0 +1,28 @@
+name: v143 two-stage PRE scenario
+
+on:
+  push:
+    paths:
+      - 'analyze_v143_two_stage_pre_scenario.py'
+      - '.github/workflows/v143-two-stage-pre-scenario.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy scikit-learn requests beautifulsoup4
+      - run: python analyze_v143_two_stage_pre_scenario.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add summary_v143_two_stage_pre_scenario.md pred_v143_20260906_kiryu_scenario.csv
+          git diff --cached --quiet || git commit -m "Generate v143 two-stage PRE scenario results"
+          git push
