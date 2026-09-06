@@ -1,0 +1,27 @@
+name: v159 ST context interaction audit
+on:
+  push:
+    paths:
+      - 'analyze_v159_st_context_interactions.py'
+      - '.github/workflows/v159-st-context-interactions.yml'
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy scikit-learn requests pandas beautifulsoup4
+      - name: Run v159
+        run: python analyze_v159_st_context_interactions.py
+      - name: Commit results
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add analysis_v159_st_context_interactions.csv summary_v159_st_context_interactions.md
+          git diff --cached --quiet || git commit -m 'Add v159 ST context interaction results'
+          git push
