@@ -70,3 +70,5 @@ def main():
   w=csv.DictWriter(f,fieldnames=['variant','month','race_code','p','head_hit']);w.writeheader();w.writerows(rows)
  open(SUMMARY,'w',encoding='utf-8').write('\n'.join(L)+'\n');print('\n'.join(L))
 if __name__=='__main__':main()
+
+# trigger v154 dedicated workflow
