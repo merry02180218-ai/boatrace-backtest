@@ -1,0 +1,28 @@
+name: v142 balanced PRE scenario
+
+on:
+  push:
+    paths:
+      - 'analyze_v142_balanced_pre_scenario.py'
+      - '.github/workflows/v142-balanced-pre-scenario.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy scikit-learn requests beautifulsoup4
+      - run: python analyze_v142_balanced_pre_scenario.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v142_balanced_pre_scenario.csv summary_v142_balanced_pre_scenario.md pred_v142_20260906_kiryu_scenario.csv
+          git diff --cached --quiet || git commit -m "Generate v142 balanced PRE scenario results"
+          git push
