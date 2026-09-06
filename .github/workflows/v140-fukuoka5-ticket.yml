@@ -1,0 +1,17 @@
+name: v140 Fukuoka5 formal ticket
+on:
+  push:
+    paths:
+      - 'predict_v140_20260906_fukuoka5_ticket.py'
+      - '.github/workflows/v140-fukuoka5-ticket.yml'
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests beautifulsoup4 numpy scikit-learn
+      - run: python predict_v140_20260906_fukuoka5_ticket.py
