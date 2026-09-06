@@ -1,0 +1,25 @@
+name: v139 Sep6 Kiryu special
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'predict_v139_20260906_kiryu_special.py'
+      - '.github/workflows/v139-20260906-kiryu-special.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy scikit-learn requests beautifulsoup4
+      - run: python predict_v139_20260906_kiryu_special.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pred_v139_20260906_kiryu_special.csv prediction_v139_20260906_kiryu_special.md
+          git diff --cached --quiet || git commit -m "Generate v139 Sep 6 Kiryu special scan"
+          git push
