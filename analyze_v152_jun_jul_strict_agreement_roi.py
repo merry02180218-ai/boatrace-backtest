@@ -83,3 +83,4 @@ def main():
     if bad:L.append('- 未settled内訳: '+', '.join(f'{k}={v}' for k,v in bad.items()))
     open(SUMMARY,'w',encoding='utf-8').write('\n'.join(L)+'\n');print('\n'.join(L))
 if __name__=='__main__':main()
+# retrigger v152 workflow after workflow file is present on default branch
