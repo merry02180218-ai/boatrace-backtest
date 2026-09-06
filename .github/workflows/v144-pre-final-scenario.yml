@@ -1,0 +1,29 @@
+name: v144 PRE FINAL scenario
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v144_pre_final_scenario.py'
+      - '.github/workflows/v144-pre-final-scenario.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy scikit-learn requests beautifulsoup4
+      - run: python analyze_v144_pre_final_scenario.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v144_pre_final_scenario.csv summary_v144_pre_final_scenario.md pred_v144_20260906_kiryu_final.csv
+          git diff --cached --quiet || git commit -m "Generate v144 PRE FINAL scenario results"
+          git push
