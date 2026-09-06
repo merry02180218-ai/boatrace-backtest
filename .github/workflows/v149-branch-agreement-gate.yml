@@ -1,0 +1,26 @@
+name: v149 branch agreement gate
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v149_branch_agreement_gate.py'
+      - '.github/workflows/v149-branch-agreement-gate.yml'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run v149
+        run: python analyze_v149_branch_agreement_gate.py
+      - name: Commit results
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add analysis_v149_branch_agreement_gate.csv summary_v149_branch_agreement_gate.md
+          git diff --cached --quiet || git commit -m 'Add v149 branch agreement gate results'
+          git push
