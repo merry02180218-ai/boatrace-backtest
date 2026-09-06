@@ -1,0 +1,26 @@
+name: v154 direct feature value audit
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v154_direct_feature_value_audit.py'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy scikit-learn
+      - name: Run v154
+        run: python analyze_v154_direct_feature_value_audit.py
+      - name: Commit results
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add analysis_v154_direct_feature_value_audit.csv summary_v154_direct_feature_value_audit.md
+          git diff --cached --quiet || git commit -m 'Add v154 direct feature value audit results'
+          git push
