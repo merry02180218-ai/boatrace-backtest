@@ -31,3 +31,4 @@ jobs:
           git add analysis_v162_1head_pair_direct.csv summary_v162_1head_pair_direct.md
           git diff --cached --quiet || git commit -m "Add v162 direct pair results"
           git push
+# trigger: 2026-09-07
