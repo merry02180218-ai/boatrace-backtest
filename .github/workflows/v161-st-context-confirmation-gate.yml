@@ -1,0 +1,29 @@
+name: v161 ST context confirmation gate
+
+on:
+  push:
+    paths:
+      - 'analyze_v161_st_context_confirmation_gate.py'
+      - '.github/workflows/v161-st-context-confirmation-gate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-v161:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run v161
+        run: python analyze_v161_st_context_confirmation_gate.py
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add summary_v161_st_context_confirmation_gate.md
+          git diff --cached --quiet || git commit -m "Add v161 ST-context confirmation results"
+          git push
