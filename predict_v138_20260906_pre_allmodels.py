@@ -1,5 +1,5 @@
 from __future__ import annotations
-import csv
+import csv, re
 from collections import defaultdict, Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, timedelta
@@ -26,6 +26,10 @@ v107.HD=HD
 
 def read_csv(path):
     with open(path,encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
+
+def parse_rno(v):
+    m=re.search(r'\d+',str(v or ''))
+    return int(m.group()) if m else 0
 
 def legacy_row_from_x(x, venue):
     z=x[1]
@@ -103,6 +107,10 @@ def non1_scan():
     return active,races,errs,found,total,cand
 
 def main():
+    # Fetch official race list first so 1-head PRE can inherit canonical venue/deadline.
+    active,races,errs,found,total,cand=non1_scan()
+    official={(str(r['jcd']).zfill(2),int(r['rno'])):r for r in races}
+
     # 1-head Legacy PRE top5/day; pre-exhibition current card only.
     model=fit_legacy(); cur=current_cards()
     one=[]
@@ -110,12 +118,14 @@ def main():
         X=np.asarray([legacy_row_from_x(x,r.get('レース場コード','')) for r,x in cur],float)
         ps=model.predict_proba(X)[:,1]
         for (r,x),p in zip(cur,ps):
-            one.append({'venue':r.get('レース場名','') or r.get('レース場コード',''),'jcd':str(r.get('レース場コード','')).zfill(2),
-                        'race':ii(r.get('レース回')),'deadline':r.get('締切予定時刻',''),'head':1,'routes':'1頭 Legacy PRE',
+            jcd=str(r.get('レース場コード','')).zfill(2)
+            rno=parse_rno(r.get('レース回'))
+            off=official.get((jcd,rno),{})
+            one.append({'venue':off.get('venue',v107.ALL_VENUES.get(jcd,jcd)),'jcd':jcd,
+                        'race':rno,'deadline':off.get('deadline',''),'head':1,'routes':'1頭 Legacy PRE',
                         'name':x[1]['name'],'grade':x[1]['grade'],'struct_index':100*float(p),'min_margin':'','shadow':'v109/v110'})
         one=sorted(one,key=lambda z:(-z['struct_index'],z['jcd'],z['race']))[:5]
 
-    active,races,errs,found,total,cand=non1_scan()
     for z in cand: z['shadow']='v100' if z['head']==3 else ('v106' if z['head']==4 else '-')
     allc=one+cand
     allc.sort(key=lambda z:(z.get('deadline','') or '99:99',z['jcd'],z['race'],z['head']))
