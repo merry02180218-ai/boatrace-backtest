@@ -1,0 +1,25 @@
+name: v138 Sep6 all-model PRE
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'predict_v138_20260906_pre_allmodels.py'
+      - '.github/workflows/v138-20260906-pre-allmodels.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy scikit-learn requests beautifulsoup4
+      - run: python predict_v138_20260906_pre_allmodels.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pred_v138_20260906_pre_allmodels.csv prediction_v138_20260906_pre_allmodels.md
+          git diff --cached --quiet || git commit -m "Generate v138 Sep 6 all-model PRE candidates"
+          git push
