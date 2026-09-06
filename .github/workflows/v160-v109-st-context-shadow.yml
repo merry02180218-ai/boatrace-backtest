@@ -31,3 +31,5 @@ jobs:
           git add analysis_v160_v109_st_context_shadow.csv summary_v160_v109_st_context_shadow.md
           git diff --cached --quiet || git commit -m "Add v160 ST-context shadow results"
           git push
+
+# trigger: 2026-09-07
