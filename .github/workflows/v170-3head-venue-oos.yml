@@ -1,0 +1,27 @@
+name: v170 3head venue OOS
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v170_3head_venue_oos.py'
+      - '.github/workflows/v170-3head-venue-oos.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy scikit-learn
+      - name: Run v170
+        run: python analyze_v170_3head_venue_oos.py
+      - name: Commit outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v170_3head_venue_oos.csv summary_v170_3head_venue_oos.md
+          git diff --cached --quiet || git commit -m "Add v170 3-head venue OOS results"
+          git push
