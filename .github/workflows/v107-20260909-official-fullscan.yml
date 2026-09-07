@@ -1,0 +1,34 @@
+name: v107 2026-09-09 official fullscan
+
+on:
+  push:
+    paths:
+      - 'predict_v107_20260909_official_fullscan.py'
+      - '.github/workflows/v107-20260909-official-fullscan.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+      - name: Run official fullscan
+        run: python predict_v107_20260909_official_fullscan.py
+      - name: Commit scan outputs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add pred_v107_20260909_official_fullscan.csv prediction_v107_20260909_official_fullscan.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Add 2026-09-09 official structural pre scan results'
+          git pull --rebase origin main
+          git push origin HEAD:main
