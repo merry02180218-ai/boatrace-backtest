@@ -1,0 +1,40 @@
+name: fill missing od3 official parallel
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fill-missing-od3-official-parallel.yml'
+      - 'tools/fill_missing_od3_official_parallel.py'
+  workflow_dispatch:
+    inputs:
+      workers:
+        description: 'parallel race requests'
+        required: false
+        default: '32'
+
+permissions:
+  contents: write
+
+jobs:
+  fill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests
+      - name: Fill missing od3 from official historical closing pages
+        run: python tools/fill_missing_od3_official_parallel.py '${{ inputs.workers || '32' }}'
+      - name: Commit official fallback and coverage manifest
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/official_closing_odds3t archive_od3_official_fill_manifest.csv
+          git diff --cached --quiet && exit 0
+          git commit -m "Fill missing od3 with official closing odds"
+          git pull --rebase --autostash origin main
+          git push
