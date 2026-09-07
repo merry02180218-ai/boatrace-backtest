@@ -1,0 +1,29 @@
+name: v177 3head historical web enrichment
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v177_3head_historical_web_enrichment.py'
+      - '.github/workflows/v177-3head-historical-web-enrichment.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy scikit-learn
+      - name: Run v177
+        run: python analyze_v177_3head_historical_web_enrichment.py
+      - name: Commit outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v177_3head_historical_web_enrichment.csv summary_v177_3head_historical_web_enrichment.md
+          git diff --cached --quiet || git commit -m "Add v177 historical web enrichment results"
+          git pull --rebase origin main
+          git push
