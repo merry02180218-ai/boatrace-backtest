@@ -1,0 +1,27 @@
+name: v174 3head development type diagnostics
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v174_3head_development_type_diagnostics.py'
+      - '.github/workflows/v174-3head-development-type-diagnostics.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy scikit-learn
+      - name: Run v174
+        run: python analyze_v174_3head_development_type_diagnostics.py
+      - name: Commit outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v174_3head_development_type_diagnostics.csv summary_v174_3head_development_type_diagnostics.md
+          git diff --cached --quiet || git commit -m "Add v174 development-type diagnostics results"
+          git push
