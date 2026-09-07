@@ -3,7 +3,7 @@
 BOAT RACE公式 racelist を直接取得し、現行v116/v109モデルへ通した。モデル変更なし。
 当日結果・払戻・当日オッズ・当日展示は使用していない。neutral-preは正式A/S/BUYではなく、展示後再計算の優先候補。
 
-- scan JST: **2026-09-08 01:01:30**
+- scan JST: **2026-09-08 01:08:49**
 - active venues: **11** (桐生, 江戸川, 平和島, 蒲郡, 津, 三国, びわこ, 尼崎, 鳴門, 児島, 大村)
 - official races: **132/132R**
 - active-race fetch errors: **0R**
