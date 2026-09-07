@@ -1,6 +1,9 @@
 name: archive official closing 3T odds
 
 on:
+  push:
+    paths:
+      - '.github/workflows/archive-official-closing-odds3t.yml'
   workflow_dispatch:
     inputs:
       start_date:
@@ -27,13 +30,13 @@ jobs:
         with:
           python-version: '3.11'
       - name: Fetch official closing trifecta odds
-        run: python tools/fetch_official_closing_odds3t.py '${{ inputs.start_date }}' '${{ inputs.end_date }}'
+        run: python tools/fetch_official_closing_odds3t.py '${{ inputs.start_date || '2025-10-01' }}' '${{ inputs.end_date || '2026-08-31' }}'
       - name: Commit archive
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add data/official_closing_odds3t
           git diff --cached --quiet && exit 0
-          git commit -m "Archive official closing 3T odds ${{ inputs.start_date }} to ${{ inputs.end_date }}"
+          git commit -m "Archive official closing 3T odds ${{ inputs.start_date || '2025-10-01' }} to ${{ inputs.end_date || '2026-08-31' }}"
           git pull --rebase --autostash origin main
           git push
