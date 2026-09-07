@@ -5,6 +5,8 @@ directly from boatrace.jp because BoatraceCSV's same-day race_cards can lag arou
 Current-race exhibition/result/payout/odds are NOT used. Same-frame waku priors are taken
 only from dates <= 2026-09-07; missing values fall back to current national figures/defaults.
 The output is neutral-pre confirmation PRIORITY only, never formal A/S/BUY.
+
+Trigger refresh: 2026-09-08 JST.
 """
 from __future__ import annotations
 import csv, io, re, requests
