@@ -1,0 +1,31 @@
+name: v184 3head style extended OOS
+
+on:
+  push:
+    paths:
+      - 'analyze_v184_3head_style_extended_oos.py'
+      - '.github/workflows/v184-3head-style-extended-oos.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests
+      - run: python analyze_v184_3head_style_extended_oos.py
+      - name: Commit outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v184_3head_style_extended_oos.csv summary_v184_3head_style_extended_oos.md
+          git diff --cached --quiet || git commit -m 'Add v184 extended historical style OOS results'
+          git pull --rebase origin main
+          git push
