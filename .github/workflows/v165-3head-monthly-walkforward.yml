@@ -1,0 +1,34 @@
+name: v165 3head monthly walk-forward
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v165_3head_monthly_walkforward.py'
+      - '.github/workflows/v165-3head-monthly-walkforward.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn
+      - run: python analyze_v165_3head_monthly_walkforward.py
+      - name: Commit outputs
+        if: always()
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v165_3head_monthly_walkforward.csv summary_v165_3head_monthly_walkforward.md analysis_v165_3head_schema.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m 'Generate v165 3-head walk-forward results'
+            git push
+          fi
