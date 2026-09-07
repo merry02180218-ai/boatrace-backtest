@@ -40,3 +40,5 @@ if src_md.exists():
     txt=src_md.read_text(encoding='utf-8').replace('2026-09-05','2026-09-09').replace('9/4以前','9/8以前')
     out_md.write_text(txt,encoding='utf-8')
     src_md.unlink(missing_ok=True)
+
+# trigger dedicated workflow after workflow file exists
