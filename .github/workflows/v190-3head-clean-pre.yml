@@ -1,0 +1,27 @@
+name: v190 3-head clean PRE
+on:
+  push:
+    paths:
+      - analyze_v190_3head_clean_pre_monitor.py
+      - .github/workflows/v190-3head-clean-pre.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scikit-learn requests beautifulsoup4
+      - name: Run v190 validation and Sep9 scan
+        run: python analyze_v190_3head_clean_pre_monitor.py
+      - name: Commit outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v190_3head_clean_pre_validation.csv prediction_v190_20260909_3head_pre_monitor.csv summary_v190_3head_clean_pre_monitor.md
+          git diff --cached --quiet || git commit -m "Add v190 clean PRE results"
+          git push
