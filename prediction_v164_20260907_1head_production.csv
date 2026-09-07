@@ -1,0 +1,6 @@
+﻿pre_rank,pre_p,race_code,venue,venue_name,race,deadline,boat1_name,status,entry_status,p109,decision,v162_top7
+5,0.81517023,202609070910,09,津,10,15:22,桐生 順平,PENDING_EXHIBITION,missing,,WAIT,
+1,0.83566328,202609070911,09,津,11,15:57,関 浩哉,PENDING_EXHIBITION,missing,,WAIT,
+4,0.81727065,202609072404,24,大村,4,16:50,飛田 江己,PENDING_EXHIBITION,missing,,WAIT,
+2,0.82929765,202609072407,24,大村,7,18:13,久田 敏之,PENDING_EXHIBITION,missing,,WAIT,
+3,0.82207028,202609072412,24,大村,12,20:45,毒島 誠,PENDING_EXHIBITION,missing,,WAIT,
