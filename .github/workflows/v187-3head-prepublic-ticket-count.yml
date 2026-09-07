@@ -1,0 +1,31 @@
+name: v187 3head prepublic ticket count
+
+on:
+  push:
+    paths:
+      - 'analyze_v187_3head_prepublic_ticket_count.py'
+      - '.github/workflows/v187-3head-prepublic-ticket-count.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  backtest:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests
+      - run: python analyze_v187_3head_prepublic_ticket_count.py
+      - name: Commit outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v187_3head_prepublic_ticket_count.csv summary_v187_3head_prepublic_ticket_count.md
+          git diff --cached --quiet || git commit -m 'Add v187 prepublic ticket results'
+          git pull --rebase origin main
+          git push
