@@ -1,0 +1,42 @@
+name: archive BoatraceCSV od3 fast
+
+on:
+  push:
+    paths:
+      - 'tools/archive_boatracecsv_od3_fast.py'
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: 'YYYY-MM-DD'
+        required: true
+        default: '2025-10-01'
+      end_date:
+        description: 'YYYY-MM-DD'
+        required: true
+        default: '2026-08-31'
+
+permissions:
+  contents: write
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download daily od3 CSVs in parallel
+        run: python tools/archive_boatracecsv_od3_fast.py '${{ inputs.start_date || '2025-10-01' }}' '${{ inputs.end_date || '2026-08-31' }}'
+      - name: Commit archive and manifest
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/previews/od3 archive_boatracecsv_od3_manifest.csv
+          git diff --cached --quiet && exit 0
+          git commit -m "Archive BoatraceCSV od3 ${{ inputs.start_date || '2025-10-01' }} to ${{ inputs.end_date || '2026-08-31' }}"
+          git pull --rebase --autostash origin main
+          git push
