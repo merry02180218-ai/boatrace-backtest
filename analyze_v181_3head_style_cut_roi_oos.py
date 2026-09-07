@@ -27,7 +27,7 @@ def build_probs():
                 tr[c]=pd.to_numeric(tr[c],errors='coerce');te[c]=pd.to_numeric(te[c],errors='coerce');nums.append(c)
         cats=[vc] if vc and vc not in nums else [];mo=model(nums,cats);mo.fit(tr[nums+cats],tr._y.astype(int));p=mo.predict_proba(te[nums+cats])[:,1]
         for ix,pr in zip(te.index,p):out[int(ix)]=float(pr)
-    return src,out,cov
+    return raw,out,cov
 
 def stat(rs,cut):
     q=[r for r in rs if ff(r.get('p3style'))>=cut];h=[r for r in q if combo(r.get('actual_combo'))[:1]==[3]]
@@ -38,7 +38,6 @@ def stat(rs,cut):
 def main():
     src,p,cov=build_probs();lam,_=choose(src);allrows=[]
     for mon in VAL+TEST:allrows+=score_month(src,mon,lam)
-    # score_month rows retain date/race_code; map source identity through same keys
     keyidx={(r['date'],r.get('race_code')):i for i,r in enumerate(src)}
     for r in allrows:
         i=keyidx.get((r['date'],r.get('race_code')),-1);r['p3style']=p.get(i,'')
@@ -46,12 +45,11 @@ def main():
     tune=[]
     for c in CUTS:
         n,hr,hit,cv,roi=stat(val,c);tune.append((c,n,hr,hit,cv,roi))
-    # Primary objective: ROI, then hit, head rate; require useful sample and >=30% head rate.
     eligible=[x for x in tune if x[1]>=150 and x[2]>=30.0]
     if not eligible: eligible=[x for x in tune if x[1]>=100]
     cut=max(eligible,key=lambda x:(x[5],x[3],x[2],x[1]))[0]
     test=[r for r in allrows if r.get('v166_month') in TEST]
-    fs=sorted(set().union(*(r.keys() for r in test)));open(OUT,'w',encoding='utf-8-sig',newline='').write('')
+    fs=sorted(set().union(*(r.keys() for r in test)))
     with open(OUT,'w',encoding='utf-8-sig',newline='') as f:w=csv.DictWriter(f,fieldnames=fs);w.writeheader();w.writerows(test)
     L=['# v181 v180-style cut固定 → v166 top10 ROI OOS','', '- style p3 cutはMar-Mayだけで選択。Jun-Augは完全固定OOS。',f'- v166 pair lambda = {lam:.2f}（v166ルールでMar-May選択）',f"- reconstruction matched: {cov['matched_src']}",'','## Mar-May cut tuning','|cut|R|③頭率|top10 hit|③頭coverage|ROI|','|---:|---:|---:|---:|---:|---:|']
     for x in tune:L.append(f'|{x[0]:.3f}|{x[1]}|{x[2]:.2f}%|{x[3]:.2f}%|{x[4]:.2f}%|{x[5]:.1f}%|')
