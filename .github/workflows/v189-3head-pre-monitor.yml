@@ -1,0 +1,32 @@
+name: v189 3-head PRE monitor
+
+on:
+  push:
+    paths:
+      - 'analyze_v189_3head_pre_monitor.py'
+      - '.github/workflows/v189-3head-pre-monitor.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scikit-learn requests beautifulsoup4
+      - name: Run v189 PRE validation and Sep9 scan
+        run: python analyze_v189_3head_pre_monitor.py
+      - name: Commit outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v189_3head_pre_monitor_validation.csv prediction_v189_20260909_3head_pre_monitor.csv summary_v189_3head_pre_monitor.md
+          git diff --cached --quiet || git commit -m "Run v189 3-head PRE monitor"
+          git pull --rebase
+          git push
