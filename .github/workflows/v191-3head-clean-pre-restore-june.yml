@@ -1,0 +1,27 @@
+name: v191 3-head clean PRE restore June
+on:
+  push:
+    paths:
+      - analyze_v191_3head_clean_pre_restore_june.py
+      - .github/workflows/v191-3head-clean-pre-restore-june.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scikit-learn requests beautifulsoup4
+      - name: Run v191 June-restored validation and Sep9 scan
+        run: python analyze_v191_3head_clean_pre_restore_june.py
+      - name: Commit outputs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v191_3head_clean_pre_validation.csv prediction_v191_20260909_3head_pre_monitor.csv summary_v191_3head_clean_pre_restore_june.md
+          git diff --cached --quiet || git commit -m "Add v191 June-restored clean PRE results"
+          git push
