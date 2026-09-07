@@ -32,7 +32,13 @@ jobs:
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add analysis_v188_v180_v166_monthly_trifecta.csv summary_v188_v180_v166_monthly_trifecta.md
-          git diff --cached --quiet && exit 0
+          if git diff --cached --quiet; then
+            echo 'No v188 output changes to commit'
+            exit 0
+          fi
           git commit -m 'Add v188 monthly trifecta results'
+          # v180/v166 regeneration also modifies their derived outputs. They are dependencies
+          # for this run only and are intentionally not part of the v188 result commit.
+          git reset --hard HEAD
           git pull --rebase origin main
           git push
