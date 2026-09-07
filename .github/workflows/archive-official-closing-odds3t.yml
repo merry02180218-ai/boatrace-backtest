@@ -1,0 +1,39 @@
+name: archive official closing 3T odds
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_date:
+        description: 'YYYY-MM-DD'
+        required: true
+        default: '2025-10-01'
+      end_date:
+        description: 'YYYY-MM-DD'
+        required: true
+        default: '2026-08-31'
+
+permissions:
+  contents: write
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fetch official closing trifecta odds
+        run: python tools/fetch_official_closing_odds3t.py '${{ inputs.start_date }}' '${{ inputs.end_date }}'
+      - name: Commit archive
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/official_closing_odds3t
+          git diff --cached --quiet && exit 0
+          git commit -m "Archive official closing 3T odds ${{ inputs.start_date }} to ${{ inputs.end_date }}"
+          git pull --rebase --autostash origin main
+          git push
