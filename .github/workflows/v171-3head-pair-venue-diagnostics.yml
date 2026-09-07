@@ -1,0 +1,27 @@
+name: v171 3head pair venue diagnostics
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v171_3head_pair_venue_diagnostics.py'
+      - '.github/workflows/v171-3head-pair-venue-diagnostics.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy scikit-learn
+      - name: Run v171
+        run: python analyze_v171_3head_pair_venue_diagnostics.py
+      - name: Commit outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v171_3head_pair_venue_diagnostics.csv summary_v171_3head_pair_venue_diagnostics.md
+          git diff --cached --quiet || git commit -m "Add v171 pair venue diagnostics results"
+          git push
