@@ -1,0 +1,28 @@
+name: v180 3head style headprob
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v180_3head_style_headprob.py'
+      - '.github/workflows/v180-3head-style-headprob.yml'
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scikit-learn
+      - name: Run v180
+        run: python analyze_v180_3head_style_headprob.py
+      - name: Commit outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v180_3head_style_headprob.csv summary_v180_3head_style_headprob.md
+          git diff --cached --quiet || git commit -m 'Add v180 3head style head probability results'
+          git push
