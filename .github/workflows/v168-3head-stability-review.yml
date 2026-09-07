@@ -1,0 +1,27 @@
+name: v168 3head stability review
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v168_3head_stability_review.py'
+      - '.github/workflows/v168-3head-stability-review.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy scikit-learn
+      - name: Run v168
+        run: python analyze_v168_3head_stability_review.py
+      - name: Commit outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v168_3head_stability_review.csv summary_v168_3head_stability_review.md
+          git diff --cached --quiet || git commit -m "Add v168 3-head stability review results"
+          git push
