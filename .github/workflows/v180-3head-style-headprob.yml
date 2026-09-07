@@ -26,3 +26,4 @@ jobs:
           git add analysis_v180_3head_style_headprob.csv summary_v180_3head_style_headprob.md
           git diff --cached --quiet || git commit -m 'Add v180 3head style head probability results'
           git push
+# retrigger 2026-09-07
