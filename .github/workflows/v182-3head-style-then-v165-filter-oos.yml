@@ -1,0 +1,28 @@
+name: v182 3head style then v165 filter OOS
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v182_3head_style_then_v165_filter_oos.py'
+      - '.github/workflows/v182-3head-style-then-v165-filter-oos.yml'
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scikit-learn
+      - name: Run v182
+        run: python analyze_v182_3head_style_then_v165_filter_oos.py
+      - name: Commit outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v182_3head_style_then_v165_filter_oos.csv summary_v182_3head_style_then_v165_filter_oos.md
+          git diff --cached --quiet || git commit -m 'Add v182 style then v165 filter OOS results'
+          git push
