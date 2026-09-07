@@ -13,7 +13,7 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import roc_auc_score,brier_score_loss,log_loss
 from analyze_v165_3head_monthly_walkforward import load,target,feats,model,pc
-from analyze_v166_3head_pair_direct import read,ii,combo
+from analyze_v166_3head_pair_direct import read
 from analyze_v177_3head_historical_web_enrichment import reconstruct
 
 ROOT=Path(__file__).resolve().parent
@@ -31,11 +31,11 @@ def main():
     src,df=load(); dc=pc(df,['date','race_date','ymd']); vc=pc(df,['venue','jcd','stadium','place'])
     if not dc: raise SystemExit('no date col')
     y,td=target(df); basefs=feats(df)
-    # v177 reconstruct is keyed to v108 source rows; v165 currently loads that same source first.
     raw=read(str(src)); extra,cov=reconstruct(raw)
     if len(extra)!=len(df): raise SystemExit(f'reconstruct length mismatch {len(extra)} != {len(df)}')
     d=df.copy(); d['_date']=pd.to_datetime(d[dc].astype(str),errors='coerce'); d['_y']=y
-    for k in STYLE:d[k]=[float(e.get(k,0.0)) for e in extra]
+    for k in STYLE:
+        d[k]=[float(extra[i].get(k,0.0)) for i in range(len(df))]
     d=d[d._date.notna()&d._y.notna()].copy()
     rows=[]; metrics=[]
     for mon in MONTHS:
