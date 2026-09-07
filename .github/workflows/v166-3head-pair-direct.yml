@@ -1,0 +1,32 @@
+name: v166 3head direct pair model
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v166_3head_pair_direct.py'
+      - '.github/workflows/v166-3head-pair-direct.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn
+      - run: python analyze_v166_3head_pair_direct.py
+      - name: Commit outputs
+        if: always()
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v166_3head_pair_schema.json summary_v166_3head_pair_direct.md 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m 'Generate v166 3-head pair schema audit'
+            git push
+          fi
