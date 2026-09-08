@@ -56,7 +56,6 @@ def main():
     src=v166.read(str(SRC))
     odds=v205.load_odds();oi=odds.set_index('race_code',drop=False)
     rows=[];diag={}
-    # Build every month with strict prior-only models for every lambda/point candidate.
     for mon in MONTHS:
         first=pd.Timestamp(mon+'-01');end=first+pd.offsets.MonthBegin(1)
         tr=d[d._date<first].copy();te=d[(d._date>=first)&(d._date<end)].copy()
@@ -93,7 +92,6 @@ def main():
     z=pd.DataFrame(rows)
     if z.empty:raise SystemExit('no rows')
 
-    # Strict adaptive choice: target month chooses only from prior audit months.
     picks=[]
     for i,mon in enumerate(MONTHS):
         if i==0:
@@ -105,9 +103,7 @@ def main():
                 for n0 in POINTS:
                     g=z[(z.month.isin(prior))&(z['lambda']==lam0)&(z.points==n0)]
                     mm=mtr(g)
-                    # Need meaningful history; Dec alone is allowed for Jan, later naturally grows.
                     if mm['R']<30:continue
-                    # Secondary stability: worst prior monthly ROI.
                     worst=min((mtr(g[g.month==m])['roi'] for m in prior if len(g[g.month==m])),default=-1e9)
                     cand.append((mm['roi'],worst,-n0,lam0,n0,mm['R']))
             if not cand:lam,n=1.0,10;reason='fallback'
@@ -120,7 +116,6 @@ def main():
     z.to_csv(OUT,index=False)
     p=pd.DataFrame(picks)
 
-    # Fixed lambda=1 Top10 diagnostic monthly table for stage decomposition.
     base=z[(z['lambda']==1.0)&(z.points==10)]
     L=['# v215 strict walk-forward overfit audit','',
        '- v165: monthly prior-only fit, fixed BUY threshold p3head>=0.30',
@@ -134,7 +129,7 @@ def main():
         L.append(f"|{mon}|{diag.get(mon,{}).get('candidates',0)}|{mm['R']}|{mm['head']:.2f}%|{mm['cov']:.2f}%|{mm['hit']:.2f}%|{mm['comp']:.3f}|{mm['roi']:.1f}%|{mm['profit']:+.0f}|")
     L += ['','## Strict walk-forward selected opponent strategy','|target month|lambda|points|settled|3-head rate|coverage|hit|avg comp|ROI|profit|','|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|']
     for _,r in p.iterrows():
-        L.append(f"|{r.month}|{r.selected_lambda:.2f}|{int(r.selected_points)}|{int(r.R)}|{r.head:.2f}%|{r.cov:.2f}%|{r.hit:.2f}%|{r.comp:.3f}|{r.roi:.1f}%|{r.profit:+.0f}|")
+        L.append(f"|{r['month']}|{float(r['selected_lambda']):.2f}|{int(r['selected_points'])}|{int(r['R'])}|{float(r['head']):.2f}%|{float(r['cov']):.2f}%|{float(r['hit']):.2f}%|{float(r['comp']):.3f}|{float(r['roi']):.1f}%|{float(r['profit']):+.0f}|")
     oos=p[p.month!='2025-12'];cost=float(oos.cost.sum());ret=float(oos.ret.sum())
     L += ['','## Adaptive OOS aggregate Jan-Aug',
           f"- races: **{int(oos.R.sum())}**",
@@ -142,7 +137,6 @@ def main():
           f"- return: **{ret:.0f} yen**",
           f"- ROI: **{100*ret/cost if cost else 0:.1f}%**",
           f"- profit: **{ret-cost:+.0f} yen**",'']
-    # Early vs late fixed Top10 regime split.
     early=base[base.month.isin(['2025-12','2026-01','2026-02','2026-03','2026-04','2026-05','2026-06'])]
     late=base[base.month.isin(['2026-07','2026-08'])]
     me,ml=mtr(early),mtr(late)
