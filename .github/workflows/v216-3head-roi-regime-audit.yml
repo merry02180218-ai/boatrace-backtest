@@ -1,0 +1,29 @@
+name: v216 3head ROI regime audit
+
+on:
+  push:
+    paths:
+      - 'analyze_v216_3head_roi_regime_audit.py'
+      - '.github/workflows/v216-3head-roi-regime-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy
+      - run: python analyze_v216_3head_roi_regime_audit.py
+      - name: Commit results
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v216_3head_roi_regime_audit.csv summary_v216_3head_roi_regime_audit.md
+          git diff --cached --quiet || git commit -m 'Add v216 ROI regime audit results'
+          git push
