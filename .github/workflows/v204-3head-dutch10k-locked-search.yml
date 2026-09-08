@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'analyze_v204_3head_dutch10k_locked_search.py'
+      - '.github/workflows/v204-3head-dutch10k-locked-search.yml'
 jobs:
   run:
     runs-on: ubuntu-latest
