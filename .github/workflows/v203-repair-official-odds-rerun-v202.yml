@@ -1,0 +1,30 @@
+name: v203 repair official odds and rerun v202
+on:
+  push:
+    paths:
+      - 'tools/repair_official_closing_odds3t_order.py'
+      - '.github/workflows/v203-repair-official-odds-rerun-v202.yml'
+  workflow_dispatch:
+permissions: {contents: write}
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install pandas numpy scikit-learn
+      - name: Repair legacy official odds combo mapping
+        run: python tools/repair_official_closing_odds3t_order.py
+      - name: Rerun audited Dutch ROI
+        run: python analyze_v202_3head_dutch10k_roi.py
+      - name: Commit repaired odds and audited v202 results
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/official_closing_odds3t analysis_v202_3head_dutch10k_roi.csv summary_v202_3head_dutch10k_roi.md
+          git diff --cached --quiet || git commit -m 'Repair official 3T odds mapping and rerun v202'
+          git pull --rebase --autostash origin main
+          git push
