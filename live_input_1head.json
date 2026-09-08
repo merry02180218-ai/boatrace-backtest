@@ -1,12 +1,12 @@
 {
   "date": "2026-09-08",
-  "venue": "09",
-  "race": 10,
+  "venue": "13",
+  "race": 11,
   "courses": [1, 2, 3, 4, 5, 6],
-  "exhibition": [6.71, 6.76, 6.82, 6.83, 6.83, 6.83],
-  "lap": [37.60, 37.54, 38.19, 37.87, 37.38, 37.74],
-  "turn": [4.43, 4.40, 4.56, 4.69, 4.69, 4.77],
-  "straight": [8.68, 8.77, 8.83, 8.53, 8.37, 8.48],
-  "st": [0.06, -0.01, 0.03, 0.04, 0.20, 0.16],
-  "source": "manual screenshot input before deadline; boat2 F.01 encoded as -0.01"
+  "exhibition": [6.92, 7.00, 7.03, 7.01, 6.97, 7.00],
+  "lap": [37.47, 38.00, 37.43, 38.01, 37.84, 37.86],
+  "turn": [11.61, 11.84, 11.66, 11.94, 11.85, 11.89],
+  "straight": [null, null, null, null, null, null],
+  "st": [0.18, 0.07, 0.05, 0.12, 0.03, 0.07],
+  "source": "manual screenshot input before deadline; Amagasaki straight original exhibition not provided"
 }
