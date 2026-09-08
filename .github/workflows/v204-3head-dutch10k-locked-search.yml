@@ -1,0 +1,26 @@
+name: v204 3head audited Dutch10k locked search
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v204_3head_dutch10k_locked_search.py'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy
+      - name: Run v204
+        run: python analyze_v204_3head_dutch10k_locked_search.py
+      - name: Commit results
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v204_3head_dutch10k_locked_search.csv summary_v204_3head_dutch10k_locked_search.md
+          git diff --cached --quiet || git commit -m 'Run v204 audited Dutch10k locked search'
+          git push
