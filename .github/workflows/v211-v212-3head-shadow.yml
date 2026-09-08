@@ -1,0 +1,28 @@
+name: v211-v212 3head shadow
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v211_3head_pre_rescue.py'
+      - 'analyze_v212_3head_pair_dutch10k_search.py'
+      - '.github/workflows/v211-v212-3head-shadow.yml'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests beautifulsoup4
+      - run: python analyze_v211_3head_pre_rescue.py
+      - run: python analyze_v212_3head_pair_dutch10k_search.py
+      - name: Commit results
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v211_3head_pre_rescue.csv summary_v211_3head_pre_rescue.md analysis_v212_3head_pair_dutch10k_search.csv summary_v212_3head_pair_dutch10k_search.md
+          git diff --cached --quiet || git commit -m 'Generate v211 v212 3-head shadow results'
+          git push
