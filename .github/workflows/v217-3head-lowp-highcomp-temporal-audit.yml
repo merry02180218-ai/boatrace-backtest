@@ -1,0 +1,26 @@
+name: v217 3head low-p high-comp temporal audit
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v217_3head_lowp_highcomp_temporal_audit.py'
+      - '.github/workflows/v217-3head-lowp-highcomp-temporal-audit.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy
+      - run: python analyze_v217_3head_lowp_highcomp_temporal_audit.py
+      - name: Commit results
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add analysis_v217_3head_lowp_highcomp_temporal_audit.csv summary_v217_3head_lowp_highcomp_temporal_audit.md
+          git diff --cached --quiet || git commit -m 'Add v217 temporal audit results'
+          git push
