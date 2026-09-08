@@ -5,6 +5,7 @@ on:
     branches: [ main ]
     paths:
       - 'analyze_v222_3head_broad_feature_audit.py'
+      - 'analyze_v222b_3head_broad_feature_audit.py'
       - '.github/workflows/v222-3head-broad-feature-audit.yml'
 jobs:
   audit:
@@ -18,9 +19,9 @@ jobs:
       - name: Install dependencies
         run: pip install numpy pandas scikit-learn
       - name: Compile
-        run: python -m py_compile analyze_v222_3head_broad_feature_audit.py
+        run: python -m py_compile analyze_v222_3head_broad_feature_audit.py analyze_v222b_3head_broad_feature_audit.py
       - name: Run v222 clean audit
-        run: python analyze_v222_3head_broad_feature_audit.py
+        run: python analyze_v222b_3head_broad_feature_audit.py
       - name: Contamination guard
         run: |
           python - <<'PY'
