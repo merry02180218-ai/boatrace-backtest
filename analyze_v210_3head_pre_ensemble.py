@@ -2,7 +2,7 @@
 """v210: SHADOW ensemble PRE for canonical 3-head production.
 
 Goal: reduce exhibition workload while preserving eventual v165 p3head>=0.30 passes.
-Strict protocol: June train -> July ensemble/cut selection -> frozen August report.
+Strict protocol: June train -> July ensemble/cut selection -> frozen raw-score cut on August.
 No current-race exhibition/result/odds enters PRE features. FINAL remains v165>=.30 -> v166 Top10.
 August has already been inspected in project history, so this is SHADOW replay, not pristine adoption evidence.
 """
@@ -21,19 +21,16 @@ TARGETS=[.08,.10,.12]
 SPECIAL={'202608112308','202608210409'}
 
 
-def pct_rank(x):
-    s=pd.Series(np.asarray(x,float))
-    return s.rank(method='average',pct=True).to_numpy(float)
-
-
 def ensemble(scores, mode):
-    a=np.vstack(scores)
+    names=list(v207.SETS.keys())
+    a=np.vstack([scores[n] for n in names])
     if mode=='mean': return a.mean(axis=0)
     if mode=='max': return a.max(axis=0)
     if mode=='top2':
         z=np.sort(a,axis=0)
         return z[-2:,:].mean(axis=0)
-    if mode=='prior_plus_base': return .6*a[2]+.4*a[0]
+    if mode=='prior_plus_base':
+        return .6*np.asarray(scores['base+prior_ex'])+.4*np.asarray(scores['base'])
     raise ValueError(mode)
 
 
@@ -58,20 +55,19 @@ def main():
     tr=h[h.month=='2026-06'].copy();tu=h[h.month=='2026-07'].copy();te=h[h.month=='2026-08'].copy()
     if min(len(tr),len(tu),len(te))<1000: raise RuntimeError(f'bad sizes {len(tr),len(tu),len(te)}')
 
-    names=list(v207.SETS.keys())
-    pj=[];pa=[]
-    for name in names:
-        m=v207.fit_model(tr,v207.SETS[name])
-        pj.append(pct_rank(v207.probs(m,tu,v207.SETS[name])))
-        pa.append(pct_rank(v207.probs(m,te,v207.SETS[name])))
+    pj={};pa={}
+    for name,extras in v207.SETS.items():
+        m=v207.fit_model(tr,extras)
+        pj[name]=v207.probs(m,tu,extras)
+        pa[name]=v207.probs(m,te,extras)
 
     modes=['mean','max','top2','prior_plus_base']
-    candidates=[]
-    frozen={}
+    candidates=[];frozen={}
     for mode in modes:
         sj=ensemble(pj,mode);sa=ensemble(pa,mode)
         for rate in TARGETS:
-            cut=cut_for_rate(sj,rate);mj=metric(tu,sj,cut);ma=metric(te,sa,cut)
+            cut=cut_for_rate(sj,rate)
+            mj=metric(tu,sj,cut);ma=metric(te,sa,cut)
             candidates.append({'mode':mode,'target':rate,'cut':cut,**{f'jul_{k}':v for k,v in mj.items()}})
             frozen[(mode,rate)]={'sj':sj,'sa':sa,'cut':cut,'mj':mj,'ma':ma}
 
@@ -101,14 +97,14 @@ def main():
         for code in sorted(SPECIAL):
             rr=te[te['_code']==code]
             if len(rr):
-                idx=rr.index[0];pos=te.index.get_loc(idx);score=float(z['sa'][pos])
+                pos=te.index.get_loc(rr.index[0]);score=float(z['sa'][pos])
                 audit.append({'tag':tag,'race_code':code,'score':score,'cut':z['cut'],'pre_watch':int(score>=z['cut']),'formal_label':int(rr.iloc[0].label)})
     pd.DataFrame(money).to_csv(ROI_OUT,index=False,encoding='utf-8-sig')
 
     L=['# v210 3-head PRE ensemble — SHADOW','','**Goal: predict eventual v165 p3head>=30% using PRE-safe data with fewer exhibition checks.**','',
-       '- Protocol: June train -> July ensemble/cut selection -> frozen August replay.','- August is report-only and already inspected historically; do not call this pristine OOS adoption evidence.',
+       '- Protocol: June train -> July ensemble/cut selection -> exact same raw-score cut on August.','- August is report-only and already inspected historically; do not call this pristine OOS adoption evidence.',
        f'- rows: June {len(tr)}, July {len(tu)}, August {len(te)}; unmatched {miss}; missing dates {missing_dates or "none"}.','',
-       '## July-selected ensemble, frozen August','|target|ensemble|cut|July watch|July recall|July precision|Aug watch|Aug recall|Aug precision|','|---:|---|---:|---:|---:|---:|---:|---:|---:|']
+       '## July-selected ensemble, frozen August','|target|ensemble|raw cut|July watch|July recall|July precision|Aug watch|Aug recall|Aug precision|','|---:|---|---:|---:|---:|---:|---:|---:|---:|']
     for rate in TARGETS:
         mode=selected[rate];z=frozen[(mode,rate)];a=z['mj'];b=z['ma']
         L.append(f'|{rate*100:.0f}%|{mode}|{z["cut"]:.6f}|{a["watch"]} ({a["watch_rate"]*100:.1f}%)|{a["recall"]*100:.1f}%|{a["precision"]*100:.1f}%|{b["watch"]} ({b["watch_rate"]*100:.1f}%)|{b["recall"]*100:.1f}%|{b["precision"]*100:.1f}%|')
@@ -124,5 +120,3 @@ def main():
     print('\n'.join(L),flush=True)
 
 if __name__=='__main__': main()
-
-# trigger: 2026-09-08 v210 validation
