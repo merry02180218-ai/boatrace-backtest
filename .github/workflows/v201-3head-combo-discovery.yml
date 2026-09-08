@@ -1,0 +1,25 @@
+name: v201 3head combo discovery
+on:
+  push:
+    paths:
+      - 'analyze_v201_3head_combo_discovery.py'
+      - '.github/workflows/v201-3head-combo-discovery.yml'
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install numpy pandas
+      - run: python analyze_v201_3head_combo_discovery.py
+      - run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v201_3head_combo_discovery.csv summary_v201_3head_combo_discovery.md
+          git diff --cached --quiet || git commit -m 'Add v201 3-head combo discovery results'
+          git pull --rebase
+          git push
