@@ -1,0 +1,29 @@
+name: v218 live odds parser smoke
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'boatrace_live_odds3t.py'
+      - 'predict_v218_3head_live_odds_shadow.py'
+      - '.github/workflows/v218-live-odds-parser-smoke.yml'
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests beautifulsoup4 pandas numpy scikit-learn
+      - name: Compile v218
+        run: python -m py_compile boatrace_live_odds3t.py predict_v218_3head_live_odds_shadow.py
+      - name: Fetch known official 3T page and validate 120 odds
+        run: |
+          python - <<'PY'
+          from boatrace_live_odds3t import fetch_odds3t
+          x=fetch_odds3t('20260829','09',3)
+          assert len(x['odds'])==120, len(x['odds'])
+          assert abs(x['odds']['1-2-3']-12.6)<1e-9, x['odds']['1-2-3']
+          assert abs(x['odds']['3-1-2']-32.7)<1e-9, x['odds']['3-1-2']
+          print('PASS',x['source'],x['fetched_at_jst'],len(x['odds']),x['odds']['1-2-3'],x['odds']['3-1-2'])
+          PY
