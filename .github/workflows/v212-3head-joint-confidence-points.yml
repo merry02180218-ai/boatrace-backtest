@@ -1,0 +1,29 @@
+name: v212 3head joint confidence variable points
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v212_3head_joint_confidence_points.py'
+      - '.github/workflows/v212-3head-joint-confidence-points.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy
+      - run: python analyze_v212_3head_joint_confidence_points.py
+      - name: Commit results
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v212_3head_joint_confidence_points.csv summary_v212_3head_joint_confidence_points.md
+          git diff --cached --quiet || git commit -m 'Generate v212 joint-confidence variable-points results'
+          git push
