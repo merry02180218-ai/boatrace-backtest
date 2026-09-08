@@ -1,0 +1,38 @@
+name: v224 3-head national form decomposition
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analyze_v224_3head_national_form_decompose.py'
+      - '.github/workflows/v224-3head-national-form-decompose.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install numpy pandas scikit-learn
+      - name: Compile
+        run: python -m py_compile analyze_v224_3head_national_form_decompose.py
+      - name: Run v224 clean audit
+        run: python analyze_v224_3head_national_form_decompose.py
+      - name: Contamination guard
+        run: |
+          python - <<'PY'
+          import pandas as pd
+          a=pd.read_csv('analysis_v224_3head_national_form_decompose.csv')
+          assert len(a)>0
+          assert set(a['month']).issubset({'2025-12','2026-01','2026-02','2026-03','2026-04','2026-05','2026-06'})
+          print('guard ok',len(a))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v224-3head-national-form-decompose
+          path: |
+            analysis_v224_3head_national_form_decompose.csv
+            summary_v224_3head_national_form_decompose.md
