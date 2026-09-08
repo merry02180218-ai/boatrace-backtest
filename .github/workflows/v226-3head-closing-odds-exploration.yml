@@ -1,0 +1,31 @@
+name: v226 3-head closing odds exploration
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analyze_v226_3head_closing_odds_exploration.py'
+      - '.github/workflows/v226-3head-closing-odds-exploration.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install numpy pandas scikit-learn
+      - run: python -m py_compile analyze_v226_3head_closing_odds_exploration.py
+      - run: python analyze_v226_3head_closing_odds_exploration.py
+      - name: Guard
+        run: |
+          python - <<'PY'
+          import pandas as pd
+          a=pd.read_csv('analysis_v226_3head_closing_odds_exploration.csv');assert len(a);assert set(a.month).issubset({'2025-12','2026-01','2026-02','2026-03','2026-04','2026-05','2026-06'});print('guard ok',len(a))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v226-3head-closing-odds-exploration
+          path: |
+            analysis_v226_3head_closing_odds_exploration.csv
+            summary_v226_3head_closing_odds_exploration.md
