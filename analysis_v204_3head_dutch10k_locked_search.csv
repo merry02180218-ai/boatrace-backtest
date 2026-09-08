@@ -1,0 +1,2 @@
+rank,rule,disc_R,disc_hit,disc_comp,disc_roi,test_R,test_hit,test_comp,test_roi
+1,p3>=0.300 & turn>=-0.2 & straight>=0.0,0,0,0,0,0,0,0,0
