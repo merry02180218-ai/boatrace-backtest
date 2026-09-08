@@ -1,0 +1,33 @@
+name: v228 3-head odds zone structure
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analyze_v228_3head_odds_zone_structure.py'
+      - '.github/workflows/v228-3head-odds-zone-structure.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install numpy pandas scikit-learn
+      - run: python analyze_v226_3head_closing_odds_exploration.py
+      - run: python analyze_v228_3head_odds_zone_structure.py
+      - name: Guard
+        run: |
+          python - <<'PY'
+          import pandas as pd
+          a=pd.read_csv('analysis_v226_3head_closing_odds_exploration.csv'); z=a[(a.n==10)&a.fully_funded&(a.comp>=3)&(a.comp<3.25)]
+          assert len(z)>0; assert set(z.month).issubset({'2025-12','2026-01','2026-02','2026-03','2026-04','2026-05','2026-06'})
+          print('zone races',len(z))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v228-3head-odds-zone-structure
+          path: |
+            analysis_v228_3head_odds_zone_structure.csv
+            summary_v228_3head_odds_zone_structure.md
