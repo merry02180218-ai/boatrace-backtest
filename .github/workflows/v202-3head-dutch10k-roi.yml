@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: '3.11'}
-      - run: pip install pandas numpy
+      - run: pip install pandas numpy scikit-learn
       - run: python analyze_v202_3head_dutch10k_roi.py
       - run: |
           git config user.name github-actions[bot]
