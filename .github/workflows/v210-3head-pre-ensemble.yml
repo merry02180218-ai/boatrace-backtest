@@ -1,0 +1,26 @@
+name: v210 3head PRE ensemble
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analyze_v210_3head_pre_ensemble.py
+      - .github/workflows/v210-3head-pre-ensemble.yml
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests beautifulsoup4
+      - run: python analyze_v210_3head_pre_ensemble.py
+      - name: Commit results
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v210_3head_pre_ensemble.csv analysis_v210_3head_pre_ensemble_roi.csv summary_v210_3head_pre_ensemble.md
+          git diff --cached --quiet || git commit -m "Add v210 3-head PRE ensemble results"
+          git push
