@@ -11,6 +11,16 @@ Default branch: `main`
 4. Never calculate a LIVE prediction from memory alone. Run the actual current program with current inputs.
 5. Freeze prediction/tickets before result/payout/post-deadline information.
 
+## CRITICAL WARNING — JULY/AUGUST ARE OVERFIT / REPEATEDLY INSPECTED
+**Treat 2026-07 and 2026-08 as overfit / contaminated-for-model-selection periods for all current 3-head development.**
+They have been inspected repeatedly for PRE cuts, v165/v166 behavior, TopN point counts, variable-point rules, ROI/value hypotheses, failure analysis, and individual profitable races. Therefore:
+- July/August results MUST NOT be presented as pristine out-of-sample proof.
+- Do NOT adopt a new PRE rule, v166 opponent rule, point-count rule, composite-odds cutoff, value filter, or ROI claim because it works on July/August.
+- July/August may be shown as descriptive/reference/shadow results only.
+- Any new rule derived after these inspections needs validation on genuinely unseen future data, or a strict historical protocol whose tuning period does not include the evaluated period.
+- The strong July/August ROI is especially suspect because v216 showed it is concentrated in a few high-return hits and is not explained by materially higher trifecta hit rate.
+- In short: **July/August profitability is currently considered overfit / non-pristine evidence, not proof of sustainable positive EV.**
+
 ## Current 1-head production
 Canonical production is newer than the old 2026-09-05 handoff:
 **Legacy PRE -> v109 S-only -> v162 Top7**.
@@ -51,7 +61,7 @@ PRE-dropped August audit:
 Key dropped hits included:
 - `202608112308`: PRE ~0.0010, v165 p3head 31.08%, hit 3-1-4, composite ~12.365, return 129,690
 - `202608210409`: PRE ~0.0087, v165 p3head 33.21%, hit 3-2-5, composite ~11.571, return 114,580
-This proves PRE must not be assumed to be a value filter.
+These are descriptive August examples only; because August is repeatedly inspected, they MUST NOT be used to justify a newly tuned production PRE rule.
 
 v207/v208 enhanced 8% PRE:
 - August PRE watch 421R = 8.8%
@@ -69,7 +79,7 @@ v210 PRE ensemble:
 
 Operational conclusion on PRE:
 - PRE cannot simply be removed because of the ~15-minute deadline constraint.
-- Do NOT adopt a new PRE hard gate from repeatedly inspected August data.
+- Do NOT adopt a new PRE hard gate from repeatedly inspected July/August data.
 - Treat PRE redesign as workload reduction / attention prioritization; protect against dropping exhibition-improvement races.
 - Current production PRE is not automatically replaced by v207/v210 shadow work.
 
@@ -92,12 +102,13 @@ v211 fixed-points test, July/August:
 - Top10: July 98.7%, August 107.7%
 - Top6: July **107.0%**, August **122.8%**
 - August fixed points: Top4 120.1%, Top6 122.8%, Top8 113.7%, Top10 107.7%, Top12 106.4%, Top15 100.5%
-Do NOT adopt Top6 from these two inspected months alone.
+**These July/August figures are overfit/non-pristine reference results and MUST NOT justify Top6 adoption.**
 
 v212 variable 4/6/8/10 using p3head + opponent concentration:
 - July ROI **109.7%**
 - August ROI **117.5%**, profit +191,080, avg points 6.88
 - August allocation: 4pt 37R, 6pt 25R, 8pt 9R, 10pt 38R
+**Again, July/August are repeatedly inspected; these are shadow/reference results, not validation.**
 
 v213 older-period stress test, Dec-2025..Jun-2026, 486R:
 - Top4 ROI 74.6%
@@ -117,6 +128,7 @@ Important decomposition:
 - Dec-Jun: 3-head rate 34.77%, v166 Top10 conditional coverage 81.66%, trifecta hit 28.40%, ROI **78.2%**
 - Jul-Aug: 3-head rate 37.24%, Top10 coverage 76.71%, trifecta hit 28.57%, ROI **103.7%**
 Thus Jul-Aug ROI improvement was NOT caused by materially better trifecta hit rate; odds/payout regime is a major driver.
+This supports treating July/August as overfit/non-pristine evidence for current development.
 
 ## ROI regime audit v216
 Key conclusion: Jul-Aug profitability is highly dependent on a few high-return hits.
@@ -181,6 +193,6 @@ Before implementing, inspect latest repo for existing official/BoatraceCSV odds 
 
 ## Next chat recommended opening
 User can say:
-`boatrace-backtest の CHAT_HANDOFF_CURRENT.md と最新GitHubを読んで続き。3号艇のLIVEを、展示後v165→v166→その時点の3連単オッズ取得→可変点数→1万円Dutchまで実装するところから再開して。`
+`boatrace-backtest の CHAT_HANDOFF_CURRENT.md と最新GitHubを読んで続き。7月・8月は過学習/非pristineとして扱うことを厳守。3号艇LIVEを、展示後v165→v166→その時点の3連単オッズ取得→可変点数→1万円Dutchまで実装するところから再開して。`
 
 Then immediately inspect latest GitHub before acting.
