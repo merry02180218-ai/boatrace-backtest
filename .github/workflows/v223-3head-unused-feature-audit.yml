@@ -1,0 +1,38 @@
+name: v223 3-head unused feature audit
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analyze_v223_3head_unused_feature_audit.py'
+      - '.github/workflows/v223-3head-unused-feature-audit.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install numpy pandas scikit-learn
+      - name: Compile
+        run: python -m py_compile analyze_v223_3head_unused_feature_audit.py
+      - name: Run v223 clean audit
+        run: python analyze_v223_3head_unused_feature_audit.py
+      - name: Contamination guard
+        run: |
+          python - <<'PY'
+          import pandas as pd
+          a=pd.read_csv('analysis_v223_3head_unused_feature_audit.csv')
+          assert len(a)>0
+          assert set(a['month']).issubset({'2025-12','2026-01','2026-02','2026-03','2026-04','2026-05','2026-06'})
+          print('guard ok',len(a))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v223-3head-unused-feature-audit
+          path: |
+            analysis_v223_3head_unused_feature_audit.csv
+            summary_v223_3head_unused_feature_audit.md
