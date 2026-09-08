@@ -1,0 +1,26 @@
+name: v214 3head cumulative mass points
+on:
+  push:
+    paths:
+      - 'analyze_v214_3head_cumulative_mass_points.py'
+      - '.github/workflows/v214-3head-cumulative-mass-points.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn
+      - run: python analyze_v214_3head_cumulative_mass_points.py
+      - name: Commit results
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v214_3head_cumulative_mass_points.csv summary_v214_3head_cumulative_mass_points.md
+          git diff --cached --quiet || git commit -m 'Add v214 cumulative-mass results'
+          git push
