@@ -7,24 +7,41 @@ https://www.boatrace.jp/owpc/pc/race/odds3t?hd=YYYYMMDD&jcd=JJ&rno=R
 The official page labels these values 締切時オッズ. This script intentionally
 keeps them separate from BoatraceCSV pre-close od3 snapshots.
 
-Usage:
-  python tools/fetch_official_closing_odds3t.py 2025-10-01 2026-08-31
-
-Writes one CSV per day under data/official_closing_odds3t/YYYY/MM/DD.csv.
+IMPORTANT: the official 3T table is rendered row-major across six first-boat
+columns. Its HTML value order is NOT itertools.permutations() order.
 """
 from __future__ import annotations
-import csv, itertools, re, sys, time
-from datetime import date, datetime, timedelta
+import csv, re, sys, time
+from datetime import date, timedelta
 from pathlib import Path
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError, URLError
 
 BASE='https://www.boatrace.jp/owpc/pc/race/odds3t?hd={hd}&jcd={jcd:02d}&rno={rno}'
 OUT=Path('data/official_closing_odds3t')
-COMBOS=[f'{a}-{b}-{c}' for a,b,c in itertools.permutations(range(1,7),3)]
+MAPPING_VERSION='official_table_v2'
 
-# BOAT RACE odds3t HTML contains 120 odds values in race table cells.
-# Parse only the 3T table area and require exactly the complete 120-combination set.
+def official_display_combos():
+    """Return the 120 combinations in the exact order displayed in official HTML.
+
+    The table has six first-boat columns. For each ordinal second-boat choice
+    (ascending among the other five), each of four third-boat choices is shown
+    as a row, with first boats 1..6 traversed across that row.
+    """
+    out=[]
+    for second_idx in range(5):
+        for third_idx in range(4):
+            for first in range(1,7):
+                seconds=[x for x in range(1,7) if x!=first]
+                second=seconds[second_idx]
+                thirds=[x for x in range(1,7) if x not in (first,second)]
+                third=thirds[third_idx]
+                out.append(f'{first}-{second}-{third}')
+    assert len(out)==120 and len(set(out))==120
+    return out
+
+COMBOS=official_display_combos()
+
 def fetch(url, retries=3):
     req=Request(url, headers={'User-Agent':'Mozilla/5.0 boatrace-backtest historical-research'})
     for k in range(retries):
@@ -38,9 +55,6 @@ def fetch(url, retries=3):
 def parse(html):
     if not html or '締切時オッズ' not in html or '3連単オッズ' not in html:
         return None
-    # Official markup exposes each combination via data attributes/classes; first try
-    # generic sequence extraction from the 3T table. Keep strict validation to avoid
-    # silently saving malformed pages if markup changes.
     m=re.search(r'3連単オッズ(.*?)(?:2連単オッズ|3連複オッズ|オッズ情報)', html, re.S)
     area=m.group(1) if m else html
     vals=re.findall(r'(?:odds|ratio)[^>]*>\s*([0-9]+(?:\.[0-9]+)?)\s*<', area, re.I)
@@ -61,14 +75,13 @@ def main():
     start=date.fromisoformat(sys.argv[1]); end=date.fromisoformat(sys.argv[2])
     total=0
     for d in daterange(start,end):
-        rows=[]
-        hd=d.strftime('%Y%m%d')
+        rows=[]; hd=d.strftime('%Y%m%d')
         for jcd in range(1,25):
             for rno in range(1,13):
                 url=BASE.format(hd=hd,jcd=jcd,rno=rno)
                 odds=parse(fetch(url))
                 if odds:
-                    row={'date':d.isoformat(),'jcd':f'{jcd:02d}','rno':rno,'source_url':url,'source_type':'official_closing'}
+                    row={'date':d.isoformat(),'jcd':f'{jcd:02d}','rno':rno,'source_url':url,'source_type':'official_closing','odds_mapping_version':MAPPING_VERSION}
                     row.update(odds); rows.append(row)
                 time.sleep(0.08)
         if rows:
