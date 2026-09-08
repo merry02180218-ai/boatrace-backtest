@@ -1,7 +1,7 @@
-# v192 live 3-head 2026-09-08 14 5R
+# v192 live 3-head 2026-09-08 10 6R
 
-- boat3: **松尾 夏海**
-- v165 p3head: **15.45%**
+- boat3: **島村 隆幸**
+- v165 p3head: **19.54%**
 - decision: **SKIP** (cut 30%)
 - v166 lambda: **1.00**
 - head train rows: 44549
