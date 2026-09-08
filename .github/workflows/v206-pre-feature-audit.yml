@@ -1,0 +1,17 @@
+name: v206 PRE feature audit
+on:
+  push:
+    paths:
+      - 'audit_v206_pre_sources.py'
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas
+      - name: Audit historical feature sources
+        run: python audit_v206_pre_sources.py
