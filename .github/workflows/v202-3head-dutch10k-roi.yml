@@ -1,0 +1,22 @@
+name: v202 3head Dutch 10k ROI
+on:
+  push:
+    paths: ['analyze_v202_3head_dutch10k_roi.py','.github/workflows/v202-3head-dutch10k-roi.yml']
+  workflow_dispatch:
+permissions: {contents: write}
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install pandas numpy
+      - run: python analyze_v202_3head_dutch10k_roi.py
+      - run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v202_3head_dutch10k_roi.csv summary_v202_3head_dutch10k_roi.md
+          git diff --cached --quiet || git commit -m 'Add v202 3-head Dutch 10k ROI results'
+          git pull --rebase --autostash origin main
+          git push
