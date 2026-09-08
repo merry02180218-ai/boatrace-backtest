@@ -24,16 +24,19 @@ def stat(g):
     cost=float(g.cost.sum()); ret=float(g['return'].sum())
     return dict(R=len(g),hit=100*g.hit.mean(),comp=g.composite_odds.mean(),cost=cost,ret=ret,roi=100*ret/cost if cost else 0)
 
+def active(v):
+    return v is not None and not pd.isna(v)
+
 def apply(d,r):
     q=d[d.p3head>=r['p3']]
     for col,key in [('turn_margin23','turn'),('st_margin23','st'),('straight_margin23','straight'),('ex_margin23','ex')]:
-        if r[key] is not None:q=q[pd.to_numeric(q[col],errors='coerce')>=r[key]]
+        if active(r[key]):q=q[pd.to_numeric(q[col],errors='coerce')>=float(r[key])]
     return q
 
 def text(r):
     a=[f"p3>={r['p3']:.3f}"]
     for k,label in [('turn','turn'),('st','ST'),('straight','straight'),('ex','EX')]:
-        if r[k] is not None:a.append(f"{label}>={r[k]:.1f}")
+        if active(r[k]):a.append(f"{label}>={float(r[k]):.1f}")
     return ' & '.join(a)
 
 def main():
@@ -48,7 +51,6 @@ def main():
         r=dict(p3=p3,turn=turn,st=st,straight=straight,ex=ex); g=apply(disc,r)
         if len(g)<MIN_DISC:continue
         m=stat(g)
-        # prioritize ROI but penalize tiny samples; no test information enters ranking
         score=m['roi'] + .08*min(m['R'],100) + .05*m['hit']
         rows.append({**r,'rule':text(r),'disc_R':m['R'],'disc_hit':m['hit'],'disc_comp':m['comp'],'disc_roi':m['roi'],'score':score})
     grid=pd.DataFrame(rows).sort_values(['score','disc_roi','disc_R'],ascending=False)
