@@ -1,0 +1,41 @@
+name: v220 3-head history player audit
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analyze_v220_3head_history_player.py'
+      - '.github/workflows/v220-3head-history-player.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install numpy pandas scikit-learn
+      - name: Compile
+        run: python -m py_compile analyze_v220_3head_history_player.py
+      - name: Run v220 clean audit
+        run: python analyze_v220_3head_history_player.py
+      - name: Contamination guard
+        run: |
+          python - <<'PY'
+          import pandas as pd
+          a=pd.read_csv('analysis_v220_3head_history_player_predictions.csv')
+          assert len(a)>0
+          d=pd.to_datetime(a['date'])
+          assert (d < pd.Timestamp('2026-07-01')).all()
+          assert set(a['month']).issubset({'2025-12','2026-01','2026-02','2026-03','2026-04','2026-05','2026-06'})
+          print('guard ok',len(a))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v220-3head-history-player
+          path: |
+            analysis_v220_3head_history_player.csv
+            analysis_v220_3head_history_player_predictions.csv
+            summary_v220_3head_history_player.md
