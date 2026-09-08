@@ -1,0 +1,8 @@
+{
+  "date": "2026-09-08",
+  "head_train_rows": 44549,
+  "pair_train_3wins": 5557,
+  "prior_st_bias_days": 342,
+  "cut": 0.3,
+  "lambda": 1.0
+}
