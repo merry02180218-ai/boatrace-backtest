@@ -1,0 +1,97 @@
+name: retry remaining official od3
+on:
+  push:
+    paths:
+      - '.github/workflows/retry-missing-official-od3-trigger.yml'
+permissions:
+  contents: write
+jobs:
+  retry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests
+      - name: Retry only failed official races
+        run: |
+          python - <<'PY'
+          import csv, itertools, time
+          from concurrent.futures import ThreadPoolExecutor, as_completed
+          from pathlib import Path
+          import tools.fill_missing_od3_official_parallel as f
+
+          cover=Path('archive_od3_official_fill_manifest.csv')
+          days=[]
+          with cover.open(encoding='utf-8-sig') as h:
+              for r in csv.DictReader(h):
+                  if int(r.get('failed_races') or 0)>0:
+                      days.append(r['date'])
+          print('retry days',len(days),flush=True)
+          todo=[]; existing={}
+          for day in days:
+              y,m,d=day.split('-'); p=f.OUT/y/m/(d+'.csv')
+              have=set(); rows=[]
+              if p.exists():
+                  with p.open(encoding='utf-8-sig') as h:
+                      rows=list(csv.DictReader(h))
+                  have={(int(r['jcd']),int(r['rno'])) for r in rows}
+              existing[day]=rows
+              races,status=f.race_inventory(day)
+              todo += [(day,j,r) for j,r in races if (j,r) not in have]
+          print('remaining race requests',len(todo),flush=True)
+          got={d:[] for d in days}
+          # Retry transient failures with lower concurrency and more passes.
+          pending=todo
+          for attempt in range(4):
+              if not pending: break
+              nxt=[]
+              with ThreadPoolExecutor(max_workers=12) as ex:
+                  fut={ex.submit(f.fetch_race,*x):x for x in pending}
+                  for i,z in enumerate(as_completed(fut),1):
+                      x=fut[z]
+                      try:
+                          day,j,r,url,o,status=z.result()
+                      except Exception:
+                          nxt.append(x); continue
+                      if o:
+                          row={'date':day,'jcd':f'{j:02d}','rno':r,'source_type':'official_closing','snapshot_type':'closing_displayed','source_url':url}; row.update(o); got[day].append(row)
+                      else: nxt.append(x)
+              pending=nxt
+              print('attempt',attempt+1,'remaining',len(pending),flush=True)
+              time.sleep(2)
+          for day in days:
+              rows=existing[day]+got[day]
+              uniq={(r['jcd'],str(r['rno'])):r for r in rows}
+              f.write_day(day,sorted(uniq.values(),key=lambda z:(z['jcd'],int(z['rno']))))
+          # Rebuild coverage against inventories.
+          fields=['date','inventory_status','expected_races','fetched_races','failed_races']
+          report=[]
+          for day in days:
+              races,status=f.race_inventory(day); y,m,d=day.split('-'); p=f.OUT/y/m/(d+'.csv')
+              n=0
+              if p.exists():
+                  with p.open(encoding='utf-8-sig') as h: n=sum(1 for _ in csv.DictReader(h))
+              report.append({'date':day,'inventory_status':status,'expected_races':len(races),'fetched_races':n,'failed_races':max(0,len(races)-n)})
+          # Preserve no-inventory rows from prior manifest too.
+          old={}
+          with cover.open(encoding='utf-8-sig') as h:
+              old={r['date']:r for r in csv.DictReader(h)}
+          for r in report: old[r['date']]=r
+          with cover.open('w',newline='',encoding='utf-8') as h:
+              w=csv.DictWriter(h,fieldnames=fields); w.writeheader(); w.writerows(old[d] for d in sorted(old))
+          print('FINAL remaining failed races',sum(int(r.get('failed_races') or 0) for r in old.values()),flush=True)
+          PY
+      - name: Commit retries
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/official_closing_odds3t archive_od3_official_fill_manifest.csv
+          git diff --cached --quiet && exit 0
+          git commit -m 'Retry remaining official closing odds'
+          git pull --rebase --autostash origin main
+          git push
