@@ -1,0 +1,25 @@
+name: v196 3head 6month failure diagnostics
+on:
+  push:
+    paths:
+      - 'analyze_v196_3head_6month_failure_diagnostics.py'
+      - '.github/workflows/v196-3head-6month-failure-diagnostics.yml'
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install pandas numpy
+      - run: python analyze_v196_3head_6month_failure_diagnostics.py
+      - run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v196_3head_6month_failure_diagnostics.csv summary_v196_3head_6month_failure_diagnostics.md
+          git diff --cached --quiet || git commit -m 'Add v196 3head failure diagnostic results'
+          git pull --rebase
+          git push
