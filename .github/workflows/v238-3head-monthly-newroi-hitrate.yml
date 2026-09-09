@@ -1,0 +1,33 @@
+name: v238 3-head monthly new ROI hit rates
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analyze_v238_3head_monthly_newroi_hitrate.py
+      - .github/workflows/v238-3head-monthly-newroi-hitrate.yml
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scikit-learn
+      - name: Get recovered Waku10
+        env: {GH_TOKEN: '${{ github.token }}'}
+        run: |
+          mkdir -p /tmp/v233
+          gh run download 34324515336 --repo merry02180218-ai/boatrace-backtest --name v233-waku10-coverage-backfill --dir /tmp/v233
+      - name: Run
+        env: {V233_DIR: /tmp/v233}
+        run: python analyze_v238_3head_monthly_newroi_hitrate.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v238-3head-monthly-newroi-hitrate
+          path: |
+            analysis_v238_3head_monthly_newroi_hitrate.csv
+            summary_v238_3head_monthly_newroi_hitrate.md
+          retention-days: 90
