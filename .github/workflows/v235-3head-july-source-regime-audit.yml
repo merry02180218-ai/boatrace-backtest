@@ -1,0 +1,47 @@
+name: v235 3-head July source/regime audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analyze_v235_3head_july_source_regime_audit.py
+      - .github/workflows/v235-3head-july-source-regime-audit.yml
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -q numpy pandas scikit-learn
+      - name: Download v233 recovered Waku10 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/v233
+          gh run download 34324515336 --repo ${{ github.repository }} --name v233-waku10-coverage-backfill --dir /tmp/v233
+          test -d /tmp/v233/recovered_boatcast
+      - name: Run v235 audit
+        env:
+          V233_DIR: /tmp/v233
+        run: python analyze_v235_3head_july_source_regime_audit.py
+      - name: Upload v235 results
+        uses: actions/upload-artifact@v4
+        with:
+          name: v235-3head-july-source-regime-audit
+          path: |
+            analysis_v235_selected_calibration.csv
+            analysis_v235_selected_feature_shifts.csv
+            analysis_v235_feature_missingness.csv
+            analysis_v235_boundary_feature_shifts.csv
+            analysis_v235_family_summary.csv
+            summary_v235_3head_july_source_regime_audit.md
+          retention-days: 90
