@@ -5,6 +5,9 @@ on:
     paths:
       - 'analyze_v246_3head_strict_preselection_audit.py'
       - '.github/workflows/v246-3head-strict-preselection-audit.yml'
+permissions:
+  actions: read
+  contents: read
 jobs:
   audit:
     runs-on: ubuntu-latest
@@ -16,14 +19,13 @@ jobs:
           python-version: '3.11'
       - run: pip install numpy pandas scikit-learn requests
       - name: Download canonical cached v243 artifact
-        run: |
-          python - <<'PY'
-          import urllib.request,zipfile,io
-          u='https://api.github.com/repos/merry02180218-ai/boatrace-backtest/actions/artifacts/10118044294/zip'
-          req=urllib.request.Request(u,headers={'Authorization':'Bearer ${{ github.token }}','Accept':'application/vnd.github+json'})
-          b=urllib.request.urlopen(req).read()
-          zipfile.ZipFile(io.BytesIO(b)).extractall('.')
-          PY
+        uses: actions/download-artifact@v4
+        with:
+          name: v243-3head-expand-feature-audit
+          path: .
+          repository: merry02180218-ai/boatrace-backtest
+          run-id: 34383567078
+          github-token: ${{ github.token }}
       - name: Run v246 strict PRE audit
         run: python analyze_v246_3head_strict_preselection_audit.py
       - uses: actions/upload-artifact@v4
