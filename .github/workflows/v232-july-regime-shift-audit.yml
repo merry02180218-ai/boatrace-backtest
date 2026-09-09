@@ -1,0 +1,24 @@
+name: v232 July regime shift audit
+on:
+  push:
+    paths:
+      - 'analyze_v232_july_regime_shift_audit.py'
+      - '.github/workflows/v232-july-regime-shift-audit.yml'
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests
+      - run: python analyze_v232_july_regime_shift_audit.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v232-july-regime-shift-audit
+          path: |
+            analysis_v232_july_regime_shift_features.csv
+            analysis_v232_july_regime_shift_selected.csv
+            summary_v232_july_regime_shift_audit.md
