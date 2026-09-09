@@ -1,0 +1,29 @@
+name: v239 3-head grade-change model impact
+on:
+  workflow_dispatch:
+  push:
+    paths: [analyze_v239_3head_gradechange_model_impact.py, .github/workflows/v239-3head-gradechange-model-impact.yml]
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    permissions: {contents: read, actions: read}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scikit-learn
+      - name: Get recovered Waku10
+        env: {GH_TOKEN: '${{ github.token }}'}
+        run: |
+          mkdir -p /tmp/v233
+          gh run download 34324515336 --repo merry02180218-ai/boatrace-backtest --name v233-waku10-coverage-backfill --dir /tmp/v233
+      - name: Run audit
+        env: {V233_DIR: /tmp/v233}
+        run: python analyze_v239_3head_gradechange_model_impact.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v239-3head-gradechange-model-impact
+          path: |
+            analysis_v239_3head_gradechange_model_impact.csv
+            summary_v239_3head_gradechange_model_impact.md
+          retention-days: 90
