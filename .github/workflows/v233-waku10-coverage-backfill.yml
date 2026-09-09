@@ -1,0 +1,20 @@
+name: v233 Waku10 coverage backfill audit
+on:
+  push:
+    paths:
+      - audit_v233_waku10_coverage_backfill.py
+      - .github/workflows/v233-waku10-coverage-backfill.yml
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: python audit_v233_waku10_coverage_backfill.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v233-waku10-coverage-backfill
+          path: data/audit/v233_waku10/
