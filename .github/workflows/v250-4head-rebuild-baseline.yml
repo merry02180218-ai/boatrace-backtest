@@ -1,0 +1,37 @@
+name: v250 4-head rebuild baseline
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v250_4head_rebuild_baseline.py'
+      - '.github/workflows/v250-4head-rebuild-baseline.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests
+      - name: Run v250 4-head rebuild baseline
+        run: python analyze_v250_4head_rebuild_baseline.py
+      - name: Commit outputs
+        if: always()
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v250_4head_rebuild_baseline.csv summary_v250_4head_rebuild_baseline.md 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m 'Run v250 4-head rebuild baseline'
+            git pull --rebase origin main
+            git push
+          fi
