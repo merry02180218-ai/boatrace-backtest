@@ -1,0 +1,27 @@
+name: v257 4-head variable comp 10-15
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v257_4head_variable_comp10to15.py'
+      - '.github/workflows/v257-4head-variable-comp10to15.yml'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests
+      - run: python analyze_v257_4head_variable_comp10to15.py
+      - name: Commit outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v257_4head_variable_comp10to15.csv summary_v257_4head_variable_comp10to15.md
+          git diff --cached --quiet || git commit -m 'Add v257 4-head variable comp 10-15 results'
+          git pull --rebase
+          git push
