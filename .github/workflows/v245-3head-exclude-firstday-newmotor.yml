@@ -8,15 +8,21 @@ on:
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - run: pip install numpy pandas scikit-learn requests
-      - name: Rebuild v243 cache
-        run: python analyze_v243_3head_expand_feature_audit.py
+      - name: Restore cached v243 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api repos/${{ github.repository }}/actions/artifacts/10118044294/zip > /tmp/v243.zip
+          unzip -o /tmp/v243.zip -d .
+          test -s analysis_v243_3head_expand_feature_audit.csv
+          test -s analysis_v243_3head_expand_rule_search.csv
       - name: Run v245 exclusion audit
         run: python analyze_v245_3head_exclude_firstday_newmotor.py
       - uses: actions/upload-artifact@v4
