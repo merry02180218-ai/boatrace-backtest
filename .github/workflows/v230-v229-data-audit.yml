@@ -1,0 +1,28 @@
+name: v230 v229 data integrity audit
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analyze_v230_v229_data_audit.py'
+      - '.github/workflows/v230-v229-data-audit.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install numpy pandas scikit-learn tabulate
+      - run: python analyze_v230_v229_data_audit.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v230-v229-data-audit
+          if-no-files-found: warn
+          path: |
+            analysis_v230_v229_data_audit.csv
+            summary_v230_v229_data_audit.md
+            analysis_v229_3head_jul_aug_shadow.csv
+            analysis_v229_eligibility_diagnostic.csv
