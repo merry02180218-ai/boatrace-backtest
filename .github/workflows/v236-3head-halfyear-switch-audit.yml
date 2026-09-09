@@ -1,0 +1,40 @@
+name: v236 3-head half-year switch audit
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analyze_v236_3head_halfyear_switch_audit.py
+      - .github/workflows/v236-3head-halfyear-switch-audit.yml
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -q numpy pandas scikit-learn
+      - name: Download v233 recovered Waku10 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/v233
+          gh run download 34324515336 --repo merry02180218-ai/boatrace-backtest --name v233-waku10-coverage-backfill --dir /tmp/v233
+          test -d /tmp/v233/recovered_boatcast
+      - name: Run v236 audit
+        env:
+          V233_DIR: /tmp/v233
+        run: python analyze_v236_3head_halfyear_switch_audit.py
+      - name: Upload v236 results
+        uses: actions/upload-artifact@v4
+        with:
+          name: v236-3head-halfyear-switch-audit
+          path: |
+            analysis_v236_halfyear_switch_same_racer.csv
+            analysis_v236_halfyear_switch_calibration.csv
+            summary_v236_3head_halfyear_switch_audit.md
+          retention-days: 90
