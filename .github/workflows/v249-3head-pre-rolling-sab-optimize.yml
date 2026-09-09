@@ -1,0 +1,29 @@
+name: v249 3-head PRE rolling S-A-B optimize
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v249_3head_pre_rolling_sab_optimize.py'
+      - '.github/workflows/v249-3head-pre-rolling-sab-optimize.yml'
+permissions: {contents: read, actions: read}
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install numpy pandas
+      - uses: actions/download-artifact@v4
+        with:
+          name: v243-3head-expand-feature-audit
+          run-id: 34383567078
+          github-token: ${{ github.token }}
+          path: .
+      - run: python analyze_v249_3head_pre_rolling_sab_optimize.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v249-3head-pre-rolling-sab-optimize
+          path: |
+            analysis_v249_3head_pre_rolling_sab_optimize.csv
+            summary_v249_3head_pre_rolling_sab_optimize.md
