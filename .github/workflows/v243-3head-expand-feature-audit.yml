@@ -1,0 +1,26 @@
+name: v243 3-head expand feature audit
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v243_3head_expand_feature_audit.py'
+      - '.github/workflows/v243-3head-expand-feature-audit.yml'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scikit-learn requests
+      - name: Run v243
+        run: python analyze_v243_3head_expand_feature_audit.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v243-3head-expand-feature-audit
+          path: |
+            analysis_v243_3head_expand_feature_audit.csv
+            analysis_v243_3head_expand_rule_search.csv
+            summary_v243_3head_expand_feature_audit.md
