@@ -1,0 +1,25 @@
+name: v240 3-head TopN Dutch compare
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v240_3head_topn_dutch_compare.py'
+      - '.github/workflows/v240-3head-topn-dutch-compare.yml'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scikit-learn requests
+      - name: Run v240
+        run: python analyze_v240_3head_topn_dutch_compare.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v240-3head-topn-dutch-compare
+          path: |
+            analysis_v240_3head_topn_dutch_compare.csv
+            summary_v240_3head_topn_dutch_compare.md
