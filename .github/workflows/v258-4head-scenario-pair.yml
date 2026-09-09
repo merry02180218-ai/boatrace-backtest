@@ -1,0 +1,27 @@
+name: v258 4-head scenario pair
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v258_4head_scenario_pair.py'
+      - '.github/workflows/v258-4head-scenario-pair.yml'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests beautifulsoup4
+      - run: python analyze_v258_4head_scenario_pair.py
+      - name: Commit outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v258_4head_scenario_pair.csv summary_v258_4head_scenario_pair.md
+          git diff --cached --quiet || git commit -m 'Add v258 4-head scenario pair results'
+          git pull --rebase
+          git push
