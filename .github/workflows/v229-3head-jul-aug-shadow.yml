@@ -1,0 +1,33 @@
+name: v229 3-head Jul-Aug non-pristine shadow
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analyze_v229_3head_jul_aug_shadow.py'
+      - '.github/workflows/v229-3head-jul-aug-shadow.yml'
+jobs:
+  shadow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install numpy pandas scikit-learn
+      - run: python analyze_v229_3head_jul_aug_shadow.py
+      - name: Guard
+        run: |
+          python - <<'PY'
+          import pandas as pd
+          z=pd.read_csv('analysis_v229_3head_jul_aug_shadow.csv')
+          assert len(z)>0
+          assert set(z.month).issubset({'2026-07','2026-08'})
+          print(z.groupby('month').size())
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v229-3head-jul-aug-shadow
+          path: |
+            analysis_v229_3head_jul_aug_shadow.csv
+            summary_v229_3head_jul_aug_shadow.md
