@@ -1,0 +1,27 @@
+name: v245 3-head exclude first day and new motor
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v245_3head_exclude_firstday_newmotor.py'
+      - '.github/workflows/v245-3head-exclude-firstday-newmotor.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scikit-learn requests
+      - name: Rebuild v243 cache
+        run: python analyze_v243_3head_expand_feature_audit.py
+      - name: Run v245 exclusion audit
+        run: python analyze_v245_3head_exclude_firstday_newmotor.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v245-3head-exclude-firstday-newmotor
+          path: |
+            analysis_v245_3head_exclude_firstday_newmotor.csv
+            summary_v245_3head_exclude_firstday_newmotor.md
