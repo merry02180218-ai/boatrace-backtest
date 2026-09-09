@@ -13,6 +13,8 @@ OUT=ROOT/'analysis_v245_3head_exclude_firstday_newmotor.csv'
 SUM=ROOT/'summary_v245_3head_exclude_firstday_newmotor.md'
 BANK=10000
 START=date(2025,12,1); END=date(2026,8,31); LOOKBACK=120
+CANON_KEEP_THR=-0.1999999999999999
+CANON_RESCUE_THR=0.5672342857142857
 
 def fetch(path):
     for k in range(3):
@@ -52,13 +54,11 @@ def main():
     if not SRC.exists(): raise RuntimeError('canonical v243 artifact is required')
     q=pd.read_csv(SRC,dtype={'race_code':str}); q['race_code']=q.race_code.astype(str).str.zfill(12); q['date']=q.date.astype(str)
     base=(q.bet==1)&(q.p3>=.45)&q.raw_top_n.between(7,18)&q.comp_odds.between(3.05,4.0)
-    keep=base&(pd.to_numeric(q['f__c_b3_minus_b5_st'],errors='coerce')>=-0.2)
-    rescue=(q.bet==1)&(~base)&(pd.to_numeric(q['f__c_attack3_stretch'],errors='coerce')<=0.5672342857142857)
+    keep=base&(pd.to_numeric(q['f__c_b3_minus_b5_st'],errors='coerce')>=CANON_KEEP_THR)
+    rescue=(q.bet==1)&(~base)&(pd.to_numeric(q['f__c_attack3_stretch'],errors='coerce')<=CANON_RESCUE_THR)
     selected=q[keep|rescue].copy()
     if len(selected)!=182: raise RuntimeError(f'canonical policy mismatch: expected 182, got {len(selected)}')
 
-    # Read official title/card data. Include 120 days before study start so a motor is
-    # considered new only if its number has not appeared at that venue in the lookback.
     daily={}; d=START-timedelta(days=LOOKBACK)
     while d<=END:
         y=d.strftime('%Y/%m/%d'); ts=rows(f'data/programs/title/{y}.csv'); cs=rows(f'data/programs/race_cards/{y}.csv')
@@ -80,8 +80,6 @@ def main():
     if coverage<0.95: raise RuntimeError(f'official day metadata coverage too low: {coverage:.1%}')
     selected['first_day']=(selected.day_no==1).astype(int)
 
-    # New-motor meeting proxy: on official day 1, >=80% of motor assignments have not
-    # appeared at that venue during the preceding 120 calendar days.
     newrows=[]
     for (v,ms),mids in sorted(meeting_first.items(),key=lambda x:(x[0][1],x[0][0])):
         seen=set(); a=max(START-timedelta(days=LOOKBACK),ms-timedelta(days=LOOKBACK)); z=a
