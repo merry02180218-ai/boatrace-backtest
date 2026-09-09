@@ -43,13 +43,10 @@ def main():
     selected=q[keep|rescue].copy()
     if len(selected)!=182: raise RuntimeError(f'canonical policy mismatch: expected 182, got {len(selected)}')
 
-    # Title CSV is authoritative for race_code/day label. Do NOT depend on race_cards existing for metadata coverage.
     title_daily={}; card_daily={}; d=START-timedelta(days=LOOKBACK)
     while d<=END:
         y=d.strftime('%Y/%m/%d'); title_daily[d]=rows(f'data/programs/title/{y}.csv'); card_daily[d]=rows(f'data/programs/race_cards/{y}.csv'); d+=timedelta(days=1)
 
-    # Build race metadata directly from title rows. Meeting start is explicit when day number is known;
-    # for 最終日 rows, inherit nearest known start for same venue/title within prior 10 days.
     meta=[]; known_starts={}
     for d in sorted(title_daily):
         for r in title_daily[d]:
@@ -58,7 +55,6 @@ def main():
                 ms=d-timedelta(days=dn-1); known_starts.setdefault((v,title),[]).append(ms)
             meta.append({'race_code':c,'venue':v,'day_label':lab,'day_no':dn if dn else np.nan,'title':title,'date_obj':d,'meeting_start':str(ms) if ms else None})
     mm=pd.DataFrame(meta).drop_duplicates('race_code')
-    # Fill unknown/final-day meeting start from nearest prior known start for same venue/title.
     for idx,r in mm[mm.meeting_start.isna()].iterrows():
         cand=[x for x in known_starts.get((r.venue,r.title),[]) if timedelta(0)<=r.date_obj-x<=timedelta(days=10)]
         if cand: mm.at[idx,'meeting_start']=str(max(cand))
@@ -67,14 +63,11 @@ def main():
     if coverage<0.95: raise RuntimeError(f'official title metadata coverage too low: {coverage:.1%}')
     selected['first_day']=(selected.day_label=='初日').astype(int)
 
-    # Day-1 motor assignments from race_cards only. New-motor proxy = >=80% assignments unseen at venue in prior 120d.
     meeting_first={}; daily_motors={}
     for d,cs in card_daily.items():
-        rec=[]
-        tmap={code_of(r):r for r in title_daily.get(d,[])}
+        rec=[]; tmap={code_of(r):r for r in title_daily.get(d,[])}
         for r in cs:
-            c=code_of(r); v=venue_of(c,r); ids=motor_ids(r); rec.append((v,ids))
-            t=tmap.get(c,{})
+            c=code_of(r); v=venue_of(c,r); ids=motor_ids(r); rec.append((v,ids)); t=tmap.get(c,{})
             if str(t.get('日次','')).strip()=='初日': meeting_first.setdefault((v,d),[]).extend(ids)
         daily_motors[d]=rec
     newrows=[]
@@ -94,13 +87,19 @@ def main():
     variants={'ALL_182':pd.Series(True,index=selected.index),'EXCLUDE_FIRST_DAY':selected.first_day==0,'EXCLUDE_NEW_MOTOR_MEETING':selected.new_motor_meeting==0,'EXCLUDE_BOTH':(selected.first_day==0)&(selected.new_motor_meeting==0)}
     out=[]
     for name,mask in variants.items():
-        g=selected[mask]; out.append({'variant':name,'month':np.nan,**metrics(g)})
-        for mon,z in g.groupby(g.date.str[:7]): out.append({'variant':name,'month':mon,**metrics(z)})
+        g=selected[mask]
+        out.append({'variant':name,'scope':'ALL','month':np.nan,'venue':np.nan,**metrics(g)})
+        for mon,z in g.groupby(g.date.str[:7]): out.append({'variant':name,'scope':'MONTH','month':mon,'venue':np.nan,**metrics(z)})
+        for ven,z in g.groupby('venue'): out.append({'variant':name,'scope':'VENUE','month':np.nan,'venue':ven,**metrics(z)})
     O=pd.DataFrame(out); O.to_csv(OUT,index=False)
     L=['# v245 corrected first-day / new-motor exclusion audit','', '- Canonical v243 policy reproduced: 182 races.', '- First day uses official title CSV `日次=初日`; title metadata coverage enforced >=95%.', f'- New-motor meeting proxy: >=80% of day-1 assigned motor numbers unseen at that venue in prior {LOOKBACK} days.', '- Dec2025-Aug2026 is in-sample / selection-contaminated, not pristine validation.','',f'- Official title metadata coverage: {coverage:.2%}','', '|variant|R|hit|ROI|','|---|---:|---:|---:|']
-    for _,r in O[O.month.isna()].iterrows(): L.append(f'|{r.variant}|{int(r.R)}|{100*r.hit:.2f}%|{100*r.roi:.2f}%|')
+    for _,r in O[O.scope=='ALL'].iterrows(): L.append(f'|{r.variant}|{int(r.R)}|{100*r.hit:.2f}%|{100*r.roi:.2f}%|')
     L+=['','## Monthly EXCLUDE_BOTH','|month|R|hit|ROI|','|---|---:|---:|---:|']
-    for _,r in O[(O.variant=='EXCLUDE_BOTH')&O.month.notna()].iterrows(): L.append(f'|{r.month}|{int(r.R)}|{100*r.hit:.2f}%|{100*r.roi:.2f}%|')
+    for _,r in O[(O.variant=='EXCLUDE_BOTH')&(O.scope=='MONTH')].iterrows(): L.append(f'|{r.month}|{int(r.R)}|{100*r.hit:.2f}%|{100*r.roi:.2f}%|')
+    for name in variants:
+        L+=['',f'## Venue breakdown: {name}','|venue|R|hit|ROI|','|---|---:|---:|---:|']
+        for _,r in O[(O.variant==name)&(O.scope=='VENUE')].sort_values(['R','roi'],ascending=[False,False]).iterrows():
+            L.append(f'|{r.venue}|{int(r.R)}|{100*r.hit:.2f}%|{100*r.roi:.2f}%|')
     L+=['','## Detected new-motor meetings','|venue|meeting start|fresh share|','|---|---|---:|']
     det=fm[fm.new_motor_meeting==1] if len(fm) else fm
     if len(det):
