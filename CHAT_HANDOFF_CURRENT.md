@@ -1,198 +1,175 @@
 # Chat handoff — canonical current state
 
-Updated: 2026-09-09 (JST)
+Updated: 2026-09-09 17:24 JST
 Repository: `merry02180218-ai/boatrace-backtest`
 Default branch: `main`
 
 ## Mandatory next-chat startup
-1. Read `CHAT_HANDOFF_CURRENT.md` first.
-2. Then inspect actual latest repo files/commits/results through GitHub before any prediction, judgment, backtest conclusion, or model change.
+1. Read this file first.
+2. Then inspect actual latest repo files/commits/results through GitHub before any prediction, judgment, backtest conclusion, audit, or model change.
 3. Latest GitHub file/commit supersedes older chat/memory when they conflict.
 4. Never calculate a LIVE prediction from memory alone. Run the actual current program with current inputs.
 5. Freeze prediction/tickets before result/payout/post-deadline information.
 
-## CRITICAL WARNING — JULY/AUGUST ARE OVERFIT / REPEATEDLY INSPECTED
-**Treat 2026-07 and 2026-08 as overfit / contaminated-for-model-selection periods for all current 3-head development.**
-They have been inspected repeatedly for PRE cuts, v165/v166 behavior, TopN point counts, variable-point rules, ROI/value hypotheses, failure analysis, and individual profitable races. Therefore:
-- July/August results MUST NOT be presented as pristine out-of-sample proof.
-- Do NOT adopt a new PRE rule, v166 opponent rule, point-count rule, composite-odds cutoff, value filter, or ROI claim because it works on July/August.
-- July/August may be shown as descriptive/reference/shadow results only.
-- Any new rule derived after these inspections needs validation on genuinely unseen future data, or a strict historical protocol whose tuning period does not include the evaluated period.
-- The strong July/August ROI is especially suspect because v216 showed it is concentrated in a few high-return hits and is not explained by materially higher trifecta hit rate.
-- In short: **July/August profitability is currently considered overfit / non-pristine evidence, not proof of sustainable positive EV.**
+## CRITICAL — JULY/AUGUST ARE NON-PRISTINE
+2026-07 and 2026-08 have been repeatedly inspected and MUST NOT be used as pristine validation/model-selection evidence. They may be used only as descriptive/shadow/sanity-check periods. Do not adopt thresholds, PRE rules, opponent rules, point-count rules, odds filters, or model changes because they work on Jul/Aug.
 
-## Current 1-head production
-Canonical production is newer than the old 2026-09-05 handoff:
-**Legacy PRE -> v109 S-only -> v162 Top7**.
-- v109 BUY only S: p109 >= .72.
-- v162 direct ordered-pair lambda=1.00 ranks all 20 `1-s-t` pairs; present Top7.
-- v110 lambda=.50 role-factorized is old opponent model.
-- Do not revert to the old v109+v110 production description.
-
-## Current 3-head production baseline
-Canonical: `V166_3HEAD_PRODUCTION_RULE.md` plus newer audit files.
-- Current exhibition required.
-- Target boat 3 must exhibit course 3.
-- v165 computes p3head using current-race exhibition/direct margins and prior-safe features.
-- Production head gate: `p3head >= 0.30`.
-- v166 direct ordered-pair model, opponents `[1,2,4,5,6]`, lambda=1.00, originally Top10.
-- v165 is NOT a pre-exhibition score.
-
-## PRE status — important
-PRE is operationally needed because exhibition/original exhibition is only available around 15 minutes before deadline and all-race manual final review is impractical.
-However, PRE hard filtering has been shown to remove profitable v165 races.
-
-v191 clean PRE:
-- cut .072608
-- July watch 13.6%, v165-formal recall 85.1%
-- August watch 14.2%, recall 85.5%
-
-v205 August operational replay:
-- NO PRE -> v165 -> v166 Top10: 109R, hit 30.28%, avg composite 4.584, cost 1,090,000, return 1,173,880, ROI **107.7%**, profit **+83,880**
-- v191 PRE -> v165 -> v166: 93R, ROI **97.8%**, profit -20,190
-
-PRE-dropped August audit:
-- 16 dropped production races
-- 3 hits
-- cost 160,000
-- return 264,070
-- ROI **165.0%**
-- profit **+104,070**
-Key dropped hits included:
-- `202608112308`: PRE ~0.0010, v165 p3head 31.08%, hit 3-1-4, composite ~12.365, return 129,690
-- `202608210409`: PRE ~0.0087, v165 p3head 33.21%, hit 3-2-5, composite ~11.571, return 114,580
-These are descriptive August examples only; because August is repeatedly inspected, they MUST NOT be used to justify a newly tuned production PRE rule.
-
-v207/v208 enhanced 8% PRE:
-- August PRE watch 421R = 8.8%
-- v165 formal recall 85/110 = 77.3%
-- settled FINAL 84R
-- Top10 hit 29/84 = 34.5%
-- avg composite 3.604
-- ROI **99.7%**, profit -2,910
-
-v210 PRE ensemble:
-- 8% style: August 424R = 8.9%, v165 recall 77.3%, settled 84R, ROI 99.7%
-- 10% style: 520R = 10.9%, recall 82.7%, ROI 93.0%
-- 12% style: 652R = 13.7%, recall 84.5%, ROI 98.9%
-- The important 8/11 and 8/21 dropped winners were NOT rescued by v210.
-
-Operational conclusion on PRE:
-- PRE cannot simply be removed because of the ~15-minute deadline constraint.
-- Do NOT adopt a new PRE hard gate from repeatedly inspected July/August data.
-- Treat PRE redesign as workload reduction / attention prioritization; protect against dropping exhibition-improvement races.
-- Current production PRE is not automatically replaced by v207/v210 shadow work.
-
-## NEW ROI DEFINITION — mandatory for current ROI work
-User explicitly changed ROI definition.
-- Total stake fixed at **10,000 yen per selected race**.
-- Selected tickets are Dutch/equal-return allocated using odds.
+## ROI / staking definition — mandatory
+- Exactly 10,000 yen total stake per selected race.
+- Dutch allocation inverse to odds.
+- 100-yen units with Hamilton/largest-remainder rounding; total exactly 10,000 yen.
+- Zero-stake tickets are not purchased.
 - Composite odds: `O_combined = 1 / sum(1/o_i)`.
-- Ideal continuous stake: `10000*(1/o_i)/sum(1/o_j)`.
-- Actual stakes use 100-yen units and total exactly 10,000; current implementation uses Hamilton/largest-remainder rounding.
-- Historical ROI = total realized return / (settled selected races * 10,000) * 100.
-- Average composite odds is NOT ROI.
-- Same-race odds must be available pre-deadline for LIVE decisions; closing odds are only for historical settlement/audit unless they were truly available at decision time.
-- User allowed BoatraceCSV od3 and corrected official closing to be treated as one unified historical odds series for replay aggregation, with source retained for audit.
+- Composite odds is a value feature, NOT ROI itself.
+- Realized ROI = total payout / (settled selected races * 10,000).
+- Losing race payout=0 and profit=-10,000 yen.
+- Canonical implementation: `analyze_v205_3head_operational_replay.py::round_dutch`.
 
-## v166 / opponent-points re-evaluation under new ROI
-User correctly noted that fixed Top10 may be structurally poor under the new ROI because adding weak tickets lowers composite odds.
+## Current production/model context
+### 1-head
+Canonical chain: Legacy PRE -> v109 S-only -> v162 Top7. Re-fetch latest files before live use.
 
-v211 fixed-points test, July/August:
-- Top10: July 98.7%, August 107.7%
-- Top6: July **107.0%**, August **122.8%**
-- August fixed points: Top4 120.1%, Top6 122.8%, Top8 113.7%, Top10 107.7%, Top12 106.4%, Top15 100.5%
-**These July/August figures are overfit/non-pristine reference results and MUST NOT justify Top6 adoption.**
+### 3-head
+Main current research line is v165/v166 -> v219+ redesign work. v165 uses current exhibition/direct margins and prior-safe features; target boat 3 must exhibit course 3. v166 direct ordered-pair model ranks opponents. Production history used p3head>=.30 and Top10, but newer research has NOT established a replacement production rule.
 
-v212 variable 4/6/8/10 using p3head + opponent concentration:
-- July ROI **109.7%**
-- August ROI **117.5%**, profit +191,080, avg points 6.88
-- August allocation: 4pt 37R, 6pt 25R, 8pt 9R, 10pt 38R
-**Again, July/August are repeatedly inspected; these are shadow/reference results, not validation.**
+### 4-corner / 5-head
+Models exist. Re-fetch exact latest repo rules before use; do not infer from old chat.
 
-v213 older-period stress test, Dec-2025..Jun-2026, 486R:
-- Top4 ROI 74.6%
-- Top6 76.1%
-- Top8 77.8%
-- Top10 78.2%
-- v212 variable 78.9%, avg 6.96 points
-Thus fixed Top6 does NOT generalize to the older period. v212 slightly beats Top10 but remains <100%.
+## Strict contamination protocol
+- Jul/Aug 2026 are NON-PRISTINE.
+- Dec2025-Jun2026 has also been used extensively for feature/rule discovery. Any threshold discovered on it is selection-contaminated and must not be called pristine.
+- Use monthly prior-only where specified.
+- Historical odds used for settlement must not be represented as pre-deadline live odds unless actually captured pre-deadline.
 
-v214 cumulative TopN probability-mass rule failed to find a useful variable-points rule and fell back to Top10.
+## v219-v225 research progression
+v219 showed v166 pair ranking/calibration was relatively strong while head/race selection was weak.
+v220 added player/prior history; player traits improved head discrimination and PRIOR12 improved ROI.
+v221 scenario-aware pair ranking improved conditional opponent coverage/ROI direction.
+v222 broad current+relative feature audit raised research ROI to 87.34%.
+v223 national recent 5-meet form raised it to 89.88%.
+v224 FULL_DECOMP/RECENCY_CONTEXT reached 90.77% on the then-existing Dec-Jun data, but only 2/7 profitable months.
+v225 weight/entry combinations did not beat v224; v224 remained research baseline.
 
-## Overfit audit
-v215 strict monthly walk-forward:
-- each month uses only prior months to choose opponent lambda/points, then evaluates the next month once
-- Jan-Aug 575R aggregate ROI **94.0%**, profit -343,830
-Important decomposition:
-- Dec-Jun: 3-head rate 34.77%, v166 Top10 conditional coverage 81.66%, trifecta hit 28.40%, ROI **78.2%**
-- Jul-Aug: 3-head rate 37.24%, Top10 coverage 76.71%, trifecta hit 28.57%, ROI **103.7%**
-Thus Jul-Aug ROI improvement was NOT caused by materially better trifecta hit rate; odds/payout regime is a major driver.
-This supports treating July/August as overfit/non-pristine evidence for current development.
+## v226-v228 odds exploration — IMPORTANT CAVEAT
+User allowed closing-odds selection for one exploratory experiment only. Fixed Top10 plus value skipping looked strong in Dec-Jun: e.g. comp>=3.0 ROI 115.37%; comp[3.0,3.25) v227/v228 was R23, hit52.2%, ROI163.2%. Dynamic BEST_N maxEV failed.
+These results are exploratory/selection-contaminated and MUST NOT be production rules.
 
-## ROI regime audit v216
-Key conclusion: Jul-Aug profitability is highly dependent on a few high-return hits.
-- Jul-Aug normal ROI 103.7%, profit +72,680
-- remove single largest-profit race -> ROI **89.9%**, profit -196,320
-- remove top 3 -> ROI 77.9%
-- remove top 5 -> ROI 68.9%
-Largest hit:
-- `202607010608`, p3head ~.302, composite ~26.703, hit 3-5-4, return ~279,000, profit +269,000
-High composite odds >=7:
-- Dec-Jun: 63R, hit 6.3%, ROI 70.9%
-- Jul-Aug: 34R, hit 14.7%, ROI 210.6%
-So do NOT claim v165/v166 became sustainably profitable based on Jul-Aug.
+Later audit found a critical odds-source definition issue: `v205.load_odds()` loads official closing plus BoatraceCSV `previews/od3`, then duplicate handling can prefer od3. Upstream od3 is a realtime preview snapshot typically around 5 minutes before deadline, NOT guaranteed final closing odds. In v229 selected rows, July used a mixture of od3/official while August used od3 for 103/103 settled selected races and zero official closing. Therefore v226-v229 odds-zone conclusions are not true uniform closing-odds experiments and must be treated cautiously.
 
-## v217 low-p/high-composite expectation audit
-Tested the hypothesis that p3head .30-.35 plus high composite odds is a reusable value region.
-Pre-Jul Dec-Jun results did NOT reproduce it:
-- comp>=3: 148R, hit 14.2%, ROI 67.8%
-- comp>=4: 101R, hit 6.9%, ROI 54.2%
-- comp>=5: 79R, hit 7.6%, ROI 63.9%
-- comp>=7: 50R, hit 4.0%, ROI 53.5%
-Chronological Dec-Feb -> Mar-Jun was worse; rolling prior-only threshold selection aggregate ROI about 49.8%.
-Jul-Aug looked extremely strong in the same region but is already inspected and is NOT pristine validation.
-Conclusion: reject the simplistic `p3head .30-.35 + high composite odds = value` rule.
+## v229 Jul/Aug NON-PRISTINE shadow
+After fixing a period-boundary builder bug, final v229 results were poor:
+- ALL Top10 Jul+Aug: R189, hit30.69%, ROI69.04%.
+- comp>=2.5: ROI58.15%.
+- comp>=2.75: ROI67.82%.
+- comp>=3.0: ROI45.94%.
+- comp[3.0,3.25): R5, 0 hits, ROI0%.
+- EV>=1.20: ROI71.09%.
+Thus the Dec-Jun odds-zone signal did not reproduce even as a NON-PRISTINE sanity check.
 
-## Important new insight: point count should react to current odds
-User pointed out correctly that under the new ROI, buying many tickets when composite odds is already low naturally destroys expected ROI.
-Therefore the next opponent/betting design should NOT be:
-`choose Top10 first -> inspect resulting composite odds`.
-Instead investigate:
-`v166 ranking -> obtain CURRENT pre-deadline odds -> calculate Top4/5/6/... composite odds -> decide how far to expand tickets based on probability/value -> Dutch 10,000 yen`.
-The exact rule is NOT validated yet. Do not invent/adopt a minimum composite-odds cutoff without walk-forward validation.
+## v230 data-integrity / failure decomposition
+v230 decomposed Jul/Aug Top10 hit collapse:
+- Jul R86: actual 3-head34.88%, Top10 hit26.74%, pair coverage given 3-head76.67%, mean p3 .5104.
+- Aug R103: actual 3-head45.63%, Top10 hit33.98%, pair coverage74.47%, mean p3 .5950.
+- Combined R189: actual 3-head40.74%, pair coverage75.32%, final hit30.69%.
+Main failure was head/p3 overprediction; pair ranker degradation was secondary.
 
-## LIVE current-odds redesign — NEXT TASK
-The user agreed to change actual operation to:
-**PRE workload screen -> exhibition/original exhibition -> v165 -> v166 ranking -> fetch CURRENT 3T odds at that moment -> variable ticket count/value decision -> 10,000-yen Dutch stakes -> freeze tickets**.
+## July half-year boundary hypothesis
+Official BOAT RACE information confirms:
+- 2026 first-half grade applies 2026-01-01 through 2026-06-30.
+- 2026 second-half grade applies 2026-07-01 through 2026-12-31.
+Thus July 1 is a genuine racer-grade/period boundary. This is a hypothesis for regime shift, not yet a proven causal explanation.
 
-Current LIVE script `predict_v192_3head_live_manual.py` intentionally does not read target-race odds/result/payout. It currently stops at v165/v166 ranking.
-The next task is to build a SHADOW LIVE extension (do not silently overwrite production) that:
-1. takes current exhibition/original exhibition inputs,
-2. runs actual v165,
-3. if p3head>=.30, runs v166 full 20-pair ranking,
-4. obtains current pre-deadline 3連単 odds for that race,
-5. calculates composite odds for TopN candidates (ideally N=4..15 or 20),
-6. calculates exact 10,000-yen Dutch/Hamilton stakes,
-7. reports a shadow variable-points/value view,
-8. freezes selected odds timestamp and tickets before result.
+## v232 July regime-shift audit
+Frozen v224-like selected-race head calibration before Waku10 restoration:
+- May: avg p3 52.06%, actual 3-head57.14%, gap -5.09pp.
+- Jun: 53.31% vs47.95%, gap +5.36pp.
+- Jul: 51.08% vs35.63%, gap +15.45pp.
+- Aug: 59.71% vs44.55%, gap +15.16pp.
+Largest Jun->Jul feature shifts were current/player-stat-like fields, especially `waku_wr`, `waku_sr`, `pastwin` and relative versions. Suspiciously, many Waku-related June means were exact defaults/zeros and became populated in July.
 
-Important: current-race odds ARE allowed for this new LIVE betting decision only if they are actually fetched before deadline. They must never be substituted by closing/result-known odds when reconstructing a historical pre-deadline decision.
+## Waku10 root cause
+`backtest.py::race_features` uses `data/programs/waku10/YYYY/MM/DD.csv`.
+- missing `waku_wr` -> default 0.
+- missing `waku_sr` -> default 3.5, transformed by current builder to 0.5.
+- no past 10-race placements -> `past_win=0`.
+This exactly explained suspicious pre-July feature defaults.
 
-Before implementing, inspect latest repo for existing official/BoatraceCSV odds fetchers and reuse the safest implementation. Historical archive scripts/workflows exist for od3/official odds, but LIVE current-odds fetching still needs to be wired into the 3-head LIVE path.
+Waku10 source is Boatcast `bc_j_waku10`; BoatraceCSV path is `data/programs/waku10/YYYY/MM/DD.csv`.
 
-## No-leak / entry rules
-- Target 3 must exhibit course 3 or exclude.
-- Current exhibition, exhibition ST, original exhibition and current pre-race conditions are allowed at FINAL.
-- Result/payout/post-race course are forbidden before freeze.
-- Current pre-deadline odds may be used in the newly agreed betting/value stage, but record timestamp/source.
-- Do not use final/deadline odds as if they were the earlier live snapshot.
+## v233 Waku10 coverage/backfill audit
+Original slow v233 was replaced by a parallel/short-timeout version.
+Successful run: `34324515336`, artifact `10093518025`.
+Coverage audit showed BoatraceCSV Waku10 availability:
+- 2025/12: 0/31 published; Boatcast recoverable 31/31.
+- 2026/01: 0/31; recoverable31/31.
+- 2026/02: 0/28; recoverable28/28.
+- 2026/03: 0/31; recoverable31/31.
+- 2026/04: 0/30; recoverable30/30.
+- 2026/05: 0/31; recoverable31/31.
+- 2026/06: 0/30; initial audit recoverable29/30; 6/17 needed deeper recovery.
+- 2026/07: 13/31 published; remaining18/18 recoverable.
+- 2026/08:31/31 published.
+Total 8,883 original Boatcast Waku10 files recovered in v233 audit. No arbitrary imputation permitted.
 
-## Other models
-4-corner and 5-head information exists in repo but exact current versions/rules MUST be re-fetched before asserting or using them. Do not rely on the old 2026-09-05 handoff for their current production state.
+## v234 — CURRENT CRITICAL RESULT: restored Waku10 replay
+Implementation/workflow commits:
+- script commit `09edebd3727bdf75f2ce4fef9ce24585530af355`
+- workflow commit `f00b4afb44de818e9966425df99bfe1d01ec3e25`
+Successful workflow run: **34326743303**.
+Artifact: **10094762062**, `v234-3head-waku10-restored-replay`.
 
-## Next chat recommended opening
-User can say:
-`boatrace-backtest の CHAT_HANDOFF_CURRENT.md と最新GitHubを読んで続き。7月・8月は過学習/非pristineとして扱うことを厳守。3号艇LIVEを、展示後v165→v166→その時点の3連単オッズ取得→可変点数→1万円Dutchまで実装するところから再開して。`
+v234 procedure:
+1. Reconstruct missing Waku10 into BoatraceCSV-compatible 208-column daily CSV from original Boatcast files.
+2. Deep-search remaining missing dates/venues (including 2026-06-17) rather than impute.
+3. Validate parser against already-published August Waku10.
+4. Only after validation, rerun frozen v224 FULL_DECOMP-like head/pair replay across Dec2025-Aug2026.
+5. Jul/Aug remain NON-PRISTINE.
 
-Then immediately inspect latest GitHub before acting.
+### Reconstruction validation
+Published August comparison: **156 races checked, 0 cell mismatches**. This strongly validates the reconstruction/parser method.
+Historical Waku10 coverage was restored across the replay period; do not revert to default-zero Waku handling when genuine source data is available.
+
+### v234 corrected v224-like results
+Dec2025-Jun2026 aggregate after Waku10 restoration:
+- R482
+- Top10 hit **39.63%**
+- conditional opponent Top10 coverage **81.97%**
+- ROI **91.85%**
+This is modestly better than old v224 ROI 90.77%, but still below 100% and is not pristine validation.
+
+Key recent monthly calibration/results after restoration:
+|month|avg p3|actual 3-head|p3 gap|Top10 hit|ROI|
+|---|---:|---:|---:|---:|---:|
+|2026-06|53.30%|45.21%|+8.10pp|34.25%|74.45%|
+|2026-07|50.49%|39.08%|+11.41pp|27.59%|60.28%|
+|2026-08|51.86%|47.71%|+4.16pp|35.78%|82.01%|
+
+### v234 interpretation
+Waku10 missing/default-imputation was a real material data bug, but NOT the entire July failure.
+- Before restoration, July p3 overprediction gap was about +15.45pp; after restoration it is still +11.41pp.
+- August improved dramatically from about +15.16pp pre-restoration to +4.16pp post-restoration.
+Therefore:
+1. Much of August's apparent calibration anomaly was caused by inconsistent/missing Waku10 handling.
+2. July still has a genuine residual regime/calibration problem after Waku10 normalization.
+3. Do NOT claim Waku10 fully explains July.
+4. The user's July-1 second-half-season hypothesis remains plausible and is now the next audit target.
+
+## NEXT TASK — v235 recommended
+Audit the residual July-specific regime shift after Waku10 restoration. Do NOT tune a new rule yet.
+Primary questions:
+1. Which frozen v224 input families still change materially across Jun30 -> Jul1 after Waku10 normalization?
+2. Audit grade/class fields and their source definitions at the official 2026 second-half switch.
+3. Audit racer national/local stats and whether source/reference periods reset or change meaning on Jul1.
+4. Audit race-card fields/fallbacks for schema/population changes at July boundary.
+5. Separate genuine racer/regime changes from source-data definition changes.
+6. Compare May/June/July/Aug calibration using corrected Waku10.
+7. Do not derive/adopt thresholds from Jul/Aug; they remain NON-PRISTINE.
+8. If another historical source is missing, search public/original sources and save exact values with provenance. Never fabricate/impute arbitrary values.
+
+Only after v235 establishes the cause should model recalibration/redesign be considered. Any proposed new model must use an appropriate no-leak validation protocol and must not call Jul/Aug pristine.
+
+## LIVE odds path status
+A live odds-aware SHADOW infrastructure exists from v218 (`boatrace_live_odds3t.py` and shadow runner). It freezes live snapshots. However, current research focus moved to correcting the 3-head model/data before production adoption. Re-fetch latest live files before any live prediction.
+
+## Recommended next-chat opening
+`boatrace-backtest の CHAT_HANDOFF_CURRENT.md と最新GitHubを読んで続き。v234でWaku10を復元した結果を確認し、次はv235として7/1後期切替後も残る3号艇p3のキャリブレーション崩れを、級別・全国/当地成績・race-card統計期間・データ定義の変化に分解して監査して。7月8月はNON-PRISTINE厳守。`
