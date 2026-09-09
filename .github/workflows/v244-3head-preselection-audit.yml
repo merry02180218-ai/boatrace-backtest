@@ -11,7 +11,7 @@ on:
 jobs:
   audit:
     runs-on: ubuntu-latest
-    timeout-minutes: 360
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -19,8 +19,14 @@ jobs:
           python-version: '3.11'
       - name: Install dependencies
         run: pip install numpy pandas scikit-learn requests
-      - name: Rebuild v243 settlement/feature cache
-        run: python analyze_v243_3head_expand_feature_audit.py
+      - name: Restore cached v243 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api repos/${{ github.repository }}/actions/artifacts/10118044294/zip > /tmp/v243.zip
+          unzip -o /tmp/v243.zip -d .
+          test -s analysis_v243_3head_expand_feature_audit.csv
+          test -s analysis_v243_3head_expand_rule_search.csv
       - name: Run v244 PRE-selection audit
         run: python analyze_v244_3head_preselection_audit.py
       - name: Upload v244 artifact
