@@ -1,0 +1,23 @@
+name: v231 v224 head calibration audit
+on:
+  push:
+    paths:
+      - 'analyze_v231_v224_head_calibration_audit.py'
+      - '.github/workflows/v231-v224-head-calibration-audit.yml'
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests
+      - run: python analyze_v231_v224_head_calibration_audit.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v231-v224-head-calibration-audit
+          path: |
+            analysis_v231_v224_head_calibration_audit.csv
+            summary_v231_v224_head_calibration_audit.md
