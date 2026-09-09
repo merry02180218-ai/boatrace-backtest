@@ -1,0 +1,28 @@
+name: v252 4-head PRE POST gate search
+on:
+  push:
+    paths:
+      - 'analyze_v252_4head_pre_post_gate_search.py'
+      - '.github/workflows/v252-4head-pre-post-gate-search.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests
+      - name: Run v252 gate search
+        run: python analyze_v252_4head_pre_post_gate_search.py
+      - name: Commit outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v252_4head_pre_post_gate_search.csv summary_v252_4head_pre_post_gate_search.md
+          git diff --cached --quiet || git commit -m 'Add v252 4-head PRE POST gate results'
+          git push
