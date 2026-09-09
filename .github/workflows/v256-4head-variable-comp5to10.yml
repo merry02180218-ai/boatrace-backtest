@@ -1,0 +1,27 @@
+name: v256 4-head variable comp 5-10
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v256_4head_variable_comp5to10.py'
+      - '.github/workflows/v256-4head-variable-comp5to10.yml'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests
+      - run: python analyze_v256_4head_variable_comp5to10.py
+      - name: Commit outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v256_4head_variable_comp5to10.csv summary_v256_4head_variable_comp5to10.md
+          git diff --cached --quiet || git commit -m 'Add v256 4-head variable comp results'
+          git pull --rebase
+          git push
