@@ -114,3 +114,4 @@ def main():
  with open(SUM,'w',encoding='utf-8') as f:f.write('\n'.join(L)+'\n')
  print('\n'.join(L))
 if __name__=='__main__':main()
+# trigger-only touch
