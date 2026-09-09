@@ -51,6 +51,11 @@ def fit_pair_audit(tr,month,miss):
  if n<100:raise RuntimeError(f'small finite pair train {month}: {n}')
  m=v222.Pipeline([('s',v222.StandardScaler()),('m',v222.LogisticRegression(C=.35,max_iter=1800,solver='lbfgs'))]);m.fit(np.asarray(X,float),np.asarray(y,int));return m,n,badn
 def main():
+ # v221/v222 were intentionally frozen at 2026-06-30 for discovery. Extend only inside
+ # this NON-PRISTINE Jul/Aug shadow so their public historical preview/result fetchers
+ # actually materialize July/Aug features. The source modules themselves remain frozen.
+ v221.CONTAM=ENDTS;v221.END=date(2026,8,31)
+ v222.CONTAM=ENDTS;v222.END=date(2026,8,31)
  v223.CONTAM=ENDTS;v223.END=date(2026,8,31);v224.CONTAM=ENDTS
  raw0=pd.read_csv(SRC,dtype={'race_code':str});dc=v165.pc(raw0,['date','race_date','ymd']);vc=v165.pc(raw0,['venue','jcd','stadium','place']);y,_=v165.target(raw0);base=v165.feats(raw0)
  raw0['_date']=pd.to_datetime(raw0[dc].astype(str),errors='coerce');raw0['_y']=y
@@ -107,8 +112,8 @@ def main():
   cnt['failure_examples']=';'.join(f'{a}:{b}' for a,b in examples);diags.append(cnt);skip.append((mon,ntrain,prior_missing,len(vals),k))
  pd.DataFrame(miss).drop_duplicates().to_csv(MISS,index=False)
  pd.DataFrame(diags).to_csv(DIAG,index=False)
- z=pd.DataFrame(race);z.to_csv(OUT,index=False)
- L=['# v229 Jul/Aug non-pristine shadow check','','**NON-PRISTINE / SANITY CHECK ONLY.**','- Top10 fixed; exact 10,000-yen Dutch; losing race = -10,000 yen.','- No missing value is imputed. Missing eligibility stages are recorded for source recovery.','','## Eligibility diagnostic','']
+ z=pd.DataFrame(race,columns=['month','date','race_code','p3','prior_cov','est_hit','comp','ev','hit','ret','profit']);z.to_csv(OUT,index=False)
+ L=['# v229 Jul/Aug non-pristine shadow check','','**NON-PRISTINE / SANITY CHECK ONLY.**','- Top10 fixed; exact 10,000-yen Dutch; losing race = -10,000 yen.','- No missing value is imputed. Missing eligibility stages are recorded for source recovery.','- v221/v222 historical fetch windows are extended only inside v229 through 2026-08-31; their frozen discovery modules are unchanged.','','## Eligibility diagnostic','']
  L.append(pd.DataFrame(diags).to_markdown(index=False) if diags else 'No diagnostics')
  if z.empty:
   L+=['','## Shadow results','','No settled Jul/Aug rows yet. Recover the missing historical source identified above, then rerun.']
