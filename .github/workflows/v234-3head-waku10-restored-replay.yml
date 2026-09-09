@@ -1,0 +1,46 @@
+name: v234 3-head restored Waku10 replay
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analyze_v234_3head_waku10_restored_replay.py
+      - .github/workflows/v234-3head-waku10-restored-replay.yml
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -q numpy pandas scikit-learn
+      - name: Download v233 recovered Waku10 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/v233
+          gh run download 34324515336 --repo ${{ github.repository }} --name v233-waku10-coverage-backfill --dir /tmp/v233
+          test -d /tmp/v233/recovered_boatcast
+          echo "recovered raw files: $(find /tmp/v233/recovered_boatcast -type f | wc -l)"
+      - name: Run v234 restored replay
+        env:
+          V233_DIR: /tmp/v233
+        run: python analyze_v234_3head_waku10_restored_replay.py
+      - name: Upload v234 results
+        uses: actions/upload-artifact@v4
+        with:
+          name: v234-3head-waku10-restored-replay
+          path: |
+            analysis_v234_3head_waku10_restored_replay.csv
+            analysis_v234_waku10_reconstruction_coverage.csv
+            summary_v234_3head_waku10_restored_replay.md
+            data/audit/v234_waku10/
+          retention-days: 90
