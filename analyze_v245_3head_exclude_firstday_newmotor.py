@@ -1,15 +1,21 @@
 #!/usr/bin/env python3
 from __future__ import annotations
-import csv, io, time, urllib.request
+import csv, io, re, time, urllib.request
 from datetime import date, timedelta
 from pathlib import Path
 import numpy as np
 import pandas as pd
+import requests
+from bs4 import BeautifulSoup
+
 ROOT=Path(__file__).resolve().parent
 BASE='https://raw.githubusercontent.com/BoatraceCSV/boatracecsv.github.io/main/'
+OFFICIAL='https://www.boatrace.jp/owpc/pc/race/raceindex'
 SRC=ROOT/'analysis_v243_3head_expand_feature_audit.csv'; OUT=ROOT/'analysis_v245_3head_exclude_firstday_newmotor.csv'; SUM=ROOT/'summary_v245_3head_exclude_firstday_newmotor.md'
 BANK=10000; START=date(2025,12,1); END=date(2026,8,31); LOOKBACK=120
 CANON_KEEP_THR=-0.1999999999999999; CANON_RESCUE_THR=0.5672342857142857
+
+FW=str.maketrans('０１２３４５６７８９','0123456789')
 
 def fetch(path):
     for k in range(3):
@@ -21,9 +27,10 @@ def fetch(path):
 def rows(path):
     s=fetch(path); return list(csv.DictReader(io.StringIO(s))) if s else []
 def daynum(s):
-    z=(s or '').strip().replace(' ','').replace('　','')
-    mp={'初日':1,'２日目':2,'2日目':2,'３日目':3,'3日目':3,'４日目':4,'4日目':4,'５日目':5,'5日目':5,'６日目':6,'6日目':6,'７日目':7,'7日目':7,'８日目':8,'8日目':8,'９日目':9,'9日目':9}
-    return mp.get(z,0)
+    z=(s or '').strip().replace(' ','').replace('　','').translate(FW)
+    if z=='初日': return 1
+    m=re.fullmatch(r'(\d+)日目',z)
+    return int(m.group(1)) if m else 0
 def metrics(g):
     n=len(g)
     if not n:return dict(R=0,hits=0,hit=np.nan,roi=np.nan,ret=0.)
@@ -33,6 +40,30 @@ def venue_of(code,r):
     v=str(r.get('レース場コード','')).strip(); return v.zfill(2) if v and v.lower()!='nan' else (code[8:10] if len(code)==12 else '')
 def motor_ids(r):
     return [z for b in range(1,7) if (z:=str(r.get(f'艇{b}_モーター番号','')).strip()) and z.lower()!='nan']
+
+def official_meeting_meta(venue:str,d:date):
+    params={'jcd':venue,'hd':d.strftime('%Y%m%d')}
+    headers={'User-Agent':'Mozilla/5.0'}
+    for k in range(3):
+        try:
+            r=requests.get(OFFICIAL,params=params,headers=headers,timeout=20)
+            r.raise_for_status()
+            text=BeautifulSoup(r.text,'html.parser').get_text(' ',strip=True).translate(FW)
+            cur=None
+            m=re.search(fr'{d.month}月\s*{d.day}日\s*(初日|\d+日目|最終日)',text)
+            if m: cur=m.group(1)
+            starts=[]
+            for mm,dd in re.findall(r'(\d{1,2})月\s*(\d{1,2})日\s*初日',text):
+                mm=int(mm); dd=int(dd)
+                for yy in (d.year-1,d.year,d.year+1):
+                    try: x=date(yy,mm,dd)
+                    except ValueError: continue
+                    if timedelta(0)<=d-x<=timedelta(days=10): starts.append(x)
+            ms=max(starts) if starts else None
+            if cur or ms: return cur,ms,'official_web'
+        except Exception:
+            if k<2: time.sleep(1.0+k)
+    return None,None,None
 
 def main():
     if not SRC.exists(): raise RuntimeError('canonical v243 artifact is required')
@@ -53,15 +84,30 @@ def main():
             c=code_of(r); v=venue_of(c,r); lab=str(r.get('日次','')).strip(); dn=daynum(lab); title=str(r.get('タイトル','')).strip(); ms=None
             if dn:
                 ms=d-timedelta(days=dn-1); known_starts.setdefault((v,title),[]).append(ms)
-            meta.append({'race_code':c,'venue':v,'day_label':lab,'day_no':dn if dn else np.nan,'title':title,'date_obj':d,'meeting_start':str(ms) if ms else None})
-    mm=pd.DataFrame(meta).drop_duplicates('race_code')
-    for idx,r in mm[mm.meeting_start.isna()].iterrows():
-        cand=[x for x in known_starts.get((r.venue,r.title),[]) if timedelta(0)<=r.date_obj-x<=timedelta(days=10)]
-        if cand: mm.at[idx,'meeting_start']=str(max(cand))
-    selected=selected.merge(mm[['race_code','venue','day_label','day_no','meeting_start']],on='race_code',how='left')
+            meta.append({'race_code':c,'venue':v,'day_label':lab,'day_no':dn if dn else np.nan,'title':title,'date_obj':d,'meeting_start':str(ms) if ms else None,'meta_source':'title_csv'})
+    mm=pd.DataFrame(meta).drop_duplicates('race_code') if meta else pd.DataFrame(columns=['race_code','venue','day_label','day_no','meeting_start','meta_source'])
+    selected=selected.merge(mm[['race_code','venue','day_label','day_no','meeting_start','meta_source']],on='race_code',how='left')
+
+    cache={}; fallback_count=0
+    for idx,r in selected.iterrows():
+        need_label=pd.isna(r.day_label) or not str(r.day_label).strip()
+        need_start=pd.isna(r.meeting_start) or not str(r.meeting_start).strip()
+        if not (need_label or need_start): continue
+        dd=date.fromisoformat(str(r.date)[:10]); vv=str(r.race_code)[8:10]
+        key=(vv,dd)
+        if key not in cache: cache[key]=official_meeting_meta(vv,dd)
+        lab,ms,src=cache[key]
+        if need_label and lab:
+            selected.at[idx,'day_label']=lab; selected.at[idx,'day_no']=daynum(lab) if lab!='最終日' else np.nan
+        if need_start and ms: selected.at[idx,'meeting_start']=str(ms)
+        if src:
+            selected.at[idx,'meta_source']=src; fallback_count+=1
+
     coverage=float(selected.day_label.notna().mean())
-    if coverage<0.95: raise RuntimeError(f'official title metadata coverage too low: {coverage:.1%}')
-    selected['first_day']=(selected.day_label=='初日').astype(int)
+    start_coverage=float(selected.meeting_start.notna().mean())
+    if coverage<0.95: raise RuntimeError(f'official day metadata coverage too low after fallback: {coverage:.1%}')
+    if start_coverage<0.95: raise RuntimeError(f'official meeting-start coverage too low after fallback: {start_coverage:.1%}')
+    selected['first_day']=(selected.day_label.astype(str).str.strip()=='初日').astype(int)
 
     meeting_first={}; daily_motors={}
     for d,cs in card_daily.items():
@@ -81,7 +127,10 @@ def main():
         newrows.append({'venue':v,'meeting_start':str(ms),'fresh_share':fresh,'new_motor_meeting':int(np.isfinite(fresh) and fresh>=.80),'entries':len(valid)})
     fm=pd.DataFrame(newrows)
     if len(fm): selected=selected.merge(fm[['venue','meeting_start','fresh_share','new_motor_meeting']],on=['venue','meeting_start'],how='left')
-    else: selected['fresh_share']=np.nan; selected['new_motor_meeting']=0
+    else:
+        selected['fresh_share']=np.nan; selected['new_motor_meeting']=np.nan
+    selected['new_motor_known']=selected.new_motor_meeting.notna().astype(int)
+    newmotor_coverage=float(selected.new_motor_known.mean())
     selected['new_motor_meeting']=selected.new_motor_meeting.fillna(0).astype(int)
 
     variants={'ALL_182':pd.Series(True,index=selected.index),'EXCLUDE_FIRST_DAY':selected.first_day==0,'EXCLUDE_NEW_MOTOR_MEETING':selected.new_motor_meeting==0,'EXCLUDE_BOTH':(selected.first_day==0)&(selected.new_motor_meeting==0)}
@@ -92,7 +141,7 @@ def main():
         for mon,z in g.groupby(g.date.str[:7]): out.append({'variant':name,'scope':'MONTH','month':mon,'venue':np.nan,**metrics(z)})
         for ven,z in g.groupby('venue'): out.append({'variant':name,'scope':'VENUE','month':np.nan,'venue':ven,**metrics(z)})
     O=pd.DataFrame(out); O.to_csv(OUT,index=False)
-    L=['# v245 corrected first-day / new-motor exclusion audit','', '- Canonical v243 policy reproduced: 182 races.', '- First day uses official title CSV `日次=初日`; title metadata coverage enforced >=95%.', f'- New-motor meeting proxy: >=80% of day-1 assigned motor numbers unseen at that venue in prior {LOOKBACK} days.', '- Dec2025-Aug2026 is in-sample / selection-contaminated, not pristine validation.','',f'- Official title metadata coverage: {coverage:.2%}','', '|variant|R|hit|ROI|','|---|---:|---:|---:|']
+    L=['# v245 corrected first-day / new-motor exclusion audit','', '- Canonical v243 policy reproduced: 182 races.', '- First-day metadata uses BoatraceCSV title CSV when available and official BOAT RACE raceindex as fallback.', '- Day / meeting-start metadata coverage is enforced >=95%; missing metadata is never silently treated as non-first-day.', f'- New-motor proxy remains >=80% of day-1 assigned motor numbers unseen at that venue in prior {LOOKBACK} days when source history is available; unknown meetings are conservatively kept.', '- Dec2025-Aug2026 is in-sample / selection-contaminated, not pristine validation.','',f'- Day metadata coverage: {coverage:.2%}',f'- Meeting-start coverage: {start_coverage:.2%}',f'- Official-web fallback rows: {fallback_count}',f'- New-motor classification coverage: {newmotor_coverage:.2%}','', '|variant|R|hit|ROI|','|---|---:|---:|---:|']
     for _,r in O[O.scope=='ALL'].iterrows(): L.append(f'|{r.variant}|{int(r.R)}|{100*r.hit:.2f}%|{100*r.roi:.2f}%|')
     L+=['','## Monthly EXCLUDE_BOTH','|month|R|hit|ROI|','|---|---:|---:|---:|']
     for _,r in O[(O.variant=='EXCLUDE_BOTH')&(O.scope=='MONTH')].iterrows(): L.append(f'|{r.month}|{int(r.R)}|{100*r.hit:.2f}%|{100*r.roi:.2f}%|')
