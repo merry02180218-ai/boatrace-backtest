@@ -51,6 +51,66 @@ Operational chain:
 Short canonical description:
 **v249 PRE S+A -> v243 exhibition/final selection -> v242 variable 5-10 tickets -> 10,000 yen Dutch.**
 
+## LIVE / daily operating procedure — use this in the next chat
+When the user asks for today's 3-head candidates, a race judgment, or actual tickets, do the following in this order.
+
+### Phase 1 — before exhibition: PRE screening
+1. Fetch latest repo state first; do not use memory-only rules.
+2. Build/evaluate the strict PRE features using only information available before the current race exhibition.
+3. Run the current v249-style rolling PRE score using chronologically prior data only.
+4. Classify S/A/B using the adopted v249 logic.
+5. **Carry forward S+A only. B is not an operational candidate.**
+6. S and A are NOT separate stake tiers. They are simply one combined candidate pool.
+7. If the user asks for a daily list, show the S+A candidates as the provisional PRE list and clearly label them "展示前候補".
+
+### Phase 2 — after exhibition: final 3-head judgment
+1. Re-fetch/read the actual current-race exhibition data. Do not infer current exhibition from prior races.
+2. Confirm boat 3's actual exhibition entry/course and all required current features.
+3. Recompute the current 3-head head/pair features using the repo code/data.
+4. Apply the canonical v243 final rule exactly, including exact float thresholds:
+   - base: bet==1, p3>=0.45, raw_top_n 7..18, comp_odds 3.05..4.0
+   - keep if `f__c_b3_minus_b5_st >= -0.1999999999999999`
+   - rescue outside base if `f__c_attack3_stretch <= 0.5672342857142857`
+5. If the race fails v243 final selection, output **見送り / NO BET** even if it was S/A PRE.
+6. Never rescue a failed race by subjective judgment unless the user explicitly asks for a separate exploratory opinion; that must not be called the official model.
+
+### Phase 3 — odds and actual tickets
+1. Only for a race that survives v243, obtain the current available 3連単 odds snapshot as close to purchase time as practical.
+2. Freeze that odds snapshot before ticket computation. Do not use result/payout/post-deadline information.
+3. Rank the ordered-pair trifecta candidates with the current canonical pair model.
+4. Evaluate unconstrained TopN for N=2..20 and compute composite odds for each N.
+5. Pick raw N whose composite odds is closest to 3.00.
+6. Apply v242 purchase rule exactly:
+   - raw N<5 => **NO BET**
+   - raw N=5..10 => buy raw N
+   - raw N>10 => buy Top10 only
+7. Allocate exactly 10,000 yen by inverse-odds Dutch using 100-yen units and Hamilton/largest-remainder rounding.
+8. Verify the final stake sum is exactly 10,000 yen and remove zero-stake tickets.
+9. Present final output with at minimum:
+   - race
+   - official 3-head status (BET / NO BET)
+   - p3 / relevant final-selection reason
+   - raw TopN and purchased TopN
+   - composite odds
+   - each trifecta combination and stake
+   - total stake = 10,000 yen
+10. After the race, if settling performance, a miss is payout 0 / profit -10,000 yen. ROI is realized payout divided by total settled stake.
+
+### Important operational prohibitions
+- Never use final result, payout, or post-deadline information to choose a race, point count, ranking, or stake.
+- Never call historical BoatraceCSV od3/closing mixtures "live pre-deadline odds" unless the specific snapshot was actually captured before deadline.
+- Never round the canonical v243 keep threshold from `-0.1999999999999999` to `-0.2`.
+- Never treat S as stronger than A for staking; historical S ROI was lower than A.
+- Never use B as an official PRE candidate under the adopted model.
+- Never silently change the 10,000-yen bankroll, Dutch method, TopN bounds, or target composite odds.
+- Never retune the adopted thresholds because of a single new loss/month and still call it the same production model.
+- Any model change must be a separately named research version and compared against this frozen official chain.
+
+### Recommended output wording in live use
+- Before exhibition: `3頭モデル 展示前候補（v249 S+A）`
+- After exhibition: `3頭モデル 最終判定（v243）`
+- After odds: `3頭モデル 正式買い目（v242可変点数・1万円Dutch）`
+
 ## Adopted historical performance reference
 For the rolling portion used in the v249 evaluation (Feb-Aug):
 - PRE S+A + final purchase: 104 settled races
@@ -92,10 +152,10 @@ Canonical chain remains Legacy PRE -> v109 S-only -> v162 Top7 unless a newer re
 ## 4-corner / 5-head
 Models exist. Re-fetch exact latest repo rules before use; do not infer from old chat.
 
-## LIVE rule
-Before any live 3-head prediction, fetch current repo and actual race inputs. Apply the adopted chain from actual code/data. Historical odds settlement must never be described as true pre-deadline live odds unless a snapshot was actually captured before deadline.
-
 ## Open audits / next improvements
 - v245 first-day/new-motor/venue audit remains a separate research audit and does not block adoption of the current 3-head chain.
 - Venue-level performance should be reviewed when v245 finishes successfully.
 - Future validation should use genuinely unseen/pristine data; do not retune adopted thresholds on each new loss/month without explicitly treating it as a new research branch.
+
+## Recommended next-chat opening
+`boatrace-backtest の CHAT_HANDOFF_CURRENT.md と最新GitHubを読んで続き。正式3頭モデルは v249 PRE S+A -> v243展示後最終判定 -> v242可変5〜10点 -> 1万円Dutch。まず最新GitHubと未完了auditを確認して、この運用ルールを厳守して再開して。`
