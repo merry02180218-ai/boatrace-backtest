@@ -1,0 +1,35 @@
+name: v247 3-head strict PRE LOMO rolling
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v247_3head_strict_pre_lomo_rolling.py'
+      - '.github/workflows/v247-3head-strict-pre-lomo-rolling.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas
+      - name: Download canonical cached v243 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: v243-3head-expand-feature-audit
+          run-id: 34383567078
+          github-token: ${{ github.token }}
+          path: .
+      - name: Run v247 LOMO rolling audit
+        run: python analyze_v247_3head_strict_pre_lomo_rolling.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v247-3head-strict-pre-lomo-rolling
+          path: |
+            analysis_v247_3head_strict_pre_lomo_rolling.csv
+            summary_v247_3head_strict_pre_lomo_rolling.md
