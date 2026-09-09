@@ -2,6 +2,11 @@ name: v244 3-head preselection audit
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'analyze_v244_3head_preselection_audit.py'
+      - '.github/workflows/v244-3head-preselection-audit.yml'
 
 jobs:
   audit:
