@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """v239: connect v237 same-racer grade changes to restored v234 model outcomes.
 AUDIT ONLY. July/Aug NON-PRISTINE. No model/threshold tuning.
-Uses normalized racer name because current BoatraceCSV race-card schema/parser exposes name but no registration number.
+Fix: resolve racer identity directly from race-card by race_code -> 艇3_選手名.
 """
 import pandas as pd
 import analyze_v234_3head_waku10_restored_replay as v234
@@ -11,20 +11,28 @@ def norm(s): return ' '.join(str(s or '').replace('　',' ').split())
 def main():
  v237.main(); same=pd.read_csv(v237.OUT,encoding='utf-8-sig'); changed=set(same.loc[same.grade_changed==1,'racer'].map(norm)); unchanged=set(same.loc[same.grade_changed==0,'racer'].map(norm))
  cov=v234.reconstruct(); common=v234.validate_parser();d,dc,vc,basefs=v234.build_restored();fs=v234.full_features(d,basefs);fs=[x for x in fs if x in d.columns]
- # Fit/select exactly as v234, but retain racer name and outcome for Jul1-14 only.
- import analyze_v222_3head_broad_feature_audit as v222, analyze_v223_3head_unused_feature_audit as v223, analyze_v205_3head_operational_replay as v205
+ import analyze_v222_3head_broad_feature_audit as v222, analyze_v223_3head_unused_feature_audit as v223
  first=pd.Timestamp('2026-07-01'); nextm=pd.Timestamp('2026-08-01');tr=d[d._date<first];pair=v222.fit_pair(tr,'V221');base_te,_=v223.fit_head(d,list(basefs),vc,first,nextm);k=max(1,int((base_te._p>=.30).sum()));te,_=v223.fit_head(d,fs,vc,first,nextm);sel=te.nlargest(k,'_p').copy();sel=sel[sel._date<=pd.Timestamp('2026-07-14')]
+ # Build authoritative race_code -> boat3 racer name map directly from source race cards.
+ rc_name={}
+ for day in pd.date_range('2026-07-01','2026-07-14'):
+  for rr in v237.fetch_day(day.date()):
+   code=str(rr.get('レースコード','')).strip()
+   if code: rc_name[code]=norm(rr.get('艇3_選手名',''))
  rows=[]
  for _,r in sel.iterrows():
   if v223.ii(r.get('valid_result'))!=1 or v223.ii(r.get('course3'),3)!=3: continue
-  racer=norm(r.get('name3',r.get('b3_name',r.get('艇3_選手名',''))))
+  code=str(r.get('race_code','')).strip()
+  # tolerate numeric-like codes that lost formatting
+  if code.endswith('.0'): code=code[:-2]
+  racer=rc_name.get(code,'')
   group='changed' if racer in changed else ('unchanged' if racer in unchanged else 'unmatched')
   act=v222.v166.combo(r.get('actual_combo'));actual='-'.join(map(str,act)) if len(act)==3 else ''
   if not actual: continue
   ts=v222.order(r,pair,'V221');rank=ts.index(actual)+1 if actual in ts else 0
-  rows.append({'date':r._date.strftime('%Y-%m-%d'),'race_code':str(r.get('race_code','')).zfill(12),'racer':racer,'group':group,'p3':float(r._p),'head_hit':int(r._y),'top10_hit':int(int(r._y)==1 and 0<rank<=10),'rank':rank})
+  rows.append({'date':r._date.strftime('%Y-%m-%d'),'race_code':code,'racer':racer,'group':group,'p3':float(r._p),'head_hit':int(r._y),'top10_hit':int(int(r._y)==1 and 0<rank<=10),'rank':rank})
  z=pd.DataFrame(rows);z.to_csv(OUT,index=False,encoding='utf-8-sig')
- L=['# v239 grade-change model-impact audit','', '- AUDIT ONLY; July is NON-PRISTINE. No tuning.', '- v234 restored-Waku10 frozen head/pair model; selected July races restricted to Jul1-14.', '- Identity uses normalized racer name because current race-card parser has no registration-number field.',f'- Waku10 parser validation: {common} races, 0 mismatches.','', '|group|R|avg p3|actual head hit|calibration gap|Top10 trifecta hit|','|---|---:|---:|---:|---:|---:|']
+ L=['# v239 grade-change model-impact audit','', '- AUDIT ONLY; July is NON-PRISTINE. No tuning.', '- v234 restored-Waku10 frozen head/pair model; selected July races restricted to Jul1-14.', '- Racer identity resolved from authoritative race-card race_code -> 艇3_選手名.',f'- Waku10 parser validation: {common} races, 0 mismatches.',f'- Racer matched: {int((z.group!="unmatched").sum())}/{len(z)}.','', '|group|R|avg p3|actual head hit|calibration gap|Top10 trifecta hit|','|---|---:|---:|---:|---:|---:|']
  for g in ['changed','unchanged','unmatched']:
   q=z[z.group==g]
   if len(q): L.append(f'|{g}|{len(q)}|{100*q.p3.mean():.2f}%|{100*q.head_hit.mean():.2f}%|{100*(q.p3.mean()-q.head_hit.mean()):+.2f}pp|{100*q.top10_hit.mean():.2f}%|')
