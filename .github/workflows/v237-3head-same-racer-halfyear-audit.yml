@@ -1,0 +1,26 @@
+name: v237 same-racer half-year audit
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analyze_v237_3head_same_racer_halfyear_audit.py
+      - .github/workflows/v237-3head-same-racer-halfyear-audit.yml
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas numpy
+      - run: python analyze_v237_3head_same_racer_halfyear_audit.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v237-3head-same-racer-halfyear-audit
+          path: |
+            analysis_v237_same_racer_halfyear.csv
+            summary_v237_3head_same_racer_halfyear_audit.md
+          retention-days: 90
