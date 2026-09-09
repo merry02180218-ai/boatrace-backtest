@@ -1,0 +1,25 @@
+name: v241 3-head target comp3 variable TopN
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v241_3head_target_comp3_variable_topn.py'
+      - '.github/workflows/v241-3head-target-comp3-variable-topn.yml'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scikit-learn requests
+      - name: Run v241
+        run: python analyze_v241_3head_target_comp3_variable_topn.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v241-3head-target-comp3-variable-topn
+          path: |
+            analysis_v241_3head_target_comp3_variable_topn.csv
+            summary_v241_3head_target_comp3_variable_topn.md
