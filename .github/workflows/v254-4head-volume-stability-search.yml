@@ -1,0 +1,27 @@
+name: v254 4-head volume stability search
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v254_4head_volume_stability_search.py'
+      - '.github/workflows/v254-4head-volume-stability-search.yml'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests
+      - run: python analyze_v254_4head_volume_stability_search.py
+      - name: Commit outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v254_4head_volume_stability_search.csv summary_v254_4head_volume_stability_search.md
+          git diff --cached --quiet || git commit -m 'Add v254 4-head volume stability results'
+          git pull --rebase
+          git push
