@@ -67,9 +67,9 @@ def main():
   L += ['',f'### {label}','|TopN|R|settled|3-ren-tan hits|3-ren-tan hit|new ROI|','|---|---:|---:|---:|---:|---:|']
   for n in TOPS:
    g=q[months & (q.top_n==n)]; R=int(g.R.sum()); S=int(g.settled_R.sum()); H=int(g.trifecta_hits.sum())
-   # Recover total return from each row's settled denominator and ROI.
    total_ret=float(((g.new_roi_pct/100)*g.settled_R*BANK).sum())
    L.append(f'|Top{n}|{R}|{S}|{H}|{100*H/R if R else float("nan"):.2f}%|{100*total_ret/(S*BANK) if S else float("nan"):.2f}%|')
  with open(SUM,'w',encoding='utf-8') as f:f.write('\n'.join(L)+'\n')
  print('\n'.join(L))
 if __name__=='__main__':main()
+# trigger-only touch: 2026-09-09
