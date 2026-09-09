@@ -4,6 +4,7 @@ Frozen restored-Waku10 3-head model; no tuning/model selection. Jul/Aug NON-PRIS
 For each selected race, evaluate TopN N=2..20 and choose the N whose composite odds is closest to 3.00.
 Then stake exactly 10,000 yen across that chosen TopN using canonical v205.round_dutch.
 """
+# Trigger note: workflow activation commit only; analysis logic unchanged.
 import numpy as np
 import pandas as pd
 import analyze_v234_3head_waku10_restored_replay as v234
@@ -33,7 +34,6 @@ def choose_n(ts,od):
   c=comp(vals)
   cand.append((abs(c-TARGET),n,c,vals))
  if not cand:return None
- # nearest to 3.00; tie -> fewer tickets
  cand.sort(key=lambda x:(x[0],x[1]))
  return cand[0][1],cand[0][2],cand[0][3]
 
