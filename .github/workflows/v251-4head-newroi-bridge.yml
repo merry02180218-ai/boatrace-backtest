@@ -1,0 +1,28 @@
+name: v251 4-head trifecta new ROI bridge
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v251_4head_newroi_bridge.py'
+      - '.github/workflows/v251-4head-newroi-bridge.yml'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests
+      - name: Run v251 new ROI bridge
+        run: python analyze_v251_4head_newroi_bridge.py
+      - name: Commit outputs
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add analysis_v251_4head_newroi_bridge.csv summary_v251_4head_newroi_bridge.md
+          git diff --cached --quiet || git commit -m 'Add v251 4-head new ROI results'
+          git push
