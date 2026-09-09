@@ -1,0 +1,28 @@
+name: v253 4-head variable TopN compare
+on:
+  push:
+    paths:
+      - 'analyze_v253_4head_variable_topn_compare.py'
+      - '.github/workflows/v253-4head-variable-topn-compare.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests
+      - name: Run v253 variable TopN comparison
+        run: python analyze_v253_4head_variable_topn_compare.py
+      - name: Commit outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v253_4head_variable_topn_compare.csv analysis_v253_4head_variable_topn_detail.csv summary_v253_4head_variable_topn_compare.md
+          git diff --cached --quiet || git commit -m 'Add v253 4-head variable TopN results'
+          git push
