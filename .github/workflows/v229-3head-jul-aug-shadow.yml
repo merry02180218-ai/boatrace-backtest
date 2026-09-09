@@ -24,6 +24,7 @@ jobs:
           print(d.to_string(index=False))
           z=pd.read_csv('analysis_v229_3head_jul_aug_shadow.csv')
           print('settled rows',len(z))
+          assert set(d['month']) == {'2026-07','2026-08'}
           PY
       - uses: actions/upload-artifact@v4
         if: always()
