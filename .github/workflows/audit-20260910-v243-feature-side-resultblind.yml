@@ -1,0 +1,20 @@
+name: audit 2026-09-10 v243 feature side resultblind
+on:
+  push:
+    paths:
+      - 'audit_20260910_v243_feature_side_resultblind.py'
+      - '.github/workflows/audit-20260910-v243-feature-side-resultblind.yml'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests beautifulsoup4
+      - run: python audit_20260910_v243_feature_side_resultblind.py | tee audit_20260910_v243_feature_side_resultblind.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audit-20260910-v243-feature-side-resultblind
+          path: audit_20260910_v243_feature_side_resultblind.txt
