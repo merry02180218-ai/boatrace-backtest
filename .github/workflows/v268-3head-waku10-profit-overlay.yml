@@ -1,0 +1,26 @@
+name: v268-3head-waku10-profit-overlay
+on:
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas
+      - name: Download frozen v243 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
+          cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
+      - name: Run v268 Waku10 overlay search
+        run: python analyze_v268_3head_waku10_profit_overlay.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v268-3head-waku10-profit-overlay
+          path: |
+            analysis_v268_3head_waku10_profit_overlay.csv
+            summary_v268_3head_waku10_profit_overlay.md
