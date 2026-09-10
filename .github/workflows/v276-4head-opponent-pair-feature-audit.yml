@@ -16,6 +16,8 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install numpy pandas scikit-learn
+      - name: Fix v276 summary display field
+        run: sed -i 's/r\.new_races/r.races/g' analyze_v276_4head_opponent_pair_feature_audit.py
       - run: python analyze_v276_4head_opponent_pair_feature_audit.py
       - uses: actions/upload-artifact@v4
         with:
@@ -28,7 +30,7 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add analysis_v276_4head_opponent_pair_family.csv analysis_v276_4head_opponent_pair_monthly.csv summary_v276_4head_opponent_pair_feature_audit.md
-          git commit -m "Add v276 4-head direct pair feature results" || exit 0
+          git add analyze_v276_4head_opponent_pair_feature_audit.py analysis_v276_4head_opponent_pair_family.csv analysis_v276_4head_opponent_pair_monthly.csv summary_v276_4head_opponent_pair_feature_audit.md
+          git commit -m "Fix and add v276 4-head direct pair feature results" || exit 0
           git pull --rebase origin main
           git push origin HEAD:main
