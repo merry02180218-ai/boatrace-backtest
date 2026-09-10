@@ -1,0 +1,40 @@
+name: smoke 2026-09-10 3head fast bridge
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - smoke_20260910_3head_fast_bridge.py
+      - .github/workflows/smoke-20260910-3head-fast-bridge.yml
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas numpy scikit-learn requests beautifulsoup4
+      - name: Download frozen v234 restored-Waku10 cache
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34326743303 --repo ${{ github.repository }} --name v234-3head-waku10-restored-replay --dir .
+          test -f analysis_v234_waku10_reconstruction_coverage.csv
+          test -f data/audit/v234_waku10/restored/2026/08/31.csv
+      - name: Run fast bridge
+        run: python smoke_20260910_3head_fast_bridge.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: smoke-20260910-3head-fast-bridge
+          path: |
+            smoke_20260910_3head_live_bridge.json
+            smoke_20260910_3head_live_bridge.txt
+          if-no-files-found: ignore
