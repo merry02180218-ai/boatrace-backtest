@@ -1,0 +1,34 @@
+name: v277 4head opponent top4 player tiebreak
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v277_4head_opponent_top4_player_tiebreak.py'
+      - '.github/workflows/v277-4head-opponent-top4-player-tiebreak.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scikit-learn
+      - run: python analyze_v277_4head_opponent_top4_player_tiebreak.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v277-4head-opponent-top4-player-tiebreak
+          path: |
+            analysis_v277_4head_opponent_top4_player_tiebreak.csv
+            analysis_v277_4head_opponent_top4_player_tiebreak_monthly.csv
+            summary_v277_4head_opponent_top4_player_tiebreak.md
+      - name: Commit v277 outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v277_4head_opponent_top4_player_tiebreak.csv analysis_v277_4head_opponent_top4_player_tiebreak_monthly.csv summary_v277_4head_opponent_top4_player_tiebreak.md
+          git commit -m "Add v277 4-head opponent top4 tiebreak results" || exit 0
+          git pull --rebase origin main
+          git push origin HEAD:main
