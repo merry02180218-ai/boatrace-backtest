@@ -1,0 +1,45 @@
+name: audit v243 direct Boatcast rebuild
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - audit_20260910_v243_direct_rebuild.py
+      - .github/workflows/audit-20260910-v243-direct-rebuild.yml
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      BOATRACECSV_REF: f4552b6a02b5cf3eb78e85eb650f4a1b1a4cd39b
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn requests beautifulsoup4
+      - name: Download frozen v243 golden artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p golden_v243
+          gh run download 34383567078 --repo ${{ github.repository }} --name v243-3head-expand-feature-audit --dir golden_v243
+          test -f golden_v243/analysis_v243_3head_expand_feature_audit.csv
+      - name: Rebuild through canonical direct-Boatcast topology
+        run: python audit_20260910_v243_direct_rebuild.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v243-direct-rebuild-audit
+          path: |
+            audit_20260910_v243_direct_rebuild.json
+            analysis_v243_3head_expand_feature_audit.csv
+            analysis_v243_3head_expand_rule_search.csv
+            summary_v243_3head_expand_feature_audit.md
+            analysis_v234_waku10_reconstruction_coverage.csv
+          if-no-files-found: ignore
