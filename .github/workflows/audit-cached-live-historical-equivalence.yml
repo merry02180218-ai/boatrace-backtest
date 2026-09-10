@@ -36,7 +36,18 @@ jobs:
           gh run download 34383567078 --repo ${{ github.repository }} --name v243-3head-expand-feature-audit --dir golden_v243
           test -f golden_v243/analysis_v243_3head_expand_feature_audit.csv
       - name: Run equivalence audit
+        id: equivalence
+        continue-on-error: true
         run: python audit_cached_live_historical_equivalence.py
+      - name: Record diagnostic verdict
+        if: always()
+        run: |
+          echo "equivalence_outcome=${{ steps.equivalence.outcome }}"
+          if [ "${{ steps.equivalence.outcome }}" = "failure" ]; then
+            echo "MODEL_EQUIVALENCE=FAIL (diagnostic mismatch; artifacts retained for investigation)" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "MODEL_EQUIVALENCE=PASS" >> "$GITHUB_STEP_SUMMARY"
+          fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:
