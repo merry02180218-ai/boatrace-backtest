@@ -1,0 +1,23 @@
+name: v263-4head-3head-features-player-history
+on:
+  push:
+    paths:
+      - 'analyze_v263_4head_3head_features_player_history.py'
+      - '.github/workflows/v263-4head-3head-features-player-history.yml'
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scikit-learn
+      - run: python analyze_v263_4head_3head_features_player_history.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v263-4head-3head-features-player-history
+          path: |
+            analysis_v263_4head_3head_features_player_history.csv
+            summary_v263_4head_3head_features_player_history.md
