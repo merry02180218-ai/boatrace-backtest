@@ -1,10 +1,15 @@
 name: v264-4head-feature-exhaustive
+
 on:
   push:
     paths:
       - 'analyze_v264_4head_feature_exhaustive.py'
       - '.github/workflows/v264-4head-feature-exhaustive.yml'
   workflow_dispatch:
+
+permissions:
+  contents: write
+
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -23,3 +28,15 @@ jobs:
             analysis_v264_4head_feature_exhaustive.csv
             analysis_v264_4head_feature_univariate.csv
             summary_v264_4head_feature_exhaustive.md
+      - name: Commit v264 outputs
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v264_4head_feature_exhaustive.csv analysis_v264_4head_feature_univariate.csv summary_v264_4head_feature_exhaustive.md
+          if git diff --cached --quiet; then
+            echo "No v264 output changes to commit"
+          else
+            git commit -m "Add v264 exhaustive 4-head feature audit results"
+            git push origin HEAD:${GITHUB_REF_NAME}
+          fi
