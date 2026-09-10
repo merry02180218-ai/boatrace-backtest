@@ -2,6 +2,8 @@ name: scan-20260911-3head-v288-pre
 on:
   push:
     paths:
+      - 'fetch_kyoteibiyori_v288_pre_inputs.py'
+      - 'scan_20260911_3head_v288_pre.py'
       - '.github/workflows/scan-20260911-3head-v288-pre.yml'
   workflow_dispatch:
 jobs:
@@ -12,20 +14,26 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install -q requests beautifulsoup4
-      - name: Probe Kyoteibiyori meeting history
+      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4
+      - name: Download frozen canonical artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          python - <<'PY'
-          import requests,re,json
-          from bs4 import BeautifulSoup
-          s=requests.Session(); s.headers.update({'User-Agent':'Mozilla/5.0'})
-          u='https://kyoteibiyori.com/race_shusso.php?hiduke=20260911&place_no=16&race_no=1&slider=1'
-          h=s.get(u,timeout=20).text; soup=BeautifulSoup(h,'html.parser'); val=lambda n:(soup.find('input',{'name':n}) or {}).get('value','')
-          tok=re.search(r'var\s+CSRF_TOKEN\s*=\s*"([^"]+)"',h).group(1)
-          d={'place_no':val('place_no'),'race_no':val('race_no'),'hiduke':val('hiduke'),'race_name':val('race_name'),'season':2021,'term':1,'kaisai_key':val('kaisai_key'),'taikai_count':val('taikai_count'),'group_no':val('group_no'),'type':0,'grade':0}
-          z=s.post('https://kyoteibiyori.com/request_race_shusso_detail_v4.php',data={'data':json.dumps(d,ensure_ascii=False),'token':tok},headers={'Referer':u,'X-Requested-With':'XMLHttpRequest'},timeout=30).json()
-          p=z['race_list']
-          kd={'race_year':int(val('race_year')),'race_name':val('race_name'),'player_no':p[0]['player_no'],'player_no2':p[1]['player_no'],'player_no3':p[2]['player_no'],'player_no4':p[3]['player_no'],'player_no5':p[4]['player_no'],'player_no6':p[5]['player_no'],'race_date':val('race_date'),'place_no':val('place_no'),'race_no':val('race_no'),'hiduke':val('hiduke'),'kaisai_key':val('kaisai_key')}
-          r=s.post('https://kyoteibiyori.com/request_konsetsu_all.php',data={'data':json.dumps(kd,ensure_ascii=False)},headers={'Referer':u,'X-Requested-With':'XMLHttpRequest'},timeout=30)
-          print('STATUS',r.status_code,'LEN',len(r.text),'HEAD',r.text[:200]); x=r.json(); print('TYPE',type(x).__name__,'N',len(x)); print(json.dumps(x[:3] if isinstance(x,list) else x,ensure_ascii=False)[:12000])
-          PY
+          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
+          cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
+          gh run download 34326743303 --repo merry02180218-ai/boatrace-backtest --name v234-3head-waku10-restored-replay --dir golden_v234
+          cp golden_v234/analysis_v234_waku10_reconstruction_coverage.csv .
+          mkdir -p data/audit
+          cp -r golden_v234/data/audit/v234_waku10 data/audit/
+      - name: Build current PRE inputs from Kyoteibiyori
+        run: python fetch_kyoteibiyori_v288_pre_inputs.py
+      - name: Run result-blind PRE scan
+        run: python scan_20260911_3head_v288_pre.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: scan-20260911-3head-v288-pre
+          path: |
+            current_input/race_cards.csv
+            current_input/waku10.csv
+            scan_20260911_3head_v288_pre.csv
+            scan_20260911_3head_v288_pre.md
