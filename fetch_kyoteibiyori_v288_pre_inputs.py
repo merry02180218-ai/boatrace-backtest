@@ -6,6 +6,7 @@ from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 
+# 2026-09-11 operational PRE scan: Kyoteibiyori supplies current race-card/Waku10-equivalent inputs.
 DAY='20260911'
 VENUES=[2,3,5,6,12,13,14,16,17,20,21,24]
 OUT=Path('current_input'); OUT.mkdir(exist_ok=True)
@@ -120,7 +121,6 @@ def main():
                 if not z: failed.append((jo,rno,'detail empty'));continue
                 detail_n+=1
                 players=sorted(z['race_list'],key=lambda x:int(x.get('course') or 99)); mt=meeting(s,jo,rno,referer,meta,players)
-                # Build both first; append only when complete. Never impute missing Waku10.
                 c=make_card(jo,rno,z,mt); w=make_waku(jo,rno,z)
                 cards.append(c); waku.append(w); got+=1
                 time.sleep(.05)
