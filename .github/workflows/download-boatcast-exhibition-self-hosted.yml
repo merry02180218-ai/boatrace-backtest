@@ -1,0 +1,52 @@
+name: download Boatcast exhibition (self-hosted Japan)
+
+on:
+  workflow_dispatch:
+    inputs:
+      race_date:
+        description: YYYYMMDD
+        required: true
+        default: '20260907'
+      stadium:
+        description: e.g. 01kiryu
+        required: true
+        default: '01kiryu'
+      race:
+        description: race number 1-12
+        required: true
+        default: '12'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  download:
+    # Register a self-hosted runner in Japan and add the custom label `japan`.
+    runs-on: [self-hosted, japan]
+    timeout-minutes: 20
+    env:
+      RACE_DATE: ${{ inputs.race_date }}
+      STADIUM: ${{ inputs.stadium }}
+      RACE: ${{ inputs.race }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Python dependencies
+        run: pip install -q playwright
+      - name: Install Chromium
+        run: python -m playwright install chromium
+      - name: Check ffmpeg
+        run: ffmpeg -version
+      - name: Download exhibition replay
+        run: python download_boatcast_exhibition.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: boatcast-exhibition-${{ inputs.race_date }}-${{ inputs.stadium }}-${{ inputs.race }}
+          path: |
+            boatcast_*_exhibition.mp4
+            boatcast_*_exhibition.json
+          if-no-files-found: ignore
