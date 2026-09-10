@@ -1,0 +1,33 @@
+name: v271 4head A-rank expansion
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v271_4head_arank_expansion.py'
+      - '.github/workflows/v271-4head-arank-expansion.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scikit-learn
+      - run: python analyze_v271_4head_arank_expansion.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v271-4head-arank-expansion
+          path: |
+            analysis_v271_4head_arank_expansion.csv
+            analysis_v271_4head_arank_races.csv
+            summary_v271_4head_arank_expansion.md
+      - name: Commit v271 outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v271_4head_arank_expansion.csv analysis_v271_4head_arank_races.csv summary_v271_4head_arank_expansion.md
+          git commit -m "Add v271 4-head A-rank expansion results" || exit 0
+          git push
