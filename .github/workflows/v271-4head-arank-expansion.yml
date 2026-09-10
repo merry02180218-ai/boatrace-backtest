@@ -30,4 +30,5 @@ jobs:
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add analysis_v271_4head_arank_expansion.csv analysis_v271_4head_arank_races.csv summary_v271_4head_arank_expansion.md
           git commit -m "Add v271 4-head A-rank expansion results" || exit 0
-          git push
+          git pull --rebase origin main
+          git push origin HEAD:main
