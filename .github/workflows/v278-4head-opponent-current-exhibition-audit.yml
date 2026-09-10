@@ -1,0 +1,35 @@
+name: v278 4head opponent current exhibition audit
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v278_4head_opponent_current_exhibition_audit.py'
+      - '.github/workflows/v278-4head-opponent-current-exhibition-audit.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scikit-learn
+      - run: python analyze_v278_4head_opponent_current_exhibition_audit.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v278-4head-opponent-current-exhibition-audit
+          path: |
+            analysis_v278_4head_opponent_current_exhibition_univariate.csv
+            analysis_v278_4head_opponent_current_exhibition_family.csv
+            analysis_v278_4head_opponent_current_exhibition_monthly.csv
+            summary_v278_4head_opponent_current_exhibition_audit.md
+      - name: Commit v278 outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v278_4head_opponent_current_exhibition_univariate.csv analysis_v278_4head_opponent_current_exhibition_family.csv analysis_v278_4head_opponent_current_exhibition_monthly.csv summary_v278_4head_opponent_current_exhibition_audit.md
+          git commit -m "Add v278 4-head opponent current exhibition results" || exit 0
+          git pull --rebase origin main
+          git push origin HEAD:main
