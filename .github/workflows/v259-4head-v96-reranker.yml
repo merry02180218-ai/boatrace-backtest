@@ -1,0 +1,27 @@
+name: v259 4-head v96 reranker
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v259_4head_v96_reranker.py'
+      - '.github/workflows/v259-4head-v96-reranker.yml'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests beautifulsoup4
+      - run: python analyze_v259_4head_v96_reranker.py
+      - name: Commit outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v259_4head_v96_reranker.csv summary_v259_4head_v96_reranker.md
+          git diff --cached --quiet || git commit -m 'Add v259 4-head v96 reranker results'
+          git pull --rebase
+          git push
