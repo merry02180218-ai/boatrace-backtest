@@ -16,6 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     env:
+      # Canonical external snapshot preceding frozen v243.
       BOATRACECSV_REF: f4552b6a02b5cf3eb78e85eb650f4a1b1a4cd39b
     steps:
       - uses: actions/checkout@v4
