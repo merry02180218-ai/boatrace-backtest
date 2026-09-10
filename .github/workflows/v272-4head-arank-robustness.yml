@@ -1,0 +1,34 @@
+name: v272 4head A-rank robustness
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v272_4head_arank_robustness.py'
+      - '.github/workflows/v272-4head-arank-robustness.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scikit-learn
+      - run: python analyze_v272_4head_arank_robustness.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v272-4head-arank-robustness
+          path: |
+            analysis_v272_4head_arank_robustness.csv
+            analysis_v272_4head_arank_lomo.csv
+            summary_v272_4head_arank_robustness.md
+      - name: Commit v272 outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v272_4head_arank_robustness.csv analysis_v272_4head_arank_lomo.csv summary_v272_4head_arank_robustness.md
+          git commit -m "Add v272 4-head A-rank robustness results" || exit 0
+          git pull --rebase origin main
+          git push origin HEAD:main
