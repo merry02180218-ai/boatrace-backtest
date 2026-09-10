@@ -1,0 +1,48 @@
+name: audit cached LIVE historical equivalence
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - audit_cached_live_historical_equivalence.py
+      - .github/workflows/audit-cached-live-historical-equivalence.yml
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas numpy scikit-learn requests beautifulsoup4 joblib
+      - name: Download frozen restored-Waku10 cache
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34326743303 --repo ${{ github.repository }} --name v234-3head-waku10-restored-replay --dir .
+          test -f analysis_v234_waku10_reconstruction_coverage.csv
+          test -f data/audit/v234_waku10/restored/2026/08/31.csv
+      - name: Download frozen v243 golden artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p golden_v243
+          gh run download 34383567078 --repo ${{ github.repository }} --name v243-3head-expand-feature-audit --dir golden_v243
+          test -f golden_v243/analysis_v243_3head_expand_feature_audit.csv
+      - name: Run equivalence audit
+        run: python audit_cached_live_historical_equivalence.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cached-live-historical-equivalence
+          path: |
+            audit_cached_live_historical_equivalence.csv
+            audit_cached_live_historical_equivalence.json
+            summary_cached_live_historical_equivalence.md
+          if-no-files-found: ignore
