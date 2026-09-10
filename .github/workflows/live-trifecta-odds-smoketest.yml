@@ -1,0 +1,61 @@
+name: live-trifecta-odds-smoketest
+
+on:
+  push:
+    paths:
+      - 'fetch_live_trifecta_odds.py'
+      - '.github/workflows/live-trifecta-odds-smoketest.yml'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'YYYYMMDD'
+        required: true
+        default: '20260910'
+      jcd:
+        description: 'venue code'
+        required: true
+        default: '01'
+      race:
+        description: 'race number'
+        required: true
+        default: '1'
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install parser deps
+        run: pip install requests beautifulsoup4
+      - name: Choose inputs
+        id: x
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "date=${{ inputs.date }}" >> "$GITHUB_OUTPUT"
+            echo "jcd=${{ inputs.jcd }}" >> "$GITHUB_OUTPUT"
+            echo "race=${{ inputs.race }}" >> "$GITHUB_OUTPUT"
+          else
+            # Smoke-test on a non-target race. This is parser validation only.
+            echo "date=20260910" >> "$GITHUB_OUTPUT"
+            echo "jcd=01" >> "$GITHUB_OUTPUT"
+            echo "race=1" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Fetch official odds3t snapshot
+        run: |
+          python fetch_live_trifecta_odds.py \
+            --date '${{ steps.x.outputs.date }}' \
+            --jcd '${{ steps.x.outputs.jcd }}' \
+            --race '${{ steps.x.outputs.race }}' \
+            --out odds_snapshots
+      - name: Upload immutable snapshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-odds3t-snapshot
+          path: odds_snapshots/
+          if-no-files-found: warn
