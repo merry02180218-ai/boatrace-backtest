@@ -1,0 +1,20 @@
+name: fetch 2026-09-10 beforeinfo only
+on:
+  push:
+    paths:
+      - 'fetch_20260910_beforeinfo_only.py'
+      - '.github/workflows/fetch-20260910-beforeinfo-only.yml'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests beautifulsoup4
+      - run: python fetch_20260910_beforeinfo_only.py | tee beforeinfo_20260910_resultblind.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: beforeinfo-20260910-resultblind
+          path: beforeinfo_20260910_resultblind.txt
