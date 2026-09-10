@@ -1,0 +1,35 @@
+name: v274 4head opponent feature audit
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v274_4head_opponent_feature_audit.py'
+      - '.github/workflows/v274-4head-opponent-feature-audit.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scikit-learn
+      - run: python analyze_v274_4head_opponent_feature_audit.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v274-4head-opponent-feature-audit
+          path: |
+            analysis_v274_4head_opponent_feature_univariate.csv
+            analysis_v274_4head_opponent_family.csv
+            analysis_v274_4head_opponent_monthly.csv
+            summary_v274_4head_opponent_feature_audit.md
+      - name: Commit v274 outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v274_4head_opponent_feature_univariate.csv analysis_v274_4head_opponent_family.csv analysis_v274_4head_opponent_monthly.csv summary_v274_4head_opponent_feature_audit.md
+          git commit -m "Add v274 4-head opponent feature audit results" || exit 0
+          git pull --rebase origin main
+          git push origin HEAD:main
