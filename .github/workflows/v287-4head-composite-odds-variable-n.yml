@@ -1,0 +1,42 @@
+name: v287 4head composite-odds variable-N
+
+on:
+  push:
+    paths:
+      - 'analyze_v287_4head_composite_odds_variable_n.py'
+      - '.github/workflows/v287-4head-composite-odds-variable-n.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy scikit-learn
+      - run: python analyze_v287_4head_composite_odds_variable_n.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v287-4head-composite-odds-variable-n
+          path: |
+            analysis_v287_4head_composite_odds_variable_n.csv
+            analysis_v287_4head_composite_odds_variable_n_monthly.csv
+            analysis_v287_4head_composite_odds_variable_n_detail.csv
+            analysis_v287_4head_composite_odds_reinfer_verify.csv
+            summary_v287_4head_composite_odds_variable_n.md
+      - name: Commit v287 outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v287_4head_composite_odds_variable_n.csv analysis_v287_4head_composite_odds_variable_n_monthly.csv analysis_v287_4head_composite_odds_variable_n_detail.csv analysis_v287_4head_composite_odds_reinfer_verify.csv summary_v287_4head_composite_odds_variable_n.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Add v287 composite-odds variable-N results'
+          git pull --rebase origin main
+          git push origin HEAD:main
