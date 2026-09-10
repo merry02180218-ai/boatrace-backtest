@@ -1,0 +1,25 @@
+name: v264-4head-feature-exhaustive
+on:
+  push:
+    paths:
+      - 'analyze_v264_4head_feature_exhaustive.py'
+      - '.github/workflows/v264-4head-feature-exhaustive.yml'
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scikit-learn
+      - run: python analyze_v264_4head_feature_exhaustive.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v264-4head-feature-exhaustive
+          path: |
+            analysis_v264_4head_feature_exhaustive.csv
+            analysis_v264_4head_feature_univariate.csv
+            summary_v264_4head_feature_exhaustive.md
