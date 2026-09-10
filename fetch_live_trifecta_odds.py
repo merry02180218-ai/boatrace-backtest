@@ -17,12 +17,11 @@ import argparse
 import csv
 import hashlib
 import json
-import math
 import re
 import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
-from typing import Dict, Iterable, List, Tuple
+from typing import Dict, List, Tuple
 
 import requests
 from bs4 import BeautifulSoup
@@ -57,12 +56,99 @@ def _num(s: str):
     return v if v > 0 else None
 
 
+def _cell_numeric_tokens(cell) -> List[str]:
+    """Return only plain numeric tokens from one odds-table cell."""
+    txt = cell.get_text(" ", strip=True).replace(",", "")
+    return re.findall(r"(?<!\d)\d+(?:\.\d+)?(?!\d)", txt)
+
+
+def parse_strategy_parallel_table(html: str) -> Dict[Tuple[int, int, int], float]:
+    """Parse BOAT RACE's six parallel 3連単 columns.
+
+    The official desktop table lays out first boats 1..6 side-by-side. At the start
+    of each second-boat block a column contributes [second, third, odds]; the next
+    three rows omit the rowspan-held second boat and contribute [third, odds].
+    Thus a body row normally has 18 numeric cells/tokens at a block start, or 12
+    on continuation rows. We keep one current second boat per first-boat column.
+
+    This parser deliberately relies on structural invariants and then requires the
+    exact full set of 120 distinct ordered combinations before betting use.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    best: Dict[Tuple[int, int, int], float] = {}
+
+    for table in soup.find_all("table"):
+        out: Dict[Tuple[int, int, int], float] = {}
+        current_second = [None] * 6
+        structural_rows = 0
+
+        for tr in table.find_all("tr"):
+            cells = tr.find_all(["th", "td"], recursive=False)
+            if not cells:
+                continue
+
+            # Preserve cell order; each visual cell should contribute one numeric
+            # token for this table, but tolerate nested markup by flattening tokens.
+            toks: List[str] = []
+            for c in cells:
+                toks.extend(_cell_numeric_tokens(c))
+
+            # The odds body is six parallel groups: either 3 tokens/column when
+            # the second boat changes, or 2 tokens/column on rowspan continuation.
+            if len(toks) not in (12, 18):
+                continue
+            width = len(toks) // 6
+            if width not in (2, 3):
+                continue
+
+            parsed_this_row = 0
+            row_values = []
+            valid_shape = True
+            for col in range(6):
+                g = toks[col * width:(col + 1) * width]
+                first = col + 1
+                if width == 3:
+                    s2, s3, sod = g
+                    if s2 not in "123456" or s3 not in "123456":
+                        valid_shape = False
+                        break
+                    second, third = int(s2), int(s3)
+                    current_second[col] = second
+                else:
+                    s3, sod = g
+                    if s3 not in "123456" or current_second[col] is None:
+                        valid_shape = False
+                        break
+                    second, third = int(current_second[col]), int(s3)
+
+                od = _num(sod)
+                combo = (first, second, third)
+                if od is None or od < 1.0 or len(set(combo)) != 3:
+                    valid_shape = False
+                    break
+                row_values.append((combo, od))
+                parsed_this_row += 1
+
+            if valid_shape and parsed_this_row == 6:
+                structural_rows += 1
+                for combo, od in row_values:
+                    out[combo] = od
+
+        # A real 3連単 table has 20 structural rows and 120 combinations. Keep
+        # the broadest candidate so diagnostics remain useful if layout changes.
+        if len(out) > len(best):
+            best = out
+        if structural_rows >= 20 and len(out) == 120:
+            return out
+
+    return best
+
+
 def parse_strategy_text(html: str) -> Dict[Tuple[int, int, int], float]:
     """Parse explicit forms such as 1-2-3 12.4 or 1 2 3 12.4."""
     soup = BeautifulSoup(html, "html.parser")
     text = soup.get_text(" ", strip=True)
     out: Dict[Tuple[int, int, int], float] = {}
-    # Strictly require three different boat numbers and a decimal/integer odds token.
     pat = re.compile(r"(?<!\d)([1-6])\s*[-→>]?\s*([1-6])\s*[-→>]?\s*([1-6])\s+([0-9]+(?:\.[0-9]+)?)(?!\d)")
     for a, b, c, od in pat.findall(text):
         t = (int(a), int(b), int(c))
@@ -74,14 +160,13 @@ def parse_strategy_text(html: str) -> Dict[Tuple[int, int, int], float]:
 
 
 def parse_strategy_cells(html: str) -> Dict[Tuple[int, int, int], float]:
-    """DOM fallback: scan each table row and recover groups [1,2,3,odds]."""
+    """Legacy DOM fallback: scan rows for explicit [1,2,3,odds] groups."""
     soup = BeautifulSoup(html, "html.parser")
     out: Dict[Tuple[int, int, int], float] = {}
     for tr in soup.find_all("tr"):
         vals = [c.get_text(" ", strip=True) for c in tr.find_all(["th", "td"])]
         tokens: List[str] = []
         for v in vals:
-            # Keep cell boundaries but split whitespace and arrows/hyphens.
             parts = [p for p in re.split(r"\s+|[-→>]", v) if p]
             tokens.extend(parts)
         for i in range(max(0, len(tokens) - 3)):
@@ -91,7 +176,6 @@ def parse_strategy_cells(html: str) -> Dict[Tuple[int, int, int], float]:
             t = (int(a), int(b), int(c))
             if len(set(t)) != 3:
                 continue
-            # Search a short window after the combo for the odds number.
             for x in tokens[i+3:i+7]:
                 od = _num(x)
                 if od is not None and od >= 1.0:
@@ -122,8 +206,12 @@ def parse_strategy_anchor(html: str) -> Dict[Tuple[int, int, int], float]:
 
 
 def parse_odds(html: str) -> Dict[Tuple[int, int, int], float]:
-    candidates = [parse_strategy_text(html), parse_strategy_cells(html), parse_strategy_anchor(html)]
-    # Merge, preferring the strategy with greatest coverage, then fill missing from others.
+    candidates = [
+        parse_strategy_parallel_table(html),
+        parse_strategy_text(html),
+        parse_strategy_cells(html),
+        parse_strategy_anchor(html),
+    ]
     candidates.sort(key=len, reverse=True)
     out = dict(candidates[0]) if candidates else {}
     for d in candidates[1:]:
@@ -169,7 +257,6 @@ def main() -> int:
     outdir = Path(args.out)
     outdir.mkdir(parents=True, exist_ok=True)
 
-    # Save raw HTML too, so parser behavior is auditable without re-fetching a later page.
     raw_path = outdir / f"{stem}.html"
     raw_path.write_text(html, encoding="utf-8")
 
