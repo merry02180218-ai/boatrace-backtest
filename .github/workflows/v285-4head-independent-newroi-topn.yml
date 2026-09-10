@@ -1,0 +1,39 @@
+name: v285 4head independent TopN Dutch ROI
+
+on:
+  push:
+    paths:
+      - 'analyze_v285_4head_independent_newroi_topn.py'
+      - '.github/workflows/v285-4head-independent-newroi-topn.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy scikit-learn
+      - run: python analyze_v285_4head_independent_newroi_topn.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v285-4head-independent-newroi-topn
+          path: |
+            analysis_v285_4head_independent_newroi_topn.csv
+            analysis_v285_4head_independent_newroi_topn_monthly.csv
+            analysis_v285_4head_independent_newroi_topn_detail.csv
+            summary_v285_4head_independent_newroi_topn.md
+      - name: Commit v285 outputs
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add analysis_v285_4head_independent_newroi_topn.csv analysis_v285_4head_independent_newroi_topn_monthly.csv analysis_v285_4head_independent_newroi_topn_detail.csv summary_v285_4head_independent_newroi_topn.md
+          git diff --cached --quiet && exit 0
+          git commit -m 'Persist v285 independent TopN Dutch ROI outputs'
+          git pull --rebase origin main
+          git push
