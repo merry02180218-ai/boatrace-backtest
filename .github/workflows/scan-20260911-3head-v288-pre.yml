@@ -1,0 +1,29 @@
+name: scan-20260911-3head-v288-pre
+on:
+  push:
+    paths:
+      - 'scan_20260911_3head_v288_pre.py'
+  workflow_dispatch:
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4
+      - name: Download frozen canonical v243 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
+          cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
+      - name: Run result-blind PRE scan
+        run: python scan_20260911_3head_v288_pre.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: scan-20260911-3head-v288-pre
+          path: |
+            scan_20260911_3head_v288_pre.csv
+            scan_20260911_3head_v288_pre.md
