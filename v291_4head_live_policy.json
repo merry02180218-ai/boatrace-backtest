@@ -1,0 +1,68 @@
+{
+  "policy_version": "HEAD4_V291_COMP7",
+  "freeze_date_jst": "2026-09-11",
+  "freeze_anchor_before_policy_commit": "dbd3cd2890e4a5d231b5bd82536dd67069f9cfab",
+  "head_boat": 4,
+  "head_layers": {
+    "priority": ["S", "A"],
+    "never_double_stake": true,
+    "S": {
+      "source": "HEAD4_V268_FROZEN_20260910.md",
+      "pre_min": 0.28,
+      "post_min": 0.25,
+      "env_entry_min": 0.22479
+    },
+    "A": {
+      "source": "HEAD4_V273_ARANK_FROZEN_20260910.md",
+      "outside_S_only": true,
+      "pre_min": 0.18,
+      "post_min": 0.18,
+      "oof_semantic_a_score_min": 0.28,
+      "live_score_mapping_required_before_formal_OOS": true
+    }
+  },
+  "opponent_model": {
+    "family": "v282_v283_independent",
+    "second": "PLAYER_START_L2_10",
+    "third": "COND_BASE_L2_0.3_conditional_on_candidate_second",
+    "pair_order": "TOP2XTOP2",
+    "alpha2": 0.60,
+    "v96_allowed": false
+  },
+  "tickets": {
+    "count": 4,
+    "variable_n": false,
+    "head_fixed": 4
+  },
+  "market_gate": {
+    "odds_type": "trifecta_decimal",
+    "composite_formula": "1/sum(1/odds_i)",
+    "composite_min_inclusive": 7.0,
+    "decision": "BET_if_composite_gte_7_else_PASS",
+    "snapshot_requirement": "immutable_pre_deadline"
+  },
+  "staking": {
+    "bet_race_total_yen": 10000,
+    "unit_yen": 100,
+    "allocation": "inverse_odds_dutch_hamilton_largest_remainder",
+    "miss_payout_yen": 0
+  },
+  "data_discipline": {
+    "non_pristine_months": ["2026-07", "2026-08"],
+    "do_not_tune_on_september_outcomes": true,
+    "archived_odds_status": "retrospective_proxy_only"
+  },
+  "formal_oos": {
+    "S_requires": [
+      "live_v283_opponent_inference",
+      "immutable_pre_deadline_top4_odds_snapshot"
+    ],
+    "A_requires": [
+      "final_A_SCORE_model_trained_through_2026-06-30",
+      "outcome_blind_mapping_to_frozen_OOF_semantics",
+      "persisted_and_frozen_A_live_artifact",
+      "live_v283_opponent_inference",
+      "immutable_pre_deadline_top4_odds_snapshot"
+    ]
+  }
+}
