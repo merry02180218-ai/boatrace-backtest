@@ -26,12 +26,28 @@ jobs:
       - name: Build today's race-card and Waku10 directly from Boatcast
         run: |
           git clone -q --depth 1 https://github.com/BoatraceCSV/boatracecsv.github.io.git upstream_boatracecsv
-          mkdir -p upstream_boatracecsv/.boatrace
-          printf '{"rate_limit_interval_seconds":0.15,"race_card_timeout_seconds":15}' > upstream_boatracecsv/.boatrace/config.json
-          python upstream_boatracecsv/scripts/race-card.py --date 2026-09-11 --force
           mkdir -p current_input
-          cp upstream_boatracecsv/data/programs/race_cards/2026/09/11.csv current_input/race_cards.csv
-          cp upstream_boatracecsv/data/programs/waku10/2026/09/11.csv current_input/waku10.csv
+          PYTHONPATH=upstream_boatracecsv/scripts python - <<'PY'
+          from pathlib import Path
+          from boatrace.race_card_scraper import RaceCardScraper
+          from boatrace.downloader import RateLimiter
+          from boatrace.converter import race_cards_to_csv,waku10_to_csv
+          day='2026-09-11'
+          # Official BOAT RACE 2026-09-11 holding list at scan time.
+          venues=[2,3,5,6,12,13,14,16,17,20,21,24]
+          sc=RaceCardScraper(timeout_seconds=12,rate_limiter=RateLimiter(interval_seconds=.08))
+          cards=[]; waku=[]
+          for jo in venues:
+              for r in range(1,13):
+                  a=sc.scrape_race(day,jo,r)
+                  b=sc.scrape_waku10(day,jo,r)
+                  if a is not None: cards.append(a)
+                  if b is not None: waku.append(b)
+          print('DIRECT_CURRENT',len(cards),len(waku),flush=True)
+          if not cards or not waku: raise SystemExit('current Boatcast scrape empty')
+          Path('current_input/race_cards.csv').write_text(race_cards_to_csv(cards),encoding='utf-8')
+          Path('current_input/waku10.csv').write_text(waku10_to_csv(waku),encoding='utf-8')
+          PY
       - name: Run result-blind PRE scan
         run: python scan_20260911_3head_v288_pre.py
       - uses: actions/upload-artifact@v4
