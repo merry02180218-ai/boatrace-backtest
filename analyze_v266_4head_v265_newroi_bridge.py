@@ -2,12 +2,12 @@
 """v266: v265 4-head consensus selectors -> exact 10k Dutch new-ROI bridge.
 
 Selector rules are frozen from the v265 retrospective Apr-Jun audit before this
-script evaluates trifecta settlement.  Jul/Aug are excluded.  Ticket opponents
-use the existing prior-only v96-lineage pair rank.  We compare fixed Top-N and a
+script evaluates trifecta settlement. Jul/Aug are excluded. Ticket opponents
+use the existing prior-only v96-lineage pair rank. We compare fixed Top-N and a
 single composite-odds target policy; no result is used to choose a ticket.
 
 IMPORTANT: Apr-Jun does not have a complete contemporaneous LIVE odds-snapshot
-archive. load_odds() is therefore an archived-odds development proxy.  The
+archive. load_odds() is therefore an archived-odds development proxy. The
 settlement math is the current new ROI definition (10,000 yen total per race,
 inverse-odds Dutch, 100-yen Hamilton rounding, misses return 0), but the result
 is NOT formal pristine/live OOS ROI.
@@ -140,17 +140,22 @@ def main():
 
     for selector in SELECTORS:
         rr = [x for x in pre if x['selector'] == selector]
-        # Fixed Top-N policies.
+        # Fixed Top-N policies. Skip only races lacking the complete odds needed
+        # for that N; coverage is reported so missing archived odds stay visible.
         for n in NS:
             vals = []
             for r in rr:
-                hit, ret, comp = next((h, rt, c) for nn, h, rt, c in r['choices'] if nn == n)
+                choice = next(((h, rt, c) for nn, h, rt, c in r['choices'] if nn == n), None)
+                if choice is None:
+                    continue
+                hit, ret, comp = choice
                 vals.append({'month': r['month'], 'race_code': r['race_code'], 'y4': r['y4'],
                              'n': n, 'hit': hit, 'return_yen': ret, 'comp': comp})
             a = aggregate(vals, selector, f'FIXED_N={n}', selected_counts.get(selector, 0))
-            if a: rows.append(a)
+            if a:
+                rows.append(a)
 
-        # Composite-odds target chooses N from odds only, never from result.
+        # Composite-odds target chooses N from available odds only, never from result.
         for target in TARGETS:
             vals = []
             for r in rr:
@@ -161,7 +166,8 @@ def main():
                                 'race_code': r['race_code'], 'score': r['score'], 'n': n,
                                 'hit': hit, 'return_yen': ret, 'comp_odds': comp, 'y4': r['y4']})
             a = aggregate(vals, selector, f'COMP_TARGET={target:.1f}', selected_counts.get(selector, 0))
-            if a: rows.append(a)
+            if a:
+                rows.append(a)
 
     o = pd.DataFrame(rows)
     o['robust_roi'] = np.minimum(o.new_roi_pct, o.min_month_roi_pct)
