@@ -170,12 +170,12 @@ def main():
        '|family|R|features|T1|T2|T4|T6|T10|v96 T2|T4|T6|T10|',
        '|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|']
     q=o[o.scope=='HOLD_ALL'].sort_values(['new_top2_pct','new_top4_pct','new_top6_pct'],ascending=False)
-    for _,r in q.iterrows():L.append(f'|{r.family}|{int(r.new_races)}|{r.avg_features:.0f}|{r.new_top1_pct:.1f}%|{r.new_top2_pct:.1f}%|{r.new_top4_pct:.1f}%|{r.new_top6_pct:.1f}%|{r.new_top10_pct:.1f}%|{r.v96_top2_pct:.1f}%|{r.v96_top4_pct:.1f}%|{r.v96_top6_pct:.1f}%|{r.v96_top10_pct:.1f}%|')
+    for _,r in q.iterrows():L.append(f'|{r.family}|{int(r.races)}|{r.avg_features:.0f}|{r.new_top1_pct:.1f}%|{r.new_top2_pct:.1f}%|{r.new_top4_pct:.1f}%|{r.new_top6_pct:.1f}%|{r.new_top10_pct:.1f}%|{r.v96_top2_pct:.1f}%|{r.v96_top4_pct:.1f}%|{r.v96_top6_pct:.1f}%|{r.v96_top10_pct:.1f}%|')
     L += ['','## Frozen S+A selected boat-4 wins, Apr-Jun','',
           '|family|R|T1|T2|T4|T6|T10|v96 T2|T4|T6|T10|ΔT2|ΔT4|',
           '|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|']
     sa=o[o.scope=='HOLD_SA'].sort_values(['new_top2_pct','new_top4_pct','new_top6_pct'],ascending=False)
-    for _,r in sa.iterrows():L.append(f'|{r.family}|{int(r.new_races)}|{r.new_top1_pct:.1f}%|{r.new_top2_pct:.1f}%|{r.new_top4_pct:.1f}%|{r.new_top6_pct:.1f}%|{r.new_top10_pct:.1f}%|{r.v96_top2_pct:.1f}%|{r.v96_top4_pct:.1f}%|{r.v96_top6_pct:.1f}%|{r.v96_top10_pct:.1f}%|{r.delta_top2_pt:+.1f}pt|{r.delta_top4_pt:+.1f}pt|')
+    for _,r in sa.iterrows():L.append(f'|{r.family}|{int(r.races)}|{r.new_top1_pct:.1f}%|{r.new_top2_pct:.1f}%|{r.new_top4_pct:.1f}%|{r.new_top6_pct:.1f}%|{r.new_top10_pct:.1f}%|{r.v96_top2_pct:.1f}%|{r.v96_top4_pct:.1f}%|{r.v96_top6_pct:.1f}%|{r.v96_top10_pct:.1f}%|{r.delta_top2_pt:+.1f}pt|{r.delta_top4_pt:+.1f}pt|')
     # Small-N priority: current composite-odds policy often uses only a few tickets.
     if len(sa):
         z=sa.copy();z['priority']=.50*z.delta_top2_pt+.30*z.delta_top4_pt+.15*z.delta_top6_pt+.05*z.delta_top10_pt
