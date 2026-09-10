@@ -1,0 +1,40 @@
+name: v281 4head independent third scenario
+
+on:
+  push:
+    paths:
+      - 'analyze_v281_4head_opponent_third_scenario.py'
+      - '.github/workflows/v281-4head-opponent-third-scenario.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy scikit-learn
+      - run: python analyze_v281_4head_opponent_third_scenario.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v281-third-scenario
+          path: |
+            analysis_v281_4head_opponent_third_scenario.csv
+            analysis_v281_4head_opponent_third_grid.csv
+            analysis_v281_4head_opponent_pair_grid.csv
+            analysis_v281_4head_opponent_monthly.csv
+            analysis_v281_4head_opponent_third_coefficients.csv
+            summary_v281_4head_opponent_third_scenario.md
+      - name: Commit v281 outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v281_4head_opponent_third_scenario.csv analysis_v281_4head_opponent_third_grid.csv analysis_v281_4head_opponent_pair_grid.csv analysis_v281_4head_opponent_monthly.csv analysis_v281_4head_opponent_third_coefficients.csv summary_v281_4head_opponent_third_scenario.md
+          git diff --cached --quiet || git commit -m 'Add v281 third-place scenario results'
+          git pull --rebase origin main
+          git push origin HEAD:main
