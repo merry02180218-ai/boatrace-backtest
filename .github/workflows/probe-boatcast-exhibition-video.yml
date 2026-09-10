@@ -1,0 +1,39 @@
+name: probe Boatcast exhibition video
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - probe_boatcast_exhibition_video.py
+      - .github/workflows/probe-boatcast-exhibition-video.yml
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      RACE_DATE: '20260907'
+      JO: '01'
+      STADIUM: '01kiryu'
+      RACE: '12'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q playwright
+      - run: python -m playwright install --with-deps chromium
+      - name: Probe exhibition player
+        run: python probe_boatcast_exhibition_video.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: boatcast-exhibition-probe
+          path: |
+            boatcast_exhibition_probe.json
+            boatcast_exhibition_probe.png
+          if-no-files-found: ignore
