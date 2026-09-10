@@ -56,9 +56,8 @@ def make_card(jo,rno,z,meet):
         try:pn=int(a.get('player_no'))
         except:continue
         st=a.get('start')
-        try:sv=float(st)
+        try:float(st)
         except:continue
-        # target-day race has not been run in PRE; keep only earlier dates
         if int(a.get('hiduke') or 0)>=int(DAY):continue
         mh[pn].append(a)
     for b,p in enumerate(sorted(z['race_list'],key=lambda x:int(x.get('course') or 99)),1):
@@ -100,17 +99,17 @@ def make_waku(jo,rno,z):
             s=f'{k:02d}'; w[f'{pre}過去{k}走_着順']=a.get(f'rank_{s}',''); w[f'{pre}過去{k}走_進入']=a.get(f'shinnyuu_{s}',''); w[f'{pre}過去{k}走_グレード']=''
     return w
 
-def write_csv(path,rows):
+def write_csv(path,rs):
     fields=[]; seen=set()
-    for r in rows:
+    for r in rs:
         for k in r:
             if k not in seen:seen.add(k);fields.append(k)
     with path.open('w',encoding='utf-8-sig',newline='') as f:
-        w=csv.DictWriter(f,fieldnames=fields);w.writeheader();w.writerows(rows)
+        w=csv.DictWriter(f,fieldnames=fields);w.writeheader();w.writerows(rs)
 
 def main():
     s=requests.Session(); s.headers.update({'User-Agent':'Mozilla/5.0 (compatible; v288-pre-scan/1.0)','Accept':'text/html,application/json'})
-    cards=[];waku=[]; failed=[]
+    cards=[];waku=[]; failed=[]; detail_n=0
     for jo in VENUES:
         try:referer,token,meta=get_meta(s,jo)
         except Exception as e:failed.append((jo,'meta',str(e)));continue
@@ -119,13 +118,16 @@ def main():
             try:
                 z=detail(s,jo,rno,referer,token,meta)
                 if not z: failed.append((jo,rno,'detail empty'));continue
+                detail_n+=1
                 players=sorted(z['race_list'],key=lambda x:int(x.get('course') or 99)); mt=meeting(s,jo,rno,referer,meta,players)
-                cards.append(make_card(jo,rno,z,mt));waku.append(make_waku(jo,rno,z));got+=1
+                # Build both first; append only when complete. Never impute missing Waku10.
+                c=make_card(jo,rno,z,mt); w=make_waku(jo,rno,z)
+                cards.append(c); waku.append(w); got+=1
                 time.sleep(.05)
             except Exception as e:failed.append((jo,rno,str(e)))
-        print(f'JCD{jo:02d}: {got}/12',flush=True)
+        print(f'JCD{jo:02d}: {got}/12 complete PRE rows',flush=True)
     write_csv(OUT/'race_cards.csv',cards);write_csv(OUT/'waku10.csv',waku)
-    print('TOTAL',len(cards),len(waku),'FAILED',len(failed),flush=True)
-    for x in failed[:30]:print('FAIL',x,flush=True)
-    if len(cards)<120 or len(waku)!=len(cards):raise RuntimeError('insufficient current inputs')
+    print('DETAIL_TOTAL',detail_n,'COMPLETE',len(cards),'WAKU',len(waku),'SKIPPED',len(failed),flush=True)
+    for x in failed[:30]:print('SKIP',x,flush=True)
+    if len(cards)<120 or len(waku)!=len(cards):raise RuntimeError('insufficient complete current inputs')
 if __name__=='__main__':main()
