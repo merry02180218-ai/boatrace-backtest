@@ -1,0 +1,44 @@
+name: v270-4head-win-feature-importance
+
+on:
+  push:
+    paths:
+      - 'analyze_v270_4head_win_feature_importance.py'
+      - 'analyze_v264_4head_feature_exhaustive.py'
+      - 'analysis_v250_4head_rebuild_baseline.csv'
+      - '.github/workflows/v270-4head-win-feature-importance.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scikit-learn
+      - run: python analyze_v270_4head_win_feature_importance.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v270-4head-win-feature-importance
+          path: |
+            analysis_v270_4head_win_feature_importance.csv
+            analysis_v270_4head_win_feature_categories.csv
+            summary_v270_4head_win_feature_importance.md
+      - name: Commit v270 outputs
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v270_4head_win_feature_importance.csv analysis_v270_4head_win_feature_categories.csv summary_v270_4head_win_feature_importance.md
+          if git diff --cached --quiet; then
+            echo "No v270 output changes to commit"
+          else
+            git commit -m "Add v270 4-head win feature importance results"
+            git push origin HEAD:${GITHUB_REF_NAME}
+          fi
