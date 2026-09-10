@@ -12,13 +12,26 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4
-      - name: Download frozen canonical v243 artifact
+      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 lhafile
+      - name: Download frozen canonical artifacts
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
           cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
+          gh run download 34326743303 --repo merry02180218-ai/boatrace-backtest --name v234-3head-waku10-restored-replay --dir golden_v234
+          cp golden_v234/analysis_v234_waku10_reconstruction_coverage.csv .
+          mkdir -p data/audit
+          cp -r golden_v234/data/audit/v234_waku10 data/audit/
+      - name: Build today's race-card and Waku10 directly from Boatcast
+        run: |
+          git clone -q --depth 1 https://github.com/BoatraceCSV/boatracecsv.github.io.git upstream_boatracecsv
+          mkdir -p upstream_boatracecsv/.boatrace
+          printf '{"rate_limit_interval_seconds":0.15,"race_card_timeout_seconds":15}' > upstream_boatracecsv/.boatrace/config.json
+          python upstream_boatracecsv/scripts/race-card.py --date 2026-09-11 --force
+          mkdir -p current_input
+          cp upstream_boatracecsv/data/programs/race_cards/2026/09/11.csv current_input/race_cards.csv
+          cp upstream_boatracecsv/data/programs/waku10/2026/09/11.csv current_input/waku10.csv
       - name: Run result-blind PRE scan
         run: python scan_20260911_3head_v288_pre.py
       - uses: actions/upload-artifact@v4
@@ -27,3 +40,5 @@ jobs:
           path: |
             scan_20260911_3head_v288_pre.csv
             scan_20260911_3head_v288_pre.md
+            current_input/race_cards.csv
+            current_input/waku10.csv
