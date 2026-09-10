@@ -1,0 +1,38 @@
+name: v280 4head independent opponent role split
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v280_4head_opponent_role_split.py'
+      - '.github/workflows/v280-4head-opponent-role-split.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy scikit-learn
+      - run: python analyze_v280_4head_opponent_role_split.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v280-4head-independent-opponent-role-split
+          path: |
+            analysis_v280_4head_opponent_role_split.csv
+            analysis_v280_4head_opponent_pairblend_grid.csv
+            analysis_v280_4head_opponent_role_split_monthly.csv
+            summary_v280_4head_opponent_role_split.md
+          if-no-files-found: ignore
+      - name: Commit v280 outputs
+        if: success()
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v280_4head_opponent_role_split.csv analysis_v280_4head_opponent_pairblend_grid.csv analysis_v280_4head_opponent_role_split_monthly.csv summary_v280_4head_opponent_role_split.md
+          git commit -m "Add v280 independent role-split opponent results" || exit 0
+          git pull --rebase origin main
+          git push origin HEAD:main
