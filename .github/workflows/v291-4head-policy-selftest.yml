@@ -1,0 +1,23 @@
+name: v291 4head frozen policy self-test
+
+on:
+  push:
+    paths:
+      - 'HEAD4_V291_COMP7_FROZEN_20260911.md'
+      - 'v291_4head_live_policy.json'
+      - 'apply_v291_4head_comp7_policy.py'
+      - '.github/workflows/v291-4head-policy-selftest.yml'
+  workflow_dispatch:
+
+jobs:
+  self-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate frozen JSON
+        run: python -m json.tool v291_4head_live_policy.json >/dev/null
+      - name: Test v291 composite gate and exact Dutch allocation
+        run: python apply_v291_4head_comp7_policy.py --self-test
