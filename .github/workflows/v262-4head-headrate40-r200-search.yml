@@ -1,0 +1,23 @@
+name: v262-4head-headrate40-r200-search
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v262_4head_headrate40_r200_search.py'
+      - '.github/workflows/v262-4head-headrate40-r200-search.yml'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas
+      - run: python analyze_v262_4head_headrate40_r200_search.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v262-4head-headrate40-r200-search
+          path: |
+            analysis_v262_4head_headrate40_r200_search.csv
+            summary_v262_4head_headrate40_r200_search.md
