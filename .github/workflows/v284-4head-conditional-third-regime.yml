@@ -1,0 +1,40 @@
+name: v284 4head conditional third regime
+
+on:
+  push:
+    paths:
+      - 'analyze_v284_4head_conditional_third_regime.py'
+      - '.github/workflows/v284-4head-conditional-third-regime.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy scikit-learn
+      - run: python analyze_v284_4head_conditional_third_regime.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v284-third-regime
+          path: |
+            analysis_v284_4head_conditional_third_regime.csv
+            analysis_v284_4head_conditional_third_regime_grid.csv
+            analysis_v284_4head_conditional_third_regime_pair_grid.csv
+            analysis_v284_4head_conditional_third_regime_monthly.csv
+            analysis_v284_4head_conditional_third_regime_coefficients.csv
+            summary_v284_4head_conditional_third_regime.md
+      - name: Commit v284 outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v284_4head_conditional_third_regime.csv analysis_v284_4head_conditional_third_regime_grid.csv analysis_v284_4head_conditional_third_regime_pair_grid.csv analysis_v284_4head_conditional_third_regime_monthly.csv analysis_v284_4head_conditional_third_regime_coefficients.csv summary_v284_4head_conditional_third_regime.md
+          git diff --cached --quiet || git commit -m 'Add v284 conditional third regime results'
+          git pull --rebase origin main
+          git push origin HEAD:main
