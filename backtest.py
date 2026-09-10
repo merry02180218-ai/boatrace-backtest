@@ -1,9 +1,10 @@
 from __future__ import annotations
-import csv, io, math, urllib.request
+import csv, io, math, os, urllib.request
 from datetime import date, timedelta
 from collections import defaultdict, Counter
 
-BASE='https://raw.githubusercontent.com/BoatraceCSV/boatracecsv.github.io/main/'
+BOATRACECSV_REF=os.environ.get('BOATRACECSV_REF','main')
+BASE=f'https://raw.githubusercontent.com/BoatraceCSV/boatracecsv.github.io/{BOATRACECSV_REF}/'
 START=date(2026,8,3); END=date(2026,9,2)
 
 def fetch(path):
@@ -35,7 +36,6 @@ def grade_score(g):
 def clamp(x,a=0,b=1): return max(a,min(b,x))
 
 def norm_st_edge(inside, outside):
-    # positive when outside is faster; +0.05 or more ~ full credit
     return clamp((inside-outside+0.01)/0.06)
 
 def pct_motor(m2):
@@ -81,12 +81,10 @@ def score3(x):
     a,b,c=x[1],x[2],x[3]
     st=0.55*norm_st_edge(b['waku_st'],c['waku_st'])+0.45*norm_st_edge(b['nst'],c['nst'])
     attack=clamp(0.55*c['past_win']/0.25 + 0.45*(6-c['waku_sr'])/5)
-    # weak wall = low frame winrate and slow ST
     wall=0.55*clamp((5.5-b['waku_wr'])/4.5)+0.45*norm_st_edge(b['waku_st'],c['waku_st'])
     motor=0.7*pct_motor(c['motor2'])+0.3*pct_motor(c['motor3'])
-    inside=clamp((7.5-a['waku_wr'])/6.0) # weaker 1 is better for 3-head
+    inside=clamp((7.5-a['waku_wr'])/6.0)
     meet=0.5 if c['meet_st'] is None else clamp((0.22-c['meet_st'])/0.12)
-    # fixed pre-result model. grade is only light; not a hard B1 condition
     quality=clamp((c['wr']-3.5)/4.0)
     s=100*(.20*st+.18*attack+.15*motor+.15*wall+.10*meet+.08*inside+.09*quality+.05*clamp((c['local']-3)/5))
     return s
@@ -123,7 +121,6 @@ def main():
         cards=rows(f'data/programs/race_cards/{ymd}.csv')
         w10={r['レースコード']:r for r in rows(f'data/programs/waku10/{ymd}.csv')}
         titles={r['レースコード']:r for r in rows(f'data/programs/title/{ymd}.csv')}
-        # IMPORTANT: scores are frozen here, before results are loaded
         frozen=[]
         for r in cards:
             code=r['レースコード']; w=w10.get(code,{})
@@ -133,7 +130,6 @@ def main():
             for model,boat,sc in [('3攻め',3,s3),('4カド',4,s4),('4→5展開',5,s45)]:
                 if sc>=60:
                     frozen.append({'date':str(daily),'race_code':code,'venue':r.get('レース場コード',''),'race':r.get('レース回',''),'day_no':dn,'day_cat':daycat,'model':model,'target_boat':boat,'score':round(sc,2),'rank':label(sc),'target_name':x[boat]['name'],'target_grade':x[boat]['grade'],'motor2':x[boat]['motor2'],'target_waku_st':x[boat]['waku_st']})
-        # only now load outcomes
         res={r['レースコード']:r for r in rows(f'data/results/realtime/{ymd}.csv')}
         for rr in res.values():
             win=i(rr.get('1着_艇番')) ; kim=(rr.get('決まり手') or '').replace('　','').replace(' ','')
