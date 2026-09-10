@@ -1,0 +1,34 @@
+name: v275 4head opponent player blend
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v275_4head_opponent_player_blend.py'
+      - '.github/workflows/v275-4head-opponent-player-blend.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scikit-learn
+      - run: python analyze_v275_4head_opponent_player_blend.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v275-4head-opponent-player-blend
+          path: |
+            analysis_v275_4head_opponent_player_blend.csv
+            analysis_v275_4head_opponent_player_blend_monthly.csv
+            summary_v275_4head_opponent_player_blend.md
+      - name: Commit v275 outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v275_4head_opponent_player_blend.csv analysis_v275_4head_opponent_player_blend_monthly.csv summary_v275_4head_opponent_player_blend.md
+          git commit -m "Add v275 4-head opponent player blend results" || exit 0
+          git pull --rebase origin main
+          git push origin HEAD:main
