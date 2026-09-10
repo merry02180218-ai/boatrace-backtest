@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - audit_cached_live_historical_equivalence.py
+      - backtest.py
       - .github/workflows/audit-cached-live-historical-equivalence.yml
 
 permissions:
@@ -15,6 +16,10 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    env:
+      # Canonical external-data snapshot immediately preceding frozen v243 run 34383567078.
+      # LIVE code still defaults to BoatraceCSV main when this env var is absent.
+      BOATRACECSV_REF: f4552b6a02b5cf3eb78e85eb650f4a1b1a4cd39b
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
