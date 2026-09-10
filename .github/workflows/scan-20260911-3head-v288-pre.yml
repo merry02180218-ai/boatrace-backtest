@@ -2,7 +2,6 @@ name: scan-20260911-3head-v288-pre
 on:
   push:
     paths:
-      - 'scan_20260911_3head_v288_pre.py'
       - '.github/workflows/scan-20260911-3head-v288-pre.yml'
   workflow_dispatch:
 jobs:
@@ -13,20 +12,27 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install -q requests beautifulsoup4 pandas lxml
-      - name: Inspect Kyoteibiyori JS
+      - run: pip install -q requests beautifulsoup4
+      - name: Probe Kyoteibiyori detail JSON
         run: |
           python - <<'PY'
-          import requests,re
-          h={'User-Agent':'Mozilla/5.0'}
-          for u in ['https://kyoteibiyori.com/js/race_shusso.js?242','https://kyoteibiyori.com/js/user_custom.js?23']:
-            r=requests.get(u,headers=h,timeout=20)
-            print('URL',u,'STATUS',r.status_code,'LEN',len(r.text))
-            for m in re.finditer(r'(?:url\s*:\s*["\']([^"\']+)|request_[A-Za-z0-9_./-]+\.php|kako10|直近10)',r.text,re.I):
-              i=m.start(); print(re.sub(r'\s+',' ',r.text[max(0,i-350):i+700])[:1050])
-            open('js_'+str(abs(hash(u)))+'.txt','w',encoding='utf-8').write(r.text)
+          import requests,re,json
+          from bs4 import BeautifulSoup
+          s=requests.Session(); s.headers.update({'User-Agent':'Mozilla/5.0'})
+          u='https://kyoteibiyori.com/race_shusso.php?hiduke=20260911&place_no=16&race_no=1&slider=1'
+          h=s.get(u,timeout=20).text
+          soup=BeautifulSoup(h,'html.parser')
+          val=lambda n:(soup.find('input',{'name':n}) or {}).get('value','')
+          tok=re.search(r'var\s+CSRF_TOKEN\s*=\s*"([^"]+)"',h).group(1)
+          d={'place_no':val('place_no'),'race_no':val('race_no'),'hiduke':val('hiduke'),'race_name':val('race_name'),'season':2021,'term':1,'kaisai_key':val('kaisai_key'),'taikai_count':val('taikai_count'),'group_no':val('group_no'),'type':0,'grade':0}
+          r=s.post('https://kyoteibiyori.com/request_race_shusso_detail_v4.php',data={'data':json.dumps(d,ensure_ascii=False),'token':tok},headers={'Referer':u,'X-Requested-With':'XMLHttpRequest'},timeout=30)
+          print('STATUS',r.status_code,'LEN',len(r.text),'HEAD',r.text[:120])
+          z=r.json(); print('TOP',sorted(z.keys()))
+          print('RACE_LEN',len(z.get('race_list',[]))); print('RACE0',json.dumps(z.get('race_list',[{}])[0],ensure_ascii=False)[:6000])
+          k=z.get('kako_list',{}); print('KAKO_KEYS',sorted(k.keys())); p=k.get('player_kako10',[]); print('PLAYER_KAKO_LEN',len(p)); print('PLAYER0',json.dumps(p[0] if p else {},ensure_ascii=False)[:9000])
+          open('kyotei_detail.json','w',encoding='utf-8').write(json.dumps(z,ensure_ascii=False))
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: kyoteibiyori-js-probe-20260911
-          path: js_*.txt
+          name: kyoteibiyori-detail-probe-20260911
+          path: kyotei_detail.json
