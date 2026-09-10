@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# 2026-09-11 PRE live bridge: direct current Boatcast inputs, result-blind.
 from __future__ import annotations
 from collections import defaultdict
 from datetime import date
