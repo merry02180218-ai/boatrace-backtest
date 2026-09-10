@@ -1,0 +1,30 @@
+name: v287-3head-add-route-expand
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_v287_3head_add_route_expand.py'
+      - '.github/workflows/v287-3head-add-route-expand.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas
+      - name: Download frozen v243 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
+          cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
+      - name: Run v287 add-route search
+        run: python analyze_v287_3head_add_route_expand.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v287-3head-add-route-expand
+          path: |
+            analysis_v287_3head_add_route_expand.csv
+            summary_v287_3head_add_route_expand.md
