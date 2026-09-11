@@ -22,30 +22,32 @@ permissions:
 
 jobs:
   download:
-    # Run only on the Japan-based self-hosted runner.
     runs-on: [self-hosted, japan]
     timeout-minutes: 20
     env:
       RACE_DATE: ${{ inputs.race_date }}
       STADIUM: ${{ inputs.stadium }}
       RACE: ${{ inputs.race }}
+      LOCAL_PYTHON: C:\Users\merry\AppData\Local\Programs\Python\Python311\python.exe
     steps:
       - uses: actions/checkout@v4
       - name: Check local Python 3.11
         shell: powershell
-        run: py -3.11 --version
+        run: |
+          & $env:LOCAL_PYTHON --version
+          & $env:LOCAL_PYTHON -m pip --version
       - name: Install Python dependencies
         shell: powershell
-        run: py -3.11 -m pip install -q playwright
+        run: '& $env:LOCAL_PYTHON -m pip install -q playwright'
       - name: Install Chromium
         shell: powershell
-        run: py -3.11 -m playwright install chromium
+        run: '& $env:LOCAL_PYTHON -m playwright install chromium'
       - name: Check ffmpeg
         shell: powershell
         run: ffmpeg -version
       - name: Download exhibition replay
         shell: powershell
-        run: py -3.11 download_boatcast_exhibition.py
+        run: '& $env:LOCAL_PYTHON download_boatcast_exhibition.py'
       - uses: actions/upload-artifact@v4
         if: always()
         with:
