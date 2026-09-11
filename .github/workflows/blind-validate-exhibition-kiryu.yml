@@ -1,0 +1,60 @@
+name: blind validate exhibition Kiryu
+
+on:
+  push:
+    paths:
+      - '.github/workflows/blind-validate-exhibition-kiryu.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  blind-video:
+    runs-on: [self-hosted, japan]
+    timeout-minutes: 25
+    env:
+      RACE_DATE: '20260909'
+      STADIUM: '01kiryu'
+      RACE: '12'
+      LOCAL_PYTHON: C:\Users\merry\AppData\Local\Programs\Python\Python311\python.exe
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install deps
+        shell: powershell
+        run: |
+          & $env:LOCAL_PYTHON -m pip install -q playwright opencv-python numpy
+          & $env:LOCAL_PYTHON -m playwright install chromium
+      - name: Download exhibition only
+        shell: powershell
+        run: '& $env:LOCAL_PYTHON download_boatcast_exhibition.py'
+      - name: Detect start exhibition grid photo
+        shell: powershell
+        run: |
+          $video = Get-ChildItem -Filter 'boatcast_*_exhibition.mp4' | Select-Object -First 1
+          if (-not $video) { throw 'exhibition MP4 not found' }
+          & $env:LOCAL_PYTHON extract_start_exhibition_calibration.py $video.FullName --out-dir blind_calibration
+      - name: Write blind lock manifest
+        shell: powershell
+        run: |
+          $video = Get-ChildItem -Filter 'boatcast_*_exhibition.mp4' | Select-Object -First 1
+          $hash = (Get-FileHash $video.FullName -Algorithm SHA256).Hash
+          $obj = [ordered]@{
+            race_date='20260909'; stadium='01kiryu'; race=12;
+            result_blind=$true;
+            race_results_read=$false;
+            video_sha256=$hash;
+            locked_at_utc=(Get-Date).ToUniversalTime().ToString('o')
+          }
+          $obj | ConvertTo-Json | Set-Content -Encoding UTF8 blind_lock.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: blind-kiryu-20260909-12
+          path: |
+            boatcast_*_exhibition.mp4
+            boatcast_*_exhibition.json
+            blind_calibration/**
+            blind_lock.json
+          if-no-files-found: warn
