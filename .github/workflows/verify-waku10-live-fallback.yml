@@ -1,0 +1,66 @@
+name: verify-waku10-live-fallback
+on:
+  push:
+    paths:
+      - '.github/workflows/verify-waku10-live-fallback.yml'
+      - 'historical_waku10_fetcher.py'
+      - 'fetch_3head_v288_pre_inputs_live.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q requests beautifulsoup4
+      - name: Compile
+        run: python -m py_compile historical_waku10_fetcher.py fetch_3head_v288_pre_inputs_live.py fetch_kyoteibiyori_v288_pre_inputs.py
+      - name: Verify direct BOATCAST recovery for the 12 previously excluded races
+        run: |
+          python - <<'PY'
+          from historical_waku10_fetcher import fetch_race
+          codes = [
+              '202609110204','202609110208','202609111312','202609111702',
+              '202609111707','202609111708','202609111712','202609112009',
+              '202609112105','202609112106','202609112107','202609112108',
+          ]
+          bad=[]
+          for code in codes:
+              row=fetch_race('2026-09-11',code)
+              ok=bool(row and row.get('レースコード')==code and len(row)>=200)
+              print(code, 'BOATCAST_WAKU10_OK' if ok else 'MISSING', 'fields', len(row or {}))
+              if not ok: bad.append(code)
+          if bad:
+              raise SystemExit(f'validated BOATCAST fallback failed for {bad}')
+          print('WAKU10_DIRECT_12_OF_12_OK')
+          PY
+      - name: Rebuild current PRE inputs with validated fallback
+        run: python fetch_3head_v288_pre_inputs_live.py --date 2026-09-11
+      - name: Assert full 2026-09-11 coverage and no outcome leakage
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('current_input/v288/20260911/input_manifest.json')
+          m=json.loads(p.read_text(encoding='utf-8'))
+          print(json.dumps(m,ensure_ascii=False,indent=2))
+          assert m['result_blind'] is True
+          assert m['result_or_payout_used'] is False
+          assert m['current_exhibition_used'] is False
+          assert m['detail_rows_seen']==144, m
+          assert m['complete_race_rows']==144, m
+          assert m['waku_rows']==144, m
+          assert m['excluded_rows']==0, m
+          print('WAKU10_LIVE_FALLBACK_144_OF_144_OK')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: verify-waku10-live-fallback-20260911
+          retention-days: 7
+          path: current_input/v288/20260911/
