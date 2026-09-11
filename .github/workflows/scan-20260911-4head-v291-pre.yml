@@ -4,6 +4,7 @@ on:
     paths:
       - 'scan_20260911_4head_v291_pre.py'
       - 'fetch_kyoteibiyori_v288_pre_inputs.py'
+      - 'fetch_kyoteibiyori_v291_pre_inputs.py'
       - '.github/workflows/scan-20260911-4head-v291-pre.yml'
   workflow_dispatch:
 jobs:
@@ -16,7 +17,7 @@ jobs:
           python-version: '3.11'
       - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4
       - name: Build current result-blind PRE inputs
-        run: python fetch_kyoteibiyori_v288_pre_inputs.py
+        run: python fetch_kyoteibiyori_v291_pre_inputs.py
       - name: Run 4-head v291 PRE scan
         run: python scan_20260911_4head_v291_pre.py
       - uses: actions/upload-artifact@v4
