@@ -42,3 +42,4 @@ jobs:
             scan_20260911_3head_v288_pre.csv
             scan_20260911_3head_v288_pre.md
             cache_20260911_3head_v288_live.joblib
+# rerun-marker: 2026-09-11-live-speed-test
