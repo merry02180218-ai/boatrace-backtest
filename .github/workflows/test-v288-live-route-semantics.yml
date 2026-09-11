@@ -1,0 +1,19 @@
+name: test-v288-live-route-semantics
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_20260911_3head_v288_live.py'
+      - 'test_v288_live_route_semantics.py'
+      - '.github/workflows/test-v288-live-route-semantics.yml'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 joblib
+      - name: Verify production LIVE route selector parity
+        run: python test_v288_live_route_semantics.py
