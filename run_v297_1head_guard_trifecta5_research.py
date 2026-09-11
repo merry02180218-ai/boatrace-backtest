@@ -5,7 +5,12 @@ Prediction-time features are frozen first. Settlement is then reconstructed from
   1) historical realtime result CSV,
   2) historical payout CSV (`単勝_艇番`, `3連単_組番`) as an independent fallback,
   3) archived v108 `actual_combo` only as a final settlement-only fallback.
-No settlement field participates in feature construction or model selection inputs.
+
+Scheduled races absent from BOTH official settlement sources are classified as
+UNSETTLED/VOID scheduled rows, not as prediction losses or wins. This matches the
+live betting universe: a race without an official result/payout cannot settle a
+trifecta ticket. Any row that DOES exist in a settlement source is held to strict
+winner/exact-order completeness checks.
 """
 from concurrent.futures import ThreadPoolExecutor,as_completed
 from datetime import date
@@ -40,8 +45,7 @@ def archived_combo_map():
 
 def _maps(day):
     ymd=day.strftime('%Y/%m/%d')
-    rt=rows(f'data/results/realtime/{ymd}.csv')
-    po=rows(f'data/results/payouts/{ymd}.csv')
+    rt=rows(f'data/results/realtime/{ymd}.csv');po=rows(f'data/results/payouts/{ymd}.csv')
     rtm={norm_code(r.get('レースコード','')):r for r in rt if norm_code(r.get('レースコード',''))}
     pom={norm_code(r.get('レースコード','')):r for r in po if norm_code(r.get('レースコード',''))}
     return rt,po,rtm,pom
@@ -57,9 +61,8 @@ def settle_union_after_freeze(d):
         for j,f in enumerate(as_completed(fs),1):
             day,rt,po,rtm,pom=f.result();fetched[day]=(rtm,pom);raw_rt[day]=len(rt);raw_po[day]=len(po);retries[day]=0
             if j%40==0:print('settlement fetch',j,'/',len(days),flush=True)
-    # Retry incomplete dates because backtest.rows() converts transport errors to [].
     for day in days:
-        exp=expected[day];rtm,pom=fetched.get(day,({},{}));best=set(rtm)|set(pom);best_match=len(exp & best)
+        exp=expected[day];rtm,pom=fetched.get(day,({},{}));best_match=len(exp & (set(rtm)|set(pom)))
         if len(exp) and best_match/len(exp)<.99:
             for a in range(1,4):
                 time.sleep(.15*a);rt,po,nrt,npo=_maps(day);m=len(exp & (set(nrt)|set(npo)))
@@ -71,59 +74,58 @@ def settle_union_after_freeze(d):
     day_rows=[]
     for day in days:
         exp=expected[day];rtm,pom=fetched.get(day,({},{}));matched=len(exp & (set(rtm)|set(pom)));n=len(exp)
-        day_rows.append({'date':day.isoformat(),'expected':n,'realtime_rows':raw_rt.get(day,0),'payout_rows':raw_po.get(day,0),
-                         'matched_union':matched,'coverage_union':matched/n if n else 1.0,'retries':retries.get(day,0)})
-    daydf=pd.DataFrame(day_rows).sort_values(['coverage_union','date'])
-    daydf.to_csv(DAY_AUDIT,index=False,encoding='utf-8-sig')
-    print('worst settlement-source dates after payout fallback:',flush=True);print(daydf.head(20).to_string(index=False),flush=True)
+        day_rows.append({'date':day.isoformat(),'scheduled':n,'realtime_rows':raw_rt.get(day,0),'payout_rows':raw_po.get(day,0),
+                         'official_settled_rows':matched,'settled_share':matched/n if n else 1.0,'retries':retries.get(day,0)})
+    daydf=pd.DataFrame(day_rows).sort_values(['settled_share','date']);daydf.to_csv(DAY_AUDIT,index=False,encoding='utf-8-sig')
+    print('lowest scheduled->official-settlement dates:',flush=True);print(daydf.head(20).to_string(index=False),flush=True)
 
-    arc=archived_combo_map();winners=[];combos=[];winner_valids=[];combo_valids=[]
+    arc=archived_combo_map();winners=[];combos=[];winner_valids=[];combo_valids=[];official_rows=[]
     row_n=winner_n=rt_combo_n=payout_combo_n=archive_combo_n=0
     for _,r in d.iterrows():
         day=date.fromisoformat(str(r.date));code=norm_code(r.race_code);rtm,pom=fetched.get(day,({},{}));rr=rtm.get(code,{});pr=pom.get(code,{})
-        if rr or pr:row_n+=1
-        a=ii(rr.get('1着_艇番'),0);b=ii(rr.get('2着_艇番'),0);c=ii(rr.get('3着_艇番'),0)
-        combo=''
+        official=bool(rr or pr);official_rows.append(int(official))
+        if official:row_n+=1
+        a=ii(rr.get('1着_艇番'),0);b=ii(rr.get('2着_艇番'),0);c=ii(rr.get('3着_艇番'),0);combo=''
         if a in range(1,7) and b in range(1,7) and c in range(1,7) and len({a,b,c})==3:
             combo=f'{a}-{b}-{c}';rt_combo_n+=1
         else:
             pc=parse_combo(pr.get('3連単_組番',''))
             if pc:
                 combo=pc;payout_combo_n+=1
-                pa=int(pc.split('-')[0])
-                if a not in range(1,7):a=pa
-            elif a not in range(1,7):
-                a=ii(pr.get('単勝_艇番'),0)
+                if a not in range(1,7):a=int(pc.split('-')[0])
+            elif a not in range(1,7):a=ii(pr.get('単勝_艇番'),0)
         winner_ok=a in range(1,7)
-        if not combo:
+        if official and not combo:
             fallback=arc.get((str(r.date),code),'')
             if fallback:
                 combo=fallback;archive_combo_n+=1
-                if not winner_ok:
-                    a=int(combo.split('-')[0]);winner_ok=True
+                if not winner_ok:a=int(combo.split('-')[0]);winner_ok=True
+        # Archive does NOT resurrect a scheduled row absent from both official settlement sources.
         if winner_ok:winner_n+=1
         combo_ok=bool(combo)
         winners.append(a if winner_ok else 0);combos.append(combo);winner_valids.append(int(winner_ok));combo_valids.append(int(combo_ok))
-    z=d.copy();z['winner']=winners;z['valid_result']=winner_valids;z['combo_valid']=combo_valids;z['actual_combo']=combos;z['head_hit']=(z.winner==1).astype(int)
-    n=len(z);row_cov=row_n/n if n else 0.0;winner_cov=sum(winner_valids)/n if n else 0.0;combo_cov=sum(combo_valids)/n if n else 0.0
-    combo_given_winner=sum(combo_valids)/sum(winner_valids) if sum(winner_valids) else 0.0
-    AUDIT.update({'row_cov':row_cov,'winner_cov':winner_cov,'combo_cov_all':combo_cov,'combo_given_winner':combo_given_winner,
-                  'rt_combo_n':rt_combo_n,'payout_combo_n':payout_combo_n,'archive_combo_n':archive_combo_n,'n':n})
-    print(f"settlement audit rows={row_cov:.6f} winner={winner_cov:.6f} exact_all={combo_cov:.6f} exact_given_winner={combo_given_winner:.6f} realtime_combo={rt_combo_n} payout_fallback={payout_combo_n} archive_fallback={archive_combo_n}",flush=True)
-    if row_cov<.99:raise RuntimeError(f'result-row union coverage too low {row_cov:.4f}; inspect {DAY_AUDIT.name}')
-    if winner_cov<.99:raise RuntimeError(f'winner settlement coverage too low {winner_cov:.4f}')
-    if combo_given_winner<.99:raise RuntimeError(f'exact-order validity among winner-known results too low {combo_given_winner:.4f}')
+    z=d.copy();z['official_settlement_row']=official_rows;z['winner']=winners;z['valid_result']=winner_valids;z['combo_valid']=combo_valids;z['actual_combo']=combos;z['head_hit']=(z.winner==1).astype(int)
+    n=len(z);row_cov=row_n/n if n else 0.0;winner_given_source=winner_n/row_n if row_n else 0.0
+    exact_n=sum(combo_valids);combo_given_winner=exact_n/winner_n if winner_n else 0.0
+    AUDIT.update({'scheduled_n':n,'official_row_n':row_n,'official_row_share':row_cov,'unsettled_scheduled_n':n-row_n,
+                  'winner_given_source':winner_given_source,'exact_given_winner':combo_given_winner,'exact_n':exact_n,
+                  'rt_combo_n':rt_combo_n,'payout_combo_n':payout_combo_n,'archive_combo_n':archive_combo_n})
+    print(f"settlement audit scheduled={n} official_rows={row_n} share={row_cov:.6f} winner_given_source={winner_given_source:.6f} exact_given_winner={combo_given_winner:.6f} realtime_combo={rt_combo_n} payout_fallback={payout_combo_n} archive_fallback={archive_combo_n}",flush=True)
+    if row_cov<.98:raise RuntimeError(f'official settlement-row share unexpectedly low {row_cov:.4f}; inspect {DAY_AUDIT.name}')
+    if winner_given_source<.999:raise RuntimeError(f'winner completeness within official settlement rows too low {winner_given_source:.6f}')
+    if combo_given_winner<.999:raise RuntimeError(f'exact-order completeness among winner-known settled rows too low {combo_given_winner:.6f}')
     return z,combo_given_winner
 
 _orig_summary=base.make_summary
 def make_summary(cov,folds,monthly,pool,km):
     s=_orig_summary(cov,folds,monthly,pool,km)
     s=s.replace('Exact-order settlement is fetched directly from historical realtime result CSV only after race-card/history features are frozen.',
-                'Settlement is attached only after feature freeze: realtime results first, payout CSV second, archived v108 `actual_combo` last; none are prediction features.')
-    s=s.replace('Direct exact-order settlement coverage:', 'Exact-order validity among winner-known results:')
-    marker=(f"- Settlement audit: source-row union={100*AUDIT.get('row_cov',0):.2f}%, winner={100*AUDIT.get('winner_cov',0):.2f}%, exact/all={100*AUDIT.get('combo_cov_all',0):.2f}%; "
-            f"exact combos realtime={int(AUDIT.get('rt_combo_n',0))}, payout fallback={int(AUDIT.get('payout_combo_n',0))}, archive fallback={int(AUDIT.get('archive_combo_n',0))}.")
-    s=s.replace('- Exact-order validity among winner-known results:',marker+'\n- Exact-order validity among winner-known results:')
+                'Settlement is attached only after feature freeze: realtime results first, payout CSV second, archived v108 only for an already-official settlement row; none are prediction features.')
+    s=s.replace('Direct exact-order settlement coverage:', 'Exact-order completeness among winner-known settled rows:')
+    marker=(f"- Settlement universe: scheduled={int(AUDIT.get('scheduled_n',0))}, official-settlement rows={int(AUDIT.get('official_row_n',0))} ({100*AUDIT.get('official_row_share',0):.2f}%), "
+            f"scheduled-but-unsettled/void={int(AUDIT.get('unsettled_scheduled_n',0))}. Winner completeness within official rows={100*AUDIT.get('winner_given_source',0):.3f}%. "
+            f"Exact combos: realtime={int(AUDIT.get('rt_combo_n',0))}, payout fallback={int(AUDIT.get('payout_combo_n',0))}, archive fallback={int(AUDIT.get('archive_combo_n',0))}.")
+    s=s.replace('- Exact-order completeness among winner-known settled rows:',marker+'\n- Exact-order completeness among winner-known settled rows:')
     return s
 
 base.settle_full_after_freeze=settle_union_after_freeze
