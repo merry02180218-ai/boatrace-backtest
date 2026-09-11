@@ -40,6 +40,22 @@ def parse_tsv(body, code, ds, jo, rno):
             vals += [fin,ent,grd]
     return dict(zip(HEAD,vals))
 
+def fetch_race(ds, code):
+    """Fetch one canonical Waku10 row directly from BOATCAST.
+
+    This uses the same parser/source previously validated against published
+    BoatraceCSV Waku10. It does not require the target day's BoatraceCSV race
+    card to be published, so it is safe for same-day PRE fallback.
+    """
+    ds=str(ds).replace('/','-')
+    y,m,d=ds.split('-')
+    code=str(code).zfill(12)
+    if len(code)!=12 or code[:8] != f'{y}{m}{d}':
+        return None
+    jo=code[8:10]; rno=code[10:12]
+    url=f'{BOATCAST}/{jo}/bc_j_waku10_{y}{m}{d}_{jo}_{rno}.txt'
+    return parse_tsv(get(url),code,ds,jo,rno)
+
 def fetch_day(ds, sleep=0.0, workers=16):
     y,m,d=ds.split('-'); ymd=f'{y}/{m}/{d}'
     card_url=RAW+f'data/programs/race_cards/{ymd}.csv'
@@ -51,15 +67,11 @@ def fetch_day(ds, sleep=0.0, workers=16):
         code=r.get('レースコード','')
         if code and code not in seen:
             seen.add(code); codes.append(code)
-    def one(code):
-        jo=code[8:10]; rno=code[10:12]
-        url=f'{BOATCAST}/{jo}/bc_j_waku10_{y}{m}{d}_{jo}_{rno}.txt'
-        return code,parse_tsv(get(url),code,ds,jo,rno)
     got={}
     with ThreadPoolExecutor(max_workers=workers) as ex:
-        fs=[ex.submit(one,c) for c in codes]
+        fs={ex.submit(fetch_race,ds,c):c for c in codes}
         for fut in as_completed(fs):
-            code,z=fut.result()
+            code=fs[fut]; z=fut.result()
             if z:got[code]=z
     return [got[c] for c in codes if c in got]
 
