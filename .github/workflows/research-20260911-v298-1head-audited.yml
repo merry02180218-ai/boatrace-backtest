@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'run_v298_1head_v288v283_audited.py'
+      - 'run_v298_1head_v288v283_audited_v2.py'
       - 'analyze_v298_1head_threat_listwise_trifecta5.py'
       - '.github/workflows/research-20260911-v298-1head-audited.yml'
 
@@ -22,7 +23,7 @@ jobs:
           python-version: '3.11'
       - run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
       - name: Run audited v298 aligned with v288/v283
-        run: python run_v298_1head_v288v283_audited.py
+        run: python run_v298_1head_v288v283_audited_v2.py
       - uses: actions/upload-artifact@v4
         with:
           name: v298-1head-audited
