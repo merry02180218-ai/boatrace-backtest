@@ -8,7 +8,7 @@ on:
       - .github/workflows/research-20260911-v292-1head-90pct.yml
 
 permissions:
-  contents: read
+  contents: write
   actions: read
 
 jobs:
@@ -36,3 +36,19 @@ jobs:
             analysis_v292_1head_feature_gap.csv
             summary_v292_1head_90pct_baseline_research.md
           if-no-files-found: ignore
+      - name: Commit compact research results
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add summary_v292_1head_90pct_baseline_research.md \
+                  analysis_v292_1head_90pct_model_metrics.csv \
+                  analysis_v292_1head_90pct_thresholds.csv \
+                  analysis_v292_1head_90pct_quantiles.csv \
+                  analysis_v292_1head_90pct_reliability.csv \
+                  analysis_v292_1head_feature_gap.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "results: v292 1-head 90pct baseline research"
+            git pull --rebase origin main
+            git push
+          fi
