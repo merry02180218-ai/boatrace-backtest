@@ -1,0 +1,263 @@
+name: auto-live-3head-v288-production
+on:
+  schedule:
+    # September production watcher. GitHub Actions schedule granularity is 5 minutes.
+    - cron: '*/5 * * 9 *'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: Optional target date YYYY-MM-DD; blank = today in Asia/Tokyo
+        required: false
+        default: ''
+  push:
+    paths:
+      - '.github/workflows/auto-live-3head-v288-production.yml'
+      - 'fetch_boatrace_deadline.py'
+      - 'run_3head_v288_production_live.py'
+      - 'run_20260911_3head_v288_live.py'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  validate:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: python -m py_compile fetch_boatrace_deadline.py run_3head_v288_production_live.py run_20260911_3head_v288_live.py
+
+  prepare:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    outputs:
+      ready: ${{ steps.prep.outputs.ready }}
+      target_date: ${{ steps.prep.outputs.target_date }}
+      target8: ${{ steps.prep.outputs.target8 }}
+      daily_run: ${{ steps.prep.outputs.daily_run }}
+      matrix: ${{ steps.prep.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Find today's frozen daily bundle and PRE candidates
+        id: prep
+        env:
+          GH_TOKEN: ${{ github.token }}
+          INPUT_DATE: ${{ inputs.date }}
+        run: |
+          set -euo pipefail
+          if [ -n "${INPUT_DATE:-}" ]; then
+            TARGET_DATE="$INPUT_DATE"
+          else
+            TARGET_DATE=$(TZ=Asia/Tokyo date +%F)
+          fi
+          TARGET8=$(date -d "$TARGET_DATE" +%Y%m%d)
+          echo "target_date=$TARGET_DATE" >> "$GITHUB_OUTPUT"
+          echo "target8=$TARGET8" >> "$GITHUB_OUTPUT"
+
+          # The frozen operational model is deliberately scoped to September 2026.
+          if [[ ! "$TARGET8" =~ ^202609[0-9]{2}$ ]]; then
+            echo 'ready=0' >> "$GITHUB_OUTPUT"
+            echo 'daily_run=' >> "$GITHUB_OUTPUT"
+            echo 'matrix={"include":[]}' >> "$GITHUB_OUTPUT"
+            echo "Outside frozen v288 September scope: $TARGET_DATE"
+            exit 0
+          fi
+
+          DAILY_RUN=''
+          rm -rf daily_artifact
+          for RUN in $(gh run list \
+              --repo "$GITHUB_REPOSITORY" \
+              --workflow daily-3head-v288-production.yml \
+              --status success --limit 10 \
+              --json databaseId --jq '.[].databaseId'); do
+            rm -rf daily_artifact
+            if gh run download "$RUN" --repo "$GITHUB_REPOSITORY" \
+                --name daily-3head-v288-production --dir daily_artifact >/dev/null 2>&1; then
+              if [ -f "daily_artifact/live_outputs/v288/$TARGET8/daily_manifest.json" ] && \
+                 [ -f "daily_artifact/live_outputs/v288/$TARGET8/live_cache.joblib" ]; then
+                DAILY_RUN="$RUN"
+                break
+              fi
+            fi
+          done
+
+          if [ -z "$DAILY_RUN" ]; then
+            echo 'ready=0' >> "$GITHUB_OUTPUT"
+            echo 'daily_run=' >> "$GITHUB_OUTPUT"
+            echo 'matrix={"include":[]}' >> "$GITHUB_OUTPUT"
+            echo "No successful frozen daily bundle for $TARGET_DATE; fail closed."
+            exit 0
+          fi
+
+          MATRIX=$(python - <<'PY'
+          import json, os
+          from pathlib import Path
+          day8=os.environ['TARGET8']
+          p=Path('daily_artifact/live_outputs/v288')/day8/'daily_manifest.json'
+          m=json.loads(p.read_text(encoding='utf-8'))
+          if m.get('target_date_yyyymmdd') != day8:
+              raise SystemExit('daily manifest target mismatch')
+          if not m.get('result_blind_target_day') or m.get('result_or_payout_used'):
+              raise SystemExit('daily manifest leakage guard failed')
+          inc=[]
+          for raw in m.get('pre_candidate_race_codes',[]):
+              code=str(raw).zfill(12)
+              if not code.startswith(day8) or len(code)!=12:
+                  raise SystemExit(f'invalid candidate race code {code!r}')
+              inc.append({'code':code,'jcd':int(code[8:10]),'race':int(code[10:12])})
+          print(json.dumps({'include':inc},separators=(',',':')))
+          PY
+          )
+          echo "daily_run=$DAILY_RUN" >> "$GITHUB_OUTPUT"
+          echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
+          if [ "$MATRIX" = '{"include":[]}' ]; then
+            echo 'ready=0' >> "$GITHUB_OUTPUT"
+            echo "No PRE S+A candidates for $TARGET_DATE."
+          else
+            echo 'ready=1' >> "$GITHUB_OUTPUT"
+            echo "Frozen daily run $DAILY_RUN candidates: $MATRIX"
+          fi
+        env:
+          TARGET8: ${{ steps.prep.outputs.target8 }}
+
+  live:
+    needs: prepare
+    if: needs.prepare.outputs.ready == '1'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 joblib
+
+      - name: Skip race already finalized by a prior auto run
+        id: prior
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CODE: ${{ matrix.code }}
+        run: |
+          COUNT=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=live-v288-final-$CODE&per_page=1" --jq '.total_count')
+          if [ "${COUNT:-0}" -gt 0 ]; then
+            echo 'done=1' >> "$GITHUB_OUTPUT"
+            echo "$CODE already has a final production artifact; skipping duplicate."
+          else
+            echo 'done=0' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Download exact frozen daily bundle
+        if: steps.prior.outputs.done == '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DAILY_RUN: ${{ needs.prepare.outputs.daily_run }}
+          TARGET8: ${{ needs.prepare.outputs.target8 }}
+        run: |
+          gh run download "$DAILY_RUN" --repo "$GITHUB_REPOSITORY" \
+            --name daily-3head-v288-production --dir daily_artifact
+          test -f "daily_artifact/live_outputs/v288/$TARGET8/live_cache.joblib"
+          test -f "daily_artifact/live_outputs/v288/$TARGET8/daily_manifest.json"
+
+      - name: Resolve official deadline and decide whether to attempt LIVE now
+        if: steps.prior.outputs.done == '0'
+        env:
+          TARGET8: ${{ needs.prepare.outputs.target8 }}
+          JCD_IN: ${{ matrix.jcd }}
+          RACE_IN: ${{ matrix.race }}
+          CODE: ${{ matrix.code }}
+        run: |
+          set -euo pipefail
+          DEADLINE=$(python fetch_boatrace_deadline.py \
+            --date "$TARGET8" --jcd "$JCD_IN" --race "$RACE_IN" \
+            --meta "deadline_$CODE.json")
+          echo "DEADLINE_JST=$DEADLINE" >> "$GITHUB_ENV"
+          MODE=$(python - <<'PY'
+          import os
+          from datetime import datetime, timezone, timedelta
+          JST=timezone(timedelta(hours=9))
+          dl=datetime.fromisoformat(os.environ['DEADLINE_JST'])
+          if dl.tzinfo is None: dl=dl.replace(tzinfo=JST)
+          remain=(dl.astimezone(JST)-datetime.now(JST)).total_seconds()
+          print('EXPIRED' if remain <= 0 else ('TRY' if remain <= 1800 else 'WAIT'))
+          PY
+          )
+          echo "LIVE_MODE=$MODE" >> "$GITHUB_ENV"
+          echo "$CODE deadline=$DEADLINE mode=$MODE"
+
+      - name: Finalize fail-closed if deadline already passed
+        if: steps.prior.outputs.done == '0' && env.LIVE_MODE == 'EXPIRED'
+        env:
+          CODE: ${{ matrix.code }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from datetime import datetime, timezone, timedelta
+          from pathlib import Path
+          JST=timezone(timedelta(hours=9))
+          obj={
+            'race_code':os.environ['CODE'],
+            'decision':'ERROR_NO_BET',
+            'reason':'deadline passed before a valid production LIVE decision was frozen',
+            'deadline_jst':os.environ['DEADLINE_JST'],
+            'decision_time_jst':datetime.now(JST).isoformat(),
+            'result_or_payout_used':False,
+            'finalized':True,
+          }
+          Path('live_v288_result.json').write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(obj,ensure_ascii=False,indent=2))
+          PY
+          echo 'FINAL_READY=1' >> "$GITHUB_ENV"
+
+      - name: Attempt cached LIVE decision in the last 30 minutes
+        if: steps.prior.outputs.done == '0' && env.LIVE_MODE == 'TRY'
+        env:
+          TARGET8: ${{ needs.prepare.outputs.target8 }}
+          JCD_IN: ${{ matrix.jcd }}
+          RACE_IN: ${{ matrix.race }}
+          CODE: ${{ matrix.code }}
+        run: |
+          set +e
+          python run_3head_v288_production_live.py \
+            --date "$TARGET8" --jcd "$JCD_IN" --race "$RACE_IN" \
+            --cache "daily_artifact/live_outputs/v288/$TARGET8/live_cache.joblib" \
+            --deadline-jst "$DEADLINE_JST" \
+            > live_v288_result.json 2> live_v288_error.txt
+          RC=$?
+          set -e
+          if [ "$RC" -eq 0 ]; then
+            cat live_v288_result.json
+            echo 'FINAL_READY=1' >> "$GITHUB_ENV"
+            echo "$CODE produced a valid frozen LIVE decision."
+          else
+            echo 'FINAL_READY=0' >> "$GITHUB_ENV"
+            echo "$CODE not ready/valid yet; a later scheduled run may retry before deadline."
+            cat live_v288_error.txt || true
+          fi
+
+      - name: Upload final immutable race decision
+        if: steps.prior.outputs.done == '0' && env.FINAL_READY == '1'
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-v288-final-${{ matrix.code }}
+          retention-days: 14
+          path: |
+            live_v288_result.json
+            deadline_${{ matrix.code }}.json
+          if-no-files-found: error
+
+      - name: Upload transient failed attempt for audit
+        if: steps.prior.outputs.done == '0' && env.LIVE_MODE == 'TRY' && env.FINAL_READY != '1'
+        uses: actions/upload-artifact@v4
+        with:
+          name: live-v288-attempt-${{ matrix.code }}-${{ github.run_id }}
+          retention-days: 2
+          path: |
+            live_v288_result.json
+            live_v288_error.txt
+            deadline_${{ matrix.code }}.json
+          if-no-files-found: ignore
