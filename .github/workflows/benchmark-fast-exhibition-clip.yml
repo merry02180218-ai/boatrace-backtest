@@ -5,6 +5,8 @@ on:
     paths:
       - '.github/workflows/benchmark-fast-exhibition-clip.yml'
       - 'download_boatcast_exhibition_fastclip.py'
+      - 'auto_seed_exhibition_motion_v1.py'
+      - 'track_exhibition_boats_v3.py'
   workflow_dispatch:
     inputs:
       race_date:
@@ -27,6 +29,10 @@ on:
         description: clip duration seconds
         required: true
         default: '52'
+      entry_order:
+        description: top-to-bottom exhibition entry order
+        required: true
+        default: '1,2,3,4,5,6'
 
 permissions:
   contents: read
@@ -42,6 +48,7 @@ jobs:
       RACE: ${{ github.event_name == 'workflow_dispatch' && inputs.race || '12' }}
       CLIP_START_SEC: ${{ github.event_name == 'workflow_dispatch' && inputs.clip_start_sec || '82' }}
       CLIP_DURATION_SEC: ${{ github.event_name == 'workflow_dispatch' && inputs.clip_duration_sec || '52' }}
+      ENTRY_ORDER: ${{ github.event_name == 'workflow_dispatch' && inputs.entry_order || '1,2,3,4,5,6' }}
       LOCAL_PYTHON: C:\Users\merry\AppData\Local\Programs\Python\Python311\python.exe
     steps:
       - uses: actions/checkout@v4
@@ -50,20 +57,46 @@ jobs:
         run: |
           & $env:LOCAL_PYTHON --version
           ffmpeg -version | Select-Object -First 1
-          & $env:LOCAL_PYTHON -c "import playwright; print('playwright ok')"
+          & $env:LOCAL_PYTHON -c "import playwright,cv2,numpy; print('runtime ok')"
       - name: Fetch only start-exhibition clip
         shell: powershell
         run: '& $env:LOCAL_PYTHON download_boatcast_exhibition_fastclip.py'
-      - name: Show latency
+      - name: Auto-detect six boat seeds
+        shell: powershell
+        run: |
+          $video = Get-ChildItem -Filter 'boatcast_*_startclip.mp4' | Select-Object -First 1
+          if (-not $video) { throw 'startclip not found' }
+          $sw = [Diagnostics.Stopwatch]::StartNew()
+          & $env:LOCAL_PYTHON auto_seed_exhibition_motion_v1.py $video.FullName --entry-order $env:ENTRY_ORDER --nominal-sec 29 --out auto_seed_meta.json --seed-out auto_seeds.json
+          if ($LASTEXITCODE -ne 0) { throw 'auto seeding failed closed' }
+          $sw.Stop()
+          "AUTO_SEED_SECONDS=$($sw.Elapsed.TotalSeconds)"
+      - name: Track and score SES
+        shell: powershell
+        run: |
+          $video = Get-ChildItem -Filter 'boatcast_*_startclip.mp4' | Select-Object -First 1
+          $meta = Get-Content auto_seed_meta.json -Raw | ConvertFrom-Json
+          $slit = [string]$meta.selected_sec
+          $sw = [Diagnostics.Stopwatch]::StartNew()
+          & $env:LOCAL_PYTHON track_exhibition_boats_v3.py $video.FullName --slit-sec $slit --seed-json auto_seeds.json --out exhibition_tracking_v3.json
+          if ($LASTEXITCODE -ne 0) { throw 'SES tracking failed closed' }
+          $sw.Stop()
+          "SES_TRACK_SECONDS=$($sw.Elapsed.TotalSeconds)"
+      - name: Show latency and outputs
         shell: powershell
         run: |
           $m = Get-ChildItem -Filter 'boatcast_*_startclip.json' | Select-Object -First 1
           Get-Content $m.FullName
+          Get-Content auto_seed_meta.json
+          Get-Content exhibition_tracking_v3.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: fastclip-${{ env.RACE_DATE }}-${{ env.STADIUM }}-${{ env.RACE }}
+          name: fastclip-ses-${{ env.RACE_DATE }}-${{ env.STADIUM }}-${{ env.RACE }}
           path: |
             boatcast_*_startclip.mp4
             boatcast_*_startclip.json
+            auto_seed_meta.json
+            auto_seeds.json
+            exhibition_tracking_v3.json
           if-no-files-found: warn
