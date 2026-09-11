@@ -31,7 +31,8 @@ def main():
     head=v165.model(hfs,cats)
     head.fit(htr[hfs+cats],htr._y.astype(int))
 
-    # Reproduce the operational PRE universe/grade bridge used by today's scan.
+    # Build today's v243 head universe. PRE grading itself is leakage-free:
+    # fixed score cutpoints are learned only from the frozen prior-history universe.
     base_te,_=v223.fit_head(d,list(basefs),vc,pre.FIRST,pre.NEXT)
     k=max(1,int((base_te._p>=.30).sum()))
     te,_=v223.fit_head(d,fs,vc,pre.FIRST,pre.NEXT)
@@ -48,9 +49,7 @@ def main():
     for c in cs:
         rawc=c[3:] if c.startswith('f__') else c
         cur[c]=pd.to_numeric(sel.get(rawc,np.nan),errors='coerce')
-    cur['_score']=v249.fit_score(hist,cur,cs)
-    cur['_pct']=cur['_score'].rank(pct=True,method='first',ascending=True)
-    cur['grade']=np.where(cur._pct>=.70,'S',np.where(cur._pct>=.20,'A','B'))
+    cur,s_thr,a_thr=pre.operational_pre_grade(hist,cur,cs)
 
     candidates={}
     for idx,r in sel.iterrows():
@@ -61,7 +60,7 @@ def main():
         candidates[code]={
             'pre_grade':str(c.grade),
             'pre_score':float(c._score),
-            'pre_pct':float(c._pct),
+            'pre_pct':float(c._train_pct),
             'pre_p3':float(r._p),
         }
 
@@ -77,9 +76,12 @@ def main():
         'date':'20260911',
         'history_cutoff':'2026-08-31',
         'target_result_or_payout_used':False,
-        'operational_pre_percentile_bridge':True,
+        'operational_pre_percentile_bridge':False,
+        'operational_pre_training_quantile':True,
+        'pre_score_threshold_s':s_thr,
+        'pre_score_threshold_a':a_thr,
     },OUT,compress=3)
-    print('CACHE_READY',OUT,'rows',len(today),'candidates',candidates,flush=True)
+    print('CACHE_READY',OUT,'rows',len(today),'S_THR',s_thr,'A_THR',a_thr,'candidates',candidates,flush=True)
 
 if __name__=='__main__':
     main()
