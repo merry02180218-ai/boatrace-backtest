@@ -10,6 +10,11 @@ The candidate feature constructor keeps exact v2 semantics while caching the six
 numeric context once per race row.  SECOND/THIRD construction calls cand_record many
 times for the same row, so recomputing all six boats for every suffix on every call was
 the dominant runtime/memory-allocation cost in CI.
+
+Opponent rows are emitted for every race so boat-1 losses remain available at inference
+and settlement time. Training remains fail-closed: only valid 1-x-y outcomes produce a
+positive SECOND label or a conditional THIRD training group; all other races are scored
+for inference but ignored by the grouped listwise fit.
 """
 from __future__ import annotations
 import numpy as np
@@ -107,6 +112,54 @@ def cand_record(r,b,sufs,prefix=''):
     return z
 
 
+def second_long_all(d,sufs):
+    """Emit all races for inference; only valid 1-x-y races have one positive label."""
+    rec=[]
+    for _,r in d.iterrows():
+        a2,a3=v298.actual23(r.actual_combo)
+        valid=int(r.head_hit)==1 and a2 in BOATS and a3 in BOATS
+        for b in BOATS:
+            z={'date':r.date,'month':r.month,'race_code':str(r.race_code).zfill(12),
+               'y2':int(valid and b==a2),'actual2':a2,'actual3':a3}
+            z.update(cand_record(r,b,sufs));rec.append(z)
+    return pd.DataFrame(rec)
+
+
+def conditional_long_all(d,sufs):
+    """Emit all candidate pairs; invalid/non-1-head races are inference-only groups."""
+    rec=[]
+    for _,r in d.iterrows():
+        a2,a3=v298.actual23(r.actual_combo)
+        valid=int(r.head_hit)==1 and a2 in BOATS and a3 in BOATS
+        for s in BOATS:
+            sr=cand_record(r,s,sufs,'s_')
+            for t in BOATS:
+                if t==s:continue
+                tr=cand_record(r,t,sufs,'t_')
+                z={'date':r.date,'month':r.month,'race_code':str(r.race_code).zfill(12),
+                   'group_id':f'{str(r.race_code).zfill(12)}|{s}',
+                   'second_boat':s,'third_boat':t,
+                   'train_group':int(valid and s==a2),
+                   'ycond':int(valid and s==a2 and t==a3),
+                   'actual2':a2,'actual3':a3,
+                   'pair_same_side1':float((s<=3 and t<=3) or (s>=4 and t>=4)),
+                   'pair_second_inner23':float(s in (2,3)),
+                   'pair_second_outer456':float(s in (4,5,6)),
+                   'pair_third_inner23':float(t in (2,3)),
+                   'pair_third_outer456':float(t in (4,5,6)),
+                   'pair_adjacent':float(abs(s-t)==1),'pair_distance':float(abs(s-t)),
+                   'pair_third_minus_second':float(t-s),'pair_second_is2':float(s==2),
+                   'pair_second_is3':float(s==3),'pair_second_is4':float(s==4),
+                   'pair_second_is5':float(s==5),'pair_second_is6':float(s==6)}
+                z.update(sr);z.update(tr)
+                for k in sufs:
+                    tv=z.get(f't_cand_{k}',np.nan);sv=z.get(f's_cand_{k}',np.nan)
+                    z[f'diff_{k}']=tv-sv if pd.notna(tv) and pd.notna(sv) else np.nan
+                    z[f'prod_{k}']=tv*sv if pd.notna(tv) and pd.notna(sv) else np.nan
+                rec.append(z)
+    return pd.DataFrame(rec)
+
+
 if __name__=='__main__':
     v298.add_threat_original=v298.add_threat
     base.cand_record_original=base.cand_record
@@ -117,11 +170,11 @@ if __name__=='__main__':
     v298.add_threat=base.add_threat
     v298.suffixes=curated_suffixes
     v298.cand_record=cand_record
-    v298.second_long=base.second_long
-    v298.conditional_long=base.conditional_long
+    v298.second_long=second_long_all
+    v298.conditional_long=conditional_long_all
     v298.v279.ListwiseSoftmax=base.FastSecond
     v298.v282.ListwiseN=base.FastConditional
     settlement.AUDIT.clear()
     v298.v297.settle_full_after_freeze=settlement.settle_union_after_freeze
-    print('v298 final audit runner: PLAYER_START pl_* fixed + within-race candidate relative signals + vectorized listwise + cached race context',flush=True)
+    print('v298 final audit runner: PLAYER_START pl_* fixed + within-race candidate relative signals + vectorized listwise + cached race context + all-race inference',flush=True)
     v298.main()
