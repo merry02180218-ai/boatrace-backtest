@@ -1,0 +1,96 @@
+name: verify-auto-live-v288-production
+on:
+  push:
+    paths:
+      - '.github/workflows/verify-auto-live-v288-production.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  verify-expired-finalization:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q requests beautifulsoup4
+      - name: Download proven 2026-09-11 daily production bundle
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34573237107 --repo "$GITHUB_REPOSITORY" \
+            --name daily-3head-v288-production --dir daily_artifact
+          test -f daily_artifact/live_outputs/v288/20260911/daily_manifest.json
+      - name: Verify frozen candidate and leakage guards
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('daily_artifact/live_outputs/v288/20260911/daily_manifest.json')
+          m=json.loads(p.read_text(encoding='utf-8'))
+          assert m['target_date_yyyymmdd']=='20260911'
+          assert m['history_cutoff']=='2026-08-31'
+          assert m['result_blind_target_day'] is True
+          assert m['result_or_payout_used'] is False
+          assert m['operational_pre_training_quantile'] is True
+          assert m['operational_pre_percentile_bridge'] is False
+          assert m['pre_candidate_race_codes']==['202609111403']
+          print('DAILY_BUNDLE_OK candidate=202609111403')
+          PY
+      - name: Resolve official deadline and finalize expired candidate fail-closed
+        run: |
+          DEADLINE=$(python fetch_boatrace_deadline.py --date 20260911 --jcd 14 --race 3 --meta deadline_202609111403.json)
+          export DEADLINE
+          python - <<'PY'
+          import json, os
+          from datetime import datetime, timedelta, timezone
+          from pathlib import Path
+          JST=timezone(timedelta(hours=9))
+          dl=datetime.fromisoformat(os.environ['DEADLINE'])
+          if dl.tzinfo is None: dl=dl.replace(tzinfo=JST)
+          dl=dl.astimezone(JST)
+          assert dl.strftime('%Y-%m-%dT%H:%M')=='2026-09-11T09:36', dl.isoformat()
+          now=datetime.now(JST)
+          assert now>=dl, (now.isoformat(),dl.isoformat())
+          obj={
+            'race_code':'202609111403',
+            'decision':'ERROR_NO_BET',
+            'reason':'deadline passed before a valid production LIVE decision was frozen',
+            'deadline_jst':dl.isoformat(),
+            'decision_time_jst':now.isoformat(),
+            'result_or_payout_used':False,
+            'finalized':True,
+            'verification':'one-shot production watcher parity',
+          }
+          Path('live_v288_result.json').write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(obj,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: live-v288-final-202609111403
+          retention-days: 14
+          path: |
+            live_v288_result.json
+            deadline_202609111403.json
+          if-no-files-found: error
+
+  verify-duplicate-guard:
+    needs: verify-expired-finalization
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confirm production duplicate guard can see final artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in 1 2 3 4 5; do
+            COUNT=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=live-v288-final-202609111403&per_page=10" --jq '.total_count')
+            if [ "${COUNT:-0}" -gt 0 ]; then
+              echo "DUPLICATE_GUARD_OK final_artifacts=$COUNT"
+              exit 0
+            fi
+            sleep 2
+          done
+          echo 'final artifact not visible to duplicate guard' >&2
+          exit 1
