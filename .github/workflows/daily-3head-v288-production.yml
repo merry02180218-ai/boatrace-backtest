@@ -1,7 +1,7 @@
 name: daily-3head-v288-production
 on:
   schedule:
-    # 06:00 JST.  Early-morning build leaves margin before morning race deadlines.
+    # 06:00 JST. Early-morning build leaves margin before morning race deadlines.
     - cron: '0 21 * * *'
   workflow_dispatch:
     inputs:
@@ -64,3 +64,4 @@ jobs:
             live_outputs/v288/${{ env.TARGET8 }}/pre_scan.md
             live_outputs/v288/${{ env.TARGET8 }}/live_cache.joblib
             live_outputs/v288/${{ env.TARGET8 }}/daily_manifest.json
+# validation-marker: 2026-09-11T16:12JST
