@@ -1,8 +1,9 @@
 name: daily-3head-v288-production
 on:
   schedule:
-    # 06:00 JST. Early-morning build leaves margin before morning race deadlines.
+    # 06:00 JST primary + 06:30 JST fallback refresh/retry.
     - cron: '0 21 * * *'
+    - cron: '30 21 * * *'
   workflow_dispatch:
     inputs:
       date:
@@ -23,11 +24,11 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 joblib
-      - name: Resolve target date
+      - name: Resolve target date and frozen-model scope
         env:
           INPUT_DATE: ${{ inputs.date }}
         run: |
-          if [ -n "$INPUT_DATE" ]; then
+          if [ -n "${INPUT_DATE:-}" ]; then
             TARGET_DATE="$INPUT_DATE"
           else
             TARGET_DATE=$(TZ=Asia/Tokyo date +%F)
@@ -35,8 +36,15 @@ jobs:
           TARGET8=$(date -d "$TARGET_DATE" +%Y%m%d)
           echo "TARGET_DATE=$TARGET_DATE" >> "$GITHUB_ENV"
           echo "TARGET8=$TARGET8" >> "$GITHUB_ENV"
+          if [[ "$TARGET8" =~ ^202609[0-9]{2}$ ]]; then
+            echo 'ACTIVE_SCOPE=1' >> "$GITHUB_ENV"
+          else
+            echo 'ACTIVE_SCOPE=0' >> "$GITHUB_ENV"
+            echo "Outside frozen v288 September scope; no build: $TARGET_DATE"
+          fi
           echo "Target: $TARGET_DATE"
       - name: Download frozen canonical September artifacts
+        if: env.ACTIVE_SCOPE == '1'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -47,12 +55,16 @@ jobs:
           mkdir -p data/audit
           cp -r golden_v234/data/audit/v234_waku10 data/audit/
       - name: Fetch current result-blind PRE inputs
+        if: env.ACTIVE_SCOPE == '1'
         run: python fetch_3head_v288_pre_inputs_live.py --date "$TARGET_DATE"
       - name: Build leakage-free PRE and frozen LIVE cache
+        if: env.ACTIVE_SCOPE == '1'
         run: python build_3head_v288_daily_live.py --date "$TARGET_DATE"
       - name: Show production manifest
+        if: env.ACTIVE_SCOPE == '1'
         run: cat "live_outputs/v288/$TARGET8/daily_manifest.json"
       - uses: actions/upload-artifact@v4
+        if: env.ACTIVE_SCOPE == '1'
         with:
           name: daily-3head-v288-production
           retention-days: 14
@@ -64,4 +76,3 @@ jobs:
             live_outputs/v288/${{ env.TARGET8 }}/pre_scan.md
             live_outputs/v288/${{ env.TARGET8 }}/live_cache.joblib
             live_outputs/v288/${{ env.TARGET8 }}/daily_manifest.json
-# validation-marker: 2026-09-11T16:12JST
