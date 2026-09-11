@@ -1,0 +1,66 @@
+name: daily-3head-v288-production
+on:
+  schedule:
+    # 06:00 JST.  Early-morning build leaves margin before morning race deadlines.
+    - cron: '0 21 * * *'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: Optional target date YYYY-MM-DD; blank = today in Asia/Tokyo
+        required: false
+        default: ''
+  push:
+    paths:
+      - 'fetch_3head_v288_pre_inputs_live.py'
+      - 'build_3head_v288_daily_live.py'
+      - '.github/workflows/daily-3head-v288-production.yml'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 joblib
+      - name: Resolve target date
+        env:
+          INPUT_DATE: ${{ inputs.date }}
+        run: |
+          if [ -n "$INPUT_DATE" ]; then
+            TARGET_DATE="$INPUT_DATE"
+          else
+            TARGET_DATE=$(TZ=Asia/Tokyo date +%F)
+          fi
+          TARGET8=$(date -d "$TARGET_DATE" +%Y%m%d)
+          echo "TARGET_DATE=$TARGET_DATE" >> "$GITHUB_ENV"
+          echo "TARGET8=$TARGET8" >> "$GITHUB_ENV"
+          echo "Target: $TARGET_DATE"
+      - name: Download frozen canonical September artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
+          cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
+          gh run download 34326743303 --repo merry02180218-ai/boatrace-backtest --name v234-3head-waku10-restored-replay --dir golden_v234
+          cp golden_v234/analysis_v234_waku10_reconstruction_coverage.csv .
+          mkdir -p data/audit
+          cp -r golden_v234/data/audit/v234_waku10 data/audit/
+      - name: Fetch current result-blind PRE inputs
+        run: python fetch_3head_v288_pre_inputs_live.py --date "$TARGET_DATE"
+      - name: Build leakage-free PRE and frozen LIVE cache
+        run: python build_3head_v288_daily_live.py --date "$TARGET_DATE"
+      - name: Show production manifest
+        run: cat "live_outputs/v288/$TARGET8/daily_manifest.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: daily-3head-v288-production
+          retention-days: 14
+          path: |
+            current_input/v288/${{ env.TARGET8 }}/race_cards.csv
+            current_input/v288/${{ env.TARGET8 }}/waku10.csv
+            current_input/v288/${{ env.TARGET8 }}/input_manifest.json
+            live_outputs/v288/${{ env.TARGET8 }}/pre_scan.csv
+            live_outputs/v288/${{ env.TARGET8 }}/pre_scan.md
+            live_outputs/v288/${{ env.TARGET8 }}/live_cache.joblib
+            live_outputs/v288/${{ env.TARGET8 }}/daily_manifest.json
