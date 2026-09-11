@@ -6,6 +6,11 @@ Boatcast exhibition/start/original -> official odds3t 120/120 -> v243 final
 -> v288 S/A/B -> v242 Top5..10 -> exactly 10,000 yen Dutch.
 No result/payout endpoint is requested.
 
+Verified v288 route semantics:
+- Route S requires v243 final + S conditions.
+- Route A/B are independent rescue routes over v249 S+A PRE candidates that
+  v242 can actually purchase, with precedence S > A > B.
+
 Safety invariant: every betting input must be frozen before the supplied race
 purchase deadline. If the deadline is already past, or is crossed while fetching
 exhibition/original data or odds, the runner exits non-zero and emits no BET.
@@ -80,7 +85,6 @@ def parse_stt(body,code):
         c=row.split('\t')
         if len(c)<5:continue
         b=int(c[1]); val=c[4].strip(); flag=c[5].strip() if len(c)>5 else ''
-        # Existing feature code accepts signed numeric ST. F.05 means -0.05.
         if flag=='F': val=str(-abs(float(val)))
         elif flag=='L': val=str(abs(float(val)))
         q[f'艇{b}_スタート展示']=val
@@ -163,6 +167,15 @@ def dutch(ts,vals):
     return [{'combo':q,'odds':float(o),'stake':int(s)} for q,o,s in zip(ts,vals,stakes) if s>0]
 
 
+def select_v288_route(v243_pass,buyable,s_cond,a_cond,b_cond):
+    """Exact semantics verified by verify_v288_3head_100r_replay_v2.py."""
+    s=bool(v243_pass and s_cond)
+    a=bool(buyable and (not s) and a_cond)
+    b=bool(buyable and (not s) and (not a) and b_cond)
+    route='S' if s else ('A' if a else ('B' if b else None))
+    return route,s,a,b
+
+
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--jcd',type=int,required=True);ap.add_argument('--race',type=int,required=True)
     ap.add_argument('--date',default='20260911');ap.add_argument('--cache',default=CACHE);ap.add_argument('--deadline-jst',required=True)
@@ -190,11 +203,11 @@ def main():
         buyable=action=='bet';base=bool(buyable and p3>=.45 and raw_n is not None and 7<=raw_n<=18 and comp is not None and 3.05<=comp<=4.0)
         keep=minus>=KEEP;rescue=attack<=RESCUE
         v243=bool(buyable and ((base and keep) or ((not base) and rescue)))
-        S=bool(r['c_b3_minus_b4_waku_st']<=S_WAKU_MAX and r['c_b3_minus_b4_st']>=S_ST_MIN and r['c_b3_meetst']<=S_MEET_MAX)
-        A=bool(r['c_b3_minus_b4_st']>=A_ST_MIN and r['c_wall12_weak']<=A_WALL_MAX)
-        B=bool(r['c_b3_minus_b2_motor']>=B_MOTOR_MIN and r['c_b3_inside_nst']<=B_NST_MAX)
-        route='S' if S else ('A' if A else ('B' if B else None))
-        final=bool(v243 and route)
+        s_cond=bool(r['c_b3_minus_b4_waku_st']<=S_WAKU_MAX and r['c_b3_minus_b4_st']>=S_ST_MIN and r['c_b3_meetst']<=S_MEET_MAX)
+        a_cond=bool(r['c_b3_minus_b4_st']>=A_ST_MIN and r['c_wall12_weak']<=A_WALL_MAX)
+        b_cond=bool(r['c_b3_minus_b2_motor']>=B_MOTOR_MIN and r['c_b3_inside_nst']<=B_NST_MAX)
+        route,S,A,B=select_v288_route(v243,buyable,s_cond,a_cond,b_cond)
+        final=route is not None
         tickets=[]
         if final:
             vals=[float(odds[x]) for x in ts[:int(top_n)]];tickets=dutch(ts[:int(top_n)],vals)
@@ -203,7 +216,8 @@ def main():
           'deadline_state':'LIVE_FROZEN_BEFORE_DEADLINE','pre':pc,'p3':p3,'v242_action':action,
           'raw_top_n':raw_n,'raw_comp_odds':ch.get('raw_comp'),'top_n':top_n,'comp_odds':comp,
           'v243':{'base':base,'minus_b5_st':minus,'keep':keep,'attack3_stretch':attack,'rescue':rescue,'pass':v243},
-          'v288':{'route':route,'S':S,'A':A,'B':B,'b3_minus_b4_waku_st':float(r['c_b3_minus_b4_waku_st']),
+          'v288':{'route':route,'S':S,'A':A,'B':B,'S_condition':s_cond,'A_condition':a_cond,'B_condition':b_cond,
+           'b3_minus_b4_waku_st':float(r['c_b3_minus_b4_waku_st']),
            'b3_minus_b4_st':float(r['c_b3_minus_b4_st']),'b3_meetst':float(r['c_b3_meetst']),'wall12_weak':float(r['c_wall12_weak']),
            'b3_minus_b2_motor':float(r['c_b3_minus_b2_motor']),'b3_inside_nst':float(r['c_b3_inside_nst'])},
           'decision':'BET' if final else 'NO_BET','tickets':tickets,'total_stake':sum(x['stake'] for x in tickets),
