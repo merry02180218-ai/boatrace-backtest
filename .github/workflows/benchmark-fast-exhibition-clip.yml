@@ -80,7 +80,7 @@ jobs:
           $meta = Get-Content auto_seed_meta_v3.json -Raw | ConvertFrom-Json
           $slit = [string]$meta.selected_sec
           $sw = [Diagnostics.Stopwatch]::StartNew()
-          & $env:LOCAL_PYTHON sweep_boat1_seed_offset_v1.py $video.FullName --slit-sec $slit --seed-json auto_seeds_v3.json --x-offsets '-120,-80,-40,0,40,80,120' --y-offsets '-12,0,12' --out boat1_seed_sweep_v1.json
+          & $env:LOCAL_PYTHON sweep_boat1_seed_offset_v1.py $video.FullName --slit-sec $slit --seed-json auto_seeds_v3.json '--x-offsets=-120,-80,-40,0,40,80,120' '--y-offsets=-12,0,12' --out boat1_seed_sweep_v1.json
           if ($LASTEXITCODE -ne 0) { throw 'boat1 seed sweep failed' }
           $sw.Stop()
           "BOAT1_SEED_SWEEP_SECONDS=$($sw.Elapsed.TotalSeconds)"
