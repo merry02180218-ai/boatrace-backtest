@@ -1,0 +1,75 @@
+name: blind validate Kiryu 20260910 batch
+
+on:
+  push:
+    paths:
+      - '.github/workflows/blind-validate-kiryu-20260910-batch.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  blind-video:
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        race: [3, 6, 9]
+    runs-on: [self-hosted, japan]
+    timeout-minutes: 25
+    env:
+      RACE_DATE: '20260910'
+      STADIUM: '01kiryu'
+      RACE: ${{ matrix.race }}
+      LOCAL_PYTHON: C:\Users\merry\AppData\Local\Programs\Python\Python311\python.exe
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install deps
+        shell: powershell
+        run: |
+          & $env:LOCAL_PYTHON -m pip install -q playwright opencv-python numpy
+          & $env:LOCAL_PYTHON -m playwright install chromium
+
+      - name: Download exhibition only
+        shell: powershell
+        run: '& $env:LOCAL_PYTHON download_boatcast_exhibition.py'
+
+      - name: Detect start exhibition grid photo
+        shell: powershell
+        run: |
+          $video = Get-ChildItem -Filter "boatcast_${env:RACE_DATE}_${env:STADIUM}_*_exhibition.mp4" | Select-Object -First 1
+          if (-not $video) { throw 'exhibition MP4 not found' }
+          $out = "blind_calibration_r${env:RACE}"
+          & $env:LOCAL_PYTHON extract_start_exhibition_calibration.py $video.FullName --out-dir $out
+
+      - name: Write blind lock manifest
+        shell: powershell
+        run: |
+          $video = Get-ChildItem -Filter "boatcast_${env:RACE_DATE}_${env:STADIUM}_*_exhibition.mp4" | Select-Object -First 1
+          if (-not $video) { throw 'exhibition MP4 not found' }
+          $hash = (Get-FileHash $video.FullName -Algorithm SHA256).Hash
+          $obj = [ordered]@{
+            race_date=$env:RACE_DATE
+            stadium=$env:STADIUM
+            race=[int]$env:RACE
+            result_blind=$true
+            race_results_read=$false
+            video_sha256=$hash
+            locked_at_utc=(Get-Date).ToUniversalTime().ToString('o')
+            next_step='Lock slit/seeds/SES before any result lookup'
+          }
+          $obj | ConvertTo-Json | Set-Content -Encoding UTF8 "blind_lock_r${env:RACE}.json"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: blind-kiryu-20260910-r${{ matrix.race }}
+          path: |
+            boatcast_*_exhibition.mp4
+            boatcast_*_exhibition.json
+            blind_calibration_r${{ matrix.race }}/**
+            blind_lock_r${{ matrix.race }}.json
+          if-no-files-found: warn
