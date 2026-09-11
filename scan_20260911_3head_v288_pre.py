@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# 2026-09-11 PRE live bridge: direct current Boatcast inputs, result-blind.
+# 2026-09-11 PRE live scan: result-blind, leakage-free operational PRE thresholds.
 from __future__ import annotations
 from collections import defaultdict
 from datetime import date
@@ -22,6 +22,7 @@ FIRST=pd.Timestamp('2026-09-01'); NEXT=pd.Timestamp('2026-10-01')
 OUT='scan_20260911_3head_v288_pre.csv'; SUM='scan_20260911_3head_v288_pre.md'
 CUR_CARDS=Path('current_input/race_cards.csv'); CUR_WAKU=Path('current_input/waku10.csv')
 COV=Path('analysis_v234_waku10_reconstruction_coverage.csv')
+S_Q=.70; A_Q=.20
 
 def local_csv(p):
     if not p.exists(): return []
@@ -77,6 +78,17 @@ def build_augmented():
     d=v221.build(raw,dc); d=v222.build_current(d,dc); d=v223.build_unused(d,dc); d=v224.add_decomp(d,dc)
     fs=[x for x in v234.full_features(d,basefs) if x in d.columns]
     return d,vc,basefs,fs
+
+def operational_pre_grade(hist,cur,cs):
+    """Grade current rows using score cutpoints learned only from the frozen prior-history universe."""
+    hist=hist.copy(); cur=cur.copy()
+    train_scores=v249.fit_score(hist,hist,cs)
+    s_thr=float(train_scores.quantile(S_Q)); a_thr=float(train_scores.quantile(A_Q))
+    cur['_score']=v249.fit_score(hist,cur,cs)
+    cur['_train_pct']=cur['_score'].map(lambda x: float((train_scores<=x).mean()))
+    cur['grade']=np.where(cur._score>=s_thr,'S',np.where(cur._score>=a_thr,'A','B'))
+    return cur,s_thr,a_thr
+
 def main():
     d,vc,basefs,fs=build_augmented()
     base_te,_=v223.fit_head(d,list(basefs),vc,FIRST,NEXT)
@@ -87,14 +99,14 @@ def main():
     cur=pd.DataFrame(index=sel.index)
     for c in cs:
         rawc=c[3:] if c.startswith('f__') else c; cur[c]=pd.to_numeric(sel.get(rawc,np.nan),errors='coerce')
-    cur['_score']=v249.fit_score(hist,cur,cs); cur['_pct']=cur['_score'].rank(pct=True,method='first',ascending=True); cur['grade']=np.where(cur._pct>=.70,'S',np.where(cur._pct>=.20,'A','B'))
+    cur,s_thr,a_thr=operational_pre_grade(hist,cur,cs)
     rec=[]
     for idx,r in sel.iterrows():
         c=cur.loc[idx]
         if c.grade not in ('S','A'): continue
-        code=str(r.race_code).zfill(12); rec.append(dict(race_code=code,jcd=int(code[8:10]),rno=int(code[10:12]),pre_grade=c.grade,pre_score=float(c._score),pre_pct=float(c._pct),p3=float(r._p),b3_minus_b2_motor=float(r.get('c_b3_minus_b2_motor',np.nan)),b3_inside_nst=float(r.get('c_b3_inside_nst',np.nan))))
+        code=str(r.race_code).zfill(12); rec.append(dict(race_code=code,jcd=int(code[8:10]),rno=int(code[10:12]),pre_grade=c.grade,pre_score=float(c._score),pre_pct=float(c._train_pct),p3=float(r._p),b3_minus_b2_motor=float(r.get('c_b3_minus_b2_motor',np.nan)),b3_inside_nst=float(r.get('c_b3_inside_nst',np.nan))))
     q=pd.DataFrame(rec).sort_values(['pre_grade','pre_pct'],ascending=[False,False]) if rec else pd.DataFrame(columns=['race_code']); q.to_csv(OUT,index=False)
-    L=['# 2026-09-11 3-head v288 PRE scan','', '- Result-blind: target-day result/payout endpoints are not used.','- PRE-only: target-day exhibition/ST/original-exhibition feeds are intentionally not supplied.','- Current race cards + Waku10 are scraped directly from Boatcast because public BoatraceCSV main was only published through 2026-09-10 at scan time.','- Operational bridge: historical v249 uses month-internal percentile; today ranks within the target-day v243 candidate universe.','',f'- v243 current head universe: {len(sel)}',f'- PRE S+A candidates: {len(q)}','', '|race|grade|pct|p3|b3-b2 motor|b3 inside NST|','|---|---|---:|---:|---:|---:|']
+    L=['# 2026-09-11 3-head v288 PRE scan','', '- Result-blind: target-day result/payout endpoints are not used.','- PRE-only: target-day exhibition/ST/original-exhibition feeds are intentionally not supplied.','- Current race cards + Waku10 are scraped directly from Boatcast because public BoatraceCSV main was only published through 2026-09-10 at scan time.','- Leakage-free operational PRE: score cutpoints are frozen from the prior-history training universe only; current-day/future races do not define the S/A thresholds.',f'- S score threshold (training 70th percentile): {s_thr:.6f}',f'- A score threshold (training 20th percentile): {a_thr:.6f}','',f'- v243 current head universe: {len(sel)}',f'- PRE S+A candidates: {len(q)}','', '|race|grade|train-CDF pct|p3|b3-b2 motor|b3 inside NST|','|---|---|---:|---:|---:|---:|']
     for _,x in q.iterrows():L.append(f"|JCD{x.jcd:02.0f} {x.rno:.0f}R|{x.pre_grade}|{x.pre_pct:.3f}|{x.p3:.3f}|{x.b3_minus_b2_motor:.3f}|{x.b3_inside_nst:.3f}|")
     open(SUM,'w',encoding='utf-8').write('\n'.join(L)+'\n'); print('\n'.join(L))
 if __name__=='__main__': main()
