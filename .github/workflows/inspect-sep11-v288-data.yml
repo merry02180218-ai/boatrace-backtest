@@ -1,0 +1,41 @@
+name: inspect-sep11-v288-data
+on:
+  push:
+    paths:
+      - '.github/workflows/inspect-sep11-v288-data.yml'
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas
+      - name: Inspect v108 source coverage
+        run: |
+          python - <<'PY'
+          import pandas as pd, os
+          p='analysis_v108_1head_feasibility.csv'
+          d=pd.read_csv(p,dtype={'race_code':str})
+          print('shape',d.shape)
+          print('columns',list(d.columns))
+          dc=next((c for c in ['date','race_date','ymd'] if c in d.columns),None)
+          print('date_col',dc)
+          if dc:
+            x=pd.to_datetime(d[dc].astype(str),errors='coerce')
+            print('date_min',x.min(),'date_max',x.max())
+            m=(x>=pd.Timestamp('2026-09-01'))&(x<=pd.Timestamp('2026-09-11'))
+            print('sep1_11_rows',int(m.sum()),'unique_races',d.loc[m,'race_code'].astype(str).nunique() if 'race_code' in d else None)
+          for pfx in ['c_b3_','odds_','valid_result','actual_combo','payout100']:
+            print(pfx,[c for c in d.columns if c.startswith(pfx)][:20])
+          PY
+      - name: Inspect public data tree for Sep dates
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          for root in ['data/programs/race_cards/2026/09','data/programs/waku10/2026/09','data/previews/tkz/2026/09','data/previews/stt/2026/09','data/previews/original_exhibition/2026/09','data/results/2026/09','data/odds/2026/09']:
+            p=Path(root)
+            fs=sorted(str(x) for x in p.rglob('*.csv')) if p.exists() else []
+            print(root,'exists',p.exists(),'files',len(fs),'first',fs[:2],'last',fs[-2:])
+          PY
