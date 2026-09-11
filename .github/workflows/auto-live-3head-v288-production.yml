@@ -134,7 +134,9 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: '3.11'}
-      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 joblib
+      # WAIT/EXPIRED checks need only the deadline fetcher dependencies. Heavy model
+      # libraries are installed only when a race is actually inside the TRY window.
+      - run: pip install -q requests beautifulsoup4
 
       - name: Skip race already finalized by a prior auto run
         id: prior
@@ -149,18 +151,6 @@ jobs:
           else
             echo 'done=0' >> "$GITHUB_OUTPUT"
           fi
-
-      - name: Download exact frozen daily bundle
-        if: steps.prior.outputs.done == '0'
-        env:
-          GH_TOKEN: ${{ github.token }}
-          DAILY_RUN: ${{ needs.prepare.outputs.daily_run }}
-          TARGET8: ${{ needs.prepare.outputs.target8 }}
-        run: |
-          gh run download "$DAILY_RUN" --repo "$GITHUB_REPOSITORY" \
-            --name daily-3head-v288-production --dir daily_artifact
-          test -f "daily_artifact/live_outputs/v288/$TARGET8/live_cache.joblib"
-          test -f "daily_artifact/live_outputs/v288/$TARGET8/daily_manifest.json"
 
       - name: Resolve official deadline and decide whether to attempt LIVE now
         if: steps.prior.outputs.done == '0'
@@ -212,6 +202,22 @@ jobs:
           print(json.dumps(obj,ensure_ascii=False,indent=2))
           PY
           echo 'FINAL_READY=1' >> "$GITHUB_ENV"
+
+      - name: Download exact frozen daily bundle only inside TRY window
+        if: steps.prior.outputs.done == '0' && env.LIVE_MODE == 'TRY'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DAILY_RUN: ${{ needs.prepare.outputs.daily_run }}
+          TARGET8: ${{ needs.prepare.outputs.target8 }}
+        run: |
+          gh run download "$DAILY_RUN" --repo "$GITHUB_REPOSITORY" \
+            --name daily-3head-v288-production --dir daily_artifact
+          test -f "daily_artifact/live_outputs/v288/$TARGET8/live_cache.joblib"
+          test -f "daily_artifact/live_outputs/v288/$TARGET8/daily_manifest.json"
+
+      - name: Install frozen LIVE scorer dependencies only inside TRY window
+        if: steps.prior.outputs.done == '0' && env.LIVE_MODE == 'TRY'
+        run: pip install -q numpy pandas scikit-learn catboost joblib
 
       - name: Attempt cached LIVE decision in the last 30 minutes
         if: steps.prior.outputs.done == '0' && env.LIVE_MODE == 'TRY'
