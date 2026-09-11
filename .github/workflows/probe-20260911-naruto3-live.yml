@@ -1,0 +1,28 @@
+name: probe-20260911-naruto3-live
+on:
+  push:
+    paths:
+      - '.github/workflows/probe-20260911-naruto3-live.yml'
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q requests
+      - name: Fetch Boatcast live preview
+        run: |
+          python - <<'PY'
+          import requests
+          urls={
+          'tkz':'https://race.boatcast.jp/hp_txt/14/bc_j_tkz_20260911_14_03.txt',
+          'stt':'https://race.boatcast.jp/hp_txt/14/bc_j_stt_20260911_14_03.txt',
+          'ori':'https://race.boatcast.jp/txt/14/bc_oriten_20260911_14_03.txt'}
+          for k,u in urls.items():
+              r=requests.get(u,headers={'User-Agent':'Mozilla/5.0'},timeout=15)
+              print('\n###',k,'status',r.status_code,'len',len(r.text))
+              print(r.text[:5000])
+          PY
