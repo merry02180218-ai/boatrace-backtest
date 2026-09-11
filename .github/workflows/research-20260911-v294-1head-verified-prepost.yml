@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - analyze_v294_1head_verified_prepost_research.py
+      - run_v294_1head_verified_prepost_research.py
       - .github/workflows/research-20260911-v294-1head-verified-prepost.yml
 
 permissions:
@@ -22,7 +23,7 @@ jobs:
           python-version: '3.11'
       - run: pip install -q numpy pandas scikit-learn
       - name: Run verified pre-Jul v294 research
-        run: python analyze_v294_1head_verified_prepost_research.py
+        run: python run_v294_1head_verified_prepost_research.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
