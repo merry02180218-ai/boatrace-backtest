@@ -23,7 +23,19 @@ jobs:
           python-version: '3.11'
       - run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
       - name: Run audited v298 aligned with v288/v283
-        run: python run_v298_1head_v288v283_audited_v2.py
+        shell: bash
+        run: |
+          set -o pipefail
+          python run_v298_1head_v288v283_audited_v2.py 2>&1 | tee v298_ci_error.txt
+      - name: Commit v298 failure diagnostic
+        if: failure()
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          test -f v298_ci_error.txt || exit 0
+          git add v298_ci_error.txt
+          git diff --cached --quiet || git commit -m 'Add v298 CI failure diagnostic'
+          git push
       - uses: actions/upload-artifact@v4
         with:
           name: v298-1head-audited
