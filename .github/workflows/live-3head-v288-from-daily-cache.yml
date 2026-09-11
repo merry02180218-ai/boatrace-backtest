@@ -15,13 +15,14 @@ on:
         required: true
         default: '3'
       deadline_jst:
-        description: ISO deadline JST, e.g. 2026-09-11T09:36:00+09:00
-        required: true
-        default: '2026-09-11T09:36:00+09:00'
+        description: Optional ISO deadline JST override; blank = BOAT RACE official racelist
+        required: false
+        default: ''
   push:
     paths:
       - '.github/workflows/live-3head-v288-from-daily-cache.yml'
       - 'run_20260911_3head_v288_live.py'
+      - 'fetch_boatrace_deadline.py'
 jobs:
   validate:
     if: github.event_name == 'push'
@@ -30,8 +31,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: '3.11'}
-      - name: Syntax check live runner
-        run: python -m py_compile run_20260911_3head_v288_live.py
+      - name: Syntax check live runner and deadline fetcher
+        run: python -m py_compile run_20260911_3head_v288_live.py fetch_boatrace_deadline.py
   live:
     if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
@@ -50,17 +51,34 @@ jobs:
           gh run download "$RUN" --repo merry02180218-ai/boatrace-backtest --name scan-20260911-3head-v288-pre --dir pre_artifact
           test -f pre_artifact/cache_20260911_3head_v288_live.joblib
           cp pre_artifact/cache_20260911_3head_v288_live.joblib .
+      - name: Resolve official deadline
+        env:
+          DATE_IN: ${{ inputs.date }}
+          JCD_IN: ${{ inputs.jcd }}
+          RACE_IN: ${{ inputs.race }}
+          DEADLINE_OVERRIDE: ${{ inputs.deadline_jst }}
+        run: |
+          if [ -n "$DEADLINE_OVERRIDE" ]; then
+            DEADLINE="$DEADLINE_OVERRIDE"
+            printf '%s\n' '{"source":"workflow_dispatch override","result_endpoint_requested":false,"payout_endpoint_requested":false}' > live_v288_deadline_meta.json
+          else
+            DEADLINE=$(python fetch_boatrace_deadline.py --date "$DATE_IN" --jcd "$JCD_IN" --race "$RACE_IN" --meta live_v288_deadline_meta.json)
+          fi
+          test -n "$DEADLINE"
+          echo "DEADLINE_JST=$DEADLINE" >> "$GITHUB_ENV"
+          echo "Resolved deadline: $DEADLINE"
       - name: One-shot live decision
         env:
           DATE_IN: ${{ inputs.date }}
           JCD_IN: ${{ inputs.jcd }}
           RACE_IN: ${{ inputs.race }}
-          DEADLINE_IN: ${{ inputs.deadline_jst }}
         run: |
-          python run_20260911_3head_v288_live.py --date "$DATE_IN" --jcd "$JCD_IN" --race "$RACE_IN" --deadline-jst "$DEADLINE_IN" | tee live_v288_result.json
+          python run_20260911_3head_v288_live.py --date "$DATE_IN" --jcd "$JCD_IN" --race "$RACE_IN" --deadline-jst "$DEADLINE_JST" | tee live_v288_result.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: live-v288-result
-          path: live_v288_result.json
+          path: |
+            live_v288_result.json
+            live_v288_deadline_meta.json
           if-no-files-found: ignore
