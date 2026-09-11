@@ -58,3 +58,5 @@ jobs:
             blind_calibration/**
             blind_lock.json
           if-no-files-found: warn
+
+# trigger 2026-09-11 blind validation run
