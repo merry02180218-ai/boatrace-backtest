@@ -1,0 +1,168 @@
+v298 final audit runner: PLAYER_START pl_* fixed + within-race candidate relative signals + vectorized listwise + cached race context
+race-card fetch 40 / 242
+race-card fetch 80 / 242
+race-card fetch 120 / 242
+race-card fetch 160 / 242
+race-card fetch 200 / 242
+race-card fetch 240 / 242
+fetch 30 / 273
+fetch 60 / 273
+fetch 90 / 273
+fetch 120 / 273
+fetch 150 / 273
+fetch 180 / 273
+fetch 210 / 273
+fetch 240 / 273
+fetch 270 / 273
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:145: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  if c in d:d[f'rel_{fam}_{k}_1v{b}']=av-pd.to_numeric(d[c],errors='coerce');opp.append(c)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:145: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  if c in d:d[f'rel_{fam}_{k}_1v{b}']=av-pd.to_numeric(d[c],errors='coerce');opp.append(c)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:145: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  if c in d:d[f'rel_{fam}_{k}_1v{b}']=av-pd.to_numeric(d[c],errors='coerce');opp.append(c)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:145: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  if c in d:d[f'rel_{fam}_{k}_1v{b}']=av-pd.to_numeric(d[c],errors='coerce');opp.append(c)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:145: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  if c in d:d[f'rel_{fam}_{k}_1v{b}']=av-pd.to_numeric(d[c],errors='coerce');opp.append(c)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:145: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  if c in d:d[f'rel_{fam}_{k}_1v{b}']=av-pd.to_numeric(d[c],errors='coerce');opp.append(c)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:145: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  if c in d:d[f'rel_{fam}_{k}_1v{b}']=av-pd.to_numeric(d[c],errors='coerce');opp.append(c)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:145: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  if c in d:d[f'rel_{fam}_{k}_1v{b}']=av-pd.to_numeric(d[c],errors='coerce');opp.append(c)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:145: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  if c in d:d[f'rel_{fam}_{k}_1v{b}']=av-pd.to_numeric(d[c],errors='coerce');opp.append(c)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:145: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  if c in d:d[f'rel_{fam}_{k}_1v{b}']=av-pd.to_numeric(d[c],errors='coerce');opp.append(c)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:145: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  if c in d:d[f'rel_{fam}_{k}_1v{b}']=av-pd.to_numeric(d[c],errors='coerce');opp.append(c)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:145: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  if c in d:d[f'rel_{fam}_{k}_1v{b}']=av-pd.to_numeric(d[c],errors='coerce');opp.append(c)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:145: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  if c in d:d[f'rel_{fam}_{k}_1v{b}']=av-pd.to_numeric(d[c],errors='coerce');opp.append(c)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:145: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  if c in d:d[f'rel_{fam}_{k}_1v{b}']=av-pd.to_numeric(d[c],errors='coerce');opp.append(c)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:145: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  if c in d:d[f'rel_{fam}_{k}_1v{b}']=av-pd.to_numeric(d[c],errors='coerce');opp.append(c)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:145: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  if c in d:d[f'rel_{fam}_{k}_1v{b}']=av-pd.to_numeric(d[c],errors='coerce');opp.append(c)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:147: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  om=d[opp].apply(pd.to_numeric,errors='coerce');d[f'rel_{fam}_{k}_1vbest']=av-om.max(axis=1);d[f'rel_{fam}_{k}_1vavg']=av-om.mean(axis=1)
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:150: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  d[f'attack23_{k}']=d[[f'b2_{k}',f'b3_{k}']].apply(pd.to_numeric,errors='coerce').max(axis=1)-pd.to_numeric(d[f'b1_{k}'],errors='coerce')
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:150: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  d[f'attack23_{k}']=d[[f'b2_{k}',f'b3_{k}']].apply(pd.to_numeric,errors='coerce').max(axis=1)-pd.to_numeric(d[f'b1_{k}'],errors='coerce')
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:150: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  d[f'attack23_{k}']=d[[f'b2_{k}',f'b3_{k}']].apply(pd.to_numeric,errors='coerce').max(axis=1)-pd.to_numeric(d[f'b1_{k}'],errors='coerce')
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:150: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  d[f'attack23_{k}']=d[[f'b2_{k}',f'b3_{k}']].apply(pd.to_numeric,errors='coerce').max(axis=1)-pd.to_numeric(d[f'b1_{k}'],errors='coerce')
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:150: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  d[f'attack23_{k}']=d[[f'b2_{k}',f'b3_{k}']].apply(pd.to_numeric,errors='coerce').max(axis=1)-pd.to_numeric(d[f'b1_{k}'],errors='coerce')
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:150: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  d[f'attack23_{k}']=d[[f'b2_{k}',f'b3_{k}']].apply(pd.to_numeric,errors='coerce').max(axis=1)-pd.to_numeric(d[f'b1_{k}'],errors='coerce')
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:150: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  d[f'attack23_{k}']=d[[f'b2_{k}',f'b3_{k}']].apply(pd.to_numeric,errors='coerce').max(axis=1)-pd.to_numeric(d[f'b1_{k}'],errors='coerce')
+/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v294_1head_verified_prepost_research.py:150: PerformanceWarning: DataFrame is highly fragmented.  This is usually the result of calling `frame.insert` many times, which has poor performance.  Consider joining all columns at once using pd.concat(axis=1) instead. To get a de-fragmented frame, use `newframe = frame.copy()`
+  d[f'attack23_{k}']=d[[f'b2_{k}',f'b3_{k}']].apply(pd.to_numeric,errors='coerce').max(axis=1)-pd.to_numeric(d[f'b1_{k}'],errors='coerce')
+features frozen; exact settlement now
+settlement fetch 40 / 241
+settlement fetch 80 / 241
+settlement fetch 120 / 241
+settlement fetch 160 / 241
+settlement fetch 200 / 241
+settlement fetch 240 / 241
+lowest scheduled->official-settlement dates:
+      date  scheduled  realtime_rows  payout_rows  official_settled_rows  settled_share  retries
+2026-01-10        144             97           96                     97       0.673611        3
+2026-01-11        180            126          126                    126       0.700000        3
+2026-05-04        210            186          185                    180       0.857143        3
+2026-05-29        168            144          148                    148       0.880952        3
+2026-01-20        156            138          137                    138       0.884615        3
+2026-01-22        156            138          128                    138       0.884615        3
+2026-06-03        108             96           96                     96       0.888889        3
+2026-01-13        167            150          149                    149       0.892216        3
+2026-04-04        113            108          108                    101       0.893805        3
+2026-04-02        120            108          106                    108       0.900000        3
+2025-12-12        129            120          120                    117       0.906977        3
+2026-06-02        144            132          132                    132       0.916667        3
+2025-11-18        121            122          121                    111       0.917355        3
+2026-02-08        156            144          142                    144       0.923077        3
+2026-01-08        165            156          155                    153       0.927273        3
+2026-02-23        173            168          166                    162       0.936416        3
+2025-12-26        166            158          157                    156       0.939759        3
+2026-03-08        132            125          123                    125       0.946970        3
+2026-03-07        120            114          112                    114       0.950000        3
+2026-04-09        120            114          113                    114       0.950000        3
+settlement audit scheduled=35921 official_rows=35483 share=0.987807 winner_given_source=0.999859 exact_given_winner=0.999549 realtime_combo=35279 payout_fallback=183 archive_fallback=0
+Traceback (most recent call last):
+  File "/home/runner/work/boatrace-backtest/boatrace-backtest/run_v298_1head_v288v283_audited_v2.py", line 127, in <module>
+    v298.main()
+  File "/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v298_1head_threat_listwise_trifecta5.py", line 272, in main
+    p,folds,sufs=run(d,fams,threat)
+                 ^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/boatrace-backtest/boatrace-backtest/analyze_v298_1head_threat_listwise_trifecta5.py", line 221, in run
+    if code not in p2 or code not in pc:raise RuntimeError(f'missing opponent prediction {tm} {code}')
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: missing opponent prediction 2026-02 202602010101
