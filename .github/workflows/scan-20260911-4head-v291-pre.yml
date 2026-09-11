@@ -1,0 +1,32 @@
+name: scan-20260911-4head-v291-pre
+on:
+  push:
+    paths:
+      - 'scan_20260911_4head_v291_pre.py'
+      - 'fetch_kyoteibiyori_v288_pre_inputs.py'
+      - '.github/workflows/scan-20260911-4head-v291-pre.yml'
+  workflow_dispatch:
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4
+      - name: Build current result-blind PRE inputs
+        run: python fetch_kyoteibiyori_v288_pre_inputs.py
+      - name: Run 4-head v291 PRE scan
+        run: python scan_20260911_4head_v291_pre.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: scan-20260911-4head-v291-pre
+          path: |
+            current_input/race_cards.csv
+            current_input/waku10.csv
+            scan_20260911_4head_v291_pre.csv
+            scan_20260911_4head_v291_pre.md
+            scan_20260911_4head_v291_pre_audit.json
+          if-no-files-found: ignore
