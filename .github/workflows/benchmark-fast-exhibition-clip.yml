@@ -6,7 +6,7 @@ on:
       - '.github/workflows/benchmark-fast-exhibition-clip.yml'
       - 'download_boatcast_exhibition_fastclip.py'
       - 'auto_seed_exhibition_motion_v1.py'
-      - 'track_exhibition_boats_v3.py'
+      - 'track_exhibition_boats_v4.py'
   workflow_dispatch:
     inputs:
       race_date:
@@ -71,15 +71,15 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw 'auto seeding failed closed' }
           $sw.Stop()
           "AUTO_SEED_SECONDS=$($sw.Elapsed.TotalSeconds)"
-      - name: Track and score SES
+      - name: Track and score SES v4
         shell: powershell
         run: |
           $video = Get-ChildItem -Filter 'boatcast_*_startclip.mp4' | Select-Object -First 1
           $meta = Get-Content auto_seed_meta.json -Raw | ConvertFrom-Json
           $slit = [string]$meta.selected_sec
           $sw = [Diagnostics.Stopwatch]::StartNew()
-          & $env:LOCAL_PYTHON track_exhibition_boats_v3.py $video.FullName --slit-sec $slit --seed-json auto_seeds.json --out exhibition_tracking_v3.json
-          if ($LASTEXITCODE -ne 0) { throw 'SES tracking failed closed' }
+          & $env:LOCAL_PYTHON track_exhibition_boats_v4.py $video.FullName --slit-sec $slit --seed-json auto_seeds.json --out exhibition_tracking_v4.json
+          if ($LASTEXITCODE -ne 0) { throw 'SES tracking v4 failed closed' }
           $sw.Stop()
           "SES_TRACK_SECONDS=$($sw.Elapsed.TotalSeconds)"
       - name: Show latency and outputs
@@ -88,15 +88,15 @@ jobs:
           $m = Get-ChildItem -Filter 'boatcast_*_startclip.json' | Select-Object -First 1
           Get-Content $m.FullName
           Get-Content auto_seed_meta.json
-          Get-Content exhibition_tracking_v3.json
+          Get-Content exhibition_tracking_v4.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: fastclip-ses-${{ env.RACE_DATE }}-${{ env.STADIUM }}-${{ env.RACE }}
+          name: fastclip-ses-v4-${{ env.RACE_DATE }}-${{ env.STADIUM }}-${{ env.RACE }}
           path: |
             boatcast_*_startclip.mp4
             boatcast_*_startclip.json
             auto_seed_meta.json
             auto_seeds.json
-            exhibition_tracking_v3.json
+            exhibition_tracking_v4.json
           if-no-files-found: warn
