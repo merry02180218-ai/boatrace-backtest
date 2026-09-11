@@ -1,0 +1,39 @@
+name: probe-sep1-11-v288-public-data
+on:
+  push:
+    paths:
+      - '.github/workflows/probe-sep1-11-v288-public-data.yml'
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Probe public archived datasets
+        run: |
+          python - <<'PY'
+          from datetime import date,timedelta
+          from backtest import rows
+          d=date(2026,9,1)
+          totals={k:0 for k in ['cards','waku','tkz','stt','orig','od3','res','pay']}
+          while d<=date(2026,9,11):
+              y=d.strftime('%Y/%m/%d')
+              sets={
+                'cards':rows(f'data/programs/race_cards/{y}.csv'),
+                'waku':rows(f'data/programs/waku10/{y}.csv'),
+                'tkz':rows(f'data/previews/tkz/{y}.csv'),
+                'stt':rows(f'data/previews/stt/{y}.csv'),
+                'orig':rows(f'data/previews/original_exhibition/{y}.csv'),
+                'od3':rows(f'data/previews/od3/{y}.csv'),
+                'res':rows(f'data/results/realtime/{y}.csv'),
+                'pay':rows(f'data/results/payouts/{y}.csv'),
+              }
+              for k,v in sets.items():totals[k]+=len(v)
+              print(str(d),*(f'{k}={len(v)}' for k,v in sets.items()))
+              if sets['od3']:
+                  print('OD3_COLS',str(d),list(sets['od3'][0].keys())[:15],list(sets['od3'][0].keys())[-5:])
+              d+=timedelta(days=1)
+          print('TOTALS',totals)
+          PY
