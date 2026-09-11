@@ -13,4 +13,13 @@ jobs:
       - run: pip install -q requests beautifulsoup4
       - name: Fetch current odds
         run: |
-          python fetch_live_trifecta_odds.py --date 20260911 --stadium 14 --race 3 || python fetch_live_trifecta_odds.py 20260911 14 3
+          python fetch_live_trifecta_odds.py --date 20260911 --jcd 14 --race 3 --out naruto3_odds.csv
+          echo '--- head ---'
+          head -20 naruto3_odds.csv
+          echo '--- rows ---'
+          python - <<'PY'
+          import pandas as pd
+          df=pd.read_csv('naruto3_odds.csv')
+          print('rows=',len(df))
+          print(df.head(10).to_string(index=False))
+          PY
