@@ -8,6 +8,7 @@ on:
       - 'auto_seed_exhibition_motion_v3.py'
       - 'track_exhibition_boats_v5.py'
       - 'sweep_exhibition_ses_anchor_v1.py'
+      - 'sweep_boat1_seed_offset_v1.py'
   workflow_dispatch:
     inputs:
       race_date:
@@ -62,17 +63,6 @@ jobs:
       - name: Fetch only start-exhibition clip
         shell: powershell
         run: '& $env:LOCAL_PYTHON download_boatcast_exhibition_fastclip.py'
-      - name: Sweep slit anchors result-blind
-        shell: powershell
-        run: |
-          $video = Get-ChildItem -Filter 'boatcast_*_startclip.mp4' | Select-Object -First 1
-          if (-not $video) { throw 'startclip not found' }
-          $sw = [Diagnostics.Stopwatch]::StartNew()
-          & $env:LOCAL_PYTHON sweep_exhibition_ses_anchor_v1.py $video.FullName --entry-order $env:ENTRY_ORDER --times '28.0,28.25,28.5,28.75,29.0,29.25,29.5' --out ses_anchor_sweep_v1.json
-          if ($LASTEXITCODE -ne 0) { throw 'anchor sweep failed' }
-          $sw.Stop()
-          "ANCHOR_SWEEP_SECONDS=$($sw.Elapsed.TotalSeconds)"
-          Get-Content ses_anchor_sweep_v1.json
       - name: Auto-detect six hybrid hull seeds v3
         shell: powershell
         run: |
@@ -83,7 +73,20 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw 'auto seeding v3 failed closed' }
           $sw.Stop()
           "AUTO_SEED_V3_SECONDS=$($sw.Elapsed.TotalSeconds)"
-      - name: Track and score SES v5
+      - name: Sweep boat1 seed offsets result-blind
+        shell: powershell
+        run: |
+          $video = Get-ChildItem -Filter 'boatcast_*_startclip.mp4' | Select-Object -First 1
+          $meta = Get-Content auto_seed_meta_v3.json -Raw | ConvertFrom-Json
+          $slit = [string]$meta.selected_sec
+          $sw = [Diagnostics.Stopwatch]::StartNew()
+          & $env:LOCAL_PYTHON sweep_boat1_seed_offset_v1.py $video.FullName --slit-sec $slit --seed-json auto_seeds_v3.json --x-offsets '-120,-80,-40,0,40,80,120' --y-offsets '-12,0,12' --out boat1_seed_sweep_v1.json
+          if ($LASTEXITCODE -ne 0) { throw 'boat1 seed sweep failed' }
+          $sw.Stop()
+          "BOAT1_SEED_SWEEP_SECONDS=$($sw.Elapsed.TotalSeconds)"
+          $s = Get-Content boat1_seed_sweep_v1.json -Raw | ConvertFrom-Json
+          $s.best_tracking_quality_candidate | ConvertTo-Json -Depth 8
+      - name: Track baseline and score SES v5
         shell: powershell
         run: |
           $video = Get-ChildItem -Filter 'boatcast_*_startclip.mp4' | Select-Object -First 1
@@ -104,15 +107,14 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: fastclip-anchor-sweep-${{ env.RACE_DATE }}-${{ env.STADIUM }}-${{ env.RACE }}
+          name: fastclip-boat1-seed-sweep-${{ env.RACE_DATE }}-${{ env.STADIUM }}-${{ env.RACE }}
           path: |
             boatcast_*_startclip.mp4
             boatcast_*_startclip.json
-            ses_anchor_sweep_v1.json
-            _sweep_seed_meta_*.json
-            _sweep_seeds_*.json
-            _sweep_track_*.json
             auto_seed_meta_v3.json
             auto_seeds_v3.json
+            boat1_seed_sweep_v1.json
+            _b1_seed_*.json
+            _b1_track_*.json
             exhibition_tracking_v5.json
           if-no-files-found: warn
