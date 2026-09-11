@@ -1,0 +1,54 @@
+name: run-20260912-3head-v288-pre
+on:
+  push:
+    paths:
+      - '.github/workflows/run-20260912-3head-v288-pre.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  TARGET_DATE: '2026-09-12'
+  TARGET8: '20260912'
+
+jobs:
+  preselect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 joblib
+      - name: Download frozen canonical September artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
+          cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
+          gh run download 34326743303 --repo merry02180218-ai/boatrace-backtest --name v234-3head-waku10-restored-replay --dir golden_v234
+          cp golden_v234/analysis_v234_waku10_reconstruction_coverage.csv .
+          mkdir -p data/audit
+          cp -r golden_v234/data/audit/v234_waku10 data/audit/
+      - name: Fetch result-blind PRE inputs with adopted Waku10 fallback
+        run: python fetch_3head_v288_pre_inputs_live.py --date "$TARGET_DATE"
+      - name: Build leakage-free PRE and frozen LIVE cache
+        run: python build_3head_v288_daily_live.py --date "$TARGET_DATE"
+      - name: Show input and production manifests
+        run: |
+          cat "current_input/v288/$TARGET8/input_manifest.json"
+          cat "live_outputs/v288/$TARGET8/daily_manifest.json"
+          cat "live_outputs/v288/$TARGET8/pre_scan.md"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: preselect-3head-v288-20260912
+          retention-days: 14
+          path: |
+            current_input/v288/20260912/race_cards.csv
+            current_input/v288/20260912/waku10.csv
+            current_input/v288/20260912/input_manifest.json
+            live_outputs/v288/20260912/pre_scan.csv
+            live_outputs/v288/20260912/pre_scan.md
+            live_outputs/v288/20260912/live_cache.joblib
+            live_outputs/v288/20260912/daily_manifest.json
