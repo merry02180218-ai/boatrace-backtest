@@ -7,6 +7,32 @@
 - 2026-09 の結果はLIVEモデルの選定・調整・救済に使わない。特に当日結果を予想前に見ない。
 - ROI: 1レース10,000円。ROI = total payout / total settled stake * 100。外れは payout=0 / profit=-10,000。合成オッズはROIではなくmarket feature。
 
+## PRODUCTION絶対遵守ルール — 4HEAD v291
+以下は実運用で変更・緩和・救済してはいけない固定条件。今後の実装・修正・LIVE判定では必ずこの節を先に確認すること。
+
+1. **2026-07/08 は NON-PRISTINE**
+   - 性能評価、閾値調整、モデル選定、救済条件作成に使わない。
+   - 実装のfeature parity確認に使う場合も outcome は見ない。
+2. **2026-09 は完全 outcome-blind**
+   - 9月の結果、払戻、的中可否をLIVEモデルの fitting / calibration / threshold selection / rescue に一切使わない。
+   - 当日結果を予想・BET/PASS/NO_BET確定前に取得しない。
+3. **production route で v96 を禁止**
+   - v96 input、fallback、救済分岐を一切使用しない。
+4. **締切後オッズ禁止**
+   - 使用可能なのは公式3連単120通りの締切前snapshotのみ。
+   - 締切超過、snapshot欠落、不完全120通り、取得時刻を保証できない場合は代替せず `ERROR_NO_BET`。
+   - 締切後オッズへのfallbackは禁止。
+5. **必要データ不足は fail closed**
+   - PRE / POST / ENV_ENTRY / v283 p2 / conditional / official odds の必須入力が不足・不整合・期限切れなら `ERROR_NO_BET`。
+   - 推測値、ダミー値、旧モデル、別sourceで救済しない。
+6. **LIVE入力に対する `.fit()` / 再学習禁止**
+   - 7月・8月・9月のLIVE/current rowsを使って imputer / scaler / model / calibration / threshold を fit または再fitしない。
+   - POST / ENV_ENTRY / v283 は 2026-06-30 までで凍結された exact recipe / artifact の inference のみ許可。
+7. **判定auditは結果取得前に永続化**
+   - BET / PASS / NO_BET / ERROR_NO_BET と、その時点のscore・閾値・Top4・odds snapshot/hash・stake・source timestampを結果取得前に保存する。
+
+この節と他の古い記述が競合した場合は、最新GitHub上のより新しい明示的なproduction仕様を優先する。ただし7/8 NON-PRISTINE、9月 outcome-blind、締切後オッズ禁止、LIVE再学習禁止を緩める変更は、ユーザーが明示的に方針変更しない限り行わない。
+
 ## 現行4号艇頭モデル
 Policy: `HEAD4_V291_COMP7`
 
