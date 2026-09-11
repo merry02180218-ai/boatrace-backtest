@@ -1,0 +1,48 @@
+{
+  "race_date": "20260909",
+  "stadium": "01kiryu",
+  "race": 12,
+  "result_blind": true,
+  "race_results_read": false,
+  "video_sha256": "9019287370E552F5A178EDD181D908BB6308C3984DC1DE1E8AE357481727D92E",
+  "video_size": [1920, 1080],
+  "slit_sec": 111.0,
+  "seed_coordinate_space": "native_1920x1080",
+  "seeds_by_boat": {
+    "1": [984, 396],
+    "2": [1002, 458],
+    "4": [1020, 521],
+    "5": [996, 618],
+    "6": [978, 684],
+    "3": [930, 821]
+  },
+  "entry_order": [1, 2, 4, 5, 6, 3],
+  "bad_motion_substitutions": {"1": 9, "2": 0, "3": 0, "4": 2, "5": 0, "6": 0},
+  "max_allowed_substitutions_per_boat": 11,
+  "accepted": true,
+  "horizons": {
+    "0.5": {
+      "dx_px": [-90.864, -59.846, 123.794, -32.085, 16.789, 56.443],
+      "relative_forward_px": [1.728, 1.261, 0.559, -2.972, -3.356, 2.78]
+    },
+    "1.0": {
+      "dx_px": [-150.825, -108.623, 204.029, -62.91, 15.176, 85.566],
+      "relative_forward_px": [9.962, -0.173, 6.053, -7.642, -11.438, 3.238]
+    },
+    "1.5": {
+      "dx_px": [-189.243, -127.574, 270.15, -71.194, 22.375, 114.973],
+      "relative_forward_px": [9.67, 4.313, 9.606, -7.415, -18.71, 2.536]
+    }
+  },
+  "ses_scale_px": 9.213,
+  "boats": {
+    "1": {"relative_forward_1_5px": 9.67, "stretch_rank": 1, "ses_v3": 1},
+    "2": {"relative_forward_1_5px": 4.313, "stretch_rank": 3, "ses_v3": 0},
+    "3": {"relative_forward_1_5px": 9.606, "stretch_rank": 2, "ses_v3": 1},
+    "4": {"relative_forward_1_5px": -7.415, "stretch_rank": 5, "ses_v3": -1},
+    "5": {"relative_forward_1_5px": -18.71, "stretch_rank": 6, "ses_v3": -2},
+    "6": {"relative_forward_1_5px": 2.536, "stretch_rank": 4, "ses_v3": 0}
+  },
+  "leakage_guard": "PRE_RACE_VIDEO_ONLY; RESULT NOT READ BEFORE THIS LOCK",
+  "note": "Previous failure was caused by seed coordinates measured on a 1600x900 rendered preview being applied to native 1920x1080 frames. Seeds here are scaled to native coordinates."
+}
