@@ -1,0 +1,25 @@
+name: validate-4head-v291-live
+
+on:
+  push:
+    paths:
+      - 'run_20260911_4head_v291_live.py'
+      - 'verify_20260911_4head_v291_live.py'
+      - '.github/workflows/validate-4head-v291-live.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn catboost requests beautifulsoup4 joblib
+      - name: Syntax check
+        run: |
+          python -m py_compile run_20260911_4head_v291_live.py
+          python -m py_compile verify_20260911_4head_v291_live.py
+      - name: Verify frozen v291 invariants offline
+        run: python verify_20260911_4head_v291_live.py
