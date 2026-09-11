@@ -3,11 +3,12 @@
 
 Features are frozen first. Settlement then uses realtime historical result CSV as
 primary source and archived v108 actual_combo only as a settlement-only fallback.
-We distinguish source-row/winner coverage from exact top-3 validity so races where
-a normal trifecta cannot be settled are not confused with source-data loss.
+Result-source completeness is audited per day with bounded retries before any
+missing race can be excluded from model development.
 """
 from concurrent.futures import ThreadPoolExecutor,as_completed
 from datetime import date
+import time
 import pandas as pd
 
 import analyze_v297_1head_guard_trifecta5_research as base
@@ -16,6 +17,7 @@ from backtest import rows
 from backtest_v51_lane_corrected_tickets import ii
 
 AUDIT={}
+DAY_AUDIT=base.ROOT/'analysis_v297_1head_guard_trifecta5_settlement_days.csv'
 
 def norm_code(x):return base.norm_code(x)
 
@@ -35,16 +37,50 @@ def archived_combo_map():
     s=s[(s.race_code!='')&(s.actual_combo!='')].drop_duplicates(['date','race_code'],keep='last')
     return {(r.date,r.race_code):r.actual_combo for r in s.itertuples(index=False)}
 
+def _fetch_result_map(day):
+    rs=rows(f"data/results/realtime/{day.strftime('%Y/%m/%d')}.csv")
+    mp={norm_code(r.get('レースコード','')):r for r in rs if norm_code(r.get('レースコード',''))}
+    return rs,mp
+
 def settle_union_after_freeze(d):
-    days=sorted({date.fromisoformat(str(x)) for x in d.date});fetched={}
+    days=sorted({date.fromisoformat(str(x)) for x in d.date})
+    expected={day:set(d.loc[d.date.astype(str)==day.isoformat(),'race_code'].map(norm_code)) for day in days}
+    fetched={}; raw_counts={}; retries={}
     def one(day):
-        rs=rows(f"data/results/realtime/{day.strftime('%Y/%m/%d')}.csv")
-        return day,{norm_code(r.get('レースコード','')):r for r in rs if norm_code(r.get('レースコード',''))}
+        rs,mp=_fetch_result_map(day)
+        return day,rs,mp
     with ThreadPoolExecutor(max_workers=10) as ex:
         fs=[ex.submit(one,day) for day in days]
         for j,f in enumerate(as_completed(fs),1):
-            day,z=f.result();fetched[day]=z
+            day,rs,mp=f.result();fetched[day]=mp;raw_counts[day]=len(rs);retries[day]=0
             if j%40==0:print('exact-result fetch',j,'/',len(days),flush=True)
+    # Retry only incomplete dates and keep the best response. backtest.rows() has no cache
+    # and swallows network errors, so a one-shot empty/partial fetch must not silently bias evaluation.
+    for day in days:
+        exp=expected[day]
+        best=fetched.get(day,{})
+        best_match=len(exp & set(best))
+        if len(exp) and best_match/len(exp)<.99:
+            for a in range(1,4):
+                time.sleep(.15*a)
+                rs,mp=_fetch_result_map(day)
+                m=len(exp & set(mp))
+                if m>best_match:
+                    best,best_match=mp,m;raw_counts[day]=len(rs)
+                retries[day]=a
+                if best_match/len(exp)>=.99:break
+            fetched[day]=best
+    day_rows=[]
+    for day in days:
+        exp=expected[day];mp=fetched.get(day,{})
+        matched=len(exp & set(mp));n=len(exp)
+        day_rows.append({'date':day.isoformat(),'expected':n,'raw_result_rows':raw_counts.get(day,0),
+                         'matched':matched,'coverage':matched/n if n else 1.0,'retries':retries.get(day,0)})
+    daydf=pd.DataFrame(day_rows).sort_values(['coverage','date'])
+    daydf.to_csv(DAY_AUDIT,index=False,encoding='utf-8-sig')
+    print('worst settlement-source dates:',flush=True)
+    print(daydf.head(20).to_string(index=False),flush=True)
+
     arc=archived_combo_map();winners=[];combos=[];winner_valids=[];combo_valids=[]
     row_n=winner_n=direct_combo_n=fallback_n=0
     for _,r in d.iterrows():
@@ -69,7 +105,7 @@ def settle_union_after_freeze(d):
     combo_given_winner=sum(combo_valids)/sum(winner_valids) if sum(winner_valids) else 0.0
     AUDIT.update({'row_cov':row_cov,'winner_cov':winner_cov,'combo_cov_all':combo_cov,'combo_given_winner':combo_given_winner,'fallback_n':fallback_n,'n':n})
     print(f"settlement audit rows={row_cov:.6f} winner={winner_cov:.6f} exact_all={combo_cov:.6f} exact_given_winner={combo_given_winner:.6f} fallback_n={fallback_n}",flush=True)
-    if row_cov<.99:raise RuntimeError(f'result-row source coverage too low {row_cov:.4f}')
+    if row_cov<.99:raise RuntimeError(f'result-row source coverage too low {row_cov:.4f}; inspect {DAY_AUDIT.name}')
     if winner_cov<.99:raise RuntimeError(f'winner settlement coverage too low {winner_cov:.4f}')
     if combo_given_winner<.99:raise RuntimeError(f'exact-order validity among winner-known results too low {combo_given_winner:.4f}')
     return z,combo_given_winner
