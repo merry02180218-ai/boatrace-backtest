@@ -1,0 +1,52 @@
+name: research v294 1head verified prepost
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analyze_v294_1head_verified_prepost_research.py
+      - .github/workflows/research-20260911-v294-1head-verified-prepost.yml
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn
+      - name: Run verified pre-Jul v294 research
+        run: python analyze_v294_1head_verified_prepost_research.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v294-1head-verified-prepost
+          path: |
+            analysis_v294_1head_verified_prepost_predictions.csv
+            analysis_v294_1head_verified_prepost_source_audit.csv
+            analysis_v294_1head_verified_prepost_folds.csv
+            analysis_v294_1head_verified_prepost_metrics.csv
+            analysis_v294_1head_verified_prepost_selection.csv
+            summary_v294_1head_verified_prepost_research.md
+          if-no-files-found: ignore
+      - name: Commit compact research outputs
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v294_1head_verified_prepost_source_audit.csv \
+                  analysis_v294_1head_verified_prepost_folds.csv \
+                  analysis_v294_1head_verified_prepost_metrics.csv \
+                  analysis_v294_1head_verified_prepost_selection.csv \
+                  summary_v294_1head_verified_prepost_research.md
+          if ! git diff --cached --quiet; then
+            git commit -m "results: v294 verified 1-head PRE POST research"
+            git pull --rebase origin main
+            git push
+          fi
