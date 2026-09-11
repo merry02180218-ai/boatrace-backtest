@@ -110,6 +110,48 @@ Relevant existing files to inspect/reuse:
 - `fetch_kyoteibiyori_v288_pre_inputs.py`
 - `scan_20260911_3head_v288_pre.py`
 
+## CONFIRMED FAST LIVE OPERATING PROCEDURE — MUST KEEP
+This is the required production pattern going forward. Do **not** rebuild historical data, refit models, or regenerate the full PRE universe after exhibition appears.
+
+### Phase A — once before races / morning prebuild
+Run all expensive work ahead of time and freeze it into a reusable daily cache:
+1. Build/load historical prerequisite data.
+2. Build canonical current-day PRE rows for all races.
+3. Fit/load the 3-head `head_model` and `pair_model`.
+4. Store all model objects, feature lists/categories, PRE/current rows, and any expensive derived prerequisites in a `joblib` daily LIVE cache.
+5. Run PRE scan from that cache and identify candidate races before exhibition time.
+6. The cache must be built **once per day/model version**, not once per race.
+
+The expensive cache-build time is **not part of the deadline path**. If the cache is unavailable near deadline, do not start a 10-20 minute historical rebuild and pretend it is LIVE-capable.
+
+### Phase B — deadline-time path for one candidate race only
+When exhibition/current data becomes available, the LIVE runner must do only this:
+1. Load the already-built daily cache.
+2. Fetch current BOATCAST/exhibition/start/original data for that race.
+3. Freeze source timestamps/body hashes while still before deadline.
+4. Update only that race's current canonical features using the repo's existing feature code.
+5. Fetch BOAT RACE official `odds3t` and require exact **120/120** trifecta odds.
+6. Freeze odds timestamp/hash before deadline.
+7. Score the cached head/pair models; do **not** fit any model here.
+8. Apply exact chain: `v243 -> v288 S/A/B -> v242 variable 5-10`.
+9. If BET, allocate exactly **10,000 yen** with canonical inverse-odds Dutch/Hamilton rounding.
+10. Immediately emit `BET/NO BET`, route, decisive features, raw/purchased TopN, composite odds, each combination/odds/stake, and total stake.
+11. Hard-fail to `ERROR_NO_BET` if deadline is crossed, exhibition snapshot is invalid, or odds are not 120/120 complete.
+12. Never query or use result/payout endpoints in this path.
+
+### Proven speed reference
+The cached smoke test on 2026-09-10 (`run_20260910_3head_live_from_cache.py`) loaded its cache in about **0.005 sec** and completed two target races in **20.265 sec total**, including official odds retrieval and final ticket construction.
+
+Observed output included:
+- 児島5R: `FINAL=False`
+- 鳴門7R: `FINAL=True`
+- 鳴門7R tickets: `3-1-6 3400`, `3-1-4 1300`, `3-6-1 2200`, `3-4-6 1000`, `3-1-2 800`, `3-6-4 1300`, total exactly `10000`.
+
+Therefore the operational target is **roughly 20 sec for a cached deadline-time run**, with further room to improve because that smoke test processed two races. Do not regress to the old pattern where the LIVE request triggers a full historical/PRE rebuild taking many minutes.
+
+### Operational rule in one sentence
+**Heavy work in the morning; at deadline only load cache -> fetch exhibition -> fetch 120 odds -> v243 -> v288 -> v242 -> 10,000-yen Dutch -> print.**
+
 ## User operating preferences
 - Execute directly; minimal chatter.
 - Always inspect actual latest GitHub before prediction/model change.
@@ -120,4 +162,4 @@ Relevant existing files to inspect/reuse:
 - Keep July/August explicitly NON-PRISTINE.
 
 ## Recommended next-chat opening
-`boatrace-backtest の CHAT_HANDOFF_20260911_LIVE_NARUTO3.md と OFFICIAL_3HEAD_V288_100R_ADOPTED_20260911.md と最新GitHubを読んで続き。鳴門3Rで判明したオッズ取得バグを直し、展示→公式120オッズ→v243→v288 S/A/B→v242 5〜10点→1万円Dutchを締切前に高速で1本実行できるLIVE runnerを完成させて。結果/払戻/締切後データは予測に絶対使わない。`
+`boatrace-backtest の CHAT_HANDOFF_20260911_LIVE_NARUTO3.md と OFFICIAL_3HEAD_V288_100R_ADOPTED_20260911.md と最新GitHubを読んで続き。確定済みFAST LIVE運用（朝にdaily cacheを1回作成、締切時はcache load -> 展示 -> 公式120オッズ -> v243 -> v288 S/A/B -> v242 5〜10点 -> 1万円Dutchのみ）を厳守。結果/払戻/締切後データは予測に絶対使わない。`
