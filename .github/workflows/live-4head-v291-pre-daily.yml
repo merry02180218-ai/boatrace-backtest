@@ -1,0 +1,50 @@
+name: live-4head-v291-pre-daily
+on:
+  schedule:
+    - cron: '30 0 * * *' # 09:30 JST
+  workflow_dispatch:
+    inputs:
+      target_date:
+        description: 'Target date YYYY-MM-DD (blank = today JST)'
+        required: false
+        type: string
+  push:
+    paths:
+      - 'fetch_4head_v291_pre_inputs_live.py'
+      - 'scan_4head_v291_pre_live.py'
+      - '.github/workflows/live-4head-v291-pre-daily.yml'
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4
+      - name: Resolve target date
+        shell: bash
+        run: |
+          if [ -n "${{ inputs.target_date }}" ]; then
+            D='${{ inputs.target_date }}'
+          else
+            D=$(TZ=Asia/Tokyo date +%F)
+          fi
+          echo "TARGET_DATE=$D" >> "$GITHUB_ENV"
+          echo "TARGET_DAY=${D//-/}" >> "$GITHUB_ENV"
+      - name: Build result-blind PRE inputs
+        run: python fetch_4head_v291_pre_inputs_live.py --date "$TARGET_DATE"
+      - name: Run frozen v291 PRE scan
+        run: python scan_4head_v291_pre_live.py --date "$TARGET_DATE"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: live-4head-v291-pre-${{ github.run_number }}
+          path: |
+            current_input/v291/${{ env.TARGET_DAY }}/race_cards.csv
+            current_input/v291/${{ env.TARGET_DAY }}/waku10.csv
+            current_input/v291/${{ env.TARGET_DAY }}/input_manifest.json
+            live_outputs/v291/${{ env.TARGET_DAY }}/pre_scan.csv
+            live_outputs/v291/${{ env.TARGET_DAY }}/pre_scan.md
+            live_outputs/v291/${{ env.TARGET_DAY }}/pre_scan_audit.json
+          if-no-files-found: warn
