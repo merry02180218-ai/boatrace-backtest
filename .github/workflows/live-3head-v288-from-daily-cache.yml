@@ -16,13 +16,24 @@ on:
         default: '3'
       deadline_jst:
         description: ISO deadline JST, e.g. 2026-09-11T09:36:00+09:00
-        required: false
-        default: ''
+        required: true
+        default: '2026-09-11T09:36:00+09:00'
   push:
     paths:
       - '.github/workflows/live-3head-v288-from-daily-cache.yml'
+      - 'run_20260911_3head_v288_live.py'
 jobs:
+  validate:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - name: Syntax check live runner
+        run: python -m py_compile run_20260911_3head_v288_live.py
   live:
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -41,13 +52,15 @@ jobs:
           cp pre_artifact/cache_20260911_3head_v288_live.joblib .
       - name: One-shot live decision
         env:
-          DATE_IN: ${{ inputs.date || '20260911' }}
-          JCD_IN: ${{ inputs.jcd || '14' }}
-          RACE_IN: ${{ inputs.race || '3' }}
-          DEADLINE_IN: ${{ inputs.deadline_jst || '2026-09-11T09:36:00+09:00' }}
+          DATE_IN: ${{ inputs.date }}
+          JCD_IN: ${{ inputs.jcd }}
+          RACE_IN: ${{ inputs.race }}
+          DEADLINE_IN: ${{ inputs.deadline_jst }}
         run: |
           python run_20260911_3head_v288_live.py --date "$DATE_IN" --jcd "$JCD_IN" --race "$RACE_IN" --deadline-jst "$DEADLINE_IN" | tee live_v288_result.json
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: live-v288-result
           path: live_v288_result.json
+          if-no-files-found: ignore
