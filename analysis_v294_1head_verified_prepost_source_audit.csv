@@ -1,0 +1,11 @@
+﻿metric,value
+pre_cards,35921.0
+pre_frozen,35921.0
+bad_code,0.0
+post_v108_before_course1_gate,35001.0
+post_course1_gate_rate,0.9127739207451215
+post_frozen,31948.0
+post_static_join_coverage,1.0
+result_coverage,0.9907763485538317
+history_player_features,71.0
+history_prior_exhibition_features,328.0
