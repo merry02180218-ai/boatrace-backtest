@@ -1,0 +1,24 @@
+name: refresh-20260912-3head-pre-inputs
+on:
+  push:
+    paths:
+      - '.github/workflows/refresh-20260912-3head-pre-inputs.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q requests beautifulsoup4
+      - run: python fetch_3head_v288_pre_inputs_live.py --date 2026-09-12
+      - run: cat current_input/v288/20260912/input_manifest.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: refresh-20260912-3head-pre-inputs
+          path: current_input/v288/20260912/
+          retention-days: 2
