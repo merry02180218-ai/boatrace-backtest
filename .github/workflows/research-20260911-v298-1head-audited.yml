@@ -4,7 +4,8 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'run_v298_1head_audited.py'
+      - 'run_v298_1head_v288v283_audited.py'
+      - 'analyze_v298_1head_threat_listwise_trifecta5.py'
       - '.github/workflows/research-20260911-v298-1head-audited.yml'
 
 permissions:
@@ -13,13 +14,15 @@ permissions:
 jobs:
   run:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
-      - run: python run_v298_1head_audited.py
+      - name: Run audited v298 aligned with v288/v283
+        run: python run_v298_1head_v288v283_audited.py
       - uses: actions/upload-artifact@v4
         with:
           name: v298-1head-audited
