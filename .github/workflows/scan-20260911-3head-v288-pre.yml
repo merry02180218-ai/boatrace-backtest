@@ -4,6 +4,8 @@ on:
     paths:
       - 'fetch_kyoteibiyori_v288_pre_inputs.py'
       - 'scan_20260911_3head_v288_pre.py'
+      - 'build_20260911_3head_v288_live_cache.py'
+      - 'run_20260911_3head_v288_live.py'
       - '.github/workflows/scan-20260911-3head-v288-pre.yml'
   workflow_dispatch:
 jobs:
@@ -14,7 +16,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4
+      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 joblib
       - name: Download frozen canonical artifacts
         env:
           GH_TOKEN: ${{ github.token }}
@@ -29,6 +31,8 @@ jobs:
         run: python fetch_kyoteibiyori_v288_pre_inputs.py
       - name: Run result-blind PRE scan
         run: python scan_20260911_3head_v288_pre.py
+      - name: Build frozen deadline cache
+        run: python build_20260911_3head_v288_live_cache.py
       - uses: actions/upload-artifact@v4
         with:
           name: scan-20260911-3head-v288-pre
@@ -37,3 +41,4 @@ jobs:
             current_input/waku10.csv
             scan_20260911_3head_v288_pre.csv
             scan_20260911_3head_v288_pre.md
+            cache_20260911_3head_v288_live.joblib
