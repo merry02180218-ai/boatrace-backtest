@@ -54,6 +54,7 @@ jobs:
             TARGET_DATE=$(TZ=Asia/Tokyo date +%F)
           fi
           TARGET8=$(date -d "$TARGET_DATE" +%Y%m%d)
+          export TARGET8
           echo "target_date=$TARGET_DATE" >> "$GITHUB_OUTPUT"
           echo "target8=$TARGET8" >> "$GITHUB_OUTPUT"
 
@@ -120,8 +121,6 @@ jobs:
             echo 'ready=1' >> "$GITHUB_OUTPUT"
             echo "Frozen daily run $DAILY_RUN candidates: $MATRIX"
           fi
-        env:
-          TARGET8: ${{ steps.prep.outputs.target8 }}
 
   live:
     needs: prepare
@@ -175,6 +174,7 @@ jobs:
           DEADLINE=$(python fetch_boatrace_deadline.py \
             --date "$TARGET8" --jcd "$JCD_IN" --race "$RACE_IN" \
             --meta "deadline_$CODE.json")
+          export DEADLINE_JST="$DEADLINE"
           echo "DEADLINE_JST=$DEADLINE" >> "$GITHUB_ENV"
           MODE=$(python - <<'PY'
           import os
