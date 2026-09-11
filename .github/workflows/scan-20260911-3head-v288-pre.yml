@@ -5,6 +5,7 @@ on:
       - 'fetch_kyoteibiyori_v288_pre_inputs.py'
       - 'scan_20260911_3head_v288_pre.py'
       - 'build_20260911_3head_v288_live_cache.py'
+      - 'build_20260911_3head_v288_daily_bundle.py'
       - 'run_20260911_3head_v288_live.py'
       - '.github/workflows/scan-20260911-3head-v288-pre.yml'
   workflow_dispatch:
@@ -29,10 +30,8 @@ jobs:
           cp -r golden_v234/data/audit/v234_waku10 data/audit/
       - name: Build current PRE inputs from Kyoteibiyori
         run: python fetch_kyoteibiyori_v288_pre_inputs.py
-      - name: Run result-blind PRE scan
-        run: python scan_20260911_3head_v288_pre.py
-      - name: Build frozen deadline cache
-        run: python build_20260911_3head_v288_live_cache.py
+      - name: Build result-blind PRE scan and frozen deadline cache once
+        run: python build_20260911_3head_v288_daily_bundle.py
       - uses: actions/upload-artifact@v4
         with:
           name: scan-20260911-3head-v288-pre
@@ -42,4 +41,4 @@ jobs:
             scan_20260911_3head_v288_pre.csv
             scan_20260911_3head_v288_pre.md
             cache_20260911_3head_v288_live.joblib
-# rerun-marker: 2026-09-11-live-speed-test
+# rerun-marker: 2026-09-11-single-pass-bundle
