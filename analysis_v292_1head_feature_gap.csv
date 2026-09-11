@@ -1,0 +1,18 @@
+﻿family,target_concept,status,note
+BASE_1,boat1 absolute player/motor/form,present,v109 absolute block exists
+RELATIVE_ATTACK,1v2/1v3 composite score,present,margin2/margin3/margin23/margin_all
+RELATIVE_ATTACK,1v2/1v3 ST,present,st_margin2/st_margin3/st_margin23
+RELATIVE_ATTACK,1vAll ST,missing,no explicit all-opponent ST margin
+RELATIVE_ATTACK,1v2/1v3 direct motor,missing,motor only embedded in composite score
+RELATIVE_ATTACK,player/course history deltas,missing,no all-win/frame-win/recent-p2 relative ledger
+WALL_THREAT,boat2/3 composite threat,present,threat2/threat3/threat23_max
+WALL_THREAT,wall2 collapse / simultaneous attack,partial,structural wall gate absent
+PRIOR_FORM,meeting ST,present,one_meet_st_strength
+PRIOR_FORM,prior exhibition/straight/turn/lap,missing,prior-history ledger absent
+ENV_ENTRY,actual course1 entry,partial,entry is gate only
+ENV_ENTRY,wind/direction interaction,missing,venue one-hot only
+POST_EXHIBITION,current display/original display,present,one_ex/st/lap/turn/straight/orig_avg
+POST_EXHIBITION,1v23 ex/turn/straight,present,existing margin23 features
+POST_EXHIBITION,1v23 lap + 1vAll display margins,missing,not in v109
+CONSENSUS,separate PRE/POST/ENV models,missing,v109 monolithic POST-capable model
+NEGATIVE_RISK,independent boat1-loss guard,missing,no separate nonlinear loss gate
