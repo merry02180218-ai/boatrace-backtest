@@ -36,22 +36,77 @@ Official adoption file: `OFFICIAL_3HEAD_V288_100R_ADOPTED_20260911.md` commit `8
 Effective feature ledger: `docs/FEATURES_THAT_WORKED_3HEAD_V288_20260911.md` commit `174f95c35722d103d5598de8f7e1b659380731b9`.
 Expansion playbook: `MODEL_EXPANSION_PLAYBOOK_CORE_PLUS_INDEPENDENT_ROUTES.md` commit `baa552917053c27b6aaeff451bffb2379f75d66c`.
 
+## LEAKAGE-FREE OPERATIONAL PRE — SAVED 2026-09-11
+The historical v249/v288 PRE grading originally used a within-test-month percentile. That is not directly reproducible in true LIVE operation because the final within-month rank depends on future races later in the same month.
+
+Therefore the production PRE rule is now aligned to a leakage-free replay:
+- Score each current/test month with a model trained only on prior months.
+- Derive PRE grade cutpoints only from the prior training-universe score distribution.
+- S threshold = prior training score 70th percentile.
+- A threshold = prior training score 20th percentile.
+- Current-day/current-month races are graded against those frozen prior-data thresholds.
+- Do not rank the target race against future races or against a completed target-month universe.
+- Then apply canonical v288 routes with precedence `S -> else A -> else B`.
+
+Verification workflow:
+- workflow: `verify-v288-operational-pre-replay`
+- run: `34560827602`
+- job: `103143016647`
+- result: `V288_OPERATIONAL_PRE_REPLAY_OK`
+
+Leakage-free operational replay result:
+- PRE S+A candidates before v288 routes: 344
+- v288 final routed races: **94R**
+- hits: **52**
+- hit rate: **55.3191%**
+- stake: **940,000 yen**
+- payout: **1,622,070 yen**
+- profit: **+682,070 yen**
+- ROI: **172.5606%**
+
+Route breakdown under the leakage-free operational PRE:
+- Route S: 55R / 33 hits / 60.00% / payout 1,012,340 / profit +462,340 / ROI 184.0618%
+- Route A: 21R / 10 hits / 47.6190% / payout 313,240 / profit +103,240 / ROI 149.1619%
+- Route B: 18R / 9 hits / 50.00% / payout 296,490 / profit +116,490 / ROI 164.7167%
+
+Monthly replay:
+- 2026-02: 8R / 5 hits / ROI 198.1375%
+- 2026-03: 12R / 7 hits / ROI 175.3167%
+- 2026-04: 12R / 8 hits / ROI 200.6083%
+- 2026-05: 16R / 10 hits / ROI 192.5125%
+- 2026-06: 14R / 7 hits / ROI 153.4357%
+- 2026-07: 13R / 3 hits / ROI 87.1231% — NON-PRISTINE
+- 2026-08: 19R / 12 hits / ROI 198.0842% — NON-PRISTINE
+
+Important comparison:
+- original model-selection v288: 100R / 56 hits / hit rate 56.00% / profit +743,810 / ROI 174.381%
+- leakage-free operational replay: 94R / 52 hits / hit rate 55.319% / profit +682,070 / ROI 172.561%
+
+The operational replay therefore preserves almost all of the historical performance while removing the future-dependent within-month percentile issue. Going forward, **94R / 52 hits / ROI 172.561% is the more relevant operational benchmark**. The 100R / ROI 174.381% figure may still be retained as historical model-selection evidence, but must not be presented as the exact LIVE-reproducible PRE benchmark.
+
+Implementation commits:
+- `9b6f2990eba7440867019db1274a4581d2787d15` — use leakage-free training-quantile PRE thresholds in the current-day scan.
+- `888b4ede04ae08e957795ffaa9d0d67acf6cd994` — align LIVE cache PRE grading with the same leakage-free replay logic.
+
+Required ongoing rule:
+**Backtest PRE and LIVE PRE must use the same prior-data-only threshold semantics. Never reintroduce target-day ranking or completed target-month percentile as the production grading rule.**
+
 ## 2026-09-11 PRE scan
 Current-day inputs were successfully sourced from Kyoteibiyori, including `player_kako10` for Waku10-like past-10 data. Scripts:
 - `fetch_kyoteibiyori_v288_pre_inputs.py`
 - `scan_20260911_3head_v288_pre.py`
 - `.github/workflows/scan-20260911-3head-v288-pre.yml`
 
-Successful run `34543376351`, job `103090677351`, artifact `10178694689`.
+Successful original run `34543376351`, job `103090677351`, artifact `10178694689`.
 132/144 races had complete Waku10 inputs.
-Only PRE candidate for 2026-09-11 was **鳴門3R (JCD14 R3)**:
+Original bridge candidate was **鳴門3R (JCD14 R3)** with:
 - PRE grade S
 - operational percentile 1.000
 - p3 0.463
 - b3-b2 motor +0.460
 - b3 inside NST +0.143
 
-Caveat: historical v249 grades use within-month percentile. Live 9/11 scanner used target-day v243 candidate-universe ranking as an operational bridge. Do not call it exact historical percentile replication.
+IMPORTANT: that original 9/11 scan used target-day v243 candidate-universe ranking as a temporary operational bridge. It has now been superseded by the leakage-free prior-training-quantile rule above. Do not treat the original target-day percentile bridge as the production standard.
 
 ## Naruto 3R exhibition captured before deadline
 BOATCAST/current exhibition data were obtained before the 09:36 deadline. Values reported in chat:
@@ -162,4 +217,4 @@ Therefore the operational target is **roughly 20 sec for a cached deadline-time 
 - Keep July/August explicitly NON-PRISTINE.
 
 ## Recommended next-chat opening
-`boatrace-backtest の CHAT_HANDOFF_20260911_LIVE_NARUTO3.md と OFFICIAL_3HEAD_V288_100R_ADOPTED_20260911.md と最新GitHubを読んで続き。確定済みFAST LIVE運用（朝にdaily cacheを1回作成、締切時はcache load -> 展示 -> 公式120オッズ -> v243 -> v288 S/A/B -> v242 5〜10点 -> 1万円Dutchのみ）を厳守。結果/払戻/締切後データは予測に絶対使わない。`
+`boatrace-backtest の CHAT_HANDOFF_20260911_LIVE_NARUTO3.md と OFFICIAL_3HEAD_V288_100R_ADOPTED_20260911.md と最新GitHubを読んで続き。確定済みFAST LIVE運用（朝にdaily cacheを1回作成、締切時はcache load -> 展示 -> 公式120オッズ -> v243 -> v288 S/A/B -> v242 5〜10点 -> 1万円Dutchのみ）と、leakage-free operational PRE（過去学習分布の70%/20%閾値、94R・52的中・ROI172.561%）を厳守。結果/払戻/締切後データは予測に絶対使わない。`
