@@ -29,7 +29,7 @@ def cluster_rows(points: np.ndarray, k: int = 6):
     if len(ys) < 6 * 5:
         return None
     criteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_MAX_ITER, 50, 0.5)
-    compact, labels, centers = cv2.kmeans(ys, k, None, criteria, 8, cv2.KMEANS_PP_CENTERS)
+    _, labels, centers = cv2.kmeans(ys, k, None, criteria, 8, cv2.KMEANS_PP_CENTERS)
     order = np.argsort(centers[:, 0])
     groups = []
     for idx in order:
@@ -53,7 +53,6 @@ def detect_at(cap, sec: float, dt: float = 0.10):
     h, w = ga.shape
 
     mask = np.zeros_like(ga)
-    # Exclude broadcast overlays/edges and concentrate on race water.
     mask[int(h * .12):int(h * .92), int(w * .12):int(w * .94)] = 255
     p0 = cv2.goodFeaturesToTrack(ga, maxCorners=900, qualityLevel=.01,
                                  minDistance=4, mask=mask, blockSize=5)
@@ -74,10 +73,8 @@ def detect_at(cap, sec: float, dt: float = 0.10):
     if len(pts) < 35:
         return None
 
-    # Prefer coherent horizontally moving features; wakes/background are noisier.
     horiz = np.abs(d[:, 0]) >= np.abs(d[:, 1]) * 0.7
     pts = pts[horiz]
-    d = d[horiz]
     if len(pts) < 30:
         return None
 
@@ -88,7 +85,6 @@ def detect_at(cap, sec: float, dt: float = 0.10):
     centers = []
     counts = []
     for g in groups:
-        # Boat body/features tend to sit toward the forward side of each moving row.
         cx = float(np.percentile(g[:, 0], 65))
         cy = float(np.median(g[:, 1]))
         centers.append([cx, cy])
@@ -96,7 +92,6 @@ def detect_at(cap, sec: float, dt: float = 0.10):
 
     cy = np.array([c[1] for c in centers])
     spacing = np.diff(cy)
-    # Reward six populated, separated rows and a plausible vertical span.
     score = float(sum(min(c, 30) for c in counts) + 0.6 * np.min(spacing) + 0.03 * (cy[-1] - cy[0]))
     return {"sec": sec, "centers": centers, "counts": counts, "score": score,
             "frame_width": w, "frame_height": h}
@@ -111,7 +106,9 @@ def main():
                     help="expected slit time within the short clip")
     ap.add_argument("--scan-radius", type=float, default=4.0)
     ap.add_argument("--scan-step", type=float, default=.25)
-    ap.add_argument("--out", type=Path, default=Path("auto_seeds.json"))
+    ap.add_argument("--out", type=Path, default=Path("auto_seed_meta.json"))
+    ap.add_argument("--seed-out", type=Path, default=Path("auto_seeds.json"),
+                    help="tracker-ready JSON containing only boat keys 1..6")
     args = ap.parse_args()
 
     entry = [int(x) for x in args.entry_order.split(',')]
@@ -128,7 +125,6 @@ def main():
     while t <= hi + 1e-9:
         r = detect_at(cap, t)
         if r:
-            # Strongly prefer a valid six-row frame close to the nominal slit anchor.
             r["selection_score"] = r["score"] - 2.5 * abs(t - args.nominal_sec)
             candidates.append(r)
         t += args.scan_step
@@ -156,6 +152,7 @@ def main():
         "warning": "selected_sec is an approximate slit anchor; exact start-line detector not yet validated",
     }
     args.out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    args.seed_out.write_text(json.dumps(seeds, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(payload, ensure_ascii=False, indent=2))
 
 
