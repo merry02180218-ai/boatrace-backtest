@@ -22,7 +22,7 @@ permissions:
 
 jobs:
   download:
-    # Register a self-hosted runner in Japan and add the custom label `japan`.
+    # Run only on the Japan-based self-hosted runner.
     runs-on: [self-hosted, japan]
     timeout-minutes: 20
     env:
@@ -31,17 +31,21 @@ jobs:
       RACE: ${{ inputs.race }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+      - name: Check local Python 3.11
+        shell: powershell
+        run: py -3.11 --version
       - name: Install Python dependencies
-        run: pip install -q playwright
+        shell: powershell
+        run: py -3.11 -m pip install -q playwright
       - name: Install Chromium
-        run: python -m playwright install chromium
+        shell: powershell
+        run: py -3.11 -m playwright install chromium
       - name: Check ffmpeg
+        shell: powershell
         run: ffmpeg -version
       - name: Download exhibition replay
-        run: python download_boatcast_exhibition.py
+        shell: powershell
+        run: py -3.11 download_boatcast_exhibition.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
