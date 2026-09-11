@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Exact replay verifier for the adopted v288 3-head 100R baseline.
 from pathlib import Path
 import json
 import numpy as np
