@@ -1,0 +1,38 @@
+name: research v292 1head 90pct baseline
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analyze_v292_1head_90pct_baseline_research.py
+      - .github/workflows/research-20260911-v292-1head-90pct.yml
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn
+      - name: Run strict Feb-Jun 1-head baseline research
+        run: python analyze_v292_1head_90pct_baseline_research.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v292-1head-90pct-baseline-research
+          path: |
+            analysis_v292_1head_90pct_predictions.csv
+            analysis_v292_1head_90pct_model_metrics.csv
+            analysis_v292_1head_90pct_thresholds.csv
+            analysis_v292_1head_90pct_quantiles.csv
+            analysis_v292_1head_90pct_reliability.csv
+            analysis_v292_1head_feature_gap.csv
+            summary_v292_1head_90pct_baseline_research.md
+          if-no-files-found: ignore
