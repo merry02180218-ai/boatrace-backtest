@@ -1,6 +1,10 @@
 name: benchmark fast exhibition clip
 
 on:
+  push:
+    paths:
+      - '.github/workflows/benchmark-fast-exhibition-clip.yml'
+      - 'download_boatcast_exhibition_fastclip.py'
   workflow_dispatch:
     inputs:
       race_date:
@@ -33,11 +37,11 @@ jobs:
     runs-on: [self-hosted, japan]
     timeout-minutes: 8
     env:
-      RACE_DATE: ${{ inputs.race_date }}
-      STADIUM: ${{ inputs.stadium }}
-      RACE: ${{ inputs.race }}
-      CLIP_START_SEC: ${{ inputs.clip_start_sec }}
-      CLIP_DURATION_SEC: ${{ inputs.clip_duration_sec }}
+      RACE_DATE: ${{ github.event_name == 'workflow_dispatch' && inputs.race_date || '20260910' }}
+      STADIUM: ${{ github.event_name == 'workflow_dispatch' && inputs.stadium || '01kiryu' }}
+      RACE: ${{ github.event_name == 'workflow_dispatch' && inputs.race || '12' }}
+      CLIP_START_SEC: ${{ github.event_name == 'workflow_dispatch' && inputs.clip_start_sec || '82' }}
+      CLIP_DURATION_SEC: ${{ github.event_name == 'workflow_dispatch' && inputs.clip_duration_sec || '52' }}
       LOCAL_PYTHON: C:\Users\merry\AppData\Local\Programs\Python\Python311\python.exe
     steps:
       - uses: actions/checkout@v4
@@ -58,7 +62,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: fastclip-${{ inputs.race_date }}-${{ inputs.stadium }}-${{ inputs.race }}
+          name: fastclip-${{ env.RACE_DATE }}-${{ env.STADIUM }}-${{ env.RACE }}
           path: |
             boatcast_*_startclip.mp4
             boatcast_*_startclip.json
