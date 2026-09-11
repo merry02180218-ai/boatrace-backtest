@@ -1,0 +1,37 @@
+name: v299 1head trifecta3 policy search
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v299_1head_trifecta3_policy_search.py'
+      - '.github/workflows/research-20260912-v299-1head-trifecta3.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Run v299 fixed-denominator 3-ticket search
+        run: python run_v299_1head_trifecta3_policy_search.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v299-1head-trifecta3
+          path: |
+            analysis_v299_1head_trifecta3_policy_search_*.csv
+            summary_v299_1head_trifecta3_policy_search.md
+      - name: Commit v299 outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v299_1head_trifecta3_policy_search_*.csv summary_v299_1head_trifecta3_policy_search.md
+          git diff --cached --quiet || git commit -m 'Add v299 three-ticket policy search outputs'
+          git push
