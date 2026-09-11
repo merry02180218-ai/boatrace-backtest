@@ -5,10 +5,8 @@ on:
     paths:
       - '.github/workflows/benchmark-fast-exhibition-clip.yml'
       - 'download_boatcast_exhibition_fastclip.py'
-      - 'auto_seed_exhibition_motion_v3.py'
+      - 'auto_seed_exhibition_motion_v4.py'
       - 'track_exhibition_boats_v5.py'
-      - 'sweep_exhibition_ses_anchor_v1.py'
-      - 'sweep_boat1_seed_offset_v1.py'
   workflow_dispatch:
     inputs:
       race_date:
@@ -63,37 +61,24 @@ jobs:
       - name: Fetch only start-exhibition clip
         shell: powershell
         run: '& $env:LOCAL_PYTHON download_boatcast_exhibition_fastclip.py'
-      - name: Auto-detect six hybrid hull seeds v3
+      - name: Auto-detect temporal appearance seeds v4
         shell: powershell
         run: |
           $video = Get-ChildItem -Filter 'boatcast_*_startclip.mp4' | Select-Object -First 1
           if (-not $video) { throw 'startclip not found' }
           $sw = [Diagnostics.Stopwatch]::StartNew()
-          & $env:LOCAL_PYTHON auto_seed_exhibition_motion_v3.py $video.FullName --entry-order $env:ENTRY_ORDER --nominal-sec 29 --out auto_seed_meta_v3.json --seed-out auto_seeds_v3.json
-          if ($LASTEXITCODE -ne 0) { throw 'auto seeding v3 failed closed' }
+          & $env:LOCAL_PYTHON auto_seed_exhibition_motion_v4.py $video.FullName --entry-order $env:ENTRY_ORDER --nominal-sec 29 --out auto_seed_meta_v4.json --seed-out auto_seeds_v4.json
+          if ($LASTEXITCODE -ne 0) { throw 'auto seeding v4 failed closed' }
           $sw.Stop()
-          "AUTO_SEED_V3_SECONDS=$($sw.Elapsed.TotalSeconds)"
-      - name: Sweep boat1 seed offsets result-blind
+          "AUTO_SEED_V4_SECONDS=$($sw.Elapsed.TotalSeconds)"
+      - name: Track and score SES v5
         shell: powershell
         run: |
           $video = Get-ChildItem -Filter 'boatcast_*_startclip.mp4' | Select-Object -First 1
-          $meta = Get-Content auto_seed_meta_v3.json -Raw | ConvertFrom-Json
+          $meta = Get-Content auto_seed_meta_v4.json -Raw | ConvertFrom-Json
           $slit = [string]$meta.selected_sec
           $sw = [Diagnostics.Stopwatch]::StartNew()
-          & $env:LOCAL_PYTHON sweep_boat1_seed_offset_v1.py $video.FullName --slit-sec $slit --seed-json auto_seeds_v3.json '--x-offsets=-120,-80,-40,0,40,80,120' '--y-offsets=-12,0,12' --out boat1_seed_sweep_v1.json
-          if ($LASTEXITCODE -ne 0) { throw 'boat1 seed sweep failed' }
-          $sw.Stop()
-          "BOAT1_SEED_SWEEP_SECONDS=$($sw.Elapsed.TotalSeconds)"
-          $s = Get-Content boat1_seed_sweep_v1.json -Raw | ConvertFrom-Json
-          $s.best_tracking_quality_candidate | ConvertTo-Json -Depth 8
-      - name: Track baseline and score SES v5
-        shell: powershell
-        run: |
-          $video = Get-ChildItem -Filter 'boatcast_*_startclip.mp4' | Select-Object -First 1
-          $meta = Get-Content auto_seed_meta_v3.json -Raw | ConvertFrom-Json
-          $slit = [string]$meta.selected_sec
-          $sw = [Diagnostics.Stopwatch]::StartNew()
-          & $env:LOCAL_PYTHON track_exhibition_boats_v5.py $video.FullName --slit-sec $slit --seed-json auto_seeds_v3.json --out exhibition_tracking_v5.json --stride 2
+          & $env:LOCAL_PYTHON track_exhibition_boats_v5.py $video.FullName --slit-sec $slit --seed-json auto_seeds_v4.json --out exhibition_tracking_v5.json --stride 2
           if ($LASTEXITCODE -ne 0) { throw 'SES tracking v5 failed closed' }
           $sw.Stop()
           "SES_TRACK_SECONDS=$($sw.Elapsed.TotalSeconds)"
@@ -102,19 +87,16 @@ jobs:
         run: |
           $m = Get-ChildItem -Filter 'boatcast_*_startclip.json' | Select-Object -First 1
           Get-Content $m.FullName
-          Get-Content auto_seed_meta_v3.json
+          Get-Content auto_seed_meta_v4.json
           Get-Content exhibition_tracking_v5.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: fastclip-boat1-seed-sweep-${{ env.RACE_DATE }}-${{ env.STADIUM }}-${{ env.RACE }}
+          name: fastclip-seedv4-sesv5-${{ env.RACE_DATE }}-${{ env.STADIUM }}-${{ env.RACE }}
           path: |
             boatcast_*_startclip.mp4
             boatcast_*_startclip.json
-            auto_seed_meta_v3.json
-            auto_seeds_v3.json
-            boat1_seed_sweep_v1.json
-            _b1_seed_*.json
-            _b1_track_*.json
+            auto_seed_meta_v4.json
+            auto_seeds_v4.json
             exhibition_tracking_v5.json
           if-no-files-found: warn
