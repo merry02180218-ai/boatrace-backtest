@@ -1,0 +1,41 @@
+name: v301 transfer 3head4head features
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v301_1head_trifecta3_transfer_3head4head_features.py'
+      - 'run_v301_1head_trifecta3_transfer_fixed.py'
+      - '.github/workflows/research-20260912-v301-transfer-3head4head.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Run v301 transfer research
+        run: python run_v301_1head_trifecta3_transfer_fixed.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v301-transfer-3head4head
+          path: |
+            analysis_v301_1head_trifecta3_transfer_3head4head_*.csv
+            summary_v301_1head_trifecta3_transfer_3head4head.md
+      - name: Commit v301 outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v301_1head_trifecta3_transfer_3head4head_*.csv summary_v301_1head_trifecta3_transfer_3head4head.md
+          git diff --cached --quiet || git commit -m 'Add v301 transfer research outputs'
+          git pull --rebase origin main
+          git push
