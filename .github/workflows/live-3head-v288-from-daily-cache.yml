@@ -1,0 +1,53 @@
+name: live-3head-v288-from-daily-cache
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: YYYYMMDD
+        required: true
+        default: '20260911'
+      jcd:
+        description: venue code
+        required: true
+        default: '14'
+      race:
+        description: race number
+        required: true
+        default: '3'
+      deadline_jst:
+        description: ISO deadline JST, e.g. 2026-09-11T09:36:00+09:00
+        required: false
+        default: ''
+  push:
+    paths:
+      - '.github/workflows/live-3head-v288-from-daily-cache.yml'
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 joblib
+      - name: Download latest successful PRE cache
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          RUN=$(gh run list --repo merry02180218-ai/boatrace-backtest --workflow scan-20260911-3head-v288-pre.yml --status success --limit 1 --json databaseId --jq '.[0].databaseId')
+          test -n "$RUN"
+          echo "PRE_RUN=$RUN"
+          gh run download "$RUN" --repo merry02180218-ai/boatrace-backtest --name scan-20260911-3head-v288-pre --dir pre_artifact
+          test -f pre_artifact/cache_20260911_3head_v288_live.joblib
+          cp pre_artifact/cache_20260911_3head_v288_live.joblib .
+      - name: One-shot live decision
+        env:
+          DATE_IN: ${{ inputs.date || '20260911' }}
+          JCD_IN: ${{ inputs.jcd || '14' }}
+          RACE_IN: ${{ inputs.race || '3' }}
+          DEADLINE_IN: ${{ inputs.deadline_jst || '2026-09-11T09:36:00+09:00' }}
+        run: |
+          python run_20260911_3head_v288_live.py --date "$DATE_IN" --jcd "$JCD_IN" --race "$RACE_IN" --deadline-jst "$DEADLINE_IN" | tee live_v288_result.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: live-v288-result
+          path: live_v288_result.json
