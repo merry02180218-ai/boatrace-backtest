@@ -1,0 +1,141 @@
+name: live-3head-v288-production
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: Optional target date YYYY-MM-DD; blank = today in Asia/Tokyo
+        required: false
+        default: ''
+      jcd:
+        description: venue code
+        required: true
+      race:
+        description: race number 1..12
+        required: true
+      deadline_jst:
+        description: Optional deadline override; blank = BOAT RACE official racelist
+        required: false
+        default: ''
+  push:
+    paths:
+      - '.github/workflows/live-3head-v288-production.yml'
+      - 'fetch_boatrace_deadline.py'
+      - 'run_20260911_3head_v288_live.py'
+jobs:
+  validate:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q requests beautifulsoup4
+      - name: Syntax and deadline-parser smoke
+        run: |
+          python -m py_compile fetch_boatrace_deadline.py run_20260911_3head_v288_live.py
+          python - <<'PY'
+          from fetch_boatrace_deadline import parse_deadlines
+          xs=[f'{8+i//2:02d}:{(i*7)%60:02d}' for i in range(12)]
+          html='<table><tr><th>締切予定時刻</th>'+''.join(f'<td>{x}</td>' for x in xs)+'</tr></table>'
+          assert parse_deadlines(html)==xs
+          print('DEADLINE_PARSER_OK')
+          PY
+  live:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 joblib
+      - name: Resolve target date
+        env:
+          INPUT_DATE: ${{ inputs.date }}
+        run: |
+          if [ -n "$INPUT_DATE" ]; then
+            TARGET_DATE="$INPUT_DATE"
+          else
+            TARGET_DATE=$(TZ=Asia/Tokyo date +%F)
+          fi
+          TARGET8=$(date -d "$TARGET_DATE" +%Y%m%d)
+          echo "TARGET_DATE=$TARGET_DATE" >> "$GITHUB_ENV"
+          echo "TARGET8=$TARGET8" >> "$GITHUB_ENV"
+      - name: Download latest successful daily frozen bundle
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          RUN=$(gh run list --repo merry02180218-ai/boatrace-backtest --workflow daily-3head-v288-production.yml --status success --limit 1 --json databaseId --jq '.[0].databaseId')
+          test -n "$RUN"
+          echo "DAILY_RUN=$RUN"
+          gh run download "$RUN" --repo merry02180218-ai/boatrace-backtest --name daily-3head-v288-production --dir daily_artifact
+          test -f "daily_artifact/live_outputs/v288/$TARGET8/daily_manifest.json"
+          test -f "daily_artifact/live_outputs/v288/$TARGET8/live_cache.joblib"
+      - name: Verify bundle date and PRE gate before any LIVE fetch
+        env:
+          JCD_IN: ${{ inputs.jcd }}
+          RACE_IN: ${{ inputs.race }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          target=os.environ['TARGET_DATE']; day8=os.environ['TARGET8']
+          jcd=int(os.environ['JCD_IN']); race=int(os.environ['RACE_IN'])
+          if not 1 <= jcd <= 24 or not 1 <= race <= 12: raise SystemExit('invalid jcd/race')
+          p=Path('daily_artifact/live_outputs/v288')/day8/'daily_manifest.json'
+          m=json.loads(p.read_text(encoding='utf-8'))
+          if m.get('target_date') != target: raise SystemExit(f'bundle date mismatch: {m.get("target_date")} != {target}')
+          if not m.get('result_blind_target_day') or m.get('result_or_payout_used'):
+              raise SystemExit('bundle leakage guard failed')
+          code=f'{day8}{jcd:02d}{race:02d}'
+          eligible=code in set(m.get('pre_candidate_race_codes',[]))
+          gate={'race_code':code,'target_date':target,'pre_eligible':eligible,'daily_manifest':m,'result_or_payout_used':False}
+          Path('live_v288_gate.json').write_text(json.dumps(gate,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          with open(os.environ['GITHUB_ENV'],'a',encoding='utf-8') as f:
+              f.write(f'RACE_CODE={code}\nPRE_ELIGIBLE={1 if eligible else 0}\n')
+          print(json.dumps({'race_code':code,'pre_eligible':eligible},ensure_ascii=False))
+          PY
+      - name: Emit PRE NO_BET without exhibition/odds fetch
+        if: env.PRE_ELIGIBLE == '0'
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          x={'race_code':os.environ['RACE_CODE'],'decision':'NO_BET','reason':'not PRE candidate','downstream_requested':False,'result_or_payout_used':False}
+          Path('live_v288_result.json').write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(x,ensure_ascii=False,indent=2))
+          PY
+      - name: Resolve official deadline only for PRE candidate
+        if: env.PRE_ELIGIBLE == '1'
+        env:
+          JCD_IN: ${{ inputs.jcd }}
+          RACE_IN: ${{ inputs.race }}
+          DEADLINE_OVERRIDE: ${{ inputs.deadline_jst }}
+        run: |
+          if [ -n "$DEADLINE_OVERRIDE" ]; then
+            DEADLINE="$DEADLINE_OVERRIDE"
+            printf '%s\n' '{"source":"workflow_dispatch override","result_endpoint_requested":false,"payout_endpoint_requested":false}' > live_v288_deadline_meta.json
+          else
+            DEADLINE=$(python fetch_boatrace_deadline.py --date "$TARGET8" --jcd "$JCD_IN" --race "$RACE_IN" --meta live_v288_deadline_meta.json)
+          fi
+          test -n "$DEADLINE"
+          echo "DEADLINE_JST=$DEADLINE" >> "$GITHUB_ENV"
+      - name: One-shot frozen LIVE decision
+        if: env.PRE_ELIGIBLE == '1'
+        env:
+          JCD_IN: ${{ inputs.jcd }}
+          RACE_IN: ${{ inputs.race }}
+        run: |
+          python run_20260911_3head_v288_live.py \
+            --date "$TARGET8" --jcd "$JCD_IN" --race "$RACE_IN" \
+            --cache "daily_artifact/live_outputs/v288/$TARGET8/live_cache.joblib" \
+            --deadline-jst "$DEADLINE_JST" | tee live_v288_result.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: live-3head-v288-production-${{ env.TARGET8 }}-${{ inputs.jcd }}-${{ inputs.race }}
+          retention-days: 14
+          path: |
+            live_v288_gate.json
+            live_v288_deadline_meta.json
+            live_v288_result.json
+          if-no-files-found: ignore
