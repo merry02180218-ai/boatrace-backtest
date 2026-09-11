@@ -1,0 +1,65 @@
+name: benchmark fast exhibition clip
+
+on:
+  workflow_dispatch:
+    inputs:
+      race_date:
+        description: YYYYMMDD
+        required: true
+        default: '20260910'
+      stadium:
+        description: e.g. 01kiryu
+        required: true
+        default: '01kiryu'
+      race:
+        description: race number 1-12
+        required: true
+        default: '12'
+      clip_start_sec:
+        description: VOD seek start seconds
+        required: true
+        default: '82'
+      clip_duration_sec:
+        description: clip duration seconds
+        required: true
+        default: '52'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  fastclip:
+    runs-on: [self-hosted, japan]
+    timeout-minutes: 8
+    env:
+      RACE_DATE: ${{ inputs.race_date }}
+      STADIUM: ${{ inputs.stadium }}
+      RACE: ${{ inputs.race }}
+      CLIP_START_SEC: ${{ inputs.clip_start_sec }}
+      CLIP_DURATION_SEC: ${{ inputs.clip_duration_sec }}
+      LOCAL_PYTHON: C:\Users\merry\AppData\Local\Programs\Python\Python311\python.exe
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify preinstalled runtime
+        shell: powershell
+        run: |
+          & $env:LOCAL_PYTHON --version
+          ffmpeg -version | Select-Object -First 1
+          & $env:LOCAL_PYTHON -c "import playwright; print('playwright ok')"
+      - name: Fetch only start-exhibition clip
+        shell: powershell
+        run: '& $env:LOCAL_PYTHON download_boatcast_exhibition_fastclip.py'
+      - name: Show latency
+        shell: powershell
+        run: |
+          $m = Get-ChildItem -Filter 'boatcast_*_startclip.json' | Select-Object -First 1
+          Get-Content $m.FullName
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fastclip-${{ inputs.race_date }}-${{ inputs.stadium }}-${{ inputs.race }}
+          path: |
+            boatcast_*_startclip.mp4
+            boatcast_*_startclip.json
+          if-no-files-found: warn
