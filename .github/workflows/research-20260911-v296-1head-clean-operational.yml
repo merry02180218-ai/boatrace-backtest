@@ -1,0 +1,48 @@
+name: research v296 1head clean operational
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analyze_v296_1head_clean_operational_rebuild.py
+      - .github/workflows/research-20260911-v296-1head-clean-operational.yml
+permissions:
+  contents: write
+  actions: read
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn
+      - name: Run v296 clean operational rebuild
+        run: python analyze_v296_1head_clean_operational_rebuild.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v296-1head-clean-operational
+          path: |
+            analysis_v296_1head_clean_operational_self_audit.csv
+            analysis_v296_1head_clean_operational_folds.csv
+            analysis_v296_1head_clean_operational_monthly.csv
+            analysis_v296_1head_clean_operational_pooled.csv
+            summary_v296_1head_clean_operational.md
+          if-no-files-found: ignore
+      - name: Commit compact outputs
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
+          git add analysis_v296_1head_clean_operational_self_audit.csv \
+                  analysis_v296_1head_clean_operational_folds.csv \
+                  analysis_v296_1head_clean_operational_monthly.csv \
+                  analysis_v296_1head_clean_operational_pooled.csv \
+                  summary_v296_1head_clean_operational.md
+          if ! git diff --cached --quiet; then
+            git commit -m "results: v296 clean operational 1-head rebuild"
+            git pull --rebase origin main
+            git push
+          fi
