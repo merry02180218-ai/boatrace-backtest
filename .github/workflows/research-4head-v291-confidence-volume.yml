@@ -1,0 +1,76 @@
+name: Research 4-head v291 confidence volume
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_4head_v291_confidence_volume_rescue.py'
+      - '.github/workflows/research-4head-v291-confidence-volume.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: research-4head-v291-confidence-volume
+  cancel-in-progress: true
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy scikit-learn
+      - name: Syntax check
+        run: python -m py_compile analyze_4head_v291_confidence_volume_rescue.py
+      - name: Run leakage-safe all-candidate confidence research
+        run: python analyze_4head_v291_confidence_volume_rescue.py
+      - name: Validate safety and coverage
+        run: |
+          python - <<'PY'
+          import json, pandas as pd
+          from pathlib import Path
+          c=pd.read_csv('analysis_4head_v291_confidence_all_candidates.csv',dtype={'race_code':str})
+          assert len(c)==100 and c['race_code'].nunique()==100
+          assert set(c['month'].astype(str))=={'2026-04','2026-05','2026-06'}
+          j=json.loads(Path('head4_v291_confidence_rescue_candidate.json').read_text())
+          assert j['all_candidate_inference'] is True
+          assert j['outcome_conditioned_v283_csv_used_as_confidence'] is False
+          assert j['jul_aug_outcomes_used'] is False and j['september_outcomes_used'] is False
+          assert j['v96_used'] is False and j['base']['immutable'] is True
+          l=pd.read_csv('analysis_4head_v291_confidence_rescue_lomo.csv')
+          assert set(l['holdout_month'])=={'2026-04','2026-05','2026-06'}
+          print(Path('summary_4head_v291_confidence_volume_rescue.md').read_text())
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-v291-confidence-volume
+          path: |
+            analysis_4head_v291_confidence_all_candidates.csv
+            analysis_4head_v291_confidence_rescue_grid.csv
+            analysis_4head_v291_confidence_rescue_monthly.csv
+            analysis_4head_v291_confidence_rescue_lomo.csv
+            head4_v291_confidence_rescue_candidate.json
+            summary_4head_v291_confidence_volume_rescue.md
+      - name: Persist results
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add analysis_4head_v291_confidence_all_candidates.csv \
+                  analysis_4head_v291_confidence_rescue_grid.csv \
+                  analysis_4head_v291_confidence_rescue_monthly.csv \
+                  analysis_4head_v291_confidence_rescue_lomo.csv \
+                  head4_v291_confidence_rescue_candidate.json \
+                  summary_4head_v291_confidence_volume_rescue.md
+          git diff --cached --quiet && exit 0
+          git commit -m 'Add leakage-safe 4-head confidence volume research results'
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 3
+          done
+          exit 1
