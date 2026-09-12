@@ -1,0 +1,80 @@
+name: Research 4-head v291 volume rescue
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_4head_v291_volume_rescue.py'
+      - '.github/workflows/research-4head-v291-volume-rescue.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: research-4head-v291-volume-rescue
+  cancel-in-progress: true
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install numpy pandas
+      - name: Syntax check
+        run: python -m py_compile analyze_4head_v291_volume_rescue.py
+      - name: Run outcome-disciplined volume research
+        run: python analyze_4head_v291_volume_rescue.py
+      - name: Validate research safety and outputs
+        run: |
+          python - <<'PY'
+          import json, pandas as pd
+          from pathlib import Path
+          q=pd.read_csv('analysis_v288_4head_composite_odds_alln_detail.csv')
+          assert set(q['month'].astype(str).unique()) == {'2026-04','2026-05','2026-06'}
+          a=pd.read_csv('analysis_4head_v291_volume_rescue_candidates.csv')
+          m=pd.read_csv('analysis_4head_v291_volume_rescue_monthly.csv')
+          l=pd.read_csv('analysis_4head_v291_volume_rescue_lomo.csv')
+          j=json.loads(Path('head4_v291_volume_rescue_candidate.json').read_text())
+          assert j['jul_aug_outcomes_used'] is False
+          assert j['september_outcomes_used'] is False
+          assert j['base']=={'n':4,'composite_floor':7.0,'stake_yen':10000,'immutable':True}
+          assert set(a['scope'])=={'S+A','S'}
+          assert set(m['month'])=={'2026-04','2026-05','2026-06'}
+          assert set(l['holdout_month'])=={'2026-04','2026-05','2026-06'}
+          print(Path('summary_4head_v291_volume_rescue.md').read_text())
+          PY
+      - name: Upload research artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: head4-v291-volume-rescue
+          path: |
+            analysis_4head_v291_volume_rescue_candidates.csv
+            analysis_4head_v291_volume_rescue_monthly.csv
+            analysis_4head_v291_volume_rescue_frontier.csv
+            analysis_4head_v291_volume_rescue_lomo.csv
+            head4_v291_volume_rescue_candidate.json
+            summary_4head_v291_volume_rescue.md
+      - name: Persist generated research
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add analysis_4head_v291_volume_rescue_candidates.csv \
+                  analysis_4head_v291_volume_rescue_monthly.csv \
+                  analysis_4head_v291_volume_rescue_frontier.csv \
+                  analysis_4head_v291_volume_rescue_lomo.csv \
+                  head4_v291_volume_rescue_candidate.json \
+                  summary_4head_v291_volume_rescue.md
+          git diff --cached --quiet && exit 0
+          git commit -m 'Add 4-head v291 volume rescue research results'
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 3
+          done
+          exit 1
