@@ -1,0 +1,78 @@
+name: replay-june-v288-liveinput-fixed
+on:
+  push:
+    paths:
+      - '.github/workflows/replay-june-v288-liveinput-fixed.yml'
+
+jobs:
+  replay:
+    strategy:
+      fail-fast: false
+      max-parallel: 18
+      matrix:
+        date:
+          - '2026-06-01'
+          - '2026-06-02'
+          - '2026-06-04'
+          - '2026-06-05'
+          - '2026-06-06'
+          - '2026-06-07'
+          - '2026-06-09'
+          - '2026-06-10'
+          - '2026-06-12'
+          - '2026-06-14'
+          - '2026-06-17'
+          - '2026-06-18'
+          - '2026-06-19'
+          - '2026-06-23'
+          - '2026-06-24'
+          - '2026-06-26'
+          - '2026-06-28'
+          - '2026-06-29'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 joblib
+      - name: Frozen canonical artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
+          cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
+          gh run download 34326743303 --repo merry02180218-ai/boatrace-backtest --name v234-3head-waku10-restored-replay --dir golden_v234
+          cp golden_v234/analysis_v234_waku10_reconstruction_coverage.csv .
+          mkdir -p data/audit
+          cp -r golden_v234/data/audit/v234_waku10 data/audit/
+      - name: Prepare result-blind PRE
+        run: python prepare_v288_historical_pre_input.py --date '${{ matrix.date }}'
+      - name: Build 5/31-frozen operational cache
+        run: >-
+          python build_3head_v288_operational_month_day.py
+          --date '${{ matrix.date }}'
+          --month-first 2026-06-01
+          --month-next 2026-07-01
+          --history-cutoff 2026-05-31
+          --bias-start 2026-05-01
+      - name: Replay corrected LIVE inputs
+        run: |
+          DAY8=$(echo '${{ matrix.date }}' | tr -d '-')
+          python replay_v288_operational_day.py --date '${{ matrix.date }}' --cache "live_outputs/v288_operational/$DAY8/live_cache.joblib" --outdir "corrected_replay/$DAY8" --history-cutoff 2026-05-31
+          cp "current_input/v288/$DAY8/historical_input_manifest.json" "corrected_replay/$DAY8/input_manifest.json"
+          cp "live_outputs/v288_operational/$DAY8/daily_manifest.json" "corrected_replay/$DAY8/production_manifest.json"
+          cp "live_outputs/v288_operational/$DAY8/pre_scan.csv" "corrected_replay/$DAY8/pre_scan.csv"
+          python - <<PY
+          import json
+          p='corrected_replay/$DAY8/day_summary.json'
+          z=json.load(open(p,encoding='utf-8'))
+          assert z['result_or_payout_used_for_decision'] is False
+          assert z['results_joined_only_after_freeze'] is True
+          print('CORRECTED_DAY', json.dumps(z,ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v288-june-liveinput-fixed-${{ matrix.date }}
+          retention-days: 30
+          path: corrected_replay/
