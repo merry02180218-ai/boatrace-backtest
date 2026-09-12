@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Auto-research a production-feasible volume extension for HEAD4_V291_COMP7.
 
-The current N4/composite>=7 BET set is immutable BASE.  Research may only ADD
-races that BASE passed.  It never changes a BASE ticket, BASE stake, or BASE
-BET/PASS decision.  Rescue selection uses only the frozen v283 pair order and
+The current N4/composite>=7 BET set is immutable BASE. Research may only ADD
+races that BASE passed. It never changes a BASE ticket, BASE stake, or BASE
+BET/PASS decision. Rescue selection uses only the frozen v283 pair order and
 archived odds; result columns are used only after selection for Apr-Jun
 settlement/evaluation.
 
@@ -18,7 +18,6 @@ from __future__ import annotations
 
 from pathlib import Path
 import json
-import math
 import numpy as np
 import pandas as pd
 
@@ -61,7 +60,6 @@ def load_source() -> pd.DataFrame:
     for code,g in q.groupby('race_code'):
         if len(g)!=19 or g.n.nunique()!=19:
             raise RuntimeError(f'incomplete N curve: {code}')
-        # Composite must not increase as tickets are appended.
         z=g.sort_values('n').comp_odds.to_numpy(float)
         if np.any(np.diff(z)>1e-9):
             raise RuntimeError(f'non-monotone composite curve: {code}')
@@ -87,7 +85,7 @@ def pick_rescue(qrace: pd.DataFrame, family: str, param: int, floor: float):
         r=z.iloc[0]
         return r if float(r.comp_odds)>=floor else None
     if family=='ADAPT':
-        z=qrace[(qrace.n>=2)&(qrace.n<=int(param))& (qrace.comp_odds>=floor)].sort_values('n')
+        z=qrace[(qrace.n>=2)&(qrace.n<=int(param))&(qrace.comp_odds>=floor)].sort_values('n')
         return z.iloc[-1] if len(z) else None
     raise ValueError(family)
 
@@ -98,7 +96,7 @@ def apply_rule(q: pd.DataFrame, scope: str, family: str, param: int, floor: floa
     add=[]
     qq=q[q.month.isin(months)]
     if scope=='S':qq=qq[qq.layer=='S']
-    for code,g in qq[qq.race_code.isin(uc-bc)].groupby('race_code'):
+    for _,g in qq[qq.race_code.isin(uc-bc)].groupby('race_code'):
         r=pick_rescue(g,family,param,float(floor))
         if r is not None:add.append(r)
     rescue=pd.DataFrame(add,columns=q.columns) if add else q.iloc[0:0].copy()
@@ -132,7 +130,6 @@ def summarize_policy(q,scope,family,param,floor,months=MONTHS):
 
 
 def pareto(df: pd.DataFrame) -> pd.DataFrame:
-    # Non-dominated on volume, aggregate ROI and minimum-month ROI.
     z=df.copy(); keep=[]
     for i,r in z.iterrows():
         dom=z[(z.R>=r.R)&(z.roi_pct>=r.roi_pct)&(z.min_month_roi_pct>=r.min_month_roi_pct)&
@@ -152,7 +149,6 @@ def choose_tier(c: pd.DataFrame, base_roi: float, base_min: float):
     for name,mask in tiers:
         z=c[mask].copy()
         if len(z):
-            # User priority is more races; robustness breaks ties before headline ROI.
             z=z.sort_values(['R','min_month_roi_pct','roi_pct','added_R'],ascending=[False,False,False,False])
             return name,z.iloc[0]
     return 'NO_SAFE_CANDIDATE',None
@@ -163,8 +159,7 @@ def lomo(q: pd.DataFrame, scope: str, grid: pd.DataFrame):
     for hold in MONTHS:
         train=tuple(m for m in MONTHS if m!=hold)
         btrain=base_rows(q,scope,train); bta=agg(btrain)
-        bm=[]
-        for m in train:bm.append(agg(btrain[btrain.month==m])['roi_pct'])
+        bm=[agg(btrain[btrain.month==m])['roi_pct'] for m in train]
         bmin=float(np.nanmin(bm))
         rec=[]
         for _,r in grid.iterrows():
@@ -206,15 +201,13 @@ def main():
         chosen[scope]=(tier,ch,ba,bmin)
         lrows.extend(lomo(q,scope,grid_df))
 
-    A=pd.DataFrame(allrows); M=pd.DataFrame(monthrows); L=pd.DataFrame(lrows)
+    A=pd.DataFrame(allrows); M=pd.DataFrame(monthrows if False else monthrows); L=pd.DataFrame(lrows)
     A.to_csv(OUT,index=False);M.to_csv(MONTH,index=False);L.to_csv(LOMO,index=False)
     fronts=[]
     for scope in ('S+A','S'):
         f=pareto(A[A.scope==scope]);f.insert(0,'frontier_scope',scope);fronts.append(f)
     F=pd.concat(fronts,ignore_index=True);F.to_csv(FRONT,index=False)
 
-    # Candidate JSON is research output. Only S scope may be considered immediately
-    # operational because A_SCORE final LIVE scale is not yet formally frozen.
     payload={'schema':'head4_v291_volume_rescue_research_v1','generated_from':'analysis_v288_4head_composite_odds_alln_detail.csv',
              'development_months':list(MONTHS),'jul_aug_outcomes_used':False,'september_outcomes_used':False,
              'base':{'n':BASE_N,'composite_floor':BASE_FLOOR,'stake_yen':BANK,'immutable':True},'scopes':{}}
