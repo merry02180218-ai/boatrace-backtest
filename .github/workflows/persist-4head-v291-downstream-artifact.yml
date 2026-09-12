@@ -1,0 +1,54 @@
+name: Persist exact 4-head v291 downstream artifact
+
+on:
+  push:
+    paths:
+      - '.github/workflows/persist-4head-v291-downstream-artifact.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: persist-4head-v291-downstream-artifact
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  persist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn
+      - name: Rebuild frozen artifact and enforce exact parity
+        run: |
+          rm -f artifacts/head4_v291_downstream_20260630.json artifacts/head4_v291_downstream_parity_20260630.json
+          python freeze_4head_v291_downstream_artifacts.py
+          python head4_v291_downstream_inference.py
+          python - <<'PY'
+          import hashlib,json
+          p='artifacts/head4_v291_downstream_20260630.json'
+          a=json.load(open(p))
+          r=json.load(open('artifacts/head4_v291_downstream_parity_20260630.json'))
+          h=hashlib.sha256(open(p,'rb').read()).hexdigest()
+          assert h == 'a8ffa92bce66a30c880f7f92cadc9d72e1d66027207bae0bd061bb0f53f13634', h
+          assert a['policy']=='HEAD4_V291_COMP7'
+          assert a['frozen_training_cutoff']=='2026-06-30'
+          assert a['jul_aug_labels_used'] is False
+          assert a['september_labels_used'] is False
+          assert a['v96_production_signal_used'] is False
+          assert a['parity']['status']=='PASS'
+          assert r['status']=='PASS'
+          print('EXACT_ARTIFACT_SHA256',h)
+          PY
+      - name: Persist exact production artifact
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add artifacts/head4_v291_downstream_20260630.json artifacts/head4_v291_downstream_parity_20260630.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Persist exact frozen 4-head v291 downstream artifact'
+          git pull --rebase origin main
+          git push origin HEAD:main
