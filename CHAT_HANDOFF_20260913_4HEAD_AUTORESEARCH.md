@@ -17,37 +17,60 @@ Current production history remains `HEAD4_V291_COMP7`. Do not mutate it in place
 
 July/August 2026 remain NON-PRISTINE. September 2026 outcomes are outcome-blind and prohibited for fitting, calibration, rule selection or evaluation. v96 is prohibited from production logic.
 
-## Important audit finding
+## Exact A-LIVE identity audit result
 
-The existing `analyze_4head_v291_a_targetcomp_rescue.py` was not valid evidence for production A-LIVE rescue because it directly used `analysis_v288_4head_composite_odds_alln_detail.csv` and `layer == 'A'`. Those A identities are historical v271 OOF identities. The frozen final A-LIVE artifact (`HEAD4_V273_A_LIVE_QMAP`) can select different exact race identities even if aggregate/monthly counts are similar.
+Corrected workflow run `34704536525` completed successfully and proved the old OOF-A identity set is not identical to the frozen A-LIVE identity set.
 
-Therefore old target-composite A-rescue metrics must NOT be promoted or quoted as an exact A-LIVE backtest.
+- exact frozen A-LIVE: 47R
+- old OOF A curves: 47R
+- overlap: 44R
+- added vs old: 3R
+- dropped vs old: 3R
+- identity sets equal: NO
+- complete all-N curve coverage before recovery: 44/47
+- missing exact identities:
+  - `202604190703`
+  - `202604272402`
+  - `202606130609`
 
-## Research resumed
+Therefore the old v288 OOF-A target-composite ROI is explicitly rejected as production evidence. No partial-44R ROI claim is allowed.
 
-Commits created to correct the research path:
+The run also verified:
+- Jul/Aug outcomes used: false
+- September outcomes used: false
+- v96 production signal used: false
+- frozen A-LIVE cutoff: 2026-06-30
+- mapped A-LIVE threshold: 0.2710428764008591
 
-- `ecf279c2bc78ce9e9b91c19c2b0b90a7d33d5736` — harden workflow with exact A-LIVE identity audit and scikit-learn dependencies.
-- `383c6f8115678fde7b17326ac47060e6d5fe8e38` — reconstruct exact frozen A-LIVE identities before any ticket optimization.
+## Recovery path implemented
 
-Workflow:
+The repository already contains immutable official closing 3T odds archives under `data/official_closing_odds3t/YYYY/MM/DD.csv` with 120 combinations, source metadata, and `snapshot_type=closing_displayed`. These are the same historical closing-odds class already used by the repo's v288 operational replay support.
 
-- `.github/workflows/research-4head-v291-a-targetcomp.yml`
-- current run: `34704536525`
+New recovery implementation:
 
-The corrected research now:
+- `recover_4head_v291_exact_a_live_curves.py`
+- commit `2a636b79137e40f4b0affd2544d03b749db648e2`
+- workflow hardening commit `e0b8c6daef30f47c33fc94c718716b65c509990f`
 
-1. validates the frozen A-LIVE artifact (`artifacts/head4_v273_a_live_20260630.json`), cutoff 2026-06-30;
-2. reconstructs the exact Apr-Jun A-LIVE candidate identities using frozen final-model inference;
-3. compares them to old v271 OOF A identities;
-4. requires complete archived N=2..20 pre-deadline odds curves for every exact A-LIVE race;
-5. fails closed if even one exact A-LIVE identity lacks a complete curve;
-6. only if coverage is complete, runs variable-N target-composite rescue research;
-7. excludes the frozen v291 base bets from rescue economics;
-8. requires standalone all-month safety plus LOMO before a candidate can be considered.
+Recovery logic is deliberately outcome-blind for ordering/selection:
 
-Outputs expected:
+1. reconstruct the exact frozen A-LIVE IDs;
+2. identify only exact A-LIVE races absent from the old all-N table;
+3. rebuild generic opponent feature rows from Apr-Jun pre-result data;
+4. apply the frozen `head4_v291_downstream_20260630.json` SECOND and conditional THIRD inference states;
+5. reproduce frozen v283 `TOP2XTOP2`, alpha2=0.60 full 20-pair order;
+6. read immutable 120/120 official closing odds for the missing races;
+7. create N=2..20 curves and ¥10,000 / ¥100 Hamilton inverse-odds Dutch economics;
+8. append recovered rows only to a separate research CSV, preserving the original v288 OOF table unchanged;
+9. rerun exact A-LIVE target-composite search only if 47/47 identity coverage is complete;
+10. retain standalone all-month + LOMO promotion gates.
 
+Recovered rows are marked `A_LIVE_RECOVERED`; the old OOF A identity set remains auditable and is not relabeled.
+
+Expected new outputs:
+
+- `audit_4head_v291_a_live_curve_recovery.json`
+- `analysis_v291_4head_composite_odds_alln_exactalive.csv`
 - `audit_4head_v291_a_live_identity.json`
 - `analysis_4head_v291_a_targetcomp_rescue.csv`
 - `analysis_4head_v291_a_targetcomp_rescue_monthly.csv`
@@ -55,16 +78,22 @@ Outputs expected:
 - `summary_4head_v291_a_targetcomp_rescue.md`
 - `head4_v291_a_targetcomp_rescue_candidate.json`
 
-## Resume point
+## Current CI / resume point
 
-At this handoff update, run `34704536525` is in progress. The next automation/chat must inspect this run first.
+Current workflow run: `34707632922` (`Research 4-head v291 A target-composite rescue`).
+
+At this handoff update the run is in progress after the recovery implementation was pushed. The next automation/chat must inspect this run first.
 
 If success:
-- read `audit_4head_v291_a_live_identity.json` and the summary;
-- if `missing_curve_R > 0`, reject any partial-subset ROI claims and continue by reconstructing/fetching immutable archived pre-deadline 120/120 odds for the missing exact identities;
-- if all exact curves are available, inspect standalone monthly ROI and LOMO and only then consider a new version/policy ID.
+- require `audit_4head_v291_a_live_curve_recovery.json.status == PASS`;
+- require `missing_before_R == recovered_R`;
+- require exact identity audit `missing_curve_R == 0` and `PASS_EXACT_CURVES_AVAILABLE`;
+- then inspect rescue standalone R/ROI, each Apr/May/Jun ROI, and LOMO;
+- only consider a new policy/version if the added route itself passes safety gates; do not use v291 base profit to mask a losing rescue.
 
 If failure:
-- inspect job logs, fix the exact failure, rerun, and update this handoff.
+- inspect the exact failed step/log;
+- fix feature parity, official closing-odds lookup, pair ordering, or Dutch reconstruction without relaxing leak guards;
+- rerun and update this handoff.
 
-Do not use July/August outcomes or any September result/payout labels to solve failures or select rules.
+Do not use July/August outcomes or any September result/payout labels to solve failures or select rules. Current production `HEAD4_V291_COMP7` remains unchanged until a separately versioned rescue route passes all gates.
