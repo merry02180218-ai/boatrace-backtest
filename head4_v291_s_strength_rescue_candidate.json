@@ -1,0 +1,13 @@
+{
+  "schema": "head4_v291_s_strength_rescue_v1",
+  "jul_aug_outcomes_used": false,
+  "september_outcomes_used": false,
+  "v96_used": false,
+  "base": {
+    "policy": "HEAD4_V291_COMP7_S",
+    "R": 10,
+    "immutable": true
+  },
+  "selection_tier": "NO_SAFE_CANDIDATE",
+  "lomo_all_holdout_rescue_profitable": false
+}
