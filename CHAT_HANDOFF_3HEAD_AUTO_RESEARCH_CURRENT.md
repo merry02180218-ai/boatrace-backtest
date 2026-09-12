@@ -7,82 +7,66 @@
 - July/August are **NON-PRISTINE**.
 - September outcomes are **not loaded / not used for tuning**.
 - frozen canonical source: Run `34383567078`, artifact `v243-3head-expand-feature-audit`, artifact ID `10118044294`, max date 2026-08-31.
+- latest completed research-results commit before this handoff update: `75c2094a51907d8e40fac4872fa9969695a87c8c`.
 
 ## Wave 1 — final-NO_BET signal ranking
-- infrastructure merged to main by PR #2; merge SHA `bf26c1fe1ba5974341a6f204b583c7c9e68358b0`.
-- successful canonical Wave-1 Run `34703862487`, artifact `v289-3head-addon-wave1`, artifact ID `10300816836`.
-- equivalent earlier in-session Run `34703771330`, artifact ID `10301626123`, had valid research/guards/artifact but failed only at concurrent report-persist push.
-- candidate pool: **178R**, operational PRE S/A + v242-buyable + final v288 `NO_BET` only.
-- best tested variant: `return_rank@0.45`.
-- best add-on: **84R / 15 hits / ROI 54.92% / profit -378,700 yen**.
-- combined: **178R / ROI 117.04%**.
+- Run `34703862487`, artifact `v289-3head-addon-wave1`, artifact ID `10300816836`.
+- candidate pool: **178R**.
+- best: `return_rank@0.45` = **84R / 15 hits / ROI 54.92% / profit -378,700 yen**.
+- combined: 178R / ROI 117.04%.
 - decision: **NO_ADOPTION_WAVE1**.
+- dead ends retained: residual_hit, exhibition_upgrade, return_rank, attack_style_split, orthogonal_consensus, ev_calibrated.
 
-### Wave-1 dead ends retained
-- `residual_hit`: prior-reject outcome effect ranking over pre-race safe features.
-- `exhibition_upgrade`: current exhibition/ST/original-exhibition family.
-- `return_rank`: prior-reject realized-return ranking, prior months only.
-- `attack_style_split`: stretch-vs-turn regimes followed by prior-trained ranking.
-- `orthogonal_consensus`: residual + exhibition + return independent-score consensus.
-- `ev_calibrated`: residual hit score + current composite odds, alpha selected on prior months only.
-- Do not repeat these merely by loosening/tightening coverage fractions.
-
-## Wave 2 — ticket-structure / opponent-order research
-- script: `research_v289_3head_addon_wave2.py`.
-- workflow: `.github/workflows/research-3head-v289-addon-wave2.yml`.
-- current Run: **`34703969778`**, head SHA `8f3fa8cfd8033838fa8be5ece7b25a01ed7b45f1`.
-- state at this handoff update: **in progress**, inside ticket-structure research step.
-- tests frozen V221 opponent order with exact 10,000-yen Dutch using:
-  - fixed Top2..Top10;
-  - target composite odds 2.5 / 3 / 3.5 / 4 / 5 / 6 / 8;
-  - prior-month-only selectors `wf_profit`, `wf_stable`, `wf_recent`.
-- v288 thresholds are untouched.
-- planned artifact: `v289-3head-addon-wave2-ticket-structure`.
-- if the run fails, inspect/fix/re-run. If it succeeds, record best fixed + walk-forward policy, add-on-only and combined metrics, monthly minimum ROI, red months and max DD here.
+## Wave 2 — ticket structure while keeping frozen V221 opponent order
+- Run `34703969778` completed successfully.
+- artifact: `v289-3head-addon-wave2-ticket-structure`, artifact ID **`10301039743`**.
+- generated-results commit: `1b8bd73ededaab51b854bd029ce588993846439e`.
+- population: operational PRE S/A + original v242-buyable + final v288 NO_BET only.
+- tested fixed Top2..Top10; target composite odds 2.5 / 3 / 3.5 / 4 / 5 / 6 / 8; exact 10,000-yen Dutch.
+- best fixed structure: **Top10 = 177R / 45 hits / ROI 57.70% / profit -748,660 yen / minimum monthly ROI 24.50% / 7 red months**.
+- prior-month-only selectors `wf_profit`, `wf_stable`, `wf_recent` all chose **0 add-on races**, correctly refusing the weak pool.
+- decision: **NO_ADOPTION_WAVE2**.
+- interpretation: changing only ticket count/composite-odds target while retaining frozen V221 order does not rescue v288 NO_BETs.
 
 ## Wave 3 — independent PRE-B LIVE rescue
-- This is **not** an S/A threshold relaxation. It is a separate candidate population: operational PRE grade B + existing v242-buyable ticket structure, then prior-PRE-B-trained LIVE rescue scoring.
-- workflow Run: **`34704413463`** — success.
-- run head SHA: `f16915524e4c2e94ae6e1b810387310d3858a00f`.
-- generated-results commit: `258ec82` (full SHA can be refreshed from branch log if needed).
-- artifact: `v289-3head-addon-wave3-preb`.
-- artifact ID: **`10301232830`**.
-- guards passed: baseline 94/52/1,622,070; source <= 2026-08-31; September unused; not-threshold-relaxation=true; overlap zero.
+- not an S/A threshold relaxation; separate PRE-B population.
+- Run `34704413463` success; artifact `v289-3head-addon-wave3-preb`, artifact ID **`10301232830`**.
+- generated-results commit `258ec82`.
 - raw PRE-B buyable pool: **81R / 23 hits / ROI 84.42%**.
-- best numerical ROI was `preb_ev@0.20`: **5R / 2 hits / ROI 117.28% / profit +8,640 yen**, but minimum monthly ROI **0%**, only 5 races, so it fails robustness/sample gates.
-- among 20+ race variants, best was `preb_return_rank@0.50`: **26R / 6 hits / ROI 67.47% / profit -84,590 yen**, minimum monthly ROI 36.93%.
-- `preb_return_rank@0.35`: 20R / 4 hits / ROI 58.06%.
-- `preb_ev@0.50`: 20R / 3 hits / ROI 44.09%.
-- `preb_ticket_quality@0.50`: 22R / 3 hits / ROI 40.84%.
+- best numerical ROI: `preb_ev@0.20` = **5R / 2 hits / ROI 117.28% / profit +8,640 yen**, but only 5 races and minimum monthly ROI 0%, so rejected.
+- best 20+ race variant: `preb_return_rank@0.50` = **26R / 6 hits / ROI 67.47% / profit -84,590 yen / minimum monthly ROI 36.93%**.
 - decision: **NO_ADOPTION_WAVE3**.
+- tiny-sample positive ROI is explicitly rejected.
 
-### Wave-3 dead ends retained
-- PRE-B hit rank.
-- PRE-B exhibition-only rank.
-- PRE-B return rank.
-- PRE-B ticket-quality rank.
-- PRE-B independent-score consensus.
-- PRE-B EV rank using composite odds with alpha selected only on prior PRE-B months.
-- Tiny-sample positive ROI is explicitly rejected; do not promote `preb_ev@0.20`.
+## Wave 4 — venue / field-archetype residual research
+- distinct family added after Wave 2 completed; v288 thresholds and tickets unchanged.
+- Run **`34706093149`** success.
+- run head SHA `4217631f55ecfa2b0555942e9e11b9870d2f1308`.
+- artifact `v289-3head-addon-wave4-archetype`, artifact ID **`10301509909`**.
+- generated-results commit **`75c2094a51907d8e40fac4872fa9969695a87c8c`**.
+- candidate pool: **178R**.
+- tested: venue-local, field-archetype-local, venue×archetype, prior-venue-ROI gate; each month prior-month-only with minimum local sample guards.
+- only positive numerical variant: `archetype_local@0.25` and `@0.40` = **2R / 1 hit / ROI 156.40% / profit +11,280 yen**.
+- this is rejected because sample is only 2 races; it does not satisfy the >=20 race robustness gate.
+- venue-local / venue×archetype / venue-ROI-gate routes selected 0 races after minimum-sample guards.
+- decision: **NO_ADOPTION_WAVE4**.
+
+## What NOT to repeat
+- simple coverage-fraction tweaks of Wave-1 scores.
+- simple TopN/composite-odds changes on frozen V221 order.
+- PRE-B families already tested in Wave 3.
+- venue/archetype segmentation without enough prior sample; the 2R positive result is not promotion evidence.
 
 ## Real-operation audit
-- Wave 1/3 score inputs are columns present before settlement in the canonical v243/v288 artifact.
-- all test-month fitting uses only prior-month outcomes; current test-month result/payout is settlement/evaluation only.
-- missing historical features may be prior-training median-imputed for research; any shadow/production promotion must fail closed on required current inputs.
-- no add-on overlaps the fixed v288 baseline in the evaluated population.
-- no v288 production workflow/model was changed.
+- v288 baseline overlap is zero by construction in the add-on populations.
+- every test-month fit uses prior-month outcomes only; current-month result/payout is settlement/evaluation only.
+- source max date is 2026-08-31; September outcomes are excluded from tuning.
+- research-time historical missing features may use prior-training imputation; any shadow/production route must fail closed on missing required current inputs.
+- no production workflow/model was changed.
 
-## Mandatory metrics for later waves
-- add-on BETs / hits / hit rate / payout / profit / ROI.
-- monthly ROI, red-month count, minimum monthly ROI.
-- max drawdown.
-- overlap with v288.
-- combined v288 + add-on totals.
-- pre-race source availability / fail-closed viability.
-- failed trials and rejection reason.
-- Run ID / artifact name + ID / latest commit SHA.
-
-## Exact restart point
-1. Finish **Wave 2 Run 34703969778** and persist the ticket-structure result.
-2. If Wave 2 is also rejected, next distinct family is venue/field-archetype residual research with minimum prior-sample guards and/or true opponent re-ranking; do not revisit Wave-1 coverage tweaks or the failed PRE-B families unchanged.
-3. Any historical passer advances only to **September outcome-blind shadow**, never directly over v288 production.
+## Exact next restart point
+1. Start **Wave 5 true opponent re-ranking**. Wave 2 proved ticket-count changes are not enough; next research must change the opponent / trifecta ordering itself using only prior-month evidence and pre-race-available inputs.
+2. Keep v288 94R fixed and evaluate only add-on races outside baseline; report add-on-only metrics separately.
+3. Candidate Wave-5 families: pair-position residual model, opponent-order model by 2nd/3rd-place racer strength, calibrated ticket-level EV, and independent consensus of opponent order vs current V221.
+4. Require exact 10,000-yen Dutch, pre-race odds only, zero overlap, monthly metrics, max DD, and source/fail-closed audit.
+5. Any historical passer advances only to **September outcome-blind shadow**; never directly replace v288.
