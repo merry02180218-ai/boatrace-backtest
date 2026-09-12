@@ -1,0 +1,7640 @@
+{
+  "research_version": "v289-addon-wave7-attack-style-role",
+  "github_run_id": "34712604315",
+  "source_max_date": "2026-08-31",
+  "waku10_validated_races": 156,
+  "rules": {
+    "baseline_fixed": "v288 operational 94R",
+    "candidate_universe": "operational PRE S/A + original v242-buyable + final v288 NO_BET",
+    "test_months": "2026-02..2026-08",
+    "training": "prior-month reject races only, same pre-race attack regime, separate 2nd/3rd role models",
+    "regime": "stretch if f__c_attack3_stretch >= f__c_attack3_turn else turn; missing => fail closed",
+    "july_august": "NON-PRISTINE",
+    "september_outcomes_used": false,
+    "not_threshold_relaxation": true,
+    "min_positive_train_races": 5,
+    "variants": [
+      "attack_role_product_target3",
+      "attack_role_ev_target3",
+      "attack_role_product_top10",
+      "attack_role_ev_top10"
+    ]
+  },
+  "baseline": {
+    "races": 94,
+    "hits": 52,
+    "hit_rate_pct": 55.319148936170215,
+    "stake_yen": 940000,
+    "payout_yen": 1622070.0,
+    "profit_yen": 682070.0,
+    "roi_pct": 172.56063829787234,
+    "max_drawdown_yen": 80000.0
+  },
+  "candidate_pool": {
+    "races": 178,
+    "hits": 23,
+    "hit_rate_pct": 12.92134831460674,
+    "stake_yen": 1780000,
+    "payout_yen": 702420.0,
+    "profit_yen": -1077580.0,
+    "roi_pct": 39.46179775280899
+  },
+  "methods": [
+    {
+      "method": "attack_role_ev_target3",
+      "addon": {
+        "races": 178,
+        "hits": 25,
+        "hit_rate_pct": 14.044943820224718,
+        "stake_yen": 1780000,
+        "payout_yen": 1128280.0,
+        "profit_yen": -651720.0,
+        "roi_pct": 63.386516853932584,
+        "max_drawdown_yen": 723200.0
+      },
+      "monthly": {
+        "2026-02": {
+          "races": 13,
+          "hits": 1,
+          "hit_rate_pct": 7.6923076923076925,
+          "stake_yen": 130000,
+          "payout_yen": 44880.0,
+          "profit_yen": -85120.0,
+          "roi_pct": 34.52307692307692
+        },
+        "2026-03": {
+          "races": 19,
+          "hits": 2,
+          "hit_rate_pct": 10.526315789473685,
+          "stake_yen": 190000,
+          "payout_yen": 91540.0,
+          "profit_yen": -98460.0,
+          "roi_pct": 48.17894736842105
+        },
+        "2026-04": {
+          "races": 7,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 70000,
+          "payout_yen": 0.0,
+          "profit_yen": -70000.0,
+          "roi_pct": 0.0
+        },
+        "2026-05": {
+          "races": 27,
+          "hits": 3,
+          "hit_rate_pct": 11.11111111111111,
+          "stake_yen": 270000,
+          "payout_yen": 166860.0,
+          "profit_yen": -103140.0,
+          "roi_pct": 61.8
+        },
+        "2026-06": {
+          "races": 25,
+          "hits": 5,
+          "hit_rate_pct": 20.0,
+          "stake_yen": 250000,
+          "payout_yen": 174940.0,
+          "profit_yen": -75060.0,
+          "roi_pct": 69.976
+        },
+        "2026-07": {
+          "races": 39,
+          "hits": 7,
+          "hit_rate_pct": 17.94871794871795,
+          "stake_yen": 390000,
+          "payout_yen": 268350.0,
+          "profit_yen": -121650.0,
+          "roi_pct": 68.8076923076923
+        },
+        "2026-08": {
+          "races": 48,
+          "hits": 7,
+          "hit_rate_pct": 14.583333333333334,
+          "stake_yen": 480000,
+          "payout_yen": 381710.0,
+          "profit_yen": -98290.0,
+          "roi_pct": 79.52291666666666
+        }
+      },
+      "red_months": 7,
+      "min_monthly_roi_pct": 0.0,
+      "combined": {
+        "races": 272,
+        "hits": 77,
+        "hit_rate_pct": 28.308823529411764,
+        "stake_yen": 2720000,
+        "payout_yen": 2750350.0,
+        "profit_yen": 30350.0,
+        "roi_pct": 101.1158088235294,
+        "max_drawdown_yen": 325530.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "method": "attack_role_ev_top10",
+      "addon": {
+        "races": 178,
+        "hits": 25,
+        "hit_rate_pct": 14.044943820224718,
+        "stake_yen": 1780000,
+        "payout_yen": 1114740.0,
+        "profit_yen": -665260.0,
+        "roi_pct": 62.62584269662921,
+        "max_drawdown_yen": 736740.0
+      },
+      "monthly": {
+        "2026-02": {
+          "races": 13,
+          "hits": 1,
+          "hit_rate_pct": 7.6923076923076925,
+          "stake_yen": 130000,
+          "payout_yen": 44880.0,
+          "profit_yen": -85120.0,
+          "roi_pct": 34.52307692307692
+        },
+        "2026-03": {
+          "races": 19,
+          "hits": 2,
+          "hit_rate_pct": 10.526315789473685,
+          "stake_yen": 190000,
+          "payout_yen": 90210.0,
+          "profit_yen": -99790.0,
+          "roi_pct": 47.47894736842105
+        },
+        "2026-04": {
+          "races": 7,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 70000,
+          "payout_yen": 0.0,
+          "profit_yen": -70000.0,
+          "roi_pct": 0.0
+        },
+        "2026-05": {
+          "races": 27,
+          "hits": 3,
+          "hit_rate_pct": 11.11111111111111,
+          "stake_yen": 270000,
+          "payout_yen": 166860.0,
+          "profit_yen": -103140.0,
+          "roi_pct": 61.8
+        },
+        "2026-06": {
+          "races": 25,
+          "hits": 5,
+          "hit_rate_pct": 20.0,
+          "stake_yen": 250000,
+          "payout_yen": 171340.0,
+          "profit_yen": -78660.0,
+          "roi_pct": 68.536
+        },
+        "2026-07": {
+          "races": 39,
+          "hits": 7,
+          "hit_rate_pct": 17.94871794871795,
+          "stake_yen": 390000,
+          "payout_yen": 259740.0,
+          "profit_yen": -130260.0,
+          "roi_pct": 66.6
+        },
+        "2026-08": {
+          "races": 48,
+          "hits": 7,
+          "hit_rate_pct": 14.583333333333334,
+          "stake_yen": 480000,
+          "payout_yen": 381710.0,
+          "profit_yen": -98290.0,
+          "roi_pct": 79.52291666666666
+        }
+      },
+      "red_months": 7,
+      "min_monthly_roi_pct": 0.0,
+      "combined": {
+        "races": 272,
+        "hits": 77,
+        "hit_rate_pct": 28.308823529411764,
+        "stake_yen": 2720000,
+        "payout_yen": 2736810.0,
+        "profit_yen": 16810.0,
+        "roi_pct": 100.61801470588236,
+        "max_drawdown_yen": 334830.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "method": "attack_role_product_top10",
+      "addon": {
+        "races": 178,
+        "hits": 33,
+        "hit_rate_pct": 18.53932584269663,
+        "stake_yen": 1780000,
+        "payout_yen": 959930.0,
+        "profit_yen": -820070.0,
+        "roi_pct": 53.928651685393255,
+        "max_drawdown_yen": 839790.0
+      },
+      "monthly": {
+        "2026-02": {
+          "races": 13,
+          "hits": 2,
+          "hit_rate_pct": 15.384615384615385,
+          "stake_yen": 130000,
+          "payout_yen": 49720.0,
+          "profit_yen": -80280.0,
+          "roi_pct": 38.246153846153845
+        },
+        "2026-03": {
+          "races": 19,
+          "hits": 2,
+          "hit_rate_pct": 10.526315789473685,
+          "stake_yen": 190000,
+          "payout_yen": 56410.0,
+          "profit_yen": -133590.0,
+          "roi_pct": 29.689473684210526
+        },
+        "2026-04": {
+          "races": 7,
+          "hits": 1,
+          "hit_rate_pct": 14.285714285714286,
+          "stake_yen": 70000,
+          "payout_yen": 23460.0,
+          "profit_yen": -46540.0,
+          "roi_pct": 33.51428571428571
+        },
+        "2026-05": {
+          "races": 27,
+          "hits": 5,
+          "hit_rate_pct": 18.51851851851852,
+          "stake_yen": 270000,
+          "payout_yen": 191370.0,
+          "profit_yen": -78630.0,
+          "roi_pct": 70.87777777777778
+        },
+        "2026-06": {
+          "races": 25,
+          "hits": 9,
+          "hit_rate_pct": 36.0,
+          "stake_yen": 250000,
+          "payout_yen": 251780.0,
+          "profit_yen": 1780.0,
+          "roi_pct": 100.712
+        },
+        "2026-07": {
+          "races": 39,
+          "hits": 6,
+          "hit_rate_pct": 15.384615384615385,
+          "stake_yen": 390000,
+          "payout_yen": 146540.0,
+          "profit_yen": -243460.0,
+          "roi_pct": 37.57435897435897
+        },
+        "2026-08": {
+          "races": 48,
+          "hits": 8,
+          "hit_rate_pct": 16.666666666666668,
+          "stake_yen": 480000,
+          "payout_yen": 240650.0,
+          "profit_yen": -239350.0,
+          "roi_pct": 50.135416666666664
+        }
+      },
+      "red_months": 6,
+      "min_monthly_roi_pct": 29.689473684210526,
+      "combined": {
+        "races": 272,
+        "hits": 85,
+        "hit_rate_pct": 31.25,
+        "stake_yen": 2720000,
+        "payout_yen": 2582000.0,
+        "profit_yen": -138000.0,
+        "roi_pct": 94.92647058823529,
+        "max_drawdown_yen": 353190.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "method": "attack_role_product_target3",
+      "addon": {
+        "races": 178,
+        "hits": 29,
+        "hit_rate_pct": 16.292134831460675,
+        "stake_yen": 1780000,
+        "payout_yen": 943410.0,
+        "profit_yen": -836590.0,
+        "roi_pct": 53.00056179775281,
+        "max_drawdown_yen": 875870.0
+      },
+      "monthly": {
+        "2026-02": {
+          "races": 13,
+          "hits": 2,
+          "hit_rate_pct": 15.384615384615385,
+          "stake_yen": 130000,
+          "payout_yen": 60280.0,
+          "profit_yen": -69720.0,
+          "roi_pct": 46.36923076923077
+        },
+        "2026-03": {
+          "races": 19,
+          "hits": 2,
+          "hit_rate_pct": 10.526315789473685,
+          "stake_yen": 190000,
+          "payout_yen": 61730.0,
+          "profit_yen": -128270.0,
+          "roi_pct": 32.48947368421052
+        },
+        "2026-04": {
+          "races": 7,
+          "hits": 1,
+          "hit_rate_pct": 14.285714285714286,
+          "stake_yen": 70000,
+          "payout_yen": 26519.999999999996,
+          "profit_yen": -43480.0,
+          "roi_pct": 37.88571428571428
+        },
+        "2026-05": {
+          "races": 27,
+          "hits": 5,
+          "hit_rate_pct": 18.51851851851852,
+          "stake_yen": 270000,
+          "payout_yen": 191370.0,
+          "profit_yen": -78630.0,
+          "roi_pct": 70.87777777777778
+        },
+        "2026-06": {
+          "races": 25,
+          "hits": 7,
+          "hit_rate_pct": 28.0,
+          "stake_yen": 250000,
+          "payout_yen": 219130.0,
+          "profit_yen": -30870.0,
+          "roi_pct": 87.652
+        },
+        "2026-07": {
+          "races": 39,
+          "hits": 4,
+          "hit_rate_pct": 10.256410256410257,
+          "stake_yen": 390000,
+          "payout_yen": 117610.0,
+          "profit_yen": -272390.0,
+          "roi_pct": 30.156410256410258
+        },
+        "2026-08": {
+          "races": 48,
+          "hits": 8,
+          "hit_rate_pct": 16.666666666666668,
+          "stake_yen": 480000,
+          "payout_yen": 266770.0,
+          "profit_yen": -213230.0,
+          "roi_pct": 55.577083333333334
+        }
+      },
+      "red_months": 7,
+      "min_monthly_roi_pct": 30.156410256410258,
+      "combined": {
+        "races": 272,
+        "hits": 81,
+        "hit_rate_pct": 29.779411764705884,
+        "stake_yen": 2720000,
+        "payout_yen": 2565480.0,
+        "profit_yen": -154520.0,
+        "roi_pct": 94.31911764705882,
+        "max_drawdown_yen": 368270.0
+      },
+      "overlap_with_v288": 0
+    }
+  ],
+  "passers": [],
+  "decision": "NO_ADOPTION_WAVE7",
+  "audit": {
+    "2026-02": {
+      "stretch": {
+        "train_reject_codes": 51,
+        "boat3_win_train_races": 22,
+        "test_candidates": 9,
+        "model_available": true
+      },
+      "turn": {
+        "train_reject_codes": 61,
+        "boat3_win_train_races": 22,
+        "test_candidates": 4,
+        "model_available": true
+      }
+    },
+    "2026-03": {
+      "stretch": {
+        "train_reject_codes": 61,
+        "boat3_win_train_races": 25,
+        "test_candidates": 14,
+        "model_available": true
+      },
+      "turn": {
+        "train_reject_codes": 69,
+        "boat3_win_train_races": 26,
+        "test_candidates": 5,
+        "model_available": true
+      }
+    },
+    "2026-04": {
+      "stretch": {
+        "train_reject_codes": 76,
+        "boat3_win_train_races": 29,
+        "test_candidates": 3,
+        "model_available": true
+      },
+      "turn": {
+        "train_reject_codes": 79,
+        "boat3_win_train_races": 29,
+        "test_candidates": 4,
+        "model_available": true
+      }
+    },
+    "2026-05": {
+      "stretch": {
+        "train_reject_codes": 83,
+        "boat3_win_train_races": 32,
+        "test_candidates": 11,
+        "model_available": true
+      },
+      "turn": {
+        "train_reject_codes": 84,
+        "boat3_win_train_races": 30,
+        "test_candidates": 16,
+        "model_available": true
+      }
+    },
+    "2026-06": {
+      "stretch": {
+        "train_reject_codes": 96,
+        "boat3_win_train_races": 38,
+        "test_candidates": 13,
+        "model_available": true
+      },
+      "turn": {
+        "train_reject_codes": 104,
+        "boat3_win_train_races": 38,
+        "test_candidates": 12,
+        "model_available": true
+      }
+    },
+    "2026-07": {
+      "stretch": {
+        "train_reject_codes": 114,
+        "boat3_win_train_races": 47,
+        "test_candidates": 13,
+        "model_available": true
+      },
+      "turn": {
+        "train_reject_codes": 121,
+        "boat3_win_train_races": 47,
+        "test_candidates": 26,
+        "model_available": true
+      }
+    },
+    "2026-08": {
+      "stretch": {
+        "train_reject_codes": 130,
+        "boat3_win_train_races": 53,
+        "test_candidates": 27,
+        "model_available": true
+      },
+      "turn": {
+        "train_reject_codes": 154,
+        "boat3_win_train_races": 54,
+        "test_candidates": 21,
+        "model_available": true
+      }
+    }
+  },
+  "detail": {
+    "attack_role_product_target3": [
+      {
+        "month": "2026-02",
+        "date": "2026-02-28",
+        "race_code": "202602280208",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.8749316146107757
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-21",
+        "race_code": "202602212208",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.870685019829064
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-05",
+        "race_code": "202602051102",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 28600.0,
+        "n_alt": 10,
+        "comp_alt": 2.8747968045684726
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-27",
+        "race_code": "202602270103",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.0219950569326754
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-25",
+        "race_code": "202602250203",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.134997414130846
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-25",
+        "race_code": "202602251103",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.995346155298565
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-15",
+        "race_code": "202602150806",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.8211224302347118
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-17",
+        "race_code": "202602170103",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.932396498167837
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-25",
+        "race_code": "202602251102",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 5,
+        "comp_alt": 3.1412545236057063
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-11",
+        "race_code": "202602111304",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 7.554984274894544
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-23",
+        "race_code": "202602231203",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 6,
+        "comp_alt": 2.7817192096630055
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-14",
+        "race_code": "202602140701",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 31680.0,
+        "n_alt": 5,
+        "comp_alt": 3.092403766102643
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-18",
+        "race_code": "202602181304",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.523990692098883
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-05",
+        "race_code": "202603050402",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 6,
+        "comp_alt": 2.8446438828828713
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-05",
+        "race_code": "202603050407",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.4294985457728835
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-07",
+        "race_code": "202603071704",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.6968797489690384
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-27",
+        "race_code": "202603271706",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.101103922010434
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-28",
+        "race_code": "202603281707",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 3.051883114612047
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-23",
+        "race_code": "202603232206",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.2630277224328275
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-16",
+        "race_code": "202603161110",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 7.378468648119936
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-10",
+        "race_code": "202603100401",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 3.1294956045366575
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-16",
+        "race_code": "202603160304",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.3675287653371955
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-13",
+        "race_code": "202603132203",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 3.0577007585152636
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-04",
+        "race_code": "202603042108",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 30590.0,
+        "n_alt": 8,
+        "comp_alt": 3.0217894038498465
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-28",
+        "race_code": "202603281704",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.222048012188833
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-22",
+        "race_code": "202603221402",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.2637236750587304
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-31",
+        "race_code": "202603310802",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 31140.0,
+        "n_alt": 10,
+        "comp_alt": 3.356641924821195
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-29",
+        "race_code": "202603290404",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 7,
+        "comp_alt": 2.7171375917731733
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-02",
+        "race_code": "202603020402",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.9531008658295095
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-31",
+        "race_code": "202603310606",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 7,
+        "comp_alt": 3.305947493031554
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-16",
+        "race_code": "202603160605",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.652728928573897
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-21",
+        "race_code": "202603211503",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.170277677980631
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-26",
+        "race_code": "202604260802",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.121739681508371
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-03",
+        "race_code": "202604030105",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 11.032637606139675
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-24",
+        "race_code": "202604240407",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.601607507097788
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-14",
+        "race_code": "202604141003",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 26519.999999999996,
+        "n_alt": 8,
+        "comp_alt": 2.686952711749674
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-28",
+        "race_code": "202604280403",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.560983175256802
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-24",
+        "race_code": "202604240406",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 2.9125269648432415
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-07",
+        "race_code": "202604070204",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.333919948073459
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-16",
+        "race_code": "202605162004",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.908322420560221
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-03",
+        "race_code": "202605031106",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 6,
+        "comp_alt": 3.313644255461276
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-05",
+        "race_code": "202605051203",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.4966358890457165
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-19",
+        "race_code": "202605191402",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 3.002285023937822
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-04",
+        "race_code": "202605040708",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 55460.0,
+        "n_alt": 10,
+        "comp_alt": 5.530365449298727
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-04",
+        "race_code": "202605040206",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 46020.0,
+        "n_alt": 10,
+        "comp_alt": 4.558709882887903
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-05",
+        "race_code": "202605050403",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 30240.0,
+        "n_alt": 10,
+        "comp_alt": 3.0946981257695607
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-18",
+        "race_code": "202605181702",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.506525022135692
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-06",
+        "race_code": "202605061301",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.16920626922015
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-26",
+        "race_code": "202605262411",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.239045794861671
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-05",
+        "race_code": "202605050807",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.339097164408626
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-08",
+        "race_code": "202605080404",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.9801309137911955
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-02",
+        "race_code": "202605020701",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 2.819049295042989
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-24",
+        "race_code": "202605242308",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 2.8643382304622076
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-11",
+        "race_code": "202605111106",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 3.2335381607546263
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-17",
+        "race_code": "202605171009",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 29849.999999999996,
+        "n_alt": 10,
+        "comp_alt": 2.994295805509802
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-08",
+        "race_code": "202605081808",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.356836538048697
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-11",
+        "race_code": "202605110504",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 7,
+        "comp_alt": 3.087911911433727
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-18",
+        "race_code": "202605180610",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.4617566099276136
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-10",
+        "race_code": "202605100910",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 29800.0,
+        "n_alt": 10,
+        "comp_alt": 2.967518482466828
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-19",
+        "race_code": "202605190807",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.2393460093467366
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-19",
+        "race_code": "202605191704",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.785663732817321
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-11",
+        "race_code": "202605111107",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.9811429054758265
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-15",
+        "race_code": "202605151008",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.47925424788818
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-29",
+        "race_code": "202605292308",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 6,
+        "comp_alt": 2.745727057523201
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-15",
+        "race_code": "202605151901",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.73440200632724
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-19",
+        "race_code": "202605190201",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.8350209084696183
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-14",
+        "race_code": "202606140307",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 3.0233385465211957
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-28",
+        "race_code": "202606282403",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 27360.0,
+        "n_alt": 10,
+        "comp_alt": 2.7025008141270024
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-21",
+        "race_code": "202606210202",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 7,
+        "comp_alt": 3.021365186676585
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-07",
+        "race_code": "202606070609",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 2.9920769702966457
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-24",
+        "race_code": "202606242203",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 3.2335001134560026
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-07",
+        "race_code": "202606070802",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 30290.0,
+        "n_alt": 8,
+        "comp_alt": 3.0394509922170574
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-30",
+        "race_code": "202606300205",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 2.83528157890183
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-30",
+        "race_code": "202606300501",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 7,
+        "comp_alt": 2.754988253911028
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-29",
+        "race_code": "202606290206",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 7,
+        "comp_alt": 3.077621653568178
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-20",
+        "race_code": "202606201305",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 39480.0,
+        "n_alt": 10,
+        "comp_alt": 4.065882964582628
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-19",
+        "race_code": "202606191704",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.7883716957994436
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-08",
+        "race_code": "202606081509",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.742923161356976
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-28",
+        "race_code": "202606280502",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.943834001229265
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-22",
+        "race_code": "202606221503",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.9453845211109986
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-27",
+        "race_code": "202606270907",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 3.1771411166225323
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-07",
+        "race_code": "202606071006",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.956798788250886
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-27",
+        "race_code": "202606271706",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 32600.0,
+        "n_alt": 10,
+        "comp_alt": 3.194771403714659
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-20",
+        "race_code": "202606200208",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.2291795117438173
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-19",
+        "race_code": "202606191301",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 27859.999999999996,
+        "n_alt": 9,
+        "comp_alt": 2.8958097001331176
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-13",
+        "race_code": "202606131906",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.550189614110483
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-28",
+        "race_code": "202606280101",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 30600.0,
+        "n_alt": 7,
+        "comp_alt": 3.0616345213183216
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-03",
+        "race_code": "202606031308",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.843362502547526
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-02",
+        "race_code": "202606022004",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.424803673245962
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-21",
+        "race_code": "202606211605",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 30940.000000000004,
+        "n_alt": 9,
+        "comp_alt": 2.8901993077954287
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-18",
+        "race_code": "202606180910",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.9491337010822614
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-09",
+        "race_code": "202607090206",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 6,
+        "comp_alt": 2.9276265459948765
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-18",
+        "race_code": "202607180204",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.9746155404318033
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-27",
+        "race_code": "202607270407",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.57689524564612
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-19",
+        "race_code": "202607191608",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.823355391571653
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-25",
+        "race_code": "202607250206",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.9378133200744245
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-22",
+        "race_code": "202607220802",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 29100.0,
+        "n_alt": 6,
+        "comp_alt": 2.869396285815388
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-09",
+        "race_code": "202607090504",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 6,
+        "comp_alt": 2.9416987323628736
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-23",
+        "race_code": "202607232401",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 6,
+        "comp_alt": 3.0217228832380236
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-18",
+        "race_code": "202607182103",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.930371529214981
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-01",
+        "race_code": "202607012309",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 7,
+        "comp_alt": 2.9273025925632763
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-26",
+        "race_code": "202607260308",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.98297487583121
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-13",
+        "race_code": "202607131901",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.426317684875028
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-24",
+        "race_code": "202607240206",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.105432771415121
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-16",
+        "race_code": "202607162103",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.06860704550485
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-11",
+        "race_code": "202607110208",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 2.833365607649117
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-26",
+        "race_code": "202607260208",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 3.1083504953632555
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-17",
+        "race_code": "202607170805",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 28500.0,
+        "n_alt": 6,
+        "comp_alt": 2.8637498174989466
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-03",
+        "race_code": "202607031904",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 7,
+        "comp_alt": 2.9633030927027333
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-29",
+        "race_code": "202607292203",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 6,
+        "comp_alt": 3.153992484663242
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-31",
+        "race_code": "202607310803",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.142994908964268
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-08",
+        "race_code": "202607082004",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.092640892344153
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-20",
+        "race_code": "202607201507",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.9357922122351656
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-05",
+        "race_code": "202607052405",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 30599.999999999996,
+        "n_alt": 10,
+        "comp_alt": 3.0018142740665543
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-06",
+        "race_code": "202607060107",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 7,
+        "comp_alt": 3.184818192151845
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-22",
+        "race_code": "202607222309",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 7,
+        "comp_alt": 3.0952270101951713
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-20",
+        "race_code": "202607201903",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 2.5507631289479638
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-15",
+        "race_code": "202607152108",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.990776689487765
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-08",
+        "race_code": "202607082002",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 2.865696063501276
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-05",
+        "race_code": "202607052203",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.190686319434575
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-23",
+        "race_code": "202607231505",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 29410.0,
+        "n_alt": 9,
+        "comp_alt": 2.9372276657706493
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-31",
+        "race_code": "202607312310",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.9565668007474297
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-06",
+        "race_code": "202607061301",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.880158749963633
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-04",
+        "race_code": "202607040903",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 3.076828167322726
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-20",
+        "race_code": "202607201206",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.880148593625634
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-12",
+        "race_code": "202607121003",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.115274896387006
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-19",
+        "race_code": "202607192006",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.2117257753385062
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-13",
+        "race_code": "202607130303",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 3.0073106157376785
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-20",
+        "race_code": "202607201104",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.408873005488274
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-11",
+        "race_code": "202607110909",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.78652158074324
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-30",
+        "race_code": "202608300607",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 28560.0,
+        "n_alt": 8,
+        "comp_alt": 2.9508434917356765
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-12",
+        "race_code": "202608120407",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 28909.999999999996,
+        "n_alt": 8,
+        "comp_alt": 2.932691314222244
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-22",
+        "race_code": "202608220606",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.466634890744836
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-24",
+        "race_code": "202608242207",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 3.259345409355441
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-31",
+        "race_code": "202608310403",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 7,
+        "comp_alt": 2.835664710080467
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-24",
+        "race_code": "202608240603",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.834098483737367
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-05",
+        "race_code": "202608051407",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.0414457903200343
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-12",
+        "race_code": "202608121603",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.572474241641019
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-28",
+        "race_code": "202608280908",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 3.3020650093766757
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-07",
+        "race_code": "202608071504",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 3.154772466253531
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-16",
+        "race_code": "202608161704",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.7730257457430674
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-04",
+        "race_code": "202608042108",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 3.1528940014774154
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-17",
+        "race_code": "202608170903",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 3.0624705058645083
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-18",
+        "race_code": "202608181407",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.425123456606105
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-19",
+        "race_code": "202608191302",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.701029228149198
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-14",
+        "race_code": "202608142405",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.9408562575530923
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-24",
+        "race_code": "202608240308",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.095920381532917
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-08",
+        "race_code": "202608080206",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 33240.0,
+        "n_alt": 10,
+        "comp_alt": 3.0247907251983976
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-10",
+        "race_code": "202608100503",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.62577533999247
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-24",
+        "race_code": "202608241811",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.343393965343668
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-01",
+        "race_code": "202608010601",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.765471172878372
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-17",
+        "race_code": "202608171107",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.817375608119811
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-08",
+        "race_code": "202608080202",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 33840.0,
+        "n_alt": 10,
+        "comp_alt": 3.443597509950821
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-20",
+        "race_code": "202608201608",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.046744612569248
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-25",
+        "race_code": "202608251504",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 3.162372928444697
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-15",
+        "race_code": "202608150506",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 3.1005152054617158
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-18",
+        "race_code": "202608181811",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.7971567481185367
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-26",
+        "race_code": "202608260904",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 51100.0,
+        "n_alt": 10,
+        "comp_alt": 5.1162138762017255
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-05",
+        "race_code": "202608050409",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 3.029675906678874
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-06",
+        "race_code": "202608060407",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.135426090160664
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-28",
+        "race_code": "202608280404",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 7,
+        "comp_alt": 3.006698144757091
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-27",
+        "race_code": "202608271301",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 7,
+        "comp_alt": 2.6841842981748947
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-12",
+        "race_code": "202608122305",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 5,
+        "comp_alt": 2.8905981699127525
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-26",
+        "race_code": "202608261503",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.57913959296172
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-27",
+        "race_code": "202608271108",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 29340.0,
+        "n_alt": 8,
+        "comp_alt": 2.902772411173805
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-21",
+        "race_code": "202608210406",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 29590.0,
+        "n_alt": 8,
+        "comp_alt": 3.032476447531596
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-22",
+        "race_code": "202608220406",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 5,
+        "comp_alt": 3.268912039206694
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-01",
+        "race_code": "202608010805",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.9795335296605185
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-30",
+        "race_code": "202608300705",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.159855889738306
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-20",
+        "race_code": "202608201504",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.141361333087614
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-08",
+        "race_code": "202608080403",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.7530452105082333
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-16",
+        "race_code": "202608160104",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.259453559172903
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-18",
+        "race_code": "202608182001",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 32190.0,
+        "n_alt": 10,
+        "comp_alt": 3.1717718498806216
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-27",
+        "race_code": "202608271303",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 7,
+        "comp_alt": 3.041597607925947
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-01",
+        "race_code": "202608010606",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 8.17130323595272
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-05",
+        "race_code": "202608051707",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.590563483249361
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-16",
+        "race_code": "202608161011",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.773952272977608
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-26",
+        "race_code": "202608260607",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.4593672783424254
+      }
+    ],
+    "attack_role_ev_target3": [
+      {
+        "month": "2026-02",
+        "date": "2026-02-28",
+        "race_code": "202602280208",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.8188485908689747
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-21",
+        "race_code": "202602212208",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 23.047763662060873
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-05",
+        "race_code": "202602051102",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.624471790588712
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-27",
+        "race_code": "202602270103",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.021995056932676
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-25",
+        "race_code": "202602250203",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.844831475137088
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-25",
+        "race_code": "202602251103",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.421052032869342
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-15",
+        "race_code": "202602150806",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.0961658118569644
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-17",
+        "race_code": "202602170103",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.724331562305542
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-25",
+        "race_code": "202602251102",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 3.246550095654843
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-11",
+        "race_code": "202602111304",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 9.579006117623855
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-23",
+        "race_code": "202602231203",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 7,
+        "comp_alt": 3.0810316109620106
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-14",
+        "race_code": "202602140701",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 44880.0,
+        "n_alt": 10,
+        "comp_alt": 4.4941005386635196
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-18",
+        "race_code": "202602181304",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.130957163275868
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-05",
+        "race_code": "202603050402",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 7,
+        "comp_alt": 2.7011294160111694
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-05",
+        "race_code": "202603050407",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.316733770412512
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-07",
+        "race_code": "202603071704",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.136706539150639
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-27",
+        "race_code": "202603271706",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.705244472640432
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-28",
+        "race_code": "202603281707",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 3.051883114612047
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-23",
+        "race_code": "202603232206",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.04427237621036
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-16",
+        "race_code": "202603161110",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 12.871702852618917
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-10",
+        "race_code": "202603100401",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 18.39347893555322
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-16",
+        "race_code": "202603160304",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 8.127983161448553
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-13",
+        "race_code": "202603132203",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.543129015457183
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-04",
+        "race_code": "202603042108",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 29260.0,
+        "n_alt": 9,
+        "comp_alt": 2.9440913765517696
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-28",
+        "race_code": "202603281704",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.766058500477062
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-22",
+        "race_code": "202603221402",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.542474947643958
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-31",
+        "race_code": "202603310802",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 62280.0,
+        "n_alt": 10,
+        "comp_alt": 6.451397002669578
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-29",
+        "race_code": "202603290404",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 2.6777450538895353
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-02",
+        "race_code": "202603020402",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.9531008658295095
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-31",
+        "race_code": "202603310606",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.4127178108765674
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-16",
+        "race_code": "202603160605",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 9.928901905021704
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-21",
+        "race_code": "202603211503",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 7.832394878084094
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-26",
+        "race_code": "202604260802",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.121739681508372
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-03",
+        "race_code": "202604030105",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 11.754684778000527
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-24",
+        "race_code": "202604240407",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.050298432161925
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-14",
+        "race_code": "202604141003",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.8916853837828764
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-28",
+        "race_code": "202604280403",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 7.132469727945181
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-24",
+        "race_code": "202604240406",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 3.0036542996430087
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-07",
+        "race_code": "202604070204",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.333919948073459
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-16",
+        "race_code": "202605162004",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.4772824957819246
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-03",
+        "race_code": "202605031106",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 2.959741845036614
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-05",
+        "race_code": "202605051203",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 8.313729110041812
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-19",
+        "race_code": "202605191402",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.879653253210887
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-04",
+        "race_code": "202605040708",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 60180.0,
+        "n_alt": 10,
+        "comp_alt": 5.9638580732059125
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-04",
+        "race_code": "202605040206",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 59000.0,
+        "n_alt": 10,
+        "comp_alt": 5.839378212023609
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-05",
+        "race_code": "202605050403",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.791954641367984
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-18",
+        "race_code": "202605181702",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.612481105308199
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-06",
+        "race_code": "202605061301",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.052306215813327
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-26",
+        "race_code": "202605262411",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.239045794861671
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-05",
+        "race_code": "202605050807",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.246797325605422
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-08",
+        "race_code": "202605080404",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 7.641148589098769
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-02",
+        "race_code": "202605020701",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 3.1102088803073635
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-24",
+        "race_code": "202605242308",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.6103949499140255
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-11",
+        "race_code": "202605111106",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.125458963419693
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-17",
+        "race_code": "202605171009",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.319910861234467
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-08",
+        "race_code": "202605081808",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.116704242549565
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-11",
+        "race_code": "202605110504",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.2810497088162145
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-18",
+        "race_code": "202605180610",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.758688671469155
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-10",
+        "race_code": "202605100910",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 47680.0,
+        "n_alt": 10,
+        "comp_alt": 4.708617598481305
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-19",
+        "race_code": "202605190807",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.2393460093467374
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-19",
+        "race_code": "202605191704",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.585913264041687
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-11",
+        "race_code": "202605111107",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.055252698860155
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-15",
+        "race_code": "202605151008",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 9.622631951437501
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-29",
+        "race_code": "202605292308",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 6,
+        "comp_alt": 2.745727057523201
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-15",
+        "race_code": "202605151901",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.404416162570497
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-19",
+        "race_code": "202605190201",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.1803123032521485
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-14",
+        "race_code": "202606140307",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.364937763807781
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-28",
+        "race_code": "202606282403",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.32752925036559
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-21",
+        "race_code": "202606210202",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.5752023049450656
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-07",
+        "race_code": "202606070609",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.9536857663050973
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-24",
+        "race_code": "202606242203",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.493584869320593
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-07",
+        "race_code": "202606070802",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 30290.0,
+        "n_alt": 10,
+        "comp_alt": 3.003937730154382
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-30",
+        "race_code": "202606300205",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.661898781368108
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-30",
+        "race_code": "202606300501",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.488872500126145
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-29",
+        "race_code": "202606290206",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.0821916330444865
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-20",
+        "race_code": "202606201305",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 7.11421621881759
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-19",
+        "race_code": "202606191704",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.957231594370686
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-08",
+        "race_code": "202606081509",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.742923161356977
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-28",
+        "race_code": "202606280502",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.473056832618037
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-22",
+        "race_code": "202606221503",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.9453845211109986
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-27",
+        "race_code": "202606270907",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 3.1771411166225323
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-07",
+        "race_code": "202606071006",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.512645392257425
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-27",
+        "race_code": "202606271706",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 57050.0,
+        "n_alt": 10,
+        "comp_alt": 5.638785732583371
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-20",
+        "race_code": "202606200208",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 7.2961425478178015
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-19",
+        "race_code": "202606191301",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 27859.999999999996,
+        "n_alt": 9,
+        "comp_alt": 2.895809700133117
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-13",
+        "race_code": "202606131906",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.550189614110481
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-28",
+        "race_code": "202606280101",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 28800.0,
+        "n_alt": 8,
+        "comp_alt": 2.9438188681014883
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-03",
+        "race_code": "202606031308",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.721017297128585
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-02",
+        "race_code": "202606022004",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.01430940411394
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-21",
+        "race_code": "202606211605",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 30940.000000000004,
+        "n_alt": 10,
+        "comp_alt": 3.0862530402544666
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-18",
+        "race_code": "202606180910",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.314162991992281
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-09",
+        "race_code": "202607090206",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 6,
+        "comp_alt": 2.9276265459948765
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-18",
+        "race_code": "202607180204",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.500192253788824
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-27",
+        "race_code": "202607270407",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.57689524564612
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-19",
+        "race_code": "202607191608",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 36260.0,
+        "n_alt": 10,
+        "comp_alt": 3.4632304175234796
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-25",
+        "race_code": "202607250206",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.9389600328010155
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-22",
+        "race_code": "202607220802",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 29100.0,
+        "n_alt": 8,
+        "comp_alt": 2.8980978642590287
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-09",
+        "race_code": "202607090504",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 3.0365121729419005
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-23",
+        "race_code": "202607232401",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.771057436284853
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-18",
+        "race_code": "202607182103",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.7467775043431635
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-01",
+        "race_code": "202607012309",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 2.8949818908300555
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-26",
+        "race_code": "202607260308",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.4323883400220914
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-13",
+        "race_code": "202607131901",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 7.644231046132327
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-24",
+        "race_code": "202607240206",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 10.566295819520896
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-16",
+        "race_code": "202607162103",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.184206510215179
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-11",
+        "race_code": "202607110208",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.215543840406676
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-26",
+        "race_code": "202607260208",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.65775348098943
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-17",
+        "race_code": "202607170805",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 32300.0,
+        "n_alt": 8,
+        "comp_alt": 3.242824916664701
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-03",
+        "race_code": "202607031904",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.87972803257825
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-29",
+        "race_code": "202607292203",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.067400813634261
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-31",
+        "race_code": "202607310803",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 10.181243250198323
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-08",
+        "race_code": "202607082004",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.092640892344153
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-20",
+        "race_code": "202607201507",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 3.118131424601583
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-05",
+        "race_code": "202607052405",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 30599.999999999996,
+        "n_alt": 10,
+        "comp_alt": 3.001814274066554
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-06",
+        "race_code": "202607060107",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.9224523308606076
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-22",
+        "race_code": "202607222309",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 38500.0,
+        "n_alt": 10,
+        "comp_alt": 3.666363125710201
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-20",
+        "race_code": "202607201903",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 72180.0,
+        "n_alt": 10,
+        "comp_alt": 7.3136774222033
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-15",
+        "race_code": "202607152108",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.7894700855588628
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-08",
+        "race_code": "202607082002",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 2.865696063501276
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-05",
+        "race_code": "202607052203",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.475112435354458
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-23",
+        "race_code": "202607231505",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 29410.0,
+        "n_alt": 10,
+        "comp_alt": 2.871136892166525
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-31",
+        "race_code": "202607312310",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.223910974450013
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-06",
+        "race_code": "202607061301",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 10.268129609176778
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-04",
+        "race_code": "202607040903",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.390726099010962
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-20",
+        "race_code": "202607201206",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 8.22033294613832
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-12",
+        "race_code": "202607121003",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 8.172930746994485
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-19",
+        "race_code": "202607192006",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.6991830434186967
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-13",
+        "race_code": "202607130303",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.8100861744424295
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-20",
+        "race_code": "202607201104",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 8.888759611812777
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-11",
+        "race_code": "202607110909",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.972188070179925
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-30",
+        "race_code": "202608300607",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 76160.0,
+        "n_alt": 10,
+        "comp_alt": 7.611676439469575
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-12",
+        "race_code": "202608120407",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 28909.999999999996,
+        "n_alt": 10,
+        "comp_alt": 3.0047824785368937
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-22",
+        "race_code": "202608220606",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.619788626808622
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-24",
+        "race_code": "202608242207",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.252166874398486
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-31",
+        "race_code": "202608310403",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.992995393881315
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-24",
+        "race_code": "202608240603",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 9.913683541883024
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-05",
+        "race_code": "202608051407",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.942454260145217
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-12",
+        "race_code": "202608121603",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 10.467002628139404
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-28",
+        "race_code": "202608280908",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.690348151755292
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-07",
+        "race_code": "202608071504",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 2.997927063977061
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-16",
+        "race_code": "202608161704",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 12.738832919624803
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-04",
+        "race_code": "202608042108",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.314947409575358
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-17",
+        "race_code": "202608170903",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 9.538500735262673
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-18",
+        "race_code": "202608181407",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.520999192465184
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-19",
+        "race_code": "202608191302",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.099710836587071
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-14",
+        "race_code": "202608142405",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 9.441302481474901
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-24",
+        "race_code": "202608240308",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.9150295359559975
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-08",
+        "race_code": "202608080206",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 121880.0,
+        "n_alt": 10,
+        "comp_alt": 11.908092672266866
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-10",
+        "race_code": "202608100503",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.1300618245459595
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-24",
+        "race_code": "202608241811",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.53938363793505
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-01",
+        "race_code": "202608010601",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.112978516666506
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-17",
+        "race_code": "202608171107",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.9663564819025074
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-08",
+        "race_code": "202608080202",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 36660.0,
+        "n_alt": 10,
+        "comp_alt": 3.7719999237633144
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-20",
+        "race_code": "202608201608",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.065617043238635
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-25",
+        "race_code": "202608251504",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.829576850930863
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-15",
+        "race_code": "202608150506",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.105585949465689
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-18",
+        "race_code": "202608181811",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 8.53929899821013
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-26",
+        "race_code": "202608260904",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 51100.0,
+        "n_alt": 10,
+        "comp_alt": 5.116213876201725
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-05",
+        "race_code": "202608050409",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.0848645500689473
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-06",
+        "race_code": "202608060407",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.3021007363625325
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-28",
+        "race_code": "202608280404",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 3.1458594541384475
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-27",
+        "race_code": "202608271301",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 9,
+        "comp_alt": 3.020209621198733
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-12",
+        "race_code": "202608122305",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 3.113337988367328
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-26",
+        "race_code": "202608261503",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.3241730896895945
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-27",
+        "race_code": "202608271108",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 29340.0,
+        "n_alt": 9,
+        "comp_alt": 3.1784403768485925
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-21",
+        "race_code": "202608210406",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 37660.0,
+        "n_alt": 10,
+        "comp_alt": 3.7932018171216915
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-22",
+        "race_code": "202608220406",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 8,
+        "comp_alt": 3.1549697851393304
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-01",
+        "race_code": "202608010805",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.0241033303313376
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-30",
+        "race_code": "202608300705",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.3902511603367245
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-20",
+        "race_code": "202608201504",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.7374049225625425
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-08",
+        "race_code": "202608080403",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.426714359702949
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-16",
+        "race_code": "202608160104",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.9548199514307
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-18",
+        "race_code": "202608182001",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 8.725219194381252
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-27",
+        "race_code": "202608271303",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.948733477759001
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-01",
+        "race_code": "202608010606",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 8.288488355217138
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-05",
+        "race_code": "202608051707",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 8.832607023932406
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-16",
+        "race_code": "202608161011",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 9.189753308149431
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-26",
+        "race_code": "202608260607",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 7.970857823077025
+      }
+    ],
+    "attack_role_product_top10": [
+      {
+        "month": "2026-02",
+        "date": "2026-02-28",
+        "race_code": "202602280208",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.184720425546113
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-21",
+        "race_code": "202602212208",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.870685019829064
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-05",
+        "race_code": "202602051102",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 28600.0,
+        "n_alt": 10,
+        "comp_alt": 2.8747968045684726
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-27",
+        "race_code": "202602270103",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.0219950569326754
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-25",
+        "race_code": "202602250203",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.134997414130846
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-25",
+        "race_code": "202602251103",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.788593602664153
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-15",
+        "race_code": "202602150806",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.7007564794786463
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-17",
+        "race_code": "202602170103",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.833023898188486
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-25",
+        "race_code": "202602251102",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 1.8335780126269883
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-11",
+        "race_code": "202602111304",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 7.554984274894544
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-23",
+        "race_code": "202602231203",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.1999981141264633
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-14",
+        "race_code": "202602140701",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 21120.0,
+        "n_alt": 10,
+        "comp_alt": 2.1815849182346505
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-18",
+        "race_code": "202602181304",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.4623944515054665
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-05",
+        "race_code": "202603050402",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.0277072404849203
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-05",
+        "race_code": "202603050407",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.4294985457728835
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-07",
+        "race_code": "202603071704",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.6968797489690384
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-27",
+        "race_code": "202603271706",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.101103922010434
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-28",
+        "race_code": "202603281707",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.9373929493120974
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-23",
+        "race_code": "202603232206",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.2630277224328275
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-16",
+        "race_code": "202603161110",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 7.378468648119936
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-10",
+        "race_code": "202603100401",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.3077595832534015
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-16",
+        "race_code": "202603160304",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.3675287653371955
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-13",
+        "race_code": "202603132203",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.2621359476772085
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-04",
+        "race_code": "202603042108",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 25270.0,
+        "n_alt": 10,
+        "comp_alt": 2.5101863881537736
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-28",
+        "race_code": "202603281704",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.222048012188833
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-22",
+        "race_code": "202603221402",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.2637236750587304
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-31",
+        "race_code": "202603310802",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 31140.0,
+        "n_alt": 10,
+        "comp_alt": 3.356641924821195
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-29",
+        "race_code": "202603290404",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.551952225910072
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-02",
+        "race_code": "202603020402",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.9531008658295095
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-31",
+        "race_code": "202603310606",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 1.913034101904761
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-16",
+        "race_code": "202603160605",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.652728928573897
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-21",
+        "race_code": "202603211503",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.170277677980631
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-26",
+        "race_code": "202604260802",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.121739681508371
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-03",
+        "race_code": "202604030105",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 11.032637606139675
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-24",
+        "race_code": "202604240407",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.601607507097788
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-14",
+        "race_code": "202604141003",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 23460.0,
+        "n_alt": 10,
+        "comp_alt": 2.379060189187268
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-28",
+        "race_code": "202604280403",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.560983175256802
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-24",
+        "race_code": "202604240406",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.3179663771036285
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-07",
+        "race_code": "202604070204",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.333919948073459
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-16",
+        "race_code": "202605162004",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.848969119937036
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-03",
+        "race_code": "202605031106",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.1037455919998282
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-05",
+        "race_code": "202605051203",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.4966358890457165
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-19",
+        "race_code": "202605191402",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.8796532532108876
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-04",
+        "race_code": "202605040708",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 55460.0,
+        "n_alt": 10,
+        "comp_alt": 5.530365449298727
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-04",
+        "race_code": "202605040206",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 46020.0,
+        "n_alt": 10,
+        "comp_alt": 4.558709882887903
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-05",
+        "race_code": "202605050403",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 30240.0,
+        "n_alt": 10,
+        "comp_alt": 3.0946981257695607
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-18",
+        "race_code": "202605181702",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.506525022135692
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-06",
+        "race_code": "202605061301",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.16920626922015
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-26",
+        "race_code": "202605262411",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.239045794861671
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-05",
+        "race_code": "202605050807",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.339097164408626
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-08",
+        "race_code": "202605080404",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.9801309137911955
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-02",
+        "race_code": "202605020701",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.372356465638895
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-24",
+        "race_code": "202605242308",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.217278985691658
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-11",
+        "race_code": "202605111106",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.7434286928234726
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-17",
+        "race_code": "202605171009",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 29849.999999999996,
+        "n_alt": 10,
+        "comp_alt": 2.994295805509802
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-08",
+        "race_code": "202605081808",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.356836538048697
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-11",
+        "race_code": "202605110504",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.656342413414381
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-18",
+        "race_code": "202605180610",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.4617566099276136
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-10",
+        "race_code": "202605100910",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 29800.0,
+        "n_alt": 10,
+        "comp_alt": 2.967518482466828
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-19",
+        "race_code": "202605190807",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.2393460093467366
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-19",
+        "race_code": "202605191704",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.785663732817321
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-11",
+        "race_code": "202605111107",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.9811429054758265
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-15",
+        "race_code": "202605151008",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.47925424788818
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-29",
+        "race_code": "202605292308",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 1.8988868790471427
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-15",
+        "race_code": "202605151901",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.73440200632724
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-19",
+        "race_code": "202605190201",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.8350209084696183
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-14",
+        "race_code": "202606140307",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 23600.0,
+        "n_alt": 10,
+        "comp_alt": 2.406704450349517
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-28",
+        "race_code": "202606282403",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 27360.0,
+        "n_alt": 10,
+        "comp_alt": 2.7025008141270024
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-21",
+        "race_code": "202606210202",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.438996635288769
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-07",
+        "race_code": "202606070609",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.8107908780346795
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-24",
+        "race_code": "202606242203",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 26980.0,
+        "n_alt": 10,
+        "comp_alt": 2.633762658803972
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-07",
+        "race_code": "202606070802",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 27960.0,
+        "n_alt": 10,
+        "comp_alt": 2.7531961354390093
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-30",
+        "race_code": "202606300205",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.518249997163161
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-30",
+        "race_code": "202606300501",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.382636207299882
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-29",
+        "race_code": "202606290206",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.7451150101889485
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-20",
+        "race_code": "202606201305",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 39480.0,
+        "n_alt": 10,
+        "comp_alt": 4.065882964582628
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-19",
+        "race_code": "202606191704",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.7883716957994436
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-08",
+        "race_code": "202606081509",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.742923161356976
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-28",
+        "race_code": "202606280502",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.8782527450753617
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-22",
+        "race_code": "202606221503",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.7443134199146364
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-27",
+        "race_code": "202606270907",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.189861180965853
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-07",
+        "race_code": "202606071006",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.754219836158127
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-27",
+        "race_code": "202606271706",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 32600.0,
+        "n_alt": 10,
+        "comp_alt": 3.194771403714659
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-20",
+        "race_code": "202606200208",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.2291795117438173
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-19",
+        "race_code": "202606191301",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 23880.0,
+        "n_alt": 10,
+        "comp_alt": 2.6180985242229022
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-13",
+        "race_code": "202606131906",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.550189614110483
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-28",
+        "race_code": "202606280101",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 23400.0,
+        "n_alt": 10,
+        "comp_alt": 2.365079913518147
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-03",
+        "race_code": "202606031308",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.843362502547526
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-02",
+        "race_code": "202606022004",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.424803673245962
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-21",
+        "race_code": "202606211605",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 26520.0,
+        "n_alt": 10,
+        "comp_alt": 2.597001919158854
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-18",
+        "race_code": "202606180910",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.8371248585838944
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-09",
+        "race_code": "202607090206",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.418353705776477
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-18",
+        "race_code": "202607180204",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.9746155404318033
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-27",
+        "race_code": "202607270407",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.57689524564612
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-19",
+        "race_code": "202607191608",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.823355391571653
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-25",
+        "race_code": "202607250206",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.7535445318492573
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-22",
+        "race_code": "202607220802",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 20370.0,
+        "n_alt": 10,
+        "comp_alt": 2.1452310058128354
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-09",
+        "race_code": "202607090504",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.2323268039571316
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-23",
+        "race_code": "202607232401",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.509933207277343
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-18",
+        "race_code": "202607182103",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.899149241830907
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-01",
+        "race_code": "202607012309",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.2197569782947864
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-26",
+        "race_code": "202607260308",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.8775254161157426
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-13",
+        "race_code": "202607131901",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.426317684875028
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-24",
+        "race_code": "202607240206",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.105432771415121
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-16",
+        "race_code": "202607162103",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.06860704550485
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-11",
+        "race_code": "202607110208",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.3203116619554334
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-26",
+        "race_code": "202607260208",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.3823519724515494
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-17",
+        "race_code": "202607170805",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 19000.0,
+        "n_alt": 10,
+        "comp_alt": 1.8685058971677782
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-03",
+        "race_code": "202607031904",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.4990180128988615
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-29",
+        "race_code": "202607292203",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.6045528041390567
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-31",
+        "race_code": "202607310803",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.142994908964268
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-08",
+        "race_code": "202607082004",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.092640892344153
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-20",
+        "race_code": "202607201507",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.3774226906119797
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-05",
+        "race_code": "202607052405",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 30599.999999999996,
+        "n_alt": 10,
+        "comp_alt": 3.0018142740665543
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-06",
+        "race_code": "202607060107",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.3467374668810694
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-22",
+        "race_code": "202607222309",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 23100.0,
+        "n_alt": 10,
+        "comp_alt": 2.2627563494864225
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-20",
+        "race_code": "202607201903",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 24060.0,
+        "n_alt": 10,
+        "comp_alt": 2.338908599211684
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-15",
+        "race_code": "202607152108",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.990776689487765
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-08",
+        "race_code": "202607082002",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.41550995894482
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-05",
+        "race_code": "202607052203",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.190686319434575
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-23",
+        "race_code": "202607231505",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 29410.0,
+        "n_alt": 10,
+        "comp_alt": 2.871136892166525
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-31",
+        "race_code": "202607312310",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.9565668007474297
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-06",
+        "race_code": "202607061301",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.880158749963633
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-04",
+        "race_code": "202607040903",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.673584956452894
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-20",
+        "race_code": "202607201206",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.880148593625634
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-12",
+        "race_code": "202607121003",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.115274896387006
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-19",
+        "race_code": "202607192006",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.2117257753385062
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-13",
+        "race_code": "202607130303",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.7772282977704053
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-20",
+        "race_code": "202607201104",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.408873005488274
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-11",
+        "race_code": "202607110909",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.78652158074324
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-30",
+        "race_code": "202608300607",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 19040.0,
+        "n_alt": 10,
+        "comp_alt": 2.0522841213149645
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-12",
+        "race_code": "202608120407",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 24780.0,
+        "n_alt": 10,
+        "comp_alt": 2.494888263659564
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-22",
+        "race_code": "202608220606",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.466634890744836
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-24",
+        "race_code": "202608242207",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.6438335086707254
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-31",
+        "race_code": "202608310403",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.215545092691239
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-24",
+        "race_code": "202608240603",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.834098483737367
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-05",
+        "race_code": "202608051407",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.0414457903200343
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-12",
+        "race_code": "202608121603",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.572474241641019
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-28",
+        "race_code": "202608280908",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.456957399220822
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-07",
+        "race_code": "202608071504",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.3125278459517746
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-16",
+        "race_code": "202608161704",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.7730257457430674
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-04",
+        "race_code": "202608042108",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.1677252773327718
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-17",
+        "race_code": "202608170903",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.3597241642218285
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-18",
+        "race_code": "202608181407",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.425123456606105
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-19",
+        "race_code": "202608191302",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.5235261575857075
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-14",
+        "race_code": "202608142405",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.758167641180436
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-24",
+        "race_code": "202608240308",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.095920381532917
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-08",
+        "race_code": "202608080206",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 33240.0,
+        "n_alt": 10,
+        "comp_alt": 3.0247907251983976
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-10",
+        "race_code": "202608100503",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.501380217076838
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-24",
+        "race_code": "202608241811",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.343393965343668
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-01",
+        "race_code": "202608010601",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.765471172878372
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-17",
+        "race_code": "202608171107",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.817375608119811
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-08",
+        "race_code": "202608080202",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 33840.0,
+        "n_alt": 10,
+        "comp_alt": 3.443597509950821
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-20",
+        "race_code": "202608201608",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.046744612569248
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-25",
+        "race_code": "202608251504",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.6807033922589296
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-15",
+        "race_code": "202608150506",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.7501528113624354
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-18",
+        "race_code": "202608181811",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.7971567481185367
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-26",
+        "race_code": "202608260904",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 51100.0,
+        "n_alt": 10,
+        "comp_alt": 5.1162138762017255
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-05",
+        "race_code": "202608050409",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.750083256248746
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-06",
+        "race_code": "202608060407",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.135426090160664
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-28",
+        "race_code": "202608280404",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.3900945609186284
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-27",
+        "race_code": "202608271301",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.2132879172997066
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-12",
+        "race_code": "202608122305",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 1.8025338461382077
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-26",
+        "race_code": "202608261503",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.57913959296172
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-27",
+        "race_code": "202608271108",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 19560.0,
+        "n_alt": 10,
+        "comp_alt": 2.136379917848094
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-21",
+        "race_code": "202608210406",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 26900.0,
+        "n_alt": 10,
+        "comp_alt": 2.7936364069941084
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-22",
+        "race_code": "202608220406",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.1537572398982685
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-01",
+        "race_code": "202608010805",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.926526336081256
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-30",
+        "race_code": "202608300705",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.159855889738306
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-20",
+        "race_code": "202608201504",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.141361333087614
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-08",
+        "race_code": "202608080403",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.7530452105082333
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-16",
+        "race_code": "202608160104",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.259453559172903
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-18",
+        "race_code": "202608182001",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 32190.0,
+        "n_alt": 10,
+        "comp_alt": 3.1717718498806216
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-27",
+        "race_code": "202608271303",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.6458155807493138
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-01",
+        "race_code": "202608010606",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 8.17130323595272
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-05",
+        "race_code": "202608051707",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.590563483249361
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-16",
+        "race_code": "202608161011",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.773952272977608
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-26",
+        "race_code": "202608260607",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.4593672783424254
+      }
+    ],
+    "attack_role_ev_top10": [
+      {
+        "month": "2026-02",
+        "date": "2026-02-28",
+        "race_code": "202602280208",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.8188485908689747
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-21",
+        "race_code": "202602212208",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 23.047763662060873
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-05",
+        "race_code": "202602051102",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.624471790588712
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-27",
+        "race_code": "202602270103",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.021995056932676
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-25",
+        "race_code": "202602250203",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.844831475137088
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-25",
+        "race_code": "202602251103",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.421052032869342
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-15",
+        "race_code": "202602150806",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.0961658118569644
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-17",
+        "race_code": "202602170103",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.724331562305542
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-25",
+        "race_code": "202602251102",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.4684857583017275
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-11",
+        "race_code": "202602111304",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 9.579006117623855
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-23",
+        "race_code": "202602231203",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.438813239769959
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-14",
+        "race_code": "202602140701",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 44880.0,
+        "n_alt": 10,
+        "comp_alt": 4.4941005386635196
+      },
+      {
+        "month": "2026-02",
+        "date": "2026-02-18",
+        "race_code": "202602181304",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.130957163275868
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-05",
+        "race_code": "202603050402",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.0495460932457275
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-05",
+        "race_code": "202603050407",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.316733770412512
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-07",
+        "race_code": "202603071704",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.136706539150639
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-27",
+        "race_code": "202603271706",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.705244472640432
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-28",
+        "race_code": "202603281707",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.9373929493120974
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-23",
+        "race_code": "202603232206",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.04427237621036
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-16",
+        "race_code": "202603161110",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 12.871702852618917
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-10",
+        "race_code": "202603100401",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 18.39347893555322
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-16",
+        "race_code": "202603160304",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 8.127983161448553
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-13",
+        "race_code": "202603132203",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.543129015457183
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-04",
+        "race_code": "202603042108",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 27930.0,
+        "n_alt": 10,
+        "comp_alt": 2.8407129047813604
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-28",
+        "race_code": "202603281704",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.766058500477062
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-22",
+        "race_code": "202603221402",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.542474947643958
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-31",
+        "race_code": "202603310802",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 62280.0,
+        "n_alt": 10,
+        "comp_alt": 6.451397002669578
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-29",
+        "race_code": "202603290404",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.618292869410696
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-02",
+        "race_code": "202603020402",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.9531008658295095
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-31",
+        "race_code": "202603310606",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.4127178108765674
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-16",
+        "race_code": "202603160605",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 9.928901905021704
+      },
+      {
+        "month": "2026-03",
+        "date": "2026-03-21",
+        "race_code": "202603211503",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 7.832394878084094
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-26",
+        "race_code": "202604260802",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.121739681508372
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-03",
+        "race_code": "202604030105",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 11.754684778000527
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-24",
+        "race_code": "202604240407",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.050298432161925
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-14",
+        "race_code": "202604141003",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.8916853837828764
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-28",
+        "race_code": "202604280403",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 7.132469727945181
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-24",
+        "race_code": "202604240406",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.4838199918624473
+      },
+      {
+        "month": "2026-04",
+        "date": "2026-04-07",
+        "race_code": "202604070204",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.333919948073459
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-16",
+        "race_code": "202605162004",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.4772824957819246
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-03",
+        "race_code": "202605031106",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.2614390473670904
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-05",
+        "race_code": "202605051203",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 8.313729110041812
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-19",
+        "race_code": "202605191402",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.879653253210887
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-04",
+        "race_code": "202605040708",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 60180.0,
+        "n_alt": 10,
+        "comp_alt": 5.9638580732059125
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-04",
+        "race_code": "202605040206",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 59000.0,
+        "n_alt": 10,
+        "comp_alt": 5.839378212023609
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-05",
+        "race_code": "202605050403",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.791954641367984
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-18",
+        "race_code": "202605181702",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.612481105308199
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-06",
+        "race_code": "202605061301",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.052306215813327
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-26",
+        "race_code": "202605262411",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.239045794861671
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-05",
+        "race_code": "202605050807",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.246797325605422
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-08",
+        "race_code": "202605080404",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 7.641148589098769
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-02",
+        "race_code": "202605020701",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.3723564656388954
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-24",
+        "race_code": "202605242308",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.6103949499140255
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-11",
+        "race_code": "202605111106",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.125458963419693
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-17",
+        "race_code": "202605171009",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.319910861234467
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-08",
+        "race_code": "202605081808",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.116704242549565
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-11",
+        "race_code": "202605110504",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.2810497088162145
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-18",
+        "race_code": "202605180610",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.758688671469155
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-10",
+        "race_code": "202605100910",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 47680.0,
+        "n_alt": 10,
+        "comp_alt": 4.708617598481305
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-19",
+        "race_code": "202605190807",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.2393460093467374
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-19",
+        "race_code": "202605191704",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.585913264041687
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-11",
+        "race_code": "202605111107",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.055252698860155
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-15",
+        "race_code": "202605151008",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 9.622631951437501
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-29",
+        "race_code": "202605292308",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.316131787997559
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-15",
+        "race_code": "202605151901",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.404416162570497
+      },
+      {
+        "month": "2026-05",
+        "date": "2026-05-19",
+        "race_code": "202605190201",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.1803123032521485
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-14",
+        "race_code": "202606140307",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.364937763807781
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-28",
+        "race_code": "202606282403",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.32752925036559
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-21",
+        "race_code": "202606210202",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.5752023049450656
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-07",
+        "race_code": "202606070609",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.81079087803468
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-24",
+        "race_code": "202606242203",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.493584869320593
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-07",
+        "race_code": "202606070802",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 30290.0,
+        "n_alt": 10,
+        "comp_alt": 3.003937730154382
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-30",
+        "race_code": "202606300205",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.661898781368108
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-30",
+        "race_code": "202606300501",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.488872500126145
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-29",
+        "race_code": "202606290206",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.0821916330444865
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-20",
+        "race_code": "202606201305",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 7.11421621881759
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-19",
+        "race_code": "202606191704",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.957231594370686
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-08",
+        "race_code": "202606081509",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.742923161356977
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-28",
+        "race_code": "202606280502",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.473056832618037
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-22",
+        "race_code": "202606221503",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.7443134199146364
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-27",
+        "race_code": "202606270907",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.4704707832138997
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-07",
+        "race_code": "202606071006",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.512645392257425
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-27",
+        "race_code": "202606271706",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 57050.0,
+        "n_alt": 10,
+        "comp_alt": 5.638785732583371
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-20",
+        "race_code": "202606200208",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 7.2961425478178015
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-19",
+        "race_code": "202606191301",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 27859.999999999996,
+        "n_alt": 10,
+        "comp_alt": 2.728416182200563
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-13",
+        "race_code": "202606131906",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.550189614110481
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-28",
+        "race_code": "202606280101",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 25200.0,
+        "n_alt": 10,
+        "comp_alt": 2.5876852559443084
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-03",
+        "race_code": "202606031308",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.721017297128585
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-02",
+        "race_code": "202606022004",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.01430940411394
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-21",
+        "race_code": "202606211605",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 30940.000000000004,
+        "n_alt": 10,
+        "comp_alt": 3.0862530402544666
+      },
+      {
+        "month": "2026-06",
+        "date": "2026-06-18",
+        "race_code": "202606180910",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.314162991992281
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-09",
+        "race_code": "202607090206",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.418353705776477
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-18",
+        "race_code": "202607180204",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.500192253788824
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-27",
+        "race_code": "202607270407",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.57689524564612
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-19",
+        "race_code": "202607191608",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 36260.0,
+        "n_alt": 10,
+        "comp_alt": 3.4632304175234796
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-25",
+        "race_code": "202607250206",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.9389600328010155
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-22",
+        "race_code": "202607220802",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 26190.0,
+        "n_alt": 10,
+        "comp_alt": 2.5073721163547376
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-09",
+        "race_code": "202607090504",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.7623931998147913
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-23",
+        "race_code": "202607232401",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.771057436284853
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-18",
+        "race_code": "202607182103",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.7467775043431635
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-01",
+        "race_code": "202607012309",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.5123480506052256
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-26",
+        "race_code": "202607260308",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.4323883400220914
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-13",
+        "race_code": "202607131901",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 7.644231046132327
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-24",
+        "race_code": "202607240206",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 10.566295819520896
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-16",
+        "race_code": "202607162103",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.184206510215179
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-11",
+        "race_code": "202607110208",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.215543840406676
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-26",
+        "race_code": "202607260208",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.65775348098943
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-17",
+        "race_code": "202607170805",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 26600.0,
+        "n_alt": 10,
+        "comp_alt": 2.6381604713931437
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-03",
+        "race_code": "202607031904",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.87972803257825
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-29",
+        "race_code": "202607292203",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.067400813634261
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-31",
+        "race_code": "202607310803",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 10.181243250198323
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-08",
+        "race_code": "202607082004",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.092640892344153
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-20",
+        "race_code": "202607201507",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.801616612984457
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-05",
+        "race_code": "202607052405",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 30599.999999999996,
+        "n_alt": 10,
+        "comp_alt": 3.001814274066554
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-06",
+        "race_code": "202607060107",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.8124232430169473
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-22",
+        "race_code": "202607222309",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 38500.0,
+        "n_alt": 10,
+        "comp_alt": 3.666363125710201
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-20",
+        "race_code": "202607201903",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 72180.0,
+        "n_alt": 10,
+        "comp_alt": 7.3136774222033
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-15",
+        "race_code": "202607152108",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.7894700855588628
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-08",
+        "race_code": "202607082002",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.660067823827769
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-05",
+        "race_code": "202607052203",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.475112435354458
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-23",
+        "race_code": "202607231505",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 29410.0,
+        "n_alt": 10,
+        "comp_alt": 2.871136892166525
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-31",
+        "race_code": "202607312310",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.223910974450013
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-06",
+        "race_code": "202607061301",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 10.268129609176778
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-04",
+        "race_code": "202607040903",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.390726099010962
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-20",
+        "race_code": "202607201206",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 8.22033294613832
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-12",
+        "race_code": "202607121003",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 8.172930746994485
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-19",
+        "race_code": "202607192006",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.6991830434186967
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-13",
+        "race_code": "202607130303",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.8100861744424295
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-20",
+        "race_code": "202607201104",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 8.888759611812777
+      },
+      {
+        "month": "2026-07",
+        "date": "2026-07-11",
+        "race_code": "202607110909",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.972188070179925
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-30",
+        "race_code": "202608300607",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 76160.0,
+        "n_alt": 10,
+        "comp_alt": 7.611676439469575
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-12",
+        "race_code": "202608120407",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 28909.999999999996,
+        "n_alt": 10,
+        "comp_alt": 3.0047824785368937
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-22",
+        "race_code": "202608220606",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.619788626808622
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-24",
+        "race_code": "202608242207",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.252166874398486
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-31",
+        "race_code": "202608310403",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.992995393881315
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-24",
+        "race_code": "202608240603",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 9.913683541883024
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-05",
+        "race_code": "202608051407",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.942454260145217
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-12",
+        "race_code": "202608121603",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 10.467002628139404
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-28",
+        "race_code": "202608280908",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.690348151755292
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-07",
+        "race_code": "202608071504",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.9178938263572265
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-16",
+        "race_code": "202608161704",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 12.738832919624803
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-04",
+        "race_code": "202608042108",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.314947409575358
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-17",
+        "race_code": "202608170903",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 9.538500735262673
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-18",
+        "race_code": "202608181407",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.520999192465184
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-19",
+        "race_code": "202608191302",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.099710836587071
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-14",
+        "race_code": "202608142405",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 9.441302481474901
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-24",
+        "race_code": "202608240308",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.9150295359559975
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-08",
+        "race_code": "202608080206",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 121880.0,
+        "n_alt": 10,
+        "comp_alt": 11.908092672266866
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-10",
+        "race_code": "202608100503",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.1300618245459595
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-24",
+        "race_code": "202608241811",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.53938363793505
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-01",
+        "race_code": "202608010601",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.112978516666506
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-17",
+        "race_code": "202608171107",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.9663564819025074
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-08",
+        "race_code": "202608080202",
+        "regime": "stretch",
+        "hit_alt": 1,
+        "ret_alt": 36660.0,
+        "n_alt": 10,
+        "comp_alt": 3.7719999237633144
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-20",
+        "race_code": "202608201608",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.065617043238635
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-25",
+        "race_code": "202608251504",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.829576850930863
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-15",
+        "race_code": "202608150506",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.105585949465689
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-18",
+        "race_code": "202608181811",
+        "regime": "stretch",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 8.53929899821013
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-26",
+        "race_code": "202608260904",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 51100.0,
+        "n_alt": 10,
+        "comp_alt": 5.116213876201725
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-05",
+        "race_code": "202608050409",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.0848645500689473
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-06",
+        "race_code": "202608060407",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.3021007363625325
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-28",
+        "race_code": "202608280404",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.585023540709971
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-27",
+        "race_code": "202608271301",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.3142097633469616
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-12",
+        "race_code": "202608122305",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.29837969439098
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-26",
+        "race_code": "202608261503",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.3241730896895945
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-27",
+        "race_code": "202608271108",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 29340.0,
+        "n_alt": 10,
+        "comp_alt": 2.7463121823953047
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-21",
+        "race_code": "202608210406",
+        "regime": "turn",
+        "hit_alt": 1,
+        "ret_alt": 37660.0,
+        "n_alt": 10,
+        "comp_alt": 3.7932018171216915
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-22",
+        "race_code": "202608220406",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 2.5343614345915717
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-01",
+        "race_code": "202608010805",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.0241033303313376
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-30",
+        "race_code": "202608300705",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 3.3902511603367245
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-20",
+        "race_code": "202608201504",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 6.7374049225625425
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-08",
+        "race_code": "202608080403",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.426714359702949
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-16",
+        "race_code": "202608160104",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 4.9548199514307
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-18",
+        "race_code": "202608182001",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 8.725219194381252
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-27",
+        "race_code": "202608271303",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 5.948733477759001
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-01",
+        "race_code": "202608010606",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 8.288488355217138
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-05",
+        "race_code": "202608051707",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 8.832607023932406
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-16",
+        "race_code": "202608161011",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 9.189753308149431
+      },
+      {
+        "month": "2026-08",
+        "date": "2026-08-26",
+        "race_code": "202608260607",
+        "regime": "turn",
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "n_alt": 10,
+        "comp_alt": 7.970857823077025
+      }
+    ]
+  }
+}
