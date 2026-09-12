@@ -1,0 +1,30 @@
+name: audit-0617-v288-pre-recovery
+on:
+  push:
+    paths: ['.github/workflows/audit-0617-v288-pre-recovery.yml']
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q requests beautifulsoup4
+      - name: Recover PRE only
+        run: python prepare_v288_historical_pre_input.py --date 2026-06-17
+      - name: Audit coverage
+        run: |
+          python - <<'PY'
+          import json
+          p='current_input/v288/20260617/historical_input_manifest.json'
+          z=json.load(open(p,encoding='utf-8'))
+          print(json.dumps(z,ensure_ascii=False,indent=2))
+          assert z['result_or_payout_used'] is False
+          assert z['current_exhibition_used'] is False
+          assert z['race_card_source']=='boatrace_official_racelist_fallback'
+          assert z['race_cards_seen']>=120
+          assert z['complete_rows']>=120
+          off=z['historical_fallback_audit']['official_racelist']
+          assert off['result_endpoint_requested'] is False and off['payout_endpoint_requested'] is False
+          print('V288_0617_PRE_RECOVERY_OK',z['race_cards_seen'],z['complete_rows'],len(z['excluded_missing_waku']))
+          PY
