@@ -36,23 +36,29 @@
 - duplicate Run `34723808595` failed after canonical result persistence; ignore as a research failure.
 
 ## Wave 10 — nonparametric KNN analogs
-- Run **`34723857336`** success; artifact `v289-3head-addon-wave10-knn-analogs`, ID **`10306962427`**; result commit **`5438503f15f4a77b4d2f1fa5b6b0da20b0ef625f`**.
-- best `knn_head_k25@0.40` / consensus equivalent: **166R / 23 hits / hit 13.86% / ROI 42.31% / profit -957,580 / min month 30.87% / 7 red / max DD 976,180 / overlap 0**; combined **260R / ROI 89.40%**.
-- smaller fractions mostly selected 0 races because fail-closed/current-score thresholds were too strict; value variants were worse (ROI ~39–40%).
-- decision: **NO_ADOPTION_WAVE10**.
-- rejection: nonparametric similarity did not isolate profitable add-on races and materially diluted v288.
+- Run `34723857336` success; artifact `v289-3head-addon-wave10-knn-analogs`, ID `10306962427`; result commit `5438503f15f4a77b4d2f1fa5b6b0da20b0ef625f`.
+- best `knn_head_k25@0.40` / consensus equivalent: **166R / 23 hits / 13.86% / ROI 42.31% / -957,580 / min month 30.87% / 7 red / max DD 976,180 / overlap 0**; combined 260R / ROI 89.40%.
+- decision **NO_ADOPTION_WAVE10**; similarity did not isolate profitable add-ons.
 
 ## Wave 11 — v288 reject-cause mixture-of-experts
-- auto-restarted after Wave10 rejection.
-- script `research_v289_3head_addon_wave11_reject_cause_moe.py`, commit **`e39b37f12cd388a8f35b3f7bbbe45c79982ca493`**.
-- workflow `.github/workflows/research-3head-v289-addon-wave11-reject-cause-moe.yml`, creation commit `21fa335c4854be848877665ff557ef36d10b2242`, explicit trigger commit **`b912ca4f79aa9cfdb666dea5157e772c95e2bb57`**.
-- Actions Run **`34723936660`** in progress.
-- distinct mechanism: classify final NO_BET by nearest failed v288 route (`NEAR_S`, `NEAR_A`, `NEAR_B`) using only pre-race route conditions, then fit cause-specific hit/value/exhibition-consensus experts from prior reject months only.
-- missing route-cause inputs => fail closed; exact 10,000-yen Dutch retained; overlap with baseline must be 0.
-- expected artifact: `v289-3head-addon-wave11-reject-cause-moe`.
+- canonical successful Run **`34723924180`**; result commit **`a871e088a263ed3cf42e013eaff294cd1aae65bc`**.
+- artifact from duplicate/computation-equivalent Run: `v289-3head-addon-wave11-reject-cause-moe`, ID **`10307560448`**. Run `34723936660` completed research+guards but failed only at persistence because canonical Run had already added the same result files.
+- best `cause_hit@0.50`: **94R / 15 hits / ROI 48.69% / profit -482,340 / min month 21.07% / 7 red / max DD 500,940 / overlap 0**; combined **188R / ROI 110.62%**.
+- smaller fractions were worse: `cause_hit@0.35` 60R / 9 hits / ROI 45.93%; `cause_consensus@0.20` 29R / 3 hits / ROI 30.62%.
+- decision: **NO_ADOPTION_WAVE11**.
+- rejection: nearest failed v288 route explains rejection structure but still does not recover positive betting value.
+
+## Wave 12 — learned joint race + ticket value
+- auto-restarted after Wave11 rejection.
+- script `research_v289_3head_addon_wave12_joint_ticket_value.py`, commit **`e0a997502ce73777ab0223e7a80ed2c02553f4ab`**.
+- workflow `.github/workflows/research-3head-v289-addon-wave12-joint-ticket-value.yml`, commit **`beb049bd185dcab752ec5f49e9717b0d24ea9c56`**.
+- Actions Run **`34724049674`** currently running.
+- distinct mechanism: train prior-month expected settled value jointly over race features + ticket descriptors, then choose at most one configuration per race from regenerated Top2..Top10 / target composite-odds families.
+- exact 10,000-yen Dutch is inherited from Wave2 ticket regeneration; final v288 NO_BET only; overlap must remain zero; current required feature missing => fail closed; September outcomes unused.
+- expected artifact: `v289-3head-addon-wave12-joint-ticket-value`.
 
 ## What NOT to repeat
-- Wave1 threshold/coverage tweaks; frozen V221 TopN/odds changes; Wave3 PRE-B; undersampled venue splits; Wave5 ordered-pair unchanged; Wave6 global role split; Wave7 attack role; Wave8 motor/racer role; Wave9 linear head classifier; Wave10 KNN analogs.
+- Wave1 threshold/coverage tweaks; frozen V221 TopN/odds changes alone; Wave3 PRE-B; undersampled venue splits; Wave5 ordered-pair unchanged; Wave6 global role split; Wave7 attack role; Wave8 motor/racer role; Wave9 linear head classifier; Wave10 KNN analogs; Wave11 reject-cause ranking unchanged.
 
 ## Real-operation audit
 - v288 overlap must remain zero.
@@ -62,6 +68,6 @@
 - exact 10,000-yen Dutch retained; production v288 workflow/model unchanged.
 
 ## Exact restart point
-1. Finish Wave11 Run `34723936660`; inspect/fix/re-run automatically if it fails.
+1. Finish Wave12 Run `34724049674`; inspect/fix/re-run automatically if it fails.
 2. If historical gates pass (>=20R, ROI>=100%, min monthly ROI>=60%, <=3 red months), advance only to September outcome-blind shadow.
-3. If rejected, move to a genuinely distinct learned ticket-value / opponent-order joint mechanism with strict prior-month fitting, not another head-probability ranker.
+3. If rejected, next family must change the source/candidate mechanism again rather than repeat Waves1–12 unchanged.
