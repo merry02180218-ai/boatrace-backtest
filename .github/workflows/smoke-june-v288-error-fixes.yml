@@ -41,6 +41,14 @@ jobs:
         run: |
           DAY8=$(echo '${{ matrix.date }}' | tr -d '-')
           python replay_v288_operational_day.py --date '${{ matrix.date }}' --cache "live_outputs/v288_operational/$DAY8/live_cache.joblib" --outdir "operational_replay/$DAY8" --history-cutoff 2026-05-31
-          cat "current_input/v288/$DAY8/historical_input_manifest.json"
-          cat "live_outputs/v288_operational/$DAY8/daily_manifest.json"
+          cp "current_input/v288/$DAY8/historical_input_manifest.json" "operational_replay/$DAY8/input_manifest.json"
+          cp "live_outputs/v288_operational/$DAY8/daily_manifest.json" "operational_replay/$DAY8/production_manifest.json"
+          cp "live_outputs/v288_operational/$DAY8/pre_scan.csv" "operational_replay/$DAY8/pre_scan.csv"
+          cat "operational_replay/$DAY8/input_manifest.json"
+          cat "operational_replay/$DAY8/production_manifest.json"
           cat "operational_replay/$DAY8/day_summary.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v288-june-operational-17-repair
+          retention-days: 30
+          path: operational_replay/20260617/
