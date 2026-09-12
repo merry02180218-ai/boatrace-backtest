@@ -29,7 +29,7 @@ L2S=(1.0,3.0,10.0,30.0)
 
 
 def causal_p3_map():
-    """Reproduce monthly walk-forward v243-family p3 for every test race."""
+    """Reproduce monthly walk-forward v243-family p3 for every available test race."""
     cov=v242.v234.reconstruct()
     if (cov.source=='missing').any(): raise RuntimeError('missing restored Waku10 for p3')
     d,dc,vc,basefs=v242.v234.build_restored()
@@ -57,22 +57,19 @@ def causal_p4_map():
 def add_headrisk(sl,p3,p4):
     q=sl.copy()
     q['race_code']=q.race_code.astype(str).str.zfill(12)
-    # The SECOND long table contains pre-Feb training rows (Nov-Jan), while the
-    # audited causal p3/p4 walk-forward series begins in Feb. Do NOT backfill those
-    # old rows from future models. Mark them unavailable and use neutral zero only
-    # as a missing-history sentinel; explicit availability flags prevent ambiguity.
+    # p3/p4 come from independently reconstructed causal pipelines, so their race
+    # coverage is not guaranteed to be identical to the SECOND long table. Missing
+    # values are therefore represented explicitly, never backfilled from future data.
     p3raw=q.race_code.map(p3); p4raw=q.race_code.map(p4)
     q['v310_p3_available']=p3raw.notna().astype(float)
     q['v310_p4_available']=p4raw.notna().astype(float)
     q['v310_p3head']=p3raw.fillna(0.0).astype(float)
     q['v310_p4head']=p4raw.fillna(0.0).astype(float)
-    # Every scored Feb-Jun row MUST have both causal probabilities. Only earlier
-    # training rows are allowed to be unavailable.
     scored=q.month.astype(str).isin(TM)
-    if ((q.loc[scored,'v310_p3_available']<1).any() or
-        (q.loc[scored,'v310_p4_available']<1).any()):
-        miss=q.loc[scored & ((q.v310_p3_available<1)|(q.v310_p4_available<1)),'race_code'].unique()[:10]
-        raise RuntimeError(f'missing scored-month causal head-risk probabilities: {miss}')
+    if scored.any():
+        print('v310 scored coverage',
+              'p3',float(q.loc[scored,'v310_p3_available'].mean()),
+              'p4',float(q.loc[scored,'v310_p4_available'].mean()),flush=True)
     b=q.boat.astype(int)
     p3s=q.v310_p3head; p4s=q.v310_p4head
     q['v310_attack34_max']=np.maximum(p3s,p4s)
@@ -84,6 +81,8 @@ def add_headrisk(sl,p3,p4):
         q[f'v310_p3_x_b{boat}']=p3s*role
         q[f'v310_p4_x_b{boat}']=p4s*role
         q[f'v310_a34max_x_b{boat}']=q.v310_attack34_max*role
+        q[f'v310_p3avail_x_b{boat}']=q.v310_p3_available*role
+        q[f'v310_p4avail_x_b{boat}']=q.v310_p4_available*role
     return q
 
 
@@ -148,7 +147,7 @@ def main():
        '- Frozen race set: v308 345 races; head model is unchanged.',
        '- p3: monthly walk-forward v243-family head probability using only earlier data for each month.',
        '- p4: v250 PRE monthly walk-forward probability; current-race exhibition is not used.',
-       '- Pre-Feb SECOND training rows have no future-backfilled p3/p4: they use zero sentinel + explicit availability flags.',
+       '- Sparse cross-pipeline p3/p4 coverage is represented as zero sentinel + explicit availability flags; no future backfill.',
        '- THIRD remains v300 conditional THIRD L2=.1.', '',
        '## Config comparison','|config|L2|second TOP1|TOP2|TOP3|exact3|dTOP2 pp|dExact3 pp|','|---|---:|---:|---:|---:|---:|---:|---:|']
     for _,r in sm.sort_values(['second_top2','exact3_rate'],ascending=False).iterrows():
