@@ -2,18 +2,41 @@
 
 Updated: 2026-09-13 JST
 Repository: `merry02180218-ai/boatrace-backtest`
-Scope: 4号艇 v291 volume expansion / rescue only.
+Scope: 4号艇 v291 volume expansion / LIVE operationalization.
 
-## Immutable production baseline
+## Immutable production baseline / newly adopted ticket policy
 
-Current production remains `HEAD4_V291_COMP7`. Do not mutate it in place.
+Base entry model remains `HEAD4_V291_COMP7`. Do not mutate its race-entry logic in place.
 
 - PRE >= 0.28
 - POST >= 0.25
 - ENV_ENTRY >= 0.224790
 - frozen v283 opponent order
-- Top4 + composite >= 7.0
-- exactly ¥10,000 inverse-odds Dutch / ¥100 Hamilton rounding
+- Top4 + composite >= 7.0 entry identity
+- ¥10,000/race inverse-odds Dutch / ¥100 Hamilton rounding
+
+### FORMAL USER DECISION — 2026-09-13
+
+The variable-ticket policy **`composite odds floor = 4.0 / maxN = 16` is formally adopted** for 4号艇 operation.
+
+Interpretation:
+- keep the frozen v291 29-race entry identities / entry logic;
+- for a v291 BET race, use the frozen v283 ranked trifecta order;
+- expand ticket count from N=4 up to at most N=16;
+- choose the largest N whose composite odds remain >= 4.0;
+- keep total race bank exactly ¥10,000 using inverse-odds Dutch + ¥100 Hamilton rounding;
+- this is a separately versioned ticket-allocation policy; do not rewrite historical v291 evidence.
+
+Apr–Jun evidence for the formally adopted policy:
+- R = 29
+- ROI = 188.83%
+- hit rate = 44.83%
+- average N = 9.97
+- minimum monthly ROI = 143.52%
+
+Why maxN=16 is preferred operationally over maxN=20:
+- extending beyond 16 did not improve the observed ROI/hit result in the completed grid while adding ticket count/exposure complexity;
+- therefore cap at 16.
 
 July/August 2026 remain NON-PRISTINE. September 2026 outcomes are outcome-blind and prohibited for fitting, calibration, rule selection or evaluation. v96 is prohibited from production logic.
 
@@ -65,32 +88,20 @@ Reason:
 
 ## CI reproducibility finding
 
-A later combined workflow run `34709042736` failed while regenerating the frozen downstream artifact before variable-N research.
+Combined workflow run `34709042736` failed while regenerating the frozen downstream artifact before variable-N research.
 
 Failure:
 - v283 conditional THIRD June parity max absolute drift = `9.04380706659e-05`
 - fail-closed parity guard blocked the run.
 
-This was not a variable-N model failure. The artifact rebuild itself showed small nondeterministic numeric drift between clean CI runs. The guard was NOT relaxed.
-
-Operational decision:
-- keep the already successful/persisted exact 47/47 curves from run `34708490537` as the research input;
-- isolate downstream ticket-count research from noisy artifact regeneration;
-- do not loosen parity tolerances merely to make CI pass.
+This was not a variable-N model failure. The guard was NOT relaxed. Persisted exact 47/47 curves from successful run `34708490537` remain the research input.
 
 Isolated workflow:
 - `.github/workflows/research-4head-v291-base-variable-n.yml`
 
 ## Immutable-base variable-N research
 
-Goal: improve hit coverage without changing the 29 production race identities or the ¥10,000 per-race bank.
-
-Operational rule family:
-- entry identity stays frozen `HEAD4_V291_COMP7`;
-- start from frozen v283 ranked pair order;
-- choose the largest `N >= 4` whose composite odds remain above a floor, capped by `maxN`;
-- total bank remains exactly ¥10,000 per race with the same inverse-odds Dutch/Hamilton economics;
-- no additional races are admitted.
+Goal: improve hit coverage without changing the 29 v291 race identities or the ¥10,000 per-race bank.
 
 Development/evaluation universe:
 - April–June 2026 only;
@@ -98,112 +109,65 @@ Development/evaluation universe:
 - September outcomes excluded;
 - no v96.
 
-### v1 LOMO implementation bug
-
-Initial isolated run `34709567539` itself completed successfully, but the research code incorrectly required `R == 29` inside every two-month LOMO training split. This made every LOMO split structurally return `NO_TRAIN_CANDIDATE`.
-
-This was a validation-code bug, not negative model evidence.
-
-The rule family and promotion thresholds were not relaxed. v2 changed only expected-R validation so each LOMO training split requires the actual frozen base-race count in those two months.
-
-### Corrected v2 result
-
 Corrected isolated CI run `34709643396`: **SUCCESS**.
 
-All of the following passed:
-- frozen 47/47 input audit;
-- immutable 29R entry-set guard;
-- Jul/Aug exclusion;
-- September outcome exclusion;
-- v96 exclusion;
-- variable-N research;
-- corrected LOMO;
-- artifact upload and GitHub persistence.
+Baseline N=4:
+- ROI 300.26%
+- hit rate 31.03%
 
-Current research candidate:
-
-- rule: `composite odds floor = 5.0`, `maxN = 6`
-- entry races: unchanged 29R
-- bank: unchanged ¥10,000/race
-- baseline N=4:
-  - ROI 300.26%
-  - hit rate 31.03%
-- candidate:
-  - ROI 213.48%
-  - hit rate 34.48%
-  - average N 5.72
-  - average composite odds 6.475
-  - minimum monthly ROI 140.37%
-
-Monthly candidate result:
-
-| month | R | ROI | profit | hit rate | avg N |
-|---|---:|---:|---:|---:|---:|
-| 2026-04 | 12 | 298.52% | +¥238,220 | 50.00% | 5.75 |
-| 2026-05 | 9 | 140.37% | +¥36,330 | 22.22% | 5.67 |
-| 2026-06 | 8 | 168.18% | +¥54,540 | 25.00% | 5.75 |
-
-Corrected LOMO:
-
-| holdout | training-selected rule | train R | hold R | variable ROI | base ROI | variable hit | base hit |
-|---|---|---:|---:|---:|---:|---:|---:|
-| Apr | floor=4.0, maxN=16 | 17 | 12 | 239.63% | 481.22% | 58.33% | 50.00% |
-| May | floor=5.0, maxN=6 | 20 | 9 | 140.37% | 177.91% | 22.22% | 22.22% |
-| Jun | floor=4.0, maxN=12 | 21 | 8 | 122.51% | 166.46% | 25.00% | 12.50% |
-
-All three LOMO holdouts are profitable (>100% ROI).
-
-Candidate status in `head4_v291_base_variable_n_candidate.json`:
-- `selection_tier = STRONG_STABLE`
-- `lomo_all_holdouts_profitable = true`
-- `status = RESEARCH_CANDIDATE_NOT_FROZEN`
-
-## Neighborhood robustness
-
-The `floor=5.0 / maxN=6` result is not a single-cell knife edge.
-
-Examples from the same predeclared grid:
-- floor 3.0–4.5 / maxN 6: ROI 208.26%, hit 34.48%, monthly ROI floor 123.53%
-- floor 5.0 / maxN 8: ROI 198.24%, hit 34.48%, monthly ROI floor 134.03%
+Important neighborhood results:
+- floor 5.0 / maxN 6: ROI 213.48%, hit 34.48%, avg N 5.72, monthly ROI floor 140.37%
 - floor 4.0 / maxN 12: ROI 180.07%, hit 41.38%, monthly ROI floor 122.51%
-- floor 4.0 / maxN 16: ROI 188.83%, hit 44.83%, monthly ROI floor 143.52%
+- **floor 4.0 / maxN 16: ROI 188.83%, hit 44.83%, avg N 9.97, monthly ROI floor 143.52% — FORMALLY ADOPTED 2026-09-13**
 - floor 3.0 / maxN 16: ROI 172.41%, hit 51.72%, monthly ROI floor 136.40%
 
-Interpretation:
-- there is a broad profitable region for expanding ticket count;
-- maxN=6 / floor=5.0 is the current best simple balance under the fixed selection gates;
-- more aggressive expansion can raise hit rate substantially, but gives up more ROI and is not the current first promotion candidate.
+Historical corrected LOMO selections remain research evidence and are not rewritten after the user's explicit operational choice:
+- Apr holdout: training selected floor=4.0/maxN=16; holdout ROI 239.63%, hit 58.33%
+- May holdout: training selected floor=5.0/maxN=6; holdout ROI 140.37%, hit 22.22%
+- Jun holdout: training selected floor=4.0/maxN=12; holdout ROI 122.51%, hit 25.00%
 
-## Decision / current production status
+## LIVE A / pre-deadline trifecta odds — IMPORTANT RECOVERY
 
-**Important candidate found, but production v291 is still unchanged.**
+Do **not** claim that pre-deadline 3連単 odds acquisition is unavailable. The repository already contains a result-free official live odds fetcher:
 
-Current production remains `HEAD4_V291_COMP7` Top4.
+- script: `fetch_live_trifecta_odds.py`
+- workflow: `.github/workflows/live-trifecta-odds-smoketest.yml`
+- official source: `https://www.boatrace.jp/owpc/pc/race/odds3t`
+- fetches only the official odds3t page; result/payout endpoints are explicitly deny-listed;
+- validates the exact full set of 120 ordered trifecta combinations before a snapshot is usable;
+- writes timestamped immutable raw HTML + CSV + metadata JSON;
+- metadata records JST request/fetch timestamps, source URL, hash, parsed count and `usable_for_betting`;
+- live operation is designed to run repeatedly until the intended purchase-time snapshot and then freeze that timestamped file.
 
-The first promotion candidate for a separately versioned policy is:
-- same 29 race entry identities;
-- same ¥10,000/race bank;
-- expand from Top4 up to Top6 only while composite odds remain >= 5.0.
+Historical chat/work log also identifies the earlier 3号艇 implementation as `v218 SHADOW`, with snapshots under `live_freeze/v218_3head/` and commit `76cac219`; this historical reference should be verified from GitHub history before reusing exact old paths, but it confirms that deadline-time odds acquisition was previously part of the LIVE architecture.
 
-Why it is a candidate:
-- all Apr/May/Jun months profitable;
-- corrected LOMO all three holdouts profitable;
-- hit rate improves versus Top4;
-- neighboring parameter cells remain profitable, so the result is not isolated.
+### LIVE A status / next operational requirement
 
-Why it is not frozen yet:
-- Apr–Jun sample is still only 29 base races;
-- full-period ROI is lower than the Top4 baseline, which is expected from added coverage but must be treated as a deliberate hit-rate/ROI tradeoff;
-- September outcomes must remain untouched/outcome-blind, so they cannot be used to promote the rule now.
+Frozen A-LIVE itself is exact 47R and its historical all-N audit is complete. The added-race A-LIVE rescue remains REJECTED; A-LIVE may still be used as the LIVE score/tier layer, but it must not silently add races outside the frozen v291 entry policy without a separately validated rule.
 
-## Next research point
+For current LIVE operation, wire the existing `fetch_live_trifecta_odds.py` snapshot into the 4号艇 v291 BET path so that the formally adopted `floor=4.0/maxN=16` N-selection and ¥10,000 Dutch stakes are computed from an actual **pre-deadline timestamped odds snapshot**. Never substitute official closing odds for a live purchase-time decision.
 
-Resume from the candidate above without changing production v291.
+Fail closed if:
+- snapshot has fewer/more than exactly 120 valid combinations;
+- snapshot timestamp is not suitable for the intended purchase time;
+- odds snapshot is missing;
+- any result/payout-derived information is present.
 
-Preferred next work:
-1. audit per-race ticket additions for floor=5.0/maxN=6 and verify every added ticket is derivable from pre-deadline odds only;
-2. compare fixed Top4 vs candidate at the race level: newly rescued hits, existing-hit dilution, payout/Dutch effects, and N distribution;
-3. perform label-free September operational shadow replay only if the repository has the required pre-deadline odds — verify that N and stakes can be generated in real operation, but do NOT inspect September outcomes/payouts;
-4. if operational replay is clean, prepare a separately versioned candidate policy; do not overwrite `HEAD4_V291_COMP7`.
+## Decision / current status
 
-Do not use July/August outcomes or any September result/payout labels for further rule selection. Do not relax the frozen-artifact parity guard to force rebuilds to pass.
+1. v291 race-entry logic remains frozen.
+2. `floor=4.0/maxN=16` is now the formally adopted variable-ticket policy.
+3. A-LIVE added-race rescue remains REJECTED.
+4. Existing official pre-deadline odds acquisition code has been rediscovered and must be reused for LIVE operationalization.
+5. September remains outcome-blind; only label-free operational shadow generation is allowed.
+
+## Next restart point
+
+1. Inspect current 4号艇 LIVE workflow (`.github/workflows/live-4head-v291-pre-daily.yml` and downstream scripts) and connect `fetch_live_trifecta_odds.py` at purchase-time.
+2. Generate N=4..16 composite-odds curve from that timestamped snapshot in frozen v283 ranked order.
+3. Select largest N with composite >= 4.0; fail closed if none/invalid.
+4. Produce exact ¥10,000 Hamilton Dutch stakes and freeze the decision artifact together with the odds snapshot timestamp/hash.
+5. Run a September **outcome-blind** operational shadow test only; do not join results or payouts.
+6. Record implementation, CI run IDs, operational failures/successes and any adoption/rejection reason in this handoff.
+
+Do not use July/August outcomes or any September result/payout labels for further rule selection. Do not relax frozen-artifact parity guards merely to force CI green.
