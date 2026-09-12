@@ -1,0 +1,35 @@
+name: probe-official-racelist-0617
+on:
+  push:
+    paths: ['.github/workflows/probe-official-racelist-0617.yml']
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q requests beautifulsoup4
+      - name: Probe official racelist only
+        run: |
+          python - <<'PY'
+          import requests
+          from bs4 import BeautifulSoup
+          u='https://www.boatrace.jp/owpc/pc/race/racelist'
+          r=requests.get(u,params={'rno':1,'jcd':'01','hd':'20260617'},headers={'User-Agent':'Mozilla/5.0'},timeout=20)
+          print('STATUS',r.status_code,'URL',r.url,'LEN',len(r.text))
+          print('HAS_RESULT_ENDPOINT', '/result' in r.url.lower())
+          s=BeautifulSoup(r.text,'html.parser')
+          print('TITLE',s.title.get_text(' ',strip=True) if s.title else '')
+          tabs=s.find_all('table'); print('TABLES',len(tabs))
+          for i,t in enumerate(tabs[:12]):
+              print('===TABLE',i,'CLASS',t.get('class'),'===')
+              for j,tr in enumerate(t.find_all('tr')[:12]):
+                  cells=[x.get_text(' ',strip=True) for x in tr.find_all(['th','td'])]
+                  print('ROW',j,cells)
+          print('PLAYER_LINKS')
+          for a in s.find_all('a',href=True):
+              h=a['href']; txt=a.get_text(' ',strip=True)
+              if 'racer' in h.lower() or 'toban' in h.lower() or (txt and any(ch.isdigit() for ch in txt)):
+                  print(txt,h)
+          PY
