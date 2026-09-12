@@ -22,9 +22,13 @@ jobs:
         run: |
           python - <<'PY'
           from datetime import date
-          import pandas as pd
+          import csv
           import analyze_v136_1head_preselection_inner_threats as v
-          from backtest import rows, race_features
+          from backtest import race_features
+
+          def local_rows(path):
+              with open(path,encoding='utf-8-sig',newline='') as f:
+                  return list(csv.DictReader(f))
 
           day='2026-09-13'
           cutoff=date.fromisoformat(day)
@@ -33,8 +37,8 @@ jobs:
           model=v.fit_lr(v.xlegacy(src),[v.ii(r.get('head_hit')) for r in src])
 
           base='/tmp/prod/current_input/v288/20260913'
-          cards=rows(base+'/race_cards.csv')
-          wrows=rows(base+'/waku10.csv')
+          cards=local_rows(base+'/race_cards.csv')
+          wrows=local_rows(base+'/waku10.csv')
           wm={str(r.get('レースコード','')).zfill(12):r for r in wrows}
           cur=[]
           for c in cards:
@@ -58,7 +62,7 @@ jobs:
           pp=model.predict_proba(v.xlegacy(cur))[:,1]
           for r,p in zip(cur,pp): r['legacy_pre_p']=float(p)
           cur=sorted(cur,key=lambda r:(-r['legacy_pre_p'],r['race_code']))
-          print('CURRENT_COMPLETE',len(cur),'TOP5')
+          print('CARDS',len(cards),'WAKU_ROWS',len(wrows),'CURRENT_COMPLETE',len(cur),'TOP5')
           print('rank,race_code,venue,race,name,grade,legacy_pre_p,motor2,nst')
           for i,r in enumerate(cur[:15],1):
               print(f"{i},{r['race_code']},{r['venue']},{r['race']},{r['name']},{r['grade']},{r['legacy_pre_p']:.9f},{r['motor2']},{r['nst']}")
