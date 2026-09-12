@@ -5,6 +5,10 @@ on:
     paths:
       - 'analyze_4head_v291_a_targetcomp_rescue.py'
       - 'analysis_v288_4head_composite_odds_alln_detail.csv'
+      - 'artifacts/head4_v273_a_live_20260630.json'
+      - 'head4_v273_a_live_inference.py'
+      - 'analyze_v270_4head_win_feature_importance.py'
+      - 'analyze_v271_4head_arank_expansion.py'
       - '.github/workflows/research-4head-v291-a-targetcomp.yml'
   workflow_dispatch:
 
@@ -23,30 +27,36 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install -q numpy pandas
+      - run: pip install -q numpy pandas scipy scikit-learn
       - name: Syntax check
         run: python -m py_compile analyze_4head_v291_a_targetcomp_rescue.py
-      - name: Run target-composite research
+      - name: Run exact A-LIVE target-composite research
         run: python analyze_4head_v291_a_targetcomp_rescue.py
-      - name: Validate leakage and LOMO outputs
+      - name: Validate leakage, identity audit and outputs
         run: |
           python - <<'PY'
           import json,pandas as pd
           p=json.load(open('head4_v291_a_targetcomp_rescue_candidate.json'))
+          a=json.load(open('audit_4head_v291_a_live_identity.json'))
           assert p['development_months']==['2026-04','2026-05','2026-06']
           assert p['jul_aug_outcomes_used'] is False
           assert p['september_outcomes_used'] is False
           assert p['v96_used'] is False
+          assert a['development_months']==['2026-04','2026-05','2026-06']
+          assert a['jul_aug_outcomes_used'] is False
+          assert a['september_outcomes_used'] is False
           q=pd.read_csv('analysis_v288_4head_composite_odds_alln_detail.csv')
           assert set(q.month.astype(str))=={'2026-04','2026-05','2026-06'}
           l=pd.read_csv('analysis_4head_v291_a_targetcomp_rescue_lomo.csv')
-          assert set(l.holdout_month.astype(str))=={'2026-04','2026-05','2026-06'}
-          print(p)
+          if len(l): assert set(l.holdout_month.astype(str))=={'2026-04','2026-05','2026-06'}
+          print(json.dumps(a,ensure_ascii=False,indent=2))
+          print(json.dumps(p,ensure_ascii=False,indent=2))
           PY
       - uses: actions/upload-artifact@v4
         with:
           name: head4-v291-a-targetcomp-research
           path: |
+            audit_4head_v291_a_live_identity.json
             analysis_4head_v291_a_targetcomp_rescue.csv
             analysis_4head_v291_a_targetcomp_rescue_monthly.csv
             analysis_4head_v291_a_targetcomp_rescue_lomo.csv
@@ -56,8 +66,8 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add analysis_4head_v291_a_targetcomp_rescue*.csv summary_4head_v291_a_targetcomp_rescue.md head4_v291_a_targetcomp_rescue_candidate.json
+          git add audit_4head_v291_a_live_identity.json analysis_4head_v291_a_targetcomp_rescue*.csv summary_4head_v291_a_targetcomp_rescue.md head4_v291_a_targetcomp_rescue_candidate.json
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'Record 4-head A target-composite rescue results'
+          git commit -m 'Record exact A-LIVE 4-head rescue research'
           git pull --rebase origin main
           git push origin HEAD:main
