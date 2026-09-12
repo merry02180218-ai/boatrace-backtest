@@ -1,0 +1,38 @@
+name: v303 1head head-model transfer ablation
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v303_1head_headmodel_transfer_ablation.py'
+      - '.github/workflows/research-20260912-v303-1head-headmodel-transfer.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Run v303 head research
+        run: python run_v303_1head_headmodel_transfer_ablation.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v303-1head-headmodel-transfer
+          path: |
+            analysis_v303_1head_headmodel_transfer_ablation_*.csv
+            summary_v303_1head_headmodel_transfer_ablation.md
+      - name: Commit v303 outputs
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add analysis_v303_1head_headmodel_transfer_ablation_*.csv summary_v303_1head_headmodel_transfer_ablation.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Add v303 head-model transfer outputs'
+          git pull --rebase origin main
+          git push
