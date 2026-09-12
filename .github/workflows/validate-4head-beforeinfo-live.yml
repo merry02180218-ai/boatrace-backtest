@@ -1,0 +1,38 @@
+name: Validate 4-head result-blind beforeinfo acquisition
+
+on:
+  push:
+    paths:
+      - 'fetch_4head_beforeinfo_live.py'
+      - 'verify_4head_beforeinfo_live.py'
+      - '.github/workflows/validate-4head-beforeinfo-live.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install parser dependencies
+        run: python -m pip install --disable-pip-version-check requests beautifulsoup4
+      - name: Syntax check
+        run: python -m py_compile fetch_4head_beforeinfo_live.py verify_4head_beforeinfo_live.py
+      - name: Offline fail-closed verifier
+        run: python verify_4head_beforeinfo_live.py
+      - name: Leakage/source guard
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          s=Path('fetch_4head_beforeinfo_live.py').read_text(encoding='utf-8').lower()
+          assert 'https://www.boatrace.jp/owpc/pc/race/beforeinfo' in s
+          assert 'allow_redirects=false' in s
+          assert '/race/raceresult' not in s
+          assert '/race/odds3t' not in s
+          print('HEAD4_BEFOREINFO_SOURCE_GUARD_OK')
+          PY
