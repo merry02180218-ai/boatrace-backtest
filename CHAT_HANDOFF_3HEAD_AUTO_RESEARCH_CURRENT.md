@@ -17,60 +17,62 @@
 - dead ends retained: residual_hit, exhibition_upgrade, return_rank, attack_style_split, orthogonal_consensus, ev_calibrated.
 
 ## Wave 2 — ticket structure while keeping frozen V221 opponent order
-- Run `34703969778` completed successfully.
-- artifact `v289-3head-addon-wave2-ticket-structure`, artifact ID **`10301039743`**.
-- generated-results commit `1b8bd73ededaab51b854bd029ce588993846439e`.
-- tested fixed Top2..Top10; target composite odds 2.5 / 3 / 3.5 / 4 / 5 / 6 / 8; exact 10,000-yen Dutch.
-- best fixed: **Top10 = 177R / 45 hits / ROI 57.70% / profit -748,660 yen / minimum monthly ROI 24.50% / 7 red months**.
-- prior-month-only selectors `wf_profit`, `wf_stable`, `wf_recent` all chose **0 add-on races**.
+- Run `34703969778` success; artifact `v289-3head-addon-wave2-ticket-structure`, ID `10301039743`.
+- best fixed Top10: **177R / 45 hits / ROI 57.70% / profit -748,660 yen / minimum monthly ROI 24.50% / 7 red months**.
+- prior-month-only selectors all chose 0 add-on races.
 - decision: **NO_ADOPTION_WAVE2**.
-- interpretation: changing ticket count/composite-odds target while retaining frozen V221 order does not rescue v288 NO_BETs.
 
 ## Wave 3 — independent PRE-B LIVE rescue
-- not an S/A threshold relaxation; separate PRE-B population.
-- Run `34704413463` success; artifact `v289-3head-addon-wave3-preb`, artifact ID **`10301232830`**.
+- Run `34704413463` success; artifact `v289-3head-addon-wave3-preb`, ID `10301232830`.
 - raw PRE-B buyable pool: **81R / 23 hits / ROI 84.42%**.
-- best numerical ROI: `preb_ev@0.20` = **5R / 2 hits / ROI 117.28% / profit +8,640 yen**, but only 5 races and minimum monthly ROI 0%, rejected.
-- best 20+ race variant: `preb_return_rank@0.50` = **26R / 6 hits / ROI 67.47% / profit -84,590 yen / minimum monthly ROI 36.93%**.
+- tiny positive `preb_ev@0.20` = **5R / 2 hits / ROI 117.28%**, rejected for sample and 0% minimum month.
+- best 20+ race variant: **26R / 6 hits / ROI 67.47%**.
 - decision: **NO_ADOPTION_WAVE3**.
 
 ## Wave 4 — venue / field-archetype residual research
-- Run **`34706093149`** success.
-- artifact `v289-3head-addon-wave4-archetype`, artifact ID **`10301509909`**.
-- generated-results commit `75c2094a51907d8e40fac4872fa9969695a87c8c`.
-- candidate pool: **178R**.
-- tested venue-local, field-archetype-local, venue×archetype, prior-venue-ROI gate with prior-month-only local fitting and minimum-sample guards.
-- `archetype_local@0.25` / `@0.40`: **2R / 1 hit / ROI 156.40% / profit +11,280 yen**, but only 2 races so explicitly rejected.
-- venue-local / venue×archetype / venue-ROI-gate selected 0 races once sample guards were enforced.
+- Run `34706093149` success; artifact `v289-3head-addon-wave4-archetype`, ID `10301509909`.
+- only positive result: **2R / 1 hit / ROI 156.40%**, rejected for sample size.
+- venue-local / venue×archetype / venue-ROI gate selected 0 with sample guards.
 - decision: **NO_ADOPTION_WAVE4**.
 
-## Wave 5 — TRUE opponent / 2着3着 order re-ranking
-- **currently running** as of this handoff update.
-- workflow: `.github/workflows/research-3head-v289-addon-wave5-pair-rerank.yml`.
-- script: `research_v289_3head_addon_wave5_pair_rerank.py`.
-- Actions Run **`34706218140`**.
-- run head SHA `75b2f178b4255edae94704498bec229a95c4b76b`.
-- current step: `Run Wave 5 true opponent reranking research` in progress; frozen canonical artifact download already succeeded.
-- this is genuinely distinct from Wave 2: Wave 2 retained V221 ordering; Wave 5 retrains the ordered-pair ranking itself using only prior-month reject races where boat 3 actually won.
-- variants fixed before seeing test-month outcome: residual-pair target3, V221+residual blend target3, ticket-level EV target3, and corresponding Top10 versions.
-- exact 10,000-yen Dutch; pre-race odds only; September outcomes forbidden.
-- planned artifact: `v289-3head-addon-wave5-pair-rerank`.
-- when complete, record add-on-only R/hits/ROI/profit/monthly minimum/red months/max DD + combined metrics + artifact ID here.
+## Wave 5 — TRUE ordered-pair re-ranking
+- Run **`34706218140`** completed successfully.
+- artifact **`v289-3head-addon-wave5-pair-rerank`**, artifact ID **`10302397653`**.
+- generated-results commit **`b35fa0ccb73dacf0c1d7a365bca137d3012a6bf6`**.
+- distinct from Wave 2: retrained the ordered 2着/3着 pair ranking itself using only prior-month reject races where boat 3 actually won.
+- best method: `ev_target3` / `ev_top10` = **178R / 24 hits / ROI 82.29% / profit -315,260 yen / minimum monthly ROI 0% / 6 red months / max DD 663,710 yen**.
+- combined v288 + add-on: **272R / ROI 113.49%**.
+- other residual/blend methods were worse (ROI 46.88%–52.32%).
+- decision: **NO_ADOPTION_WAVE5**.
+- rejection reason: pair re-ranking improves on frozen-order ticket research but add-on-only remains materially negative and unstable month-to-month.
+
+## Wave 6 — separate 2nd-place / 3rd-place role models
+- restarted automatically after Wave 5 rejection because no research run remained active.
+- script: `research_v289_3head_addon_wave6_role_split.py`.
+- workflow: `.github/workflows/research-3head-v289-addon-wave6-role-split.yml`.
+- script commit: `e1070444596a576a40d70e259b56bd43a9d1e443`.
+- workflow-trigger commit: `c12126a1e0fe68ba6065c181ef087ef896e79df4`.
+- structurally distinct from Wave 5: independent opponent-role classifiers for 2着 and 3着, trained only on prior-month reject races where boat 3 won; ticket ordering is role-probability product or role-probability × pre-race odds EV.
+- variants: role-product target3 / role-EV target3 / role-product Top10 / role-EV Top10.
+- exact 10,000-yen Dutch; all evaluation Feb-Aug walk-forward; September outcomes forbidden; v288 overlap zero; fail-closed requirements retained.
+- expected artifact: `v289-3head-addon-wave6-role-split`.
 
 ## What NOT to repeat
 - simple coverage-fraction tweaks of Wave-1 scores.
 - simple TopN/composite-odds changes on frozen V221 order.
 - PRE-B families already tested in Wave 3.
-- venue/archetype segmentation without adequate sample; 2R positive result is not promotion evidence.
+- venue/archetype segmentation without adequate sample.
+- Wave-5 ordered-pair residual/blend/EV reranking unchanged.
 
 ## Real-operation audit
 - v288 baseline overlap is zero by construction in evaluated add-on populations.
 - every test-month fit uses prior-month outcomes only; current-month result/payout is settlement/evaluation only.
 - source max date 2026-08-31; September outcomes excluded from tuning.
-- historical research-time missing features may use prior-training handling; any shadow/production route must fail closed on missing required current inputs.
+- all promoted/shadow routes must use inputs obtainable before deadline and fail closed on missing required current inputs.
+- exact 10,000-yen Dutch settlement is retained where tickets are evaluated.
 - no production workflow/model was changed.
 
 ## Exact restart point
-1. Finish **Wave 5 Run 34706218140**; inspect/fix/re-run if it fails.
-2. If Wave 5 produces a historical passer, only advance it to September outcome-blind shadow.
-3. If Wave 5 is rejected, next family must be structurally different again (e.g. separate 2nd-place and 3rd-place models, motor/racer-role conditional ordering, or new PRE candidate-generation population), not another V221/TopN tweak.
+1. Finish Wave 6 CI; if it fails, inspect logs, fix, and rerun.
+2. If Wave 6 produces a robust historical passer (>=20R, ROI>=100%, minimum monthly ROI>=60%, <=3 red months), advance only to September outcome-blind shadow, never directly over v288.
+3. If Wave 6 is rejected, next distinct family should condition opponent roles on motor/racer role or generate a genuinely new PRE candidate population; do not revisit failed Wave1–5 families unchanged.
