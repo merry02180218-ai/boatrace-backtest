@@ -1,0 +1,38 @@
+name: Validate 4-head POST feature lineage
+
+on:
+  push:
+    paths:
+      - 'artifacts/head4_post_feature_lineage_v1.json'
+      - 'verify_4head_post_feature_lineage.py'
+      - 'artifacts/head4_v291_downstream_20260630.json'
+      - 'analyze_v250_4head_rebuild_baseline.py'
+      - '.github/workflows/validate-4head-post-feature-lineage.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Syntax check
+        run: python -m py_compile verify_4head_post_feature_lineage.py
+      - name: Verify frozen schema and historical lineage
+        run: python verify_4head_post_feature_lineage.py
+      - name: Outcome-blind policy guard
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          m=json.loads(Path('artifacts/head4_post_feature_lineage_v1.json').read_text(encoding='utf-8'))
+          assert m['frozen_training_cutoff']=='2026-06-30'
+          assert 'NON-PRISTINE' in m['outcome_policy']['jul_aug_2026']
+          assert 'outcome-blind' in m['outcome_policy']['sep_2026']
+          print('HEAD4_POST_LINEAGE_POLICY_OK')
+          PY
