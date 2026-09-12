@@ -3,7 +3,7 @@ name: Research 4-head v291 immutable-base variable-N
 on:
   push:
     paths:
-      - 'analyze_4head_v291_base_variable_n.py'
+      - 'analyze_4head_v291_base_variable_n_v2.py'
       - 'analysis_v291_4head_composite_odds_alln_exactalive.csv'
       - 'audit_4head_v291_a_live_curve_recovery.json'
       - 'audit_4head_v291_a_live_identity.json'
@@ -50,14 +50,16 @@ jobs:
           assert base.race_code.nunique()==29
           PY
       - name: Syntax check
-        run: python -m py_compile analyze_4head_v291_base_variable_n.py
+        run: python -m py_compile analyze_4head_v291_base_variable_n_v2.py
       - name: Run immutable-base variable-N research
-        run: python analyze_4head_v291_base_variable_n.py
+        run: python analyze_4head_v291_base_variable_n_v2.py
       - name: Validate outputs and leakage guards
         run: |
           python - <<'PY'
           import json,pandas as pd
           p=json.load(open('head4_v291_base_variable_n_candidate.json'))
+          assert p['schema']=='head4_v291_base_variable_n_v2'
+          assert p['lomo_race_count_bug_fixed'] is True
           assert p['development_months']==['2026-04','2026-05','2026-06']
           assert p['jul_aug_outcomes_used'] is False
           assert p['september_outcomes_used'] is False
@@ -71,11 +73,12 @@ jobs:
           assert set(m.month.astype(str))=={'2026-04','2026-05','2026-06'}
           l=pd.read_csv('analysis_4head_v291_base_variable_n_lomo.csv')
           assert set(l.holdout_month.astype(str))=={'2026-04','2026-05','2026-06'}
+          assert (l.train_R>0).all()
           print(json.dumps(p,ensure_ascii=False,indent=2))
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: head4-v291-base-variable-n
+          name: head4-v291-base-variable-n-v2
           path: |
             analysis_4head_v291_base_variable_n.csv
             analysis_4head_v291_base_variable_n_monthly.csv
@@ -88,6 +91,6 @@ jobs:
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add analysis_4head_v291_base_variable_n*.csv summary_4head_v291_base_variable_n.md head4_v291_base_variable_n_candidate.json
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'Record v291 immutable-base variable-N research'
+          git commit -m 'Record corrected v291 variable-N LOMO research'
           git pull --rebase origin main
           git push origin HEAD:main
