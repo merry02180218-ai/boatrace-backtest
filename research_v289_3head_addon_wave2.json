@@ -1,0 +1,1597 @@
+{
+  "research_version": "v289-addon-wave2-ticket-structure",
+  "github_run_id": "34703969778",
+  "source_max_date": "2026-08-31",
+  "waku10_validated_races": 156,
+  "rules": {
+    "baseline_fixed": "v288 operational 94R",
+    "candidate_universe": "operational PRE S/A + original v242-buyable + final v288 NO_BET",
+    "test_months": "2026-02..2026-08",
+    "july_august": "NON-PRISTINE",
+    "september_outcomes_used": false,
+    "ticket_family": "frozen monthly V221 order + pre-race odds + exact 10,000-yen Dutch",
+    "fixed_topn": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "target_composite_odds": [
+      2.5,
+      3.0,
+      3.5,
+      4.0,
+      5.0,
+      6.0,
+      8.0
+    ]
+  },
+  "baseline": {
+    "races": 94,
+    "hits": 52,
+    "hit_rate_pct": 55.319148936170215,
+    "stake_yen": 940000,
+    "payout_yen": 1622070.0,
+    "profit_yen": 682070.0,
+    "roi_pct": 172.56063829787234,
+    "max_drawdown_yen": 80000.0
+  },
+  "candidate_pool_original": {
+    "races": 178,
+    "hits": 23,
+    "hit_rate_pct": 12.92134831460674,
+    "stake_yen": 1780000,
+    "payout_yen": 702420.0,
+    "profit_yen": -1077580.0,
+    "roi_pct": 39.46179775280899
+  },
+  "ticket_matrix_rows": 10608,
+  "fixed_ticket_policies": [
+    {
+      "races": 177,
+      "hits": 45,
+      "hit_rate_pct": 25.423728813559322,
+      "stake_yen": 1770000,
+      "payout_yen": 1021340.0,
+      "profit_yen": -748660.0,
+      "roi_pct": 57.70282485875706,
+      "config": "top10",
+      "red_months": 7,
+      "min_monthly_roi_pct": 24.5,
+      "monthly": {
+        "2026-02": {
+          "races": 13,
+          "hits": 4,
+          "hit_rate_pct": 30.76923076923077,
+          "stake_yen": 130000,
+          "payout_yen": 86080.0,
+          "profit_yen": -43920.0,
+          "roi_pct": 66.21538461538462
+        },
+        "2026-03": {
+          "races": 19,
+          "hits": 2,
+          "hit_rate_pct": 10.526315789473685,
+          "stake_yen": 190000,
+          "payout_yen": 46550.0,
+          "profit_yen": -143450.0,
+          "roi_pct": 24.5
+        },
+        "2026-04": {
+          "races": 7,
+          "hits": 1,
+          "hit_rate_pct": 14.285714285714286,
+          "stake_yen": 70000,
+          "payout_yen": 23460.0,
+          "profit_yen": -46540.0,
+          "roi_pct": 33.51428571428571
+        },
+        "2026-05": {
+          "races": 27,
+          "hits": 7,
+          "hit_rate_pct": 25.925925925925927,
+          "stake_yen": 270000,
+          "payout_yen": 182500.0,
+          "profit_yen": -87500.0,
+          "roi_pct": 67.5925925925926
+        },
+        "2026-06": {
+          "races": 24,
+          "hits": 10,
+          "hit_rate_pct": 41.666666666666664,
+          "stake_yen": 240000,
+          "payout_yen": 213660.0,
+          "profit_yen": -26340.0,
+          "roi_pct": 89.025
+        },
+        "2026-07": {
+          "races": 39,
+          "hits": 5,
+          "hit_rate_pct": 12.820512820512821,
+          "stake_yen": 390000,
+          "payout_yen": 100150.0,
+          "profit_yen": -289850.0,
+          "roi_pct": 25.67948717948718
+        },
+        "2026-08": {
+          "races": 48,
+          "hits": 16,
+          "hit_rate_pct": 33.333333333333336,
+          "stake_yen": 480000,
+          "payout_yen": 368940.0,
+          "profit_yen": -111060.0,
+          "roi_pct": 76.8625
+        }
+      },
+      "max_drawdown_yen": 762880.0,
+      "combined": {
+        "races": 271,
+        "hits": 97,
+        "hit_rate_pct": 35.79335793357934,
+        "stake_yen": 2710000,
+        "payout_yen": 2643410.0,
+        "profit_yen": -66590.0,
+        "roi_pct": 97.54280442804428,
+        "max_drawdown_yen": 347790.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "races": 177,
+      "hits": 40,
+      "hit_rate_pct": 22.598870056497177,
+      "stake_yen": 1770000,
+      "payout_yen": 958450.0,
+      "profit_yen": -811550.0,
+      "roi_pct": 54.14971751412429,
+      "config": "top9",
+      "red_months": 7,
+      "min_monthly_roi_pct": 25.936842105263157,
+      "monthly": {
+        "2026-02": {
+          "races": 13,
+          "hits": 4,
+          "hit_rate_pct": 30.76923076923077,
+          "stake_yen": 130000,
+          "payout_yen": 88060.0,
+          "profit_yen": -41940.0,
+          "roi_pct": 67.73846153846154
+        },
+        "2026-03": {
+          "races": 19,
+          "hits": 2,
+          "hit_rate_pct": 10.526315789473685,
+          "stake_yen": 190000,
+          "payout_yen": 49280.0,
+          "profit_yen": -140720.0,
+          "roi_pct": 25.936842105263157
+        },
+        "2026-04": {
+          "races": 7,
+          "hits": 1,
+          "hit_rate_pct": 14.285714285714286,
+          "stake_yen": 70000,
+          "payout_yen": 24480.0,
+          "profit_yen": -45520.0,
+          "roi_pct": 34.97142857142857
+        },
+        "2026-05": {
+          "races": 27,
+          "hits": 6,
+          "hit_rate_pct": 22.22222222222222,
+          "stake_yen": 270000,
+          "payout_yen": 163490.0,
+          "profit_yen": -106510.0,
+          "roi_pct": 60.55185185185185
+        },
+        "2026-06": {
+          "races": 24,
+          "hits": 9,
+          "hit_rate_pct": 37.5,
+          "stake_yen": 240000,
+          "payout_yen": 208600.0,
+          "profit_yen": -31400.0,
+          "roi_pct": 86.91666666666667
+        },
+        "2026-07": {
+          "races": 39,
+          "hits": 5,
+          "hit_rate_pct": 12.820512820512821,
+          "stake_yen": 390000,
+          "payout_yen": 104180.0,
+          "profit_yen": -285820.0,
+          "roi_pct": 26.712820512820514
+        },
+        "2026-08": {
+          "races": 48,
+          "hits": 13,
+          "hit_rate_pct": 27.083333333333332,
+          "stake_yen": 480000,
+          "payout_yen": 320360.0,
+          "profit_yen": -159640.0,
+          "roi_pct": 66.74166666666666
+        }
+      },
+      "max_drawdown_yen": 826870.0,
+      "combined": {
+        "races": 271,
+        "hits": 92,
+        "hit_rate_pct": 33.94833948339483,
+        "stake_yen": 2710000,
+        "payout_yen": 2580520.0,
+        "profit_yen": -129480.0,
+        "roi_pct": 95.22214022140221,
+        "max_drawdown_yen": 343760.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "races": 177,
+      "hits": 36,
+      "hit_rate_pct": 20.338983050847457,
+      "stake_yen": 1770000,
+      "payout_yen": 920340.0,
+      "profit_yen": -849660.0,
+      "roi_pct": 51.996610169491525,
+      "config": "target2.5",
+      "red_months": 7,
+      "min_monthly_roi_pct": 24.764102564102565,
+      "monthly": {
+        "2026-02": {
+          "races": 13,
+          "hits": 3,
+          "hit_rate_pct": 23.076923076923077,
+          "stake_yen": 130000,
+          "payout_yen": 72600.0,
+          "profit_yen": -57400.0,
+          "roi_pct": 55.84615384615385
+        },
+        "2026-03": {
+          "races": 19,
+          "hits": 2,
+          "hit_rate_pct": 10.526315789473685,
+          "stake_yen": 190000,
+          "payout_yen": 51870.0,
+          "profit_yen": -138130.0,
+          "roi_pct": 27.3
+        },
+        "2026-04": {
+          "races": 7,
+          "hits": 1,
+          "hit_rate_pct": 14.285714285714286,
+          "stake_yen": 70000,
+          "payout_yen": 24480.0,
+          "profit_yen": -45520.0,
+          "roi_pct": 34.97142857142857
+        },
+        "2026-05": {
+          "races": 27,
+          "hits": 6,
+          "hit_rate_pct": 22.22222222222222,
+          "stake_yen": 270000,
+          "payout_yen": 171830.0,
+          "profit_yen": -98170.0,
+          "roi_pct": 63.64074074074074
+        },
+        "2026-06": {
+          "races": 24,
+          "hits": 8,
+          "hit_rate_pct": 33.333333333333336,
+          "stake_yen": 240000,
+          "payout_yen": 196430.0,
+          "profit_yen": -43570.0,
+          "roi_pct": 81.84583333333333
+        },
+        "2026-07": {
+          "races": 39,
+          "hits": 4,
+          "hit_rate_pct": 10.256410256410257,
+          "stake_yen": 390000,
+          "payout_yen": 96580.0,
+          "profit_yen": -293420.0,
+          "roi_pct": 24.764102564102565
+        },
+        "2026-08": {
+          "races": 48,
+          "hits": 12,
+          "hit_rate_pct": 25.0,
+          "stake_yen": 480000,
+          "payout_yen": 306550.0,
+          "profit_yen": -173450.0,
+          "roi_pct": 63.864583333333336
+        }
+      },
+      "max_drawdown_yen": 867620.0,
+      "combined": {
+        "races": 271,
+        "hits": 88,
+        "hit_rate_pct": 32.47232472324723,
+        "stake_yen": 2710000,
+        "payout_yen": 2542410.0,
+        "profit_yen": -167590.0,
+        "roi_pct": 93.81586715867158,
+        "max_drawdown_yen": 351360.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "races": 177,
+      "hits": 35,
+      "hit_rate_pct": 19.774011299435028,
+      "stake_yen": 1770000,
+      "payout_yen": 877340.0,
+      "profit_yen": -892660.0,
+      "roi_pct": 49.56723163841808,
+      "config": "top8",
+      "red_months": 7,
+      "min_monthly_roi_pct": 27.373684210526317,
+      "monthly": {
+        "2026-02": {
+          "races": 13,
+          "hits": 4,
+          "hit_rate_pct": 30.76923076923077,
+          "stake_yen": 130000,
+          "payout_yen": 93780.0,
+          "profit_yen": -36220.0,
+          "roi_pct": 72.13846153846154
+        },
+        "2026-03": {
+          "races": 19,
+          "hits": 2,
+          "hit_rate_pct": 10.526315789473685,
+          "stake_yen": 190000,
+          "payout_yen": 52010.0,
+          "profit_yen": -137990.0,
+          "roi_pct": 27.373684210526317
+        },
+        "2026-04": {
+          "races": 7,
+          "hits": 1,
+          "hit_rate_pct": 14.285714285714286,
+          "stake_yen": 70000,
+          "payout_yen": 25500.0,
+          "profit_yen": -44500.0,
+          "roi_pct": 36.42857142857143
+        },
+        "2026-05": {
+          "races": 27,
+          "hits": 5,
+          "hit_rate_pct": 18.51851851851852,
+          "stake_yen": 270000,
+          "payout_yen": 148340.0,
+          "profit_yen": -121660.0,
+          "roi_pct": 54.94074074074074
+        },
+        "2026-06": {
+          "races": 24,
+          "hits": 8,
+          "hit_rate_pct": 33.333333333333336,
+          "stake_yen": 240000,
+          "payout_yen": 187660.0,
+          "profit_yen": -52340.0,
+          "roi_pct": 78.19166666666666
+        },
+        "2026-07": {
+          "races": 39,
+          "hits": 5,
+          "hit_rate_pct": 12.820512820512821,
+          "stake_yen": 390000,
+          "payout_yen": 111130.0,
+          "profit_yen": -278870.0,
+          "roi_pct": 28.494871794871795
+        },
+        "2026-08": {
+          "races": 48,
+          "hits": 10,
+          "hit_rate_pct": 20.833333333333332,
+          "stake_yen": 480000,
+          "payout_yen": 258920.0,
+          "profit_yen": -221080.0,
+          "roi_pct": 53.94166666666667
+        }
+      },
+      "max_drawdown_yen": 912820.0,
+      "combined": {
+        "races": 271,
+        "hits": 87,
+        "hit_rate_pct": 32.103321033210335,
+        "stake_yen": 2710000,
+        "payout_yen": 2499410.0,
+        "profit_yen": -210590.0,
+        "roi_pct": 92.22915129151292,
+        "max_drawdown_yen": 375140.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "races": 177,
+      "hits": 18,
+      "hit_rate_pct": 10.169491525423728,
+      "stake_yen": 1770000,
+      "payout_yen": 743890.0,
+      "profit_yen": -1026110.0,
+      "roi_pct": 42.02768361581921,
+      "config": "top4",
+      "red_months": 7,
+      "min_monthly_roi_pct": 16.775,
+      "monthly": {
+        "2026-02": {
+          "races": 13,
+          "hits": 2,
+          "hit_rate_pct": 15.384615384615385,
+          "stake_yen": 130000,
+          "payout_yen": 74360.0,
+          "profit_yen": -55640.0,
+          "roi_pct": 57.2
+        },
+        "2026-03": {
+          "races": 19,
+          "hits": 2,
+          "hit_rate_pct": 10.526315789473685,
+          "stake_yen": 190000,
+          "payout_yen": 78120.0,
+          "profit_yen": -111880.0,
+          "roi_pct": 41.11578947368421
+        },
+        "2026-04": {
+          "races": 7,
+          "hits": 1,
+          "hit_rate_pct": 14.285714285714286,
+          "stake_yen": 70000,
+          "payout_yen": 32639.999999999996,
+          "profit_yen": -37360.0,
+          "roi_pct": 46.62857142857142
+        },
+        "2026-05": {
+          "races": 27,
+          "hits": 3,
+          "hit_rate_pct": 11.11111111111111,
+          "stake_yen": 270000,
+          "payout_yen": 155600.0,
+          "profit_yen": -114400.0,
+          "roi_pct": 57.629629629629626
+        },
+        "2026-06": {
+          "races": 24,
+          "hits": 1,
+          "hit_rate_pct": 4.166666666666667,
+          "stake_yen": 240000,
+          "payout_yen": 40260.0,
+          "profit_yen": -199740.0,
+          "roi_pct": 16.775
+        },
+        "2026-07": {
+          "races": 39,
+          "hits": 3,
+          "hit_rate_pct": 7.6923076923076925,
+          "stake_yen": 390000,
+          "payout_yen": 123220.0,
+          "profit_yen": -266780.0,
+          "roi_pct": 31.594871794871796
+        },
+        "2026-08": {
+          "races": 48,
+          "hits": 6,
+          "hit_rate_pct": 12.5,
+          "stake_yen": 480000,
+          "payout_yen": 239690.0,
+          "profit_yen": -240310.0,
+          "roi_pct": 49.93541666666667
+        }
+      },
+      "max_drawdown_yen": 1057910.0,
+      "combined": {
+        "races": 271,
+        "hits": 70,
+        "hit_rate_pct": 25.830258302583026,
+        "stake_yen": 2710000,
+        "payout_yen": 2365960.0,
+        "profit_yen": -344040.0,
+        "roi_pct": 87.30479704797048,
+        "max_drawdown_yen": 526920.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "races": 177,
+      "hits": 27,
+      "hit_rate_pct": 15.254237288135593,
+      "stake_yen": 1770000,
+      "payout_yen": 742130.0,
+      "profit_yen": -1027870.0,
+      "roi_pct": 41.92824858757062,
+      "config": "top7",
+      "red_months": 7,
+      "min_monthly_roi_pct": 29.58421052631579,
+      "monthly": {
+        "2026-02": {
+          "races": 13,
+          "hits": 3,
+          "hit_rate_pct": 23.076923076923077,
+          "stake_yen": 130000,
+          "payout_yen": 74360.0,
+          "profit_yen": -55640.0,
+          "roi_pct": 57.2
+        },
+        "2026-03": {
+          "races": 19,
+          "hits": 2,
+          "hit_rate_pct": 10.526315789473685,
+          "stake_yen": 190000,
+          "payout_yen": 56210.0,
+          "profit_yen": -133790.0,
+          "roi_pct": 29.58421052631579
+        },
+        "2026-04": {
+          "races": 7,
+          "hits": 1,
+          "hit_rate_pct": 14.285714285714286,
+          "stake_yen": 70000,
+          "payout_yen": 27539.999999999996,
+          "profit_yen": -42460.0,
+          "roi_pct": 39.342857142857135
+        },
+        "2026-05": {
+          "races": 27,
+          "hits": 5,
+          "hit_rate_pct": 18.51851851851852,
+          "stake_yen": 270000,
+          "payout_yen": 160790.0,
+          "profit_yen": -109210.0,
+          "roi_pct": 59.55185185185185
+        },
+        "2026-06": {
+          "races": 24,
+          "hits": 3,
+          "hit_rate_pct": 12.5,
+          "stake_yen": 240000,
+          "payout_yen": 79260.0,
+          "profit_yen": -160740.0,
+          "roi_pct": 33.025
+        },
+        "2026-07": {
+          "races": 39,
+          "hits": 5,
+          "hit_rate_pct": 12.820512820512821,
+          "stake_yen": 390000,
+          "payout_yen": 121540.0,
+          "profit_yen": -268460.0,
+          "roi_pct": 31.164102564102564
+        },
+        "2026-08": {
+          "races": 48,
+          "hits": 8,
+          "hit_rate_pct": 16.666666666666668,
+          "stake_yen": 480000,
+          "payout_yen": 222430.0,
+          "profit_yen": -257570.0,
+          "roi_pct": 46.33958333333333
+        }
+      },
+      "max_drawdown_yen": 1050230.0,
+      "combined": {
+        "races": 271,
+        "hits": 79,
+        "hit_rate_pct": 29.15129151291513,
+        "stake_yen": 2710000,
+        "payout_yen": 2364200.0,
+        "profit_yen": -345800.0,
+        "roi_pct": 87.23985239852398,
+        "max_drawdown_yen": 501710.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "races": 177,
+      "hits": 14,
+      "hit_rate_pct": 7.909604519774011,
+      "stake_yen": 1770000,
+      "payout_yen": 727230.0,
+      "profit_yen": -1042770.0,
+      "roi_pct": 41.0864406779661,
+      "config": "top3",
+      "red_months": 7,
+      "min_monthly_roi_pct": 0.0,
+      "monthly": {
+        "2026-02": {
+          "races": 13,
+          "hits": 2,
+          "hit_rate_pct": 15.384615384615385,
+          "stake_yen": 130000,
+          "payout_yen": 84920.0,
+          "profit_yen": -45080.0,
+          "roi_pct": 65.32307692307693
+        },
+        "2026-03": {
+          "races": 19,
+          "hits": 1,
+          "hit_rate_pct": 5.2631578947368425,
+          "stake_yen": 190000,
+          "payout_yen": 57400.0,
+          "profit_yen": -132600.0,
+          "roi_pct": 30.210526315789473
+        },
+        "2026-04": {
+          "races": 7,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 70000,
+          "payout_yen": 0.0,
+          "profit_yen": -70000.0,
+          "roi_pct": 0.0
+        },
+        "2026-05": {
+          "races": 27,
+          "hits": 3,
+          "hit_rate_pct": 11.11111111111111,
+          "stake_yen": 270000,
+          "payout_yen": 186700.0,
+          "profit_yen": -83300.0,
+          "roi_pct": 69.14814814814815
+        },
+        "2026-06": {
+          "races": 24,
+          "hits": 1,
+          "hit_rate_pct": 4.166666666666667,
+          "stake_yen": 240000,
+          "payout_yen": 43920.0,
+          "profit_yen": -196080.0,
+          "roi_pct": 18.3
+        },
+        "2026-07": {
+          "races": 39,
+          "hits": 2,
+          "hit_rate_pct": 5.128205128205129,
+          "stake_yen": 390000,
+          "payout_yen": 100640.0,
+          "profit_yen": -289360.0,
+          "roi_pct": 25.805128205128206
+        },
+        "2026-08": {
+          "races": 48,
+          "hits": 5,
+          "hit_rate_pct": 10.416666666666666,
+          "stake_yen": 480000,
+          "payout_yen": 253650.0,
+          "profit_yen": -226350.0,
+          "roi_pct": 52.84375
+        }
+      },
+      "max_drawdown_yen": 1078970.0,
+      "combined": {
+        "races": 271,
+        "hits": 66,
+        "hit_rate_pct": 24.354243542435423,
+        "stake_yen": 2710000,
+        "payout_yen": 2349300.0,
+        "profit_yen": -360700.0,
+        "roi_pct": 86.69003690036901,
+        "max_drawdown_yen": 517080.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "races": 177,
+      "hits": 21,
+      "hit_rate_pct": 11.864406779661017,
+      "stake_yen": 1770000,
+      "payout_yen": 725670.0,
+      "profit_yen": -1044330.0,
+      "roi_pct": 40.998305084745766,
+      "config": "top5",
+      "red_months": 7,
+      "min_monthly_roi_pct": 25.3,
+      "monthly": {
+        "2026-02": {
+          "races": 13,
+          "hits": 2,
+          "hit_rate_pct": 15.384615384615385,
+          "stake_yen": 130000,
+          "payout_yen": 67540.0,
+          "profit_yen": -62460.0,
+          "roi_pct": 51.95384615384615
+        },
+        "2026-03": {
+          "races": 19,
+          "hits": 2,
+          "hit_rate_pct": 10.526315789473685,
+          "stake_yen": 190000,
+          "payout_yen": 69860.0,
+          "profit_yen": -120140.0,
+          "roi_pct": 36.76842105263158
+        },
+        "2026-04": {
+          "races": 7,
+          "hits": 1,
+          "hit_rate_pct": 14.285714285714286,
+          "stake_yen": 70000,
+          "payout_yen": 29579.999999999996,
+          "profit_yen": -40420.0,
+          "roi_pct": 42.25714285714285
+        },
+        "2026-05": {
+          "races": 27,
+          "hits": 4,
+          "hit_rate_pct": 14.814814814814815,
+          "stake_yen": 270000,
+          "payout_yen": 167020.0,
+          "profit_yen": -102980.0,
+          "roi_pct": 61.85925925925926
+        },
+        "2026-06": {
+          "races": 24,
+          "hits": 2,
+          "hit_rate_pct": 8.333333333333334,
+          "stake_yen": 240000,
+          "payout_yen": 60720.0,
+          "profit_yen": -179280.0,
+          "roi_pct": 25.3
+        },
+        "2026-07": {
+          "races": 39,
+          "hits": 4,
+          "hit_rate_pct": 10.256410256410257,
+          "stake_yen": 390000,
+          "payout_yen": 126180.0,
+          "profit_yen": -263820.0,
+          "roi_pct": 32.353846153846156
+        },
+        "2026-08": {
+          "races": 48,
+          "hits": 6,
+          "hit_rate_pct": 12.5,
+          "stake_yen": 480000,
+          "payout_yen": 204770.0,
+          "profit_yen": -275230.0,
+          "roi_pct": 42.66041666666667
+        }
+      },
+      "max_drawdown_yen": 1072830.0,
+      "combined": {
+        "races": 271,
+        "hits": 73,
+        "hit_rate_pct": 26.937269372693727,
+        "stake_yen": 2710000,
+        "payout_yen": 2347740.0,
+        "profit_yen": -362260.0,
+        "roi_pct": 86.63247232472325,
+        "max_drawdown_yen": 518420.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "races": 177,
+      "hits": 23,
+      "hit_rate_pct": 12.994350282485875,
+      "stake_yen": 1770000,
+      "payout_yen": 702420.0,
+      "profit_yen": -1067580.0,
+      "roi_pct": 39.68474576271186,
+      "config": "target3",
+      "red_months": 7,
+      "min_monthly_roi_pct": 30.57948717948718,
+      "monthly": {
+        "2026-02": {
+          "races": 13,
+          "hits": 2,
+          "hit_rate_pct": 15.384615384615385,
+          "stake_yen": 130000,
+          "payout_yen": 57640.0,
+          "profit_yen": -72360.0,
+          "roi_pct": 44.33846153846154
+        },
+        "2026-03": {
+          "races": 19,
+          "hits": 2,
+          "hit_rate_pct": 10.526315789473685,
+          "stake_yen": 190000,
+          "payout_yen": 58660.0,
+          "profit_yen": -131340.0,
+          "roi_pct": 30.873684210526317
+        },
+        "2026-04": {
+          "races": 7,
+          "hits": 1,
+          "hit_rate_pct": 14.285714285714286,
+          "stake_yen": 70000,
+          "payout_yen": 29579.999999999996,
+          "profit_yen": -40420.0,
+          "roi_pct": 42.25714285714285
+        },
+        "2026-05": {
+          "races": 27,
+          "hits": 4,
+          "hit_rate_pct": 14.814814814814815,
+          "stake_yen": 270000,
+          "payout_yen": 132420.0,
+          "profit_yen": -137580.0,
+          "roi_pct": 49.044444444444444
+        },
+        "2026-06": {
+          "races": 24,
+          "hits": 3,
+          "hit_rate_pct": 12.5,
+          "stake_yen": 240000,
+          "payout_yen": 90220.0,
+          "profit_yen": -149780.0,
+          "roi_pct": 37.59166666666667
+        },
+        "2026-07": {
+          "races": 39,
+          "hits": 4,
+          "hit_rate_pct": 10.256410256410257,
+          "stake_yen": 390000,
+          "payout_yen": 119260.0,
+          "profit_yen": -270740.0,
+          "roi_pct": 30.57948717948718
+        },
+        "2026-08": {
+          "races": 48,
+          "hits": 7,
+          "hit_rate_pct": 14.583333333333334,
+          "stake_yen": 480000,
+          "payout_yen": 214640.0,
+          "profit_yen": -265360.0,
+          "roi_pct": 44.71666666666667
+        }
+      },
+      "max_drawdown_yen": 1086180.0,
+      "combined": {
+        "races": 271,
+        "hits": 75,
+        "hit_rate_pct": 27.675276752767527,
+        "stake_yen": 2710000,
+        "payout_yen": 2324490.0,
+        "profit_yen": -385510.0,
+        "roi_pct": 85.77453874538746,
+        "max_drawdown_yen": 503730.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "races": 177,
+      "hits": 19,
+      "hit_rate_pct": 10.734463276836157,
+      "stake_yen": 1770000,
+      "payout_yen": 660720.0,
+      "profit_yen": -1109280.0,
+      "roi_pct": 37.328813559322036,
+      "config": "target3.5",
+      "red_months": 7,
+      "min_monthly_roi_pct": 28.48974358974359,
+      "monthly": {
+        "2026-02": {
+          "races": 13,
+          "hits": 2,
+          "hit_rate_pct": 15.384615384615385,
+          "stake_yen": 130000,
+          "payout_yen": 64460.0,
+          "profit_yen": -65540.0,
+          "roi_pct": 49.58461538461538
+        },
+        "2026-03": {
+          "races": 19,
+          "hits": 2,
+          "hit_rate_pct": 10.526315789473685,
+          "stake_yen": 190000,
+          "payout_yen": 68320.0,
+          "profit_yen": -121680.0,
+          "roi_pct": 35.95789473684211
+        },
+        "2026-04": {
+          "races": 7,
+          "hits": 1,
+          "hit_rate_pct": 14.285714285714286,
+          "stake_yen": 70000,
+          "payout_yen": 32639.999999999996,
+          "profit_yen": -37360.0,
+          "roi_pct": 46.62857142857142
+        },
+        "2026-05": {
+          "races": 27,
+          "hits": 3,
+          "hit_rate_pct": 11.11111111111111,
+          "stake_yen": 270000,
+          "payout_yen": 110340.0,
+          "profit_yen": -159660.0,
+          "roi_pct": 40.86666666666667
+        },
+        "2026-06": {
+          "races": 24,
+          "hits": 2,
+          "hit_rate_pct": 8.333333333333334,
+          "stake_yen": 240000,
+          "payout_yen": 72920.0,
+          "profit_yen": -167080.0,
+          "roi_pct": 30.383333333333333
+        },
+        "2026-07": {
+          "races": 39,
+          "hits": 3,
+          "hit_rate_pct": 7.6923076923076925,
+          "stake_yen": 390000,
+          "payout_yen": 111110.0,
+          "profit_yen": -278890.0,
+          "roi_pct": 28.48974358974359
+        },
+        "2026-08": {
+          "races": 48,
+          "hits": 6,
+          "hit_rate_pct": 12.5,
+          "stake_yen": 480000,
+          "payout_yen": 200930.0,
+          "profit_yen": -279070.0,
+          "roi_pct": 41.860416666666666
+        }
+      },
+      "max_drawdown_yen": 1131180.0,
+      "combined": {
+        "races": 271,
+        "hits": 71,
+        "hit_rate_pct": 26.199261992619927,
+        "stake_yen": 2710000,
+        "payout_yen": 2282790.0,
+        "profit_yen": -427210.0,
+        "roi_pct": 84.23579335793357,
+        "max_drawdown_yen": 574730.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "races": 177,
+      "hits": 22,
+      "hit_rate_pct": 12.429378531073446,
+      "stake_yen": 1770000,
+      "payout_yen": 654610.0,
+      "profit_yen": -1115390.0,
+      "roi_pct": 36.98361581920904,
+      "config": "top6",
+      "red_months": 7,
+      "min_monthly_roi_pct": 21.325,
+      "monthly": {
+        "2026-02": {
+          "races": 13,
+          "hits": 2,
+          "hit_rate_pct": 15.384615384615385,
+          "stake_yen": 130000,
+          "payout_yen": 56540.0,
+          "profit_yen": -73460.0,
+          "roi_pct": 43.49230769230769
+        },
+        "2026-03": {
+          "races": 19,
+          "hits": 2,
+          "hit_rate_pct": 10.526315789473685,
+          "stake_yen": 190000,
+          "payout_yen": 61670.0,
+          "profit_yen": -128330.0,
+          "roi_pct": 32.45789473684211
+        },
+        "2026-04": {
+          "races": 7,
+          "hits": 1,
+          "hit_rate_pct": 14.285714285714286,
+          "stake_yen": 70000,
+          "payout_yen": 27539.999999999996,
+          "profit_yen": -42460.0,
+          "roi_pct": 39.342857142857135
+        },
+        "2026-05": {
+          "races": 27,
+          "hits": 5,
+          "hit_rate_pct": 18.51851851851852,
+          "stake_yen": 270000,
+          "payout_yen": 170150.0,
+          "profit_yen": -99850.0,
+          "roi_pct": 63.01851851851852
+        },
+        "2026-06": {
+          "races": 24,
+          "hits": 2,
+          "hit_rate_pct": 8.333333333333334,
+          "stake_yen": 240000,
+          "payout_yen": 51180.0,
+          "profit_yen": -188820.0,
+          "roi_pct": 21.325
+        },
+        "2026-07": {
+          "races": 39,
+          "hits": 4,
+          "hit_rate_pct": 10.256410256410257,
+          "stake_yen": 390000,
+          "payout_yen": 108690.0,
+          "profit_yen": -281310.0,
+          "roi_pct": 27.869230769230768
+        },
+        "2026-08": {
+          "races": 48,
+          "hits": 6,
+          "hit_rate_pct": 12.5,
+          "stake_yen": 480000,
+          "payout_yen": 178840.0,
+          "profit_yen": -301160.0,
+          "roi_pct": 37.25833333333333
+        }
+      },
+      "max_drawdown_yen": 1137290.0,
+      "combined": {
+        "races": 271,
+        "hits": 74,
+        "hit_rate_pct": 27.30627306273063,
+        "stake_yen": 2710000,
+        "payout_yen": 2276680.0,
+        "profit_yen": -433320.0,
+        "roi_pct": 84.01033210332103,
+        "max_drawdown_yen": 583270.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "races": 177,
+      "hits": 13,
+      "hit_rate_pct": 7.344632768361582,
+      "stake_yen": 1770000,
+      "payout_yen": 642070.0,
+      "profit_yen": -1127930.0,
+      "roi_pct": 36.275141242937856,
+      "config": "target5",
+      "red_months": 7,
+      "min_monthly_roi_pct": 0.0,
+      "monthly": {
+        "2026-02": {
+          "races": 13,
+          "hits": 2,
+          "hit_rate_pct": 15.384615384615385,
+          "stake_yen": 130000,
+          "payout_yen": 95480.0,
+          "profit_yen": -34520.0,
+          "roi_pct": 73.44615384615385
+        },
+        "2026-03": {
+          "races": 19,
+          "hits": 1,
+          "hit_rate_pct": 5.2631578947368425,
+          "stake_yen": 190000,
+          "payout_yen": 46200.0,
+          "profit_yen": -143800.0,
+          "roi_pct": 24.31578947368421
+        },
+        "2026-04": {
+          "races": 7,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 70000,
+          "payout_yen": 0.0,
+          "profit_yen": -70000.0,
+          "roi_pct": 0.0
+        },
+        "2026-05": {
+          "races": 27,
+          "hits": 3,
+          "hit_rate_pct": 11.11111111111111,
+          "stake_yen": 270000,
+          "payout_yen": 154140.0,
+          "profit_yen": -115860.0,
+          "roi_pct": 57.08888888888889
+        },
+        "2026-06": {
+          "races": 24,
+          "hits": 1,
+          "hit_rate_pct": 4.166666666666667,
+          "stake_yen": 240000,
+          "payout_yen": 43920.0,
+          "profit_yen": -196080.0,
+          "roi_pct": 18.3
+        },
+        "2026-07": {
+          "races": 39,
+          "hits": 2,
+          "hit_rate_pct": 5.128205128205129,
+          "stake_yen": 390000,
+          "payout_yen": 90260.0,
+          "profit_yen": -299740.0,
+          "roi_pct": 23.143589743589743
+        },
+        "2026-08": {
+          "races": 48,
+          "hits": 4,
+          "hit_rate_pct": 8.333333333333334,
+          "stake_yen": 480000,
+          "payout_yen": 212070.0,
+          "profit_yen": -267930.0,
+          "roi_pct": 44.18125
+        }
+      },
+      "max_drawdown_yen": 1164130.0,
+      "combined": {
+        "races": 271,
+        "hits": 65,
+        "hit_rate_pct": 23.985239852398525,
+        "stake_yen": 2710000,
+        "payout_yen": 2264140.0,
+        "profit_yen": -445860.0,
+        "roi_pct": 83.54760147601476,
+        "max_drawdown_yen": 601600.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "races": 177,
+      "hits": 8,
+      "hit_rate_pct": 4.519774011299435,
+      "stake_yen": 1770000,
+      "payout_yen": 597320.0,
+      "profit_yen": -1172680.0,
+      "roi_pct": 33.74689265536723,
+      "config": "top2",
+      "red_months": 7,
+      "min_monthly_roi_pct": 0.0,
+      "monthly": {
+        "2026-02": {
+          "races": 13,
+          "hits": 2,
+          "hit_rate_pct": 15.384615384615385,
+          "stake_yen": 130000,
+          "payout_yen": 119680.0,
+          "profit_yen": -10320.0,
+          "roi_pct": 92.06153846153846
+        },
+        "2026-03": {
+          "races": 19,
+          "hits": 1,
+          "hit_rate_pct": 5.2631578947368425,
+          "stake_yen": 190000,
+          "payout_yen": 88200.0,
+          "profit_yen": -101800.0,
+          "roi_pct": 46.421052631578945
+        },
+        "2026-04": {
+          "races": 7,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 70000,
+          "payout_yen": 0.0,
+          "profit_yen": -70000.0,
+          "roi_pct": 0.0
+        },
+        "2026-05": {
+          "races": 27,
+          "hits": 3,
+          "hit_rate_pct": 11.11111111111111,
+          "stake_yen": 270000,
+          "payout_yen": 251540.0,
+          "profit_yen": -18460.0,
+          "roi_pct": 93.16296296296296
+        },
+        "2026-06": {
+          "races": 24,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 240000,
+          "payout_yen": 0.0,
+          "profit_yen": -240000.0,
+          "roi_pct": 0.0
+        },
+        "2026-07": {
+          "races": 39,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 390000,
+          "payout_yen": 0.0,
+          "profit_yen": -390000.0,
+          "roi_pct": 0.0
+        },
+        "2026-08": {
+          "races": 48,
+          "hits": 2,
+          "hit_rate_pct": 4.166666666666667,
+          "stake_yen": 480000,
+          "payout_yen": 137900.0,
+          "profit_yen": -342100.0,
+          "roi_pct": 28.729166666666668
+        }
+      },
+      "max_drawdown_yen": 1233080.0,
+      "combined": {
+        "races": 271,
+        "hits": 60,
+        "hit_rate_pct": 22.14022140221402,
+        "stake_yen": 2710000,
+        "payout_yen": 2219390.0,
+        "profit_yen": -490610.0,
+        "roi_pct": 81.89630996309963,
+        "max_drawdown_yen": 757670.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "races": 177,
+      "hits": 15,
+      "hit_rate_pct": 8.474576271186441,
+      "stake_yen": 1770000,
+      "payout_yen": 595240.0,
+      "profit_yen": -1174760.0,
+      "roi_pct": 33.62937853107345,
+      "config": "target4",
+      "red_months": 7,
+      "min_monthly_roi_pct": 16.775,
+      "monthly": {
+        "2026-02": {
+          "races": 13,
+          "hits": 2,
+          "hit_rate_pct": 15.384615384615385,
+          "stake_yen": 130000,
+          "payout_yen": 77220.0,
+          "profit_yen": -52780.0,
+          "roi_pct": 59.4
+        },
+        "2026-03": {
+          "races": 19,
+          "hits": 1,
+          "hit_rate_pct": 5.2631578947368425,
+          "stake_yen": 190000,
+          "payout_yen": 40600.0,
+          "profit_yen": -149400.0,
+          "roi_pct": 21.36842105263158
+        },
+        "2026-04": {
+          "races": 7,
+          "hits": 1,
+          "hit_rate_pct": 14.285714285714286,
+          "stake_yen": 70000,
+          "payout_yen": 32639.999999999996,
+          "profit_yen": -37360.0,
+          "roi_pct": 46.62857142857142
+        },
+        "2026-05": {
+          "races": 27,
+          "hits": 3,
+          "hit_rate_pct": 11.11111111111111,
+          "stake_yen": 270000,
+          "payout_yen": 121880.0,
+          "profit_yen": -148120.0,
+          "roi_pct": 45.14074074074074
+        },
+        "2026-06": {
+          "races": 24,
+          "hits": 1,
+          "hit_rate_pct": 4.166666666666667,
+          "stake_yen": 240000,
+          "payout_yen": 40260.0,
+          "profit_yen": -199740.0,
+          "roi_pct": 16.775
+        },
+        "2026-07": {
+          "races": 39,
+          "hits": 2,
+          "hit_rate_pct": 5.128205128205129,
+          "stake_yen": 390000,
+          "payout_yen": 79880.0,
+          "profit_yen": -310120.0,
+          "roi_pct": 20.48205128205128
+        },
+        "2026-08": {
+          "races": 48,
+          "hits": 5,
+          "hit_rate_pct": 10.416666666666666,
+          "stake_yen": 480000,
+          "payout_yen": 202760.0,
+          "profit_yen": -277240.0,
+          "roi_pct": 42.24166666666667
+        }
+      },
+      "max_drawdown_yen": 1203260.0,
+      "combined": {
+        "races": 271,
+        "hits": 67,
+        "hit_rate_pct": 24.723247232472325,
+        "stake_yen": 2710000,
+        "payout_yen": 2217310.0,
+        "profit_yen": -492690.0,
+        "roi_pct": 81.81955719557196,
+        "max_drawdown_yen": 633830.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "races": 177,
+      "hits": 10,
+      "hit_rate_pct": 5.649717514124294,
+      "stake_yen": 1770000,
+      "payout_yen": 577600.0,
+      "profit_yen": -1192400.0,
+      "roi_pct": 32.632768361581924,
+      "config": "target6",
+      "red_months": 7,
+      "min_monthly_roi_pct": 0.0,
+      "monthly": {
+        "2026-02": {
+          "races": 13,
+          "hits": 2,
+          "hit_rate_pct": 15.384615384615385,
+          "stake_yen": 130000,
+          "payout_yen": 119680.0,
+          "profit_yen": -10320.0,
+          "roi_pct": 92.06153846153846
+        },
+        "2026-03": {
+          "races": 19,
+          "hits": 1,
+          "hit_rate_pct": 5.2631578947368425,
+          "stake_yen": 190000,
+          "payout_yen": 57400.0,
+          "profit_yen": -132600.0,
+          "roi_pct": 30.210526315789473
+        },
+        "2026-04": {
+          "races": 7,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 70000,
+          "payout_yen": 0.0,
+          "profit_yen": -70000.0,
+          "roi_pct": 0.0
+        },
+        "2026-05": {
+          "races": 27,
+          "hits": 3,
+          "hit_rate_pct": 11.11111111111111,
+          "stake_yen": 270000,
+          "payout_yen": 167140.0,
+          "profit_yen": -102860.0,
+          "roi_pct": 61.903703703703705
+        },
+        "2026-06": {
+          "races": 24,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 240000,
+          "payout_yen": 0.0,
+          "profit_yen": -240000.0,
+          "roi_pct": 0.0
+        },
+        "2026-07": {
+          "races": 39,
+          "hits": 1,
+          "hit_rate_pct": 2.5641025641025643,
+          "stake_yen": 390000,
+          "payout_yen": 58820.0,
+          "profit_yen": -331180.0,
+          "roi_pct": 15.082051282051282
+        },
+        "2026-08": {
+          "races": 48,
+          "hits": 3,
+          "hit_rate_pct": 6.25,
+          "stake_yen": 480000,
+          "payout_yen": 174560.0,
+          "profit_yen": -305440.0,
+          "roi_pct": 36.36666666666667
+        }
+      },
+      "max_drawdown_yen": 1252800.0,
+      "combined": {
+        "races": 271,
+        "hits": 62,
+        "hit_rate_pct": 22.878228782287824,
+        "stake_yen": 2710000,
+        "payout_yen": 2199670.0,
+        "profit_yen": -510330.0,
+        "roi_pct": 81.16863468634686,
+        "max_drawdown_yen": 708550.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "races": 177,
+      "hits": 8,
+      "hit_rate_pct": 4.519774011299435,
+      "stake_yen": 1770000,
+      "payout_yen": 564760.0,
+      "profit_yen": -1205240.0,
+      "roi_pct": 31.90734463276836,
+      "config": "target8",
+      "red_months": 7,
+      "min_monthly_roi_pct": 0.0,
+      "monthly": {
+        "2026-02": {
+          "races": 13,
+          "hits": 2,
+          "hit_rate_pct": 15.384615384615385,
+          "stake_yen": 130000,
+          "payout_yen": 119680.0,
+          "profit_yen": -10320.0,
+          "roi_pct": 92.06153846153846
+        },
+        "2026-03": {
+          "races": 19,
+          "hits": 1,
+          "hit_rate_pct": 5.2631578947368425,
+          "stake_yen": 190000,
+          "payout_yen": 88200.0,
+          "profit_yen": -101800.0,
+          "roi_pct": 46.421052631578945
+        },
+        "2026-04": {
+          "races": 7,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 70000,
+          "payout_yen": 0.0,
+          "profit_yen": -70000.0,
+          "roi_pct": 0.0
+        },
+        "2026-05": {
+          "races": 27,
+          "hits": 3,
+          "hit_rate_pct": 11.11111111111111,
+          "stake_yen": 270000,
+          "payout_yen": 218980.0,
+          "profit_yen": -51020.0,
+          "roi_pct": 81.1037037037037
+        },
+        "2026-06": {
+          "races": 24,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 240000,
+          "payout_yen": 0.0,
+          "profit_yen": -240000.0,
+          "roi_pct": 0.0
+        },
+        "2026-07": {
+          "races": 39,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 390000,
+          "payout_yen": 0.0,
+          "profit_yen": -390000.0,
+          "roi_pct": 0.0
+        },
+        "2026-08": {
+          "races": 48,
+          "hits": 2,
+          "hit_rate_pct": 4.166666666666667,
+          "stake_yen": 480000,
+          "payout_yen": 137900.0,
+          "profit_yen": -342100.0,
+          "roi_pct": 28.729166666666668
+        }
+      },
+      "max_drawdown_yen": 1265640.0,
+      "combined": {
+        "races": 271,
+        "hits": 60,
+        "hit_rate_pct": 22.14022140221402,
+        "stake_yen": 2710000,
+        "payout_yen": 2186830.0,
+        "profit_yen": -523170.0,
+        "roi_pct": 80.69483394833948,
+        "max_drawdown_yen": 777390.0
+      },
+      "overlap_with_v288": 0
+    }
+  ],
+  "walkforward_ticket_selectors": [
+    {
+      "method": "wf_profit",
+      "addon": {
+        "races": 0,
+        "hits": 0,
+        "hit_rate_pct": null,
+        "stake_yen": 0,
+        "payout_yen": 0.0,
+        "profit_yen": 0.0,
+        "roi_pct": null,
+        "max_drawdown_yen": 0.0,
+        "red_months": 0,
+        "min_monthly_roi_pct": null
+      },
+      "monthly": {},
+      "choices": {
+        "2026-02": null,
+        "2026-03": null,
+        "2026-04": null,
+        "2026-05": null,
+        "2026-06": null,
+        "2026-07": null,
+        "2026-08": null
+      },
+      "combined": {
+        "races": 94,
+        "hits": 52,
+        "hit_rate_pct": 55.319148936170215,
+        "stake_yen": 940000,
+        "payout_yen": 1622070.0,
+        "profit_yen": 682070.0,
+        "roi_pct": 172.56063829787234,
+        "max_drawdown_yen": 80000.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "method": "wf_stable",
+      "addon": {
+        "races": 0,
+        "hits": 0,
+        "hit_rate_pct": null,
+        "stake_yen": 0,
+        "payout_yen": 0.0,
+        "profit_yen": 0.0,
+        "roi_pct": null,
+        "max_drawdown_yen": 0.0,
+        "red_months": 0,
+        "min_monthly_roi_pct": null
+      },
+      "monthly": {},
+      "choices": {
+        "2026-02": null,
+        "2026-03": null,
+        "2026-04": null,
+        "2026-05": null,
+        "2026-06": null,
+        "2026-07": null,
+        "2026-08": null
+      },
+      "combined": {
+        "races": 94,
+        "hits": 52,
+        "hit_rate_pct": 55.319148936170215,
+        "stake_yen": 940000,
+        "payout_yen": 1622070.0,
+        "profit_yen": 682070.0,
+        "roi_pct": 172.56063829787234,
+        "max_drawdown_yen": 80000.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "method": "wf_recent",
+      "addon": {
+        "races": 0,
+        "hits": 0,
+        "hit_rate_pct": null,
+        "stake_yen": 0,
+        "payout_yen": 0.0,
+        "profit_yen": 0.0,
+        "roi_pct": null,
+        "max_drawdown_yen": 0.0,
+        "red_months": 0,
+        "min_monthly_roi_pct": null
+      },
+      "monthly": {},
+      "choices": {
+        "2026-02": null,
+        "2026-03": null,
+        "2026-04": null,
+        "2026-05": null,
+        "2026-06": null,
+        "2026-07": null,
+        "2026-08": null
+      },
+      "combined": {
+        "races": 94,
+        "hits": 52,
+        "hit_rate_pct": 55.319148936170215,
+        "stake_yen": 940000,
+        "payout_yen": 1622070.0,
+        "profit_yen": 682070.0,
+        "roi_pct": 172.56063829787234,
+        "max_drawdown_yen": 80000.0
+      },
+      "overlap_with_v288": 0
+    }
+  ],
+  "passers": [],
+  "decision": "NO_ADOPTION_WAVE2",
+  "detail": {
+    "wf_profit": [],
+    "wf_stable": [],
+    "wf_recent": []
+  }
+}
