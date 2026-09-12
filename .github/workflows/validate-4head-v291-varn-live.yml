@@ -1,0 +1,29 @@
+name: validate-4head-v291-varn-live
+on:
+  push:
+    paths:
+      - 'run_4head_v291_varn_live.py'
+      - 'verify_4head_v291_varn_live.py'
+      - 'head4_v273_a_live_inference.py'
+      - 'run_20260911_4head_v291_live.py'
+      - '.github/workflows/validate-4head-v291-varn-live.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Syntax check
+        run: python -m py_compile run_4head_v291_varn_live.py verify_4head_v291_varn_live.py
+      - name: Verify frozen S/A + v291 entry + variable-N economics
+        run: python verify_4head_v291_varn_live.py
+      - name: Guard result-blind LIVE code
+        shell: bash
+        run: |
+          if grep -nE '/result|/pay|result\?|pay\?' run_4head_v291_varn_live.py; then exit 1; fi
+          if grep -nE '\.fit\(' run_4head_v291_varn_live.py; then exit 1; fi
