@@ -1,0 +1,3107 @@
+{
+  "research_version": "v289-addon-wave9-independent-pre-head",
+  "github_run_id": "34723795903",
+  "source_max_date": "2026-08-31",
+  "rules": {
+    "baseline_fixed": "v288 operational 94R",
+    "candidate_universe": "operational PRE S/A + v242 buyable + final v288 NO_BET only",
+    "training_population": "all prior-month v242-buyable races",
+    "target": "boat3 actual win y3, prior months only",
+    "independent_from_existing_p3": true,
+    "selected_feature_missing_current": "FAIL_CLOSED",
+    "july_august": "NON-PRISTINE",
+    "september_outcomes_used": false,
+    "test": "walk-forward Feb-Aug"
+  },
+  "baseline": {
+    "races": 94,
+    "hits": 52,
+    "hit_rate_pct": 55.319148936170215,
+    "stake_yen": 940000,
+    "payout_yen": 1622070.0,
+    "profit_yen": 682070.0,
+    "roi_pct": 172.56063829787234,
+    "max_drawdown_yen": 80000.0
+  },
+  "candidate_pool": {
+    "races": 178,
+    "hits": 23,
+    "hit_rate_pct": 12.92134831460674,
+    "stake_yen": 1780000,
+    "payout_yen": 702420.0,
+    "profit_yen": -1077580.0,
+    "roi_pct": 39.46179775280899
+  },
+  "methods": [
+    {
+      "method": "head_ev",
+      "fraction": 0.15,
+      "addon": {
+        "races": 37,
+        "hits": 7,
+        "hit_rate_pct": 18.91891891891892,
+        "stake_yen": 370000,
+        "payout_yen": 211870.0,
+        "profit_yen": -158130.0,
+        "roi_pct": 57.26216216216216,
+        "max_drawdown_yen": 167870.0
+      },
+      "monthly": {
+        "2026-02": {
+          "races": 5,
+          "hits": 1,
+          "hit_rate_pct": 20.0,
+          "stake_yen": 50000,
+          "payout_yen": 29040.000000000004,
+          "profit_yen": -20959.999999999996,
+          "roi_pct": 58.08000000000001
+        },
+        "2026-03": {
+          "races": 2,
+          "hits": 1,
+          "hit_rate_pct": 50.0,
+          "stake_yen": 20000,
+          "payout_yen": 29260.0,
+          "profit_yen": 9260.0,
+          "roi_pct": 146.3
+        },
+        "2026-04": {
+          "races": 2,
+          "hits": 1,
+          "hit_rate_pct": 50.0,
+          "stake_yen": 20000,
+          "payout_yen": 29580.0,
+          "profit_yen": 9580.0,
+          "roi_pct": 147.9
+        },
+        "2026-05": {
+          "races": 7,
+          "hits": 1,
+          "hit_rate_pct": 14.285714285714286,
+          "stake_yen": 70000,
+          "payout_yen": 31860.000000000004,
+          "profit_yen": -38140.0,
+          "roi_pct": 45.51428571428572
+        },
+        "2026-06": {
+          "races": 10,
+          "hits": 2,
+          "hit_rate_pct": 20.0,
+          "stake_yen": 100000,
+          "payout_yen": 62160.0,
+          "profit_yen": -37840.0,
+          "roi_pct": 62.16
+        },
+        "2026-07": {
+          "races": 4,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 40000,
+          "payout_yen": 0.0,
+          "profit_yen": -40000.0,
+          "roi_pct": 0.0
+        },
+        "2026-08": {
+          "races": 7,
+          "hits": 1,
+          "hit_rate_pct": 14.285714285714286,
+          "stake_yen": 70000,
+          "payout_yen": 29970.0,
+          "profit_yen": -40030.0,
+          "roi_pct": 42.81428571428572
+        }
+      },
+      "red_months": 5,
+      "min_monthly_roi_pct": 0.0,
+      "combined": {
+        "races": 131,
+        "hits": 59,
+        "hit_rate_pct": 45.038167938931295,
+        "stake_yen": 1310000,
+        "payout_yen": 1833940.0,
+        "profit_yen": 523940.0,
+        "roi_pct": 139.99541984732824,
+        "max_drawdown_yen": 120000.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "method": "head_prob",
+      "fraction": 0.15,
+      "addon": {
+        "races": 36,
+        "hits": 6,
+        "hit_rate_pct": 16.666666666666668,
+        "stake_yen": 360000,
+        "payout_yen": 180010.0,
+        "profit_yen": -179990.0,
+        "roi_pct": 50.00277777777778,
+        "max_drawdown_yen": 187870.0
+      },
+      "monthly": {
+        "2026-02": {
+          "races": 5,
+          "hits": 1,
+          "hit_rate_pct": 20.0,
+          "stake_yen": 50000,
+          "payout_yen": 29040.000000000004,
+          "profit_yen": -20959.999999999996,
+          "roi_pct": 58.08000000000001
+        },
+        "2026-03": {
+          "races": 2,
+          "hits": 1,
+          "hit_rate_pct": 50.0,
+          "stake_yen": 20000,
+          "payout_yen": 29260.0,
+          "profit_yen": 9260.0,
+          "roi_pct": 146.3
+        },
+        "2026-04": {
+          "races": 1,
+          "hits": 1,
+          "hit_rate_pct": 100.0,
+          "stake_yen": 10000,
+          "payout_yen": 29580.0,
+          "profit_yen": 19580.0,
+          "roi_pct": 295.8
+        },
+        "2026-05": {
+          "races": 6,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 60000,
+          "payout_yen": 0.0,
+          "profit_yen": -60000.0,
+          "roi_pct": 0.0
+        },
+        "2026-06": {
+          "races": 10,
+          "hits": 2,
+          "hit_rate_pct": 20.0,
+          "stake_yen": 100000,
+          "payout_yen": 62160.0,
+          "profit_yen": -37840.0,
+          "roi_pct": 62.16
+        },
+        "2026-07": {
+          "races": 5,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 50000,
+          "payout_yen": 0.0,
+          "profit_yen": -50000.0,
+          "roi_pct": 0.0
+        },
+        "2026-08": {
+          "races": 7,
+          "hits": 1,
+          "hit_rate_pct": 14.285714285714286,
+          "stake_yen": 70000,
+          "payout_yen": 29970.0,
+          "profit_yen": -40030.0,
+          "roi_pct": 42.81428571428572
+        }
+      },
+      "red_months": 5,
+      "min_monthly_roi_pct": 0.0,
+      "combined": {
+        "races": 130,
+        "hits": 58,
+        "hit_rate_pct": 44.61538461538461,
+        "stake_yen": 1300000,
+        "payout_yen": 1802080.0,
+        "profit_yen": 502080.0,
+        "roi_pct": 138.62153846153845,
+        "max_drawdown_yen": 120000.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "method": "head_ev",
+      "fraction": 0.25,
+      "addon": {
+        "races": 60,
+        "hits": 9,
+        "hit_rate_pct": 15.0,
+        "stake_yen": 600000,
+        "payout_yen": 271300.0,
+        "profit_yen": -328700.0,
+        "roi_pct": 45.21666666666667,
+        "max_drawdown_yen": 347840.0
+      },
+      "monthly": {
+        "2026-02": {
+          "races": 5,
+          "hits": 1,
+          "hit_rate_pct": 20.0,
+          "stake_yen": 50000,
+          "payout_yen": 29040.000000000004,
+          "profit_yen": -20959.999999999996,
+          "roi_pct": 58.08000000000001
+        },
+        "2026-03": {
+          "races": 3,
+          "hits": 2,
+          "hit_rate_pct": 66.66666666666667,
+          "stake_yen": 30000,
+          "payout_yen": 58660.0,
+          "profit_yen": 28660.0,
+          "roi_pct": 195.53333333333333
+        },
+        "2026-04": {
+          "races": 2,
+          "hits": 1,
+          "hit_rate_pct": 50.0,
+          "stake_yen": 20000,
+          "payout_yen": 29580.0,
+          "profit_yen": 9580.0,
+          "roi_pct": 147.9
+        },
+        "2026-05": {
+          "races": 11,
+          "hits": 1,
+          "hit_rate_pct": 9.090909090909092,
+          "stake_yen": 110000,
+          "payout_yen": 31860.000000000004,
+          "profit_yen": -78140.0,
+          "roi_pct": 28.96363636363637
+        },
+        "2026-06": {
+          "races": 13,
+          "hits": 2,
+          "hit_rate_pct": 15.384615384615385,
+          "stake_yen": 130000,
+          "payout_yen": 62160.0,
+          "profit_yen": -67840.0,
+          "roi_pct": 47.815384615384616
+        },
+        "2026-07": {
+          "races": 13,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 130000,
+          "payout_yen": 0.0,
+          "profit_yen": -130000.0,
+          "roi_pct": 0.0
+        },
+        "2026-08": {
+          "races": 13,
+          "hits": 2,
+          "hit_rate_pct": 15.384615384615385,
+          "stake_yen": 130000,
+          "payout_yen": 60000.0,
+          "profit_yen": -70000.0,
+          "roi_pct": 46.15384615384615
+        }
+      },
+      "red_months": 5,
+      "min_monthly_roi_pct": 0.0,
+      "combined": {
+        "races": 154,
+        "hits": 61,
+        "hit_rate_pct": 39.61038961038961,
+        "stake_yen": 1540000,
+        "payout_yen": 1893370.0,
+        "profit_yen": 353370.0,
+        "roi_pct": 122.94610389610389,
+        "max_drawdown_yen": 176830.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "method": "head_prob",
+      "fraction": 0.25,
+      "addon": {
+        "races": 62,
+        "hits": 9,
+        "hit_rate_pct": 14.516129032258064,
+        "stake_yen": 620000,
+        "payout_yen": 271300.0,
+        "profit_yen": -348700.0,
+        "roi_pct": 43.75806451612903,
+        "max_drawdown_yen": 367840.0
+      },
+      "monthly": {
+        "2026-02": {
+          "races": 5,
+          "hits": 1,
+          "hit_rate_pct": 20.0,
+          "stake_yen": 50000,
+          "payout_yen": 29040.000000000004,
+          "profit_yen": -20959.999999999996,
+          "roi_pct": 58.08000000000001
+        },
+        "2026-03": {
+          "races": 3,
+          "hits": 2,
+          "hit_rate_pct": 66.66666666666667,
+          "stake_yen": 30000,
+          "payout_yen": 58660.0,
+          "profit_yen": 28660.0,
+          "roi_pct": 195.53333333333333
+        },
+        "2026-04": {
+          "races": 2,
+          "hits": 1,
+          "hit_rate_pct": 50.0,
+          "stake_yen": 20000,
+          "payout_yen": 29580.0,
+          "profit_yen": 9580.0,
+          "roi_pct": 147.9
+        },
+        "2026-05": {
+          "races": 11,
+          "hits": 1,
+          "hit_rate_pct": 9.090909090909092,
+          "stake_yen": 110000,
+          "payout_yen": 31860.000000000004,
+          "profit_yen": -78140.0,
+          "roi_pct": 28.96363636363637
+        },
+        "2026-06": {
+          "races": 13,
+          "hits": 2,
+          "hit_rate_pct": 15.384615384615385,
+          "stake_yen": 130000,
+          "payout_yen": 62160.0,
+          "profit_yen": -67840.0,
+          "roi_pct": 47.815384615384616
+        },
+        "2026-07": {
+          "races": 13,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 130000,
+          "payout_yen": 0.0,
+          "profit_yen": -130000.0,
+          "roi_pct": 0.0
+        },
+        "2026-08": {
+          "races": 15,
+          "hits": 2,
+          "hit_rate_pct": 13.333333333333334,
+          "stake_yen": 150000,
+          "payout_yen": 60000.0,
+          "profit_yen": -90000.0,
+          "roi_pct": 40.0
+        }
+      },
+      "red_months": 5,
+      "min_monthly_roi_pct": 0.0,
+      "combined": {
+        "races": 156,
+        "hits": 61,
+        "hit_rate_pct": 39.1025641025641,
+        "stake_yen": 1560000,
+        "payout_yen": 1893370.0,
+        "profit_yen": 333370.0,
+        "roi_pct": 121.3698717948718,
+        "max_drawdown_yen": 176830.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "method": "head_prob",
+      "fraction": 0.4,
+      "addon": {
+        "races": 81,
+        "hits": 11,
+        "hit_rate_pct": 13.580246913580247,
+        "stake_yen": 810000,
+        "payout_yen": 331000.0,
+        "profit_yen": -479000.0,
+        "roi_pct": 40.864197530864196,
+        "max_drawdown_yen": 479000.0
+      },
+      "monthly": {
+        "2026-02": {
+          "races": 7,
+          "hits": 1,
+          "hit_rate_pct": 14.285714285714286,
+          "stake_yen": 70000,
+          "payout_yen": 29040.000000000004,
+          "profit_yen": -40960.0,
+          "roi_pct": 41.485714285714295
+        },
+        "2026-03": {
+          "races": 5,
+          "hits": 2,
+          "hit_rate_pct": 40.0,
+          "stake_yen": 50000,
+          "payout_yen": 58660.0,
+          "profit_yen": 8660.0,
+          "roi_pct": 117.32
+        },
+        "2026-04": {
+          "races": 2,
+          "hits": 1,
+          "hit_rate_pct": 50.0,
+          "stake_yen": 20000,
+          "payout_yen": 29580.0,
+          "profit_yen": 9580.0,
+          "roi_pct": 147.9
+        },
+        "2026-05": {
+          "races": 13,
+          "hits": 1,
+          "hit_rate_pct": 7.6923076923076925,
+          "stake_yen": 130000,
+          "payout_yen": 31860.000000000004,
+          "profit_yen": -98140.0,
+          "roi_pct": 24.507692307692313
+        },
+        "2026-06": {
+          "races": 17,
+          "hits": 2,
+          "hit_rate_pct": 11.764705882352942,
+          "stake_yen": 170000,
+          "payout_yen": 62160.0,
+          "profit_yen": -107840.0,
+          "roi_pct": 36.56470588235294
+        },
+        "2026-07": {
+          "races": 18,
+          "hits": 1,
+          "hit_rate_pct": 5.555555555555555,
+          "stake_yen": 180000,
+          "payout_yen": 31140.0,
+          "profit_yen": -148860.0,
+          "roi_pct": 17.3
+        },
+        "2026-08": {
+          "races": 19,
+          "hits": 3,
+          "hit_rate_pct": 15.789473684210526,
+          "stake_yen": 190000,
+          "payout_yen": 88560.0,
+          "profit_yen": -101440.0,
+          "roi_pct": 46.61052631578947
+        }
+      },
+      "red_months": 5,
+      "min_monthly_roi_pct": 17.3,
+      "combined": {
+        "races": 175,
+        "hits": 63,
+        "hit_rate_pct": 36.0,
+        "stake_yen": 1750000,
+        "payout_yen": 1953070.0,
+        "profit_yen": 203070.0,
+        "roi_pct": 111.604,
+        "max_drawdown_yen": 247470.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "method": "head_ev",
+      "fraction": 0.4,
+      "addon": {
+        "races": 82,
+        "hits": 11,
+        "hit_rate_pct": 13.414634146341463,
+        "stake_yen": 820000,
+        "payout_yen": 331000.0,
+        "profit_yen": -489000.0,
+        "roi_pct": 40.36585365853659,
+        "max_drawdown_yen": 489000.0
+      },
+      "monthly": {
+        "2026-02": {
+          "races": 6,
+          "hits": 1,
+          "hit_rate_pct": 16.666666666666668,
+          "stake_yen": 60000,
+          "payout_yen": 29040.000000000004,
+          "profit_yen": -30959.999999999996,
+          "roi_pct": 48.400000000000006
+        },
+        "2026-03": {
+          "races": 5,
+          "hits": 2,
+          "hit_rate_pct": 40.0,
+          "stake_yen": 50000,
+          "payout_yen": 58660.0,
+          "profit_yen": 8660.0,
+          "roi_pct": 117.32
+        },
+        "2026-04": {
+          "races": 2,
+          "hits": 1,
+          "hit_rate_pct": 50.0,
+          "stake_yen": 20000,
+          "payout_yen": 29580.0,
+          "profit_yen": 9580.0,
+          "roi_pct": 147.9
+        },
+        "2026-05": {
+          "races": 13,
+          "hits": 1,
+          "hit_rate_pct": 7.6923076923076925,
+          "stake_yen": 130000,
+          "payout_yen": 31860.000000000004,
+          "profit_yen": -98140.0,
+          "roi_pct": 24.507692307692313
+        },
+        "2026-06": {
+          "races": 17,
+          "hits": 2,
+          "hit_rate_pct": 11.764705882352942,
+          "stake_yen": 170000,
+          "payout_yen": 62160.0,
+          "profit_yen": -107840.0,
+          "roi_pct": 36.56470588235294
+        },
+        "2026-07": {
+          "races": 18,
+          "hits": 1,
+          "hit_rate_pct": 5.555555555555555,
+          "stake_yen": 180000,
+          "payout_yen": 31140.0,
+          "profit_yen": -148860.0,
+          "roi_pct": 17.3
+        },
+        "2026-08": {
+          "races": 21,
+          "hits": 3,
+          "hit_rate_pct": 14.285714285714286,
+          "stake_yen": 210000,
+          "payout_yen": 88560.0,
+          "profit_yen": -121440.0,
+          "roi_pct": 42.17142857142857
+        }
+      },
+      "red_months": 5,
+      "min_monthly_roi_pct": 17.3,
+      "combined": {
+        "races": 176,
+        "hits": 63,
+        "hit_rate_pct": 35.79545454545455,
+        "stake_yen": 1760000,
+        "payout_yen": 1953070.0,
+        "profit_yen": 193070.0,
+        "roi_pct": 110.96988636363636,
+        "max_drawdown_yen": 247470.0
+      },
+      "overlap_with_v288": 0
+    }
+  ],
+  "passers": [],
+  "decision": "NO_ADOPTION_WAVE9",
+  "audit": {
+    "2026-02": {
+      "train_all_buyable": 169,
+      "train_rejects": 112,
+      "test_candidates": 13,
+      "features": [
+        "f__c_b3_inside_meetst",
+        "f__c_b3_minus_b1_meetst",
+        "f__c_outer_follow",
+        "f__c_b3_minus_b6_motor",
+        "f__c_b3_minus_b2_pastwin",
+        "raw_top_n",
+        "f__c_b3_minus_b2_meetst",
+        "f__c_b3_motor",
+        "f__b3_vh_delta_turn",
+        "f__c_b3_minus_b4_motor",
+        "f__c_b3_minus_b6_pastwin",
+        "f__b3_vh_delta_overall",
+        "f__c_b3_outside_motor",
+        "f__c_b3_minus_b5_st",
+        "f__c_b3_minus_b4_wr",
+        "f__c_b3_pastwin",
+        "f__c_b3_minus_b5_pastwin",
+        "f__c_b3_tilt",
+        "f__c_b3_minus_b1_wr",
+        "f__c_straight_spread",
+        "f__c_b3_minus_b2_waku_wr",
+        "f__c_b3_inside_wr",
+        "f__c_b3_outside_pastwin",
+        "f__c_b3_minus_b6_st",
+        "f__c_b3_minus_b2_ex",
+        "f__c_b3_minus_b5_motor",
+        "f__c_b3_inside_waku_wr",
+        "f__c_b3_inside_waku_st",
+        "f__c_b3_minus_b1_turn",
+        "f__c_b3_minus_b6_meetst"
+      ],
+      "valid_current_rows": 13
+    },
+    "2026-03": {
+      "train_all_buyable": 196,
+      "train_rejects": 130,
+      "test_candidates": 19,
+      "features": [
+        "f__c_b3_inside_meetst",
+        "f__c_b3_minus_b1_meetst",
+        "f__c_outer_follow",
+        "f__c_b3_minus_b4_wr",
+        "raw_top_n",
+        "f__c_b3_tilt",
+        "f__c_b3_minus_b2_ex",
+        "f__c_b3_minus_b4_motor",
+        "f__c_b3_minus_b6_motor",
+        "f__b3_vh_delta_turn",
+        "f__c_b3_minus_b2_meetst",
+        "f__c_b3_minus_b1_wr",
+        "f__c_b3_minus_b5_st",
+        "f__c_b3_minus_b2_pastwin",
+        "f__b3_vh_delta_overall",
+        "f__c_b3_minus_b6_waku_st",
+        "f__c_b3_minus_b1_waku_st",
+        "f__c_b3_outside_st",
+        "f__c_b3_minus_b6_lap",
+        "f__c_b3_minus_b6_st",
+        "f__threat4",
+        "f__c_b3_minus_b6_meetst",
+        "f__c_b3_minus_b5_lap",
+        "f__c_b3_waku_st",
+        "f__c_st_spread",
+        "f__c_ex_spread",
+        "f__c_b3_minus_b5_turn",
+        "f__c_b3_inside_waku_st",
+        "comp_odds",
+        "f__c_b3_minus_b6_origavg"
+      ],
+      "valid_current_rows": 19
+    },
+    "2026-04": {
+      "train_all_buyable": 236,
+      "train_rejects": 155,
+      "test_candidates": 7,
+      "features": [
+        "f__c_b3_minus_b4_wr",
+        "f__c_outer_follow",
+        "f__c_b3_minus_b1_wr",
+        "raw_top_n",
+        "f__c_b3_inside_meetst",
+        "f__b3_vh_delta_turn",
+        "f__threat4",
+        "f__c_b3_minus_b6_waku_st",
+        "f__c_b3_inside_waku_wr",
+        "f__c_b3_minus_b6_motor",
+        "f__c_b3_tilt",
+        "f__c_b3_waku_st",
+        "f__c_b3_outside_pastwin",
+        "f__c_b3_minus_b1_meetst",
+        "f__c_b3_minus_b2_pastwin",
+        "f__c_b3_minus_b4_motor",
+        "f__c_b3_outside_wr",
+        "f__b3_vh_delta_overall",
+        "f__c_b3_minus_b1_waku_st",
+        "f__c_b3_inside_wr",
+        "f__c_b3_minus_b1_lap",
+        "f__c_b3_minus_b6_pastwin",
+        "f__c_b3_minus_b2_ex",
+        "f__c_b3_minus_b4_waku_st",
+        "f__c_b3_minus_b5_st",
+        "f__b3_vh_p2_turn",
+        "f__c_b3_inside_waku_st",
+        "comp_odds",
+        "f__c_b3_minus_b4_pastwin",
+        "f__margin_all"
+      ],
+      "valid_current_rows": 7
+    },
+    "2026-05": {
+      "train_all_buyable": 262,
+      "train_rejects": 167,
+      "test_candidates": 27,
+      "features": [
+        "f__c_b3_minus_b4_wr",
+        "f__c_outer_follow",
+        "raw_top_n",
+        "f__b3_vh_delta_turn",
+        "f__threat4",
+        "f__c_b3_outside_wr",
+        "f__c_b3_minus_b1_wr",
+        "f__c_b3_inside_waku_wr",
+        "f__c_b3_minus_b6_motor",
+        "f__c_b3_outside_pastwin",
+        "f__c_b3_minus_b4_waku_wr",
+        "f__b3_vh_p2_turn",
+        "f__b3_vh_delta_overall",
+        "f__c_b3_motor",
+        "f__c_b3_minus_b4_pastwin",
+        "f__c_b3_inside_meetst",
+        "f__c_b3_minus_b1_meetst",
+        "f__c_b3_minus_b1_waku_st",
+        "f__c_b3_minus_b5_st",
+        "f__c_b3_inside_wr",
+        "f__c_b3_minus_b1_lap",
+        "f__c_b3_minus_b2_pastwin",
+        "f__b3_vh_p2_overall",
+        "f__c_b3_tilt",
+        "f__c_b3_outside_waku_wr",
+        "f__c_b3_minus_b6_waku_st",
+        "f__c_b3_minus_b2_waku_wr",
+        "comp_odds",
+        "f__c_b3_minus_b4_motor",
+        "f__c_b3_minus_b6_pastwin"
+      ],
+      "valid_current_rows": 27
+    },
+    "2026-06": {
+      "train_all_buyable": 314,
+      "train_rejects": 200,
+      "test_candidates": 25,
+      "features": [
+        "f__c_b3_minus_b4_wr",
+        "f__c_b3_minus_b1_wr",
+        "f__c_b3_outside_wr",
+        "raw_top_n",
+        "f__threat4",
+        "f__c_b3_minus_b6_waku_st",
+        "f__b3_vh_delta_turn",
+        "f__b3_vh_p2_turn",
+        "f__c_outer_follow",
+        "f__b3_vh_delta_overall",
+        "f__b3_vh_p2_overall",
+        "f__c_b3_waku_st",
+        "f__c_b3_minus_b1_meetst",
+        "f__c_b3_minus_b4_waku_wr",
+        "f__c_b3_wr",
+        "f__c_b3_tilt",
+        "f__c_b3_outside_pastwin",
+        "f__c_b3_minus_b6_origavg",
+        "f__c_b3_inside_waku_wr",
+        "f__c_b3_minus_b1_lap",
+        "f__c_b3_outside_waku_wr",
+        "f__c_b3_minus_b1_waku_st",
+        "f__c_b3_minus_b5_st",
+        "comp_odds",
+        "f__c_b3_minus_b4_waku_st",
+        "f__c_b3_minus_b6_waku_sr",
+        "f__c_b3_minus_b6_motor",
+        "f__c_b3_minus_b4_pastwin",
+        "f__c_b3_inside_wr",
+        "f__c_b3_inside_st"
+      ],
+      "valid_current_rows": 25
+    },
+    "2026-07": {
+      "train_all_buyable": 369,
+      "train_rejects": 235,
+      "test_candidates": 39,
+      "features": [
+        "f__c_b3_minus_b4_wr",
+        "f__c_b3_minus_b1_wr",
+        "raw_top_n",
+        "f__c_b3_outside_wr",
+        "f__c_b3_minus_b6_waku_st",
+        "f__threat4",
+        "f__c_outer_follow",
+        "f__b3_vh_delta_turn",
+        "f__c_b3_inside_waku_wr",
+        "f__b3_vh_p2_turn",
+        "f__c_b3_minus_b1_meetst",
+        "f__c_b3_waku_st",
+        "f__c_b3_inside_st",
+        "f__c_b3_minus_b4_waku_wr",
+        "f__c_b3_outside_waku_wr",
+        "f__b3_vh_delta_overall",
+        "f__margin_all",
+        "f__c_b3_minus_b5_lap",
+        "comp_odds",
+        "f__c_b3_minus_b6_motor",
+        "f__c_b3_inside_wr",
+        "f__b3_vh_p2_overall",
+        "f__c_b3_outside_pastwin",
+        "f__c_b3_minus_b1_lap",
+        "f__c_b3_minus_b2_st",
+        "f__c_b3_wr",
+        "f__c_b3_minus_b6_waku_sr",
+        "f__c_b3_minus_b1_waku_wr",
+        "f__c_b3_waku_wr",
+        "f__c_b3_minus_b5_waku_wr"
+      ],
+      "valid_current_rows": 39
+    },
+    "2026-08": {
+      "train_all_buyable": 437,
+      "train_rejects": 284,
+      "test_candidates": 48,
+      "features": [
+        "f__c_b3_minus_b4_wr",
+        "raw_top_n",
+        "f__c_b3_minus_b6_waku_st",
+        "f__c_b3_outside_wr",
+        "f__c_b3_outside_waku_wr",
+        "f__c_b3_minus_b1_wr",
+        "f__c_b3_inside_waku_wr",
+        "f__c_b3_waku_wr",
+        "f__c_b3_minus_b4_waku_wr",
+        "f__c_b3_outside_pastwin",
+        "f__threat4",
+        "f__c_b3_waku_st",
+        "f__c_b3_minus_b5_waku_wr",
+        "f__c_b3_minus_b2_waku_wr",
+        "f__c_b3_minus_b6_waku_wr",
+        "f__c_outer_follow",
+        "f__c_b3_minus_b6_waku_sr",
+        "f__c_b3_minus_b4_pastwin",
+        "f__c_b3_minus_b1_meetst",
+        "f__c_b3_inside_st",
+        "f__c_b3_minus_b6_pastwin",
+        "f__c_b3_minus_b2_pastwin",
+        "f__c_b3_minus_b1_lap",
+        "f__b3_vh_delta_turn",
+        "f__c_b3_minus_b1_waku_wr",
+        "f__c_b3_minus_b5_wr",
+        "f__c_b3_wr",
+        "f__c_b3_pastwin",
+        "f__c_b3_minus_b5_st",
+        "f__c_b3_inside_wr"
+      ],
+      "valid_current_rows": 48
+    }
+  },
+  "detail": {
+    "head_prob@0.15": [
+      {
+        "date": "2026-02-28",
+        "race_code": "202602280208",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-27",
+        "race_code": "202602270103",
+        "hit": 1,
+        "ret": 29040.000000000004
+      },
+      {
+        "date": "2026-02-25",
+        "race_code": "202602250203",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-25",
+        "race_code": "202602251103",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-14",
+        "race_code": "202602140701",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-03-16",
+        "race_code": "202603161110",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-03-04",
+        "race_code": "202603042108",
+        "hit": 1,
+        "ret": 29260.0
+      },
+      {
+        "date": "2026-04-14",
+        "race_code": "202604141003",
+        "hit": 1,
+        "ret": 29580.0
+      },
+      {
+        "date": "2026-05-08",
+        "race_code": "202605080404",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-24",
+        "race_code": "202605242308",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-03",
+        "race_code": "202605031106",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-11",
+        "race_code": "202605111106",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-29",
+        "race_code": "202605292308",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-26",
+        "race_code": "202605262411",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-14",
+        "race_code": "202606140307",
+        "hit": 1,
+        "ret": 29500.0
+      },
+      {
+        "date": "2026-06-28",
+        "race_code": "202606282403",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-22",
+        "race_code": "202606221503",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-24",
+        "race_code": "202606242203",
+        "hit": 1,
+        "ret": 32660.0
+      },
+      {
+        "date": "2026-06-30",
+        "race_code": "202606300501",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-19",
+        "race_code": "202606191301",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-20",
+        "race_code": "202606201305",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-13",
+        "race_code": "202606131906",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-28",
+        "race_code": "202606280101",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-03",
+        "race_code": "202606031308",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-26",
+        "race_code": "202607260208",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-09",
+        "race_code": "202607090504",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-23",
+        "race_code": "202607232401",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-06",
+        "race_code": "202607061301",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-13",
+        "race_code": "202607130303",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-26",
+        "race_code": "202608260904",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-27",
+        "race_code": "202608271301",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-26",
+        "race_code": "202608261503",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-27",
+        "race_code": "202608271108",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-21",
+        "race_code": "202608210406",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-18",
+        "race_code": "202608182001",
+        "hit": 1,
+        "ret": 29970.0
+      },
+      {
+        "date": "2026-08-01",
+        "race_code": "202608010606",
+        "hit": 0,
+        "ret": 0.0
+      }
+    ],
+    "head_ev@0.15": [
+      {
+        "date": "2026-02-28",
+        "race_code": "202602280208",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-27",
+        "race_code": "202602270103",
+        "hit": 1,
+        "ret": 29040.000000000004
+      },
+      {
+        "date": "2026-02-25",
+        "race_code": "202602250203",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-25",
+        "race_code": "202602251103",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-14",
+        "race_code": "202602140701",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-03-16",
+        "race_code": "202603161110",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-03-04",
+        "race_code": "202603042108",
+        "hit": 1,
+        "ret": 29260.0
+      },
+      {
+        "date": "2026-04-14",
+        "race_code": "202604141003",
+        "hit": 1,
+        "ret": 29580.0
+      },
+      {
+        "date": "2026-04-03",
+        "race_code": "202604030105",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-08",
+        "race_code": "202605080404",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-24",
+        "race_code": "202605242308",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-03",
+        "race_code": "202605031106",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-11",
+        "race_code": "202605111106",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-04",
+        "race_code": "202605040708",
+        "hit": 1,
+        "ret": 31860.000000000004
+      },
+      {
+        "date": "2026-05-29",
+        "race_code": "202605292308",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-26",
+        "race_code": "202605262411",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-14",
+        "race_code": "202606140307",
+        "hit": 1,
+        "ret": 29500.0
+      },
+      {
+        "date": "2026-06-28",
+        "race_code": "202606282403",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-22",
+        "race_code": "202606221503",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-24",
+        "race_code": "202606242203",
+        "hit": 1,
+        "ret": 32660.0
+      },
+      {
+        "date": "2026-06-30",
+        "race_code": "202606300501",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-19",
+        "race_code": "202606191301",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-20",
+        "race_code": "202606201305",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-13",
+        "race_code": "202606131906",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-28",
+        "race_code": "202606280101",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-03",
+        "race_code": "202606031308",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-26",
+        "race_code": "202607260208",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-09",
+        "race_code": "202607090504",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-06",
+        "race_code": "202607061301",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-13",
+        "race_code": "202607130303",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-26",
+        "race_code": "202608260904",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-27",
+        "race_code": "202608271301",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-26",
+        "race_code": "202608261503",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-27",
+        "race_code": "202608271108",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-21",
+        "race_code": "202608210406",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-18",
+        "race_code": "202608182001",
+        "hit": 1,
+        "ret": 29970.0
+      },
+      {
+        "date": "2026-08-01",
+        "race_code": "202608010606",
+        "hit": 0,
+        "ret": 0.0
+      }
+    ],
+    "head_prob@0.25": [
+      {
+        "date": "2026-02-28",
+        "race_code": "202602280208",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-27",
+        "race_code": "202602270103",
+        "hit": 1,
+        "ret": 29040.000000000004
+      },
+      {
+        "date": "2026-02-25",
+        "race_code": "202602250203",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-25",
+        "race_code": "202602251103",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-14",
+        "race_code": "202602140701",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-03-23",
+        "race_code": "202603232206",
+        "hit": 1,
+        "ret": 29400.0
+      },
+      {
+        "date": "2026-03-16",
+        "race_code": "202603161110",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-03-04",
+        "race_code": "202603042108",
+        "hit": 1,
+        "ret": 29260.0
+      },
+      {
+        "date": "2026-04-14",
+        "race_code": "202604141003",
+        "hit": 1,
+        "ret": 29580.0
+      },
+      {
+        "date": "2026-04-03",
+        "race_code": "202604030105",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-08",
+        "race_code": "202605080404",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-02",
+        "race_code": "202605020701",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-24",
+        "race_code": "202605242308",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-03",
+        "race_code": "202605031106",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-11",
+        "race_code": "202605111106",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-08",
+        "race_code": "202605081808",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-18",
+        "race_code": "202605180610",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-04",
+        "race_code": "202605040708",
+        "hit": 1,
+        "ret": 31860.000000000004
+      },
+      {
+        "date": "2026-05-29",
+        "race_code": "202605292308",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-15",
+        "race_code": "202605151901",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-26",
+        "race_code": "202605262411",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-14",
+        "race_code": "202606140307",
+        "hit": 1,
+        "ret": 29500.0
+      },
+      {
+        "date": "2026-06-28",
+        "race_code": "202606282403",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-22",
+        "race_code": "202606221503",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-07",
+        "race_code": "202606070609",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-24",
+        "race_code": "202606242203",
+        "hit": 1,
+        "ret": 32660.0
+      },
+      {
+        "date": "2026-06-07",
+        "race_code": "202606071006",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-30",
+        "race_code": "202606300501",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-19",
+        "race_code": "202606191301",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-20",
+        "race_code": "202606201305",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-13",
+        "race_code": "202606131906",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-28",
+        "race_code": "202606280101",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-03",
+        "race_code": "202606031308",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-02",
+        "race_code": "202606022004",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-16",
+        "race_code": "202607162103",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-11",
+        "race_code": "202607110208",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-26",
+        "race_code": "202607260208",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-19",
+        "race_code": "202607191608",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-31",
+        "race_code": "202607310803",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-09",
+        "race_code": "202607090504",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-23",
+        "race_code": "202607232401",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-22",
+        "race_code": "202607222309",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-15",
+        "race_code": "202607152108",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-06",
+        "race_code": "202607061301",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-04",
+        "race_code": "202607040903",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-13",
+        "race_code": "202607130303",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-13",
+        "race_code": "202607131901",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-26",
+        "race_code": "202608260904",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-27",
+        "race_code": "202608271301",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-24",
+        "race_code": "202608242207",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-26",
+        "race_code": "202608261503",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-27",
+        "race_code": "202608271108",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-21",
+        "race_code": "202608210406",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-30",
+        "race_code": "202608300705",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-07",
+        "race_code": "202608071504",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-16",
+        "race_code": "202608161704",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-19",
+        "race_code": "202608191302",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-18",
+        "race_code": "202608182001",
+        "hit": 1,
+        "ret": 29970.0
+      },
+      {
+        "date": "2026-08-01",
+        "race_code": "202608010606",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-05",
+        "race_code": "202608051707",
+        "hit": 1,
+        "ret": 30030.000000000004
+      },
+      {
+        "date": "2026-08-17",
+        "race_code": "202608171107",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-15",
+        "race_code": "202608150506",
+        "hit": 0,
+        "ret": 0.0
+      }
+    ],
+    "head_ev@0.25": [
+      {
+        "date": "2026-02-28",
+        "race_code": "202602280208",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-27",
+        "race_code": "202602270103",
+        "hit": 1,
+        "ret": 29040.000000000004
+      },
+      {
+        "date": "2026-02-25",
+        "race_code": "202602250203",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-25",
+        "race_code": "202602251103",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-14",
+        "race_code": "202602140701",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-03-23",
+        "race_code": "202603232206",
+        "hit": 1,
+        "ret": 29400.0
+      },
+      {
+        "date": "2026-03-16",
+        "race_code": "202603161110",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-03-04",
+        "race_code": "202603042108",
+        "hit": 1,
+        "ret": 29260.0
+      },
+      {
+        "date": "2026-04-14",
+        "race_code": "202604141003",
+        "hit": 1,
+        "ret": 29580.0
+      },
+      {
+        "date": "2026-04-03",
+        "race_code": "202604030105",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-08",
+        "race_code": "202605080404",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-02",
+        "race_code": "202605020701",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-24",
+        "race_code": "202605242308",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-03",
+        "race_code": "202605031106",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-11",
+        "race_code": "202605111106",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-08",
+        "race_code": "202605081808",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-18",
+        "race_code": "202605180610",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-04",
+        "race_code": "202605040708",
+        "hit": 1,
+        "ret": 31860.000000000004
+      },
+      {
+        "date": "2026-05-29",
+        "race_code": "202605292308",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-15",
+        "race_code": "202605151901",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-26",
+        "race_code": "202605262411",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-14",
+        "race_code": "202606140307",
+        "hit": 1,
+        "ret": 29500.0
+      },
+      {
+        "date": "2026-06-28",
+        "race_code": "202606282403",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-22",
+        "race_code": "202606221503",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-07",
+        "race_code": "202606070609",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-24",
+        "race_code": "202606242203",
+        "hit": 1,
+        "ret": 32660.0
+      },
+      {
+        "date": "2026-06-07",
+        "race_code": "202606071006",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-30",
+        "race_code": "202606300501",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-19",
+        "race_code": "202606191301",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-20",
+        "race_code": "202606201305",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-13",
+        "race_code": "202606131906",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-28",
+        "race_code": "202606280101",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-03",
+        "race_code": "202606031308",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-02",
+        "race_code": "202606022004",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-16",
+        "race_code": "202607162103",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-11",
+        "race_code": "202607110208",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-26",
+        "race_code": "202607260208",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-19",
+        "race_code": "202607191608",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-31",
+        "race_code": "202607310803",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-09",
+        "race_code": "202607090504",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-23",
+        "race_code": "202607232401",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-22",
+        "race_code": "202607222309",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-15",
+        "race_code": "202607152108",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-06",
+        "race_code": "202607061301",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-04",
+        "race_code": "202607040903",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-13",
+        "race_code": "202607130303",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-13",
+        "race_code": "202607131901",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-26",
+        "race_code": "202608260904",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-27",
+        "race_code": "202608271301",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-24",
+        "race_code": "202608242207",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-26",
+        "race_code": "202608261503",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-27",
+        "race_code": "202608271108",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-21",
+        "race_code": "202608210406",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-16",
+        "race_code": "202608161704",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-19",
+        "race_code": "202608191302",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-18",
+        "race_code": "202608182001",
+        "hit": 1,
+        "ret": 29970.0
+      },
+      {
+        "date": "2026-08-01",
+        "race_code": "202608010606",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-05",
+        "race_code": "202608051707",
+        "hit": 1,
+        "ret": 30030.000000000004
+      },
+      {
+        "date": "2026-08-17",
+        "race_code": "202608171107",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-15",
+        "race_code": "202608150506",
+        "hit": 0,
+        "ret": 0.0
+      }
+    ],
+    "head_prob@0.40": [
+      {
+        "date": "2026-02-28",
+        "race_code": "202602280208",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-27",
+        "race_code": "202602270103",
+        "hit": 1,
+        "ret": 29040.000000000004
+      },
+      {
+        "date": "2026-02-25",
+        "race_code": "202602250203",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-25",
+        "race_code": "202602251103",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-15",
+        "race_code": "202602150806",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-17",
+        "race_code": "202602170103",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-14",
+        "race_code": "202602140701",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-03-23",
+        "race_code": "202603232206",
+        "hit": 1,
+        "ret": 29400.0
+      },
+      {
+        "date": "2026-03-16",
+        "race_code": "202603161110",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-03-21",
+        "race_code": "202603211503",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-03-04",
+        "race_code": "202603042108",
+        "hit": 1,
+        "ret": 29260.0
+      },
+      {
+        "date": "2026-03-28",
+        "race_code": "202603281704",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-04-14",
+        "race_code": "202604141003",
+        "hit": 1,
+        "ret": 29580.0
+      },
+      {
+        "date": "2026-04-03",
+        "race_code": "202604030105",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-08",
+        "race_code": "202605080404",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-02",
+        "race_code": "202605020701",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-24",
+        "race_code": "202605242308",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-03",
+        "race_code": "202605031106",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-11",
+        "race_code": "202605111106",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-08",
+        "race_code": "202605081808",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-11",
+        "race_code": "202605110504",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-18",
+        "race_code": "202605180610",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-04",
+        "race_code": "202605040708",
+        "hit": 1,
+        "ret": 31860.000000000004
+      },
+      {
+        "date": "2026-05-18",
+        "race_code": "202605181702",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-29",
+        "race_code": "202605292308",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-15",
+        "race_code": "202605151901",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-26",
+        "race_code": "202605262411",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-14",
+        "race_code": "202606140307",
+        "hit": 1,
+        "ret": 29500.0
+      },
+      {
+        "date": "2026-06-28",
+        "race_code": "202606282403",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-21",
+        "race_code": "202606210202",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-22",
+        "race_code": "202606221503",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-07",
+        "race_code": "202606070609",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-24",
+        "race_code": "202606242203",
+        "hit": 1,
+        "ret": 32660.0
+      },
+      {
+        "date": "2026-06-07",
+        "race_code": "202606071006",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-30",
+        "race_code": "202606300501",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-19",
+        "race_code": "202606191301",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-20",
+        "race_code": "202606201305",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-13",
+        "race_code": "202606131906",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-28",
+        "race_code": "202606280101",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-03",
+        "race_code": "202606031308",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-02",
+        "race_code": "202606022004",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-21",
+        "race_code": "202606211605",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-28",
+        "race_code": "202606280502",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-18",
+        "race_code": "202606180910",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-16",
+        "race_code": "202607162103",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-11",
+        "race_code": "202607110208",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-26",
+        "race_code": "202607260208",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-19",
+        "race_code": "202607191608",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-31",
+        "race_code": "202607310803",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-09",
+        "race_code": "202607090504",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-08",
+        "race_code": "202607082004",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-23",
+        "race_code": "202607232401",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-22",
+        "race_code": "202607222309",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-15",
+        "race_code": "202607152108",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-08",
+        "race_code": "202607082002",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-23",
+        "race_code": "202607231505",
+        "hit": 1,
+        "ret": 31140.0
+      },
+      {
+        "date": "2026-07-31",
+        "race_code": "202607312310",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-06",
+        "race_code": "202607061301",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-04",
+        "race_code": "202607040903",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-19",
+        "race_code": "202607192006",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-13",
+        "race_code": "202607130303",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-13",
+        "race_code": "202607131901",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-26",
+        "race_code": "202608260904",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-22",
+        "race_code": "202608220606",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-27",
+        "race_code": "202608271301",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-24",
+        "race_code": "202608242207",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-26",
+        "race_code": "202608261503",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-27",
+        "race_code": "202608271108",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-21",
+        "race_code": "202608210406",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-30",
+        "race_code": "202608300705",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-07",
+        "race_code": "202608071504",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-16",
+        "race_code": "202608161704",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-19",
+        "race_code": "202608191302",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-18",
+        "race_code": "202608182001",
+        "hit": 1,
+        "ret": 29970.0
+      },
+      {
+        "date": "2026-08-08",
+        "race_code": "202608080206",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-27",
+        "race_code": "202608271303",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-01",
+        "race_code": "202608010606",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-05",
+        "race_code": "202608051707",
+        "hit": 1,
+        "ret": 30030.000000000004
+      },
+      {
+        "date": "2026-08-17",
+        "race_code": "202608171107",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-25",
+        "race_code": "202608251504",
+        "hit": 1,
+        "ret": 28560.0
+      },
+      {
+        "date": "2026-08-15",
+        "race_code": "202608150506",
+        "hit": 0,
+        "ret": 0.0
+      }
+    ],
+    "head_ev@0.40": [
+      {
+        "date": "2026-02-28",
+        "race_code": "202602280208",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-27",
+        "race_code": "202602270103",
+        "hit": 1,
+        "ret": 29040.000000000004
+      },
+      {
+        "date": "2026-02-25",
+        "race_code": "202602250203",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-25",
+        "race_code": "202602251103",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-17",
+        "race_code": "202602170103",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-02-14",
+        "race_code": "202602140701",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-03-23",
+        "race_code": "202603232206",
+        "hit": 1,
+        "ret": 29400.0
+      },
+      {
+        "date": "2026-03-16",
+        "race_code": "202603161110",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-03-21",
+        "race_code": "202603211503",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-03-04",
+        "race_code": "202603042108",
+        "hit": 1,
+        "ret": 29260.0
+      },
+      {
+        "date": "2026-03-28",
+        "race_code": "202603281704",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-04-14",
+        "race_code": "202604141003",
+        "hit": 1,
+        "ret": 29580.0
+      },
+      {
+        "date": "2026-04-03",
+        "race_code": "202604030105",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-08",
+        "race_code": "202605080404",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-02",
+        "race_code": "202605020701",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-24",
+        "race_code": "202605242308",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-03",
+        "race_code": "202605031106",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-11",
+        "race_code": "202605111106",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-08",
+        "race_code": "202605081808",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-11",
+        "race_code": "202605110504",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-18",
+        "race_code": "202605180610",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-04",
+        "race_code": "202605040708",
+        "hit": 1,
+        "ret": 31860.000000000004
+      },
+      {
+        "date": "2026-05-18",
+        "race_code": "202605181702",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-29",
+        "race_code": "202605292308",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-15",
+        "race_code": "202605151901",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-05-26",
+        "race_code": "202605262411",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-14",
+        "race_code": "202606140307",
+        "hit": 1,
+        "ret": 29500.0
+      },
+      {
+        "date": "2026-06-28",
+        "race_code": "202606282403",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-21",
+        "race_code": "202606210202",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-22",
+        "race_code": "202606221503",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-07",
+        "race_code": "202606070609",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-24",
+        "race_code": "202606242203",
+        "hit": 1,
+        "ret": 32660.0
+      },
+      {
+        "date": "2026-06-07",
+        "race_code": "202606071006",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-30",
+        "race_code": "202606300501",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-19",
+        "race_code": "202606191301",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-20",
+        "race_code": "202606201305",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-13",
+        "race_code": "202606131906",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-28",
+        "race_code": "202606280101",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-03",
+        "race_code": "202606031308",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-02",
+        "race_code": "202606022004",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-21",
+        "race_code": "202606211605",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-28",
+        "race_code": "202606280502",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-18",
+        "race_code": "202606180910",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-16",
+        "race_code": "202607162103",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-11",
+        "race_code": "202607110208",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-26",
+        "race_code": "202607260208",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-19",
+        "race_code": "202607191608",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-31",
+        "race_code": "202607310803",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-09",
+        "race_code": "202607090504",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-08",
+        "race_code": "202607082004",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-23",
+        "race_code": "202607232401",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-22",
+        "race_code": "202607222309",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-15",
+        "race_code": "202607152108",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-08",
+        "race_code": "202607082002",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-23",
+        "race_code": "202607231505",
+        "hit": 1,
+        "ret": 31140.0
+      },
+      {
+        "date": "2026-07-31",
+        "race_code": "202607312310",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-06",
+        "race_code": "202607061301",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-04",
+        "race_code": "202607040903",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-19",
+        "race_code": "202607192006",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-13",
+        "race_code": "202607130303",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-13",
+        "race_code": "202607131901",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-26",
+        "race_code": "202608260904",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-22",
+        "race_code": "202608220606",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-27",
+        "race_code": "202608271301",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-24",
+        "race_code": "202608242207",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-26",
+        "race_code": "202608261503",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-27",
+        "race_code": "202608271108",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-21",
+        "race_code": "202608210406",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-22",
+        "race_code": "202608220406",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-30",
+        "race_code": "202608300705",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-07",
+        "race_code": "202608071504",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-16",
+        "race_code": "202608161704",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-19",
+        "race_code": "202608191302",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-14",
+        "race_code": "202608142405",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-18",
+        "race_code": "202608182001",
+        "hit": 1,
+        "ret": 29970.0
+      },
+      {
+        "date": "2026-08-08",
+        "race_code": "202608080206",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-27",
+        "race_code": "202608271303",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-01",
+        "race_code": "202608010606",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-05",
+        "race_code": "202608051707",
+        "hit": 1,
+        "ret": 30030.000000000004
+      },
+      {
+        "date": "2026-08-17",
+        "race_code": "202608171107",
+        "hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-25",
+        "race_code": "202608251504",
+        "hit": 1,
+        "ret": 28560.0
+      },
+      {
+        "date": "2026-08-15",
+        "race_code": "202608150506",
+        "hit": 0,
+        "ret": 0.0
+      }
+    ]
+  },
+  "thresholds": {
+    "2026-02": {
+      "train_months": [
+        "2025-12",
+        "2026-01"
+      ],
+      "s_threshold": 2.8033818620601934,
+      "a_threshold": -5.027268780750075,
+      "test_rows": 36
+    },
+    "2026-03": {
+      "train_months": [
+        "2025-12",
+        "2026-01",
+        "2026-02"
+      ],
+      "s_threshold": 3.6667373720231287,
+      "a_threshold": -6.23408227818142,
+      "test_rows": 58
+    },
+    "2026-04": {
+      "train_months": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03"
+      ],
+      "s_threshold": 3.34176071070831,
+      "a_threshold": -4.986271317412377,
+      "test_rows": 40
+    },
+    "2026-05": {
+      "train_months": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04"
+      ],
+      "s_threshold": 3.7015221901785296,
+      "a_threshold": -5.165295868767192,
+      "test_rows": 77
+    },
+    "2026-06": {
+      "train_months": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05"
+      ],
+      "s_threshold": 2.941228852972743,
+      "a_threshold": -4.868019039818082,
+      "test_rows": 73
+    },
+    "2026-07": {
+      "train_months": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "s_threshold": 2.6593441693614746,
+      "a_threshold": -4.545025182045867,
+      "test_rows": 87
+    },
+    "2026-08": {
+      "train_months": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07"
+      ],
+      "s_threshold": 3.111814522562125,
+      "a_threshold": -4.64823618757876,
+      "test_rows": 109
+    }
+  }
+}
