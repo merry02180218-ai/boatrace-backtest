@@ -1,0 +1,65 @@
+name: diag-1head-pre-20260913
+on:
+  push:
+    paths:
+      - '.github/workflows/diag-1head-pre-20260913.yml'
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn
+      - name: Download 2026-09-13 result-blind PRE input
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api /repos/merry02180218-ai/boatrace-backtest/actions/artifacts/10302229729/zip > /tmp/prod.zip
+          unzip -q /tmp/prod.zip -d /tmp/prod
+      - name: Score canonical Legacy PRE top5
+        run: |
+          python - <<'PY'
+          from datetime import date
+          import pandas as pd
+          import analyze_v136_1head_preselection_inner_threats as v
+          from backtest import rows, race_features
+
+          day='2026-09-13'
+          cutoff=date.fromisoformat(day)
+          src=[r for r in v.read_csv(v.SRC) if v.ii(r.get('valid_result'))==1 and r.get('date') and date.fromisoformat(r['date']) < cutoff]
+          print('SRC',v.SRC,'TRAIN_ROWS',len(src),'TRAIN_MIN',min(r['date'] for r in src),'TRAIN_MAX',max(r['date'] for r in src))
+          model=v.fit_lr(v.xlegacy(src),[v.ii(r.get('head_hit')) for r in src])
+
+          base='/tmp/prod/current_input/v288/20260913'
+          cards=rows(base+'/race_cards.csv')
+          wrows=rows(base+'/waku10.csv')
+          wm={str(r.get('レースコード','')).zfill(12):r for r in wrows}
+          cur=[]
+          for c in cards:
+              code=str(c.get('レースコード','')).zfill(12)
+              if code not in wm:
+                  continue
+              try:
+                  x=race_features(c,wm[code])
+                  vals=v.boat_pre(x,1)
+              except Exception as e:
+                  print('SKIP',code,repr(e)); continue
+              r={k:val for k,val in zip(v.LEGACY_FEATURES,vals)}
+              r['venue']=code[8:10]
+              r['race_code']=code
+              r['race']=int(code[10:12])
+              r['name']=c.get('艇1_選手名','')
+              r['grade']=c.get('艇1_級別','')
+              r['motor2']=c.get('艇1_モーター2連対率','')
+              r['nst']=c.get('艇1_全国平均ST','')
+              cur.append(r)
+          pp=model.predict_proba(v.xlegacy(cur))[:,1]
+          for r,p in zip(cur,pp): r['legacy_pre_p']=float(p)
+          cur=sorted(cur,key=lambda r:(-r['legacy_pre_p'],r['race_code']))
+          print('CURRENT_COMPLETE',len(cur),'TOP5')
+          print('rank,race_code,venue,race,name,grade,legacy_pre_p,motor2,nst')
+          for i,r in enumerate(cur[:15],1):
+              print(f"{i},{r['race_code']},{r['venue']},{r['race']},{r['name']},{r['grade']},{r['legacy_pre_p']:.9f},{r['motor2']},{r['nst']}")
+          PY
