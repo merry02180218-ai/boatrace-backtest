@@ -1,8 +1,12 @@
 name: replay-june-3head-v288-operational
 on:
+  workflow_dispatch:
   push:
     paths:
       - '.github/workflows/replay-june-3head-v288-operational.yml'
+      - 'prepare_v288_historical_pre_input.py'
+      - 'build_3head_v288_operational_month_day.py'
+      - 'replay_v288_operational_day.py'
 
 jobs:
   replay-day:
@@ -112,7 +116,7 @@ jobs:
           c=0.;peak=0.;mdd=0.
           for x in profits:
               c+=x;peak=max(peak,c);mdd=max(mdd,peak-c)
-          cov={x['target_date']:{'cards':x['race_cards_seen'],'complete':x['complete_rows'],'fallback':len(x['boatcast_fallback_recovered']),'excluded':len(x['excluded_missing_waku'])} for x in mans}
+          cov={x['target_date']:{'cards':x['race_cards_seen'],'complete':x['complete_rows'],'fallback':len(x['boatcast_fallback_recovered']),'excluded':len(x['excluded_missing_waku']),'card_source':x.get('race_card_source','')} for x in mans}
           route={}
           if B:
               for r,g in bets.groupby('route',sort=True):
@@ -135,8 +139,8 @@ jobs:
           for x in daily:
               s=float(x['stake']);r=float(x['payout']);roi=f'{100*r/s:.2f}%' if s else '-'
               L.append(f"|{x['date']}|{int(x['pre_candidates'])}|{int(x['bets'])}|{int(x['hits'])}|{s:.0f}|{r:.0f}|{r-s:+.0f}|{roi}|")
-          L += ['','## Input coverage','|date|cards|complete|fallback|excluded|','|---|---:|---:|---:|---:|']
-          for d,x in sorted(cov.items()):L.append(f"|{d}|{x['cards']}|{x['complete']}|{x['fallback']}|{x['excluded']}|")
+          L += ['','## Input coverage','|date|cards|complete|fallback|excluded|source|','|---|---:|---:|---:|---:|---|']
+          for d,x in sorted(cov.items()):L.append(f"|{d}|{x['cards']}|{x['complete']}|{x['fallback']}|{x['excluded']}|{x['card_source']}|")
           Path('summary_v288_june_operational_replay.md').write_text('\n'.join(L)+'\n',encoding='utf-8')
           print('\n'.join(L));print('V288_JUNE_OPERATIONAL_REPLAY_OK',json.dumps(summary,ensure_ascii=False))
           PY
