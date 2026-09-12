@@ -44,16 +44,24 @@ def odds_map(row):
     return out
 
 
-def official_closing_odds(day):
-    """Return race_code -> combo map from either official archive schema.
+def _local_csv_rows(path):
+    p=Path(path)
+    if not p.exists():return []
+    with p.open('r',encoding='utf-8-sig',newline='') as f:
+        return list(csv.DictReader(f))
 
-    Current June archive is wide (one race per row, 120 combo columns).
-    The older long schema is retained for compatibility.
+
+def official_closing_odds(day):
+    """Return race_code -> combo map from the repo's official odds archive.
+
+    This archive belongs to boatrace-backtest itself, not the external
+    BoatraceCSV repository used by backtest.rows(), so it must be read locally.
+    June files are wide (one race per row, 120 combo columns); the older long
+    schema remains supported for compatibility.
     """
-    ymd=day.strftime('%Y/%m/%d'); day8=day.strftime('%Y%m%d')
+    ymd=day.strftime('%Y/%m/%d');day8=day.strftime('%Y%m%d')
     out={}
-    for r in rows(f'data/official_closing_odds3t/{ymd}.csv'):
-        # Wide schema: date,jcd,rno,...,1-2-3,... (120 combo columns).
+    for r in _local_csv_rows(f'data/official_closing_odds3t/{ymd}.csv'):
         jcd=str(r.get('jcd','')).strip().zfill(2)
         rno=str(r.get('rno','')).strip()
         if jcd and rno:
@@ -70,7 +78,6 @@ def official_closing_odds(day):
                             if q is not None and q>0:om[key]=q
                 if om:out[code]=om
                 continue
-        # Long schema compatibility.
         code=str(r.get('レースコード','')).zfill(12)
         if len(code)!=12:continue
         try:
@@ -190,7 +197,7 @@ def main():
     print('DECISIONS_FROZEN_BEFORE_RESULTS',a.date,'candidates',len(decisions),'sha256',decision_sha,flush=True)
 
     # EVALUATION PHASE ONLY.
-    paym=bycode(rows(f'data/results/payouts/{ymd}.csv')); resm=bycode(rows(f'data/results/realtime/{ymd}.csv'))
+    paym=bycode(rows(f'data/results/payouts/{ymd}.csv'));resm=bycode(rows(f'data/results/realtime/{ymd}.csv'))
     settled=[]
     for rec in decisions:
         x=dict(rec);code=x['race_code'];x.update({'valid_result':0,'actual_combo':'','payout100':0,'hit':0,'return_yen':0.0,'profit':0.0,'result_joined_after_freeze':True})
