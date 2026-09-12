@@ -1,0 +1,34 @@
+name: probe-june-v288-live-input-repair
+on:
+  push:
+    paths:
+      - '.github/workflows/probe-june-v288-live-input-repair.yml'
+      - 'replay_v288_historical_day.py'
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 joblib
+      - name: Verify June repaired LIVE inputs
+        run: |
+          python - <<'PY'
+          from datetime import date
+          import replay_v288_historical_day as r
+          cases=['202606050303','202606140307']
+          for code in cases:
+              d=date.fromisoformat(code[:4]+'-'+code[4:6]+'-'+code[6:8])
+              om=r.official_closing_odds(d)
+              print('ODDS',code,len(om.get(code,{})))
+              assert len(om.get(code,{}))==120
+              try:
+                  row,url,sha=r.direct_historical_orig(code[:8],code)
+                  labels=[row.get(f'計測項目{k}','') for k in range(1,5)]
+                  print('ORIG_OK',code,url,labels,sha)
+              except Exception as e:
+                  print('ORIG_UNAVAILABLE',code,repr(e))
+          print('JUNE_V288_LIVE_INPUT_PROBE_OK')
+          PY
