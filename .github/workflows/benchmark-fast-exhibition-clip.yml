@@ -7,7 +7,7 @@ on:
       - 'download_boatcast_exhibition_fastclip.py'
       - 'auto_seed_exhibition_motion_v3.py'
       - 'auto_seed_exhibition_motion_v9.py'
-      - 'auto_seed_exhibition_motion_v10.py'
+      - 'auto_seed_exhibition_motion_v11.py'
       - 'track_exhibition_boats_v5.py'
   workflow_dispatch:
     inputs:
@@ -63,24 +63,24 @@ jobs:
       - name: Fetch only start-exhibition clip
         shell: powershell
         run: '& $env:LOCAL_PYTHON download_boatcast_exhibition_fastclip.py'
-      - name: Auto-detect fleet-geometry guarded seeds v10
+      - name: Auto-detect 2D fleet-coherence seeds v11
         shell: powershell
         run: |
           $video = Get-ChildItem -Filter 'boatcast_*_startclip.mp4' | Select-Object -First 1
           if (-not $video) { throw 'startclip not found' }
           $sw = [Diagnostics.Stopwatch]::StartNew()
-          & $env:LOCAL_PYTHON auto_seed_exhibition_motion_v10.py $video.FullName --entry-order $env:ENTRY_ORDER --nominal-sec 29 --out auto_seed_meta_v10.json --seed-out auto_seeds_v10.json
-          if ($LASTEXITCODE -ne 0) { throw 'auto seeding v10 failed closed' }
+          & $env:LOCAL_PYTHON auto_seed_exhibition_motion_v11.py $video.FullName --entry-order $env:ENTRY_ORDER --nominal-sec 29 --out auto_seed_meta_v11.json --seed-out auto_seeds_v11.json
+          if ($LASTEXITCODE -ne 0) { throw 'auto seeding v11 failed closed' }
           $sw.Stop()
-          "AUTO_SEED_V10_SECONDS=$($sw.Elapsed.TotalSeconds)"
+          "AUTO_SEED_V11_SECONDS=$($sw.Elapsed.TotalSeconds)"
       - name: Track and score SES v5
         shell: powershell
         run: |
           $video = Get-ChildItem -Filter 'boatcast_*_startclip.mp4' | Select-Object -First 1
-          $meta = Get-Content auto_seed_meta_v10.json -Raw | ConvertFrom-Json
+          $meta = Get-Content auto_seed_meta_v11.json -Raw | ConvertFrom-Json
           $slit = [string]$meta.selected_sec
           $sw = [Diagnostics.Stopwatch]::StartNew()
-          & $env:LOCAL_PYTHON track_exhibition_boats_v5.py $video.FullName --slit-sec $slit --seed-json auto_seeds_v10.json --out exhibition_tracking_v5.json --stride 2
+          & $env:LOCAL_PYTHON track_exhibition_boats_v5.py $video.FullName --slit-sec $slit --seed-json auto_seeds_v11.json --out exhibition_tracking_v5.json --stride 2
           if ($LASTEXITCODE -ne 0) { throw 'SES tracking v5 failed closed' }
           $sw.Stop()
           "SES_TRACK_SECONDS=$($sw.Elapsed.TotalSeconds)"
@@ -89,16 +89,16 @@ jobs:
         run: |
           $m = Get-ChildItem -Filter 'boatcast_*_startclip.json' | Select-Object -First 1
           Get-Content $m.FullName
-          Get-Content auto_seed_meta_v10.json
+          Get-Content auto_seed_meta_v11.json
           Get-Content exhibition_tracking_v5.json
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: fastclip-seedv10-sesv5-${{ env.RACE_DATE }}-${{ env.STADIUM }}-${{ env.RACE }}
+          name: fastclip-seedv11-sesv5-${{ env.RACE_DATE }}-${{ env.STADIUM }}-${{ env.RACE }}
           path: |
             boatcast_*_startclip.mp4
             boatcast_*_startclip.json
-            auto_seed_meta_v10.json
-            auto_seeds_v10.json
+            auto_seed_meta_v11.json
+            auto_seeds_v11.json
             exhibition_tracking_v5.json
           if-no-files-found: warn
