@@ -2,11 +2,14 @@ name: research-3head-v289-addon
 
 on:
   push:
-    branches: [main]
+    branches:
+      - 'research/3head-v289-addon-expansion'
     paths:
       - 'research_v289_3head_addon.py'
       - '.github/workflows/research-3head-v289-addon.yml'
   workflow_dispatch:
+  schedule:
+    - cron: '23 */6 * * *'
 
 permissions:
   contents: write
@@ -17,6 +20,7 @@ env:
 jobs:
   wave1:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
         with:
@@ -55,6 +59,7 @@ jobs:
             research_v289_3head_addon.md
             CHAT_HANDOFF_3HEAD_AUTO_RESEARCH_CURRENT.md
       - name: Persist research handoff and reports
+        if: success()
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
