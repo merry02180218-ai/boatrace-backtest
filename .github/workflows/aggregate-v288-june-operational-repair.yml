@@ -1,0 +1,34 @@
+name: aggregate-v288-june-operational-repair
+on:
+  push:
+    paths:
+      - '.github/workflows/aggregate-v288-june-operational-repair.yml'
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas
+      - name: Download 29 original June artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p june_all
+          gh run download 34679440163 --repo merry02180218-ai/boatrace-backtest --pattern 'v288-june-operational-*' --dir june_all
+          mkdir -p june_all/v288-june-operational-17-repair
+          gh run download 34684264842 --repo merry02180218-ai/boatrace-backtest --name v288-june-operational-17-repair --dir june_all/v288-june-operational-17-repair
+          echo "artifact dirs=$(find june_all -mindepth 1 -maxdepth 1 -type d | wc -l)"
+          find june_all -mindepth 1 -maxdepth 1 -type d | sort
+      - name: Strict 30-day aggregate
+        run: |
+          mkdir -p june_final
+          python aggregate_v288_june_operational_repair.py --root june_all --outdir june_final
+          cat june_final/summary_v288_june_operational_replay.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v288-june-operational-replay-final-repaired
+          retention-days: 30
+          path: june_final/
