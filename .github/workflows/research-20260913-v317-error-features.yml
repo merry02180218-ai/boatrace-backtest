@@ -1,0 +1,49 @@
+name: v317 error-driven SECOND features
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v317_1head_opponent_error_features.py'
+      - '.github/workflows/research-20260913-v317-error-features.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Require reusable causal cache
+        run: |
+          test -f CACHE_V313_1HEAD_OPPONENT_CAUSAL.md
+          test -f cache_v313_1head_opponent_pre.csv.gz
+          test -f cache_v313_1head_opponent_p3.csv.gz
+          test -f cache_v313_1head_opponent_p4.csv.gz
+      - name: Run v317 error-driven SECOND feature research
+        run: python run_v317_1head_opponent_error_features.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v317-error-driven-second
+          path: |
+            summary_v317_1head_opponent_error_features.md
+            analysis_v317_1head_opponent_error_features_*.csv
+          if-no-files-found: warn
+      - name: Commit v317 outputs
+        if: success()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add summary_v317_1head_opponent_error_features.md analysis_v317_1head_opponent_error_features_*.csv
+          git diff --cached --quiet || git commit -m 'Add v317 error-driven SECOND results'
+          git pull --rebase origin main
+          git push
