@@ -18,12 +18,8 @@
   "identity_added_vs_old_R": 3,
   "identity_dropped_vs_old_R": 3,
   "identity_sets_equal": false,
-  "complete_curve_coverage_R": 44,
-  "missing_curve_R": 3,
-  "missing_curve_race_codes": [
-    "202604190703",
-    "202604272402",
-    "202606130609"
-  ],
-  "status": "BLOCKED_MISSING_EXACT_PREDEADLINE_ODDS_CURVES"
+  "complete_curve_coverage_R": 47,
+  "missing_curve_R": 0,
+  "missing_curve_race_codes": [],
+  "status": "PASS_EXACT_CURVES_AVAILABLE"
 }

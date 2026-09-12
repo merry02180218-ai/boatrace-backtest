@@ -1,0 +1,51 @@
+{
+  "schema": "head4_v291_exact_a_live_curve_recovery_v1",
+  "development_months": [
+    "2026-04",
+    "2026-05",
+    "2026-06"
+  ],
+  "jul_aug_outcomes_used": false,
+  "september_outcomes_used": false,
+  "v96_used": false,
+  "base_curve_races": 100,
+  "exact_a_live_R": 47,
+  "missing_before_R": 3,
+  "recovered_R": 3,
+  "recovered_race_codes": [
+    "202604190703",
+    "202604272402",
+    "202606130609"
+  ],
+  "odds_snapshot_class": "official_closing/closing_displayed",
+  "provenance": [
+    {
+      "race_code": "202604190703",
+      "source_type": "official_closing",
+      "snapshot_type": "closing_displayed",
+      "source_url": "https://www.boatrace.jp/owpc/pc/race/odds3t?hd=20260419&jcd=07&rno=3",
+      "pair_policy": "TOP2XTOP2",
+      "alpha2": 0.6,
+      "curve_rows": 19
+    },
+    {
+      "race_code": "202604272402",
+      "source_type": "official_closing",
+      "snapshot_type": "closing_displayed",
+      "source_url": "https://www.boatrace.jp/owpc/pc/race/odds3t?hd=20260427&jcd=24&rno=2",
+      "pair_policy": "TOP2XTOP2",
+      "alpha2": 0.6,
+      "curve_rows": 19
+    },
+    {
+      "race_code": "202606130609",
+      "source_type": "official_closing",
+      "snapshot_type": "closing_displayed",
+      "source_url": "https://www.boatrace.jp/owpc/pc/race/odds3t?hd=20260613&jcd=06&rno=9",
+      "pair_policy": "TOP2XTOP2",
+      "alpha2": 0.6,
+      "curve_rows": 19
+    }
+  ],
+  "status": "PASS"
+}

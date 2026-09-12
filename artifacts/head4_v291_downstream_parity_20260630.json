@@ -1,0 +1,37 @@
+{
+  "ENV_ENTRY": {
+    "final_features": 25,
+    "june_features": 25,
+    "max_abs": 8.326672684688674e-17,
+    "max_training_date": "2026-06-30",
+    "rows": 126,
+    "tol": 1e-10
+  },
+  "POST": {
+    "max_abs": 9.71445146547012e-17,
+    "max_training_date": "2026-06-30",
+    "rows": 4488,
+    "tol": 1e-10
+  },
+  "artifact_sha256": "a8ffa92bce66a30c880f7f92cadc9d72e1d66027207bae0bd061bb0f53f13634",
+  "cutoff": "2026-06-30",
+  "jul_aug_labels_used": false,
+  "policy": "HEAD4_V291_COMP7",
+  "september_labels_used": false,
+  "status": "PASS",
+  "v283": {
+    "conditional_final_features": 69,
+    "conditional_june_features": 69,
+    "conditional_max_abs": 4.976713485760342e-13,
+    "conditional_rows": 28,
+    "max_training_date": "2026-06-29",
+    "max_training_month": "2026-06",
+    "second_final_features": 25,
+    "second_june_features": 25,
+    "second_max_abs": 4.977407375150733e-13,
+    "second_rows": 28,
+    "tol": 2e-08,
+    "training_rows": 1035
+  },
+  "v96_production_signal_used": false
+}

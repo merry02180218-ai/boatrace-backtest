@@ -10,11 +10,11 @@
   "v96_used": false,
   "base": {
     "policy": "HEAD4_V291_COMP7",
-    "R": 28,
+    "R": 29,
     "immutable": true
   },
-  "selection_tier": "BLOCKED_IDENTITY_COVERAGE",
-  "status": "REJECT_OLD_OOF_IDENTITY_REUSE",
+  "selection_tier": "NO_STANDALONE_SAFE_CANDIDATE",
+  "lomo_all_holdouts_profitable": false,
   "identity_audit": {
     "schema": "head4_v291_a_live_identity_audit_v1",
     "development_months": [
@@ -35,13 +35,9 @@
     "identity_added_vs_old_R": 3,
     "identity_dropped_vs_old_R": 3,
     "identity_sets_equal": false,
-    "complete_curve_coverage_R": 44,
-    "missing_curve_R": 3,
-    "missing_curve_race_codes": [
-      "202604190703",
-      "202604272402",
-      "202606130609"
-    ],
-    "status": "BLOCKED_MISSING_EXACT_PREDEADLINE_ODDS_CURVES"
+    "complete_curve_coverage_R": 47,
+    "missing_curve_R": 0,
+    "missing_curve_race_codes": [],
+    "status": "PASS_EXACT_CURVES_AVAILABLE"
   }
 }
