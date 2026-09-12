@@ -1,0 +1,168 @@
+{
+  "schema": "head4_v273_a_live_artifact_v1",
+  "policy": "HEAD4_V273_A_LIVE_QMAP",
+  "frozen_training_cutoff": "2026-06-30",
+  "production_inference_only": true,
+  "jul_aug_labels_used": false,
+  "september_labels_used": false,
+  "v96_production_signal_used": false,
+  "model_family": "median+standardscale+logistic_C0.18",
+  "priority": "S_FIRST_A_ONLY_OUTSIDE_S",
+  "S_gate": {
+    "PRE": 0.28,
+    "POST": 0.25,
+    "ENV_ENTRY": 0.22479
+  },
+  "A_gate": {
+    "PRE": 0.18,
+    "POST": 0.18,
+    "A_SCORE_LIVE": 0.2710428764008591
+  },
+  "frozen_oof_A_cut": 0.28,
+  "mapping": {
+    "method": "OUTCOME_BLIND_SELECTED_FRACTION_QUANTILE",
+    "reference_months": [
+      "2026-04",
+      "2026-05",
+      "2026-06"
+    ],
+    "reference_universe": "outside_S AND PRE>=0.18 AND POST>=0.18",
+    "oof_threshold": 0.28,
+    "reference_R": 120,
+    "oof_selected_R": 47,
+    "selected_fraction": 0.39166666666666666,
+    "mapped_live_threshold": 0.2710428764008591,
+    "mapped_selected_R": 47,
+    "month_count_audit": [
+      {
+        "month": "2026-04",
+        "reference_R": 34,
+        "oof_selected_R": 14,
+        "mapped_final_selected_R": 14
+      },
+      {
+        "month": "2026-05",
+        "reference_R": 43,
+        "oof_selected_R": 12,
+        "mapped_final_selected_R": 12
+      },
+      {
+        "month": "2026-06",
+        "reference_R": 43,
+        "oof_selected_R": 21,
+        "mapped_final_selected_R": 21
+      }
+    ],
+    "outcomes_used_by_mapping": false
+  },
+  "A_SCORE": {
+    "kind": "standardized_logistic",
+    "features": [
+      "v91_ex",
+      "score_CORR20_v91",
+      "score_wind_v83",
+      "score_RAW20_v91",
+      "score_BASE_v91",
+      "preview_comp",
+      "rel_pl_all_win_4v1",
+      "rel_pl_all_p2_4v1",
+      "rel_pl_recent_p2_4v1",
+      "opp_grade_b1_v93",
+      "opp_score_b1_v93",
+      "opp_national_b1_v93",
+      "b1_pl_all_win",
+      "b1_pl_all_p2",
+      "b1_pl_frame_win",
+      "rel_pl_recent_p2_4v3",
+      "b4_pl_recent_p2"
+    ],
+    "imputer_median": [
+      0.6,
+      54.1553,
+      53.7379,
+      53.6362,
+      54.1972,
+      0.543,
+      0.04938271604938274,
+      0.06923282544774123,
+      0.09999999999999998,
+      0.72,
+      0.452411,
+      0.498,
+      0.12466124661246612,
+      0.2659176029962547,
+      0.3645833333333333,
+      0.26666666666666666,
+      0.43333333333333335
+    ],
+    "scaler_mean": [
+      0.5657096424702058,
+      54.560883748645715,
+      54.59067789815818,
+      54.45254138678223,
+      54.852866413867815,
+      0.5497955037919827,
+      0.0494313133082157,
+      0.06945686195125604,
+      0.09705260140011893,
+      0.6221993499458288,
+      0.452825849404117,
+      0.48514409534127845,
+      0.1307116945978967,
+      0.2627214515370317,
+      0.35648064186523726,
+      0.2562353690069722,
+      0.40947070830147336
+    ],
+    "scaler_scale": [
+      0.3159916379576135,
+      17.51518541946566,
+      17.279862692801366,
+      17.491624639684616,
+      17.195261332551283,
+      0.16715419330024484,
+      0.08219939382684359,
+      0.1127414328137984,
+      0.16788380430612926,
+      0.2585328957813574,
+      0.11306445865880838,
+      0.1963358826174247,
+      0.06826113704084547,
+      0.10437400807817272,
+      0.1671718916050091,
+      0.15284619036349978,
+      0.1453610056457702
+    ],
+    "coef": [
+      0.24934221617370186,
+      0.18224343469511306,
+      0.24626269359134634,
+      0.06737098970476776,
+      -0.11164950808089989,
+      -0.15259729792893853,
+      0.05945145881602993,
+      -0.08925724958361632,
+      -0.13978884683474577,
+      -0.1644293822871684,
+      -0.04472474781780885,
+      -0.14421663149200106,
+      0.1307338318112398,
+      -0.3091166446944028,
+      -0.05367914350711741,
+      0.21448198294861465,
+      0.2765188623233675
+    ],
+    "intercept": -1.36810028750278
+  },
+  "oof_parity": {
+    "available": true,
+    "n": 384,
+    "max_abs": 1.3133938381315602e-13,
+    "status": "PASS"
+  },
+  "training": {
+    "max_training_date": "2026-06-30",
+    "rows": 923,
+    "features": 17
+  }
+}

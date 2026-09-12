@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "policy": "HEAD4_V273_A_LIVE_QMAP",
+  "cutoff": "2026-06-30",
+  "parity": {
+    "available": true,
+    "n": 384,
+    "max_abs": 1.3133938381315602e-13,
+    "status": "PASS"
+  },
+  "mapping": {
+    "method": "OUTCOME_BLIND_SELECTED_FRACTION_QUANTILE",
+    "reference_months": [
+      "2026-04",
+      "2026-05",
+      "2026-06"
+    ],
+    "reference_universe": "outside_S AND PRE>=0.18 AND POST>=0.18",
+    "oof_threshold": 0.28,
+    "reference_R": 120,
+    "oof_selected_R": 47,
+    "selected_fraction": 0.39166666666666666,
+    "mapped_live_threshold": 0.2710428764008591,
+    "mapped_selected_R": 47,
+    "month_count_audit": [
+      {
+        "month": "2026-04",
+        "reference_R": 34,
+        "oof_selected_R": 14,
+        "mapped_final_selected_R": 14
+      },
+      {
+        "month": "2026-05",
+        "reference_R": 43,
+        "oof_selected_R": 12,
+        "mapped_final_selected_R": 12
+      },
+      {
+        "month": "2026-06",
+        "reference_R": 43,
+        "oof_selected_R": 21,
+        "mapped_final_selected_R": 21
+      }
+    ],
+    "outcomes_used_by_mapping": false
+  },
+  "jul_aug_labels_used": false,
+  "september_labels_used": false,
+  "v96_production_signal_used": false
+}
