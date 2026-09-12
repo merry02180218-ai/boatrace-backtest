@@ -103,8 +103,13 @@ Commits:
 - `9b038f75af598ddbf4eba0fcdbea0ae9434060ac` — source audit manifest
 - `e2a356528cee61fc6c878d4f0a0c15fa9ceb66b7` — fail-closed verifier
 - `43035c631db2bdf3331f368b5b637fc399de8a7c` — dedicated CI workflow
+- `7166544631f6724a1b88c68a7e6b5ad3e754e1d3` — exact historical feature-order correction only; no semantics changed
 
-Dedicated CI run: `34726307714` (started from commit `43035c631db2bdf3331f368b5b637fc399de8a7c`; conclusion must be checked before promoting this milestone).
+### CI result
+
+- First dedicated run `34726307714`: **FAILURE** because the audit JSON key order put `tilt4` before the three original-exhibition fields; syntax passed and the failure was the verifier's exact-order guard, not a scientific/policy failure.
+- Corrected only the manifest key order to match frozen/historical POST order in commit `7166544631f6724a1b88c68a7e6b5ad3e754e1d3`.
+- Corrected dedicated run **`34726340979` completed SUCCESS** on 2026-09-13 JST, proving exact audit schema/order plus fail-closed classifications and policy guard.
 
 ### Decision
 
@@ -114,7 +119,8 @@ Reason:
 - source availability is proven without touching outcomes;
 - v291/v283/A-LIVE/variable-N semantics are unchanged;
 - missing original-exhibition fields are explicitly fail-closed rather than imputed/fabricated;
-- exact ST numeric representation (including F-start handling) and Apr–Jun parity still must be demonstrated before feeding these values into frozen inference.
+- exact ST numeric representation (including F-start handling) and Apr–Jun parity still must be demonstrated before feeding these values into frozen inference;
+- corrected dedicated CI is green (`34726340979`).
 
 ## Not yet accepted / current blocker
 
@@ -126,4 +132,4 @@ Remaining work now narrows to:
 3. After complete POST parity, repeat source-to-feature proof for ENV_ENTRY 25 inputs, A-LIVE 17 keys, v283 SECOND 5 rows and conditional THIRD 20 rows.
 4. Only after exact value parity/schema completeness feed immutable inputs to `run_4head_v291_varn_live.py`.
 
-Current status: **important new result: official central beforeinfo covers 4/7 exhibition-side POST inputs, while original-exhibition 3/7 remain source-unproven and are now explicitly fail-closed. v291 remains unchanged.**
+Current status: **important new result: official central beforeinfo covers 4/7 exhibition-side POST inputs, while original-exhibition 3/7 remain source-unproven and are now explicitly fail-closed. Corrected dedicated CI is green. v291 remains unchanged.**
