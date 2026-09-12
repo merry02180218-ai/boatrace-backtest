@@ -1,0 +1,60 @@
+{
+  "schema": "head4_post_live_source_audit_v1",
+  "policy": "HEAD4_V291_COMP7_VARN_F4_N16",
+  "reference_lineage": "artifacts/head4_post_feature_lineage_v1.json",
+  "historical_constructor": "analyze_v250_4head_rebuild_baseline.py::post_features",
+  "outcome_policy": {
+    "jul_aug_2026": "NON-PRISTINE; outcomes forbidden for fitting/tuning/promotion",
+    "sep_2026": "outcome-blind; results/payouts forbidden"
+  },
+  "official_beforeinfo_endpoint": "https://www.boatrace.jp/owpc/pc/race/beforeinfo",
+  "audit_scope": "pre-result source availability only; no outcomes read or used",
+  "post_exhibition_features": {
+    "ex_st_rank4": {
+      "historical_source": "data/previews/stt",
+      "official_beforeinfo_source": "スタート展示 table (course/boat + ST)",
+      "status": "SOURCE_AVAILABLE_MAPPING_PENDING_VALUE_PARITY",
+      "note": "Use exact historical rank_score semantics; do not use entry/course as a predictive feature."
+    },
+    "ex_st_4": {
+      "historical_source": "data/previews/stt 艇4_スタート展示",
+      "official_beforeinfo_source": "スタート展示 table",
+      "status": "SOURCE_AVAILABLE_MAPPING_PENDING_VALUE_PARITY"
+    },
+    "ex_st_edge_4v3": {
+      "historical_source": "data/previews/stt 艇3/艇4_スタート展示",
+      "official_beforeinfo_source": "スタート展示 table",
+      "status": "SOURCE_AVAILABLE_MAPPING_PENDING_VALUE_PARITY"
+    },
+    "tilt4": {
+      "historical_source": "data/previews/tkz 艇4_チルト",
+      "official_beforeinfo_source": "racer/exhibition table チルト column",
+      "status": "SOURCE_AVAILABLE_MAPPING_PENDING_VALUE_PARITY",
+      "note": "Use exact analyze_v33_tilt_effect.tiltval semantics."
+    },
+    "orig_straight4": {
+      "historical_source": "data/previews/original_exhibition + original_scores",
+      "official_beforeinfo_source": null,
+      "status": "UNPROVEN_SOURCE_FAIL_CLOSED",
+      "note": "Central official beforeinfo exposes 展示タイム/チルト/スタート展示 but not the historical original-exhibition 直線 metric."
+    },
+    "orig_lap4": {
+      "historical_source": "data/previews/original_exhibition + original_scores",
+      "official_beforeinfo_source": null,
+      "status": "UNPROVEN_SOURCE_FAIL_CLOSED",
+      "note": "Central official beforeinfo does not expose the historical original-exhibition 一周 metric."
+    },
+    "orig_turn4": {
+      "historical_source": "data/previews/original_exhibition + original_scores",
+      "official_beforeinfo_source": null,
+      "status": "UNPROVEN_SOURCE_FAIL_CLOSED",
+      "note": "Central official beforeinfo does not expose the historical original-exhibition 回り足/ターン metric."
+    }
+  },
+  "summary": {
+    "source_available": 4,
+    "unproven": 3,
+    "complete_live_post_builder_authorized": false
+  },
+  "decision": "ACCEPT source-availability audit only. REJECT any complete POST LIVE builder that fabricates/defaults the three original-exhibition features."
+}
