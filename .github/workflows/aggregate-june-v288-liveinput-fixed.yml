@@ -1,0 +1,35 @@
+name: aggregate-june-v288-liveinput-fixed
+on:
+  workflow_run:
+    workflows: ['replay-june-v288-liveinput-fixed']
+    types: [completed]
+
+jobs:
+  aggregate:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas
+      - name: Download baseline and corrected artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FIX_RUN: ${{ github.event.workflow_run.id }}
+        run: |
+          mkdir -p baseline corrected final
+          gh run download 34679440163 --repo merry02180218-ai/boatrace-backtest --pattern 'v288-june-operational-*' --dir baseline
+          gh run download "$FIX_RUN" --repo merry02180218-ai/boatrace-backtest --pattern 'v288-june-liveinput-fixed-*' --dir corrected
+          echo "baseline summaries=$(find baseline -name day_summary.json | wc -l)"
+          echo "corrected summaries=$(find corrected -name day_summary.json | wc -l)"
+      - name: Aggregate and audit
+        run: |
+          python aggregate_v288_june_liveinput_fixed.py --baseline baseline --corrected corrected --outdir final
+          cat final/summary_v288_june_liveinput_fixed.md
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v288-june-liveinput-fixed-final
+          retention-days: 30
+          path: final/
