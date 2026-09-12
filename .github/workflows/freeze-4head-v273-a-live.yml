@@ -1,0 +1,67 @@
+name: Freeze 4-head v273 A LIVE artifact
+
+on:
+  push:
+    paths:
+      - 'freeze_4head_v273_a_live_artifact.py'
+      - 'head4_v273_a_live_inference.py'
+      - 'verify_4head_v273_a_live_inference.py'
+      - 'analyze_v271_4head_arank_expansion.py'
+      - '.github/workflows/freeze-4head-v273-a-live.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: freeze-4head-v273-a-live
+  cancel-in-progress: true
+permissions:
+  contents: write
+
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn requests beautifulsoup4 lxml
+      - name: Syntax and inference-only guards
+        run: |
+          python -m py_compile freeze_4head_v273_a_live_artifact.py head4_v273_a_live_inference.py verify_4head_v273_a_live_inference.py
+          if grep -nE '\.fit\(' head4_v273_a_live_inference.py; then exit 1; fi
+          if grep -nE '(^|[[:space:]])from[[:space:]]+sklearn|(^|[[:space:]])import[[:space:]]+sklearn' head4_v273_a_live_inference.py; then exit 1; fi
+          python verify_4head_v273_a_live_inference.py
+      - name: Freeze final <=2026-06-30 A model and outcome-blind scale mapping
+        run: python freeze_4head_v273_a_live_artifact.py
+      - name: Validate artifact invariants
+        run: |
+          python - <<'PY'
+          import json,datetime
+          a=json.load(open('artifacts/head4_v273_a_live_20260630.json'))
+          r=json.load(open('artifacts/head4_v273_a_live_mapping_20260630.json'))
+          assert r['status']=='PASS'
+          assert a['frozen_training_cutoff']=='2026-06-30'
+          assert a['training']['max_training_date']<='2026-06-30'
+          assert a['jul_aug_labels_used'] is False and a['september_labels_used'] is False
+          assert a['v96_production_signal_used'] is False
+          assert a['mapping']['outcomes_used_by_mapping'] is False
+          assert a['mapping']['oof_selected_R']==a['mapping']['mapped_selected_R']
+          assert len(a['A_SCORE']['features'])==17
+          print('mapped_live_threshold',a['A_gate']['A_SCORE_LIVE'])
+          PY
+          python head4_v273_a_live_inference.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-v273-a-live-freeze
+          path: |
+            artifacts/head4_v273_a_live_20260630.json
+            artifacts/head4_v273_a_live_mapping_20260630.json
+      - name: Persist frozen artifacts
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add artifacts/head4_v273_a_live_20260630.json artifacts/head4_v273_a_live_mapping_20260630.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Freeze v273 A-rank LIVE score mapping'
+          git pull --rebase origin main
+          git push origin HEAD:main
