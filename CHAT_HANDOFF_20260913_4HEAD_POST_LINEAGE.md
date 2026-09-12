@@ -55,6 +55,11 @@ Commits:
 - `ce07d643e399688c7dc8070f8ef86589b01d3fdf` — lineage manifest
 - `9f0e79b00a63cfc0f239ef7b894ad3265e8638eb` — verifier
 - `bd2c1863968995f7684aabe46404284f8ace9c81` — CI workflow
+- `2ec4ccfa600812b781c3f1cf65bf8191894cea1f` — this handoff milestone
+
+### CI result
+
+Dedicated workflow `Validate 4-head POST feature lineage` run **`34723924296` completed SUCCESS** on 2026-09-13 JST. It passed syntax compilation, exact frozen POST schema/order verification, historical lineage checks, and the Jul/Aug NON-PRISTINE + September outcome-blind policy guard.
 
 ### Decision
 
@@ -65,7 +70,8 @@ Reason:
 - it traces to the existing historical constructor instead of inventing feature formulas;
 - it does not alter v291, v283, A-LIVE, the variable-N overlay, or bankroll allocation;
 - it uses no Jul/Aug/Sep outcomes;
-- the verifier explicitly does **not** claim current-day value parity.
+- the verifier explicitly does **not** claim current-day value parity;
+- the dedicated CI is green (`34723924296`).
 
 ### Not yet accepted
 
@@ -73,9 +79,8 @@ A current-day POST LIVE builder is **NOT accepted yet**. The official `beforeinf
 
 ## Next research step
 
-1. Run the new POST lineage CI and require green status.
-2. Map official pre-result source fields to the 7 exhibition-side POST features and parity-test against Apr–Jun result-free fixtures.
-3. Then repeat the same source-to-feature proof for ENV_ENTRY 25 inputs, A-LIVE 17 keys, v283 SECOND 5 rows and conditional THIRD 20 rows.
-4. Only after exact value parity/schema completeness should these immutable inputs be fed to `run_4head_v291_varn_live.py`.
+1. Map official pre-result source fields to the 7 exhibition-side POST features and parity-test against Apr–Jun result-free fixtures.
+2. Then repeat the same source-to-feature proof for ENV_ENTRY 25 inputs, A-LIVE 17 keys, v283 SECOND 5 rows and conditional THIRD 20 rows.
+3. Only after exact value parity/schema completeness should these immutable inputs be fed to `run_4head_v291_varn_live.py`.
 
-Current status: **important progress; POST lineage is fully identified 16/16, but one-click LIVE remains incomplete pending current-day value parity and downstream ENV/A/v283 lineage.**
+Current status: **important progress; POST lineage is fully identified 16/16 and dedicated CI is green, but one-click LIVE remains incomplete pending current-day value parity and downstream ENV/A/v283 lineage.**
