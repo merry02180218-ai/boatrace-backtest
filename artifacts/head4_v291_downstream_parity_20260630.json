@@ -13,7 +13,7 @@
     "rows": 4488,
     "tol": 1e-10
   },
-  "artifact_sha256": "a8ffa92bce66a30c880f7f92cadc9d72e1d66027207bae0bd061bb0f53f13634",
+  "artifact_sha256": "3013edc7a3ad6f706a4a8eeec7c65b5b0f5f26caf64c4588d08f972b12d8d5c7",
   "cutoff": "2026-06-30",
   "jul_aug_labels_used": false,
   "policy": "HEAD4_V291_COMP7",
