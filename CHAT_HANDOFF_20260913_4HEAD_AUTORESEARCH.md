@@ -141,33 +141,75 @@ Do **not** claim that pre-deadline 3連単 odds acquisition is unavailable. The 
 
 Historical chat/work log also identifies the earlier 3号艇 implementation as `v218 SHADOW`, with snapshots under `live_freeze/v218_3head/` and commit `76cac219`; this historical reference should be verified from GitHub history before reusing exact old paths, but it confirms that deadline-time odds acquisition was previously part of the LIVE architecture.
 
-### LIVE A status / next operational requirement
+### LIVE A status
 
-Frozen A-LIVE itself is exact 47R and its historical all-N audit is complete. The added-race A-LIVE rescue remains REJECTED; A-LIVE may still be used as the LIVE score/tier layer, but it must not silently add races outside the frozen v291 entry policy without a separately validated rule.
+Frozen A-LIVE is operationally available through `HEAD4_V273_A_LIVE_QMAP` and `head4_v273_a_live_inference.py`.
 
-For current LIVE operation, wire the existing `fetch_live_trifecta_odds.py` snapshot into the 4号艇 v291 BET path so that the formally adopted `floor=4.0/maxN=16` N-selection and ¥10,000 Dutch stakes are computed from an actual **pre-deadline timestamped odds snapshot**. Never substitute official closing odds for a live purchase-time decision.
+Priority/semantics:
+- S has priority.
+- A is evaluated only outside S.
+- S gate remains PRE>=0.28 / POST>=0.25 / ENV_ENTRY>=0.224790.
+- A gate remains PRE>=0.18 / POST>=0.18 plus frozen outcome-blind mapped `A_SCORE_LIVE` threshold from the artifact trained through 2026-06-30.
+- added-race A-LIVE rescue remains REJECTED; the A score/tier may be used, but it does not authorize bypassing v291 market entry.
 
-Fail closed if:
-- snapshot has fewer/more than exactly 120 valid combinations;
-- snapshot timestamp is not suitable for the intended purchase time;
-- odds snapshot is missing;
-- any result/payout-derived information is present.
+## 2026-09-13 S/A variable-N LIVE implementation — COMPLETE / CI PASS
+
+Implemented:
+- `run_4head_v291_varn_live.py`
+- `verify_4head_v291_varn_live.py`
+- `.github/workflows/validate-4head-v291-varn-live.yml`
+
+New policy ID:
+- `HEAD4_V291_COMP7_VARN_F4_N16`
+
+Exact prospective chain implemented:
+
+`frozen PRE/POST/ENV_ENTRY + frozen A features -> S priority / A outside S -> frozen v283 full 4-x-y order -> official pre-deadline odds3t 120-way snapshot -> original v291 Top4 composite >= 7.0 entry gate -> largest N=4..16 with composite >=4.0 -> exact ¥10,000 Dutch / ¥100 Hamilton -> append audit before result`
+
+Important invariants verified:
+- v291 Top4 entry logic is preserved exactly; variable-N does not create new races by itself.
+- full v283 ordering must have 20 unique 4-head combinations.
+- first four combinations must exactly equal legacy frozen v283 Top4.
+- S priority and A-only-outside-S semantics are preserved.
+- A uses the frozen inference-only artifact; no LIVE `.fit()`.
+- official odds fetch remains result-free and requires exactly 120 combinations.
+- deadline is checked before/after odds fetch and immediately before decision persistence.
+- Top4 composite <7 => PASS even if wider-N market conditions might look attractive.
+- Top4 composite >=7 => select largest N <=16 whose composite >=4.0.
+- every BET uses exactly ¥10,000; stakes are positive ¥100 multiples and sum exactly ¥10,000.
+- missing/late/incomplete input => fail closed `ERROR_NO_BET`.
+- no Jul/Aug fitting/tuning; no September outcomes/results/payouts used.
+
+CI history:
+- first validation run `34710678134`: runner/economics verifier itself printed `VERIFY_4HEAD_V291_VARN_LIVE_OK`, but workflow failed because a naive grep guard falsely matched the explanatory comment text `result/payout` in the source. This was **not a model or LIVE-logic failure**.
+- guard-only fix commit: `d61da6b328827d3b5d221c31c159bdae5174549e`.
+- corrected validation run `34711859515`: **SUCCESS**.
+
+Decision:
+- **S/A LIVE market/ticket runner is now implementation-complete and CI-validated.**
+- The adopted `floor=4.0/maxN=16` rule is wired after the immutable v291 Top4>=7 entry gate.
+- A-LIVE can now produce a formal layer classification and, when the same immutable v291 market entry gate passes, a real pre-deadline variable-N ticket set with exact ¥10,000 Dutch stakes.
+
+Operational limitation still remaining:
+- the generalized daily PRE workflow exists, but a one-click fully automated scheduler from PRE candidate detection through exhibition-time POST/ENV_ENTRY/A-feature/v283-input generation into this new S/A market runner is still a separate integration task.
+- Until that orchestration is completed, the new runner requires a correctly frozen pre-result input JSON containing PRE/POST/ENV_ENTRY, v283 `p2`/`cond`, and the 17 A feature keys.
 
 ## Decision / current status
 
 1. v291 race-entry logic remains frozen.
-2. `floor=4.0/maxN=16` is now the formally adopted variable-ticket policy.
-3. A-LIVE added-race rescue remains REJECTED.
-4. Existing official pre-deadline odds acquisition code has been rediscovered and must be reused for LIVE operationalization.
-5. September remains outcome-blind; only label-free operational shadow generation is allowed.
+2. `floor=4.0/maxN=16` is formally adopted and implemented as `HEAD4_V291_COMP7_VARN_F4_N16`.
+3. A-LIVE score/tier inference is operational and now connected to the same pre-deadline v291/variable-N market runner.
+4. A-LIVE added-race rescue remains REJECTED.
+5. Existing official pre-deadline odds acquisition is reused; post-deadline/closing odds are never a LIVE fallback.
+6. Corrected CI run `34711859515` is SUCCESS.
+7. September remains outcome-blind; only pre-result operational generation is allowed.
 
 ## Next restart point
 
-1. Inspect current 4号艇 LIVE workflow (`.github/workflows/live-4head-v291-pre-daily.yml` and downstream scripts) and connect `fetch_live_trifecta_odds.py` at purchase-time.
-2. Generate N=4..16 composite-odds curve from that timestamped snapshot in frozen v283 ranked order.
-3. Select largest N with composite >= 4.0; fail closed if none/invalid.
-4. Produce exact ¥10,000 Hamilton Dutch stakes and freeze the decision artifact together with the odds snapshot timestamp/hash.
-5. Run a September **outcome-blind** operational shadow test only; do not join results or payouts.
-6. Record implementation, CI run IDs, operational failures/successes and any adoption/rejection reason in this handoff.
+1. Complete orchestration after daily PRE: for PRE candidates, fetch exhibition/current data when available and generate frozen POST / ENV_ENTRY / the 17 A features / v283 p2+conditional-third inputs without refitting.
+2. Feed the resulting immutable pre-result JSON directly into `run_4head_v291_varn_live.py` before deadline.
+3. Persist/freeze input manifest, source timestamps/hashes, odds snapshot metadata, layer classification, selected N and stakes together.
+4. Run September outcome-blind shadow executions only; never join current-month results/payouts for tuning or validation.
+5. If orchestration CI fails, repair only operational plumbing/parity; do not lower gates or alter model/ticket rules.
 
 Do not use July/August outcomes or any September result/payout labels for further rule selection. Do not relax frozen-artifact parity guards merely to force CI green.
