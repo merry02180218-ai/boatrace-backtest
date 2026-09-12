@@ -1,0 +1,95 @@
+name: regress SES v16 September samples
+
+on:
+  push:
+    paths:
+      - '.github/workflows/regress-ses-v16.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  regress:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - sample: kiryu3-20260910
+            race_date: '20260910'
+            stadium: '01kiryu'
+            race: '3'
+            entry_order: '1,2,3,4,5,6'
+          - sample: kiryu12-20260910
+            race_date: '20260910'
+            stadium: '01kiryu'
+            race: '12'
+            entry_order: '1,2,3,4,5,6'
+          - sample: kiryu12-20260909-varied
+            race_date: '20260909'
+            stadium: '01kiryu'
+            race: '12'
+            entry_order: '1,2,4,5,6,3'
+    runs-on: [self-hosted, japan]
+    timeout-minutes: 10
+    env:
+      RACE_DATE: ${{ matrix.race_date }}
+      STADIUM: ${{ matrix.stadium }}
+      RACE: ${{ matrix.race }}
+      CLIP_START_SEC: '82'
+      CLIP_DURATION_SEC: '52'
+      ENTRY_ORDER: ${{ matrix.entry_order }}
+      LOCAL_PYTHON: C:\Users\merry\AppData\Local\Programs\Python\Python311\python.exe
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify runtime
+        shell: powershell
+        run: |
+          & $env:LOCAL_PYTHON --version
+          & $env:LOCAL_PYTHON -c "import playwright,cv2,numpy; print('runtime ok')"
+      - name: Fetch start-exhibition clip
+        shell: powershell
+        run: '& $env:LOCAL_PYTHON download_boatcast_exhibition_fastclip.py'
+      - name: Seed v16 unchanged
+        shell: powershell
+        run: |
+          $video = Get-ChildItem -Filter 'boatcast_*_startclip.mp4' | Select-Object -First 1
+          if (-not $video) { throw 'startclip not found' }
+          $sw = [Diagnostics.Stopwatch]::StartNew()
+          & $env:LOCAL_PYTHON auto_seed_exhibition_motion_v16.py $video.FullName --entry-order $env:ENTRY_ORDER --nominal-sec 29 --out auto_seed_meta_v16.json --seed-out auto_seeds_v16.json
+          if ($LASTEXITCODE -ne 0) { throw 'v16 seeding failed closed' }
+          $sw.Stop()
+          "AUTO_SEED_V16_SECONDS=$($sw.Elapsed.TotalSeconds)"
+      - name: Track SES v5 and require acceptance
+        shell: powershell
+        run: |
+          $video = Get-ChildItem -Filter 'boatcast_*_startclip.mp4' | Select-Object -First 1
+          $meta = Get-Content auto_seed_meta_v16.json -Raw | ConvertFrom-Json
+          $sw = [Diagnostics.Stopwatch]::StartNew()
+          & $env:LOCAL_PYTHON track_exhibition_boats_v5.py $video.FullName --slit-sec ([string]$meta.selected_sec) --seed-json auto_seeds_v16.json --out exhibition_tracking_v5.json --stride 2
+          if ($LASTEXITCODE -ne 0) { throw 'tracker failed closed' }
+          $sw.Stop()
+          "SES_TRACK_SECONDS=$($sw.Elapsed.TotalSeconds)"
+          $track = Get-Content exhibition_tracking_v5.json -Raw | ConvertFrom-Json
+          if (-not $track.accepted) { throw 'tracker JSON not accepted' }
+          $low = @($track.quality_tier.PSObject.Properties | Where-Object { $_.Value -eq 'LOW' })
+          if ($low.Count -gt 0) { throw 'LOW quality tier found' }
+      - name: Show outputs
+        if: always()
+        shell: powershell
+        run: |
+          $m = Get-ChildItem -Filter 'boatcast_*_startclip.json' | Select-Object -First 1
+          if ($m) { Get-Content $m.FullName }
+          if (Test-Path auto_seed_meta_v16.json) { Get-Content auto_seed_meta_v16.json }
+          if (Test-Path exhibition_tracking_v5.json) { Get-Content exhibition_tracking_v5.json }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: regress-v16-${{ matrix.sample }}
+          path: |
+            boatcast_*_startclip.json
+            auto_seed_meta_v16.json
+            auto_seeds_v16.json
+            exhibition_tracking_v5.json
+          if-no-files-found: warn
