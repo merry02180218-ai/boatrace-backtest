@@ -78,11 +78,34 @@ Expected new outputs:
 - `summary_4head_v291_a_targetcomp_rescue.md`
 - `head4_v291_a_targetcomp_rescue_candidate.json`
 
+## CI failure and automatic resume — 2026-09-13
+
+Workflow run `34707632922` failed before ROI research because `recover_4head_v291_exact_a_live_curves.py` called the frozen downstream inference loader while `artifacts/head4_v291_downstream_20260630.json` did not exist in the clean GitHub Actions checkout.
+
+Exact failure class:
+- `FrozenInferenceError: missing frozen artifact`
+- this was infrastructure/orchestration failure, not a failed model gate or negative ROI result.
+
+The repository already had `freeze_4head_v291_downstream_artifacts.py`, which reproduces archived June parity first and then fits/serializes only through the hard cutoff `2026-06-30`. The workflow simply had not invoked it.
+
+Fix commit: `e3d4056055407457a9f54f7d96d0cdb70d8deead`.
+
+The rescue workflow is now self-contained and fail-closed:
+1. syntax-check freeze/inference/recovery/research code;
+2. delete any stale downstream artifact in the runner;
+3. rebuild `head4_v291_downstream_20260630.json` from <= Jun history;
+4. require artifact and parity status PASS and explicit Jul/Aug=false, September=false, v96=false guards;
+5. validate the frozen inference loader;
+6. recover the exact missing A-LIVE curves;
+7. require 47/47 exact curve coverage;
+8. run target-composite / variable-N rescue research;
+9. persist audit + research outputs only after all guards pass.
+
+Current resumed workflow run: `34708490537` (`Research 4-head v291 A target-composite rescue`). At this handoff update it is in progress from commit `e3d4056055407457a9f54f7d96d0cdb70d8deead`.
+
 ## Current CI / resume point
 
-Current workflow run: `34707632922` (`Research 4-head v291 A target-composite rescue`).
-
-At this handoff update the run is in progress after the recovery implementation was pushed. The next automation/chat must inspect this run first.
+Inspect run `34708490537` first.
 
 If success:
 - require `audit_4head_v291_a_live_curve_recovery.json.status == PASS`;
@@ -92,8 +115,8 @@ If success:
 - only consider a new policy/version if the added route itself passes safety gates; do not use v291 base profit to mask a losing rescue.
 
 If failure:
-- inspect the exact failed step/log;
-- fix feature parity, official closing-odds lookup, pair ordering, or Dutch reconstruction without relaxing leak guards;
-- rerun and update this handoff.
+- inspect the exact failed step/log immediately;
+- repair the failing parity, feature reconstruction, official closing-odds lookup, pair ordering, Dutch reconstruction or CI plumbing without relaxing leak guards;
+- rerun in the same session and update this handoff again.
 
 Do not use July/August outcomes or any September result/payout labels to solve failures or select rules. Current production `HEAD4_V291_COMP7` remains unchanged until a separately versioned rescue route passes all gates.
