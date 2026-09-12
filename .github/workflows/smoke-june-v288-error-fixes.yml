@@ -1,0 +1,46 @@
+name: smoke-june-v288-error-fixes
+on:
+  push:
+    paths:
+      - '.github/workflows/smoke-june-v288-error-fixes.yml'
+
+jobs:
+  verify:
+    strategy:
+      fail-fast: false
+      matrix:
+        date: ['2026-06-17','2026-06-23']
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 joblib
+      - name: Frozen canonical artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
+          cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
+          gh run download 34326743303 --repo merry02180218-ai/boatrace-backtest --name v234-3head-waku10-restored-replay --dir golden_v234
+          cp golden_v234/analysis_v234_waku10_reconstruction_coverage.csv .
+          mkdir -p data/audit
+          cp -r golden_v234/data/audit/v234_waku10 data/audit/
+      - name: Prepare PRE
+        run: python prepare_v288_historical_pre_input.py --date '${{ matrix.date }}'
+      - name: Build frozen day
+        run: >-
+          python build_3head_v288_operational_month_day.py
+          --date '${{ matrix.date }}'
+          --month-first 2026-06-01
+          --month-next 2026-07-01
+          --history-cutoff 2026-05-31
+          --bias-start 2026-05-01
+      - name: Replay
+        run: |
+          DAY8=$(echo '${{ matrix.date }}' | tr -d '-')
+          python replay_v288_operational_day.py --date '${{ matrix.date }}' --cache "live_outputs/v288_operational/$DAY8/live_cache.joblib" --outdir "operational_replay/$DAY8" --history-cutoff 2026-05-31
+          cat "current_input/v288/$DAY8/historical_input_manifest.json"
+          cat "live_outputs/v288_operational/$DAY8/daily_manifest.json"
+          cat "operational_replay/$DAY8/day_summary.json"
