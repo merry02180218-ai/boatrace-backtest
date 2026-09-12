@@ -1,0 +1,35 @@
+name: v308 1head volume opponent joint
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v308_1head_volume_opponent_joint.py'
+      - '.github/workflows/research-20260912-v308-volume-opponent-joint.yml'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Run v308 joint research
+        run: python run_v308_1head_volume_opponent_joint.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v308-volume-opponent-joint
+          path: |
+            analysis_v308_1head_volume_opponent_joint_*.csv
+            summary_v308_1head_volume_opponent_joint.md
+      - name: Commit outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v308_1head_volume_opponent_joint_*.csv summary_v308_1head_volume_opponent_joint.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Add v308 volume opponent joint outputs'
+          git pull --rebase origin main
+          git push origin HEAD:main
