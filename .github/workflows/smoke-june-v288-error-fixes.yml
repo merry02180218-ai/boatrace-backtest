@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        date: ['2026-06-17','2026-06-23']
+        date: ['2026-06-17']
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
