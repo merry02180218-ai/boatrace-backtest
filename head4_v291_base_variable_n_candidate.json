@@ -1,0 +1,33 @@
+{
+  "schema": "head4_v291_base_variable_n_v1",
+  "development_months": [
+    "2026-04",
+    "2026-05",
+    "2026-06"
+  ],
+  "jul_aug_outcomes_used": false,
+  "september_outcomes_used": false,
+  "v96_used": false,
+  "base": {
+    "policy": "HEAD4_V291_COMP7",
+    "R": 29,
+    "roi_pct": 300.2586206896552,
+    "hit_rate_pct": 31.03448275862069,
+    "avg_n": 4.0,
+    "immutable_entry_set": true
+  },
+  "rule_family": "largest N>=4 with composite_odds >= floor, capped at maxN; fixed 10000 JPY bank",
+  "selection_tier": "STRONG_STABLE",
+  "lomo_all_holdouts_profitable": false,
+  "candidate": {
+    "floor": 5.0,
+    "maxn": 6,
+    "R": 29,
+    "roi_pct": 213.47931034482758,
+    "min_month_roi_pct": 140.36666666666667,
+    "hit_rate_pct": 34.48275862068966,
+    "avg_n": 5.724137931034483,
+    "avg_comp_odds": 6.474950983706849,
+    "status": "REJECT_LOMO"
+  }
+}
