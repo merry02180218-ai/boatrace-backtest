@@ -57,19 +57,28 @@ def causal_p4_map():
 def add_headrisk(sl,p3,p4):
     q=sl.copy()
     q['race_code']=q.race_code.astype(str).str.zfill(12)
-    q['v310_p3head']=q.race_code.map(p3)
-    q['v310_p4head']=q.race_code.map(p4)
-    if q[['v310_p3head','v310_p4head']].isna().any().any():
-        miss=q[q[['v310_p3head','v310_p4head']].isna().any(axis=1)].race_code.unique()[:10]
-        raise RuntimeError(f'missing causal head-risk probabilities: {miss}')
+    # The SECOND long table contains pre-Feb training rows (Nov-Jan), while the
+    # audited causal p3/p4 walk-forward series begins in Feb. Do NOT backfill those
+    # old rows from future models. Mark them unavailable and use neutral zero only
+    # as a missing-history sentinel; explicit availability flags prevent ambiguity.
+    p3raw=q.race_code.map(p3); p4raw=q.race_code.map(p4)
+    q['v310_p3_available']=p3raw.notna().astype(float)
+    q['v310_p4_available']=p4raw.notna().astype(float)
+    q['v310_p3head']=p3raw.fillna(0.0).astype(float)
+    q['v310_p4head']=p4raw.fillna(0.0).astype(float)
+    # Every scored Feb-Jun row MUST have both causal probabilities. Only earlier
+    # training rows are allowed to be unavailable.
+    scored=q.month.astype(str).isin(TM)
+    if ((q.loc[scored,'v310_p3_available']<1).any() or
+        (q.loc[scored,'v310_p4_available']<1).any()):
+        miss=q.loc[scored & ((q.v310_p3_available<1)|(q.v310_p4_available<1)),'race_code'].unique()[:10]
+        raise RuntimeError(f'missing scored-month causal head-risk probabilities: {miss}')
     b=q.boat.astype(int)
-    p3s=q.v310_p3head.astype(float); p4s=q.v310_p4head.astype(float)
+    p3s=q.v310_p3head; p4s=q.v310_p4head
     q['v310_attack34_max']=np.maximum(p3s,p4s)
     q['v310_attack34_sum']=p3s+p4s
     q['v310_attack34_gap']=p3s-p4s
     q['v310_candidate_headrisk']=np.where(b.eq(3),p3s,np.where(b.eq(4),p4s,0.0))
-    # Role interactions let the listwise ranker learn how 3/4 attack pressure changes
-    # the chance that each possible opponent becomes SECOND, including boats 5/6.
     for boat in v298.BOATS:
         role=b.eq(int(boat)).astype(float)
         q[f'v310_p3_x_b{boat}']=p3s*role
@@ -114,7 +123,6 @@ def main():
     sl0=v300.augment_second(v298.second_long(d,sufs)); sl1=add_headrisk(sl0,p3,p4)
     cl=v300.augment_third(v298.conditional_long(d,sufs))
 
-    # THIRD is frozen at v300 best (.1). Build it once per fold.
     pc={tm:v300.pc_predict(cl,tm,.1,True)[0] for tm in TM}
     configs=[('BASE',3.0,sl0)]+[(f'HEADRISK_L2_{l2:g}',l2,sl1) for l2 in L2S]
     summaries=[]; allrows=[]
@@ -140,6 +148,7 @@ def main():
        '- Frozen race set: v308 345 races; head model is unchanged.',
        '- p3: monthly walk-forward v243-family head probability using only earlier data for each month.',
        '- p4: v250 PRE monthly walk-forward probability; current-race exhibition is not used.',
+       '- Pre-Feb SECOND training rows have no future-backfilled p3/p4: they use zero sentinel + explicit availability flags.',
        '- THIRD remains v300 conditional THIRD L2=.1.', '',
        '## Config comparison','|config|L2|second TOP1|TOP2|TOP3|exact3|dTOP2 pp|dExact3 pp|','|---|---:|---:|---:|---:|---:|---:|---:|']
     for _,r in sm.sort_values(['second_top2','exact3_rate'],ascending=False).iterrows():
