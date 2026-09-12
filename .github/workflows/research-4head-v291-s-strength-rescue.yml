@@ -1,0 +1,68 @@
+name: Research 4-head v291 S strength rescue
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_4head_v291_s_strength_rescue.py'
+      - '.github/workflows/research-4head-v291-s-strength-rescue.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: research-4head-v291-s-strength-rescue
+  cancel-in-progress: true
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas
+      - run: python -m py_compile analyze_4head_v291_s_strength_rescue.py
+      - name: Run S-strength rescue research
+        run: python analyze_4head_v291_s_strength_rescue.py
+      - name: Validate safety
+        run: |
+          python - <<'PY'
+          import json, pandas as pd
+          from pathlib import Path
+          j=json.loads(Path('head4_v291_s_strength_rescue_candidate.json').read_text())
+          assert j['jul_aug_outcomes_used'] is False and j['september_outcomes_used'] is False and j['v96_used'] is False
+          assert j['base']['immutable'] is True
+          l=pd.read_csv('analysis_4head_v291_s_strength_rescue_lomo.csv')
+          assert set(l.holdout_month)=={'2026-04','2026-05','2026-06'}
+          print(Path('summary_4head_v291_s_strength_rescue.md').read_text())
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-v291-s-strength-rescue
+          path: |
+            analysis_4head_v291_s_strength_rescue_grid.csv
+            analysis_4head_v291_s_strength_rescue_monthly.csv
+            analysis_4head_v291_s_strength_rescue_lomo.csv
+            head4_v291_s_strength_rescue_candidate.json
+            summary_4head_v291_s_strength_rescue.md
+      - name: Persist results
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add analysis_4head_v291_s_strength_rescue_grid.csv \
+                  analysis_4head_v291_s_strength_rescue_monthly.csv \
+                  analysis_4head_v291_s_strength_rescue_lomo.csv \
+                  head4_v291_s_strength_rescue_candidate.json \
+                  summary_4head_v291_s_strength_rescue.md
+          git diff --cached --quiet && exit 0
+          git commit -m 'Add S-layer head-strength rescue research results'
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 3
+          done
+          exit 1
