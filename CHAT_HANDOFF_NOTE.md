@@ -1,1 +1,0 @@
-Use `CHAT_HANDOFF_20260912_V288_JUNE_LIVEINPUT_FINAL.md` as the main handoff. Always read latest GitHub first.
