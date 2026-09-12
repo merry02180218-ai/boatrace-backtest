@@ -1,0 +1,150 @@
+name: replay-june-3head-v288-operational
+on:
+  push:
+    paths:
+      - '.github/workflows/replay-june-3head-v288-operational.yml'
+
+jobs:
+  replay-day:
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        day: [01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 joblib
+      - name: Resolve date
+        run: |
+          echo "DATE=2026-06-${{ matrix.day }}" >> "$GITHUB_ENV"
+          echo "DAY8=202606${{ matrix.day }}" >> "$GITHUB_ENV"
+      - name: Download frozen canonical source artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
+          cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
+          gh run download 34326743303 --repo merry02180218-ai/boatrace-backtest --name v234-3head-waku10-restored-replay --dir golden_v234
+          cp golden_v234/analysis_v234_waku10_reconstruction_coverage.csv .
+          mkdir -p data/audit
+          cp -r golden_v234/data/audit/v234_waku10 data/audit/
+      - name: Build archived PRE input
+        run: python prepare_v288_historical_pre_input.py --date "$DATE"
+      - name: Build month-frozen PRE/cache
+        run: >-
+          python build_3head_v288_operational_month_day.py
+          --date "$DATE"
+          --month-first 2026-06-01
+          --month-next 2026-07-01
+          --history-cutoff 2026-05-31
+          --bias-start 2026-05-01
+      - name: Replay LIVE then settle after decision freeze
+        run: >-
+          python replay_v288_operational_day.py
+          --date "$DATE"
+          --cache "live_outputs/v288_operational/$DAY8/live_cache.joblib"
+          --outdir "operational_replay/$DAY8"
+          --history-cutoff 2026-05-31
+      - name: Copy manifests
+        run: |
+          cp "current_input/v288/$DAY8/historical_input_manifest.json" "operational_replay/$DAY8/input_manifest.json"
+          cp "live_outputs/v288_operational/$DAY8/daily_manifest.json" "operational_replay/$DAY8/production_manifest.json"
+          cp "live_outputs/v288_operational/$DAY8/pre_scan.csv" "operational_replay/$DAY8/pre_scan.csv"
+      - name: Guard
+        run: |
+          python - <<'PY'
+          import json,os
+          d=os.environ['DAY8']
+          p=json.load(open(f'operational_replay/{d}/production_manifest.json',encoding='utf-8'))
+          s=json.load(open(f'operational_replay/{d}/day_summary.json',encoding='utf-8'))
+          assert p['history_cutoff']=='2026-05-31' and p['result_or_payout_used'] is False
+          assert p['evaluation_month_rows_removed_from_training_frame'] is True
+          assert p['pre_score_training_filtered_before_month_first'] is True
+          assert s['history_cutoff']=='2026-05-31'
+          assert s['result_or_payout_used_for_decision'] is False and s['results_joined_only_after_freeze'] is True
+          print('V288_JUNE_DAY_OK',d,p['pre_candidate_count'],s['bets'],s['hits'])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v288-june-operational-${{ matrix.day }}
+          retention-days: 30
+          path: operational_replay/${{ env.DAY8 }}/
+
+  aggregate:
+    needs: replay-day
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v288-june-operational-*
+          path: june_all
+      - name: Aggregate month
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import pandas as pd
+          root=Path('june_all'); sums=[]; mans=[]; frames=[]
+          for p in root.rglob('day_summary.json'): sums.append(json.loads(p.read_text(encoding='utf-8')))
+          for p in root.rglob('input_manifest.json'): mans.append(json.loads(p.read_text(encoding='utf-8')))
+          for p in root.rglob('day_replay.csv'):
+              try:
+                  q=pd.read_csv(p,dtype={'race_code':str})
+                  if len(q): frames.append(q)
+              except pd.errors.EmptyDataError: pass
+          q=pd.concat(frames,ignore_index=True,sort=False) if frames else pd.DataFrame()
+          q.to_csv('analysis_v288_june_operational_replay.csv',index=False) if len(q) else Path('analysis_v288_june_operational_replay.csv').write_text('',encoding='utf-8')
+          bets=q[q.decision.eq('BET')].copy() if len(q) else pd.DataFrame()
+          B=len(bets); H=int(bets.hit.sum()) if B else 0
+          stake=float(bets.total_stake.sum()) if B else 0.; ret=float(bets.return_yen.sum()) if B else 0.
+          candidates=sum(int(x.get('pre_candidates',0)) for x in sums)
+          daily=sorted(sums,key=lambda x:x['date'])
+          profits=[float(x.get('profit',0)) for x in daily]
+          c=0.;peak=0.;mdd=0.
+          for x in profits:
+              c+=x;peak=max(peak,c);mdd=max(mdd,peak-c)
+          cov={x['target_date']:{'cards':x['race_cards_seen'],'complete':x['complete_rows'],'fallback':len(x['boatcast_fallback_recovered']),'excluded':len(x['excluded_missing_waku'])} for x in mans}
+          route={}
+          if B:
+              for r,g in bets.groupby('route',sort=True):
+                  n=len(g);h=int(g.hit.sum());s=float(g.total_stake.sum());v=float(g.return_yen.sum())
+                  route[str(r)]={'bets':n,'hits':h,'hit_rate_pct':100*h/n,'stake':s,'payout':v,'profit':v-s,'roi_pct':100*v/s if s else None}
+          summary={'period':'2026-06-01..2026-06-30','policy':'3HEAD_V288_OPERATIONAL_MONTH_REPLAY','month_first':'2026-06-01','history_cutoff':'2026-05-31',
+            'rule_version_note':'v288 fixed later; operational replay, not pristine model-selection evidence','pre_candidates':candidates,'bets':B,'hits':H,
+            'hit_rate_pct':100*H/B if B else None,'stake':stake,'payout':ret,'profit':ret-stake,'roi_pct':100*ret/stake if stake else None,'max_drawdown_yen':mdd,
+            'result_or_payout_used_for_decision':False,'results_joined_only_after_freeze':True,'route_breakdown':route,'coverage':cov}
+          Path('summary_v288_june_operational_replay.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          L=['# v288 operational month replay: 2026-06','',
+             '- Month-frozen model/history cutoff: 2026-05-31.','- PRE score thresholds trained only before 2026-06-01.',
+             '- Each target day is built result-blind; archived LIVE exhibition/odds determine decisions; results/payouts are joined only after decision SHA freeze.',
+             '- v288 rule choice itself was finalized later, so this is operational-process replay rather than pristine model-selection evidence.','',
+             f'- PRE candidates: {candidates}',f'- BET: {B}',f'- Hits: {H}',f'- Hit rate: {100*H/B:.2f}%' if B else '- Hit rate: -',
+             f'- Stake: {stake:.0f}',f'- Payout: {ret:.0f}',f'- Profit: {ret-stake:+.0f}',f'- ROI: {100*ret/stake:.2f}%' if stake else '- ROI: -',f'- Max drawdown: {mdd:.0f}','',
+             '## Route breakdown','|route|bets|hits|hit rate|stake|payout|profit|ROI|','|---|---:|---:|---:|---:|---:|---:|---:|']
+          for r,x in route.items():L.append(f"|{r}|{x['bets']}|{x['hits']}|{x['hit_rate_pct']:.2f}%|{x['stake']:.0f}|{x['payout']:.0f}|{x['profit']:+.0f}|{x['roi_pct']:.2f}%|")
+          L += ['','## Daily','|date|PRE|bets|hits|stake|payout|profit|ROI|','|---|---:|---:|---:|---:|---:|---:|---:|']
+          for x in daily:
+              s=float(x['stake']);r=float(x['payout']);roi=f'{100*r/s:.2f}%' if s else '-'
+              L.append(f"|{x['date']}|{int(x['pre_candidates'])}|{int(x['bets'])}|{int(x['hits'])}|{s:.0f}|{r:.0f}|{r-s:+.0f}|{roi}|")
+          L += ['','## Input coverage','|date|cards|complete|fallback|excluded|','|---|---:|---:|---:|---:|']
+          for d,x in sorted(cov.items()):L.append(f"|{d}|{x['cards']}|{x['complete']}|{x['fallback']}|{x['excluded']}|")
+          Path('summary_v288_june_operational_replay.md').write_text('\n'.join(L)+'\n',encoding='utf-8')
+          print('\n'.join(L));print('V288_JUNE_OPERATIONAL_REPLAY_OK',json.dumps(summary,ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v288-june-operational-replay-final
+          retention-days: 60
+          path: |
+            analysis_v288_june_operational_replay.csv
+            summary_v288_june_operational_replay.json
+            summary_v288_june_operational_replay.md
