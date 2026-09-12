@@ -1,0 +1,94 @@
+name: regress exhibition seed14 tracker7
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'auto_seed_exhibition_motion_v14.py'
+      - 'track_exhibition_boats_v7.py'
+      - '.github/workflows/regress-exhibition-seed14-track7.yml'
+
+jobs:
+  regress:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - label: kiryu3
+            race_date: '20260910'
+            stadium: '01kiryu'
+            race: '3'
+            entry_order: '1,2,3,4,5,6'
+          - label: kiryu6
+            race_date: '20260910'
+            stadium: '01kiryu'
+            race: '6'
+            entry_order: '1,2,3,4,5,6'
+          - label: kiryu12
+            race_date: '20260910'
+            stadium: '01kiryu'
+            race: '12'
+            entry_order: '1,2,3,4,5,6'
+          - label: kiryu12var
+            race_date: '20260909'
+            stadium: '01kiryu'
+            race: '12'
+            entry_order: '1,2,4,5,6,3'
+    runs-on: [self-hosted, Windows, X64]
+    timeout-minutes: 15
+    env:
+      RACE_DATE: ${{ matrix.race_date }}
+      STADIUM: ${{ matrix.stadium }}
+      RACE: ${{ matrix.race }}
+      CLIP_START_SEC: '82'
+      CLIP_DURATION_SEC: '52'
+      ENTRY_ORDER: ${{ matrix.entry_order }}
+      LOCAL_PYTHON: 'C:\Users\merry\AppData\Local\Programs\Python\Python311\python.exe'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify runtime
+        shell: powershell
+        run: |
+          & $env:LOCAL_PYTHON --version
+          & $env:LOCAL_PYTHON -c "import playwright,cv2,numpy; print('runtime ok')"
+          ffmpeg -version | Select-Object -First 1
+      - name: Fetch result-blind start clip
+        shell: powershell
+        run: |
+          & $env:LOCAL_PYTHON download_boatcast_exhibition_fastclip.py
+          if ($LASTEXITCODE -ne 0) { throw 'fastclip failed' }
+      - name: Auto seed v14
+        shell: powershell
+        run: |
+          $video = Get-ChildItem -Filter 'boatcast_*_startclip.mp4' | Select-Object -First 1
+          if (-not $video) { throw 'startclip missing' }
+          $sw=[Diagnostics.Stopwatch]::StartNew()
+          & $env:LOCAL_PYTHON auto_seed_exhibition_motion_v14.py $video.FullName --entry-order $env:ENTRY_ORDER --nominal-sec 29 --out auto_seed_meta_v14.json --seed-out auto_seeds_v14.json
+          if ($LASTEXITCODE -ne 0) { throw 'seed v14 failed closed' }
+          $sw.Stop(); "SEED_V14_SECONDS=$($sw.Elapsed.TotalSeconds)"
+      - name: Track v7
+        shell: powershell
+        run: |
+          $video = Get-ChildItem -Filter 'boatcast_*_startclip.mp4' | Select-Object -First 1
+          $meta = Get-Content auto_seed_meta_v14.json -Raw | ConvertFrom-Json
+          $slit=[string]$meta.selected_sec
+          $sw=[Diagnostics.Stopwatch]::StartNew()
+          & $env:LOCAL_PYTHON track_exhibition_boats_v7.py $video.FullName --slit-sec $slit --seed-json auto_seeds_v14.json --out exhibition_tracking_v7.json --stride 2
+          if ($LASTEXITCODE -ne 0) { throw 'tracker v7 process failed' }
+          $sw.Stop(); "TRACK_V7_SECONDS=$($sw.Elapsed.TotalSeconds)"
+      - name: Summarize
+        if: always()
+        shell: powershell
+        run: |
+          if (Test-Path auto_seed_meta_v14.json) { Get-Content auto_seed_meta_v14.json -Raw }
+          if (Test-Path exhibition_tracking_v7.json) { Get-Content exhibition_tracking_v7.json -Raw }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: seed14-track7-${{ matrix.label }}
+          path: |
+            boatcast_*_startclip.json
+            auto_seed_meta_v14.json
+            auto_seeds_v14.json
+            exhibition_tracking_v7.json
+          if-no-files-found: warn
