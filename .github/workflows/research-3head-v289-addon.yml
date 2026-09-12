@@ -1,0 +1,72 @@
+name: research-3head-v289-addon
+
+on:
+  push:
+    branches:
+      - 'research/3head-v289-addon-expansion'
+    paths:
+      - 'research_v289_3head_addon.py'
+      - '.github/workflows/research-3head-v289-addon.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '23 */6 * * *'
+
+permissions:
+  contents: write
+
+env:
+  PYTHONUNBUFFERED: '1'
+
+jobs:
+  wave1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas
+      - name: Download frozen canonical v243 audit artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
+          cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
+      - name: Run v289 add-on walk-forward research
+        run: python research_v289_3head_addon.py
+      - name: Verify leakage and baseline guards
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('research_v289_3head_addon.json',encoding='utf-8'))
+          assert d['source_max_date'] <= '2026-08-31'
+          assert d['rules']['september_outcomes_used'] is False
+          assert d['baseline']['races']==94
+          assert d['baseline']['hits']==52
+          assert abs(d['baseline']['payout_yen']-1622070.0)<0.01
+          assert all(x['overlap_with_v288']==0 for x in d['methods'])
+          print('V289_ADDON_GUARDS_OK')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v289-3head-addon-wave1
+          path: |
+            research_v289_3head_addon.json
+            research_v289_3head_addon.md
+            CHAT_HANDOFF_3HEAD_AUTO_RESEARCH_CURRENT.md
+      - name: Persist research handoff and reports
+        if: success()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add research_v289_3head_addon.json research_v289_3head_addon.md CHAT_HANDOFF_3HEAD_AUTO_RESEARCH_CURRENT.md
+          if git diff --cached --quiet; then
+            echo 'No research report changes to commit.'
+          else
+            git commit -m 'Record v289 3-head add-on wave1 results'
+            git push origin HEAD:${GITHUB_REF_NAME}
+          fi
