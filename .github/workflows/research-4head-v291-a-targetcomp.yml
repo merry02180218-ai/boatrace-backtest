@@ -1,0 +1,63 @@
+name: Research 4-head v291 A target-composite rescue
+
+on:
+  push:
+    paths:
+      - 'analyze_4head_v291_a_targetcomp_rescue.py'
+      - 'analysis_v288_4head_composite_odds_alln_detail.csv'
+      - '.github/workflows/research-4head-v291-a-targetcomp.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: research-4head-v291-a-targetcomp
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas
+      - name: Syntax check
+        run: python -m py_compile analyze_4head_v291_a_targetcomp_rescue.py
+      - name: Run target-composite research
+        run: python analyze_4head_v291_a_targetcomp_rescue.py
+      - name: Validate leakage and LOMO outputs
+        run: |
+          python - <<'PY'
+          import json,pandas as pd
+          p=json.load(open('head4_v291_a_targetcomp_rescue_candidate.json'))
+          assert p['development_months']==['2026-04','2026-05','2026-06']
+          assert p['jul_aug_outcomes_used'] is False
+          assert p['september_outcomes_used'] is False
+          assert p['v96_used'] is False
+          q=pd.read_csv('analysis_v288_4head_composite_odds_alln_detail.csv')
+          assert set(q.month.astype(str))=={'2026-04','2026-05','2026-06'}
+          l=pd.read_csv('analysis_4head_v291_a_targetcomp_rescue_lomo.csv')
+          assert set(l.holdout_month.astype(str))=={'2026-04','2026-05','2026-06'}
+          print(p)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-v291-a-targetcomp-research
+          path: |
+            analysis_4head_v291_a_targetcomp_rescue.csv
+            analysis_4head_v291_a_targetcomp_rescue_monthly.csv
+            analysis_4head_v291_a_targetcomp_rescue_lomo.csv
+            summary_4head_v291_a_targetcomp_rescue.md
+            head4_v291_a_targetcomp_rescue_candidate.json
+      - name: Persist research outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_4head_v291_a_targetcomp_rescue*.csv summary_4head_v291_a_targetcomp_rescue.md head4_v291_a_targetcomp_rescue_candidate.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Record 4-head A target-composite rescue results'
+          git pull --rebase origin main
+          git push origin HEAD:main
