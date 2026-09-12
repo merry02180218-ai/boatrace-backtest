@@ -1,0 +1,75 @@
+name: verify-v288-operational-june-smoke
+on:
+  push:
+    paths:
+      - '.github/workflows/verify-v288-operational-june-smoke.yml'
+      - 'build_3head_v288_operational_month_day.py'
+      - 'replay_v288_operational_day.py'
+
+jobs:
+  smoke:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {date: '2026-06-01', day8: '20260601'}
+          - {date: '2026-06-15', day8: '20260615'}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 joblib
+      - name: Download frozen canonical source artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
+          cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
+          gh run download 34326743303 --repo merry02180218-ai/boatrace-backtest --name v234-3head-waku10-restored-replay --dir golden_v234
+          cp golden_v234/analysis_v234_waku10_reconstruction_coverage.csv .
+          mkdir -p data/audit
+          cp -r golden_v234/data/audit/v234_waku10 data/audit/
+      - name: Build archived PRE input
+        run: python prepare_v288_historical_pre_input.py --date '${{ matrix.date }}'
+      - name: Build month-frozen PRE/cache
+        run: >-
+          python build_3head_v288_operational_month_day.py
+          --date '${{ matrix.date }}'
+          --month-first 2026-06-01
+          --month-next 2026-07-01
+          --history-cutoff 2026-05-31
+          --bias-start 2026-05-01
+      - name: Replay LIVE and settle after freeze
+        run: >-
+          python replay_v288_operational_day.py
+          --date '${{ matrix.date }}'
+          --cache 'live_outputs/v288_operational/${{ matrix.day8 }}/live_cache.joblib'
+          --outdir 'operational_replay/${{ matrix.day8 }}'
+          --history-cutoff 2026-05-31
+      - name: Audit guards
+        run: |
+          python - <<'PY'
+          import json,os
+          d=os.environ['DAY8']
+          p=json.load(open(f'live_outputs/v288_operational/{d}/daily_manifest.json',encoding='utf-8'))
+          s=json.load(open(f'operational_replay/{d}/day_summary.json',encoding='utf-8'))
+          assert p['history_cutoff']=='2026-05-31'
+          assert p['result_or_payout_used'] is False
+          assert p['evaluation_month_rows_removed_from_training_frame'] is True
+          assert p['pre_score_training_filtered_before_month_first'] is True
+          assert s['history_cutoff']=='2026-05-31'
+          assert s['result_or_payout_used_for_decision'] is False
+          assert s['results_joined_only_after_freeze'] is True
+          print('V288_JUNE_OPERATIONAL_SMOKE_OK',d,p['pre_candidate_count'],s['bets'],s['hits'])
+          PY
+        env:
+          DAY8: ${{ matrix.day8 }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v288-june-smoke-${{ matrix.day8 }}
+          retention-days: 7
+          path: |
+            live_outputs/v288_operational/${{ matrix.day8 }}/
+            operational_replay/${{ matrix.day8 }}/
