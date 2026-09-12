@@ -1,0 +1,52 @@
+name: diag-3head-nearmiss-20260913
+on:
+  push:
+    paths:
+      - '.github/workflows/diag-3head-nearmiss-20260913.yml'
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn catboost joblib
+      - name: Download frozen production cache and PRE history
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api /repos/merry02180218-ai/boatrace-backtest/actions/artifacts/10302229729/zip > /tmp/prod.zip
+          unzip -q /tmp/prod.zip -d /tmp/prod
+          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir /tmp/golden_v243
+      - name: Rank near misses
+        run: |
+          python - <<'PY'
+          import joblib, pandas as pd, numpy as np
+          import analyze_v249_3head_pre_rolling_sab_optimize as v249
+          cache=joblib.load('/tmp/prod/live_outputs/v288/20260913/live_cache.joblib')
+          d=cache['current_rows'].copy()
+          hfs=list(cache['head_features']); cats=list(cache['head_cats'])
+          for c in hfs:
+              d[c]=pd.to_numeric(d[c],errors='coerce')
+          d['p3']=cache['head_model'].predict_proba(d[hfs+cats])[:,1]
+          hist=pd.read_csv('/tmp/golden_v243/analysis_v243_3head_expand_feature_audit.csv',dtype={'race_code':str})
+          hist.date=hist.date.astype(str); hist['_target']=v249.target(hist).astype(int); cs=v249.cols(hist)
+          cur=pd.DataFrame(index=d.index)
+          for c in cs:
+              rawc=c[3:] if c.startswith('f__') else c
+              cur[c]=pd.to_numeric(d.get(rawc,np.nan),errors='coerce')
+          cur['_score']=v249.fit_score(hist,cur,cs)
+          train_scores=v249.fit_score(hist,hist,cs)
+          s=float(train_scores.quantile(.70)); a=float(train_scores.quantile(.20))
+          cur['_pct']=cur['_score'].map(lambda x:float((train_scores<=x).mean()))
+          cur['hyp_grade']=np.where(cur._score>=s,'S',np.where(cur._score>=a,'A','B'))
+          d=d.join(cur[['_score','_pct','hyp_grade']])
+          d['race_code']=d.race_code.astype(str).str.zfill(12)
+          official=set(cache['pre_candidates'])
+          d['official']=d.race_code.isin(official)
+          out=d.sort_values(['p3','_pct'],ascending=False).head(12).copy()
+          cols=['race_code','p3','_score','_pct','hyp_grade','official','c_b3_minus_b2_motor','c_b3_inside_nst']
+          print('S_THR',s,'A_THR',a)
+          print(out[[c for c in cols if c in out.columns]].to_csv(index=False))
+          PY
