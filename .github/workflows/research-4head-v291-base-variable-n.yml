@@ -1,0 +1,93 @@
+name: Research 4-head v291 immutable-base variable-N
+
+on:
+  push:
+    paths:
+      - 'analyze_4head_v291_base_variable_n.py'
+      - 'analysis_v291_4head_composite_odds_alln_exactalive.csv'
+      - 'audit_4head_v291_a_live_curve_recovery.json'
+      - 'audit_4head_v291_a_live_identity.json'
+      - '.github/workflows/research-4head-v291-base-variable-n.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: research-4head-v291-base-variable-n
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas
+      - name: Validate frozen research inputs
+        run: |
+          python - <<'PY'
+          import json,pandas as pd
+          a=json.load(open('audit_4head_v291_a_live_identity.json'))
+          r=json.load(open('audit_4head_v291_a_live_curve_recovery.json'))
+          assert a['status']=='PASS_EXACT_CURVES_AVAILABLE'
+          assert a['exact_a_live_R']==47
+          assert a['complete_curve_coverage_R']==47
+          assert a['missing_curve_R']==0
+          assert a['jul_aug_outcomes_used'] is False
+          assert a['september_outcomes_used'] is False
+          assert r['status']=='PASS'
+          assert r['jul_aug_outcomes_used'] is False
+          assert r['september_outcomes_used'] is False
+          assert r['v96_used'] is False
+          q=pd.read_csv('analysis_v291_4head_composite_odds_alln_exactalive.csv',dtype={'race_code':str})
+          assert set(q.month.astype(str))=={'2026-04','2026-05','2026-06'}
+          assert set(q.n.astype(int))==set(range(2,21))
+          assert q.groupby('race_code').n.nunique().eq(19).all()
+          base=q[(q.n==4)&(q.comp_odds>=7.0)]
+          assert base.race_code.nunique()==29
+          PY
+      - name: Syntax check
+        run: python -m py_compile analyze_4head_v291_base_variable_n.py
+      - name: Run immutable-base variable-N research
+        run: python analyze_4head_v291_base_variable_n.py
+      - name: Validate outputs and leakage guards
+        run: |
+          python - <<'PY'
+          import json,pandas as pd
+          p=json.load(open('head4_v291_base_variable_n_candidate.json'))
+          assert p['development_months']==['2026-04','2026-05','2026-06']
+          assert p['jul_aug_outcomes_used'] is False
+          assert p['september_outcomes_used'] is False
+          assert p['v96_used'] is False
+          assert p['base']['policy']=='HEAD4_V291_COMP7'
+          assert p['base']['R']==29
+          assert p['base']['immutable_entry_set'] is True
+          q=pd.read_csv('analysis_4head_v291_base_variable_n.csv')
+          assert len(q)>0 and q.R.eq(29).all() and (q.avg_n>=4.0).all()
+          m=pd.read_csv('analysis_4head_v291_base_variable_n_monthly.csv')
+          assert set(m.month.astype(str))=={'2026-04','2026-05','2026-06'}
+          l=pd.read_csv('analysis_4head_v291_base_variable_n_lomo.csv')
+          assert set(l.holdout_month.astype(str))=={'2026-04','2026-05','2026-06'}
+          print(json.dumps(p,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-v291-base-variable-n
+          path: |
+            analysis_4head_v291_base_variable_n.csv
+            analysis_4head_v291_base_variable_n_monthly.csv
+            analysis_4head_v291_base_variable_n_lomo.csv
+            summary_4head_v291_base_variable_n.md
+            head4_v291_base_variable_n_candidate.json
+      - name: Persist research outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_4head_v291_base_variable_n*.csv summary_4head_v291_base_variable_n.md head4_v291_base_variable_n_candidate.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Record v291 immutable-base variable-N research'
+          git pull --rebase origin main
+          git push origin HEAD:main
