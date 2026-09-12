@@ -1,0 +1,81 @@
+name: aggregate-v288-sep1-11-replay-fix
+on:
+  push:
+    paths:
+      - '.github/workflows/aggregate-v288-sep1-11-replay-fix.yml'
+
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas
+      - name: Download proven day artifacts from original replay run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p replay_all
+          gh run download 34633726217 --repo merry02180218-ai/boatrace-backtest --pattern 'v288-sep-replay-*' --dir replay_all
+      - name: Aggregate frozen decisions and settlement
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import pandas as pd
+          root=Path('replay_all'); frames=[]; sums=[]; manifests=[]
+          for p in sorted(root.rglob('day_summary.json')):
+              sums.append(json.loads(p.read_text(encoding='utf-8')))
+          for p in sorted(root.rglob('input_manifest.json')):
+              manifests.append(json.loads(p.read_text(encoding='utf-8')))
+          for p in sorted(root.rglob('day_replay.csv')):
+              try:
+                  q=pd.read_csv(p,dtype={'race_code':str})
+                  if len(q): frames.append(q)
+              except pd.errors.EmptyDataError:
+                  pass
+          q=pd.concat(frames,ignore_index=True,sort=False) if frames else pd.DataFrame()
+          if len(q): q.to_csv('analysis_v288_sep1_11_production_replay.csv',index=False)
+          else: Path('analysis_v288_sep1_11_production_replay.csv').write_text('',encoding='utf-8')
+          bets=q[q.decision.eq('BET')].copy() if len(q) else pd.DataFrame()
+          B=len(bets); H=int(bets.hit.sum()) if B else 0
+          stake=float(bets.total_stake.sum()) if B else 0.; ret=float(bets.return_yen.sum()) if B else 0.
+          candidates=sum(int(x.get('pre_candidates',0)) for x in sums)
+          coverage={x['target_date']:{'cards':x['race_cards_seen'],'complete':x['complete_rows'],'fallback':len(x['boatcast_fallback_recovered']),'excluded':len(x['excluded_missing_waku'])} for x in manifests}
+          summary={'period':'2026-09-01..2026-09-11','policy':'3HEAD_V288_PRODUCTION_RETROSPECTIVE_REPLAY','history_cutoff':'2026-08-31',
+             'pre_candidates':candidates,'bets':B,'hits':H,'hit_rate_pct':100*H/B if B else None,'stake':stake,'payout':ret,'profit':ret-stake,'roi_pct':100*ret/stake if stake else None,
+             'result_or_payout_used_for_decision':False,'results_joined_only_after_freeze':True,'coverage':coverage}
+          Path('summary_v288_sep1_11_production_replay.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          L=['# v288 retrospective production-rule replay: 2026-09-01..2026-09-11','',
+             '- Model/history/operational PRE thresholds frozen through 2026-08-31.',
+             '- Each day uses production daily PRE/cache semantics.',
+             '- Archived exhibition + archived od3 odds are read for the LIVE decision; all decisions/tickets are frozen before result/payout files are read.',
+             '- This is retrospective policy replay, not a claim that every race was actually executed live.',
+             f'- PRE candidates: {candidates}',f'- BET: {B}',f'- Hits: {H}',f'- Hit rate: {100*H/B:.2f}%' if B else '- Hit rate: -',
+             f'- Stake: {stake:.0f}',f'- Payout: {ret:.0f}',f'- Profit: {ret-stake:+.0f}',f'- ROI: {100*ret/stake:.2f}%' if stake else '- ROI: -','',
+             '## Route breakdown','|route|bets|hits|hit rate|stake|payout|profit|ROI|','|---|---:|---:|---:|---:|---:|---:|---:|']
+          if B:
+              for route,g in bets.groupby('route',sort=True):
+                  n=len(g); h=int(g.hit.sum()); s=float(g.total_stake.sum()); r=float(g.return_yen.sum())
+                  L.append(f'|{route}|{n}|{h}|{100*h/n:.2f}%|{s:.0f}|{r:.0f}|{r-s:+.0f}|{100*r/s:.2f}%|')
+          L += ['','## Daily','|date|PRE candidates|bets|hits|hit rate|stake|payout|profit|ROI|','|---|---:|---:|---:|---:|---:|---:|---:|---:|']
+          bysum={x['date']:x for x in sums}
+          for day in sorted(bysum):
+              x=bysum[day]; b=int(x['bets']); h=int(x['hits']); s=float(x['stake']); r=float(x['payout'])
+              hr=f'{100*h/b:.2f}%' if b else '-'; roi=f'{100*r/s:.2f}%' if s else '-'
+              L.append(f'|{day}|{int(x["pre_candidates"])}|{b}|{h}|{hr}|{s:.0f}|{r:.0f}|{r-s:+.0f}|{roi}|')
+          L += ['','## Input coverage','|date|race cards|complete PRE inputs|BOATCAST fallback|excluded|','|---|---:|---:|---:|---:|']
+          for day,x in sorted(coverage.items()): L.append(f'|{day}|{x["cards"]}|{x["complete"]}|{x["fallback"]}|{x["excluded"]}|')
+          Path('summary_v288_sep1_11_production_replay.md').write_text('\n'.join(L)+'\n',encoding='utf-8')
+          print('\n'.join(L)); print('V288_SEP1_11_REPLAY_OK',json.dumps(summary,ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v288-sep1-11-production-replay-final
+          retention-days: 30
+          path: |
+            analysis_v288_sep1_11_production_replay.csv
+            summary_v288_sep1_11_production_replay.json
+            summary_v288_sep1_11_production_replay.md
