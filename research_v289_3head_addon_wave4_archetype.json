@@ -1,0 +1,5919 @@
+{
+  "research_version": "v289-addon-wave4-venue-archetype",
+  "github_run_id": "34706093149",
+  "source_max_date": "2026-08-31",
+  "rules": {
+    "baseline_fixed": "v288 operational 94R",
+    "population": "operational PRE S/A + v242-buyable + final v288 NO_BET only",
+    "not_threshold_relaxation": true,
+    "test_months": "2026-02..2026-08",
+    "training": "prior months only",
+    "july_august": "NON-PRISTINE",
+    "september_outcomes_used": false,
+    "fractions": [
+      0.25,
+      0.4
+    ],
+    "min_local": 30
+  },
+  "baseline": {
+    "races": 94,
+    "hits": 52,
+    "hit_rate_pct": 55.319148936170215,
+    "stake_yen": 940000,
+    "payout_yen": 1622070.0,
+    "profit_yen": 682070.0,
+    "roi_pct": 172.56063829787234,
+    "max_drawdown_yen": 80000.0
+  },
+  "candidate_pool": {
+    "races": 178,
+    "hits": 23,
+    "hit_rate_pct": 12.92134831460674,
+    "stake_yen": 1780000,
+    "payout_yen": 702420.0,
+    "profit_yen": -1077580.0,
+    "roi_pct": 39.46179775280899
+  },
+  "methods": [
+    {
+      "method": "archetype_local",
+      "fraction": 0.25,
+      "addon": {
+        "races": 2,
+        "hits": 1,
+        "hit_rate_pct": 50.0,
+        "stake_yen": 20000,
+        "payout_yen": 31280.0,
+        "profit_yen": 11280.0,
+        "roi_pct": 156.4,
+        "max_drawdown_yen": 10000.0
+      },
+      "monthly": {
+        "2026-08": {
+          "races": 2,
+          "hits": 1,
+          "hit_rate_pct": 50.0,
+          "stake_yen": 20000,
+          "payout_yen": 31280.0,
+          "profit_yen": 11280.0,
+          "roi_pct": 156.4
+        }
+      },
+      "red_months": 0,
+      "min_monthly_roi_pct": 156.4,
+      "combined": {
+        "races": 96,
+        "hits": 53,
+        "hit_rate_pct": 55.208333333333336,
+        "stake_yen": 960000,
+        "payout_yen": 1653350.0,
+        "profit_yen": 693350.0,
+        "roi_pct": 172.22395833333334,
+        "max_drawdown_yen": 80000.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "method": "archetype_local",
+      "fraction": 0.4,
+      "addon": {
+        "races": 2,
+        "hits": 1,
+        "hit_rate_pct": 50.0,
+        "stake_yen": 20000,
+        "payout_yen": 31280.0,
+        "profit_yen": 11280.0,
+        "roi_pct": 156.4,
+        "max_drawdown_yen": 10000.0
+      },
+      "monthly": {
+        "2026-08": {
+          "races": 2,
+          "hits": 1,
+          "hit_rate_pct": 50.0,
+          "stake_yen": 20000,
+          "payout_yen": 31280.0,
+          "profit_yen": 11280.0,
+          "roi_pct": 156.4
+        }
+      },
+      "red_months": 0,
+      "min_monthly_roi_pct": 156.4,
+      "combined": {
+        "races": 96,
+        "hits": 53,
+        "hit_rate_pct": 55.208333333333336,
+        "stake_yen": 960000,
+        "payout_yen": 1653350.0,
+        "profit_yen": 693350.0,
+        "roi_pct": 172.22395833333334,
+        "max_drawdown_yen": 80000.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "method": "venue_local",
+      "fraction": 0.25,
+      "addon": {
+        "races": 0,
+        "hits": 0,
+        "hit_rate_pct": null,
+        "stake_yen": 0,
+        "payout_yen": 0.0,
+        "profit_yen": 0.0,
+        "roi_pct": null,
+        "max_drawdown_yen": 0.0
+      },
+      "monthly": {},
+      "red_months": 0,
+      "min_monthly_roi_pct": null,
+      "combined": {
+        "races": 94,
+        "hits": 52,
+        "hit_rate_pct": 55.319148936170215,
+        "stake_yen": 940000,
+        "payout_yen": 1622070.0,
+        "profit_yen": 682070.0,
+        "roi_pct": 172.56063829787234,
+        "max_drawdown_yen": 80000.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "method": "venue_archetype",
+      "fraction": 0.25,
+      "addon": {
+        "races": 0,
+        "hits": 0,
+        "hit_rate_pct": null,
+        "stake_yen": 0,
+        "payout_yen": 0.0,
+        "profit_yen": 0.0,
+        "roi_pct": null,
+        "max_drawdown_yen": 0.0
+      },
+      "monthly": {},
+      "red_months": 0,
+      "min_monthly_roi_pct": null,
+      "combined": {
+        "races": 94,
+        "hits": 52,
+        "hit_rate_pct": 55.319148936170215,
+        "stake_yen": 940000,
+        "payout_yen": 1622070.0,
+        "profit_yen": 682070.0,
+        "roi_pct": 172.56063829787234,
+        "max_drawdown_yen": 80000.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "method": "venue_roi_gate",
+      "fraction": 0.25,
+      "addon": {
+        "races": 0,
+        "hits": 0,
+        "hit_rate_pct": null,
+        "stake_yen": 0,
+        "payout_yen": 0.0,
+        "profit_yen": 0.0,
+        "roi_pct": null,
+        "max_drawdown_yen": 0.0
+      },
+      "monthly": {},
+      "red_months": 0,
+      "min_monthly_roi_pct": null,
+      "combined": {
+        "races": 94,
+        "hits": 52,
+        "hit_rate_pct": 55.319148936170215,
+        "stake_yen": 940000,
+        "payout_yen": 1622070.0,
+        "profit_yen": 682070.0,
+        "roi_pct": 172.56063829787234,
+        "max_drawdown_yen": 80000.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "method": "venue_local",
+      "fraction": 0.4,
+      "addon": {
+        "races": 0,
+        "hits": 0,
+        "hit_rate_pct": null,
+        "stake_yen": 0,
+        "payout_yen": 0.0,
+        "profit_yen": 0.0,
+        "roi_pct": null,
+        "max_drawdown_yen": 0.0
+      },
+      "monthly": {},
+      "red_months": 0,
+      "min_monthly_roi_pct": null,
+      "combined": {
+        "races": 94,
+        "hits": 52,
+        "hit_rate_pct": 55.319148936170215,
+        "stake_yen": 940000,
+        "payout_yen": 1622070.0,
+        "profit_yen": 682070.0,
+        "roi_pct": 172.56063829787234,
+        "max_drawdown_yen": 80000.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "method": "venue_archetype",
+      "fraction": 0.4,
+      "addon": {
+        "races": 0,
+        "hits": 0,
+        "hit_rate_pct": null,
+        "stake_yen": 0,
+        "payout_yen": 0.0,
+        "profit_yen": 0.0,
+        "roi_pct": null,
+        "max_drawdown_yen": 0.0
+      },
+      "monthly": {},
+      "red_months": 0,
+      "min_monthly_roi_pct": null,
+      "combined": {
+        "races": 94,
+        "hits": 52,
+        "hit_rate_pct": 55.319148936170215,
+        "stake_yen": 940000,
+        "payout_yen": 1622070.0,
+        "profit_yen": 682070.0,
+        "roi_pct": 172.56063829787234,
+        "max_drawdown_yen": 80000.0
+      },
+      "overlap_with_v288": 0
+    },
+    {
+      "method": "venue_roi_gate",
+      "fraction": 0.4,
+      "addon": {
+        "races": 0,
+        "hits": 0,
+        "hit_rate_pct": null,
+        "stake_yen": 0,
+        "payout_yen": 0.0,
+        "profit_yen": 0.0,
+        "roi_pct": null,
+        "max_drawdown_yen": 0.0
+      },
+      "monthly": {},
+      "red_months": 0,
+      "min_monthly_roi_pct": null,
+      "combined": {
+        "races": 94,
+        "hits": 52,
+        "hit_rate_pct": 55.319148936170215,
+        "stake_yen": 940000,
+        "payout_yen": 1622070.0,
+        "profit_yen": 682070.0,
+        "roi_pct": 172.56063829787234,
+        "max_drawdown_yen": 80000.0
+      },
+      "overlap_with_v288": 0
+    }
+  ],
+  "passers": [],
+  "decision": "NO_ADOPTION_WAVE4",
+  "thresholds": {
+    "2026-02": {
+      "train_months": [
+        "2025-12",
+        "2026-01"
+      ],
+      "s_threshold": 2.8033818620601934,
+      "a_threshold": -5.027268780750075,
+      "test_rows": 36
+    },
+    "2026-03": {
+      "train_months": [
+        "2025-12",
+        "2026-01",
+        "2026-02"
+      ],
+      "s_threshold": 3.6667373720231287,
+      "a_threshold": -6.23408227818142,
+      "test_rows": 58
+    },
+    "2026-04": {
+      "train_months": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03"
+      ],
+      "s_threshold": 3.34176071070831,
+      "a_threshold": -4.986271317412377,
+      "test_rows": 40
+    },
+    "2026-05": {
+      "train_months": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04"
+      ],
+      "s_threshold": 3.7015221901785296,
+      "a_threshold": -5.165295868767192,
+      "test_rows": 77
+    },
+    "2026-06": {
+      "train_months": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05"
+      ],
+      "s_threshold": 2.941228852972743,
+      "a_threshold": -4.868019039818082,
+      "test_rows": 73
+    },
+    "2026-07": {
+      "train_months": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06"
+      ],
+      "s_threshold": 2.6593441693614746,
+      "a_threshold": -4.545025182045867,
+      "test_rows": 87
+    },
+    "2026-08": {
+      "train_months": [
+        "2025-12",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07"
+      ],
+      "s_threshold": 3.111814522562125,
+      "a_threshold": -4.64823618757876,
+      "test_rows": 109
+    }
+  },
+  "audit": {
+    "2026-02": {
+      "train_rejects": 112,
+      "test_operational_rejects": 13,
+      "medians": {
+        "st": -0.1999999999999999,
+        "motor": 0.03317142857142845,
+        "wall": 0.233125
+      },
+      "methods": {
+        "venue_local@0.25": [
+          {
+            "group": "01",
+            "train": 2,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "02",
+            "train": 2,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "07",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11",
+            "train": 11,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "12",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13",
+            "train": 8,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "22",
+            "train": 10,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "archetype_local@0.25": [
+          {
+            "group": "S0M0W0A0",
+            "train": 3,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M0W0A1",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A1",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A0",
+            "train": 9,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A1",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W0A0",
+            "train": 15,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W0A1",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W1A0",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_archetype@0.25": [
+          {
+            "group": "01/S1M1W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "01/S1M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S0M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M1W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "07/S0M0W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08/S1M0W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11/S0M0W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11/S1M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11/S1M1W0A0",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "12/S1M0W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13/S0M1W1A1",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13/S1M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22/S1M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_roi_gate@0.25": [
+          {
+            "group": "01",
+            "train": 2,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "02",
+            "train": 2,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "07",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11",
+            "train": 11,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "12",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13",
+            "train": 8,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "22",
+            "train": 10,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_local@0.4": [
+          {
+            "group": "01",
+            "train": 2,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "02",
+            "train": 2,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "07",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11",
+            "train": 11,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "12",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13",
+            "train": 8,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "22",
+            "train": 10,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "archetype_local@0.4": [
+          {
+            "group": "S0M0W0A0",
+            "train": 3,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M0W0A1",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A1",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A0",
+            "train": 9,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A1",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W0A0",
+            "train": 15,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W0A1",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W1A0",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_archetype@0.4": [
+          {
+            "group": "01/S1M1W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "01/S1M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S0M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M1W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "07/S0M0W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08/S1M0W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11/S0M0W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11/S1M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11/S1M1W0A0",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "12/S1M0W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13/S0M1W1A1",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13/S1M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22/S1M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_roi_gate@0.4": [
+          {
+            "group": "01",
+            "train": 2,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "02",
+            "train": 2,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "07",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11",
+            "train": 11,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "12",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13",
+            "train": 8,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "22",
+            "train": 10,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ]
+      }
+    },
+    "2026-03": {
+      "train_rejects": 130,
+      "test_operational_rejects": 19,
+      "medians": {
+        "st": -0.1999999999999999,
+        "motor": 0.03554285714285705,
+        "wall": 0.25487499999999996
+      },
+      "methods": {
+        "venue_local@0.25": [
+          {
+            "group": "03",
+            "train": 7,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04",
+            "train": 4,
+            "test": 5,
+            "status": "insufficient"
+          },
+          {
+            "group": "06",
+            "train": 6,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 7,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11",
+            "train": 14,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "14",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "15",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17",
+            "train": 12,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "21",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22",
+            "train": 11,
+            "test": 2,
+            "status": "insufficient"
+          }
+        ],
+        "archetype_local@0.25": [
+          {
+            "group": "S0M0W0A0",
+            "train": 5,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M0W1A0",
+            "train": 5,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W0A0",
+            "train": 7,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A0",
+            "train": 4,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A1",
+            "train": 10,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A0",
+            "train": 12,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A1",
+            "train": 6,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W1A0",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W0A0",
+            "train": 19,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W0A1",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W1A1",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_archetype@0.25": [
+          {
+            "group": "03/S0M1W1A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S0M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S0M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S1M0W0A1",
+            "train": 0,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S1M1W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06/S1M1W0A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06/S1M1W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08/S0M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11/S1M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "14/S0M1W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "15/S0M1W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17/S0M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17/S0M1W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17/S0M1W1A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17/S1M1W0A0",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "21/S1M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22/S0M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22/S0M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_roi_gate@0.25": [
+          {
+            "group": "03",
+            "train": 7,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04",
+            "train": 4,
+            "test": 5,
+            "status": "insufficient"
+          },
+          {
+            "group": "06",
+            "train": 6,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 7,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11",
+            "train": 14,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "14",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "15",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17",
+            "train": 12,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "21",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22",
+            "train": 11,
+            "test": 2,
+            "status": "insufficient"
+          }
+        ],
+        "venue_local@0.4": [
+          {
+            "group": "03",
+            "train": 7,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04",
+            "train": 4,
+            "test": 5,
+            "status": "insufficient"
+          },
+          {
+            "group": "06",
+            "train": 6,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 7,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11",
+            "train": 14,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "14",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "15",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17",
+            "train": 12,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "21",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22",
+            "train": 11,
+            "test": 2,
+            "status": "insufficient"
+          }
+        ],
+        "archetype_local@0.4": [
+          {
+            "group": "S0M0W0A0",
+            "train": 5,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M0W1A0",
+            "train": 5,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W0A0",
+            "train": 7,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A0",
+            "train": 4,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A1",
+            "train": 10,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A0",
+            "train": 12,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A1",
+            "train": 6,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W1A0",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W0A0",
+            "train": 19,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W0A1",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W1A1",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_archetype@0.4": [
+          {
+            "group": "03/S0M1W1A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S0M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S0M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S1M0W0A1",
+            "train": 0,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S1M1W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06/S1M1W0A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06/S1M1W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08/S0M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11/S1M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "14/S0M1W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "15/S0M1W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17/S0M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17/S0M1W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17/S0M1W1A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17/S1M1W0A0",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "21/S1M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22/S0M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22/S0M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_roi_gate@0.4": [
+          {
+            "group": "03",
+            "train": 7,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04",
+            "train": 4,
+            "test": 5,
+            "status": "insufficient"
+          },
+          {
+            "group": "06",
+            "train": 6,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 7,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11",
+            "train": 14,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "14",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "15",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17",
+            "train": 12,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "21",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22",
+            "train": 11,
+            "test": 2,
+            "status": "insufficient"
+          }
+        ]
+      }
+    },
+    "2026-04": {
+      "train_rejects": 155,
+      "test_operational_rejects": 7,
+      "medians": {
+        "st": -0.1999999999999999,
+        "motor": 0.0407428571428573,
+        "wall": 0.26
+      },
+      "methods": {
+        "venue_local@0.25": [
+          {
+            "group": "01",
+            "train": 5,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02",
+            "train": 5,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04",
+            "train": 9,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "10",
+            "train": 5,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "archetype_local@0.25": [
+          {
+            "group": "S0M0W0A0",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M0W1A0",
+            "train": 7,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W0A1",
+            "train": 4,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A1",
+            "train": 11,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W1A0",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W1A1",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_archetype@0.25": [
+          {
+            "group": "01/S1M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S0M1W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S0M0W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S0M1W0A1",
+            "train": 1,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "08/S0M0W1A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "10/S1M1W1A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_roi_gate@0.25": [
+          {
+            "group": "01",
+            "train": 5,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02",
+            "train": 5,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04",
+            "train": 9,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "10",
+            "train": 5,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_local@0.4": [
+          {
+            "group": "01",
+            "train": 5,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02",
+            "train": 5,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04",
+            "train": 9,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "10",
+            "train": 5,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "archetype_local@0.4": [
+          {
+            "group": "S0M0W0A0",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M0W1A0",
+            "train": 7,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W0A1",
+            "train": 4,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A1",
+            "train": 11,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W1A0",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W1A1",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_archetype@0.4": [
+          {
+            "group": "01/S1M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S0M1W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S0M0W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S0M1W0A1",
+            "train": 1,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "08/S0M0W1A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "10/S1M1W1A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_roi_gate@0.4": [
+          {
+            "group": "01",
+            "train": 5,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02",
+            "train": 5,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04",
+            "train": 9,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "10",
+            "train": 5,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ]
+      }
+    },
+    "2026-05": {
+      "train_rejects": 167,
+      "test_operational_rejects": 27,
+      "medians": {
+        "st": -0.1999999999999999,
+        "motor": 0.0470857142857142,
+        "wall": 0.26125
+      },
+      "methods": {
+        "venue_local@0.25": [
+          {
+            "group": "02",
+            "train": 7,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "04",
+            "train": 13,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "05",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "07",
+            "train": 1,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 9,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "09",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "10",
+            "train": 6,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "11",
+            "train": 15,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "12",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13",
+            "train": 13,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "14",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17",
+            "train": 17,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "18",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "19",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "20",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "23",
+            "train": 4,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "24",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "archetype_local@0.25": [
+          {
+            "group": "S0M0W0A0",
+            "train": 10,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M0W1A0",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M0W1A1",
+            "train": 16,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W0A1",
+            "train": 6,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A1",
+            "train": 11,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A0",
+            "train": 12,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A1",
+            "train": 8,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W1A0",
+            "train": 7,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W1A1",
+            "train": 18,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W0A0",
+            "train": 24,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W0A1",
+            "train": 11,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W1A0",
+            "train": 6,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W1A1",
+            "train": 10,
+            "test": 3,
+            "status": "insufficient"
+          }
+        ],
+        "venue_archetype@0.25": [
+          {
+            "group": "02/S0M1W0A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S0M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S1M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "05/S0M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06/S1M1W1A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "07/S1M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "07/S1M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08/S0M0W1A0",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08/S0M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09/S0M1W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "10/S1M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "10/S1M1W1A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11/S1M1W0A0",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11/S1M1W0A1",
+            "train": 0,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "12/S1M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13/S1M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "14/S1M1W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17/S1M1W0A0",
+            "train": 5,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17/S1M1W1A1",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "18/S1M0W0A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "19/S1M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "20/S0M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "23/S0M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "23/S1M0W0A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "24/S1M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_roi_gate@0.25": [
+          {
+            "group": "02",
+            "train": 7,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "04",
+            "train": 13,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "05",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "07",
+            "train": 1,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 9,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "09",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "10",
+            "train": 6,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "11",
+            "train": 15,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "12",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13",
+            "train": 13,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "14",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17",
+            "train": 17,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "18",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "19",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "20",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "23",
+            "train": 4,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "24",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_local@0.4": [
+          {
+            "group": "02",
+            "train": 7,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "04",
+            "train": 13,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "05",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "07",
+            "train": 1,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 9,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "09",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "10",
+            "train": 6,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "11",
+            "train": 15,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "12",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13",
+            "train": 13,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "14",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17",
+            "train": 17,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "18",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "19",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "20",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "23",
+            "train": 4,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "24",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "archetype_local@0.4": [
+          {
+            "group": "S0M0W0A0",
+            "train": 10,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M0W1A0",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M0W1A1",
+            "train": 16,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W0A1",
+            "train": 6,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A1",
+            "train": 11,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A0",
+            "train": 12,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A1",
+            "train": 8,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W1A0",
+            "train": 7,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W1A1",
+            "train": 18,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W0A0",
+            "train": 24,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W0A1",
+            "train": 11,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W1A0",
+            "train": 6,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W1A1",
+            "train": 10,
+            "test": 3,
+            "status": "insufficient"
+          }
+        ],
+        "venue_archetype@0.4": [
+          {
+            "group": "02/S0M1W0A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S0M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S1M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "05/S0M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06/S1M1W1A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "07/S1M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "07/S1M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08/S0M0W1A0",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08/S0M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09/S0M1W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "10/S1M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "10/S1M1W1A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11/S1M1W0A0",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11/S1M1W0A1",
+            "train": 0,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "12/S1M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13/S1M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "14/S1M1W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17/S1M1W0A0",
+            "train": 5,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17/S1M1W1A1",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "18/S1M0W0A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "19/S1M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "20/S0M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "23/S0M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "23/S1M0W0A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "24/S1M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_roi_gate@0.4": [
+          {
+            "group": "02",
+            "train": 7,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "04",
+            "train": 13,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "05",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "07",
+            "train": 1,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 9,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "09",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "10",
+            "train": 6,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "11",
+            "train": 15,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "12",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13",
+            "train": 13,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "14",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17",
+            "train": 17,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "18",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "19",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "20",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "23",
+            "train": 4,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "24",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ]
+      }
+    },
+    "2026-06": {
+      "train_rejects": 200,
+      "test_operational_rejects": 25,
+      "medians": {
+        "st": -0.1999999999999999,
+        "motor": 0.059171428571428555,
+        "wall": 0.260625
+      },
+      "methods": {
+        "venue_local@0.25": [
+          {
+            "group": "01",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02",
+            "train": 9,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "03",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "05",
+            "train": 4,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "06",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 11,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09",
+            "train": 5,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "10",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13",
+            "train": 14,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "15",
+            "train": 7,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "16",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17",
+            "train": 19,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "19",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "20",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22",
+            "train": 14,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "24",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "archetype_local@0.25": [
+          {
+            "group": "S0M0W0A1",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M0W1A0",
+            "train": 9,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M0W1A1",
+            "train": 19,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W0A0",
+            "train": 9,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W0A1",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A0",
+            "train": 7,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A1",
+            "train": 13,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A0",
+            "train": 16,
+            "test": 5,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A1",
+            "train": 10,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W1A0",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W1A1",
+            "train": 22,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W0A0",
+            "train": 26,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W0A1",
+            "train": 15,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_archetype@0.25": [
+          {
+            "group": "01/S1M0W1A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M0W0A0",
+            "train": 0,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M1W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "03/S1M1W0A0",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "05/S0M1W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "05/S1M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06/S0M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08/S1M0W0A0",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09/S0M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09/S0M1W1A1",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "10/S1M0W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13/S0M0W1A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13/S0M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13/S1M0W1A1",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "15/S0M0W1A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "15/S1M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "16/S1M0W1A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17/S0M0W0A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17/S0M1W0A0",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "19/S1M0W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "20/S0M1W1A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22/S1M0W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "24/S1M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_roi_gate@0.25": [
+          {
+            "group": "01",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02",
+            "train": 9,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "03",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "05",
+            "train": 4,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "06",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 11,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09",
+            "train": 5,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "10",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13",
+            "train": 14,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "15",
+            "train": 7,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "16",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17",
+            "train": 19,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "19",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "20",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22",
+            "train": 14,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "24",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_local@0.4": [
+          {
+            "group": "01",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02",
+            "train": 9,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "03",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "05",
+            "train": 4,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "06",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 11,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09",
+            "train": 5,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "10",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13",
+            "train": 14,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "15",
+            "train": 7,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "16",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17",
+            "train": 19,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "19",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "20",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22",
+            "train": 14,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "24",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "archetype_local@0.4": [
+          {
+            "group": "S0M0W0A1",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M0W1A0",
+            "train": 9,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M0W1A1",
+            "train": 19,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W0A0",
+            "train": 9,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W0A1",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A0",
+            "train": 7,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A1",
+            "train": 13,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A0",
+            "train": 16,
+            "test": 5,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A1",
+            "train": 10,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W1A0",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W1A1",
+            "train": 22,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W0A0",
+            "train": 26,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W0A1",
+            "train": 15,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_archetype@0.4": [
+          {
+            "group": "01/S1M0W1A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M0W0A0",
+            "train": 0,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M1W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "03/S1M1W0A0",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "05/S0M1W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "05/S1M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06/S0M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08/S1M0W0A0",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09/S0M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09/S0M1W1A1",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "10/S1M0W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13/S0M0W1A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13/S0M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13/S1M0W1A1",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "15/S0M0W1A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "15/S1M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "16/S1M0W1A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17/S0M0W0A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17/S0M1W0A0",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "19/S1M0W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "20/S0M1W1A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22/S1M0W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "24/S1M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_roi_gate@0.4": [
+          {
+            "group": "01",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02",
+            "train": 9,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "03",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "05",
+            "train": 4,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "06",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 11,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09",
+            "train": 5,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "10",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13",
+            "train": 14,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "15",
+            "train": 7,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "16",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17",
+            "train": 19,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "19",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "20",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22",
+            "train": 14,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "24",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ]
+      }
+    },
+    "2026-07": {
+      "train_rejects": 235,
+      "test_operational_rejects": 39,
+      "medians": {
+        "st": -0.1999999999999999,
+        "motor": 0.0552571428571427,
+        "wall": 0.26125
+      },
+      "methods": {
+        "venue_local@0.25": [
+          {
+            "group": "01",
+            "train": 7,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02",
+            "train": 13,
+            "test": 6,
+            "status": "insufficient"
+          },
+          {
+            "group": "03",
+            "train": 10,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "04",
+            "train": 16,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "05",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 12,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "09",
+            "train": 7,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "10",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11",
+            "train": 18,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "12",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13",
+            "train": 18,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "15",
+            "train": 10,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "16",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "19",
+            "train": 7,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "20",
+            "train": 3,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "21",
+            "train": 1,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "22",
+            "train": 17,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "23",
+            "train": 6,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "24",
+            "train": 5,
+            "test": 2,
+            "status": "insufficient"
+          }
+        ],
+        "archetype_local@0.25": [
+          {
+            "group": "S0M0W0A0",
+            "train": 12,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M0W1A0",
+            "train": 12,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M0W1A1",
+            "train": 20,
+            "test": 6,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W0A1",
+            "train": 11,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A0",
+            "train": 10,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A1",
+            "train": 17,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A0",
+            "train": 19,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A1",
+            "train": 12,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W1A0",
+            "train": 10,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W1A1",
+            "train": 27,
+            "test": 7,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W0A0",
+            "train": 31,
+            "test": 4,
+            "picked": 0,
+            "status": "ok"
+          },
+          {
+            "group": "S1M1W0A1",
+            "train": 16,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W1A0",
+            "train": 9,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W1A1",
+            "train": 13,
+            "test": 4,
+            "status": "insufficient"
+          }
+        ],
+        "venue_archetype@0.25": [
+          {
+            "group": "01/S0M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S0M0W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S0M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M0W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M0W1A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M1W0A0",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M1W1A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "03/S0M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "03/S1M0W1A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S1M1W0A0",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "05/S0M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08/S0M1W0A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08/S1M0W0A0",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08/S1M0W1A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09/S0M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09/S1M1W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "10/S1M0W0A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11/S0M1W1A1",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "12/S1M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13/S1M0W0A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "15/S1M1W1A1",
+            "train": 2,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "16/S1M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "19/S0M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "19/S0M0W1A1",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "19/S1M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "20/S0M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "20/S1M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "20/S1M1W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "21/S0M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "21/S1M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "21/S1M1W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22/S1M0W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22/S1M0W1A1",
+            "train": 5,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "23/S0M0W1A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "23/S1M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "23/S1M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "24/S0M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "24/S1M1W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_roi_gate@0.25": [
+          {
+            "group": "01",
+            "train": 7,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02",
+            "train": 13,
+            "test": 6,
+            "status": "insufficient"
+          },
+          {
+            "group": "03",
+            "train": 10,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "04",
+            "train": 16,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "05",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 12,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "09",
+            "train": 7,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "10",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11",
+            "train": 18,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "12",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13",
+            "train": 18,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "15",
+            "train": 10,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "16",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "19",
+            "train": 7,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "20",
+            "train": 3,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "21",
+            "train": 1,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "22",
+            "train": 17,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "23",
+            "train": 6,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "24",
+            "train": 5,
+            "test": 2,
+            "status": "insufficient"
+          }
+        ],
+        "venue_local@0.4": [
+          {
+            "group": "01",
+            "train": 7,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02",
+            "train": 13,
+            "test": 6,
+            "status": "insufficient"
+          },
+          {
+            "group": "03",
+            "train": 10,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "04",
+            "train": 16,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "05",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 12,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "09",
+            "train": 7,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "10",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11",
+            "train": 18,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "12",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13",
+            "train": 18,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "15",
+            "train": 10,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "16",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "19",
+            "train": 7,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "20",
+            "train": 3,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "21",
+            "train": 1,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "22",
+            "train": 17,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "23",
+            "train": 6,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "24",
+            "train": 5,
+            "test": 2,
+            "status": "insufficient"
+          }
+        ],
+        "archetype_local@0.4": [
+          {
+            "group": "S0M0W0A0",
+            "train": 12,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M0W1A0",
+            "train": 12,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M0W1A1",
+            "train": 20,
+            "test": 6,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W0A1",
+            "train": 11,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A0",
+            "train": 10,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A1",
+            "train": 17,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A0",
+            "train": 19,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A1",
+            "train": 12,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W1A0",
+            "train": 10,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W1A1",
+            "train": 27,
+            "test": 7,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W0A0",
+            "train": 31,
+            "test": 4,
+            "picked": 0,
+            "status": "ok"
+          },
+          {
+            "group": "S1M1W0A1",
+            "train": 16,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W1A0",
+            "train": 9,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W1A1",
+            "train": 13,
+            "test": 4,
+            "status": "insufficient"
+          }
+        ],
+        "venue_archetype@0.4": [
+          {
+            "group": "01/S0M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S0M0W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S0M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M0W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M0W1A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M1W0A0",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M1W1A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "03/S0M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "03/S1M0W1A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S1M1W0A0",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "05/S0M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08/S0M1W0A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08/S1M0W0A0",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08/S1M0W1A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09/S0M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09/S1M1W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "10/S1M0W0A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11/S0M1W1A1",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "12/S1M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13/S1M0W0A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "15/S1M1W1A1",
+            "train": 2,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "16/S1M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "19/S0M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "19/S0M0W1A1",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "19/S1M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "20/S0M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "20/S1M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "20/S1M1W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "21/S0M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "21/S1M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "21/S1M1W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22/S1M0W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22/S1M0W1A1",
+            "train": 5,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "23/S0M0W1A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "23/S1M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "23/S1M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "24/S0M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "24/S1M1W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_roi_gate@0.4": [
+          {
+            "group": "01",
+            "train": 7,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02",
+            "train": 13,
+            "test": 6,
+            "status": "insufficient"
+          },
+          {
+            "group": "03",
+            "train": 10,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "04",
+            "train": 16,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "05",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 12,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "09",
+            "train": 7,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "10",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11",
+            "train": 18,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "12",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13",
+            "train": 18,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "15",
+            "train": 10,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "16",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "19",
+            "train": 7,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "20",
+            "train": 3,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "21",
+            "train": 1,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "22",
+            "train": 17,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "23",
+            "train": 6,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "24",
+            "train": 5,
+            "test": 2,
+            "status": "insufficient"
+          }
+        ]
+      }
+    },
+    "2026-08": {
+      "train_rejects": 284,
+      "test_operational_rejects": 48,
+      "medians": {
+        "st": -0.1999999999999999,
+        "motor": 0.05225714285714275,
+        "wall": 0.25506249999999997
+      },
+      "methods": {
+        "venue_local@0.25": [
+          {
+            "group": "01",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02",
+            "train": 19,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "03",
+            "train": 12,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04",
+            "train": 17,
+            "test": 8,
+            "status": "insufficient"
+          },
+          {
+            "group": "05",
+            "train": 7,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "06",
+            "train": 10,
+            "test": 6,
+            "status": "insufficient"
+          },
+          {
+            "group": "07",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 17,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09",
+            "train": 9,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "10",
+            "train": 11,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11",
+            "train": 19,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "13",
+            "train": 19,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "14",
+            "train": 12,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "15",
+            "train": 12,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "16",
+            "train": 10,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "17",
+            "train": 22,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "18",
+            "train": 10,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "20",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "21",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22",
+            "train": 23,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "23",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "24",
+            "train": 7,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "archetype_local@0.25": [
+          {
+            "group": "S0M0W1A0",
+            "train": 13,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M0W1A1",
+            "train": 27,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W0A0",
+            "train": 12,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A0",
+            "train": 10,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A1",
+            "train": 19,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A0",
+            "train": 22,
+            "test": 6,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A1",
+            "train": 17,
+            "test": 5,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W1A0",
+            "train": 10,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W1A1",
+            "train": 34,
+            "test": 5,
+            "status": "feature_fail"
+          },
+          {
+            "group": "S1M1W0A0",
+            "train": 39,
+            "test": 7,
+            "picked": 2,
+            "status": "ok"
+          },
+          {
+            "group": "S1M1W0A1",
+            "train": 19,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W1A0",
+            "train": 10,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W1A1",
+            "train": 19,
+            "test": 2,
+            "status": "insufficient"
+          }
+        ],
+        "venue_archetype@0.25": [
+          {
+            "group": "01/S1M0W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M0W0A0",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "03/S1M0W1A0",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S0M0W1A1",
+            "train": 1,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S0M1W1A0",
+            "train": 2,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S0M1W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S1M0W1A1",
+            "train": 1,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S1M1W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "05/S0M1W0A0",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "05/S1M1W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06/S0M1W1A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06/S1M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06/S1M0W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06/S1M0W1A1",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06/S1M1W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06/S1M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "07/S1M1W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08/S1M0W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09/S0M1W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09/S1M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09/S1M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "10/S0M1W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11/S0M0W1A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11/S1M0W0A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13/S1M0W1A1",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13/S1M1W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13/S1M1W0A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "14/S0M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "14/S1M1W0A0",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "15/S0M0W1A1",
+            "train": 0,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "15/S1M0W1A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "15/S1M1W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "16/S0M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "16/S1M0W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17/S1M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17/S1M1W0A0",
+            "train": 5,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "18/S1M0W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "18/S1M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "20/S1M0W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "21/S1M1W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22/S1M0W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "23/S1M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "24/S1M0W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_roi_gate@0.25": [
+          {
+            "group": "01",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02",
+            "train": 19,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "03",
+            "train": 12,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04",
+            "train": 17,
+            "test": 8,
+            "status": "insufficient"
+          },
+          {
+            "group": "05",
+            "train": 7,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "06",
+            "train": 10,
+            "test": 6,
+            "status": "insufficient"
+          },
+          {
+            "group": "07",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 17,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09",
+            "train": 9,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "10",
+            "train": 11,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11",
+            "train": 19,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "13",
+            "train": 19,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "14",
+            "train": 12,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "15",
+            "train": 12,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "16",
+            "train": 10,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "17",
+            "train": 22,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "18",
+            "train": 10,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "20",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "21",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22",
+            "train": 23,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "23",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "24",
+            "train": 7,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_local@0.4": [
+          {
+            "group": "01",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02",
+            "train": 19,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "03",
+            "train": 12,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04",
+            "train": 17,
+            "test": 8,
+            "status": "insufficient"
+          },
+          {
+            "group": "05",
+            "train": 7,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "06",
+            "train": 10,
+            "test": 6,
+            "status": "insufficient"
+          },
+          {
+            "group": "07",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 17,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09",
+            "train": 9,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "10",
+            "train": 11,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11",
+            "train": 19,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "13",
+            "train": 19,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "14",
+            "train": 12,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "15",
+            "train": 12,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "16",
+            "train": 10,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "17",
+            "train": 22,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "18",
+            "train": 10,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "20",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "21",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22",
+            "train": 23,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "23",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "24",
+            "train": 7,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "archetype_local@0.4": [
+          {
+            "group": "S0M0W1A0",
+            "train": 13,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M0W1A1",
+            "train": 27,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W0A0",
+            "train": 12,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A0",
+            "train": 10,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "S0M1W1A1",
+            "train": 19,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A0",
+            "train": 22,
+            "test": 6,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W0A1",
+            "train": 17,
+            "test": 5,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W1A0",
+            "train": 10,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M0W1A1",
+            "train": 34,
+            "test": 5,
+            "status": "feature_fail"
+          },
+          {
+            "group": "S1M1W0A0",
+            "train": 39,
+            "test": 7,
+            "picked": 2,
+            "status": "ok"
+          },
+          {
+            "group": "S1M1W0A1",
+            "train": 19,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W1A0",
+            "train": 10,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "S1M1W1A1",
+            "train": 19,
+            "test": 2,
+            "status": "insufficient"
+          }
+        ],
+        "venue_archetype@0.4": [
+          {
+            "group": "01/S1M0W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M0W0A0",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02/S1M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "03/S1M0W1A0",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S0M0W1A1",
+            "train": 1,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S0M1W1A0",
+            "train": 2,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S0M1W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S1M0W1A1",
+            "train": 1,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "04/S1M1W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "05/S0M1W0A0",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "05/S1M1W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06/S0M1W1A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06/S1M0W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06/S1M0W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06/S1M0W1A1",
+            "train": 2,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06/S1M1W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "06/S1M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "07/S1M1W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08/S1M0W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09/S0M1W0A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09/S1M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09/S1M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "10/S0M1W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11/S0M0W1A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11/S1M0W0A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13/S1M0W1A1",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13/S1M1W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "13/S1M1W0A1",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "14/S0M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "14/S1M1W0A0",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "15/S0M0W1A1",
+            "train": 0,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "15/S1M0W1A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "15/S1M1W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "16/S0M1W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "16/S1M0W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17/S1M0W1A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "17/S1M1W0A0",
+            "train": 5,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "18/S1M0W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "18/S1M0W1A0",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "20/S1M0W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "21/S1M1W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22/S1M0W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "23/S1M1W0A1",
+            "train": 0,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "24/S1M0W0A0",
+            "train": 1,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ],
+        "venue_roi_gate@0.4": [
+          {
+            "group": "01",
+            "train": 8,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "02",
+            "train": 19,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "03",
+            "train": 12,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "04",
+            "train": 17,
+            "test": 8,
+            "status": "insufficient"
+          },
+          {
+            "group": "05",
+            "train": 7,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "06",
+            "train": 10,
+            "test": 6,
+            "status": "insufficient"
+          },
+          {
+            "group": "07",
+            "train": 3,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "08",
+            "train": 17,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "09",
+            "train": 9,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "10",
+            "train": 11,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "11",
+            "train": 19,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "13",
+            "train": 19,
+            "test": 3,
+            "status": "insufficient"
+          },
+          {
+            "group": "14",
+            "train": 12,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "15",
+            "train": 12,
+            "test": 4,
+            "status": "insufficient"
+          },
+          {
+            "group": "16",
+            "train": 10,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "17",
+            "train": 22,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "18",
+            "train": 10,
+            "test": 2,
+            "status": "insufficient"
+          },
+          {
+            "group": "20",
+            "train": 6,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "21",
+            "train": 4,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "22",
+            "train": 23,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "23",
+            "train": 9,
+            "test": 1,
+            "status": "insufficient"
+          },
+          {
+            "group": "24",
+            "train": 7,
+            "test": 1,
+            "status": "insufficient"
+          }
+        ]
+      }
+    }
+  },
+  "detail": {
+    "venue_local@0.25": [],
+    "archetype_local@0.25": [
+      {
+        "date": "2026-08-04",
+        "race_code": "202608042108",
+        "hit": 1,
+        "ret": 31280.0
+      },
+      {
+        "date": "2026-08-19",
+        "race_code": "202608191302",
+        "hit": 0,
+        "ret": 0.0
+      }
+    ],
+    "venue_archetype@0.25": [],
+    "venue_roi_gate@0.25": [],
+    "venue_local@0.40": [],
+    "archetype_local@0.40": [
+      {
+        "date": "2026-08-04",
+        "race_code": "202608042108",
+        "hit": 1,
+        "ret": 31280.0
+      },
+      {
+        "date": "2026-08-19",
+        "race_code": "202608191302",
+        "hit": 0,
+        "ret": 0.0
+      }
+    ],
+    "venue_archetype@0.40": [],
+    "venue_roi_gate@0.40": []
+  }
+}
