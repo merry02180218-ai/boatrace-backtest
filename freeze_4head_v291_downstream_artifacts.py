@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Build production inference artifacts for frozen HEAD4_V291_COMP7 downstream models.
 
-This script is intentionally historical-only.  It may FIT only on rows dated
-<= 2026-06-30, and it first reproduces the archived June walk-forward predictions
-for the exact frozen research lineages:
+This script is historical-only. It may FIT only on rows dated <= 2026-06-30,
+and it first reproduces the archived June walk-forward predictions for the exact
+frozen research lineages:
 
 * POST: v250 LogisticRegression(C=.35)
 * ENV_ENTRY: v264 LogisticRegression(C=.18)
@@ -11,13 +11,14 @@ for the exact frozen research lineages:
 * conditional THIRD: v282 COND_BASE listwise, L2=.3
 
 If the current repository/raw historical sources no longer reproduce the archived
-June predictions within tight tolerances, artifact freezing fails closed.  This
+June predictions within tight tolerances, artifact freezing fails closed. This
 protects v291 from silently changing because an upstream historical source was
 revised after the research artifacts were produced.
 
-No July/August/September outcomes are read.  No v96 score/rank/order is used in
-any frozen production model.  The output artifact contains only inference state
-(imputer/scaler/model coefficients and feature order), never training rows.
+July/August/September outcomes are never allowed into any final fit or feature
+selection. No v96 score/rank/order is used in any frozen production model. The
+output artifact contains only inference state (imputer/scaler/model coefficients
+and feature order), never training rows.
 """
 from __future__ import annotations
 
@@ -114,6 +115,8 @@ def build_v250_frame() -> pd.DataFrame:
         d += timedelta(days=1)
     q = pd.DataFrame(out)
     q["_date"] = pd.to_datetime(q.date)
+    if q.empty or q._date.max().date() > CUTOFF:
+        raise RuntimeError("POST cutoff breach")
     return q
 
 
@@ -179,12 +182,17 @@ def post_stage(frame: pd.DataFrame):
 
     final = v250.make_model(POST_COLS)
     final.fit(frame[POST_COLS], frame.y4head.astype(int))
-    return serialize_sklearn_logistic(final, POST_COLS), {"rows": n, "max_abs": err, "tol": TOL_POST}
+    return serialize_sklearn_logistic(final, POST_COLS), {
+        "rows": n, "max_abs": err, "tol": TOL_POST,
+        "max_training_date": str(frame._date.max().date()),
+    }
 
 
 def env_stage():
     d, _groups, _fs = v270.prepare()
     d = d[d._date < JULY_START].copy()
+    if d.empty or d._date.max().date() > CUTOFF:
+        raise RuntimeError("ENV_ENTRY cutoff breach")
     d["y4"] = pd.to_numeric(d.y4).astype(int)
     env0 = v264.families(d)["ENV_ENTRY"]
 
@@ -207,7 +215,11 @@ def env_stage():
     state = serialize_sklearn_logistic(final, use_final)
     state["family"] = "ENV_ENTRY"
     state["C"] = 0.18
-    return state, {"rows": n, "max_abs": err, "tol": TOL_ENV, "june_features": len(use_june), "final_features": len(use_final)}
+    return state, {
+        "rows": n, "max_abs": err, "tol": TOL_ENV,
+        "june_features": len(use_june), "final_features": len(use_final),
+        "max_training_date": str(d._date.max().date()),
+    }
 
 
 def _p2_frame(z: pd.DataFrame, model) -> pd.DataFrame:
@@ -242,6 +254,24 @@ def _cond_frame(pairs: pd.DataFrame, model) -> pd.DataFrame:
 
 def opponent_stage():
     z, base = v282.prep()
+
+    # HARD GUARD: prune to the frozen cutoff BEFORE pair construction, feature
+    # selection, or final listwise fitting. Jul/Aug rows must not influence the
+    # serialized v283 production state in any way.
+    if "date" in z.columns:
+        zdate = pd.to_datetime(z["date"], errors="coerce")
+        z = z[zdate <= pd.Timestamp(CUTOFF)].copy()
+        max_date = pd.to_datetime(z["date"], errors="coerce").max().date() if len(z) else None
+        if max_date is None or max_date > CUTOFF:
+            raise RuntimeError(f"v283 cutoff breach max_date={max_date}")
+    else:
+        z = z[z.month <= "2026-06"].copy()
+        max_date = None
+        if z.empty or str(z.month.max()) > "2026-06":
+            raise RuntimeError(f"v283 cutoff breach max_month={z.month.max() if len(z) else None}")
+    if z.empty:
+        raise RuntimeError("empty v283 frame through cutoff")
+
     pairs, fams = v282.make_pairs(z, base)
 
     # June parity: exactly the monthly walk-forward state used by v282.
@@ -291,7 +321,7 @@ def opponent_stage():
     if e3 > TOL_LISTWISE:
         raise RuntimeError(f"v283 conditional THIRD June parity failed max_abs={e3:.12g}")
 
-    # Final <= Jun states.  These are the only listwise states production loads.
+    # Final <= Jun states. These are the only listwise states production loads.
     use2f = v279.good_features(z, base[v282.SECOND_FAMILY])
     m2 = v279.ListwiseSoftmax(v282.SECOND_L2).fit(z, use2f, "y2")
     tr3f = pairs[pairs.train_group == 1].copy()
@@ -305,6 +335,9 @@ def opponent_stage():
         "tol": TOL_LISTWISE,
         "second_june_features": len(use2), "second_final_features": len(use2f),
         "conditional_june_features": len(use3), "conditional_final_features": len(use3f),
+        "training_rows": int(len(z)),
+        "max_training_date": str(max_date) if max_date is not None else None,
+        "max_training_month": str(z.month.max()),
     }
 
 
