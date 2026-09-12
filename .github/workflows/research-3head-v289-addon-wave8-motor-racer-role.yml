@@ -76,3 +76,4 @@ jobs:
             done
             exit 1
           fi
+      # explicit trigger after workflow creation
