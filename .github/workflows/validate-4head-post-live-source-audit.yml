@@ -1,0 +1,33 @@
+name: Validate 4-head POST live source audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'artifacts/head4_post_live_source_audit_v1.json'
+      - 'artifacts/head4_post_feature_lineage_v1.json'
+      - 'verify_4head_post_live_source_audit.py'
+      - '.github/workflows/validate-4head-post-live-source-audit.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Syntax
+        run: python -m py_compile verify_4head_post_live_source_audit.py
+      - name: Verify fail-closed source audit
+        run: python verify_4head_post_live_source_audit.py
+      - name: Policy guard
+        run: |
+          python - <<'PY'
+          import json
+          x=json.load(open('artifacts/head4_post_live_source_audit_v1.json',encoding='utf-8'))
+          assert 'NON-PRISTINE' in x['outcome_policy']['jul_aug_2026']
+          assert 'outcome-blind' in x['outcome_policy']['sep_2026']
+          assert x['summary']['complete_live_post_builder_authorized'] is False
+          print('PASS policy guard')
+          PY
