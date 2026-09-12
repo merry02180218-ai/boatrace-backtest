@@ -1,0 +1,38 @@
+name: v304 1head head-model combination research
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v304_1head_headmodel_combo_research.py'
+      - '.github/workflows/research-20260912-v304-1head-headmodel-combo.yml'
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Run v304 head combination research
+        run: python run_v304_1head_headmodel_combo_research.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v304-1head-headmodel-combo
+          path: |
+            analysis_v304_1head_headmodel_combo_research_*.csv
+            summary_v304_1head_headmodel_combo_research.md
+      - name: Commit v304 outputs
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add analysis_v304_1head_headmodel_combo_research_*.csv summary_v304_1head_headmodel_combo_research.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Add v304 head-model combination outputs'
+          git pull --rebase origin main
+          git push
