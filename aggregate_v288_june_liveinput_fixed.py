@@ -14,7 +14,7 @@ CANDIDATE_DATES={
 def loadj(p):return json.loads(p.read_text(encoding='utf-8'))
 
 def collect(root):
-    root=Path(root); out={}
+    root=Path(root);out={}
     for p in root.rglob('day_summary.json'):
         z=loadj(p);d=str(z['date'])
         if d in out:raise RuntimeError(f'duplicate summary {d}: {out[d][0]} and {p}')
@@ -40,6 +40,7 @@ def classify_no_bet(row):
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--baseline',required=True);ap.add_argument('--corrected',required=True);ap.add_argument('--outdir',required=True);a=ap.parse_args()
+    out=Path(a.outdir);out.mkdir(parents=True,exist_ok=True)
     base=collect(a.baseline);fix=collect(a.corrected)
     missing_fix=sorted(CANDIDATE_DATES-set(fix))
     if missing_fix:raise RuntimeError(f'corrected candidate days missing: {missing_fix}')
@@ -49,7 +50,7 @@ def main():
         if src is None:raise RuntimeError(f'missing final day {d}')
         chosen[d]=src
 
-    frames=[]; daily=[]; pre=0;live_eval=0;errs=0;genuine_nb=0
+    frames=[];daily=[];pre=0;live_eval=0;errs=0;genuine_nb=0
     for d in EXPECTED:
         p,s,csvp=chosen[d]
         if str(s.get('history_cutoff'))!='2026-05-31':raise RuntimeError(f'{d} cutoff drift: {s.get("history_cutoff")}')
@@ -105,7 +106,7 @@ def main():
     detail_cols=['date','race_code','pre_grade','pre_score','pre_pct','pre_p3','evaluation_status','error_type','error','orig_source','odds_source','decision','route','p3_live','v242_action','raw_top_n','top_n','comp_odds','v243_pass','S_condition','A_condition','B_condition','b3_minus_b4_waku_st','b3_minus_b4_st','b3_meetst','wall12_weak','b3_minus_b2_motor','b3_inside_nst','total_stake','actual_combo','hit','return_yen','profit']
     for c in detail_cols:
         if c not in cand:cand[c]=''
-    cand[detail_cols].sort_values(['date','race_code']).to_csv(Path(a.outdir)/'june_v288_candidate_details.csv',index=False)
+    cand[detail_cols].sort_values(['date','race_code']).to_csv(out/'june_v288_candidate_details.csv',index=False)
 
     summary={'period':'2026-06-01..2026-06-30','policy':'3HEAD_V288_OPERATIONAL_MONTH_REPLAY_LIVEINPUT_FIXED','history_cutoff':'2026-05-31','pre_candidates':pre,
       'live_evaluable':len(evaluable),'input_or_decision_errors':len(errors),'genuine_no_bets':len(nobets),'bets':B,'hits':H,'hit_rate_pct':100*H/B if B else None,
@@ -113,7 +114,6 @@ def main():
       'result_or_payout_used_for_decision':False,'results_joined_only_after_freeze':True,'route_breakdown':route,'no_bet_reason_breakdown':dict(nb_reasons),
       'input_error_breakdown':dict(err_reasons),'condition_pass_counts':conditions,'source_counts':source_counts,'daily':daily,
       'odds_caveat':'official closing odds snapshot used where legacy od3 unavailable; not exact historical purchase-time fill'}
-    out=Path(a.outdir);out.mkdir(parents=True,exist_ok=True)
     (out/'summary_v288_june_liveinput_fixed.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     L=['# v288 June operational replay — LIVE inputs repaired','',f"- PRE candidates: {pre}",f"- LIVE evaluable: {len(evaluable)}",f"- Input/decision errors: {len(errors)}",f"- Genuine NO_BET: {len(nobets)}",f"- BET: {B}",f"- Hits: {H}",f"- Stake: {stake:.0f}",f"- Payout: {payout:.0f}",f"- Profit: {payout-stake:+.0f}",f"- ROI: {100*payout/stake:.2f}%" if stake else '- ROI: -',f"- Max drawdown: {mdd:.0f}",'','## Gate pass counts']
     for k,v in conditions.items():L.append(f'- {k}: {v}/{len(evaluable)}')
