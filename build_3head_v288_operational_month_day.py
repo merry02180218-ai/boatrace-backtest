@@ -139,8 +139,35 @@ def main() -> None:
         if h.empty: raise RuntimeError('no PRE score training rows before month-first')
         return original_grade(h,cur,cs)
 
+    pair_audit={'eligible_pair_training_races':0,'dropped_nonfinite_pair_training_races':0}
+    original_pair_fit=v222.fit_pair
+    def finite_pair_fit(tr,kind):
+        bad=[]; eligible=0
+        for ix,r in tr.iterrows():
+            if v222.ii(r.get('valid_result'))!=1: continue
+            actual=v222.v166.combo(r.get('actual_combo'))
+            if len(actual)!=3 or actual[0]!=3 or actual[1] not in v222.OPP or actual[2] not in v222.OPP or actual[1]==actual[2]:
+                continue
+            eligible+=1; ok=True
+            for s in v222.OPP:
+                for t in v222.OPP:
+                    if s==t: continue
+                    try:
+                        vec=np.asarray(v222.pairvec(r,s,t,kind),float)
+                        if not np.isfinite(vec).all(): ok=False; break
+                    except Exception:
+                        ok=False; break
+                if not ok: break
+            if not ok: bad.append(ix)
+        pair_audit['eligible_pair_training_races']=eligible
+        pair_audit['dropped_nonfinite_pair_training_races']=len(bad)
+        clean=tr.drop(index=bad) if bad else tr
+        print('PAIR_TRAIN_FINITE_GUARD','eligible',eligible,'dropped',len(bad),'rows_after',len(clean),flush=True)
+        return original_pair_fit(clean,kind)
+
     original_build=pre.build_augmented; original_bias=pre.learn_bias; original_base=pre.make_current_base
     pre.build_augmented=build_augmented_frozen; pre.learn_bias=target_bias; pre.make_current_base=make_current_base; pre.operational_pre_grade=frozen_grade
+    v222.fit_pair=finite_pair_fit
     try:
         bundle=build_augmented_frozen()
         pre.build_augmented=lambda:bundle
@@ -149,9 +176,6 @@ def main() -> None:
         if q.empty:
             d=bundle[0]
             today=d[d._date==pd.Timestamp(day)].copy()
-            # A true production watcher would never enter the expensive LIVE scorer
-            # when PRE has no candidate. Keep a minimal auditable cache so historical
-            # replay records a clean NO_BET day without fitting unused models.
             joblib.dump({
                 'current_rows':today,
                 'pre_candidates':{},
@@ -169,11 +193,13 @@ def main() -> None:
             cache.main()
     finally:
         pre.build_augmented=original_build; pre.learn_bias=original_bias; pre.make_current_base=original_base; pre.operational_pre_grade=original_grade
+        v222.fit_pair=original_pair_fit
 
     z=joblib.load(cache_path)
     z['date']=day8; z['history_cutoff']=a.history_cutoff
     z['production_daily_wrapper']=False; z['operational_month_replay']=True
     z['target_result_or_payout_used']=False
+    z['pair_training_finite_guard']=pair_audit
     joblib.dump(z,cache_path,compress=3)
 
     q=pd.read_csv(pre_csv,dtype={'race_code':str}) if pre_csv.exists() and pre_csv.stat().st_size else pd.DataFrame()
@@ -188,6 +214,7 @@ def main() -> None:
       'evaluation_month_rows_removed_from_training_frame':True,
       'pre_score_training_filtered_before_month_first':True,
       'zero_pre_fast_path':len(candidates)==0,
+      'pair_training_finite_guard':pair_audit,
       'rule_version':'v288-fixed-later; operational replay, not pristine model-selection evidence'
     }
     (outdir/'daily_manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
