@@ -1,6 +1,11 @@
 name: research-3head-v289-addon
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'research_v289_3head_addon.py'
+      - '.github/workflows/research-3head-v289-addon.yml'
   workflow_dispatch:
 
 permissions:
@@ -49,7 +54,7 @@ jobs:
             research_v289_3head_addon.json
             research_v289_3head_addon.md
             CHAT_HANDOFF_3HEAD_AUTO_RESEARCH_CURRENT.md
-      - name: Persist research handoff and reports on research branch
+      - name: Persist research handoff and reports
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
