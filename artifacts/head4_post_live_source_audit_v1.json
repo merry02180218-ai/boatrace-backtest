@@ -26,12 +26,6 @@
       "official_beforeinfo_source": "スタート展示 table",
       "status": "SOURCE_AVAILABLE_MAPPING_PENDING_VALUE_PARITY"
     },
-    "tilt4": {
-      "historical_source": "data/previews/tkz 艇4_チルト",
-      "official_beforeinfo_source": "racer/exhibition table チルト column",
-      "status": "SOURCE_AVAILABLE_MAPPING_PENDING_VALUE_PARITY",
-      "note": "Use exact analyze_v33_tilt_effect.tiltval semantics."
-    },
     "orig_straight4": {
       "historical_source": "data/previews/original_exhibition + original_scores",
       "official_beforeinfo_source": null,
@@ -49,6 +43,12 @@
       "official_beforeinfo_source": null,
       "status": "UNPROVEN_SOURCE_FAIL_CLOSED",
       "note": "Central official beforeinfo does not expose the historical original-exhibition 回り足/ターン metric."
+    },
+    "tilt4": {
+      "historical_source": "data/previews/tkz 艇4_チルト",
+      "official_beforeinfo_source": "racer/exhibition table チルト column",
+      "status": "SOURCE_AVAILABLE_MAPPING_PENDING_VALUE_PARITY",
+      "note": "Use exact analyze_v33_tilt_effect.tiltval semantics."
     }
   },
   "summary": {
