@@ -1,0 +1,7 @@
+scope,holdout_month,status,train_tier,family,nparam,floor,conf,hold_added_R,hold_added_roi_pct,hold_R,hold_roi_pct
+S+A,2026-04,OK,STRICT,P2R_FIXED,2.0,7.0,2.0,3.0,0.0,14.0,412.4714285714286
+S+A,2026-05,NO_TRAIN_CANDIDATE,,,,,,,,,
+S+A,2026-06,NO_TRAIN_CANDIDATE,,,,,,,,,
+S,2026-04,NO_TRAIN_CANDIDATE,,,,,,,,,
+S,2026-05,NO_TRAIN_CANDIDATE,,,,,,,,,
+S,2026-06,NO_TRAIN_CANDIDATE,,,,,,,,,

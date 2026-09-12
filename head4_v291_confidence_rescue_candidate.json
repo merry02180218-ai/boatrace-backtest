@@ -1,0 +1,22 @@
+{
+  "schema": "head4_v291_confidence_rescue_research_v1",
+  "all_candidate_inference": true,
+  "outcome_conditioned_v283_csv_used_as_confidence": false,
+  "jul_aug_outcomes_used": false,
+  "september_outcomes_used": false,
+  "v96_used": false,
+  "base": {
+    "policy": "HEAD4_V291_COMP7",
+    "immutable": true
+  },
+  "scopes": {
+    "S+A": {
+      "selection_tier": "NO_SAFE_CANDIDATE",
+      "lomo_all_holdout_rescue_profitable": false
+    },
+    "S": {
+      "selection_tier": "NO_SAFE_CANDIDATE",
+      "lomo_all_holdout_rescue_profitable": false
+    }
+  }
+}
