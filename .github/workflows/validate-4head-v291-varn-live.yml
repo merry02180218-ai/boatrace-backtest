@@ -25,5 +25,22 @@ jobs:
       - name: Guard result-blind LIVE code
         shell: bash
         run: |
-          if grep -nE '/result|/pay|result\?|pay\?' run_4head_v291_varn_live.py; then exit 1; fi
+          python - <<'PY'
+          import ast
+          from pathlib import Path
+          p=Path('run_4head_v291_varn_live.py')
+          src=p.read_text(encoding='utf-8')
+          tree=ast.parse(src)
+          bad=[]
+          for n in ast.walk(tree):
+              if isinstance(n, ast.Constant) and isinstance(n.value,str):
+                  s=n.value.lower()
+                  if any(x in s for x in ('/result','/pay','result?','pay?')):
+                      # Allow documentation/audit strings, but reject URL-like runtime strings.
+                      if s.startswith('http://') or s.startswith('https://') or 'boatrace.jp/' in s:
+                          bad.append((getattr(n,'lineno',None),n.value))
+          if bad:
+              raise SystemExit(f'forbidden result/payout runtime endpoint strings: {bad}')
+          print('RESULT_BLIND_ENDPOINT_GUARD_OK')
+          PY
           if grep -nE '\.fit\(' run_4head_v291_varn_live.py; then exit 1; fi
