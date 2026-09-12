@@ -6,6 +6,7 @@ on:
       - 'freeze_4head_v291_downstream_artifacts.py'
       - 'recover_4head_v291_exact_a_live_curves.py'
       - 'analyze_4head_v291_a_targetcomp_rescue.py'
+      - 'analyze_4head_v291_base_variable_n.py'
       - 'analysis_v288_4head_composite_odds_alln_detail.csv'
       - 'artifacts/head4_v273_a_live_20260630.json'
       - 'artifacts/head4_v291_downstream_20260630.json'
@@ -47,6 +48,7 @@ jobs:
           python -m py_compile head4_v291_downstream_inference.py
           python -m py_compile recover_4head_v291_exact_a_live_curves.py
           python -m py_compile analyze_4head_v291_a_targetcomp_rescue.py
+          python -m py_compile analyze_4head_v291_base_variable_n.py
       - name: Build and validate frozen v291 downstream artifact
         run: |
           rm -f artifacts/head4_v291_downstream_20260630.json artifacts/head4_v291_downstream_parity_20260630.json
@@ -64,9 +66,9 @@ jobs:
           assert a['parity']['status']=='PASS'
           assert p['status']=='PASS'
           PY
-      - name: Recover exact frozen A-LIVE curves and run research
+      - name: Recover exact frozen A-LIVE curves and run rescue research
         run: python recover_4head_v291_exact_a_live_curves.py
-      - name: Validate leakage, exact curve recovery and outputs
+      - name: Validate leakage, exact curve recovery and rescue outputs
         run: |
           python - <<'PY'
           import json,pandas as pd
@@ -92,13 +94,34 @@ jobs:
           assert set(q.month.astype(str))=={'2026-04','2026-05','2026-06'}
           l=pd.read_csv('analysis_4head_v291_a_targetcomp_rescue_lomo.csv')
           if len(l): assert set(l.holdout_month.astype(str))=={'2026-04','2026-05','2026-06'}
-          print(json.dumps(r,ensure_ascii=False,indent=2))
-          print(json.dumps(a,ensure_ascii=False,indent=2))
+          PY
+      - name: Run immutable-base variable-N research
+        run: python analyze_4head_v291_base_variable_n.py
+      - name: Validate variable-N leakage and immutable entry set
+        run: |
+          python - <<'PY'
+          import json,pandas as pd
+          p=json.load(open('head4_v291_base_variable_n_candidate.json'))
+          assert p['development_months']==['2026-04','2026-05','2026-06']
+          assert p['jul_aug_outcomes_used'] is False
+          assert p['september_outcomes_used'] is False
+          assert p['v96_used'] is False
+          assert p['base']['policy']=='HEAD4_V291_COMP7'
+          assert p['base']['R']==29
+          assert p['base']['immutable_entry_set'] is True
+          q=pd.read_csv('analysis_4head_v291_base_variable_n.csv')
+          assert len(q)>0
+          assert q.R.eq(29).all()
+          assert (q.avg_n>=4.0).all()
+          m=pd.read_csv('analysis_4head_v291_base_variable_n_monthly.csv')
+          assert set(m.month.astype(str))=={'2026-04','2026-05','2026-06'}
+          l=pd.read_csv('analysis_4head_v291_base_variable_n_lomo.csv')
+          assert set(l.holdout_month.astype(str))=={'2026-04','2026-05','2026-06'}
           print(json.dumps(p,ensure_ascii=False,indent=2))
           PY
       - uses: actions/upload-artifact@v4
         with:
-          name: head4-v291-a-targetcomp-research
+          name: head4-v291-operational-research
           path: |
             artifacts/head4_v291_downstream_parity_20260630.json
             audit_4head_v291_a_live_curve_recovery.json
@@ -109,12 +132,17 @@ jobs:
             analysis_4head_v291_a_targetcomp_rescue_lomo.csv
             summary_4head_v291_a_targetcomp_rescue.md
             head4_v291_a_targetcomp_rescue_candidate.json
+            analysis_4head_v291_base_variable_n.csv
+            analysis_4head_v291_base_variable_n_monthly.csv
+            analysis_4head_v291_base_variable_n_lomo.csv
+            summary_4head_v291_base_variable_n.md
+            head4_v291_base_variable_n_candidate.json
       - name: Persist research outputs
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add artifacts/head4_v291_downstream_parity_20260630.json audit_4head_v291_a_live_curve_recovery.json audit_4head_v291_a_live_identity.json analysis_v291_4head_composite_odds_alln_exactalive.csv analysis_4head_v291_a_targetcomp_rescue*.csv summary_4head_v291_a_targetcomp_rescue.md head4_v291_a_targetcomp_rescue_candidate.json
+          git add artifacts/head4_v291_downstream_parity_20260630.json audit_4head_v291_a_live_curve_recovery.json audit_4head_v291_a_live_identity.json analysis_v291_4head_composite_odds_alln_exactalive.csv analysis_4head_v291_a_targetcomp_rescue*.csv summary_4head_v291_a_targetcomp_rescue.md head4_v291_a_targetcomp_rescue_candidate.json analysis_4head_v291_base_variable_n*.csv summary_4head_v291_base_variable_n.md head4_v291_base_variable_n_candidate.json
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'Record recovered exact A-LIVE 4-head rescue research'
+          git commit -m 'Record v291 operational variable-N research'
           git pull --rebase origin main
           git push origin HEAD:main
