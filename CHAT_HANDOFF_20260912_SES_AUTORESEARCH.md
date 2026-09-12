@@ -25,184 +25,86 @@ Japan self-hosted Python path:
 Do not guess alternate Python paths.
 
 ## BOATCAST acquisition
-Player URL pattern:
-`https://front.player.boatrace-cdn.jp/player/vod?raceDate=YYYYMMDD&raceNumber=N&raceType=exhibition&service=boatcast&stadium=01kiryu`
-
-Current low-latency downloader:
-`download_boatcast_exhibition_fastclip.py`
-
-Typical benchmark setup:
-- clip start: 82 sec
-- duration: 52 sec
-- player autoplay enabled
-- playback response polled quickly
-- ffmpeg input-side seek / stream copy
-
-Known successful timings:
-- 2026-09-10 Kiryu12: fastclip as low as ~4.2 sec on earlier run; latest v6 benchmark acquisition 13.515 sec.
-- 2026-09-09 Kiryu12: acquisition 9.309 sec.
+Current low-latency downloader: `download_boatcast_exhibition_fastclip.py`
+Typical benchmark clip start 82 sec / duration 52 sec.
+Known acquisition timings: 2026-09-10 Kiryu12 as low as ~4.2 sec historically; v6 run 13.515 sec. 2026-09-09 Kiryu12 ~8.4–9.3 sec.
 
 ## Tracker
-Current tracker:
-`track_exhibition_boats_v5.py`
-
-Key behavior:
-- result-blind
-- stride 2 (~15 fps effective on 30 fps video)
-- LK prediction + bounded adaptive template matching
+Current tracker: `track_exhibition_boats_v5.py`
+- result-blind, stride 2 (~15 fps effective)
+- LK prediction + bounded adaptive template match
 - arbitrary exhibition entry order
-- lane-separation guard
+- fail closed on entry-order violation or lane separation <=4 px during tracking
 - confidence-aware HIGH/MEDIUM/LOW quality
-- overall `accepted=true` only when all six pass quality gates
-- produces `ses_v5` only when accepted
-
+- overall accepted only when all six pass
 Do not relax quality gates merely to pass.
 
-## Seed history
+## Seed history / evidence
 ### v3
-`auto_seed_exhibition_motion_v3.py`
-- permissive six-row LK detection
-- per-row motion direction
-- improved boats 2–6 on 2026-09-10 Kiryu12
-- boat1 remained LOW in tracker
+`auto_seed_exhibition_motion_v3.py`: permissive six-row LK + per-row coherent hull-side refinement. Improved boats 2–6 on 9/10 but boat1 remained LOW.
 
-### boat1 calibration sweep
-On 2026-09-10 Kiryu12, a result-blind technical seed sweep found that moving boat1 from `[1289,429]` to `[1169,429]` (x -120) produced tracker `accepted=true`.
-This was diagnostic only; never hard-code boat1 -120 globally.
+### v6 calibration success and generalization failure
+`auto_seed_exhibition_motion_v6.py`: fleet-relative extreme motion -> saturated +/-120 px shift.
+- 2026-09-10 Kiryu12 run `34603144372`: accepted=true, all HIGH. Only boat1 shifted -120 from [1289,429] to [1169,429].
+- 2026-09-09 Kiryu12 run `34604306399`: failed closed lane separation. v6 chose 30.0 sec where final two rows were only 20.5 px apart and shifted both adjacent extreme rows +120.
+Conclusion: v6 NOT live-ready.
 
-### v4/v5 seed attempts
-- v4 moved too many boats and degraded tracking.
-- v5 improved boat1 but fallback remained above limit.
+### v7 geometry-aware candidate selection — FAILED but informative
+File: `auto_seed_exhibition_motion_v7.py`
+Commits: implementation `27c0a639e97701a0c363bd08a1f208d6b61a7739`; benchmark workflow `a0567e828fde0ace6be76fe990d711f5b7ece747`.
+Run: `34687516774` on 2026-09-09 Kiryu12, entry order `1,2,4,5,6,3`.
+Fastclip: 8.376 sec. Seed v7: 4.901 sec.
+v7 successfully fixed candidate-time geometry:
+- selected_sec 28.25 instead of v6 30.0
+- min vertical gap 52 px, median gap 57 px
+- gaps [56.5,57,84,52,103]
+But it still saturated-shifted isolated extreme rows:
+- boat1 motion [1106.5,398.5] -> [986.5,398.5] (-120)
+- boat3 motion [680,751] -> [800,751] (+120)
+Tracker then failed closed with entry-order violation: expected `[1,2,4,5,6,3]`, got `[2,1,4,5,6,3]`.
+Diagnosis: candidate time/vertical geometry is now much better, but motion-extreme status alone is insufficient evidence to accept a horizontal seed shift. The boat1 -120 correction useful on 9/10 is harmful on 9/9 at 28.25.
 
-### v6
-Current file:
-`auto_seed_exhibition_motion_v6.py`
-Method:
-`v3 permissive six-row LK + fleet-relative extreme-motion saturated correction`
-- fleet median abs(dx)
-- extreme threshold = median * 1.5
-- extreme rows shifted by saturated +/-120 px
-- boat-number agnostic
+### v8 current experiment — short-horizon visual validation
+File: `auto_seed_exhibition_motion_v8.py`
+Implementation commit: `36e5e6447714ec165467438154287d6a6b2e6814`
+Workflow commit: `e421a1c8f38212152978ce618b7e0b3d43302e20`
+Workflow run: `34687634261` (2026-09-09 Kiryu12), currently pending/in progress at this handoff update.
+Design:
+1. Keep v7 geometry-aware candidate-time selection.
+2. Extreme motion is only a proposal.
+3. For each isolated extreme row compare base v3 seed vs proposed +/-120 seed using only a short ~0.18 sec future video window.
+4. Use local template NCC with vertical-drift penalty; accept shift only if shifted score beats base by margin 0.035 and passes visual gate.
+5. Adjacent extreme rows remain ambiguous and are not shifted.
+6. This is result-blind and bounded; it is not a full 1.5 sec tracker sweep and does not inspect race outcome.
+Next action: inspect actual logs of run `34687634261`. If v8 passes 9/9, immediately re-test unchanged v8 on 9/10 to ensure it preserves the known useful correction; then expand to additional September races.
 
-## v6 benchmark results
-### 2026-09-10 Kiryu12 — technical calibration SUCCESS
-Workflow run: `34603144372`
-Commit before run: `cae871c60655713e5c3a4cfb61bffc8805ecdb1d`
-Entry order: `1,2,3,4,5,6`
-Selected sec: 27.75
-Only boat1 corrected:
-- boat1 motion center `[1289,429]`
-- final seed `[1169,429]`
-- saturated shift -120
-
-Tracker v5:
-- `accepted=true`
-- all boats HIGH
-- fallback fraction: 1=.348, 2=.000, 3=.000, 4=.130, 5=.000, 6=.043
-- median NCC: 1=.965, 2=.848, 3=.831, 4=.825, 5=.875, 6=.883
-- SES: 1=-3, 2=+1, 3=+1, 4=0, 5=0, 6=-2
-
-Important warning: boat1 motion magnitude remained suspiciously extreme. Success on this one race is not enough for LIVE.
-
-### 2026-09-09 Kiryu12 — independent generalization FAILURE
-Workflow run: `34604306399`
-Commit: `4e6b6c0b304506e14f20cbebfaa17f191c99c536`
-Entry order: `1,2,4,5,6,3`
-Fastclip: 9.309 sec
-Seed v6: 5.029 sec
-Selected sec: 30.0
-Fleet median abs dx: 9.339
-Extreme threshold: 14.008
-Corrected rows: 2
-
-Seeds:
-- 1 `[797.5,429.5]`, no correction
-- 2 `[853.0,475.0]`, no correction
-- 4 `[912.0,514.5]`, no correction
-- 5 `[1027.5,629.5]`, no correction
-- 6 motion center `[1133.5,720.0]` -> final `[1253.5,720.0]` (+120)
-- 3 motion center `[1069.0,740.5]` -> final `[1189.0,740.5]` (+120)
-
-Tracker v5 failed closed:
-`FAIL_CLOSED: lane separation too small`
-
-Diagnosis:
-v6's fleet-relative extreme-motion rule can over-correct multiple adjacent/nearby rows. In 9/9 it shifted both 6 and 3 right by +120, causing unsafe geometry/lane separation. Therefore v6 does NOT generalize and must NOT be used in LIVE.
-
-## Exact next research direction: v7+
-Build a principled seed refinement that preserves the useful 9/10 boat1 correction while preventing 9/9 multi-row over-correction.
-
-Preferred constraints:
-1. Start from v3 seeds.
-2. Treat motion-extreme detection only as a proposal, not an unconditional +/-120 move.
-3. Add neighbor/geometry constraints before accepting a correction:
-   - preserve initial top-to-bottom entry order
-   - enforce minimum y separation / lane separation
-   - avoid moving two adjacent rows in the same direction if it collapses geometry
-   - cap correction based on nearest-neighbor x/y geometry, not a universal fixed 120
-   - if corrected candidate violates geometry, reduce shift or revert that row
-4. Prefer one-pass automatic refinement; no 21-way tracker sweep in live operation.
-5. Remain result-blind.
-6. Fail closed if confidence is insufficient.
-
-Possible implementation name:
-`auto_seed_exhibition_motion_v7.py`
-
-## Validation plan
-Before LIVE integration, require multiple independent races with different entry orders/camera geometry.
-Minimum practical acceptance gate before wiring production:
+## Validation plan before LIVE integration
+Require multiple independent September samples with different entry orders/camera geometry. Practical minimum before wiring production:
 - at least 3 independent September samples (more is better)
 - automatic acquisition + automatic seed + tracker only; no manual seed edits
-- tracker accepted on all required samples, or a documented fail-closed rate low enough for operational use
-- no systematic absurd center displacement / identity jumps
+- tracker accepted on required samples, or documented fail-closed rate low enough for operations
+- no absurd center displacement / identity jumps
 - arbitrary entry order handled correctly
-- result-blind lock before any result comparison
-- core processing latency around <=30 sec where feasible and <=60 sec maximum target
+- result-blind lock before result comparison
+- core processing <=30 sec where feasible and <=60 sec maximum target
+Then expand toward 10+ samples before treating SES as stable/predictive.
 
-Then expand toward 10+ samples before treating SES as a stable feature.
-
-## Scientific interpretation of SES
-SES is currently an attack/head-support feature candidate, NOT a direct finishing-order ranking.
-Known blind sample 2026-09-09 Kiryu12 from earlier v3/manual-seed work:
-- locked SES direction supported boat3 attack; boat3 later won by makuri
-- lower SES boats still finished 2nd/3rd
-Therefore do not equate SES rank with finishing order.
+## Scientific interpretation
+SES is an attack/head-support feature candidate, not a direct finishing-order rank. Do not join race results until exhibition judgement is locked.
 
 ## Production/live wrapper
-Current wrapper:
-`run_exhibition_ses_live_local.py`
-Known state before this handoff:
-- still old pipeline using `auto_seed_exhibition_motion_v1.py`
-- still using `track_exhibition_boats_v3.py`
-- output `exhibition_tracking_v3.json`
+Current `run_exhibition_ses_live_local.py` is still old (seed v1 + tracker v3). Do NOT update until v8 or later generalizes across multiple independent samples. Once validated, wire validated seed + tracker v5 stride2 + output `exhibition_tracking_v5.json`, then build persistent Japan-PC watcher.
 
-Do NOT switch it to v6.
-Only after v7+ passes multi-race validation, update wrapper to the validated seed version + tracker v5 (or newer), `--stride 2`, and output the validated SES result.
+## Workflow
+`.github/workflows/benchmark-fast-exhibition-clip.yml` runs on `[self-hosted, japan]`, supports inputs race_date/stadium/race/clip start/duration/entry order, and is currently configured to benchmark v8 on 2026-09-09 Kiryu12.
 
-After that, implement persistent watcher on Japan self-hosted PC:
-`exhibition finished -> detect VOD availability -> fetch only start segment -> auto seed -> track/SES -> model re-evaluation -> odds -> betting decision`
+## Required behavior for future sessions / automation
+1. Read this file first.
+2. Inspect latest GitHub commits/files/workflow runs; latest GitHub wins.
+3. Inspect actual job logs, not just green/red status.
+4. Continue implementation/testing autonomously.
+5. Update this file after meaningful design/result changes.
+6. Never claim live readiness without accepted=true evidence plus geometry sanity across multiple independent races.
 
-## Workflow used for technical benchmark
-`.github/workflows/benchmark-fast-exhibition-clip.yml`
-It currently supports workflow_dispatch inputs for race_date, stadium, race, clip start/duration, entry order and runs on `[self-hosted, japan]`.
-
-## Required behavior for future ChatGPT sessions
-When resuming:
-1. Read THIS file first.
-2. Read latest GitHub commits/workflows/files; GitHub latest wins over this file if newer.
-3. Check whether an automation/research iteration has created v7 or later.
-4. Inspect actual workflow logs/results, not just green/red workflow status.
-5. Continue implementing/testing autonomously when asked to continue.
-6. Keep this handoff updated after meaningful design/result changes, especially before chat context may run out.
-7. Never claim success without actual `accepted=true` evidence and geometry sanity across multiple independent races.
-
-## Definition of "done enough to notify user"
-Notify the user when the automatic pipeline has reached a credible LIVE-ready milestone:
-- a seed/refinement version generalizes across multiple independent September races with varied entry order,
-- tracker quality gates pass without manual seeds or race-specific hard-coded offsets,
-- geometry/identity checks are sane,
-- latency is compatible with post-exhibition live use,
-- live local wrapper has been updated to the validated pipeline,
-- at least one end-to-end self-hosted validation run succeeds.
-
-Even after this milestone, continue collecting blind samples before declaring SES statistically predictive of race outcomes.
+## Done-enough-to-notify milestone
+Notify user only when a seed/refinement version generalizes across multiple independent September races with varied entry order; tracker quality passes without manual/race-specific offsets; geometry/identity is sane; latency fits post-exhibition operation; live local wrapper is updated; and at least one end-to-end self-hosted live-style validation succeeds.
