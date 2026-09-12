@@ -13,6 +13,7 @@ Continue BOATCAST start-exhibition video development until immediate post-exhibi
 - Never weaken fail-closed quality gates merely to obtain `accepted=true`.
 - Never hard-code boat-number-specific/race-specific offsets.
 - Do not production-wire experimental code until multi-race technical generalization is demonstrated.
+- `accepted=true` is necessary but NOT sufficient: trajectories must also stay physically sane/on-frame and preserve identity.
 - Final race-by-race operation should be persistent on Japan self-hosted PC; Actions are validation/logging.
 - Exact Japan Python: `C:\Users\merry\AppData\Local\Programs\Python\Python311\python.exe`.
 
@@ -20,75 +21,60 @@ Continue BOATCAST start-exhibition video development until immediate post-exhibi
 Ideal <=30 sec after video availability; maximum <=60 sec.
 Downloader: `download_boatcast_exhibition_fastclip.py`.
 
-## v13 baseline — strong but fourth-sample failure
-`auto_seed_exhibition_motion_v13.py`, commit `2e4c8966637f5ea175a50e227f03f48659dfd23d`.
-Generic/result-blind NCC persistence + dominant-LK direction consistency + horizontal rescue.
-UNCHANGED v13 passed three September technical samples with tracker v5:
-1. 2026-09-10 Kiryu3 standard — run `34688954987`, accepted=true, ALL HIGH, core ~27.9s. Blind SES locked: 1=-3,2=-1,3=+1,4=+1,5=0,6=+2; result still MUST NOT be looked up.
-2. 2026-09-10 Kiryu12 standard — run `34698720223`, accepted=true, ALL HIGH, core ~30.62s.
-3. 2026-09-09 Kiryu12 varied entry `1,2,4,5,6,3` — run `34698851667`, accepted=true, ALL HIGH, core ~23.71s.
+## Important audit correction: old v13 handoff claim is not authoritative
+Latest artifact reinspection of run `34688954987` for 2026-09-10 Kiryu3 showed `exhibition_tracking_v5.json` actually had `accepted=false`, boat6 LOW (fallback .565), with boat6 drifting to x~65/y~1087 by +1.5s. Therefore the older prose claim that this run was ALL HIGH/accepted=true must NOT be used. Latest artifact JSON wins.
+The race result remains unread and MUST remain blind.
 
-Fourth result-blind sample 2026-09-10 Kiryu6 exposed a new generic failure:
-- commit/default `c53361a056965ef68633092a24e139b6b214be0a`, run `34699132130`, job `103567660609`.
-- selected 28.0; seeds 1 [1025,459],2 [937,497],3 [990,599],4 [849,711],5 [749,770.5],6 [778,891.5].
-- boat6 dominant LK dx +10.544 but persistence net dx -44, so v13 correctly rejected it; horizontal rescue found nothing.
-- Result-blind frame inspection showed boat6 seed y~891.5 on a foreground rail/fence, with actual hull roughly ~96 px higher. Generic diagnosis: wrong-row/y seed cannot be fixed by x-only rescue.
-- Race result remains unread and MUST remain blind.
-
-## v14 — generic 2D fallback seed rescue
+## v14 seed — generic 2D fallback
 `auto_seed_exhibition_motion_v14.py`.
-Starts from v12 and retains v13-style short persistence + direction gate. Only rows that fail those checks are searched on a resolution-relative 2D grid with fleet y-order/gap and neighbor-x geometry constraints. No race/boat rule.
-Kiryu6 benchmark run `34699280445`, job `103568051600`:
-- boat6 rescued generically from [778,891.5] to [818,795.5] (x+40,y-96).
-- FastClip ~5.385s, seed ~31.807s, tracker v5 ~6.935s, core ~44.1s (<60).
-- tracker v5 accepted=false: boats1-4 HIGH, boat5 MEDIUM fallback .391/NCC .874, boat6 LOW fallback .609/NCC .923.
-- 5/6 trajectories converged by +1.0/+1.5 despite distinct seeds.
-Diagnosis shifted from seed-only to tracker identity collision.
+Starts from the v13-equivalent short persistence+direction validation and searches a resolution-relative 2D grid ONLY for rows that fail it. This fixed the Kiryu6 wrong-y/rail seed generically, moving boat6 from the bad foreground row toward y~795.5, but tracker identity collision remained.
 
-## Tracker v5 design limitation
-`track_exhibition_boats_v5.py` tracks each boat independently. Template fallback uses a broad search ROI with no pairwise exclusion/dynamic lane partition; adjacent boats can converge onto the same wake/background patch. Lane separation is checked only after estimates are chosen. Therefore high NCC can still represent the wrong neighboring texture.
-
-## v15/v16 experiment — reject as production direction
-`auto_seed_exhibition_motion_v15.py` adds generic predicted-y 2D danger-row rescue.
-`auto_seed_exhibition_motion_v16.py`, commit `466dbbce20912697efe554dc7c9bf3ad5d3d9544`, adds longer-horizon (~0.6/0.9/1.2s) validation and x-only long rescue.
-Regression workflow commit `dd93b718ce12ee53f52665a246a11beca868ab9c`, run `34701030505`.
-- Kiryu12var passed ALL HIGH (~44s total), but
-- Kiryu3 failed lane separation because boat6 bad-y seed was moved only in x, leaving y wrong.
-- Kiryu12 failed because v16 overrode known-good v13 boat3 [1033,498] after long-horizon NCC latched to an opposite-direction background/wake track; it moved boat3 to [1233,498], then tracker failed lane separation.
-Conclusion: long-horizon template evidence is not trustworthy enough to override a seed that already passes v13 short persistence/direction. Future seed logic must preserve healthy v13-equivalent rows and use 2D fallback ONLY for rows v13-equivalent validation rejects.
-
-## CURRENT tracker candidate: v6 dynamic lane partition
+## Tracker v6 — rejected
 `track_exhibition_boats_v6.py`, commit `4436499f9bb2dd7cc8a3b49a3b75db81e198d13d`.
-Principled change from v5:
-- retain stride2, LK/template fusion and the SAME NCC/fallback fail-closed thresholds;
-- determine entry order from initial seed y-order;
-- before each tracking step, create dynamic vertical cells bounded by midpoints between neighboring previous centers;
-- clip each boat's template search to its own cell and clip predictions into the cell;
-- preserve entry order and >4px separation fail-closed checks;
-- record minimum lane separation.
-Goal: prevent adjacent 5/6 from matching the same wake/texture without relaxing quality gates.
+It clipped each boat's template search IMAGE to a dynamic vertical cell. Four-race run `34711310461` showed this can remove valid template evidence when rows are close; e.g. standard Kiryu12 boat2 regressed from healthy HIGH/0 fallback/NCC .848 to LOW/fallback .391/NCC .567. Do not production-wire v6.
 
-## CURRENT regression in progress
-Workflow `.github/workflows/regress-exhibition-seed14-track6.yml`, commit `a01689495e893dd3b4d5c8406a19c367ee733f0f`, run `34711310461`.
-Matrix uses result-blind FastClip -> seed v14 -> tracker v6 unchanged on:
-- 2026-09-10 Kiryu3 standard
-- 2026-09-10 Kiryu6 standard
-- 2026-09-10 Kiryu12 standard
-- 2026-09-09 Kiryu12 varied entry `1,2,4,5,6,3`
-At handoff update time first job was running and remaining jobs queued. Inspect actual logs/JSON, not workflow green alone.
+## Tracker v7 — center-gated lane partition, useful but not sufficient
+`track_exhibition_boats_v7.py`, commit `9930d3d55ecb85e48b276a542ee3fa552729509c`.
+Workflow `.github/workflows/regress-exhibition-seed14-track7.yml`, commit `16889e45456722256f1b638abb9df888e0853e6a`, run `34712928619`.
+Principled change: keep the local search image uncut, but only accept template-match CENTERS inside the boat's dynamic vertical cell. Same NCC/fallback thresholds as v5/v6; no loosened gate.
+
+Four-sample artifact audit:
+- 2026-09-10 Kiryu12 standard: accepted=true, ALL HIGH, min separation 26.689px. fallback 1=.348,2=0,3=0,4=.130,5=0,6=.043. median NCC 1=.965,2=.848,3=.831,4=.825,5=.875,6=.883. This successfully restores boat2 without lowering thresholds.
+- 2026-09-09 Kiryu12 varied `1,2,4,5,6,3`: accepted=true; 1/2/4/5/6 HIGH, boat3 MEDIUM. min separation 45.026px. boat3 fallback .391/NCC .861; +1.5 center x~267/y~857. Technical pass but weaker outer-row behavior.
+- 2026-09-10 Kiryu6: accepted=false. boats1-4 HIGH, boat5 MEDIUM fallback .391/NCC .873, boat6 LOW fallback .609/NCC .923. 5/6 trajectories still collapse toward left/background by +1.5 despite center gating.
+- 2026-09-10 Kiryu3: accepted=true and all tiers HIGH, BUT physically invalid: boat6 runs to x~36/y~1060 by +1.5 (near/off frame) and SES flips drastically relative to prior exhibition lock. This is a critical example that confidence acceptance alone cannot establish identity.
+Conclusion: v7 improves cell clipping pathology but does NOT solve false wake/background identity for rescued outer rows. Do not production-wire it yet.
+
+## v15/v16 prior experiment — rejected direction
+`auto_seed_exhibition_motion_v15.py` is a faster short-horizon 2D rescue. `auto_seed_exhibition_motion_v16.py` added longer-horizon validation but could override rows that were already healthy under v13-equivalent short persistence/direction, causing regressions. Key rule retained: long-horizon evidence must never override a healthy short-gate row.
+
+## CURRENT seed candidate: v17 rescued-row-only long survival
+`auto_seed_exhibition_motion_v17.py`, commit `3f628a0099a5b93b38da7a9be8acdbf89fdcef2b`.
+Design:
+- run v14;
+- preserve every non-rescued/healthy v14 row EXACTLY;
+- ONLY rows that v14 rescued are revalidated through .15/.30/.45/.60/.90/1.20s;
+- require >=5/6 good horizons, median NCC >=.55, min NCC >=.35, dominant-LK direction consistency, and on-frame survival for the final long matches;
+- if v14 chosen rescue fails, re-rank only the bounded result-blind 2D candidates already generated by v14 using long survival + fleet geometry;
+- fail closed if no rescue candidate survives;
+- no result, boat-number special case or race-specific offset.
+
+Regression workflow `.github/workflows/regress-exhibition-seed17-track7.yml`, commit `bb54c2bbb5e9dbc171ae3ab9558771770ab79861`, run `34713478083`.
+Matrix: Kiryu3, Kiryu6, Kiryu12 standard, Kiryu12 varied. At this handoff update the run had just been queued. Inspect actual artifacts/JSON after completion; workflow green alone is insufficient.
 
 ## Blindness status
-Results for 2026-09-10 Kiryu3/6/9 remain unread in this SES research thread. Preserve blindness. 2026-09-09 Kiryu12 result was exposed only after its earlier blind lock and is technical regression only now. 2026-09-10 Kiryu12 is technical calibration/exposed, not pristine predictive proof.
+Results for 2026-09-10 Kiryu3/6/9 remain unread in this SES research thread. Preserve blindness. 2026-09-09 Kiryu12 is technical regression only after earlier result exposure. 2026-09-10 Kiryu12 is technical calibration/exposed.
 
 ## Production wrapper
-`run_exhibition_ses_live_local.py` remains old (seed v1 + tracker v3). Do NOT update until a candidate seed+tracker passes the four-sample technical matrix with sane identity/geometry and <=60s.
+`run_exhibition_ses_live_local.py` remains old (seed v1 + tracker v3). DO NOT update until one unchanged seed+tracker combination passes the four-sample technical matrix with sane identity/geometry and <=60s.
 
 ## Immediate next actions
-1. Inspect run `34711310461` all four jobs/logs.
-2. For each: seed decisions, selected_sec, runtime, tracker accepted, fallback fractions, median NCC, min lane separation, +0.5/+1.0/+1.5 centers and physical identity sanity.
-3. If v14+tracker v6 passes all four unchanged and <=60s, freeze/refactor naming as needed, update `run_exhibition_ses_live_local.py`, then run one self-hosted end-to-end live-style validation.
-4. If tracker v6 fails, do NOT relax thresholds. Diagnose whether dynamic cells are too rigid or bad seed geometry remains; next tracker change should remain generic and result-blind.
-5. Update this handoff after every meaningful result/design change.
+1. Inspect run `34713478083` all four jobs/artifacts.
+2. For each inspect seed v17 decisions, runtime, tracker accepted, fallback, NCC, min separation and +0.5/+1.0/+1.5 physical trajectories.
+3. Pay special attention to Kiryu3 boat6 and Kiryu6 boats5/6. `accepted=true` with edge/off-frame drift is a failure.
+4. If v17+v7 still fails, do NOT relax thresholds. Next principled direction is joint six-boat mutual-exclusion / fleet-consistent assignment, not more race-specific seed offsets.
+5. Only after a four-sample sane pass update `run_exhibition_ses_live_local.py` and perform a self-hosted end-to-end live-style validation.
+6. Update this handoff after meaningful results/design changes.
 
 ## Live-ready milestone
 Before notifying user as complete:
