@@ -29,25 +29,25 @@ Current v300 opponent model on fixed 345R:
   - boat6: 0%
 Main bottleneck: SECOND ranking, especially boats 4-6.
 
-## v310 concept / current status
+## v310 result
 Use causal head-risk probabilities from the existing 3-head and 4-head models as opponent-context features for SECOND ranking.
 - p3: v243-family monthly walk-forward 3-head probability.
 - p4: v250 PRE monthly walk-forward 4-head probability.
-- THIRD stays frozen to v300 conditional THIRD L2=.1 for attribution.
-- Test SECOND L2 = 1, 3, 10, 30 plus BASE.
-- Add role interactions so p3/p4 pressure can affect boats 2-6, including outer boats.
-- Run 1: 34691636653 failed because pre-Feb SECOND training rows had no p3/p4.
-- Run 2: 34694162406 failed because some Feb-Jun rows had cross-pipeline p3/p4 coverage gaps.
-- Fix 1 commit: 283a85661c7ac701e45b1ff2abcd9ff3e2e53620.
-- Fix 2/current v310 commit: ebb82bcbb7e718e20b72ab053c3a489a9670f9d2.
-- Missing p3/p4 policy: explicit availability flags + zero sentinel; no future backfill; denominator remains 345R.
-- Current run 3: 34696379838 was in progress when v311 auto-research was launched.
+- THIRD stayed frozen to v300 conditional THIRD L2=.1 for attribution.
+- Final successful run: 34696379838.
+- Best: HEADRISK_L2_3.
+- SECOND TOP2: 71.72% -> 72.07%.
+- exact3: 132/345 = 38.26% -> 133/345 = 38.55%.
+- actual SECOND boat4 TOP2: 35.71% -> 38.10%.
+- boat5 remains 18.75%; boat6 remains 0%.
+Conclusion: causal p3/p4 is a small useful auxiliary signal, not a solution to outer-SECOND failure.
 
 ## v311 auto-research — launched
 Script: `run_v311_1head_opponent_second_family_autoresearch.py`
 Workflow: `.github/workflows/research-20260912-v311-second-family-autoresearch.yml`
 Script commit: a4a1cb84bf2f3982778f2fe878a8372a135e22c9
 Workflow commit: 2eba72b0e1d68693e70c6e5b0b1dd5c3c7f7b71b
+Run: 34696800597
 
 Purpose:
 - Keep exact frozen 345R / 290 head wins.
@@ -63,14 +63,6 @@ Feature families automatically audited/tested:
 - FORM_STATIC: grade/wr/local/f_safety.
 - POSITION: candidate lane/role geometry.
 - OTHER_SAFE: remaining audited within-race relative transforms from the existing PRE/prior opponent pipeline.
-
-v311 outputs when successful:
-- `analysis_v311_1head_opponent_second_family_autoresearch_configs.csv`
-- `analysis_v311_1head_opponent_second_family_autoresearch_features.csv`
-- `analysis_v311_1head_opponent_second_family_autoresearch_best_by_second.csv`
-- `analysis_v311_1head_opponent_second_family_autoresearch_best_monthly.csv`
-- `analysis_v311_1head_opponent_second_family_autoresearch_best_race.csv`
-- `summary_v311_1head_opponent_second_family_autoresearch.md`
 
 v311 development best ordering:
 1. overall SECOND TOP2
@@ -99,54 +91,49 @@ For every new opponent experiment:
 2. Freeze/assert the evaluation race IDs and head hits.
 3. Record feature provenance and leakage status before fitting.
 4. Run a clean BASE in the same script/run.
-5. Report at minimum:
-   - exact3 / full 345 denominator,
-   - SECOND TOP1/TOP2/TOP3 on head-hit races,
-   - conditional THIRD TOP1/TOP2/TOP3 when THIRD is under study,
-   - by actual SECOND boat,
-   - outer 4/5/6 capture,
-   - monthly breakdown,
-   - worst month,
-   - change vs BASE.
-6. Prefer broad, stable gains over one-month spikes.
-7. If a gain comes from a suspicious feature, stop and perform a causal/leakage audit before continuing.
+5. Report at minimum exact3/full345, SECOND TOP1/TOP2/TOP3, by-boat outer capture, monthly, worst month, and delta vs BASE.
+6. Prefer broad stable gains over one-month spikes.
+7. If a gain comes from a suspicious feature, stop that branch and perform a causal/leakage audit before accepting it.
 8. Save summary markdown + config CSV + race-level CSV to GitHub.
 9. Update this handoff after every meaningful result, failure, fix, or design change.
 10. Never discard failed experiments silently; record why they failed and whether the result is invalid.
 11. Preserve the next auto-research step so a new chat can resume without redesigning the research plan.
 
-## Automatic next-step policy
-After v311:
-- If one or more clean families improve SECOND TOP2 stably, build v312 as a compact SECOND model around those families and test outer-specialist/gating blends.
-- If gains are concentrated only in one month or one boat, audit before continuing.
-- If SECOND TOP2 cannot improve materially, move to alternative ranking formulations (pairwise or inner-vs-outer route gating) without changing the fixed cohort.
-- Once SECOND is stable, rebuild conditional THIRD separately.
-- After SECOND/THIRD stabilize, test a direct 20 ordered-pair model and then ticket policy.
+## Self-continuing research rule — mandatory
+The auto-research must NOT stop merely because the current hypothesis or model family fails.
+- A failed or flat experiment is diagnostic evidence, not a stopping condition.
+- After each valid negative result, inspect the failure decomposition and choose the next materially different hypothesis automatically.
+- Do not endlessly tune one weak formulation. If incremental tuning saturates, switch model class or target decomposition.
+- Keep the 345R/290-head-hit cohort fixed while opponent research is being compared, unless a separate explicitly-labelled experiment studies cohort definition.
+- Keep leak rules unchanged when switching model classes.
+- Continue until one of these explicit stop conditions is reached: (a) a user stops/redefines the research; (b) all planned materially distinct leak-safe approaches have been exhausted and the handoff records the evidence; or (c) a technical/data blocker prevents a valid experiment and the blocker is documented.
+
+## Automatic branch sequence after each result
+1. Feature-family attribution / compact listwise SECOND (v311 line).
+2. Inner-vs-outer route gating with a dedicated outer SECOND specialist for boats 4/5/6.
+3. Pairwise SECOND ranking, including outer-balanced weighting where causally valid.
+4. Multiclass/listwise alternatives with class/route balancing that do not alter evaluation denominator.
+5. Error-driven feature engineering from PRE/prior-only ST, motor, player/form, lane geometry, prior foot/turn, and causal p3/p4; no unsafe `meet_*`.
+6. Once SECOND capture stabilizes, rebuild conditional THIRD separately.
+7. If factorized SECOND×THIRD remains the bottleneck, fit a direct model over 20 ordered (second, third) pairs.
+8. Only after ranking/probability models stabilize, optimize the exactly-3-ticket policy.
+9. For any suspicious large gain, branch immediately into a leakage/causal audit before further optimization.
+
+## Decision rules for moving branches
+- If SECOND TOP2 improves only <= ~0.5pp and outer boats remain essentially unchanged, treat it as weak and move on rather than over-tune.
+- If improvement is concentrated in one month/boat, audit stability and do not accept it as general improvement.
+- If outer capture improves but inner 2/3 collapses enough to reduce overall TOP2/exact3 materially, try gated blending rather than replacing the base ranker wholesale.
+- If SECOND TOP2 stops being the dominant error, move research effort to THIRD or ordered-pair coverage according to the latest failure decomposition.
+- Promotion still requires production-compatible calibration and prospective/outcome-blind validation; Feb-Jun search remains development-only.
 
 ## Research roadmap
-A. SECOND rebuild from scratch
-- clean families: lane prior, racer/form, ST/start, motor, prior player/form, causal p3/p4 head-risk.
-- compare family-only and compact combinations.
-- specifically optimize outer SECOND recovery without collapsing boat2/3 precision.
-
-B. Alternative SECOND formulations
-- listwise softmax/logistic.
-- pairwise ranking.
-- route/gating model: normal inner route vs outer-SECOND route.
-- optional specialist for boats 4-6, blended causally with base ranker.
-
-C. THIRD rebuild after SECOND stabilizes
-- conditional THIRD model P(third | second).
-- evaluate using actual SECOND diagnostically and predicted SECOND operationally.
-
-D. Joint ordered-pair model
-- direct ranking/classification over 20 ordered (second, third) pairs.
-- compare top-3 pair coverage against separate SECOND×THIRD factorization.
-
-E. Ticket policy
-- only after probability/ranking models are stable.
-- compare top-3 joint pairs vs TOP2xTOP2/diversity-aware policies.
-- keep exactly 3 tickets for clean comparison initially.
+A. SECOND rebuild from scratch / family attribution.
+B. Route/gating and outer-specialist SECOND.
+C. Pairwise/multiclass alternative SECOND formulations.
+D. Conditional THIRD rebuild.
+E. Direct 20 ordered-pair model.
+F. Three-ticket policy research.
+G. Prospective production-compatible validation.
 
 ## Promotion rule
 Do not promote opponent changes merely because Feb-Jun development improves. Require leak-safe implementation, stable month-by-month behavior, production-compatible calibration, and prospective/outcome-blind validation before production adoption.
