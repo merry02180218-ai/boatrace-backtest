@@ -31,18 +31,30 @@ TM=list(v298.TEST_MONTHS)
 
 
 def specialist_predict(sl, tm, boats, l2=3.0):
-    boats=set(int(x) for x in boats)
-    tr=sl[(sl.month<tm) & sl.actual2.isin(boats) & sl.boat.astype(int).isin(boats)].copy()
-    te=sl[(sl.month==tm) & sl.boat.astype(int).isin(boats)].copy()
+    boats=tuple(sorted(int(x) for x in boats))
+    boatset=set(boats)
+    tr=sl[(sl.month<tm) & sl.actual2.isin(boatset) & sl.boat.astype(int).isin(boatset)].copy()
+    te=sl[(sl.month==tm) & sl.boat.astype(int).isin(boatset)].copy()
     fs=v311.audited_features(tr)
     fs=[c for c in fs if v311.family(c)!='START']  # v311 development-best family choice
     if not fs: raise RuntimeError(f'v314 no specialist features month={tm} boats={boats}')
-    if pd.to_numeric(tr.y2,errors='coerce').sum() < 8:
-        raise RuntimeError(f'v314 too few specialist positives month={tm} boats={boats}')
-    m=v300.fastbase.FastSecond(float(l2)).fit(tr,fs,'y2')
+    positives=int(pd.to_numeric(tr.y2,errors='coerce').fillna(0).sum())
+    if positives < 8:
+        raise RuntimeError(f'v314 too few specialist positives month={tm} boats={boats} positives={positives}')
+
+    # FastSecond is hard-coded for the original five-candidate SECOND task.
+    # A role specialist has only 2 (inner) or 3 (outer) candidates per race, so use
+    # the same audited FastListwise implementation with the correct group size.
+    m=v300.fastbase.FastListwise(float(l2))
+    m.group_n=len(boats)
+    m.target_col='y2'
+    m.fit(tr,fs,'y2')
+
     te=te.copy(); te['score']=m.score(te)
     out={}
     for code,g in te.groupby('race_code'):
+        if len(g)!=len(boats):
+            raise RuntimeError(f'v314 incomplete specialist test group code={code} boats={boats} n={len(g)}')
         out[str(code).zfill(12)]=v298.v279.probs_within_race(g,'score')
     return out,len(fs)
 
