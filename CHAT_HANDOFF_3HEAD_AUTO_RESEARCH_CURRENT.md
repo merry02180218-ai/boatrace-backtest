@@ -36,43 +36,56 @@
 - decision: **NO_ADOPTION_WAVE4**.
 
 ## Wave 5 — TRUE ordered-pair re-ranking
-- Run **`34706218140`** completed successfully.
-- artifact **`v289-3head-addon-wave5-pair-rerank`**, artifact ID **`10302397653`**.
-- generated-results commit **`b35fa0ccb73dacf0c1d7a365bca137d3012a6bf6`**.
-- distinct from Wave 2: retrained the ordered 2着/3着 pair ranking itself using only prior-month reject races where boat 3 actually won.
-- best method: `ev_target3` / `ev_top10` = **178R / 24 hits / ROI 82.29% / profit -315,260 yen / minimum monthly ROI 0% / 6 red months / max DD 663,710 yen**.
+- Run `34706218140` success; artifact `v289-3head-addon-wave5-pair-rerank`, ID `10302397653`.
+- generated-results commit `b35fa0ccb73dacf0c1d7a365bca137d3012a6bf6`.
+- best `ev_target3` / `ev_top10`: **178R / 24 hits / ROI 82.29% / profit -315,260 yen / minimum monthly ROI 0% / 6 red months / max DD 663,710 yen**.
 - combined v288 + add-on: **272R / ROI 113.49%**.
-- other residual/blend methods were worse (ROI 46.88%–52.32%).
 - decision: **NO_ADOPTION_WAVE5**.
-- rejection reason: pair re-ranking improves on frozen-order ticket research but add-on-only remains materially negative and unstable month-to-month.
 
 ## Wave 6 — separate 2nd-place / 3rd-place role models
-- restarted automatically after Wave 5 rejection because no research run remained active.
-- script: `research_v289_3head_addon_wave6_role_split.py`.
-- workflow: `.github/workflows/research-3head-v289-addon-wave6-role-split.yml`.
-- script commit: `e1070444596a576a40d70e259b56bd43a9d1e443`.
-- workflow-trigger commit: `c12126a1e0fe68ba6065c181ef087ef896e79df4`.
-- structurally distinct from Wave 5: independent opponent-role classifiers for 2着 and 3着, trained only on prior-month reject races where boat 3 won; ticket ordering is role-probability product or role-probability × pre-race odds EV.
-- variants: role-product target3 / role-EV target3 / role-product Top10 / role-EV Top10.
-- exact 10,000-yen Dutch; all evaluation Feb-Aug walk-forward; September outcomes forbidden; v288 overlap zero; fail-closed requirements retained.
-- expected artifact: `v289-3head-addon-wave6-role-split`.
+- Run **`34710538598`** completed successfully.
+- generated-results commit **`7d082f4b5401b8acd979675e608e4d120dd621dd`**.
+- artifact expected/recorded by workflow: `v289-3head-addon-wave6-role-split`.
+- separate 2着/3着 role models trained only on prior-month reject races where boat 3 won.
+- best method `role_ev_top10`: **178R / 24 hits / ROI 66.16% / profit -602,410 yen / minimum monthly ROI 0% / 7 red months / max DD 688,360 yen**.
+- combined v288 + add-on: **272R / ROI 102.93%**.
+- `role_ev_target3`: 178R / 23 hits / ROI 65.34%.
+- product variants were worse: ROI 48.47%–52.94%.
+- decision: **NO_ADOPTION_WAVE6**.
+- rejection reason: independent role decomposition worsened Wave5 and failed every robustness gate.
+
+## Wave 7 — attack-style-conditioned role models
+- auto-restarted because Wave6 finished with no active next research run.
+- script: `research_v289_3head_addon_wave7_attack_role.py`.
+- workflow: `.github/workflows/research-3head-v289-addon-wave7-attack-role.yml`.
+- script commit: `e527d88d24fa93158bfd0ea1eba8b59416e30861`.
+- workflow creation commit: `475c6913e5a8f5972822aa24061def3593d39da2`.
+- explicit trigger commit: `9a10c3b52d7a293dfca9b05925f32c83899a80d7`.
+- Actions Run **`34712587015`** currently in progress.
+- candidate remains only final v288 NO_BET.
+- pre-race regime is derived from `f__c_attack3_stretch` vs `f__c_attack3_turn`; missing regime => fail closed.
+- separate 2着/3着 role models are trained within the same prior-month regime only; no current-month outcome enters fitting.
+- variants: attack-role product / odds-EV × target3 / Top10; exact 10,000-yen Dutch.
+- required output: add-on R/hits/hit rate/ROI/profit, monthly ROI, minimum month ROI, red months, max DD, v288 overlap, combined totals.
+- expected artifact: `v289-3head-addon-wave7-attack-role`.
 
 ## What NOT to repeat
-- simple coverage-fraction tweaks of Wave-1 scores.
-- simple TopN/composite-odds changes on frozen V221 order.
-- PRE-B families already tested in Wave 3.
+- simple Wave1 coverage/threshold tweaks.
+- TopN/composite-odds changes on frozen V221 order.
+- PRE-B families already tested in Wave3.
 - venue/archetype segmentation without adequate sample.
-- Wave-5 ordered-pair residual/blend/EV reranking unchanged.
+- Wave5 ordered-pair reranking unchanged.
+- Wave6 global 2nd/3rd role split unchanged.
 
 ## Real-operation audit
-- v288 baseline overlap is zero by construction in evaluated add-on populations.
-- every test-month fit uses prior-month outcomes only; current-month result/payout is settlement/evaluation only.
+- v288 baseline overlap must remain zero.
+- every test-month fit uses only prior-month outcomes; current-month result/payout is settlement/evaluation only.
 - source max date 2026-08-31; September outcomes excluded from tuning.
-- all promoted/shadow routes must use inputs obtainable before deadline and fail closed on missing required current inputs.
-- exact 10,000-yen Dutch settlement is retained where tickets are evaluated.
-- no production workflow/model was changed.
+- all inputs used for any shadow/production route must be obtainable before deadline; required-current missingness must fail closed.
+- exact 10,000-yen Dutch settlement retained.
+- no production workflow/model changed.
 
 ## Exact restart point
-1. Finish Wave 6 CI; if it fails, inspect logs, fix, and rerun.
-2. If Wave 6 produces a robust historical passer (>=20R, ROI>=100%, minimum monthly ROI>=60%, <=3 red months), advance only to September outcome-blind shadow, never directly over v288.
-3. If Wave 6 is rejected, next distinct family should condition opponent roles on motor/racer role or generate a genuinely new PRE candidate population; do not revisit failed Wave1–5 families unchanged.
+1. Finish Wave7 Run `34712587015`; inspect/fix/re-run automatically if it fails.
+2. If Wave7 passes historical gates (>=20R, ROI>=100%, minimum monthly ROI>=60%, <=3 red months), advance only to September outcome-blind shadow.
+3. If rejected, next family must be genuinely distinct again: motor/racer-role conditioned ordering or a new PRE candidate-generation population; do not revisit Wave1–6 unchanged.
