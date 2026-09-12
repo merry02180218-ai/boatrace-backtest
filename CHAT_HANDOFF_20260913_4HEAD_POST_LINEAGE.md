@@ -19,7 +19,7 @@ Previous handoff: `CHAT_HANDOFF_20260913_4HEAD_LIVE_FEATURE_BUILDER.md`.
 - Generalized official `beforeinfo` result-blind acquisition layer is accepted; CI `34721199607` passed.
 - Full one-click LIVE remains incomplete at exact current-day feature construction/parity.
 
-## This run — POST 16-feature lineage/schema milestone
+## POST 16-feature lineage/schema milestone
 
 Goal: resume the stalled LIVE feature-construction research without changing v291 and without touching Jul/Aug/Sep outcomes.
 
@@ -55,7 +55,7 @@ Commits:
 - `ce07d643e399688c7dc8070f8ef86589b01d3fdf` — lineage manifest
 - `9f0e79b00a63cfc0f239ef7b894ad3265e8638eb` — verifier
 - `bd2c1863968995f7684aabe46404284f8ace9c81` — CI workflow
-- `2ec4ccfa600812b781c3f1cf65bf8191894cea1f` — this handoff milestone
+- `2ec4ccfa600812b781c3f1cf65bf8191894cea1f` — handoff milestone
 
 ### CI result
 
@@ -73,14 +73,57 @@ Reason:
 - the verifier explicitly does **not** claim current-day value parity;
 - the dedicated CI is green (`34723924296`).
 
-### Not yet accepted
+## 2026-09-13 source-availability audit — official beforeinfo vs POST exhibition inputs
 
-A current-day POST LIVE builder is **NOT accepted yet**. The official `beforeinfo` snapshot still must be mapped to the historical ST/tilt semantics, and the availability/timing of the three original-exhibition values (`straight/lap/turn`) must be proven. Any unavailable field must fail closed; median/default substitution is not authorization to fabricate LIVE data.
+The official result-blind `beforeinfo` surface was audited against the seven exhibition-side POST features. No result/payout endpoint or September outcome was used.
 
-## Next research step
+### Important result
 
-1. Map official pre-result source fields to the 7 exhibition-side POST features and parity-test against Apr–Jun result-free fixtures.
-2. Then repeat the same source-to-feature proof for ENV_ENTRY 25 inputs, A-LIVE 17 keys, v283 SECOND 5 rows and conditional THIRD 20 rows.
-3. Only after exact value parity/schema completeness should these immutable inputs be fed to `run_4head_v291_varn_live.py`.
+The central official `beforeinfo` page directly exposes enough pre-result source data for **4/7** POST exhibition features:
 
-Current status: **important progress; POST lineage is fully identified 16/16 and dedicated CI is green, but one-click LIVE remains incomplete pending current-day value parity and downstream ENV/A/v283 lineage.**
+- `ex_st_rank4` — start-exhibition ST table exists; exact historical `rank_score` mapping still requires value parity.
+- `ex_st_4` — boat-4 start-exhibition ST exists.
+- `ex_st_edge_4v3` — boat-3 and boat-4 start-exhibition ST exist.
+- `tilt4` — boat-4 tilt exists; exact historical `tiltval` semantics remain fixed.
+
+But the same official central `beforeinfo` page does **not** expose the historical original-exhibition metrics required for:
+
+- `orig_straight4`
+- `orig_lap4`
+- `orig_turn4`
+
+Therefore the previous assumption that `beforeinfo` alone might complete all seven exhibition-side POST values is rejected. Those three fields remain **UNPROVEN_SOURCE_FAIL_CLOSED**. They must not be replaced by 0.5/defaults merely because historical constructors have fallback values; doing that would fabricate a current-day LIVE input and break production parity.
+
+Added:
+- `artifacts/head4_post_live_source_audit_v1.json`
+- `verify_4head_post_live_source_audit.py`
+- `.github/workflows/validate-4head-post-live-source-audit.yml`
+
+Commits:
+- `9b038f75af598ddbf4eba0fcdbea0ae9434060ac` — source audit manifest
+- `e2a356528cee61fc6c878d4f0a0c15fa9ceb66b7` — fail-closed verifier
+- `43035c631db2bdf3331f368b5b637fc399de8a7c` — dedicated CI workflow
+
+Dedicated CI run: `34726307714` (started from commit `43035c631db2bdf3331f368b5b637fc399de8a7c`; conclusion must be checked before promoting this milestone).
+
+### Decision
+
+**ACCEPT the source-availability classification as research evidence; DO NOT accept a complete current-day POST builder yet.**
+
+Reason:
+- source availability is proven without touching outcomes;
+- v291/v283/A-LIVE/variable-N semantics are unchanged;
+- missing original-exhibition fields are explicitly fail-closed rather than imputed/fabricated;
+- exact ST numeric representation (including F-start handling) and Apr–Jun parity still must be demonstrated before feeding these values into frozen inference.
+
+## Not yet accepted / current blocker
+
+A current-day POST LIVE builder is **NOT accepted yet**.
+
+Remaining work now narrows to:
+1. Prove exact official-beforeinfo -> historical `stt` numeric mapping, including F-start representation, on Apr–Jun result-free fixtures.
+2. Identify and prove a pre-result causal source for original-exhibition straight/lap/turn values. If no source can be proven for a target venue/race, production must fail closed for that target.
+3. After complete POST parity, repeat source-to-feature proof for ENV_ENTRY 25 inputs, A-LIVE 17 keys, v283 SECOND 5 rows and conditional THIRD 20 rows.
+4. Only after exact value parity/schema completeness feed immutable inputs to `run_4head_v291_varn_live.py`.
+
+Current status: **important new result: official central beforeinfo covers 4/7 exhibition-side POST inputs, while original-exhibition 3/7 remain source-unproven and are now explicitly fail-closed. v291 remains unchanged.**
