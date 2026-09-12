@@ -1,0 +1,42 @@
+name: v311 second family autoresearch
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v311_1head_opponent_second_family_autoresearch.py'
+      - '.github/workflows/research-20260912-v311-second-family-autoresearch.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Run v311 SECOND family auto-research
+        run: python run_v311_1head_opponent_second_family_autoresearch.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v311-second-family-autoresearch
+          path: |
+            analysis_v311_1head_opponent_second_family_autoresearch_*.csv
+            summary_v311_1head_opponent_second_family_autoresearch.md
+          if-no-files-found: ignore
+      - name: Commit outputs
+        if: success()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add analysis_v311_1head_opponent_second_family_autoresearch_*.csv summary_v311_1head_opponent_second_family_autoresearch.md
+          git diff --cached --quiet || git commit -m 'Add v311 SECOND family auto-research results'
+          git push
