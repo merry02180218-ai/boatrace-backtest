@@ -13,7 +13,7 @@ on:
       race_date:
         description: YYYYMMDD
         required: true
-        default: '20260909'
+        default: '20260910'
       stadium:
         description: e.g. 01kiryu
         required: true
@@ -33,7 +33,7 @@ on:
       entry_order:
         description: top-to-bottom exhibition entry order
         required: true
-        default: '1,2,4,5,6,3'
+        default: '1,2,3,4,5,6'
 
 permissions:
   contents: read
@@ -44,12 +44,12 @@ jobs:
     runs-on: [self-hosted, japan]
     timeout-minutes: 8
     env:
-      RACE_DATE: ${{ github.event_name == 'workflow_dispatch' && inputs.race_date || '20260909' }}
+      RACE_DATE: ${{ github.event_name == 'workflow_dispatch' && inputs.race_date || '20260910' }}
       STADIUM: ${{ github.event_name == 'workflow_dispatch' && inputs.stadium || '01kiryu' }}
       RACE: ${{ github.event_name == 'workflow_dispatch' && inputs.race || '12' }}
       CLIP_START_SEC: ${{ github.event_name == 'workflow_dispatch' && inputs.clip_start_sec || '82' }}
       CLIP_DURATION_SEC: ${{ github.event_name == 'workflow_dispatch' && inputs.clip_duration_sec || '52' }}
-      ENTRY_ORDER: ${{ github.event_name == 'workflow_dispatch' && inputs.entry_order || '1,2,4,5,6,3' }}
+      ENTRY_ORDER: ${{ github.event_name == 'workflow_dispatch' && inputs.entry_order || '1,2,3,4,5,6' }}
       LOCAL_PYTHON: C:\Users\merry\AppData\Local\Programs\Python\Python311\python.exe
     steps:
       - uses: actions/checkout@v4
