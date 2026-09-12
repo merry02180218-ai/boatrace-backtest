@@ -21,7 +21,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - run: pip install numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
       - name: Require reusable causal cache
         run: |
           test -f CACHE_V313_1HEAD_OPPONENT_CAUSAL.md
