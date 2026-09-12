@@ -1,0 +1,63 @@
+name: acquire SES fourth sample
+
+on:
+  push:
+    paths:
+      - '.github/workflows/acquire-ses-fourth-sample.yml'
+  workflow_dispatch:
+    inputs:
+      race_date:
+        description: YYYYMMDD
+        required: true
+        default: '20260910'
+      stadium:
+        description: e.g. 01kiryu
+        required: true
+        default: '01kiryu'
+      race:
+        description: race number 1-12
+        required: true
+        default: '6'
+      clip_start_sec:
+        description: VOD seek start seconds
+        required: true
+        default: '82'
+      clip_duration_sec:
+        description: clip duration seconds
+        required: true
+        default: '52'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  acquire:
+    runs-on: [self-hosted, japan]
+    timeout-minutes: 6
+    env:
+      RACE_DATE: ${{ github.event_name == 'workflow_dispatch' && inputs.race_date || '20260910' }}
+      STADIUM: ${{ github.event_name == 'workflow_dispatch' && inputs.stadium || '01kiryu' }}
+      RACE: ${{ github.event_name == 'workflow_dispatch' && inputs.race || '6' }}
+      CLIP_START_SEC: ${{ github.event_name == 'workflow_dispatch' && inputs.clip_start_sec || '82' }}
+      CLIP_DURATION_SEC: ${{ github.event_name == 'workflow_dispatch' && inputs.clip_duration_sec || '52' }}
+      LOCAL_PYTHON: C:\Users\merry\AppData\Local\Programs\Python\Python311\python.exe
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify runtime
+        shell: powershell
+        run: |
+          & $env:LOCAL_PYTHON --version
+          ffmpeg -version | Select-Object -First 1
+          & $env:LOCAL_PYTHON -c "import playwright; print('runtime ok')"
+      - name: Fetch result-blind exhibition clip only
+        shell: powershell
+        run: '& $env:LOCAL_PYTHON download_boatcast_exhibition_fastclip.py'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ses-fourth-sample-${{ env.RACE_DATE }}-${{ env.STADIUM }}-${{ env.RACE }}
+          path: |
+            boatcast_*_startclip.mp4
+            boatcast_*_startclip.json
+          if-no-files-found: error
