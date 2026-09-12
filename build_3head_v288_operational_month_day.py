@@ -2,8 +2,8 @@
 """Build one leakage-controlled historical day as if v288 were operated live for a month.
 
 The month is frozen at its first day: head/pair models and PRE score thresholds use only
-history strictly before --month-first.  Target-day result/payout/exhibition are not used
-while PRE/cache are built.  Past days inside the evaluation month may be used only as
+history strictly before --month-first. Target-day result/payout/exhibition are not used
+while PRE/cache are built. Past days inside the evaluation month may be used only as
 past information by the feature builders/bias calculation.
 """
 from __future__ import annotations
@@ -96,9 +96,6 @@ def main() -> None:
         if not out: raise RuntimeError(f'no current PRE rows built cards={len(cards)} waku={len(waku)}')
         return pd.DataFrame(out)
 
-    # Mirror the production builder, but remove every base row from the evaluation
-    # month before appending the single target day.  This prevents target/future
-    # outcomes from entering the augmented frame while preserving frozen month fit.
     def build_augmented_frozen():
         cov=pd.read_csv(pre.COV,dtype={'date':str,'source':str})
         if (cov.source=='missing').any(): raise RuntimeError('restored historical Waku10 has missing days')
@@ -147,7 +144,29 @@ def main() -> None:
     try:
         bundle=build_augmented_frozen()
         pre.build_augmented=lambda:bundle
-        pre.main(); cache.main()
+        pre.main()
+        q=pd.read_csv(pre_csv,dtype={'race_code':str}) if pre_csv.exists() and pre_csv.stat().st_size else pd.DataFrame()
+        if q.empty:
+            d=bundle[0]
+            today=d[d._date==pd.Timestamp(day)].copy()
+            # A true production watcher would never enter the expensive LIVE scorer
+            # when PRE has no candidate. Keep a minimal auditable cache so historical
+            # replay records a clean NO_BET day without fitting unused models.
+            joblib.dump({
+                'current_rows':today,
+                'pre_candidates':{},
+                'st_bias':target_bias(),
+                'date':day8,
+                'history_cutoff':a.history_cutoff,
+                'target_result_or_payout_used':False,
+                'operational_pre_percentile_bridge':False,
+                'operational_pre_training_quantile':True,
+                'operational_month_replay':True,
+                'zero_pre_fast_path':True,
+            },cache_path,compress=3)
+            print('CACHE_READY_ZERO_PRE',cache_path,'rows',len(today),flush=True)
+        else:
+            cache.main()
     finally:
         pre.build_augmented=original_build; pre.learn_bias=original_bias; pre.make_current_base=original_base; pre.operational_pre_grade=original_grade
 
@@ -157,7 +176,7 @@ def main() -> None:
     z['target_result_or_payout_used']=False
     joblib.dump(z,cache_path,compress=3)
 
-    q=pd.read_csv(pre_csv,dtype={'race_code':str}) if pre_csv.exists() else pd.DataFrame()
+    q=pd.read_csv(pre_csv,dtype={'race_code':str}) if pre_csv.exists() and pre_csv.stat().st_size else pd.DataFrame()
     candidates=[] if q.empty else q.race_code.astype(str).str.zfill(12).tolist()
     manifest={
       'policy':'3HEAD_V288_OPERATIONAL_MONTH_REPLAY','target_date':day.isoformat(),'target_date_yyyymmdd':day8,
@@ -168,6 +187,7 @@ def main() -> None:
       'cards_sha256':sha256(cards_path),'waku_sha256':sha256(waku_path),'cache_sha256':sha256(cache_path),
       'evaluation_month_rows_removed_from_training_frame':True,
       'pre_score_training_filtered_before_month_first':True,
+      'zero_pre_fast_path':len(candidates)==0,
       'rule_version':'v288-fixed-later; operational replay, not pristine model-selection evidence'
     }
     (outdir/'daily_manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
