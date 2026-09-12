@@ -1,0 +1,66 @@
+name: freeze-4head-v291-downstream
+
+on:
+  push:
+    paths:
+      - 'freeze_4head_v291_downstream_artifacts.py'
+      - '.github/workflows/freeze-4head-v291-downstream.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  freeze-and-parity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn catboost requests beautifulsoup4 joblib
+      - name: Syntax check
+        run: python -m py_compile freeze_4head_v291_downstream_artifacts.py
+      - name: Reproduce June and freeze <=2026-06-30 artifacts
+        run: python freeze_4head_v291_downstream_artifacts.py
+      - name: Validate artifact invariants
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('artifacts/head4_v291_downstream_20260630.json')
+          r=Path('artifacts/head4_v291_downstream_parity_20260630.json')
+          assert p.exists() and r.exists()
+          a=json.loads(p.read_text())
+          q=json.loads(r.read_text())
+          assert q['status']=='PASS', q
+          assert a['frozen_training_cutoff']=='2026-06-30'
+          assert a['production_inference_only'] is True
+          assert a['jul_aug_labels_used'] is False
+          assert a['september_labels_used'] is False
+          assert a['v96_production_signal_used'] is False
+          assert a['v283_pair_policy']=={'alpha2':0.60,'mode':'TOP2XTOP2','top_n':4}
+          assert a['thresholds']=={'COMPOSITE':7.0,'ENV_ENTRY':0.22479,'POST':0.25,'PRE':0.28}
+          for k in ('POST','ENV_ENTRY','v283_SECOND','v283_COND_THIRD'):
+              assert a[k]['features'], k
+              assert len(a[k]['features'])==len(a[k]['imputer_median'])==len(a[k]['scaler_mean'])==len(a[k]['scaler_scale'])
+          print('artifact invariants OK')
+          PY
+      - name: Upload generated artifact and parity report
+        uses: actions/upload-artifact@v4
+        with:
+          name: head4-v291-downstream-freeze
+          path: |
+            artifacts/head4_v291_downstream_20260630.json
+            artifacts/head4_v291_downstream_parity_20260630.json
+      - name: Commit frozen artifact on exact parity
+        run: |
+          if git diff --quiet -- artifacts/head4_v291_downstream_20260630.json artifacts/head4_v291_downstream_parity_20260630.json; then
+            echo 'Artifacts already identical; nothing to commit.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add artifacts/head4_v291_downstream_20260630.json artifacts/head4_v291_downstream_parity_20260630.json
+          git commit -m 'Freeze HEAD4 v291 downstream inference artifacts'
+          git push
