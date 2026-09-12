@@ -1,0 +1,74 @@
+name: research-3head-v289-addon-wave9-independent-pre-head
+
+on:
+  push:
+    branches:
+      - 'research/3head-v289-addon-expansion'
+    paths:
+      - 'research_v289_3head_addon_wave9_independent_pre_head.py'
+      - '.github/workflows/research-3head-v289-addon-wave9-independent-pre-head.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  PYTHONUNBUFFERED: '1'
+
+jobs:
+  wave9-independent-pre-head:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Download frozen canonical v243 audit artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
+          cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
+      - name: Run Wave 9 independent PRE head research
+        run: python research_v289_3head_addon_wave9_independent_pre_head.py
+      - name: Verify guards
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('research_v289_3head_addon_wave9_independent_pre_head.json',encoding='utf-8'))
+          assert d['source_max_date'] <= '2026-08-31'
+          assert d['rules']['september_outcomes_used'] is False
+          assert d['rules']['selected_feature_missing_current']=='FAIL_CLOSED'
+          assert d['baseline']['races']==94
+          assert d['baseline']['hits']==52
+          assert abs(d['baseline']['payout_yen']-1622070.0)<0.01
+          assert all(x['overlap_with_v288']==0 for x in d['methods'])
+          print('V289_WAVE9_GUARDS_OK')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v289-3head-addon-wave9-independent-pre-head
+          path: |
+            research_v289_3head_addon_wave9_independent_pre_head.json
+            research_v289_3head_addon_wave9_independent_pre_head.md
+            CHAT_HANDOFF_3HEAD_AUTO_RESEARCH_CURRENT.md
+          if-no-files-found: ignore
+      - name: Persist Wave 9 reports
+        if: success()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add research_v289_3head_addon_wave9_independent_pre_head.json research_v289_3head_addon_wave9_independent_pre_head.md
+          if git diff --cached --quiet; then
+            echo 'No report changes.'
+          else
+            git commit -m 'Record v289 3-head add-on wave9 independent PRE results'
+            git pull --rebase origin ${GITHUB_REF_NAME}
+            git push origin HEAD:${GITHUB_REF_NAME}
+          fi
