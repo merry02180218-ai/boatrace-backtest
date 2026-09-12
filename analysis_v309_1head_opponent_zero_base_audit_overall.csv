@@ -1,0 +1,2 @@
+R,head_hits,head_rate,exact3_hits,exact3_rate,second_top1_on_headwins,second_top2_on_headwins,second_top3_on_headwins,third_top1_given_actual2_on_headwins,third_top2_given_actual2_on_headwins,third_top3_given_actual2_on_headwins
+345,290,0.8405797101449275,132,0.3826086956521739,0.4379310344827586,0.7172413793103448,0.8793103448275862,0.41379310344827586,0.7275862068965517,0.9103448275862069
