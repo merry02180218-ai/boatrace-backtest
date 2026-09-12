@@ -36,3 +36,4 @@ jobs:
           git commit -m 'Add v303 head-model transfer outputs'
           git pull --rebase origin main
           git push
+# trigger: 2026-09-12T15:00+09:00
