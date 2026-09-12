@@ -1,0 +1,49 @@
+{
+  "schema": "head4_post_feature_lineage_v1",
+  "policy": "HEAD4_V291_COMP7_VARN_F4_N16",
+  "frozen_training_cutoff": "2026-06-30",
+  "outcome_policy": {
+    "jul_aug_2026": "NON-PRISTINE; outcomes forbidden for fitting/tuning/promotion",
+    "sep_2026": "outcome-blind; results/payouts forbidden"
+  },
+  "reference_artifact": "artifacts/head4_v291_downstream_20260630.json",
+  "historical_constructor": "analyze_v250_4head_rebuild_baseline.py",
+  "feature_order": [
+    "legacy_score4",
+    "racer4",
+    "hist_st_edge_4v3",
+    "wall3_weak",
+    "inner12_resistance",
+    "motor4_2ren",
+    "motor4_hist",
+    "turnfoot4_prior",
+    "past_win4",
+    "ex_st_rank4",
+    "ex_st_4",
+    "ex_st_edge_4v3",
+    "orig_straight4",
+    "orig_lap4",
+    "orig_turn4",
+    "tilt4"
+  ],
+  "features": {
+    "legacy_score4": {"stage":"PRE","constructor":"pre_features","expression":"safe(s4)","source_lineage":"process_features(...)->s4","live_status":"requires frozen PRE-side input"},
+    "racer4": {"stage":"PRE","constructor":"pre_features","expression":"safe(features4(x)['4選手力'])","source_lineage":"backtest_v18_core45.features4","live_status":"requires frozen PRE-side input"},
+    "hist_st_edge_4v3": {"stage":"PRE","constructor":"pre_features","expression":"safe(features4(x)['4_ST優位'])","source_lineage":"backtest_v18_core45.features4","live_status":"requires frozen PRE-side input"},
+    "wall3_weak": {"stage":"PRE","constructor":"pre_features","expression":"safe(features4(x)['3壁弱さ'])","source_lineage":"backtest_v18_core45.features4","live_status":"requires frozen PRE-side input"},
+    "inner12_resistance": {"stage":"PRE","constructor":"pre_features","expression":"safe(resistance12(x))","source_lineage":"backtest_v4.resistance12","live_status":"requires frozen PRE-side input"},
+    "motor4_2ren": {"stage":"PRE","constructor":"pre_features","expression":"safe(x[4].get('motor2'))","source_lineage":"process_features boat-4 state","live_status":"requires frozen PRE-side input"},
+    "motor4_hist": {"stage":"PRE","constructor":"pre_features","expression":"safe(x[4].get('mhist'))","source_lineage":"process_features boat-4 state","live_status":"requires frozen PRE-side input"},
+    "turnfoot4_prior": {"stage":"PRE","constructor":"pre_features","expression":"safe(x[4].get('turnfoot'))","source_lineage":"process_features boat-4 state","live_status":"requires frozen PRE-side input"},
+    "past_win4": {"stage":"PRE","constructor":"pre_features","expression":"safe(x[4].get('past_win'))","source_lineage":"process_features boat-4 state","live_status":"requires frozen PRE-side input"},
+    "ex_st_rank4": {"stage":"POST","constructor":"post_features","expression":"rank_score({boat: start_exhibition}, 4, True), default .5","source_lineage":"data/previews/stt historical semantics","live_status":"official beforeinfo mapping still to parity-test"},
+    "ex_st_4": {"stage":"POST","constructor":"post_features","expression":"safe(stt['艇4_スタート展示'], .20)","source_lineage":"data/previews/stt historical semantics","live_status":"official beforeinfo mapping still to parity-test"},
+    "ex_st_edge_4v3": {"stage":"POST","constructor":"post_features","expression":"safe(stt['艇3_スタート展示'],.20)-safe(stt['艇4_スタート展示'],.20)","source_lineage":"data/previews/stt historical semantics","live_status":"official beforeinfo mapping still to parity-test"},
+    "orig_straight4": {"stage":"POST","constructor":"post_features","expression":"safe(original_scores(orig,4)['straight'], .5)","source_lineage":"data/previews/original_exhibition + analyze_v23_20260902_daypreview.original_scores","live_status":"causal source availability must be proven; fail closed if absent"},
+    "orig_lap4": {"stage":"POST","constructor":"post_features","expression":"safe(original_scores(orig,4)['lap'], .5)","source_lineage":"data/previews/original_exhibition + analyze_v23_20260902_daypreview.original_scores","live_status":"causal source availability must be proven; fail closed if absent"},
+    "orig_turn4": {"stage":"POST","constructor":"post_features","expression":"safe(original_scores(orig,4)['turn'], .5)","source_lineage":"data/previews/original_exhibition + analyze_v23_20260902_daypreview.original_scores","live_status":"causal source availability must be proven; fail closed if absent"},
+    "tilt4": {"stage":"POST","constructor":"post_features","expression":"safe(tiltval(tkz['艇4_チルト']), 0.0)","source_lineage":"data/previews/tkz + analyze_v33_tilt_effect.tiltval","live_status":"official beforeinfo mapping still to parity-test"}
+  },
+  "decision": "ACCEPT lineage/schema manifest only; NOT approval of a current-day LIVE builder",
+  "remaining_blocker": "map official result-blind current-day sources to these historical semantics and prove value parity; then continue ENV_ENTRY/A-LIVE/v283"
+}
