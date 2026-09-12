@@ -7,6 +7,10 @@ on:
       - '.github/workflows/freeze-4head-v291-downstream.yml'
   workflow_dispatch:
 
+concurrency:
+  group: freeze-4head-v291-downstream
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -41,6 +45,11 @@ jobs:
           assert a['v96_production_signal_used'] is False
           assert a['v283_pair_policy']=={'alpha2':0.60,'mode':'TOP2XTOP2','top_n':4}
           assert a['thresholds']=={'COMPOSITE':7.0,'ENV_ENTRY':0.22479,'POST':0.25,'PRE':0.28}
+          assert q['POST']['max_training_date'] <= '2026-06-30'
+          assert q['ENV_ENTRY']['max_training_date'] <= '2026-06-30'
+          assert q['v283']['max_training_month'] <= '2026-06'
+          if q['v283']['max_training_date'] is not None:
+              assert q['v283']['max_training_date'] <= '2026-06-30'
           for k in ('POST','ENV_ENTRY','v283_SECOND','v283_COND_THIRD'):
               assert a[k]['features'], k
               assert len(a[k]['features'])==len(a[k]['imputer_median'])==len(a[k]['scaler_mean'])==len(a[k]['scaler_scale'])
