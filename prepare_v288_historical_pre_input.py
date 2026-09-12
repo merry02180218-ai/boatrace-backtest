@@ -135,10 +135,9 @@ def official_racelist_card(day8,day_iso,jo,rno):
           pre+'ボート番号':boat[0],pre+'ボート2連対率':boat[1],pre+'ボート3連対率':boat[2],
           pre+'F本数':fcnt,pre+'L本数':lcnt,pre+'早見':''})
 
-        # The official racelist embeds prior meeting results as links, but we do
-        # not request those result endpoints. Use the link dates only to count
-        # slots that are strictly before the target day, then take the matching
-        # ST cells from the same displayed history grid. Same-day slots are cut.
+        # Prior meeting information is already printed on racelist. We never
+        # request any result link; its hd parameter is used only to exclude
+        # same-day/future history slots.
         end=summaries[k+1][0] if k+1<len(summaries) else len(trs)
         group=trs[idx:end]
         prior_slots=0
@@ -206,12 +205,24 @@ def main():
         raise RuntimeError(f'no archived/pre-race cards from approved sources {a.date}')
 
     wm=bycode(waku0); recovered=[]; missing=[]
+    need=[]
     for card in cards:
         code=str(card.get('レースコード','')).zfill(12)
-        if code in wm: continue
-        z=fetch_race(a.date,code)
-        if z: wm[code]=z;recovered.append(code)
-        else: missing.append(code)
+        if code not in wm:need.append(code)
+    if need:
+        got={}
+        with ThreadPoolExecutor(max_workers=16) as ex:
+            fut={ex.submit(fetch_race,a.date,code):code for code in need}
+            for f in as_completed(fut):
+                code=fut[f]
+                try:z=f.result()
+                except Exception:z=None
+                if z:got[code]=z
+        for code in need:
+            if code in got:
+                wm[code]=got[code];recovered.append(code)
+            else:missing.append(code)
+        print('WAKU_PARALLEL_RECOVERY','need',len(need),'recovered',len(recovered),'missing',len(missing),flush=True)
 
     # Production semantics are fail-closed per race; preserve all complete card+waku rows.
     cc=[];ww=[]
