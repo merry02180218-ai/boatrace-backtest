@@ -24,7 +24,7 @@ on:
       race:
         description: race number 1-12
         required: true
-        default: '3'
+        default: '12'
       clip_start_sec:
         description: VOD seek start seconds
         required: true
@@ -49,7 +49,7 @@ jobs:
     env:
       RACE_DATE: ${{ github.event_name == 'workflow_dispatch' && inputs.race_date || '20260910' }}
       STADIUM: ${{ github.event_name == 'workflow_dispatch' && inputs.stadium || '01kiryu' }}
-      RACE: ${{ github.event_name == 'workflow_dispatch' && inputs.race || '3' }}
+      RACE: ${{ github.event_name == 'workflow_dispatch' && inputs.race || '12' }}
       CLIP_START_SEC: ${{ github.event_name == 'workflow_dispatch' && inputs.clip_start_sec || '82' }}
       CLIP_DURATION_SEC: ${{ github.event_name == 'workflow_dispatch' && inputs.clip_duration_sec || '52' }}
       ENTRY_ORDER: ${{ github.event_name == 'workflow_dispatch' && inputs.entry_order || '1,2,3,4,5,6' }}
