@@ -1,0 +1,43 @@
+name: validate-4head-v291-downstream-inference
+
+on:
+  push:
+    paths:
+      - 'head4_v291_downstream_inference.py'
+      - 'verify_4head_v291_downstream_inference.py'
+      - 'artifacts/head4_v291_downstream_20260630.json'
+      - '.github/workflows/validate-4head-v291-downstream-inference.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy
+      - name: Syntax check
+        run: |
+          python -m py_compile head4_v291_downstream_inference.py
+          python -m py_compile verify_4head_v291_downstream_inference.py
+      - name: Assert inference module contains no training calls
+        run: |
+          if grep -nE '\.fit\(' head4_v291_downstream_inference.py; then
+            echo 'ERROR: production inference module contains .fit()'
+            exit 1
+          fi
+          if grep -nE '(^|[[:space:]])from[[:space:]]+sklearn|(^|[[:space:]])import[[:space:]]+sklearn' head4_v291_downstream_inference.py; then
+            echo 'ERROR: production inference module imports sklearn'
+            exit 1
+          fi
+      - name: Verify frozen inference math and guards offline
+        run: python verify_4head_v291_downstream_inference.py
+      - name: Validate real artifact when present
+        run: |
+          if [ -f artifacts/head4_v291_downstream_20260630.json ]; then
+            python head4_v291_downstream_inference.py
+          else
+            echo 'Frozen artifact not committed yet; synthetic verifier passed.'
+          fi
