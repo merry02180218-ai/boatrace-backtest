@@ -1,0 +1,52 @@
+name: v314 role-split SECOND autoresearch
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v314_1head_opponent_role_split.py'
+      - '.github/workflows/research-20260913-v314-role-split.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Ensure reusable causal cache exists
+        run: |
+          if [ ! -f CACHE_V313_1HEAD_OPPONENT_CAUSAL.md ] || [ ! -f cache_v313_1head_opponent_pre.csv.gz ] || [ ! -f cache_v313_1head_opponent_p3.csv.gz ] || [ ! -f cache_v313_1head_opponent_p4.csv.gz ]; then
+            python build_v313_1head_opponent_causal_cache.py
+          else
+            echo 'Using committed v313 causal cache'
+          fi
+      - name: Run v314 role-split research
+        run: python run_v314_1head_opponent_role_split.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v314-role-split-second
+          path: |
+            summary_v314_1head_opponent_role_split.md
+            analysis_v314_1head_opponent_role_split_*.csv
+            CACHE_V313_1HEAD_OPPONENT_CAUSAL.md
+          if-no-files-found: warn
+      - name: Commit cache and v314 outputs
+        if: success()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add CACHE_V313_1HEAD_OPPONENT_CAUSAL.md cache_v313_1head_opponent_pre.csv.gz cache_v313_1head_opponent_p3.csv.gz cache_v313_1head_opponent_p4.csv.gz || true
+          git add summary_v314_1head_opponent_role_split.md analysis_v314_1head_opponent_role_split_*.csv
+          git diff --cached --quiet || git commit -m 'Add v314 role-split SECOND results'
+          git pull --rebase origin main
+          git push
