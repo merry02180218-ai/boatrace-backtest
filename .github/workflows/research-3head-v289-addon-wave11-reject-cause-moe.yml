@@ -72,3 +72,4 @@ jobs:
             git pull --rebase origin ${GITHUB_REF_NAME}
             git push origin HEAD:${GITHUB_REF_NAME}
           fi
+# trigger: wave11 after wave10 rejection
