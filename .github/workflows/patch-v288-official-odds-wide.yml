@@ -1,0 +1,82 @@
+name: patch-v288-official-odds-wide
+on:
+  push:
+    paths: ['.github/workflows/patch-v288-official-odds-wide.yml']
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch official closing odds reader
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('replay_v288_historical_day.py')
+          s=p.read_text(encoding='utf-8')
+          old='''def official_closing_odds(day):
+              """Return race_code -> 120-combo map from official long-form odds archive."""
+              ymd=day.strftime('%Y/%m/%d')
+              out={}
+              for r in rows(f'data/official_closing_odds3t/{ymd}.csv'):
+                  code=str(r.get('レースコード','')).zfill(12)
+                  if len(code)!=12:continue
+                  try:
+                      a=int(float(r.get('1着')));b=int(float(r.get('2着')));c=int(float(r.get('3着')))
+                  except:continue
+                  q=ff(r.get('オッズ'))
+                  if q is None or q<=0:continue
+                  out.setdefault(code,{})[f'{a}-{b}-{c}']=q
+              return out
+          '''.replace('              ','')
+          new='''def official_closing_odds(day):
+              """Return race_code -> combo map from either official archive schema.
+
+              Current June archive is wide (one race per row, 120 combo columns).
+              The older long schema is retained for compatibility.
+              """
+              ymd=day.strftime('%Y/%m/%d'); day8=day.strftime('%Y%m%d')
+              out={}
+              for r in rows(f'data/official_closing_odds3t/{ymd}.csv'):
+                  # Wide schema: date,jcd,rno,...,1-2-3,... (120 combo columns)
+                  jcd=str(r.get('jcd','')).strip().zfill(2)
+                  rno=str(r.get('rno','')).strip()
+                  if jcd and rno:
+                      try: code=f'{day8}{int(float(jcd)):02d}{int(float(rno)):02d}'
+                      except: code=''
+                      if code:
+                          om={}
+                          for k,v in r.items():
+                              key=str(k).strip()
+                              if key.count('-')==2:
+                                  parts=key.split('-')
+                                  if all(x in {'1','2','3','4','5','6'} for x in parts) and len(set(parts))==3:
+                                      q=ff(v)
+                                      if q is not None and q>0: om[key]=q
+                          if om: out[code]=om
+                          continue
+                  # Long schema compatibility.
+                  code=str(r.get('レースコード','')).zfill(12)
+                  if len(code)!=12: continue
+                  try:
+                      a=int(float(r.get('1着')));b=int(float(r.get('2着')));c=int(float(r.get('3着')))
+                  except: continue
+                  q=ff(r.get('オッズ'))
+                  if q is None or q<=0: continue
+                  out.setdefault(code,{})[f'{a}-{b}-{c}']=q
+              return out
+          '''.replace('              ','')
+          if old not in s:
+              raise SystemExit('target official_closing_odds block not found')
+          p.write_text(s.replace(old,new),encoding='utf-8')
+          PY
+          git diff --check
+          git diff -- replay_v288_historical_day.py
+      - name: Commit patch
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add replay_v288_historical_day.py
+          git commit -m 'Support wide official closing odds archive in v288 replay'
+          git push
