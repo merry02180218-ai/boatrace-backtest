@@ -1,0 +1,40 @@
+{
+  "schema": "head4_v291_volume_rescue_research_v1",
+  "development_months": [
+    "2026-04",
+    "2026-05",
+    "2026-06"
+  ],
+  "jul_aug_outcomes_used": false,
+  "september_outcomes_used": false,
+  "base": {
+    "n": 4,
+    "composite_floor": 7.0,
+    "stake_yen": 10000,
+    "immutable": true
+  },
+  "scopes": {
+    "S+A": {
+      "selection_tier": "SAFE_VOLUME_120_180",
+      "base_R": 28,
+      "base_roi_pct": 310.98214285714283,
+      "base_min_month_roi_pct": 166.4625,
+      "candidate": {
+        "family": "FIXED",
+        "param": 4,
+        "floor": 5.5,
+        "combined_R": 45,
+        "added_R": 17,
+        "combined_roi_pct": 220.28666666666666,
+        "min_month_roi_pct": 127.42,
+        "status": "RESEARCH_CANDIDATE_NOT_FROZEN"
+      }
+    },
+    "S": {
+      "selection_tier": "NO_SAFE_CANDIDATE",
+      "base_R": 10,
+      "base_roi_pct": 288.47,
+      "base_min_month_roi_pct": 0.0
+    }
+  }
+}
