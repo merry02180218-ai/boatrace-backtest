@@ -45,10 +45,32 @@ def odds_map(row):
 
 
 def official_closing_odds(day):
-    """Return race_code -> 120-combo map from official long-form odds archive."""
-    ymd=day.strftime('%Y/%m/%d')
+    """Return race_code -> combo map from either official archive schema.
+
+    Current June archive is wide (one race per row, 120 combo columns).
+    The older long schema is retained for compatibility.
+    """
+    ymd=day.strftime('%Y/%m/%d'); day8=day.strftime('%Y%m%d')
     out={}
     for r in rows(f'data/official_closing_odds3t/{ymd}.csv'):
+        # Wide schema: date,jcd,rno,...,1-2-3,... (120 combo columns).
+        jcd=str(r.get('jcd','')).strip().zfill(2)
+        rno=str(r.get('rno','')).strip()
+        if jcd and rno:
+            try:code=f'{day8}{int(float(jcd)):02d}{int(float(rno)):02d}'
+            except:code=''
+            if code:
+                om={}
+                for k,v in r.items():
+                    key=str(k).strip()
+                    if key.count('-')==2:
+                        parts=key.split('-')
+                        if all(x in {'1','2','3','4','5','6'} for x in parts) and len(set(parts))==3:
+                            q=ff(v)
+                            if q is not None and q>0:om[key]=q
+                if om:out[code]=om
+                continue
+        # Long schema compatibility.
         code=str(r.get('レースコード','')).zfill(12)
         if len(code)!=12:continue
         try:
@@ -176,7 +198,7 @@ def main():
         actual=str(pr.get('3連単_組番') or '').strip();p100=int(float(pr.get('3連単_払戻金') or 0)) if str(pr.get('3連単_払戻金') or '').strip() else 0
         x['valid_result']=int(bool(rr));x['actual_combo']=actual;x['payout100']=p100
         if x['decision']=='BET':
-            tickets=json.loads(x['tickets_json']); ret=0.0;hit=0
+            tickets=json.loads(x['tickets_json']);ret=0.0;hit=0
             for t in tickets:
                 if t['combo']==actual and int(t['stake'])>0:
                     hit=1;ret=float(t['stake'])*float(t['odds']);break
