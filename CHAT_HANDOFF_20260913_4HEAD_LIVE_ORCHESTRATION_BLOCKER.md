@@ -36,42 +36,46 @@ A-LIVE frozen inference is available through:
 
 A added-race rescue remains REJECTED. A may classify a layer but does not authorize bypassing v291 entry.
 
-## New readiness audit finding — IMPORTANT BLOCKER
+## Readiness audit status
 
-The remaining one-click chain is not production-ready yet:
+The remaining one-click chain is:
 
 `daily PRE -> current exhibition/beforeinfo -> POST -> ENV_ENTRY -> A 17 features -> v283 SECOND/conditional THIRD features -> frozen downstream inference -> market runner`
 
-Two concrete blockers were confirmed from latest GitHub.
+### Blocker 1 — RESOLVED: frozen downstream production artifact persisted
 
-### Blocker 1 — frozen downstream production artifact is not persisted on main
-
-`head4_v291_downstream_inference.py` defaults to:
+The original audit found that `head4_v291_downstream_inference.py` expected:
 
 `artifacts/head4_v291_downstream_20260630.json`
 
-but that file is currently absent from the repository (`fetch_file` returns 404).
+but the file was not persisted on `main`.
 
-The inference module itself is production-safe/inference-only and expects this artifact for:
+Resolution work:
 
-- POST frozen logistic state
-- ENV_ENTRY frozen logistic state
-- v283 SECOND frozen listwise state
-- v283 conditional THIRD frozen listwise state
+- commit `7346e9a6af26264860a08419acff5d911be7b008` added `.github/workflows/persist-4head-v291-downstream-artifact.yml`;
+- the first attempt used an exact byte-hash guard, which was too strict for harmless floating-point serialization variation;
+- commit `77b5a97d2ddf97def469f9d03596d4069d71c876` changed the persistence guard to the existing strict model-parity checks instead of raw byte identity;
+- CI run `34714996270` completed **SUCCESS**;
+- commit `672db68cf86ce91e0a30cf5ae909fa6464512a37` persisted the resulting parity-passing production artifact on `main`.
 
-The successful exact A-LIVE recovery workflow `34708490537` uploaded an artifact bundle, but inspection of that bundle showed only:
+Persisted artifact state:
 
-- `artifacts/head4_v291_downstream_parity_20260630.json`
-- A-LIVE identity/recovery audits
-- all-N research curves/results
+- policy = `HEAD4_V291_COMP7`
+- frozen training cutoff = `2026-06-30`
+- Jul/Aug labels used = false
+- September labels used = false
+- v96 production signal used = false
+- POST parity max abs ~= `9.71e-17`
+- ENV_ENTRY parity max abs ~= `8.33e-17`
+- v283 SECOND parity max abs ~= `4.98e-13`
+- v283 conditional THIRD parity max abs ~= `4.98e-13`
+- parity status = `PASS`
 
-It did **not** contain `artifacts/head4_v291_downstream_20260630.json` itself.
+Decision: **ACCEPT blocker-1 recovery.** This is operational plumbing only; no v291 threshold, race identity, A mapping, variable-N rule, or Dutch economics changed.
 
-Therefore a clean checkout cannot run the intended frozen downstream inference using its default production artifact.
+Important note: the earlier run `34707632922` failed inside exact A-LIVE curve recovery, but that path was subsequently repaired and completed in later successful recovery research. It is not the current blocker.
 
-Do not replace this artifact with a newly refit approximation. The previous clean rebuild path already showed small nondeterministic v283 THIRD parity drift (`9.04380706659e-05`) and correctly failed closed. Do not relax that guard merely to create a file.
-
-### Blocker 2 — no verified generalized result-blind LIVE feature builder found
+### Blocker 2 — ACTIVE: no verified generalized result-blind LIVE feature builder yet
 
 A result-blind official `beforeinfo` fetch exists historically:
 
@@ -86,7 +90,7 @@ The frozen POST recipe is identifiable from `analyze_v250_4head_rebuild_baseline
 - original exhibition straight/lap/turn
 - tilt4
 
-However, latest GitHub does not currently expose a verified generalized causal builder that converts current-day pre-result sources into the complete exact schemas required by all of:
+Latest GitHub still does not expose a verified generalized causal builder that converts current-day pre-result sources into the complete exact schemas required by all of:
 
 - POST frozen feature list
 - ENV_ENTRY frozen feature list
@@ -96,19 +100,19 @@ However, latest GitHub does not currently expose a verified generalized causal b
 
 Historical reconstruction code such as `recover_4head_v291_exact_a_live_curves.py` operates on historical prepared research frames and must not be silently repurposed as a LIVE current-day feature builder without causal/parity validation.
 
-## Decision
+Current decision: **DO NOT fabricate or refit missing LIVE features.** Keep fail-closed behavior until a generalized pre-result feature builder passes parity.
 
-Status: **MARKET RUNNER COMPLETE; ONE-CLICK LIVE ORCHESTRATION BLOCKED / NOT YET COMPLETE.**
+## Current status / restart point
 
-Do not claim full automatic LIVE operation until both blockers are resolved.
+Status: **MARKET RUNNER COMPLETE; DOWNSTREAM ARTIFACT BLOCKER RESOLVED; ONE-CLICK LIVE ORCHESTRATION STILL INCOMPLETE ONLY AT GENERALIZED RESULT-BLIND FEATURE BUILDING/PARITY.**
 
-The correct next work is operational plumbing/parity only, not model-rule modification:
+Next work is operational plumbing/parity only:
 
-1. Recover/persist the exact previously validated downstream artifact, or produce it through a deterministic build whose parity guard passes unchanged.
-2. Build a generalized result-blind current-day feature builder using only pre-result sources.
-3. Prove feature parity against frozen historical/pre-result fixtures without using Jul/Aug outcomes or any September results.
+1. Generalize official pre-result `beforeinfo` / exhibition acquisition for arbitrary current-day race codes without following result/payout endpoints.
+2. Map those sources plus frozen PRE-side inputs into the exact POST / ENV_ENTRY / A-LIVE / v283 SECOND / v283 conditional THIRD schemas without fitting.
+3. Prove feature parity against frozen historical/pre-result fixtures using Apr–Jun or result-free fixtures only; Jul/Aug outcomes and September outcomes remain prohibited.
 4. Generate immutable input JSON containing PRE/POST/ENV_ENTRY, A 17 features, v283 p2/conditional-third inputs plus source timestamps/hashes.
 5. Feed that JSON into `run_4head_v291_varn_live.py` before deadline.
-6. Add CI that fails closed on artifact absence/schema drift/source incompleteness/deadline violation.
+6. Add CI that fails closed on source incompleteness, schema drift, artifact absence, parity failure, odds incompleteness, or deadline violation.
 
-No thresholds, v291 entry identities, A mapping, floor=4.0, maxN=16, or Dutch economics should be changed to work around these blockers.
+No thresholds, v291 entry identities, A mapping, floor=4.0, maxN=16, or Dutch economics should be changed to work around the remaining blocker.
