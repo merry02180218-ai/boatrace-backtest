@@ -1,0 +1,18 @@
+{
+  "schema": "head4_v291_a_rescue_research_v1",
+  "development_months": [
+    "2026-04",
+    "2026-05",
+    "2026-06"
+  ],
+  "jul_aug_outcomes_used": false,
+  "september_outcomes_used": false,
+  "v96_used": false,
+  "base": {
+    "policy": "HEAD4_V291_COMP7",
+    "R": 28,
+    "immutable": true
+  },
+  "selection_tier": "NO_STANDALONE_SAFE_CANDIDATE",
+  "lomo_all_holdouts_profitable": false
+}
