@@ -31,17 +31,19 @@
 - March chose combined-odds floor 3.5.
 - Apr-Jun variable K: 391R / 92 hits / ROI 103.009% / +117,670 yen; avg K 6.069; min month 67.066%; red months 2; overlap 0.
 - Monthly: Apr 147.838%, May 96.587%, Jun 67.066%. Fixed Top5 remained better at 114.913%.
-- Conclusion: uniform combined-odds floor expands tickets too broadly despite +5 hits.
 
-## Wave39C confidence-aware variable ticket count — STARTED
-- Freeze Wave36 head gate p3>=0.365448, chronology, and Wave37 static63 conditional-logit ticket ranking. Do not retune prediction models.
-- Test confidence-aware K: high-confidence races use fewer tickets (target 3-5); lower-confidence races may expand toward 6-10 only when combined/effective Dutch odds remains acceptable.
-- Confidence inputs must be model-derived pre-deadline quantities only (head p3 and/or ranked ticket probability concentration/margin). Historical closing odds may only determine staking/ticket-count feasibility, never prediction ranking.
-- Predeclare a small grid of confidence cutoffs and K/floor mappings. Select rule using March only, prioritizing full/early/late ROI robustness and avoiding one-half collapse; Apr-Jun cannot tune rule.
-- JPY10,000 Dutch per selected race, JPY100 units. Report Apr-Jun races/hits/ROI/profit/monthly/min month/red months/max DD/avg K/K distribution, fixed-Top5 comparison, and exact v288 overlap. Jul/Aug NON-PRISTINE shadow only; September forbidden.
+## Wave39C confidence-aware variable ticket count — COMPLETE / NO_ADOPTION
+- Run 34783195043 success; artifact 10325494927.
+- March selected rule p45_k4_f35: if p3>=0.45 use fixed Top4; otherwise variable K under combined-odds floor 3.5.
+- March: 90R / 25 hits / ROI 138.104%; early 168.931%, late 107.278%; avg K 5.978.
+- Apr-Jun pristine: 391R / 84 hits / ROI 98.103% / -74,190 yen; avg K 5.529; min month 65.757%; red months 2; max DD 689,670 yen; overlap 0.
+- Monthly: Apr 121R / 31 hits / ROI 131.230% / +377,880; May 145R / 32 hits / ROI 98.343% / -24,030; Jun 125R / 21 hits / ROI 65.757% / -428,040.
+- Jul-Aug NON-PRISTINE shadow: 328R / 68 hits / ROI 85.825% / -464,940; avg K 4.957.
+- Fixed Top5 Apr-Jun remains superior: 391R / 87 hits / ROI 114.913% / +583,090.
+- Conclusion: p3 confidence + combined-odds variable K did not generalize; it lost 3 hits and 16.81 ROI points versus fixed Top5. NO_ADOPTION.
 
 ## Exact restart point
-1. Implement and launch Wave39C confidence-aware variable-K test.
-2. Auto-fix technical failures without weakening guards.
-3. On completion, update this handoff with exact Run/artifact/metrics before reporting.
-4. If no pristine improvement over fixed Top5 114.913%, continue automatically to the next predeclared staking robustness idea without using Apr-Jun for tuning.
+1. Keep fixed Top5 as current staking benchmark for Wave36/37.
+2. Do not tune further on Apr-Jun outcomes. Any next staking idea must be predeclared and selected using March only.
+3. Wave39 candidate-pair ranker, if still active/completed, inspect and record separately.
+4. Prefer model/order robustness research over further broad ticket expansion unless a genuinely distinct pre-April rule is proposed.
