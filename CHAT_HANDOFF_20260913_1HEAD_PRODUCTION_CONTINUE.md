@@ -111,3 +111,22 @@ Exact next resume point:
 4. If anchor passes, record cutoff 0.8073405637/0.80/0.79/0.78/0.77/0.75 PRE/PASS/month/head/exact3 plus newly admitted quality and compare against v336 exhibition-q expansion.
 5. Append actual final Run/Job/Artifact/results or blocker to THIS file before reporting v337 complete.
 6. Do not start v338 before reporting v337 once.
+
+# 8. 2026-09-14 PRE-WORK UPDATE — v337 ANCHOR DRIFT / WAKU10 RE-AUDIT
+User suspects the 96 -> 88 PASS anchor drift may have been caused by the Waku10 rewrite. Treat that as an open hypothesis, despite the earlier static dependency audit.
+
+Known failure to investigate:
+- Run `34779669216` final audit Job `103785686708` failed the hard regression gate.
+- observed anchor: 88 PASS / 76 head / 43 exact3.
+- expected anchor: 96 PASS / 83 head / 45 exact3.
+- Artifact `10324652726` was produced despite the failed audit.
+
+Exact work now:
+1. Inspect the failed v337 artifact and identify the exact 8 PASS races missing versus the known v332 96-race anchor.
+2. Trace each missing race backward through candidate PRE, SECOND/THIRD/ticket readiness, and current exhibition feature/readiness stages.
+3. Compare relevant source inputs before and after the canonical Waku10 rewrite/materialization commits, including any indirect effects through shared `backtest.py` fetch behavior or historical helper functions.
+4. Do not assume the earlier `Waku10 dependency = NONE` conclusion is sufficient; test the actual missing identities against old/new source behavior.
+5. If Waku10 caused the drift, quantify the exact changed races/fields and restore a reconstruction method that reproduces the frozen anchor without changing production logic.
+6. If Waku10 did not cause it, identify the true reconstruction mismatch and fix only the v337 reconstruction/audit harness.
+7. Keep September outcomes UNREAD and do not interpret relaxed cutoffs until the anchor is exactly 96/83/45 again.
+8. After diagnosis/fix, append exact missing races, root cause, commits, rerun IDs and final anchor status to THIS handoff before reporting completion.
