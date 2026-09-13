@@ -1,0 +1,47 @@
+name: v321 Jul-Aug NON-PRISTINE validation
+
+on:
+  push:
+    paths:
+      - 'run_v321_1head_julaug_nonpristine_validation.py'
+      - '.github/workflows/research-20260913-v321-julaug-nonpristine.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Require causal cache and v308 development predictions
+        run: |
+          test -f CACHE_V313_1HEAD_OPPONENT_CAUSAL.md
+          test -f cache_v313_1head_opponent_pre.csv.gz
+          test -f cache_v313_1head_opponent_p3.csv.gz
+          test -f cache_v313_1head_opponent_p4.csv.gz
+          test -f analysis_v308_1head_volume_opponent_joint_pred.csv
+      - name: Run v321 Jul-Aug NON-PRISTINE validation
+        run: python run_v321_1head_julaug_nonpristine_validation.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v321-julaug-nonpristine
+          path: |
+            analysis_v321_1head_julaug_nonpristine_validation_*.csv
+            summary_v321_1head_julaug_nonpristine_validation.md
+      - name: Commit v321 outputs
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add analysis_v321_1head_julaug_nonpristine_validation_*.csv summary_v321_1head_julaug_nonpristine_validation.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'Add v321 Jul-Aug NON-PRISTINE validation results'
+            git push
+          fi
