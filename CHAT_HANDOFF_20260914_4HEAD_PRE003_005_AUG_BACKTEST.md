@@ -1,69 +1,31 @@
 # CHAT HANDOFF — HEAD4 PRE 0.03-0.05 RESEARCH
 
-Status: **JULY 18->19 RAW PRIMITIVE LINEAGE AUDIT COMPLETE**
+Status: **CANONICAL HISTORICAL WAKU10 MATERIALIZATION IN PROGRESS**
 
 ## Frozen production
 Production remains unchanged (`HEAD4_V291_COMP7`). July/August 2026 remain NON-PRISTINE; September remains outcome-blind for tuning/model selection.
 
-## Prior findings
-- Motor-history source starts 2026-07-01 and becomes causally usable 2026-07-02.
-- Dominant PRE break is later, 2026-07-19: `inner12_resistance` 0.245328->0.699611, `wall3_weak` 0.715926->0.195410, `past_win4` 0->0.0938657, `legacy_score4` 46.209->36.2835, PRE<.01 share 0->80.7292%.
+## Correction to prior July 18->19 conclusion
+The prior raw audit read only public BoatraceCSV `data/programs/waku10/YYYY/MM/DD.csv` through `rows()`. GitHub history confirms that a validated historical Waku10 restoration pipeline already exists (v233/v234) using direct BOATCAST historical `bc_j_waku10_*` data and restored replay. Therefore the public-schema break seen on 7/19 is a property of the un-restored public source, not necessarily of the intended historical input set.
 
-## Formula lineage
-`inner12_resistance` depends on boat1/2 `waku_wr`, national `wr`, and `waku_st`.
-`wall3_weak` depends on boat3 `waku_wr` plus 3-vs-4 `waku_st` edge.
-`past_win4` is first-place share over numeric boat4 past-10 Waku10 finishes.
+## User-requested permanent fix — work-start record written BEFORE implementation
+Goal: eliminate the possibility that future models/audits accidentally read sparse historical Waku10 when validated restored Waku10 exists.
 
-## Implementation / correction
-- analysis: `analyze_4head_jul18_19_primitives_20260914.py`
-- workflow: `.github/workflows/analyze-4head-jul18-19-primitives.yml`
-- work-start commit: `b678824b43e792539f44227df16449c784ce0277`
-- initial analysis commit: `f8361f06e1fc0fb3725ce05bedc710b5b6982ae6`
-- workflow commit: `1820426f31edad4e3d9b538792a1355d79c1a3df`
-- first CI failed because raw `race_features()` output was passed directly to `score4v4()` without v4-added fields (`mhist`, `stretch`).
-- correction commit: `006dc5e418c4bf2e367e1915f50d132027a8c5f7`; replay now uses the causal `process_features()` state for `legacy_score4`, while raw Waku/card diagnostics remain outcome-blind.
+Plan:
+1. Keep production model/rules unchanged.
+2. Reuse the already validated v233/v234 BOATCAST historical restoration parser and source policy; do not invent a new Waku10 definition.
+3. Materialize the restored historical Waku10 into the canonical repo path `data/programs/waku10/YYYY/MM/DD.csv` for the historical range covered by the restoration pipeline, rather than keeping it only under an audit-specific directory.
+4. Change the shared `rows()` loader so repository-local `data/programs/waku10/...` is preferred automatically before the public BoatraceCSV URL. This makes every old/new model that calls `rows('data/programs/waku10/...')` transparently use the restored canonical copy.
+5. Add an idempotent workflow that rebuilds/restores Waku10 and commits only changed canonical files, with `contents: write`; published rich Waku10 remains verbatim where already complete, missing/sparse historical days are replaced by validated BOATCAST reconstruction.
+6. Validate coverage/schema before commit: race-code uniqueness, expected Waku10 columns, row counts, and no regression on already-rich dates.
+7. Run CI/materialization and verify actual files exist in the canonical repo path.
+8. Re-run the HEAD4 7/18->7/19 primitive audit using the canonical path to confirm the false source-boundary disappears or is materially reduced.
+9. AFTER completion update this handoff with commits, Run/Job IDs, files/coverage, artifact/hash, corrected interpretation, limitations, and restart point.
 
-## Successful CI
-- Run ID `34776896951`
-- Job ID `103776546968`
-- conclusion: SUCCESS
-- Artifact `head4-jul18-19-primitives`
-- Artifact ID `10324181759`
-- size 20422 bytes
-- SHA256 `ecad422375095ffd8d209798fb007fb028cbd835a55df1986153665e0d643608`
+## Existing validated restoration lineage to reuse
+- `analyze_v234_3head_waku10_restored_replay.py`
+- v234 uses published Waku10 verbatim where available, reconstructs missing historical Waku10 from BOATCAST raw files, and validates the parser against a published August day.
+- Relevant historical commits include `09edebd3727bdf75f2ce4fef9ce24585530af355` and `f00b4afb44de818e9966425df99bfe1d01ec3e25`.
 
-## Root-cause evidence
-The 7/18 -> 7/19 break is overwhelmingly a **Waku10 source-schema/coverage boundary**, not an ordinary one-day race-population shift.
-
-Exact evidence:
-- race-card schema: +0 / -0 columns (unchanged)
-- Waku10 schema: **+208 / -0 columns on 7/19**
-- On 7/18, for boats 1-4:
-  - mean numeric past-10 count = **0.0**
-  - `waku_wr` = **0.0** because source fields are absent
-  - `waku_st` raw blank share = essentially **100%**, so code falls back to national ST
-  - `waku_sr` defaults to **3.5**
-- On 7/19:
-  - past-10 numeric observations suddenly become ~**9.8/10 per boat**
-  - boat1 `waku_wr` mean = **7.867969**
-  - boat2 `waku_wr` mean = **5.714792**
-  - boat3 `waku_wr` mean = **5.401563**
-  - boat4 `waku_wr` mean = **4.724844**
-  - frame-specific ST fields become populated for ~99.5-100% of rows
-  - boat1 `waku_sr` 3.5 -> **2.931771**; boat3 3.5 -> **3.044792**; boat4 3.5 -> **3.241667**
-- Resulting feature shifts exactly align:
-  - `wall3_weak`: 0.715926 -> **0.195410**
-  - `resistance12`: 0.245328 -> **0.699611**
-  - `past_win4`: 0 -> **0.093866**
-  - `legacy_score4`: 46.209026 -> **36.283451**
-
-## Interpretation
-This identifies the primary source of the July-19 PRE collapse: **Waku10 changed from a sparse/old schema with the required frame-specific and past-10 fields absent to a richer schema with those fields populated.** Before July 19, the feature code silently used defaults (`waku_wr=0`, `waku_sr=3.5`, `waku_st` fallback to national ST, `past_win=0`). From July 19 onward the real Waku10 values enter, dramatically changing the feature distribution.
-
-Therefore the earlier July/August drift is substantially a data-lineage compatibility problem, not evidence by itself of a genuine racing-regime change. July/August remain NON-PRISTINE and cannot be used to tune production.
-
-## Next restart point
-1. Identify the exact Waku10 schema introduction history around July 19 and whether equivalent rich fields exist for older dates under another source/path.
-2. Build a schema-consistent causal replay for historical months using one fixed information definition: either reconstruct rich Waku10 historically where legitimately available, or explicitly restrict all periods to the common pre-July field set.
-3. Re-run Feb-Aug PRE distributions on that consistent lineage before drawing conclusions about model drift.
-4. Do not change production until the corrected lineage backtest is complete.
+## Restart protection
+If interrupted, resume from canonical Waku10 materialization. Do not continue HEAD4 model interpretation until the shared canonical Waku10 source is fixed and the 7/18->7/19 audit is rerun.
