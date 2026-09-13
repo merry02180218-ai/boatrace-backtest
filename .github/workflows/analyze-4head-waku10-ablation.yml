@@ -5,6 +5,7 @@ on:
     paths:
       - 'analyze_4head_waku10_ablation_20260914.py'
       - 'analyze_v267_4head_v260_consensus_overlay.py'
+      - 'analyze_v271_4head_arank_expansion.py'
       - '.github/workflows/analyze-4head-waku10-ablation.yml'
   workflow_dispatch:
 
@@ -76,7 +77,6 @@ jobs:
                       cost=len(q)*BANK;ret=float(q.return_yen.fillna(0).sum())
                       rows.append({'variant':V,'month':mon,'layer':layer,'R':len(q),'head4_wins':int(q.actual_head4.fillna(0).sum()),'head4_rate':float(q.actual_head4.mean()) if len(q) else None,'trifecta_hits':int(q.hit.fillna(0).sum()),'hit_rate':float(q.hit.mean()) if len(q) else None,'return_yen':ret,'proxy_roi':ret/cost if cost else None,'avg_comp_odds':float(q.comp_odds.mean()) if len(q) else None})
           out=pd.DataFrame(rows);out.to_csv('analysis_4head_waku10_ablation_summary.csv',index=False)
-          # descriptive NON-PRISTINE score distributions only; no outcome metrics, no selection.
           stress=[]
           for V in variants:
               p=pd.read_csv(ROOT/V/'analysis_v250_4head_rebuild_baseline.csv')
