@@ -1,0 +1,20 @@
+name: validate-4head-env-v91-primitives
+
+on:
+  push:
+    paths:
+      - 'build_4head_env_v91_primitives_live.py'
+      - 'verify_4head_env_v91_primitives_live.py'
+      - '.github/workflows/validate-4head-env-v91-primitives.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify frozen v74/v91 primitive semantics
+        run: python verify_4head_env_v91_primitives_live.py
