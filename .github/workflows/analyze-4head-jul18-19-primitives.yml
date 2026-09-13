@@ -1,0 +1,19 @@
+name: head4-jul18-19-primitives
+on: [push, workflow_dispatch]
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas requests beautifulsoup4 lxml
+      - run: python analyze_4head_jul18_19_primitives_20260914.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-jul18-19-primitives
+          path: |
+            summary_4head_jul18_19_primitives_20260914.md
+            analysis_4head_jul18_19_primitives_20260914.csv
+            audit_4head_jul18_19_primitives_20260914.json
