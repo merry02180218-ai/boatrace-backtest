@@ -69,3 +69,6 @@ User instruction: **progress so real production matches the established backtest
 6. Feed only current v308-qualified races into frozen v317 SECOND + v318 THIRD + v320 HYBRID alpha=.70 exactly 3 tickets.
 7. Fetch current odds only for those three tickets, compute composite odds, and output race / v308 score / mass / 3 tickets / each odds / composite odds / BUY-SKIP status. Until a prospective BUY cutoff is legitimately frozen, BUY-SKIP must be fail-safe and must not silently use the descriptive v322 threshold grid.
 8. Create/modify the dedicated GitHub Actions workflow, then verify a real run ID, inspect logs/artifacts, and fix technical failures. Before each fix/restart, update this handoff first.
+
+## ACTIVE WORK ITEM — 2026-09-13 production adapter restart
+Stopped continuation was detected after v322. Resume now with **inspection only before implementation**: inspect the existing 3-head/4-head LIVE workflows and their invoked scripts, identify the exact v308/v317/v318/v320 reusable functions and result-blind current-card source, then implement the minimum 1-head adapter without changing frozen model logic. Before any subsequent fix/restart, record that intended change here first. Historical 345R/290 head hits and 139/345 exact3 are mandatory regression assertions; Jul/Aug remain NON-PRISTINE, September outcomes unread, `meet_*` forbidden.
