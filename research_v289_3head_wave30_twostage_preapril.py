@@ -110,3 +110,5 @@ def main():
     for mo,z in sm['monthly'].items(): lines.append(f"- {mo}: {z['races']}R / {z['hits']} hits / ROI {z['roi_pct']:.3f}% / profit {z['profit_yen']:+,} yen")
     OUTM.write_text('\n'.join(lines)+'\n',encoding='utf-8');print('\n'.join(lines),flush=True)
 if __name__=='__main__': main()
+
+# workflow trigger after workflow registration
