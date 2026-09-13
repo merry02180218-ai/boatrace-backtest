@@ -39,16 +39,17 @@
 - Combined baseline + holdout: 329R / 87 hits / ROI 90.179% / -323,110 yen.
 - Decision NO_ADOPTION.
 
-## Wave34 — RUNNING prototype-distance family
-- Script `research_v289_3head_wave34_prototype_distance.py`, commit `00a366ecbe159087e5d17e51a674cec8ff95a7c6`.
-- Workflow `.github/workflows/research-3head-wave34-prototype-distance.yml`, commit `419a20912bf373ba8b67ac03903f9488eac7fcc3`.
-- Run `34767979974` is in progress.
-- Family: standardized positive-vs-negative prototype-distance head score + conditional multinomial logistic exact-order model.
-- March selects only head-score quantile and top3/top5/top7 with 30..300R floor; Apr-Jun untouched; Jul-Aug NON-PRISTINE shadow.
+## Wave34 — RETRYING prototype-distance family
+- Initial Run `34767979974` failed in the research script only; baseline/source guards passed.
+- Failure cause: current scikit-learn removed the `multi_class` keyword from `LogisticRegression`; error was `TypeError: LogisticRegression.__init__() got an unexpected keyword argument 'multi_class'`.
+- Compatibility-only fix committed as `b711725614b63a2355098e11d0d5294c0c2d3439`: removed `multi_class='auto'`; research logic/scope unchanged.
+- Retry Run `34768428513` is in progress.
+- Family: standardized positive-vs-negative prototype-distance head score + conditional logistic exact-order model.
+- March selects head-score quantile and top3/top5/top7 with 30..300R floor; Apr-Jun untouched; Jul-Aug NON-PRISTINE shadow.
 - Corrected full-population-minus-exact-94 scope; September forbidden; closing odds staking-only; JPY10k Dutch.
 
 ## Exact restart point
-1. Inspect Run `34767979974` first.
+1. Inspect retry Run `34768428513` first.
 2. If failed, inspect logs, fix automatically, rerun without weakening guards.
 3. If success, record March score gate/top-K; Apr-Jun R/hits/ROI/profit/monthly/min month/red months/max DD; Jul-Aug shadow; exact v288 overlap; combined baseline.
 4. Adoption status uses pristine Apr-Jun only. Jul/Aug cannot rescue a weak result.
