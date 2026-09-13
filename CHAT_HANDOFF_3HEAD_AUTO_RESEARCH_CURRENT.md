@@ -38,16 +38,17 @@
 - Jul-Aug NON-PRISTINE shadow: 172R / 37 hits / ROI 90.738% / -159,310 yen.
 - Combined baseline + holdout: 329R / 87 hits / ROI 90.179% / -323,110 yen.
 - Decision NO_ADOPTION.
-- Interpretation: simply tightening nonlinear confidence does not generalize; May/Jun collapse persists.
 
-## Wave34 — NEXT prototype-distance family
-- Use a genuinely distinct leak-free scoring family: robustly standardized static features, positive (3-head winner) vs negative class prototypes, and a distance-difference head score instead of tree/logistic head probability.
-- Exact-order tickets remain trained only from historical 3-head races using a simple conditional multinomial logistic model.
-- March chooses only score quantile + top-K with a sparse sample floor; freeze before Apr-Jun.
-- Corrected full-population-minus-exact-94 scope; Jul/Aug shadow only; September forbidden; closing odds staking-only; JPY10k Dutch.
+## Wave34 — RUNNING prototype-distance family
+- Script `research_v289_3head_wave34_prototype_distance.py`, commit `00a366ecbe159087e5d17e51a674cec8ff95a7c6`.
+- Workflow `.github/workflows/research-3head-wave34-prototype-distance.yml`, commit `419a20912bf373ba8b67ac03903f9488eac7fcc3`.
+- Run `34767979974` is in progress.
+- Family: standardized positive-vs-negative prototype-distance head score + conditional multinomial logistic exact-order model.
+- March selects only head-score quantile and top3/top5/top7 with 30..300R floor; Apr-Jun untouched; Jul-Aug NON-PRISTINE shadow.
+- Corrected full-population-minus-exact-94 scope; September forbidden; closing odds staking-only; JPY10k Dutch.
 
 ## Exact restart point
-1. Implement and launch Wave34 prototype-distance corrected-scope family.
+1. Inspect Run `34767979974` first.
 2. If failed, inspect logs, fix automatically, rerun without weakening guards.
 3. If success, record March score gate/top-K; Apr-Jun R/hits/ROI/profit/monthly/min month/red months/max DD; Jul-Aug shadow; exact v288 overlap; combined baseline.
 4. Adoption status uses pristine Apr-Jun only. Jul/Aug cannot rescue a weak result.
