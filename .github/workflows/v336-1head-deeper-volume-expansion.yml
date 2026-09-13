@@ -1,0 +1,24 @@
+name: v336 1-head deeper volume expansion
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v336_1head_deeper_volume_expansion.py'
+      - '.github/workflows/v336-1head-deeper-volume-expansion.yml'
+jobs:
+  v336:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy scikit-learn
+      - name: Run v336 deeper volume expansion
+        run: python run_v336_1head_deeper_volume_expansion.py
+      - name: Show summary
+        run: cat /tmp/v336/summary_v336.md || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v336-1head-deeper-volume-expansion
+          path: /tmp/v336/
