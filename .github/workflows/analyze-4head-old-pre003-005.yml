@@ -1,0 +1,36 @@
+name: analyze-4head-old-pre003-005
+on:
+  push:
+    paths:
+      - 'analyze_4head_old_pre003_005.py'
+      - '.github/workflows/analyze-4head-old-pre003-005.yml'
+jobs:
+  analyze:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Syntax check
+        run: python -m py_compile analyze_4head_old_pre003_005.py
+      - name: Older-period backtest
+        run: python analyze_4head_old_pre003_005.py
+      - name: Guard audit
+        run: |
+          python - <<'PY'
+          import json
+          a=json.load(open('audit_4head_old_pre003_005.json'))
+          assert a['target_result_join_after_feature_freeze'] is True
+          assert a['band']==[0.03,0.05]
+          print(json.dumps(a,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-old-pre003-005
+          path: |
+            analysis_4head_old_pre003_005.csv
+            audit_4head_old_pre003_005.json
+            summary_4head_old_pre003_005.md
