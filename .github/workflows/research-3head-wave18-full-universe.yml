@@ -1,31 +1,26 @@
-name: research-3head-wave19b-full584-walkforward
+name: research-3head-wave20-allrace-universe
 on:
   push:
     branches: ['research/3head-v289-addon-expansion']
     paths:
-      - 'research_v289_3head_wave19b_full584_walkforward.py'
+      - 'research_v289_3head_wave20_allrace_universe.py'
       - '.github/workflows/research-3head-wave18-full-universe.yml'
   workflow_dispatch:
 jobs:
-  wave19b:
+  wave20:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install -q pandas numpy scipy scikit-learn
-      - name: Download source
-        run: |
-          gh run download 34749575986 --repo merry02180218-ai/boatrace-backtest --name 3head-wave19-payout-enrichment --dir wave19
-          cp wave19/analysis_v289_3head_wave19_full_universe_payout_enriched.csv .
-        env:
-          GH_TOKEN: ${{ github.token }}
-      - run: python research_v289_3head_wave19b_full584_walkforward.py
+      - run: python research_v289_3head_wave20_allrace_universe.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: 3head-wave19b-full584-walkforward
+          name: 3head-wave20-allrace-universe
           path: |
-            research_v289_3head_wave19b_full584_walkforward.json
-            research_v289_3head_wave19b_full584_walkforward.md
+            analysis_v289_3head_wave20_allrace_universe.csv
+            research_v289_3head_wave20_allrace_universe.json
+            research_v289_3head_wave20_allrace_universe.md
