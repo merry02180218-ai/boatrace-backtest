@@ -24,24 +24,32 @@
 
 ## Wave36R robustness decomposition — COMPLETE
 - Run 34781673254 success; artifact 10325487808.
-- Apr: 121R; head 54/121=44.628%; top5 ticket 33/121=27.273%; ROI 175.280%. Remove largest return => 125.490%; remove top3 => 99.181%. April profit is materially high-payout concentrated.
+- Apr: 121R; head 54/121=44.628%; top5 ticket 33/121=27.273%; ROI 175.280%. Remove largest return => 125.490%; remove top3 => 99.181%.
 - May: 145R; head 59=40.690%; top5 33=22.759%; ROI 103.005%. Early ROI 148.194%, late 58.434%.
-- Jun: 125R; head 47=37.600%; top5 21=16.800%; 26 races had correct 3-head but exact-order top5 miss; ROI 70.290%. Early 56.765%, late 83.602%.
-- Jul NON-PRISTINE: head 38.312%, top5 22.078%, ROI 77.896%.
-- Aug NON-PRISTINE: head 43.103%, top5 25.862%, ROI 100.253%.
-- Conclusion: no monotonic leakage signature. Wave36 head gate retains signal, but opponent/exact-order conversion is a major weakness, especially June. Keep head gate fixed and research opponent/order selection separately.
+- Jun: 125R; head 47=37.600%; top5 21=16.800%; 26 races had correct 3-head but exact-order top5 miss; ROI 70.290%.
+- Conclusion: Wave36 head gate retains signal; opponent/exact-order conversion is a major weakness.
 
-## Wave37 opponent/order research — STARTED
-- Freeze Wave36 3-head gate and its pre-April selection logic; do not optimize head threshold on Apr-Jun or Jul/Aug.
-- Research only conditional 2nd/3rd ordering among combos beginning with 3.
-- Train opponent/order model using pre-test historical rows only. March is the only validation/tuning month; Apr-Jun untouched pristine evaluation; Jul/Aug shadow only.
-- Compare current conditional logistic top5 against structurally different orderers using the same 63 static features: regularized multinomial conditional model and pairwise/position decomposition if implementable.
-- Selection objective in March must emphasize exact-order/top5 conversion conditional on actual 3-head, not realized ROI. Closing odds cannot select/tune the orderer.
-- Freeze selected orderer before Apr-Jun. Report head hits, ticket hits, conditional conversion ticket_hits/head_hits, ROI/profit/monthly/min month/max DD/overlap and baseline+combined.
-- Required feature missing => fail closed; September forbidden.
+## Wave37 opponent/order research — COMPLETE
+- Run 34782216334 success; Job 103791173136; artifact 10325149135.
+- March comparison used conversion conditional on actual 3-head only; no ROI selection.
+- March results:
+  - logit: 38 head cases / 24 top5 hits / conversion 63.158%; early 73.684%; late 52.632%; worst-half 52.632%.
+  - ExtraTrees: 34.211% conversion; worst-half 31.579%.
+  - position decomposition: 50.000% conversion; worst-half 47.368%.
+- March therefore selected current conditional logistic. The alternative orderers did not beat it.
+- Apr-Jun with selected logit reproduces Wave36 exactly: 391R / 87 hits / ROI 114.913% / +583,090 yen; conditional conversion 87/160=54.375%; overlap 0.
+- Monthly conversion: Apr 33/54=61.111%; May 33/59=55.932%; Jun 21/47=44.681%.
+- Jul NON-PRISTINE: 34/59=57.627%, ROI 77.896%. Aug NON-PRISTINE: 45/75=60.000%, ROI 100.253%.
+- Interpretation: simple model-class swap does not fix June. Current conditional logistic remains best among tested orderers; next work should add opponent-specific structural features rather than replacing classifier family.
+
+## Wave38 opponent structural features — NEXT
+- Keep Wave36 head gate and March-only selection discipline fixed.
+- Add pre-deadline opponent-specific structure for boats 1/2/4/5/6 and pair relationships relevant to 2nd/3rd ordering, without using result/odds/current-meet post-race fields.
+- Candidate features should come only from existing static card information: each opponent's nationwide/local/motor/boat rates and ST, plus relative gaps versus boat3 and pairwise opponent gaps.
+- Tune/orderer choice on Feb->Mar only using conditional top5 conversion, not ROI. Freeze before Apr-Jun.
+- Report pristine Apr-Jun conditional conversion and ROI versus Wave37 baseline; Jul/Aug shadow only; September forbidden.
 
 ## Exact restart point
-1. Implement Wave37 conditional opponent/order comparison with fixed Wave36 head gate.
+1. Implement Wave38 opponent-specific structural feature orderer.
 2. Launch CI and auto-fix technical failures without weakening guards.
 3. Record exact results here after completion.
-4. If no improvement in pristine conversion/robustness, move to opponent-specific structural features without using Apr-Jun/Jul-Aug outcomes for tuning.
