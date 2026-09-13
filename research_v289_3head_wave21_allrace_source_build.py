@@ -1,5 +1,5 @@
 from __future__ import annotations
-import csv, io, json, os, urllib.request, time
+import csv, io, json, os, urllib.request, time, subprocess, sys
 from datetime import date
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -111,7 +111,6 @@ def main():
     OUTJ.write_text(json.dumps(audit,ensure_ascii=False,indent=2)+'\n',encoding='utf-8'); OUTM.write_text(md,encoding='utf-8'); print(md)
     if audit['decision']!='ALLRACE_SETTLED_SOURCE_READY': raise RuntimeError(audit['decision'])
 
-    # Wave22: historical closing trifecta odds. Evaluation/staking only; never prediction features.
     from research_v289_3head_wave22_closing_trifecta_odds import main as wave22_main
     wave22_main()
     oj=json.loads(Path('research_v289_3head_wave22_closing_trifecta_odds.json').read_text(encoding='utf-8'))
@@ -119,7 +118,15 @@ def main():
     keep=['race_code','odds_ok','parsed_odds','deadline_label','odds_json','error','url']
     merged=out.merge(od[keep],on='race_code',how='left').rename(columns={'odds_ok':'closing_odds__ok','parsed_odds':'closing_odds__parsed','deadline_label':'closing_odds__deadline_label','odds_json':'closing_odds__json','error':'closing_odds__error','url':'closing_odds__url'})
     merged.to_csv(OUT,index=False,encoding='utf-8-sig')
-    audit['closing_odds']=oj; OUTJ.write_text(json.dumps(audit,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    audit['closing_odds']=oj
     md += f"\n# Wave22 closing trifecta odds\n\n- odds available: **{oj['ok_rows']}/{oj['rows']} ({100*oj['coverage_share']:.3f}%)**\n- full 120 odds: **{oj['full120_rows']}/{oj['rows']} ({100*oj['full120_share']:.3f}%)**\n- decision: **{oj['decision']}**\n- closing odds are staking/post-hoc ROI only and excluded from prediction features.\n"
-    OUTM.write_text(md,encoding='utf-8'); print(md.split('# Wave22')[-1],flush=True)
+
+    # Wave23 auto-continue: install sklearn in-run, run temporal head3 research, and fold metrics into the persisted audit artifact.
+    subprocess.check_call([sys.executable,'-m','pip','install','-q','scikit-learn'])
+    subprocess.check_call([sys.executable,'research_v289_3head_wave23_runner.py'])
+    w23=json.loads(Path('research_v289_3head_wave23_fullpop_walkforward.json').read_text(encoding='utf-8'))
+    audit['wave23']=w23
+    c=w23['chosen_pristine']; s=w23['shadow_non_pristine']; cmb=w23['combined_pristine_plus_baseline']
+    md += f"\n# Wave23 full-pop walk-forward\n\n- pristine Apr-Jun: **{c['races']}R / {c['hits']} hits / ROI {c['roi_pct']:.3f}% / profit {c['profit_yen']:+,} yen**\n- min-month ROI: **{c['min_month_roi_pct']:.3f}%** / red months **{c['red_months']}** / max DD **{c['max_drawdown_yen']:,.0f} yen**\n- Jul-Aug NON-PRISTINE shadow: **{s['races']}R / {s['hits']} hits / ROI {s['roi_pct']:.3f}% / profit {s['profit_yen']:+,} yen**\n- v288 overlap: **{w23['legacy_overlap']}**\n- baseline + pristine add-on: **{cmb['races']}R / ROI {cmb['roi_pct']:.3f}% / profit {cmb['profit_yen']:+,} yen**\n- decision: **{w23['decision']}**\n"
+    OUTJ.write_text(json.dumps(audit,ensure_ascii=False,indent=2)+'\n',encoding='utf-8'); OUTM.write_text(md,encoding='utf-8'); print(md.split('# Wave23')[-1],flush=True)
 if __name__=='__main__': main()
