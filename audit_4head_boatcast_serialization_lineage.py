@@ -2,12 +2,12 @@
 """Result-free serialization-lineage audit for frozen HEAD4 v291 POST inputs.
 
 This audit closes the remaining raw-source provenance question without reading
-race results.  It pins the exact BoatraceCSV commit that scrapes BOATCAST and
+race results. It pins the exact BoatraceCSV commit that scrapes BOATCAST and
 verifies that original-exhibition labels/raw numeric values and start-display ST
 are serialized to the archived preview CSV representation without a hidden
 model-side transform.
 
-No Jul/Aug outcomes or September outcomes are read.  v291 and betting policy are
+No Jul/Aug outcomes or September outcomes are read. v291 and betting policy are
 not modified.
 """
 from __future__ import annotations
@@ -47,7 +47,6 @@ def require(text: str, needles: list[str], name: str) -> None:
 def main() -> None:
     src = {k: fetch(v) for k, v in FILES.items()}
 
-    # BOATCAST original-exhibition TSV -> typed values.
     require(
         src["original_scraper"],
         [
@@ -61,8 +60,6 @@ def main() -> None:
         "original scraper",
     )
 
-    # Typed original-exhibition values -> CSV: labels and values are emitted
-    # directly; only None -> blank / Python numeric -> string formatting occurs.
     require(
         src["converter"],
         [
@@ -77,22 +74,22 @@ def main() -> None:
         "original converter",
     )
 
-    # BOATCAST start-display TSV -> RacePreview start_timing.
+    # Match the exact pinned implementation, not an equivalent pseudocode form.
     require(
         src["preview_scraper"],
         [
             '"bc_j_stt"',
             "st_value = cols[4]",
             "st_flag = cols[5].strip()",
-            'if flag == "L":',
-            'if flag == "F":',
-            "return -abs(parsed)",
+            'if flag.upper() == "L":',
+            'if flag.upper() == "F":',
+            "num = -num",
+            "return num",
             '"start_timing": self._parse_start_timing(st_value, st_flag)',
         ],
         "preview ST scraper",
     )
 
-    # RacePreview start_timing -> archived CSV directly.
     require(
         src["converter"],
         [
