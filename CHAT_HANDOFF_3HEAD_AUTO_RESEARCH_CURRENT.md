@@ -20,15 +20,23 @@
 - Monthly: Apr190.737%, May112.675%, Jun72.542%. June head rate recovered to41.111% but conversion only43.243%.
 - Jul-Aug NON-PRISTINE ROI94.628%/-123,550. Not production adopted.
 
-## Wave36S-D pre-April order-conversion robustness — STARTING
-- Preserve Wave36S-C head-selection rule exactly; do not alter its p3 calibration, motor-mismatch penalty, threshold, or temporal chronology.
-- Target only conditional opponent ordering / Top5 conversion robustness because June head selection recovered while order conversion remained weak.
-- Design candidate orderer robustness changes using Feb training and March OOS only. Candidate choice must use March conditional-order accuracy/conversion metrics only; never March payout/ROI and never Apr-Aug outcomes.
-- Keep prediction inputs strictly pre-deadline. Closing odds remain Dutch staking/evaluation only. Settlement fields evaluation only. September forbidden. Exact v288 overlap must remain zero.
-- Freeze the March-selected orderer rule, then evaluate Apr-Jun pristine month-by-month and aggregate; Jul/Aug NON-PRISTINE diagnostic only.
-- Compare against frozen Wave36S-C and original Wave36S on R/hits/ROI/profit/head rate/conversion/maxDD. No Apr-Aug threshold/filter tuning.
+## Wave36S-C narrowing experiment — PLANNED / STARTING
+- User requested narrowing Wave36 rather than expanding race count.
+- Freeze Wave36S-C model, p3 calibration, motor-mismatch modifier and v288 exclusion; do not change production v288.
+- Search for stricter pre-deadline gates that reduce the 305 Apr-Jun races toward roughly 200 / 150 / 100 race bands.
+- Candidate gates may use only information available before the target evaluation period. Select/freeze rules using Feb training + March OOS only; never tune from Apr-Jun ROI/payout and never tune from Jul/Aug outcomes.
+- Prioritize robustness, not peak aggregate ROI: report Apr, May, Jun separately plus aggregate R/hits/head rate/conversion/ROI/profit/maxDD. Explicitly check whether June ROI can recover while retaining useful volume.
+- Jul/Aug remain NON-PRISTINE diagnostic only. September outcomes/data forbidden. Exact v288 overlap must remain zero.
+- Closing odds may be used only for exact JPY10,000 Dutch staking/evaluation, never candidate selection.
+- Compare every narrowed survivor against frozen Wave36S-C (305R/74 hits/ROI128.218%) and v288 baseline context.
+- If no narrowing rule improves robustness without obvious overfitting, keep Wave36S-C unchanged and record NO_ADOPTION.
+
+## Wave36S-D order-conversion robustness — DEFERRED UNTIL NARROWING CHECK
+- Preserve Wave36S-C head-selection rule exactly if/when resumed.
+- Target conditional opponent ordering / Top5 conversion robustness using Feb training and March OOS only.
 
 ## Exact restart point
-1. Implement Wave36S-D orderer candidates from Feb/March evidence only.
-2. Run CI and inspect exact Apr-Jun plus Jul-Aug results.
-3. Record run/artifact/results here before reporting; if no robust improvement, keep Wave36S-C as candidate and do not adopt D.
+1. Implement Wave36S-C narrowing candidates with Feb/March-only selection.
+2. Run CI and inspect exact Apr-Jun plus Jul-Aug diagnostic results.
+3. Record run/artifact/results here before reporting.
+4. Only after narrowing decision, resume Wave36S-D if still warranted.
