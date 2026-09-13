@@ -1,0 +1,24 @@
+name: v333 1-head v332 monthly variance audit
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v333_1head_v332_monthly_variance_audit.py'
+      - '.github/workflows/v333-1head-v332-monthly-variance-audit.yml'
+jobs:
+  v333:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy scikit-learn
+      - name: Run v333 variance audit
+        run: python run_v333_1head_v332_monthly_variance_audit.py
+      - name: Show summary
+        run: cat /tmp/v333/summary_v333.md || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v333-1head-v332-monthly-variance-audit
+          path: /tmp/v333/
