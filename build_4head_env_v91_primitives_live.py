@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
-"""Exact causal v74/v91 primitive builder for frozen HEAD4 ENV_ENTRY.
+"""Exact causal v74/v83/v91 primitive builder for frozen HEAD4 ENV_ENTRY.
 
 This module reproduces only semantics verified from the historical production
-lineage. It never reads results/payouts/odds and deliberately does not invent
-the v83 wind +/-2 class: ``wind_adjust_points`` must come from a separately
-frozen/parity-audited old-period wind-cell artifact.
+lineage. It never reads current/future results, payouts, or odds. The v83 HEAD4
+wind +/-2 mapping is a frozen old-period artifact learned only on
+2025-11-01..2026-05-31 and is replayed here without refitting.
 
 Verified lineage:
 - v74 strict replay: 649adb553cbc17df39719d1ca40821f5941dcbc5
 - v83 wind/entry:    1cf29fddd2b5db088d810e5c32e412fa688713f9
+- v83 results:       7c9a85ba492b07e4b5cd4d9c3623551a8ef52d4f
 - v91 score variants:7075ae9dbe38748a22d71f049ff99f39f4aeb0b1
 """
 from __future__ import annotations
@@ -33,6 +34,15 @@ STADIUM_FACING = {
     '下関':0,'若松':0,'芦屋':0,'福岡':0,'唐津':0,'大村':0,
 }
 WIND_DEG = {1:0,2:45,3:90,4:135,5:180,6:225,7:270,8:315}
+
+# Frozen from v83 old-period-only classification (2025-11-01..2026-05-31).
+# Criteria in v83: n>=40 and head-rate lift >= +3pt => +2;
+# n>=40 and lift <= -3pt => -2; every other HEAD4 cell => 0.
+HEAD4_V83_WIND_POINTS = {
+    '追い_0-2m': -2.0,
+    '向かい_0-2m': -2.0,
+    '左横_3-4m': 2.0,
+}
 
 
 class PrimitiveBuildError(RuntimeError):
@@ -90,6 +100,29 @@ def relative_deg(venue_code: Any, wind_code: Any) -> float:
     return float((wd-face) % 360)
 
 
+def relative_wind_exact(rdeg: Any) -> str:
+    rel = finite("relative_deg", rdeg) % 360.0
+    if rel < 45 or rel >= 315:
+        return '追い'
+    if rel < 135:
+        return '右横'
+    if rel < 225:
+        return '向かい'
+    return '左横'
+
+
+def wind_speed_bin_exact(speed: Any) -> str:
+    x = finite("wind_speed", speed)
+    if x < 0:
+        raise PrimitiveBuildError("wind_speed must be >= 0")
+    return '0-2m' if x <= 2 else ('3-4m' if x <= 4 else '5m+')
+
+
+def wind_adjust_points_v83_head4(rdeg: Any, speed: Any) -> float:
+    cell = f"{relative_wind_exact(rdeg)}_{wind_speed_bin_exact(speed)}"
+    return HEAD4_V83_WIND_POINTS.get(cell, 0.0)
+
+
 def build(current: Mapping[str, Any], context: Mapping[str, Any]) -> dict[str, float]:
     if current.get("result_blind") is not True:
         raise PrimitiveBuildError("current exhibition must be result_blind=true")
@@ -126,12 +159,7 @@ def build(current: Mapping[str, Any], context: Mapping[str, Any]) -> dict[str, f
 
     wind_speed = finite("wind_speed", context.get("wind_speed"))
     rdeg = relative_deg(context.get("venue_code"), context.get("wind_code"))
-
-    # v83 +/-2 is learned from OLD-period outcomes. Consume only an explicitly
-    # frozen value; never silently derive/guess it from current conditions.
-    wind_adj = finite("wind_adjust_points", context.get("wind_adjust_points"))
-    if wind_adj not in (-2.0, 0.0, 2.0):
-        raise PrimitiveBuildError("wind_adjust_points must be frozen -2/0/+2")
+    wind_adj = wind_adjust_points_v83_head4(rdeg, wind_speed)
 
     out = {
         "preview_comp": preview,
@@ -171,11 +199,12 @@ def main() -> None:
     ctx = json.loads(Path(a.context_json).read_text(encoding="utf-8"))
     out = build(cur, ctx)
     payload = {
-        "schema":"head4_env_v91_primitives_live_v1",
+        "schema":"head4_env_v91_primitives_live_v2",
         "model":MODEL,
         "head":HEAD,
         "result_blind":True,
         "odds_used":False,
+        "wind_mapping":"v83_old_20251101_20260531_frozen",
         "features":out,
     }
     Path(a.out).write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
