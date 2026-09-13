@@ -30,8 +30,10 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           s=Path('build_4head_post_live.py').read_text(encoding='utf-8').lower()
-          assert 'race.boatcast.jp/hp_txt/' in s
           assert 'race.boatcast.jp' in s
+          assert '/hp_txt/' in s and 'bc_j_stt_' in s
+          assert '/txt/' in s and 'bc_oriten_' in s
+          assert 'beforeinfo' in s
           assert 'allow_redirects=false' in s
           assert '/race/raceresult' not in s
           assert '/race/odds3t' not in s
