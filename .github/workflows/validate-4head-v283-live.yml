@@ -1,0 +1,37 @@
+name: validate-4head-v283-live
+on:
+  push:
+    paths:
+      - 'build_4head_v283_live.py'
+      - 'verify_4head_v283_live.py'
+      - 'head4_v291_downstream_inference.py'
+      - 'artifacts/head4_v291_downstream_20260630.json'
+      - '.github/workflows/validate-4head-v283-live.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy
+      - name: Syntax check
+        run: python -m py_compile build_4head_v283_live.py verify_4head_v283_live.py head4_v291_downstream_inference.py
+      - name: Frozen SECOND5 and conditional20 contract
+        run: python verify_4head_v283_live.py
+      - name: Immutable result-blind guard
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          s=Path('build_4head_v283_live.py').read_text().lower()
+          prohibited=['data/results/','data/payouts/','closing_odds','actual_result','valid_result']
+          for x in prohibited:
+              assert x not in s, x
+          assert 'jul_aug_labels_used": false' in s
+          assert 'september_labels_used": false' in s
+          assert '"v96_used": false' in s
+          print('v283 result-blind immutable guard PASS')
+          PY
