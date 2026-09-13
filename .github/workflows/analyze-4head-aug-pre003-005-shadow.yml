@@ -1,0 +1,44 @@
+name: analyze-4head-aug-pre003-005-shadow
+on:
+  push:
+    paths:
+      - 'analyze_4head_aug_pre003_005_shadow.py'
+      - '.github/workflows/analyze-4head-aug-pre003-005-shadow.yml'
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Syntax check
+        run: python -m py_compile analyze_4head_aug_pre003_005_shadow.py
+      - name: August frozen shadow analysis
+        run: python analyze_4head_aug_pre003_005_shadow.py
+      - name: Guard audit
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('audit_4head_aug_pre003_005_shadow.json')
+          assert p.exists()
+          a=json.loads(p.read_text())
+          assert a['fit_label_cutoff']=='2026-06-30'
+          assert a['jul_aug_labels_used_for_fit'] is False
+          assert a['production_policy_modified'] is False
+          assert a['band_inclusive']==[0.03,0.05]
+          assert a['betting_metrics_status'].startswith('NOT_COMPUTED_')
+          print(json.dumps(a,indent=2,ensure_ascii=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-aug-pre003-005-shadow
+          path: |
+            analysis_4head_aug_pre003_005_shadow.csv
+            summary_4head_aug_pre003_005_shadow.md
+            audit_4head_aug_pre003_005_shadow.json
