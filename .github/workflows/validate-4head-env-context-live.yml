@@ -5,6 +5,8 @@ on:
     paths:
       - 'build_4head_env_context_live.py'
       - 'verify_4head_env_context_live.py'
+      - 'build_4head_env_entry_auto_live.py'
+      - 'verify_4head_env_entry_auto_live.py'
       - '.github/workflows/validate-4head-env-context-live.yml'
   workflow_dispatch:
 
@@ -19,6 +21,8 @@ jobs:
       - name: Install dependencies
         run: pip install requests beautifulsoup4 numpy
       - name: Syntax check
-        run: python -m py_compile build_4head_env_context_live.py verify_4head_env_context_live.py
+        run: python -m py_compile build_4head_env_context_live.py verify_4head_env_context_live.py build_4head_env_entry_auto_live.py verify_4head_env_entry_auto_live.py
       - name: Verify result-blind ENV context contract
         run: python verify_4head_env_context_live.py
+      - name: Verify automatic ENV_ENTRY wiring
+        run: python verify_4head_env_entry_auto_live.py
