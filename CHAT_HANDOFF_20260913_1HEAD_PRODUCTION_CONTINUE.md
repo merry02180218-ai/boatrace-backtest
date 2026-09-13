@@ -184,3 +184,30 @@ Failure fallback:
 
 Exact next resume point:
 - create `run_v329_1head_multistage_exhibition.py` and `.github/workflows/v329-1head-multistage-exhibition.yml`, run Actions, then append actual result before any v330 work.
+
+---
+
+# 9. Work Unit 6C-R — v329 Actions retrigger — ABOUT TO RESTART
+Current position:
+- `run_v329_1head_multistage_exhibition.py` exists (commit `c21b0587...`).
+- `.github/workflows/v329-1head-multistage-exhibition.yml` exists (commit `b69b2ac9b078604ee6eb056e8afd44900efd70d3`).
+- latest Actions inspection found no confirmed v329 workflow run; therefore v329 is **not currently running** and is not complete.
+
+Exact work about to be done:
+1. touch only the v329 workflow with a harmless retrigger comment so its existing `push.paths` trigger fires;
+2. identify the resulting v329 Actions Run ID and job;
+3. if successful, read summary/artifact and record Feb-Apr/May/June metrics and promotion decision;
+4. if failed, record the exact failing step/log before patching.
+
+Success criteria:
+- a real `v329 1-head multistage exhibition` Actions run is created and reaches a terminal status;
+- frozen 345/290/139 identity remains intact;
+- June is evaluated only under the already frozen v329 selection logic;
+- Jul/Aug are not used for tuning and September outcomes remain unread.
+
+Failure fallback:
+- if the push does not create the workflow run, inspect workflow registration/path trigger and fix only the trigger mechanics, not model logic;
+- if the job fails, append the failure/run/job/log details before any correction.
+
+Exact next resume point:
+- retrigger `.github/workflows/v329-1head-multistage-exhibition.yml`, then capture the resulting Run ID/status before any other model work.
