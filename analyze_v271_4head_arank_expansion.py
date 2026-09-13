@@ -40,8 +40,6 @@ S_PRE=.28
 S_POST=.25
 S_ENV=.224790
 
-# Chosen before this v271 ROI search from the stable v270 importance result.
-# Highly correlated raw families are kept compact; no Jul/Aug information.
 A_FEATURES=(
     'v91_ex','score_CORR20_v91','score_wind_v83','score_RAW20_v91',
     'score_BASE_v91','preview_comp',
@@ -51,8 +49,6 @@ A_FEATURES=(
     'rel_pl_recent_p2_4v3','b4_pl_recent_p2',
 )
 
-# Small, pre-declared boundary grid.  A-rank is explicitly not allowed to
-# modify the S-rank rule; these gates only define rescue candidates outside S.
 GATES={
     'BAL_22_20':(.22,.20),
     'BAL_20_20':(.20,.20),
@@ -67,10 +63,20 @@ A_CUTS=tuple(np.round(np.arange(.16,.501,.01),2))
 
 def num(s): return pd.to_numeric(s,errors='coerce')
 
+def norm_code(x):
+    s=str(x).strip()
+    if s.endswith('.0'): s=s[:-2]
+    return s.zfill(12)
+
+def norm_date(x):
+    try: return pd.Timestamp(x).strftime('%Y-%m-%d')
+    except Exception: return str(x).strip().replace('/','-')
+
 
 def env_scores():
     f=pd.read_csv(F4,dtype={'race_code':str})
-    f['race_code']=f.race_code.astype(str).str.zfill(12)
+    f['race_code']=f.race_code.map(norm_code)
+    f['date']=f.date.map(norm_date)
     f=f[(f.month.isin(EVAL_MONTHS)) & (f.variant=='ENV_ENTRY')].copy()
     return f[['date','month','race_code','p']].rename(columns={'p':'ENV_ENTRY'})
 
@@ -86,7 +92,7 @@ def oof_a_scores():
         m=v264.lr_model(); m.fit(tr[fs].apply(num),tr.y4)
         pr=m.predict_proba(te[fs].apply(num))[:,1]
         for (_,r),p in zip(te.iterrows(),pr):
-            rec={'date':str(r.date),'month':mon,'race_code':str(r.race_code).zfill(12),
+            rec={'date':norm_date(r.date),'month':mon,'race_code':norm_code(r.race_code),
                  'PRE':float(r.PRE) if pd.notna(r.PRE) else np.nan,
                  'POST':float(r.POST) if pd.notna(r.POST) else np.nan,
                  'a_score':float(p),'y4':int(r.y4)}
@@ -94,18 +100,30 @@ def oof_a_scores():
                 if c in r.index: rec[c]=r[c]
             rows.append(rec)
     z=pd.DataFrame(rows)
-    e=env_scores(); e['date']=e.date.astype(str)
+    e=env_scores()
     return z.merge(e,on=['date','month','race_code'],how='inner')
 
 
 def settle_all(z):
     rs=c4.read(); orders=v251.pair_orders(rs); actual=v251.actual_map(rs)
-    od=load_odds(); oi=od.set_index('race_code',drop=False) if not od.empty else pd.DataFrame()
+    orders_by_code={norm_code(k[1]):v for k,v in orders.items()}
+    actual_by_code={norm_code(k[1]):v for k,v in actual.items()}
+    od=load_odds()
+    if not od.empty:
+        od=od.copy(); od['race_code']=od.race_code.map(norm_code); oi=od.set_index('race_code',drop=False)
+    else:
+        oi=pd.DataFrame()
     rows=[]
+    diag={'scored_rows':int(len(z)),'order_match':0,'actual_match':0,'valid_actual':0,'odds_match':0,'settled_rows':0}
     for _,r in z.iterrows():
-        code=str(r.race_code).zfill(12); k=(str(r.date),code)
-        order=orders.get(k); a=actual.get(k)
-        if not order or not a or a[3]!=1 or code not in oi.index: continue
+        code=norm_code(r.race_code); ds=norm_date(r.date); k=(ds,code)
+        order=orders.get(k) or orders_by_code.get(code); a=actual.get(k) or actual_by_code.get(code)
+        if order: diag['order_match']+=1
+        if a: diag['actual_match']+=1
+        if not order or not a or a[3]!=1: continue
+        diag['valid_actual']+=1
+        if code not in oi.index: continue
+        diag['odds_match']+=1
         o=oi.loc[code]; o=o.iloc[-1] if isinstance(o,pd.DataFrame) else o
         choices=[]
         for n in NS:
@@ -115,10 +133,12 @@ def settle_all(z):
             hit,ret,comp=s; choices.append((n,int(hit),float(ret),float(comp)))
         if not choices: continue
         n,hit,ret,comp=min(choices,key=lambda x:(abs(x[3]-COMP_TARGET),x[0]))
-        rec=r.to_dict(); rec.update({'n':n,'hit':hit,'return_yen':ret,'comp_odds':comp,
+        rec=r.to_dict(); rec.update({'date':ds,'race_code':code,'n':n,'hit':hit,'return_yen':ret,'comp_odds':comp,
                                      'actual_head4':int(a[0]==4)})
         rec['is_S']=bool(float(r.PRE)>=S_PRE and float(r.POST)>=S_POST and float(r.ENV_ENTRY)>=S_ENV)
         rows.append(rec)
+    diag['settled_rows']=len(rows)
+    print('v271 settlement diagnostics:',diag)
     return pd.DataFrame(rows)
 
 
@@ -141,7 +161,7 @@ def metrics(q,prefix=''):
 
 def main():
     scored=oof_a_scores(); settled=settle_all(scored)
-    if settled.empty: raise RuntimeError('no settled rows')
+    if settled.empty: raise RuntimeError('no settled rows after canonical key normalization')
     S=settled[settled.is_S].copy()
     outside=settled[~settled.is_S].copy()
     sm=metrics(S,'s_')
@@ -163,14 +183,9 @@ def main():
     o['candidate_ok']=(o.combined_R.between(80,120) & (o.a_R>=20))
     o=o.sort_values(['candidate_ok','robust_combined_roi','combined_roi_pct','target_distance','combined_R'],ascending=[False,False,False,True,False])
     o.to_csv(OUT,index=False)
-
-    # Persist race-level rows for audit, without making any rule production.
     settled.to_csv(DETAIL,index=False)
 
     near=o[o.candidate_ok].copy()
-    best=near.iloc[0] if len(near) else o.iloc[0]
-    # Also identify the closest-to-100 cell among those with combined ROI>=100,
-    # preferring a >=90 monthly floor. This is descriptive model selection only.
     viable=o[(o.combined_roi_pct>=100)&(o.combined_min_month_roi_pct>=90)&(o.a_R>=20)]
     closest=viable.sort_values(['target_distance','robust_combined_roi'],ascending=[True,False]).iloc[0] if len(viable) else None
     maxr=o[(o.combined_roi_pct>=100)&(o.combined_min_month_roi_pct>=90)].sort_values(['combined_R','robust_combined_roi'],ascending=[False,False])
