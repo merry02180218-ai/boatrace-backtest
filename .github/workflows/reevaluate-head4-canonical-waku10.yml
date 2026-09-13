@@ -1,4 +1,5 @@
 name: reevaluate-head4-canonical-waku10
+# trigger: canonical-waku10-head4-pristine-reevaluation-20260914
 
 on:
   push:
