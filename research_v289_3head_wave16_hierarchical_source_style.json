@@ -1,0 +1,2384 @@
+{
+  "research_version": "wave16-hierarchical-source-style",
+  "github_run_id": "34747021942",
+  "source_max_date": "2026-08-31",
+  "rules": {
+    "baseline_policy": "legacy v288 94R floor",
+    "candidate": "expanded final-NO_BET including OLD_PRE_EXCLUDED",
+    "model": "source-group x attack-style hierarchy with source fallback",
+    "test": "prior-month-only Feb-Aug walk-forward",
+    "july_august": "NON-PRISTINE",
+    "september_outcomes_used": false,
+    "current_required_missing": "FAIL_CLOSED",
+    "stake_per_race_yen": 10000
+  },
+  "baseline": {
+    "races": 94,
+    "hits": 52,
+    "hit_rate_pct": 55.319148936170215,
+    "stake_yen": 940000,
+    "payout_yen": 1622070.0,
+    "profit_yen": 682070.0,
+    "roi_pct": 172.56063829787234,
+    "max_drawdown_yen": 80000.0
+  },
+  "expanded_pool": {
+    "races": 232,
+    "old_no_bet": 178,
+    "old_pre_excluded": 54
+  },
+  "methods": [
+    {
+      "method": "consensus",
+      "fraction": 0.15,
+      "addon": {
+        "races": 12,
+        "hits": 1,
+        "hit_rate_pct": 8.333333333333334,
+        "stake_yen": 120000,
+        "payout_yen": 31280.0,
+        "profit_yen": -88720.0,
+        "roi_pct": 26.066666666666666,
+        "max_drawdown_yen": 88720.0
+      },
+      "monthly": {
+        "2026-06": {
+          "races": 1,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 10000,
+          "payout_yen": 0.0,
+          "profit_yen": -10000.0,
+          "roi_pct": 0.0
+        },
+        "2026-07": {
+          "races": 4,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 40000,
+          "payout_yen": 0.0,
+          "profit_yen": -40000.0,
+          "roi_pct": 0.0
+        },
+        "2026-08": {
+          "races": 7,
+          "hits": 1,
+          "hit_rate_pct": 14.285714285714286,
+          "stake_yen": 70000,
+          "payout_yen": 31280.0,
+          "profit_yen": -38720.0,
+          "roi_pct": 44.68571428571428
+        }
+      },
+      "min_monthly_roi_pct": 0.0,
+      "red_months": 3,
+      "overlap_with_v288": 0,
+      "source_metrics": {
+        "OLD_NO_BET": {
+          "races": 12,
+          "hits": 1,
+          "hit_rate_pct": 8.333333333333334,
+          "stake_yen": 120000,
+          "payout_yen": 31280.0,
+          "profit_yen": -88720.0,
+          "roi_pct": 26.066666666666666,
+          "max_drawdown_yen": 88720.0
+        }
+      },
+      "style_metrics": {
+        "MAKURI": {
+          "races": 4,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 40000,
+          "payout_yen": 0.0,
+          "profit_yen": -40000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 40000.0
+        },
+        "MAKURISASHI": {
+          "races": 8,
+          "hits": 1,
+          "hit_rate_pct": 12.5,
+          "stake_yen": 80000,
+          "payout_yen": 31280.0,
+          "profit_yen": -48720.0,
+          "roi_pct": 39.1,
+          "max_drawdown_yen": 48720.0
+        }
+      },
+      "old_pre_excluded_selected": 0,
+      "combined": {
+        "races": 106,
+        "hits": 53,
+        "hit_rate_pct": 50.0,
+        "stake_yen": 1060000,
+        "payout_yen": 1653350.0,
+        "profit_yen": 593350.0,
+        "roi_pct": 155.97641509433961,
+        "max_drawdown_yen": 100000.0
+      }
+    },
+    {
+      "method": "consensus",
+      "fraction": 0.25,
+      "addon": {
+        "races": 18,
+        "hits": 1,
+        "hit_rate_pct": 5.555555555555555,
+        "stake_yen": 180000,
+        "payout_yen": 31280.0,
+        "profit_yen": -148720.0,
+        "roi_pct": 17.377777777777776,
+        "max_drawdown_yen": 148720.0
+      },
+      "monthly": {
+        "2026-06": {
+          "races": 1,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 10000,
+          "payout_yen": 0.0,
+          "profit_yen": -10000.0,
+          "roi_pct": 0.0
+        },
+        "2026-07": {
+          "races": 8,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 80000,
+          "payout_yen": 0.0,
+          "profit_yen": -80000.0,
+          "roi_pct": 0.0
+        },
+        "2026-08": {
+          "races": 9,
+          "hits": 1,
+          "hit_rate_pct": 11.11111111111111,
+          "stake_yen": 90000,
+          "payout_yen": 31280.0,
+          "profit_yen": -58720.0,
+          "roi_pct": 34.75555555555555
+        }
+      },
+      "min_monthly_roi_pct": 0.0,
+      "red_months": 3,
+      "overlap_with_v288": 0,
+      "source_metrics": {
+        "OLD_NO_BET": {
+          "races": 18,
+          "hits": 1,
+          "hit_rate_pct": 5.555555555555555,
+          "stake_yen": 180000,
+          "payout_yen": 31280.0,
+          "profit_yen": -148720.0,
+          "roi_pct": 17.377777777777776,
+          "max_drawdown_yen": 148720.0
+        }
+      },
+      "style_metrics": {
+        "MAKURI": {
+          "races": 7,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 70000,
+          "payout_yen": 0.0,
+          "profit_yen": -70000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 70000.0
+        },
+        "MAKURISASHI": {
+          "races": 11,
+          "hits": 1,
+          "hit_rate_pct": 9.090909090909092,
+          "stake_yen": 110000,
+          "payout_yen": 31280.0,
+          "profit_yen": -78720.0,
+          "roi_pct": 28.436363636363637,
+          "max_drawdown_yen": 78720.0
+        }
+      },
+      "old_pre_excluded_selected": 0,
+      "combined": {
+        "races": 112,
+        "hits": 53,
+        "hit_rate_pct": 47.32142857142857,
+        "stake_yen": 1120000,
+        "payout_yen": 1653350.0,
+        "profit_yen": 533350.0,
+        "roi_pct": 147.62053571428572,
+        "max_drawdown_yen": 116830.0
+      }
+    },
+    {
+      "method": "hit",
+      "fraction": 0.25,
+      "addon": {
+        "races": 19,
+        "hits": 1,
+        "hit_rate_pct": 5.2631578947368425,
+        "stake_yen": 190000,
+        "payout_yen": 31280.0,
+        "profit_yen": -158720.0,
+        "roi_pct": 16.46315789473684,
+        "max_drawdown_yen": 158720.0
+      },
+      "monthly": {
+        "2026-06": {
+          "races": 1,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 10000,
+          "payout_yen": 0.0,
+          "profit_yen": -10000.0,
+          "roi_pct": 0.0
+        },
+        "2026-07": {
+          "races": 9,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 90000,
+          "payout_yen": 0.0,
+          "profit_yen": -90000.0,
+          "roi_pct": 0.0
+        },
+        "2026-08": {
+          "races": 9,
+          "hits": 1,
+          "hit_rate_pct": 11.11111111111111,
+          "stake_yen": 90000,
+          "payout_yen": 31280.0,
+          "profit_yen": -58720.0,
+          "roi_pct": 34.75555555555555
+        }
+      },
+      "min_monthly_roi_pct": 0.0,
+      "red_months": 3,
+      "overlap_with_v288": 0,
+      "source_metrics": {
+        "OLD_NO_BET": {
+          "races": 19,
+          "hits": 1,
+          "hit_rate_pct": 5.2631578947368425,
+          "stake_yen": 190000,
+          "payout_yen": 31280.0,
+          "profit_yen": -158720.0,
+          "roi_pct": 16.46315789473684,
+          "max_drawdown_yen": 158720.0
+        }
+      },
+      "style_metrics": {
+        "MAKURI": {
+          "races": 7,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 70000,
+          "payout_yen": 0.0,
+          "profit_yen": -70000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 70000.0
+        },
+        "MAKURISASHI": {
+          "races": 12,
+          "hits": 1,
+          "hit_rate_pct": 8.333333333333334,
+          "stake_yen": 120000,
+          "payout_yen": 31280.0,
+          "profit_yen": -88720.0,
+          "roi_pct": 26.066666666666666,
+          "max_drawdown_yen": 88720.0
+        }
+      },
+      "old_pre_excluded_selected": 0,
+      "combined": {
+        "races": 113,
+        "hits": 53,
+        "hit_rate_pct": 46.902654867256636,
+        "stake_yen": 1130000,
+        "payout_yen": 1653350.0,
+        "profit_yen": 523350.0,
+        "roi_pct": 146.31415929203538,
+        "max_drawdown_yen": 126830.0
+      }
+    },
+    {
+      "method": "return",
+      "fraction": 0.25,
+      "addon": {
+        "races": 20,
+        "hits": 1,
+        "hit_rate_pct": 5.0,
+        "stake_yen": 200000,
+        "payout_yen": 31280.0,
+        "profit_yen": -168720.0,
+        "roi_pct": 15.64,
+        "max_drawdown_yen": 168720.0
+      },
+      "monthly": {
+        "2026-06": {
+          "races": 1,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 10000,
+          "payout_yen": 0.0,
+          "profit_yen": -10000.0,
+          "roi_pct": 0.0
+        },
+        "2026-07": {
+          "races": 10,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 100000,
+          "payout_yen": 0.0,
+          "profit_yen": -100000.0,
+          "roi_pct": 0.0
+        },
+        "2026-08": {
+          "races": 9,
+          "hits": 1,
+          "hit_rate_pct": 11.11111111111111,
+          "stake_yen": 90000,
+          "payout_yen": 31280.0,
+          "profit_yen": -58720.0,
+          "roi_pct": 34.75555555555555
+        }
+      },
+      "min_monthly_roi_pct": 0.0,
+      "red_months": 3,
+      "overlap_with_v288": 0,
+      "source_metrics": {
+        "OLD_NO_BET": {
+          "races": 20,
+          "hits": 1,
+          "hit_rate_pct": 5.0,
+          "stake_yen": 200000,
+          "payout_yen": 31280.0,
+          "profit_yen": -168720.0,
+          "roi_pct": 15.64,
+          "max_drawdown_yen": 168720.0
+        }
+      },
+      "style_metrics": {
+        "MAKURI": {
+          "races": 7,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 70000,
+          "payout_yen": 0.0,
+          "profit_yen": -70000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 70000.0
+        },
+        "MAKURISASHI": {
+          "races": 13,
+          "hits": 1,
+          "hit_rate_pct": 7.6923076923076925,
+          "stake_yen": 130000,
+          "payout_yen": 31280.0,
+          "profit_yen": -98720.0,
+          "roi_pct": 24.06153846153846,
+          "max_drawdown_yen": 98720.0
+        }
+      },
+      "old_pre_excluded_selected": 0,
+      "combined": {
+        "races": 114,
+        "hits": 53,
+        "hit_rate_pct": 46.49122807017544,
+        "stake_yen": 1140000,
+        "payout_yen": 1653350.0,
+        "profit_yen": 513350.0,
+        "roi_pct": 145.03070175438597,
+        "max_drawdown_yen": 136830.0
+      }
+    },
+    {
+      "method": "exhibition",
+      "fraction": 0.25,
+      "addon": {
+        "races": 21,
+        "hits": 1,
+        "hit_rate_pct": 4.761904761904762,
+        "stake_yen": 210000,
+        "payout_yen": 31280.0,
+        "profit_yen": -178720.0,
+        "roi_pct": 14.895238095238096,
+        "max_drawdown_yen": 178720.0
+      },
+      "monthly": {
+        "2026-06": {
+          "races": 2,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 20000,
+          "payout_yen": 0.0,
+          "profit_yen": -20000.0,
+          "roi_pct": 0.0
+        },
+        "2026-07": {
+          "races": 6,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 60000,
+          "payout_yen": 0.0,
+          "profit_yen": -60000.0,
+          "roi_pct": 0.0
+        },
+        "2026-08": {
+          "races": 13,
+          "hits": 1,
+          "hit_rate_pct": 7.6923076923076925,
+          "stake_yen": 130000,
+          "payout_yen": 31280.0,
+          "profit_yen": -98720.0,
+          "roi_pct": 24.06153846153846
+        }
+      },
+      "min_monthly_roi_pct": 0.0,
+      "red_months": 3,
+      "overlap_with_v288": 0,
+      "source_metrics": {
+        "OLD_NO_BET": {
+          "races": 21,
+          "hits": 1,
+          "hit_rate_pct": 4.761904761904762,
+          "stake_yen": 210000,
+          "payout_yen": 31280.0,
+          "profit_yen": -178720.0,
+          "roi_pct": 14.895238095238096,
+          "max_drawdown_yen": 178720.0
+        }
+      },
+      "style_metrics": {
+        "MAKURI": {
+          "races": 10,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 100000,
+          "payout_yen": 0.0,
+          "profit_yen": -100000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 100000.0
+        },
+        "MAKURISASHI": {
+          "races": 11,
+          "hits": 1,
+          "hit_rate_pct": 9.090909090909092,
+          "stake_yen": 110000,
+          "payout_yen": 31280.0,
+          "profit_yen": -78720.0,
+          "roi_pct": 28.436363636363637,
+          "max_drawdown_yen": 78720.0
+        }
+      },
+      "old_pre_excluded_selected": 0,
+      "combined": {
+        "races": 115,
+        "hits": 53,
+        "hit_rate_pct": 46.08695652173913,
+        "stake_yen": 1150000,
+        "payout_yen": 1653350.0,
+        "profit_yen": 503350.0,
+        "roi_pct": 143.76956521739132,
+        "max_drawdown_yen": 110000.0
+      }
+    },
+    {
+      "method": "exhibition",
+      "fraction": 0.15,
+      "addon": {
+        "races": 14,
+        "hits": 0,
+        "hit_rate_pct": 0.0,
+        "stake_yen": 140000,
+        "payout_yen": 0.0,
+        "profit_yen": -140000.0,
+        "roi_pct": 0.0,
+        "max_drawdown_yen": 140000.0
+      },
+      "monthly": {
+        "2026-06": {
+          "races": 2,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 20000,
+          "payout_yen": 0.0,
+          "profit_yen": -20000.0,
+          "roi_pct": 0.0
+        },
+        "2026-07": {
+          "races": 5,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 50000,
+          "payout_yen": 0.0,
+          "profit_yen": -50000.0,
+          "roi_pct": 0.0
+        },
+        "2026-08": {
+          "races": 7,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 70000,
+          "payout_yen": 0.0,
+          "profit_yen": -70000.0,
+          "roi_pct": 0.0
+        }
+      },
+      "min_monthly_roi_pct": 0.0,
+      "red_months": 3,
+      "overlap_with_v288": 0,
+      "source_metrics": {
+        "OLD_NO_BET": {
+          "races": 14,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 140000,
+          "payout_yen": 0.0,
+          "profit_yen": -140000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 140000.0
+        }
+      },
+      "style_metrics": {
+        "MAKURI": {
+          "races": 7,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 70000,
+          "payout_yen": 0.0,
+          "profit_yen": -70000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 70000.0
+        },
+        "MAKURISASHI": {
+          "races": 7,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 70000,
+          "payout_yen": 0.0,
+          "profit_yen": -70000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 70000.0
+        }
+      },
+      "old_pre_excluded_selected": 0,
+      "combined": {
+        "races": 108,
+        "hits": 52,
+        "hit_rate_pct": 48.148148148148145,
+        "stake_yen": 1080000,
+        "payout_yen": 1622070.0,
+        "profit_yen": 542070.0,
+        "roi_pct": 150.19166666666666,
+        "max_drawdown_yen": 110000.0
+      }
+    },
+    {
+      "method": "hit",
+      "fraction": 0.15,
+      "addon": {
+        "races": 8,
+        "hits": 0,
+        "hit_rate_pct": 0.0,
+        "stake_yen": 80000,
+        "payout_yen": 0.0,
+        "profit_yen": -80000.0,
+        "roi_pct": 0.0,
+        "max_drawdown_yen": 80000.0
+      },
+      "monthly": {
+        "2026-06": {
+          "races": 1,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 10000,
+          "payout_yen": 0.0,
+          "profit_yen": -10000.0,
+          "roi_pct": 0.0
+        },
+        "2026-07": {
+          "races": 4,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 40000,
+          "payout_yen": 0.0,
+          "profit_yen": -40000.0,
+          "roi_pct": 0.0
+        },
+        "2026-08": {
+          "races": 3,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 30000,
+          "payout_yen": 0.0,
+          "profit_yen": -30000.0,
+          "roi_pct": 0.0
+        }
+      },
+      "min_monthly_roi_pct": 0.0,
+      "red_months": 3,
+      "overlap_with_v288": 0,
+      "source_metrics": {
+        "OLD_NO_BET": {
+          "races": 8,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 80000,
+          "payout_yen": 0.0,
+          "profit_yen": -80000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 80000.0
+        }
+      },
+      "style_metrics": {
+        "MAKURI": {
+          "races": 3,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 30000,
+          "payout_yen": 0.0,
+          "profit_yen": -30000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 30000.0
+        },
+        "MAKURISASHI": {
+          "races": 5,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 50000,
+          "payout_yen": 0.0,
+          "profit_yen": -50000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 50000.0
+        }
+      },
+      "old_pre_excluded_selected": 0,
+      "combined": {
+        "races": 102,
+        "hits": 52,
+        "hit_rate_pct": 50.98039215686274,
+        "stake_yen": 1020000,
+        "payout_yen": 1622070.0,
+        "profit_yen": 602070.0,
+        "roi_pct": 159.0264705882353,
+        "max_drawdown_yen": 100000.0
+      }
+    },
+    {
+      "method": "exhibition",
+      "fraction": 0.1,
+      "addon": {
+        "races": 8,
+        "hits": 0,
+        "hit_rate_pct": 0.0,
+        "stake_yen": 80000,
+        "payout_yen": 0.0,
+        "profit_yen": -80000.0,
+        "roi_pct": 0.0,
+        "max_drawdown_yen": 80000.0
+      },
+      "monthly": {
+        "2026-06": {
+          "races": 2,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 20000,
+          "payout_yen": 0.0,
+          "profit_yen": -20000.0,
+          "roi_pct": 0.0
+        },
+        "2026-07": {
+          "races": 2,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 20000,
+          "payout_yen": 0.0,
+          "profit_yen": -20000.0,
+          "roi_pct": 0.0
+        },
+        "2026-08": {
+          "races": 4,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 40000,
+          "payout_yen": 0.0,
+          "profit_yen": -40000.0,
+          "roi_pct": 0.0
+        }
+      },
+      "min_monthly_roi_pct": 0.0,
+      "red_months": 3,
+      "overlap_with_v288": 0,
+      "source_metrics": {
+        "OLD_NO_BET": {
+          "races": 8,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 80000,
+          "payout_yen": 0.0,
+          "profit_yen": -80000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 80000.0
+        }
+      },
+      "style_metrics": {
+        "MAKURI": {
+          "races": 4,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 40000,
+          "payout_yen": 0.0,
+          "profit_yen": -40000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 40000.0
+        },
+        "MAKURISASHI": {
+          "races": 4,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 40000,
+          "payout_yen": 0.0,
+          "profit_yen": -40000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 40000.0
+        }
+      },
+      "old_pre_excluded_selected": 0,
+      "combined": {
+        "races": 102,
+        "hits": 52,
+        "hit_rate_pct": 50.98039215686274,
+        "stake_yen": 1020000,
+        "payout_yen": 1622070.0,
+        "profit_yen": 602070.0,
+        "roi_pct": 159.0264705882353,
+        "max_drawdown_yen": 90000.0
+      }
+    },
+    {
+      "method": "return",
+      "fraction": 0.15,
+      "addon": {
+        "races": 6,
+        "hits": 0,
+        "hit_rate_pct": 0.0,
+        "stake_yen": 60000,
+        "payout_yen": 0.0,
+        "profit_yen": -60000.0,
+        "roi_pct": 0.0,
+        "max_drawdown_yen": 60000.0
+      },
+      "monthly": {
+        "2026-07": {
+          "races": 3,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 30000,
+          "payout_yen": 0.0,
+          "profit_yen": -30000.0,
+          "roi_pct": 0.0
+        },
+        "2026-08": {
+          "races": 3,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 30000,
+          "payout_yen": 0.0,
+          "profit_yen": -30000.0,
+          "roi_pct": 0.0
+        }
+      },
+      "min_monthly_roi_pct": 0.0,
+      "red_months": 2,
+      "overlap_with_v288": 0,
+      "source_metrics": {
+        "OLD_NO_BET": {
+          "races": 6,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 60000,
+          "payout_yen": 0.0,
+          "profit_yen": -60000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 60000.0
+        }
+      },
+      "style_metrics": {
+        "MAKURI": {
+          "races": 3,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 30000,
+          "payout_yen": 0.0,
+          "profit_yen": -30000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 30000.0
+        },
+        "MAKURISASHI": {
+          "races": 3,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 30000,
+          "payout_yen": 0.0,
+          "profit_yen": -30000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 30000.0
+        }
+      },
+      "old_pre_excluded_selected": 0,
+      "combined": {
+        "races": 100,
+        "hits": 52,
+        "hit_rate_pct": 52.0,
+        "stake_yen": 1000000,
+        "payout_yen": 1622070.0,
+        "profit_yen": 622070.0,
+        "roi_pct": 162.207,
+        "max_drawdown_yen": 100000.0
+      }
+    },
+    {
+      "method": "return",
+      "fraction": 0.1,
+      "addon": {
+        "races": 5,
+        "hits": 0,
+        "hit_rate_pct": 0.0,
+        "stake_yen": 50000,
+        "payout_yen": 0.0,
+        "profit_yen": -50000.0,
+        "roi_pct": 0.0,
+        "max_drawdown_yen": 50000.0
+      },
+      "monthly": {
+        "2026-07": {
+          "races": 3,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 30000,
+          "payout_yen": 0.0,
+          "profit_yen": -30000.0,
+          "roi_pct": 0.0
+        },
+        "2026-08": {
+          "races": 2,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 20000,
+          "payout_yen": 0.0,
+          "profit_yen": -20000.0,
+          "roi_pct": 0.0
+        }
+      },
+      "min_monthly_roi_pct": 0.0,
+      "red_months": 2,
+      "overlap_with_v288": 0,
+      "source_metrics": {
+        "OLD_NO_BET": {
+          "races": 5,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 50000,
+          "payout_yen": 0.0,
+          "profit_yen": -50000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 50000.0
+        }
+      },
+      "style_metrics": {
+        "MAKURI": {
+          "races": 3,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 30000,
+          "payout_yen": 0.0,
+          "profit_yen": -30000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 30000.0
+        },
+        "MAKURISASHI": {
+          "races": 2,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 20000,
+          "payout_yen": 0.0,
+          "profit_yen": -20000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 20000.0
+        }
+      },
+      "old_pre_excluded_selected": 0,
+      "combined": {
+        "races": 99,
+        "hits": 52,
+        "hit_rate_pct": 52.525252525252526,
+        "stake_yen": 990000,
+        "payout_yen": 1622070.0,
+        "profit_yen": 632070.0,
+        "roi_pct": 163.84545454545454,
+        "max_drawdown_yen": 100000.0
+      }
+    },
+    {
+      "method": "hit",
+      "fraction": 0.1,
+      "addon": {
+        "races": 4,
+        "hits": 0,
+        "hit_rate_pct": 0.0,
+        "stake_yen": 40000,
+        "payout_yen": 0.0,
+        "profit_yen": -40000.0,
+        "roi_pct": 0.0,
+        "max_drawdown_yen": 40000.0
+      },
+      "monthly": {
+        "2026-07": {
+          "races": 2,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 20000,
+          "payout_yen": 0.0,
+          "profit_yen": -20000.0,
+          "roi_pct": 0.0
+        },
+        "2026-08": {
+          "races": 2,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 20000,
+          "payout_yen": 0.0,
+          "profit_yen": -20000.0,
+          "roi_pct": 0.0
+        }
+      },
+      "min_monthly_roi_pct": 0.0,
+      "red_months": 2,
+      "overlap_with_v288": 0,
+      "source_metrics": {
+        "OLD_NO_BET": {
+          "races": 4,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 40000,
+          "payout_yen": 0.0,
+          "profit_yen": -40000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 40000.0
+        }
+      },
+      "style_metrics": {
+        "MAKURI": {
+          "races": 2,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 20000,
+          "payout_yen": 0.0,
+          "profit_yen": -20000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 20000.0
+        },
+        "MAKURISASHI": {
+          "races": 2,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 20000,
+          "payout_yen": 0.0,
+          "profit_yen": -20000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 20000.0
+        }
+      },
+      "old_pre_excluded_selected": 0,
+      "combined": {
+        "races": 98,
+        "hits": 52,
+        "hit_rate_pct": 53.06122448979592,
+        "stake_yen": 980000,
+        "payout_yen": 1622070.0,
+        "profit_yen": 642070.0,
+        "roi_pct": 165.51734693877552,
+        "max_drawdown_yen": 90000.0
+      }
+    },
+    {
+      "method": "consensus",
+      "fraction": 0.1,
+      "addon": {
+        "races": 4,
+        "hits": 0,
+        "hit_rate_pct": 0.0,
+        "stake_yen": 40000,
+        "payout_yen": 0.0,
+        "profit_yen": -40000.0,
+        "roi_pct": 0.0,
+        "max_drawdown_yen": 40000.0
+      },
+      "monthly": {
+        "2026-07": {
+          "races": 2,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 20000,
+          "payout_yen": 0.0,
+          "profit_yen": -20000.0,
+          "roi_pct": 0.0
+        },
+        "2026-08": {
+          "races": 2,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 20000,
+          "payout_yen": 0.0,
+          "profit_yen": -20000.0,
+          "roi_pct": 0.0
+        }
+      },
+      "min_monthly_roi_pct": 0.0,
+      "red_months": 2,
+      "overlap_with_v288": 0,
+      "source_metrics": {
+        "OLD_NO_BET": {
+          "races": 4,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 40000,
+          "payout_yen": 0.0,
+          "profit_yen": -40000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 40000.0
+        }
+      },
+      "style_metrics": {
+        "MAKURI": {
+          "races": 3,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 30000,
+          "payout_yen": 0.0,
+          "profit_yen": -30000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 30000.0
+        },
+        "MAKURISASHI": {
+          "races": 1,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 10000,
+          "payout_yen": 0.0,
+          "profit_yen": -10000.0,
+          "roi_pct": 0.0,
+          "max_drawdown_yen": 10000.0
+        }
+      },
+      "old_pre_excluded_selected": 0,
+      "combined": {
+        "races": 98,
+        "hits": 52,
+        "hit_rate_pct": 53.06122448979592,
+        "stake_yen": 980000,
+        "payout_yen": 1622070.0,
+        "profit_yen": 642070.0,
+        "roi_pct": 165.51734693877552,
+        "max_drawdown_yen": 100000.0
+      }
+    }
+  ],
+  "passers": [],
+  "decision": "NO_ADOPTION_WAVE16",
+  "audit": {
+    "2026-06": {
+      "train": 88,
+      "test": 35,
+      "old_pre_excluded": 10
+    },
+    "2026-07": {
+      "train": 123,
+      "test": 49,
+      "old_pre_excluded": 10
+    },
+    "2026-08": {
+      "train": 172,
+      "test": 60,
+      "old_pre_excluded": 12
+    }
+  },
+  "detail": {
+    "hit@0.10": [
+      {
+        "date": "2026-07-22",
+        "race_code": "202607220802",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-12",
+        "race_code": "202607121003",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-07",
+        "race_code": "202608071504",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-08",
+        "race_code": "202608080403",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      }
+    ],
+    "hit@0.15": [
+      {
+        "date": "2026-06-07",
+        "race_code": "202606070609",
+        "month": "2026-06",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-22",
+        "race_code": "202607220802",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-08",
+        "race_code": "202607082004",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-23",
+        "race_code": "202607232401",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-12",
+        "race_code": "202607121003",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-24",
+        "race_code": "202608242207",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-07",
+        "race_code": "202608071504",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-08",
+        "race_code": "202608080403",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      }
+    ],
+    "hit@0.25": [
+      {
+        "date": "2026-06-07",
+        "race_code": "202606070609",
+        "month": "2026-06",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-16",
+        "race_code": "202607162103",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-19",
+        "race_code": "202607191608",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-22",
+        "race_code": "202607220802",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-09",
+        "race_code": "202607090504",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-08",
+        "race_code": "202607082004",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-23",
+        "race_code": "202607232401",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-04",
+        "race_code": "202607040903",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-26",
+        "race_code": "202607260308",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-12",
+        "race_code": "202607121003",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-24",
+        "race_code": "202608242207",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-12",
+        "race_code": "202608122305",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-07",
+        "race_code": "202608071504",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-16",
+        "race_code": "202608161704",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-08",
+        "race_code": "202608080403",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-04",
+        "race_code": "202608042108",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 1,
+        "ret": 31280.0
+      },
+      {
+        "date": "2026-08-10",
+        "race_code": "202608100503",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-01",
+        "race_code": "202608010601",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-16",
+        "race_code": "202608161011",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      }
+    ],
+    "exhibition@0.10": [
+      {
+        "date": "2026-06-21",
+        "race_code": "202606210202",
+        "month": "2026-06",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-07",
+        "race_code": "202606070609",
+        "month": "2026-06",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-08",
+        "race_code": "202607082004",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-23",
+        "race_code": "202607232401",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-21",
+        "race_code": "202608210406",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-08",
+        "race_code": "202608080403",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-16",
+        "race_code": "202608160104",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-01",
+        "race_code": "202608010601",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      }
+    ],
+    "exhibition@0.15": [
+      {
+        "date": "2026-06-21",
+        "race_code": "202606210202",
+        "month": "2026-06",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-07",
+        "race_code": "202606070609",
+        "month": "2026-06",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-16",
+        "race_code": "202607162103",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-08",
+        "race_code": "202607082004",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-23",
+        "race_code": "202607232401",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-04",
+        "race_code": "202607040903",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-12",
+        "race_code": "202607121003",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-24",
+        "race_code": "202608242207",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-21",
+        "race_code": "202608210406",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-16",
+        "race_code": "202608161704",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-08",
+        "race_code": "202608080403",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-16",
+        "race_code": "202608160104",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-10",
+        "race_code": "202608100503",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-01",
+        "race_code": "202608010601",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      }
+    ],
+    "exhibition@0.25": [
+      {
+        "date": "2026-06-21",
+        "race_code": "202606210202",
+        "month": "2026-06",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-06-07",
+        "race_code": "202606070609",
+        "month": "2026-06",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-16",
+        "race_code": "202607162103",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-08",
+        "race_code": "202607082004",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-23",
+        "race_code": "202607232401",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-04",
+        "race_code": "202607040903",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-26",
+        "race_code": "202607260308",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-12",
+        "race_code": "202607121003",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-27",
+        "race_code": "202608271301",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-24",
+        "race_code": "202608242207",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-21",
+        "race_code": "202608210406",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-22",
+        "race_code": "202608220406",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-07",
+        "race_code": "202608071504",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-16",
+        "race_code": "202608161704",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-08",
+        "race_code": "202608080403",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-04",
+        "race_code": "202608042108",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 1,
+        "ret": 31280.0
+      },
+      {
+        "date": "2026-08-16",
+        "race_code": "202608160104",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-10",
+        "race_code": "202608100503",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-01",
+        "race_code": "202608010606",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-01",
+        "race_code": "202608010601",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-18",
+        "race_code": "202608181811",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      }
+    ],
+    "return@0.10": [
+      {
+        "date": "2026-07-22",
+        "race_code": "202607220802",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-08",
+        "race_code": "202607082004",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-12",
+        "race_code": "202607121003",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-07",
+        "race_code": "202608071504",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-08",
+        "race_code": "202608080403",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      }
+    ],
+    "return@0.15": [
+      {
+        "date": "2026-07-22",
+        "race_code": "202607220802",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-08",
+        "race_code": "202607082004",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-12",
+        "race_code": "202607121003",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-24",
+        "race_code": "202608242207",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-07",
+        "race_code": "202608071504",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-08",
+        "race_code": "202608080403",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      }
+    ],
+    "return@0.25": [
+      {
+        "date": "2026-06-07",
+        "race_code": "202606070609",
+        "month": "2026-06",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-19",
+        "race_code": "202607191608",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-22",
+        "race_code": "202607220802",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-09",
+        "race_code": "202607090504",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-08",
+        "race_code": "202607082004",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-23",
+        "race_code": "202607232401",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-01",
+        "race_code": "202607012309",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-04",
+        "race_code": "202607040903",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-26",
+        "race_code": "202607260308",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-12",
+        "race_code": "202607121003",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-13",
+        "race_code": "202607130303",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-24",
+        "race_code": "202608242207",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-12",
+        "race_code": "202608122305",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-07",
+        "race_code": "202608071504",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-16",
+        "race_code": "202608161704",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-08",
+        "race_code": "202608080403",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-04",
+        "race_code": "202608042108",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 1,
+        "ret": 31280.0
+      },
+      {
+        "date": "2026-08-10",
+        "race_code": "202608100503",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-01",
+        "race_code": "202608010601",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-16",
+        "race_code": "202608161011",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      }
+    ],
+    "consensus@0.10": [
+      {
+        "date": "2026-07-08",
+        "race_code": "202607082004",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-12",
+        "race_code": "202607121003",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-07",
+        "race_code": "202608071504",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-08",
+        "race_code": "202608080403",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      }
+    ],
+    "consensus@0.15": [
+      {
+        "date": "2026-06-07",
+        "race_code": "202606070609",
+        "month": "2026-06",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-22",
+        "race_code": "202607220802",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-08",
+        "race_code": "202607082004",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-23",
+        "race_code": "202607232401",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-12",
+        "race_code": "202607121003",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-24",
+        "race_code": "202608242207",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-07",
+        "race_code": "202608071504",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-16",
+        "race_code": "202608161704",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-08",
+        "race_code": "202608080403",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-04",
+        "race_code": "202608042108",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 1,
+        "ret": 31280.0
+      },
+      {
+        "date": "2026-08-16",
+        "race_code": "202608160104",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-01",
+        "race_code": "202608010601",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      }
+    ],
+    "consensus@0.25": [
+      {
+        "date": "2026-06-07",
+        "race_code": "202606070609",
+        "month": "2026-06",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-16",
+        "race_code": "202607162103",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-19",
+        "race_code": "202607191608",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-22",
+        "race_code": "202607220802",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-08",
+        "race_code": "202607082004",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-23",
+        "race_code": "202607232401",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-04",
+        "race_code": "202607040903",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-26",
+        "race_code": "202607260308",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-07-12",
+        "race_code": "202607121003",
+        "month": "2026-07",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-24",
+        "race_code": "202608242207",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-07",
+        "race_code": "202608071504",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-16",
+        "race_code": "202608161704",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-08",
+        "race_code": "202608080403",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-04",
+        "race_code": "202608042108",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 1,
+        "ret": 31280.0
+      },
+      {
+        "date": "2026-08-16",
+        "race_code": "202608160104",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-10",
+        "race_code": "202608100503",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-01",
+        "race_code": "202608010601",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURISASHI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      },
+      {
+        "date": "2026-08-16",
+        "race_code": "202608161011",
+        "month": "2026-08",
+        "source_group": "OLD_NO_BET",
+        "style": "MAKURI",
+        "trifecta_hit": 0,
+        "ret": 0.0
+      }
+    ]
+  }
+}
