@@ -18,8 +18,17 @@ S=ROOT/'summary_v319_1head_opponent_ordered_pair.md'
 TM=list(v298.TEST_MONTHS)
 
 def predict(cl,tm,l2,mode):
-    tr=cl[(cl.month<tm)&(cl.train_group==1)].copy(); te=cl[cl.month==tm].copy()
+    base=cl[cl.month<tm].copy()
+    # conditional_long_all marks only the actual-SECOND 4-row block as train_group=1.
+    # Direct ordered-pair training instead needs all 20 pair candidates for every
+    # valid historical 1-x-y race. Use train_group only to identify those eligible
+    # races, then restore their complete 20-row candidate sets.
+    eligible=set(base.loc[base.train_group==1,'race_code'].astype(str))
+    tr=base[base.race_code.astype(str).isin(eligible)].copy(); te=cl[cl.month==tm].copy()
     tr['ypair']=((tr.second_boat.astype(int)==tr.actual2.astype(int))&(tr.third_boat.astype(int)==tr.actual3.astype(int))).astype(int)
+    grp=tr.groupby('race_code',sort=False).agg(n=('race_code','size'),ys=('ypair','sum'))
+    bad=grp[(grp.n!=20)|(grp.ys!=1)]
+    if len(bad): raise RuntimeError(f'v319 invalid 20-pair training groups n={len(bad)}')
     meta={'date','month','race_code','group_id','second_boat','third_boat','train_group','ycond','ypair','actual2','actual3'}
     fs=v300.good(tr,[c for c in tr.columns if c not in meta])
     if any('meet_' in str(c) for c in fs): raise RuntimeError('v319 forbidden meet feature')
