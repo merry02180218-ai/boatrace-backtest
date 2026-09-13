@@ -5,7 +5,7 @@
   "parity": {
     "available": true,
     "n": 384,
-    "max_abs": 1.3133938381315602e-13,
+    "max_abs": 9.71445146547012e-17,
     "status": "PASS"
   },
   "mapping": {
@@ -20,7 +20,7 @@
     "reference_R": 120,
     "oof_selected_R": 47,
     "selected_fraction": 0.39166666666666666,
-    "mapped_live_threshold": 0.2710428764008591,
+    "mapped_live_threshold": 0.2710428764008623,
     "mapped_selected_R": 47,
     "month_count_audit": [
       {
