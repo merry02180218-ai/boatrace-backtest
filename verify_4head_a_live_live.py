@@ -55,13 +55,16 @@ def main() -> None:
     else:
         raise AssertionError("non-finite A-LIVE key did not fail closed")
 
-    bad = copy.deepcopy(a); bad["A_SCORE"]["features"] = list(reversed(fs))
+    # Mutating immutable artifact policy metadata must fail closed. Feature order
+    # itself is intentionally artifact-defined, so reversing it is not a valid
+    # negative test of the frozen inference contract.
+    bad = copy.deepcopy(a); bad["policy"] = "MUTATED"
     try:
         score_a(row, bad)
     except FrozenARankError:
         pass
     else:
-        raise AssertionError("artifact schema mutation did not fail closed")
+        raise AssertionError("artifact policy mutation did not fail closed")
 
     assert a["jul_aug_labels_used"] is False
     assert a["september_labels_used"] is False
