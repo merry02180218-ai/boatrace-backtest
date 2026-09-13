@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'analyze_4head_waku10_ablation_20260914.py'
+      - 'analyze_v267_4head_v260_consensus_overlay.py'
       - '.github/workflows/analyze-4head-waku10-ablation.yml'
   workflow_dispatch:
 
