@@ -1,0 +1,30 @@
+name: v330 1-head extended v329 reference
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v330_1head_extended_v329_reference.py'
+      - '.github/workflows/v330-1head-extended-v329-reference.yml'
+
+jobs:
+  v330:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy scikit-learn
+      - name: Run v330 extended v329 robustness audit
+        run: python run_v330_1head_extended_v329_reference.py
+      - name: Show summary
+        if: always()
+        run: cat /tmp/v330/summary_v330.md || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v330-1head-extended-v329-reference
+          path: /tmp/v330/
+          if-no-files-found: warn
