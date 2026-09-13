@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# canonical Waku10 re-audit trigger 2026-09-14; analysis logic unchanged
 from collections import defaultdict
 from datetime import date,timedelta
 from pathlib import Path
