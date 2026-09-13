@@ -54,12 +54,20 @@ Design:
 - Top 3 direct pair probabilities form the exact-3-ticket candidate set.
 - Compare against factorized v317 SECOND + v318 THIRD reference exact3 **137/345=39.71%**, including monthly/worst-month stability.
 - Feb-Jun development only; Jul/Aug NON-PRISTINE; September unread.
-- Workflow creation triggers v319; fresh check must inspect newest v319 run first.
+
+### v319 failure/restart 2026-09-13
+- Initial run **`34731843060`** started successfully but failed in `FastListwise.fit` with `RuntimeError: no valid listwise groups`.
+- Root cause: direct ordered-pair model requires **20 candidate rows per race**, but the initial code filtered rows with `train_group==1`; in `conditional_long_all`, that flag marks only the actual-SECOND conditional 4-row block. Thus every historical training race was reduced from 20 rows to 4 before a `group_n=20` listwise fit.
+- This was a technical grouping bug, not model evidence and not a change to the causal rules.
+- Fix commit **`e7626463c00bd923be319c0c680f42d306726e54`**: use `train_group==1` only to identify eligible historical valid 1-x-y race codes, then restore all 20 ordered-pair candidate rows for those race codes. Add fail-closed assertion that every training race has exactly 20 rows and exactly one `ypair` positive.
+- No `meet_*`, future fields, Jul/Aug validation, or September outcomes were introduced. Fixed **345R / 290 head hits** remains mandatory.
+- Restarted run **`34733175916`** from the fix commit; status at handoff update: **in_progress**.
+- Do not consider v319 started merely because a commit was pushed: future monitor checks must verify an actual Actions run ID and its status.
 
 ## Automatic branch sequence
 1. SECOND family/gating/role/pairwise/multiclass/error-feature research v311-v317 — completed; saturated.
 2. v318 conditional THIRD rebuild — completed, flat.
-3. **v319 direct 20 ordered `(second,third)` pair model — CURRENT.**
+3. **v319 direct 20 ordered `(second,third)` pair model — CURRENT / restarted after technical fix.**
 4. If ordered-pair materially improves stable exact3, retain it as ranking reference; otherwise retain stronger factorized reference.
 5. Then optimize exactly-3-ticket policy using the stronger stabilized probability/ranking model without changing the 345R cohort.
 6. Suspicious large gain -> immediate leakage/causal audit.
