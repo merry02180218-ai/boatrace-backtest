@@ -177,3 +177,16 @@ Exact next resume point:
 3. Fix only the v337 reconstruction/audit harness until cutoff 0.8073405637 reproduces exactly 96/83/45.
 4. Only then run/interpret the predeclared cutoff grid 0.80/0.79/0.78/0.77/0.75.
 5. Keep September outcomes UNREAD and production v332 unchanged.
+
+# 12. 2026-09-14 PRE-WORK — v337 8-RACE IDENTITY REPAIR
+User instructed to continue after Waku10 was ruled out.
+
+Exact work now:
+1. Compare failed v337 Artifact `10324652726` (88/76/43) against corrected canonical v332 Artifact `10325336969` (96/83/45) by race_code.
+2. Identify all missing/extra PASS identities; expected net missing count is 8 if no compensating additions exist.
+3. For every missing canonical PASS race, trace the first divergence stage in v337: candidate PRE/head cutoff, opponent gate, SECOND/THIRD/ticket readiness, exhibition feature/readiness construction, ATTACK_ENV_SOFT scoring, or q=.65 training threshold semantics.
+4. Determine one or more shared root causes and fix ONLY the v337 reconstruction/audit harness. Frozen v308/v317/v318/v320/v323/v332 production files must remain untouched.
+5. Re-run the anchor gate. Do not interpret relaxed cutoffs unless the current cutoff reproduces exactly 96 PASS / 83 head / 45 exact3.
+6. If anchor passes, continue the predeclared cutoff grid 0.80/0.79/0.78/0.77/0.75 and compare against v336 volume relaxation.
+7. Keep September outcomes UNREAD.
+8. Append exact missing race IDs, root cause, fix commit, Run/Job/Artifact IDs, anchor result, and next resume point to THIS file before reporting completion.
