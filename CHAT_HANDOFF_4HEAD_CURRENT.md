@@ -1,6 +1,6 @@
 # CHAT HANDOFF — HEAD4 CURRENT
 
-Updated: 2026-09-13 JST
+Updated: 2026-09-14 JST
 
 ## Source of truth
 Always use latest GitHub main + latest 4-head CI over older chats/handoffs.
@@ -84,7 +84,7 @@ Decision: **ACCEPT automatic current exhibition + frozen v90 ST-flat.**
 ## v93 opponent primitives LIVE — ACCEPTED
 `build_4head_v93_primitives_live.py`, commit `d9baa169d6f72f65ab80fdb9a8597863d89c1969`.
 Verifier commit `9695ac3d231e90e0c56099818e307640077be09d`.
-Workflow commit `e831c7f12621bb7ef900ae888a072b890c3a69b3`.
+Workflow commit `e831c7f12621bb7ff441f71b662316ee964c`.
 
 - exact historical v93 opponent primitives from current result-blind race_cards + waku10 + accepted current exhibition/ST-flat.
 - outputs `opp_score_bN_v93` and grade/national/local/motor/waku/nst/direct parts for boats 1,2,3,5,6.
@@ -202,3 +202,16 @@ Latest completed milestones:
 - player-history latest CI Run `34764112242`: SUCCESS.
 - strict current source CI Run `34764140752`: SUCCESS.
 - next active implementation: exact causal ENV_ENTRY/base primitive acquisition.
+
+## Work session — 2026-09-14 JST — START RECORD
+Status: **IN PROGRESS**
+
+User-mandated workflow: record intended work here before implementation, and record implementation/results/restart point here again before ending the work session.
+
+Planned work unit:
+1. Re-read latest main/4-head CI state and treat this handoff plus latest GitHub as source of truth.
+2. Trace exact historical formulas and source lineage for all unresolved ENV_ENTRY/base primitives, with special focus on `preview_comp`, `relative_deg`, wind/entry fields, v91/v83 scores, `history_adjust_online`, and `history_pct_online`.
+3. Implement only semantics that can be verified exactly from existing repository code/data; missing or unverifiable inputs must fail closed rather than use guessed defaults.
+4. Add parity/fixture/source-allow-list verification and CI where the repository lineage supports implementation.
+5. If the primitive layer becomes production-green, wire the next safe upstream orchestration step; otherwise stop at the exact verified boundary.
+6. Before ending this session, append files changed, commits, CI/run outcomes, any rejection/blocker, and the exact restart point to this handoff.
