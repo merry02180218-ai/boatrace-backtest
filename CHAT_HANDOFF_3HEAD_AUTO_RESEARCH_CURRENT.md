@@ -24,33 +24,42 @@
 - Therefore Wave26 result is contaminated and cannot support adoption. Closing odds were not the leak; section-history fields were.
 
 ## Wave27 — FINAL leak-free exact-order
-- Run **`34763079073`**, workflow `research-3head-wave27-leakfree`: success.
-- Artifact `3head-wave27-leakfree-exactorder`, ID **`10318874127`**.
-- Features: **63 static card-only**; every `節D` ST/着順 field removed.
-- Wave26 leak signature reproduced: **15,280 matched rows / 97.997% agreement**.
+- Run **`34763079073`**, artifact ID **`10318874127`**.
+- Features: **63 static card-only**; every `節D` field removed.
 - April-only tune chose **p3>=0.38, top5**.
-- Strict untouched May-Jun holdout: **195R / 26 hits / ROI 57.947% / profit -820,040 yen**.
-- Holdout monthly: May **129R / 16 hits / ROI 51.947% / -619,880**; Jun **66R / 10 hits / ROI 69.673% / -200,160**.
-- Holdout min-month ROI **51.947%**; red months **2**; max DD **857,540 yen**.
+- Strict May-Jun holdout: **195R / 26 hits / ROI 57.947% / profit -820,040 yen**.
+- Monthly: May **51.947%**, Jun **69.673%**; red months 2; max DD 857,540 yen.
 - Jul-Aug NON-PRISTINE shadow: **170R / 46 hits / ROI 124.170% / profit +410,890 yen**.
-- Shadow monthly: Jul **75R / 18 hits / ROI 111.251% / +84,380**; Aug **95R / 28 hits / ROI 134.369% / +326,510**.
-- Baseline + strict holdout: **289R / ROI 95.226% / profit -137,970 yen**.
-- Legacy overlap **0**. Decision **NO_ADOPTION**.
-- Interpretation: leak-free family is not adoptable, but Jul/Aug positive shadow justifies structural research. Do not tune directly to Jul/Aug outcomes.
+- Shadow monthly: Jul **111.251%**, Aug **134.369%**.
+- Baseline + holdout: **289R / ROI 95.226% / profit -137,970 yen**.
+- Legacy overlap 0. Decision **NO_ADOPTION**.
 
-## Wave28 — RUNNING leak-free structure gate
-- Script commit `9ecdbf319d0fc54520334c1751551a62af1b2f4c`: `research_v289_3head_wave28_structure_gate.py`.
-- Workflow commit `1ac80a231a0010d81321e3335f953e60c0432c02`: `.github/workflows/research-3head-wave28-structure.yml`.
-- Current Run **`34764021442`**, workflow `research-3head-wave28-structure`, status at launch `in_progress`.
-- Base Wave27 config is frozen: **p3>=0.38 / top5**.
-- All `節D` fields remain excluded; 63 static card features only.
-- Candidate gates are deliberately limited/interpretable: 3号艇-vs-others strength, ST, motor differentials, 3-vs-1/2 differentials, and race-number bands.
-- Gate thresholds come from April feature quantiles; April outcomes choose among the limited gates. May-Jun remain untouched strict holdout. Jul-Aug remain NON-PRISTINE shadow only.
-- No direct Jul/Aug optimization. Closing odds staking-only. Legacy overlap 0. September forbidden.
+## Wave28 — FINAL leak-free structure gate
+- Run **`34764021442`**, workflow `research-3head-wave28-structure`: success.
+- Artifact `3head-wave28-structure-gate`, ID **`10318999751`**.
+- Candidate count **64**; base config remained Wave27 p3>=0.38/top5.
+- Chosen April-only structural gate: **b3_minus_b1_全国勝率 >= 2.415** (April 75th percentile).
+- April tune: **37R / ROI 354.568% / profit +941,900 yen**.
+- Strict May-Jun holdout: **75R / 11 hits / ROI 73.745% / profit -196,910 yen**.
+- Monthly holdout: May **44R / 5 hits / ROI 55.852% / -194,250**; Jun **31R / 6 hits / ROI 99.142% / -2,660**.
+- Jul-Aug NON-PRISTINE shadow: **77R / 20 hits / ROI 128.013% / profit +215,700 yen**.
+- Shadow: Jul **71.557%**, Aug **175.060%**.
+- Baseline + holdout: **169R / ROI 128.708% / profit +485,160 yen**.
+- Legacy overlap 0. Decision **NO_ADOPTION**.
+- Interpretation: single structural gate does not generalize to untouched May-Jun; August strength is not sufficient because Jul/Aug are NON-PRISTINE.
+
+## Wave29 — RUNNING pre-April leak-free validation
+- Script commit `607d877689f86b0a20b83d1805633615b8ca4e6d`: `research_v289_3head_wave29_preapril_validation.py`.
+- Workflow commit `0dcea2043e69f95b2b29c0cf62b70a3d9a659537`: `.github/workflows/research-3head-wave29-preapril.yml`.
+- Current Run **`34764558658`**, workflow `research-3head-wave29-preapril`, status at launch **queued**.
+- All `節D`/result-like fields remain excluded; only 63 static pre-deadline-safe card features.
+- March is the only tuning month, and March predictions are trained on February only. Threshold/top-K are selected only from March.
+- **Apr-Jun are now a fully untouched model-selection holdout**. Jul-Aug remain NON-PRISTINE shadow only.
+- Closing odds are staking-only; legacy overlap 0; September forbidden.
 
 ## Exact restart point
-1. Inspect Run `34764021442` first.
+1. Inspect Run `34764558658` first.
 2. If failed, inspect logs, fix and rerun automatically without weakening leak/date/zero-overlap guards.
-3. If success, record chosen structural gate, April tune metrics, strict May-Jun holdout R/hits/ROI/profit/monthly/min month/red months/max DD, Jul-Aug shadow, overlap and combined baseline.
-4. If Wave28 does not generalize, continue a genuinely distinct leak-free family; do not rescue by tuning Jul/Aug.
-5. Keep v288 production unchanged unless independent leak-free validation supports promotion.
+3. If success, record March chosen p3/top-K, Apr-Jun holdout R/hits/ROI/profit/monthly/min month/red months/max DD, Jul-Aug shadow, overlap and combined baseline.
+4. If Wave29 generalizes, treat it as substantially stronger evidence than Wave27/28 because Apr-Jun were never used for selection.
+5. If Wave29 fails, continue another genuinely distinct leak-free family; never optimize directly on Jul/Aug outcomes.
