@@ -1,0 +1,26 @@
+name: analyze-4head-common-frozen-20260131
+on:
+  push:
+    paths:
+      - analyze_4head_common_frozen_20260131.py
+      - .github/workflows/analyze-4head-common-frozen-20260131.yml
+jobs:
+  analyze:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - run: python -m py_compile analyze_4head_common_frozen_20260131.py
+      - run: python analyze_4head_common_frozen_20260131.py
+      - run: python -c "import json; a=json.load(open('audit_4head_common_frozen_20260131.json')); assert a['fit_cutoff']=='2026-01-31'; assert a['single_model_refit_after_cutoff'] is False; assert a['band']==[0.03,0.05]; assert a['production_modified'] is False; print(a)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-common-frozen-20260131
+          path: |
+            analysis_4head_common_frozen_20260131.csv
+            audit_4head_common_frozen_20260131.json
+            summary_4head_common_frozen_20260131.md
