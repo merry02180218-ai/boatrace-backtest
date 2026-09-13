@@ -83,7 +83,7 @@ def build(target_card:dict[str,Any],target_date:date,history_start:date)->dict[s
       'schema':'head4_player_history_live_v1','race_code':code,'target_date':target_date.isoformat(),
       'history_start':history_start.isoformat(),'history_end':(target_date-timedelta(days=1)).isoformat(),
       'player_flat':flat,'history_races_seen_by_boat':{str(b):seen[names[b]] for b in BOATS},
-      'same_day_results_used':False,'historical_outcomes_use':'causal_feature_state_only',
+      'result_blind':True,'same_day_results_used':False,'historical_outcomes_use':'causal_feature_state_only',
       'model_fitting_used':False,'calibration_used':False,'threshold_tuning_used':False,
       'odds_used':False,'payout_used':False,'v96_used':False,
     }
