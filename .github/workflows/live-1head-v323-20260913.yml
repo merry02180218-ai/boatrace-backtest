@@ -1,0 +1,66 @@
+name: live-1head-v323-20260913
+
+on:
+  push:
+    paths:
+      - 'run_v323_1head_frozen_live_adapter.py'
+      - '.github/workflows/live-1head-v323-20260913.yml'
+  workflow_dispatch:
+
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4
+
+      - name: Download result-blind 2026-09-13 current input
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api /repos/merry02180218-ai/boatrace-backtest/actions/artifacts/10302229729/zip > /tmp/prod.zip
+          mkdir -p /tmp/prod
+          unzip -q /tmp/prod.zip -d /tmp/prod
+          test -s /tmp/prod/current_input/v288/20260913/race_cards.csv
+          echo "current input files:"
+          find /tmp/prod/current_input/v288/20260913 -maxdepth 1 -type f -printf '%f\n' | sort
+
+      - name: Rebuild causal training caches through Aug 31 only
+        run: |
+          # v321 prepare settles only through 2026-08-31. It explicitly rejects September.
+          python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
+          test -s cache_v321_julaug_nonpristine_head.csv
+          test -s cache_v321_julaug_nonpristine_slim.csv.gz
+
+      - name: Run frozen v323 current adapter
+        run: |
+          python run_v323_1head_frozen_live_adapter.py \
+            --date 2026-09-13 \
+            --cards /tmp/prod/current_input/v288/20260913/race_cards.csv \
+            --out v323_live
+          test -s v323_live/v323_1head_live_20260913.csv
+          test -s v323_live/v323_1head_live_20260913.md
+
+      - name: Show v323 result
+        if: always()
+        run: |
+          if [ -f v323_live/v323_1head_live_20260913.md ]; then
+            cat v323_live/v323_1head_live_20260913.md
+          fi
+
+      - name: Upload v323 output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v323-1head-live-20260913
+          path: |
+            v323_live/
+            cache_v321_julaug_nonpristine_meta.csv
+          if-no-files-found: warn
