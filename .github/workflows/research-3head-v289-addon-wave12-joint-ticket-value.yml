@@ -18,7 +18,10 @@ env:
 jobs:
   wave12-joint-ticket-value:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    # Wave12 regenerates the frozen Wave2 ticket matrix before fitting. The first
+    # canonical run reached the former 45-minute job limit during reconstruction,
+    # so allow enough headroom to finish and still run guards/artifact persistence.
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
         with:
