@@ -232,3 +232,33 @@ Failure fallback:
 
 # 9. Exact next resume point
 **STOP here until v328 is reported to the user. After that, audit the latest 3-head and 4-head exhibition-stage judgement implementations and design the 1-head adaptation. Do not start a v329 implementation before that source audit is recorded in this handoff.**
+
+---
+
+# 10. Work Unit 6B — v329 3-head/4-head exhibition logic source audit — ABOUT TO START
+
+Current position:
+- v328 has been reported to the user.
+- frozen production remains v308/v317/v318/v320/v323; no production change is authorized in this work unit.
+- user explicitly requested that the next 1-head direct-before-start judgement imitate the current 3-head and 4-head models' direct-before-start judgement mechanism.
+
+Exact work about to be done:
+1. Search latest GitHub default branch for the authoritative 3-head direct-before-start/live exhibition implementation and its current handoff.
+2. Search latest GitHub default branch for the authoritative 4-head direct-before-start/live exhibition implementation and its current handoff.
+3. Trace exactly how each implementation uses current exhibition time, current exhibition ST/start course, original exhibition (lap/turn/straight), course/lane adjustment, prior-race adjusted exhibition, motor/entry context, and missing-input fail-closed behavior.
+4. Compare the two implementations feature-by-feature and identify the subset that is causally safe and structurally transferable to the frozen 1-head cohort.
+5. Record a concrete v329 adaptation design in this handoff BEFORE creating any v329 model code.
+
+Success criteria:
+- identify exact current source files/functions for both 3-head and 4-head final exhibition judgement.
+- distinguish common architecture from head-specific logic.
+- produce a result-blind 1-head adaptation specification that can be implemented without changing v308/v317/v318/v320.
+- keep Jul/Aug tuning closed and September outcomes unread.
+
+Failure fallback:
+- if a current model points through multiple wrappers, follow the call chain until the actual scoring/threshold logic is identified.
+- if 3-head and 4-head disagree materially, do not average or merge ad hoc; record both and choose only components justified by causal/source audit.
+- if a required feature is unavailable historically or live for 1-head, exclude it or fail closed rather than substitute future/backfilled data.
+
+Exact next resume point after this audit:
+- append the identified 3-head/4-head architecture and the proposed v329 1-head adaptation to this handoff; only then create v329 code/workflow.
