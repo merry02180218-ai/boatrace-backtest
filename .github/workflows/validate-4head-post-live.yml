@@ -1,0 +1,42 @@
+name: Validate 4-head current-day POST builder
+
+on:
+  push:
+    paths:
+      - 'build_4head_post_live.py'
+      - 'verify_4head_post_live.py'
+      - '.github/workflows/validate-4head-post-live.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check requests beautifulsoup4
+      - name: Syntax check
+        run: python -m py_compile fetch_4head_beforeinfo_live.py build_4head_post_live.py verify_4head_post_live.py
+      - name: Offline exact/fail-closed verifier
+        run: python verify_4head_post_live.py
+      - name: Leakage and immutable-policy guard
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          s=Path('build_4head_post_live.py').read_text(encoding='utf-8').lower()
+          assert 'race.boatcast.jp/hp_txt/' in s
+          assert 'race.boatcast.jp' in s
+          assert 'allow_redirects=false' in s
+          assert '/race/raceresult' not in s
+          assert '/race/odds3t' not in s
+          assert 'data/results/' not in s
+          assert '2026-07' not in s and '2026-08' not in s and '2026-09' not in s
+          assert 'v291_changed": false' in s
+          print('HEAD4_POST_LIVE_POLICY_GUARD_OK')
+          PY
