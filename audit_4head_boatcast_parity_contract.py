@@ -1,25 +1,18 @@
 #!/usr/bin/env python3
 """Result-free BOATCAST source/feature contract audit for frozen HEAD4 v291 POST.
 
-This is additive research tooling only. It does NOT wire BOATCAST into production.
-It validates the exact pre-race parsing semantics needed by v250/v291 POST and
-checks Apr-Jun archived preview CSVs without reading any race result/payout data.
-
-Frozen research rules:
-- v291 model / thresholds / ticket policy are untouched.
-- Jul/Aug are not used.
-- September outcomes are not read.
-- Missing LIVE inputs must remain fail-closed until end-to-end raw-source parity.
+Additive research tooling only. It does NOT wire BOATCAST into production.
+Apr-Jun archived preview inputs are read through the repository's existing
+BoatraceCSV fetch layer; no race-result or payout path is touched.
 """
 from __future__ import annotations
 
-import csv
 import json
 import math
-import re
 from datetime import date, timedelta
 from pathlib import Path
 
+from backtest import rows as remote_rows
 from analyze_v23_20260902_daypreview import original_scores
 
 ROOT = Path(__file__).resolve().parent
@@ -72,15 +65,12 @@ def parse_original_exhibition_tsv(text: str) -> dict:
     status = int(meta[0])
     ncols = int(meta[1])
     labels = [norm_label(x) for x in lines[1].split("\t") if norm_label(x)]
-    # Some variants include boat/name headings; keep only measurement labels.
     labels = [x for x in labels if label_family(x) is not None]
     if ncols > 0 and len(labels) > ncols:
         labels = labels[-ncols:]
     boats = {}
     for line in lines[2:]:
         p = line.split("\t")
-        if not p:
-            continue
         try:
             b = int(str(p[0]).strip())
         except Exception:
@@ -88,7 +78,6 @@ def parse_original_exhibition_tsv(text: str) -> dict:
         if b not in range(1, 7):
             continue
         nums = [_f(x) for x in p[1:]]
-        # Racer name may occupy p[1]; take the last ncols numeric-shaped cells.
         nums = nums[-len(labels):] if labels else []
         boats[b] = {lab: val for lab, val in zip(labels, nums)}
     return {"status": status, "ncols": ncols, "labels": labels, "boats": boats}
@@ -133,13 +122,6 @@ def parse_start_display_tsv(text: str) -> dict[int, float | None]:
     return out
 
 
-def rows(path: Path):
-    if not path.exists():
-        return []
-    with path.open(encoding="utf-8-sig", newline="") as f:
-        return list(csv.DictReader(f))
-
-
 def historical_audit():
     orig_rows = st_rows = 0
     orig_dates = st_dates = 0
@@ -150,10 +132,8 @@ def historical_audit():
     d = START
     while d <= END:
         ymd = d.strftime("%Y/%m/%d")
-        op = ROOT / "data" / "previews" / "original_exhibition" / f"{ymd}.csv"
-        sp = ROOT / "data" / "previews" / "stt" / f"{ymd}.csv"
-        ors = rows(op)
-        srs = rows(sp)
+        ors = remote_rows(f"data/previews/original_exhibition/{ymd}.csv")
+        srs = remote_rows(f"data/previews/stt/{ymd}.csv")
         if ors:
             orig_dates += 1
         if srs:
@@ -165,10 +145,9 @@ def historical_audit():
             nf = len([x for x in fams if x])
             two_metric_rows += int(nf == 2)
             three_metric_rows += int(nf >= 3)
-            for f in fams:
-                if f:
-                    label_families[f] += 1
-            # Independently reconstruct exactly the frozen label-driven rank semantics.
+            for fam in fams:
+                if fam:
+                    label_families[fam] += 1
             ours = {"straight": 0.5, "lap": 0.5, "turn": 0.5}
             for k, lab in enumerate(labels, 1):
                 fam = label_family(lab)
@@ -187,6 +166,7 @@ def historical_audit():
         d += timedelta(days=1)
     return {
         "window": [str(START), str(END)],
+        "source": "BoatraceCSV via backtest.rows",
         "result_or_payout_files_read": False,
         "original_dates": orig_dates,
         "st_dates": st_dates,
@@ -208,18 +188,14 @@ def self_test():
     p = parse_original_exhibition_tsv(t)
     assert p["status"] == 1
     assert set(p["labels"]) == {"一周", "まわり足", "直線"}
-    s = original_lane4_scores(p)
-    assert set(s) == {"straight", "lap", "turn"}
+    assert set(original_lane4_scores(p)) == {"straight", "lap", "turn"}
     assert parse_st_value(".08", "F") == -0.08
     assert parse_st_value(".09", "") == 0.09
     assert parse_st_value(".03", "L") is None
     st = parse_start_display_tsv("4\tname\tx\tx\t.08\tF\n5\tname\tx\tx\t.03\tL")
     assert st[4] == -0.08 and st[5] is None
-    # Missing metric families must retain frozen neutral .5 rather than fabrication.
     t2 = "data=\n1\t2\n一周\t直線\n1\tA\t6.8\t6.9\n4\tD\t6.7\t6.8\n"
-    s2 = original_lane4_scores(parse_original_exhibition_tsv(t2))
-    assert s2["turn"] == 0.5
-    return True
+    assert original_lane4_scores(parse_original_exhibition_tsv(t2))["turn"] == 0.5
 
 
 def main():
@@ -242,7 +218,7 @@ def main():
             "st_L": "missing/fail-closed upstream",
         },
         "historical": h,
-        "decision": "Parser contract and archived-feature semantics may be accepted if PASS; production hookup remains rejected until raw BOATCAST-vs-archived value parity is demonstrated.",
+        "decision": "Accept parser contract/archived feature semantics if PASS; production hookup remains rejected until raw BOATCAST-vs-archived value parity is demonstrated.",
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
