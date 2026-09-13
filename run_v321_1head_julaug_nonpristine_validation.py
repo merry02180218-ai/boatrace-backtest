@@ -28,6 +28,7 @@ P=ROOT/'analysis_v321_1head_julaug_nonpristine_validation'
 S=ROOT/'summary_v321_1head_julaug_nonpristine_validation.md'
 PREP_SLIM=ROOT/'cache_v321_julaug_nonpristine_slim.csv.gz'
 PREP_HEAD=ROOT/'cache_v321_julaug_nonpristine_head.csv'
+PREP_HEAD_FULL=ROOT/'cache_v321_julaug_nonpristine_head_full.csv.gz'
 PREP_META=ROOT/'cache_v321_julaug_nonpristine_meta.csv'
 SECOND_PKL=ROOT/'cache_v321_julaug_second.pkl'
 BASE_PC_PKL=ROOT/'cache_v321_julaug_base_pc.pkl'
@@ -136,6 +137,13 @@ def prepare():
     if missing: raise RuntimeError(f'v321 required head columns missing n={len(missing)} sample={missing[:8]}')
     hd=d[head_cols].copy(); del d; gc.collect()
     print(f'v321 narrowed head frame rows={len(hd)} cols={len(hd.columns)}; opponent slim cols={len(slim.columns)}',flush=True)
+    # v323 LIVE fitting needs the full chronological head-feature frame, not only
+    # the Jul/Aug validation predictions persisted below. This is an additional
+    # causal cache only; it does not change any v321 model/threshold/metric.
+    if any(str(m).startswith('2026-09') for m in hd.month.astype(str).unique()):
+        raise RuntimeError('v321 full head cache contains September')
+    hd.to_csv(PREP_HEAD_FULL,index=False,compression='gzip')
+    print(f'v321 full head cache ready rows={len(hd)} cols={len(hd.columns)}',flush=True)
     out=[]
     for tm in TARGET_MONTHS:
         print(f'v321 head fold start {tm}',flush=True)
