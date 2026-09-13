@@ -5,7 +5,7 @@ This is the authoritative 1号艇 handoff. On a new chat, read this file and lat
 
 Immediate resume point:
 - **Work Unit 5A source audit is COMPLETE.**
-- **v325 implementation has NOT started yet.**
+- **Work Unit 5B v325 implementation is STARTING.**
 - Resume by creating `run_v325_1head_exhibition_postfilter.py` exactly as specified below, then its workflow, run Actions, inspect logs/results, and append results here.
 - Do NOT repeat source-audit work unless latest GitHub has materially changed.
 - Do NOT alter frozen PRE stack v308/v317/v318/v320.
@@ -229,22 +229,22 @@ July:
 August:
 |rule|R|H|hit rate|ROI|
 |---|---:|---:|---:|---:|
-|ALL|42|18|42.86%|97.74%|
-|>=2.5|18|5|27.78%|82.41%|
-|>=2.7|16|4|25.00%|76.52%|
-|>=3.0|9|1|11.11%|41.25%|
-|>=3.2|7|1|14.29%|53.04%|
-|>=3.5|6|1|16.67%|61.88%|
+|ALL|42|18|42.86%|97.74%
+|>=2.5|18|5|27.78%|82.41%
+|>=2.7|16|4|25.00%|76.52%
+|>=3.0|9|1|11.11%|41.25%
+|>=3.2|7|1|14.29%|53.04%
+|>=3.5|6|1|16.67%|61.88%
 
 Jul+Aug:
 |rule|R|H|hit rate|ROI|
 |---|---:|---:|---:|---:|
-|ALL|55|21|38.18%|85.66%|
-|>=2.5|22|6|27.27%|79.44%|
-|>=2.7|17|4|23.53%|72.02%|
-|>=3.0|10|1|10.00%|37.13%|
-|>=3.2|7|1|14.29%|53.04%|
-|>=3.5|6|1|16.67%|61.88%|
+|ALL|55|21|38.18%|85.66%
+|>=2.5|22|6|27.27%|79.44%
+|>=2.7|17|4|23.53%|72.02%
+|>=3.0|10|1|10.00%|37.13%
+|>=3.2|7|1|14.29%|53.04%
+|>=3.5|6|1|16.67%|61.88%
 
 Conclusion:
 - composite >=3.0 is **not supported** by Jul/Aug reference.
@@ -329,7 +329,35 @@ Source-audit handoff commits:
 - `9556a0f65cd63efedb64be9e079d3550879cfeb2` — initial Work Unit 5 pre-exhibition-filter research record
 - `aed49b849f2f030ab350b2393ccc11f77a69f777` — Work Unit 5A implementation specification after audit
 
-## v325 implementation — NOT STARTED
+## v325 implementation — STARTING (Work Unit 5B)
+
+Current position:
+- Work Unit 5A source audit is complete.
+- No newer v325 implementation/workflow was found on the latest default branch before starting.
+- Frozen PRE stack remains v308/v317/v318/v320; September outcomes remain unread.
+
+Exact work about to be done:
+1. Create `run_v325_1head_exhibition_postfilter.py`.
+2. Reconcile frozen v320 identity at exactly 345 races / 139 exact3 hits before filtering.
+3. Join/reconstruct same-race historical exhibition features using audited v108/v283-compatible sources only.
+4. Quantify `has_tkz`, `has_stt`, `has_orig` coverage and fail closed for missing inputs.
+5. Use Feb-Apr discovery, May validation/freeze, Jun one-shot forward check; no Jul/Aug outcome inspection until candidate is frozen.
+6. Test interpretable 1-D lower-tail skip gates plus one small regularized logistic PASS model on predeclared exhibition features only.
+7. Freeze the development candidate before one-time Jul/Aug NON-PRISTINE reference evaluation.
+8. Add `.github/workflows/v325-1head-exhibition-postfilter.yml`, run Actions, inspect logs/artifact, then record all results here.
+
+Success criteria:
+- v320 identity unchanged at 345/139.
+- explicit exhibition coverage/missingness.
+- no September results/payout reads.
+- no changes to v308/v317/v318/v320.
+- chronological May/Jun validation reported.
+- Jul/Aug evaluated only after freeze and never used to retune.
+- target >=50% exact3 PASS rate with useful retained R; no production promotion unless forward evidence supports it.
+
+Failure fallback:
+- If `analysis_v108_1head_feasibility.csv` is unusable, rebuild a separate result-blind historical exhibition dataset from existing `tkz/stt/original_exhibition` snapshots using audited transforms.
+- On any implementation/Actions failure, append the exact failure and intended fix to this handoff before changing code.
 
 Create new file:
 ### `run_v325_1head_exhibition_postfilter.py`
@@ -418,10 +446,10 @@ Do not create more duplicate 1-head monitor tasks unless user explicitly asks.
 
 1. Read this file + latest GitHub.
 2. Verify no newer v325 implementation already landed.
-3. If not, **before code change**, append a short Work Unit 5B line stating implementation is starting and success criteria above still apply.
-4. Create `run_v325_1head_exhibition_postfilter.py`.
+3. If Work Unit 5B has not started, **before code change**, append a short Work Unit 5B line stating implementation is starting and success criteria above still apply.
+4. If Work Unit 5B is already marked STARTING, continue directly with `run_v325_1head_exhibition_postfilter.py`.
 5. If historical v108 CSV cannot be consumed, safely rebuild the exhibition feature dataset from `tkz/stt/original_exhibition` using audited v108/v283 transforms.
-6. Run v325 locally via Actions workflow; create `.github/workflows/v325-1head-exhibition-postfilter.yml` if absent.
+6. Create/run `.github/workflows/v325-1head-exhibition-postfilter.yml`.
 7. Trigger Actions and verify actual Run ID/status/logs/artifact.
 8. On any failure: append intended fix to this handoff before changing code.
 9. On success: append development split metrics, frozen candidate rule/model, Jul/Aug reference, commits, Run ID, artifact ID, and exact production-next step.
