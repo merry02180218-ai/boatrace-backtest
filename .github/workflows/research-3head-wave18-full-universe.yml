@@ -1,11 +1,11 @@
-name: research-3head-wave18-full-universe
+name: research-3head-wave19-payout-enrichment
 
 on:
   push:
     branches:
       - 'research/3head-v289-addon-expansion'
     paths:
-      - 'research_v289_3head_wave18b_settlement_recovery.py'
+      - 'research_v289_3head_wave19_payout_enrichment.py'
       - '.github/workflows/research-3head-wave18-full-universe.yml'
   workflow_dispatch:
 
@@ -16,7 +16,7 @@ env:
   PYTHONUNBUFFERED: '1'
 
 jobs:
-  wave18b-settlement-recovery:
+  wave19-payout-enrichment:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
@@ -28,31 +28,31 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install -q pandas numpy
-      - name: Download frozen canonical v243 audit artifact
+      - name: Download Wave18b settled source
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
-          cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
-      - name: Recover full-universe settlement
-        run: python research_v289_3head_wave18b_settlement_recovery.py
-      - name: Verify settlement guard
+          gh run download 34749443471 --repo merry02180218-ai/boatrace-backtest --name 3head-wave18b-settlement-recovery --dir wave18b
+          cp wave18b/analysis_v289_3head_wave18b_full_universe_settled.csv .
+      - name: Enrich official trifecta payouts
+        run: python research_v289_3head_wave19_payout_enrichment.py
+      - name: Verify payout guard
         run: |
           python - <<'PY'
           import json
-          d=json.load(open('research_v289_3head_wave18b_settlement_recovery.json',encoding='utf-8'))
+          d=json.load(open('research_v289_3head_wave19_payout_enrichment.json',encoding='utf-8'))
           assert d['max_date'] <= '2026-08-31'
-          assert d['decision'] == 'SETTLED_SOURCE_READY'
-          assert d['official_share'] >= 0.98
-          assert d['exact_given_official'] >= 0.999
-          print('WAVE18B_GUARDS_OK')
+          assert d['decision'] == 'PAYOUT_SOURCE_READY'
+          assert d['payout_row_share'] >= 0.98
+          assert d['combo_match_share'] >= 0.999
+          print('WAVE19_PAYOUT_GUARDS_OK')
           PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: 3head-wave18b-settlement-recovery
+          name: 3head-wave19-payout-enrichment
           path: |
-            analysis_v289_3head_wave18b_full_universe_settled.csv
-            research_v289_3head_wave18b_settlement_recovery.json
-            research_v289_3head_wave18b_settlement_recovery.md
+            analysis_v289_3head_wave19_full_universe_payout_enriched.csv
+            research_v289_3head_wave19_payout_enrichment.json
+            research_v289_3head_wave19_payout_enrichment.md
           if-no-files-found: ignore
