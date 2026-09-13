@@ -4,6 +4,8 @@
 Guardrails:
 - August is NON-PRISTINE; this script is descriptive only.
 - Fit labels stop at 2026-06-30. July/August outcomes never enter fitting/tuning.
+- Prior-day outcomes may update causal player-history feature state, exactly as the
+  production HEAD4 player-history builder does; same-day target outcomes never do.
 - The only selection rule is the pre-declared inclusive PRE band 0.03..0.05.
 - Production v291/VARN thresholds/policy are not modified.
 - Betting/VARN settlement is intentionally omitted unless exact historical
@@ -55,7 +57,7 @@ def build_train_and_aug_features():
         for z in frozen:
             z['y4head']=int(i(rr.get(z['race_code'],{}).get('1着_艇番'))==4);train.append(z)
         ingest_prior_day_preview(cache,d);ingest_motor(hist,seen,d);d+=timedelta(days=1)
-    # July updates causal PRE state only. No July result is read.
+    # July updates causal PRE state only. No July result is used as a PRE fit label.
     while d<START:
         ingest_prior_day_preview(cache,d);ingest_motor(hist,seen,d);d+=timedelta(days=1)
     model=v250.make_model(PRE_COLS);tr=pd.DataFrame(train);model.fit(tr[PRE_COLS],tr.y4head.astype(int))
@@ -77,10 +79,19 @@ def build_train_and_aug_features():
 
 def historical_safe_frame(pred):
     # analysis_v93 rows contain historical outcome columns too, but those are never
-    # passed into inference. Explicit feature-only copy is created before scoring.
+    # passed into inference. v221.build freezes each target row's player-history
+    # state BEFORE that day's results are ingested. For this replay only, extend its
+    # historical window through Aug 31. This matches the newer production causal
+    # player-history contract: prior-day outcomes are feature state, never fit labels.
     raw=pd.DataFrame(c4.read());raw['race_code']=raw.race_code.astype(str).str.zfill(12)
     raw=raw[raw.date.astype(str).str[:7].eq('2026-08')].copy()
-    raw=v221.build(raw,'date');raw=v264.add_rel(raw)
+    old_contam,old_end=v221.CONTAM,v221.END
+    try:
+        v221.CONTAM=pd.Timestamp('2026-09-01');v221.END=END
+        raw=v221.build(raw,'date')
+    finally:
+        v221.CONTAM, v221.END = old_contam, old_end
+    raw=v264.add_rel(raw)
     q=raw.merge(pred[['race_code','PRE','POST']],on='race_code',how='inner',validate='one_to_one')
     q['p4_joint']=pd.to_numeric(q.PRE,errors='coerce')*pd.to_numeric(q.POST,errors='coerce')
     q['post_x_entry_same']=pd.to_numeric(q.POST,errors='coerce')*pd.to_numeric(q.get('entry_confirmed_same'),errors='coerce')
@@ -131,6 +142,7 @@ def main():
     audit={
       'status':'COMPLETE','scope':'AUG_2026_NON_PRISTINE_EXPLORATORY_ONLY','band_inclusive':[BAND_LO,BAND_HI],
       'fit_label_start':str(TRAIN_START),'fit_label_cutoff':str(TRAIN_END),'jul_aug_labels_used_for_fit':False,
+      'prior_day_outcomes_used_for_causal_player_state':True,'same_day_target_outcomes_used_for_features':False,
       'production_policy_modified':False,'v96_used_as_production_signal':False,'train_rows':train_rows,'train_head4_rate':train_rate,
       'aug_all_rows':int(len(pred)),'cohort_rows':n,'cohort_head4_wins':wins,'cohort_head4_rate':float(wins/n) if n else None,
       'post_s_pass':int(b.post_s_pass.sum()),'env_s_pass':int(b.env_s_pass.sum()),'shadow_s_downstream_pass':int(b.shadow_s_downstream_pass.sum()),
@@ -143,6 +155,7 @@ def main():
     L=['# HEAD4 August 2026 PRE 0.03-0.05 shadow cohort','',
        '- **NON-PRISTINE exploratory description only. Production policy is unchanged.**',
        '- Frozen fit labels end at **2026-06-30**; July/August outcomes are not used for fitting/tuning.',
+       '- Prior-day outcomes update causal player-history state only; same-day target outcomes do not enter features.',
        '- Cohort is fixed only by inclusive `0.03 <= PRE <= 0.05` before outcome join.',
        f'- August all frozen-PRE rows: **{len(pred)}**',f'- Cohort: **{n}R**',f'- 4-head wins: **{wins}/{n} ({(100*wins/n if n else 0):.2f}%)**','',
        '## Frozen downstream shadow diagnostics',
