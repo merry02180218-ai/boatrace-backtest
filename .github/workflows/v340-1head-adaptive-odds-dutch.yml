@@ -1,0 +1,117 @@
+name: v340 1-head adaptive odds Dutch
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v340_1head_adaptive_odds_dutch.py'
+      - '.github/workflows/v340-1head-adaptive-odds-dutch.yml'
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - run: python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v340-julaug-prepare
+          path: |
+            cache_v321_julaug_nonpristine_slim.csv.gz
+            cache_v321_julaug_nonpristine_head.csv
+            cache_v321_julaug_nonpristine_meta.csv
+
+  second:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v340-julaug-prepare
+          path: .
+      - run: python run_v321_1head_julaug_nonpristine_validation.py --stage second
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v340-julaug-second
+          path: cache_v321_julaug_second.pkl
+
+  base-third:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v340-julaug-prepare
+          path: .
+      - run: python run_v321_1head_julaug_nonpristine_validation.py --stage base-third
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v340-julaug-base-third
+          path: cache_v321_julaug_base_pc.pkl
+
+  third:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v340-julaug-prepare
+          path: .
+      - run: python run_v321_1head_julaug_nonpristine_validation.py --stage third
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v340-julaug-third
+          path: cache_v321_julaug_third.pkl
+
+  audit:
+    needs: [prepare, second, base-third, third]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v340-julaug-prepare
+          path: .
+      - uses: actions/download-artifact@v4
+        with:
+          name: v340-julaug-second
+          path: .
+      - uses: actions/download-artifact@v4
+        with:
+          name: v340-julaug-base-third
+          path: .
+      - uses: actions/download-artifact@v4
+        with:
+          name: v340-julaug-third
+          path: .
+      - name: Run adaptive odds Dutch audit
+        run: python run_v340_1head_adaptive_odds_dutch.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v340-1head-adaptive-odds-dutch
+          path: /tmp/v340/
