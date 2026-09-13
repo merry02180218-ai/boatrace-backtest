@@ -49,13 +49,14 @@
 - rejection: nearest failed v288 route explains rejection structure but still does not recover positive betting value.
 
 ## Wave 12 — learned joint race + ticket value
-- auto-restarted after Wave11 rejection.
-- script `research_v289_3head_addon_wave12_joint_ticket_value.py`, commit **`e0a997502ce73777ab0223e7a80ed2c02553f4ab`**.
-- workflow `.github/workflows/research-3head-v289-addon-wave12-joint-ticket-value.yml`, commit **`beb049bd185dcab752ec5f49e9717b0d24ea9c56`**.
-- Actions Run **`34724049674`** currently running.
+- script `research_v289_3head_addon_wave12_joint_ticket_value.py`, original script commit **`e0a997502ce73777ab0223e7a80ed2c02553f4ab`**.
 - distinct mechanism: train prior-month expected settled value jointly over race features + ticket descriptors, then choose at most one configuration per race from regenerated Top2..Top10 / target composite-odds families.
 - exact 10,000-yen Dutch is inherited from Wave2 ticket regeneration; final v288 NO_BET only; overlap must remain zero; current required feature missing => fail closed; September outcomes unused.
-- expected artifact: `v289-3head-addon-wave12-joint-ticket-value`.
+- first Run **`34724049674`** was **cancelled by the former 45-minute job timeout** during heavy historical ticket-matrix reconstruction; research logic/guard failure was not reached.
+- cancelled-run artifact `v289-3head-addon-wave12-joint-ticket-value`, ID **`10307563511`**, contains no completed Wave12 result files and is not research evidence.
+- workflow timeout was raised from 45 to 120 minutes in fix commit **`9021f76f71438a19c5638ebbe752737c05c8df57`**; no model rule, data window, or acceptance gate changed.
+- replacement Actions Run **`34729958264`** is now in progress from that fix commit.
+- expected completed artifact remains `v289-3head-addon-wave12-joint-ticket-value`.
 
 ## What NOT to repeat
 - Wave1 threshold/coverage tweaks; frozen V221 TopN/odds changes alone; Wave3 PRE-B; undersampled venue splits; Wave5 ordered-pair unchanged; Wave6 global role split; Wave7 attack role; Wave8 motor/racer role; Wave9 linear head classifier; Wave10 KNN analogs; Wave11 reject-cause ranking unchanged.
@@ -68,6 +69,6 @@
 - exact 10,000-yen Dutch retained; production v288 workflow/model unchanged.
 
 ## Exact restart point
-1. Finish Wave12 Run `34724049674`; inspect/fix/re-run automatically if it fails.
+1. Finish replacement Wave12 Run `34729958264`; inspect/fix/re-run automatically if it fails.
 2. If historical gates pass (>=20R, ROI>=100%, min monthly ROI>=60%, <=3 red months), advance only to September outcome-blind shadow.
 3. If rejected, next family must change the source/candidate mechanism again rather than repeat Waves1–12 unchanged.
