@@ -1,0 +1,26 @@
+name: v332 1-head attack-first redesign
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v332_1head_attack_first_redesign.py'
+      - '.github/workflows/v332-1head-attack-first-redesign.yml'
+
+jobs:
+  v332:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy scikit-learn
+      - name: Run v332 attack-first redesign
+        run: python run_v332_1head_attack_first_redesign.py
+      - name: Show summary
+        run: cat /tmp/v332/summary_v332.md || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v332-1head-attack-first-redesign
+          path: /tmp/v332/
