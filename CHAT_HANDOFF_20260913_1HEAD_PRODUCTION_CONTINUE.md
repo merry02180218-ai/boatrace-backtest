@@ -56,5 +56,30 @@ Success criteria:
 Failure fallback:
 - if the broader PRE universe cannot be reconstructed with identical current-cutoff regression, stop and fix reconstruction/identity only; do not report incomparable numbers.
 
+# 6. 2026-09-14 PRE-WORK UPDATE — CANONICAL WAKU10 IMPACT AUDIT FIRST
+User explicitly requested that the newly updated Waku10 lineage be audited for its impact on the 1-head model before continuing v337. This section is written BEFORE starting that work.
+
+Observed repository change to audit:
+- canonical historical Waku10 materialization work was added on 2026-09-14;
+- backtest.py now prefers repository-local `data/programs/waku10/` files when present, instead of always relying on the external BoatraceCSV source;
+- therefore historical PRE features/candidate identity may change where the previous Waku10 source was missing, restored, or different;
+- exhibition tracker v10 is a separate SES/video-tracking experiment and is NOT to be adopted into the 1-head production stack merely because its version name is v10.
+
+Exact work to execute now, in this order:
+1. Audit the canonical Waku10 materialization commits/files and identify the exact historical dates/races whose Waku10 inputs changed or became newly available.
+2. Audit v308/v323 row-generation and feature-loading paths to determine whether and where the 1-head PRE pipeline consumes Waku10 and whether the new local-preferred source reaches the current v308 reconstruction.
+3. Reconstruct the current-cutoff (`0.8073405637`) Feb-Aug PRE universe with canonical Waku10 while preserving all other frozen logic.
+4. Compare old/frozen versus canonical-Waku10 inputs and report: changed Waku10 rows/races, changed 1-head PRE scores, cutoff-crossing races, PRE additions/removals, and any downstream PASS identity changes.
+5. Re-run the fixed v332 downstream stack (v317/v318/v320 + ATTACK_ENV_SOFT env_w=.1 q=.65) on the canonical-Waku10 reconstruction.
+6. Regression gate: explicitly test whether the canonical-Waku10 anchor still reproduces 96 PASS / 83 head / 45 exact3. If it does not, do NOT silently proceed as though identities are comparable; isolate and document the changed races and causal source difference first.
+7. Keep September outcomes UNREAD throughout this audit. September source availability/coverage may be inspected only without reading race outcomes if technically necessary.
+8. Only after the Waku10 impact is quantified and the anchor status is understood, execute the predeclared v337 head-cutoff sweep on the correct canonical-Waku10 universe.
+9. Compare v337 volume/quality against the earlier v335/v336 exhibition-q relaxation.
+10. Do not alter the formally adopted production model during this audit/research unit.
+
+Completion requirement:
+- after the work finishes, append actual commit SHA(s), Actions Run/Job/Artifact IDs, Waku10 changed-row/race counts, anchor reproduction result, per-cutoff v337 results, interpretation, and the exact next resume point to THIS handoff file before reporting completion to the user.
+- if blocked/failing, append the actual failure/blocker and exact restart point here rather than leaving the handoff at the pre-work plan.
+
 Exact next resume point:
-- audit v308/v323 row-generation entry points, implement v337 head-cutoff-only sweep, run Actions, append actual commits/Run/Job/Artifact/results here, then report once before any v338.
+- begin canonical Waku10 lineage/input-diff audit, then v308/v323 dependency audit; do not run/report v337 comparisons until the canonical-Waku10 anchor regression is resolved.
