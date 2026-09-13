@@ -1,0 +1,37 @@
+name: research-3head-wave29-preapril
+on:
+  push:
+    branches: [research/3head-v289-addon-expansion]
+    paths:
+      - 'research_v289_3head_wave29_preapril_validation.py'
+      - '.github/workflows/research-3head-wave29-preapril.yml'
+  workflow_dispatch:
+jobs:
+  wave29:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas numpy scikit-learn
+      - name: Download full-population source with closing odds
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34754875342 --repo merry02180218-ai/boatrace-backtest --name 3head-wave21-allrace-source-build --dir source
+          cp source/analysis_v289_3head_wave21_allrace_feature_settled.csv .
+      - name: Download conservative old-v243 exclusion source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34749575986 --repo merry02180218-ai/boatrace-backtest --name 3head-wave19-payout-enrichment --dir old
+          cp old/analysis_v289_3head_wave19_full_universe_payout_enriched.csv .
+      - run: python research_v289_3head_wave29_preapril_validation.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 3head-wave29-preapril-validation
+          path: |
+            analysis_v289_3head_wave29_preapril_validation.csv
+            research_v289_3head_wave29_preapril_validation.json
+            research_v289_3head_wave29_preapril_validation.md
