@@ -2,7 +2,7 @@
 """Exact causal v74/v91 primitive builder for frozen HEAD4 ENV_ENTRY.
 
 This module reproduces only semantics verified from the historical production
-lineage.  It never reads results/payouts/odds and deliberately does not invent
+lineage. It never reads results/payouts/odds and deliberately does not invent
 the v83 wind +/-2 class: ``wind_adjust_points`` must come from a separately
 frozen/parity-audited old-period wind-cell artifact.
 
@@ -40,24 +40,31 @@ class PrimitiveBuildError(RuntimeError):
 
 
 def finite(name: str, v: Any) -> float:
-    try: x = float(v)
-    except (TypeError, ValueError) as e: raise PrimitiveBuildError(f"invalid {name}") from e
-    if not math.isfinite(x): raise PrimitiveBuildError(f"non-finite {name}")
+    try:
+        x = float(v)
+    except (TypeError, ValueError) as e:
+        raise PrimitiveBuildError(f"invalid {name}") from e
+    if not math.isfinite(x):
+        raise PrimitiveBuildError(f"non-finite {name}")
     return x
 
 
 def flag(name: str, v: Any) -> int:
     x = finite(name, v)
-    if x not in (0.0, 1.0): raise PrimitiveBuildError(f"{name} must be 0/1")
+    if x not in (0.0, 1.0):
+        raise PrimitiveBuildError(f"{name} must be 0/1")
     return int(x)
 
 
 def tilt_band_exact(v: Any) -> float:
     x = finite("tilt", v)
-    # Historical tilt_band collapses unsupported values to the nearest frozen band.
-    if x <= -0.5: return -1.0
-    if x < 0.25: return 0.0
-    if x < 0.75: return 0.5
+    # Exact backtest_v51_lane_corrected_tickets.tilt_band semantics.
+    if x <= -0.5:
+        return -1.0
+    if x < 0.5:
+        return 0.0
+    if x < 1.0:
+        return 0.5
     return 1.0
 
 
@@ -73,8 +80,11 @@ def pct_rank_online(x: float, vals: Sequence[Any]) -> float:
 
 
 def relative_deg(venue_code: Any, wind_code: Any) -> float:
-    vc = int(finite("venue_code", venue_code)); wc = int(finite("wind_code", wind_code))
-    venue = VENUE.get(vc); wd = WIND_DEG.get(wc); face = STADIUM_FACING.get(venue or "")
+    vc = int(finite("venue_code", venue_code))
+    wc = int(finite("wind_code", wind_code))
+    venue = VENUE.get(vc)
+    wd = WIND_DEG.get(wc)
+    face = STADIUM_FACING.get(venue or "")
     if venue is None or wd is None or face is None:
         raise PrimitiveBuildError("unsupported/missing venue_code or wind_code")
     return float((wd-face) % 360)
@@ -83,16 +93,18 @@ def relative_deg(venue_code: Any, wind_code: Any) -> float:
 def build(current: Mapping[str, Any], context: Mapping[str, Any]) -> dict[str, float]:
     if current.get("result_blind") is not True:
         raise PrimitiveBuildError("current exhibition must be result_blind=true")
-    boats = current.get("current_boats") or {}; b4 = boats.get("4") or {}
+    boats = current.get("current_boats") or {}
+    b4 = boats.get("4") or {}
     flat = current.get("st_flat") or {}
     ex = finite("v91_ex", b4.get("cur_ex"))
     st_corr = finite("v91_st_corr", flat.get("st_corr_strength_b4"))
     st_raw = finite("v91_st_raw", flat.get("st_raw_strength_b4"))
     straight = finite("v91_straight", b4.get("cur_orig_straight"))
+    avg = finite("v91_avg", b4.get("cur_orig_avg"))
 
-    preview = .28*ex + .30*st_corr + .22*straight + .15*finite("v91_avg", b4.get("cur_orig_avg")) + .05*.5
-    corr20 = .28*ex + .20*st_corr + .32*straight + .15*finite("v91_avg", b4.get("cur_orig_avg")) + .05*.5
-    raw20 = .28*ex + .20*st_raw + .32*straight + .15*finite("v91_avg", b4.get("cur_orig_avg")) + .05*.5
+    preview = .28*ex + .30*st_corr + .22*straight + .15*avg + .05*.5
+    corr20 = .28*ex + .20*st_corr + .32*straight + .15*avg + .05*.5
+    raw20 = .28*ex + .20*st_raw + .32*straight + .15*avg + .05*.5
 
     hv = history_value(context.get("history_prior1"), context.get("history_prior2"), context.get("history_has2"))
     population = context.get("history_population")
@@ -101,19 +113,21 @@ def build(current: Mapping[str, Any], context: Mapping[str, Any]) -> dict[str, f
     hp = pct_rank_online(hv, population)
     hadj = HIST_P*(2*hp-1)
 
-    tilt = finite("tilt", context.get("tilt")); tb = TILT_BONUS[tilt_band_exact(tilt)]
+    tilt = finite("tilt", context.get("tilt"))
+    tb = TILT_BONUS[tilt_band_exact(tilt)]
     score_base = 100*preview + hadj + tb
     score_corr20 = score_base + 100*(corr20-preview)
     score_raw20 = score_base + 100*(raw20-preview)
 
     course = int(finite("entry_course_preview", context.get("entry_course_preview")))
-    if course not in range(0,7): raise PrimitiveBuildError("entry_course_preview must be 0..6")
+    if course not in range(0,7):
+        raise PrimitiveBuildError("entry_course_preview must be 0..6")
     same = int(course == HEAD)
 
     wind_speed = finite("wind_speed", context.get("wind_speed"))
     rdeg = relative_deg(context.get("venue_code"), context.get("wind_code"))
 
-    # v83 +/-2 is learned from OLD-period outcomes.  Consume only an explicitly
+    # v83 +/-2 is learned from OLD-period outcomes. Consume only an explicitly
     # frozen value; never silently derive/guess it from current conditions.
     wind_adj = finite("wind_adjust_points", context.get("wind_adjust_points"))
     if wind_adj not in (-2.0, 0.0, 2.0):
@@ -142,21 +156,30 @@ def build(current: Mapping[str, Any], context: Mapping[str, Any]) -> dict[str, f
         "history_adjust_online": hadj,
         "history_pct_online": hp,
     }
-    if any(not math.isfinite(v) for v in out.values()): raise PrimitiveBuildError("non-finite primitive output")
+    if any(not math.isfinite(v) for v in out.values()):
+        raise PrimitiveBuildError("non-finite primitive output")
     return out
 
 
 def main() -> None:
-    ap=argparse.ArgumentParser()
+    ap = argparse.ArgumentParser()
     ap.add_argument("--current-exhibition", required=True)
     ap.add_argument("--context-json", required=True)
     ap.add_argument("--out", required=True)
-    a=ap.parse_args()
-    cur=json.loads(Path(a.current_exhibition).read_text(encoding="utf-8"))
-    ctx=json.loads(Path(a.context_json).read_text(encoding="utf-8"))
-    out=build(cur,ctx)
-    payload={"schema":"head4_env_v91_primitives_live_v1","model":MODEL,"head":HEAD,"result_blind":True,"odds_used":False,"features":out}
+    a = ap.parse_args()
+    cur = json.loads(Path(a.current_exhibition).read_text(encoding="utf-8"))
+    ctx = json.loads(Path(a.context_json).read_text(encoding="utf-8"))
+    out = build(cur, ctx)
+    payload = {
+        "schema":"head4_env_v91_primitives_live_v1",
+        "model":MODEL,
+        "head":HEAD,
+        "result_blind":True,
+        "odds_used":False,
+        "features":out,
+    }
     Path(a.out).write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({"status":"READY","out":a.out,"primitive_count":len(out)},ensure_ascii=False))
 
-if __name__ == "__main__": main()
+if __name__ == "__main__":
+    main()
