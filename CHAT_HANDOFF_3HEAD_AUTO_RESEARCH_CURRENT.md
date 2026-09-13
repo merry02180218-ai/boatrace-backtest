@@ -32,13 +32,16 @@
 - Exact v288 overlap 0; September forbidden true.
 - Decision: NO_ADOPTION. Narrowing improved head rate, conversion, maxDD and June from72.542% to97.529%, but destroyed aggregate pristine economics versus Wave36S-C ROI128.218%/+860,660. Keep Wave36S-C unchanged as research candidate.
 
-## Wave36S-D order-conversion robustness — NEXT
-- Preserve Wave36S-C head-selection rule exactly.
-- Target conditional opponent ordering / Top5 conversion robustness because June head selection is acceptable but ticket conversion is weak.
-- Design/freeze candidates using Feb training + March OOS only; candidate selection must not use payout/ROI or Apr-Aug outcomes.
-- Evaluate Apr-Jun pristine month-by-month and aggregate; Jul/Aug NON-PRISTINE diagnostic only; September forbidden; v288 overlap zero.
+## Wave36S-D v288-style opponent selection — STARTING
+- User explicitly requested that opponent selection use v288 as the reference.
+- Preserve Wave36S-C head-selection rule exactly; do not alter p3 calibration, motor-mismatch modifier, threshold, or v288 exclusion.
+- Reference opponent stack is the production v288 path: frozen V221 ordered-pair ranker (`safe_order`) -> v242 variable TopN targeting composite odds 3.00 -> skip if unconstrained TopN<5 -> cap TopN at10 -> exact JPY10,000 Dutch.
+- First test whether the Wave36 all-race source contains the fields required to run the exact v288 V221 orderer without imputation. If exact parity is possible, use the v288 orderer unchanged. If not, fail closed and record the missing-field blocker rather than inventing features.
+- Any optional adaptation beyond exact v288 parity must be selected/frozen from Feb training + March OOS order accuracy/conversion only. Never choose from March payout/ROI; never tune from Apr-Aug outcomes.
+- Evaluate Apr-Jun pristine month-by-month and aggregate on R/hits/head hits/head rate/conversion/ROI/profit/maxDD. Jul/Aug NON-PRISTINE diagnostic only. September forbidden. Exact v288 overlap must remain zero.
+- Compare against frozen Wave36S-C and the v288 baseline context. Do not modify production v288.
 
 ## Exact restart point
-1. Implement Wave36S-D orderer candidates from Feb/March evidence only.
-2. Run CI and inspect exact Apr-Jun plus Jul-Aug results.
-3. Record run/artifact/results here before reporting; do not modify v288.
+1. Implement exact v288 V221/v242 opponent-selection parity on Wave36S-C candidates if source fields permit.
+2. Run CI and inspect exact Apr-Jun plus Jul-Aug diagnostic results.
+3. Record run/artifact/results here before reporting; if exact parity is blocked, record the blocker and do not substitute an unaudited orderer.
