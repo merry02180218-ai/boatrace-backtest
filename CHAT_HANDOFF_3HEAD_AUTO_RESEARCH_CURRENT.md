@@ -46,20 +46,33 @@
 - Shadow: Jul **71.557%**, Aug **175.060%**.
 - Baseline + holdout: **169R / ROI 128.708% / profit +485,160 yen**.
 - Legacy overlap 0. Decision **NO_ADOPTION**.
-- Interpretation: single structural gate does not generalize to untouched May-Jun; August strength is not sufficient because Jul/Aug are NON-PRISTINE.
 
-## Wave29 — RUNNING pre-April leak-free validation
-- Script commit `607d877689f86b0a20b83d1805633615b8ca4e6d`: `research_v289_3head_wave29_preapril_validation.py`.
-- Workflow commit `0dcea2043e69f95b2b29c0cf62b70a3d9a659537`: `.github/workflows/research-3head-wave29-preapril.yml`.
-- Current Run **`34764558658`**, workflow `research-3head-wave29-preapril`, status at launch **queued**.
-- All `節D`/result-like fields remain excluded; only 63 static pre-deadline-safe card features.
-- March is the only tuning month, and March predictions are trained on February only. Threshold/top-K are selected only from March.
-- **Apr-Jun are now a fully untouched model-selection holdout**. Jul-Aug remain NON-PRISTINE shadow only.
-- Closing odds are staking-only; legacy overlap 0; September forbidden.
+## Wave29 — FINAL pre-April leak-free validation
+- Run **`34764558658`**, workflow `research-3head-wave29-preapril`: **success**.
+- Artifact `3head-wave29-preapril-validation`, ID **`10320410273`**.
+- Features: **63 static pre-deadline-safe card features**; no `節D` / current-meet result/ST fields.
+- March-only tune using February training chose **p3>=0.38, top7**; March **185R / ROI 118.999%**.
+- Strict untouched Apr-Jun holdout: **342R / 63 hits / ROI 93.845% / profit -210,510 yen**.
+- Holdout monthly: Apr **147R / 30 hits / ROI 123.769% / +349,400**; May **129R / 22 hits / ROI 78.718% / -274,540**; Jun **66R / 11 hits / ROI 56.762% / -285,370**.
+- Holdout min month **56.762%** / red months **2** / max DD **628,780 yen**.
+- Jul-Aug NON-PRISTINE shadow: **170R / 53 hits / ROI 111.906% / profit +202,410 yen**.
+- Shadow monthly: Jul **75R / 21 hits / ROI 101.352% / +10,140**; Aug **95R / 32 hits / ROI 120.239% / +192,270**.
+- Baseline + holdout: **436R / ROI 110.816% / profit +471,560 yen**.
+- Legacy overlap **0**. Decision **NO_ADOPTION**.
+- Interpretation: stronger validation design than Wave27/28, but May-Jun degradation shows the one-stage multinomial family still fails pristine generalization.
+
+## Wave30 — RUNNING distinct two-stage family
+- Script commit **`8e0f9d10b4822650523163175a6ec6de33fab8d4`** introduced `research_v289_3head_wave30_twostage_preapril.py`.
+- Workflow commit **`49c2ccccfe9fde1be6945d9eb2b132af882684f5`** introduced `.github/workflows/research-3head-wave30-twostage.yml`.
+- Current Run **`34765791471`**, workflow `research-3head-wave30-twostage`, status at last inspection **in_progress**.
+- Family is deliberately distinct from Wave29: stage 1 binary `P(3-head)` gate, stage 2 exact-order model conditional on historical 3-head races.
+- Same 63 static card-only features; no `節D` / result-like current-meet fields.
+- March only selects threshold/top-K using predictions trained on February. Apr-Jun remains untouched model-selection holdout.
+- Jul-Aug NON-PRISTINE shadow only. September forbidden. Closing odds staking-only. Legacy overlap 0.
 
 ## Exact restart point
-1. Inspect Run `34764558658` first.
-2. If failed, inspect logs, fix and rerun automatically without weakening leak/date/zero-overlap guards.
-3. If success, record March chosen p3/top-K, Apr-Jun holdout R/hits/ROI/profit/monthly/min month/red months/max DD, Jul-Aug shadow, overlap and combined baseline.
-4. If Wave29 generalizes, treat it as substantially stronger evidence than Wave27/28 because Apr-Jun were never used for selection.
-5. If Wave29 fails, continue another genuinely distinct leak-free family; never optimize directly on Jul/Aug outcomes.
+1. Inspect Run `34765791471` first.
+2. If failed/stopped, inspect logs, fix and rerun automatically without weakening date/leak/zero-overlap guards.
+3. If success, record March chosen p3/top-K, Apr-Jun R/hits/ROI/profit/monthly/min month/red months/max DD, Jul-Aug shadow, overlap and combined baseline.
+4. Adoption/shadow status must be based on pristine Apr-Jun only; Jul/Aug cannot rescue a weak pristine result.
+5. If Wave30 fails to generalize, continue another genuinely distinct full-population leak-free family automatically; do not optimize on Jul/Aug outcomes.
