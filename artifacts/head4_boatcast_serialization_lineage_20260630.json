@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "scope": "HEAD4 BOATCAST raw-parser -> archived CSV serialization lineage -> frozen v291 POST semantic parity",
+  "pinned_boatracecsv_commit": "563c69ccd28853b8b4953489c673877a9dfeb4e8",
+  "result_or_payout_files_read": false,
+  "jul_aug_outcomes_used": false,
+  "september_outcomes_used": false,
+  "v291_changed": false,
+  "betting_overlay_changed": false,
+  "evidence": {
+    "original_exhibition": "BOATCAST TSV labels/value1..3 are parsed to floats then written directly as measure_labels/value1..3 CSV cells; None alone becomes blank.",
+    "start_display": "BOATCAST ST value+flag is normalized by pinned parser (F negative, L missing) then RacePreview.start_timing is written directly to CSV.",
+    "archived_semantic_parity": {
+      "original_rows": 12250,
+      "st_rows": 12749,
+      "lane4_score_mismatch": 0
+    }
+  },
+  "decision": "ACCEPT archived Apr-Jun BoatraceCSV preview representation as the exact serialized output of the pinned BOATCAST parser lineage for the fields used here. This closes the prior hidden-transform concern; production wiring still requires the current-day fail-closed builder/field-completeness CI.",
+  "ci": {
+    "initial_run": 34738462928,
+    "initial_conclusion": "failure",
+    "initial_failure_reason": "Audit harness expected pseudocode ST strings (if flag == L/F and return -abs(parsed)) that do not match the pinned implementation; existing Apr-Jun semantic audit passed in the same run.",
+    "fix_commit": "eaadda670611a23ecbbbbff45cc887ecde9fb5a1",
+    "corrected_run": 34738543306,
+    "corrected_conclusion": "success"
+  }
+}
