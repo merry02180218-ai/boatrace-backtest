@@ -64,4 +64,24 @@ Conclusion / guardrail:
 - The ~40% unconditional exact3 rate cannot be converted directly into a fair-odds threshold without conditioning hit probability on composite odds; observed hit probability fell sharply in the higher-odds subset.
 - Do NOT freeze/promote any BUY cutoff from this reused Jul/Aug evidence. Keep production fail-safe until a cutoff has genuinely out-of-sample support.
 
-Next work candidate (NOT started): diagnose conditional hit rate/calibration versus composite-odds bands, e.g. 1.5-2.0 / 2.0-2.5 / 2.5-3.0 / >=3.0, using development + Jul/Aug only as descriptive evidence. Before starting, append a new work unit here first.
+## WORK UNIT 2026-09-13-5 — Exhibition-time post-PRE filter for exact3 >=50% — written BEFORE execution
+User goal: raise the frozen 3-ticket exact3 hit rate from ~40% toward **50% or more** by using data that becomes available after exhibition, rather than changing the frozen PRE model itself.
+
+Do now:
+1. Keep the frozen PRE stack unchanged: v308 -> v317 -> v318 -> v320, exactly 3 tickets. The new logic is an additional post-exhibition PASS/SKIP layer only.
+2. Inspect existing repository sources for same-race exhibition data already available historically and in live operation: exhibition time, exhibition ST, actual exhibition entry/course, and original exhibition metrics such as straight, one-lap, turn/handling where available.
+3. Build candidate same-race exhibition features as **relative/field-adjusted values**, not raw times alone. At minimum inspect boat1 vs field, predicted SECOND/THIRD boats vs field, and ticket-covered opponents vs uncovered opponents.
+4. Explicitly separate current-race exhibition data from PRE predictors. These same-race exhibition fields are allowed only in the new post-exhibition filter and must never leak into v308/v317/v318/v320 training/scoring.
+5. First objective is classification/calibration: among races already selected by the frozen PRE stack, identify exhibition patterns associated with exact3 hits versus misses. Optimize for useful retained race count while testing whether PASS exact3 can reach >=50%; report coverage, head hit rate, exact3 hit rate, and odds/ROI diagnostics where odds are complete.
+6. Use development data for feature research/training. Jul/Aug 2026 remain NON-PRISTINE/reference-only and may only be used as a final reference check after a rule/model is fixed. September outcomes remain unread.
+7. Avoid simple threshold overfitting on individual exhibition times. Prefer causal, interpretable relative features and month-forward/OOS validation where possible.
+8. Before implementing the filter, identify exact source files/columns and historical coverage. If original exhibition coverage is partial, quantify missingness and make the filter fail-safe rather than silently imputing future/post-race values.
+
+Success criteria for this work unit:
+- exact source and timing of exhibition/original-exhibition columns are audited;
+- same-race exhibition data is isolated to a post-PRE layer;
+- a reproducible dataset for the frozen selected races is created with exact3 label + exhibition features;
+- no September outcome is read;
+- if a candidate filter is tested, report retained R, exact3 H/rate, head H/rate, and Jul/Aug reference only after freezing the candidate on development data.
+
+If interrupted: resume WORK UNIT 5 from item 2. Do not alter the frozen PRE stack and do not tune on Jul/Aug.
