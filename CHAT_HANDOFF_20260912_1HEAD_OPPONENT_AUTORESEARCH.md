@@ -44,23 +44,33 @@ v321 is a contamination-aware stress check only and cannot alter the development
 History:
 - Initial run `34739967420` failed because the audited source horizon ended at 2026-06-30.
 - Fix `274864650cb8a8d5607217464b2e32a043de1772` extended only the v321 source horizon through **2026-08-31**, with an explicit September fail-closed check.
-- Repeated attempts of run `34741655731` and then run `34745855880` were terminated by GitHub hosted runner shutdown/cancellation around the long monolithic Python step, not by leakage assertions or a model exception.
-- Memory projection commit `badbc36831a91cb90d478c944ca5d0bcd1b9de8e` was insufficient because the runner still shut down.
+- Repeated attempts of run `34741655731` and then run `34745855880` were terminated around the long monolithic Python step.
+- Memory projection commit `badbc36831a91cb90d478c944ca5d0bcd1b9de8e` was insufficient.
+- Two-job split (`prepare -> evaluate`) at `0f0836bb65a6abe3b52bcc790fca29e9aaa5a7a3` still failed in prepare run `34746675136` with runner shutdown / exit 143.
 
-### Current restart
-To avoid the runner shutdown, v321 is now split into two independent jobs with an artifact boundary:
-1. **prepare**: build the Jul/Aug causal PRE/head-selection universe only, enforce September absence, remove `meet_*`, project to symmetric opponent columns, and upload three temporary artifacts:
+### Root cause found 2026-09-13
+This is not being treated as merely a GitHub runner problem. The v321 prepare implementation was copying the fully expanded, highly fragmented v294->v307 dataframe for each target month:
+`tr=d[d.month<tm].copy(); te=d[d.month==tm].copy()`.
+That frame contains hundreds of columns produced by repeated `frame.insert` operations (confirmed by repeated pandas fragmentation warnings). The monthly copies therefore amplified memory immediately before the expensive v308 head OOF/HGB+LR folds. Earlier exit 137 and repeated shutdowns in the same region are consistent with this code-side resource design problem.
+
+Fix commit **`2f020cb6517c50319a3bf849e6dfa93a650eb44a`**:
+- extract the narrow symmetric opponent cache first;
+- project the head frame to only metadata + the exact frozen v308 core/guard/causal head feature columns;
+- delete the full expanded dataframe before monthly head copies/training;
+- add explicit per-month head-fold heartbeat output;
+- keep all model settings and leakage boundaries unchanged.
+
+Restarted v321 workflow run: **`34748125204`** (push of the fix commit; initially `in_progress`).
+
+### Current staged design
+1. **prepare**: build Jul/Aug causal PRE/head-selection universe, enforce September absence, remove `meet_*`, project to exact head inputs + symmetric opponent columns, and upload:
    - `cache_v321_julaug_nonpristine_slim.csv.gz`
    - `cache_v321_julaug_nonpristine_head.csv`
    - `cache_v321_julaug_nonpristine_meta.csv`
-2. **evaluate**: download those artifacts, apply frozen v317 SECOND + v318 THIRD + v320 HYBRID alpha=.70, and write the final v321 race/monthly/summary outputs.
-
-Implementation commits:
-- staged script: **`7a922d2899bf36120a88042d2ca0006f7562427a`**
-- split workflow: **`0f0836bb65a6abe3b52bcc790fca29e9aaa5a7a3`**
+2. **evaluate**: download artifacts, apply frozen v317 SECOND + v318 THIRD + v320 HYBRID alpha=.70, and write final race/monthly/summary outputs.
 
 Invariant notes:
-- temporary v321 artifacts are NON-PRISTINE infrastructure only; they are not development cache replacements.
+- v321 artifacts are NON-PRISTINE infrastructure only; not development cache replacements.
 - v313 p3/p4 remain frozen; Jul/Aug missing p3/p4 stay unavailable/neutral and are never future-backfilled.
 - September outcomes remain unread and any September row causes fail-closed termination.
 - `meet_*` remains forbidden.
