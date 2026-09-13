@@ -130,3 +130,17 @@ Exact work now:
 6. If Waku10 did not cause it, identify the true reconstruction mismatch and fix only the v337 reconstruction/audit harness.
 7. Keep September outcomes UNREAD and do not interpret relaxed cutoffs until the anchor is exactly 96/83/45 again.
 8. After diagnosis/fix, append exact missing races, root cause, commits, rerun IDs and final anchor status to THIS handoff before reporting completion.
+
+# 9. 2026-09-14 PRE-WORK RESUME — CANONICAL ANCHOR DIAGNOSTIC
+User instructed to continue. Before any further analysis, resume from the actual latest GitHub state.
+
+Exact work now:
+1. Inspect canonical-anchor diagnostic Run `34781252937` / Job `103788554432` to completion.
+2. Retrieve its artifact/log output and record the canonical current-state v332 anchor count/head/exact3 and full PASS race identity.
+3. Compare that identity directly against the failed v337 anchor (88/76/43) to isolate the exact missing races.
+4. For each missing race, identify the first stage where v337 diverges: PRE candidate, SECOND/THIRD/ticket readiness, exhibition feature readiness, ATTACK_ENV_SOFT score, or q=.65 threshold.
+5. Re-test the Waku10 hypothesis against actual missing-race inputs and commit chronology; do not infer causation from timing alone.
+6. If the canonical v332 anchor remains 96/83/45, fix only the v337 reconstruction harness until it reproduces that exact anchor before interpreting any relaxed-cutoff result.
+7. If canonical v332 itself changed, stop and isolate the source-data/model-input change before any v337 comparison.
+8. Keep September outcomes UNREAD and do not alter frozen production files.
+9. Append the actual diagnostic result, exact missing race identities/root cause, any fix commit, rerun IDs/artifact IDs, and exact next resume point to THIS file before reporting completion.
