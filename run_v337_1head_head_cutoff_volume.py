@@ -4,7 +4,6 @@ from __future__ import annotations
 from collections import defaultdict
 from datetime import date, timedelta
 from pathlib import Path
-from statistics import mean
 import json, pickle
 
 import numpy as np
@@ -16,7 +15,6 @@ import run_v299_1head_trifecta3_policy_search as v299
 import run_v300_1head_trifecta3_feature_upgrade as v300
 import run_v312_1head_opponent_outer_gate as v312
 import run_v320_1head_exact3_ticket_policy as v320
-import run_v321_1head_julaug_nonpristine_validation as v321
 import run_v326_1head_ticketaware_exhibition as v326
 import run_v332_1head_attack_first_redesign as v332
 
@@ -33,6 +31,7 @@ OPP=.375
 POLICY='HYBRID'; ALPHA=.70
 MONTHS=['2026-02','2026-03','2026-04','2026-05','2026-06','2026-07','2026-08']
 PRELOAD=date(2025,10,1)
+CFG={'family':'ATTACK_ENV_SOFT','env_w':0.1,'q':0.65}
 
 
 def pct(n,d): return 100*n/d if d else float('nan')
@@ -43,6 +42,18 @@ def met(z):
 def validate_no_sep(df):
     if any(str(x).startswith('2026-09') for x in df.get('month',pd.Series(dtype=str)).astype(str).unique()):
         raise RuntimeError('September entered v337')
+
+def canonical_anchor(canon):
+    selected=[]
+    for m in MONTHS:
+        if m=='2026-08': tr=canon[canon.month.isin(MONTHS[:-1])].copy()
+        else: tr=canon[canon.month.isin([x for x in MONTHS[:-1] if x!=m])].copy()
+        z=canon[canon.month.eq(m)].copy(); p,_=v332.fit_apply(tr,z,CFG); selected.append(p)
+    s=pd.concat(selected,ignore_index=True)
+    mm=met(s)
+    if (mm['R'],mm['head'],mm['exact3'])!=(96,83,45):
+        raise AssertionError(f'CANONICAL_V332_DRIFT before v337 overlay: {mm}')
+    return s
 
 def dev_ticket_map(ids:set[str]):
     d,p3,p4=v312.load_cache(); d.race_code=d.race_code.astype(str).str.zfill(12)
@@ -110,6 +121,25 @@ def build_exhibition(base):
         v326.update_st(strows,sums,allv); d+=timedelta(days=1)
     feat=pd.DataFrame.from_dict(features,orient='index'); feat.index.name='race_code'; feat=feat.reset_index()
     y=base.merge(feat,on='race_code',how='left',validate='one_to_one')
+
+    # Identity repair: the adopted 400-row v332 universe must use exactly the same
+    # exhibition-feature route as v332 itself.  Broad v337-only candidates retain
+    # the dynamic reconstruction above.  This prevents transient remote preview
+    # fetch misses in the much broader sweep from changing the frozen anchor.
+    canon=v332.load_all().copy(); canon.race_code=canon.race_code.astype(str).str.zfill(12); validate_no_sep(canon)
+    canon_pass=canonical_anchor(canon)
+    overlay_cols=list(v326.MODEL_FEATURES)+[
+        'has_tkz','has_stt','has_orig','tkz_all6','stt_all6','orig_turn_all6',
+        'orig_straight_all6','orig_avg_all6','orig_turn_straight_all6','source_complete',
+        'second_boats','third_boats','covered_boats','uncovered_boats'
+    ]
+    overlay_cols=[c for c in overlay_cols if c in canon.columns]
+    cm=canon.set_index('race_code')
+    mask=y.race_code.isin(cm.index)
+    for c in overlay_cols:
+        y.loc[mask,c]=y.loc[mask,'race_code'].map(cm[c])
+    pd.DataFrame({'race_code':y.loc[mask,'race_code'].astype(str)}).to_csv(OUT/'analysis_v337_canonical_overlay.csv',index=False)
+
     for c in ['tkz_all6','stt_all6','orig_turn_all6','orig_straight_all6','orig_avg_all6']:
         y[c]=pd.to_numeric(y.get(c),errors='coerce').fillna(0).astype(int)
     y['attack_ready']=y.tkz_all6.eq(1)&y.stt_all6.eq(1)&y.orig_straight_all6.eq(1)&y.orig_avg_all6.eq(1)
@@ -121,23 +151,20 @@ def build_exhibition(base):
     y['env_pair']=np.nan; m=y.env_ready
     y.loc[m,'env_pair']=.30*y.loc[m,'sec_ex_mean_margin']+.30*y.loc[m,'sec_st_mean_margin']+.20*y.loc[m,'third_turn_mean_margin']+.20*y.loc[m,'third_straight_mean_margin']
     y.to_csv(OUT/'analysis_v337_candidate_exhibition.csv',index=False)
-    return y
+    return y,canon_pass,len(cm.index.intersection(set(y.race_code)))
 
 def eval_cut(allrows,cut):
     y=allrows[pd.to_numeric(allrows.p_head,errors='coerce').ge(cut)].copy(); selected=[]; monthly=[]
-    cfg={'family':'ATTACK_ENV_SOFT','env_w':0.1,'q':0.65}
     for m in MONTHS:
         if m=='2026-08': tr=y[y.month.isin(MONTHS[:-1])].copy()
-        else: tr=y[y.month.isin([x for x in MONTHS if x!=m and x!='2026-08'])].copy() if m!='2026-08' else y[y.month.isin(MONTHS[:-1])].copy()
-        # Match v332/v336 semantics: Feb-Jul leave-one-out over Feb-Jul; Aug trains Feb-Jul.
-        if m!='2026-08': tr=y[y.month.isin([x for x in MONTHS[:-1] if x!=m])].copy()
-        z=y[y.month.eq(m)].copy(); p,_=v332.fit_apply(tr,z,cfg); p=p.copy(); p['eval_month']=m; selected.append(p)
+        else: tr=y[y.month.isin([x for x in MONTHS[:-1] if x!=m])].copy()
+        z=y[y.month.eq(m)].copy(); p,_=v332.fit_apply(tr,z,CFG); p=p.copy(); p['eval_month']=m; selected.append(p)
         monthly.append({'cutoff':cut,'month':m,'pre_R':len(z),**{f'pass_{k}':v for k,v in met(p).items()}})
     s=pd.concat(selected,ignore_index=True) if selected else y.iloc[0:0].copy(); sm=met(s)
     return y,s,monthly,{'cutoff':cut,'pre_R':len(y),**sm,'races_per_month':len(s)/7.0}
 
 def main():
-    base=load_candidate_base(); y=build_exhibition(base); validate_no_sep(y)
+    base=load_candidate_base(); y,canon_pass,overlay_n=build_exhibition(base); validate_no_sep(y)
     results={}; summaries=[]; monthly=[]
     for c in CUTS:
         pre,p,m,sm=eval_cut(y,c); results[c]=(pre,p); summaries.append(sm); monthly+=m
@@ -147,6 +174,10 @@ def main():
         pd.DataFrame(summaries).to_csv(OUT/'analysis_v337_summary.csv',index=False)
         pd.DataFrame(monthly).to_csv(OUT/'analysis_v337_monthly.csv',index=False)
         raise AssertionError(f'ANCHOR_IDENTITY_DRIFT got {ar} expected 96/83/45')
+    if set(anchor.race_code.astype(str))!=set(canon_pass.race_code.astype(str)):
+        miss=sorted(set(canon_pass.race_code.astype(str))-set(anchor.race_code.astype(str)))
+        extra=sorted(set(anchor.race_code.astype(str))-set(canon_pass.race_code.astype(str)))
+        raise AssertionError(f'ANCHOR_RACECODE_DRIFT missing={miss} extra={extra}')
     ref=set(anchor.race_code.astype(str)); bands=[]
     for c in CUTS[1:]:
         p=results[c][1]; add=p[~p.race_code.astype(str).isin(ref)].copy(); mm=met(add)
@@ -154,9 +185,11 @@ def main():
     pd.DataFrame(summaries).to_csv(OUT/'analysis_v337_summary.csv',index=False)
     pd.DataFrame(monthly).to_csv(OUT/'analysis_v337_monthly.csv',index=False)
     pd.DataFrame(bands).to_csv(OUT/'analysis_v337_added_vs_anchor.csv',index=False)
-    result={'WAKU10_DEPENDENCY':'NONE_IN_V308_V337_PATH','WAKU10_CHANGED_1HEAD_ROWS':0,'WAKU10_CUTOFF_CROSSINGS':0,'anchor':ar,'summary':summaries,'added_vs_anchor':bands,'SEPTEMBER_OUTCOMES_READ':False}
+    result={'WAKU10_DEPENDENCY':'NONE_IN_V308_V337_PATH','WAKU10_CHANGED_1HEAD_ROWS':0,'WAKU10_CUTOFF_CROSSINGS':0,
+            'CANONICAL_V332_OVERLAY_ROWS':overlay_n,'anchor':ar,'summary':summaries,'added_vs_anchor':bands,'SEPTEMBER_OUTCOMES_READ':False}
     (OUT/'result_v337.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
-    L=['# v337 head-cutoff-only volume audit','', '- Waku10 dependency in v308/v337 PRE path: NONE.','- September outcomes unread.','- v332 exhibition filter fixed: ATTACK_ENV_SOFT env_w=.1 q=.65.','']
+    L=['# v337 head-cutoff-only volume audit','', '- Waku10 dependency in v308/v337 PRE path: NONE.','- September outcomes unread.',
+       '- v332 exhibition filter fixed: ATTACK_ENV_SOFT env_w=.1 q=.65.',f'- canonical v332 exhibition overlay rows: {overlay_n}.','']
     for r in summaries: L.append(f"- cutoff={r['cutoff']:.10f}: PRE {r['pre_R']}, PASS {r['R']} ({r['races_per_month']:.1f}/month), head {r['head']}/{r['R']}={r['head_rate']:.2f}%, exact3 {r['exact3']}/{r['R']}={r['exact3_rate']:.2f}%")
     L+=['','## Newly admitted final PASS vs anchor']
     for r in bands:L.append(f"- cutoff={r['cutoff']:.2f}: +{r['added_pass_R']} PASS, head {r['added_head_rate']:.2f}%, exact3 {r['added_exact3_rate']:.2f}%")
