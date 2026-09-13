@@ -2,7 +2,9 @@ name: research-3head-wave36sa-audit
 on:
   push:
     branches: [research/3head-v289-addon-expansion]
-    paths: ['.github/workflows/research-3head-wave36sa-audit.yml']
+    paths:
+      - 'research_v289_3head_wave36sa_audit.py'
+      - '.github/workflows/research-3head-wave36sa-audit.yml'
   workflow_dispatch:
 jobs:
   audit:
