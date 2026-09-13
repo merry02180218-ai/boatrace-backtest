@@ -1,0 +1,206 @@
+from __future__ import annotations
+
+import csv
+from collections import defaultdict
+from datetime import date, timedelta
+from pathlib import Path
+from statistics import mean
+
+import numpy as np
+import pandas as pd
+from sklearn.linear_model import LogisticRegression
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+
+from backtest import rows
+from backtest_v51_lane_corrected_tickets import corrected_direct, ff
+
+V320=Path('analysis_v320_1head_exact3_ticket_policy_best_race.csv')
+OUT=Path('/tmp/v326'); OUT.mkdir(parents=True,exist_ok=True)
+PRELOAD=date(2025,10,1)
+
+MODEL_FEATURES=[
+    'one_ex','one_st','one_turn','one_straight','one_orig_avg',
+    'sec_ex_mean_margin','sec_st_mean_margin','sec_turn_mean_margin','sec_straight_mean_margin',
+    'third_turn_mean_margin','third_straight_mean_margin','third_orig_mean_margin',
+    'covered_turn_weak_margin','covered_straight_weak_margin',
+    'covered_balance_min','uncovered_turn_dominance','uncovered_straight_dominance',
+]
+RULE_FEATURES=[
+    'sec_ex_mean_margin','sec_st_mean_margin','sec_turn_mean_margin','sec_straight_mean_margin',
+    'third_turn_mean_margin','third_straight_mean_margin','third_orig_mean_margin',
+    'covered_turn_weak_margin','covered_straight_weak_margin','covered_balance_min',
+]
+
+def pct(n,d): return 100*n/d if d else float('nan')
+def bycode(rs): return {str(r.get('レースコード','')).zfill(12):r for r in rs if r.get('レースコード')}
+def metrics(x):
+    n=len(x);h=int(x.hit.sum()) if n else 0;hh=int(x.head_hit.sum()) if n else 0
+    return {'R':n,'H':h,'exact3_rate':pct(h,n),'head_H':hh,'head_rate':pct(hh,n)}
+
+def st_bias(sums,allv):
+    g=mean(allv) if allv else .15
+    return {b:(mean(sums[b])-g if sums[b] else 0.0) for b in range(1,7)}
+def update_st(strows,sums,allv):
+    for r in strows:
+        for b in range(1,7):
+            v=ff(r.get(f'艇{b}_スタート展示'))
+            if v is not None and -.30<v<1.0:
+                sums[b].append(v);allv.append(v)
+
+def parse_tickets(s):
+    ts=[]
+    for t in str(s).split(';'):
+        p=t.strip().split('-')
+        if len(p)==3 and all(z.isdigit() for z in p):ts.append(tuple(map(int,p)))
+    if len(ts)!=3: raise AssertionError(f'expected exactly 3 tickets: {s}')
+    if any(t[0]!=1 for t in ts): raise AssertionError(f'non-1 head ticket: {s}')
+    return ts
+
+def avg(vals): return float(np.mean(vals)) if vals else float('nan')
+def mx(vals): return max(vals) if vals else float('nan')
+def mn(vals): return min(vals) if vals else float('nan')
+def margin_mean(group,uncovered,metric):
+    return avg([metric[b] for b in group])-mx([metric[b] for b in uncovered]) if group and uncovered else float('nan')
+def margin_weak(group,uncovered,metric):
+    return mn([metric[b] for b in group])-mx([metric[b] for b in uncovered]) if group and uncovered else float('nan')
+
+def feature_row(base,ex,st,os):
+    ts=parse_tickets(base['tickets'])
+    seconds=sorted({t[1] for t in ts}); thirds=sorted({t[2] for t in ts})
+    covered=sorted((set(seconds)|set(thirds))-{1})
+    uncovered=sorted(set(range(2,7))-set(covered))
+    if not covered: raise AssertionError('empty covered opponents')
+    # If all 2..6 are covered, use the non-role opponents for each role margin when possible;
+    # otherwise margins are intentionally missing rather than fabricated.
+    sec_un=sorted(set(range(2,7))-set(seconds)); third_un=sorted(set(range(2,7))-set(thirds))
+    turn={b:os[b]['turn'] for b in range(1,7)}; straight={b:os[b]['straight'] for b in range(1,7)}
+    orig={b:os[b]['avg'] for b in range(1,7)}
+    out={
+      'one_ex':ex[1],'one_st':st[1],'one_turn':turn[1],'one_straight':straight[1],'one_orig_avg':orig[1],
+      'sec_ex_mean':avg([ex[b] for b in seconds]),'sec_st_mean':avg([st[b] for b in seconds]),
+      'sec_turn_mean':avg([turn[b] for b in seconds]),'sec_straight_mean':avg([straight[b] for b in seconds]),
+      'third_turn_mean':avg([turn[b] for b in thirds]),'third_straight_mean':avg([straight[b] for b in thirds]),'third_orig_mean':avg([orig[b] for b in thirds]),
+      'sec_ex_mean_margin':margin_mean(seconds,sec_un,ex),'sec_st_mean_margin':margin_mean(seconds,sec_un,st),
+      'sec_turn_mean_margin':margin_mean(seconds,sec_un,turn),'sec_straight_mean_margin':margin_mean(seconds,sec_un,straight),
+      'third_turn_mean_margin':margin_mean(thirds,third_un,turn),'third_straight_mean_margin':margin_mean(thirds,third_un,straight),'third_orig_mean_margin':margin_mean(thirds,third_un,orig),
+      'covered_turn_weak_margin':margin_weak(covered,uncovered,turn),'covered_straight_weak_margin':margin_weak(covered,uncovered,straight),
+      'covered_balance_min':mn([turn[b] for b in covered]+[straight[b] for b in covered]),
+      'uncovered_turn_dominance':mx([turn[b] for b in uncovered])-mx([turn[b] for b in covered]) if uncovered else -1.0,
+      'uncovered_straight_dominance':mx([straight[b] for b in uncovered])-mx([straight[b] for b in covered]) if uncovered else -1.0,
+      'second_boats':'-'.join(map(str,seconds)),'third_boats':'-'.join(map(str,thirds)),
+      'covered_boats':'-'.join(map(str,covered)),'uncovered_boats':'-'.join(map(str,uncovered)),
+    }
+    return out
+
+def build_dataset():
+    x=pd.read_csv(V320,dtype={'race_code':str})
+    x['race_code']=x.race_code.astype(str).str.zfill(12)
+    x['hit']=pd.to_numeric(x.hit,errors='coerce').fillna(0).astype(int)
+    x['head_hit']=pd.to_numeric(x.head_hit,errors='coerce').fillna(0).astype(int)
+    if len(x)!=345 or int(x.hit.sum())!=139 or int(x.head_hit.sum())!=290:
+        raise AssertionError('v320 identity mismatch')
+    wanted={c for c in x.race_code}; selected_days=sorted({date(int(c[:4]),int(c[4:6]),int(c[6:8])) for c in wanted})
+    last=max(selected_days); sums=defaultdict(list);allv=[]; features={}
+    d=PRELOAD
+    while d<=last:
+        ymd=d.strftime('%Y/%m/%d'); strows=rows(f'data/previews/stt/{ymd}.csv')
+        bias=st_bias(sums,allv)
+        if d in set(selected_days):
+            tkz=bycode(rows(f'data/previews/tkz/{ymd}.csv')); stt=bycode(strows); orig=bycode(rows(f'data/previews/original_exhibition/{ymd}.csv'))
+            day_codes=[c for c in wanted if c.startswith(d.strftime('%Y%m%d'))]
+            for code in day_codes:
+                has_tkz=int(code in tkz);has_stt=int(code in stt);has_orig=int(code in orig)
+                if not (has_tkz and has_stt and has_orig):
+                    features[code]={'source_complete':0,'has_tkz':has_tkz,'has_stt':has_stt,'has_orig':has_orig};continue
+                ex,st,os=corrected_direct(code,tkz,stt,orig,bias)
+                b=x.loc[x.race_code.eq(code)].iloc[0]
+                z=feature_row(b,ex,st,os);z.update({'source_complete':1,'has_tkz':1,'has_stt':1,'has_orig':1});features[code]=z
+        update_st(strows,sums,allv); d+=timedelta(days=1)
+    rowsout=[]
+    for _,r in x.iterrows():
+        z=r.to_dict();z.update(features.get(r.race_code,{'source_complete':0,'has_tkz':0,'has_stt':0,'has_orig':0}));rowsout.append(z)
+    y=pd.DataFrame(rowsout)
+    for c in MODEL_FEATURES:
+        if c not in y:y[c]=np.nan
+        y[c]=pd.to_numeric(y[c],errors='coerce')
+    y['model_ready']=(y.source_complete.eq(1)&y[MODEL_FEATURES].notna().all(axis=1)).astype(int)
+    y.to_csv(OUT/'v326_ticketaware_dataset.csv',index=False)
+    return y
+
+def rule_search(disc,val):
+    rowsout=[]
+    for feat in RULE_FEATURES:
+        dd=disc[(disc.source_complete==1)&disc[feat].notna()]
+        vv=val[(val.source_complete==1)&val[feat].notna()]
+        if len(dd)<25 or len(vv)<10:continue
+        for t in np.unique(np.quantile(dd[feat],np.arange(.10,.91,.10))):
+            for op in ('>=','<='):
+                a=dd[dd[feat]>=t] if op=='>=' else dd[dd[feat]<=t]
+                b=vv[vv[feat]>=t] if op=='>=' else vv[vv[feat]<=t]
+                dm=metrics(a);vm=metrics(b)
+                rowsout.append({'kind':'1d','feature':feat,'op':op,'threshold':float(t),
+                    **{f'disc_{k}':v for k,v in dm.items()},**{f'val_{k}':v for k,v in vm.items()}})
+    c=pd.DataFrame(rowsout)
+    if c.empty:return c,None
+    ok=c[(c.val_R>=15)&(c.val_exact3_rate>=50)&(c.disc_R>=25)]
+    if ok.empty:ok=c[(c.val_R>=10)&(c.val_exact3_rate>=48)&(c.disc_R>=20)]
+    if ok.empty:return c,None
+    return c,ok.sort_values(['val_R','val_exact3_rate','disc_exact3_rate'],ascending=[False,False,False]).iloc[0].to_dict()
+
+def logit_search(disc,val):
+    tr=disc[disc.model_ready==1].copy();va=val[val.model_ready==1].copy()
+    if len(tr)<30 or len(va)<10:return pd.DataFrame(),None,None
+    model=Pipeline([('sc',StandardScaler()),('lr',LogisticRegression(C=.15,max_iter=2000))])
+    model.fit(tr[MODEL_FEATURES],tr.hit)
+    pdsc=model.predict_proba(tr[MODEL_FEATURES])[:,1];pv=model.predict_proba(va[MODEL_FEATURES])[:,1]
+    rr=[]
+    for t in np.unique(np.quantile(pdsc,np.arange(.10,.91,.05))):
+        a=tr[pdsc>=t];b=va[pv>=t];dm=metrics(a);vm=metrics(b)
+        rr.append({'kind':'logit','threshold':float(t),**{f'disc_{k}':v for k,v in dm.items()},**{f'val_{k}':v for k,v in vm.items()}})
+    c=pd.DataFrame(rr);ok=c[(c.val_R>=15)&(c.val_exact3_rate>=50)&(c.disc_R>=25)]
+    if ok.empty:ok=c[(c.val_R>=10)&(c.val_exact3_rate>=48)&(c.disc_R>=20)]
+    if ok.empty:return c,None,model
+    return c,ok.sort_values(['val_R','val_exact3_rate','disc_exact3_rate'],ascending=[False,False,False]).iloc[0].to_dict(),model
+
+def apply(df,best,model=None):
+    if best is None:return df.iloc[0:0]
+    if best['kind']=='1d':
+        z=df[(df.source_complete==1)&df[best['feature']].notna()]
+        return z[z[best['feature']]>=best['threshold']] if best['op']=='>=' else z[z[best['feature']]<=best['threshold']]
+    z=df[df.model_ready==1].copy();z['pass_prob']=model.predict_proba(z[MODEL_FEATURES])[:,1]
+    return z[z.pass_prob>=best['threshold']]
+
+def main():
+    y=build_dataset();print('RECONCILE',metrics(y));print('SOURCE_COMPLETE',int(y.source_complete.sum()),'MODEL_READY',int(y.model_ready.sum()))
+    for m,g in y.groupby('month'):print('BASE_MONTH',m,metrics(g),'source',int(g.source_complete.sum()),'model_ready',int(g.model_ready.sum()))
+    disc=y[y.month.isin(['2026-02','2026-03','2026-04'])];val=y[y.month.eq('2026-05')];fwd=y[y.month.eq('2026-06')]
+    c1,b1=rule_search(disc,val);cl,bl,model=logit_search(disc,val)
+    c1.to_csv(OUT/'v326_candidates_1d.csv',index=False);cl.to_csv(OUT/'v326_candidates_logit.csv',index=False)
+    choices=[]
+    if b1 is not None:choices.append(('1d',b1,None))
+    if bl is not None:choices.append(('logit',bl,model))
+    chosen=None
+    if choices:
+        choices.sort(key=lambda z:(z[1].get('val_R',0),z[1].get('val_exact3_rate',0),1 if z[0]=='1d' else 0),reverse=True);chosen=choices[0]
+    summary={'candidate':'NONE','forward_supported':False}
+    if chosen:
+        typ,best,mdl=chosen
+        key=f"{best['feature']} {best['op']} {best['threshold']:.6f}" if typ=='1d' else f"logit p>={best['threshold']:.6f}"
+        p=apply(fwd,best,mdl);skip=fwd[~fwd.index.isin(p.index)];pm=metrics(p);sm=metrics(skip);bm=metrics(fwd)
+        supported=(pm['R']>=10 and (pm['exact3_rate']>=50 or pm['exact3_rate']>=bm['exact3_rate']+5))
+        summary={'candidate':key,'kind':typ,'val_R':best.get('val_R'),'val_exact3_rate':best.get('val_exact3_rate'),
+                 'jun_pass_R':pm['R'],'jun_pass_H':pm['H'],'jun_pass_exact3_rate':pm['exact3_rate'],'jun_pass_head_rate':pm['head_rate'],
+                 'jun_skip_R':sm['R'],'jun_skip_H':sm['H'],'jun_skip_exact3_rate':sm['exact3_rate'],'jun_base_exact3_rate':bm['exact3_rate'],
+                 'forward_supported':bool(supported)}
+        print('FROZEN_CANDIDATE',key,best);print('JUN_PASS',pm);print('JUN_SKIP',sm);print('FORWARD_SUPPORTED',supported)
+    else:print('FROZEN_CANDIDATE NONE')
+    pd.DataFrame([summary]).to_csv(OUT/'v326_summary.csv',index=False)
+    with open(OUT/'summary_v326_1head_ticketaware_exhibition.md','w',encoding='utf-8') as f:
+        f.write('# v326 ticket-aware exhibition postfilter\n\n')
+        f.write(f"- frozen baseline: {len(y)}R / {int(y.hit.sum())} exact3 / {int(y.head_hit.sum())} head hits\n")
+        f.write(f"- actual all-source complete: {int(y.source_complete.sum())}; full model-ready: {int(y.model_ready.sum())}\n")
+        for k,v in summary.items():f.write(f'- {k}: {v}\n')
+        f.write('\nNo Jul/Aug or September outcome is read by this script. Jul/Aug reference is allowed only if forward_supported=True.\n')
+
+if __name__=='__main__':main()
