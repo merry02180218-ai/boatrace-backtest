@@ -30,7 +30,7 @@ def fit_predict(trainX,train_combo,testX):
     dpos=np.sqrt(((B-pos)**2).mean(axis=1)); dneg=np.sqrt(((B-neg)**2).mean(axis=1))
     head_score=dneg-dpos
     mask=y==1
-    cond=make_pipeline(StandardScaler(),LogisticRegression(max_iter=500,C=.20,solver='lbfgs',multi_class='auto'))
+    cond=make_pipeline(StandardScaler(),LogisticRegression(max_iter=500,C=.20,solver='lbfgs'))
     cond.fit(A[mask],train_combo.to_numpy()[mask])
     pc=cond.predict_proba(B)
     score=np.zeros((len(testX),len(base.COMBOS)))
