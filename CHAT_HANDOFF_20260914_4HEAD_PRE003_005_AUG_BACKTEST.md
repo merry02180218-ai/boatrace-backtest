@@ -1,6 +1,6 @@
 # CHAT HANDOFF — HEAD4 PRE 0.03-0.05 RESEARCH
 
-Status: **CANONICAL WAKU10 HEAD4 FEB-AUG FULL RE-RUN STARTED**
+Status: **FIXED AUGUST INPUT / TRAINING-ONLY WAKU10 AUDIT IN PROGRESS**
 
 ## Frozen production
 Production remains unchanged (`HEAD4_V291_COMP7`). July/August 2026 remain NON-PRISTINE; September remains outcome-blind for tuning/model selection.
@@ -20,18 +20,32 @@ Production remains unchanged (`HEAD4_V291_COMP7`). July/August 2026 remain NON-P
 - Corrected 7/18 -> 7/19 changes: legacy_score4 36.381158 -> 36.283451 (-0.097707), resistance12 .720583 -> .699611 (-.020972), wall3_weak .208704 -> .195410 (-.013294), past_win4 .098148 -> .093866 (-.004282).
 - Therefore the old huge 7/19 discontinuity was caused by sparse public Waku10 lineage and is INVALID for model/regime decisions.
 
-## CURRENT WORK-START RECORD — written BEFORE implementation/run
-Goal: recompute the key HEAD4 February-August diagnostics with canonical restored Waku10 and determine whether the August anomaly/low-PRE behavior remains.
+## Canonical Feb-Aug reruns — COMPLETE
+- Common frozen Jan-31 model: Run `34781257580`, Job `103788567081`: SUCCESS.
+  - Artifact ID `10325587160`, SHA256 `3032d71a7bf7c7f08abc417c94478215e6192cb7fc8994ca2d334d627b154b32`.
+  - PRE .03-.05: Feb 609/20=3.28%, Mar 740/24=3.24%, Apr 743/12=1.62%, May 817/24=2.94%, Jun 716/29=4.05%, Jul 872/27=3.10% NON-PRISTINE, Aug 843/29=3.44% NON-PRISTINE.
+- Rolling fit cutoff rerun: Run `34781279884`, Job `103788629685`: SUCCESS.
+- Regime drift rerun: Run `34781297306`, Job `103788675802`: SUCCESS.
+- Production unchanged.
+
+## Important correction / open question
+User correctly noted that July/August Waku10 already existed historically, so August raw target inputs should not materially change merely because canonical historical Waku10 was materialized. The corrected Jan-31 frozen model can still change because its Dec-Jan training features changed after historical Waku10 restoration. This needs a direct controlled audit rather than inference.
+
+## CURRENT WORK-START RECORD — written BEFORE implementation
+Goal: isolate the effect of TRAINING-period Waku10 restoration while holding August 2026 target features exactly fixed.
 
 Exact plan:
-1. Fetch current implementations/workflows for common frozen-scale, rolling fit-cutoffs, regime drift/day-boundary, and PRE .03-.05 analyses; ensure they resolve canonical local Waku10 through the shared loader.
-2. Re-run the common frozen-scale February-August distribution/performance comparison under one fixed causal model.
-3. Re-run rolling causal fit cutoffs through 2026-06-30, with 2026-07-31 diagnostic-only, to test whether August recentering/collapse survives corrected Waku10.
-4. Re-run outcome-independent regime/day-boundary diagnostics to remove the false sparse-public-Waku10 discontinuity.
-5. Recompute PRE .03-.05 counts and 4-head performance for pristine Feb-Jun and descriptive NON-PRISTINE Jul-Aug. No July/August tuning or production selection.
-6. September outcomes remain unused/outcome-blind. Production `HEAD4_V291_COMP7` remains unchanged.
-7. Inspect CI logs/artifacts. Fix and rerun automatically if any audit error occurs.
-8. AFTER all required runs complete, update this handoff with exact Run/Job/Artifact IDs/hashes, corrected numbers, which old conclusions survive/disappear, production status, and restart point.
+1. Build an audit-only script; production code/thresholds remain untouched.
+2. Construct one single canonical August 2026 feature matrix and freeze it in memory. Use exactly the same target rows/features for both model variants.
+3. Fit two Jan-31 PRE models on the same Dec-2025 through Jan-2026 race labels:
+   - `CANONICAL_TRAIN`: local restored canonical Waku10 for training.
+   - `PUBLIC_ONLY_TRAIN`: bypass local canonical Waku10 only for training-period Waku10 reads and fetch the public BoatraceCSV historical path, reproducing the old sparse lineage as closely as currently available. No imputation/fabrication.
+4. Verify training race codes/labels are identical between variants and report which raw/derived training features differ, including missing/default shares.
+5. Score the exact same frozen canonical August matrix with both fitted models. Compare PRE mean/median, PRE-bin counts, PRE .03-.05 membership overlap, entries gained/lost, and 4-head descriptive hit rates. July/August remain NON-PRISTINE; outcomes are descriptive only.
+6. Also report model coefficient/scaler shifts so we can identify which restored training features move the PRE scale.
+7. Fail closed if public-only training source cannot be reconstructed or if August target feature hashes differ between variants.
+8. Run CI, inspect logs/artifact, fix automatically on audit errors.
+9. AFTER completion update this handoff with Run/Job/Artifact IDs/hash, exact controlled results, conclusion, production status, and restart point.
 
 ## Restart protection
-If interrupted, resume from canonical-Waku10 HEAD4 Feb-Aug full rerun. Never reuse pre-canonical Waku10 results for model decisions.
+If interrupted, resume from fixed-August-input / training-only Waku10 controlled audit. Do not attribute August changes to target Waku10 unless the fixed-input audit proves it.
