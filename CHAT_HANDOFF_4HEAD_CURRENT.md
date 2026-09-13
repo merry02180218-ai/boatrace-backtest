@@ -145,7 +145,7 @@ Guards:
 
 Decision: **ACCEPT strict source-object assembler as production-green.**
 
-## Existing ENV_ENTRY assembler — ACCEPTED, source acquisition still incomplete
+## Existing ENV_ENTRY assembler — ACCEPTED
 `build_4head_env_entry_live.py`, commit `7fad596ac8ae530307546239716aa082cad623b7`.
 Verifier commit `9f9e04a57f399ec00c07d190b497f78993d61faf`.
 Workflow commit `894b432d5ca6ca81fb7ff441f71b662316ee964c`.
@@ -159,7 +159,42 @@ Derived internally:
 - `p4_joint = PRE * POST`
 - `post_x_entry_same = POST * entry_confirmed_same`
 
-Therefore the unresolved raw acquisition layer is the exact causal generation of the other 21 primitives. Missing values must fail closed; do not invent defaults/formulas.
+## Exact causal ENV_ENTRY primitive semantics — ACCEPTED
+Builder `build_4head_env_v91_primitives_live.py` now reproduces the 21 primitive semantics from frozen v74/v83/v91 lineage.
+
+Initial exact v74/v91 primitive builder commit:
+- `f5fa00d0e1181e2aab4ad68cf2a4194f6d3f7e66`
+Tilt parity correction:
+- `be28071e00a99aedb95ba65fe944ff930a22336e`
+Verifier:
+- `ed3c1e62374d9e398f183a811535dec340562e63`
+CI workflow:
+- `df8a4e2a48e073655aac725c1b51f1b9573c7d4f`
+Prior parity CI:
+- Run `34767423066`: **SUCCESS**.
+
+### Frozen v83 HEAD4 wind mapping — ACCEPTED
+Historical source was recovered from v83 commits `1cf29fddd2b5db088d810e5c32e412fa688713f9` and result commit `7c9a85ba492b07e4b5cd4d9c3623551a8ef52d4f`.
+
+The mapping was learned only on old period `2025-11-01..2026-05-31` with v83's frozen rule:
+- per model x relative-wind x speed cell;
+- favorable if `n>=40` and head-rate lift >= +3pt vs old model baseline;
+- unfavorable if `n>=40` and lift <= -3pt;
+- otherwise neutral;
+- Jul/Aug/recent results are not used to classify the cells.
+
+For HEAD4 the only non-neutral frozen cells are:
+- `追い_0-2m` => `-2`
+- `向かい_0-2m` => `-2`
+- `左横_3-4m` => `+2`
+- every other valid HEAD4 wind cell => `0`
+
+Production builder now derives relative wind, speed bin and `wind_adjust_points` internally; no manual learned wind label is required.
+- implementation commit `d7109c1eea6ffb9a28855b185888b6350373a0e9`
+- verifier commit `8e86a9e1bbcf03295cdab83db85b2a3ff0ee1164`
+- CI Run `34767924924`: **SUCCESS**.
+
+Decision: **ACCEPT frozen v83 wind replay. The prior 21-primitive semantic blocker is closed.**
 
 ## Verified raw/current building blocks
 - `fetch_4head_v291_pre_inputs_live.py`: current result-blind race_cards + waku10 for all active venues/races.
@@ -180,20 +215,20 @@ Automatic and CI-green now:
 - frozen v90 ST-flat,
 - v93 opponent primitives,
 - causal v221-style player history,
+- exact v74/v83/v91 ENV primitive semantics including frozen old-period wind mapping,
 - strict component merger into `--source-json`,
 - strict source -> frozen models -> official-market/Dutch runner.
 
 Still unfinished:
-1. exact causal current-day acquisition/reproduction of the 21 ENV_ENTRY/base primitives, especially v91/v83/history/entry/wind primitives; copy historical semantics exactly, do not approximate.
+1. exact automatic acquisition/assembly of the primitive builder context (`history_prior1`, `history_prior2`, prior-only history population, tilt/entry/wind flags) from accepted raw sources so no manual context JSON is required.
 2. one orchestration command that executes all accepted upstream builders and emits the final strict source object without manual JSON preparation.
 3. full raw-source -> official pre-deadline 120-way odds -> VARN -> exact JPY10,000 Dutch dry/live validation with audit persisted before result retrieval.
 
 ## Exact next action
-1. Locate historical production formulas/source lineage for each unresolved ENV_ENTRY primitive (`preview_comp`, `relative_deg`, wind/entry flags, v91/v83 scores, `history_adjust_online`, `history_pct_online`).
-2. Implement a fail-closed causal primitive builder only after exact semantics are verified from repository code/data lineage.
-3. Add fixture/parity/source-allow-list CI.
-4. Wire it into a one-command upstream orchestrator -> `assemble_4head_current_source.py` -> `run_4head_v291_varn_auto_live.py --source-json`.
-5. Run end-to-end dry/live validation and record exact Run IDs/commits here.
+1. Build a causal current-race ENV context adapter from accepted pre-race sources and prior-only v74 history replay; target-day results must never be read.
+2. Feed that context + accepted current exhibition into `build_4head_env_v91_primitives_live.py`, then into `build_4head_env_entry_live.py`.
+3. Wire all accepted components into one upstream orchestration command -> `assemble_4head_current_source.py` -> `run_4head_v291_varn_auto_live.py --source-json`.
+4. Run end-to-end dry/live validation and record exact Run IDs/commits here.
 
 ## Work session — 2026-09-13 JST
 Status: **IN PROGRESS**
@@ -215,3 +250,18 @@ Planned work unit:
 4. Add parity/fixture/source-allow-list verification and CI where the repository lineage supports implementation.
 5. If the primitive layer becomes production-green, wire the next safe upstream orchestration step; otherwise stop at the exact verified boundary.
 6. Before ending this session, append files changed, commits, CI/run outcomes, any rejection/blocker, and the exact restart point to this handoff.
+
+## Work session — 2026-09-14 JST — PROGRESS / HANDOFF UPDATE
+Status: **PRIMITIVE SEMANTICS COMPLETE; AUTO CONTEXT WIRING NEXT**
+
+Completed in this work unit:
+- recovered the exact v83 old-period-only wind classification source and verified it did not use Jul/Aug recent outcomes for cell classification;
+- restored the frozen HEAD4 wind +/-2 mapping inside `build_4head_env_v91_primitives_live.py`;
+- removed the need to manually inject `wind_adjust_points`;
+- added exact relative-wind boundary, wind-speed bin and frozen-cell parity checks;
+- CI Run `34767924924` completed **SUCCESS** on verifier commit `8e86a9e1bbcf03295cdab83db85b2a3ff0ee1164`.
+
+No frozen threshold/model/ticket rule changed. Jul/Aug remain NON-PRISTINE and were not used for reclassification/tuning.
+
+Exact restart point:
+- implement automatic causal ENV context acquisition (especially prior-only v74 history state + current tilt/entry/wind extraction), then wire the one-command upstream orchestrator and run end-to-end dry/live validation.
