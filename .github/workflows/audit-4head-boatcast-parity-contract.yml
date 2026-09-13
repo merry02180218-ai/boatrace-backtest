@@ -1,0 +1,60 @@
+name: audit-4head-boatcast-parity-contract
+
+on:
+  push:
+    paths:
+      - 'audit_4head_boatcast_parity_contract.py'
+      - '.github/workflows/audit-4head-boatcast-parity-contract.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn
+      - name: Syntax check
+        run: python -m py_compile audit_4head_boatcast_parity_contract.py
+      - name: Run result-free Apr-Jun contract audit
+        run: python audit_4head_boatcast_parity_contract.py
+      - name: Validate guards and parity
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('artifacts/head4_boatcast_parity_contract_20260630.json')
+          assert p.exists()
+          x=json.loads(p.read_text())
+          assert x['status']=='PASS', x
+          assert x['production_hookup'] is False
+          assert x['jul_aug_used'] is False
+          assert x['september_outcomes_used'] is False
+          assert x['v291_changed'] is False
+          h=x['historical']
+          assert h['result_or_payout_files_read'] is False
+          assert h['lane4_score_mismatch']==0
+          assert h['original_rows']>0 and h['st_rows']>0
+          print('HEAD4 BOATCAST parity contract PASS', h)
+          PY
+      - name: Upload audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: head4-boatcast-parity-contract
+          path: artifacts/head4_boatcast_parity_contract_20260630.json
+      - name: Commit audit result
+        run: |
+          if git diff --quiet -- artifacts/head4_boatcast_parity_contract_20260630.json; then
+            echo 'No audit artifact diff.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add artifacts/head4_boatcast_parity_contract_20260630.json
+          git commit -m 'Record HEAD4 BOATCAST parity contract result'
+          git push
