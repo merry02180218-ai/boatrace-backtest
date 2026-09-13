@@ -87,3 +87,4 @@ def main():
     OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n');print(json.dumps(out,ensure_ascii=False,indent=2))
     if out['decision']!='PARITY_READY':raise RuntimeError(out['decision'])
 if __name__=='__main__':main()
+# workflow trigger: exact v288 orderer parity
