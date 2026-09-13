@@ -1,4 +1,5 @@
 name: regress exhibition seed17 tracker11
+# v11 regression trigger: immutable slit-motion corridor
 
 on:
   workflow_dispatch:
