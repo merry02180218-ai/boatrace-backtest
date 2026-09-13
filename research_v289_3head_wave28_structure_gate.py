@@ -1,0 +1,143 @@
+from __future__ import annotations
+import json
+from pathlib import Path
+import numpy as np
+import pandas as pd
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LogisticRegression
+from sklearn.pipeline import make_pipeline
+
+SRC=Path('analysis_v289_3head_wave21_allrace_feature_settled.csv')
+OLD=Path('analysis_v289_3head_wave19_full_universe_payout_enriched.csv')
+OUT=Path('analysis_v289_3head_wave28_structure_gate.csv')
+OUTJ=Path('research_v289_3head_wave28_structure_gate.json')
+OUTM=Path('research_v289_3head_wave28_structure_gate.md')
+METRICS=['全国平均ST','全国勝率','全国2連対率','全国3連対率','当地勝率','当地2連対率','モーター2連対率','モーター3連対率','ボート2連対率']
+COMBOS=[f'3-{a}-{b}' for a in [1,2,4,5,6] for b in [1,2,4,5,6] if b!=a]
+CLASSES=['OTHER']+COMBOS
+BASE_T=.38
+BASE_K=5
+BASELINE={'races':94,'hits':52,'stake_yen':940000,'payout_yen':1622070,'profit_yen':682070,'roi_pct':172.560638}
+
+def num(s): return pd.to_numeric(s.astype(str).str.replace('%','',regex=False),errors='coerce')
+
+def build_static(df):
+    X=pd.DataFrame(index=df.index)
+    for met in METRICS:
+        vals={b:num(df[f'card__艇{b}_{met}']) for b in range(1,7) if f'card__艇{b}_{met}' in df}
+        if 3 not in vals: continue
+        X[f'b3_{met}']=vals[3]
+        oth=pd.concat([vals[b] for b in vals if b!=3],axis=1)
+        X[f'b3_minus_mean_{met}']=vals[3]-oth.mean(axis=1)
+        for b in [1,2,4,5,6]:
+            if b in vals: X[f'b3_minus_b{b}_{met}']=vals[3]-vals[b]
+    if X.shape[1]!=63: raise RuntimeError(f'expected 63 features got {X.shape[1]}')
+    return X.replace([np.inf,-np.inf],np.nan)
+
+def target(s):
+    s=str(s); return s if s in COMBOS else 'OTHER'
+
+def fit(X,y):
+    m=make_pipeline(SimpleImputer(strategy='median'),StandardScaler(),LogisticRegression(max_iter=350,C=.35,solver='lbfgs'))
+    m.fit(X,y); return m
+
+def probs(m,X):
+    p=m.predict_proba(X); out=np.zeros((len(X),len(CLASSES)))
+    for j,c in enumerate(m.classes_):
+        if c in CLASSES: out[:,CLASSES.index(c)]=p[:,j]
+    return out
+
+def dutch_return(r,tickets):
+    try: od=json.loads(r['closing_odds__json']); odds=np.array([float(od[c]) for c in tickets])
+    except: return 0
+    if len(odds)==0 or np.any(odds<=1): return 0
+    raw=100*(1/odds)/(1/odds).sum(); units=np.floor(raw).astype(int); rem=100-int(units.sum())
+    if rem>0:
+        frac=raw-units
+        for i in np.argsort(-frac)[:rem]: units[i]+=1
+    ac=str(r['settle__actual_combo'])
+    if ac not in tickets:return 0
+    return int(units[tickets.index(ac)]*int(float(r['settle__trifecta_payout_100_yen'] or 0)))
+
+def block(g):
+    n=len(g); payout=int(g['variant_return'].sum()) if n else 0; stake=n*10000; hits=int((g['variant_return']>0).sum()) if n else 0
+    return {'races':n,'hits':hits,'stake_yen':stake,'payout_yen':payout,'profit_yen':payout-stake,'roi_pct':100*payout/stake if stake else None}
+
+def maxdd(g):
+    if g.empty:return 0
+    pnl=(g['variant_return']-10000).cumsum(); return float((pnl.cummax()-pnl).max())
+
+def with_monthly(q):
+    m=block(q); mm={mo:block(g) for mo,g in q.groupby('month')}; m['monthly']=mm; m['red_months']=sum(1 for z in mm.values() if z['roi_pct']<100); m['min_month_roi_pct']=min((z['roi_pct'] for z in mm.values()),default=None); m['max_drawdown_yen']=maxdd(q.sort_values(['date','race_code'])); return m
+
+def apply_gate(df,g):
+    if g['kind']=='feature':
+        s=df[g['feature']]; return s>=g['cut'] if g['op']=='>=' else s<=g['cut']
+    if g['kind']=='race_band':
+        r=pd.to_numeric(df['race_no'],errors='coerce'); lo,hi=g['lo'],g['hi']; return (r>=lo)&(r<=hi)
+    raise RuntimeError('bad gate')
+
+def main():
+    df=pd.read_csv(SRC,dtype=str).fillna('')
+    if df['date'].max()>'2026-08-31': raise RuntimeError('September forbidden')
+    old=pd.read_csv(OLD,dtype=str).fillna(''); exclusion=set(old['race_code'].astype(str))
+    if len(exclusion)!=678: raise RuntimeError('bad exclusion')
+    df=df[~df['race_code'].astype(str).isin(exclusion)].copy()
+    df=df[(df['settle__usable']=='1')&(df['closing_odds__ok']=='1')].copy(); df['month']=df['date'].str[:7]
+    df['race_no']=pd.to_numeric(df['race'].astype(str).str.extract(r'(\d+)')[0],errors='coerce')
+    X=build_static(df); y=df['settle__actual_combo'].map(target)
+    P=np.full((len(df),len(CLASSES)),np.nan); pos={idx:i for i,idx in enumerate(df.index)}
+    for mo in ['2026-04','2026-05','2026-06']:
+        tr=df['month']<mo; te=df['month']==mo; pp=probs(fit(X.loc[tr],y.loc[tr]),X.loc[te])
+        for j,idx in enumerate(df.index[te]):P[pos[idx],:]=pp[j]
+    frozen=fit(X.loc[df['month']<='2026-06'],y.loc[df['month']<='2026-06'])
+    for mo in ['2026-07','2026-08']:
+        te=df['month']==mo; pp=probs(frozen,X.loc[te])
+        for j,idx in enumerate(df.index[te]):P[pos[idx],:]=pp[j]
+    df['p3']=np.nansum(P[:,1:],axis=1)
+    tickets=[]; rets=[]
+    for i,(_,r) in enumerate(df.iterrows()):
+        order=np.argsort(-P[i,1:])[:BASE_K]; ts=[COMBOS[j] for j in order]; tickets.append(';'.join(ts)); rets.append(dutch_return(r,ts) if np.isfinite(df.iloc[i]['p3']) and df.iloc[i]['p3']>=BASE_T else 0)
+    df['tickets']=tickets; df['variant_return']=rets
+    for c in X.columns: df[c]=X[c]
+    base=df[df['p3']>=BASE_T].copy()
+    april=base[base['month']=='2026-04'].copy()
+    hold=base[base['month'].isin(['2026-05','2026-06'])].copy()
+    shadow=base[base['month'].isin(['2026-07','2026-08'])].copy()
+    # Limited, interpretable gate family. Thresholds are feature-distribution quantiles; outcomes only rank candidates in April.
+    gate_features=['b3_minus_mean_全国平均ST','b3_minus_mean_全国勝率','b3_minus_mean_全国2連対率','b3_minus_mean_当地勝率','b3_minus_mean_当地2連対率','b3_minus_mean_モーター2連対率','b3_minus_mean_モーター3連対率','b3_minus_b1_全国平均ST','b3_minus_b2_全国平均ST','b3_minus_b1_全国勝率','b3_minus_b2_全国勝率']
+    gates=[]
+    for f in gate_features:
+        s=april[f].dropna()
+        for q in [.25,.50,.75]:
+            cut=float(s.quantile(q))
+            gates.append({'kind':'feature','feature':f,'op':'>=','cut':cut,'q':q})
+            gates.append({'kind':'feature','feature':f,'op':'<=','cut':cut,'q':q})
+    gates += [
+        {'kind':'race_band','lo':1,'hi':4,'name':'R1-4'},
+        {'kind':'race_band','lo':5,'hi':8,'name':'R5-8'},
+        {'kind':'race_band','lo':9,'hi':12,'name':'R9-12'},
+    ]
+    candidates=[]
+    for g in gates:
+        q=april[apply_gate(april,g)].copy(); m=with_monthly(q)
+        if m['races']>=35:
+            candidates.append((m['roi_pct'],m['races'],g,m))
+    if not candidates: raise RuntimeError('no gate candidate')
+    # Penalize tiny April regimes; require >=35R, then maximize ROI with race-count tie breaker.
+    candidates.sort(key=lambda z:(z[0],z[1]),reverse=True); _,_,chosen,tune=candidates[0]
+    h=hold[apply_gate(hold,chosen)].copy(); hm=with_monthly(h)
+    s=shadow[apply_gate(shadow,chosen)].copy(); sm=with_monthly(s)
+    selected=pd.concat([h.assign(period='holdout'),s.assign(period='shadow')],ignore_index=True); selected.to_csv(OUT,index=False,encoding='utf-8-sig')
+    cmb={'races':BASELINE['races']+hm['races'],'hits':BASELINE['hits']+hm['hits'],'stake_yen':BASELINE['stake_yen']+hm['stake_yen'],'payout_yen':BASELINE['payout_yen']+hm['payout_yen']}; cmb['profit_yen']=cmb['payout_yen']-cmb['stake_yen']; cmb['roi_pct']=100*cmb['payout_yen']/cmb['stake_yen']
+    decision='RESEARCH_CANDIDATE' if hm['races']>=50 and hm['roi_pct']>=110 and hm['red_months']<=1 else 'NO_ADOPTION'
+    out={'wave':'28-leakfree-structure-gate','base_wave27':{'p3_threshold':BASE_T,'top_k':BASE_K},'feature_count':63,'chosen_gate':chosen,'april_tune':tune,'strict_holdout_may_june':hm,'shadow_non_pristine_jul_aug':sm,'legacy_overlap':0,'combined_baseline_plus_holdout':cmb,'decision':decision,'candidate_count':len(candidates),'notes':['All 節D fields excluded.','Wave27 p3>=0.38/top5 frozen before gate research.','Gate family limited to interpretable strength/ST/motor/race-band conditions.','Gate chosen only from April outcomes; May-Jun untouched holdout; Jul-Aug NON-PRISTINE shadow only.']}
+    OUTJ.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    lines=['# Wave28 leak-free structure gate','',f'- candidates: **{len(candidates)}**',f'- chosen gate: **{chosen}**',f"- April tune: **{tune['races']}R / ROI {tune['roi_pct']:.3f}% / profit {tune['profit_yen']:+,} yen**",f"- May-Jun strict holdout: **{hm['races']}R / {hm['hits']} hits / ROI {hm['roi_pct']:.3f}% / profit {hm['profit_yen']:+,} yen**",f"- Jul-Aug NON-PRISTINE shadow: **{sm['races']}R / {sm['hits']} hits / ROI {sm['roi_pct']:.3f}% / profit {sm['profit_yen']:+,} yen**",f"- baseline + holdout: **{cmb['races']}R / ROI {cmb['roi_pct']:.3f}% / profit {cmb['profit_yen']:+,} yen**",'- legacy overlap: **0**',f'- decision: **{decision}**','','## Holdout monthly']
+    for mo,z in hm['monthly'].items(): lines.append(f"- {mo}: {z['races']}R / {z['hits']} hits / ROI {z['roi_pct']:.3f}% / profit {z['profit_yen']:+,} yen")
+    lines+=['','## Shadow monthly']
+    for mo,z in sm['monthly'].items(): lines.append(f"- {mo}: {z['races']}R / {z['hits']} hits / ROI {z['roi_pct']:.3f}% / profit {z['profit_yen']:+,} yen")
+    OUTM.write_text('\n'.join(lines)+'\n',encoding='utf-8'); print('\n'.join(lines),flush=True)
+
+if __name__=='__main__': main()
