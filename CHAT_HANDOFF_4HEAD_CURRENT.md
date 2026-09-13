@@ -265,3 +265,83 @@ No frozen threshold/model/ticket rule changed. Jul/Aug remain NON-PRISTINE and w
 
 Exact restart point:
 - implement automatic causal ENV context acquisition (especially prior-only v74 history state + current tilt/entry/wind extraction), then wire the one-command upstream orchestrator and run end-to-end dry/live validation.
+
+## Work session — 2026-09-14 JST — AUTO CONTEXT + FULL ORCHESTRATION COMPLETE
+Status: **PRODUCTION WIRING CI-GREEN; LIVE MARKET VALIDATION AWAITS AN ACTIVE PRE-RACE TARGET**
+
+Completed after the prior progress record:
+
+### 1. Automatic current ENV context — COMPLETE
+Added `build_4head_env_context_live.py`.
+- commit: `8589c52110c87f5874412619a4d4f929f607a2e6`
+- exact pinned BOATCAST parser lineage: BoatraceCSV commit `563c69ccd28853b8b4953489c673877a9dfeb4e8`.
+- `bc_j_stt`: `[0]=entry course`, `[1]=boat number`; current boat4 exhibition course is obtained directly.
+- `bc_sui`: current pre-race weather only; `[3]=wind direction`, `[4]=wind speed`.
+- LIVE weather explicitly does not use post-race `bc_rs1_2`.
+- current tilt comes from `bc_j_tkz`.
+- prior-only v74 history context is replayed in exact historical update order strictly while `day < target_date`.
+- target-day results are never loaded by the v74 history replay.
+- missing/malformed current source fails closed.
+
+Verifier `verify_4head_env_context_live.py`:
+- initial commit `f0955f675c13ee95a7c2b3c1891a83883486e55b`.
+- initial CI Run `34768312668`: **FAILED only because the verifier matched the literal string `bc_rs1_2` inside an explanatory comment**; syntax and implementation checks passed up to that assertion.
+- verifier-only correction commit `bde38f2da9b58c152b5386aaada0faad0dc48e78`; no production/model rule changed.
+
+### 2. Automatic 25-field ENV_ENTRY — COMPLETE
+Added `build_4head_env_entry_auto_live.py`.
+- commit `fdcc89cbfaa3f74ea082b9bfc24013320c8a0515`.
+- inputs are target date/JCD/R, current race-card CSV, frozen PRE and POST.
+- automatically executes accepted current exhibition -> ENV context -> exact 21 v74/v83/v91 primitives -> frozen 25-field ENV_ENTRY inference.
+- no manual context/primitive JSON is required.
+
+Verifier:
+- `verify_4head_env_entry_auto_live.py`, commit `72a76aa358632af67e0759cec71fcd4c781f689b`.
+
+CI extension commit:
+- `8a37b615b7cef71ca9a3caaabd0a680985ab4c88`.
+- CI Run `34768398670`: **SUCCESS**.
+
+Decision: **ACCEPT automatic ENV context + automatic ENV_ENTRY as CI-green.**
+
+### 3. Full one-command upstream LIVE orchestrator — COMPLETE
+Added `run_4head_full_auto_live.py`.
+- implementation commit `3bc28f573b44aaf7cdbf6f3f6f687b1d8acd87ae`.
+- verifier `verify_4head_full_auto_live.py`, commit `9488bb013b45d9221629c79229603cc31f7697f0`.
+- CI workflow extension commit `5442c69ef3f3e17ceedabe359bf379fea70ed9a0`.
+- CI Run `34768557091`: **SUCCESS**; syntax + ENV context + automatic ENV_ENTRY + full one-command LIVE wiring all passed.
+
+Required prepared same-day inputs are only the already-accepted PRE outputs:
+- `current_input/v291/YYYYMMDD/race_cards.csv`
+- `current_input/v291/YYYYMMDD/waku10.csv`
+- `live_outputs/v291/YYYYMMDD/pre_scan.csv`
+
+For a selected race the new orchestrator now automatically performs:
+1. read frozen PRE probability and PRE causal feature row;
+2. fetch current POST exhibition sources and calculate frozen POST probability;
+3. build accepted six-boat exhibition + v90 ST-flat;
+4. build exact current ENV context and frozen v83 wind mapping;
+5. build exact 21 ENV primitives and frozen ENV_ENTRY;
+6. build v93 opponent primitives;
+7. build causal v221-style player-history primitives;
+8. assemble strict `--source-json` with existing leakage/completeness guards;
+9. invoke `run_4head_v291_varn_auto_live.py --source-json`;
+10. in non-prepare-only mode, the already-accepted final runner owns official pre-deadline 120-way odds, VARN N=4..16, exact JPY10,000 inverse-odds Dutch/Hamilton rounding and audit.
+
+No HEAD4 threshold, model coefficient, ticket rule, wind rule, A/S rule, or ROI rule was changed in this wiring work.
+
+### Current exact status
+The previous two source-acquisition/orchestration gaps are now closed in code and CI:
+- automatic ENV context: **DONE**;
+- automatic ENV_ENTRY: **DONE**;
+- one-command upstream source orchestration: **DONE**;
+- handoff/manual JSON preparation between these layers: **removed**.
+
+The only remaining validation item is an actual active-race market run using same-day PRE artifacts plus published exhibition data and a real future deadline, so the final runner can fetch the official pre-deadline 120-way odds and persist the real audit. Do not simulate or substitute post-deadline odds for that validation.
+
+### Exact next restart point
+1. After the same-day PRE workflow has produced `race_cards.csv`, `waku10.csv`, and `pre_scan.csv`, choose an eligible/current target race whose exhibition is published and deadline is still in the future.
+2. First run `run_4head_full_auto_live.py ... --prepare-only` and confirm strict source/A-LIVE/v283 preparation succeeds.
+3. Then, while still before the real deadline, run the same command without `--prepare-only` and with the exact `--deadline-jst`.
+4. Confirm official 120-way odds completeness, VARN variable ticket selection, exact JPY10,000 Dutch allocation, and audit persistence before any result retrieval.
+5. Record the actual live Run/command/audit outcome here. If no valid current target exists, fail closed and wait for the next pre-race window; never backfill with post-deadline market data.
