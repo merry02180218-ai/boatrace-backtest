@@ -1,0 +1,27 @@
+name: v337 canonical anchor identity diagnostic
+on:
+  push:
+    paths:
+      - 'run_v337_anchor_identity_diagnostic.py'
+      - '.github/workflows/v337-anchor-identity-diagnostic.yml'
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Run canonical v332 anchor identity diagnostic
+        run: python run_v337_anchor_identity_diagnostic.py
+      - name: Upload diagnostic
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v337-anchor-identity-diagnostic
+          path: /tmp/v337_anchor_diag/
+          if-no-files-found: warn
