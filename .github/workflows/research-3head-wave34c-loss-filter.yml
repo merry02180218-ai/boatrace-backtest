@@ -1,13 +1,13 @@
-name: research-3head-wave36-lda-stable-gate
+name: research-3head-wave36l-leak-audit
 on:
   push:
     branches: [research/3head-v289-addon-expansion]
     paths:
-      - 'research_v289_3head_wave36_lda_stable_gate.py'
+      - 'research_v289_3head_wave36l_leak_audit.py'
       - '.github/workflows/research-3head-wave34c-loss-filter.yml'
   workflow_dispatch:
 jobs:
-  wave36:
+  wave36l:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -21,11 +21,8 @@ jobs:
         run: |
           gh run download 34754875342 --repo merry02180218-ai/boatrace-backtest --name 3head-wave21-allrace-source-build --dir source
           cp source/analysis_v289_3head_wave21_allrace_feature_settled.csv .
-      - run: python research_v289_3head_wave36_lda_stable_gate.py
+      - run: python research_v289_3head_wave36l_leak_audit.py
       - uses: actions/upload-artifact@v4
         with:
-          name: 3head-wave36-lda-stable-gate
-          path: |
-            analysis_v289_3head_wave36_lda_stable_gate.csv
-            research_v289_3head_wave36_lda_stable_gate.json
-            research_v289_3head_wave36_lda_stable_gate.md
+          name: 3head-wave36l-leak-audit
+          path: research_v289_3head_wave36l_leak_audit.json
