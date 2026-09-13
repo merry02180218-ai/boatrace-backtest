@@ -1,0 +1,42 @@
+{
+  "research_version": "wave18-full-universe",
+  "github_run_id": "34748886697",
+  "source_max_date": "2026-08-31",
+  "rules": {
+    "candidate_universe": "ALL audited Feb-Aug races excluding unchanged legacy v288 baseline; no bet/PRE/route prefilter",
+    "legacy_94r_policy": "FLOOR",
+    "july_august": "NON-PRISTINE",
+    "september_outcomes_used": false,
+    "required_current_missing": "FAIL_CLOSED",
+    "predeadline_only": true,
+    "stake_per_race_yen": 10000
+  },
+  "baseline": {
+    "races": 94,
+    "hits": 52,
+    "hit_rate_pct": 55.319148936170215,
+    "stake_yen": 940000,
+    "payout_yen": 1622070.0,
+    "profit_yen": 682070.0,
+    "roi_pct": 172.56063829787234
+  },
+  "census": {
+    "all_rows_source": 678,
+    "all_unique_races_source": 678,
+    "legacy_baseline_races": 94,
+    "full_universe_excluding_baseline": 584,
+    "bet1_rows": 428,
+    "bet0_rows": 156,
+    "nonbet_rows_with_positive_hypothetical_settlement": 0,
+    "settlement_columns": {
+      "ret": true,
+      "trifecta_hit": true
+    },
+    "settlement_usable_for_full_universe_roi": false
+  },
+  "methods": [],
+  "passers": [],
+  "decision": "SOURCE_REBUILD_REQUIRED_WAVE18",
+  "reason": "Frozen v243 audit does not provide usable hypothetical settlement on non-bet rows; build an all-race 3-head settled source before model fitting.",
+  "audit": {}
+}
