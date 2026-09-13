@@ -54,22 +54,23 @@ This is not being treated as merely a GitHub runner problem.
 
 1. The original prepare implementation copied the fully expanded, highly fragmented v294->v307 dataframe for each Jul/Aug head fold, amplifying memory before v308 OOF/HGB+LR training.
 2. v321 also called `v303.opponent_mass(d)` during prepare. That helper is hard-wired to `TM=list(v298.TEST_MONTHS)`, i.e. the legacy Feb-Jun development months. It therefore cannot produce Jul/Aug opponent masses, while also rebuilding large SECOND/THIRD tables and models unnecessarily. This was semantically wrong and resource-heavy.
+3. After splitting prepare/SECOND/THIRD jobs, run `34749658497` proved prepare and SECOND can complete, but both BASE THIRD and frozen v318 THIRD still died with hosted-runner shutdown while constructing the full conditional table. The legacy builder emits 20 ordered pairs for every historical race even though `pc_predict` trains only rows with `train_group==1`. This created roughly 900k rows unnecessarily for Jul/Aug.
 
-Fix commit **`ffd6a1caf089546ae13c51059589b8f810bf6bef`**:
-- remove `v303.opponent_mass(d)` from prepare;
-- keep prepare limited to Aug-31 causal PRE, narrow head inputs, and symmetric opponent inputs;
-- reconstruct frozen v308 BASE opponent mass in evaluate for each Jul/Aug month with month M `< M` using SECOND L2=10 no-aug + THIRD L2=.3 no-aug + `v300.base5(...)[1]`;
-- reuse the same causal long tables for frozen v317 SECOND and v318 THIRD;
-- apply the frozen v308 selector and v320 HYBRID alpha=.70 only after correct Jul/Aug opponent mass exists.
+Fix commit **`46d3a398679bacf57cc5325d4e817041d452e712`**:
+- preserve exact chronological THIRD semantics while building folds compactly;
+- for historical month `< M`, emit only the four THIRD candidates conditional on the actual SECOND for valid `1-x-y` races, exactly the rows consumed by `train_group==1`;
+- for target month `M`, still emit all 20 ordered pairs for inference;
+- build Jul and Aug folds separately and release each fold before the next;
+- no threshold/model/ticket-policy tuning and no change to frozen v318 DROP_START configuration.
 
-Current restarted v321 workflow run: **`34748818695`**, head SHA `ffd6a1caf089546ae13c51059589b8f810bf6bef`. At verification it was **queued** awaiting a hosted runner, with no job assigned yet.
+Restarted v321 run: **`34750719803`**, head SHA `46d3a398679bacf57cc5325d4e817041d452e712`; at verification it was **queued**.
 
 ### Current staged design
-1. **prepare**: build Jul/Aug causal PRE/head universe, enforce September absence, remove `meet_*`, project to exact head inputs + symmetric opponent columns, and upload:
-   - `cache_v321_julaug_nonpristine_slim.csv.gz`
-   - `cache_v321_julaug_nonpristine_head.csv`
-   - `cache_v321_julaug_nonpristine_meta.csv`
-2. **evaluate**: download artifacts, reconstruct frozen v308 BASE opponent-mass gate for Jul/Aug, apply frozen v317 SECOND + v318 THIRD + v320 HYBRID alpha=.70, and write final race/monthly/summary outputs.
+1. **prepare**: build Jul/Aug causal PRE/head universe, enforce September absence, remove `meet_*`, project to exact head inputs + symmetric opponent columns.
+2. **second**: frozen BASE SECOND + v317 SECOND predictions.
+3. **base-third**: compact chronological BASE THIRD folds for v308 opponent mass.
+4. **third**: compact chronological frozen v318 DROP_START THIRD folds.
+5. **score**: reconstruct frozen v308 gate and apply v320 HYBRID alpha=.70 exactly 3 tickets.
 
 Invariant notes:
 - v321 artifacts are NON-PRISTINE infrastructure only; not development cache replacements.
