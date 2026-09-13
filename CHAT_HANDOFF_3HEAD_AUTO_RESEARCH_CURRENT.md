@@ -19,16 +19,23 @@
 - Wave34b ROI 85.449%.
 - Wave34c Run 34769751846: Apr-Jun 381R / 54 hits / ROI 86.794% / profit -503,130 yen; Apr 95.734 / May 74.626 / Jun 89.808. Current best Wave34-family pristine ROI.
 - Wave34d corrected Run 34770655705: Apr-Jun ROI 71.717%. NO_ADOPTION.
-- Wave34e Run 34771060051: success; artifact 10321329425. March 45R / ROI 179.522%, selected raw_mean rather than normalized margin. Apr-Jun 365R / 50 hits / ROI 81.640% / profit -670,130 yen. Apr 96.993 / May 67.128 / Jun 80.527. Jul-Aug shadow 76.300%. combined v288 ROI 100.260% / +11,940. NO_ADOPTION.
+- Wave34e Run 34771060051: Apr-Jun 365R / 50 hits / ROI 81.640% / profit -670,130 yen. NO_ADOPTION.
 
-## NEXT: Wave34f diagnosis
-- User approved diagnosis-first continuation.
-- Diagnose why Wave34 selections deteriorate in May compared with April and June before another predictive gate is designed.
-- Use only pre-deadline 63 static features for explanatory distribution comparisons. Settlement/outcome can label retrospective hit/miss groups only.
-- Compare Apr/May/Jun selected races for feature drift, prototype score/agreement/stability, and hit/miss clustering.
-- Diagnosis can create hypotheses but May outcomes must NOT tune the next production threshold. Any Wave34f predictive gate must still be chosen using Feb/March only and evaluated untouched on Apr-Jun.
+## Wave34f diagnosis — FINAL
+- Run 34772303065 success; artifact 10322665846.
+- Fixed Wave34b/c gate diagnostic: mean>=0.233221, agreement>=0.55, top3.
+- Monthly reproduction: Apr 107R / 15 hits / ROI 94.839%; May 118R / 17 hits / ROI 73.993%; Jun 162R / 22 hits / ROI 87.591%.
+- Prototype-level distributions are NOT the main cause: Apr/May/Jun prototype mean 0.2534/0.2519/0.2554, agreement all 1.000, hit rates 0.140/0.144/0.136. May does not collapse in hit rate; payout/selection quality is weaker.
+- Largest May-vs-Apr+Jun pre-deadline shifts include: b3_全国平均ST lower/faster (0.140 vs 0.150), b3_全国勝率 higher (7.00 vs 6.75), stronger b3-vs-b2/b4 national win-rate/2-ren advantages, but weaker b3-vs-b5 local 2-ren advantage.
+- Largest May hit-vs-miss diagnostic separators concentrate on relative motor strength and some local-strength gaps: b3_minus_b1_モーター2連対率, b3_minus_mean_モーター2連対率, b3_minus_b1_モーター3連対率, b3_minus_b2_モーター2連対率, plus b3-vs-b2/b5 local/national strength. These are diagnostic-only and MUST NOT be thresholded from May.
+
+## NEXT: Wave34g pre-April hypothesis
+- Hypothesis: Wave34 prototype head signal needs an independent pre-deadline relative-motor-strength confirmation to avoid low-quality 3-head selections. This is motivated by diagnosis, but thresholds must be selected using Feb/March only.
+- Build a very small confirmation family from existing 63 features only: relative motor 2-ren and 3-ren strength versus inner boats / field mean, optionally combined with the existing prototype mean gate.
+- Feb trains prototype. March alone selects confirmation thresholds and ticket count from a small predeclared grid with race-count floor. Apr-Jun remains untouched pristine. Jul/Aug shadow only.
+- Do NOT use May labels to set thresholds or choose feature cut values.
 
 ## Exact restart point
-1. Build and run May-failure diagnostic.
-2. Record largest pre-deadline distribution shifts and hit/miss clusters.
-3. Design next gate from a hypothesis that can be selected using Feb/March only, then run untouched Apr-Jun evaluation.
+1. Implement Wave34g relative-motor confirmation using only existing static features and March-only selection.
+2. Run Apr-Jun untouched and compare directly to Wave34c 86.794% / May 74.626%.
+3. Record final metrics and continue only if materially improved.
