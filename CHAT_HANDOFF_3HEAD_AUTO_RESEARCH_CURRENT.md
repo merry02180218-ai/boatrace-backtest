@@ -35,19 +35,25 @@ All prior Wave1-13 proposals were rejected. The stable earlier results remain in
 - combined legacy v288 + add-on: **117R / ROI 149.45%**.
 - decision: **NO_ADOPTION_WAVE15** because add-on ROI remained far below break-even despite successfully recovering formerly excluded races.
 
+## Wave16 — hierarchical source-group x attack-style — RUNNING
+- purpose: distinguish profitable vs unprofitable cases inside the expanded pool instead of applying one global ranking.
+- candidate population stays expanded: `OLD_NO_BET` + `OLD_PRE_EXCLUDED`, while legacy v288 94R is retained untouched as the floor.
+- hierarchy: source group (`OLD_NO_BET` vs `OLD_PRE_EXCLUDED`) x attack style (`MAKURI` vs `MAKURISASHI`), with source-group fallback for sparse cells.
+- variants: hit-oriented, exhibition-oriented, return/value-oriented, and independent consensus.
+- walk-forward: prior-month-only Feb-Aug; Jul/Aug NON-PRISTINE; September outcomes forbidden.
+- current required features fail closed; legacy-v288 overlap must be zero.
+- script commit **`8f087c21ffb31a39c4e4acdcc8baba448aaa4492`**: `research_v289_3head_wave16_hierarchical_source_style.py`.
+- workflow commit **`abdf3557daced58969f25b42fc0f23d32ee213fe`**: `.github/workflows/research-3head-wave16-hierarchical-source-style.yml`.
+- Actions Run **`34747021942`** started from workflow push and was queued at the latest check.
+- intended artifact: **`3head-wave16-hierarchical-source-style`**.
+
 ## Research conclusion from Wave15
 - the new candidate source is valid operationally: previously excluded races can be recovered without touching the legacy 94R.
-- the next useful question is not whether PRE-excluded races exist, but how to distinguish profitable vs unprofitable PRE-excluded/NO_BET cases under prior-month-only training.
-- because the population changed, source-group-specific and attack-style-specific re-evaluation of earlier signal families is allowed.
-
-## Current blocker / restart state
-- Wave15 finished and the previous handoff had not been updated; this file now repairs that gap.
-- attempted next implementation: a source-group x attack-style hierarchical Wave16 over the expanded pool, with prior-month-only training and fail-closed current features.
-- repository write for the new Wave16 script was blocked by the connected GitHub write safety layer before a commit could be created. No scientific guard was weakened and no Wave16 Run exists yet.
+- Wave16 now tests whether source-group and attack-style conditioning can separate useful recovered races from the unprofitable majority.
 
 ## Exact restart point
-1. First inspect whether a Wave16 implementation or newer 3-head commit has appeared since this handoff.
-2. If not, resume with a genuinely population-conditional expanded-source method rather than a global threshold relaxation. Preferred next family: source-group (`OLD_NO_BET` vs `OLD_PRE_EXCLUDED`) x attack-style (makuri-like vs makuri-sashi-like) hierarchical models, with source-group fallback only for sparse cells.
-3. Compare hit-oriented, exhibition-upgrade, return/value, and independent-consensus variants using prior-month-only walk-forward Feb-Aug.
-4. Preserve: legacy 94R as floor, Jul/Aug NON-PRISTINE, September outcomes unused, pre-deadline inputs only, missing-current fail closed, no legacy-v288 overlap.
-5. For every completed experiment record add-on races, hits/hit rate, ROI, profit, monthly metrics, minimum monthly ROI, red months, max DD, legacy-v288 overlap, combined race count and combined ROI, Run ID, artifact name/ID, result commit SHA, decision, rejection/adoption reason, and the next restart point here.
+1. Inspect Actions Run `34747021942` first.
+2. If success: read `research_v289_3head_wave16_hierarchical_source_style.md/json`, record add-on R, hits/hit rate, ROI, profit, monthly, minimum monthly ROI, red months, max DD, source-group/style splits, v288 overlap, combined R/ROI, artifact ID and result commit SHA here.
+3. If failed/cancelled: inspect job/logs, fix only the technical/scientific defect without weakening the guards, rerun automatically, and record the replacement Run ID.
+4. If Wave16 is NO_ADOPTION, do not globally loosen thresholds. Continue with another population-conditional family, prioritizing explicit profitable-vs-unprofitable PRE-excluded discrimination or ticket-value structure within the expanded source.
+5. Preserve legacy 94R as floor, Jul/Aug NON-PRISTINE, September outcomes unused, pre-deadline inputs only, current-required missing => fail closed, and no overlap with legacy v288.
