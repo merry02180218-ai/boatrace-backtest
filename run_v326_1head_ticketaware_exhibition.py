@@ -13,7 +13,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
 from backtest import rows
-from backtest_v51_lane_corrected_tickets import corrected_direct, ff
+from backtest_v51_lane_corrected_tickets import corrected_direct, ff, norm_metric
 
 V320=Path('analysis_v320_1head_exact3_ticket_policy_best_race.csv')
 OUT=Path('/tmp/v326'); OUT.mkdir(parents=True,exist_ok=True)
@@ -48,6 +48,25 @@ def update_st(strows,sums,allv):
             if v is not None and -.30<v<1.0:
                 sums[b].append(v);allv.append(v)
 
+def all6_numeric(row,prefix):
+    return bool(row) and all(ff(row.get(f'艇{b}_{prefix}')) is not None for b in range(1,7))
+
+def orig_metric_all6(row,target):
+    if not row:return False
+    for k in range(1,5):
+        if norm_metric(row.get(f'計測項目{k}',''))!=target:continue
+        if all(ff(row.get(f'艇{b}_値{k}')) is not None for b in range(1,7)):
+            return True
+    return False
+
+def raw_completeness(tkz_row,stt_row,orig_row):
+    tkz_all6=all6_numeric(tkz_row,'展示タイム')
+    stt_all6=all6_numeric(stt_row,'スタート展示')
+    orig_turn_all6=orig_metric_all6(orig_row,'回り足') or orig_metric_all6(orig_row,'まわり足')
+    orig_straight_all6=orig_metric_all6(orig_row,'直線')
+    orig_required_all6=orig_turn_all6 and orig_straight_all6
+    return tkz_all6,stt_all6,orig_turn_all6,orig_straight_all6,orig_required_all6
+
 def parse_tickets(s):
     ts=[]
     for t in str(s).split(';'):
@@ -71,8 +90,6 @@ def feature_row(base,ex,st,os):
     covered=sorted((set(seconds)|set(thirds))-{1})
     uncovered=sorted(set(range(2,7))-set(covered))
     if not covered: raise AssertionError('empty covered opponents')
-    # If all 2..6 are covered, use the non-role opponents for each role margin when possible;
-    # otherwise margins are intentionally missing rather than fabricated.
     sec_un=sorted(set(range(2,7))-set(seconds)); third_un=sorted(set(range(2,7))-set(thirds))
     turn={b:os[b]['turn'] for b in range(1,7)}; straight={b:os[b]['straight'] for b in range(1,7)}
     orig={b:os[b]['avg'] for b in range(1,7)}
@@ -101,25 +118,35 @@ def build_dataset():
     if len(x)!=345 or int(x.hit.sum())!=139 or int(x.head_hit.sum())!=290:
         raise AssertionError('v320 identity mismatch')
     wanted={c for c in x.race_code}; selected_days=sorted({date(int(c[:4]),int(c[4:6]),int(c[6:8])) for c in wanted})
-    last=max(selected_days); sums=defaultdict(list);allv=[]; features={}
+    selected_day_set=set(selected_days); last=max(selected_days); sums=defaultdict(list);allv=[]; features={}
     d=PRELOAD
     while d<=last:
         ymd=d.strftime('%Y/%m/%d'); strows=rows(f'data/previews/stt/{ymd}.csv')
         bias=st_bias(sums,allv)
-        if d in set(selected_days):
+        if d in selected_day_set:
             tkz=bycode(rows(f'data/previews/tkz/{ymd}.csv')); stt=bycode(strows); orig=bycode(rows(f'data/previews/original_exhibition/{ymd}.csv'))
             day_codes=[c for c in wanted if c.startswith(d.strftime('%Y%m%d'))]
             for code in day_codes:
+                tr=tkz.get(code,{});sr=stt.get(code,{});orr=orig.get(code,{})
                 has_tkz=int(code in tkz);has_stt=int(code in stt);has_orig=int(code in orig)
-                if not (has_tkz and has_stt and has_orig):
-                    features[code]={'source_complete':0,'has_tkz':has_tkz,'has_stt':has_stt,'has_orig':has_orig};continue
+                tkz_all6,stt_all6,orig_turn_all6,orig_straight_all6,orig_required_all6=raw_completeness(tr,sr,orr)
+                source_complete=int(has_tkz and has_stt and has_orig and tkz_all6 and stt_all6 and orig_required_all6)
+                audit={'source_complete':source_complete,'has_tkz':has_tkz,'has_stt':has_stt,'has_orig':has_orig,
+                       'tkz_all6':int(tkz_all6),'stt_all6':int(stt_all6),'orig_turn_all6':int(orig_turn_all6),
+                       'orig_straight_all6':int(orig_straight_all6),'orig_required_all6':int(orig_required_all6)}
+                if not source_complete:
+                    features[code]=audit;continue
                 ex,st,os=corrected_direct(code,tkz,stt,orig,bias)
+                if not all(b in ex and b in st and b in os for b in range(1,7)):
+                    audit['source_complete']=0;features[code]=audit;continue
                 b=x.loc[x.race_code.eq(code)].iloc[0]
-                z=feature_row(b,ex,st,os);z.update({'source_complete':1,'has_tkz':1,'has_stt':1,'has_orig':1});features[code]=z
+                z=feature_row(b,ex,st,os);z.update(audit);features[code]=z
         update_st(strows,sums,allv); d+=timedelta(days=1)
     rowsout=[]
+    blank={'source_complete':0,'has_tkz':0,'has_stt':0,'has_orig':0,'tkz_all6':0,'stt_all6':0,
+           'orig_turn_all6':0,'orig_straight_all6':0,'orig_required_all6':0}
     for _,r in x.iterrows():
-        z=r.to_dict();z.update(features.get(r.race_code,{'source_complete':0,'has_tkz':0,'has_stt':0,'has_orig':0}));rowsout.append(z)
+        z=r.to_dict();z.update(features.get(r.race_code,blank));rowsout.append(z)
     y=pd.DataFrame(rowsout)
     for c in MODEL_FEATURES:
         if c not in y:y[c]=np.nan
@@ -173,6 +200,9 @@ def apply(df,best,model=None):
 
 def main():
     y=build_dataset();print('RECONCILE',metrics(y));print('SOURCE_COMPLETE',int(y.source_complete.sum()),'MODEL_READY',int(y.model_ready.sum()))
+    print('RAW_COMPLETENESS','tkz_all6',int(y.tkz_all6.sum()),'stt_all6',int(y.stt_all6.sum()),
+          'orig_turn_all6',int(y.orig_turn_all6.sum()),'orig_straight_all6',int(y.orig_straight_all6.sum()),
+          'orig_required_all6',int(y.orig_required_all6.sum()))
     for m,g in y.groupby('month'):print('BASE_MONTH',m,metrics(g),'source',int(g.source_complete.sum()),'model_ready',int(g.model_ready.sum()))
     disc=y[y.month.isin(['2026-02','2026-03','2026-04'])];val=y[y.month.eq('2026-05')];fwd=y[y.month.eq('2026-06')]
     c1,b1=rule_search(disc,val);cl,bl,model=logit_search(disc,val)
@@ -199,7 +229,8 @@ def main():
     with open(OUT/'summary_v326_1head_ticketaware_exhibition.md','w',encoding='utf-8') as f:
         f.write('# v326 ticket-aware exhibition postfilter\n\n')
         f.write(f"- frozen baseline: {len(y)}R / {int(y.hit.sum())} exact3 / {int(y.head_hit.sum())} head hits\n")
-        f.write(f"- actual all-source complete: {int(y.source_complete.sum())}; full model-ready: {int(y.model_ready.sum())}\n")
+        f.write(f"- strict per-boat source complete: {int(y.source_complete.sum())}; full model-ready: {int(y.model_ready.sum())}\n")
+        f.write(f"- raw all6: tkz={int(y.tkz_all6.sum())}; stt={int(y.stt_all6.sum())}; original turn={int(y.orig_turn_all6.sum())}; original straight={int(y.orig_straight_all6.sum())}; original required={int(y.orig_required_all6.sum())}\n")
         for k,v in summary.items():f.write(f'- {k}: {v}\n')
         f.write('\nNo Jul/Aug or September outcome is read by this script. Jul/Aug reference is allowed only if forward_supported=True.\n')
 
