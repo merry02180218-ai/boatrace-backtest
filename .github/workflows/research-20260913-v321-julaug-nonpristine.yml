@@ -11,7 +11,30 @@ permissions:
   contents: write
 
 jobs:
-  validate:
+  prepare:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Require development inputs
+        run: |
+          test -f analysis_v308_1head_volume_opponent_joint_pred.csv
+          test -f CACHE_V313_1HEAD_OPPONENT_CAUSAL.md
+      - name: Prepare Jul-Aug causal NON-PRISTINE cache
+        run: python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v321-julaug-prepare
+          path: |
+            cache_v321_julaug_nonpristine_slim.csv.gz
+            cache_v321_julaug_nonpristine_head.csv
+            cache_v321_julaug_nonpristine_meta.csv
+
+  evaluate:
+    needs: prepare
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -21,15 +44,19 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
-      - name: Require causal cache and v308 development predictions
+      - uses: actions/download-artifact@v4
+        with:
+          name: v321-julaug-prepare
+          path: .
+      - name: Require causal opponent caches
         run: |
-          test -f CACHE_V313_1HEAD_OPPONENT_CAUSAL.md
-          test -f cache_v313_1head_opponent_pre.csv.gz
           test -f cache_v313_1head_opponent_p3.csv.gz
           test -f cache_v313_1head_opponent_p4.csv.gz
-          test -f analysis_v308_1head_volume_opponent_joint_pred.csv
-      - name: Run v321 Jul-Aug NON-PRISTINE validation
-        run: python run_v321_1head_julaug_nonpristine_validation.py
+          test -f cache_v321_julaug_nonpristine_slim.csv.gz
+          test -f cache_v321_julaug_nonpristine_head.csv
+          test -f cache_v321_julaug_nonpristine_meta.csv
+      - name: Evaluate frozen SECOND THIRD and ticket policy
+        run: python run_v321_1head_julaug_nonpristine_validation.py --stage evaluate
       - uses: actions/upload-artifact@v4
         with:
           name: v321-julaug-nonpristine
