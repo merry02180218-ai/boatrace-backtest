@@ -1,0 +1,27 @@
+name: validate-4head-current-source
+
+on:
+  push:
+    paths:
+      - 'assemble_4head_current_source.py'
+      - 'verify_4head_current_source.py'
+      - 'build_4head_player_history_live.py'
+      - 'build_4head_current_bundle.py'
+      - 'build_4head_env_entry_live.py'
+      - '.github/workflows/validate-4head-current-source.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install numpy pandas scikit-learn
+      - name: Syntax
+        run: python -m py_compile assemble_4head_current_source.py verify_4head_current_source.py build_4head_player_history_live.py
+      - name: Verify strict current source contract
+        run: python verify_4head_current_source.py
