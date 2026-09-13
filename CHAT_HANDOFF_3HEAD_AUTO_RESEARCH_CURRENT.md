@@ -49,23 +49,26 @@
 - Jul-Aug NON-PRISTINE shadow: **4,102R / 773 hits / ROI 73.452% / -10,890,140 yen**.
 - Decision: **NO_ADOPTION**.
 
-## Wave26 — FINAL conditional exact-order softmax
-- Run `34759822824`, workflow `research-3head-wave26-exactorder`: **success**.
-- Head SHA `2761d402e1619abea4c4475a46e972908fd17981`.
-- Artifact `3head-wave26-exactorder-softmax`, ID **`10318069914`**.
-- Source rows **30,746R**; pre-deadline features **77**; 21 classes (`OTHER` + twenty 3-head exact orders); legacy overlap **0**.
-- Frozen choice selected on pristine Apr-Jun only: **p3>=0.40, top3 tickets**.
-- Pristine Apr-Jun: **1,125R / 167 hits / stake 11,250,000 / ROI 226.722% / profit +14,256,180 yen**.
-- Monthly pristine: Apr **389R / 85 hits / ROI 258.811% / +6,177,760**; May **455R / 53 hits / ROI 272.062% / +7,828,830**; Jun **281R / 29 hits / ROI 108.882% / +249,590**.
-- Min pristine month ROI **108.882%**; red pristine months **0**; max DD **1,361,370 yen**.
-- Jul-Aug NON-PRISTINE shadow, frozen config: **487R / 56 hits / ROI 82.152% / profit -869,190 yen**.
-- Shadow monthly: Jul **240R / 28 hits / ROI 80.142% / -476,600**; Aug **247R / 28 hits / ROI 84.106% / -392,590**.
-- Baseline + pristine add-on: **1,219R / ROI 222.545% / profit +14,938,250 yen**.
-- Decision from script: **SHADOW_CANDIDATE**. Do **not** replace v288 automatically because Jul-Aug frozen shadow is materially weak.
+## Wave26 — FINAL but INVALIDATED pending leak-free rerun
+- Run `34759822824`, workflow `research-3head-wave26-exactorder`: success; artifact `3head-wave26-exactorder-softmax`, ID `10318069914`.
+- Reported Apr-Jun: **1,125R / 167 hits / ROI 226.722% / +14,256,180 yen**; Jul-Aug shadow **487R / 56 hits / ROI 82.152% / -869,190 yen**; overlap 0.
+- Wave26 used 77 features: 63 static card metrics plus current-meet `節D...ST/着順` aggregates.
+- Leak audit found a strong target signature in historical `race_cards`: for boat 3, rows where `節D` race-number/frame matched the current race produced **15,280 matched rows**, and `節D...着順==1` agreed with actual 3-head outcome at about **97.997%**.
+- Therefore Wave26 `recent_finish` and `recent_st` cannot be treated as pre-deadline-safe from this historical source. The previous `SHADOW_CANDIDATE` is **invalidated for adoption** until reproduced without all section-history fields.
+- Closing odds were not prediction features in Wave26; the leakage concern is the historical section-race fields.
+
+## Wave27 — RUNNING leak-free exact-order audit
+- Script commit `894387d7835846e9437415c153a215b6f77b886e`: `research_v289_3head_wave27_leakfree_exactorder.py`.
+- Workflow commit `b30fd9608f45d452271380ca50f82eafd380e041`: `.github/workflows/research-3head-wave27-leakfree.yml`.
+- Current Run: **`34763079073`**, workflow `research-3head-wave27-leakfree`, status at launch **in_progress**.
+- Prediction features are restricted to **63 static card metrics only**. Every `節D`, current-meet ST/finish, result, settlement and odds field is excluded from prediction and guarded fail-closed.
+- Exact-order family remains 21-class softmax (`OTHER` + 20 exact 3-head combinations).
+- Strict model-selection correction: threshold/top-K are chosen **only on April**; **May-Jun are untouched holdout** for the adoption decision. Jul-Aug remain frozen NON-PRISTINE shadow. September forbidden.
+- Closing odds remain staking-only for JPY10,000 Dutch settlement. Legacy overlap remains 0 by conservative old-v243 exclusion.
 
 ## Exact restart point
-1. Wave26 is the first full-population family to clear the legacy ROI floor on Apr-Jun with zero red pristine months and zero overlap.
-2. Before any adoption, run a separate frozen-config robustness validation of Wave26. Do not retune from Jul/Aug outcomes.
-3. Validation priorities: leakage audit; venue/grade/time stability; ticket-probability calibration; contribution concentration; sensitivity around p3=0.40/top3 using only pristine history; and a frozen forward/shadow protocol.
-4. Jul/Aug remain NON-PRISTINE and may be reported only as shadow evidence; September outcomes remain forbidden.
-5. Keep v288 production unchanged unless an independent validation supports promotion.
+1. Inspect Run `34763079073` first.
+2. If failed, inspect logs and fix/rerun without restoring any `節D` field or weakening no-leak/date/zero-overlap guards.
+3. If success, record April tuning metrics, strict May-Jun holdout R/hits/ROI/profit/monthly/min month/red months/max DD, Jul-Aug NON-PRISTINE shadow, overlap and combined baseline.
+4. Treat Wave26's 226.7% ROI as contaminated unless Wave27 independently reproduces strength with static pre-deadline-safe features.
+5. Keep v288 production unchanged unless independent leak-free validation supports promotion.
