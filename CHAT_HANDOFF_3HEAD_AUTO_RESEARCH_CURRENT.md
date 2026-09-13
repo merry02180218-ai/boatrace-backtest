@@ -39,17 +39,28 @@
 - Combined baseline + holdout: 329R / 87 hits / ROI 90.179% / -323,110 yen.
 - Decision NO_ADOPTION.
 
-## Wave34 — RETRYING prototype-distance family
-- Initial Run `34767979974` failed in the research script only; baseline/source guards passed.
-- Failure cause: current scikit-learn removed the `multi_class` keyword from `LogisticRegression`; error was `TypeError: LogisticRegression.__init__() got an unexpected keyword argument 'multi_class'`.
-- Compatibility-only fix committed as `b711725614b63a2355098e11d0d5294c0c2d3439`: removed `multi_class='auto'`; research logic/scope unchanged.
-- Retry Run `34768428513` is in progress.
-- Family: standardized positive-vs-negative prototype-distance head score + conditional logistic exact-order model.
-- March selects head-score quantile and top3/top5/top7 with 30..300R floor; Apr-Jun untouched; Jul-Aug NON-PRISTINE shadow.
-- Corrected full-population-minus-exact-94 scope; September forbidden; closing odds staking-only; JPY10k Dutch.
+## Wave34 — FINAL prototype-distance family
+- Initial Run `34767979974` failed only because current scikit-learn rejected `LogisticRegression(..., multi_class='auto')`; baseline/source guards passed.
+- Compatibility-only fix `b711725614b63a2355098e11d0d5294c0c2d3439` removed that obsolete keyword; research logic unchanged.
+- Retry Run `34768428513`: success; artifact `3head-wave34-prototype-distance` ID `10320144189`.
+- Family: standardized positive-vs-negative prototype-distance head score + conditional logistic exact-order model; 63 static features; overlap 0.
+- March gate from Feb-only: score>=0.234255, top3; 45R / 13 hits / ROI 177.860% / +350,370 yen.
+- Apr-Jun pristine holdout: 386R / 53 hits / ROI 84.243% / profit -608,230 yen.
+- Monthly: Apr 116R / 16 hits / ROI 96.157% / -44,580; May 131R / 17 hits / ROI 66.650% / -436,880; Jun 139R / 20 hits / ROI 90.880% / -126,770.
+- Min month 66.650%; red months 3; max DD 886,340 yen.
+- Jul-Aug NON-PRISTINE shadow: 464R / 67 hits / ROI 75.100% / -1,155,370 yen.
+- Combined baseline + holdout: 480R / 105 hits / ROI 101.538% / +73,840 yen.
+- Decision NO_ADOPTION.
+- Interpretation: prototype distance looked excellent in March but did not generalize; May remains the largest failure month.
+
+## Wave35 — NEXT local-neighbor density family
+- Use a genuinely distinct nonparametric head score: standardized 63-feature space, nearest historical neighbors, distance-weighted local P(3-head) rather than tree/logistic/global-prototype head score.
+- Exact-order tickets remain conditional multinomial logistic trained only on historical 3-head winners.
+- March chooses only local-score quantile + top3/top5/top7 with sparse sample floor; freeze before Apr-Jun.
+- Corrected full-population-minus-exact-94 scope; Jul/Aug shadow only; September forbidden; closing odds staking-only; JPY10k Dutch.
 
 ## Exact restart point
-1. Inspect retry Run `34768428513` first.
+1. Implement and launch Wave35 local-neighbor corrected-scope family.
 2. If failed, inspect logs, fix automatically, rerun without weakening guards.
 3. If success, record March score gate/top-K; Apr-Jun R/hits/ROI/profit/monthly/min month/red months/max DD; Jul-Aug shadow; exact v288 overlap; combined baseline.
 4. Adoption status uses pristine Apr-Jun only. Jul/Aug cannot rescue a weak result.
