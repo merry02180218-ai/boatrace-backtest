@@ -1,26 +1,33 @@
-name: research-3head-wave20-allrace-universe
+name: research-3head-wave21-allrace-source-build
 on:
   push:
     branches: ['research/3head-v289-addon-expansion']
     paths:
-      - 'research_v289_3head_wave20_allrace_universe.py'
+      - 'research_v289_3head_wave21_allrace_source_build.py'
       - '.github/workflows/research-3head-wave18-full-universe.yml'
   workflow_dispatch:
 jobs:
-  wave20:
+  wave21:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python research_v289_3head_wave20_allrace_universe.py
+      - run: pip install -q pandas
+      - name: Download Wave20 universe
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34749917116 --repo merry02180218-ai/boatrace-backtest --name 3head-wave20-allrace-universe --dir wave20
+          cp wave20/analysis_v289_3head_wave20_allrace_universe.csv .
+      - run: python research_v289_3head_wave21_allrace_source_build.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: 3head-wave20-allrace-universe
+          name: 3head-wave21-allrace-source-build
           path: |
-            analysis_v289_3head_wave20_allrace_universe.csv
-            research_v289_3head_wave20_allrace_universe.json
-            research_v289_3head_wave20_allrace_universe.md
+            analysis_v289_3head_wave21_allrace_feature_settled.csv
+            research_v289_3head_wave21_allrace_source_build.json
+            research_v289_3head_wave21_allrace_source_build.md
