@@ -25,12 +25,20 @@
 - 391 selected; actual boat3 head160; Top5 hits87; boat3-head Top5 misses73.
 - Miss actual-rank counts: r6=7,r7=9,r8=12,r9=7,r10=3,r11=6,r12=5,r13=3,r14=2,r15=7,r16=4,r17=3,r18=0,r19=3,r20=2.
 - Cumulative miss recovery: Top6 7/73=9.6%; Top7 16=21.9%; Top8 28=38.4%; Top10 38=52.1%; Top15 61=83.6%; Top20 73=100%.
-- 50x+ misses=25. Recovered: Top6=0,Top7=0,Top8=3,Top10=8,Top15=19,Top20=25. 100x+ misses=8; Top8=1,Top10=1,Top15=5,Top20=8.
-- High misses:312.3x 3-4-6 rank20;209.6x 3-4-6 rank8;143.9x 3-6-1 rank15;142.2x 3-1-2 rank13;118.4x 3-6-5 rank15;106.2x 3-6-2 rank15;103.5x 3-4-1 rank16;100.2x 3-6-4 rank16.
-- Diagnostic equal-Dutch expansion on same391 races: Top5 87 hits ROI114.913%/+583,090; Top6 94 ROI101.224%/+47,840; Top7 103 ROI97.775%/-87,010; Top8 115 ROI97.932%/-80,870; Top10 125 ROI93.085%/-270,380; Top15 148 ROI90.868%/-357,070; Top20 160 ROI88.006%/-468,970.
-- Diagnosis only: widening every race destroys economics. Next target is selective tail activation, especially ranks8-15. Any live rule must be frozen using Feb+March only before Apr-Jun evaluation. v288 untouched; September unread.
+- Diagnostic equal-Dutch expansion: Top5 ROI114.913%; Top6 101.224%; Top7 97.775%; Top8 97.932%; Top10 93.085%; Top15 90.868%; Top20 88.006%.
+
+## Wave36 opponent ranking rebuild — STARTING / USER PRIORITY
+- User explicitly decided to review the opponent ranking itself before any selective tail activation, TopN expansion, or stake-allocation research. This supersedes the prior restart point.
+- Objective: improve ordering of the 20 conditional combinations 3-X-Y, especially Top5 capture conditional on actual boat3 win, while retaining current good Top5 hits.
+- Strict selection protocol: February is training/design only; March is OOS model/ranker selection and stability validation. Freeze the new ranker before any Apr-Jun outcome inspection. Apr-Jun is final pristine evaluation only; no retuning after seeing it.
+- Head gate remains frozen Wave36 p3>=0.365448 initially so this experiment isolates opponent-order quality rather than changing head selection.
+- Candidate ranking architectures may use only pre-deadline/static features already available in the all-race source. No closing/settlement odds as ranking features. No realized Apr-Jun result or payout may influence selection.
+- Evaluate on March first: among actual boat3-head cases, actual-pair MRR/mean rank/median rank and Top1/Top3/Top5/Top8/Top10 capture; early/late March stability. Also record regressions where frozen Wave36 Top5 was correct but candidate drops actual pair outside Top5.
+- Only candidate(s) chosen from March may be evaluated on Apr-Jun. Final Apr-Jun comparison must report same rank metrics, Top5 conversion among boat3-head, old-hit retained/lost, old-miss rescued, monthly stability, and optional ROI using unchanged Top5 exact JPY10,000 Dutch solely as evaluation.
+- Production v288 untouched; exact v288 overlap0; Jul/Aug diagnostic only if needed; September forbidden/unread.
 
 ## Exact restart point
-1. Build selective tail-activation rule from Feb training + March OOS only.
-2. Freeze before Apr-Jun evaluation; keep exact JPY10,000 stake.
-3. Compare to Wave36 Top5; Jul/Aug NON-PRISTINE; September forbidden.
+1. Inspect current Wave36 conditional ranking implementation/features and available source columns.
+2. Build opponent-ranker candidates using Feb only and select/freeze using March OOS only.
+3. Evaluate the frozen winner on Apr-Jun once; do not retune from Apr-Jun.
+4. Update this handoff after completion with exact commits/run/artifact/results and decision.
