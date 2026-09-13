@@ -1,58 +1,31 @@
-name: research-3head-wave19-payout-enrichment
-
+name: research-3head-wave19b-full584-walkforward
 on:
   push:
-    branches:
-      - 'research/3head-v289-addon-expansion'
+    branches: ['research/3head-v289-addon-expansion']
     paths:
-      - 'research_v289_3head_wave19_payout_enrichment.py'
+      - 'research_v289_3head_wave19b_full584_walkforward.py'
       - '.github/workflows/research-3head-wave18-full-universe.yml'
   workflow_dispatch:
-
-permissions:
-  contents: write
-
-env:
-  PYTHONUNBUFFERED: '1'
-
 jobs:
-  wave19-payout-enrichment:
+  wave19b:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.ref_name }}
-          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install -q pandas numpy
-      - name: Download Wave18b settled source
+      - run: pip install -q pandas numpy scipy scikit-learn
+      - name: Download source
+        run: |
+          gh run download 34749575986 --repo merry02180218-ai/boatrace-backtest --name 3head-wave19-payout-enrichment --dir wave19
+          cp wave19/analysis_v289_3head_wave19_full_universe_payout_enriched.csv .
         env:
           GH_TOKEN: ${{ github.token }}
-        run: |
-          gh run download 34749443471 --repo merry02180218-ai/boatrace-backtest --name 3head-wave18b-settlement-recovery --dir wave18b
-          cp wave18b/analysis_v289_3head_wave18b_full_universe_settled.csv .
-      - name: Enrich official trifecta payouts
-        run: python research_v289_3head_wave19_payout_enrichment.py
-      - name: Verify payout guard
-        run: |
-          python - <<'PY'
-          import json
-          d=json.load(open('research_v289_3head_wave19_payout_enrichment.json',encoding='utf-8'))
-          assert d['max_date'] <= '2026-08-31'
-          assert d['decision'] == 'PAYOUT_SOURCE_READY'
-          assert d['payout_row_share'] >= 0.98
-          assert d['combo_match_share'] >= 0.999
-          print('WAVE19_PAYOUT_GUARDS_OK')
-          PY
+      - run: python research_v289_3head_wave19b_full584_walkforward.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: 3head-wave19-payout-enrichment
+          name: 3head-wave19b-full584-walkforward
           path: |
-            analysis_v289_3head_wave19_full_universe_payout_enriched.csv
-            research_v289_3head_wave19_payout_enrichment.json
-            research_v289_3head_wave19_payout_enrichment.md
-          if-no-files-found: ignore
+            research_v289_3head_wave19b_full584_walkforward.json
+            research_v289_3head_wave19b_full584_walkforward.md
