@@ -47,32 +47,30 @@ Formal adoption does NOT authorize reading September outcomes yet.
 - v333 Run **34774493891**, Job **103769983424**, Artifact **10322953353**.
 - v334 Run **34776500418**, Job **103775463224**, Artifact **10323272716**.
 
-# 5. v335 — PRE-WORK DECLARATION: INCREASE PASS VOLUME WITHOUT CHANGING SIGNAL FAMILY
-User says ~14 races/month is too few and asks whether more races can be selected.
+# 5. v335 volume expansion audit — COMPLETE / REPORT BEFORE ANY v336
+Pre-work handoff commit `1578816cf916920903ed4293f708bfb92acb43fd`.
+Implementation `80ea9433d9aee5ea1d8522cc928d1a76b9c1f0d8`; workflow `6a008d20f5da7eb882403d20a7422bd412a4f8b6`.
+Run **34777110285** SUCCESS, Job **103777132353**, Artifact **10323577430**, artifact SHA256 `bdd819c79f878679e124b9ef6bc571a8069540b9e8c85e66e0ea007a6e65bd3c`.
+September outcomes remained unread.
 
-Exact work:
-1. Keep the v332 signal family and env weight fixed: `ATTACK_ENV_SOFT`, `env_w=0.1`.
-2. Change only the quantile threshold to compare `q = 0.65` (adopted reference), `0.60`, `0.55`, `0.50`, and `0.45`.
-3. Reproduce the exact same causal evaluation scheme as v332/v333:
-   - Feb-Jul: leave-one-month-out OOF fitting; held-out month labels never used to fit its threshold.
-   - August: fit on Feb-Jul only and evaluate August once.
-4. For every q report pooled Feb-Aug PASS count, races/month, pass fraction, head rate, exact3 rate, head/exact3 lifts versus matched monthly baseline, and each month's PASS count/rates.
-5. Report incremental added-race quality relative to q=.65: the races newly admitted by each relaxed q, with head and exact3 rates. This answers whether extra volume is useful or merely dilutive.
-6. Do not search env_w, family, or any new feature. This is a one-dimensional capacity/volume audit only.
-7. September outcomes remain unread.
+Exact causal volume tradeoff (same ATTACK_ENV_SOFT, env_w=.1; only q changed):
+- `q=.65` adopted reference: **96 PASS = 13.7/month**, head **83/96=86.46%**, exact3 **45/96=46.88%**, lifts head +2.71pp / exact3 +6.88pp.
+- `q=.60`: **111 PASS = 15.9/month**, head **95/111=85.59%**, exact3 **50/111=45.05%**, lifts +1.84pp / +5.05pp.
+- `q=.55`: **119 PASS = 17.0/month**, head **103/119=86.55%**, exact3 **52/119=43.70%**, lifts +2.80pp / +3.70pp.
+- `q=.50`: **138 PASS = 19.7/month**, head **120/138=86.96%**, exact3 **62/138=44.93%**, lifts +3.21pp / +4.93pp.
+- `q=.45`: **151 PASS = 21.6/month**, head **131/151=86.75%**, exact3 **65/151=43.05%**, lifts +3.00pp / +3.05pp.
 
-Decision guide (diagnostic, user decides adoption):
-- Prefer the loosest q that materially increases volume while keeping pooled head rate >=83% and exact3 rate >=42%, with no obvious single-month catastrophic collapse attributable to the added band.
-- Do not automatically replace adopted q=.65; report tradeoff first.
+Newly admitted races versus q=.65:
+- q=.60 adds 15R: head **80.00%**, exact3 **33.33%**.
+- q=.55 adds 23R: head **86.96%**, exact3 **30.43%**.
+- q=.50 adds 42R: head **88.10%**, exact3 **40.48%**.
+- q=.45 adds 55R: head **87.27%**, exact3 **36.36%**.
 
-Success criteria:
-- q=.65 reproduces 96 PASS / 83 head / 45 exact3 exactly;
-- relaxed variants give exact monthly volume/quality tradeoffs;
-- September unread.
+Interpretation:
+- The surprising best volume/quality balance is **q=.50**, not .60/.55. It raises volume from 13.7 to **19.7 races/month (+43.8%)** while pooled head improves slightly from 86.46% to **86.96%** and exact3 declines modestly from 46.88% to **44.93%**.
+- The 42 newly admitted q=.50-vs-.65 races are not weak on head survival: **88.10% head**, with **40.48% exact3**. This suggests q=.50 is a credible volume-expanded production candidate rather than simple dilution.
+- q=.45 reaches 21.6/month but added-band exact3 falls to 36.36%, so q=.50 is the cleaner stopping point from this one-dimensional audit.
+- Current formally adopted production selector remains **q=.65** until user explicitly approves replacement. Do not silently switch to q=.50.
 
-Failure fallback:
-- identity mismatch => stop and fix reconstruction only;
-- if added bands are clearly poor, keep q=.65 formally adopted and investigate a separate secondary route later instead of lowering the main threshold.
-
-Exact next resume point:
-- implement `run_v335_1head_v332_volume_expansion.py` and workflow; run Actions; append results; report once before any v336.
+# 6. Exact next resume point
+Report v335 to user. If user approves more volume, the natural replacement candidate is **v332 family with q=.50**. Before replacing production, recommended one last check is q=.50 monthly stability / bootstrap using the exact v334 framework; September remains unread until the final chosen selector is frozen.
