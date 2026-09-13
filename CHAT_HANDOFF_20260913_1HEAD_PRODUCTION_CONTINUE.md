@@ -127,37 +127,90 @@ Conclusion:
 
 ---
 
-# 5. Work Unit 5D — v327 PRE-confidence + exhibition selective postfilter SOURCE AUDIT STARTING
+# 5. Work Unit 5D — v327 PRE-confidence + exhibition selective postfilter SOURCE AUDIT — COMPLETE
 
-Reason for next direction:
-- v325 boat1-only exhibition and v326 ticket-aware exhibition both failed June forward validation.
-- Exhibition-only thresholds are therefore not enough.
-- The next safe post-PRE direction is to test whether **already-frozen PRE/ticket confidence** can identify intrinsically easier exact3 races, then use exhibition only as an incremental same-race confirmation signal.
-- This remains a PASS/SKIP layer after v320; it must not alter frozen selection or ticket identities.
+Audited frozen PRE confidence sources:
+- v308 persists race-level `p_head` and `opp_mass`; both are computed before target-race settlement and are already reproduced in live v323.
+- v317 SECOND uses a probability map `p2[boat]` from causal PRE/prior features only. Safe race-level summaries can be derived directly from that map without labels.
+- v318 THIRD uses conditional probability map `pc[(second,third)]`, normalized within each SECOND branch from causal PRE/prior features only.
+- v320 computes `pair_prob(p2,pc,alpha=.70)` and frozen `HYBRID` ticket order. These probabilities are pre-settlement and independent of odds/results.
+- v323 reconstructs the same live sequence: head `p_head` -> base opponent mass -> frozen v317 `p2` -> frozen v318 `pc` -> v320 pair probabilities/tickets.
 
-### Exact work about to be done
-1. Audit frozen v308/v317/v318/v320 outputs/scripts for result-blind confidence values available before exhibition/settlement, especially:
-   - v308/head confidence,
-   - v317 SECOND probability/margin/confidence,
-   - v318 THIRD probability/margin/confidence,
-   - v320 pair/ticket probability or ticket-mass/spread signals.
-2. Identify a single race-level historical table keyed by `race_code` that can reproduce the frozen 345 cohort without recomputing from settlement-aware fields.
-3. Causality-audit each candidate confidence feature: it must be generated from the already-frozen PRE path and available live in v323 or reproducible with the same live fit.
-4. Do **not** inspect Jul/Aug/September outcomes.
-5. Before any v327 model implementation, append the exact audited feature set and predeclared chronological research design here.
+Audited v327 PRE feature set to freeze before implementation:
+1. `p_head`
+2. `opp_mass`
+3. `second_top1_prob` = largest frozen v317 `p2`
+4. `second_top2_mass` = sum of two largest frozen v317 `p2`
+5. `second_margin12` = top1 minus top2 frozen v317 `p2`
+6. `third_top1_mean_for_top2_second` = mean best conditional THIRD probability for the top-2 SECOND candidates
+7. `third_top1_min_for_top2_second` = weaker of those two branch-best THIRD probabilities
+8. `ticket_prob1`, `ticket_prob2`, `ticket_prob3` = pair probabilities of the exact three frozen HYBRID tickets
+9. `ticket_mass3` = sum of pair probability on the three frozen tickets
+10. `ticket_prob3` / weakest-ticket confidence retained explicitly
+11. `ticket_gap34` = probability gap between 3rd and 4th HYBRID-ranked pair
+12. `ticket_entropy20` = entropy of normalized 20 pair probabilities
 
-### Success criteria for source audit
-- exact 345/139/290 identity maintained.
-- every proposed confidence feature is demonstrably PRE/result-blind.
-- no feature relies on odds, result, payout, same-race exhibition, or future/backfilled values.
-- identify how the same feature can be computed in live v323 flow.
-- no model/threshold search starts until the audited feature set is frozen in this handoff.
+Excluded from v327 PRE confidence inputs:
+- odds/composite odds
+- result/payout fields
+- actual combo/head labels except after feature freeze for evaluation
+- same-race exhibition fields inside the PRE confidence block
+- Jul/Aug/September outcome-derived fields
+- any `meet_*` or future/backfilled value
 
-### Failure fallback
-- If no stable frozen PRE-confidence outputs are persisted, reconstruct only from v308/v317/v318/v320 causal caches/scripts and verify against the frozen 345 race/ticket identity.
-- If a proposed signal cannot be reproduced live/result-blind, exclude it rather than approximate from settlement data.
+Historical reconstruction plan:
+- use `analysis_v320_1head_exact3_ticket_policy_best_race.csv` only as the immutable 345-race/ticket identity + labels for evaluation after feature generation.
+- recompute PRE confidence features fold-by-fold from v313/v308/v317/v318/v320 causal code, keyed by `race_code`.
+- verify exact identity before search: **345R / 290 head / 139 exact3** and exact ticket strings unchanged.
+- no Jul/Aug or September outcomes opened during feature building/search.
+
+### Predeclared v327 research design — NEXT WORK UNIT
+Chronology remains:
+- Feb-Apr: discovery only
+- May: validation/freeze
+- Jun: one-shot forward check
+- Jul/Aug may be opened once, reference-only, only if June is forward-supported
+- September outcomes remain unread
+
+Candidate families are intentionally small:
+1. one-dimensional PRE confidence gates on the frozen features above;
+2. one-dimensional exhibition confirmation gates from v326's already-audited feature-specific source families;
+3. PRE gate AND one exhibition confirmation gate;
+4. one small regularized logistic PASS model using frozen PRE-confidence + audited exhibition features, chronological only, no random CV.
+
+Primary success target:
+- June forward exact3 PASS rate >=50% with useful retained R and no obvious month-collapse.
+- 345/290/139 and frozen tickets must remain unchanged before filtering.
+
+Failure fallback:
+- if PRE-confidence alone does not validate, do not retune v308/v317/v318/v320; stop that family.
+- if PRE+exhibition fails June, do not inspect Jul/Aug for promotion and do not create production BUY logic.
 
 ---
 
-# 6. Exact next resume point
-**Audit v308/v317/v318/v320 confidence outputs for v327. Do not reopen Jul/Aug or September outcomes.**
+# 6. Work Unit 5E — v327 IMPLEMENTATION ABOUT TO START
+
+Exact work about to be done:
+1. Create `run_v327_1head_preconf_exhibition.py`.
+2. Rebuild the frozen 345 cohort's PRE-confidence table fold-by-fold using only v308/v317/v318/v320 causal paths.
+3. Assert 345/290/139 and exact frozen ticket identity before any search.
+4. Join the existing audited historical exhibition feature builder from v326 without changing source-readiness semantics.
+5. Run the predeclared Feb-Apr -> May -> Jun chronology only.
+6. Emit race-level dataset, candidate table, frozen candidate summary, monthly PASS/SKIP metrics, and clear `FORWARD_SUPPORTED` flag.
+7. Add `.github/workflows/v327-1head-preconf-exhibition.yml` and run Actions.
+
+Success criteria:
+- frozen identity/tickets unchanged.
+- no Jul/Aug or September outcome read during candidate search.
+- every PRE feature available through the same live v323 computation path.
+- exhibition features remain fail-closed per source family.
+- June forward result explicit.
+
+Failure fallback:
+- on any assertion/schema/runtime failure, first append exact failure + intended fix to this handoff, then patch.
+- unsafe/unreproducible feature is dropped, never approximated from settlement data.
+
+---
+
+# 7. Exact next resume point
+**Implement `run_v327_1head_preconf_exhibition.py` from the frozen source-audited feature set above, then workflow + Actions. Do not open Jul/Aug or September outcomes unless June forward support is achieved.**
