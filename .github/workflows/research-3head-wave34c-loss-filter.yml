@@ -1,13 +1,13 @@
-name: research-3head-wave34i-structural-motor
+name: research-3head-wave35-logistic-stable-gate
 on:
   push:
     branches: [research/3head-v289-addon-expansion]
     paths:
-      - 'research_v289_3head_wave34i_structural_motor.py'
+      - 'research_v289_3head_wave35_logistic_stable_gate.py'
       - '.github/workflows/research-3head-wave34c-loss-filter.yml'
   workflow_dispatch:
 jobs:
-  wave34i:
+  wave35:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -21,11 +21,11 @@ jobs:
         run: |
           gh run download 34754875342 --repo merry02180218-ai/boatrace-backtest --name 3head-wave21-allrace-source-build --dir source
           cp source/analysis_v289_3head_wave21_allrace_feature_settled.csv .
-      - run: python research_v289_3head_wave34i_structural_motor.py
+      - run: python research_v289_3head_wave35_logistic_stable_gate.py
       - uses: actions/upload-artifact@v4
         with:
-          name: 3head-wave34i-structural-motor
+          name: 3head-wave35-logistic-stable-gate
           path: |
-            analysis_v289_3head_wave34i_structural_motor.csv
-            research_v289_3head_wave34i_structural_motor.json
-            research_v289_3head_wave34i_structural_motor.md
+            analysis_v289_3head_wave35_logistic_stable_gate.csv
+            research_v289_3head_wave35_logistic_stable_gate.json
+            research_v289_3head_wave35_logistic_stable_gate.md
