@@ -12,7 +12,6 @@ OUT=Path('analysis_v289_3head_wave36_top5_miss_rank_audit.csv')
 OUTJ=Path('research_v289_3head_wave36_top5_miss_rank_audit.json')
 CUT=0.365448
 
-
 def main():
     d=pd.read_csv(SRC,dtype=str).fillna('')
     if d.date.max()>'2026-08-31': raise RuntimeError('September forbidden')
@@ -42,21 +41,23 @@ def main():
         raise RuntimeError(f'parity mismatch hold={len(hold)} head={len(head)} miss={len(miss)}')
     miss['actual_odds']=pd.to_numeric(miss.settle__trifecta_payout_100_yen,errors='coerce')/100.0
     miss['actual_rank']=miss.actual_rank.astype(int)
-    keep=['race_code','date','month','venue','race_no','settle__actual_combo','actual_rank','actual_odds','p3','top5_rebuilt']
+    keep=['race_code','date','month','venue','race','settle__actual_combo','actual_rank','actual_odds','p3','top5_rebuilt']
     miss[keep].sort_values(['actual_rank','actual_odds'],ascending=[True,False]).to_csv(OUT,index=False,encoding='utf-8-sig')
     rank_counts={str(k):int((miss.actual_rank==k).sum()) for k in range(6,21)}
     cum={}
-    for k in [6,7,8,10,15,20]:
+    for k in [6,7,8,9,10,12,15,20]:
         q=miss[miss.actual_rank<=k]
         cum[str(k)]={'recovered':len(q),'of_73_pct':100*len(q)/73,'extra_tickets_per_race':k-5,
                      'odds_50plus':int((q.actual_odds>=50).sum()),'odds_100plus':int((q.actual_odds>=100).sum()),
                      'median_odds':float(q.actual_odds.median()) if len(q) else None,'max_odds':float(q.actual_odds.max()) if len(q) else None}
-    bands={'lt10':miss.actual_odds<10,'10to20':(miss.actual_odds>=10)&(miss.actual_odds<20),'20to50':(miss.actual_odds>=20)&(miss.actual_odds<50),'ge50':miss.actual_odds>=50}
+    bands={'lt10':miss.actual_odds<10,'10to20':(miss.actual_odds>=10)&(miss.actual_odds<20),'20to50':(miss.actual_odds>=20)&(miss.actual_odds<50),'50to100':(miss.actual_odds>=50)&(miss.actual_odds<100),'100plus':miss.actual_odds>=100}
     bandrank={name:{'races':int(mask.sum()),'median_rank':float(miss.loc[mask,'actual_rank'].median()) if mask.sum() else None,
                     'rank6to8':int((mask & miss.actual_rank.le(8)).sum()),'rank6to10':int((mask & miss.actual_rank.le(10)).sum())} for name,mask in bands.items()}
-    high=miss.sort_values('actual_odds',ascending=False).head(15)[['race_code','settle__actual_combo','actual_odds','actual_rank']].to_dict('records')
+    high=miss.sort_values('actual_odds',ascending=False).head(25)[['race_code','settle__actual_combo','actual_odds','actual_rank','p3']].to_dict('records')
     out={'wave':'36-top5-miss-rank-audit','frozen_cut':CUT,'holdout_candidates':len(hold),'boat3_head':len(head),'top5_hits':len(head)-len(miss),'top5_misses':len(miss),
          'rank_counts_6_to_20':rank_counts,'cumulative_recovery':cum,'odds_band_rank_summary':bandrank,'highest_odds_misses':high,
+         'second_place_counts':miss.settle__actual_combo.str.split('-').str[1].value_counts().to_dict(),
+         'third_place_counts':miss.settle__actual_combo.str.split('-').str[2].value_counts().to_dict(),
          'v288_overlap':int(miss.race_code.astype(str).isin(ex).sum()),'september_forbidden':True,
          'note':'Descriptive Apr-Jun audit only; not valid for choosing a new live TopN.'}
     OUTJ.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
