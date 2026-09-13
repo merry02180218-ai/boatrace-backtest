@@ -1,0 +1,25 @@
+name: head4-regime-drift
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - analyze_4head_regime_drift_20260914.py
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml tabulate
+      - run: python -m py_compile analyze_4head_regime_drift_20260914.py
+      - run: python analyze_4head_regime_drift_20260914.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-regime-drift
+          path: |
+            analysis_4head_regime_drift_20260914.csv
+            analysis_4head_pre_bins_20260914.csv
+            audit_4head_regime_drift_20260914.json
+            summary_4head_regime_drift_20260914.md
