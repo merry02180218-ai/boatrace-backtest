@@ -1,0 +1,64 @@
+name: materialize-canonical-waku10
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - materialize_canonical_waku10.py
+      - historical_waku10_fetcher.py
+      - .github/workflows/materialize-canonical-waku10.yml
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  materialize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Materialize restored Waku10 into canonical path
+        run: python materialize_canonical_waku10.py
+      - name: Validate canonical coverage files
+        run: |
+          test -f canonical_waku10_coverage.csv
+          test -f canonical_waku10_summary.md
+          test -d data/programs/waku10/2026/07
+          test -f data/programs/waku10/2026/07/18.csv
+          test -f data/programs/waku10/2026/07/19.csv
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+          for p in [Path('data/programs/waku10/2026/07/18.csv'),Path('data/programs/waku10/2026/07/19.csv')]:
+              rs=list(csv.DictReader(p.open(encoding='utf-8-sig')))
+              assert rs, p
+              assert '艇1_枠番別勝率' in rs[0], p
+              assert '艇4_過去10走_着順' in rs[0], p
+              assert any((r.get('艇1_枠番別勝率') or '').strip() for r in rs), p
+              assert any((r.get('艇4_過去1走_着順') or '').strip() for r in rs), p
+              print(p, len(rs))
+          PY
+      - name: Commit canonical Waku10 files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/programs/waku10 canonical_waku10_coverage.csv canonical_waku10_summary.md
+          if git diff --cached --quiet; then
+            echo "No canonical Waku10 changes"
+          else
+            git commit -m "Materialize restored historical Waku10 canonically"
+            git push origin HEAD:main
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: canonical-waku10-materialization
+          path: |
+            canonical_waku10_coverage.csv
+            canonical_waku10_summary.md
+          retention-days: 90
