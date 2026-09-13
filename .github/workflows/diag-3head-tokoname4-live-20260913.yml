@@ -1,0 +1,48 @@
+name: diag-3head-tokoname4-live-20260913
+on:
+  push:
+    paths:
+      - '.github/workflows/diag-3head-tokoname4-live-20260913.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  judge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q requests beautifulsoup4 numpy pandas scikit-learn catboost joblib
+      - name: Download exact frozen daily bundle
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34720311853 --repo "$GITHUB_REPOSITORY" --name daily-3head-v288-production --dir daily_artifact
+          test -f daily_artifact/live_outputs/v288/20260913/live_cache.joblib
+      - name: Run exact v288 LIVE logic with browser-compatible Boatcast request headers
+        run: |
+          python - <<'PY'
+          import sys, requests
+          import run_20260911_3head_v288_live as m
+
+          def get_text(url):
+              headers={
+                  'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+                  'Referer':'https://race.boatcast.jp/',
+                  'Accept':'text/plain,text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                  'Accept-Language':'ja,en-US;q=0.9,en;q=0.8',
+                  'Cache-Control':'no-cache',
+              }
+              r=requests.get(url,headers=headers,timeout=12)
+              print('DIRECT_FETCH',r.status_code,url,file=sys.stderr)
+              r.raise_for_status()
+              return r.content.decode('utf-8',errors='replace')
+
+          m.get_text=get_text
+          sys.argv=['diag','--date','20260913','--jcd','8','--race','4',
+                    '--cache','daily_artifact/live_outputs/v288/20260913/live_cache.joblib',
+                    '--deadline-jst','2026-09-13T12:08:00+09:00']
+          m.main()
+          PY
