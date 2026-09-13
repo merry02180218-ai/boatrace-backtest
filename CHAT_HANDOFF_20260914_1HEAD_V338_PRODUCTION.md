@@ -3,6 +3,23 @@
 作成日: 2026-09-14
 repo: merry02180218-ai/boatrace-backtest
 
+## 2026-09-14 今回の作業開始記録（v339）
+- 作業開始時のGitHub最新HEAD: `c9b07cf97f79669c75dec8c1e86bdea1d74a47cf`
+- 正式productionは変更しない: `1HEAD_PRODUCTION_20260914_HEAD078`
+  - HEAD/PRE cutoff = `0.78`
+  - exhibition = v332 `ATTACK_ENV_SOFT`, env_w=0.1, q=0.65
+  - SECOND = v317 `OUTER_L2_1`
+  - THIRD = v318 `DROPSTART_T0.1`
+  - 3-ticket = v320 `HYBRID alpha=.70`
+- September 2026 outcomesは `UNREAD` を厳守。今回も結果ファイルを開かず、学習・評価・選別に使用しない。
+- 今回やること:
+  1. v338 production identityを基準に、0.78周辺のHEAD cutoff局所安定性をrace-levelで検証する。
+  2. 主対象は `0.785 / 0.7825 / 0.7800 / 0.7775 / 0.7750`。0.78はcontrolとして必ず同一性を確認する。
+  3. 各cutoffについてR数・head・exact3・0.78との差分・incremental quality・月別/場別の偏りを比較する。
+  4. 7月・8月はNON-PRISTINEとして扱う。小標本の後付け除外はしない。
+  5. 正式productionは研究結果だけでは黙って変更しない。0.78 identityが再現できなければ研究を停止しidentity修復を優先する。
+  6. 完了後に実測結果、commit、Actions Run/Job/Artifact ID、結論、次の再開地点をこの引き継ぎへ追記する。
+
 ## 次チャットで最初にやること
 1. このファイルと最新GitHubを読む。競合時は最新GitHubを優先する。
 2. 9月2026のレース結果は引き続きUNREADのまま維持する。
