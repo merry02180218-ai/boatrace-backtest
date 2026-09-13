@@ -23,11 +23,19 @@
 - Missing race_cards date: 2026-06-17 only.
 - Decision: `ALLRACE_UNIVERSE_READY`.
 
+## Wave21 — RUNNING
+- Script: `research_v289_3head_wave21_allrace_source_build.py`.
+- Script commit: `9c117764246254914f7427160c29710ece5a27bc`.
+- Workflow commit: `99339fe17fe19726447a6f45158e693150ba426d`.
+- Run: **`34750513056`**.
+- Current state at latest check: `in_progress`; source download completed and Python source-build step is running.
+- Goal: join all available pre-deadline race_cards + waku10 features to all 32,111 races, then attach realtime exact order and official trifecta combo/payout strictly for settlement evaluation.
+- Output artifact name: `3head-wave21-allrace-source-build`.
+
 ## Exact restart point
-1. Use Wave20 artifact CSV as the 32,111R base.
-2. Join complete pre-deadline race_cards plus waku10 fields.
-3. After feature freeze, attach realtime exact order plus official trifecta combo and payout for settlement only.
-4. Audit coverage, date range, and result/payout combo agreement; fail closed on insufficient coverage.
-5. Then run full-population 3-head walk-forward research. Exclude the legacy 94R only when checking add-on overlap, not as an initial candidate-universe restriction.
-6. Report R, hits, stake, payout, ROI, profit, monthly, min-month ROI, red months, max DD, overlap, and combined baseline+addon.
-7. If a run fails or a wave ends without the next wave, fix/restart automatically and update this file.
+1. Inspect Run `34750513056` first.
+2. If failed, inspect logs and fix/re-run automatically without weakening date/coverage guards.
+3. If success, record artifact ID plus feature-column count, result/exact-order/payout coverage, combo agreement, and actual 3-head wins.
+4. Then run full-population 3-head walk-forward research from the Wave21 source. Exclude legacy v288 94R only when checking add-on overlap, not as an initial candidate-universe restriction.
+5. Report R, hits, stake, payout, ROI, profit, monthly, min-month ROI, red months, max DD, overlap, and combined baseline+addon.
+6. If a run fails or a wave ends without the next wave, fix/restart automatically and update this file.
