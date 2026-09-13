@@ -1,0 +1,37 @@
+name: validate-4head-env-entry-live
+on:
+  push:
+    paths:
+      - 'build_4head_env_entry_live.py'
+      - 'verify_4head_env_entry_live.py'
+      - 'head4_v291_downstream_inference.py'
+      - 'artifacts/head4_v291_downstream_20260630.json'
+      - '.github/workflows/validate-4head-env-entry-live.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy
+      - name: Syntax check
+        run: python -m py_compile build_4head_env_entry_live.py verify_4head_env_entry_live.py head4_v291_downstream_inference.py
+      - name: Exact schema and fail-closed contract
+        run: python verify_4head_env_entry_live.py
+      - name: Immutable result-blind guard
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          s=Path('build_4head_env_entry_live.py').read_text()
+          prohibited=['data/results/','payout','winner','actual_result','valid_result']
+          low=s.lower()
+          for x in prohibited:
+              assert x not in low, x
+          assert 'jul_aug_labels_used": False' in s
+          assert 'september_labels_used": False' in s
+          print('result-blind immutable guard PASS')
+          PY
