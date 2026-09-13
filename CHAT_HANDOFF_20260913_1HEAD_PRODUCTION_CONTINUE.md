@@ -54,36 +54,47 @@ Exact v332 reproduction succeeded:
 - conclusion: **INSUFFICIENT_EVIDENCE_MONTHLY_VARIANCE_PLAUSIBLE**.
 - therefore do not discard v332 on August alone; treat as strong provisional candidate.
 
-# 6. v334 — PRE-WORK DECLARATION: v332 BOOTSTRAP / MONTH-BLOCK ROBUSTNESS AUDIT
-Current position: v333 says August weakness is not strong evidence of structural failure. Before freezing v332 for September inference, quantify how robust the observed Feb-Aug advantage is to race-level and month-level resampling without retuning.
+# 6. v334 v332 bootstrap/month-block robustness audit — COMPLETE / REPORTED NEXT
+Pre-work handoff commit `7d4900021128c22dd1e08d95cca8cd473bd5c9c7`.
+Implementation `e20c352b5998d66d712f5112d55602fa29103408`; workflow `ee54e08fe5f37db1d7cb7ee5a44c0c9e9e47d34e`.
+Run **34776500418** SUCCESS, Job **103775463224**, Artifact **10323272716**, artifact SHA256 `439ea86e3f29759db9a182414872a3ff505f37adbc7a9739080b82ea3a5d0df9`.
+Identity reproduced: pooled v332 PASS **96R / head83 / exact3 45** = Feb-Jul 86R/head76/exact341 + August10R/head7/exact34. No retuning; September unread.
 
-Exact work:
-1. **Do not alter v332 config.** Freeze `ATTACK_ENV_SOFT`, env_w=.1, q=.65.
-2. Reconstruct exact v332 selections used in v333: Feb-Jul month-OOF + August trained on Feb-Jul. Assert pooled selection identity **96 PASS = 86 OOF + 10 August**, with Feb-Jul head76/exact341 and August head7/exact34.
-3. Build paired month-level table containing baseline and PASS head/exact3 rates and lifts for Feb-Aug.
-4. Perform deterministic Monte Carlo bootstrap with fixed RNG seed:
-   - race-level bootstrap within each month, preserving month and PASS membership, estimating pooled head/exact3 rates and lifts;
-   - month-block bootstrap resampling the 7 months with replacement, aggregating original month totals, estimating robustness to month composition.
-5. Report 2.5/50/97.5 percentiles for PASS head rate, PASS exact3 rate, head lift, exact3 lift under both bootstrap schemes.
-6. Report probabilities that pooled head lift >0, exact3 lift >0, both >0, and probabilities of material underperformance (head lift <= -5pp, exact3 lift <= -5pp).
-7. Include leave-one-month-out pooled summaries for Feb-Aug: remove each month in turn and report pooled PASS/base metrics and lifts. This is diagnostic only and must not choose a new config.
-8. **No September outcomes, no threshold search, no retraining based on bootstrap results.**
+Deterministic bootstrap setup:
+- RNG seed `33420260914`
+- 20,000 race-level within-month bootstrap draws
+- 20,000 month-block bootstrap draws across Feb-Aug months
 
-Interpretation rule:
-- `ROBUST_PROVISIONAL` if month-block P(head lift>0) >= .70, P(exact3 lift>0) >= .70, and neither material-underperformance probability exceeds .25.
-- `MIXED_UNCERTAIN` if these are not met but no material-underperformance probability exceeds .50.
-- `FRAGILE` if either material-underperformance probability > .50.
-This is a diagnostic label only, not automatic production promotion.
+Race-level bootstrap:
+- PASS head rate median **86.46%**, 95% interval **80.21–92.71%**.
+- PASS exact3 rate median **46.88%**, 95% interval **37.50–56.25%**.
+- head lift median **+2.75pp**, 95% interval **-5.00 to +10.00pp**.
+- exact3 lift median **+6.88pp**, 95% interval **-3.88 to +17.83pp**.
+- P(head lift >0) **0.76125**.
+- P(exact3 lift >0) **0.89220**.
+- P(both lifts >0) **0.70130**.
+- P(head lift <= -5pp) **0.02525**.
+- P(exact3 lift <= -5pp) **0.01485**.
 
-Success criteria:
-- exact v332/v333 identities reproduced;
-- bootstrap outputs deterministic and saved;
-- result answers whether v332 advantage survives plausible race/month resampling;
-- September remains unread.
+Month-block bootstrap:
+- PASS head rate median **86.54%**, 95% interval **80.00–92.39%**.
+- PASS exact3 rate median **46.88%**, 95% interval **36.76–56.57%**.
+- head lift median **+2.63pp**, 95% interval **-3.16 to +7.91pp**.
+- exact3 lift median **+6.85pp**, 95% interval **-2.40 to +15.45pp**.
+- P(head lift >0) **0.81830**.
+- P(exact3 lift >0) **0.91255**.
+- P(both lifts >0) **0.80225**.
+- P(head lift <= -5pp) **0.00450**.
+- P(exact3 lift <= -5pp) **0.00020**.
 
-Failure fallback:
-- any identity mismatch => stop and fix reconstruction only;
-- if month count makes month-block intervals extremely wide, report underpowered rather than overinterpreting.
+Predeclared diagnostic label: **ROBUST_PROVISIONAL**.
+Interpretation:
+- v332's advantage survives month-composition resampling more often than not and satisfies the predeclared robustness rule.
+- August weakness is therefore more consistent with ordinary small-sample/month variation than with a clearly fragile selector.
+- Uncertainty still exists: both 95% lift intervals include 0, so this is not proof of a positive true effect.
+- However severe underperformance probabilities are low, especially in month-block resampling.
+- v332 should remain the leading provisional candidate; do not redesign it merely because of August 7/10.
+- September outcomes remain unread. No retuning.
 
-Exact next resume point:
-- implement `run_v334_1head_v332_bootstrap_robustness.py` and workflow; run Actions; append exact Run/Job/Artifact and metrics here; report v334 once before any v335 or September evaluation.
+# 7. Exact next resume point — REPORT v334 BEFORE ANY v335/SEPTEMBER EVALUATION
+After reporting v334 to user, recommended next unit is to freeze the v332 rule/parameters on Feb-Aug and build a **September inference-only adapter** that can produce selections without reading September outcomes. Only after the inference output is frozen should September outcomes be opened for the final untouched evaluation. Do not read September outcomes before that freeze.
