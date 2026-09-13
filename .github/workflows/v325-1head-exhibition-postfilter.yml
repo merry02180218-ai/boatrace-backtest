@@ -1,0 +1,37 @@
+name: v325-1head-exhibition-postfilter
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v325_1head_exhibition_postfilter.py'
+      - '.github/workflows/v325-1head-exhibition-postfilter.yml'
+
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install pandas numpy scikit-learn
+      - name: Audit frozen inputs
+        run: |
+          test -s analysis_v320_1head_exact3_ticket_policy_best_race.csv
+          test -s analysis_v108_1head_feasibility.csv
+          python - <<'PY'
+          import pandas as pd
+          x=pd.read_csv('analysis_v320_1head_exact3_ticket_policy_best_race.csv')
+          assert len(x)==345 and int(x['hit'].sum())==139, (len(x),int(x['hit'].sum()))
+          print('v320 frozen identity OK',len(x),int(x['hit'].sum()))
+          PY
+      - name: Run v325 post-exhibition research
+        run: python run_v325_1head_exhibition_postfilter.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v325-1head-exhibition-postfilter
+          path: /tmp/v325/*
+          if-no-files-found: error
