@@ -72,3 +72,14 @@ User instruction: **progress so real production matches the established backtest
 
 ## ACTIVE WORK ITEM — 2026-09-13 production adapter restart
 Stopped continuation was detected after v322. Resume now with **inspection only before implementation**: inspect the existing 3-head/4-head LIVE workflows and their invoked scripts, identify the exact v308/v317/v318/v320 reusable functions and result-blind current-card source, then implement the minimum 1-head adapter without changing frozen model logic. Before any subsequent fix/restart, record that intended change here first. Historical 345R/290 head hits and 139/345 exact3 are mandatory regression assertions; Jul/Aug remain NON-PRISTINE, September outcomes unread, `meet_*` forbidden.
+
+## WORK UNIT 2026-09-13-1 — written BEFORE execution
+Current position: handoff + monitoring are restored; production adapter is still unfinished.
+
+Do now:
+1. Search latest main branch for the exact v308 implementation and the v317/v318/v320/v321/v322 scripts/workflows by filename/function/commit references.
+2. Inspect the current result-blind 2026-09-13 input workflow and reusable live odds fetcher.
+3. Determine the minimum files/functions required for a production adapter while preserving exact regression assertions 345 selected / 290 head wins / 139 exact3.
+4. BEFORE creating or editing production code, append a WORK UNIT 2 entry naming the exact files to add/change and the exact regression/current-run success criteria.
+
+Success for this work unit: exact implementation locations and reusable functions are identified from latest GitHub; no model code is changed yet. If interrupted, resume from item 1 above.
