@@ -27,63 +27,81 @@ Always use latest GitHub main + latest 4-head CI over older chats/handoffs.
 - Prior downstream bridge CI Run `34752338147`: **SUCCESS**.
 
 ## Current-day causal source adapter — ACCEPTED
-### Implementation
-`build_4head_current_bundle.py`
-- commit `6a30e0899946ed92368c4930bc2068275bfb1637`
-- strict result-blind source object -> exact A-LIVE/v283 bundle.
-- historical frozen A relative formula is preserved: `b4_pl_* - opponent_pl_*`.
-- v283 flat mappings use `opp_*_bN_v93`, `bN_pl_*`, `st_*_bN`, current exhibition six fields, and deterministic position features.
-- result/payout/odds/profit/return-like source columns are rejected.
-- missing causal primitives fail closed.
+`build_4head_current_bundle.py`, commit `6a30e0899946ed92368c4930bc2068275bfb1637`.
 
-Verifier `verify_4head_current_bundle.py`:
-- commit `3f3eaa70cb603da78009079ef82dacc18de27b8b`
-- validates relative formulas, feature mapping, frozen assembler compatibility, SECOND5/conditional20, leakage rejection, and missing-feature rejection.
+- strict result-blind source object -> exact A-LIVE/v283 bundle.
+- historical frozen relative player formula preserved: `b4_pl_* - opponent_pl_*`.
+- v283 flat mappings use `opp_*_bN_v93`, `bN_pl_*`, `st_*_bN`, current exhibition six fields, deterministic position features.
+- result/payout/odds/profit/return-like columns are rejected; missing causal primitives fail closed.
+
+Verifier `verify_4head_current_bundle.py`, commit `3f3eaa70cb603da78009079ef82dacc18de27b8b`.
 
 CI:
-- initial workflow commit `e04f9a003c5741930117c11ca53941901133c105`.
 - Run `34753138305`: FAILED only because numpy was omitted from CI; no production/model rule failed.
 - dependency-only fix commit `dc9c265e5ba36452be6ffd32fbddbea85de43c2c`.
 - Run `34753157788`: **SUCCESS**.
 
-Decision: **ACCEPT causal bundle adapter as production building block.**
+Decision: **ACCEPT causal bundle adapter.**
 
 ## AUTO LIVE strict source mode — ACCEPTED
-`run_4head_v291_varn_auto_live.py` updated by commit `77e816caddea21333a2f19f56a2a75dea33ddc24`.
-It accepts either:
-- `--bundle-json` (backward-compatible existing path), or
-- `--source-json` (strict causal source -> `build_4head_current_bundle` -> frozen assembler -> existing final runner).
+`run_4head_v291_varn_auto_live.py` source-mode commit `77e816caddea21333a2f19f56a2a75dea33ddc24`.
 
-`verify_4head_v291_varn_auto_live.py` updated by commit `4fd65a5ed3d95f5a753f4f7beec8ea91faebb36c` to verify both paths.
+Accepts either:
+- `--bundle-json`, or
+- `--source-json` -> causal bundle builder -> frozen assembler -> existing final runner.
 
-Source-mode CI Run `34753243163`: **SUCCESS**.
-All CI stages passed:
-- syntax check
-- AUTO LIVE bridge contract
-- result-blind / frozen-policy guard
+Verifier source-mode commit `4fd65a5ed3d95f5a753f4f7beec8ea91faebb36c`.
+
+- Source-mode CI Run `34753243163`: **SUCCESS**.
+- syntax, AUTO LIVE contract, result-blind guard and frozen-policy guard all passed.
 
 Decision: **ACCEPT strict source mode as production-green.**
 
+## v283 six-boat current exhibition LIVE — ACCEPTED
+`build_4head_v283_current_exhibition_live.py`, commit `4f74e0bdd499ed5706917e4eb9e1f30031e422a1`.
+
+It automatically constructs the six current v283 exhibition fields for every boat:
+- `cur_ex`
+- `cur_st`
+- `cur_orig_lap`
+- `cur_orig_turn`
+- `cur_orig_straight`
+- `cur_orig_avg`
+
+Result-blind source semantics:
+- official BOAT RACE `beforeinfo` for display time,
+- BOATCAST start display,
+- BOATCAST original exhibition,
+- prior-only ST lane bias rebuilt from repository STT snapshots strictly before the target day using v90 update order,
+- existing `CORR` lane/frame corrections + `corrected_direct` rank semantics reused,
+- no result/payout/odds endpoint.
+
+Verifier `verify_4head_v283_current_exhibition_live.py`, commit `0008c63e78ea7e66a447074b2f79077f7b211f48`.
+Workflow commit `fcdc65bd50c0f0175772c570e491b519ad6d1894`.
+CI Run `34753369345`: **SUCCESS**.
+
+Decision: **ACCEPT automatic `current_boats` construction.**
+
 ## Verified raw/current building blocks
-- `fetch_4head_v291_pre_inputs_live.py`: current result-blind `race_cards.csv` + `waku10.csv`, all active venues/races.
+- `fetch_4head_v291_pre_inputs_live.py`: current result-blind `race_cards.csv` + `waku10.csv` for all active venues/races.
 - `build_4head_post_live.py`: official beforeinfo tilt + BOATCAST start display + BOATCAST original exhibition, pre-race allow-list and fail-closed.
-- historical `analyze_v278_4head_opponent_current_exhibition_audit.py`: exact six current exhibition fields used by v283.
-- historical `analyze_v264_4head_feature_exhaustive.add_rel()`: exact 4-minus-opponent relative formulas.
-- historical `analyze_v221_3head_scenario_pair.py`: defines `bN_pl_*` by freezing history before current-day results. Do not blindly ingest Sep outcomes while Sep outcome-blind constraints are in force.
+- `analyze_v93_4corner_second_third.py`: exact opponent v93 scoring primitives/formula.
+- `analyze_v90_exhibition_st_10month.py`: exact prior-only ST lane-bias + raw/corrected rank/strength semantics.
+- `analyze_v264_4head_feature_exhaustive.add_rel()`: exact 4-minus-opponent relative formulas.
+- `analyze_v221_3head_scenario_pair.py`: defines `bN_pl_*` by freezing history before current-day results. Do not blindly ingest Sep outcomes while Sep outcome-blind constraints are in force.
 
 ## Exact remaining AUTO LIVE gap
-The chain from a strict causal source object through the frozen models and existing final market/Dutch runner is now green.
+The strict source -> frozen models -> final market/Dutch runner path is green, and `current_boats` is now automatic.
 
-The remaining upstream gap is automatic construction/acquisition of the strict source object from raw current-day inputs, specifically the flat primitives:
+Remaining upstream construction:
 - v93 opponent values `opp_{grade,national,local,motor,nst}_bN_v93`
+- flat ST values `st_{raw,raw_strength,raw_rank,corr_strength,corr_rank}_bN` wired into the source object (formula is now identified)
 - frozen player-history values `bN_pl_*`
-- prior ST values `st_{raw,raw_strength,raw_rank,corr_strength,corr_rank}_bN`
-- six-boat current exhibition values
 - ENV_ENTRY primitives not already supplied by PRE/POST.
 
 ## Exact next action
-1. Trace the exact existing v93 + ST primitive construction from the historical/live code; reuse, do not invent formulas.
-2. Resolve player-history production input without violating Sep outcome-blind rules; prefer already-frozen/precomputed causal history or an allowed current pre-race source rather than reading Sep results ad hoc.
-3. Build one upstream fetch/transform command that emits `--source-json` directly from current PRE + allowed pre-race exhibition/history sources.
+1. Implement v90 ST flat primitive builder and v93 opponent primitive builder from current `race_cards/waku10` + current exhibition, reusing exact historical formulas.
+2. Resolve `bN_pl_*` production source without violating Sep outcome-blind rules; use frozen/precomputed causal history or an allowed pre-race source, not ad-hoc Sep outcome tuning.
+3. Build one upstream command emitting `--source-json` directly from current PRE + allowed pre-race exhibition/history sources.
 4. Add fixture/parity + fail-closed CI.
-5. Run full raw-source -> strict source -> models -> official pre-deadline odds -> VARN -> exact 10k Dutch path and record Run IDs/commits here.
+5. Run full raw-source -> strict source -> models -> official pre-deadline odds -> VARN -> exact 10k Dutch and record all Run IDs/commits here.
