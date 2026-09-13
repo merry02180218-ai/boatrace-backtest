@@ -29,18 +29,20 @@
 - March mapped original raw gate p3=0.365448 to fixed calibrated cut 0.391729.
 - Apr-Jun pristine recalibrated: 341R / 77 hits / ROI 111.111% / +378,890 yen / 144 head hits / head rate 42.229% / conversion 53.472% / max DD 634,560 yen.
 - Original raw Wave36 Apr-Jun comparator: 391R / 87 hits / ROI 114.913% / +583,090 yen / head rate 40.921% / conversion 54.375% / max DD 717,360 yen.
-- Monthly recalibrated:
-  - Apr: 121R / 33 hits / ROI 175.280% / +910,890; identical to raw.
-  - May: 114R / 24 hits / ROI 74.235% / -293,720; worse than raw 103.005%.
-  - Jun: 106R / 20 hits / ROI 77.521% / -238,280; improved from raw 70.290%, with head rate 41.51% vs 37.60%.
-  - Jul NON-PRISTINE: 134R / 32 hits / ROI 84.128% / -212,690; improved from raw 77.896%.
-  - Aug NON-PRISTINE: 138R / 39 hits / ROI 106.275% / +86,600; improved from raw 99.025%.
+- Monthly recalibrated: Apr 175.280%; May 74.235%; Jun 77.521%; Jul 84.128%; Aug 106.275%.
 - Jul-Aug recalibrated robustness: 272R / 71 hits / ROI 95.364% / -126,090 / head rate 43.75% / max DD 393,720.
-- Raw Jul-Aug comparator: 327R / 79 hits / ROI 89.074% / -357,270 / head rate 40.37% / max DD 572,990.
 - Exact v288 overlap 0.
-- Interpretation: monthly recalibration improved June, July and August robustness and reduced drawdown, but materially damaged May. Therefore it does not beat the pristine Apr-Jun benchmark and is NO_ADOPTION as a universal replacement. It is evidence that temporal p3 calibration is useful, but a one-month-only calibrator is too reactive/noisy.
+- Interpretation: temporal calibration helped Jun-Aug but one-month calibration was too reactive and damaged May.
+
+## Wave36S smoother p3 calibration — STARTING
+- Preserve the exact Wave36 63 static features, shrinkage-LDA head model, conditional-logit Top5 orderer, expanding chronology, JPY10k Dutch, and exact v288 exclusion.
+- Test a predeclared smoother head-probability recalibration that uses only already-settled prior-month OOS predictions and never current-month outcomes.
+- Primary rule: rolling prior OOS months with a 3-month cap (March for April; Mar+Apr for May; Mar+Apr+May for June; Apr+May+Jun for July; May+Jun+Jul for August), fitting one Platt calibrator to the pooled prior OOS rows.
+- Keep the decision threshold anchored from March only by mapping raw p3=0.365448 through the March-only calibrator; do not optimize any threshold on Apr-Aug ROI.
+- Also report a conservative shrinkage variant blending rolling calibration parameters toward the March calibrator with a fixed predeclared weight, but selection/adoption must be judged on Apr-Jun pristine only and Jul/Aug remain NON-PRISTINE diagnostics.
+- Compare against raw Wave36 and Wave36C: selected races, head rate, Top5 conversion, ROI/profit, monthly ROI, min month, red months, max DD, overlap.
 
 ## Exact restart point
-1. Keep original Wave36 raw gate + Top5 as the pristine benchmark.
-2. Promising direction: smoother calibration using multiple prior months / shrinkage toward the March calibrator, predeclared without Apr-Jun ROI tuning.
-3. Jul/Aug improvements from Wave36C are diagnostic only and cannot rescue pristine adoption.
+1. Implement Wave36S from the actual Wave36/Wave36C code without changing prediction features/orderer.
+2. Launch CI and auto-fix technical failures without weakening temporal guards.
+3. On completion, write exact Run/artifact/results here before reporting.
