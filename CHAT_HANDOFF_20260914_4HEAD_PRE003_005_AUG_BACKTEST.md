@@ -1,6 +1,6 @@
 # CHAT HANDOFF — HEAD4 PRE 0.03-0.05 RESEARCH
 
-Status: **CANONICAL WAKU10 HEAD4 PRISTINE RE-EVALUATION COMPLETE**
+Status: **HEAD4 WAKU10 ABLATION AUDIT STARTED**
 
 ## Frozen production
 Production remains unchanged (`HEAD4_V291_COMP7`). July/August 2026 remain NON-PRISTINE; September remains outcome-blind for tuning/model selection.
@@ -39,49 +39,33 @@ Production remains unchanged (`HEAD4_V291_COMP7`). July/August 2026 remain NON-P
 - Conclusion: August raw target data is not the cause of the old anomaly; missing training-period Waku10 changed the learned score scale/coefficients.
 
 ## Canonical Waku10 full HEAD4 pristine re-evaluation — COMPLETE
-Work-start plan was to rebuild the HEAD4 chain from corrected canonical Waku10 without reusing stale intermediate CSVs, keeping production unchanged and using Apr-Jun as the pristine development comparison window.
-
-Implementation/run lineage:
-- New audit workflow: `.github/workflows/reevaluate-head4-canonical-waku10.yml`.
-- Workflow creation commit: `612abd96a4d7e5a06569588905f2405ee2b770d8`.
-- Trigger commit: `2e4d4afe2f45e0d3b4ef50c227ca7e6dc2761500`.
-- Rebuilt in one CI job in this order: `v250 -> v93 -> v264 -> v267 -> v271 -> candidate v273 LIVE mapping`.
-- Run `34783210177`, Job `103793867409`: **SUCCESS**.
+- Workflow: `.github/workflows/reevaluate-head4-canonical-waku10.yml`.
+- Run `34783210177`, Job `103793867409`: SUCCESS.
 - Artifact `head4-canonical-waku10-pristine-reevaluation`, ID `10325184553`, SHA256 `1c29e9e8e2bfc720f18800f08b4d9bbe8e14e9fe68bffd421cc92be8e7563be0`.
+- Corrected Apr-Jun archived-odds proxy results:
+  - S: 72R, 29 heads, 10 trifecta hits, ROI 103.26%.
+  - A: 56R, 21 heads, 5 hits, ROI 74.36%.
+  - S+A: 128R, 50 heads, 15 hits, ROI 90.61%.
+- Rebuilt canonical A_SCORE_LIVE candidate threshold: `0.2826475979692089` vs current production `0.2710428764008591`.
+- Old pre-canonical ~131% S+A claim does not survive corrected rebuild.
+- Production remains unchanged.
 
-Corrected Apr-Jun results using archived historical odds proxy (10,000 JPY/race; NOT immutable contemporaneous LIVE odds):
-- S:
-  - Apr: 15R, 3 heads (20.00%), 1 trifecta hit (6.67%), ROI 62.88%.
-  - May: 33R, 17 heads (51.52%), 6 hits (18.18%), ROI 137.84%.
-  - Jun: 24R, 9 heads (37.50%), 3 hits (12.50%), ROI 80.95%.
-  - Aggregate: 72R, 29 heads (40.28%), 10 hits (13.89%), return 743,470 JPY on 720,000 JPY, proxy ROI 103.26%.
-- A (OOF development semantics, outside S, PRE>=.18, POST>=.18, OOF A_SCORE>=.28):
-  - Apr: 21R, 9 heads (42.86%), 2 hits (9.52%), ROI 72.38%.
-  - May: 18R, 5 heads (27.78%), 1 hit (5.56%), ROI 51.72%.
-  - Jun: 17R, 7 heads (41.18%), 2 hits (11.76%), ROI 100.76%.
-  - Aggregate: 56R, 21 heads (37.50%), 5 hits (8.93%), return 416,390 JPY on 560,000 JPY, proxy ROI 74.36%.
-- S+A aggregate:
-  - Apr: 36R, 12 heads (33.33%), 3 hits (8.33%), ROI 68.42%.
-  - May: 51R, 22 heads (43.14%), 7 hits (13.73%), ROI 107.45%.
-  - Jun: 41R, 16 heads (39.02%), 5 hits (12.20%), ROI 89.16%.
-  - Aggregate: 128R, 50 heads (39.06%), 15 hits (11.72%), return 1,159,860 JPY on 1,280,000 JPY, proxy ROI **90.61%**.
+## CURRENT WORK-START RECORD — Waku10 ablation audit
+Goal: determine whether HEAD4 performs better with no Waku10-derived signal, or only a subset, under the same corrected canonical data and causal evaluation conditions.
 
-A-score LIVE mapping changed materially under canonical Waku10:
-- Current production `A_SCORE_LIVE`: `0.2710428764008591`.
-- Rebuilt canonical candidate threshold: `0.2826475979692089`.
-- Canonical reference universe: 173R, frozen OOF-selected 57R = 32.95%; mapped selected 57R exactly.
-- Month reference counts: Apr 57R/21 selected, May 65R/19 selected, Jun 51R/17 selected.
-- Mapping itself is outcome-blind; July/August labels and September labels are not used.
+Pre-declared comparison before implementation:
+1. Keep production `HEAD4_V291_COMP7` unchanged throughout.
+2. Use the same canonical raw source, same date splits, same labels, same archived-odds proxy rules, and same causal/OoF semantics across variants.
+3. Primary selection/evaluation window: Apr-Jun 2026 only. July/August remain NON-PRISTINE descriptive stress checks only; September outcomes prohibited.
+4. Compare at minimum:
+   - `FULL_WAKU10`: current corrected canonical feature set.
+   - `NO_WAKU10`: remove direct Waku10-derived inputs and composites whose construction materially depends on Waku10 (`waku_wr`, `waku_st`, `waku_sr`, `past10/past_win`, plus dependent `resistance12`, `wall3_weak`, and Waku10-dependent legacy components rather than silently zero-imputing them).
+   - `CORE_WAKU10`: retain only stable direct frame statistics needed for a minimal signal test, while excluding past10 and higher-order Waku10 composites; exact feature membership must be written into the audit output before outcome summaries are interpreted.
+5. Do not compare a missing-data model against a complete-data model. Every variant must be explicitly trained/rebuilt from the same canonical rows with its own fixed feature definition.
+6. Report by month and Apr-Jun aggregate: S/A/S+A race counts, 4-head hit rate, trifecta hit rate, archived-odds proxy ROI where available, and score calibration/distribution.
+7. Any variant ranking is exploratory retrospective evidence only. Do not alter production from this audit alone.
+8. Run via GitHub Actions; inspect logs/artifacts; auto-fix and rerun failures.
+9. AFTER completion, update this handoff with exact feature definitions, commits, Run/Job/Artifact IDs/hashes, Apr-Jun results, Jul-Aug descriptive stress checks, interpretation, and exact restart point.
 
-Decision / limitations:
-- The old pre-canonical headline that S+A produced ~131% proxy ROI over 100 races does **not** survive this full canonical rebuild.
-- Corrected canonical S+A proxy ROI is 90.61%; A-only is 74.36%; S-only is 103.26% aggregate but loses in Apr and Jun.
-- Therefore the current A layer is not supported by the corrected Apr-Jun archived-odds development evidence.
-- However this audit is still retrospective and uses archived historical odds proxy, not immutable contemporaneous LIVE pre-deadline odds; it is NOT formal OOS profitability evidence.
-- Do NOT alter production automatically from this audit alone. `HEAD4_V291_COMP7` remains unchanged pending a separately frozen, outcome-blind canonical replacement decision and prospective validation.
-- July/August remain NON-PRISTINE and did not select/tune any threshold here. September outcomes remain prohibited for tuning/model selection.
-
-## Exact restart point
-1. Treat all old sparse-public-Waku10 HEAD4 development profitability claims as superseded by the canonical rebuild where they conflict.
-2. Next research should isolate whether to retire/rebuild the A layer using only corrected canonical pre-Jul data and a pre-declared outcome-blind procedure; do not tune from Jul/Aug/Sep outcomes.
-3. Preserve current production until a replacement policy is explicitly frozen before outcome inspection and then validated prospectively with immutable pre-deadline 120/120 odds.
+## Restart protection
+If interrupted, resume from the Waku10 ablation audit above. Do not use Jul/Aug/Sep outcomes to choose features or thresholds. Production stays `HEAD4_V291_COMP7` until a separately frozen prospective replacement policy is validated.
