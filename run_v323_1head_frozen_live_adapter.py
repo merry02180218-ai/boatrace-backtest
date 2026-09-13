@@ -44,7 +44,7 @@ import fetch_live_trifecta_odds as liveodds
 ROOT = Path(__file__).resolve().parent
 DEV_PRED = ROOT / 'analysis_v308_1head_volume_opponent_joint_pred.csv'
 FROZEN_V320 = ROOT / 'analysis_v320_1head_exact3_ticket_policy_best_race.csv'
-PREP_HEAD = ROOT / 'cache_v321_julaug_nonpristine_head.csv'
+PREP_HEAD = ROOT / 'cache_v321_julaug_nonpristine_head_full.csv.gz'
 PREP_SLIM = ROOT / 'cache_v321_julaug_nonpristine_slim.csv.gz'
 Q = .98
 OPP_MASS_CUT = .375
@@ -108,7 +108,6 @@ def current_static(cards: list[dict], target: date) -> pd.DataFrame:
         code = norm_code(card.get('レースコード',''))
         if not code:
             continue
-        # Fail closed if the artifact is not for the requested target date.
         if code[:8] != target.strftime('%Y%m%d'):
             raise RuntimeError(f'current card date mismatch: {code} vs {target}')
         q = {
@@ -148,13 +147,12 @@ def build_current_features(cur0: pd.DataFrame):
 
 def head_score(cur_feat: pd.DataFrame, hcut: float) -> pd.DataFrame:
     if not PREP_HEAD.exists():
-        raise RuntimeError('v323 requires v321 prepare head cache')
+        raise RuntimeError('v323 requires v321 full prepare head cache')
     hd = pd.read_csv(PREP_HEAD, dtype={'race_code': str})
     hd['race_code'] = hd.race_code.astype(str).str.zfill(12)
     if any(str(m).startswith('2026-09') for m in hd.month.astype(str).unique()):
         raise RuntimeError('v323 training head cache contains September')
 
-    # Reconstruct v308 core membership from v321's persisted head-only frame.
     safe_static = set(v298.v296.SAFE)
     core = []
     for c in hd.columns:
@@ -179,8 +177,6 @@ def head_score(cur_feat: pd.DataFrame, hcut: float) -> pd.DataFrame:
         raise RuntimeError('v323 meet_* entered head fit')
 
     cur = cur_feat.copy()
-    # Align inference frame to the exact persisted v321/v308 feature ledger. Missing
-    # prior-history features stay NaN because September outcomes are deliberately unread.
     for c in hd.columns:
         if c not in cur.columns:
             cur[c] = np.nan
@@ -226,7 +222,6 @@ def opponent_score(cur_feat: pd.DataFrame, head: pd.DataFrame):
     if set(full.loc[full.month.astype(str)==TARGET_MONTH, 'race_code']) != set(cur.race_code):
         raise RuntimeError('v323 target inference cohort mismatch')
 
-    # SECOND: BASE path for v308 opponent-mass and frozen v317 path for ticket ranking.
     sl = v300.augment_second(v298.second_long(full, sufs))
     base_p2, _ = v300.p2_predict(sl, TARGET_MONTH, 10.0, False)
     _, p3, p4 = v312.load_cache()
@@ -234,8 +229,6 @@ def opponent_score(cur_feat: pd.DataFrame, head: pd.DataFrame):
     sx, _ = v317.add_engineered(sl_hr, 'OUTER')
     p2, _ = v311.p2_predict_explicit(sx, TARGET_MONTH, 1.0, None, {'START'})
 
-    # THIRD uses v321's compact chronological row builder so historical inference-only
-    # rows do not create unnecessary memory load.
     cl = v300.augment_third(v321._third_fold_long(full, sufs, TARGET_MONTH))
     base_pc, _ = v300.pc_predict(cl, TARGET_MONTH, .3, False)
     pc, _ = v318.pc_predict(cl, TARGET_MONTH, .1, 'DROP_START')
@@ -299,7 +292,6 @@ def attach_live_odds(out: pd.DataFrame, ticket_map: dict[str,list[str]], target:
             z.at[i,'odds1'],z.at[i,'odds2'],z.at[i,'odds3'] = vals
             z.at[i,'composite_odds'] = composite(vals)
             z.at[i,'odds_complete'] = 1
-            # No development-reused threshold is silently promoted to production.
             status = 'SKIP_NO_FROZEN_ODDS_CUTOFF'
         except Exception as e:
             print(f'v323 odds unavailable {code}: {type(e).__name__}: {e}', flush=True)
