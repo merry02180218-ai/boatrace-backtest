@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# trigger: 20260914-head4-waku10-ablation
 from __future__ import annotations
 from collections import defaultdict
 from datetime import date,timedelta
@@ -43,7 +44,6 @@ def raw_features(x,s4):
       'motor4_hist':safe(b4.get('mhist')),
       'turnfoot4_prior':safe(b4.get('turnfoot')),
       'past_win4':safe(b4.get('past_win')),
-      # direct canonical Waku10 fields for CORE_WAKU10 only
       'b3_waku_wr':safe(b3.get('waku_wr'),np.nan),
       'b3_waku_st':safe(b3.get('waku_st'),np.nan),
       'b3_waku_sr':safe(b3.get('waku_sr'),np.nan),
