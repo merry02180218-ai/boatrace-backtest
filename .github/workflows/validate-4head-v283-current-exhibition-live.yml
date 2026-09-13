@@ -1,0 +1,22 @@
+name: validate-4head-v283-current-exhibition-live
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'build_4head_v283_current_exhibition_live.py'
+      - 'verify_4head_v283_current_exhibition_live.py'
+      - 'build_4head_post_live.py'
+      - 'backtest_v51_lane_corrected_tickets.py'
+      - 'backtest_v3.py'
+      - '.github/workflows/validate-4head-v283-current-exhibition-live.yml'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q requests beautifulsoup4 numpy pandas
+      - run: python -m py_compile build_4head_v283_current_exhibition_live.py verify_4head_v283_current_exhibition_live.py
+      - run: python verify_4head_v283_current_exhibition_live.py
