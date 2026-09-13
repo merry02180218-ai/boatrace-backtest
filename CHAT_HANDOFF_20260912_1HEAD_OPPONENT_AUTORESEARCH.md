@@ -57,32 +57,29 @@ Restart run **`34733175916`** completed successfully.
 - Factorized v317 SECOND + v318 THIRD reference remains stronger at **137/345=39.71%**.
 Decision: direct ordered-pair did not materially improve and is not retained as ranking reference. Keep factorized v317+v318 and move to exact-3-ticket policy optimization.
 
-## v320 CURRENT — exact-3-ticket policy optimization
+## v320 completed — exact-3-ticket policy optimization
 Files:
 - `run_v320_1head_exact3_ticket_policy.py`
 - `.github/workflows/research-20260913-v320-exact3-ticket.yml`
-Implementation commit **`b54ec0574380e42b24c778aaff8e0295b0efe6b9`**; workflow commit **`2c0745d75322cb52080f8d910fce5fe797c555c5`**.
+Implementation commit **`b54ec0574380e42b24c778aaff8e0295b0efe6b9`**; workflow commit **`2c0745d75322cb52080f8d910fce5fe797c555c5`**; result commit **`76ce4ce563c8e73a57b71f7ac687057ba5807a19`**.
 
-Design:
-- Ranking reference frozen to **v317 OUTER SECOND + v318 DROPSTART_T0.1 THIRD**; only ticket ordering/policy changes for attribution.
-- Fixed **345R / 290 head hits**; exactly 3 tickets on every fixed-cohort race, no denominator shrinkage.
-- v313 cache only; `meet_*` forbidden; no future backfill; month M trains only before M.
-- Explicitly reject Jul/Aug/Sep evaluation months; Jul/Aug remain NON-PRISTINE and September outcomes remain unread.
-- Test leak-safe policy forms `TOP2XTOP2`, `JOINT`, `SECOND1X3`, `SECOND3X1`, `HYBRID` across alpha 0.20-0.80.
-- Fail closed unless frozen baseline `TOP2XTOP2 alpha=.60` reproduces **137/345** exactly.
-- Compare full 345 exact3 and monthly/worst-month stability; suspicious large gains require leakage audit.
-
-Actions run **`34737004683`** was verified as actually created and **in_progress** after the workflow commit. Do not treat a push alone as started; monitor the run ID/status.
+Actions run **`34737004683`** completed successfully and committed `summary_v320_1head_exact3_ticket_policy.md`.
+- Frozen **345R / 290 head hits** confirmed; exactly 3 tickets on every race, no denominator shrinkage.
+- Ranking reference remained factorized **v317 OUTER SECOND + v318 DROPSTART_T0.1 THIRD**.
+- Baseline `TOP2XTOP2 alpha=.60`: **137/345=39.71%**, worst month **33.33%**.
+- Best development policy `HYBRID alpha=.70`: **139/345=40.29%**, delta **+0.58pt**, worst month **34.78%**.
+- Monthly best: Feb 34.92%, Mar 50.00%, Apr 52.83%, May 40.50%, Jun 34.78%.
+- Jul/Aug were not evaluated as pristine and September outcomes remained unread.
+Decision: freeze **HYBRID alpha=.70** as the current development winner for ticket ordering, but treat the +2-hit gain as development evidence only, not prospective validation. Do not continue ticket-order micro-tuning without a new causal hypothesis.
 
 ## Automatic branch sequence
 1. SECOND family/gating/role/pairwise/multiclass/error-feature research v311-v317 — completed; saturated.
 2. v318 conditional THIRD rebuild — completed, flat.
 3. v319 direct 20 ordered `(second,third)` pair model — completed; **134/345**, weaker than factorized **137/345**.
 4. Factorized v317+v318 retained as stronger ranking reference.
-5. **v320 exactly-3-ticket policy optimization — CURRENT / run 34737004683.**
-6. If a ticket policy materially improves exact3 with acceptable monthly stability, freeze it as development winner; Feb-Jun is reused development evidence, not prospective validation.
-7. If no material stable gain, retain factorized TOP2XTOP2 alpha=.60 and stop ticket-order micro-tuning unless a new causal hypothesis is explicitly defined.
-8. Suspicious large gain -> immediate leakage/causal audit.
+5. v320 exactly-3-ticket policy optimization — completed; development best **HYBRID alpha=.70, 139/345=40.29%**.
+6. Current state is an intentional research boundary: freeze the development winner and wait for genuinely prospective evidence or an explicitly defined new causal hypothesis. Do not invent another micro-tuning branch from reused Feb-Jun outcomes.
+7. Suspicious large gain -> immediate leakage/causal audit.
 
 ## Required metrics
 - exact3 on full 345 denominator
@@ -93,4 +90,4 @@ Actions run **`34737004683`** was verified as actually created and **in_progress
 - delta vs clean/factorized reference.
 
 ## Self-continuing rule
-A failed/flat experiment is diagnostic evidence, not a stopping condition. If research is stopped and the next leak-safe branch is clear, implement/start it automatically and update this handoff. Do not merely report stopped state. For any new workflow, verify an actual Actions run ID and status after creation. If v320 completes, record the result and apply the automatic decision above without reading Jul/Aug as pristine or any September outcomes.
+A failed/flat experiment is diagnostic evidence, not a stopping condition. If research is stopped and the next leak-safe branch is clear, implement/start it automatically and update this handoff. Do not merely report stopped state. For any new workflow, verify an actual Actions run ID and status after creation. v320 is complete and the defined branch sequence has reached its intentional boundary; do not start another ticket-order micro-tune unless a new causal hypothesis is explicitly defined. Keep Jul/Aug NON-PRISTINE and September outcomes unread.
