@@ -13,47 +13,50 @@
 - overlap with legacy v288 must remain zero for add-on selections.
 
 ## Waves 1-13
-All prior Wave1-13 proposals were rejected. The stable earlier results remain in repository result files. Because the candidate population has now changed, prior signal families may be re-tested on the expanded population, but simple global threshold relaxation remains disallowed.
+All prior Wave1-13 proposals were rejected. Stable earlier results remain in repository result files. Because the candidate population changed, prior signal families may be re-tested on the expanded population, but simple global threshold relaxation remains disallowed.
 
-## Wave14 — conformal market/field selective gating — FINAL
-- Run `34741605409` completed successfully.
-- artifact `v289-3head-addon-wave14-conformal-market`, artifact ID `10313288111`.
+## Wave14 — FINAL
+- Run `34741605409` success.
+- artifact `v289-3head-addon-wave14-conformal-market`, ID `10313288111`.
 - result commit `c921aa8dc71e835d91015a83e865888d6eb33dc0`.
-- best rows were still strongly negative: 99R / 4 hits / ROI 33.74% / profit -656,020 yen; other alphas were worse.
-- decision: **NO_ADOPTION_WAVE14**.
+- best: 99R / 4 hits / ROI 33.74% / profit -656,020 yen.
+- **NO_ADOPTION_WAVE14**.
 
-## Wave15 — expanded source + prior-Wave replay — FINAL
-- purpose: reopen buyable final-NO_BET races formerly excluded by old PRE S/A, while preserving the legacy 94R baseline as a floor.
-- script commit `57efd2eb99d43e1f4390c6a88bd14504b05987f9`.
-- workflow commit `fdc021c4a3fb729a7c7033bee7b73eb70a917592`.
-- Actions Run `34745869030` completed successfully.
-- artifact `3head-wave15-expanded-source-replay`, artifact ID `10314256546`.
-- result commit `572104107d5a292944d2554e07e64052ba9a9fc0`.
+## Wave15 — FINAL
 - expanded pool: **232R = old final-NO_BET 178R + old PRE-excluded 54R**.
-- best method `return_rank@0.15`: **23 add-on races / 4 hits / hit rate 17.39% / ROI 55.00% / profit -103,500 yen / minimum monthly ROI 0% / 3 red months / max DD 121,980 yen / v288 overlap 0**.
-- of those 23 selected races, **12 were formerly PRE-excluded**.
-- combined legacy v288 + add-on: **117R / ROI 149.45%**.
-- decision: **NO_ADOPTION_WAVE15** because add-on ROI remained far below break-even despite successfully recovering formerly excluded races.
+- Run `34745869030` success; artifact `3head-wave15-expanded-source-replay`, ID `10314256546`.
+- result commit `572104107d5a292944d2554e07e64052ba9a9fc0`.
+- best `return_rank@0.15`: **23 add-on / 4 hits / ROI 55.00% / profit -103,500 / min month 0% / 3 red / max DD 121,980 / overlap 0**; 12 selected races were PRE-excluded.
+- combined: **117R / ROI 149.45%**.
+- **NO_ADOPTION_WAVE15**.
 
-## Wave16 — hierarchical source-group x attack-style — RUNNING
-- purpose: distinguish profitable vs unprofitable cases inside the expanded pool instead of applying one global ranking.
-- candidate population stays expanded: `OLD_NO_BET` + `OLD_PRE_EXCLUDED`, while legacy v288 94R is retained untouched as the floor.
-- hierarchy: source group (`OLD_NO_BET` vs `OLD_PRE_EXCLUDED`) x attack style (`MAKURI` vs `MAKURISASHI`), with source-group fallback for sparse cells.
-- variants: hit-oriented, exhibition-oriented, return/value-oriented, and independent consensus.
-- walk-forward: prior-month-only Feb-Aug; Jul/Aug NON-PRISTINE; September outcomes forbidden.
-- current required features fail closed; legacy-v288 overlap must be zero.
-- script commit **`8f087c21ffb31a39c4e4acdcc8baba448aaa4492`**: `research_v289_3head_wave16_hierarchical_source_style.py`.
-- workflow commit **`abdf3557daced58969f25b42fc0f23d32ee213fe`**: `.github/workflows/research-3head-wave16-hierarchical-source-style.yml`.
-- Actions Run **`34747021942`** started from workflow push and was queued at the latest check.
-- intended artifact: **`3head-wave16-hierarchical-source-style`**.
+## Wave16 — hierarchical source-group x attack-style — FINAL
+- purpose: source group (`OLD_NO_BET` vs `OLD_PRE_EXCLUDED`) x attack style (`MAKURI` vs `MAKURISASHI`) hierarchical modeling.
+- script commit `8f087c21ffb31a39c4e4acdcc8baba448aaa4492`.
+- workflow commit `abdf3557daced58969f25b42fc0f23d32ee213fe`.
+- Actions Run **`34747021942` completed success**.
+- artifact **`3head-wave16-hierarchical-source-style`**, artifact ID **`10314003981`**.
+- result commit **`a89e5f5f5f6c1b84875d4e72cadb9f97693bf229`**.
+- best `consensus@0.15`: **12 add-on / 1 hit / hit rate 8.33% / ROI 26.07% / profit -88,720 / min month 0% / 3 red / max DD 88,720 / combined 106R / combined ROI 155.98%**.
+- critical result: **all Wave16 selected rows had PRE-excluded selected = 0**. The hierarchy failed to recover the new source population.
+- **NO_ADOPTION_WAVE16**.
+- rejection reason: severe negative add-on EV and no PRE-excluded recovery despite explicit source/style conditioning.
 
-## Research conclusion from Wave15
-- the new candidate source is valid operationally: previously excluded races can be recovered without touching the legacy 94R.
-- Wave16 now tests whether source-group and attack-style conditioning can separate useful recovered races from the unprofitable majority.
+## Wave17 — source-specific hurdle EV — RUNNING
+- restart reason: Wave16 completed NO_ADOPTION and no next research had started; automation resumed immediately from the exact handoff point.
+- scientific goal: explicitly discriminate profitable vs unprofitable races separately inside `OLD_NO_BET` and `OLD_PRE_EXCLUDED`, rather than letting the old source dominate rankings.
+- model family: source-specific independent hit probability + positive-profit hurdle probability + settled-value regression + pre-deadline market/composite-odds consensus.
+- current required selected features fail closed.
+- prior-month-only walk-forward Feb-Aug; Jul/Aug NON-PRISTINE; September outcomes forbidden.
+- legacy 94R is a floor and remains untouched; overlap with legacy v288 must be 0.
+- script commit **`f9bb2d7e2e17cab922a216b8e20577526916000b`**: `research_v289_3head_wave17_source_hurdle_ev.py`.
+- workflow commit **`1883d39c46fc229b05e0648d34561d8221df838f`**: `.github/workflows/research-3head-wave17-source-hurdle-ev.yml`.
+- Actions Run **`34747412436`** queued at the latest check.
+- intended artifact: **`3head-wave17-source-hurdle-ev`**.
 
 ## Exact restart point
-1. Inspect Actions Run `34747021942` first.
-2. If success: read `research_v289_3head_wave16_hierarchical_source_style.md/json`, record add-on R, hits/hit rate, ROI, profit, monthly, minimum monthly ROI, red months, max DD, source-group/style splits, v288 overlap, combined R/ROI, artifact ID and result commit SHA here.
-3. If failed/cancelled: inspect job/logs, fix only the technical/scientific defect without weakening the guards, rerun automatically, and record the replacement Run ID.
-4. If Wave16 is NO_ADOPTION, do not globally loosen thresholds. Continue with another population-conditional family, prioritizing explicit profitable-vs-unprofitable PRE-excluded discrimination or ticket-value structure within the expanded source.
-5. Preserve legacy 94R as floor, Jul/Aug NON-PRISTINE, September outcomes unused, pre-deadline inputs only, current-required missing => fail closed, and no overlap with legacy v288.
+1. Inspect Actions Run `34747412436` first.
+2. If success: read `research_v289_3head_wave17_source_hurdle_ev.md/json`; record add-on R, hits/hit rate, ROI, profit, monthly, min monthly ROI, red months, max DD, source-group metrics including PRE-excluded selected count, v288 overlap, combined R/ROI, artifact ID, result commit SHA, decision and rejection/adoption reason here.
+3. If failed/cancelled: inspect failed job/log, fix the technical/scientific defect without weakening guards, rerun automatically, and record replacement Run ID.
+4. If Wave17 is NO_ADOPTION, continue to another expanded-population family without global threshold loosening. Prefer a distinct ticket-value / latent-regime / analog-family approach that forces evaluation of PRE-excluded rows rather than allowing them to disappear from selection.
+5. Preserve legacy 94R floor, Jul/Aug NON-PRISTINE, September outcomes unused, pre-deadline inputs only, current-required missing => fail closed, no overlap with legacy v288, and JPY10,000 per race.
