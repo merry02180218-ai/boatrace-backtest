@@ -57,7 +57,6 @@ def build_train_and_aug_features():
         for z in frozen:
             z['y4head']=int(i(rr.get(z['race_code'],{}).get('1着_艇番'))==4);train.append(z)
         ingest_prior_day_preview(cache,d);ingest_motor(hist,seen,d);d+=timedelta(days=1)
-    # July updates causal PRE state only. No July result is used as a PRE fit label.
     while d<START:
         ingest_prior_day_preview(cache,d);ingest_motor(hist,seen,d);d+=timedelta(days=1)
     model=v250.make_model(PRE_COLS);tr=pd.DataFrame(train);model.fit(tr[PRE_COLS],tr.y4head.astype(int))
@@ -78,11 +77,6 @@ def build_train_and_aug_features():
 
 
 def historical_safe_frame(pred):
-    # analysis_v93 rows contain historical outcome columns too, but those are never
-    # passed into inference. v221.build freezes each target row's player-history
-    # state BEFORE that day's results are ingested. For this replay only, extend its
-    # historical window through Aug 31. This matches the newer production causal
-    # player-history contract: prior-day outcomes are feature state, never fit labels.
     raw=pd.DataFrame(c4.read());raw['race_code']=raw.race_code.astype(str).str.zfill(12)
     raw=raw[raw.date.astype(str).str[:7].eq('2026-08')].copy()
     old_contam,old_end=v221.CONTAM,v221.END
@@ -90,7 +84,7 @@ def historical_safe_frame(pred):
         v221.CONTAM=pd.Timestamp('2026-09-01');v221.END=END
         raw=v221.build(raw,'date')
     finally:
-        v221.CONTAM, v221.END = old_contam, old_end
+        v221.CONTAM,v221.END=old_contam,old_end
     raw=v264.add_rel(raw)
     q=raw.merge(pred[['race_code','PRE','POST']],on='race_code',how='inner',validate='one_to_one')
     q['p4_joint']=pd.to_numeric(q.PRE,errors='coerce')*pd.to_numeric(q.POST,errors='coerce')
@@ -120,8 +114,6 @@ def main():
     band=pred[pred.PRE.between(BAND_LO,BAND_HI,inclusive='both')].copy()
     safe=historical_safe_frame(pred)
     art=load_artifact();aa=load_a_artifact()
-    # Restrict to artifact feature keys + identifiers before scoring, preventing
-    # historical winner/result columns from entering downstream inference.
     envfs=list(art['ENV_ENTRY']['features']);afs=list(aa['A_SCORE']['features'])
     need=list(dict.fromkeys(['race_code','PRE','POST']+envfs+afs))
     missing=[c for c in need if c not in safe.columns]
@@ -130,26 +122,31 @@ def main():
     sf['ENV_ENTRY']=[score_env_entry(r,art) for r in sf.to_dict('records')]
     sf['A_SCORE_LIVE']=[score_a(r,aa) for r in sf.to_dict('records')]
     b=band.merge(sf[['race_code','ENV_ENTRY','A_SCORE_LIVE']],on='race_code',how='left',validate='one_to_one')
-    if b.ENV_ENTRY.isna().any() or b.A_SCORE_LIVE.isna().any():raise RuntimeError('shadow cohort missing downstream score')
-    # Only now join August outcomes, after frozen scores and cohort identity exist.
+    b['downstream_reconstructed']=(b.ENV_ENTRY.notna()&b.A_SCORE_LIVE.notna()).astype(int)
+    missing_codes=b.loc[b.downstream_reconstructed.eq(0),'race_code'].astype(str).tolist()
+    # Outcome join happens only after cohort identity and every reconstructible frozen score are fixed.
     rm=result_map();b['y4head']=[rm.get(c,np.nan) for c in b.race_code]
-    b['post_s_pass']=(b.POST>=POST_S).astype(int);b['env_s_pass']=(b.ENV_ENTRY>=ENV_S).astype(int)
-    b['shadow_s_downstream_pass']=((b.POST>=POST_S)&(b.ENV_ENTRY>=ENV_S)).astype(int)
+    b['post_s_pass']=(b.POST>=POST_S).astype(int);b['env_s_pass']=((b.downstream_reconstructed==1)&(b.ENV_ENTRY>=ENV_S)).astype(int)
+    b['shadow_s_downstream_pass']=((b.downstream_reconstructed==1)&(b.POST>=POST_S)&(b.ENV_ENTRY>=ENV_S)).astype(int)
     acut=float(aa['A_gate']['A_SCORE_LIVE'])
-    b['shadow_a_downstream_pass']=((b.POST>=POST_A)&(b.A_SCORE_LIVE>=acut)).astype(int)
+    b['shadow_a_downstream_pass']=((b.downstream_reconstructed==1)&(b.POST>=POST_A)&(b.A_SCORE_LIVE>=acut)).astype(int)
     b=b.sort_values(['PRE','race_code']).reset_index(drop=True);b.to_csv(OUT,index=False)
-    n=len(b);wins=int(pd.to_numeric(b.y4head).fillna(0).sum())
+    n=len(b);wins=int(pd.to_numeric(b.y4head).fillna(0).sum());recon=int(b.downstream_reconstructed.sum())
     audit={
-      'status':'COMPLETE','scope':'AUG_2026_NON_PRISTINE_EXPLORATORY_ONLY','band_inclusive':[BAND_LO,BAND_HI],
+      'status':'COMPLETE_WITH_PARTIAL_DOWNSTREAM_COVERAGE' if recon<n else 'COMPLETE',
+      'scope':'AUG_2026_NON_PRISTINE_EXPLORATORY_ONLY','band_inclusive':[BAND_LO,BAND_HI],
       'fit_label_start':str(TRAIN_START),'fit_label_cutoff':str(TRAIN_END),'jul_aug_labels_used_for_fit':False,
       'prior_day_outcomes_used_for_causal_player_state':True,'same_day_target_outcomes_used_for_features':False,
       'production_policy_modified':False,'v96_used_as_production_signal':False,'train_rows':train_rows,'train_head4_rate':train_rate,
       'aug_all_rows':int(len(pred)),'cohort_rows':n,'cohort_head4_wins':wins,'cohort_head4_rate':float(wins/n) if n else None,
-      'post_s_pass':int(b.post_s_pass.sum()),'env_s_pass':int(b.env_s_pass.sum()),'shadow_s_downstream_pass':int(b.shadow_s_downstream_pass.sum()),
-      'shadow_a_downstream_pass_bypassing_pre_floor_only':int(b.shadow_a_downstream_pass.sum()),
+      'downstream_reconstructed_rows':recon,'downstream_missing_rows':int(n-recon),'downstream_missing_race_codes':missing_codes,
+      'downstream_coverage_note':'ENV/A diagnostics are reported only where the archived historical safe-feature lineage has a row; missing rows are not imputed or fabricated.',
+      'post_s_pass':int(b.post_s_pass.sum()),'env_s_pass_reconstructed_only':int(b.env_s_pass.sum()),
+      'shadow_s_downstream_pass_reconstructed_only':int(b.shadow_s_downstream_pass.sum()),
+      'shadow_a_downstream_pass_bypassing_pre_floor_reconstructed_only':int(b.shadow_a_downstream_pass.sum()),
       'mapped_a_score_cut':acut,'betting_metrics_status':'NOT_COMPUTED_EXACT_PREDEADLINE_ODDS_LINEAGE_NOT_PROVEN_IN_THIS_RUN',
       'varn_n_status':'NOT_COMPUTED_EXACT_PREDEADLINE_ODDS_LINEAGE_NOT_PROVEN_IN_THIS_RUN',
-      'PRE_stats':stats(b.PRE),'POST_stats':stats(b.POST),'ENV_ENTRY_stats':stats(b.ENV_ENTRY),'A_SCORE_LIVE_stats':stats(b.A_SCORE_LIVE),
+      'PRE_stats':stats(b.PRE),'POST_stats':stats(b.POST),'ENV_ENTRY_stats_reconstructed_only':stats(b.ENV_ENTRY),'A_SCORE_LIVE_stats_reconstructed_only':stats(b.A_SCORE_LIVE),
     }
     AUDIT.write_text(json.dumps(audit,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     L=['# HEAD4 August 2026 PRE 0.03-0.05 shadow cohort','',
@@ -157,16 +154,17 @@ def main():
        '- Frozen fit labels end at **2026-06-30**; July/August outcomes are not used for fitting/tuning.',
        '- Prior-day outcomes update causal player-history state only; same-day target outcomes do not enter features.',
        '- Cohort is fixed only by inclusive `0.03 <= PRE <= 0.05` before outcome join.',
-       f'- August all frozen-PRE rows: **{len(pred)}**',f'- Cohort: **{n}R**',f'- 4-head wins: **{wins}/{n} ({(100*wins/n if n else 0):.2f}%)**','',
-       '## Frozen downstream shadow diagnostics',
-       f'- POST >= {POST_S:.2f}: **{int(b.post_s_pass.sum())}R**',f'- ENV_ENTRY >= {ENV_S:.6f}: **{int(b.env_s_pass.sum())}R**',
-       f'- Both S downstream gates (PRE floor intentionally bypassed): **{int(b.shadow_s_downstream_pass.sum())}R**',
-       f'- A downstream gates POST >= {POST_A:.2f} and mapped A_SCORE >= {acut:.6f} (PRE floor intentionally bypassed): **{int(b.shadow_a_downstream_pass.sum())}R**','',
+       f'- August all frozen-PRE rows: **{len(pred)}**',f'- Cohort: **{n}R**',f'- 4-head wins: **{wins}/{n} ({(100*wins/n if n else 0):.2f}%)**',
+       f'- ENV/A historical-safe reconstruction coverage: **{recon}/{n}R**; missing rows are left missing, never imputed/fabricated.','',
+       '## Frozen downstream shadow diagnostics',f'- POST >= {POST_S:.2f}: **{int(b.post_s_pass.sum())}R** (POST is available for the full PRE cohort)',
+       f'- ENV_ENTRY >= {ENV_S:.6f}: **{int(b.env_s_pass.sum())}R** among reconstructed rows',
+       f'- Both S downstream gates, PRE floor intentionally bypassed: **{int(b.shadow_s_downstream_pass.sum())}R** among reconstructed rows',
+       f'- A downstream gates POST >= {POST_A:.2f} and mapped A_SCORE >= {acut:.6f}, PRE floor intentionally bypassed: **{int(b.shadow_a_downstream_pass.sum())}R** among reconstructed rows','',
        '## Score distributions','|score|n|min|p25|median|p75|max|mean|','|---|---:|---:|---:|---:|---:|---:|---:|']
-    for name in ['PRE','POST','ENV_ENTRY','A_SCORE_LIVE']:
-        x=audit[name+'_stats'];L.append(f"|{name}|{x.get('n',0)}|{x.get('min',float('nan')):.6f}|{x.get('p25',float('nan')):.6f}|{x.get('median',float('nan')):.6f}|{x.get('p75',float('nan')):.6f}|{x.get('max',float('nan')):.6f}|{x.get('mean',float('nan')):.6f}|")
-    L += ['','## Betting/VARN','- Not computed in this run. Exact historical **pre-deadline** 120-way trifecta odds lineage must be proven before ROI, payout, or VARN N is reported. No post-hoc/closing substitute is allowed.','',
-          '## Interpretation','- Because the frozen production A floor is PRE >= 0.18 and S floor is PRE >= 0.28, this 0.03-0.05 cohort has **0 production bets by construction**.','- These diagnostics may describe the shadow cohort but must not be used to tune/promote thresholds from August outcomes.']
+    dist={'PRE':audit['PRE_stats'],'POST':audit['POST_stats'],'ENV_ENTRY':audit['ENV_ENTRY_stats_reconstructed_only'],'A_SCORE_LIVE':audit['A_SCORE_LIVE_stats_reconstructed_only']}
+    for name,x in dist.items():L.append(f"|{name}|{x.get('n',0)}|{x.get('min',float('nan')):.6f}|{x.get('p25',float('nan')):.6f}|{x.get('median',float('nan')):.6f}|{x.get('p75',float('nan')):.6f}|{x.get('max',float('nan')):.6f}|{x.get('mean',float('nan')):.6f}|")
+    L += ['','## Betting/VARN','- Not computed. Exact historical **pre-deadline** 120-way trifecta odds lineage is not proven for August in the current repository; no closing/post-hoc substitute is allowed.','',
+          '## Interpretation','- Frozen production A floor is PRE >= 0.18 and S floor is PRE >= 0.28, so this 0.03-0.05 cohort has **0 production bets by construction**.','- August outcomes are descriptive only and must not be used to tune/promote thresholds.']
     SUMMARY.write_text('\n'.join(L)+'\n',encoding='utf-8');print(SUMMARY.read_text(encoding='utf-8'))
 
 if __name__=='__main__':main()
