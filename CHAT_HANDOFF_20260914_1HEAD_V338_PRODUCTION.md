@@ -3,6 +3,89 @@
 作成日: 2026-09-14
 repo: merry02180218-ai/boatrace-backtest
 
+## 2026-09-14 v339 作業完了記録 — 0.78周辺局所安定性
+- 正式productionは変更なし: `1HEAD_PRODUCTION_20260914_HEAD078`
+  - HEAD/PRE cutoff = `0.78`
+  - exhibition = v332 `ATTACK_ENV_SOFT`, env_w=0.1, q=0.65
+  - SECOND = v317 `OUTER_L2_1`
+  - THIRD = v318 `DROPSTART_T0.1`
+  - 3-ticket = v320 `HYBRID alpha=.70`
+- September 2026 outcomesは今回も `UNREAD`。結果ファイルを開かず、評価月はFeb-Aug 2026のみ。
+- 実装commit: `8ea5ffaca30777c27d030bcf02427a9293d8345a`
+  - `run_v339_1head_cutoff_local_stability.py`
+- workflow commit: `e278593c0dad727bd015bf2df5f5be5578b2f6a7`
+  - `.github/workflows/v339-1head-cutoff-local-stability.yml`
+- GitHub Actions Run: `34787687379`
+  - prepare Job `103806049754`
+  - この引き継ぎ更新時点ではprepareの既存Jul/Aug NON-PRISTINE cache再構築が `in_progress`。次回最初にrunの最終status/job/artifactを確認すること。
+- Run完了待ちと独立に、修復済みv337 Run `34782769446` / Artifact `10325922020` の `analysis_v337_candidate_exhibition.csv` を、現行v332 `ATTACK_ENV_SOFT env_w=.1 q=.65` のleave-one-month手順で再計算した。0.78 production controlがmetricとrace identity SHA256の両方で完全一致したため、以下の局所比較値は再現済み。
+
+### production identity control
+- cutoff 0.7800
+- PRE 1114R
+- PASS 276R
+- head 241/276 = 87.32%
+- exact3 119/276 = 43.12%
+- SHA256 `89e0b32c3ffbed6212f98f0a9b2e230717b8e41010019e3321fb49e70148ba73`
+- top venue share 10.51%
+- venue HHI 0.0650
+
+### v339 local cutoff sweep
+- 0.7850: PRE 949 / PASS 240 / head 211 = 87.92% / exact3 100 = 41.67% / top venue 10.83% / HHI 0.0637
+- 0.7825: PRE 1036 / PASS 254 / head 221 = 87.01% / exact3 109 = 42.91% / top venue 11.02% / HHI 0.0657
+- 0.7800: PRE 1114 / PASS 276 / head 241 = 87.32% / exact3 119 = 43.12% / top venue 10.51% / HHI 0.0650
+- 0.7775: PRE 1197 / PASS 295 / head 253 = 85.76% / exact3 126 = 42.71% / top venue 10.51% / HHI 0.0648
+- 0.7750: PRE 1265 / PASS 314 / head 268 = 85.35% / exact3 135 = 42.99% / top venue 11.15% / HHI 0.0651
+
+### 0.78に対するrace-level差分 / incremental quality
+注意: exhibition thresholdは各cutoffのtraining populationから再fitされるため、cutoffを上げてもfinal PASSは0.78 PASSの単純subsetにはならない。
+
+- 0.7850 vs 0.7800:
+  - +11R: head 10/11 = 90.91%, exact3 5/11 = 45.45%
+  - -47R: head 40/47 = 85.11%, exact3 24/47 = 51.06%
+  - net PASS -36R、頭率は+0.60ppだがexact3は-1.45pp。volumeも大きく落ちる。
+- 0.7825 vs 0.7800:
+  - +1R: head 1/1 = 100%, exact3 1/1 = 100%
+  - -23R: head 21/23 = 91.30%, exact3 11/23 = 47.83%
+  - net PASS -22Rで、頭率87.01%・exact3 42.91%とも0.78を上回らない。
+- 0.7775 vs 0.7800:
+  - +26R: head 19/26 = 73.08%, exact3 10/26 = 38.46%
+  - -7R: head 7/7 = 100%, exact3 3/7 = 42.86%
+  - 0.78直下で明確に質が悪化。頭率85.76%。
+- 0.7750 vs 0.7800:
+  - +39R: head 28/39 = 71.79%, exact3 17/39 = 43.59%
+  - -1R: head 1/1 = 100%, exact3 1/1 = 100%
+  - 頭率85.35%まで悪化。
+
+### 月別頭率
+0.7850:
+- Feb 90.48 / Mar 85.00 / Apr 92.31 / May 84.13 / Jun 89.80 / Jul 94.44 / Aug 83.33
+
+0.7825:
+- Feb 85.00 / Mar 88.89 / Apr 86.36 / May 83.61 / Jun 90.20 / Jul 90.00 / Aug 87.10
+
+0.7800:
+- Feb 86.96 / Mar 90.63 / Apr 85.42 / May 84.38 / Jun 88.68 / Jul 90.48 / Aug 88.57
+
+0.7775:
+- Feb 88.46 / Mar 83.78 / Apr 82.35 / May 82.09 / Jun 88.00 / Jul 92.00 / Aug 89.74
+
+0.7750:
+- Feb 86.67 / Mar 81.58 / Apr 83.02 / May 81.94 / Jun 88.89 / Jul 92.31 / Aug 87.80
+
+### v339結論
+- 0.78直下の `0.7775 / 0.7750` は追加raceの頭質が73.08% / 71.79%と明確に悪く、0.78に局所的な下限cliffがある。
+- 0.7850は頭率だけなら87.92%で0.78の87.32%より+0.60ppだが、PASSは276→240へ減り、exact3は43.12→41.67%へ悪化。月別でもAug 83.33%まで落ちるため、総合的に0.78を置き換える根拠はない。
+- 0.7825も0.78を上回らない。
+- 場集中度は全候補でtop venue約10.5〜11.1%、HHI約0.064〜0.066で大差なし。
+- よって正式production `HEAD 0.78 / v332 q=.65` を維持する。
+
+### 次の再開地点
+1. まず Actions Run `34787687379` の最終statusを確認し、audit Job ID / final Artifact ID / summary_v339をこの引き継ぎへ追記する。control identityが不一致なら研究結果よりidentity修復を優先する。
+2. controlが一致すれば、HEAD 0.78は固定したまま `exact3 43.12%` 改善を優先。SECOND/THIRD/3-ticket側のrace-level改善候補を比較する。
+3. 並行候補としてproduction 276Rに1レース1万円Dutch・合成オッズ基準ROIを適用。ただし9月outcomeはUNREADのまま。
+4. 追加180Rの失敗race分類を行う場合も、結果リークしない事前/展示特徴だけで設計し、小標本の後付け除外は禁止。
+
 ## 2026-09-14 今回の作業開始記録（v339）
 - 作業開始時のGitHub最新HEAD: `c9b07cf97f79669c75dec8c1e86bdea1d74a47cf`
 - 正式productionは変更しない: `1HEAD_PRODUCTION_20260914_HEAD078`
