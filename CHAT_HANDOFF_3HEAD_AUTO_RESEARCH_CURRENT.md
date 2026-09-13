@@ -27,7 +27,18 @@
 - Partial 296R metrics are diagnostic only and must NOT be treated as valid parity result: Apr106R ROI107.446%; May102R ROI64.874%; Jun88R ROI33.461%; Apr-Jun ROI70.780%/-864,900; conversion42.742%; v288 overlap0.
 - Recovery rule: investigate only technical/source recovery for those 9R. Do not impute or change model/order criteria. If exact required pre-deadline fields cannot be recovered, keep fail-closed and record blocker; do not substitute an unaudited orderer.
 
+## Wave36S-F two-layer opponent allocation — STARTING
+- User requested a Wave36-specific opponent-selection study after examining both the strong 10–20x hit band and the 50x+ hits.
+- Preserve Wave36 head-selection logic and exact v288 exclusion; do not alter production v288.
+- Design target: two-layer ticket allocation with mainline Top1–3 and retained longshot Top4–5 rather than trimming all lower-ranked opponents.
+- Critical observation to test: 10–20x winners are concentrated in higher-ranked opponent combinations, while 50x+ winners disproportionately survive in ranks 3–5; therefore Top4–5 must be evaluated as a small-stake longshot layer rather than discarded.
+- Selection/tuning discipline: derive and freeze any ranking/allocation thresholds from Feb training + March OOS only. Do not use Apr–Jun payout/ROI for tuning. Jul/Aug remain NON-PRISTINE diagnostics only. September forbidden/unread.
+- Evaluate Apr/May/Jun separately and aggregate with actual JPY10,000 per bet, exact stake accounting, ticket hits, head hits, conversion, ROI, profit, max drawdown, hit-odds distribution, and 50x+ capture/return contribution.
+- Explicitly report whether the two-layer design preserves the 50x+ winners that drive tail profit while improving the 10–20x core.
+- If no robust OOS improvement, NO_ADOPTION.
+
 ## Exact restart point
-1. Inspect Wave36S-D script and the 9 missing/invalid races to identify whether fetch/parsing/source plumbing caused the parity gap.
-2. If recoverable without imputation/model changes, fix plumbing and rerun exact parity automatically.
-3. If not recoverable, record exact missing fields/source blocker and stop this exact-parity branch while preserving Wave36S-C candidate.
+1. Build Wave36S-F research script from the frozen Wave36 dataset/artifact and only pre-April design information.
+2. Freeze mainline/longshot allocation from Feb + March only; no Apr-Jun tuning.
+3. Run Apr-Jun pristine evaluation, then Jul/Aug NON-PRISTINE diagnostics if available without violating source parity.
+4. Record exact CI/run/artifact IDs, monthly/aggregate metrics, 10–20x and 50x+ contributions, v288 overlap0, September guard, and adoption/no-adoption.
