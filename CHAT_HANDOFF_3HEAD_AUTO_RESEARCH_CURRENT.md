@@ -41,15 +41,18 @@
 - Decision: NO_ADOPTION.
 - Interpretation: broad selection buys too many races. Next family must deliberately target sparse, high-confidence 3-head opportunities.
 
-## Wave33 — NEXT sparse high-confidence corrected-scope family
+## Wave33 — RUNNING sparse high-confidence corrected-scope family
+- Script `research_v289_3head_wave33_sparse_confidence.py`, commit `ba6adcd1e75899bd18bda4d235036b0f47aabd49`.
+- Workflow `.github/workflows/research-3head-wave33-sparse-confidence.yml`, commit `1defbf2423028277668ca03e61904a9cc2dbc800`.
+- Run `34767681917` is in progress.
 - Goal: sharply reduce race count and test whether only the strongest 3-head signals can clear profitability.
-- Keep corrected full-population-minus-exact-94 scope, 63 leak-free static features, pre-April model selection, Jul/Aug shadow only, September forbidden, closing odds staking-only, JPY10k Dutch.
-- Use nonlinear head probability plus exact-order concentration and freeze March-derived high-confidence cutoffs before Apr-Jun evaluation.
-- March selection must require a meaningful sample floor but explicitly allow a sparse candidate set; do not optimize Jul/Aug.
+- Family: HistGradientBoosting P(3-head) + conditional ExtraTrees exact-order model; use March-derived high quantiles of head probability and exact-order concentration as frozen sparse gates.
+- March candidates restricted to 30..250R; top3/top5/top7 tested. Apr-Jun untouched walk-forward evaluation; Jul-Aug frozen NON-PRISTINE shadow only.
+- Corrected full-population-minus-exact-94 scope, 63 leak-free static features, September forbidden, closing odds staking-only, JPY10k Dutch.
 
 ## Exact restart point
-1. Implement and launch Wave33 sparse high-confidence family.
+1. Inspect Run `34767681917` first.
 2. If failed, inspect logs, fix automatically, rerun without weakening guards.
-3. If success, record March gates; Apr-Jun R/hits/ROI/profit/monthly/min month/red months/max DD; Jul-Aug shadow; exact v288 overlap; combined baseline.
+3. If success, record March sparse gates; Apr-Jun R/hits/ROI/profit/monthly/min month/red months/max DD; Jul-Aug shadow; exact v288 overlap; combined baseline.
 4. Adoption status uses pristine Apr-Jun only. Jul/Aug cannot rescue a weak result.
 5. If NO_ADOPTION, automatically continue with another genuinely distinct corrected-scope leak-free full-population family.
