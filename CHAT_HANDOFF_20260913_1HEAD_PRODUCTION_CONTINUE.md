@@ -129,4 +129,22 @@ B. Current 2026-09-13 execution must:
 
 C. Dedicated GitHub Actions workflow must actually run. Record a real Run ID and inspect job status/logs/artifact. If it fails, BEFORE changing code/workflow append the exact intended fix as WORK UNIT 3 (or later) here, then fix and rerun.
 
-If interrupted now: resume by creating `run_v323_1head_frozen_live_adapter.py` first, then its workflow. Do not redo research or change the frozen model.
+## WORK UNIT 2026-09-13-3 — fix v323 temporal OOF training frame — written BEFORE changes
+Run **34756701468** executed the real workflow. Input download succeeded and v321 prepare succeeded. v323 regression assertion also passed exactly **345 / 290 / 139**, with frozen hcut **0.8073405637**. Failure occurred before current head scores: `RuntimeError: no temporal OOF` in `v293.oof()`.
+
+Root cause: v321 `cache_v321_julaug_nonpristine_head.csv` intentionally contains only the Jul/Aug validation/test rows (9641 rows), not the full historical head-feature frame needed to fit/calibrate a September final model. The v321 prepare process already constructs `hd` with **45103 rows / 403 columns** before narrowing outputs, so the needed causal training frame exists in memory but is not persisted.
+
+### Exact fix now
+1. Modify `run_v321_1head_julaug_nonpristine_validation.py` **only to additionally persist** its already-built full causal `hd` frame as `cache_v321_julaug_nonpristine_head_full.csv.gz`. Do not change any v321 predictions, thresholds, selection, or validation metrics.
+2. Modify `run_v323_1head_frozen_live_adapter.py` to use that full cache for September head training/OOF; still reject any September row in the training cache.
+3. Modify `.github/workflows/live-1head-v323-20260913.yml` to require the full cache after prepare. Keep the same result-blind input and frozen model rules.
+4. Re-run via the workflow push and verify a new real Run ID.
+
+### Success criteria for this fix
+- v321 prepare still succeeds and its original outputs are unchanged in semantics.
+- full head cache has historical rows through Aug31 and **zero September rows**.
+- v323 historical assertion remains 345/290/139 and hcut remains 0.8073405637.
+- temporal OOF is successfully created; current 9/13 head scoring proceeds to opponent/ticket stages.
+- If a new failure appears after this point, record WORK UNIT 4 before any further code change.
+
+If interrupted now: persist the full v321 head frame, point v323 at it, update workflow test, then inspect the newly triggered Run.
