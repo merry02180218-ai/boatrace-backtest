@@ -50,19 +50,30 @@
 - Baseline + pristine: **214R / ROI 129.201% / profit +624,900 yen**.
 - Decision: **NO_ADOPTION**. Do not tune K/PCA/threshold on Jul-Aug to rescue it.
 
-## Wave25 — RUNNING latent regime cluster family
-- Script commit `c6c3020121ad10f5a8e39c249742f25e8f47764e`: `research_v289_3head_wave25_regime_cluster.py`.
-- Workflow commit `9067353322e0549042df80dde64b706093a6c2f8`: `.github/workflows/research-3head-wave25-regime.yml`.
-- Current Run: **`34757888935`**, workflow `research-3head-wave25-regime`, latest launch state **queued**.
-- Distinct family: pre-deadline features -> median impute -> StandardScaler -> PCA 12 -> KMeans 24 latent regimes; prediction is smoothed prior-data 3-head frequency of assigned regime.
+## Wave25 — FINAL latent regime cluster
+- Run `34757888935`, workflow `research-3head-wave25-regime`: success; artifact `3head-wave25-regime-cluster`, ID `10317569451`.
+- Distinct family: pre-deadline features -> median impute -> StandardScaler -> PCA 12 -> KMeans 24 latent regimes; smoothed prior-data 3-head rate per regime.
+- Source **30,746R**; legacy overlap **0**; chosen threshold **0.12**.
+- Pristine Apr-Jun: **5,427R / 962 hits / stake 54,270,000 / payout 38,369,190 / ROI 70.701% / profit -15,900,810 yen**.
+- Monthly: Apr 1,887R / 309 hits / ROI 67.691% / -6,096,740; May 1,799R / 327 hits / ROI 71.962% / -5,044,030; Jun 1,741R / 326 hits / ROI 72.659% / -4,760,040.
+- min month **67.691%**; red months **3**; max DD **15,890,810 yen**.
+- Jul-Aug NON-PRISTINE shadow: **4,102R / 773 hits / ROI 73.452% / profit -10,890,140 yen**. Jul 74.945%; Aug 71.956%.
+- Baseline + pristine: **5,521R / ROI 72.435% / profit -15,218,740 yen**.
+- Decision: **NO_ADOPTION**.
+
+## Wave26 — RUNNING conditional exact-order softmax
+- Script commit `ad16968a96869ba88fe6707cfebefe84b4b8ed9b`: `research_v289_3head_wave26_exactorder_softmax.py`.
+- Workflow commit `2761d402e1619abea4c4475a46e972908fd17981`: `.github/workflows/research-3head-wave26-exactorder.yml`.
+- Current Run: **`34759822824`**, workflow `research-3head-wave26-exactorder`, latest launch state **queued**.
+- Distinct family: 21-class multinomial softmax predicts `OTHER` vs each of the 20 exact 3-head trifecta orders using pre-deadline features only.
+- Ticket ranking is model probability only. Candidate variants jointly choose p3 threshold and top-K ticket count on Apr-Jun only; closing odds are used after selection only for JPY10,000 Dutch settlement.
 - Same conservative old-v243 678R exclusion guarantees legacy overlap=0.
-- Apr/May/Jun prior-only walk-forward; threshold selection Apr-Jun only; Jul/Aug frozen NON-PRISTINE shadow.
-- Closing odds and settlement remain post-selection only; JPY10,000/race all-20 Dutch.
+- Apr/May/Jun prior-only walk-forward; Jul/Aug frozen NON-PRISTINE shadow; September forbidden.
 - Strict decision: SHADOW_CANDIDATE only if pristine ROI >= 172.560638% and zero red pristine months; else NO_ADOPTION.
 
 ## Exact restart point
-1. Inspect Run `34757888935` first.
+1. Inspect Run `34759822824` first.
 2. If failed, inspect logs, fix, rerun automatically without weakening date/no-leakage/zero-overlap guards.
-3. If success, record exact Wave25 pristine and NON-PRISTINE shadow metrics, artifact ID, overlap and combined baseline.
-4. If Wave25 is `NO_ADOPTION`, continue another genuinely distinct family (opponent-ticket rerank / conditional exact-order model), not threshold loosening.
+3. If success, record exact Wave26 pristine and NON-PRISTINE shadow metrics, artifact ID, overlap and combined baseline.
+4. If Wave26 is `NO_ADOPTION`, continue another genuinely distinct family, not threshold loosening.
 5. If `SHADOW_CANDIDATE`, do not replace v288 automatically; validate separately.
