@@ -30,45 +30,47 @@ v315 pairwise, result `2419b4e2887b47a6d64f9a4e2339ce1c15b760e1`: SECOND TOP2 72
 
 v316 multiclass, result `56fa0eba373f9a512ce68634beaaf91346add9d7`: SECOND TOP2 72.76%, outer 27.59%, exact3 136/345, worst month 66.67%; stable but weak, 5/6 unresolved.
 
-## v317 completed — error-driven causal SECOND features
-Workflow run **34724618109** completed successfully. Result commit pushed by workflow after rebase (log shows main advanced to `397d4ac...`). Summary `summary_v317_1head_opponent_error_features.md`.
-- Frozen **345R / 290 head hits** confirmed.
-- Best **OUTER_L2_1**: SECOND TOP2 **72.76%**, outer456 **28.74%**, exact3 **137/345=39.71%**, worst-month SECOND TOP2 **66.67%**.
-- By actual SECOND: boat2 97.37%, boat3 84.27%, boat4 45.24%, boat5 18.75%, boat6 0%.
-- Monthly TOP2: Feb 70.59, Mar 66.67, Apr 79.17, May 75.25, Jun 68.00%.
-- BOAT56 variants could recover boat6 to 15.38% and outer456 to 29.89%, but overall TOP2 fell to 72.07% and exact3 did not improve, so not selected.
-Decision: overall SECOND TOP2 did not improve beyond the <=0.5pp saturation rule. Safe SECOND model classes are sufficiently saturated; move target to conditional THIRD rather than micro-tune SECOND.
+v317 error-driven causal features: best OUTER_L2_1 SECOND TOP2 **72.76%**, outer456 **28.74%**, exact3 **137/345=39.71%**, worst month 66.67%. SECOND declared sufficiently saturated.
 
-## v318 CURRENT — conditional THIRD rebuild
+## v318 completed — conditional THIRD rebuild
+Summary `summary_v318_1head_opponent_third_rebuild.md`; result commit `39f84acadb9dc03fe68dba427795485e93548bba`.
+- Frozen **345R / 290 head hits** confirmed.
+- SECOND fixed to v317 OUTER_L2_1.
+- Baseline THIRD TOP2 **72.76%**, exact3 **137/345=39.71%**.
+- Best **DROPSTART_T0.1**: THIRD TOP2 **72.76%**, TOP1 **40.34%**, TOP3 **92.07%**, exact3 **137/345=39.71%**, worst-month THIRD TOP2 **68.32%**.
+- Monthly THIRD TOP2: Feb 74.51, Mar 73.33, Apr 83.33, May 68.32, Jun 70.67%.
+Decision: no material THIRD gain. Per automatic branch rules, move to direct 20 ordered `(second,third)` pair modeling.
+
+## v319 CURRENT — direct ordered-pair model
 Files:
-- `run_v318_1head_opponent_third_rebuild.py`
-- `.github/workflows/research-20260913-v318-third-rebuild.yml`
-Implementation commit **`06c03db1cc4ec67aed86f34ce26ac54477a6c354`**; workflow commit **`2be175120b73e400e09bcbe919062be60559dcd8`**.
+- `run_v319_1head_opponent_ordered_pair.py`
+- `.github/workflows/research-20260913-v319-ordered-pair.yml`
+Implementation commit **`38da1f80650533866e34a58eb61bc9342459e87c`**; workflow commit **`f0534370337e8ad292a2d1dd4c23ae08d25d920e`**.
 
 Design:
 - fixed 345R/290 head hits; v313 cache only; no `meet_*`; no future backfill; month M trains only before M.
-- SECOND fixed to v317 **OUTER_L2_1** so changes are attributable to THIRD.
-- Rebuild conditional THIRD using ALL / DROP_START / COMPACT safe feature formulations and L2 grid.
-- Report conditional THIRD TOP1/TOP2/TOP3, exact3, monthly/worst-month while retaining full 345 exact denominator.
+- Directly fit one 20-candidate listwise model per race over all ordered `(SECOND,THIRD)` pairs.
+- Test ALL / DROP_START / COMPACT leak-safe feature formulations and L2 grid.
+- Top 3 direct pair probabilities form the exact-3-ticket candidate set.
+- Compare against factorized v317 SECOND + v318 THIRD reference exact3 **137/345=39.71%**, including monthly/worst-month stability.
 - Feb-Jun development only; Jul/Aug NON-PRISTINE; September unread.
-- Workflow file creation should trigger v318. Fresh check must inspect newest v318 run first.
+- Workflow creation triggers v319; fresh check must inspect newest v319 run first.
 
 ## Automatic branch sequence
-1. SECOND family/gating/role/pairwise/multiclass/error-feature research v311-v317 — completed; saturated enough.
-2. **v318 conditional THIRD rebuild — CURRENT.**
-3. If v318 THIRD gain is weak/unstable, implement direct **20 ordered `(second,third)` pair model** using only leak-safe cached/pre-race features.
-4. If v318 materially improves THIRD, preserve it and still compare factorized SECOND×THIRD against direct ordered-pair.
-5. Once ranking/probability model stabilizes, optimize exactly-3-ticket policy.
+1. SECOND family/gating/role/pairwise/multiclass/error-feature research v311-v317 — completed; saturated.
+2. v318 conditional THIRD rebuild — completed, flat.
+3. **v319 direct 20 ordered `(second,third)` pair model — CURRENT.**
+4. If ordered-pair materially improves stable exact3, retain it as ranking reference; otherwise retain stronger factorized reference.
+5. Then optimize exactly-3-ticket policy using the stronger stabilized probability/ranking model without changing the 345R cohort.
 6. Suspicious large gain -> immediate leakage/causal audit.
 
 ## Required metrics
 - exact3 on full 345 denominator
-- SECOND TOP1/TOP2/TOP3 on 290 head-win races
-- conditional THIRD TOP1/TOP2/TOP3
-- by actual SECOND/route where relevant
-- outer456 capture
+- SECOND TOP1/TOP2/TOP3 when factorized branch is evaluated
+- conditional THIRD TOP1/TOP2/TOP3 when factorized branch is evaluated
+- direct pair TOP1/TOP2/TOP3/TOP5 for ordered-pair branch
 - monthly breakdown and worst month
-- delta vs clean/base formulation.
+- delta vs clean/factorized reference.
 
 ## Self-continuing rule
-A failed/flat experiment is diagnostic evidence, not a stopping condition. If research is stopped and the next leak-safe branch is clear, implement/start it automatically and update this handoff. Do not merely report stopped state. If v318 completes, record results here and automatically move to direct ordered-pair if warranted.
+A failed/flat experiment is diagnostic evidence, not a stopping condition. If research is stopped and the next leak-safe branch is clear, implement/start it automatically and update this handoff. Do not merely report stopped state. If v319 completes, record results here and automatically move to exact-3-ticket policy optimization using whichever ranking reference is stronger and stable.
