@@ -89,54 +89,74 @@ Run 34767480326 SUCCESS. ALL R345/head290/exact3 139. June R92/head75/exact3 32.
 
 ---
 
-# 7. v329 3-head/4-head architecture audit — COMPLETE
-Transferred architecture only: frozen PRE -> multiple current-exhibition dimensions -> core POST + opponent/environment stage -> S/A/B routes -> route-specific raw readiness/fail-closed. Head-specific 3/4 thresholds were not copied.
-
----
-
-# 8. v329 multistage exhibition judgement — COMPLETE / REPORTED
-Implementation commit `c21b058773138c7a9148e4b3a05b68474a741621`; workflow commit `b69b2ac9b078604ee6eb056e8afd44900efd70d3`; retrigger commit `71a46a174563d97b98630042bbb74eeec5dc2976`.
-Actions Run **34771215699** SUCCESS, Job **103761044413**, Artifact **10322321569**, artifact SHA256 `6d61c88386ff54ab443c03b36b0f034da7fbac0298185bb722d0ee0d383cb2f9`.
-Frozen identity remained 345/290/139; tickets unchanged; September outcomes unread.
+# 7. v329 multistage exhibition judgement — COMPLETE / REPORTED
+Architecture transferred from 3-head/4-head: frozen PRE -> multiple current-exhibition dimensions -> POST core + opponent/environment stage -> S/A/B routes -> fail-closed readiness.
+Implementation commit `c21b058773138c7a9148e4b3a05b68474a741621`; workflow `b69b2ac9b078604ee6eb056e8afd44900efd70d3`; retrigger `71a46a174563d97b98630042bbb74eeec5dc2976`.
+Run **34771215699** SUCCESS, Job **103761044413**, Artifact **10322321569**, SHA256 `6d61c88386ff54ab443c03b36b0f034da7fbac0298185bb722d0ee0d383cb2f9`.
 Frozen config: attack_q=.55, turn_q=.55, env_q=.60, bcore_q=.90, benv_q=.40.
-Fixed thresholds from discovery: attack `0.6453333333333333`; turn `0.5980000000000001`; env `-0.29666666666666663`; bcore `0.8973333333333333`; benv `-0.37666666666666665`.
-Feb-Apr PASS 25R / 12 exact3 = 48.00%, head22/25=88.00%.
-May PASS 24R / 10 exact3 = 41.67%, head21/24=87.50%.
-June baseline 92R / 32 exact3 = 34.78%, head75/92=81.52%.
-June PASS **17R / 8 exact3 = 47.06%, head16/17=94.12%**; SKIP 75R / 24 exact3=32.00%.
-June S grade 14R / 8 exact3=57.14%, head13/14=92.86%; A grade 3R / 0 exact3; B 0R.
-`FORWARD_SUPPORTED=True`, `PROMOTE=True` under v329's predeclared criterion.
-User caveat: 17/92 June PASS may be too selective; longer-period robustness/volume test required before practical production use.
+Frozen thresholds: attack `0.6453333333333333`; turn `0.5980000000000001`; env `-0.29666666666666663`; bcore `0.8973333333333333`; benv `-0.37666666666666665`.
+Feb-Apr PASS 25R/12 exact3=48.00%, head22/25=88.00%.
+May PASS 24R/10=41.67%, head21/24=87.50%.
+June baseline 92R/32=34.78%, head75/92=81.52%.
+June PASS **17R/8=47.06%, head16/17=94.12%**; SKIP 75R/24=32.00%.
+June S 14R/8=57.14%, head13/14=92.86%; A 3R/0; B 0R.
+`FORWARD_SUPPORTED=True`, `PROMOTE=True` under v329 criterion, but user flagged severe selectivity.
 
 ---
 
-# 9. Work Unit 6D-A — v330 period-extension source audit — COMPLETE
-Audit findings recorded before v330 code:
-1. `analyze_v294_1head_verified_prepost_research.py` has `START=2025-11-01`, but formal walk-forward `TEST_MONTHS` are only **2026-02..2026-06**. Nov-Jan are warm-up/training lineage, not an existing comparable frozen evaluation cohort.
-2. `run_v308_1head_volume_opponent_joint.py` inherits those same TEST_MONTHS.
-3. `run_v326_1head_ticketaware_exhibition.py` and v329 hard-code the frozen v320 345-row Feb-Jun identity, so an earlier Jan-or-before extension would require rebuilding/redefining the full PRE/opponent evaluation design rather than simply applying the same frozen rule.
-4. A directly comparable later frozen-stack cohort already exists from v321: `analysis_v321_1head_julaug_nonpristine_validation_race.csv`, exactly **55 rows / head45 / exact3 21**, split Jul13 and Aug42. It was reconstructed month-by-month using the frozen v308 head gate, v317 SECOND, v318 THIRD and v320 HYBRID tickets with month M trained only on <M.
-5. Jul/Aug are NON-PRISTINE because their outcomes were exposed previously, so they can only be a **fixed-rule stress/volume reference**; they cannot tune thresholds or promote a model. September remains unread.
+# 8. v330 period-extension source audit — COMPLETE
+- Formal frozen v308/v320 walk-forward evaluation exists only for Feb-Jun; pre-Feb is warm-up/training lineage and not a directly comparable frozen test cohort.
+- v321 provides a directly comparable frozen-stack Jul/Aug cohort: exactly 55R/head45/exact3 21, reconstructed month-by-month with v308/v317/v318/v320 and train `<M`.
+- Because Jul/Aug outcomes were previously exposed, v330 treats them as NON-PRISTINE fixed-rule robustness/volume reference only. No tuning/promotion. September remains unread.
 
-Revised v330 design now frozen before implementation:
-- load the v321 55-row Jul/Aug frozen-stack cohort and assert 55/head45/exact3=21 before exhibition filtering;
-- recreate same-race exhibition features with the v326 audited raw-readiness + `corrected_direct` path and prior-day-only ST bias, preloading from 2025-10-01;
-- use v329 formulas and the exact already-frozen numeric thresholds above; **no quantiles/grid/refit/threshold change**;
-- grade S -> A -> B with exactly the v329 precedence and fail-closed route readiness;
-- report July, August, Jul+Aug baseline/readiness/PASS/SKIP/S-A-B, PASS fraction, head rate, exact3 rate, unique selected days and practical PASS volume;
-- also report descriptive Feb-Jun vs Jul/Aug and Feb-Aug totals, while keeping the NON-PRISTINE caveat explicit.
+---
 
-Success criteria:
-- base reconciliation exactly 55/head45/exact3=21;
-- no September result access;
-- frozen v329 thresholds unchanged;
-- Jul/Aug exhibition feature generation completes causally with missing-source routes failing closed;
-- enough output to judge whether v329's ~19% Feb-Jun PASS share and June 17/92 selectivity are stable or an artifact.
+# 9. v330 extended v329 robustness/volume audit — COMPLETE / ABOUT TO REPORT
+Pre-work handoff commit: `c8a9b5d961e66ce0902789857a55d4cec6b72736`.
+Implementation: `run_v330_1head_extended_v329_reference.py`, commit `7c63e199f2e8fc02e87f38b2d0150dcd42176759`.
+Workflow: `.github/workflows/v330-1head-extended-v329-reference.yml`, commit `e9df21bc1d714a0c2bea24de5aa7e285eaa510c5`.
+Actions Run **34772689488** SUCCESS, Job **103765047806**, Artifact **10322487241**, artifact SHA256 `d7506a5984ff6f5e096766f66f97240c918c4c9df72d8a9c2abbf6270b2fcfac`.
 
-Failure fallback:
-- if Jul/Aug source coverage is missing, report readiness and fail closed; never neutral-fill a missing required source;
-- if base identity differs, stop before scoring and record exact mismatch;
-- if code fails, record Run/Job/error here before correction.
+Validation/reconciliation:
+- Jul/Aug base exactly **55R / head45 / exact3 21**.
+- Feb-Jun fixed-v329 PASS exactly **66R / head59 / exact3 30**.
+- v329 formulas/config/thresholds unchanged; no retuning.
+- September outcomes UNREAD.
 
-Exact next resume point:
-- implement `run_v330_1head_extended_v329_reference.py` and `.github/workflows/v330-1head-extended-v329-reference.yml`; run Actions; append actual results before any v331 widening experiment.
+July NON-PRISTINE reference:
+- baseline 13R / exact3 3 = 23.08%, head11 = 84.62%.
+- readiness attack/turn/env = 12/12/12.
+- PASS **4/13 = 30.77% of base**, exact3 **1/4 = 25.00%**, head **3/4 = 75.00%**.
+- SKIP 9R, exact3 2/9=22.22%, head8/9=88.89%.
+- grades S/A/B = 3/1/0.
+- selected days10, PASS days4, PASS/selected-day=.400.
+
+August NON-PRISTINE reference:
+- baseline 42R / exact3 18 = 42.86%, head34 = 80.95%.
+- readiness attack/turn/env = 32/38/32.
+- PASS **6/42 = 14.29% of base**, exact3 **1/6 = 16.67%**, head **2/6 = 33.33%**.
+- SKIP 36R, exact3 **17/36 = 47.22%**, head **32/36 = 88.89%**.
+- grades S/A/B = 3/2/1.
+- selected days22, PASS days5, PASS/selected-day=.273.
+
+Jul+Aug NON-PRISTINE reference:
+- baseline 55R / exact3 21 = 38.18%, head45 = 81.82%.
+- readiness attack/turn/env = 44/50/44.
+- PASS **10/55 = 18.18% of base**, exact3 **2/10 = 20.00%** (Wilson95 5.67-50.98%), head **5/10 = 50.00%**.
+- SKIP **45R / exact3 19 = 42.22%, head40 = 88.89%**.
+- grades S/A/B = 6/3/1.
+- selected days32, PASS days9, PASS/selected-day=.312.
+
+Volume comparison:
+- Feb-Jun PASS **66/345 = 19.13%**, exact3 30/66=45.45%, head59/66=89.39%.
+- Jul-Aug NON-PRISTINE PASS **10/55 = 18.18%**, exact3 2/10=20.00%, head5/10=50.00%.
+- Feb-Aug descriptive-only PASS **76/400 = 19.00%**, exact3 32/76=42.11%, head64/76=84.21%; this combined line is NOT promotion evidence because Jul/Aug are NON-PRISTINE.
+
+v330 conclusion:
+- **Selectivity is structurally stable at ~18-19%**, so the user's concern that the model filters out roughly 4 of every 5 PRE-selected races is confirmed.
+- More importantly, the fixed v329 rule is **not robust in the Jul/Aug stress reference**: PASS head rate collapses to 50% and exact3 to 20%, while SKIP is much stronger (head 88.89%, exact3 42.22%). August is especially adverse (PASS head 33.33%, exact3 16.67%).
+- Because Jul/Aug are NON-PRISTINE, this cannot statistically invalidate/promote by itself, but it is strong evidence against treating v329 as practical production-ready despite its June promotion flag.
+- Do **not** relax v329 thresholds blindly; the failure is directional, not merely too-low volume.
+
+Exact next resume point — DO NOT START BEFORE USER RECEIVES v330 REPORT:
+- After reporting v330, predeclare v331 as a diagnostic redesign, not a threshold-widening exercise. First compare which v329 components/routes flipped sign in Jul/Aug (attack_core, turn_core, env_pair, S/A/B) and whether the opponent/environment sign/definition is unstable. Preserve frozen production v308/v317/v318/v320/v323 until a new direct-before-start rule has independent support.
