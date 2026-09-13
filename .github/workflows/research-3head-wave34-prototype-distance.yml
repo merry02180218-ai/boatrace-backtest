@@ -1,0 +1,40 @@
+name: research-3head-wave34-prototype-distance
+on:
+  push:
+    branches: [research/3head-v289-addon-expansion]
+    paths:
+      - 'research_v289_3head_wave34_prototype_distance.py'
+      - '.github/workflows/research-3head-wave34-prototype-distance.yml'
+  workflow_dispatch:
+jobs:
+  wave34:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas numpy scikit-learn
+      - name: Download full-population settled source with closing odds
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34754875342 --repo merry02180218-ai/boatrace-backtest --name 3head-wave21-allrace-source-build --dir source
+          cp source/analysis_v289_3head_wave21_allrace_feature_settled.csv .
+      - name: Verify exact v288 baseline exclusion file
+        run: |
+          python - <<'PY'
+          import pandas as pd
+          q=pd.read_csv('v288_operational_pre_replay_94_baseline_codes.csv',dtype=str)
+          assert len(q)==94 and q.race_code.nunique()==94
+          assert q.route.value_counts().to_dict()=={'S':55,'A':21,'B':18}
+          print('V288_EXACT_94_BASELINE_CODES_OK')
+          PY
+      - run: python research_v289_3head_wave34_prototype_distance.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 3head-wave34-prototype-distance
+          path: |
+            analysis_v289_3head_wave34_prototype_distance.csv
+            research_v289_3head_wave34_prototype_distance.json
+            research_v289_3head_wave34_prototype_distance.md
