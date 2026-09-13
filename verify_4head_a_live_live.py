@@ -4,6 +4,8 @@ from __future__ import annotations
 import copy
 import math
 
+import numpy as np
+
 from build_4head_a_live_live import ALiveBuildError, assemble, expected_features
 from head4_v273_a_live_inference import FrozenARankError, classify, load_artifact, score_a
 
@@ -14,13 +16,16 @@ def main() -> None:
     assert fs == a["A_SCORE"]["features"]
     assert len(fs) == 17
 
-    # Frozen medians are a deterministic result-blind fixture: standardized x=0,
-    # so score equals sigmoid(intercept). This tests exact schema/order and scorer.
-    base = dict(zip(fs, a["A_SCORE"]["imputer_median"]))
+    # Frozen medians form a deterministic result-blind fixture. Recompute the
+    # exact frozen standardized-logistic expression independently of score_a.
+    st = a["A_SCORE"]
+    base = dict(zip(fs, st["imputer_median"]))
     row = assemble(base, a)
     assert list(row) == fs
     p = score_a(row, a)
-    z = float(a["A_SCORE"]["intercept"])
+    x = np.asarray([row[k] for k in fs], dtype=float)
+    zvec = (x - np.asarray(st["scaler_mean"], dtype=float)) / np.asarray(st["scaler_scale"], dtype=float)
+    z = float(st["intercept"]) + float(zvec @ np.asarray(st["coef"], dtype=float))
     expected = 1.0 / (1.0 + math.exp(-z)) if z >= 0 else math.exp(z) / (1.0 + math.exp(z))
     assert abs(p - expected) < 1e-15, (p, expected)
 
