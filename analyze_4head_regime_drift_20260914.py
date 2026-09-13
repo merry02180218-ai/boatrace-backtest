@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# Outcome-independent drift audit; target-period results are intentionally not loaded.
 from collections import defaultdict
 from datetime import date,timedelta
 from pathlib import Path
@@ -37,12 +38,6 @@ def main():
         for r,x,s4,_s5,_dc in process_features(d,cache,hist):
             code=str(r['レースコード']).zfill(12);z={'date':str(d),'race_code':code};z.update(v250.pre_features(x,s4));z.update(v250.post_features(code,tkz,stt,orig));train.append(z)
         ingest_prior_day_preview(cache,d);ingest_motor(hist,seen,d);d+=timedelta(days=1)
-    # Labels are used only to fit the already-defined frozen Jan-31 model, never for drift ranking.
-    for z in train:
-        ymd=z['date'].replace('-','/'); rm=getattr(main,'_rm',{}).get(ymd)
-        if rm is None:
-            rm={str(r['レースコード']).zfill(12):r for r in rows(f'data/results/realtime/{ymd}.csv')}; getattr(main,'_rm',{} )[ymd]=rm if hasattr(main,'_rm') else rm
-    # rebuild labels safely without target-period outcomes
     rms={}
     for z in train:
         ymd=z['date'].replace('-','/')
@@ -75,5 +70,4 @@ def main():
     for _,r in top.iterrows():L.append(f"|{r.feature}|{r.smd:.3f}|{r.ks:.3f}|")
     L+=['','## PRE-bin population shares','',bt.to_markdown(index=False)]
     SUM.write_text('\n'.join(L)+'\n');print(SUM.read_text())
-if __name__=='__main__':
-    main._rm={};main()
+if __name__=='__main__':main()
