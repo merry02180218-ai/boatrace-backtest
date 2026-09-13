@@ -1,0 +1,558 @@
+{
+  "research_version": "v289-addon-wave13-hurdle-ticket-ev",
+  "github_run_id": "34733351060",
+  "source_max_date": "2026-08-31",
+  "rules": {
+    "baseline_fixed": "v288 94R",
+    "candidate": "final v288 NO_BET only",
+    "mechanism": "two-part ticket generator: P(hit) x conditional payout with independent direct-value ticket agreement",
+    "ticket_family": "Wave2 regenerated Top2..Top10 + target composite odds; exact 10000-yen Dutch",
+    "test": "walk-forward Feb-Aug",
+    "training": "prior-month final-NO_BET ticket rows only",
+    "current_required_missing": "FAIL_CLOSED",
+    "july_august": "NON-PRISTINE",
+    "september_outcomes_used": false
+  },
+  "baseline": {
+    "races": 94,
+    "hits": 52,
+    "hit_rate_pct": 55.319148936170215,
+    "stake_yen": 940000,
+    "payout_yen": 1622070.0,
+    "profit_yen": 682070.0,
+    "roi_pct": 172.56063829787234,
+    "max_drawdown_yen": 80000.0
+  },
+  "candidate_pool": {
+    "races": 178,
+    "hits": 23,
+    "hit_rate_pct": 12.92134831460674,
+    "stake_yen": 1780000,
+    "payout_yen": 702420.0,
+    "profit_yen": -1077580.0,
+    "roi_pct": 39.46179775280899
+  },
+  "methods": [
+    {
+      "method": "hurdle_ticket_ev_consensus",
+      "fraction": 0.4,
+      "addon": {
+        "races": 4,
+        "hits": 1,
+        "hit_rate_pct": 25.0,
+        "stake_yen": 40000,
+        "payout_yen": 23460.0,
+        "profit_yen": -16540.0,
+        "roi_pct": 58.65,
+        "max_drawdown_yen": 20000.0
+      },
+      "monthly": {
+        "2026-06": {
+          "races": 1,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 10000,
+          "payout_yen": 0.0,
+          "profit_yen": -10000.0,
+          "roi_pct": 0.0
+        },
+        "2026-07": {
+          "races": 1,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 10000,
+          "payout_yen": 0.0,
+          "profit_yen": -10000.0,
+          "roi_pct": 0.0
+        },
+        "2026-08": {
+          "races": 2,
+          "hits": 1,
+          "hit_rate_pct": 50.0,
+          "stake_yen": 20000,
+          "payout_yen": 23460.0,
+          "profit_yen": 3460.0,
+          "roi_pct": 117.3
+        }
+      },
+      "red_months": 2,
+      "min_monthly_roi_pct": 0.0,
+      "combined": {
+        "races": 98,
+        "hits": 53,
+        "hit_rate_pct": 54.08163265306123,
+        "stake_yen": 980000,
+        "payout_yen": 1645530.0,
+        "profit_yen": 665530.0,
+        "roi_pct": 167.91122448979593,
+        "max_drawdown_yen": 80000.0
+      },
+      "overlap_with_v288": 0,
+      "config_counts": {
+        "top2": 3,
+        "top7": 1
+      }
+    },
+    {
+      "method": "hurdle_ticket_ev_consensus",
+      "fraction": 0.3,
+      "addon": {
+        "races": 2,
+        "hits": 0,
+        "hit_rate_pct": 0.0,
+        "stake_yen": 20000,
+        "payout_yen": 0.0,
+        "profit_yen": -20000.0,
+        "roi_pct": 0.0,
+        "max_drawdown_yen": 20000.0
+      },
+      "monthly": {
+        "2026-07": {
+          "races": 1,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 10000,
+          "payout_yen": 0.0,
+          "profit_yen": -10000.0,
+          "roi_pct": 0.0
+        },
+        "2026-08": {
+          "races": 1,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 10000,
+          "payout_yen": 0.0,
+          "profit_yen": -10000.0,
+          "roi_pct": 0.0
+        }
+      },
+      "red_months": 2,
+      "min_monthly_roi_pct": 0.0,
+      "combined": {
+        "races": 96,
+        "hits": 52,
+        "hit_rate_pct": 54.166666666666664,
+        "stake_yen": 960000,
+        "payout_yen": 1622070.0,
+        "profit_yen": 662070.0,
+        "roi_pct": 168.965625,
+        "max_drawdown_yen": 80000.0
+      },
+      "overlap_with_v288": 0,
+      "config_counts": {
+        "top2": 2
+      }
+    },
+    {
+      "method": "hurdle_ticket_ev_consensus",
+      "fraction": 0.1,
+      "addon": {
+        "races": 1,
+        "hits": 0,
+        "hit_rate_pct": 0.0,
+        "stake_yen": 10000,
+        "payout_yen": 0.0,
+        "profit_yen": -10000.0,
+        "roi_pct": 0.0,
+        "max_drawdown_yen": 10000.0
+      },
+      "monthly": {
+        "2026-08": {
+          "races": 1,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 10000,
+          "payout_yen": 0.0,
+          "profit_yen": -10000.0,
+          "roi_pct": 0.0
+        }
+      },
+      "red_months": 1,
+      "min_monthly_roi_pct": 0.0,
+      "combined": {
+        "races": 95,
+        "hits": 52,
+        "hit_rate_pct": 54.73684210526316,
+        "stake_yen": 950000,
+        "payout_yen": 1622070.0,
+        "profit_yen": 672070.0,
+        "roi_pct": 170.74421052631578,
+        "max_drawdown_yen": 80000.0
+      },
+      "overlap_with_v288": 0,
+      "config_counts": {
+        "top2": 1
+      }
+    },
+    {
+      "method": "hurdle_ticket_ev_consensus",
+      "fraction": 0.2,
+      "addon": {
+        "races": 1,
+        "hits": 0,
+        "hit_rate_pct": 0.0,
+        "stake_yen": 10000,
+        "payout_yen": 0.0,
+        "profit_yen": -10000.0,
+        "roi_pct": 0.0,
+        "max_drawdown_yen": 10000.0
+      },
+      "monthly": {
+        "2026-08": {
+          "races": 1,
+          "hits": 0,
+          "hit_rate_pct": 0.0,
+          "stake_yen": 10000,
+          "payout_yen": 0.0,
+          "profit_yen": -10000.0,
+          "roi_pct": 0.0
+        }
+      },
+      "red_months": 1,
+      "min_monthly_roi_pct": 0.0,
+      "combined": {
+        "races": 95,
+        "hits": 52,
+        "hit_rate_pct": 54.73684210526316,
+        "stake_yen": 950000,
+        "payout_yen": 1622070.0,
+        "profit_yen": 672070.0,
+        "roi_pct": 170.74421052631578,
+        "max_drawdown_yen": 80000.0
+      },
+      "overlap_with_v288": 0,
+      "config_counts": {
+        "top2": 1
+      }
+    }
+  ],
+  "passers": [],
+  "decision": "NO_ADOPTION_WAVE13",
+  "audit": {
+    "2026-02": {
+      "train_ticket_rows": 2208,
+      "train_races": 138,
+      "test_ticket_rows": 208,
+      "test_races": 13,
+      "features": [
+        "f__c_straight_spread",
+        "f__c_b3_minus_b1_meetst",
+        "raw_top_n",
+        "f__c_b3_inside_meetst",
+        "f__c_b3_grade",
+        "f__c_b3_outside_nst",
+        "f__c_b3_minus_b4_lap",
+        "f__c_b3_minus_b4_waku_st",
+        "f__c_b3_minus_b4_waku_sr",
+        "f__b3_vh_p1_display",
+        "f__c_b3_motor",
+        "f__c_b3_minus_b2_pastwin",
+        "f__turn_margin23",
+        "f__c_outer_follow",
+        "f__c_b3_minus_b4_origavg",
+        "f__c_b3_minus_b5_pastwin",
+        "f__c_b3_minus_b1_turn",
+        "f__c_b3_minus_b5_waku_sr"
+      ],
+      "valid_ticket_rows": 208,
+      "valid_races": 13,
+      "agreement_races": 0
+    },
+    "2026-03": {
+      "train_ticket_rows": 2624,
+      "train_races": 164,
+      "test_ticket_rows": 304,
+      "test_races": 19,
+      "features": [
+        "f__c_b3_minus_b1_meetst",
+        "f__c_straight_spread",
+        "f__c_b3_inside_meetst",
+        "f__c_b3_minus_b4_waku_st",
+        "f__c_b3_outside_nst",
+        "f__c_b3_minus_b4_waku_sr",
+        "raw_top_n",
+        "f__threat6",
+        "f__c_b3_minus_b2_ex",
+        "f__c_b3_minus_b6_nst",
+        "f__c_b3_minus_b6_origavg",
+        "f__c_b3_minus_b6_lap",
+        "f__c_b3_waku_st",
+        "f__c_b3_minus_b5_waku_sr",
+        "f__b3_vh_delta_display",
+        "f__c_b3_minus_b5_nst",
+        "f__c_turn_spread",
+        "f__c_b3_minus_b5_meetst"
+      ],
+      "valid_ticket_rows": 304,
+      "valid_races": 19,
+      "agreement_races": 3
+    },
+    "2026-04": {
+      "train_ticket_rows": 3280,
+      "train_races": 205,
+      "test_ticket_rows": 112,
+      "test_races": 7,
+      "features": [
+        "raw_top_n",
+        "f__c_b3_outside_nst",
+        "f__c_straight_spread",
+        "f__c_b3_minus_b4_waku_sr",
+        "f__c_b3_minus_b1_meetst",
+        "f__c_b3_minus_b4_waku_st",
+        "f__c_b3_minus_b5_waku_sr",
+        "f__c_b3_inside_meetst",
+        "f__c_b3_waku_st",
+        "f__c_b3_minus_b2_ex",
+        "f__c_b3_minus_b6_nst",
+        "f__c_b3_minus_b4_wr",
+        "f__turn_margin23",
+        "f__threat6",
+        "f__c_b3_minus_b5_waku_st",
+        "f__c_b3_minus_b1_waku_sr",
+        "f__threat4",
+        "f__c_b3_outside_pastwin"
+      ],
+      "valid_ticket_rows": 112,
+      "valid_races": 7,
+      "agreement_races": 0
+    },
+    "2026-05": {
+      "train_ticket_rows": 3680,
+      "train_races": 230,
+      "test_ticket_rows": 432,
+      "test_races": 27,
+      "features": [
+        "raw_top_n",
+        "f__c_b3_minus_b4_wr",
+        "f__c_b3_minus_b1_meetst",
+        "f__threat4",
+        "f__c_b3_inside_meetst",
+        "f__c_outer_follow",
+        "f__c_straight_spread",
+        "f__c_b3_outside_wr",
+        "f__c_b3_minus_b2_ex",
+        "f__c_b3_motor",
+        "f__c_b3_outside_nst",
+        "f__c_b3_minus_b4_waku_sr",
+        "f__c_b3_waku_st",
+        "f__threat6",
+        "f__c_b3_minus_b5_waku_sr",
+        "f__c_b3_outside_pastwin",
+        "f__c_b3_minus_b5_waku_st",
+        "f__c_b3_inside_nst"
+      ],
+      "valid_ticket_rows": 432,
+      "valid_races": 27,
+      "agreement_races": 0
+    },
+    "2026-06": {
+      "train_ticket_rows": 4608,
+      "train_races": 288,
+      "test_ticket_rows": 400,
+      "test_races": 25,
+      "features": [
+        "raw_top_n",
+        "f__c_b3_waku_st",
+        "f__c_b3_minus_b4_wr",
+        "f__threat6",
+        "f__c_b3_outside_waku_st",
+        "f__c_b3_minus_b4_waku_st",
+        "f__c_b3_minus_b2_ex",
+        "f__c_b3_minus_b6_wr",
+        "f__c_b3_outside_wr",
+        "f__c_b3_minus_b6_waku_st",
+        "f__c_outer_follow",
+        "f__c_b3_minus_b5_waku_st",
+        "f__c_b3_minus_b1_meetst",
+        "f__threat4",
+        "f__c_b3_outside_pastwin",
+        "f__c_b3_inside_waku_st",
+        "f__c_b3_minus_b5_pastwin",
+        "f__c_b3_grade"
+      ],
+      "valid_ticket_rows": 400,
+      "valid_races": 25,
+      "agreement_races": 1
+    },
+    "2026-07": {
+      "train_ticket_rows": 5456,
+      "train_races": 341,
+      "test_ticket_rows": 624,
+      "test_races": 39,
+      "features": [
+        "raw_top_n",
+        "f__threat6",
+        "f__c_outer_follow",
+        "f__c_b3_minus_b4_wr",
+        "f__c_b3_waku_st",
+        "f__c_b3_minus_b6_wr",
+        "f__c_b3_minus_b4_st",
+        "f__c_b3_outside_wr",
+        "f__c_b3_outside_st",
+        "f__c_turn_spread",
+        "f__c_b3_outside_waku_st",
+        "f__c_b3_minus_b5_st",
+        "f__c_b3_minus_b5_waku_st",
+        "f__c_b3_minus_b4_lap",
+        "f__c_b3_tilt",
+        "f__c_b3_minus_b1_meetst",
+        "f__b3_vh_delta_turn",
+        "f__c_b3_minus_b6_waku_st"
+      ],
+      "valid_ticket_rows": 624,
+      "valid_races": 39,
+      "agreement_races": 3
+    },
+    "2026-08": {
+      "train_ticket_rows": 6528,
+      "train_races": 408,
+      "test_ticket_rows": 768,
+      "test_races": 48,
+      "features": [
+        "raw_top_n",
+        "f__threat6",
+        "f__c_b3_minus_b6_wr",
+        "f__c_outer_follow",
+        "f__c_b3_minus_b4_lap",
+        "f__c_b3_outside_wr",
+        "f__c_ex_spread",
+        "f__c_b3_minus_b4_st",
+        "f__c_b3_minus_b1_meetst",
+        "f__c_b3_minus_b4_wr",
+        "f__c_b3_inside_meetst",
+        "f__c_b3_outside_st",
+        "f__c_st_spread",
+        "f__c_b3_waku_st",
+        "f__c_b3_tilt",
+        "f__c_b3_minus_b6_waku_wr",
+        "comp_odds",
+        "f__c_b3_inside_motor"
+      ],
+      "valid_ticket_rows": 768,
+      "valid_races": 48,
+      "agreement_races": 3
+    }
+  },
+  "detail": {
+    "hurdle_ticket_ev_consensus@0.10": [
+      {
+        "date": "2026-08-12",
+        "race_code": "202608120407",
+        "month": "2026-08",
+        "config": "top2",
+        "n_alt": 2,
+        "comp_alt": 6.710963455149501,
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "_p_hit": 0.4402716522655797,
+        "_cond_pay": 63596.14071891911,
+        "_hurdle_ev": 27999.577952032825,
+        "_direct_ev": 21165.350526903312
+      }
+    ],
+    "hurdle_ticket_ev_consensus@0.20": [
+      {
+        "date": "2026-08-12",
+        "race_code": "202608120407",
+        "month": "2026-08",
+        "config": "top2",
+        "n_alt": 2,
+        "comp_alt": 6.710963455149501,
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "_p_hit": 0.4402716522655797,
+        "_cond_pay": 63596.14071891911,
+        "_hurdle_ev": 27999.577952032825,
+        "_direct_ev": 21165.350526903312
+      }
+    ],
+    "hurdle_ticket_ev_consensus@0.30": [
+      {
+        "date": "2026-07-18",
+        "race_code": "202607182103",
+        "month": "2026-07",
+        "config": "top2",
+        "n_alt": 2,
+        "comp_alt": 5.5721973094170405,
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "_p_hit": 0.3140254446369469,
+        "_cond_pay": 57291.44178022008,
+        "_hurdle_ev": 17990.970478925366,
+        "_direct_ev": 2793.8205944227448
+      },
+      {
+        "date": "2026-08-12",
+        "race_code": "202608120407",
+        "month": "2026-08",
+        "config": "top2",
+        "n_alt": 2,
+        "comp_alt": 6.710963455149501,
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "_p_hit": 0.4402716522655797,
+        "_cond_pay": 63596.14071891911,
+        "_hurdle_ev": 27999.577952032825,
+        "_direct_ev": 21165.350526903312
+      }
+    ],
+    "hurdle_ticket_ev_consensus@0.40": [
+      {
+        "date": "2026-06-07",
+        "race_code": "202606071006",
+        "month": "2026-06",
+        "config": "top2",
+        "n_alt": 2,
+        "comp_alt": 9.30165137614679,
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "_p_hit": 0.23349268734182646,
+        "_cond_pay": 78580.97801754203,
+        "_hurdle_ev": 18348.08373126488,
+        "_direct_ev": 8195.452043834657
+      },
+      {
+        "date": "2026-07-18",
+        "race_code": "202607182103",
+        "month": "2026-07",
+        "config": "top2",
+        "n_alt": 2,
+        "comp_alt": 5.5721973094170405,
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "_p_hit": 0.3140254446369469,
+        "_cond_pay": 57291.44178022008,
+        "_hurdle_ev": 17990.970478925366,
+        "_direct_ev": 2793.8205944227448
+      },
+      {
+        "date": "2026-08-04",
+        "race_code": "202608042108",
+        "month": "2026-08",
+        "config": "top7",
+        "n_alt": 7,
+        "comp_alt": 2.355457563810497,
+        "hit_alt": 1,
+        "ret_alt": 23460.0,
+        "_p_hit": 0.6900495321135185,
+        "_cond_pay": 23659.100520733708,
+        "_hurdle_ev": 16325.951244558997,
+        "_direct_ev": 4375.1708714205615
+      },
+      {
+        "date": "2026-08-12",
+        "race_code": "202608120407",
+        "month": "2026-08",
+        "config": "top2",
+        "n_alt": 2,
+        "comp_alt": 6.710963455149501,
+        "hit_alt": 0,
+        "ret_alt": 0.0,
+        "_p_hit": 0.4402716522655797,
+        "_cond_pay": 63596.14071891911,
+        "_hurdle_ev": 27999.577952032825,
+        "_direct_ev": 21165.350526903312
+      }
+    ]
+  }
+}
