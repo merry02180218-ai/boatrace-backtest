@@ -47,6 +47,64 @@ def _load_slim():
     return slim
 
 
+def _third_fold_long(slim,sufs,tm):
+    """Build exactly the THIRD rows consumed by one chronological fold.
+
+    Legacy conditional_long emits 20 ordered pairs for every historical race, but
+    pc_predict trains only rows with train_group==1. For historical month < M that
+    means only the four THIRD candidates conditional on the *actual* SECOND in a
+    valid 1-x-y race are ever used. Target month M still needs all 20 pairs for
+    inference. Emitting only those consumed rows is prediction-equivalent while
+    avoiding the ~900k-row Jul/Aug long table that repeatedly killed hosted runners.
+    """
+    rec=[]
+    boats=list(v298.BOATS)
+    d=slim.loc[slim.month.astype(str)<=tm]
+    for _,r in d.iterrows():
+        m=str(r.month)
+        a2,a3=v298.actual23(r.actual_combo)
+        valid=int(r.head_hit)==1 and a2 in boats and a3 in boats
+        if m<tm:
+            if not valid:
+                continue
+            seconds=[int(a2)]
+        elif m==tm:
+            seconds=boats
+        else:
+            continue
+        code=str(r.race_code).zfill(12)
+        for s in seconds:
+            sr=v298.cand_record(r,s,sufs,'s_')
+            for t in boats:
+                if t==s: continue
+                tr=v298.cand_record(r,t,sufs,'t_')
+                z={'date':r.date,'month':r.month,'race_code':code,
+                   'group_id':f'{code}|{s}','second_boat':s,'third_boat':t,
+                   'train_group':int(valid and m<tm and s==a2),
+                   'ycond':int(valid and m<tm and s==a2 and t==a3),
+                   'actual2':a2,'actual3':a3,
+                   'pair_same_side1':float((s<=3 and t<=3) or (s>=4 and t>=4)),
+                   'pair_second_inner23':float(s in (2,3)),
+                   'pair_second_outer456':float(s in (4,5,6)),
+                   'pair_third_inner23':float(t in (2,3)),
+                   'pair_third_outer456':float(t in (4,5,6)),
+                   'pair_adjacent':float(abs(s-t)==1),'pair_distance':float(abs(s-t)),
+                   'pair_third_minus_second':float(t-s),'pair_second_is2':float(s==2),
+                   'pair_second_is3':float(s==3),'pair_second_is4':float(s==4),
+                   'pair_second_is5':float(s==5),'pair_second_is6':float(s==6)}
+                z.update(sr); z.update(tr)
+                for k in sufs:
+                    tv=z.get(f't_cand_{k}',np.nan); sv=z.get(f's_cand_{k}',np.nan)
+                    z[f'diff_{k}']=tv-sv if pd.notna(tv) and pd.notna(sv) else np.nan
+                    z[f'prod_{k}']=tv*sv if pd.notna(tv) and pd.notna(sv) else np.nan
+                rec.append(z)
+    q=pd.DataFrame(rec)
+    if q.empty or not (q.month.astype(str)==tm).any():
+        raise RuntimeError(f'v321 THIRD fold empty {tm}')
+    print(f'v321 THIRD compact fold {tm}: rows={len(q)} train_rows={int(q.train_group.sum())*4 if False else int((q.train_group==1).sum())} test_rows={int((q.month.astype(str)==tm).sum())}',flush=True)
+    return q
+
+
 def prepare():
     dev=pd.read_csv(DEV_PRED,dtype={'race_code':str})
     if any(str(m).startswith(('2026-07','2026-08','2026-09')) for m in dev.test_month.astype(str).unique()):
@@ -106,18 +164,26 @@ def second_stage():
 
 def base_third_stage():
     slim=_load_slim(); v300.setup_v298(); sufs=v298.suffixes(slim)
-    print(f'v321 BASE THIRD build rows={len(slim)} cols={len(slim.columns)}',flush=True)
-    cl=v300.augment_third(v298.conditional_long(slim,sufs))
-    base_pc={tm:v300.pc_predict(cl,tm,.3,False)[0] for tm in TARGET_MONTHS}
+    base_pc={}
+    for tm in TARGET_MONTHS:
+        print(f'v321 BASE THIRD compact fold start {tm}',flush=True)
+        cl=v300.augment_third(_third_fold_long(slim,sufs,tm))
+        base_pc[tm]=v300.pc_predict(cl,tm,.3,False)[0]
+        del cl; gc.collect()
+        print(f'v321 BASE THIRD compact fold done {tm}',flush=True)
     with BASE_PC_PKL.open('wb') as f: pickle.dump(base_pc,f,pickle.HIGHEST_PROTOCOL)
     print(f'v321 BASE THIRD artifact ready {BASE_PC_PKL.name}',flush=True)
 
 
 def third_stage():
     slim=_load_slim(); v300.setup_v298(); sufs=v298.suffixes(slim)
-    print(f'v321 FROZEN THIRD build rows={len(slim)} cols={len(slim.columns)}',flush=True)
-    cl=v300.augment_third(v298.conditional_long(slim,sufs))
-    pc={tm:v318.pc_predict(cl,tm,.1,'DROP_START')[0] for tm in TARGET_MONTHS}
+    pc={}
+    for tm in TARGET_MONTHS:
+        print(f'v321 FROZEN THIRD compact fold start {tm}',flush=True)
+        cl=v300.augment_third(_third_fold_long(slim,sufs,tm))
+        pc[tm]=v318.pc_predict(cl,tm,.1,'DROP_START')[0]
+        del cl; gc.collect()
+        print(f'v321 FROZEN THIRD compact fold done {tm}',flush=True)
     with THIRD_PKL.open('wb') as f: pickle.dump(pc,f,pickle.HIGHEST_PROTOCOL)
     print(f'v321 FROZEN THIRD artifact ready {THIRD_PKL.name}',flush=True)
 
