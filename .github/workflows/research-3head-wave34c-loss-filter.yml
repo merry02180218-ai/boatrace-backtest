@@ -1,13 +1,13 @@
-name: research-3head-wave39v-combined-odds
+name: research-3head-wave39c-confidence-k
 on:
   push:
     branches: [research/3head-v289-addon-expansion]
     paths:
-      - 'research_v289_3head_wave39v_combined_odds.py'
+      - 'research_v289_3head_wave39c_confidence_k.py'
       - '.github/workflows/research-3head-wave34c-loss-filter.yml'
   workflow_dispatch:
 jobs:
-  wave39v:
+  wave39c:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -21,8 +21,8 @@ jobs:
         run: |
           gh run download 34754875342 --repo merry02180218-ai/boatrace-backtest --name 3head-wave21-allrace-source-build --dir source
           cp source/analysis_v289_3head_wave21_allrace_feature_settled.csv .
-      - run: python research_v289_3head_wave39v_combined_odds.py
+      - run: python research_v289_3head_wave39c_confidence_k.py
       - uses: actions/upload-artifact@v4
         with:
-          name: 3head-wave39v-combined-odds
-          path: research_v289_3head_wave39v_combined_odds.json
+          name: 3head-wave39c-confidence-k
+          path: research_v289_3head_wave39c_confidence_k.json
