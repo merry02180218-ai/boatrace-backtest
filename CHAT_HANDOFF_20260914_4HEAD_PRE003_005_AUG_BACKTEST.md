@@ -1,6 +1,6 @@
 # CHAT HANDOFF — HEAD4 PRE 0.03-0.05 RESEARCH
 
-Status: **CANONICAL HISTORICAL WAKU10 MATERIALIZATION IN PROGRESS**
+Status: **CANONICAL HISTORICAL WAKU10 MATERIALIZATION RETRY IN PROGRESS**
 
 ## Frozen production
 Production remains unchanged (`HEAD4_V291_COMP7`). July/August 2026 remain NON-PRISTINE; September remains outcome-blind for tuning/model selection.
@@ -27,5 +27,18 @@ Plan:
 - v234 uses published Waku10 verbatim where available, reconstructs missing historical Waku10 from BOATCAST raw files, and validates the parser against a published August day.
 - Relevant historical commits include `09edebd3727bdf75f2ce4fef9ce24585530af355` and `f00b4afb44de818e9966425df99bfe1d01ec3e25`.
 
+## First materialization attempt
+- Workflow Run `34777427318`, Job `103777985325`.
+- Restoration and validation succeeded before push.
+- Coverage generated at 100% for every month 2025-12 through 2026-08; 7/18 restored 180/180 and 7/19 restored 192/192.
+- Local generated commit inside runner: `726a56c`, 275 files changed / 42,488 insertions.
+- Failure occurred only at `git push origin HEAD:main`: non-fast-forward because another workflow advanced `main` while this long materialization was running.
+
+## Retry plan recorded BEFORE fix
+1. Modify materialization workflow push step to fetch latest `origin/main` after generating files.
+2. Rebase the generated canonical Waku10 commit onto the latest `origin/main`; fail closed on a real content conflict.
+3. Push only after successful rebase, then verify canonical Waku10 files exist on current `main`.
+4. Preserve the 100% coverage/schema validation and then rerun the HEAD4 7/18->7/19 audit against canonical local Waku10.
+
 ## Restart protection
-If interrupted, resume from canonical Waku10 materialization. Do not continue HEAD4 model interpretation until the shared canonical Waku10 source is fixed and the 7/18->7/19 audit is rerun.
+If interrupted, resume from the failed canonical Waku10 push retry. Do not continue HEAD4 model interpretation until the shared canonical Waku10 source is committed and the 7/18->7/19 audit is rerun.
