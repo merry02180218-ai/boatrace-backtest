@@ -25,24 +25,25 @@
 
 ## Wave36C one-month-lag p3 recalibration — COMPLETE / NO_ADOPTION
 - Run 34784940922 success; artifact 10325838776.
-- Method: one-month-lag Platt calibration of raw Wave36 p3. March OOS calibrated April; then Apr->May, May->Jun, Jun->Jul, Jul->Aug. No current-month outcomes entered its own calibration.
-- March mapped original raw gate p3=0.365448 to fixed calibrated cut 0.391729.
-- Apr-Jun pristine recalibrated: 341R / 77 hits / ROI 111.111% / +378,890 yen / 144 head hits / head rate 42.229% / conversion 53.472% / max DD 634,560 yen.
-- Original raw Wave36 Apr-Jun comparator: 391R / 87 hits / ROI 114.913% / +583,090 yen / head rate 40.921% / conversion 54.375% / max DD 717,360 yen.
-- Monthly recalibrated: Apr 175.280%; May 74.235%; Jun 77.521%; Jul 84.128%; Aug 106.275%.
-- Jul-Aug recalibrated robustness: 272R / 71 hits / ROI 95.364% / -126,090 / head rate 43.75% / max DD 393,720.
-- Exact v288 overlap 0.
-- Interpretation: temporal calibration helped Jun-Aug but one-month calibration was too reactive and damaged May.
+- Apr-Jun recalibrated: 341R / 77 hits / ROI 111.111% / +378,890 yen.
+- Jul-Aug: ROI 95.364% / -126,090 yen.
+- One-month calibration helped Jun-Aug but damaged May badly.
 
-## Wave36S smoother p3 calibration — STARTING
-- Preserve the exact Wave36 63 static features, shrinkage-LDA head model, conditional-logit Top5 orderer, expanding chronology, JPY10k Dutch, and exact v288 exclusion.
-- Test a predeclared smoother head-probability recalibration that uses only already-settled prior-month OOS predictions and never current-month outcomes.
-- Primary rule: rolling prior OOS months with a 3-month cap (March for April; Mar+Apr for May; Mar+Apr+May for June; Apr+May+Jun for July; May+Jun+Jul for August), fitting one Platt calibrator to the pooled prior OOS rows.
-- Keep the decision threshold anchored from March only by mapping raw p3=0.365448 through the March-only calibrator; do not optimize any threshold on Apr-Aug ROI.
-- Also report a conservative shrinkage variant blending rolling calibration parameters toward the March calibrator with a fixed predeclared weight, but selection/adoption must be judged on Apr-Jun pristine only and Jul/Aug remain NON-PRISTINE diagnostics.
-- Compare against raw Wave36 and Wave36C: selected races, head rate, Top5 conversion, ROI/profit, monthly ROI, min month, red months, max DD, overlap.
+## Wave36S smoother p3 calibration — COMPLETE / RESEARCH_CANDIDATE
+- Run 34785370650 success; artifact 10326411657; workflow research-3head-wave36s-smooth-calibration.
+- Method: 3-month-cap pooled prior-month OOS Platt calibration. April uses Mar only; May uses Mar+Apr; June uses Mar+Apr+May; July uses Apr+May+Jun; August uses May+Jun+Jul. Threshold remains March-anchored: raw 0.365448 -> calibrated 0.391729. No current-month outcomes used for own calibration.
+- Rolling pooled calibration Apr-Jun pristine: 358R / 81 hits / ROI 116.938% / +606,380 yen / head hits 148 / head rate 41.341% / conversion 54.730% / max DD 625,060 yen.
+- Raw Wave36 Apr-Jun comparator: 391R / 87 hits / ROI 114.913% / +583,090 yen / head rate 40.921% / conversion 54.375% / max DD 717,360 yen.
+- Therefore rolling smoother improves pristine ROI by +2.025 points, profit by +23,290 yen, head rate by +0.420 points, conversion by +0.355 points, and reduces max DD by 92,300 yen, while selecting 33 fewer races.
+- Rolling monthly ROI: Apr 175.280% (121R/33 hits), May 99.502% (125R/28), Jun 73.368% (112R/20), Jul NON-PRISTINE 86.716% (130R/32), Aug NON-PRISTINE 107.155% (142R/40).
+- Rolling Jul-Aug robustness: 272R / 72 hits / ROI 97.386% / -71,090 yen / head rate 43.75% / conversion 60.504% / max DD 363,720 yen. This is better than raw Jul-Aug ROI 89.074% / -357,270 and Wave36C Jul-Aug ROI 95.364% / -126,090.
+- Fixed 50% shrink-to-March variant Apr-Jun: 377R / 85 hits / ROI 116.127% / +607,980 yen / head rate 41.114% / conversion 54.839% / max DD 684,270 yen. It has slightly lower ROI than rolling but slightly higher absolute profit.
+- Shrink monthly ROI: Apr 175.280%, May 104.012%, Jun 69.637%, Jul 82.164%, Aug 104.487%.
+- Shrink Jul-Aug robustness: 301R / 77 hits / ROI 93.659% / -190,850 yen / max DD 452,990 yen.
+- Exact v288 overlap rolling=0, shrink=0.
+- Interpretation: smoother calibration clearly avoids Wave36C's May collapse and improves the Apr-Jun pristine aggregate over raw Wave36 on ROI/profit/DD. Rolling pooled calibration is currently the strongest calibration candidate; however improvement is modest and June remains weak, so retain RESEARCH_CANDIDATE rather than final adoption until robustness/audit confirms no accidental selection instability or hidden tuning.
 
 ## Exact restart point
-1. Implement Wave36S from the actual Wave36/Wave36C code without changing prediction features/orderer.
-2. Launch CI and auto-fix technical failures without weakening temporal guards.
-3. On completion, write exact Run/artifact/results here before reporting.
+1. Treat Wave36S rolling pooled calibration as the leading 3-head add-on research candidate, with raw Wave36 still the fixed benchmark.
+2. Next: audit Wave36S month-by-month selected-race deltas versus raw, especially what was removed from May/June and whether gains are concentrated in a few payouts.
+3. Reconfirm causality/leak guards and payout concentration before any adoption decision. Jul/Aug remain NON-PRISTINE diagnostics.
