@@ -10,6 +10,7 @@ from backtest_v4 import ingest_prior_day_preview
 from backtest_v5_ev import process_features
 import analyze_v250_4head_rebuild_baseline as v250
 
+# CI trigger: 2026-09-14 rolling fit-cutoff diagnostic
 ROOT=Path(__file__).resolve().parent
 TRAIN_START=date(2025,12,1); PRELOAD=TRAIN_START-timedelta(days=120); END=date(2026,8,31)
 CUTOFFS=[date(2026,m,1)-timedelta(days=1) for m in range(2,9)]
