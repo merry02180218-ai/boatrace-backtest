@@ -47,27 +47,29 @@ History:
 - Repeated attempts of run `34741655731` and then run `34745855880` were terminated around the long monolithic Python step.
 - Memory projection commit `badbc36831a91cb90d478c944ca5d0bcd1b9de8e` was insufficient.
 - Two-job split (`prepare -> evaluate`) at `0f0836bb65a6abe3b52bcc790fca29e9aaa5a7a3` still failed in prepare run `34746675136` with runner shutdown / exit 143.
+- Narrow-frame fix `2f020cb6517c50319a3bf849e6dfa93a650eb44a` reduced monthly copy amplification, but run `34748125204` still died in prepare with exit 137.
 
-### Root cause found 2026-09-13
-This is not being treated as merely a GitHub runner problem. The v321 prepare implementation was copying the fully expanded, highly fragmented v294->v307 dataframe for each target month:
-`tr=d[d.month<tm].copy(); te=d[d.month==tm].copy()`.
-That frame contains hundreds of columns produced by repeated `frame.insert` operations (confirmed by repeated pandas fragmentation warnings). The monthly copies therefore amplified memory immediately before the expensive v308 head OOF/HGB+LR folds. Earlier exit 137 and repeated shutdowns in the same region are consistent with this code-side resource design problem.
+### Root causes found 2026-09-13
+This is not being treated as merely a GitHub runner problem.
 
-Fix commit **`2f020cb6517c50319a3bf849e6dfa93a650eb44a`**:
-- extract the narrow symmetric opponent cache first;
-- project the head frame to only metadata + the exact frozen v308 core/guard/causal head feature columns;
-- delete the full expanded dataframe before monthly head copies/training;
-- add explicit per-month head-fold heartbeat output;
-- keep all model settings and leakage boundaries unchanged.
+1. The original prepare implementation copied the fully expanded, highly fragmented v294->v307 dataframe for each Jul/Aug head fold, amplifying memory before v308 OOF/HGB+LR training.
+2. v321 also called `v303.opponent_mass(d)` during prepare. That helper is hard-wired to `TM=list(v298.TEST_MONTHS)`, i.e. the legacy Feb-Jun development months. It therefore cannot produce Jul/Aug opponent masses, while also rebuilding large SECOND/THIRD tables and models unnecessarily. This was semantically wrong and resource-heavy.
 
-Restarted v321 workflow run: **`34748125204`** (push of the fix commit; initially `in_progress`).
+Fix commit **`ffd6a1caf089546ae13c51059589b8f810bf6bef`**:
+- remove `v303.opponent_mass(d)` from prepare;
+- keep prepare limited to Aug-31 causal PRE, narrow head inputs, and symmetric opponent inputs;
+- reconstruct frozen v308 BASE opponent mass in evaluate for each Jul/Aug month with month M `< M` using SECOND L2=10 no-aug + THIRD L2=.3 no-aug + `v300.base5(...)[1]`;
+- reuse the same causal long tables for frozen v317 SECOND and v318 THIRD;
+- apply the frozen v308 selector and v320 HYBRID alpha=.70 only after correct Jul/Aug opponent mass exists.
+
+Current restarted v321 workflow run: **`34748818695`**, head SHA `ffd6a1caf089546ae13c51059589b8f810bf6bef`. At verification it was **queued** awaiting a hosted runner, with no job assigned yet.
 
 ### Current staged design
-1. **prepare**: build Jul/Aug causal PRE/head-selection universe, enforce September absence, remove `meet_*`, project to exact head inputs + symmetric opponent columns, and upload:
+1. **prepare**: build Jul/Aug causal PRE/head universe, enforce September absence, remove `meet_*`, project to exact head inputs + symmetric opponent columns, and upload:
    - `cache_v321_julaug_nonpristine_slim.csv.gz`
    - `cache_v321_julaug_nonpristine_head.csv`
    - `cache_v321_julaug_nonpristine_meta.csv`
-2. **evaluate**: download artifacts, apply frozen v317 SECOND + v318 THIRD + v320 HYBRID alpha=.70, and write final race/monthly/summary outputs.
+2. **evaluate**: download artifacts, reconstruct frozen v308 BASE opponent-mass gate for Jul/Aug, apply frozen v317 SECOND + v318 THIRD + v320 HYBRID alpha=.70, and write final race/monthly/summary outputs.
 
 Invariant notes:
 - v321 artifacts are NON-PRISTINE infrastructure only; not development cache replacements.
