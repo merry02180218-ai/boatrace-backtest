@@ -105,3 +105,14 @@ Remaining upstream construction:
 3. Build one upstream command emitting `--source-json` directly from current PRE + allowed pre-race exhibition/history sources.
 4. Add fixture/parity + fail-closed CI.
 5. Run full raw-source -> strict source -> models -> official pre-deadline odds -> VARN -> exact 10k Dutch and record all Run IDs/commits here.
+
+## Work session started — 2026-09-13 JST
+Status: **IN PROGRESS**
+
+Before-work plan for this session:
+1. Re-read latest main and latest 4-head Actions before changing production code.
+2. Verify whether the v283 ST-flat extension and v93 primitive builder already landed after this handoff; if landed, verify their newest CI rather than duplicating work.
+3. If CI is failed, inspect logs and fix/rerun without changing frozen production thresholds/policy.
+4. Then implement the next missing causal upstream block, prioritizing `bN_pl_*` production-safe construction and wiring of generated ST/v93/current exhibition into one strict source object.
+5. Add or extend fail-closed/parity CI for the new block.
+6. At session end, replace this status with **COMPLETED** or **BLOCKED**, and record exact commit SHAs, Run IDs, decisions, remaining gap, and the next resume point.
