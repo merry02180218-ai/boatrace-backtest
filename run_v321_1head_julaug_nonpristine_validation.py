@@ -37,36 +37,69 @@ def prepare():
     if any(str(m).startswith(('2026-07','2026-08','2026-09')) for m in dev.test_month.astype(str).unique()):
         raise RuntimeError('v321 DEV_PRED unexpectedly contains Jul/Aug/Sep')
     hcut=float(pd.to_numeric(dev.p_head,errors='coerce').quantile(Q))
+
+    # Build the causal universe once, capped hard at Aug 31. Settlement is attached only
+    # after PRE/history features are frozen; September is never requested or admitted.
     v300.setup_v298(); old_end=v298.v294.END
     try:
         v298.v294.END=date(2026,8,31); d,_=v298.v294.freeze_true_pre()
-    finally: v298.v294.END=old_end
+    finally:
+        v298.v294.END=old_end
     d=v298.v294.add_prior_history(d); d=v298.v294.add_rel(d)
     d,th=v298.add_threat(d); fam=v298.v296.clean_manifest(d); d,tf=v303.add_transfer_features(d); d,ca=v307.add_causal(d)
     safe=list(dict.fromkeys(v305.safe_transfer(tf['TURN_FORM'])+v305.safe_transfer(tf['STMOTOR'])+ca))
     if any('meet_' in str(c).lower() for c in safe): raise RuntimeError('v321 unsafe head feature')
     d,_=v298.v297.settle_full_after_freeze(d); d=d[(d.valid_result==1)&(d.combo_valid==1)].copy()
     if any(str(m).startswith('2026-09') for m in d.month.astype(str).unique()): raise RuntimeError('v321 September present')
-    masses=v303.opponent_mass(d); core=list(dict.fromkeys(fam['CLEAN_STATIC6_PLAYER']+th))
+
+    masses=v303.opponent_mass(d)
+    core=list(dict.fromkeys(fam['CLEAN_STATIC6_PLAYER']+th))
     guard=[c for c in core if c.startswith(('b1_','b2_','b3_','b4_','rel_','attack23_','v298_'))]
+
+    # IMPORTANT: extract the narrow opponent cache BEFORE the head folds, then throw away
+    # hundreds of unrelated columns. Previous v321 copied the fully-expanded d for each
+    # month (tr=d[...].copy()), amplifying a highly fragmented frame and repeatedly dying
+    # with runner 137/143. The frozen model inputs are unchanged; only unused columns are
+    # removed before monthly copies/training.
+    if any('meet_' in str(c) for c in d.columns):
+        d=d.drop(columns=[c for c in d.columns if 'meet_' in str(c)]).copy()
+    v300.setup_v298(); sufs=v298.suffixes(d)
+    if any('meet_' in str(x) for x in sufs): raise RuntimeError('v321 forbidden meet suffix')
+    slim_meta=['date','month','race_code','head_hit','actual_combo']
+    sym=[f'b{b}_{k}' for k in sufs for b in range(1,7) if f'b{b}_{k}' in d.columns]
+    slim=d[list(dict.fromkeys(slim_meta+sym))].copy()
+    slim.race_code=slim.race_code.astype(str).str.zfill(12)
+    if any(str(m).startswith('2026-09') for m in slim.month.astype(str).unique()): raise RuntimeError('v321 slim contains September')
+
+    head_meta=['date','month','race_code','venue','race','head_hit','actual_combo']
+    head_cols=list(dict.fromkeys(head_meta+core+safe))
+    missing=[c for c in head_cols if c not in d.columns]
+    if missing: raise RuntimeError(f'v321 required head columns missing n={len(missing)} sample={missing[:8]}')
+    hd=d[head_cols].copy()
+    del d
+    gc.collect()
+    print(f'v321 narrowed head frame rows={len(hd)} cols={len(hd.columns)}; opponent slim cols={len(slim.columns)}',flush=True)
+
     out=[]
     for tm in TARGET_MONTHS:
-        tr=d[d.month<tm].copy(); te=d[d.month==tm].copy()
+        print(f'v321 head fold start {tm}',flush=True)
+        tr=hd.loc[hd.month<tm].copy(); te=hd.loc[hd.month==tm].copy()
         if te.empty: raise RuntimeError(f'v321 no source rows for {tm}')
         bc=v298.v293.available(tr,core,.55); bg=v298.v293.available(tr,guard,.55); ex=v303.available(tr,safe)
         ph,_,_,_,_,_=v298.head_fold(tr,te,list(dict.fromkeys(bc+ex)),bg)
-        z=te[['date','month','race_code','venue','race','head_hit','actual_combo']].copy(); z.race_code=z.race_code.astype(str).str.zfill(12)
+        z=te[['date','month','race_code','venue','race','head_hit','actual_combo']].copy()
+        z.race_code=z.race_code.astype(str).str.zfill(12)
         z['p_head']=ph; z['opp_mass']=[masses.get(x,np.nan) for x in z.race_code]
-        z['selected']=((z.p_head>=hcut)&(z.opp_mass>=OPP_MASS_CUT)).astype(int); out.append(z)
-        del tr,te; gc.collect()
+        z['selected']=((z.p_head>=hcut)&(z.opp_mass>=OPP_MASS_CUT)).astype(int)
+        out.append(z)
+        print(f'v321 head fold done {tm} train={len(tr)} test={len(te)} features={len(set(bc+ex))}',flush=True)
+        del tr,te
+        gc.collect()
+
     head=pd.concat(out,ignore_index=True)
-    if any('meet_' in str(c) for c in d.columns): d=d.drop(columns=[c for c in d.columns if 'meet_' in str(c)]).copy()
-    v300.setup_v298(); sufs=v298.suffixes(d)
-    if any('meet_' in str(x) for x in sufs): raise RuntimeError('v321 forbidden meet suffix')
-    meta=['date','month','race_code','head_hit','actual_combo']; sym=[f'b{b}_{k}' for k in sufs for b in range(1,7) if f'b{b}_{k}' in d.columns]
-    slim=d[list(dict.fromkeys(meta+sym))].copy(); slim.race_code=slim.race_code.astype(str).str.zfill(12)
-    if any(str(m).startswith('2026-09') for m in slim.month.astype(str).unique()): raise RuntimeError('v321 slim contains September')
-    head.to_csv(PREP_HEAD,index=False); slim.to_csv(PREP_SLIM,index=False,compression='gzip'); pd.DataFrame([{'hcut':hcut}]).to_csv(PREP_META,index=False)
+    head.to_csv(PREP_HEAD,index=False)
+    slim.to_csv(PREP_SLIM,index=False,compression='gzip')
+    pd.DataFrame([{'hcut':hcut}]).to_csv(PREP_META,index=False)
     print(f'prepared head={len(head)} slim={len(slim)} cols={len(slim.columns)} hcut={hcut:.8f}',flush=True)
 
 
@@ -75,9 +108,12 @@ def evaluate():
     slim=pd.read_csv(PREP_SLIM,dtype={'race_code':str}); head=pd.read_csv(PREP_HEAD,dtype={'race_code':str}); hcut=float(pd.read_csv(PREP_META).hcut.iloc[0])
     if any(str(m).startswith('2026-09') for m in slim.month.astype(str).unique()): raise RuntimeError('v321 cache contains September')
     _,p3,p4=v312.load_cache(); v300.setup_v298(); sufs=v298.suffixes(slim)
+    print(f'v321 SECOND build rows={len(slim)} cols={len(slim.columns)}',flush=True)
     sl=v310.add_headrisk(v300.augment_second(v298.second_long(slim,sufs)),p3,p4); sx,_=v317.add_engineered(sl,'OUTER'); del sl; gc.collect()
     p2={tm:v311.p2_predict_explicit(sx,tm,1.0,None,{'START'})[0] for tm in TARGET_MONTHS}; del sx; gc.collect()
+    print('v321 SECOND done; THIRD build start',flush=True)
     cl=v300.augment_third(v298.conditional_long(slim,sufs)); pc={tm:v318.pc_predict(cl,tm,.1,'DROP_START')[0] for tm in TARGET_MONTHS}; del cl; gc.collect()
+    print('v321 THIRD done; ticket evaluation start',flush=True)
     selected=head[head.selected==1].copy()
     if selected.empty: raise RuntimeError('v321 no selected races')
     rows=[]; fn=v299.STRATEGIES[POLICY]
