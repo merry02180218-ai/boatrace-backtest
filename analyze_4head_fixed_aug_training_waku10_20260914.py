@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+# CI trigger: fixed August target / training-only Waku10 lineage audit
 from collections import defaultdict
 from datetime import date, timedelta
 from pathlib import Path
@@ -86,16 +87,13 @@ def hash_target(df):
     return hashlib.sha256(s.encode()).hexdigest()
 
 def main():
-    # Canonical replay once through August. This single target matrix is reused by both fitted models.
     canon_all=replay_features(TRAIN_START,TARGET_END,'canonical')
     canon_train=canon_all[canon_all.date<=str(TRAIN_END)].copy()
     target=canon_all[(canon_all.date>=str(TARGET_START))&(canon_all.date<=str(TARGET_END))].copy()
     target_hash=hash_target(target)
 
-    # Public-only Waku10 is used ONLY to reconstruct the old training feature lineage.
     public_train=replay_features(TRAIN_START,TRAIN_END,'public')
 
-    # Race identity/labels must be identical.
     canon_codes=canon_train[['date','race_code']].sort_values(['date','race_code']).reset_index(drop=True)
     public_codes=public_train[['date','race_code']].sort_values(['date','race_code']).reset_index(drop=True)
     if not canon_codes.equals(public_codes):
@@ -107,7 +105,6 @@ def main():
     m_can=v250.make_model(PRE_COLS); m_pub=v250.make_model(PRE_COLS)
     m_can.fit(canon_train[PRE_COLS],canon_train.y4head); m_pub.fit(public_train[PRE_COLS],public_train.y4head)
 
-    # Exact same frozen target matrix scored twice.
     target=add_labels(target)
     target['PRE_CANONICAL_TRAIN']=m_can.predict_proba(target[PRE_COLS])[:,1]
     target['PRE_PUBLIC_ONLY_TRAIN']=m_pub.predict_proba(target[PRE_COLS])[:,1]
@@ -133,7 +130,6 @@ def main():
         return {'mean':float(p.mean()),'median':float(p.median()),'bins':{lab:int(cut[lab]) for lab in LABELS},'band_R':int(len(band)),'band_wins':int(band.y4head.sum()),'band_rate':float(band.y4head.mean()) if len(band) else None}
     can=dist('PRE_CANONICAL_TRAIN');pub=dist('PRE_PUBLIC_ONLY_TRAIN')
     both=int((target.band_can & target.band_pub).sum()); gained=int((target.band_can & ~target.band_pub).sum()); lost=int((~target.band_can & target.band_pub).sum())
-    # Current public source coverage for training period, as actually observed during replay.
     pub_days=[]
     d=TRAIN_START
     while d<=TRAIN_END:
