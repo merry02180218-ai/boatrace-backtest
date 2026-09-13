@@ -20,23 +20,25 @@
 - Monthly: Apr190.737%, May112.675%, Jun72.542%. June head rate recovered to41.111% but conversion only43.243%.
 - Jul-Aug NON-PRISTINE ROI94.628%/-123,550. Not production adopted.
 
-## Wave36S-C narrowing experiment — PLANNED / STARTING
-- User requested narrowing Wave36 rather than expanding race count.
-- Freeze Wave36S-C model, p3 calibration, motor-mismatch modifier and v288 exclusion; do not change production v288.
-- Search for stricter pre-deadline gates that reduce the 305 Apr-Jun races toward roughly 200 / 150 / 100 race bands.
-- Candidate gates may use only information available before the target evaluation period. Select/freeze rules using Feb training + March OOS only; never tune from Apr-Jun ROI/payout and never tune from Jul/Aug outcomes.
-- Prioritize robustness, not peak aggregate ROI: report Apr, May, Jun separately plus aggregate R/hits/head rate/conversion/ROI/profit/maxDD. Explicitly check whether June ROI can recover while retaining useful volume.
-- Jul/Aug remain NON-PRISTINE diagnostic only. September outcomes/data forbidden. Exact v288 overlap must remain zero.
-- Closing odds may be used only for exact JPY10,000 Dutch staking/evaluation, never candidate selection.
-- Compare every narrowed survivor against frozen Wave36S-C (305R/74 hits/ROI128.218%) and v288 baseline context.
-- If no narrowing rule improves robustness without obvious overfitting, keep Wave36S-C unchanged and record NO_ADOPTION.
+## Wave36S-E confidence-margin narrowing — COMPLETE / NO_ADOPTION
+- Run 34787362679 success; job 103805147776; artifact 10327236674; artifact SHA256 100da520acc1ec98e3b3af08db72b669aea4fa5d3d01d14f326684ad9ed0ee7a.
+- Checkout SHA 6d99d440ac5184e341541c40199548bcaa8fc733.
+- Selection used March OOS head rate only; no March payout/ROI and no Apr-Aug tuning.
+- March Wave36S-C pool 79R. Tested confidence-margin keep levels 100/80/65/50/40/33%.
+- March-selected setting: keep65%, margin_cut 0.0853103576642292, 51R, head rate43.137%.
+- Apr-Jun pristine narrowed result:175R/46 ticket hits/79 head hits/head45.143%/conversion58.228%/ROI100.446%/+7,800/maxDD319,330.
+- Monthly: Apr63R/19 hits/ROI117.984%/+113,300; May63R/15 hits/ROI85.176%/-93,390; Jun49R/12 hits/ROI97.529%/-12,110.
+- Jul-Aug NON-PRISTINE diagnostic:130R/35 hits/ROI94.733%/-68,470; Jul55.000%, Aug133.262%.
+- Exact v288 overlap 0; September forbidden true.
+- Decision: NO_ADOPTION. Narrowing improved head rate, conversion, maxDD and June from72.542% to97.529%, but destroyed aggregate pristine economics versus Wave36S-C ROI128.218%/+860,660. Keep Wave36S-C unchanged as research candidate.
 
-## Wave36S-D order-conversion robustness — DEFERRED UNTIL NARROWING CHECK
-- Preserve Wave36S-C head-selection rule exactly if/when resumed.
-- Target conditional opponent ordering / Top5 conversion robustness using Feb training and March OOS only.
+## Wave36S-D order-conversion robustness — NEXT
+- Preserve Wave36S-C head-selection rule exactly.
+- Target conditional opponent ordering / Top5 conversion robustness because June head selection is acceptable but ticket conversion is weak.
+- Design/freeze candidates using Feb training + March OOS only; candidate selection must not use payout/ROI or Apr-Aug outcomes.
+- Evaluate Apr-Jun pristine month-by-month and aggregate; Jul/Aug NON-PRISTINE diagnostic only; September forbidden; v288 overlap zero.
 
 ## Exact restart point
-1. Implement Wave36S-C narrowing candidates with Feb/March-only selection.
-2. Run CI and inspect exact Apr-Jun plus Jul-Aug diagnostic results.
-3. Record run/artifact/results here before reporting.
-4. Only after narrowing decision, resume Wave36S-D if still warranted.
+1. Implement Wave36S-D orderer candidates from Feb/March evidence only.
+2. Run CI and inspect exact Apr-Jun plus Jul-Aug results.
+3. Record run/artifact/results here before reporting; do not modify v288.
