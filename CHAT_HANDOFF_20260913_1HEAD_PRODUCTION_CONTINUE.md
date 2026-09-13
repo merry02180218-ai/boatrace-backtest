@@ -190,3 +190,16 @@ Exact work now:
 6. If anchor passes, continue the predeclared cutoff grid 0.80/0.79/0.78/0.77/0.75 and compare against v336 volume relaxation.
 7. Keep September outcomes UNREAD.
 8. Append exact missing race IDs, root cause, fix commit, Run/Job/Artifact IDs, anchor result, and next resume point to THIS file before reporting completion.
+
+# 13. 2026-09-14 PRE-WORK — FORMALLY ADOPT HEAD CUTOFF 0.78 AND REGRESSION-AUDIT PRODUCTION PROFILE
+User instructed to continue after the v337 head-cutoff research and requested the 0.78 setting to be treated as the new operating choice.
+
+Exact work now:
+1. Re-check the latest successful v337 run/artifact on GitHub and verify the reported 0.78 aggregate/identity before adoption. Do not rely only on chat memory.
+2. Confirm the 0.8073405637 anchor still reproduces the canonical 96 PASS / 83 head / 45 exact3 identity and that September outcomes remain UNREAD.
+3. Locate the actual 1-head operational entry point/configuration. Preserve frozen research modules v308/v317/v318/v320/v323; do not rewrite their historical constants solely to make 0.78 look native.
+4. Create or update an explicit production profile/wrapper whose HEAD cutoff is 0.78 while retaining v332 ATTACK_ENV_SOFT env_w=.1 q=.65, SECOND v317, THIRD v318, and v320 HYBRID alpha=.70.
+5. Add a regression audit that hard-fails unless the adopted 0.78 Feb-Aug result reproduces the verified v337 aggregate and exact PASS race identity.
+6. Quantify monthly and venue concentration plus the quality of races newly admitted versus the old 0.8073405637 anchor, to detect whether 0.78 depends on one month/venue.
+7. Run CI for the new production profile/regression. September outcomes must remain UNREAD.
+8. After completion, append actual file changes, commit SHA(s), Actions Run/Job/Artifact IDs, 0.78 regression result, concentration audit, conclusion, and exact next resume point to THIS handoff before reporting completion.
