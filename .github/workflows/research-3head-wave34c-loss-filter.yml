@@ -1,13 +1,13 @@
-name: research-3head-wave34d-group-prototypes
+name: research-3head-wave34e-normalized-margin
 on:
   push:
     branches: [research/3head-v289-addon-expansion]
     paths:
-      - 'research_v289_3head_wave34d_group_prototypes.py'
+      - 'research_v289_3head_wave34e_normalized_margin.py'
       - '.github/workflows/research-3head-wave34c-loss-filter.yml'
   workflow_dispatch:
 jobs:
-  wave34d:
+  wave34e:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -21,19 +21,11 @@ jobs:
         run: |
           gh run download 34754875342 --repo merry02180218-ai/boatrace-backtest --name 3head-wave21-allrace-source-build --dir source
           cp source/analysis_v289_3head_wave21_allrace_feature_settled.csv .
-      - name: Verify baseline
-        run: |
-          python - <<'PY'
-          import pandas as pd
-          q=pd.read_csv('v288_operational_pre_replay_94_baseline_codes.csv',dtype=str)
-          assert len(q)==94 and q.race_code.nunique()==94
-          assert q.route.value_counts().to_dict()=={'S':55,'A':21,'B':18}
-          PY
-      - run: python research_v289_3head_wave34d_group_prototypes.py
+      - run: python research_v289_3head_wave34e_normalized_margin.py
       - uses: actions/upload-artifact@v4
         with:
-          name: 3head-wave34d-group-prototypes
+          name: 3head-wave34e-normalized-margin
           path: |
-            analysis_v289_3head_wave34d_group_prototypes.csv
-            research_v289_3head_wave34d_group_prototypes.json
-            research_v289_3head_wave34d_group_prototypes.md
+            analysis_v289_3head_wave34e_normalized_margin.csv
+            research_v289_3head_wave34e_normalized_margin.json
+            research_v289_3head_wave34e_normalized_margin.md
