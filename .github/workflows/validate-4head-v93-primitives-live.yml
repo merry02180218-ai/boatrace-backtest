@@ -1,0 +1,19 @@
+name: validate-4head-v93-primitives-live
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'build_4head_v93_primitives_live.py'
+      - 'verify_4head_v93_primitives_live.py'
+      - 'backtest.py'
+      - '.github/workflows/validate-4head-v93-primitives-live.yml'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m py_compile build_4head_v93_primitives_live.py verify_4head_v93_primitives_live.py
+      - run: python verify_4head_v93_primitives_live.py
