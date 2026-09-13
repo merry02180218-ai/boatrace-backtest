@@ -1,13 +1,13 @@
-name: research-3head-wave36r-robustness
+name: research-3head-wave37-orderer
 on:
   push:
     branches: [research/3head-v289-addon-expansion]
     paths:
-      - 'research_v289_3head_wave36r_robustness.py'
+      - 'research_v289_3head_wave37_orderer.py'
       - '.github/workflows/research-3head-wave34c-loss-filter.yml'
   workflow_dispatch:
 jobs:
-  wave36r:
+  wave37:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -21,8 +21,8 @@ jobs:
         run: |
           gh run download 34754875342 --repo merry02180218-ai/boatrace-backtest --name 3head-wave21-allrace-source-build --dir source
           cp source/analysis_v289_3head_wave21_allrace_feature_settled.csv .
-      - run: python research_v289_3head_wave36r_robustness.py
+      - run: python research_v289_3head_wave37_orderer.py
       - uses: actions/upload-artifact@v4
         with:
-          name: 3head-wave36r-robustness
-          path: research_v289_3head_wave36r_robustness.json
+          name: 3head-wave37-orderer
+          path: research_v289_3head_wave37_orderer.json
