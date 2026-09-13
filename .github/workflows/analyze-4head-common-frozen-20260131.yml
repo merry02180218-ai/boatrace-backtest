@@ -4,6 +4,7 @@ on:
     paths:
       - analyze_4head_common_frozen_20260131.py
       - .github/workflows/analyze-4head-common-frozen-20260131.yml
+      - data/programs/waku10/**
 jobs:
   analyze:
     runs-on: ubuntu-24.04
