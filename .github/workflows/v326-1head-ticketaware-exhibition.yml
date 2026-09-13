@@ -1,0 +1,39 @@
+name: v326-1head-ticketaware-exhibition
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v326_1head_ticketaware_exhibition.py'
+      - '.github/workflows/v326-1head-ticketaware-exhibition.yml'
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install pandas numpy scikit-learn requests
+      - name: Run v326 ticket-aware exhibition research
+        run: python run_v326_1head_ticketaware_exhibition.py
+      - name: Show summary
+        if: always()
+        run: |
+          echo '--- v326 summary ---'
+          if [ -f /tmp/v326/summary_v326_1head_ticketaware_exhibition.md ]; then
+            cat /tmp/v326/summary_v326_1head_ticketaware_exhibition.md
+          fi
+          echo '--- v326 summary csv ---'
+          if [ -f /tmp/v326/v326_summary.csv ]; then
+            cat /tmp/v326/v326_summary.csv
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v326-1head-ticketaware-exhibition
+          path: /tmp/v326/*
+          if-no-files-found: warn
