@@ -1,63 +1,33 @@
 # CHAT HANDOFF — 3HEAD AUTO RESEARCH CURRENT
 
-## Current policy
-- research branch: `research/3head-v289-addon-expansion`
-- latest GitHub overrides older chat/memory.
-- legacy v288 production remains unchanged.
-- legacy v288 baseline is a **floor**: 94R / 52 hits / stake 940,000 yen / payout 1,622,070 yen / profit +682,070 yen / ROI 172.560638%.
-- candidate research universe is the **full audited Feb-Aug population** excluding only unchanged legacy v288 baseline: 678 total - 94 baseline = **584R**.
-- July/August are NON-PRISTINE. September outcomes are forbidden for tuning/model selection.
-- prediction inputs must be pre-deadline only; required-current missing => fail closed.
-- settlement/outcome fields are evaluation-only after feature freeze.
-- add-on overlap with legacy v288 must remain zero.
-- stake remains JPY10,000/race.
+## Policy
+- Branch: `research/3head-v289-addon-expansion`; newest GitHub state wins.
+- Legacy v288 stays unchanged: 94R / 52 hits / stake 940,000 yen / payout 1,622,070 yen / profit +682,070 yen / ROI 172.560638%.
+- Current research source is no longer limited to v243 678R or 584R. Use all available six-boat races from 2026-02-01 through 2026-08-31 from BoatraceCSV race_cards.
+- Jul/Aug NON-PRISTINE. September outcomes forbidden.
+- Features must be pre-deadline. Results/payouts are evaluation-only. Missing required current inputs fail closed.
+- Add-on overlap with v288 must be zero. Stake JPY10,000/race.
 
-## Waves 1-17
-All rejected. Stable details remain in repository result files.
+## Prior state
+- Wave18b Run `34749443471`: 678/678 official settlements and exact-order results recovered.
+- Wave19a Run `34749575986`: 678/678 payouts recovered; 3-head all-20 equal stake benchmark ROI 70.929941%.
+- Wave19b Run `34749707037` failed with `RuntimeError: missing payout`. This 584R branch is superseded by Wave20; keep only as audit history.
 
-## Wave18 — FINAL
-- Run `34748886697` success; artifact `3head-wave18-full-universe`, ID `10315126991`.
-- source unique races 678; non-baseline research universe 584R; frozen v243 table lacked hypothetical settlement on BET=0 rows.
-- decision **SOURCE_REBUILD_REQUIRED_WAVE18**.
-
-## Wave18b — FINAL
-- startup-failed Run `34749298218` fixed automatically.
-- successful Run **`34749443471`**, job `103703132844` success.
-- artifact **`3head-wave18b-settlement-recovery`**, ID **`10315112832`**.
-- 678/678 official settlements = 100%; 678/678 exact trifecta outcomes = 100%; actual 3-head wins = 321R.
-- all 678 recovered from realtime result source; max date 2026-08-31.
-- decision **SETTLED_SOURCE_READY**.
-
-## Wave19a — payout enrichment — FINAL
-- Run **`34749575986`** completed success.
-- job `103703497997` success.
-- artifact **`3head-wave19-payout-enrichment`**, ID **`10315596555`**.
-- head SHA `a30b22936169e82d14c2203759562ad332a95f88`.
-- payout coverage: **678/678 = 100%**.
-- payout combo exactly matched recovered actual combo: **678/678 = 100%**.
-- positive trifecta payout rows: **678R**.
-- max date: 2026-08-31.
-- transparent benchmark: 3号艇頭20通りを各500円（計10,000円/R）で678R全買い => stake **6,780,000 yen**, payout **4,809,050 yen**, profit **-1,970,950 yen**, ROI **70.929941%**.
-- decision **PAYOUT_SOURCE_READY**.
-- interpretation: full-population ROI research is now scientifically settleable; do not revert to 232R/54R restricted pools.
-
-## Wave19b — full 584R walk-forward — RUNNING
-- script: `research_v289_3head_wave19b_full584_walkforward.py`.
-- script commit: **`979e9647444c09452817a7e4cb59b525a16d1776`**.
-- workflow update commit: **`bf8ebc78c537eb7ae3d296d890c26039a5d14150`**.
-- Actions Run: **`34749707037`** (queued at launch check).
-- candidate population: exactly **584R** non-baseline full universe.
-- settlement benchmark: 3-head all 20 exact-order combos x JPY500 = JPY10,000/race.
-- prior-month-only walk-forward; full pre-deadline features + value + current exhibition; required feature missing => fail closed.
-- fractions tested: 2%, 4%, 6%, 8%, 12%, 15% of prior score distribution.
-- every method must report add-on R, hits/rate, stake, payout, ROI, profit, monthly, min-month ROI, red months, max DD, overlap, combined baseline+addon R/ROI.
-- adoption research guard: add-on >=20R, ROI>=100%, min-month ROI>=60%, red months<=3, overlap=0. A pass is shadow candidate only until separately validated.
+## Wave20 — FINAL
+- Script: `research_v289_3head_wave20_allrace_universe.py`; commit `7b45397f47eeb08c3558268b5288db6768c104cb`.
+- Workflow commit: `33c296c008a7a588e9f694feb577a3612b4731d7`.
+- Run `34749917116`: success.
+- Artifact `3head-wave20-allrace-universe`, ID `10314839371`.
+- Full available six-boat universe: **32,111R**.
+- Monthly: Feb 4100 / Mar 4607 / Apr 4244 / May 4832 / Jun 4488 / Jul 4920 / Aug 4920.
+- Missing race_cards date: 2026-06-17 only.
+- Decision: `ALLRACE_UNIVERSE_READY`.
 
 ## Exact restart point
-1. Inspect Run `34749707037` first.
-2. If failed: inspect logs, fix automatically, rerun without weakening guards.
-3. If success: inspect artifact `3head-wave19b-full584-walkforward`, record artifact ID, all method metrics, best method, passers, decision, and relevant commit SHA here.
-4. If **NO_ADOPTION_WAVE19B**, immediately launch a distinct Wave20 full-584R family (not simple threshold loosening; e.g. latent regime / nearest-neighbor analog / ticket-rerank using the payout-enriched source).
-5. If shadow candidate appears, record it but do not replace v288 until separate validation.
-6. Preserve: legacy 94R floor, Jul/Aug NON-PRISTINE, September forbidden, pre-deadline only, fail-closed current inputs, zero overlap, JPY10,000/race.
-7. **AUTO-CONTINUE:** if no relevant 3-head commit/Run for >2h, a Run fails/stops/incompletely exits, or a Wave completes with no next distinct Wave launched, resume automatically from this file, fix/re-run, update this handoff, and continue.
+1. Use Wave20 artifact CSV as the 32,111R base.
+2. Join complete pre-deadline race_cards plus waku10 fields.
+3. After feature freeze, attach realtime exact order plus official trifecta combo and payout for settlement only.
+4. Audit coverage, date range, and result/payout combo agreement; fail closed on insufficient coverage.
+5. Then run full-population 3-head walk-forward research. Exclude the legacy 94R only when checking add-on overlap, not as an initial candidate-universe restriction.
+6. Report R, hits, stake, payout, ROI, profit, monthly, min-month ROI, red months, max DD, overlap, and combined baseline+addon.
+7. If a run fails or a wave ends without the next wave, fix/restart automatically and update this file.
