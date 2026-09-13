@@ -40,15 +40,31 @@ CONSENSUS = {
 }
 
 
+def norm_code(x):
+    s = str(x).strip()
+    if s.endswith('.0'):
+        s = s[:-2]
+    return s.zfill(12)
+
+
+def norm_date(x):
+    try:
+        return pd.Timestamp(x).strftime('%Y-%m-%d')
+    except Exception:
+        return str(x).strip().replace('/', '-')
+
+
 def selector_frame():
     p = pd.read_csv(P4, dtype={'race_code': str})
-    p['race_code'] = p.race_code.astype(str).str.zfill(12)
+    p['race_code'] = p.race_code.map(norm_code)
+    p['date'] = p.date.map(norm_date)
     w = p.pivot_table(index=['date','month','race_code'], columns='variant', values='p4head', aggfunc='last').reset_index()
     w = w[(w.month <= '2026-06') & (~w.month.isin(['2026-07','2026-08']))].copy()
     w = w[(w.PRE >= PRE_CUT) & (w.POST >= POST_CUT)].copy()
 
     f = pd.read_csv(F4, dtype={'race_code': str})
-    f['race_code'] = f.race_code.astype(str).str.zfill(12)
+    f['race_code'] = f.race_code.map(norm_code)
+    f['date'] = f.date.map(norm_date)
     f = f[(f.month <= '2026-06') & (~f.month.isin(['2026-07','2026-08']))].copy()
     fw = f.pivot_table(index=['date','month','race_code','y4'], columns='variant', values='p', aggfunc='last').reset_index()
     z = w.merge(fw, on=['date','month','race_code'], how='inner')
@@ -59,15 +75,34 @@ def settle_rows(z):
     rs = c4.read()
     orders = v251.pair_orders(rs)
     actual = v251.actual_map(rs)
+    # Canonical race-code fallback is plumbing-only. race_code already embeds the
+    # event date, so this does not alter ranking, thresholds, tickets or outcomes.
+    orders_by_code = {norm_code(k[1]): v for k, v in orders.items()}
+    actual_by_code = {norm_code(k[1]): v for k, v in actual.items()}
     od = load_odds()
-    oi = od.set_index('race_code', drop=False) if not od.empty else pd.DataFrame()
+    if not od.empty:
+        od = od.copy()
+        od['race_code'] = od.race_code.map(norm_code)
+        oi = od.set_index('race_code', drop=False)
+    else:
+        oi = pd.DataFrame()
     rows = []
+    diag = {'selector_rows': int(len(z)), 'order_match': 0, 'actual_match': 0, 'valid_actual': 0, 'odds_match': 0, 'settled_rows': 0}
     for _, r in z.iterrows():
-        code = str(r.race_code).zfill(12)
-        order = orders.get((str(r.date), code))
-        a = actual.get((str(r.date), code))
-        if not order or not a or a[3] != 1 or code not in oi.index:
+        code = norm_code(r.race_code)
+        ds = norm_date(r.date)
+        order = orders.get((ds, code)) or orders_by_code.get(code)
+        a = actual.get((ds, code)) or actual_by_code.get(code)
+        if order:
+            diag['order_match'] += 1
+        if a:
+            diag['actual_match'] += 1
+        if not order or not a or a[3] != 1:
             continue
+        diag['valid_actual'] += 1
+        if code not in oi.index:
+            continue
+        diag['odds_match'] += 1
         o = oi.loc[code]
         o = o.iloc[-1] if isinstance(o, pd.DataFrame) else o
         ch = []
@@ -81,7 +116,7 @@ def settle_rows(z):
             continue
         n, hit, ret, comp = min(ch, key=lambda x: (abs(x[3] - COMP_TARGET), x[0]))
         rec = {
-            'date': r.date, 'month': r.month, 'race_code': code,
+            'date': ds, 'month': r.month, 'race_code': code,
             'PRE': float(r.PRE), 'POST': float(r.POST), 'y4': int(r.y4),
             'n': n, 'hit': hit, 'return_yen': ret, 'comp_odds': comp,
         }
@@ -91,6 +126,8 @@ def settle_rows(z):
             else:
                 rec[name] = np.nan
         rows.append(rec)
+    diag['settled_rows'] = len(rows)
+    print('v267 settlement diagnostics:', diag)
     return pd.DataFrame(rows)
 
 
@@ -119,7 +156,7 @@ def main():
     z = selector_frame()
     settled = settle_rows(z)
     if settled.empty:
-        raise RuntimeError('no settled v260-base rows')
+        raise RuntimeError('no settled v260-base rows after canonical key normalization')
     rows = []
 
     # Frozen v260 benchmark: no new overlay.
