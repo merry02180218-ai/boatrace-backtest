@@ -1,0 +1,30 @@
+name: v328 1-head ticket error audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v328_1head_ticket_error_audit.py'
+      - '.github/workflows/v328-1head-ticket-error-audit.yml'
+
+jobs:
+  v328:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy scikit-learn
+      - name: Run v328 audit
+        run: python run_v328_1head_ticket_error_audit.py
+      - name: Show summary
+        if: always()
+        run: cat /tmp/v328/summary_v328.md || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v328-1head-ticket-error-audit
+          path: /tmp/v328/
+          if-no-files-found: warn
