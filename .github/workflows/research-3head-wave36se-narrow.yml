@@ -1,0 +1,31 @@
+name: research-3head-wave36se-narrow
+on:
+  push:
+    branches: [research/3head-v289-addon-expansion]
+    paths:
+      - 'research_v289_3head_wave36se_narrow.py'
+      - '.github/workflows/research-3head-wave36se-narrow.yml'
+  workflow_dispatch:
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas numpy scikit-learn
+      - name: Download source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34754875342 --repo merry02180218-ai/boatrace-backtest --name 3head-wave21-allrace-source-build --dir source
+          cp source/analysis_v289_3head_wave21_allrace_feature_settled.csv .
+      - run: python research_v289_3head_wave36se_narrow.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 3head-wave36se-narrow
+          path: research_v289_3head_wave36se_narrow.json
