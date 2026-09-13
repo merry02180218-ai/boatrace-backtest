@@ -72,8 +72,8 @@ Historical result-blind sources:
 - `data/previews/stt/YYYY/MM/DD.csv`
 - `data/previews/original_exhibition/YYYY/MM/DD.csv`
 - audited transform `backtest_v51_lane_corrected_tickets.py::corrected_direct`
-- `corrected_direct` applies lane/frame correction then within-race rank scores; ST bias is learned only from prior dates.
-- coverage on historical frozen source family: tkz/stt ~92.8%, original exhibition ~88.5%.
+- ST lane bias is learned only from prior dates.
+- route readiness uses raw completeness, never neutral 0.5 as proof of observation.
 
 ---
 
@@ -95,44 +95,48 @@ Transferred architecture only: frozen PRE -> multiple current-exhibition dimensi
 ---
 
 # 8. v329 multistage exhibition judgement — COMPLETE / REPORTED
-Implementation `run_v329_1head_multistage_exhibition.py`; workflow `.github/workflows/v329-1head-multistage-exhibition.yml`.
-Retrigger commit `71a46a174563d97b98630042bbb74eeec5dc2976`.
+Implementation commit `c21b058773138c7a9148e4b3a05b68474a741621`; workflow commit `b69b2ac9b078604ee6eb056e8afd44900efd70d3`; retrigger commit `71a46a174563d97b98630042bbb74eeec5dc2976`.
 Actions Run **34771215699** SUCCESS, Job **103761044413**, Artifact **10322321569**, artifact SHA256 `6d61c88386ff54ab443c03b36b0f034da7fbac0298185bb722d0ee0d383cb2f9`.
-Frozen identity remained 345/290/139; tickets unchanged; Jul/Aug unopened for tuning/performance; September outcomes unread.
+Frozen identity remained 345/290/139; tickets unchanged; September outcomes unread.
 Frozen config: attack_q=.55, turn_q=.55, env_q=.60, bcore_q=.90, benv_q=.40.
+Fixed thresholds from discovery: attack `0.6453333333333333`; turn `0.5980000000000001`; env `-0.29666666666666663`; bcore `0.8973333333333333`; benv `-0.37666666666666665`.
 Feb-Apr PASS 25R / 12 exact3 = 48.00%, head22/25=88.00%.
 May PASS 24R / 10 exact3 = 41.67%, head21/24=87.50%.
 June baseline 92R / 32 exact3 = 34.78%, head75/92=81.52%.
 June PASS **17R / 8 exact3 = 47.06%, head16/17=94.12%**; SKIP 75R / 24 exact3=32.00%.
 June S grade 14R / 8 exact3=57.14%, head13/14=92.86%; A grade 3R / 0 exact3; B 0R.
-`FORWARD_SUPPORTED=True`, `PROMOTE=True` under v329's predeclared criteria.
-Important caveat raised by user: 17/92 June PASS is likely too selective; robustness/volume must be tested over a longer backtest period before treating v329 as practical production promotion.
+`FORWARD_SUPPORTED=True`, `PROMOTE=True` under v329's predeclared criterion.
+User caveat: 17/92 June PASS may be too selective; longer-period robustness/volume test required before practical production use.
 
 ---
 
-# 9. Work Unit 6D — v330 extended-period v329 robustness/volume audit — ABOUT TO START
-Current position:
-- v329 passed its one-shot June forward test but selects only 17/92 June frozen PRE races.
-- User explicitly requested a longer backtest period to determine whether the apparent lift is robust and whether the race count is too restrictive.
-- Frozen production v308/v317/v318/v320/v323 remains unchanged while this audit runs.
+# 9. Work Unit 6D-A — v330 period-extension source audit — COMPLETE
+Audit findings recorded before v330 code:
+1. `analyze_v294_1head_verified_prepost_research.py` has `START=2025-11-01`, but formal walk-forward `TEST_MONTHS` are only **2026-02..2026-06**. Nov-Jan are warm-up/training lineage, not an existing comparable frozen evaluation cohort.
+2. `run_v308_1head_volume_opponent_joint.py` inherits those same TEST_MONTHS.
+3. `run_v326_1head_ticketaware_exhibition.py` and v329 hard-code the frozen v320 345-row Feb-Jun identity, so an earlier Jan-or-before extension would require rebuilding/redefining the full PRE/opponent evaluation design rather than simply applying the same frozen rule.
+4. A directly comparable later frozen-stack cohort already exists from v321: `analysis_v321_1head_julaug_nonpristine_validation_race.csv`, exactly **55 rows / head45 / exact3 21**, split Jul13 and Aug42. It was reconstructed month-by-month using the frozen v308 head gate, v317 SECOND, v318 THIRD and v320 HYBRID tickets with month M trained only on <M.
+5. Jul/Aug are NON-PRISTINE because their outcomes were exposed previously, so they can only be a **fixed-rule stress/volume reference**; they cannot tune thresholds or promote a model. September remains unread.
 
-Exact work about to be done:
-1. Audit repository historical availability before choosing dates. Extend backward as far as the existing causal PRE/opponent/exhibition pipeline can be reproduced without future/backfill leakage. Do NOT simply append Jul/Aug because those are NON-PRISTINE and were exposed during research.
-2. Prefer a genuinely earlier untouched historical window (before Feb 2026) if required source/cache lineage supports it. Month M must train only on <M and current-race exhibition remains post-PRE.
-3. Apply the already-frozen v329 scoring formulas and thresholds/config without retuning on the extended evaluation months.
-4. Report per-month and aggregate: PRE-selected R, exhibition-ready R, v329 PASS R and PASS rate, exact3 hit rate, head rate, S/A/B counts/rates, SKIP metrics, and confidence intervals/dispersion sufficient to judge whether 47.06% was small-sample noise.
-5. Also report practical volume: PASS races per racing day / per month where possible. Do not relax v329 thresholds in this work unit; first measure robustness honestly.
-6. Jul/Aug may remain only previously-known NON-PRISTINE reference and must not be used to select/retune thresholds. September outcomes remain unread.
+Revised v330 design now frozen before implementation:
+- load the v321 55-row Jul/Aug frozen-stack cohort and assert 55/head45/exact3=21 before exhibition filtering;
+- recreate same-race exhibition features with the v326 audited raw-readiness + `corrected_direct` path and prior-day-only ST bias, preloading from 2025-10-01;
+- use v329 formulas and the exact already-frozen numeric thresholds above; **no quantiles/grid/refit/threshold change**;
+- grade S -> A -> B with exactly the v329 precedence and fail-closed route readiness;
+- report July, August, Jul+Aug baseline/readiness/PASS/SKIP/S-A-B, PASS fraction, head rate, exact3 rate, unique selected days and practical PASS volume;
+- also report descriptive Feb-Jun vs Jul/Aug and Feb-Aug totals, while keeping the NON-PRISTINE caveat explicit.
 
 Success criteria:
-- at least several additional months or a materially larger independent race sample is evaluated with the frozen v329 rule;
-- no future/backfill contamination and frozen ticket identity logic is preserved for comparable cohorts;
-- volume and accuracy tradeoff is quantified, not just hit rate;
-- result determines whether next work should be (a) keep v329, (b) cautiously widen routes in a separately predeclared v331, or (c) reject v329 as unstable.
+- base reconciliation exactly 55/head45/exact3=21;
+- no September result access;
+- frozen v329 thresholds unchanged;
+- Jul/Aug exhibition feature generation completes causally with missing-source routes failing closed;
+- enough output to judge whether v329's ~19% Feb-Jun PASS share and June 17/92 selectivity are stable or an artifact.
 
 Failure fallback:
-- if earlier months cannot be reconstructed causally from existing repo data, document the exact earliest valid boundary and why; do not fabricate or silently use contaminated data.
-- if extended cohort differs from the 345 frozen cohort construction, explicitly reconcile the difference before comparing rates.
+- if Jul/Aug source coverage is missing, report readiness and fail closed; never neutral-fill a missing required source;
+- if base identity differs, stop before scoring and record exact mismatch;
+- if code fails, record Run/Job/error here before correction.
 
 Exact next resume point:
-- inspect historical data/cache/model date coverage and implement a frozen-rule extended-period evaluator as v330; run Actions and report the v330 result before any threshold-widening experiment.
+- implement `run_v330_1head_extended_v329_reference.py` and `.github/workflows/v330-1head-extended-v329-reference.yml`; run Actions; append actual results before any v331 widening experiment.
