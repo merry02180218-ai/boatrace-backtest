@@ -9,38 +9,26 @@
 - Stake JPY10,000 per selected race with Dutch allocation; selected overlap with v288 must be zero.
 
 ## Stable source
-- Wave20 Run 34749917116: success; full six-boat universe 32,111R. Monthly Feb 4100 / Mar 4607 / Apr 4244 / May 4832 / Jun 4488 / Jul 4920 / Aug 4920.
+- Wave20 Run 34749917116: success; full six-boat universe 32,111R.
 - Wave21 Run 34751314113: exact settlement usable 31,518/32,111.
 - Wave22 Run 34752573368: full 120 closing trifecta odds 31,605/32,111.
-- Wave19b Run 34749707037 failed due missing payout column and is superseded; never revert to old 584R/678R scope.
+- Wave19b failed and is superseded; never revert to old 584R/678R scope.
 
 ## Wave34 family
-- Wave34: Apr-Jun ROI 84.243%.
-- Wave34b: Apr-Jun ROI 85.449%.
-- Wave34c Run 34769751846: Apr-Jun 381R / 54 hits / ROI 86.794% / profit -503,130 yen; Apr 95.734 / May 74.626 / Jun 89.808; combined v288 ROI 103.767% / +178,940 yen. NO_ADOPTION and current best Wave34-family pristine ROI.
+- Wave34 ROI 84.243%.
+- Wave34b ROI 85.449%.
+- Wave34c Run 34769751846: Apr-Jun 381R / 54 hits / ROI 86.794% / profit -503,130 yen; Apr 95.734 / May 74.626 / Jun 89.808. Current best Wave34-family pristine ROI.
+- Wave34d corrected Run 34770655705: Apr-Jun ROI 71.717%. NO_ADOPTION.
+- Wave34e Run 34771060051: success; artifact 10321329425. March 45R / ROI 179.522%, selected raw_mean rather than normalized margin. Apr-Jun 365R / 50 hits / ROI 81.640% / profit -670,130 yen. Apr 96.993 / May 67.128 / Jun 80.527. Jul-Aug shadow 76.300%. combined v288 ROI 100.260% / +11,940. NO_ADOPTION.
 
-## Wave34d corrected grouped prototypes — FINAL
-- Run 34770655705 success; artifact 10321937503.
-- Correct groups: global 63 / boat3_abs 9 / mean_advantage 9 / inner12 18 / outer456 27.
-- March selected inner12 / consensus1 / top5: 135R / ROI 153.116%.
-- Apr-Jun pristine: 764R / 118 hits / ROI 71.717% / profit -2,160,850 yen.
-- Monthly: Apr 203R / ROI 76.787% / -471,220; May 284R / ROI 64.063% / -1,020,600; Jun 277R / ROI 75.847% / -669,030.
-- min month 64.063%; red months 3; max DD 2,288,930 yen.
-- Jul-Aug NON-PRISTINE shadow ROI 67.714%.
-- combined v288 + holdout ROI 82.765% / profit -1,478,780 yen. overlap 0.
-- Decision NO_ADOPTION. Group-specific March signal did not generalize; do not continue group decomposition.
-
-## Wave34e — NEXT normalized prototype margin
-- User requested continued research.
-- Return to Wave34b/34c global 63-feature bootstrap prototype core; do not carry Wave34d group gate.
-- Test scale-normalized prototype margin: (d_neg - d_pos) / (d_neg + d_pos + eps), retaining bootstrap mean/std/agreement. Compare against raw-margin baseline inside March only.
-- Keep the conditional exact-order logistic model from Wave34b.
-- Feb trains. March alone selects a small predeclared gate using normalized mean, agreement and optionally maximum bootstrap std; 30..300 March race floor. Apr-Jun untouched pristine. Jul-Aug frozen shadow only.
-- Goal: improve Wave34c Apr-Jun ROI 86.794% and May 74.626% while preserving non-trivial race count.
-- Same exact-v288-94 exclusion, 63 static features, no September, closing odds staking-only, JPY10k Dutch, overlap 0.
+## NEXT: Wave34f diagnosis
+- User approved diagnosis-first continuation.
+- Diagnose why Wave34 selections deteriorate in May compared with April and June before another predictive gate is designed.
+- Use only pre-deadline 63 static features for explanatory distribution comparisons. Settlement/outcome can label retrospective hit/miss groups only.
+- Compare Apr/May/Jun selected races for feature drift, prototype score/agreement/stability, and hit/miss clustering.
+- Diagnosis can create hypotheses but May outcomes must NOT tune the next production threshold. Any Wave34f predictive gate must still be chosen using Feb/March only and evaluated untouched on Apr-Jun.
 
 ## Exact restart point
-1. Implement Wave34e normalized-margin prototype stability research.
-2. Trigger existing Wave34d workflow path as runner if a new workflow cannot be created.
-3. If failed, fix automatically without weakening guards.
-4. On success record R/hits/ROI/profit/monthly/min month/red months/max DD/overlap/combined and compare Wave34c vs Wave34e.
+1. Build and run May-failure diagnostic.
+2. Record largest pre-deadline distribution shifts and hit/miss clusters.
+3. Design next gate from a hypothesis that can be selected using Feb/March only, then run untouched Apr-Jun evaluation.
