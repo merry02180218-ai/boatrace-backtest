@@ -1,0 +1,24 @@
+name: v335 1-head v332 volume expansion
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v335_1head_v332_volume_expansion.py'
+      - '.github/workflows/v335-1head-v332-volume-expansion.yml'
+jobs:
+  v335:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy scikit-learn
+      - name: Run v335 volume expansion audit
+        run: python run_v335_1head_v332_volume_expansion.py
+      - name: Show summary
+        run: cat /tmp/v335/summary_v335.md || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v335-1head-v332-volume-expansion
+          path: /tmp/v335/
