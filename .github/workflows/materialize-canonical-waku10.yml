@@ -62,3 +62,4 @@ jobs:
             canonical_waku10_coverage.csv
             canonical_waku10_summary.md
           retention-days: 90
+      # push-triggered canonical materialization
