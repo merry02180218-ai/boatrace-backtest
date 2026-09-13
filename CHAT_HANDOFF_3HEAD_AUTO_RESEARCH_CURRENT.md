@@ -3,45 +3,34 @@
 ## Policy
 - Branch research/3head-v289-addon-expansion; newest GitHub state wins.
 - Fixed v288 baseline 94R /52 hits / ROI172.560638%.
-- Scope Feb-Aug 2026 full six-boat population; exclude exact v288 94R.
-- Pre-deadline features only. Settlement/closing odds eval/staking only.
-- JPY10,000 per selected race, Dutch. Jul/Aug NON-PRISTINE. September forbidden.
+- Pre-deadline features only; JPY10,000 per selected race. Jul/Aug NON-PRISTINE. September forbidden.
 
 ## Wave36 benchmark
-- Run 34780059085: Apr-Jun 391R /87 hits / ROI114.913% / +583,090.
+- Run34780059085: Apr-Jun 391R/87 hits/ROI114.913%/+583,090.
 
-## Wave36S-C pre-April motor robustness modifier — RESEARCH_CANDIDATE
-- Run 34786354062 success; artifact 10326661910.
-- Apr-Jun pristine:305R/74 hits/ROI128.218%/+860,660/head42.295%/conversion57.364%/maxDD481,120.
-- Monthly: Apr190.737%, May112.675%, Jun72.542%. June head rate41.111%, conversion43.243%.
-- Jul-Aug NON-PRISTINE ROI94.628%/-123,550. Not production adopted.
+## Wave36S-C
+- Run34786354062: Apr-Jun305R/74 hits/ROI128.218%/+860,660. RESEARCH_CANDIDATE.
 
-## Wave36S-E confidence-margin narrowing — COMPLETE / NO_ADOPTION
-- Run 34787362679 success; Apr-Jun 175R/46 hits/ROI100.446%/+7,800; no adoption.
+## Wave36S-D
+- Run34787885427 failed closed: exact v288 opponent orderer covered296/305; 9 missing. Partial ROI invalid until NO-BET semantics fixed.
 
-## Wave36S-D exact v288 opponent selection — FAILED / RECOVERY STARTED
-- Run 34787885427 failed by intentional fail-closed parity guard; Job 103806586829; artifact 10327506732; artifact SHA256 6706ce5b35c740393b71d42eca13b8e998b476d06287486c81e0c34c8fec604d.
-- Exact stack attempted: production V221 ordered-pair ranker safe_order -> v242 variable TopN target composite odds3.00 -> skip if unconstrained TopN<5 -> cap10 -> exact JPY10,000 Dutch.
-- Wave36S-C expected Apr-Jun candidates305R; exact v288-orderer inputs covered296R; 9R missing/invalid, so decision FAIL_CLOSED_PARITY_INCOMPLETE and CI exited1 by design.
-- Missing race codes: 202604190602, 202605020105, 202605070503, 202605070505, 202605071301, 202605191810, 202605280107, 202606160302, 202606240705.
-- Partial 296R metrics are diagnostic only and must NOT be treated as valid parity result: Apr106R ROI107.446%; May102R ROI64.874%; Jun88R ROI33.461%; Apr-Jun ROI70.780%/-864,900; conversion42.742%; v288 overlap0.
-- Recovery rule: investigate only technical/source recovery for those 9R. Do not impute or change model/order criteria. If exact required pre-deadline fields cannot be recovered, keep fail-closed and record blocker; do not substitute an unaudited orderer.
+## Wave36S-F
+- Run34789147056 success; artifact10327388998 SHA256 07439a302357495b3052c107e469630256a59bfac201338848da1a6a37b98931.
+- Top1-3 JPY8000 + Top4-5 JPY2000: Apr-Jun ROI106.616%/+258,700 vs original114.913%/+583,090. NO_ADOPTION.
 
-## Wave36S-F two-layer opponent allocation — COMPLETE / NO_ADOPTION
-- Run 34789147056 success; Job 103810013414; artifact 10327388998; artifact SHA256 07439a302357495b3052c107e469630256a59bfac201338848da1a6a37b98931.
-- Frozen Wave36 gate unchanged: p3>=0.365448, Top5, exact v288 exclusion, v288 overlap0, September forbidden true.
-- Two-layer allocation fixed ex ante: Top1–3 JPY8,000; Top4–5 JPY2,000. Apr-Jun 391R/87 hits/ROI106.616%/+258,700 vs original ROI114.913%/+583,090; NO_ADOPTION.
-- Rank4–5 produced 26 winning tickets / JPY1,104,180 payout; five were 50x+ / JPY629,820.
-
-## Wave36 head-hit / Top5-miss rank recovery — STARTING
-- User now wants the 73 Apr-Jun races where Wave36 selected the race and actual winner was boat3, but actual 3-X-Y was outside current Top5.
-- Goal: rebuild the frozen Wave36 conditional opponent scores for all 20 ordered 3-X-Y combinations and determine the actual combination rank (6..20) for each of those 73 misses.
-- Report cumulative recovery at Top6, Top7, Top8, Top10, Top15, Top20; incremental extra ticket counts; actual winning trifecta odds distribution; especially 50x+ misses recovered at each depth.
-- This is descriptive diagnosis only. Apr-Jun outcomes MUST NOT be used to choose a new live TopN rule. Any later rule must be selected/frozen using Feb training + March OOS only before Apr-Jun evaluation.
-- Preserve exact Wave36 rolling training semantics, v288 exclusion, closing odds only for evaluation, Jul/Aug NON-PRISTINE, September forbidden/unread.
+## Wave36 boat3-head / Top5-miss rank audit — COMPLETE
+- Plan commit348bb24c8f452ba8f1705f09c8022cd24f2e92d3; script commit33fe37d39b3910546dfd94a7f06a050ea8a21704.
+- Source run34754875342 artifact10317157868. Rebuilt frozen Wave36 conditional ranking with rolling schedule and exact v288 exclusion.
+- Parity check: rebuilt Top5 matched saved Wave36 Top5 on all391/391 Apr-Jun selected races.
+- 391 selected; actual boat3 head160; Top5 hits87; boat3-head Top5 misses73.
+- Miss actual-rank counts: r6=7,r7=9,r8=12,r9=7,r10=3,r11=6,r12=5,r13=3,r14=2,r15=7,r16=4,r17=3,r18=0,r19=3,r20=2.
+- Cumulative miss recovery: Top6 7/73=9.6%; Top7 16=21.9%; Top8 28=38.4%; Top10 38=52.1%; Top15 61=83.6%; Top20 73=100%.
+- 50x+ misses=25. Recovered: Top6=0,Top7=0,Top8=3,Top10=8,Top15=19,Top20=25. 100x+ misses=8; Top8=1,Top10=1,Top15=5,Top20=8.
+- High misses:312.3x 3-4-6 rank20;209.6x 3-4-6 rank8;143.9x 3-6-1 rank15;142.2x 3-1-2 rank13;118.4x 3-6-5 rank15;106.2x 3-6-2 rank15;103.5x 3-4-1 rank16;100.2x 3-6-4 rank16.
+- Diagnostic equal-Dutch expansion on same391 races: Top5 87 hits ROI114.913%/+583,090; Top6 94 ROI101.224%/+47,840; Top7 103 ROI97.775%/-87,010; Top8 115 ROI97.932%/-80,870; Top10 125 ROI93.085%/-270,380; Top15 148 ROI90.868%/-357,070; Top20 160 ROI88.006%/-468,970.
+- Diagnosis only: widening every race destroys economics. Next target is selective tail activation, especially ranks8-15. Any live rule must be frozen using Feb+March only before Apr-Jun evaluation. v288 untouched; September unread.
 
 ## Exact restart point
-1. Rebuild Wave36 full 20-combination conditional ranking with the frozen Wave36 model/training schedule.
-2. Isolate Apr-Jun actual boat3-head rows outside Top5 and audit their true rank 6..20.
-3. Produce cumulative TopN recovery and high-odds recovery tables without tuning a rule on Apr-Jun.
-4. Update this handoff with exact results and provenance after completion.
+1. Build selective tail-activation rule from Feb training + March OOS only.
+2. Freeze before Apr-Jun evaluation; keep exact JPY10,000 stake.
+3. Compare to Wave36 Top5; Jul/Aug NON-PRISTINE; September forbidden.
