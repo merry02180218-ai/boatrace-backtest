@@ -75,7 +75,7 @@ Purpose: compare exhibition quality of SECOND/THIRD boats actually covered by th
 Implementation/workflow:
 - `ee2ca7b155b9a2e1d4559c4e98210bc6cc5d9b55` — initial v326 script
 - `64433735827c63971badaff7be2652c8a25586e2` — workflow
-- first Run **34766023220** failed `KeyError: 6`; recorded before fix in `27655a5830841815ac38bcf02723419996713d6f`.
+- first Run **34766023220** failed `KeyError: 6`; recorded before fix in `27655a5830841815ac38f02723419996713d6f`.
 - strict correction `bfeba1b91f5a2b7314ad0de819c81e0c7d934df3`; Run **34766151983** success.
 - semantic readiness audit recorded `7fe36555e2a7657957a67235275ead76360880b7`.
 - feature-specific readiness correction `749d298354f46e2bfa5e8e8e7e19c2f9fd6211cf`.
@@ -152,33 +152,83 @@ Conclusion:
 
 ---
 
-# 7. Work Unit 6A — NEXT DIRECTION ABOUT TO START: ticket-selection error audit
+# 7. Work Unit 6A — v328 ticket-selection error audit — COMPLETE
 
-Current position:
-- HEAD selection remains strong/frozen; the unresolved production problem is exact3 ticket coverage, not a validated PASS/SKIP filter.
-- Three chronological postfilter attempts (v325-v327) failed June forward support.
+Implementation:
+- script `run_v328_1head_ticket_error_audit.py`
+- script commit **bab1896a23393f0b564f741cf0332fb20f74922b**
+- workflow `.github/workflows/v328-1head-ticket-error-audit.yml`
+- workflow commit **9418247f6bc40534881b03586b9019443da45a52**
 
-Exact work about to be done BEFORE any new challenger model:
-1. Audit the frozen 345 cohort's misses at the opponent-pair/ticket level using only already-generated causal PRE probabilities plus settlement labels after prediction freeze.
-2. Decompose exact3 misses into:
-   - boat1 head loss,
-   - correct head but actual SECOND absent from covered seconds,
-   - SECOND covered but actual THIRD absent,
-   - actual ordered pair ranked 4th/5th/6th vs much lower,
-   - duplicate/concentration effects of 3-ticket HYBRID coverage.
-3. Report Feb-Apr / May / Jun separately so the error mechanism is chronological, not aggregate-only.
-4. Compare oracle diagnostic ceilings without promoting them: top-N pair rank coverage and SECOND/THIRD conditional coverage.
-5. Do NOT tune on Jul/Aug; do NOT inspect September outcomes.
+Actions:
+- Run **34767480326** — SUCCESS
+- Job **103750928927** — SUCCESS
+- Artifact `v328-1head-ticket-error-audit`
+- Artifact ID **10321143424**
+- artifact SHA256 `ad41a0084632207b45debcb10b52da6bd8e8a2c25386e9cdfa7c83be9b43f89e`
 
-Success criteria:
-- identify whether the largest recoverable exact3 loss is SECOND selection, THIRD conditional selection, or 3-ticket allocation.
-- produce a causal-safe recommendation for a v328 challenger research target without modifying v308/v317/v318/v320 production.
+Identity/causality:
+- frozen reconciliation **345 selected / 290 head / 139 exact3**.
+- Jul/Aug not inspected for v328.
+- September outcomes unread.
+- p2 / pc / HYBRID alpha=.70 rebuilt causally and frozen top-3 ticket identity verified.
 
-Failure fallback:
-- if required pair-rank information cannot be safely reconstructed, use only frozen v320 tickets + causal v317/v318 probability maps; never infer from odds/results.
-- if no clear dominant error class exists, do not launch broad combinatorial model search; document that result.
+Results by period:
+
+FEB-APR:
+- R=132, head=114 (86.36%), exact3=58 (43.94%)
+- SECOND top1/top2 on head wins: 45 (39.47%) / 84 (73.68%)
+- conditional THIRD top1/top2 on head wins: 50 (43.86%) / 89 (78.07%)
+- HYBRID ordered-pair oracle coverage top3/top4/top5/top6: 58 (50.88%) / 65 (57.02%) / 71 (62.28%) / 80 (70.18%)
+- misses: HEAD_LOSS 18; SECOND_NOT_COVERED 30; SECOND_COVERED_THIRD_MISS 26
+
+MAY:
+- R=121, head=101 (83.47%), exact3=49 (40.50%)
+- SECOND top1/top2: 52 (51.49%) / 76 (75.25%)
+- conditional THIRD top1/top2: 37 (36.63%) / 69 (68.32%)
+- HYBRID top3/top4/top5/top6: 49 (48.51%) / 59 (58.42%) / 67 (66.34%) / 70 (69.31%)
+- misses: HEAD_LOSS 20; SECOND_NOT_COVERED 24; SECOND_COVERED_THIRD_MISS 28
+
+JUNE:
+- R=92, head=75 (81.52%), exact3=32 (34.78%)
+- SECOND top1/top2: 32 (42.67%) / 51 (68.00%)
+- conditional THIRD top1/top2: 30 (40.00%) / 53 (70.67%)
+- HYBRID top3/top4/top5/top6: 32 (42.67%) / 39 (52.00%) / 41 (54.67%) / 47 (62.67%)
+- misses: HEAD_LOSS 17; SECOND_NOT_COVERED 23; SECOND_COVERED_THIRD_MISS 20
+
+ALL:
+- R=345, head=290 (84.06%), exact3=139 (40.29%)
+- SECOND top1/top2: 129 (44.48%) / 211 (72.76%)
+- conditional THIRD top1/top2: 117 (40.34%) / 211 (72.76%)
+- HYBRID top3/top4/top5/top6: 139 (47.93%) / 163 (56.21%) / 179 (61.72%) / 197 (67.93%)
+- misses: HEAD_LOSS 55 (15.94% of all selected); SECOND_NOT_COVERED 77 (22.32%); SECOND_COVERED_THIRD_MISS 74 (21.45%); HIT 139 (40.29%).
+
+Conclusion:
+- no single miss class dominates overwhelmingly; SECOND coverage and THIRD/pair coverage are nearly equally important.
+- June deterioration is broad: head rate, SECOND top2, conditional THIRD top2, and HYBRID pair coverage all decline together.
+- the 3-ticket allocation ceiling is material: among head-hit races, top3 pair coverage is only 47.93% overall and 42.67% in June, while top6 rises to 67.93% overall and 62.67% in June.
+- therefore the next research target should NOT be another narrow PRE-only filter. The next post-v328 work should focus on improving the post-PRE/straight-before-start judgement using richer exhibition logic, and only then revisit ticket allocation if needed.
 
 ---
 
-# 8. Exact next resume point
-**Run Work Unit 6A ticket-selection error audit on the frozen 345 cohort. Keep Jul/Aug NON-PRISTINE/unopened for tuning and keep September outcomes unread. Production stack remains v308/v317/v318/v320/v323 unchanged.**
+# 8. Next work to perform AFTER reporting v328 to the user
+User explicitly requested that each version be reported before proceeding to the next version.
+
+Next direction requested by user:
+- rebuild the 1-head final judgement by borrowing the **3-head and 4-head models' pre-race exhibition judgement mechanism** rather than extending v327's simple filter.
+- inspect latest GitHub code/handoffs for 3-head and 4-head direct-before-start logic first.
+- reproduce their handling of exhibition time, exhibition ST, original exhibition, course/lane adjustment, prior-race adjusted exhibition, and fail-closed availability checks as applicable.
+- keep the frozen PRE production stack v308/v317/v318/v320 unchanged; the new logic is a downstream exhibition-stage judgement layer only unless a later predeclared experiment says otherwise.
+
+Success criteria for the next work unit:
+- identify the exact current 3-head/4-head direct-before-start scoring architecture from latest GitHub.
+- write a source-audited 1-head adaptation plan before code.
+- preserve result blindness and all Jul/Aug/September guardrails.
+
+Failure fallback:
+- if 3-head and 4-head implementations differ materially, document both and select components only after source/causality audit; do not blend them ad hoc.
+
+---
+
+# 9. Exact next resume point
+**STOP here until v328 is reported to the user. After that, audit the latest 3-head and 4-head exhibition-stage judgement implementations and design the 1-head adaptation. Do not start a v329 implementation before that source audit is recorded in this handoff.**
