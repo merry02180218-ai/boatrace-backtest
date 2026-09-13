@@ -1,0 +1,22 @@
+name: validate-4head-player-history-live
+
+on:
+  push:
+    paths:
+      - 'build_4head_player_history_live.py'
+      - 'verify_4head_player_history_live.py'
+      - '.github/workflows/validate-4head-player-history-live.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Syntax
+        run: python -m py_compile build_4head_player_history_live.py verify_4head_player_history_live.py
+      - name: Verify causal player history contract
+        run: python verify_4head_player_history_live.py
