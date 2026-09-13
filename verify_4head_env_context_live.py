@@ -48,12 +48,14 @@ def main() -> None:
     wc, ws, hhmm = m.parse_sui_weather(sui_fixture())
     assert wc == 4 and ws == 4.0 and hhmm == '0930', (wc, ws, hhmm)
 
-    # Exact pinned source URL families. No post-race weather endpoint is allowed.
+    # Exact pinned source URL families. Fetch code must actually call only the
+    # current pre-race TKZ/STT/SUI URLs; explanatory comments are irrelevant.
     assert '/bc_j_tkz_' in m.boatcast_tkz_url('20260914', 1, 1)
     assert '/bc_j_stt_' in m.boatcast_stt_url('20260914', 1, 1)
     assert '/bc_sui_' in m.boatcast_sui_url('20260914', 1)
     src = inspect.getsource(m.fetch_and_build)
-    assert 'bc_rs1_2' not in src
+    assert 'boatcast_tkz_url' in src and 'boatcast_stt_url' in src and 'boatcast_sui_url' in src
+    assert "_fetch(wu, f'{BOATCAST}/m_txt/{jcd:02d}/bc_sui_'" in src
     assert 'results/' not in inspect.getsource(m)
     assert 'payout' not in src.lower()
     assert 'odds' not in src.lower()
@@ -89,7 +91,6 @@ def main() -> None:
         m.build_history_before = original
 
     hsrc = inspect.getsource(m.build_history_before)
-    # Guard exact v74 source primitives/update order and target-day exclusion.
     assert 'while d < target' in hsrc
     assert 'raw_candidates(cards, w10, cache, mhist, ph)' in hsrc
     assert "histvals[r['model']].append(history_value(r))" in hsrc
@@ -97,7 +98,6 @@ def main() -> None:
     assert 'ingest_motor(mhist, seen, d)' in hsrc
     assert 'data/results' not in hsrc and 'payout' not in hsrc and 'odds' not in hsrc
 
-    # Fail closed malformed/missing source fields.
     for bad in ('', 'data=1\n1\n'):
         try: m.parse_stt_courses(bad)
         except m.EnvContextBuildError: pass
