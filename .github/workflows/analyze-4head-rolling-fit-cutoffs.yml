@@ -1,0 +1,26 @@
+name: analyze-4head-rolling-fit-cutoffs
+on:
+  push:
+    paths:
+      - analyze_4head_rolling_fit_cutoffs_20260914.py
+      - .github/workflows/analyze-4head-rolling-fit-cutoffs.yml
+jobs:
+  analyze:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - run: python -m py_compile analyze_4head_rolling_fit_cutoffs_20260914.py
+      - run: python analyze_4head_rolling_fit_cutoffs_20260914.py
+      - run: python -c "import json; a=json.load(open('audit_4head_rolling_fit_cutoffs_20260914.json')); assert a['production_modified'] is False; assert a['target_outcomes_used_for_distribution_ranking'] is False; assert a['fit_cutoffs'][-1]=='2026-07-31'; print('guard audit PASS')"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-rolling-fit-cutoffs
+          path: |
+            analysis_4head_rolling_fit_cutoffs_20260914.csv
+            audit_4head_rolling_fit_cutoffs_20260914.json
+            summary_4head_rolling_fit_cutoffs_20260914.md
