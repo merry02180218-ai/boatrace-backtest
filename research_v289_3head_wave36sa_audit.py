@@ -4,7 +4,7 @@ import research_v289_3head_wave31_nonlinear_gate as base
 import research_v289_3head_wave36s_smooth_calibration as s
 SRC=Path('analysis_v289_3head_wave21_allrace_feature_settled.csv');BC=Path('v288_operational_pre_replay_94_baseline_codes.csv');OUT=Path('research_v289_3head_wave36sa_audit.json')
 def enrich(q):
- x=q.copy();x['ret']=[base.dutch_return(r,str(r.top5).split(';')) for _,r in x.iterrows()];x['profit']=x.ret-10000;return x
+ x=q.copy();x['variant_return']=[base.dutch_return(r,str(r.top5).split(';')) for _,r in x.iterrows()];x['ret']=x.variant_return;x['profit']=x.ret-10000;return x
 def met(x):
  if not len(x):return {'races':0,'hits':0,'roi_pct':0,'profit_yen':0,'head_rate':0,'conversion':0}
  z=enrich(x);hh=int(z.actual3.sum());hits=int((z.ret>0).sum());return {'races':len(z),'hits':hits,'roi_pct':float(z.ret.sum()/len(z)/100),'profit_yen':int(z.profit.sum()),'head_hits':hh,'head_rate':hh/len(z),'conversion':hits/hh if hh else 0,'max_drawdown_yen':float(base.maxdd(z.sort_values(['date','race_code'])))}
