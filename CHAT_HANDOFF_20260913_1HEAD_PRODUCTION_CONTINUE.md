@@ -18,60 +18,55 @@ Before every work unit/code change/restart record current position, exact work, 
 - do not modify v308/v317/v318/v320/v323.
 
 # 2. Causality / evaluation rules
-- User explicitly changed the old Jul/Aug restriction on 2026-09-14: **July/August 2026 may now be used for model learning/tuning.**
-- September outcomes remain **UNREAD** and are reserved as the final untouched evaluation period.
+- July/August 2026 may be used for model learning/tuning.
+- September outcomes remain **UNREAD** and reserved as the final untouched evaluation period.
 - no same/later-race result, payout, future/backfill contamination in race-time features.
-- current-race exhibition is post-PRE only and must be result-blind at prediction time.
-- missing current exhibition inputs fail closed for any feature/route requiring them.
+- current-race exhibition is post-PRE only and result-blind at prediction time.
+- missing current exhibition inputs fail closed.
 - no `meet_*` unless separately audited.
 - neutral 0.5 defaults are not proof raw metric existed.
 
-# 3. Frozen research through v331
+# 3. Key research through v331
 - v320 `HYBRID alpha=.70`: **139/345=40.29%** exact3.
-- v321 Jul/Aug base: Run 34750719803; **55R/head45/exact3 21**.
-- v329 multistage Run **34771215699**: June PASS 17R/8 exact3=47.06%, head16/17=94.12%.
-- v330 Run **34772689488**: fixed-v329 Jul+Aug PASS 10/55, exact3 2/10=20%, head5/10=50%; fixed v329 not production-ready.
-- v331 Run **34773137181** SUCCESS, Job **103766279485**, Artifact **10322896490**. Identity Feb-Jun 345/head290/exact3 139; Jul-Aug 55/head45/exact321. Key finding: `attack_core` was materially more stable than `env_pair`; hard attack+env AND was main reversal mechanism; `turn_core` weak/unstable.
+- v321 Jul/Aug base: **55R/head45/exact3 21**.
+- v329 June PASS 17R/8 exact3=47.06%, head16/17=94.12%, but fixed-v329 Jul+Aug collapsed.
+- v331 Run **34773137181**: `attack_core` materially more stable than `env_pair`; hard attack+env AND was main reversal mechanism; `turn_core` weak/unstable.
 
-# 4. Exhibition source audit
-Historical result-blind sources:
-- `data/previews/tkz/YYYY/MM/DD.csv`
-- `data/previews/stt/YYYY/MM/DD.csv`
-- `data/previews/original_exhibition/YYYY/MM/DD.csv`
-- transform `backtest_v51_lane_corrected_tickets.py::corrected_direct`
-- ST lane bias learned only from prior dates.
-- readiness uses raw completeness, never neutral 0.5 as proof.
-
-# 5. v332 attack-first redesign — COMPLETE / REPORTED
+# 4. v332 attack-first redesign — COMPLETE / REPORTED
 Implementation `db15c03df9f2d551d6ac1f724433401be5c155c0`; workflow `17db56410c92729df34c3c680f360d98b5781fbb`.
 Run **34774010225** SUCCESS, Job **103768650973**, Artifact **10323285065**.
 Identity **400 rows / 335 head / 160 exact3** Feb-Aug; September unread.
-Chosen Feb-Jul month-OOF config: `ATTACK_ENV_SOFT`, env_w=.1, q=.65.
-OOF PASS **86R**, exact3 **41/86=47.67%**, head **76/86=88.37%**, fraction **24.02%**; baseline lifts exact3 +8.01pp, head +4.29pp; exact3 nonnegative 4/6 months.
-August one-shot: baseline 42R/exact3 42.86%/head80.95%; PASS **10R/exact34=40.00%/head7=70.00%**, fraction23.81%; therefore not promoted under v332 rule.
-Important interpretation from user/assistant after report: **10 August PASS races is a small sample; 70% head and 40% exact3 may plausibly be ordinary month-to-month variance rather than structural failure. Do not discard v332 before quantifying this.**
+Chosen config: `ATTACK_ENV_SOFT`, env_w=.1, q=.65.
+Feb-Jul OOF PASS **86R**, exact3 **41/86=47.67%**, head **76/86=88.37%**, PASS fraction **24.02%**, exact3 lift +8.01pp, head lift +4.29pp.
+August one-shot PASS **10R / exact3 4=40.00% / head7=70.00%**, fraction23.81%; strict v332 criterion said unsupported because head fell >5pp below August baseline.
+User correctly flagged that n=10 may make this ordinary month-to-month variance; v333 audits that before any redesign.
 
-# 6. v333 — PRE-WORK DECLARATION: v332 MONTHLY VARIANCE / STABILITY AUDIT
-Current position: v332 improved catastrophic v329 reversal and has stable ~24% volume, but failed the strict August one-shot criterion on only 10 PASS races. User explicitly requested testing whether this is just monthly sampling variance before redesigning the model.
+# 5. v333 v332 monthly variance/stability audit — COMPLETE / REPORTED NEXT
+Pre-work handoff commit `edcf0192942cc6c1a8967d34e842c6730e1632ce`.
+Implementation `54c3a63a3b54c4f9eae8b2223c083431a35247c4`; workflow `a15835414285111bbb22b5f2333217a6a9580ca8`.
+Run **34774493891** SUCCESS, Job **103769983424**, Artifact **10322953353**, artifact SHA256 `7349220630cd0e9e3350c81949b79da259637787cb6cfd28e55ac2d862e12092`.
+Exact v332 reproduction succeeded:
+- Feb-Jul OOF **86R / head76=88.37% / exact3 41=47.67%**.
+- pooled Wilson95: head **79.90–93.56%**, exact3 **37.45–58.10%**.
+- August PASS **10R / head7=70.00% / exact3 4=40.00%**.
+- August Wilson95: head **39.68–89.22%**, exact3 **16.82–68.73%**.
+- August vs preceding pooled OOF two-sided binomial p-values: **head p=0.1009**, **exact3 p=0.7566**.
+- August lifts vs its own baseline: head **-10.95pp**, exact3 **-2.86pp**.
+- Prior Feb-Jul nonnegative monthly lifts: head **4/6**, exact3 **4/6**.
+- Empirical add-one absolute-lift extremeness: head **0.143**, exact3 **0.857**.
+- With n=10, one result moves a rate by exactly **10 percentage points**, two results by 20pp.
 
-Exact work now:
-1. **Do not alter or retune v332.** Reconstruct the exact frozen v332 chosen rule (`ATTACK_ENV_SOFT`, env_w=.1, q=.65) in its month-OOF form for Feb-Jul and its frozen one-shot form for August.
-2. Produce month-by-month Feb-Aug table for baseline and v332 PASS: R, PASS fraction, head wins/rate, exact3 hits/rate, head lift, exact3 lift.
-3. Compute Wilson 95% confidence intervals for PASS head rate and PASS exact3 rate each month, plus pooled Feb-Jul OOF intervals.
-4. Quantify whether August PASS 7/10 head and 4/10 exact3 are statistically unusual relative to the preceding v332 OOF performance using exact/binomial predictive-tail or Fisher-style small-sample tests. Report effect sizes and p-values; do not treat p>0.05 as proof of equality.
-5. Run leave-one-month-out stability summaries: dispersion/range of monthly lifts, count positive/nonnegative months, and compare August to the empirical distribution of prior month deviations.
-6. Include a small-sample sensitivity table showing August rates if 1 or 2 race outcomes differed, to make denominator=10 instability explicit.
-7. Diagnostic only. **No new selector, no threshold search, no September outcomes.**
+Conclusion:
+- **INSUFFICIENT_EVIDENCE_MONTHLY_VARIANCE_PLAUSIBLE**.
+- The August 7/10 head result is weaker than preceding pooled performance, but not statistically unusual enough on this sample to call a structural break.
+- The August 4/10 exact3 result is very consistent with ordinary sampling variation.
+- Therefore **do not discard v332 on August alone**. Treat v332 as a strong provisional candidate whose strict August fail flag was likely too harsh for n=10.
+- This is not proof v332 is correct; sample is underpowered and p>0.05 is not equivalence.
+- September outcomes remain unread. No retuning was performed.
 
-Success criteria:
-- exact v332 identity and August PASS 10/head7/exact3 4 reproduced;
-- all Feb-Jul OOF selections reproduced without using each held-out month's labels in its fit;
-- statistical audit can distinguish `clear structural break evidence` from `insufficient evidence; monthly variance plausible`;
-- no September outcome read.
-
-Failure fallback:
-- if exact v332 OOF selections cannot be reconstructed from the v332 implementation, stop and fix identity/reconstruction only; do not substitute a newly fitted rule;
-- if small sample makes tests underpowered, report that explicitly rather than forcing a structural-failure conclusion.
-
-Exact next resume point:
-- implement `run_v333_1head_v332_monthly_variance_audit.py` and workflow; run Actions; append Run/Job/Artifact and metrics here; **report v333 once before starting any v334 redesign.**
+# 6. Exact next resume point — REPORT v333 BEFORE v334
+After reporting v333 to user, next work should preserve v332 as a provisional candidate rather than redesign immediately.
+Recommended next unit:
+1. Decide whether to freeze v332 on Feb-Aug and prepare a September inference-only adapter without reading September outcomes; or
+2. run one more **result-blind robustness audit** on v332 using bootstrap/month-block resampling and head/exact3 uncertainty, still without retuning and without September outcomes.
+Do not start v334 before user sees this v333 result.
