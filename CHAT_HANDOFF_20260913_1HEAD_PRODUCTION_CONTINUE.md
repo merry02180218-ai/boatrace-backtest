@@ -156,3 +156,24 @@ Exact work now:
 5. If Waku10 is causal, record the exact changed field/value and the resulting score/threshold crossing; if not causal, identify the true changed input/path.
 6. Do not modify frozen production logic and keep September outcomes UNREAD.
 7. Append the actual differential result, race identity, values, conclusion, commit/run/job/artifact IDs, and exact next resume point to THIS file before reporting completion.
+
+# 11. 2026-09-14 WORK RESULT — 96/97 DIFFERENTIAL RESOLVED; WAKU10 NOT CAUSAL
+- Pre-work handoff commit: `92ef87af629c5f7ddb332ca0ac0e808c3a177023`.
+- Initial canonical diagnostic Run `34781252937`, Job `103788554432`, Artifact `10324542569` produced 97 PASS / 84 head / 45 exact3, but this run used an incorrect training split: for Feb-Jul evaluation it trained on every other month including August (`y.month.ne(m)`), which does not match adopted v332/v336 semantics.
+- Fix commit: `02b4b8d54823c4a7071ebf8cf620ad0c287a8e03` (`Fix v337 anchor diagnostic training split`). Correct semantics are Feb-Jul leave-one-out within Feb-Jul only, and August trained on all Feb-Jul.
+- Corrected canonical diagnostic Run `34781490760` SUCCESS, Job `103789205968`, Artifact `10325336969`.
+- Corrected result with the new/canonical Waku10 files still present: base 400 / head335 / exact3 160; anchor exactly 96 PASS / 83 head / 45 exact3. September outcomes read=false.
+- Therefore the apparent 96 -> 97 drift is NOT caused by the Waku10 value rewrite. The canonical/new Waku10 state preserves the adopted v332 anchor exactly when the original evaluation semantics are respected.
+- Direct 97-vs-96 PASS identity diff contains exactly one erroneous extra race: `202606112005` (2026-06-11, place code 20, race 05). There are no races present only in the corrected 96 set.
+- That race had head_hit=1 and exact3 hit=0, explaining why the erroneous aggregate moved 96/83/45 -> 97/84/45.
+- Its raw exhibition features are unchanged between the two diagnostics: attack_core=0.64, env_pair=-0.0066666667, one_ex=0.6, one_st=0.2, one_straight=1.0, one_orig_avg=1.0.
+- Under the incorrect split that included August in the June training reference, its standardized v332 score was 0.3461412969 versus threshold 0.3420497705, so it incorrectly PASSed by +0.0040915264.
+- Under the correct Feb-Jul-only leave-one-out split, its standardized v332 score is 0.3096219072 versus threshold 0.3292212005, so it correctly FAILs by -0.0195992934.
+- The score shift comes from the training reference mean/std distribution, not a changed Waku10 field. Production logic remains unchanged.
+
+Exact next resume point:
+1. Return to the original v337 88/76/43 reconstruction failure; Waku10 is now ruled out as the cause of both PRE identity and the corrected canonical v332 anchor.
+2. Compare failed v337 Artifact `10324652726` against corrected canonical anchor Artifact `10325336969` to identify the 8 missing PASS races and their first divergence stage.
+3. Fix only the v337 reconstruction/audit harness until cutoff 0.8073405637 reproduces exactly 96/83/45.
+4. Only then run/interpret the predeclared cutoff grid 0.80/0.79/0.78/0.77/0.75.
+5. Keep September outcomes UNREAD and production v332 unchanged.
