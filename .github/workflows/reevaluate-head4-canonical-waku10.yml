@@ -1,0 +1,106 @@
+name: reevaluate-head4-canonical-waku10
+
+on:
+  push:
+    paths:
+      - '.github/workflows/reevaluate-head4-canonical-waku10.yml'
+      - 'data/programs/waku10/**'
+      - 'analyze_v250_4head_rebuild_baseline.py'
+      - 'analyze_v93_4corner_second_third.py'
+      - 'analyze_v264_4head_feature_exhaustive.py'
+      - 'analyze_v267_4head_v260_consensus_overlay.py'
+      - 'analyze_v271_4head_arank_expansion.py'
+      - 'freeze_4head_v273_a_live_artifact.py'
+  workflow_dispatch:
+
+jobs:
+  reevaluate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml tabulate
+      - name: Canonical Waku10 guards
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv
+          for ds in ('2025/12/01','2026/01/15','2026/02/15','2026/04/15','2026/06/15','2026/07/18','2026/08/15'):
+              p=Path('data/programs/waku10')/(ds+'.csv')
+              assert p.is_file(), p
+              with p.open(encoding='utf-8-sig',newline='') as f: rows=list(csv.DictReader(f))
+              assert rows and '艇4_枠番別勝率' in rows[0] and '艇4_過去10走_着順' in rows[0], ds
+          print('canonical Waku10 guard PASS')
+          PY
+      - name: Rebuild HEAD4 PRE POST from canonical Waku10
+        run: python analyze_v250_4head_rebuild_baseline.py
+      - name: Rebuild opponent context from canonical Waku10
+        run: python analyze_v93_4corner_second_third.py
+      - name: Rebuild v264 feature models
+        run: python analyze_v264_4head_feature_exhaustive.py
+      - name: Re-evaluate frozen S lineage
+        run: python analyze_v267_4head_v260_consensus_overlay.py
+      - name: Re-evaluate frozen A lineage
+        run: python analyze_v271_4head_arank_expansion.py
+      - name: Rebuild candidate v273 LIVE mapping locally only
+        run: python freeze_4head_v273_a_live_artifact.py
+      - name: Produce canonical reevaluation summary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import pandas as pd
+          D=Path('.')
+          detail=pd.read_csv(D/'analysis_v271_4head_arank_races.csv',dtype={'race_code':str})
+          detail['race_code']=detail.race_code.astype(str).str.zfill(12)
+          for c in ('PRE','POST','ENV_ENTRY','a_score','actual_head4','hit','return_yen','comp_odds'):
+              detail[c]=pd.to_numeric(detail[c],errors='coerce')
+          rows=[]
+          S_PRE=.28;S_POST=.25;S_ENV=.224790;A_PRE=.18;A_POST=.18;A_OOF=.28;BANK=10000
+          detail['S_exact']=(detail.PRE>=S_PRE)&(detail.POST>=S_POST)&(detail.ENV_ENTRY>=S_ENV)
+          detail['A_exact']=(~detail.S_exact)&(detail.PRE>=A_PRE)&(detail.POST>=A_POST)&(detail.a_score>=A_OOF)
+          detail['layer']='PASS';detail.loc[detail.S_exact,'layer']='S';detail.loc[detail.A_exact,'layer']='A'
+          for mon in ['2026-04','2026-05','2026-06','ALL_APR_JUN']:
+              g=detail if mon=='ALL_APR_JUN' else detail[detail.month.astype(str)==mon]
+              for layer in ['S','A','S+A']:
+                  q=g[g.layer.isin(['S','A'])] if layer=='S+A' else g[g.layer==layer]
+                  cost=len(q)*BANK;ret=float(q.return_yen.fillna(0).sum())
+                  rows.append({'month':mon,'layer':layer,'R':len(q),'head4_wins':int(q.actual_head4.fillna(0).sum()),'head4_rate':float(q.actual_head4.mean()) if len(q) else None,'trifecta_hits':int(q.hit.fillna(0).sum()),'hit_rate':float(q.hit.mean()) if len(q) else None,'return_yen':ret,'proxy_roi':ret/cost if cost else None,'avg_comp_odds':float(q.comp_odds.mean()) if len(q) else None})
+          pd.DataFrame(rows).to_csv('analysis_head4_canonical_reevaluation_summary.csv',index=False)
+          art=json.load(open('artifacts/head4_v273_a_live_20260630.json'))
+          old=json.load(open('v291_4head_live_policy.json'))
+          audit={
+            'production_modified':False,
+            'canonical_waku10':True,
+            'production_policy':old.get('policy_version'),
+            'current_production_A_live_threshold':0.2710428764008591,
+            'rebuilt_candidate_A_live_threshold':art['A_gate']['A_SCORE_LIVE'],
+            'rebuilt_A_mapping':art['mapping'],
+            'notes':['Apr-Jun settlement uses archived historical odds proxy, not immutable contemporaneous LIVE odds.','July/August excluded from selection and production remains unchanged.']
+          }
+          Path('audit_head4_canonical_reevaluation.json').write_text(json.dumps(audit,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(pd.DataFrame(rows).to_string(index=False))
+          print(json.dumps(audit,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-canonical-waku10-pristine-reevaluation
+          path: |
+            analysis_v250_4head_rebuild_baseline.csv
+            summary_v250_4head_rebuild_baseline.md
+            analysis_v93_4corner_second_third.csv
+            summary_v93_4corner_second_third.md
+            analysis_v264_4head_feature_exhaustive.csv
+            summary_v264_4head_feature_exhaustive.md
+            analysis_v267_4head_v260_consensus_overlay.csv
+            summary_v267_4head_v260_consensus_overlay.md
+            analysis_v271_4head_arank_expansion.csv
+            analysis_v271_4head_arank_races.csv
+            summary_v271_4head_arank_expansion.md
+            artifacts/head4_v273_a_live_20260630.json
+            artifacts/head4_v273_a_live_mapping_20260630.json
+            analysis_head4_canonical_reevaluation_summary.csv
+            audit_head4_canonical_reevaluation.json
