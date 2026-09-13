@@ -53,6 +53,8 @@ jobs:
             echo "No canonical Waku10 changes"
           else
             git commit -m "Materialize restored historical Waku10 canonically"
+            git fetch origin main
+            git rebase origin/main
             git push origin HEAD:main
           fi
       - uses: actions/upload-artifact@v4
