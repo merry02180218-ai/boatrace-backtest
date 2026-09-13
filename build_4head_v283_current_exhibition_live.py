@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the six current-exhibition rows used by frozen HEAD4 v283.
+"""Build current six-boat exhibition + frozen v90 ST primitives for HEAD4 v283.
 
 Result-blind sources only:
 - official BOAT RACE beforeinfo: display time
@@ -72,6 +72,12 @@ def st_bias_before(target:date)->dict[int,float]:
     g=mean(allv) if allv else .15
     return {b:(mean(sums[b])-g if sums[b] else 0.0) for b in range(1,7)}
 
+def _rank_strength(vals:dict[int,float])->tuple[dict[int,int],dict[int,float]]:
+    a=sorted(vals.items(),key=lambda z:(z[1],z[0]));n=len(a)
+    rank={b:i+1 for i,(b,_) in enumerate(a)}
+    strength={b:(1-i/(n-1) if n>=2 else .5) for i,(b,_) in enumerate(a)}
+    return rank,strength
+
 def original_corrected(labels:list[str],raw:dict[int,list[float|None]])->dict[int,dict[str,float]]:
     out={b:{'lap':.5,'turn':.5,'straight':.5,'avg':.5} for b in range(1,7)};per={b:[] for b in range(1,7)}
     for k,label in enumerate(labels):
@@ -94,20 +100,26 @@ def build_from_sources(hd:str,jcd:int,rno:int,before_html:str,st_text:str,orig_t
     validate_target(hd,jcd,rno)
     disp=parse_display_times(before_html)
     exraw={b:disp[b]+CORR[b]['展示'] for b in range(1,7)};ex=rank_scores(exraw,True)
-    st_raw=parse_boatcast_st(st_text)
-    if any(st_raw[b] is None for b in range(1,7)):raise ExhibitionBuildError('start display incomplete/L')
-    corr={b:float(st_raw[b])-float(bias.get(b,0.0)) for b in range(1,7)}
-    st_strength=rank_scores(corr,True)
+    parsed=parse_boatcast_st(st_text)
+    if any(parsed[b] is None for b in range(1,7)):raise ExhibitionBuildError('start display incomplete/L')
+    st_raw={b:float(parsed[b]) for b in range(1,7)}
+    st_corr={b:st_raw[b]-float(bias.get(b,0.0)) for b in range(1,7)}
+    rr,rs=_rank_strength(st_raw);cr,cs=_rank_strength(st_corr)
     labels,oraw=parse_boatcast_original(orig_text);os=original_corrected(labels,oraw)
-    boats={}
+    boats={};st_flat={}
     for b in range(1,7):
         boats[str(b)]={
-          'cur_ex':float(ex[b]),'cur_st':float(st_strength[b]),
+          'cur_ex':float(ex[b]),'cur_st':float(cs[b]),
           'cur_orig_lap':float(os[b]['lap']),'cur_orig_turn':float(os[b]['turn']),
           'cur_orig_straight':float(os[b]['straight']),'cur_orig_avg':float(os[b]['avg']),
         }
-    return {'schema':'head4_v283_current_exhibition_live_v1','race_code':f'{hd}{jcd:02d}{rno:02d}','current_boats':boats,
-            'st_bias':{str(k):float(v) for k,v in bias.items()},'result_blind':True,'odds_used':False}
+        st_flat[f'st_raw_b{b}']=st_raw[b]
+        st_flat[f'st_raw_rank_b{b}']=rr[b]
+        st_flat[f'st_corr_rank_b{b}']=cr[b]
+        st_flat[f'st_raw_strength_b{b}']=round(rs[b],4)
+        st_flat[f'st_corr_strength_b{b}']=round(cs[b],4)
+    return {'schema':'head4_v283_current_exhibition_live_v2','race_code':f'{hd}{jcd:02d}{rno:02d}','current_boats':boats,
+            'st_flat':st_flat,'st_bias':{str(k):float(v) for k,v in bias.items()},'result_blind':True,'odds_used':False}
 
 def fetch_and_build(hd:str,jcd:int,rno:int,timeout:int=20)->dict[str,Any]:
     target=date(int(hd[:4]),int(hd[4:6]),int(hd[6:8]));bias=st_bias_before(target)
