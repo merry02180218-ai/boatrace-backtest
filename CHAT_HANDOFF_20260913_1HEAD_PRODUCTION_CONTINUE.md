@@ -75,142 +75,110 @@ Purpose: compare exhibition quality of SECOND/THIRD boats actually covered by th
 Implementation/workflow:
 - `ee2ca7b155b9a2e1d4559c4e98210bc6cc5d9b55` — initial v326 script
 - `64433735827c63971badaff7be2652c8a25586e2` — workflow
-
-First run failure:
-- Run **34766023220**, job 103747013697 — FAILED `KeyError: 6` because race-row presence did not guarantee every boat metric existed.
-- failure recorded before fix: `27655a5830841815ac38bcf02723419996713d6f`.
-
-Strict per-boat correction:
-- `bfeba1b91f5a2b7314ad0de819c81e0c7d934df3`
-- Run **34766151983** success, job 103747359375, artifact 10321086346
-- strict all-feature source complete/model-ready 237R
-- result was `FROZEN_CANDIDATE NONE`.
-
-A second semantic audit found 1-D rules were over-requiring all source families even when a rule used only one family. This was recorded before correction in commit `7fe36555e2a7657957a67235275ead76360880b7`.
-
-Feature-specific source-readiness correction:
-- commit **`749d298354f46e2bfa5e8e8e7e19c2f9fd6211cf`**
-- 1-D rules now fail closed only on the raw source family actually required by that feature.
-- logistic remains full-source/model-ready.
-- candidate definitions, quantile grids, C=.15, validation/fallback thresholds, sorting, and Feb-Apr -> May -> Jun chronology were unchanged.
+- first Run **34766023220** failed `KeyError: 6`; recorded before fix in `27655a5830841815ac38bcf02723419996713d6f`.
+- strict correction `bfeba1b91f5a2b7314ad0de819c81e0c7d934df3`; Run **34766151983** success.
+- semantic readiness audit recorded `7fe36555e2a7657957a67235275ead76360880b7`.
+- feature-specific readiness correction `749d298354f46e2bfa5e8e8e7e19c2f9fd6211cf`.
 
 Final v326 Actions:
-- Run **34766426083** — SUCCESS
-- job **103748102108**
-- artifact `v326-1head-ticketaware-exhibition`, ID **10320837179**
-- artifact SHA256 `b26b340c8515e557be1ae97637f59b624b8dd347dd61ba7fc133876205454d21`
+- Run **34766426083** SUCCESS, job **103748102108**, artifact **10320837179**.
+- 345R / 139 exact3 / 290 head unchanged.
+- frozen `sec_st_mean_margin <= -0.600000`.
+- discovery 8/22=36.36%; May 14/29=48.28%; June PASS 8/25=32.00%; June baseline 32/92=34.78%.
+- FORWARD_SUPPORTED=False.
+- Jul/Aug unopened for v326; September unread.
 
-Final v326 reconciliation/availability:
-- **345R / 139 exact3 / 290 head wins** unchanged
-- strict all-feature complete/model-ready: 237R
-- tkz all6: 289
-- ST all6: 296
-- original turn all6: 299
-- original straight all6: 243
-- original avg all6: 299
-- turn+straight all6: 243
+---
 
-Frozen candidate after correct feature-specific availability:
-- **`sec_st_mean_margin <= -0.600000`**
-- discovery Feb-Apr: **8/22 = 36.36% exact3**, head 21/22=95.45%
-- May validation: **14/29 = 48.28% exact3**, head 24/29=82.76%
-- June PASS: **8/25 = 32.00% exact3**, head 20/25=80.00%
-- June SKIP: **24/67 = 35.82% exact3**, head 55/67=82.09%
-- June baseline: **32/92 = 34.78% exact3**
+# 5. Work Unit 5D — v327 PRE-confidence + exhibition source audit — COMPLETE
+
+Safe PRE confidence sources audited:
+- v308 race-level `p_head`, `opp_mass`.
+- v317 causal SECOND `p2[boat]`.
+- v318 causal conditional THIRD `pc[(second,third)]`.
+- v320 causal pair probabilities and frozen HYBRID ordering.
+- v323 reproduces same live sequence before settlement.
+
+Frozen v327 PRE feature set:
+`p_head`, `opp_mass`, `second_top1_prob`, `second_top2_mass`, `second_margin12`, `third_top1_mean_for_top2_second`, `third_top1_min_for_top2_second`, `ticket_prob1`, `ticket_prob2`, `ticket_prob3`, `ticket_mass3`, `ticket_gap34`, `ticket_entropy20`.
+
+Excluded: odds/composite odds, result/payout before feature freeze, same-race exhibition inside PRE block, Jul/Aug/September outcome-derived fields, `meet_*`, future/backfill.
+
+Source audit + implementation plan commit:
+- **`faecfa0245698b8859ea803fad4f51c9de765c2f`**
+
+---
+
+# 6. Work Unit 5E — v327 IMPLEMENTATION — COMPLETE / NOT PROMOTED
+
+Files/commits:
+- `run_v327_1head_preconf_exhibition.py`
+- implementation commit **`d3869f12d53038d558a3cf73843e4f15a755b016`**
+- workflow `.github/workflows/v327-1head-preconf-exhibition.yml`
+- workflow commit **`351adaf0b6a76eeff050619caec18f8d28d60fe3`**
+
+Actions:
+- Run **34766775614** — SUCCESS
+- Job **103749028093** — SUCCESS
+- Artifact `v327-1head-preconf-exhibition`
+- Artifact ID **10320494086**
+- artifact SHA256 `b78274f7af191d3208010f9bce99d8d840c9d0a05298d2b4ccb351ba453c92b9`
+
+Identity/causality:
+- exact frozen reconciliation **345 / 290 head / 139 exact3**.
+- exact frozen HYBRID ticket strings were asserted during PRE-confidence reconstruction.
+- Jul/Aug were not opened for v327.
+- September outcomes remain unread.
+
+Frozen v327 candidate from Feb-Apr discovery + May validation:
+- kind: `pre_ex`
+- PRE: **`opp_mass >= 0.416322574702382`**
+- exhibition confirmation: **`third_orig_mean_margin >= -0.37777777777777793`**
+- discovery Feb-Apr: **18/42 = 42.86% exact3**, head 34/42=80.95%
+- May validation: **28/56 = 50.00% exact3**, head 49/56=87.50%
+
+One-shot June forward check:
+- baseline: **32/92 = 34.78% exact3**, head 75/92=81.52%
+- PASS: **13/39 = 33.33% exact3**, head 31/39=79.49%
+- SKIP: **19/53 = 35.85% exact3**, head 44/53=83.02%
 - **FORWARD_SUPPORTED=False**
 
 Conclusion:
-- v326 ticket-aware exhibition-only postfilter also fails chronological forward validation.
-- It is not promoted.
-- Jul/Aug remains unread for v326 because forward support failed.
-- September outcomes remain unread.
+- v327 PRE-confidence + exhibition postfilter did NOT generalize chronologically.
+- It is NOT promoted.
+- The PASS layer actually underperformed June baseline and SKIP group.
+- Per predeclared guardrail, do not open Jul/Aug for v327 and do not build production BUY logic from it.
+- v325/v326/v327 together show that selective postfiltering is not currently solving the exact3 ceiling robustly.
 
 ---
 
-# 5. Work Unit 5D — v327 PRE-confidence + exhibition selective postfilter SOURCE AUDIT — COMPLETE
+# 7. Work Unit 6A — NEXT DIRECTION ABOUT TO START: ticket-selection error audit
 
-Audited frozen PRE confidence sources:
-- v308 persists race-level `p_head` and `opp_mass`; both are computed before target-race settlement and are already reproduced in live v323.
-- v317 SECOND uses a probability map `p2[boat]` from causal PRE/prior features only. Safe race-level summaries can be derived directly from that map without labels.
-- v318 THIRD uses conditional probability map `pc[(second,third)]`, normalized within each SECOND branch from causal PRE/prior features only.
-- v320 computes `pair_prob(p2,pc,alpha=.70)` and frozen `HYBRID` ticket order. These probabilities are pre-settlement and independent of odds/results.
-- v323 reconstructs the same live sequence: head `p_head` -> base opponent mass -> frozen v317 `p2` -> frozen v318 `pc` -> v320 pair probabilities/tickets.
+Current position:
+- HEAD selection remains strong/frozen; the unresolved production problem is exact3 ticket coverage, not a validated PASS/SKIP filter.
+- Three chronological postfilter attempts (v325-v327) failed June forward support.
 
-Audited v327 PRE feature set to freeze before implementation:
-1. `p_head`
-2. `opp_mass`
-3. `second_top1_prob` = largest frozen v317 `p2`
-4. `second_top2_mass` = sum of two largest frozen v317 `p2`
-5. `second_margin12` = top1 minus top2 frozen v317 `p2`
-6. `third_top1_mean_for_top2_second` = mean best conditional THIRD probability for the top-2 SECOND candidates
-7. `third_top1_min_for_top2_second` = weaker of those two branch-best THIRD probabilities
-8. `ticket_prob1`, `ticket_prob2`, `ticket_prob3` = pair probabilities of the exact three frozen HYBRID tickets
-9. `ticket_mass3` = sum of pair probability on the three frozen tickets
-10. `ticket_prob3` / weakest-ticket confidence retained explicitly
-11. `ticket_gap34` = probability gap between 3rd and 4th HYBRID-ranked pair
-12. `ticket_entropy20` = entropy of normalized 20 pair probabilities
-
-Excluded from v327 PRE confidence inputs:
-- odds/composite odds
-- result/payout fields
-- actual combo/head labels except after feature freeze for evaluation
-- same-race exhibition fields inside the PRE confidence block
-- Jul/Aug/September outcome-derived fields
-- any `meet_*` or future/backfilled value
-
-Historical reconstruction plan:
-- use `analysis_v320_1head_exact3_ticket_policy_best_race.csv` only as the immutable 345-race/ticket identity + labels for evaluation after feature generation.
-- recompute PRE confidence features fold-by-fold from v313/v308/v317/v318/v320 causal code, keyed by `race_code`.
-- verify exact identity before search: **345R / 290 head / 139 exact3** and exact ticket strings unchanged.
-- no Jul/Aug or September outcomes opened during feature building/search.
-
-### Predeclared v327 research design — NEXT WORK UNIT
-Chronology remains:
-- Feb-Apr: discovery only
-- May: validation/freeze
-- Jun: one-shot forward check
-- Jul/Aug may be opened once, reference-only, only if June is forward-supported
-- September outcomes remain unread
-
-Candidate families are intentionally small:
-1. one-dimensional PRE confidence gates on the frozen features above;
-2. one-dimensional exhibition confirmation gates from v326's already-audited feature-specific source families;
-3. PRE gate AND one exhibition confirmation gate;
-4. one small regularized logistic PASS model using frozen PRE-confidence + audited exhibition features, chronological only, no random CV.
-
-Primary success target:
-- June forward exact3 PASS rate >=50% with useful retained R and no obvious month-collapse.
-- 345/290/139 and frozen tickets must remain unchanged before filtering.
-
-Failure fallback:
-- if PRE-confidence alone does not validate, do not retune v308/v317/v318/v320; stop that family.
-- if PRE+exhibition fails June, do not inspect Jul/Aug for promotion and do not create production BUY logic.
-
----
-
-# 6. Work Unit 5E — v327 IMPLEMENTATION ABOUT TO START
-
-Exact work about to be done:
-1. Create `run_v327_1head_preconf_exhibition.py`.
-2. Rebuild the frozen 345 cohort's PRE-confidence table fold-by-fold using only v308/v317/v318/v320 causal paths.
-3. Assert 345/290/139 and exact frozen ticket identity before any search.
-4. Join the existing audited historical exhibition feature builder from v326 without changing source-readiness semantics.
-5. Run the predeclared Feb-Apr -> May -> Jun chronology only.
-6. Emit race-level dataset, candidate table, frozen candidate summary, monthly PASS/SKIP metrics, and clear `FORWARD_SUPPORTED` flag.
-7. Add `.github/workflows/v327-1head-preconf-exhibition.yml` and run Actions.
+Exact work about to be done BEFORE any new challenger model:
+1. Audit the frozen 345 cohort's misses at the opponent-pair/ticket level using only already-generated causal PRE probabilities plus settlement labels after prediction freeze.
+2. Decompose exact3 misses into:
+   - boat1 head loss,
+   - correct head but actual SECOND absent from covered seconds,
+   - SECOND covered but actual THIRD absent,
+   - actual ordered pair ranked 4th/5th/6th vs much lower,
+   - duplicate/concentration effects of 3-ticket HYBRID coverage.
+3. Report Feb-Apr / May / Jun separately so the error mechanism is chronological, not aggregate-only.
+4. Compare oracle diagnostic ceilings without promoting them: top-N pair rank coverage and SECOND/THIRD conditional coverage.
+5. Do NOT tune on Jul/Aug; do NOT inspect September outcomes.
 
 Success criteria:
-- frozen identity/tickets unchanged.
-- no Jul/Aug or September outcome read during candidate search.
-- every PRE feature available through the same live v323 computation path.
-- exhibition features remain fail-closed per source family.
-- June forward result explicit.
+- identify whether the largest recoverable exact3 loss is SECOND selection, THIRD conditional selection, or 3-ticket allocation.
+- produce a causal-safe recommendation for a v328 challenger research target without modifying v308/v317/v318/v320 production.
 
 Failure fallback:
-- on any assertion/schema/runtime failure, first append exact failure + intended fix to this handoff, then patch.
-- unsafe/unreproducible feature is dropped, never approximated from settlement data.
+- if required pair-rank information cannot be safely reconstructed, use only frozen v320 tickets + causal v317/v318 probability maps; never infer from odds/results.
+- if no clear dominant error class exists, do not launch broad combinatorial model search; document that result.
 
 ---
 
-# 7. Exact next resume point
-**Implement `run_v327_1head_preconf_exhibition.py` from the frozen source-audited feature set above, then workflow + Actions. Do not open Jul/Aug or September outcomes unless June forward support is achieved.**
+# 8. Exact next resume point
+**Run Work Unit 6A ticket-selection error audit on the frozen 345 cohort. Keep Jul/Aug NON-PRISTINE/unopened for tuning and keep September outcomes unread. Production stack remains v308/v317/v318/v320/v323 unchanged.**
