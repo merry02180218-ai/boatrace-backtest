@@ -1,13 +1,13 @@
-name: research-3head-wave36d-temporal-diagnosis
+name: research-3head-wave36c-monthly-calibration
 on:
   push:
     branches: [research/3head-v289-addon-expansion]
     paths:
-      - 'research_v289_3head_wave36d_diagnosis.py'
+      - 'research_v289_3head_wave36c_monthly_calibration.py'
       - '.github/workflows/research-3head-wave34c-loss-filter.yml'
   workflow_dispatch:
 jobs:
-  wave36d:
+  wave36c:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -21,8 +21,8 @@ jobs:
         run: |
           gh run download 34754875342 --repo merry02180218-ai/boatrace-backtest --name 3head-wave21-allrace-source-build --dir source
           cp source/analysis_v289_3head_wave21_allrace_feature_settled.csv .
-      - run: python research_v289_3head_wave36d_diagnosis.py
+      - run: python research_v289_3head_wave36c_monthly_calibration.py
       - uses: actions/upload-artifact@v4
         with:
-          name: 3head-wave36d-temporal-diagnosis
-          path: research_v289_3head_wave36d_diagnosis.json
+          name: 3head-wave36c-monthly-calibration
+          path: research_v289_3head_wave36c_monthly_calibration.json
