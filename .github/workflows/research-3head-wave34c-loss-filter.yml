@@ -1,13 +1,13 @@
-name: research-3head-wave34f-may-diagnosis
+name: research-3head-wave34g-motor-confirmation
 on:
   push:
     branches: [research/3head-v289-addon-expansion]
     paths:
-      - 'research_v289_3head_wave34f_may_diagnosis.py'
+      - 'research_v289_3head_wave34g_motor_confirmation.py'
       - '.github/workflows/research-3head-wave34c-loss-filter.yml'
   workflow_dispatch:
 jobs:
-  wave34f:
+  wave34g:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -21,11 +21,11 @@ jobs:
         run: |
           gh run download 34754875342 --repo merry02180218-ai/boatrace-backtest --name 3head-wave21-allrace-source-build --dir source
           cp source/analysis_v289_3head_wave21_allrace_feature_settled.csv .
-      - run: python research_v289_3head_wave34f_may_diagnosis.py
+      - run: python research_v289_3head_wave34g_motor_confirmation.py
       - uses: actions/upload-artifact@v4
         with:
-          name: 3head-wave34f-may-diagnosis
+          name: 3head-wave34g-motor-confirmation
           path: |
-            analysis_v289_3head_wave34f_may_diagnosis.csv
-            research_v289_3head_wave34f_may_diagnosis.json
-            research_v289_3head_wave34f_may_diagnosis.md
+            analysis_v289_3head_wave34g_motor_confirmation.csv
+            research_v289_3head_wave34g_motor_confirmation.json
+            research_v289_3head_wave34g_motor_confirmation.md
