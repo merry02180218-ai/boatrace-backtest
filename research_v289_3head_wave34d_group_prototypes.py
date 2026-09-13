@@ -12,14 +12,17 @@ OUT=Path('analysis_v289_3head_wave34d_group_prototypes.csv'); OUTJ=Path('researc
 BASE={'races':94,'hits':52,'stake_yen':940000,'payout_yen':1622070,'roi_pct':172.560638}; KS=[3,5,7]
 
 def groups(cols):
- def slot(c):
-  m=re.search(r'(?:^|__|_|艇|枠)([1-6])(?:$|__|_)',str(c)); return int(m.group(1)) if m else None
- s={i:[] for i in range(1,7)}; other=[]
- for c in cols:
-  k=slot(c); (s[k] if k else other).append(c)
- g={'global':list(cols),'boat3':s[3],'inner12':s[1]+s[2],'outer456':s[4]+s[5]+s[6]}
- if len(other)>=3:g['nonslot']=other
- return {k:v for k,v in g.items() if len(v)>=3}
+ g={
+  'global':list(cols),
+  'boat3_abs':[c for c in cols if c.startswith('b3_') and not c.startswith('b3_minus_')],
+  'mean_advantage':[c for c in cols if c.startswith('b3_minus_mean_')],
+  'inner12':[c for c in cols if c.startswith('b3_minus_b1_') or c.startswith('b3_minus_b2_')],
+  'outer456':[c for c in cols if c.startswith('b3_minus_b4_') or c.startswith('b3_minus_b5_') or c.startswith('b3_minus_b6_')],
+ }
+ expected={'global':63,'boat3_abs':9,'mean_advantage':9,'inner12':18,'outer456':27}
+ got={k:len(v) for k,v in g.items()}
+ if got!=expected: raise RuntimeError(f'group layout mismatch: {got} expected {expected}')
+ return g
 
 def proto(A,y,B,idx):
  imp=SimpleImputer(strategy='median'); a=imp.fit_transform(A[:,idx]); b=imp.transform(B[:,idx]); sc=StandardScaler().fit(a); a=sc.transform(a); b=sc.transform(b)
