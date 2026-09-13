@@ -1,0 +1,59 @@
+name: audit-4head-boatcast-serialization-lineage
+
+on:
+  push:
+    paths:
+      - 'audit_4head_boatcast_serialization_lineage.py'
+      - 'artifacts/head4_boatcast_parity_contract_20260630.json'
+      - '.github/workflows/audit-4head-boatcast-serialization-lineage.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Syntax check
+        run: python -m py_compile audit_4head_boatcast_serialization_lineage.py
+      - name: Run result-free source serialization lineage audit
+        run: python audit_4head_boatcast_serialization_lineage.py
+      - name: Validate immutable guards
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('artifacts/head4_boatcast_serialization_lineage_20260630.json')
+          assert p.exists()
+          x=json.loads(p.read_text())
+          assert x['status']=='PASS', x
+          assert x['result_or_payout_files_read'] is False
+          assert x['jul_aug_outcomes_used'] is False
+          assert x['september_outcomes_used'] is False
+          assert x['v291_changed'] is False
+          assert x['betting_overlay_changed'] is False
+          assert x['evidence']['archived_semantic_parity']['lane4_score_mismatch']==0
+          print('HEAD4 BOATCAST serialization lineage PASS')
+          PY
+      - name: Upload audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: head4-boatcast-serialization-lineage
+          path: artifacts/head4_boatcast_serialization_lineage_20260630.json
+      - name: Commit audit result
+        run: |
+          if git diff --quiet -- artifacts/head4_boatcast_serialization_lineage_20260630.json; then
+            echo 'No audit artifact diff.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add artifacts/head4_boatcast_serialization_lineage_20260630.json
+          git commit -m 'Record HEAD4 BOATCAST serialization lineage result'
+          git push
