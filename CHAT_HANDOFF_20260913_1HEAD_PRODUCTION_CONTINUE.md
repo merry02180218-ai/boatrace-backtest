@@ -81,5 +81,33 @@ Completion requirement:
 - after the work finishes, append actual commit SHA(s), Actions Run/Job/Artifact IDs, Waku10 changed-row/race counts, anchor reproduction result, per-cutoff v337 results, interpretation, and the exact next resume point to THIS handoff file before reporting completion to the user.
 - if blocked/failing, append the actual failure/blocker and exact restart point here rather than leaving the handoff at the pre-work plan.
 
+# 7. 2026-09-14 WORK RESULT — WAKU10 IMPACT AUDIT COMPLETE; v337 CI IN PROGRESS
+
+## Waku10 audit result
+- Canonical historical Waku10 materializer covers 2025-12-01 through 2026-08-31 and its first full run restored/validated 100% monthly coverage; 2026-07-18 was 180/180 and 2026-07-19 was 192/192. The first run's only final failure was a non-fast-forward push conflict after successful restoration/validation.
+- `backtest.py` now prefers repository-local `data/programs/waku10/` where present, but the frozen 1-head v308 HEAD/PRE path does NOT consume Waku10.
+- v308 starts from v294 TRUE PRE. v294 reconstructs current-race PRE from race cards plus strictly prior-day player/history state; v221 prior history uses race cards, exhibition history and results strictly after the scoring point; v303/v307 add only causal features derived from that existing PRE/history frame.
+- Therefore canonical Waku10 has no causal input edge into v308 p_head or v337 HEAD-cutoff selection.
+- Impact on the frozen/current 1-head HEAD/PRE path due solely to Waku10: changed input rows=0; changed p_head rows=0; head-cutoff crossings=0; PRE additions/removals=0; downstream v332 identity changes attributable solely to Waku10=0.
+- September outcomes remain unread.
+
+## v337 implementation started
+- implementation commit: `a6c0a39088a40c9a2c7236f71ec6bc3539bf2dd2` (`run_v337_1head_head_cutoff_volume.py`).
+- workflow commit: `886483907e1f036c2ab15aa4ce2121fd79ec8991` (`.github/workflows/v337-1head-head-cutoff-volume.yml`).
+- v337 reconstructs a broader PRE candidate universe down to p_head=.75 rather than filtering only the frozen selected 345 rows; Jul/Aug uses the full causal v321 head universe and frozen SECOND/THIRD artifacts; Feb-Jun uses the full v308 prediction universe plus frozen v317/v318/v320 ticket machinery.
+- fixed exhibition policy remains ATTACK_ENV_SOFT env_w=.1 q=.65.
+- hard regression gate remains 96 PASS / 83 head / 45 exact3 at cutoff 0.8073405637; if that fails, variant comparison is invalid and reconstruction only must be fixed.
+
+## Current Actions state at this handoff update
+- Run `34779669216` — `v337 1-head head-cutoff-only volume audit` — IN PROGRESS.
+- current Job `103784237186` (`prepare`) is running `Prepare full Jul-Aug causal head universe`.
+- no v337 result/Artifact exists yet at this exact update because the prerequisite causal PRE reconstruction job is still executing.
+- this is not treated as v337 completion; production remains unchanged.
+
 Exact next resume point:
-- begin canonical Waku10 lineage/input-diff audit, then v308/v323 dependency audit; do not run/report v337 comparisons until the canonical-Waku10 anchor regression is resolved.
+1. Inspect Run `34779669216` / Job `103784237186` to completion.
+2. If prepare succeeds, inspect second/base-third/third and final audit jobs, then artifact.
+3. If final anchor is not exactly 96/83/45, stop cutoff interpretation and fix reconstruction identity only.
+4. If anchor passes, record cutoff 0.8073405637/0.80/0.79/0.78/0.77/0.75 PRE/PASS/month/head/exact3 plus newly admitted quality and compare against v336 exhibition-q expansion.
+5. Append actual final Run/Job/Artifact/results or blocker to THIS file before reporting v337 complete.
+6. Do not start v338 before reporting v337 once.
