@@ -37,6 +37,7 @@ jobs:
           # v321 prepare settles only through 2026-08-31. It explicitly rejects September.
           python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
           test -s cache_v321_julaug_nonpristine_head.csv
+          test -s cache_v321_julaug_nonpristine_head_full.csv.gz
           test -s cache_v321_julaug_nonpristine_slim.csv.gz
 
       - name: Run frozen v323 current adapter
