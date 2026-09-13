@@ -17,26 +17,27 @@
 ## Wave34 family
 - Wave34c Run 34769751846: Apr-Jun 381R / 54 hits / ROI 86.794% / profit -503,130 yen; current best Wave34-family pristine ROI.
 - Wave34h Run 34773911115: ROI 68.726%; NO_ADOPTION.
+- Wave34i Run 34774184349: Apr-Jun 314R / 55 hits / ROI 70.745%; NO_ADOPTION. Relative-motor confirmation family retired.
 
-## Wave34i structural motor — FINAL
-- Run 34774184349 success; artifact 10322014882.
-- March validation used no monetary ROI: Feb-derived q=.20 structural motor cut -1.1074, top5; 39R; 3-head rate 51.282%, early 50.000%, late 52.174%.
-- Apr-Jun pristine: 314R / 55 hits / ROI 70.745% / profit -918,620 yen.
-- Monthly: Apr 70R / 13 hits / ROI 89.496% / -73,530; May 103R / 20 hits / ROI 73.360% / -274,390; Jun 141R / 22 hits / ROI 59.525% / -570,700.
-- min month 59.525%; red months 3; max DD 1,088,140 yen.
-- Jul-Aug shadow 406R / ROI 75.950%.
-- combined v288 + holdout: 408R / ROI 94.202% / profit -236,550 yen. overlap 0. NO_ADOPTION.
-- Conclusion: relative-motor confirmation family does not generalize; stop iterating it.
+## Wave35 corrected-scope logistic stable gate — FINAL
+- Run 34775954251 success; artifact 10324000675.
+- March gate p3>=0.402921, top5 (q=.99). March 45R / head rate 44.444%; early 50.000%; late 40.741%; worst-half 40.741%. Selection used label stability only, no ROI.
+- Apr-Jun pristine: 202R / 54 hits / ROI 102.805% / profit +56,660 yen.
+- Monthly: Apr 56R / 20 hits / ROI 141.657% / +233,280; May 79R / 20 hits / ROI 90.930% / -71,650; Jun 67R / 14 hits / ROI 84.333% / -104,970.
+- min month 84.333%; red months 2; max DD 330,930 yen.
+- Jul-Aug NON-PRISTINE shadow: 178R / 49 hits / ROI 102.711% / +48,250 yen.
+- combined v288 + holdout: 296R / ROI 124.957% / profit +738,730 yen. exact v288 overlap 0.
+- Decision NO_ADOPTION because two pristine months remain red and holdout ROI is below research-candidate threshold. This is nevertheless the strongest corrected-scope post-Wave34 signal so far.
 
-## Wave35 — STARTED
-- Distinct corrected-scope family. Re-test a simple probabilistic head gate under the FINAL Wave20 population, because older Waves27-31 were later found to have excluded the old 678R universe and are not definitive corrected-scope evidence.
-- Use exactly 63 static pre-deadline features. Feb trains a regularized logistic P(3-head) model plus conditional exact-order logistic model.
-- March selects only a sparse probability threshold/top-K using label stability, NOT payout/ROI: require support in both chronological March halves and maximize worst-half 3-head hit rate/lift, with tie preference for larger support and simpler threshold. No closing odds in gate selection.
-- Freeze after March. Apr-Jun untouched pristine; Jul/Aug frozen NON-PRISTINE shadow. Exact v288 94 exclusion, zero overlap, no September, JPY10k Dutch.
-- Report R/hits/ROI/profit/monthly/min month/red months/max DD/overlap/combined.
+## Wave36 — STARTED
+- Distinct corrected-scope full-population head family: shrinkage Linear Discriminant Analysis (LDA) for P(3-head), retaining conditional exact-order logistic only for ticket ordering.
+- Use exactly 63 static pre-deadline features, median imputation + standardization, LDA solver=lsqr with automatic shrinkage.
+- Feb trains. March selects sparse probability quantile/top-K by label stability only: support in chronological early/late halves, maximize worst-half 3-head head rate, then full-March head rate/ticket coverage/support. No payout/closing odds in selection.
+- Freeze after March. Apr-Jun untouched pristine; Jul/Aug NON-PRISTINE frozen shadow. Exact v288 94 exclusion, zero overlap, September forbidden, JPY10k Dutch.
+- Report R/hits/ROI/profit/monthly/min month/red months/max DD/overlap/combined and compare to Wave35 102.805%.
 
 ## Exact restart point
-1. Implement Wave35 corrected-scope logistic head gate + conditional exact-order model.
+1. Implement Wave36 shrinkage-LDA stable gate.
 2. Launch and auto-fix technical failures without weakening guards.
 3. Record results here after completion.
-4. If NO_ADOPTION, continue a distinct corrected-scope full-population family automatically.
+4. If NO_ADOPTION, continue another distinct corrected-scope full-population family automatically.
