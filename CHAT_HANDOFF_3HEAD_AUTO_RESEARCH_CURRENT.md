@@ -34,6 +34,13 @@
 - Diagnosis: collapse is not just payout compression. It is primarily a combination of head-selection miscalibration and order-conversion failure, with some payout softening. The model increasingly over-trusted racer-strength advantages while motor quality weakened; p3 did not reflect that temporal mismatch.
 - No production adoption. Do not derive a cutoff from Apr-Jun.
 
-## Safest next experiment
-- Design a new robustness modifier using Feb/March only: test predeclared interaction/regularization that reduces head confidence when racer-strength advantage is high but motor advantage is weak, because this failure pattern is descriptive only from Apr-Jun.
-- Freeze any such rule from Feb/March, then evaluate Apr-Jun pristine and Jul/Aug NON-PRISTINE without retuning.
+## Wave36S-C pre-April motor robustness modifier — STARTING
+- Preserve Wave36S 63 static pre-deadline features, shrinkage-LDA head model, pooled rolling calibration, conditional-logit Top5, expanding chronology, JPY10,000 Dutch, exact v288 exclusion.
+- Design/freeze the modifier using Feb/March evidence only. Apr-Jun outcomes/ROI must not choose its threshold or strength.
+- Predeclared idea: construct racer-strength advantage and motor-strength advantage composites from existing static boat3 relative-gap features; penalize head confidence only in the mismatch regime where racer advantage is strong but motor advantage is weak.
+- Candidate modifier settings may be compared only on March OOS head quality/stability; monetary ROI is not used to choose the rule. Freeze one setting before Apr-Jun evaluation.
+- Evaluate frozen rule on Apr-Jun pristine and Jul/Aug NON-PRISTINE. Report selected R, head hits/rate, Top5 conversion, ROI/profit, monthly ROI, min month, red months, max DD, exact v288 overlap, and comparison with Wave36S/raw Wave36.
+- No September data. No settlement or closing-odds feature enters prediction.
+
+## Restart
+Implement Wave36S-C, run CI, record exact Run/artifact/results here, then decide whether the pre-April motor robustness modifier improves pristine robustness without sacrificing aggregate edge.
