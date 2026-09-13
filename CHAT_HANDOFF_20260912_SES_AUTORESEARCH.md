@@ -29,82 +29,69 @@ Old prose that v13 passed Kiryu3 was wrong. Artifact reinspection of run `346889
 File `auto_seed_exhibition_motion_v17.py`, commit `3f628a0099a5b93b38da7a9be8acdbf89fdcef2b`.
 It runs v14, freezes healthy rows, and applies long-horizon .15/.30/.45/.60/.90/1.20s validation only to rows that v14 rescued. It remains the current seed candidate.
 
-Kiryu6 artifact diagnosis from run `34713478083` showed v17 seed itself is plausible:
-- selected_sec 29.75
-- seeds 1 [790,420.5], 2 [849,470.5], 3 [882,531.5], 4 [935.5,600], 5 [737,717], 6 [829,795.5]
-- v14 rescued boat6 from bad rail/background center [989,930.5] to [829,795.5]
-- boat6 long-survival passed 6/6 horizons, median NCC ~.959, min ~.920, net dx +196, final long center ~[1025,776], on-frame and direction-consistent.
-Therefore current blocker is tracker identity preservation, not additional race-specific seed movement.
+Kiryu6 diagnosis established that v17 can place rescued boat6 plausibly and validate it through long horizons; current blocker is tracker identity preservation rather than more race-specific seed movement.
 
-## Tracker v8 — insufficient
-File `track_exhibition_boats_v8.py`, commit `264bf494812b6b72e4af94cacc1d40b009a6dde1`.
-Workflow run `34718223751` matrix: Kiryu12 standard SUCCESS, Kiryu12 varied SUCCESS, Kiryu3 FAILURE, Kiryu6 FAILURE. v8 is 2/4 and not live-ready. Per-frame joint six-boat assignment alone does not preserve identity over time.
+## Tracker history
+### v8 — insufficient
+`track_exhibition_boats_v8.py`, commit `264bf494812b6b72e4af94cacc1d40b009a6dde1`.
+Run `34718223751`: Kiryu12 standard SUCCESS, Kiryu12 varied SUCCESS, Kiryu3 FAILURE, Kiryu6 FAILURE. Per-frame joint assignment alone did not preserve identity over time.
 
-## Tracker v9 — rejected after 4/4 matrix failure
-File `track_exhibition_boats_v9.py`.
-Run `34752608413` on the unchanged four-video matrix failed all four jobs. v9 added immutable seed-frame anchor appearance memory on top of v8, but did not cure the outer-row collapse.
+### v9 — rejected
+`track_exhibition_boats_v9.py`, implementation commit `30a7b7ad2e44e51ccd2d0d2c0df0e32b5c265608`.
+Run `34752608413` failed the unchanged four-video matrix. Immutable seed-frame appearance memory did not cure outer-row collapse. Kiryu6 showed 5/6 y separation collapsing to ~7.7px with high fallback counts, implying tracker geometry feedback rather than seed failure.
 
-### Key v9 Kiryu6 artifact diagnosis
-Artifact `seed17-track9-kiryu6`, artifact ID `10315947350`.
-- v17 selected_sec = 29.75 and seed6 remained plausible.
-- tracker failed closed at native frame 1131 because `dynamic_lane_cells` became invalid.
-- last centers at failure:
-  - 1 [780.14,452.89]
-  - 2 [870.28,512.96]
-  - 3 [979.91,604.05]
-  - 4 [1033.32,733.01]
-  - 5 [650.77,852.14]
-  - 6 [679.22,859.86]
-- boats5/6 y separation collapsed to only ~7.72 px.
-- fallback counts were already 5=22 and 6=21, while boats1-4 remained 0.
-- immutable anchor-time templates for 5/6 were still around y~765/y~819, so the later y convergence is physically suspicious.
+### v10 — REJECTED after artifact audit
+`track_exhibition_boats_v10.py`; workflow `.github/workflows/regress-exhibition-seed17-track10.yml`; workflow commit `a3cd49d1c8feaf1eeb26a09995698933df1ed2cf`; run `34778546662`.
+All four matrix jobs failed closed. This is not a coding/import failure; FastClip and seed v17 succeeded and tracker v10 itself reached its safety gates.
 
-Interpretation: the dynamic lane cells were built from the previous raw tracked centers. Once an outer row drifted, its own wrong center moved the next frame's lane boundary, creating a self-reinforcing identity/lane collapse. This is a tracker geometry feedback problem, not evidence that the v17 seed needs another race-specific move. Do not relax lane-separation or confidence thresholds.
+v10 changed only lane-cell reference to a robust affine projection from immutable seed y geometry. It regressed previously healthier samples, so do not continue this lane-cell direction.
 
-## CURRENT candidate: tracker v10 fleet-affine lane reference
-File `track_exhibition_boats_v10.py`.
-Implementation commit: `f92e02643d96300f0a2d1ff7f6524892e4e6b760`.
-Workflow `.github/workflows/regress-exhibition-seed17-track10.yml`.
-Workflow commit: `a3cd49d1c8feaf1eeb26a09995698933df1ed2cf`.
-Run: `34778546662` (launched by push; initially queued on Japan self-hosted runner at this handoff update).
+Artifact evidence:
+- Kiryu3 artifact ID `10323234881`: failed `FAIL_CLOSED: tracked center reached frame edge`. At +0.5 boat6 was already ~[297.8,979.6] from seed [616,961], despite v17 slit LK direction being positive (`dominant_dx` +13.269). At +1.0 boat6 reached x~11.7/y~1047.4. This is a clear high-NCC wake/background run opposite the slit motion and validates the need for a motion-direction identity guard.
+- Kiryu6 artifact ID `10324139376`: failed `FAIL_CLOSED: no feasible joint six-boat assignment`. Seed v17 was plausible; at +1.0 boat5 had fallen back toward x~728.8 while its immutable slit LK direction was strongly positive (`dominant_dx` +15.848), and later assignment became infeasible.
+- Kiryu12 standard artifact ID `10324203882`: also regressed to `FAIL_CLOSED: no feasible joint six-boat assignment`; e.g. boat1/2/3 accumulated many fallback steps. Therefore v10's fleet-affine y reference is rejected rather than tuned.
+- Kiryu12 varied artifact ID `10323469202`: job also failed closed.
+No thresholds were relaxed and no race results were read.
 
-Principled v10 change:
+## CURRENT candidate: tracker v11 immutable slit-motion corridor
+File `track_exhibition_boats_v11.py`.
+Implementation commit `372aea94e0f718cc7dc2be3502c8761f33433ecf`.
+Workflow `.github/workflows/regress-exhibition-seed17-track11.yml`.
+Workflow creation commit `5632113f288d442bc1e619e284ba8d6b1a553b47`.
+Regression trigger commit `bce6845d3d37852ffbfde22f7a174b3fa8136110`.
+Run `34788921925` launched on the Japan self-hosted runner and was queued at this handoff update.
+
+Principled v11 design:
+- deliberately return to v9 lane-cell behavior; v10 affine lane reference is NOT inherited;
 - keep v9 joint six-boat assignment, immutable anchor memory, adaptive appearance logic, stride2, NCC thresholds and fallback caps unchanged;
-- replace only the dynamic vertical lane-cell reference;
-- initialize immutable seed-frame y positions once;
-- each frame fit a robust affine mapping from immutable seed y geometry to the current fleet y geometry;
-- clip each boat's residual around that fleet-affine reference using a scale-aware allowance derived from immutable neighboring seed gaps (`max(12px, 0.28 * local initial gap)`);
-- build lane cells from those fleet-consistent reference y values rather than directly from raw potentially drifting centers;
-- fail closed if projected order degenerates or a lane cell becomes too small;
-- no race result, boat number, race-specific offset, or loosened quality threshold is used.
+- read result-blind v17 `row_details[*].dominant_dx` from `auto_seed_meta_v17.json`;
+- only rows with |dominant_dx| >= 4px establish an immutable slit screen-x direction; near-zero rows remain unconstrained;
+- reject candidates whose cumulative movement goes more than a resolution-scaled 5% frame width opposite the immutable slit direction;
+- reject a single update whose reverse step exceeds a resolution-scaled 1.25% frame width per native frame;
+- if filtering leaves no safe candidate, fail closed; never restore an unsafe fallback merely to pass;
+- no race result, boat-number rule, race-specific offset or loosened confidence threshold is used.
 
-Rationale: allow ordinary camera/perspective vertical motion while preventing one bad outer-row track from dragging its own future lane boundary into a neighboring identity. This directly targets the v9 Kiryu6 failure mechanism without touching the seed or lowering gates.
+Rationale: Kiryu3 boat6 and Kiryu6 outer-row failures show that high NCC is not sufficient because wake/background texture can remain highly correlated while moving in the physically wrong screen-x direction. v11 adds an independent motion-consistency identity signal derived before results and before the tracker drifts.
 
-## v10 validation matrix
-Run `34778546662`, unchanged videos:
+## v11 validation matrix / exact restart point
+Run `34788921925`, unchanged four videos:
 1. 2026-09-10 Kiryu3 standard — result remains blind.
 2. 2026-09-10 Kiryu6 standard — result remains blind.
 3. 2026-09-10 Kiryu12 standard — technical calibration.
 4. 2026-09-09 Kiryu12 varied entry `1,2,4,5,6,3` — technical regression.
 
-When the run completes, inspect actual artifact JSON, not workflow green only. For each job inspect:
-- accepted/failure reason;
-- +0.5/+1.0/+1.5 physical centers and on-frame identity;
-- fallback fractions and median NCC/anchor evidence;
-- minimum lane separation;
-- whether Kiryu3 boat6 and Kiryu6 boats5/6 remain distinct;
-- FastClip + seed + tracker latency, max <=60 sec.
+Next run must:
+1. Inspect all four v11 jobs/artifacts, not workflow green alone.
+2. Confirm Kiryu3 boat6 no longer runs left/off-frame against positive slit motion.
+3. Confirm Kiryu6 boats5/6 remain distinct and physically sane through +1.5s.
+4. Confirm Kiryu12 standard/varied are not regressed by the new guard.
+5. Record accepted/failure reason, fallback fractions, median identity/anchor NCC, min lane separation, +0.5/+1.0/+1.5 centers, and FastClip+seed+tracker latency.
+6. If v11 merely fails earlier but safely, do NOT relax the corridor or NCC gates to force a pass. Diagnose candidate availability and move toward multi-frame beam/Viterbi trajectory assignment using immutable appearance + motion likelihood.
+7. If one unchanged seed+tracker combination passes all four physically sane and <=60 sec, only then update `run_exhibition_ses_live_local.py` and perform a self-hosted end-to-end live-style validation.
+8. Update this handoff after every meaningful result/design change with exact commit SHA, Run ID, artifact IDs/evidence and restart point.
 
 ## Production wrapper
-`run_exhibition_ses_live_local.py` remains old seed v1 + tracker v3. DO NOT update until one unchanged seed+tracker combination passes the full technical matrix with sane identity/geometry and <=60 sec.
-
-## Exact restart point
-1. Inspect run `34778546662` all four jobs/artifacts when completed.
-2. If v10 has a technical coding/import failure, fix and rerun immediately.
-3. If v10 gets past the old lane-cell collapse but still loses identity, do not relax gates. Next direction should use stronger multi-frame/beam/Viterbi fleet-consistent temporal appearance assignment or explicit immutable-anchor trajectory likelihood, not seed offsets.
-4. If v17+v10 passes 4/4 physically sane and <=60 sec, update `run_exhibition_ses_live_local.py` to v17+v10 and perform a self-hosted end-to-end live-style validation.
-5. Only after technical live validation expand toward 10+ September samples before treating SES as stable/predictive.
-6. Update this handoff after every meaningful result/design change with commit SHA, Run ID, artifact IDs/evidence, failure diagnosis and exact restart point.
+`run_exhibition_ses_live_local.py` remains old seed v1 + tracker v3. DO NOT update until an unchanged seed+tracker passes the full technical matrix with sane identity/geometry and <=60 sec.
 
 ## Live-ready milestone
 Before user notification as complete:
@@ -114,4 +101,4 @@ Before user notification as complete:
 - ideally <=30 sec, maximum <=60 sec;
 - `run_exhibition_ses_live_local.py` updated to validated pipeline;
 - >=1 self-hosted end-to-end live-style success.
-SES remains an attack/head-support feature candidate, not direct finishing-order rank.
+Prefer 10+ samples before treating SES as stable/predictive. SES remains an attack/head-support feature candidate, not direct finishing-order rank.
