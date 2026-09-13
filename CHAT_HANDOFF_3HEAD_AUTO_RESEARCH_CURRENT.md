@@ -9,35 +9,37 @@
 - Stake JPY10,000 per selected race with Dutch allocation; selected overlap with v288 must be zero.
 
 ## Stable source / scope correction
-- Wave20 Run 34749917116, workflow research-3head-wave20-allrace-universe, head 33c296c008a7a588e9f694feb577a3612b4731d7: SUCCESS. 32,111 six-boat races. Monthly Feb 4,100 / Mar 4,607 / Apr 4,244 / May 4,832 / Jun 4,488 / Jul 4,920 / Aug 4,920. Missing program date 2026-06-17 recorded.
+- Wave20 Run 34749917116: SUCCESS. 32,111 six-boat races. Monthly Feb 4,100 / Mar 4,607 / Apr 4,244 / May 4,832 / Jun 4,488 / Jul 4,920 / Aug 4,920. Missing program date 2026-06-17 recorded.
 - Wave21 Run 34751314113: exact settlement usable 31,518/32,111.
 - Wave22 Run 34752573368: full 120 closing trifecta odds 31,605/32,111.
-- Wave19b Run 34749707037 failed due missing payout column and is superseded. Preserve failure; never revert to old v243 678R / non-baseline 584R universe.
+- Wave19b Run 34749707037 failed due missing payout column and is superseded; never revert to 678R/584R scope.
 
-## Wave34 family
-- Wave34c Run 34769751846: Apr-Jun 381R / 54 hits / ROI 86.794% / profit -503,130 yen; current best Wave34-family pristine ROI.
-- Wave34h Run 34773911115: ROI 68.726%; NO_ADOPTION.
-- Wave34i Run 34774184349: Apr-Jun 314R / 55 hits / ROI 70.745%; NO_ADOPTION. Relative-motor confirmation family retired.
+## Wave35
+- Run 34775954251 success. Apr-Jun 202R / 54 hits / ROI 102.805%; Apr 141.657 / May 90.930 / Jun 84.333; Jul-Aug shadow 102.711%; overlap 0; NO_ADOPTION.
 
-## Wave35 corrected-scope logistic stable gate — FINAL
-- Run 34775954251 success; artifact 10324000675.
-- March gate p3>=0.402921, top5 (q=.99). March 45R / head rate 44.444%; early 50.000%; late 40.741%; worst-half 40.741%. Selection used label stability only, no ROI.
-- Apr-Jun pristine: 202R / 54 hits / ROI 102.805% / profit +56,660 yen.
-- Monthly: Apr 56R / 20 hits / ROI 141.657% / +233,280; May 79R / 20 hits / ROI 90.930% / -71,650; Jun 67R / 14 hits / ROI 84.333% / -104,970.
-- min month 84.333%; red months 2; max DD 330,930 yen.
-- Jul-Aug NON-PRISTINE shadow: 178R / 49 hits / ROI 102.711% / +48,250 yen.
-- combined v288 + holdout: 296R / ROI 124.957% / profit +738,730 yen. exact v288 overlap 0.
-- Decision NO_ADOPTION because two pristine months remain red and holdout ROI is below research-candidate threshold. This is nevertheless the strongest corrected-scope post-Wave34 signal so far.
+## Wave36 shrinkage-LDA — RESEARCH CANDIDATE, AUDIT REQUIRED
+- Run 34780059085 success; artifact 10324527230.
+- March gate p3>=0.365448 top5 q=.98; 90R; head rate 42.222%; early 44.737%; late 40.385%.
+- Apr-Jun pristine: 391R / 87 hits / ROI 114.913% / +583,090 yen.
+- Apr 121R / 33 hits / ROI 175.280% / +910,890.
+- May 145R / 33 hits / ROI 103.005% / +43,570.
+- Jun 125R / 21 hits / ROI 70.290% / -371,370.
+- min month 70.290%; red months 1; max DD 717,360 yen.
+- Jul-Aug NON-PRISTINE shadow: 328R / 79 hits / ROI 89.756% / -335,990.
+- baseline + holdout 485R / ROI 126.086% / +1,265,160. exact v288 overlap 0.
+- Decision RESEARCH_CANDIDATE, but user flagged temporal degradation as possible leakage. Do not promote until audit passes.
 
-## Wave36 — STARTED
-- Distinct corrected-scope full-population head family: shrinkage Linear Discriminant Analysis (LDA) for P(3-head), retaining conditional exact-order logistic only for ticket ordering.
-- Use exactly 63 static pre-deadline features, median imputation + standardization, LDA solver=lsqr with automatic shrinkage.
-- Feb trains. March selects sparse probability quantile/top-K by label stability only: support in chronological early/late halves, maximize worst-half 3-head head rate, then full-March head rate/ticket coverage/support. No payout/closing odds in selection.
-- Freeze after March. Apr-Jun untouched pristine; Jul/Aug NON-PRISTINE frozen shadow. Exact v288 94 exclusion, zero overlap, September forbidden, JPY10k Dutch.
-- Report R/hits/ROI/profit/monthly/min month/red months/max DD/overlap/combined and compare to Wave35 102.805%.
+## Wave36L leak / temporal audit — STARTED
+- Audit before any adoption. Do not tune a new production gate in this wave.
+- Verify the exact 63 feature names produced by build_static contain no settlement/result/payout/odds/current-meet post-race fields and no suspicious target-derived names.
+- Verify walk-forward index causality: every prediction row's training max date must be strictly earlier than test month/date; March trained Feb only; Apr train <Apr; May <May; Jun <Jun; Jul/Aug frozen <=Jun.
+- Verify preprocessing is fit inside each training fold only (SimpleImputer, StandardScaler, shrinkage LDA and conditional logistic all pipeline-fit on trainX).
+- Quantify temporal degradation without changing gate: split Apr, May, Jun and Jul/Aug chronologically; report R/hits/head rate/ticket hit rate/ROI/profit and high-payout concentration. Determine whether April ROI is driven by a few outlier payouts versus sustained hit quality.
+- Add a negative-control leakage test: shuffled training labels should collapse predictive head separation; fail audit if suspiciously strong.
+- Required current feature missing => fail closed. September forbidden. Jul/Aug remains NON-PRISTINE.
 
 ## Exact restart point
-1. Implement Wave36 shrinkage-LDA stable gate.
+1. Implement Wave36L audit script/workflow.
 2. Launch and auto-fix technical failures without weakening guards.
-3. Record results here after completion.
-4. If NO_ADOPTION, continue another distinct corrected-scope full-population family automatically.
+3. Record PASS/FAIL and diagnostics here.
+4. Only if PASS, continue Wave36 robustness research; if FAIL, invalidate Wave36 and repair source/features automatically.
