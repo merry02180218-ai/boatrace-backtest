@@ -21,28 +21,34 @@ jobs:
         run: |
           gh run download 34720311853 --repo "$GITHUB_REPOSITORY" --name daily-3head-v288-production --dir daily_artifact
           test -f daily_artifact/live_outputs/v288/20260913/live_cache.joblib
-      - name: Run exact v288 LIVE logic with browser-compatible Boatcast request headers
+      - name: Print hypothetical v242 top5 combinations only
         run: |
           python - <<'PY'
-          import sys, requests
+          import requests, joblib
           import run_20260911_3head_v288_live as m
+          import analyze_v242_3head_target_comp3_min5_max10 as v242
 
-          def get_text(url):
-              headers={
-                  'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
-                  'Referer':'https://race.boatcast.jp/',
-                  'Accept':'text/plain,text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-                  'Accept-Language':'ja,en-US;q=0.9,en;q=0.8',
-                  'Cache-Control':'no-cache',
-              }
-              r=requests.get(url,headers=headers,timeout=12)
-              print('DIRECT_FETCH',r.status_code,url,file=sys.stderr)
-              r.raise_for_status()
-              return r.content.decode('utf-8',errors='replace')
-
-          m.get_text=get_text
-          sys.argv=['diag','--date','20260913','--jcd','8','--race','4',
-                    '--cache','daily_artifact/live_outputs/v288/20260913/live_cache.joblib',
-                    '--deadline-jst','2026-09-13T12:08:00+09:00']
-          m.main()
+          date='20260913'; jcd=8; rno=4; code='202609130804'
+          z=joblib.load('daily_artifact/live_outputs/v288/20260913/live_cache.joblib')
+          q=z['current_rows']; q=q[q.race_code.astype(str).str.zfill(12)==code]
+          if len(q)!=1: raise SystemExit(f'row count {len(q)}')
+          headers={
+            'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36',
+            'Referer':'https://race.boatcast.jp/',
+            'Accept':'text/plain,text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'Accept-Language':'ja,en-US;q=0.9,en;q=0.8',
+            'Cache-Control':'no-cache',
+          }
+          jo='08'; rr='04'
+          urls={
+            'tkz':f'https://race.boatcast.jp/hp_txt/{jo}/bc_j_tkz_{date}_{jo}_{rr}.txt',
+            'stt':f'https://race.boatcast.jp/hp_txt/{jo}/bc_j_stt_{date}_{jo}_{rr}.txt',
+            'orig':f'https://race.boatcast.jp/txt/{jo}/bc_oriten_{date}_{jo}_{rr}.txt'}
+          bodies={}
+          for k,u in urls.items():
+            r=requests.get(u,headers=headers,timeout=12); print(k,r.status_code); r.raise_for_status(); bodies[k]=r.content.decode('utf-8',errors='replace')
+          tkz=m.parse_tkz(bodies['tkz'],code); stt=m.parse_stt(bodies['stt'],code); orig=m.parse_orig(bodies['orig'],code)
+          row=m.update_current_features(q.iloc[0],tkz,stt,orig,z['st_bias'])
+          ts=v242.safe_order(row,z['pair_model'])
+          print('HYPOTHETICAL_TOP5', ts[:5])
           PY
