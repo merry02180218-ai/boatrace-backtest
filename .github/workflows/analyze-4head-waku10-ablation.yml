@@ -1,0 +1,98 @@
+name: analyze-4head-waku10-ablation
+
+on:
+  push:
+    paths:
+      - 'analyze_4head_waku10_ablation_20260914.py'
+      - '.github/workflows/analyze-4head-waku10-ablation.yml'
+  workflow_dispatch:
+
+jobs:
+  ablation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml tabulate
+      - name: Canonical Waku10 guards
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import csv
+          for ds in ('2025/12/01','2026/01/15','2026/04/15','2026/06/15','2026/07/18','2026/08/15'):
+              p=Path('data/programs/waku10')/(ds+'.csv'); assert p.is_file(),p
+              with p.open(encoding='utf-8-sig',newline='') as f:r=list(csv.DictReader(f))
+              assert r and '艇4_枠番別勝率' in r[0] and '艇4_過去10走_着順' in r[0],ds
+          print('canonical Waku10 PASS')
+          PY
+      - name: Build common opponent context
+        run: python analyze_v93_4corner_second_third.py
+      - name: Run three ablation variants through frozen downstream chain
+        run: |
+          set -euo pipefail
+          mkdir -p waku10_ablation_results
+          for V in FULL_WAKU10 NO_WAKU10 CORE_WAKU10; do
+            echo "===== $V ====="
+            python analyze_4head_waku10_ablation_20260914.py --variant "$V" --out analysis_v250_4head_rebuild_baseline.csv --meta "audit_4head_waku10_ablation_${V}.json"
+            python analyze_v264_4head_feature_exhaustive.py
+            python analyze_v267_4head_v260_consensus_overlay.py
+            python analyze_v271_4head_arank_expansion.py
+            python freeze_4head_v273_a_live_artifact.py
+            mkdir -p "waku10_ablation_results/$V"
+            cp analysis_v250_4head_rebuild_baseline.csv "waku10_ablation_results/$V/"
+            cp "audit_4head_waku10_ablation_${V}.json" "waku10_ablation_results/$V/"
+            cp "diagnostics_4head_waku10_ablation_${V}.csv" "waku10_ablation_results/$V/"
+            cp analysis_v264_4head_feature_exhaustive.csv "waku10_ablation_results/$V/"
+            cp analysis_v267_4head_v260_consensus_overlay.csv "waku10_ablation_results/$V/"
+            cp analysis_v271_4head_arank_expansion.csv "waku10_ablation_results/$V/"
+            cp analysis_v271_4head_arank_races.csv "waku10_ablation_results/$V/"
+            cp artifacts/head4_v273_a_live_20260630.json "waku10_ablation_results/$V/"
+          done
+      - name: Summarize Apr-Jun identical-policy comparison
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import pandas as pd
+          ROOT=Path('waku10_ablation_results'); BANK=10000
+          S_PRE=.28;S_POST=.25;S_ENV=.224790;A_PRE=.18;A_POST=.18;A_OOF=.28
+          variants=['FULL_WAKU10','NO_WAKU10','CORE_WAKU10']
+          rows=[]
+          for V in variants:
+              d=pd.read_csv(ROOT/V/'analysis_v271_4head_arank_races.csv',dtype={'race_code':str})
+              for c in ('PRE','POST','ENV_ENTRY','a_score','actual_head4','hit','return_yen','comp_odds'):
+                  d[c]=pd.to_numeric(d[c],errors='coerce')
+              d['S_exact']=(d.PRE>=S_PRE)&(d.POST>=S_POST)&(d.ENV_ENTRY>=S_ENV)
+              d['A_exact']=(~d.S_exact)&(d.PRE>=A_PRE)&(d.POST>=A_POST)&(d.a_score>=A_OOF)
+              d['layer']='PASS';d.loc[d.S_exact,'layer']='S';d.loc[d.A_exact,'layer']='A'
+              for mon in ['2026-04','2026-05','2026-06','ALL_APR_JUN']:
+                  g=d if mon=='ALL_APR_JUN' else d[d.month.astype(str)==mon]
+                  for layer in ['S','A','S+A']:
+                      q=g[g.layer.isin(['S','A'])] if layer=='S+A' else g[g.layer==layer]
+                      cost=len(q)*BANK;ret=float(q.return_yen.fillna(0).sum())
+                      rows.append({'variant':V,'month':mon,'layer':layer,'R':len(q),'head4_wins':int(q.actual_head4.fillna(0).sum()),'head4_rate':float(q.actual_head4.mean()) if len(q) else None,'trifecta_hits':int(q.hit.fillna(0).sum()),'hit_rate':float(q.hit.mean()) if len(q) else None,'return_yen':ret,'proxy_roi':ret/cost if cost else None,'avg_comp_odds':float(q.comp_odds.mean()) if len(q) else None})
+          out=pd.DataFrame(rows);out.to_csv('analysis_4head_waku10_ablation_summary.csv',index=False)
+          # descriptive NON-PRISTINE score distributions only; no outcome metrics, no selection.
+          stress=[]
+          for V in variants:
+              p=pd.read_csv(ROOT/V/'analysis_v250_4head_rebuild_baseline.csv')
+              for mon in ['2026-07','2026-08']:
+                  for score in ['PRE','POST']:
+                      q=p[(p.month==mon)&(p.variant==score)]
+                      stress.append({'variant':V,'month':mon,'score':score,'R':len(q),'mean_p':float(q.p4head.mean()),'median_p':float(q.p4head.median()),'p_ge_018':int((q.p4head>=.18).sum()),'p_ge_025':int((q.p4head>=.25).sum()),'p_ge_028':int((q.p4head>=.28).sum())})
+          pd.DataFrame(stress).to_csv('analysis_4head_waku10_ablation_nonpristine_score_stress.csv',index=False)
+          audit={'production_modified':False,'selection_window':'Apr-Jun 2026 only','nonpristine':'Jul-Aug score distributions only, outcomes not summarized or used','thresholds':{'S_PRE':S_PRE,'S_POST':S_POST,'S_ENV':S_ENV,'A_PRE':A_PRE,'A_POST':A_POST,'A_OOF':A_OOF},'warning':'archived odds are retrospective proxy, not immutable contemporaneous LIVE odds'}
+          Path('audit_4head_waku10_ablation.json').write_text(json.dumps(audit,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(out[out.month=='ALL_APR_JUN'].to_string(index=False))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-waku10-ablation
+          path: |
+            waku10_ablation_results/**
+            analysis_4head_waku10_ablation_summary.csv
+            analysis_4head_waku10_ablation_nonpristine_score_stress.csv
+            audit_4head_waku10_ablation.json
