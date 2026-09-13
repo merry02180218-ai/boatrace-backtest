@@ -51,19 +51,26 @@
 - Jul-Aug NON-PRISTINE shadow: 464R / 67 hits / ROI 75.100% / -1,155,370 yen.
 - Combined baseline + holdout: 480R / 105 hits / ROI 101.538% / +73,840 yen.
 - Decision NO_ADOPTION.
-- Interpretation: prototype distance looked excellent in March but did not generalize; May remains the largest failure month.
+- Interpretation: not adoptable as-is, but materially better than Waves32/33 and worth targeted follow-up.
 
 ## Wave35 — RUNNING local-neighbor density family
 - Script `research_v289_3head_wave35_local_neighbor.py`, commit `cd7370fc25a74abcc87985a0f2a6d2210e3a7b08`.
 - Workflow `.github/workflows/research-3head-wave35-local-neighbor.yml`, commit `e275093e7f6d532011795d64c339617b4469c110`; trigger follow-up `c595b3bf7a7dd0f802c1b50a87e080cee847ba00`.
-- Run `34769054253` is in progress.
-- Family: standardized 63-feature space, 75 nearest historical neighbors, inverse-distance weighted local P(3-head) + conditional logistic exact-order model.
-- March chooses local-score quantile + top3/top5/top7 with 30..300R floor; freeze before Apr-Jun.
-- Corrected full-population-minus-exact-94 scope; Jul/Aug shadow only; September forbidden; closing odds staking-only; JPY10k Dutch.
+- Run `34769054253` is in progress. It may finish in parallel, but user explicitly requested the next focused research to extend Wave34.
+
+## Wave34b — NEXT targeted prototype-distance extension
+- User explicitly requested additional research on Wave34 because its shape looks promising.
+- Preserve Wave34 core idea; do NOT switch family.
+- Main hypothesis: Wave34's single global prototype is unstable. Improve robustness using an ensemble of prototype-distance scores built from fixed feature groups/subsets and require cross-view agreement/stability.
+- Use only Feb to fit and March to choose fixed score/agreement/top-K gates. Do NOT tune on Apr-Jun; Apr-Jun remains pristine evaluation.
+- Candidate gates should remain sparse (roughly 30..300 March races) and compare top3/top5/top7.
+- Jul/Aug remain NON-PRISTINE shadow only and cannot influence selection.
+- Corrected full-population-minus-exact-94 scope, same 63 static features, closing odds staking-only, JPY10k Dutch, overlap must remain zero.
+- Extra diagnostics to report: agreement distribution, selected-score margin, month-by-month Apr/May/Jun, max DD, and whether May degradation improves versus Wave34 without sacrificing Apr/Jun excessively.
 
 ## Exact restart point
-1. Inspect Run `34769054253` first (and any newer duplicate if present).
+1. Implement and launch Wave34b prototype-distance stability/ensemble extension.
 2. If failed, inspect logs, fix automatically, rerun without weakening guards.
-3. If success, record March score gate/top-K; Apr-Jun R/hits/ROI/profit/monthly/min month/red months/max DD; Jul-Aug shadow; exact v288 overlap; combined baseline.
-4. Adoption status uses pristine Apr-Jun only. Jul/Aug cannot rescue a weak result.
-5. If NO_ADOPTION, automatically continue with another genuinely distinct corrected-scope leak-free family.
+3. If success, record March fixed gates; Apr-Jun R/hits/ROI/profit/monthly/min month/red months/max DD; Jul-Aug shadow; overlap; combined baseline; compare directly to Wave34.
+4. Adoption status still uses pristine Apr-Jun only. Jul/Aug cannot rescue a weak result.
+5. Keep Wave35 result for comparison, but prioritize Wave34b follow-up requested by the user.
