@@ -54,12 +54,28 @@ Why production adoption is still rejected for now:
 
 Repository lineage review confirms historical ST ultimately enters numeric feature construction as floats, but this alone does **not** prove how an official `F` display token was normalized at acquisition time. No new conversion rule was invented. F-start handling remains fail-closed until acquisition lineage or Apr–Jun result-free fixture parity proves the exact mapping.
 
+## 2026-09-13 follow-up — machine-readable lineage materially narrowed
+
+Fresh web indexing exposed a concrete result-free realtime lineage already used by the public BoatraceCSV collector. Its documentation states that `scripts/preview-realtime.py` polls BOATCAST-side preview sources before cutoff and writes separate snapshots for `tkz`, `stt`, `sui`, `original_exhibition`, and odds. The original-exhibition snapshot schema is `計測数 / 計測項目1..3` plus six boats × `選手名 / 値1..3`, with venue-specific labels such as 一周・まわり足・直線. It also documents that only published `status=1` original-exhibition rows are retained and that ST `F` rows are stored as negative ST while `L` rows are blank.
+
+The same documentation identifies BOATCAST machine-source naming for other pre-race data (`race.boatcast.jp/hp_txt/{jo}/...`) and confirms `race.boatcast.jp` as the data origin for multiple pre-race feeds. This is a material narrowing from “official surface only”: a machine-readable BOATCAST acquisition path and normalization convention now have an independently documented implementation candidate.
+
+### Decision on this follow-up
+
+**ACCEPT the documented BOATCAST realtime collector lineage as an implementation/reference candidate; still REJECT direct production adoption until exact endpoint/source code and Apr–Jun parity are frozen inside this repository.**
+
+Reasons:
+- Positive: gives an explicit realtime snapshot architecture, exact original-exhibition output schema, status gating, and a concrete F-ST normalization convention.
+- Positive: all evidence is pre-result/source-lineage evidence; no Sep result/payout was read and no Jul/Aug outcome was used.
+- Reject production for now: the external documentation is not itself frozen code in this repository, the exact original-exhibition source filename/endpoint still needs to be extracted, and historical `original_scores` parity has not yet been demonstrated.
+- Therefore no v291/v283/A-LIVE/overlay/bankroll change is permitted yet; missing values remain fail-closed.
+
 ## Next research checkpoint
 
-1. Resolve BOATCAST race-page/data endpoint structure from a network-capable path without touching result/payout endpoints.
+1. Extract/freeze the exact `preview-realtime.py` BOATCAST endpoint and parser for `original_exhibition` and `stt`, without accessing result/payout endpoints.
 2. Freeze a pre-result raw fixture with URL, retrieval timestamp and SHA256 for a race exposing original exhibition values.
 3. Map raw BOATCAST labels/values to the historical `original_exhibition.csv` fields and reproduce the existing `original_scores` semantics exactly.
-4. Prove Apr–Jun parity on result-free fixtures for straight/lap/turn and ST including F notation.
+4. Prove Apr–Jun parity on result-free fixtures for straight/lap/turn and ST including F notation; specifically verify whether the documented negative-F convention exactly matches this repository's frozen historical numeric ST.
 5. Only then extend the current-day POST builder; after complete POST parity continue ENV_ENTRY 25, A-LIVE 17, v283 SECOND 5 and conditional THIRD 20.
 
-Current status: **important source candidate identified and recorded; production POST builder remains incomplete/fail-closed. No model or betting-policy change.**
+Current status: **important machine-readable source lineage identified and recorded; production POST builder remains incomplete/fail-closed. No model or betting-policy change.**
