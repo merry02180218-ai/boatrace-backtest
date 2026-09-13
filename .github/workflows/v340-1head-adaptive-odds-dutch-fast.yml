@@ -1,0 +1,56 @@
+name: v340 1-head adaptive odds Dutch fast
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/v340-1head-adaptive-odds-dutch-fast.yml'
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    permissions:
+      actions: read
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v338-julaug-prepare
+          path: .
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: merry02180218-ai/boatrace-backtest
+          run-id: 34785538304
+      - uses: actions/download-artifact@v4
+        with:
+          name: v338-julaug-second
+          path: .
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: merry02180218-ai/boatrace-backtest
+          run-id: 34785538304
+      - uses: actions/download-artifact@v4
+        with:
+          name: v338-julaug-base-third
+          path: .
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: merry02180218-ai/boatrace-backtest
+          run-id: 34785538304
+      - uses: actions/download-artifact@v4
+        with:
+          name: v338-julaug-third
+          path: .
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: merry02180218-ai/boatrace-backtest
+          run-id: 34785538304
+      - name: Run adaptive odds Dutch audit
+        run: python run_v340_1head_adaptive_odds_dutch.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v340-1head-adaptive-odds-dutch-fast
+          path: /tmp/v340/
