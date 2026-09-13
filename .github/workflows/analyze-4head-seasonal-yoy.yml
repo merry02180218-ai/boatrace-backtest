@@ -1,0 +1,28 @@
+name: analyze-4head-seasonal-yoy
+on:
+  push:
+    paths:
+      - analyze_4head_seasonal_yoy_20260914.py
+      - .github/workflows/analyze-4head-seasonal-yoy.yml
+jobs:
+  analyze:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml tabulate
+      - run: python -m py_compile analyze_4head_seasonal_yoy_20260914.py
+      - run: python analyze_4head_seasonal_yoy_20260914.py
+      - run: python -c "import json; a=json.load(open('audit_4head_seasonal_yoy_20260914.json')); assert a['target_outcomes_loaded'] is False; assert a['production_modified'] is False; assert a['source_2024_claimed'] is False; print('seasonal audit guard PASS')"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-seasonal-yoy
+          path: |
+            summary_4head_seasonal_yoy_20260914.md
+            analysis_4head_seasonal_yoy_monthly_20260914.csv
+            analysis_4head_seasonal_yoy_jumps_20260914.csv
+            analysis_4head_seasonal_yoy_coverage_20260914.csv
+            audit_4head_seasonal_yoy_20260914.json
