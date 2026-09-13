@@ -45,6 +45,16 @@
 - decision: **NO_ADOPTION_WAVE13**.
 - rejection reason: independent hurdle-EV agreement collapses coverage to 1–4 races and remains negative; fails the minimum 20R gate and ROI gate, so there is no production adoption case.
 
+## Wave 14 — conformal market/field selective gating — RUNNING
+- automatic restart condition was met: no new 3-head add-on commit/Run for more than 2 hours after Wave13 finalization.
+- new candidate-source family is **not** a prior-score threshold relaxation: choose one exact JPY10,000 Dutch ticket by deterministic pre-deadline market structure (`comp_alt` relative to ticket count), then apply a chronological positive-class conformal selective gate learned only from prior-month NO_BET outcomes.
+- script commit **`1857c5528e978ca4ed6e2e21d50ec8ce84839434`**: `research_v289_3head_addon_wave14_conformal_market.py`.
+- workflow commit **`8dc48dbcd428370a780bcc7a422ddc9d33f3512d`**: `.github/workflows/research-3head-v289-addon-wave14-conformal-market.yml`.
+- Actions Run **`34741605409`** is in progress.
+- intended artifact: **`v289-3head-addon-wave14-conformal-market`**.
+- policies compared: `market_density` and `market_efficiency`; conformal alpha 0.05/0.10/0.20/0.30.
+- immutable guards retained: v288 94R fixed, final NO_BET only, Feb-Aug prior-month-only walk-forward, Jul/Aug NON-PRISTINE, September outcomes forbidden, required-current missing => fail closed, overlap 0, exact 10,000-yen Dutch.
+
 ## What NOT to repeat
 - Wave1 threshold/coverage tweaks; TopN/odds changes alone; PRE-B; undersampled venue splits; ordered-pair unchanged; global role split; attack-role; motor/racer-role; linear head classifier; KNN analogs; reject-cause ranking unchanged; Wave12 direct joint settled-value regression unchanged; Wave13 hurdle/direct-value agreement unchanged.
 
@@ -56,8 +66,8 @@
 - exact 10,000-yen Dutch retained; production v288 workflow/model unchanged.
 
 ## Exact restart point
-1. Wave13 is final **NO_ADOPTION_WAVE13**; do not retune its consensus thresholds or reuse Waves1–13 as a threshold-relaxation exercise.
-2. If no new 3-head add-on branch commit/Run appears for >=2 hours, resume automatically with a genuinely different candidate-source family.
-3. Preferred next family: outcome-blind candidate generation from pre-deadline market/field structure or selective uncertainty/conformal gating that does not use September outcomes and is not merely a different cutoff on prior scores.
-4. Preserve v288 94R baseline, final-NO_BET-only scope, Feb-Aug prior-month-only walk-forward, Jul/Aug NON-PRISTINE, overlap 0, fail-closed guards, and exact 10,000-yen Dutch.
-5. Any next wave must persist add-on-only R/hit rate/ROI/profit/monthly/min-month/max-DD/overlap, combined v288+add-on, rejection reason, Run ID, artifact, commit SHA, and next restart point here.
+1. Inspect Actions Run `34741605409` first.
+2. If success: persist add-on-only BET count/hits/hit rate/ROI/profit/monthly/min-month/max-DD/overlap and v288+add-on combined metrics, artifact ID, result commit SHA, decision and rejection/adoption reason here.
+3. If failed/cancelled: inspect the failed job/log, fix only the technical/scientific defect without weakening immutable guards, rerun automatically, and record replacement Run ID.
+4. If Wave14 is NO_ADOPTION, do not retune conformal alpha or market-score cutoffs as a threshold-relaxation exercise; move to another genuinely distinct pre-deadline candidate-source family.
+5. Preserve v288 94R baseline, final-NO_BET-only scope, Feb-Aug prior-month-only walk-forward, Jul/Aug NON-PRISTINE, September outcomes unused, overlap 0, fail-closed guards, and exact 10,000-yen Dutch.
