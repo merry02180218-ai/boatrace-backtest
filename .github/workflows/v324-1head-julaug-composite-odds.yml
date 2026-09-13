@@ -1,0 +1,49 @@
+name: v324-1head-julaug-composite-odds
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v324_1head_julaug_composite_odds.py'
+      - '.github/workflows/v324-1head-julaug-composite-odds.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy requests
+      - name: Download frozen v321 Jul-Aug output
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/v321/score
+          gh run download 34750719803 -n v321-julaug-nonpristine -D /tmp/v321/score
+          ls -la /tmp/v321/score
+      - name: Normalize frozen v321 race output for v324
+        run: |
+          python - <<'PY'
+          import pandas as pd
+          p='/tmp/v321/score/analysis_v321_1head_julaug_nonpristine_validation_race.csv'
+          x=pd.read_csv(p)
+          parts=x['race_code'].astype(str).str.zfill(12)
+          x['date']=parts.str[:8]
+          x['place']=parts.str[8:10].astype(int)
+          x['race']=parts.str[10:12].astype(int)
+          ts=x['tickets'].str.split(';',expand=True)
+          x['ticket1']=ts[0]; x['ticket2']=ts[1]; x['ticket3']=ts[2]
+          x['exact3']=x['hit']
+          out='/tmp/v321/score/v321_1head_julaug_scored.csv'
+          x.to_csv(out,index=False)
+          print('normalized',len(x),int(x.exact3.sum()))
+          PY
+      - name: Run v324 Jul-Aug composite odds audit
+        run: python run_v324_1head_julaug_composite_odds.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v324-1head-julaug-composite-odds
+          path: /tmp/v324/*
