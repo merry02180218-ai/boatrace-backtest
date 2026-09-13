@@ -10,6 +10,7 @@ September outcomes remain unread. meet_* is forbidden. Month M trains only on < 
 """
 from datetime import date
 from pathlib import Path
+import gc
 import numpy as np
 import pandas as pd
 import analyze_v298_1head_threat_listwise_trifecta5 as v298
@@ -36,15 +37,11 @@ ALPHA=.70
 
 
 def build_head_selection():
-    # Absolute cutoff comes only from the original Feb-Jun development prediction file.
     dev=pd.read_csv(DEV_PRED,dtype={'race_code':str})
     if any(str(m).startswith(('2026-07','2026-08','2026-09')) for m in dev['test_month'].astype(str).unique()):
         raise RuntimeError('v321 DEV_PRED unexpectedly contains Jul/Aug/Sep')
     hcut=float(pd.to_numeric(dev.p_head,errors='coerce').quantile(Q))
 
-    # v294 is deliberately capped at Jun for pristine development. v321 is an explicit
-    # NON-PRISTINE stress check, so extend only the source horizon to Aug while retaining
-    # the same causal construction. Never extend into September.
     v300.setup_v298()
     old_end=v298.v294.END
     try:
@@ -73,32 +70,52 @@ def build_head_selection():
         z['opp_mass']=[masses.get(str(x).zfill(12),np.nan) for x in z.race_code]
         z['selected']=((z.p_head>=hcut)&(z.opp_mass>=OPP_MASS_CUT)).astype(int)
         out.append(z)
+        del tr,te
+        gc.collect()
     return pd.concat(out,ignore_index=True),hcut,d
 
 
 def build_opponent_probs(d):
-    # Reuse the audited v313 p3/p4 maps. They intentionally end with the development
-    # horizon, so Jul/Aug receive explicit unavailable=0 flags via add_headrisk; there is
-    # no future backfill. The PRE/prior table itself is extended causally above because
-    # the committed v313 table is intentionally capped at Jun.
     _,p3,p4=v312.load_cache()
-    d=d.copy(); d.race_code=d.race_code.astype(str).str.zfill(12)
-    drop=[c for c in d.columns if 'meet_' in str(c)]
-    if drop: d=d.drop(columns=drop)
+    if any('meet_' in str(c) for c in d.columns):
+        d=d.drop(columns=[c for c in d.columns if 'meet_' in str(c)]).copy()
     if any('meet_' in str(c) for c in d.columns): raise RuntimeError('v321 meet_* present after drop')
     have=set(d.month.astype(str).unique())
     missing=[m for m in TARGET_MONTHS if m not in have]
     if missing: raise RuntimeError(f'v321 extended PRE missing target months {missing}')
+
+    # Memory guard: opponent models only need symmetric b1..b6 candidate attributes
+    # plus result keys/labels. Drop the hundreds of head-only engineered columns before
+    # expanding to 5-row SECOND and 20-row THIRD long tables. This is a projection only;
+    # it changes no feature values and introduces no new information.
+    d=d.copy()
+    d['race_code']=d.race_code.astype(str).str.zfill(12)
     v300.setup_v298(); sufs=v298.suffixes(d)
     if any('meet_' in str(x) for x in sufs): raise RuntimeError('v321 forbidden meet suffix')
-    sl=v310.add_headrisk(v300.augment_second(v298.second_long(d,sufs)),p3,p4)
+    meta=['date','month','race_code','head_hit','actual_combo']
+    sym=[f'b{b}_{k}' for k in sufs for b in range(1,7) if f'b{b}_{k}' in d.columns]
+    slim=d[list(dict.fromkeys(meta+sym))].copy()
+    del d
+    gc.collect()
+
+    sl=v298.second_long(slim,sufs)
+    sl=v310.add_headrisk(v300.augment_second(sl),p3,p4)
     sx,_=v317.add_engineered(sl,'OUTER')
-    cl=v300.augment_third(v298.conditional_long(d,sufs))
-    p2={}; pc={}
+    del sl
+    gc.collect()
+    p2={}
     for tm in TARGET_MONTHS:
         p2[tm]=v311.p2_predict_explicit(sx,tm,1.0,None,{'START'})[0]
+    del sx
+    gc.collect()
+
+    cl=v300.augment_third(v298.conditional_long(slim,sufs))
+    pc={}
+    for tm in TARGET_MONTHS:
         pc[tm]=v318.pc_predict(cl,tm,.1,'DROP_START')[0]
-    return d,p2,pc
+    del cl
+    gc.collect()
+    return slim,p2,pc
 
 
 def main():
