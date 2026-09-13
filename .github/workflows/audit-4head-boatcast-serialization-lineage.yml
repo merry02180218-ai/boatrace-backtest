@@ -1,5 +1,6 @@
 name: audit-4head-boatcast-serialization-lineage
 
+# Registered separately before this trigger commit so GitHub evaluates it on push.
 on:
   push:
     paths:
