@@ -1,13 +1,13 @@
-name: research-3head-wave34g-motor-confirmation
+name: research-3head-wave34h-march-stability
 on:
   push:
     branches: [research/3head-v289-addon-expansion]
     paths:
-      - 'research_v289_3head_wave34g_motor_confirmation.py'
+      - 'research_v289_3head_wave34h_march_stability.py'
       - '.github/workflows/research-3head-wave34c-loss-filter.yml'
   workflow_dispatch:
 jobs:
-  wave34g:
+  wave34h:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -21,11 +21,11 @@ jobs:
         run: |
           gh run download 34754875342 --repo merry02180218-ai/boatrace-backtest --name 3head-wave21-allrace-source-build --dir source
           cp source/analysis_v289_3head_wave21_allrace_feature_settled.csv .
-      - run: python research_v289_3head_wave34g_motor_confirmation.py
+      - run: python research_v289_3head_wave34h_march_stability.py
       - uses: actions/upload-artifact@v4
         with:
-          name: 3head-wave34g-motor-confirmation
+          name: 3head-wave34h-march-stability
           path: |
-            analysis_v289_3head_wave34g_motor_confirmation.csv
-            research_v289_3head_wave34g_motor_confirmation.json
-            research_v289_3head_wave34g_motor_confirmation.md
+            analysis_v289_3head_wave34h_march_stability.csv
+            research_v289_3head_wave34h_march_stability.json
+            research_v289_3head_wave34h_march_stability.md
