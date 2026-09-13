@@ -58,7 +58,7 @@ Verifier source-mode commit `4fd65a5ed3d95f5a753f4f7beec8ea91faebb36c`.
 Decision: **ACCEPT strict source mode as production-green.**
 
 ## v283 six-boat current exhibition LIVE — ACCEPTED
-`build_4head_v283_current_exhibition_live.py`, commit `4f74e0bdd499ed5706917e4eb9e1f30031e422a1`.
+Initial builder `build_4head_v283_current_exhibition_live.py`, commit `4f74e0bdd499ed5706917e4eb9e1f30031e422a1`.
 
 It automatically constructs the six current v283 exhibition fields for every boat:
 - `cur_ex`
@@ -76,11 +76,34 @@ Result-blind source semantics:
 - existing `CORR` lane/frame corrections + `corrected_direct` rank semantics reused,
 - no result/payout/odds endpoint.
 
-Verifier `verify_4head_v283_current_exhibition_live.py`, commit `0008c63e78ea7e66a447074b2f79077f7b211f48`.
+Initial verifier `verify_4head_v283_current_exhibition_live.py`, commit `0008c63e78ea7e66a447074b2f79077f7b211f48`.
 Workflow commit `fcdc65bd50c0f0175772c570e491b519ad6d1894`.
-CI Run `34753369345`: **SUCCESS**.
+Initial CI Run `34753369345`: **SUCCESS**.
 
-Decision: **ACCEPT automatic `current_boats` construction.**
+### Frozen v90 ST-flat extension — ACCEPTED
+- builder extension commit `1b1237033ccb73dfb9f85e181ec53234826cc846`
+- verifier extension commit `747fd85a8e30ce728f42aff76d1036db3c8292db`
+- current exhibition schema now also emits exact v90 flat primitives for all six boats:
+  - `st_raw_bN`
+  - `st_raw_rank_bN`
+  - `st_corr_rank_bN`
+  - `st_raw_strength_bN`
+  - `st_corr_strength_bN`
+- CI Run `34753443662`: **SUCCESS**.
+
+Decision: **ACCEPT automatic `current_boats` + frozen v90 `st_flat` construction.**
+
+## v93 opponent primitives LIVE — ACCEPTED
+`build_4head_v93_primitives_live.py`, commit `d9baa169d6f72f65ab80fdb9a8597863d89c1969`.
+Verifier commit `9695ac3d231e90e0c56099818e307640077be09d`.
+Workflow commit `e831c7f12621bb7ef900ae888a072b890c3a69b3`.
+
+- builds exact historical v93 opponent primitives from current result-blind `race_cards.csv` + `waku10.csv` + accepted current exhibition/ST-flat object.
+- outputs `opp_score_bN_v93` and exact grade/national/local/motor/waku/nst/direct parts for boats 1,2,3,5,6.
+- odds/results/payouts are not read; v96 remains prohibited.
+- CI Run `34753470120`: **SUCCESS**.
+
+Decision: **ACCEPT v93 primitive live builder.**
 
 ## Verified raw/current building blocks
 - `fetch_4head_v291_pre_inputs_live.py`: current result-blind `race_cards.csv` + `waku10.csv` for all active venues/races.
@@ -88,23 +111,23 @@ Decision: **ACCEPT automatic `current_boats` construction.**
 - `analyze_v93_4corner_second_third.py`: exact opponent v93 scoring primitives/formula.
 - `analyze_v90_exhibition_st_10month.py`: exact prior-only ST lane-bias + raw/corrected rank/strength semantics.
 - `analyze_v264_4head_feature_exhaustive.add_rel()`: exact 4-minus-opponent relative formulas.
-- `analyze_v221_3head_scenario_pair.py`: defines `bN_pl_*` by freezing history before current-day results. Do not blindly ingest Sep outcomes while Sep outcome-blind constraints are in force.
+- `analyze_v221_3head_scenario_pair.py`: defines `bN_pl_*` by freezing history before current-day results.
 
 ## Exact remaining AUTO LIVE gap
-The strict source -> frozen models -> final market/Dutch runner path is green, and `current_boats` is now automatic.
+The strict source -> frozen models -> final market/Dutch runner path is green. `current_boats`, frozen v90 `st_flat`, and v93 opponent primitives are now automatic and CI-green.
 
 Remaining upstream construction:
-- v93 opponent values `opp_{grade,national,local,motor,nst}_bN_v93`
-- flat ST values `st_{raw,raw_strength,raw_rank,corr_strength,corr_rank}_bN` wired into the source object (formula is now identified)
-- frozen player-history values `bN_pl_*`
-- ENV_ENTRY primitives not already supplied by PRE/POST.
+- frozen causal player-history values `bN_pl_*`
+- ENV_ENTRY primitives not already supplied by PRE/POST
+- one upstream command that merges current PRE + accepted exhibition/ST + v93 + player history + ENV_ENTRY inputs into the strict `--source-json` object
+- full raw-source -> official pre-deadline odds -> VARN -> exact 10k Dutch dry/live validation.
 
 ## Exact next action
-1. Implement v90 ST flat primitive builder and v93 opponent primitive builder from current `race_cards/waku10` + current exhibition, reusing exact historical formulas.
-2. Resolve `bN_pl_*` production source without violating Sep outcome-blind rules; use frozen/precomputed causal history or an allowed pre-race source, not ad-hoc Sep outcome tuning.
-3. Build one upstream command emitting `--source-json` directly from current PRE + allowed pre-race exhibition/history sources.
-4. Add fixture/parity + fail-closed CI.
-5. Run full raw-source -> strict source -> models -> official pre-deadline odds -> VARN -> exact 10k Dutch and record all Run IDs/commits here.
+1. Implement a production-safe causal `bN_pl_*` builder preserving v221 semantics: state frozen before target race day; prior outcomes may only update causal feature history, never Sep model fitting/calibration/threshold/rescue.
+2. Add explicit audit metadata proving history cutoff `< target_date`, no same-day outcome use, no odds/payout use, and no tuning path.
+3. Wire accepted `st_flat` + v93 + `current_boats` + player history into one strict source-object assembler.
+4. Resolve remaining ENV_ENTRY primitives from existing PRE/POST/current pre-race sources without inventing semantics.
+5. Add fixture/parity + fail-closed CI, then run full chain and record all Run IDs/commits here.
 
 ## Work session started — 2026-09-13 JST
 Status: **IN PROGRESS**
@@ -116,3 +139,8 @@ Before-work plan for this session:
 4. Then implement the next missing causal upstream block, prioritizing `bN_pl_*` production-safe construction and wiring of generated ST/v93/current exhibition into one strict source object.
 5. Add or extend fail-closed/parity CI for the new block.
 6. At session end, replace this status with **COMPLETED** or **BLOCKED**, and record exact commit SHAs, Run IDs, decisions, remaining gap, and the next resume point.
+
+### Progress checkpoint
+- v283 ST-flat extension verified green: Run `34753443662`.
+- v93 primitive builder verified green: Run `34753470120`.
+- Next active implementation: causal `bN_pl_*` production builder.
