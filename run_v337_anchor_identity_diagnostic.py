@@ -16,7 +16,13 @@ def main():
     y['race_code']=y.race_code.astype(str).str.zfill(12)
     selected=[]; monthly=[]
     for m in MONTHS:
-        tr=y[y.month.ne(m)].copy(); te=y[y.month.eq(m)].copy()
+        # Match adopted v332/v336 semantics exactly:
+        # Feb-Jul = leave-one-out within Feb-Jul only; Aug = train on all Feb-Jul.
+        if m==v332.AUG:
+            tr=y[y.month.isin(v332.MONTHS_DEV)].copy()
+        else:
+            tr=y[y.month.isin([x for x in v332.MONTHS_DEV if x!=m])].copy()
+        te=y[y.month.eq(m)].copy()
         p,pars=v332.fit_apply(tr,te,CFG)
         p=p.copy(); p['eval_month']=m; selected.append(p)
         monthly.append({'month':m,**met(p),'threshold':pars.get('threshold')})
