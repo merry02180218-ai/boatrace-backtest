@@ -17,20 +17,30 @@
 ## Wave34 family
 - Wave34: Apr-Jun ROI 84.243%.
 - Wave34b: Apr-Jun ROI 85.449%.
-- Wave34c Run 34769751846: Apr-Jun 381R / 54 hits / ROI 86.794% / profit -503,130 yen; Apr 95.734 / May 74.626 / Jun 89.808; combined v288 ROI 103.767% / +178,940 yen. NO_ADOPTION.
+- Wave34c Run 34769751846: Apr-Jun 381R / 54 hits / ROI 86.794% / profit -503,130 yen; Apr 95.734 / May 74.626 / Jun 89.808; combined v288 ROI 103.767% / +178,940 yen. NO_ADOPTION and current best Wave34-family pristine ROI.
 
-## Wave34d initial run — INVALID FOR INTENDED GROUP TEST
-- True Wave34d Run 34770530725 succeeded technically; artifact 10322391192.
-- Output: Apr-Jun 716R / 91 hits / ROI 81.303% / -1,338,740 yen; Apr 91.856 / May 67.655 / Jun 85.088; shadow 77.497%; combined 91.893%; overlap 0; NO_ADOPTION.
-- However group diagnostics showed {'global':63,'nonslot':63}. The grouping regex failed to recognize the actual feature names, so boat-specific decomposition was not performed. Do not treat this as the intended Wave34d comparison.
-- Actual 63 feature names from build_static are structured as: b3_<metric> (9), b3_minus_mean_<metric> (9), b3_minus_b1/b2_<metric> (18), b3_minus_b4/b5/b6_<metric> (27).
+## Wave34d corrected grouped prototypes — FINAL
+- Run 34770655705 success; artifact 10321937503.
+- Correct groups: global 63 / boat3_abs 9 / mean_advantage 9 / inner12 18 / outer456 27.
+- March selected inner12 / consensus1 / top5: 135R / ROI 153.116%.
+- Apr-Jun pristine: 764R / 118 hits / ROI 71.717% / profit -2,160,850 yen.
+- Monthly: Apr 203R / ROI 76.787% / -471,220; May 284R / ROI 64.063% / -1,020,600; Jun 277R / ROI 75.847% / -669,030.
+- min month 64.063%; red months 3; max DD 2,288,930 yen.
+- Jul-Aug NON-PRISTINE shadow ROI 67.714%.
+- combined v288 + holdout ROI 82.765% / profit -1,478,780 yen. overlap 0.
+- Decision NO_ADOPTION. Group-specific March signal did not generalize; do not continue group decomposition.
 
-## Wave34d retry — NEXT
-- Fix grouping deterministically using the actual prefixes above: boat3_abs=9, mean_advantage=9, inner12=18, outer456=27, plus global=63.
-- Re-run identical Feb-train / March-select / Apr-Jun pristine / Jul-Aug shadow protocol. No Apr-Jun tuning.
-- If the corrected grouped prototype test improves Wave34c 86.794%, continue this family; otherwise record NO_ADOPTION and move to the next distinct prototype refinement.
+## Wave34e — NEXT normalized prototype margin
+- User requested continued research.
+- Return to Wave34b/34c global 63-feature bootstrap prototype core; do not carry Wave34d group gate.
+- Test scale-normalized prototype margin: (d_neg - d_pos) / (d_neg + d_pos + eps), retaining bootstrap mean/std/agreement. Compare against raw-margin baseline inside March only.
+- Keep the conditional exact-order logistic model from Wave34b.
+- Feb trains. March alone selects a small predeclared gate using normalized mean, agreement and optionally maximum bootstrap std; 30..300 March race floor. Apr-Jun untouched pristine. Jul-Aug frozen shadow only.
+- Goal: improve Wave34c Apr-Jun ROI 86.794% and May 74.626% while preserving non-trivial race count.
+- Same exact-v288-94 exclusion, 63 static features, no September, closing odds staking-only, JPY10k Dutch, overlap 0.
 
 ## Exact restart point
-1. Patch research_v289_3head_wave34d_group_prototypes.py grouping only.
-2. Trigger the existing Wave34d runner and inspect result automatically.
-3. Record final corrected Wave34d metrics and update handoff.
+1. Implement Wave34e normalized-margin prototype stability research.
+2. Trigger existing Wave34d workflow path as runner if a new workflow cannot be created.
+3. If failed, fix automatically without weakening guards.
+4. On success record R/hits/ROI/profit/monthly/min month/red months/max DD/overlap/combined and compare Wave34c vs Wave34e.
