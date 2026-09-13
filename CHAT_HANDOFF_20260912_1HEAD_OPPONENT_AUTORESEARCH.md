@@ -63,7 +63,31 @@ Fix commit **`46d3a398679bacf57cc5325d4e817041d452e712`**:
 - build Jul and Aug folds separately and release each fold before the next;
 - no threshold/model/ticket-policy tuning and no change to frozen v318 DROP_START configuration.
 
-Restarted v321 run: **`34750719803`**, head SHA `46d3a398679bacf57cc5325d4e817041d452e712`; at verification it was **queued**.
+### v321 completed result
+Run **`34750719803`** completed all research computation successfully:
+- `prepare`: success
+- `second`: success
+- `base-third`: success
+- `third`: success
+- `score`: scoring and artifact upload success
+
+The only workflow failure was the final repository push: another main commit landed after checkout, so the generated-results commit was rejected as **non-fast-forward**. This was not a model/research failure.
+
+Recovered the successful result artifact and committed it to latest main manually:
+- `analysis_v321_1head_julaug_nonpristine_validation_race.csv`
+- `analysis_v321_1head_julaug_nonpristine_validation_monthly.csv`
+- `summary_v321_1head_julaug_nonpristine_validation.md`
+
+NON-PRISTINE reference result:
+- Jul+Aug selected R: **55**
+- head hits: **45/55 = 81.82%**
+- exact3: **21/55 = 38.18%**
+- July: R 13, head 11/13 = 84.62%, exact3 3/13 = 23.08%
+- August: R 42, head 34/42 = 80.95%, exact3 18/42 = 42.86%
+
+These metrics are **reference-only** and cannot promote/tune the model.
+
+Workflow push hardening commit **`2376aa48ea9ac414ea27eae412dcba1b5a2143fc`** adds `git pull --rebase origin main` before pushing generated outputs so concurrent main updates no longer cause the same non-fast-forward failure.
 
 ### Current staged design
 1. **prepare**: build Jul/Aug causal PRE/head universe, enforce September absence, remove `meet_*`, project to exact head inputs + symmetric opponent columns.
@@ -81,4 +105,4 @@ Invariant notes:
 - No Jul/Aug tuning of thresholds, features, alpha, or ticket strategy is allowed.
 
 ## Self-continuing rule
-A failed/flat experiment is diagnostic evidence, not a stopping condition. If execution stops and a leak-safe technical continuation is clear, implement/restart it and update this file. For any new workflow/restart, verify an actual Actions run ID and status. If v321 completes, record its Jul/Aug metrics as NON-PRISTINE reference only; do not start another development micro-tune unless a new causal hypothesis is explicitly defined.
+A failed/flat experiment is diagnostic evidence, not a stopping condition. If execution stops and a leak-safe technical continuation is clear, implement/restart it and update this file. For any new workflow/restart, verify an actual Actions run ID and status. v321 is now complete. Do not start another development micro-tune from Jul/Aug or reused Feb-Jun outcomes unless a genuinely new causal hypothesis is explicitly defined; September outcomes remain unread.
