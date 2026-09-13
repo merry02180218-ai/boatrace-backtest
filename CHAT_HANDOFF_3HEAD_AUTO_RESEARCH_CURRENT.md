@@ -2,51 +2,35 @@
 
 ## Policy
 - Branch research/3head-v289-addon-expansion; newest GitHub state wins.
-- Fixed v288 baseline: 94R / 52 hits / ROI 172.560638%.
-- FINAL scope: Wave20 full six-boat population Feb 1-Aug 31 2026; exclude exact v288 operational 94R only.
-- Prediction uses pre-deadline card information only. Settlement/closing odds evaluation/staking only.
-- JPY10,000 per selected race, Dutch; v288 overlap must be zero.
+- Fixed v288 baseline 94R / 52 hits / ROI 172.560638%.
+- Scope Feb-Aug 2026 full six-boat population; exclude exact v288 94R.
+- Pre-deadline features only. Settlement/closing odds eval/staking only.
+- JPY10,000 per selected race, Dutch. Jul/Aug NON-PRISTINE. September forbidden.
 
 ## Wave36 benchmark
-- Run 34780059085; shrinkage-LDA head gate + conditional logistic Top5.
-- Apr-Jun 391R / 87 hits / ROI 114.913% / +583,090 yen.
-- Apr 175.280%, May 103.005%, Jun 70.290%.
+- Run 34780059085: Apr-Jun 391R /87 hits / ROI114.913% / +583,090.
 
-## Wave36X extended learning — COMPLETE
-- Run 34784017004 success; expanding Apr-Aug 718R / 166 hits / ROI 103.145% / +225,820 yen.
-- Monthly ROI Apr 175.280 / May 103.005 / Jun 70.290 / Jul 77.896 / Aug 99.025.
+## Wave36S — RESEARCH_CANDIDATE
+- Run 34785370650; artifact 10326411657.
+- Apr-Jun: 358R /81 hits / ROI116.938% / +606,380 / head rate41.341% / conversion54.730% / maxDD625,060.
+- Monthly ROI: Apr175.280 / May99.502 / Jun73.368 / Jul86.716 / Aug107.155.
+- Jul-Aug: 272R /72 hits / ROI97.386% / -71,090. v288 overlap0.
 
-## Wave36D temporal diagnosis — COMPLETE
-- Run 34784246428 success; artifact 10325977322.
-- June: head rate 37.60%, Top5 conversion 44.68%, ROI 70.29% — both head and order quality weakened.
-- July: head rate 38.31%, conversion 57.63%, ROI 77.90% — head calibration weak plus low payout mix.
-- High raw p3 was not reliably safer in Jun/Jul; p3>0.60 head rate was only 16.7% / 14.3%.
-- Feature drift was strongest in relative ST and racer-strength fields.
+## Wave36S-A audit — COMPLETE
+- Fixed audit Run 34785891378 success; Job 103801181659; artifact 10326059528.
+- Wave36S is always a stricter subset of raw Wave36: adds 0 races.
+- Removed subsets: May 20R ROI124.9% +49,800; Jun 13R ROI43.777% -73,090; Jul 24R ROI30.121% -167,710; Aug 31R ROI61.784% -118,470.
+- Apr-Jun payout concentration: removing largest win leaves ROI100.109%; removing top3 leaves86.201%; removing top5 leaves80.221%.
+- Apr-Jun first half: 179R /49 hits / ROI164.355% / +1,151,960 / head45.810% / conversion59.756%.
+- Apr-Jun second half: 179R /32 hits / ROI69.521% / -545,580 / head36.872% / conversion48.485%.
+- Conclusion: aggregate edge is tail-dependent and late-pristine performance collapses. No production adoption yet.
 
-## Wave36C one-month-lag p3 recalibration — COMPLETE / NO_ADOPTION
-- Run 34784940922 success; artifact 10325838776.
-- Apr-Jun recalibrated: 341R / 77 hits / ROI 111.111% / +378,890 yen.
-- Jul-Aug: ROI 95.364% / -126,090 yen.
-- One-month calibration helped Jun-Aug but damaged May badly.
+## Wave36S-B descriptive diagnosis — STARTING
+- Preserve exact Wave36S selections/model; diagnostic only.
+- Compare early vs late Apr-Jun on the 63 static pre-deadline features, raw/calibrated p3, head rate, Top5 conversion, payout/return distribution.
+- Rank standardized feature drift; summarize by ST, racer strength, motor, boat and relative-gap families.
+- Diagnose whether late decline is mainly head-selection, order-conversion, payout compression, or combination.
+- Do not tune any threshold/filter from Apr-Jun outcomes. Any mitigation must later be designed from Feb/March evidence.
 
-## Wave36S smoother p3 calibration — COMPLETE / RESEARCH_CANDIDATE
-- Run 34785370650 success; artifact 10326411657; workflow research-3head-wave36s-smooth-calibration.
-- Method: 3-month-cap pooled prior-month OOS Platt calibration. April uses Mar only; May uses Mar+Apr; June uses Mar+Apr+May; July uses Apr+May+Jun; August uses May+Jun+Jul. Threshold remains March-anchored: raw 0.365448 -> calibrated 0.391729. No current-month outcomes used for own calibration.
-- Rolling pooled calibration Apr-Jun pristine: 358R / 81 hits / ROI 116.938% / +606,380 yen / head hits 148 / head rate 41.341% / conversion 54.730% / max DD 625,060 yen.
-- Raw Wave36 Apr-Jun comparator: 391R / 87 hits / ROI 114.913% / +583,090 yen / head rate 40.921% / conversion 54.375% / max DD 717,360 yen.
-- Rolling monthly ROI: Apr 175.280%, May 99.502%, Jun 73.368%, Jul NON-PRISTINE 86.716%, Aug NON-PRISTINE 107.155%.
-- Rolling Jul-Aug robustness: 272R / 72 hits / ROI 97.386% / -71,090 yen / max DD 363,720 yen.
-- Exact v288 overlap=0.
-
-## Wave36S-A robustness / concentration audit — STARTING
-- Before-work declaration: do not alter Wave36S selection, threshold, features, orderer, Dutch staking, or temporal chronology.
-- Audit selected-race deltas Wave36S vs raw Wave36 by month Apr-Aug: kept/removed/added counts, head hits, ticket hits, stake/payout/profit and ROI of delta subsets.
-- Audit payout concentration on Wave36S: top 1 / top 3 / top 5 winning-race payout share, ROI with largest 1/3/5 winning payouts removed, median winning payout, and month-level concentration.
-- Audit stability: first-half vs second-half within Apr-Jun and Jul-Aug diagnostic, selected count/head rate/conversion/ROI/profit/max DD.
-- Reconfirm no current-month outcomes enter calibration, no settlement/odds prediction features, and exact v288 overlap=0.
-- No threshold/filter optimization in this audit. Apr-Jun only may support adoption; Jul/Aug remain NON-PRISTINE diagnostic. September forbidden.
-
-## Exact restart point
-1. Implement and run Wave36S-A audit from existing Wave36S outputs/code without modifying prediction rules.
-2. If technical failure occurs, fix only implementation plumbing, not model criteria.
-3. Write exact Run/artifact/findings here before reporting or making an adoption decision.
+## Restart
+Implement Wave36S-B diagnosis, run CI, record exact results, then define the safest pre-April-designed next experiment.
