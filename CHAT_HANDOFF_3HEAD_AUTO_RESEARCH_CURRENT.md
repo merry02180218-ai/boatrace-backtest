@@ -15,32 +15,22 @@
 - Apr-Jun 358R /81 hits / ROI116.938% / +606,380 / head41.341% / conversion54.730% / maxDD625,060.
 - Monthly ROI Apr175.280 / May99.502 / Jun73.368 / Jul86.716 / Aug107.155.
 
-## Wave36S-A audit — COMPLETE
-- Run 34785891378 success; artifact 10326059528.
-- Wave36S adds no races vs raw Wave36; it only removes races.
-- Removed subsets: May20R ROI124.9% +49,800; Jun13R ROI43.777% -73,090; Jul24R ROI30.121% -167,710; Aug31R ROI61.784% -118,470.
-- Apr-Jun removing largest win leaves ROI100.109%; removing top3 leaves86.201%.
-- Apr-Jun halves: early179R ROI164.355% / +1,151,960 / head45.810% / conversion59.756%; late179R ROI69.521% / -545,580 / head36.872% / conversion48.485%.
+## Wave36S-A/B audit + diagnosis — COMPLETE
+- Wave36S aggregate edge is concentrated early; Apr-Jun halves early ROI164.355% vs late69.521%.
+- Wave36S-B Run 34786166134: late degradation combines head-selection and order-conversion failure. Racer-strength gaps became more favorable while motor signal weakened; p3 did not warn adequately.
 
-## Wave36S-B descriptive diagnosis — COMPLETE
-- Run 34786166134 success; Job 103801930864; artifact 10325708932; artifact SHA256 c7b39093ee91ae3ae73157b9fefe11405753e5763401952531c8621b617e5336.
-- Rules unchanged; 63 features; v288 overlap0; September forbidden.
-- Early vs late Apr-Jun confirms combined degradation: head rate 45.81% -> 36.87%, Top5 conversion 59.76% -> 48.48%, median positive return 38,160 -> 35,275 yen; ROI 164.36% -> 69.52%.
-- Mean raw p3 barely moved: 0.45439 early vs 0.45291 late. Mean calibrated p3 only modestly fell: 0.52505 -> 0.50897. Therefore score level itself did not warn adequately about the regime change.
-- Largest feature drifts were racer-strength relative gaps becoming more favorable to boat3 while realized performance worsened: b3-minus-mean national 2-rate effect +0.442 SD; national 3-rate +0.399; b3-vs4 national 3-rate +0.387; b3-vs2 local 2-rate +0.384; b3-vs2 national 2-rate +0.364.
-- Motor signal moved the opposite way: b3-vs6 motor 2-rate -0.339 SD; b3 own motor 2-rate -0.324; b3-vs6 motor 3-rate -0.284; b3 own motor 3-rate -0.276. ST drift smaller; top ST effect b3-vs2 national avg ST -0.284 SD. Boat-number feature drift small.
-- Family mean absolute drift: racer_strength 0.228 SD, motor 0.216, ST 0.114, boat 0.040.
-- Raw p3 bands deteriorated broadly. Especially late p3 (0.5,0.6] = 27R / head33.33% / conversion22.22% / ROI32.05%, versus early 23R / head47.83% / conversion72.73% / ROI183.5%. Late p3>0.6 only 9R / head33.33% / ROI93.13%.
-- Diagnosis: collapse is not just payout compression. It is primarily a combination of head-selection miscalibration and order-conversion failure, with some payout softening. The model increasingly over-trusted racer-strength advantages while motor quality weakened; p3 did not reflect that temporal mismatch.
-- No production adoption. Do not derive a cutoff from Apr-Jun.
+## Wave36S-C pre-April motor robustness modifier — COMPLETE / RESEARCH_CANDIDATE
+- Run 34786354062 success; Job 103802431273; artifact 10326661910; artifact SHA256 cd4c3a54cc33c6f2447b2324bc8d5238e9df5a7946f0a11e8347e9da43ae5dc7.
+- Rules: exact Wave36S 63 static features and Top5 architecture; Feb-only standardization for composites; March OOS chooses modifier by head rate only, never payout/ROI. September forbidden; exact v288 overlap0.
+- Chosen pre-April rule: racer composite >= Feb q50 (-0.009837) AND motor composite <= Feb q50 (-0.024125) => subtract 0.08 from calibrated p3. March retained79R with head rate43.038%.
+- Apr-Jun pristine: 305R /74 ticket hits / stake3,050,000 / payout3,910,660 / profit +860,660 / ROI128.218% / head129 / head rate42.295% / conversion57.364% / maxDD481,120.
+- Wave36S comparator Apr-Jun: 358R /81 hits / ROI116.938% / +606,380 / head41.341% / conversion54.730% / maxDD625,060. Raw Wave36 benchmark:391R /87 hits / ROI114.913% / +583,090.
+- Monthly Wave36S-C: Apr107R/31 hits/ROI190.737%/+970,890/head43.925%/conversion65.957%; May108R/27/ROI112.675%/+136,890/head41.667%/conversion60.0%; Jun90R/16/ROI72.542%/-247,120/head41.111%/conversion43.243%.
+- Pristine robustness: aggregate ROI +11.280 points vs Wave36S; profit +254,280 yen; maxDD improves by143,940 yen; head rate +0.954 points; conversion +2.635 points. May becomes clearly profitable, but June remains weak and is the only red pristine month; minimum month72.542%.
+- Jul-Aug NON-PRISTINE:230R/60 hits/ROI94.628%/-123,550/head44.783%/conversion58.252%/maxDD454,990. This is worse than Wave36S Jul-Aug ROI97.386%/-71,090, so shadow robustness is mixed rather than universally improved.
+- Decision: keep as RESEARCH_CANDIDATE, not production adoption. The pre-April motor mismatch penalty materially improves pristine aggregate and drawdown without leakage, but June still fails and Jul/Aug shadow does not improve.
 
-## Wave36S-C pre-April motor robustness modifier — STARTING
-- Preserve Wave36S 63 static pre-deadline features, shrinkage-LDA head model, pooled rolling calibration, conditional-logit Top5, expanding chronology, JPY10,000 Dutch, exact v288 exclusion.
-- Design/freeze the modifier using Feb/March evidence only. Apr-Jun outcomes/ROI must not choose its threshold or strength.
-- Predeclared idea: construct racer-strength advantage and motor-strength advantage composites from existing static boat3 relative-gap features; penalize head confidence only in the mismatch regime where racer advantage is strong but motor advantage is weak.
-- Candidate modifier settings may be compared only on March OOS head quality/stability; monetary ROI is not used to choose the rule. Freeze one setting before Apr-Jun evaluation.
-- Evaluate frozen rule on Apr-Jun pristine and Jul/Aug NON-PRISTINE. Report selected R, head hits/rate, Top5 conversion, ROI/profit, monthly ROI, min month, red months, max DD, exact v288 overlap, and comparison with Wave36S/raw Wave36.
-- No September data. No settlement or closing-odds feature enters prediction.
-
-## Restart
-Implement Wave36S-C, run CI, record exact Run/artifact/results here, then decide whether the pre-April motor robustness modifier improves pristine robustness without sacrificing aggregate edge.
+## Exact restart point
+1. Preserve Wave36S-C frozen rule as a candidate; do not tune it on Apr-Aug.
+2. Next experiment should target order-conversion robustness, because June Wave36S-C head rate recovers to41.11% but conversion remains only43.24%.
+3. Design any orderer robustness change from Feb/March only, then freeze and evaluate Apr-Jun pristine; Jul/Aug remain NON-PRISTINE diagnostics.
