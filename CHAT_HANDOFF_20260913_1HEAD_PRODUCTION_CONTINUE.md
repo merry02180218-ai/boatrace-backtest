@@ -75,47 +75,79 @@ Conclusion: boat1-only exhibition gating failed. Jul/Aug was not evaluated. v325
 
 Purpose: evaluate same-race exhibition quality of the actual SECOND/THIRD boats covered by the frozen three v320 tickets versus uncovered opponents.
 
-Already completed before this chat:
-- `ee2ca7b155b9a2e1d4559c4e98210bc6cc5d9b55` — `run_v326_1head_ticketaware_exhibition.py`
-- ticket identities remain frozen; per-boat features use result-blind tkz/stt/original snapshots and prior-only ST bias.
-- chronology: Feb-Apr discovery -> May validation/freeze -> June forward; Jul/Aug unread unless June supports frozen candidate.
+Implementation/workflow:
+- `ee2ca7b155b9a2e1d4559c4e98210bc6cc5d9b55` — initial `run_v326_1head_ticketaware_exhibition.py`
+- `64433735827c63971badaff7be2652c8a25586e2` — `.github/workflows/v326-1head-ticketaware-exhibition.yml`
 
-This chat reconciled a stale handoff that incorrectly said v325 had not started. Latest GitHub proved v325 was complete and v326 code already existed. A failed create attempt for v325 returned GitHub 422 and did not overwrite code.
+First run:
+- Run **34766023220**, job 103747013697 — FAILED
+- failure: `KeyError: 6` in ticket-aware margin calculation because a race-level source row could exist while a specific boat raw metric was missing.
+- failure was recorded before fix in commit `27655a5830841815ac38bcf02723419996713d6f`.
 
-Workflow created this chat:
-- **64433735827c63971badaff7be2652c8a25586e2** — `.github/workflows/v326-1head-ticketaware-exhibition.yml`
+Per-boat strict completeness correction:
+- commit **`bfeba1b91f5a2b7314ad0de819c81e0c7d934df3`**
+- tkz exhibition time, ST, original turn/straight were audited per boat 1..6.
+- missing required all-six metric made the race fail closed rather than creating a neutral rank.
 
-## v326 first Actions run — FAILED; recorded BEFORE code fix
-- Run **34766023220**
-- job **103747013697**
-- workflow setup/dependencies succeeded.
-- research step failed in `feature_row -> margin_mean` with **`KeyError: 6`**.
-- exact cause: `corrected_direct()` rank dictionaries can omit an individual boat when that boat's raw tkz/stt value is missing, even though the race-level source row exists. v326 assumed all boats 1..6 were present once `has_tkz/has_stt/has_orig` were true.
-- no research output/artifact was produced.
-- no Jul/Aug or September outcome was read by the failing script.
+Corrected run:
+- Actions Run **34766151983** — SUCCESS
+- job **103747359375**
+- artifact `v326-1head-ticketaware-exhibition`, ID **10321086346**
+- artifact SHA256 `7593d5536cc616cea543dd279e7b869f475574efc7cbab2624f66a4310f55b65`
 
-### Exact fix about to be done
-1. Patch v326 to require per-boat raw metric completeness before calling ticket-aware margin functions, not just race-row presence.
-2. For tkz require parseable exhibition time for boats 1..6; for stt require parseable start exhibition for boats 1..6.
-3. For original exhibition require the actual per-boat turn and straight measurements used by v326 for boats 1..6; do not accept `corrected_direct` neutral 0.5 defaults as evidence.
-4. Mark any race failing these requirements as `source_complete=0` and automatic SKIP; never fill missing boat ranks.
-5. Re-run the same frozen search/chronology without changing candidate definitions based on this failure.
-6. Inspect 345/139/290 reconciliation, source coverage, May freeze, June PASS/SKIP.
-7. Jul/Aug remains unread unless the corrected June forward result supports the frozen candidate.
+Corrected-run reconciliation/coverage:
+- frozen baseline: **345R / 139 exact3 / 290 head wins**
+- strict all-source complete: **237R**
+- model-ready: **237R**
+- raw all-six coverage: tkz 289 / stt 296 / original turn 299 / original straight 243 / original required(turn+straight) 243
+- monthly strict-source complete: Feb 31 / Mar 10 / Apr 40 / May 89 / Jun 67
 
-### Success criteria for corrected run
-- no KeyError/missing-boat fabrication.
-- 345/139/290 identity unchanged.
-- per-boat required-source completeness explicit and fail-closed.
+Result from strict-all-source run:
+- `FROZEN_CANDIDATE NONE`
+- `forward_supported=False`
+- Jul/Aug and September outcomes were not read.
+
+Useful near-misses from artifact candidate tables (diagnostic only, not promoted):
+- `covered_straight_weak_margin >= 0.2`: discovery 6/12=50.0%, May 8/13=61.54% — too few discovery/validation races for fixed freeze guardrails.
+- `covered_straight_weak_margin >= -0.2`: discovery 8/17=47.06%, May 11/21=52.38% — discovery too small/weak.
+- logit high-score rows reached strong discovery rates but did not meet retained-R chronology; e.g. one candidate had discovery 9/12=75% and May 8/16=50%, but discovery R was below the fixed minimum.
+- broader logit candidate with discovery 31/61=50.82% fell to May 21/52=40.38%.
+
+## IMPORTANT semantic audit after successful Run 34766151983 — recorded BEFORE next code fix
+
+The corrected run is safe but **overly strict for 1-D rules**: `rule_search()` currently requires `source_complete==1` for every one-dimensional feature. `source_complete` means tkz + ST + original turn + original straight all available for all six boats.
+
+This is stricter than the declared rule “missing the source REQUIRED BY THAT FEATURE => fail closed.” Example: `sec_st_mean_margin` only needs ST all-six, but current code also rejects a race because original straight is missing. This unnecessarily reduces the 1-D discovery/May sample and can turn the result into `NONE` for a data-availability reason unrelated to that feature.
+
+This is a source-semantics correction, **not performance retuning**. Do not change feature definitions, quantile grids, model C, freeze thresholds, retained-R guardrails, or chronological splits.
+
+### Exact work about to be done
+1. Add explicit feature-family readiness flags and make 1-D rules require only the actual raw source metrics they use:
+   - `sec_ex_mean_margin` -> `tkz_all6`
+   - `sec_st_mean_margin` -> `stt_all6`
+   - turn rules (`sec_turn_mean_margin`, `third_turn_mean_margin`, `covered_turn_weak_margin`) -> `orig_turn_all6`
+   - straight rules (`sec_straight_mean_margin`, `third_straight_mean_margin`, `covered_straight_weak_margin`) -> `orig_straight_all6`
+   - `third_orig_mean_margin` -> strict `orig_avg_all6` where every original metric contributing to average is present for all six boats
+   - `covered_balance_min` -> both original turn and straight all-six.
+2. Build partial feature rows safely: compute each feature group only when its raw required source family is complete; leave unavailable features NaN. Do not let `corrected_direct` neutral defaults qualify missing metrics.
+3. Keep logistic multi-feature `model_ready` strict: all MODEL_FEATURES present with their source families complete.
+4. Keep existing 1-D search quantiles `.10..90 step .10`, both directions, existing primary/fallback validation criteria, logit C=.15 and threshold grid, and candidate sorting unchanged.
+5. Rerun same Feb-Apr -> May freeze -> June forward chronology.
+6. Report corrected per-feature coverage, frozen candidate if any, and June PASS/SKIP. Jul/Aug remains unread unless a candidate is genuinely June-forward-supported.
+
+### Success criteria
+- 345/139/290 unchanged.
+- feature-specific fail-closed semantics exactly match actual required source(s).
+- no missing raw metric produces a usable derived feature.
 - ticket identities unchanged.
-- Feb-Apr -> May -> June chronology unchanged.
-- June PASS/SKIP exact3/head/retained R explicit.
-- no Jul/Aug unless forward-supported; no September outcomes.
+- search/freeze hyperparameters unchanged from the predeclared v326 implementation.
+- June PASS/SKIP exact3/head/retained R explicit if a candidate freezes.
+- no Jul/Aug unless forward-supported; no September outcome read.
 
 ### Failure fallback
-On another failure, record exact error and intended fix here before changing code again. If live-compatible per-boat original metrics cannot be safely established, stop v326 rather than substitute backfilled/post-race data.
+On another failure, append the exact error and intended fix here before changing code. If any original-exhibition derived feature cannot be given live-compatible all-six source semantics, exclude that feature safely rather than use neutral/backfilled values.
 
 ---
 
 # 5. Exact next resume point
-**Patch `run_v326_1head_ticketaware_exhibition.py` for per-boat raw metric completeness, then rerun v326. Do not rebuild v325.**
+**Patch v326 for feature-specific source readiness without changing search/freeze rules, then rerun v326.**
