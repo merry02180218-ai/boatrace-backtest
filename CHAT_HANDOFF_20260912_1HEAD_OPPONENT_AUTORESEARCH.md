@@ -72,6 +72,15 @@ Actions run **`34737004683`** completed successfully and committed `summary_v320
 - Jul/Aug were not evaluated as pristine and September outcomes remained unread.
 Decision: freeze **HYBRID alpha=.70** as the current development winner for ticket ordering, but treat the +2-hit gain as development evidence only, not prospective validation. Do not continue ticket-order micro-tuning without a new causal hypothesis.
 
+## v321 Jul/Aug NON-PRISTINE reference check — restarted after source-horizon failure
+This is a user-requested contamination-aware stress check only; it does **not** reopen the completed v311-v320 development branch and cannot promote a model.
+- Initial run **`34739967420`** failed with `RuntimeError: v321 no source rows for 2026-07` because the audited v294 PRE builder is intentionally capped at 2026-06-30.
+- Fix commit **`274864650cb8a8d5607217464b2e32a043de1772`** extends only the v321 PRE source horizon to **2026-08-31**, restores the v294 global bound immediately after source construction, and explicitly fails if September appears.
+- v313 p3/p4 maps remain unchanged; Jul/Aug p3/p4 are represented as unavailable + neutral sentinel, never future-backfilled.
+- `meet_*` columns are removed before opponent modeling; month M still trains strictly on `< M`.
+- Restart run **`34741655731`** was verified **in_progress** after the fix.
+- Jul/Aug remain **NON-PRISTINE/reference-only**; no thresholds, features, alpha, or ticket strategy may be tuned from these outcomes.
+
 ## Automatic branch sequence
 1. SECOND family/gating/role/pairwise/multiclass/error-feature research v311-v317 — completed; saturated.
 2. v318 conditional THIRD rebuild — completed, flat.
@@ -79,7 +88,8 @@ Decision: freeze **HYBRID alpha=.70** as the current development winner for tick
 4. Factorized v317+v318 retained as stronger ranking reference.
 5. v320 exactly-3-ticket policy optimization — completed; development best **HYBRID alpha=.70, 139/345=40.29%**.
 6. Current state is an intentional research boundary: freeze the development winner and wait for genuinely prospective evidence or an explicitly defined new causal hypothesis. Do not invent another micro-tuning branch from reused Feb-Jun outcomes.
-7. Suspicious large gain -> immediate leakage/causal audit.
+7. v321 is only a Jul/Aug NON-PRISTINE stress check and does not alter step 6.
+8. Suspicious large gain -> immediate leakage/causal audit.
 
 ## Required metrics
 - exact3 on full 345 denominator
