@@ -1,0 +1,24 @@
+name: v331 1-head component stability
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - run_v331_1head_component_stability.py
+      - .github/workflows/v331-1head-component-stability.yml
+jobs:
+  v331:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy scikit-learn
+      - name: Run v331 component stability diagnostic
+        run: python run_v331_1head_component_stability.py
+      - name: Show summary
+        run: cat /tmp/v331/summary_v331.md || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v331-1head-component-stability
+          path: /tmp/v331/
