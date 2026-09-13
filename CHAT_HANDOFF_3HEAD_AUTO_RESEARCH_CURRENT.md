@@ -14,64 +14,55 @@
 - Wave19b Run `34749707037` failed with `RuntimeError: missing payout`; superseded by Wave20.
 
 ## Wave20 — FINAL
-- Run `34749917116`: success.
-- Artifact `3head-wave20-allrace-universe`, ID `10314839371`.
-- Full available six-boat universe: **32,111R**.
-- Monthly: Feb 4100 / Mar 4607 / Apr 4244 / May 4832 / Jun 4488 / Jul 4920 / Aug 4920.
-- Missing race_cards date: 2026-06-17 only.
+- Run `34749917116`: success; artifact `3head-wave20-allrace-universe`, ID `10314839371`.
+- Full six-boat universe: **32,111R**. Monthly: Feb 4100 / Mar 4607 / Apr 4244 / May 4832 / Jun 4488 / Jul 4920 / Aug 4920. Missing race_cards date: 2026-06-17 only.
 - Decision: `ALLRACE_UNIVERSE_READY`.
 
 ## Wave21 — FINAL source audit
-- Successful recovery Run `34751314113`, head `10fabebaa444fdb6730b16287fe95051a6f3942b`.
-- Artifact `3head-wave21-allrace-source-build`, ID `10316605199`.
-- rows 32,111; feature columns 786; retry days 13.
-- result coverage 31,472/32,111 = 98.010%.
-- payout coverage 31,553/32,111 = 98.262%.
-- usable exact settlement 31,518/32,111 = 98.153%.
-- agreement when both exact sources exist 31,300/31,314 = 99.9553%; true mismatches 14.
-- actual 3-head wins in usable rows 4,040.
+- Run `34751314113`: success; artifact ID `10316605199`.
+- 32,111 rows; feature columns 786; usable exact settlement **31,518/32,111 = 98.153%**; both-source agreement **99.9553%**; true mismatches 14; actual 3-head wins 4,040.
 - Decision: `ALLRACE_SETTLED_SOURCE_READY`.
 
 ## Wave22 — FINAL historical closing trifecta odds
-- Run `34752573368`, workflow `research-3head-wave21-allrace-source-build`, head `195e14da883d291b633dbe4deaf0bd5a57298cd5`: success.
-- Artifact `3head-wave21-allrace-source-build`, ID `10316748754` (Wave21 source enriched with closing odds).
-- Source: Kyotei24 Odds Bank historical 3T pages explicitly labelled `締切時オッズ`.
-- odds available/full 120: **31,605/32,111 = 98.424%**.
-- Monthly coverage: Feb 4021/4100 98.07%; Mar 4523/4607 98.18%; Apr 4165/4244 98.14%; May 4731/4832 97.91%; Jun 4418/4488 98.44%; Jul 4877/4920 99.13%; Aug 4870/4920 98.98%.
-- Decision: `CLOSING_ODDS_SOURCE_READY`.
-- Closing odds remain excluded from prediction features; use only after selection for staking/post-hoc ROI.
+- Run `34752573368`: success; artifact ID `10316748754`.
+- Kyotei24 Odds Bank `締切時オッズ`; full 120 odds **31,605/32,111 = 98.424%**.
+- Monthly coverage: Feb 98.07%; Mar 98.18%; Apr 98.14%; May 97.91%; Jun 98.44%; Jul 99.13%; Aug 98.98%.
+- Decision: `CLOSING_ODDS_SOURCE_READY`. Odds remain staking/post-hoc only.
 
-## Wave23 — FINAL full-population tree walk-forward
-- Run `34754875342`, workflow `research-3head-wave21-allrace-source-build`, head `3d27fa6a1c215346693b92d30a07db10a5ced135`: success.
-- Artifact `3head-wave21-allrace-source-build`, ID `10317157868`.
-- Source after conservative old-v243 678R exclusion: **30,746R**; legacy v288 overlap **0**.
-- Features **77**; HistGradientBoosting; chosen threshold **0.40**.
+## Wave23 — FINAL tree walk-forward
+- Run `34754875342`: success; artifact ID `10317157868`.
+- Source after conservative old-v243 678R exclusion: **30,746R**; legacy overlap **0**; features 77; HistGradientBoosting; threshold 0.40.
 - Pristine Apr-Jun: **651R / 250 hits / stake 6,510,000 / payout 8,792,530 / ROI 135.062% / profit +2,282,530 yen**.
-- Pristine monthly:
-  - Apr: 232R / 130 hits / ROI 196.434% / profit +2,237,260 yen.
-  - May: 247R / 82 hits / ROI 131.256% / profit +772,030 yen.
-  - Jun: 172R / 38 hits / ROI 57.747% / profit -726,760 yen.
-- min-month ROI **57.747%**; red months **1**; max DD **1,184,940 yen**.
-- Jul-Aug NON-PRISTINE shadow: **296R / 80 hits / ROI 77.598% / profit -663,100 yen**.
-  - Jul: 143R / 34 hits / ROI 60.289% / profit -567,870 yen.
-  - Aug: 153R / 46 hits / ROI 93.776% / profit -95,230 yen.
-- Baseline + pristine add-on: **745R / ROI 139.793% / profit +2,964,600 yen**.
-- Decision: **NO_ADOPTION**. Do not relax threshold family to rescue it.
+- Monthly: Apr 232R / 130 hits / ROI 196.434% / +2,237,260; May 247R / 82 hits / ROI 131.256% / +772,030; Jun 172R / 38 hits / ROI 57.747% / -726,760.
+- min month 57.747%; red months 1; max DD 1,184,940 yen.
+- Jul-Aug NON-PRISTINE shadow: **296R / 80 hits / ROI 77.598% / -663,100 yen**. Jul 60.289%; Aug 93.776%.
+- Baseline + pristine: **745R / ROI 139.793% / +2,964,600 yen**.
+- Decision: **NO_ADOPTION**.
 
-## Wave24 — RUNNING distinct latent nearest-neighbor analog family
-- Script commit `9ae0803b30e1163d81c435076a81aaa00795f401`: `research_v289_3head_wave24_neighbor_analog.py`.
-- Workflow commit `adde22ffca67eaa160c4849af41afdaa44317ee6`: `.github/workflows/research-3head-wave24-neighbor.yml`.
-- Current Run: **`34757826506`**, workflow `research-3head-wave24-neighbor`, status at launch **in_progress**.
-- Distinct family: same pre-deadline feature construction -> median impute -> StandardScaler -> PCA 12 latent components -> 200-neighbor distance-weighted Euclidean KNN.
-- Same conservative old-v243 678R exclusion guarantees legacy v288 overlap=0.
-- Apr/May/Jun use prior-month-only walk-forward predictions; threshold selected on Apr-Jun only; Jul/Aug frozen NON-PRISTINE shadow only.
-- Closing odds and settlement remain post-selection only; JPY10,000/race all twenty `3-x-y` exact-order Dutch in JPY100 units.
-- Decision rule remains strict: SHADOW_CANDIDATE only if pristine ROI >= legacy 172.560638% and zero red pristine months; else NO_ADOPTION.
+## Wave24 — FINAL nearest-neighbor analog
+- Run `34757826506`, workflow `research-3head-wave24-neighbor`: completed successfully; artifact `3head-wave24-neighbor-analog`, ID `10317814162`.
+- Distinct family: median impute -> StandardScaler -> PCA 12 -> 200-neighbor distance-weighted Euclidean KNN.
+- Source **30,746R**; legacy overlap **0**; threshold **0.32**.
+- Pristine Apr-Jun: **120R / 55 hits / stake 1,200,000 / payout 1,142,830 / ROI 95.236% / profit -57,170 yen**.
+- Monthly: Apr 25R / 16 hits / ROI 151.992% / +129,980; May 44R / 19 hits / ROI 86.268% / -60,420; Jun 51R / 20 hits / ROI 75.151% / -126,730.
+- min month **75.151%**; red months **2**; max DD **206,700 yen**.
+- Jul-Aug NON-PRISTINE shadow: **77R / 22 hits / ROI 55.145% / profit -345,380 yen**. Jul 51.094%; Aug 58.521%.
+- Baseline + pristine: **214R / ROI 129.201% / profit +624,900 yen**.
+- Decision: **NO_ADOPTION**. Do not tune K/PCA/threshold on Jul-Aug to rescue it.
+
+## Wave25 — RUNNING latent regime cluster family
+- Script commit `c6c3020121ad10f5a8e39c249742f25e8f47764e`: `research_v289_3head_wave25_regime_cluster.py`.
+- Workflow commit `9067353322e0549042df80dde64b706093a6c2f8`: `.github/workflows/research-3head-wave25-regime.yml`.
+- Current Run: **`34757888935`**, workflow `research-3head-wave25-regime`, latest launch state **queued**.
+- Distinct family: pre-deadline features -> median impute -> StandardScaler -> PCA 12 -> KMeans 24 latent regimes; prediction is smoothed prior-data 3-head frequency of assigned regime.
+- Same conservative old-v243 678R exclusion guarantees legacy overlap=0.
+- Apr/May/Jun prior-only walk-forward; threshold selection Apr-Jun only; Jul/Aug frozen NON-PRISTINE shadow.
+- Closing odds and settlement remain post-selection only; JPY10,000/race all-20 Dutch.
+- Strict decision: SHADOW_CANDIDATE only if pristine ROI >= 172.560638% and zero red pristine months; else NO_ADOPTION.
 
 ## Exact restart point
-1. Inspect Run `34757826506` first.
-2. If failed, inspect logs, fix, and rerun automatically without weakening no-leakage/date/zero-overlap guards.
-3. If success, report exact Wave24 pristine Apr-Jun R/hits/stake/payout/ROI/profit/monthly/min-month/red-months/max-DD/overlap/combined and Jul-Aug NON-PRISTINE shadow metrics.
-4. If Wave24 is `NO_ADOPTION`, automatically launch another genuinely distinct family (opponent-ticket rerank or regime segmentation), not threshold loosening.
+1. Inspect Run `34757888935` first.
+2. If failed, inspect logs, fix, rerun automatically without weakening date/no-leakage/zero-overlap guards.
+3. If success, record exact Wave25 pristine and NON-PRISTINE shadow metrics, artifact ID, overlap and combined baseline.
+4. If Wave25 is `NO_ADOPTION`, continue another genuinely distinct family (opponent-ticket rerank / conditional exact-order model), not threshold loosening.
 5. If `SHADOW_CANDIDATE`, do not replace v288 automatically; validate separately.
-6. Jul/Aug NON-PRISTINE; September outcomes forbidden; legacy v288 remains immutable baseline/floor; add-on overlap zero.
