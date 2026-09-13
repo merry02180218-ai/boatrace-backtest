@@ -135,5 +135,6 @@ jobs:
           git add analysis_v321_1head_julaug_nonpristine_validation_*.csv summary_v321_1head_julaug_nonpristine_validation.md
           if ! git diff --cached --quiet; then
             git commit -m 'Add v321 Jul-Aug NON-PRISTINE validation results'
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
