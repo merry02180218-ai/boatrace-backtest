@@ -33,8 +33,68 @@ jobs:
             cache_v321_julaug_nonpristine_head.csv
             cache_v321_julaug_nonpristine_meta.csv
 
-  evaluate:
+  second:
     needs: prepare
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v321-julaug-prepare
+          path: .
+      - name: Build frozen SECOND predictions
+        run: python run_v321_1head_julaug_nonpristine_validation.py --stage second
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v321-julaug-second
+          path: cache_v321_julaug_second.pkl
+
+  base-third:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v321-julaug-prepare
+          path: .
+      - name: Build frozen BASE THIRD predictions for opponent mass
+        run: python run_v321_1head_julaug_nonpristine_validation.py --stage base-third
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v321-julaug-base-third
+          path: cache_v321_julaug_base_pc.pkl
+
+  third:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v321-julaug-prepare
+          path: .
+      - name: Build frozen v318 THIRD predictions
+        run: python run_v321_1head_julaug_nonpristine_validation.py --stage third
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v321-julaug-third
+          path: cache_v321_julaug_third.pkl
+
+  score:
+    needs: [prepare, second, base-third, third]
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -48,15 +108,20 @@ jobs:
         with:
           name: v321-julaug-prepare
           path: .
-      - name: Require causal opponent caches
-        run: |
-          test -f cache_v313_1head_opponent_p3.csv.gz
-          test -f cache_v313_1head_opponent_p4.csv.gz
-          test -f cache_v321_julaug_nonpristine_slim.csv.gz
-          test -f cache_v321_julaug_nonpristine_head.csv
-          test -f cache_v321_julaug_nonpristine_meta.csv
-      - name: Evaluate frozen SECOND THIRD and ticket policy
-        run: python run_v321_1head_julaug_nonpristine_validation.py --stage evaluate
+      - uses: actions/download-artifact@v4
+        with:
+          name: v321-julaug-second
+          path: .
+      - uses: actions/download-artifact@v4
+        with:
+          name: v321-julaug-base-third
+          path: .
+      - uses: actions/download-artifact@v4
+        with:
+          name: v321-julaug-third
+          path: .
+      - name: Score frozen ticket policy
+        run: python run_v321_1head_julaug_nonpristine_validation.py --stage score
       - uses: actions/upload-artifact@v4
         with:
           name: v321-julaug-nonpristine
