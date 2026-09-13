@@ -17,7 +17,7 @@
 ## Wave35
 - Run 34775954251 success. Apr-Jun 202R / 54 hits / ROI 102.805%; Apr 141.657 / May 90.930 / Jun 84.333; Jul-Aug shadow 102.711%; overlap 0; NO_ADOPTION.
 
-## Wave36 shrinkage-LDA — RESEARCH CANDIDATE, AUDIT REQUIRED
+## Wave36 shrinkage-LDA — RESEARCH CANDIDATE
 - Run 34780059085 success; artifact 10324527230.
 - March gate p3>=0.365448 top5 q=.98; 90R; head rate 42.222%; early 44.737%; late 40.385%.
 - Apr-Jun pristine: 391R / 87 hits / ROI 114.913% / +583,090 yen.
@@ -27,19 +27,23 @@
 - min month 70.290%; red months 1; max DD 717,360 yen.
 - Jul-Aug NON-PRISTINE shadow: 328R / 79 hits / ROI 89.756% / -335,990.
 - baseline + holdout 485R / ROI 126.086% / +1,265,160. exact v288 overlap 0.
-- Decision RESEARCH_CANDIDATE, but user flagged temporal degradation as possible leakage. Do not promote until audit passes.
 
-## Wave36L leak / temporal audit — STARTED
-- Audit before any adoption. Do not tune a new production gate in this wave.
-- Verify the exact 63 feature names produced by build_static contain no settlement/result/payout/odds/current-meet post-race fields and no suspicious target-derived names.
-- Verify walk-forward index causality: every prediction row's training max date must be strictly earlier than test month/date; March trained Feb only; Apr train <Apr; May <May; Jun <Jun; Jul/Aug frozen <=Jun.
-- Verify preprocessing is fit inside each training fold only (SimpleImputer, StandardScaler, shrinkage LDA and conditional logistic all pipeline-fit on trainX).
-- Quantify temporal degradation without changing gate: split Apr, May, Jun and Jul/Aug chronologically; report R/hits/head rate/ticket hit rate/ROI/profit and high-payout concentration. Determine whether April ROI is driven by a few outlier payouts versus sustained hit quality.
-- Add a negative-control leakage test: shuffled training labels should collapse predictive head separation; fail audit if suspiciously strong.
-- Required current feature missing => fail closed. September forbidden. Jul/Aug remains NON-PRISTINE.
+## Wave36L leak / temporal audit — PASS
+- Run 34781494240 success; artifact 10325173171.
+- 63 features verified; suspicious result/payout/odds/target-derived feature names: 0.
+- Walk-forward causality PASS for Mar through Aug: every training max date strictly before test min date; Jul/Aug frozen training <= Jun 30.
+- Shuffled-label Feb->Mar negative-control AUC 0.506287, consistent with chance.
+- Head-rate diagnostic at fixed Wave36 p3 gate: Apr 44.628%, May 40.690%, Jun 37.600%, Jul 38.312%, Aug 43.103%. This is not monotonic time decay; no clear future-information leakage found.
+- Wave36 remains RESEARCH_CANDIDATE; proceed to payout/order decomposition before promotion.
+
+## Wave36R robustness decomposition — STARTED
+- Do not tune or alter Wave36 gate. Reproduce exact p3>=0.365448/top5 walk-forward selection and Dutch settlement.
+- For Apr/May/Jun and Jul/Aug, split chronologically early/late and report selected R, 3-head hits/rate, top5 ticket hits/rate, ROI/profit, mean/median winning payout, top1/top3 payout concentration.
+- Decompose misses into (A) 3-head miss and (B) 3-head correct but exact-order top5 miss, so June weakness can be attributed to head gate vs opponent/order model.
+- Quantify April outlier sensitivity by recomputing ROI after removing largest 1, 3, and 5 winning returns; diagnostics only, never threshold tuning.
+- Keep Jul/Aug NON-PRISTINE and September forbidden. No adoption change until this diagnostic completes.
 
 ## Exact restart point
-1. Implement Wave36L audit script/workflow.
-2. Launch and auto-fix technical failures without weakening guards.
-3. Record PASS/FAIL and diagnostics here.
-4. Only if PASS, continue Wave36 robustness research; if FAIL, invalidate Wave36 and repair source/features automatically.
+1. Implement and run Wave36R fixed-gate decomposition.
+2. Record whether April profitability is broad or payout-concentrated and whether June weakness is head-gate or order-model driven.
+3. If robustness remains credible, continue pre-April-only robustness confirmation; otherwise downgrade Wave36 candidate without using Jul/Aug for tuning.
