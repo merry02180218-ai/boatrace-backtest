@@ -1,13 +1,20 @@
 name: research-3head-wave18-full-universe
+
 on:
   push:
-    branches: ['research/3head-v289-addon-expansion']
+    branches:
+      - 'research/3head-v289-addon-expansion'
     paths:
       - 'research_v289_3head_wave18b_settlement_recovery.py'
       - '.github/workflows/research-3head-wave18-full-universe.yml'
   workflow_dispatch:
+
 permissions:
   contents: write
+
+env:
+  PYTHONUNBUFFERED: '1'
+
 jobs:
   wave18b-settlement-recovery:
     runs-on: ubuntu-latest
@@ -29,6 +36,17 @@ jobs:
           cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
       - name: Recover full-universe settlement
         run: python research_v289_3head_wave18b_settlement_recovery.py
+      - name: Verify settlement guard
+        run: |
+          python - <<'PY'
+          import json
+          d=json.load(open('research_v289_3head_wave18b_settlement_recovery.json',encoding='utf-8'))
+          assert d['max_date'] <= '2026-08-31'
+          assert d['decision'] == 'SETTLED_SOURCE_READY'
+          assert d['official_share'] >= 0.98
+          assert d['exact_given_official'] >= 0.999
+          print('WAVE18B_GUARDS_OK')
+          PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
