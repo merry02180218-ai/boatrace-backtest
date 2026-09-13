@@ -1,0 +1,40 @@
+name: validate-4head-v291-varn-auto-live
+on:
+  push:
+    paths:
+      - 'run_4head_v291_varn_auto_live.py'
+      - 'verify_4head_v291_varn_auto_live.py'
+      - 'assemble_4head_v291_varn_live_input.py'
+      - 'build_4head_env_entry_live.py'
+      - 'build_4head_a_live_live.py'
+      - 'build_4head_v283_rows_live.py'
+      - 'head4_v291_downstream_inference.py'
+      - 'head4_v273_a_live_inference.py'
+      - '.github/workflows/validate-4head-v291-varn-auto-live.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Syntax check
+        run: python -m py_compile run_4head_v291_varn_auto_live.py verify_4head_v291_varn_auto_live.py
+      - name: AUTO LIVE bridge contract
+        run: python verify_4head_v291_varn_auto_live.py
+      - name: Result-blind and frozen-policy guard
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          s=(Path('run_4head_v291_varn_auto_live.py').read_text()+Path('verify_4head_v291_varn_auto_live.py').read_text()).lower()
+          for x in ['data/results/','payout','winner','actual_result','valid_result','closing_odds']:
+              assert x not in s, x
+          r=Path('run_4head_v291_varn_auto_live.py').read_text()
+          assert "POLICY='HEAD4_V291_COMP7_VARN_F4_N16'" in r
+          assert 'run_4head_v291_varn_live.py' in r
+          print('AUTO LIVE frozen/result-blind guard PASS')
+          PY
