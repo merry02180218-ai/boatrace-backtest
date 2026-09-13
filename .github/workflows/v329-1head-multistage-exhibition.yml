@@ -1,5 +1,6 @@
 name: v329 1-head multistage exhibition
 
+# retrigger 2026-09-14 after workflow existed without a confirmed Actions run
 on:
   workflow_dispatch:
   push:
