@@ -41,44 +41,56 @@ Summary `summary_v318_1head_opponent_third_rebuild.md`; result commit `39f84acad
 - Monthly THIRD TOP2: Feb 74.51, Mar 73.33, Apr 83.33, May 68.32, Jun 70.67%.
 Decision: no material THIRD gain. Per automatic branch rules, move to direct 20 ordered `(second,third)` pair modeling.
 
-## v319 CURRENT — direct ordered-pair model
+## v319 completed — direct ordered-pair model
 Files:
 - `run_v319_1head_opponent_ordered_pair.py`
 - `.github/workflows/research-20260913-v319-ordered-pair.yml`
-Implementation commit **`38da1f80650533866e34a58eb61bc9342459e87c`**; workflow commit **`f0534370337e8ad292a2d1dd4c23ae08d25d920e`**.
+Implementation commit **`38da1f80650533866e34a58eb61bc9342459e87c`**; workflow commit **`f0534370337e8ad292a2d1dd4c23ae08d25d920e`**; grouping fix **`e7626463c00bd923be319c0c680f42d306726e54`**.
+
+Initial run **`34731843060`** failed because `train_group==1` reduced each 20-pair race to the actual-SECOND 4-row block. This was fixed by using that flag only to identify eligible valid 1-x-y race codes and then restoring all 20 ordered-pair rows, with fail-closed 20-row/one-positive assertions.
+
+Restart run **`34733175916`** completed successfully.
+- Fixed **345R / 290 head hits** confirmed.
+- Best **ALL_P0.3**: pair TOP1 **21.38%**, TOP2 **34.14%**, TOP3 **46.21%**, TOP5 **60.69%**.
+- exact3 **134/345=38.84%**; worst-month pair TOP3 **36.00%**.
+- Monthly pair TOP3: Feb 45.10, Mar 46.67, Apr 58.33, May 48.51, Jun 36.00%.
+- Factorized v317 SECOND + v318 THIRD reference remains stronger at **137/345=39.71%**.
+Decision: direct ordered-pair did not materially improve and is not retained as ranking reference. Keep factorized v317+v318 and move to exact-3-ticket policy optimization.
+
+## v320 CURRENT — exact-3-ticket policy optimization
+Files:
+- `run_v320_1head_exact3_ticket_policy.py`
+- `.github/workflows/research-20260913-v320-exact3-ticket.yml`
+Implementation commit **`b54ec0574380e42b24c778aaff8e0295b0efe6b9`**; workflow commit **`2c0745d75322cb52080f8d910fce5fe797c555c5`**.
 
 Design:
-- fixed 345R/290 head hits; v313 cache only; no `meet_*`; no future backfill; month M trains only before M.
-- Directly fit one 20-candidate listwise model per race over all ordered `(SECOND,THIRD)` pairs.
-- Test ALL / DROP_START / COMPACT leak-safe feature formulations and L2 grid.
-- Top 3 direct pair probabilities form the exact-3-ticket candidate set.
-- Compare against factorized v317 SECOND + v318 THIRD reference exact3 **137/345=39.71%**, including monthly/worst-month stability.
-- Feb-Jun development only; Jul/Aug NON-PRISTINE; September unread.
+- Ranking reference frozen to **v317 OUTER SECOND + v318 DROPSTART_T0.1 THIRD**; only ticket ordering/policy changes for attribution.
+- Fixed **345R / 290 head hits**; exactly 3 tickets on every fixed-cohort race, no denominator shrinkage.
+- v313 cache only; `meet_*` forbidden; no future backfill; month M trains only before M.
+- Explicitly reject Jul/Aug/Sep evaluation months; Jul/Aug remain NON-PRISTINE and September outcomes remain unread.
+- Test leak-safe policy forms `TOP2XTOP2`, `JOINT`, `SECOND1X3`, `SECOND3X1`, `HYBRID` across alpha 0.20-0.80.
+- Fail closed unless frozen baseline `TOP2XTOP2 alpha=.60` reproduces **137/345** exactly.
+- Compare full 345 exact3 and monthly/worst-month stability; suspicious large gains require leakage audit.
 
-### v319 failure/restart 2026-09-13
-- Initial run **`34731843060`** started successfully but failed in `FastListwise.fit` with `RuntimeError: no valid listwise groups`.
-- Root cause: direct ordered-pair model requires **20 candidate rows per race**, but the initial code filtered rows with `train_group==1`; in `conditional_long_all`, that flag marks only the actual-SECOND conditional 4-row block. Thus every historical training race was reduced from 20 rows to 4 before a `group_n=20` listwise fit.
-- This was a technical grouping bug, not model evidence and not a change to the causal rules.
-- Fix commit **`e7626463c00bd923be319c0c680f42d306726e54`**: use `train_group==1` only to identify eligible historical valid 1-x-y race codes, then restore all 20 ordered-pair candidate rows for those race codes. Add fail-closed assertion that every training race has exactly 20 rows and exactly one `ypair` positive.
-- No `meet_*`, future fields, Jul/Aug validation, or September outcomes were introduced. Fixed **345R / 290 head hits** remains mandatory.
-- Restarted run **`34733175916`** from the fix commit; status at handoff update: **in_progress**.
-- Do not consider v319 started merely because a commit was pushed: future monitor checks must verify an actual Actions run ID and its status.
+Actions run **`34737004683`** was verified as actually created and **in_progress** after the workflow commit. Do not treat a push alone as started; monitor the run ID/status.
 
 ## Automatic branch sequence
 1. SECOND family/gating/role/pairwise/multiclass/error-feature research v311-v317 — completed; saturated.
 2. v318 conditional THIRD rebuild — completed, flat.
-3. **v319 direct 20 ordered `(second,third)` pair model — CURRENT / restarted after technical fix.**
-4. If ordered-pair materially improves stable exact3, retain it as ranking reference; otherwise retain stronger factorized reference.
-5. Then optimize exactly-3-ticket policy using the stronger stabilized probability/ranking model without changing the 345R cohort.
-6. Suspicious large gain -> immediate leakage/causal audit.
+3. v319 direct 20 ordered `(second,third)` pair model — completed; **134/345**, weaker than factorized **137/345**.
+4. Factorized v317+v318 retained as stronger ranking reference.
+5. **v320 exactly-3-ticket policy optimization — CURRENT / run 34737004683.**
+6. If a ticket policy materially improves exact3 with acceptable monthly stability, freeze it as development winner; Feb-Jun is reused development evidence, not prospective validation.
+7. If no material stable gain, retain factorized TOP2XTOP2 alpha=.60 and stop ticket-order micro-tuning unless a new causal hypothesis is explicitly defined.
+8. Suspicious large gain -> immediate leakage/causal audit.
 
 ## Required metrics
 - exact3 on full 345 denominator
 - SECOND TOP1/TOP2/TOP3 when factorized branch is evaluated
 - conditional THIRD TOP1/TOP2/TOP3 when factorized branch is evaluated
 - direct pair TOP1/TOP2/TOP3/TOP5 for ordered-pair branch
-- monthly breakdown and worst month
+- exact-3-ticket policy full-cohort hits/rate, monthly breakdown and worst month
 - delta vs clean/factorized reference.
 
 ## Self-continuing rule
-A failed/flat experiment is diagnostic evidence, not a stopping condition. If research is stopped and the next leak-safe branch is clear, implement/start it automatically and update this handoff. Do not merely report stopped state. If v319 completes, record results here and automatically move to exact-3-ticket policy optimization using whichever ranking reference is stronger and stable.
+A failed/flat experiment is diagnostic evidence, not a stopping condition. If research is stopped and the next leak-safe branch is clear, implement/start it automatically and update this handoff. Do not merely report stopped state. For any new workflow, verify an actual Actions run ID and status after creation. If v320 completes, record the result and apply the automatic decision above without reading Jul/Aug as pristine or any September outcomes.
