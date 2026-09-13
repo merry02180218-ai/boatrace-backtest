@@ -5,7 +5,8 @@ from __future__ import annotations
 import math
 from build_4head_env_v91_primitives_live import (
     PrimitiveBuildError, build, history_value, pct_rank_online,
-    relative_deg, tilt_band_exact,
+    relative_deg, relative_wind_exact, tilt_band_exact,
+    wind_adjust_points_v83_head4, wind_speed_bin_exact,
 )
 
 
@@ -25,7 +26,8 @@ def fixture():
         'history_prior1':0.4,'history_prior2':0.8,'history_has2':1,
         'history_population':[0.2,0.5,0.7,0.9],
         'tilt':0.5,'entry_course_preview':4,
-        'venue_code':1,'wind_code':3,'wind_speed':3.4,'wind_adjust_points':2,
+        # Kiryu faces 90deg. wind code3=90 => tailwind; 3.4m => 3-4m => neutral.
+        'venue_code':1,'wind_code':3,'wind_speed':3.4,
         'has_orig':1,'has_stt':1,'has_tkz':1,
     }
     return current,context
@@ -46,8 +48,25 @@ def main():
     close(pct_rank_online(.64,[.2,.5,.7,.9]),.5)
     close(pct_rank_online(.64,[]),.5)
 
-    # v83 relative wind: Kiryu facing 90 deg and wind code 3 = 90 deg.
+    # Exact v83 relative wind and speed-bin boundaries.
     close(relative_deg(1,3),0)
+    assert relative_wind_exact(0)=='追い'
+    assert relative_wind_exact(44.999)=='追い'
+    assert relative_wind_exact(45)=='右横'
+    assert relative_wind_exact(135)=='向かい'
+    assert relative_wind_exact(225)=='左横'
+    assert relative_wind_exact(315)=='追い'
+    assert wind_speed_bin_exact(2)=='0-2m'
+    assert wind_speed_bin_exact(2.01)=='3-4m'
+    assert wind_speed_bin_exact(4)=='3-4m'
+    assert wind_speed_bin_exact(4.01)=='5m+'
+
+    # Frozen v83 HEAD4 old-period mapping. Only these 3 cells are non-neutral.
+    assert wind_adjust_points_v83_head4(0,2)==-2       # 追い_0-2m
+    assert wind_adjust_points_v83_head4(180,2)==-2     # 向かい_0-2m
+    assert wind_adjust_points_v83_head4(270,3)==2      # 左横_3-4m
+    for deg,speed in [(0,3),(0,5),(90,1),(90,3),(90,5),(180,3),(180,5),(270,1),(270,5)]:
+        assert wind_adjust_points_v83_head4(deg,speed)==0,(deg,speed)
 
     cur,ctx=fixture(); z=build(cur,ctx)
     preview=.28*.8+.30*.9+.22*.6+.15*.7+.05*.5
@@ -62,20 +81,27 @@ def main():
     close(z['score_BASE_v91'],base)
     close(z['score_CORR20_v91'],base+100*(corr20-preview))
     close(z['score_RAW20_v91'],base+100*(raw20-preview))
-    close(z['score_wind_v83'],base+2)
+    close(z['wind_adjust_points'],0)
+    close(z['score_wind_v83'],base)
     assert z['entry_confirmed_same']==1
     assert len(z)==21
 
-    # Fail closed: no learned wind default, no result-blind bypass.
-    bad=dict(ctx); bad.pop('wind_adjust_points')
-    try: build(cur,bad)
-    except PrimitiveBuildError: pass
-    else: raise AssertionError('missing wind adjustment must fail closed')
+    # A live unfavorable cell derives -2 internally; no manual learned label is accepted/needed.
+    badwind=dict(ctx); badwind['wind_speed']=2.0
+    z2=build(cur,badwind)
+    close(z2['wind_adjust_points'],-2)
+    close(z2['score_wind_v83'],base-2)
+
+    # Fail closed on result-blind bypass / invalid wind.
     badcur=dict(cur);badcur['result_blind']=False
     try: build(badcur,ctx)
     except PrimitiveBuildError: pass
     else: raise AssertionError('non-result-blind current exhibition must fail')
+    bad=dict(ctx);bad['wind_speed']=-1
+    try: build(cur,bad)
+    except PrimitiveBuildError: pass
+    else: raise AssertionError('negative wind speed must fail')
 
-    print('PASS verify_4head_env_v91_primitives_live')
+    print('PASS verify_4head_env_v91_primitives_live_v2')
 
 if __name__=='__main__':main()
