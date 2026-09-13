@@ -33,19 +33,20 @@
 - smaller fractions were also negative: 47R ROI 57.14%; 11R ROI 52.11%.
 - decision: **NO_ADOPTION_WAVE12**. Rejection reason: direct settled-value learning improves hit rate but cannot recover positive add-on EV or monthly robustness.
 
-## Wave 13 — hurdle ticket EV + independent agreement — RUNNING
-- restart was required because Wave12 had completed but no next candidate-source family had been launched and the stable handoff was stale.
-- new script commit **`edcaf8d98532e078de29107bb16b211b92676845`**: `research_v289_3head_addon_wave13_hurdle_ticket_ev.py`.
+## Wave 13 — hurdle ticket EV + independent agreement — FINAL
+- script commit **`edcaf8d98532e078de29107bb16b211b92676845`**: `research_v289_3head_addon_wave13_hurdle_ticket_ev.py`.
 - workflow commit **`bf8330a0ab3a37f5e9336b25d669d0c70bf19b2a`**: `.github/workflows/research-3head-v289-addon-wave13-hurdle-ticket-ev.yml`.
-- Actions Run **`34733351060`** started from workflow commit; current state at handoff update: **in_progress**.
-- expected artifact: **`v289-3head-addon-wave13-hurdle-ticket-ev`**.
-- mechanism deliberately changes candidate generation after Wave12: model `P(ticket hit)` and conditional hit payout separately, multiply them into hurdle EV, then require an independent direct-value model to choose the same ticket configuration. This is not a simple threshold relaxation.
-- candidate ticket families remain regenerated Top2..Top10 / target composite-odds with exact **10,000-yen Dutch**.
-- walk-forward Feb-Aug only; every test month fits prior months only; current required feature missing => **FAIL_CLOSED**.
-- acceptance gate unchanged: **>=20R, ROI>=100%, min monthly ROI>=60%, <=3 red months**, plus overlap 0 and all guards passing.
+- Actions Run **`34733351060` completed success**.
+- artifact **`v289-3head-addon-wave13-hurdle-ticket-ev`**, artifact ID **`10310494882`**.
+- result commit **`4318d5cb132fe92cb8c0476e672a905367f0963f`**.
+- best `hurdle_ticket_ev_consensus@0.40`: **4R / 1 hit / hit 25.00% / ROI 58.65% / profit -16,540 / min month ROI 0.00% / 2 red months / max DD 20,000 / overlap 0**.
+- combined v288+add-on: **98R / ROI 167.91%**.
+- other fractions: 2R / 0 hits / ROI 0%; 1R / 0 hits / ROI 0% (two variants).
+- decision: **NO_ADOPTION_WAVE13**.
+- rejection reason: independent hurdle-EV agreement collapses coverage to 1–4 races and remains negative; fails the minimum 20R gate and ROI gate, so there is no production adoption case.
 
 ## What NOT to repeat
-- Wave1 threshold/coverage tweaks; TopN/odds changes alone; PRE-B; undersampled venue splits; ordered-pair unchanged; global role split; attack-role; motor/racer-role; linear head classifier; KNN analogs; reject-cause ranking unchanged; Wave12 direct joint settled-value regression unchanged.
+- Wave1 threshold/coverage tweaks; TopN/odds changes alone; PRE-B; undersampled venue splits; ordered-pair unchanged; global role split; attack-role; motor/racer-role; linear head classifier; KNN analogs; reject-cause ranking unchanged; Wave12 direct joint settled-value regression unchanged; Wave13 hurdle/direct-value agreement unchanged.
 
 ## Real-operation audit
 - v288 overlap must remain zero.
@@ -55,7 +56,8 @@
 - exact 10,000-yen Dutch retained; production v288 workflow/model unchanged.
 
 ## Exact restart point
-1. Inspect Run `34733351060` and its jobs/artifact.
-2. If failed/cancelled, inspect logs, patch Wave13, and rerun automatically.
-3. If success, record add-on-only R/hit rate/ROI/profit/monthly/min-month/max-DD/overlap and combined v288+add-on in this handoff.
-4. If the historical gate passes, advance only to September **outcome-blind** shadow. If rejected, record why and move to a genuinely different candidate-source mechanism rather than retuning Waves1–13.
+1. Wave13 is final **NO_ADOPTION_WAVE13**; do not retune its consensus thresholds or reuse Waves1–13 as a threshold-relaxation exercise.
+2. If no new 3-head add-on branch commit/Run appears for >=2 hours, resume automatically with a genuinely different candidate-source family.
+3. Preferred next family: outcome-blind candidate generation from pre-deadline market/field structure or selective uncertainty/conformal gating that does not use September outcomes and is not merely a different cutoff on prior scores.
+4. Preserve v288 94R baseline, final-NO_BET-only scope, Feb-Aug prior-month-only walk-forward, Jul/Aug NON-PRISTINE, overlap 0, fail-closed guards, and exact 10,000-yen Dutch.
+5. Any next wave must persist add-on-only R/hit rate/ROI/profit/monthly/min-month/max-DD/overlap, combined v288+add-on, rejection reason, Run ID, artifact, commit SHA, and next restart point here.
