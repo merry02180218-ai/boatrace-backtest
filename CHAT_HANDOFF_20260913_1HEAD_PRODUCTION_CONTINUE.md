@@ -144,3 +144,15 @@ Exact work now:
 7. If canonical v332 itself changed, stop and isolate the source-data/model-input change before any v337 comparison.
 8. Keep September outcomes UNREAD and do not alter frozen production files.
 9. Append the actual diagnostic result, exact missing race identities/root cause, any fix commit, rerun IDs/artifact IDs, and exact next resume point to THIS file before reporting completion.
+
+# 10. 2026-09-14 PRE-WORK — OLD vs NEW WAKU10 96/97 RACE DIFFERENTIAL
+User asks to verify whether the new Waku10 values caused the current canonical anchor drift from the previously frozen 96 PASS / 83 head / 45 exact3 to the current diagnostic 97 PASS / 84 head / 45 exact3.
+
+Exact work now:
+1. Treat the prior v336 q=.65 artifact/run as the frozen 96-race identity source and the current canonical diagnostic artifact/run as the 97-race identity source.
+2. Compare the PASS race identities directly by race_code/date/place/race and identify the exact one-race addition/removal set.
+3. For the differing race, compare old versus canonical Waku10 values and all exhibition-stage inputs used by ATTACK_ENV_SOFT, including the score and q=.65 threshold margin.
+4. Determine causality: whether a Waku10 field changed and propagated into the exhibition-stage pass decision, or whether the 97th race came from another reconstruction/data-source difference.
+5. If Waku10 is causal, record the exact changed field/value and the resulting score/threshold crossing; if not causal, identify the true changed input/path.
+6. Do not modify frozen production logic and keep September outcomes UNREAD.
+7. Append the actual differential result, race identity, values, conclusion, commit/run/job/artifact IDs, and exact next resume point to THIS file before reporting completion.
