@@ -27,18 +27,23 @@
 - Partial 296R metrics are diagnostic only and must NOT be treated as valid parity result: Apr106R ROI107.446%; May102R ROI64.874%; Jun88R ROI33.461%; Apr-Jun ROI70.780%/-864,900; conversion42.742%; v288 overlap0.
 - Recovery rule: investigate only technical/source recovery for those 9R. Do not impute or change model/order criteria. If exact required pre-deadline fields cannot be recovered, keep fail-closed and record blocker; do not substitute an unaudited orderer.
 
-## Wave36S-F two-layer opponent allocation — STARTING
-- User requested a Wave36-specific opponent-selection study after examining both the strong 10–20x hit band and the 50x+ hits.
-- Preserve Wave36 head-selection logic and exact v288 exclusion; do not alter production v288.
-- Design target: two-layer ticket allocation with mainline Top1–3 and retained longshot Top4–5 rather than trimming all lower-ranked opponents.
-- Critical observation to test: 10–20x winners are concentrated in higher-ranked opponent combinations, while 50x+ winners disproportionately survive in ranks 3–5; therefore Top4–5 must be evaluated as a small-stake longshot layer rather than discarded.
-- Selection/tuning discipline: derive and freeze any ranking/allocation thresholds from Feb training + March OOS only. Do not use Apr–Jun payout/ROI for tuning. Jul/Aug remain NON-PRISTINE diagnostics only. September forbidden/unread.
-- Evaluate Apr/May/Jun separately and aggregate with actual JPY10,000 per bet, exact stake accounting, ticket hits, head hits, conversion, ROI, profit, max drawdown, hit-odds distribution, and 50x+ capture/return contribution.
-- Explicitly report whether the two-layer design preserves the 50x+ winners that drive tail profit while improving the 10–20x core.
-- If no robust OOS improvement, NO_ADOPTION.
+## Wave36S-F two-layer opponent allocation — COMPLETE / NO_ADOPTION
+- User requested Wave36-specific opponent allocation after analyzing both 10–20x core hits and 50x+ hits.
+- Implementation commit 249efa1295a48accf26cfb6677a5a7a9723365f1; workflow commit 1e5d9339b3ca2e07a9162fb7e1708af14d884651.
+- Run 34789147056 success; Job 103810013414; artifact 10327388998; artifact SHA256 07439a302357495b3052c107e469630256a59bfac201338848da1a6a37b98931.
+- Frozen Wave36 gate unchanged: p3>=0.365448, Top5, exact v288 exclusion, v288 overlap0, September forbidden true.
+- Two-layer allocation fixed ex ante before Apr-Jun inspection: Top1–3 share JPY8,000 via inverse-odds Dutch; Top4–5 share JPY2,000 via inverse-odds Dutch. Total stake exactly JPY10,000/race. No Apr-Jun payout/ROI tuning.
+- Apr-Jun pristine two-layer: 391R /87 hits / stake3,910,000 / payout4,168,700 / profit +258,700 / ROI106.616%.
+- Same races original Wave36 equal-Dutch baseline: ROI114.913% / profit +583,090. Therefore two-layer weighting reduced profit by 324,390 and is NO_ADOPTION.
+- Monthly two-layer: Apr121R/33 hits/ROI158.731%/+710,650; May145R/33 hits/ROI94.486%/-79,950; Jun125R/21 hits/ROI70.240%/-372,000.
+- Odds-band two-layer Apr-Jun: <10x 54R/22 hits/ROI114.652%/+79,120; 10–20x 94R/33 hits/ROI119.346%/+181,850; 20–50x 120R/22 hits/ROI98.463%/-18,450; 50x+ 123R/10 hits/ROI101.315%/+16,180.
+- Rank4–5 produced 26 winning tickets and JPY1,104,180 payout. Of these, five were 50x+ and paid JPY629,820 under the two-layer allocation.
+- Rank4–5 50x+ captured races: 202604091008 3-2-5 90.0x rank4 return108,000; 202604290808 3-1-6 334.7x rank5 return334,700; 202605012309 3-5-1 81.5x rank5 return16,300; 202605100512 3-1-5 86.3x rank5 return129,450; 202605131406 3-2-5 59.1x rank4 return41,370.
+- Jul-Aug NON-PRISTINE two-layer diagnostic: 328R /79 hits / ROI89.572% / -342,050; not used for adoption.
+- Interpretation: preserving Top4–5 is correct because tail wins are real, but a hard 80/20 stake split underfunds those tail winners and worsens pristine economics. Do not adopt this weighting. Next research should identify pre-race conditions for when rank4–5 deserves full/elevated funding rather than always shrinking it.
 
 ## Exact restart point
-1. Build Wave36S-F research script from the frozen Wave36 dataset/artifact and only pre-April design information.
-2. Freeze mainline/longshot allocation from Feb + March only; no Apr-Jun tuning.
-3. Run Apr-Jun pristine evaluation, then Jul/Aug NON-PRISTINE diagnostics if available without violating source parity.
-4. Record exact CI/run/artifact IDs, monthly/aggregate metrics, 10–20x and 50x+ contributions, v288 overlap0, September guard, and adoption/no-adoption.
+1. Keep production v288 untouched and keep Wave36 baseline/Wave36S-C as current references.
+2. If continuing Wave36 opponent research, do not globally downweight Top4–5. Instead study pre-deadline predictors that distinguish profitable tail races from ordinary rank4–5 noise, using Feb training + March OOS only and no Apr-Jun payout tuning.
+3. Preserve exact JPY10,000 stake accounting, v288 overlap0, Jul/Aug NON-PRISTINE, September forbidden/unread.
+4. Wave36S-D parity recovery remains a separate technical branch; its old partial ROI numbers remain diagnostic-invalid until NO-BET stake semantics and 9 missing races are resolved.
