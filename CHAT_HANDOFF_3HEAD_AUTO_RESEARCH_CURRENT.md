@@ -12,33 +12,33 @@
 - Run34786354062: Apr-Jun305R/74 hits/ROI128.218%/+860,660. RESEARCH_CANDIDATE.
 
 ## Wave36S-D
-- Run34787885427 failed closed: exact v288 opponent orderer covered296/305; 9 missing. Partial ROI invalid until NO-BET semantics fixed.
+- Run34787885427 failed closed: exact v288 opponent orderer covered296/305; 9 missing. Superseded for current research direction.
+- Diagnostic rerun34788719785 confirmed all 9 are absent_from_legacy_v108, so exact legacy-orderer parity cannot cover full Wave36S-C universe without violating fail-closed.
 
 ## Wave36S-F
-- Run34789147056 success; artifact10327388998 SHA256 07439a302357495b3052c107e469630256a59bfac201338848da1a6a37b98931.
+- Run34789147056 success; artifact10327388998.
 - Top1-3 JPY8000 + Top4-5 JPY2000: Apr-Jun ROI106.616%/+258,700 vs original114.913%/+583,090. NO_ADOPTION.
 
 ## Wave36 boat3-head / Top5-miss rank audit — COMPLETE
-- Plan commit348bb24c8f452ba8f1705f09c8022cd24f2e92d3; script commit33fe37d39b3910546dfd94a7f06a050ea8a21704.
-- Source run34754875342 artifact10317157868. Rebuilt frozen Wave36 conditional ranking with rolling schedule and exact v288 exclusion.
-- Parity check: rebuilt Top5 matched saved Wave36 Top5 on all391/391 Apr-Jun selected races.
+- Rebuilt frozen Wave36 Top5 exactly on391/391 Apr-Jun selected races.
 - 391 selected; actual boat3 head160; Top5 hits87; boat3-head Top5 misses73.
-- Miss actual-rank counts: r6=7,r7=9,r8=12,r9=7,r10=3,r11=6,r12=5,r13=3,r14=2,r15=7,r16=4,r17=3,r18=0,r19=3,r20=2.
-- Cumulative miss recovery: Top6 7/73=9.6%; Top7 16=21.9%; Top8 28=38.4%; Top10 38=52.1%; Top15 61=83.6%; Top20 73=100%.
-- Diagnostic equal-Dutch expansion: Top5 ROI114.913%; Top6 101.224%; Top7 97.775%; Top8 97.932%; Top10 93.085%; Top15 90.868%; Top20 88.006%.
+- Miss recovery if blindly expanding: Top6 7/73, Top7 16/73, Top8 28/73, Top10 38/73, but equal-Dutch ROI falls from Top5 114.913% to Top6 101.224%, Top7 97.775%, Top8 97.932%, Top10 93.085%.
 
-## Wave36 opponent ranking rebuild — STARTING / USER PRIORITY
-- User explicitly decided to review the opponent ranking itself before any selective tail activation, TopN expansion, or stake-allocation research. This supersedes the prior restart point.
-- Objective: improve ordering of the 20 conditional combinations 3-X-Y, especially Top5 capture conditional on actual boat3 win, while retaining current good Top5 hits.
-- Strict selection protocol: February is training/design only; March is OOS model/ranker selection and stability validation. Freeze the new ranker before any Apr-Jun outcome inspection. Apr-Jun is final pristine evaluation only; no retuning after seeing it.
-- Head gate remains frozen Wave36 p3>=0.365448 initially so this experiment isolates opponent-order quality rather than changing head selection.
-- Candidate ranking architectures may use only pre-deadline/static features already available in the all-race source. No closing/settlement odds as ranking features. No realized Apr-Jun result or payout may influence selection.
-- Evaluate on March first: among actual boat3-head cases, actual-pair MRR/mean rank/median rank and Top1/Top3/Top5/Top8/Top10 capture; early/late March stability. Also record regressions where frozen Wave36 Top5 was correct but candidate drops actual pair outside Top5.
-- Only candidate(s) chosen from March may be evaluated on Apr-Jun. Final Apr-Jun comparison must report same rank metrics, Top5 conversion among boat3-head, old-hit retained/lost, old-miss rescued, monthly stability, and optional ROI using unchanged Top5 exact JPY10,000 Dutch solely as evaluation.
-- Production v288 untouched; exact v288 overlap0; Jul/Aug diagnostic only if needed; September forbidden/unread.
+## Prior Wave39 direct pair ranker — COMPLETE / NO_ADOPTION
+- Run34782729676 success; pair45 binary ranker chosen C0.08 from March only.
+- March selected conversion 24/38=63.158% with equal early/late halves.
+- Apr-Jun frozen evaluation:391R/68 hits; conditional conversion68/160=42.5%; ROI70.911%/-1,137,370. Apr95.099%, May64.463%, Jun54.978%. Therefore direct pair ranker is rejected.
+
+## Wave40 blended opponent ranker — RUNNING
+- Purpose: preserve the strong frozen Wave36 conditional multiclass ranking while testing whether March-validated pair information can improve rank order without sacrificing old Top5 hits.
+- Script commit ffe2557a7b618d3c490e97fe09c80d8fad61ff49; workflow commit a9f842c7f935e72a4547e976c246c0fccaac0fea.
+- Run34790604535 workflow research-3head-wave40-blend-ranker currently in progress.
+- Frozen head gate remains Wave36 p3>=0.365448. Static63 baseline score blended with pair45 C0.08 score at alpha baseline weights [0,.25,.5,.75,1].
+- February trains/designs; March OOS selects alpha by worst-half Top5 capture, then old-hit retention, full Top5 capture, MRR. No March money used. Apr-Jun evaluated once after freeze. Jul/Aug diagnostic only.
+- Report March rank metrics and stability; Apr-Jun MRR/mean/median rank/Top1/3/5/8/10, old Top5 retained/lost, old misses rescued, monthly Top5 ROI/profit/maxDD, v288 overlap0.
 
 ## Exact restart point
-1. Inspect current Wave36 conditional ranking implementation/features and available source columns.
-2. Build opponent-ranker candidates using Feb only and select/freeze using March OOS only.
-3. Evaluate the frozen winner on Apr-Jun once; do not retune from Apr-Jun.
-4. Update this handoff after completion with exact commits/run/artifact/results and decision.
+1. Inspect Run34790604535.
+2. If failure, fix implementation plumbing only and rerun; do not change candidate protocol from Apr-Jun results.
+3. If success, record artifact/results and decision here.
+4. If Wave40 does not robustly beat frozen Wave36, continue with a distinct pre-April ranker architecture rather than tuning alpha on Apr-Jun.
