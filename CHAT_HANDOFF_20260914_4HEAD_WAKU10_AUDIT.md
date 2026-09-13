@@ -23,4 +23,17 @@
 3. FULL / NO / COREをApr-Jun同一policyで比較し、Waku10の実寄与を判定する。
 4. 監査完了後、このhandoffに結果・採否・次作業を追記する。
 
-Status: BEFORE_WORK_RECORDED
+## RECOVERY WORK — BEFORE
+
+- Failed run recovered: Waku10 guards and common opponent-context build completed, then the three-variant downstream step failed before summary/artifact upload.
+- Confirmed failure point: FULL_WAKU10 completed its variant scoring and v264 stage, then v267 raised `RuntimeError: no settled rows available for v267`.
+- Therefore there is not yet a valid FULL/NO/CORE comparison result to interpret.
+- This repair is plumbing-only: do not relax/tune model thresholds, do not alter production, and do not use Jul/Aug outcomes or any September outcomes.
+- Immediate work unit:
+  1. inspect v267 input contract and the ablation workflow handoff between v264 and v267;
+  2. fix settlement-row propagation so v267 receives the intended Apr-Jun settled rows under the same frozen policy;
+  3. rerun FULL_WAKU10 / NO_WAKU10 / CORE_WAKU10 through the identical downstream chain;
+  4. recover Apr-Jun race count, 4-head rate, trifecta hit rate and retrospective proxy ROI plus any configured score-distribution stress output;
+  5. append the exact fix, run id, results, decision, and next step here after completion.
+
+Status: RECOVERY_BEFORE_WORK_RECORDED
