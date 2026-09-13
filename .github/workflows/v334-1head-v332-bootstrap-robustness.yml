@@ -1,0 +1,24 @@
+name: v334 1-head v332 bootstrap robustness
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v334_1head_v332_bootstrap_robustness.py'
+      - '.github/workflows/v334-1head-v332-bootstrap-robustness.yml'
+jobs:
+  v334:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy scikit-learn
+      - name: Run v334 bootstrap robustness
+        run: python run_v334_1head_v332_bootstrap_robustness.py
+      - name: Show summary
+        run: cat /tmp/v334/summary_v334.md || true
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v334-1head-v332-bootstrap-robustness
+          path: /tmp/v334/
