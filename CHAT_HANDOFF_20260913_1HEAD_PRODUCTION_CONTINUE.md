@@ -35,18 +35,6 @@ Therefore, to match the backtest, **do not invent a separate post-exhibition v30
 - September outcomes remain unread/outcome-blind
 - v321 Jul/Aug reference validation is complete and cannot tune/promote the model
 
-## Work to do NOW (written before execution)
-1. Treat the existing `diag-1head-pre-20260913.yml` Legacy PRE output as diagnostic only; do not substitute it for v308.
-2. Locate/reuse the v321 causal feature preparation and frozen v317/v318/v320 scoring components so production uses the exact same feature semantics and model rules as the frozen backtest.
-3. Build the smallest **result-blind current-date v308 PRE adapter** that reconstructs scheduled current race-card static fields, strictly prior-day player/history features, v298 threat structure, v305-safe v303 transfer features, and v307 causal features; no `meet_*`, same-race result/exhibition/payout fields.
-4. Fit the head model from historical data exactly as the frozen walk-forward semantics allow for a future date, derive the production head probability cut corresponding to the frozen q=.980 rule from training/OOF data, and compute the frozen opponent confidence/mass needed for the >=.375 gate without using current outcomes.
-5. Assert historical alignment before LIVE use: the adapter/model code must reproduce the frozen v308 345R / 290 head-hit selector when run on the development backtest path, or any difference must be explained and fixed.
-6. Feed only v308-qualified current races through frozen v317 SECOND + v318 THIRD + v320 HYBRID alpha=.70 exactly-3-ticket logic.
-7. Add current trifecta odds retrieval for only those 3 tickets and compute composite odds `1/(1/o1+1/o2+1/o3)`.
-8. Output race, v308 score/gate, 3 tickets, each current odds, composite odds, and BUY/SKIP. Do not implement Dutch staking unless separately requested later.
-9. Fail closed on missing/stale inputs, missing prior history, forbidden columns, or inability to reproduce model semantics. Never silently fall back to Legacy PRE or an older model.
-10. Trigger/verify actual GitHub Actions run IDs and inspect outputs/errors. If technical continuation is clear, write the next intended fix here before changing code/restarting and continue.
-
 ## Backtest-alignment priority
 User instruction: **progress so real production matches the established backtest result/logic.** Production convenience must not redefine the model. The historical reference to preserve is v308 q=.980 + opponent mass>=.375 producing 345R / 290 head hits, followed by the frozen v317/v318/v320 opponent stack.
 
@@ -66,15 +54,18 @@ User instruction: **progress so real production matches the established backtest
 - v308 reference re-confirmed from committed summary: q=.980 + mass>=.375 => 345R / 290 head hits = 84.06%.
 - v320 exact-3 race file confirmed: 345 rows, HYBRID alpha=.70, 139 exact3 hits.
 - Existing result-free official live 3連単 odds fetcher `fetch_live_trifecta_odds.py` confirmed reusable; it requests odds3t only and validates 120 combinations.
+- **v322 completed successfully.** GitHub Actions run **34753932483** / artifact **10316354325**.
+- v322 frozen assertions passed: **345 races / 290 head wins / 139 exact3 hits**.
+- Historical 3-ticket closing-odds coverage: **339/345 = 98.26%**.
+- Evaluable overall: **339R / 136 hits = 40.12% / ROI 91.27%** under the notional composite-odds accounting convention.
+- Descriptive threshold diagnostics: >=2.5 gave 114R / ROI 100.12%, >=3.0 gave 59R / ROI 100.80%, but these are reused Feb-Jun development evidence and are **not promoted** as LIVE cutoffs.
 
-## NEXT CONCRETE ACTION — v322 (written before code change)
-Create `run_v322_1head_composite_odds_backtest.py` and a dedicated GitHub Actions workflow.
-
-Purpose:
-1. Load the **already frozen** `analysis_v320_1head_exact3_ticket_policy_best_race.csv` (must assert exactly 345 races, 290 head hits, 139 exact3 hits, HYBRID alpha=.70, exactly 3 unique tickets/race).
-2. Load historical closing trifecta odds using the existing audited `analyze_v205_3head_operational_replay.load_odds()` unified odds source. Odds are settlement/diagnostic only; they must not change v308/v317/v318/v320 race or ticket selection.
-3. For each race with all three ticket odds available, calculate only the 3-ticket **composite odds** `1/(1/o1+1/o2+1/o3)`; do NOT calculate or output Dutch stakes.
-4. For backtest accounting, use the user's composite-odds convention: a hit has notional return `10000 * composite_odds`, a miss has return 0, every evaluable race has notional cost 10000. This is an evaluation convention only, not a staking instruction.
-5. Output race-level CSV, monthly summary, overall ROI/coverage, and a descriptive composite-odds threshold grid. Threshold diagnostics are development evidence only and must NOT be silently promoted into a LIVE BUY cutoff.
-6. Assert that odds availability cannot alter the frozen 345-race model cohort; report missing-odds races separately rather than dropping them from model metrics.
-7. Trigger the workflow and verify its real Actions run ID/result before proceeding to the current-date production adapter.
+## NEXT CONCRETE ACTION — current-date frozen production adapter (written before code change)
+1. Locate the exact reusable v308 feature/model path plus v321 frozen v317/v318/v320 scoring components already in repo.
+2. Inspect current result-blind 2026-09-13 input layout and any existing PRE diagnostic workflow/artifact source. Do not read September outcomes.
+3. Implement the smallest adapter that scores current scheduled races with **v308 semantics**, using only scheduled/static and strictly prior-day information; forbid `meet_*` and same-race exhibition/result/payout fields.
+4. Derive/freeze the production v308 score cutoff and opponent-mass gate exactly from the historical frozen path; no retuning on Jul/Aug/September.
+5. Assert historical alignment before using the adapter for current races: same frozen development selector must remain 345R / 290 head hits.
+6. Feed only current v308-qualified races into frozen v317 SECOND + v318 THIRD + v320 HYBRID alpha=.70 exactly 3 tickets.
+7. Fetch current odds only for those three tickets, compute composite odds, and output race / v308 score / mass / 3 tickets / each odds / composite odds / BUY-SKIP status. Until a prospective BUY cutoff is legitimately frozen, BUY-SKIP must be fail-safe and must not silently use the descriptive v322 threshold grid.
+8. Create/modify the dedicated GitHub Actions workflow, then verify a real run ID, inspect logs/artifacts, and fix technical failures. Before each fix/restart, update this handoff first.
