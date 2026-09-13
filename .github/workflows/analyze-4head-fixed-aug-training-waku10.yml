@@ -1,0 +1,29 @@
+name: analyze-4head-fixed-aug-training-waku10
+on:
+  push:
+    paths:
+      - analyze_4head_fixed_aug_training_waku10_20260914.py
+      - .github/workflows/analyze-4head-fixed-aug-training-waku10.yml
+  workflow_dispatch:
+jobs:
+  analyze:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml tabulate
+      - run: python -m py_compile analyze_4head_fixed_aug_training_waku10_20260914.py
+      - run: python analyze_4head_fixed_aug_training_waku10_20260914.py
+      - run: >-
+          python -c "import json; a=json.load(open('audit_4head_fixed_aug_training_waku10_20260914.json')); assert a['production_modified'] is False; assert a['target_matrix_reused_exactly'] is True; assert a['train_labels_identical'] is True; assert a['target_R']>4000; print(a['canonical_train']); print(a['public_only_train'])"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-fixed-aug-training-waku10
+          path: |
+            analysis_4head_fixed_aug_training_waku10_20260914.csv
+            analysis_4head_training_feature_diff_20260914.csv
+            audit_4head_fixed_aug_training_waku10_20260914.json
+            summary_4head_fixed_aug_training_waku10_20260914.md
