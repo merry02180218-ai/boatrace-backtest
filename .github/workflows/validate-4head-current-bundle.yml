@@ -22,4 +22,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - run: pip install numpy
       - run: python verify_4head_current_bundle.py
