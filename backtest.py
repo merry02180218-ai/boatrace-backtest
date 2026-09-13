@@ -1,13 +1,22 @@
 from __future__ import annotations
 import csv, io, math, os, urllib.request
+from pathlib import Path
 from datetime import date, timedelta
 from collections import defaultdict, Counter
 
 BOATRACECSV_REF=os.environ.get('BOATRACECSV_REF','main')
 BASE=f'https://raw.githubusercontent.com/BoatraceCSV/boatracecsv.github.io/{BOATRACECSV_REF}/'
+ROOT=Path(__file__).resolve().parent
 START=date(2026,8,3); END=date(2026,9,2)
 
 def fetch(path):
+    # Canonical historical Waku10 is materialized in this repository.
+    # Always prefer the local restored copy so every model/audit sees the same lineage.
+    if path.startswith('data/programs/waku10/'):
+        p=ROOT/path
+        if p.is_file():
+            try:return p.read_text(encoding='utf-8-sig')
+            except Exception:return ''
     try:
         with urllib.request.urlopen(BASE+path, timeout=30) as r:
             return r.read().decode('utf-8-sig')
@@ -147,9 +156,7 @@ def main():
             elif c['model']=='4カド':
                 c['head_hit']=int(win==4 and kim in ('まくり','まくり差し'))
                 c['involved_hit']=int(win==4 or second==4)
-            else:
-                c['head_hit']=int(win==5)
-                c['involved_hit']=int(win==5 or second==5)
+            else: c['head_hit']=int(win==5);c['involved_hit']=int(win==5 or second==5)
             candidates.append(c)
         daily+=timedelta(days=1)
 
