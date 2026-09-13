@@ -32,18 +32,44 @@
 - actual 3-head wins in usable rows 4,040.
 - Decision: `ALLRACE_SETTLED_SOURCE_READY`.
 
-## Wave22 — historical closing trifecta odds — RUNNING
-- Historical source implementation reused from v102: Kyotei24 Odds Bank pages explicitly labelled `締切時オッズ`, parsing all 120 trifecta odds per race.
-- New script: `research_v289_3head_wave22_closing_trifecta_odds.py`, commit `2f8f8f377204ff4feb424303c7dfc8d4827bfe21`.
-- Wave22 is chained after Wave21 in `research_v289_3head_wave21_allrace_source_build.py`, commit `195e14da883d291b633dbe4deaf0bd5a57298cd5`.
-- Current Run: **`34752573368`**, workflow `research-3head-wave21-allrace-source-build`, head `195e14da883d291b633dbe4deaf0bd5a57298cd5`.
-- Latest state: **in_progress**; Python source-build step is running. It will rebuild Wave21, then execute Wave22 and merge closing odds into the all-race source.
-- Target: audit odds available rows, full-120 rows, coverage share, then use closing odds only for JPY10,000 Dutch staking and realized ROI evaluation.
+## Wave22 — FINAL historical closing trifecta odds
+- Run `34752573368`, workflow `research-3head-wave21-allrace-source-build`, head `195e14da883d291b633dbe4deaf0bd5a57298cd5`: success.
+- Artifact `3head-wave21-allrace-source-build`, ID `10316748754` (Wave21 source now enriched with closing odds).
+- Source: Kyotei24 Odds Bank historical 3T pages explicitly labelled `締切時オッズ`.
+- odds available: **31,605/32,111 = 98.424%**.
+- full 120 trifecta odds: **31,605/32,111 = 98.424%**.
+- Monthly coverage:
+  - 2026-02: 4021/4100 = 98.07%
+  - 2026-03: 4523/4607 = 98.18%
+  - 2026-04: 4165/4244 = 98.14%
+  - 2026-05: 4731/4832 = 97.91%
+  - 2026-06: 4418/4488 = 98.44%
+  - 2026-07: 4877/4920 = 99.13%
+  - 2026-08: 4870/4920 = 98.98%
+- Decision: `CLOSING_ODDS_SOURCE_READY`.
+- Closing odds remain excluded from prediction features; use only after selection for staking/post-hoc ROI.
+
+## Wave23 — RUNNING full-population temporal walk-forward
+- Script commit `aabf34f626dc2c66af7be78b47ba6557eef43e9b`: `research_v289_3head_wave23_fullpop_walkforward.py`.
+- Self-contained conservative old-v243 exclusion runner commit `cfee48015a7791f1138f5919c97ad8004707678d`.
+- Auto-chain commit `3d27fa6a1c215346693b92d30a07db10a5ced135` runs Wave23 after Wave21+22 and folds Wave23 metrics into the persisted Wave21 artifact JSON/MD.
+- Current Run: **`34754875342`**, workflow `research-3head-wave21-allrace-source-build`, head `3d27fa6a1c215346693b92d30a07db10a5ced135`.
+- Latest state at launch: **queued**.
+- Wave23 design:
+  - model uses only pre-deadline card/program features;
+  - all old v243 678 race codes are conservatively excluded, which is a superset of legacy v288 94R and therefore guarantees legacy overlap = 0;
+  - exact closing 120 odds are used only after race selection;
+  - JPY10,000/race allocated across all twenty `3-x-y` exact orders in JPY100 Dutch units;
+  - realized return uses official exact trifecta payout;
+  - temporal tests Apr/May/Jun use prior-month-only training;
+  - threshold selection is Apr-Jun only;
+  - Jul/Aug are one frozen-model NON-PRISTINE shadow evaluation and may not alter threshold;
+  - decision can only become SHADOW_CANDIDATE if pristine ROI reaches/exceeds legacy baseline and has zero red pristine months; otherwise NO_ADOPTION.
 
 ## Exact restart point
-1. Inspect Run `34752573368` first.
-2. If success, inspect Wave22 figures from job log/artifact: odds available, full 120 odds coverage, failures by date/venue/source reason.
-3. If Wave22 coverage is acceptable, immediately launch full-population temporal/walk-forward 3-head research using only pre-deadline features; use closing odds only after selection for Dutch allocation/evaluation.
-4. If Wave22 fails, inspect logs, fix parser/source/retry issues without weakening no-leakage/date guards, rerun automatically.
-5. For candidate research report R, hits, stake, payout, ROI, profit, monthly, min-month ROI, red months, max DD, overlap, combined baseline+addon.
-6. Jul/Aug remain NON-PRISTINE; September outcomes forbidden; legacy v288 94R is baseline/floor; add-on overlap zero.
+1. Inspect Run `34754875342` first.
+2. If failed, inspect job logs and fix/rerun automatically without weakening date/no-leakage/zero-overlap guards.
+3. If success, read the Wave23 section from the artifact JSON/MD and report exact pristine Apr-Jun R/hits/stake/payout/ROI/profit/monthly/min-month/red-months/max-DD/overlap/combined plus Jul-Aug NON-PRISTINE shadow metrics.
+4. If Wave23 is `NO_ADOPTION`, automatically launch a genuinely distinct next family (latent regime / nearest-neighbor analog / opponent-ticket rerank) rather than simple threshold loosening.
+5. If `SHADOW_CANDIDATE`, do not replace v288 automatically; validate separately.
+6. Jul/Aug remain NON-PRISTINE; September outcomes forbidden; legacy v288 94R remains the baseline/floor; add-on overlap zero.
