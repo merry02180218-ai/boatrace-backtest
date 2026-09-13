@@ -83,3 +83,50 @@ Do now:
 4. BEFORE creating or editing production code, append a WORK UNIT 2 entry naming the exact files to add/change and the exact regression/current-run success criteria.
 
 Success for this work unit: exact implementation locations and reusable functions are identified from latest GitHub; no model code is changed yet. If interrupted, resume from item 1 above.
+
+## WORK UNIT 2026-09-13-2 — v323 frozen LIVE adapter — written BEFORE implementation
+Work Unit 1 is complete. Exact implementation locations were identified:
+- v308 head path: `run_v308_1head_volume_opponent_joint.py` + `analyze_v294_1head_verified_prepost_research.py` + v296/v303/v305/v307 helpers.
+- frozen SECOND: `run_v317_1head_opponent_error_features.py::add_engineered(...,'OUTER')` with `run_v311_1head_opponent_second_family_autoresearch.py::p2_predict_explicit(...,1.0,None,{'START'})`.
+- frozen THIRD: `run_v318_1head_opponent_third_rebuild.py::pc_predict(...,.1,'DROP_START')`.
+- frozen 3-ticket policy: v320 semantics using `run_v299_1head_trifecta3_policy_search.py` HYBRID + alpha=.70.
+- official result-free odds source: `fetch_live_trifecta_odds.py`.
+- current 2026-09-13 result-blind card source: artifact **10302229729**, path `current_input/v288/20260913/race_cards.csv`.
+
+### Files to add/change now
+1. ADD `run_v323_1head_frozen_live_adapter.py`.
+2. ADD `.github/workflows/live-1head-v323-20260913.yml`.
+3. Do not modify frozen v308/v317/v318/v320 research scripts unless a technical incompatibility is proven; adapt around them.
+
+### v323 causal/live contract
+- Training/history may use chronologically prior labeled data through 2026-08-31, but Jul/Aug remain NON-PRISTINE and are never used to tune q, mass cutoff, strategy, alpha, or BUY threshold.
+- **No September result or payout endpoint/file may be requested or read.** For Sep1-target history, player result state is not advanced from outcomes. The target row is inference-only.
+- Same-race exhibition/current actual-entry must not enter v308.
+- `meet_*` is forbidden in fitted head/opponent features and suffixes.
+- v308 absolute `hcut` must be derived only from committed `analysis_v308_1head_volume_opponent_joint_pred.csv` at q=.98; opponent mass cutoff remains exactly .375.
+- Current base opponent mass must be rebuilt for month `2026-09` with v300 BASE SECOND L2=10/non-aug + BASE THIRD L2=.3/non-aug, not by calling v303.opponent_mass which is hard-wired to Feb-Jun.
+- Current frozen SECOND/THIRD are trained only on months `< 2026-09`; current Sep13 rows are inference-only.
+- Missing current p3/p4 head-risk inputs must use the existing v310 zero-sentinel + availability-flag behavior; no future backfill.
+- v320 outputs exactly 3 unique `1-x-y` tickets with HYBRID alpha=.70.
+- Current odds must come only from official `odds3t`; incomplete 120-combination snapshot fails closed.
+- Composite odds = `1/(1/o1+1/o2+1/o3)`.
+- No reused v322 threshold is promoted. Output status must remain fail-safe, e.g. `SKIP_NO_FROZEN_ODDS_CUTOFF`, until a prospective BUY cutoff is explicitly frozen later.
+
+### Mandatory regression/current-run success criteria
+A. Before current scoring, v323 must assert the committed frozen development artifacts still equal:
+- 345 selected races;
+- 290 boat-1 wins;
+- 139 v320 exact3 hits;
+- strategy HYBRID, alpha=.70, exactly 3 unique boat-1-head tickets/race.
+
+B. Current 2026-09-13 execution must:
+- read no September outcomes/payouts;
+- score all usable scheduled races with v308-compatible PRE features;
+- output `race_code, venue, race, p_head, hcut, opp_mass, selected`;
+- for every selected race output exactly 3 frozen tickets;
+- when complete odds are available, output each ticket odds + composite odds;
+- output fail-safe BUY/SKIP status without inventing a cutoff.
+
+C. Dedicated GitHub Actions workflow must actually run. Record a real Run ID and inspect job status/logs/artifact. If it fails, BEFORE changing code/workflow append the exact intended fix as WORK UNIT 3 (or later) here, then fix and rerun.
+
+If interrupted now: resume by creating `run_v323_1head_frozen_live_adapter.py` first, then its workflow. Do not redo research or change the frozen model.
