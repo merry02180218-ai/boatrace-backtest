@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# canonical Waku10 re-audit trigger 2026-09-14; analysis logic unchanged
 # Outcome-independent drift audit; target-period results are intentionally not loaded.
 from collections import defaultdict
 from datetime import date,timedelta
