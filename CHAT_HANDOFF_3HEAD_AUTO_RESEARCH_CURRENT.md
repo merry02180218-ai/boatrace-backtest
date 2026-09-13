@@ -2,7 +2,7 @@
 
 ## Policy
 - Branch research/3head-v289-addon-expansion; newest GitHub state wins.
-- Fixed v288 baseline 94R / 52 hits / ROI 172.560638%.
+- Fixed v288 baseline 94R /52 hits / ROI172.560638%.
 - Scope Feb-Aug 2026 full six-boat population; exclude exact v288 94R.
 - Pre-deadline features only. Settlement/closing odds eval/staking only.
 - JPY10,000 per selected race, Dutch. Jul/Aug NON-PRISTINE. September forbidden.
@@ -12,25 +12,28 @@
 
 ## Wave36S — RESEARCH_CANDIDATE
 - Run 34785370650; artifact 10326411657.
-- Apr-Jun: 358R /81 hits / ROI116.938% / +606,380 / head rate41.341% / conversion54.730% / maxDD625,060.
-- Monthly ROI: Apr175.280 / May99.502 / Jun73.368 / Jul86.716 / Aug107.155.
-- Jul-Aug: 272R /72 hits / ROI97.386% / -71,090. v288 overlap0.
+- Apr-Jun 358R /81 hits / ROI116.938% / +606,380 / head41.341% / conversion54.730% / maxDD625,060.
+- Monthly ROI Apr175.280 / May99.502 / Jun73.368 / Jul86.716 / Aug107.155.
 
 ## Wave36S-A audit — COMPLETE
-- Fixed audit Run 34785891378 success; Job 103801181659; artifact 10326059528.
-- Wave36S is always a stricter subset of raw Wave36: adds 0 races.
-- Removed subsets: May 20R ROI124.9% +49,800; Jun 13R ROI43.777% -73,090; Jul 24R ROI30.121% -167,710; Aug 31R ROI61.784% -118,470.
-- Apr-Jun payout concentration: removing largest win leaves ROI100.109%; removing top3 leaves86.201%; removing top5 leaves80.221%.
-- Apr-Jun first half: 179R /49 hits / ROI164.355% / +1,151,960 / head45.810% / conversion59.756%.
-- Apr-Jun second half: 179R /32 hits / ROI69.521% / -545,580 / head36.872% / conversion48.485%.
-- Conclusion: aggregate edge is tail-dependent and late-pristine performance collapses. No production adoption yet.
+- Run 34785891378 success; artifact 10326059528.
+- Wave36S adds no races vs raw Wave36; it only removes races.
+- Removed subsets: May20R ROI124.9% +49,800; Jun13R ROI43.777% -73,090; Jul24R ROI30.121% -167,710; Aug31R ROI61.784% -118,470.
+- Apr-Jun removing largest win leaves ROI100.109%; removing top3 leaves86.201%.
+- Apr-Jun halves: early179R ROI164.355% / +1,151,960 / head45.810% / conversion59.756%; late179R ROI69.521% / -545,580 / head36.872% / conversion48.485%.
 
-## Wave36S-B descriptive diagnosis — STARTING
-- Preserve exact Wave36S selections/model; diagnostic only.
-- Compare early vs late Apr-Jun on the 63 static pre-deadline features, raw/calibrated p3, head rate, Top5 conversion, payout/return distribution.
-- Rank standardized feature drift; summarize by ST, racer strength, motor, boat and relative-gap families.
-- Diagnose whether late decline is mainly head-selection, order-conversion, payout compression, or combination.
-- Do not tune any threshold/filter from Apr-Jun outcomes. Any mitigation must later be designed from Feb/March evidence.
+## Wave36S-B descriptive diagnosis — COMPLETE
+- Run 34786166134 success; Job 103801930864; artifact 10325708932; artifact SHA256 c7b39093ee91ae3ae73157b9fefe11405753e5763401952531c8621b617e5336.
+- Rules unchanged; 63 features; v288 overlap0; September forbidden.
+- Early vs late Apr-Jun confirms combined degradation: head rate 45.81% -> 36.87%, Top5 conversion 59.76% -> 48.48%, median positive return 38,160 -> 35,275 yen; ROI 164.36% -> 69.52%.
+- Mean raw p3 barely moved: 0.45439 early vs 0.45291 late. Mean calibrated p3 only modestly fell: 0.52505 -> 0.50897. Therefore score level itself did not warn adequately about the regime change.
+- Largest feature drifts were racer-strength relative gaps becoming more favorable to boat3 while realized performance worsened: b3-minus-mean national 2-rate effect +0.442 SD; national 3-rate +0.399; b3-vs4 national 3-rate +0.387; b3-vs2 local 2-rate +0.384; b3-vs2 national 2-rate +0.364.
+- Motor signal moved the opposite way: b3-vs6 motor 2-rate -0.339 SD; b3 own motor 2-rate -0.324; b3-vs6 motor 3-rate -0.284; b3 own motor 3-rate -0.276. ST drift smaller; top ST effect b3-vs2 national avg ST -0.284 SD. Boat-number feature drift small.
+- Family mean absolute drift: racer_strength 0.228 SD, motor 0.216, ST 0.114, boat 0.040.
+- Raw p3 bands deteriorated broadly. Especially late p3 (0.5,0.6] = 27R / head33.33% / conversion22.22% / ROI32.05%, versus early 23R / head47.83% / conversion72.73% / ROI183.5%. Late p3>0.6 only 9R / head33.33% / ROI93.13%.
+- Diagnosis: collapse is not just payout compression. It is primarily a combination of head-selection miscalibration and order-conversion failure, with some payout softening. The model increasingly over-trusted racer-strength advantages while motor quality weakened; p3 did not reflect that temporal mismatch.
+- No production adoption. Do not derive a cutoff from Apr-Jun.
 
-## Restart
-Implement Wave36S-B diagnosis, run CI, record exact results, then define the safest pre-April-designed next experiment.
+## Safest next experiment
+- Design a new robustness modifier using Feb/March only: test predeclared interaction/regularization that reduces head confidence when racer-strength advantage is high but motor advantage is weak, because this failure pattern is descriptive only from Apr-Jun.
+- Freeze any such rule from Feb/March, then evaluate Apr-Jun pristine and Jul/Aug NON-PRISTINE without retuning.
