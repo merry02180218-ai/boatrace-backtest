@@ -1,6 +1,6 @@
 # CHAT HANDOFF — HEAD4 PRE 0.03-0.05 RESEARCH
 
-Status: **FIXED AUGUST INPUT / TRAINING-ONLY WAKU10 AUDIT IN PROGRESS**
+Status: **CANONICAL WAKU10 HEAD4 PRISTINE RE-EVALUATION STARTED**
 
 ## Frozen production
 Production remains unchanged (`HEAD4_V291_COMP7`). July/August 2026 remain NON-PRISTINE; September remains outcome-blind for tuning/model selection.
@@ -28,24 +28,30 @@ Production remains unchanged (`HEAD4_V291_COMP7`). July/August 2026 remain NON-P
 - Regime drift rerun: Run `34781297306`, Job `103788675802`: SUCCESS.
 - Production unchanged.
 
-## Important correction / open question
-User correctly noted that July/August Waku10 already existed historically, so August raw target inputs should not materially change merely because canonical historical Waku10 was materialized. The corrected Jan-31 frozen model can still change because its Dec-Jan training features changed after historical Waku10 restoration. This needs a direct controlled audit rather than inference.
+## Fixed August / training-only Waku10 audit — COMPLETE
+- Run `34782285223`, Job `103791354620`: SUCCESS.
+- Artifact `head4-fixed-aug-training-waku10`, ID `10325805350`, SHA256 `415b21de088d96f7d0c3cb209a13eab6d75e9beb5394e7df0393031121e328b1`.
+- August target matrix hash fixed and reused exactly: `29019abd13ed3673901aeb21cf9f1138dafd713bf416a6264f327bc8e85bbc59`.
+- Canonical-training model: PRE mean .10042, median .08335, PRE .03-.05 = 843R / 29 wins = 3.44%.
+- Public-only-training model: PRE mean .01297, median .00587, PRE .03-.05 = 233R / 54 wins = 23.18%.
+- PRE .03-.05 overlap = 0R; mean absolute PRE shift = .08746; max shift = .40360.
+- Public-only historical Waku10 coverage currently observed for Dec-Jan = 0/62 days, 0 rows.
+- Conclusion: August raw target data is not the cause of the old anomaly; missing training-period Waku10 changed the learned score scale/coefficients.
 
-## CURRENT WORK-START RECORD — written BEFORE implementation
-Goal: isolate the effect of TRAINING-period Waku10 restoration while holding August 2026 target features exactly fixed.
+## CURRENT WORK-START RECORD — written BEFORE implementation/run
+Goal: re-evaluate HEAD4 from scratch on corrected canonical Waku10, prioritizing truly PRISTINE Feb-Jun 2026 evidence and treating Jul-Aug only as descriptive NON-PRISTINE checks.
 
 Exact plan:
-1. Build an audit-only script; production code/thresholds remain untouched.
-2. Construct one single canonical August 2026 feature matrix and freeze it in memory. Use exactly the same target rows/features for both model variants.
-3. Fit two Jan-31 PRE models on the same Dec-2025 through Jan-2026 race labels:
-   - `CANONICAL_TRAIN`: local restored canonical Waku10 for training.
-   - `PUBLIC_ONLY_TRAIN`: bypass local canonical Waku10 only for training-period Waku10 reads and fetch the public BoatraceCSV historical path, reproducing the old sparse lineage as closely as currently available. No imputation/fabrication.
-4. Verify training race codes/labels are identical between variants and report which raw/derived training features differ, including missing/default shares.
-5. Score the exact same frozen canonical August matrix with both fitted models. Compare PRE mean/median, PRE-bin counts, PRE .03-.05 membership overlap, entries gained/lost, and 4-head descriptive hit rates. July/August remain NON-PRISTINE; outcomes are descriptive only.
-6. Also report model coefficient/scaler shifts so we can identify which restored training features move the PRE scale.
-7. Fail closed if public-only training source cannot be reconstructed or if August target feature hashes differ between variants.
-8. Run CI, inspect logs/artifact, fix automatically on audit errors.
-9. AFTER completion update this handoff with Run/Job/Artifact IDs/hash, exact controlled results, conclusion, production status, and restart point.
+1. Keep production `HEAD4_V291_COMP7` unchanged during the entire reevaluation.
+2. Use canonical restored Waku10 for every historical read. Do not reuse pre-canonical backtest conclusions for model decisions.
+3. Reconstruct/evaluate the current HEAD4 production decision chain on Feb-Jun PRISTINE data: PRE, POST, ENV/A logic, opponent selection, v291 Top4/composite-odds market logic where verified historical closing odds exist.
+4. Report race count, bet count, hit count/rate, payout/ROI under the current 10,000 JPY/race Dutch definition whenever verified closing 120/120 trifecta odds are available; otherwise mark ROI unavailable rather than substitute/fabricate odds.
+5. Re-evaluate score/threshold stability by month and aggregate Feb-Jun. Include production S/A eligibility counts and performance, not only PRE .03-.05 research bands.
+6. Use July/August only as NON-PRISTINE descriptive stress checks. They must not drive threshold/feature/model selection.
+7. Compare current production model against any immediately adjacent/frozen candidate versions only if those versions can be reconstructed outcome-blind from prior pristine rules. No new tuning on Jul/Aug/Sep outcomes.
+8. September remains outcome-blind and must not be used for tuning/model selection.
+9. Run via GitHub Actions, inspect logs/artifacts, and automatically fix/re-run audit errors.
+10. AFTER completion, update this handoff with exact Run/Job/Artifact IDs/hashes, Feb-Jun results, Jul-Aug descriptive checks, conclusions, whether production should remain unchanged, and exact restart point.
 
 ## Restart protection
-If interrupted, resume from fixed-August-input / training-only Waku10 controlled audit. Do not attribute August changes to target Waku10 unless the fixed-input audit proves it.
+If interrupted, resume from canonical-Waku10 HEAD4 pristine reevaluation. The next decision must be based on Feb-Jun PRISTINE evidence, not on the old sparse-public-Waku10 results.
