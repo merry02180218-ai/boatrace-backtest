@@ -1,0 +1,35 @@
+name: v322-1head-composite-odds
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v322_1head_composite_odds_backtest.py'
+      - '.github/workflows/v322-1head-composite-odds.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -q numpy pandas scikit-learn requests beautifulsoup4
+      - name: Run frozen 1-head composite-odds backtest
+        run: python run_v322_1head_composite_odds_backtest.py
+      - name: Upload v322 results
+        uses: actions/upload-artifact@v4
+        with:
+          name: v322-1head-composite-odds
+          if-no-files-found: error
+          path: |
+            analysis_v322_1head_composite_odds_backtest.csv
+            analysis_v322_1head_composite_odds_missing.csv
+            analysis_v322_1head_composite_odds_monthly.csv
+            analysis_v322_1head_composite_odds_threshold_grid.csv
+            summary_v322_1head_composite_odds_backtest.md
