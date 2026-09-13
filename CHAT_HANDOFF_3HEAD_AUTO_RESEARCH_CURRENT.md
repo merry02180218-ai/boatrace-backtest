@@ -1,52 +1,31 @@
 # CHAT HANDOFF — 3HEAD AUTO RESEARCH CURRENT
 
 ## Policy
-- Branch: `research/3head-v289-addon-expansion`; newest GitHub state wins.
-- Legacy v288 fixed baseline: 94R / 52 hits / stake 940,000 / payout 1,622,070 / profit +682,070 / ROI 172.560638%.
-- Research universe: every available six-boat race 2026-02-01 through 2026-08-31 from BoatraceCSV `race_cards`.
-- Add-ons exclude only the exact v288 operational 94-race baseline and must have zero overlap with it.
-- Jul/Aug are NON-PRISTINE shadow only. September outcomes forbidden.
-- Prediction features are pre-deadline only. Result/payout/settlement fields are evaluation-only. Closing trifecta odds are staking/post-hoc ROI only.
-- Current leak-free feature family uses exactly 63 static card-only features; all `節D` / current-meet result/ST fields are forbidden.
-- Missing required current input => fail closed. Stake JPY10,000/race with Dutch allocation.
+- Branch research/3head-v289-addon-expansion; newest GitHub state wins.
+- Fixed v288 baseline: 94R / 52 hits / ROI 172.560638%.
+- Research scope: all available six-boat races Feb-Aug 2026 minus exact v288 94R only.
+- Jul/Aug NON-PRISTINE shadow only; September outcomes forbidden.
+- Prediction uses exactly 63 static pre-deadline features. Closing odds are staking/evaluation only.
+- Stake JPY10,000 per selected race with Dutch allocation; selected overlap with v288 must be zero.
 
-## Stable source milestones
-- Wave20 Run `34749917116`: success; full six-boat universe 32,111R.
-- Wave21 Run `34751314113`: exact settlement usable 31,518/32,111 = 98.153%.
-- Wave22 Run `34752573368`: full 120 closing trifecta odds 31,605/32,111 = 98.424%.
-- Exact v288 94R baseline code list: `v288_operational_pre_replay_94_baseline_codes.csv`.
-- Correct scope from Wave32 onward = Wave20 full six-boat population minus exact v288 operational 94R only.
+## Wave34 family
+- Wave34 Run 34768428513: Apr-Jun 386R / 53 hits / ROI 84.243%; Apr 96.157 / May 66.650 / Jun 90.880.
+- Wave34b Run 34769342335: Apr-Jun 387R / 54 hits / ROI 85.449%; Apr 94.839 / May 73.993 / Jun 87.591.
+- Wave34c Run 34769751846: success; artifact 3head-wave34c-loss-filter ID 10321796538.
+- Wave34c March: 45R / 14 hits / ROI 189.300%. Loss-risk q=1.00, therefore loss filter was effectively non-binding.
+- Wave34c Apr-Jun: 381R / 54 hits / ROI 86.794% / profit -503,130 yen.
+- Wave34c monthly ROI: Apr 95.734 / May 74.626 / Jun 89.808. Combined v288 + holdout ROI 103.767%, profit +178,940 yen.
+- Wave34 -> 34b -> 34c pristine ROI improved 84.243 -> 85.449 -> 86.794, so continue this family despite NO_ADOPTION.
 
-## Wave34 — FINAL prototype-distance
-- Run `34768428513`: Apr-Jun 386R / 53 hits / ROI 84.243% / profit -608,230 yen.
-- Apr 96.157% / May 66.650% / Jun 90.880%; combined v288 + holdout ROI 101.538% / +73,840 yen.
-- NO_ADOPTION but retained as promising research family.
-
-## Wave34b — FINAL prototype-stability extension
-- Run `34769342335`: success; artifact `3head-wave34b-prototype-stability` ID `10321421797`.
-- March fixed gate from Feb-only: prototype_mean>=0.233221, agreement>=0.55, top3; 45R / 14 hits / ROI 189.300%.
-- Apr-Jun pristine holdout: 387R / 54 hits / ROI 85.449% / profit -563,130 yen.
-- Monthly: Apr 107R / 15 hits / ROI 94.839% / -55,220; May 118R / 17 hits / ROI 73.993% / -306,880; Jun 162R / 22 hits / ROI 87.591% / -201,030.
-- Min month 73.993%; red months 3; max DD 964,000 yen.
-- Jul-Aug NON-PRISTINE shadow: 458R / 66 hits / ROI 75.338% / -1,129,530 yen.
-- Combined baseline + holdout: 481R / ROI 102.473% / profit +118,940 yen.
-- Delta vs Wave34: +1.206 ROI pt / +45,100 yen / May +7.343 ROI pt.
-- Exact v288 overlap 0. Decision NO_ADOPTION.
-- Interpretation: stability ensemble improves Wave34 modestly and improves May materially, so continue this family.
-
-## Wave34c — NEXT loss-risk filter on Wave34b
-- User requested continued research on Wave34 family.
-- Preserve Wave34b prototype mean/agreement score and exact-order top-K logic.
-- Add a separate loss-risk / false-positive filter trained only on information available before the pristine period. Do not use Apr-Jun labels or ROI for tuning.
-- Feb is model training; March is the only gate/filter selection month. Freeze all thresholds before Apr-Jun.
-- Candidate filter should learn which high prototype-score races fail to become 3-head, using only the same 63 static pre-deadline features plus Wave34b score/agreement diagnostics derived from historical training.
-- Keep selection sparse; compare removing the highest predicted-loss tail from the fixed Wave34b March-qualified population while preserving a minimum March sample floor.
-- Primary comparison: Apr-Jun ROI/profit, especially May ROI vs Wave34b 73.993%, while not materially damaging Apr/Jun. Report max DD and combined v288 ROI.
-- Jul/Aug NON-PRISTINE shadow only; September forbidden; closing odds staking-only; exact v288 overlap must be 0.
+## Wave34d — NEXT
+- User requested continued research.
+- Preserve prototype-distance family. Test feature-group prototype decomposition rather than another generic loss filter.
+- Deterministically split the same 63 static features into boat-3 centered, inner boats 1/2, outer boats 4/5/6, and global/non-slot groups where possible.
+- Compute positive-vs-negative prototype-distance score per group plus consensus/agreement across groups.
+- Feb trains; March alone selects a fixed sparse gate and top-K. Apr-Jun remains untouched pristine evaluation. Jul-Aug shadow only.
+- Goal: exceed Wave34c Apr-Jun ROI 86.794%, especially May 74.626%, without a trivial sample.
 
 ## Exact restart point
-1. Implement and launch Wave34c loss-risk filter extension.
-2. If failed, inspect logs, fix automatically, rerun without weakening guards.
-3. If success, compare directly with Wave34 and Wave34b: March gate/filter, Apr-Jun R/hits/ROI/profit/monthly/min month/red months/max DD, Jul-Aug shadow, overlap, combined baseline.
-4. Adoption uses pristine Apr-Jun only; Jul/Aug cannot rescue weak results.
-5. If Wave34c improves, continue targeted prototype-distance refinement rather than switching away immediately.
+1. Implement and launch Wave34d feature-group prototype decomposition.
+2. If failed, inspect logs and fix automatically without weakening guards.
+3. Compare Wave34d directly against Wave34/34b/34c; adoption uses Apr-Jun only.
