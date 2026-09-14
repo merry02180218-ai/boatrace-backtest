@@ -33,56 +33,59 @@ Evidence continues to indicate the principal blocker is tracker identity/path pr
 - v14 prediction-local diversification: unstable; one weak Kiryu6 acceptance only.
 - v15 immutable-anchor lattice + beam: all four accepted=false.
 - v16 motion-aware reranking: all four failed; candidate generation still depended on prior hypothesis.
-- v17 fixed state-independent candidate graph + temporal fleet DP: completed and rejected below.
+- v17 fixed state-independent candidate graph + temporal fleet DP: all four failed; each frame still had 96 safe states but globally pruned states lost coherent paths.
+- v18 hypothesis-diverse fixed-state DP: completed and rejected below.
 
-## v17 completed audit — authoritative
-File `track_exhibition_boats_v17.py`.
-Regression workflow `.github/workflows/regress-exhibition-seed17-track17.yml`.
-Run **`34823290910`**.
+## v18 completed audit — authoritative
+File `track_exhibition_boats_v18.py`, implementation commit `06595fa7358635bb8a3ff61bc3d96e2cc7beaeae`.
+Regression workflow `.github/workflows/regress-exhibition-seed17-track18.yml`, workflow commit `ceff05bd59a0d391c0933fee61028f9dbea6d1d5`, trigger commit `5849d9d3a96feaa0e816b280a8e4675a26e3e566`.
+Run **`34826924155`**.
 Artifacts:
-- Kiryu12 varied: `10338468885`
-- Kiryu6: `10338559298`
-- Kiryu3: `10339073552`
-- Kiryu12 standard: `10339452028`
+- Kiryu12 standard: `10340945535`
+- Kiryu12 varied: `10340459285`
+- Kiryu3: `10340249913`
+- Kiryu6: `10339919034`
 
-All four tracker jobs failed closed. FastClip and seed v17 succeeded, so this is an algorithmic tracking/search issue, not an environment/import problem.
+All four tracker jobs failed closed. FastClip and seed v17 succeeded; this is algorithmic search/path exhaustion, not environment/import failure. No results were read and no quality gate was relaxed.
 
-Key diagnosis from artifact/log inspection:
-- Each frame could still produce the configured **96 feasible six-boat fleet states** before the temporal beam later became infeasible/exhausted.
-- Therefore the dominant failure is no longer simply “no safe candidate exists”.
-- v17 prunes to the top 96 states by state-local appearance score before temporal DP. Many near-identical high-NCC wake/background hypotheses can consume the whole state budget, discarding a lower-local-score but temporally coherent identity path.
-- Beam/path deduplication also used a fleet-average displacement metric, which can collapse a materially different hypothesis for one outer boat because the other five boats agree.
-- This explains why merely increasing beam width or weakening NCC/reverse/geometry gates is not principled and remains prohibited.
+Exact v18 diagnostics from artifact JSON:
+- Kiryu3: `FAIL_CLOSED: fixed-candidate DP exhausted; no feasible temporal path`; last completed step 2 / native frame 4; frame states `[96,96,96]`; beam sizes `[2,1]`; tracker 3.247s; FastClip 5.388s. Last centers included boat6 `[555,948]` from seed `[616,961]`, already moving opposite its positive slit `dominant_dx=+13.269`.
+- Kiryu6: same failure; last step 6 / native frame 12; seven frames each retained 96 states; beam sizes `[1,1,1,1,1,1]`; tracker 6.710s; FastClip 4.145s. Last centers boat5 `[826,816]`, boat6 `[954,866]`; slit directions remained strongly positive for 5/6.
+- Kiryu12 standard: same failure; last step 8 / native frame 16; nine frames each retained 96 states; beam sizes `[5,3,4,2,2,2,2,4]`; tracker 5.515s; FastClip 4.222s.
+- Kiryu12 varied: same failure; last step 6 / native frame 12; seven frames each retained 96 states; beam sizes `[1,1,1,1,1,1]`; tracker 6.414s; FastClip 5.411s.
 
-## CURRENT candidate: tracker v18 hypothesis-diverse fleet DP
-File `track_exhibition_boats_v18.py`.
-Implementation commit **`06595fa7358635bb8a3ff61bc3d96e2cc7beaeae`**.
-Regression workflow `.github/workflows/regress-exhibition-seed17-track18.yml`.
-Workflow commit **`ceff05bd59a0d391c0933fee61028f9dbea6d1d5`**.
-Explicit regression-trigger commit **`5849d9d3a96feaa0e816b280a8e4675a26e3e566`**.
-Run **`34826924155`** launched on the Japan self-hosted runner; all four jobs were queued at this handoff update.
+Conclusion: v18 search diversity after a GLOBAL current-frame state pool is still too late. Even with 96 safe states on every processed frame, the temporally reachable alternatives are not retained. Increasing the fixed global state budget or loosening safety/NCC gates is not the principled fix.
 
-### v18 design
-v18 changes SEARCH DIVERSITY only and deliberately keeps v17 visual/safety/final gates unchanged.
-- Same result-blind immutable-anchor candidate lattice and fixed current-frame graph as v17.
-- Same entry-order, lane separation, image-edge, duplicate-patch, slit-motion reverse, max-step, NCC and final confidence gates.
-- No race result, future-result/frame feedback, boat-number rule or race-specific offset.
-- For pre-DP frame-state retention, states are first diversified by a six-boat signature of each boat's x-progress relative to the immutable slit seed, using coarse 32px buckets. The best state per bucket is kept before remaining slots are filled by local appearance score.
-- Beam deduplication now uses the **maximum per-boat center displacement** rather than the six-boat mean, so a distinct identity hypothesis for one boat is not erased merely because the other five boats match.
-- Workflow args remain `--stride 2 --topk 6 --frame-state-keep 96 --beam-width 24`.
-- No quality threshold was relaxed.
+## CURRENT candidate: tracker v19 predecessor-conditioned fleet beam
+File `track_exhibition_boats_v19.py`.
+Implementation commit **`a305634c8a136e40165303f3df9c88cc4af591bd`**.
+Regression workflow `.github/workflows/regress-exhibition-seed17-track19.yml`.
+Workflow creation commit **`9b7739c3316c009c3a954541751ebc4272068787`**.
+Run **`34835647158`** launched on the Japan self-hosted runner and was queued/running at this handoff update.
+
+### v19 design
+v19 implements the exact next principled direction from the v18 failure and keeps the v17 visual/safety/final gates unchanged.
+- Current-frame search is conditioned on EACH surviving beam predecessor instead of first globally truncating current-frame fleet states.
+- For each boat/predecessor, candidate search combines immutable-anchor peaks from the full immutable seed-derived lane band with additional immutable-anchor NCC peaks inside the predecessor's physically reachable window.
+- Candidates still must satisfy the same per-step maximum movement; no unsafe fallback is restored.
+- Joint fleet states are built and safety-checked separately for each predecessor, then scored with the unchanged v17 transition function.
+- Keep up to 5 distinct per-boat candidates and 12 K-best joint expansions per predecessor; combine all predecessor expansions, then choose an identity-diverse global beam of 24 using maximum per-boat displacement for deduplication.
+- Workflow uses `--stride 2 --topk 6 --per-boat-keep 5 --per-path-keep 12 --beam-width 24`.
+- Same min-NCC .48, strong-NCC .80, geometry/order, edge, duplicate-patch, slit-motion reverse, step-size and final confidence gates.
+- Candidate generation uses only immutable slit appearance plus current/past frame predecessor state; no future frame/result leakage, no boat-number rule, no race-specific offset.
 
 ## Exact restart point
-1. Inspect Run `34826924155` as soon as jobs leave queued/running state.
-2. If any job has a coding/runtime error, diagnose/fix/rerun immediately.
-3. If tracker executes, inspect all four artifact JSONs rather than trusting workflow green/red alone.
-4. Record accepted/failure reason, temporal failure step, per-frame state/beam sizes, fallback fractions if any, median identity/anchor NCC, min lane separation, +0.5/+1.0/+1.5 centers, physical trajectory sanity, FastClip time, seed time, tracker time and total latency.
+1. Inspect Run `34835647158` all four jobs as soon as they complete.
+2. If there is a coding/runtime error, inspect logs, fix and rerun immediately.
+3. If tracker executes, inspect artifact JSONs, not workflow color alone.
+4. Record accepted/failure reason, predecessor_counts, expanded_counts, beam_sizes, median NCC, min lane separation, +0.5/+1.0/+1.5 centers, physical sanity, FastClip/seed/tracker latency.
 5. Specifically require Kiryu3 boat6 not to run reverse-left/off-frame and Kiryu6 boats5/6 to remain distinct/sane through +1.5s.
 6. Confirm Kiryu12 standard and varied-entry samples are not regressed.
-7. Do NOT relax min-NCC, reverse corridor, geometry/order, edge or confidence gates merely to pass.
-8. If v18 still exhausts while 96 safe states exist per frame, next principled direction is **transition-aware state generation conditioned on beam predecessors**: each predecessor proposes safe current-frame candidates around both the predecessor and immutable anchor, builds K-best joint expansions, combines/deduplicates them, and beam-selects. Use only current/past frame information; no future frame/result leakage.
-9. Only after one unchanged seed+tracker passes all four physically sane and <=60 sec, update `run_exhibition_ses_live_local.py` and perform a Japan self-hosted end-to-end live-style validation.
-10. Update this handoff after every meaningful result/design change with exact commits, Run IDs, artifact IDs/evidence and restart point.
+7. Do NOT relax min-NCC, reverse corridor, geometry/order, edge, step-size or confidence gates merely to pass.
+8. If v19 fails because predecessor-conditioned per-boat candidate lists still vanish, next inspect whether the immutable anchor itself has become appearance-unstable; consider a causally updated appearance ensemble gated by agreement with the immutable anchor and motion/geometry, not a free adaptive template.
+9. If v19 succeeds technically but runtime exceeds 60s, optimize matchTemplate reuse/response caching before any production wiring.
+10. Only after one unchanged seed+tracker passes all four physically sane and <=60 sec, update `run_exhibition_ses_live_local.py` and perform a Japan self-hosted end-to-end live-style validation.
+11. Update this handoff after every meaningful result/design change with exact commits, Run IDs, artifact IDs/evidence and restart point.
 
 ## Production wrapper
 `run_exhibition_ses_live_local.py` remains old seed v1 + tracker v3. DO NOT update until an unchanged seed+tracker passes the full technical matrix with sane identity/geometry and <=60 sec.
