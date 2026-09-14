@@ -98,7 +98,7 @@ def main():
     if tr.y.nunique()<2 or te.y.nunique()<2: raise RuntimeError('both mode classes required')
     model=make_pipeline(SimpleImputer(strategy='median'),StandardScaler(),LogisticRegression(C=.2,max_iter=1000,class_weight='balanced'))
     model.fit(tr[fs],tr.y); p=model.predict_proba(te[fs])[:,1]; pred=(p>=.5).astype(int)
-    auc=float(roc_auc_score(te.y,p)); ll=float(log_loss(te.y,p)); acc=float(accuracy_score(te.y,p))
+    auc=float(roc_auc_score(te.y,p)); ll=float(log_loss(te.y,p)); acc=float(accuracy_score(te.y,pred))
     priorp=te.y1_makuri_share.to_numpy(float); prior_auc=float(roc_auc_score(te.y,priorp)); prior_ll=float(log_loss(te.y,np.clip(priorp,1e-6,1-1e-6)))
     te=te.assign(pred_p_makuri=p,pred_mode=np.where(pred==1,'MAKURI','MAKURI_SASHI'))
     te.to_csv(OUT,index=False,encoding='utf-8-sig')
