@@ -67,7 +67,6 @@ This is the first valid boat3 decomposition run. Earlier run `34815749150` used 
 | B3_ALL | 111 | 37.84% | 10.81% | 79.338% |
 
 ### Current interpretation
-
 1. Boat3 `ST` is the strongest single direct Waku10 signal, but `B3_ST_ONLY` S=8R is too small to promote directly.
 2. `SR_ONLY` is weak and sub-100% S proxy ROI. SR is not useful as a standalone primary signal.
 3. `B3_WR_ST` gives the best broad sample balance: 41 S races, head4 46.34%, trifecta 24.39%, proxy ROI 189.07%.
@@ -224,3 +223,57 @@ Status: `BOAT3_OVERLAP_AUDIT_COMPLETE_WR_ST_PREFERRED_NEXT_FROZEN_VALIDATION_PEN
 - If and only if such a window exists, apply the already-frozen policy without tuning and report the result as validation, not selection.
 - Jul/Aug remain NON-PRISTINE and outcome-blind; September outcome remains UNREAD and must not be used.
 - Status: `FROZEN_WR_ST_PROVENANCE_AUDIT_STARTED`.
+
+## FROZEN WR_ST UNTOUCHED-WINDOW PROVENANCE AUDIT — AFTER (2026-09-14 JST)
+
+### Provenance evidence
+
+- BEFORE commit: `44786fc439ca67a7a0eb4d768db66e9837b31e53`.
+- Frozen candidate remains exactly `B3_WR_ST`; no feature, weight, threshold, downstream-policy, ticket-policy, or production change was made.
+- Current ablation scorer defines source data `START=2025-12-01`, `END=2026-08-31`, scores monthly `2026-02` through `2026-08`, and for each scored month trains on **all rows strictly before that month**. Therefore Dec-2025 and Jan-2026 are model-training data for the Feb-2026 evaluation and cannot be an untouched validation set.
+- The canonical HEAD4 history explicitly records a common frozen Jan-31 model rerun across Feb-Aug and reports outcome-bearing PRE-band counts including Feb `609/20` and Mar `740/24`. Therefore Feb and Mar HEAD4 outcomes were already inspected before this candidate was frozen.
+- Apr-Jun were the explicit primary development/model-selection windows for the canonical HEAD4 reevaluation, Waku10 ablation, core decomposition, boat3 decomposition, and overlap audit. They are not validation data.
+- Jul-Aug are explicitly NON-PRISTINE and outcome-forbidden for selection/validation.
+- September remains UNREAD/outcome-blind by hard rule and was not substituted into this audit.
+- Older cross-model repository history also contains Dec-2025..Jun-2026 outcome/ROI audits, reinforcing that these are not globally unseen race outcomes; this is supporting evidence, not the primary exclusion reason.
+
+### Window-by-window disposition
+
+| period | disposition | reason |
+|---|---|---|
+| Dec-2025 | NOT VALIDATION | used as rolling training data |
+| Jan-2026 | NOT VALIDATION | used as rolling training data / Jan-31 frozen model base |
+| Feb-2026 | NOT UNTOUCHED | HEAD4 outcome already inspected in canonical reruns |
+| Mar-2026 | NOT UNTOUCHED | HEAD4 outcome already inspected in canonical reruns |
+| Apr-Jun 2026 | DEVELOPMENT | explicit Waku10/HEAD4 selection and audit window |
+| Jul-Aug 2026 | FORBIDDEN | NON-PRISTINE; outcome must remain unused for model selection/validation |
+| Sep-2026 | RESERVED | outcome remains UNREAD; do not consume retrospectively here |
+
+### Result / execution decision
+
+- **No admissible genuinely untouched historical outcome window remains under the current research rules.**
+- Consequently, the frozen `B3_WR_ST` policy was **not** run against any additional historical outcomes in this work unit. This is intentional to preserve research integrity.
+- Validation run/job/artifact: `N/A — provenance audit correctly stopped before outcome-bearing validation because no admissible historical holdout exists`.
+- No Jul/Aug outcomes were inspected. No September outcomes were inspected.
+- No production change was made.
+
+### Research judgment
+
+1. `B3_WR_ST` remains the frozen research candidate, not a production promotion.
+2. Its Apr-Jun results are development evidence only and must not be relabeled as OOS validation.
+3. The next clean evidence must be **prospective**: freeze the policy before race outcomes, record candidate decisions/inputs/odds before deadline, and settle only after the freeze.
+4. September's already-protected unread outcomes should remain unread under the current handoff rule rather than being opportunistically converted into a retrospective holdout.
+5. Production `HEAD4_V291_COMP7` remains unchanged until separate prospective evidence supports replacement and the user explicitly approves it.
+
+Status: `FROZEN_WR_ST_PROVENANCE_AUDIT_COMPLETE_NO_HISTORICAL_HOLDOUT_PROSPECTIVE_VALIDATION_REQUIRED`.
+
+### Next work unit
+
+- Build/verify an **outcome-blind prospective shadow path** for frozen `B3_WR_ST` using the existing canonical data and frozen downstream S policy.
+- The shadow path must emit/freeze race ID, timestamp, PRE/POST/ENV scores, S eligibility, opponent/ticket decision if applicable, and the actual pre-deadline odds snapshot/source before results are available.
+- Do not use Sep historical outcomes to bootstrap the design. First freeze the prospective logging/decision specification itself.
+- Jul/Aug remain NON-PRISTINE; September remains UNREAD; production remains unchanged.
+
+## UPDATED NEXT CHAT START PROMPT — PROSPECTIVE ONLY
+
+`boatrace-backtest の CHAT_HANDOFF_20260914_4HEAD_BOAT3_WAKU10_NEXT.md と最新GitHubを読んで続き。最新GitHubを優先し、作業前にBEFORE追記。B3_WR_STはfrozen research candidateだが、provenance監査で使えるuntouched historical windowは残っていないと確定済み。Jul/Aug outcome禁止・Sep outcome UNREADを維持し、過去結果を開かず、まずB3_WR_STのprospective shadow logging/decision pathを固定する。productionは変更しない。作業後にAFTER追記。`
