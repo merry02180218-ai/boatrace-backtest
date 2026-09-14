@@ -16,26 +16,20 @@
 - Wave45 confidence/margin: zero lift. NO_ADOPTION.
 - Wave46 second/third role factorization: March 16/90 role, 21/90 blend vs Wave36 24/90. NO_ADOPTION.
 
-## Wave47 head-condition zoning — MARCH GATE PASS
-- Plan commit 3fc1f8b8bb3e1e42a50db2a8308c1f11e73b4a8d.
-- Implementation commit 55588d48e5ce5bd2e4fc1536e98d63a19ef6cec3.
-- Workflow commit a95292c2f9416c605c847495c17b97d6af360e6c.
-- CI Run34843925397 / Job103975145924: success.
-- Artifact ID10347171131; SHA256 7595ce0c4bc51a4788fac272a27c8335b7503244a5854f69c4e23683f404459b.
-- March Wave36 baseline: 90R / 38 head hits / 42.222%; frozen Top5 24 hits / 26.667%.
-- Best predeclared zone: motor family, keep top60% =>54R / head48.148% (lift +5.926pt); frozen Top5 ticket rate27.778%.
-- Early/late head rate:46.875% /50.000%.
-- Gate passers:1. Decision MARCH_GATE_PASS.
-- Apr-Jun not yet opened by the March script. September unread.
-
-## BEFORE-WORK PLAN — Wave47 pristine Apr-Jun economics — 2026-09-14
-1. Freeze the March-selected structure: motor-only boat3-vs-1/2/4 gaps and the validated top60% zone rule. No further feature-family or retention tuning after seeing Apr-Jun.
-2. Reproduce Wave36 rolling head/opponent scoring for Apr, May, Jun using only prior months, but keep opponent Top5 logic unchanged.
-3. Apply the Wave47 zone as a selection filter only. Use a deployment-compatible frozen March threshold/model specification; do not optimize thresholds on Apr-Jun.
-4. Evaluate exact JPY10,000 inverse-odds Dutch returns, losing races as -JPY10,000, NO BET as no stake.
-5. Report races, hits, ROI, profit, monthly ROI, red months, and max drawdown; compare directly with Wave36 and Wave36S-C.
-6. This is the single pristine Apr-Jun opening for Wave47. No second-pass retuning from these outcomes.
-7. v288 untouched; Jul/Aug NON-PRISTINE; September outcomes remain unread.
+## Wave47 head-condition zoning — COMPLETE / NO_ADOPTION
+- March plan commit 3fc1f8b8bb3e1e42a50db2a8308c1f11e73b4a8d; implementation 55588d48e5ce5bd2e4fc1536e98d63a19ef6cec3.
+- March CI Run34843925397 / Job103975145924 success; artifact10347171131; SHA256 7595ce0c4bc51a4788fac272a27c8335b7503244a5854f69c4e23683f404459b.
+- March baseline:90R /38 head hits /42.222%; Top5 24 /26.667%.
+- March winner: motor family top60% =>54R / head48.148% (+5.926pt), early46.875%, late50.000%. Gate passed.
+- Apr-Jun single pristine opening used the frozen March-selected structure with no retuning.
+- Holdout runner commit6617b10240a64815f2bcc5c77aa2064eadbe1922; trigger commit a00a1ec323906d9bf535996eec50550019801ed6.
+- Holdout CI Run34844221809 / Job103976135822 success.
+- Wave36 recomputed exactly:391R /87 hits / ROI114.913% / +583,090 yen.
+- Wave47 holdout:174R /36 hits / ROI95.511% / -78,100 yen; min month53.623%; red months1; maxDD336,140 yen.
+- Monthly Wave47: Apr49R/12 hits/ROI111.384%/+55,780; May63R/15/124.390%/+153,660; Jun62R/9/53.623%/-287,540.
+- Decision NO_ADOPTION. Do not retune Wave47 on Apr-Jun after this failure.
+- Wave47 March audit entrypoint restored at commit496688106d20b65fce5531f4a27700767ea3e97d.
+- v288 untouched. Jul/Aug remain NON-PRISTINE. September outcomes unread.
 
 ## Exact restart point
-- Implement Wave47 fixed-rule Apr-Jun holdout economics and run CI once. Promote only if economics materially improve while retaining useful volume and monthly robustness.
+- Wave47 is closed. Preserve Wave36 and Wave36S-C benchmarks. Next research must use a new structural hypothesis and must avoid reusing Apr-Jun outcomes for retuning Wave47.
