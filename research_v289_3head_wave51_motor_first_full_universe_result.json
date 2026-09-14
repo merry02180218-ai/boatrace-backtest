@@ -1,0 +1,31 @@
+{
+  "wave": "51-motor-first-full-universe",
+  "source": {"run_id": 34754875342, "artifact_id": 10317157868, "v288_exclusion": 94},
+  "march_full": {"races": 4482, "head_hits": 563, "head_rate": 0.1256135654},
+  "wave36": {"races": 90, "head_hits": 38, "head_rate": 0.4222222222},
+  "feb_quantile_cuts": {
+    "0.50": {"motor2_gap": 0.1, "motor3_gap": 0.0},
+    "0.67": {"motor2_gap": 4.0, "motor3_gap": 4.8},
+    "0.75": {"motor2_gap": 6.2, "motor3_gap": 7.2},
+    "0.80": {"motor2_gap": 7.9, "motor3_gap": 9.1},
+    "0.90": {"motor2_gap": 12.32, "motor3_gap": 14.1}
+  },
+  "motor_only": [
+    {"q":0.50,"races":1783,"head_hits":256,"head_rate":0.1435782389,"wave36_overlap":59,"incremental_races":1724,"incremental_head_hits":227,"incremental_head_rate":0.1316705336},
+    {"q":0.67,"races":1109,"head_hits":157,"head_rate":0.1415689811,"wave36_overlap":49,"incremental_races":1060,"incremental_head_hits":135,"incremental_head_rate":0.1273584906},
+    {"q":0.75,"races":826,"head_hits":120,"head_rate":0.1452784504,"wave36_overlap":45,"incremental_races":781,"incremental_head_hits":100,"incremental_head_rate":0.1280409731},
+    {"q":0.80,"races":633,"head_hits":91,"head_rate":0.1437598736,"wave36_overlap":41,"incremental_races":592,"incremental_head_hits":72,"incremental_head_rate":0.1216216216},
+    {"q":0.90,"races":323,"head_hits":49,"head_rate":0.1517027864,"wave36_overlap":30,"incremental_races":293,"incremental_head_hits":36,"incremental_head_rate":0.1228668942}
+  ],
+  "motor75_plus_fixed_p3": [
+    {"p3_min":0.20,"races":186,"head_hits":58,"head_rate":0.3118279570,"wave36_overlap":45,"incremental_races":141,"incremental_head_hits":38,"incremental_head_rate":0.2695035461},
+    {"p3_min":0.25,"races":133,"head_hits":47,"head_rate":0.3533834586,"wave36_overlap":45,"incremental_races":88,"incremental_head_hits":27,"incremental_head_rate":0.3068181818},
+    {"p3_min":0.30,"races":87,"head_hits":32,"head_rate":0.3678160920,"wave36_overlap":45,"incremental_races":42,"incremental_head_hits":12,"incremental_head_rate":0.2857142857},
+    {"p3_min":0.35,"races":59,"head_hits":25,"head_rate":0.4237288136,"wave36_overlap":45,"incremental_races":14,"incremental_head_hits":5,"incremental_head_rate":0.3571428571}
+  ],
+  "focused_candidate": {"definition":"both boat3-vs-boat2 motor2/motor3 gaps >= February 75th percentile AND p3>=0.25","races":133,"head_hits":47,"head_rate":0.3533834586,"wave36_overlap":45,"incremental_races":88,"incremental_head_hits":27,"incremental_head_rate":0.3068181818},
+  "conclusion": "Motor advantage alone is too weak as a standalone 3-head selector, but motor-first plus a looser frozen p3 gate materially expands the candidate pool. The focused candidate adds 88 races outside Wave36 with 27 boat3 heads (30.68%). This is strong enough to justify an independent motor-first model family, but not production adoption because March is research-exposed.",
+  "status": "RESEARCH_FAMILY_WORTH_CONTINUING_DIAGNOSTIC_ONLY_NO_PRISTINE_PERIOD",
+  "jul_aug_used": false,
+  "september_outcomes_read": false
+}
