@@ -94,3 +94,4 @@ jobs:
         with:
           name: v340-1head-adaptive-odds-dutch-sharded
           path: /tmp/v340final/
+# trigger: 2026-09-14 v340 sharded repair
