@@ -1,5 +1,6 @@
 from __future__ import annotations
 import csv, io, json, urllib.request, time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import date, timedelta
 from pathlib import Path
 import numpy as np
@@ -47,7 +48,7 @@ def day_bundle(d):
     cards=fetch_rows(f'data/programs/race_cards/{ymd}.csv')
     results=fetch_rows(f'data/results/realtime/{ymd}.csv')
     cmap={norm_code(r.get('レースコード','')):r for r in cards if norm_code(r.get('レースコード',''))}
-    return cmap,results
+    return d.isoformat(),cmap,results
 
 def main():
     d=pd.read_csv(SRC,dtype=str).fillna('')
@@ -57,9 +58,17 @@ def main():
     target=d[(d.date>='2026-02-01')&(d.date<='2026-03-31')&(d.settle__head3_actual.astype(str)=='1')].copy()
     target['racer_id']=target[idcol].astype(str).str.strip()
     wanted=set(target.race_code.map(norm_code)); labels={}
-    hist=[]; cur=START
+    days=[]; cur=START
     while cur<=END:
-        cmap,results=day_bundle(cur)
+        days.append(cur); cur+=timedelta(days=1)
+    bundles={}
+    with ThreadPoolExecutor(max_workers=16) as ex:
+        fs={ex.submit(day_bundle,dd):dd for dd in days}
+        for f in as_completed(fs):
+            day_s,cmap,results=f.result(); bundles[day_s]=(cmap,results)
+    hist=[]
+    for day_s in sorted(bundles):
+        cmap,results=bundles[day_s]
         for r in results:
             code=norm_code(r.get('レースコード',''))
             winner=pick(r,['1着_艇番'])
@@ -67,24 +76,23 @@ def main():
             card=cmap.get(code,{})
             rid=pick(card,[f'艇{winner}_登録番号']) if winner else ''
             if rid and winner:
-                hist.append((cur.isoformat(),code,rid,str(winner),mode))
+                hist.append((day_s,code,rid,str(winner),mode))
             if code in wanted: labels[code]=mode
-        cur+=timedelta(days=1)
     h=pd.DataFrame(hist,columns=['date','race_code','racer_id','winner_boat','mode'])
     if h.empty: raise RuntimeError('no historical result rows with racer id after race-card join')
     rows=[]
     for _,r in target.sort_values(['date','race_code']).iterrows():
         code=norm_code(r.race_code); mode=labels.get(code,'OTHER')
         if mode not in ('MAKURI','MAKURI_SASHI'): continue
-        prior=h[(h.racer_id==r.racer_id)&(h.date<r.date)&(h.winner_boat=='3')&h.mode.isin(['MAKURI','MAKURI_SASHI'])]
-        recent=prior[prior.date>=str(date.fromisoformat(r.date)-timedelta(days=365))]
+        prior=h[(h['racer_id']==r.racer_id)&(h['date']<r.date)&(h['winner_boat']=='3')&h['mode'].isin(['MAKURI','MAKURI_SASHI'])]
+        recent=prior[prior['date']>=str(date.fromisoformat(r.date)-timedelta(days=365))]
         def feats(q,pfx):
-            n=len(q); m=int((q.mode=='MAKURI').sum()); s=int((q.mode=='MAKURI_SASHI').sum())
+            n=len(q); m=int((q['mode']=='MAKURI').sum()); s=int((q['mode']=='MAKURI_SASHI').sum())
             return {f'{pfx}_n':n,f'{pfx}_makuri':m,f'{pfx}_makurizashi':s,f'{pfx}_makuri_share':(m+1)/(n+2),f'{pfx}_logodds':float(np.log((m+1)/(s+1)))}
         z={'date':r.date,'race_code':r.race_code,'racer_id':r.racer_id,'mode':mode}; z.update(feats(prior,'career')); z.update(feats(recent,'y1')); rows.append(z)
     x=pd.DataFrame(rows)
     if x.empty: raise RuntimeError('no labeled MAKURI/MAKURI-SASHI target rows')
-    x['y']=(x.mode=='MAKURI').astype(int)
+    x['y']=(x['mode']=='MAKURI').astype(int)
     tr=x[x.date.str[:7]=='2026-02'].copy(); te=x[x.date.str[:7]=='2026-03'].copy()
     fs=['career_n','career_makuri_share','career_logodds','y1_n','y1_makuri_share','y1_logodds']
     if tr.y.nunique()<2 or te.y.nunique()<2: raise RuntimeError('both mode classes required')
