@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# trigger: 20260914-head4-waku10-ablation
+# trigger: 20260914-head4-waku10-core-decomposition
 from __future__ import annotations
 from collections import defaultdict
 from datetime import date,timedelta
@@ -25,7 +25,7 @@ ROOT=Path(__file__).resolve().parent
 START=date(2025,12,1); END=date(2026,8,31)
 PRELOAD_START=START-timedelta(days=120)
 MONTHS=[f'2026-{m:02d}' for m in range(2,9)]
-VARIANTS=('FULL_WAKU10','NO_WAKU10','CORE_WAKU10')
+VARIANTS=('FULL_WAKU10','NO_WAKU10','CORE_WAKU10','B3_ONLY','B4_ONLY','WR_ONLY','ST_ONLY','SR_ONLY','WR_ST','WR_SR','ST_SR')
 
 def safe(v,default=0.0):
     try:
@@ -34,25 +34,7 @@ def safe(v,default=0.0):
 
 def raw_features(x,s4):
     fr=features4(x); b1,b2,b3,b4=x[1],x[2],x[3],x[4]
-    return {
-      'legacy_score4':safe(s4),
-      'racer4':safe(fr['4選手力']),
-      'hist_st_edge_4v3':safe(fr['4_ST優位']),
-      'wall3_weak':safe(fr['3壁弱さ']),
-      'inner12_resistance':safe(resistance12(x)),
-      'motor4_2ren':safe(b4.get('motor2')),
-      'motor4_hist':safe(b4.get('mhist')),
-      'turnfoot4_prior':safe(b4.get('turnfoot')),
-      'past_win4':safe(b4.get('past_win')),
-      'b3_waku_wr':safe(b3.get('waku_wr'),np.nan),
-      'b3_waku_st':safe(b3.get('waku_st'),np.nan),
-      'b3_waku_sr':safe(b3.get('waku_sr'),np.nan),
-      'b4_waku_wr':safe(b4.get('waku_wr'),np.nan),
-      'b4_waku_st':safe(b4.get('waku_st'),np.nan),
-      'b4_waku_sr':safe(b4.get('waku_sr'),np.nan),
-      'b1_waku_wr':safe(b1.get('waku_wr'),np.nan),
-      'b2_waku_wr':safe(b2.get('waku_wr'),np.nan),
-    }
+    return {'legacy_score4':safe(s4),'racer4':safe(fr['4選手力']),'hist_st_edge_4v3':safe(fr['4_ST優位']),'wall3_weak':safe(fr['3壁弱さ']),'inner12_resistance':safe(resistance12(x)),'motor4_2ren':safe(b4.get('motor2')),'motor4_hist':safe(b4.get('mhist')),'turnfoot4_prior':safe(b4.get('turnfoot')),'past_win4':safe(b4.get('past_win')),'b3_waku_wr':safe(b3.get('waku_wr'),np.nan),'b3_waku_st':safe(b3.get('waku_st'),np.nan),'b3_waku_sr':safe(b3.get('waku_sr'),np.nan),'b4_waku_wr':safe(b4.get('waku_wr'),np.nan),'b4_waku_st':safe(b4.get('waku_st'),np.nan),'b4_waku_sr':safe(b4.get('waku_sr'),np.nan),'b1_waku_wr':safe(b1.get('waku_wr'),np.nan),'b2_waku_wr':safe(b2.get('waku_wr'),np.nan)}
 
 def post_features(code,tkz,stt,orig):
     sr=stt.get(code,{});orr=orig.get(code,{});tr=tkz.get(code,{})
@@ -62,12 +44,12 @@ def post_features(code,tkz,stt,orig):
     return {'ex_st_rank4':safe(st_rank,.5),'ex_st_4':safe(sr.get('艇4_スタート展示'),.20),'ex_st_edge_4v3':safe(sr.get('艇3_スタート展示'),.20)-safe(sr.get('艇4_スタート展示'),.20),'orig_straight4':safe(os.get('straight'),.5),'orig_lap4':safe(os.get('lap'),.5),'orig_turn4':safe(os.get('turn'),.5),'tilt4':safe(tiltval(tr.get('艇4_チルト')),0.0)}
 
 def cols_for(variant):
-    nonwaku=['racer4','motor4_2ren','motor4_hist','turnfoot4_prior']
+    base=['racer4','motor4_2ren','motor4_hist','turnfoot4_prior']
     full=['legacy_score4','racer4','hist_st_edge_4v3','wall3_weak','inner12_resistance','motor4_2ren','motor4_hist','turnfoot4_prior','past_win4']
-    core=nonwaku+['b3_waku_wr','b3_waku_st','b3_waku_sr','b4_waku_wr','b4_waku_st','b4_waku_sr']
+    groups={'B3_ONLY':['b3_waku_wr','b3_waku_st','b3_waku_sr'],'B4_ONLY':['b4_waku_wr','b4_waku_st','b4_waku_sr'],'WR_ONLY':['b3_waku_wr','b4_waku_wr'],'ST_ONLY':['b3_waku_st','b4_waku_st'],'SR_ONLY':['b3_waku_sr','b4_waku_sr'],'WR_ST':['b3_waku_wr','b4_waku_wr','b3_waku_st','b4_waku_st'],'WR_SR':['b3_waku_wr','b4_waku_wr','b3_waku_sr','b4_waku_sr'],'ST_SR':['b3_waku_st','b4_waku_st','b3_waku_sr','b4_waku_sr'],'CORE_WAKU10':['b3_waku_wr','b3_waku_st','b3_waku_sr','b4_waku_wr','b4_waku_st','b4_waku_sr']}
     if variant=='FULL_WAKU10': pre=full
-    elif variant=='NO_WAKU10': pre=nonwaku
-    elif variant=='CORE_WAKU10': pre=core
+    elif variant=='NO_WAKU10': pre=base
+    elif variant in groups: pre=base+groups[variant]
     else: raise ValueError(variant)
     post=pre+['ex_st_rank4','ex_st_4','ex_st_edge_4v3','orig_straight4','orig_lap4','orig_turn4','tilt4']
     return pre,post
@@ -88,14 +70,12 @@ def build_data():
         tkz=by_code(f'data/previews/tkz/{ymd}.csv');stt=by_code(f'data/previews/stt/{ymd}.csv');orig=by_code(f'data/previews/original_exhibition/{ymd}.csv')
         frozen=[]
         for r,x,s4,s5,dc in feats:
-            z={'date':str(d),'race_code':r['レースコード'],'venue':str(r.get('レース場コード','')).zfill(2)}
-            z.update(raw_features(x,s4));z.update(post_features(r['レースコード'],tkz,stt,orig));frozen.append(z)
+            z={'date':str(d),'race_code':r['レースコード'],'venue':str(r.get('レース場コード','')).zfill(2)};z.update(raw_features(x,s4));z.update(post_features(r['レースコード'],tkz,stt,orig));frozen.append(z)
         res={r['レースコード']:r for r in rows(f'data/results/realtime/{ymd}.csv')}
         for z in frozen:
             rr=res.get(z['race_code'],{});z['y4head']=int(i(rr.get('1着_艇番'))==4);z['kimarite']=(rr.get('決まり手') or '').strip();data.append(z)
         ingest_prior_day_preview(cache,d);ingest_motor(hist,seen,d);d+=timedelta(days=1)
-    df=pd.DataFrame(data);df['_date']=pd.to_datetime(df.date)
-    return df
+    df=pd.DataFrame(data);df['_date']=pd.to_datetime(df.date);return df
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--variant',choices=VARIANTS,required=True);ap.add_argument('--out',default='analysis_v250_4head_rebuild_baseline.csv');ap.add_argument('--meta',default=None);a=ap.parse_args()
@@ -108,9 +88,7 @@ def main():
             for (_,r),pr in zip(te.iterrows(),p):out.append({'date':r.date,'race_code':r.race_code,'venue':r.venue,'month':mon,'variant':vn,'p4head':float(pr),'y4head':int(r.y4head),'kimarite':r.kimarite,'ablation_variant':a.variant})
             diag.append({'month':mon,'score':vn,'R':len(te),'base_rate':float(te.y4head.mean()),'mean_p':float(np.mean(p))})
     pd.DataFrame(out).to_csv(a.out,index=False)
-    meta={'variant':a.variant,'pre_cols':pre_cols,'post_cols':post_cols,'direct_core_definition':'boat3/4 waku_wr,waku_st,waku_sr only; no past10/past_win, resistance12, wall3_weak, hist_st_edge, or legacy_score4','production_modified':False}
-    mp=Path(a.meta or f'audit_4head_waku10_ablation_{a.variant}.json')
-    import json;mp.write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    pd.DataFrame(diag).to_csv(f'diagnostics_4head_waku10_ablation_{a.variant}.csv',index=False)
-    print(meta)
+    meta={'variant':a.variant,'pre_cols':pre_cols,'post_cols':post_cols,'direct_core_definition':'boat3/4 direct waku_wr, waku_st, waku_sr decomposition on identical minimal non-Waku base','production_modified':False}
+    mp=Path(a.meta or f'audit_4head_waku10_ablation_{a.variant}.json');import json;mp.write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    pd.DataFrame(diag).to_csv(f'diagnostics_4head_waku10_ablation_{a.variant}.csv',index=False);print(meta)
 if __name__=='__main__':main()
