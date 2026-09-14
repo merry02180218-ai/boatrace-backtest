@@ -1,0 +1,103 @@
+name: v350 1-head LIVE operation 20260915
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/v350-1head-live-operation-20260915.yml'
+
+jobs:
+  pre-scan:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Fetch 2026-09-15 result-blind PRE inputs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import fetch_kyoteibiyori_v288_pre_inputs as f
+          f.DAY='20260915'
+          f.VENUES=list(range(1,25))
+          f.OUT=Path('/tmp/live_pre')
+          f.OUT.mkdir(parents=True,exist_ok=True)
+          old_card=f.make_card
+          old_waku=f.make_waku
+          def card(jo,rno,z,meet):
+              r=old_card(jo,rno,z,meet); r['レース日']='2026-09-15'; return r
+          def waku(jo,rno,z):
+              r=old_waku(jo,rno,z); r['レース日']='2026-09-15'; return r
+          f.make_card=card
+          f.make_waku=waku
+          f.main()
+          PY
+      - name: Score result-blind Legacy PRE and freeze candidates
+        run: |
+          python - <<'PY'
+          from datetime import date
+          from pathlib import Path
+          import csv, json
+          import analyze_v136_1head_preselection_inner_threats as v
+          from backtest import race_features
+
+          def read(path):
+              with open(path,encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
+
+          # Critical prospective guard: no September outcomes are read for training.
+          sep_cut=date(2026,9,1)
+          src=[r for r in v.read_csv(v.SRC)
+               if v.ii(r.get('valid_result'))==1 and r.get('date') and date.fromisoformat(r['date']) < sep_cut]
+          if not src: raise RuntimeError('empty pre-September training set')
+          if max(r['date'] for r in src) >= '2026-09-01': raise AssertionError('September outcome leak')
+          model=v.fit_lr(v.xlegacy(src),[v.ii(r.get('head_hit')) for r in src])
+
+          cards=read('/tmp/live_pre/race_cards.csv')
+          wrows=read('/tmp/live_pre/waku10.csv')
+          wm={str(r.get('レースコード','')).zfill(12):r for r in wrows}
+          cur=[]
+          for c in cards:
+              code=str(c.get('レースコード','')).zfill(12)
+              if code not in wm: continue
+              try:
+                  x=race_features(c,wm[code]); vals=v.boat_pre(x,1)
+              except Exception as e:
+                  print('SKIP_SCORE',code,repr(e)); continue
+              r={k:val for k,val in zip(v.LEGACY_FEATURES,vals)}
+              r.update({
+                  'race_code':code,'venue':code[8:10],'race':int(code[10:12]),
+                  'name':c.get('艇1_選手名',''),'grade':c.get('艇1_級別',''),
+                  'motor2':c.get('艇1_モーター2連対率',''),'nst':c.get('艇1_全国平均ST','')})
+              cur.append(r)
+          pp=model.predict_proba(v.xlegacy(cur))[:,1]
+          for r,p in zip(cur,pp):r['legacy_pre_p']=float(p)
+          cur=sorted(cur,key=lambda r:(-r['legacy_pre_p'],r['race_code']))
+          frozen=cur[:15]
+          top5=cur[:5]
+          out=Path('/tmp/v350_live');out.mkdir(exist_ok=True)
+          fields=['rank','race_code','venue','race','name','grade','legacy_pre_p','motor2','nst']
+          with (out/'pre_candidates.csv').open('w',encoding='utf-8-sig',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=fields);w.writeheader()
+              for i,r in enumerate(frozen,1):w.writerow({'rank':i,**{k:r.get(k) for k in fields if k!='rank'}})
+          result={
+              'date':'2026-09-15','cards':len(cards),'waku_rows':len(wrows),'scored':len(cur),
+              'training_max_date':max(r['date'] for r in src),
+              'SEPTEMBER_OUTCOMES_READ':False,
+              'production_g2':0.50,'research_g2':0.45,'g3_fixed':1.00,
+              'top5':[{'race_code':r['race_code'],'name':r['name'],'pre_p':r['legacy_pre_p']} for r in top5],
+              'frozen_top15':[{'race_code':r['race_code'],'name':r['name'],'pre_p':r['legacy_pre_p']} for r in frozen],
+              'PRODUCTION_CHANGED':False
+          }
+          (out/'pre_result.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+          print(json.dumps(result,ensure_ascii=False,indent=2),flush=True)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v350-1head-live-pre-20260915
+          path: |
+            /tmp/v350_live/
+            /tmp/live_pre/race_cards.csv
+            /tmp/live_pre/waku10.csv
