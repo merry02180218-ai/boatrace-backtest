@@ -59,12 +59,6 @@ Frozen Top15追加候補:
 14. 下関10R 平田忠則 0.7832464065
 15. 徳山12R 石野貴之 0.7824352970
 
-## 現在の結論 / 次の実運用地点
-- PRE prospective stageは完了し、Top5を結果blindで固定した。
-- 最初の比較対象は徳山1R。展示公開後にHEAD側production条件を適用し、PASSなら同一入力で `g2=.50/g3=1.00` と `g2=.45/g3=1.00` の3連単3点を並列比較する。
-- その後も固定Top5（徳山4R/8R/10R/11R）について同じ手順で記録する。
-- September outcomeは明示解禁まで読まない。
-
 ## 正式採用＋実運用バックテスト 作業開始
 - ユーザー指示により、研究候補 `SECOND g2=.45 / THIRD g3=1.00` を正式productionへ昇格させる。
 - 既存HEAD条件、SECOND/THIRDモデル、3点HYBRID、v345 HEAD-side weightsは変更しない。
@@ -74,3 +68,66 @@ Frozen Top15追加候補:
 - regressionはSeptember outcomeを読まず、Feb-Jun pristine=選定証拠、Jul-Aug=`NON_PRISTINE_SUPPORT_ONLY`を維持する。
 - そのうえで2026-09-15固定PRE候補を新production設定で実運用バックテストする。今日の結果・払戻は一切読まない。
 - 実運用バックテストでは展示公開後データが取得可能な固定候補について、HEAD PASS判定→正式g2=.45/g3=1.00→3連単3点生成までを測定し、処理時間と出力を記録する。
+
+## 正式採用 完了
+- 正式production profile=`1HEAD_PRODUCTION_20260915_HEAD078_V351_OPPONENTCORE_G2_045_G3_100`
+- SECOND `g2=.45` / THIRD `g3=1.00`
+- production reflection commit=`8f2950c4fbc576117793db31f8db8cfd6a1c75c6`
+- independent regression code commit=`95acd70dbf5d22c9141eeb86e6926ebf237d518a`
+- regression workflow commit=`60ec84a160801f0907cb412cda9f2f77b7875692`
+
+### 独立production監査
+- Run=`34900768805` success
+- prepare Job=`104165916351` success
+- base-third Job=`104167455887` success
+- second Job=`104167456001` success
+- third Job=`104167456049` success
+- production-regression Job=`104170501348` success
+- Artifact=`v351-1head-production-regression`
+- Artifact ID=`10371394695`
+- Artifact digest=`sha256:023f0592ede29601183984193d6790fe8e2d496bb7fbc73526f9a9ea8069f4af`
+- `AUDIT_OK=true`
+- `PASS=276`
+- `HEAD=241`
+- `EXACT3=131`
+- exact3 rate=`47.46376811594203%`
+- Feb-Jun pristine=`107/220` = `48.63636363636364%`
+- Jul-Aug support-only=`24/56` = `42.857142857142855%`
+- race identity SHA256=`08eb41e04c36d25074d6a1e471ff9334fafd34c8306cd5d336923772b613b8bd`
+- ticket identity SHA256=`21631473d2a8b82f4fe93d18f8292d777837c26a47c408917fd8b722d1898cd7`
+- `SEPTEMBER_OUTCOMES_READ=false`
+
+## 実運用バックテスト 完了
+- workflow=`.github/workflows/v351-1head-operational-backtest.yml`
+- Run=`34900892661` success
+- prepare Job=`104166323778` success
+- base-third Job=`104168079611` success
+- third Job=`104168079628` success
+- second Job=`104168079673` success
+- operational-backtest Job=`104170469924` success
+- Artifact=`v351-1head-operational-backtest`
+- Artifact ID=`10371468748`
+- Artifact digest=`sha256:0fde92545aca309ad0b063eabb9f42aedf324b1ac3a4325a360f02dc2fa9b676`
+
+### 実運用バックテスト結果
+- overall: `276R / HEAD 241 / EXACT3 131 / 47.46376811594203%`
+- Feb-Jun pristine: `220R / HEAD 193 / EXACT3 107 / 48.63636363636364%`
+- Jul-Aug support-only: `56R / HEAD 48 / EXACT3 24 / 42.857142857142855%`
+- 3点均等100円想定 stake=`82,800円`
+- 出力上の `return_yen=0 / roi=0` は払戻データが未結合のためで、実ROI=0%を意味しない。ROIは現時点で評価不能。
+
+### 展示後ローカル計算速度
+- shared prepare=`678111.370339ms`（学習/共有前処理。レースごとの直前判定時間とは別）
+- mean=`0.170026ms/race`
+- median=`0.080386ms/race`
+- p95=`0.398716ms/race`
+- max=`0.577104ms/race`
+- 結論: 展示入力が揃った後の判定・買い目生成ローカル計算は十分高速。実運用遅延の主因候補はネットワーク経由の展示データ取得側。
+
+## 現在の結論 / 次の再開地点
+- v351 `g2=.45 / g3=1.00` は正式production採用・独立再現監査とも完了。
+- 的中再現性と展示後ローカル計算速度は実運用可能。
+- September outcomesは一切未読のまま維持。
+- 次は2本立て:
+  1. 払戻/締切時オッズを安全な過去期間だけ結合し、実ROIを正しく算出する。
+  2. 2026-09-15の固定PRE候補について、結果を読まずに展示公開後の正式HEAD判定と買い目生成をprospective LIVEで継続する。
