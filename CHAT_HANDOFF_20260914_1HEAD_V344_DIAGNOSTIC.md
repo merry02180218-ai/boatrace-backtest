@@ -1,19 +1,30 @@
-# 1号艇モデル 引き継ぎ — v344 事前特徴量診断
+# 1号艇 v344 pre-race feature diagnostic handoff
 
-作成日: 2026-09-14
-repo: merry02180218-ai/boatrace-backtest
+## 作業前/現在地
+- v343で、単純な3連単上位3点の合成オッズ閾値だけでは、Feb-Jun pristineでBET 80R以上とROI 110%以上を同時達成できないことを確認。
+- 正式productionは変更しない。`1HEAD_PRODUCTION_20260914_HEAD078` を維持。
+- HEAD cutoff=.78 / exhibition v332 ATTACK_ENV_SOFT env_w=.10 q=.65 / SECOND v317 OUTER_L2_1 / THIRD v318 DROPSTART_T0.1 / ticket v320 HYBRID alpha=.70。
+- production identity: 276R / head 241 / exact3(top3) 119 / race_code SHA256 `89e0b32c3ffbed6212f98f0a9b2e230717b8e41010019e3321fb49e70148ba73`。
+- Jul/AugはNON-PRISTINEで補助確認のみ。September outcomesはUNREADのまま。
 
-## 作業開始記録
-- 前回完了: `CHAT_HANDOFF_20260914_1HEAD_V343_VOLUME.md`
-- v343結論: 単純combined odds閾値では、Feb-Jun pristineで80BET以上かつROI110%以上を同時達成できない。
-- 正式production本体は変更しない: `1HEAD_PRODUCTION_20260914_HEAD078`
-- Jul/AugはNON-PRISTINE、Sep outcomesはUNREAD。
+## v344目的
+過去データの診断として、広めの合成オッズ帯における事前特徴量とhit/returnの関係を調べる。主対象はFeb-Jun pristine。Jul/Augは補助のみ。productionは変更しない。
 
-## 今回やること
-1. 2.20〜2.50帯を中心に、結果を使わない事前特徴量と的中・払戻結果の関連を後方診断する。
-2. 主評価はFeb-Jun pristine-only。Jul/Augは補助ストレス確認のみ。
-3. 候補特徴量: p_head、opp_mass、展示由来のattack_core/env_pair、top3個別オッズ、odds spread/concentration。
-4. 目的はBET数を減らす条件を直接採用することではなく、v343でvolumeを増やした際にどの特徴群が弱いレースと関連しているかを特定すること。
-5. leave-one-month-outで関連の方向が維持されるか確認し、特定月依存の特徴は採用候補にしない。
-6. 正式productionは監査だけで変更しない。
-7. `SEPTEMBER_OUTCOMES_READ=false` を厳守する。
+主な特徴量: p_head, opp_mass, attack_core, env_pair, 1号艇展示/ST/直線/オリジナル展示、SECOND/THIRDの展示関連margin。
+LOMOで方向安定性も確認し、特定月・特定binへの過学習を避ける。
+
+## CI完了
+- workflow: `.github/workflows/v344-1head-prerace-feature-diagnostic.yml`（top-level `name:` なし）
+- script: `run_v344_1head_prerace_feature_diagnostic.py`
+- Run: `34808981813` SUCCESS
+- Job: `103866342121` SUCCESS
+- Artifact: `10334491773` / `v344-1head-prerace-feature-diagnostic`
+- Artifact digest: `sha256:7ef7f969191481179b59826b4a89b8d0e48e0fb48a29f28957da5a81101ec132`
+- workflow head SHA: `9369bd98f4ff493c48be9ab31cd72575fd989306`
+- 全step成功。診断artifactの詳細解析へ進む。
+
+## 厳守
+- `SEPTEMBER_OUTCOMES_READ=false`
+- 9月結果を読まない。
+- Jul/Augをmodel selectionの根拠にしない。
+- v344はretrospective diagnosticであり、現時点でproduction変更なし。
