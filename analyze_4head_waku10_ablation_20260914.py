@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# trigger: 20260914-head4-waku10-core-decomposition
+# trigger: 20260914-head4-boat3-waku10-decomposition
 from __future__ import annotations
 from collections import defaultdict
 from datetime import date,timedelta
@@ -25,7 +25,7 @@ ROOT=Path(__file__).resolve().parent
 START=date(2025,12,1); END=date(2026,8,31)
 PRELOAD_START=START-timedelta(days=120)
 MONTHS=[f'2026-{m:02d}' for m in range(2,9)]
-VARIANTS=('FULL_WAKU10','NO_WAKU10','CORE_WAKU10','B3_ONLY','B4_ONLY','WR_ONLY','ST_ONLY','SR_ONLY','WR_ST','WR_SR','ST_SR')
+VARIANTS=('FULL_WAKU10','NO_WAKU10','CORE_WAKU10','B3_ONLY','B4_ONLY','WR_ONLY','ST_ONLY','SR_ONLY','WR_ST','WR_SR','ST_SR','B3_WR_ONLY','B3_ST_ONLY','B3_SR_ONLY','B3_WR_ST','B3_WR_SR','B3_ST_SR','B3_ALL')
 
 def safe(v,default=0.0):
     try:
@@ -46,7 +46,24 @@ def post_features(code,tkz,stt,orig):
 def cols_for(variant):
     base=['racer4','motor4_2ren','motor4_hist','turnfoot4_prior']
     full=['legacy_score4','racer4','hist_st_edge_4v3','wall3_weak','inner12_resistance','motor4_2ren','motor4_hist','turnfoot4_prior','past_win4']
-    groups={'B3_ONLY':['b3_waku_wr','b3_waku_st','b3_waku_sr'],'B4_ONLY':['b4_waku_wr','b4_waku_st','b4_waku_sr'],'WR_ONLY':['b3_waku_wr','b4_waku_wr'],'ST_ONLY':['b3_waku_st','b4_waku_st'],'SR_ONLY':['b3_waku_sr','b4_waku_sr'],'WR_ST':['b3_waku_wr','b4_waku_wr','b3_waku_st','b4_waku_st'],'WR_SR':['b3_waku_wr','b4_waku_wr','b3_waku_sr','b4_waku_sr'],'ST_SR':['b3_waku_st','b4_waku_st','b3_waku_sr','b4_waku_sr'],'CORE_WAKU10':['b3_waku_wr','b3_waku_st','b3_waku_sr','b4_waku_wr','b4_waku_st','b4_waku_sr']}
+    groups={
+        'B3_ONLY':['b3_waku_wr','b3_waku_st','b3_waku_sr'],
+        'B4_ONLY':['b4_waku_wr','b4_waku_st','b4_waku_sr'],
+        'WR_ONLY':['b3_waku_wr','b4_waku_wr'],
+        'ST_ONLY':['b3_waku_st','b4_waku_st'],
+        'SR_ONLY':['b3_waku_sr','b4_waku_sr'],
+        'WR_ST':['b3_waku_wr','b4_waku_wr','b3_waku_st','b4_waku_st'],
+        'WR_SR':['b3_waku_wr','b4_waku_wr','b3_waku_sr','b4_waku_sr'],
+        'ST_SR':['b3_waku_st','b4_waku_st','b3_waku_sr','b4_waku_sr'],
+        'CORE_WAKU10':['b3_waku_wr','b3_waku_st','b3_waku_sr','b4_waku_wr','b4_waku_st','b4_waku_sr'],
+        'B3_WR_ONLY':['b3_waku_wr'],
+        'B3_ST_ONLY':['b3_waku_st'],
+        'B3_SR_ONLY':['b3_waku_sr'],
+        'B3_WR_ST':['b3_waku_wr','b3_waku_st'],
+        'B3_WR_SR':['b3_waku_wr','b3_waku_sr'],
+        'B3_ST_SR':['b3_waku_st','b3_waku_sr'],
+        'B3_ALL':['b3_waku_wr','b3_waku_st','b3_waku_sr'],
+    }
     if variant=='FULL_WAKU10': pre=full
     elif variant=='NO_WAKU10': pre=base
     elif variant in groups: pre=base+groups[variant]
