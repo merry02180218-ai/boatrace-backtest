@@ -1,0 +1,30 @@
+on:
+  push:
+    paths:
+      - 'run_v341_1head_v340_robustness_audit.py'
+      - '.github/workflows/v341-1head-v340-robustness-audit.yml'
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas
+      - uses: actions/download-artifact@v4
+        with:
+          name: v340-1head-adaptive-odds-dutch-sharded
+          path: /tmp/v341/
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 34796402852
+      - run: python run_v341_1head_v340_robustness_audit.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v341-1head-v340-robustness-audit
+          path: /tmp/v341out/
