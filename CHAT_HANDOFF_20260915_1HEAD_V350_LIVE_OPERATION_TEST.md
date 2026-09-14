@@ -21,7 +21,46 @@
 
 ## 実施予定
 1. 2026-09-15のresult-blind PRE入力を取得する。
-2. 過去データは2026-09-15より前だけで学習し、今日の全場をPREスコアする。
-3. 実運用候補を固定して記録する。
+2. 学習用結果はSeptember outcome guardを優先し、2026-09-01より前だけを使用する。
+3. 今日の全場をPREスコアし、実運用候補を固定して記録する。
 4. 展示データが取得可能な候補は production g2=.50 と research g2=.45 の3連単3点を比較する。
 5. Run/Job/Artifact、候補、買い目差分、未取得項目をこのhandoffへ追記する。
+
+## LIVE PRE 実行
+- workflow=`.github/workflows/v350-1head-live-operation-20260915.yml`
+- workflow commit=`7e011cbcd3e9ac53f18bbb20f6f2f2141c6d21f2`
+- Actions Run ID=`34900103279` success
+- Job `pre-scan`=`104163744302` success
+- Artifact=`v350-1head-live-pre-20260915`
+- Artifact ID=`10370741174`
+- Artifact digest=`sha256:46dc7fa6d3e05a2a634970a4f26be8a5d1b46f6209dd8e87cf90cfa78e1ca11f`
+- PRE cards=153 / waku10=153 / scored=153
+- training max date=`2026-08-31`
+- `SEPTEMBER_OUTCOMES_READ=false`
+- `PRODUCTION_CHANGED=false`
+
+## 2026-09-15 固定PRE候補
+Top5は以下。候補はこの時点で固定し、結果を見て差し替えない。
+1. `202609151811` 徳山11R 山口剛 PRE=0.8600252281
+2. `202609151808` 徳山8R 西村拓也 PRE=0.8502034460
+3. `202609151810` 徳山10R 磯部誠 PRE=0.8491149529
+4. `202609151804` 徳山4R 坪井康晴 PRE=0.8365496612
+5. `202609151801` 徳山1R 高橋竜矢 PRE=0.8276768490
+
+Frozen Top15追加候補:
+6. 徳山6R 川原祐明 0.8184384410
+7. 福岡1R 石倉洋行 0.8061393310
+8. 常滑11R 三浦永理 0.8048050886
+9. 福岡10R 吉田裕平 0.8034152526
+10. 徳山5R 末永和也 0.7907800225
+11. 徳山9R 土屋智則 0.7901627687
+12. 徳山3R 金子拓矢 0.7850749775
+13. 住之江4R 中村日向 0.7847288257
+14. 下関10R 平田忠則 0.7832464065
+15. 徳山12R 石野貴之 0.7824352970
+
+## 現在の結論 / 次の実運用地点
+- PRE prospective stageは完了し、Top5を結果blindで固定した。
+- 最初の比較対象は徳山1R。展示公開後にHEAD側production条件を適用し、PASSなら同一入力で `g2=.50/g3=1.00` と `g2=.45/g3=1.00` の3連単3点を並列比較する。
+- その後も固定Top5（徳山4R/8R/10R/11R）について同じ手順で記録する。
+- September outcomeは明示解禁まで読まない。
