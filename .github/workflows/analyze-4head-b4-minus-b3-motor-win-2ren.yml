@@ -1,0 +1,42 @@
+name: analyze-4head-b4-minus-b3-motor-win-2ren
+
+on:
+  push:
+    paths:
+      - 'analyze_4head_b4_minus_b3_motor_win_2ren.py'
+      - '.github/workflows/analyze-4head-b4-minus-b3-motor-win-2ren.yml'
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml tabulate
+      - name: Guard September outcome blindness
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('analyze_4head_b4_minus_b3_motor_win_2ren.py').read_text(encoding='utf-8')
+          assert "END=date(2026,8,31)" in p
+          assert "HOLD_MONTHS=('2026-07','2026-08')" in p
+          assert '2026-09' not in p
+          print('September outcome blind guard PASS')
+          PY
+      - name: Rebuild 4-head PRE predictions through August
+        run: python analyze_v250_4head_rebuild_baseline.py
+      - name: Rebuild frozen opponent context through August
+        run: python analyze_v93_4corner_second_third.py
+      - name: Run focused motor difference study
+        run: python analyze_4head_b4_minus_b3_motor_win_2ren.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-b4-minus-b3-motor-win-2ren
+          path: |
+            analysis_4head_b4_minus_b3_motor_win_2ren_grid.csv
+            analysis_4head_b4_minus_b3_motor_win_2ren_races.csv
+            summary_4head_b4_minus_b3_motor_win_2ren.md
