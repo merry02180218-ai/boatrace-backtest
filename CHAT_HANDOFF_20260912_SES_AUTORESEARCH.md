@@ -20,106 +20,89 @@ Continue BOATCAST start-exhibition video research until immediate post-exhibitio
 - Live latency target: ideal <=30 sec after video availability, maximum <=60 sec.
 
 ## Seed state
-Current seed remains `auto_seed_exhibition_motion_v17.py`, commit `3f628a0099a5b93b38da7a9be8acdbf89fdcef2b`.
-Evidence still indicates the principal blocker is tracker identity/path preservation rather than seed placement.
+Current seed remains `auto_seed_exhibition_motion_v17.py`, commit `3f628a0099a5b93b38da7a9be8acdbf89fdcef2b`. Prior Kiryu6 evidence shows v17 can produce a plausible rescued outer-row seed and survive long-horizon result-blind validation. Current blocker remains tracker identity/path preservation rather than race-specific seed movement.
 
 ## Retained tracker progression
 - v8 joint per-frame assignment: Kiryu12 std/var passed, Kiryu3/6 failed.
 - v9 immutable appearance memory: rejected.
 - v10 fleet-affine y reference: rejected.
 - v11-v18 progressively added result-blind motion/path constraints and multi-hypothesis temporal search; all failed safely without justifying threshold relaxation.
-- v19 predecessor-conditioned beam, run `34835647158`: all four failed closed after healthy beams eventually reached a frame with zero feasible expansion. Diagnosis: immutable slit appearance becomes proposal-brittle after appearance phase shift.
-- v20 causal rescue proposal, authoritative run `34843565746`: all four failed closed; adaptive appearance as proposal-only did not solve late beam exhaustion.
-- v21 verified appearance bank, run `34856451633`: all four failed closed. Hundreds of verified-bank proposals could still exist near dead frames, so simple proposal absence was not the full explanation.
-- v22 rejection-attribution diagnostic, run `34865180548`: transition gate rejected zero states in all four; cumulative safe-state rejection was too coarse to locate the exact failure. This justified finer attribution without changing behavior.
+- v19 predecessor-conditioned beam, run `34835647158`: all four failed closed after healthy beams eventually reached a frame with zero feasible expansion.
+- v20 causal rescue proposal, run `34843565746`: all four failed closed.
+- v21 verified appearance bank, run `34856451633`: all four failed closed; verified-bank proposals could still exist near dead frames, so simple proposal absence was not the full explanation.
+- v22 rejection attribution, run `34865180548`: transition gate rejected zero states; finer attribution was required.
+- v23 fine-grained rejection attribution, run `34872289293`: proved Kiryu3 is stopped mainly by the immutable reverse-motion corridor, while Kiryu6/Kiryu12 viability often disappears before fleet `_safe_state`, at proposal merge/reachability.
 
-## v23 fine-grained rejection attribution — COMPLETE
-File `track_exhibition_boats_v23.py`.
-Implementation commit `4a8df5f9974c92c65493f2cb228004ef9fcb6372`.
-Workflow `.github/workflows/regress-exhibition-seed17-track23.yml`.
-Workflow commit `5b1038e265cda0e71004bcdbf2710f0aa740ad29`.
-Authoritative run **`34872289293`**.
-
-All four unchanged technical jobs reached tracker v23 and failed closed. FastClip and seed v17 succeeded. v23 changed no tracking behavior, no gate and no score.
-
-Artifact IDs:
-- Kiryu3 `10358763705`
-- Kiryu6 `10360125362`
-- Kiryu12 standard `10359768240`
-- Kiryu12 varied `10358768292`
-
-### v23 audited evidence
-Kiryu3:
-- runtime 55.813s; dead after native frame 18.
-- last centers `[[997,409],[951,492],[964,589],[900,699],[975,819],[520,1016]]`.
-- cumulative safe-state: 4,768 calls, 497 rejects = 475 reverse-corridor + 22 order; transition rejects 0.
-- at the final recorded predecessor expansions candidate lists were non-empty, Cartesian fleet states were non-zero, but every state was rejected by the immutable reverse-motion corridor (with occasional order rejection). Example tail calls had candidate lengths such as `[3,1,1,1,3,1]`, 9 Cartesian states, 9/9 reverse-corridor rejects, 0 output expansions.
-- conclusion: Kiryu3 reaches fleet safety and is correctly fail-closed by motion-direction identity protection. Do not relax the reverse corridor merely to make it pass.
-
-Kiryu6:
-- runtime 52.280s; dead after native frame 20.
-- last centers `[[930,448],[873,503],[1006,606],[952,742],[897,834],[921,843]]`.
-- cumulative safe-state: 18,171 calls, 748 rejects = 736 order + 12 <=4px gap; transition rejects 0.
-- final diagnostic frame: predecessor_count=0, rescue_attempts=24, bank_proposals=284.
-- the final v23 `_expand_predecessor` records immediately before death still had non-zero outputs; therefore the dead frame never reached `_expand_predecessor`. At least one per-boat merged proposal list becomes empty first.
-- conclusion: failure locus is pre-safe proposal merge/reachability, not transition and not a reason to relax fleet order.
-
-Kiryu12 standard:
-- runtime 46.618s; dead after native frame 20.
-- last centers `[[851,386],[984,447],[983,496],[1054,561],[958,602],[706,771]]`.
-- cumulative safe-state: 26,692 calls, only 64 rejects, all order; transition rejects 0.
-- final diagnostic frame: predecessor_count=0, rescue_attempts=24, bank_proposals=144.
-- as with Kiryu6, preceding expansion calls were healthy/non-zero, so the dead frame loses viability before `_expand_predecessor` is invoked.
-- conclusion: proposal merge/reachability loss is the direct locus.
-
-Kiryu12 varied `1,2,4,5,6,3`:
-- runtime 81.548s; dead after native frame 36.
-- last centers `[[878,400],[938,451],[707,811],[691,530],[978,586],[1093,666]]`.
-- cumulative safe-state: 35,473 calls, 1,153 rejects = 982 <=4px gap + 171 order; transition rejects 0.
-- final diagnostic frame: predecessor_count=0, rescue_attempts=24, bank_proposals=0.
-- no zero candidate lengths were seen in the preceding `_expand_predecessor` calls; dead-frame viability disappears before fleet-state evaluation.
-- conclusion: this sample additionally needs attribution of why verified-bank/local/global proposals fail to survive predecessor merge/reachability at the dead frame.
-
-### v23 conclusion
-There are at least two distinct failure loci:
-1. Kiryu3: candidates survive proposal generation/merge but are physically unsafe under the immutable slit-motion corridor.
-2. Kiryu6 and both Kiryu12 technical samples: viability disappears earlier, before fleet `_safe_state`; v23 did not instrument `_merge`, so source loss/reachability/dedup must be measured next.
-Threshold relaxation is not justified.
-
-## CURRENT candidate: v24 proposal-merge source attribution diagnostic
+## v24 proposal-merge attribution — COMPLETE
 File `track_exhibition_boats_v24.py`.
-Implementation commit **`f3c75fce1f10b3278a08f5f2d5569813e81efd3d`**.
+Implementation commit `f3c75fce1f10b3278a08f5f2d5569813e81efd3d`.
 Workflow `.github/workflows/regress-exhibition-seed17-track24.yml`.
-Workflow creation/trigger commit **`d17e7fd200d2861832017a76ceca79ce0fcc32cb`**.
-Authoritative run **`34876804919`** launched by push on the Japan self-hosted runner; queued at this handoff update.
+Workflow commit `d17e7fd200d2861832017a76ceca79ce0fcc32cb`.
+Authoritative run **`34876804919`**.
 
-v24 deliberately preserves v21/v23 tracking behavior exactly. It wraps the existing proposal `_merge` as a side-channel diagnostic and records for every merge call:
-- input counts by source: global immutable / predecessor-local immutable / verified appearance bank;
-- unchanged predecessor reachability radius and minimum candidate distance by source;
-- counts rejected by the unchanged reachability radius;
-- counts rejected by the unchanged 8px merge dedup;
-- accepted source counts and capacity-skipped count;
-- authoritative output count plus diagnostic replay output count.
-It also retains the v23 safe-state and transition attribution. `behavior_changed_from_v21=false`; no threshold, score, beam width, proposal source, gate or race-specific rule is changed.
+All four unchanged matrix jobs reached tracker v24 and failed closed; FastClip and seed v17 succeeded. v24 is diagnostic-only and intentionally preserves prior behavior.
 
-## v24 exact restart point
-1. Inspect run `34876804919`; do not launch a duplicate while legitimately queued/running.
-2. Download all four `seed17-track24-*` artifacts and inspect `exhibition_tracking_v24.json`, not workflow status alone.
-3. For each dead frame, inspect the final merge-call suffix and determine which boat/source loses predecessor reachability:
-   - global immutable source present but all outside radius;
-   - local immutable source absent;
-   - verified bank source absent;
-   - bank/global/local candidates exist but all outside radius;
-   - 8px merge dedup removes the last distinct reachable option;
-   - or another mismatch (diagnostic replay count must equal authoritative output count).
-4. Kiryu3 should reproduce v23 reverse-corridor fail-close. If it changes behavior, v24 diagnostic is invalid and must be fixed rather than interpreted.
-5. If Kiryu6/Kiryu12 loss is primarily predecessor reachability with physically plausible nearby bank candidates just outside the per-step radius, do NOT blindly widen the radius. Compare multi-frame motion/path evidence and implement a causal trajectory-prediction proposal centered on robust recent velocity while preserving hard physical fail-close.
-6. If local/bank proposal generation itself goes empty, instrument the exact NCC/support rejection or add a principled causal appearance-continuity proposal; do not lower NCC merely to pass.
-7. If merge dedup is the dominant source of last-option loss, inspect whether the dedup is merging genuinely distinct identities before changing it.
-8. After failure locus is proven, implement the next behavioral tracker version and rerun the unchanged four-sample matrix.
-9. Only if one unchanged seed+tracker passes all four physically sane with total latency <=60 sec may `run_exhibition_ses_live_local.py` be updated.
-10. After a four-sample technical pass, perform at least one Japan self-hosted end-to-end live-style validation before calling live-ready.
-11. Update this handoff after every meaningful result/design change with exact commit SHA, Run ID and artifact/log evidence.
+Artifacts:
+- Kiryu3: `10360359164`
+- Kiryu6: `10361411914`
+- Kiryu12 standard: `10361841075`
+- Kiryu12 varied: `10361920291`
+
+Observed failure/runtime:
+- Kiryu3: `FAIL_CLOSED: no beam survived frame 1164`, tracker ~1341.68 sec.
+- Kiryu6: `FAIL_CLOSED: no beam survived frame 1166`, tracker ~2849.95 sec.
+- Kiryu12 standard: `FAIL_CLOSED: no beam survived frame 1154`, tracker ~9847.90 sec.
+- Kiryu12 varied: `FAIL_CLOSED: no beam survived frame 1146`, tracker ~896.26 sec.
+These latencies are far beyond the <=60 sec live ceiling and must be reduced after correctness is established.
+
+### v24 root-cause evidence
+The fixed predecessor reachability radius is now directly implicated in many zero-output merges:
+- Kiryu3: 70 zero-output merges / 851 merge calls.
+- Kiryu6: 645 / 3240.
+- Kiryu12 standard: 138 / 11607.
+- Kiryu12 varied: 279 / 1118.
+Many candidate proposal distances were only just outside the unchanged 24 px/native-frame radius (for stride2, examples around 48.37 px versus a 48 px radius), while some were much farther (roughly 53-90+ px).
+
+The source code confirms two coupled zero-velocity assumptions:
+1. v21 proposal `_merge` admits candidates only inside `24*advance` around the predecessor center.
+2. v17 transition logic hard-rejects raw screen displacement above `24*advance`.
+This is brittle under shared camera/screen motion. The evidence does NOT justify blindly widening a radius; it motivates a causal trajectory/camera-motion compensated reachability model while retaining identity, reverse-motion and fleet-geometry fail-closed gates.
+
+## CURRENT behavioral candidate: v25 causal camera-compensated trajectory reachability
+File `track_exhibition_boats_v25.py`.
+Implementation commit **`562db33edfc21dca24fdd7401d7f970d47dd617d`**.
+Workflow `.github/workflows/regress-exhibition-seed17-track25.yml`.
+Initial workflow commit **`54b957afc0270a114bcd5bb62adbdd32a9004abd`**.
+Explicit trigger commit **`844e21fdf324ead70384debc40c18b83ec9e0699`**.
+Latest regression run **`34882583228`**; four matrix jobs were queued on the Japan self-hosted runner at the latest check. Earlier run `34882390375` was also queued; use the newer run as authoritative when it starts unless GitHub shows otherwise.
+
+### v25 design
+v25 keeps v21 immutable appearance anchors, verified appearance bank, NCC thresholds, beam search, fleet order/separation/edge checks, and immutable reverse-motion corridor. It changes predecessor reachability causally rather than by a free threshold relaxation:
+- predict each next center from the predecessor's previous accepted displacement;
+- merge proposals inside the same 24 px/native-frame radius around that causal prediction instead of a zero-velocity circle around the old center;
+- first step retains the original <=24 px/native-frame raw displacement cap;
+- later steps require residual from robust fleet screen motion <=24 px/native-frame;
+- individual acceleration <=20 px/native-frame;
+- absolute raw screen step <=42 px/native-frame as an outer safety ceiling;
+- candidates still must pass immutable appearance/identity, reverse-direction, fleet geometry and edge safety gates;
+- if no safe candidate remains, fail closed;
+- no future frame, race result, boat-number rule or race-specific offset is used.
+
+The wider absolute screen-step ceiling is not a standalone gate relaxation: a candidate beyond the old zero-velocity radius is only reachable if it is close to the causal trajectory prediction and also passes acceleration, shared-screen-motion, appearance, geometry, edge and reverse-direction checks.
+
+## v25 exact restart point
+1. Inspect run `34882583228` jobs first. Do not launch another duplicate while this run is legitimately queued/running.
+2. If it completes, download all four `seed17-track25-*` artifacts and inspect `exhibition_tracking_v25.json`, not workflow status alone.
+3. For each race record accepted/failure reason, `v25_diagnostic`, fallback fractions, identity/anchor NCC, min lane separation, +0.5/+1.0/+1.5 centers, physical on-frame survival, and FastClip+seed+tracker latency.
+4. Kiryu3 result must remain unread. Check specifically whether boat6 is prevented from high-NCC reverse-direction wake/background drift without merely failing earlier for an artificial reason.
+5. Check Kiryu6 boats5/6 remain distinct and physically sane.
+6. Check both Kiryu12 technical samples are not regressed by causal camera compensation.
+7. If v25 fails from a coding/import error, fix and rerun immediately.
+8. If v25 fails scientifically, do not loosen gates merely to pass. Use the new causal diagnostics to decide whether the next step should be multi-frame beam/Viterbi trajectory assignment, improved robust shared-camera-motion estimation, or an appearance-continuity refinement.
+9. If v25 is correct but too slow, optimize candidate/beam computation only after preserving exactly the validated decisions.
+10. Only if one unchanged seed+tracker passes all four with sane identity/geometry and total latency <=60 sec may `run_exhibition_ses_live_local.py` be updated.
+11. After a four-sample technical pass, perform at least one Japan self-hosted end-to-end live-style validation before calling live-ready.
+12. Update this handoff after every meaningful result/design change with exact commit SHA, Run ID, artifact/log evidence and next restart point.
 
 ## Production wrapper
 `run_exhibition_ses_live_local.py` remains old seed v1 + tracker v3. DO NOT update until an unchanged seed+tracker passes the full technical matrix with sane identity/geometry and <=60 sec.
