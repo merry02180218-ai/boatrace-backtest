@@ -144,3 +144,106 @@ Status: `ENV_ENTRY_21_EXACT_AUDIT_PASS`
 7. CIでREADY/BLOCKED契約を固定し、Run/Job/Artifactまで回収する。
 
 Status: `WR_ST_CURRENT_DAY_READINESS_GATE_STARTED`
+
+## AFTER — WR_ST current-day READY判定の一本化
+
+### 実装
+
+追加:
+
+- `audit_4head_b3_wrst_current_readiness.py`
+  - 初回commit: `065cb9841da70b0bfdaaf8a50515d2adc303a356`
+  - POST / ENV / v283 の現在日再現可否を1つの検証専用レポートへ統合。
+  - 2026-09-14 exact-currentを例に、ENV 21/21、v283 20/25、v283履歴5項目BLOCKEDを明示。
+  - `production_action_authorized=false`、`september_outcomes_read=false` を固定。
+- `.github/workflows/validate-4head-b3-wrst-current-readiness.yml`
+  - commit: `8997e1b754f68bd0ba5c7fc7fe8e4c95d99db795`
+  - レポート生成、期待契約assert、Artifact保存。
+
+### 初回CI failure と修正
+
+初回:
+
+- Run ID: `34865796033`
+- Job ID: `104049206417`
+- conclusion: `failure`
+- 原因: readiness監査スクリプトがmodel runtimeをimportし、その依存先で `numpy` が必要だったが、この軽量CIにはnumpyを入れていなかったため `ModuleNotFoundError: No module named 'numpy'`。
+- モデル契約・READY/BLOCKED判定の矛盾による失敗ではなく、監査スクリプトの不要な依存関係が原因。
+- 初回RunではArtifactは保存されていない。
+
+修正:
+
+- `audit_4head_b3_wrst_current_readiness.py` をPython標準ライブラリのみで動くよう変更。
+- frozen ENV 21 schemaを監査側に明示し、v283 SECOND 25 schemaは `artifacts/head4_v291_downstream_20260630.json` を直接JSON読込して確認する方式へ変更。
+- 修正commit: `a2f02ee146215fba0477f333b0553f2cd2f6b4ec`
+
+### 最終CI
+
+- Workflow: `validate-4head-b3-wrst-current-readiness`
+- Run ID: `34865910925`
+- Job ID: `104049576389`
+- Run conclusion: `success`
+- Job steps: レポート生成 `success` / September outcome-blind契約assert `success` / Artifact保存 `success`
+- validated head SHA: `a2f02ee146215fba0477f333b0553f2cd2f6b4ec`
+- Artifact ID: `10356657553`
+- Artifact name: `head4-b3-wrst-current-readiness`
+- Artifact digest: `sha256:e90af83628d6a2d727cb4e0dc038c3d053db4bb59712e6790ab5dad6dc8ba596`
+
+### READY/BLOCKED確定結果
+
+POST 7項目:
+
+- `READY_IF_PREDEADLINE_SOURCES_AVAILABLE`
+- 9月結果不要。
+
+ENV_ENTRY primitives 21項目:
+
+- `READY_IF_PREDEADLINE_SOURCES_AVAILABLE`
+- exact: **21/21**
+- 9月結果不要。
+
+v283 SECOND 25項目:
+
+- 9月結果なしでexact-current再現可能: **20/25**
+- 2026-09-14 exactでBLOCKEDになる5項目:
+  - `pref_pl_all_p2`
+  - `pref_pl_all_win`
+  - `pref_pl_frame_p2`
+  - `pref_pl_recent_p2`
+  - `pref_pl_frame_win`
+- 理由: 9/14時点のexactな選手履歴状態には9/1〜9/13のレース結果更新が必要。
+
+WR_ST overall:
+
+- `BLOCKED_EXACT_V283_SEPTEMBER_UNREAD`
+- `may_emit_frozen_exact_wrst_decision=false`
+- つまり、**9月結果UNREADを維持する現在ルールでは、2026-09-14のfrozen exact v283を使った完全なWR_ST判定は出さない**。
+- これは不具合ではなく、結果漏洩を避けるための正しい停止条件。
+
+### production / データ境界
+
+- production `HEAD4_V291_COMP7`: **変更なし**。
+- WR_ST: **検証専用のまま**。
+- 閾値・重み・production policy: **変更なし**。
+- 7月・8月結果: **使用可**。
+- 9月結果: **UNREAD維持。今回も読んでいない**。
+- 8/31履歴状態を9/14 exactと偽装する経路は作っていない。
+
+### 結論
+
+- current-day入力再現の未解決点はかなり絞れた。
+- POSTは事前ソースがあればREADY。
+- ENVは21/21 exact-current READY。
+- v283は20/25 READY、残る5つの選手履歴だけがSeptember `UNREAD`ルールと衝突する。
+- よって、今後も9月結果を読まないなら、WR_ST研究を続けるには **8/31までの履歴で明示的に打ち切った検証専用variant** をexact frozen v283とは別物として作るのが安全な次手。
+
+### 次の再開地点
+
+1. `HEAD4_B3_WR_ST` 用に、8/31時点の選手履歴を使う **明示的な検証専用variant** を設計する。
+2. variantには必ず `exact_for_target=false` / `usable_for_frozen_exact_v283=false` / `production_action_authorized=false` / `september_outcomes_used=false` を持たせる。
+3. exact v283 / production経路とファイル名・policy名・出力manifestを分離する。
+4. 8/31履歴variantを使った場合にWR_ST候補生成まで技術的に通せるか、結果を見ずに入力契約だけをCI検証する。
+5. production `HEAD4_V291_COMP7`、閾値、重みは触らない。
+6. もし将来ユーザーが9月結果の使用も明示的に解禁した場合のみ、9/14 exact v283の5履歴項目を再構築する。
+
+Status: `WR_ST_CURRENT_DAY_READINESS_GATE_PASS_BLOCKED_BY_V283_SEP_HISTORY`
