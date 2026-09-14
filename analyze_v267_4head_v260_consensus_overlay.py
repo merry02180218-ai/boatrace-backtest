@@ -152,10 +152,38 @@ def summarize(q, overlay, keep_frac, base_r):
     }
 
 
+def write_zero_selector_outputs():
+    cols = [
+        'overlay','keep_frac','base_settled_R','R','head4_rate_pct','trifecta_hit_pct',
+        'avg_n','avg_comp_odds','cost_yen','return_yen','profit_yen','new_roi_pct',
+        'min_month_roi_pct','month_detail','score_cut','robust_roi',
+    ]
+    pd.DataFrame(columns=cols).to_csv(OUT, index=False)
+    L = [
+        '# v267 4-head: v260 selector + v265 consensus overlay', '',
+        f'- Frozen base selector: PRE>={PRE_CUT:.2f}, POST>={POST_CUT:.2f}.',
+        '- Selector rows: 0.',
+        '- This is a valid zero-race ablation result, not a settlement plumbing failure.',
+        '- No thresholds, ranking rules, ticket rules, or settlement rules were relaxed.',
+        '- Jul/Aug remain excluded and production is unchanged.', '',
+        '## Decision',
+        '- Frozen v260 S-base has 0 qualifying races for this input variant.',
+        '- Continue downstream independent analyses so the comparison can record 0R explicitly.',
+        '',
+    ]
+    SUM.write_text('\n'.join(L), encoding='utf-8')
+    print('\n'.join(L))
+
+
 def main():
     z = selector_frame()
+    if z.empty:
+        write_zero_selector_outputs()
+        return
+
     settled = settle_rows(z)
     if settled.empty:
+        # Nonzero selector rows that cannot be settled are still a hard plumbing failure.
         raise RuntimeError('no settled v260-base rows after canonical key normalization')
     rows = []
 
