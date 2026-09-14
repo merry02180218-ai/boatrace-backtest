@@ -358,3 +358,14 @@ Status: `FROZEN_WR_ST_PROSPECTIVE_SHADOW_PATH_FROZEN_AND_VALIDATED_SOURCE_WIRING
 ## UPDATED NEXT CHAT START PROMPT — SOURCE WIRING / PROSPECTIVE RECORDING
 
 `boatrace-backtest の CHAT_HANDOFF_20260914_4HEAD_BOAT3_WAKU10_NEXT.md と最新GitHubを読んで続き。最新GitHubを優先し、作業前にBEFORE追記。B3_WR_ST prospective shadow path は HEAD4_B3_WR_ST_SHADOW_V1 としてfreeze済みで、freeze run 34825494106 と最終validate run 34826229101 はsuccess。Jul/Aug outcome禁止・Sep outcome UNREAD・production HEAD4_V291_COMP7不変を維持したまま、次はcurrent-day POST 7項目/ENV_ENTRY primitives/v283 boatsのresult-blind source manifestをwire・検証し、完全なレースだけ締切前shadow recordを保存できるようにする。欠損はfail closed。作業後にAFTER追記。`
+
+## FROZEN WR_ST CURRENT-DAY SOURCE WIRING — BEFORE (2026-09-14 JST)
+
+- Start point: latest GitHub HEAD `532d0e8575c6b48be933f4551d73ef86a480106f` confirmed immediately before this work unit.
+- Policy remains frozen as `HEAD4_B3_WR_ST_SHADOW_V1`; production `HEAD4_V291_COMP7` must remain unchanged.
+- Objective: wire and verify result-blind current-day source contracts for POST 7 fields, ENV_ENTRY primitives, and v283 `boats`, then make only source-complete races eligible for prospective pre-deadline shadow logging.
+- First action: inventory existing HEAD4 LIVE source/acquisition builders and prior source-provenance audits; reuse proven components, especially official beforeinfo/BOATCAST work, rather than create parallel semantics.
+- POST source contract remains strict: `ex_st_rank4`, `ex_st_4`, `ex_st_edge_4v3`, `orig_straight4`, `orig_lap4`, `orig_turn4`, `tilt4`; no default fabrication for unavailable original-exhibition values.
+- ENV_ENTRY and v283 inputs must carry explicit source/timestamp/completeness provenance; missing fields fail closed.
+- No Jul/Aug outcomes, no September outcomes, no target-race result/payout endpoints, no threshold/feature/weight tuning, and no production action.
+- Status: `FROZEN_WR_ST_CURRENT_DAY_SOURCE_WIRING_STARTED`.
