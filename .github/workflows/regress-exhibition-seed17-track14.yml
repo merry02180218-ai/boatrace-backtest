@@ -1,5 +1,6 @@
 name: regress exhibition seed17 tracker14
 # v14 regression: diversified NCC anchors + slit-direction beam rerank
+# trigger: 2026-09-14 14:18 JST
 
 on:
   workflow_dispatch:
