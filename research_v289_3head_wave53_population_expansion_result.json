@@ -1,0 +1,24 @@
+{
+  "wave": "53-motor-first-population-expansion",
+  "source": {"run_id": 34754875342, "artifact_id": 10317157868, "v288_exclusion": 94},
+  "march_full": {"races": 4482, "head_hits": 563, "head_rate": 0.1256135654},
+  "wave36": {"races": 90, "head_hits": 38, "head_rate": 0.4222222222, "p3_cut": 0.365448},
+  "feb_motor_cuts": {
+    "q50": {"motor2_gap": 0.1, "motor3_gap": 0.0},
+    "q67": {"motor2_gap": 4.0, "motor3_gap": 4.8},
+    "q75": {"motor2_gap": 6.2, "motor3_gap": 7.2}
+  },
+  "high_volume_focus": [
+    {"definition":"Q50 motor edge + p3>=0.18", "total_races":448, "total_head_hits":132, "total_head_rate":0.2946428571, "wave36_overlap":59, "incremental_races":389, "incremental_head_hits":103, "incremental_head_rate":0.2647814910},
+    {"definition":"Q50 motor edge + p3>=0.20", "total_races":359, "total_head_hits":116, "total_head_rate":0.3231197772, "wave36_overlap":59, "incremental_races":300, "incremental_head_hits":87, "incremental_head_rate":0.2900000000},
+    {"definition":"Q50 motor edge + p3>=0.22", "total_races":295, "total_head_hits":99, "total_head_rate":0.3355932203, "wave36_overlap":59, "incremental_races":236, "incremental_head_hits":70, "incremental_head_rate":0.2966101695},
+    {"definition":"Q67 motor edge + p3>=0.18", "total_races":301, "total_head_hits":83, "total_head_rate":0.2757475083, "wave36_overlap":49, "incremental_races":252, "incremental_head_hits":61, "incremental_head_rate":0.2420634921},
+    {"definition":"Q67 motor edge + p3>=0.20", "total_races":242, "total_head_hits":73, "total_head_rate":0.3016528926, "wave36_overlap":49, "incremental_races":193, "incremental_head_hits":51, "incremental_head_rate":0.2642487047}
+  ],
+  "reference_wave51": {"definition":"Q75 motor edge + p3>=0.25", "incremental_races":88, "incremental_head_hits":27, "incremental_head_rate":0.3068181818},
+  "conclusion": "Relaxing the motor entrance from Q75 to Q50 creates a much larger useful motor-first pool. Q50+p3>=0.20 gives 300 incremental races outside Wave36 with 87 boat3 heads (29.0%). Q50+p3>=0.22 gives 236/70 (29.66%), and Q50+p3>=0.18 gives 389/103 (26.48%). Stronger motor thresholds have a worse volume-rate tradeoff. March is research-exposed, so these are hypothesis regions only.",
+  "status": "DIAGNOSTIC_ONLY_HIGH_VOLUME_REGION_FOUND_NO_PRISTINE_PERIOD",
+  "jul_aug_used": false,
+  "september_outcomes_read": false,
+  "production_changed": false
+}
