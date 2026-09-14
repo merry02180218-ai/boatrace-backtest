@@ -30,13 +30,23 @@ ATTACK_CORE_W_ONE_ST = 0.25
 ATTACK_CORE_W_ONE_STRAIGHT = 0.15
 ATTACK_CORE_W_ONE_ORIG_AVG = 0.20
 
-# Frozen Feb-Aug regression identity from successful v337 audit, retained as
-# the pre-v345 sentinel. A new production identity must be established by a
-# dedicated regression run before replacing these expected values.
-EXPECTED_PASS_R = 276
-EXPECTED_HEAD = 241
-EXPECTED_EXACT3 = 119
-EXPECTED_PASS_ID_SHA256 = "89e0b32c3ffbed6212f98f0a9b2e230717b8e41010019e3321fb49e70148ba73"
+# Current post-v345 Feb-Aug regression identity.  Jul/Aug remain NON-PRISTINE
+# support months; September outcomes must remain unread.
+CURRENT_EXPECTED_PASS_R = 276
+CURRENT_EXPECTED_HEAD = 241
+CURRENT_EXPECTED_EXACT3 = 121
+CURRENT_EXPECTED_PASS_ID_SHA256 = "08eb41e04c36d25074d6a1e471ff9334fafd34c8306cd5d336923772b613b8bd"
+
+# Backward-compatible pre-v345 sentinel used by historical v338 regression.
+# Keep EXPECTED_* aliases frozen so old wrappers remain reproducible.
+PRE_V345_EXPECTED_PASS_R = 276
+PRE_V345_EXPECTED_HEAD = 241
+PRE_V345_EXPECTED_EXACT3 = 119
+PRE_V345_EXPECTED_PASS_ID_SHA256 = "89e0b32c3ffbed6212f98f0a9b2e230717b8e41010019e3321fb49e70148ba73"
+EXPECTED_PASS_R = PRE_V345_EXPECTED_PASS_R
+EXPECTED_HEAD = PRE_V345_EXPECTED_HEAD
+EXPECTED_EXACT3 = PRE_V345_EXPECTED_EXACT3
+EXPECTED_PASS_ID_SHA256 = PRE_V345_EXPECTED_PASS_ID_SHA256
 
 # Original frozen anchor is retained as a regression sentinel, not production.
 ANCHOR_HEAD_CUTOFF = 0.8073405637
