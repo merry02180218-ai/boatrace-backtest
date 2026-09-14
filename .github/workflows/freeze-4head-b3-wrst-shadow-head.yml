@@ -1,0 +1,45 @@
+name: freeze-4head-b3-wrst-shadow-head
+
+on:
+  push:
+    paths:
+      - 'freeze_4head_b3_wrst_shadow_head_artifact.py'
+      - 'analyze_4head_waku10_ablation_20260914.py'
+      - 'artifacts/head4_b3_wrst_shadow_policy_v1.json'
+      - '.github/workflows/freeze-4head-b3-wrst-shadow-head.yml'
+  workflow_dispatch:
+
+jobs:
+  freeze:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Guard prospective research policy
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=json.loads(Path('artifacts/head4_b3_wrst_shadow_policy_v1.json').read_text())
+          assert p['policy_id']=='HEAD4_B3_WR_ST_SHADOW_V1'
+          assert p['status']=='RESEARCH_SHADOW_ONLY'
+          assert p['production_policy_unchanged']=='HEAD4_V291_COMP7'
+          assert p['head_model']['training_label_cutoff']=='2026-06-30'
+          assert p['outcome_guards']['jul_aug_2026_outcomes_allowed'] is False
+          assert p['outcome_guards']['september_2026_outcomes_allowed'] is False
+          print('policy guards PASS')
+          PY
+      - name: Build and parity-check frozen head artifact
+        run: python freeze_4head_b3_wrst_shadow_head_artifact.py
+      - name: Upload frozen research artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: head4-b3-wrst-shadow-head-20260630
+          if-no-files-found: error
+          path: |
+            artifacts/head4_b3_wrst_shadow_head_20260630.json
+            artifacts/head4_b3_wrst_shadow_head_parity_20260630.json
+            artifacts/head4_b3_wrst_shadow_policy_v1.json
