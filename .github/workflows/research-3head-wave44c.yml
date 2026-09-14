@@ -9,4 +9,10 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install -q pandas numpy scikit-learn
+      - name: download Wave21 source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34754875342 -n 3head-wave21-allrace-source-build -D /tmp/w21
+          cp /tmp/w21/analysis_v289_3head_wave21_allrace_feature_settled.csv .
       - run: python research_v289_3head_wave44c_contextual_player_attack_mode.py
