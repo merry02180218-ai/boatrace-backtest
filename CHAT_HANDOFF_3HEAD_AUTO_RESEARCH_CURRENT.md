@@ -13,18 +13,16 @@
 ## Closed research
 - Wave39/40/41/42/43 rank replacements: NO_ADOPTION.
 - Wave44 attack-mode route: best March AUC0.5895, below 0.60 gate. CLOSED.
+- Wave45 confidence/margin: March 90R/24 Top5 hits; best confidence subset had zero lift. NO_ADOPTION.
 
-## Wave45 confidence/margin topology — COMPLETE / NO_ADOPTION
-- Implementation commit cd1cada28cb9f7abb30c7cbd9e03e3845933d2f2.
-- CI trigger commit a2f1f0c400654196cc64f0d4a23ebd1623b25a2f.
-- Run34834816592 / Job103946124771: success.
-- March only, Wave36 p3 cutoff fixed 0.365448. Apr-Jun not opened.
-- Baseline: 90R / 24 Top5 hits / 26.667%. Early31.111%, late22.222%.
-- Tested pre-race Top5 mass, p5-p6 margin, entropy/concentration and fixed conjunctions.
-- Best: Top5 mass high at median =>45R /26.667%, lift0.000%, early27.273%, late26.087%.
-- Gate rules=0. Decision NO_ADOPTION.
-- Do not open Apr-Jun for Wave45. Do not conditionally expand Top5 using these measures.
-- v288 untouched; Jul/Aug NON-PRISTINE; September unread.
+## BEFORE-WORK PLAN — Wave46 second-place / third-place role factorization — 2026-09-14
+1. New structural hypothesis: when boat3 wins, the attributes that make an opponent likely to finish second are not identical to those that make it likely to finish third. Model the two finishing roles separately rather than predicting the ordered pair directly.
+2. Use only the frozen pre-race 63 static feature family and Feb training -> March OOS. No current-race result/kimarite/exhibition leakage.
+3. Train two opponent-level classifiers on actual historical 3-head training rows: P(opponent=2nd | boat3 wins) and P(opponent=3rd | boat3 wins). Score each legal ordered pair (a,b) with a predeclared combination of second-role and third-role probabilities; compare against frozen Wave36 Top5 on March only.
+4. Keep model family deliberately small and regularized. Test only a few predeclared pair-score forms (product, geometric mean equivalent ranking, and conservative blend with frozen Wave36 score if available). Do not search dozens of weights.
+5. March promotion gate: at least +1 Top5 hit over Wave36 baseline on the same gated rows, lose no more than 2 old hits, and no early/late collapse. If gate fails, stop and do not open Apr-Jun.
+6. If gate passes, open Apr-Jun once and evaluate exact JPY10,000 Dutch economics against Wave36/Wave36S-C. v288 untouched.
+7. Jul/Aug remain NON-PRISTINE; September outcomes remain unread.
 
 ## Exact restart point
-- Next research must use a genuinely different pre-race structural hypothesis. Preserve Wave36/Wave36S-C benchmarks. Keep Apr-Jun unopened until a March gate passes.
+- Implement Wave46 role-factorized second/third opponent model using Wave21 source and frozen Wave36 gate p3>=0.365448, run March OOS CI, then decide whether Apr-Jun may be opened.
