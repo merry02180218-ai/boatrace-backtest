@@ -44,4 +44,19 @@
 - No threshold, feature ranking, ticket rule, production rule, Jul/Aug outcome usage, or September outcome usage may change in this iteration.
 - After diagnostics identify the mismatch, rerun the same FULL/NO/CORE chain and only then collect Apr-Jun comparison results.
 
-Status: RECOVERY_ITERATION_2_BEFORE_RECORDED
+## RECOVERY ITERATION 3 — BEFORE
+
+- Diagnostic rerun `34796519530` completed with failure after the prior diagnostics-persistence work.
+- The exact stop is now understood: `FULL_WAKU10` traversed the frozen downstream chain, while `NO_WAKU10` reached v267 with `selector_rows=0` under the unchanged fixed S selector (`PRE>=0.28`, `POST>=0.25`).
+- This is not a settlement-key mismatch. It means the NO_WAKU10 variant has zero rows entering the frozen v267 S-base selector for Apr-Jun.
+- A zero-selector variant is a legitimate ablation outcome and must be represented as `0R`, not treated as a pipeline exception. However, any case with nonzero selector rows but zero settlement remains fail-closed.
+- Repair scope is therefore plumbing-only:
+  1. make v267 emit a valid empty/zero benchmark artifact when `selector_rows==0`;
+  2. preserve hard failure if `selector_rows>0` but no rows settle;
+  3. let v271 continue independently so A-layer behavior can still be measured;
+  4. rerun FULL / NO / CORE under identical fixed thresholds;
+  5. recover Apr-Jun S/A/S+A metrics and Jul/Aug score-distribution stress only;
+  6. append exact commit/run/results/decision after completion.
+- No thresholds, feature definitions, ranking rules, ticket rules, production policy, Jul/Aug outcome selection, or September outcomes may be changed/used.
+
+Status: RECOVERY_ITERATION_3_BEFORE_RECORDED
