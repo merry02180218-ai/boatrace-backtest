@@ -54,5 +54,14 @@
 - This is NOT an adoption rule because Apr-Jun were already opened. No threshold may be tuned/promoted from these outcomes.
 - Jul/Aug remain NON-PRISTINE and are not used as validation. September outcomes remain unread. v288 untouched.
 
+## 2026-09-15 JST — Wave49 BEFORE WORK
+- User approved proceeding from the Wave48 diagnosis.
+- Objective: build a genuinely new pre-deadline 3-head selection test around the structure `boat3 vs boat2 motor edge + boat2 wall strength + relative ST`, rather than a post-hoc single cutoff on June.
+- Preserve v288 production unchanged and keep Wave36 opponent Top5 logic frozen for the first head-layer test unless the experiment explicitly separates a second opponent-layer diagnostic.
+- Do not tune any threshold from Apr-Jun outcomes. Apr-Jun may be used only as already-open diagnostic reference; Jul/Aug remain NON-PRISTINE; September outcomes remain unread.
+- Prefer parameterization learned from earlier untouched/training periods (Feb -> March OOS) and evaluate March first. Any Apr-Jun readout must be labeled contaminated/diagnostic only, not adoption evidence.
+- Required reporting: exact feature construction, March sample/head-rate/Top5 capture and chronological halves, any comparator versus Wave47/Wave36, exact Run/Job/Artifact IDs if CI is used, commit SHAs, and a strict adoption status.
+- Status: `WAVE49_STARTED_BOAT3_VS_BOAT2_MOTOR_WALL_STRUCTURE`.
+
 ## Exact restart point
-- Design a future-pristine hypothesis from Wave48 without fitting Apr-Jun cutoffs: prioritize boat3-vs-boat2 motor-edge/wall structure and separate head-selection vs opponent-layer handling. Validate only on a genuinely new untouched period when available; do not retrofit Wave47 to June.
+- Implement Wave49 from the frozen Wave48 hypothesis without fitting June. Use a March-first OOS gate based on pre-deadline-only features; keep production untouched and record all results before moving further.
