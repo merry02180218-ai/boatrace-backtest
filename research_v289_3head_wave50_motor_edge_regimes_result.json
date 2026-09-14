@@ -1,0 +1,48 @@
+{
+  "wave": "50-explicit-3v2-motor-edge-regimes",
+  "execution": "direct exact source artifact because workflow write/reroute was blocked by platform safety checker",
+  "source_run_id": 34754875342,
+  "source_artifact_id": 10317157868,
+  "february_feature_only_cuts": {
+    "motor2_gap_low": -4.0,
+    "motor2_gap_high": 3.9,
+    "motor3_gap_low": -4.6,
+    "motor3_gap_high": 4.633333333333257
+  },
+  "march_baseline": {
+    "races": 90,
+    "head_hits": 38,
+    "head_rate": 0.4222222222222222,
+    "ticket_hits": 24,
+    "ticket_rate": 0.26666666666666666,
+    "conditional_top5_capture_given_head3": 0.631578947368421
+  },
+  "regimes": {
+    "strong": {
+      "full": {"races": 49, "head_hits": 22, "head_rate": 0.4489795918367347, "ticket_hits": 13, "ticket_rate": 0.2653061224489796, "conditional_top5_capture_given_head3": 0.5909090909090909},
+      "early": {"races": 28, "head_hits": 12, "head_rate": 0.42857142857142855, "ticket_hits": 8, "ticket_rate": 0.2857142857142857, "conditional_top5_capture_given_head3": 0.6666666666666666},
+      "late": {"races": 21, "head_hits": 10, "head_rate": 0.47619047619047616, "ticket_hits": 5, "ticket_rate": 0.23809523809523808, "conditional_top5_capture_given_head3": 0.5},
+      "mean_motor2_gap": 22.244897959183675,
+      "mean_motor3_gap": 27.03061224489796
+    },
+    "medium": {
+      "full": {"races": 30, "head_hits": 14, "head_rate": 0.4666666666666667, "ticket_hits": 9, "ticket_rate": 0.3, "conditional_top5_capture_given_head3": 0.6428571428571429},
+      "early": {"races": 15, "head_hits": 7, "head_rate": 0.4666666666666667, "ticket_hits": 6, "ticket_rate": 0.4, "conditional_top5_capture_given_head3": 0.8571428571428571},
+      "late": {"races": 15, "head_hits": 7, "head_rate": 0.4666666666666667, "ticket_hits": 3, "ticket_rate": 0.2, "conditional_top5_capture_given_head3": 0.42857142857142855},
+      "mean_motor2_gap": 0.11428571428571388,
+      "mean_motor3_gap": 0.9964285714285721
+    },
+    "weak": {
+      "full": {"races": 11, "head_hits": 2, "head_rate": 0.18181818181818182, "ticket_hits": 2, "ticket_rate": 0.18181818181818182, "conditional_top5_capture_given_head3": 1.0},
+      "early": {"races": 2, "head_hits": 0, "head_rate": 0.0, "ticket_hits": 0, "ticket_rate": 0.0, "conditional_top5_capture_given_head3": null},
+      "late": {"races": 9, "head_hits": 2, "head_rate": 0.2222222222222222, "ticket_hits": 2, "ticket_rate": 0.2222222222222222, "conditional_top5_capture_given_head3": 1.0},
+      "mean_motor2_gap": -10.663636363636364,
+      "mean_motor3_gap": -11.263636363636364
+    }
+  },
+  "interpretation": "weak joint 3-vs-2 motor-edge regime is strongly associated with head failure; opponent Top5 capture is not the primary issue there because only two head wins occurred and both were captured",
+  "adoption_status": "DIAGNOSTIC_ONLY_NO_PRISTINE_PERIOD",
+  "jul_aug_used": false,
+  "september_outcomes_read": false,
+  "production_changed": false
+}
