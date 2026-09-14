@@ -65,3 +65,14 @@
 - 次は head-hit / exact3-miss を中心に、SECOND / THIRD / ticket側の相手選び診断へ進む。
 - v345 production本体のHEAD cutoff .78 / opponent mass .375 / env_w .10 / q .65 / v317 / v318 / v320 alpha=.70 は固定して比較する。
 - September outcomesは引き続きUNREAD。Jul/AugはNON-PRISTINE support only。
+
+## 2026-09-14 19:40 JST 今回の作業開始記録
+- 前チャットと最新GitHubを再確認。最新main HEADは作業開始確認時 `1caf0e8530b411fb48450ae257e0828b8d43a02f`（v345 regression full reconstruction成功記録）。
+- 現正式productionは `1HEAD_PRODUCTION_20260914_HEAD078_V345_ATTACKCORE`。PASS 276R / head 241 (87.3188%) / exact3 121 (43.8406%) / race SHA `08eb41e04c36d25074d6a1e471ff9334fafd34c8306cd5d336923772b613b8bd` を基準とする。
+- September 2026 outcomesは今回も `UNREAD` を厳守。Jul/Augは `NON_PRISTINE_SUPPORT_ONLY`。
+- 今回やること:
+  1. v345正式identityを固定したまま、head-hit / exact3-miss を中心にSECOND / THIRD / ticketの相手選び失敗をrace-levelで診断する。
+  2. まず現行 v317 SECOND / v318 THIRD / v320 HYBRID alpha=.70 のどこで正解艇を落としているかを分類し、改善余地を定量化する。
+  3. 結果リーク型の後付け除外はせず、候補改善は事前・展示時点で利用可能な特徴だけを使う。
+  4. production本体（HEAD .78 / opponent mass .375 / env_w .10 / q .65 / v345 attack_core）は固定し、相手側の比較だけを行う。
+  5. 作業完了後、実測結果・commit・Actions Run/Job/Artifact ID・結論・次の再開地点をこのファイルへ追記する。
