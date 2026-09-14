@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# trigger: 20260914-head4-boat3-waku10-decomposition
+# trigger: 20260914-head4-boat3-waku10-decomposition-cache
 from __future__ import annotations
 from collections import defaultdict
 from datetime import date,timedelta
@@ -46,24 +46,7 @@ def post_features(code,tkz,stt,orig):
 def cols_for(variant):
     base=['racer4','motor4_2ren','motor4_hist','turnfoot4_prior']
     full=['legacy_score4','racer4','hist_st_edge_4v3','wall3_weak','inner12_resistance','motor4_2ren','motor4_hist','turnfoot4_prior','past_win4']
-    groups={
-        'B3_ONLY':['b3_waku_wr','b3_waku_st','b3_waku_sr'],
-        'B4_ONLY':['b4_waku_wr','b4_waku_st','b4_waku_sr'],
-        'WR_ONLY':['b3_waku_wr','b4_waku_wr'],
-        'ST_ONLY':['b3_waku_st','b4_waku_st'],
-        'SR_ONLY':['b3_waku_sr','b4_waku_sr'],
-        'WR_ST':['b3_waku_wr','b4_waku_wr','b3_waku_st','b4_waku_st'],
-        'WR_SR':['b3_waku_wr','b4_waku_wr','b3_waku_sr','b4_waku_sr'],
-        'ST_SR':['b3_waku_st','b4_waku_st','b3_waku_sr','b4_waku_sr'],
-        'CORE_WAKU10':['b3_waku_wr','b3_waku_st','b3_waku_sr','b4_waku_wr','b4_waku_st','b4_waku_sr'],
-        'B3_WR_ONLY':['b3_waku_wr'],
-        'B3_ST_ONLY':['b3_waku_st'],
-        'B3_SR_ONLY':['b3_waku_sr'],
-        'B3_WR_ST':['b3_waku_wr','b3_waku_st'],
-        'B3_WR_SR':['b3_waku_wr','b3_waku_sr'],
-        'B3_ST_SR':['b3_waku_st','b3_waku_sr'],
-        'B3_ALL':['b3_waku_wr','b3_waku_st','b3_waku_sr'],
-    }
+    groups={'B3_ONLY':['b3_waku_wr','b3_waku_st','b3_waku_sr'],'B4_ONLY':['b4_waku_wr','b4_waku_st','b4_waku_sr'],'WR_ONLY':['b3_waku_wr','b4_waku_wr'],'ST_ONLY':['b3_waku_st','b4_waku_st'],'SR_ONLY':['b3_waku_sr','b4_waku_sr'],'WR_ST':['b3_waku_wr','b4_waku_wr','b3_waku_st','b4_waku_st'],'WR_SR':['b3_waku_wr','b4_waku_wr','b3_waku_sr','b4_waku_sr'],'ST_SR':['b3_waku_st','b4_waku_st','b3_waku_sr','b4_waku_sr'],'CORE_WAKU10':['b3_waku_wr','b3_waku_st','b3_waku_sr','b4_waku_wr','b4_waku_st','b4_waku_sr'],'B3_WR_ONLY':['b3_waku_wr'],'B3_ST_ONLY':['b3_waku_st'],'B3_SR_ONLY':['b3_waku_sr'],'B3_WR_ST':['b3_waku_wr','b3_waku_st'],'B3_WR_SR':['b3_waku_wr','b3_waku_sr'],'B3_ST_SR':['b3_waku_st','b3_waku_sr'],'B3_ALL':['b3_waku_wr','b3_waku_st','b3_waku_sr']}
     if variant=='FULL_WAKU10': pre=full
     elif variant=='NO_WAKU10': pre=base
     elif variant in groups: pre=base+groups[variant]
@@ -94,9 +77,22 @@ def build_data():
         ingest_prior_day_preview(cache,d);ingest_motor(hist,seen,d);d+=timedelta(days=1)
     df=pd.DataFrame(data);df['_date']=pd.to_datetime(df.date);return df
 
+def load_or_build_data(cache_path):
+    if not cache_path:
+        return build_data()
+    p=Path(cache_path)
+    if p.is_file():
+        df=pd.read_pickle(p)
+        if '_date' not in df.columns: df['_date']=pd.to_datetime(df.date)
+        print(f'common feature cache HIT: {p} rows={len(df)}')
+        return df
+    df=build_data();p.parent.mkdir(parents=True,exist_ok=True);df.to_pickle(p)
+    print(f'common feature cache MISS->WRITE: {p} rows={len(df)}')
+    return df
+
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--variant',choices=VARIANTS,required=True);ap.add_argument('--out',default='analysis_v250_4head_rebuild_baseline.csv');ap.add_argument('--meta',default=None);a=ap.parse_args()
-    pre_cols,post_cols=cols_for(a.variant);df=build_data();out=[];diag=[]
+    ap=argparse.ArgumentParser();ap.add_argument('--variant',choices=VARIANTS,required=True);ap.add_argument('--out',default='analysis_v250_4head_rebuild_baseline.csv');ap.add_argument('--meta',default=None);ap.add_argument('--data-cache',default=None);a=ap.parse_args()
+    pre_cols,post_cols=cols_for(a.variant);df=load_or_build_data(a.data_cache);out=[];diag=[]
     for mon in MONTHS:
         m=pd.Timestamp(mon+'-01');e=m+pd.offsets.MonthBegin(1);tr=df[df._date<m].copy();te=df[(df._date>=m)&(df._date<e)].copy()
         if len(tr)<500 or len(te)<50 or tr.y4head.nunique()<2:continue
@@ -105,7 +101,7 @@ def main():
             for (_,r),pr in zip(te.iterrows(),p):out.append({'date':r.date,'race_code':r.race_code,'venue':r.venue,'month':mon,'variant':vn,'p4head':float(pr),'y4head':int(r.y4head),'kimarite':r.kimarite,'ablation_variant':a.variant})
             diag.append({'month':mon,'score':vn,'R':len(te),'base_rate':float(te.y4head.mean()),'mean_p':float(np.mean(p))})
     pd.DataFrame(out).to_csv(a.out,index=False)
-    meta={'variant':a.variant,'pre_cols':pre_cols,'post_cols':post_cols,'direct_core_definition':'boat3/4 direct waku_wr, waku_st, waku_sr decomposition on identical minimal non-Waku base','production_modified':False}
+    meta={'variant':a.variant,'pre_cols':pre_cols,'post_cols':post_cols,'direct_core_definition':'boat3/4 direct waku_wr, waku_st, waku_sr decomposition on identical minimal non-Waku base','production_modified':False,'common_data_cache':a.data_cache}
     mp=Path(a.meta or f'audit_4head_waku10_ablation_{a.variant}.json');import json;mp.write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     pd.DataFrame(diag).to_csv(f'diagnostics_4head_waku10_ablation_{a.variant}.csv',index=False);print(meta)
 if __name__=='__main__':main()
