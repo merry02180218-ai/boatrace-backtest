@@ -35,11 +35,11 @@ def run(train,test):
     model=make_pipeline(SimpleImputer(strategy='median'),StandardScaler(),LogisticRegression(max_iter=800,C=.08,class_weight='balanced'))
     model.fit(X.iloc[:len(train)],y); sc=model.predict_proba(X.iloc[len(train):])[:,1]
     sm=test[['race_code']].copy().reset_index(drop=True); sm['score']=sc
-    q=q.merge(sm,on='race_code'); q['head']=q.settle__actual_combo.str.startswith('3-').astype(int); q['hit']=[a in t.split(';') for a,t in zip(q.settle__actual_combo,q.top5)]
+    q=q.merge(sm,on='race_code'); q['head3']=q.settle__actual_combo.str.startswith('3-').astype(int); q['hit']=np.array([a in t.split(';') for a,t in zip(q.settle__actual_combo,q.top5)],dtype=int)
     return q
 
 def st(q):
-    return {'races':len(q),'head_hits':int(q.head.sum()),'head_rate':float(q.head.mean()) if len(q) else None,'ticket_hits':int(q.hit.sum()),'ticket_rate':float(q.hit.mean()) if len(q) else None}
+    return {'races':len(q),'head_hits':int(q['head3'].sum()),'head_rate':float(q['head3'].mean()) if len(q) else None,'ticket_hits':int(q['hit'].sum()),'ticket_rate':float(q['hit'].mean()) if len(q) else None}
 
 def main():
     d=pd.read_csv(SRC,dtype=str).fillna(''); d=d[d.date<'2026-09-01'].copy(); d['month']=d.date.str[:7]
