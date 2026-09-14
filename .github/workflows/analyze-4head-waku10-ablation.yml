@@ -31,13 +31,14 @@ jobs:
           PY
       - name: Build common opponent context
         run: python analyze_v93_4corner_second_third.py
-      - name: Run direct Waku10 decomposition through frozen downstream chain
+      - name: Run cached boat3 Waku10 decomposition through frozen downstream chain
         run: |
           set -euo pipefail
-          mkdir -p waku10_ablation_results diagnostic_logs
-          for V in NO_WAKU10 B3_ONLY B4_ONLY WR_ONLY ST_ONLY SR_ONLY WR_ST WR_SR ST_SR CORE_WAKU10; do
+          mkdir -p waku10_ablation_results diagnostic_logs cache
+          CACHE=cache/analysis_4head_waku10_common_features.pkl
+          for V in B3_WR_ONLY B3_ST_ONLY B3_SR_ONLY B3_WR_ST B3_WR_SR B3_ST_SR B3_ALL; do
             echo "===== $V ====="
-            python analyze_4head_waku10_ablation_20260914.py --variant "$V" --out analysis_v250_4head_rebuild_baseline.csv --meta "audit_4head_waku10_ablation_${V}.json" 2>&1 | tee "diagnostic_logs/${V}_v250.log"
+            python analyze_4head_waku10_ablation_20260914.py --variant "$V" --data-cache "$CACHE" --out analysis_v250_4head_rebuild_baseline.csv --meta "audit_4head_waku10_ablation_${V}.json" 2>&1 | tee "diagnostic_logs/${V}_v250.log"
             python analyze_v264_4head_feature_exhaustive.py 2>&1 | tee "diagnostic_logs/${V}_v264.log"
             python analyze_v267_4head_v260_consensus_overlay.py 2>&1 | tee "diagnostic_logs/${V}_v267.log"
             python analyze_v271_4head_arank_expansion.py 2>&1 | tee "diagnostic_logs/${V}_v271.log"
@@ -49,7 +50,7 @@ jobs:
             cp analysis_v267_4head_v260_consensus_overlay.csv "waku10_ablation_results/$V/"
             cp analysis_v271_4head_arank_races.csv "waku10_ablation_results/$V/"
           done
-      - name: Summarize Apr-Jun direct Waku10 decomposition
+      - name: Summarize Apr-Jun boat3 Waku10 decomposition
         run: |
           python - <<'PY'
           import json
@@ -57,16 +58,20 @@ jobs:
           import pandas as pd
           ROOT=Path('waku10_ablation_results');BANK=10000
           S_PRE=.28;S_POST=.25;S_ENV=.224790;A_PRE=.18;A_POST=.18;A_OOF=.28
-          variants=['NO_WAKU10','B3_ONLY','B4_ONLY','WR_ONLY','ST_ONLY','SR_ONLY','WR_ST','WR_SR','ST_SR','CORE_WAKU10']
+          variants=['B3_WR_ONLY','B3_ST_ONLY','B3_SR_ONLY','B3_WR_ST','B3_WR_SR','B3_ST_SR','B3_ALL']
+          selection_months={'2026-04','2026-05','2026-06'}
           rows=[];stress=[]
           for V in variants:
               d=pd.read_csv(ROOT/V/'analysis_v271_4head_arank_races.csv',dtype={'race_code':str})
               for c in ('PRE','POST','ENV_ENTRY','a_score','actual_head4','hit','return_yen','comp_odds'): d[c]=pd.to_numeric(d[c],errors='coerce')
-              d['S_exact']=(d.PRE>=S_PRE)&(d.POST>=S_POST)&(d.ENV_ENTRY>=S_ENV)
-              d['A_exact']=(~d.S_exact)&(d.PRE>=A_PRE)&(d.POST>=A_POST)&(d.a_score>=A_OOF)
-              d['layer']='PASS';d.loc[d.S_exact,'layer']='S';d.loc[d.A_exact,'layer']='A'
+              if 'month' not in d.columns:
+                  d['month']=pd.to_datetime(d['date'],errors='coerce').dt.strftime('%Y-%m')
+              sel=d[d['month'].astype(str).isin(selection_months)].copy()
+              sel['S_exact']=(sel.PRE>=S_PRE)&(sel.POST>=S_POST)&(sel.ENV_ENTRY>=S_ENV)
+              sel['A_exact']=(~sel.S_exact)&(sel.PRE>=A_PRE)&(sel.POST>=A_POST)&(sel.a_score>=A_OOF)
+              sel['layer']='PASS';sel.loc[sel.S_exact,'layer']='S';sel.loc[sel.A_exact,'layer']='A'
               for layer in ['S','A','S+A']:
-                  q=d[d.layer.isin(['S','A'])] if layer=='S+A' else d[d.layer==layer]
+                  q=sel[sel.layer.isin(['S','A'])] if layer=='S+A' else sel[sel.layer==layer]
                   cost=len(q)*BANK;ret=float(q.return_yen.fillna(0).sum())
                   rows.append({'variant':V,'layer':layer,'R':len(q),'head4_wins':int(q.actual_head4.fillna(0).sum()),'head4_rate':float(q.actual_head4.mean()) if len(q) else None,'trifecta_hits':int(q.hit.fillna(0).sum()),'hit_rate':float(q.hit.mean()) if len(q) else None,'return_yen':ret,'proxy_roi':ret/cost if cost else None,'avg_comp_odds':float(q.comp_odds.mean()) if len(q) else None})
               p=pd.read_csv(ROOT/V/'analysis_v250_4head_rebuild_baseline.csv')
@@ -74,20 +79,20 @@ jobs:
                   for score in ['PRE','POST']:
                       q=p[(p.month==mon)&(p.variant==score)]
                       stress.append({'variant':V,'month':mon,'score':score,'R':len(q),'mean_p':float(q.p4head.mean()),'median_p':float(q.p4head.median()),'p_ge_018':int((q.p4head>=.18).sum()),'p_ge_025':int((q.p4head>=.25).sum()),'p_ge_028':int((q.p4head>=.28).sum())})
-          out=pd.DataFrame(rows);out.to_csv('analysis_4head_waku10_core_decomposition_summary.csv',index=False)
-          pd.DataFrame(stress).to_csv('analysis_4head_waku10_core_decomposition_nonpristine_stress.csv',index=False)
-          Path('audit_4head_waku10_core_decomposition.json').write_text(json.dumps({'production_modified':False,'selection_window':'Apr-Jun 2026 only','nonpristine':'Jul-Aug score distributions only; outcomes unused','september_outcomes_used':False,'warning':'archived odds ROI is retrospective proxy'},indent=2)+'\n')
+          out=pd.DataFrame(rows);out.to_csv('analysis_4head_boat3_waku10_decomposition_summary.csv',index=False)
+          pd.DataFrame(stress).to_csv('analysis_4head_boat3_waku10_decomposition_nonpristine_stress.csv',index=False)
+          Path('audit_4head_boat3_waku10_decomposition.json').write_text(json.dumps({'production_modified':False,'selection_window':'Apr-Jun 2026 only (explicitly filtered)','nonpristine':'Jul-Aug score distributions only; outcomes unused','september_outcomes_used':False,'common_feature_cache':'cache/analysis_4head_waku10_common_features.pkl','warning':'archived odds ROI is retrospective proxy'},indent=2)+'\n')
           print(out.to_string(index=False))
           PY
-      - name: Upload Waku10 decomposition outputs
+      - name: Upload boat3 Waku10 decomposition outputs
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: head4-waku10-core-decomposition
+          name: head4-boat3-waku10-decomposition
           if-no-files-found: warn
           path: |
             waku10_ablation_results/**
             diagnostic_logs/**
-            analysis_4head_waku10_core_decomposition_summary.csv
-            analysis_4head_waku10_core_decomposition_nonpristine_stress.csv
-            audit_4head_waku10_core_decomposition.json
+            analysis_4head_boat3_waku10_decomposition_summary.csv
+            analysis_4head_boat3_waku10_decomposition_nonpristine_stress.csv
+            audit_4head_boat3_waku10_decomposition.json
