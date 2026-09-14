@@ -101,3 +101,12 @@ Status: `BOAT3_DECOMPOSITION_COMPLETE_NEXT_OVERLAP_AUDIT_PENDING`
 ## NEXT CHAT START PROMPT
 
 `boatrace-backtest の CHAT_HANDOFF_20260914_4HEAD_BOAT3_WAKU10_NEXT.md と最新GitHubを読んで、4号艇Waku10研究の続きから進めて。最新GitHubを優先。まず作業前に引き継ぎへBEFORE追記してから、B3_WR_ST vs B3_ALLを中心にApr-Junのrace-level overlap・月別安定性・払戻集中度を監査して。7月8月はNON-PRISTINEでoutcome禁止、9月outcomeはUNREAD、productionは変更しない。重い共通処理はキャッシュ再利用して。`
+
+## BOAT3 OVERLAP / STABILITY AUDIT — BEFORE (2026-09-14 JST)
+
+- Start point: latest GitHub HEAD `40a2abab108e732e11a6627aa523da47e7200b4d` confirmed before this work unit.
+- Scope: Apr-Jun only for outcome-bearing analysis; audit `B3_WR_ST`, `B3_ALL`, `B3_ST_ONLY`, `B3_ST_SR` S-layer selections at exact race level.
+- Required outputs: month-by-month S metrics, WR_ST↔ALL shared/unique race sets, shared/unique head4/trifecta/return contribution, top-1/top-3 payout concentration and removal sensitivity, composite-odds distributions, SR effect diagnosis, and exploratory resampling intervals where practical.
+- Guardrails: Jul/Aug remain NON-PRISTINE outcome-blind (score-distribution stress only); Sep outcome remains UNREAD; no threshold tuning; no production change.
+- Implementation rule: reuse the existing invariant cache/data path and preserve the existing feature/training/policy definitions.
+- Status: `BOAT3_OVERLAP_AUDIT_STARTED`.
