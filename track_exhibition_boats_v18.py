@@ -166,5 +166,6 @@ def main():
         raise SystemExit(code)
 
 
+# Touch this file to trigger the four-video v18 self-hosted regression matrix.
 if __name__ == '__main__':
     main()
