@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Authoritative 1-head production profile.
 
-Historical research modules remain frozen.  This profile records only the
+Historical research modules remain frozen. This profile records only the
 currently adopted operating choices and is imported by production/regression
 wrappers so old experiments stay reproducible.
 """
 
-PROFILE_NAME = "1HEAD_PRODUCTION_20260914_HEAD078_V349_OPPONENT_ATTACKCORE"
+PROFILE_NAME = "1HEAD_PRODUCTION_20260915_HEAD078_V351_OPPONENTCORE_G2_045_G3_100"
 
 HEAD_MODEL = "v308"
 HEAD_CUTOFF = 0.78
@@ -21,28 +21,40 @@ EXHIBITION_MODEL = "v332_ATTACK_ENV_SOFT_V345_ATTACKCORE"
 EXHIBITION_ENV_W = 0.10
 EXHIBITION_Q = 0.65
 
-# v345 adopted HEAD-side attack_core component weights.
-# Historical v332/v337 research modules retain their original .30/.30/.23/.17
-# formula for reproducibility; production wrappers should use these constants.
+# v345 adopted HEAD-side component weights. Historical names are retained for
+# compatibility with frozen research modules.
 ATTACK_CORE_VERSION = "v345"
 ATTACK_CORE_W_ONE_EX = 0.40
 ATTACK_CORE_W_ONE_ST = 0.25
 ATTACK_CORE_W_ONE_STRAIGHT = 0.15
 ATTACK_CORE_W_ONE_ORIG_AVG = 0.20
 
-# v349 adopted opponent-side attackCore tilt.  The v345 276-race HEAD selection
-# remains fixed; only SECOND/THIRD opponent probabilities are tilted.
-OPPONENT_ATTACK_CORE_VERSION = "v349_OPPONENT_ATTACKCORE_G2_050_G3_100"
-OPPONENT_ATTACK_CORE_SECOND_G2 = 0.50
-OPPONENT_ATTACK_CORE_THIRD_G3 = 1.00
+# v351 formally adopts the SECOND-side opponentCore coefficient selected in v350.
+# The frozen v345 276-race HEAD selection remains unchanged.
+OPPONENT_CORE_VERSION = "v351_OPPONENTCORE_G2_045_G3_100"
+OPPONENT_CORE_SECOND_G2 = 0.45
+OPPONENT_CORE_THIRD_G3 = 1.00
 
-# Formal v349 production sentinel.  Jul/Aug remain NON_PRISTINE support-only;
+# Backward-compatible aliases for historical modules that still import the old
+# constant names. New code must use the neutral OPPONENT_CORE_* names above.
+OPPONENT_ATTACK_CORE_VERSION = OPPONENT_CORE_VERSION
+OPPONENT_ATTACK_CORE_SECOND_G2 = OPPONENT_CORE_SECOND_G2
+OPPONENT_ATTACK_CORE_THIRD_G3 = OPPONENT_CORE_THIRD_G3
+
+# Formal v351 production sentinel. Jul/Aug remain NON_PRISTINE support-only;
 # September outcomes must remain unread.
 PRODUCTION_EXPECTED_PASS_R = 276
 PRODUCTION_EXPECTED_HEAD = 241
-PRODUCTION_EXPECTED_EXACT3 = 130
+PRODUCTION_EXPECTED_EXACT3 = 131
 PRODUCTION_EXPECTED_PASS_ID_SHA256 = "08eb41e04c36d25074d6a1e471ff9334fafd34c8306cd5d336923772b613b8bd"
-PRODUCTION_EXPECTED_TICKET_ID_SHA256 = "50378499c439f3c13572f2ee5d4c012a812043fea34cf840e3aa47db4ebbec0c"
+PRODUCTION_EXPECTED_TICKET_ID_SHA256 = "21631473d2a8b82f4fe93d18f8292d777837c26a47c408917fd8b722d1898cd7"
+
+# Frozen v349 sentinel retained so historical production evidence stays explicit.
+V349_EXPECTED_PASS_R = 276
+V349_EXPECTED_HEAD = 241
+V349_EXPECTED_EXACT3 = 130
+V349_EXPECTED_PASS_ID_SHA256 = "08eb41e04c36d25074d6a1e471ff9334fafd34c8306cd5d336923772b613b8bd"
+V349_EXPECTED_TICKET_ID_SHA256 = "50378499c439f3c13572f2ee5d4c012a812043fea34cf840e3aa47db4ebbec0c"
 
 # Frozen v345 sentinel retained for historical v346/v347 regression code.
 # CURRENT_EXPECTED_* aliases intentionally remain pointed at v345 so those
