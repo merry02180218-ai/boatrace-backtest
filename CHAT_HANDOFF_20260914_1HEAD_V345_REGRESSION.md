@@ -108,3 +108,31 @@
 - plateau判定は9点のうち何点がbaselineを改善するか、中央候補±1 dev hit以内の点数、dev worst-month、月別安定性を確認する。中央だけ突出する場合はproduction昇格を見送る。
 - 実装: `run_v348_1head_opponent_attackcore_plateau.py` commit `53121257be60e367d93c58328ea8413c6256e70b`、workflow `.github/workflows/v348-1head-opponent-attackcore-plateau.yml` commit `0f354ee6d1b27abbf46c85cb9084603dabceec07`。
 - productionはこの監査中変更しない。完了後にRun/Job/Artifact、9点結果、plateau判定、次のproduction regression可否を追記する。
+
+## 2026-09-14 22:50 JST v348 local plateau監査 完了
+- GitHub Actions Run `34848746204` は全job SUCCESS。
+  - prepare `103991018453`
+  - second `103992785970`
+  - base-third `103992785990`
+  - third `103992786125`
+  - plateau `103994498818`
+- final Artifact `10351490539` / `v348-1head-opponent-attackcore-plateau`。
+- Artifact digest `sha256:24072378f5dbbb39ac9fda781f4a5fd47d146f322f75f5331b73d8a77199b216`。
+- baseline `(0,0)` は 121/276=43.8406%、Feb-Jun 98/220=44.5455%、worst-month 34.8485%、Jul-Aug support-only 23/56。
+- center `(g2=.50,g3=1.00)` は 130/276=47.1014%、Feb-Jun 106/220=48.1818%（baseline比+8）、worst-month 40.9091%、Jul-Aug 24/56（+1）。gain/lossは +12/-3。
+- 局所9点は全点でFeb-Jun baselineを改善し、全期間でも9/9点がbaselineを改善。中央だけの孤立ピークではない。
+- 9点結果:
+  - `.25/.75`: all127 / dev104（+6） / worst39.39% / support23
+  - `.25/1.00`: all129 / dev105（+7） / worst40.91% / support24
+  - `.25/1.25`: all126 / dev101（+3） / worst37.50% / support25
+  - `.50/.75`: all129 / dev105（+7） / worst39.39% / support24
+  - `.50/1.00`: all130 / dev106（+8） / worst40.91% / support24
+  - `.50/1.25`: all129 / dev104（+6） / worst40.91% / support25
+  - `.75/.75`: all124 / dev101（+3） / worst39.39% / support23
+  - `.75/1.00`: all127 / dev103（+5） / worst40.91% / support24
+  - `.75/1.25`: all124 / dev99（+1） / worst40.91% / support25
+- center±1 dev hit以内は3/9点。局所dev改善レンジは+1〜+8で、中心が最良だが周囲に広く改善領域が存在する。
+- worst-monthもcenter 40.91%でbaseline 34.85%を改善。局所最低worst-monthでも37.50%でbaselineを上回る。
+- 結論: `g2=.50/g3=1.00` はピンポイント偶然値ではなく、周囲で同方向の改善が確認できるため、v348 production candidateとして固定regressionへ進めるだけのロバスト性あり。ただし同じFeb-Junを用いた探索/監査であり独立holdoutではないため、現時点では正式productionへはまだ昇格しない。
+- 次の再開地点: `g2=.50/g3=1.00` を固定したproduction-candidate profile / regression sentinelを作成し、現v345 identity 276/241/121をbase sentinelとして、候補exact3 130とticket identityを再現可能な形でlockする。その後に正式昇格可否を判断する。
+- `PRODUCTION_CHANGED=false` / `SEPTEMBER_OUTCOMES_READ=false` / Jul-Aug=`NON_PRISTINE_SUPPORT_ONLY`。
