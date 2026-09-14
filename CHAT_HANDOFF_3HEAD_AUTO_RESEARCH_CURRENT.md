@@ -17,19 +17,20 @@
 - Wave46 second/third role factorization: March 16/90 role, 21/90 blend vs Wave36 24/90. NO_ADOPTION.
 
 ## Wave47 head-condition zoning — COMPLETE / NO_ADOPTION
-- March plan commit 3fc1f8b8bb3e1e42a50db2a8308c1f11e73b4a8d; implementation 55588d48e5ce5bd2e4fc1536e98d63a19ef6cec3.
-- March CI Run34843925397 / Job103975145924 success; artifact10347171131; SHA256 7595ce0c4bc51a4788fac272a27c8335b7503244a5854f69c4e23683f404459b.
 - March baseline:90R /38 head hits /42.222%; Top5 24 /26.667%.
-- March winner: motor family top60% =>54R / head48.148% (+5.926pt), early46.875%, late50.000%. Gate passed.
-- Apr-Jun single pristine opening used the frozen March-selected structure with no retuning.
-- Holdout runner commit6617b10240a64815f2bcc5c77aa2064eadbe1922; trigger commit a00a1ec323906d9bf535996eec50550019801ed6.
-- Holdout CI Run34844221809 / Job103976135822 success.
-- Wave36 recomputed exactly:391R /87 hits / ROI114.913% / +583,090 yen.
-- Wave47 holdout:174R /36 hits / ROI95.511% / -78,100 yen; min month53.623%; red months1; maxDD336,140 yen.
-- Monthly Wave47: Apr49R/12 hits/ROI111.384%/+55,780; May63R/15/124.390%/+153,660; Jun62R/9/53.623%/-287,540.
-- Decision NO_ADOPTION. Do not retune Wave47 on Apr-Jun after this failure.
-- Wave47 March audit entrypoint restored at commit496688106d20b65fce5531f4a27700767ea3e97d.
-- v288 untouched. Jul/Aug remain NON-PRISTINE. September outcomes unread.
+- March winner: motor family top60% =>54R / head48.148% (+5.926pt), early46.875%, late50.000%.
+- Apr-Jun fixed holdout:174R /36 hits / ROI95.511% / -78,100 yen.
+- Monthly: Apr49R/12/ROI111.384%; May63R/15/124.390%; Jun62R/9/53.623%.
+- Decision NO_ADOPTION. Do not retune Wave47 on Apr-Jun.
+
+## BEFORE-WORK PLAN — Wave48 June failure diagnostic — 2026-09-14
+1. User hypothesis: Wave47 could become useful if the June collapse is understood and a live-identifiable failure regime exists.
+2. This is DIAGNOSTIC ONLY. Apr-Jun outcomes are already opened/contaminated for Wave47; do not promote or retune a production rule from this audit.
+3. Reproduce the frozen Wave47 Apr-Jun selections and decompose each month into: boat3 head rate, conditional frozen-Wave36 Top5 capture given boat3 head, ticket hit rate, average/median winning odds for hits/misses where available, and exact payout contribution.
+4. Compare pre-race distributions across Apr/May/Jun for Wave36 p3, frozen Wave47 motor-zone score, boat3-vs-1/2/4 motor gaps, ST gaps, national/local win-rate gaps, and venue/race-number composition. Outcome labels may be used only to describe failure, never to search/choose a new cutoff.
+5. Determine whether June loss is primarily (A) head-selection failure, (B) opponent Top5 failure conditional on head, (C) payout/odds economics, or a mixture.
+6. Report candidate pre-race drift indicators only if they are visible without outcomes and show a clear June distribution shift. Mark them HYPOTHESIS_FOR_FUTURE_PRISTINE_TEST, not adoption rules.
+7. No Jul/Aug validation because NON-PRISTINE. September outcomes remain unread. v288 untouched.
 
 ## Exact restart point
-- Wave47 is closed. Preserve Wave36 and Wave36S-C benchmarks. Next research must use a new structural hypothesis and must avoid reusing Apr-Jun outcomes for retuning Wave47.
+- Implement Wave48 diagnostic using the already-open Apr-Jun Wave47 holdout rows, run CI, classify the June failure mechanism, and record future-test hypotheses without retuning Wave47.
