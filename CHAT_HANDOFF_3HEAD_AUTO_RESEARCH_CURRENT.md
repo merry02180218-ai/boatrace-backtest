@@ -39,3 +39,10 @@
 1. Implement/run Wave46 selective ticket compression.
 2. Record exact March gate and Apr-Jun/Jul-Aug results.
 3. If NO_ADOPTION, immediately launch a distinct full-population walk-forward idea; if candidate, retain only as research/shadow unless robustness is clearly superior.
+
+## 2026-09-15 JST — RESUME BEFORE
+- Re-read the latest prior chat context and this handoff; newest GitHub state remains authoritative.
+- Confirmed Wave46 implementation/trigger commits are already present and Actions Run `34798878358` completed successfully after the prior handoff text was written.
+- This work unit will recover the exact Wave46 job/artifact/results, compare them against the frozen Wave36 benchmark and v288 production baseline, and decide the next research step without changing production.
+- Guardrails remain unchanged: Jul/Aug NON-PRISTINE; September outcomes forbidden/unread; no Apr-Aug tuning; no production change during this audit.
+- Status: `WAVE46_RESULT_AUDIT_STARTED`.
