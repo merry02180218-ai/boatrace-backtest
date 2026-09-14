@@ -84,7 +84,7 @@ def main():
         te=d.month==mo; ti=np.flatnonzero(trm.to_numpy()); ei=np.flatnonzero(te.to_numpy()); tr=d.iloc[ti].reset_index(drop=True); tx=X.iloc[ti].reset_index(drop=True); tst=d.iloc[ei].reset_index(drop=True); exx=X.iloc[ei].reset_index(drop=True)
         _,trsc=w36.fit_predict(tx,tr.settle__actual_combo.astype(str),tx)
         corr=fit_scores(tr,tx,trsc,tst,exx,sc[ei],C); d.loc[te,'new_rank']=rerank(sc[ei],corr,th)
-    d.loc[mm,'new_rank']=rerank(marchsc,cached[C],th)
+    d.loc[mi[sel],'new_rank']=rerank(marchsc,cached[C],th)
     ev=d[(d.month.isin(['2026-04','2026-05','2026-06']))&(d.p3>=CUT)].copy(); oh=hits(ev,'old_rank'); nh=hits(ev,'new_rank')
     out={'wave':'43-conservative-boundary-rerank','protocol':'Feb train; March OOS select; Apr-Jun one-shot','cut':CUT,'chosen':chosen,'march_candidates':cand,'apr_jun_old_rank':w40.rank_metrics(ev,'old_rank'),'apr_jun_new_rank':w40.rank_metrics(ev,'new_rank'),'old_vs_new':{'old_hits':len(oh),'new_hits':len(nh),'retained':len(oh&nh),'lost':len(oh-nh),'rescued':len(nh-oh),'net':len(nh)-len(oh)},'apr_jun_old_money':money(ev,'old_rank'),'apr_jun_new_money':money(ev,'new_rank'),'months':{},'v288_overlap':int(ev.race_code.astype(str).isin(ex).sum()),'september_forbidden':True}
     for mo in ['2026-04','2026-05','2026-06']:
