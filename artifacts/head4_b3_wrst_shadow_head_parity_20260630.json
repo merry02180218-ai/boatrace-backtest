@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "artifact": "artifacts/head4_b3_wrst_shadow_head_20260630.json",
+  "training_rows": 32085,
+  "training_head4_rate": 0.0973352033660589,
+  "june_rows": 4488,
+  "parity": {
+    "PRE": {
+      "rows": 4488,
+      "sha256": "04d18ebd46ebc5249622a4a3d54a2549f941a5e93a41f36333de18e96d71dd1d",
+      "expected": {
+        "rows": 4488,
+        "sha256": "04d18ebd46ebc5249622a4a3d54a2549f941a5e93a41f36333de18e96d71dd1d"
+      }
+    },
+    "POST": {
+      "rows": 4488,
+      "sha256": "a1d6d98c902a99aff58b2d36ee2b1b1eb861c0f91c1476ad6b7a90a6d39222d7",
+      "expected": {
+        "rows": 4488,
+        "sha256": "a1d6d98c902a99aff58b2d36ee2b1b1eb861c0f91c1476ad6b7a90a6d39222d7"
+      }
+    }
+  },
+  "production_modified": false
+}
