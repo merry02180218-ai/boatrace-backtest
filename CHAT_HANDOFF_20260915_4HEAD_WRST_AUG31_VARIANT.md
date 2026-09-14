@@ -61,3 +61,57 @@ Status: `HEAD4_MOTOR_DIFF_TRANSFER_STARTED`
 8. 完了後、commit SHA / Run / Job / Artifact / 結論 / 次の再開地点を追記する。
 
 Status: `HEAD4_B4_MINUS_B3_MOTOR_WIN_2REN_STUDY_STARTED`
+
+## INTERMEDIATE — 4号艇−3号艇 モーター勝率・2連対率 実装完了 / CI待ち
+
+定義を確定:
+
+- 公式race-cardにはモーター2連対率・3連対率は存在するが、独立した「モーター勝率」列はない。
+- 今回の `motor_win_diff_4v3` は、同場・同モーターについて**当日より前の全レース結果だけ**から算出する1着率の `4号艇 - 3号艇` 差。
+- `motor_2ren_diff_4v3` は公式race-card事前値のモーター2連対率の `4号艇 - 3号艇` 差。
+- 各日の出走表でモーター番号と入力値を全レース分先に固定し、その日の結果は全固定後に履歴へ追加する。よって同日結果はその日の入力に入らない。
+- 履歴開始は 2025-11-01、研究対象終端は 2026-08-31。2026-09結果はコード上も読まない。
+
+実装:
+
+- `analyze_4head_b4_minus_b3_motor_win_2ren.py`
+  - initial commit `0107e3ecb86ffb2bd6e27373e557f9e4a77d4f7a`
+  - causal history fix commit `26c0e4efd93cfc5b95fb9728cb1cf5a7c195e9cc`
+- `.github/workflows/analyze-4head-b4-minus-b3-motor-win-2ren.yml`
+  - initial commit `18b649a166a87059fd98a054852a0ae046c3a203`
+  - frozen committed input optimization commit `08e13b0cdc64e4006ba22a4c2dabfffd49f291cd`
+- BEFORE handoff commit `cee1076dbf94601e969ac85671492093ec9f3c53`
+
+研究設計:
+
+- candidate universe: v250 `PRE >= 0.18`
+- Apr-Junだけで閾値を選択。
+- 比較: `WIN_ONLY`, `2REN_ONLY`, `AND`, `OR`。
+- 閾値候補はApr-Jun内の20/30/40/50/60/70/80 percentile。
+- Jul-Augは選択後に条件固定してholdout評価。
+- 1R 10,000円、prior-only v96相手順位、N=2..20から合成オッズ10.5最接近。
+- ROIはarchived historical odds proxy。
+
+CI状況:
+
+- 初版 Run `34900742342`, Job `104165828652`: 旧workflowの重いPRE再構築が実行中。最終研究結果としては採用しない。
+- causal fix Run `34901160996`, Job `104167181816`: 起動済み。
+- 最適化済み正式検証 Run `34901233777`, Job `104167416359`: 現在queued。既存コミット済みのv250/v93凍結入力を使い、不要な再構築を省略した正式な結果回収対象。
+- Artifact ID: Run完了前のため未発行。推測禁止。
+
+現時点の結論:
+
+- 4号艇−3号艇のモーター勝率差・2連対率差を事前情報として安全に再構築する実装は完了。
+- バックテスト数値はRun完了前なので未確定。結果を推測しない。
+- production `HEAD4_V291_COMP7` は変更なし。
+- September outcomes remain `UNREAD`。
+
+次の再開地点:
+
+1. Run `34901233777` / Job `104167416359` の完了状態を取得する。
+2. failureならjob logを読み、その場で修正して再実行。
+3. successならArtifact IDを取得し、job log / summaryからApr-Jun選択条件、Jul-Aug holdoutのR数・4号艇1着率・3連単率・ROI、月別Jul/Augを回収する。
+4. このhandoffに最終AFTERを追記し、Artifact ID・最終commit SHA・結論を固定する。
+5. production昇格はしない。September結果は読まない。
+
+Status: `HEAD4_B4_MINUS_B3_MOTOR_WIN_2REN_CI_PENDING`
