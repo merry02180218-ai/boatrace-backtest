@@ -19,24 +19,24 @@
 - Wave36G ordinal blend:88/160 but ROI94.187%, NO_ADOPTION.
 - Wave41 ExtraTrees:71/160, ROI74.814%, NO_ADOPTION.
 - Wave42 factorized second/third:79/160, ROI90.795%, NO_ADOPTION.
+- Wave43 conservative boundary correction: March no-op; Apr-Jun old/new Top5 both87/160. NO_ADOPTION.
 
-## Wave43 conservative boundary correction — COMPLETE / NO_ADOPTION
-- Plan commit6657d886e6ec0b8bce57c4113fd9275530b8fa8a.
-- CI Run34793612036 success; Job103822377750; artifact10328797771.
-- March and Apr-Jun correction collapsed to no-op; Apr-Jun old/new Top5 both87/160. NO_ADOPTION.
+## Wave44b player-specific attack mode — COMPLETE / WEAK
+- CI Run34809931603 success; Job103869078993; artifact10334735981; artifact SHA256 510da759ef69fbf34cdcbe233778a726873ebdb3a3902e98754a6631f4a20641.
+- Historical joined rows22074. Feb train381; March OOS445 (MAKURI241 / MAKURI-SASHI204).
+- March ML AUC0.5672 / logloss0.6841 / accuracy53.933%.
+- Individual 1-year prior AUC0.5765 / logloss0.6920.
+- Decision MODE_SIGNAL_WEAK. Individual tendency has some signal but is insufficient alone. Apr-Jun was NOT opened for this experiment.
 
-## User hypothesis / research pivot — PLAYER-SPECIFIC ATTACK MODE
-- User proposes that MAKURI vs MAKURI-SASHI may be identifiable primarily from the individual racer's historical tendencies rather than generic race-level features.
-- This supersedes the generic attack-mode classifier as the immediate experiment.
-- Historical actual kimarite is target/diagnostic only. Never feed current-race result/kimarite into live prediction.
-
-## BEFORE-WORK PLAN — 2026-09-14
-1. Inspect historical pre-race/source data for stable racer ID and historical results/kimarite availability. Never infer kimarite from finish order.
-2. Build leakage-safe player-history features available strictly before each race, prioritizing boat3/3-course history: prior MAKURI count/rate, prior MAKURI-SASHI count/rate, smoothed log-odds/share, sample size, recent-window and longer-window tendencies where source coverage permits. Use only races chronologically before target race.
-3. Evaluate whether player-history features improve Feb-trained -> March OOS MAKURI-vs-MAKURI-SASHI discrimination versus the prior generic mode model. Report class counts, coverage, AUC/logloss/accuracy as feasible, and performance by history sample size.
-4. Only if March OOS mode discrimination shows meaningful improvement, feed predicted mode probabilities into mode-specific opponent ranking and compare frozen Wave36 Top1/3/5/8/10, MRR, retained/lost/rescued, March early/late.
-5. March promotion gate remains conservative: Top5 must improve by >=1, lost existing Wave36 Top5 hits <=2, and improvement cannot exist only in one March half. If gate fails, do not open Apr-Jun.
-6. If March passes, freeze design and run Apr-Jun exactly once with exact JPY10,000 Dutch economics. Production v288 remains untouched. Jul/Aug diagnostic only; September outcomes remain unread.
+## BEFORE-WORK PLAN — Wave44c contextual player attack mode — 2026-09-14
+User approved combining individual tendency with current-race matchup/context.
+1. Keep Wave44b leakage-safe player priors as the base signal.
+2. Add only pre-deadline race-context features from the Wave21 source, prioritizing: boat3 vs boats1/2 ST ability/gaps, national/local performance gaps, motor performance gaps, and available motor/exhibition-style proxies that are genuinely pre-deadline. Do not use current-race result/kimarite or September outcomes.
+3. Train on February and evaluate March OOS exactly once. Compare against Wave44b AUC0.5672 and individual-prior AUC0.5765; report AUC/logloss/accuracy and early/late March stability.
+4. Contextual mode gate: require materially stronger March signal (target AUC >=0.60, preferably >=0.62) and no collapse in either March half before using mode probability for opponent ranking.
+5. If mode gate passes, integrate probability softly into Wave36 opponent ranking rather than hard MAKURI/MAKURI-SASHI routing. Compare frozen Wave36 Top1/3/5/8/10, retained/lost/rescued, MRR, early/late March.
+6. Ranking promotion gate: March Top5 >= Wave36 24/38 +1, lost existing hits <=2, and lift not isolated to one half. Only then freeze design and open Apr-Jun exactly once with exact JPY10,000 Dutch economics.
+7. v288 remains untouched. Jul/Aug NON-PRISTINE diagnostic only. September remains unread.
 
 ## Exact restart point
-- Start with source/schema audit for stable racer ID + historical kimarite and implement player-history attack-mode features on this isolated branch.
+- Implement Wave44c contextual player attack-mode classifier on the isolated research branch, beginning with a Wave21 column audit for safe ST/performance/motor matchup features.
