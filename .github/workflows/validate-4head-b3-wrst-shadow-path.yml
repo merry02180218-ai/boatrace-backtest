@@ -9,6 +9,8 @@ on:
       - 'assemble_4head_b3_wrst_shadow_input.py'
       - 'run_4head_b3_wrst_shadow.py'
       - 'artifacts/head4_b3_wrst_shadow_policy_v1.json'
+      - 'artifacts/head4_b3_wrst_shadow_head_20260630.json'
+      - 'artifacts/head4_b3_wrst_shadow_head_parity_20260630.json'
       - '.github/workflows/validate-4head-b3-wrst-shadow-path.yml'
   workflow_dispatch:
 
@@ -20,18 +22,32 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: '3.11'}
       - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
-      - name: Static policy and safety guards
+      - name: Static policy artifact and safety guards
         run: |
           python - <<'PY'
           import ast, json
           from pathlib import Path
           policy=json.loads(Path('artifacts/head4_b3_wrst_shadow_policy_v1.json').read_text())
+          head=json.loads(Path('artifacts/head4_b3_wrst_shadow_head_20260630.json').read_text())
+          parity=json.loads(Path('artifacts/head4_b3_wrst_shadow_head_parity_20260630.json').read_text())
           assert policy['policy_id']=='HEAD4_B3_WR_ST_SHADOW_V1'
           assert policy['status']=='RESEARCH_SHADOW_ONLY'
           assert policy['production_policy_unchanged']=='HEAD4_V291_COMP7'
           assert policy['head_model']['training_label_cutoff']=='2026-06-30'
           assert policy['outcome_guards']['jul_aug_2026_outcomes_allowed'] is False
           assert policy['outcome_guards']['september_2026_outcomes_allowed'] is False
+          assert head['policy_id']==policy['policy_id'] and head['variant']=='B3_WR_ST'
+          assert head['research_shadow_only'] is True and head['production_modified'] is False
+          assert head['training_label_cutoff']=='2026-06-30'
+          assert head['jul_aug_labels_used'] is False and head['september_labels_used'] is False
+          assert parity['status']=='PASS' and parity['production_modified'] is False
+          assert parity['training_rows']==32085 and parity['june_rows']==4488
+          for stage,key in [('PRE','pre_sha256'),('POST','post_sha256')]:
+              p=policy['head_model']['june_2026_walkforward_reference'][key]
+              assert head['june_walkforward_parity'][stage]['sha256']==p
+              assert head['june_walkforward_parity'][stage]['expected']['sha256']==p
+              assert parity['parity'][stage]['sha256']==p
+              assert parity['parity'][stage]['expected']['sha256']==p
           files=['head4_b3_wrst_shadow_inference.py','scan_4head_b3_wrst_pre_shadow.py','score_4head_b3_wrst_post_shadow.py','assemble_4head_b3_wrst_shadow_input.py','run_4head_b3_wrst_shadow.py']
           for f in files:
               ast.parse(Path(f).read_text(), filename=f)
@@ -48,12 +64,20 @@ jobs:
           assert 'complete result-blind POST source provenance required' in post
           print('static shadow guards PASS')
           PY
+      - name: Verify inference artifact loads
+        run: |
+          python - <<'PY'
+          from head4_b3_wrst_shadow_inference import load_artifact
+          a=load_artifact()
+          assert a['models']['PRE']['features']==['racer4','motor4_2ren','motor4_hist','turnfoot4_prior','b3_waku_wr','b3_waku_st']
+          assert len(a['models']['POST']['features'])==13
+          print('frozen inference artifact PASS')
+          PY
       - name: Verify fail-closed source requirements
         run: |
           python - <<'PY'
           import json, tempfile, subprocess, sys
           from pathlib import Path
-          # The POST scorer must reject incomplete source provenance before model scoring.
           with tempfile.TemporaryDirectory() as td:
               p=Path(td)
               pre=p/'pre.csv'; post=p/'post.json'; out=p/'out.json'
