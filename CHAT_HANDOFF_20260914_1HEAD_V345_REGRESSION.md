@@ -110,29 +110,21 @@
 - productionはこの監査中変更しない。完了後にRun/Job/Artifact、9点結果、plateau判定、次のproduction regression可否を追記する。
 
 ## 2026-09-14 22:50 JST v348 local plateau監査 完了
-- GitHub Actions Run `34848746204` は全job SUCCESS。
-  - prepare `103991018453`
-  - second `103992785970`
-  - base-third `103992785990`
-  - third `103992786125`
-  - plateau `103994498818`
-- final Artifact `10351490539` / `v348-1head-opponent-attackcore-plateau`。
-- Artifact digest `sha256:24072378f5dbbb39ac9fda781f4a5fd47d146f322f75f5331b73d8a77199b216`。
-- baseline `(0,0)` は 121/276=43.8406%、Feb-Jun 98/220=44.5455%、worst-month 34.8485%、Jul-Aug support-only 23/56。
-- center `(g2=.50,g3=1.00)` は 130/276=47.1014%、Feb-Jun 106/220=48.1818%（baseline比+8）、worst-month 40.9091%、Jul-Aug 24/56（+1）。gain/lossは +12/-3。
-- 局所9点は全点でFeb-Jun baselineを改善し、全期間でも9/9点がbaselineを改善。中央だけの孤立ピークではない。
-- 9点結果:
-  - `.25/.75`: all127 / dev104（+6） / worst39.39% / support23
-  - `.25/1.00`: all129 / dev105（+7） / worst40.91% / support24
-  - `.25/1.25`: all126 / dev101（+3） / worst37.50% / support25
-  - `.50/.75`: all129 / dev105（+7） / worst39.39% / support24
-  - `.50/1.00`: all130 / dev106（+8） / worst40.91% / support24
-  - `.50/1.25`: all129 / dev104（+6） / worst40.91% / support25
-  - `.75/.75`: all124 / dev101（+3） / worst39.39% / support23
-  - `.75/1.00`: all127 / dev103（+5） / worst40.91% / support24
-  - `.75/1.25`: all124 / dev99（+1） / worst40.91% / support25
-- center±1 dev hit以内は3/9点。局所dev改善レンジは+1〜+8で、中心が最良だが周囲に広く改善領域が存在する。
-- worst-monthもcenter 40.91%でbaseline 34.85%を改善。局所最低worst-monthでも37.50%でbaselineを上回る。
-- 結論: `g2=.50/g3=1.00` はピンポイント偶然値ではなく、周囲で同方向の改善が確認できるため、v348 production candidateとして固定regressionへ進めるだけのロバスト性あり。ただし同じFeb-Junを用いた探索/監査であり独立holdoutではないため、現時点では正式productionへはまだ昇格しない。
-- 次の再開地点: `g2=.50/g3=1.00` を固定したproduction-candidate profile / regression sentinelを作成し、現v345 identity 276/241/121をbase sentinelとして、候補exact3 130とticket identityを再現可能な形でlockする。その後に正式昇格可否を判断する。
-- `PRODUCTION_CHANGED=false` / `SEPTEMBER_OUTCOMES_READ=false` / Jul-Aug=`NON_PRISTINE_SUPPORT_ONLY`。
+- GitHub Actions Run `34848746204` は全job SUCCESS。prepare `103991018453` / second `103992785970` / base-third `103992785990` / third `103992786125` / plateau `103994498818`。
+- 最終Artifact `10351490539` / `v348-1head-opponent-attackcore-plateau` / digest `sha256:24072378f5dbbb39ac9fda781f4a5fd47d146f322f75f5331b73d8a77199b216`。
+- baseline `(0,0)` は all 121/276、Feb-Jun 98/220、worst-month 34.85%、Jul-Aug support 23/56。
+- 中央候補 `(g2=.50,g3=1.00)` は all 130/276 = 47.1014%、Feb-Jun 106/220 = 48.1818%（baseline比 +8）、worst-month 40.91%、Jul-Aug support 24/56（+1）。
+- 9点全てがFeb-Jun baselineを改善（9/9）。全期間でも9/9がbaselineを改善。中央±1 dev hit以内は3/9点。
+- 局所9点のFeb-Jun改善幅は +1〜+8。代表値: `.25/.75` +6、`.25/1.00` +7、`.50/.75` +7、`.50/1.25` +6、`.75/1.00` +5。したがって中央だけの孤立ピークではない。
+- 最弱点 `.75/1.25` でもFeb-Jun 99/220でbaseline 98/220を+1上回る。局所worst-month最低は37.50%でbaseline 34.85%を上回る。
+- 中央候補のgain/lossは全期間 +hit12 / -hit3で、先のrace-level監査と一致。
+- 結論: `g2=.50/g3=1.00` は局所plateau上の最良点で、production候補として固定regression/sentinel作成へ進めるだけの頑健性を確認。ただし同一Feb-Jun開発期間由来なので独立holdoutとは扱わない。
+- `PRODUCTION_CHANGED=false`。正式productionは引き続きv345。`SEPTEMBER_OUTCOMES_READ=false`。Jul-Aug=`NON_PRISTINE_SUPPORT_ONLY`。
+- 次の再開地点: `g2=.50/g3=1.00` を固定したproduction候補regressionを作り、276R/head241/exact3 130の完全再現、race identity SHA、ticket identity SHAをsentinel化する。再現確認後にのみ正式production昇格を判断する。
+
+## 2026-09-14 23:xx JST v349 production候補regression 作業開始
+- v348監査で固定した相手attackCore係数 `SECOND g2=.50 / THIRD g3=1.00` を以後の候補値として固定し、追加の係数探索は行わない。
+- 現正式production v345のHEAD選定・276R identityは変更しない前提で、候補相手選びを本番相当経路で再構築する。
+- 今回の必須監査: PASS 276R / head 241 / exact3 130 の完全再現、race identity SHA256（v345と同一であること）、3点買い目のticket identity SHA256を新規sentinelとして確定する。
+- regressionが再現できた場合も、まず候補sentinelを記録してから正式production昇格可否を判断する。productionを無断変更しない。
+- September 2026 outcomesは引き続き `UNREAD`。Jul/Augは `NON_PRISTINE_SUPPORT_ONLY`。結果を見てレース除外・係数再調整はしない。
