@@ -215,3 +215,12 @@ Status: `BOAT3_OVERLAP_AUDIT_COMPLETE_WR_ST_PREFERRED_NEXT_FROZEN_VALIDATION_PEN
 ## UPDATED NEXT CHAT START PROMPT
 
 `boatrace-backtest の CHAT_HANDOFF_20260914_4HEAD_BOAT3_WAKU10_NEXT.md と最新GitHubを読んで続き。最新GitHubを優先し、作業前にBEFORE追記。Boat3 Waku10 overlap監査では B3_WR_ST を次のfrozen research candidateに決定済み。まず untouched validation window のprovenanceを確認し、存在する場合だけ閾値・重みを一切変えず frozen WR_ST policy を検証する。7月8月はNON-PRISTINEでoutcome禁止、9月outcomeはUNREAD、4号艇productionは変更しない。作業後はAFTERを追記。`
+
+## FROZEN WR_ST UNTOUCHED-WINDOW PROVENANCE AUDIT — BEFORE (2026-09-14 JST)
+
+- Start point: GitHub HEAD `fabfd15bb397f5f7e986decfad13c930dcf0d3fe` confirmed immediately before this work unit.
+- Candidate is frozen as `B3_WR_ST`; no WR/ST weight changes, feature changes, score-threshold changes, downstream-policy changes, or production changes are allowed in this work unit.
+- First task is provenance only: identify whether any historical outcome window is genuinely untouched by prior 4-head/Waku10 research/model selection.
+- If and only if such a window exists, apply the already-frozen policy without tuning and report the result as validation, not selection.
+- Jul/Aug remain NON-PRISTINE and outcome-blind; September outcome remains UNREAD and must not be used.
+- Status: `FROZEN_WR_ST_PROVENANCE_AUDIT_STARTED`.
