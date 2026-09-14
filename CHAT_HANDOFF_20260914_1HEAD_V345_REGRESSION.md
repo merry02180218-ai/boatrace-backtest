@@ -14,7 +14,7 @@
 - historical `run_v337_1head_head_cutoff_volume.py` は変更せず、旧feature routeを構築した後にproduction profileのv345 attack_core weightsだけをoverlayする。
 - まずpre-v345 sentinel 276R / 241 head / 119 exact3 / SHA `89e0b32c3ffbed6212f98f0a9b2e230717b8e41010019e3321fb49e70148ba73` を再現できることをassertし、その後v345重みで再評価する二段監査。
 - `.github/workflows/v346-1head-v345-production-regression.yml` を追加。commit `fb480c6a97c5ca76468c66e4b8bbfab346a96873`。
-- full reconstruction GitHub Actions Run `34828125951`。prepare / second / base-third / third はSUCCESSし、最終regression job `103927840153` 実行中。
+- full reconstruction GitHub Actions Run `34828125951`。
 
 ## v345 production identity 確定
 - repaired canonical v337 artifactを使う独立fast verifierを追加。
@@ -36,6 +36,32 @@
 - `SEPTEMBER_OUTCOMES_READ=false`。9月結果は未読。
 - Jul/Augは`NON_PRISTINE_SUPPORT_ONLY`のまま。
 
-## 次の確認
-- full reconstruction Run `34828125951` の最終regression結果をfast verifierと照合して二重確定する。
-- 二重確定後は新v345 identity上のexact3 miss 155件、とくにhead-hit / exact3-missの相手選び診断へ進む。
+## full reconstruction 二重確認完了
+- Run `34828125951` は全ジョブSUCCESS。
+  - prepare `103924872439`
+  - second `103926393845`
+  - base-third `103926393915`
+  - third `103926394046`
+  - regression `103927840153`
+- final Artifact `10341577466` / `v346-1head-v345-production-regression`。
+- artifact digest `sha256:f83dceefe1ebd5828fa658d9cef76e581875aab739b86e78b6d6f0cdd02071d6`。
+- full reconstruction result:
+  - PRE_R 1114
+  - PASS 276R
+  - head 241 / 87.3188405797%
+  - exact3 121 / 43.8405797101%
+  - race_code SHA256 `08eb41e04c36d25074d6a1e471ff9334fafd34c8306cd5d336923772b613b8bd`
+  - pre-v345 sentinel verified = true
+  - race identity delta = 31 added / 31 removed
+  - top venue share = 10.8695652174%
+  - venue HHI = 0.0648498215
+  - `SEPTEMBER_OUTCOMES_READ=false`
+  - `JUL_AUG_STATUS=NON_PRISTINE_SUPPORT_ONLY`
+- fast verifierとfull reconstructionが metrics / race identity SHA の両方で完全一致。v345 production identityを正式確定する。
+- stale commit `1d84f552d01d223fe6ccfd89c0dc24dc6e8ddda3` のv339 continuationはこのhandoffで明示的にsuperseded。
+
+## 次の再開地点
+- v345正式identity上では exact3 miss = 155件。
+- 次は head-hit / exact3-miss を中心に、SECOND / THIRD / ticket側の相手選び診断へ進む。
+- v345 production本体のHEAD cutoff .78 / opponent mass .375 / env_w .10 / q .65 / v317 / v318 / v320 alpha=.70 は固定して比較する。
+- September outcomesは引き続きUNREAD。Jul/AugはNON-PRISTINE support only。
