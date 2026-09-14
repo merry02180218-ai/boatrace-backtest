@@ -30,63 +30,61 @@ Kiryu6 evidence continues to indicate that v17 can place rescued outer rows plau
 - v8 (`264bf494812b6b72e4af94cacc1d40b009a6dde1`): per-frame joint six-boat assignment. Kiryu12 standard/varied passed, Kiryu3/Kiryu6 failed.
 - v9 (`30a7b7ad2e44e51ccd2d0d2c0df0e32b5c265608`): immutable seed-frame appearance memory. Still allowed outer-row wake/background collapse.
 - v10: fleet-affine y-cell reference. Rejected after all four matrix jobs failed closed and previously healthier samples regressed.
-- v11 (`372aea94e0f718cc7dc2be3502c8761f33433ecf`): immutable slit-motion corridor on top of v9. Run `34788921925`; all four failed closed. It prevented unsafe continuation but was too myopic to recover a feasible per-frame assignment.
+- v11 (`372aea94e0f718cc7dc2be3502c8761f33433ecf`): immutable slit-motion corridor. Run `34788921925`; all four failed closed. It prevented unsafe continuation but was too myopic to recover a feasible per-frame assignment.
 - v12 (`13a929a8a296ac92247ba6664f9e5bd35ec9cb4e`): four-step per-boat motion memory while remaining greedy per frame. Run `34804266678`; all four failed safely/fail-closed.
 - v13 (`ed02d51599da88c3930370116d70b5d390d5ee0b`): first multi-hypothesis complete six-boat beam tracker. Run `34807739191`; all four unchanged jobs failed closed because every beam hypothesis died. No result was read and no quality threshold was relaxed.
+- v14 (`a2df021c038a09f4df324545426b4892800e9eda`): diversified directional beam, bounded local appearance searches around prediction and +/-0.50*search_x, larger feasible transition pool, same hard gates/thresholds. Run `34809061470` now fully audited below.
 
-## v13 artifact diagnosis — authoritative
-Run `34807739191` artifacts were inspected, not just workflow conclusions.
+## v13 diagnosis retained
+Run `34807739191` showed all four failed with `all beam hypotheses died` while fallback use remained zero at the failure point. The key problem was candidate omission: if the locally correct appearance candidate was not generated around the current x prediction, beam width could not recover it. This motivated v14 candidate diversification rather than threshold relaxation.
 
-All four failed with `all beam hypotheses died` while fallback use remained zero at the failure point, so this is not a missing-video/import/runtime failure and not merely weak fallback quality:
-- Kiryu3: failed after 3 tracking steps, failure frame 930 from slit frame 927. Last boat6 center ~[551.6,978.2].
-- Kiryu6: failed after 8 tracking steps, failure frame 901 from slit 893. Last boats5/6 ~[815.0,678.2] / [851.0,797.0].
-- Kiryu12 standard: failed after 12 tracking steps, frame 915 from slit 903.
-- Kiryu12 varied `1,2,4,5,6,3`: failed after 15 tracking steps, frame 912 from slit 897.
+## v14 completed audit — authoritative
+Workflow `.github/workflows/regress-exhibition-seed17-track14.yml`, Run `34809061470`.
+Artifacts inspected directly:
+- Kiryu3 artifact ID `10333959406`
+- Kiryu6 artifact ID `10333899996`
+- Kiryu12 standard artifact ID `10334655876`
+- Kiryu12 varied artifact ID `10334536496`
 
-Technical interpretation: v13 can kill the physically correct path very early because each boat's appearance candidates are generated around one current x prediction. Once that prediction is locally wrong, the correct alternative may never enter the beam; increasing beam width alone cannot recover a candidate that was never generated. The next change therefore expands candidate coverage without lowering NCC/confidence gates.
+Results:
+- **Kiryu3: rejected/fail closed** — `FAIL_CLOSED: no feasible v14 six-boat beam state at step 2` (4 native frames). No fallback had yet been used. Last centers were still essentially seed positions: 1 [523,683], 2 [777,738.5], 3 [800.5,787.5], 4 [593,836], 5 [555,883.5], 6 [616,961]. Candidate diversity did not solve the very-early omission/feasibility conflict.
+- **Kiryu12 standard: rejected/fail closed** — `FAIL_CLOSED: no feasible v14 six-boat beam state at step 12` (24 native frames). Last centers: 1 [1216,637], 2 [1173,723], 3 [1219,756], 4 [1129,836], 5 [1108,922], 6 [1095,982]. Fallback counts across 11 samples: 1=10, 2=6, 3=8, 4=7, 5=5, 6=3. This is not a clean identity pass.
+- **Kiryu12 varied `1,2,4,5,6,3`: rejected/fail closed** — `FAIL_CLOSED: no feasible v14 six-boat beam state at step 8` (16 native frames). Last centers: 1 [1176,671], 2 [1150,731], 4 [1113,825], 5 [1078,888], 6 [982,983], 3 [983,1059]. Fallback counts across 7 samples: 1=6, 2=6, 4=4, 5=1, 6=3, 3=1.
+- **Kiryu6: workflow/quality accepted but NOT sufficient for production**. Final centers remained on-frame/distinct: 1 [214,456], 2 [206,497], 3 [362,560], 4 [522,626], 5 [936,721], 6 [1072,816]. Fallback fractions: 1=.174, 2=.087, 3=.130, 4=.348, 5=.348, 6=.565. Median identity NCC: 1=.706, 2=.708, 3=.673, 4=.639, 5=.862, 6=.846. Median anchor NCC: 1=.495, 2=.325, 3=.542, 4=.685, 5=.890, 6=.846. Boat6's .565 fallback fraction is too weak to treat this single acceptance as stable proof. Outer boats nevertheless stayed physically distinct/on-frame through +1.5s.
 
-## CURRENT candidate: tracker v14 diversified directional beam
-File: `track_exhibition_boats_v14.py`
-Implementation commit: `a2df021c038a09f4df324545426b4892800e9eda`
-Workflow: `.github/workflows/regress-exhibition-seed17-track14.yml`
-Workflow creation commit: `45560a70dc39a29d433a890f423f6c5ae1a27e4d`
-Explicit trigger commit: `8e1d4bdaaffee32d2fb1b3666e7ac235089a4e09`
-Current Run: `34809061470`
-Workflow ID: `357548031`
+Interpretation: v14 improved candidate coverage enough to produce one technical acceptance, but three unchanged samples still die and the successful Kiryu6 path relies heavily on fallback for boat6. Increasing beam width again is not the principled next step. The remaining problem is that candidate generation is still conditioned on the current prediction, so the correct path can disappear before temporal scoring can rescue it.
 
-### v14 design
-v14 keeps v13's fail-closed hard geometry/direction gates and existing NCC/confidence/fallback thresholds. It does not make passing easier by lowering quality requirements.
+## CURRENT candidate: tracker v15 full-cell anchor lattice + multi-frame beam
+File: `track_exhibition_boats_v15.py`
+Implementation commit: `1d18621d725343437aed81554713a1db8017eb68`
+Workflow: `.github/workflows/regress-exhibition-seed17-track15.yml`
+Workflow creation/trigger commit: `fbd8aac8ae321402f0206f4293ad061584280092`
+Current Run: `34816553593`
+Workflow ID: `357605796`
+At this handoff update Run `34816553593` is confirmed queued on the Japan self-hosted runner. Do not invent results before completion.
 
-Principled changes:
-- for each boat, call the unchanged v9 appearance matcher around three bounded horizontal anchors: current v13 prediction, prediction -0.50*search_x, prediction +0.50*search_x;
-- deduplicate nearby appearance candidates and retain several spatially distinct high-NCC alternatives;
-- ask the original v13 feasibility code for a larger feasible transition pool, still under the same hard lane/order/jump/duplicate/edge/reverse-direction constraints;
-- rerank that already-feasible pool with a soft result-blind preference for cumulative and step motion aligned with immutable slit `dominant_dx`;
-- use `beam-width=8` / `per-state-keep=8` in this validation to preserve more hypotheses; confidence/NCC gates remain unchanged;
-- no race result, boat-number exception or race-specific offset.
+### v15 design
+v15 deliberately preserves v13's temporal beam, immutable slit-motion corridor, hard geometry/order/jump/duplicate/edge/direction gates, existing NCC thresholds, fallback caps and adaptive appearance behavior.
 
-Rationale: v13's immediate beam deaths show that path diversity is useless if the correct local candidate is omitted. v14 targets candidate omission rather than weakening fail-closed safety.
+New candidate-lattice change only:
+- keep the unchanged local v9 dual-memory proposals around each beam state's current prediction;
+- additionally compute immutable seed-anchor NCC peaks across the boat's **entire current lane cell**, independent of current x prediction;
+- use full-frame `matchTemplate` response per immutable anchor/frame, then retain NMS-separated peaks whose centers lie in the current lane cell;
+- merge local candidates and full-cell anchor candidates, deduplicate nearby positions and pass them into the unchanged v13 multi-frame six-boat beam;
+- the temporal beam therefore receives alternatives that can survive even when the current x prediction is locally wrong, approximating a short-window candidate lattice/Viterbi selector without relaxing safety gates;
+- no result, boat-number rule, race-specific offset or quality-threshold relaxation.
 
-### v14 validation matrix / exact restart point
-Run `34809061470` is confirmed on GitHub Actions and is queued on the Japan self-hosted runner. Four unchanged jobs exist:
-1. 2026-09-10 Kiryu3 standard — result remains blind.
-2. 2026-09-10 Kiryu6 standard — result remains blind.
-3. 2026-09-10 Kiryu12 standard — technical calibration.
-4. 2026-09-09 Kiryu12 varied entry `1,2,4,5,6,3` — technical regression.
+Validation uses the same unchanged four-video matrix and `--stride 2 --beam-width 8 --per-state-keep 8`.
 
-At this handoff update, all four v14 jobs are queued. Do not invent a result before completion.
-
-## Exact next actions
-1. Inspect Run `34809061470` once jobs leave queued state.
-2. If technical code/runtime failure occurs, inspect logs, patch and rerun immediately.
-3. If tracking runs complete, inspect artifacts/JSON rather than trusting workflow green alone.
-4. Compare v14 beam survival depth against v13's 3/8/12/15-step deaths. If v14 survives longer but still dies, identify which boat/candidate/hard constraint removes the last plausible path.
-5. Specifically audit Kiryu3 boat6 and Kiryu6 boats5/6 at +0.5/+1.0/+1.5s for slit-direction consistency, separation, edge survival and identity.
-6. Record accepted/failure reason, beam-size history, fallback counts/fractions, median anchor/adaptive NCC, min separation, horizon centers and FastClip+seed+tracker latency.
-7. Verify Kiryu12 standard and varied-entry samples are not regressed.
-8. If v14 still fails safely, do NOT relax NCC/confidence/corridor gates. Next principled direction is a windowed candidate lattice / Viterbi pass over the short 1.5s segment with appearance+motion likelihood, so candidate alternatives survive across a fixed temporal window before committing.
-9. Only if one unchanged seed+tracker combination passes all four physically sane and <=60 sec, update `run_exhibition_ses_live_local.py` and perform a self-hosted end-to-end live-style validation.
-10. Update this handoff after every meaningful v14 result/design change with exact commit SHA, Run ID, artifact IDs/evidence and restart point.
+## Exact restart point
+1. Inspect Run `34816553593` as soon as it leaves queued state.
+2. If code/runtime fails, inspect logs, fix v15/workflow and rerun immediately.
+3. If tracker runs complete, inspect all four artifacts/JSON; workflow green alone is insufficient.
+4. Record for every race: accepted/failure reason, failure step/beam survival, fallback counts/fractions, median adaptive/anchor NCC, min separation, +0.5/+1.0/+1.5 centers, on-frame/identity sanity, and FastClip+seed+tracker latency.
+5. Specifically verify Kiryu3 boat6 no longer disappears immediately and Kiryu6 boats5/6 remain distinct without unsafe high fallback dependence. Verify Kiryu12 standard and varied do not regress.
+6. If v15 still fails because full-cell anchor candidates are insufficient, do NOT relax NCC/corridor/geometry gates. Next principled direction is an explicit fixed-window Viterbi/DP candidate graph over the 1.5s segment using state-independent per-frame appearance peaks plus immutable motion likelihood, rather than committing/update-feedback every step.
+7. Only if one unchanged seed+tracker combination passes all four physically sane and <=60 sec, update `run_exhibition_ses_live_local.py` and perform at least one self-hosted end-to-end live-style validation.
+8. Update this handoff after every meaningful result/design change with exact commits, Run IDs, artifact IDs/evidence and restart point.
 
 ## Production wrapper
 `run_exhibition_ses_live_local.py` remains old seed v1 + tracker v3. DO NOT update until an unchanged seed+tracker passes the full technical matrix with sane identity/geometry and <=60 sec.
