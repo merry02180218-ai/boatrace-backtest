@@ -283,8 +283,78 @@ Status: `FROZEN_WR_ST_PROVENANCE_AUDIT_COMPLETE_NO_HISTORICAL_HOLDOUT_PROSPECTIV
 - Start point: provenance audit AFTER commit `7df8e10ffa3a5f5a7c045cbc9dd787225cad5df0`.
 - Objective: create or verify a prospective, result-blind shadow path for the already-frozen `B3_WR_ST` candidate; this is logging/decision infrastructure, not a model-selection exercise.
 - Frozen model semantics: boat3 direct Waku10 `WR + ST` on the identical minimal non-Waku base; rolling training/scoring and downstream S thresholds remain unchanged (`PRE>=.28`, `POST>=.25`, `ENV_ENTRY>=.224790`).
-- Required freeze payload before race result: race/date/venue, generated-at timestamp, source/input provenance, PRE, POST, ENV_ENTRY, S eligibility, downstream opponent/ticket decision if available, actual pre-deadline odds snapshot/source/timestamp if used, and a content hash or similarly immutable audit identifier.
+- Required freeze payload before race result: race/date/venue, generated-at timestamp, source/input provenance, PRE, POST, ENV_ENTRY, S eligibility, downstream opponent/ticket decision if applicable, actual pre-deadline odds snapshot/source/timestamp if used, and a content hash or similarly immutable audit identifier.
 - The shadow path must fail closed if required pre-result inputs are missing; it must not read target-race result/payout or use historical September outcomes.
 - Jul/Aug remain NON-PRISTINE; September outcome remains UNREAD; production `HEAD4_V291_COMP7` remains unchanged.
 - First implementation step: inspect current HEAD4 live/shadow entrypoints and odds fetch/snapshot utilities, then reuse the safest existing no-leak components rather than duplicating logic.
 - Status: `FROZEN_WR_ST_PROSPECTIVE_SHADOW_PATH_STARTED`.
+
+## FROZEN WR_ST PROSPECTIVE SHADOW PATH — AFTER (2026-09-14 JST)
+
+### Frozen policy and artifacts
+
+- BEFORE commit: `9f312c93559c125db856ff06ce7269c5e0cf2680`.
+- Research-only policy manifest: `artifacts/head4_b3_wrst_shadow_policy_v1.json` (commit `e43479e9df3ce1d7d264c314acf38d88e8ca5091`).
+- Head artifact builder: `freeze_4head_b3_wrst_shadow_head_artifact.py` (commit `0e20b091fd422fa1fc051b94c147b3d1d9b5b433`).
+- Persisted frozen head artifact: `artifacts/head4_b3_wrst_shadow_head_20260630.json` (commit `2d3665ae644e860a1411b24ac240928250063680`).
+- Persisted parity report: `artifacts/head4_b3_wrst_shadow_head_parity_20260630.json` (commit `9634d451ad0557fc8591880c9cd0d0afb39b28ef`).
+- Frozen inference helper: `head4_b3_wrst_shadow_inference.py` (commit `c7ef059464e6f8b9d09139a212895f643a6acb0e`).
+- Result-blind PRE scanner: `scan_4head_b3_wrst_pre_shadow.py` (commit `e3562cdf45f446c878cd47e3e9ad9be2ec024b8d`).
+- Fail-closed POST scorer: `score_4head_b3_wrst_post_shadow.py` (commit `99bec3438c7cc8c59ed312c319de5c24854509d5`).
+- Immutable causal bundle assembler: `assemble_4head_b3_wrst_shadow_input.py` (commit `8ced0c2f9e5fe535715d63b4aa17cd00a5252044`).
+- Prospective shadow runner: `run_4head_b3_wrst_shadow.py` (initial commit `a640415e6963e2c8aeeed072c44596da76792814`; theoretical-stake clarification commit `516a3c607008582015f9fa220c1805648a233c66`).
+- Validation workflow: `.github/workflows/validate-4head-b3-wrst-shadow-path.yml`; final artifact-integrity version commit `49bac3718f24c58f0984f42a9f92de12bf4a81a2`.
+
+### Freeze/parity CI
+
+- Workflow: `freeze-4head-b3-wrst-shadow-head`.
+- Run ID: `34825494106` — `success`.
+- Job ID: `103916561244` — `success`.
+- Run head SHA: `b737eca85106fb4d62ceece1b7dde625e7e2c90f`.
+- Artifact: `head4-b3-wrst-shadow-head-20260630`.
+- Artifact ID: `10339748580`.
+- Artifact digest: `sha256:e560687cde325ceeb83403edebc24f806546cb9ed7bc2047d546c62316b92ea2`.
+- Final frozen training rows through 2026-06-30: `32,085`; head4 base rate `0.0973352033660589`.
+- June walk-forward reference rows: `4,488` per PRE/POST stage.
+- PRE June parity hash: `04d18ebd46ebc5249622a4a3d54a2549f941a5e93a41f36333de18e96d71dd1d` — exact match.
+- POST June parity hash: `a1d6d98c902a99aff58b2d36ee2b1b1eb861c0f91c1476ad6b7a90a6d39222d7` — exact match.
+- Therefore the frozen prospective head model reproduces the official B3_WR_ST June walk-forward lineage before being fit through the fixed 2026-06-30 cutoff.
+
+### Shadow-path validation CI
+
+- Run `34825974109`: success after correcting a CI-only false-positive string guard; no model semantics changed.
+- Final run `34826229101`: `success`.
+- Final job ID: `103918922861` — `success`.
+- This final run verifies persisted policy/head/parity artifacts, frozen inference artifact loading, fail-closed incomplete POST provenance behavior, no production action path, and result/payout guardrails.
+
+### Prospective path semantics
+
+1. Policy ID is `HEAD4_B3_WR_ST_SHADOW_V1`; status is **RESEARCH_SHADOW_ONLY**. Production remains `HEAD4_V291_COMP7` and was not modified.
+2. PRE/POST head model is exactly B3 direct Waku10 `WR + ST` on the minimal non-Waku base with fixed LogisticRegression C=.35 and frozen label cutoff 2026-06-30.
+3. S gate is unchanged: `PRE>=0.28`, `POST>=0.25`, `ENV_ENTRY>=0.224790`.
+4. PRE shadow scanner consumes current result-blind cards/Waku10 inputs and the frozen artifact; it does not fit on Jul/Aug/Sep outcomes.
+5. POST scorer requires all seven POST-only exhibition features plus explicit complete/result-blind source provenance. Missing/unproven source fields fail closed; original-exhibition straight/lap/turn are never fabricated with 0.5/defaults.
+6. The bundle assembler hashes source components and requires result-blind complete provenance before producing a race bundle.
+7. The shadow runner reuses frozen 2026-06-30 ENV_ENTRY and v283 opponent inference, fetches the official 120-way trifecta odds snapshot only before deadline, and appends an immutable decision row containing input hash and decision-record hash.
+8. The shadow runner **never places a wager**. Market/ticket output is observation only; stake fields are recorded as `theoretical_stake` / `theoretical_total_stake`, and `production_action_taken=false`.
+9. If required inputs are absent, source provenance is incomplete, a result/payout key is detected, official odds are incomplete/late, or the deadline has passed, the path fails closed.
+
+### Outcome integrity
+
+- No July/August outcome was used in this work unit.
+- September outcome remains UNREAD and was not consumed.
+- No threshold/weight tuning was performed.
+- No production promotion/change was made.
+
+### Current blocker / next step
+
+- The prospective **decision/logging path is frozen and validated**, but a complete one-click current-day source acquisition path is not newly claimed here.
+- In particular, current-day POST must still arrive with proven complete causal source provenance for all seven POST-only fields; historically the difficult fields were `orig_straight4`, `orig_lap4`, `orig_turn4`.
+- ENV_ENTRY primitives and opponent `boats` inputs must likewise be supplied from already-proven result-blind sources; if a target race cannot satisfy the source contract, shadow evaluation must remain fail-closed.
+- Next work: wire/verify the current-day source manifest into the frozen shadow path, without looking at results, then begin storing genuinely prospective pre-deadline shadow records for future races. Only those records may later be settled as clean validation evidence.
+
+Status: `FROZEN_WR_ST_PROSPECTIVE_SHADOW_PATH_FROZEN_AND_VALIDATED_SOURCE_WIRING_NEXT`.
+
+## UPDATED NEXT CHAT START PROMPT — SOURCE WIRING / PROSPECTIVE RECORDING
+
+`boatrace-backtest の CHAT_HANDOFF_20260914_4HEAD_BOAT3_WAKU10_NEXT.md と最新GitHubを読んで続き。最新GitHubを優先し、作業前にBEFORE追記。B3_WR_ST prospective shadow path は HEAD4_B3_WR_ST_SHADOW_V1 としてfreeze済みで、freeze run 34825494106 と最終validate run 34826229101 はsuccess。Jul/Aug outcome禁止・Sep outcome UNREAD・production HEAD4_V291_COMP7不変を維持したまま、次はcurrent-day POST 7項目/ENV_ENTRY primitives/v283 boatsのresult-blind source manifestをwire・検証し、完全なレースだけ締切前shadow recordを保存できるようにする。欠損はfail closed。作業後にAFTER追記。`
