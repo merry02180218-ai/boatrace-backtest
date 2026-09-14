@@ -1,0 +1,39 @@
+name: v347 1-head opponent miss diagnostic
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_v347_1head_opponent_miss_diagnostic.py'
+      - '.github/workflows/v347-1head-opponent-miss-diagnostic.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy 'scikit-learn==1.6.1'
+      - name: Download repaired v337 canonical artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/v337prev
+          gh run download 34782769446 --name v337-1head-head-cutoff-volume --dir /tmp/v337prev
+          test -f /tmp/v337prev/analysis_v337_candidate_exhibition.csv
+      - name: Run v347 diagnostic
+        run: python run_v347_1head_opponent_miss_diagnostic.py /tmp/v337prev/analysis_v337_candidate_exhibition.csv
+      - name: Show result
+        if: always()
+        run: cat /tmp/v347/result_v347.json || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v347-1head-opponent-miss-diagnostic
+          path: /tmp/v347/
