@@ -1,5 +1,7 @@
 name: regress exhibition seed17 tracker20
-# v20 regression: v19 beam + gated causal-appearance rescue
+run-name: SES v20 causal-rescue matrix
+# v20 regression: v19 beam + gated causal-appearance rescue.
+# This run-name makes the rescue-only validation easy to distinguish from v19.
 
 on:
   workflow_dispatch:
