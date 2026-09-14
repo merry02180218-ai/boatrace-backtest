@@ -44,3 +44,20 @@ Predecessor: `CHAT_HANDOFF_20260915_4HEAD_ENV_V283_JULAUG_ENV_DONE.md`
 8. 作業後にcommit SHA / Run / Job / Artifact / 結論 / 次の再開地点を追記する。
 
 Status: `HEAD4_MOTOR_DIFF_TRANSFER_STARTED`
+
+## BEFORE — 4号艇−3号艇 モーター勝率・2連対率 集中検証
+
+ユーザー指定により比較軸を絞る。
+
+これからやること:
+
+1. 4号艇・3号艇それぞれのモーター勝率とモーター2連対率の実データ列・生成元を最新GitHubから特定する。
+2. 主軸を `4号艇−3号艇` とし、少なくとも `motor_win_rate_diff_4_3` と `motor_2ren_rate_diff_4_3` を検証する。
+3. 4〜6月を条件探索期間として、単独差・AND/OR・閾値帯を比較する。
+4. 7〜8月は後段検証として候補数、4号艇1着率、3連単的中率、ROIを確認する。
+5. 既存 `HEAD4_V291_COMP7` のS/A/Bを基準比較し、production自体は変更しない。
+6. 9月結果・払戻・結果ラベルは一切読まず `UNREAD` を維持する。
+7. 検証コード・workflowを追加し、CIで再現可能にする。
+8. 完了後、commit SHA / Run / Job / Artifact / 結論 / 次の再開地点を追記する。
+
+Status: `HEAD4_B4_MINUS_B3_MOTOR_WIN_2REN_STUDY_STARTED`
