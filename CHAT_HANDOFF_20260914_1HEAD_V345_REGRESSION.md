@@ -67,39 +67,36 @@
 - September outcomesは引き続きUNREAD。Jul/AugはNON-PRISTINE support only。
 
 ## 2026-09-14 19:40 JST 今回の作業開始記録
-- 前チャットと最新GitHubを再確認。最新main HEADは作業開始確認時 `1caf0e8530b411fb48450ae257e0828b8d43a02f`（v345 regression full reconstruction成功記録）。
-- 現正式productionは `1HEAD_PRODUCTION_20260914_HEAD078_V345_ATTACKCORE`。PASS 276R / head 241 (87.3188%) / exact3 121 (43.8406%) / race SHA `08eb41e04c36d25074d6a1e471ff9334fafd34c8306cd5d336923772b613b8bd` を基準とする。
-- September 2026 outcomesは今回も `UNREAD` を厳守。Jul/Augは `NON_PRISTINE_SUPPORT_ONLY`。
-- 今回やること:
-  1. v345正式identityを固定したまま、head-hit / exact3-miss を中心にSECOND / THIRD / ticketの相手選び失敗をrace-levelで診断する。
-  2. まず現行 v317 SECOND / v318 THIRD / v320 HYBRID alpha=.70 のどこで正解艇を落としているかを分類し、改善余地を定量化する。
-  3. 結果リーク型の後付け除外はせず、候補改善は事前・展示時点で利用可能な特徴だけを使う。
-  4. production本体（HEAD .78 / opponent mass .375 / env_w .10 / q .65 / v345 attack_core）は固定し、相手側の比較だけを行う。
-  5. 作業完了後、実測結果・commit・Actions Run/Job/Artifact ID・結論・次の再開地点をこのファイルへ追記する。
+- 現正式productionは `1HEAD_PRODUCTION_20260914_HEAD078_V345_ATTACKCORE`。PASS 276R / head 241 / exact3 121を基準とする。
+- September 2026 outcomesは `UNREAD` を厳守。Jul/Augは `NON_PRISTINE_SUPPORT_ONLY`。
+- v345 identity固定でSECOND / THIRD / ticketの相手選びを診断する。
 
 ## 2026-09-14 20:xx JST v347再開前記録
-- ユーザー指示「相手選びにもattackCore使ってみよう」を受け、相手艇2〜6号艇ごとに v345 と同じ attackCore 構成（EX .40 / ST .25 / straight .15 / original平均 .20）を作り、SECOND側係数 `g2` と THIRD側係数 `g3` を別々に比較する `run_v347_1head_opponent_attackcore.py` と workflow を追加済み。
-- v347初回 Run `34835017760` は prepare / second / base-third / third がSUCCESSしたが、最終 attackcore Job `103949065798` は baseline assert 部分で `base.head` が pandas Series の `.head` method と衝突し、`TypeError: int() argument must be ... not 'method'` で失敗。モデル比較そのものの結論は未確定。
-- 今回の再開作業は、この命名衝突だけを修正し、同じ276R・同じv345 production identityを固定してv347を再実行する。baseline `g2=0,g3=0` が 276 / 241 / 121 を再現しない場合は比較を無効とする。
-- production本体は変更しない。September outcomesは引き続きUNREAD、Jul/AugはNON_PRISTINE_SUPPORT_ONLY。
-- 再Run完了後、最良g2/g3・exact3・Feb-Jun pristine評価・Jul/Aug support-only評価・Run/Job/Artifact IDと採否を追記する。
+- 相手艇2〜6号艇ごとに v345 と同じ attackCore（EX .40 / ST .25 / straight .15 / original平均 .20）を作り、SECOND係数 `g2` とTHIRD係数 `g3` を比較。
+- 初回Run `34835017760` 最終Job `103949065798` は pandas `base.head` 衝突のみで失敗。モデル結論未確定。
+- 修正commit `0d74def18c58fac4f6fddc1fc68ecd2229dfcd9f`。production変更なし、September UNREAD。
 
 ## 2026-09-14 22:xx JST v347分解監査 作業開始
-- v347修正版 Run `34843974949` は全job SUCCESS。attackcore Job `103978592224`、Artifact `10348980075`、digest `sha256:fca910c0bbf8b1f291a4e97c0457399ec7b4806c5151833b75700ef3c3245db9`。
-- baseline `g2=0,g3=0` は 121/276=43.8406% を完全再現。attackCore ready=276/276R。
-- 現時点の最良研究候補は `g2=.5 / g3=1.0`：130/276=47.1014%（+9）。Feb-Jun pristine 106/220=48.1818%（baseline比+8）、Jul-Aug support-only 24/56=42.8571%（+1）、race swap +hit 12 / -hit 3。
-- 今回は25 gridを分解し、SECOND-only (`g2>0,g3=0`)、THIRD-only (`g2=0,g3>0`)、併用のどこが改善源か、Feb-Jun月別worst-monthを含めて監査する。Jul/Augは採用判断の主証拠にしない。
-- September outcomesは引き続きUNREAD。productionは変更せず、分解監査後に昇格可否を判断する。
+- 修正版 Run `34843974949` 全job SUCCESS。attackcore Job `103978592224`、Artifact `10348980075`、digest `sha256:fca910c0bbf8b1f291a4e97c0457399ec7b4806c5151833b75700ef3c3245db9`。
+- baseline 121/276、best `g2=.5/g3=1.0`=130/276。Feb-Jun 106/220、Jul-Aug 24/56。
 
 ## 2026-09-14 22:xx JST v347分解監査 完了
-- 25 gridをArtifact `10348980075` の `v347_grid.csv` / `v347_monthly.csv` で分解監査した。
-- baseline `(g2,g3)=(0,0)`：all 121/276=43.8406%、Feb-Jun 98/220=44.5455%、Jul-Aug 23/56=41.0714%、Feb-Jun worst-month=34.8485%。
-- SECOND-only最良は `(0.5,0)`：126/276=45.6522%（+5）、Feb-Jun 102/220=46.3636%（+4）、support 24/56=42.8571%（+1）、worst-month=36.3636%。SECOND tiltは弱い0.5が最良で、g2=1.0ではFeb-Junが97/220へ悪化。強く掛けるのは不安定。
-- THIRD-only最良は `(0,1.0)`：128/276=46.3768%（+7）、Feb-Jun 104/220=47.2727%（+6）、support 24/56=42.8571%（+1）、worst-month=39.3939%。改善の主成分はTHIRD側。
-- 併用 `(0.5,1.0)`：130/276=47.1014%（+9）、Feb-Jun 106/220=48.1818%（+8）、support 24/56=42.8571%（+1）、worst-month=40.9091%。単純なSECOND(+4 dev)＋THIRD(+6 dev)の完全加算ではないが、併用がdev hits最大。
-- `(0.5,1.5)` もall 130/276だが、Feb-Junは103/220（+5）に落ち、Jul-Aug supportの+4で見かけ上並ぶため採用候補にはしない。Jul/Aug非pristineに引かれない観点でも `(0.5,1.0)` が優位。
-- 月別 `(0.5,1.0)` は Feb 13/25=52.0%、Mar 15/32=46.875%、Apr 24/48=50.0%、May 27/66=40.909%、Jun 27/49=55.102%。baselineは Feb 9/25、Mar 15/32、Apr 24/48、May 23/66、Jun 27/49。改善は主にFeb +4 / May +4、Mar-Apr-Junは維持。
-- したがってattackCoreを相手選びへ入れる方向は有望。特にTHIRD g3=1.0が主効果、SECONDはg2=.5の弱い補正が適切。強いg2/g3は劣化が確認でき、単調な後付け改善ではない。
-- ただし同一Feb-Junで25 gridから選んだ研究候補なので、直ちにproduction昇格せず、次は `(0.5,1.0)` を固定候補としてrace-level gain/loss 15Rとticket構造を監査し、可能なら独立holdout/追加sentinelを作ってから昇格判断する。
-- productionは引き続きv345 unchanged。`PRODUCTION_CHANGED=false` / `SEPTEMBER_OUTCOMES_READ=false` / Jul-Aug=`NON_PRISTINE_SUPPORT_ONLY`。
-- 次の再開地点：`g2=.5/g3=1.0` を固定し、+hit12R/-hit3Rの原因分類（SECOND順位変更、THIRD順位変更、HYBRID top3境界）と、過学習耐性を確認する。
+- baseline `(0,0)`：all 121/276、Feb-Jun 98/220、Jul-Aug 23/56。
+- SECOND-only `(0.5,0)`：126/276、Feb-Jun 102/220（+4）、support 24/56（+1）。
+- THIRD-only `(0,1.0)`：128/276、Feb-Jun 104/220（+6）、support 24/56（+1）。
+- 併用 `(0.5,1.0)`：130/276、Feb-Jun 106/220（+8）、support 24/56（+1）、worst-month 40.9091%。
+- 改善主成分はTHIRD側。強いg2/g3は劣化し、単調な後付け改善ではない。
+- production unchanged / September unread。
+
+## 2026-09-14 22:xx JST v347 gain/loss ticket境界監査 完了
+- Artifact `10348980075` の `v347_best_race_delta.csv` を使い、best `(g2=.5,g3=1.0)` とbaselineの的中状態が変わった15Rを全件監査した。
+- 全期間15R内訳は +hit 12R / -hit 3R。Feb-Jun pristineは +hit 11R / -hit 3R = net +8。Jul-Aug support-onlyは7月の +hit 1Rのみ、8月は的中状態変化0R。
+- ticketの2着艇系列（3点のsecond position）が変わったものを `SECOND boundary/rank`、2着艇系列が同じで3着艇だけが入れ替わったものを `THIRD/top3 boundary` と分類した。
+- Feb-Jun pristineのSECOND系は4R：+hit 3R（202602102303, 202603212404, 202605171708）/ -hit 1R（202604061012）= net +2。
+- Feb-Jun pristineのTHIRD/top3系は10R：+hit 8R（202602101612, 202602241701, 202602251412, 202604301712, 202605041909, 202605070801, 202605211601, 202606231001）/ -hit 2R（202603300608, 202606300106）= net +6。
+- Jul-Aug support-onlyの唯一の変化は 202607130905 のSECOND boundaryで +hit 1。8月はgain/lossなし。
+- よってFeb-Junのnet +8は `THIRD境界 +6` と `SECOND境界 +2` に分解でき、25-grid監査の「THIRDが主効果、SECONDは弱い補助」とrace-levelでも一致した。
+- gainが特定1か月だけに集中する形ではなく、Feb +4、Mar net0、Apr net0、May +4、Jun net0。損失3RもMar/Apr/Junに分散しており、少数月の全勝だけで作られた改善ではない。
+- 一方、最適係数は同一Feb-Jun gridから選択しているため、この監査だけで独立holdoutとはみなさない。production昇格はまだ行わない。
+- 次の再開地点：`g2=.5/g3=1.0` を固定して、係数近傍（特に g2=.25/.5/.75、g3=.75/1.0/1.25）でplateau/感度監査を行い、ピンポイント最適化でないことを確認する。その後、production昇格候補v348として固定sentinelを作るか判断する。
+- `PRODUCTION_CHANGED=false` / `SEPTEMBER_OUTCOMES_READ=false` / Jul-Aug=`NON_PRISTINE_SUPPORT_ONLY`。
