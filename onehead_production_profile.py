@@ -6,7 +6,7 @@ currently adopted operating choices and is imported by production/regression
 wrappers so old experiments stay reproducible.
 """
 
-PROFILE_NAME = "1HEAD_PRODUCTION_20260914_HEAD078_V345_ATTACKCORE"
+PROFILE_NAME = "1HEAD_PRODUCTION_20260914_HEAD078_V349_OPPONENT_ATTACKCORE"
 
 HEAD_MODEL = "v308"
 HEAD_CUTOFF = 0.78
@@ -21,7 +21,7 @@ EXHIBITION_MODEL = "v332_ATTACK_ENV_SOFT_V345_ATTACKCORE"
 EXHIBITION_ENV_W = 0.10
 EXHIBITION_Q = 0.65
 
-# v345 adopted attack_core component weights.
+# v345 adopted HEAD-side attack_core component weights.
 # Historical v332/v337 research modules retain their original .30/.30/.23/.17
 # formula for reproducibility; production wrappers should use these constants.
 ATTACK_CORE_VERSION = "v345"
@@ -30,12 +30,32 @@ ATTACK_CORE_W_ONE_ST = 0.25
 ATTACK_CORE_W_ONE_STRAIGHT = 0.15
 ATTACK_CORE_W_ONE_ORIG_AVG = 0.20
 
-# Current post-v345 Feb-Aug regression identity.  Jul/Aug remain NON-PRISTINE
-# support months; September outcomes must remain unread.
-CURRENT_EXPECTED_PASS_R = 276
-CURRENT_EXPECTED_HEAD = 241
-CURRENT_EXPECTED_EXACT3 = 121
-CURRENT_EXPECTED_PASS_ID_SHA256 = "08eb41e04c36d25074d6a1e471ff9334fafd34c8306cd5d336923772b613b8bd"
+# v349 adopted opponent-side attackCore tilt.  The v345 276-race HEAD selection
+# remains fixed; only SECOND/THIRD opponent probabilities are tilted.
+OPPONENT_ATTACK_CORE_VERSION = "v349_OPPONENT_ATTACKCORE_G2_050_G3_100"
+OPPONENT_ATTACK_CORE_SECOND_G2 = 0.50
+OPPONENT_ATTACK_CORE_THIRD_G3 = 1.00
+
+# Formal v349 production sentinel.  Jul/Aug remain NON_PRISTINE support-only;
+# September outcomes must remain unread.
+PRODUCTION_EXPECTED_PASS_R = 276
+PRODUCTION_EXPECTED_HEAD = 241
+PRODUCTION_EXPECTED_EXACT3 = 130
+PRODUCTION_EXPECTED_PASS_ID_SHA256 = "08eb41e04c36d25074d6a1e471ff9334fafd34c8306cd5d336923772b613b8bd"
+PRODUCTION_EXPECTED_TICKET_ID_SHA256 = "50378499c439f3c13572f2ee5d4c012a812043fea34cf840e3aa47db4ebbec0c"
+
+# Frozen v345 sentinel retained for historical v346/v347 regression code.
+# CURRENT_EXPECTED_* aliases intentionally remain pointed at v345 so those
+# historical wrappers stay reproducible without modification.
+V345_EXPECTED_PASS_R = 276
+V345_EXPECTED_HEAD = 241
+V345_EXPECTED_EXACT3 = 121
+V345_EXPECTED_PASS_ID_SHA256 = "08eb41e04c36d25074d6a1e471ff9334fafd34c8306cd5d336923772b613b8bd"
+V345_EXPECTED_TICKET_ID_SHA256 = "bb5b7fd44245e616a1bc6455f15f2df1a59083f55196b78ac83d59abbf39daae"
+CURRENT_EXPECTED_PASS_R = V345_EXPECTED_PASS_R
+CURRENT_EXPECTED_HEAD = V345_EXPECTED_HEAD
+CURRENT_EXPECTED_EXACT3 = V345_EXPECTED_EXACT3
+CURRENT_EXPECTED_PASS_ID_SHA256 = V345_EXPECTED_PASS_ID_SHA256
 
 # Backward-compatible pre-v345 sentinel used by historical v338 regression.
 # Keep EXPECTED_* aliases frozen so old wrappers remain reproducible.
@@ -55,4 +75,5 @@ ANCHOR_EXPECTED_HEAD = 83
 ANCHOR_EXPECTED_EXACT3 = 45
 ANCHOR_PASS_ID_SHA256 = "8c97e8ae4ef7f444ad82ce91f6e8b6483c57181cce3ccdb56593863a533241fc"
 
+JUL_AUG_STATUS = "NON_PRISTINE_SUPPORT_ONLY"
 SEPTEMBER_OUTCOMES_MUST_REMAIN_UNREAD = True
