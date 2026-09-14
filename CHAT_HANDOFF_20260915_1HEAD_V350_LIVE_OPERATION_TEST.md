@@ -64,3 +64,13 @@ Frozen Top15追加候補:
 - 最初の比較対象は徳山1R。展示公開後にHEAD側production条件を適用し、PASSなら同一入力で `g2=.50/g3=1.00` と `g2=.45/g3=1.00` の3連単3点を並列比較する。
 - その後も固定Top5（徳山4R/8R/10R/11R）について同じ手順で記録する。
 - September outcomeは明示解禁まで読まない。
+
+## 正式採用＋実運用バックテスト 作業開始
+- ユーザー指示により、研究候補 `SECOND g2=.45 / THIRD g3=1.00` を正式productionへ昇格させる。
+- 既存HEAD条件、SECOND/THIRDモデル、3点HYBRID、v345 HEAD-side weightsは変更しない。
+- 新productionの名称・新規コードでは `opponentCore` 表記を使う。既存v349の歴史的名称は変更しない。
+- v350探索artifactから g2=.45 のticket identityを独立計算し、候補sentinelは `PASS=276 / HEAD=241 / EXACT3=131 / race SHA=08eb41e04c36d25074d6a1e471ff9334fafd34c8306cd5d336923772b613b8bd / ticket SHA=21631473d2a8b82f4fe93d18f8292d777837c26a47c408917fd8b722d1898cd7` と確認済み。
+- まずproduction profileを g2=.45 へ反映し、その後に独立production regressionを新規に走らせる。
+- regressionはSeptember outcomeを読まず、Feb-Jun pristine=選定証拠、Jul-Aug=`NON_PRISTINE_SUPPORT_ONLY`を維持する。
+- そのうえで2026-09-15固定PRE候補を新production設定で実運用バックテストする。今日の結果・払戻は一切読まない。
+- 実運用バックテストでは展示公開後データが取得可能な固定候補について、HEAD PASS判定→正式g2=.45/g3=1.00→3連単3点生成までを測定し、処理時間と出力を記録する。
