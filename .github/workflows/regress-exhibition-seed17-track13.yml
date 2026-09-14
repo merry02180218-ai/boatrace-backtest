@@ -1,5 +1,6 @@
 name: regress exhibition seed17 tracker13
 # v13 regression: true multi-hypothesis beam fleet tracking
+# trigger: 2026-09-14 beam validation
 
 on:
   workflow_dispatch:
