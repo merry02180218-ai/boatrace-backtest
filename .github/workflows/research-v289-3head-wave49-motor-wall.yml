@@ -1,0 +1,31 @@
+name: research-v289-3head-wave49-motor-wall
+on:
+  push:
+    branches: [research/3head-player-attack-mode]
+    paths:
+      - 'research_v289_3head_wave49_motor_wall.py'
+      - '.github/workflows/research-v289-3head-wave49-motor-wall.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas numpy scikit-learn
+      - name: get source artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34754875342 -n 3head-wave21-allrace-source-build -D /tmp/w21
+          cp /tmp/w21/analysis_v289_3head_wave21_allrace_feature_settled.csv .
+      - run: python research_v289_3head_wave49_motor_wall.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 3head-wave49-motor-wall
+          path: research_v289_3head_wave49_motor_wall.json
