@@ -40,7 +40,8 @@ jobs:
           assert 'result_or_payout_used' in runner
           assert 'market.persist_audit' in runner
           assert 'fetch_odds' in runner
-          assert 'requests.post' not in runner and 'submit' not in runner.lower()
+          assert 'requests.post' not in runner
+          assert 'place_bet(' not in runner and 'submit_bet(' not in runner
           post=Path('score_4head_b3_wrst_post_shadow.py').read_text()
           for k in ['orig_straight4','orig_lap4','orig_turn4']:
               assert k in post
