@@ -4,7 +4,7 @@ on:
   push:
     branches: [research/3head-player-attack-mode]
     paths:
-      - 'research_v289_3head_wave44b_player_attack_mode.py'
+      - 'research_v289_3head_wave47_head_condition_zoning.py'
       - '.github/workflows/research-3head-wave44b-player-attack-mode.yml'
 jobs:
   audit:
@@ -22,13 +22,12 @@ jobs:
         run: |
           gh run download 34754875342 -n 3head-wave21-allrace-source-build -D /tmp/w21
           cp /tmp/w21/analysis_v289_3head_wave21_allrace_feature_settled.csv .
-      - run: python research_v289_3head_wave44b_player_attack_mode.py
+      - run: python research_v289_3head_wave47_head_condition_zoning.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: 3head-wave44b-player-attack-mode
+          name: 3head-wave47-head-condition-zoning
           path: |
-            analysis_v289_3head_wave44b_player_attack_mode.csv
-            research_v289_3head_wave44b_player_attack_mode.json
-            research_v289_3head_wave44b_player_attack_mode.md
+            research_v289_3head_wave47_head_condition_zoning.json
+            research_v289_3head_wave47_head_condition_zoning.md
           if-no-files-found: warn
