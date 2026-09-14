@@ -115,3 +115,15 @@ Artifact付き最終CI:
 5. production変更・閾値変更・重み変更はしない。
 
 Status: `V283_JULAUG_PLAYER_HISTORY_AUDIT_PASS_ENV_ENTRY_NEXT`
+
+## BEFORE — ENV_ENTRY 21項目 最終分類 / 2026-09-14 exact可否監査
+
+- この作業は上記v283履歴監査完了後の継続作業。
+- 作業開始時の直前handoff commit: `51cf96247866725bbf052179e7ba7cbb71436f0b`。
+- `ENV_ENTRY` frozen 21項目をコード上の実生成元まで再追跡し、各項目を `直接取得 / 決定的派生 / 過去状態 / 未解決` に確定する。
+- 各項目について、2026-09-14時点で **9月結果を一切読まずにexact再現可能か** を判定する。
+- 7月・8月結果はユーザー承認どおり使用可。
+- 9月結果は `UNREAD` のまま。結果依存項目があれば黙って補完せず、exact不可として停止条件を明示する。
+- production `HEAD4_V291_COMP7` とWR_STの本番接続は変更しない。今回も検証専用。
+
+Status: `ENV_ENTRY_21_EXACT_AUDIT_STARTED`
