@@ -63,5 +63,24 @@
 - Required reporting: exact feature construction, March sample/head-rate/Top5 capture and chronological halves, any comparator versus Wave47/Wave36, exact Run/Job/Artifact IDs if CI is used, commit SHAs, and a strict adoption status.
 - Status: `WAVE49_STARTED_BOAT3_VS_BOAT2_MOTOR_WALL_STRUCTURE`.
 
+## 2026-09-15 JST — Wave49 AFTER
+- BEFORE handoff commit: `6ff5efa6010d911245a0c873f5cafad9527b9314`.
+- Wave49 script commit: `e8a5ca9b140cb5c2c6e50df55f5b4a57b1ac7b90`; CI workflow commit: `86ec58beee13907c88128a9fe50c1c08da9e7920`.
+- First CI Run `34863529639` / Job `104041510270` failed only because the output column name `head` collided with pandas `DataFrame.head`; no research conclusion was taken from that failed run.
+- Fix commit: `e4cd55dc989eaeb24ae5c64b9c39537b393eefd0`.
+- Successful CI: Run `34863681673` / Job `104042028571` / Artifact `10355472826` (`3head-wave49-motor-wall`), conclusion `success`.
+- Wave49 features were pre-deadline only and focused on boat3-vs-boat2 motor2/motor3 gaps, relative average ST, boat2 absolute motor/ST wall strength, and motor-gap x ST-edge interactions. Wave36 head gate/p3 and opponent Top5 generation remained the comparator structure.
+- March Wave36 baseline reproduced: 90R / 38 head hits = 42.222%; Top5 24/90 = 26.667%.
+- Wave49 fixed keep60 result: 54R / 24 head hits = 44.444%; head lift only +2.222pt; Top5 14/54 = 25.926%.
+- Chronological halves: early 29R / 14 head = 48.276%; late 25R / 10 head = 40.000%. The late half fell below the baseline head rate.
+- Fixed Wave49 score threshold from March keep60 was 0.5628166498815553.
+- Comparison with Wave47: Wave47 achieved March 48.148% head (+5.926pt) with early46.875% / late50.000%; Wave49 is materially weaker overall and unstable late.
+- Decision: `NO_ADOPTION`. The simple learned motor-wall composite does not improve on Wave47 and fails the intended stability test. Do not use it to retrofit June.
+- Apr-Jun were not reopened for tuning; Jul/Aug were not used; September outcomes remain unread. v288 production unchanged.
+- Interpretation: the Wave48 diagnosis that 3-vs-2 motor edge matters still stands, but compressing it into a generic logistic wall score loses too much structure. The next useful test should keep the motor-edge signal explicit and examine conditional regimes / opponent handling rather than one blended head score.
+- Status: `WAVE49_COMPLETE_NO_ADOPTION`.
+
 ## Exact restart point
-- Implement Wave49 from the frozen Wave48 hypothesis without fitting June. Use a March-first OOS gate based on pre-deadline-only features; keep production untouched and record all results before moving further.
+1. Preserve Wave48 diagnosis and Wave47 as the stronger research comparator; keep v288 production unchanged.
+2. Next experiment should avoid another generic blended classifier. Test an explicit conditional structure such as strong/medium/weak 3-vs-2 motor-edge regimes combined with frozen opponent behavior, with all cut definitions derived without Apr-Jun outcome fitting.
+3. March can only be treated as repeated research/OOS evidence now; Apr-Jun contaminated for this line, Jul/Aug NON-PRISTINE, September outcomes unread. Any future adoption requires a genuinely untouched period.
