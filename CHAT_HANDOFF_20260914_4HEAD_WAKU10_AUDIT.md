@@ -140,3 +140,13 @@ Status: CORE_DECOMPOSITION_COMPLETE
 - Production remains unchanged. No production promotion from this work unit without explicit approval.
 
 Status: BOAT3_DECOMPOSITION_BEFORE_RECORDED
+
+## BOAT3 WORKFLOW/CACHE CORRECTION — BEFORE
+
+- Audit found that commit `0e150b6dae669fa25c709646b716cf0b37d933d5` added the boat3 variants to the Python scorer, but `.github/workflows/analyze-4head-waku10-ablation.yml` still loops the prior 10 CORE-decomposition variants. Therefore run `34815749150` is not a valid boat3-decomposition run even if it completes; do not use it as boat3 selection evidence.
+- Correct the workflow to run exactly: `B3_WR_ONLY B3_ST_ONLY B3_SR_ONLY B3_WR_ST B3_WR_SR B3_ST_SR B3_ALL`.
+- Correct the summary logic so selection metrics explicitly filter `month` to `2026-04`, `2026-05`, `2026-06` before S/A/S+A aggregation. Jul/Aug outcomes remain forbidden and are only used in the separate score-stress table.
+- Performance optimization requested by user: the expensive common feature dataset produced by `build_data()` is invariant across variants, so build it once per workflow run and persist it as a local pickle cache on the runner; all boat3 variants then load that cache. This must not alter feature values, train/test windows, model settings, thresholds, downstream chain, or results.
+- September outcomes remain unread/unused and production remains unchanged.
+
+Status: BOAT3_WORKFLOW_CACHE_CORRECTION_BEFORE_RECORDED
