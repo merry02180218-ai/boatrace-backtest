@@ -65,6 +65,9 @@ jobs:
   audit:
     needs: [prepare, second, base-third, third]
     runs-on: ubuntu-24.04
+    permissions:
+      actions: read
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -78,7 +81,14 @@ jobs:
         with: {name: v352-julaug-base-third, path: .}
       - uses: actions/download-artifact@v4
         with: {name: v352-julaug-third, path: .}
-      - run: python run_v352_1head_pre_sab_audit.py
+      - name: Download independently audited v351 frozen races
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh run download 34900768805 -n v351-1head-production-regression -D /tmp/v351-fixed
+      - name: Run fast PRE S/A/B audit
+        env:
+          V351_FROZEN_RACES: /tmp/v351-fixed/v351_production_races.csv
+        run: python run_v352_1head_pre_sab_audit.py
       - if: always()
         run: cat /tmp/v352-pre-sab-audit/result_v352_pre_sab_audit.json || true
       - uses: actions/upload-artifact@v4
