@@ -277,3 +277,14 @@ Status: `FROZEN_WR_ST_PROVENANCE_AUDIT_COMPLETE_NO_HISTORICAL_HOLDOUT_PROSPECTIV
 ## UPDATED NEXT CHAT START PROMPT — PROSPECTIVE ONLY
 
 `boatrace-backtest の CHAT_HANDOFF_20260914_4HEAD_BOAT3_WAKU10_NEXT.md と最新GitHubを読んで続き。最新GitHubを優先し、作業前にBEFORE追記。B3_WR_STはfrozen research candidateだが、provenance監査で使えるuntouched historical windowは残っていないと確定済み。Jul/Aug outcome禁止・Sep outcome UNREADを維持し、過去結果を開かず、まずB3_WR_STのprospective shadow logging/decision pathを固定する。productionは変更しない。作業後にAFTER追記。`
+
+## FROZEN WR_ST PROSPECTIVE SHADOW PATH — BEFORE (2026-09-14 JST)
+
+- Start point: provenance audit AFTER commit `7df8e10ffa3a5f5a7c045cbc9dd787225cad5df0`.
+- Objective: create or verify a prospective, result-blind shadow path for the already-frozen `B3_WR_ST` candidate; this is logging/decision infrastructure, not a model-selection exercise.
+- Frozen model semantics: boat3 direct Waku10 `WR + ST` on the identical minimal non-Waku base; rolling training/scoring and downstream S thresholds remain unchanged (`PRE>=.28`, `POST>=.25`, `ENV_ENTRY>=.224790`).
+- Required freeze payload before race result: race/date/venue, generated-at timestamp, source/input provenance, PRE, POST, ENV_ENTRY, S eligibility, downstream opponent/ticket decision if available, actual pre-deadline odds snapshot/source/timestamp if used, and a content hash or similarly immutable audit identifier.
+- The shadow path must fail closed if required pre-result inputs are missing; it must not read target-race result/payout or use historical September outcomes.
+- Jul/Aug remain NON-PRISTINE; September outcome remains UNREAD; production `HEAD4_V291_COMP7` remains unchanged.
+- First implementation step: inspect current HEAD4 live/shadow entrypoints and odds fetch/snapshot utilities, then reuse the safest existing no-leak components rather than duplicating logic.
+- Status: `FROZEN_WR_ST_PROSPECTIVE_SHADOW_PATH_STARTED`.
