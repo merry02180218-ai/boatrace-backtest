@@ -26,17 +26,25 @@
 - Historical joined rows22074. Feb train381; March OOS445 (MAKURI241 / MAKURI-SASHI204).
 - March ML AUC0.5672 / logloss0.6841 / accuracy53.933%.
 - Individual 1-year prior AUC0.5765 / logloss0.6920.
-- Decision MODE_SIGNAL_WEAK. Individual tendency has some signal but is insufficient alone. Apr-Jun was NOT opened for this experiment.
+- Decision MODE_SIGNAL_WEAK. Apr-Jun not opened.
 
-## BEFORE-WORK PLAN — Wave44c contextual player attack mode — 2026-09-14
-User approved combining individual tendency with current-race matchup/context.
-1. Keep Wave44b leakage-safe player priors as the base signal.
-2. Add only pre-deadline race-context features from the Wave21 source, prioritizing: boat3 vs boats1/2 ST ability/gaps, national/local performance gaps, motor performance gaps, and available motor/exhibition-style proxies that are genuinely pre-deadline. Do not use current-race result/kimarite or September outcomes.
-3. Train on February and evaluate March OOS exactly once. Compare against Wave44b AUC0.5672 and individual-prior AUC0.5765; report AUC/logloss/accuracy and early/late March stability.
-4. Contextual mode gate: require materially stronger March signal (target AUC >=0.60, preferably >=0.62) and no collapse in either March half before using mode probability for opponent ranking.
-5. If mode gate passes, integrate probability softly into Wave36 opponent ranking rather than hard MAKURI/MAKURI-SASHI routing. Compare frozen Wave36 Top1/3/5/8/10, retained/lost/rescued, MRR, early/late March.
-6. Ranking promotion gate: March Top5 >= Wave36 24/38 +1, lost existing hits <=2, and lift not isolated to one half. Only then freeze design and open Apr-Jun exactly once with exact JPY10,000 Dutch economics.
-7. v288 remains untouched. Jul/Aug NON-PRISTINE diagnostic only. September remains unread.
+## Wave44c broad contextual player attack mode — COMPLETE / NO_ADOPTION
+- CI Run34815647859 success at commit 573c44bf632e75f3594d7cdba659d5e9ec4371fb.
+- 69 features = player priors6 + broad static matchup63.
+- Feb train381; March OOS445.
+- March AUC0.5420 / logloss0.7530 / accuracy52.360%.
+- Early AUC0.5467 / late AUC0.5398.
+- Worse than Wave44b ML0.5672 and individual-prior0.5765. Decision MODE_SIGNAL_WEAK / NO_ADOPTION.
+- Context gate failed, therefore Apr-Jun was not opened and Wave36 ranking was not modified. September outcomes unread.
+
+## BEFORE-WORK PLAN — Wave44d sparse contextual player attack mode — 2026-09-14
+User approved the next direction after Wave44c failure.
+1. Use leakage-safe individual racer tendency (1-year prior AUC0.5765) as the anchor; do not throw all 63 matchup features into one model.
+2. Audit Wave21 exact safe columns and construct a deliberately small context set centered on race mechanics: boat3 vs boat1/2 average-ST gaps, boat1/2 wall strength proxies, boat3 vs boat1/2 national/local win-rate gaps, and boat3 vs boat1/2 motor performance gaps. Avoid outer-boat/global noise unless separately justified.
+3. Test sparse additions conservatively on Feb train -> March OOS only. Report individual-prior baseline plus each small feature-family/addition, March AUC/logloss/accuracy and early/late stability. Do not tune on Apr-Jun.
+4. Promotion target remains March AUC >=0.60, preferably >=0.62, with both halves stable. If no sparse variant beats the 0.5765 individual-prior baseline materially, stop this attack-mode route rather than opening Apr-Jun.
+5. Only if the mode gate passes, softly blend mode probability into frozen Wave36 opponent ranking and apply the existing March ranking promotion gate before any Apr-Jun economics.
+6. v288 untouched; Jul/Aug NON-PRISTINE; September outcomes remain unread.
 
 ## Exact restart point
-- Implement Wave44c contextual player attack-mode classifier on the isolated research branch, beginning with a Wave21 column audit for safe ST/performance/motor matchup features.
+- Implement Wave44d sparse contextual audit on research/3head-player-attack-mode using the existing Wave21 artifact and Wave44b prior-history construction, then run CI and compare March OOS variants.
