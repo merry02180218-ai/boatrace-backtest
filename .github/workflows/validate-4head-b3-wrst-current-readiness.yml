@@ -1,0 +1,39 @@
+name: validate-4head-b3-wrst-current-readiness
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'audit_4head_b3_wrst_current_readiness.py'
+      - 'build_4head_env_entry_live.py'
+      - 'artifacts/head4_v291_downstream_20260630.json'
+      - '.github/workflows/validate-4head-b3-wrst-current-readiness.yml'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m py_compile audit_4head_b3_wrst_current_readiness.py
+      - name: Build readiness report
+        run: python audit_4head_b3_wrst_current_readiness.py | tee head4-b3-wrst-current-readiness.json
+      - name: Assert September outcome-blind block
+        run: |
+          python - <<'PY'
+          import json
+          z=json.load(open('head4-b3-wrst-current-readiness.json', encoding='utf-8'))
+          assert z['september_outcomes_read'] is False
+          assert z['groups']['ENV_ENTRY_PRIMITIVES']['exact_fields'] == 21
+          assert z['groups']['V283_SECOND']['exact_fields_without_september_outcomes'] == 20
+          assert len(z['groups']['V283_SECOND']['blocked_fields']) == 5
+          assert z['may_emit_frozen_exact_wrst_decision'] is False
+          assert z['production_action_authorized'] is False
+          print('HEAD4 WR_ST readiness gate PASS')
+          PY
+      - name: Upload readiness evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: head4-b3-wrst-current-readiness
+          path: head4-b3-wrst-current-readiness.json
+          if-no-files-found: error
