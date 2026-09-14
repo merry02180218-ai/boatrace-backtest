@@ -76,3 +76,10 @@
   3. 結果リーク型の後付け除外はせず、候補改善は事前・展示時点で利用可能な特徴だけを使う。
   4. production本体（HEAD .78 / opponent mass .375 / env_w .10 / q .65 / v345 attack_core）は固定し、相手側の比較だけを行う。
   5. 作業完了後、実測結果・commit・Actions Run/Job/Artifact ID・結論・次の再開地点をこのファイルへ追記する。
+
+## 2026-09-14 20:xx JST v347再開前記録
+- ユーザー指示「相手選びにもattackCore使ってみよう」を受け、相手艇2〜6号艇ごとに v345 と同じ attackCore 構成（EX .40 / ST .25 / straight .15 / original平均 .20）を作り、SECOND側係数 `g2` と THIRD側係数 `g3` を別々に比較する `run_v347_1head_opponent_attackcore.py` と workflow を追加済み。
+- v347初回 Run `34835017760` は prepare / second / base-third / third がSUCCESSしたが、最終 attackcore Job `103949065798` は baseline assert 部分で `base.head` が pandas Series の `.head` method と衝突し、`TypeError: int() argument must be ... not 'method'` で失敗。モデル比較そのものの結論は未確定。
+- 今回の再開作業は、この命名衝突だけを修正し、同じ276R・同じv345 production identityを固定してv347を再実行する。baseline `g2=0,g3=0` が 276 / 241 / 121 を再現しない場合は比較を無効とする。
+- production本体は変更しない。September outcomesは引き続きUNREAD、Jul/AugはNON_PRISTINE_SUPPORT_ONLY。
+- 再Run完了後、最良g2/g3・exact3・Feb-Jun pristine評価・Jul/Aug support-only評価・Run/Job/Artifact IDと採否を追記する。
