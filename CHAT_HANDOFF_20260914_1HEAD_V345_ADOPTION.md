@@ -9,8 +9,21 @@
 - Formal production before this change: profile `1HEAD_PRODUCTION_20260914_HEAD078`, HEAD cutoff .78, v332 ATTACK_ENV_SOFT env_w=.10 q=.65, SECOND v317, THIRD v318, ticket v320 alpha=.70.
 - September outcomes remain UNREAD. Jul/Aug NON-PRISTINE.
 
-## 今回やること
-- Production profileにv345 attack_core weightsを正式記録する。
-- Historical research modulesは再現性のため凍結し、production側で新weightsを明示する。
-- 9月結果は読まない。
-- 採用後の引き継ぎをこのファイルへ追記する。
+## 採用完了
+- `onehead_production_profile.py` を更新。
+- 新PROFILE_NAME: `1HEAD_PRODUCTION_20260914_HEAD078_V345_ATTACKCORE`。
+- EXHIBITION_MODEL: `v332_ATTACK_ENV_SOFT_V345_ATTACKCORE`。
+- 正式attack_core weights:
+  - `ATTACK_CORE_W_ONE_EX = 0.40`
+  - `ATTACK_CORE_W_ONE_ST = 0.25`
+  - `ATTACK_CORE_W_ONE_STRAIGHT = 0.15`
+  - `ATTACK_CORE_W_ONE_ORIG_AVG = 0.20`
+- production profile更新commit: `012d1f9f8295d985e7f70c603264c1930f0ba99c`。
+- historical v332/v337 modulesは旧weightsの再現性維持のため変更していない。
+- 旧v337 identity 276R / head241 / exact3 119 / SHA `89e0b32c...` はpre-v345 regression sentinelとして保持。新weights適用後の正式identityは専用regressionで再確定する必要がある。
+- HEAD cutoff .78 / opponent mass .375 / env_w .10 / q .65 / SECOND v317 / THIRD v318 / ticket v320 alpha .70 は変更なし。
+- `SEPTEMBER_OUTCOMES_READ=false`。9月結果は読んでいない。
+
+## 次工程
+- v345 weightsをproduction計算経路へ適用した専用regressionを走らせ、新しいpass R/head/exact3/race_code SHAを確定する。
+- そのregressionまでは旧identity値を新weightsの結果だと誤認しないこと。
