@@ -16,14 +16,26 @@
 - Wave45 confidence/margin: zero lift. NO_ADOPTION.
 - Wave46 second/third role factorization: March 16/90 role, 21/90 blend vs Wave36 24/90. NO_ADOPTION.
 
-## BEFORE-WORK PLAN — Wave47 head-condition zoning — 2026-09-14
-1. Stop modifying opponent ranking. Freeze Wave36 opponent Top5 and focus on whether a race should be selected at all.
-2. Structural hypothesis: Wave36's 3-head signal should be stronger in specific matchup zones defined by boat3 relative to boats1/2/4: b3-vs-b2 average-ST gap and wall weakness, b3-vs-b1 escape resistance, b3-vs-b4 outside attack pressure, and motor-performance gaps.
-3. Use only pre-race card/static columns. Feb is training/reference; March is the only OOS evaluation. Apr-Jun outcomes stay unopened until a March zoning gate passes.
-4. Predeclare a small interpretable feature set and regularized head classifier / score adjustment; no broad feature fishing. Compare frozen Wave36 p3>=0.365448 against sparse zone variants on March.
-5. Primary March gate is selection quality, not opponent-rank replacement: retain a meaningful sample (target >=45 races), improve 3-head strike rate by at least +5 percentage points relative to the same Wave36 March candidate universe, and avoid early/late collapse. Also report Top5 ticket hit rate on selected races using frozen Wave36 ranking.
-6. If no variant passes, close Wave47 without Apr-Jun. If one passes, freeze the rule and open Apr-Jun once for exact JPY10,000 Dutch economics versus Wave36 and Wave36S-C.
-7. v288 untouched; Jul/Aug NON-PRISTINE; September outcomes unread.
+## Wave47 head-condition zoning — MARCH GATE PASS
+- Plan commit 3fc1f8b8bb3e1e42a50db2a8308c1f11e73b4a8d.
+- Implementation commit 55588d48e5ce5bd2e4fc1536e98d63a19ef6cec3.
+- Workflow commit a95292c2f9416c605c847495c17b97d6af360e6c.
+- CI Run34843925397 / Job103975145924: success.
+- Artifact ID10347171131; SHA256 7595ce0c4bc51a4788fac272a27c8335b7503244a5854f69c4e23683f404459b.
+- March Wave36 baseline: 90R / 38 head hits / 42.222%; frozen Top5 24 hits / 26.667%.
+- Best predeclared zone: motor family, keep top60% =>54R / head48.148% (lift +5.926pt); frozen Top5 ticket rate27.778%.
+- Early/late head rate:46.875% /50.000%.
+- Gate passers:1. Decision MARCH_GATE_PASS.
+- Apr-Jun not yet opened by the March script. September unread.
+
+## BEFORE-WORK PLAN — Wave47 pristine Apr-Jun economics — 2026-09-14
+1. Freeze the March-selected structure: motor-only boat3-vs-1/2/4 gaps and the validated top60% zone rule. No further feature-family or retention tuning after seeing Apr-Jun.
+2. Reproduce Wave36 rolling head/opponent scoring for Apr, May, Jun using only prior months, but keep opponent Top5 logic unchanged.
+3. Apply the Wave47 zone as a selection filter only. Use a deployment-compatible frozen March threshold/model specification; do not optimize thresholds on Apr-Jun.
+4. Evaluate exact JPY10,000 inverse-odds Dutch returns, losing races as -JPY10,000, NO BET as no stake.
+5. Report races, hits, ROI, profit, monthly ROI, red months, and max drawdown; compare directly with Wave36 and Wave36S-C.
+6. This is the single pristine Apr-Jun opening for Wave47. No second-pass retuning from these outcomes.
+7. v288 untouched; Jul/Aug NON-PRISTINE; September outcomes remain unread.
 
 ## Exact restart point
-- Implement Wave47 sparse head-condition zoning from Wave21 source, Feb->March OOS only, preserving frozen Wave36 opponent ranking and cutoff reference.
+- Implement Wave47 fixed-rule Apr-Jun holdout economics and run CI once. Promote only if economics materially improve while retaining useful volume and monthly robustness.
