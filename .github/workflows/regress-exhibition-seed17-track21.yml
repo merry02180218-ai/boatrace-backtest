@@ -1,6 +1,7 @@
 name: regress exhibition seed17 tracker21
 run-name: SES v21 verified-appearance-bank matrix
 # v21 regression: v20 predecessor beam + conservatively verified multi-look bank rescue.
+# trigger marker: 2026-09-14T23:20JST automation validation
 
 on:
   workflow_dispatch:
