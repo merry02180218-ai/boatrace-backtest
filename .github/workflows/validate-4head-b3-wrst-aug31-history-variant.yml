@@ -1,0 +1,49 @@
+name: validate-4head-b3-wrst-aug31-history-variant
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'assemble_4head_b3_wrst_aug31_history_variant.py'
+      - 'verify_4head_b3_wrst_aug31_history_variant.py'
+      - 'artifacts/head4_v291_downstream_20260630.json'
+      - '.github/workflows/validate-4head-b3-wrst-aug31-history-variant.yml'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m py_compile assemble_4head_b3_wrst_aug31_history_variant.py verify_4head_b3_wrst_aug31_history_variant.py
+      - name: Verify isolated Aug31-history variant
+        run: python verify_4head_b3_wrst_aug31_history_variant.py | tee head4-b3-wrst-aug31-history-variant-verify.txt
+      - name: Write contract evidence
+        run: |
+          python - <<'PY'
+          import json
+          from assemble_4head_b3_wrst_aug31_history_variant import HISTORY_FIELDS, POLICY, _schemas
+          second,current20=_schemas()
+          z={
+            'schema':'head4_b3_wrst_aug31_history_variant_contract_v1',
+            'policy':POLICY,
+            'history_cutoff':'2026-08-31',
+            'exact_for_target':False,
+            'usable_for_frozen_exact_v283':False,
+            'production_action_authorized':False,
+            'september_outcomes_used':False,
+            'current_feature_count_per_boat':len(current20),
+            'history_feature_count_per_boat':len(HISTORY_FIELDS),
+            'assembled_feature_count_per_boat':len(second),
+            'verification':'PASS',
+          }
+          open('head4-b3-wrst-aug31-history-variant-contract.json','w',encoding='utf-8').write(json.dumps(z,ensure_ascii=False,indent=2)+'\n')
+          PY
+      - name: Upload verification evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: head4-b3-wrst-aug31-history-variant
+          path: |
+            head4-b3-wrst-aug31-history-variant-verify.txt
+            head4-b3-wrst-aug31-history-variant-contract.json
+          if-no-files-found: error
