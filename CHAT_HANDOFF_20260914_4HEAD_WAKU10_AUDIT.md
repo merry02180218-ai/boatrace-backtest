@@ -6,57 +6,63 @@
 - Resume point: 前チャットで進めていた **Waku10比較監査**。
 - Productionは変更しない。現行4号艇production policyを固定したまま、Waku10情報の寄与を比較監査する。
 - GitHub mainには `analyze_4head_waku10_ablation_20260914.py` と `.github/workflows/analyze-4head-waku10-ablation.yml` が存在することを確認。
-- 比較variant:
-  - `FULL_WAKU10`: 現行full feature側
-  - `NO_WAKU10`: Waku10由来/関連featureを外した側
-  - `CORE_WAKU10`: 艇3/艇4の `waku_wr / waku_st / waku_sr` を直接入れる側
-- downstreamは v264 -> v267 -> v271 -> v273 artifact freeze の同一chainを通す。
-- 主比較windowは **2026-04〜06のみ**。7月・8月はNON-PRISTINEなので、outcomeを使った選定は禁止。workflowでも7/8月はscore distribution stressだけを見る。
-- 9月outcomeはこの監査に使わない。
-- S/A thresholdは固定: S PRE>=.28, POST>=.25, ENV_ENTRY>=.224790; Aは非Sかつ PRE>=.18, POST>=.18, A_SCORE>=.28。
-- archived oddsを使うROIはretrospective proxyであり、immutable contemporaneous LIVE oddsとは扱わない。
+- 比較variant: FULL_WAKU10 / NO_WAKU10 / CORE_WAKU10。
+- downstreamは v264 -> v267 -> v271 -> v273 artifact freeze の同一chain。
+- 主比較windowは2026-04〜06のみ。7月・8月はNON-PRISTINEなのでoutcomeを使った選定は禁止。9月outcomeも使わない。
+- S/A threshold固定: S PRE>=.28, POST>=.25, ENV_ENTRY>=.224790; Aは非Sかつ PRE>=.18, POST>=.18, A_SCORE>=.28。
+- archived odds ROIはretrospective proxy。
 
-## THIS WORK
+## RECOVERY SUMMARY
 
-1. Waku10 ablation workflow/codeの比較定義とguardを監査。
-2. 最新workflow run/commit状態を確認し、比較結果が既に出ていれば取得する。
-3. FULL / NO / COREをApr-Jun同一policyで比較し、Waku10の実寄与を判定する。
-4. 監査完了後、このhandoffに結果・採否・次作業を追記する。
+- v267/v271 settlement key normalizationを実施。
+- zero-selector variantを異常ではなく0Rとして扱うようv267を修正。ただしselector>0でsettlement=0はfail-closed維持。
+- 最終修正commit: `81da7e34d3f62ac10a6eeab28b638fa1988d0551`。
 
-## RECOVERY WORK — BEFORE
+## AFTER WORK — WAKU10 ABLATION COMPLETE
 
-- Failed run recovered: Waku10 guards and common opponent-context build completed, then the three-variant downstream step failed before summary/artifact upload.
-- Confirmed failure point: FULL_WAKU10 completed its variant scoring and v264 stage, then v267 raised `RuntimeError: no settled rows available for v267`.
-- Therefore there is not yet a valid FULL/NO/CORE comparison result to interpret.
-- This repair is plumbing-only: do not relax/tune model thresholds, do not alter production, and do not use Jul/Aug outcomes or any September outcomes.
-- Immediate work unit:
-  1. inspect v267 input contract and the ablation workflow handoff between v264 and v267;
-  2. fix settlement-row propagation so v267 receives the intended Apr-Jun settled rows under the same frozen policy;
-  3. rerun FULL_WAKU10 / NO_WAKU10 / CORE_WAKU10 through the identical downstream chain;
-  4. recover Apr-Jun race count, 4-head rate, trifecta hit rate and retrospective proxy ROI plus any configured score-distribution stress output;
-  5. append the exact fix, run id, results, decision, and next step here after completion.
+- Official successful run: `34803857919` / job `103851724750` / conclusion `success`。
+- FULL / NO / COREの3variant、Apr-Jun summary、artifact uploadまで全step success。
+- Artifact: `head4-waku10-ablation` id `10332802959`。
+- Apr-Jun ALL S:
+  - FULL_WAKU10: 72R, head4 29/72=40.28%, trifecta 10/72=13.89%, proxy ROI 103.26%.
+  - NO_WAKU10: 0R. Fixed S条件を突破する候補なし。
+  - CORE_WAKU10: 57R, head4 19/57=33.33%, trifecta 9/57=15.79%, proxy ROI 123.69%.
+- Apr-Jun ALL A:
+  - FULL: 56R, trifecta 5, proxy ROI 74.36%.
+  - NO: 14R, trifecta 2, proxy ROI 93.54%.
+  - CORE: 67R, trifecta 6, proxy ROI 70.20%.
+- Apr-Jun ALL S+A:
+  - FULL: 128R, head4 50/128=39.06%, trifecta 15/128=11.72%, proxy ROI 90.61%.
+  - NO: 14R, head4 6/14=42.86%, trifecta 2/14=14.29%, proxy ROI 93.54%.
+  - CORE: 124R, head4 47/124=37.90%, trifecta 15/124=12.10%, proxy ROI 94.79%.
+- Interpretation: Waku10 information is materially important to creating S-strength signals because NO produces 0 S races. CORE has the best S-layer efficiency of the three in this retrospective Apr-Jun audit, while FULL has higher head4 win rate but lower trifecta hit rate/ROI than CORE at S.
+- Methodological caveat: FULL vs NO is confounded because NO removes several related/non-direct features; CORE vs NO is the cleaner direct incremental comparison. Therefore do not declare individual Waku10 fields causal yet.
+- Jul/Aug remain NON-PRISTINE and are used only for score-distribution stress; September outcomes remain unused.
+- Production remains unchanged.
 
-## RECOVERY ITERATION 2 — BEFORE
+## CORE DECOMPOSITION — BEFORE
 
-- Official rerun with both v267/v271 normalization fixes identified as Actions run `34788716350`; it still failed in the three-variant downstream step before summary/artifact upload.
-- The previous normalization fix was therefore insufficient. Do not guess at Waku10 performance from this failure.
-- Next repair is diagnostic-first and plumbing-only: persist selector/order/actual/odds settlement counts even on failure, upload diagnostics on failed runs, then use the observed zero/mismatch stage to repair the exact input contract.
-- No threshold, feature ranking, ticket rule, production rule, Jul/Aug outcome usage, or September outcome usage may change in this iteration.
-- After diagnostics identify the mismatch, rerun the same FULL/NO/CORE chain and only then collect Apr-Jun comparison results.
+Next work unit is a clean decomposition inside CORE_WAKU10, keeping the same non-Waku base and changing only direct Waku10 fields. No production/threshold/ticket changes.
 
-## RECOVERY ITERATION 3 — BEFORE
+Planned variants:
+1. BASE = current NO_WAKU10 minimal base.
+2. B3_ONLY = BASE + boat3 `waku_wr / waku_st / waku_sr`.
+3. B4_ONLY = BASE + boat4 `waku_wr / waku_st / waku_sr`.
+4. WR_ONLY = BASE + boat3/4 `waku_wr`.
+5. ST_ONLY = BASE + boat3/4 `waku_st`.
+6. SR_ONLY = BASE + boat3/4 `waku_sr`.
+7. WR_ST = BASE + boat3/4 `waku_wr + waku_st`.
+8. WR_SR = BASE + boat3/4 `waku_wr + waku_sr`.
+9. ST_SR = BASE + boat3/4 `waku_st + waku_sr`.
+10. CORE_ALL = BASE + boat3/4 all six direct Waku10 fields.
 
-- Diagnostic rerun `34796519530` completed with failure after the prior diagnostics-persistence work.
-- The exact stop is now understood: `FULL_WAKU10` traversed the frozen downstream chain, while `NO_WAKU10` reached v267 with `selector_rows=0` under the unchanged fixed S selector (`PRE>=0.28`, `POST>=0.25`).
-- This is not a settlement-key mismatch. It means the NO_WAKU10 variant has zero rows entering the frozen v267 S-base selector for Apr-Jun.
-- A zero-selector variant is a legitimate ablation outcome and must be represented as `0R`, not treated as a pipeline exception. However, any case with nonzero selector rows but zero settlement remains fail-closed.
-- Repair scope is therefore plumbing-only:
-  1. make v267 emit a valid empty/zero benchmark artifact when `selector_rows==0`;
-  2. preserve hard failure if `selector_rows>0` but no rows settle;
-  3. let v271 continue independently so A-layer behavior can still be measured;
-  4. rerun FULL / NO / CORE under identical fixed thresholds;
-  5. recover Apr-Jun S/A/S+A metrics and Jul/Aug score-distribution stress only;
-  6. append exact commit/run/results/decision after completion.
-- No thresholds, feature definitions, ranking rules, ticket rules, production policy, Jul/Aug outcome selection, or September outcomes may be changed/used.
+Evaluation:
+- identical rolling training/scoring and frozen downstream policy;
+- model selection evidence only Apr-Jun 2026;
+- compare S first: R, head4 rate, trifecta hit rate, proxy ROI, avg composite odds;
+- A/S+A secondary;
+- Jul/Aug score distribution only; no outcomes;
+- September outcomes unused;
+- production unchanged until explicit user approval.
 
-Status: RECOVERY_ITERATION_3_BEFORE_RECORDED
+Status: CORE_DECOMPOSITION_BEFORE_RECORDED
