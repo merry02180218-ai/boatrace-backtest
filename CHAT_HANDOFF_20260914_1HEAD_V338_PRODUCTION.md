@@ -244,3 +244,10 @@ Waku10のみを原因とする:
 
 ## 次チャット用開始文
 `boatrace-backtest の CHAT_HANDOFF_20260914_1HEAD_V338_PRODUCTION.md と最新GitHubを読んで、1号艇モデルの続きから進めて。最新GitHubを優先し、正式productionはHEAD cutoff 0.78 / v332 q=.65。9月結果はUNREADのまま。作業前後に引き継ぎを更新して。`
+
+## 2026-09-14 16:32 JST 今回の作業開始記録（v339後継 / exact3改善）
+- v339 Actions Run `34787687379` の最終status・全Job・final Artifactを確定する。
+- `PRODUCTION_ARTIFACT_V339.md`、`shared_*_oof.csv`、`exact3_audit.csv` を確認し、production 276Rのexact3失敗をrace-levelで監査する。
+- 特にperformance gate以上の `exact3=False` かつ高 `pred_p` 群を抽出し、calibrator miss と同順位compromiseを分離して改善仮説を作る。
+- 正式production `HEAD 0.78 / v332 q=.65` は固定。改善仮説と実測比較が揃うまでは変更しない。
+- 2026年9月outcomesは引き続き `UNREAD`。結果ファイルは開かない。
