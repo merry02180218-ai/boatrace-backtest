@@ -21,7 +21,12 @@ LOMOで方向安定性も確認し、特定月・特定binへの過学習を避�
 - Artifact: `10334491773` / `v344-1head-prerace-feature-diagnostic`
 - Artifact digest: `sha256:7ef7f969191481179b59826b4a89b8d0e48e0fb48a29f28957da5a81101ec132`
 - workflow head SHA: `9369bd98f4ff493c48be9ab31cd72575fd989306`
-- 全step成功。診断artifactの詳細解析へ進む。
+- 全step成功。
+
+## Artifact解析開始
+- 上記Artifactの `result_v344.json`, `feature_association_summary.csv`, `feature_association_lomo.csv`, `feature_quintiles.csv` を確認する。
+- Feb-Jun historical diagnosticを主対象として、feature associationとLOMOの方向安定性を確認する。
+- この解析中も正式productionは変更しない。
 
 ## 厳守
 - `SEPTEMBER_OUTCOMES_READ=false`
