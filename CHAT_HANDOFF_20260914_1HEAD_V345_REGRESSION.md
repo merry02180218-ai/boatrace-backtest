@@ -83,3 +83,10 @@
 - 今回の再開作業は、この命名衝突だけを修正し、同じ276R・同じv345 production identityを固定してv347を再実行する。baseline `g2=0,g3=0` が 276 / 241 / 121 を再現しない場合は比較を無効とする。
 - production本体は変更しない。September outcomesは引き続きUNREAD、Jul/AugはNON_PRISTINE_SUPPORT_ONLY。
 - 再Run完了後、最良g2/g3・exact3・Feb-Jun pristine評価・Jul/Aug support-only評価・Run/Job/Artifact IDと採否を追記する。
+
+## 2026-09-14 22:xx JST v347分解監査 作業開始
+- v347修正版 Run `34843974949` は全job SUCCESS。attackcore Job `103978592224`、Artifact `10348980075`、digest `sha256:fca910c0bbf8b1f291a4e97c0457399ec7b4806c5151833b75700ef3c3245db9`。
+- baseline `g2=0,g3=0` は 121/276=43.8406% を完全再現。attackCore ready=276/276R。
+- 現時点の最良研究候補は `g2=.5 / g3=1.0`：130/276=47.1014%（+9）。Feb-Jun pristine 106/220=48.1818%（baseline比+8）、Jul-Aug support-only 24/56=42.8571%（+1）、race swap +hit 12 / -hit 3。
+- 今回は25 gridを分解し、SECOND-only (`g2>0,g3=0`)、THIRD-only (`g2=0,g3>0`)、併用のどこが改善源か、Feb-Jun月別worst-monthを含めて監査する。Jul/Augは採用判断の主証拠にしない。
+- September outcomesは引き続きUNREAD。productionは変更せず、分解監査後に昇格可否を判断する。
