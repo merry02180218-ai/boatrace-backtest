@@ -1,6 +1,7 @@
 name: regress exhibition seed17 tracker25 causal trajectory
 run-name: SES v25 causal trajectory matrix
 
+# Explicit push touch to launch the first v25 matrix after workflow registration.
 on:
   workflow_dispatch:
   push:
