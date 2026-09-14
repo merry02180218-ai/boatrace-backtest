@@ -150,3 +150,16 @@ Status: BOAT3_DECOMPOSITION_BEFORE_RECORDED
 - September outcomes remain unread/unused and production remains unchanged.
 
 Status: BOAT3_WORKFLOW_CACHE_CORRECTION_BEFORE_RECORDED
+
+## BOAT3 WORKFLOW/CACHE CORRECTION — AFTER
+
+- BEFORE was recorded before code/workflow changes.
+- Common-feature caching implemented in `analyze_4head_waku10_ablation_20260914.py` via `--data-cache`; first variant builds/writes the invariant feature frame, subsequent variants use `pd.read_pickle` on the same runner. Commit: `23e354a8ac6f6bd92322653228b601695f0c828b`.
+- Workflow corrected to execute exactly the seven boat3 variants and pass a shared cache path: `B3_WR_ONLY B3_ST_ONLY B3_SR_ONLY B3_WR_ST B3_WR_SR B3_ST_SR B3_ALL`.
+- Workflow summary now explicitly filters Apr-Jun (`2026-04/05/06`) before S/A/S+A outcome aggregation; Jul/Aug remain separate score-distribution stress only.
+- Output/artifact names changed to boat3-specific names to avoid confusing this run with the completed CORE decomposition.
+- Workflow correction/cache commit: `8b9ea8b1bda75d82acaa4f2741540571bd0f0203`.
+- The earlier run `34815749150` is explicitly invalid for boat3 selection because it used the old workflow variant loop; ignore its outcome metrics for this research question.
+- Production remains unchanged; September outcomes remain unread/unused.
+
+Status: BOAT3_WORKFLOW_CACHE_CORRECTION_COMPLETE
