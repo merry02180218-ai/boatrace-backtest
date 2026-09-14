@@ -1,0 +1,38 @@
+name: analyze-4head-headrate-3ren-player-st
+on:
+  push:
+    paths:
+      - 'analyze_4head_headrate_3ren_player_st.py'
+      - '.github/workflows/analyze-4head-headrate-3ren-player-st.yml'
+  workflow_dispatch:
+jobs:
+  analyze:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml tabulate
+      - name: Guard fixed base and September blindness
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('analyze_4head_headrate_3ren_player_st.py').read_text(encoding='utf-8')
+          assert 'WIN_CUT=0.010782' in p and 'REN2_CUT=0.4000' in p
+          assert "END=date(2026,8,31)" in p
+          assert "TRAIN=('2026-04','2026-05','2026-06')" in p
+          assert "HOLD=('2026-07','2026-08')" in p
+          assert "September outcome access blocked" in p
+          print('fixed motor base / September blind guard PASS')
+          PY
+      - name: Run head-rate-first study
+        run: python analyze_4head_headrate_3ren_player_st.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-headrate-3ren-player-st
+          path: |
+            analysis_4head_headrate_3ren_player_st_races.csv
+            analysis_4head_headrate_3ren_player_st_grid.csv
+            summary_4head_headrate_3ren_player_st.md
