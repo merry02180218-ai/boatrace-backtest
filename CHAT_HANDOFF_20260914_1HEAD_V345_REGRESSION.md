@@ -100,3 +100,11 @@
 - 一方、最適係数は同一Feb-Jun gridから選択しているため、この監査だけで独立holdoutとはみなさない。production昇格はまだ行わない。
 - 次の再開地点：`g2=.5/g3=1.0` を固定して、係数近傍（特に g2=.25/.5/.75、g3=.75/1.0/1.25）でplateau/感度監査を行い、ピンポイント最適化でないことを確認する。その後、production昇格候補v348として固定sentinelを作るか判断する。
 - `PRODUCTION_CHANGED=false` / `SEPTEMBER_OUTCOMES_READ=false` / Jul-Aug=`NON_PRISTINE_SUPPORT_ONLY`。
+
+## 2026-09-14 22:21 JST v348 local plateau監査 作業開始
+- `g2=.5/g3=1.0` のピンポイント最適化懸念を監査するため、局所9点 `g2={.25,.50,.75}` × `g3={.75,1.00,1.25}` を固定比較する。
+- 評価の主証拠はFeb-Jun pristineのみ。Jul/Augは`NON_PRISTINE_SUPPORT_ONLY`として参考表示だけに使い、設定選択の主証拠にはしない。September outcomesは引き続きUNREAD。
+- baselineは276R / head241 / exact3 121、Feb-Jun 98/220。中央候補 `.5/1.0` は粗gridで130/276、Feb-Jun 106/220（+8）。
+- plateau判定は9点のうち何点がbaselineを改善するか、中央候補±1 dev hit以内の点数、dev worst-month、月別安定性を確認する。中央だけ突出する場合はproduction昇格を見送る。
+- 実装: `run_v348_1head_opponent_attackcore_plateau.py` commit `53121257be60e367d93c58328ea8413c6256e70b`、workflow `.github/workflows/v348-1head-opponent-attackcore-plateau.yml` commit `0f354ee6d1b27abbf46c85cb9084603dabceec07`。
+- productionはこの監査中変更しない。完了後にRun/Job/Artifact、9点結果、plateau判定、次のproduction regression可否を追記する。
