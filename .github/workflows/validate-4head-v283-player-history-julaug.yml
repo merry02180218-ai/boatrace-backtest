@@ -15,4 +15,11 @@ jobs:
         with:
           python-version: '3.11'
       - run: python -m py_compile build_4head_v283_player_history_julaug.py verify_4head_v283_player_history_julaug.py
-      - run: python verify_4head_v283_player_history_julaug.py
+      - name: Verify causal player-history contract
+        run: python verify_4head_v283_player_history_julaug.py | tee head4-v283-player-history-julaug-verify.txt
+      - name: Upload verification evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: head4-v283-player-history-julaug-verify
+          path: head4-v283-player-history-julaug-verify.txt
+          if-no-files-found: error
