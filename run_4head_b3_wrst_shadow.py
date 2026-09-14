@@ -95,6 +95,15 @@ def assemble_downstream(src: dict) -> dict:
     }
 
 
+def theoreticalize_tickets(rows):
+    out = []
+    for x in rows or []:
+        z = dict(x)
+        z["theoretical_stake"] = int(z.pop("stake", 0))
+        out.append(z)
+    return out
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--input-json", required=True)
@@ -134,6 +143,7 @@ def main() -> None:
             base = market.evaluate_market(prepared, odds, meta, deadline)
             raw_decision = base["decision"]
             row = dict(base)
+            row["tickets"] = theoreticalize_tickets(base.get("tickets"))
             row.update({
                 "policy": POLICY,
                 "base_market_policy": "HEAD4_V291_COMP7",
