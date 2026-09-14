@@ -36,4 +36,12 @@
   4. recover Apr-Jun race count, 4-head rate, trifecta hit rate and retrospective proxy ROI plus any configured score-distribution stress output;
   5. append the exact fix, run id, results, decision, and next step here after completion.
 
-Status: RECOVERY_BEFORE_WORK_RECORDED
+## RECOVERY ITERATION 2 — BEFORE
+
+- Official rerun with both v267/v271 normalization fixes identified as Actions run `34788716350`; it still failed in the three-variant downstream step before summary/artifact upload.
+- The previous normalization fix was therefore insufficient. Do not guess at Waku10 performance from this failure.
+- Next repair is diagnostic-first and plumbing-only: persist selector/order/actual/odds settlement counts even on failure, upload diagnostics on failed runs, then use the observed zero/mismatch stage to repair the exact input contract.
+- No threshold, feature ranking, ticket rule, production rule, Jul/Aug outcome usage, or September outcome usage may change in this iteration.
+- After diagnostics identify the mismatch, rerun the same FULL/NO/CORE chain and only then collect Apr-Jun comparison results.
+
+Status: RECOVERY_ITERATION_2_BEFORE_RECORDED
