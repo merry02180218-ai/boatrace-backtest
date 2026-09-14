@@ -1,0 +1,25 @@
+name: research-3head-wave43-conservative-rerank
+on:
+  push:
+    branches: [research/3head-v289-addon-expansion]
+    paths:
+      - 'research_v289_3head_wave43_conservative_rerank.py'
+      - '.github/workflows/research-3head-wave43-conservative-rerank.yml'
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q pandas numpy scikit-learn
+      - name: Download source
+        env: {GH_TOKEN: '${{ github.token }}'}
+        run: |
+          gh run download 34754875342 -n 3head-wave21-allrace-source-build
+      - name: Run Wave43
+        run: python research_v289_3head_wave43_conservative_rerank.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 3head-wave43-conservative-rerank
+          path: research_v289_3head_wave43_conservative_rerank.json
