@@ -35,26 +35,87 @@ repo: merry02180218-ai/boatrace-backtest
 - workflow: `.github/workflows/v342-1head-skip-threshold-stability.yml`
 - top-level `name:` は置いていない。
 
-## Actions
-- Run `34804207503`
-- audit Job `103852724255`
-- 現在: IN_PROGRESS（2026-09-14 12:55 JST時点）
+## Actions — 完了
+- Run `34804207503`: SUCCESS
+- audit Job `103852724255`: SUCCESS
+- Artifact `10332352437`: `v342-1head-skip-threshold-stability`
+- artifact digest: `sha256:86c1268b16fc43f237143f594653ec4eb4cd7556877fa820aff8e13db85f6fb3`
+- production identity guard: PASS 276R / head241 / exact3(top3)119
+- `SEPTEMBER_OUTCOMES_READ=false`
 
-## 途中再計算（正式値はCI完走後に確定）
-Feb-Jun pristine-only:
-- 2.7: 45R / 16hit / +66,790円 / ROI 114.8422%
-- 2.8: 39R / 16hit / +126,790円 / ROI 132.5103%
-- 2.9: 32R / 13hit / +112,090円 / ROI 135.0281%
-- 3.0: 26R / 9hit / +54,060円 / ROI 120.7923%
-- 3.1: 21R / 6hit / +11,370円 / ROI 105.4143%
-- 3.2: 18R / 6hit / +41,370円 / ROI 122.9833%
-- 3.3: 16R / 5hit / +29,420円 / ROI 118.3875%
+## v342 正式結果
 
-暫定では2.9が総合ROI最大、2.8が利益額最大。ただし月別ブレがあるためCI結果と月別安定性を見てから判断する。
+### Feb-Jun pristine-only
+| threshold | bought_R | hits | profit | ROI |
+|---:|---:|---:|---:|---:|
+| 2.7 | 45 | 16 | +66,790円 | 114.8422% |
+| 2.8 | 39 | 16 | **+126,790円** | 132.5103% |
+| 2.9 | 32 | 13 | +112,090円 | **135.0281%** |
+| 3.0 | 26 | 9 | +54,060円 | 120.7923% |
+| 3.1 | 21 | 6 | +11,370円 | 105.4143% |
+| 3.2 | 18 | 6 | +41,370円 | 122.9833% |
+| 3.3 | 16 | 5 | +29,420円 | 118.3875% |
 
-## 次の再開地点
-1. Run `34804207503` のconclusion確認。
-2. Artifact回収。
-3. 月別安定性を含めて2.8 / 2.9 / 3.0を比較。
-4. 完了結果を本ファイルへ追記。
-5. `SEPTEMBER_OUTCOMES_READ=false` を明記。
+- ROI最大は2.9 = 135.0281%。
+- 利益額最大は2.8 = +126,790円。
+- 2.8は2.9より7R多く買い、的中も3件多い。
+- 3.0は2.8・2.9の双方にaggregateで明確に劣後する。
+
+### Feb-Aug（Jul/AugはNON-PRISTINEなので補助評価）
+| threshold | bought_R | hits | profit | ROI |
+|---:|---:|---:|---:|---:|
+| 2.7 | 55 | 18 | +33,990円 | 106.1800% |
+| 2.8 | 48 | 18 | +103,990円 | 121.6646% |
+| 2.9 | 39 | 15 | **+109,290円** | **128.0231%** |
+| 3.0 | 33 | 11 | +51,260円 | 115.5333% |
+| 3.1 | 28 | 8 | +8,570円 | 103.0607% |
+| 3.2 | 23 | 7 | +27,250円 | 111.8478% |
+| 3.3 | 20 | 6 | +25,300円 | 112.6500% |
+
+補助評価では2.9が利益額・ROIとも最大。ただしJul/AugはNON-PRISTINEのため、production判断の主根拠にはしない。
+
+## 月別 pristine 安定性
+
+### threshold 2.8
+- Feb: 4R / 1hit / -5,440円 / ROI 86.40%
+- Mar: 6R / 3hit / +40,110円 / ROI 166.85%
+- Apr: 9R / 5hit / +64,740円 / ROI 171.93%
+- May: 6R / 1hit / -31,510円 / ROI 47.48%
+- Jun: 14R / 6hit / +58,890円 / ROI 142.06%
+
+### threshold 2.9
+- Feb: 4R / 1hit / -5,440円 / ROI 86.40%
+- Mar: 4R / 2hit / +32,210円 / ROI 180.53%
+- Apr: 8R / 4hit / +46,430円 / ROI 158.04%
+- May: 4R / 0hit / -40,000円 / ROI 0%
+- Jun: 12R / 6hit / +78,890円 / ROI 165.74%
+
+### threshold 3.0
+- Feb: 4R / 1hit / -5,440円 / ROI 86.40%
+- Mar: 3R / 1hit / +12,780円 / ROI 142.60%
+- Apr: 5R / 3hit / +46,530円 / ROI 193.06%
+- May: 4R / 0hit / -40,000円 / ROI 0%
+- Jun: 10R / 4hit / +40,190円 / ROI 140.19%
+
+## 解釈
+1. 3.0は局所的最適ではない。2.8/2.9へ下げる方がpristineで明確に改善する。
+2. 2.9は総合ROI最大だが、32Rとサンプルがやや小さく、Mayは0/4で-40,000円。
+3. 2.8はROI差が2.9より2.52pt低いだけで、39R/16hit、利益+126,790円とvolume・利益額が最大。Mayにも1hitが残り、2.9より下方耐性が少し良い。
+4. したがって現時点の「実運用候補」は2.8を第一候補、2.9を高ROI候補とする。
+5. ただし同じFeb-Junデータ上で閾値選択をしているため、ここだけで正式productionへ昇格はしない。
+
+## 正式productionの扱い
+- 1号艇予測本体は引き続き `HEAD .78 / v332 q=.65 / v317 / v318 / v320` を維持。
+- 購入後段はまだ正式変更しない。
+- v340のexpandロジックは追加価値0のため、今後の主軸候補から外す。
+- 次の検証対象は単純な `top3 combined odds >= threshold の時だけ1万円Dutch`。
+
+## 次の再開地点 — v343
+1. threshold 2.75 / 2.80 / 2.85 / 2.90 / 2.95 の細粒度比較。
+2. Feb-Jun pristineで leave-one-month-out を実施し、1か月ずつ除外しても2.8/2.9帯が優位か確認。
+3. 月別最悪損益・最悪ROI・購入R数を含むrobust scoreを作り、単純総ROIだけで選ばない。
+4. 2.8がfine sweep/LOMOでも優位なら、購入後段のproduction候補として固定する。
+5. Jul/AugはNON-PRISTINEの補助確認だけに使う。
+6. 2026年9月 outcomes は引き続きUNREADを厳守する。
+
+`SEPTEMBER_OUTCOMES_READ=false`
