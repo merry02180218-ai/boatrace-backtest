@@ -1,0 +1,27 @@
+name: validate-4head-env-entry-21-exact
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'audit_4head_env_entry_21_exact.py'
+      - 'build_4head_env_entry_live.py'
+      - 'build_4head_env_context_live.py'
+      - 'build_4head_env_v91_primitives_live.py'
+      - '.github/workflows/validate-4head-env-entry-21-exact.yml'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m py_compile audit_4head_env_entry_21_exact.py
+      - name: Audit 21 primitive inputs
+        run: python audit_4head_env_entry_21_exact.py | tee head4-env-entry-21-exact-audit.json
+      - name: Upload audit evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: head4-env-entry-21-exact-audit
+          path: head4-env-entry-21-exact-audit.json
+          if-no-files-found: error
