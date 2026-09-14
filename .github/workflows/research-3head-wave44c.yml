@@ -1,0 +1,12 @@
+name: wave44c
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas numpy scikit-learn
+      - run: python research_v289_3head_wave44c_contextual_player_attack_mode.py
