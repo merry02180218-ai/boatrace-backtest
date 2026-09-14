@@ -9,31 +9,33 @@
 - Pre-deadline features only; required feature missing => fail closed. Settlement and closing odds evaluation/staking only. JPY10,000 per selected race. Jul/Aug NON-PRISTINE. September forbidden.
 
 ## Wave36 benchmark
-- Run34780059085: Apr-Jun391R/87 hits/ROI114.913%/+583,090; maxDD717,360; exact v288 overlap0.
+- Run34780059085: Apr-Jun391R/87 hits/ROI114.913%/+583,090; min month70.290%; red months1; maxDD717,360; exact v288 overlap0.
 
 ## Wave36S-C
 - Run34786354062: Apr-Jun305R/74 hits/ROI128.218%/+860,660. RESEARCH_CANDIDATE, not production adoption.
 
 ## Rank replacement research
-- Wave39 direct linear pair 68/160 ROI70.911 NO_ADOPTION; Wave40 blend 68/160 NO_ADOPTION; Wave36G ordinal blend88/160 but ROI94.187 NO_ADOPTION; Wave41 ExtraTrees71/160 NO_ADOPTION; Wave42 factorized79/160 NO_ADOPTION.
-- Wave43 fixed rerun Run34794554978 success. March chosen correction retained all 24 old hits and rescued0; Apr-Jun old87 vs new85 Top5 hits. Money new391R/85 hits/ROI97.473%/-98,820 vs old114.913%/+583,090. Monthly new Apr118.127 May103.390 Jun70.615; NO_ADOPTION. This confirms conservative rerank does not improve production economics.
+- Wave39 direct linear pair, Wave40 blend, Wave36G ordinal blend, Wave41 ExtraTrees, Wave42 factorized, Wave43 conservative rerank: all NO_ADOPTION.
+- Wave44 attack-mode Run34794666290: March attack predictor AUC0.5078, March Top5 24->20, gate failed; NO_ADOPTION.
 
-## Wave44 ATTACK MODE — COMPLETE / NO_ADOPTION
-- Run34794666290 success; artifact10329167528.
-- Historical `決まり手` shows strong topology difference: Feb MAKURI 189 rows vs MAKURI_SASHI187; MAKURI_SASHI second place is boat1 in118/187, while MAKURI is diffuse.
-- However Feb-trained pre-deadline attack-mode predictor is effectively chance on March: AUC0.5078 / accuracy0.5057.
-- March selected90R: frozen Wave36 old Top5 24/38 head cases vs attack-mixture20/38; retained18, lost6, rescued2, net -4. Early14->13, late10->7. March gate failed; Apr-Jun was not opened. Decision NO_ADOPTION_MARCH_GATE.
-- `決まり手` remains target/diagnostic only and never prediction input.
+## Wave45 adaptive TopK — COMPLETE / NO_ADOPTION
+- Run34796877432 success; artifact10330610070.
+- March OOS gate passed at Top5-mass threshold0.747010 (q50): old24 hits -> adaptive26; early14->15, late10->11; avg tickets6.5.
+- Apr-Jun pristine adaptive:391R/103 hits/ROI101.576%/+61,610; monthly Apr148.470 May97.624 Jun60.766; min month60.766; red months2; maxDD831,730; avg tickets7.01; v288 overlap0.
+- Frozen Top5 comparator:391R/87 hits/ROI114.913%/+583,090; red months1; maxDD717,360.
+- Jul-Aug NON-PRISTINE adaptive:328R/95 hits/ROI82.690%/-567,780; Jul73.077 Aug91.198; red months2; maxDD640,040.
+- Combined v288+adaptive Apr-Jun:485R/155 hits/ROI115.334%/+743,680.
+- Decision NO_ADOPTION: wider tickets materially raise hit count but dilute economics, worsen min month/red months/maxDD.
 
-## Wave45 adaptive TopK uncertainty width — STARTING
-- Preserve Wave36 63-feature head p3 model, opponent score order, cut0.365448 and exact v288 exclusion. Do not rerank combinations.
-- Hypothesis: repeated rerank failures imply ordering contains useful signal but Top5 is too narrow in uncertain races. Use conditional-model uncertainty only to choose ticket width Top5 vs Top8; always JPY10,000 total Dutch per selected race.
-- Uncertainty statistic: cumulative probability mass of frozen opponent model Top5. Low Top5 mass => use Top8; otherwise Top5.
-- Feb trains March model. March OOS only selects one mass threshold from predeclared March score-distribution quantiles using ticket-hit coverage, never payout/ROI. Gate requires >=1 net rescued March hit, no chronological-half deterioration, and average tickets <=6.5.
-- If March gate passes, freeze the absolute mass threshold and evaluate Apr-Jun pristine once using standard expanding prior-month Wave36 training. Jul/Aug NON-PRISTINE uses Wave36 frozen-through-Jun convention. September unread.
-- Report R/hits/ROI/profit/monthly/min month/red months/maxDD/overlap/combined baseline+addon and average ticket count. If gate fails, NO_ADOPTION without Apr-Jun money opening.
+## Wave46 selective ticket compression — STARTING
+- Preserve exact Wave36 head selection and opponent score ordering. Do not rerank and do not change p3 cutoff.
+- Distinct hypothesis from Wave45: instead of widening uncertain races, compress tickets only when frozen opponent distribution is highly concentrated; use Top3 or Top4 on confident races and Top5 otherwise. JPY10,000 total per race remains constant, so fewer tickets concentrate stake without using odds for prediction.
+- Confidence statistic is cumulative frozen opponent-model probability mass in Top3/Top4. Feb trains March. March OOS only chooses one predeclared quantile/width using ticket-hit retention and average ticket count, never payout/ROI.
+- March gate: retain at least 23 of frozen Top5's 24 ticket hits, lose no more than one hit in either chronological half, and average ticket count <=4.6. Candidate selection prefers fewer tickets, then more retained hits.
+- If gate passes, freeze absolute confidence threshold and width, evaluate Apr-Jun pristine once with standard expanding prior-month Wave36 training. Jul/Aug NON-PRISTINE use Wave36 frozen-through-Jun convention. September forbidden.
+- Report R/hits/ROI/profit/monthly/min month/red months/maxDD/overlap/combined and average ticket count. No Apr-Aug tuning.
 
 ## Exact restart point
-1. Implement/run Wave45 adaptive TopK.
-2. If March gate fails, record and immediately launch a distinct full-population walk-forward idea; do not tune Wave45 on Apr-Aug.
-3. If it passes, inspect one-shot Apr-Jun plus Jul/Aug shadow and record exact results before adoption/shadow decision.
+1. Implement/run Wave46 selective ticket compression.
+2. Record exact March gate and Apr-Jun/Jul-Aug results.
+3. If NO_ADOPTION, immediately launch a distinct full-population walk-forward idea; if candidate, retain only as research/shadow unless robustness is clearly superior.
