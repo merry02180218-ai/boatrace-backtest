@@ -115,3 +115,91 @@ CI状況:
 5. production昇格はしない。September結果は読まない。
 
 Status: `HEAD4_B4_MINUS_B3_MOTOR_WIN_2REN_CI_PENDING`
+
+## AFTER — 4号艇−3号艇 モーター勝率・2連対率 集中検証 完了
+
+正式検証は成功。
+
+- final implementation SHA: `08e13b0cdc64e4006ba22a4c2dabfffd49f291cd`
+- causal motor-win fix SHA: `26c0e4efd93cfc5b95fb9728cb1cf5a7c195e9cc`
+- Actions Run: `34901233777`
+- Job: `104167416359`
+- conclusion: `success`
+- Artifact: `head4-b4-minus-b3-motor-win-2ren`
+- Artifact ID: `10371331473`
+- Artifact digest: `sha256:587c035450e4931438fcb41e2c60e9ca9515e1c857d8fb43e4ede28833c1057d`
+- September blind / frozen-input guard: PASS
+
+### Apr-Jun 条件探索
+
+baseline:
+- 189R
+- 4号艇1着 55 / 29.10%
+- 3連単 21 / 11.11%
+- ROI 90.76%
+- return 1,715,450円
+
+選択された固定条件:
+
+- rule: `AND`
+- `motor_win_diff_4v3 >= 0.010782`
+- `motor_2ren_diff_4v3 >= 0.4000pt`
+- つまり、4号艇の事前モーター1着率が3号艇より約1.0782ポイント以上高く、かつ公式モーター2連対率も3号艇より0.4ポイント以上高いことを同時に要求。
+
+chosen train:
+- 65R
+- 4号艇1着 20 / 30.77%
+- 3連単 11 / 16.92%
+- ROI 140.56%
+- return 913,670円
+- 月別ROI最低値 101.53%
+
+### Jul-Aug 固定holdout
+
+baseline holdout:
+- 58R
+- 4号艇1着 23 / 39.66%
+- 3連単 6 / 10.34%
+- ROI 94.05%
+- return 545,510円
+
+chosen holdout:
+- 23R
+- 4号艇1着 11 / **47.83%**
+- 3連単 3 / **13.04%**
+- ROI **131.46%**
+- return 302,350円
+- retention 23/58 = 39.7%
+
+holdoutでbaseline比:
+- 4号艇1着率: 39.66% -> 47.83% (+8.17pt)
+- 3連単率: 10.34% -> 13.04% (+2.70pt)
+- ROI: 94.05% -> 131.46% (+37.41pt)
+
+### 月別 fixed rule
+
+- 2026-04: 20R / 4頭率 25.00% / 3連単率 15.00% / ROI 141.40%
+- 2026-05: 25R / 4頭率 36.00% / 3連単率 24.00% / ROI 171.12%
+- 2026-06: 20R / 4頭率 30.00% / 3連単率 10.00% / ROI 101.53%
+- 2026-07: 19R / 4頭率 42.11% / 3連単率 15.79% / ROI 159.13%
+- 2026-08: 4R / 4頭率 75.00% / 3連単率 0.00% / ROI 0.00%
+
+### 結論
+
+- **4号艇−3号艇のモーター優位差は、4号艇頭判定の主要フィルタ候補として有望。**
+- Apr-Junで選択した単純なAND条件が、条件を固定したJul-Augでも4号艇1着率・3連単率・proxy ROIのすべてをbaselineより改善した。
+- 特にJulは19Rで4頭率42.11%、3連単率15.79%、ROI159.13%と強い。
+- ただしAugは4Rしかなく、3連単0的中。Jul-Aug合算の改善だけでproductionへ昇格させない。
+- ROIはarchived historical odds proxyであり、当時の不変LIVE締切前オッズではない。
+- production `HEAD4_V291_COMP7` は変更なし。
+- 2026年9月の結果・払戻・結果ラベルは引き続き `UNREAD`。
+
+### 次の再開地点
+
+1. 固定条件 `motor_win_diff_4v3 >= 0.010782 AND motor_2ren_diff_4v3 >= 0.4000pt` を変更せず、4号艇頭候補の主要モーターゲートとして比較する。
+2. 現行S/A/B候補および新しい4号艇head再構築baselineにこのゲートを重ね、候補数・4号艇1着率・3連単率・ROIを比較する。
+3. 特に8月4Rの小標本を補うため、許可済みの過去期間で時間分割を追加し、閾値を再最適化せず固定条件の再現性を見る。
+4. その後、必要ならまくり型 / まくり差し型を分離して、このモーター優位条件の効き方を比較する。
+5. production昇格はユーザー明示承認まで行わない。September outcomesは読まない。
+
+Status: `HEAD4_B4_MINUS_B3_MOTOR_WIN_2REN_HOLDOUT_PASS_NEXT_CORE_GATE_TEST`
