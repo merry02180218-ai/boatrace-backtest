@@ -45,15 +45,16 @@ def main():
     grid['delta_vs_current_hits'] = grid.hits - int(current.hits)
     grid['delta_vs_current_dev_hits'] = grid.dev_hits - int(current.dev_hits)
     grid['delta_vs_current_support_hits'] = grid.support_hits - int(current.support_hits)
+    grid['distance_from_current'] = (grid.g2 - 0.50).abs()
 
-    # Selection criterion is pristine only. Support months are descriptive, never tie-breakers.
+    # Selection uses pristine data only. Jul-Aug never influence ranking or tie-breaking.
+    # If pristine metrics tie, prefer the smaller change from the current production value.
     ranked = grid.sort_values(
-        ['dev_hits', 'dev_worst_month', 'hits'],
-        ascending=[False, False, False],
+        ['dev_hits', 'dev_worst_month', 'distance_from_current'],
+        ascending=[False, False, True],
     ).reset_index(drop=True)
     best = ranked.iloc[0]
 
-    # Plateau diagnostics around the pristine best.
     best_g2 = float(best.g2)
     near = grid[(grid.g2 >= max(0.0, best_g2 - 0.15) - 1e-9) & (grid.g2 <= min(2.0, best_g2 + 0.15) + 1e-9)].copy()
     plateau = grid[grid.dev_hits >= int(best.dev_hits) - 1].copy()
@@ -81,6 +82,7 @@ def main():
         'g2_end': max(G2_VALUES),
         'g2_step': 0.05,
         'points': len(G2_VALUES),
+        'ranking_rule': 'Feb-Jun dev_hits desc, Feb-Jun worst-month desc, distance from current .50 asc',
         'current': current.to_dict(),
         'best_pristine': best.to_dict(),
         'best_gain_R_vs_current': int((cmp.delta == 1).sum()),
@@ -101,8 +103,8 @@ def main():
         '# v350 second opponentCore coefficient search', '',
         '- Third-side coefficient is fixed at g3=1.00.',
         '- Second-side g2 is scanned from 0.00 to 2.00 in 0.05 steps.',
-        '- Ranking uses Feb-Jun pristine data only: dev hits, then pristine worst-month, then all-period hits.',
-        '- Jul-Aug are support-only and are not used as a tie-breaker.',
+        '- Ranking uses Feb-Jun pristine data only: dev hits, then pristine worst-month, then distance from current .50.',
+        '- Jul-Aug are support-only and are not used in ranking or tie-breaking.',
         '- September outcomes remain unread.',
         '',
         f"- Current g2=.50: all {int(current.hits)}/{int(current.R)}, Feb-Jun {int(current.dev_hits)}/{int(current.dev_R)}, worst-month {100*current.dev_worst_month:.2f}%.",
