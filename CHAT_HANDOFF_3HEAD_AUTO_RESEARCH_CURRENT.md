@@ -6,53 +6,38 @@
 - Pre-deadline features only; JPY10,000 per selected race. Jul/Aug NON-PRISTINE. September forbidden.
 
 ## Wave36 benchmark
-- Run34780059085: Apr-Jun 391R/87 hits/ROI114.913%/+583,090.
-- Conditional ranking on 160 actual boat3-head cases: Top5=87/160.
+- Run34780059085: Apr-Jun391R/87 hits/ROI114.913%/+583,090.
+- Conditional ranking on160 actual boat3-head cases: Top5=87/160.
 
 ## Wave36S-C
 - Run34786354062: Apr-Jun305R/74 hits/ROI128.218%/+860,660. RESEARCH_CANDIDATE.
 
-## Rank audit
-- Wave36 selected391; actual boat3 head160; Top5 hits87; misses73.
-- Blind TopN expansion hurts: Top6 ROI101.224%; Top7 97.775%; Top8 97.932%; Top10 93.085%.
+## Rank replacement research
+- Wave39 direct linear pair:68/160, ROI70.911%, NO_ADOPTION.
+- Wave40 blend:68/160, ROI70.911%, NO_ADOPTION.
+- Wave36G ordinal blend:88/160 but ROI94.187%, NO_ADOPTION.
+- Wave41 ExtraTrees:71/160, ROI74.814%, NO_ADOPTION.
+- Wave42 factorized second/third:79/160, ROI90.795%, NO_ADOPTION.
 
-## Wave39 direct linear pair ranker — NO_ADOPTION
-- Run34782729676: Apr-Jun68/160 Top5; ROI70.911%/-1,137,370.
-
-## Wave40 blend ranker — NO_ADOPTION
-- Run34790604535; artifact10328251093 SHA256 f71035ad3e19d8ccbce9a99df23d5a88257bf720ae7c9796e5acc67ce8a371fa.
-- March selected alpha0 pair signal; Apr-Jun68/160 Top5, ROI70.911%/-1,137,370; retained46/lost41/rescued22.
-
-## Wave36G ordinal blend side audit — NO_ADOPTION
-- Run34790913552; artifact10328506579. Apr-Jun88/160 Top5 but ROI94.187%/-227,300. Hit-count-only gain destroyed economics.
-
-## Wave41 ExtraTrees pair ranker — COMPLETE / NO_ADOPTION
-- Final optimized CI Run34791534572 success; Job103816570018; artifact10328516441; SHA256 9e601629f77fdaa9216f325642d2e457c75c17411ab84a257684c279de6f5870; head SHA d6f239330902a00b13735fab61ef7d32727b3092.
-- March selected leaf30:18/38 Top5=47.37%, MRR.3222, mean rank7.158 vs old24/38=63.16%.
-- Apr-Jun:71/160 Top5=44.375%; ROI74.814%/-984,790. Monthly Apr82.069%, May71.210%, Jun71.971%. NO_ADOPTION.
-
-## Wave42 factorized second/third ranker — COMPLETE / NO_ADOPTION
-- Script commit bb53ff83ce283a9d8aa618683bac48511b5ea167; workflow commit024b2e1edbc955f09b2bb4fcf6a57318cf06c8a0.
-- Run34791746174 success; Job103817146598; artifact10328373250; SHA256 c7c851655442a906e4a25e6638568be78cbd47f1aeae0233a615f9ca0c5bc05a; head SHA024b2e1edbc955f09b2bb4fcf6a57318cf06c8a0.
-- Architecture: P(second=a|boat3 win) * P(third=b|second=a,boat3 win), static63 pre-deadline features only. Wave36 head gate p3>=0.365448 and Top5 fixed.
-- March OOS C=.10: new25/38 Top5 vs old24/38, but frozen Apr-Jun new79/160 vs old87/160.
-- Money same391 races:79 hits / ROI90.795% / -359,900. NO_ADOPTION.
+## Wave43 conservative boundary correction — COMPLETE / NO_ADOPTION
+- Plan commit6657d886e6ec0b8bce57c4113fd9275530b8fa8a.
+- Implementation commit475ba5fc73d04df975ade02c2f2612f370626eb0; workflow commit e89d18b8231359d6f1365034ac5b5fce43274141.
+- CI Run34793612036 success; Job103822377750; artifact10328797771; SHA256 50501785b9d1b306141bb57e6e7a538a6020fbfaa476b2db9bd33515fbad50ed.
+- Architecture preserved Wave36 ordering and allowed only conservative Top5-boundary promotion from ranks6-10 using score ratio; no outcome/odds feature.
+- March OOS selected rank7 / ratio0.95. Crucially this made ZERO effective correction on March winners: old Top5=24/38, new=24/38, lost0, rescued0. More aggressive candidates only lost existing hits and rescued none. Therefore March supplied no evidence for a useful boundary promotion.
+- Frozen Apr-Jun likewise produced no rank change: old/new Top5 both87/160; retained87, lost0, rescued0; Top1=29, Top3=61, Top8=115, Top10=125, MRR.348439, mean rank6.43125.
+- Evaluation implementation reports same hit set but payout4,484,870 / ROI114.7026% / +574,870, slightly below canonical Wave36 benchmark payout4,493,090 / ROI114.913% / +583,090. Treat canonical Wave36 artifact as economic authority; the small payout mismatch is an evaluation-path parity issue, not a rank improvement. Do not use Wave43 money figure to redefine baseline.
+- Monthly Wave43 rank-identical evaluation: Apr33 hits ROI174.601%; May33 hits ROI103.005%; Jun21 hits ROI70.290%. Jul-Aug NON-PRISTINE rank79 hits ROI89.888%. v288 overlap0. September forbidden/unread.
+- Decision NO_ADOPTION: conservative score-ratio boundary correction found no March rescues and therefore correctly collapsed to effectively no-op.
 
 ## Current ranking conclusion
 - Frozen Wave36 conditional multiclass logistic remains the strongest verified opponent ranking.
-- Do NOT widen TopN or change stake allocation yet.
-
-## Wave43 conservative correction layer — STARTING
-- Work plan written BEFORE implementation as required.
-- Preserve Wave36 full ranking as the base; do not replace it globally.
-- Learn only a conservative boundary correction around the Top5 cutoff: candidate promotions from ranks6-10 may displace rank4/5 only when pre-April evidence is strong.
-- Use pre-deadline/static features plus Wave36 score/rank-margin information only; no closing-result-derived feature and no realized winning odds as a feature.
-- Train/design on February and select/freeze thresholds/hyperparameters on March OOS only. Explicitly penalize displacement/loss of existing March Top5 winners; prioritize net rescued-minus-lost and early/late stability, then rank metrics. No March monetary tuning.
-- After freezing, open Apr-Jun exactly once. Report old Top5 hits retained/lost, misses rescued, net hits, Top1/3/5/8/10, MRR/mean rank, monthly/aggregate exact JPY10,000 Top5 Dutch ROI/profit/maxDD.
-- v288 production untouched and overlap must remain0. Jul/Aug NON-PRISTINE diagnostic only. September forbidden/unread.
+- Replacement architectures failed OOS; conservative score-ratio correction found no validated promotion rule.
+- Do NOT blindly widen TopN and do NOT globally alter stake allocation.
+- Important next question is not another generic classifier. We need diagnose WHY current Wave36 misses rank6-15 winners and identify a stable pre-April subgroup where a specific structural correction is supported.
 
 ## Exact restart point
-1. Implement Wave43 conservative Top5-boundary rerank correction on frozen Wave36 ordering.
-2. Freeze correction using Feb+March only with explicit old-hit preservation penalty.
-3. One-shot Apr-Jun evaluation; reject if economics or robustness deteriorate materially.
-4. Update this handoff after CI with exact commits/run/job/artifact/results.
+1. Audit February+March only for structural patterns in Wave36 Top5 misses versus hits: especially second-place boat identity (outer4/5/6), score/rank margins, racer/motor/ST/course-relative features and pair topology.
+2. Build candidate subgroup hypotheses strictly from Feb training + March OOS; require positive rescue-minus-loss on March and reasonable early/late support before any Apr-Jun opening.
+3. Only then implement one targeted correction and one-shot Apr-Jun evaluation.
+4. Keep v288 untouched; Jul/Aug NON-PRISTINE; September unread.
