@@ -65,4 +65,65 @@ Evaluation:
 - September outcomes unused;
 - production unchanged until explicit user approval.
 
-Status: CORE_DECOMPOSITION_BEFORE_RECORDED
+## CORE DECOMPOSITION — AFTER
+
+- Official successful run: `34808568480` / job `103865187359` / conclusion `success`.
+- Head SHA: `514c4a61103dba105816886c674f753e17c34f3e`.
+- Artifact: `head4-waku10-core-decomposition`, id `10335502943`, digest `sha256:a8bf915fa953128d104d0e440f1db09957fa78255ecdc4003b2fe3ee3564d2d4`.
+- All workflow steps succeeded, including direct decomposition, Apr-Jun summary, and artifact upload.
+- Audit JSON confirms: `production_modified=false`, selection window=`Apr-Jun 2026 only`, Jul-Aug=`score distributions only; outcomes unused`, `september_outcomes_used=false`, archived odds ROI is retrospective proxy.
+
+### Apr-Jun S-layer results
+
+- NO_WAKU10: 0R.
+- B3_ONLY: 38R, head4 17/38=44.74%, trifecta 10/38=26.32%, proxy ROI 203.997%, avg comp odds 7.6803.
+- B4_ONLY: 1R, head4 0%, trifecta 0%, proxy ROI 0%.
+- WR_ONLY: 27R, head4 8/27=29.63%, trifecta 4/27=14.81%, proxy ROI 108.622%, avg comp odds 7.6310.
+- ST_ONLY: 13R, head4 6/13=46.15%, trifecta 5/13=38.46%, proxy ROI 284.054%, avg comp odds 7.5747.
+- SR_ONLY: 14R, head4 3/14=21.43%, trifecta 2/14=14.29%, proxy ROI 80.314%, avg comp odds 7.5493.
+- WR_ST: 50R, head4 17/50=34.00%, trifecta 9/50=18.00%, proxy ROI 141.012%, avg comp odds 7.8973.
+- WR_SR: 50R, head4 15/50=30.00%, trifecta 7/50=14.00%, proxy ROI 110.670%, avg comp odds 7.4631.
+- ST_SR: 18R, head4 6/18=33.33%, trifecta 4/18=22.22%, proxy ROI 143.367%, avg comp odds 7.8911.
+- CORE_WAKU10: 57R, head4 19/57=33.33%, trifecta 9/57=15.79%, proxy ROI 123.695%, avg comp odds 7.7255.
+
+### Apr-Jun A and S+A secondary checks
+
+- B3_ONLY S+A: 111R, head4 42/111=37.84%, trifecta 12/111=10.81%, proxy ROI 79.34%.
+- ST_ONLY S+A: 67R, head4 27/67=40.30%, trifecta 9/67=13.43%, proxy ROI 98.84%.
+- WR_ST S+A: 121R, head4 47/121=38.84%, trifecta 14/121=11.57%, proxy ROI 89.44%.
+- CORE_WAKU10 S+A: 124R, head4 47/124=37.90%, trifecta 15/124=12.10%, proxy ROI 94.79%.
+- NO_WAKU10 S+A: 14R, head4 6/14=42.86%, trifecta 2/14=14.29%, proxy ROI 93.54%.
+
+### Interpretation
+
+1. The dominant direct Waku10 information is on **boat3**, not boat4. B3_ONLY creates 38 S races with strong head4 and trifecta performance, while B4_ONLY creates only 1 S race.
+2. By field type, **ST is the strongest single signal** in this sample: ST_ONLY has the best S head4 rate, trifecta hit rate, and proxy ROI, but only 13 races, so it is too small to crown as production choice by itself.
+3. **WR_ST is the best broader two-field candidate**: 50 S races, 18% trifecta hit rate, 141.0% proxy ROI. It gives much better sample size than ST_ONLY while outperforming CORE_ALL on S trifecta efficiency/ROI.
+4. SR is weak alone. SR_ONLY has sub-100% S proxy ROI and low head4 rate. Adding SR to WR or ST does not beat WR_ST on the primary S balance.
+5. CORE_ALL increases S volume to 57R but dilutes S efficiency versus WR_ST. This suggests SR and/or boat4 direct fields mainly broaden the score tail rather than improve the highest-quality S set.
+6. B3_ONLY is especially notable: 38R, 44.7% head4, 26.3% trifecta, 204.0% proxy ROI. Because it bundles WR/ST/SR on boat3, the next clean test should decompose **boat3-only WR vs ST vs SR and pairwise combinations** to determine whether B3 strength is mostly ST-driven or requires boat3 interactions.
+7. Jul/Aug remain NON-PRISTINE: only score-distribution stress was reviewed; no Jul/Aug outcomes were used for selection.
+8. September outcomes remain unread/unused.
+9. Production remains unchanged.
+
+### Current research ranking
+
+- Tier 1: `B3_ONLY`, `WR_ST`.
+- High-efficiency / small-N signal: `ST_ONLY`.
+- Secondary: `CORE_WAKU10`, `ST_SR`, `WR_SR`, `WR_ONLY`.
+- Weak: `SR_ONLY`, `B4_ONLY`, `NO_WAKU10`.
+
+### Next work unit
+
+Before any production change, run a **boat3 direct-Waku10 decomposition** on the same base and same Apr-Jun-only selection window:
+- B3_WR_ONLY
+- B3_ST_ONLY
+- B3_SR_ONLY
+- B3_WR_ST
+- B3_WR_SR
+- B3_ST_SR
+- B3_ALL (= current B3_ONLY)
+
+Keep downstream policy frozen. Jul/Aug score stress only, Sep outcome blind, production unchanged.
+
+Status: CORE_DECOMPOSITION_COMPLETE
