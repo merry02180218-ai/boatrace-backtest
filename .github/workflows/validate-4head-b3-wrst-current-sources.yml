@@ -1,0 +1,119 @@
+name: validate-4head-b3-wrst-current-sources
+
+on:
+  push:
+    paths:
+      - 'validate_4head_b3_wrst_current_sources.py'
+      - 'run_4head_b3_wrst_current_shadow.py'
+      - 'build_4head_env_entry_live.py'
+      - 'build_4head_v283_rows_live.py'
+      - 'score_4head_b3_wrst_post_shadow.py'
+      - 'assemble_4head_b3_wrst_shadow_input.py'
+      - 'run_4head_b3_wrst_shadow.py'
+      - 'artifacts/head4_v291_downstream_20260630.json'
+      - '.github/workflows/validate-4head-b3-wrst-current-sources.yml'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Static shadow-only guards
+        run: |
+          python - <<'PY'
+          import ast
+          from pathlib import Path
+          files = [
+              'validate_4head_b3_wrst_current_sources.py',
+              'run_4head_b3_wrst_current_shadow.py',
+          ]
+          for f in files:
+              text = Path(f).read_text(encoding='utf-8')
+              ast.parse(text, filename=f)
+              assert 'requests.post' not in text
+              assert 'place_bet(' not in text
+              assert 'submit_bet(' not in text
+          orch = Path('run_4head_b3_wrst_current_shadow.py').read_text(encoding='utf-8')
+          assert 'run_4head_b3_wrst_shadow.py' in orch
+          assert 'production_action_taken' in orch
+          validator = Path('validate_4head_b3_wrst_current_sources.py').read_text(encoding='utf-8')
+          for key in ['jul_aug_labels_used', 'september_outcomes_used', 'official_beforeinfo', 'boatcast']:
+              assert key in validator
+          print('static current-source guards PASS')
+          PY
+      - name: Validate complete and fail-closed source contracts
+        run: |
+          python - <<'PY'
+          import copy, json, tempfile
+          from pathlib import Path
+          from build_4head_env_entry_live import PRIMITIVES
+          from head4_v291_downstream_inference import load_artifact
+          from validate_4head_b3_wrst_current_sources import (
+              CurrentSourceError, POST_FIELDS, POST_FIELD_SOURCES, validate_and_normalize,
+          )
+
+          code = '202609140101'
+          captured = '2026-09-14T20:00:00+09:00'
+          deadline = '2026-09-14T21:00:00+09:00'
+          fs2 = list(load_artifact('artifacts/head4_v291_downstream_20260630.json')['v283_SECOND']['features'])
+          assert len(PRIMITIVES) == 21
+          assert len(fs2) == 25
+
+          def prov():
+              return {'result_blind': True, 'complete': True, 'captured_at_jst': captured}
+
+          post = {
+              'race_code': code,
+              'source_provenance': {**prov(), 'field_sources': dict(POST_FIELD_SOURCES)},
+              'features': {k: 0.5 for k in POST_FIELDS},
+          }
+          env = {
+              'race_code': code,
+              'source_provenance': prov(),
+              'primitives': {k: 0.5 for k in PRIMITIVES},
+          }
+          boats = {
+              'race_code': code,
+              'source_provenance': prov(),
+              'boats': {str(b): {k: 0.5 for k in fs2} for b in range(1, 7)},
+          }
+
+          with tempfile.TemporaryDirectory() as td:
+              root = Path(td)
+              def save(name, obj):
+                  p = root / name
+                  p.write_text(json.dumps(obj), encoding='utf-8')
+                  return p
+              def check(pst, ev, bts, should_pass):
+                  pp, ep, bp = save('post.json', pst), save('env.json', ev), save('boats.json', bts)
+                  try:
+                      out = validate_and_normalize(
+                          post_path=pp, env_path=ep, boats_path=bp,
+                          race_code=code, deadline_jst=deadline,
+                      )
+                  except CurrentSourceError:
+                      assert not should_pass
+                      return
+                  assert should_pass
+                  assert out['complete'] is True
+                  assert out['result_blind'] is True
+                  assert out['production_action_authorized'] is False
+                  assert out['jul_aug_labels_used'] is False
+                  assert out['september_outcomes_used'] is False
+
+              check(post, env, boats, True)
+
+              x = copy.deepcopy(post); x['features'].pop('orig_turn4'); check(x, env, boats, False)
+              x = copy.deepcopy(post); x['source_provenance']['field_sources']['orig_lap4'] = 'unknown'; check(x, env, boats, False)
+              x = copy.deepcopy(env); x['primitives'].pop(PRIMITIVES[0]); check(post, x, boats, False)
+              x = copy.deepcopy(boats); x['boats']['6'].pop(fs2[-1]); check(post, env, x, False)
+              x = copy.deepcopy(env); x['source_provenance']['complete'] = False; check(post, x, boats, False)
+              x = copy.deepcopy(boats); x['payout'] = 1234; check(post, env, x, False)
+              x = copy.deepcopy(post); x['source_provenance']['captured_at_jst'] = deadline; check(x, env, boats, False)
+
+          print('complete + fail-closed source contract PASS')
+          PY
