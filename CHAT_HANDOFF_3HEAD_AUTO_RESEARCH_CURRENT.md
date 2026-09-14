@@ -1,9 +1,10 @@
 # CHAT HANDOFF — 3HEAD AUTO RESEARCH CURRENT
 
 ## Policy
-- Branch research/3head-v289-addon-expansion; newest GitHub state wins.
+- Active continuation branch: research/3head-player-attack-mode, forked from historical verified attack-mode pivot commit dcc012e4e81ef19636a070f221282c1b87ed262c. Do not rewrite current main.
 - Fixed v288 baseline 94R /52 hits / ROI172.560638%.
-- Pre-deadline features only; JPY10,000 per selected race. Jul/Aug NON-PRISTINE. September forbidden.
+- Pre-deadline features only; JPY10,000 per selected race. Jul/Aug NON-PRISTINE. September forbidden/unread.
+- 3号艇 hourly research monitor was explicitly disabled by user on 2026-09-14. Do not recreate it unless user asks.
 
 ## Wave36 benchmark
 - Run34780059085: Apr-Jun391R/87 hits/ROI114.913%/+583,090.
@@ -24,19 +25,18 @@
 - CI Run34793612036 success; Job103822377750; artifact10328797771.
 - March and Apr-Jun correction collapsed to no-op; Apr-Jun old/new Top5 both87/160. NO_ADOPTION.
 
-## User hypothesis / research pivot — ATTACK MODE FIRST
-- User correctly raised that opponent ordering may fundamentally depend on whether boat3 wins by MAKURI versus MAKURI-SASHI. This is now the highest-priority structural hypothesis and supersedes the generic miss-subgroup audit.
-- Rationale to test, not assume: MAKURI destroys/changes the inside wall and may favor different second/third topology (outer follow, surviving inner boat, attack-line relationships), while MAKURI-SASHI passes through the gap and can preserve different inside/outside boats. A single conditional 20-class ranker may be averaging these distinct mechanisms.
-- BEFORE any Apr-Jun opening, inspect available source columns and historical result labels to determine whether actual winning technique (`kimarite`/decision) exists for training labels and, separately, which pre-deadline features can predict MAKURI vs MAKURI-SASHI. Actual kimarite may be used only as historical target/diagnostic, never as a live input.
-- Build February training diagnostics split by actual boat3 MAKURI / MAKURI-SASHI; compare second-place identity, third-place identity, pair topology, current Wave36 actual-pair rank and Top5 capture.
-- March OOS: train an attack-mode predictor using February only and evaluate mode classification plus opponent ranking by predicted mode. No actual March kimarite may be used to choose tickets; it is evaluation label only.
-- Candidate architecture: P(mode | pre-deadline X) then mode-specific P(ordered opponent pair | boat3 wins, mode), optionally mixture-weighted rather than hard routing. Compare against frozen Wave36 ranking.
-- Freeze all architecture/hyperparameters using Feb design + March OOS only. Require March improvement with existing-hit retention and early/late support before opening Apr-Jun.
-- If source lacks reliable kimarite labels, stop and document that blocker rather than infer actual attack mode from post-race finishing order.
-- Production v288 untouched; Wave36 head gate unchanged initially; Top5 and JPY10,000 Dutch unchanged for evaluation. Jul/Aug NON-PRISTINE only; September forbidden/unread.
+## User hypothesis / research pivot — PLAYER-SPECIFIC ATTACK MODE
+- User proposes that MAKURI vs MAKURI-SASHI may be identifiable primarily from the individual racer's historical tendencies rather than generic race-level features.
+- This supersedes the generic attack-mode classifier as the immediate experiment.
+- Historical actual kimarite is target/diagnostic only. Never feed current-race result/kimarite into live prediction.
+
+## BEFORE-WORK PLAN — 2026-09-14
+1. Inspect historical pre-race/source data for stable racer ID and historical results/kimarite availability. Never infer kimarite from finish order.
+2. Build leakage-safe player-history features available strictly before each race, prioritizing boat3/3-course history: prior MAKURI count/rate, prior MAKURI-SASHI count/rate, smoothed log-odds/share, sample size, recent-window and longer-window tendencies where source coverage permits. Use only races chronologically before target race.
+3. Evaluate whether player-history features improve Feb-trained -> March OOS MAKURI-vs-MAKURI-SASHI discrimination versus the prior generic mode model. Report class counts, coverage, AUC/logloss/accuracy as feasible, and performance by history sample size.
+4. Only if March OOS mode discrimination shows meaningful improvement, feed predicted mode probabilities into mode-specific opponent ranking and compare frozen Wave36 Top1/3/5/8/10, MRR, retained/lost/rescued, March early/late.
+5. March promotion gate remains conservative: Top5 must improve by >=1, lost existing Wave36 Top5 hits <=2, and improvement cannot exist only in one March half. If gate fails, do not open Apr-Jun.
+6. If March passes, freeze design and run Apr-Jun exactly once with exact JPY10,000 Dutch economics. Production v288 remains untouched. Jul/Aug diagnostic only; September outcomes remain unread.
 
 ## Exact restart point
-1. Inspect Wave21 source schema/build pipeline for reliable actual kimarite / winning-technique labels.
-2. If present, quantify Feb+March MAKURI vs MAKURI-SASHI opponent topology and Wave36 rank performance separately.
-3. Train Feb-only pre-deadline mode predictor + mode-specific opponent ranker; select/freeze on March OOS only.
-4. Only if March supports it, one-shot Apr-Jun evaluation; update handoff afterward.
+- Start with source/schema audit for stable racer ID + historical kimarite and implement player-history attack-mode features on this isolated branch.
