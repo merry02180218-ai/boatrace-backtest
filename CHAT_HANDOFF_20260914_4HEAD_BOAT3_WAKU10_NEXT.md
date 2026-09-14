@@ -369,3 +369,69 @@ Status: `FROZEN_WR_ST_PROSPECTIVE_SHADOW_PATH_FROZEN_AND_VALIDATED_SOURCE_WIRING
 - ENV_ENTRY and v283 inputs must carry explicit source/timestamp/completeness provenance; missing fields fail closed.
 - No Jul/Aug outcomes, no September outcomes, no target-race result/payout endpoints, no threshold/feature/weight tuning, and no production action.
 - Status: `FROZEN_WR_ST_CURRENT_DAY_SOURCE_WIRING_STARTED`.
+
+## FROZEN WR_ST CURRENT-DAY SOURCE WIRING — AFTER (2026-09-14 JST)
+
+### Provenance / commits
+
+- Existing BEFORE commit: `95169394434c45571605a82394deaee4b58d197b`; this work unit was resumed without adding a duplicate BEFORE.
+- Work-unit documented start HEAD: `532d0e8575c6b48be933f4551d73ef86a480106f`.
+- Implementation resumed against then-current main HEAD `3d3353ddbad9f19f9bd2d90f15bbd1d141b8a735`; latest GitHub was always preferred over older chat state.
+- Fail-closed current source validator: `validate_4head_b3_wrst_current_sources.py`, commit `d6d5c960eaaeb5ec7ccf7844ee1f5aaae59b42c4`.
+- Current-day research-shadow orchestrator: `run_4head_b3_wrst_current_shadow.py`, commit `0c45e71e2bf68856ecbcb2416a680a687173c785`.
+- Current-source validation workflow: `.github/workflows/validate-4head-b3-wrst-current-sources.yml`, initial commit `50cb124e70724b49377c4cc8c6b47be2b370f007`, trigger/validated head commit `564512a5da95b83167d9cc65f64a7878fd745d6c`.
+
+### Source coverage / contracts
+
+| source group | frozen shadow fields | disposition |
+|---|---|---|
+| official BOAT RACE beforeinfo | `ex_st_rank4`, `ex_st_4`, `ex_st_edge_4v3`, `tilt4` | proven result-blind current-source candidate; explicit field-source provenance required |
+| BOATCAST original exhibition | `orig_straight4`, `orig_lap4`, `orig_turn4` | existing parser/serialization/parity audits support frozen v291 semantics; explicit pre-deadline BOATCAST provenance required; no default/0.5 fabrication |
+| ENV_ENTRY causal primitives | exact 21-field schema from `build_4head_env_entry_live.py` | validator requires every finite field plus complete/result-blind pre-deadline provenance; a current-day causal acquisition/generator for the full 21-field snapshot is **not proven in this work unit** |
+| v283 opponent `boats` | 6 boats × frozen 25-field `v283_SECOND` schema read from `artifacts/head4_v291_downstream_20260630.json` | validator requires all 150 finite primitive values plus complete/result-blind pre-deadline provenance; a current-day causal acquisition/generator for the complete 6×25 snapshot is **not proven in this work unit** |
+
+The exact ENV schema remains the frozen 21 primitives: `preview_comp`, `relative_deg`, `wind_speed`, `wind_adjust_points`, `entry_confirmed_same`, `entry_course_preview`, `has_orig`, `has_stt`, `has_tkz`, `tilt`, `tilt_bonus`, `v91_ex`, `v91_st_corr`, `v91_st_raw`, `v91_straight`, `score_BASE_v91`, `score_CORR20_v91`, `score_RAW20_v91`, `score_wind_v83`, `history_adjust_online`, `history_pct_online`.
+
+### Implemented fail-closed behavior
+
+- Requires one race_code across POST / ENV / BOATS sources.
+- Requires `source_provenance.result_blind=true` and `complete=true` for every source group.
+- Requires timezone-aware `captured_at_jst` strictly before the supplied race deadline.
+- Recursively rejects result/payout/settlement keys before normalization.
+- Requires all seven POST fields finite and pins each POST field to the expected source family (`official_beforeinfo` or `boatcast`).
+- Requires all 21 ENV primitives finite; no internal invention or unproven recomputation is accepted.
+- Requires all 6 boats and every frozen 25-field SECOND primitive finite; no missing-row imputation path is accepted by this current-source validator.
+- Hashes the three raw source snapshots and emits a source manifest with `production_action_authorized=false`, `jul_aug_labels_used=false`, and `september_outcomes_used=false`.
+- `run_4head_b3_wrst_current_shadow.py` chains PRE availability -> current-source validation -> frozen POST scoring -> immutable bundle assembly -> existing prospective shadow runner. It does not submit a wager and does not read result/payout data.
+- This is a one-click **shadow execution from already-complete causal snapshots**, not a false claim that upstream ENV/v283 acquisition itself is fully automated.
+
+### Validation CI
+
+- Workflow: `validate-4head-b3-wrst-current-sources`.
+- Run ID: `34840228247` — `success`.
+- Job ID: `103963229603` / job `validate` — `success`.
+- Validated head SHA: `564512a5da95b83167d9cc65f64a7878fd745d6c`.
+- `Static shadow-only guards`: success.
+- `Validate complete and fail-closed source contracts`: success.
+- Synthetic contract tests prove a complete fixture passes and the following fail closed: missing POST feature, wrong original-exhibition source lineage, missing ENV primitive, missing boat SECOND primitive, incomplete provenance, forbidden payout key, and snapshot captured at/after deadline.
+- CI also asserts the frozen ENV schema size is 21 and frozen v283 SECOND schema size is 25.
+
+### Prospective capture / outcome integrity
+
+- No genuine 2026-09-14 prospective shadow decision was recorded in this work unit because no complete current-day `source_provenance`-qualified ENV + v283 snapshot set was available/proven in the repository at capture time.
+- Repo search for a 2026-09-14 `source_provenance` snapshot returned no usable match. The path therefore remained correctly fail-closed rather than manufacturing inputs.
+- No target-race result or payout was opened to backfill the missing sources.
+- Jul/Aug outcomes were not consumed.
+- September outcomes remain UNREAD / unused.
+- No feature/weight/threshold/downstream-policy tuning was performed.
+- Production `HEAD4_V291_COMP7` is unchanged; no production action or wager submission path was added.
+
+### Judgment / next step
+
+1. POST current-source lineage is now sufficiently specified: official beforeinfo for ST/tilt-derived fields and BOATCAST for original exhibition, with strict pre-deadline provenance.
+2. The frozen shadow path now has a validated source-contract boundary and a single research-shadow orchestration entrypoint.
+3. The remaining gap is upstream acquisition/parity proof for the complete **21-field ENV snapshot** and **6×25 v283 boats snapshot**. These must be proven causal/current-day before the first real prospective record is accepted.
+4. Until that proof exists, incomplete races are intentionally skipped; do not fall back to historical outcomes, defaults, medians, or guessed primitives.
+5. Once the ENV/v283 acquisition lineage is proven, run the orchestrator before deadline and persist the first immutable pre-result shadow decision; only later, in a separate phase, may that frozen record be settled.
+
+Status: `FROZEN_WR_ST_CURRENT_DAY_SOURCE_WIRING_COMPLETE_FAIL_CLOSED_ENV_V283_ACQUISITION_PROOF_NEXT`.
