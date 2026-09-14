@@ -96,7 +96,14 @@
 - Apr-Jun were not used for threshold fitting or reopened for optimization; Jul/Aug were not used; September outcomes remain unread. v288 production unchanged.
 - Status: `WAVE50_COMPLETE_DIAGNOSTIC_WEAK_3V2_MOTOR_EDGE_HEAD_FAILURE_CONFIRMED`.
 
+## 2026-09-15 JST — Wave51 BEFORE WORK
+- User approved testing the stronger idea: use pre-race motor strength itself as an upstream candidate finder rather than only as a fail-closed filter inside Wave36/Wave47.
+- Objective: scan the full March settled six-boat universe after exact v288 94-race exclusion, not the 90-race Wave36 p3>=0.365448 subset, and measure whether boat3-vs-boat2 motor advantage alone can surface additional 3-head opportunities.
+- Thresholds/cuts must be frozen from February feature distributions only. Do not tune on March outcomes or Apr-Jun.
+- Primary analyses: full-March candidate counts/head rates for increasingly strong 3-vs-2 motor-edge states; overlap vs Wave36 March 90R; incremental candidates outside Wave36; ST and boat3-vs-boat1 strength summaries; and frozen Wave36 opponent Top5 capture where a comparable Top5 score can be produced.
+- Goal is structural discovery, not production adoption. March is already research-exposed; Apr-Jun contaminated for this research line; Jul/Aug NON-PRISTINE; September outcomes remain unread.
+- v288 production remains unchanged.
+- Status: `WAVE51_STARTED_MOTOR_FIRST_FULL_UNIVERSE_CANDIDATE_DISCOVERY`.
+
 ## Exact restart point
-1. Preserve the Wave50 February-derived regime definition as a frozen research hypothesis; do not retune the -4/+3.9 and -4.6/+4.633 cuts on later outcomes.
-2. Next useful work is to inspect whether the WEAK regime can be identified/handled as a fail-closed head-selection state in live pre-deadline scoring, while keeping opponent Top5 frozen because the weak-regime misses are primarily head failures.
-3. Any production adoption requires a genuinely untouched future period. Jul/Aug remain NON-PRISTINE and September outcomes remain unread.
+- Execute Wave51 from the frozen Wave21 source artifact with February-derived motor thresholds, quantify incremental March 3-head candidates outside Wave36, and record whether motor-first selection is strong enough to justify an independent model family.
