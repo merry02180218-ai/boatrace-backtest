@@ -1,0 +1,58 @@
+on:
+  push:
+    paths:
+      - 'run_v344_1head_prerace_feature_diagnostic.py'
+      - '.github/workflows/v344-1head-prerace-feature-diagnostic.yml'
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: read
+jobs:
+  diagnostic:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v339-julaug-prepare
+          path: .
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 34787687379
+      - uses: actions/download-artifact@v4
+        with:
+          name: v339-julaug-second
+          path: .
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 34787687379
+      - uses: actions/download-artifact@v4
+        with:
+          name: v339-julaug-base-third
+          path: .
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 34787687379
+      - uses: actions/download-artifact@v4
+        with:
+          name: v339-julaug-third
+          path: .
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 34787687379
+      - uses: actions/download-artifact@v4
+        with:
+          name: v340-1head-adaptive-odds-dutch-sharded
+          path: /tmp/v344/
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 34796402852
+      - run: python run_v344_1head_prerace_feature_diagnostic.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v344-1head-prerace-feature-diagnostic
+          path: /tmp/v344out/
