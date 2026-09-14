@@ -4,7 +4,6 @@ from __future__ import annotations
 from pathlib import Path
 import hashlib
 import json
-import math
 import sys
 
 import numpy as np
@@ -73,6 +72,12 @@ def main() -> None:
     z.loc[~m, 'attack_core'] = np.nan
     pre, selected = eval_cut(z)
     got = met(selected); h = ident(selected)
+    expected = (prod.CURRENT_EXPECTED_PASS_R, prod.CURRENT_EXPECTED_HEAD, prod.CURRENT_EXPECTED_EXACT3)
+    if got != expected or h != prod.CURRENT_EXPECTED_PASS_ID_SHA256:
+        raise AssertionError(
+            f'current v345 identity drift got={got}/{h} '
+            f'expected={expected}/{prod.CURRENT_EXPECTED_PASS_ID_SHA256}'
+        )
 
     selected = selected.copy()
     selected['place'] = selected.race_code.str[8:10]
@@ -92,6 +97,7 @@ def main() -> None:
         'pre_R': len(pre),
         'pass': {'R': got[0], 'head': got[1], 'head_rate': 100*got[1]/got[0], 'exact3': got[2], 'exact3_rate': 100*got[2]/got[0]},
         'pass_identity_sha256': h,
+        'current_profile_identity_verified': True,
         'pre_v345_sentinel_verified': True,
         'pre_v345': {'pre_R':len(old_pre), 'R':PRE_V345[0], 'head':PRE_V345[1], 'exact3':PRE_V345[2], 'sha256':PRE_V345_SHA},
         'race_identity_delta': {'added_R':len(new_ids-old_ids), 'removed_R':len(old_ids-new_ids)},
