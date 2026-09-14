@@ -54,15 +54,6 @@
 - This is NOT an adoption rule because Apr-Jun were already opened. No threshold may be tuned/promoted from these outcomes.
 - Jul/Aug remain NON-PRISTINE and are not used as validation. September outcomes remain unread. v288 untouched.
 
-## 2026-09-15 JST — Wave49 BEFORE WORK
-- User approved proceeding from the Wave48 diagnosis.
-- Objective: build a genuinely new pre-deadline 3-head selection test around the structure `boat3 vs boat2 motor edge + boat2 wall strength + relative ST`, rather than a post-hoc single cutoff on June.
-- Preserve v288 production unchanged and keep Wave36 opponent Top5 logic frozen for the first head-layer test unless the experiment explicitly separates a second opponent-layer diagnostic.
-- Do not tune any threshold from Apr-Jun outcomes. Apr-Jun may be used only as already-open diagnostic reference; Jul/Aug remain NON-PRISTINE; September outcomes remain unread.
-- Prefer parameterization learned from earlier untouched/training periods (Feb -> March OOS) and evaluate March first. Any Apr-Jun readout must be labeled contaminated/diagnostic only, not adoption evidence.
-- Required reporting: exact feature construction, March sample/head-rate/Top5 capture and chronological halves, any comparator versus Wave47/Wave36, exact Run/Job/Artifact IDs if CI is used, commit SHAs, and a strict adoption status.
-- Status: `WAVE49_STARTED_BOAT3_VS_BOAT2_MOTOR_WALL_STRUCTURE`.
-
 ## 2026-09-15 JST — Wave49 AFTER
 - BEFORE handoff commit: `6ff5efa6010d911245a0c873f5cafad9527b9314`.
 - Wave49 script commit: `e8a5ca9b140cb5c2c6e50df55f5b4a57b1ac7b90`; CI workflow commit: `86ec58beee13907c88128a9fe50c1c08da9e7920`.
@@ -80,7 +71,14 @@
 - Interpretation: the Wave48 diagnosis that 3-vs-2 motor edge matters still stands, but compressing it into a generic logistic wall score loses too much structure. The next useful test should keep the motor-edge signal explicit and examine conditional regimes / opponent handling rather than one blended head score.
 - Status: `WAVE49_COMPLETE_NO_ADOPTION`.
 
+## 2026-09-15 JST — Wave50 BEFORE WORK
+- User approved the next step: explicit strong/medium/weak boat3-vs-boat2 motor-edge regimes with frozen Wave36 opponent behavior.
+- Do NOT fit regime thresholds to March outcomes or Apr-Jun. Define regime cuts from the February feature distribution only, using boat3-minus-boat2 motor2 and motor3 rate gaps.
+- Primary March outputs: race count, head rate, Top5 ticket rate, and conditional Top5 capture given boat3 head for each regime; also chronological-half stability where sample size permits.
+- This is a structural diagnostic/research test, not a production candidate. March is already repeatedly researched; Apr-Jun are contaminated for this line; Jul/Aug NON-PRISTINE; September outcomes unread.
+- Preserve v288 production and frozen Wave36 Top5 ordering. No payout/ROI optimization and no threshold search on outcomes.
+- Required record after completion: script/workflow commits, Run/Job/Artifact IDs, exact February regime cuts, March regime table, interpretation, and next restart point.
+- Status: `WAVE50_STARTED_EXPLICIT_3V2_MOTOR_EDGE_REGIMES`.
+
 ## Exact restart point
-1. Preserve Wave48 diagnosis and Wave47 as the stronger research comparator; keep v288 production unchanged.
-2. Next experiment should avoid another generic blended classifier. Test an explicit conditional structure such as strong/medium/weak 3-vs-2 motor-edge regimes combined with frozen opponent behavior, with all cut definitions derived without Apr-Jun outcome fitting.
-3. March can only be treated as repeated research/OOS evidence now; Apr-Jun contaminated for this line, Jul/Aug NON-PRISTINE, September outcomes unread. Any future adoption requires a genuinely untouched period.
+- Implement Wave50 with February-derived explicit motor-edge regimes, run March structural diagnostics only, and record whether opponent capture meaningfully differs across regimes without changing production.
