@@ -23,7 +23,8 @@ motion decomposition:
 This is not a free threshold relaxation: the same numerical residual and
 acceleration caps are applied in a coordinate system compensated for causal
 same-frame shared camera motion. No future frame, race result, boat-number rule,
-or race-specific offset is used.
+or race-specific offset is used. The unchanged four-video September technical
+matrix is the acceptance test for this candidate.
 """
 from __future__ import annotations
 
