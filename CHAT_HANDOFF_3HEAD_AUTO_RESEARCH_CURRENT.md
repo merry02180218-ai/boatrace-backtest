@@ -21,40 +21,22 @@
 - Wave42 factorized second/third:79/160, ROI90.795%, NO_ADOPTION.
 - Wave43 conservative boundary correction: March no-op; Apr-Jun old/new Top5 both87/160. NO_ADOPTION.
 
-## Wave44b player-specific attack mode — COMPLETE / WEAK
-- CI Run34809931603 success; Job103869078993; artifact10334735981; artifact SHA256 510da759ef69fbf34cdcbe233778a726873ebdb3a3902e98754a6631f4a20641.
-- Historical joined rows22074. Feb train381; March OOS445 (MAKURI241 / MAKURI-SASHI204).
-- March ML AUC0.5672 / logloss0.6841 / accuracy53.933%.
-- Individual 1-year prior AUC0.5765 / logloss0.6920.
-- Decision MODE_SIGNAL_WEAK. Apr-Jun not opened.
+## Wave44 attack-mode route — CLOSED
+- Wave44b individual prior AUC0.5765; ML AUC0.5672.
+- Wave44c broad context AUC0.5420.
+- Wave44d best sparse context prior_st_win12 AUC0.5895 (early0.6117 / late0.5691), below promotion AUC0.60.
+- Wave44d CI Run34830607670 / Job103932793240 success at commit44955e231d3f6bab1cf3a7fd72e5536f20bd0c1e.
+- Decision NO_ADOPTION_STOP_ATTACK_MODE. Apr-Jun not opened; September unread.
 
-## Wave44c broad contextual player attack mode — COMPLETE / NO_ADOPTION
-- CI Run34815647859 success at commit 573c44bf632e75f3594d7cdba659d5e9ec4371fb.
-- 69 features = player priors6 + broad static matchup63.
-- Feb train381; March OOS445.
-- March AUC0.5420 / logloss0.7530 / accuracy52.360%.
-- Early AUC0.5467 / late AUC0.5398.
-- Worse than Wave44b ML0.5672 and individual-prior0.5765. Decision MODE_SIGNAL_WEAK / NO_ADOPTION.
-- Context gate failed, therefore Apr-Jun was not opened and Wave36 ranking was not modified. September outcomes unread.
-
-## Wave44d sparse contextual player attack mode — COMPLETE / NO_ADOPTION
-- Implementation commit: 05d1cc6b66eae9d96cdd0c50b0226b14f2e6e2dd.
-- Circular-import fix / successful run commit: 44955e231d3f6bab1cf3a7fd72e5536f20bd0c1e.
-- CI Run34830607670 success; Job103932793240.
-- Feb train381; March OOS445. September outcomes unread.
-- Individual 1-year prior baseline AUC0.5765.
-- Sparse variants:
-  - prior_st12: AUC0.5684 / logloss0.6833 / accuracy53.483% / early0.5502 / late0.5814.
-  - prior_win12: AUC0.5888 / logloss0.6805 / accuracy57.528% / early0.6132 / late0.5660.
-  - prior_motor12: AUC0.5575 / logloss0.6867 / accuracy51.461% / early0.5503 / late0.5632.
-  - prior_st_win12: AUC0.5895 / logloss0.6800 / accuracy57.079% / early0.6117 / late0.5691.
-  - prior_st_motor12: AUC0.5570 / logloss0.6863 / accuracy53.258% / early0.5346 / late0.5776.
-  - prior_st_win_motor12: AUC0.5782 / logloss0.6840 / accuracy57.753% / early0.5907 / late0.5677.
-- Best sparse variant: prior_st_win12, March AUC0.5895.
-- Promotion target AUC>=0.60 not met. Decision NO_ADOPTION_STOP_ATTACK_MODE.
-- Therefore do not open Apr-Jun for Wave44d, do not blend mode probability into Wave36 opponent ranking, and stop this attack-mode route unless a genuinely new hypothesis is introduced.
-- Workflow artifact upload still points at old Wave44b filenames, so no Wave44d artifact was uploaded despite job success; authoritative metrics are in the CI log above.
-- v288 production untouched; Jul/Aug remain NON-PRISTINE; September outcomes remain unread.
+## BEFORE-WORK PLAN — Wave45 Wave36 ranking confidence/margin topology — 2026-09-14
+User approved continuing from a genuinely different structural hypothesis after closing attack-mode.
+1. Keep the frozen Wave36 conditional opponent ranker itself unchanged. Do not train another replacement ranker.
+2. Audit March OOS ranking topology using only Wave36's pre-race pair probabilities: probability mass in Top5, p5-p6 boundary margin, entropy/concentration, top1/top3/top5 cumulative mass, and rank-gap shape.
+3. Test a small predeclared family of confidence/margin rules whose purpose is to identify when Top5 is trustworthy versus ambiguous. Do not use actual winning pair to construct the rule; outcomes are evaluation only.
+4. Primary March gate: preserve/improve Wave36 Top5 hit behavior while isolating a stable high-confidence subset or a narrowly justified ambiguous subset. Require early/late stability; reject rules that merely shrink sample opportunistically.
+5. Do not open Apr-Jun until a March rule passes the predeclared structural gate. If it passes, evaluate Apr-Jun economics once using the existing exact JPY10,000 Dutch settlement and compare against Wave36 and Wave36S-C.
+6. No blind Top6+ expansion: prior diagnostics showed Top6 ROI101.224%, Top7 97.775%, Top8 97.932%; expansion must be conditional on pre-race ambiguity and justified by March first.
+7. v288 untouched; Jul/Aug NON-PRISTINE; September outcomes remain unread.
 
 ## Exact restart point
-- Attack-mode route is closed for now. Resume 3-head research from a different structural hypothesis, while preserving Wave36/Wave36S-C benchmarks and all outcome-blind rules above.
+- Inspect the historical Wave36 script/artifact fields needed to reproduce pair-probability vectors on Feb/March without reading Apr-Jun outcomes, then implement Wave45 confidence/margin topology audit and run CI.
