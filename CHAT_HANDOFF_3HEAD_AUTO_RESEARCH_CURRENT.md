@@ -37,14 +37,24 @@
 - Worse than Wave44b ML0.5672 and individual-prior0.5765. Decision MODE_SIGNAL_WEAK / NO_ADOPTION.
 - Context gate failed, therefore Apr-Jun was not opened and Wave36 ranking was not modified. September outcomes unread.
 
-## BEFORE-WORK PLAN — Wave44d sparse contextual player attack mode — 2026-09-14
-User approved the next direction after Wave44c failure.
-1. Use leakage-safe individual racer tendency (1-year prior AUC0.5765) as the anchor; do not throw all 63 matchup features into one model.
-2. Audit Wave21 exact safe columns and construct a deliberately small context set centered on race mechanics: boat3 vs boat1/2 average-ST gaps, boat1/2 wall strength proxies, boat3 vs boat1/2 national/local win-rate gaps, and boat3 vs boat1/2 motor performance gaps. Avoid outer-boat/global noise unless separately justified.
-3. Test sparse additions conservatively on Feb train -> March OOS only. Report individual-prior baseline plus each small feature-family/addition, March AUC/logloss/accuracy and early/late stability. Do not tune on Apr-Jun.
-4. Promotion target remains March AUC >=0.60, preferably >=0.62, with both halves stable. If no sparse variant beats the 0.5765 individual-prior baseline materially, stop this attack-mode route rather than opening Apr-Jun.
-5. Only if the mode gate passes, softly blend mode probability into frozen Wave36 opponent ranking and apply the existing March ranking promotion gate before any Apr-Jun economics.
-6. v288 untouched; Jul/Aug NON-PRISTINE; September outcomes remain unread.
+## Wave44d sparse contextual player attack mode — COMPLETE / NO_ADOPTION
+- Implementation commit: 05d1cc6b66eae9d96cdd0c50b0226b14f2e6e2dd.
+- Circular-import fix / successful run commit: 44955e231d3f6bab1cf3a7fd72e5536f20bd0c1e.
+- CI Run34830607670 success; Job103932793240.
+- Feb train381; March OOS445. September outcomes unread.
+- Individual 1-year prior baseline AUC0.5765.
+- Sparse variants:
+  - prior_st12: AUC0.5684 / logloss0.6833 / accuracy53.483% / early0.5502 / late0.5814.
+  - prior_win12: AUC0.5888 / logloss0.6805 / accuracy57.528% / early0.6132 / late0.5660.
+  - prior_motor12: AUC0.5575 / logloss0.6867 / accuracy51.461% / early0.5503 / late0.5632.
+  - prior_st_win12: AUC0.5895 / logloss0.6800 / accuracy57.079% / early0.6117 / late0.5691.
+  - prior_st_motor12: AUC0.5570 / logloss0.6863 / accuracy53.258% / early0.5346 / late0.5776.
+  - prior_st_win_motor12: AUC0.5782 / logloss0.6840 / accuracy57.753% / early0.5907 / late0.5677.
+- Best sparse variant: prior_st_win12, March AUC0.5895.
+- Promotion target AUC>=0.60 not met. Decision NO_ADOPTION_STOP_ATTACK_MODE.
+- Therefore do not open Apr-Jun for Wave44d, do not blend mode probability into Wave36 opponent ranking, and stop this attack-mode route unless a genuinely new hypothesis is introduced.
+- Workflow artifact upload still points at old Wave44b filenames, so no Wave44d artifact was uploaded despite job success; authoritative metrics are in the CI log above.
+- v288 production untouched; Jul/Aug remain NON-PRISTINE; September outcomes remain unread.
 
 ## Exact restart point
-- Implement Wave44d sparse contextual audit on research/3head-player-attack-mode using the existing Wave21 artifact and Wave44b prior-history construction, then run CI and compare March OOS variants.
+- Attack-mode route is closed for now. Resume 3-head research from a different structural hypothesis, while preserving Wave36/Wave36S-C benchmarks and all outcome-blind rules above.
