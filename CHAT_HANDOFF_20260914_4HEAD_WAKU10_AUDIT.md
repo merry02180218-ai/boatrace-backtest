@@ -127,3 +127,16 @@ Before any production change, run a **boat3 direct-Waku10 decomposition** on the
 Keep downstream policy frozen. Jul/Aug score stress only, Sep outcome blind, production unchanged.
 
 Status: CORE_DECOMPOSITION_COMPLETE
+
+## BOAT3 DIRECT-WAKU10 DECOMPOSITION — BEFORE
+
+- Start the next research unit exactly from the completed CORE decomposition above.
+- Objective: determine whether the strong `B3_ONLY` result is mainly driven by boat3 ST, boat3 WR, boat3 SR, or a boat3-only interaction.
+- Variants on the identical minimal non-Waku base: `B3_WR_ONLY`, `B3_ST_ONLY`, `B3_SR_ONLY`, `B3_WR_ST`, `B3_WR_SR`, `B3_ST_SR`, `B3_ALL`.
+- Keep rolling training/scoring, v264 -> v267 -> v271 -> v273 downstream chain, S/A thresholds, opponent/ticket policy, and archived-odds ROI calculation frozen.
+- Primary selection evidence: Apr-Jun 2026 S layer (R, head4 rate, trifecta hit rate, proxy ROI, avg composite odds), with A/S+A secondary.
+- Jul/Aug 2026 remain NON-PRISTINE and may be used only for score-distribution stress; their outcomes are forbidden for selection.
+- September 2026 outcomes remain unread/unused.
+- Production remains unchanged. No production promotion from this work unit without explicit approval.
+
+Status: BOAT3_DECOMPOSITION_BEFORE_RECORDED
