@@ -80,5 +80,23 @@
 - Required record after completion: script/workflow commits, Run/Job/Artifact IDs, exact February regime cuts, March regime table, interpretation, and next restart point.
 - Status: `WAVE50_STARTED_EXPLICIT_3V2_MOTOR_EDGE_REGIMES`.
 
+## 2026-09-15 JST — Wave50 AFTER
+- BEFORE handoff commit: `33c75b4a4df9880d24b7cab9f62ea296c9482721`.
+- Wave50 research script commit: `f070b53445ab59968c48e87c2deff89b6342162e`.
+- Creating/repointing a GitHub Actions workflow for Wave50 was blocked by the platform safety checker, so no Wave50 CI Run/Job/Artifact IDs are claimed.
+- To avoid inventing CI evidence, Wave50 was executed directly from the exact frozen source artifact used by Wave48: source Run `34754875342`, Artifact `10317157868`, with exact v288 94-race exclusion. Result JSON was committed as `research_v289_3head_wave50_motor_edge_regimes_result.json` in commit `e60dda90f7f44068e5f5d6ace592bd3182a162f3`.
+- Regime cuts were derived from February feature distributions only, not outcomes: motor2 gap low/high = `-4.0 / +3.9`; motor3 gap low/high = `-4.6 / +4.633333`.
+- Joint regime definition: STRONG when both motor2 and motor3 gaps are above the February upper-tercile cuts; WEAK when both are below the lower-tercile cuts; otherwise MEDIUM.
+- March Wave36 baseline reproduced exactly: 90R / 38 head hits = 42.222%; 24 ticket hits = 26.667%; conditional Top5 capture given head3 = 63.158%.
+- STRONG: 49R / 22 head hits = 44.898%; Top5 13/49 = 26.531%; conditional capture 59.091%. Early head 42.857%, late head 47.619%. Mean motor2 gap +22.245, mean motor3 gap +27.031.
+- MEDIUM: 30R / 14 head hits = 46.667%; Top5 9/30 = 30.000%; conditional capture 64.286%. Early/late head both 46.667%. Mean motor2 gap +0.114, mean motor3 gap +0.996.
+- WEAK: 11R / 2 head hits = 18.182%; Top5 2/11 = 18.182%. Only two head wins occurred and both were inside frozen Top5, so conditional capture = 100%; the dominant failure is head selection, not opponent capture. Early 0/2 heads; late 2/9 = 22.222%. Mean motor2 gap -10.664, mean motor3 gap -11.264.
+- Key structural finding: the weak joint 3-vs-2 motor-edge regime is a clear head-failure zone in March. Strong/medium regimes are materially healthier, while weak collapses far below the 42.222% baseline.
+- This supports the Wave48 mechanism qualitatively, but remains `DIAGNOSTIC_ONLY_NO_PRISTINE_PERIOD` because March is repeatedly researched and no genuinely untouched period is available. Do not promote a weak-regime exclusion into production from this evidence.
+- Apr-Jun were not used for threshold fitting or reopened for optimization; Jul/Aug were not used; September outcomes remain unread. v288 production unchanged.
+- Status: `WAVE50_COMPLETE_DIAGNOSTIC_WEAK_3V2_MOTOR_EDGE_HEAD_FAILURE_CONFIRMED`.
+
 ## Exact restart point
-- Implement Wave50 with February-derived explicit motor-edge regimes, run March structural diagnostics only, and record whether opponent capture meaningfully differs across regimes without changing production.
+1. Preserve the Wave50 February-derived regime definition as a frozen research hypothesis; do not retune the -4/+3.9 and -4.6/+4.633 cuts on later outcomes.
+2. Next useful work is to inspect whether the WEAK regime can be identified/handled as a fail-closed head-selection state in live pre-deadline scoring, while keeping opponent Top5 frozen because the weak-regime misses are primarily head failures.
+3. Any production adoption requires a genuinely untouched future period. Jul/Aug remain NON-PRISTINE and September outcomes remain unread.
