@@ -3,6 +3,8 @@
 ## Policy
 - Branch research/3head-v289-addon-expansion; newest GitHub state wins.
 - Fixed v288 baseline 94R /52 hits / ROI172.560638%.
+- Full research universe is Wave20 every available six-boat race Feb 1-Aug 31 2026, no v243/PRE/bet/route candidate prefilter.
+- Wave20 Run34749917116 success: 32,111R; Feb4100 Mar4607 Apr4244 May4832 Jun4488 Jul4920 Aug4920; missing program date 2026-06-17.
 - Pre-deadline features only; JPY10,000 per selected race. Jul/Aug NON-PRISTINE. September forbidden.
 
 ## Wave36 benchmark
@@ -20,23 +22,19 @@
 - Wave42 factorized second/third:79/160, ROI90.795%, NO_ADOPTION.
 
 ## Wave43 conservative boundary correction — COMPLETE / NO_ADOPTION
-- Plan commit6657d886e6ec0b8bce57c4113fd9275530b8fa8a.
-- CI Run34793612036 success; Job103822377750; artifact10328797771.
+- Prior successful CI Run34793612036; Job103822377750; artifact10328797771.
 - March and Apr-Jun correction collapsed to no-op; Apr-Jun old/new Top5 both87/160. NO_ADOPTION.
+- A later duplicate workflow Run34794147756 at head 549a82b05d2bd61018fb551d3acf541c0a1cfabe FAILED in plumbing only: pandas length mismatch assigning March `new_rank` because filtered March rows were assigned through the unfiltered month mask. This does not supersede the prior successful scientific result.
+- Auto-resume action: fix only this assignment/index plumbing, rerun to green, preserve Wave43 NO_ADOPTION unless exact rerun contradicts prior result.
 
 ## User hypothesis / research pivot — ATTACK MODE FIRST
-- User correctly raised that opponent ordering may fundamentally depend on whether boat3 wins by MAKURI versus MAKURI-SASHI. This is now the highest-priority structural hypothesis and supersedes the generic miss-subgroup audit.
-- Rationale to test, not assume: MAKURI destroys/changes the inside wall and may favor different second/third topology (outer follow, surviving inner boat, attack-line relationships), while MAKURI-SASHI passes through the gap and can preserve different inside/outside boats. A single conditional 20-class ranker may be averaging these distinct mechanisms.
-- BEFORE any Apr-Jun opening, inspect available source columns and historical result labels to determine whether actual winning technique (`kimarite`/decision) exists for training labels and, separately, which pre-deadline features can predict MAKURI vs MAKURI-SASHI. Actual kimarite may be used only as historical target/diagnostic, never as a live input.
-- Build February training diagnostics split by actual boat3 MAKURI / MAKURI-SASHI; compare second-place identity, third-place identity, pair topology, current Wave36 actual-pair rank and Top5 capture.
-- March OOS: train an attack-mode predictor using February only and evaluate mode classification plus opponent ranking by predicted mode. No actual March kimarite may be used to choose tickets; it is evaluation label only.
-- Candidate architecture: P(mode | pre-deadline X) then mode-specific P(ordered opponent pair | boat3 wins, mode), optionally mixture-weighted rather than hard routing. Compare against frozen Wave36 ranking.
-- Freeze all architecture/hyperparameters using Feb design + March OOS only. Require March improvement with existing-hit retention and early/late support before opening Apr-Jun.
-- If source lacks reliable kimarite labels, stop and document that blocker rather than infer actual attack mode from post-race finishing order.
-- Production v288 untouched; Wave36 head gate unchanged initially; Top5 and JPY10,000 Dutch unchanged for evaluation. Jul/Aug NON-PRISTINE only; September forbidden/unread.
+- Highest-priority structural hypothesis: opponent ordering may depend on whether boat3 wins by MAKURI versus MAKURI-SASHI.
+- Actual winning technique may be historical target/diagnostic only, never live input.
+- First inspect Wave21 source schema/build pipeline for a reliable kimarite/winning-technique label. If absent, document blocker and do not infer attack mode from finishing order.
+- If present, compare Feb/March opponent topology and Wave36 Top5 capture by attack mode, then train Feb-only pre-deadline mode predictor + mode-specific pair ranker; select/freeze using March OOS only.
+- Open Apr-Jun only after March supports it. Jul/Aug NON-PRISTINE only; September forbidden/unread.
 
 ## Exact restart point
-1. Inspect Wave21 source schema/build pipeline for reliable actual kimarite / winning-technique labels.
-2. If present, quantify Feb+March MAKURI vs MAKURI-SASHI opponent topology and Wave36 rank performance separately.
-3. Train Feb-only pre-deadline mode predictor + mode-specific opponent ranker; select/freeze on March OOS only.
-4. Only if March supports it, one-shot Apr-Jun evaluation; update handoff afterward.
+1. Fix and rerun failed duplicate Wave43 plumbing only; record green rerun.
+2. Immediately continue ATTACK MODE FIRST schema inspection; do not spend new tuning cycles on generic Wave43 rerank.
+3. If reliable kimarite exists, launch Feb/March-only attack-mode diagnostic/predictor. If not, record blocker and choose another pre-April structural target.
