@@ -23,14 +23,36 @@
 - Monthly: Apr49R/12/ROI111.384%; May63R/15/124.390%; Jun62R/9/53.623%.
 - Decision NO_ADOPTION. Do not retune Wave47 on Apr-Jun.
 
-## BEFORE-WORK PLAN — Wave48 June failure diagnostic — 2026-09-14
-1. User hypothesis: Wave47 could become useful if the June collapse is understood and a live-identifiable failure regime exists.
-2. This is DIAGNOSTIC ONLY. Apr-Jun outcomes are already opened/contaminated for Wave47; do not promote or retune a production rule from this audit.
-3. Reproduce the frozen Wave47 Apr-Jun selections and decompose each month into: boat3 head rate, conditional frozen-Wave36 Top5 capture given boat3 head, ticket hit rate, average/median winning odds for hits/misses where available, and exact payout contribution.
-4. Compare pre-race distributions across Apr/May/Jun for Wave36 p3, frozen Wave47 motor-zone score, boat3-vs-1/2/4 motor gaps, ST gaps, national/local win-rate gaps, and venue/race-number composition. Outcome labels may be used only to describe failure, never to search/choose a new cutoff.
-5. Determine whether June loss is primarily (A) head-selection failure, (B) opponent Top5 failure conditional on head, (C) payout/odds economics, or a mixture.
-6. Report candidate pre-race drift indicators only if they are visible without outcomes and show a clear June distribution shift. Mark them HYPOTHESIS_FOR_FUTURE_PRISTINE_TEST, not adoption rules.
-7. No Jul/Aug validation because NON-PRISTINE. September outcomes remain unread. v288 untouched.
+## Wave48 June failure diagnostic — COMPLETE / DIAGNOSTIC ONLY
+- BEFORE-WORK plan commit: 3731e067bb96c209309d0ad3c373e5b31b41d61c.
+- Diagnostic script commit: 093d7032d466dcf7b9a9a23bf25ce0278b43d147.
+- GitHub Actions reroute attempts did not execute Wave48: Run34848481844 / Job103990131077 completed successfully but actually ran the old Wave44c entrypoint. Further workflow/entrypoint rewrites were blocked by the platform safety checker, so no CI result is claimed for Wave48.
+- Final diagnostic was executed directly from the exact source artifact `3head-wave21-allrace-source-build` (run34754875342, artifact10317157868, artifact digest sha256:01d84cc2b5b63ae9ec240c730cd556c168caeae184355fd6d74e8beb9a4bf8b1) with the repository Wave48 logic and exact v288 94-race exclusion.
+- Reproduced frozen Wave47 sample exactly: March Wave36 universe 90R; frozen zone cutoff 0.5260507011821546; Apr49R / May63R / Jun62R = 174R total.
+
+### Failure decomposition
+- Apr+May combined: 112R / boat3 head 52 = 46.429%; ticket hits27 =24.107%; frozen Wave36 Top5 capture conditional on boat3 head =51.923%; ROI118.700%; profit +209,440 yen.
+- June: 62R / boat3 head21 =33.871%; ticket hits9 =14.516%; conditional Top5 capture =42.857%; ROI53.623%; profit -287,540 yen.
+- June vs Apr+May head-rate change: -12.557pt.
+- June vs Apr+May conditional Top5 capture change: -9.066pt.
+- Classification: **MIXED_HEAD_AND_OPPONENT_FAILURE**. The June collapse is not payout-only; both the 3-head selection layer and the opponent Top5 layer weakened.
+
+### Largest visible pre-race distribution shifts, June vs Apr+May
+- boat3 minus boat2 motor 3-place rate gap: standardized shift -0.571; mean +29.261 -> +16.448.
+- frozen Wave47 motor-zone score: shift -0.550; mean 0.627606 -> 0.579885.
+- boat3 minus boat2 motor 2-place rate gap: shift -0.511; mean +23.8625 -> +13.1323.
+- boat3 minus boat4 national win-rate gap: shift +0.468; mean +1.4911 -> +2.1577.
+- boat3 minus boat2 average-ST gap: shift -0.353; mean -0.0190 -> -0.0308 (boat3 relatively faster on paper, so ST gap alone does not explain the collapse).
+- boat3 minus boat4 average-ST gap: shift -0.348.
+- boat3 minus boat2 national win-rate gap: shift +0.324.
+- boat3 minus boat1 motor 2-place rate gap: shift -0.295.
+- Wave36 p3 mean also softened: 0.468656 -> 0.444980; standardized shift -0.291.
+
+### Interpretation / future-test hypothesis only
+- Strongest diagnostic clue is the **2号艇とのモーター優位の縮小** together with lower overall motor-zone score. June still often had favorable ST/win-rate gaps, but the motor edge versus boat2 was materially weaker.
+- Therefore a future pristine hypothesis should examine whether 3号艇頭 selection needs a stronger `3 vs 2 motor edge` / wall-mechanism condition, and whether low zone-score regimes also need stricter opponent handling.
+- This is NOT an adoption rule because Apr-Jun were already opened. No threshold may be tuned/promoted from these outcomes.
+- Jul/Aug remain NON-PRISTINE and are not used as validation. September outcomes remain unread. v288 untouched.
 
 ## Exact restart point
-- Implement Wave48 diagnostic using the already-open Apr-Jun Wave47 holdout rows, run CI, classify the June failure mechanism, and record future-test hypotheses without retuning Wave47.
+- Design a future-pristine hypothesis from Wave48 without fitting Apr-Jun cutoffs: prioritize boat3-vs-boat2 motor-edge/wall structure and separate head-selection vs opponent-layer handling. Validate only on a genuinely new untouched period when available; do not retrofit Wave47 to June.
