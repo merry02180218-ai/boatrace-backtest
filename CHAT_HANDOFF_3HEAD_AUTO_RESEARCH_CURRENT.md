@@ -13,20 +13,17 @@
 ## Closed research
 - Wave39/40/41/42/43 rank replacements: NO_ADOPTION.
 - Wave44 attack-mode route: best March AUC0.5895, below 0.60 gate. CLOSED.
-- Wave45 confidence/margin: March 90R/24 Top5 hits; best confidence subset had zero lift. NO_ADOPTION.
+- Wave45 confidence/margin: zero lift. NO_ADOPTION.
+- Wave46 second/third role factorization: March 16/90 role, 21/90 blend vs Wave36 24/90. NO_ADOPTION.
 
-## Wave46 second-place / third-place role factorization — COMPLETE / NO_ADOPTION
-- Plan commit ce8849c5f343255b952b28220b704f5145c46a5b.
-- Implementation commit 99696399f274aaf6012744e2153b4031d187d8f8.
-- CI trigger commit 6bfb760e8c32dca0316a076da50a07c939d8b519.
-- Run34835199595 / Job103947329456: success.
-- March gate fixed p3>=0.365448; 90 rows.
-- Frozen Wave36 baseline Top5: 24/90 = 26.667%.
-- Role-factorized Top5: 16/90 = 17.778%.
-- 50/50 blend with frozen Wave36: 21/90 = 23.333%.
-- Best candidate was blend: gained 3 old misses but lost 6 old hits, net -3; early26.667%, late20.000%.
-- Promotion gate failed. Decision NO_ADOPTION.
-- Apr-Jun not opened. Jul/Aug remain NON-PRISTINE. September outcomes remain unread. v288 untouched.
+## BEFORE-WORK PLAN — Wave47 head-condition zoning — 2026-09-14
+1. Stop modifying opponent ranking. Freeze Wave36 opponent Top5 and focus on whether a race should be selected at all.
+2. Structural hypothesis: Wave36's 3-head signal should be stronger in specific matchup zones defined by boat3 relative to boats1/2/4: b3-vs-b2 average-ST gap and wall weakness, b3-vs-b1 escape resistance, b3-vs-b4 outside attack pressure, and motor-performance gaps.
+3. Use only pre-race card/static columns. Feb is training/reference; March is the only OOS evaluation. Apr-Jun outcomes stay unopened until a March zoning gate passes.
+4. Predeclare a small interpretable feature set and regularized head classifier / score adjustment; no broad feature fishing. Compare frozen Wave36 p3>=0.365448 against sparse zone variants on March.
+5. Primary March gate is selection quality, not opponent-rank replacement: retain a meaningful sample (target >=45 races), improve 3-head strike rate by at least +5 percentage points relative to the same Wave36 March candidate universe, and avoid early/late collapse. Also report Top5 ticket hit rate on selected races using frozen Wave36 ranking.
+6. If no variant passes, close Wave47 without Apr-Jun. If one passes, freeze the rule and open Apr-Jun once for exact JPY10,000 Dutch economics versus Wave36 and Wave36S-C.
+7. v288 untouched; Jul/Aug NON-PRISTINE; September outcomes unread.
 
 ## Exact restart point
-- Wave46 is closed. Next research must use a different pre-race structural hypothesis and must beat Wave36 on March before Apr-Jun is opened.
+- Implement Wave47 sparse head-condition zoning from Wave21 source, Feb->March OOS only, preserving frozen Wave36 opponent ranking and cutoff reference.
