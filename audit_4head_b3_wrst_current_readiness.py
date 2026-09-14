@@ -4,15 +4,23 @@
 Verification-only. This gate combines the proven source contracts and refuses to
 claim READY when frozen v283 exact-current inputs would require September race
 outcomes. Production is never authorized here.
+
+This audit intentionally uses only the Python standard library so CI does not
+need the full model-runtime dependency stack merely to verify the frozen schema.
 """
 from __future__ import annotations
 
 import json
+from pathlib import Path
 
-from build_4head_env_entry_live import PRIMITIVES as ENV_PRIMITIVES
-from head4_v291_downstream_inference import load_artifact
-
-ARTIFACT = "artifacts/head4_v291_downstream_20260630.json"
+ARTIFACT = Path("artifacts/head4_v291_downstream_20260630.json")
+ENV_PRIMITIVES = [
+    "preview_comp", "relative_deg", "wind_speed", "wind_adjust_points",
+    "entry_confirmed_same", "entry_course_preview", "has_orig", "has_stt",
+    "has_tkz", "tilt", "tilt_bonus", "v91_ex", "v91_st_corr", "v91_st_raw",
+    "v91_straight", "score_BASE_v91", "score_CORR20_v91", "score_RAW20_v91",
+    "score_wind_v83", "history_adjust_online", "history_pct_online",
+]
 BLOCKED_V283 = [
     "pref_pl_all_p2",
     "pref_pl_all_win",
@@ -23,9 +31,10 @@ BLOCKED_V283 = [
 
 
 def main() -> None:
-    artifact = load_artifact(ARTIFACT)
+    artifact = json.loads(ARTIFACT.read_text(encoding="utf-8"))
     second = list(artifact.get("v283_SECOND", {}).get("features") or [])
     assert len(ENV_PRIMITIVES) == 21
+    assert len(set(ENV_PRIMITIVES)) == 21
     assert len(second) == 25
     assert all(x in second for x in BLOCKED_V283)
     exact_v283 = [x for x in second if x not in BLOCKED_V283]
