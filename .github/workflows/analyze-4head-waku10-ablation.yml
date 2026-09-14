@@ -35,14 +35,14 @@ jobs:
       - name: Run three ablation variants through frozen downstream chain
         run: |
           set -euo pipefail
-          mkdir -p waku10_ablation_results
+          mkdir -p waku10_ablation_results diagnostic_logs
           for V in FULL_WAKU10 NO_WAKU10 CORE_WAKU10; do
             echo "===== $V ====="
-            python analyze_4head_waku10_ablation_20260914.py --variant "$V" --out analysis_v250_4head_rebuild_baseline.csv --meta "audit_4head_waku10_ablation_${V}.json"
-            python analyze_v264_4head_feature_exhaustive.py
-            python analyze_v267_4head_v260_consensus_overlay.py
-            python analyze_v271_4head_arank_expansion.py
-            python freeze_4head_v273_a_live_artifact.py
+            python analyze_4head_waku10_ablation_20260914.py --variant "$V" --out analysis_v250_4head_rebuild_baseline.csv --meta "audit_4head_waku10_ablation_${V}.json" 2>&1 | tee "diagnostic_logs/${V}_v250.log"
+            python analyze_v264_4head_feature_exhaustive.py 2>&1 | tee "diagnostic_logs/${V}_v264.log"
+            python analyze_v267_4head_v260_consensus_overlay.py 2>&1 | tee "diagnostic_logs/${V}_v267.log"
+            python analyze_v271_4head_arank_expansion.py 2>&1 | tee "diagnostic_logs/${V}_v271.log"
+            python freeze_4head_v273_a_live_artifact.py 2>&1 | tee "diagnostic_logs/${V}_v273.log"
             mkdir -p "waku10_ablation_results/$V"
             cp analysis_v250_4head_rebuild_baseline.csv "waku10_ablation_results/$V/"
             cp "audit_4head_waku10_ablation_${V}.json" "waku10_ablation_results/$V/"
@@ -89,11 +89,15 @@ jobs:
           Path('audit_4head_waku10_ablation.json').write_text(json.dumps(audit,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
           print(out[out.month=='ALL_APR_JUN'].to_string(index=False))
           PY
-      - uses: actions/upload-artifact@v4
+      - name: Upload Waku10 ablation outputs and diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
           name: head4-waku10-ablation
+          if-no-files-found: warn
           path: |
             waku10_ablation_results/**
+            diagnostic_logs/**
             analysis_4head_waku10_ablation_summary.csv
             analysis_4head_waku10_ablation_nonpristine_score_stress.csv
             audit_4head_waku10_ablation.json
