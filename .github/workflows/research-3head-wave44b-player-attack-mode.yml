@@ -1,0 +1,34 @@
+name: research-3head-wave44b-player-attack-mode
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/3head-player-attack-mode]
+    paths:
+      - 'research_v289_3head_wave44b_player_attack_mode.py'
+      - '.github/workflows/research-3head-wave44b-player-attack-mode.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas numpy scikit-learn
+      - name: Download Wave21 source artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34754875342 -n 3head-wave21-allrace-source-build -D /tmp/w21
+          cp /tmp/w21/analysis_v289_3head_wave21_allrace_feature_settled.csv .
+      - run: python research_v289_3head_wave44b_player_attack_mode.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 3head-wave44b-player-attack-mode
+          path: |
+            analysis_v289_3head_wave44b_player_attack_mode.csv
+            research_v289_3head_wave44b_player_attack_mode.json
+            research_v289_3head_wave44b_player_attack_mode.md
+          if-no-files-found: warn
