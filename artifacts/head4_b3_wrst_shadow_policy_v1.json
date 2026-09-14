@@ -1,0 +1,84 @@
+{
+  "policy_id": "HEAD4_B3_WR_ST_SHADOW_V1",
+  "status": "RESEARCH_SHADOW_ONLY",
+  "production_policy_unchanged": "HEAD4_V291_COMP7",
+  "selected_variant": "B3_WR_ST",
+  "selection_provenance": {
+    "official_decomposition_run_id": 34818957616,
+    "official_decomposition_head_sha": "8b9ea8b1bda75d82acaa4f2741540571bd0f0203",
+    "source_artifact_id": 10337984670,
+    "overlap_audit_after_commit": "fabfd15bb397f5f7e986decfad13c930dcf0d3fe",
+    "historical_holdout_audit_after_commit": "7df8e10ffa3a5f5a7c045cbc9dd787225cad5df0"
+  },
+  "head_model": {
+    "training_label_start": "2025-12-01",
+    "training_label_cutoff": "2026-06-30",
+    "model": "median_impute_standardize_logistic_regression",
+    "logistic_C": 0.35,
+    "pre_features": [
+      "racer4",
+      "motor4_2ren",
+      "motor4_hist",
+      "turnfoot4_prior",
+      "b3_waku_wr",
+      "b3_waku_st"
+    ],
+    "post_extra_features": [
+      "ex_st_rank4",
+      "ex_st_4",
+      "ex_st_edge_4v3",
+      "orig_straight4",
+      "orig_lap4",
+      "orig_turn4",
+      "tilt4"
+    ],
+    "june_2026_walkforward_reference": {
+      "rounding_decimals": 10,
+      "rows_per_score": 4488,
+      "pre_sha256": "04d18ebd46ebc5249622a4a3d54a2549f941a5e93a41f36333de18e96d71dd1d",
+      "post_sha256": "a1d6d98c902a99aff58b2d36ee2b1b1eb861c0f91c1476ad6b7a90a6d39222d7"
+    }
+  },
+  "s_gate": {
+    "PRE_gte": 0.28,
+    "POST_gte": 0.25,
+    "ENV_ENTRY_gte": 0.22479
+  },
+  "downstream": {
+    "env_entry_artifact": "artifacts/head4_v291_downstream_20260630.json",
+    "opponent_order": "frozen v283 TOP2XTOP2 alpha2=0.60",
+    "market_evaluation": "shadow observation only; official pre-deadline odds snapshot may be recorded but this policy does not place a wager"
+  },
+  "prospective_freeze_requirements": [
+    "race_code",
+    "target_date",
+    "generated_at_jst",
+    "decision_time_jst",
+    "deadline_jst",
+    "PRE",
+    "POST",
+    "ENV_ENTRY",
+    "S_eligible",
+    "input_provenance",
+    "input_sha256",
+    "decision_record_sha256"
+  ],
+  "fail_closed": {
+    "missing_required_feature": true,
+    "missing_or_unproven_post_source": true,
+    "late_after_deadline": true,
+    "result_or_payout_input_detected": true,
+    "incomplete_official_odds_snapshot_if_market_logged": true
+  },
+  "outcome_guards": {
+    "jul_aug_2026_outcomes_allowed": false,
+    "september_2026_outcomes_allowed": false,
+    "target_race_result_or_payout_allowed_before_freeze": false,
+    "prospective_settlement_allowed_only_after_pre_result_record_is_frozen": true
+  },
+  "notes": [
+    "B3_WR_ST is frozen as a research candidate, not production.",
+    "No historical untouched validation window remains; clean evidence must be prospective.",
+    "The shadow path must never impute or fabricate unavailable current-day exhibition sources merely to obtain a decision."
+  ]
+}
