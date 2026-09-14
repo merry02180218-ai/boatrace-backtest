@@ -46,3 +46,35 @@
 - This work unit will recover the exact Wave46 job/artifact/results, compare them against the frozen Wave36 benchmark and v288 production baseline, and decide the next research step without changing production.
 - Guardrails remain unchanged: Jul/Aug NON-PRISTINE; September outcomes forbidden/unread; no Apr-Aug tuning; no production change during this audit.
 - Status: `WAVE46_RESULT_AUDIT_STARTED`.
+
+## 2026-09-15 JST — WAVE46 RESULT AUDIT AFTER
+- GitHub Actions Run `34798878358` completed `success`.
+- Job `research`: `103837304227` (`success`).
+- Head SHA: `9c61979a43b54560952bb1589c3f85dcb63ec68a`.
+- Artifact: `3head-wave46-selective-ticket-compression`, Artifact ID `10330378720`, digest `sha256:9d540f66672a7e999ffa07b1a3519580bf49d1747242cd0591d8031a9a905441`.
+- Frozen March comparator: 90 races / 38 head hits / 24 Top5 ticket hits; chronological halves 14 early + 10 late.
+- Wave46 gate candidates:
+  - Top3 q50: 19/24 retained, avg 4.0 tickets.
+  - Top3 q60: 21/24, avg 4.2.
+  - Top3 q70: 21/24, avg 4.4.
+  - Top3 q80: 22/24, avg 4.6.
+  - Top3 q90: 23/24, avg 4.8.
+  - Top4 q50: 20/24, avg 4.5.
+  - Top4 q60: 22/24, avg 4.6.
+  - Top4 q70: 22/24, avg 4.7.
+  - Top4 q80: 22/24, avg 4.8.
+  - Top4 q90: 23/24, avg 4.9.
+- Predeclared gate required >=23/24 retained, <=1 hit loss in each chronological half, and avg tickets <=4.6. No candidate satisfies all conditions.
+- Therefore `march_gate_pass=false` / `decision=NO_ADOPTION_MARCH_GATE`.
+- By design Apr-Jun payout/ROI evaluation was not opened after the failed March gate; Jul/Aug were not used for tuning; September outcomes remain forbidden/unread.
+- Interpretation: simple confidence-based Top3/Top4 compression cannot reduce average ticket width enough without losing too many correct combinations. Preserve frozen Wave36 ordering and Top5 benchmark; do not adopt Wave46.
+- Next research direction should return to the user's opponent-selection hypothesis while respecting the Wave44 failure: do not use or predict `決まり手` as an input. Test a distinct pre-deadline-only opponent-topology approach that allows different opponent ordering behavior for makuri-like vs makuri-sashi-like observable race states, using only features available before deadline and an OOS March gate before any Apr-Jun money evaluation.
+- Production v288 remains unchanged.
+- BEFORE commit for this resumed audit: `ee2313a165a048452dfc2c8881438b9b75b662b3`.
+- Status: `WAVE46_COMPLETE_NO_ADOPTION_NEXT_OPPONENT_TOPOLOGY_RESEARCH_PENDING`.
+
+## Updated exact restart point
+1. Design the next opponent-topology experiment as a genuinely distinct walk-forward test, not another small rerank/threshold tweak.
+2. Preserve Wave36 head selection, p3 cutoff, JPY10,000/race, and exact v288 exclusion; use pre-deadline features only.
+3. Use March OOS as the first gate; only if it passes open Apr-Jun pristine evaluation. Jul/Aug remain NON-PRISTINE and September outcomes remain forbidden/unread.
+4. Record BEFORE/AFTER, Run/Job/Artifact IDs, commit SHAs, exact gate/result, and adoption decision in this handoff.
