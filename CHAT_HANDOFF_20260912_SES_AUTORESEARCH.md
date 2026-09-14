@@ -4,15 +4,15 @@ Updated: 2026-09-14 JST
 Repo: `merry02180218-ai/boatrace-backtest`
 
 ## Purpose
-Continue BOATCAST start-exhibition video development until immediate post-exhibition live use is reliable: result-blind FastClip -> automatic six-boat seed -> automatic tracking -> SES -> later model re-evaluation, with no manual seed editing.
+Continue BOATCAST start-exhibition video research until immediate post-exhibition live use is reliable: result-blind FastClip -> automatic six-boat seed -> automatic tracking -> SES -> model re-evaluation, with no manual/race-specific edits.
 
 ## Non-negotiable rules
-- Latest GitHub code/results override this handoff and old chat memory.
-- Never inspect race results before locking exhibition-only judgement on blind/pristine samples.
+- Latest GitHub code/artifacts override old prose/chat memory.
+- Never inspect race results before locking exhibition-only judgement on blind samples.
 - 2026-09-10 Kiryu3/6/9 results remain unread; preserve blindness.
 - 2026-09-09 Kiryu12 and 2026-09-10 Kiryu12 are exposed technical samples only.
-- July/August 2026 are NON-PRISTINE/research-only.
-- Never weaken fail-closed gates merely to obtain accepted=true.
+- July/August 2026 are NON-PRISTINE.
+- Never relax fail-closed/NCC/geometry/motion gates merely to obtain accepted=true.
 - Never hard-code boat-number/race-specific offsets.
 - accepted=true is necessary but not sufficient: trajectories must remain physically sane/on-frame and preserve identity.
 - Final race-by-race operation should be persistent on Japan self-hosted PC; Actions are validation/logging.
@@ -21,72 +21,56 @@ Continue BOATCAST start-exhibition video development until immediate post-exhibi
 
 ## Seed state
 Current seed remains `auto_seed_exhibition_motion_v17.py`, commit `3f628a0099a5b93b38da7a9be8acdbf89fdcef2b`.
-Evidence continues to indicate the principal blocker is tracker identity/path preservation, not race-specific seed movement.
+Evidence still indicates the principal blocker is tracker identity/path preservation rather than seed placement.
 
 ## Retained tracker progression
 - v8 joint per-frame assignment: Kiryu12 std/var passed, Kiryu3/6 failed.
 - v9 immutable appearance memory: rejected.
 - v10 fleet-affine y reference: rejected.
-- v11 slit-motion corridor: safe but insufficient.
-- v12 short motion memory: failed safely.
-- v13-v18 explored multi-hypothesis/fixed-state/DP variants; all exhausted safe temporal paths without justifying gate relaxation.
-- v18 authoritative run `34826924155`: all four failed closed despite 96 safe current-frame states; conclusion was that global current-frame pruning loses coherent reachable paths.
+- v11-v18 progressively added result-blind motion/path constraints and multi-hypothesis temporal search; all failed safely without justifying threshold relaxation.
+- v19 predecessor-conditioned beam, run `34835647158`: all four failed closed after healthy beams eventually reached a frame with zero feasible expansion. Diagnosis: immutable slit appearance becomes proposal-brittle after appearance phase shift.
 
-## v19 completed audit — authoritative
-File `track_exhibition_boats_v19.py`, implementation commit `a305634c8a136e40165303f3df9c88cc4af591bd`.
-Workflow `.github/workflows/regress-exhibition-seed17-track19.yml`.
-Run **`34835647158`**.
-
-All four unchanged technical videos reached tracker v19 and failed closed; FastClip and seed v17 succeeded. This is algorithmic/path-proposal failure, not an import/environment failure. No results were read and no confidence/safety gate was relaxed.
-
-Artifacts:
-- Kiryu3: **`10344470949`**
-- Kiryu6: **`10344846076`**
-- Kiryu12 standard: **`10344131902`**
-- Kiryu12 varied: **`10344206101`**
-
-Key diagnosis from logs/artifacts:
-- v19 successfully retained a healthy predecessor-conditioned beam (often the full 24 paths) immediately before failure.
-- At a later single frame, every surviving predecessor produced zero feasible expansion.
-- Therefore simply enlarging beam width or loosening NCC/motion/geometry gates is not the principled fix.
-- The bottleneck is current-frame proposal availability under immutable slit appearance after appearance phase shift; outer-row identity remains the critical case (Kiryu3 boat6; Kiryu6 boats5/6).
-- The next method should add a causal appearance proposal source while retaining immutable-anchor verification and every existing physical/fail-closed guard.
-
-## CURRENT candidate: tracker v20 gated causal-appearance rescue
+## v20 completed audit — REJECTED, but diagnostic progress
 File `track_exhibition_boats_v20.py`.
-Implementation commit **`d6ca4c4078a9765f0f6a07ea3891e59c9142a9dd`** (file creation commit immediately preceding workflow creation; verify exact file-history SHA if needed before quoting externally).
-Workflow `.github/workflows/regress-exhibition-seed17-track20.yml`.
-Workflow creation commit **`9b814a0d325dc75e20e7034e7e596e0c983cbdeb`**.
-Regression trigger commit **`08f039abf636786b2aa9f82770ad963466d74e8c`**.
-Run **`34843565746`** is the authoritative v20 four-video matrix; all four jobs were queued on the Japan self-hosted runner at this handoff update.
+Authoritative unchanged four-video run: **`34843565746`**.
 
-### v20 design
-v20 keeps the v19 standard path unchanged and adds a rescue-only proposal source; it does not lower any identity/safety threshold.
-- First try the normal v19 immutable-anchor predecessor-conditioned expansion.
-- Only when a predecessor has zero standard expansion, search a causal per-path appearance template inside that predecessor's physically reachable ROI.
-- A causal appearance template is updated only after a selected state has strong agreement with the original immutable slit anchor (`NCC >= .80`).
-- Every rescue proposal is re-checked at the exact proposed center against the original immutable slit anchor and must still satisfy the unchanged `min_ncc=.48` identity gate.
-- Adaptive appearance therefore proposes location only; it cannot bypass the immutable identity requirement.
-- Fleet safety, temporal motion, slit-direction reverse corridor, fixed lane/order, frame-edge, duplicate-patch, step-size and final confidence gates remain unchanged.
-- No future-frame feedback, race result, boat-number rule or race-specific offset is used.
-- New diagnostics include `rescue_attempts`, `rescue_predecessors_with_expansion`, and `adaptive_proposals` so failure mode can be separated cleanly.
+All four jobs reached tracker v20 and failed closed. FastClip and seed v17 succeeded in all jobs, so this is not an environment/import/downloader/seed failure. The tracker exhausted safe predecessor expansions. No results were read and no threshold was relaxed.
 
-Workflow parameters remain strict and comparable: `--stride 2 --topk 6 --per-boat-keep 5 --per-path-keep 12 --beam-width 24`.
+v20 used a causal adaptive template only as a rescue proposal source, while every proposed center still had to pass immutable-anchor NCC plus all v19 motion/fleet/geometry guards. The failure therefore supports the planned next direction: do not loosen `.48`; instead retain multiple historical appearances only after they were strongly verified against the immutable anchor and require consensus/chain-of-trust when using them later.
 
-## v20 exact restart point
-1. Inspect Run **`34843565746`** all four jobs when they leave queue; do not infer success from workflow color alone.
-2. If there is a runtime/coding error, inspect job logs, fix and rerun immediately.
-3. Download and inspect each `seed17-track20-*` artifact JSON.
-4. Record per race: accepted/failure reason, `rescue_attempts`, `rescue_predecessors_with_expansion`, `adaptive_proposals`, median immutable identity NCC, min lane separation, +0.5/+1.0/+1.5 centers, physical sanity, tracker runtime, and FastClip+seed+tracker latency.
-5. Specifically require Kiryu3 boat6 not to run reverse-left/off-frame and Kiryu6 boats5/6 to remain distinct/sane through +1.5s; also require Kiryu12 standard/varied not to regress.
-6. Interpret failure diagnostically without weakening `.48` or any safety gate:
-   - `adaptive_proposals == 0` => causal appearance itself cannot find reachable proposals;
-   - proposals exist but immutable recheck rejects them => original slit anchor is appearance-brittle after phase shift;
-   - proposals pass identity but expansion still dies => temporal/fleet geometry transition is the bottleneck.
-7. If immutable recheck is the bottleneck, next principled direction is a **verified appearance bank**: retain multiple historical templates only from states previously verified strongly by immutable anchor, search the bank inside predecessor ROI, and require chain-of-trust/consensus rather than a free adaptive template.
-8. Do NOT update production wrapper unless one unchanged seed+tracker passes all four with physically sane identity and total latency <=60 sec.
-9. After a technical four-sample pass, update `run_exhibition_ses_live_local.py` and perform at least one Japan self-hosted end-to-end live-style validation.
-10. Update this handoff after every meaningful result/design change with exact commit SHA, Run ID, artifact IDs/evidence and restart point.
+## CURRENT candidate: tracker v21 verified appearance bank
+File: `track_exhibition_boats_v21.py`
+Implementation commit: **`555796903f400528f94173dba42e41a02685431a`**
+Workflow: `.github/workflows/regress-exhibition-seed17-track21.yml`
+Workflow creation commit: **`ee3c50df717013a9b493a30a1d691683d223adbf`**
+Explicit regression trigger commit: **`52a78f304237ab1f8183e29d1c284206ae783624`**
+Authoritative v21 run: **`34856451633`** — queued on Japan self-hosted runner at this handoff update.
+
+### v21 design
+v21 keeps v20/v19 standard immutable predecessor-conditioned tracking first. It changes rescue appearance only:
+- each path keeps a small per-boat trusted appearance bank;
+- the bank begins with the immutable slit anchor;
+- a new look can enter the bank only after the selected state has already survived the unchanged temporal/fleet safety gates, the proposal source is immutable, immutable NCC is at least the existing strong threshold `.80`, and temporal spacing is satisfied;
+- the immutable anchor is never removed;
+- rescue is attempted only when standard expansion has no feasible successor;
+- rescue searches each trusted look inside the same physically reachable predecessor ROI;
+- the exact rescue patch must still pass immutable-anchor NCC >= existing `.48`;
+- after the bank grows beyond one look, a rescue candidate must be supported by at least two trusted looks and median bank NCC >= `.48`;
+- bank cap is 5 looks per boat; no future frame feedback is used;
+- existing slit-direction reverse corridor, lane/order, duplicate-patch, frame-edge, jump, fleet geometry and final confidence gates remain unchanged;
+- no result, boat-number rule, race-specific offset or relaxed quality threshold is used.
+
+Workflow parameters remain strict/comparable: `--stride 2 --topk 6 --per-boat-keep 5 --per-path-keep 12 --beam-width 24 --bank-cap 5`.
+
+## v21 exact restart point
+1. Inspect run **`34856451633`** all four jobs when they leave queue; workflow color alone is insufficient.
+2. If any job has a coding/runtime error, inspect logs, fix and rerun immediately.
+3. For each race inspect `exhibition_tracking_v21.json` and record accepted/failure reason, rescue attempts/successes, bank proposal/admission counts and final bank sizes, median immutable identity NCC, min lane separation, +0.5/+1.0/+1.5 centers, physical sanity, tracker runtime, and total FastClip+seed+tracker latency.
+4. Specifically require Kiryu3 boat6 not to run reverse-left/off-frame and Kiryu6 boats5/6 to remain distinct/sane through +1.5s; require both Kiryu12 technical samples not to regress.
+5. If v21 merely fails earlier but safely, do NOT loosen NCC or corridor gates. Diagnose whether bank proposal availability or consensus is the bottleneck, then move to a stronger multi-frame beam/Viterbi trajectory likelihood using immutable appearance + trusted appearance history + motion likelihood.
+6. Only if one unchanged seed+tracker combination passes all four physically sane with total latency <=60 sec may `run_exhibition_ses_live_local.py` be updated.
+7. After a four-sample technical pass, perform at least one Japan self-hosted end-to-end live-style validation before calling live-ready.
+8. Update this handoff after every meaningful result/design change with exact commit SHA, Run ID and artifact/log evidence.
 
 ## Production wrapper
 `run_exhibition_ses_live_local.py` remains old seed v1 + tracker v3. DO NOT update until an unchanged seed+tracker passes the full technical matrix with sane identity/geometry and <=60 sec.
@@ -97,6 +81,6 @@ Before user notification as complete:
 - automatic acquisition + seed + tracker only, no manual/race-specific edits;
 - accepted with sane identity/geometry and fail-closed retained;
 - ideally <=30 sec, maximum <=60 sec;
-- `run_exhibition_ses_live_local.py` updated to validated pipeline;
+- `run_exhibition_ses_live_local.py` updated to the validated pipeline;
 - >=1 self-hosted end-to-end live-style success.
 Prefer 10+ samples before treating SES as stable/predictive. SES remains an attack/head-support feature candidate, not direct finishing-order rank.
