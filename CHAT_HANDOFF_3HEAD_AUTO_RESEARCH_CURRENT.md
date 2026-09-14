@@ -71,15 +71,6 @@
 - Interpretation: the Wave48 diagnosis that 3-vs-2 motor edge matters still stands, but compressing it into a generic logistic wall score loses too much structure. The next useful test should keep the motor-edge signal explicit and examine conditional regimes / opponent handling rather than one blended head score.
 - Status: `WAVE49_COMPLETE_NO_ADOPTION`.
 
-## 2026-09-15 JST — Wave50 BEFORE WORK
-- User approved the next step: explicit strong/medium/weak boat3-vs-boat2 motor-edge regimes with frozen Wave36 opponent behavior.
-- Do NOT fit regime thresholds to March outcomes or Apr-Jun. Define regime cuts from the February feature distribution only, using boat3-minus-boat2 motor2 and motor3 rate gaps.
-- Primary March outputs: race count, head rate, Top5 ticket rate, and conditional Top5 capture given boat3 head for each regime; also chronological-half stability where sample size permits.
-- This is a structural diagnostic/research test, not a production candidate. March is already repeatedly researched; Apr-Jun are contaminated for this line; Jul/Aug NON-PRISTINE; September outcomes unread.
-- Preserve v288 production and frozen Wave36 Top5 ordering. No payout/ROI optimization and no threshold search on outcomes.
-- Required record after completion: script/workflow commits, Run/Job/Artifact IDs, exact February regime cuts, March regime table, interpretation, and next restart point.
-- Status: `WAVE50_STARTED_EXPLICIT_3V2_MOTOR_EDGE_REGIMES`.
-
 ## 2026-09-15 JST — Wave50 AFTER
 - BEFORE handoff commit: `33c75b4a4df9880d24b7cab9f62ea296c9482721`.
 - Wave50 research script commit: `f070b53445ab59968c48e87c2deff89b6342162e`.
@@ -105,5 +96,23 @@
 - v288 production remains unchanged.
 - Status: `WAVE51_STARTED_MOTOR_FIRST_FULL_UNIVERSE_CANDIDATE_DISCOVERY`.
 
+## 2026-09-15 JST — Wave51 AFTER
+- BEFORE handoff commit: `7cafb602ae4e1739ba4186e3a542ba1447416a7a`.
+- Wave51 was executed directly from frozen Wave21 source Run `34754875342` / Artifact `10317157868` with exact v288 94-race exclusion. No September outcomes were read.
+- Result JSON committed as `research_v289_3head_wave51_motor_first_full_universe_result.json` in commit `b7d5d0f9b3f6042976d8820771def4d89aa33278`.
+- Full March usable universe after exclusions: 4,482R / 563 boat3 heads = 12.561%.
+- Motor-only upstream selection using February-frozen joint motor2/motor3 quantiles increases head rate only modestly: Q50 1,783R / 14.358%; Q67 1,109R / 14.157%; Q75 826R / 14.528%; Q80 633R / 14.376%; Q90 323R / 15.170%. Therefore motor advantage alone is NOT sufficient as an independent 3-head selector.
+- However, motor-first combined with a looser pre-existing p3 gate is materially stronger and expands coverage. Using February Q75 joint motor cuts (boat3-minus-boat2 motor2 >= +6.2pt and motor3 >= +7.2pt):
+  - p3>=0.20: 186R / 58 heads = 31.183%; Wave36 overlap45; incremental outside Wave36 141R / 38 heads = 26.950%.
+  - p3>=0.25: 133R / 47 heads = 35.338%; Wave36 overlap45; incremental outside Wave36 88R / 27 heads = 30.682%.
+  - p3>=0.30: 87R / 32 heads = 36.782%; Wave36 overlap45; incremental outside Wave36 42R / 12 heads = 28.571%.
+  - p3>=0.35: 59R / 25 heads = 42.373%; Wave36 overlap45; incremental outside Wave36 14R / 5 heads = 35.714%.
+- Focused structural candidate for continued research (not adoption): joint Feb-Q75 motor advantage + p3>=0.25 gives 133R / 47 heads = 35.338%, with 88 genuinely additional races outside Wave36 and 27 boat3 heads = 30.682%.
+- Interpretation: the user's intuition is partly confirmed. Pre-race motor strength by itself is too broad, but it is valuable as the FIRST gate before a looser head-probability filter. This creates a much larger candidate pool than Wave36 while retaining a substantially elevated 3-head rate. It justifies a separate `motor-first 3HEAD` research family rather than merely a Wave36 exclusion filter.
+- No Apr-Jun tuning was performed; Jul/Aug unused; September outcomes remain unread; v288 production unchanged.
+- Status: `WAVE51_COMPLETE_MOTOR_FIRST_FAMILY_WORTH_CONTINUING_DIAGNOSTIC_ONLY`.
+
 ## Exact restart point
-- Execute Wave51 from the frozen Wave21 source artifact with February-derived motor thresholds, quantify incremental March 3-head candidates outside Wave36, and record whether motor-first selection is strong enough to justify an independent model family.
+1. Preserve Wave51's Q75 motor cuts (+6.2pt motor2 / +7.2pt motor3) and p3>=0.25 only as a frozen research candidate, not production.
+2. Next experiment should study the 88 incremental races outside Wave36, especially why 27 became boat3 heads: compare 1号艇 strength, 2号艇 wall/ST, 3号艇 national/local win rate, and opponent-order capture. Do not select thresholds from March outcomes; use descriptive stratification or February-derived bins.
+3. Goal: determine whether the incremental 30.682% head-rate pool can be narrowed without collapsing volume, forming an independent motor-first 3HEAD model.
