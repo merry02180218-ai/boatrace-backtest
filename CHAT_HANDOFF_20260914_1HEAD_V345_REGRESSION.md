@@ -90,3 +90,16 @@
 - 現時点の最良研究候補は `g2=.5 / g3=1.0`：130/276=47.1014%（+9）。Feb-Jun pristine 106/220=48.1818%（baseline比+8）、Jul-Aug support-only 24/56=42.8571%（+1）、race swap +hit 12 / -hit 3。
 - 今回は25 gridを分解し、SECOND-only (`g2>0,g3=0`)、THIRD-only (`g2=0,g3>0`)、併用のどこが改善源か、Feb-Jun月別worst-monthを含めて監査する。Jul/Augは採用判断の主証拠にしない。
 - September outcomesは引き続きUNREAD。productionは変更せず、分解監査後に昇格可否を判断する。
+
+## 2026-09-14 22:xx JST v347分解監査 完了
+- 25 gridをArtifact `10348980075` の `v347_grid.csv` / `v347_monthly.csv` で分解監査した。
+- baseline `(g2,g3)=(0,0)`：all 121/276=43.8406%、Feb-Jun 98/220=44.5455%、Jul-Aug 23/56=41.0714%、Feb-Jun worst-month=34.8485%。
+- SECOND-only最良は `(0.5,0)`：126/276=45.6522%（+5）、Feb-Jun 102/220=46.3636%（+4）、support 24/56=42.8571%（+1）、worst-month=36.3636%。SECOND tiltは弱い0.5が最良で、g2=1.0ではFeb-Junが97/220へ悪化。強く掛けるのは不安定。
+- THIRD-only最良は `(0,1.0)`：128/276=46.3768%（+7）、Feb-Jun 104/220=47.2727%（+6）、support 24/56=42.8571%（+1）、worst-month=39.3939%。改善の主成分はTHIRD側。
+- 併用 `(0.5,1.0)`：130/276=47.1014%（+9）、Feb-Jun 106/220=48.1818%（+8）、support 24/56=42.8571%（+1）、worst-month=40.9091%。単純なSECOND(+4 dev)＋THIRD(+6 dev)の完全加算ではないが、併用がdev hits最大。
+- `(0.5,1.5)` もall 130/276だが、Feb-Junは103/220（+5）に落ち、Jul-Aug supportの+4で見かけ上並ぶため採用候補にはしない。Jul/Aug非pristineに引かれない観点でも `(0.5,1.0)` が優位。
+- 月別 `(0.5,1.0)` は Feb 13/25=52.0%、Mar 15/32=46.875%、Apr 24/48=50.0%、May 27/66=40.909%、Jun 27/49=55.102%。baselineは Feb 9/25、Mar 15/32、Apr 24/48、May 23/66、Jun 27/49。改善は主にFeb +4 / May +4、Mar-Apr-Junは維持。
+- したがってattackCoreを相手選びへ入れる方向は有望。特にTHIRD g3=1.0が主効果、SECONDはg2=.5の弱い補正が適切。強いg2/g3は劣化が確認でき、単調な後付け改善ではない。
+- ただし同一Feb-Junで25 gridから選んだ研究候補なので、直ちにproduction昇格せず、次は `(0.5,1.0)` を固定候補としてrace-level gain/loss 15Rとticket構造を監査し、可能なら独立holdout/追加sentinelを作ってから昇格判断する。
+- productionは引き続きv345 unchanged。`PRODUCTION_CHANGED=false` / `SEPTEMBER_OUTCOMES_READ=false` / Jul-Aug=`NON_PRISTINE_SUPPORT_ONLY`。
+- 次の再開地点：`g2=.5/g3=1.0` を固定し、+hit12R/-hit3Rの原因分類（SECOND順位変更、THIRD順位変更、HYBRID top3境界）と、過学習耐性を確認する。
