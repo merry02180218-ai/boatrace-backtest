@@ -209,3 +209,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Regression trigger: validate the shared fleet-camera representation on the unchanged four-video matrix.
