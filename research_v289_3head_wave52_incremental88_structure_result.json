@@ -1,0 +1,33 @@
+{
+  "wave": "52-incremental88-hit-miss-structure",
+  "source": {"run_id":34754875342,"artifact_id":10317157868,"v288_exclusion":94},
+  "frozen_wave51_definition": {"motor2_gap_feb_q75":6.199999999999999,"motor3_gap_feb_q75":7.199999999999996,"p3_min":0.25,"outside_wave36_march_90":true},
+  "incremental_pool": {"races":88,"head_hits":27,"head_rate":0.3068181818,"misses":61},
+  "hit_vs_miss_descriptive": [
+    {"feature":"boat3 national win rate","hit_mean":6.40296,"miss_mean":5.90393,"standardized_shift":0.64866},
+    {"feature":"boat3 national 3-place rate","hit_mean":64.52963,"miss_mean":58.54262,"standardized_shift":0.61904},
+    {"feature":"boat1 average ST","hit_mean":0.15889,"miss_mean":0.17098,"standardized_shift":-0.57912},
+    {"feature":"boat3 national 2-place rate","hit_mean":46.04444,"miss_mean":41.15246,"standardized_shift":0.54041},
+    {"feature":"boat3-minus-boat1 national 2-place gap","hit_mean":19.37778,"miss_mean":15.25246,"standardized_shift":0.39472},
+    {"feature":"boat3-minus-boat1 national win-rate gap","hit_mean":1.58407,"miss_mean":1.24213,"standardized_shift":0.38769},
+    {"feature":"boat2 average ST","hit_mean":0.16370,"miss_mean":0.17213,"standardized_shift":-0.37122}
+  ],
+  "important_non_discriminators": {"p3_hit_mean":0.30209,"p3_miss_mean":0.30255,"motor2_gap_hit_mean":16.86667,"motor2_gap_miss_mean":18.44754,"motor3_gap_hit_mean":20.70000,"motor3_gap_miss_mean":21.79344},
+  "feb_derived_single_dimension_slices": [
+    {"rule":"boat3 national win rate >= Feb Q75 6.18","races":41,"heads":17,"head_rate":0.4146341463},
+    {"rule":"boat3 national 3-place rate >= Feb Q75 61.4","races":40,"heads":15,"head_rate":0.375},
+    {"rule":"boat3 national 2-place rate >= Feb Q75 43.5","races":45,"heads":18,"head_rate":0.4},
+    {"rule":"boat1 average ST <= Feb median 0.16","races":43,"heads":18,"head_rate":0.4186046512},
+    {"rule":"boat2 average ST <= Feb median 0.16","races":37,"heads":13,"head_rate":0.3513513514}
+  ],
+  "exploratory_combination_not_for_adoption": [
+    {"rule":"boat3 win>=6.18 AND boat1 ST<=0.16","races":26,"heads":14,"head_rate":0.5384615385},
+    {"rule":"boat3 national2>=43.5 AND boat1 ST<=0.16","races":25,"heads":13,"head_rate":0.52}
+  ],
+  "frozen_opponent_top5": {"head_races":27,"captured":13,"conditional_capture":0.4814814815},
+  "interpretation": "The extra Wave51 pool is not separated by more motor edge or higher p3 once inside the motor-first gate. The clearest remaining dimensions are boat3 own national strength and a faster-paper-ST environment, especially boat1 ST. Feb-derived single-dimension slices lift the 30.68% pool into roughly 40-42%. Exploratory combinations reach about 52-54% but were discovered after inspecting March and therefore cannot be treated as validation. Frozen opponent Top5 captures only 13/27 head wins, so an independent motor-first family also needs opponent-layer work.",
+  "status":"DIAGNOSTIC_ONLY_STRONG_FUTURE_HYPOTHESIS_NO_PRISTINE_PERIOD",
+  "jul_aug_used":false,
+  "september_outcomes_read":false,
+  "production_changed":false
+}
