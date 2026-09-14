@@ -47,3 +47,15 @@
 ## 次の再開地点
 - 正式production昇格を行う場合は、`onehead_production_profile.py` に opponent attackCore `g2=.50/g3=1.00` と候補sentinel（276/241/130、race SHA、ticket SHA）を明示してから、独立verifierで再確認する。
 - その昇格判断まではv345 productionを維持する。
+
+## 2026-09-14 production昇格作業 開始
+- ユーザー指示により `v349_OPPONENT_ATTACKCORE_G2_050_G3_100` を正式productionへ昇格する作業を開始。
+- 最新GitHubの `onehead_production_profile.py` は確認時点で `1HEAD_PRODUCTION_20260914_HEAD078_V345_ATTACKCORE` のまま。
+- 既存v345 HEAD側 attackCore、HEAD_MODEL=v308、HEAD_CUTOFF=.78、OPPONENT_MASS_MIN=.375、SECOND=v317、THIRD=v318、ticket=v320 alpha=.70、env_w=.10、q=.65 は維持する。
+- 追加する相手attackCoreは SECOND g2=.50 / THIRD g3=1.00 のみ。
+- 新production名は `1HEAD_PRODUCTION_20260914_HEAD078_V349_OPPONENT_ATTACKCORE` とする。
+- 新sentinelは PASS=276 / HEAD=241 / EXACT3=130 / race SHA=`08eb41e04c36d25074d6a1e471ff9334fafd34c8306cd5d336923772b613b8bd` / ticket SHA=`50378499c439f3c13572f2ee5d4c012a812043fea34cf840e3aa47db4ebbec0c`。
+- 旧v345およびpre-v345 sentinelは再現用に残す。
+- production反映後、独立verifierをGitHub Actionsで実行し、上記sentinel完全一致を確認するまで昇格完了とはしない。
+- September 2026 outcomesは絶対に読まず `SEPTEMBER_OUTCOMES_READ=false` を維持する。
+- Jul/Augは `NON_PRISTINE_SUPPORT_ONLY` のみ。
