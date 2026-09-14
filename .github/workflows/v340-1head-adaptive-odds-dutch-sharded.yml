@@ -1,0 +1,96 @@
+name: v340 1-head adaptive odds Dutch sharded
+on:
+  push:
+    paths:
+      - 'run_v340_prepare_rankings.py'
+      - 'run_v340_odds_shard.py'
+      - 'run_v340_aggregate_shards.py'
+      - '.github/workflows/v340-1head-adaptive-odds-dutch-sharded.yml'
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v338-julaug-prepare
+          path: .
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 34785538304
+      - uses: actions/download-artifact@v4
+        with:
+          name: v338-julaug-second
+          path: .
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 34785538304
+      - uses: actions/download-artifact@v4
+        with:
+          name: v338-julaug-base-third
+          path: .
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 34785538304
+      - uses: actions/download-artifact@v4
+        with:
+          name: v338-julaug-third
+          path: .
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 34785538304
+      - run: python run_v340_prepare_rankings.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v340-prepared-rankings
+          path: /tmp/v340prep/
+  odds:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0,1,2,3,4,5]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v340-prepared-rankings
+          path: /tmp/v340prep/
+      - run: python run_v340_odds_shard.py --shard ${{ matrix.shard }} --n 6
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v340-odds-shard-${{ matrix.shard }}
+          path: /tmp/v340shard/
+  aggregate:
+    needs: odds
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v340-prepared-rankings
+          path: /tmp/v340prep/
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: v340-odds-shard-*
+          path: /tmp/v340shard/
+          merge-multiple: true
+      - run: python run_v340_aggregate_shards.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v340-1head-adaptive-odds-dutch-sharded
+          path: /tmp/v340final/
