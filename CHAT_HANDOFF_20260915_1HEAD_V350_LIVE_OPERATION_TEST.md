@@ -131,3 +131,12 @@ Frozen Top15追加候補:
 - 次は2本立て:
   1. 払戻/締切時オッズを安全な過去期間だけ結合し、実ROIを正しく算出する。
   2. 2026-09-15の固定PRE候補について、結果を読まずに展示公開後の正式HEAD判定と買い目生成をprospective LIVEで継続する。
+
+## PRE S/A/B 閾値監査 作業開始
+- ユーザー指示により、固定Top15方式から閾値方式への移行を検証する。
+- 暫定PREランクは `S >= .82 / A >= .80 and < .82 / B >= .78 and < .80 / < .78 対象外`。
+- まず過去の安全な期間で、PRE S/A/B別に `候補R / 展示後v351 PASS / PASS率 / 1号艇1着 / 3連単3点EXACT3` を集計する。
+- Feb-Jun pristineを主証拠、Jul-Augは `NON_PRISTINE_SUPPORT_ONLY` として別表示し、閾値選定には使わない。
+- September outcomesは一切読まず `SEPTEMBER_OUTCOMES_READ=false` を維持する。
+- 特に `PRE S/A/B → 展示後v351で何R落ちるか` と、B帯が展示後にどの程度残り・改善するかを確認する。
+- 既存production v351の選定・買い目は変更せず、まず監査として実施する。
