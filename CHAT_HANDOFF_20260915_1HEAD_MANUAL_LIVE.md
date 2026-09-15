@@ -42,3 +42,22 @@
 - Biyori detail APIの各race取得にretry/backoffを追加し、一時的timeoutで場全体を捨てないようにする。
 - fresh workflowで `BIYORI_CARDS ... races=156`、`all_race_cache_R=156`、artifact生成まで確認する。
 - 結果・払戻・オッズは取得禁止。`result_or_payout_used=False` / `chronology_guard=True`、September outcomes `UNREAD` 維持。
+
+### AFTER: 正式な当日PRE取得手順 — 2026-09-16確定
+- **今後の1号艇v351当日PREはこの方式を標準とする。** 03:00時点でrolling artifactを待つ方式には戻さない。
+- データ源は **ボートレース日和 (BoatRace Biyori)**。`fetch_1head_v351_biyori_cards.py --date YYYYMMDD --out race_cards.csv` で当日出走表を直接取得する。
+- 取得は `race_shusso.php` で開催/CSRF情報を得て、`request_race_shusso_detail_v4.php` の詳細APIから各場・各Rの事前情報を取得する。簡易HTMLだけをPREへ流さない。
+- 各race取得は **retry/backoff** を使う。一時的なHTTP timeoutで11/12になった場を丸ごと捨てず、12R揃うまで再取得する。完全12Rの場だけ当日gridへ採用する。
+- 取得対象は事前に確定している出走/選手/モーター等のPRE情報のみ。結果・払戻・オッズは取得・使用しない。必須guardは `result_or_payout_used=False` / `chronology_guard=True`。
+- Biyoriカード取得後、`run_v321_1head_julaug_nonpristine_validation.py --stage prepare` でcausal preparationを作成し、続いて `prepare_1head_v351_live_cache.py --date YYYY-MM-DD --cards race_cards.csv --out ...` で全Rのv351 cacheを作る。
+- 最後に各race JSONから `race_code / jcd / race / pre_class / final_head_p / base_tickets` を集約してPRE summaryを作成し、Actions artifactとして保存する。
+- 2026-09-16の最終検証: Run `35034996720` / Job `104601998526` / **success**。
+- Biyori取得結果: JCD `04,05,07,08,09,11,12,13,14,18,19,22,23` の **13場156R**。ログ `BIYORI_CARDS date=20260916 ... races=156 result_or_payout_used=False chronology_guard=True` を確認。
+- v351 cache: `all_race_cache_R=156` / `training_cutoff=2026-09-15` / production profile `1HEAD_PRODUCTION_20260915_HEAD078_V351_OPPONENTCORE_G2_045_G3_100`。
+- Artifact `10423825328` (`v351-1head-live-cache-20260916`) / SHA256 `bb1361755137655b8abd04d0ee09079b7a4f98910e64f7724bc7ec91b86fffec`。
+- この成功Runを、今後の「ボートレース日和から当日カード→causal prepare→全R cache→PRE summary」の再現基準とする。
+- September 2026の結果・払戻は引き続き `UNREAD`。今回の取得・cache作成でも使用していない。
+
+### 次の再開地点
+- 日次PRE/LIVEでは上記Biyori方式を使用する。ユーザーから特定Rの「判別して」が来た場合、事前候補外でも当該race cacheを起点に展示取得→直前判定を即時実行する。
+- 研究側はWave9の結果抽出へ戻る。production変更はWave9監査完了まで行わない。
