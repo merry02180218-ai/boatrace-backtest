@@ -1,11 +1,21 @@
 name: regress exhibition seed17 tracker30 shared affine camera
 run-name: SES v30 affine-camera matrix
+
 on:
   workflow_dispatch:
   push:
     paths:
+      - 'auto_seed_exhibition_motion_v17.py'
+      - 'track_exhibition_boats_v17.py'
+      - 'track_exhibition_boats_v19.py'
+      - 'track_exhibition_boats_v20.py'
+      - 'track_exhibition_boats_v21.py'
+      - 'track_exhibition_boats_v25.py'
+      - 'track_exhibition_boats_v27.py'
+      - 'track_exhibition_boats_v29.py'
       - 'track_exhibition_boats_v30.py'
       - '.github/workflows/regress-exhibition-seed17-track30.yml'
+
 jobs:
   regress:
     strategy:
