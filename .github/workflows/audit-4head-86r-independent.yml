@@ -1,9 +1,9 @@
 name: audit-4head-86r-independent
-'on':
+
+on:
   workflow_dispatch:
   push:
-    paths:
-      - 'start_4head_86r_independent_audit.txt'
+
 jobs:
   audit:
     runs-on: ubuntu-latest
