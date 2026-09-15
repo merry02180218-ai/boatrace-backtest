@@ -15,41 +15,26 @@
 - Exact **210R /71 heads =33.8095%**; early 104/36=34.6154%, late106/35=33.0189%.
 - Wave54 commit `a45f83c11b7c3c7b8c6c75cab227253ea4f1d91f`.
 
-## Wave55 dedicated opponent layer
+## Wave55 dedicated opponent benchmark
 - February-only candidate-level balanced logistic second/third models, 478 boat3-head races /2390 candidate rows.
 - 3 tickets/R baseline: **27/71 =38.0282% capture**, stake ¥63,000, return ¥67,340, **ROI106.8889%**.
 - Early 13/36 heads captured; late14/35.
 - Result commit `6d402473d42c63e321994c6f672b5d45e1394ebe`.
 
-## Wave56 — compact inner-vs-outer refinement — completed
-### BEFORE commit
-- `027c4e1c47c5139416fe66e7b097e151febfa2ab`.
+## Wave56 coarse inner-vs-outer refinement — rejected
+- Race-level inner(1/2)-vs-outer(4/5/6) blend did not beat Wave55.
+- Best nonzero capture tied 27/71 but ROI fell to 87.90%; other weights lost capture and ROI.
+- Keep Wave55 as benchmark. Result commit `ee32e5122a522eca6b78878432ab1bcc7ce40c53`; AFTER commit `51ce1c52ca5c3b7e22cbfadcf0891163abf348e0`.
 
-### Method
-- Frozen Wave54 210R/71 heads and maximum 3 tickets/R.
-- Retained Wave55 February-trained second/third pair score.
-- Added a race-level pre-deadline inner(1/2)-vs-outer(4/5/6) blend from national2, national3, motor3 and average ST, standardized on February distributions.
-- Tested diagnostic blend weights lambda 0, .1, .2, .35, .5, .75, 1.0. March is research-exposed; nonzero weights are diagnostic only.
-
-### Exact results
-- lambda0 baseline: **27 hits /38.0282% / ROI106.8889%**, early13/36, late14/35.
-- lambda.1: 25 hits /35.2113% / ROI77.9365%, early12, late13.
-- lambda.2: 26 /36.6197% / ROI75.4762%, early11, late15.
-- lambda.35: 25 /35.2113% / ROI75.2857%, early13, late12.
-- lambda.5: 25 /35.2113% / ROI75.2857%, early13, late12.
-- lambda.75: 27 /38.0282% / ROI87.9048%, early15, late12.
-- lambda1.0: 26 /36.6197% / ROI82.7619%, early14, late12.
-
-### Conclusion
-- **Reject the coarse inner-vs-outer race-level blend.** No nonzero weight beats Wave55; all lose ROI and most lose capture.
-- Keep Wave55 3-ticket ordering as the current compact opponent benchmark: 27/71, ROI106.89% diagnostic.
-- Negative evidence suggests the next opponent improvement should be **candidate/pair-level**, not a single race-level inner/outer prior.
-- A useful next direction is February-trained attack-structure proxy interaction at candidate/pair level (e.g. boat1/2 hold strength and boat4/5/6 rise strength as pair-specific interactions), still without realized 決まり手.
-- Result file `research_v289_3head_wave56_compact_inner_outer_result.json`.
-- Result commit `ee32e5122a522eca6b78878432ab1bcc7ce40c53`.
-- No new Actions Run/Job/Artifact; reused Run34754875342 / Artifact10317157868.
-- Status `DIAGNOSTIC_ONLY_WAVE56_INNER_OUTER_BLEND_REJECTED_KEEP_WAVE55`.
-- September outcomes remain UNREAD; Jul/Aug not used; production unchanged.
+## BEFORE WORK — Wave57 pair-level attack-structure interactions (2026-09-15)
+- Freeze Wave54 population **210R /71 heads** and max **3 tickets/R**.
+- Baseline to beat: Wave55 **27/71 capture, ROI106.8889%, early13/36, late14/35**.
+- Train only on February boat3-head races. Build candidate/pair-level interaction features instead of a single race-level inner/outer prior.
+- Explicitly model whether each ordered opponent pair contains inner boats1/2, outer boats4/5/6, mixed inner/outer, and pair-specific strength/ST/motor relationships to boat3 and to each other.
+- Candidate/pair inputs remain strictly pre-deadline: lane, national ST/win/2/3, local win/2, motor2/3, boat2, plus derived gaps/means/interactions. Actual finish/order is training/settlement label only; payout is settlement only; realized 決まり手 never used.
+- Compare pair-level February-trained models against Wave55's independent second*third pair score at exactly 3 tickets/R. Report hits/capture, all-210 ROI, early/late stability, and ticket composition frequencies.
+- Any March-based model/threshold selection must be labeled exploratory. Prefer February model selection/frozen hyperparameters.
+- No Jul/Aug clean validation; September outcomes remain UNREAD; production v288 unchanged.
 
 ## Exact restart point
-- **Wave57:** keep 210R/71 and <=3 tickets/R frozen; refine Wave55 at candidate/pair level with February-trained pre-race attack-structure interactions. Target >27/71 capture and/or >106.89% ROI, with early/late stability. Do not use realized 決まり手. September UNREAD; v288 unchanged.
+- Execute Wave57 from fixed Artifact10317157868, commit exact result JSON, then append AFTER-WORK metrics/commit IDs/conclusion here.
