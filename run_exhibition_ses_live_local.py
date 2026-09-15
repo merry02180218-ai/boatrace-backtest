@@ -7,11 +7,12 @@ pre-race exhibition entry order are known.
 
 Pipeline:
 1) fetch only the short BOATCAST start-exhibition clip
-2) auto-detect six boat motion rows
-3) track 1.5 s and compute SES
+2) auto-detect six boat motion rows with seed v17
+3) track 1.5 s with tracker v33 and compute SES
 4) write one combined live result JSON
 
-No race-result endpoint is accessed.
+No race-result endpoint is accessed. The wrapper fails closed if v33 does not
+accept the six-boat measurement.
 """
 from __future__ import annotations
 
@@ -55,9 +56,9 @@ def main():
     outdir.mkdir(parents=True, exist_ok=True)
     video = outdir / f"boatcast_{args.date}_{args.stadium}_{args.race:02d}_startclip.mp4"
     clip_meta = video.with_suffix('.json')
-    seed_meta = outdir / 'auto_seed_meta.json'
-    seed_json = outdir / 'auto_seeds.json'
-    track_json = outdir / 'exhibition_tracking_v3.json'
+    seed_meta = outdir / 'auto_seed_meta_v17.json'
+    seed_json = outdir / 'auto_seeds_v17.json'
+    track_json = outdir / 'exhibition_tracking_v33.json'
     final_json = outdir / 'live_exhibition_ses.json'
 
     env = os.environ.copy()
@@ -75,7 +76,7 @@ def main():
     fetch_sec, _ = run([sys.executable, str(root / 'download_boatcast_exhibition_fastclip.py')], env=env)
 
     seed_sec, _ = run([
-        sys.executable, str(root / 'auto_seed_exhibition_motion_v1.py'), str(video),
+        sys.executable, str(root / 'auto_seed_exhibition_motion_v17.py'), str(video),
         '--entry-order', args.entry_order,
         '--nominal-sec', str(args.nominal_slit_sec),
         '--out', str(seed_meta), '--seed-out', str(seed_json)
@@ -84,12 +85,17 @@ def main():
     slit = float(sm['selected_sec'])
 
     track_sec, _ = run([
-        sys.executable, str(root / 'track_exhibition_boats_v3.py'), str(video),
-        '--slit-sec', str(slit), '--seed-json', str(seed_json), '--out', str(track_json)
+        sys.executable, str(root / 'track_exhibition_boats_v33.py'), str(video),
+        '--slit-sec', str(slit),
+        '--seed-json', str(seed_json),
+        '--seed-meta', str(seed_meta),
+        '--out', str(track_json),
+        '--stride', '2', '--topk', '6', '--per-boat-keep', '5',
+        '--per-path-keep', '12', '--beam-width', '24', '--bank-cap', '5'
     ])
     tr = json.loads(track_json.read_text(encoding='utf-8'))
     if not tr.get('accepted'):
-        raise SystemExit('FAIL_CLOSED: tracker did not accept measurement')
+        raise SystemExit('FAIL_CLOSED: tracker v33 did not accept measurement')
 
     total = time.perf_counter() - t_all
     cm = json.loads(clip_meta.read_text(encoding='utf-8'))
@@ -100,6 +106,7 @@ def main():
         'entry_order': entry,
         'result_blind': True,
         'race_results_read': False,
+        'pipeline': {'seed': 'v17', 'tracker': 'v33'},
         'clip_start_sec': args.clip_start_sec,
         'selected_slit_sec_in_clip': slit,
         'timing_sec': {
@@ -116,7 +123,7 @@ def main():
             'seed_meta': str(seed_meta),
             'tracking': str(track_json),
         },
-        'warning': 'LIVE research pipeline. Exact slit-anchor generalization across venues still requires validation.',
+        'warning': 'LIVE research pipeline. v17+v33 passed the four-sample Kiryu technical matrix; broader September/venue validation is still required.',
     }
     final_json.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps(payload, ensure_ascii=False, indent=2))
