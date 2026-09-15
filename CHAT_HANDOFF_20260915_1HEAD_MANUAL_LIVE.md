@@ -28,16 +28,27 @@
 - 設計: request fileの12桁race_codeを読み、shared cache hitまたはon-demand causal base生成後、deadline→exhibition→既存v351 gate→既存v351 finalizer→artifact upload。
 - 定期cron/controllerは追加していない。結果・払戻は使用しない。
 
-### 検証状態
-- request fileへのcommit自体はChatから成功。
-- smoke commit `a1c5d27...` に対してrepoの既存push workflow Run `34962132886` がqueuedになったことを確認し、ChatからのcommitがGitHub Actions push eventを発生させること自体は確認済み。
-- ただし新設 `chat-live-1head-v351-request` のRunは同commitではまだ確認できていないため、bridgeをactual LIVE使用可能と断定しない。
-- Run ID: bridge専用は未確認。
-- Job ID: 未確認。
-- Artifact ID: 未生成。
+### 検証結果 — bridge trigger確認完了
+- 以前「bridge専用Run未確認」としていたのは検索確認不足。commit `a1c5d27cf8b2c5e42a84c99b5390287f1d261653` に対し、専用workflowは実際に起動していた。
+- Workflow: `chat-live-1head-v351-request`
+- Run ID: `34962132626`
+- Job ID: `104357944028`
+- event: `push`
+- workflow_id: `358664242`
+- Runは `failure` だが、これはsmoke requestが意図的な無効race_code `999999999999` だったため `Resolve request and causal base` でfail-closeしたもの。trigger不良ではない。
+- checkout / Python setup / dependency installまではsuccessし、専用request commitからbridge Jobが実行されることを確認した。
+- Artifact ID: なし（無効race_codeでbase解決前にfail-closeしたため正常）。
+- このsmokeでは結果・払戻を使用していない。
 
-### 結論 / 次の再開地点
-1. 新設workflowがActionsに登録・起動されない原因を確認する。
-2. 必要ならworkflow YAML/triggerを修正し、専用request変更でbridge Runが発生するまで検証する。
-3. bridge RunのJob/stepsを確認し、実レースではArtifact回収まで完了させる。
-4. 今後の判別要求は request commit → bridge Run確認 → Run監視 → Artifact回収 → BUY/DROPと買い目返却までを一連のLIVE作業とする。
+### 結論
+- Chatから `live_requests/1head_v351.txt` を更新することで専用LIVE workflowを起動できる。
+- したがって今後はユーザーの「○○R判別して」に対して、Chatからrequest commit → bridge Run特定 → Job監視 → Artifact回収 → BUY/DROP + BUY時3連単3点返却まで実行する。
+- 1号艇の定期cron/controllerは復活させない。
+- actual LIVE成功判定は、実在race_codeで締切前に最終Artifactを生成しユーザーへ締切前に返せた場合のみ。smoke Run `34962132626` はactual LIVE成功には数えない。
+
+### 次の再開地点
+1. 次にユーザーから実在レースの判別要求が来たら、即座に `live_requests/1head_v351.txt` をrace_codeへ更新する。
+2. そのcommit SHAの `chat-live-1head-v351-request` Runを取得する。
+3. Run/Jobを監視し、Artifact生成後にfinal JSONを回収する。
+4. BUY/DROP、BUYなら3点、Run/Job/Artifact IDを即返す。
+5. 作業後に本handoffへactual LIVE結果を追記する。
