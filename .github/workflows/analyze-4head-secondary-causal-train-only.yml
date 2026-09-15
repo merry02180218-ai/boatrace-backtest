@@ -1,0 +1,31 @@
+name: analyze-4head-secondary-causal-train-only
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_4head_secondary_causal_train_only.py'
+      - '.github/workflows/analyze-4head-secondary-causal-train-only.yml'
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy
+      - name: Guard September blind production frozen and ST excluded
+        run: |
+          grep -q "September outcomes are never read" analyze_4head_secondary_causal_train_only.py
+          grep -q "production is untouched" analyze_4head_secondary_causal_train_only.py
+          grep -q "END=date(2026,8,31)" analyze_4head_headrate_3ren_player_st.py
+          ! grep -q "st4_strength" analyze_4head_secondary_causal_train_only.py
+          echo 'September blind / production frozen / ST excluded guard PASS'
+      - name: Run secondary train-only study
+        run: python analyze_4head_secondary_causal_train_only.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-secondary-causal-train-only
+          path: |
+            analysis_4head_secondary_causal_train_only.csv
+            summary_4head_secondary_causal_train_only.md
