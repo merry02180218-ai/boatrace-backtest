@@ -26,18 +26,21 @@ v29 used ONE shared robust four-of-six similarity-camera state instead of six le
 File `track_exhibition_boats_v30.py`.
 Implementation commit `6e406352bf8a28876c61ad67e42b4621657c13e8`.
 Workflow `.github/workflows/regress-exhibition-seed17-track30.yml`, creation commit `62ad92bd13d617ded98dd0c2c1c59df515246085`.
-First explicit trigger commit `f26f5abd0331df306df2db86651e85519c28a9ef` produced no discoverable Actions run after propagation. Per the previous restart instruction, one harmless retrigger edit was made exactly once: commit `bac262422a2b0de69bbc9d09845dcdd9f2b78ea3` at 2026-09-15 00:13Z. No tracker logic, thresholds, result access, or sample configuration changed. Immediately after the retrigger, no v30 run was yet discoverable in the Actions run list; do not make another trigger-only edit until GitHub propagation/runner state is checked on the next cycle.
+First explicit trigger commit `f26f5abd0331df306df2db86651e85519c28a9ef` changed the tracker path but produced no discoverable Actions run. A later handoff-only commit `bac262422a2b0de69bbc9d09845dcdd9f2b78ea3` could not trigger this path-filtered workflow by design.
+
+At 2026-09-15 ~10:15 JST the Actions list was rechecked: v30 still had no discoverable run. The workflow was then repaired to mirror the dependency path coverage used by v29 (seed v17 and inherited tracker dependencies v17/v19/v20/v21/v25/v27/v29 plus v30) and retain its own workflow path. This is a workflow-trigger/dependency repair only; tracker logic, thresholds, samples and blindness are unchanged. Repair commit: `0fb3eda2c9fb4a866f6ec4ac151e693c335e7cc6`. This workflow-file change itself is an eligible push trigger. Immediately after commit, the general Actions list had not yet propagated a v30 run; next cycle must check propagation before any further trigger edit.
 
 ### v30 design
 v29 showed shared state is not enough if camera representation remains similarity-only. The six boats span a large y range in an oblique camera, so first-order perspective can appear as anisotropic scale/shear. v30 changes ONLY shared camera representation to affine. It enumerates C(6,3)=20 exact three-boat affine fits, selects by 4th-smallest six-boat residual then mean of four best, applies one shared transform to all six, and retains unchanged 24 px/native-frame residual, 20 acceleration, 42 absolute, reverse corridor, NCC, appearance bank, fleet geometry, v25 proposal reachability and fail-closed behavior. No future frame/result/special case/threshold relaxation.
 
 ## Exact restart point
-1. Resolve whether retrigger commit `bac262422a2b0de69bbc9d09845dcdd9f2b78ea3` created the v30 matrix after propagation. Do not make another duplicate trigger-only edit. If still absent, diagnose workflow registration/Actions trigger state rather than repeatedly touching code.
-2. Once a v30 run exists, inspect all four jobs/artifacts, not workflow status alone. Preserve Kiryu3/6 blindness.
-3. Record dead-frame depth, residual/acceleration rejection counts, +0.5/+1.0/+1.5 centers, on-frame/identity sanity and FastClip+seed+tracker latency.
-4. Compare v30 against v29/v28. A win must be physically sane and improve feasibility without widening any gate.
-5. If v30 still fails, do not widen 24/20 caps. The next principled direction is to stop forcing every candidate through a single instantaneous global camera transform and instead carry a low-dimensional camera-motion state temporally in the beam (camera parameter velocity/acceleration), or derive background-feature camera motion independently from boat hypotheses.
-6. Only after one unchanged seed+tracker passes all four sane and <=60 sec may `run_exhibition_ses_live_local.py` be updated, followed by >=1 Japan self-hosted end-to-end live-style validation.
+1. Check whether workflow repair commit `0fb3eda2c9fb4a866f6ec4ac151e693c335e7cc6` produced the v30 four-job matrix after GitHub propagation. Do not make another trigger-only edit before this check.
+2. If still absent, diagnose workflow registration/Actions state rather than touching tracker logic or repeatedly retriggering.
+3. Once a v30 run exists, inspect all four jobs/artifacts, not workflow status alone. Preserve Kiryu3/6 blindness.
+4. Record dead-frame depth, residual/acceleration rejection counts, +0.5/+1.0/+1.5 centers, on-frame/identity sanity and FastClip+seed+tracker latency.
+5. Compare v30 against v29/v28. A win must be physically sane and improve feasibility without widening any gate.
+6. If v30 still fails, do not widen 24/20 caps. Next principled direction: carry a low-dimensional camera-motion state temporally in the beam (camera parameter velocity/acceleration), or derive background-feature camera motion independently from boat hypotheses.
+7. Only after one unchanged seed+tracker passes all four sane and <=60 sec may `run_exhibition_ses_live_local.py` be updated, followed by >=1 Japan self-hosted end-to-end live-style validation.
 
 ## Production wrapper
 `run_exhibition_ses_live_local.py` remains old seed v1 + tracker v3. DO NOT update yet.
