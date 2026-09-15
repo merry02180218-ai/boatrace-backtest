@@ -1,3 +1,2 @@
-2026-09-15T19:05:00+09:00
-schema-correct cohort comparison old-vs-recovered
-run 3
+2026-09-15T19:10:00+09:00
+FORCE LIVE v351 Shimonoseki 9R race_code=202609151909
