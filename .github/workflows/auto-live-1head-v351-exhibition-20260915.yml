@@ -1,31 +1,45 @@
-name: auto-live-1head-v351-exhibition-20260915
+name: manual-live-1head-v351-exhibition-20260915
+
+# LIVE運用方針 (2026-09-15):
+# 自動cron / push起動は停止。ユーザーから判定要求があった時だけ手動起動する。
+# v351 production gate/finalizer自体は変更しない。
 on:
-  schedule: [{cron: '*/5 * 15 9 *'}]
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/auto-live-1head-v351-exhibition-20260915.yml'
-      - 'run_1head_v351_live_finalize.py'
-      - 'run_1head_v351_live_exhibition_gate.py'
-      - 'probe_1head_v351_boatcast_exhibition.py'
-permissions: {contents: read, actions: read}
-# watchdog + forced immediate trigger 202609151910
-concurrency:
-  group: v351-live-controller-20260915
-  cancel-in-progress: false
+    inputs:
+      race_code:
+        description: '12-digit race code (YYYYMMDDJJRR)'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
 jobs:
-  controller:
+  manual-race:
     runs-on: ubuntu-latest
-    timeout-minutes: 360
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: '3.11'}
       - run: pip install -q requests beautifulsoup4 numpy pandas scipy scikit-learn
-      - name: Download PRE candidates and shared cache
-        env: {GH_TOKEN: '${{ github.token }}'}
+
+      - name: Resolve race and download PRE/cache
+        env:
+          GH_TOKEN: '${{ github.token }}'
+          RACE_CODE: '${{ inputs.race_code }}'
         run: |
           set -euo pipefail
+          test "${#RACE_CODE}" -eq 12
+          DATE=${RACE_CODE:0:8}
+          JCD=$((10#${RACE_CODE:8:2}))
+          RACE=$((10#${RACE_CODE:10:2}))
+          echo "DATE=$DATE" >> "$GITHUB_ENV"
+          echo "JCD=$JCD" >> "$GITHUB_ENV"
+          echo "RACE=$RACE" >> "$GITHUB_ENV"
+          echo "RACE_CODE=$RACE_CODE" >> "$GITHUB_ENV"
+
           rm -rf /tmp/pre /tmp/cache; mkdir -p /tmp/pre /tmp/cache
           PRE_ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-pre-sab-20260915-rolling&per_page=20" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id')
           CACHE_ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-cache-20260915&per_page=20" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id')
@@ -35,71 +49,66 @@ jobs:
           gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$CACHE_ID/zip" > /tmp/cache.zip
           unzip -q /tmp/pre.zip -d /tmp/pre
           unzip -q /tmp/cache.zip -d /tmp/cache
+
           CSV=$(find /tmp/pre -name pre_candidates_sab.csv -print -quit); test -n "$CSV"
-          cp "$CSV" /tmp/pre_candidates.csv
-      - name: Deadline-ordered controller
+          python - "$CSV" "$RACE_CODE" <<'PY'
+          import csv,json,sys
+          csv_path,code=sys.argv[1:]
+          with open(csv_path,encoding='utf-8-sig',newline='') as f:
+              rows=[r for r in csv.DictReader(f) if str(r['race_code']).zfill(12)==code]
+          if len(rows)!=1:
+              raise SystemExit(f'expected exactly one PRE candidate for {code}, got {len(rows)}')
+          json.dump(rows[0],open('/tmp/pre_row.json','w'),ensure_ascii=False,indent=2)
+          PY
+
+      - name: Skip existing immutable final
+        id: immutable
         env: {GH_TOKEN: '${{ github.token }}'}
         run: |
+          N=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=live-v351-final-$RACE_CODE&per_page=1" --jq '.total_count')
+          if [ "${N:-0}" -gt 0 ]; then echo 'exists=1' >> "$GITHUB_OUTPUT"; else echo 'exists=0' >> "$GITHUB_OUTPUT"; fi
+
+      - name: Fetch deadline, exhibition and finalize v351
+        if: steps.immutable.outputs.exists != '1'
+        run: |
           set -euo pipefail
-          python - <<'PY' > /tmp/candidates.tsv
-          import csv,subprocess
-          rows=[]
-          with open('/tmp/pre_candidates.csv',encoding='utf-8-sig',newline='') as f:
-            for x in csv.DictReader(f):
-              code=str(x['race_code']).zfill(12); jcd=int(code[8:10]); race=int(code[10:12])
-              p=subprocess.run(['python','fetch_boatrace_deadline.py','--date','20260915','--jcd',str(jcd),'--race',str(race),'--meta',f'deadline_{code}.json'],capture_output=True,text=True)
-              if p.returncode: continue
-              dl=p.stdout.strip().splitlines()[-1]
-              rows.append((dl,code,jcd,race,x['pre_class'],x['legacy_pre_p']))
-          for r in sorted(rows): print('\t'.join(map(str,r)))
+          DL=$(python fetch_boatrace_deadline.py --date "$DATE" --jcd "$JCD" --race "$RACE" --meta "deadline_$RACE_CODE.json" | tail -1)
+          python run_1head_v351_live_window.py --deadline-jst "$DL" > "window_$RACE_CODE.json"
+          MODE=$(python -c "import json;print(json.load(open('window_$RACE_CODE.json'))['mode'])")
+          if [ "$MODE" = "EXPIRED" ]; then echo 'deadline already expired; refusing LIVE final'; exit 2; fi
+
+          READY=0
+          for i in $(seq 1 8); do
+            if python probe_1head_v351_boatcast_exhibition.py --date "$DATE" --jcd "$JCD" --race "$RACE" --deadline-jst "$DL" > "exhibition_$RACE_CODE.json" 2> "exhibition_error_$RACE_CODE.txt"; then READY=1; break; fi
+            sleep 15
+          done
+          if [ "$READY" != 1 ]; then echo 'exhibition unavailable'; exit 3; fi
+
+          BASE=$(find /tmp/cache -name "$RACE_CODE.json" -print -quit); test -n "$BASE"
+          TRAIN=$(find /tmp/cache -name v351_exhibition_train.csv -print -quit); test -n "$TRAIN"
+          TRAIN_DST="$(dirname "$BASE")/v351_exhibition_train.csv"
+          if [ "$(readlink -f "$TRAIN")" != "$(readlink -f "$TRAIN_DST")" ]; then cp "$TRAIN" "$TRAIN_DST"; fi
+          CUTOFF=$(python -c "import json;print(json.load(open('$BASE'))['training_cutoff'])")
+          python run_1head_v351_live_exhibition_gate.py --probe "exhibition_$RACE_CODE.json" --base "$BASE" --history-cutoff "$CUTOFF" --out "gate_$RACE_CODE.json"
+          python - "$BASE" "gate_$RACE_CODE.json" "window_$RACE_CODE.json" "final_input_$RACE_CODE.json" <<'PY'
+          import json,sys
+          from datetime import datetime,timezone,timedelta
+          b=json.load(open(sys.argv[1])); g=json.load(open(sys.argv[2])); w=json.load(open(sys.argv[3]))
+          b.update(g)
+          b.update({'exhibition_ready':True,'deadline_jst':w['deadline_jst'],'minutes_to_deadline':w['remaining_minutes'],'evaluated_at_jst':datetime.now(timezone(timedelta(hours=9))).isoformat(),'result_or_payout_used':False,'chronology_guard':True})
+          json.dump(b,open(sys.argv[4],'w'),ensure_ascii=False,indent=2)
           PY
-          while IFS=$'\t' read -r DL CODE JCD RACE PRE_CLASS LEGACY_PRE_P; do
-            N=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=live-v351-final-$CODE&per_page=1" --jq '.total_count')
-            if [ "${N:-0}" -gt 0 ]; then echo "$CODE immutable-final exists"; continue; fi
-            while true; do
-              python run_1head_v351_live_window.py --deadline-jst "$DL" > "window_$CODE.json"
-              MODE=$(python -c "import json;print(json.load(open('window_$CODE.json'))['mode'])")
-              REM=$(python -c "import json;print(json.load(open('window_$CODE.json'))['remaining_seconds'])")
-              echo "$CODE mode=$MODE remaining=$REM"
-              if [ "$MODE" = "EXPIRED" ]; then break; fi
-              if [ "$MODE" = "WAIT" ]; then SLEEP=$(python -c "print(max(5,min(30,int(float('$REM')-15*60))))"); sleep "$SLEEP"; continue; fi
-              set +e
-              python probe_1head_v351_boatcast_exhibition.py --date 20260915 --jcd "$JCD" --race "$RACE" --deadline-jst "$DL" > "exhibition_$CODE.json" 2> "exhibition_error_$CODE.txt"; RC=$?
-              set -e
-              if [ "$RC" -eq 0 ]; then
-                BASE=$(find /tmp/cache -name "$CODE.json" -print -quit); test -n "$BASE"
-                TRAIN=$(find /tmp/cache -name v351_exhibition_train.csv -print -quit); test -n "$TRAIN"
-                TRAIN_DST="$(dirname "$BASE")/v351_exhibition_train.csv"; if [ "$(readlink -f "$TRAIN")" != "$(readlink -f "$TRAIN_DST")" ]; then cp "$TRAIN" "$TRAIN_DST"; fi
-                CUTOFF=$(python -c "import json;print(json.load(open('$BASE'))['training_cutoff'])")
-                python run_1head_v351_live_exhibition_gate.py --probe "exhibition_$CODE.json" --base "$BASE" --history-cutoff "$CUTOFF" --out "gate_$CODE.json"
-                python - "$BASE" "gate_$CODE.json" "window_$CODE.json" "final_input_$CODE.json" <<'PY2'
-          import json,sys
-          from datetime import datetime,timezone,timedelta
-          b=json.load(open(sys.argv[1]));g=json.load(open(sys.argv[2]));w=json.load(open(sys.argv[3]));b.update(g);b.update({'exhibition_ready':True,'deadline_jst':w['deadline_jst'],'minutes_to_deadline':w['remaining_minutes'],'evaluated_at_jst':datetime.now(timezone(timedelta(hours=9))).isoformat(),'result_or_payout_used':False,'chronology_guard':True});json.dump(b,open(sys.argv[4],'w'),ensure_ascii=False,indent=2)
-          PY2
-                python run_1head_v351_live_finalize.py --input "final_input_$CODE.json" --out "live_v351_final_$CODE.json"; break
-              fi
-              if [ "$MODE" = "FINAL5" ]; then
-                python - "$CODE" "$PRE_CLASS" "$DL" <<'PY3'
-          import json,sys
-          from datetime import datetime,timezone,timedelta
-          J=timezone(timedelta(hours=9));c=sys.argv[1];o={'race_code':c,'pre_class':sys.argv[2],'status':'ERROR_NO_BET','reason':'required exhibition still unavailable at T-5 final window','deadline_jst':sys.argv[3],'evaluated_at_jst':datetime.now(J).isoformat(),'result_or_payout_used':False,'chronology_guard':True,'finalized':True,'tickets':[]};json.dump(o,open(f'live_v351_final_{c}.json','w'),ensure_ascii=False,indent=2)
-          PY3
-                break
-              fi
-              sleep 15
-            done
-          done < /tmp/candidates.tsv
+          python run_1head_v351_live_finalize.py --input "final_input_$RACE_CODE.json" --out "live_v351_final_$RACE_CODE.json"
+
       - uses: actions/upload-artifact@v4
-        if: always()
+        if: steps.immutable.outputs.exists != '1' && success()
         with:
-          name: live-v351-controller-output-20260915
+          name: live-v351-final-${{ inputs.race_code }}
           retention-days: 14
-          if-no-files-found: ignore
+          if-no-files-found: error
           path: |
-            live_v351_final_*.json
-            deadline_*.json
-            window_*.json
-            exhibition_*.json
-            gate_*.json
-            exhibition_error_*.txt
+            live_v351_final_${{ inputs.race_code }}.json
+            deadline_${{ inputs.race_code }}.json
+            window_${{ inputs.race_code }}.json
+            exhibition_${{ inputs.race_code }}.json
+            gate_${{ inputs.race_code }}.json
