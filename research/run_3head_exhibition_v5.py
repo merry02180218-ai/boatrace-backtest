@@ -85,7 +85,7 @@ def cvscore(x):
  return {'features':len(feats),'oof_hits':int(hits),'oof_races':int(nr),'capture':float(hits/nr),'auc':float(roc_auc_score(v.y,v.p)),'fold_capture':fold,'fold_capture_sd':float(np.std(fold))}
 
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--source',default='analysis_v289_3head_wave21_allrace_feature_settled.csv');a=ap.parse_args()
+ ap=argparse.ArgumentParser();ap.add_argument('--source',default='analysis_v289_3head_wave21_allrace_feature_settled.csv');ap.add_argument('--phase',choices=['feb'],default='feb');a=ap.parse_args()
  use=['date','race_code_norm','settle__actual_combo','settle__winner','settle__usable','closing_odds__ok']+[f'card__艇{i}_{m}' for i in range(1,7) for m in STATIC]
  df=pd.read_csv(a.source,usecols=use,low_memory=False);df.date=pd.to_datetime(df.date);df['rc']=pd.to_numeric(df.race_code_norm,errors='coerce').astype('Int64');df=df[(df.settle__usable==1)&(df.closing_odds__ok==1)&(~df.rc.isin(EX))].copy()
  feb_all=df[(df.date>='2026-02-01')&(df.date<'2026-03-01')].copy(); assert len(feb_all)==3970, len(feb_all)
