@@ -27,7 +27,13 @@
 - FINAL5未READYのみfail-close。
 - watch timeoutを45分から10分へ短縮。
 - `result_or_payout_used=False` / `chronology_guard=True` 維持。9月15日結果・払戻はUNREAD。
-- 実装直後に head_sha=`b953b27d...` のActions Runを検索した時点では0件で、Run/Job/Artifact IDはまだ未発行。したがって実動完了とはまだ判定しない。
+
+## 福岡10R 緊急監査 / これからやること
+- race_code `202609152210`, PRE=A, legacy_pre_p=`0.8034152525704932`, 締切16:30 JST。
+- Run `34939662186` の福岡10R jobを再実行し、新Job `104291330238` で16:25:46 JSTに `FINAL5`、`EXHIBITION_READY=1`、`POLL_DONE=READY` まで確認。
+- finalizer直前に `cp: '/tmp/cache/v351_exhibition_train.csv' and '/tmp/cache/v351_exhibition_train.csv' are the same file` でexit 1。
+- これから workflow の自己コピーを安全に回避するhotfixを入れ、福岡10Rを再実行して exact gate→finalizer→artifact を回収する。
+- 9月結果・払戻は引き続きUNREAD。展示・事前情報だけを使う。
 
 ## 既知の監査ID
 - 徳山9R旧失敗 Run: `34934002769`
@@ -35,9 +41,7 @@
 - 徳山9R旧Artifact: `10382617649`
 - Runner占有確認 Run: `34938438610`
 - 常滑11R queued Job: `104281420706`
-
-## 結論
-persistent WAIT job方式は廃止。5分cronのnonblocking polling方式へ戻し、展示取得可能な時間帯だけ処理する設計へ修正済み。ただし新commitのActions実動監査は未完了。
+- 福岡10R rerun Job（自己copyエラー）: `104291330238`
 
 ## 次の再開地点
-**`b953b27d` を使った最新v351 Runを確認し、常滑11Rを含むJob/Artifactとexact finalizerの実動を監査する。**
+**自己copy hotfixをcommitし、福岡10R jobを再実行してfinal artifactを回収・内容確認する。**
