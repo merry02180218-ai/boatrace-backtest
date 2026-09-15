@@ -1,4 +1,4 @@
-name: trigger-4head-exhibition-original-v2
+name: legacy-4head-research-trigger-only
 on: [push]
 jobs:
   run:
