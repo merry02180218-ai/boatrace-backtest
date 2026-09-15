@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '0 18 * * *' # 03:00 JST
   workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'fetch_1head_v351_boatcast_cards.py'
+      - '.github/workflows/prepare-1head-v351-daily-0300-jst.yml'
 
 permissions:
   contents: read
