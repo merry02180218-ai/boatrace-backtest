@@ -1,0 +1,50 @@
+name: test 1-head v351 September rolling models
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - prepare_1head_v351_rolling_models.py
+      - run_v323_1head_frozen_live_adapter.py
+      - .github/workflows/test-1head-v351-rolling-models.yml
+jobs:
+  rolling:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4
+      - name: Download verified September training source
+        uses: actions/download-artifact@v4
+        with:
+          name: onehead-september-training-source-20260915
+          path: /tmp/sep
+          github-token: ${{ github.token }}
+          run-id: 34929791569
+      - name: Download frozen PRE inputs
+        uses: actions/download-artifact@v4
+        with:
+          name: v351-1head-live-pre-sab-20260915
+          path: /tmp/pre
+          github-token: ${{ github.token }}
+          run-id: 34924389688
+      - name: Train rolling v308 v317 v318
+        run: |
+          mkdir -p /tmp/rolling
+          /usr/bin/time -f 'wall_sec=%e max_rss_kb=%M' -o /tmp/rolling/time.txt python prepare_1head_v351_rolling_models.py --target-date 2026-09-15 --sep-source /tmp/sep/september_training_rows.csv --cards /tmp/pre/race_cards.csv --out-dir /tmp/rolling
+          python - <<'PY'
+          import json
+          z=json.load(open('/tmp/rolling/rolling_models.json'));m=z['meta']
+          assert m['training_cutoff']=='2026-09-14' and m['september_rows']>0
+          assert m['same_day_outcomes_read'] is False and m['target_or_future_rows']==0 and m['chronology_guard'] is True
+          assert len(z['races'])>0
+          for r in z['races']:
+            assert len(r['p2'])==5 and len(r['pc'])==20 and len(r['base_tickets'].split(';'))==3
+          print('ROLLING_MODELS_OK',m,'races',len(z['races']))
+          PY
+          cat /tmp/rolling/time.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v351-1head-rolling-models-20260915
+          path: /tmp/rolling/
