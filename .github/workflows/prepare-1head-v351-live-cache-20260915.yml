@@ -1,0 +1,41 @@
+name: prepare-1head-v351-live-cache-20260915
+on:
+  workflow_run:
+    workflows: ['v351 1-head LIVE PRE SAB 20260915']
+    types: [completed]
+  workflow_dispatch:
+  push:
+    paths:
+      - 'prepare_1head_v351_live_cache.py'
+      - 'run_1head_v351_live_exhibition_gate.py'
+      - '.github/workflows/prepare-1head-v351-live-cache-20260915.yml'
+permissions: {contents: read, actions: read}
+jobs:
+  cache:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Download latest rolling PRE artifact
+        env: {GH_TOKEN: '${{ github.token }}'}
+        run: |
+          ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-pre-sab-20260915-rolling&per_page=20" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id')
+          test -n "$ID" && test "$ID" != null
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$ID/zip" > /tmp/pre.zip
+          mkdir -p /tmp/pre && unzip -q /tmp/pre.zip -d /tmp/pre
+          find /tmp/pre -name pre_candidates_sab.csv -print -quit | grep .
+          find /tmp/pre -name race_cards.csv -print -quit | grep .
+      - name: Build shared causal caches once
+        run: |
+          python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
+          PRE=$(find /tmp/pre -name pre_candidates_sab.csv -print -quit); CARDS=$(find /tmp/pre -name race_cards.csv -print -quit)
+          python prepare_1head_v351_live_cache.py --date 2026-09-15 --cards "$CARDS" --pre "$PRE" --out /tmp/v351-live-cache
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v351-1head-live-cache-20260915
+          retention-days: 3
+          path: /tmp/v351-live-cache/
