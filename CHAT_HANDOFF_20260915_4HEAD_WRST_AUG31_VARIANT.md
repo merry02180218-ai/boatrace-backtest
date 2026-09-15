@@ -43,109 +43,44 @@
 - Sep `UNREAD`、production unchanged。
 Status: `HEAD4_111R_ORIG_COMBO_COMPLETE`
 
-## BEFORE — 86R / 40.70% 候補 独立再現監査・月別・3連単ROI
-ユーザー指定: 「この86R / 40.70%候補を独立再現監査して、月別安定性と3連単的中率・ROIまで確認」。
-
-これからやること:
-1. `analyze_4head_111r_orig_combo.py` の選択結果を読み込んで再集計するのではなく、別の監査コードで raw/source lineage から候補を独立再構築する。
-2. 条件は固定: `motor_win_diff_4v3 >= -0.0299361318939513`, `motor_2ren_diff_4v3 >= -7.080000000000001`, `player4_all_win >= .215605`, `basic_complete=1`, `st4_adv_inside >= -0.6000000000000001`, `orig_avg_available=1`, `orig4_adv_inside >= -0.057777777777777706`。
-3. Apr-Junで 86R / 頭率40.6977% を独立再現できることをassert。Jul-Augは条件固定のまま78R / 44.8718%を再現確認する。
-4. Apr, May, Junを個別にR数・4号艇1着数・頭率で出し、特定月だけで成立していないか確認。Jul/Augも固定検証として月別表示する。
-5. 3連単は研究中の4号艇系で使用している独立相手選び/チケット構成と、利用可能な締切前オッズスナップショットだけを使う。post-deadline oddsは禁止。欠損は明示し、都合のよい補完をしない。
-6. 月別およびApr-Jun合計、Jul-Aug固定で、3連単的中R/的中率、stake、payout、profit、ROIを出す。賭け金ルールは監査対象の4号艇チケットルールを明記して固定する。
-7. 頭率監査と3連単ROI監査を分離し、オッズ欠損で頭率母集団86R/78R自体を減らして見せない。ROI coverageを別途報告する。
-8. 2026年9月結果は一切読まず `UNREAD`。production `HEAD4_V291_COMP7` は変更しない。
-9. 実装→Actions→ログ/Artifact回収→独立再現・月別・ROI確認後、AFTERへ exact commit SHA / Run / Job / Artifact / 結果 / 結論 / 次の再開地点を記録してcommitする。
-
-Status: `HEAD4_86R_INDEPENDENT_AUDIT_STARTED`
-
-## HANDOFF UPDATE — 86R独立監査の途中経過 / 次チャット再開点
-
-### BEFORE記録
-- BEFORE handoff commit: `31c979a69aaa540508cda4562a982f8272593720`
-- corrected audit commit: `85019562ccc8278099e7740cf163b4da65409acc`
-- handoff restart commit: `eecc2500098ca26ad001903267805be032be5f27`
-- 旧Run `34974926857` のrerunは禁止。fresh main SHAの新Runだけを正式監査に採用する。
-
-### 現行production/research opponent contract
-- production: `HEAD4_V291_COMP7`
-- opponent: frozen independent `v283`
-- SECOND: `PLAYER_START`
-- conditional THIRD: `COND_BASE`
-- pair mode: `TOP2XTOP2`
-- `alpha2=.60`
-- Top4 exactly 4 tickets
-- v96 production signal **禁止**
-- frozen inference module: `head4_v291_downstream_inference.py`
-- live adapter: `build_4head_v283_live.py`
-- frozen artifact: `artifacts/head4_v291_downstream_20260630.json`
-
-### 最重要の禁止事項
-- Sep 2026 outcomeを読まない。
-- Jul/Augを再チューニングしてpristine扱いしない。
-- v96を4-head opponentへ戻さない。
-- post-deadline/closing oddsをformal prospective ROIとして扱わない。
-- 古いRunのrerun結果を修正版監査と誤認しない。
-- mainを古いSHAへforce/resetしない。
-
 ## AFTER — 86R独立再現監査 完了
 - fresh audit head SHA: `c732387d1bbf01afb4ffdb266d08eb1f74a2399b`
 - Workflow: `audit-4head-86r-independent`
-- Run `34984842829`: success
-- Job `104434176443`: success
-- Artifact `10402973600`
-- marker: `HEAD4_86R_INDEPENDENT_REPLAY_OK`
-
-### 頭率独立再現
+- Run `34984842829` / Job `104434176443` / Artifact `10402973600`: success
 - Apr-Jun: 86R / 35頭 / 40.6977%
-- Apr: 25R / 11頭 / 44.00%
-- May: 35R / 15頭 / 42.86%
-- Jun: 26R / 9頭 / 34.62%
-- Jul: 47R / 24頭 / 51.06%
-- Aug: 31R / 11頭 / 35.48%
-- Jul-Aug fixed: 78R / 35頭 / 44.8718%
-- 4月・5月・6月の全月で30%台後半以上を維持し、Apr-Jun 40.70%は単一月だけの突出ではない。Jul-Aug固定でも44.87%を維持した。
-
-### v283 3連単監査
-- frozen v283 contractは `TOP2XTOP2`, `alpha2=.60`, Top4 exactly 4 tickets。
-- 現行の独立監査では、86R/78Rに対して検証可能な exact causal v283 feature replay rows と、formal prospective用途として認められた pre-deadline 120-way odds snapshot の組を確認できなかった。
-- formal ROI coverage: 0%。したがって正式な3連単的中率 / stake / payout / ROIは `NOT_COMPUTABLE`。
-- v96による代用はしていない。
-- post-deadline/archived closing oddsを正式prospective ROIへ代用していない。
-- 締切時オッズを retrospective diagnostic として別枠利用する研究は可能だが、今回の formal prospective audit 値には混ぜない。
-
-### workflow発火修正
-- fresh trigger: `96ab5744cdcd321c07ece62cba1284e3faf8ebf6`
-- workflow registration/all-push修正: `13ff51aa80e2b67ff314a6a464788b04632e3ffb`
-- registered trigger: `5e34ca175ab8840d8cdbe1294604fa89a229455e`
-- fresh v2 workflow追加: `c732387d1bbf01afb4ffdb266d08eb1f74a2399b`
-- このfresh main SHAで正式成功Run `34984842829` を取得した。
-
-### 結論
-- 86R候補の頭率は独立再現監査を通過。Apr-Jun 40.70%、Jul-Aug 44.87%。
-- 月別にも極端な単月依存は確認されない。
-- v283 formal 3連単ROIは、必要なcausal replay + prospective odds coverage不足のため捏造せず `NOT_COMPUTABLE` と確定。
-- September 2026 outcomes: `UNREAD`。
-- production `HEAD4_V291_COMP7`: unchanged。
-
-### 次の再開地点
-1. 86R候補は頭率監査済み研究候補として扱う。
-2. 3連単を追加研究する場合は、frozen v283のApr-Aug exact causal SECOND/THIRD feature replayを構築し、締切時オッズは formal prospective と分離した retrospective diagnostic として評価する。
-3. audit用に一時的に広げたworkflow triggerと重複v2 workflowは、他作業への影響を確認してから整理する。productionロジックには触れない。
-4. September 2026 outcomesは引き続き `UNREAD`。
-
+- Apr 25R/11頭/44.00%, May 35R/15頭/42.86%, Jun 26R/9頭/34.62%
+- Jul 47R/24頭/51.06%, Aug 31R/11頭/35.48%, Jul-Aug 78R/35頭/44.8718%
+- frozen v283: `TOP2XTOP2`, alpha2=.60, Top4 exactly 4 tickets; v96禁止。
+- formal prospective ROIは `NOT_COMPUTABLE`。Sep `UNREAD`、production unchanged。
 Status: `HEAD4_86R_INDEPENDENT_AUDIT_COMPLETE`
 
 ## BEFORE — v283 締切時オッズ retrospective diagnostic
-ユーザー明示許可: 「締切時オッズでいいよ、検証なんだから」。したがって、従来の formal prospective ROI 監査とは明確に分離し、Apr-Aug の **retrospective diagnostic** として締切時3連単オッズを使用してよい。
+ユーザー明示許可: 「締切時オッズでいいよ、検証なんだから」。formal prospective ROIとは分離する。
+- 固定164R（Apr-Jun 86R + Jul-Aug 78R）を変更しない。
+- frozen v283を使用し、v96代用禁止。
+- official closing oddsを結合し月別・期間別ROIを算出。
+- Sep outcomes `UNREAD`、production unchanged。
+Status: `HEAD4_V283_CLOSING_ODDS_DIAGNOSTIC_STARTED`
+
+## INTERIM — v283 closing odds diagnostic
+- implementation `7c18054ec4a23981867c8afd83c0f4964bbf02ee`
+- workflow fix `7ac801ce35899d5566239d2cc1bf55034875be33`
+- Workflow `audit-4head-v283-closing-odds`
+- Run `34991765053` / Job `104457918590` / Artifact `10406490587`: success
+- Apr-Aug 164R中115R coverage=70.12%, hits=17, stake=46,000円, payout=63,070円, profit=+17,070円, ROI=137.11%。
+- Augは31R中0R coverageで未評価。
+- retrospective diagnosticのみ。formal prospective ROI=`NOT_COMPUTABLE`。Sep `UNREAD`、production unchanged。
+
+## BEFORE — 締切時オッズ coverage 100% 回収監査
+ユーザー指示: 「締切時オッズは全部何処かにあるはず」「続けて」。
 
 これからやること:
-1. 86R/78R候補の母集団・固定条件は一切変更しない。
-2. frozen v283 (`PLAYER_START` SECOND + `COND_BASE` conditional THIRD, `TOP2XTOP2`, alpha2=.60, Top4=4点) を正規ロジックで過去レースへ再現する。v96代用は禁止。
-3. 利用可能な `official_closing` / 締切時3連単オッズを各v283買い目へ結合し、coverageを明示する。
-4. Apr, May, Jun, Jul, Aug および Apr-Jun / Jul-Aug / Apr-Aug 合計について、対象R、coverage、的中R、stake、payout、profit、ROIを計算する。
-5. この値は retrospective diagnostic と明記し、formal prospective ROIとは混同しない。
-6. September 2026 outcomesは引き続き `UNREAD`。production `HEAD4_V291_COMP7` は変更しない。
-7. 実装→fresh Actions Run→Job/Artifact/ログ確認→AFTER追記まで行う。
+1. 現在115/164Rしか結合できていない原因を、候補race keyと `data/official_closing_odds3t` の保存範囲・日付・場コード・R番号の対応から特定する。
+2. 特にAug 31Rが0 coverageの原因を最優先で調べる。現時点のmain `data/official_closing_odds3t/2026` directory listingでは01〜07までは確認でき、`2026/08` contents APIは404だったため、別path・別artifact・取得workflow・生成元を探索する。
+3. repo内のclosing odds取得/生成コード、過去Actions artifacts、別保存形式を調査し、Apr-Aug 164Rの締切時3連単オッズを可能な限り回収する。
+4. 取得可能なら不足日をofficial sourceから再取得するworkflowを実装し、保存/診断へ接続する。September outcomeは絶対に読まない。
+5. coverage 100%を目標にv283 retrospective diagnosticを再実行し、Apr/Augを含む月別・Apr-Jun・Jul-Aug・Apr-Augのhits/stake/payout/profit/ROIを更新する。
+6. fresh Actions Run/Job/Artifactを確認後、AFTERへ原因、回収方法、coverage、全指標、commit SHA、Run/Job/Artifact、結論、次の再開地点を追記する。
+7. formal prospective ROIは引き続き `NOT_COMPUTABLE`。production `HEAD4_V291_COMP7` は変更しない。v96禁止。
 
-Status: `HEAD4_V283_CLOSING_ODDS_DIAGNOSTIC_STARTED`
+Status: `HEAD4_V283_CLOSING_ODDS_COVERAGE_RECOVERY_STARTED`
