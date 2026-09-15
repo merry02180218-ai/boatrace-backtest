@@ -1,0 +1,27 @@
+name: head4-111r-orig-combo
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'start_4head_111r_orig_combo.txt'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy requests beautifulsoup4 lxml
+      - name: Guard and run
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -q "HOLD=('2026-07','2026-08')" analyze_4head_111r_orig_combo.py
+          grep -q "September UNREAD" analyze_4head_111r_orig_combo.py
+          python analyze_4head_111r_orig_combo.py 2>&1 | tee /tmp/head4_111r_orig_combo/run.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-111r-orig-combo
+          path: /tmp/head4_111r_orig_combo/
