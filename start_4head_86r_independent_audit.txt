@@ -3,3 +3,4 @@ retry after workflow registration
 retry after source reconstruction fix
 retry trigger after build_base fix 2026-09-15
 retry after yaml on-key fix 2026-09-15
+fresh main-SHA trigger after v96/postdeadline fail-closed fix 2026-09-15
