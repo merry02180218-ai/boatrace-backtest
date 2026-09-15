@@ -105,3 +105,15 @@ Status: `HEAD4_PLAYER_ALL_WIN_PARETO_COMPLETE_NEXT_SECONDARY_TRAIN_ONLY`
 - v326は展示タイム・展示ST・回り足・直線・orig平均を6艇相対marginへ変換し、ST biasを過去日までで凍結している。
 
 Status: `HEAD4_EXHIBITION_ORIGINAL_RESEARCH_STARTED`
+
+## BEFORE — 場別オリジナル展示availability対応
+ユーザー指摘: 「場によってはオリジナル展示なかったりするから気をつけて」。
+
+これからやること:
+1. `orig_*_all6` を全場共通の必須条件から外す。通常展示タイム `tkz_all6` と展示ST `stt_all6` を基本レイヤーとして全場で評価する。
+2. オリジナル展示は、当該レース/場で6艇分が提供されている場合だけ追加特徴を生成する。非提供場を欠損扱いで候補母集団から落とさない。
+3. `basic_complete`（tkz+stt）と `orig_complete`（turn+straight+avg）を分離して記録し、通常展示特徴はbasic_complete母集団、orig特徴はorig_complete母集団で探索する。
+4. orig非提供と単発取得欠損を可能な範囲で区別できるようavailabilityを出力し、場別complete率も確認可能にする。
+5. Apr-Junだけで条件選択し、Jul-Augは固定評価。September outcomesは `UNREAD`、production `HEAD4_V291_COMP7` は凍結維持。
+
+Status: `HEAD4_EXHIBITION_VENUE_AVAILABILITY_FIX_STARTED`
