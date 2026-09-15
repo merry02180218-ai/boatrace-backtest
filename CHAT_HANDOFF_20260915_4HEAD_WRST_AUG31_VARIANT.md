@@ -57,3 +57,29 @@ Status: `HEAD4_EXHIBITION_ITEM_AVAILABILITY_FIX_STARTED`
 8. 実装→Actions→結果回収後、commit SHA / Run / Job / Artifact / モーター母集団R / 最終R・頭率 / 月別 / holdout / 結論をAFTERへ追記する。
 
 Status: `HEAD4_RELAXED_MOTOR_EXHIBITION_PARETO_STARTED`
+
+## AFTER — モーター条件緩和 × 展示判定 Pareto
+- Run `34966369280` / Job `104371677153` / Artifact `10394589438` / success
+- executed head SHA `f40ad8c5c697de14e2aaef303789af9020b168ed`
+- Apr-Jun最大ボリューム35%超: 111R / 4頭36.94%。
+- 条件: relaxed motor `motor_win_diff_4v3 >= -0.029936` / `motor_2ren_diff_4v3 >= -7.08pt` + `player4_all_win >= .215605` + `st4_adv_inside >= -0.60`。
+- 同条件の展示ST判定前 Apr-Jun: 130R / 34.62%。展示STで +2.32pt。
+- Jul-Aug fixed: 96R / 39.58%。同条件base 39.82%からほぼ横ばい。
+- orig平均 `orig4_adv_inside` は候補条件で Apr-Jun 101R / 38.61%、Jul-Aug 92R / 44.57%。同一availability比 Apr-Jun +3.97pt / Jul-Aug +3.82pt。
+- 9月結果は `UNREAD` 維持。production `HEAD4_V291_COMP7` は変更なし。
+Conclusion: 35%以上を保ちながら100R超へ拡張できた。次は111R/36.94%系を軸にorig項目をavailability非加点のまま組み合わせ、100R前後を維持して40%近辺を狙う。
+
+## BEFORE — 111R母集団 × オリジナル展示組み合わせ
+ユーザー指定: 「続けて」。
+
+これからやること:
+1. Apr-Junで選択済みの111R/36.94%系（relaxed motor + player4_all_win + basic展示ST）を固定の出発点にする。
+2. `turn4_*` / `straight4_*` / `orig4_adv_inside` を項目別availabilityで扱い、availabilityそのものは加点しない。
+3. 単項目だけでなく、利用可能項目に応じたAND/OR/スコア型の組み合わせをApr-Junだけで比較する。
+4. 第一目的は100R前後を維持しながら4号艇頭率40%近辺。件数を大きく落とす条件は別Paretoとして分離する。
+5. 各orig条件は必ず同一availability母集団のベース頭率との差を併記し、提供場バイアスを頭率改善として数えない。
+6. Apr-Junだけで閾値・構成を決定。Jul-Augは固定候補のみ評価し、holdout結果で再選択しない。
+7. 2026年9月結果は一切読まず `UNREAD`。production `HEAD4_V291_COMP7` は凍結。
+8. 実装→Actions→結果回収→AFTERに commit SHA / Run / Job / Artifact / Apr-Jun件数・頭率 / Jul-Aug固定評価 / 結論 / 次の再開地点を記録する。
+
+Status: `HEAD4_111R_ORIG_COMBO_STARTED`
