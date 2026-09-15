@@ -4,10 +4,11 @@ on:
     branches: [research/3head-player-attack-mode]
     paths:
       - 'research/run_3head_exhibition_ticket_rescue.py'
+      - 'research/run_3head_exhibition_ticket_rescue_march.py'
       - '.github/workflows/research-3head-ticket-rescue.yml'
   workflow_dispatch:
 jobs:
-  feb-ticket-rescue:
+  march-one-shot:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -27,14 +28,13 @@ jobs:
           DST="$GITHUB_WORKSPACE/analysis_v289_3head_wave21_allrace_feature_settled.csv"
           if [ "$(realpath "$SRC")" != "$(realpath -m "$DST")" ]; then cp "$SRC" "$DST"; fi
           test -f "$DST"
-      - name: February post-ranking ticket-rescue grid
+      - name: March frozen one-shot ticket-rescue audit
         run: |
           set -o pipefail
-          PYTHONPATH="$GITHUB_WORKSPACE" python research/run_3head_exhibition_ticket_rescue.py | tee research_v289_3head_exhibition_ticket_rescue.log
+          PYTHONPATH="$GITHUB_WORKSPACE" python research/run_3head_exhibition_ticket_rescue_march.py | tee research_v289_3head_exhibition_ticket_rescue_march.log
       - uses: actions/upload-artifact@v4
         with:
-          name: research-3head-ticket-rescue-feb
+          name: research-3head-ticket-rescue-march
           path: |
-            research_v289_3head_exhibition_ticket_rescue.json
-            research_v289_3head_exhibition_ticket_rescue_grid.csv
-            research_v289_3head_exhibition_ticket_rescue.log
+            research_v289_3head_exhibition_ticket_rescue_march.json
+            research_v289_3head_exhibition_ticket_rescue_march.log
