@@ -39,8 +39,10 @@
 3. KEEPを誤って壊す false override を明示評価し、override閾値を設ける。
 4. 同一race集合で first-pair baseline / corrected first-pair / 3-ticket union coverage / override率 / false-override damage / REPLACE_ONE rescue を比較する。
 5. schemaごとの利用可能展示特徴に合わせ、存在しないstraight等を一律dropnaしない。
-6. データが20260630までなので、可能なら train<20260601 / June frozen holdout を別評価する。
-7. September 2026結果・払戻は絶対に読まない。production/LIVE条件は研究結果確定まで変更しない。
+6. データが20260630までなので、train<20260601 / June frozen holdout を評価する。
+7. Wave4実装 commit `3be754d21d727d3626924a2d159b2c25bb6c8efe` (`research_v351_one_replace_wave4.py`) はmainに存在。現 `monthly-backtest` Run `34994172220` はWave3までしか実行しないため、workflowへWave4 step/artifactを追加してfresh Runを発火する。
+8. 同pushで旧 `.github/workflows/audit-4head-86r-independent.yml` Run `34994172125` が無関係発火したことを確認。1号艇研究実行と並行して、この旧4号艇workflowのpush triggerを整理する。
+9. September 2026結果・払戻は絶対に読まない。production/LIVE条件は研究結果確定まで変更しない。
 
 ## 現行production / LIVE
 - production profile: `1HEAD_PRODUCTION_20260915_HEAD078_V351_OPPONENTCORE_G2_045_G3_100`
