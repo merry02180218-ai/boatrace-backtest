@@ -60,3 +60,29 @@ Status: `HEAD4_HEADRATE_3REN_ST_ENV_RESEARCH_STARTED`
 7. 実装→CI→結果回収後、commit SHA / Run / Job / Artifact / Pareto表 / 結論 / 次の再開地点を追記する。
 
 Status: `HEAD4_PLAYER_ALL_WIN_PARETO_STARTED`
+
+## AFTER — player4_all_win threshold Pareto refinement
+- BEFORE commit: `c5e11bad05c7570add019d55f58b9eb6e1a806d2`
+- implementation commit: `7728506dd653a73bc1ff0827dc7bf0dcc1355662`
+- workflow commit / executed SHA: `dfb914e965c874c6c66ab56dae25c4c7ec004f4e`
+- Run `34926782402` / Job `104246398587` / Artifact `10379723183` / success
+- CI guard: September blind / production frozen PASS.
+- train-only Pareto representatives were fixed before holdout evaluation.
+
+Key Pareto points:
+- cut 0.204165: Apr-Jun 83R / 27.71%; Jul-Aug 65R / 43.08%; Apr-Aug 148R / 34.46%.
+- cut 0.206905: Apr-Jun 80R / 28.75%; Jul-Aug 63R / 42.86%; Apr-Aug 143R / 34.97%.
+- cut 0.210863: Apr-Jun 77R / 29.87%; Jul-Aug 61R / 42.62%; Apr-Aug 138R / 35.51%.
+- cut 0.215605: Apr-Jun 75R / 30.67%; Jul-Aug 61R / 42.62%; Apr-Aug 136R / 36.03%.
+- train-fixed representative cut 0.224982: Apr-Jun 69R / 31.88%; Jul-Aug 50R / 50.00%; Apr-Aug 119R / 39.50%.
+- previous cut 0.230699: Apr-Jun 64R / 32.81%; Jul-Aug 50R / 50.00%; Apr-Aug 114R / 40.35%.
+- train-fixed high-head representative cut 0.242111: Apr-Jun 59R / 33.90%; Jul-Aug 45R / 53.33%; Apr-Aug 104R / 42.31%.
+
+Conclusion:
+- `player4_all_win` 単独でも、R数を136〜138Rまで残しながらApr-Aug頭率35.5〜36.0%の帯に到達した。
+- ただしApr-Jun単独の頭率は30%前後であり、35%超はJul-Augの強いholdout成績に支えられている。よって0.210863/0.215605をproduction採用とはしない。
+- 0.224982以上はApr-Augでは非常に強いが、母数119R以下。holdoutの50%を見た後なので、今後この結果だけを理由に閾値を選び直すとholdout contaminationになる。
+- 次は `0.210863`〜`0.215605` 周辺を「量を保つ基準帯」とし、Apr-Junだけでsecondary causal gateを探索してtrain頭率35%近辺へ上げられるか検証する。候補はmotor_3ren_diff、recent_p2、frame4/player strength等。STはlineage完全監査までは使わない。
+- September 2026 remains `UNREAD`; production `HEAD4_V291_COMP7` remains frozen.
+
+Status: `HEAD4_PLAYER_ALL_WIN_PARETO_COMPLETE_NEXT_SECONDARY_TRAIN_ONLY`
