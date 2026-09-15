@@ -35,3 +35,28 @@
 8. 実装→CI→結果回収後、commit SHA / Run / Job / Artifact / 採用候補 / 月別頭率 / 次の再開地点を追記する。
 
 Status: `HEAD4_HEADRATE_3REN_ST_ENV_RESEARCH_STARTED`
+
+## RESULT — initial head-rate research
+- implementation SHA `2e5df5c1feccfca4792bdc890de06434a5766823`
+- Run `34907898020` / Job `104188682345` / Artifact `10372929335` / success
+- fixed-base Apr-Jun: 107R / 4頭 27.10%
+- selected train-only extra gate: `player4_all_win >= 0.230699`
+- Apr-Jun selected: 64R / 4頭 32.81%; Apr 27.8% / May 37.0% / Jun 31.6%
+- Jul-Aug fixed holdout: 50R / 25頭 / 50.00%; Jul 28R/53.6%, Aug 22R/45.5%
+- September remained `UNREAD`; production unchanged.
+- `player4_all_win` is prior-only and freezes the whole date before ingesting same-day results.
+- ST source is `analysis_v93` / v90-v91 lineage. v93 explicitly treats these as prior-only frozen ST strengths and freezes opponent ranks before official outcome join. Because the original v90/v91 generator is not currently present on main under the expected filename, ST is not needed for the next univariate player-strength Pareto step; do not use ST to justify the chosen threshold until lineage is independently reproducible.
+
+## BEFORE — player4_all_win threshold Pareto refinement
+ユーザー指定: 続行。
+
+これからやること:
+1. fixed motor baseはそのまま、追加条件を causal `player4_all_win` 単独に限定して閾値Paretoを調べる。
+2. 閾値候補はApr-Junだけから事前に作り、Jul-Augで閾値を選び直さない。
+3. Apr-JunのR数・頭率・月別頭率を基準にPareto frontierを作り、代表候補をtrain-onlyで固定してからJul-Augを評価する。
+4. 目標はApr-Augで100〜150R程度を残しつつ、4号艇頭率35%近辺以上を狙う。ただしholdoutを見て閾値を最適化した場合はpristine扱いしない。
+5. STは今回の閾値選択には使わない。ST lineage監査は別系統で継続可能とする。
+6. September outcomesは一切読まず `UNREAD` 維持。production `HEAD4_V291_COMP7` は変更しない。
+7. 実装→CI→結果回収後、commit SHA / Run / Job / Artifact / Pareto表 / 結論 / 次の再開地点を追記する。
+
+Status: `HEAD4_PLAYER_ALL_WIN_PARETO_STARTED`
