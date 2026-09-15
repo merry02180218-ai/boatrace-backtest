@@ -49,3 +49,8 @@
 - 同時に誤って簡略化した `run_v323_1head_frozen_live_adapter.py` を変更前版へ復元し、September rolling処理はLIVE専用moduleへ分離する。
 - base opponent mass と production SECOND/THIRD のL2/family差も監査し、chronology-safeな日付ベース学習を維持する。
 - 修正後にrolling CIを再実行し、Run/Job/Artifactまで確認してからshared cache→watcher E2Eへ進む。
+
+## 作業開始 2026-09-15 — PRE artifact path repair
+- 最新 failure Run=`34932940149` / Job=`104264780075` を確認。v321 canonical prepareは成功し、rolling工程で `FileNotFoundError: /tmp/pre/race_cards.csv`。
+- PRE Artifact ID=`10379049041` の実体を確認し、race cardsは `/tmp/pre/live_pre/race_cards.csv`、waku10は `/tmp/pre/live_pre/waku10.csv`、S/A/Bは `/tmp/pre/v351_live_sab/pre_candidates_sab.csv` に格納されている。
+- これからworkflowの `--cards` を実Artifact構成へ修正し、CIを再実行して次の停止点まで確認する。
