@@ -41,3 +41,11 @@
 - target自身/未来raceは不使用。同日結果も不使用。
 - rolling model cacheを生成し、watcherの展示→正式gate→v351 finalizer→immutable PASS/DROP/3点までE2E CIを通す。
 - 完了後にcommit / Run / Job / Artifact / timingを追記する。
+
+## 作業再開 2026-09-15 — rolling cache repair
+- rolling CI Run=`34931581247` / Job=`104260715984` は failure。
+- September race-card取得修正後、次の停止点は `cache_v321_julaug_nonpristine_head_full.csv.gz` 不在。
+- これから frozen prepare/cache の正規生成経路を確認してworkflowへ接続する。
+- 同時に誤って簡略化した `run_v323_1head_frozen_live_adapter.py` を変更前版へ復元し、September rolling処理はLIVE専用moduleへ分離する。
+- base opponent mass と production SECOND/THIRD のL2/family差も監査し、chronology-safeな日付ベース学習を維持する。
+- 修正後にrolling CIを再実行し、Run/Job/Artifactまで確認してからshared cache→watcher E2Eへ進む。
