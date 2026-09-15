@@ -1,8 +1,8 @@
 name: legacy-4head-research-trigger-only
-on: [push]
+on:
+  workflow_dispatch:
 jobs:
   run:
-    if: contains(github.event.head_commit.message, 'start 4-head exhibition original study')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
