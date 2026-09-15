@@ -25,13 +25,15 @@ jobs:
           MATRIX=$(python - "$CSV" <<'PY'
           import csv,json,sys
           with open(sys.argv[1],encoding='utf-8-sig',newline='') as f:r=list(csv.DictReader(f))
-          print(json.dumps({'include':[{'code':str(x['race_code']).zfill(12),'jcd':int(str(x['race_code']).zfill(12)[8:10]),'race':int(str(x['race_code']).zfill(12)[10:12]),'pre_class':x['pre_class'],'legacy_pre_p':x['legacy_pre_p']} for x in r]},separators=(',',':')))
+          rows=[{'code':str(x['race_code']).zfill(12),'jcd':int(str(x['race_code']).zfill(12)[8:10]),'race':int(str(x['race_code']).zfill(12)[10:12]),'pre_class':x['pre_class'],'legacy_pre_p':x['legacy_pre_p']} for x in r]
+          rows.sort(key=lambda x:x['code'])
+          print(json.dumps({'include':rows},separators=(',',':')))
           PY
           );echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
   watch:
     needs: prepare
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 10
     strategy:
       fail-fast: false
       max-parallel: 20
@@ -46,35 +48,36 @@ jobs:
         env: {GH_TOKEN: '${{ github.token }}', CODE: '${{ matrix.code }}'}
         run: |
           N=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=live-v351-final-$CODE&per_page=1" --jq '.total_count');echo "done=$([ "${N:-0}" -gt 0 ] && echo 1 || echo 0)" >> "$GITHUB_OUTPUT"
-      - name: Wait for exhibition and probe
+      - name: Resolve window and probe once
         if: steps.prior.outputs.done == '0'
         env: {CODE: '${{ matrix.code }}', JCD: '${{ matrix.jcd }}', RACE: '${{ matrix.race }}'}
         run: |
           set -euo pipefail
           DL=$(python fetch_boatrace_deadline.py --date 20260915 --jcd "$JCD" --race "$RACE" --meta "deadline_$CODE.json")
           echo "DEADLINE_JST=$DL" >> "$GITHUB_ENV"
-          while true; do
-            python run_1head_v351_live_window.py --deadline-jst "$DL" > "window_$CODE.json"
-            MODE=$(python -c "import json;print(json.load(open('window_$CODE.json'))['mode'])")
-            echo "LIVE_MODE=$MODE" >> "$GITHUB_ENV"
-            cat "window_$CODE.json"
-            if [ "$MODE" = "WAIT" ]; then sleep 15; continue; fi
-            set +e
-            python probe_1head_v351_boatcast_exhibition.py --date 20260915 --jcd "$JCD" --race "$RACE" --deadline-jst "$DL" > "exhibition_$CODE.json" 2> "exhibition_error_$CODE.txt"
-            RC=$?
-            set -e
-            if [ "$RC" -eq 0 ]; then
-              echo 'EXHIBITION_READY=1' >> "$GITHUB_ENV"
-              echo "EXHIBITION_READY at $(date -u +%FT%TZ)"
-              break
-            fi
-            if [ "$MODE" = "FINAL5" ]; then
-              echo 'EXHIBITION_READY=0' >> "$GITHUB_ENV"
-              echo 'FAIL_CLOSE=1' >> "$GITHUB_ENV"
-              break
-            fi
-            sleep 15
-          done
+          python run_1head_v351_live_window.py --deadline-jst "$DL" > "window_$CODE.json"
+          MODE=$(python -c "import json;print(json.load(open('window_$CODE.json'))['mode'])")
+          echo "LIVE_MODE=$MODE" >> "$GITHUB_ENV"
+          cat "window_$CODE.json"
+          if [ "$MODE" = "WAIT" ]; then
+            echo 'POLL_DONE=WAIT' >> "$GITHUB_ENV"
+            exit 0
+          fi
+          set +e
+          python probe_1head_v351_boatcast_exhibition.py --date 20260915 --jcd "$JCD" --race "$RACE" --deadline-jst "$DL" > "exhibition_$CODE.json" 2> "exhibition_error_$CODE.txt"
+          RC=$?
+          set -e
+          if [ "$RC" -eq 0 ]; then
+            echo 'EXHIBITION_READY=1' >> "$GITHUB_ENV"
+            echo 'POLL_DONE=READY' >> "$GITHUB_ENV"
+          elif [ "$MODE" = "FINAL5" ]; then
+            echo 'EXHIBITION_READY=0' >> "$GITHUB_ENV"
+            echo 'FAIL_CLOSE=1' >> "$GITHUB_ENV"
+            echo 'POLL_DONE=FINAL5_NOT_READY' >> "$GITHUB_ENV"
+          else
+            echo 'EXHIBITION_READY=0' >> "$GITHUB_ENV"
+            echo 'POLL_DONE=TRY_NOT_READY' >> "$GITHUB_ENV"
+          fi
       - name: T-5 fail close
         if: steps.prior.outputs.done == '0' && env.FAIL_CLOSE == '1'
         env: {CODE: '${{ matrix.code }}', PRE_CLASS: '${{ matrix.pre_class }}'}
