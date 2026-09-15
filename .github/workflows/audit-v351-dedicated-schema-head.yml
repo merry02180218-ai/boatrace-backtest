@@ -1,5 +1,5 @@
 name: audit-v351-dedicated-schema-head
-# retry-trigger: exact3 decomposition through proven registered workflow
+# retry-trigger: exact3 decomposition latest-main attempt 2
 on:
   workflow_dispatch:
   push:
