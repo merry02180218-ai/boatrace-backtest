@@ -1,0 +1,31 @@
+name: audit-v351-schema-calibration
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'audit_v351_schema_calibration.py'
+      - '.github/workflows/audit-v351-schema-calibration.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4
+      - name: Rebuild schema OOF
+        run: python audit_v351_schema_correct_rebuild.py | tee schema_rebuild.txt
+      - name: Chronological calibration
+        run: python audit_v351_schema_calibration.py | tee schema_calibration.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audit-v351-schema-calibration
+          path: |
+            analysis_v351_schema_correct_rebuild.csv
+            analysis_v351_schema_map.csv
+            analysis_v351_schema_calibration.csv
+            analysis_v351_schema_calibration_summary.csv
+            schema_rebuild.txt
+            schema_calibration.txt
