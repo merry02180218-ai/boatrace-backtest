@@ -61,3 +61,10 @@
 ### 次の再開地点
 - 日次PRE/LIVEでは上記Biyori方式を使用する。ユーザーから特定Rの「判別して」が来た場合、事前候補外でも当該race cacheを起点に展示取得→直前判定を即時実行する。
 - 研究側はWave9の結果抽出へ戻る。production変更はWave9監査完了まで行わない。
+
+## BEFORE: opponent mass `.375` 独立監査
+- ユーザー指示により、HEAD>=.78を通過したレースを対象に `OPPONENT_MASS_MIN=.375` が本当に有効なgateか監査する。
+- 現production定数 `.375` は変更せず、まず historical `race_code < 20260901` のみで評価する。September outcomes/payoutsは `UNREAD` 維持。
+- 比較する内容: mass帯別のR数 / HEAD的中率 / exact3的中率、`.375`以上 vs 未満、閾値grid（少なくとも .30/.325/.35/.375/.40/.425/.45）、`.375`で落としたレースのHEAD/exact3、可能なら月別・schema別も確認する。
+- 特に今日の津3R/鳴門4Rのような `HEAD>=.78 & mass<.375` 型を捨てることにhistoricalな根拠があるかを見る。
+- 閾値選択と評価を同じ標本で行う場合は探索結果と明記し、production変更は独立holdout確認まで行わない。
