@@ -1,4 +1,4 @@
-name: v350 1-head LIVE operation 20260915
+name: v351 1-head LIVE PRE SAB 20260915
 
 on:
   workflow_dispatch:
@@ -34,7 +34,7 @@ jobs:
           f.make_waku=waku
           f.main()
           PY
-      - name: Score result-blind Legacy PRE and freeze candidates
+      - name: Score result-blind Legacy PRE and freeze S/A/B candidates
         run: |
           python - <<'PY'
           from datetime import date
@@ -42,6 +42,16 @@ jobs:
           import csv, json
           import analyze_v136_1head_preselection_inner_threats as v
           from backtest import race_features
+
+          S_MIN=0.82
+          A_MIN=0.80
+          B_MIN=0.78
+
+          def pre_class(p):
+              if p >= S_MIN: return 'S'
+              if p >= A_MIN: return 'A'
+              if p >= B_MIN: return 'B'
+              return ''
 
           def read(path):
               with open(path,encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
@@ -72,32 +82,36 @@ jobs:
                   'motor2':c.get('艇1_モーター2連対率',''),'nst':c.get('艇1_全国平均ST','')})
               cur.append(r)
           pp=model.predict_proba(v.xlegacy(cur))[:,1]
-          for r,p in zip(cur,pp):r['legacy_pre_p']=float(p)
+          for r,p in zip(cur,pp):
+              r['legacy_pre_p']=float(p)
+              r['pre_class']=pre_class(float(p))
           cur=sorted(cur,key=lambda r:(-r['legacy_pre_p'],r['race_code']))
-          frozen=cur[:15]
-          top5=cur[:5]
-          out=Path('/tmp/v350_live');out.mkdir(exist_ok=True)
-          fields=['rank','race_code','venue','race','name','grade','legacy_pre_p','motor2','nst']
-          with (out/'pre_candidates.csv').open('w',encoding='utf-8-sig',newline='') as f:
+          frozen=[r for r in cur if r['pre_class']]
+          out=Path('/tmp/v351_live_sab');out.mkdir(exist_ok=True)
+          fields=['rank','pre_class','race_code','venue','race','name','grade','legacy_pre_p','motor2','nst']
+          with (out/'pre_candidates_sab.csv').open('w',encoding='utf-8-sig',newline='') as f:
               w=csv.DictWriter(f,fieldnames=fields);w.writeheader()
               for i,r in enumerate(frozen,1):w.writerow({'rank':i,**{k:r.get(k) for k in fields if k!='rank'}})
+          counts={g:sum(r['pre_class']==g for r in frozen) for g in ['S','A','B']}
           result={
               'date':'2026-09-15','cards':len(cards),'waku_rows':len(wrows),'scored':len(cur),
               'training_max_date':max(r['date'] for r in src),
               'SEPTEMBER_OUTCOMES_READ':False,
-              'production_g2':0.50,'research_g2':0.45,'g3_fixed':1.00,
-              'top5':[{'race_code':r['race_code'],'name':r['name'],'pre_p':r['legacy_pre_p']} for r in top5],
-              'frozen_top15':[{'race_code':r['race_code'],'name':r['name'],'pre_p':r['legacy_pre_p']} for r in frozen],
+              'production_profile':'1HEAD_PRODUCTION_20260915_HEAD078_V351_OPPONENTCORE_G2_045_G3_100',
+              'thresholds':{'S_MIN':S_MIN,'A_MIN':A_MIN,'B_MIN':B_MIN},
+              'candidate_count':len(frozen),'class_counts':counts,
+              'candidates':[{'rank':i,'pre_class':r['pre_class'],'race_code':r['race_code'],'name':r['name'],'pre_p':r['legacy_pre_p']} for i,r in enumerate(frozen,1)],
+              'FIXED_TOP15_USED':False,
               'PRODUCTION_CHANGED':False
           }
-          (out/'pre_result.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
+          (out/'pre_result_sab.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
           print(json.dumps(result,ensure_ascii=False,indent=2),flush=True)
           PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: v350-1head-live-pre-20260915
+          name: v351-1head-live-pre-sab-20260915
           path: |
-            /tmp/v350_live/
+            /tmp/v351_live_sab/
             /tmp/live_pre/race_cards.csv
             /tmp/live_pre/waku10.csv
