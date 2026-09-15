@@ -5,6 +5,7 @@ from datetime import date,timedelta
 from pathlib import Path
 import numpy as np,pandas as pd
 from scipy.special import logsumexp
+from backtest import rows as source_rows
 import run_v323_1head_frozen_live_adapter as v323
 import analyze_v298_1head_threat_listwise_trifecta5 as v298
 import run_v300_1head_trifecta3_feature_upgrade as v300
@@ -22,9 +23,12 @@ def sep_features(labels,target):
  for ds in sorted(labels.date.astype(str).unique()):
   d=date.fromisoformat(ds)
   if d>=target:continue
-  p=Path(f'data/programs/race_cards/{d:%Y/%m/%d}.csv')
-  if not p.exists():continue
-  cur=v323.current_static(v323.load_cards(p),d);feat,_,_=v323.build_current_features(cur);out.append(feat)
+  # Historical September cards are canonical BoatraceCSV inputs and are not
+  # materialized in this repository. Use the same remote loader as the
+  # verified September source builder instead of Path.exists().
+  cards=source_rows(f'data/programs/race_cards/{d:%Y/%m/%d}.csv')
+  if not cards:continue
+  cur=v323.current_static(cards,d);feat,_,_=v323.build_current_features(cur);out.append(feat)
  if not out:raise RuntimeError('no September reconstructed features')
  z=pd.concat(out,ignore_index=True);lab=labels[['race_code','head_hit','actual_combo']].copy();lab.race_code=lab.race_code.astype(str).str.zfill(12);z.race_code=z.race_code.astype(str).str.zfill(12);z=z.merge(lab,on='race_code',how='inner',validate='one_to_one');return z
 
@@ -41,7 +45,7 @@ def pc_fit(cl,target_date,l2=.1,drop_start=True):
  for code,g in te.groupby('race_code'):
   pc={}
   for s,gs in g.groupby('second_boat'):
-   a=gs.score.to_numpy(float);pp=np.exp(a-logsumexp(a))
+   aa=gs.score.to_numpy(float);pp=np.exp(aa-logsumexp(aa))
    for t,p in zip(gs.third_boat.astype(int),pp):pc[(int(s),int(t))]=float(p)
   out[str(code).zfill(12)]=pc
  return out,len(fs)
@@ -53,8 +57,8 @@ def main():
  v300.setup_v298();sufs=v298.suffixes(slimhist);curx=cur.copy();curx['head_hit']=0;curx['actual_combo']=''
  for c in slimhist.columns:
   if c not in curx:curx[c]=np.nan
- full=pd.concat([slimhist,curx[list(slimhist.columns)]],ignore_index=True);sl=v300.augment_second(v298.second_long(full,sufs));_,p3,p4=v312.load_cache();sx,_=v317.add_engineered(v310.add_headrisk(sl,p3,p4),'OUTER');p2,n2=p2_fit(sx,target);cl=v300.augment_third(v321._third_fold_long(full,sufs,target.strftime('%Y-%m')));pc,n3=pc_fit(cl,target);base2,_=p2_fit(sl,target);basepc,_=pc_fit(cl,target,l2=.3,drop_start=False);fn=v299.STRATEGIES[prod.TICKET_POLICY];rows=[]
+ full=pd.concat([slimhist,curx[list(slimhist.columns)]],ignore_index=True);sl=v300.augment_second(v298.second_long(full,sufs));_,p3,p4=v312.load_cache();sx,_=v317.add_engineered(v310.add_headrisk(sl,p3,p4),'OUTER');p2,n2=p2_fit(sx,target);cl=v300.augment_third(v321._third_fold_long(full,sufs,target.strftime('%Y-%m')));pc,n3=pc_fit(cl,target);base2,_=p2_fit(sl,target);basepc,_=pc_fit(cl,target,l2=.3,drop_start=False);fn=v299.STRATEGIES[prod.TICKET_POLICY];outrows=[]
  for _,r in head.iterrows():
-  code=str(r.race_code).zfill(12);mass=v300.base5(base2[code],basepc[code])[1];pair=v299.pair_prob(p2[code],pc[code],prod.TICKET_ALPHA);top=fn(p2[code],pc[code],pair)[:3];rows.append({'race_code':code,'final_head_p':float(r.p_head),'opp_mass':float(mass),'p2':{str(k):float(v) for k,v in p2[code].items()},'pc':{f'{s}-{t}':float(v) for (s,t),v in pc[code].items()},'base_tickets':';'.join(f'1-{s}-{t}' for s,t in top)})
- meta={'production_profile':prod.PROFILE_NAME,'target_date':str(target),'training_cutoff':str(target-timedelta(days=1)),'september_rows':len(sep),'head_history_rows':len(headhist),'opponent_history_rows':len(slimhist),'second_features':n2,'third_features':n3,'same_day_outcomes_read':False,'target_or_future_rows':0,'chronology_guard':True,'build_sec':time.perf_counter()-t0};(a.out_dir/'rolling_models.json').write_text(json.dumps({'meta':meta,'races':rows},ensure_ascii=False,indent=2));print(json.dumps(meta,ensure_ascii=False))
+  code=str(r.race_code).zfill(12);mass=v300.base5(base2[code],basepc[code])[1];pair=v299.pair_prob(p2[code],pc[code],prod.TICKET_ALPHA);top=fn(p2[code],pc[code],pair)[:3];outrows.append({'race_code':code,'final_head_p':float(r.p_head),'opp_mass':float(mass),'p2':{str(k):float(v) for k,v in p2[code].items()},'pc':{f'{s}-{t}':float(v) for (s,t),v in pc[code].items()},'base_tickets':';'.join(f'1-{s}-{t}' for s,t in top)})
+ meta={'production_profile':prod.PROFILE_NAME,'target_date':str(target),'training_cutoff':str(target-timedelta(days=1)),'september_rows':len(sep),'head_history_rows':len(headhist),'opponent_history_rows':len(slimhist),'second_features':n2,'third_features':n3,'same_day_outcomes_read':False,'target_or_future_rows':0,'chronology_guard':True,'build_sec':time.perf_counter()-t0};(a.out_dir/'rolling_models.json').write_text(json.dumps({'meta':meta,'races':outrows},ensure_ascii=False,indent=2));print(json.dumps(meta,ensure_ascii=False))
 if __name__=='__main__':main()
