@@ -18,14 +18,16 @@ File `track_exhibition_boats_v30.py`; implementation `6e406352bf8a28876c61ad67e4
 ### v30 Actions trigger diagnosis and repair
 The dedicated workflow `.github/workflows/regress-exhibition-seed17-track30.yml` was created at `62ad92bd13d617ded98dd0c2c1c59df515246085`. Trigger `f26f5abd0331df306df2db86651e85519c28a9ef`, later retrigger `bac262422a2b0de69bbc9d09845dcdd9f2b78ea3`, and dependency-path repair `0fb3eda2c9fb4a866f6ec4ac151e693c335e7cc6` produced no discoverable v30 Actions run even after propagation. A head-SHA Actions query for repair commit showed other push workflows ran, proving repository Actions itself was alive; the v30 workflow specifically was not registered/triggering.
 
-At ~11:23 JST the existing already-registered v29 regression workflow was therefore converted into a temporary **v30 validation bridge** rather than changing tracker logic or thresholds. Bridge commit: `dca84d404b6bda839e0f6044fd6e6450db827f47`. The workflow path remains `.github/workflows/regress-exhibition-seed17-track29.yml` so GitHub uses an already-known workflow identity, but its run-name, tracker command, output and artifacts now explicitly execute `track_exhibition_boats_v30.py` on the unchanged four-video matrix. Artifact prefix is `seed17-track30-bridge-*`. Immediately after commit, head-SHA run query returned zero; allow normal GitHub propagation, then recheck before further edits. This bridge is validation infrastructure only and does not alter production wrapper or blindness.
+At ~11:23 JST the existing v29 regression path was converted into a temporary v30 validation bridge at `dca84d404b6bda839e0f6044fd6e6450db827f47`. A later head-SHA query proved this commit did trigger four unrelated push workflows, but NOT the bridge: run `34921036101` was `head4-jul18-19-primitives`, not SES. Therefore the assumption that the v29 path remained registered is false.
+
+At ~12:22 JST, after propagation, `track_exhibition_boats_v30.py` received a source-comment-only retrigger commit `7db971e47301296d6a8cbd194fba75f29c1196f5`; tracker logic/thresholds were unchanged. Immediate head-SHA Actions query again returned zero runs. This confirms the current blocker is GitHub Actions workflow registration/triggering, not a v30 scientific result. Do not interpret absence of a run as tracker failure. No race results were read.
 
 ## Exact restart point
-1. Query Actions runs for head SHA `dca84d404b6bda839e0f6044fd6e6450db827f47` and/or the registered v29 workflow path after propagation.
-2. If bridge run exists, inspect all four jobs/artifacts, not workflow status alone. Preserve Kiryu3/6 blindness. Record dead-frame depth, residual/acceleration rejects, +0.5/+1.0/+1.5 centers, physical identity/on-frame sanity, and FastClip+seed+tracker latency.
-3. Compare v30 directly with v29/v28. A win must improve feasibility physically without widening gates.
-4. If v30 still fails, do not widen 24/20 caps. Next principled direction is temporal camera-state continuity in the beam (camera parameter velocity/acceleration), or independent background-feature camera motion.
-5. If bridge still produces no run after propagation, diagnose Actions workflow registration rather than modifying tracker logic. Do not repeatedly create trigger-only commits.
+1. Recheck head SHA `7db971e47301296d6a8cbd194fba75f29c1196f5` after propagation. If the SES bridge appears, inspect all four jobs/artifacts immediately.
+2. If it still does not appear, stop making trigger-only tracker commits. Diagnose workflow registration using repository Actions workflow metadata/registered workflow identity; if connector cannot dispatch/list it, repair via an actually registered existing SES workflow path rather than changing tracker science.
+3. Once v30 runs, preserve Kiryu3/6 blindness and record dead-frame depth, residual/acceleration rejects, +0.5/+1.0/+1.5 centers, physical identity/on-frame sanity, and FastClip+seed+tracker latency.
+4. Compare v30 directly with v29/v28. A win must improve feasibility physically without widening gates.
+5. If v30 scientifically fails, do not widen 24/20 caps. Next principled direction is temporal camera-state continuity in the beam (camera parameter velocity/acceleration), or independent background-feature camera motion.
 6. Only after one unchanged seed+tracker passes all four sane and <=60 sec may `run_exhibition_ses_live_local.py` be updated, then perform >=1 Japan self-hosted end-to-end live-style validation.
 
 ## Production wrapper
