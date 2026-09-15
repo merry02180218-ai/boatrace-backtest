@@ -36,19 +36,19 @@
 - event: `push`
 - workflow_id: `358664242`
 - Runは `failure` だが、これはsmoke requestが意図的な無効race_code `999999999999` だったため `Resolve request and causal base` でfail-closeしたもの。trigger不良ではない。
-- checkout / Python setup / dependency installまではsuccessし、専用request commitからbridge Jobが実行されることを確認した。
-- Artifact ID: なし（無効race_codeでbase解決前にfail-closeしたため正常）。
-- このsmokeでは結果・払戻を使用していない。
+- Artifact ID: なし。
 
 ### 結論
 - Chatから `live_requests/1head_v351.txt` を更新することで専用LIVE workflowを起動できる。
-- したがって今後はユーザーの「○○R判別して」に対して、Chatからrequest commit → bridge Run特定 → Job監視 → Artifact回収 → BUY/DROP + BUY時3連単3点返却まで実行する。
 - 1号艇の定期cron/controllerは復活させない。
-- actual LIVE成功判定は、実在race_codeで締切前に最終Artifactを生成しユーザーへ締切前に返せた場合のみ。smoke Run `34962132626` はactual LIVE成功には数えない。
 
 ### 次の再開地点
-1. 次にユーザーから実在レースの判別要求が来たら、即座に `live_requests/1head_v351.txt` をrace_codeへ更新する。
-2. そのcommit SHAの `chat-live-1head-v351-request` Runを取得する。
-3. Run/Jobを監視し、Artifact生成後にfinal JSONを回収する。
-4. BUY/DROP、BUYなら3点、Run/Job/Artifact IDを即返す。
-5. 作業後に本handoffへactual LIVE結果を追記する。
+- 実在レース判別要求 → request commit → Run/Job監視 → Artifact回収 → BUY/DROP + BUY時3点返却 → 作業後handoff更新。
+
+## 2026-09-15 蒲郡12R actual LIVE
+### 作業前記録
+- ユーザー要求: 「蒲郡12R判別して」
+- race_code: `202609150712`
+- BOAT RACE公式で締切予定 `20:35 JST` を確認。
+- これから `live_requests/1head_v351.txt` を上記race_codeへ更新し、専用bridge Runを特定・監視、Artifactを回収してv351のBUY/DROP（BUYなら3連単3点）を返す。
+- production gate/finalizerは変更しない。結果・払戻は使用しない。
