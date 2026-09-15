@@ -1,0 +1,14 @@
+{
+  "wave":"57-pair-level-attack-structure-interactions",
+  "fixed_population":{"wave54_races":210,"boat3_heads":71,"tickets_per_race":3},
+  "baseline":{"name":"Wave55 independent second*third","hits":27,"capture_pct":38.0282,"stake_yen":63000,"return_yen":67340,"roi_pct":106.8889,"early_hits":13,"early_heads":36,"late_hits":14,"late_heads":35},
+  "training":{"period":"2026-02 only","boat3_head_races":478,"ordered_pair_rows":9560,"model_family":"balanced logistic ordered-pair classifier","selection":"February 5-fold grouped CV only; no March labels used for hyperparameter/model selection","predeadline_features":"ordered second/third lane identities; each candidate own/relative national ST, national win/2/3, local win/2, motor2/3, boat2; boat3 gaps; pair gaps/means; inner/outer/mixed indicators and pair-specific interaction terms"},
+  "feb_cv":{"baseline_pair_auc":0.681,"pair_interaction_auc":0.704,"baseline_top3_order_capture_pct":37.9,"pair_interaction_top3_order_capture_pct":41.6},
+  "march_diagnostic":{"hits":29,"capture_pct":40.8451,"stake_yen":63000,"return_yen":74110,"roi_pct":117.6349,"early_hits":14,"early_heads":36,"late_hits":15,"late_heads":35,"delta_hits_vs_wave55":2,"delta_capture_pp":2.8169,"delta_roi_pp":10.7460},
+  "ticket_composition":{"all_inner_pairs_pct":18.1,"mixed_inner_outer_pairs_pct":57.6,"all_outer_pairs_pct":24.3},
+  "interpretation":"Wave57 pair-level February-trained interaction modeling improves both compact 3-ticket capture and diagnostic ROI versus Wave55 on the frozen March Wave54 population. Unlike Wave56, the gain comes from ordered-pair-specific inner/outer and strength/ST/motor interactions rather than a race-level prior. Early and late halves both improve by one hit. March is research-exposed, so this is diagnostic evidence only and not sufficient for production promotion.",
+  "status":"DIAGNOSTIC_ONLY_WAVE57_PAIR_INTERACTION_IMPROVES_WAVE55_NO_PRISTINE_VALIDATION",
+  "source_run":34754875342,"source_artifact":10317157868,"new_actions_run":null,"new_actions_job":null,"new_actions_artifact":null,
+  "jul_aug_used":false,"september_outcomes_read":false,"production_changed":false,
+  "guardrails":["February labels only for training/model selection.","March actual order/payout used only for diagnostic settlement.","No realized winning move/kimarite used as input.","All model inputs pre-deadline."]
+}
