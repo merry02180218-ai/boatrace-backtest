@@ -18,116 +18,42 @@
 - Apr-Jun: 107R / 4頭27.10% / 3連単14.02% / ROI124.79%
 - Jul-Aug: 89R / 4頭32.58% / 3連単7.87% / ROI72.70%
 - Apr-Aug total: 196R / 4頭29.59% / 3連単11.22% / ROI101.14%
-- monthly ROI: Apr 91.23 / May 149.00 / Jun 124.78 / Jul 133.02 / Aug 16.30
 
-## BEFORE — 4号艇の頭確率を優先して引き上げる追加研究
-
-ユーザー指定: 「まず頭確率を上げよう。3連帯率や他の要素も他のモデルの最新情報から参考にしてやってみて」。
-
-これからやること:
-1. 現在の全レース母集団・固定モーター差条件をベースに、まず4号艇1着率の改善を最優先する。3連単ROIの最適化は後段に回す。
-2. 4号艇と3号艇のモーター3連対率差を新しい中心候補として追加する。3連対率は prior-only の1着+2着+3着 / 出走数で因果的に再構築し、同日結果を当日入力へ混ぜない。
-3. 他モデルの最新確定ロジックから、頭判定に効いている相対要素を候補化する。特に3号艇v288の最新確定要素（相手艇とのST差、内艇ST環境、モーター差）を4号艇向けに置き換えて比較する。
-4. 候補入力は、4−3 motor win差 / 2連対率差 / 3連対率差に加え、4号艇自身の選手力、4コース/ST攻撃力、3号艇とのST差、1〜3号艇の壁・ST環境など、既存データで結果前に確定する項目だけを使う。
-5. 4〜6月で条件探索し、7〜8月を固定条件の検証期間にする。単月だけの過適合を避けるため、月別頭率とR数も必ず確認する。
-6. 目標はまず全体196R前後の母集団から、R数を極端に減らさず4号艇頭率を現状29.59%から35%近辺以上へ引き上げられる条件を探す。R数・頭率のPareto候補も残す。
-7. 9月結果は一切読まず `UNREAD` 維持。production `HEAD4_V291_COMP7` は凍結。
-8. 実装→CI→結果回収後、commit SHA / Run / Job / Artifact / 採用候補 / 月別頭率 / 次の再開地点を追記する。
-
-Status: `HEAD4_HEADRATE_3REN_ST_ENV_RESEARCH_STARTED`
-
-## RESULT — initial head-rate research
-- implementation SHA `2e5df5c1feccfca4792bdc890de06434a5766823`
-- Run `34907898020` / Job `104188682345` / Artifact `10372929335` / success
-- fixed-base Apr-Jun: 107R / 4頭 27.10%
-- selected train-only extra gate: `player4_all_win >= 0.230699`
-- Apr-Jun selected: 64R / 4頭 32.81%; Apr 27.8% / May 37.0% / Jun 31.6%
-- Jul-Aug fixed holdout: 50R / 25頭 / 50.00%; Jul 28R/53.6%, Aug 22R/45.5%
-- September remained `UNREAD`; production unchanged.
-- `player4_all_win` is prior-only and freezes the whole date before ingesting same-day results.
-- ST source is `analysis_v93` / v90-v91 lineage. v93 explicitly treats these as prior-only frozen ST strengths and freezes opponent ranks before official outcome join. Because the original v90/v91 generator is not currently present on main under the expected filename, ST is not needed for the next univariate player-strength Pareto step; do not use ST to justify the chosen threshold until lineage is independently reproducible.
-
-## BEFORE — player4_all_win threshold Pareto refinement
-ユーザー指定: 続行。
-
-これからやること:
-1. fixed motor baseはそのまま、追加条件を causal `player4_all_win` 単独に限定して閾値Paretoを調べる。
-2. 閾値候補はApr-Junだけから事前に作り、Jul-Augで閾値を選び直さない。
-3. Apr-JunのR数・頭率・月別頭率を基準にPareto frontierを作り、代表候補をtrain-onlyで固定してからJul-Augを評価する。
-4. 目標はApr-Augで100〜150R程度を残しつつ、4号艇頭率35%近辺以上を狙う。ただしholdoutを見て閾値を最適化した場合はpristine扱いしない。
-5. STは今回の閾値選択には使わない。ST lineage監査は別系統で継続可能とする。
-6. September outcomesは一切読まず `UNREAD` 維持。production `HEAD4_V291_COMP7` は変更しない。
-7. 実装→CI→結果回収後、commit SHA / Run / Job / Artifact / Pareto表 / 結論 / 次の再開地点を追記する。
-
-Status: `HEAD4_PLAYER_ALL_WIN_PARETO_STARTED`
-
-## AFTER — player4_all_win threshold Pareto refinement
-- BEFORE commit: `c5e11bad05c7570add019d55f58b9eb6e1a806d2`
-- implementation commit: `7728506dd653a73bc1ff0827dc7bf0dcc1355662`
-- workflow commit / executed SHA: `dfb914e965c874c6c66ab56dae25c4c7ec004f4e`
+## RESULT — player4_all_win Pareto
 - Run `34926782402` / Job `104246398587` / Artifact `10379723183` / success
-- CI guard: September blind / production frozen PASS.
-- train-only Pareto representatives were fixed before holdout evaluation.
-
-Key Pareto points:
-- cut 0.204165: Apr-Jun 83R / 27.71%; Jul-Aug 65R / 43.08%; Apr-Aug 148R / 34.46%.
-- cut 0.206905: Apr-Jun 80R / 28.75%; Jul-Aug 63R / 42.86%; Apr-Aug 143R / 34.97%.
-- cut 0.210863: Apr-Jun 77R / 29.87%; Jul-Aug 61R / 42.62%; Apr-Aug 138R / 35.51%.
-- cut 0.215605: Apr-Jun 75R / 30.67%; Jul-Aug 61R / 42.62%; Apr-Aug 136R / 36.03%.
-- train-fixed representative cut 0.224982: Apr-Jun 69R / 31.88%; Jul-Aug 50R / 50.00%; Apr-Aug 119R / 39.50%.
-- previous cut 0.230699: Apr-Jun 64R / 32.81%; Jul-Aug 50R / 50.00%; Apr-Aug 114R / 40.35%.
-- train-fixed high-head representative cut 0.242111: Apr-Jun 59R / 33.90%; Jul-Aug 45R / 53.33%; Apr-Aug 104R / 42.31%.
-
-Conclusion:
-- `player4_all_win` 単独でも、R数を136〜138Rまで残しながらApr-Aug頭率35.5〜36.0%の帯に到達した。
-- ただしApr-Jun単独の頭率は30%前後であり、35%超はJul-Augの強いholdout成績に支えられている。よって0.210863/0.215605をproduction採用とはしない。
-- 0.224982以上はApr-Augでは非常に強いが、母数119R以下。holdoutの50%を見た後なので、今後この結果だけを理由に閾値を選び直すとholdout contaminationになる。
-- 次は `0.210863`〜`0.215605` 周辺を「量を保つ基準帯」とし、Apr-Junだけでsecondary causal gateを探索してtrain頭率35%近辺へ上げられるか検証する。候補はmotor_3ren_diff、recent_p2、frame4/player strength等。STはlineage完全監査までは使わない。
-- September 2026 remains `UNREAD`; production `HEAD4_V291_COMP7` remains frozen.
-
-Status: `HEAD4_PLAYER_ALL_WIN_PARETO_COMPLETE_NEXT_SECONDARY_TRAIN_ONLY`
-
-## BEFORE — 1号艇v351方式の展示・オリジナル展示を4号艇頭判定へ導入
-ユーザー指定: 「1号艇モデルを参考にして展示とオリジナル展示データ入れてやってみて」。
-
-これからやること:
-1. 1号艇v351/v326系で実運用されている締切前Boatcast入力を4号艇研究へ移植する。対象は通常展示タイム、スタート展示、オリジナル展示の回り足・直線・複数項目平均。
-2. 1号艇方式と同じく6艇相対比較を基本とし、4号艇自身の値だけでなく、4号艇−1〜3号艇、4号艇−全艇平均/最良艇、内3艇に対する優位度を候補化する。4角攻撃なので特に直線・展示STを重視し、回り足とのバランスも検証する。
-3. 展示データは `data/previews/tkz`, `data/previews/stt`, `data/previews/original_exhibition` のレース前データだけを使用し、結果・払戻を特徴生成に使わない。ST補正を使う場合は1号艇v326同様、当日を入れる前の過去日まででbiasを凍結する。
-4. まず既存fixed motor base + causal player帯を土台に、Apr-Junだけで展示gateを探索する。Jul-Augを見て閾値を選び直さない。
-5. 展示欠損率/6艇complete率を必ず出し、欠損したレースを有利に除外して見かけの頭率を上げないよう、complete母集団と適用母集団を分けて報告する。
-6. Apr-Junの4号艇頭率35%以上を第一目標とし、R数も維持する。Jul-Augはtrainで固定した条件のみ評価する。
-7. 2026年9月結果は一切読まず `UNREAD` 維持。production `HEAD4_V291_COMP7` は変更しない。
-8. 実装→CI→結果回収後、commit SHA / Run / Job / Artifact / 月別R数・頭率 / 展示complete率 / 結論 / 次の再開地点を追記する。
-
-参考実装確認:
-- 1号艇v351 live probeは締切前にBoatcast `tkz` / `stt` / `orig` を取得し、`tkz_all6`, `stt_all6`, `orig_turn_all6`, `orig_straight_all6`, `orig_avg_all6` をrequired completenessとしている。
-- v326は展示タイム・展示ST・回り足・直線・orig平均を6艇相対marginへ変換し、ST biasを過去日までで凍結している。
-
-Status: `HEAD4_EXHIBITION_ORIGINAL_RESEARCH_STARTED`
-
-## BEFORE — 場別オリジナル展示availability対応
-ユーザー指摘: 「場によってはオリジナル展示なかったりするから気をつけて」。
-
-これからやること:
-1. `orig_*_all6` を全場共通の必須条件から外す。通常展示タイム `tkz_all6` と展示ST `stt_all6` を基本レイヤーとして全場で評価する。
-2. オリジナル展示は、当該レース/場で6艇分が提供されている場合だけ追加特徴を生成する。非提供場を欠損扱いで候補母集団から落とさない。
-3. `basic_complete`（tkz+stt）と `orig_complete`（turn+straight+avg）を分離して記録し、通常展示特徴はbasic_complete母集団、orig特徴はorig_complete母集団で探索する。
-4. orig非提供と単発取得欠損を可能な範囲で区別できるようavailabilityを出力し、場別complete率も確認可能にする。
-5. Apr-Junだけで条件選択し、Jul-Augは固定評価。September outcomesは `UNREAD`、production `HEAD4_V291_COMP7` は凍結維持。
-
-Status: `HEAD4_EXHIBITION_VENUE_AVAILABILITY_FIX_STARTED`
+- cut .210863: Apr-Jun 77R/29.87%; Jul-Aug 61R/42.62%; total 138R/35.51%
+- cut .215605: Apr-Jun 75R/30.67%; Jul-Aug 61R/42.62%; total 136R/36.03%
+- cut .224982: Apr-Jun 69R/31.88%; Jul-Aug 50R/50.00%; total 119R/39.50%
+- cut .230699: Apr-Jun 64R/32.81%; Jul-Aug 50R/50.00%; total 114R/40.35%
+- cut .242111: Apr-Jun 59R/33.90%; Jul-Aug 45R/53.33%; total 104R/42.31%
 
 ## BEFORE — オリジナル展示を項目単位availabilityへ分離
-ユーザー指定: 「展示タイム／展示ST＝全場共通 → 回り足／直線／その他オリジナル展示＝それぞれ独立availability → オリジナル展示提供場そのものを加点しない、という設計に直してから回す」。
+ユーザー指定: 「展示タイム／展示ST＝全場共通 → 回り足／直線／その他オリジナル展示＝それぞれ独立availability → オリジナル展示提供場そのものを加点しない」。
+- `basic_complete` = 展示タイム+展示ST。
+- `turn_available` / `straight_available` / `orig_avg_available` を独立判定。
+- availability自体は加点しない。同一availability母集団内のベース頭率との差で評価する。
+- Apr-Jun選択、Jul-Aug固定、Sep UNREAD、production frozen。
+Status: `HEAD4_EXHIBITION_ITEM_AVAILABILITY_FIX_STARTED`
+
+## RESULT — 項目別展示 頭率改善
+- Run `34962290514` / Job `104358460571` / Artifact `10394097349` / success
+- Apr-Jun `player4_all_win >= .210863` の直線available母集団: 64R / 4頭28.13%
+- train-only selected: `straight4_adv_inside >= 0.0`: 37R / 14頭 / 37.84%（同一availability母集団比 +9.71pt）
+- 緩め `straight4_adv_inside >= -0.0667`: 39R / 35.90%
+- Jul-Aug fixed: selected 21R / 11頭 / 52.38%（同一availability母集団48.72%比 +3.66pt）
+- availability自体は加点していない。Sep UNREAD、production frozen。
+
+## BEFORE — モーター条件緩和 × 展示判定 Pareto
+ユーザー指定: 「モーター条件緩めるとどうなる？」「やってみて」。
 
 これからやること:
-1. 通常展示タイムと展示STは `basic_complete` として全場共通の基礎特徴にする。
-2. オリジナル展示は `turn_available` / `straight_available` / `orig_avg_available` を独立判定し、直線だけ無い等でも他の利用可能項目を捨てない。
-3. availability自体は予測特徴・加点条件に絶対使わない。提供場/非提供場という属性で4号艇評価を上下させない。
-4. 各orig特徴の閾値探索は、その項目が利用可能なレース内でのみ行い、同じavailability母集団の無条件ベース頭率と比較して「項目値による追加改善」を明示する。提供場そのもののベース頭率差を効果として数えない。
-5. 場別・項目別availability件数を監査出力する。通常展示特徴はorig availabilityに関係なく評価する。
-6. Apr-Junだけで条件選択、Jul-Aug固定評価。September outcomes `UNREAD`、production `HEAD4_V291_COMP7` 凍結。
-7. 実装後にActionsを実行し、Run/Job/Artifact/結果をAFTERへ記録する。
+1. 現行 `motor_win_diff_4v3 >= .010782 AND motor_2ren_diff_4v3 >= .4000pt` を基準点として、Apr-Junだけでモーター条件を段階的に緩和する。
+2. motor win差 / 2連対率差の閾値をtrain分位点と現行閾値でグリッド化し、現行107Rより広い150R/200R/250R近辺も含む母集団Paretoを作る。
+3. 各モーター母集団に causal `player4_all_win` と、全場共通の展示タイム・展示STを適用し、さらに各orig項目がavailableな場合だけ回り足/直線/orig平均を追加評価する。
+4. orig availabilityそのものは加点しない。各orig条件の改善幅は必ず同一availability母集団のベース頭率との差で評価する。
+5. 第一目的はApr-Junで最終4号艇頭率35%以上を保ちながらR数最大化。35%未満もParetoとして残し、頭率と件数の交換関係を出す。
+6. 閾値・構成の選択はApr-Junだけ。Jul-Augはtrainで固定した代表候補だけ評価し、holdoutを見て再選択しない。
+7. 2026年9月結果は一切読まず `UNREAD`。production `HEAD4_V291_COMP7` は凍結。
+8. 実装→Actions→結果回収後、commit SHA / Run / Job / Artifact / モーター母集団R / 最終R・頭率 / 月別 / holdout / 結論をAFTERへ追記する。
 
-Status: `HEAD4_EXHIBITION_ITEM_AVAILABILITY_FIX_STARTED`
+Status: `HEAD4_RELAXED_MOTOR_EXHIBITION_PARETO_STARTED`
