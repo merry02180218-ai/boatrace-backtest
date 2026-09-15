@@ -8,4 +8,9 @@
 - 現行LIVE workflowの単純rerunは締切後 `EXPIRED` となり展示probeを実行しないことを Job 104292235929 のログで確認済み。そのため締切時間guardだけをretrospective用に迂回し、gate/finalizer本体はproduction scriptをそのまま呼ぶ専用workflowを作る。
 - 17候補: 202609151803, 202609150710, 202609151204, 202609151804, 202609150811, 202609151801, 202609152210, 202609151812, 202609151811, 202609151805, 202609151810, 202609151806, 202609151809, 202609152201, 202609151909, 202609151910, 202609151808。
 
-次: retrospective Phase A workflowを実装→Actions実Run→prediction artifact回収。
+## 場別 completeness 監査開始
+- ユーザー指示により、v351/v326展示バックテスト母集団を場別に分解する。
+- 確認対象: 各場の候補R数、tkz/stt/original各complete数、strict source_complete/model_ready数、展示gate評価可能数、頭率。特に original straight 非公開場（江戸川/津/住之江/尼崎/徳山等）の除外偏りを確認する。
+- 閾値・特徴量は変更せず、まず現行バックテストがどの場を母集団から落としていたかを監査する。
+
+次: 既存v326/v351 dataset生成ロジックを使ったvenue auditをActionsで実行し、artifactを回収する。
