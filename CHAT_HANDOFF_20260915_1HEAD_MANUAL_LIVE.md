@@ -32,11 +32,13 @@
 - exact cause: `PRE_SOURCE_NOT_READY: rolling race cards for 20260916 are not available at 03:00 JST` / exit 30。
 - 03:00 workflowが rolling artifactを必須依存にしている設計欠陥。
 
-### BEFORE: Boatcast direct fallback implementation
-- User decision: rolling artifactが無ければ **Boatcast またはボートレース日和から当日カードを取得**する。
-- 実装優先順位は既にLIVE展示取得で使用・監査済みのBoatcastをprimaryとする。Boatcastの出走表は結果/払戻を読まず、当日静的PREカードだけを構築する。
-- rolling artifactがあれば従来カードを使用、無ければBoatcast direct card builderを起動する。
-- direct builderは対象日一致を確認し、開催場×12R×6艇のPRE出走情報だけをCSV化。結果/競走成績/払戻エンドポイントは使用禁止。
-- 生成CSVを既存 `prepare_1head_v351_live_cache.py` にそのまま渡し、all-R cacheを作る。
-- fresh workflow runで `all_race_cache_R > 0` とartifact生成まで確認する。
-- LIVE chronology guard維持。September 2026 outcomesはUNREAD、production変更なし。
+### BoatRace Biyori daily recovery
+- Biyori direct PRE取得へ切替済み。Run `35032210723` / Job `104593063750` success / Artifact `10421874851`。
+- 20260916は10場120Rをcache化。`result_or_payout_used=False` / `chronology_guard=True`。
+- JCD04/JCD05/JCD07は各1RのHTTP timeoutにより11/12となり、場単位で除外された。
+
+### BEFORE: recover missing Biyori races
+- 目的: JCD04/JCD05/JCD07の欠落36Rを再取得し、当日開催13場156Rの完全gridを作る。
+- Biyori detail APIの各race取得にretry/backoffを追加し、一時的timeoutで場全体を捨てないようにする。
+- fresh workflowで `BIYORI_CARDS ... races=156`、`all_race_cache_R=156`、artifact生成まで確認する。
+- 結果・払戻・オッズは取得禁止。`result_or_payout_used=False` / `chronology_guard=True`、September outcomes `UNREAD` 維持。
