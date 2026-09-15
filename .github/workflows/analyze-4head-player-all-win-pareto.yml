@@ -1,0 +1,30 @@
+name: analyze-4head-player-all-win-pareto
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'analyze_4head_player_all_win_pareto.py'
+      - '.github/workflows/analyze-4head-player-all-win-pareto.yml'
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy
+      - name: Guard September blind and production frozen
+        run: |
+          grep -q "September outcomes are never read" analyze_4head_player_all_win_pareto.py
+          grep -q "production is untouched" analyze_4head_player_all_win_pareto.py
+          grep -q "END=date(2026,8,31)" analyze_4head_headrate_3ren_player_st.py
+          echo 'September blind / production frozen guard PASS'
+      - name: Run Pareto study
+        run: python analyze_4head_player_all_win_pareto.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-player-all-win-pareto
+          path: |
+            analysis_4head_player_all_win_pareto.csv
+            summary_4head_player_all_win_pareto.md
