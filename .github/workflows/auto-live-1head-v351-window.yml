@@ -1,0 +1,31 @@
+name: auto-live-1head-v351-window
+on:
+  push:
+    paths:
+      - 'run_1head_v351_live_window.py'
+      - 'probe_1head_v351_boatcast_exhibition.py'
+      - '.github/workflows/auto-live-1head-v351-window.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: python -m py_compile run_1head_v351_live_window.py probe_1head_v351_boatcast_exhibition.py
+      - name: Boundary tests T-15 T-12 T-10 T-5
+        run: |
+          python - <<'PY'
+          from datetime import datetime,timezone,timedelta
+          from run_1head_v351_live_window import window
+          J=timezone(timedelta(hours=9));d=datetime(2026,9,15,15,0,tzinfo=J)
+          cases=[(20.1,'WAIT'),(15,'TRY15'),(12,'TRY12'),(10,'TRY10'),(5,'FINAL5'),(.1,'FINAL5'),(0,'EXPIRED')]
+          for mins,exp in cases:
+              got=window(d,d-timedelta(minutes=mins))['mode'];print(mins,got);assert got==exp,(mins,got,exp)
+          assert window(d,d-timedelta(minutes=10))['final_fail_close_if_not_ready'] is False
+          assert window(d,d-timedelta(minutes=5))['final_fail_close_if_not_ready'] is True
+          print('WINDOW_POLICY_OK')
+          PY
