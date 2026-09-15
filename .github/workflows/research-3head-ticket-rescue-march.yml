@@ -1,0 +1,42 @@
+name: research-3head-ticket-rescue-march
+on:
+  push:
+    branches: [research/3head-player-attack-mode]
+    paths:
+      - '.github/workflows/research-3head-ticket-rescue-march.yml'
+      - 'research/run_3head_exhibition_ticket_rescue_march.py'
+  workflow_dispatch:
+jobs:
+  march-one-shot:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/3head-player-attack-mode
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn
+      - name: Restore fixed source artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34754875342 -n 3head-wave21-allrace-source-build
+          SRC=$(find . -name 'analysis_v289_3head_wave21_allrace_feature_settled.csv' | head -1)
+          test -n "$SRC"
+          DST="$GITHUB_WORKSPACE/analysis_v289_3head_wave21_allrace_feature_settled.csv"
+          if [ "$(realpath "$SRC")" != "$(realpath -m "$DST")" ]; then cp "$SRC" "$DST"; fi
+          test -f "$DST"
+      - name: March frozen one-shot ticket-rescue audit
+        run: |
+          set -o pipefail
+          PYTHONPATH="$GITHUB_WORKSPACE" python research/run_3head_exhibition_ticket_rescue_march.py | tee research_v289_3head_exhibition_ticket_rescue_march.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: research-3head-ticket-rescue-march
+          path: |
+            research_v289_3head_exhibition_ticket_rescue_march.json
+            research_v289_3head_exhibition_ticket_rescue_march.log
