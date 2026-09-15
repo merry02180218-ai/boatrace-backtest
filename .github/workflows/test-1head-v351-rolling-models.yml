@@ -29,6 +29,11 @@ jobs:
           path: /tmp/pre
           github-token: ${{ github.token }}
           run-id: 34924389688
+      - name: Prepare canonical v321 frozen history caches
+        run: |
+          /usr/bin/time -f 'v321_prepare_wall_sec=%e v321_prepare_max_rss_kb=%M' python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
+          test -s cache_v321_julaug_nonpristine_head_full.csv.gz
+          test -s cache_v321_julaug_nonpristine_slim.csv.gz
       - name: Train rolling v308 v317 v318
         run: |
           mkdir -p /tmp/rolling
