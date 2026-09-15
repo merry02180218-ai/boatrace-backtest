@@ -1,0 +1,83 @@
+name: chat-live-1head-v351-request
+
+on:
+  push:
+    paths:
+      - 'live_requests/1head_v351.txt'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  live-request:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q requests beautifulsoup4 numpy pandas scipy scikit-learn
+
+      - name: Resolve request and causal base
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          RACE_CODE=$(tr -d '[:space:]' < live_requests/1head_v351.txt)
+          [[ "$RACE_CODE" =~ ^[0-9]{12}$ ]]
+          DATE=${RACE_CODE:0:8}; JCD=$((10#${RACE_CODE:8:2})); RACE=$((10#${RACE_CODE:10:2}))
+          echo "RACE_CODE=$RACE_CODE" >> "$GITHUB_ENV"; echo "DATE=$DATE" >> "$GITHUB_ENV"; echo "JCD=$JCD" >> "$GITHUB_ENV"; echo "RACE=$RACE" >> "$GITHUB_ENV"
+          mkdir -p /tmp/cache
+          CACHE_ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-cache-$DATE&per_page=20" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id // empty')
+          if [ -n "$CACHE_ID" ]; then gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$CACHE_ID/zip" > /tmp/cache.zip; unzip -q /tmp/cache.zip -d /tmp/cache; fi
+          BASE=$(find /tmp/cache -name "$RACE_CODE.json" -print -quit)
+          if [ -z "$BASE" ]; then
+            PRE_ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-pre-sab-$DATE-rolling&per_page=20" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id // empty')
+            test -n "$PRE_ID"
+            gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$PRE_ID/zip" > /tmp/pre.zip; mkdir -p /tmp/pre; unzip -q /tmp/pre.zip -d /tmp/pre
+            CARDS=$(find /tmp/pre -name race_cards.csv -print -quit); test -n "$CARDS"
+            python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
+            python prepare_1head_v351_live_cache.py --date "${DATE:0:4}-${DATE:4:2}-${DATE:6:2}" --cards "$CARDS" --race-code "$RACE_CODE" --out /tmp/on-demand
+            BASE=/tmp/on-demand/$RACE_CODE.json; test -f "$BASE"
+            cp /tmp/on-demand/v351_exhibition_train.csv /tmp/cache/v351_exhibition_train.csv
+          fi
+          echo "BASE=$BASE" >> "$GITHUB_ENV"
+
+      - name: Deadline exhibition and v351 final
+        run: |
+          set -euo pipefail
+          DL=$(python fetch_boatrace_deadline.py --date "$DATE" --jcd "$JCD" --race "$RACE" --meta "deadline_$RACE_CODE.json" | tail -1)
+          python run_1head_v351_live_window.py --deadline-jst "$DL" > "window_$RACE_CODE.json"
+          MODE=$(python -c "import json;print(json.load(open('window_$RACE_CODE.json'))['mode'])")
+          test "$MODE" != EXPIRED
+          READY=0
+          for i in $(seq 1 8); do
+            if python probe_1head_v351_boatcast_exhibition.py --date "$DATE" --jcd "$JCD" --race "$RACE" --deadline-jst "$DL" > "exhibition_$RACE_CODE.json" 2> "exhibition_error_$RACE_CODE.txt"; then READY=1; break; fi
+            sleep 15
+          done
+          test "$READY" = 1
+          TRAIN=$(find /tmp/cache -name v351_exhibition_train.csv -print -quit); test -n "$TRAIN"
+          TRAIN_DST="$(dirname "$BASE")/v351_exhibition_train.csv"; [ "$(readlink -f "$TRAIN")" = "$(readlink -f "$TRAIN_DST")" ] || cp "$TRAIN" "$TRAIN_DST"
+          CUTOFF=$(python -c "import json;print(json.load(open('$BASE'))['training_cutoff'])")
+          python run_1head_v351_live_exhibition_gate.py --probe "exhibition_$RACE_CODE.json" --base "$BASE" --history-cutoff "$CUTOFF" --out "gate_$RACE_CODE.json"
+          python - "$BASE" "gate_$RACE_CODE.json" "window_$RACE_CODE.json" "final_input_$RACE_CODE.json" <<'PY'
+          import json,sys
+          from datetime import datetime,timezone,timedelta
+          b=json.load(open(sys.argv[1])); g=json.load(open(sys.argv[2])); w=json.load(open(sys.argv[3])); b.update(g)
+          b.update({'exhibition_ready':True,'deadline_jst':w['deadline_jst'],'minutes_to_deadline':w['remaining_minutes'],'evaluated_at_jst':datetime.now(timezone(timedelta(hours=9))).isoformat(),'result_or_payout_used':False,'chronology_guard':True})
+          json.dump(b,open(sys.argv[4],'w'),ensure_ascii=False,indent=2)
+          PY
+          python run_1head_v351_live_finalize.py --input "final_input_$RACE_CODE.json" --out "live_v351_final_$RACE_CODE.json"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: live-v351-final-${{ env.RACE_CODE }}
+          retention-days: 14
+          if-no-files-found: error
+          path: |
+            live_v351_final_*.json
+            deadline_*.json
+            window_*.json
+            exhibition_*.json
+            gate_*.json
