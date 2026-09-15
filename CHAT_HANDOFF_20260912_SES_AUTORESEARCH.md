@@ -4,43 +4,29 @@ Updated: 2026-09-15 JST
 Repo: `merry02180218-ai/boatrace-backtest`
 
 ## Non-negotiable rules
-Latest GitHub/artifacts win. 2026-09-10 Kiryu3/6/9 results remain unread. 2026-09-09 Kiryu12 and 2026-09-10 Kiryu12 are exposed technical samples only. July/August NON-PRISTINE. Never relax fail-closed/NCC/geometry/motion gates merely to pass. No boat/race-specific offsets. Production target is persistent Japan self-hosted PC; ideal <=30 sec, maximum <=60 sec. Exact Python: `C:\Users\merry\AppData\Local\Programs\Python\Python311\python.exe`.
+Latest GitHub/artifacts win. 2026-09-10 Kiryu3/6/9 results remain unread. 2026-09-09 Kiryu12 and 2026-09-10 Kiryu12 are exposed technical samples only. July/August NON-PRISTINE. Never relax fail-closed/NCC/geometry/motion gates merely to pass. No boat/race-specific offsets. Production target persistent Japan self-hosted PC; ideal <=30 sec, maximum <=60 sec. Exact Python: `C:\Users\merry\AppData\Local\Programs\Python\Python311\python.exe`.
 
 ## Seed
-Keep `auto_seed_exhibition_motion_v17.py`, commit `3f628a0099a5b93b38da7a9be8acdbf89fdcef2b`. Current blocker remains tracker identity/path representation, not race-specific seed movement.
+Keep `auto_seed_exhibition_motion_v17.py`, commit `3f628a0099a5b93b38da7a9be8acdbf89fdcef2b`. Current blocker is tracker identity/path representation, not race-specific seed movement.
 
-## Retained progression through v27
-v8-v24 progressively established that independent/per-frame identity, immutable appearance alone, lane-cell geometry, and fixed proposal reachability were insufficient. v25 causal trajectory reachability removed gross wrong-direction paths. v26 translation camera compensation improved feasibility but remained insufficient. v27 leave-one-out similarity run `34893353398` failed all four; residual/acceleration gates dominated and runtime was 43.6–94.3 sec.
-
-## v28 COMPLETE / REJECTED
-File `track_exhibition_boats_v28.py`, workflow `.github/workflows/regress-exhibition-seed17-track28.yml`, run `34900743347`, head `3d83884f5bc44925102f025a8cd31517eb7f14f3`.
-Artifacts: Kiryu3 `10370611700`, Kiryu6 `10371205844`, Kiryu12 `10370942723`, varied `10371386638`.
-All four failed closed. Kiryu3 artifact audit: `accepted=false`, `FAIL_CLOSED: verified appearance-bank beam exhausted; no feasible temporal expansion`, dead after step9/native18, tracker runtime 54.566 sec. At +0.5 centers were [1008,409],[957,490],[961,589],[890,695],[883,812],[547,1008]; boat6 old catastrophic path did not continue but identity remained dubious. Diagnostics: 2756 transition calls, 1351 residual rejects, 518 acceleration rejects, 887 accepts. C(5,3) per-held robust consensus was expensive and did not improve dead-frame depth enough.
-
-## v29 COMPLETE / REJECTED
-File `track_exhibition_boats_v29.py`. Implementation commit `41c09beb619b60687f2a208db061a42aaebb2166`; trigger commit `8c21cb70206acd54bfddd51ea621805592595dc6`; workflow `.github/workflows/regress-exhibition-seed17-track29.yml`; authoritative run `34906246958` completed FAILURE scientifically, not import failure.
-Artifacts: Kiryu3 `10373431188`, Kiryu6 `10372379200`, Kiryu12 `10373605755`, varied `10373017503`.
-v29 used ONE shared robust four-of-six similarity-camera state instead of six leave-one-out transforms, with all 24/20/42 caps unchanged. Kiryu3 still failed closed, now after step8/native16, runtime 43.713 sec; +0.5 centers [959,433],[957,490],[961,589],[890,695],[868,845],[561,1010]. Diagnostics: 2765 calls, 1172 residual rejects, 691 acceleration rejects, 902 accepts, zero reverse/absolute rejects. Shared similarity therefore did not solve the coordinate mismatch and slightly worsened dead-frame depth vs v28. Do not tune/widen caps.
+## Retained progression
+v8-v24 established independent/per-frame identity, immutable appearance alone, lane-cell geometry and fixed proposal reachability were insufficient. v25 causal trajectory reachability removed gross wrong-direction paths. v26 translation camera compensation improved feasibility but remained insufficient. v27 leave-one-out similarity run `34893353398` failed all four and was too slow. v28 run `34900743347` failed all four; Kiryu3 died step9/native18, tracker 54.566 sec. v29 run `34906246958` failed all four; shared robust similarity did not solve coordinate mismatch, Kiryu3 died step8/native16, 43.713 sec. Do not widen 24/20/42 motion caps.
 
 ## CURRENT candidate: v30 shared robust affine-camera state
-File `track_exhibition_boats_v30.py`.
-Implementation commit `6e406352bf8a28876c61ad67e42b4621657c13e8`.
-Workflow `.github/workflows/regress-exhibition-seed17-track30.yml`, creation commit `62ad92bd13d617ded98dd0c2c1c59df515246085`.
-First explicit trigger commit `f26f5abd0331df306df2db86651e85519c28a9ef` changed the tracker path but produced no discoverable Actions run. A later handoff-only commit `bac262422a2b0de69bbc9d09845dcdd9f2b78ea3` could not trigger this path-filtered workflow by design.
+File `track_exhibition_boats_v30.py`; implementation `6e406352bf8a28876c61ad67e42b4621657c13e8`. It changes only the shared camera representation from similarity to affine: enumerate C(6,3)=20 exact three-boat affine fits, choose by 4th-smallest six-boat residual then mean of four best, then apply unchanged 24 px/native-frame residual, 20 acceleration, 42 absolute, reverse corridor, NCC, appearance bank, fleet geometry, v25 proposal reachability and fail-closed behavior. No future frame/result/special case/threshold relaxation.
 
-At 2026-09-15 ~10:15 JST the Actions list was rechecked: v30 still had no discoverable run. The workflow was then repaired to mirror the dependency path coverage used by v29 (seed v17 and inherited tracker dependencies v17/v19/v20/v21/v25/v27/v29 plus v30) and retain its own workflow path. This is a workflow-trigger/dependency repair only; tracker logic, thresholds, samples and blindness are unchanged. Repair commit: `0fb3eda2c9fb4a866f6ec4ac151e693c335e7cc6`. This workflow-file change itself is an eligible push trigger. Immediately after commit, the general Actions list had not yet propagated a v30 run; next cycle must check propagation before any further trigger edit.
+### v30 Actions trigger diagnosis and repair
+The dedicated workflow `.github/workflows/regress-exhibition-seed17-track30.yml` was created at `62ad92bd13d617ded98dd0c2c1c59df515246085`. Trigger `f26f5abd0331df306df2db86651e85519c28a9ef`, later retrigger `bac262422a2b0de69bbc9d09845dcdd9f2b78ea3`, and dependency-path repair `0fb3eda2c9fb4a866f6ec4ac151e693c335e7cc6` produced no discoverable v30 Actions run even after propagation. A head-SHA Actions query for repair commit showed other push workflows ran, proving repository Actions itself was alive; the v30 workflow specifically was not registered/triggering.
 
-### v30 design
-v29 showed shared state is not enough if camera representation remains similarity-only. The six boats span a large y range in an oblique camera, so first-order perspective can appear as anisotropic scale/shear. v30 changes ONLY shared camera representation to affine. It enumerates C(6,3)=20 exact three-boat affine fits, selects by 4th-smallest six-boat residual then mean of four best, applies one shared transform to all six, and retains unchanged 24 px/native-frame residual, 20 acceleration, 42 absolute, reverse corridor, NCC, appearance bank, fleet geometry, v25 proposal reachability and fail-closed behavior. No future frame/result/special case/threshold relaxation.
+At ~11:23 JST the existing already-registered v29 regression workflow was therefore converted into a temporary **v30 validation bridge** rather than changing tracker logic or thresholds. Bridge commit: `dca84d404b6bda839e0f6044fd6e6450db827f47`. The workflow path remains `.github/workflows/regress-exhibition-seed17-track29.yml` so GitHub uses an already-known workflow identity, but its run-name, tracker command, output and artifacts now explicitly execute `track_exhibition_boats_v30.py` on the unchanged four-video matrix. Artifact prefix is `seed17-track30-bridge-*`. Immediately after commit, head-SHA run query returned zero; allow normal GitHub propagation, then recheck before further edits. This bridge is validation infrastructure only and does not alter production wrapper or blindness.
 
 ## Exact restart point
-1. Check whether workflow repair commit `0fb3eda2c9fb4a866f6ec4ac151e693c335e7cc6` produced the v30 four-job matrix after GitHub propagation. Do not make another trigger-only edit before this check.
-2. If still absent, diagnose workflow registration/Actions state rather than touching tracker logic or repeatedly retriggering.
-3. Once a v30 run exists, inspect all four jobs/artifacts, not workflow status alone. Preserve Kiryu3/6 blindness.
-4. Record dead-frame depth, residual/acceleration rejection counts, +0.5/+1.0/+1.5 centers, on-frame/identity sanity and FastClip+seed+tracker latency.
-5. Compare v30 against v29/v28. A win must be physically sane and improve feasibility without widening any gate.
-6. If v30 still fails, do not widen 24/20 caps. Next principled direction: carry a low-dimensional camera-motion state temporally in the beam (camera parameter velocity/acceleration), or derive background-feature camera motion independently from boat hypotheses.
-7. Only after one unchanged seed+tracker passes all four sane and <=60 sec may `run_exhibition_ses_live_local.py` be updated, followed by >=1 Japan self-hosted end-to-end live-style validation.
+1. Query Actions runs for head SHA `dca84d404b6bda839e0f6044fd6e6450db827f47` and/or the registered v29 workflow path after propagation.
+2. If bridge run exists, inspect all four jobs/artifacts, not workflow status alone. Preserve Kiryu3/6 blindness. Record dead-frame depth, residual/acceleration rejects, +0.5/+1.0/+1.5 centers, physical identity/on-frame sanity, and FastClip+seed+tracker latency.
+3. Compare v30 directly with v29/v28. A win must improve feasibility physically without widening gates.
+4. If v30 still fails, do not widen 24/20 caps. Next principled direction is temporal camera-state continuity in the beam (camera parameter velocity/acceleration), or independent background-feature camera motion.
+5. If bridge still produces no run after propagation, diagnose Actions workflow registration rather than modifying tracker logic. Do not repeatedly create trigger-only commits.
+6. Only after one unchanged seed+tracker passes all four sane and <=60 sec may `run_exhibition_ses_live_local.py` be updated, then perform >=1 Japan self-hosted end-to-end live-style validation.
 
 ## Production wrapper
 `run_exhibition_ses_live_local.py` remains old seed v1 + tracker v3. DO NOT update yet.
