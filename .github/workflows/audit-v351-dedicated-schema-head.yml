@@ -1,10 +1,11 @@
 name: audit-v351-dedicated-schema-head
-# retry-trigger: 2026-09-15 after b['head'] fix
+# retry-trigger: exact3 decomposition through proven registered workflow
 on:
   workflow_dispatch:
   push:
     paths:
       - 'audit_v351_dedicated_schema_head.py'
+      - 'analyze_v351_schema_exact3_errors.py'
       - '.github/workflows/audit-v351-dedicated-schema-head.yml'
 jobs:
   audit:
@@ -20,6 +21,8 @@ jobs:
         run: python audit_v351_schema_correct_rebuild.py | tee schema_rebuild.txt
       - name: Dedicated schema HEAD OOF sweep
         run: python audit_v351_dedicated_schema_head.py | tee dedicated_schema_head.txt
+      - name: Decompose exact3 errors
+        run: python analyze_v351_schema_exact3_errors.py | tee schema_exact3_errors.txt
       - uses: actions/upload-artifact@v4
         with:
           name: audit-v351-dedicated-schema-head
@@ -27,5 +30,8 @@ jobs:
             analysis_v351_schema_correct_rebuild.csv
             analysis_v351_schema_map.csv
             analysis_v351_dedicated_*.csv
+            analysis_v351_schema_exact3_errors.csv
+            analysis_v351_schema_exact3_error_summary.csv
             schema_rebuild.txt
             dedicated_schema_head.txt
+            schema_exact3_errors.txt
