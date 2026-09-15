@@ -13,41 +13,23 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Run v18 core 4-corner and 5-head model
-        run: python backtest_v18_core45.py
-      - name: Run v19 split 3-makuri and makurizashi weekly model
-        run: python backtest_v19_split3_week.py
-      - name: Run v20 motor-light four-model weekly backtest
-        run: python backtest_v20_week.py
-      - name: Analyze v20 5-head hits and misses
-        run: python analyze_v20_5head.py
-      - name: Validate fixed v21 5-head strength rule
-        run: python validate_v21_5head.py
-      - name: Analyze v22 venue fit
-        run: python analyze_v22_venue_fit.py
-      - name: Analyze v23 Sep 2 same-day exhibition
-        run: python analyze_v23_20260902_daypreview.py
-      - name: Analyze v24 one-week same-day exhibition no entry
-        run: python analyze_v24_week_daypreview.py
-      - name: Predict Sep 3 pre-exhibition candidates
-        run: python predict_v25_20260903_pre.py
-      - name: Run v47 prior week soft-score ROI backtest
-        run: python analyze_v47_week_before_softscore_roi.py
-      - name: Run v48 payout-joined ROI backtest
-        run: python analyze_v48_week_before_softscore_roi.py
-      - name: Commit results
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "418982818+github-actions[bot]@users.noreply.github.com"
-          git add summary_v18.md summary_v19.md summary_v20.md analysis_v20_5head.md validation_v21_5head.md analysis_v22_venue.md venue_model_index_v22.csv analysis_v23_20260902.md races_v23_20260902.csv analysis_v24_week_daypreview.md races_v24_week_daypreview.csv prediction_v25_20260903_pre.md pred_v25_20260903_pre.csv summary_v47_week_before_softscore_roi.md analysis_v47_week_before_softscore_roi.csv summary_v48_week_before_softscore_roi.md analysis_v48_week_before_softscore_roi.csv
-          [ -f bets_v18.csv ] && git add bets_v18.csv || true
-          [ -f races_v18.csv ] && git add races_v18.csv || true
-          [ -f bets_v19.csv ] && git add bets_v19.csv || true
-          [ -f races_v19.csv ] && git add races_v19.csv || true
-          [ -f bets_v20.csv ] && git add bets_v20.csv || true
-          [ -f races_v20.csv ] && git add races_v20.csv || true
-          if ! git diff --cached --quiet; then
-            git commit -m "Run v48 payout-joined ROI backtest"
-            git pull --rebase origin main
-            git push
-          fi
+      - name: Install v351 audit dependencies
+        run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4
+      - name: Rebuild v351 schema dataset
+        run: python audit_v351_schema_correct_rebuild.py | tee schema_rebuild.txt
+      - name: Run v351 dedicated schema HEAD OOF
+        run: python audit_v351_dedicated_schema_head.py | tee dedicated_schema_head.txt
+      - name: Decompose v351 exact3 errors
+        run: python analyze_v351_schema_exact3_errors.py | tee schema_exact3_errors.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audit-v351-exact3-via-monthly
+          path: |
+            analysis_v351_schema_correct_rebuild.csv
+            analysis_v351_schema_map.csv
+            analysis_v351_dedicated_*.csv
+            analysis_v351_schema_exact3_errors.csv
+            analysis_v351_schema_exact3_error_summary.csv
+            schema_rebuild.txt
+            dedicated_schema_head.txt
+            schema_exact3_errors.txt
