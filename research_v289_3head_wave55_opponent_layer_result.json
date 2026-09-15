@@ -1,0 +1,19 @@
+{
+  "wave": "55-dedicated-opponent-layer",
+  "reproduction": {"march_universe":4482,"wave36":90,"wave36_heads":38,"wave53_base":300,"wave53_heads":87,"wave54":210,"wave54_heads":71},
+  "training": {"period":"2026-02 only","boat3_head_races":478,"candidate_rows":2390,"method":"candidate-level balanced logistic models for second and third, then pair score P(second)*P(third)","predeadline_features":"lane plus own/relative national ST, national win/2/3, local win/2, motor2/3, boat2"},
+  "ticket_results_all_210": [
+    {"tickets_per_race":1,"hits":12,"head_capture_pct":16.9014,"return_yen":22370,"stake_yen":21000,"roi_pct":106.5238},
+    {"tickets_per_race":3,"hits":27,"head_capture_pct":38.0282,"return_yen":67340,"stake_yen":63000,"roi_pct":106.8889},
+    {"tickets_per_race":5,"hits":36,"head_capture_pct":50.7042,"return_yen":93010,"stake_yen":105000,"roi_pct":88.5810},
+    {"tickets_per_race":7,"hits":45,"head_capture_pct":63.3803,"return_yen":121670,"stake_yen":147000,"roi_pct":82.7687},
+    {"tickets_per_race":10,"hits":52,"head_capture_pct":73.2394,"return_yen":153990,"stake_yen":210000,"roi_pct":73.3286},
+    {"tickets_per_race":12,"hits":58,"head_capture_pct":81.6901,"return_yen":213500,"stake_yen":252000,"roi_pct":84.7222},
+    {"tickets_per_race":20,"hits":71,"head_capture_pct":100.0,"return_yen":370290,"stake_yen":420000,"roi_pct":88.1643}
+  ],
+  "interpretation": "Wave55 exactly reproduces Wave54. The dedicated February-trained opponent ordering reaches its best all-210 diagnostic ROI at 3 tickets/race: 27 trifecta hits among 71 head wins, 38.03% conditional capture, ROI 106.89%. One ticket is also slightly positive at 106.52% but only 12/71 capture. Expanding to 5 tickets raises capture to 50.70% but ROI falls to 88.58%; broad ticket expansion is not attractive. This is diagnostic March evaluation only, not production evidence.",
+  "status":"DIAGNOSTIC_ONLY_WAVE55_3TICKET_POSITIVE_MARCH_NO_PRISTINE_VALIDATION",
+  "source_run":34754875342,"source_artifact":10317157868,"new_actions_run":null,"new_actions_job":null,"new_actions_artifact":null,
+  "jul_aug_used":false,"september_outcomes_read":false,"production_changed":false,
+  "guardrails":["Actual finish/order used only as February training labels and March settlement labels.","No realized winning move/kimarite used as input.","All ranking features are pre-deadline."]
+}
