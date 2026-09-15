@@ -1,9 +1,6 @@
 name: recover official closing odds3t Aug 2026
 
 on:
-  push:
-    paths:
-      - '.github/workflows/recover-official-closing-odds3t-aug2026.yml'
   workflow_dispatch:
 
 permissions:
