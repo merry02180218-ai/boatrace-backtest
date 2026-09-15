@@ -10,6 +10,7 @@ import requests
 from bs4 import BeautifulSoup
 
 BASE='https://kyoteibiyori.com'
+RETRIES=5
 
 def norm_st(x):
     try:
@@ -17,9 +18,27 @@ def norm_st(x):
         return v/100.0 if v>1 else v
     except:return ''
 
+def retry_get(s,u,timeout=30):
+    last=None
+    for n in range(RETRIES):
+        try:
+            r=s.get(u,timeout=timeout); r.raise_for_status(); return r
+        except Exception as e:
+            last=e; time.sleep(1.5*(n+1))
+    raise last
+
+def retry_post(s,u,*,data,headers,timeout=35):
+    last=None
+    for n in range(RETRIES):
+        try:
+            r=s.post(u,data=data,headers=headers,timeout=timeout); r.raise_for_status(); return r
+        except Exception as e:
+            last=e; time.sleep(1.5*(n+1))
+    raise last
+
 def get_meta(s,day,jo):
     u=f'{BASE}/race_shusso.php?hiduke={day}&place_no={jo}&race_no=1&slider=1'
-    h=s.get(u,timeout=25).text; soup=BeautifulSoup(h,'html.parser')
+    h=retry_get(s,u).text; soup=BeautifulSoup(h,'html.parser')
     def v(n):
         z=soup.find('input',{'name':n}); return z.get('value','') if z else ''
     m=re.search(r'var\s+CSRF_TOKEN\s*=\s*"([^"]+)"',h)
@@ -30,9 +49,10 @@ def get_meta(s,day,jo):
 def detail(s,day,jo,rno,referer,token,meta):
     d={'place_no':str(jo),'race_no':str(rno),'hiduke':day,'race_name':meta['race_name'],'season':2021,'term':1,
        'kaisai_key':meta['kaisai_key'],'taikai_count':meta['taikai_count'],'group_no':meta['group_no'],'type':0,'grade':0}
-    r=s.post(f'{BASE}/request_race_shusso_detail_v4.php',data={'data':json.dumps(d,ensure_ascii=False),'token':token},
-             headers={'Referer':referer,'X-Requested-With':'XMLHttpRequest'},timeout=30)
-    r.raise_for_status(); z=r.json()
+    payload={'data':json.dumps(d,ensure_ascii=False),'token':token}
+    r=retry_post(s,f'{BASE}/request_race_shusso_detail_v4.php',data=payload,
+                 headers={'Referer':referer,'X-Requested-With':'XMLHttpRequest'})
+    z=r.json()
     return z if len(z.get('race_list',[]))==6 else None
 
 def make_card(day,jo,rno,z):
@@ -41,10 +61,8 @@ def make_card(day,jo,rno,z):
     ps=sorted(z['race_list'],key=lambda x:int(x.get('course') or 99))
     for b,p in enumerate(ps,1):
         q=f'艇{b}_'
-        c.update({
-          q+'登録番号':p.get('player_no',''),q+'選手名':p.get('player_name',''),q+'級別':p.get('kyubetsu',''),
-          q+'全国平均ST':norm_st(p.get('ave_start')),q+'全国勝率':p.get('zenkoku_shoritsu',''),
-          q+'全国2連対率':p.get('zenkoku_niren',''),q+'全国3連対率':p.get('zenkoku_sanren',''),
+        c.update({q+'登録番号':p.get('player_no',''),q+'選手名':p.get('player_name',''),q+'級別':p.get('kyubetsu',''),
+          q+'全国平均ST':norm_st(p.get('ave_start')),q+'全国勝率':p.get('zenkoku_shoritsu',''),q+'全国2連対率':p.get('zenkoku_niren',''),q+'全国3連対率':p.get('zenkoku_sanren',''),
           q+'当地勝率':p.get('touchi_shoritsu',''),q+'当地2連対率':p.get('touchi_niren',''),q+'当地3連対率':p.get('touchi_sanren',''),
           q+'モーター番号':p.get('motor',''),q+'モーター2連対率':p.get('motor_niren',''),q+'モーター3連対率':p.get('motor_sanren',''),
           q+'ボート番号':p.get('boat',''),q+'ボート2連対率':p.get('boat_niren',''),q+'ボート3連対率':p.get('boat_sanren',''),
@@ -63,7 +81,7 @@ def main():
     ap=argparse.ArgumentParser(); ap.add_argument('--date',required=True); ap.add_argument('--out',type=Path,required=True); a=ap.parse_args()
     day=a.date.replace('-','')
     if not re.fullmatch(r'20\d{6}',day): raise SystemExit('bad date')
-    s=requests.Session(); s.headers.update({'User-Agent':'Mozilla/5.0 (compatible; v351-live-pre-card/2.0)','Accept':'text/html,application/json'})
+    s=requests.Session(); s.headers.update({'User-Agent':'Mozilla/5.0 (compatible; v351-live-pre-card/2.1)','Accept':'text/html,application/json'})
     rows=[]; venues=[]; failed=[]
     for jo in range(1,25):
         try: meta=get_meta(s,day,jo)
@@ -74,7 +92,7 @@ def main():
             try:
                 z=detail(s,day,jo,rno,referer,token,m)
                 if not z: raise RuntimeError('detail empty')
-                vr.append(make_card(day,jo,rno,z)); time.sleep(.03)
+                vr.append(make_card(day,jo,rno,z)); time.sleep(.05)
             except Exception as e: failed.append((jo,rno,str(e)))
         if len(vr)==12: rows.extend(vr); venues.append(jo)
         elif vr: failed.append((jo,'grid',f'{len(vr)}/12'))
