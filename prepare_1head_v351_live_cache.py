@@ -25,20 +25,20 @@ def main():
  full=pd.concat([slim,cc[list(slim.columns)]],ignore_index=True);full.race_code=full.race_code.astype(str).str.zfill(12)
  sl=v300.augment_second(v298.second_long(full,sufs));base_p2,_=v300.p2_predict(sl,live.TARGET_MONTH,10.0,False);_,p3,p4=v312.load_cache();sx,_=v317.add_engineered(v310.add_headrisk(sl,p3,p4),'OUTER');p2,_=v311.p2_predict_explicit(sx,live.TARGET_MONTH,1.0,None,{'START'})
  cl=v300.augment_third(v321._third_fold_long(full,sufs,live.TARGET_MONTH));base_pc,_=v300.pc_predict(cl,live.TARGET_MONTH,.3,False);pc,_=v318.pc_predict(cl,live.TARGET_MONTH,.1,'DROP_START')
- pm={}
+ # Daily mode must cache every current race, not only PRE candidates. PRE rows are
+ # metadata overlays; this keeps arbitrary LIVE requests fast without changing
+ # production HEAD/opponent calculations.
+ pm={str(c).zfill(12):{} for c in head.race_code.astype(str)}
  if a.pre:
-  pre=pd.read_csv(a.pre,dtype={'race_code':str});pre.race_code=pre.race_code.astype(str).str.zfill(12);pm=pre.set_index('race_code').to_dict('index')
- if wanted:
-  # On-demand mode deliberately does not require PRE candidacy.  The production
-  # head score and opponent distributions are rebuilt from the same causal
-  # current-card path; no result/payout fields are consulted.
-  pm={wanted:pm.get(wanted,{})}
+  pre=pd.read_csv(a.pre,dtype={'race_code':str});pre.race_code=pre.race_code.astype(str).str.zfill(12)
+  for code,m in pre.set_index('race_code').to_dict('index').items(): pm.setdefault(code,{}).update(m)
+ if wanted: pm={wanted:pm.get(wanted,{})}
  hm=head.set_index('race_code');a.out.mkdir(parents=True,exist_ok=True)
  train=v332.load_all();train['date']=[f'{c[:4]}-{c[4:6]}-{c[6:8]}' for c in train.race_code.astype(str).str.zfill(12)];train.to_csv(a.out/'v351_exhibition_train.csv',index=False);n=0
  for code,m in pm.items():
   if code not in hm.index or code not in p2 or code not in pc or code not in base_p2 or code not in base_pc: continue
   mass=v300.base5(base_p2[code],base_pc[code])[1];probs=v299.pair_prob(p2[code],pc[code],prod.TICKET_ALPHA);top=v299.STRATEGIES['HYBRID'](p2[code],pc[code],probs)[:3];hp=float(hm.loc[code,'p_head'])
-  obj={'race_code':code,'pre_class':m.get('pre_class','ON_DEMAND'),'legacy_pre_p':float(m['legacy_pre_p']) if m.get('legacy_pre_p') not in (None,'') else hp,'final_head_p':hp,'opp_mass':float(mass),'p2':{str(k):float(v) for k,v in p2[code].items()},'pc':{f'{s}-{t}':float(v) for (s,t),v in pc[code].items()},'base_tickets':';'.join(f'1-{s}-{t}' for s,t in top),'production_profile':prod.PROFILE_NAME,'training_cutoff':(target-pd.Timedelta(days=1)).isoformat(),'result_or_payout_used':False,'chronology_guard':True,'base_source':'ON_DEMAND_CAUSAL' if wanted else 'PRE_CACHE'};(a.out/f'{code}.json').write_text(json.dumps(obj,ensure_ascii=False,indent=2));n+=1
+  obj={'race_code':code,'pre_class':m.get('pre_class','NON_CANDIDATE'),'legacy_pre_p':float(m['legacy_pre_p']) if m.get('legacy_pre_p') not in (None,'') else hp,'final_head_p':hp,'opp_mass':float(mass),'p2':{str(k):float(v) for k,v in p2[code].items()},'pc':{f'{s}-{t}':float(v) for (s,t),v in pc[code].items()},'base_tickets':';'.join(f'1-{s}-{t}' for s,t in top),'production_profile':prod.PROFILE_NAME,'training_cutoff':(target-pd.Timedelta(days=1)).isoformat(),'result_or_payout_used':False,'chronology_guard':True,'base_source':'ON_DEMAND_CAUSAL' if wanted else 'DAILY_ALL_RACE_CACHE'};(a.out/f'{code}.json').write_text(json.dumps(obj,ensure_ascii=False,indent=2));n+=1
  if wanted and n!=1: raise RuntimeError(f'on-demand causal base could not be generated for {wanted}')
- meta={'date':a.date,'candidate_cache_R':n,'requested_race_code':wanted or None,'training_cutoff':(target-pd.Timedelta(days=1)).isoformat(),'production_profile':prod.PROFILE_NAME,'result_or_payout_used':False,'chronology_guard':True};(a.out/'meta.json').write_text(json.dumps(meta,indent=2));print(json.dumps(meta))
+ meta={'date':a.date,'all_race_cache_R':n,'requested_race_code':wanted or None,'training_cutoff':(target-pd.Timedelta(days=1)).isoformat(),'production_profile':prod.PROFILE_NAME,'result_or_payout_used':False,'chronology_guard':True};(a.out/'meta.json').write_text(json.dumps(meta,indent=2));print(json.dumps(meta))
 if __name__=='__main__':main()
