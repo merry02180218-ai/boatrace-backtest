@@ -19,18 +19,24 @@
 - 実装 commit `b5d1b0a...`、workflow commit `93157a13311da5e1e5900e64896f444175ee2c62`。
 - Run `34997552243` / Job `104477496635` / Artifact `10408383148` / success。
 - Artifact SHA256 `6ebddd3f56e3c51f3c042564d2d509d082af86c32e315b903ea30ebdce4214f1`。
-- 桐生 half+turn+straight historical 15R。
-- actual opponent pairに2号艇: 8/15=53.33%。2着3R、3着5R。
-- current first pairは2号艇を15/15=100%含む。actual2なのに現行が2を落としたケース=0。
-- 一方、actualに2がいないのにcurrent first pairが2を含むケース=7。
-- current first pair完全一致=4/15=26.67%。3-ticket unionも2号艇15/15=100%。
-- 結論: 桐生で2号艇をさらに優遇する必要はない。むしろ2を残す8Rと外すべき7Rを半周ラップ/ST/ターン/直線で判別する研究が必要。
+- 桐生 half+turn+straight historical 15R。actual pairに2号艇 8/15=53.33%、現行first pairは2を15/15含む。actual2なのに落とした=0、false keep2=7。first pair完全一致4/15=26.67%。
+- 結論: 2号艇をさらに優遇せず、KEEP2/DROP2判別を研究。
+
+## Wave8 桐生2号艇 KEEP/DROP特徴監査 — 完了
+- Run `34999916439` / Job `104485468453` / Artifact `10409258569` / success。
+- Artifact SHA256 `bd5241371d62bc7d2f19e7bb123e4d1144837f34729df06e13d09cce897cbe73`。
+- checkout SHA `5685c287b702a16ddd32222ad921e5a9faedd3fa`。
+- KIRYU_R=15 / KEEP2=8 / DROP2=7。
+- half: KEEP mean .200 / DROP .257、rank 1.875 / 2.000。半周単独の分離は弱い。
+- ex: KEEP mean .500 / DROP .229、ex_vs_best .500 / .171。単純な「展示が良いほどKEEP」ではなく逆方向を含み、単独閾値は危険。
+- turn: KEEP .375 / DROP .286、ST: KEEP .525 / DROP .571、straight: KEEP .400 / DROP .429。
+- 結論: 単一特徴guardではなく、展示×半周×turn×ST等の複合guardをLOOで評価する。15Rのためproduction昇格はしない。
 - `SEPTEMBER_OUTCOMES_USED False` / `PRODUCTION_CHANGED False`。
 
-## 次作業開始 — Wave8 桐生2号艇 KEEP/DROP guard
-1. 桐生15Rを対象に、actual_has_2=1（KEEP2）8Rと actual_has_2=0（DROP2候補）7Rを比較する。
-2. 2号艇自身の補正展示 `ex`, `st`, 半周 `half`, turn, straight と場内rankを抽出する。
-3. 2号艇と他艇（特に現行pair相方・最有力outsider）の差分を作り、KEEP2/DROP2を分離する方向を探る。
-4. 15Rだけへの過学習を避けるため、まず単変量の方向・閾値候補とleave-one-out/簡易walk-forward相当を確認し、productionには入れない。
-5. Wave4に残るtrain+June median imputation leakageも別途修正対象。Wave8の結論と混同しない。
-6. September 2026結果・払戻は絶対に読まない。production変更なし。
+## 次作業開始 — Wave9 桐生2号艇複合guard LOO
+1. Wave8の15Rだけを用い、leave-one-outでKEEP2/DROP2を予測する複合guardを検証する。
+2. まず shared features（ex/st/turn/straight/orig_avg）と、half追加版を同じLOO条件で比較し、halfの増分価値を確認する。
+3. 標準化・欠損補完は各LOO train foldだけでfitし、held-out raceの情報を前処理に使わない。
+4. accuracyだけでなく、DROP2 precision/recall、KEEP2誤DROP数を出す。現行は全KEEPなので、false drop damageを特に重視する。
+5. 15R小標本につき診断研究のみ。production変更なし。
+6. September 2026結果・払戻は絶対に読まない。
