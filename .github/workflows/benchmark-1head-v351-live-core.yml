@@ -1,0 +1,27 @@
+name: benchmark-1head-v351-live-core
+on:
+  push:
+    paths:
+      - 'benchmark_1head_v351_live_core.py'
+      - '.github/workflows/benchmark-1head-v351-live-core.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scikit-learn
+      - name: Benchmark v351 cached live core
+        run: |
+          mkdir -p /tmp/v351-live-benchmark
+          /usr/bin/time -f 'wall_sec=%e\nmax_rss_kb=%M' -o /tmp/v351-live-benchmark/process_time.txt python benchmark_1head_v351_live_core.py --n 20000 | tee /tmp/v351-live-benchmark/core.json
+          cat /tmp/v351-live-benchmark/process_time.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v351-1head-live-core-benchmark
+          retention-days: 14
+          path: /tmp/v351-live-benchmark/
