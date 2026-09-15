@@ -9,7 +9,7 @@ on:
       - 'run_1head_v351_live_exhibition_gate.py'
       - 'probe_1head_v351_boatcast_exhibition.py'
 permissions: {contents: read, actions: read}
-# The 5-minute schedule is watchdog/restart insurance only. Near-deadline polling happens inside the controller.
+# watchdog + forced immediate trigger 202609151910
 concurrency:
   group: v351-live-controller-20260915
   cancel-in-progress: false
@@ -62,18 +62,14 @@ jobs:
               REM=$(python -c "import json;print(json.load(open('window_$CODE.json'))['remaining_seconds'])")
               echo "$CODE mode=$MODE remaining=$REM"
               if [ "$MODE" = "EXPIRED" ]; then break; fi
-              if [ "$MODE" = "WAIT" ]; then
-                SLEEP=$(python -c "print(max(5,min(30,int(float('$REM')-15*60))))")
-                sleep "$SLEEP"; continue
-              fi
+              if [ "$MODE" = "WAIT" ]; then SLEEP=$(python -c "print(max(5,min(30,int(float('$REM')-15*60))))"); sleep "$SLEEP"; continue; fi
               set +e
               python probe_1head_v351_boatcast_exhibition.py --date 20260915 --jcd "$JCD" --race "$RACE" --deadline-jst "$DL" > "exhibition_$CODE.json" 2> "exhibition_error_$CODE.txt"; RC=$?
               set -e
               if [ "$RC" -eq 0 ]; then
                 BASE=$(find /tmp/cache -name "$CODE.json" -print -quit); test -n "$BASE"
                 TRAIN=$(find /tmp/cache -name v351_exhibition_train.csv -print -quit); test -n "$TRAIN"
-                TRAIN_DST="$(dirname "$BASE")/v351_exhibition_train.csv"
-                if [ "$(readlink -f "$TRAIN")" != "$(readlink -f "$TRAIN_DST")" ]; then cp "$TRAIN" "$TRAIN_DST"; fi
+                TRAIN_DST="$(dirname "$BASE")/v351_exhibition_train.csv"; if [ "$(readlink -f "$TRAIN")" != "$(readlink -f "$TRAIN_DST")" ]; then cp "$TRAIN" "$TRAIN_DST"; fi
                 CUTOFF=$(python -c "import json;print(json.load(open('$BASE'))['training_cutoff'])")
                 python run_1head_v351_live_exhibition_gate.py --probe "exhibition_$CODE.json" --base "$BASE" --history-cutoff "$CUTOFF" --out "gate_$CODE.json"
                 python - "$BASE" "gate_$CODE.json" "window_$CODE.json" "final_input_$CODE.json" <<'PY2'
@@ -81,8 +77,7 @@ jobs:
           from datetime import datetime,timezone,timedelta
           b=json.load(open(sys.argv[1]));g=json.load(open(sys.argv[2]));w=json.load(open(sys.argv[3]));b.update(g);b.update({'exhibition_ready':True,'deadline_jst':w['deadline_jst'],'minutes_to_deadline':w['remaining_minutes'],'evaluated_at_jst':datetime.now(timezone(timedelta(hours=9))).isoformat(),'result_or_payout_used':False,'chronology_guard':True});json.dump(b,open(sys.argv[4],'w'),ensure_ascii=False,indent=2)
           PY2
-                python run_1head_v351_live_finalize.py --input "final_input_$CODE.json" --out "live_v351_final_$CODE.json"
-                break
+                python run_1head_v351_live_finalize.py --input "final_input_$CODE.json" --out "live_v351_final_$CODE.json"; break
               fi
               if [ "$MODE" = "FINAL5" ]; then
                 python - "$CODE" "$PRE_CLASS" "$DL" <<'PY3'
