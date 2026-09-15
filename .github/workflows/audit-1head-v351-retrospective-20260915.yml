@@ -1,0 +1,82 @@
+name: audit-1head-v351-retrospective-20260915
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/audit-1head-v351-retrospective-20260915.yml'
+permissions: {contents: read, actions: read}
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q requests beautifulsoup4 numpy pandas scipy scikit-learn
+      - name: Download frozen 9/15 prediction cache
+        env: {GH_TOKEN: '${{ github.token }}'}
+        run: |
+          set -euo pipefail
+          ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-cache-20260915&per_page=100" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id')
+          test -n "$ID" && test "$ID" != null
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$ID/zip" > /tmp/cache.zip
+          mkdir -p /tmp/cache out
+          unzip -q /tmp/cache.zip -d /tmp/cache
+          echo "$ID" > out/source_cache_artifact_id.txt
+      - name: Replay and freeze predictions only
+        run: |
+          set -euo pipefail
+          cat > /tmp/candidates.csv <<'CSV'
+          code,jcd,race,pre_class,legacy_pre_p
+          202609151803,18,3,B,0.7850749775099378
+          202609150710,7,10,B,0.781652880578337
+          202609151204,12,4,B,0.7847288256516033
+          202609151804,18,4,S,0.8365496612028864
+          202609150811,8,11,A,0.8048050886183357
+          202609151801,18,1,S,0.8276768490059474
+          202609152210,22,10,A,0.8034152525704932
+          202609151812,18,12,B,0.7824352969770146
+          202609151811,18,11,S,0.8600252281439814
+          202609151805,18,5,B,0.7907800224870352
+          202609151810,18,10,S,0.8491149528818462
+          202609151806,18,6,A,0.8184384410034887
+          202609151809,18,9,B,0.7901627686613822
+          202609152201,22,1,A,0.8061393309719818
+          202609151909,19,9,B,0.782218720979782
+          202609151910,19,10,B,0.7832464064537197
+          202609151808,18,8,S,0.8502034460455856
+          CSV
+          tail -n +2 /tmp/candidates.csv | while IFS=, read -r CODE JCD RACE PRE PREP; do
+            BASE=$(find /tmp/cache -name "$CODE.json" -print -quit); test -n "$BASE"
+            TRAIN=$(find /tmp/cache -name v351_exhibition_train.csv -print -quit); test -n "$TRAIN"
+            DST="$(dirname "$BASE")/v351_exhibition_train.csv"
+            if [ "$(readlink -f "$TRAIN")" != "$(readlink -f "$DST")" ]; then cp "$TRAIN" "$DST"; fi
+            # Historical replay: only bypass the wall-clock deadline guard. Data URL remains 20260915/race-specific.
+            python probe_1head_v351_boatcast_exhibition.py --date 20260915 --jcd "$JCD" --race "$RACE" --deadline-jst '2099-01-01T00:00:00+09:00' > "out/exhibition_$CODE.json"
+            CUTOFF=$(python -c "import json;print(json.load(open('$BASE'))['training_cutoff'])")
+            python run_1head_v351_live_exhibition_gate.py --probe "out/exhibition_$CODE.json" --base "$BASE" --history-cutoff "$CUTOFF" --out "out/gate_$CODE.json"
+            python - "$BASE" "out/gate_$CODE.json" "$CODE" "$PRE" "$PREP" "out/final_input_$CODE.json" <<'PY'
+          import json,sys
+          from datetime import datetime,timezone,timedelta
+          b=json.load(open(sys.argv[1]));g=json.load(open(sys.argv[2]));b.update(g)
+          b.update({'race_code':sys.argv[3],'pre_class':sys.argv[4],'legacy_pre_p':float(sys.argv[5]),'exhibition_ready':True,'deadline_jst':'RETROSPECTIVE_20260915','minutes_to_deadline':None,'evaluated_at_jst':datetime.now(timezone(timedelta(hours=9))).isoformat(),'result_or_payout_used':False,'chronology_guard':True})
+          json.dump(b,open(sys.argv[6],'w'),ensure_ascii=False,indent=2)
+          PY
+            python run_1head_v351_live_finalize.py --input "out/final_input_$CODE.json" --out "out/final_$CODE.json"
+          done
+          python - <<'PY'
+          import glob,json,csv
+          rows=[]
+          for f in sorted(glob.glob('out/final_*.json')):
+              x=json.load(open(f)); rows.append({k:x.get(k) for k in ['race_code','pre_class','legacy_pre_p','final_head_p','status','tickets','opp_mass','head_exhibition_pass','production_profile']})
+          json.dump({'phase':'PREDICTIONS_FROZEN_BEFORE_RESULTS','result_or_payout_used':False,'count':len(rows),'rows':rows},open('out/predictions_frozen.json','w'),ensure_ascii=False,indent=2)
+          with open('out/predictions_frozen.csv','w',newline='',encoding='utf-8') as h:
+              w=csv.DictWriter(h,fieldnames=rows[0].keys());w.writeheader();w.writerows(rows)
+          assert len(rows)==17, len(rows)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audit-v351-predictions-frozen-20260915
+          retention-days: 30
+          path: out/
