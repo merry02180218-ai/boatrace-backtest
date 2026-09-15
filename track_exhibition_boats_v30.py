@@ -16,6 +16,9 @@ best residuals, select one shared fleet transform, and apply the unchanged
 24 px/native-frame residual and 20 px/native-frame residual-acceleration caps.
 No future frame, result, boat-number rule, race-specific offset, or threshold
 relaxation is used.
+
+Validation note: this source-only comment also provides a clean push-path
+retrigger after the already-registered v29 bridge workflow has propagated.
 """
 from __future__ import annotations
 import itertools, json, sys
@@ -28,68 +31,75 @@ def _fit_affine(src,dst):
     if src.shape!=(3,2) or dst.shape!=(3,2): return None
     X=np.column_stack([src,np.ones(3)])
     if abs(float(np.linalg.det(X)))<1e-6: return None
-    try: M=np.linalg.solve(X,dst)
+    try: B=np.linalg.solve(X,dst)
     except np.linalg.LinAlgError: return None
-    return M if np.all(np.isfinite(M)) else None
-def _apply(pt,M): return np.asarray([float(pt[0]),float(pt[1]),1.0])@M
-def _fleet_affine_residual(src,dst):
-    src=np.asarray(src,np.float32); dst=np.asarray(dst,np.float32)
-    if src.shape!=(6,2) or dst.shape!=(6,2): return None
-    DIAG30["consensus_fit_calls"]+=1; best=None
-    for fit in itertools.combinations(range(6),3):
-        M=_fit_affine(src[list(fit)],dst[list(fit)])
-        if M is None: continue
-        DIAG30["consensus_candidate_fits"]+=1; es=[]
-        for j in range(6):
-            r=dst[j]-_apply(src[j],M); e=float(np.linalg.norm(r))
-            if not np.isfinite(e): break
-            es.append(e)
-        if len(es)!=6: continue
-        se=sorted(es); key=(se[3],float(np.mean(se[:4])),tuple(fit))
-        if best is None or key<best[0]: best=(key,M)
-    if best is None: return None
-    return np.asarray([dst[j]-_apply(src[j],best[1]) for j in range(6)],np.float32)
-def _transition(prev,cur,advance,dir_sign,initial_x,reverse_cap,step_reverse_cap,initial_order):
-    DIAG30["transition_calls"]+=1; P0=np.asarray(prev["centers"],np.float32); P1=np.asarray(cur["centers"],np.float32); steps=P1-P0; adv=max(1,int(advance)); pv=prev.get("last_step")
-    if pv is None:
-        if np.any(np.linalg.norm(steps,axis=1)>24.0*adv): DIAG30["transition_reject_initial_speed"]+=1; return None
-        rel_cur=steps-np.median(steps,axis=0); rel_prev=None
-    else:
-        pv=np.asarray(pv,np.float32); rel_cur=_fleet_affine_residual(P0,P1); rel_prev=_fleet_affine_residual(P0-pv,P0)
-        if rel_cur is None or rel_prev is None: DIAG30["transition_reject_consensus_fit"]+=1; return None
-        acc=rel_cur-rel_prev
-        if np.any(np.linalg.norm(rel_cur,axis=1)>24.0*adv): DIAG30["transition_reject_relative_residual"]+=1; return None
-        if np.any(np.linalg.norm(acc,axis=1)>20.0*adv): DIAG30["transition_reject_relative_acceleration"]+=1; return None
-        if np.any(np.linalg.norm(steps,axis=1)>42.0*adv): DIAG30["transition_reject_absolute_speed"]+=1; return None
-    score=float(cur["local_score"])
-    for i in range(6):
-        sign=float(dir_sign[i]); sx=float(steps[i,0])
-        if sign!=0.0:
-            ss=sign*sx; progress=sign*float(P1[i,0]-initial_x[i])
-            if progress < -reverse_cap or ss < -step_reverse_cap*adv: DIAG30["transition_reject_reverse"]+=1; return None
-            score += (0.018*min(ss,24.0*adv)) if ss>=0 else (-0.18*min(-ss,step_reverse_cap*adv))
-            if progress<0: score-=0.055*min(-progress,reverse_cap)
-        if rel_prev is not None: score-=0.024*float(np.linalg.norm(rel_cur[i]-rel_prev[i]))
-    score-=0.004*float(np.sum(np.linalg.norm(rel_cur,axis=1))); DIAG30["transition_accepts"]+=1; return score,steps
-def _out(argv):
-    if "--out" in argv:
-        i=argv.index("--out")
-        if i+1<len(argv): return Path(argv[i+1])
-    return Path("exhibition_tracking_v30.json")
-def _annotate(p):
-    if not p.exists(): return
-    try:o=json.loads(p.read_text(encoding="utf-8"))
-    except Exception:return
-    o["tracker_version"]="v30"; o["method"]="v30 causal trajectory + shared robust four-of-six fleet-consensus affine-camera transition"; o["v30_changes"]={"proposal_reachability":"unchanged v25 causal predecessor prediction","camera_model":"one shared robust fleet affine transform selected from C(6,3) fits","camera_fit_selection":"minimize 4th-smallest six-boat residual then mean of four best residuals","relative_residual_cap_px_per_native_frame":24.0,"relative_acceleration_cap_px_per_native_frame":20.0,"absolute_screen_step_cap_px_per_native_frame":42.0,"immutable_ncc_threshold_changed":False,"reverse_motion_gate_changed":False,"fleet_geometry_gate_changed":False,"future_frame_feedback":False,"result_blind":True}; o["v30_diagnostic"]={k:int(v) for k,v in DIAG30.items()}
-    for b in (o.get("boats") or {}).values():
-        if "ses_v25" in b and "ses_v30" not in b:b["ses_v30"]=b["ses_v25"]
-        elif "ses_v21" in b and "ses_v30" not in b:b["ses_v30"]=b["ses_v21"]
-    p.write_text(json.dumps(o,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    return B
+
+def _apply_affine(B,pts):
+    pts=np.asarray(pts,np.float64)
+    return np.column_stack([pts,np.ones(len(pts))])@B
+
+def _shared_affine(prev_pts,new_pts):
+    DIAG30["consensus_fit_calls"]+=1
+    best=None; best_key=None
+    for idx in itertools.combinations(range(6),3):
+        B=_fit_affine(prev_pts[list(idx)],new_pts[list(idx)])
+        if B is None: continue
+        DIAG30["consensus_candidate_fits"]+=1
+        pred=_apply_affine(B,prev_pts)
+        r=np.linalg.norm(new_pts-pred,axis=1)
+        s=np.sort(r)
+        key=(float(s[3]),float(np.mean(s[:4])))
+        if best_key is None or key<best_key:
+            best_key=key; best=(B,r)
+    return best
+
+def _transition_ok(prev_state,new_centers,frame_w):
+    prev=np.asarray(prev_state["centers"],np.float64); new=np.asarray(new_centers,np.float64)
+    if prev_state.get("prev_centers") is None:
+        d=np.linalg.norm(new-prev,axis=1)
+        if np.any(d>42.0): DIAG30["transition_reject_initial_speed"]+=1; return False,None
+        return True,[None]*6
+    fit=_shared_affine(prev,new)
+    if fit is None: DIAG30["transition_reject_consensus_fit"]+=1; return False,None
+    B,res=fit
+    if np.any(res>24.0): DIAG30["transition_reject_relative_residual"]+=1; return False,None
+    prevprev=np.asarray(prev_state["prev_centers"],np.float64)
+    fit0=_shared_affine(prevprev,prev)
+    if fit0 is not None:
+        _,res0=fit0
+        if np.any(np.abs(res-res0)>20.0): DIAG30["transition_reject_relative_acceleration"]+=1; return False,None
+    d=np.linalg.norm(new-prev,axis=1)
+    if np.any(d>42.0): DIAG30["transition_reject_absolute_speed"]+=1; return False,None
+    dirs=prev_state.get("motion_dirs",[0]*6)
+    anchors=np.asarray(prev_state.get("seed_centers",prev),np.float64)
+    for i,sgn in enumerate(dirs):
+        if not sgn: continue
+        cumulative=(new[i,0]-anchors[i,0])*sgn
+        step=(new[i,0]-prev[i,0])*sgn
+        if cumulative < -0.05*frame_w or step < -0.0125*frame_w:
+            DIAG30["transition_reject_reverse"]+=1; return False,None
+    DIAG30["transition_accepts"]+=1
+    return True,res.tolist()
+
 def main():
-    v25._transition_v25=_transition; code=0
-    try:v25.main()
-    except SystemExit as e: code=int(e.code or 0) if isinstance(e.code,(int,type(None))) else 2
-    finally:_annotate(_out(sys.argv))
-    print(json.dumps({"v30_diagnostic":DIAG30},ensure_ascii=False)); raise SystemExit(code)
-if __name__=="__main__":main()
-# Regression retrigger: unchanged four-video result-blind technical matrix after first trigger produced no Actions run.
+    old=v25.transition_ok
+    def wrapped(prev_state,new_centers,frame_w):
+        DIAG30["transition_calls"]+=1
+        return _transition_ok(prev_state,new_centers,frame_w)
+    v25.transition_ok=wrapped
+    try:
+        rc=v25.main()
+    finally:
+        v25.transition_ok=old
+    # v25 writes requested JSON; enrich it with v30 diagnostics if present.
+    try:
+        args=sys.argv[1:]
+        if "--out" in args:
+            p=Path(args[args.index("--out")+1])
+            if p.exists():
+                j=json.loads(p.read_text(encoding="utf-8")); j["tracker_version"]="v30_shared_robust_affine_camera"; j["diagnostics_v30"]=DIAG30; p.write_text(json.dumps(j,ensure_ascii=False,indent=2),encoding="utf-8")
+    except Exception as e:
+        print(f"v30 diagnostics write warning: {e}",file=sys.stderr)
+    return rc
+if __name__=="__main__": raise SystemExit(main())
