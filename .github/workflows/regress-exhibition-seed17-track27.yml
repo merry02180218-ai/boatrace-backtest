@@ -1,5 +1,5 @@
-name: regress exhibition seed17 tracker35 dual causal proposals
-run-name: SES v35 dual-causal-proposal matrix
+name: regress exhibition seed17 tracker36 perspective band
+run-name: SES v36 perspective-band matrix
 
 on:
   workflow_dispatch:
@@ -9,8 +9,8 @@ on:
       - 'track_exhibition_boats_v25.py'
       - 'track_exhibition_boats_v34.py'
       - 'track_exhibition_boats_v35.py'
+      - 'track_exhibition_boats_v36.py'
       - 'CHAT_HANDOFF_20260912_SES_AUTORESEARCH.md'
-      - 'CHAT_HANDOFF_20260915_SES_V28_WORK.md'
       - '.github/workflows/regress-exhibition-seed17-track27.yml'
 
 jobs:
@@ -56,29 +56,29 @@ jobs:
           & $env:LOCAL_PYTHON auto_seed_exhibition_motion_v17.py $video.FullName --entry-order $env:ENTRY_ORDER --nominal-sec 29 --out auto_seed_meta_v17.json --seed-out auto_seeds_v17.json
           if ($LASTEXITCODE -ne 0) { throw 'seed v17 failed closed' }
           $sw.Stop(); "SEED_V17_SECONDS=$($sw.Elapsed.TotalSeconds)"
-      - name: Track v35 dual causal proposal centers
+      - name: Track v36 perspective-band translation
         shell: powershell
         run: |
           $video=Get-ChildItem -Filter 'boatcast_*_startclip.mp4' | Select-Object -First 1
           $meta=Get-Content auto_seed_meta_v17.json -Raw | ConvertFrom-Json
           $sw=[Diagnostics.Stopwatch]::StartNew()
-          & $env:LOCAL_PYTHON track_exhibition_boats_v35.py $video.FullName --slit-sec ([string]$meta.selected_sec) --seed-json auto_seeds_v17.json --seed-meta auto_seed_meta_v17.json --out exhibition_tracking_v35.json --stride 2 --topk 6 --per-boat-keep 5 --per-path-keep 12 --beam-width 24 --bank-cap 5
+          & $env:LOCAL_PYTHON track_exhibition_boats_v36.py $video.FullName --slit-sec ([string]$meta.selected_sec) --seed-json auto_seeds_v17.json --seed-meta auto_seed_meta_v17.json --out exhibition_tracking_v36.json --stride 2 --topk 6 --per-boat-keep 5 --per-path-keep 12 --beam-width 24 --bank-cap 5
           $code=$LASTEXITCODE
-          $sw.Stop(); "TRACK_V35_SECONDS=$($sw.Elapsed.TotalSeconds)"
-          if ($code -ne 0) { throw 'tracker v35 failed closed' }
+          $sw.Stop(); "TRACK_V36_SECONDS=$($sw.Elapsed.TotalSeconds)"
+          if ($code -ne 0) { throw 'tracker v36 failed closed' }
       - name: Summarize
         if: always()
         shell: powershell
         run: |
           if (Test-Path auto_seed_meta_v17.json) { Get-Content auto_seed_meta_v17.json -Raw }
-          if (Test-Path exhibition_tracking_v35.json) { Get-Content exhibition_tracking_v35.json -Raw }
+          if (Test-Path exhibition_tracking_v36.json) { Get-Content exhibition_tracking_v36.json -Raw }
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: seed17-track35-${{ matrix.label }}
+          name: seed17-track36-${{ matrix.label }}
           path: |
             boatcast_*_startclip.json
             auto_seed_meta_v17.json
             auto_seeds_v17.json
-            exhibition_tracking_v35.json
+            exhibition_tracking_v36.json
           if-no-files-found: warn
