@@ -1,8 +1,6 @@
-name: manual-live-1head-v351-exhibition-20260915
+name: manual-live-1head-v351-exhibition
 
-# 手動LIVE専用。自動cron / push起動なし。
-# PRE候補リストに無いレースも race_code 指定で判定可能にする。
-# v351 production gate/finalizer自体は変更しない。
+# Manual LIVE only: no cron/push. Any race_code may be requested.
 on:
   workflow_dispatch:
     inputs:
@@ -10,60 +8,45 @@ on:
         description: '12-digit race code (YYYYMMDDJJRR)'
         required: true
         type: string
-
-permissions:
-  contents: read
-  actions: read
-
+permissions: {contents: read, actions: read}
 jobs:
   manual-race:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: '3.11'}
-      - run: pip install -q requests beautifulsoup4 numpy pandas scipy scikit-learn
-
-      - name: Resolve race and download shared v351 cache
-        env:
-          GH_TOKEN: '${{ github.token }}'
-          RACE_CODE: '${{ inputs.race_code }}'
+      - run: pip install -q requests beautifulsoup4 lxml numpy pandas scipy 'scikit-learn==1.6.1'
+      - name: Resolve race and causal base
+        env: {GH_TOKEN: '${{ github.token }}', RACE_CODE: '${{ inputs.race_code }}'}
         run: |
           set -euo pipefail
           test "${#RACE_CODE}" -eq 12
-          DATE=${RACE_CODE:0:8}
-          JCD=$((10#${RACE_CODE:8:2}))
-          RACE=$((10#${RACE_CODE:10:2}))
-          echo "DATE=$DATE" >> "$GITHUB_ENV"
-          echo "JCD=$JCD" >> "$GITHUB_ENV"
-          echo "RACE=$RACE" >> "$GITHUB_ENV"
-          echo "RACE_CODE=$RACE_CODE" >> "$GITHUB_ENV"
-
-          rm -rf /tmp/cache; mkdir -p /tmp/cache
-          CACHE_ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-cache-20260915&per_page=20" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id')
-          test -n "$CACHE_ID" && test "$CACHE_ID" != null
-          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$CACHE_ID/zip" > /tmp/cache.zip
-          unzip -q /tmp/cache.zip -d /tmp/cache
-
-          # PRE candidate CSV is intentionally NOT consulted here.
-          # Any requested race is allowed as long as the shared v351 cache contains
-          # the causal pre-exhibition base required by the unchanged production gate.
+          DATE=${RACE_CODE:0:8}; JCD=$((10#${RACE_CODE:8:2})); RACE=$((10#${RACE_CODE:10:2})); ISO_DATE="${DATE:0:4}-${DATE:4:2}-${DATE:6:2}"
+          echo "DATE=$DATE" >> "$GITHUB_ENV"; echo "JCD=$JCD" >> "$GITHUB_ENV"; echo "RACE=$RACE" >> "$GITHUB_ENV"; echo "RACE_CODE=$RACE_CODE" >> "$GITHUB_ENV"
+          rm -rf /tmp/cache /tmp/pre /tmp/ondemand; mkdir -p /tmp/cache /tmp/pre /tmp/ondemand
+          CACHE_ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-cache-$DATE&per_page=20" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id // empty')
+          if [ -n "$CACHE_ID" ]; then gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$CACHE_ID/zip" > /tmp/cache.zip; unzip -q /tmp/cache.zip -d /tmp/cache; fi
           BASE=$(find /tmp/cache -name "$RACE_CODE.json" -print -quit)
           if [ -z "$BASE" ]; then
-            echo "No causal v351 base found for requested race $RACE_CODE" >&2
-            echo "This is not a PRE-candidate rejection; the shared cache lacks the race base." >&2
-            exit 4
+            echo "shared cache has no $RACE_CODE; rebuilding causal base on demand"
+            PRE_ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-pre-sab-$DATE-rolling&per_page=20" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id // empty')
+            test -n "$PRE_ID"
+            gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$PRE_ID/zip" > /tmp/pre.zip; unzip -q /tmp/pre.zip -d /tmp/pre
+            CARDS=$(find /tmp/pre -name race_cards.csv -print -quit); test -n "$CARDS"
+            python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
+            python prepare_1head_v351_live_cache.py --date "$ISO_DATE" --cards "$CARDS" --race-code "$RACE_CODE" --out /tmp/ondemand
+            BASE="/tmp/ondemand/$RACE_CODE.json"; test -s "$BASE"
           fi
-          echo "BASE=$BASE" >> "$GITHUB_ENV"
-
+          TRAIN=$(find "$(dirname "$BASE")" /tmp/cache -name v351_exhibition_train.csv -print -quit); test -n "$TRAIN"
+          echo "BASE=$BASE" >> "$GITHUB_ENV"; echo "TRAIN=$TRAIN" >> "$GITHUB_ENV"
       - name: Skip existing immutable final
         id: immutable
         env: {GH_TOKEN: '${{ github.token }}'}
         run: |
           N=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=live-v351-final-$RACE_CODE&per_page=1" --jq '.total_count')
           if [ "${N:-0}" -gt 0 ]; then echo 'exists=1' >> "$GITHUB_OUTPUT"; else echo 'exists=0' >> "$GITHUB_OUTPUT"; fi
-
       - name: Fetch deadline, exhibition and finalize v351
         if: steps.immutable.outputs.exists != '1'
         run: |
@@ -71,30 +54,18 @@ jobs:
           DL=$(python fetch_boatrace_deadline.py --date "$DATE" --jcd "$JCD" --race "$RACE" --meta "deadline_$RACE_CODE.json" | tail -1)
           python run_1head_v351_live_window.py --deadline-jst "$DL" > "window_$RACE_CODE.json"
           MODE=$(python -c "import json;print(json.load(open('window_$RACE_CODE.json'))['mode'])")
-          if [ "$MODE" = "EXPIRED" ]; then echo 'deadline already expired; refusing LIVE final'; exit 2; fi
-
-          READY=0
-          for i in $(seq 1 8); do
-            if python probe_1head_v351_boatcast_exhibition.py --date "$DATE" --jcd "$JCD" --race "$RACE" --deadline-jst "$DL" > "exhibition_$RACE_CODE.json" 2> "exhibition_error_$RACE_CODE.txt"; then READY=1; break; fi
-            sleep 15
-          done
-          if [ "$READY" != 1 ]; then echo 'exhibition unavailable'; exit 3; fi
-
-          TRAIN=$(find /tmp/cache -name v351_exhibition_train.csv -print -quit); test -n "$TRAIN"
-          TRAIN_DST="$(dirname "$BASE")/v351_exhibition_train.csv"
-          if [ "$(readlink -f "$TRAIN")" != "$(readlink -f "$TRAIN_DST")" ]; then cp "$TRAIN" "$TRAIN_DST"; fi
+          if [ "$MODE" = EXPIRED ]; then echo 'deadline expired; refusing LIVE final'; exit 2; fi
+          READY=0; for i in $(seq 1 8); do if python probe_1head_v351_boatcast_exhibition.py --date "$DATE" --jcd "$JCD" --race "$RACE" --deadline-jst "$DL" > "exhibition_$RACE_CODE.json" 2> "exhibition_error_$RACE_CODE.txt"; then READY=1; break; fi; sleep 15; done
+          test "$READY" = 1
+          TRAIN_DST="$(dirname "$BASE")/v351_exhibition_train.csv"; if [ "$(readlink -f "$TRAIN")" != "$(readlink -f "$TRAIN_DST")" ]; then cp "$TRAIN" "$TRAIN_DST"; fi
           CUTOFF=$(python -c "import json;print(json.load(open('$BASE'))['training_cutoff'])")
           python run_1head_v351_live_exhibition_gate.py --probe "exhibition_$RACE_CODE.json" --base "$BASE" --history-cutoff "$CUTOFF" --out "gate_$RACE_CODE.json"
           python - "$BASE" "gate_$RACE_CODE.json" "window_$RACE_CODE.json" "final_input_$RACE_CODE.json" <<'PY'
           import json,sys
           from datetime import datetime,timezone,timedelta
-          b=json.load(open(sys.argv[1])); g=json.load(open(sys.argv[2])); w=json.load(open(sys.argv[3]))
-          b.update(g)
-          b.update({'exhibition_ready':True,'deadline_jst':w['deadline_jst'],'minutes_to_deadline':w['remaining_minutes'],'evaluated_at_jst':datetime.now(timezone(timedelta(hours=9))).isoformat(),'result_or_payout_used':False,'chronology_guard':True})
-          json.dump(b,open(sys.argv[4],'w'),ensure_ascii=False,indent=2)
+          b=json.load(open(sys.argv[1]));g=json.load(open(sys.argv[2]));w=json.load(open(sys.argv[3]));b.update(g);b.update({'exhibition_ready':True,'deadline_jst':w['deadline_jst'],'minutes_to_deadline':w['remaining_minutes'],'evaluated_at_jst':datetime.now(timezone(timedelta(hours=9))).isoformat(),'result_or_payout_used':False,'chronology_guard':True});json.dump(b,open(sys.argv[4],'w'),ensure_ascii=False,indent=2)
           PY
           python run_1head_v351_live_finalize.py --input "final_input_$RACE_CODE.json" --out "live_v351_final_$RACE_CODE.json"
-
       - uses: actions/upload-artifact@v4
         if: steps.immutable.outputs.exists != '1' && success()
         with:
