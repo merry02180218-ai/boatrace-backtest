@@ -1,0 +1,47 @@
+name: manual-v351-shimonoseki10-20260915
+on:
+  push:
+    paths: ['.github/workflows/manual-v351-shimonoseki10-20260915.yml']
+permissions: {contents: read, actions: read}
+jobs:
+  judge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q requests beautifulsoup4 numpy pandas scipy scikit-learn
+      - name: Fetch cache and judge 202609151910 now
+        env: {GH_TOKEN: '${{ github.token }}'}
+        run: |
+          set -euo pipefail
+          CODE=202609151910; JCD=19; RACE=10
+          DL=$(python fetch_boatrace_deadline.py --date 20260915 --jcd $JCD --race $RACE --meta deadline_$CODE.json)
+          python probe_1head_v351_boatcast_exhibition.py --date 20260915 --jcd $JCD --race $RACE --deadline-jst "$DL" > exhibition_$CODE.json
+          rm -rf /tmp/cache; mkdir -p /tmp/cache
+          CACHE_ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-cache-20260915&per_page=20" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id')
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$CACHE_ID/zip" > /tmp/cache.zip
+          unzip -q /tmp/cache.zip -d /tmp/cache
+          BASE=$(find /tmp/cache -name "$CODE.json" -print -quit); test -n "$BASE"
+          TRAIN=$(find /tmp/cache -name v351_exhibition_train.csv -print -quit); test -n "$TRAIN"
+          TRAIN_DST="$(dirname "$BASE")/v351_exhibition_train.csv"; if [ "$(readlink -f "$TRAIN")" != "$(readlink -f "$TRAIN_DST")" ]; then cp "$TRAIN" "$TRAIN_DST"; fi
+          CUTOFF=$(python -c "import json;print(json.load(open('$BASE'))['training_cutoff'])")
+          python run_1head_v351_live_exhibition_gate.py --probe exhibition_$CODE.json --base "$BASE" --history-cutoff "$CUTOFF" --out gate_$CODE.json
+          python - "$BASE" gate_$CODE.json "$DL" final_input_$CODE.json <<'PY'
+          import json,sys
+          from datetime import datetime,timezone,timedelta
+          b=json.load(open(sys.argv[1])); g=json.load(open(sys.argv[2])); b.update(g); b.update({'exhibition_ready':True,'deadline_jst':sys.argv[3],'evaluated_at_jst':datetime.now(timezone(timedelta(hours=9))).isoformat(),'result_or_payout_used':False,'chronology_guard':True}); json.dump(b,open(sys.argv[4],'w'),ensure_ascii=False,indent=2)
+          PY
+          python run_1head_v351_live_finalize.py --input final_input_$CODE.json --out live_v351_final_$CODE.json
+          cat live_v351_final_$CODE.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: manual-v351-final-202609151910
+          retention-days: 14
+          path: |
+            live_v351_final_202609151910.json
+            deadline_202609151910.json
+            exhibition_202609151910.json
+            gate_202609151910.json
