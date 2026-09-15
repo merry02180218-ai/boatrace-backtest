@@ -1,0 +1,32 @@
+name: research-3head-exhibition-v5
+on:
+  push:
+    branches: [research/3head-player-attack-mode]
+    paths:
+      - 'research/run_3head_exhibition_v5.py'
+      - '.github/workflows/research-3head-exhibition-v5.yml'
+  workflow_dispatch:
+jobs:
+  feb-freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn
+      - name: Locate fixed source
+        run: |
+          test -f analysis_v289_3head_wave21_allrace_feature_settled.csv || { echo 'fixed source missing'; exit 2; }
+      - name: February-only A/B/C freeze
+        shell: bash
+        run: |
+          set -o pipefail
+          PYTHONPATH="$GITHUB_WORKSPACE" python research/run_3head_exhibition_v5.py --phase feb | tee research_v289_3head_exhibition_v5_feb.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-3head-exhibition-v5-feb
+          path: |
+            research_v289_3head_exhibition_v5_feb.json
+            research_v289_3head_exhibition_v5_feb.log
