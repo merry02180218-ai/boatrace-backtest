@@ -1,0 +1,20 @@
+{
+  "wave": "56-compact-inner-outer-refinement",
+  "fixed_population": {"races":210,"boat3_heads":71,"head_rate_pct":33.8095},
+  "baseline_wave55": {"tickets_per_race":3,"hits":27,"conditional_capture_pct":38.0282,"stake_yen":63000,"return_yen":67340,"roi_pct":106.8889,"early_hits":13,"early_heads":36,"late_hits":14,"late_heads":35},
+  "method": "Keep Wave55 February-trained second/third pair scores and add a February-standardized pre-deadline inner(boats1/2)-vs-outer(boats4/5/6) structural blend from national2, national3, motor3 and average ST. Evaluate a diagnostic lambda sensitivity grid on March. Maximum remains 3 tickets/race.",
+  "results": [
+    {"lambda":0.0,"hits":27,"capture_pct":38.0282,"return_yen":67340,"roi_pct":106.8889,"early_hits":13,"late_hits":14},
+    {"lambda":0.1,"hits":25,"capture_pct":35.2113,"return_yen":49100,"roi_pct":77.9365,"early_hits":12,"late_hits":13},
+    {"lambda":0.2,"hits":26,"capture_pct":36.6197,"return_yen":47550,"roi_pct":75.4762,"early_hits":11,"late_hits":15},
+    {"lambda":0.35,"hits":25,"capture_pct":35.2113,"return_yen":47430,"roi_pct":75.2857,"early_hits":13,"late_hits":12},
+    {"lambda":0.5,"hits":25,"capture_pct":35.2113,"return_yen":47430,"roi_pct":75.2857,"early_hits":13,"late_hits":12},
+    {"lambda":0.75,"hits":27,"capture_pct":38.0282,"return_yen":55380,"roi_pct":87.9048,"early_hits":15,"late_hits":12},
+    {"lambda":1.0,"hits":26,"capture_pct":36.6197,"return_yen":52140,"roi_pct":82.7619,"early_hits":14,"late_hits":12}
+  ],
+  "conclusion": "The explicit inner-vs-outer structural blend does not improve Wave55. Every nonzero tested weight either loses captures, loses ROI, or both. Lambda 0 (unchanged Wave55 ranking) remains best: 27/71 capture and ROI 106.89%. This is useful negative evidence: do not force a coarse race-level inner/outer prior onto the pair ordering. Next work should refine opponent ranking at candidate/pair level, preferably with attack-mode proxies learned from February pre-race structure rather than a single aggregate inner/outer blend.",
+  "status": "DIAGNOSTIC_ONLY_WAVE56_INNER_OUTER_BLEND_REJECTED_KEEP_WAVE55",
+  "source_run":34754875342,"source_artifact":10317157868,"new_actions_run":null,"new_actions_job":null,"new_actions_artifact":null,
+  "jul_aug_used":false,"september_outcomes_read":false,"production_changed":false,
+  "guardrails":["Wave54 210R/71 heads frozen","maximum 3 tickets/race","actual order/payout settlement labels only","realized kimarite not used","September absent/unread"]
+}
