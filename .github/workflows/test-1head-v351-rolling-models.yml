@@ -37,7 +37,8 @@ jobs:
       - name: Train rolling v308 v317 v318
         run: |
           mkdir -p /tmp/rolling
-          /usr/bin/time -f 'wall_sec=%e max_rss_kb=%M' -o /tmp/rolling/time.txt python prepare_1head_v351_rolling_models.py --target-date 2026-09-15 --sep-source /tmp/sep/september_training_rows.csv --cards /tmp/pre/race_cards.csv --out-dir /tmp/rolling
+          test -s /tmp/pre/live_pre/race_cards.csv
+          /usr/bin/time -f 'wall_sec=%e max_rss_kb=%M' -o /tmp/rolling/time.txt python prepare_1head_v351_rolling_models.py --target-date 2026-09-15 --sep-source /tmp/sep/september_training_rows.csv --cards /tmp/pre/live_pre/race_cards.csv --out-dir /tmp/rolling
           python - <<'PY'
           import json
           z=json.load(open('/tmp/rolling/rolling_models.json'));m=z['meta']
