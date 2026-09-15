@@ -1,9 +1,5 @@
 name: audit-4head-v283-closing-odds
 on:
-  push:
-    paths:
-      - 'audit_4head_86r_v283_closing_odds.py'
-      - '.github/workflows/audit-4head-v283-closing-odds.yml'
   workflow_dispatch:
 jobs:
   audit:
