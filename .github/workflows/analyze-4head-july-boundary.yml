@@ -1,5 +1,6 @@
 name: head4-july-boundary
-on: [push, workflow_dispatch]
+on:
+  workflow_dispatch:
 jobs:
   analyze:
     runs-on: ubuntu-latest
