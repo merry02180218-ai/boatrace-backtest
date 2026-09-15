@@ -13,6 +13,9 @@ jobs:
           set -o pipefail
           grep -q "END=date(2026,8,31)" analyze_4head_exhibition_original_trainonly.py
           grep -q "September outcome access blocked" analyze_4head_exhibition_original_trainonly.py
+          grep -q "turn_available" analyze_4head_exhibition_original_trainonly.py
+          grep -q "straight_available" analyze_4head_exhibition_original_trainonly.py
+          grep -q "orig_avg_available" analyze_4head_exhibition_original_trainonly.py
           python analyze_4head_exhibition_original_trainonly.py | tee /tmp/run.log
           cp /tmp/run.log /tmp/head4_exhibition/run.log
       - uses: actions/upload-artifact@v4
