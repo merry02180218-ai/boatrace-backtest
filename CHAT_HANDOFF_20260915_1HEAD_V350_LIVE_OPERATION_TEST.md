@@ -140,3 +140,20 @@ Frozen Top15追加候補:
 - September outcomesは一切読まず `SEPTEMBER_OUTCOMES_READ=false` を維持する。
 - 特に `PRE S/A/B → 展示後v351で何R落ちるか` と、B帯が展示後にどの程度残り・改善するかを確認する。
 - 既存production v351の選定・買い目は変更せず、まず監査として実施する。
+
+## PRE S/A/B 閾値監査 完了
+- Run=`34907990351` success / audit Job=`104191450086` success。
+- Artifact=`v352-1head-pre-sab-audit` / ID=`10373284609` / digest=`sha256:aab7ea9084191d31a375a56194274221a5c2d766d8cf735093c386d474dbd325`。
+- Feb-Jun pristine: S `201→51 PASS` (drop 74.63%), HEAD `45/51=88.24%`, EXACT3 `27/51=52.94%`。
+- Feb-Jun pristine: A `261→60 PASS` (drop 77.01%), HEAD `49/60=81.67%`, EXACT3 `26/60=43.33%`。
+- Feb-Jun pristine: B `439→109 PASS` (drop 75.17%), HEAD `99/109=90.83%`, EXACT3 `54/109=49.54%`。
+- 全S/A/B `1114→276 PASS / HEAD241 / EXACT3 131`。直前判定で概ね75%を落とす。
+- Bは直前v351を通過した後のHEAD/EXACT3が強く、PRE段階で除外する根拠はない。
+- `SEPTEMBER_OUTCOMES_READ=false`、Jul-Aug=`NON_PRISTINE_SUPPORT_ONLY`、production v351自体は変更なし。
+
+## S/A/B 閾値方式 実運用実装 作業開始
+- ユーザー承認により、PRE固定Top15方式を廃止し、`S>=.82 / A=.80-.82 / B=.78-.80 / <.78対象外` の閾値方式へ変更する。
+- 全場をPREスコアした後、順位数ではなく `legacy_pre_p>=.78` の全レースを候補として固定し、各候補へ `pre_class=S/A/B` を付与する。
+- S/A/Bの全候補を展示後の正式production v351判定へ送り、最終PASSのみ3連単3点の購入候補とする。
+- 2026-09-15は結果・着順・払戻を読まず、同じresult-blind入力で閾値方式PREを再実行する。
+- `SEPTEMBER_OUTCOMES_READ=false` を維持し、候補は結果を見て差し替えない。
