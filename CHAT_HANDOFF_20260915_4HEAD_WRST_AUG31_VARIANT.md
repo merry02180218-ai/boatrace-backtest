@@ -135,3 +135,17 @@ Status: `HEAD4_86R_INDEPENDENT_AUDIT_STARTED`
 4. September 2026 outcomesは引き続き `UNREAD`。
 
 Status: `HEAD4_86R_INDEPENDENT_AUDIT_COMPLETE`
+
+## BEFORE — v283 締切時オッズ retrospective diagnostic
+ユーザー明示許可: 「締切時オッズでいいよ、検証なんだから」。したがって、従来の formal prospective ROI 監査とは明確に分離し、Apr-Aug の **retrospective diagnostic** として締切時3連単オッズを使用してよい。
+
+これからやること:
+1. 86R/78R候補の母集団・固定条件は一切変更しない。
+2. frozen v283 (`PLAYER_START` SECOND + `COND_BASE` conditional THIRD, `TOP2XTOP2`, alpha2=.60, Top4=4点) を正規ロジックで過去レースへ再現する。v96代用は禁止。
+3. 利用可能な `official_closing` / 締切時3連単オッズを各v283買い目へ結合し、coverageを明示する。
+4. Apr, May, Jun, Jul, Aug および Apr-Jun / Jul-Aug / Apr-Aug 合計について、対象R、coverage、的中R、stake、payout、profit、ROIを計算する。
+5. この値は retrospective diagnostic と明記し、formal prospective ROIとは混同しない。
+6. September 2026 outcomesは引き続き `UNREAD`。production `HEAD4_V291_COMP7` は変更しない。
+7. 実装→fresh Actions Run→Job/Artifact/ログ確認→AFTER追記まで行う。
+
+Status: `HEAD4_V283_CLOSING_ODDS_DIAGNOSTIC_STARTED`
