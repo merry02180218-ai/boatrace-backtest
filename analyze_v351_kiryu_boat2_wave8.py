@@ -23,7 +23,7 @@ def main():
     for boat in range(2,7):
      if boat in ex and boat in ss:
       o=os.get(boat,{})
-      feat[(code,boat)]={'ex':ex[boat],'st':ss[boat],'half':o.get('half',np.nan),'turn':o.get('turn',np.nan),'straight':o.get('straight',np.nan),'orig_avg':o.get('avg',np.nan)}
+      feat[(code,boat)]={'ex':ex[boat],'st':ss[boat],'half':o.get('lap',np.nan),'turn':o.get('turn',np.nan),'straight':o.get('straight',np.nan),'orig_avg':o.get('avg',np.nan)}
   v326.update_st(sr,sums,allv);d+=timedelta(days=1)
  out=[]
  for _,r in b.iterrows():
