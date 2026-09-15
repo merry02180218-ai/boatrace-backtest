@@ -26,15 +26,14 @@ v29 used ONE shared robust four-of-six similarity-camera state instead of six le
 File `track_exhibition_boats_v30.py`.
 Implementation commit `6e406352bf8a28876c61ad67e42b4621657c13e8`.
 Workflow `.github/workflows/regress-exhibition-seed17-track30.yml`, creation commit `62ad92bd13d617ded98dd0c2c1c59df515246085`.
-Explicit trigger commit `f26f5abd0331df306df2db86651e85519c28a9ef`.
-At this handoff write the GitHub run had not yet appeared in the API; first next action is to resolve the v30 run ID/status and do NOT create a duplicate if queued/running.
+First explicit trigger commit `f26f5abd0331df306df2db86651e85519c28a9ef` produced no discoverable Actions run after propagation. Per the previous restart instruction, one harmless retrigger edit was made exactly once: commit `bac262422a2b0de69bbc9d09845dcdd9f2b78ea3` at 2026-09-15 00:13Z. No tracker logic, thresholds, result access, or sample configuration changed. Immediately after the retrigger, no v30 run was yet discoverable in the Actions run list; do not make another trigger-only edit until GitHub propagation/runner state is checked on the next cycle.
 
 ### v30 design
 v29 showed shared state is not enough if camera representation remains similarity-only. The six boats span a large y range in an oblique camera, so first-order perspective can appear as anisotropic scale/shear. v30 changes ONLY shared camera representation to affine. It enumerates C(6,3)=20 exact three-boat affine fits, selects by 4th-smallest six-boat residual then mean of four best, applies one shared transform to all six, and retains unchanged 24 px/native-frame residual, 20 acceleration, 42 absolute, reverse corridor, NCC, appearance bank, fleet geometry, v25 proposal reachability and fail-closed behavior. No future frame/result/special case/threshold relaxation.
 
 ## Exact restart point
-1. Find v30 run created by trigger `f26f5abd0331df306df2db86651e85519c28a9ef`; if missing after GitHub propagation, make one harmless trigger edit only once.
-2. Inspect all four v30 jobs/artifacts, not workflow status alone. Preserve Kiryu3/6 blindness.
+1. Resolve whether retrigger commit `bac262422a2b0de69bbc9d09845dcdd9f2b78ea3` created the v30 matrix after propagation. Do not make another duplicate trigger-only edit. If still absent, diagnose workflow registration/Actions trigger state rather than repeatedly touching code.
+2. Once a v30 run exists, inspect all four jobs/artifacts, not workflow status alone. Preserve Kiryu3/6 blindness.
 3. Record dead-frame depth, residual/acceleration rejection counts, +0.5/+1.0/+1.5 centers, on-frame/identity sanity and FastClip+seed+tracker latency.
 4. Compare v30 against v29/v28. A win must be physically sane and improve feasibility without widening any gate.
 5. If v30 still fails, do not widen 24/20 caps. The next principled direction is to stop forcing every candidate through a single instantaneous global camera transform and instead carry a low-dimensional camera-motion state temporally in the beam (camera parameter velocity/acceleration), or derive background-feature camera motion independently from boat hypotheses.
