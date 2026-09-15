@@ -1,0 +1,28 @@
+{
+  "wave": "54-broad-q50-head-refinement",
+  "source": {"run_id": 34754875342, "artifact_id": 10317157868, "v288_exclusion": 94},
+  "base_pool": {"definition": "Wave53 Q50 motor2>=+0.1 and motor3>=0.0 + p3>=0.20, outside Wave36 p3>=0.365448", "races": 300, "head_hits": 87, "head_rate": 0.29},
+  "method": "Reproduce Wave36 p3 with February-trained shrinkage LDA and exact 63 static pre-deadline features; use February-derived quantile cuts for boat3 player strength and ST environment; inspect 180-230R region and chronological early/late halves. March outcomes used only for diagnostic evaluation, not production promotion.",
+  "best_around_200_single": {"rule": "boat3 national2 minus boat1 national2 >= +9.8pt (February Q80 cut)", "races": 210, "head_hits": 71, "head_rate": 0.3380952381, "early": {"races":104,"head_hits":36,"head_rate":0.3461538462}, "late": {"races":106,"head_hits":35,"head_rate":0.3301886792}},
+  "other_single_slices": [
+    {"rule":"boat3 national win >= 5.68 (February Q60)","races":207,"head_hits":68,"head_rate":0.3285024155,"early_rate":0.3333333333,"late_rate":0.3229166667},
+    {"rule":"boat3 national3 >= 56.6 (February Q60)","races":200,"head_hits":65,"head_rate":0.325,"early_rate":0.3425925926,"late_rate":0.3043478261},
+    {"rule":"boat1 avg ST <= 0.17", "races":191,"head_hits":61,"head_rate":0.3193717277,"early_rate":0.3061224490,"late_rate":0.3333333333}
+  ],
+  "best_pair_180_220": {"rule":"boat3 national2 >= 23.8 (February Q25) AND boat1 avg ST <= 0.17", "races":183,"head_hits":61,"head_rate":0.3333333333,"early":{"races":95,"head_hits":30,"head_rate":0.3157894737},"late":{"races":88,"head_hits":31,"head_rate":0.3522727273}},
+  "known_wave52_strict_cuts_on_300": [
+    {"rule":"boat3 national win >= 6.18","races":138,"head_hits":45,"head_rate":0.3260869565},
+    {"rule":"boat3 national2 >= 43.5","races":148,"head_hits":48,"head_rate":0.3243243243},
+    {"rule":"boat3 national3 >= 61.4","races":147,"head_hits":43,"head_rate":0.2925170068},
+    {"rule":"boat1 avg ST <= 0.16","races":129,"head_hits":41,"head_rate":0.3178294574},
+    {"rule":"boat2 avg ST <= 0.16","races":145,"head_hits":44,"head_rate":0.3034482759}
+  ],
+  "conclusion": "The target improves materially from 29.0% to 33.81% while retaining 210R, but the tested frozen February-derived player/ST refinements do not reach 35% at roughly 200R. The strongest volume-preserving signal is boat3-vs-boat1 national 2-place-rate gap >= +9.8pt. Early/late stability is good (34.62% / 33.02%). Keep as diagnostic research hypothesis; no production adoption.",
+  "status": "DIAGNOSTIC_ONLY_WAVE54_33P81_AT_210R_NO_PRISTINE_VALIDATION",
+  "jul_aug_used": false,
+  "september_outcomes_read": false,
+  "production_changed": false,
+  "new_actions_run": null,
+  "new_actions_job": null,
+  "new_actions_artifact": null
+}
