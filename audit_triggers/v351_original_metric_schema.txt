@@ -1,3 +1,3 @@
-2026-09-15T18:52:00+09:00
-schema-correct rebuild via existing proven original-metric workflow
-run 2
+2026-09-15T19:05:00+09:00
+schema-correct cohort comparison old-vs-recovered
+run 3
