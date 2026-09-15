@@ -31,5 +31,10 @@
 - Record feature counts, eligible/readiness counts, February fold metrics, frozen choice, March 3-ticket hits/stake/return/ROI, deterministic output hash, Run/Job/Artifact IDs, and conclusion.
 - Production v288 remains unchanged.
 
+## IMPLEMENTATION CORRECTION BEFORE FIRST VALID FREEZE
+- Run 34992010310 / Job 104458764351 / Artifact 10405946917 executed, but its February counts were 489 heads for A and 394 common-ready heads for B/C. This violates the canonical February baseline of 478 heads and does not compare A/B/C on the same ready universe. Therefore its frozen winner B is INVALID and must not be used for March.
+- Before any March settlement read, repair v5 to copy canonical eligibility/exclusion/source preparation from `research/rebuild_3head_opponent_v1.py`, require A/B/C comparison on one identical common-ready February universe, compute global OOF top3 capture plus fold metrics, and compute venue original `avg` readiness directly rather than `any(metric)`.
+- Re-run February only after the repair. Only the repaired run may freeze A/B/C. September outcomes remain UNREAD; production v288 unchanged.
+
 ## Exact restart point
-- Implement and run v5 venue-aware exhibition comparison, then write AFTER result and next restart point.
+- Repair v5 canonical eligibility/common-ready comparison, run a fresh February-only freeze, then and only then run one frozen March diagnostic and write AFTER result.
