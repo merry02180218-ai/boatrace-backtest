@@ -1,3 +1,4 @@
+# trigger: 2026-09-15 retrospective phase A
 name: audit-1head-v351-retrospective-20260915
 on:
   workflow_dispatch:
@@ -52,7 +53,6 @@ jobs:
             TRAIN=$(find /tmp/cache -name v351_exhibition_train.csv -print -quit); test -n "$TRAIN"
             DST="$(dirname "$BASE")/v351_exhibition_train.csv"
             if [ "$(readlink -f "$TRAIN")" != "$(readlink -f "$DST")" ]; then cp "$TRAIN" "$DST"; fi
-            # Historical replay: only bypass the wall-clock deadline guard. Data URL remains 20260915/race-specific.
             python probe_1head_v351_boatcast_exhibition.py --date 20260915 --jcd "$JCD" --race "$RACE" --deadline-jst '2099-01-01T00:00:00+09:00' > "out/exhibition_$CODE.json"
             CUTOFF=$(python -c "import json;print(json.load(open('$BASE'))['training_cutoff'])")
             python run_1head_v351_live_exhibition_gate.py --probe "out/exhibition_$CODE.json" --base "$BASE" --history-cutoff "$CUTOFF" --out "out/gate_$CODE.json"
