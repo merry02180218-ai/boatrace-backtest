@@ -26,7 +26,15 @@
 - schema定義は結果列を見ずに固定する。
 - 実装 `audit_v351_schema_correct_rebuild.py` は commit 991c15b767dd6cfd8e7cac49ac328669b353f999。
 
-## 2026-09-15 再開作業（実行経路修正）
-- 新規schema-correct workflowの登録に固執せず、Run 34948892215で実績のある `audit-v351-original-metric-schema.yml` を一時的にschema-correct rebuild実行へ切替える。
-- 同じ既存trigger `audit_triggers/v351_original_metric_schema.txt` を更新して確実にActionsを起動する。
-- Run/Job/Artifactと345R診断結果を確認後、このhandoffへ結果と次の再開地点を追記する。
+## schema-correct実行結果
+- Run 34955007753 / Job 104334834599: success。
+- Artifact 10390973051 `audit-v351-schema-correct-rebuild`。
+- TOTAL 345 / SCHEMA_READY 288 / OLD_MODEL_READY 237。
+- OOF_SCORED 195、HEAD 162、HEAD_RATE 83.08%。cutoff 0.78 は148R中123頭=83.11%、exact3 58=39.19%。
+
+## 次作業：母集団差分比較
+- ユーザー指示により、schema-correctで精度が下がって見える原因を分解する。
+- 同一schema-correctスコアを用い、旧model_ready群、新たに復活した群、全schema_ready群を分けてcutoff 0.78のHEAD/exact3を比較する。
+- 徳山18・尼崎13・住之江12を個別集計する。
+- 旧237Rと新51Rというready母集団の差だけでなく、OOF scoreが存在する行数も明示し、分母の混同を避ける。
+- 結果確認後、Run/Job/Artifact ID、結論、次の再開地点を追記する。
