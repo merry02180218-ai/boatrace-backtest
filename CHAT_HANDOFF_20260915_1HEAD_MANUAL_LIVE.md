@@ -55,3 +55,10 @@
 2. 03:00時点でrolling source未準備ならsource生成をdaily workflowへ内包。
 3. daily Artifact成功後、実在race requestで高速LIVEを実測し、request commitからBUY/DROP Artifactまでの秒数を記録。
 4. PRE候補一覧に締切時刻を確実に付与し、締切順表示を完成させる。
+
+## 復活51R 閾値再監査 — 作業前記録
+- schema-correct rebuildで `RECOVERED_ONLY READY=51 / OOF=18 / cutoff0.78=9R / 頭4R=44.44%` だった群を対象に、閾値を0.78固定ではなく再探索する。
+- 同一chronological OOFのスコアを使い、51R群だけについて複数cutoffで「対象R数・頭数・頭率・exact3数・exact3率」を比較する。
+- 小標本なので、単純な最高率だけでなく最低母数も併記し、productionへ勝手に反映しない。
+- 徳山・尼崎等の場偏りが閾値上昇でどう変わるかも確認する。
+- September 2026結果は研究入力として読まず、既存の監査用chronological OOF範囲だけを使用する。
