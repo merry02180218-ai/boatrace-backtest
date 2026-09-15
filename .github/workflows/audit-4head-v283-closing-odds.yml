@@ -1,0 +1,26 @@
+name: audit-4head-v283-closing-odds
+on:
+  push:
+    paths:
+      - 'audit_4head_86r_v283_closing_odds.py'
+      - '.github/workflows/audit-4head-v283-closing-odds.yml'
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - run: pip install -r requirements.txt
+      - name: Run retrospective closing odds diagnostic
+        run: python audit_4head_86r_v283_closing_odds.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-v283-closing-odds-diagnostic
+          path: /tmp/head4_v283_closing/
+          if-no-files-found: warn
