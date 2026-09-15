@@ -1,0 +1,30 @@
+name: audit-v351-dedicated-schema-head
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'audit_v351_dedicated_schema_head.py'
+      - '.github/workflows/audit-v351-dedicated-schema-head.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4
+      - name: Rebuild schema dataset
+        run: python audit_v351_schema_correct_rebuild.py | tee schema_rebuild.txt
+      - name: Dedicated schema HEAD OOF sweep
+        run: python audit_v351_dedicated_schema_head.py | tee dedicated_schema_head.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audit-v351-dedicated-schema-head
+          path: |
+            analysis_v351_schema_correct_rebuild.csv
+            analysis_v351_schema_map.csv
+            analysis_v351_dedicated_*.csv
+            schema_rebuild.txt
+            dedicated_schema_head.txt
