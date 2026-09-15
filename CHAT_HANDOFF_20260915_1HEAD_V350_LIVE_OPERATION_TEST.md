@@ -27,21 +27,17 @@
 - benchmark Run=`34927249888` success / Job=`104247789036` / Artifact=`10380650284`。
 - 20,000 iterations mean=`0.026297ms`, p95=`0.027051ms`。
 
-## September rolling監査 2026-09-15
-- rolling PRE Run=`34928773352` はsuccessしたが、Job logを再監査すると `training_max_date=2026-08-31`, `SEPTEMBER_OUTCOMES_READ=false`, `september_training_rows=0` だった。
-- 原因は `analyze_v108_1head_preselection_training.csv` 自体に2026-09のfeature/outcome rowが存在しないこと。従って前回の「September rolling対応」という表現は実データ上は未成立。
-- HEAD v308 / SECOND v317 / THIRD v318の既存cacheもSep feature/outcome rowを持たないため、結果ラベルだけ追加しても再学習できない。
-- 安全修正として `.github/workflows/v350-1head-live-operation-20260915.yml` を更新し、target>=9/2なのにSeptember training rowが0なら `SEPTEMBER_ROLLING_SOURCE_MISSING` でfail-closeするようにした。現行workflow SHA=`8f648cb971d31a950da8a7d63b9aeb2d7f658158`。
-- これにより「9月を学習した」と偽ってAug-onlyモデルを実運用する経路は閉じた。
+## September rolling source — PASS
+- builder=`build_1head_september_training_source.py` commit=`5910d1ed9399f13db246d88b32d0165f1273a864`。
+- workflow fix commit=`fc9ad45e30196ac9309be8278896379bb7158adc`。
+- Run=`34929791569` success / Job=`104255445743` / Artifact ID=`10381361732` / digest=`sha256:7664595fa4c125dace2a0490d6c14aa5d7c6948570f877d8355a3164ceec46e8`。
+- 2026-09-01〜09-14 feature_rows=2131 / valid_result_rows=2118 / head_hits=1161。
+- training_max_date=`2026-09-14`、same_day_outcomes_read=false、target_or_future_rows=0、chronology_guard=true。
 
-## 残る唯一のブロッカー
-- 9/1〜target前日のPRE feature + outcomeを、当時利用可能だった入力だけで再構築するSeptember training-source builderが必要。
-- そのsourceを作った後、v308/v317/v318とv332 exhibition trainingをprior-day cutoffで再fitし、shared cacheへ保存してwatcher E2Eを通す。
-- 同日結果は確定時刻を証明できない限り不使用。target/未来raceは不使用。
-
-## 作業開始 2026-09-15 — September training-source rebuild
-- ユーザー指示「お願いします」を受けて続行。
-- まず既存PRE training CSVの生成元・9月の日別PRE入力/結果取得コード・v308/v317/v318学習列を特定する。
-- 9/1〜9/14を日単位で再構築し、各target dayでは前日までだけを学習に使う。target自身/未来raceは混入させない。
-- source builder→rolling model cache→watcher E2Eの順に実装・CI確認する。
-- 作業完了後にcommit / Run / Job / Artifact / 実測時間 / 残課題を追記する。
+## 作業開始 2026-09-15 — rolling model wiring
+- ユーザー指示「続けて」。
+- September sourceが実データでPASSしたので、次はv308 HEAD / v317 SECOND / v318 THIRD / v332 exhibition trainingへprior-day September rowsを接続する。
+- historical production sentinelは変更しない。LIVE shared cacheだけをrolling化する。
+- target自身/未来raceは不使用。同日結果も不使用。
+- rolling model cacheを生成し、watcherの展示→正式gate→v351 finalizer→immutable PASS/DROP/3点までE2E CIを通す。
+- 完了後にcommit / Run / Job / Artifact / timingを追記する。
