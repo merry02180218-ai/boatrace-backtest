@@ -1,5 +1,5 @@
 name: regress exhibition seed17 tracker33 initial translation camera
-run-name: SES v33 initial robust-translation + later affine matrix
+run-name: SES v33 matrix + live wrapper validation
 
 on:
   workflow_dispatch:
@@ -9,6 +9,7 @@ on:
       - 'track_exhibition_boats_v25.py'
       - 'track_exhibition_boats_v31.py'
       - 'track_exhibition_boats_v33.py'
+      - 'run_exhibition_ses_live_local.py'
       - 'CHAT_HANDOFF_20260912_SES_AUTORESEARCH.md'
       - '.github/workflows/regress-exhibition-seed17-track27.yml'
 
@@ -80,4 +81,32 @@ jobs:
             auto_seed_meta_v17.json
             auto_seeds_v17.json
             exhibition_tracking_v33.json
+          if-no-files-found: warn
+
+  live-wrapper:
+    runs-on: [self-hosted, Windows, X64]
+    timeout-minutes: 20
+    env:
+      LOCAL_PYTHON: 'C:\Users\merry\AppData\Local\Programs\Python\Python311\python.exe'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run production-style wrapper on varied-entry sample
+        shell: powershell
+        run: |
+          $sw=[Diagnostics.Stopwatch]::StartNew()
+          & $env:LOCAL_PYTHON run_exhibition_ses_live_local.py --date 20260909 --stadium 01kiryu --race 12 --entry-order '1,2,4,5,6,3' --out-dir live_validation
+          $code=$LASTEXITCODE
+          $sw.Stop(); "LIVE_WRAPPER_WALL_SECONDS=$($sw.Elapsed.TotalSeconds)"
+          if ($code -ne 0) { throw 'live wrapper failed closed' }
+      - name: Show live payload
+        if: always()
+        shell: powershell
+        run: |
+          $f=Get-ChildItem -Recurse -Filter live_exhibition_ses.json live_validation -ErrorAction SilentlyContinue | Select-Object -First 1
+          if ($f) { Get-Content $f.FullName -Raw }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ses-live-v17-v33-validation
+          path: live_validation/**
           if-no-files-found: warn
