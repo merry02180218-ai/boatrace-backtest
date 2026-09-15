@@ -53,9 +53,12 @@
 ## schema正式昇格 + 3連単研究 — 作業前記録 2026-09-15
 - ユーザー承認: `turn+straight` 以外を正式production対象へ入れる。
 - 正式対象: `lap+turn+straight`, `lap+turn`, `half+turn+straight`, `base`。`turn+straight` は保留/非production。
-- まず現行v351 production gate/finalizerとschema生成経路を最新GitHubで確認し、schema別HEAD scorer/cutoffをLIVE経路へ安全に統合する。HEAD判定以外の既存条件は無断変更しない。
-- `base` はOOF3Rしかないため、ユーザー承認により正式対象へ含めるが、低標本フラグをコード/監査に残す。
-- 次に3連単相手選びを研究する。HEAD的中レースを母集団として、schema別に2着・3着の取り違え/相手抜けを分解し、現行v351 opponent core (`G2_045/G3_100`) と比較する。
-- 研究候補: 2着/3着別ranking、schema別相手特徴、1-相手2頭の順序、3頭内的中だが順序違い、相手候補外、人気/展示/ST/選手力/攻撃力の寄与。まず原因分解を行い、その後に改善案を時系列OOFで比較する。
-- September 2026結果はUNREAD維持。研究でproduction結果を後読みしない。
-- 作業完了後、production commit・監査Run/Job/Artifact・3連単研究結果・次の再開地点を追記する。
+- `base` はOOF3Rしかないため低標本フラグを維持。
+- 3連単相手選びはHEAD的中レースを母集団として、`EXACT3_HIT / ORDER_MISS / OPPONENT_PAIR_MISS` に分解し、現行 `G2=.45/G3=1.00` の改善箇所を特定する。
+- September 2026結果はUNREAD維持。
+
+## 3連単原因分解 workflow 再発火 — 作業前記録 2026-09-15
+- 初回追加: research commit `13caab319e109080b4fcb89578f9ad90aa817f8c` / workflow commit `ef9821fda7fc5cb01a80cbd53f52997240f60f50`。
+- 初回pushでは目的の `analyze-v351-schema-exact3-errors` が発火していないことを確認済み。別workflowのRunを目的Runと誤認しない。
+- workflowファイルを通常contents APIで安全に更新して明示的にpush再トリガーし、対象workflow名・Run ID・Job IDを確認する。
+- 完走後はArtifactとログを確認し、原因分解結果をhandoffへ追記する。September 2026 UNREAD、production変更なし。
