@@ -109,6 +109,7 @@ Canonical verification:
 
 ### B — baseline + corrected exhibition / ST exhibition
 - 79 features
+- pair rows 7,800
 - OOF hits **143/390**
 - capture **36.66666667%**
 - AUC **0.6840994498**
@@ -116,6 +117,7 @@ Canonical verification:
 
 ### C — B + venue-aware original exhibition
 - 103 features
+- pair rows 7,800
 - OOF hits **135/390**
 - capture **34.61538462%**
 - AUC **0.6863849960**
@@ -129,6 +131,19 @@ Canonical verification:
 
 March結果はこの corrected February freeze の段階では開かない。Aが勝者なので展示追加案をMarchで追試して選択し直す必要はない。
 
+## post-ranking / ticket-rescue 研究 BEFORE — 2026-09-16
+
+これから行うこと:
+- frozen baseline A の OOF ordered-pair score / top3 tickets を固定する。
+- 展示を学習特徴へ再投入しない。
+- February common-ready 390Rだけで、baseline top3から漏れた実着2・3着艇（ordered pair）を展示/ST展示で救えるケースを監査する。
+- 同時に baseline hit を壊す damage を必ず数え、`net_rescue = rescued_miss - broken_hit` を主指標にする。
+- 補正は post-ranking のみ。まず corrected exhibition と corrected ST exhibition の race-relative signal を使い、閾値/重みの小さなgridを February のみで探索する。
+- original exhibition は v5 C が悪化したため初手では使わず、必要なら venue-aware の限定補正として別枝で検証する。
+- tie-break は baseline score を優先し、展示差が明確なときだけ順位を動かす。
+- September 2026 outcomes は読まない。production v288も変更しない。
+- Februaryで正の net rescue が再現できた場合だけ、freezeした1案を March の一発診断へ進める。
+
 ## 次に試す価値がある方向
 
 展示そのものを捨てるのではなく、**学習特徴量として混ぜずに直前の相手順位補正として使う**方向。
@@ -141,12 +156,10 @@ March結果はこの corrected February freeze の段階では開かない。A�
 - 同時に baseline 的中を展示補正で壊すケース数を数え、net rescue が正か確認
 - 閾値は Februaryだけで決め、Marchはfreeze後の一発診断にする
 
-次チャットでは、まず最新GitHubとこのファイルを読み、**展示によるpost-ranking / ticket-rescue補正研究のBEFOREをこの引き継ぎへ追記してから実装**する。
-
 ## 現在の結論
 
 - 展示を直接相手選び特徴量へ追加: REJECT
 - frozen winner: A（従来67特徴）
 - production v288: unchanged
 - September 2026 outcomes: **UNREAD**
-- 次の再開地点: **post-ranking / ticket-rescue exhibition correction のFebruary-only研究設計**
+- 次の再開地点: **post-ranking / ticket-rescue exhibition correction のFebruary-only実装・実行**
