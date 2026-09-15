@@ -5,3 +5,4 @@ retry trigger after build_base fix 2026-09-15
 retry after yaml on-key fix 2026-09-15
 fresh main-SHA trigger after v96/postdeadline fail-closed fix 2026-09-15
 fresh audit continuation trigger 2026-09-15 23:53 JST
+fresh trigger after all-push workflow registration 2026-09-15 23:55 JST
