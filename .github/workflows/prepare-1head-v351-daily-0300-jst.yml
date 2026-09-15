@@ -1,0 +1,64 @@
+name: prepare-1head-v351-daily-0300-jst
+
+on:
+  schedule:
+    - cron: '0 18 * * *' # 03:00 JST
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  prepare-daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q requests beautifulsoup4 lxml numpy pandas scipy 'scikit-learn==1.6.1'
+      - name: Resolve JST date and latest rolling cards
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          DATE=$(TZ=Asia/Tokyo date +%Y%m%d); ISO_DATE=$(TZ=Asia/Tokyo date +%F)
+          echo "DATE=$DATE" >> "$GITHUB_ENV"; echo "ISO_DATE=$ISO_DATE" >> "$GITHUB_ENV"
+          mkdir -p /tmp/pre /tmp/daily
+          PRE_ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-pre-sab-$DATE-rolling&per_page=20" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id // empty')
+          if [ -z "$PRE_ID" ]; then echo "PRE_SOURCE_NOT_READY: rolling race cards for $DATE are not available at 03:00 JST"; exit 30; fi
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$PRE_ID/zip" > /tmp/pre.zip
+          unzip -q /tmp/pre.zip -d /tmp/pre
+          CARDS=$(find /tmp/pre -name race_cards.csv -print -quit); test -n "$CARDS"
+          PRE=$(find /tmp/pre -name '*.csv' -print | grep -E 'pre|candidate|sab' | head -1 || true)
+          echo "CARDS=$CARDS" >> "$GITHUB_ENV"; echo "PRE=$PRE" >> "$GITHUB_ENV"
+      - name: Build causal preparation once
+        run: python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
+      - name: Build all-race v351 cache
+        run: |
+          set -euo pipefail
+          if [ -n "$PRE" ]; then
+            python prepare_1head_v351_live_cache.py --date "$ISO_DATE" --cards "$CARDS" --pre "$PRE" --out /tmp/daily
+          else
+            python prepare_1head_v351_live_cache.py --date "$ISO_DATE" --cards "$CARDS" --out /tmp/daily
+          fi
+      - name: Build PRE candidate summary
+        run: |
+          python - <<'PY'
+          import csv,json,glob,os
+          rows=[]
+          for p in glob.glob('/tmp/daily/20*.json'):
+              x=json.load(open(p)); code=str(x['race_code']).zfill(12)
+              rows.append({'race_code':code,'jcd':int(code[8:10]),'race':int(code[10:12]),'pre_class':x.get('pre_class',''),'head_p':x.get('final_head_p'),'base_tickets':x.get('base_tickets',''),'result_or_payout_used':False,'chronology_guard':True})
+          rows.sort(key=lambda r:(r['jcd'],r['race']))
+          with open('/tmp/daily/pre_candidates.csv','w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=list(rows[0]) if rows else ['race_code','jcd','race','pre_class','head_p','base_tickets','result_or_payout_used','chronology_guard']);w.writeheader();w.writerows(rows)
+          json.dump({'date':os.environ['ISO_DATE'],'candidate_R':len(rows),'result_or_payout_used':False,'chronology_guard':True},open('/tmp/daily/pre_candidates_meta.json','w'),indent=2)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v351-1head-live-cache-${{ env.DATE }}
+          retention-days: 3
+          if-no-files-found: error
+          path: /tmp/daily/
