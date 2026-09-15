@@ -12,14 +12,14 @@ permissions:
 jobs:
   live-request:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 4
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: '3.11'}
       - run: pip install -q requests beautifulsoup4 numpy pandas scipy scikit-learn
 
-      - name: Resolve request and causal base
+      - name: Resolve request from prepared daily base
         env:
           GH_TOKEN: '${{ github.token }}'
         run: |
@@ -30,19 +30,14 @@ jobs:
           echo "RACE_CODE=$RACE_CODE" >> "$GITHUB_ENV"; echo "DATE=$DATE" >> "$GITHUB_ENV"; echo "JCD=$JCD" >> "$GITHUB_ENV"; echo "RACE=$RACE" >> "$GITHUB_ENV"
           mkdir -p /tmp/cache
           CACHE_ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-cache-$DATE&per_page=20" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id // empty')
-          if [ -n "$CACHE_ID" ]; then gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$CACHE_ID/zip" > /tmp/cache.zip; unzip -q /tmp/cache.zip -d /tmp/cache; fi
+          if [ -z "$CACHE_ID" ]; then echo "BASE_NOT_READY: daily v351 cache artifact missing for $DATE"; exit 20; fi
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$CACHE_ID/zip" > /tmp/cache.zip
+          unzip -q /tmp/cache.zip -d /tmp/cache
           BASE=$(find /tmp/cache -name "$RACE_CODE.json" -print -quit)
-          if [ -z "$BASE" ]; then
-            PRE_ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-pre-sab-$DATE-rolling&per_page=20" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id // empty')
-            test -n "$PRE_ID"
-            gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$PRE_ID/zip" > /tmp/pre.zip; mkdir -p /tmp/pre; unzip -q /tmp/pre.zip -d /tmp/pre
-            CARDS=$(find /tmp/pre -name race_cards.csv -print -quit); test -n "$CARDS"
-            python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
-            python prepare_1head_v351_live_cache.py --date "${DATE:0:4}-${DATE:4:2}-${DATE:6:2}" --cards "$CARDS" --race-code "$RACE_CODE" --out /tmp/on-demand
-            BASE=/tmp/on-demand/$RACE_CODE.json; test -f "$BASE"
-            cp /tmp/on-demand/v351_exhibition_train.csv /tmp/cache/v351_exhibition_train.csv
-          fi
-          echo "BASE=$BASE" >> "$GITHUB_ENV"
+          if [ -z "$BASE" ]; then echo "BASE_NOT_READY: $RACE_CODE missing from prepared daily cache"; exit 21; fi
+          TRAIN=$(find /tmp/cache -name v351_exhibition_train.csv -print -quit)
+          if [ -z "$TRAIN" ]; then echo "BASE_NOT_READY: v351_exhibition_train.csv missing"; exit 22; fi
+          echo "BASE=$BASE" >> "$GITHUB_ENV"; echo "TRAIN=$TRAIN" >> "$GITHUB_ENV"
 
       - name: Deadline exhibition and v351 final
         run: |
@@ -52,12 +47,11 @@ jobs:
           MODE=$(python -c "import json;print(json.load(open('window_$RACE_CODE.json'))['mode'])")
           test "$MODE" != EXPIRED
           READY=0
-          for i in $(seq 1 8); do
+          for i in $(seq 1 4); do
             if python probe_1head_v351_boatcast_exhibition.py --date "$DATE" --jcd "$JCD" --race "$RACE" --deadline-jst "$DL" > "exhibition_$RACE_CODE.json" 2> "exhibition_error_$RACE_CODE.txt"; then READY=1; break; fi
-            sleep 15
+            sleep 10
           done
           test "$READY" = 1
-          TRAIN=$(find /tmp/cache -name v351_exhibition_train.csv -print -quit); test -n "$TRAIN"
           TRAIN_DST="$(dirname "$BASE")/v351_exhibition_train.csv"; [ "$(readlink -f "$TRAIN")" = "$(readlink -f "$TRAIN_DST")" ] || cp "$TRAIN" "$TRAIN_DST"
           CUTOFF=$(python -c "import json;print(json.load(open('$BASE'))['training_cutoff'])")
           python run_1head_v351_live_exhibition_gate.py --probe "exhibition_$RACE_CODE.json" --base "$BASE" --history-cutoff "$CUTOFF" --out "gate_$RACE_CODE.json"
