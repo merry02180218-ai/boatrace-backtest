@@ -2,7 +2,6 @@ name: audit-4head-86r-independent
 
 on:
   workflow_dispatch:
-  push:
 
 jobs:
   audit:
