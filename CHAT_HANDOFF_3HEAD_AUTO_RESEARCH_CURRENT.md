@@ -2,29 +2,37 @@
 
 ## Policy / non-negotiables
 - Active branch: `research/3head-player-attack-mode`. Latest GitHub wins over old chats/memory.
-- Production remains v288: 94R/52 hits/ROI172.560638%. Research does not change production.
+- Production remains **v288: 94R/52 hits/ROI172.560638%**. Research does not change production.
 - Inputs pre-deadline only; realized 決まり手 never input. Exact v288 94-race exclusion preserved.
-- Jul/Aug NON-PRISTINE. September 2026 outcomes UNREAD and must remain UNREAD.
+- Jul/Aug NON-PRISTINE. September 2026 outcomes **UNREAD** and must remain UNREAD.
 
-## Frozen research record before audit
-- Wave54 March population: 210R/71 heads.
-- Wave55 recorded: 27/71, ROI106.8889%.
-- Wave57 recorded: 29/71, ROI117.6349%, Feb grouped-CV AUC .704/top3 41.6%.
-- Wave58 previously declared Wave57 frozen.
+## Reproducible head layer
+- Wave54 March population remains **210R /71 heads =33.8095%**.
 
-## REPRODUCIBILITY ISSUE DISCOVERED
-- During requested monthly aggregation, rebuilding the opponent model from the prose/JSON specification did NOT reproduce recorded Wave57 March result: independent reconstruction produced 25 hits / ROI99.73%, not 29 /117.63%.
-- Therefore the prior Wave57/Wave58 performance claims are not considered independently verified until exact executable reproduction succeeds.
+## Wave57/Wave58 REPRODUCIBILITY AUDIT — FAILED
+### BEFORE commit
+- `2f19697c95e36d4e0bc64726a06710ff308e4660`.
 
-## BEFORE WORK — Wave57 reproducibility audit (2026-09-15)
-- Audit GitHub history/results/source and reconstruct the exact executable Wave57 pipeline.
-- Do not read September outcomes.
-- Determine whether recorded 29/71 and ¥74,110 return can be reproduced from fixed source Artifact10317157868 using only February training and frozen March candidate population.
-- Check feature definitions, pair-row construction, labels, preprocessing/imputation/scaling, grouped-CV procedure, regularization, class weighting, tie/order handling, payout settlement, and any hidden/default implementation choices.
-- If exact original implementation cannot be recovered, mark Wave57 and Wave58 historical numerical claims UNVERIFIED rather than inventing missing choices.
-- Create a reproducible audit script/specification in GitHub only if it is backed by actual reconstruction; record hashes/counts and exact output.
-- Do not tune choices to force 29 hits using March labels.
-- Production v288 unchanged; September UNREAD.
+### Audit finding
+- Wave57 commit `e2803294d68cb7fe5cf849651febb35595f370bf` added only `research_v289_3head_wave57_pair_interaction_result.json`; **no executable Wave57 implementation or ticket-level output was committed**.
+- Wave58 commit `2eded90296f0f04f3a20fb4362adaae2de999456` likewise added only a result JSON; **no executable robustness-audit implementation was committed**.
+- No new Actions run/job/artifact exists for Wave57/58; both claimed reuse of Run34754875342 / Artifact10317157868.
+- The result JSON describes feature families but does not specify exact feature formulas/columns, preprocessing order, pair-label construction, GroupKFold details, logistic solver/random state/encoding, tie-breaking, ticket list, or settlement implementation.
+- Independent reconstruction from the documented prose produced March **25 hits / ROI99.73%**, not the claimed **29 hits / ROI117.6349%**.
+- It would be invalid to search implementation choices against March labels merely to force the historical 29-hit number.
+
+### Canonical conclusion
+- **Wave57 29/71 / ROI117.6349% is UNVERIFIED and is no longer a frozen research leader.**
+- **Wave58 robustness metrics are also UNVERIFIED**, because they depend on the unreproducible Wave57 implementation and themselves have no executable audit code.
+- Revoke prior status `FREEZE_WAVE57_OPPONENT_SPEC_PENDING_PRISTINE_FUTURE_VALIDATION`.
+- Audit result file `research_v289_3head_wave57_reproducibility_audit.json`.
+- Audit result commit `b5f892dc003af1ff6f7af9579a7eff34e4f18f87`.
+- Production v288 unchanged. September outcomes remain UNREAD.
+
+## What remains usable
+- Wave54 head-population result 210R/71 remains the current reproduced head-layer research base.
+- Do not use the prior monthly ROI table as canonical Wave57 performance; it came from an independent reconstruction and was explicitly not the recorded Wave57 implementation.
+- Opponent layer must be rebuilt as a **fully executable deterministic implementation** with code, exact feature list/formulas, model parameters, ticket-level output and result hash committed together.
 
 ## Exact restart point
-- Complete reproducibility audit first. No further Wave57 tuning or future-validation claim until audit status is resolved.
+- Build a new reproducible opponent experiment from the Wave54 210R/71 base. Freeze its implementation before March settlement, preferably select using February-only grouped CV. Commit executable code + deterministic ticket output + summary in the same research step. Do not attempt to recover 29 hits by March tuning. September UNREAD; production v288 unchanged.
