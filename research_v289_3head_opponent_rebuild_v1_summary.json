@@ -1,0 +1,19 @@
+{
+  "wave54_races": 210,
+  "heads": 71,
+  "train_head_races": 478,
+  "train_pair_rows": 9560,
+  "features": 67,
+  "hits": 25,
+  "stake_yen": 63000,
+  "return_yen": 62830.0,
+  "roi_pct": 99.73015873015873,
+  "ticket_sha256": "6d35377b76be2b403fd7ccaa466374666452d3404cd0fae2752f640396b35897",
+  "script_sha256_local_audit": "e8113a0b176f4988e33d633aa2a290d73fd877a5d4a00fd79ce50945ea55c079",
+  "double_run_identical": true,
+  "model": "median+standardscale+LogisticRegression(C=1,class_weight=balanced,solver=liblinear,max_iter=2000,random_state=0)",
+  "tie_break": "score desc, second asc, third asc",
+  "selection_note": "Specification fixed without using March outcome to optimize. This v1 is a reproducibility baseline, not an optimized successor.",
+  "september_outcomes_read": false,
+  "production_changed": false
+}
