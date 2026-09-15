@@ -29,6 +29,8 @@ jobs:
         run: python research_v351_one_replace_wave4.py | tee one_replace_wave4.txt
       - name: Analyze Wave5 rescue vs damage
         run: python analyze_v351_one_replace_wave5.py | tee one_replace_wave5.txt
+      - name: Analyze Wave6 venue effect
+        run: python analyze_v351_one_replace_wave6_venue.py | tee one_replace_wave6.txt
       - uses: actions/upload-artifact@v4
         with:
           name: audit-v351-exact3-via-monthly
@@ -47,6 +49,9 @@ jobs:
             analysis_v351_one_replace_wave4_summary.csv
             analysis_v351_one_replace_wave5_cases.csv
             analysis_v351_one_replace_wave5_guard_summary.csv
+            analysis_v351_one_replace_wave6_venue_summary.csv
+            analysis_v351_one_replace_wave6_lts_venue_summary.csv
+            analysis_v351_one_replace_wave6_focus.csv
             schema_rebuild.txt
             dedicated_schema_head.txt
             schema_exact3_errors.txt
@@ -54,3 +59,4 @@ jobs:
             g2g3_pair_wave3.txt
             one_replace_wave4.txt
             one_replace_wave5.txt
+            one_replace_wave6.txt
