@@ -1,5 +1,6 @@
 name: auto-live-1head-v351-exhibition-20260915
 on:
+  schedule: [{cron: '*/5 * 15 9 *'}]
   workflow_dispatch:
   push:
     paths:
@@ -8,6 +9,7 @@ on:
       - 'run_1head_v351_live_exhibition_gate.py'
       - 'probe_1head_v351_boatcast_exhibition.py'
 permissions: {contents: read, actions: read}
+# The 5-minute schedule is watchdog/restart insurance only. Near-deadline polling happens inside the controller.
 concurrency:
   group: v351-live-controller-20260915
   cancel-in-progress: false
@@ -40,7 +42,7 @@ jobs:
         run: |
           set -euo pipefail
           python - <<'PY' > /tmp/candidates.tsv
-          import csv,subprocess,json
+          import csv,subprocess
           rows=[]
           with open('/tmp/pre_candidates.csv',encoding='utf-8-sig',newline='') as f:
             for x in csv.DictReader(f):
@@ -80,7 +82,6 @@ jobs:
           b=json.load(open(sys.argv[1]));g=json.load(open(sys.argv[2]));w=json.load(open(sys.argv[3]));b.update(g);b.update({'exhibition_ready':True,'deadline_jst':w['deadline_jst'],'minutes_to_deadline':w['remaining_minutes'],'evaluated_at_jst':datetime.now(timezone(timedelta(hours=9))).isoformat(),'result_or_payout_used':False,'chronology_guard':True});json.dump(b,open(sys.argv[4],'w'),ensure_ascii=False,indent=2)
           PY2
                 python run_1head_v351_live_finalize.py --input "final_input_$CODE.json" --out "live_v351_final_$CODE.json"
-                gh api --method POST "/repos/$GITHUB_REPOSITORY/actions/artifacts" >/dev/null 2>&1 || true
                 break
               fi
               if [ "$MODE" = "FINAL5" ]; then
