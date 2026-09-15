@@ -92,4 +92,4 @@ def main():
     finally:_annotate(_out(sys.argv))
     print(json.dumps({"v30_diagnostic":DIAG30},ensure_ascii=False)); raise SystemExit(code)
 if __name__=="__main__":main()
-# Regression trigger: unchanged four-video result-blind technical matrix.
+# Regression retrigger: unchanged four-video result-blind technical matrix after first trigger produced no Actions run.
