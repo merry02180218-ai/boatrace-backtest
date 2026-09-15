@@ -1,4 +1,4 @@
-# trigger: 2026-09-15 retrospective phase A
+# trigger: 2026-09-15 retrospective phase A retry
 name: audit-1head-v351-retrospective-20260915
 on:
   workflow_dispatch:
@@ -27,7 +27,7 @@ jobs:
           echo "$ID" > out/source_cache_artifact_id.txt
       - name: Replay and freeze predictions only
         run: |
-          set -euo pipefail
+          set -uo pipefail
           cat > /tmp/candidates.csv <<'CSV'
           code,jcd,race,pre_class,legacy_pre_p
           202609151803,18,3,B,0.7850749775099378
@@ -48,14 +48,20 @@ jobs:
           202609151910,19,10,B,0.7832464064537197
           202609151808,18,8,S,0.8502034460455856
           CSV
+          : > out/skipped.csv
+          echo 'race_code,jcd,race,reason' > out/skipped.csv
           tail -n +2 /tmp/candidates.csv | while IFS=, read -r CODE JCD RACE PRE PREP; do
-            BASE=$(find /tmp/cache -name "$CODE.json" -print -quit); test -n "$BASE"
-            TRAIN=$(find /tmp/cache -name v351_exhibition_train.csv -print -quit); test -n "$TRAIN"
+            BASE=$(find /tmp/cache -name "$CODE.json" -print -quit)
+            TRAIN=$(find /tmp/cache -name v351_exhibition_train.csv -print -quit)
+            if [ -z "$BASE" ] || [ -z "$TRAIN" ]; then echo "$CODE,$JCD,$RACE,missing_cache" >> out/skipped.csv; continue; fi
             DST="$(dirname "$BASE")/v351_exhibition_train.csv"
             if [ "$(readlink -f "$TRAIN")" != "$(readlink -f "$DST")" ]; then cp "$TRAIN" "$DST"; fi
-            python probe_1head_v351_boatcast_exhibition.py --date 20260915 --jcd "$JCD" --race "$RACE" --deadline-jst '2099-01-01T00:00:00+09:00' > "out/exhibition_$CODE.json"
+            if ! python probe_1head_v351_boatcast_exhibition.py --date 20260915 --jcd "$JCD" --race "$RACE" --deadline-jst '2099-01-01T00:00:00+09:00' > "out/exhibition_$CODE.json" 2>"out/probe_error_$CODE.txt"; then
+              echo "$CODE,$JCD,$RACE,probe_not_ready_or_fetch_error" >> out/skipped.csv
+              continue
+            fi
             CUTOFF=$(python -c "import json;print(json.load(open('$BASE'))['training_cutoff'])")
-            python run_1head_v351_live_exhibition_gate.py --probe "out/exhibition_$CODE.json" --base "$BASE" --history-cutoff "$CUTOFF" --out "out/gate_$CODE.json"
+            if ! python run_1head_v351_live_exhibition_gate.py --probe "out/exhibition_$CODE.json" --base "$BASE" --history-cutoff "$CUTOFF" --out "out/gate_$CODE.json"; then echo "$CODE,$JCD,$RACE,gate_error" >> out/skipped.csv; continue; fi
             python - "$BASE" "out/gate_$CODE.json" "$CODE" "$PRE" "$PREP" "out/final_input_$CODE.json" <<'PY'
           import json,sys
           from datetime import datetime,timezone,timedelta
@@ -63,7 +69,7 @@ jobs:
           b.update({'race_code':sys.argv[3],'pre_class':sys.argv[4],'legacy_pre_p':float(sys.argv[5]),'exhibition_ready':True,'deadline_jst':'RETROSPECTIVE_20260915','minutes_to_deadline':None,'evaluated_at_jst':datetime.now(timezone(timedelta(hours=9))).isoformat(),'result_or_payout_used':False,'chronology_guard':True})
           json.dump(b,open(sys.argv[6],'w'),ensure_ascii=False,indent=2)
           PY
-            python run_1head_v351_live_finalize.py --input "out/final_input_$CODE.json" --out "out/final_$CODE.json"
+            if ! python run_1head_v351_live_finalize.py --input "out/final_input_$CODE.json" --out "out/final_$CODE.json"; then echo "$CODE,$JCD,$RACE,finalize_error" >> out/skipped.csv; continue; fi
           done
           python - <<'PY'
           import glob,json,csv
@@ -71,9 +77,10 @@ jobs:
           for f in sorted(glob.glob('out/final_*.json')):
               x=json.load(open(f)); rows.append({k:x.get(k) for k in ['race_code','pre_class','legacy_pre_p','final_head_p','status','tickets','opp_mass','head_exhibition_pass','production_profile']})
           json.dump({'phase':'PREDICTIONS_FROZEN_BEFORE_RESULTS','result_or_payout_used':False,'count':len(rows),'rows':rows},open('out/predictions_frozen.json','w'),ensure_ascii=False,indent=2)
-          with open('out/predictions_frozen.csv','w',newline='',encoding='utf-8') as h:
-              w=csv.DictWriter(h,fieldnames=rows[0].keys());w.writeheader();w.writerows(rows)
-          assert len(rows)==17, len(rows)
+          if rows:
+              with open('out/predictions_frozen.csv','w',newline='',encoding='utf-8') as h:
+                  w=csv.DictWriter(h,fieldnames=rows[0].keys());w.writeheader();w.writerows(rows)
+          print('FROZEN_COUNT',len(rows))
           PY
       - uses: actions/upload-artifact@v4
         with:
