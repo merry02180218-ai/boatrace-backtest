@@ -157,3 +157,11 @@ Frozen Top15追加候補:
 - S/A/Bの全候補を展示後の正式production v351判定へ送り、最終PASSのみ3連単3点の購入候補とする。
 - 2026-09-15は結果・着順・払戻を読まず、同じresult-blind入力で閾値方式PREを再実行する。
 - `SEPTEMBER_OUTCOMES_READ=false` を維持し、候補は結果を見て差し替えない。
+
+## 2026-09-15 v351 自動直前判定 LIVE試行 — 作業開始
+- ユーザー指示により、S/A/B候補から展示公開を自動検知し、正式v351でPASS/DROP、PASSなら3連単3点まで自動生成する実運用試行を開始する。
+- 4号艇でCI-green済みのBOATCAST current-source取得資産（展示/ST/進入/チルト/風、未公開時fail-close）を再利用し、1号艇専用の薄いオーケストレーターへ接続する。
+- 正式productionは `1HEAD_PRODUCTION_20260915_HEAD078_V351_OPPONENTCORE_G2_045_G3_100`、SECOND g2=.45 / THIRD g3=1.00 を変更しない。
+- 実運用学習はユーザー承認により9月も利用可能とする。ただし対象レースの判定時点より前に確定済みの結果だけを許可し、対象レース自身・未来レースは絶対に学習へ入れない chronology guard を必須とする。
+- 既存の研究/production regression sentinelはSeptember UNREADの歴史的監査として変更しない。今回のLIVE系だけを明確に分離する。
+- まず今日のS/A/B候補で end-to-end を1回通し、展示未公開/締切後は購入候補を捏造せず fail-close する。
