@@ -7,6 +7,7 @@ on:
       - '.github/workflows/auto-live-1head-v351-exhibition-20260915.yml'
       - 'run_1head_v351_live_finalize.py'
       - 'run_1head_v351_live_exhibition_gate.py'
+      - 'probe_1head_v351_boatcast_exhibition.py'
 permissions: {contents: read, actions: read}
 jobs:
   prepare:
