@@ -97,7 +97,10 @@ jobs:
         if: steps.prior.outputs.done == '0' && env.EXHIBITION_READY == '1'
         env: {CODE: '${{ matrix.code }}', PRE_CLASS: '${{ matrix.pre_class }}', LEGACY_PRE_P: '${{ matrix.legacy_pre_p }}'}
         run: |
-          BASE=$(find /tmp/cache -name "$CODE.json" -print -quit);test -n "$BASE";TRAIN=$(find /tmp/cache -name v351_exhibition_train.csv -print -quit);test -n "$TRAIN";cp "$TRAIN" "$(dirname "$BASE")/v351_exhibition_train.csv"
+          BASE=$(find /tmp/cache -name "$CODE.json" -print -quit);test -n "$BASE"
+          TRAIN=$(find /tmp/cache -name v351_exhibition_train.csv -print -quit);test -n "$TRAIN"
+          TRAIN_DST="$(dirname "$BASE")/v351_exhibition_train.csv"
+          if [ "$(readlink -f "$TRAIN")" != "$(readlink -f "$TRAIN_DST")" ]; then cp "$TRAIN" "$TRAIN_DST"; fi
           CUTOFF=$(python -c "import json;print(json.load(open('$BASE'))['training_cutoff'])")
           python run_1head_v351_live_exhibition_gate.py --probe "exhibition_$CODE.json" --base "$BASE" --history-cutoff "$CUTOFF" --out "gate_$CODE.json"
           python - "$BASE" "gate_$CODE.json" "window_$CODE.json" "final_input_$CODE.json" <<'PY'
