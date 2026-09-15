@@ -18,7 +18,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: '3.11'}
       - run: pip install -q requests beautifulsoup4 lxml numpy pandas scipy 'scikit-learn==1.6.1'
-      - name: Resolve JST date and latest rolling cards
+      - name: Resolve JST date and race cards
         env:
           GH_TOKEN: '${{ github.token }}'
         run: |
@@ -27,11 +27,18 @@ jobs:
           echo "DATE=$DATE" >> "$GITHUB_ENV"; echo "ISO_DATE=$ISO_DATE" >> "$GITHUB_ENV"
           mkdir -p /tmp/pre /tmp/daily
           PRE_ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-pre-sab-$DATE-rolling&per_page=20" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id // empty')
-          if [ -z "$PRE_ID" ]; then echo "PRE_SOURCE_NOT_READY: rolling race cards for $DATE are not available at 03:00 JST"; exit 30; fi
-          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$PRE_ID/zip" > /tmp/pre.zip
-          unzip -q /tmp/pre.zip -d /tmp/pre
-          CARDS=$(find /tmp/pre -name race_cards.csv -print -quit); test -n "$CARDS"
-          PRE=$(find /tmp/pre -name '*.csv' -print | grep -E 'pre|candidate|sab' | head -1 || true)
+          if [ -n "$PRE_ID" ]; then
+            echo "CARD_SOURCE=ROLLING_ARTIFACT"
+            gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$PRE_ID/zip" > /tmp/pre.zip
+            unzip -q /tmp/pre.zip -d /tmp/pre
+            CARDS=$(find /tmp/pre -name race_cards.csv -print -quit); test -n "$CARDS"
+            PRE=$(find /tmp/pre -name '*.csv' -print | grep -E 'pre|candidate|sab' | head -1 || true)
+          else
+            echo "CARD_SOURCE=BOATCAST_DIRECT_FALLBACK"
+            python fetch_1head_v351_boatcast_cards.py --date "$DATE" --out /tmp/pre/race_cards.csv
+            CARDS=/tmp/pre/race_cards.csv
+            PRE=""
+          fi
           echo "CARDS=$CARDS" >> "$GITHUB_ENV"; echo "PRE=$PRE" >> "$GITHUB_ENV"
       - name: Build causal preparation once
         run: python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
