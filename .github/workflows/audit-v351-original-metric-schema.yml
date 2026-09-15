@@ -1,0 +1,26 @@
+name: audit-v351-original-metric-schema
+on:
+  push:
+    paths:
+      - 'audit_triggers/v351_original_metric_schema.txt'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4
+      - run: python audit_v351_original_metric_schema.py | tee original_metric_schema.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audit-v351-original-metric-schema
+          path: |
+            analysis_v351_original_metric_raw.csv
+            analysis_v351_original_metric_schema.csv
+            original_metric_schema.txt
