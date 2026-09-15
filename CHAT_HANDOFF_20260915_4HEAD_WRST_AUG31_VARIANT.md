@@ -117,3 +117,17 @@ Status: `HEAD4_EXHIBITION_ORIGINAL_RESEARCH_STARTED`
 5. Apr-Junだけで条件選択し、Jul-Augは固定評価。September outcomesは `UNREAD`、production `HEAD4_V291_COMP7` は凍結維持。
 
 Status: `HEAD4_EXHIBITION_VENUE_AVAILABILITY_FIX_STARTED`
+
+## BEFORE — オリジナル展示を項目単位availabilityへ分離
+ユーザー指定: 「展示タイム／展示ST＝全場共通 → 回り足／直線／その他オリジナル展示＝それぞれ独立availability → オリジナル展示提供場そのものを加点しない、という設計に直してから回す」。
+
+これからやること:
+1. 通常展示タイムと展示STは `basic_complete` として全場共通の基礎特徴にする。
+2. オリジナル展示は `turn_available` / `straight_available` / `orig_avg_available` を独立判定し、直線だけ無い等でも他の利用可能項目を捨てない。
+3. availability自体は予測特徴・加点条件に絶対使わない。提供場/非提供場という属性で4号艇評価を上下させない。
+4. 各orig特徴の閾値探索は、その項目が利用可能なレース内でのみ行い、同じavailability母集団の無条件ベース頭率と比較して「項目値による追加改善」を明示する。提供場そのもののベース頭率差を効果として数えない。
+5. 場別・項目別availability件数を監査出力する。通常展示特徴はorig availabilityに関係なく評価する。
+6. Apr-Junだけで条件選択、Jul-Aug固定評価。September outcomes `UNREAD`、production `HEAD4_V291_COMP7` 凍結。
+7. 実装後にActionsを実行し、Run/Job/Artifact/結果をAFTERへ記録する。
+
+Status: `HEAD4_EXHIBITION_ITEM_AVAILABILITY_FIX_STARTED`
