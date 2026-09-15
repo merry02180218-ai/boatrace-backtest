@@ -35,10 +35,13 @@
 - production/live workflowは変更していない。`HEAD4_V291_COMP7` unchanged。
 - September outcome `UNREAD`、v96禁止。
 
-次の再開地点:
-1. 残る4号艇research/audit workflowでbare pushまたは広いpath pushがないか追加監査。
-2. 通常commitで多重発火しないことを確認。
-3. 問題なければ `recover official closing odds3t Aug 2026` を手動で1本だけ起動。
-4. Aug official closing odds回収後、v283 closing-odds diagnosticを手動で1本だけ再実行しcoverage 100%を目指す。
+## BEFORE — targeted Aug 31R closing-odds recovery
+- Full-Aug recovery Run `34995369072` / Job `104470152985` は長時間取得後 `cancelled`。Fetch step cancelled、commit step skippedで08 archiveは保存されなかった。
+- 全31日×24場×12Rの総当たり再実行はやめる。
+- 4号艇固定候補164RのうちAug 31Rだけを抽出し、その(date,jcd,rno)だけ公式 `odds3t` 締切時オッズを取得する targeted recovery に切替。
+- 取得行は `source_type=official_closing`, `snapshot_type=closing_displayed`, `odds_mapping_version=official_table_v2` を明示し、既存archive互換形式で保存する。
+- September 2026 outcome/resultsは絶対に読まない。`UNREAD`維持。
+- production `HEAD4_V291_COMP7` unchanged、opponent frozen v283のみ、v96禁止。
+- targeted recovery後にv283 retrospective closing-odds diagnosticを再実行し、Apr-Aug 164R coverageを再監査する。
 
-Status: `HEAD4_ACTIONS_DUPLICATE_TRIGGER_CLEANUP_PROGRESS_VERIFIED`
+Status: `HEAD4_TARGETED_AUG_CLOSING_ODDS_RECOVERY_STARTED`
