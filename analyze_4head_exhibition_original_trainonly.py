@@ -5,6 +5,7 @@ import numpy as np,pandas as pd
 from collections import defaultdict
 from statistics import mean
 import analyze_4head_headrate_3ren_player_st as base
+import run_v326_1head_ticketaware_exhibition as v326
 from backtest import rows
 from backtest_v51_lane_corrected_tickets import corrected_direct,ff
 
@@ -31,9 +32,6 @@ def build_ex(wanted):
    tkz=bycode(rows(f'data/previews/tkz/{y}.csv'));stt=bycode(strows);orig=bycode(rows(f'data/previews/original_exhibition/{y}.csv'))
    for c in [x for x in wanted if x.startswith(d.strftime('%Y%m%d'))]:
     tr,sr,orr=tkz.get(c,{}),stt.get(c,{}),orig.get(c,{})
-    audit=base.c4.raw_completeness(tr,sr,orr) if hasattr(base,'c4') else None
-    # use v326 completeness directly to keep same contract as 1-head
-    import run_v326_1head_ticketaware_exhibition as v326
     audit=v326.raw_completeness(tr,sr,orr)
     complete=int(all(audit[k] for k in ('tkz_all6','stt_all6','orig_turn_all6','orig_straight_all6','orig_avg_all6')))
     z={'race_code':c,'ex_complete':complete,**audit}
@@ -75,7 +73,6 @@ def main():
     if len(a)<25:continue
     grid.append({'player_cut':pc,'feature':f,'q':q,'cut':cut,**{f'train_{k}':v for k,v in metric(a).items()},**{f'hold_{k}':v for k,v in metric(hh[hh[f]>=cut]).items()}})
  g=pd.DataFrame(grid);g.to_csv(OUT/'grid.csv',index=False)
- # train-only rank; hold columns are never used in selection
  cand=g[(g.train_R>=35)].copy();cand['goal35']=(cand.train_rate>=35).astype(int)
  cand=cand.sort_values(['goal35','train_rate','train_R'],ascending=[False,False,False]);best=cand.iloc[0]
  print('SELECTED_TRAIN_ONLY',best[['player_cut','feature','q','cut','train_R','train_rate']].to_dict())
