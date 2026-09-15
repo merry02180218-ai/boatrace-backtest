@@ -13,21 +13,31 @@
 ## 完了済み — 完全任意レース対応
 - オンデマンドbase生成script: `bc9c7d4f1628a5c0b09a491b7ba4213dbdc5648b`
 - manual workflow fallback接続: `ef18e95d6de8ff4a301e96a196c9d6e1fcae53ed`
-- PRE候補外・shared cache外でも同日のrace_cardsからcausal baseを生成可能。
 
-## 作業前記録 — Chat起動用request bridge
-ユーザー指示: 「それでお願い。明記して」
+## Chat起動用request bridge
+### 作業前記録
+- commit `bb8104b1ce68ee2e2b2e8a0962fd0ede51c5545a`
+- Chat側GitHub接続では新規workflow_dispatchを直接開始できないため、専用request fileへのcommitを起点にする方針を明記。
 
-### 問題
-- 現在のChat側GitHub接続では新規workflow_dispatchを直接開始できない。
-- workflow_dispatchだけでは、ユーザーの判別要求からChatがactual LIVE処理を開始できない。
+### 実装
+- workflow追加commit: `a5db0a6c9e90d4f365452dc904f93bbabaed301f`
+- workflow: `.github/workflows/chat-live-1head-v351-request.yml`
+- request path: `live_requests/1head_v351.txt`
+- request初期化commit: `3d7d7c79773d3dbb878cf5caa3fa35dc77ac7209`
+- smoke用request更新commit: `a1c5d27cf8b2c5e42a84c99b5390287f1d261653`
+- 設計: request fileの12桁race_codeを読み、shared cache hitまたはon-demand causal base生成後、deadline→exhibition→既存v351 gate→既存v351 finalizer→artifact upload。
+- 定期cron/controllerは追加していない。結果・払戻は使用しない。
 
-### これから行うこと
-1. Chatから利用可能なGitHub file create/updateをLIVE要求の入口にする。
-2. 専用request pathへの変更だけで起動するworkflowを追加する。
-3. request内のrace_codeを読み、既存v351処理へ渡す。
-4. 通常push全般では起動せず、専用request pathだけに限定する。
-5. 定期cron/controllerは復活させない。ユーザー要求時だけ起動する。
-6. 結果・払戻は使用せず、締切後はfail-closeする。
-7. 完了後、実装commit SHA・検証Run/Job/Artifact ID・結論・次の再開地点を追記する。
-8. 今後の判別要求は request commit → Actions起動確認 → Run監視 → Artifact回収 → BUY/DROPと買い目返却までを一連のLIVE作業とする。
+### 検証状態
+- request fileへのcommit自体はChatから成功。
+- smoke commit `a1c5d27...` に対してrepoの既存push workflow Run `34962132886` がqueuedになったことを確認し、ChatからのcommitがGitHub Actions push eventを発生させること自体は確認済み。
+- ただし新設 `chat-live-1head-v351-request` のRunは同commitではまだ確認できていないため、bridgeをactual LIVE使用可能と断定しない。
+- Run ID: bridge専用は未確認。
+- Job ID: 未確認。
+- Artifact ID: 未生成。
+
+### 結論 / 次の再開地点
+1. 新設workflowがActionsに登録・起動されない原因を確認する。
+2. 必要ならworkflow YAML/triggerを修正し、専用request変更でbridge Runが発生するまで検証する。
+3. bridge RunのJob/stepsを確認し、実レースではArtifact回収まで完了させる。
+4. 今後の判別要求は request commit → bridge Run確認 → Run監視 → Artifact回収 → BUY/DROPと買い目返却までを一連のLIVE作業とする。
