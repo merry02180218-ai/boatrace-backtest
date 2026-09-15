@@ -1,0 +1,26 @@
+name: audit-v351-venue-aware-rebuild
+on:
+  push:
+    paths:
+      - 'audit_triggers/v351_venue_aware_rebuild.txt'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4
+      - run: python audit_v351_venue_aware_rebuild.py | tee venue_aware_audit.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audit-v351-venue-aware-rebuild
+          path: |
+            analysis_v351_venue_aware_coverage.csv
+            analysis_v351_venue_aware_scored.csv
+            venue_aware_audit.txt
