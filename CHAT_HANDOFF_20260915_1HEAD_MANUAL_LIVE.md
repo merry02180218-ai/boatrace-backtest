@@ -22,13 +22,25 @@
 - schema: base 55.56→33.33、half+turn+straight 46.15→15.38、lap+turn 55.17→27.59、lap+turn+straight 53.90→26.62。
 - 結論: Wave2は不採用。現行G2/G3 pairを維持する。
 
-## 次作業開始 — G2/G3 pair補正研究 Wave3
-1. 現行G2/G3/ticket生成の実装箇所を最新mainから特定する。
-2. 同一235Rを KEEP（現行pair正解）/ REPLACE_ONE（現行pairと実pairが1艇共通）/ REPLACE_BOTH（共通0艇）へ分解する。
-3. ゼロからtop2を作り直さず、現行pairをbaselineとして「変更すべき時だけ補正」する。
-4. まずREPLACE_ONEの救済を優先し、現行正解KEEPを壊さない条件を探索する。
-5. OOF評価は baseline 53.66% を必ず同一race集合で比較し、改善しない案は不採用。
-6. September 2026結果・払戻は絶対に読まない。HEAD以外のproduction gate/finalizerも変更しない。
+## G2/G3 pair補正研究 Wave3 — 完了
+- 実装 commit `f95e7c02d5c4a0b1011f2ff78b26e8db19af07cd`。
+- workflow/trigger commit `d7031c058749c6ad7b0d5922ecb89a91d90cd277`。
+- Run `34992781339` / Job `104461353200` / Artifact `10406003255` / success。
+- Artifact SHA256 `171e6e1f22477a214b593ab28f1d1d2e3b7c369773ed83d1fd5a35aefdd891b5`。
+- 母集団 20260201〜20260630、235R。3-ticket union pair hit=120/235=51.06%。
+- 第1優先ticket pair分解: KEEP=67 / REPLACE_ONE=144 / REPLACE_BOTH=24。
+- KEEP+REPLACE_ONE=211/235=89.79%。主力lap+turn+straightは KEEP48 / REPLACE_ONE115 / REPLACE_BOTH13。
+- `SEPTEMBER_OUTCOMES_USED False` をログ確認。September UNREAD維持。
+- 結論: pairをゼロから作り直さず、REPLACE_ONEで「片方を残し片方だけ交換」が次の本命。
+
+## 次作業開始 — Wave4 one-replacement correction
+1. Wave3の235Rを基準に、現行第1pairのどちらをKEEPするかを因果特徴だけで学習する。
+2. REPLACE_ONEでは残す艇を決めた後、未選択の2〜6号艇からreplacement候補を順位付けする。
+3. KEEPを誤って壊す false override を明示評価し、override閾値を設ける。
+4. 同一race集合で first-pair baseline / corrected first-pair / 3-ticket union coverage / override率 / false-override damage / REPLACE_ONE rescue を比較する。
+5. schemaごとの利用可能展示特徴に合わせ、存在しないstraight等を一律dropnaしない。
+6. データが20260630までなので、可能なら train<20260601 / June frozen holdout を別評価する。
+7. September 2026結果・払戻は絶対に読まない。production/LIVE条件は研究結果確定まで変更しない。
 
 ## 現行production / LIVE
 - production profile: `1HEAD_PRODUCTION_20260915_HEAD078_V351_OPPONENTCORE_G2_045_G3_100`
