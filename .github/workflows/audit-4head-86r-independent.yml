@@ -1,28 +1,47 @@
-name: audit-4head-86r-independent
+name: onehead-research-runner
 
 on:
   workflow_dispatch:
   push:
+    branches: [ main ]
 
 jobs:
-  audit:
+  onehead-research:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[RUN_1HEAD_RESEARCH]')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-      - run: pip install pandas numpy scikit-learn requests beautifulsoup4 lxml
-      - name: Run independent audit
-        shell: bash
-        run: |
-          set -o pipefail
-          mkdir -p /tmp/head4_86r_audit
-          python audit_4head_86r_independent.py 2>&1 | tee /tmp/head4_86r_audit/run.log
-          grep -q HEAD4_86R_INDEPENDENT_REPLAY_OK /tmp/head4_86r_audit/run.log
-          grep -q SEPTEMBER_UNREAD /tmp/head4_86r_audit/run.log
-          grep -q PRODUCTION_UNCHANGED /tmp/head4_86r_audit/run.log
+          python-version: '3.12'
+      - name: Install v351 research dependencies
+        run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4
+      - name: Rebuild v351 schema dataset
+        run: python audit_v351_schema_correct_rebuild.py | tee schema_rebuild.txt
+      - name: Dedicated schema HEAD OOF
+        run: python audit_v351_dedicated_schema_head.py | tee dedicated_schema_head.txt
+      - name: Exact3 decomposition
+        run: python analyze_v351_schema_exact3_errors.py | tee schema_exact3_errors.txt
+      - name: Opponent pair temporal OOF
+        run: python research_v351_opponent_pair_oof.py | tee opponent_pair_oof.txt
+      - name: G2 G3 pair correction Wave3
+        run: python analyze_v351_g2g3_pair_correction_wave3.py | tee g2g3_pair_wave3.txt
       - uses: actions/upload-artifact@v4
         with:
-          name: head4-86r-independent-audit
-          path: /tmp/head4_86r_audit/
+          name: onehead-v351-research
+          path: |
+            analysis_v351_schema_correct_rebuild.csv
+            analysis_v351_schema_map.csv
+            analysis_v351_dedicated_*.csv
+            analysis_v351_schema_exact3_errors.csv
+            analysis_v351_schema_exact3_error_summary.csv
+            analysis_v351_opponent_boat_oof.csv
+            analysis_v351_opponent_pair_oof.csv
+            analysis_v351_opponent_pair_summary.csv
+            analysis_v351_g2g3_pair_correction_wave3.csv
+            analysis_v351_g2g3_pair_correction_wave3_summary.csv
+            schema_rebuild.txt
+            dedicated_schema_head.txt
+            schema_exact3_errors.txt
+            opponent_pair_oof.txt
+            g2g3_pair_wave3.txt
