@@ -40,18 +40,22 @@
 - `lap+turn+straight` READY207/raw OOF177/cal OOF172。`lap+turn` READY48/raw OOF18/cal OOF13。`half+turn+straight` READY18/raw OOF0。`turn+straight` READY5/raw OOF0。`base` READY10/raw OOF0。
 - 単純logistic補正はproduction不採用。production v351変更なし。September 2026結果UNREAD維持。
 
-## 専用schema HEAD OOF — 作業前記録 2026-09-15
-- 対象: `lap+turn`, `half+turn+straight`, `turn+straight`, `base`。完全schema `lap+turn+straight` は比較基準として保持。
-- 時系列順で過去データだけを学習する dedicated HEAD OOF を生成する。September 2026結果は学習・評価ともUNREAD維持。
-- この監査中はproduction v351 gate/finalizerを変更しない。
+## 専用schema HEAD OOF — 再実行結果
+- 実装 commit `5daed9e991bfcc1de1a56ae3557ffe9f8fab085a`、バグ修正 commit `f0c8aeaa6196748b334d3a12e23233c662e96a0c`、再trigger commit `5330e0ae6f4659a1a4984d11b2d126f9da0de736`。
+- Run `34979361041` / Job `104415303329` / Artifact `10401475091` / success。
+- lap+turn: READY48 / OOF43 / best cutoff .82 / 25R / HEAD20=80.0% / exact3 10=40.0%。JCD13 11R HEAD81.82%、JCD18 14R HEAD78.57%。
+- half+turn+straight: READY18 / OOF13 / 13R / HEAD11=84.62% / exact3 3=23.08%。
+- base: READY10 / OOF3 / 3R / HEAD3=100% / exact3 2=66.67%。小標本。
+- turn+straight: READY5 / OOF0。評価不能。
+- lap+turn+straight benchmark: READY207 / OOF202 / 202R / HEAD172=85.15% / exact3 79=39.11%。
+- September 2026結果UNREAD維持。
 
-## 専用schema HEAD OOF — 初回Run不具合
-- 実装 commit `5daed9e991bfcc1de1a56ae3557ffe9f8fab085a` / workflow commit `413073ddef549876ef6392f269c493339324ccdd`。
-- Run `34974696665` / Job `104399364790`。GitHub Job表示はsuccessだが、`Dedicated schema HEAD OOF sweep` 内で `b.head` が pandas Series.head メソッドと衝突し TypeError。Artifact `10398039072` は途中生成物のみ。
-- このRunは研究結果として無効。production変更なし。
-
-## 専用schema HEAD OOF — 再実行 作業前記録 2026-09-15
-- ユーザー指示「再実行して」により、上記 `b.head` 衝突を `b['head']` 等の明示的キー参照へ修正する。
-- 修正commitで同workflowをpush起動し、完走後にRun/Job/Artifactとschema別BEST・venue/JCD結果を確認する。
-- 途中生成Artifact `10398039072` の数値は採用しない。
-- September 2026結果UNREAD、production v351変更なしを維持する。
+## schema正式昇格 + 3連単研究 — 作業前記録 2026-09-15
+- ユーザー承認: `turn+straight` 以外を正式production対象へ入れる。
+- 正式対象: `lap+turn+straight`, `lap+turn`, `half+turn+straight`, `base`。`turn+straight` は保留/非production。
+- まず現行v351 production gate/finalizerとschema生成経路を最新GitHubで確認し、schema別HEAD scorer/cutoffをLIVE経路へ安全に統合する。HEAD判定以外の既存条件は無断変更しない。
+- `base` はOOF3Rしかないため、ユーザー承認により正式対象へ含めるが、低標本フラグをコード/監査に残す。
+- 次に3連単相手選びを研究する。HEAD的中レースを母集団として、schema別に2着・3着の取り違え/相手抜けを分解し、現行v351 opponent core (`G2_045/G3_100`) と比較する。
+- 研究候補: 2着/3着別ranking、schema別相手特徴、1-相手2頭の順序、3頭内的中だが順序違い、相手候補外、人気/展示/ST/選手力/攻撃力の寄与。まず原因分解を行い、その後に改善案を時系列OOFで比較する。
+- September 2026結果はUNREAD維持。研究でproduction結果を後読みしない。
+- 作業完了後、production commit・監査Run/Job/Artifact・3連単研究結果・次の再開地点を追記する。
