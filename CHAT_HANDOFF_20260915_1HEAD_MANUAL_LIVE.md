@@ -41,11 +41,17 @@
 - 単純logistic補正はproduction不採用。production v351変更なし。September 2026結果UNREAD維持。
 
 ## 専用schema HEAD OOF — 作業前記録 2026-09-15
-- ユーザー指示「続けて」により、前回の再開地点から専用schema HEADモデル監査を開始する。
 - 対象: `lap+turn`, `half+turn+straight`, `turn+straight`, `base`。完全schema `lap+turn+straight` は比較基準として保持。
-- 各schemaで実際に利用可能な特徴列を最新監査コード/データ生成コードから確定し、欠損schemaに存在しない特徴を無理に補完しない。
 - 時系列順で過去データだけを学習する dedicated HEAD OOF を生成する。September 2026結果は学習・評価ともUNREAD維持。
-- `lap+turn` は既存schema_pの単純補正ではなく、特徴方向を再学習する専用HEADモデルとして評価する。
-- `half+turn+straight` / `turn+straight` / `base` はraw OOF=0問題を解消し、可能な範囲で専用OOFを新規生成する。
-- 比較: schema別 OOF数、HEAD率、score分布、cutoff sweep、共通0.78へ写像した場合の対象R/HEAD率、JCD/venue holdout。小標本はproduction採用しない。
 - この監査中はproduction v351 gate/finalizerを変更しない。
+
+## 専用schema HEAD OOF — 初回Run不具合
+- 実装 commit `5daed9e991bfcc1de1a56ae3557ffe9f8fab085a` / workflow commit `413073ddef549876ef6392f269c493339324ccdd`。
+- Run `34974696665` / Job `104399364790`。GitHub Job表示はsuccessだが、`Dedicated schema HEAD OOF sweep` 内で `b.head` が pandas Series.head メソッドと衝突し TypeError。Artifact `10398039072` は途中生成物のみ。
+- このRunは研究結果として無効。production変更なし。
+
+## 専用schema HEAD OOF — 再実行 作業前記録 2026-09-15
+- ユーザー指示「再実行して」により、上記 `b.head` 衝突を `b['head']` 等の明示的キー参照へ修正する。
+- 修正commitで同workflowをpush起動し、完走後にRun/Job/Artifactとschema別BEST・venue/JCD結果を確認する。
+- 途中生成Artifact `10398039072` の数値は採用しない。
+- September 2026結果UNREAD、production v351変更なしを維持する。
