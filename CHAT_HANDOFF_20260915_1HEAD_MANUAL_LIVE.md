@@ -11,22 +11,24 @@
 - workflow commit `576b30f5bfba16755bcb8133807121348763a967`。
 - Run `34988080328` / Job `104445260878` / Artifact `10404333709` / success。
 - historical hard guard: `race_code < 20260901`。September 2026結果はUNREAD維持。
-- 艇単位feature: boat / exhibition / ST / turn / straight / original avg。
-- walk-forwardで同一raceより前だけを学習。
 - OOF結果: TOTAL 151R / PAIR_HIT 41 / PAIR_RATE 27.15%。
-- `lap+turn`: 5R / 2 hit / 40.00%。
-- `lap+turn+straight`: 146R / 39 hit / 26.71%。
-- `half+turn+straight` と `base` は学習量不足でOOF pair評価なし。
-- 重要: `HOLDOUT_START=20260701` を設定したが、出力summaryに holdout=1 が1行も無い。よって7-8月独立holdout評価は未成立。これを成功と誤認しない。
-- 結論: 展示系だけの単純logistic top2はPAIR_HIT 27.15%で、現時点ではproduction候補にしない。
+- 結論: 展示系だけの単純logistic top2はproduction候補にしない。
 
-## 次作業開始 — pair研究 Wave2
-1. なぜ2026-07-01以降のholdout行が0なのか、母集団の日付分布とOOF対象期間を監査する。
-2. 現行G2/G3 pairのPAIR_HIT baselineを同一151R上で必ず算出し、新モデル27.15%と同条件比較する。
-3. 展示/STだけでなく、既存データからcausalに取得可能な選手力・コース/攻撃力・モーター/展示相対差・艇番/場/schema特徴を追加できるか調査する。
-4. pairを艇ごとの独立binaryだけでなく、10通りの2艇pairを直接rankingする方式も比較する。
-5. 時系列OOFで改善した案のみ、未使用の後半期間を独立holdoutに固定して最終確認する。
-6. September 2026結果・払戻は絶対に読まない。
+## pair研究 Wave2 — 完了
+- commit `0ba82c666b88d05442d22d5b152be4ee21a3051b`。
+- Run `34989886719` / Job `104451495547` / Artifact `10404069913` / success。
+- 母集団は 20260201〜20260630 の235R。7〜8月データはこの監査母集団に存在せず、独立holdoutは未成立。
+- 同一OOF 205Rで現行ticket pair baseline=110/205=53.66%、Wave2=54/205=26.34%、差=-27.32pt。
+- schema: base 55.56→33.33、half+turn+straight 46.15→15.38、lap+turn 55.17→27.59、lap+turn+straight 53.90→26.62。
+- 結論: Wave2は不採用。現行G2/G3 pairを維持する。
+
+## 次作業開始 — G2/G3 pair補正研究 Wave3
+1. 現行G2/G3/ticket生成の実装箇所を最新mainから特定する。
+2. 同一235Rを KEEP（現行pair正解）/ REPLACE_ONE（現行pairと実pairが1艇共通）/ REPLACE_BOTH（共通0艇）へ分解する。
+3. ゼロからtop2を作り直さず、現行pairをbaselineとして「変更すべき時だけ補正」する。
+4. まずREPLACE_ONEの救済を優先し、現行正解KEEPを壊さない条件を探索する。
+5. OOF評価は baseline 53.66% を必ず同一race集合で比較し、改善しない案は不採用。
+6. September 2026結果・払戻は絶対に読まない。HEAD以外のproduction gate/finalizerも変更しない。
 
 ## 現行production / LIVE
 - production profile: `1HEAD_PRODUCTION_20260915_HEAD078_V351_OPPONENTCORE_G2_045_G3_100`
