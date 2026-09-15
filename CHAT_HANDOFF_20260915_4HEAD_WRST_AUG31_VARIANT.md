@@ -22,14 +22,23 @@
 ## BEFORE — Actions多重発火の整理を最優先
 ユーザー指示: 「発火が複数しちゃうからそれを先にどうにかしよう」。coverage回収より先にActions trigger整理を行う。
 
-これからやること:
-1. `.github/workflows` の4号艇研究/監査関連、とくに過去に一時的に `push` を広げたworkflow、v2重複workflow、今回追加したAug回収workflowの `on:` 条件を棚卸しする。
-2. 通常のコード/handoff commitで不要な4号艇監査workflowが複数同時発火しないようにする。研究監査・回収系は原則 `workflow_dispatch` の手動起動へ寄せ、必要な専用push path以外のall-push triggerを除去する。
-3. production/liveに必要なworkflowは勝手に停止しない。4号艇production `HEAD4_V291_COMP7` の運用経路は維持する。
-4. 重複している `audit-4head-86r-independent.yml` / `audit-4head-86r-independent-v2.yml` など、同目的の監査workflowは正式な1本を残すか、push自動発火を止める。
-5. 今回のAug締切時オッズ回収workflowも、登録用pushで勝手に走らず、明示的な手動dispatchだけで1回起動できる構成にする。
-6. trigger整理commit後、そのcommitで発火したActions一覧を確認し、多重発火が解消したことを監査する。不要workflowがまだ発火するなら追加修正する。
-7. 解消確認後にのみAug回収→coverage 100%診断へ戻る。
-8. September outcomeは `UNREAD`、v96禁止、production unchanged。
+## AFTER / PROGRESS — duplicate trigger cleanup
+- BEFORE handoff commit: `39e82819fb12be777a7cd100f160fa9f7f81ef91`。
+- `audit-4head-86r-independent.yml`: bare `push:` を削除し `workflow_dispatch` only。commit `5a9fbb122c631b33830f62df98a7cf84cf655691`。
+- `audit-4head-v283-closing-odds.yml`: script/workflow path pushを削除し `workflow_dispatch` only。commit `29045dea2a5258d5c3ca8f28612dec30bc9791f1`。
+- `recover-official-closing-odds3t-aug2026.yml`: self-path pushを削除し `workflow_dispatch` only。commit `512dce21d23bf64577e4856639c2961319985dfb`。
+- `analyze-4head-b4-minus-b3-motor-full-universe.yml`: research script/workflow path pushを削除し manual only。commit `51564e7ce4fb15e913c59dd45d2b6668f1db2f8c`。
+- `analyze-4head-b4-minus-b3-motor-win-2ren.yml`: research script/workflow path pushを削除し manual only。commit `20f51ac5b82b46bca854ed05d56a9c1dd6079120`。
+- latest cleanup commit `20f51ac...` のActions runsを確認: `total_count=0`。少なくとも整理済み研究workflowによるcommit連鎖の多重発火は止まっている。
+- `audit-4head-86r-independent-v2.yml` は元から `workflow_dispatch` only。
+- `analyze-4head-111r-orig-combo.yml` は専用sentinel `start_4head_111r_orig_combo.txt` pathだけのpushで、通常commitでは発火しないため現状維持。
+- production/live workflowは変更していない。`HEAD4_V291_COMP7` unchanged。
+- September outcome `UNREAD`、v96禁止。
 
-Status: `HEAD4_ACTIONS_DUPLICATE_TRIGGER_CLEANUP_STARTED`
+次の再開地点:
+1. 残る4号艇research/audit workflowでbare pushまたは広いpath pushがないか追加監査。
+2. 通常commitで多重発火しないことを確認。
+3. 問題なければ `recover official closing odds3t Aug 2026` を手動で1本だけ起動。
+4. Aug official closing odds回収後、v283 closing-odds diagnosticを手動で1本だけ再実行しcoverage 100%を目指す。
+
+Status: `HEAD4_ACTIONS_DUPLICATE_TRIGGER_CLEANUP_PROGRESS_VERIFIED`
