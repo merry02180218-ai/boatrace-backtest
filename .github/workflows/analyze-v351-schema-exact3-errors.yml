@@ -1,7 +1,7 @@
 name: analyze-v351-schema-exact3-errors
-# retrigger: 2026-09-15 explicit exact3 research run
-on:
-  workflow_dispatch:
+# NOTE: quote 'on' so YAML 1.1 parsers do not coerce it to boolean.
+'on':
+  workflow_dispatch: {}
   push:
     paths:
       - 'analyze_v351_schema_exact3_errors.py'
