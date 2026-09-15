@@ -58,3 +58,102 @@ Status: `HEAD4_111R_ORIG_COMBO_COMPLETE`
 9. 実装→Actions→ログ/Artifact回収→独立再現・月別・ROI確認後、AFTERへ exact commit SHA / Run / Job / Artifact / 結果 / 結論 / 次の再開地点を記録してcommitする。
 
 Status: `HEAD4_86R_INDEPENDENT_AUDIT_STARTED`
+
+## HANDOFF UPDATE — 86R独立監査の途中経過 / 次チャット再開点
+
+### 目的は未完了
+86R候補について、独立再現 → 月別安定性 → 現行v283相手選びで3連単的中率/ROI → AFTER記録、までがゴール。現時点では **完了していない**。次チャットではここから続ける。
+
+### BEFORE記録
+- BEFORE handoff commit: `31c979a69aaa540508cda4562a982f8272593720`
+- BEFORE時点 status: `HEAD4_86R_INDEPENDENT_AUDIT_STARTED`
+
+### 最初の監査実装と失敗
+- initial audit implementation: `3fbfe1da9600731f14b61d5a8d147b5b7bf97535`
+- initial workflow: `478046c82f3ea5979a04e33773abae2aeeec87f5`
+- initial trigger: `c03e684d7696f0a3e80b658acfc8af052b16d580`
+- retrigger: `e6aa086fc81214bdc249badd66c04a8681848c08`
+- dedicated Workflow: `audit-4head-86r-independent`
+- failed Run `34974926857`
+- failed Job `104400140027`
+- exact primary traceback: `AttributeError: module 'analyze_4head_exhibition_original_trainonly' has no attribute 'build_base'`
+- workflow側にも当初 `/tmp/head4_86r_audit` 作成前のtee問題があった。
+
+### source lineage修正
+`audit_4head_86r_independent.py` のhead候補再構築を正しいlineageへ修正:
+- `base.settle_all()`
+- merge `base.build_motor_features()`
+- merge `base.build_prior_features()`
+- `ex.build_ex(set(z.race_code))`
+- exact fixed filters適用
+- Apr-Jun `(86R,35 heads)` / Jul-Aug `(78R,35 heads)` assert
+
+関連commit:
+- source reconstruction fix: `bbaabd25e22f524932a3c508890c1e9e110de0b6`
+- trigger: `1e41d3ceb6d81e50044ebf0400b5f0860e8453e2`
+- extra trigger: `b612e404575d585dadd131b9ebcb04fedb9cf092`
+- workflow YAML/mkdir fix: `1385b6a4895b93aa0f987e6195d772eba3da145c`
+- retrigger: `a91d44c1c016d91ce45d52075020cf2430215a53`
+
+### rerunで判明した重要事項
+旧Run `34974926857` のrerun Job `104415607670` も failure。
+理由: rerunは元Runの古いhead SHA `e6aa086...` をcheckoutするため、main上の修正版を実行しない。したがって旧Run rerunは今後使わない。fresh main SHAの新Runだけを正式監査に採用すること。
+
+### v96混入を発見・排除
+source reconstruction fix後の監査コードには、相手選びとして `analyze_v96_4corner_monthly_walkforward_tiebreak` が残っていた。これは現行4-head契約違反。
+
+現行production/research opponent contract:
+- production: `HEAD4_V291_COMP7`
+- opponent: frozen independent `v283`
+- SECOND: `PLAYER_START`
+- conditional THIRD: `COND_BASE`
+- pair mode: `TOP2XTOP2`
+- `alpha2=.60`
+- Top4 exactly 4 tickets
+- v96 production signal **禁止**
+- frozen inference module: `head4_v291_downstream_inference.py`
+- live adapter: `build_4head_v283_live.py`
+- frozen artifact: `artifacts/head4_v291_downstream_20260630.json`
+
+監査コードはv96/post-deadline ROIを正式値として出さないfail-closed版へ修正済み:
+- corrected audit commit: `85019562ccc8278099e7740cf163b4da65409acc`
+- 現在の `audit_4head_86r_independent.py` はhead-rate独立再現を行い、正式ROIについてはv283 frozen feature rows + pre-deadline oddsが揃わなければ `NOT_COMPUTABLE` とする方針。
+- archived/closing oddsを正式prospective ROIとして代用してはいけない。
+
+### fresh SHA trigger調査
+- fresh trigger commit: `56e3d3f5c5a1b53a34dac02aa1b462023802598e`
+- このcommit自体はmain pushとしてGitHub Actionsに届いており、同SHAで4本のActions Runが生成されたことを確認。
+- 例: `legacy-4head-research-trigger-only` Run `34983301866` は同SHA `56e3d3...` に反応（skipped）。
+- しかし目的の `audit-4head-86r-independent` の新Runだけ生成されなかった。
+- したがって Actions全体停止ではなく、専用workflowのtrigger/registration問題に絞られている。
+
+### 注意: create_commitだけではmain pushにならない
+発火調査中に以下のcommit objectも作成したが、`create_commit` はcommit object作成のみで、main refを動かさなければpushではない。これらを「mainへ反映済み」と誤認しないこと:
+- `f8fc2058924e6b91bc0ea3896785f6e6a39d96f1`
+- `ece2ac77f5a10f0f1a2ceb4d4404e6315bc81fd8`
+- `e835c18f41d5a658c40916d6328fafe96d87601f`
+- `2e0834a43d2a459cdd1c9c0d4550091b6fdd73d8`
+これらはmain refへ明示的に反映した証拠がない限り、正式実装commitとして扱わない。
+
+### 次チャットで最初にやること
+1. **最新main HEADを取得**し、他チャット/他作業が進んでいるため絶対に `56e3d3...` へmainを巻き戻さない。
+2. このhandoffと最新mainの `audit_4head_86r_independent.py` / `.github/workflows/audit-4head-86r-independent.yml` を読む。
+3. 専用workflowがmain上でどう登録されているか確認。必要なら最新main HEADを親にしてworkflowを修正し、`update_file` などmainへ直接反映される方法でcommitする。
+4. trigger fileも最新main上で更新し、**fresh main SHAの新Run**を生成する。旧Run `34974926857` のrerunは禁止。
+5. 新Runでまず `HEAD4_86R_INDEPENDENT_REPLAY_OK` を通し、Apr-Jun 86/35、Jul-Aug 78/35を確認。
+6. 月別 Apr/May/Jun/Jul/Aug の R / heads / head rate を回収。
+7. 3連単は必ず frozen v283 を使う。Apr-Aug各raceの exact causal SECOND 25-feature / conditional THIRD 69-feature rowsを再構築できる既存builder/replayをrepoから探す。**v96で代用しない**。
+8. formal ROIは official pre-deadline 120-way odds snapshotだけ。存在/coverageをrepo内で確認。なければ formal ROI=`NOT_COMPUTABLE` と明記。archived closing oddsを出す場合は別枠 retrospective diagnostic としてのみ。
+9. 成功Runの exact Run / Job / Artifact ID、月別結果、ROI coverage/結果、結論をこのhandoffのAFTERへ追記してcommit。
+10. Sep 2026 outcomesは最後まで `UNREAD`、production `HEAD4_V291_COMP7` unchanged。
+
+### 最重要の禁止事項
+- Sep 2026 outcomeを読まない。
+- Jul/Augを再チューニングしてpristine扱いしない。
+- v96を4-head opponentへ戻さない。
+- post-deadline/closing oddsをformal ROIとして扱わない。
+- 古いRunのrerun結果を修正版監査と誤認しない。
+- mainを古いSHAへforce/resetしない。
+- successful fresh Run + AFTER handoff commit前に「完了」と言わない。
+
+Status: `HEAD4_86R_AUDIT_HANDOFF_READY_NEEDS_FRESH_MAIN_RUN`
