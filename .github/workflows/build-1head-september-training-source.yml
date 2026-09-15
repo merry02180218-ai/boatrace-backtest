@@ -16,6 +16,7 @@ jobs:
       - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1'
       - name: Build prior-day September source
         run: |
+          mkdir -p /tmp/onehead_sep_training
           /usr/bin/time -f 'wall_sec=%e max_rss_kb=%M' -o /tmp/onehead_sep_training/time.txt python build_1head_september_training_source.py --target-date 2026-09-15 --out-dir /tmp/onehead_sep_training
           python - <<'PY'
           import json
