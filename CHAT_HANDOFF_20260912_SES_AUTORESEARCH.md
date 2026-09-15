@@ -16,13 +16,17 @@ v8-v24 established independent/per-frame identity, immutable appearance alone, l
 File `track_exhibition_boats_v30.py`; implementation `6e406352bf8a28876c61ad67e42b4621657c13e8`. It changes only the shared camera representation from similarity to affine: enumerate C(6,3)=20 exact three-boat affine fits, choose by 4th-smallest six-boat residual then mean of four best, then apply unchanged 24 px/native-frame residual, 20 acceleration, 42 absolute, reverse corridor, NCC, appearance bank, fleet geometry, v25 proposal reachability and fail-closed behavior. No future frame/result/special case/threshold relaxation.
 
 ### v30 Actions trigger diagnosis and repair
-Dedicated `.github/workflows/regress-exhibition-seed17-track30.yml` exists but was not registered/triggering after several pushes. The attempted v29 bridge also did not trigger.
+Dedicated `.github/workflows/regress-exhibition-seed17-track30.yml` existed but did not register/trigger. The known historical v27 workflow path has workflow ID `358168090` from run `34893353398` and is therefore known to have been registered previously.
 
-At ~13:53 JST, the known historical v27 workflow path `.github/workflows/regress-exhibition-seed17-track27.yml` was converted to a v30 validation bridge without changing tracker science or thresholds. Commit: `f9a154df227aa685fb8f479cab7d2e4df215080a`. It runs the unchanged four-video matrix with seed v17 + tracker v30 and preserves the blind Kiryu3/6 outcomes. Immediate head-SHA Actions query returned zero runs, so workflow registration/triggering remains the current infrastructure blocker at this exact moment; this is NOT a scientific v30 failure. Do not create more tracker-only retrigger commits.
+At ~13:53 JST, `.github/workflows/regress-exhibition-seed17-track27.yml` was converted to a v30 bridge at commit `f9a154df227aa685fb8f479cab7d2e4df215080a`; head-SHA query showed only unrelated workflows and no v27 bridge run.
+
+At ~14:06 JST automation rechecked the exact commit and confirmed the push itself was visible to Actions (five workflow runs existed for head `f9a154...`, including unrelated skipped workflows) but the registered v27 workflow was absent. This narrows the blocker to workflow registration/enablement/filtering rather than missing GitHub push propagation or tracker science.
+
+Infrastructure-only repair commit `8ce20d221c8764b231c96e4d5cdef7035bfed1c3` added `CHAT_HANDOFF_20260912_SES_AUTORESEARCH.md` to the v27 bridge push paths, leaving tracker v30 science/thresholds unchanged. Immediate head-SHA query still returned zero runs; this may require Actions registration propagation. This handoff update itself is intentionally another path-matching push for that registered bridge. Do not create tracker-only no-op commits.
 
 ## Exact restart point
-1. Recheck head SHA `f9a154df227aa685fb8f479cab7d2e4df215080a` after propagation. If the v27 bridge appears, inspect all four jobs/artifacts immediately.
-2. If it still does not appear, diagnose repository workflow registration/disable state via Actions workflow metadata or another known currently registered SES workflow. Do not change tracker science just to trigger CI.
+1. Query Actions for infrastructure commit `8ce20d221c8764b231c96e4d5cdef7035bfed1c3` and the latest handoff commit after propagation. If the v27 bridge appears, inspect all four v30 jobs/artifacts immediately.
+2. If still absent while unrelated workflows see the same push, treat workflow ID `358168090` as disabled/unregistered and diagnose Actions workflow enablement/registration. Do not change tracker science merely to trigger CI.
 3. Once v30 runs, preserve Kiryu3/6 blindness and record dead-frame depth, residual/acceleration rejects, +0.5/+1.0/+1.5 centers, physical identity/on-frame sanity, and FastClip+seed+tracker latency.
 4. Compare v30 directly with v29/v28. A win must improve feasibility physically without widening gates.
 5. If v30 scientifically fails, do not widen 24/20 caps. Next principled direction is temporal camera-state continuity in the beam (camera parameter velocity/acceleration), or independent background-feature camera motion.
