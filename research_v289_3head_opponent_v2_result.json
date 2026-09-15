@@ -1,0 +1,22 @@
+{
+  "version":"reproducible-opponent-v2",
+  "selection_period":"2026-02 only",
+  "selection_method":"GroupKFold(5) by race; primary mean top3 ordered-pair capture; secondary mean pair AUC; March labels unseen until C frozen",
+  "candidates":[
+    {"C":0.1,"top3":0.3808114035,"auc":0.6969655019},
+    {"C":0.25,"top3":0.3849780702,"auc":0.6968272439},
+    {"C":0.5,"top3":0.3849780702,"auc":0.6966964554},
+    {"C":1.0,"top3":0.3849780702,"auc":0.6965957262},
+    {"C":2.0,"top3":0.3849780702,"auc":0.6965751912},
+    {"C":4.0,"top3":0.3849780702,"auc":0.6965569646},
+    {"C":10.0,"top3":0.3849780702,"auc":0.6965671959}
+  ],
+  "frozen_C":0.25,
+  "feb_train_head_races":478,"feb_pair_rows":9560,"features":67,
+  "march":{"wave54_races":210,"heads":71,"hits":25,"capture_pct":35.2112676,"stake_yen":63000,"return_yen":62830,"roi_pct":99.7301587},
+  "v1_comparison":{"hits":25,"return_yen":62830,"roi_pct":99.7301587,"result_change":"none"},
+  "ticket_sha256":"50f71ee9626c43472552549da7a3496719077ac2f5dc8b561c2046687d27271d",
+  "double_run_hash_match":true,
+  "conclusion":"February CV prefers C=.25 by the predeclared tie-break, but March diagnostic is identical to v1 in hits/return/ROI. v2 therefore does not establish an opponent-performance improvement; retain v1/v2 as reproducible baselines and next test structural scoring changes selected only on February CV.",
+  "september_outcomes_read":false,"production_changed":false
+}
