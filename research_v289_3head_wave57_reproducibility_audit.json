@@ -1,0 +1,12 @@
+{
+  "audit":"Wave57 reproducibility audit",
+  "date":"2026-09-15",
+  "status":"FAILED_REPRODUCIBILITY_WAVE57_WAVE58_METRICS_UNVERIFIED",
+  "historical_record":{"wave57_commit":"e2803294d68cb7fe5cf849651febb35595f370bf","wave58_commit":"2eded90296f0f04f3a20fb4362adaae2de999456","claimed_wave57_march":{"races":210,"heads":71,"ticket_hits":29,"return_yen":74110,"roi_pct":117.6349}},
+  "git_history_audit":{"wave57_commit_files":["research_v289_3head_wave57_pair_interaction_result.json"],"wave57_executable_code_committed":false,"wave58_commit_files":["research_v289_3head_wave58_robustness_audit_result.json"],"wave58_executable_code_committed":false,"new_actions_for_wave57":false,"new_actions_for_wave58":false},
+  "missing_reproduction_details":["exact ordered-pair feature column definitions/formulas","exact preprocessing pipeline and imputation/scaling order","exact pair label construction and positive-class definition","exact GroupKFold grouping/order/randomness details","exact logistic solver/max_iter/random_state and feature encoding","exact score-to-top3 ranking/tie-breaking implementation","exact March ticket list and per-race scores","exact payout settlement code"],
+  "independent_reconstruction_observation":{"march_races":210,"heads":71,"ticket_hits":25,"roi_pct":99.73,"matches_claim":false,"note":"This reconstruction is evidence of non-reproducibility, not a replacement canonical Wave57 implementation."},
+  "audit_conclusion":"The repository contains asserted Wave57/Wave58 numerical result JSONs but no executable implementation or ticket-level output capable of reproducing them. The 29/71 and ROI117.6349% claims therefore fail independent reproducibility and must be treated as UNVERIFIED. Wave58 robustness numbers inherit the same problem because they were also committed only as result JSON without executable audit code. Do not tune implementation choices against March outcomes to recover the claimed number.",
+  "canonical_effect":"Revoke the prior FREEZE_WAVE57 decision. Wave57 and Wave58 numerical performance are historical/unverified only. Return to the last reproducible opponent benchmark before these claims, then rebuild a fully executable pair-level model with code + deterministic outputs before evaluating it.",
+  "september_outcomes_read":false,"production_changed":false
+}
