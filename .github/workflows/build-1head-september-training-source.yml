@@ -1,0 +1,33 @@
+name: build 1-head September rolling training source
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - build_1head_september_training_source.py
+      - .github/workflows/build-1head-september-training-source.yml
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1'
+      - name: Build prior-day September source
+        run: |
+          /usr/bin/time -f 'wall_sec=%e max_rss_kb=%M' -o /tmp/onehead_sep_training/time.txt python build_1head_september_training_source.py --target-date 2026-09-15 --out-dir /tmp/onehead_sep_training
+          python - <<'PY'
+          import json
+          p='/tmp/onehead_sep_training/meta.json';z=json.load(open(p))
+          assert z['training_max_date']<'2026-09-15'
+          assert z['valid_result_rows']>0
+          assert z['same_day_outcomes_read'] is False
+          assert z['target_or_future_rows']==0
+          assert z['chronology_guard'] is True
+          print('SEPTEMBER_TRAINING_SOURCE_OK',z['valid_result_rows'],z['training_max_date'])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: onehead-september-training-source-20260915
+          path: /tmp/onehead_sep_training/
