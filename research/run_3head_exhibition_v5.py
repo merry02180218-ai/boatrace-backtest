@@ -16,7 +16,7 @@ from backtest_v51_lane_corrected_tickets import corrected_direct, ff, norm_metri
 
 CANDS=[1,2,4,5,6]
 STATIC=['全国平均ST','全国勝率','全国2連対率','全国3連対率','当地勝率','当地2連対率','モーター2連対率','モーター3連対率','ボート2連対率']
-DIRECT_COMMON=['ex','st']; DIRECT_ORIG=['turn','straight','lap','avg']
+EX={202602071007,202602120606,202602150404,202602161108,202602171607,202602171911,202602191910,202602270507,202603031807,202603080101,202603081308,202603101810,202603111810,202603122004,202603141405,202603200809,202603211406,202603241009,202603271906,202603281904}
 
 def bycode(rs): return {str(r.get('レースコード','')).zfill(12):r for r in rs if r.get('レースコード')}
 def combo(x):
@@ -46,16 +46,16 @@ def load_direct(codes):
     tr=tk.get(code,{}); ss=st.get(code,{}); oo=og.get(code,{})
     common=bool(tr and ss and all(ff(tr.get(f'艇{b}_展示タイム')) is not None for b in range(1,7)) and all(ff(ss.get(f'艇{b}_スタート展示')) is not None for b in range(1,7)))
     ex,stsc,os=corrected_direct(code,tk,st,og,bias)
-    out[code]={'common':common,'ex':ex,'st':stsc,'os':os,'turn':orig_all6(oo,'回り足') or orig_all6(oo,'まわり足'),'straight':orig_all6(oo,'直線'),'lap':orig_all6(oo,'一周')}
+    turn=orig_all6(oo,'回り足') or orig_all6(oo,'まわり足'); straight=orig_all6(oo,'直線'); lap=orig_all6(oo,'一周')
+    avg=all(os.get(b,{}).get('avg') is not None for b in range(1,7))
+    out[code]={'common':common,'ex':ex,'st':stsc,'os':os,'turn':turn,'straight':straight,'lap':lap,'avg':avg}
   update_st(sr,sums,allv); d+=timedelta(days=1)
  return out
 
-def base_rows(races,direct,variant,venue_ok):
+def pair_rows(races,direct,variant,venue_ok):
  rr=[]
  for _,r in races.iterrows():
-  code=str(int(r.rc)).zfill(12); actual=combo(r.settle__actual_combo); di=direct.get(code)
-  if variant!='A' and (not di or not di['common']):continue
-  jcd=code[8:10]
+  code=str(int(r.rc)).zfill(12); actual=combo(r.settle__actual_combo); di=direct[code]; jcd=code[8:10]
   for a in CANDS:
    for b in CANDS:
     if a==b:continue
@@ -64,34 +64,44 @@ def base_rows(races,direct,variant,venue_ok):
     for m in STATIC:
      va=pd.to_numeric(r[f'card__艇{a}_{m}'],errors='coerce');vb=pd.to_numeric(r[f'card__艇{b}_{m}'],errors='coerce');v3=pd.to_numeric(r[f'card__艇3_{m}'],errors='coerce')
      for n,v in [('s',va),('t',vb),('sg3',va-v3),('tg3',vb-v3),('smt',va-vb),('pm',(va+vb)/2)]:z[f'{n}_{m}']=v
-    z['same_side']=int((a<3)==(b<3));z['second_inner']=int(a<3);z['third_inner']=int(b<3)
+    z['same_side']=int((a in [1,2])==(b in [1,2]));z['second_inner']=int(a in [1,2]);z['third_inner']=int(b in [1,2])
     if variant in ('B','C'):
-     for m in DIRECT_COMMON:
+     for m in ['ex','st']:
       q=di[m];z[f's_{m}']=q[a];z[f't_{m}']=q[b];z[f'sg3_{m}']=q[a]-q[3];z[f'tg3_{m}']=q[b]-q[3];z[f'smt_{m}']=q[a]-q[b];z[f'head3_{m}']=q[3]
     if variant=='C':
-     for m in ['turn','straight','lap']:
-      q={x:di['os'][x][m] for x in range(1,7)}; ready=venue_ok.get(jcd,{}).get(m,False) and di[m]
-      if ready:
+     for m in ['turn','straight','lap','avg']:
+      if venue_ok.get(jcd,{}).get(m,False) and di[m]:
+       q={x:di['os'][x][m] for x in range(1,7)}
        z[f's_{m}']=q[a];z[f't_{m}']=q[b];z[f'sg3_{m}']=q[a]-q[3];z[f'tg3_{m}']=q[b]-q[3];z[f'smt_{m}']=q[a]-q[b];z[f'head3_{m}']=q[3]
-     q={x:di['os'][x]['avg'] for x in range(1,7)}
-     if venue_ok.get(jcd,{}).get('avg',False):
-      z['s_avg']=q[a];z['t_avg']=q[b];z['sg3_avg']=q[a]-q[3];z['tg3_avg']=q[b]-q[3];z['smt_avg']=q[a]-q[b];z['head3_avg']=q[3]
     rr.append(z)
  return pd.DataFrame(rr)
+
 def cvscore(x):
- feats=[c for c in x if c not in ['race_code','second','third','y']]; caps=[];aucs=[]
+ feats=[c for c in x if c not in ['race_code','second','third','y']]; oof=np.full(len(x),np.nan); fold=[]
  for tr,va in GroupKFold(5).split(x,groups=x.race_code):
-  m=make_pipeline(SimpleImputer(strategy='median'),StandardScaler(),LogisticRegression(C=.25,class_weight='balanced',solver='liblinear',max_iter=2000,random_state=0));m.fit(x.iloc[tr][feats],x.iloc[tr].y);v=x.iloc[va].copy();v['p']=m.predict_proba(v[feats])[:,1]
-  top=v.sort_values(['race_code','p','second','third'],ascending=[1,0,1,1]).groupby('race_code').head(3); truth=v[v.y.eq(1)][['race_code','second','third']];caps.append(sum(((g.y==1).any()) for _,g in top.groupby('race_code'))/max(1,len(truth)));aucs.append(roc_auc_score(v.y,v.p))
- return {'features':len(feats),'capture':float(np.mean(caps)),'auc':float(np.mean(aucs)),'fold_capture':caps}
+  m=make_pipeline(SimpleImputer(strategy='median'),StandardScaler(),LogisticRegression(C=.25,class_weight='balanced',solver='liblinear',max_iter=2000,random_state=0));m.fit(x.iloc[tr][feats],x.iloc[tr].y);p=m.predict_proba(x.iloc[va][feats])[:,1];oof[va]=p
+  v=x.iloc[va].copy();v['p']=p;top=v.sort_values(['race_code','p','second','third'],ascending=[True,False,True,True]).groupby('race_code').head(3); nr=v.race_code.nunique(); fold.append(sum(g.y.eq(1).any() for _,g in top.groupby('race_code'))/nr)
+ v=x.copy();v['p']=oof;top=v.sort_values(['race_code','p','second','third'],ascending=[True,False,True,True]).groupby('race_code').head(3); nr=v.race_code.nunique(); hits=sum(g.y.eq(1).any() for _,g in top.groupby('race_code'))
+ return {'features':len(feats),'oof_hits':int(hits),'oof_races':int(nr),'capture':float(hits/nr),'auc':float(roc_auc_score(v.y,v.p)),'fold_capture':fold,'fold_capture_sd':float(np.std(fold))}
+
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--source',default='analysis_v289_3head_wave21_allrace_feature_settled.csv');ap.add_argument('--phase',choices=['feb','march'],default='feb');a=ap.parse_args()
- use=['date','race_code_norm','settle__actual_combo','settle__winner']+[f'card__艇{i}_{m}' for i in range(1,7) for m in STATIC];df=pd.read_csv(a.source,usecols=use,low_memory=False);df.date=pd.to_datetime(df.date);df['rc']=pd.to_numeric(df.race_code_norm,errors='coerce').astype('Int64');feb=df[(df.date>='2026-02-01')&(df.date<'2026-03-01')&(df.settle__winner==3)].copy()
- direct=load_direct([str(int(x)).zfill(12) for x in feb.rc.dropna()]); venue_ok={}
- for jcd in sorted({str(int(x)).zfill(12)[8:10] for x in feb.rc.dropna()}):
-  cs=[c for c in direct if c[8:10]==jcd];venue_ok[jcd]={m:(sum(bool(direct[c].get(m,False)) for c in cs)/len(cs)>=.8 if cs else False) for m in ['turn','straight','lap']};venue_ok[jcd]['avg']=any(venue_ok[jcd].values())
+ ap=argparse.ArgumentParser();ap.add_argument('--source',default='analysis_v289_3head_wave21_allrace_feature_settled.csv');a=ap.parse_args()
+ use=['date','race_code_norm','settle__actual_combo','settle__winner','settle__usable','closing_odds__ok']+[f'card__艇{i}_{m}' for i in range(1,7) for m in STATIC]
+ df=pd.read_csv(a.source,usecols=use,low_memory=False);df.date=pd.to_datetime(df.date);df['rc']=pd.to_numeric(df.race_code_norm,errors='coerce').astype('Int64');df=df[(df.settle__usable==1)&(df.closing_odds__ok==1)&(~df.rc.isin(EX))].copy()
+ feb_all=df[(df.date>='2026-02-01')&(df.date<'2026-03-01')].copy(); assert len(feb_all)==3970, len(feb_all)
+ feb_heads=feb_all[feb_all.settle__winner==3].copy(); assert len(feb_heads)==478, len(feb_heads)
+ codes=[str(int(x)).zfill(12) for x in feb_all.rc.dropna()]; direct=load_direct(codes)
+ venue_ok={}
+ for jcd in sorted({c[8:10] for c in codes}):
+  cs=[c for c in codes if c[8:10]==jcd and c in direct]
+  venue_ok[jcd]={m:(sum(bool(direct[c].get(m,False)) for c in cs)/len(cs)>=.8 if cs else False) for m in ['turn','straight','lap','avg']}
+ common_heads=feb_heads[feb_heads.rc.map(lambda x: direct.get(str(int(x)).zfill(12),{}).get('common',False))].copy()
+ assert len(common_heads)>0
  res={}
  for v in 'ABC':
-  x=base_rows(feb,direct,v,venue_ok);res[v]={'pair_rows':len(x),'races':x.race_code.nunique(),**cvscore(x)}
- winner=max(res,key=lambda k:(res[k]['capture'],res[k]['auc']));out={'phase':'FEB_ONLY_FREEZE','results':res,'frozen_winner':winner,'venue_ok':venue_ok,'september_outcomes_read':False,'production_changed':False};Path('research_v289_3head_exhibition_v5_feb.json').write_text(json.dumps(out,ensure_ascii=False,indent=2));print(json.dumps(out,ensure_ascii=False,indent=2))
+  x=pair_rows(common_heads,direct,v,venue_ok);res[v]={'pair_rows':len(x),'races':x.race_code.nunique(),**cvscore(x)}
+ assert len({res[v]['races'] for v in res})==1
+ winner=max(res,key=lambda k:(res[k]['capture'],res[k]['auc']))
+ out={'phase':'FEB_ONLY_FREEZE_CORRECTED','canonical_feb_eligible':len(feb_all),'canonical_feb_heads':len(feb_heads),'common_ready_head_races':len(common_heads),'results':res,'frozen_winner':winner,'venue_ok':venue_ok,'exact_v288_exclusion_preserved':True,'september_outcomes_read':False,'production_changed':False}
+ Path('research_v289_3head_exhibition_v5_feb.json').write_text(json.dumps(out,ensure_ascii=False,indent=2));print(json.dumps(out,ensure_ascii=False,indent=2))
 if __name__=='__main__':main()
