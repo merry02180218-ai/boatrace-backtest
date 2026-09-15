@@ -10,6 +10,8 @@ on:
       - 'track_exhibition_boats_v33.py'
       - '.github/workflows/validate-exhibition-live-v17-v33.yml'
 
+# This workflow validates the exact production-style wrapper after the unchanged
+# v17+v33 combination passed the four-sample technical matrix.
 jobs:
   validate-live-wrapper:
     runs-on: [self-hosted, Windows, X64]
