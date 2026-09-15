@@ -44,12 +44,21 @@
 - 結論: one-replacement方向は小幅改善するが、そのままproduction採用は不可。KEEP破壊を抑えながら救済を選別する必要あり。
 - `SEPTEMBER_OUTCOMES_USED False` / `PRODUCTION_CHANGED False` を確認。
 
-## 次作業開始 — Wave5 rescue vs damage 分解
-1. frozen June 71Rを維持し、threshold -0.05で救えたREPLACE_ONE 5Rと壊したKEEP 3Rを明示抽出する。
-2. marginだけでなく、keep/drop/replacement各艇の predicted probability、ex/st/rank、turn/straight/orig_avg rank、schema、現行pair構成の差を比較する。
-3. June結果でルールを直接最適化してproduction化しない。まず診断として「damageを避けられる因果特徴」があるか確認する。
-4. candidate guardを複数提示する場合は、同じJune 71Rで override数 / hit / delta / false damage / REPLACE_ONE rescue を併記する。
-5. September 2026結果・払戻は絶対に読まない。production/LIVEは変更しない。
+## Wave5 rescue vs damage — 完了
+- Run `34995646024` / Job `104471068416` / Artifact `10407751198` / success。
+- Artifact SHA256 `9c8809e5c735b002b84e5c22b61f4d807b847ef4f17b58ab97081b29db75fb29`。
+- threshold -0.05: 17 overrides / rescue5 / damage3 / hit24/71=33.80% / baseline比+2。
+- 主力 `lap+turn+straight` は rescue3 / damage3 で差引0。`base` rescue1、`lap+turn` rescue1が純改善に寄与。
+- threshold 0.05は overrides2 / rescue1 / damage0 / +1 と安全寄りだが発動が少ない。
+- `SEPTEMBER_OUTCOMES_USED False` / `PRODUCTION_CHANGED False`。
+
+## 次作業開始 — Wave6 場別効果監査
+1. ユーザー指摘「場が関係あるかも」を検証する。
+2. frozen June 71Rを維持し、race_codeからJCD（場コード）を復元して、場別に baseline / override数 / rescue / damage / delta を集計する。
+3. Wave5 focus 8R（rescue5/damage3）の場分布を明示し、特定場にdamageまたはrescueが偏るか確認する。
+4. `lap+turn+straight` に限定した場別分解も併記する。
+5. 小標本の場別ルールをJuneだけでproduction化しない。まず診断し、必要なら次Waveで場を特徴量またはguard候補として過去月OOFへ持ち込む。
+6. September 2026結果・払戻は絶対に読まない。production/LIVEは変更しない。
 
 ## 現行production / LIVE
 - production profile: `1HEAD_PRODUCTION_20260915_HEAD078_V351_OPPONENTCORE_G2_045_G3_100`
