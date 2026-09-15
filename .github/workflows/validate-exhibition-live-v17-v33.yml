@@ -1,0 +1,51 @@
+name: validate SES live wrapper v17 v33
+run-name: SES live wrapper v17+v33 end-to-end validation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_exhibition_ses_live_local.py'
+      - 'auto_seed_exhibition_motion_v17.py'
+      - 'track_exhibition_boats_v33.py'
+      - '.github/workflows/validate-exhibition-live-v17-v33.yml'
+
+jobs:
+  validate-live-wrapper:
+    runs-on: [self-hosted, Windows, X64]
+    timeout-minutes: 20
+    env:
+      LOCAL_PYTHON: 'C:\Users\merry\AppData\Local\Programs\Python\Python311\python.exe'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify runtime
+        shell: powershell
+        run: |
+          & $env:LOCAL_PYTHON -c "import cv2,numpy; print('runtime ok')"
+          ffmpeg -version | Select-Object -First 1
+      - name: Run unchanged live wrapper on varied-entry technical sample
+        shell: powershell
+        run: |
+          $sw=[Diagnostics.Stopwatch]::StartNew()
+          & $env:LOCAL_PYTHON run_exhibition_ses_live_local.py --date 20260909 --stadium 01kiryu --race 12 --entry-order '1,2,4,5,6,3' --out-dir live_validation
+          $code=$LASTEXITCODE
+          $sw.Stop(); "LIVE_WRAPPER_WALL_SECONDS=$($sw.Elapsed.TotalSeconds)"
+          if ($code -ne 0) { throw 'live wrapper failed closed' }
+      - name: Show live payload
+        if: always()
+        shell: powershell
+        run: |
+          Get-ChildItem -Recurse live_validation -ErrorAction SilentlyContinue
+          $f=Get-ChildItem -Recurse -Filter live_exhibition_ses.json live_validation -ErrorAction SilentlyContinue | Select-Object -First 1
+          if ($f) { Get-Content $f.FullName -Raw }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ses-live-v17-v33-validation
+          path: |
+            live_validation/**/boatcast_*_startclip.json
+            live_validation/**/auto_seed_meta_v17.json
+            live_validation/**/auto_seeds_v17.json
+            live_validation/**/exhibition_tracking_v33.json
+            live_validation/**/live_exhibition_ses.json
+          if-no-files-found: warn
