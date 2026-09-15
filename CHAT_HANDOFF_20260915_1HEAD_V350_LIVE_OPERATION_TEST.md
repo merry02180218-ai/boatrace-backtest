@@ -46,3 +46,10 @@
 - **展示ready後の正式v351 HEAD/SECOND/THIRD計算と3点生成はまだ接続していない。** readyをfinal扱いしないことで誤BETを防いでいる。
 - 次の再開地点は、日次v351 cacheを作り、ready artifactを正式v351 scorerへ接続すること。
 - September rolling learningはLIVE cache側で chronology-safe cutoffを実装する。historical regressionのSeptember UNREADは変更しない。
+
+## 作業開始 2026-09-15 — v351正式LIVE scorer接続
+- ready展示を正式v351 HEAD判定へ接続し、PASS時のみv351 opponentCore SECOND g2=.45 / THIRD g3=1.00 + HYBRID alpha=.70で3点生成する。
+- DROP時は買い目を出さない。必要入力不足・cutoff不明・期限超過はfail-closeする。
+- 重い履歴/モデル準備はraceごとに再構築せず、日次cache化してLIVE scorerは単レース計算だけにする。
+- September LIVE学習はtarget prediction timeより前に確定済みの結果だけを許可し、target/future resultは絶対に読まない。historical production sentinelは従来どおりSeptember UNREADを維持する。
+- 実装後はCI/Actionsを確認し、Run/Job/Artifact/commitと次の再開地点をこのhandoffへ追記する。
