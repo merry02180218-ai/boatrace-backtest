@@ -1,9 +1,5 @@
 name: analyze-4head-b4-minus-b3-motor-full-universe
 on:
-  push:
-    paths:
-      - 'analyze_4head_b4_minus_b3_motor_full_universe.py'
-      - '.github/workflows/analyze-4head-b4-minus-b3-motor-full-universe.yml'
   workflow_dispatch:
 jobs:
   analyze:
