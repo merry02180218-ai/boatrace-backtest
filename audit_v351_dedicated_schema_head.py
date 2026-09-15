@@ -38,7 +38,6 @@ def stats(z,cut):
 
 def main():
     d=pd.read_csv(SRC,dtype={'race_code':str}); d.race_code=d.race_code.str.zfill(12)
-    # hard guard: audit source is historical through Aug; never admit Sep 2026 outcomes.
     d=d[d.race_code.str[:8]<'20260901'].copy()
     allrows=[]; best=[]
     for schema in SCHEMAS:
@@ -52,16 +51,14 @@ def main():
               n,h,hr,e,er=stats(z,cut)
               candidates.append({'schema':schema,'min_train':mt,'C':C,'cut':cut,'ready':len(g),'oof':len(scored),'n':n,'head':h,'head_rate':hr,'exact3':e,'exact3_rate':er})
         c=pd.DataFrame(candidates); allrows.append(c)
-        # Research selection: prioritize >=10 picks and >=78% head, then volume, then exact3/head rate.
         viable=c[(c.n>=10)&(c.head_rate>=78)].sort_values(['n','exact3_rate','head_rate'],ascending=[False,False,False])
         if len(viable): b=viable.iloc[0]
         else:
           viable=c[c.n>=5].sort_values(['head_rate','n','exact3_rate'],ascending=[False,False,False])
           b=viable.iloc[0] if len(viable) else c.sort_values(['oof','head_rate'],ascending=[False,False]).iloc[0]
         best.append(b.to_dict())
-        print('BEST',schema,'READY',int(b.ready),'OOF',int(b.oof),'MIN_TRAIN',int(b.min_train),'C',b.C,'CUT',b.cut,'R',int(b.n),'HEAD',int(b.head),'HEAD_RATE',b.head_rate,'EXACT3',int(b.exact3),'EXACT3_RATE',b.exact3_rate)
-        # venue holdout descriptive on selected hyperparams/cut (OOF remains chronological within schema)
-        z=oof(g,fs,int(b.min_train),float(b.C)); q=z[z.dedicated_p.notna() & (z.dedicated_p>=float(b.cut))]
+        print('BEST',schema,'READY',int(b['ready']),'OOF',int(b['oof']),'MIN_TRAIN',int(b['min_train']),'C',b['C'],'CUT',b['cut'],'R',int(b['n']),'HEAD',int(b['head']),'HEAD_RATE',b['head_rate'],'EXACT3',int(b['exact3']),'EXACT3_RATE',b['exact3_rate'])
+        z=oof(g,fs,int(b['min_train']),float(b['C'])); q=z[z.dedicated_p.notna() & (z.dedicated_p>=float(b['cut']))]
         for j,x in q.groupby('jcd'):
           print('HOLDOUT',schema,'JCD',int(j),'R',len(x),'HEAD',int(x.head_hit.sum()),'HEAD_RATE',100*x.head_hit.mean() if len(x) else np.nan,'EXACT3',int(x.hit.sum()))
         z.to_csv('analysis_v351_dedicated_'+schema.replace('+','_')+'.csv',index=False,encoding='utf-8-sig')
