@@ -1,5 +1,5 @@
 name: regress exhibition seed17 tracker27 similarity camera motion
-run-name: SES v27 similarity-camera matrix
+run-name: SES v30 affine-camera matrix via registered v27 workflow
 
 on:
   workflow_dispatch:
@@ -12,6 +12,7 @@ on:
       - 'track_exhibition_boats_v21.py'
       - 'track_exhibition_boats_v25.py'
       - 'track_exhibition_boats_v27.py'
+      - 'track_exhibition_boats_v30.py'
       - '.github/workflows/regress-exhibition-seed17-track27.yml'
 
 jobs:
@@ -57,29 +58,29 @@ jobs:
           & $env:LOCAL_PYTHON auto_seed_exhibition_motion_v17.py $video.FullName --entry-order $env:ENTRY_ORDER --nominal-sec 29 --out auto_seed_meta_v17.json --seed-out auto_seeds_v17.json
           if ($LASTEXITCODE -ne 0) { throw 'seed v17 failed closed' }
           $sw.Stop(); "SEED_V17_SECONDS=$($sw.Elapsed.TotalSeconds)"
-      - name: Track v27 similarity camera motion
+      - name: Track v30 shared robust affine camera
         shell: powershell
         run: |
           $video=Get-ChildItem -Filter 'boatcast_*_startclip.mp4' | Select-Object -First 1
           $meta=Get-Content auto_seed_meta_v17.json -Raw | ConvertFrom-Json
           $sw=[Diagnostics.Stopwatch]::StartNew()
-          & $env:LOCAL_PYTHON track_exhibition_boats_v27.py $video.FullName --slit-sec ([string]$meta.selected_sec) --seed-json auto_seeds_v17.json --seed-meta auto_seed_meta_v17.json --out exhibition_tracking_v27.json --stride 2 --topk 6 --per-boat-keep 5 --per-path-keep 12 --beam-width 24 --bank-cap 5
+          & $env:LOCAL_PYTHON track_exhibition_boats_v30.py $video.FullName --slit-sec ([string]$meta.selected_sec) --seed-json auto_seeds_v17.json --seed-meta auto_seed_meta_v17.json --out exhibition_tracking_v30.json --stride 2 --topk 6 --per-boat-keep 5 --per-path-keep 12 --beam-width 24 --bank-cap 5
           $code=$LASTEXITCODE
-          $sw.Stop(); "TRACK_V27_SECONDS=$($sw.Elapsed.TotalSeconds)"
-          if ($code -ne 0) { throw 'tracker v27 failed closed' }
+          $sw.Stop(); "TRACK_V30_SECONDS=$($sw.Elapsed.TotalSeconds)"
+          if ($code -ne 0) { throw 'tracker v30 failed closed' }
       - name: Summarize
         if: always()
         shell: powershell
         run: |
           if (Test-Path auto_seed_meta_v17.json) { Get-Content auto_seed_meta_v17.json -Raw }
-          if (Test-Path exhibition_tracking_v27.json) { Get-Content exhibition_tracking_v27.json -Raw }
+          if (Test-Path exhibition_tracking_v30.json) { Get-Content exhibition_tracking_v30.json -Raw }
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: seed17-track27-${{ matrix.label }}
+          name: seed17-track30-via-v27-${{ matrix.label }}
           path: |
             boatcast_*_startclip.json
             auto_seed_meta_v17.json
             auto_seeds_v17.json
-            exhibition_tracking_v27.json
+            exhibition_tracking_v30.json
           if-no-files-found: warn
