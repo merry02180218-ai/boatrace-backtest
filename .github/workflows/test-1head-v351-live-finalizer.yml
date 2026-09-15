@@ -1,0 +1,38 @@
+name: test-1head-v351-live-finalizer
+on:
+  push:
+    paths:
+      - 'run_1head_v351_live_finalize.py'
+      - '.github/workflows/test-1head-v351-live-finalizer.yml'
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scikit-learn
+      - name: Contract PASS DROP guards and timing
+        run: |
+          mkdir -p /tmp/v351-final
+          python - <<'PY'
+          import json
+          b={'race_code':'202609159912','pre_class':'S','legacy_pre_p':.84,'deadline_jst':'2026-09-15T20:00:00+09:00','evaluated_at_jst':'2026-09-15T19:50:00+09:00','minutes_to_deadline':10,'training_cutoff':'2026-09-14T23:59:59+09:00','production_profile':'1HEAD_PRODUCTION_20260915_HEAD078_V351_OPPONENTCORE_G2_045_G3_100','final_head_p':.81,'opp_mass':.50,'head_exhibition_pass':True,'exhibition_ready':True,'corrected_ex':{'2':.4,'3':.5,'4':.6,'5':.7,'6':.8},'corrected_st':{'2':.4,'3':.5,'4':.6,'5':.7,'6':.8},'corrected_straight':{'2':.4,'3':.5,'4':.6,'5':.7,'6':.8},'corrected_orig_avg':{'2':.4,'3':.5,'4':.6,'5':.7,'6':.8},'p2':{'2':.2,'3':.2,'4':.2,'5':.2,'6':.2},'pc':{f'{s}-{t}':.25 for s in range(2,7) for t in range(2,7) if s!=t},'exhibition_hashes':{},'result_or_payout_used':False,'chronology_guard':True}
+          open('/tmp/v351-final/in.json','w').write(json.dumps(b))
+          d=dict(b);d['final_head_p']=.77;open('/tmp/v351-final/drop.json','w').write(json.dumps(d))
+          PY
+          /usr/bin/time -f 'wall_sec=%e max_rss_kb=%M' -o /tmp/v351-final/time.txt python run_1head_v351_live_finalize.py --input /tmp/v351-final/in.json --out /tmp/v351-final/pass.json
+          python run_1head_v351_live_finalize.py --input /tmp/v351-final/drop.json --out /tmp/v351-final/drop-out.json
+          python - <<'PY'
+          import json
+          p=json.load(open('/tmp/v351-final/pass.json'));d=json.load(open('/tmp/v351-final/drop-out.json'))
+          assert p['status']=='PASS' and len(p['tickets'])==3 and p['result_or_payout_used'] is False and p['chronology_guard'] is True
+          assert d['status']=='DROP' and d['tickets']==[]
+          print('V351_LIVE_FINALIZER_OK',p['scoring_ms'])
+          PY
+          cat /tmp/v351-final/time.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v351-live-finalizer-contract
+          path: /tmp/v351-final/
