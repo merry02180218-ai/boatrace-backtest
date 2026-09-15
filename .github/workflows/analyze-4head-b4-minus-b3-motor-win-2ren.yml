@@ -1,10 +1,6 @@
 name: analyze-4head-b4-minus-b3-motor-win-2ren
 
 on:
-  push:
-    paths:
-      - 'analyze_4head_b4_minus_b3_motor_win_2ren.py'
-      - '.github/workflows/analyze-4head-b4-minus-b3-motor-win-2ren.yml'
   workflow_dispatch:
 
 jobs:
