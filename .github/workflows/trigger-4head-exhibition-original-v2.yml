@@ -10,6 +10,7 @@ jobs:
         with: {python-version: '3.11'}
       - run: pip install -q numpy pandas scikit-learn requests beautifulsoup4
       - run: |
+          set -o pipefail
           grep -q "END=date(2026,8,31)" analyze_4head_exhibition_original_trainonly.py
           grep -q "September outcome access blocked" analyze_4head_exhibition_original_trainonly.py
           python analyze_4head_exhibition_original_trainonly.py | tee /tmp/run.log
