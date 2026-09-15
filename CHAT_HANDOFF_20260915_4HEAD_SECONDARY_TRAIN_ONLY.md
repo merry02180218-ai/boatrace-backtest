@@ -21,3 +21,15 @@
 7. CI完了後、commit SHA / Run / Job / Artifact / train・holdout・Apr-Aug結果 / 結論 / 次の再開地点をこの引き継ぎへ追記する。
 
 Status: `HEAD4_SECONDARY_CAUSAL_TRAIN_ONLY_STARTED`
+
+## BEFORE — exhibition/original study repair
+Run `34928751377` はActions上 success だったが、解析本体は `winner` 列参照で `AttributeError` 停止していた。現行 `settle_all()` 系の正しい目的変数は `actual_head4` なので、結果を読まずにコード契約だけ確認して修正する。
+
+これからやること:
+1. `analyze_4head_exhibition_original_trainonly.py` の `winner` 依存を `actual_head4` に修正する。
+2. workflow に `set -o pipefail` を追加し、Python失敗時にActionsも必ずfailureにする。
+3. September `UNREAD` guard、production frozenを維持する。
+4. 修正後に再実行し、Run / Job / Artifact とApr-Jun train-only選択、固定Jul-Aug評価を回収する。
+5. 完了後にこのhandoffへAFTERを追記する。
+
+Status: `HEAD4_EXHIBITION_ORIGINAL_REPAIR_STARTED`
