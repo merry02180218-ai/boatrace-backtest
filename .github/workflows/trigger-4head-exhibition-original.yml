@@ -1,0 +1,23 @@
+name: trigger-4head-exhibition-original
+on:
+  push:
+    paths:
+      - '.github/workflows/trigger-4head-exhibition-original.yml'
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scikit-learn requests beautifulsoup4
+      - run: |
+          grep -q "END=date(2026,8,31)" analyze_4head_exhibition_original_trainonly.py
+          grep -q "September outcome access blocked" analyze_4head_exhibition_original_trainonly.py
+          python analyze_4head_exhibition_original_trainonly.py | tee /tmp/run.log
+          cp /tmp/run.log /tmp/head4_exhibition/run.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-exhibition-original-trainonly
+          retention-days: 14
+          path: /tmp/head4_exhibition/*
