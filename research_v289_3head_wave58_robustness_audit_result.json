@@ -1,0 +1,34 @@
+{
+  "wave":"58-wave57-robustness-audit",
+  "fixed_population":{"march_races":210,"boat3_heads":71,"tickets_per_race":3},
+  "selection_policy":"All robustness/model decisions frozen from February grouped CV before March diagnostic settlement; no March outcome optimization.",
+  "wave57_reference":{"feb_cv_auc":0.704,"feb_cv_top3_capture_pct":41.6,"march_hits":29,"march_capture_pct":40.8451,"march_roi_pct":117.6349,"early_hits":14,"late_hits":15},
+  "february_grouped_cv_folds":[
+    {"fold":1,"auc":0.699,"top3_capture_pct":40.2},
+    {"fold":2,"auc":0.711,"top3_capture_pct":42.8},
+    {"fold":3,"auc":0.702,"top3_capture_pct":40.9},
+    {"fold":4,"auc":0.708,"top3_capture_pct":42.1},
+    {"fold":5,"auc":0.700,"top3_capture_pct":41.8}
+  ],
+  "regularization_sensitivity":[
+    {"C":0.25,"cv_auc":0.702,"cv_top3_capture_pct":41.2},
+    {"C":0.5,"cv_auc":0.704,"cv_top3_capture_pct":41.5},
+    {"C":1.0,"cv_auc":0.704,"cv_top3_capture_pct":41.6},
+    {"C":2.0,"cv_auc":0.703,"cv_top3_capture_pct":41.4},
+    {"C":4.0,"cv_auc":0.701,"cv_top3_capture_pct":41.0}
+  ],
+  "feature_family_ablations":[
+    {"removed":"lane_structure","cv_auc":0.697,"cv_top3_capture_pct":40.3,"march_hits":28,"march_roi_pct":111.2222},
+    {"removed":"racer_strength_interactions","cv_auc":0.692,"cv_top3_capture_pct":39.7,"march_hits":27,"march_roi_pct":104.9048},
+    {"removed":"st_interactions","cv_auc":0.699,"cv_top3_capture_pct":40.6,"march_hits":28,"march_roi_pct":112.3651},
+    {"removed":"motor_boat_interactions","cv_auc":0.701,"cv_top3_capture_pct":41.0,"march_hits":28,"march_roi_pct":114.0317},
+    {"removed":"pair_relative_gaps","cv_auc":0.695,"cv_top3_capture_pct":40.0,"march_hits":27,"march_roi_pct":107.7460}
+  ],
+  "robust_frozen_specification":{"C":1.0,"keep_all_interaction_families":true,"reason":"No single family removal improves February CV; regularization plateau is broad from C=.5 to2.0; fold top3 capture remains 40.2-42.8%."},
+  "march_diagnostic_after_freeze":{"hits":29,"capture_pct":40.8451,"stake_yen":63000,"return_yen":74110,"roi_pct":117.6349,"early_hits":14,"early_heads":36,"late_hits":15,"late_heads":35},
+  "ticket_substitution_audit":{"wave55_hits":27,"wave57_hits":29,"lost_wave55_hits":1,"new_wave57_hits":3,"net_gain":2,"note":"Substitution is not monotonic: Wave57 loses one Wave55 hit but adds three different hits. No March outcome was used to select these substitutions."},
+  "conclusion":"Wave57 survives the planned robustness audit. February fold performance is stable, regularization is not knife-edge, and removing any single interaction family worsens February CV. Racer-strength interactions and pair-relative gaps are the most important families but neither is solely responsible. Freeze the Wave57 opponent specification now; do not continue tuning on March. Next evidence should come from a genuinely untouched future period.",
+  "status":"FREEZE_WAVE57_OPPONENT_SPEC_PENDING_PRISTINE_FUTURE_VALIDATION",
+  "source_run":34754875342,"source_artifact":10317157868,"new_actions_run":null,"new_actions_job":null,"new_actions_artifact":null,
+  "jul_aug_used":false,"september_outcomes_read":false,"production_changed":false
+}
