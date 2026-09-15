@@ -26,10 +26,17 @@
 ## Wave9 — 実行中
 - strict fold-local LOO実装済み。production変更なし、September outcomes UNREAD。
 
-## 2026-09-16 03:00 daily failure — BEFORE recovery
-- Run `35006130791` / Job `104506215489` failure。
+## 2026-09-16 03:00 daily failure / recovery
+- Run `35006130791` / initial Job `104506215489` failure、retry Job `104583289886` failure。
 - failure step: `Resolve JST date and latest rolling cards`。
 - exact cause: `PRE_SOURCE_NOT_READY: rolling race cards for 20260916 are not available at 03:00 JST` / exit 30。
-- 03:00 workflowが `v351-1head-live-pre-sab-$DATE-rolling` artifactを必須依存にしている設計欠陥が顕在化。
-- これから、rolling artifactが無い時も当日カードを取得/構築してdaily all-R cacheを作れるfallbackを実装し、fresh runで復旧確認する。
-- LIVE chronology guard維持。結果・払戻は使用しない。September 2026 outcomesはUNREAD維持。
+- 03:00 workflowが rolling artifactを必須依存にしている設計欠陥。
+
+### BEFORE: Boatcast direct fallback implementation
+- User decision: rolling artifactが無ければ **Boatcast またはボートレース日和から当日カードを取得**する。
+- 実装優先順位は既にLIVE展示取得で使用・監査済みのBoatcastをprimaryとする。Boatcastの出走表は結果/払戻を読まず、当日静的PREカードだけを構築する。
+- rolling artifactがあれば従来カードを使用、無ければBoatcast direct card builderを起動する。
+- direct builderは対象日一致を確認し、開催場×12R×6艇のPRE出走情報だけをCSV化。結果/競走成績/払戻エンドポイントは使用禁止。
+- 生成CSVを既存 `prepare_1head_v351_live_cache.py` にそのまま渡し、all-R cacheを作る。
+- fresh workflow runで `all_race_cache_R > 0` とartifact生成まで確認する。
+- LIVE chronology guard維持。September 2026 outcomesはUNREAD、production変更なし。
