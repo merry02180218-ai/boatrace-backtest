@@ -36,8 +36,19 @@
 
 ## schema別補正 OOF生成 — 作業前記録
 - ユーザー指示により、`lap+turn` だけでなく `half+turn+straight`（半周ラップ場）と、オリジナル展示項目が無い/展示タイム中心の場も同じ考え方で補正可能か試す。
-- まず最新schema mapと監査コードを確認し、各schemaについて結果を未来参照しないchronological OOFを生成できる実装にする。
 - 目標は `raw schema score -> schema補正（必要なら場補正） -> corrected HEAD p -> 共通cutoff 0.78`。
-- 補正は同じ評価対象自身の結果で後付けしない。月外/時系列foldまたはvenue holdoutで検証する。
-- September 2026結果はUNREAD維持。production v351条件はこの試験では変更しない。
-- 出力予定: schema別 READY/OOF/補正式・corrected cutoff0.78の対象R/頭率/exact3率、場別holdout、比較CSV。
+- 補正は同じ評価対象自身の結果で後付けしない。September 2026結果はUNREAD維持。production v351条件は変更しない。
+
+## schema別補正 OOF生成 — 実行結果
+- 実装 commit `3f9a650b4a89d56d4b1327d1ab20ed4df77b5150`: `audit_v351_schema_calibration.py`。
+- workflow commit `fbfb00e2a9b00033bc5aab21532987caad486d2a`: `.github/workflows/audit-v351-schema-calibration.yml`。
+- Actions Run `34971467223` / Job `104388520815` / conclusion `success`。
+- Artifact `10397660673` / name `audit-v351-schema-calibration` / digest `sha256:a1338e9df5693a52ca0e13d902ed3831028a9fc9fb11d47c092b4201d5fd7ed4`。
+- schema map: JCD01=`half+turn+straight`; JCD13/JCD18=`lap+turn`; JCD19=`turn+straight`; JCD02/05/12/15=`base`; その他の対象場は主に`lap+turn+straight`。
+- READY/OOF: `lap+turn+straight` READY207/raw OOF177/cal OOF172。`lap+turn` READY48/raw OOF18/cal OOF13。`half+turn+straight` READY18/raw OOF0。`turn+straight` READY5/raw OOF0。`base` READY10/raw OOF0。
+- chronological logistic calibration後 cutoff0.78: `lap+turn+straight` 172R / 頭148 = 86.05% / exact3 69 = 40.12%。ただしcalibrationがほぼ全172Rを0.78以上へ押し上げるため、選別力改善とは言えずproduction採用しない。
+- `lap+turn` はcal OOF13のうち corrected>=0.78 が1Rのみで、その1Rは頭外れ・exact3外れ。単純logistic補正では復活できない。
+- `half+turn+straight`、`turn+straight`、`base` はraw OOF自体が0のため、このRunでは補正値を決定不能。結果を見た後付け補正は禁止。
+- 結論: 今回の単純schema_p→logistic補正をproductionへ入れない。`lap+turn` はscore方向/特徴意味の再設計が必要。半周ラップ・展示タイム中心schemaはまず専用chronological OOF生成が必要。
+- production v351は変更なし。September 2026結果UNREAD維持。
+- 次の再開地点: `half+turn+straight` / `turn+straight` / `base` 用に、各schemaの利用可能特徴からHEAD raw OOFを時系列生成する専用監査を作る。同時に`lap+turn`は単純校正ではなく特徴方向を含む専用HEADモデルを検証し、共通cutoff0.78へ変換できるか比較する。
