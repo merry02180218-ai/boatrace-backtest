@@ -1,18 +1,20 @@
 name: audit-v351-schema-correct-rebuild
 on:
   push:
+    paths:
+      - 'audit_triggers/v351_schema_correct_rebuild.txt'
   workflow_dispatch:
 permissions:
   contents: read
 jobs:
   audit:
-    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[v351-schema-audit]')
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: {python-version: '3.11'}
+        with:
+          python-version: '3.11'
       - run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4
       - run: python audit_v351_schema_correct_rebuild.py | tee schema_correct_rebuild.txt
       - uses: actions/upload-artifact@v4
