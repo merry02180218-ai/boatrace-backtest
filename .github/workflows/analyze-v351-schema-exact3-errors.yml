@@ -1,7 +1,7 @@
 name: analyze-v351-schema-exact3-errors
-# NOTE: quote 'on' so YAML 1.1 parsers do not coerce it to boolean.
-'on':
-  workflow_dispatch: {}
+# retry-trigger: align with proven dedicated-schema workflow
+on:
+  workflow_dispatch:
   push:
     paths:
       - 'analyze_v351_schema_exact3_errors.py'
@@ -17,15 +17,9 @@ jobs:
           python-version: '3.11'
       - run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4
       - name: Rebuild schema audit source
-        shell: bash
-        run: |
-          set -o pipefail
-          python audit_v351_schema_correct_rebuild.py | tee schema_rebuild.txt
+        run: python audit_v351_schema_correct_rebuild.py | tee schema_rebuild.txt
       - name: Decompose exact3 errors
-        shell: bash
-        run: |
-          set -o pipefail
-          python analyze_v351_schema_exact3_errors.py | tee schema_exact3_errors.txt
+        run: python analyze_v351_schema_exact3_errors.py | tee schema_exact3_errors.txt
       - uses: actions/upload-artifact@v4
         with:
           name: analyze-v351-schema-exact3-errors
