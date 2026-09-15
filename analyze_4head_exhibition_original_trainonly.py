@@ -60,7 +60,7 @@ def main():
  z=base.settle_all().merge(base.build_motor_features(),on=['race_code','month'],how='inner')
  z=z[(z.motor_win_diff_4v3>=base.WIN_CUT)&(z.motor_2ren_diff_4v3>=base.REN2_CUT)]
  z=z.merge(base.build_prior_features(),on=['race_code','month'],how='left')
- z['race_code']=z.race_code.astype(str).str.zfill(12);z['head4']=(z.winner==4).astype(int)
+ z['race_code']=z.race_code.astype(str).str.zfill(12);z['head4']=pd.to_numeric(z.actual_head4,errors='coerce').fillna(0).astype(int)
  ex=build_ex(set(z.race_code));z=z.merge(ex,on='race_code',how='left');z.to_csv(OUT/'detail.csv',index=False)
  feats=['ex4_adv_all','ex4_adv_inside','st4_adv_all','st4_adv_inside','turn4_adv_inside','straight4_adv_inside','orig4_adv_inside','straight4_minus3','turn4_minus3']
  grid=[]
@@ -71,7 +71,7 @@ def main():
    tt=tr[(tr.ex_complete==1)&tr[f].notna()];hh=ho[(ho.ex_complete==1)&ho[f].notna()]
    if len(tt)<25:continue
    for q in np.arange(.15,.86,.05):
-    cut=float(tt[f].quantile(q));a=tt[tt[f]>=cut];
+    cut=float(tt[f].quantile(q));a=tt[tt[f]>=cut]
     if len(a)<25:continue
     grid.append({'player_cut':pc,'feature':f,'q':q,'cut':cut,**{f'train_{k}':v for k,v in metric(a).items()},**{f'hold_{k}':v for k,v in metric(hh[hh[f]>=cut]).items()}})
  g=pd.DataFrame(grid);g.to_csv(OUT/'grid.csv',index=False)
