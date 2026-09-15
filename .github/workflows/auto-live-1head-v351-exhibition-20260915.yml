@@ -1,107 +1,88 @@
 name: auto-live-1head-v351-exhibition-20260915
 on:
-  schedule:
-    - cron: '*/5 * 15 9 *'
+  schedule: [{cron: '*/5 * 15 9 *'}]
   workflow_dispatch:
   push:
     paths:
       - '.github/workflows/auto-live-1head-v351-exhibition-20260915.yml'
-permissions:
-  contents: read
-  actions: read
+      - 'run_1head_v351_live_finalize.py'
+      - 'run_1head_v351_live_exhibition_gate.py'
+permissions: {contents: read, actions: read}
 jobs:
   prepare:
     if: github.event_name != 'push'
     runs-on: ubuntu-latest
-    outputs:
-      matrix: ${{ steps.m.outputs.matrix }}
+    outputs: {matrix: '${{ steps.m.outputs.matrix }}'}
     steps:
       - uses: actions/checkout@v4
       - id: m
         env: {GH_TOKEN: '${{ github.token }}'}
         run: |
-          set -euo pipefail
-          rm -rf /tmp/pre && mkdir -p /tmp/pre
-          gh api /repos/$GITHUB_REPOSITORY/actions/artifacts/10379049041/zip > /tmp/pre.zip
-          unzip -q /tmp/pre.zip -d /tmp/pre
-          CSV=$(find /tmp/pre -name pre_candidates_sab.csv -print -quit)
-          test -n "$CSV"
+          set -euo pipefail; rm -rf /tmp/pre && mkdir -p /tmp/pre
+          ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-pre-sab-20260915-rolling&per_page=20" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id')
+          test -n "$ID" && test "$ID" != null; gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$ID/zip" > /tmp/pre.zip; unzip -q /tmp/pre.zip -d /tmp/pre
+          CSV=$(find /tmp/pre -name pre_candidates_sab.csv -print -quit);test -n "$CSV"
           MATRIX=$(python - "$CSV" <<'PY'
           import csv,json,sys
           with open(sys.argv[1],encoding='utf-8-sig',newline='') as f:r=list(csv.DictReader(f))
-          inc=[]
-          for x in r:
-              c=str(x['race_code']).zfill(12)
-              inc.append({'code':c,'jcd':int(c[8:10]),'race':int(c[10:12]),'pre_class':x['pre_class']})
-          print(json.dumps({'include':inc},separators=(',',':')))
+          print(json.dumps({'include':[{'code':str(x['race_code']).zfill(12),'jcd':int(str(x['race_code']).zfill(12)[8:10]),'race':int(str(x['race_code']).zfill(12)[10:12]),'pre_class':x['pre_class'],'legacy_pre_p':x['legacy_pre_p']} for x in r]},separators=(',',':')))
           PY
-          )
-          echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
+          );echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
   watch:
     needs: prepare
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       max-parallel: 4
-      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+      matrix: '${{ fromJSON(needs.prepare.outputs.matrix) }}'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: '3.11'}
-      - run: pip install -q requests beautifulsoup4 numpy pandas scikit-learn
+      - run: pip install -q requests beautifulsoup4 numpy pandas scipy scikit-learn
       - name: Skip immutable final
         id: prior
         env: {GH_TOKEN: '${{ github.token }}', CODE: '${{ matrix.code }}'}
         run: |
-          N=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=live-v351-final-$CODE&per_page=1" --jq '.total_count')
-          echo "done=$([ "${N:-0}" -gt 0 ] && echo 1 || echo 0)" >> "$GITHUB_OUTPUT"
+          N=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=live-v351-final-$CODE&per_page=1" --jq '.total_count');echo "done=$([ "${N:-0}" -gt 0 ] && echo 1 || echo 0)" >> "$GITHUB_OUTPUT"
       - name: Resolve deadline and window
         if: steps.prior.outputs.done == '0'
         env: {CODE: '${{ matrix.code }}', JCD: '${{ matrix.jcd }}', RACE: '${{ matrix.race }}'}
         run: |
-          DL=$(python fetch_boatrace_deadline.py --date 20260915 --jcd "$JCD" --race "$RACE" --meta "deadline_$CODE.json")
-          echo "DEADLINE_JST=$DL" >> "$GITHUB_ENV"
-          python run_1head_v351_live_window.py --deadline-jst "$DL" > "window_$CODE.json"
-          MODE=$(python -c "import json;print(json.load(open('window_$CODE.json'))['mode'])")
-          echo "LIVE_MODE=$MODE" >> "$GITHUB_ENV"
-          cat "window_$CODE.json"
-      - name: Probe exhibition only in TRY windows
+          DL=$(python fetch_boatrace_deadline.py --date 20260915 --jcd "$JCD" --race "$RACE" --meta "deadline_$CODE.json");echo "DEADLINE_JST=$DL" >> "$GITHUB_ENV";python run_1head_v351_live_window.py --deadline-jst "$DL" > "window_$CODE.json";MODE=$(python -c "import json;print(json.load(open('window_$CODE.json'))['mode'])");echo "LIVE_MODE=$MODE" >> "$GITHUB_ENV";cat "window_$CODE.json"
+      - name: Probe exhibition in TRY windows
         if: steps.prior.outputs.done == '0' && (env.LIVE_MODE == 'TRY15' || env.LIVE_MODE == 'TRY12' || env.LIVE_MODE == 'TRY10' || env.LIVE_MODE == 'FINAL5')
         env: {CODE: '${{ matrix.code }}', JCD: '${{ matrix.jcd }}', RACE: '${{ matrix.race }}'}
         run: |
-          set +e
-          python probe_1head_v351_boatcast_exhibition.py --date 20260915 --jcd "$JCD" --race "$RACE" --deadline-jst "$DEADLINE_JST" > "exhibition_$CODE.json" 2> "exhibition_error_$CODE.txt"
-          RC=$?
-          set -e
-          echo "EXHIBITION_RC=$RC" >> "$GITHUB_ENV"
-          if [ "$RC" -eq 0 ]; then
-            echo 'EXHIBITION_READY=1' >> "$GITHUB_ENV"
-            cat "exhibition_$CODE.json"
-          else
-            echo 'EXHIBITION_READY=0' >> "$GITHUB_ENV"
-            cat "exhibition_error_$CODE.txt" || true
-          fi
-      - name: T-5 fail close if exhibition still unavailable
+          set +e;python probe_1head_v351_boatcast_exhibition.py --date 20260915 --jcd "$JCD" --race "$RACE" --deadline-jst "$DEADLINE_JST" > "exhibition_$CODE.json" 2> "exhibition_error_$CODE.txt";RC=$?;set -e;echo "EXHIBITION_RC=$RC" >> "$GITHUB_ENV";if [ "$RC" -eq 0 ];then echo 'EXHIBITION_READY=1' >> "$GITHUB_ENV";else echo 'EXHIBITION_READY=0' >> "$GITHUB_ENV";fi
+      - name: T-5 fail close
         if: steps.prior.outputs.done == '0' && env.LIVE_MODE == 'FINAL5' && env.EXHIBITION_READY != '1'
         env: {CODE: '${{ matrix.code }}', PRE_CLASS: '${{ matrix.pre_class }}'}
         run: |
           python - <<'PY'
           import json,os
           from datetime import datetime,timezone,timedelta
-          J=timezone(timedelta(hours=9));c=os.environ['CODE']
-          o={'race_code':c,'pre_class':os.environ['PRE_CLASS'],'decision':'ERROR_NO_BET','reason':'required exhibition still unavailable at T-5 final window','deadline_jst':os.environ['DEADLINE_JST'],'decision_time_jst':datetime.now(J).isoformat(),'result_or_payout_used':False,'finalized':True}
-          open(f'live_v351_final_{c}.json','w').write(json.dumps(o,ensure_ascii=False,indent=2)+'\n');print(json.dumps(o,ensure_ascii=False))
+          J=timezone(timedelta(hours=9));c=os.environ['CODE'];o={'race_code':c,'pre_class':os.environ['PRE_CLASS'],'status':'ERROR_NO_BET','reason':'required exhibition still unavailable at T-5 final window','deadline_jst':os.environ['DEADLINE_JST'],'evaluated_at_jst':datetime.now(J).isoformat(),'result_or_payout_used':False,'chronology_guard':True,'finalized':True,'tickets':[]};open(f'live_v351_final_{c}.json','w').write(json.dumps(o,ensure_ascii=False,indent=2))
           PY
           echo 'FINAL_READY=1' >> "$GITHUB_ENV"
-      - name: Mark ready for v351 scorer without finalizing
+      - name: Download shared prediction cache
         if: steps.prior.outputs.done == '0' && env.EXHIBITION_READY == '1'
-        env: {CODE: '${{ matrix.code }}', PRE_CLASS: '${{ matrix.pre_class }}'}
+        env: {GH_TOKEN: '${{ github.token }}'}
         run: |
-          python - <<'PY'
-          import json,os
-          c=os.environ['CODE'];o={'race_code':c,'pre_class':os.environ['PRE_CLASS'],'state':'EXHIBITION_READY_FOR_V351','finalized':False,'result_or_payout_used':False}
-          open(f'live_v351_ready_{c}.json','w').write(json.dumps(o,ensure_ascii=False,indent=2)+'\n')
+          ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-cache-20260915&per_page=20" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id');test -n "$ID" && test "$ID" != null || { echo 'NO_SHARED_CACHE';exit 2; };gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$ID/zip" > /tmp/cache.zip;mkdir -p /tmp/cache;unzip -q /tmp/cache.zip -d /tmp/cache
+      - name: Exact v351 exhibition gate and finalizer
+        if: steps.prior.outputs.done == '0' && env.EXHIBITION_READY == '1'
+        env: {CODE: '${{ matrix.code }}', PRE_CLASS: '${{ matrix.pre_class }}', LEGACY_PRE_P: '${{ matrix.legacy_pre_p }}'}
+        run: |
+          BASE=$(find /tmp/cache -name "$CODE.json" -print -quit);test -n "$BASE";TRAIN=$(find /tmp/cache -name v351_exhibition_train.csv -print -quit);test -n "$TRAIN";cp "$TRAIN" "$(dirname "$BASE")/v351_exhibition_train.csv"
+          CUTOFF=$(python -c "import json;print(json.load(open('$BASE'))['training_cutoff'])")
+          python run_1head_v351_live_exhibition_gate.py --probe "exhibition_$CODE.json" --base "$BASE" --history-cutoff "$CUTOFF" --out "gate_$CODE.json"
+          python - "$BASE" "gate_$CODE.json" "window_$CODE.json" "final_input_$CODE.json" <<'PY'
+          import json,sys
+          from datetime import datetime,timezone,timedelta
+          b=json.load(open(sys.argv[1]));g=json.load(open(sys.argv[2]));w=json.load(open(sys.argv[3]));b.update(g);b.update({'exhibition_ready':True,'deadline_jst':w['deadline_jst'],'minutes_to_deadline':w['minutes_to_deadline'],'evaluated_at_jst':datetime.now(timezone(timedelta(hours=9))).isoformat(),'result_or_payout_used':False,'chronology_guard':True});json.dump(b,open(sys.argv[4],'w'),ensure_ascii=False,indent=2)
           PY
+          python run_1head_v351_live_finalize.py --input "final_input_$CODE.json" --out "live_v351_final_$CODE.json";echo 'FINAL_READY=1' >> "$GITHUB_ENV"
       - uses: actions/upload-artifact@v4
         if: steps.prior.outputs.done == '0' && env.FINAL_READY == '1'
         with:
@@ -111,13 +92,5 @@ jobs:
             live_v351_final_${{ matrix.code }}.json
             deadline_${{ matrix.code }}.json
             window_${{ matrix.code }}.json
-      - uses: actions/upload-artifact@v4
-        if: steps.prior.outputs.done == '0' && env.EXHIBITION_READY == '1'
-        with:
-          name: live-v351-exhibition-ready-${{ matrix.code }}-${{ github.run_id }}
-          retention-days: 2
-          path: |
-            live_v351_ready_${{ matrix.code }}.json
             exhibition_${{ matrix.code }}.json
-            deadline_${{ matrix.code }}.json
-            window_${{ matrix.code }}.json
+            gate_${{ matrix.code }}.json
