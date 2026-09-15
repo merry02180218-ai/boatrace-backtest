@@ -62,7 +62,7 @@ Status: `HEAD4_RELAXED_MOTOR_EXHIBITION_PARETO_STARTED`
 - Run `34966369280` / Job `104371677153` / Artifact `10394589438` / success
 - executed head SHA `f40ad8c5c697de14e2aaef303789af9020b168ed`
 - Apr-Jun最大ボリューム35%超: 111R / 4頭36.94%。
-- 条件: relaxed motor `motor_win_diff_4v3 >= -0.029936` / `motor_2ren_diff_4v3 >= -7.08pt` + `player4_all_win >= .215605` + `st4_adv_inside >= -0.60`。
+- 正確な選択閾値（Artifact grid/run.logから再確認）: `motor_win_diff_4v3 >= -0.0299361318939513` / `motor_2ren_diff_4v3 >= -7.080000000000001` + `player4_all_win >= .215605` + `st4_adv_inside >= -0.6000000000000001`。
 - 同条件の展示ST判定前 Apr-Jun: 130R / 34.62%。展示STで +2.32pt。
 - Jul-Aug fixed: 96R / 39.58%。同条件base 39.82%からほぼ横ばい。
 - orig平均 `orig4_adv_inside` は候補条件で Apr-Jun 101R / 38.61%、Jul-Aug 92R / 44.57%。同一availability比 Apr-Jun +3.97pt / Jul-Aug +3.82pt。
@@ -83,3 +83,21 @@ Conclusion: 35%以上を保ちながら100R超へ拡張できた。次は111R/36
 8. 実装→Actions→結果回収→AFTERに commit SHA / Run / Job / Artifact / Apr-Jun件数・頭率 / Jul-Aug固定評価 / 結論 / 次の再開地点を記録する。
 
 Status: `HEAD4_111R_ORIG_COMBO_STARTED`
+
+## INTERIM — 111R再現ズレ検出
+- combo Run `34969019521` / Job `104380406547` / Artifact `10396239531` / success。
+- script commit `ae3fd0ad908e7befc0f47d0f27559e9933d3d568` / workflow `9180b5ea6a518e4388a57141d312f3b57b5d299d` / trigger `9ed909e7fc829c073ca8f9b91c779b796a4db143`。
+- ただしcombo scriptが relaxed-motor選択閾値を `WIN=-0.029936`, `REN2=-7.08`, `ST=-0.60` と丸めて固定したため、固定baseが Apr-Jun 103R/35.92%, Jul-Aug 84R/42.86% となり、元Runの111R/36.94%, 96R/39.58%を再現しなかった。
+- この103Rベース上のtrain-only selectedは `orig4_adv_inside >= 0.0444444444444444`: Apr-Jun 72R/40.28%（same availability 100R/36.00%, +4.28pt）、Jul-Aug 61R/49.18%（81R/44.44%, +4.74pt）。参考候補だが、111Rベース再現前なので最終採用扱いしない。
+
+## BEFORE — exact 111R replay repair
+これからやること:
+1. Run `34966369280` Artifact `10394589438` の exact selected thresholdsを固定値として再利用する。
+2. exact values: win `-0.0299361318939513`, ren2 `-7.080000000000001`, player `.215605`, ST `-0.6000000000000001`。
+3. combo scriptの丸め値を修正し、まず Apr-Jun 111R/36.9369%, Jul-Aug 96R/39.5833% の完全再現をassertする。
+4. そのexact 111R母集団だけでorig単項目/adaptive comboをApr-Jun train-only選択し、Jul-Augは固定評価する。
+5. availabilityは非加点、same-availability baseline差を必ず併記。
+6. Sep 2026は `UNREAD`、production `HEAD4_V291_COMP7` は変更しない。
+7. 成功後AFTERへ exact Run/Job/Artifact/結果/次再開地点を記録する。
+
+Status: `HEAD4_111R_EXACT_REPLAY_REPAIR_STARTED`
