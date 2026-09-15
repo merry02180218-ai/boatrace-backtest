@@ -9,6 +9,7 @@ on:
       - 'run_1head_v351_live_exhibition_gate.py'
       - 'probe_1head_v351_boatcast_exhibition.py'
 permissions: {contents: read, actions: read}
+# manual trigger: 2026-09-15 19:12 JST / target 202609151909
 jobs:
   prepare:
     runs-on: ubuntu-latest
@@ -59,25 +60,10 @@ jobs:
           MODE=$(python -c "import json;print(json.load(open('window_$CODE.json'))['mode'])")
           echo "LIVE_MODE=$MODE" >> "$GITHUB_ENV"
           cat "window_$CODE.json"
-          if [ "$MODE" = "WAIT" ]; then
-            echo 'POLL_DONE=WAIT' >> "$GITHUB_ENV"
-            exit 0
-          fi
+          if [ "$MODE" = "WAIT" ]; then echo 'POLL_DONE=WAIT' >> "$GITHUB_ENV"; exit 0; fi
           set +e
-          python probe_1head_v351_boatcast_exhibition.py --date 20260915 --jcd "$JCD" --race "$RACE" --deadline-jst "$DL" > "exhibition_$CODE.json" 2> "exhibition_error_$CODE.txt"
-          RC=$?
-          set -e
-          if [ "$RC" -eq 0 ]; then
-            echo 'EXHIBITION_READY=1' >> "$GITHUB_ENV"
-            echo 'POLL_DONE=READY' >> "$GITHUB_ENV"
-          elif [ "$MODE" = "FINAL5" ]; then
-            echo 'EXHIBITION_READY=0' >> "$GITHUB_ENV"
-            echo 'FAIL_CLOSE=1' >> "$GITHUB_ENV"
-            echo 'POLL_DONE=FINAL5_NOT_READY' >> "$GITHUB_ENV"
-          else
-            echo 'EXHIBITION_READY=0' >> "$GITHUB_ENV"
-            echo 'POLL_DONE=TRY_NOT_READY' >> "$GITHUB_ENV"
-          fi
+          python probe_1head_v351_boatcast_exhibition.py --date 20260915 --jcd "$JCD" --race "$RACE" --deadline-jst "$DL" > "exhibition_$CODE.json" 2> "exhibition_error_$CODE.txt"; RC=$?; set -e
+          if [ "$RC" -eq 0 ]; then echo 'EXHIBITION_READY=1' >> "$GITHUB_ENV"; echo 'POLL_DONE=READY' >> "$GITHUB_ENV"; elif [ "$MODE" = "FINAL5" ]; then echo 'EXHIBITION_READY=0' >> "$GITHUB_ENV"; echo 'FAIL_CLOSE=1' >> "$GITHUB_ENV"; echo 'POLL_DONE=FINAL5_NOT_READY' >> "$GITHUB_ENV"; else echo 'EXHIBITION_READY=0' >> "$GITHUB_ENV"; echo 'POLL_DONE=TRY_NOT_READY' >> "$GITHUB_ENV"; fi
       - name: T-5 fail close
         if: steps.prior.outputs.done == '0' && env.FAIL_CLOSE == '1'
         env: {CODE: '${{ matrix.code }}', PRE_CLASS: '${{ matrix.pre_class }}'}
@@ -97,10 +83,7 @@ jobs:
         if: steps.prior.outputs.done == '0' && env.EXHIBITION_READY == '1'
         env: {CODE: '${{ matrix.code }}', PRE_CLASS: '${{ matrix.pre_class }}', LEGACY_PRE_P: '${{ matrix.legacy_pre_p }}'}
         run: |
-          BASE=$(find /tmp/cache -name "$CODE.json" -print -quit);test -n "$BASE"
-          TRAIN=$(find /tmp/cache -name v351_exhibition_train.csv -print -quit);test -n "$TRAIN"
-          TRAIN_DST="$(dirname "$BASE")/v351_exhibition_train.csv"
-          if [ "$(readlink -f "$TRAIN")" != "$(readlink -f "$TRAIN_DST")" ]; then cp "$TRAIN" "$TRAIN_DST"; fi
+          BASE=$(find /tmp/cache -name "$CODE.json" -print -quit);test -n "$BASE"; TRAIN=$(find /tmp/cache -name v351_exhibition_train.csv -print -quit);test -n "$TRAIN"; TRAIN_DST="$(dirname "$BASE")/v351_exhibition_train.csv"; if [ "$(readlink -f "$TRAIN")" != "$(readlink -f "$TRAIN_DST")" ]; then cp "$TRAIN" "$TRAIN_DST"; fi
           CUTOFF=$(python -c "import json;print(json.load(open('$BASE'))['training_cutoff'])")
           python run_1head_v351_live_exhibition_gate.py --probe "exhibition_$CODE.json" --base "$BASE" --history-cutoff "$CUTOFF" --out "gate_$CODE.json"
           python - "$BASE" "gate_$CODE.json" "window_$CODE.json" "final_input_$CODE.json" <<'PY'
