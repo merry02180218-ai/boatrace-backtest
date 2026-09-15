@@ -14,14 +14,16 @@
 - 全345R中 source_complete/model_ready は237R。108Rが展示特徴量の欠損でstrict除外。
 - 徳山35R、尼崎25R、住之江5Rはmodel_ready=0。特に徳山はorig_straight=0/35のため全件除外。
 
-## 2026-09-15 次作業（venue-aware再構築）
-- ユーザー承認により、345Rを場ごとの公開項目に合わせて再構築する。
-- 結果を見て閾値を調整するのではなく、まず各場の利用可能な展示特徴量パターンを固定し、欠損項目を理由に場全体を落とさないvenue-aware feature/gateを作る。
-- 徳山・尼崎・住之江を含む345Rで同一条件のバックテストを実行し、全体/場別の母数、1頭率、PASS/DROP、ticket ROIを旧v351と比較する。
-- 実装・CI後にcommit SHA、Run/Job/Artifact ID、結論、次の再開地点をここへ追記する。
+## original exhibition schema監査結果
+- Run 34948892215 / Job 104314826115: success。
+- Artifact 10387899217 `audit-v351-original-metric-schema`。
+- 345R中original exhibitionあり304R。
+- 桐生01は21/21Rが `半周ラップ + まわり足 + 直線`。現行norm_metricが「ラップ」を一周へ潰すため半周と一周を混同していた。
+- 住之江12は3/5R、尼崎13は24/25R、徳山18は30/35Rが `一周 + まわり足` で、直線非公開を欠損扱いしてはいけない。
 
-## 2026-09-15 作業前追記（original exhibition 生項目監査）
-- 現行 `norm_metric` は「直線」「まわり/回り/ターン」「一周/ラップ」を正規化しているが、v326/v351特徴量は主に turn/straight/avg で、lap を独立特徴量として保持していない。
-- そのため暫定venue-awareモデルを正式採用せず、まず `data/previews/original_exhibition` の生CSVにある `計測項目1..4` を全345R・24場で抽出し、実際の公開項目名・組合せ・欠損率を固定する。
-- 次に一周/回り足/直線/半周ラップ等を別特徴量として再定義し、結果を使った閾値調整なしで345Rを再構築する。
-- この作業では結果列は項目定義・schema選択に使用しない。
+## 2026-09-15 次作業（schema-correct再構築）
+- ユーザー承認。半周ラップ/一周/まわり足/直線を独立チャネルとして保持する。
+- 場の正式schemaに存在しないチャネルを欠損ペナルティにせず、存在するチャネルだけで展示比較特徴量を構築する。
+- schema定義は結果列を見ずに固定する。
+- 345Rを再構築し、旧strict 237Rとのcoverage/head/PASS/ticket成績を比較する。
+- 実装・CI後にcommit SHA、Run/Job/Artifact ID、結果、次の再開地点を追記する。
