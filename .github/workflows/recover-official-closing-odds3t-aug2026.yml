@@ -1,0 +1,33 @@
+name: recover official closing odds3t Aug 2026
+
+on:
+  push:
+    paths:
+      - '.github/workflows/recover-official-closing-odds3t-aug2026.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Fetch August 2026 official closing trifecta odds
+        run: python tools/fetch_official_closing_odds3t.py 2026-08-01 2026-08-31
+      - name: Commit recovered archive
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add data/official_closing_odds3t/2026/08
+          git diff --cached --quiet && exit 0
+          git commit -m 'Archive official closing 3T odds 2026-08-01 to 2026-08-31'
+          git pull --rebase --autostash origin main
+          git push
