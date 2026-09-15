@@ -1,0 +1,40 @@
+name: research-3head-ticket-rescue
+on:
+  push:
+    branches: [research/3head-player-attack-mode]
+    paths:
+      - 'research/run_3head_exhibition_ticket_rescue.py'
+      - '.github/workflows/research-3head-ticket-rescue.yml'
+  workflow_dispatch:
+jobs:
+  feb-ticket-rescue:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/3head-player-attack-mode
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn
+      - name: Restore fixed source artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34754875342 -n 3head-wave21-allrace-source-build
+          SRC=$(find . -name 'analysis_v289_3head_wave21_allrace_feature_settled.csv' | head -1)
+          test -n "$SRC"
+          DST="$GITHUB_WORKSPACE/analysis_v289_3head_wave21_allrace_feature_settled.csv"
+          if [ "$(realpath "$SRC")" != "$(realpath -m "$DST")" ]; then cp "$SRC" "$DST"; fi
+          test -f "$DST"
+      - name: February post-ranking ticket-rescue grid
+        run: |
+          set -o pipefail
+          PYTHONPATH="$GITHUB_WORKSPACE" python research/run_3head_exhibition_ticket_rescue.py | tee research_v289_3head_exhibition_ticket_rescue.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: research-3head-ticket-rescue-feb
+          path: |
+            research_v289_3head_exhibition_ticket_rescue.json
+            research_v289_3head_exhibition_ticket_rescue_grid.csv
+            research_v289_3head_exhibition_ticket_rescue.log
