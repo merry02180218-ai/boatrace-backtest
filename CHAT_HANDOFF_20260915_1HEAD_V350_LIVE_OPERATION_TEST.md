@@ -38,3 +38,10 @@
 - 9/1〜target前日のPRE feature + outcomeを、当時利用可能だった入力だけで再構築するSeptember training-source builderが必要。
 - そのsourceを作った後、v308/v317/v318とv332 exhibition trainingをprior-day cutoffで再fitし、shared cacheへ保存してwatcher E2Eを通す。
 - 同日結果は確定時刻を証明できない限り不使用。target/未来raceは不使用。
+
+## 作業開始 2026-09-15 — September training-source rebuild
+- ユーザー指示「お願いします」を受けて続行。
+- まず既存PRE training CSVの生成元・9月の日別PRE入力/結果取得コード・v308/v317/v318学習列を特定する。
+- 9/1〜9/14を日単位で再構築し、各target dayでは前日までだけを学習に使う。target自身/未来raceは混入させない。
+- source builder→rolling model cache→watcher E2Eの順に実装・CI確認する。
+- 作業完了後にcommit / Run / Job / Artifact / 実測時間 / 残課題を追記する。
