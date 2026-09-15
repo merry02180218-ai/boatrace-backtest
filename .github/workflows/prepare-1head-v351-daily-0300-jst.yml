@@ -29,7 +29,7 @@ jobs:
           DATE=$(TZ=Asia/Tokyo date +%Y%m%d); ISO_DATE=$(TZ=Asia/Tokyo date +%F)
           echo "DATE=$DATE" >> "$GITHUB_ENV"; echo "ISO_DATE=$ISO_DATE" >> "$GITHUB_ENV"
           mkdir -p /tmp/pre /tmp/daily
-          echo "CARD_SOURCE=BOATRACE_BIYORI"
+          echo "CARD_SOURCE=BOATRACE_BIYORI_RETRY"
           python fetch_1head_v351_biyori_cards.py --date "$DATE" --out /tmp/pre/race_cards.csv
           echo "CARDS=/tmp/pre/race_cards.csv" >> "$GITHUB_ENV"
           echo "PRE=" >> "$GITHUB_ENV"
@@ -48,7 +48,8 @@ jobs:
           rows.sort(key=lambda r:(r['jcd'],r['race']))
           with open('/tmp/daily/pre_candidates.csv','w',newline='') as f:
               w=csv.DictWriter(f,fieldnames=list(rows[0]) if rows else ['race_code','jcd','race','pre_class','head_p','base_tickets','result_or_payout_used','chronology_guard']);w.writeheader();w.writerows(rows)
-          json.dump({'date':os.environ['ISO_DATE'],'candidate_R':len(rows),'card_source':'BOATRACE_BIYORI','result_or_payout_used':False,'chronology_guard':True},open('/tmp/daily/pre_candidates_meta.json','w'),indent=2)
+          json.dump({'date':os.environ['ISO_DATE'],'candidate_R':len(rows),'card_source':'BOATRACE_BIYORI_RETRY','result_or_payout_used':False,'chronology_guard':True},open('/tmp/daily/pre_candidates_meta.json','w'),indent=2)
+          print(f"PRE_SUMMARY_R={len(rows)}")
           PY
       - uses: actions/upload-artifact@v4
         with:
