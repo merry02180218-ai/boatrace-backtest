@@ -52,13 +52,22 @@
 - threshold 0.05は overrides2 / rescue1 / damage0 / +1 と安全寄りだが発動が少ない。
 - `SEPTEMBER_OUTCOMES_USED False` / `PRODUCTION_CHANGED False`。
 
-## 次作業開始 — Wave6 場別効果監査
-1. ユーザー指摘「場が関係あるかも」を検証する。
-2. frozen June 71Rを維持し、race_codeからJCD（場コード）を復元して、場別に baseline / override数 / rescue / damage / delta を集計する。
-3. Wave5 focus 8R（rescue5/damage3）の場分布を明示し、特定場にdamageまたはrescueが偏るか確認する。
-4. `lap+turn+straight` に限定した場別分解も併記する。
-5. 小標本の場別ルールをJuneだけでproduction化しない。まず診断し、必要なら次Waveで場を特徴量またはguard候補として過去月OOFへ持ち込む。
-6. September 2026結果・払戻は絶対に読まない。production/LIVEは変更しない。
+## Wave6 場別効果監査 — 完了
+- Run `34996525058` / Job `104474037072` / Artifact `10408615346` / success。
+- Artifact SHA256 `27c075aa6aabd8dd63ff825d666bb4da53379ff8ae1df767aa651a0e3e0e7e68`。
+- threshold -0.05 の場別: JCD06 浜名湖=8R baseline1→final3、rescue2/damage0、delta+2。JCD11 びわこ=4R baseline2→final0、rescue0/damage2、delta-2。JCD08 常滑=2R rescue1/damage1、delta0。JCD12 住之江=1R rescue1、delta+1。JCD18 徳山=9R rescue1、delta+1。
+- JCD01 桐生はJune 5R、baseline pair 2/5、3-ticket union 3/5、Wave4 override発動0。
+- 場差は有望だが小標本。production変更なし。
+- `SEPTEMBER_OUTCOMES_USED False` / `PRODUCTION_CHANGED False`。
+
+## 次作業開始 — Wave7 桐生×2号艇監査
+1. ユーザー確定事項: `half`（半周ラップ）は桐生(JCD01)だけ。`half+turn+straight` は桐生専用schemaとして扱う。
+2. ユーザー仮説「桐生は2号艇がよく相手に来る」を直接検証する。
+3. June 5Rだけでなく、historical母集団の桐生 `half+turn+straight` 全対象を使い、実際の相手pairへの2号艇包含率を集計する。
+4. 現行first pairが2号艇を含む/含まない、actual pairが2号艇を含む/含まないをクロスし、2を落としたmiss・2を残したhit・2を誤って残したmissを分解する。
+5. 3-ticket unionでも2号艇を含むticketの有無とactual 2包含を確認し、「桐生だけ2を優先して残す」guardの救済数/破壊数/理論deltaを算出する。
+6. 可能なら2着/3着別にも分解し、1-2-X と 1-X-2 のどちらに寄るか確認する。
+7. 小標本のため、この監査だけでproduction化しない。September 2026結果・払戻は絶対に読まない。
 
 ## 現行production / LIVE
 - production profile: `1HEAD_PRODUCTION_20260915_HEAD078_V351_OPPONENTCORE_G2_045_G3_100`
