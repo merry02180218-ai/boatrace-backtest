@@ -29,36 +29,36 @@
 ## 03:00 JST 当日全量base + PRE候補化 — 実装結果
 - 作業前handoff commit: `3cb27591beeedfed5dba40dd65dd18fc17381804`。
 - LIVE bridge高速fail-close化 commit: `2592874f23254a1bdc8220ebdec8ec06021c1784`。
-  - LIVE中の `run_v321... --stage prepare` / on-demand全量base fallbackを削除。
-  - 日次cache Artifactが無い場合は即 `BASE_NOT_READY`。
-  - 対象race JSON / exhibition train欠損も即fail-close。
-  - 直前workflow timeoutを4分へ短縮、展示probeは10秒間隔最大4回。
 - 03:00 JST daily workflow追加 commit: `f4eff2a8a534c819521cde7113b770386454d254`。
-  - workflow: `.github/workflows/prepare-1head-v351-daily-0300-jst.yml`
-  - schedule: `0 18 * * *` UTC = `03:00 JST`。
-  - 当日rolling race_cards/PRE sourceを取得 -> v321 causal prepareを1回だけ実施 -> 全R base作成 -> `v351-1head-live-cache-YYYYMMDD` Artifactへ保存。
-  - `pre_candidates.csv` / `pre_candidates_meta.json` も同Artifactへ格納。
 - 全R cache対応 commit: `55de6538561ac8b7df36e5bdae738636c7ddae37`。
-  - `prepare_1head_v351_live_cache.py` のdaily modeをPRE候補だけでなくcurrent head frameの全race_codeへ拡張。
-  - PRE CSVがあるraceは既存PRE metadataをoverlayし、production HEAD/opponent計算は変更しない。
-  - `base_source=DAILY_ALL_RACE_CACHE`。
-- 重要: PRE S/A/Bは既存PRE sourceの分類をそのまま使い、勝手な新閾値は導入していない。非候補は `NON_CANDIDATE`。
 - production v351 gate/finalizer条件は変更なし。結果・払戻利用なし。
-
-### Actions検証状態
-- 03:00 workflowは新規scheduleのため、現時点では初回03:00 JST実Run前。Run ID / Job ID / Artifact IDはまだ無し。
-- 実装を「運用検証完了」とはまだ扱わない。
-- 最初の03:00 Runで rolling PRE source が03:00時点に存在するかを必ず確認する。存在しなければ、race_cards/PRE source自体を03:00 workflow内で生成する経路へ修正する。
-
-### 次の再開地点
-1. 初回03:00 JST Runを確認し Run/Job/Artifact ID・全R cache件数・PRE候補件数・所要時間を記録。
-2. 03:00時点でrolling source未準備ならsource生成をdaily workflowへ内包。
-3. daily Artifact成功後、実在race requestで高速LIVEを実測し、request commitからBUY/DROP Artifactまでの秒数を記録。
-4. PRE候補一覧に締切時刻を確実に付与し、締切順表示を完成させる。
 
 ## 復活51R 閾値再監査 — 作業前記録
 - schema-correct rebuildで `RECOVERED_ONLY READY=51 / OOF=18 / cutoff0.78=9R / 頭4R=44.44%` だった群を対象に、閾値を0.78固定ではなく再探索する。
 - 同一chronological OOFのスコアを使い、51R群だけについて複数cutoffで「対象R数・頭数・頭率・exact3数・exact3率」を比較する。
 - 小標本なので、単純な最高率だけでなく最低母数も併記し、productionへ勝手に反映しない。
-- 徳山・尼崎等の場偏りが閾値上昇でどう変わるかも確認する。
 - September 2026結果は研究入力として読まず、既存の監査用chronological OOF範囲だけを使用する。
+
+## 復活51R 閾値再監査 — 結果
+- 作業前handoff commit: `546457fe354a20cdf4eb552f89f7ef0a142b85ff`。
+- 元データは schema-correct chronological OOF Artifact `10390159767`（Run `34955947116` / Job `104337913699`）。新規結果読込なし。
+- RECOVERED_ONLYは READY 51Rだが、chronological OOF score (`schema_p`) が存在するのは18R。
+- 高いscoreを採る通常の `schema_p >= cutoff` は改善しなかった。
+  - >=0.70: 13R / 頭5 / 38.46% / exact3 0
+  - >=0.75: 11R / 頭5 / 45.45% / exact3 0
+  - >=0.78: 9R / 頭4 / 44.44% / exact3 0
+  - >=0.80: 8R / 頭4 / 50.00% / exact3 0
+  - >=0.82: 6R / 頭2 / 33.33% / exact3 0
+  - >=0.85: 3R / 頭1 / 33.33% / exact3 0
+  - >=0.89: 1R / 頭0 / 0% / exact3 0
+- むしろこの復活OOF18Rではscoreが低い側に頭的中が集中している。
+  - <=0.55: 3R / 頭3 / 100% / exact3 2 (66.67%)
+  - <=0.56: 4R / 頭4 / 100% / exact3 2 (50.00%)
+  - <=0.66: 5R / 頭5 / 100% / exact3 3 (60.00%)
+  - <=0.70: 5R / 頭5 / 100% / exact3 3 (60.00%)
+  - <=0.72: 6R / 頭5 / 83.33% / exact3 3 (50.00%)
+  - <=0.78: 9R / 頭6 / 66.67% / exact3 3 (33.33%)
+- 結論: 復活51Rに既存と同じ「高scoreほど良い」閾値を再設定するだけでは救えない。OOF18Rではscore方向が逆転しており、schema_pの校正/特徴意味が旧model_ready群と異なる可能性が高い。
+- `<=0.66` の5/5は非常に目立つが5Rだけなのでproduction採用禁止。これは候補仮説として別fold/追加OOFで再検証する。
+- 次の再開地点: 復活51Rを一括閾値探索ではなく、`schema/jcd` とscore方向・校正を分解し、なぜ高score側が外れるかを監査する。必要なら復活群専用calibrationをchronologicalに再学習してOOF再評価する。
+- 今回は既存Artifact再解析のみのため新規Actions Run/Job/Artifactは無し。production設定変更なし。
