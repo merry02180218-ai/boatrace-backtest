@@ -23,33 +23,20 @@
 - 展示取得できた最初のTRYでv351判定へ進む。final artifactがあるrace_codeは再処理しない。
 
 ## 実装済み 2026-09-15
-- `run_1head_v351_live_window.py` を新規実装。commit=`de0c85473390ae511d0f7c140edfc0fcdc5391ae`。
-  - remaining timeから `WAIT / TRY15 / TRY12 / TRY10 / FINAL5 / EXPIRED` を決定。
-  - T-10は `final_fail_close_if_not_ready=false`、T-5はtrue。
-  - result/payout used=falseを明示。
-- `probe_1head_v351_boatcast_exhibition.py` を新規実装。commit=`3b717ce430aef4b7bc6d094967deeb8ea480248c`。
-  - BOATCAST tkz/stt/originalだけを取得。
-  - 既存3号艇parserと1号艇v326 raw_completenessを再利用。
-  - tkz/stt/orig turn/straight/avgの6艇完全性を検査。
-  - result/payout endpointは使用しない。
-- `.github/workflows/auto-live-1head-v351-window.yml` を新規実装、境界テストを追加。commit=`cb89eaab7d6a3eb2b2b6a18e39abf60b6ca337f5`、再trigger commit=`f91d76412762686089b610c81b9094e7227a65ea`。
-- `.github/workflows/auto-live-1head-v351-exhibition-20260915.yml` を新規実装。commit=`de0ad59accd5fac384333602e85dfc35967d0ca7`。
-  - 既存PRE Artifact ID 10379049041から17 S/A/B候補だけmatrix化。
-  - 5分scheduleで候補ごとのofficial deadlineを取得。
-  - final artifactがあればskip。
-  - TRY窓だけBOATCAST展示をprobe。
-  - FINAL5未readyのみ `live-v351-final-<race_code>` ERROR_NO_BET artifactを作る。
-  - 展示ready時は `EXHIBITION_READY_FOR_V351` transient artifactとし、まだBET/DROPを捏造しない。
+- `run_1head_v351_live_window.py` commit=`de0c85473390ae511d0f7c140edfc0fcdc5391ae`。
+- `probe_1head_v351_boatcast_exhibition.py` commit=`3b717ce430aef4b7bc6d094967deeb8ea480248c`。
+- `.github/workflows/auto-live-1head-v351-window.yml` commit=`cb89eaab7d6a3eb2b2b6a18e39abf60b6ca337f5`、再trigger=`f91d76412762686089b610c81b9094e7227a65ea`。
+- `.github/workflows/auto-live-1head-v351-exhibition-20260915.yml` commit=`de0ad59accd5fac384333602e85dfc35967d0ca7`。
 
-## 重要: 現在の完成境界
-- **T-5 fail-closeを含む締切window + BOATCAST展示自動取得/完全性判定までは実装済み。**
-- **展示ready後の正式v351 HEAD/SECOND/THIRD計算と3点生成はまだ接続していない。** readyをfinal扱いしないことで誤BETを防いでいる。
-- 次の再開地点は、日次v351 cacheを作り、ready artifactを正式v351 scorerへ接続すること。
-- September rolling learningはLIVE cache側で chronology-safe cutoffを実装する。historical regressionのSeptember UNREADは変更しない。
+## v351 cached live core timing
+- benchmark Run=`34927249888` success / Job=`104247789036` / Artifact ID=`10380650284`。
+- 20,000 iterations: mean=`0.026297ms`, median=`0.025979ms`, p95=`0.027051ms`, max=`0.123647ms`。
+- process wall=`1.73s`, max RSS=`165132KB`。
+- この計測はcache準備後のopponentCore→SECOND/THIRD→HYBRID 3点生成部分。ネットワーク/重い履歴準備は含まない。
 
-## 作業開始 2026-09-15 — v351正式LIVE scorer接続
-- ready展示を正式v351 HEAD判定へ接続し、PASS時のみv351 opponentCore SECOND g2=.45 / THIRD g3=1.00 + HYBRID alpha=.70で3点生成する。
-- DROP時は買い目を出さない。必要入力不足・cutoff不明・期限超過はfail-closeする。
-- 重い履歴/モデル準備はraceごとに再構築せず、日次cache化してLIVE scorerは単レース計算だけにする。
-- September LIVE学習はtarget prediction timeより前に確定済みの結果だけを許可し、target/future resultは絶対に読まない。historical production sentinelは従来どおりSeptember UNREADを維持する。
-- 実装後はCI/Actionsを確認し、Run/Job/Artifact/commitと次の再開地点をこのhandoffへ追記する。
+## 作業開始 2026-09-15 — 最終完成
+- ユーザー指示「完成させて」により、ready展示→正式HEAD final cutoff .78→PASS/DROP→PASSのみ3点をwatcherへ直結する。
+- 日次cacheを前提にし、LIVE raceごとの重い再学習は禁止。
+- T-15/T-12/T-10/T-5、T-5未ready ERROR_NO_BET、result/payout禁止、immutable finalを維持。
+- September learningはchronology-safe cutoffのみ。target/future resultは読まない。
+- CIでscorer contractとwatcher接続を通し、Run/Job/Artifact/commitを完了後追記する。
