@@ -29,26 +29,28 @@
 - 定期cron/controllerは追加していない。結果・払戻は使用しない。
 
 ### 検証結果 — bridge trigger確認完了
-- 以前「bridge専用Run未確認」としていたのは検索確認不足。commit `a1c5d27cf8b2c5e42a84c99b5390287f1d261653` に対し、専用workflowは実際に起動していた。
+- commit `a1c5d27cf8b2c5e42a84c99b5390287f1d261653` に対し専用workflow起動確認。
 - Workflow: `chat-live-1head-v351-request`
 - Run ID: `34962132626`
 - Job ID: `104357944028`
 - event: `push`
 - workflow_id: `358664242`
-- Runは `failure` だが、これはsmoke requestが意図的な無効race_code `999999999999` だったため `Resolve request and causal base` でfail-closeしたもの。trigger不良ではない。
-- Artifact ID: なし。
+- smoke無効race_codeのためfailure、Artifactなし。
 
-### 結論
-- Chatから `live_requests/1head_v351.txt` を更新することで専用LIVE workflowを起動できる。
-- 1号艇の定期cron/controllerは復活させない。
-
-### 次の再開地点
-- 実在レース判別要求 → request commit → Run/Job監視 → Artifact回収 → BUY/DROP + BUY時3点返却 → 作業後handoff更新。
-
-## 2026-09-15 蒲郡12R actual LIVE
-### 作業前記録
-- ユーザー要求: 「蒲郡12R判別して」
+## 2026-09-15 蒲郡12R actual LIVE — 失敗記録
 - race_code: `202609150712`
-- BOAT RACE公式で締切予定 `20:35 JST` を確認。
-- これから `live_requests/1head_v351.txt` を上記race_codeへ更新し、専用bridge Runを特定・監視、Artifactを回収してv351のBUY/DROP（BUYなら3連単3点）を返す。
-- production gate/finalizerは変更しない。結果・払戻は使用しない。
+- Run ID: `34962990778`
+- Job ID: `104360757399`
+- `Resolve request and causal base` でshared baseが無く、LIVE中に `run_v321_1head_julaug_nonpristine_validation.py --stage prepare` を実行。
+- 約4.5万Rのhead再構築・fold処理と10万行超のTHIRD処理へ入り、10分timeoutでcancelled。展示gate/finalizer未到達、Artifactなし、BUY/DROP未判定。
+- 結論: LIVE中の全量base fallbackは禁止すべき。今回をLIVE失敗として扱う。
+
+## 03:00 JST 当日全量base + PRE候補化 — 作業前記録
+- ユーザー確定方針: 毎日 `03:00 JST` に当日開催分の全場・全Rについて、展示前に確定可能なv351 causal baseを一括生成する。
+- 同じ処理で当日の1号艇PRE候補を全場・全R横断で抽出し、締切時刻順に一覧化する。
+- PRE候補出力には少なくとも 場/R・締切時刻・PRE S/A/B・展示前HEAD確率・事前買い目候補 を含める。
+- LIVE request時は対象race JSONを既存Artifact/cacheから取得し、`deadline -> exhibition -> v351 gate -> finalizer` のみを実行する。
+- LIVE時にbaseが無い場合、v321全量再構築へfallbackせず即 `BASE_NOT_READY` でfail-closeする。
+- production v351 gate/finalizer条件は変更しない。LIVE/03時base生成ともSeptember結果・対象レース結果・払戻を読まない。`result_or_payout_used=False` / `chronology_guard=True` 維持。
+- 03時処理はbase/PRE準備のための定期処理であり、直前自動判定controllerは復活させない。
+- これから行うこと: 既存daily/PRE workflowとcache生成scriptを確認 -> 03:00 JST workflow実装 -> PRE候補Artifact出力 -> chat bridgeの重いon-demand fallback削除 -> Actions smoke/実測 -> 作業後にcommit SHA / Run / Job / Artifact / 所要時間 / 結論 / 次の再開地点を追記する。
