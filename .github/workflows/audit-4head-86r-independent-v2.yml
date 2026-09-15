@@ -1,0 +1,28 @@
+name: audit-4head-86r-independent-v2
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests beautifulsoup4 lxml
+      - name: Run independent audit
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p /tmp/head4_86r_audit
+          python audit_4head_86r_independent.py 2>&1 | tee /tmp/head4_86r_audit/run.log
+          grep -q HEAD4_86R_INDEPENDENT_REPLAY_OK /tmp/head4_86r_audit/run.log
+          grep -q SEPTEMBER_UNREAD /tmp/head4_86r_audit/run.log
+          grep -q PRODUCTION_UNCHANGED /tmp/head4_86r_audit/run.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-86r-independent-audit-v2
+          path: /tmp/head4_86r_audit/
