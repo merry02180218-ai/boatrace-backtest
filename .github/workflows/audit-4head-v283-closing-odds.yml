@@ -14,8 +14,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
-      - run: pip install -r requirements.txt
+      - name: Install dependencies
+        run: pip install pandas numpy scikit-learn
       - name: Run retrospective closing odds diagnostic
         run: python audit_4head_86r_v283_closing_odds.py
       - uses: actions/upload-artifact@v4
