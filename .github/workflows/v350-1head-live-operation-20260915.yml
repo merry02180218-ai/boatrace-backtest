@@ -1,116 +1,60 @@
 name: v351 1-head LIVE PRE SAB 20260915
-
 on:
   workflow_dispatch:
   push:
-    paths:
-      - '.github/workflows/v350-1head-live-operation-20260915.yml'
-
+    paths: ['.github/workflows/v350-1head-live-operation-20260915.yml']
 jobs:
   pre-scan:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+        with: {python-version: '3.11'}
       - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
-      - name: Fetch 2026-09-15 result-blind PRE inputs
+      - name: Fetch result-blind PRE inputs
         run: |
           python - <<'PY'
           from pathlib import Path
           import fetch_kyoteibiyori_v288_pre_inputs as f
-          f.DAY='20260915'
-          f.VENUES=list(range(1,25))
-          f.OUT=Path('/tmp/live_pre')
-          f.OUT.mkdir(parents=True,exist_ok=True)
-          old_card=f.make_card
-          old_waku=f.make_waku
-          def card(jo,rno,z,meet):
-              r=old_card(jo,rno,z,meet); r['レース日']='2026-09-15'; return r
-          def waku(jo,rno,z):
-              r=old_waku(jo,rno,z); r['レース日']='2026-09-15'; return r
-          f.make_card=card
-          f.make_waku=waku
-          f.main()
+          f.DAY='20260915';f.VENUES=list(range(1,25));f.OUT=Path('/tmp/live_pre');f.OUT.mkdir(parents=True,exist_ok=True);oc=f.make_card;ow=f.make_waku
+          def card(jo,rno,z,meet): r=oc(jo,rno,z,meet);r['レース日']='2026-09-15';return r
+          def waku(jo,rno,z): r=ow(jo,rno,z);r['レース日']='2026-09-15';return r
+          f.make_card=card;f.make_waku=waku;f.main()
           PY
-      - name: Score result-blind Legacy PRE and freeze S/A/B candidates
+      - name: Score chronology-safe rolling PRE and freeze S/A/B
         run: |
           python - <<'PY'
           from datetime import date
           from pathlib import Path
-          import csv, json
+          import csv,json
           import analyze_v136_1head_preselection_inner_threats as v
           from backtest import race_features
-
-          S_MIN=0.82
-          A_MIN=0.80
-          B_MIN=0.78
-
-          def pre_class(p):
-              if p >= S_MIN: return 'S'
-              if p >= A_MIN: return 'A'
-              if p >= B_MIN: return 'B'
-              return ''
-
-          def read(path):
-              with open(path,encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
-
-          # Critical prospective guard: no September outcomes are read for training.
-          sep_cut=date(2026,9,1)
-          src=[r for r in v.read_csv(v.SRC)
-               if v.ii(r.get('valid_result'))==1 and r.get('date') and date.fromisoformat(r['date']) < sep_cut]
-          if not src: raise RuntimeError('empty pre-September training set')
-          if max(r['date'] for r in src) >= '2026-09-01': raise AssertionError('September outcome leak')
-          model=v.fit_lr(v.xlegacy(src),[v.ii(r.get('head_hit')) for r in src])
-
-          cards=read('/tmp/live_pre/race_cards.csv')
-          wrows=read('/tmp/live_pre/waku10.csv')
-          wm={str(r.get('レースコード','')).zfill(12):r for r in wrows}
-          cur=[]
+          TARGET=date(2026,9,15);S_MIN=.82;A_MIN=.80;B_MIN=.78
+          def cls(p): return 'S' if p>=S_MIN else 'A' if p>=A_MIN else 'B' if p>=B_MIN else ''
+          def read(p):
+            with open(p,encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
+          # Real-operation rule: completed September races before target date are eligible.
+          # Same-day outcomes are conservatively excluded because exact publication timestamps are not proven here.
+          src=[r for r in v.read_csv(v.SRC) if v.ii(r.get('valid_result'))==1 and r.get('date') and date.fromisoformat(r['date'])<TARGET]
+          if not src: raise RuntimeError('empty chronology-safe training set')
+          if max(date.fromisoformat(r['date']) for r in src)>=TARGET: raise AssertionError('target/future leak')
+          model=v.fit_lr(v.xlegacy(src),[v.ii(r.get('head_hit')) for r in src]);cards=read('/tmp/live_pre/race_cards.csv');wm={str(r.get('レースコード','')).zfill(12):r for r in read('/tmp/live_pre/waku10.csv')};cur=[]
           for c in cards:
-              code=str(c.get('レースコード','')).zfill(12)
-              if code not in wm: continue
-              try:
-                  x=race_features(c,wm[code]); vals=v.boat_pre(x,1)
-              except Exception as e:
-                  print('SKIP_SCORE',code,repr(e)); continue
-              r={k:val for k,val in zip(v.LEGACY_FEATURES,vals)}
-              r.update({
-                  'race_code':code,'venue':code[8:10],'race':int(code[10:12]),
-                  'name':c.get('艇1_選手名',''),'grade':c.get('艇1_級別',''),
-                  'motor2':c.get('艇1_モーター2連対率',''),'nst':c.get('艇1_全国平均ST','')})
-              cur.append(r)
+            code=str(c.get('レースコード','')).zfill(12)
+            if code not in wm:continue
+            try: vals=v.boat_pre(race_features(c,wm[code]),1)
+            except Exception as e: print('SKIP_SCORE',code,repr(e));continue
+            r={k:z for k,z in zip(v.LEGACY_FEATURES,vals)};r.update({'race_code':code,'venue':code[8:10],'race':int(code[10:12]),'name':c.get('艇1_選手名',''),'grade':c.get('艇1_級別',''),'motor2':c.get('艇1_モーター2連対率',''),'nst':c.get('艇1_全国平均ST','')});cur.append(r)
           pp=model.predict_proba(v.xlegacy(cur))[:,1]
-          for r,p in zip(cur,pp):
-              r['legacy_pre_p']=float(p)
-              r['pre_class']=pre_class(float(p))
-          cur=sorted(cur,key=lambda r:(-r['legacy_pre_p'],r['race_code']))
-          frozen=[r for r in cur if r['pre_class']]
-          out=Path('/tmp/v351_live_sab');out.mkdir(exist_ok=True)
-          fields=['rank','pre_class','race_code','venue','race','name','grade','legacy_pre_p','motor2','nst']
+          for r,p in zip(cur,pp):r['legacy_pre_p']=float(p);r['pre_class']=cls(float(p))
+          frozen=sorted([r for r in cur if r['pre_class']],key=lambda r:(-r['legacy_pre_p'],r['race_code']));out=Path('/tmp/v351_live_sab');out.mkdir(exist_ok=True);fields=['rank','pre_class','race_code','venue','race','name','grade','legacy_pre_p','motor2','nst']
           with (out/'pre_candidates_sab.csv').open('w',encoding='utf-8-sig',newline='') as f:
-              w=csv.DictWriter(f,fieldnames=fields);w.writeheader()
-              for i,r in enumerate(frozen,1):w.writerow({'rank':i,**{k:r.get(k) for k in fields if k!='rank'}})
-          counts={g:sum(r['pre_class']==g for r in frozen) for g in ['S','A','B']}
-          result={
-              'date':'2026-09-15','cards':len(cards),'waku_rows':len(wrows),'scored':len(cur),
-              'training_max_date':max(r['date'] for r in src),
-              'SEPTEMBER_OUTCOMES_READ':False,
-              'production_profile':'1HEAD_PRODUCTION_20260915_HEAD078_V351_OPPONENTCORE_G2_045_G3_100',
-              'thresholds':{'S_MIN':S_MIN,'A_MIN':A_MIN,'B_MIN':B_MIN},
-              'candidate_count':len(frozen),'class_counts':counts,
-              'candidates':[{'rank':i,'pre_class':r['pre_class'],'race_code':r['race_code'],'name':r['name'],'pre_p':r['legacy_pre_p']} for i,r in enumerate(frozen,1)],
-              'FIXED_TOP15_USED':False,
-              'PRODUCTION_CHANGED':False
-          }
-          (out/'pre_result_sab.json').write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf-8')
-          print(json.dumps(result,ensure_ascii=False,indent=2),flush=True)
+            w=csv.DictWriter(f,fieldnames=fields);w.writeheader();[w.writerow({'rank':i,**{k:r.get(k) for k in fields if k!='rank'}}) for i,r in enumerate(frozen,1)]
+          mx=max(r['date'] for r in src);res={'date':'2026-09-15','training_max_date':mx,'SEPTEMBER_OUTCOMES_READ':mx>='2026-09-01','same_day_outcomes_read':False,'chronology_guard':True,'candidate_count':len(frozen),'class_counts':{g:sum(r['pre_class']==g for r in frozen) for g in 'SAB'},'production_profile':'1HEAD_PRODUCTION_20260915_HEAD078_V351_OPPONENTCORE_G2_045_G3_100'};(out/'pre_result_sab.json').write_text(json.dumps(res,ensure_ascii=False,indent=2));print(json.dumps(res,ensure_ascii=False,indent=2))
           PY
       - uses: actions/upload-artifact@v4
-        if: always()
         with:
-          name: v351-1head-live-pre-sab-20260915
+          name: v351-1head-live-pre-sab-20260915-rolling
           path: |
             /tmp/v351_live_sab/
             /tmp/live_pre/race_cards.csv
