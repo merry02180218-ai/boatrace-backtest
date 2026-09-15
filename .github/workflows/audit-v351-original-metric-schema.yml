@@ -23,4 +23,5 @@ jobs:
           path: |
             analysis_v351_schema_correct_rebuild.csv
             analysis_v351_schema_map.csv
+            analysis_v351_schema_cohort_compare.csv
             schema_correct_rebuild.txt
