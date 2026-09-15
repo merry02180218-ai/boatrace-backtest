@@ -1,57 +1,87 @@
 #!/usr/bin/env python3
-"""Build result-blind daily race_cards.csv from BoatRace Biyori race-list pages.
+"""Build result-blind v351 daily race_cards.csv from BoatRace Biyori entry/detail API.
 
-Only race-list/entry information is requested. Result, payout and odds endpoints are
-never requested. Accepted pages must visibly identify the requested date.
+Fetches only pre-race entry/profile/motor data. Result/payout/odds are never requested.
 """
 from __future__ import annotations
-import argparse, io, re
+import argparse,csv,json,re,time
 from pathlib import Path
-import pandas as pd, requests
+import requests
+from bs4 import BeautifulSoup
 
-UA={'User-Agent':'Mozilla/5.0 (compatible; v351-live-pre-card/1.0)'}
-BASE='https://kyoteibiyori.com/race_ichiran.php?hiduke={ymd}&place_no={jo}&race_no=1'
+BASE='https://kyoteibiyori.com'
 
-def num(x):
-    m=re.search(r'-?\d+(?:\.\d+)?',str(x).replace(',',''))
-    return m.group(0) if m else ''
+def norm_st(x):
+    try:
+        v=float(x)
+        return v/100.0 if v>1 else v
+    except:return ''
+
+def get_meta(s,day,jo):
+    u=f'{BASE}/race_shusso.php?hiduke={day}&place_no={jo}&race_no=1&slider=1'
+    h=s.get(u,timeout=25).text; soup=BeautifulSoup(h,'html.parser')
+    def v(n):
+        z=soup.find('input',{'name':n}); return z.get('value','') if z else ''
+    m=re.search(r'var\s+CSRF_TOKEN\s*=\s*"([^"]+)"',h)
+    meta={k:v(k) for k in ['race_name','kaisai_key','taikai_count','group_no','race_year','race_date','place_name']}
+    if not m or not meta['kaisai_key']: return None
+    return u,m.group(1),meta
+
+def detail(s,day,jo,rno,referer,token,meta):
+    d={'place_no':str(jo),'race_no':str(rno),'hiduke':day,'race_name':meta['race_name'],'season':2021,'term':1,
+       'kaisai_key':meta['kaisai_key'],'taikai_count':meta['taikai_count'],'group_no':meta['group_no'],'type':0,'grade':0}
+    r=s.post(f'{BASE}/request_race_shusso_detail_v4.php',data={'data':json.dumps(d,ensure_ascii=False),'token':token},
+             headers={'Referer':referer,'X-Requested-With':'XMLHttpRequest'},timeout=30)
+    r.raise_for_status(); z=r.json()
+    return z if len(z.get('race_list',[]))==6 else None
+
+def make_card(day,jo,rno,z):
+    iso=f'{day[:4]}-{day[4:6]}-{day[6:8]}'
+    c={'レースコード':f'{day}{jo:02d}{rno:02d}','レース日':iso,'レース場コード':f'{jo:02d}','レース回':str(rno)}
+    ps=sorted(z['race_list'],key=lambda x:int(x.get('course') or 99))
+    for b,p in enumerate(ps,1):
+        q=f'艇{b}_'
+        c.update({
+          q+'登録番号':p.get('player_no',''),q+'選手名':p.get('player_name',''),q+'級別':p.get('kyubetsu',''),
+          q+'全国平均ST':norm_st(p.get('ave_start')),q+'全国勝率':p.get('zenkoku_shoritsu',''),
+          q+'全国2連対率':p.get('zenkoku_niren',''),q+'全国3連対率':p.get('zenkoku_sanren',''),
+          q+'当地勝率':p.get('touchi_shoritsu',''),q+'当地2連対率':p.get('touchi_niren',''),q+'当地3連対率':p.get('touchi_sanren',''),
+          q+'モーター番号':p.get('motor',''),q+'モーター2連対率':p.get('motor_niren',''),q+'モーター3連対率':p.get('motor_sanren',''),
+          q+'ボート番号':p.get('boat',''),q+'ボート2連対率':p.get('boat_niren',''),q+'ボート3連対率':p.get('boat_sanren',''),
+          q+'早見':p.get('hayami',''),q+'F本数':p.get('flying','') or 0,q+'L本数':p.get('late0','') or 0})
+    return c
+
+def write_csv(path,rows):
+    fields=[]; seen=set()
+    for r in rows:
+        for k in r:
+            if k not in seen: seen.add(k); fields.append(k)
+    with path.open('w',encoding='utf-8-sig',newline='') as f:
+        w=csv.DictWriter(f,fieldnames=fields); w.writeheader(); w.writerows(rows)
 
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument('--date',required=True); ap.add_argument('--out',type=Path,required=True); a=ap.parse_args()
-    ymd=a.date.replace('-','')
-    if not re.fullmatch(r'20\d{6}',ymd): raise SystemExit('bad date')
-    sess=requests.Session(); sess.headers.update(UA); out=[]; venues=[]
+    day=a.date.replace('-','')
+    if not re.fullmatch(r'20\d{6}',day): raise SystemExit('bad date')
+    s=requests.Session(); s.headers.update({'User-Agent':'Mozilla/5.0 (compatible; v351-live-pre-card/2.0)','Accept':'text/html,application/json'})
+    rows=[]; venues=[]; failed=[]
     for jo in range(1,25):
-        r=sess.get(BASE.format(ymd=ymd,jo=jo),timeout=20); r.raise_for_status(); html=r.text
-        visible=(f'{ymd[:4]}/{ymd[4:6]}/{ymd[6:8]}' in html) or (f'{ymd[4:6]}/{ymd[6:8]}' in html)
-        if not visible: continue
-        try: tabs=pd.read_html(io.StringIO(html))
-        except Exception: continue
-        race_tables=[]
-        for t in tabs:
-            if t.shape[1] != 6: continue
-            text=' '.join(map(str,t.astype(str).values.ravel()))
-            regs=re.findall(r'(?<!\d)([3-5]\d{3})(?!\d)',text)
-            grades=re.findall(r'(?<![A-Z])([AB][12])(?!\w)',text)
-            if len(set(regs))>=6 and len(grades)>=6: race_tables.append(t)
-        if len(race_tables)<12: continue
-        venues.append(jo)
-        for race,t in enumerate(race_tables[:12],1):
-            row={'レースコード':f'{ymd}{jo:02d}{race:02d}','レース場コード':f'{jo:02d}'}
-            for i in range(6):
-                b=i+1; cell=' '.join(str(x) for x in t.iloc[:,i].tolist())
-                gm=re.search(r'(?<![A-Z])([AB][12])(?!\w)',cell); stm=re.search(r'(?:平均ST|ST)\s*[:：]?\s*(0?\.\d+)',cell)
-                wrs=re.findall(r'(?<!\d)(\d\.\d{1,2})(?!\d)',cell)
-                row[f'艇{b}_級別']=gm.group(1) if gm else ''
-                row[f'艇{b}_全国平均ST']=stm.group(1) if stm else ''
-                row[f'艇{b}_全国勝率']=wrs[0] if len(wrs)>0 else ''
-                row[f'艇{b}_当地勝率']=wrs[1] if len(wrs)>1 else ''
-                row[f'艇{b}_モーター2連対率']=''; row[f'艇{b}_モーター3連対率']=''; row[f'艇{b}_F本数']='0'
-            out.append(row)
-    if not out: raise RuntimeError(f'BIYORI returned no target-date entry cards for {ymd}')
-    q=pd.DataFrame(out).drop_duplicates('レースコード').sort_values('レースコード')
-    if len(q)!=12*len(venues): raise RuntimeError(f'incomplete BIYORI venue/race grid venues={venues} R={len(q)}')
-    a.out.parent.mkdir(parents=True,exist_ok=True); q.to_csv(a.out,index=False,encoding='utf-8-sig')
-    print(f'BIYORI_CARDS date={ymd} venues={venues} races={len(q)} result_or_payout_used=False chronology_guard=True')
+        try: meta=get_meta(s,day,jo)
+        except Exception as e: failed.append((jo,'meta',str(e))); continue
+        if not meta: continue
+        referer,token,m=meta; vr=[]
+        for rno in range(1,13):
+            try:
+                z=detail(s,day,jo,rno,referer,token,m)
+                if not z: raise RuntimeError('detail empty')
+                vr.append(make_card(day,jo,rno,z)); time.sleep(.03)
+            except Exception as e: failed.append((jo,rno,str(e)))
+        if len(vr)==12: rows.extend(vr); venues.append(jo)
+        elif vr: failed.append((jo,'grid',f'{len(vr)}/12'))
+    if not rows: raise RuntimeError(f'BIYORI detail API returned no complete target-date cards for {day}; failures={failed[:8]}')
+    if len(rows)!=12*len(venues): raise RuntimeError(f'incomplete BIYORI grid venues={venues} R={len(rows)}')
+    a.out.parent.mkdir(parents=True,exist_ok=True); write_csv(a.out,rows)
+    print(f'BIYORI_CARDS date={day} venues={venues} races={len(rows)} result_or_payout_used=False chronology_guard=True')
+    if failed: print('BIYORI_SKIPPED',failed[:20])
     return 0
 if __name__=='__main__': raise SystemExit(main())
