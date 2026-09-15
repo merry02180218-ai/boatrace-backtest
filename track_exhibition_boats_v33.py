@@ -3,15 +3,15 @@
 
 v32 proved that an unconstrained 3-point affine fit is too flexible on the first
 six-boat transition: it can explain wrong candidate geometry with near-zero
-residual.  At the slit the camera contribution over one stride is instead
+residual. At the slit the camera contribution over one stride is instead
 modelled conservatively as a single fleet-wide translation, estimated by the
-coordinate-wise median of all six displacements.  Candidate identity is then
+coordinate-wise median of all six displacements. Candidate identity is then
 judged from each boat's residual motion after subtracting that shared camera
-translation.  Later transitions retain v31's robust affine model unchanged.
+translation. Later transitions retain v31's robust affine model unchanged.
 
 The existing 24 px/native-frame relative residual cap, 42 px absolute hard
 ceiling, reverse corridor, appearance/geometry gates and fail-closed behavior
-are retained.  No future frame, result, boat-number special case, race-specific
+are retained. No future frame, result, boat-number special case, race-specific
 offset or confidence-threshold relaxation is used.
 """
 from __future__ import annotations
