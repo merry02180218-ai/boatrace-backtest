@@ -1,0 +1,39 @@
+name: research-3head-exhibition-v5-trigger
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/research-3head-exhibition-v5-trigger.yml'
+  workflow_dispatch:
+jobs:
+  feb-freeze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/3head-player-attack-mode
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn
+      - name: Restore fixed source artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34754875342 -n 3head-wave21-allrace-source-build
+          find . -name 'analysis_v289_3head_wave21_allrace_feature_settled.csv' -print
+          SRC=$(find . -name 'analysis_v289_3head_wave21_allrace_feature_settled.csv' | head -1)
+          test -n "$SRC"
+          cp "$SRC" ./analysis_v289_3head_wave21_allrace_feature_settled.csv
+      - name: February-only A/B/C freeze
+        shell: bash
+        run: |
+          set -o pipefail
+          PYTHONPATH="$GITHUB_WORKSPACE" python research/run_3head_exhibition_v5.py --phase feb | tee research_v289_3head_exhibition_v5_feb.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-3head-exhibition-v5-feb
+          path: |
+            research_v289_3head_exhibition_v5_feb.json
+            research_v289_3head_exhibition_v5_feb.log
