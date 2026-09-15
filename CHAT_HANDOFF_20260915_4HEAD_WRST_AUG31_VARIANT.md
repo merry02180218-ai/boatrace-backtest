@@ -86,3 +86,22 @@ Conclusion:
 - September 2026 remains `UNREAD`; production `HEAD4_V291_COMP7` remains frozen.
 
 Status: `HEAD4_PLAYER_ALL_WIN_PARETO_COMPLETE_NEXT_SECONDARY_TRAIN_ONLY`
+
+## BEFORE — 1号艇v351方式の展示・オリジナル展示を4号艇頭判定へ導入
+ユーザー指定: 「1号艇モデルを参考にして展示とオリジナル展示データ入れてやってみて」。
+
+これからやること:
+1. 1号艇v351/v326系で実運用されている締切前Boatcast入力を4号艇研究へ移植する。対象は通常展示タイム、スタート展示、オリジナル展示の回り足・直線・複数項目平均。
+2. 1号艇方式と同じく6艇相対比較を基本とし、4号艇自身の値だけでなく、4号艇−1〜3号艇、4号艇−全艇平均/最良艇、内3艇に対する優位度を候補化する。4角攻撃なので特に直線・展示STを重視し、回り足とのバランスも検証する。
+3. 展示データは `data/previews/tkz`, `data/previews/stt`, `data/previews/original_exhibition` のレース前データだけを使用し、結果・払戻を特徴生成に使わない。ST補正を使う場合は1号艇v326同様、当日を入れる前の過去日まででbiasを凍結する。
+4. まず既存fixed motor base + causal player帯を土台に、Apr-Junだけで展示gateを探索する。Jul-Augを見て閾値を選び直さない。
+5. 展示欠損率/6艇complete率を必ず出し、欠損したレースを有利に除外して見かけの頭率を上げないよう、complete母集団と適用母集団を分けて報告する。
+6. Apr-Junの4号艇頭率35%以上を第一目標とし、R数も維持する。Jul-Augはtrainで固定した条件のみ評価する。
+7. 2026年9月結果は一切読まず `UNREAD` 維持。production `HEAD4_V291_COMP7` は変更しない。
+8. 実装→CI→結果回収後、commit SHA / Run / Job / Artifact / 月別R数・頭率 / 展示complete率 / 結論 / 次の再開地点を追記する。
+
+参考実装確認:
+- 1号艇v351 live probeは締切前にBoatcast `tkz` / `stt` / `orig` を取得し、`tkz_all6`, `stt_all6`, `orig_turn_all6`, `orig_straight_all6`, `orig_avg_all6` をrequired completenessとしている。
+- v326は展示タイム・展示ST・回り足・直線・orig平均を6艇相対marginへ変換し、ST biasを過去日までで凍結している。
+
+Status: `HEAD4_EXHIBITION_ORIGINAL_RESEARCH_STARTED`
