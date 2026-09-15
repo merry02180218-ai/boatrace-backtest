@@ -1,3 +1,4 @@
+# Frozen March one-shot trigger; parameters selected on February only.
 from __future__ import annotations
 import json
 from pathlib import Path
@@ -44,27 +45,14 @@ def main():
     direct=load_direct(codes)
     feb_common=feb_heads[feb_heads.rc.map(lambda x:direct.get(str(int(x)).zfill(12),{}).get('common',False))].copy(); assert len(feb_common)==390
     mar_common=mar_heads[mar_heads.rc.map(lambda x:direct.get(str(int(x)).zfill(12),{}).get('common',False))].copy()
-    train=pair_rows(feb_common,direct,'A',{})
-    test=pair_rows(mar_common,direct,'A',{})
+    train=pair_rows(feb_common,direct,'A',{}); test=pair_rows(mar_common,direct,'A',{})
     model,feats=model_and_features(train); model.fit(train[feats],train.y)
-    test['p']=model.predict_proba(test[feats])[:,1]
-    test=add_direct_scores(test,direct)
+    test['p']=model.predict_proba(test[feats])[:,1]; test=add_direct_scores(test,direct)
     base=top3(test,test.p); basehits=hitset(base); allr=set(test.race_code.unique())
     raw=W_EX*(test.exq-.5)+W_ST*(test.stq-.5)
-    strength=(test.exq-.5).abs()+(test.stq-.5).abs()
-    adj=np.where(strength>=THRESHOLD,raw,0.0)
-    rescued=top3(test,test.p+adj); hh=hitset(rescued)
+    strength=(test.exq-.5).abs()+(test.stq-.5).abs(); adj=np.where(strength>=THRESHOLD,raw,0.0)
+    hh=hitset(top3(test,test.p+adj))
     rescued_miss=len((allr-basehits)&hh); broken_hit=len(basehits-hh)
-    out={
-      'phase':'MARCH_FROZEN_POST_RANKING_TICKET_RESCUE_ONE_SHOT',
-      'train_period':'2026-02','test_period':'2026-03',
-      'canonical_feb_eligible':len(feb),'canonical_feb_heads':len(feb_heads),'feb_common_ready_heads':len(feb_common),
-      'canonical_march_eligible':len(mar),'canonical_march_heads':len(mar_heads),'march_common_ready_head_races':len(mar_common),
-      'frozen_params':{'w_ex':W_EX,'w_st':W_ST,'threshold':THRESHOLD},
-      'baseline_hits':len(basehits),'baseline_capture':len(basehits)/len(allr),
-      'corrected_hits':len(hh),'corrected_capture':len(hh)/len(allr),
-      'rescued_miss':rescued_miss,'broken_hit':broken_hit,'net_rescue':rescued_miss-broken_hit,
-      'march_retuned':False,'exact_v288_exclusion_preserved':True,'september_outcomes_read':False,'production_changed':False}
-    Path('research_v289_3head_exhibition_ticket_rescue_march.json').write_text(json.dumps(out,ensure_ascii=False,indent=2))
-    print(json.dumps(out,ensure_ascii=False,indent=2))
+    out={'phase':'MARCH_FROZEN_POST_RANKING_TICKET_RESCUE_ONE_SHOT','train_period':'2026-02','test_period':'2026-03','canonical_feb_eligible':len(feb),'canonical_feb_heads':len(feb_heads),'feb_common_ready_heads':len(feb_common),'canonical_march_eligible':len(mar),'canonical_march_heads':len(mar_heads),'march_common_ready_head_races':len(mar_common),'frozen_params':{'w_ex':W_EX,'w_st':W_ST,'threshold':THRESHOLD},'baseline_hits':len(basehits),'baseline_capture':len(basehits)/len(allr),'corrected_hits':len(hh),'corrected_capture':len(hh)/len(allr),'rescued_miss':rescued_miss,'broken_hit':broken_hit,'net_rescue':rescued_miss-broken_hit,'march_retuned':False,'exact_v288_exclusion_preserved':True,'september_outcomes_read':False,'production_changed':False}
+    Path('research_v289_3head_exhibition_ticket_rescue_march.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)); print(json.dumps(out,ensure_ascii=False,indent=2))
 if __name__=='__main__': main()
