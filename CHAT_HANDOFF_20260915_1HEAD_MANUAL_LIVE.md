@@ -1,5 +1,14 @@
 # 1号艇 v351 手動LIVE 引き継ぎ — 2026-09-15
 
+## 今回の作業開始記録 — 2026-09-15 23:52 JST
+- 最新main HEAD `8fdd1ea7ad74e6aa0148dc71c2184b266526514a` と本handoffを確認して再開。
+- September 2026結果・払戻は `UNREAD` のまま維持し、研究/LIVE判定には使用しない。
+- 最優先は未発火の `analyze-v351-schema-exact3-errors` workflow の認識/trigger不具合を特定し、対象workflow自身の実Run ID / Job ID / Artifact IDまで確認すること。
+- 正常稼働workflowとのYAML比較、commit/check/Actions run確認を行い、必要なら最小構成へ修正する。
+- exact3原因を `EXACT3_HIT / ORDER_MISS / OPPONENT_PAIR_MISS` に分解し、schema別に2着/3着ranking改善へ進む。
+- 並行して承認済み4 schema (`lap+turn+straight`, `lap+turn`, `half+turn+straight`, `base`) のHEAD production統合を安全に進める。`turn+straight`は保留。既存v351のHEAD以外のgate/finalizer条件は勝手に変更しない。
+- 作業完了後、本handoffへcommit SHA / Actions Run・Job・Artifact ID / 結果 / 結論 / 次の再開地点を追記する。
+
 ## 最重要ルール
 - 最新GitHubを最優先。古いチャット・古い記憶と競合した場合は最新GitHubを採用。
 - GitHub作業は必ず、作業前にこの引き継ぎへ「これからやること」を記録し、作業後にも結果・commit SHA・Actions Run/Job/Artifact ID・結論・次の再開地点を追記する。
