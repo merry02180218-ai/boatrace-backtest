@@ -25,6 +25,8 @@ jobs:
         run: python research_v351_opponent_pair_oof.py | tee opponent_pair_oof.txt
       - name: Decompose current G2 G3 pair corrections
         run: python analyze_v351_g2g3_pair_correction_wave3.py | tee g2g3_pair_wave3.txt
+      - name: Research v351 one-replacement Wave4 frozen June
+        run: python research_v351_one_replace_wave4.py | tee one_replace_wave4.txt
       - uses: actions/upload-artifact@v4
         with:
           name: audit-v351-exact3-via-monthly
@@ -39,8 +41,11 @@ jobs:
             analysis_v351_opponent_pair_summary.csv
             analysis_v351_g2g3_pair_correction_wave3.csv
             analysis_v351_g2g3_pair_correction_wave3_summary.csv
+            analysis_v351_one_replace_wave4_june.csv
+            analysis_v351_one_replace_wave4_summary.csv
             schema_rebuild.txt
             dedicated_schema_head.txt
             schema_exact3_errors.txt
             opponent_pair_oof.txt
             g2g3_pair_wave3.txt
+            one_replace_wave4.txt
