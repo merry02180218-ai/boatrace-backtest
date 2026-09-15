@@ -18,26 +18,21 @@
 - `run_1head_v351_live_finalize.py` commit=`0fb5a4e0139c2cf87aaf978738277420121ffbf6`。
 - finalizer CI commit=`fc970a5a23a65807766efa0b85639c9e39f7cfd2`。
 - finalizer CI Run=`34928441122` success / Job=`104251395344` / Artifact ID=`10379909511` / digest=`sha256:a9eb4fbf1e019f2641ca8fca3df9bb08f411a707c71fd684bce7ffde6e0e1a02`。
-- BOATCAST probeをparsed tkz/stt/orig payload返却へ更新 commit=`cc912d1940bc2149bb3ad84cbdf18782f1611f1c`。
-- 正式v332/v345 exhibition semanticsをLIVEに適用する `run_1head_v351_live_exhibition_gate.py` commit=`7092c53e9a8d2b4939a4ed179967522ad49ee9b7`。
-- 共有prediction cache builder `prepare_1head_v351_live_cache.py` commit=`49efc893210263d0235359e98d96df472e0588e4`。
-- rolling PREをtarget前日までのSeptember completed outcomes許可へ変更 commit=`4a78ee92409ceffdba75d2b34fe725d9b15c535c`。同日結果は時刻証明できないため保守的に除外。
-- 共有cache workflow `.github/workflows/prepare-1head-v351-live-cache-20260915.yml` commit=`97b92455df3b3ed040644e6dc3916bef941a33d7`。
-- watcherを `展示ready → exact exhibition gate → v351 opponentCore g2=.45/g3=1.00 → HYBRID 3点 → immutable PASS/DROP` に直結 commit=`eccbbe52642a62b4c460616a89490fe0cde9e7bf`。
-- watcherはshared cache欠落時にBETを作らずfail-closeする。
-- result/payout guardとchronology_guardはfinalizerまで保持。
+- BOATCAST probe parsed payload commit=`cc912d1940bc2149bb3ad84cbdf18782f1611f1c`。
+- exhibition gate commit=`7092c53e9a8d2b4939a4ed179967522ad49ee9b7`。
+- shared cache builder commit=`49efc893210263d0235359e98d96df472e0588e4`。
+- rolling PRE commit=`4a78ee92409ceffdba75d2b34fe725d9b15c535c`。
+- shared cache workflow commit=`97b92455df3b3ed040644e6dc3916bef941a33d7`。
+- watcher exact final connection commit=`eccbbe52642a62b4c460616a89490fe0cde9e7bf`。
 
 ## v351 cached live core timing
 - benchmark Run=`34927249888` success / Job=`104247789036` / Artifact ID=`10380650284`。
 - 20,000 iterations mean=`0.026297ms`, p95=`0.027051ms`。
 
-## 検証状態
-- finalizer単体 contract はGREEN: Run=`34928441122`。
-- rolling PRE Run=`34928773352` / Job=`104252395285` は記録時点で `in_progress`。fetch PRE inputs step実行中。
-- rolling PRE成功後に workflow_run でshared cache生成が起動する設計。
-- そのshared cache artifact生成成功を確認するまでは「本番E2E検証完了」とは呼ばない。
-
-## 重要な残存境界
-- PREはSeptember completed outcomesをtarget前日まで学習する。
-- 現時点のv308/v317/v318 shared prediction cache本体は既存frozen causal historyを利用するため、September outcome rolling retrainをHEAD/SECOND/THIRD全体へ完全反映する追加改修は未完。ここを未完のまま「9月学習完全対応」とは表現しない。
-- 次の再開点: rolling PRE Run 34928773352完了確認 → shared cache workflow Run/Artifact確認 → HEAD/SECOND/THIRDにもSeptember prior-day historyを入れるday-aware/pseudo-month rolling fitへ更新 → watcher E2EをGREENにする。
+## 作業開始 2026-09-15 — September rolling完全対応
+- ユーザー指示「お願いします」を受け、未完だったHEAD v308 / SECOND v317 / THIRD v318のSeptember prior-day rolling学習を完成させる。
+- まず rolling PRE Run 34928773352 の完了状態を確認する。
+- 最新のv308/v317/v318 training/apply経路を読み、既存productionのFeb-Aug historical sentinelを変更せず、LIVE cache側だけtarget前日までのcompleted September outcomesを追加する。
+- 同日結果は確定時刻を証明できない限り使わない。target race自身/未来raceは絶対に学習へ入れない。
+- shared cache生成→watcher exact gate/finalizerまでCI/E2Eを確認する。
+- 完了後、Run/Job/Artifact/commitと実測時間、残存境界をこのhandoffへ追記する。
