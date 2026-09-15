@@ -27,16 +27,19 @@
 - `probe_1head_v351_boatcast_exhibition.py` commit=`3b717ce430aef4b7bc6d094967deeb8ea480248c`。
 - `.github/workflows/auto-live-1head-v351-window.yml` commit=`cb89eaab7d6a3eb2b2b6a18e39abf60b6ca337f5`、再trigger=`f91d76412762686089b610c81b9094e7227a65ea`。
 - `.github/workflows/auto-live-1head-v351-exhibition-20260915.yml` commit=`de0ad59accd5fac384333602e85dfc35967d0ca7`。
+- `run_1head_v351_live_finalize.py` commit=`0fb5a4e0139c2cf87aaf978738277420121ffbf6`。
+- `.github/workflows/test-1head-v351-live-finalizer.yml` commit=`fc970a5a23a65807766efa0b85639c9e39f7cfd2`。
 
 ## v351 cached live core timing
 - benchmark Run=`34927249888` success / Job=`104247789036` / Artifact ID=`10380650284`。
 - 20,000 iterations: mean=`0.026297ms`, median=`0.025979ms`, p95=`0.027051ms`, max=`0.123647ms`。
 - process wall=`1.73s`, max RSS=`165132KB`。
-- この計測はcache準備後のopponentCore→SECOND/THIRD→HYBRID 3点生成部分。ネットワーク/重い履歴準備は含まない。
 
-## 作業開始 2026-09-15 — 最終完成
-- ユーザー指示「完成させて」により、ready展示→正式HEAD final cutoff .78→PASS/DROP→PASSのみ3点をwatcherへ直結する。
-- 日次cacheを前提にし、LIVE raceごとの重い再学習は禁止。
+## 作業開始 2026-09-15 — 最終完成（継続）
+- ユーザー指示「完成させて」。
+- 既存watcherは展示readyで止まるため、ready→正式v351最終判定→immutable PASS/DROP/3点へ接続する。
+- 既存v323 LIVE routeとv337/v332/v326の正式 exhibition semanticsを再利用し、仮の判定は作らない。
+- raceごとの重い再学習は禁止。共有cache/事前計算を利用する。
 - T-15/T-12/T-10/T-5、T-5未ready ERROR_NO_BET、result/payout禁止、immutable finalを維持。
-- September learningはchronology-safe cutoffのみ。target/future resultは読まない。
-- CIでscorer contractとwatcher接続を通し、Run/Job/Artifact/commitを完了後追記する。
+- September学習はtargetより前に確定した結果だけ。厳密な同日確定時刻を証明できない場合はprior-day cutoffへfail-closeする。
+- CIでfinalizer contractとwatcher接続を通し、Run/Job/Artifact/commitを完了後追記する。
