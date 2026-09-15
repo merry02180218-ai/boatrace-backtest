@@ -19,5 +19,17 @@
 - For opponent ranking, add candidate/boat3 and second/third relative direct-info gaps; for 3head final filter also audit boat3 direct strength vs field. No realized kimarite as input.
 - Preserve deterministic 3 tickets/R and current baseline unless a successor wins the predeclared validation and frozen March diagnostic. Production unchanged; September UNREAD.
 
+## Availability audit completed
+- Fixed audit Run 34987709625 / Job 104443998031 / Artifact 10403679769 completed success.
+- 47 venue-month rows generated for Feb/Mar. Common exhibition/start exhibition is broadly available; original-exhibition availability is venue-specific.
+- JCD03 has no original-exhibition group in this source. JCD12/13/18 have turn/lap but straight is absent, confirming that original fields must be selected per venue rather than globally.
+
+## BEFORE NEXT EXECUTION — venue-aware model comparison
+- Start now from the successful availability audit. Implement executable v5 comparison on the fixed historical source.
+- Candidate A = frozen direct C=.25 baseline; B = baseline + corrected exhibition/start-exhibition; C = B + venue-aware original exhibition fields using the 1head >=80% availability contract.
+- February-only grouped validation decides/freeze. March outcomes remain unopened until the winner is frozen; then exactly one March diagnostic. September outcomes remain UNREAD throughout.
+- Record feature counts, eligible/readiness counts, February fold metrics, frozen choice, March 3-ticket hits/stake/return/ROI, deterministic output hash, Run/Job/Artifact IDs, and conclusion.
+- Production v288 remains unchanged.
+
 ## Exact restart point
-- Audit historical preview availability for Feb/Mar, implement 1head-compatible corrected direct features for 3head, run February-only validation, freeze winner, then one March diagnostic and AFTER handoff.
+- Implement and run v5 venue-aware exhibition comparison, then write AFTER result and next restart point.
