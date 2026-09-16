@@ -28,44 +28,36 @@ Run `35061928492` / Job `104683888325` / Artifact `10432044277`, success。
 
 ## THIRD close-margin strict audit AFTER
 - gap<=0.10 fixed from Apr-Jun development.
-- Run `35074469211` / Job `104723453680` / Artifact `10437831280`, success, marker `HEAD4_V283_MARGIN6_STRICT_CLOSING_ROI_OK`。
-- Apr-Jun: base ROI 167.73% -> expanded 153.11%, hits 18->19。
-- Jul-Aug holdout: base 87.79% -> expanded 115.35%, hits 11->16。incremental stake 7,700円 / payout 17,480円 / profit +9,780円 / incremental ROI 227.01%。
-- July: base 82.66% -> expanded 141.72%, hits 6->11。incremental ROI 388.44%。
-- August: base 95.56% -> expanded 75.96%, hits 5->5。THIRD追加では救済0。
-- Apr-Aug: base 129.71% -> expanded 135.13%, hits 29->35。
-- September UNREAD / production unchanged。
+- Run `35074469211` / Job `104723453680` / Artifact `10437831280`, success。
+- Apr-Jun ROI 167.73% -> 153.11%, hits 18->19。
+- Jul-Aug 87.79% -> 115.35%, hits 11->16。
+- July 82.66% -> 141.72%, hits 6->11。August 95.56% -> 75.96%, hits 5->5。
+- Apr-Aug 129.71% -> 135.13%, hits 29->35。
 
 ## SECOND-margin rescue validation AFTER
-- Run `35089336519` / Job `104771656556` / Artifact `10443723290`, success, marker `HEAD4_V283_SECOND_MARGIN_VALIDATION_OK`。
-- Apr-Jun developmentのみで選択したSECOND gap threshold=`0.20`。Jul/Augでthreshold tuningなし。
-- SECOND-margin: Apr-Jun ROI 167.73% -> 140.46%, hits 18->22。Jul-Aug 87.79% -> 103.33%, hits 11->18。July 82.66% -> 120.99%, hits 6->12。August 95.56% -> 75.67%, hits 5->6。
-- SECOND+THIRD combined: Apr-Jun ROI 129.37%, hits 24。Jul-Aug ROI 122.63%, hits 24。July ROI 146.18%, hits 17。August ROI 85.18%, hits 7。Apr-Aug ROI 126.14%, hits 48。
-- August SECOND miss 5Rのactual SECOND rankは rank4, rank3, rank4, rank3, rank3。THIRD-only拡張では届かない構造が中心。
-- ただしAugust全体のbase capture自体はJulyより悪いとは限らないため、「8月が単純により荒い」とは断定しない。miss depthと追加投資効率を分離して監査する。
-- closing oddsはretrospective diagnosticのみ。formal prospective ROI=`NOT_COMPUTABLE`。September `UNREAD`。production unchanged。
-
-## BEFORE — adaptive SECOND depth / staged ticket audit
-- 次は一律Top3拡張ではなく、SECONDの境界強度に応じて4点→6点→必要時のみ深い拡張へ段階化できるかを調べる。
-- actual SECOND rank3/rank4 missのscore gap構造をApr-Jun developmentとJul-Aug holdoutで比較する。
-- PLAYER_STARTのrank2-3 gapに加えrank3-4 gap、rank2-4 cumulative gapを出し、rank4まで広げるべき事前シグナルがあるか確認する。
-- 比較対象: frozen base4 / SECOND Top3 / SECOND Top4 / THIRD-margin / SECOND3+THIRD-margin / adaptive SECOND depth。
-- adaptive ruleの閾値選択はApr-Junのみ。July/August個別結果で閾値を選ばない。
-- official closing oddsでexact tickets/stake/payout/profit/ROIをsettleし、追加1点あたりの救済効率も比較する。
-- 2026-09 outcome/resultsは絶対に読まない。production `HEAD4_V291_COMP7` unchanged。formal prospective ROI=`NOT_COMPUTABLE`。
+- Run `35089336519` / Job `104771656556` / Artifact `10443723290`, success。
+- Apr-JunだけでSECOND gap=`0.20`選択。
+- SECOND-margin: Apr-Jun ROI 140.46%, hits22。Jul-Aug 103.33%, hits18。July 120.99%, hits12。August 75.67%, hits6。
+- SECOND+THIRD: Apr-Jun 129.37%, hits24。Jul-Aug 122.63%, hits24。July 146.18%, hits17。August 85.18%, hits7。Apr-Aug 126.14%, hits48。
+- August SECOND miss 5R actual SECOND rank = rank4/rank3/rank4/rank3/rank3。
 
 ## AFTER — adaptive SECOND depth / staged ticket audit
 - Run `35111649299` / Job `104846602672` / Artifact `10453260665`, success。run head SHA `b494a0553af41491b473a216319d38afed5e2639`。
-- Artifact `head4-v283-adaptive-second-depth` を回収して exact official closing odds で監査完了。
-- Apr-Jun developmentだけで adaptive threshold を選択: `g3=0.20`, `g4=0.20`。selection=`Apr-Jun max profit, then ROI, fewer tickets, tighter thresholds`。Jul/Augでthreshold tuningなし。
-- Apr-Jun: base4 344 tickets / 18 hits / ROI 167.73%。SECOND Top3 516 / 22 / 136.10%。SECOND Top4 688 / 27 / 139.38%。adaptive SECOND 656 / 27 / 146.17%。THIRD-margin 428 / 19 / 153.11%。SECOND3+THIRD 640 / 25 / 134.03%。adaptive+THIRD 821 / 29 / 129.43%。
-- Jul-Aug holdout: base4 312 / 11 / 87.79%。SECOND Top3 468 / 18 / 102.01%。SECOND Top4 624 / 19 / 88.51%。adaptive SECOND 612 / 19 / 90.25%。THIRD-margin 389 / 16 / 115.35%。SECOND3+THIRD 582 / 24 / 121.15%。adaptive+THIRD 757 / 25 / 103.04%。
-- July: base 82.66%。SECOND Top3 120.99%。THIRD-margin 141.72%。SECOND3+THIRD 146.18%。adaptive SECOND 90.74%。adaptive+THIRD 111.45%。
-- August: base 95.56%。SECOND Top3 73.23% (hits 5->6)。SECOND Top4 85.12% (hits 5->7)。THIRD-margin 75.96% (hits 5)。SECOND3+THIRD 82.58% (hits 7)。adaptive SECOND 89.45% (hits 7)。adaptive+THIRD 89.80% (hits 8)。
-- Apr-Aug: base 129.71%。SECOND Top3 119.89%。SECOND Top4 115.18%。THIRD-margin 135.13%。SECOND3+THIRD 127.90%。adaptive SECOND 119.18%。adaptive+THIRD 116.77%。
-- August SECOND miss 5Rは rank4/rank3/rank4/rank3/rank3。rank4 missでも rank2-4 cumulative gap は約0.0585, 0.0469と小さく、深いSECOND候補自体は事前score上の僅差として検出可能だった。一方、adaptiveを広く使うとticket増加が重く、Jul-Aug holdout ROIは90.25%に留まる。
-- 結論: `adaptive SECOND depth` 単独をproductionへ昇格する根拠は不足。現時点では `THIRD-margin` がApr-Aug ROI 135.13%で最も安定し、Jul-Augでは `SECOND Top3 + THIRD-margin` が121.15%まで改善するがApr-Jun/Apr-AugではROIを削るためproduction変更はまだしない。August救済のためのrank4拡張は命中数を増やすが、常時適用では投資効率が不足。
-- 次の再開地点: SECOND深掘りを常時Top4にせず、`rank2-4 cumulative gap` が極小のときだけrank4を追加する sparse rescue をApr-Jun developmentで設計し、Jul-Aug holdoutで固定監査する。既存THIRD-marginとの組合せも比較する。
-- closing oddsはretrospective diagnosticのみ。formal prospective ROI=`NOT_COMPUTABLE`。September `UNREAD`。production `HEAD4_V291_COMP7` unchanged。
+- Apr-Junだけで `g3=0.20`, `g4=0.20` 選択。Jul/Aug tuningなし。
+- Apr-Jun: base 167.73%; adaptive SECOND 146.17%; adaptive+THIRD 129.43%。
+- Jul-Aug: base 87.79%; adaptive SECOND 90.25%; adaptive+THIRD 103.04%; THIRD-margin 115.35%; SECOND3+THIRD 121.15%。
+- July adaptive SECOND 90.74%; adaptive+THIRD 111.45%。August adaptive SECOND 89.45% (hits7); adaptive+THIRD 89.80% (hits8)。
+- August rank4 missのrank2-4 cumulative gapは約0.0585, 0.0469と小さい。常時深掘りは投資効率不足。
+- 結論: adaptive SECOND depthはproduction昇格せず。次は極小gap時だけrank4追加。
+- formal prospective ROI=`NOT_COMPUTABLE`。September `UNREAD`。production unchanged。
 
-Status: `ADAPTIVE_SECOND_DEPTH_AUDIT_COMPLETE_NEXT_SPARSE_RANK4_RESCUE`
+## BEFORE — 僅差時のみ4番手を追加する救済監査
+- ユーザー了承を受け、2着候補の4番手を常時買わず「2番手から4番手までの評価差が極小のときだけ」追加する方式を検証する。
+- 判定には結果を使わず、PLAYER_STARTの事前スコア `2番手-4番手累積差` のみを使う。
+- 閾値候補はApr-Junだけで選択し、Jul-Augには固定適用する。7月/8月個別結果で閾値調整しない。
+- 比較は base4、3着僅差補正、2着Top3+3着僅差補正、および「極小gap時だけ2着4番手追加」の各方式。
+- 追加買い目数、追加的中、投資、払戻、利益、回収率をofficial closing oddsで監査する。
+- 特にAugustのrank4 miss 2件を拾えるかと、そのためにJul-Aug全体で何点余計に買うかを分離して評価する。
+- 2026年9月 outcome/resultsは絶対に読まない。production `HEAD4_V291_COMP7` unchanged。formal prospective ROI=`NOT_COMPUTABLE`。
+
+Status: `SPARSE_RANK4_RESCUE_AUDIT_IN_PROGRESS`
