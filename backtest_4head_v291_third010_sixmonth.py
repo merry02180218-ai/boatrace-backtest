@@ -49,8 +49,11 @@ def main():
         st=float(q.stake.sum()); pay=float(q.payout.sum()); bets=int((q.decision=='BET').sum())
         summary.append({'period':period,'candidate_R':len(q),'covered_R':int(q.covered.sum()),'bet_R':bets,'pass_R':int((q.decision=='PASS').sum()),'tickets_if_candidate':int(q.ticket_count.sum()),'hits':int(q.hit.sum()),'stake':st,'payout':pay,'profit':pay-st,'roi_pct':100*pay/st if st else np.nan})
     sm=pd.DataFrame(summary)
-    if set(sm[sm.period.str.match(r'2026-\d\d')].period)!=set(REQUIRED): raise RuntimeError('MONTH_SUMMARY_INCOMPLETE')
+    # Persist diagnostics before the final integrity guard so failures still produce artifacts.
     rd.to_csv(OUT/'race_detail.csv',index=False); sm.to_csv(OUT/'summary.csv',index=False)
+    monthly_periods=sm.loc[sm.period.isin(REQUIRED),'period'].tolist()
+    if sorted(monthly_periods)!=REQUIRED or len(monthly_periods)!=len(REQUIRED):
+        raise RuntimeError(f'MONTH_SUMMARY_INCOMPLETE required={REQUIRED} available={monthly_periods}')
     meta={'policy':live.POLICY,'window':[START,END],'months':REQUIRED,'third_gap':live.THIRD_GAP,'composite_cut':live.COMP_CUT,'bank_yen':live.BANK,'dutch_unit_yen':100,'odds_source':'closing odds; retrospective diagnostic only','formal_prospective_roi':'NOT_COMPUTABLE','candidate_selection':'frozen reconstruction; no threshold retuning','v96_used':False,'september_2026':'UNREAD'}
     (OUT/'meta.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n')
     print('HEAD4_THIRD010_SIXMONTH_OK'); print(sm.to_string(index=False)); print('FORMAL_PROSPECTIVE_ROI NOT_COMPUTABLE'); print('V96_USED False'); print('SEPTEMBER_UNREAD')
