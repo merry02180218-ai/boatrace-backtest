@@ -13,6 +13,7 @@ on:
       - 'CHAT_HANDOFF_20260912_SES_AUTORESEARCH.md'
       - '.github/workflows/regress-exhibition-seed17-track27.yml'
 
+# 2026-09-16: explicit v38 blind-matrix launch marker; no result data is read here.
 jobs:
   regress:
     strategy:
