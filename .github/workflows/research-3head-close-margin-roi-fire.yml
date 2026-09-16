@@ -1,0 +1,40 @@
+name: research-3head-close-margin-roi-fire
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/research-3head-close-margin-roi-fire.yml']
+permissions:
+  actions: read
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: research/3head-player-attack-mode
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests beautifulsoup4 lxml
+      - name: Restore fixed pre-September source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34754875342 -n 3head-wave21-allrace-source-build
+          SRC=$(find . -name 'analysis_v289_3head_wave21_allrace_feature_settled.csv' | head -1)
+          TARGET="$GITHUB_WORKSPACE/analysis_v289_3head_wave21_allrace_feature_settled.csv"
+          test -n "$SRC"
+          if [ "$(realpath "$SRC")" != "$(realpath -m "$TARGET")" ]; then cp "$SRC" "$TARGET"; fi
+          test -s "$TARGET"
+      - name: Run composite-odds ROI audit
+        run: PYTHONPATH="$GITHUB_WORKSPACE" python research/run_3head_close_margin_fourth_ticket_roi.py | tee research_v289_3head_close_margin_fourth_ticket_roi.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-3head-close-margin-fourth-ticket-roi
+          path: |
+            research_v289_3head_close_margin_fourth_ticket_roi.json
+            research_v289_3head_close_margin_fourth_ticket_roi_detail.csv
+            research_v289_3head_close_margin_fourth_ticket_roi.log
