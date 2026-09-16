@@ -12,7 +12,6 @@ import numpy as np
 import pandas as pd
 
 import audit_4head_86r_independent as cand
-import analyze_v96_4corner_monthly_walkforward_tiebreak as c4
 import analyze_v221_3head_scenario_pair as v221
 import analyze_v264_4head_feature_exhaustive as v264
 import analyze_v274_4head_opponent_feature_audit as v274
@@ -28,17 +27,15 @@ STAKE_PER_TICKET=100
 
 
 def source_rows(codes):
-    # analysis_v93 is the frozen historical feature table used by the v279/v282
-    # lineage. Its research horizon is Jan-Aug 2026. Fail closed if that contract
-    # has changed rather than permitting September into this diagnostic.
-    rs=c4.read()
-    dates=[str(r.get('date','')) for r in rs]
-    if any(d>END for d in dates if d):
+    p=ROOT/'analysis_v93_4corner_second_third.csv'
+    d=pd.read_csv(p)
+    if 'date' not in d or 'race_code' not in d:
+        raise RuntimeError('V93_SOURCE_CONTRACT_MISSING_DATE_OR_RACE_CODE')
+    d['date']=d.date.astype(str)
+    if any(x>END for x in d.date if x):
         raise RuntimeError('SEPTEMBER_OR_LATER_PRESENT_IN_V93_SOURCE_ABORT')
-    d=pd.DataFrame(rs)
     d['race_code']=d.race_code.astype(str).str.zfill(12)
     d=d[d.race_code.isin(codes)].copy()
-    d['date']=d.date.astype(str)
     d=d[(d.date>=START)&(d.date<=END)].copy()
     d=v221.build(d,'date')
     return d
@@ -61,7 +58,6 @@ def build_long_all(d):
 
 def conditional_rows(g, second_features, cond_features):
     by={int(r.boat):r for _,r in g.iterrows()}; out=[]
-    # Exact feature construction from v282.make_pairs, but label-free.
     tbase=[c for c in second_features if c in g.columns]
     scenario=[c for c in g.columns if c.startswith('is_boat') or c in ('is_inner123','is_outer56','is_inner_edge3','is_outer_edge5','h4_attack','h4_turning') or '__vs4' in c or '__abs4' in c or c.startswith('h4_attack_x_')]
     for s in BOATS:
@@ -82,9 +78,8 @@ def conditional_rows(g, second_features, cond_features):
                     sv=pd.to_numeric(pd.Series([sr.get(c,np.nan)]),errors='coerce').iloc[0]
                     r[f'diff_{c}']=tv-sv if pd.notna(tv) and pd.notna(sv) else np.nan
                     r[f'prod_{c}']=tv*sv if pd.notna(tv) and pd.notna(sv) else np.nan
-            # Frozen scorer requires every frozen key to exist; absent-but-valid
-            # historical values are represented as NaN and use frozen imputation.
-            for c in cond_features: r.setdefault(c,np.nan)
+            missing=[c for c in cond_features if c not in r]
+            if missing: raise RuntimeError(f'FROZEN_COND_FEATURE_MISSING:{missing[:5]}')
             out.append(r)
     return out
 
@@ -107,15 +102,16 @@ def main():
     if set(d.race_code)!=codes: raise RuntimeError(f'feature source coverage mismatch {len(set(d.race_code))}/{len(codes)}')
     long=build_long_all(d); art=load_artifact()
     sf=list(art['v283_SECOND']['features']); cf=list(art['v283_COND_THIRD']['features'])
-    rec=[]
-    odds_cache={}
+    missing_sf=[f for f in sf if f not in long.columns]
+    if missing_sf: raise RuntimeError(f'FROZEN_SECOND_FEATURE_MISSING:{missing_sf[:5]}')
+    rec=[]; odds_cache={}
     truth={str(r.race_code).zfill(12):(int(float(r.winner)),int(float(r.second)),int(float(r.third))) for _,r in d.iterrows() if str(r.get('valid_result','0')) in ('1','1.0')}
     for code,g in long.groupby('race_code'):
-        if len(g)!=5: continue
+        if len(g)!=5: raise RuntimeError(f'FROZEN_BOAT_ROWS_MISMATCH:{code}:{len(g)}')
         sr=[]
         for _,r in g.iterrows():
             x={'boat':int(r.boat)}
-            for f in sf: x[f]=r.get(f,np.nan)
+            for f in sf: x[f]=r[f]
             sr.append(x)
         p2=score_second(sr,art); cr=conditional_rows(g,sf,cf); pc=score_conditional_third(cr,art); pairs=v283_top4(p2,pc)
         ds=str(g.date.iloc[0]); oq=odds_cache.setdefault(ds,odds_for_date(ds)); oo=oq[oq.race_code.astype(str)==str(code)] if len(oq) else oq
