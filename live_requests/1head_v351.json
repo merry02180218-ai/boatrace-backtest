@@ -1,7 +1,7 @@
 {
-  "mode": "validate",
-  "race_code": "",
-  "deadline_jst": "",
-  "requested_at_jst": "2026-09-16T08:00:00+09:00",
-  "note": "Entrypoint validation only. Change mode to judge with race_code and deadline_jst only when user explicitly requests 判別して."
+  "mode": "judge",
+  "race_code": "202609161404",
+  "deadline_jst": "2026-09-16T09:50:00+09:00",
+  "requested_at_jst": "2026-09-16T09:44:00+09:00",
+  "note": "User explicitly requested Naruto 4R immediate judgment."
 }
