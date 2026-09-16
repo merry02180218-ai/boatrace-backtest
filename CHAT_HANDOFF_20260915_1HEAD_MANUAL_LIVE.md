@@ -42,3 +42,13 @@
 - 初回Run `35037266265` / Job `104609063946` はworkflow自体successだが、mass監査stepは `cache_v321_julaug_nonpristine_slim.csv.gz` 不在で結果未生成。
 - **これから行うこと**: `.github/workflows/backtest.yml` のmass監査前に `run_v321_1head_julaug_nonpristine_validation.py --stage prepare` を追加して必要cacheをfresh生成し、その後mass監査を実行する。fresh RunのRun/Job/Artifact IDと閾値結果を確認してAFTERへ記録する。
 - cache生成・監査ともSeptember結果を読まないことを確認し、production変更は結果確認後に判断する。
+
+## BEFORE: 手動即時LIVE入口の復旧 — 2026-09-16
+- ユーザーの「○○R判別して」だけで、こちらからGitHubへtrigger fileをpushして任意Rを即時発火できる入口を復旧する。
+- レース時刻controllerの自動運用は復活させない。明示要求時だけ発火する。
+- triggerには `race_code` と締切JSTを記録し、そのpushで専用workflowを起動する。
+- workflowは当日 `v351-1head-live-cache-YYYYMMDD` artifactを取得し、PRE候補外でも対象JSONを使用する。
+- `probe_1head_v351_boatcast_exhibition.py` -> `run_1head_v351_live_exhibition_gate.py` -> merge -> `run_1head_v351_live_finalize.py` を実行し、PASS/DROPと3連単3点をartifactへ残す。
+- 締切前のみ。結果・払戻・オッズは読まない。`result_or_payout_used=False` / `chronology_guard=True` を維持。
+- production profile / HEAD cutoff / opponent mass / G2/G3 / ticket policy は変更しない。
+- 実装後はfresh Actions Runで入口を監査し、Run/Job/Artifact ID・結論・次の再開地点をAFTERへ記録する。
