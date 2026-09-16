@@ -75,3 +75,12 @@
 - `.github/workflows/manual-1head-v351-live.yml`。ユーザーの明示要求時だけtrigger file pushで発火。controller自動運用は復活させない。
 - validation Run `35041039151` / Job `104620732127` / Artifact `10424643529` / success。
 - 結果・払戻・オッズは読まない。`result_or_payout_used=False` / `chronology_guard=True`。
+
+## BEFORE: Wave12 結果非依存 one-replace guard — 2026-09-16
+- Wave11 fresh Run `35062917684` / Job `104686861402` / Artifact `10433019414` はsuccess。81R中first pairで `KEEP_ONE_REPLACE_ONE=57`、`REPLACE_BOTH=19`、`ORDER_ONLY=5`。production変更なし。
+- 次はoracle結果そのものを入力にせず、低mass `[.350,.375)` の全対象を使って damage risk を含めた結果非依存guardを作る。
+- Wave4の全期間median事前補完は廃止し、`SimpleImputer -> StandardScaler -> LogisticRegression` をtraining fold内fitに変更する。
+- 学習はFeb-May、Juneを完全frozen test。HEAD>=.78、mass `[.350,.375)`、主力 `lap+turn+straight` / `lap+turn` を優先する。rescue-positive 81Rだけで学習しない。
+- 評価は現行pair/ticket基準、override数、rescue、damage、net delta、schema/venue別。threshold探索はtraining側だけで行いJuneを閾値選択に使わない。
+- 展示はpost-ranking/ticket-rescue用途だけ。HEAD学習特徴へ直接追加しない。production `.375` / G2=.45 / G3=1.00 / HYBRID 3点は変更しない。
+- September 2026 outcomes/payoutsは `UNREAD` 維持。fresh Actionsで再現後、Run/Job/Artifact/commit/結論をAFTER追記する。
