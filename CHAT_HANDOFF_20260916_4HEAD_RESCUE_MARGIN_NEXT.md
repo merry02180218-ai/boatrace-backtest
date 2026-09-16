@@ -60,4 +60,17 @@ Run `35061928492` / Job `104683888325` / Artifact `10432044277`, success。
 - 特にAugustのrank4 miss 2件を拾えるかと、そのためにJul-Aug全体で何点余計に買うかを分離して評価する。
 - 2026年9月 outcome/resultsは絶対に読まない。production `HEAD4_V291_COMP7` unchanged。formal prospective ROI=`NOT_COMPUTABLE`。
 
-Status: `SPARSE_RANK4_RESCUE_AUDIT_IN_PROGRESS`
+## AFTER — sparse rank4 rescue
+- Run `35117061755` / Job `104865691490` / Artifact `10456830494`, success。run head SHA `79c9d69927c7a28216603ceb1800c29bc722a578`。
+- Apr-Jun development選択ではgap24<=0.20が採用されたが、投資増が大きい。
+- 追加検討として0.05/0.06固定値を全月（月別4〜8月）で比較する。
+- September `UNREAD`、production unchanged。
+
+## BEFORE — gap24 0.05 / 0.06 固定・全月比較
+- ユーザー要望により、閾値選択ではなく `gap24<=0.05` と `gap24<=0.06` を固定して4月・5月・6月・7月・8月を各月別に監査する。
+- 各月で発火レース数、総買い目、追加買い目、的中数、base比追加的中、投資、払戻、利益、closing-odds ROIを比較する。
+- actual SECOND rank4 missについて、0.05/0.06で何件救済対象になるかも月別に出す。
+- base4および必要に応じTHIRD-margin併用も同じ月別表で比較する。
+- 2026年9月 outcome/resultsは読まない。対象は2026-04-01〜2026-08-31のみ。production `HEAD4_V291_COMP7` unchanged。formal prospective ROI=`NOT_COMPUTABLE`。
+
+Status: `FIXED_GAP_005_006_MONTHLY_AUDIT_IN_PROGRESS`
