@@ -3,9 +3,10 @@
 Repo: `merry02180218-ai/boatrace-backtest`
 
 ## 最重要ルール
-- 4号艇productionは作業開始時点で `HEAD4_V291_COMP7`。
+- 4号艇production ticket policyは `HEAD4_V291_COMP7_THIRD010`。
+- 頭判定S layerは従来 `HEAD4_V291_COMP7` と同じPRE>=0.28 / POST>=0.25 / ENV_ENTRY>=0.224790。
 - frozen opponentはv283: SECOND `PLAYER_START` / conditional THIRD `COND_BASE` / `TOP2XTOP2` / alpha2=.60。
-- v96禁止。
+- v96禁止。締切前公式oddsのみ。comp>=7。10,000円Dutch。fail closed。
 - 2026年9月のレース結果/outcomeは絶対に読まない。`UNREAD`維持。
 - closing odds評価はretrospective diagnosticのみ。formal prospective ROI=`NOT_COMPUTABLE`。
 - 作業前後にこの引き継ぎへBEFORE/AFTERを追記し、Run/Job/Artifact/commit SHAを正確に残す。
@@ -20,23 +21,48 @@ Repo: `merry02180218-ai/boatrace-backtest`
 - strict comparison source Run `35089336519` / Job `104771656556` / Artifact `10443723290`。
 - fixed gap audit Run `35119432005` / Job `104873127479` / Artifact `10456963422`。
 
-## THIRD0.10 の正確な意味
-- SECONDは従来どおりv283の上位2艇。
+## THIRD0.10 production semantics
+- SECONDは従来どおりv283上位2艇。
 - 各SECOND候補 `s` ごとに conditional THIRD を順位付け。
-- `P3(rank2|s) - P3(rank3|s) <= 0.10` のとき、そのSECOND枝だけTHIRD rank3を追加。
-- それ以外は従来のTHIRD Top2。
+- `P3(rank2|s) - P3(rank3|s) <= 0.10`（inclusive）のとき、そのSECOND枝だけTHIRD rank3を追加。
 - frozen base Top4を必ず保持し、追加対象だけ重複除去して足す。
-- SECOND rescue/rank4 rescueは本採用しない。
+- production ticket数は4〜6点。
+- SECOND rescue/rank4 rescueは採用しない。
 
 ## BEFORE — 2026-09-17 USER APPROVED PRODUCTION PROMOTION
 ユーザーが `3着候補の僅差補正（差0.10以下）は本採用でいい` と明示承認。
+- shadow案を撤回し、THIRD0.10をproduction ticket policyへ昇格する。
+- 9月outcome/resultsは読まずsynthetic/pre-resultだけで実装確認する。
 
-次の作業:
-1. `THIRD gap0.10` をshadowではなく4号艇production ticket policyへ正式昇格する。
-2. 頭判定 `HEAD4_V291_COMP7` のPRE/POST/ENV_ENTRY閾値、v283 SECOND、alpha2=.60、comp>=7、締切前公式odds、10,000円Dutch、fail-closed、v96禁止は維持する。
-3. 変更するのはv283 ticket expansionのみ。base Top4に、上記THIRD rank3 close-margin追加を行う。
-4. ticket数が4固定ではなく4〜6点になり得るため、composite odds / Dutch / verifierの4点固定仮定を安全に可変点数対応へ変更する。全買い目を購入し、合計10,000円・100円単位を維持する。
-5. 9月outcome/resultsは一切読まない。テストはsynthetic/pre-result入力のみで行う。
-6. 実装後にコード差分・verifierを確認し、commit SHAとテスト結果をAFTERへ記録する。
+## AFTER — THIRD0.10 production implementation
+実装済み。
 
-Status: `THIRD010_PRODUCTION_PROMOTION_APPROVED_IN_PROGRESS`
+### New production runner
+- file: `run_4head_v291_third010_live.py`
+- commit: `376c636839af499821244ca660e382a43a16d644`
+- policy name: `HEAD4_V291_COMP7_THIRD010`
+- 旧 `run_20260911_4head_v291_live.py` をfrozen base helperとして再利用し、S gate / p2 / cond parser / official pre-deadline odds / audit persistenceは変更していない。
+- base v283 Top4を先に生成し、Top2 SECOND各枝についてTHIRD rank2-rank3 gap<=0.10ならrank3を追加。
+- 4〜6点の可変ticketに対応してcomposite oddsを再計算。
+- BET時は全ticketを対象に10,000円Dutch、全stake正数・100円単位・合計10,000円を強制。
+- comp>=7 inclusive、v96=false、result/payout未使用を維持。
+
+### Offline synthetic verifier
+- file: `verify_4head_v291_third010_live.py`
+- commit: `760800671596c87334877217e1683223aa7a7879`
+- 検証内容: 非発火時4点、両SECOND枝発火時6点、base Top4保持、gap exactly 0.10 inclusive、可変Nでcomp exactly 7 BET、10,000円/100円単位、below7 PASS、S gate NO_BET、v96禁止。
+- race result/outcomeは参照しない。
+
+### Validation workflow
+- file: `.github/workflows/validate-4head-v291-third010-live.yml`
+- commit: `695dab0796fc79fa6c27e1bff7f0d1ac33099287`
+- `workflow_dispatch` only。多重/自動発火なし。
+- 現在のGitHub connectorにはworkflow_dispatch起動actionが無いため、このチャットからRunはまだ発火していない。Run/Job/Artifact IDは未発行。発火していないものを成功扱いしない。
+
+### Production status
+- 本採用判断は確定。production ticket policyは `HEAD4_V291_COMP7_THIRD010`。
+- ただし新verifierのGitHub Actions実行確認だけ未完了。workflowを1回手動発火後、Run/Jobを確認して最終CI記録する。
+- 既存のfull post-exhibition automation自体は以前から未完成なので、今回の変更はproduction market/ticket entrypointの正式版として追加したもの。旧4点runnerを新規運用で使わないこと。
+- September outcome/results=`UNREAD`。
+
+Status: `THIRD010_PRODUCTION_ADOPTED_CI_DISPATCH_PENDING`
