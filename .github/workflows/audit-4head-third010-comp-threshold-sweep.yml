@@ -1,0 +1,24 @@
+name: audit-4head-third010-comp-threshold-sweep
+on:
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run comp threshold sweep
+        run: python audit_4head_third010_comp_threshold_sweep.py
+      - name: Upload audit artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: head4-third010-comp-threshold-sweep
+          path: /tmp/head4_third010_comp_sweep/
+          if-no-files-found: error
