@@ -23,14 +23,20 @@ Date: 2026-09-16〜17
 - June: 195/544 -> 243/544 (+48), add 488。
 - July/August NON-PRISTINE。September UNREAD。production unchanged。
 
-## 2026-09-17 合成オッズROI監査 BEFORE
-ユーザー確認: ROIは単純均等買いではなく、既存v288と同じ合成オッズ基準で評価する。
+## 2026-09-17 合成オッズROI監査 INVALID AFTER
+- Run `35131305385` SUCCESS / Job `104912706361` / Artifact `10460683745`。
+- ただし対象が v288 production 実BET 94Rではなく、Apr-Jun の3号艇頭評価母集団 1521Rだったため採否判断から除外。
+- 608.65% -> 610.34% は production ROI 比較として無効。production unchanged。
+
+## 2026-09-17 exact v288 94R ROI再監査 BEFORE
+ユーザー確認: v288で実際に買う94Rだけを対象に再監査する。
 これからやること:
-1. v288でROI 172.560638%を算出した既存の合成オッズ/資金配分定義をGitHubから特定する。
-2. その定義を変更せず、既存3点と margin<=0.075 の4点化を比較する。
-3. Marchは選択月、Apr-Junはfreeze OOS、Jul-AugはNON-PRISTINE参考のみ。
-4. 月別の合成オッズ、投資、払戻、ROI差を出す。追加4点目単体の均等買いROIでは採否しない。
-5. September outcomesは絶対に読まない。production v288は変更しない。
+1. v288 production の実BET 94Rを既存production実装/監査成果物から完全再現し、まず R=94 / hits=52 / ROI=172.560638% をassertする。
+2. 94Rの既存3点買い目・合成オッズ資金配分を変更せず再現する。
+3. その94Rだけに、rank3-rank4 score差 <= 0.075 の場合だけrank4を4点目として追加する。
+4. 1R投資10,000円固定、v288と同一の逆オッズDutch + 100円Hamiltonで現行3点 vs 条件付き4点を比較する。
+5. baseline再現assertに失敗した場合はROI比較を出さず、原因修正を優先する。
+6. September outcomesは絶対に読まない。July/AugustはNON-PRISTINE。productionは変更しない。
 
 ## 次の再開地点
-v288合成オッズROI実装の特定 → ROI監査script/workflow実装 → Actions発火 → 結果をAFTER追記。
+exact v288 94R portfolio source特定 → baseline 94R/52hits/172.560638% assert → 0.075条件付き4点ROI監査 → Actions結果 → AFTER追記。
