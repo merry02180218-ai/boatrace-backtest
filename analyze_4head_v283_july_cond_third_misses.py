@@ -27,7 +27,10 @@ def main():
         sr=[]
         for _,r in g.iterrows():
             x={'boat':int(r.boat)}; x.update({f:r[f] for f in sf}); sr.append(x)
-        p2=score_second(sr,art); cr=audit.conditional_rows(g,sf,cf); pc=score_conditional_third(cr,art)
+        p2=score_second(sr,art)
+        cr=audit.conditional_rows(g,sf,cf)
+        pc=score_conditional_third(cr,art)
+        crdf=pd.DataFrame(cr)
         a2,a3=actual[1],actual[2]
         sorder=sorted(BOATS,key=lambda s:(-float(p2[s]),s)); second_rank=sorder.index(a2)+1
         torder=sorted((t for t in BOATS if t!=a2),key=lambda t:(-float(pc[(a2,t)]),t)); third_rank=torder.index(a3)+1
@@ -36,14 +39,13 @@ def main():
              'second_rank':second_rank,'third_rank':third_rank,'actual_third_p':actual_p,'third_top2_boundary_p':top2_p,'p_margin_vs_top2':margin,
              'third_order':'|'.join(map(str,torder)),'second_pass':int(second_rank<=2),'third_hit':int(third_rank<=2)}
         # Preserve frozen conditional feature values for the actual s>t row.
-        rr=cr[(cr.second_boat==a2)&(cr.third_boat==a3)]
+        rr=crdf[(crdf.second_boat==a2)&(crdf.third_boat==a3)]
         assert len(rr)==1
         for f in cf: row[f]=rr.iloc[0][f]
         rec.append(row)
     r=pd.DataFrame(rec).sort_values(['date','race_code']); assert len(r)==70
     r.to_csv(OUT/'head4_70r_cond_third_detail.csv',index=False)
     passed=r[r.second_pass==1].copy(); assert len(passed)==40
-    # Structural summary by month and actual second/third boat.
     summaries=[]
     for label,g in [('Apr-Jun',passed[passed.month<='2026-06']),('July',passed[passed.month=='2026-07']),('August',passed[passed.month=='2026-08'])]:
         summaries.append({'period':label,'second_pass_R':len(g),'third_hit_R':int(g.third_hit.sum()),'third_hit_pct':100*g.third_hit.mean(),
@@ -53,7 +55,6 @@ def main():
     pd.DataFrame(summaries).to_csv(OUT/'period_summary.csv',index=False)
     pd.crosstab([passed.month,passed.actual_second],passed.third_hit).to_csv(OUT/'by_second.csv')
     pd.crosstab([passed.month,passed.actual_third],passed.third_hit).to_csv(OUT/'by_third.csv')
-    # Frozen standardized feature contributions for July misses vs comparison groups.
     st=art['v283_COND_THIRD']; mean=np.asarray(st['scaler_mean'],float); scale=np.asarray(st['scaler_scale'],float); beta=np.asarray(st['beta'],float); med=np.asarray(st['imputer_median'],float)
     X=passed[cf].apply(pd.to_numeric,errors='coerce').to_numpy(float); X=np.where(np.isnan(X),med,X); Z=(X-mean)/scale; C=Z*beta
     groups={'AprJun_hit':(passed.month<='2026-06')&(passed.third_hit==1),'AprJun_miss':(passed.month<='2026-06')&(passed.third_hit==0),'July_hit':(passed.month=='2026-07')&(passed.third_hit==1),'July_miss':(passed.month=='2026-07')&(passed.third_hit==0),'August':passed.month=='2026-08'}
