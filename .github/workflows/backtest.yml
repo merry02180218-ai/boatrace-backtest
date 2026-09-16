@@ -41,6 +41,8 @@ jobs:
         run: python run_v321_1head_julaug_nonpristine_validation.py --stage prepare | tee opponent_mass_v321_prepare.txt
       - name: Audit opponent mass threshold
         run: python audit_v351_opponent_mass_threshold.py | tee opponent_mass_threshold.txt
+      - name: Analyze Wave10 low-mass rescue band
+        run: python analyze_v351_mass_rescue_wave10.py | tee mass_rescue_wave10.txt
       - uses: actions/upload-artifact@v4
         with:
           name: audit-v351-exact3-via-monthly
@@ -70,6 +72,9 @@ jobs:
             analysis_v351_opponent_mass_threshold_rows.csv
             analysis_v351_opponent_mass_threshold_summary.csv
             analysis_v351_opponent_mass_bands.csv
+            analysis_v351_mass_rescue_wave10_rows.csv
+            analysis_v351_mass_rescue_wave10_summary.csv
+            analysis_v351_mass_rescue_wave10_bins.csv
             schema_rebuild.txt
             dedicated_schema_head.txt
             schema_exact3_errors.txt
@@ -83,3 +88,4 @@ jobs:
             kiryu_boat2_wave9.txt
             opponent_mass_v321_prepare.txt
             opponent_mass_threshold.txt
+            mass_rescue_wave10.txt
