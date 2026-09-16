@@ -56,19 +56,37 @@
 - `[.350,.375)` は145R / HEAD77.24% / exact3 21.38%。単純な `.375 -> .350` 緩和はREJECT。production `.375` 維持。
 
 ## Wave15 1号艇の2/3警戒→相手着順構造 — 完了
+- 実装 commit `2ff5d28ae9aab1a8b24526717c316bdab6ca359f`、workflow追加 commit `b494a0553af41491b473a216319d38afed5e2639`。
 - Run `35111618442` / Job `104846502944` / Artifact `10454356574` / success。
-- Run head SHA `b494a0553af41491b473a216319d38afed5e2639`。Artifact SHA256 `5d5840825821f65dadefa8e4865c6ff03ab019abbde5011f3de7c84eb1692aac`。
+- Artifact SHA256 `5d5840825821f65dadefa8e4865c6ff03ab019abbde5011f3de7c84eb1692aac`。
 - historical 98Rのみ。September outcomes/payoutsは使用していない。本番設定変更なし。
 - 2号艇が明確に3号艇より強い40R: actual SECOND 2号艇32.5%、4号艇25.0%、actual THIRD 3号艇35.0%。4〜6号艇がどちらかに入る75.0%、4〜6両方12.5%。
 - 3号艇が明確に2号艇より強い29R: actual SECOND 2号艇31.0%、3号艇24.1%、actual THIRD 5号艇31.0%、3号艇13.8%。4〜6号艇がどちらかに入る79.3%、4〜6両方27.6%。
 - 解釈: 『強い2/3号艇本人をそのまま買う』より、1号艇の警戒で展開が変わり外艇が浮上する仮説を追加検証する価値あり。特に探索上は2優勢→4号艇、3優勢→5号艇の着順差が見える。
 - ただし同じ98Rを見た探索結果であり、本番採用根拠にはしない。
 
-## BEFORE: Wave16 2優勢→4 / 3優勢→5 の月別frozen検証 — 2026-09-17
-- Wave15で見えた『2号艇優勢時は4号艇、3号艇優勢時は5号艇が浮上』を探索データへ最適化せず、時系列で固定検証する。
-- まずWave15と同一の攻撃強度定義・band定義をコードから再利用し、探索月と検証月を分離する。閾値・ルールは学習側で固定し、検証月では変更しない。
-- 比較対象は現行HYBRID 3点をbaselineとし、候補ルールは『2優勢→4を相手候補へ』『3優勢→5を相手候補へ』。救済で既存ticketを壊すdamageも必ず計測する。
-- 月別で対象R、現行的中、救済数、破壊数、差引、2着/3着別の4・5浮上率を出す。小標本なら採用しない。
+## Wave16 2優勢→4 / 3優勢→5 月別frozen検証 — 実行中
+- このチャットでユーザー承認後、Wave15の探索結果を別月固定検証するWave16を実装・発火した。
+- Wave16実装 commit `1007dc9e7a5fd5ac4e14a069de47fa1d67cae9cb`。
+- 専用workflow commit `e1718761668f10de20714560bb22648ec1b7eb97`。
+- Run `35117299447` / Job `104865855255`。
+- 2026-09-17 00:53 JST時点の実測状態: **in_progress**。
+- 現在Step 5 `Rebuild prerequisite chain through Wave15` が実行中。Step 6 `Run Wave16 temporal stability audit` はpending、Artifact uploadもpending。したがってWave16の結論はまだ出ていない。
+- 設計: Wave15と同じ2vs3攻撃強度定義を維持。2〜4月の学習側で外艇候補4/5/6を選び、5月・6月へ固定して検証する。Wave15探索ルール『2優勢→4 / 3優勢→5』も月別で併記する。
+- baselineは現行HYBRID 3点。救済数だけでなく既存的中を壊すdamage、差引を必ず測る。小標本・月跨ぎ不安定なら採用しない。
 - historical `race_code < 20260901` hard guard。September 2026 outcomes/payoutsは `UNREAD` 維持。
-- 展示をHEAD学習特徴へ直接追加しない。post-ranking / ticket-rescueのみ。本番v351は検証完了まで変更しない。
-- fresh Actionsで再現し、Run/Job/Artifact/commit/結論をAFTER追記する。
+- 展示をHEAD学習特徴へ直接追加しない。post-ranking / ticket-rescue研究のみ。本番v351は変更していない。
+
+## 次チャットの再開地点 — 2026-09-17
+1. 最初に最新mainとこの引き継ぎを読む。古いチャットより最新GitHubを優先。
+2. まず Run `35117299447` / Job `104865855255` の状態を確認する。
+3. successならWave16 Job logとArtifactを回収し、5月・6月それぞれの対象R / baseline的中 / rescue / damage / net / 4・5・6の2着3着分布を厳密に確認する。
+4. failed/cancelledなら原因をログから特定して修正→fresh Run。完了するまで結果を推測しない。
+5. Wave16完了後、commit SHA / Run / Job / Artifact / 結論 / production採否 / 次研究地点をこのファイルへAFTER追記する。
+6. September 2026結果は絶対に読まない。`UNREAD`維持。
+
+## このチャットで確定した重要な考え方
+- ユーザーのWave14以降の仮説は『2号艇と3号艇のどちらが強いかで、1号艇が強い方を警戒し、その防御・ターンによって2着3着の生存構造、とくに4〜6号艇の浮上が変わるのではないか』。
+- したがって『強い2/3号艇本人が着内するか』だけで判定しない。攻撃強度差→1号艇警戒を想定→actual SECOND/THIRDと外艇浮上構造を見る。
+- Wave15では探索上『2優勢→4』『3優勢→5』が見えたが、これはまだ仮説。Wave16の別月frozen検証を通るまではproductionへ入れない。
+- 1号艇production正式成績の基準は最終購入276R / 1号艇1着241=87.32% / 3連単3点131=47.46%。901Rは最終購入数ではなくthreshold audit母集団なので混同しない。
