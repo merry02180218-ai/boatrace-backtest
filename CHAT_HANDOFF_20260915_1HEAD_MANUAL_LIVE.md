@@ -39,47 +39,31 @@
 - HEAD>=.78を通過したhistorical raceだけで `OPPONENT_MASS_MIN=.375` の有効性を監査する。
 - `race_code < 20260901` hard guard。September 2026 outcomes/payoutsは `UNREAD` 維持。
 - 比較: `.30/.325/.35/.375/.40/.425/.45`、mass帯別R/HEAD/exact3、月別。production定数 `.375` は監査完了まで変更しない。
-- 初回Run `35037266265` / Job `104609063946` はworkflow自体successだが、mass監査stepは `cache_v321_julaug_nonpristine_slim.csv.gz` 不在で結果未生成。
-- cache生成・監査ともSeptember結果を読まないことを確認し、production変更は結果確認後に判断する。
 
 ### AFTER — 2026-09-16
 - cache recovery commit `c5b00997abeb84502468412e00bab4aed5a2d549`。
 - fresh Run `35039558019` / Job `104616158961` / Artifact `10424409413` / success。
-- Artifact SHA256 `9b7fb6f4b73e222c0db79bf6d6ecd51bf3f512f039db08a158f11b7cb6a256e0`。
-- HEAD>=.78固定でmass cut別: .300=1140R/HEAD80.96%/exact3 36.49%, .325=1118/81.13/36.94, .350=1046/81.45/37.67, .375=901/82.13/40.29, .400=680/82.06/42.65, .425=456/81.80/44.08, .450=280/82.50/47.14。
-- `[.350,.375)` は145R / HEAD77.24% / exact3 21.38%。現行閾値直下は特にexact3が弱い。
-- `[.375,.400)` は221R / HEAD82.35% / exact3 33.03%。
-- 単純な `.375 -> .350` 緩和はREJECT方向。production `.375` は変更しない。
+- `[.350,.375)` は145R / HEAD77.24% / exact3 21.38%。単純な `.375 -> .350` 緩和はREJECT。production `.375` は変更しない。
 - September 2026 outcomes/payoutsは `UNREAD` 維持。
 
-## BEFORE: mass直下 `[.350,.375)` 展示救済研究 — 2026-09-16
-- 145Rの閾値直下帯を一律production採用せず、展示post-ranking / ticket-rescue型で救済可能な条件があるかを独立研究する。
-- HEAD gate自体は変更しない。mass `.375` もproductionでは維持する。
-- `race_code < 20260901` hard guard。September outcomes/payoutsは絶対に読まない。
-- まず145Rを月別・場別・schema別・展示特徴別に分解し、HEAD rescueとexact3 rescueを分離する。
-- 展示をHEAD学習特徴へ直接追加するのではなく、現行PREを保持したpost-ranking / rescue guardとして評価する。
-- 小標本の見かけ改善をproduction昇格させない。fresh Actions Runで再現し、Run/Job/Artifact IDと結論をAFTER記録する。
+## mass直下 `[.350,.375)` 展示救済研究
+- 展示をHEAD学習特徴へ直接追加する案はREJECT。post-ranking / ticket-rescueだけを研究する。
+- Wave10分類修正 commit `6ae6fae56503283050fcaeb84dfab9239ee7ad96`。
+- fresh Run `35059052599` / Job `104675293447` / Artifact `10432685265` / success。
+- 145RのうちHEAD hitだがexact3 missの救済候補は81R。
+- schema分類はvenue mapで修正し、halfを桐生(JCD01)だけに強制。
+- 主力一周系の救済余地が大きく、次は現行相手の片方を保持し、もう片方だけ交換するone-replaceを研究する。
 
-## BEFORE: 手動即時LIVE入口の復旧 — 2026-09-16
-- ユーザーの「○○R判別して」だけで、こちらからGitHubへtrigger fileをpushして任意Rを即時発火できる入口を復旧する。
-- レース時刻controllerの自動運用は復活させない。明示要求時だけ発火する。
-- triggerには `race_code` と締切JSTを記録し、そのpushで専用workflowを起動する。
-- workflowは当日 `v351-1head-live-cache-YYYYMMDD` artifactを取得し、PRE候補外でも対象JSONを使用する。
-- `probe_1head_v351_boatcast_exhibition.py` -> `run_1head_v351_live_exhibition_gate.py` -> merge -> `run_1head_v351_live_finalize.py` を実行し、PASS/DROPと3連単3点をartifactへ残す。
-- 締切前のみ。結果・払戻・オッズは読まない。`result_or_payout_used=False` / `chronology_guard=True` を維持。
-- production profile / HEAD cutoff / opponent mass / G2/G3 / ticket policy は変更しない。
-- 実装後はfresh Actions Runで入口を監査し、Run/Job/Artifact ID・結論・次の再開地点をAFTERへ記録する。
+## BEFORE: Wave11 81R one-opponent rescue — 2026-09-16
+- 対象はhistorical `race_code < 20260901` のみ。September 2026 outcomes/payoutsは `UNREAD` 維持。
+- Wave10の `[.350,.375)` 145Rから、HEAD hitかつ現行3連単missの81Rを分析母集団とする。ただしルール探索時は結果ラベルを入力特徴へ混入させない。
+- 目的は「現行相手を1艇残す＋もう1艇だけ交換」で、どちらを残すべきか／交換先はどの艇かを、展示データ形式・場・展示順位/差・ST環境・現行ticket構造から分解すること。
+- まずoracle分解として、現行3点unionの各相手艇について actual pair に含まれる保持可能艇の頻度、交換1艇でactual pairへ到達可能な率、両方交換が必要な率を計測する。
+- 次に結果非依存の候補guardを設計する。主力 `lap+turn+straight` / `lap+turn` を優先し、桐生halfは独立扱い。小標本の場別改善だけではproduction昇格しない。
+- HEAD cutoff `.78` / production mass `.375` / G2=.45 / G3=1.00 / HYBRID 3点は変更しない。研究はpost-ranking / ticket-rescueのみ。
+- fresh Actions Runで再現し、Run/Job/Artifact ID・commit SHA・結論をAFTERへ追記する。
 
-## AFTER: 手動即時LIVE入口の復旧 — 2026-09-16 完了
-- BEFORE記録 commit: `b85511e62ce6d7e4c81f915079ac469030d0df98`。
-- 新規workflow: `.github/workflows/manual-1head-v351-live.yml`、実装commit `86a7e50623b774a284f935376a76e8020f1181fd`。
-- trigger file: `live_requests/1head_v351.json`。`mode=judge` + `race_code` + `deadline_jst` をpushすると明示要求時だけ発火する。初回validation trigger commit `a09c00eb90a8cb81a154eeaaaefc896cffaf18c7`。
-- controller自動運用は復活していない。trigger file push以外ではmanual LIVE workflowは動かない。
-- judge経路: 当日all-race cache artifact取得 -> LIVE window guard -> Boatcast展示取得 -> venue-aware exhibition gate -> causal base merge -> v351 finalizer -> PASS/DROP + 3連単3点 -> artifact。
-- PRE候補外でも当日156R cache内なら対象JSONを直接使う。
-- validation Run `35041039151` / Job `104620732127` / conclusion `success`。
-- validation Artifact `10424643529` / `manual-1head-v351-live-35041039151` / SHA256 `da64bd5c74414f2ca438467f44d65f458995fbefac1cfde1d8920f97b016ce0b`。
-- validationでは `ENTRYPOINT_READY`、production profile/HEAD cutoff/opponent massを読み込み、`result_or_payout_used=False` / `chronology_guard=True` / `controller_auto_enabled=False` を確認。実レースの展示取得・finalizeはvalidation modeなので意図的にskipped。
-- September 2026 outcomes/payoutsは `UNREAD` 維持。production変更なし。
-- 次回ユーザーが「○○R判別して」と言ったら、締切を確認してtrigger fileを `mode=judge` に更新し、fresh Run完了まで追跡して判定結果と買い目を返す。
-- 研究側の次再開地点は mass直下 `[.350,.375)` の展示post-ranking / rescue研究。
+## 手動即時LIVE入口
+- `.github/workflows/manual-1head-v351-live.yml`。ユーザーの明示要求時だけtrigger file pushで発火。controller自動運用は復活させない。
+- validation Run `35041039151` / Job `104620732127` / Artifact `10424643529` / success。
+- 結果・払戻・オッズは読まない。`result_or_payout_used=False` / `chronology_guard=True`。
