@@ -45,6 +45,8 @@ jobs:
         run: python analyze_v351_mass_rescue_wave10.py | tee mass_rescue_wave10.txt
       - name: Analyze Wave11 one-opponent rescue oracle
         run: python analyze_v351_mass_rescue_wave11_one_replace.py | tee mass_rescue_wave11.txt
+      - name: Research Wave12 frozen low-mass one-replace guard
+        run: python research_v351_mass_rescue_wave12_frozen_guard.py | tee mass_rescue_wave12.txt
       - uses: actions/upload-artifact@v4
         with:
           name: audit-v351-exact3-via-monthly
@@ -80,6 +82,9 @@ jobs:
             analysis_v351_mass_rescue_wave11_one_replace_rows.csv
             analysis_v351_mass_rescue_wave11_one_replace_summary.csv
             analysis_v351_mass_rescue_wave11_keepability.csv
+            analysis_v351_mass_rescue_wave12_june.csv
+            analysis_v351_mass_rescue_wave12_may_thresholds.csv
+            analysis_v351_mass_rescue_wave12_summary.csv
             schema_rebuild.txt
             dedicated_schema_head.txt
             schema_exact3_errors.txt
@@ -95,3 +100,4 @@ jobs:
             opponent_mass_threshold.txt
             mass_rescue_wave10.txt
             mass_rescue_wave11.txt
+            mass_rescue_wave12.txt
