@@ -6,6 +6,10 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 SRC='analysis_v351_opponent_mass_threshold_rows.csv'; LO,HI=.350,.375
+# JCD03 (Edogawa) has no rows in the schema-rebuild source population, so no
+# additional original-exhibition schema can be established there. Treat it
+# explicitly as BASE rather than silently guessing an unavailable schema.
+EXPLICIT_BASE_FALLBACK={3:'base'}
 
 def rate(s): return 100*float(s.mean()) if len(s) else np.nan
 
@@ -19,7 +23,10 @@ def main():
  sm=pd.read_csv('analysis_v351_schema_map.csv')
  sm['jcd']=pd.to_numeric(sm.jcd,errors='raise').astype(int)
  if sm.jcd.duplicated().any(): raise RuntimeError('duplicate jcd in schema map')
- mp=sm.set_index('jcd').schema.astype(str)
+ mp=sm.set_index('jcd').schema.astype(str).to_dict()
+ overlap=set(mp).intersection(EXPLICIT_BASE_FALLBACK)
+ if overlap: raise RuntimeError(f'explicit fallback now present in schema map jcd={sorted(overlap)}; remove fallback and audit schema')
+ mp.update(EXPLICIT_BASE_FALLBACK)
  q['schema']=q.jcd.map(mp)
  if q.schema.isna().any():
   missing=sorted(q.loc[q.schema.isna(),'jcd'].unique().tolist()); raise RuntimeError(f'unmapped schema jcd={missing}')
@@ -37,7 +44,7 @@ def main():
  edges=[.350,.355,.360,.365,.370,.375]; q['mass_bin']=pd.cut(q.opp_mass,edges,right=False,include_lowest=True); bins=[]
  for k,g in q.groupby('mass_bin',observed=True): bins.append({'mass_bin':str(k),'R':len(g),'HEAD_rate':rate(g.head_hit),'EXACT3_rate':rate(g.exact3),'RESCUE_OPP':int(g.rescue_opportunity.sum()),'RESCUE_OPP_rate':rate(g.rescue_opportunity)})
  pd.DataFrame(bins).to_csv('analysis_v351_mass_rescue_wave10_bins.csv',index=False,encoding='utf-8-sig')
- print('SEPTEMBER_OUTCOMES_USED False'); print('PRODUCTION_CHANGED False'); print('HEAD_EXHIBITION_DIRECT_FEATURE False'); print('SCHEMA_CLASSIFICATION venue_map')
+ print('SEPTEMBER_OUTCOMES_USED False'); print('PRODUCTION_CHANGED False'); print('HEAD_EXHIBITION_DIRECT_FEATURE False'); print('SCHEMA_CLASSIFICATION venue_map_plus_explicit_base_fallback_jcd03')
  print('BAND',LO,HI,'R',len(q),'HEAD',int(q.head_hit.sum()),f'HEAD_RATE={rate(q.head_hit):.2f}','EXACT3',int(q.exact3.sum()),f'EXACT3_RATE={rate(q.exact3):.2f}','RESCUE_OPP',int(q.rescue_opportunity.sum()))
  print('\nBY_SCHEMA'); print(s[s.scope.eq('schema')].to_string(index=False)); print('\nBY_VENUE'); print(s[s.scope.eq('jcd')].sort_values(['R','RESCUE_OPP'],ascending=False).to_string(index=False)); print('\nMASS_BINS'); print(pd.DataFrame(bins).to_string(index=False))
 if __name__=='__main__': main()
