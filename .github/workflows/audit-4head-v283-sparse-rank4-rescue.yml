@@ -1,0 +1,24 @@
+name: Audit 4head v283 sparse rank4 rescue
+
+on:
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install pandas numpy scikit-learn lightgbm joblib
+      - name: Run sparse rank4 rescue audit
+        run: python audit_4head_v283_sparse_rank4_rescue.py
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: head4-v283-sparse-rank4-rescue
+          path: /tmp/head4_v283_sparse_rank4/
