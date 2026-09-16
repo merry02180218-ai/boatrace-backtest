@@ -1,0 +1,19 @@
+name: analyze-4head-v283-second-margin-rescue
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  analyze:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy scikit-learn
+      - run: python analyze_4head_v283_second_margin_rescue.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-v283-second-margin-rescue
+          path: /tmp/head4_v283_second_margin/
