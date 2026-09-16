@@ -23,48 +23,22 @@
 - Artifact SHA256 `bd5241371d62bc7d2f19e7bb123e4d1144837f34729df06e13d09cce897cbe73`。
 - KIRYU_R=15 / KEEP2=8 / DROP2=7。half単独分離は弱く、複合guardをLOO評価へ。
 
-## Wave9 — 実行中
-- strict fold-local LOO実装済み。production変更なし、September outcomes UNREAD。
+## Wave9 — 実行済み
+- strict fold-local LOOを実行。桐生half追加は改善せず、多くの設定で悪化。`SHARED_PLUS_HALF` をproductionへ入れない方向。
+- production変更なし、September outcomes UNREAD。
 
-## 2026-09-16 03:00 daily failure / recovery
-- Run `35006130791` / initial Job `104506215489` failure、retry Job `104583289886` failure。
-- failure step: `Resolve JST date and latest rolling cards`。
-- exact cause: `PRE_SOURCE_NOT_READY: rolling race cards for 20260916 are not available at 03:00 JST` / exit 30。
-- 03:00 workflowが rolling artifactを必須依存にしている設計欠陥。
+## 2026-09-16 daily PRE
+- 正式取得は BoatRace Biyori。`fetch_1head_v351_biyori_cards.py --date YYYYMMDD --out race_cards.csv`。
+- `race_shusso.php` + `request_race_shusso_detail_v4.php`、retry/backoff、完全12Rの場だけ採用。
+- 結果・払戻・オッズは取得しない。`result_or_payout_used=False` / `chronology_guard=True`。
+- Biyori -> v321 causal prepare -> `prepare_1head_v351_live_cache.py` -> PRE summary -> Actions artifact。
+- 2026-09-16基準Run `35034996720` / Job `104601998526` / Artifact `10423825328` / 13場156R / SHA256 `bb1361755137655b8abd04d0ee09079b7a4f98910e64f7724bc7ec91b86fffec`。
 
-### BoatRace Biyori daily recovery
-- Biyori direct PRE取得へ切替済み。Run `35032210723` / Job `104593063750` success / Artifact `10421874851`。
-- 20260916は10場120Rをcache化。`result_or_payout_used=False` / `chronology_guard=True`。
-- JCD04/JCD05/JCD07は各1RのHTTP timeoutにより11/12となり、場単位で除外された。
-
-### BEFORE: recover missing Biyori races
-- 目的: JCD04/JCD05/JCD07の欠落36Rを再取得し、当日開催13場156Rの完全gridを作る。
-- Biyori detail APIの各race取得にretry/backoffを追加し、一時的timeoutで場全体を捨てないようにする。
-- fresh workflowで `BIYORI_CARDS ... races=156`、`all_race_cache_R=156`、artifact生成まで確認する。
-- 結果・払戻・オッズは取得禁止。`result_or_payout_used=False` / `chronology_guard=True`、September outcomes `UNREAD` 維持。
-
-### AFTER: 正式な当日PRE取得手順 — 2026-09-16確定
-- **今後の1号艇v351当日PREはこの方式を標準とする。** 03:00時点でrolling artifactを待つ方式には戻さない。
-- データ源は **ボートレース日和 (BoatRace Biyori)**。`fetch_1head_v351_biyori_cards.py --date YYYYMMDD --out race_cards.csv` で当日出走表を直接取得する。
-- 取得は `race_shusso.php` で開催/CSRF情報を得て、`request_race_shusso_detail_v4.php` の詳細APIから各場・各Rの事前情報を取得する。簡易HTMLだけをPREへ流さない。
-- 各race取得は **retry/backoff** を使う。一時的なHTTP timeoutで11/12になった場を丸ごと捨てず、12R揃うまで再取得する。完全12Rの場だけ当日gridへ採用する。
-- 取得対象は事前に確定している出走/選手/モーター等のPRE情報のみ。結果・払戻・オッズは取得・使用しない。必須guardは `result_or_payout_used=False` / `chronology_guard=True`。
-- Biyoriカード取得後、`run_v321_1head_julaug_nonpristine_validation.py --stage prepare` でcausal preparationを作成し、続いて `prepare_1head_v351_live_cache.py --date YYYY-MM-DD --cards race_cards.csv --out ...` で全Rのv351 cacheを作る。
-- 最後に各race JSONから `race_code / jcd / race / pre_class / final_head_p / base_tickets` を集約してPRE summaryを作成し、Actions artifactとして保存する。
-- 2026-09-16の最終検証: Run `35034996720` / Job `104601998526` / **success**。
-- Biyori取得結果: JCD `04,05,07,08,09,11,12,13,14,18,19,22,23` の **13場156R**。ログ `BIYORI_CARDS date=20260916 ... races=156 result_or_payout_used=False chronology_guard=True` を確認。
-- v351 cache: `all_race_cache_R=156` / `training_cutoff=2026-09-15` / production profile `1HEAD_PRODUCTION_20260915_HEAD078_V351_OPPONENTCORE_G2_045_G3_100`。
-- Artifact `10423825328` (`v351-1head-live-cache-20260916`) / SHA256 `bb1361755137655b8abd04d0ee09079b7a4f98910e64f7724bc7ec91b86fffec`。
-- この成功Runを、今後の「ボートレース日和から当日カード→causal prepare→全R cache→PRE summary」の再現基準とする。
-- September 2026の結果・払戻は引き続き `UNREAD`。今回の取得・cache作成でも使用していない。
-
-### 次の再開地点
-- 日次PRE/LIVEでは上記Biyori方式を使用する。ユーザーから特定Rの「判別して」が来た場合、事前候補外でも当該race cacheを起点に展示取得→直前判定を即時実行する。
-- 研究側はWave9の結果抽出へ戻る。production変更はWave9監査完了まで行わない。
-
-## BEFORE: opponent mass `.375` 独立監査
-- ユーザー指示により、HEAD>=.78を通過したレースを対象に `OPPONENT_MASS_MIN=.375` が本当に有効なgateか監査する。
-- 現production定数 `.375` は変更せず、まず historical `race_code < 20260901` のみで評価する。September outcomes/payoutsは `UNREAD` 維持。
-- 比較する内容: mass帯別のR数 / HEAD的中率 / exact3的中率、`.375`以上 vs 未満、閾値grid（少なくとも .30/.325/.35/.375/.40/.425/.45）、`.375`で落としたレースのHEAD/exact3、可能なら月別・schema別も確認する。
-- 特に今日の津3R/鳴門4Rのような `HEAD>=.78 & mass<.375` 型を捨てることにhistoricalな根拠があるかを見る。
-- 閾値選択と評価を同じ標本で行う場合は探索結果と明記し、production変更は独立holdout確認まで行わない。
+## opponent mass `.375` 独立監査
+### BEFORE
+- HEAD>=.78を通過したhistorical raceだけで `OPPONENT_MASS_MIN=.375` の有効性を監査する。
+- `race_code < 20260901` hard guard。September 2026 outcomes/payoutsは `UNREAD` 維持。
+- 比較: `.30/.325/.35/.375/.40/.425/.45`、mass帯別R/HEAD/exact3、月別。production定数 `.375` は監査完了まで変更しない。
+- 初回Run `35037266265` / Job `104609063946` はworkflow自体successだが、mass監査stepは `cache_v321_julaug_nonpristine_slim.csv.gz` 不在で結果未生成。
+- **これから行うこと**: `.github/workflows/backtest.yml` のmass監査前に `run_v321_1head_julaug_nonpristine_validation.py --stage prepare` を追加して必要cacheをfresh生成し、その後mass監査を実行する。fresh RunのRun/Job/Artifact IDと閾値結果を確認してAFTERへ記録する。
+- cache生成・監査ともSeptember結果を読まないことを確認し、production変更は結果確認後に判断する。
