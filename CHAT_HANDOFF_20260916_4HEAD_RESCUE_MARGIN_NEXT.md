@@ -54,4 +54,18 @@ Run `35061928492` / Job `104683888325` / Artifact `10432044277`, success。
 - official closing oddsでexact tickets/stake/payout/profit/ROIをsettleし、追加1点あたりの救済効率も比較する。
 - 2026-09 outcome/resultsは絶対に読まない。production `HEAD4_V291_COMP7` unchanged。formal prospective ROI=`NOT_COMPUTABLE`。
 
-Status: `ADAPTIVE_SECOND_DEPTH_AUDIT_IN_PROGRESS`
+## AFTER — adaptive SECOND depth / staged ticket audit
+- Run `35111649299` / Job `104846602672` / Artifact `10453260665`, success。run head SHA `b494a0553af41491b473a216319d38afed5e2639`。
+- Artifact `head4-v283-adaptive-second-depth` を回収して exact official closing odds で監査完了。
+- Apr-Jun developmentだけで adaptive threshold を選択: `g3=0.20`, `g4=0.20`。selection=`Apr-Jun max profit, then ROI, fewer tickets, tighter thresholds`。Jul/Augでthreshold tuningなし。
+- Apr-Jun: base4 344 tickets / 18 hits / ROI 167.73%。SECOND Top3 516 / 22 / 136.10%。SECOND Top4 688 / 27 / 139.38%。adaptive SECOND 656 / 27 / 146.17%。THIRD-margin 428 / 19 / 153.11%。SECOND3+THIRD 640 / 25 / 134.03%。adaptive+THIRD 821 / 29 / 129.43%。
+- Jul-Aug holdout: base4 312 / 11 / 87.79%。SECOND Top3 468 / 18 / 102.01%。SECOND Top4 624 / 19 / 88.51%。adaptive SECOND 612 / 19 / 90.25%。THIRD-margin 389 / 16 / 115.35%。SECOND3+THIRD 582 / 24 / 121.15%。adaptive+THIRD 757 / 25 / 103.04%。
+- July: base 82.66%。SECOND Top3 120.99%。THIRD-margin 141.72%。SECOND3+THIRD 146.18%。adaptive SECOND 90.74%。adaptive+THIRD 111.45%。
+- August: base 95.56%。SECOND Top3 73.23% (hits 5->6)。SECOND Top4 85.12% (hits 5->7)。THIRD-margin 75.96% (hits 5)。SECOND3+THIRD 82.58% (hits 7)。adaptive SECOND 89.45% (hits 7)。adaptive+THIRD 89.80% (hits 8)。
+- Apr-Aug: base 129.71%。SECOND Top3 119.89%。SECOND Top4 115.18%。THIRD-margin 135.13%。SECOND3+THIRD 127.90%。adaptive SECOND 119.18%。adaptive+THIRD 116.77%。
+- August SECOND miss 5Rは rank4/rank3/rank4/rank3/rank3。rank4 missでも rank2-4 cumulative gap は約0.0585, 0.0469と小さく、深いSECOND候補自体は事前score上の僅差として検出可能だった。一方、adaptiveを広く使うとticket増加が重く、Jul-Aug holdout ROIは90.25%に留まる。
+- 結論: `adaptive SECOND depth` 単独をproductionへ昇格する根拠は不足。現時点では `THIRD-margin` がApr-Aug ROI 135.13%で最も安定し、Jul-Augでは `SECOND Top3 + THIRD-margin` が121.15%まで改善するがApr-Jun/Apr-AugではROIを削るためproduction変更はまだしない。August救済のためのrank4拡張は命中数を増やすが、常時適用では投資効率が不足。
+- 次の再開地点: SECOND深掘りを常時Top4にせず、`rank2-4 cumulative gap` が極小のときだけrank4を追加する sparse rescue をApr-Jun developmentで設計し、Jul-Aug holdoutで固定監査する。既存THIRD-marginとの組合せも比較する。
+- closing oddsはretrospective diagnosticのみ。formal prospective ROI=`NOT_COMPUTABLE`。September `UNREAD`。production `HEAD4_V291_COMP7` unchanged。
+
+Status: `ADAPTIVE_SECOND_DEPTH_AUDIT_COMPLETE_NEXT_SPARSE_RANK4_RESCUE`
