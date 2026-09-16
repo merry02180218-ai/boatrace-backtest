@@ -66,3 +66,12 @@ Status: `HEAD4_TARGETED_AUG_CLOSING_ODDS_RECOVERY_STARTED`
 - September 2026 outcome/resultsは絶対に読まない。`UNREAD`維持。production `HEAD4_V291_COMP7` unchanged。
 
 Status: `HEAD4_FINAL_164R_V283_CLOSING_ODDS_AUDIT_STARTED`
+
+## BEFORE — v283 conditional scenario feature repair
+- Final audit Run `35059044185` / Job `104675270738` は `FROZEN_COND_FEATURE_MISSING:['t_is_boat1','t_is_boat2','t_is_boat3','t_is_boat5','t_is_boat6']` でfailure。
+- frozen v282/v283実装を確認。`t_is_boat*` は展示進入ではなく、`analyze_v281_4head_opponent_third_scenario.add_scenario()` が作る「候補艇の艇番one-hot」scenario feature。v282 `make_pairs()` がそれを `t_` prefixでconditional THIRDへ渡している。
+- 監査側 `build_long_all()` が `v281.add_scenario()` を飛ばしていたのが原因。v96とは無関係。
+- 修正方針: v281をimportし、`v278.add_current()` 後に frozen研究と同じ `v281.add_scenario()` を適用してからrelative featuresを生成する。v283 policy・候補条件・odds・productionは変更しない。
+- September outcome/resultsは `UNREAD` 維持。
+
+Status: `HEAD4_V283_SCENARIO_FEATURE_REPAIR_STARTED`
