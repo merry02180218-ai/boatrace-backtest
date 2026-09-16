@@ -1,5 +1,11 @@
 name: wave44c
-on: push
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/3head-player-attack-mode]
+    paths:
+      - 'research_v289_3head_wave44c_contextual_player_attack_mode.py'
+      - '.github/workflows/research-3head-wave44c.yml'
 jobs:
   test:
     runs-on: ubuntu-latest
