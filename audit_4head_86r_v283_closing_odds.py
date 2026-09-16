@@ -17,6 +17,7 @@ import analyze_v264_4head_feature_exhaustive as v264
 import analyze_v274_4head_opponent_feature_audit as v274
 import analyze_v278_4head_opponent_current_exhibition_audit as v278
 import analyze_v279_4head_opponent_listwise_rebuild as v279
+import analyze_v281_4head_opponent_third_scenario as v281
 import analyze_v282_4head_conditional_third as v282
 from head4_v291_downstream_inference import load_artifact, score_second, score_conditional_third, v283_top4, BOATS
 
@@ -51,6 +52,9 @@ def build_long_all(d):
             rec.append(z)
     z=pd.DataFrame(rec)
     z=v278.add_current(z)
+    # v282/v283 COND_BASE was frozen on v281 scenario construction.  This is
+    # positional/current-foot context (including is_boat*), not exhibition entry.
+    z=v281.add_scenario(z)
     relseed=[c for c in list(v279.ABILITY)+list(v279.PLAYER)+list(v279.PRIOR_HINTS)+list(v279.START_HINTS)+list(v279.POSITION)+list(v279.CURRENT) if c in z]
     z=v279.add_relative(z,relseed)
     return z
