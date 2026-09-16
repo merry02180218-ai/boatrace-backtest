@@ -1,0 +1,8 @@
+{
+  "mode": "TEST_REPLAY",
+  "date": "20260916",
+  "race_codes": ["202609160903", "202609162201"],
+  "result_or_payout_used": false,
+  "odds_used": false,
+  "note": "User requested post-deadline test replay using PRE cache plus exhibition only."
+}
