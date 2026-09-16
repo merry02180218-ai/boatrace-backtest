@@ -4,57 +4,37 @@
 - 2026年7月・8月結果は学習・検証に使用可。
 - 2026年9月結果は `UNREAD` 維持。
 - production `HEAD4_V291_COMP7` は変更しない。
+- frozen opponent v283: SECOND `PLAYER_START`, conditional THIRD `COND_BASE`, `TOP2XTOP2`, alpha2=.60, Top4 exactly 4 tickets。v96禁止。
+- closing oddsを使う評価はretrospective diagnosticのみ。formal prospective ROI=`NOT_COMPUTABLE`。
 
 ## KEY AUDITED STATE
-- 4-head fixed candidate: Apr-Jun 86R / 35頭 / 40.6977%; Jul-Aug 78R / 35頭 / 44.8718%。
-- frozen opponent v283: SECOND `PLAYER_START`, conditional THIRD `COND_BASE`, `TOP2XTOP2`, alpha2=.60, Top4 exactly 4 tickets。v96禁止。
+- fixed candidate: Apr-Jun 86R / 35頭 / 40.6977%; Jul-Aug 78R / 35頭 / 44.8718%。
 - final closing-odds audit Run `35060311090` / Job `104679045711` / Artifact `10432272637`: success, coverage 164/164, Apr-Aug ROI 129.71%。
 - Apr-Jun ROI 167.73%、Jul-Aug ROI 87.79%。4頭時capture 51.43%→31.43%。
-- retrospective diagnosticのみ。formal prospective ROI=`NOT_COMPUTABLE`。Sep `UNREAD`、production unchanged。
+- v283 miss decomposition Run `35061928492` / Job `104683888325` / Artifact `10432044277`: success。
+- Apr-Jun actual 4-head 35R: capture 18, SECOND miss 14, THIRD miss 3, pair-rank miss 0。SECOND-pass conditional THIRD capture 18/21=85.71%。
+- Jul-Aug actual 4-head 35R: capture 11, SECOND miss 16, THIRD miss 8, pair-rank miss 0。SECOND-pass conditional THIRD capture 11/19=57.89%。
+- July: SECOND-pass 13R, conditional THIRD capture 6/13=46.15%, THIRD miss 7。
+- August: SECOND-pass 6R, conditional THIRD capture 5/6=83.33%, THIRD miss 1。
 
-## BEFORE — v283 opponent miss decomposition
-- ユーザー指示「お願いします」。4号艇が実際に頭だった70Rへ実着2着/3着を付け、v283の失敗を厳密分解する。
-- `SECOND miss` / `THIRD miss` / `pair-ranking miss` をApr-Jun vs Jul-Aug、月別で分離する。
-- frozen v283のスコアリング・候補条件・productionは変更しない。v96禁止。Sep `UNREAD`。
-- BEFORE handoff commit `579ec0ff1673919c0bc9a9a7e76b7ce2d60a910b`。
+## AFTER — July conditional THIRD diagnostic
+- 初回 Run `35063523492` / Job `104688743645` は `AttributeError: 'list' object has no attribute 'second_boat'` で失敗。
+- `conditional_rows()` がlistを返すことへ型処理を修正。fix commit `e2081cb81991a25c10847ee6e8ec0a2f65b98e25`。
+- 修正版 Run `35065837875` / Job `104695793974` / Artifact `10434471836`: success。marker `HEAD4_V283_JULY_COND_THIRD_MISS_ANALYSIS_OK`。
+- July THIRD miss 7Rのactual-third conditional rankは、rank3が6R、rank4が1R。大半がTop2境界型。
+- July SECOND-pass 13R中THIRD capture 6R=46.15%。Apr-Jun 18/21=85.71%、August 5/6=83.33%。Julyだけ明確に崩れた。
+- rank3 missにはTop2境界probability差が小さい例があり、単純な大外しではなく「僅差3位の取り逃し」が主対象。
+- production/frozen v283 unchanged。Sep `UNREAD`。v96禁止。
 
-## AFTER / READY — v283 opponent miss decomposition implementation
-- 新規 `analyze_4head_v283_miss_decomposition.py` commit `15c0f5d1dc59270d5f3e33ede3eded8167c9d6d7`。
-- 164Rから4号艇実頭70Rだけを診断し、実2着/3着、SECOND Top2、actual-second条件のTHIRD Top2、最終Top4を保存する。
-- miss_stageは `SECOND_MISS` → `THIRD_MISS` → `PAIR_RANK_MISS` → `CAPTURE` の順で排他的に分類。
-- TOP2XTOP2ではSECONDとconditional THIRDの双方がTop2なら原理上4組poolに入るため、PAIR_RANK_MISSが出るなら実装/parity異常の検知にもなる。
-- 手動workflow `.github/workflows/analyze-4head-v283-miss-decomposition.yml` commit `f8a454e4e6a78962c8057cf8194c2ae01d6fcb5d`。`workflow_dispatch` onlyで多重発火なし。
-- 出力: `/tmp/head4_v283_miss_decomp/head4_70r_miss_detail.csv`, `miss_summary.csv`, `meta.json`。
-- 次: workflowを1回手動発火し、Run/Job/ArtifactとApr-Jun vs Jul-AugのSECOND/THIRD miss件数を確定する。
-- production `HEAD4_V291_COMP7` / frozen v283 unchanged。formal prospective ROI=`NOT_COMPUTABLE`。September outcome/results `UNREAD`。
+## BEFORE — rescue条件 + 僅差時の買い目追加研究
+- ユーザー提案: 「救済条件調べると同時に僅差なら買い目増やすってのはどう？」→ 両方を同時比較する。
+- 研究A: conditional THIRDのactual rank3を特徴量条件でTop2へ救済し、4点維持できる条件を探索する。
+- 研究B: 2位と3位が僅差の場合だけTHIRD候補を3艇へ広げ、現行4点から原則6点へ増やす。元Top2は捨てない。
+- 研究C: A+B併用も比較する。
+- 比較対象: 現行4点 / 条件付き救済4点 / 僅差時6点 / 救済+僅差追加。
+- 閾値はJulyだけへ後付け最適化しない。Apr-Junを開発側、Jul-Augを独立確認側として扱い、過学習を避ける。September outcomes/resultsは絶対に読まない。
+- 評価項目: 発火R数、追加点数、追加投資、追加的中、払戻増、profit、retrospective closing-odds ROI、期間別capture。closing odds評価はretrospective diagnosticラベルを維持し、formal prospective ROIは`NOT_COMPUTABLE`。
+- 特にJuly rank3 miss 6Rについて、rank2-rank3 probability gapとCOND_BASE feature contributionを使い、救済/追加条件がどれだけ拾えるか確認する。同時にApr-Jun/Jul-Augの既存的中を壊さないか確認する。
+- production `HEAD4_V291_COMP7` / frozen v283は研究中変更しない。v96禁止。
 
-## AFTER — v283 opponent miss decomposition result
-- Workflow `analyze-4head-v283-miss-decomposition` Run `35061928492` / Job `104683888325` / Artifact `10432044277`: success。marker `HEAD4_V283_MISS_DECOMPOSITION_OK`。
-- Apr-Jun: 35頭中 CAPTURE 18 (51.43%), SECOND_MISS 14 (40.00%), THIRD_MISS 3 (8.57%), PAIR_RANK_MISS 0。SECOND通過21R中 conditional THIRD hit 18R = 85.71%。
-- Jul-Aug: 35頭中 CAPTURE 11 (31.43%), SECOND_MISS 16 (45.71%), THIRD_MISS 8 (22.86%), PAIR_RANK_MISS 0。SECOND通過19R中 conditional THIRD hit 11R = 57.89%。
-- July: 24頭中 SECOND_MISS 11、THIRD_MISS 7、CAPTURE 6。SECOND通過13R中 conditional THIRD hit 6R = 46.15%。
-- August: 11頭中 SECOND_MISS 5、THIRD_MISS 1、CAPTURE 5。SECOND通過6R中 conditional THIRD hit 5R = 83.33%。
-- 結論: alpha2/joint pair rank崩れではなく、主な追加劣化はJulyのconditional THIRD `COND_BASE`。SECONDも弱化しているが、まずJuly 7RのTHIRD missを特徴量・順位差・艇番/相手構造で分解する。
-- production `HEAD4_V291_COMP7` / frozen v283 unchanged。formal prospective ROI=`NOT_COMPUTABLE`。September outcome/results `UNREAD`。
-
-## BEFORE — July conditional THIRD miss analysis
-- ユーザー指示「続けて」。上記decompositionから、JulyでSECOND Top2を通過した13Rのうちconditional THIRDを落とした7Rを主対象にする。
-- 7Rについて actual third のconditional rank/probability、Top2との差、actual second/third艇番、COND_BASE主要特徴の分布を、Apr-JunのTHIRD hit/missおよびAugustと比較する。
-- 目的は「Julyだけの分布シフト」「特定艇番/相手構造」「境界的rank miss」のどれが支配的かを特定し、次の最小変更研究案を作ること。まだfrozen v283/productionは変更しない。
-- v96禁止。September outcome/resultsは `UNREAD` 維持。正式prospective ROIは `NOT_COMPUTABLE` のまま。
-
-## AFTER / READY — July conditional THIRD miss diagnostic implementation
-- 新規 `analyze_4head_v283_july_cond_third_misses.py` commit `be0d76d8bbd61d5a7e4a1e21b53dcd57bf68939d`。
-- July 7 missを含む4頭70Rを再構築し、SECOND通過40Rについて actual THIRD conditional rank/probability、Top2境界probabilityとの差、actual second/third艇番、frozen COND_BASE feature値を保存する。
-- Apr-Jun hit/miss、July hit/miss、Augustの比較を作り、frozen scaler/betaを使った標準化feature contribution shiftを算出する。学習・再fitはしない。
-- 手動workflow `.github/workflows/analyze-4head-v283-july-cond-third-misses.yml` commit `c44b60485df83d5f7cfd80677bb46da306ff12d4`。`workflow_dispatch` only。
-- 出力: `head4_70r_cond_third_detail.csv`, `period_summary.csv`, `by_second.csv`, `by_third.csv`, `feature_shift.csv`, `july_7_misses.csv`, `meta.json`。
-- 次: workflowを1回手動発火してRun/Job/Artifactを確定し、July 7 missがrank3境界型かrank4大外し型か、艇番偏り、feature contribution shift上位を読む。その結果から最小変更のrescue研究を設計する。
-- production `HEAD4_V291_COMP7` / frozen v283 unchanged。formal prospective ROI=`NOT_COMPUTABLE`。September outcome/results `UNREAD`。v96=false。
-
-## BEFORE — failed July THIRD diagnostic fix / rerun
-- Run `35063523492` / Job `104688743645` failed with `AttributeError: 'list' object has no attribute 'second_boat'` because `audit.conditional_rows()` returns a list of dict rows while the diagnostic treated it as a DataFrame.
-- ユーザー指示「再実行して」。まず型処理だけを修正し、frozen v283 scoring/production/候補条件は一切変更せず、workflow_dispatch-only workflowを再実行可能状態にする。
-- 修正後は新Run/Job/Artifactとmarkerを確認してから完了扱いにする。September outcomes/resultsは `UNREAD` 維持、v96禁止、formal prospective ROI=`NOT_COMPUTABLE`。
-
-Status: `HEAD4_V283_JULY_COND_THIRD_DIAGNOSTIC_FIXING_FAILED_RUN_35063523492`
+Status: `HEAD4_V283_RESCUE_AND_CLOSE_MARGIN_TICKET_EXPANSION_RESEARCH_START`
