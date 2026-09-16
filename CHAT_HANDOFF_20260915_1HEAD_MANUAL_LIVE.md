@@ -63,6 +63,14 @@
 - HEAD cutoff `.78` / production mass `.375` / G2=.45 / G3=1.00 / HYBRID 3点は変更しない。研究はpost-ranking / ticket-rescueのみ。
 - fresh Actions Runで再現し、Run/Job/Artifact ID・commit SHA・結論をAFTERへ追記する。
 
+## BEFORE: Wave10/11 JCD03分類欠落の復旧 — 2026-09-16
+- Run `35061436857` / Job `104682400317` はworkflow全体表示successだが、Wave10は `unmapped schema jcd=[3]`、Wave11はWave10 CSV欠落で失敗。Artifact `10433355530` は不完全なので完了扱いしない。
+- 原因確認: schema rebuildの母集団345RにはJCD03（江戸川）が1Rも無く、`analysis_v351_schema_map.csv` に03が生成されない。一方opponent-mass監査母集団にはJCD03が存在するためjoinで欠落した。
+- これからJCD03を『元schema母集団に存在しない＝追加オリジナル展示形式を実証できない場』として明示的に `base` 扱いするfallbackを実装する。暗黙unknownや推測の一周系分類はしない。
+- fallback適用後も、halfはJCD01桐生のみというinvariantを維持し、未定義JCDが他に出たらfail-closeする。
+- Wave10→Wave11をfresh Runで再実行し、実際のschema別分類・one-replace oracle結果を確認してからAFTERを追記する。
+- production設定は変更しない。September 2026 outcomes/payoutsは `UNREAD` 維持。
+
 ## 手動即時LIVE入口
 - `.github/workflows/manual-1head-v351-live.yml`。ユーザーの明示要求時だけtrigger file pushで発火。controller自動運用は復活させない。
 - validation Run `35041039151` / Job `104620732127` / Artifact `10424643529` / success。
