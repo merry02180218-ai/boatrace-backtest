@@ -26,8 +26,20 @@
 
 ## BEFORE — Jul-Aug ROI degradation analysis
 - ユーザー指示「調べて」。Apr-Jun ROI 167.73%に対してJul-Aug 87.79%へ低下した原因を、固定候補164R・frozen v283・公式締切時オッズのまま分解する。
-- まずfinal diagnostic artifactのrace-level出力を回収し、月別だけでなく、4号艇頭率、v283 Top4的中率、的中時配当、外れ方（SECOND miss / THIRD miss / 頭外れ）、高配当依存、7月と8月差を確認する。
-- 必要なら既存feature列を使いApr-Jun vs Jul-Augの分布差を比較するが、候補条件・v283 policy・productionは変更しない。
+- final diagnostic Artifact `10432272637` のrace-level出力を使用する。
 - September 2026 outcome/resultsは絶対に読まない。`UNREAD`維持。
 
-Status: `HEAD4_V283_JULAUG_ROI_DEGRADATION_ANALYSIS_STARTED`
+## AFTER — Jul-Aug ROI degradation analysis
+- Artifact `10432272637` の `race_detail.csv` 164Rを直接集計。coverage 164/164。
+- 4号艇頭率は Apr-Jun 35/86=40.70% → Jul-Aug 35/78=44.87% とむしろ上昇。したがってROI低下の主因はHEAD候補選別ではない。
+- 4号艇が実際に頭だった35Rに限定したv283 Top4 captureは Apr-Jun 18/35=51.43% → Jul-Aug 11/35=31.43%。頭は同数35Rなのに相手Top4で拾えないレースが17R→24Rへ増えた。ここが最大の劣化点。
+- 月別 capture: Apr 8/11=72.73%, May 7/15=46.67%, Jun 3/9=33.33%, Jul 6/24=25.00%, Aug 5/11=45.45%。特に7月が悪い。8月は相手capture自体は回復している。
+- 的中時平均3連単オッズも Apr-Jun 32.06倍（median 30.1）→ Jul-Aug 24.90倍（median 18.7）へ低下。相手capture低下に加えて、拾えた的中の配当も低くなった。
+- Apr-Jun hit odds: 10.9,11.1,16.5,17.6,19.0,19.1,20.3,21.8,29.4,30.8,30.9,31.4,34.3,37.9,47.7,53.7,67.8,76.8。
+- Jul-Aug hit odds: 7.2,10.2,12.0,16.3,17.6,18.7,19.8,23.1,43.4,51.3,54.3。高配当側の拾い方も弱い。
+- SECOND候補構成にもshiftあり。全ticket上の2着艇shareは boat1 43.0%→34.0%、boat5 12.2%→20.5%。実際に4頭だったレースのSECOND top2構成では (1,6) capture 5/6=83.3%→2/5=40.0%、(1,2) 7/15=46.7%→5/12=41.7%、Jul-Augで増えた(2,5)は2/7=28.6%。
+- 結論: Jul-AugのROI低下は「4号艇が頭にならなくなった」ためではなく、主に frozen v283 の相手順位付け/capture劣化、特に7月の2・3着選択劣化。さらに的中時オッズ低下が重なった。
+- 現artifactは実着2着/3着列を持たないため、SECOND miss と THIRD miss の厳密分離はまだ未実施。次の研究は4号艇頭35Rについて実着2/3をrace-levelへ付加し、SECOND Top2 miss / conditional THIRD miss / pair-ranking missを分離する。その上で7月に崩れた相手特徴を調べる。
+- production `HEAD4_V291_COMP7` / frozen v283 はまだ変更しない。formal prospective ROI=`NOT_COMPUTABLE`。September outcome/results `UNREAD`。
+
+Status: `HEAD4_V283_JULAUG_ROI_DEGRADATION_ANALYZED_NEXT_OPPONENT_MISS_DECOMPOSITION`
