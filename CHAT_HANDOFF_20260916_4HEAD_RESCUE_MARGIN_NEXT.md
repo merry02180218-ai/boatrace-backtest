@@ -28,21 +28,20 @@ Recovery commits extended causal reconstruction to March and repaired the backte
 ## AFTER — FAILURE 2 FIX
 - `audit_4head_86r_v283_closing_odds.py` now accepts explicit `start,end` in `source_rows`, defaults remain Apr-Aug for legacy audit, and September odds access is explicitly blocked. commit `eeeb77f6fa8005940b0c9f7f1314a23c0b0866af`.
 - `analyze_4head_v283_second_margin_rescue.py` now passes the requested window into `source_rows` and asserts exact source/replay coverage and 5 opponent rows per race. commit `2be97348806833f5d506d165dcb26aa91db9011b`.
-- This fixes the actual second failure rather than weakening the six-month assertion.
-- A rerun-failed-jobs request was accidentally issued for Run `35125191625`; GitHub reruns the original head SHA, so that attempt cannot validate these newer commits and must NOT be accepted as evidence. A fresh workflow_dispatch on current main is required.
 - September outcome/results remains `UNREAD`.
 
 ## FAILURE 3 — Run 35126729027
 - Run `35126729027`, Job `104897492664`.
 - six-month candidate/v283 reconstruction succeeded: `HEAD4_FROZEN_INDEPENDENT_REPLAY_OK 2026-03-01 2026-08-31 191`.
-- failure is post-computation guard `MONTH_SUMMARY_INCOMPLETE`.
-- root cause: summary validation uses `str.match(r'2026-\\d\\d')`, which also matches aggregate label `2026-03..08`; therefore the set contains an extra aggregate period and fails even though six monthly rows exist.
-- output files are currently written after this guard, so failure leaves no useful CSV artifact.
+- failure was post-computation guard `MONTH_SUMMARY_INCOMPLETE`.
+- root cause: `str.match(r'2026-\\d\\d')` also matched aggregate label `2026-03..08`, adding an unwanted seventh period to the integrity set.
 
-## BEFORE — FAILURE 3 FIX
-- Fix only the summary/output guard; do not alter candidate/model/ticket/market semantics.
-- Validate monthly rows by exact membership in `REQUIRED`, and assert all six required months are present.
-- Persist `race_detail.csv` and `summary.csv` before the final integrity assertion so future failures leave diagnostic artifacts.
-- Keep September 2026 outcomes `UNREAD` and retain fail-closed behavior.
+## AFTER — FAILURE 3 FIX
+- `backtest_4head_v291_third010_sixmonth.py` fixed at commit `81261c5bf703fd9c4dd866dfd46c2ed56bce33dc`.
+- monthly integrity now selects periods by exact `REQUIRED` membership, so aggregate `2026-03..08` cannot contaminate the six-month check.
+- `race_detail.csv` and `summary.csv` are now persisted before the final integrity guard so a future late-stage failure still leaves diagnostics for Artifact upload.
+- candidate/model/ticket/market semantics were not changed.
+- September 2026 outcomes/results remains `UNREAD`.
+- Fresh workflow_dispatch on current main is required; do not accept reruns of older head SHAs as validation.
 
-Status: `THIRD010_SIX_MONTH_FIXING_MONTH_SUMMARY_GUARD`
+Status: `THIRD010_SIX_MONTH_FAILURE3_FIXED_NEEDS_FRESH_DISPATCH`
