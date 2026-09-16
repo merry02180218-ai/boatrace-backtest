@@ -3,13 +3,11 @@ on:
   push:
     branches: [research/3head-player-attack-mode]
     paths:
-      - 'research/run_3head_exhibition_ticket_rescue.py'
-      - 'research/run_3head_exhibition_ticket_rescue_march.py'
-      - 'research/run_3head_exhibition_ticket_rescue_apr_aug.py'
+      - 'research/run_3head_exhibition_rescue_break_decomp.py'
       - '.github/workflows/research-3head-ticket-rescue.yml'
   workflow_dispatch:
 jobs:
-  apr-aug-stability:
+  rescue-break-decomp:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -28,14 +26,14 @@ jobs:
           test -n "$SRC"
           DST="$GITHUB_WORKSPACE/analysis_v289_3head_wave21_allrace_feature_settled.csv"
           if [ "$(realpath "$SRC")" != "$(realpath -m "$DST")" ]; then cp "$SRC" "$DST"; fi
-          test -f "$DST"
-      - name: Apr-Aug frozen monthly stability audit
+      - name: Rescue versus broken decomposition
         run: |
           set -o pipefail
-          PYTHONPATH="$GITHUB_WORKSPACE" python research/run_3head_exhibition_ticket_rescue_apr_aug.py | tee research_v289_3head_exhibition_ticket_rescue_apr_aug.log
+          PYTHONPATH="$GITHUB_WORKSPACE" python research/run_3head_exhibition_rescue_break_decomp.py | tee research_v289_3head_exhibition_rescue_break_decomp.log
       - uses: actions/upload-artifact@v4
         with:
-          name: research-3head-ticket-rescue-apr-aug
+          name: research-3head-rescue-break-decomp
           path: |
-            research_v289_3head_exhibition_ticket_rescue_apr_aug.json
-            research_v289_3head_exhibition_ticket_rescue_apr_aug.log
+            research_v289_3head_exhibition_rescue_break_decomp.json
+            research_v289_3head_exhibition_rescue_break_decomp.csv
+            research_v289_3head_exhibition_rescue_break_decomp.log
