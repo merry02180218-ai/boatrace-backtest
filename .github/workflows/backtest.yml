@@ -51,6 +51,8 @@ jobs:
         run: python analyze_v351_mass_rescue_wave13_keepdrop.py | tee mass_rescue_wave13.txt
       - name: Analyze Wave14 2-vs-3 inner attack structure
         run: python analyze_v351_mass_rescue_wave14_inner_attack_structure.py | tee mass_rescue_wave14.txt
+      - name: Analyze Wave15 attack-awareness finishing structure
+        run: python analyze_v351_mass_rescue_wave15_attack_awareness.py | tee mass_rescue_wave15.txt
       - uses: actions/upload-artifact@v4
         with:
           name: audit-v351-exact3-via-monthly
@@ -99,6 +101,10 @@ jobs:
             analysis_v351_mass_rescue_wave14_pair23.csv
             analysis_v351_mass_rescue_wave14_pair23_summary.csv
             analysis_v351_mass_rescue_wave14_feature_direction.csv
+            analysis_v351_mass_rescue_wave15_rows.csv
+            analysis_v351_mass_rescue_wave15_summary.csv
+            analysis_v351_mass_rescue_wave15_finish_distribution.csv
+            analysis_v351_mass_rescue_wave15_outer_distribution.csv
             schema_rebuild.txt
             dedicated_schema_head.txt
             schema_exact3_errors.txt
@@ -117,3 +123,4 @@ jobs:
             mass_rescue_wave12.txt
             mass_rescue_wave13.txt
             mass_rescue_wave14.txt
+            mass_rescue_wave15.txt
