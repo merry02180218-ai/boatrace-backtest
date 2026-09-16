@@ -10,14 +10,18 @@ GAPS=[.01,.02,.03,.04,.05,.075,.10,.15,.20]; THIRD_GAP=.10; STAKE=100
 
 def build(start='2026-04-01',end='2026-08-31'):
  if str(end)>='2026-09-01': raise RuntimeError('September outcome access blocked')
- cx=cand.rebuild(start,end); codes=set(cx.race_code.astype(str).str.zfill(12)); d=audit.source_rows(codes); long=audit.build_long_all(d); art=load_artifact(); sf=list(art['v283_SECOND']['features']); cf=list(art['v283_COND_THIRD']['features'])
+ cx=cand.rebuild(start,end); codes=set(cx.race_code.astype(str).str.zfill(12)); d=audit.source_rows(codes,start,end)
+ if set(d.race_code.astype(str).str.zfill(12))!=codes: raise RuntimeError(f'FROZEN_V283_SOURCE_COVERAGE {len(set(d.race_code))}/{len(codes)}')
+ long=audit.build_long_all(d); art=load_artifact(); sf=list(art['v283_SECOND']['features']); cf=list(art['v283_COND_THIRD']['features'])
  truth={str(r.race_code).zfill(12):(int(float(r.winner)),int(float(r.second)),int(float(r.third))) for _,r in d.iterrows() if str(r.get('valid_result','0')) in ('1','1.0')}; rows=[]
  for code,g in long.groupby('race_code'):
+  if len(g)!=5: raise RuntimeError(f'FROZEN_BOAT_ROWS_MISMATCH:{code}:{len(g)}')
   sr=[]
   for _,r in g.iterrows(): x={'boat':int(r.boat)}; x.update({f:r[f] for f in sf}); sr.append(x)
   p2=score_second(sr,art); pc=score_conditional_third(audit.conditional_rows(g,sf,cf),art); so=sorted(BOATS,key=lambda s:(-float(p2[s]),s)); actual=truth.get(str(code)); ar=so.index(actual[1])+1 if actual and actual[0]==4 else np.nan
   rows.append({'date':str(g.date.iloc[0]),'month':str(g.date.iloc[0])[:7],'race_code':str(code),'head4':int(actual is not None and actual[0]==4),'actual_second':actual[1] if actual and actual[0]==4 else np.nan,'actual_third':actual[2] if actual and actual[0]==4 else np.nan,'second_rank':ar,'second_order':'-'.join(map(str,so)),'second_gap23':float(p2[so[1]]-p2[so[2]]),'p2':p2,'pc':pc})
  df=pd.DataFrame(rows)
+ if len(df)!=len(cx): raise RuntimeError(f'FROZEN_V283_REPLAY_COVERAGE {len(df)}/{len(cx)}')
  if start=='2026-04-01' and end=='2026-08-31': assert len(df)==164,len(df)
  return df,art
 
