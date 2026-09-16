@@ -64,22 +64,47 @@ February 390R:
 - September outcomes read=false
 - production changed=false
 
-結論: direct-feature案はREJECT維持だが、post-ranking / ticket-rescue は February で明確な正のnet rescue。Marchへ進める価値あり。
+結論: direct-feature案はREJECT維持だが、post-ranking / ticket-rescue は February で明確な正のnet rescue。
 
-## March one-shot audit BEFORE — 2026-09-16
+## March one-shot audit AFTER — 2026-09-16
+February freeze `w_ex=0.08, w_st=0.08, threshold=0.0` をMarchで一切再調整せずout-of-time監査。
+
+実装/trigger commit:
+- `8b34783355fa40c68242a7da637277e69ba79542`
+
+Actions:
+- Run `34998881760` SUCCESS
+- Job `104482001438` (`march-one-shot`)
+- Artifact `10409495083` (`research-3head-ticket-rescue-march`)
+
+March 472 common-ready head races:
+- baseline: 192/472 = 40.67796610%
+- corrected: 201/472 = 42.58474576%
+- rescued_miss=20
+- broken_hit=11
+- net_rescue=+9
+- march_retuned=false
+- exact_v288_exclusion_preserved=true
+- September outcomes read=false
+- production changed=false
+
+結論: February freezeがMarch独立期間でも +9 net rescue / +1.9068pt を再現。February単月過適合だけでは説明しにくく、4〜8月の月別安定性監査へ進む。
+
+## Apr-Aug stability audit BEFORE — 2026-09-16
 これから行うこと:
-- Februaryで選んだ `w_ex=0.08, w_st=0.08, threshold=0.0` を**完全freeze**し、Marchで再探索しない。
-- Februaryでbaseline Aをfitし、March common-ready boat3-head racesへout-of-time適用する。March自身でモデル/重み/thresholdをfit・tuneしない。
-- Marchで baseline hits/capture と frozen rescue後 hits/capture、rescued_miss、broken_hit、net_rescue を一発診断する。
-- exact v288 exclusion、canonical eligibility、締切前特徴のみを維持。
-- March結果はこの監査目的でのみ読む。September 2026 outcomes は引き続き絶対に読まず `UNREAD`。
+- frozen `w_ex=0.08, w_st=0.08, threshold=0.0` を完全固定し、4〜8月で再探索・再調整しない。
+- baseline A / exact v288 exclusion / canonical eligibility / 締切前特徴のみを維持。
+- April, May, June, July, August を月別に baseline hits/capture、corrected hits/capture、rescued_miss、broken_hit、net_rescue で監査する。
+- July/August は既知のとおり NON-PRISTINE と明記し、pristine validation と混同しない。
+- 月別の符号安定性と合計net rescueを確認し、必要なら攻め方別のrescue分解へ進む。
+- September 2026 outcomes は絶対に読まない。`UNREAD`維持。
 - production v288は変更しない。
-- Marchで正のnet rescueが再現した場合だけ、次に4〜8月の月別安定性/攻め方別rescue監査へ進む。再現しなければFebruary過適合としてREJECT候補。
 
 ## 現在の結論 / 再開地点
 - direct exhibition features: REJECT
-- February post-ranking rescue: +8 net rescue
+- February post-ranking rescue: +8 net
+- March frozen one-shot: +9 net
 - frozen rescue parameters: `0.08 / 0.08 / threshold 0.0`
 - production v288: unchanged
 - September 2026 outcomes: **UNREAD**
-- 次: **March one-shot out-of-time ticket-rescue audit を実装→Actions→結果回収→本ファイルへAFTER追記**
+- 次: **Apr-Aug frozen monthly stability audit を実装→fresh Actions→月別結果回収→本ファイルへAFTER追記**
