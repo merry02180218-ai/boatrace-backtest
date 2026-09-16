@@ -1,9 +1,17 @@
 name: research-3head-close-margin-fourth-ticket-fire4
+
 on:
+  workflow_dispatch:
   push:
-    branches: [main]
+    branches:
+      - main
     paths:
       - '.github/workflows/research-3head-close-margin-fourth-ticket-fire4.yml'
+
+permissions:
+  actions: read
+  contents: read
+
 jobs:
   audit:
     runs-on: ubuntu-latest
@@ -15,7 +23,7 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install pandas numpy scikit-learn
-      - name: restore
+      - name: Restore fixed pre-September source
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -23,7 +31,8 @@ jobs:
           SRC=$(find . -name 'analysis_v289_3head_wave21_allrace_feature_settled.csv' | head -1)
           test -n "$SRC"
           cp "$SRC" "$GITHUB_WORKSPACE/analysis_v289_3head_wave21_allrace_feature_settled.csv"
-      - run: PYTHONPATH="$GITHUB_WORKSPACE" python research/run_3head_close_margin_fourth_ticket.py | tee research_v289_3head_close_margin_fourth_ticket.log
+      - name: Run close-margin fourth-ticket audit
+        run: PYTHONPATH="$GITHUB_WORKSPACE" python research/run_3head_close_margin_fourth_ticket.py | tee research_v289_3head_close_margin_fourth_ticket.log
       - uses: actions/upload-artifact@v4
         if: always()
         with:
