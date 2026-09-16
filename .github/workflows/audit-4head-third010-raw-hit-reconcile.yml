@@ -1,0 +1,19 @@
+name: audit-4head-third010-raw-hit-reconcile
+on:
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Reconcile raw ticket hits vs comp7
+        run: python audit_4head_third010_raw_hit_reconcile.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-third010-raw-hit-reconcile
+          path: /tmp/head4_third010_raw_reconcile/
