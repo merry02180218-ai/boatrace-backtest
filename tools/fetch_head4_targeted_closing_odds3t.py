@@ -7,11 +7,16 @@ are fetched, so this avoids the full date x 24 venues x 12 races crawl.
 """
 from pathlib import Path
 import csv
+import sys
 import pandas as pd
+
+ROOT=Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0,str(ROOT))
+
 import audit_4head_86r_independent as cand
 from tools.fetch_official_closing_odds3t import BASE, COMBOS, MAPPING_VERSION, fetch, parse
 
-ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'data'/'official_closing_odds3t'
 START='2026-04-01'; END='2026-08-31'
 
