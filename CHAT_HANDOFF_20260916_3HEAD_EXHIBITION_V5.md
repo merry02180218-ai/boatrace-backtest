@@ -64,20 +64,31 @@ Frozen `0.08 / 0.08 / threshold 0.0`, no retuning:
 
 結論: February +8 / March +9 は再現したが、Apr-Augは合計+7に弱まり、Apr/Augは負。全レース一律補正をproduction採用する根拠としては不十分。展示補正が救済する条件と既存的中を壊す条件を分解する。
 
-## Rescue vs Broken decomposition BEFORE — 2026-09-16
+## Rescue vs Broken decomposition AFTER — 2026-09-16
+- 初回 fresh Run `35062170154` / Job `104684604972` は `settle__actual_combo` 読み込み漏れで failure。
+- 修正 commit `19321a9d8bb2bc60ab6768312f540152603003b4`。
+- 成功 Run `35063772129` / Job `104689492719` / Artifact `10433766645`。
+- Artifact SHA256 `4628666869220f29d76fe437434b94ae1e3ce2ccd06287a3364af98df067fca7`。
+- Feb-Jun pooled: rescued 72 / broken 57 / net +15。
+- discovery best: baseline gap<=0.04 & max_abs_adj>=0.02: 1537R, rescued 69, broken 56, net +13。
+- rescued の entered exhibition/ST 平均 0.6599/0.6296、broken は 0.5871/0.5932。中途半端な展示優位で既存的中を壊す可能性がある。
+- ただし pooled Feb-Jun は discovery であり、February baseline は同月fitのため、このgateをそのままfreeze/production採用しない。
+- July/August NON-PRISTINE、September outcomes UNREAD、production unchanged。
+
+## 展示補正OFF条件分析 BEFORE — 2026-09-16
 これから行うこと:
-- frozen baseline A と `0.08/0.08/0.0` の順位変化をrace単位で記録。
-- February〜Juneを主解析期間とし、July/AugustはNON-PRISTINE参考値として分離。
-- outcomeカテゴリを rescued / broken / unchanged-hit / unchanged-miss に分ける。
-- 締切前に観測できる量だけで分解: baseline 3位と4位のscore gap、展示補正によるswap margin、入替対象艇のcorrected exhibition/ST、pair exhibition/ST quality、補正絶対量、場、月。
-- 実際の決まり手・September outcomesは使わない。
-- rescued と broken の分布差を集計し、単純で事前固定可能なgate候補（例: baseline gapが小さい時だけ補正、展示優位が十分大きい時だけ補正）を抽出する。
-- この段階ではproduction変更しない。gate候補を作っても同じ解析期間への採用判断はせず、次の独立監査用にfreezeする。
-- exact v288 exclusion維持 / September outcomes UNREAD。
+- 主目的を「展示補正を使う条件」ではなく「展示補正を禁止する条件」の抽出へ変更。
+- broken（展示補正で元の的中を壊したレース）を中心に rescued と比較する。
+- 解析は締切前に観測できる特徴だけを使用する。
+- baseline 3位-4位差、入替艇の展示/ST、entered-exited の展示/ST差、補正差、順位変動数を中心に比較する。
+- Apr-Jun pristine を主な安定性確認期間とし、Feb-Marは発見/参考、Jul-Augは NON-PRISTINE 参考に分離する。
+- 単純で実運用可能な「補正OFF」ルール候補を抽出し、月別 rescued/broken/net を必ず確認する。
+- 同じ解析期間で選んだルールはproduction採用しない。候補固定後に独立監査へ進む。
+- exact v288 exclusion維持 / September outcomes UNREAD / production unchanged。
 
 ## 現在の結論 / 再開地点
 - direct exhibition features: REJECT
-- frozen rescue: Feb +8, Mar +9, Apr-Aug +7 total with Apr/Aug negative
+- 一律展示補正は安定性不足。
+- 次: **broken中心の展示補正OFF条件を実装→fresh Actions→Apr-Jun月別安定性→OFF候補freeze→独立監査**
 - production v288 unchanged
 - September 2026 outcomes **UNREAD**
-- 次: **rescue/broken decomposition実装→fresh Actions→gate候補freeze→独立期間監査**
