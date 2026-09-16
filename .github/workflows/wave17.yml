@@ -1,0 +1,44 @@
+name: wave17-boat5-third-rescue
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'analyze_v351_mass_rescue_wave17_boat5_third_rescue.py'
+      - '.github/workflows/wave17.yml'
+jobs:
+  wave17:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4
+      - name: Rebuild prerequisite chain through Wave10
+        run: |
+          python audit_v351_schema_correct_rebuild.py
+          python audit_v351_dedicated_schema_head.py
+          python analyze_v351_schema_exact3_errors.py
+          python research_v351_opponent_pair_oof.py
+          python analyze_v351_g2g3_pair_correction_wave3.py
+          python research_v351_one_replace_wave4.py
+          python analyze_v351_one_replace_wave5.py
+          python analyze_v351_one_replace_wave6_venue.py
+          python analyze_v351_kiryu_boat2_wave7.py
+          python analyze_v351_kiryu_boat2_wave8.py
+          python analyze_v351_kiryu_boat2_wave9_loo.py
+          python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
+          python audit_v351_opponent_mass_threshold.py
+          python analyze_v351_mass_rescue_wave10.py
+      - name: Run Wave17 frozen boat5 third-place rescue audit
+        run: python analyze_v351_mass_rescue_wave17_boat5_third_rescue.py | tee mass_rescue_wave17.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wave17-boat5-third-rescue
+          path: |
+            analysis_v351_mass_rescue_wave17_discovery_grid.csv
+            analysis_v351_mass_rescue_wave17_rows.csv
+            analysis_v351_mass_rescue_wave17_monthly.csv
+            analysis_v351_mass_rescue_wave17_frozen_summary.csv
+            mass_rescue_wave17.txt
