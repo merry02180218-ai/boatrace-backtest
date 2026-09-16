@@ -23,25 +23,25 @@ Recovery commits extended causal reconstruction to March and repaired the backte
 - Run `35125191625`, Job `104892400132`, head SHA `74e9d0a8d6785a9f3dbefebd9a93bcb2f1c28e41`.
 - candidate reconstruction itself succeeded: `HEAD4_FROZEN_INDEPENDENT_REPLAY_OK 2026-03-01 2026-08-31 191`.
 - failure occurred later because `audit_4head_86r_v283_closing_odds.source_rows()` still hard-filtered its V93 feature source to Apr-Aug. Thus v283 replay discarded March and the final six-month guard correctly stopped with available Apr-Aug only.
-- Artifact upload step succeeded structurally but no files existed because failure occurred before output creation.
 
 ## AFTER — FAILURE 2 FIX
-- `audit_4head_86r_v283_closing_odds.py` now accepts explicit `start,end` in `source_rows`, defaults remain Apr-Aug for legacy audit, and September odds access is explicitly blocked. commit `eeeb77f6fa8005940b0c9f7f1314a23c0b0866af`.
-- `analyze_4head_v283_second_margin_rescue.py` now passes the requested window into `source_rows` and asserts exact source/replay coverage and 5 opponent rows per race. commit `2be97348806833f5d506d165dcb26aa91db9011b`.
-- September outcome/results remains `UNREAD`.
+- `audit_4head_86r_v283_closing_odds.py` explicit start/end commit `eeeb77f6fa8005940b0c9f7f1314a23c0b0866af`.
+- `analyze_4head_v283_second_margin_rescue.py` passes requested window and asserts replay coverage commit `2be97348806833f5d506d165dcb26aa91db9011b`.
 
-## FAILURE 3 — Run 35126729027
-- Run `35126729027`, Job `104897492664`.
-- six-month candidate/v283 reconstruction succeeded: `HEAD4_FROZEN_INDEPENDENT_REPLAY_OK 2026-03-01 2026-08-31 191`.
-- failure was post-computation guard `MONTH_SUMMARY_INCOMPLETE`.
-- root cause: `str.match(r'2026-\\d\\d')` also matched aggregate label `2026-03..08`, adding an unwanted seventh period to the integrity set.
+## FAILURE 3 / FIX
+- Run `35126729027`, Job `104897492664`: reconstruction 191R succeeded; late guard `MONTH_SUMMARY_INCOMPLETE` failed because aggregate label matched loose month regex.
+- fixed `backtest_4head_v291_third010_sixmonth.py` commit `81261c5bf703fd9c4dd866dfd46c2ed56bce33dc` with exact REQUIRED membership and pre-guard CSV persistence.
 
-## AFTER — FAILURE 3 FIX
-- `backtest_4head_v291_third010_sixmonth.py` fixed at commit `81261c5bf703fd9c4dd866dfd46c2ed56bce33dc`.
-- monthly integrity now selects periods by exact `REQUIRED` membership, so aggregate `2026-03..08` cannot contaminate the six-month check.
-- `race_detail.csv` and `summary.csv` are now persisted before the final integrity guard so a future late-stage failure still leaves diagnostics for Artifact upload.
-- candidate/model/ticket/market semantics were not changed.
-- September 2026 outcomes/results remains `UNREAD`.
-- Fresh workflow_dispatch on current main is required; do not accept reruns of older head SHAs as validation.
+## SUCCESS RUN
+- fresh Run `35129089769`, Job `104905317906`, head `2ec7575bb0b508f1ce848edd12aeaee1b4fcfabe`, Artifact `10461260375` SUCCESS.
+- artifact summary: Mar-Aug 191 candidates / all 191 closing-odds covered / 55 BET / 136 PASS / 953 candidate tickets / 7 BET hits / JPY550,000 stake / JPY807,580 payout / ROI 146.8327%.
+- monthly BET-hit summary: Mar 10BET/2hit, Apr 7/4, May 8/0, Jun 7/1, Jul 16/0, Aug 7/0.
+- IMPORTANT: artifact `hit` is defined only after `bet=True`; PASS races are forced hit=0. Therefore this 7 cannot be compared directly to the old Apr-Aug THIRD0.10 35 ticket hits.
 
-Status: `THIRD010_SIX_MONTH_FAILURE3_FIXED_NEEDS_FRESH_DISPATCH`
+## BEFORE — 191R TICKET-HIT RECONCILIATION
+- Reconcile every Mar-Aug candidate independently of comp>=7: head4, THIRD0.10 ticket containment, BET/PASS, and closing-odds market filter.
+- Apr-Aug must be compared on the same population/definition with the historical 817 tickets / 35 hits; identify whether discrepancy comes from ticket generation, candidate reconstruction, or comp>=7 filtering.
+- Quantify how many correct ticket hits are discarded by PASS, by month, especially May/Jul/Aug.
+- Do not read September outcomes. Keep `UNREAD`.
+
+Status: `AUDITING_191R_RAW_TICKET_HITS_VS_MARKET_FILTER`
