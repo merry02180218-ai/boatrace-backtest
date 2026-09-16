@@ -5,10 +5,11 @@ on:
     paths:
       - 'research/run_3head_exhibition_rescue_break_decomp.py'
       - 'research/run_3head_exhibition_off_gate.py'
+      - 'research/run_3head_exhibition_motor_protection.py'
       - '.github/workflows/research-3head-ticket-rescue.yml'
   workflow_dispatch:
 jobs:
-  exhibition-off-gate:
+  motor-protection:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -27,14 +28,14 @@ jobs:
           test -n "$SRC"
           DST="$GITHUB_WORKSPACE/analysis_v289_3head_wave21_allrace_feature_settled.csv"
           if [ "$(realpath "$SRC")" != "$(realpath -m "$DST")" ]; then cp "$SRC" "$DST"; fi
-      - name: Analyze when exhibition correction should be OFF
+      - name: Motor-aware v288 protection audit
         run: |
           set -o pipefail
-          PYTHONPATH="$GITHUB_WORKSPACE" python research/run_3head_exhibition_off_gate.py | tee research_v289_3head_exhibition_off_gate.log
+          PYTHONPATH="$GITHUB_WORKSPACE" python research/run_3head_exhibition_motor_protection.py | tee research_v289_3head_motor_protection.log
       - uses: actions/upload-artifact@v4
         with:
-          name: research-3head-exhibition-off-gate
+          name: research-3head-motor-protection
           path: |
-            research_v289_3head_exhibition_off_gate.json
-            research_v289_3head_exhibition_off_gate.csv
-            research_v289_3head_exhibition_off_gate.log
+            research_v289_3head_motor_protection.json
+            research_v289_3head_motor_protection.csv
+            research_v289_3head_motor_protection.log
