@@ -1,0 +1,16 @@
+name: validate-4head-v291-third010-live
+on:
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Verify approved THIRD0.10 production invariants
+        run: python verify_4head_v291_third010_live.py
