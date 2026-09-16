@@ -76,79 +76,27 @@ Date: 2026-09-16〜17
 - March ruleは対象0Rとなり、閾値決め打ち方式を中止。
 
 ## モーター差分布研究 AFTER — 2026-09-17
-### 実装・Actions
-- BEFORE/handoff update commit: `76e51b4...`
-- distribution script commit: `70cff7d...`
 - workflow commit/head SHA: `584633c9524c84a44446e08384acf9f6029d6907`
-- script: `research/run_3head_motor_distribution.py`
-- Run: `35111654588` — **SUCCESS**
-- Job: `104846612766` (`motor-distribution`) — **SUCCESS**
-- Artifact: `10453170462` (`research-3head-motor-distribution`)
-- Artifact ZIP SHA256: `f6951901bfb3a89fe2bc326bf955ac58b5e8cf1be1badc2fa3ac6677dedea753`
-- exact v288 exclusion preserved=true
-- candidate_selected_using_apr_jun=false
-- September outcomes read=false
-- production changed=false
-
-### Marchでの実分布
-展示補正で外れ→的中になった `rescued` は20R（motor有効19R）。
-- motor_adv平均 +0.0137316（約+1.37ポイント）
-- 中央値 +0.002775（約+0.28ポイント）
-- 25%点 -0.01755 / 75%点 +0.054225
-- motor_adv<=0 は42.1%
-
-展示補正で的中→外れになった `broken` は11R。
-- motor_adv平均 +0.0140909（約+1.41ポイント）
-- 中央値 +0.009725（約+0.97ポイント）
-- 25%点 -0.00855 / 75%点 +0.031225
-- motor_adv<=0 は27.3%
-
-### March-only候補探索結果
-Marchのrescued/broken実分布から候補閾値を生成し、Apr-Jun結果は選択に使わなかった。
-最上位候補でも:
-- base_gap_min=0
-- ex_adv_max=.15
-- st_adv_max=.30
-- motor_adv_max=.0082
-- 対象7R
-- 防げたbroken=1R
-- 失ったrescued=1R
-- net=0
-
-正のnetとなるMarchルールが無かったため:
-- `frozen_march_rule = null`
-- Apr/May/Junへのfreeze検証は実施対象なし
-- `apr_jun_all_positive=false`
-
-### 結論
-- 単純な「入替艇と外れ艇のモーター2連率/3連率の合成差」では、rescuedとbrokenを分離できなかった。
-- rescued平均 +1.37pt、broken平均 +1.41pt とほぼ同等で、モーター差単独の保護gateは不採用。
-- これはモーター情報自体を全否定するものではない。現行の単純合成差が識別材料にならなかった、という結論。
-- production v288は変更しない。
-- September 2026 outcomesは **UNREAD維持**。
+- Run: `35111654588` SUCCESS / Job: `104846612766` / Artifact: `10453170462`
+- March rescued 20R / broken 11R。単純motor_advでは分離不能。
+- `frozen_march_rule = null`; production unchanged; September UNREAD。
 
 ## このチャット内の運用変更
 - `auto-live-3head-v288-production` の5分ごとの自動実行は停止済み。
 - commit `a029b144a7a8ce52b0238b3fea6aecf1445cd3ef`
 - `schedule` を削除し、`workflow_dispatch` の手動実行は残している。
-- これは3号艇研究本体とは別のLIVE運用変更。
 
-## 次チャットの再開地点
-次は **展示タイム差 + 展示ST差 + 元のv288順位差 + 実際に入れ替わった組み合わせ** を組み合わせて、展示補正をON/OFFすべき条件を調べる。
+## 2026-09-17 追加研究 BEFORE — close-margin 4点目
+ユーザー指示: 4号艇モデル同様、僅差なら4点目も買う方式を3号艇で検証する。
 
-優先候補:
-1. `ex_adv`（入替側の展示優位差）
-2. `st_adv`（入替側の展示ST優位差）
-3. `base_gap`（v288元順位3位と4位の確率差）
-4. `changed_pairs` / 入替艇・外れ艇の組み合わせ特性
-5. 必要ならmotor2/motor3を別々に補助情報として再確認するが、単純合成motor_adv gateには戻らない。
+これからやること:
+1. v288/既存3点ランキングは変更しない。
+2. 3位と4位のbase score差（margin）が小さいレースだけ4点目を追加する。
+3. まず `margin-only` をMarchで候補探索し、Apr/May/Junへfreezeして独立検証する。
+4. 次に `margin + exhibition/ST` 条件を比較し、4点目追加による追加的中と追加投資を分離する。
+5. 指標は追加購入R、追加的中、incremental hit、可能なら払戻/ROI、月別安定性を出す。
+6. July/AugustはNON-PRISTINE参考のみ。September outcomesは絶対に読まずUNREAD維持。
+7. production v288は研究終了まで変更しない。
 
-研究設計は引き続き、Marchのみで発見・freeze → Apr/May/Junを月別独立検証。July/AugustはNON-PRISTINE参考のみ。September outcomesは絶対に読まずUNREADを維持する。
-
-## 現在の最終状態
-- production: **v288 unchanged**
-- direct exhibition training features: **REJECT**
-- uniform post-ranking exhibition correction: 月別安定性不足
-- simple motor protection gate: **REJECT / no freeze**
-- 次: **展示差・ST差・v288順位差・入替組み合わせによるON/OFF条件研究**
-- September 2026 outcomes: **UNREAD**
+## 次の再開地点
+**close-margin fourth-ticket audit 実装 → Actions発火 → March freeze / Apr-Jun OOS比較。**
