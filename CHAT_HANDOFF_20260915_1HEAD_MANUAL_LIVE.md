@@ -40,8 +40,25 @@
 - `race_code < 20260901` hard guard。September 2026 outcomes/payoutsは `UNREAD` 維持。
 - 比較: `.30/.325/.35/.375/.40/.425/.45`、mass帯別R/HEAD/exact3、月別。production定数 `.375` は監査完了まで変更しない。
 - 初回Run `35037266265` / Job `104609063946` はworkflow自体successだが、mass監査stepは `cache_v321_julaug_nonpristine_slim.csv.gz` 不在で結果未生成。
-- **これから行うこと**: `.github/workflows/backtest.yml` のmass監査前に `run_v321_1head_julaug_nonpristine_validation.py --stage prepare` を追加して必要cacheをfresh生成し、その後mass監査を実行する。fresh RunのRun/Job/Artifact IDと閾値結果を確認してAFTERへ記録する。
 - cache生成・監査ともSeptember結果を読まないことを確認し、production変更は結果確認後に判断する。
+
+### AFTER — 2026-09-16
+- cache recovery commit `c5b00997abeb84502468412e00bab4aed5a2d549`。
+- fresh Run `35039558019` / Job `104616158961` / Artifact `10424409413` / success。
+- Artifact SHA256 `9b7fb6f4b73e222c0db79bf6d6ecd51bf3f512f039db08a158f11b7cb6a256e0`。
+- HEAD>=.78固定でmass cut別: .300=1140R/HEAD80.96%/exact3 36.49%, .325=1118/81.13/36.94, .350=1046/81.45/37.67, .375=901/82.13/40.29, .400=680/82.06/42.65, .425=456/81.80/44.08, .450=280/82.50/47.14。
+- `[.350,.375)` は145R / HEAD77.24% / exact3 21.38%。現行閾値直下は特にexact3が弱い。
+- `[.375,.400)` は221R / HEAD82.35% / exact3 33.03%。
+- 単純な `.375 -> .350` 緩和はREJECT方向。production `.375` は変更しない。
+- September 2026 outcomes/payoutsは `UNREAD` 維持。
+
+## BEFORE: mass直下 `[.350,.375)` 展示救済研究 — 2026-09-16
+- 145Rの閾値直下帯を一律production採用せず、展示post-ranking / ticket-rescue型で救済可能な条件があるかを独立研究する。
+- HEAD gate自体は変更しない。mass `.375` もproductionでは維持する。
+- `race_code < 20260901` hard guard。September outcomes/payoutsは絶対に読まない。
+- まず145Rを月別・場別・schema別・展示特徴別に分解し、HEAD rescueとexact3 rescueを分離する。
+- 展示をHEAD学習特徴へ直接追加するのではなく、現行PREを保持したpost-ranking / rescue guardとして評価する。
+- 小標本の見かけ改善をproduction昇格させない。fresh Actions Runで再現し、Run/Job/Artifact IDと結論をAFTER記録する。
 
 ## BEFORE: 手動即時LIVE入口の復旧 — 2026-09-16
 - ユーザーの「○○R判別して」だけで、こちらからGitHubへtrigger fileをpushして任意Rを即時発火できる入口を復旧する。
@@ -65,4 +82,4 @@
 - validationでは `ENTRYPOINT_READY`、production profile/HEAD cutoff/opponent massを読み込み、`result_or_payout_used=False` / `chronology_guard=True` / `controller_auto_enabled=False` を確認。実レースの展示取得・finalizeはvalidation modeなので意図的にskipped。
 - September 2026 outcomes/payoutsは `UNREAD` 維持。production変更なし。
 - 次回ユーザーが「○○R判別して」と言ったら、締切を確認してtrigger fileを `mode=judge` に更新し、fresh Run完了まで追跡して判定結果と買い目を返す。
-- 研究側の次再開地点は opponent mass `.375` 独立監査のfresh cache生成/結果確認。
+- 研究側の次再開地点は mass直下 `[.350,.375)` の展示post-ranking / rescue研究。
