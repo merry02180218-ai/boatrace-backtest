@@ -1,0 +1,19 @@
+name: audit-4head-v283-margin6-closing-roi
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy scikit-learn
+      - run: python audit_4head_v283_margin6_closing_roi.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-v283-margin6-closing-roi
+          path: /tmp/head4_v283_margin6_roi/
