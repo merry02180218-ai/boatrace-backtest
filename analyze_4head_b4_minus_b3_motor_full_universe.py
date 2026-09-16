@@ -18,7 +18,10 @@ HOLD=('2026-07','2026-08')
 WIN_CUT=0.010782
 REN2_CUT=0.4000
 
-def settle_all():
+def settle_all(months=MONTHS):
+    months=tuple(months)
+    if any(str(m).startswith('2026-09') for m in months):
+        raise RuntimeError('September outcome access blocked')
     rs=c4.read(); orders=v251.pair_orders(rs); actual=v251.actual_map(rs)
     od=load_odds()
     if od.empty: raise RuntimeError('archived odds unavailable')
@@ -26,7 +29,7 @@ def settle_all():
     out=[]
     for r in rs:
         ds=str(r.get('date','')); mon=ds[:7]
-        if mon not in MONTHS: continue
+        if mon not in months: continue
         c=code(r.get('race_code','')); k=(ds,c); order=orders.get(k); a=actual.get(k)
         if not order or not a or a[3]!=1 or c not in oi.index: continue
         o=oi.loc[c]; o=o.iloc[-1] if isinstance(o,pd.DataFrame) else o
