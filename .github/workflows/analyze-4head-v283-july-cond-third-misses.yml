@@ -1,6 +1,9 @@
 name: analyze-4head-v283-july-cond-third-misses
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/run-4head-v283-july-cond-third-misses.txt'
 jobs:
   analyze:
     runs-on: ubuntu-latest
