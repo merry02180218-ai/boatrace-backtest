@@ -65,4 +65,11 @@ Repo: `merry02180218-ai/boatrace-backtest`
 - 既存のfull post-exhibition automation自体は以前から未完成なので、今回の変更はproduction market/ticket entrypointの正式版として追加したもの。旧4点runnerを新規運用で使わないこと。
 - September outcome/results=`UNREAD`。
 
-Status: `THIRD010_PRODUCTION_ADOPTED_CI_DISPATCH_PENDING`
+## BEFORE — 2026-09-17 THIRD010 SIX-MONTH BACKTEST
+ユーザー依頼: production `HEAD4_V291_COMP7_THIRD010` を半年バックテスト1回。
+- 9月outcome/resultsは絶対に読まず `UNREAD` 維持。
+- 既存の確定済み履歴データ/研究コードを再利用し、THIRD0.10 semanticsを固定して6か月集計する専用 `workflow_dispatch` を追加する。
+- 月別/全体のrace数、ticket数、hit、stake、payout、profit、ROIをartifactへ出す。closing oddsを使う場合はretrospective diagnosticと明記し、formal prospective ROIとは扱わない。
+- workflow作成後に正しいActions直リンクをユーザーへ渡し、手動発火後にRun/Job/Artifactを監査する。
+
+Status: `THIRD010_SIX_MONTH_WORKFLOW_BUILDING`
