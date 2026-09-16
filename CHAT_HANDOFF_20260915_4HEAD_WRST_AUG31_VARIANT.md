@@ -52,3 +52,17 @@ Status: `HEAD4_TARGETED_AUG_CLOSING_ODDS_RECOVERY_STARTED`
 - 原因: `tools/fetch_head4_targeted_closing_odds3t.py` を `python tools/...py` で起動すると `sys.path[0]` が `tools/` となり、repo root の `audit_4head_86r_independent.py` をimportできない。
 - 修正方針: repo rootを明示的に `sys.path` へ追加してからcandidate auditをimportする。候補条件・v283・productionは変更しない。
 - 修正後はworkflowを再発火して exact Run/Job と回収件数を確認する。September outcome/resultsは `UNREAD` 維持。
+
+## AFTER — targeted recovery success
+- Run `35041139038` / Job `104621037331`: success。
+- uncovered candidate odds 49Rを49/49回収、FAILED 0。mainへ保存済み。
+- September outcome/resultsは `UNREAD` 維持。
+
+## BEFORE — final 164R frozen-v283 closing-odds audit
+- targeted回収後のApr-Aug固定候補164Rを公式締切時3連単オッズで再監査する。
+- diagnosticからv96 importを完全除去し、`analysis_v93_4corner_second_third.csv` を直接readする。
+- frozen artifactが要求するfeature欠落はfail-closedにする。v283 `PLAYER_START + COND_BASE / TOP2XTOP2 / alpha2=.60 / Top4=4` は変更しない。
+- retrospective diagnosticのみ。formal prospective ROI=`NOT_COMPUTABLE`。
+- September 2026 outcome/resultsは絶対に読まない。`UNREAD`維持。production `HEAD4_V291_COMP7` unchanged。
+
+Status: `HEAD4_FINAL_164R_V283_CLOSING_ODDS_AUDIT_STARTED`
