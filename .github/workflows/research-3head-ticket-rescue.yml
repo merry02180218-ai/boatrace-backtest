@@ -4,10 +4,11 @@ on:
     branches: [research/3head-player-attack-mode]
     paths:
       - 'research/run_3head_exhibition_rescue_break_decomp.py'
+      - 'research/run_3head_exhibition_off_gate.py'
       - '.github/workflows/research-3head-ticket-rescue.yml'
   workflow_dispatch:
 jobs:
-  rescue-break-decomp:
+  exhibition-off-gate:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -26,15 +27,14 @@ jobs:
           test -n "$SRC"
           DST="$GITHUB_WORKSPACE/analysis_v289_3head_wave21_allrace_feature_settled.csv"
           if [ "$(realpath "$SRC")" != "$(realpath -m "$DST")" ]; then cp "$SRC" "$DST"; fi
-      - name: Rescue versus broken decomposition
+      - name: Analyze when exhibition correction should be OFF
         run: |
           set -o pipefail
-          PYTHONPATH="$GITHUB_WORKSPACE" python research/run_3head_exhibition_rescue_break_decomp.py | tee research_v289_3head_exhibition_rescue_break_decomp.log
+          PYTHONPATH="$GITHUB_WORKSPACE" python research/run_3head_exhibition_off_gate.py | tee research_v289_3head_exhibition_off_gate.log
       - uses: actions/upload-artifact@v4
         with:
-          name: research-3head-rescue-break-decomp
+          name: research-3head-exhibition-off-gate
           path: |
-            research_v289_3head_exhibition_rescue_break_decomp.json
-            research_v289_3head_exhibition_rescue_break_decomp.csv
-            research_v289_3head_exhibition_rescue_break_decomp.log
-# fresh-trigger: 2026-09-16 rescue-break-decomp
+            research_v289_3head_exhibition_off_gate.json
+            research_v289_3head_exhibition_off_gate.csv
+            research_v289_3head_exhibition_off_gate.log
