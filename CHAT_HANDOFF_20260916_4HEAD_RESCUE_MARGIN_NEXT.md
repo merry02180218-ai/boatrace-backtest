@@ -57,4 +57,15 @@ Repo: `merry02180218-ai/boatrace-backtest`
 - IMPORTANT fail-closed guard: current strict source reconstruction was previously audited Apr-Aug. The new runner requires all six months Mar-Aug and will FAIL rather than mislabel five months as six if March is not supplied by the frozen reconstruction path. If it fails on this guard, next work is to extend the frozen candidate reconstruction to March without touching September, then rerun.
 - Run/Job/Artifact: pending manual dispatch; do not claim success before observed.
 
-Status: `THIRD010_SIX_MONTH_READY_FOR_DISPATCH`
+## BEFORE — 2026-09-17 SIX-MONTH FAILURE RECOVERY
+Observed Run `35121865532` / Job `104881369251` failed closed because reconstructed source contains Apr-Aug only; March is missing.
+User instructed: fix any other concerns and continue.
+Plan before code changes:
+1. inspect the dedicated six-month script/workflow and frozen reconstruction source rather than merely bypassing the month guard;
+2. extend the same frozen candidate/model reconstruction to March 2026 without reading September;
+3. audit for additional risks: accidental September reads, inconsistent month windows, changed model semantics, look-ahead/result leakage in candidate selection, closing-odds labeling, variable 4-6 ticket staking/composite-odds handling, and incomplete artifact-on-failure behavior;
+4. keep fail-closed guards for all six months and production semantics;
+5. commit fixes, update this handoff AFTER, then dispatch only when a valid workflow path exists and report exact Run/Job/Artifact.
+September outcome/results remains `UNREAD`.
+
+Status: `THIRD010_SIX_MONTH_RECOVERY_IN_PROGRESS`
