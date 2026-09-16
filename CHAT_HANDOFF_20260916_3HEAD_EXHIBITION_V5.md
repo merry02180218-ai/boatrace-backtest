@@ -45,50 +45,55 @@ Date: 2026-09-16
 - rescued=20 / broken=11 / net=+9
 - March retuned=false
 
-## Apr-Aug frozen stability audit AFTER — 2026-09-16
-Implementation commit `a5327d1fdddf230b7c401c735aeedaba0b77b6d5`
-Workflow commit `872924264de70c60e115a8fb80c94001ad8ddf59`
-Actions:
-- Run `35059260596` SUCCESS
-- Job `104675902983` (`apr-aug-stability`)
-- Artifact `10432320401` (`research-3head-ticket-rescue-apr-aug`)
-- Artifact ZIP SHA256 `de169cc031d855939b3b6149247861dec223d730719956e9eea7605453b4057d`
+## Apr-Aug frozen stability audit AFTER
+- Run `35059260596` / Job `104675902983` / Artifact `10432320401`
+- Apr -2 / May +5 / Jun +5 / Jul NON-PRISTINE +2 / Aug NON-PRISTINE -3; total +7。
+- 結論: 一律展示補正はproduction根拠として不足。
 
-Frozen `0.08 / 0.08 / threshold 0.0`, no retuning:
-- Apr: 414R, baseline 154 (37.1981%), corrected 152 (36.7150%), rescued 12, broken 14, net -2
-- May: 563R, baseline 212 (37.6554%), corrected 217 (38.5435%), rescued 14, broken 9, net +5
-- Jun: 544R, baseline 195 (35.8456%), corrected 200 (36.7647%), rescued 16, broken 11, net +5
-- Jul NON-PRISTINE: 604R, baseline 234 (38.7417%), corrected 236 (39.0728%), rescued 16, broken 14, net +2
-- Aug NON-PRISTINE: 591R, baseline 237 (40.1015%), corrected 234 (39.5939%), rescued 15, broken 18, net -3
-- Total Apr-Aug: 2716R, baseline 1032 (37.9971%), corrected 1039 (38.2548%), rescued 73, broken 66, net +7
-
-結論: February +8 / March +9 は再現したが、Apr-Augは合計+7に弱まり、Apr/Augは負。全レース一律補正をproduction採用する根拠としては不十分。展示補正が救済する条件と既存的中を壊す条件を分解する。
-
-## Rescue vs Broken decomposition AFTER — 2026-09-16
-- 初回 fresh Run `35062170154` / Job `104684604972` は `settle__actual_combo` 読み込み漏れで failure。
-- 修正 commit `19321a9d8bb2bc60ab6768312f540152603003b4`。
-- 成功 Run `35063772129` / Job `104689492719` / Artifact `10433766645`。
-- Artifact SHA256 `4628666869220f29d76fe437434b94ae1e3ce2ccd06287a3364af98df067fca7`。
+## Rescue vs Broken decomposition AFTER
+- 修正 commit `19321a9d8bb2bc60ab6768312f540152603003b4`
+- Run `35063772129` / Job `104689492719` / Artifact `10433766645`
 - Feb-Jun pooled: rescued 72 / broken 57 / net +15。
-- discovery best: baseline gap<=0.04 & max_abs_adj>=0.02: 1537R, rescued 69, broken 56, net +13。
-- rescued の entered exhibition/ST 平均 0.6599/0.6296、broken は 0.5871/0.5932。中途半端な展示優位で既存的中を壊す可能性がある。
-- ただし pooled Feb-Jun は discovery であり、February baseline は同月fitのため、このgateをそのままfreeze/production採用しない。
-- July/August NON-PRISTINE、September outcomes UNREAD、production unchanged。
+- rescued entered exhibition/ST mean 0.6599/0.6296、broken 0.5871/0.5932。
+- gapだけでは分離不足。swap-specific evidenceを見る。
 
-## 展示補正OFF条件分析 BEFORE — 2026-09-16
+## 展示補正OFF分析 AFTER
+- script `research/run_3head_exhibition_off_gate.py`
+- script commit `ecffb441008fe944faf0c0c083f9ba998567015a`
+- workflow commit `49163da4726d206686cefa730f63e723dfef9d19`
+- Run `35065912592` SUCCESS / Job `104696025937`
+- Artifact `10434665644` / SHA256 `4e3df5c1613ebf932d5cd61e4d318e80674b385743acd53e54251d1c4717724d`
+- March/Feb discoveryの単純OFF条件はApr-Junで強く再現せず。例 `.55/.20/0` は Apr-Jun broken blocked 5 / rescues lost 5 / net 0。
+- validation側で +2 のルールは存在するが、validationを見て選ぶためfreeze不可。
+- production unchanged / September UNREAD。
+
+## モーター差入りv288保護監査 AFTER
+- BEFORE commit `eda0d57aa06f28896e0ecd50435828e14093f837`
+- implementation commit `6e737a9fe39cf292c2450c2549b83baed8408a28`
+- workflow commit `603bb5c85374b9f2097b8b0423801a55584798fb`
+- Run `35081477233` SUCCESS / Job `104746260511`
+- Artifact `10441015163` (`research-3head-motor-protection`)
+- Artifact SHA256 `26305639a9b1926538d00e808e55665794b007c8ee2e92e563fcdbf18b6ee572`
+- motor definition: lane=mean(motor2rate,motor3rate)/100, pair=.55*second+.45*third, motor_adv=entered-exited。
+- March-only discoveryで選ばれた rule: base_gap>=0, ex_adv<=.10, st_adv<=.10, motor_adv<=-.05。
+- しかし March off_races=0。Apr=0, May=0, Jun=1で、broken_blocked/rescues_lost/netは全て0。`apr_jun_all_positive=false`。
+- 結論: モーター差を使う発想の否定ではなく、`motor_adv<=-.05` 等の事前固定gridが実分布に対して厳しすぎ、対象が消えた。閾値決め打ちは中止。
+- production unchanged / September UNREAD。
+
+## モーター差分布研究 BEFORE — 2026-09-16
 これから行うこと:
-- 主目的を「展示補正を使う条件」ではなく「展示補正を禁止する条件」の抽出へ変更。
-- broken（展示補正で元の的中を壊したレース）を中心に rescued と比較する。
-- 解析は締切前に観測できる特徴だけを使用する。
-- baseline 3位-4位差、入替艇の展示/ST、entered-exited の展示/ST差、補正差、順位変動数を中心に比較する。
-- Apr-Jun pristine を主な安定性確認期間とし、Feb-Marは発見/参考、Jul-Augは NON-PRISTINE 参考に分離する。
-- 単純で実運用可能な「補正OFF」ルール候補を抽出し、月別 rescued/broken/net を必ず確認する。
-- 同じ解析期間で選んだルールはproduction採用しない。候補固定後に独立監査へ進む。
+- broken / rescued の実際の `motor_adv` 分布を先に測る。先に閾値を決めない。
+- Marchを主発見期間とし、中央値・四分位・符号比率と、ex_adv / st_adv / base_gapとの関係を出す。
+- その分布から単純な候補閾値を作る。Apr/May/Junの結果を使って候補選択しない。
+- Marchで候補をfreezeした後だけ、Apr/May/Junを月別検証する。
+- 目的は「v288が強い＋入替側モーター優位が弱い時に展示補正を止める」保護gate。
+- July/AugustはNON-PRISTINE参考のみ。
 - exact v288 exclusion維持 / September outcomes UNREAD / production unchanged。
 
 ## 現在の結論 / 再開地点
-- direct exhibition features: REJECT
+- direct exhibition features: REJECT。
 - 一律展示補正は安定性不足。
-- 次: **broken中心の展示補正OFF条件を実装→fresh Actions→Apr-Jun月別安定性→OFF候補freeze→独立監査**
-- production v288 unchanged
-- September 2026 outcomes **UNREAD**
+- モーター差固定gridは対象消失で失敗。
+- 次: **motor_adv実分布→March-only候補freeze→Apr/May/Jun月別独立検証**。
+- production v288 unchanged。
+- September 2026 outcomes **UNREAD**。
