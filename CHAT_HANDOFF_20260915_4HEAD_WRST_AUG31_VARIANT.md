@@ -43,4 +43,13 @@
 - 目的は「Julyだけの分布シフト」「特定艇番/相手構造」「境界的rank miss」のどれが支配的かを特定し、次の最小変更研究案を作ること。まだfrozen v283/productionは変更しない。
 - v96禁止。September outcome/resultsは `UNREAD` 維持。正式prospective ROIは `NOT_COMPUTABLE` のまま。
 
-Status: `HEAD4_V283_JULY_COND_THIRD_MISS_ANALYSIS_STARTED`
+## AFTER / READY — July conditional THIRD miss diagnostic implementation
+- 新規 `analyze_4head_v283_july_cond_third_misses.py` commit `be0d76d8bbd61d5a7e4a1e21b53dcd57bf68939d`。
+- July 7 missを含む4頭70Rを再構築し、SECOND通過40Rについて actual THIRD conditional rank/probability、Top2境界probabilityとの差、actual second/third艇番、frozen COND_BASE feature値を保存する。
+- Apr-Jun hit/miss、July hit/miss、Augustの比較を作り、frozen scaler/betaを使った標準化feature contribution shiftを算出する。学習・再fitはしない。
+- 手動workflow `.github/workflows/analyze-4head-v283-july-cond-third-misses.yml` commit `c44b60485df83d5f7cfd80677bb46da306ff12d4`。`workflow_dispatch` only。
+- 出力: `head4_70r_cond_third_detail.csv`, `period_summary.csv`, `by_second.csv`, `by_third.csv`, `feature_shift.csv`, `july_7_misses.csv`, `meta.json`。
+- 次: workflowを1回手動発火してRun/Job/Artifactを確定し、July 7 missがrank3境界型かrank4大外し型か、艇番偏り、feature contribution shift上位を読む。その結果から最小変更のrescue研究を設計する。
+- production `HEAD4_V291_COMP7` / frozen v283 unchanged。formal prospective ROI=`NOT_COMPUTABLE`。September outcome/results `UNREAD`。v96=false。
+
+Status: `HEAD4_V283_JULY_COND_THIRD_MISS_DIAGNOSTIC_READY_TO_RUN`
