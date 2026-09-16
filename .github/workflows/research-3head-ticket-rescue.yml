@@ -5,10 +5,11 @@ on:
     paths:
       - 'research/run_3head_exhibition_ticket_rescue.py'
       - 'research/run_3head_exhibition_ticket_rescue_march.py'
+      - 'research/run_3head_exhibition_ticket_rescue_apr_aug.py'
       - '.github/workflows/research-3head-ticket-rescue.yml'
   workflow_dispatch:
 jobs:
-  march-one-shot:
+  apr-aug-stability:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -28,13 +29,13 @@ jobs:
           DST="$GITHUB_WORKSPACE/analysis_v289_3head_wave21_allrace_feature_settled.csv"
           if [ "$(realpath "$SRC")" != "$(realpath -m "$DST")" ]; then cp "$SRC" "$DST"; fi
           test -f "$DST"
-      - name: March frozen one-shot ticket-rescue audit
+      - name: Apr-Aug frozen monthly stability audit
         run: |
           set -o pipefail
-          PYTHONPATH="$GITHUB_WORKSPACE" python research/run_3head_exhibition_ticket_rescue_march.py | tee research_v289_3head_exhibition_ticket_rescue_march.log
+          PYTHONPATH="$GITHUB_WORKSPACE" python research/run_3head_exhibition_ticket_rescue_apr_aug.py | tee research_v289_3head_exhibition_ticket_rescue_apr_aug.log
       - uses: actions/upload-artifact@v4
         with:
-          name: research-3head-ticket-rescue-march
+          name: research-3head-ticket-rescue-apr-aug
           path: |
-            research_v289_3head_exhibition_ticket_rescue_march.json
-            research_v289_3head_exhibition_ticket_rescue_march.log
+            research_v289_3head_exhibition_ticket_rescue_apr_aug.json
+            research_v289_3head_exhibition_ticket_rescue_apr_aug.log
