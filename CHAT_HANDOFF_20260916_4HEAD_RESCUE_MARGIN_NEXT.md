@@ -36,33 +36,9 @@ Repo: `merry02180218-ai/boatrace-backtest`
 
 ## AFTER — THIRD0.10 production implementation
 実装済み。
-
-### New production runner
-- file: `run_4head_v291_third010_live.py`
-- commit: `376c636839af499821244ca660e382a43a16d644`
-- policy name: `HEAD4_V291_COMP7_THIRD010`
-- 旧 `run_20260911_4head_v291_live.py` をfrozen base helperとして再利用し、S gate / p2 / cond parser / official pre-deadline odds / audit persistenceは変更していない。
-- base v283 Top4を先に生成し、Top2 SECOND各枝についてTHIRD rank2-rank3 gap<=0.10ならrank3を追加。
-- 4〜6点の可変ticketに対応してcomposite oddsを再計算。
-- BET時は全ticketを対象に10,000円Dutch、全stake正数・100円単位・合計10,000円を強制。
-- comp>=7 inclusive、v96=false、result/payout未使用を維持。
-
-### Offline synthetic verifier
-- file: `verify_4head_v291_third010_live.py`
-- commit: `760800671596c87334877217e1683223aa7a7879`
-- 検証内容: 非発火時4点、両SECOND枝発火時6点、base Top4保持、gap exactly 0.10 inclusive、可変Nでcomp exactly 7 BET、10,000円/100円単位、below7 PASS、S gate NO_BET、v96禁止。
-- race result/outcomeは参照しない。
-
-### Validation workflow
-- file: `.github/workflows/validate-4head-v291-third010-live.yml`
-- commit: `695dab0796fc79fa6c27e1bff7f0d1ac33099287`
-- `workflow_dispatch` only。多重/自動発火なし。
-- 現在のGitHub connectorにはworkflow_dispatch起動actionが無いため、このチャットからRunはまだ発火していない。Run/Job/Artifact IDは未発行。発火していないものを成功扱いしない。
-
-### Production status
-- 本採用判断は確定。production ticket policyは `HEAD4_V291_COMP7_THIRD010`。
-- ただし新verifierのGitHub Actions実行確認だけ未完了。workflowを1回手動発火後、Run/Jobを確認して最終CI記録する。
-- 既存のfull post-exhibition automation自体は以前から未完成なので、今回の変更はproduction market/ticket entrypointの正式版として追加したもの。旧4点runnerを新規運用で使わないこと。
+- runner `run_4head_v291_third010_live.py` commit `376c636839af499821244ca660e382a43a16d644`
+- verifier `verify_4head_v291_third010_live.py` commit `760800671596c87334877217e1683223aa7a7879`
+- validation workflow `.github/workflows/validate-4head-v291-third010-live.yml` commit `695dab0796fc79fa6c27e1bff7f0d1ac33099287`
 - September outcome/results=`UNREAD`。
 
 ## BEFORE — 2026-09-17 THIRD010 SIX-MONTH BACKTEST
@@ -70,6 +46,15 @@ Repo: `merry02180218-ai/boatrace-backtest`
 - 9月outcome/resultsは絶対に読まず `UNREAD` 維持。
 - 既存の確定済み履歴データ/研究コードを再利用し、THIRD0.10 semanticsを固定して6か月集計する専用 `workflow_dispatch` を追加する。
 - 月別/全体のrace数、ticket数、hit、stake、payout、profit、ROIをartifactへ出す。closing oddsを使う場合はretrospective diagnosticと明記し、formal prospective ROIとは扱わない。
-- workflow作成後に正しいActions直リンクをユーザーへ渡し、手動発火後にRun/Job/Artifactを監査する。
 
-Status: `THIRD010_SIX_MONTH_WORKFLOW_BUILDING`
+## AFTER — 2026-09-17 SIX-MONTH WORKFLOW READY
+- script: `backtest_4head_v291_third010_sixmonth.py`
+- script commit: `b4c64870d2e3fbbcf754e8287ba3293c343eaace`
+- workflow: `.github/workflows/backtest-4head-v291-third010-sixmonth.yml`
+- workflow commit: `cb6077647dc916a75159c38f64a319aadce30ee8`
+- workflow is `workflow_dispatch` only and uploads artifact `head4-third010-sixmonth`.
+- window is fixed to 2026-03-01..2026-08-31; September is not read.
+- IMPORTANT fail-closed guard: current strict source reconstruction was previously audited Apr-Aug. The new runner requires all six months Mar-Aug and will FAIL rather than mislabel five months as six if March is not supplied by the frozen reconstruction path. If it fails on this guard, next work is to extend the frozen candidate reconstruction to March without touching September, then rerun.
+- Run/Job/Artifact: pending manual dispatch; do not claim success before observed.
+
+Status: `THIRD010_SIX_MONTH_READY_FOR_DISPATCH`
