@@ -52,3 +52,17 @@
 - 締切前のみ。結果・払戻・オッズは読まない。`result_or_payout_used=False` / `chronology_guard=True` を維持。
 - production profile / HEAD cutoff / opponent mass / G2/G3 / ticket policy は変更しない。
 - 実装後はfresh Actions Runで入口を監査し、Run/Job/Artifact ID・結論・次の再開地点をAFTERへ記録する。
+
+## AFTER: 手動即時LIVE入口の復旧 — 2026-09-16 完了
+- BEFORE記録 commit: `b85511e62ce6d7e4c81f915079ac469030d0df98`。
+- 新規workflow: `.github/workflows/manual-1head-v351-live.yml`、実装commit `86a7e50623b774a284f935376a76e8020f1181fd`。
+- trigger file: `live_requests/1head_v351.json`。`mode=judge` + `race_code` + `deadline_jst` をpushすると明示要求時だけ発火する。初回validation trigger commit `a09c00eb90a8cb81a154eeaaaefc896cffaf18c7`。
+- controller自動運用は復活していない。trigger file push以外ではmanual LIVE workflowは動かない。
+- judge経路: 当日all-race cache artifact取得 -> LIVE window guard -> Boatcast展示取得 -> venue-aware exhibition gate -> causal base merge -> v351 finalizer -> PASS/DROP + 3連単3点 -> artifact。
+- PRE候補外でも当日156R cache内なら対象JSONを直接使う。
+- validation Run `35041039151` / Job `104620732127` / conclusion `success`。
+- validation Artifact `10424643529` / `manual-1head-v351-live-35041039151` / SHA256 `da64bd5c74414f2ca438467f44d65f458995fbefac1cfde1d8920f97b016ce0b`。
+- validationでは `ENTRYPOINT_READY`、production profile/HEAD cutoff/opponent massを読み込み、`result_or_payout_used=False` / `chronology_guard=True` / `controller_auto_enabled=False` を確認。実レースの展示取得・finalizeはvalidation modeなので意図的にskipped。
+- September 2026 outcomes/payoutsは `UNREAD` 維持。production変更なし。
+- 次回ユーザーが「○○R判別して」と言ったら、締切を確認してtrigger fileを `mode=judge` に更新し、fresh Run完了まで追跡して判定結果と買い目を返す。
+- 研究側の次再開地点は opponent mass `.375` 独立監査のfresh cache生成/結果確認。
