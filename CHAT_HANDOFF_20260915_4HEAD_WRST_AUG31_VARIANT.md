@@ -24,22 +24,20 @@
 - retrospective closing-odds diagnostic only。formal prospective ROI=`NOT_COMPUTABLE`。
 - production `HEAD4_V291_COMP7` unchanged、frozen opponent v283 unchanged、v96禁止、September outcome/results `UNREAD`。
 
-## BEFORE — Jul-Aug ROI degradation analysis
-- ユーザー指示「調べて」。Apr-Jun ROI 167.73%に対してJul-Aug 87.79%へ低下した原因を、固定候補164R・frozen v283・公式締切時オッズのまま分解する。
-- final diagnostic Artifact `10432272637` のrace-level出力を使用する。
-- September 2026 outcome/resultsは絶対に読まない。`UNREAD`維持。
-
 ## AFTER — Jul-Aug ROI degradation analysis
 - Artifact `10432272637` の `race_detail.csv` 164Rを直接集計。coverage 164/164。
-- 4号艇頭率は Apr-Jun 35/86=40.70% → Jul-Aug 35/78=44.87% とむしろ上昇。したがってROI低下の主因はHEAD候補選別ではない。
-- 4号艇が実際に頭だった35Rに限定したv283 Top4 captureは Apr-Jun 18/35=51.43% → Jul-Aug 11/35=31.43%。頭は同数35Rなのに相手Top4で拾えないレースが17R→24Rへ増えた。ここが最大の劣化点。
-- 月別 capture: Apr 8/11=72.73%, May 7/15=46.67%, Jun 3/9=33.33%, Jul 6/24=25.00%, Aug 5/11=45.45%。特に7月が悪い。8月は相手capture自体は回復している。
-- 的中時平均3連単オッズも Apr-Jun 32.06倍（median 30.1）→ Jul-Aug 24.90倍（median 18.7）へ低下。相手capture低下に加えて、拾えた的中の配当も低くなった。
-- Apr-Jun hit odds: 10.9,11.1,16.5,17.6,19.0,19.1,20.3,21.8,29.4,30.8,30.9,31.4,34.3,37.9,47.7,53.7,67.8,76.8。
-- Jul-Aug hit odds: 7.2,10.2,12.0,16.3,17.6,18.7,19.8,23.1,43.4,51.3,54.3。高配当側の拾い方も弱い。
-- SECOND候補構成にもshiftあり。全ticket上の2着艇shareは boat1 43.0%→34.0%、boat5 12.2%→20.5%。実際に4頭だったレースのSECOND top2構成では (1,6) capture 5/6=83.3%→2/5=40.0%、(1,2) 7/15=46.7%→5/12=41.7%、Jul-Augで増えた(2,5)は2/7=28.6%。
-- 結論: Jul-AugのROI低下は「4号艇が頭にならなくなった」ためではなく、主に frozen v283 の相手順位付け/capture劣化、特に7月の2・3着選択劣化。さらに的中時オッズ低下が重なった。
-- 現artifactは実着2着/3着列を持たないため、SECOND miss と THIRD miss の厳密分離はまだ未実施。次の研究は4号艇頭35Rについて実着2/3をrace-levelへ付加し、SECOND Top2 miss / conditional THIRD miss / pair-ranking missを分離する。その上で7月に崩れた相手特徴を調べる。
-- production `HEAD4_V291_COMP7` / frozen v283 はまだ変更しない。formal prospective ROI=`NOT_COMPUTABLE`。September outcome/results `UNREAD`。
+- 4号艇頭率 Apr-Jun 35/86=40.70% → Jul-Aug 35/78=44.87%。ROI低下主因はHEADではない。
+- 4頭時v283 Top4 capture Apr-Jun 18/35=51.43% → Jul-Aug 11/35=31.43%。特にJul 6/24=25.00%。Aug 5/11=45.45%。
+- 的中時平均オッズ Apr-Jun 32.06倍 → Jul-Aug 24.90倍。
+- SECOND候補構成もshift: ticket上boat1 43.0%→34.0%、boat5 12.2%→20.5%。
+- production/frozen v283 unchanged。formal prospective ROI=`NOT_COMPUTABLE`。Sep `UNREAD`。
 
-Status: `HEAD4_V283_JULAUG_ROI_DEGRADATION_ANALYZED_NEXT_OPPONENT_MISS_DECOMPOSITION`
+## BEFORE — v283 opponent miss decomposition
+- ユーザー指示「お願いします」。4号艇が実際に頭だった70Rへ実着2着/3着をrace-level出力し、v283の失敗を厳密に分解する。
+- 現auditはp2/conditional-third/pairsを内部計算しているがartifactにはactual second/thirdやSECOND Top2、actual-second条件のTHIRD Top2を保存していない。
+- audit出力を診断用に拡張し、actual_second/actual_third、second_top2、second_top2_hit、actual-secondに対するconditional third top2、conditional_third_top2_hit、final_pair_hitを保存する。
+- これにより `SECOND miss` / `THIRD miss` / `pair-ranking miss` をApr-Jun vs Jul-Aug、月別で分離する。
+- frozen v283のスコアリング・候補条件・productionは変更しない。これはretrospective diagnostic拡張のみ。
+- v96禁止。September 2026 outcome/resultsは絶対に読まない。`UNREAD`維持。
+
+Status: `HEAD4_V283_OPPONENT_MISS_DECOMPOSITION_STARTED`
