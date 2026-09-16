@@ -51,26 +51,30 @@ Run `35061928492` / Job `104683888325` / Artifact `10432044277`, success。
 - 結論: adaptive SECOND depthはproduction昇格せず。次は極小gap時だけrank4追加。
 - formal prospective ROI=`NOT_COMPUTABLE`。September `UNREAD`。production unchanged。
 
-## BEFORE — 僅差時のみ4番手を追加する救済監査
-- ユーザー了承を受け、2着候補の4番手を常時買わず「2番手から4番手までの評価差が極小のときだけ」追加する方式を検証する。
-- 判定には結果を使わず、PLAYER_STARTの事前スコア `2番手-4番手累積差` のみを使う。
-- 閾値候補はApr-Junだけで選択し、Jul-Augには固定適用する。7月/8月個別結果で閾値調整しない。
-- 比較は base4、3着僅差補正、2着Top3+3着僅差補正、および「極小gap時だけ2着4番手追加」の各方式。
-- 追加買い目数、追加的中、投資、払戻、利益、回収率をofficial closing oddsで監査する。
-- 特にAugustのrank4 miss 2件を拾えるかと、そのためにJul-Aug全体で何点余計に買うかを分離して評価する。
-- 2026年9月 outcome/resultsは絶対に読まない。production `HEAD4_V291_COMP7` unchanged。formal prospective ROI=`NOT_COMPUTABLE`。
-
 ## AFTER — sparse rank4 rescue
 - Run `35117061755` / Job `104865691490` / Artifact `10456830494`, success。run head SHA `79c9d69927c7a28216603ceb1800c29bc722a578`。
 - Apr-Jun development選択ではgap24<=0.20が採用されたが、投資増が大きい。
 - 追加検討として0.05/0.06固定値を全月（月別4〜8月）で比較する。
 - September `UNREAD`、production unchanged。
 
-## BEFORE — gap24 0.05 / 0.06 固定・全月比較
-- ユーザー要望により、閾値選択ではなく `gap24<=0.05` と `gap24<=0.06` を固定して4月・5月・6月・7月・8月を各月別に監査する。
-- 各月で発火レース数、総買い目、追加買い目、的中数、base比追加的中、投資、払戻、利益、closing-odds ROIを比較する。
-- actual SECOND rank4 missについて、0.05/0.06で何件救済対象になるかも月別に出す。
-- base4および必要に応じTHIRD-margin併用も同じ月別表で比較する。
-- 2026年9月 outcome/resultsは読まない。対象は2026-04-01〜2026-08-31のみ。production `HEAD4_V291_COMP7` unchanged。formal prospective ROI=`NOT_COMPUTABLE`。
+## AFTER — gap24 0.05 / 0.06 fixed monthly audit
+- Run `35119432005` / Job `104873127479` / Artifact `10456963422`, success。run head SHA `8c67e71ca4b74d76b9407151185f4b20daa6a0bd`。
+- Artifact meta: fixed gap24=[0.05,0.06], THIRD gap=0.10, months=2026-04..08, September=`UNREAD`, production=`HEAD4_V291_COMP7 unchanged`。
+- base4 monthly ROI: Apr 269.10%, May 145.29%, Jun 100.48%, Jul 82.66%, Aug 95.56%。Apr-Aug aggregate 129.71% / 656 tickets / 29 hits。
+- gap24<=0.05 only: Apr 231.98% (fire4,+16 tickets,+0 hit), May 137.43% (fire2,+8,+0), Jun 90.09% (fire3,+12,+0), Jul 71.06% (fire12,+48,+1), Aug 123.97% (fire8,+32,+1)。aggregate 121.52% / 772 tickets / 31 hits。
+- gap24<=0.06 only: Apr 231.98% (fire4,+16,+0), May 130.38% (fire4,+16,+0), Jun 90.09% (fire3,+12,+0), Jul 69.84% (fire16,+64,+2), Aug 122.73% (fire12,+48,+2)。aggregate 118.73% / 812 tickets / 33 hits。
+- THIRD-margin alone: Apr 211.89%, May 120.36%, Jun 138.48%, Jul 141.72%, Aug 75.96%。aggregate 135.13% / 817 tickets / 35 hits。
+- gap0.05+THIRD: Apr 181.82%, May 113.63%, Jun 124.35%, Jul 114.93%, Aug 125.03%。aggregate 128.39% / 969 tickets / 38 hits。
+- gap0.06+THIRD: Apr 181.82%, May 108.19%, Jun 124.35%, Jul 110.66%, Aug 121.10%。aggregate 124.76% / 1018 tickets / 40 hits。
+- actual SECOND rank4 miss rescue count: Apr 0/2, May 0/2, Jun 0/2 for both thresholds; Jul 2/4 at 0.05 and 4/4 at 0.06; Aug 1/2 at 0.05 and 2/2 at 0.06。
+- 重要: Apr-Jun development期間では0.05/0.06ともrank4 missを1件も救済せず、追加投資だけ増える。Jul/Augでのみ救済が出るため、この結果を使って0.05/0.06をproduction採用すると後知恵になる。
+- 結論: fixed 0.05/0.06 rank4 rescueはproduction昇格しない。特にTHIRD-margin単独がApr-Aug aggregate ROIで両併用案を上回る。August改善は確認できるが、Julyとdevelopment期間の投資効率悪化を相殺できない。
+- formal prospective ROI=`NOT_COMPUTABLE`。September outcome/results=`UNREAD`。production `HEAD4_V291_COMP7` unchanged。
 
-Status: `FIXED_GAP_005_006_MONTHLY_AUDIT_IN_PROGRESS`
+## BEFORE — next: rescue研究の打ち切り判定と既存候補の厳密比較
+- rank4 rescueはApr-Junに正例がなく、Jul/Aug結果を見て追加gateを作るとvalidation leakageになるため、rank4向けの新しい閾値/gate探索はここで停止する。
+- 次は新規パラメータ探索ではなく、既にApr-Junで固定済みの方式だけを同一母集団・同一closing-odds条件で比較し、`base4` / `THIRD gap0.10` / `SECOND gap0.20` / `SECOND+THIRD` のApr-Jun、Jul-Aug、Jul、Aug、Apr-Augのtickets/hits/stake/payout/profit/ROIを1表に再監査する。
+- 目的はproduction変更ではなく、どの既存方式を次の独立prospective候補として保持するかを漏洩なしで整理すること。新しいJul/Aug由来の閾値は作らない。
+- 2026年9月 outcome/resultsは絶対に読まない。production `HEAD4_V291_COMP7` unchanged。formal prospective ROI=`NOT_COMPUTABLE`。
+
+Status: `FIXED_GAP_005_006_AUDIT_DONE_NEXT_STRICT_EXISTING_VARIANT_COMPARE`
