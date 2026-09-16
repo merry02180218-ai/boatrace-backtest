@@ -9,11 +9,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install pandas numpy scikit-learn
+      - run: pip install pandas numpy scipy scikit-learn requests beautifulsoup4
       - name: Build prerequisite data through Wave10
         run: |
+          python audit_v351_schema_correct_rebuild.py
           python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
-          python research_v351_mass_rescue_wave10_lowmass_population.py
+          python audit_v351_opponent_mass_threshold.py
+          python analyze_v351_mass_rescue_wave10.py
       - name: Audit production 276R
         run: python analyze_v351_wave19_production276_rescue_audit.py
       - uses: actions/upload-artifact@v4
