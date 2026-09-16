@@ -71,10 +71,21 @@ Run `35061928492` / Job `104683888325` / Artifact `10432044277`, success。
 - 結論: fixed 0.05/0.06 rank4 rescueはproduction昇格しない。特にTHIRD-margin単独がApr-Aug aggregate ROIで両併用案を上回る。August改善は確認できるが、Julyとdevelopment期間の投資効率悪化を相殺できない。
 - formal prospective ROI=`NOT_COMPUTABLE`。September outcome/results=`UNREAD`。production `HEAD4_V291_COMP7` unchanged。
 
-## BEFORE — next: rescue研究の打ち切り判定と既存候補の厳密比較
-- rank4 rescueはApr-Junに正例がなく、Jul/Aug結果を見て追加gateを作るとvalidation leakageになるため、rank4向けの新しい閾値/gate探索はここで停止する。
-- 次は新規パラメータ探索ではなく、既にApr-Junで固定済みの方式だけを同一母集団・同一closing-odds条件で比較し、`base4` / `THIRD gap0.10` / `SECOND gap0.20` / `SECOND+THIRD` のApr-Jun、Jul-Aug、Jul、Aug、Apr-Augのtickets/hits/stake/payout/profit/ROIを1表に再監査する。
-- 目的はproduction変更ではなく、どの既存方式を次の独立prospective候補として保持するかを漏洩なしで整理すること。新しいJul/Aug由来の閾値は作らない。
-- 2026年9月 outcome/resultsは絶対に読まない。production `HEAD4_V291_COMP7` unchanged。formal prospective ROI=`NOT_COMPUTABLE`。
+## AFTER — strict existing variant compare
+- 新規Actionsは発火せず、既存の漏洩なし監査 Artifact `10443723290`（Run `35089336519` / Job `104771656556`）を再取得し、同一164R・同一closing-odds条件の `summary.csv` / `race_mode_detail.csv` を厳密再確認した。冗長な再計算workflowは作らない。
+- Apr-Jun: base 344 tickets / 18 hits / ROI 167.73%; SECOND0.20 500 / 22 / 140.46%; THIRD0.10 428 / 19 / 153.11%; COMBINED 623 / 24 / 129.37%。
+- Jul-Aug validation: base 312 / 11 / 87.79%; SECOND0.20 462 / 18 / 103.33%; THIRD0.10 389 / 16 / 115.35%; COMBINED 575 / 24 / 122.63%。
+- July: base 82.66%; SECOND 120.99%; THIRD 141.72%; COMBINED 146.18%。August: base 95.56%; SECOND 75.67%; THIRD 75.96%; COMBINED 85.18%。
+- Apr-Aug aggregate: base 656 / 29 / stake 65,600 / payout 85,090 / profit 19,490 / ROI 129.71%; SECOND 962 / 40 / 96,200 / 117,970 / 21,770 / 122.63%; THIRD 817 / 35 / 81,700 / 110,400 / 28,700 / 135.13%; COMBINED 1198 / 48 / 119,800 / 151,110 / 31,310 / 126.14%。
+- 月別補足: Apr THIRD 211.89%, May 120.36%, Jun 138.48%; SECOND Apr 181.82%, May 164.35%, Jun 68.75%; COMBINED Apr 143.14%, May 146.32%, Jun 94.72%。THIRD0.10だけがApr-Jun各月すべて100%超だったが、Augustは75.96%であり月別安定性が保証されたわけではない。
+- 研究判断: rank4 rescueは打ち切り。既存候補の中では `THIRD gap0.10` を次の独立prospective/shadow候補として保持する。理由は、Jul-Aug validationが115.35%で100%超、Apr-Aug aggregate ROIが4方式中最高135.13%、追加投資がSECOND/COMBINEDより小さいため。これはproduction昇格判断ではない。
+- `SECOND gap0.20` と `COMBINED` はhit数を増やすが投資膨張が大きく、Augustも100%未満。研究候補として記録は残すが、次の主候補にはしない。
+- closing oddsはretrospective diagnosticのみなのでformal prospective ROI=`NOT_COMPUTABLE`。September outcome/results=`UNREAD`。production `HEAD4_V291_COMP7` unchanged。
 
-Status: `FIXED_GAP_005_006_AUDIT_DONE_NEXT_STRICT_EXISTING_VARIANT_COMPARE`
+## BEFORE — next: THIRD0.10 prospective-shadow準備
+- 次の作業は `THIRD gap0.10` をproductionへ入れず、4号艇production候補が出た時にbase4とTHIRD0.10の買い目差分を保存できるshadow出力を準備する。
+- shadowは予測時点情報だけで作り、結果・払戻・closing oddsを参照しない。2026年9月 outcome/resultsは引き続き読まない。
+- 既存production `HEAD4_V291_COMP7` の買い目や判定を変更しない。shadow追加により本番ロジックへ副作用を出さない。
+- 実装する場合はworkflow_dispatch onlyまたは既存live出力への非侵襲なsidecarとし、発火前にコード差分を監査する。
+
+Status: `RANK4_RESCUE_REJECTED_THIRD010_HELD_FOR_PROSPECTIVE_SHADOW`
