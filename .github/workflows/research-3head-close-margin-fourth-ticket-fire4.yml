@@ -30,7 +30,11 @@ jobs:
           gh run download 34754875342 -n 3head-wave21-allrace-source-build
           SRC=$(find . -name 'analysis_v289_3head_wave21_allrace_feature_settled.csv' | head -1)
           test -n "$SRC"
-          cp "$SRC" "$GITHUB_WORKSPACE/analysis_v289_3head_wave21_allrace_feature_settled.csv"
+          TARGET="$GITHUB_WORKSPACE/analysis_v289_3head_wave21_allrace_feature_settled.csv"
+          if [ "$(realpath "$SRC")" != "$(realpath -m "$TARGET")" ]; then
+            cp "$SRC" "$TARGET"
+          fi
+          test -s "$TARGET"
       - name: Run close-margin fourth-ticket audit
         run: PYTHONPATH="$GITHUB_WORKSPACE" python research/run_3head_close_margin_fourth_ticket.py | tee research_v289_3head_close_margin_fourth_ticket.log
       - uses: actions/upload-artifact@v4
