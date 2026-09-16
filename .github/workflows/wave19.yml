@@ -1,0 +1,24 @@
+name: wave19-production276-rescue-audit
+on:
+  workflow_dispatch:
+jobs:
+  wave19:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn
+      - name: Build prerequisite data through Wave10
+        run: |
+          python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
+          python research_v351_mass_rescue_wave10_lowmass_population.py
+      - name: Audit production 276R
+        run: python analyze_v351_wave19_production276_rescue_audit.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wave19-production276-rescue-audit
+          path: |
+            analysis_v351_wave19_production276_rows.csv
+            analysis_v351_wave19_production276_summary.csv
