@@ -45,3 +45,10 @@
 - targeted recovery後にv283 retrospective closing-odds diagnosticを再実行し、Apr-Aug 164R coverageを再監査する。
 
 Status: `HEAD4_TARGETED_AUG_CLOSING_ODDS_RECOVERY_STARTED`
+
+## BEFORE — targeted recovery import-path fix
+- 手動発火 Run `35040972097` / Job `104620526879` を確認。
+- step `Recover only uncovered HEAD4 Apr-Aug candidate odds` は `ModuleNotFoundError: No module named 'audit_4head_86r_independent'` でfailure。公式サイト取得前のimport-path実装ミス。
+- 原因: `tools/fetch_head4_targeted_closing_odds3t.py` を `python tools/...py` で起動すると `sys.path[0]` が `tools/` となり、repo root の `audit_4head_86r_independent.py` をimportできない。
+- 修正方針: repo rootを明示的に `sys.path` へ追加してからcandidate auditをimportする。候補条件・v283・productionは変更しない。
+- 修正後はworkflowを再発火して exact Run/Job と回収件数を確認する。September outcome/resultsは `UNREAD` 維持。
