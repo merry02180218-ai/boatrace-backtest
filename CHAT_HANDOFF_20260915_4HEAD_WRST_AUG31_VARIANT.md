@@ -52,4 +52,9 @@
 - 次: workflowを1回手動発火してRun/Job/Artifactを確定し、July 7 missがrank3境界型かrank4大外し型か、艇番偏り、feature contribution shift上位を読む。その結果から最小変更のrescue研究を設計する。
 - production `HEAD4_V291_COMP7` / frozen v283 unchanged。formal prospective ROI=`NOT_COMPUTABLE`。September outcome/results `UNREAD`。v96=false。
 
-Status: `HEAD4_V283_JULY_COND_THIRD_MISS_DIAGNOSTIC_READY_TO_RUN`
+## BEFORE — failed July THIRD diagnostic fix / rerun
+- Run `35063523492` / Job `104688743645` failed with `AttributeError: 'list' object has no attribute 'second_boat'` because `audit.conditional_rows()` returns a list of dict rows while the diagnostic treated it as a DataFrame.
+- ユーザー指示「再実行して」。まず型処理だけを修正し、frozen v283 scoring/production/候補条件は一切変更せず、workflow_dispatch-only workflowを再実行可能状態にする。
+- 修正後は新Run/Job/Artifactとmarkerを確認してから完了扱いにする。September outcomes/resultsは `UNREAD` 維持、v96禁止、formal prospective ROI=`NOT_COMPUTABLE`。
+
+Status: `HEAD4_V283_JULY_COND_THIRD_DIAGNOSTIC_FIXING_FAILED_RUN_35063523492`
