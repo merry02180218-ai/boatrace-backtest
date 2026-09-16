@@ -10,3 +10,11 @@
 - September 2026 outcomes/payoutsはUNREAD。`race_code < 20260901` hard guard。
 - HEAD学習特徴へ展示を直接追加しない。
 - 結果確認前にproduction変更しない。
+
+## FAILED RUN / REPAIR BEFORE
+- Wave19初回 Run `35133449401` / Job `104919825318` は失敗。
+- 前処理は完走したが、Wave19本体で `build_pre_result_strength()` に渡したproduction側入力の日付集合が空になり `max(days)` で停止。
+- 原因: Wave10低mass CSVをそのまま `.375以上` に反転利用して本番276Rを再構成しようとした設計が誤り。Wave10 CSVは低mass研究母集団専用で、本番276Rの正規ソースではない。
+- 単純再実行は禁止。現行productionを生成する正規経路から276Rを再現し、まず `276R / baseline exact3=131` の二重hard guardを通した後だけWave17/18固定救済ルールを適用する。
+- 失敗RunではSeptember結果・払戻は読んでいない。UNREAD維持。
+- production変更なし。
