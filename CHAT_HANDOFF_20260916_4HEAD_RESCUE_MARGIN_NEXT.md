@@ -32,4 +32,17 @@ Recovery commits extended causal reconstruction to March and repaired the backte
 - A rerun-failed-jobs request was accidentally issued for Run `35125191625`; GitHub reruns the original head SHA, so that attempt cannot validate these newer commits and must NOT be accepted as evidence. A fresh workflow_dispatch on current main is required.
 - September outcome/results remains `UNREAD`.
 
-Status: `THIRD010_SIX_MONTH_FAILURE2_FIXED_NEEDS_FRESH_DISPATCH`
+## FAILURE 3 — Run 35126729027
+- Run `35126729027`, Job `104897492664`.
+- six-month candidate/v283 reconstruction succeeded: `HEAD4_FROZEN_INDEPENDENT_REPLAY_OK 2026-03-01 2026-08-31 191`.
+- failure is post-computation guard `MONTH_SUMMARY_INCOMPLETE`.
+- root cause: summary validation uses `str.match(r'2026-\\d\\d')`, which also matches aggregate label `2026-03..08`; therefore the set contains an extra aggregate period and fails even though six monthly rows exist.
+- output files are currently written after this guard, so failure leaves no useful CSV artifact.
+
+## BEFORE — FAILURE 3 FIX
+- Fix only the summary/output guard; do not alter candidate/model/ticket/market semantics.
+- Validate monthly rows by exact membership in `REQUIRED`, and assert all six required months are present.
+- Persist `race_detail.csv` and `summary.csv` before the final integrity assertion so future failures leave diagnostic artifacts.
+- Keep September 2026 outcomes `UNREAD` and retain fail-closed behavior.
+
+Status: `THIRD010_SIX_MONTH_FIXING_MONTH_SUMMARY_GUARD`
