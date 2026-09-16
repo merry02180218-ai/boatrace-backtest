@@ -36,5 +36,25 @@
 6. September 2026 outcomes/payoutsは絶対に読まない。`race_code < 20260901` hard guardを維持する。
 7. 完了後、commit SHA / Run / Job / Artifact / 月別・場別・schema別結果 / production採否 / 次研究地点をAFTER追記する。
 
+## Wave18 AFTER
+- Workflow: `wave18-wide-revalidation`。
+- implementation commit: `0d3a65b51f99670cb0f82e79d1e8cc5c24d957c2`。
+- workflow/head commit: `74e9d0a8d6785a9f3dbefebd9a93bcb2f1c28e41`。
+- Run `35125138250` / Job `104892212739` / `success`。
+- Artifact `10458594916`, SHA256 `f35892def32a056677a371421844af3d0cac5a074050266db843ac2b5db9b4ff`。
+- Artifact実データを回収して確認。利用可能月は `202602,202603,202604,202605,202606`。Jul/Augは今回のWave10母集団には存在せず、holdoutはMay/Juneのみ。
+- frozen policy: `CHOSEN_SECOND=3`, `CHOSEN_REPLACE_SLOT=2`, candidate=`1-3-5`。Feb-Aprのみでfreeze。
+- holdout May-Jun 25R: baseline `5/25=20.0%` → fixed3 `7/25=28.0%`、Rescue `2` / Damage `0` / Net `+2`。24Rでoverride。
+- 月別: May 11R baseline2→fixed3 3、Rescue1/Damage0/Net+1。June 14R baseline3→fixed3 4、Rescue1/Damage0/Net+1。
+- schema別: `lap+turn` 6R baseline1→fixed3 2、Net+1。`lap+turn+straight` 19R baseline4→fixed3 5、Net+1。両schemaでプラス。
+- strength bucket別: `[0.75,1.0)` 6R baseline2→fixed3 3、Net+1。`[1.5,inf)` 5R baseline1→fixed3 2、Net+1。`[-inf,0.75)` と `[1.0,1.5)` はNet0。Damageは全bucket 0。
+- 場別: JCD13で3R baseline0→fixed3 1、Net+1。JCD24で2R baseline0→fixed3 1、Net+1。他場はNet0。特定1場だけのプラスではないが、各場サンプルは小さい。
+- discovery側も April 5RでNet+1、Feb/MarはNet0。holdout May/Juneが各+1で連続したため、現時点では再現方向は維持。
+- `SEPTEMBER_OUTCOMES_USED=False` / `HEAD_EXHIBITION_DIRECT_FEATURE=False` / `PRODUCTION_CHANGED=False` を確認。
+- 重要: この検証は opponent mass `[.350,.375)` のproduction cutoff未満拡張帯。現行276R productionの3点を直接改善した検証ではない。よってproduction profileは変更しない。
+- 結論: Wave17の `BOAT3_STRONGER -> 1-3-5 THIRD rescue / slot2 replacement` はMay/June holdoutで Damage 0 のNet+2を維持し、両schemaでも各+1。研究候補としてKEEP。ただしholdout 25R・救済2件のみで本採用には不足。
+- 次の再開地点: Wave19でこの固定ルールを `[.350,.375)` の「追加購入候補」として評価し、対象25R全購入ではなく、strength bucket等の事前条件で発火を絞った場合の購入R数・的中増分・必要オッズ/損益分岐を検証する。結果を見て閾値を後付けせず、候補条件はdiscovery/holdoutを分離する。SeptemberはUNREAD維持。
+
 ## 現時点のproduction採否
-- Wave17ルールはまだ研究段階。production変更なし。
+- Wave17/18ルールは研究候補としてKEEP。
+- production変更なし。
