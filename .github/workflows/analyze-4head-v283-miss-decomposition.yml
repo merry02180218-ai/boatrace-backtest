@@ -1,0 +1,22 @@
+name: analyze-4head-v283-miss-decomposition
+on:
+  workflow_dispatch:
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install pandas numpy scikit-learn
+      - name: Decompose frozen v283 opponent misses
+        run: python analyze_4head_v283_miss_decomposition.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-v283-miss-decomposition
+          path: /tmp/head4_v283_miss_decomp/
+          if-no-files-found: warn
