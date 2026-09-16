@@ -1,0 +1,154 @@
+name: manual-1head-v351-live
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'live_requests/1head_v351.json'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  judge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q requests beautifulsoup4 lxml numpy pandas scipy 'scikit-learn==1.6.1'
+
+      - name: Parse request
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, os, re
+          p='live_requests/1head_v351.json'
+          x=json.load(open(p))
+          mode=str(x.get('mode','judge')).lower()
+          if mode not in {'judge','validate'}: raise SystemExit('mode must be judge or validate')
+          code=str(x.get('race_code','')).zfill(12) if x.get('race_code') else ''
+          deadline=str(x.get('deadline_jst',''))
+          if mode=='judge':
+              if not re.fullmatch(r'20\d{10}',code): raise SystemExit('invalid race_code')
+              if not deadline: raise SystemExit('deadline_jst required for judge')
+          with open(os.environ['GITHUB_ENV'],'a') as f:
+              f.write(f'MODE={mode}\n')
+              f.write(f'RACE_CODE={code}\n')
+              f.write(f'DATE={code[:8] if code else ""}\n')
+              f.write(f'JCD={int(code[8:10]) if code else ""}\n')
+              f.write(f'RACE={int(code[10:12]) if code else ""}\n')
+              f.write(f'DEADLINE_JST={deadline}\n')
+          print({'mode':mode,'race_code':code or None,'deadline_jst':deadline or None,'result_or_payout_used':False})
+          PY
+
+      - name: Validate manual LIVE entrypoint
+        if: env.MODE == 'validate'
+        run: |
+          set -euo pipefail
+          python -m py_compile probe_1head_v351_boatcast_exhibition.py run_1head_v351_live_exhibition_gate.py run_1head_v351_live_finalize.py
+          python - <<'PY'
+          import json
+          import onehead_production_profile as p
+          x={'status':'ENTRYPOINT_READY','production_profile':p.PROFILE_NAME,'head_cutoff':p.HEAD_CUTOFF,'opponent_mass_min':p.OPPONENT_MASS_MIN,'result_or_payout_used':False,'chronology_guard':True,'controller_auto_enabled':False}
+          open('/tmp/manual_live_validation.json','w').write(json.dumps(x,ensure_ascii=False,indent=2))
+          print(json.dumps(x,ensure_ascii=False))
+          PY
+
+      - name: Download today's all-race cache
+        if: env.MODE == 'judge'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          NAME="v351-1head-live-cache-${DATE}"
+          ART_ID=$(gh api "repos/${GITHUB_REPOSITORY}/actions/artifacts?name=${NAME}&per_page=20" --jq '[.artifacts[] | select(.expired==false)] | sort_by(.created_at) | last | .id')
+          if [ -z "$ART_ID" ] || [ "$ART_ID" = "null" ]; then echo "CACHE_NOT_FOUND ${NAME}"; exit 20; fi
+          mkdir -p /tmp/cache
+          gh api "repos/${GITHUB_REPOSITORY}/actions/artifacts/${ART_ID}/zip" > /tmp/cache.zip
+          unzip -q /tmp/cache.zip -d /tmp/cache
+          test -f "/tmp/cache/${RACE_CODE}.json" || { echo "RACE_CACHE_NOT_FOUND ${RACE_CODE}"; exit 21; }
+          test -f /tmp/cache/v351_exhibition_train.csv || { echo 'EXHIBITION_TRAIN_CACHE_NOT_FOUND'; exit 22; }
+          echo "CACHE_ARTIFACT_ID=${ART_ID}" >> "$GITHUB_ENV"
+
+      - name: Guard LIVE window
+        if: env.MODE == 'judge'
+        run: |
+          set -euo pipefail
+          python run_1head_v351_live_window.py --deadline-jst "$DEADLINE_JST" | tee /tmp/window.json
+          python - <<'PY'
+          import json
+          x=json.load(open('/tmp/window.json'))
+          if x['mode']=='EXPIRED': raise SystemExit('deadline already passed')
+          PY
+
+      - name: Fetch Boatcast exhibition
+        if: env.MODE == 'judge'
+        run: |
+          set -euo pipefail
+          python probe_1head_v351_boatcast_exhibition.py --date "$DATE" --jcd "$JCD" --race "$RACE" --deadline-jst "$DEADLINE_JST" > /tmp/probe.json
+
+      - name: Apply venue-aware exhibition gate
+        if: env.MODE == 'judge'
+        run: |
+          set -euo pipefail
+          CUTOFF=$(python - <<'PY'
+          import json
+          print(json.load(open('/tmp/cache/'+__import__('os').environ['RACE_CODE']+'.json'))['training_cutoff'])
+          PY
+          )
+          python run_1head_v351_live_exhibition_gate.py --probe /tmp/probe.json --base "/tmp/cache/${RACE_CODE}.json" --history-cutoff "$CUTOFF" --out /tmp/gate.json
+
+      - name: Merge causal base and exhibition
+        if: env.MODE == 'judge'
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, os
+          code=os.environ['RACE_CODE']
+          b=json.load(open('/tmp/cache/'+code+'.json')); g=json.load(open('/tmp/gate.json'))
+          if b.get('result_or_payout_used') is not False or not b.get('chronology_guard'): raise SystemExit('unsafe base')
+          if g.get('result_or_payout_used') is not False or not g.get('chronology_guard'): raise SystemExit('unsafe exhibition gate')
+          b.update({
+            'deadline_jst':os.environ['DEADLINE_JST'],
+            'exhibition_ready':True,
+            'head_exhibition_pass':bool(g['head_exhibition_pass']),
+            'corrected_ex':g['corrected_ex'],
+            'corrected_st':g['corrected_st'],
+            'corrected_straight':g['corrected_straight'],
+            'corrected_orig_avg':g['corrected_orig_avg'],
+            'exhibition_hashes':g['exhibition_hashes'],
+            'result_or_payout_used':False,
+            'chronology_guard':True,
+          })
+          open('/tmp/final_input.json','w').write(json.dumps(b,ensure_ascii=False,indent=2))
+          PY
+
+      - name: Finalize v351
+        if: env.MODE == 'judge'
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/result
+          python run_1head_v351_live_finalize.py --input /tmp/final_input.json --out "/tmp/result/${RACE_CODE}.json" | tee /tmp/final_stdout.json
+          python - <<'PY'
+          import json, os
+          x=json.load(open('/tmp/result/'+os.environ['RACE_CODE']+'.json'))
+          assert x['result_or_payout_used'] is False and x['chronology_guard'] is True
+          print('MANUAL_LIVE_FINAL',json.dumps({'race_code':x['race_code'],'status':x['status'],'final_head_p':x['final_head_p'],'opp_mass':x['opp_mass'],'head_exhibition_pass':x['head_exhibition_pass'],'tickets':x['tickets'],'result_or_payout_used':False,'chronology_guard':True},ensure_ascii=False))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: manual-1head-v351-live-${{ github.run_id }}
+          retention-days: 7
+          if-no-files-found: warn
+          path: |
+            /tmp/manual_live_validation.json
+            /tmp/window.json
+            /tmp/probe.json
+            /tmp/gate.json
+            /tmp/final_input.json
+            /tmp/result/*.json
