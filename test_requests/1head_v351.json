@@ -1,8 +1,8 @@
 {
   "mode": "TEST_REPLAY",
-  "date": "20260916",
-  "race_codes": ["202609160903", "202609162201"],
+  "date": "20260917",
+  "race_codes": ["202609171306"],
   "result_or_payout_used": false,
   "odds_used": false,
-  "note": "User requested post-deadline test replay using PRE cache plus exhibition only."
+  "note": "User requested post-deadline Amagasaki 6R replay using formal PRE cache plus exhibition only; September results/payouts remain unread."
 }
