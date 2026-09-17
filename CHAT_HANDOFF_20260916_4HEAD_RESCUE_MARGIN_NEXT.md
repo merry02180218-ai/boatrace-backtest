@@ -30,13 +30,24 @@ Repo: `merry02180218-ai/boatrace-backtest`
 - Simple lowering of comp cutoff does not robustly increase profitable BET races; comp filter strongly discards Jul-Aug winners.
 - Production comp>=7 remains unchanged.
 
-## BEFORE — RENEWED HEAD-PROBABILITY RESEARCH
-- User explicitly requested another study of 4号艇 head probability.
-- Objective: revisit head-probability selection as a way to increase BET races without changing frozen v283 + THIRD0.10 opponent/ticket semantics yet.
-- First reproduce the exact current fixed candidate population and identify the actual head-probability score/fields used by the current model; do not substitute a guessed probability definition.
-- Re-sweep head-probability thresholds and report candidate R, head4 R/rate, raw THIRD0.10 ticket hits, and closing-odds retrospective ROI where applicable.
-- Primary split remains Apr-Jun development vs Jul-Aug independent holdout; Apr-Aug overall is secondary.
-- Compare against the previously observed head-probability research, but require exact reproduction before using old thresholds as conclusions.
-- Keep production unchanged during research. v96 prohibited. September remains `UNREAD`.
+## RENEWED HEAD-PROBABILITY RESEARCH — FIRST RUN SUCCESS
+- Data source: BoatraceCSV public CSV (`https://boatracecsv.github.io/data`), race-card pre-race fields.
+- Run `35232199824`, Job `105238910701`, Artifact `10501603555`, head `70448954df69f915c94af95628327c056a06d5da`, SUCCESS.
+- Apr-Jun training rows 13,221 / head4 1,276; Jul-Aug unused validation rows 9,610 / head4 964; 78 usable fields.
+- Examples: cut .30 => Apr-Jun 405R / head4 37.04%, Jul-Aug 369R / 39.30%; cut .35 => 217R / 40.09%, 203R / 45.81%; cut .40 => 110R / 40.91%, 114R / 50.88%.
+- September remained UNREAD and production unchanged.
+- IMPORTANT: this first run is NOT yet certified leakage-free. Feature availability filtering was calculated from Apr-Aug combined rows, so the Jul-Aug validation period influenced only which columns were considered sufficiently non-missing. Labels were not used in that selection, but strict temporal isolation requires correction and re-audit.
 
-Status: `HEAD_PROBABILITY_RESEARCH_PREPARING`
+## BEFORE — STRICT LEAKAGE AUDIT
+- User explicitly requested a leakage audit before using the renewed head probability.
+- Audit must be stricter than the first run and use Japanese reporting where practical.
+- Required checks:
+  1. Select usable fields from Apr-Jun training rows ONLY; Jul-Aug must not influence field selection, imputation, scaling, fitting, threshold choice, or any learned preprocessing.
+  2. Audit all selected BoatraceCSV race-card field names and exclude any field whose timing cannot be proven pre-race / pre-decision. Results may be used ONLY to create the target label after race-key matching.
+  3. Re-run Apr-Jun -> Jul-Aug untouched validation with the corrected pipeline and compare the full head-probability threshold curve against Run 35232199824.
+  4. Add shuffled-target negative-control test. With training labels randomized, validation discrimination / high-probability head rates must collapse toward chance; otherwise flag possible leakage or structural bug.
+  5. Add date/race-key integrity checks: no duplicate race keys across train/validation, no September access, no target/result-derived column in model matrix.
+  6. Save field list, audit flags, corrected threshold sweep, and negative-control summary as artifact.
+- Do NOT change production based on this audit alone. v96 prohibited. September remains `UNREAD`.
+
+Status: `HEAD_PROBABILITY_STRICT_LEAKAGE_AUDIT_PREPARING`
