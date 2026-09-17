@@ -1,8 +1,6 @@
 name: monthly-backtest
 on:
   workflow_dispatch:
-  push:
-    branches: [ main ]
 jobs:
   backtest:
     runs-on: ubuntu-latest
