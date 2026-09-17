@@ -1,0 +1,39 @@
+name: ops-actions-cleanup-20260917
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Only list matching runs; do not cancel/delete'
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel accidental queued/in-progress runs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "Scanning accidental runs in $REPO (dry_run=$DRY_RUN)"
+          gh api --paginate "repos/$REPO/actions/runs?per_page=100" --jq '.workflow_runs[] | select((.status == "queued" or .status == "in_progress") and (.display_title == "chore: remove accidental noop trigger files" or (.display_title | startswith("noop")) or (.display_title | contains("Wave19 fire production276 rescue")))) | [.id,.status,.name,.display_title] | @tsv' > /tmp/matches.tsv
+          cat /tmp/matches.tsv || true
+          if [[ "$DRY_RUN" == "true" ]]; then
+            echo "DRY RUN: no runs changed"
+            exit 0
+          fi
+          while IFS=$'\t' read -r id status name title; do
+            [[ -z "${id:-}" ]] && continue
+            echo "Cancelling $id [$status] $name :: $title"
+            gh api --method POST "repos/$REPO/actions/runs/$id/cancel" || true
+          done < /tmp/matches.tsv
