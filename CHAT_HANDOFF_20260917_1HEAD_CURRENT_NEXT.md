@@ -238,3 +238,75 @@ fix commit:
 - 現在のGitHub connectorには新規workflow_dispatch write actionが無いため、ユーザー側でGitHub Actions画面から手動発火が必要。
 - 発火後は新Run ID / Job IDを確認し、成功時に logs → Artifact ID/name/content → summary/rows → 日別/レース別 → 9/17未使用guard の順で監査する。
 - Sep auditが確定してから、次に1号艇v351 `THIRD close-margin` 4点化監査へ進む。
+
+## 2026-09-17 — AFTER / Run 35190832903 rolling chronology failure + daily guard fix
+### Run結果
+- Workflow: `audit-1head-v351-sep1-16`
+- Run: **35190832903**
+- Job: **105102822607**
+- head SHA: `55c8f248e2b52e725c1ad43dd62a516aae011cdc`
+- conclusion: **failure**
+- `Rebuild chronology-safe September source through Sep16`: **success**
+- `Prepare canonical v321 frozen history caches`: **success**
+- `Backtest existing v351 rolling path Sep1-16`: **failure**
+- 9/1 targetは通過し、**9/2 targetのrolling学習時**に停止。
+- Artifactは生成されていない。
+
+### 今回の原因
+- `prepare_1head_v351_rolling_models.py` は9/2 targetに対して9/1までのverified September historyだけを渡しており、呼び出し側の chronology は正しい。
+- しかし `run_v323_1head_frozen_live_adapter.py::_audit_history` が日付ではなく `month` だけで判定し、`month >= target_month` を無条件rejectしていた。
+- そのため `allow_rolling_history=True` でも、正当な **2026-09-01 prior-day row** を「2026-09月だからtarget/future leak」と誤判定した。
+- これは未来リークではなく、guardの粒度が月単位だったことによるfalse positive。
+- **2026-09-17結果・払戻はこのRunでも取得・閲覧していない。UNREAD維持。**
+
+### guard修正
+`run_v323_1head_frozen_live_adapter.py` を修正。
+- `allow_rolling_history=False`（通常strict）:
+  - 従来どおりtarget月以降のhistoryを拒否。
+- `allow_rolling_history=True`:
+  - `date` / `race_date` / `race_code` から実日付を復元。
+  - **history date < target_date のみ許可**。
+  - **history date >= target_date は必ず拒否**。
+  - 日付を復元できないrowがtarget月以降なら安全側で拒否。
+- HEAD / opponent 両方でcurrent targetの実日付を渡すように変更。
+
+fix commit:
+- **`32e77ff2c8317dc10947118bc915b36b6ee00eb4`**
+- message: `fix: allow prior-day history in rolling chronology guard`
+
+### 回帰チェック追加
+`.github/workflows/audit-1head-v351-sep1-16.yml` の高コスト処理前に `Verify daily rolling chronology guard` を追加。
+チェック内容:
+1. target=9/2, history=9/1, rolling=True → PASS
+2. race_codeから9/1を復元するfallback → PASS
+3. target=9/2, history=9/2 → 必ずREJECT
+4. target=9/2, history=9/3 → 必ずREJECT
+5. strict modeでhistory=9/1 → current-monthなのでREJECT
+6. strict modeでhistory=8/31 → PASS
+
+workflow commit:
+- **`83d08cdb6209d2ca2384d55609ef70dc55f8b772`**
+- message: `audit: test daily rolling chronology guard`
+- triggerは再確認済みで **`workflow_dispatch` only**。pushでこのauditを自動発火しない。
+
+### ローカル意味論チェック
+同じguardロジックを手元でsynthetic DataFrameに対して確認し、
+- 9/1 prior-day rolling PASS
+- 9/2 same-day rolling REJECT
+- 9/3 future rolling REJECT
+- 9/1 strict REJECT
+- 8/31 strict PASS
+を確認済み。
+
+### chronology / 9/17
+- retrospective loopは `range(1,17)` = 9/1〜9/16のみ。
+- Sep training sourceはtarget=9/17なので学習cutoffは9/16。
+- results/payouts JOINもloop内9/1〜9/16だけ。
+- **9/17 result/payoutはUNREAD維持。**
+
+### 次の再開地点
+- 旧Run 35190832903 のrerunは禁止（旧SHAを再実行するため）。
+- 最新main `83d08cd...` で `audit-1head-v351-sep1-16` を **新規workflow_dispatchで1回だけ手動発火**する。
+- 新Runでは最初に `Verify daily rolling chronology guard` が成功することを確認し、その後 source build → v321 prep → Sep1-16 rolling の順で追う。
+- 成功時は Artifact の `summary.json` / `rows.csv` を確認して、購入R・1頭率・exact3率・投資・払戻・ROI・日別/レース別を確定する。
+- その後に1号艇v351の `THIRD close-margin` 4点化監査へ進む。
