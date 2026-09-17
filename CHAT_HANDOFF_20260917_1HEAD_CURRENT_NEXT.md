@@ -46,7 +46,7 @@ Workflow: `.github/workflows/audit-1head-v351-sep1-16.yml`
 - canonical Jul/Aug v321 frozen cacheを `run_v321_1head_julaug_nonpristine_validation.py --stage prepare` で生成。
 - Sep1はfrozen production history、Sep2+は prior-day September rowsのみでrolling。
 - predictions/exhibition pathを先に作り、その後9/1〜9/16 results/payoutsを評価JOIN。
-- 成功時 `out/rows.csv` / `out/summary.json` をartifact化。
+- 成功時 `out/rows.csv` / `out/daily.csv` / `out/summary.json` をartifact化。
 
 ## これまでの失敗と修正
 ### 1) Run 35189567267 / Job 105098929876
@@ -65,13 +65,8 @@ Workflow: `.github/workflows/audit-1head-v351-sep1-16.yml`
 - workflow回帰チェック追加 `83d08cdb6209d2ca2384d55609ef70dc55f8b772`。
 - handoff update `921b575bc6ba4965ae384b1bbac4898c7f878cce`。
 
-## 2026-09-17 — BEFORE / Run 35195900311 failure修正
-### Run確認
-- Workflow: `audit-1head-v351-sep1-16`
-- Run: **35195900311** (run #4)
-- Job: **105118940286**
-- head SHA: `921b575bc6ba4965ae384b1bbac4898c7f878cce`
-- conclusion: **failure**
+### 3) Run 35195900311 / Job 105118940286
+- head SHA `921b575bc6ba4965ae384b1bbac4898c7f878cce`
 - chronology guard regression: success
 - September source build: success
   - feature_rows 2443 / valid_result_rows 2430 / target_or_future_rows 0 / same_day_outcomes_read false
@@ -80,24 +75,79 @@ Workflow: `.github/workflows/audit-1head-v351-sep1-16.yml`
 - Sep1 rolling target:通過
 - Sep2 rolling target: failure
 - artifact upload: skipped
+- failure: `prepare_1head_v351_rolling_models.py` が `v299.STRATEGIES[prod.TICKET_POLICY]` を直接参照し、profile値 `v320_HYBRID` に対して `KeyError`。
+- `v299.STRATEGIES` 側の正式strategy keyは `HYBRID`。正式LIVE finalizerも `STRATEGIES['HYBRID']` を使用している。
 
-### 今回の正確な失敗原因
-`prepare_1head_v351_rolling_models.py` line 60:
-`fn=v299.STRATEGIES[prod.TICKET_POLICY]`
-で `KeyError: 'v320_HYBRID'`。
+## 2026-09-17 — AFTER / ticket policy fix + runtime parallelization
+### ticket policy修正
+`prepare_1head_v351_rolling_models.py` に `resolve_ticket_strategy()` を追加。
+- `v320_HYBRID` → `HYBRID`
+- v299に既存のstrategy名ならそのまま使用
+- 未知のproduction policy名はsilent fallbackせず `RuntimeError`
+- rolling metaへ `ticket_policy` / `ticket_strategy` を保存
 
-`onehead_production_profile.py` の正式値は `TICKET_POLICY = 'v320_HYBRID'` だが、`run_v299_1head_trifecta3_policy_search.py::STRATEGIES` のキーは `HYBRID` / `TOP2XTOP2` 等であり、`v320_HYBRID` キーは存在しない。
+commit:
+- **`cb2b35b535f115189f2e80890983bbc5e65359c6`**
+- message: `fix: resolve v351 rolling ticket policy name`
 
-現行の正式LIVE finalizer `run_1head_v351_live_finalize.py` は明示的に
-`v299.STRATEGIES['HYBRID'](...)`
-を使っているため、rolling側も同じ semantics に揃えるのが正しい。
+### 実データsmoke test
+上記code fileは既存 `.github/workflows/test-1head-v351-rolling-models.yml` のpush対象だったため、commit時に既存rollingテストが自動発火した。
+- Run: **35199667608**
+- Job: **105131123899**
+- head SHA: `cb2b35b535f115189f2e80890983bbc5e65359c6`
+- conclusion: **success**
+- canonical v321 prep: success
+- `Train rolling v308 v317 v318`: **success**
+- log: `ROLLING_MODELS_OK`
+- target: 2026-09-15 / training_cutoff: 2026-09-14
+- September rows: 2118
+- head/opponent history rows: 47221 / 47221
+- SECOND features: 277 / THIRD features: 221
+- `ticket_policy = v320_HYBRID`
+- `ticket_strategy = HYBRID`
+- `same_day_outcomes_read = False`
+- `target_or_future_rows = 0`
+- `chronology_guard = True`
+- races output: **153**
+- rolling build: 512.7 sec / wall 514.1 sec
+- Artifact: **10488126888** `v351-1head-rolling-models-20260915`
+- 3-ticket assertionも全raceで通過。
 
-### これからやること
-1. `prepare_1head_v351_rolling_models.py` のticket policy解決をproduction名 `v320_HYBRID` → v299 strategy `HYBRID` に安全に対応させる。
-2. production profileが想定外のpolicy名ならsilent fallbackせず例外にする。
-3. 高コストActionsを回す前に、profile policyが解決でき、LIVE finalizerと同じ3-ticket orderingになる軽量回帰チェックをworkflowへ追加する。
-4. triggerが `workflow_dispatch` only のままか再確認する。
-5. 修正commit後、旧Runのrerunはせず **新しいworkflow_dispatchを1回だけ**発火する。
-6. 9/17 result/payoutは引き続き **UNREAD**。
+これにより Run 35195900311 の `KeyError: v320_HYBRID` は実データrolling経路で解消確認済み。
 
-次の再開地点: 上記ticket policy mapping修正と回帰チェックを実装・commitし、その結果をAFTERとして本handoffへ追記する。
+### 長時間問題への修正
+Run 35195900311ではSep1〜Sep2だけでもStep 8が非常に重く、16日直列では90分timeoutリスクが高かったため、同時に監査をchunk並列化した。
+
+新script:
+- `audit_1head_v351_sep_chunk.py`
+- commit **`57fe01ddd37c6383852c93ef4b11cca69140f7e2`**
+- 2日単位でrolling/backtestを独立実行。
+- chunk開始日前までST stateを再構築し、chunk内は日次更新。
+- Sep1のみfrozen production history、Sep2+はprior-day Sep history。
+- 9/17以降をhard reject。
+- rolling meta chronology / ticket_strategy=HYBRID / 3点uniqueを検証。
+
+workflow parallelization:
+- commit **`dee017c223692825e2f3f572daec7da9f0aa60bb`**
+- prepare job: chronology regression + ticket policy軽量回帰 + Sep source rebuild + v321 cacheを1回だけ生成・artifact化。
+- backtest job: 8並列matrix
+  - Sep1-2
+  - Sep3-4
+  - Sep5-6
+  - Sep7-8
+  - Sep9-10
+  - Sep11-12
+  - Sep13-14
+  - Sep15-16
+- aggregate job: 8 chunkを統合し `rows.csv` / `daily.csv` / `summary.json` を作る。
+- aggregateで `20260917` や範囲外race_codeをhard reject。
+- workflow triggerは **`workflow_dispatch` only** のまま。
+
+### 次の再開地点
+1. 最新mainから `audit-1head-v351-sep1-16` を **新規workflow_dispatchで1回だけ発火**。
+2. 旧Run 35195900311のrerunは禁止（旧SHA/旧直列workflowを再実行するため）。
+3. 新Runでは prepare → 8 chunk jobs → aggregate を追う。
+4. 成功後、final Artifactの `summary.json` / `daily.csv` / `rows.csv` を読み、購入R・1頭率・exact3率・投資・払戻・ROI・日別/レース別を確定する。
+5. `today_20260917_used=false`、race_codeに20260917なしを再確認。
+6. **9/17 result/payoutはUNREAD維持。**
+7. Sep audit確定後、`THIRD close-margin` 4点化の276R監査へ進む。
