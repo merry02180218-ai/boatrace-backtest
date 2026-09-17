@@ -61,20 +61,26 @@ Repo: `merry02180218-ai/boatrace-backtest`
 - これは `live_requests/1head_v351.json` のpushで単一レースを手動判定する入口。
 - judge時は当日全場cache artifact `v351-1head-live-cache-${DATE}` を要求し、各race_code JSONと `v351_exhibition_train.csv` を使う。
 - LIVE判定は結果/払戻を使わないguardあり。
+- 9/15用cache generatorは削除されておらず `.github/workflows/prepare-1head-v351-live-cache-20260915.yml` としてmainに存在する。旧説明の「mainから外れている」は誤り。
+- 9/15 PRE workflowはSeptember outcome rowsをrolling学習へ含める設計になっているため、今回の明示ルール（September結果UNREAD）には流用不可。
 
 ### 未完了
 - 2026-09-17の「事前候補一覧」はまだユーザーへ出せていない。
-- 当日全場cacheの生成workflow/Artifactを特定して、9/17の事前候補を取得する作業途中でチャット移行。
 - 推測や古い候補を出してはいけない。
 
-### 次チャットで最初にやること
-1. 最新mainとこの引き継ぎを読む。
-2. repo tree / workflowから `v351-1head-live-cache-20260917` を生成する当日全場precompute workflowを特定する。
-3. 9/17 cacheが既に存在するならそのArtifactを取得。無ければ正規workflowを発火できる状態にして生成する。
-4. 事前情報のみで正式v351 production条件を通過したレースを、締切時刻順に一覧化する。
-5. 各候補は少なくとも 場/R/締切/事前HEAD確率/opp_mass/事前3点 を出す。展示後判定は別段階。
-6. September 9/17の結果・払戻は絶対に読まない。
-7. 作業前後で引き継ぎ更新。
+### BEFORE — 2026-09-17 result-blind PRE/cache recovery
+- 9/17専用PRE workflowとcache workflowを9/15実装から作る。
+- PRE学習は `race_code < 20260901` hard guardで固定し、September outcome/result/payoutを一切読まない。
+- 9/17当日カード/枠情報だけ取得し、S/A/B PRE候補を作る。
+- cacheは現行production profileで `final_head_p`, `opp_mass`, `base_tickets` を作り、`result_or_payout_used=False`, `chronology_guard=True` を必須化。
+- workflow成功後、Artifactから候補を締切順に一覧化する。
+
+### 次の再開地点
+1. 9/17 PRE/cache workflowを作成してpush発火。
+2. PRE→cacheのRun/Job/Artifactを確認。
+3. 場/R/締切/事前HEAD確率/opp_mass/事前3点を出す。
+4. September結果/払戻はUNREAD維持。
+5. AFTERを追記。
 
 ## LIVE運用の注意
 - 事前候補に実進入・当日展示など未確定/締切直前情報を混ぜない。
