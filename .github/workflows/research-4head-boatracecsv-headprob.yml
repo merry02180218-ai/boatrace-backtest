@@ -1,0 +1,24 @@
+name: research-4head-boatracecsv-headprob
+on:
+  workflow_dispatch:
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install pandas numpy scipy scikit-learn requests
+      - name: Run BoatraceCSV head probability research
+        run: python research_4head_boatracecsv_headprob.py
+      - name: Upload research artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: head4-boatracecsv-headprob
+          path: /tmp/head4_boatracecsv_headprob/
+          if-no-files-found: error
