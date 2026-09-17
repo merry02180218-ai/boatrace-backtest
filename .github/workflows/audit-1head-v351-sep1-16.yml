@@ -11,6 +11,34 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: '3.11'}
       - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Verify daily rolling chronology guard
+        run: |
+          python - <<'PY'
+          import pandas as pd
+          import run_v323_1head_frozen_live_adapter as live
+
+          prior=pd.DataFrame([{'date':'2026-09-01','month':'2026-09','race_code':'202609010101'}])
+          live._audit_history(prior,'2026-09-02',True)
+          fallback=pd.DataFrame([{'month':'2026-09','race_code':'202609010101'}])
+          live._audit_history(fallback,'2026-09-02',True)
+          for bad_date in ('2026-09-02','2026-09-03'):
+            bad=pd.DataFrame([{'date':bad_date,'month':'2026-09','race_code':bad_date.replace('-','')+'0101'}])
+            try:
+              live._audit_history(bad,'2026-09-02',True)
+            except RuntimeError:
+              pass
+            else:
+              raise AssertionError(f'rolling guard accepted forbidden date {bad_date}')
+          try:
+            live._audit_history(prior,'2026-09-02',False)
+          except RuntimeError:
+            pass
+          else:
+            raise AssertionError('strict guard accepted current-month history')
+          old=pd.DataFrame([{'date':'2026-08-31','month':'2026-08','race_code':'202608310101'}])
+          live._audit_history(old,'2026-09-02',False)
+          print('DAILY_ROLLING_CHRONOLOGY_GUARD_OK')
+          PY
       - name: Rebuild chronology-safe September source through Sep16
         run: python build_1head_september_training_source.py --target-date 2026-09-17 --start-date 2026-09-01 --out-dir /tmp/sep
       - name: Prepare canonical v321 frozen history caches
