@@ -15,38 +15,56 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: '3.11'}
       - run: pip install -q requests beautifulsoup4 lxml numpy pandas scipy 'scikit-learn==1.6.1'
+      - name: Parse safe replay request
+        id: req
+        run: |
+          set -euo pipefail
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          r=json.load(open('test_requests/1head_v351.json'))
+          assert r.get('mode')=='TEST_REPLAY'
+          assert r.get('result_or_payout_used') is False
+          assert r.get('odds_used') is False
+          codes=r.get('race_codes') or []
+          assert len(codes)==1
+          code=str(codes[0]).zfill(12)
+          assert len(code)==12 and code.isdigit()
+          assert code[:6]=='202609', 'only September 2026 safe replay requests are accepted here'
+          print('code='+code)
+          print('date='+code[:8])
+          PY
       - name: Download PRE cache
         env: {GH_TOKEN: '${{ github.token }}'}
         run: |
           set -euo pipefail
           mkdir -p /tmp/cache /tmp/result
-          NAME='v351-1head-live-cache-20260916'
+          NAME="v351-1head-live-cache-${{ steps.req.outputs.date }}"
           ID=$(gh api "repos/${GITHUB_REPOSITORY}/actions/artifacts?name=${NAME}&per_page=20" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id')
           test -n "$ID" -a "$ID" != null
           gh api "repos/${GITHUB_REPOSITORY}/actions/artifacts/${ID}/zip" >/tmp/c.zip
           unzip -q /tmp/c.zip -d /tmp/cache
-      - name: Replay Tsu3 and Fukuoka1
+      - name: Replay requested race safely
         run: |
           set -euo pipefail
-          for CODE in 202609160903 202609162201; do
-            JCD=$((10#${CODE:8:2})); RACE=$((10#${CODE:10:2}))
-            python run_1head_v351_postrace_test.py --race-code "$CODE" --cache-dir /tmp/cache --out "/tmp/result/${CODE}_meta.json"
-            python probe_1head_v351_boatcast_exhibition_test_replay.py --date 20260916 --jcd "$JCD" --race "$RACE" > "/tmp/result/${CODE}_probe.json"
-            CUTOFF=$(python -c "import json;print(json.load(open('/tmp/cache/${CODE}.json'))['training_cutoff'])")
-            python run_1head_v351_live_exhibition_gate.py --probe "/tmp/result/${CODE}_probe.json" --base "/tmp/cache/${CODE}.json" --history-cutoff "$CUTOFF" --out "/tmp/result/${CODE}_gate.json"
-            CODE="$CODE" python - <<'PY'
+          CODE='${{ steps.req.outputs.code }}'
+          DATE='${{ steps.req.outputs.date }}'
+          JCD=$((10#${CODE:8:2})); RACE=$((10#${CODE:10:2}))
+          python run_1head_v351_postrace_test.py --race-code "$CODE" --cache-dir /tmp/cache --out "/tmp/result/${CODE}_meta.json"
+          python probe_1head_v351_boatcast_exhibition_test_replay.py --date "$DATE" --jcd "$JCD" --race "$RACE" > "/tmp/result/${CODE}_probe.json"
+          CUTOFF=$(python -c "import json;print(json.load(open('/tmp/cache/${CODE}.json'))['training_cutoff'])")
+          python run_1head_v351_live_exhibition_gate.py --probe "/tmp/result/${CODE}_probe.json" --base "/tmp/cache/${CODE}.json" --history-cutoff "$CUTOFF" --out "/tmp/result/${CODE}_gate.json"
+          CODE="$CODE" python - <<'PY'
           import json,os
           c=os.environ['CODE'];b=json.load(open('/tmp/cache/'+c+'.json'));g=json.load(open('/tmp/result/'+c+'_gate.json'))
           b.update({'exhibition_ready':True,'head_exhibition_pass':bool(g['head_exhibition_pass']),'corrected_ex':g['corrected_ex'],'corrected_st':g['corrected_st'],'corrected_straight':g['corrected_straight'],'corrected_orig_avg':g['corrected_orig_avg'],'exhibition_hashes':g['exhibition_hashes'],'result_or_payout_used':False,'chronology_guard':True})
           json.dump(b,open('/tmp/result/'+c+'_input.json','w'),ensure_ascii=False,indent=2)
           PY
-            python run_1head_v351_live_finalize.py --input "/tmp/result/${CODE}_input.json" --out "/tmp/result/${CODE}_final.json"
-            CODE="$CODE" python - <<'PY'
+          python run_1head_v351_live_finalize.py --input "/tmp/result/${CODE}_input.json" --out "/tmp/result/${CODE}_final.json"
+          CODE="$CODE" python - <<'PY'
           import json,os
-          c=os.environ['CODE'];x=json.load(open('/tmp/result/'+c+'_final.json'))
-          print('TEST_REPLAY_FINAL',json.dumps({'race_code':c,'status':x['status'],'final_head_p':x['final_head_p'],'opp_mass':x['opp_mass'],'head_exhibition_pass':x['head_exhibition_pass'],'tickets':x['tickets'],'result_or_payout_used':x['result_or_payout_used'],'chronology_guard':x['chronology_guard']},ensure_ascii=False))
+          c=os.environ['CODE'];x=json.load(open('/tmp/result/'+c+'_final.json'));g=json.load(open('/tmp/result/'+c+'_gate.json'))
+          print('TEST_REPLAY_FINAL',json.dumps({'race_code':c,'status':x['status'],'final_head_p':x['final_head_p'],'opp_mass':x['opp_mass'],'head_exhibition_pass':x['head_exhibition_pass'],'tickets':x['tickets'],'corrected_ex':g['corrected_ex'],'corrected_st':g['corrected_st'],'corrected_straight':g['corrected_straight'],'corrected_orig_avg':g['corrected_orig_avg'],'result_or_payout_used':x['result_or_payout_used'],'chronology_guard':x['chronology_guard']},ensure_ascii=False))
           PY
-          done
       - uses: actions/upload-artifact@v4
         if: always()
         with:
