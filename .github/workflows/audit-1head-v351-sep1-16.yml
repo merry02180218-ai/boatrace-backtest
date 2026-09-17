@@ -13,6 +13,11 @@ jobs:
       - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
       - name: Rebuild chronology-safe September source through Sep16
         run: python build_1head_september_training_source.py --target-date 2026-09-17 --start-date 2026-09-01 --out-dir /tmp/sep
+      - name: Prepare canonical v321 frozen history caches
+        run: |
+          /usr/bin/time -f 'v321_prepare_wall_sec=%e v321_prepare_max_rss_kb=%M' python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
+          test -s cache_v321_julaug_nonpristine_head_full.csv.gz
+          test -s cache_v321_julaug_nonpristine_slim.csv.gz
       - name: Backtest existing v351 rolling path Sep1-16
         run: |
           mkdir -p out
