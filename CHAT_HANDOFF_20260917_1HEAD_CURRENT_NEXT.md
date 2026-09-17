@@ -1,39 +1,172 @@
-# 1号艇 v351 現状引き継ぎ — 2026-09-17
+# 1号艇 v351 現状引き継ぎ — 2026-09-17 15:24 JST
 
 Repo: `merry02180218-ai/boatrace-backtest`
 
-## 最重要ルール
-- 最新GitHubを最優先。作業開始前/完了後に引き継ぎを更新する。
-- historical hard guard は通常 `race_code < 20260901`。
-- ユーザーが2026-09-17に明示的に「昨日までの9月のレースバックテスト」を依頼したため、今回の retrospective に限り `20260901〜20260916` の確定結果・払戻を評価用として読むことを許可。
-- `20260917` 当日結果・払戻は引き続き絶対に読まない。UNREAD維持。
-- LIVE/当日判定では `result_or_payout_used=False`, `chronology_guard=True`。
+## 最重要ルール / ユーザー運用方針
+- 最新GitHub + 最新引き継ぎを、古いチャット/記憶より必ず優先する。
+- 「無い」と判断する前に、最新mainだけでなく **commit履歴 / 既存script / workflow / Actions Run / Artifact** まで検索する。今回、昨日作成済みのSeptember rolling経路を見落としたため、以後これは必須。
+- 作業開始前に「これからやること」を引き継ぎへ記録し、作業完了後に結果・commit SHA・Run/Job/Artifact・結論・次の再開地点を追記する。
+- workflowを書き換える前にtriggerを確認する。不要なpush発火、noop commit、新規workflow乱立は禁止。
+- 1回発火→確認→次。エラー→commit→発火の無確認ループは禁止。
+- ユーザーは実作業と厳密確認を希望。未確認の完了/発火/結果を断言しない。
+- 自動LIVEより、ユーザーが「判別して」と言った時の手動取得/判定を優先する。
 - HEAD学習特徴へ展示を直接追加しない。展示は post-ranking / ticket-rescue / live final correction のみ。
 
-## 現行production
-- profile: `1HEAD_PRODUCTION_20260915_HEAD078_V351_OPPONENTCORE_G2_045_G3_100`
-- HEAD cutoff `.78`
-- opponent core SECOND G2=.45 / THIRD G3=1.00
-- formal historical baseline: 276R / 1号艇1着241=87.32% / exact3 131=47.46%（3点）
+## September結果の扱い（今回の特例）
+- 通常historical hard guardは `race_code < 20260901`。
+- ユーザーが2026-09-17に明示的に「昨日までの9月のレースバックテスト」を依頼したため、**今回のretrospectiveに限り 20260901〜20260916 の確定結果・払戻を評価用として読むことを許可**。
+- **20260917当日結果・払戻は絶対に読まない。UNREAD維持。**
+- 9/17 LIVE/判定データは pre-race / exhibition のみ使用可。`result_or_payout_used=False`, `chronology_guard=True`。
 
-## BEFORE — BoatraceCSV Sep1-16 retrospective（2026-09-17）
-- 前回 Run 35185302721 は Boatcast を1Rずつ再取得して45分 timeout。
-- BoatraceCSV/boatracecsv.github.io に9月実データが存在することを確認済み。
-  - 2026-09-01 tkz 展示CSVあり
-  - 2026-09-01 original_exhibition CSVあり
-  - 2026-09-01 payouts CSVあり
-- 全CSVは12桁race_codeでJOIN可能。
+## 現行1号艇 production
+profile:
+`1HEAD_PRODUCTION_20260915_HEAD078_V351_OPPONENTCORE_G2_045_G3_100`
 
-今回の実施方針:
-1. 9/1〜9/16をBoatraceCSVの日別CSVから一括取得する。
-2. race_cards / tkz / stt / original_exhibition を予測側に使用する。
-3. results/realtime と results/payouts は予測を確定した後の評価にだけJOINする。
-4. 9/17 CSVは一切取得しない。
-5. 可能な限り現行v351 productionの特徴・cutoff・ticketロジックを再現する。完全再現できない項目があれば結果に明示する。
-6. 購入R、1頭数/率、3連単的中数/率、投資、払戻、ROI、日別明細をartifact化する。
-7. workflowはmanual dispatchのみ。1回発火→検証。
-8. 完了後、commit / Run / Job / Artifact / 結果をAFTERへ記録する。
+構成:
+- HEAD model: v308
+- HEAD cutoff: 0.78
+- opponent mass min: 0.375
+- SECOND: v317_OUTER_L2_1
+- THIRD: v318_DROPSTART_T0.1
+- ticket policy: v320_HYBRID
+- exhibition: v332_ATTACK_ENV_SOFT_V345_ATTACKCORE
+- exhibition env: w=.10 / q=.65
+- opponent core: SECOND G2=.45 / THIRD G3=1.00
 
-## 次の再開地点
-- `.github/workflows/audit-1head-v351-sep1-16.yml` をBoatraceCSV一括取得方式へ置換する。
-- 9/17結果はUNREAD維持。
+formal historical baseline:
+- 購入対象 276R
+- 1号艇1着 241R = 87.32%
+- exact3 131R = 47.46%
+- 基本3点
+
+## このチャットで確認した9/17 LIVE情報
+9/17 v351 canonical cache:
+- Artifact 10477251012
+- Run 35170926144
+- head SHA `d951448ff9e6b397454fff796cf70bbf0c08bfcf`
+
+formal candidates:
+1. 平和島12R `202609170412`
+   - final_head_p 0.7901582366125368
+   - opp_mass 0.42123448085672327
+   - tickets `1-4-2;1-4-5;1-2-4`
+2. 尼崎6R `202609171306`
+   - final_head_p 0.8301538300238417
+   - opp_mass 0.38674739724923224
+   - PRE tickets `1-2-4;1-2-3;1-4-2`
+   - safe post-deadline replay final = DROP (`head_exhibition_pass=false`), final tickets=[]
+   - replay Run 35181006387 / Job 105072935543 / Artifact 10480421315
+   - result/payout未使用、chronology_guard=true
+3. 下関4R `202609171904`
+   - final_head_p 0.8105814572971805
+   - opp_mass 0.4090498291303686
+   - tickets `1-2-5;1-2-3;1-3-2`
+
+## Wave / close-margin整理
+- 1号艇 Wave17/18 は production 276Rを直接変更するルールではなく、opponent_mass .350-.375 のbelow-cutoff rescue研究。
+- Wave17 `BOAT3_STRONGER -> boat5 THIRD rescue`。候補は frozen choice で `1-3-5`。add4 と fixed3 を比較。
+- 尼崎6RにはWave17/18条件は発火しないため、強制購入ならPRE 3点のまま。
+- ユーザーが覚えていた「3着候補が僅差なら4点化 / 3着だけ両方押さえる」はWave17とは別。
+- 4号艇 v283 では THIRD close-margin 0.10 が正式productionへ昇格済み（commit `376c636839af499821244ca660e382a43a16d644`）。
+- 1号艇v351について同様のclose-margin 4点化は、今回の9月auditが終わった後に276R基準で別監査候補。閾値0.05/0.10/0.15等を比較し、的中増・追加点数・ROI・月別安定性を見る。ただし現行ticket ranking semanticsを確認してから定義し、推測で作らない。
+
+## Sep1-16 retrospective — ここまでの経緯
+ユーザー依頼: 現行1号艇v351を **2026-09-01〜09-16** でバックテスト。
+
+### 失敗した旧方式
+最初に `.github/workflows/audit-1head-v351-sep1-16.yml` を作り、daily cache + Boatcast postrace probeを1Rずつ直列で再取得した。
+- Run 35185302721
+- Job 105085988789
+- 45分 timeout / cancelled
+- 原因: 1RずつBoatcast再取得で20〜60秒級、全レースを直列処理したため。
+- さらにartifact検索上、frozen daily cacheは主に9/15・9/16しか見えていなかった。
+- この旧方式をそのまま再実行しない。
+
+### BoatraceCSVを確認
+ユーザー提示: `BoatraceCSV/boatracecsv.github.io`
+確認結果:
+- 1レース1行CSV、12桁race_code `YYYYMMDDjjrr` でJOIN可能。
+- 9月実データあり。
+- 主なpath:
+  - `data/programs/race_cards/YYYY/MM/DD.csv`
+  - `data/programs/waku10/YYYY/MM/DD.csv`
+  - `data/programs/recent_national/...`
+  - `data/programs/recent_local/...`
+  - `data/programs/motor_stats/...`
+  - `data/programs/motor_history/...`
+  - previews: `tkz / stt / sui / original_exhibition`
+  - results: `data/results/realtime/YYYY/MM/DD.csv`
+  - payouts: `data/results/payouts/YYYY/MM/DD.csv`
+  - odds: `data/previews/od3/YYYY/MM/DD.csv`
+- 9/1について展示CSV、original_exhibition、payoutsの実在を確認済み。
+- 予測側データと結果/払戻を分離して扱えるのでretrospectiveに適する。
+
+### 重要: 昨日すでにSeptember rolling経路を実装済みだった
+当初「9/1〜14はcacheが無いので新規再構築が必要」と誤認したが、commit履歴を再検索して既存経路を発見。今後は毎回この確認を先にする。
+
+既存主要commit:
+- `5910d1e` — September chronology-safe training source builder
+- `b3849cd` — v308 / v317 / v318をSeptember prior-dayまでrolling学習
+- `1aeb459` — v351 rolling models through September prior-day
+- `b94ef694e34981d54586325e3412d165412e6f4a` — BoatraceCSV race_cardsを使う正式loader修正
+
+既存主要script:
+- `build_1head_september_training_source.py`
+  - 既存のstrict historical rowsを維持し、BoatraceCSV race_cardsからSeptember prior-dayの追加学習行を作る。
+  - 対象日当日の結果は学習に使わないchronology-safe設計。
+- `prepare_1head_v351_rolling_models.py`
+  - 対象日ごとに `training_cutoff = target_date - 1 day`
+  - v308 HEAD / v317 SECOND / v318 THIRD / v320 ticket / v332 exhibition等の現行v351系をrolling再現する経路。
+
+## 現在のSep1-16 workflow（重要）
+`.github/workflows/audit-1head-v351-sep1-16.yml`
+
+最新修正commit:
+- `bf69cd3f48001109aaa3d103499726b98ee80651`
+- message: `audit: use existing September rolling model path`
+- このcommitによる予期しないpush Actions runは0件確認済み。
+
+現在のworkflow方針:
+1. `build_1head_september_training_source.py --cutoff 2026-09-16` で既存chronology-safe September sourceを再構築。
+2. `prepare_1head_v351_rolling_models.py` を使い、9/1〜9/16を日付順に既存v351 rolling経路でバックテスト。
+3. 予測/候補生成後にのみBoatraceCSV results/payoutsをJOINして評価。
+4. 9/17データは取得しない。
+5. 購入R / 1頭数・率 / exact3数・率 / 投資 / 払戻 / ROI / 日別明細をartifact化する設計。
+6. workflow triggerは `workflow_dispatch` のみ。
+
+## 現在発火中のRun — 次チャットはここから
+ユーザーが手動発火済み。
+- Workflow: `audit-1head-v351-sep1-16`
+- Run: **35189567267**
+- Run number: 2
+- head SHA: `bf69cd3f48001109aaa3d103499726b98ee80651`
+- Job: **105098929876**
+- 2026-09-17 15:24 JST時点 status: **in_progress**
+
+現在のstep:
+- setup: success
+- dependencies: success
+- **Step 5 `Rebuild chronology-safe September source through Sep16`: in_progress**
+- Step 6 `Backtest existing v351 rolling path Sep1-16`: pending
+- artifact upload: pending
+
+Job実行中のためlogs downloadはまだ404 BlobNotFoundだった。これはjob終了前なので異常とは限らない。
+
+Run URL:
+`https://github.com/merry02180218-ai/boatrace-backtest/actions/runs/35189567267`
+
+## 次チャットで最初にやること
+1. **まず最新GitHub / このhandoff / Run 35189567267 を確認。**
+2. Runがまだin_progressならJob 105098929876のstepsを確認して待つ。新しいRunを重ねない。
+3. Run完了後:
+   - conclusion確認
+   - job logs確認
+   - artifact ID/name確認・中身確認
+   - 9/1〜9/16の購入R、1頭率、exact3率、投資、払戻、ROI、日別/レース別明細を厳密に確認
+   - 9/17結果が使われていないことを確認
+4. 成功ならこのhandoffへAFTERとして Run / Job / Artifact / 結果 / 結論 / 次の研究地点を追記。
+5. 失敗なら、**ログを読んで原因を特定してから**修正。闇雲に再発火しない。
+6. その後、必要なら1号艇v351の「THIRD close-margin時だけ4点化」監査へ進む。
+
+## 次チャット用の短い開始文
+`CHAT_HANDOFF_20260917_1HEAD_CURRENT_NEXT.md と最新GitHubを読んで、Run 35189567267 / Job 105098929876 の結果確認から続けて。9/1〜9/16 retrospective はユーザー許可済み、9/17結果はUNREAD維持。`
