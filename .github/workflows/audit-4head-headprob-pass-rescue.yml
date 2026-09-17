@@ -13,7 +13,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: 依存関係をインストール
-        run: pip install pandas numpy scipy scikit-learn requests joblib
+        run: pip install pandas numpy scipy scikit-learn requests joblib beautifulsoup4
       - name: 頭確率と合成オッズでPASS救済を監査
         run: python audit_4head_headprob_pass_rescue.py
       - name: 結果を保存
