@@ -61,12 +61,35 @@ def build_current_features(cur0):
  d=v298.v294.add_rel(cur0.copy());d,threat=v298.add_threat(d);d,tf=v303.add_transfer_features(d);d,causal=v307.add_causal(d);safe=list(dict.fromkeys(v305.safe_transfer(tf['TURN_FORM'])+v305.safe_transfer(tf['STMOTOR'])+causal))
  if any('meet_' in str(c).lower() for c in safe):raise RuntimeError('unsafe meet current feature')
  return d,threat,safe
-def _audit_history(hd,target_month,allow):
- mons=hd.month.astype(str);bad=mons[mons>=target_month].unique().tolist()
+def _history_dates(hd):
+ if isinstance(hd.index,pd.DatetimeIndex):return pd.Series(pd.to_datetime(hd.index).normalize(),index=hd.index)
+ for c in ('date','race_date'):
+  if c in hd:
+   s=pd.to_datetime(hd[c],errors='coerce')
+   if s.notna().any():return s.dt.normalize()
+ for c in ('race_code','race_id'):
+  if c in hd:
+   s=hd[c].astype(str).str.extract(r'(\d{8})',expand=False);d=pd.to_datetime(s,format='%Y%m%d',errors='coerce')
+   if d.notna().any():return d.dt.normalize()
+ return pd.Series(pd.NaT,index=hd.index,dtype='datetime64[ns]')
+def _audit_history(hd,target_date,allow):
+ target=pd.Timestamp(target_date).normalize();target_month=target.strftime('%Y-%m');mons=hd.month.astype(str) if 'month' in hd else pd.Series('',index=hd.index,dtype=str)
+ if allow:
+  dates=_history_dates(hd);bad=dates.notna()&(dates>=target)
+  if bad.any():raise RuntimeError(f'target/future history leak target={target.date()} min_bad={dates[bad].min().date()} max_bad={dates[bad].max().date()}')
+  unknown_same_or_future=dates.isna()&(mons>=target_month)
+  if unknown_same_or_future.any():raise RuntimeError(f'undated target/future history leak target={target.date()} months={sorted(mons[unknown_same_or_future].unique().tolist())}')
+  return
+ bad=mons[mons>=target_month].unique().tolist()
  if bad:raise RuntimeError(f'target/future history leak {bad}')
- if not allow and any(str(m).startswith('2026-09') for m in mons.unique()):raise RuntimeError('September history requires explicit rolling audit')
+ if any(str(m).startswith('2026-09') for m in mons.unique()):raise RuntimeError('September history requires explicit rolling audit')
+def _current_target_date(cur_feat):
+ if 'date' in cur_feat and len(cur_feat):
+  d=pd.to_datetime(pd.Series([cur_feat.date.iloc[0]]),errors='coerce').iloc[0]
+  if pd.notna(d):return d.normalize()
+ code=str(cur_feat.race_code.iloc[0]).zfill(12);d=pd.to_datetime(code[:8],format='%Y%m%d',errors='raise');return d.normalize()
 def head_score(cur_feat,hcut,history_path=None,allow_rolling_history=False):
- hd=pd.read_csv(history_path or PREP_HEAD,dtype={'race_code':str});hd.race_code=hd.race_code.astype(str).str.zfill(12);target_month=str(cur_feat.month.iloc[0]);_audit_history(hd,target_month,allow_rolling_history)
+ hd=pd.read_csv(history_path or PREP_HEAD,dtype={'race_code':str});hd.race_code=hd.race_code.astype(str).str.zfill(12);target_date=_current_target_date(cur_feat);_audit_history(hd,target_date,allow_rolling_history)
  safe_static=set(v298.v296.SAFE);core=[]
  for c in hd.columns:
   s=str(c)
@@ -78,7 +101,7 @@ def head_score(cur_feat,hcut,history_path=None,allow_rolling_history=False):
   if c not in cur:cur[c]=np.nan
  cur['head_hit']=0;cur['actual_combo']='';tr=hd.copy();te=cur.copy();bc=v298.v293.available(tr,core,.55);bg=v298.v293.available(tr,guard,.55);ex=v303.available(tr,extras);ph,*_=v298.head_fold(tr,te,list(dict.fromkeys(bc+ex)),bg);z=te[['date','month','race_code','venue','race']].copy();z['p_head']=ph;z['hcut']=hcut;return z
 def opponent_score(cur_feat,head,history_path=None,allow_rolling_history=False):
- slim=pd.read_csv(history_path or PREP_SLIM,dtype={'race_code':str});slim.race_code=slim.race_code.astype(str).str.zfill(12);target_month=str(cur_feat.month.iloc[0]);_audit_history(slim,target_month,allow_rolling_history);v300.setup_v298();sufs=v298.suffixes(slim)
+ slim=pd.read_csv(history_path or PREP_SLIM,dtype={'race_code':str});slim.race_code=slim.race_code.astype(str).str.zfill(12);target_date=_current_target_date(cur_feat);target_month=str(cur_feat.month.iloc[0]);_audit_history(slim,target_date,allow_rolling_history);v300.setup_v298();sufs=v298.suffixes(slim)
  if any('meet_' in str(x).lower() for x in sufs):raise RuntimeError('forbidden meet suffix')
  cur=cur_feat.copy();cur['head_hit']=0;cur['actual_combo']=''
  for c in slim.columns:
