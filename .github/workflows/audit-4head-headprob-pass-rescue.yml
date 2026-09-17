@@ -1,0 +1,24 @@
+name: audit-4head-headprob-pass-rescue
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: 依存関係をインストール
+        run: pip install pandas numpy scipy scikit-learn requests joblib
+      - name: 頭確率と合成オッズでPASS救済を監査
+        run: python audit_4head_headprob_pass_rescue.py
+      - name: 結果を保存
+        uses: actions/upload-artifact@v4
+        with:
+          name: head4-headprob-pass-rescue
+          path: /tmp/head4_headprob_pass_rescue/
+          if-no-files-found: error
