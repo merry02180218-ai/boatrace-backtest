@@ -1,39 +1,19 @@
 # CHAT HANDOFF — 3HEAD AUTO RESEARCH CURRENT
 
-## Status
-- research version: `v289-addon-wave1`
-- decision: **NO_ADOPTION_WAVE1**
-- v288 production is unchanged; baseline replay assertion is 94R / 52 hits / payout 1,622,070 yen.
-- July/August are NON-PRISTINE. September outcomes were not loaded or used.
-- Candidate universe is only v288 final NO_BET among operational PRE S/A and v242-buyable races.
+## Policy
+- v288 production unchanged; baseline 94R / 52 hits / payout 1,622,070 yen.
+- July/August NON-PRISTINE. September outcomes remain UNREAD.
+- Pre-deadline inputs only for the head-probability rebuild.
 
-## Wave-1 result
-- candidate pool: 178 races
-- best tested variant: `return_rank@0.45`
-- best add-on: 84R / 15 hits / ROI 54.92% / profit -378,700 yen
-- combined: 178R / ROI 117.04%
+## BEFORE WORK — fun-site 3号艇頭率50% rebuild (2026-09-17)
+- Probe Run 35234503567 / Job 105246832483 completed SUCCESS; Artifact 10503470393.
+- February availability confirmed: programs/race_cards 28/28 days (4,100 rows), programs/recent_national 28/28 (4,106), programs/recent_local 28/28 (4,106).
+- February unavailable at probed historical paths: programs/waku10, programs/motor_stats, estimate/racer_st, estimate/motor_pt/motors. Do not assume these features exist for the Feb/Mar temporal validation.
+- Build the actual PRE head model using available race_cards + recent_national/local, joined to the existing leak-audited settled universe/labels.
+- Selection/training and threshold choice use February or earlier only. Freeze before reading March labels; March is one diagnostic only.
+- Objective: maximize retained race count subject to useful head-rate precision. Report Pareto bands >=50%, >=45%, >=40%, chronological halves, venue dispersion, overlap/increment vs Wave54. Do not force >=50% if it only exists at tiny N.
+- No realized finish/kimarite/payout is an input feature. Current-session history is allowed only when the referenced run is chronologically before the target race; otherwise exclude it.
+- Production unchanged unless explicitly promoted by user.
 
-## Methods tested / dead ends retained
-- `residual_hit`: prior-reject outcome effect ranking over pre-race safe features.
-- `exhibition_upgrade`: current exhibition/ST/original-exhibition family only.
-- `return_rank`: prior-reject realized-return ranking trained only on prior months.
-- `attack_style_split`: separate stretch-vs-turn regimes, then outcome ranking.
-- `orthogonal_consensus`: residual + exhibition + return independent-score consensus.
-- `ev_calibrated`: residual hit score plus current composite odds, alpha chosen on prior months only.
-
-## Real-operation audit
-- all scoring inputs are columns already present before settlement in the canonical v243/v288 audit artifact;
-- decisions use only prior-month outcomes for fitting; current test-month result/payout enters settlement only;
-- missing features are median-imputed from prior training; production promotion must replace any required-current missingness with fail-closed gates;
-- overlap with v288 baseline is zero by construction;
-- no production workflow/model was changed.
-
-## Next restart point
-- If no wave-1 variant passes, next research must change the information/ticket family rather than loosen v288 thresholds.
-- Priority next: opponent/ticket re-ranking on NO_BETs, PRE-B/new-population research with full leak audit, and venue/field archetype residual models.
-- Before any promotion, build live shadow scorer with fail-closed source checks and exact 10,000-yen Dutch.
-
-## Generated artifacts
-- `research_v289_3head_addon.json`
-- `research_v289_3head_addon.md`
-
+## Exact restart point
+- Implement model/backtest workflow on main, dispatch it, inspect result artifact, then append AFTER WORK with exact commit / Run / Job / Artifact / metrics / conclusion.
