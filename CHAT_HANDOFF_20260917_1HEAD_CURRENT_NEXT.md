@@ -170,3 +170,11 @@ Run URL:
 
 ## 次チャット用の短い開始文
 `CHAT_HANDOFF_20260917_1HEAD_CURRENT_NEXT.md と最新GitHubを読んで、Run 35189567267 / Job 105098929876 の結果確認から続けて。9/1〜9/16 retrospective はユーザー許可済み、9/17結果はUNREAD維持。`
+
+## 2026-09-17 15:27 JST — BEFORE / このチャットの作業開始
+- 最新main / 本handoff / Run 35189567267 / Job 105098929876 を確認してから続行。
+- 指定Run以外を重ねて発火しない。
+- Run完了後は conclusion → logs → artifact → 指標/日別/レース別明細 → chronology guard の順で厳密確認する。
+- 9/1〜9/16 retrospective の結果・払戻はユーザー許可済み。
+- **9/17結果・払戻は取得・閲覧せず UNREAD 維持。**
+- audit成功時は結果を本handoffへAFTER追記し、その後 `THIRD close-margin` 4点化監査の設計/実行へ進む。
