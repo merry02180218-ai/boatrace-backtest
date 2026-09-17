@@ -1,0 +1,134 @@
+name: v351 1-head THIRD close-margin audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'onehead_production_profile.py'
+      - 'run_v351_1head_third_close_margin_audit.py'
+      - '.github/workflows/v351-1head-third-close-margin-audit.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - run: python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v351-third-margin-prepare-${{ github.run_id }}
+          retention-days: 2
+          path: |
+            cache_v321_julaug_nonpristine_slim.csv.gz
+            cache_v321_julaug_nonpristine_head.csv
+            cache_v321_julaug_nonpristine_meta.csv
+
+  second:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v351-third-margin-prepare-${{ github.run_id }}
+          path: .
+      - run: python run_v321_1head_julaug_nonpristine_validation.py --stage second
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v351-third-margin-second-${{ github.run_id }}
+          retention-days: 2
+          path: cache_v321_julaug_second.pkl
+
+  base-third:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v351-third-margin-prepare-${{ github.run_id }}
+          path: .
+      - run: python run_v321_1head_julaug_nonpristine_validation.py --stage base-third
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v351-third-margin-base-third-${{ github.run_id }}
+          retention-days: 2
+          path: cache_v321_julaug_base_pc.pkl
+
+  third:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v351-third-margin-prepare-${{ github.run_id }}
+          path: .
+      - run: python run_v321_1head_julaug_nonpristine_validation.py --stage third
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v351-third-margin-third-${{ github.run_id }}
+          retention-days: 2
+          path: cache_v321_julaug_third.pkl
+
+  audit:
+    needs: [prepare, second, base-third, third]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v351-third-margin-prepare-${{ github.run_id }}
+          path: .
+      - uses: actions/download-artifact@v4
+        with:
+          name: v351-third-margin-second-${{ github.run_id }}
+          path: .
+      - uses: actions/download-artifact@v4
+        with:
+          name: v351-third-margin-base-third-${{ github.run_id }}
+          path: .
+      - uses: actions/download-artifact@v4
+        with:
+          name: v351-third-margin-third-${{ github.run_id }}
+          path: .
+      - name: Run THIRD close-margin exact-4 audit
+        run: python run_v351_1head_third_close_margin_audit.py
+      - name: Show result
+        if: always()
+        run: cat /tmp/v351-third-close-margin-audit/result.json || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v351-third-close-margin-audit-${{ github.run_id }}
+          retention-days: 30
+          path: /tmp/v351-third-close-margin-audit/
