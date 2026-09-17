@@ -1,0 +1,24 @@
+name: audit-4head-boatracecsv-headprob-leakage
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: 依存関係をインストール
+        run: pip install pandas numpy scipy scikit-learn requests
+      - name: 未来情報混入を厳密監査
+        run: python audit_4head_boatracecsv_headprob_leakage.py
+      - name: 監査結果を保存
+        uses: actions/upload-artifact@v4
+        with:
+          name: head4-boatracecsv-leakage-audit
+          path: /tmp/head4_boatracecsv_leakage_audit/
+          if-no-files-found: error
