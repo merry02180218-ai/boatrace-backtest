@@ -18,6 +18,12 @@ import run_v312_1head_opponent_outer_gate as v312
 import run_v321_1head_julaug_nonpristine_validation as v321
 import onehead_production_profile as prod
 
+def resolve_ticket_strategy(policy):
+ p=str(policy)
+ if p=='v320_HYBRID':return 'HYBRID'
+ if p in v299.STRATEGIES:return p
+ raise RuntimeError(f'unsupported production ticket policy: {p}')
+
 def sep_features(labels,target):
  out=[]
  for ds in sorted(labels.date.astype(str).unique()):
@@ -57,8 +63,8 @@ def main():
  v300.setup_v298();sufs=v298.suffixes(slimhist);curx=cur.copy();curx['head_hit']=0;curx['actual_combo']=''
  for c in slimhist.columns:
   if c not in curx:curx[c]=np.nan
- full=pd.concat([slimhist,curx[list(slimhist.columns)]],ignore_index=True);sl=v300.augment_second(v298.second_long(full,sufs));_,p3,p4=v312.load_cache();sx,_=v317.add_engineered(v310.add_headrisk(sl,p3,p4),'OUTER');p2,n2=p2_fit(sx,target);cl=v300.augment_third(v321._third_fold_long(full,sufs,target.strftime('%Y-%m')));pc,n3=pc_fit(cl,target);base2,_=p2_fit(sl,target);basepc,_=pc_fit(cl,target,l2=.3,drop_start=False);fn=v299.STRATEGIES[prod.TICKET_POLICY];outrows=[]
+ full=pd.concat([slimhist,curx[list(slimhist.columns)]],ignore_index=True);sl=v300.augment_second(v298.second_long(full,sufs));_,p3,p4=v312.load_cache();sx,_=v317.add_engineered(v310.add_headrisk(sl,p3,p4),'OUTER');p2,n2=p2_fit(sx,target);cl=v300.augment_third(v321._third_fold_long(full,sufs,target.strftime('%Y-%m')));pc,n3=pc_fit(cl,target);base2,_=p2_fit(sl,target);basepc,_=pc_fit(cl,target,l2=.3,drop_start=False);strategy=resolve_ticket_strategy(prod.TICKET_POLICY);fn=v299.STRATEGIES[strategy];outrows=[]
  for _,r in head.iterrows():
   code=str(r.race_code).zfill(12);mass=v300.base5(base2[code],basepc[code])[1];pair=v299.pair_prob(p2[code],pc[code],prod.TICKET_ALPHA);top=fn(p2[code],pc[code],pair)[:3];outrows.append({'race_code':code,'final_head_p':float(r.p_head),'opp_mass':float(mass),'p2':{str(k):float(v) for k,v in p2[code].items()},'pc':{f'{s}-{t}':float(v) for (s,t),v in pc[code].items()},'base_tickets':';'.join(f'1-{s}-{t}' for s,t in top)})
- meta={'production_profile':prod.PROFILE_NAME,'target_date':str(target),'training_cutoff':str(target-timedelta(days=1)),'september_rows':len(sep),'head_history_rows':len(headhist),'opponent_history_rows':len(slimhist),'second_features':n2,'third_features':n3,'same_day_outcomes_read':False,'target_or_future_rows':0,'chronology_guard':True,'build_sec':time.perf_counter()-t0};(a.out_dir/'rolling_models.json').write_text(json.dumps({'meta':meta,'races':outrows},ensure_ascii=False,indent=2));print(json.dumps(meta,ensure_ascii=False))
+ meta={'production_profile':prod.PROFILE_NAME,'target_date':str(target),'training_cutoff':str(target-timedelta(days=1)),'september_rows':len(sep),'head_history_rows':len(headhist),'opponent_history_rows':len(slimhist),'second_features':n2,'third_features':n3,'ticket_policy':prod.TICKET_POLICY,'ticket_strategy':strategy,'same_day_outcomes_read':False,'target_or_future_rows':0,'chronology_guard':True,'build_sec':time.perf_counter()-t0};(a.out_dir/'rolling_models.json').write_text(json.dumps({'meta':meta,'races':outrows},ensure_ascii=False,indent=2));print(json.dumps(meta,ensure_ascii=False))
 if __name__=='__main__':main()
