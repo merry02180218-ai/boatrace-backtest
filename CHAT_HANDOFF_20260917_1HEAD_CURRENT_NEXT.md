@@ -178,3 +178,63 @@ Run URL:
 - 9/1〜9/16 retrospective の結果・払戻はユーザー許可済み。
 - **9/17結果・払戻は取得・閲覧せず UNREAD 維持。**
 - audit成功時は結果を本handoffへAFTER追記し、その後 `THIRD close-margin` 4点化監査の設計/実行へ進む。
+
+## 2026-09-17 — AFTER / Run 35189567267 failure analysis + canonical fix
+### Run結果
+- Workflow: `audit-1head-v351-sep1-16`
+- Run: **35189567267**
+- Job: **105098929876**
+- head SHA: `bf69cd3f48001109aaa3d103499726b98ee80651`
+- conclusion: **failure**
+- Step 5 `Rebuild chronology-safe September source through Sep16`: **success**
+  - base_rows = 14760
+  - added_sep_rows = 1752
+  - total_rows = 16512
+- Step 6 `Backtest existing v351 rolling path Sep1-16`: **failure**
+- Artifact upload: skipped; Run artifact = **0件**
+
+### 失敗原因
+- 9/1の `prepare_1head_v351_live_cache.py` から `run_v323_1head_frozen_live_adapter.py` に入り、canonical frozen history cacheを読む時点で停止。
+- exception:
+  `FileNotFoundError: cache_v321_julaug_nonpristine_head_full.csv.gz`
+- current v323が必要とするcanonical history inputは:
+  - `cache_v321_julaug_nonpristine_head_full.csv.gz`
+  - `cache_v321_julaug_nonpristine_slim.csv.gz`
+- repo常駐ファイルではなく、workflow内で再生成する前提だった。
+
+### commit履歴まで検索して正式な既存解決経路を確認
+- commit `63bc1ef6550f71de121f1a91bf72148033ee8ea3`
+  - message: `fix: prepare v321 frozen caches before rolling fit`
+  - `.github/workflows/test-1head-v351-rolling-models.yml` に、rolling fit前に
+    `python run_v321_1head_julaug_nonpristine_validation.py --stage prepare`
+    を実行して `head_full` / `slim` を作る正式stepを追加した過去修正。
+- commit `db3407f03d6199453195ee00c0a313493b5e1b6d`
+  - v323 LIVE用のfull chronological head cacheをv321 prepareで保存する変更。
+- commit `6aaa178499f5a9f1bad6342dee9d783025719959`
+  - v323 LIVE workflowで `head_full` の存在チェックを正式追加。
+- したがって今回も新しいロジックを発明せず、この既存canonical経路を再利用するのが正しい。
+
+### 修正
+`.github/workflows/audit-1head-v351-sep1-16.yml` に Step 5 とrolling backtestの間で以下を追加:
+- `Prepare canonical v321 frozen history caches`
+- `/usr/bin/time ... python run_v321_1head_julaug_nonpristine_validation.py --stage prepare`
+- `test -s cache_v321_julaug_nonpristine_head_full.csv.gz`
+- `test -s cache_v321_julaug_nonpristine_slim.csv.gz`
+
+fix commit:
+- **`a671089f6a26fb8aff49709ed54c78a69a5d8414`**
+- message: `fix: prepare canonical v321 caches before Sep audit`
+- workflowは `workflow_dispatch` only のため、このpushによる予期しないActions runは **0件確認済み**。
+
+### chronology / 9/17 guard
+- v321 prepareはJul/Augまでのfrozen causal history生成で、Septemberを含むと明示的にrejectする。
+- Sep source builderはtarget 2026-09-17に対し cutoff=2026-09-16。
+- retrospective loopはSep1〜Sep16のみ。
+- **2026-09-17結果・払戻は未取得・未閲覧のまま。UNREAD維持。**
+
+### 次の再開地点
+- 新fix SHA `a671089f...` で `audit-1head-v351-sep1-16` を **新規workflow_dispatchで1回だけ発火**する。
+- 旧Jobのrerunは旧SHA `bf69cd...` のworkflowを再実行してしまうため禁止。
+- 現在のGitHub connectorには新規workflow_dispatch write actionが無いため、ユーザー側でGitHub Actions画面から手動発火が必要。
+- 発火後は新Run ID / Job IDを確認し、成功時に logs → Artifact ID/name/content → summary/rows → 日別/レース別 → 9/17未使用guard の順で監査する。
+- Sep auditが確定してから、次に1号艇v351 `THIRD close-margin` 4点化監査へ進む。
