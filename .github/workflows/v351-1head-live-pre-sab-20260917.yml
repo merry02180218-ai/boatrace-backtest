@@ -1,0 +1,78 @@
+name: v351 1-head LIVE PRE SAB 20260917
+
+on:
+  workflow_dispatch:
+  push:
+    paths: ['.github/workflows/v351-1head-live-pre-sab-20260917.yml']
+
+jobs:
+  pre-scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Fetch result-blind PRE inputs
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import fetch_kyoteibiyori_v288_pre_inputs as f
+          f.DAY='20260917'; f.VENUES=list(range(1,25)); f.OUT=Path('/tmp/live_pre'); f.OUT.mkdir(parents=True,exist_ok=True)
+          oc=f.make_card; ow=f.make_waku
+          def card(jo,rno,z,meet):
+              r=oc(jo,rno,z,meet); r['レース日']='2026-09-17'; return r
+          def waku(jo,rno,z):
+              r=ow(jo,rno,z); r['レース日']='2026-09-17'; return r
+          f.make_card=card; f.make_waku=waku; f.main()
+          PY
+      - name: Score PRE with September outcomes hard-excluded
+        run: |
+          python - <<'PY'
+          from datetime import date
+          from pathlib import Path
+          import csv,json
+          import analyze_v136_1head_preselection_inner_threats as v
+          from backtest import race_features
+
+          TARGET=date(2026,9,17); HARD_CUTOFF='20260901'; S_MIN=.82; A_MIN=.80; B_MIN=.78
+          def cls(p): return 'S' if p>=S_MIN else 'A' if p>=A_MIN else 'B' if p>=B_MIN else ''
+          def read(p):
+              with open(p,encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
+          # Historical hard guard. September rows are excluded before any model fit/label access.
+          raw=v.read_csv(v.SRC)
+          src=[]
+          for r in raw:
+              code=str(r.get('race_code','')).zfill(12)
+              if not code or code[:8] >= HARD_CUTOFF: continue
+              if v.ii(r.get('valid_result'))==1 and r.get('date'): src.append(r)
+          if not src: raise RuntimeError('empty historical training set')
+          if any(str(r.get('race_code','')).zfill(12)[:8] >= HARD_CUTOFF for r in src): raise AssertionError('September outcome leak')
+          model=v.fit_lr(v.xlegacy(src),[v.ii(r.get('head_hit')) for r in src])
+          cards=read('/tmp/live_pre/race_cards.csv'); wm={str(r.get('レースコード','')).zfill(12):r for r in read('/tmp/live_pre/waku10.csv')}; cur=[]
+          for c in cards:
+              code=str(c.get('レースコード','')).zfill(12)
+              if code not in wm: continue
+              try: vals=v.boat_pre(race_features(c,wm[code]),1)
+              except Exception as e: print('SKIP_SCORE',code,repr(e)); continue
+              r={k:z for k,z in zip(v.LEGACY_FEATURES,vals)}
+              r.update({'race_code':code,'venue':code[8:10],'race':int(code[10:12]),'name':c.get('艇1_選手名',''),'grade':c.get('艇1_級別',''),'motor2':c.get('艇1_モーター2連対率',''),'nst':c.get('艇1_全国平均ST','')}); cur.append(r)
+          pp=model.predict_proba(v.xlegacy(cur))[:,1]
+          for r,p in zip(cur,pp): r['legacy_pre_p']=float(p); r['pre_class']=cls(float(p))
+          frozen=sorted([r for r in cur if r['pre_class']],key=lambda r:(-r['legacy_pre_p'],r['race_code']))
+          out=Path('/tmp/v351_live_sab'); out.mkdir(exist_ok=True); fields=['rank','pre_class','race_code','venue','race','name','grade','legacy_pre_p','motor2','nst']
+          with (out/'pre_candidates_sab.csv').open('w',encoding='utf-8-sig',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=fields); w.writeheader()
+              for i,r in enumerate(frozen,1): w.writerow({'rank':i,**{k:r.get(k) for k in fields if k!='rank'}})
+          res={'date':'2026-09-17','historical_hard_cutoff':HARD_CUTOFF,'training_max_race_code':max(str(r.get('race_code','')).zfill(12) for r in src),'SEPTEMBER_OUTCOMES_READ':False,'result_or_payout_used':False,'chronology_guard':True,'candidate_count':len(frozen),'class_counts':{g:sum(r['pre_class']==g for r in frozen) for g in 'SAB'},'production_profile':'1HEAD_PRODUCTION_20260915_HEAD078_V351_OPPONENTCORE_G2_045_G3_100'}
+          (out/'pre_result_sab.json').write_text(json.dumps(res,ensure_ascii=False,indent=2),encoding='utf-8'); print(json.dumps(res,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v351-1head-live-pre-sab-20260917
+          retention-days: 3
+          path: |
+            /tmp/v351_live_sab/
+            /tmp/live_pre/race_cards.csv
+            /tmp/live_pre/waku10.csv
