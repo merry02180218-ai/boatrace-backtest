@@ -143,11 +143,58 @@ workflow parallelization:
 - aggregateで `20260917` や範囲外race_codeをhard reject。
 - workflow triggerは **`workflow_dispatch` only** のまま。
 
+## 2026-09-17 — AFTER / Sep1-16 retrospective SUCCESS
+### Run
+- Workflow: `audit-1head-v351-sep1-16`
+- Run: **35201237033**
+- run number: 5
+- head SHA: **`08eccc05af82c5d49cd11520732a8fba94f7ca7d`**
+- prepare Job: **105136223811** — success
+- backtest jobs 8本 — **全success**
+- aggregate Job: **105145377812** — success
+- final Artifact: **10489485417** `audit-v351-sep1-16-35201237033`
+- final artifact digest: `sha256:2680f894bcb79a254aba06b74e9b4d6e93109f74de5f9039ef7230537d522430`
+
+### 確定結果（2026-09-01〜09-16）
+- 購入対象: **30R**
+- 1号艇1着: **22R / 30R = 73.33%**
+- 3連単3点 exact hit: **12R / 30R = 40.00%**
+- 投資: **9,000円**（各R 3点×100円）
+- 払戻: **8,780円**
+- ROI: **97.56%**
+- 損益: **-220円**
+
+formal historical baseline 276Rとの単純比較:
+- 1頭率: 87.32% → Sep1-16 73.33%（-13.99pt）
+- exact3率: 47.46% → Sep1-16 40.00%（-7.46pt）
+- ただしSep監査は30Rの小標本なので、この16日間だけでproductionを変更しない。
+
+### 日別購入があった日
+- 9/1: 1R / head1 1 / exact3 1 / return 780 / ROI 260%
+- 9/3: 2R / 2 / 2 / 930 / 155%
+- 9/5: 4R / 2 / 0 / 0 / 0%
+- 9/6: 5R / 5 / 4 / 2,670 / 178%
+- 9/7: 2R / 0 / 0 / 0 / 0%
+- 9/8: 2R / 2 / 1 / 480 / 80%
+- 9/9: 2R / 2 / 0 / 0 / 0%
+- 9/11: 3R / 3 / 3 / 2,210 / 245.56%
+- 9/12: 2R / 1 / 0 / 0 / 0%
+- 9/13: 2R / 2 / 1 / 1,710 / 285%
+- 9/14: 1R / 0 / 0 / 0 / 0%
+- 9/15: 2R / 1 / 0 / 0 / 0%
+- 9/16: 2R / 1 / 0 / 0 / 0%
+
+### chronology / 9/17 guard verification
+- final `summary.json`: `today_20260917_used = false`
+- `chronology_guard = true`
+- 8 chunk files全部aggregate成功。
+- final `rows.csv` は30Rすべて `20260901`〜`20260916` のrace_code。
+- `20260917...` race_codeは **0件**。
+- **9/17 result/payoutはUNREAD維持。**
+
 ### 次の再開地点
-1. 最新mainから `audit-1head-v351-sep1-16` を **新規workflow_dispatchで1回だけ発火**。
-2. 旧Run 35195900311のrerunは禁止（旧SHA/旧直列workflowを再実行するため）。
-3. 新Runでは prepare → 8 chunk jobs → aggregate を追う。
-4. 成功後、final Artifactの `summary.json` / `daily.csv` / `rows.csv` を読み、購入R・1頭率・exact3率・投資・払戻・ROI・日別/レース別を確定する。
-5. `today_20260917_used=false`、race_codeに20260917なしを再確認。
-6. **9/17 result/payoutはUNREAD維持。**
-7. Sep audit確定後、`THIRD close-margin` 4点化の276R監査へ進む。
+- Sep auditは確定完了。
+- 次は予定どおり、1号艇v351の **THIRD close-margin時だけ4点化** をformal 276Rで監査。
+- 先に現行v351 ticket ranking semanticsを厳密確認。
+- threshold候補 `.05 / .10 / .15` を比較し、追加4点化R数、exact hit増分、総投資、払戻、ROI、月別安定性を評価する。
+- 4号艇v283の実装をそのまま移植せず、1号艇のSECOND/THIRD条件付き確率構造に合わせる。
