@@ -15,74 +15,34 @@ Repo: `merry02180218-ai/boatrace-backtest`
 - HEAD cutoff `.78`
 - opponent core SECOND G2=.45 / THIRD G3=1.00
 - formal baseline: 276R / 1号艇1着241=87.32% / exact3 131=47.46%（3点）
-- 901Rはthreshold audit母集団であり最終購入276Rではない。
-- formal schemas: `lap+turn+straight`, `lap+turn`, `half+turn+straight`, `base`。half系は桐生のみ。
 
-## Wave17/18 固定救済研究
-- cutoff未満 `[.350,.375)` の追加購入研究で、現行276Rとは別母集団。
-- 固定ルール: BOAT3_STRONGER / candidate `1-3-5` / slot2 replacement。
-- Wave18 May-Jun holdout 25R: baseline 5/25 -> fixed3 7/25、rescue2 damage0 net+2。
-- ただし25R/救済2件と小標本、かつ仮説由来にMay/June探索の影響があるためproduction未採用。
-- Wave18 Run `35125138250` / Job `104892212739` / Artifact `10458594916`。
+## 2026-09-17 今日の正式事前候補
+- `202609171306` 尼崎6R: final_head_p=0.8301538300238417 / opp_mass=0.38674739724923224 / base tickets `1-2-4;1-2-3;1-4-2`
+- `202609170412` 平和島12R: final_head_p=0.7901582366125368 / opp_mass=0.42123448085672327 / base tickets `1-4-2;1-4-5;1-2-4`
+- `202609171904` 下関4R: final_head_p=0.8105814572971805 / opp_mass=0.4090498291303686 / base tickets `1-2-5;1-2-3;1-3-2`
+- formal cache Run `35170926144`, Artifact `10477251012`, result/payout unused.
 
-## Wave19 — 本番276Rで固定救済ルールを直接監査
-ユーザー指示: 「本番276Rで見たい」。
+## 既存LIVE / postrace replay
+- manual LIVE: `.github/workflows/manual-1head-v351-live.yml`
+- 終了後の安全な検証経路は昨日すでに作成済み:
+  - `probe_1head_v351_boatcast_exhibition_test_replay.py`
+  - `run_1head_v351_postrace_test.py`
+  - `.github/workflows/test-replay-1head-v351.yml`
+- 既存test replayはPRE cache + Boatcast展示だけを使い、結果/払戻/oddsを使わず `run_1head_v351_live_exhibition_gate.py` → `run_1head_v351_live_finalize.py` を再現する。
 
-### 設計
-- 現行production 276Rを正規production経路から再現する。
-- `276R` と baseline exact3 `131` の二重hard guardを通してからのみ固定救済を適用。
-- eligibilityは事前情報だけ。candidate `1-3-5`、3点維持。重複時はno-op。
-- rescue / damage / net、月別等を監査。
-- 結果を見てproductionを自動変更しない。
+## BEFORE — 尼崎6R safe replay（2026-09-17）
+ユーザー指示: 終了済み尼崎6Rを、昨日作成済みの安全なpostrace replay経路で直前判定として再現して出す。
 
-### 失敗履歴
-1. Run `35129446541` / Job `104906510773`: Wave10前提ファイル名不一致で失敗。
-2. Run `35133449401` / Job `104919825318`: Wave10低mass CSVを`.375以上`へ反転利用する誤設計によりproduction側日付集合が空、`max(days)`で失敗。
-3. このためWave10低mass経路から切り離し、正式production経路で276Rを再構築するよう修正。
-   - Wave19本体 commit `8d76cd8e68ad61888b01c5865e058a26c6ce44e9`
-   - workflow commit `ba29e0902e606d36055046ae09a8c8c86e610151`
-4. 最新確認 Run `35136277468` / Job `104929337412` も失敗。
-   - 前処理は成功。
-   - 本番276R監査で `cache_v321_julaug_second.pkl` が無く `FileNotFoundError`。
-   - まだ `131/276 -> 救済後` の結果は出ていない。
-   - このRunでもSeptember結果/払戻は未使用、production変更なし。
+実施方針:
+1. September結果・払戻は絶対に読まない。UNREAD維持。
+2. 9/17 formal cache `v351-1head-live-cache-20260917` を使う。
+3. 対象は `202609171306` のみ。
+4. deadline-free test probeでBoatcast展示だけ取得する。
+5. venue-aware exhibition gate → v351 finalizeを通す。
+6. `status / head_exhibition_pass / corrected exhibition / tickets` を確認する。
+7. Run/Job/Artifact/commitと結果をAFTERへ追記する。
+8. 1回発火→確認。不要なworkflowやnoop commitは作らない。
 
-### Wave19 次の再開地点
-- 不足している SECOND/THIRD cache を正式生成工程で作るよう workflow を修正する。
-- その後Wave19を再発火。
-- 成功時は必ず `276 / 131` sentinelを確認し、final exact3 / rescue / damage / netをArtifactまで確認する。
-- AFTERとして実装commit、workflow commit、Run/Job/Artifact ID、結果、採否、次の再開地点をこの引き継ぎへ追記する。
-
-## 2026-09-17 今日の事前候補 — 現在の未完了作業
-ユーザーから「今日の事前候補出して」→「続けて」→「お願いします」と依頼あり。
-
-### 確認済み
-- manual LIVE workflow: `.github/workflows/manual-1head-v351-live.yml`
-- これは `live_requests/1head_v351.json` のpushで単一レースを手動判定する入口。
-- judge時は当日全場cache artifact `v351-1head-live-cache-${DATE}` を要求し、各race_code JSONと `v351_exhibition_train.csv` を使う。
-- LIVE判定は結果/払戻を使わないguardあり。
-- 9/15用cache generatorは削除されておらず `.github/workflows/prepare-1head-v351-live-cache-20260915.yml` としてmainに存在する。旧説明の「mainから外れている」は誤り。
-- 9/15 PRE workflowはSeptember outcome rowsをrolling学習へ含める設計になっているため、今回の明示ルール（September結果UNREAD）には流用不可。
-
-### 未完了
-- 2026-09-17の「事前候補一覧」はまだユーザーへ出せていない。
-- 推測や古い候補を出してはいけない。
-
-### BEFORE — 2026-09-17 result-blind PRE/cache recovery
-- 9/17専用PRE workflowとcache workflowを9/15実装から作る。
-- PRE学習は `race_code < 20260901` hard guardで固定し、September outcome/result/payoutを一切読まない。
-- 9/17当日カード/枠情報だけ取得し、S/A/B PRE候補を作る。
-- cacheは現行production profileで `final_head_p`, `opp_mass`, `base_tickets` を作り、`result_or_payout_used=False`, `chronology_guard=True` を必須化。
-- workflow成功後、Artifactから候補を締切順に一覧化する。
-
-### 次の再開地点
-1. 9/17 PRE/cache workflowを作成してpush発火。
-2. PRE→cacheのRun/Job/Artifactを確認。
-3. 場/R/締切/事前HEAD確率/opp_mass/事前3点を出す。
-4. September結果/払戻はUNREAD維持。
-5. AFTERを追記。
-
-## LIVE運用の注意
-- 事前候補に実進入・当日展示など未確定/締切直前情報を混ぜない。
-- 展示後は展示タイム/ST/オリジナル展示/場補正を使うが、結果・払戻は使わない。
-- 事前候補外レースもユーザーが指定すれば手動判別可能にしてある。
+## 次の再開地点
+- `.github/workflows/test-replay-1head-v351.yml` を9/17 request-driven単一race replayへ最小修正し、`test_requests/1head_v351.json` の尼崎6R requestで一度だけ発火する。
+- 結果確認後AFTER追記。
