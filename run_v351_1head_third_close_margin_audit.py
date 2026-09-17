@@ -3,20 +3,24 @@ from __future__ import annotations
 
 """Audit exact-4 THIRD close-margin expansion on formal 1HEAD v351 276R.
 
-The production three HYBRID tickets are never replaced.  For the SECOND branch
+The production three HYBRID tickets are never replaced. For the SECOND branch
 used by HYBRID tickets #1/#2, add conditional THIRD rank3 as exactly one extra
 ticket when P(third rank2|second)-P(third rank3|second) <= threshold.
 
 Thresholds .05/.10/.15 are evaluated on the identical frozen Feb-Aug 276R.
 Historical payouts are joined only after the frozen selection/tickets are rebuilt.
+BoatraceCSV payout rows are primary; if an otherwise valid historical race row is
+missing there, BOAT RACE official result-list data is used only as a payout fallback.
 2026-09-17 outcomes/payouts are never requested.
 """
 
 from pathlib import Path
 import json
-import math
+import re
 
 import pandas as pd
+import requests
+from bs4 import BeautifulSoup
 
 from backtest import rows, BOATRACECSV_REF
 import onehead_production_profile as prod
@@ -31,6 +35,8 @@ THRESHOLDS = (0.05, 0.10, 0.15)
 DEV_MONTHS = ('2026-02', '2026-03', '2026-04', '2026-05', '2026-06')
 SUPPORT_MONTHS = ('2026-07', '2026-08')
 STAKE_PER_TICKET_YEN = 100
+OFFICIAL_RESULTLIST_CACHE: dict[tuple[str, str], dict[str, dict]] = {}
+OFFICIAL_FALLBACK_CODES: set[str] = set()
 
 
 def _payout_map_for(code: str, cache: dict[str, dict[str, dict]]) -> dict[str, dict]:
@@ -44,18 +50,85 @@ def _payout_map_for(code: str, cache: dict[str, dict[str, dict]]) -> dict[str, d
             str(r.get('レースコード', '')).zfill(12): r
             for r in rs if r.get('レースコード')
         }
-        if not cache[day]:
-            raise RuntimeError(f'missing historical payout file/data for {ymd}')
     return cache[day]
+
+
+def _official_resultlist(day: str, jcd: str) -> dict[str, dict]:
+    if day >= '20260917':
+        raise RuntimeError(f'forbidden official payout date requested: {day}')
+    key = (day, jcd.zfill(2))
+    if key in OFFICIAL_RESULTLIST_CACHE:
+        return OFFICIAL_RESULTLIST_CACHE[key]
+
+    url = f'https://www.boatrace.jp/owpc/pc/race/resultlist?hd={day}&jcd={jcd.zfill(2)}'
+    r = requests.get(
+        url,
+        timeout=30,
+        headers={'User-Agent': 'Mozilla/5.0 v351-historical-audit/1.0'},
+    )
+    r.raise_for_status()
+    soup = BeautifulSoup(r.text, 'lxml')
+    out: dict[str, dict] = {}
+
+    def save(race_no: int, combo: str, payout: int) -> None:
+        if not (1 <= race_no <= 12 and payout > 0):
+            return
+        combo = re.sub(r'\s+', '', combo)
+        if not re.fullmatch(r'[1-6]-[1-6]-[1-6]', combo):
+            return
+        code = f'{day}{jcd.zfill(2)}{race_no:02d}'
+        out[code] = {
+            'レースコード': code,
+            '3連単_組番': combo,
+            '3連単_払戻金': str(payout),
+            '_source': 'BOAT_RACE_OFFICIAL_RESULTLIST',
+            '_url': url,
+        }
+
+    # Primary parser: each result-list race is rendered as a table row.
+    for tr in soup.find_all('tr'):
+        cells = [' '.join(x.stripped_strings) for x in tr.find_all(['th', 'td'])]
+        if not cells:
+            continue
+        race_no = None
+        for cell in cells[:3]:
+            m = re.fullmatch(r'\s*(\d{1,2})\s*R\s*', cell)
+            if m:
+                race_no = int(m.group(1))
+                break
+        if race_no is None:
+            continue
+        text = ' | '.join(cells)
+        cm = re.search(r'([1-6])\s*-\s*([1-6])\s*-\s*([1-6])', text)
+        pm = re.search(r'[¥￥]\s*([0-9][0-9,]*)', text)
+        if cm and pm:
+            save(race_no, '-'.join(cm.groups()), int(pm.group(1).replace(',', '')))
+
+    # Defensive fallback for markup changes: parse the rendered text sequence.
+    if len(out) < 12:
+        text = ' '.join(soup.stripped_strings)
+        pat = re.compile(
+            r'(?<!\d)(\d{1,2})\s*R\s+([1-6])\s*-\s*([1-6])\s*-\s*([1-6])\s*[¥￥]\s*([0-9][0-9,]*)'
+        )
+        for m in pat.finditer(text):
+            save(int(m.group(1)), '-'.join(m.group(i) for i in (2, 3, 4)), int(m.group(5).replace(',', '')))
+
+    OFFICIAL_RESULTLIST_CACHE[key] = out
+    return out
 
 
 def _payout(code: str, actual: str, cache: dict[str, dict[str, dict]]) -> tuple[str, int]:
     r = _payout_map_for(code, cache).get(code)
     if r is None:
-        raise RuntimeError(f'missing payout row for {code}')
-    combo = str(r.get('3連単_組番') or '').strip()
+        day, jcd = code[:8], code[8:10]
+        r = _official_resultlist(day, jcd).get(code)
+        if r is None:
+            raise RuntimeError(f'missing payout row in BoatraceCSV and BOAT RACE official resultlist for {code}')
+        OFFICIAL_FALLBACK_CODES.add(code)
+
+    combo = str(r.get('3連単_組番') or '').strip().replace(' ', '')
     try:
-        payout = int(float(str(r.get('3連単_払戻金') or '0').replace(',', '')))
+        payout = int(float(str(r.get('3連単_払戻金') or '0').replace(',', '').replace('¥', '').replace('￥', '')))
     except Exception as e:
         raise RuntimeError(f'invalid payout for {code}: {r.get("3連単_払戻金")}') from e
     if combo != actual:
@@ -126,7 +199,6 @@ def main():
     if prod.TICKET_POLICY != 'v320_HYBRID' or float(prod.TICKET_ALPHA) != 0.70:
         raise AssertionError('ticket policy drift')
 
-    # Rebuild the exact formal production population before reading payout files.
     selected, pre_R = legacy.current_selected()
     selected = selected.copy()
     selected['race_code'] = selected.race_code.astype(str).str.zfill(12)
@@ -198,7 +270,6 @@ def main():
     if (len(support), int(support.base_hit.sum())) != (56, 24):
         raise AssertionError('Jul-Aug support-only sentinel drift')
 
-    # Historical payout join is deliberately after selection/ticket regeneration.
     payout_cache: dict[str, dict[str, dict]] = {}
     payouts = []
     combos = []
@@ -222,7 +293,6 @@ def main():
             monthly_rows.append(m)
     monthly = pd.DataFrame(monthly_rows)
 
-    # Verify exact-four semantics for every threshold.
     for threshold in THRESHOLDS:
         mask = z.gap23 <= threshold + 1e-12
         for _, r in z[mask].iterrows():
@@ -245,8 +315,10 @@ def main():
             'Feb-Jun': {'R': len(dev), 'EXACT3': int(dev.base_hit.sum())},
             'Jul-Aug': {'R': len(support), 'EXACT3': int(support.base_hit.sum())},
         },
-        'payout_source': f'BoatraceCSV/{BOATRACECSV_REF} data/results/payouts/YYYY/MM/DD.csv',
+        'payout_source': f'BoatraceCSV/{BOATRACECSV_REF} data/results/payouts/YYYY/MM/DD.csv primary; BOAT RACE official resultlist fallback for missing rows only',
         'payout_days_joined': len(payout_cache),
+        'official_fallback_R': len(OFFICIAL_FALLBACK_CODES),
+        'official_fallback_codes': sorted(OFFICIAL_FALLBACK_CODES),
         'stake_per_ticket_yen': STAKE_PER_TICKET_YEN,
         'pre_R': pre_R,
         'core_ready_R': int(z.core_ready.sum()),
