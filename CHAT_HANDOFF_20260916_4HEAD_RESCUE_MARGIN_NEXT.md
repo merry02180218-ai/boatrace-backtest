@@ -22,13 +22,21 @@ Repo: `merry02180218-ai/boatrace-backtest`
 - monthly raw -> BET hits: Apr 8->4, May 7->0, Jun 4->1, Jul 11->0, Aug 5->0.
 - Therefore ticket generation is intact; the discrepancy is caused by the comp>=7 market filter.
 
-## BEFORE — COMP THRESHOLD SWEEP
-- Next audit will sweep composite-odds cutoffs without changing candidate or THIRD0.10 ticket semantics.
-- Primary cutoffs: 6.0 / 6.25 / 6.5 / 6.75 / 7.0, plus no-filter diagnostic baseline.
-- Report BET R, hits, stake, payout, ROI, retained raw hits and discarded raw hits.
-- Split Apr-Jun development vs Jul-Aug independent holdout, plus monthly detail and Apr-Aug total.
-- JPY10,000 Dutch / 100-yen units; official closing odds are retrospective diagnostic only.
-- Production comp>=7 is NOT changed by this audit. Any adoption requires holdout evidence after the sweep.
-- September remains `UNREAD`.
+## COMP THRESHOLD SWEEP — SUCCESS
+- Run `35135508327`, Job `104926754630`, Artifact `10463204774` SUCCESS.
+- frozen v283 + THIRD0.10 fixed; only composite-odds cutoff varied.
+- Apr-Jun ROI: no-filter 149.0%, 6.00 246.9%, 6.25 266.5%, 6.50 293.4%, 6.75 262.5%, 7.00 255.4%.
+- Jul-Aug holdout ROI: no-filter 86.4% (16/78 hits), 6.00 23.0% (1/27), 6.25 23.0% (1/27), 6.50/6.75/7.00 0%.
+- Simple lowering of comp cutoff does not robustly increase profitable BET races; comp filter strongly discards Jul-Aug winners.
+- Production comp>=7 remains unchanged.
 
-Status: `COMP_THRESHOLD_SWEEP_PREPARING`
+## BEFORE — RENEWED HEAD-PROBABILITY RESEARCH
+- User explicitly requested another study of 4号艇 head probability.
+- Objective: revisit head-probability selection as a way to increase BET races without changing frozen v283 + THIRD0.10 opponent/ticket semantics yet.
+- First reproduce the exact current fixed candidate population and identify the actual head-probability score/fields used by the current model; do not substitute a guessed probability definition.
+- Re-sweep head-probability thresholds and report candidate R, head4 R/rate, raw THIRD0.10 ticket hits, and closing-odds retrospective ROI where applicable.
+- Primary split remains Apr-Jun development vs Jul-Aug independent holdout; Apr-Aug overall is secondary.
+- Compare against the previously observed head-probability research, but require exact reproduction before using old thresholds as conclusions.
+- Keep production unchanged during research. v96 prohibited. September remains `UNREAD`.
+
+Status: `HEAD_PROBABILITY_RESEARCH_PREPARING`
