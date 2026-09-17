@@ -11,43 +11,35 @@ Repo: `merry02180218-ai/boatrace-backtest`
 - fixed candidate Apr-Jun 86R/35 head4; Jul-Aug 78R/35; Apr-Aug 164R/70.
 - THIRD0.10 old flat-100yen retrospective: Apr-Aug 817 tickets / 35 hits / ROI 135.13%.
 
-## SIX-MONTH SUCCESS
-- Run `35129089769`, Job `104905317906`, Artifact `10461260375` SUCCESS.
-- Mar-Aug 191 candidates / 953 tickets / 55 BET / 136 PASS / 7 BET hits / ROI 146.8327% closing-odds diagnostic.
+## RAW HIT / COMP 要約
+- RAW HIT Run `35131504476`: Apr-Aug 164R / 817 tickets / 35 raw hits; comp>=7 retains 5, discards 30.
+- COMP SWEEP Run `35135508327`: Apr-Jun no-filter ROI 149.0%, comp7 255.4%; Jul-Aug no-filter 86.4%, comp7 0%. Simple comp lowering rejected.
 
-## RAW HIT RECONCILIATION — SUCCESS
-- Run `35131504476`, Job `104913379223`, Artifact `10461493300` SUCCESS.
-- Apr-Aug THIRD0.10 exactly reproduces 164R / 817 tickets / 35 raw hits.
-- comp>=7 retains only 5 of those 35 raw hits; 30 correct raw hits are PASS-discarded.
-- monthly raw -> BET hits: Apr 8->4, May 7->0, Jun 4->1, Jul 11->0, Aug 5->0.
-- Therefore ticket generation is intact; the discrepancy is caused by the comp>=7 market filter.
+## RENEWED HEAD-PROBABILITY — FIRST RUN
+- BoatraceCSV public race-card data. Run `35232199824`, Job `105238910701`, Artifact `10501603555`, SUCCESS.
+- Apr-Jun 13,221R / head4 1,276; Jul-Aug 9,610R / head4 964; 78 fields.
 
-## COMP THRESHOLD SWEEP — SUCCESS
-- Run `35135508327`, Job `104926754630`, Artifact `10463204774` SUCCESS.
-- frozen v283 + THIRD0.10 fixed; only composite-odds cutoff varied.
-- Apr-Jun ROI: no-filter 149.0%, 6.00 246.9%, 6.25 266.5%, 6.50 293.4%, 6.75 262.5%, 7.00 255.4%.
-- Jul-Aug holdout ROI: no-filter 86.4% (16/78 hits), 6.00 23.0% (1/27), 6.25 23.0% (1/27), 6.50/6.75/7.00 0%.
-- Simple lowering of comp cutoff does not robustly increase profitable BET races; comp filter strongly discards Jul-Aug winners.
-- Production comp>=7 remains unchanged.
+## STRICT LEAKAGE AUDIT — SUCCESS
+- Run `35234326600`, Job `105246227265`, Artifact `10503431028`, head `5ac632922a71e633d1ebb54080bc80442f2e0fe3`, SUCCESS.
+- Corrected feature availability selection uses Apr-Jun training rows ONLY. Imputation/scaling/model fit also Apr-Jun only; Jul-Aug predict only.
+- 78 fields remained usable. No train/validation race-key duplication. Result-derived fields forbidden from model matrix. September access blocked.
+- Jul-Aug untouched validation AUC `0.727090`.
+- 10 shuffled-target negative controls average AUC `0.503484`, collapsing to chance as expected.
+- Corrected threshold results unchanged from first run: cut .30 => Apr-Jun 405R/150 head4=37.04%, Jul-Aug 369R/145=39.30%; .35 => 217/87=40.09%, 203/93=45.81%; .40 => 110/45=40.91%, 114/58=50.88%.
+- Conclusion: no obvious future/result leakage detected by implemented checks; head probability is suitable for downstream retrospective research. This is not a mathematical proof of zero leakage; field-timing semantics remain a continuing audit concern.
+- Production unchanged. September `UNREAD`.
 
-## RENEWED HEAD-PROBABILITY RESEARCH — FIRST RUN SUCCESS
-- Data source: BoatraceCSV public CSV (`https://boatracecsv.github.io/data`), race-card pre-race fields.
-- Run `35232199824`, Job `105238910701`, Artifact `10501603555`, head `70448954df69f915c94af95628327c056a06d5da`, SUCCESS.
-- Apr-Jun training rows 13,221 / head4 1,276; Jul-Aug unused validation rows 9,610 / head4 964; 78 usable fields.
-- Examples: cut .30 => Apr-Jun 405R / head4 37.04%, Jul-Aug 369R / 39.30%; cut .35 => 217R / 40.09%, 203R / 45.81%; cut .40 => 110R / 40.91%, 114R / 50.88%.
-- September remained UNREAD and production unchanged.
-- IMPORTANT: this first run is NOT yet certified leakage-free. Feature availability filtering was calculated from Apr-Aug combined rows, so the Jul-Aug validation period influenced only which columns were considered sufficiently non-missing. Labels were not used in that selection, but strict temporal isolation requires correction and re-audit.
+## BEFORE — HEAD PROBABILITY × CURRENT 164R × THIRD0.10 × COMPOSITE ODDS
+- User requested continuation after leakage audit.
+- Next objective: attach corrected BoatraceCSV head probability to exact frozen 164 current candidates and evaluate whether it can rescue profitable PASS races while preserving current BETs.
+- Reproduce exact Apr-Jun 86R/35 head4 and Jul-Aug 78R/35 head4 via frozen candidate builder.
+- Recompute corrected head probability deterministically using Apr-Jun all-race training only; merge by 12-digit race_code.
+- Keep v283 + THIRD0.10 ticket semantics frozen and verify ticket reproduction guard: Apr-Aug 817 tickets / 35 raw hits.
+- Obtain retrospective closing odds with existing audited helper; compute composite odds and JPY10,000 Dutch payout exactly as current research semantics.
+- Baseline = current comp>=7 BETs unchanged.
+- Rescue only current PASS (`comp<7`) using 2D grid: head probability cut .20-.45 and optional composite lower bound 0/5.5/6.0/6.25/6.5/6.75. Report Apr-Jun development and Jul-Aug untouched validation separately.
+- Metrics: total BET R, added rescue R, head4 R/rate, ticket hits, stake, payout, profit, ROI, and delta vs baseline.
+- Do not select a production change from Apr-Aug aggregate alone; robustness on Jul-Aug is mandatory evidence.
+- Production remains unchanged until explicit approval. v96 prohibited. September remains `UNREAD`.
 
-## BEFORE — STRICT LEAKAGE AUDIT
-- User explicitly requested a leakage audit before using the renewed head probability.
-- Audit must be stricter than the first run and use Japanese reporting where practical.
-- Required checks:
-  1. Select usable fields from Apr-Jun training rows ONLY; Jul-Aug must not influence field selection, imputation, scaling, fitting, threshold choice, or any learned preprocessing.
-  2. Audit all selected BoatraceCSV race-card field names and exclude any field whose timing cannot be proven pre-race / pre-decision. Results may be used ONLY to create the target label after race-key matching.
-  3. Re-run Apr-Jun -> Jul-Aug untouched validation with the corrected pipeline and compare the full head-probability threshold curve against Run 35232199824.
-  4. Add shuffled-target negative-control test. With training labels randomized, validation discrimination / high-probability head rates must collapse toward chance; otherwise flag possible leakage or structural bug.
-  5. Add date/race-key integrity checks: no duplicate race keys across train/validation, no September access, no target/result-derived column in model matrix.
-  6. Save field list, audit flags, corrected threshold sweep, and negative-control summary as artifact.
-- Do NOT change production based on this audit alone. v96 prohibited. September remains `UNREAD`.
-
-Status: `HEAD_PROBABILITY_STRICT_LEAKAGE_AUDIT_PREPARING`
+Status: `HEADPROB_PASS_RESCUE_ROI_INTEGRATION_PREPARING`
