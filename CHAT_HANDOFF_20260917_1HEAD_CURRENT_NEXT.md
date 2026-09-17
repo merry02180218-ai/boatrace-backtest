@@ -36,39 +36,28 @@ BASE: 131 hits, stake 82800, return 86390, profit +3590, ROI 104.34%.
 
 ---
 
-# BEFORE — 次の作業: HEAD × opponent mass × 直前判定の合成ROIグリッド探索
-ユーザー指示（2026-09-17）:
-「頭確率とopponent mass判定、直前判定でそれぞれ値変えて一番合成オッズROIが良くなるとこを探したい」→実施許可済み。
+# BEFORE — HEAD × opponent mass × 直前判定の合成ROIグリッド探索
+ユーザー指示: 「頭確率とopponent mass判定、直前判定でそれぞれ値変えて一番合成オッズROIが良くなるとこを探したい」実施許可済み。
 
-## 目的
-現行productionを中心に3軸を同時に振り、単独軸最適化ではなく相互作用込みで、historicalの合成オッズROIが高く、かつ周辺条件でも崩れにくい安定帯を探す。
+## 探索仕様
+- HEAD cutoff: .775/.7775/.780/.7825/.785/.7875/.790
+- opponent mass min: .350/.3625/.375/.3875/.400/.4125/.425
+- exhibition env_w: .05/.10/.15
+- exhibition q: .60/.65/.70
+- 計441セル。
+- ticket=v320 HYBRID基本3点固定。close-margin 4点化は混ぜない。
+- opponent core G2=.45/G3=1.00固定。
+- productionセル (.780,.375,.10,.65) は 276R / HEAD241 / exact3 131 を必須sentinel。
+- 2026-09-17 result/payout hard reject、UNREAD維持。
 
-## 探索方針
-- HEAD cutoff: 現行 .780 周辺を細かく探索（初期候補 .775/.7775/.780/.7825/.785/.7875/.790。既存コード/過去監査の再利用可能範囲を確認して必要なら拡張）。
-- opponent mass min: 現行 .375 周辺（初期候補 .350/.3625/.375/.3875/.400/.4125/.425）。
-- 直前判定: 現行 exhibition `v332_ATTACK_ENV_SOFT_V345_ATTACKCORE` の env_w=.10 / q=.65 を中心に、既存semanticsを壊さず env_w と q の近傍を探索する。まず既存実装・過去監査で有効だった値を確認してグリッドを確定する。
-- ticketは現行v320 HYBRID基本3点を固定。THIRD close-margin 4点化は混ぜない。
-- opponent core G2=.45/G3=1.00は固定し、今回の探索軸にしない。
+## 進捗 / 障害
+- manifest Run 35234365735 / Job 105246363819 は成功。
+- 実計算workflowを追加したが Run 35236067163 / Job 105252175139 は依存関係installで失敗。
+- ログ確認結果: repo直下に存在しない `requirements.txt` を `pip install -r requirements.txt` していたのが原因。モデル/441セル計算には未到達。
 
-## 評価指標
-各組み合わせで最低限:
-- R / HEAD hits & rate / exact3 hits & rate
-- tickets / stake / return / profit / ROI
-- 合成オッズ（可能なら race-level combined odds と全体要約）
-- 月別 R / hit / stake / return / ROI
-- 最大DDまたは時系列収支の安定性指標
-- 現行productionとの差分
-- ROI最高点だけでなく、その周辺セルのROI・R数が維持される安定帯を確認
-
-## ガード
-- 2026-09-17 result/payoutはhard reject、UNREAD維持。
-- formal productionセル (.780,.375,env_w=.10,q=.65) は既知baseline 276R / HEAD241 / exact3 131 を再現できることをsentinelにする。
-- race/ticket identityを可能な限り既存production定数で照合。
-- payout欠損は前監査同様、BoatraceCSV primary + historical official fallback、9/17以降は禁止。
-- Jul-Augのnon-pristine性は明示し、ROI最大一点をそのままproduction昇格しない。
-
-## 次の実作業
-1. 最新のHEAD/opponent/exhibition監査コードを検索して再利用可能な部品を特定。
-2. グリッド監査script/workflowを実装。
-3. Actions発火。
-4. 完了後、Run/Job/Artifact、全グリッド上位と安定帯、production比較を本handoffへAFTER追記。
+## 2026-09-18 00:10 JST 修正
+- 既存の正常稼働 `v351-1head-third-close-margin-audit.yml` を確認し、同じ依存関係 `numpy pandas scipy scikit-learn==1.6.1 requests beautifulsoup4 lxml` の直接install方式へ変更。
+- runnerも既存監査に合わせ `ubuntu-24.04`。
+- 失敗時にも result/summary とartifactを可能な範囲で残すよう `if: always()` を追加。
+- 修正commit: `53b1a4f9b8bdcb9c6f202ba96dfef5e5552687c7`
+- **次の再開地点:** `.github/workflows/v351-1head-joint-roi-grid.yml` を手動発火し、fresh Runのaudit jobを確認。成功ならArtifactの `summary.csv/monthly.csv/result.json` を回収し、441セルのraw best + 周辺安定帯 + production比較を監査する。失敗ならログから次の原因を特定し、盲目的rerunしない。
