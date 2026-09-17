@@ -3,205 +3,191 @@
 Repo: `merry02180218-ai/boatrace-backtest`
 
 ## 最重要ルール / ユーザー運用方針
-- 最新GitHub + 最新引き継ぎを、古いチャット/記憶より必ず優先する。
-- 作業開始前に「これからやること」を本handoffへ記録し、完了後に結果・commit SHA・Actions Run/Job/Artifact・結論・次の再開地点を追記する。
-- workflowを書き換える前にtriggerを確認する。不要なpush発火、noop commit、新規workflow乱立は禁止。
-- 1回発火→確認→次。失敗時は logs / artifact / existing code / commit履歴を確認してから修正する。
-- 未確認の完了/発火/結果を断言しない。
-- 自動LIVEより、ユーザーが「判別して」と言った時の手動取得/判定を優先する。
+- 最新GitHub + 本handoffを、古いチャット/記憶より必ず優先する。
+- 作業開始前に「これからやること」、完了後に結果・commit SHA・Actions Run/Job/Artifact・結論・次の再開地点を本handoffへ記録する。
+- 失敗時は logs / artifact / existing code / commit履歴を先に確認し、盲目的にrerunしない。
+- 未確認の完了/成功を断言しない。
+- 自動LIVEより、ユーザーが「判別して」と言った時の手動取得/判定を優先。
 - HEAD学習特徴へ展示を直接追加しない。展示は post-ranking / ticket-rescue / live final correction のみ。
 
 ## September結果の扱い
-- 今回のretrospectiveに限り **2026-09-01〜09-16** の確定結果・払戻を評価用として読むことをユーザー許可済み。
+- retrospective評価に限り **2026-09-01〜09-16** の結果・払戻は読み取り許可済み。
 - **2026-09-17当日結果・払戻は絶対に読まない。UNREAD維持。**
-- 9/17 LIVE/判定は pre-race / exhibition のみ使用可。
+- 9/17は pre-race / exhibition のみ使用可。
 
 ## 現行1号艇 production
 Profile: `1HEAD_PRODUCTION_20260915_HEAD078_V351_OPPONENTCORE_G2_045_G3_100`
-- HEAD: v308 / cutoff 0.78
-- opponent mass min: 0.375
-- SECOND: v317_OUTER_L2_1
-- THIRD: v318_DROPSTART_T0.1
-- ticket: `v320_HYBRID`, alpha 0.70, 基本3点
-- exhibition: v332_ATTACK_ENV_SOFT_V345_ATTACKCORE, env w=.10 / q=.65
-- opponent core: SECOND G2=.45 / THIRD G3=1.00
-- formal historical baseline: 276R / 1頭241R=87.32% / exact3 131R=47.46%
+- HEAD v308 / cutoff 0.78
+- opponent mass min 0.375
+- SECOND `v317_OUTER_L2_1`
+- THIRD `v318_DROPSTART_T0.1`
+- ticket `v320_HYBRID`, alpha 0.70, 基本3点
+- exhibition `v332_ATTACK_ENV_SOFT_V345_ATTACKCORE`, env w=.10 / q=.65
+- opponent core SECOND G2=.45 / THIRD G3=1.00
+- formal historical baseline: **276R / 1号艇頭241R=87.32% / exact3 131R=47.46%**
 
-## 9/17 formal candidates（結果はUNREAD）
-Canonical cache Artifact 10477251012 / Run 35170926144 / head SHA `d951448ff9e6b397454fff796cf70bbf0c08bfcf`。
+## 9/17 formal candidates（結果UNREAD）
+Canonical cache Artifact **10477251012** / Run **35170926144** / head `d951448ff9e6b397454fff796cf70bbf0c08bfcf`
 1. 平和島12R `202609170412`: p=0.7901582366 / opp_mass=0.4212344809 / `1-4-2;1-4-5;1-2-4`
-2. 尼崎6R `202609171306`: p=0.8301538300 / opp_mass=0.3867473972 / PRE `1-2-4;1-2-3;1-4-2`; safe post-deadline replay final DROP, Run 35181006387 / Job 105072935543 / Artifact 10480421315
+2. 尼崎6R `202609171306`: p=0.8301538300 / opp_mass=0.3867473972 / PRE `1-2-4;1-2-3;1-4-2`; safe replay final DROP, Run **35181006387** / Job **105072935543** / Artifact **10480421315**
 3. 下関4R `202609171904`: p=0.8105814573 / opp_mass=0.4090498291 / `1-2-5;1-2-3;1-3-2`
 
-## 次研究候補
-Sep audit確定後、1号艇v351の `THIRD close-margin` 時だけ4点化を formal 276Rで監査。
-- 4号艇v283では THIRD差<=0.10 をproduction採用済み（commit `376c636839af499821244ca660e382a43a16d644`）。
-- 1号艇は閾値 .05/.10/.15、的中増、追加点数、ROI、月別安定性を比較する。
-- 先に現行ticket ranking semanticsを確認し、4号艇実装をそのまま移植しない。
+## Sep1-16 retrospective 確定
+Workflow `.github/workflows/audit-1head-v351-sep1-16.yml`
+Run **35201237033** / aggregate Job **105145377812** / Artifact **10489485417**
+- 30R
+- 1号艇1着 22/30 = 73.33%
+- exact3 12/30 = 40.00%
+- stake 9,000円
+- return 8,780円
+- ROI 97.56%
+- profit -220円
+- `today_20260917_used=false`
+- `chronology_guard=true`
+- 20260917 race_code 0件
+- **9/17 result/payout UNREAD維持**
 
-## Sep1-16 retrospective 監査経路
-Workflow: `.github/workflows/audit-1head-v351-sep1-16.yml`
-- `workflow_dispatch` only。
-- `build_1head_september_training_source.py --target-date 2026-09-17 --start-date 2026-09-01`
-- canonical Jul/Aug v321 frozen cacheを `run_v321_1head_julaug_nonpristine_validation.py --stage prepare` で生成。
-- Sep1はfrozen production history、Sep2+は prior-day September rowsのみでrolling。
-- predictions/exhibition pathを先に作り、その後9/1〜9/16 results/payoutsを評価JOIN。
-- 成功時 `out/rows.csv` / `out/daily.csv` / `out/summary.json` をartifact化。
+---
 
-## これまでの失敗と修正
-### 1) Run 35189567267 / Job 105098929876
-- Sep source build成功。
-- `cache_v321_julaug_nonpristine_head_full.csv.gz` 不足で失敗。
-- canonical v321 prepare stepを追加。
-- fix commit `a671089f6a26fb8aff49709ed54c78a69a5d8414`。
+# 現在の作業: THIRD close-margin時だけ4点化
+ユーザー指示: **「3着候補が僅差のときだけ4点化」**
 
-### 2) Run 35190832903 / Job 105102822607
-- source build / v321 cache prepare成功。
-- 9/2 rollingで prior-day 9/1 rowを同月という理由だけで chronology leak扱いして失敗。
-- `run_v323_1head_frozen_live_adapter.py` のrolling guardを日付単位に修正。
-- rolling=Trueは history date < target_date のみ許可、same-day/futureをreject。
-- strict modeは従来の月単位guard維持。
-- code fix `32e77ff2c8317dc10947118bc915b36b6ee00eb4`。
-- workflow回帰チェック追加 `83d08cdb6209d2ca2384d55609ef70dc55f8b772`。
-- handoff update `921b575bc6ba4965ae384b1bbac4898c7f878cce`。
+## 1号艇用の確定semantics
+現行 `v320_HYBRID` の3点は保持する。HYBRIDは:
+- ticket #1 = joint最上位 `(SECOND=s, THIRD rank1)`
+- ticket #2 = 同じSECOND=sの次点 `(s, THIRD rank2)`
+- ticket #3 = 別SECOND枝の最上位
 
-### 3) Run 35195900311 / Job 105118940286
-- head SHA `921b575bc6ba4965ae384b1bbac4898c7f878cce`
-- chronology guard regression: success
-- September source build: success
-  - feature_rows 2443 / valid_result_rows 2430 / target_or_future_rows 0 / same_day_outcomes_read false
-- canonical v321 frozen cache prepare: success
-  - wall 267.06 sec / max RSS 3,323,812 KB
-- Sep1 rolling target:通過
-- Sep2 rolling target: failure
-- artifact upload: skipped
-- failure: `prepare_1head_v351_rolling_models.py` が `v299.STRATEGIES[prod.TICKET_POLICY]` を直接参照し、profile値 `v320_HYBRID` に対して `KeyError`。
-- `v299.STRATEGIES` 側の正式strategy keyは `HYBRID`。正式LIVE finalizerも `STRATEGIES['HYBRID']` を使用している。
+したがって4点化は、主SECOND枝 `s` の条件付きTHIRDについて
+`P(rank2|s) - P(rank3|s) <= threshold`
+の時だけ、`(s, THIRD rank3)` を**4点目として1点だけ追加**する。
+- baseline3点は置換しない
+- expanded raceは必ずexactly 4 tickets
+- threshold比較: **.05 / .10 / .15**
+- 4号艇v283の考え方を参照するが、1号艇HYBRID構造に合わせた実装
 
-## 2026-09-17 — AFTER / ticket policy fix + runtime parallelization
-### ticket policy修正
-`prepare_1head_v351_rolling_models.py` に `resolve_ticket_strategy()` を追加。
-- `v320_HYBRID` → `HYBRID`
-- v299に既存のstrategy名ならそのまま使用
-- 未知のproduction policy名はsilent fallbackせず `RuntimeError`
-- rolling metaへ `ticket_policy` / `ticket_strategy` を保存
+参考: 4号艇production close-margin commit
+- `376c636839af499821244ca660e382a43a16d644`
+- 4号艇はTHIRD rank2-rank3差 <=0.10をproduction採用済み
 
-commit:
-- **`cb2b35b535f115189f2e80890983bbc5e65359c6`**
-- message: `fix: resolve v351 rolling ticket policy name`
+## BEFORE記録
+handoff commit:
+- `4babb2539385fc926723e5a164f361ad7a28c5c8`
+- message `handoff: start 1head third close-margin audit`
 
-### 実データsmoke test
-上記code fileは既存 `.github/workflows/test-1head-v351-rolling-models.yml` のpush対象だったため、commit時に既存rollingテストが自動発火した。
-- Run: **35199667608**
-- Job: **105131123899**
-- head SHA: `cb2b35b535f115189f2e80890983bbc5e65359c6`
-- conclusion: **success**
-- canonical v321 prep: success
-- `Train rolling v308 v317 v318`: **success**
-- log: `ROLLING_MODELS_OK`
-- target: 2026-09-15 / training_cutoff: 2026-09-14
-- September rows: 2118
-- head/opponent history rows: 47221 / 47221
-- SECOND features: 277 / THIRD features: 221
-- `ticket_policy = v320_HYBRID`
-- `ticket_strategy = HYBRID`
-- `same_day_outcomes_read = False`
-- `target_or_future_rows = 0`
-- `chronology_guard = True`
-- races output: **153**
-- rolling build: 512.7 sec / wall 514.1 sec
-- Artifact: **10488126888** `v351-1head-rolling-models-20260915`
-- 3-ticket assertionも全raceで通過。
+## 監査実装
+script:
+- `run_v351_1head_third_close_margin_audit.py`
+- commit **`80e8dccb248c768a5f2116705ee3155fb1597e42`**
+- message `audit: add v351 third close-margin 4-ticket analysis`
 
-これにより Run 35195900311 の `KeyError: v320_HYBRID` は実データrolling経路で解消確認済み。
+workflow:
+- `.github/workflows/v351-1head-third-close-margin-audit.yml`
+- commit **`752e1e0737dbab811d4b86789e0f1fa5a6e4134f`**
+- message `workflow: run v351 third close-margin audit`
 
-### 長時間問題への修正
-Run 35195900311ではSep1〜Sep2だけでもStep 8が非常に重く、16日直列では90分timeoutリスクが高かったため、同時に監査をchunk並列化した。
+監査scriptの重要guard:
+- formal v351母集団を `legacy.current_selected()` から再構築
+- opponent core調整後にHYBRID top3を再生成
+- payoutを読む前にformal sentinelを強制確認
+- expected: PASS=276 / HEAD=241 / EXACT3=131
+- race identity SHA / ticket identity SHAもproduction定数と一致必須
+- Feb-Jun sentinel: 220R / exact3 107
+- Jul-Aug support-only sentinel: 56R / exact3 24
+- 9/17以降のpayout/result requestはhard reject
+- thresholdごとに expanded_R / added tickets / exact hit gain / stake / return / ROI / monthly を出力
 
-新script:
-- `audit_1head_v351_sep_chunk.py`
-- commit **`57fe01ddd37c6383852c93ef4b11cca69140f7e2`**
-- 2日単位でrolling/backtestを独立実行。
-- chunk開始日前までST stateを再構築し、chunk内は日次更新。
-- Sep1のみfrozen production history、Sep2+はprior-day Sep history。
-- 9/17以降をhard reject。
-- rolling meta chronology / ticket_strategy=HYBRID / 3点uniqueを検証。
+## Run #1 — 失敗、原因確定
+Workflow: `v351 1-head THIRD close-margin audit`
+Run **35217755431** / run #1 / head **`752e1e0737dbab811d4b86789e0f1fa5a6e4134f`**
+Conclusion: **failure**
 
-workflow parallelization:
-- commit **`dee017c223692825e2f3f572daec7da9f0aa60bb`**
-- prepare job: chronology regression + ticket policy軽量回帰 + Sep source rebuild + v321 cacheを1回だけ生成・artifact化。
-- backtest job: 8並列matrix
-  - Sep1-2
-  - Sep3-4
-  - Sep5-6
-  - Sep7-8
-  - Sep9-10
-  - Sep11-12
-  - Sep13-14
-  - Sep15-16
-- aggregate job: 8 chunkを統合し `rows.csv` / `daily.csv` / `summary.json` を作る。
-- aggregateで `20260917` や範囲外race_codeをhard reject。
-- workflow triggerは **`workflow_dispatch` only** のまま。
+Jobs:
+- prepare **105190185352** — success
+- third **105191627528** — success
+- base-third **105191627562** — success
+- second **105191627671** — success
+- audit **105193097452** — failure
 
-## 2026-09-17 — AFTER / Sep1-16 retrospective SUCCESS
-### Run
-- Workflow: `audit-1head-v351-sep1-16`
-- Run: **35201237033**
-- run number: 5
-- head SHA: **`08eccc05af82c5d49cd11520732a8fba94f7ca7d`**
-- prepare Job: **105136223811** — success
-- backtest jobs 8本 — **全success**
-- aggregate Job: **105145377812** — success
-- final Artifact: **10489485417** `audit-v351-sep1-16-35201237033`
-- final artifact digest: `sha256:2680f894bcb79a254aba06b74e9b4d6e93109f74de5f9039ef7230537d522430`
+Artifacts generated before audit failure:
+- **10495950804** `v351-third-margin-prepare-35217755431`
+- **10496156494** `v351-third-margin-second-35217755431`
+- **10495886548** `v351-third-margin-base-third-35217755431`
+- **10496506040** `v351-third-margin-third-35217755431`
+- final audit artifactは未生成
 
-### 確定結果（2026-09-01〜09-16）
-- 購入対象: **30R**
-- 1号艇1着: **22R / 30R = 73.33%**
-- 3連単3点 exact hit: **12R / 30R = 40.00%**
-- 投資: **9,000円**（各R 3点×100円）
-- 払戻: **8,780円**
-- ROI: **97.56%**
-- 損益: **-220円**
+### 重要: formal 276R sentinelは通過済み
+失敗位置は payout join loop 内 `_payout()`。コード上、PASS/HEAD/EXACT3・identity SHA・Feb-Jun/Jul-Aug sentinel確認を通過した後にしか到達しないため、**Run #1は正式276R / 241頭 / 131 exact3母集団を再現した上で払戻JOINまで進んでいる**。
 
-formal historical baseline 276Rとの単純比較:
-- 1頭率: 87.32% → Sep1-16 73.33%（-13.99pt）
-- exact3率: 47.46% → Sep1-16 40.00%（-7.46pt）
-- ただしSep監査は30Rの小標本なので、この16日間だけでproductionを変更しない。
+### 失敗原因
+Audit log:
+`RuntimeError: missing payout row for 202602102303`
 
-### 日別購入があった日
-- 9/1: 1R / head1 1 / exact3 1 / return 780 / ROI 260%
-- 9/3: 2R / 2 / 2 / return 930 / ROI 155%
-- 9/5: 4R / 2 / 0 / return 0 / ROI 0%
-- 9/6: 5R / 5 / 4 / return 2,670 / ROI 178%
-- 9/7: 2R / 0 / 0 / return 0 / ROI 0%
-- 9/8: 2R / 2 / 1 / return 480 / ROI 80%
-- 9/9: 2R / 2 / 0 / return 0 / ROI 0%
-- 9/11: 3R / 3 / 3 / return 2,210 / ROI 245.56%
-- 9/12: 2R / 1 / 0 / return 0 / ROI 0%
-- 9/13: 2R / 2 / 1 / return 1,710 / ROI 285%
-- 9/14: 1R / 0 / 0 / return 0 / ROI 0%
-- 9/15: 2R / 1 / 0 / return 0 / ROI 0%
-- 9/16: 2R / 1 / 0 / return 0 / ROI 0%
+BoatraceCSV `data/results/payouts/2026/02/10.csv` には
+- 23場01R,02R,04R... はある
+- **`202602102303` (23場03R) だけ欠損**
+一方 `data/results/realtime/2026/02/10.csv` には `202602102303` が存在し、結果は `1-3-4` と確認できる。
+つまりモデル/母集団の失敗ではなく、**BoatraceCSV historical payout row欠損**が原因。
 
-### chronology / 9/17 guard verification
-- final `summary.json`: `today_20260917_used = false`
-- `chronology_guard = true`
-- 8 chunk files全部aggregate成功。
-- final `rows.csv` は30Rすべて `20260901`〜`20260916` のrace_code。
-- `20260917...` race_codeは **0件**。
-- **9/17 result/payoutはUNREAD維持。**
+## 払戻fallback修正
+最新main commit:
+- **`eeb7e8a020e1f0c725a10770bc01db334a8a24e6`**
+- message `fix: fallback to official payouts for v351 margin audit`
 
-## 2026-09-17 — BEFORE / THIRD close-margin 4点化監査
-ユーザー指示: 「3着候補が僅差のときだけ4点化 を行って」。
+変更:
+- BoatraceCSV payoutをprimaryのまま維持
+- BoatraceCSVで有効なhistorical raceのpayout rowが欠損した場合のみ、BOAT RACE公式 `resultlist` をfallback
+- official fallbackでも `day >= 20260917` はhard reject
+- official fallback race codeを `official_fallback_codes` としてresultに記録
+- BoatraceCSV + official双方に無ければfail closed
+- comboがactualと不一致、payout<=0もfail closed
+- **9/17 result/payoutは読まない**
 
-これからやること:
-1. 最新main `e2cd25ae6ebbea979fb38d973841e92f377267b0` を基準に、現行v351 `v320_HYBRID` の3点ランキングsemanticsを確認する。
-2. 4号艇v283 production commit `376c636839af499821244ca660e382a43a16d644` の close-marginロジックを参照するが、1号艇へ機械移植しない。
-3. formal historical 276Rを母集団として、THIRD候補の条件付き確率差で threshold `.05 / .10 / .15` を比較する。
-4. 各thresholdで、4点化R数、追加ticket数、exact3 hit増分、総投資、払戻、ROI、月別安定性を算出する。
-5. 9/17 result/payoutは一切読まず、UNREADを維持する。
-6. 結果確定後、script/workflow/Run/Job/Artifact/commit SHAと結論を本handoffへAFTER追記する。
+---
 
-### 次の再開地点
-- 上記THIRD close-margin 4点化監査を実行中。
+# 現在走っているRun — 次チャットはここから
+修正版pushで自動発火済み:
+- Workflow: `v351 1-head THIRD close-margin audit`
+- **Run 35221732112**
+- run #2
+- head SHA **`eeb7e8a020e1f0c725a10770bc01db334a8a24e6`**
+- snapshot時点: **in_progress**
+
+snapshot job状態:
+- prepare Job **105203286991** — success
+- base-third Job **105204954293** — success
+- second Job **105204954402** — success
+- third Job **105204954418** — success
+- audit Job **105206482047** — queued
+
+## 次の再開地点（最優先）
+次チャットでは最初に最新GitHub + 本handoffを読み、**Run 35221732112 / Job 105206482047 の結果確認から再開**する。
+
+成功した場合:
+1. final audit Artifact IDを取得
+2. `result.json`, `summary.csv`, `monthly.csv`, `rows.csv` を確認
+3. formal sentinelが **276 / 241 / 131** か再確認
+4. `.05 / .10 / .15` それぞれについて以下を比較
+   - expanded_R
+   - added_tickets
+   - exact3_hits / gain_hits
+   - hit rate
+   - stake_yen
+   - return_yen
+   - profit_yen
+   - ROI
+   - 月別安定性
+5. `official_fallback_R` / `official_fallback_codes` を確認
+6. `TODAY_20260917_RESULT_OR_PAYOUT_USED=false` / September outcomes unread を確認
+7. 監査結果だけで勝手にproduction昇格せず、結果をユーザーへ詳しく報告
+8. AFTERとしてRun/Job/Artifact/metrics/結論/次再開地点を本handoffへ追記
+
+失敗した場合:
+- rerun前に Job **105206482047** のlogsを読む
+- payout fallback parserなのか別のmissing rowなのかを特定
+- formal sentinel driftなら修正せず原因調査を優先
+
+## 現時点のproduction状態
+- **v351 productionはまだ3点のまま。4点化は未昇格。**
+- `.05/.10/.15` の正式監査結果待ち。
+- **2026-09-17 result/payoutはUNREAD。**
