@@ -4,17 +4,19 @@ on:
 permissions:
   contents: read
 jobs:
-  probe:
+  model:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Probe February fun-site sources
-        run: python research/run_3head_funsite_50pct_probe.py
+      - name: Install research dependencies
+        run: pip install pandas numpy scikit-learn
+      - name: Run February-frozen March one-shot head model
+        run: python research/run_3head_funsite_50pct_model.py
       - uses: actions/upload-artifact@v4
         with:
-          name: research-3head-funsite-50pct-probe
-          path: research_3head_funsite_50pct_probe.json
+          name: research-3head-funsite-50pct-model
+          path: research_3head_funsite_50pct_model_result.json
