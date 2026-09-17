@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
 permissions: {contents: read, actions: read}
 jobs:
-  audit:
+  prepare:
     runs-on: ubuntu-24.04
-    timeout-minutes: 90
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -16,7 +16,6 @@ jobs:
           python - <<'PY'
           import pandas as pd
           import run_v323_1head_frozen_live_adapter as live
-
           prior=pd.DataFrame([{'date':'2026-09-01','month':'2026-09','race_code':'202609010101'}])
           live._audit_history(prior,'2026-09-02',True)
           fallback=pd.DataFrame([{'month':'2026-09','race_code':'202609010101'}])
@@ -39,6 +38,30 @@ jobs:
           live._audit_history(old,'2026-09-02',False)
           print('DAILY_ROLLING_CHRONOLOGY_GUARD_OK')
           PY
+      - name: Verify production ticket policy mapping
+        run: |
+          python - <<'PY'
+          import onehead_production_profile as prod
+          import prepare_1head_v351_rolling_models as rolling
+          import run_v299_1head_trifecta3_policy_search as v299
+          import run_1head_v351_live_finalize as fin
+          name=rolling.resolve_ticket_strategy(prod.TICKET_POLICY)
+          assert prod.TICKET_POLICY=='v320_HYBRID'
+          assert name=='HYBRID'
+          p2={2:.40,3:.25,4:.15,5:.12,6:.08}
+          pc={(s,t):.25 for s in range(2,7) for t in range(2,7) if s!=t}
+          pair=v299.pair_prob(p2,pc,prod.TICKET_ALPHA)
+          a=v299.STRATEGIES[name](p2,pc,pair)[:3]
+          b=fin.v299.STRATEGIES['HYBRID'](p2,pc,pair)[:3]
+          assert a==b and len(a)==3 and len(set(a))==3
+          try:
+            rolling.resolve_ticket_strategy('v320_NOT_REAL')
+          except RuntimeError:
+            pass
+          else:
+            raise AssertionError('unsupported ticket policy did not fail closed')
+          print('V351_TICKET_POLICY_MAPPING_OK',a)
+          PY
       - name: Rebuild chronology-safe September source through Sep16
         run: python build_1head_september_training_source.py --target-date 2026-09-17 --start-date 2026-09-01 --out-dir /tmp/sep
       - name: Prepare canonical v321 frozen history caches
@@ -46,74 +69,105 @@ jobs:
           /usr/bin/time -f 'v321_prepare_wall_sec=%e v321_prepare_max_rss_kb=%M' python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
           test -s cache_v321_julaug_nonpristine_head_full.csv.gz
           test -s cache_v321_julaug_nonpristine_slim.csv.gz
-      - name: Backtest existing v351 rolling path Sep1-16
+      - name: Package audit inputs
         run: |
-          mkdir -p out
-          python - <<'PY'
-          import csv,json,subprocess,sys,hashlib
-          from pathlib import Path
-          from datetime import date,timedelta
-          import pandas as pd
-          from backtest import rows
-          import onehead_production_profile as prod
-          import run_v323_1head_frozen_live_adapter as live
-          import run_v326_1head_ticketaware_exhibition as v326
-          import run_v332_1head_attack_first_redesign as v332
-          import run_1head_v351_live_finalize as fin
-          from probe_1head_v351_boatcast_exhibition import ORIG_REQUIRED,AUDIT_KEY
+          mkdir -p audit_inputs
+          cp /tmp/sep/september_training_rows.csv audit_inputs/
+          cp cache_v321_julaug_nonpristine_head_full.csv.gz audit_inputs/
+          cp cache_v321_julaug_nonpristine_slim.csv.gz audit_inputs/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audit-v351-inputs-${{ github.run_id }}
+          retention-days: 2
+          path: audit_inputs/
 
-          sep=pd.read_csv('/tmp/sep/september_training_rows.csv',dtype={'race_code':str}); sep.race_code=sep.race_code.astype(str).str.zfill(12)
-          train=v332.load_all(); train['date']=[f'{c[:4]}-{c[4:6]}-{c[6:8]}' for c in train.race_code.astype(str).str.zfill(12)]
-          allout=[]
-          def bycode(rs): return {str(r.get('レースコード','')).zfill(12):r for r in rs if r.get('レースコード')}
-          # Precompute ST bias once, then advance day by day. No per-race Boatcast fetches.
-          sums={b:[] for b in range(1,7)}; allv=[]
-          d=date(2025,10,1)
-          while d<date(2026,9,1):
-            v326.update_st(rows(f'data/previews/stt/{d:%Y/%m/%d}.csv'),sums,allv); d+=timedelta(days=1)
-          for day in range(1,17):
-            target=date(2026,9,day); ymd=f'{target:%Y/%m/%d}'; ymd8=f'{target:%Y%m%d}'; work=Path(f'/tmp/d{day:02d}'); work.mkdir(parents=True,exist_ok=True)
-            cards=rows(f'data/programs/race_cards/{ymd}.csv')
-            if not cards: continue
-            cp=work/'race_cards.csv';
-            with cp.open('w',encoding='utf-8-sig',newline='') as f:
-              fs=sorted(set().union(*(r.keys() for r in cards))); w=csv.DictWriter(f,fieldnames=fs); w.writeheader(); w.writerows(cards)
-            # Sep1 has no prior-September rows; use frozen production history. Sep2+ uses verified rolling path.
-            bases=[]
-            if day==1:
-              subprocess.run([sys.executable,'prepare_1head_v351_live_cache.py','--date',str(target),'--cards',str(cp),'--out',str(work)],check=True)
-              bases=[json.load(open(p)) for p in work.glob(f'{ymd8}*.json') if p.name!='meta.json']
-            else:
-              prior=sep[pd.to_datetime(sep.date).dt.date<target].copy(); sp=work/'sep.csv'; prior.to_csv(sp,index=False)
-              subprocess.run([sys.executable,'prepare_1head_v351_rolling_models.py','--target-date',str(target),'--sep-source',str(sp),'--cards',str(cp),'--out-dir',str(work)],check=True)
-              z=json.load(open(work/'rolling_models.json'))
-              for r in z['races']:
-                bases.append({**r,'pre_class':'RETRO','legacy_pre_p':r['final_head_p'],'production_profile':prod.PROFILE_NAME,'training_cutoff':str(target-timedelta(days=1)),'result_or_payout_used':False,'chronology_guard':True})
-              train.to_csv(work/'v351_exhibition_train.csv',index=False)
-            tkz=bycode(rows(f'data/previews/tkz/{ymd}.csv')); strows=rows(f'data/previews/stt/{ymd}.csv'); stt=bycode(strows); orig=bycode(rows(f'data/previews/original_exhibition/{ymd}.csv')); bias=v326.st_bias(sums,allv)
-            res=bycode(rows(f'data/results/realtime/{ymd}.csv')); pay=bycode(rows(f'data/results/payouts/{ymd}.csv'))
-            for b in bases:
-              code=str(b['race_code']).zfill(12)
-              if float(b['final_head_p'])<prod.HEAD_CUTOFF or float(b['opp_mass'])<prod.OPPONENT_MASS_MIN: continue
-              tr,sr,orr=tkz.get(code,{}),stt.get(code,{}),orig.get(code,{})
-              audit=v326.raw_completeness(tr,sr,orr); req=ORIG_REQUIRED.get(int(code[8:10]),('avg','turn','straight')); keys=['tkz_all6','stt_all6']+[AUDIT_KEY[x] for x in req]
-              if not all(audit.get(k,False) for k in keys): continue
-              ex,st,os=v326.corrected_direct(code,{code:tr},{code:sr},{code:orr},bias)
-              feat=v326.partial_feature_row({'tickets':b['base_tickets']},ex,st,os,audit); feat.update(audit)
-              feat['attack_ready']=bool(audit['tkz_all6'] and audit['stt_all6'] and audit['orig_straight_all6'] and audit['orig_avg_all6']); feat['env_ready']=bool(audit['tkz_all6'] and audit['stt_all6'] and audit['orig_turn_all6'] and audit['orig_straight_all6'])
-              feat['attack_core']=prod.ATTACK_CORE_W_ONE_EX*feat['one_ex']+prod.ATTACK_CORE_W_ONE_ST*feat['one_st']+prod.ATTACK_CORE_W_ONE_STRAIGHT*feat['one_straight']+prod.ATTACK_CORE_W_ONE_ORIG_AVG*feat['one_orig_avg']
-              feat['env_pair']=.30*feat['sec_ex_mean_margin']+.30*feat['sec_st_mean_margin']+.20*feat['third_turn_mean_margin']+.20*feat['third_straight_mean_margin'] if feat['env_ready'] else float('nan')
-              hist=train[pd.to_datetime(train.date).dt.date<=target-timedelta(days=1)].copy(); test=pd.DataFrame([{**feat,'race_code':code,'head_hit':0,'hit':0}]); passed,_=v332.fit_apply(hist,test,{'family':'ATTACK_ENV_SOFT','env_w':prod.EXHIBITION_ENV_W,'q':prod.EXHIBITION_Q})
-              if len(passed)!=1: continue
-              core={bb:prod.ATTACK_CORE_W_ONE_EX*ex[bb]+prod.ATTACK_CORE_W_ONE_ST*st[bb]+prod.ATTACK_CORE_W_ONE_STRAIGHT*os[bb]['straight']+prod.ATTACK_CORE_W_ONE_ORIG_AVG*os[bb]['avg'] for bb in range(2,7)}
-              p2,pc2=fin.adjust(b['p2'],b['pc'],core); pair=fin.v299.pair_prob(p2,pc2,prod.TICKET_ALPHA); top=fin.v299.STRATEGIES['HYBRID'](p2,pc2,pair)[:3]; tickets=[f'1-{s}-{t}' for s,t in top]
-              rr=res.get(code,{}); pp=pay.get(code,{}); winner=int(float(rr.get('1着_艇番') or 0)); combo=str(pp.get('3連単_組番') or '').strip(); payout=int(float(pp.get('3連単_払戻金') or 0)); hit=combo in tickets
-              allout.append({'date':str(target),'race_code':code,'tickets':'|'.join(tickets),'winner':winner,'head1':winner==1,'combo':combo,'payout100':payout,'hit':hit,'stake':300,'return':payout if hit else 0,'final_head_p':b['final_head_p'],'opp_mass':b['opp_mass']})
-            v326.update_st(strows,sums,allv)
-          pd.DataFrame(allout).to_csv('out/rows.csv',index=False)
-          n=len(allout); stake=sum(x['stake'] for x in allout); ret=sum(x['return'] for x in allout); h1=sum(x['head1'] for x in allout); hits=sum(x['hit'] for x in allout)
-          s={'period':'20260901-20260916','buy_races':n,'head1':h1,'head1_rate':h1/n if n else None,'exact3_hits':hits,'exact3_rate':hits/n if n else None,'stake_yen':stake,'return_yen':ret,'roi':ret/stake if stake else None,'production_profile':prod.PROFILE_NAME,'today_20260917_used':False,'source':'BoatraceCSV + existing v351 rolling path'}
-          json.dump(s,open('out/summary.json','w'),ensure_ascii=False,indent=2); print(json.dumps(s,ensure_ascii=False,indent=2))
+  backtest:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {start: 1, end: 2}
+          - {start: 3, end: 4}
+          - {start: 5, end: 6}
+          - {start: 7, end: 8}
+          - {start: 9, end: 10}
+          - {start: 11, end: 12}
+          - {start: 13, end: 14}
+          - {start: 15, end: 16}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: audit-v351-inputs-${{ github.run_id }}
+          path: audit_inputs
+      - name: Restore canonical caches
+        run: |
+          cp audit_inputs/cache_v321_julaug_nonpristine_head_full.csv.gz .
+          cp audit_inputs/cache_v321_julaug_nonpristine_slim.csv.gz .
+          test -s audit_inputs/september_training_rows.csv
+      - name: Backtest Sep ${{ matrix.start }}-${{ matrix.end }}
+        run: |
+          python audit_1head_v351_sep_chunk.py \
+            --start-day ${{ matrix.start }} \
+            --end-day ${{ matrix.end }} \
+            --sep-source audit_inputs/september_training_rows.csv \
+            --out-dir out_chunk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audit-v351-sep-chunk-${{ matrix.start }}-${{ matrix.end }}-${{ github.run_id }}
+          retention-days: 30
+          path: out_chunk/
+
+  aggregate:
+    needs: [prepare, backtest]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: audit-v351-sep-chunk-*-${{ github.run_id }}
+          merge-multiple: true
+          path: out_chunks
+      - name: Aggregate and verify Sep1-16 audit
+        run: |
+          python - <<'PY'
+          import csv,json
+          from collections import defaultdict
+          from pathlib import Path
+          files=sorted(Path('out_chunks').glob('rows_*.csv'))
+          if len(files)!=8:raise RuntimeError(f'expected 8 chunk row files, got {len(files)}: {files}')
+          rows=[]
+          for p in files:
+            with p.open(encoding='utf-8-sig',newline='') as f:rows.extend(csv.DictReader(f))
+          rows.sort(key=lambda r:(r['date'],r['race_code']))
+          for r in rows:
+            code=str(r['race_code']).zfill(12)
+            if code.startswith('20260917') or not code.startswith('202609'):
+              raise RuntimeError(f'forbidden race in audit output: {code}')
+            day=int(code[6:8])
+            if not (1<=day<=16):raise RuntimeError(f'out-of-range race in audit output: {code}')
+          out=Path('out');out.mkdir(exist_ok=True)
+          fields=['date','race_code','tickets','winner','head1','combo','payout100','hit','stake','return','final_head_p','opp_mass']
+          with (out/'rows.csv').open('w',encoding='utf-8-sig',newline='') as f:
+            w=csv.DictWriter(f,fieldnames=fields);w.writeheader();w.writerows(rows)
+          def yes(v):return str(v).strip().lower()=='true'
+          n=len(rows);stake=sum(int(float(r['stake'] or 0)) for r in rows);ret=sum(int(float(r['return'] or 0)) for r in rows);h1=sum(yes(r['head1']) for r in rows);hits=sum(yes(r['hit']) for r in rows)
+          daily=defaultdict(lambda:{'buy_races':0,'head1':0,'exact3_hits':0,'stake_yen':0,'return_yen':0})
+          for r in rows:
+            d=daily[r['date']];d['buy_races']+=1;d['head1']+=int(yes(r['head1']));d['exact3_hits']+=int(yes(r['hit']));d['stake_yen']+=int(float(r['stake'] or 0));d['return_yen']+=int(float(r['return'] or 0))
+          daily_rows=[]
+          for day in sorted(daily):
+            d=daily[day];d.update({'date':day,'head1_rate':d['head1']/d['buy_races'] if d['buy_races'] else None,'exact3_rate':d['exact3_hits']/d['buy_races'] if d['buy_races'] else None,'roi':d['return_yen']/d['stake_yen'] if d['stake_yen'] else None});daily_rows.append(d)
+          with (out/'daily.csv').open('w',encoding='utf-8-sig',newline='') as f:
+            fs=['date','buy_races','head1','head1_rate','exact3_hits','exact3_rate','stake_yen','return_yen','roi'];w=csv.DictWriter(f,fieldnames=fs);w.writeheader();w.writerows(daily_rows)
+          s={'period':'20260901-20260916','buy_races':n,'head1':h1,'head1_rate':h1/n if n else None,'exact3_hits':hits,'exact3_rate':hits/n if n else None,'stake_yen':stake,'return_yen':ret,'roi':ret/stake if stake else None,'production_profile':'1HEAD_PRODUCTION_20260915_HEAD078_V351_OPPONENTCORE_G2_045_G3_100','today_20260917_used':False,'chronology_guard':True,'chunk_files':len(files),'source':'BoatraceCSV + existing v351 rolling path; 2-day parallel chunks'}
+          (out/'summary.json').write_text(json.dumps(s,ensure_ascii=False,indent=2));print(json.dumps(s,ensure_ascii=False,indent=2))
           PY
       - uses: actions/upload-artifact@v4
         with:
