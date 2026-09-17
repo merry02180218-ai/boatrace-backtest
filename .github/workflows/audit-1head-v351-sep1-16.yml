@@ -1,0 +1,88 @@
+name: audit-1head-v351-sep1-16
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q requests beautifulsoup4 numpy pandas scipy scikit-learn
+      - name: Download available frozen daily v351 caches Sep1-16
+        env: {GH_TOKEN: '${{ github.token }}'}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/caches out
+          echo 'date,artifact_id' > out/source_caches.csv
+          for D in $(seq -w 1 16); do
+            DATE="202609${D}"
+            NAME="v351-1head-live-cache-${DATE}"
+            ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=${NAME}&per_page=100" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id // empty')
+            if [ -n "$ID" ]; then
+              mkdir -p "/tmp/caches/$DATE"
+              gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$ID/zip" > "/tmp/$DATE.zip"
+              unzip -q "/tmp/$DATE.zip" -d "/tmp/caches/$DATE"
+              echo "$DATE,$ID" >> out/source_caches.csv
+            fi
+          done
+          cat out/source_caches.csv
+      - name: Reproduce final v351 decisions from frozen caches and exhibition
+        run: |
+          set -uo pipefail
+          echo 'race_code,reason' > out/skipped.csv
+          mkdir -p out/finals
+          find /tmp/caches -type f -name '202609*.json' | sort | while read -r BASE; do
+            CODE=$(basename "$BASE" .json)
+            case "$CODE" in 2026090[1-9]*|2026091[0-6]*) ;; *) continue;; esac
+            DATE=${CODE:0:8}; JCD=$((10#${CODE:8:2})); RACE=$((10#${CODE:10:2}))
+            TRAIN=$(find "/tmp/caches/$DATE" -name v351_exhibition_train.csv -print -quit)
+            if [ -z "$TRAIN" ]; then echo "$CODE,missing_train" >> out/skipped.csv; continue; fi
+            DST="$(dirname "$BASE")/v351_exhibition_train.csv"; [ "$(readlink -f "$TRAIN")" = "$(readlink -f "$DST")" ] || cp "$TRAIN" "$DST"
+            if ! python probe_1head_v351_boatcast_exhibition_test_replay.py --date "$DATE" --jcd "$JCD" --race "$RACE" > "out/ex_$CODE.json" 2>"out/probe_$CODE.err"; then echo "$CODE,probe_error" >> out/skipped.csv; continue; fi
+            CUTOFF=$(python -c "import json;print(json.load(open('$BASE')).get('training_cutoff','2026-08-31'))")
+            if ! python run_1head_v351_live_exhibition_gate.py --probe "out/ex_$CODE.json" --base "$BASE" --history-cutoff "$CUTOFF" --out "out/gate_$CODE.json"; then echo "$CODE,gate_error" >> out/skipped.csv; continue; fi
+            python - "$BASE" "out/gate_$CODE.json" "out/in_$CODE.json" <<'PY'
+          import json,sys
+          b=json.load(open(sys.argv[1])); g=json.load(open(sys.argv[2])); b.update(g)
+          b.update({'exhibition_ready':True,'result_or_payout_used':False,'chronology_guard':True})
+          json.dump(b,open(sys.argv[3],'w'),ensure_ascii=False)
+          PY
+            python run_1head_v351_live_finalize.py --input "out/in_$CODE.json" --out "out/finals/$CODE.json" || echo "$CODE,finalize_error" >> out/skipped.csv
+          done
+      - name: Evaluate Sep1-16 outcomes after predictions are frozen
+        run: |
+          python - <<'PY'
+          import glob,json,re,requests,csv,time
+          rows=[]
+          for f in sorted(glob.glob('out/finals/*.json')):
+            x=json.load(open(f)); code=str(x.get('race_code') or f.split('/')[-1][:-5]); date=code[:8]; jcd=int(code[8:10]); race=int(code[10:12])
+            status=x.get('status'); tickets=x.get('tickets') or []
+            if isinstance(tickets,str): tickets=[t for t in re.split(r'[;, ]+',tickets) if t]
+            url=f'https://www.boatrace.jp/owpc/pc/race/raceresult?rno={race}&jcd={jcd:02d}&hd={date}'
+            txt=requests.get(url,timeout=20).text
+            # result page contains 3連単 winning combination and payout; parse conservatively
+            m=re.search(r'3連単[\s\S]{0,300}?([1-6])[^1-6]{0,30}([1-6])[^1-6]{0,30}([1-6])[\s\S]{0,120}?([0-9,]+)円',txt)
+            if not m:
+              rows.append({'race_code':code,'status':status,'tickets':'|'.join(tickets),'result':'','payout':'','head1':'','hit':'','stake':100*len(tickets),'return':0,'parse':'MISS'}); continue
+            comb='-'.join(m.group(i) for i in (1,2,3)); payout=int(m.group(4).replace(',',''))
+            hit=comb in tickets if status!='DROP' else False
+            rows.append({'race_code':code,'status':status,'tickets':'|'.join(tickets),'result':comb,'payout':payout,'head1':comb.startswith('1-'),'hit':hit,'stake':100*len(tickets) if status!='DROP' else 0,'return':payout if hit else 0,'parse':'OK'})
+            time.sleep(.1)
+          ok=[r for r in rows if r['parse']=='OK']; buys=[r for r in ok if r['status']!='DROP' and r['stake']>0]
+          stake=sum(r['stake'] for r in buys); ret=sum(r['return'] for r in buys)
+          summary={'period':'20260901-20260916','finalized':len(rows),'result_parsed':len(ok),'buy_races':len(buys),'head1':sum(bool(r['head1']) for r in buys),'head1_rate':sum(bool(r['head1']) for r in buys)/len(buys) if buys else None,'exact3_hits':sum(bool(r['hit']) for r in buys),'exact3_rate':sum(bool(r['hit']) for r in buys)/len(buys) if buys else None,'stake_yen':stake,'return_yen':ret,'roi':ret/stake if stake else None,'today_20260917_used':False}
+          json.dump(summary,open('out/summary.json','w'),ensure_ascii=False,indent=2); json.dump(rows,open('out/rows.json','w'),ensure_ascii=False,indent=2)
+          with open('out/rows.csv','w',newline='',encoding='utf-8') as h:
+            w=csv.DictWriter(h,fieldnames=rows[0].keys() if rows else ['race_code']); w.writeheader(); w.writerows(rows)
+          print(json.dumps(summary,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audit-v351-sep1-16-${{ github.run_id }}
+          retention-days: 30
+          path: out/
