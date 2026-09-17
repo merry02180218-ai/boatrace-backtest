@@ -1,0 +1,48 @@
+name: prepare-1head-v351-live-cache-20260917
+
+on:
+  workflow_run:
+    workflows: ['v351 1-head LIVE PRE SAB 20260917']
+    types: [completed]
+  workflow_dispatch:
+  push:
+    paths: ['.github/workflows/prepare-1head-v351-live-cache-20260917.yml']
+
+permissions: {contents: read, actions: read}
+jobs:
+  cache:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Download 20260917 PRE artifact
+        env: {GH_TOKEN: '${{ github.token }}'}
+        run: |
+          ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-pre-sab-20260917&per_page=20" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id')
+          test -n "$ID" && test "$ID" != null
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$ID/zip" > /tmp/pre.zip
+          mkdir -p /tmp/pre && unzip -q /tmp/pre.zip -d /tmp/pre
+          find /tmp/pre -name pre_candidates_sab.csv -print -quit | grep .
+          find /tmp/pre -name race_cards.csv -print -quit | grep .
+      - name: Build shared causal caches
+        run: |
+          python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
+          PRE=$(find /tmp/pre -name pre_candidates_sab.csv -print -quit); CARDS=$(find /tmp/pre -name race_cards.csv -print -quit)
+          python prepare_1head_v351_live_cache.py --date 2026-09-17 --cards "$CARDS" --pre "$PRE" --out /tmp/v351-live-cache
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('/tmp/v351-live-cache/meta.json'); m=json.loads(p.read_text())
+          assert m['result_or_payout_used'] is False
+          assert m['chronology_guard'] is True
+          print(json.dumps(m,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v351-1head-live-cache-20260917
+          retention-days: 3
+          path: /tmp/v351-live-cache/
