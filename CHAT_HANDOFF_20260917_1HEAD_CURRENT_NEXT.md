@@ -171,18 +171,18 @@ formal historical baseline 276Rとの単純比較:
 
 ### 日別購入があった日
 - 9/1: 1R / head1 1 / exact3 1 / return 780 / ROI 260%
-- 9/3: 2R / 2 / 2 / 930 / 155%
-- 9/5: 4R / 2 / 0 / 0 / 0%
-- 9/6: 5R / 5 / 4 / 2,670 / 178%
-- 9/7: 2R / 0 / 0 / 0 / 0%
-- 9/8: 2R / 2 / 1 / 480 / 80%
-- 9/9: 2R / 2 / 0 / 0 / 0%
-- 9/11: 3R / 3 / 3 / 2,210 / 245.56%
-- 9/12: 2R / 1 / 0 / 0 / 0%
-- 9/13: 2R / 2 / 1 / 1,710 / 285%
-- 9/14: 1R / 0 / 0 / 0 / 0%
-- 9/15: 2R / 1 / 0 / 0 / 0%
-- 9/16: 2R / 1 / 0 / 0 / 0%
+- 9/3: 2R / 2 / 2 / return 930 / ROI 155%
+- 9/5: 4R / 2 / 0 / return 0 / ROI 0%
+- 9/6: 5R / 5 / 4 / return 2,670 / ROI 178%
+- 9/7: 2R / 0 / 0 / return 0 / ROI 0%
+- 9/8: 2R / 2 / 1 / return 480 / ROI 80%
+- 9/9: 2R / 2 / 0 / return 0 / ROI 0%
+- 9/11: 3R / 3 / 3 / return 2,210 / ROI 245.56%
+- 9/12: 2R / 1 / 0 / return 0 / ROI 0%
+- 9/13: 2R / 2 / 1 / return 1,710 / ROI 285%
+- 9/14: 1R / 0 / 0 / return 0 / ROI 0%
+- 9/15: 2R / 1 / 0 / return 0 / ROI 0%
+- 9/16: 2R / 1 / 0 / return 0 / ROI 0%
 
 ### chronology / 9/17 guard verification
 - final `summary.json`: `today_20260917_used = false`
@@ -192,9 +192,16 @@ formal historical baseline 276Rとの単純比較:
 - `20260917...` race_codeは **0件**。
 - **9/17 result/payoutはUNREAD維持。**
 
+## 2026-09-17 — BEFORE / THIRD close-margin 4点化監査
+ユーザー指示: 「3着候補が僅差のときだけ4点化 を行って」。
+
+これからやること:
+1. 最新main `e2cd25ae6ebbea979fb38d973841e92f377267b0` を基準に、現行v351 `v320_HYBRID` の3点ランキングsemanticsを確認する。
+2. 4号艇v283 production commit `376c636839af499821244ca660e382a43a16d644` の close-marginロジックを参照するが、1号艇へ機械移植しない。
+3. formal historical 276Rを母集団として、THIRD候補の条件付き確率差で threshold `.05 / .10 / .15` を比較する。
+4. 各thresholdで、4点化R数、追加ticket数、exact3 hit増分、総投資、払戻、ROI、月別安定性を算出する。
+5. 9/17 result/payoutは一切読まず、UNREADを維持する。
+6. 結果確定後、script/workflow/Run/Job/Artifact/commit SHAと結論を本handoffへAFTER追記する。
+
 ### 次の再開地点
-- Sep auditは確定完了。
-- 次は予定どおり、1号艇v351の **THIRD close-margin時だけ4点化** をformal 276Rで監査。
-- 先に現行v351 ticket ranking semanticsを厳密確認。
-- threshold候補 `.05 / .10 / .15` を比較し、追加4点化R数、exact hit増分、総投資、払戻、ROI、月別安定性を評価する。
-- 4号艇v283の実装をそのまま移植せず、1号艇のSECOND/THIRD条件付き確率構造に合わせる。
+- 上記THIRD close-margin 4点化監査を実行中。
