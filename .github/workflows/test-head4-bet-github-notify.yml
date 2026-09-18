@@ -43,7 +43,10 @@ jobs:
             "opponent_mass":0.36,
             "composite_odds":4.8,
             "base120_selected":false,
-            "expanded156_added":true,
+            "newfeature_expanded_added":true,
+            "newfeature_score":12.8,
+            "newfeature_threshold":12.293333333333333,
+            "legacy_156r_selected":false,
             "st4_adv_inside":-0.2,
             "orig4_adv_inside":0.1,
             "tickets":["4-1-2","4-1-3"],
@@ -54,5 +57,6 @@ jobs:
           JSON
           python notify_head4_bet_github_issue.py --dry-run --decision-json /tmp/bet.json --target-date 20260918 --jcd 7 --race 11 --deadline-jst 20:15 | tee /tmp/bet.log
           grep -q 'HEAD4_BET_GITHUB_ISSUE_DRY_RUN_OK' /tmp/bet.log
-          grep -q 'expanded156_added' /tmp/bet.log
+          grep -q 'newfeature_expanded_added' /tmp/bet.log
+          grep -q 'newfeature_score' /tmp/bet.log
           grep -q '@merry02180218-ai' /tmp/bet.log
