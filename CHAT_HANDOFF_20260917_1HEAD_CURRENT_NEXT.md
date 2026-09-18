@@ -779,3 +779,58 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - DEV grid / plateau選定部分は通過済み。研究ロジック自体のfailureではない。
 - 修正: payout/cache対象を `LIVE165 / H078_M375 / H0775_M375 / H0775_M350` のrace unionへ拡張。
 - grid・選定・LOMO条件は一切変更しない。fresh Runで再監査。
+
+
+## AFTER — v363 5>6 ST 近傍robustness
+- 修正版 Run `35332130748` / Job `105558625364` completed success / Artifact `10541541621` / head `ab60e13d6063ac785fb7a61ff35f9da1d407fe35`。
+- grid 1,200 cells / AUDIT_OK=true / September outcomes unread / production unchanged。
+- DEV zero-lossで最大改善は +2 hits。
+- DEV plateauは **126 cells** と広い:
+  - score6 min: .55〜.65
+  - ST6-ST5 min: .30〜.55
+  - SECOND g2: 0〜.25
+  - THIRD g3: .75〜.875
+  - mass min: .35〜.375
+- raw DEV best:
+  - score6>=.65 / ST gap>=.45 / g2=0 / g3=.75 / mass>=.375
+  - DEV 116->118 / ROI106.77->111.23 / gain2 loss0。
+- plateau center:
+  - score6>=.60 / ST gap>=.45 / g2=.25 / g3=.75 / mass>=.375
+  - DEV 116->118 / gain2 loss0
+  - SUPPORT 26->27 / ROI85.61->89.95 / gain1 loss0
+  - ALL313 142->145 / ROI102.31->106.74 / gain3 loss0。
+- current formal wall3 + plateau center on LIVE165:
+  - 83->**86** / return 58,650->62,810 / ROI118.485->**126.889%**
+  - gain3 / loss0。
+- DEV LOMO再選定では **5 holdout月すべて同じcore設定**
+  - score6=.60 / ST gap=.40 / g2=0 / g3=.75 / mass=.375
+  - これは現在のLIVE 5>6 shadow coreと一致。
+  - Feb/Mar/Apr delta0、May +1、Jun +1、全月loss0。
+- 近傍162 cells:
+  - net delta_hits >=0 は **100%**
+  - loss=0 は 150/162 = **92.6%**
+  - dev ROI range 107.61〜111.23%、mean 109.58%。
+- 現在のshadow設定 `.60/.40/g2=0/g3=.75` はDEV plateau内。313Rでmass=.35まで許す既存v361 broad40では 142->147 / ROI109.51 / gain5 loss0、うち `202607091004` はLIVE165外の独立gain。
+- ただしv363のDEV-only plateau center（mass=.375）を固定したdisjoint band監査では:
+  - LIVE165 +3
+  - +71R: ±0
+  - +33R: ±0
+  - +45R: ±0
+  よって自己設定した `outer_bands_have_gain` 条件のみfalse。
+- promotion_checks:
+  - DEV loss0=true
+  - SUPPORT loss0=true
+  - SUPPORT nonnegative=true
+  - LIVE165 loss0=true / improves=true
+  - LOMO all nonnegative=true
+  - plateau>=10=true
+  - neighborhood nonnegative share=1.0
+  - outer_bands_have_gain=false
+  - all_conditions_pass=false。
+- 解釈:
+  - **パラメータ安定性は強い**。current shadow coreはLOMOでも毎回再選択される。
+  - ただし現LIVE gate外の追加高mass母集団では新規gainが増えておらず、拡大母集団での独立再現性はまだ限定的。
+  - したがって5>6は現時点でshadow維持。正式昇格は未実施。
+- 次の再開地点:
+  1) forward LIVEで5>6 shadow発火例を蓄積、または
+  2) current shadowを固定した追加独立期間/非重複母集団監査。
