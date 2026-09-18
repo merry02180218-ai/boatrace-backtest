@@ -1607,3 +1607,32 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - stake shadowのみ overlay発火時200/200/200
   - 今後のmanual LIVE「判別して」では正式買い目と併せてshadow stake発火有無を確認できる。
 - forward結果を読む許可が得られるまで、shadowの実戦成績でformal昇格は行わない。
+
+
+## BEFORE — v370 current formal 3-ticket dynamic staking with official closing odds
+- ユーザー指示: 買い方研究を継続。
+- v369で固定rank配分はDEV/SUPPORTで傾向反転したため、rank番号固定ではなくraceごとのmodel probability + 公式3連単オッズで動的配分を研究する。
+- 現正式買い目は固定:
+  - opponentCore -> wall3 -> 5>6 ST
+  - 87/165 / equal 100-100-100実払戻ROI128.687%
+- odds source:
+  - repo `data/official_closing_odds3t/YYYY/MM/DD.csv`
+  - BOAT RACE公式締切3連単オッズ。
+  - これはhistorical backtestでは「締切時の最終表示」であり、実LIVEで発注直前に完全同値が必ず見えるわけではない。したがってallocation研究用proxyとして扱い、productionへそのまま直結しない。
+- 全165Rを買う。skip/dropはしない。
+- 3点すべて最低100円を維持。
+- budget:
+  - 600円/R = 6 units
+  - 1000円/R = 10 units
+- candidate allocation:
+  1) EQUAL
+  2) DUTCH: inverse oddsでgross return均等化
+  3) MODEL: formal pair probability比例
+  4) VALUE_PROP: score = p^alpha * odds^beta の比例配分
+  5) VALUE_TOP: base1unitずつ + 残unitを最大 p^alpha*odds^beta の1点へ
+- grid alpha=.5/1/1.5/2, beta=-1/-.5/0/.5/1。
+- 評価returnはallocationに使用したclosing oddsから逆算せず、実公式払戻100円をstake units倍して算出。
+- selectionはFeb-Jun DEVのみ。Jul-Aug SUPPORTは完全holdout。
+- baselineは同budgetの均等配分と、現行300円 equalの両方を表示。
+- 月別、rank別stake、profit、ROI、support劣化を監査。
+- 2026-09 outcomes/payoutsは読まない。LIVE tickets/productionは変更しない。
