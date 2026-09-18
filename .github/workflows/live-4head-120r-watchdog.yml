@@ -2,7 +2,7 @@ name: live-4head-120r-watchdog
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/10 0-12 * * *' # every 10 min, 09:00-21:59 JST only
   workflow_dispatch:
   push:
     paths:
@@ -23,9 +23,6 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
 
       - name: Resolve current watch target
         shell: bash
@@ -77,6 +74,11 @@ jobs:
             echo "WATCHDOG_ALREADY_COMPLETED $NAME"
             echo "SHOULD_RUN=0" >> "$GITHUB_ENV"
           fi
+
+      - uses: actions/setup-python@v5
+        if: env.SHOULD_RUN == '1'
+        with:
+          python-version: '3.11'
 
       - name: Install runtime
         if: env.SHOULD_RUN == '1'
