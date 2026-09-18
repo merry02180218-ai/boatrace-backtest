@@ -2720,3 +2720,33 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 既存 `stakes_yen` / threshold3.5 shadow semanticsは変更しない。3.9/4.3は追加telemetryのみ。
 - result/payout endpointは使用しない。formal tickets / official stakes / HEAD gatesは変更しない。
 - 保存済みsynthetic regressionで既存3.5出力不変 + 3.9/4.3追加fieldを監査する。
+
+
+## AFTER — prospective current-odds telemetry 3.5/3.9/4.3
+- current odds shadow script commit `2d1163625f70d0308fe25f96c0a5b295cfc6bc73`
+  - existing threshold3.5 `stakes_yen` / signal semanticsは変更なし。
+  - `formal_deadline_jst`, `formal_evaluated_at_jst`, `formal_minutes_to_deadline` を追加。
+  - `safety_scenarios` に3.5 / 3.9 / 4.3を同時出力:
+    - ratio_min
+    - odds_ratio_max_min
+    - soft_applied
+    - soft_units
+    - signal
+    - stakes_yen
+    - total_stake_yen
+  - WALL3は全thresholdで100/100/400固定。five6-only/NONEはthresholdごとにsoft発火を比較。
+- regression update commit `caa6db21573ad8c96c856a0ce02c99cf6553b72e`。
+- v384 regression Run `35378645210` / Job `105709293039` success / Artifact `10561770747`
+  - digest `sha256:1b94145aae6b200d52318f7bc09cd6a210eac54eb8bd3fb8b291849c67aca585`
+  - existing3.5 output不変
+  - deadline/minutes telemetry確認
+  - safety_scenarios 3.5/3.9/4.3確認
+  - result_or_payout_used=false / AUDIT_OK=true。
+- 現運用:
+  - formal ticket / official stakeは変更なし。
+  - current-odds allocationはresearch shadowのまま。
+  - 今後「判別して」のLIVE artifactで実購入可能時点のodds ratioと3.5/3.9/4.3配分をprospectiveに保存可能。
+- 次の研究価値:
+  - forward sampleで current ratio → 締切ratio drift を蓄積し、5%安全margin(3.9) / 10%margin(4.3) のどちらが実測に合うかを結果ではなくodds drift自体で判定する。
+  - これが十分貯まるまではclosing-odds historical ROIだけでformal stakeへ昇格しない。
+- September outcomes unread / production unchanged。
