@@ -1,0 +1,16 @@
+{
+  "date": "20260918",
+  "targets": [
+    {
+      "jcd": "07",
+      "race": 11,
+      "deadline_jst": "20:15",
+      "watch_minutes_before": 20,
+      "pre_run_id": "35317588703",
+      "pre_artifact_name": "head4-120r-pre-live-trial-20260918",
+      "state_run_id": "35326011735",
+      "state_artifact_name": "head4-120r-live-deadline-benchmark",
+      "note": "true monitoring_parent fallback target after Marugame scheduler incident"
+    }
+  ]
+}
