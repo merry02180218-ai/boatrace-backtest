@@ -1102,3 +1102,70 @@ Next immediate action:
 - verify Run/Job/Artifact;
 - report today's display shortlist and internal monitoring count.
 Status: `HEAD4_120R_PRE_LIVE_TRIAL_READY_TO_TRIGGER`
+
+
+## 2026-09-18 LIVE PRE TRIAL — corrected official result
+
+First trial:
+- Run `35314941417` SUCCESS
+- but interpretation INVALID because almost all current rows hit `PARENT_MISSING_FAIL_OPEN` due player-name spacing mismatch between current API and historical cards.
+- do NOT use its 179 watch / 50 display counts.
+
+Fix:
+- live parent player history keyed by **registration number** instead of display name.
+- scanner commit: `50b1daa95cad6ebb13d840dea756d524ddc6bb2f`
+- rerun trigger: `46602c34c62d25e8ba2971ecbeb5bd6eda4a3e41`
+
+Corrected official run:
+- Run `35317588703`
+- Job `105512548374`
+- conclusion: **SUCCESS**
+- Artifact `10535553060`
+- digest `sha256:5f6343f68b7bbabb3c661022223193ba7c37ea125268526241b0653ec2725dbf`
+
+Corrected live PRE result for 2026-09-18:
+- current universe: **180R**
+- internal monitoring parent: **29R**
+- user-facing PRE display: **19R**
+- parent feature missing: **0R**
+  - motor win prior missing 0
+  - motor 2-ren missing 0
+  - player prior missing 0
+- September result files read: false
+- current exhibition used: false
+- current odds used: false
+- production unchanged
+
+Display candidates:
+- 戸田6R 片岡雅裕 — head_prob .247 / v250_PRE .245
+- 江戸川10R 野中一平 — .185 / .119
+- 多摩川1R 竹田和哉 — .120 / .122
+- 多摩川2R 若林将 — .071 / .122
+- 多摩川5R 中山将 — .022 / .125
+- 多摩川6R 丸野一樹 — .141 / .156
+- 多摩川10R 松田大志郎 — .102 / .176
+- 蒲郡4R 竹間隆晟 — .402 / .231
+- びわこ5R 中野希一 — .174 / .231
+- びわこ10R 谷村一哉 — .154 / .147
+- びわこ12R 佐藤博亮 — .060 / .147
+- 住之江4R 桑原悠 — .349 / .360
+- 尼崎3R 峰重力也 — .186 / .178
+- 尼崎5R 村岡賢人 — .266 / .197
+- 尼崎10R 榎幸司 — .142 / .140
+- 児島6R 柳内敬太 — .285 / .133
+- 宮島3R 平山智加 — .299 / .229
+- 宮島5R 守屋美穂 — .219 / .193
+- 大村6R 上條嘉嗣 — .204 / .148
+
+Dedicated report:
+- `HEAD4_120R_PRE_LIVE_TRIAL_20260918.md`
+- commit `94885918509409f2c2f9797a8af3b465a00d333f`
+
+Operational rule remains:
+- 19R display is advisory only.
+- all 29 internal-watch races remain eligible for post-exhibition 120R promotion.
+- next step is to persist the 29R watch list cleanly and wire the post-exhibition final scanner to it.
+- final market gate must use timestamped pre-deadline odds, not historical closing odds.
+- September outcomes remain UNREAD.
+
+Status: `HEAD4_120R_PRE_LIVE_TRIAL_SUCCESS__19_DISPLAY__29_INTERNAL_WATCH`
