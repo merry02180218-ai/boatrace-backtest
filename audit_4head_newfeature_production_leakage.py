@@ -13,6 +13,7 @@ RUNNER=Path('run_4head_120r_lastminute_fast.py')
 STATE=Path('prepare_4head_120r_daily_state.py')
 STRICT=Path('.github/workflows/live-4head-120r-true-monitor.yml')
 WATCH=Path('.github/workflows/live-4head-120r-watchdog.yml')
+WATCHLIST=Path('.github/live/head4_120r_watchlist.json')
 PRE=Path('scan_4head_120r_pre_live.py')
 
 FORBIDDEN_SCORE_TOKENS=(
@@ -111,12 +112,17 @@ def scan_live_deadline_contract():
         must("HEAD4_NEWFEATURE_FIXED156_V1" in src,f'{name}: production profile contract missing')
         must("z.get('target_race_result_used') is False" in src,f'{name}: result contract missing')
         must("z.get('payout_used') is False" in src,f'{name}: payout contract missing')
+        must("timeout-minutes: 45" in src,f'{name}: job timeout must exceed 30m exhibition wait')
+    wl=json.loads(WATCHLIST.read_text(encoding='utf-8'))
     return {
       'startup_before_deadline_guard':True,
       'persist_before_deadline_guard':True,
       'predeadline_odds_contract':True,
       'strict_profile_contract':True,
       'watchdog_profile_contract':True,
+      'job_timeout_minutes':45,
+      'watchlist_date':wl.get('date'),
+      'watchlist_current_for_audit_date':(wl.get('date')=='20260919'),
       'status':'PASS',
     }
 
@@ -165,7 +171,10 @@ def main():
       {'class':'FROZEN_TRANSFORM_LEAKAGE','status':'PASS','detail':'Weights, threshold and 50-row ECDF references per feature are frozen in the production artifact from Apr-Jun fit period.'},
       {'class':'JULAUG_LABELS_IN_LIVE_SCORE','status':'PASS','detail':'LIVE score uses only frozen artifact references and current/predecision features; Jul-Aug outcomes are not inputs to live transforms.'},
       {'class':'SEPTEMBER_TARGET_OUTCOME_CONTAMINATION','status':'PASS','detail':'Production artifact marks September outcomes unused; audited LIVE/PRE paths do not read target-race results.'},
-      {'class':'MARKET_TIMING','status':'PASS_OPERATIONAL','detail':'Official decision path guards startup/persist before deadline and marks predeadline_odds_used; performance benchmark path is explicitly non-decision.'},
+      {'class':'MARKET_TIMING_OPERATIONAL','status':'PASS','detail':'Official decision path guards startup/persist before deadline and marks predeadline_odds_used; performance benchmark path is explicitly non-decision.'},
+      {'class':'MARKET_RESEARCH_TO_LIVE_PROXY','status':'WARN','detail':'Research market_conf/ROI used verified official closing odds, while LIVE uses an earlier predeadline snapshot. This is not same-race outcome leakage, but it is a research-to-live market-timing proxy mismatch.'},
+      {'class':'RETROSPECTIVE_SAMPLE_SELECTION','status':'WARN','detail':'The 208R research universe requires verified archived closing-odds coverage; this may create coverage/sample-selection bias even though it does not inject same-race results into LIVE scoring.'},
+      {'class':'WATCHDOG_DAILY_TARGETING','status':('PASS' if livec['watchlist_current_for_audit_date'] else 'WARN_STALE_WATCHLIST'),'detail':('watchlist current' if livec['watchlist_current_for_audit_date'] else f"watchlist date {livec['watchlist_date']} is not 20260919; manual strict path remains available, but automatic watchdog has no current-day targets until watchlist is refreshed.")},
       {'class':'MODEL_SELECTION_CONTAMINATION','status':'WARN_NON_PRISTINE','detail':research['detail']},
     ]
 
