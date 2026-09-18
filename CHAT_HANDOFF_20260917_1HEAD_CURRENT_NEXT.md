@@ -2863,3 +2863,59 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   をresearch-only telemetryとして出力。
 - formal `official_stakes_yen` / tickets / existing current-odds `stakes_yen` は変更しない。
 - regressionを追加し、既存shadow semantics不変・value gate telemetryのみ追加を確認する。
+
+
+## AFTER — prospective v373 value-gate current-odds telemetry
+- implementation commits:
+  - thresholds/profile `4e95fb58fa08b5a27186e0bf858f6348495f3d9a`
+  - LIVE finalize formal ticket pair probabilities `ed5c7b7c7fce36f739e9ce1518d12526692b51e4`
+  - current odds shadow additive value-gate telemetry `5cbe0d65f714298af66f311c7238b4b3760dc937`
+  - regression script `b6e136632362c90275ce26003bf00617a619ac89`
+  - regression workflow `cbf1c4c624581c8c48f23e3e9275ea6459146f2a`
+  - audit publish `9f1a7fd395e191d779015c3e56b50f6c4a9ffbf2`
+- v374 telemetry regression:
+  - Run `35379286090`
+  - Job `105711349027`
+  - Artifact `10561117781`
+  - digest `sha256:b1e6babf5c7c1075e829d5c57759186d5183acf09469f16f909a2b9c3cbd1efb`
+  - SUCCESS / AUDIT_OK=true。
+- LIVE finalize:
+  - formal最終3点について `ticket_pair_probs` をadditive出力。
+  - wall3 / five6反映後のfinal pair distributionを再構成し、ticket ranking一致をassert。
+  - result/payoutは不使用。
+- current odds shadow additive output:
+  - existing soft-Dutch `stakes_yen` / safety_scenarios 3.5/3.9/4.3 は不変。
+  - `value_gate_scenarios.D20`:
+    - combined_min 2.8125
+    - value_min 1.375
+    - extra_units 3
+    - active時はvalue=p×current_odds比例でbase1unit+extra3。
+  - `value_gate_scenarios.D30`:
+    - combined_min 3.2142857143
+    - value_min 1.5714285714
+    - extra_units 3。
+  - いずれもresearch_only=true。
+  - pair probabilityが無い古いfinal JSONでは `UNAVAILABLE_NO_PAIR_PROBS` とし、existing shadowを壊さない。
+- synthetic regression:
+  - D20だけ発火case: legacy 100/100/100維持、D20=200/200/200、D30非発火。
+  - D20/D30両発火case: legacy 100/100/100維持、value gate=300/200/100。
+  - backward compatibility case: pair probs無しでもlegacy stakes unchanged。
+- existing regressions after modifications:
+  - v384 current odds shadow Run `35379228026` / Job `105711157653` / Artifact `10560812888` SUCCESS。
+  - v356 wall3 Run `35379203378` / Job `105711076049` / Artifact `10561801678` SUCCESS。
+  - v364 five6 Run `35379203415` / Job `105711076284` / Artifact `10561971352` SUCCESS。
+  - live-finalizer contract Run `35379203554` / Job `105711076584` / Artifact `10561961448` SUCCESS。
+  - v377 overlay stake Run `35379203585` / Job `105711079265` / Artifact `10561656831` SUCCESS。
+- broad historical workflows triggered by additive production-profile constants were still in_progress at the last check; targeted LIVE/finalizer regressions above are all green.
+- production/formal:
+  - formal tickets unchanged。
+  - `official_stakes_yen` remains 100/100/100。
+  - existing stake/allocation/current-odds shadows unchanged; v373 fields are additive research telemetry only。
+  - September outcomes/payouts remain UNREAD。
+
+## NEXT — dynamic staking / current-odds forward validation
+1. 今後の1head LIVE PASS判定artifactで `ticket_pair_probs` + official current odds + D20/D30 active/stakes をprospective保存する。
+2. まず結果を読まず、判定時current odds → official closing oddsのmarket driftだけを蓄積。
+3. D20が「currentで発火した後もclosing core条件を保つ」率を十分な件数で確認する。
+4. 件数が貯まるまでD20/D30はresearch shadowのまま。closing v371 ROIを理由にformal stakeへ昇格しない。
+5. September outcomesはUNREAD維持。production変更なし。
