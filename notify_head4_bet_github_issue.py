@@ -39,6 +39,7 @@ def main():
     ap.add_argument("--jcd", required=True, type=int)
     ap.add_argument("--race", required=True, type=int)
     ap.add_argument("--deadline-jst", required=True)
+    ap.add_argument("--dry-run", action="store_true")
     args=ap.parse_args()
 
     z=json.loads(Path(args.decision_json).read_text(encoding="utf-8"))
@@ -93,6 +94,10 @@ def main():
     body="\n".join(lines)+"\n"
 
     payload={"title":title,"body":body,"assignees":[owner]}
+    if args.dry_run:
+        print("HEAD4_BET_GITHUB_ISSUE_DRY_RUN_OK")
+        print(json.dumps(payload,ensure_ascii=False,indent=2))
+        return
     out=api("POST", f"{base}/issues", token, json=payload).json()
     print(f"HEAD4_BET_GITHUB_ISSUE_NOTIFIED issue={out.get('number')} url={out.get('html_url')}")
 
