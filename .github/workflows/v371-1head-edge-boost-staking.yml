@@ -1,0 +1,51 @@
+name: v371 1-head edge boost staking
+on:
+  push:
+    paths:
+      - 'run_v371_1head_edge_boost_staking.py'
+      - '.github/workflows/v371-1head-edge-boost-staking.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1'
+      - name: Download v360 prepared artifact
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10539401122/zip" > /tmp/v360.zip
+          mkdir -p /tmp/v360
+          unzip -q /tmp/v360.zip -d /tmp/v360
+          test -f /tmp/v360/prepared_rows.pkl
+      - name: Download v370 dynamic staking artifact
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10545859624/zip" > /tmp/v370.zip
+          mkdir -p /tmp/v370
+          unzip -q /tmp/v370.zip -d /tmp/v370
+          test -f /tmp/v370/formal_with_closing_odds.csv
+      - name: Run edge boost staking audit
+        run: python run_v371_1head_edge_boost_staking.py --v370-csv /tmp/v370/formal_with_closing_odds.csv --prepared /tmp/v360/prepared_rows.pkl
+      - name: Show result
+        if: always()
+        run: |
+          cat /tmp/v371-edge-boost/result.json 2>/dev/null || true
+          cat /tmp/v371-edge-boost/monthly.csv 2>/dev/null || true
+          cat /tmp/v371-edge-boost/lomo.csv 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v371-edge-boost-staking-${{ github.run_id }}
+          path: /tmp/v371-edge-boost/
+          retention-days: 30
