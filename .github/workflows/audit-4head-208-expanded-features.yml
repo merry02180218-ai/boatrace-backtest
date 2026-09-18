@@ -60,7 +60,7 @@ jobs:
             data/previews/original_exhibition/2026/06
             data/previews/original_exhibition/2026/07
             data/previews/original_exhibition/2026/08
-      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
       - name: Download frozen Stage1 and Stage2 artifacts
         env:
           GH_TOKEN: ${{ github.token }}
