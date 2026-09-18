@@ -1685,3 +1685,30 @@ Status: `HEAD4_120R_STRICT_MONITOR_PERSIST_UNTIL_EXHIBITION_OR_75S_CUTOFF`
 - September outcomes remain unread by these audits; production unchanged.
 
 Status: `HEAD4_WALL3_OPEN_RESCUE_PROMISING__123R_SHADOW_ONLY__NO_SUPPORT_RESCUES`
+
+
+## AFTER — wall3 open-rescue LIVE shadow implemented (research-only)
+- Fast runner commit: `5068b5358640146553248d8ffd24705b70275306`.
+- New output field: `wall3_open_shadow`.
+- Canonical shadow profile:
+  - `HEAD4_WALL3_OPEN_RESCUE_SHADOW_V1_BETA010_Q082_COMP250`
+  - wall_score uses the exact formal 1HEAD weights EX .20 / ST .40 / straight .25 / orig_avg .15 for lane3-lane4;
+  - open_risk = max(0,-wall_score);
+  - base_quality = head_prob + 1.50*opponent_mass;
+  - shadow_quality = base_quality + .10*open_risk;
+  - only current PASS is eligible;
+  - would_rescue when comp>=2.5 and shadow_quality>=.82.
+- This field is explicitly `research_only=true` and `production_applied=false`; official selected/BET/PASS logic is untouched.
+- Contract test workflow commit: `4db4eae6ca13ae1f3cc53aa3aa4999a9d700ee94`.
+- Test Run `35335467918` / Job `105569167818`: **SUCCESS**.
+  - weak lane3 synthetic case => shadow rescue true;
+  - already-selected official BET => shadow rescue false;
+  - strong lane3 => no veto/no rescue;
+  - compile and production-applied=false assertions passed.
+- Fine audit source:
+  - Run `35335191819` / Artifact `10542531161`;
+  - exact 3-race rescue set reproduced across 110 nearby parameter cells;
+  - support_added_R=0, so keep shadow-only until forward evidence.
+- No production thresholds, tickets, monitoring parent, or live decision semantics changed.
+
+Status: `HEAD4_WALL3_OPEN_RESCUE_SHADOW_LIVE_READY__OFFICIAL_DECISION_UNCHANGED`
