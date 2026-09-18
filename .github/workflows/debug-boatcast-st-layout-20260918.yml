@@ -1,0 +1,29 @@
+name: debug-boatcast-st-layout-20260918
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/debug-boatcast-st-layout-20260918.txt'
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests
+      - name: Dump raw ST layouts
+        run: |
+          python - <<'PY'
+          import requests
+          for jcd,rno in [(15,4),(11,12)]:
+              url=f'https://race.boatcast.jp/hp_txt/{jcd:02d}/bc_j_stt_20260918_{jcd:02d}_{rno:02d}.txt'
+              r=requests.get(url,timeout=8)
+              print('URL',url,'STATUS',r.status_code,'LEN',len(r.text))
+              for i,line in enumerate(r.text.splitlines()):
+                  print(jcd,rno,i,repr(line), 'COLS', line.split('\t'))
+          PY
