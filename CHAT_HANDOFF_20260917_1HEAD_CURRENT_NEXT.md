@@ -481,3 +481,26 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - Jul-Aug 14/28・ROI104.167%据え置き。
 - 今後のLIVE「判別して」では、WATCHでwall3条件が発火した場合は補正後3点が**正式買い目**として返る。shadow扱いではない。
 - 次の再開地点: 次回LIVE判定から正式wall3 ticket profileを通常運用。必要ならforward実績を別途蓄積して再監査。
+
+
+## BEFORE — v358 展示後・汎用買い目rerank研究
+- ユーザー指摘: 「展示後に買い目変わるパターンこれ以外に結構ありそう」。
+- 現状:
+  - v351 opponentCore は各艇の展示強弱を個別tiltする。
+  - v355正式採用wall3は 3号艇内壁 vs 4号艇攻撃 の相対関係だけを追加補正する。
+- 研究仮説: 買い目変更に効くのはwall3固有ではなく、**隣接コースの内壁/外攻め関係全般**と、場合によっては全艇の展示総合順位の追加rerank。
+- HEAD/BASIC/WATCH選定は固定、3点固定、レース数は一切減らさない。既存正式wall3も比較対象として残す。
+- 研究overlay:
+  1) GLOBAL: corrected EX/ST/straight/orig_avg の総合scoreを全2〜6号艇でcenterし、SECOND/THIRDを追加tilt。
+  2) ADJACENT: (2,3),(3,4),(4,5),(5,6) の各隣接pairで、外艇scoreが内艇を上回り、外艇attack scoreが閾値以上なら outer boost / inner demote。
+  3) ADJACENT_ST: 上記をST差中心で実施。
+  4) GLOBAL+ADJACENT: 個別総合順位と隣接圧力を合成。
+- 評価:
+  - BASIC165R全件
+  - operational WATCH subset（BASIC通過後mass>=.425）
+  - all / Feb-Jun / Jul-Aug / 月別
+  - exact3、ROI、変更R、gain/loss
+  - 現正式v355との差分
+  - どのadjacent pairが何R変更を起こしたか
+- 過学習対策: 単一点raw bestではなく、近傍plateau・月別・LOMOを後段で監査。
+- 2026-09結果/払戻は読まない。現正式LIVE wall3はこの研究中も維持し、自動置換しない。
