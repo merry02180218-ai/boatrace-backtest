@@ -1243,3 +1243,41 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 修正: repo CSV -> v340 shard -> BOAT RACE公式 historical odds3t fetch（旧v340と同じfetch関数）の3段fallback。
 - 公式fetchもclosing trifecta oddsのみで、結果/払戻はdecision featureに使わない。
 - 165/165にならなければ引き続きfail。staking gridは変更なし。
+
+
+## AFTER — v370 closing-odds within-race 600yen allocation
+- final Run `35345751484` / Job `105601806665` completed success / Artifact `10545859624` / head `b80dcbb02e14047cf8f5775cedb466fa5b3f1a36`。
+- official closing odds coverage **165/165**:
+  - repo CSV 144R
+  - v340 shard fallback 20R
+  - BOAT RACE公式historical odds3t page fallback 1R
+  - missing 0。
+- equal 600円（200/200/200）baseline:
+  - stake99,000 / return127,400 / profit+28,400 / ROI **128.687%**（100/100/100と同率）。
+- DEV-only raw bestは EDGE threshold=.8:
+  - DEV ROI143.75% vs equal129.44%
+  - ALL ROI137.89% vs128.69%。
+- しかし SUPPORT:
+  - equal125.00% -> selected109.23%（-15.77pt）
+  - Jul -39.26pt / Aug -4.65pt
+- LOMOは5月中3月のみ非悪化。Mar/Mayで悪化。
+- 結論: 固定600円を3点内でEV配分する方式はDEV過適合が強く、正式採用しない。
+- production unchanged / September outcomes unread / AUDIT_OK=true。
+
+## BEFORE — v371 base300 + positive-edge boost staking
+- 目的: 165R全件・formal3点を必ず各100円買いつつ、期待値の高い券だけ追加100円する。
+- race skipなし / ticket削除なし。最低stakeは常に300円/R。
+- decision featureは公式締切oddsとformal model exact-pair probabilityのみ。
+- edge mode:
+  1) conditional edge = `pair_prob * odds`
+  2) unconditional edge = `p_head * pair_prob * odds`
+- threshold grid .5/.6/.7/.8/.9/1.0/1.1/1.2/1.3/1.4/1.5/1.75/2.0。
+- 1レースで追加するのは、threshold以上のticketをedge順に最大1/2/3点、各+100円。
+- DEV選定は単純最大ROIではなく月別robustnessを入れる:
+  - DEV全体でequal baseline比 +5pt以上
+  - Feb-Jun 5月中4月以上で非悪化
+  - worst monthly delta >= -3pt
+  - 上記を満たす中でworst month最大 -> DEV ROI最大 -> 追加units少を優先。
+- Jul-Aug SUPPORTは完全holdout。
+- DEV LOMOでも同じrobust selectionを4月trainで再選定しholdout確認。
+- 現formal100/100/100は変更しない。v371はresearch only。
