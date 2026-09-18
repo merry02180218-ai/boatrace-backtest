@@ -8,10 +8,11 @@ candidate is taken from the BASIC-universe v353 predictions so no independent
 .425 exhibition recalibration enters this audit.
 """
 from pathlib import Path
-import argparse, json, hashlib
+import argparse, json, hashlib, pickle
 import numpy as np
 import pandas as pd
 import run_v337_1head_head_cutoff_volume as v337
+import run_v300_1head_trifecta3_feature_upgrade as v300
 import run_v351_1head_third_close_margin_audit as pay
 
 OUT=Path('/tmp/v355-watch-wall3-overlay'); OUT.mkdir(parents=True,exist_ok=True)
@@ -45,10 +46,23 @@ def main():
     if (len(basic),int(basic.hit.sum()))!=(165,80): raise RuntimeError(f'BASIC baseline drift R={len(basic)} hit={int(basic.hit.sum())}')
     if len(cand)!=165: raise RuntimeError(f'BASIC candidate drift R={len(cand)}')
 
-    # Recover pre-existing opponent mass only; do not rebuild/re-fit exhibition gate.
-    bi=v337.load_candidate_base()[['race_code','opp_mass']].copy()
-    bi.race_code=bi.race_code.astype(str).str.zfill(12)
-    if bi.race_code.duplicated().any(): raise RuntimeError('candidate-base duplicate race_code')
+    # Recover pre-existing opponent mass only; do not rebuild tickets or exhibition.
+    dev=pd.read_csv(v337.DEV_PRED,dtype={'race_code':str})
+    dev.race_code=dev.race_code.astype(str).str.zfill(12)
+    bi=dev[['race_code','opp_mass']].copy()
+    need=set(basic.race_code)-set(bi.race_code)
+    if need:
+        j=pd.read_csv(v337.JUL_HEAD,dtype={'race_code':str}); j.race_code=j.race_code.astype(str).str.zfill(12)
+        with v337.SECOND.open('rb') as fh: sec=pickle.load(fh)
+        with v337.BASE_PC.open('rb') as fh: bpc=pickle.load(fh)
+        rec=[]
+        for _,r in j[j.race_code.isin(need)].iterrows():
+            tm=str(r.month); code=str(r.race_code).zfill(12)
+            if code not in sec['base_p2'].get(tm,{}) or code not in bpc.get(tm,{}): continue
+            mass=v300.base5(sec['base_p2'][tm][code],bpc[tm][code])[1]
+            rec.append({'race_code':code,'opp_mass':float(mass)})
+        if rec: bi=pd.concat([bi,pd.DataFrame(rec)],ignore_index=True)
+    bi=bi.drop_duplicates('race_code')
     z=basic.merge(bi,on='race_code',how='left',validate='one_to_one')
     if z.opp_mass.isna().any(): raise RuntimeError(f'missing mass for BASIC rows {int(z.opp_mass.isna().sum())}')
     z['operational_watch']=pd.to_numeric(z.opp_mass,errors='coerce').ge(WATCH_MASS)
