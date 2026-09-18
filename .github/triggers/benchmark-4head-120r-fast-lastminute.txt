@@ -1,1 +1,2 @@
 trigger 2026-09-18 fast last-minute benchmark
+rerun with local sparse historical data
