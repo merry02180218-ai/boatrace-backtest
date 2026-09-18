@@ -55,3 +55,4 @@ jobs:
           python notify_head4_bet_github_issue.py --dry-run --decision-json /tmp/bet.json --target-date 20260918 --jcd 7 --race 11 --deadline-jst 20:15 | tee /tmp/bet.log
           grep -q 'HEAD4_BET_GITHUB_ISSUE_DRY_RUN_OK' /tmp/bet.log
           grep -q 'expanded156_added' /tmp/bet.log
+          grep -q '@merry02180218-ai' /tmp/bet.log
