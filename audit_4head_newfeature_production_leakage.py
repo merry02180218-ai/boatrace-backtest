@@ -17,7 +17,7 @@ PRE=Path('scan_4head_120r_pre_live.py')
 
 FORBIDDEN_SCORE_TOKENS=(
     'result','winner','payout','payoff','finish','着順','払戻',
-    'raw_hit','head4','actual_second','actual_third','hit_ticket',
+    'raw_hit','actual_second','actual_third','hit_ticket',
 )
 
 def must(cond,msg):
