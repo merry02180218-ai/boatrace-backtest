@@ -1,0 +1,40 @@
+name: trial-4head-120r-pre-live
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_date:
+        description: 'YYYY-MM-DD'
+        required: false
+        default: '2026-09-18'
+  push:
+    paths:
+      - '.github/triggers/trial-4head-120r-pre-live.txt'
+
+jobs:
+  trial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      TARGET_DATE: '2026-09-18'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy scikit-learn requests joblib beautifulsoup4 lxml
+      - name: Fetch result-blind current PRE inputs
+        run: python fetch_4head_v291_pre_inputs_live.py --date "$TARGET_DATE"
+      - name: Run 120R PRE live trial
+        run: |
+          python scan_4head_120r_pre_live.py --date "$TARGET_DATE" | tee /tmp/head4_120r_pre_live.log
+          grep -q 'HEAD4_120R_PRE_LIVE_TRIAL_OK' /tmp/head4_120r_pre_live.log
+          grep -q '9月結果_UNREAD' /tmp/head4_120r_pre_live.log
+          grep -q '本番変更なし' /tmp/head4_120r_pre_live.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-120r-pre-live-trial-20260918
+          path: |
+            current_input/v291/20260918/
+            live_outputs/head4_120r_pre/20260918/
+            /tmp/head4_120r_pre_live.log
