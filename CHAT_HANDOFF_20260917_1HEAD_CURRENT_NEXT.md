@@ -425,3 +425,23 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - まだproduction ticket置換はしていない。forward evidenceを貯めるまでは research-only。
 - September 9/17 outcomes UNREAD、9/18結果/払戻もこの研究・回帰では未使用。
 - 次の再開地点: 次回WATCH LIVE判定で official tickets と wall3_shadow_tickets を併記し、前向きサンプルを蓄積。別研究としては operational WATCH73Rに対する周辺設定の追加paired監査/forward promotion条件設計が可能。
+
+
+## BEFORE — 2026-09-18 WATCH wall3買い目 正式LIVE採用
+- ユーザー明示指示: 「正式採用でいいよ」。
+- 採用対象はv355で監査済みの **WATCH-only wall3 ticket rerank**。HEAD/BASIC/WATCHのレース選定条件は変更しない。
+- 現行LIVE定義:
+  - BASIC: HEAD>=.790 / mass>=.375 / env_w=.05 / q=.70
+  - WATCH: BASIC通過かつ mass>=.425
+- WATCH/PASSかつ wall3条件発火時:
+  - attack4_score>=.60
+  - wall score = .20*(EX3-EX4)+.40*(ST3-ST4)+.25*(straight3-straight4)+.15*(origavg3-origavg4)
+  - risk=max(0,-wall_score)
+  - SECOND: 4を exp(3.0*risk) boost、3を同量demote
+  - THIRD: 4を exp(.5*risk) boost、3を同量demote
+  - 3点HYBRID alpha=.70を再生成し、これを正式 `tickets` とする。
+- BASIC-only、WATCHでもwall risk非発火時は従来3点を維持。
+- v355監査: 165Rを削らず 80→83 exact3、ROI112.505→118.485%、gain3/loss0、Jul-Aug不変。
+- historical production constants / 276R sentinelは凍結維持。今回の変更はLIVE ticket policy昇格のみ。
+- 出力には旧3点も `pre_wall3_tickets` として残し、監査可能性を維持する。
+- びわこ7R保存済み直前データで正式採用後の回帰を実施し、正式ticketsが `1-4-5 / 1-4-3 / 1-2-4` へ変わること、結果払戻未使用を確認する。
