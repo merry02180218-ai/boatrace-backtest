@@ -1,0 +1,41 @@
+name: v371 1-head confidence value staking
+on:
+  push:
+    paths:
+      - 'run_v371_1head_confidence_value_staking.py'
+      - '.github/workflows/v371-1head-confidence-value-staking.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas
+      - name: Download v370 successful artifact
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10554711567/zip" > /tmp/v370.zip
+          mkdir -p /tmp/v370
+          unzip -q /tmp/v370.zip -d /tmp/v370
+          test -f /tmp/v370/race_level.csv
+      - name: Run confidence-value staking audit
+        run: python run_v371_1head_confidence_value_staking.py --race-level /tmp/v370/race_level.csv
+      - name: Show result
+        if: always()
+        run: |
+          cat /tmp/v371-confidence-value-staking/result.json 2>/dev/null || true
+          cat /tmp/v371-confidence-value-staking/conf_ev_budget_sensitivity.csv 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v371-confidence-value-staking-${{ github.run_id }}
+          path: /tmp/v371-confidence-value-staking/
+          retention-days: 30
