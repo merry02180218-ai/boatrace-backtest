@@ -745,3 +745,32 @@ Operational timing note:
 - This is not leakage; it is a timing/availability constraint.
 
 Status: `HEAD4_120R_CORE_REPLAY_SUCCESS__LEAKAGE_RUN_STILL_IN_PROGRESS`
+
+
+## LEAKAGE AUDIT REPORT FROZEN
+Dedicated report created:
+- `HEAD4_120R_LEAKAGE_AUDIT_20260918.md`
+- commit: `a0371c340f0fec709733d281a3e0a2105381bd6f`
+
+Frozen audit conclusion:
+- same-race outcome leakage: **PASS**
+- temporal/future feature leakage: **PASS on audited code/artifact contracts**
+- dynamic `head_prob` leakage/negative-control audit: **PASS**
+- market timing: **WARN / NOT PROSPECTIVE** because archived `official_closing / closing_displayed` odds are a retrospective proxy
+- Apr-Aug threshold-selection leakage: **PRESENT / NON-PRISTINE**
+- retrospective sample-selection: **WARN**
+- September contamination: **PASS / UNREAD**
+- overall: `HEAD4_120R_LEAK_AUDIT_PASS_WITH_WARNINGS__RESEARCH_ONLY`
+
+Additional operational constraint:
+- `opponent_mass` uses current-race exhibition/ST/original-exhibition features, so 120R is a **post-exhibition last-minute** rule.
+- For a future live-safe implementation, freeze the `head_prob` model state (feature list, imputer, scaler, coefficients) instead of refitting from an external historical source on each run; this is a reproducibility requirement, not a currently observed target leak.
+
+Production blockers remain:
+1. unified Run `35306188702` must finish successfully;
+2. historical closing odds must not be treated as historical live snapshots;
+3. live implementation must use immutable timestamped pre-deadline odds;
+4. Apr-Aug ROI cannot be called independent holdout evidence;
+5. September outcomes remain unread until the future evaluation checkpoint.
+
+Status: `HEAD4_120R_RESEARCH_FROZEN__LEAK_AUDIT_PASS_WITH_WARNINGS__PRODUCTION_UNCHANGED`
