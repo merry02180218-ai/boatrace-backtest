@@ -48,6 +48,13 @@ def main():
     assert labels == ['一周', 'まわり足', '直線']
     assert rows[4] == [36.9, 5.45, 7.25]
 
+    # Original-exhibition rows can also wrap inside the player-name field.
+    orig_wrapped = ORIG.replace('1\tA\t37.20\t5.60\t7.40', '1\tA_PART\nIAL\t37.20\t5.60\t7.40')
+    wl, wr = parse_boatcast_original(orig_wrapped)
+    assert wl == labels
+    assert set(wr) == set(range(1,7))
+    assert wr[1] == [37.2, 5.6, 7.4]
+
     z = build_from_sources('20260630', 1, 1, HTML, ST, ORIG)
     assert list(z) == [
         'ex_st_rank4','ex_st_4','ex_st_edge_4v3',
