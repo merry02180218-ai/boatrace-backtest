@@ -1,0 +1,22 @@
+name: audit-4head-nested-expansion-from-77
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/audit-4head-nested-expansion-from-77.txt'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy scikit-learn requests joblib beautifulsoup4 lxml
+      - run: mkdir -p /tmp/head4_nested_expansion && python audit_4head_nested_expansion_from_77.py | tee /tmp/head4_nested_expansion/run.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-nested-expansion-from-77
+          path: /tmp/head4_nested_expansion/
