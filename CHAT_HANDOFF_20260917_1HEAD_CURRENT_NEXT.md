@@ -2675,3 +2675,48 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   3. repo内のhistorical pre-close/current odds snapshot保存実装の有無を監査。
   4. snapshotが無ければforward LIVE用に判定時オッズを保存するlogger設計/実装へ進む。
 - formal race set/ticketsは変更しない。September outcomes/payoutsはUNREAD維持。production/LIVE betting ruleはこの研究だけでは変更しない。
+
+
+## AFTER — v386 expanded current-odds safety-margin audit
+- Run `35368163224` / Job `105675520424` success / Artifact `10556873896` / digest `sha256:89bd1a40236ee615c865eaf73d0b5dcf24790e7c84799d669442c1445433a7e3`。
+- v379 odds-independent allocation baselineとの厳密比較:
+  - LIVE165 baseline142.305%
+    - threshold3.9: **144.163%** (+1.857pp)
+    - threshold4.3: **142.935%** (+0.630pp)
+  - H078_M375 baseline128.503%
+    - 3.9: **131.099%** (+2.596pp)
+    - 4.3: **129.263%** (+0.760pp)
+  - H0775_M375 baseline123.211%
+    - 3.9: **125.474%** (+2.263pp)
+    - 4.3: **123.874%** (+0.663pp)
+  - H0775_M350 baseline119.709%
+    - 3.9: **122.443%** (+2.734pp)
+    - 4.3: **120.608%** (+0.899pp)
+  - PROD276 baseline124.861%
+    - 3.9: **127.381%** (+2.520pp)
+    - 4.3: **125.823%** (+0.962pp)
+- disjoint nested bands against reconstructed v379 baseline:
+  - LIVE165: 3.9 +1.857pp / 4.3 +0.630pp
+  - added71R baseline95.476%: 3.9 **99.841%** (+4.365pp), 4.3 **96.548%** (+1.071pp)
+  - added33R baseline87.302%: 3.9/4.3ともsoft発火0で完全同値
+  - added45R baseline97.255%: 3.9 **101.026%** (+3.771pp), 4.3 **97.756%** (+0.502pp)
+- 結論: 3.9/4.3はLIVE165だけの改善ではなく、拡大母集団でもodds-independent allocation以上。特に3.9は独立追加71R/45Rでも改善。
+- ただし3.9/4.3は「想定current→close drift 5%/10%」から機械的に導いた安全閾値で、historical outcomeで最適化した値ではない。
+- production/official stake/current-odds shadow未変更 / September unread / AUDIT_OK=true。
+
+## BEFORE — prospective current-odds telemetry 3.5/3.9/4.3
+- historical pre-close odds snapshotが存在しないため、これ以上closing oddsだけで正式採用判断しない。
+- 現在のLIVE current-odds shadowはresearch_onlyのまま維持。
+- forward観測を強化:
+  - current odds取得時刻
+  - formal deadline_jst
+  - minutes_to_deadline
+  - current selected3 odds ratio
+  - threshold3.5 / 3.9 / 4.3それぞれのsoft発火有無
+  - 各thresholdでの仮想stakes
+  を同一shadow JSONに保存。
+- WALL3時はodds非依存100/100/400なので全threshold同一。
+- five6-only / NONEだけthreshold別soft allocationを比較。
+- 既存 `stakes_yen` / threshold3.5 shadow semanticsは変更しない。3.9/4.3は追加telemetryのみ。
+- result/payout endpointは使用しない。formal tickets / official stakes / HEAD gatesは変更しない。
+- 保存済みsynthetic regressionで既存3.5出力不変 + 3.9/4.3追加fieldを監査する。
