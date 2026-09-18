@@ -2471,3 +2471,222 @@ Research discipline:
 5. Selection scores themselves may use only information available by the last-minute decision point; outcomes/payouts are evaluation-only.
 
 Status: HEAD4_156R_EXPANDED_FEATURE_RESEARCH_START
+
+
+## AFTER — expanded wall3/motor features break the exact156 head-rate frontier
+User approved continuing after the old-feature swap search could not exceed 41.67% head rate while preserving the current monthly floor.
+
+### 1) Expanded feature table on the full Stage2 odds-covered universe
+New script:
+- `audit_4head_208_expanded_features.py`
+- commit `995cfb2a43df5717f036d75ed2ce4a91b1c1bc09`
+
+Workflow:
+- `.github/workflows/audit-4head-208-expanded-features.yml`
+- initial commit `60aafdff49ddc14980cd7a67c5a1ddaa7dd2f93f`
+- first Run `35361515996` / Job `105653655967` FAILED only because `requests` was missing from the runtime dependency list.
+- dependency fix commit `6bfa24add8d53a3012a6d1deb633e47b7dd449ed`
+- successful Run `35361685459`
+- Job `105654231541`
+- Artifact `10555325906` / `head4-208-expanded-features`
+- SUCCESS.
+
+Coverage:
+- verified Stage2 universe: 208R
+- base120: 120R
+- nonbase expansion candidates: 88R
+- wall3 ready: 183/208 overall, **79/88 nonbase**
+- motor prior-win diff ready: **208/208; 88/88 nonbase**
+- motor 2-ren diff ready: **208/208; 88/88 nonbase**
+- September outcomes unread.
+
+New causal/current-exhibition features:
+- formal 1HEAD wall semantics:
+  - wall_score
+  - ex_wall_gap
+  - st_wall_gap
+  - straight_wall_gap
+  - avg_wall_gap
+  - attack4_score
+  - wall3_score
+  - ex_wall_votes
+- causal motor features:
+  - motor_win_diff_4v3
+  - motor_2ren_diff_4v3
+
+Expansion-88 diagnostic strata showed meaningful separation:
+- motor_win_diff -0.03..0: 28R / head4 **46.43%** / ROI152.02%.
+- motor_2ren_diff -10..-3: 12R / head4 **50.0%** / ROI144.68%.
+- motor_2ren_diff -3..0: 13R / head4 **46.15%** / ROI182.51%.
+- attack4_score >.5: 54R / head4 **38.89%** vs <=.5 20.83%.
+- st_wall_gap 0..0.2: 9R / head4 **44.44%** / ROI286.8%.
+These are retrospective diagnostics, not standalone promotion rules.
+
+### 2) Formal exact156 new-feature frontier
+Script:
+- `audit_4head_156r_newfeature_frontier.py`
+- commit `2ed6665a44870ae98e9438c2b8a7beea8016b0f4`
+
+Workflow:
+- `.github/workflows/audit-4head-156r-newfeature-frontier.yml`
+- commit `5dacfb1baa9cc6b90b32d0a455ac7304ddaa75c8`
+- Run `35362436857`
+- Job `105656709647`
+- Artifact `10555042274` / `head4-156r-newfeature-frontier`
+- SUCCESS.
+
+Score family:
+- hp rank
+- opponent mass rank
+- ST advantage rank
+- ORIG advantage rank
+- market-confidence rank
+- reverse motor-win-diff rank
+- reverse motor-2ren-diff rank
+- attack4 rank
+- ST-wall closeness to +0.10 rank
+- reverse wall-score rank
+- missing wall features are neutral 0.5, not outcome-imputed.
+
+Grid:
+- 39,366 parameter cells
+- 12,308 unique exact156 memberships
+- 10,529 memberships kept overall ROI >= current156
+- 7,182 kept monthly floor >=85
+- **2,489 kept monthly floor >=90**
+- **1,297 kept both current monthly floor >=91.575 and current Jul-Aug ROI >=115.0453**
+
+Best fully robust retrospective membership:
+- weights:
+  - hp 2
+  - mass 5
+  - ST 3
+  - ORIG 0
+  - market 0
+  - motor_win_rev 3
+  - motor_2ren_rev 3
+  - attack4 2
+  - stwall_center 2
+  - wall_rev 3
+- plateau_cells 3
+- **156R / 75 heads = 48.08%**
+- exact3 **40**
+- ROI **140.99%**
+- monthly floor **91.575%**
+- Jul-Aug:
+  - 59R
+  - 33 heads = **55.93%**
+  - exact3 16
+  - ROI **117.01%**
+- month ROI:
+  - Apr233.08
+  - May120.45
+  - Jun135.89
+  - Jul130.06
+  - Aug91.575.
+
+Compared with current156:
+- head4: 65 -> **75** (+10)
+- head rate: 41.67% -> **48.08%** (+6.41pp)
+- exact3: 37 -> **40**
+- ROI: 128.59% -> **140.99%**
+- monthly floor: 91.575% -> **91.575%** unchanged
+- support ROI: 115.045% -> **117.012%**.
+
+Ablation confirms both new feature families matter:
+- FULL: 48.08% / ROI140.99 / floor91.575.
+- NO_MOTOR: 43.59% / ROI126.38 / floor87.21.
+- NO_WALL (attack/wall-related terms removed): 42.95% / ROI125.38 / floor79.63.
+- NO_MOTOR_WIN: 44.87% / ROI123.98 / floor87.21.
+- NO_MOTOR_2REN: 44.87% / ROI126.38 / floor83.25.
+- NO_ATTACK4: 45.51% / ROI135.71 / floor83.25.
+- NO_STWALL_CENTER: 46.15% / ROI126.38 / floor91.575.
+- NO_WALL_SCORE: 44.23% / ROI133.31 / floor83.25.
+Therefore the prior frontier was genuinely broken by the added motor + wall3 information, not by another old-feature threshold tweak.
+
+Important limitation:
+- the 48.08% / ROI140.99 row is selected using Apr-Aug evaluation and is NON-PRISTINE.
+- it is promising research evidence, not yet a prospective production proof.
+
+### 3) Temporal holdout: freeze weights on Apr-Jun only
+To reduce all-period selection bias, added:
+- `audit_4head_156r_newfeature_temporal_holdout.py`
+- commit `86472a6a90bb86272c168d3239675054e13ee7b1`
+- workflow `.github/workflows/audit-4head-156r-newfeature-temporal-holdout.yml`
+- commit `521c65a8f47557ad03a691e6158ff3fe7652fed1`
+- Run `35362985518`
+- Job `105658535646`
+- Artifact `10555188638` / `head4-156r-newfeature-temporal-holdout`
+- SUCCESS.
+
+Temporal discipline:
+- weight selection uses Apr-Jun outcomes only.
+- Jul-Aug outcomes are not used to choose weights.
+- monthly addition counts are held equal to current156 for like-for-like volume:
+  - Apr3 / May11 / Jun7 / Jul13 / Aug2.
+- feature normalization uses Apr-Jun ECDFs; missing wall features neutral.
+- frozen Apr-Jun selection rule:
+  - dev ROI >= current dev ROI
+  - dev monthly floor >= current dev floor
+  - maximize dev head rate -> exact3 -> ROI -> floor -> plateau -> lower weight sum.
+
+Frozen weights:
+- hp2
+- mass4
+- ST1
+- ORIG1
+- market2
+- motor_win_rev4
+- motor_2ren_rev3
+- attack4 3
+- stwall_center2
+- wall_rev1
+- dev plateau cells 3.
+
+Apr-Jun frozen metrics:
+- 92R
+- **40 heads =43.48%** vs current31/92=33.70%
+- exact3 23 vs20
+- ROI **153.49%** vs138.01%
+- dev monthly floor **123.54%** vs109.63%.
+
+Jul-Aug true report after freeze:
+- 64R
+- **34 heads =53.125%**, exactly same head count/rate as current support
+- exact3 16 vs current17
+- ROI **107.87%** vs current115.05%
+- Jul ROI115.28
+- Aug ROI91.575
+- support monthly floor remains **91.575%**.
+
+Combined exact156 temporal-holdout profile:
+- **156R / 74 heads =47.44%**
+- exact3 **39**
+- ROI **134.77%**
+- monthly floor **91.575%**
+- head-rate improvement vs current156: +5.77pp / +9 heads
+- total ROI improvement: +6.19pp
+- race count unchanged.
+This is materially stronger evidence for head-rate improvement because Jul-Aug labels did not participate in weight selection. However Jul-Aug ROI itself is weaker than current, so period-specific ROI stability is not fully improved.
+
+### 4) Old long score search
+The earlier broad `35358441813` score-search run eventually ended `cancelled`; it is superseded by the vectorized/focused audits above and is not needed.
+
+### Conclusion / current status
+The prior conclusion that ~44% head rate + 156R + monthly floor ~90% was unreachable is now overturned **after adding genuinely new information**:
+- all-period robust diagnostic: **48.08% / ROI140.99 / floor91.575 / 156R**
+- Apr-Jun-frozen temporal audit: **47.44% / ROI134.77 / floor91.575 / 156R**
+- Jul-Aug head rate remains 53.125% after the Apr-Jun freeze, so the head-rate improvement does not depend on a Jul-Aug collapse/recovery artifact.
+- Jul-Aug ROI falls to107.87 in the temporal freeze, therefore do not promote yet without deciding whether overall ROI+head-rate is sufficient or support-period ROI must also remain >= current.
+
+Production/LIVE remains unchanged:
+- `HEAD4_156R_ROI_EXPANSION_V1`
+- GitHub BET notification remains enabled.
+- September target outcomes remain UNREAD.
+
+Exact restart point:
+1. Convert the Apr-Jun-frozen new-feature score into an operational per-race rule/threshold that does not require retrospective monthly quotas/top-k knowledge.
+2. Audit resulting volume near156 and Jul-Aug behavior.
+3. If acceptable, add the new score as a LIVE shadow first (no decision change), then collect prospective September decisions/outcomes before promotion.
+
+Status: `HEAD4_NEWFEATURE_FRONTIER_BROKEN__TEMPORAL_HEADRATE_CONFIRMED__OPERATIONALIZATION_NEXT__PRODUCTION_UNCHANGED`
