@@ -209,3 +209,13 @@ Changes in research/run_3head_funsite_broad50.py:
 - Frozen candidates: 0.50=null, 0.45=null, 0.40=null; therefore no March candidate was opened/evaluated in this wave.
 - Conclusion: these four generic families (logit / ExtraTrees / RF / HistGB + existing ensemble discovery) do not provide a Feb-stable 50% useful-volume region. RF v2 10R=50% is a tiny-N one-block artifact because the paired v1 block is 0/10.
 - Do NOT stop research. Next wave should change representation/selection family: rank-based features, explicit 3-vs-1/2/4 attack archetypes, Feb-only model intersections/consensus/disagreement gates, and rule/tree searches with minimum support and two-block stability. Production v288 unchanged; September outcomes UNREAD.
+
+
+## BEFORE WORK — Broad50 Wave2 representation/consensus/rule search (2026-09-18)
+- Start only after verifying repaired Broad50 Run 35303255628 SUCCESS and no Feb-stable frozen candidate in generic families.
+- Keep production v288 unchanged; September outcomes UNREAD; July/August NON-PRISTINE.
+- Wave2 is a materially different hypothesis family, selected only inside February before any Wave2 March label is evaluated.
+- Add good-direction rank features for boat3 among all six, explicit boat3-vs-inner(1/2), boat3-vs-1, boat3-vs-2, boat3-vs-4 counter, motor/player/ST/recent-form attack signals.
+- Search two Feb stability blocks with: (a) models trained on the new representation, (b) model intersection/consensus quantile gates, and (c) explicit single/pair rule gates whose thresholds come only from the Feb training block.
+- Require minimum-support reporting and expose both strict and relaxed discovery stability; tiny-N 50% remains diagnostic only.
+- Freeze candidates from February only. March remains one-shot for any Wave2 candidate that passes the Feb support/stability gate; do not iterate Wave2 rules from March outcomes.
