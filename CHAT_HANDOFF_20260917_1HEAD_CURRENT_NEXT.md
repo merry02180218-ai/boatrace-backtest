@@ -631,3 +631,20 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 選定はFeb-Jun devのみ。Jul-Aug supportは選定に使わない。
 - 目的は unique gainを増やしつつ lossを抑え、特に165R外の追加148Rでも新規gainが出る設定を探す。
 - 現正式wall3/LIVE設定は変更しない。2026-09結果払戻は読まない。
+
+
+## v361 初回failure — payout union不足
+- Run `35327996597` / Job `105545490129` failure。
+- grid本体は313R DEV探索まで通過。後段で全universeへ同一bestを横展開する際、payout辞書を313Rだけから作っていたため、PROD276側にのみ存在する `202602250509` で KeyError。
+- 修正: payout/cache対象を5母集団のrace unionへ拡張。研究パラメータ・選定条件は変更しない。
+- なおprepared rowsを使った独立ローカルexact3再現では有望候補:
+  - pair 5>6 / basis ST
+  - outer score>=.60
+  - ST gap>=.30（.40も同じplateau）
+  - mass制限なし
+  - SECOND g2=0 / THIRD g3=.75
+  - 313R: 142 -> 147 hits / gain5 / loss0
+  - DEV: 116 -> 118 / gain2 / loss0
+  - SUPPORT: 26 -> 29 / gain3 / loss0
+  - 165R: 80 -> 84、236R:113->117、269R:128->132、276R:131->136
+- GitHub正式監査でROI/LOMOを確定するまでproduction変更なし。
