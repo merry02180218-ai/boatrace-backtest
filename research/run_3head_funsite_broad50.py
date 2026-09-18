@@ -26,7 +26,7 @@ def recent(row,b,p):
  a=np.array(vals,float)
  return {f'{p}_starts':len(a),f'{p}_mean':a.mean() if len(a) else np.nan,f'{p}_win':(a==1).mean() if len(a) else np.nan,f'{p}_top2':(a<=2).mean() if len(a) else np.nan,f'{p}_top3':(a<=3).mean() if len(a) else np.nan}
 def features(rc,rn,rl):
- o={'rc':int(rc['レースコード']),'venue':str(rc.get('レース場コード','')).zfill(2),'race_no':int(re.sub(r'\\D','',rc.get('レース回','0')) or 0)}
+ o={'rc':int(rc['レースコード']),'venue':str(rc.get('レース場コード','')).zfill(2),'race_no':int(re.sub(r'\D','',str(rc.get('レース回','0'))) or 0)}
  for b in range(1,7):
   for c in CORE:o[f'b{b}_{c}']=num(rc.get(f'艇{b}_{c}'))
   for k,v in recent(rn,b,'rn').items():o[f'b{b}_{k}']=v
