@@ -1494,3 +1494,38 @@ Status: `HEAD4_120R_LASTMINUTE_SPEED_CONFIRMED__2P23S_ADDITIONAL_LIVE_BENCHMARK`
 - Build a reusable strict live workflow that consumes the frozen corrected PRE artifact and prewarmed causal daily-state artifact, rejects non-parent races, runs `run_4head_120r_lastminute_fast.py` without benchmark override, and uploads the full decision JSON/log.
 - First smoke target: Marugame 10R. Because current time is well before exhibition, an immediate run is expected to fail closed as `NO_BET_DATA_NOT_READY`; that is a safety-path check, not the final BET/PASS proof.
 - Preserve causal rule: prior completed Sep dates through Sep17 allowed; target-race result/payout/future outcomes forbidden. Production/research thresholds unchanged.
+
+
+## AFTER WORK — strict monitored workflow created and fail-closed smoke passed
+- New reusable workflow: `.github/workflows/live-4head-120r-true-monitor.yml`
+  - workflow commit: `409960bbadaccb6c0a7fce9fd9607ecca72884a8`
+  - accepts target/date/deadline and frozen PRE/state artifact identifiers by workflow_dispatch;
+  - push trigger file: `.github/triggers/live-4head-120r-true-monitor.json`;
+  - downloads corrected PRE + prewarmed daily state dynamically with `gh run download`;
+  - runs `run_4head_120r_lastminute_fast.py` **without** `--allow-unmonitored-benchmark`;
+  - contract asserts `monitoring_parent=true`, target result unused, payout unused, and decision is BET/PASS/NO_BET_DATA_NOT_READY.
+- Initial trigger commit: `4f091f3efde1a9f371ab101f2df4c7b491d91883`.
+- Strict monitored smoke target: 2026-09-18 Marugame 10R, official deadline 19:39 JST.
+- Run: `35328561014`
+- Job/check: `105547310818`
+- conclusion: **SUCCESS**
+- Artifact: `10539639044`
+- Output:
+  - race_code `202609181510`
+  - `monitoring_parent=true`
+  - head_prob `0.1011314922400658`
+  - decision `NO_BET_DATA_NOT_READY`
+  - not_ready_stage `EXHIBITION`
+  - attempts 10 / elapsed ~31.3s
+  - strict runner wall ~31.67s (intentional pre-exhibition polling window)
+  - target_race_result_used=false
+  - payout_used=false
+  - contract check: `STRICT_MONITOR_CONTRACT_OK`
+- Interpretation: strict internal-parent gating and fail-closed behavior are now proven on a true monitoring-parent race. This is **not yet** the final BET/PASS proof because the run was intentionally early (18:15 JST) and exhibition data was not published.
+- Earliest remaining true-parent final candidates today from corrected PRE:
+  1. Marugame 10R — deadline 19:39 JST
+  2. Omura 6R — deadline 19:56 JST
+  3. Gamagori 11R — deadline 20:15 JST
+- Next resume point: rerun the same strict workflow once exhibition is available for one of those races; no code change should be needed. A successful complete-data run must end in semantic BET or PASS while retaining `monitoring_parent=true` and no target result/payout access.
+
+Status: `HEAD4_120R_STRICT_MONITOR_GATE_AND_FAILCLOSED_PASS__FINAL_BET_PASS_PENDING_EXHIBITION`
