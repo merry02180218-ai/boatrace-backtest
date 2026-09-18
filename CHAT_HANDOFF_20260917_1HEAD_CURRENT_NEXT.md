@@ -541,3 +541,17 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 を監査する。
 - Jul-Augはsupportのみで選定に使わない。
 - 正式wall3 profileは維持し、汎用adjacentは自動昇格しない。
+
+
+## AFTER — 2026-09-18 平和島12R LIVE直前判定
+- ユーザー指示: 「1号艇モデルの平和島12Rの直前判定して」。
+- race_code=`202609180412`。LIVE request更新commit `864aabada1647b194a9e0232314ef3b99060af1d`。
+- chat-live Run `35319697557` completed success / Artifact `10536382992` name `live-v351-final-202609180412`。
+- 締切 16:40 JST / evaluated 16:31:02 JST / 約9.46分前。
+- 事前値: HEAD=.8010601806 / opponent mass=.4858903563。現行LIVE BASIC(.790/.375/.05/.70)およびWATCH mass(.425)の事前条件は満たす。
+- 展示取得: EX 1=6.86,2=6.79,3=6.74,4=6.72,5=6.78,6=6.67。ST展示 1=.08,2=.12,3=.03,4=.06,5=.25,6=.23。
+- original: 1号艇 一周37.20 / まわり足5.50 / 直線7.40。
+- venue-aware exhibition gate: `head_exhibition_pass=false` / attack_core=.26 / threshold=.5010533623。
+- 最終判定: **DROP / 見送り**。tickets=[]。WATCH用wall3 ticket補正は、展示gate DROPのため非適用。
+- result_or_payout_used=false / chronology_guard=true。2026-09-18結果払戻未使用、2026-09-17結果払戻UNREAD維持。
+- 補足: このチャットではLIVE発火を先に行い、作業前handoff追記を先行できなかった。未実施を実施済みとして記録しない。
