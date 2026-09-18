@@ -1487,3 +1487,49 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - expanded universe全体とdisjoint band
 - signal選定に新しい閾値や払戻最適化は使わない。FIVE6/WALL3/EITHERは既にformal overlay componentとして事前定義済み。
 - 目的: stake shadowとしてforward運用に回せるほど安定かを見る。正式stake採用はユーザー許可まで行わない。
+
+
+## AFTER — v375 fixed overlay-stake robustness
+- Run `35351867665` / Job `105621672737` completed success / Artifact `10550240515` / digest `sha256:31038e65a699413c61f5eac60d50ee6f83526a47cefc67e9b30414d276df14a1` / head `01ad9245e69dc35f53a3bd94d35dc966b0c42787`。
+- parameter searchなし。固定2x（signal raceだけ200/200/200、他は100/100/100）を監査。
+- EITHER:
+  - ALL ROI128.687 -> **134.892%**, profit +14,200 -> **+21,040**
+  - DEV 129.44 ->134.22
+  - SUPPORT 125.00 ->138.10
+  - leave-one-month-out 7/7すべてROI改善
+  - 4か月以上の全month subsetで非悪化 **85.94%**
+  - subset median delta +6.80pp / worst -5.99pp
+- FIVE6:
+  - ALL ROI -> **133.070%**, profit +18,850
+  - DEV +2.31pp / SUPPORT +14.12pp
+  - LOO 7/7改善
+  - month subset非悪化 **93.75%**（3 signal中最高）
+  - subset median +4.63pp / worst -3.52pp
+- WALL3:
+  - ALL ROI ->132.166%
+  - SUPPORTは -0.75pp（1 signal raceのみ）
+  - LOO 7/7改善
+  - month subset非悪化90.63%
+- 単月ではEITHER/FIVE6ともFeb/Mar/May悪化、Apr/Jun/Jul/Aug改善。したがって短期の月単位振れは大きい。
+- expanded universe overallではEITHER/FIVE6/WALL3の2xはいずれも概ね改善するが、disjoint追加33R帯は全signalで悪化。current LIVE165で特に強い。
+- 結論: overlay signalをrace-level stake signalとして使う価値は高い。特にFIVE6はsubset robustness、EITHERは総ROI/利益で優勢。ただし単月varianceがあるため正式採用前に資金曲線/最大DD監査が必要。
+- production/LIVE stake unchanged / September outcomes unread / AUDIT_OK=true。
+
+## BEFORE — v376 overlay staking bankroll / drawdown audit
+- 目的: v374/v375で有望なformal overlay stake concentrationについて、ROIだけでなく**時系列リスク**を評価する。
+- 新しいpredictive gate/thresholdは一切導入しない。
+- current LIVE165をrace_code時系列順に固定。
+- signal: EITHER / FIVE6 / WALL3。
+- multiplier: 1x / 2x / 3x / 4x（signal raceの3点を均等に倍率化、他は100/100/100）。
+- 評価:
+  - total ROI / profit
+  - max drawdown（円）
+  - max drawdown / cumulative stake
+  - peak-to-trough race count
+  - longest losing streak
+  - worst 10R / 20R rolling profit
+  - profit per 10,000円 stake
+  - monthly profit volatility
+- DEV / SUPPORTも別集計。
+- 目的はROI最大の倍率を選ぶことではなく、**追加リスク1円あたりの利益**とDDの増え方を比較し、forward stake shadowの自然な倍率を決めること。
+- 2026-09 outcomes/payoutsは読まない。formal stakingは変更しない。
