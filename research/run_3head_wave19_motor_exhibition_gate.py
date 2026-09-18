@@ -10,7 +10,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 
 from run_3head_funsite_broad50_wave16 import (
-    fetch, build_pre_enhanced, load_canonical, choose_features, walk_predictions, pct_ref
+    fetch, build_pre_enhanced, load_canonical, choose_features, pct_ref
 )
 
 MOTOR_START='2025-07-01'
@@ -221,28 +221,39 @@ def prep_month(x,res):
     return y
 
 def make_pre_scores(frames):
-    all_data=pd.concat(list(frames.values()),ignore_index=True,sort=False)
+    all_data=pd.concat([frames[m] for m in ['oct','nov','dec','jan','feb']],ignore_index=True,sort=False)
     _,enh,_=choose_features(all_data)
-    feature_sets={'ENHANCED':enh}
-    order=['oct','nov','dec','jan','feb']
-    histories={}
-    # September 2025 is present in frames only as history support, never a reported validation month.
-    sep=frames['sep']
-    acc=sep.copy()
-    for m in order:
-        acc=pd.concat([acc,frames[m]],ignore_index=True,sort=False)
-        histories[m]=acc.copy()
     score_months=['nov','dec','jan','feb']
-    preds={m:walk_predictions(histories[m],frames[m],feature_sets) for m in score_months}
     out={}
-    for m,p in preds.items():
-        if p.empty or 'family' not in p.columns:
+    cumulative=frames['oct'].copy()
+    histories={}
+    for m in score_months:
+        cumulative=pd.concat([cumulative,frames[m]],ignore_index=True,sort=False)
+        histories[m]=cumulative.copy()
+
+    for m in score_months:
+        target=frames[m].sort_values(['date','rc']).copy()
+        rows=[]
+        hist=histories[m]
+        for dayv in sorted(target.date.dt.normalize().unique()):
+            day=pd.Timestamp(dayv)
+            today=target[target.date.dt.normalize()==day].copy()
+            tr=hist[(hist.date<day)&(hist.date>=day-pd.Timedelta(days=42))].copy()
+            if len(tr)<500 or tr.y.nunique()<2 or len(today)==0:continue
+            model=make_pipeline(
+                SimpleImputer(strategy='median'),StandardScaler(),
+                LogisticRegression(C=.08,class_weight='balanced',solver='liblinear',
+                                   max_iter=1800,random_state=161)
+            )
+            model.fit(tr[enh],tr.y)
+            ptr=model.predict_proba(tr[enh])[:,1]
+            p=model.predict_proba(today[enh])[:,1]
+            z=today[['rc','date','venue','race_no','y']].copy()
+            z['pre_score']=pct_ref(ptr,p)
+            rows.append(z)
+        if not rows:
             raise RuntimeError(f'no PRE predictions for {m}')
-        q=p[(p.family=='ENHANCED')&(p.window==42)][['rc','date','venue','race_no','y','p_logit']].copy()
-        if q.empty:
-            raise RuntimeError(f'no ENHANCED window42 PRE predictions for {m}')
-        q=q.rename(columns={'p_logit':'pre_score'})
-        out[m]=q.drop_duplicates('rc')
+        out[m]=pd.concat(rows,ignore_index=True).drop_duplicates('rc')
     return out,len(enh)
 
 def rolling_post_scores(allrows,target_month,features,require_common):
@@ -306,7 +317,7 @@ def main():
     canon=load_canonical()
     raw={}
     for m,(a,b) in {
-      'sep':('2025-09-01','2025-09-30'),'oct':('2025-10-01','2025-10-31'),
+      'oct':('2025-10-01','2025-10-31'),
       'nov':('2025-11-01','2025-11-30'),'dec':('2025-12-01','2025-12-31'),
       'jan':('2026-01-01','2026-01-31'),'feb':('2026-02-01','2026-02-28')}.items():
         x,r,audit=build_pre_enhanced(a,b,True);raw[m]=(x,r,audit)
