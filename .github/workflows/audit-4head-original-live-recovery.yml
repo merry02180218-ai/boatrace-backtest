@@ -1,0 +1,60 @@
+name: audit-4head-original-live-recovery
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'audit_4head_original_live_recovery.py'
+      - 'run_4head_120r_lastminute_fast.py'
+      - '.github/workflows/audit-4head-original-live-recovery.yml'
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Sparse checkout historical original exhibition only
+        uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/previews/original_exhibition/2026/04
+            data/previews/original_exhibition/2026/05
+            data/previews/original_exhibition/2026/06
+            data/previews/original_exhibition/2026/07
+            data/previews/original_exhibition/2026/08
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml joblib
+      - name: Download frozen expanded 208R table
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p seed
+          gh run download 35361685459 -n head4-208-expanded-features -D seed
+          F="$(find seed -type f -name 'expanded_features_208.csv' | head -1)"
+          test -n "$F"
+          echo "EXPANDED_FEATURES_208=$F" >> "$GITHUB_ENV"
+      - name: Recovery audit
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: |
+          python audit_4head_original_live_recovery.py | tee /tmp/recovery.log
+          grep -q 'HEAD4_ORIGINAL_LIVE_RECOVERY_AUDIT_OK' /tmp/recovery.log
+          grep -q 'SEPTEMBER_UNREAD' /tmp/recovery.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-original-live-recovery
+          path: |
+            /tmp/head4_original_live_recovery/
+            /tmp/recovery.log
+          retention-days: 30
