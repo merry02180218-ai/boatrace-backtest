@@ -52,6 +52,12 @@ jobs:
           python audit_4head_newfeature_production_parity.py | tee /tmp/parity.log
           grep -q 'HEAD4_NEWFEATURE_PRODUCTION_PARITY_OK' /tmp/parity.log
           grep -q 'SEPTEMBER_UNREAD' /tmp/parity.log
+      - name: Production leakage contract regression
+        run: |
+          python audit_4head_newfeature_production_leakage.py | tee /tmp/leakage.log
+          grep -q 'HEAD4_NEWFEATURE_PRODUCTION_LEAKAGE_AUDIT_OK' /tmp/leakage.log
+          grep -q 'HEAD4_OPERATIONAL_LEAKAGE_PASS' /tmp/leakage.log
+          grep -q 'SEPTEMBER_UNREAD' /tmp/leakage.log
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -60,4 +66,5 @@ jobs:
             /tmp/head4_venue_aware_original/
             /tmp/venue.log
             /tmp/parity.log
+            /tmp/leakage.log
           retention-days: 30
