@@ -2292,3 +2292,54 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - lost formal hit
 - support/expanded結果でルール変更しない。
 - production/official stake/shadows変更なし。September outcomes unread。
+
+
+## AFTER — v382 fixed soft-Dutch + WALL3 allocation combined
+- Run `35364692971` / Job `105664169322` success / Artifact `10555891309` / digest `sha256:b6a71f9ded39c67799f29e6e6a4abb5d2c721ca29a94763beccf214ccfa9e67a`。
+- 新規parameter searchなし。v372 threshold3.5 + v379 WALL3 1:1:4を固定合成。
+- LIVE165:
+  - official 100/100/100: stake49,500 / return63,700 / profit+14,200 / ROI128.687%
+  - soft only: stake49,500 / return66,510 / profit+17,010 / ROI134.364%
+  - v379 alloc only: stake60,300 / return85,810 / profit+25,510 / ROI142.305%
+  - **combined: stake60,300 / return88,530 / profit+28,230 / ROI146.816%**
+  - alloc比 **+4.51pp / +2,720円**、stake完全同一。
+  - hit 87維持 / lost hit0。
+- DEV: alloc143.82 -> combined149.28% (+5.46pp)。
+- SUPPORT: alloc=combined135.14%、非悪化。
+- expanded 5 universes ALLすべてalloc以上:
+  - LIVE +4.51pp
+  - H078 +4.95
+  - H0775_M375 +5.01
+  - H0775_M350 +5.11
+  - PROD276 +4.51。
+- disjoint 4/4 bands alloc以上:
+  - LIVE +4.51pp
+  - +71R +5.99
+  - +33R +5.40
+  - +45R +5.64。
+- risk LIVE165:
+  - maxDD 3,320円（v379 allocと不変）
+  - worst10R / worst20R / losing streakも不変
+  - worst month -640 -> **+180**
+  - profit/maxDD 7.68 -> **8.50**。
+- interaction: soft changed25R、うちwall3 4R（wall3 rule優先）、five6-only 3R、none18R。
+- production/official stake/shadows未変更 / September unread / AUDIT_OK=true。
+- 重要制約: soft Dutch decisionはofficial closing oddsを使用。実LIVE購入時にclosing値は未確定なので、正式採用前にpre-close odds drift robustnessが必要。
+
+## BEFORE — v383 soft-Dutch odds-drift stress
+- v382 combined ruleを固定し、threshold3.5 / WALL3 1:1:4 / five6-only 2x soft / none softを変更しない。
+- historical pre-close snapshotはrepoに保存されていないため、closing oddsに対するrelative drift stressを実施。
+- stress幅: 各formal ticket oddsに独立 ±5% / ±10% / ±15% / ±20%。
+- deterministic tests:
+  1) 各raceで8 corner perturbations（各ticket x(1±d)）を全列挙し、soft allocationが全cornerで不変なrace割合を計測。
+  2) fixed seed Monte Carloで各delta 1000 simulations、各race/ticket独立uniform[1-d,1+d]。
+- WALL3 raceはodds非依存1:1:4なので完全固定。odds stressはfive6-only/noneのsoft decisionだけ。
+- 各simulationでtotal stakeはv382と同じ60,300円固定。
+- 評価:
+  - ROI mean/median/p05/p95/min/max
+  - v379 alloc ROI142.305%を上回るsimulation比率
+  - official ROI128.687%を上回る比率
+  - closing-based v382 ROI146.816%との差
+  - decision stability率
+- これはreal pre-close distributionの予測ではなく、closing odds依存性のstress test。結果を見てthreshold変更しない。
+- production/LIVE stake変更なし。September outcomes unread。
