@@ -20,6 +20,7 @@ from pathlib import Path
 from statistics import mean
 
 START=date(2025,10,1)
+NEWFEATURE_MOTOR_START=date(2025,11,1)
 BOATS=range(1,7)
 
 def _ii(x,d=0):
@@ -44,7 +45,7 @@ def main():
     target=date.fromisoformat(a.target_date)
     if target<=START:raise SystemExit('target_date too early')
     t0=time.perf_counter()
-    players=defaultdict(blank); motors=defaultdict(lambda:[0,0]); st_sums=defaultdict(list); st_all=[]
+    players=defaultdict(blank); motors=defaultdict(lambda:[0,0]); motors_newfeature=defaultdict(lambda:[0,0]); st_sums=defaultdict(list); st_all=[]
     days=0; races=0; result_days=0
     d=START
     while d<target:
@@ -68,6 +69,9 @@ def main():
                         mk=f'{venue}|{motor_no}'
                         motors[mk][1]+=1
                         motors[mk][0]+=int(w==b)
+                        if d>=NEWFEATURE_MOTOR_START:
+                            motors_newfeature[mk][1]+=1
+                            motors_newfeature[mk][0]+=int(w==b)
                     reg=str(card.get(f'艇{b}_登録番号','')).strip()
                     if not reg: continue
                     s=players[reg]
@@ -100,8 +104,12 @@ def main():
       'september_prior_results_allowed':True,
       'target_date_results_used':False,
       'payout_used':False,'odds_used':False,
-      'players':pjson,'motors':{k:{'w':int(v[0]),'n':int(v[1])} for k,v in motors.items()},'st_bias':bias,
-      'stats':{'days_loaded':days,'result_days':result_days,'settled_races_loaded':races,'players':len(pjson),'motors':len(motors)},
+      'players':pjson,
+      'motors':{k:{'w':int(v[0]),'n':int(v[1])} for k,v in motors.items()},
+      'motors_newfeature_nov2025':{k:{'w':int(v[0]),'n':int(v[1])} for k,v in motors_newfeature.items()},
+      'newfeature_motor_history_start':NEWFEATURE_MOTOR_START.isoformat(),
+      'st_bias':bias,
+      'stats':{'days_loaded':days,'result_days':result_days,'settled_races_loaded':races,'players':len(pjson),'motors':len(motors),'motors_newfeature':len(motors_newfeature)},
       'seconds':time.perf_counter()-t0,
     }
     Path(a.out).parent.mkdir(parents=True,exist_ok=True)
