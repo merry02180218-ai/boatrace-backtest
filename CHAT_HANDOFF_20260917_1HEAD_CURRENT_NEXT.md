@@ -372,3 +372,31 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - v355が `WATCH not subset of BASIC` でfailしたのは正しい検知。sentinel/条件を緩めて通さない。
 - これから: v337 candidate baseの `opp_mass` を用いてBASIC165R内から **現行LIVE定義のWATCH subset** を再構成し、そのsubsetだけwall3 rerankを適用するようv355を修正。
 - 必要cacheはv353 Runのprepare/second/base-third/third artifactsを利用。HEAD/exhibition gateは再計算せず、既存BASIC165R identityを固定してmassラベルだけ復元する。
+
+
+## AFTER — v355 現行LIVE定義 WATCH-only wall3 overlay
+- 軽量修正版 Run `35315563674` / Job `105506340941` completed success / Artifact `10535930081`。
+- 現行LIVEと同じ定義で、BASIC165Rの共通展示gate通過後に `opp_mass>=.425` を付けると operational WATCH = **73R**。
+- WATCH73Rだけ `SCORE / attack4>=.60 / g2=3.0 / g3=.5` のwall3相手rerankを適用、BASIC-onlyは従来3点のまま。
+- 全165Rを1Rも削らず:
+  - baseline 80/165 / return 55,690 / profit +6,190 / ROI 112.505%
+  - overlay 83/165 / return 58,650 / profit +9,150 / ROI **118.485%**
+  - +3 hits / return +2,960 / ROI +5.98pp
+- Feb-Jun 137R: 66 -> 69 hits / ROI 114.209% -> **121.411%**。
+- Jul-Aug 28R: 14 -> 14 hits / ROI **104.167%据え置き**。
+- 買い目変更は10Rのみ、gain 3 / loss 0。
+- gain:
+  - 202604102412 actual 1-4-2
+  - 202604202408 actual 1-2-4
+  - 202606032008 actual 1-4-3
+- 月別はApr 20->22 hits / ROI142.53->157.98%、Jun 16->17 / 118.38->132.83%。他月は完全据え置き。
+- September outcomes unread / production unchanged / AUDIT_OK=true。
+- 結論: レース数を減らさず、WATCHだけ相手買い目を壁3連動で補正する形が現時点で最も有望。ただしJul-Aug増分0のため、即production置換ではなくLIVE shadow出力で前向き確認する。
+
+## BEFORE — LIVE wall3 shadow tickets
+- 現行 `tickets` は変更しない。
+- WATCH/PASS時だけ、v355候補 `SCORE / attack4>=.60 / SECOND g2=3.0 / THIRD g3=.5` を同じp2/pc + opponentCore補正後に追加適用し、`wall3_shadow_tickets` として併記する。
+- riskは corrected 3-vs-4 の exhibition score（EX .20 / ST .40 / straight .25 / orig avg .15）で、attack4_score>=.60 かつ wall score<0 の時だけ発動。
+- outputへ shadow profile / applied / risk / wall score / attack4 score / shadow tickets を追加。
+- 既存status / attention_level / tickets / historical production sentinelは変更しない。
+- 9/17および9/18結果払戻は使わない。
