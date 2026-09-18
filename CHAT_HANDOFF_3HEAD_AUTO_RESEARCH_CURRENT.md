@@ -73,3 +73,22 @@
 - This is implementation-only. Data retrieval, causal motor state, PRE score construction, and exhibition merge completed before the failure. No research result was produced and the failed run must not be used.
 - Repair commit **02c6d4d74369482b187243e3d7ba1d2f4d0a0b04** assigns `persistent_worst=-1` whenever any half-month has no rate; such rows are then rejected by the unchanged support/venue eligibility gate. No thresholds, gate definitions, volume target, or train/test split changed.
 - A fresh current-main run is required for the official Wave20 result.
+
+
+## AFTER WORK — Wave20 interpretable manual exhibition/motor gates (Run 35351033915, 2026-09-18)
+- Initial Run 35350314199 failed on zero-support `None` handling; implementation-only repair commit **02c6d4d74369482b187243e3d7ba1d2f4d0a0b04**. Official fresh Run **35351033915** / Job **105618951554** / Artifact **10549734884** SUCCESS; head SHA **02c6d4d74369482b187243e3d7ba1d2f4d0a0b04**.
+- Audit: February canonical/realtime winner agreement **3970/3970 = 100%**; Feb frame canonicalized to exactly 3970. Motor state strict prior-day; no same-day results. 185 interpretable gates / 2,590 PRE+gate candidates; 298 strict candidates satisfied 40-70R/month in each Nov-Dec-Jan month and half-month >=8R / >=6 venues.
+- PRE baseline reproduced: R1-8 / PRE q=.99, **128R / 44 heads = 34.375%**, avg 42.67R/month, worst half **28.57%**.
+- Stability-first formal best was MOTOR_ST: R1-8 / PRE q=.925 / motor3 top2-rate edge vs boat2 >= +0.03 AND boat3 start-exhibition rank <=2. Nov 50R/16=32.0%, Dec 57R/17=29.82%, Jan 60R/21=35.0%; total **167R/54=32.34%**, avg55.67/month, worst half **29.41%**. It improves worst-half stability slightly but loses combined precision, so it is not a head-rate promotion candidate.
+- Important precision clue: **MOTOR_EX** manual gate materially beat PRE combined precision. Candidate: R1-8 / PRE q=.95 / boat3 motor EWMA-rank advantage vs boat2 >=0 AND boat3 exhibition-time rank <=2.
+  - Nov: **47R/18=38.30%** (H1 9/18=50.0%, H2 9/29=31.03%).
+  - Dec: **60R/20=33.33%** (H1 7/25=28.0%, H2 13/35=37.14%).
+  - Jan: **68R/31=45.59%** (H1 22/43=51.16%, H2 9/25=36.0%).
+  - Combined **175R / 69 heads = 39.43%**, avg **58.33R/month**, worst half **28.0%**. This is +5.05pt combined vs PRE, but worst-half stability is 0.57pt lower than PRE.
+  - February NON-PRISTINE reference: **34R/14=41.18%** (H1 46.15%, H2 38.10%). This is supportive only, not a clean holdout.
+- A second MOTOR_EX variant (motor top2 edge vs2 >=0 + exhibition rank<=2, same R1-8/q=.95) reached **170R/65=38.24%**, avg56.67/month; Nov34.0%, Dec37.04%, Jan42.42%.
+- MOTOR-only at exactly ~50/month also improved over PRE: R1-12/q=.985 + boat3 motor top2 rate >= boat2 motor top2 rate -> **150R/56=37.33%**, avg50.0/month; Nov38.78%, Dec31.37%, Jan42.0%; worst half27.27%.
+- EXHIBIT-only best: R1-8/q=.95 + boat3 exhibition-time rank #1 -> **152R/54=35.53%**, avg50.67/month; only modest improvement over PRE.
+- Learned Wave19 gates had failed, but Wave20 shows an interpretable relative **motor-vs-2 + exhibition-rank** gate contains incremental head signal. This is the first post-Wave17 branch to lift combined pre-Feb precision close to 40% at useful monthly volume.
+- Do NOT promote yet: Nov-Dec-Jan were used for gate/threshold selection and February is NON-PRISTINE. The correct next step is to freeze the primary MOTOR_EX rule above **without any more threshold tuning**, then use still-unopened March as the one-shot diagnostic. If March is opened, no post-March retuning may be presented as holdout-valid.
+- March remains unopened as of this AFTER record; September-2026 outcomes UNREAD; production v288 unchanged.
