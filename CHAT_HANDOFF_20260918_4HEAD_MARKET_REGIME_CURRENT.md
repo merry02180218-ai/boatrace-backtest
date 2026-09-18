@@ -1749,3 +1749,21 @@ Status: `HEAD4_WALL3_OPEN_RESCUE_SHADOW_LIVE_READY__OFFICIAL_DECISION_UNCHANGED`
 - Omura 6R recovery remains separately running from direct trigger Run `35335946046`.
 
 Status: `HEAD4_LIVE_TRIGGER_ROOT_FIXED_GITHUB_NATIVE_WATCHDOG`
+
+
+## WATCHDOG PRESSURE REDUCTION — 2026-09-18
+- User correctly raised concern that a 5-minute 24h cron would create excessive Actions churn.
+- Repository visibility confirmed **public**. Standard GitHub-hosted Actions minutes are therefore not billed, but run-count/queue/history pressure still matters.
+- Watchdog cadence reduced:
+  - from every 5 minutes, 24h = 288 scheduled runs/day;
+  - to every 15 minutes during 09:00-21:59 JST only = at most 52 scheduled runs/day.
+- No-target path is now minimal:
+  - it reads the small watchlist through GitHub API before checkout;
+  - actions/checkout, setup-python, dependency install, artifact download, and strict runner execute only when an actual target is inside its watch window.
+- Target watch window widened from 20m to 35m so 15-minute cadence still leaves substantial pre-deadline headroom even in the worst alignment.
+- Commits:
+  - 7117a0ef388e70e025fb00e02ed2cbfeaa7754e4 — low-pressure schedule + no-target fast path
+  - 0b4df4aba516b7d744b8c7a5a3fdaf39c2a93b0a — 35-minute watch window
+- Rationale: preserve live reliability while reducing routine watchdog Actions creation by ~82% versus the initial 5-minute/24h design.
+
+Status: HEAD4_WATCHDOG_LOW_PRESSURE_15MIN_DAYTIME_ONLY
