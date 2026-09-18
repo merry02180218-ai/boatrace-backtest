@@ -71,5 +71,22 @@
     "formal_prospective_roi": "NOT_COMPUTABLE",
     "production_changed": false,
     "v96_prohibited": true
-  }
+  },
+  "membership_sha256": "37057b43e344309e3fd06dfa1f2b519cfaad16379e92bfda51166da42834844c",
+  "leakage_audit": {
+    "outcome_leakage": "PASS_STATIC_AND_FORMULA_AUDIT",
+    "temporal_feature_leakage": "PASS_STATIC_AND_FROZEN_ARTIFACT_CONTRACTS",
+    "market_timing": "WARN_OFFICIAL_CLOSING_ODDS_RETROSPECTIVE_PROXY",
+    "model_selection": "PRESENT_APR_AUG_NON_PRISTINE",
+    "retrospective_sample_selection": "WARN_SETTLED_ROWS_REQUIRE_VALID_RESULT_AND_ARCHIVED_ODDS",
+    "september_2026": "UNREAD",
+    "independent_actions_run": 35306188702,
+    "independent_actions_status": "IN_PROGRESS"
+  },
+  "promotion_blockers": [
+    "Apr-Aug was used for threshold selection; Apr-Aug ROI is not an independent holdout.",
+    "Historical composite_odds/current_bet are reconstructed from official closing_displayed odds, not immutable pre-deadline snapshots.",
+    "Independent Actions replay/leakage audit must complete successfully before any implementation promotion.",
+    "Prospective/live evaluation must use timestamped pre-deadline odds and keep September outcomes unread until checkpoint."
+  ]
 }
