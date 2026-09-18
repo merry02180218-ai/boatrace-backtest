@@ -112,10 +112,42 @@ def parse_start_timing(value: str, flag: str) -> float | None:
     return x
 
 
+def _coalesce_boatcast_st_records(text: str) -> list[str]:
+    """Join BOATCAST physical line wraps back into six logical ST records.
+
+    The bc_j_stt source can wrap a player-name field at a byte boundary, including
+    inside a multibyte Japanese character. A logical boat record always starts with
+    two tab-separated integers: [entry course, boat number]. Any following physical
+    line that does not start a new [1..6, 1..6] record is a continuation.
+    """
+    records: list[str] = []
+    cur: str | None = None
+    for raw in text.splitlines():
+        line = raw.rstrip("\r\n")
+        cols = line.split("\t")
+        is_start = False
+        if len(cols) >= 2:
+            try:
+                course = int(_clean(cols[0]))
+                boat = int(_clean(cols[1]))
+                is_start = 1 <= course <= 6 and 1 <= boat <= 6
+            except Exception:
+                is_start = False
+        if is_start:
+            if cur is not None:
+                records.append(cur)
+            cur = line
+        elif cur is not None:
+            cur += line
+    if cur is not None:
+        records.append(cur)
+    return records
+
+
 def parse_boatcast_st(text: str) -> dict[int, float | None]:
     out: dict[int, float | None] = {}
-    for raw in text.splitlines():
-        cols = raw.rstrip("\r\n").split("\t")
+    for raw in _coalesce_boatcast_st_records(text):
+        cols = raw.split("\t")
         if len(cols) < 6:
             continue
         # BOATCAST bc_j_stt pinned layout:
