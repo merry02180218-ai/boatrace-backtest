@@ -228,3 +228,22 @@ Changes in research/run_3head_funsite_broad50.py:
 - New selection families: six model score diagnostics, cross-model percentile consensus/intersection gates, and Feb-train-quantile single/pair rule gates with support in both Feb validation blocks.
 - Freeze logic remains February-only. Wave2 March is opened only for a candidate frozen from February; September outcomes remain UNREAD; production v288 unchanged.
 - Verification is pending a **fresh workflow_dispatch** of `research-3head-funsite-broad50-wave2` from current main. A commit is not completion; inspect fresh Run/Job/Artifact before drawing conclusions.
+
+
+## AFTER WORK — Broad50 Wave2 verified (Run 35304121579, 2026-09-18)
+- SUCCESS: Run **35304121579** / Job **105472696195** / Artifact **10531566331**.
+- Head SHA **bda563e9e97fbc5eda20f61faf3fd811324d30d6**.
+- Wave2 used rank/margin/attack-archetype features, six-model consensus diagnostics, and Feb-train-quantile single/pair rules. Selection remained February-only; March was one-shot; September outcomes remained UNREAD; production v288 unchanged.
+- Strict 50% frozen rule from February:
+  - `sig_vs2_全国2連対率 >= 25.2pt` AND `sig_vs2_全国平均ST >= 0.04` (the ST signal is oriented positive when boat3 is faster than boat2).
+  - Feb v1: **18R / 9 heads = 50.0%**.
+  - Feb v2: **18R / 9 heads = 50.0%**.
+  - March one-shot: **106R / 40 heads = 37.7358%**; early **21/53 = 39.62%**, late **19/53 = 35.85%**.
+- Strict 45% frozen rule:
+  - `sig_vs1_全国2連対率 >= 23.1pt` AND `sig_vs4_全国2連対率 >= 17.43pt`.
+  - Feb v1: **23R / 11 = 47.8261%**; Feb v2: **26R / 12 = 46.1538%**.
+  - March one-shot: **137R / 53 = 38.6861%**; early **23/68 = 33.82%**, late **30/69 = 43.48%**.
+- The 40% target froze to the same vs1/vs4 rule and therefore has the same March **137R / 53 = 38.6861%** result.
+- Interpretation: Wave2 found a structurally interpretable Feb pattern around boat3 superiority over boat2 (player gap + ST edge), but the 50% precision did not transfer to March. Do NOT promote or tune that exact threshold from March.
+- Important positive signal: unlike generic Wave1, Wave2 produced a useful-volume March population (106R) at **37.7%**, indicating the opponent-specific representation is materially better than the generic model search direction even though it missed 50%.
+- Next research should preserve the opponent/archetype representation but improve temporal stability: rolling/leave-one-week-out Feb threshold selection, venue/race-number regime stratification with support caps, and consensus between interpretable rule score and model score. March should remain untouched for the new family until its thresholds are re-frozen from February-only resampling.
