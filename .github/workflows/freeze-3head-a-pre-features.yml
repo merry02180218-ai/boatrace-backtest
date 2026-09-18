@@ -1,0 +1,25 @@
+name: freeze-3head-a-pre-features
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'research/export_3head_a_frozen_pre_features.py'
+      - '.github/workflows/freeze-3head-a-pre-features.yml'
+permissions:
+  contents: read
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas numpy scikit-learn
+      - run: python research/export_3head_a_frozen_pre_features.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 3head-a-frozen-pre-features
+          path: research/3head_a_frozen_pre_features.json
