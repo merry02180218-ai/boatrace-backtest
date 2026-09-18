@@ -1,0 +1,31 @@
+name: audit-4head-research-candidate-production-s-overlay
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/audit-4head-production-s-overlay.txt'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy scikit-learn requests joblib beautifulsoup4 lxml
+      - name: Frozen production S overlay
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p /tmp/head4_production_s_overlay
+          python audit_4head_research_candidate_production_s_overlay.py 2>&1 | tee /tmp/head4_production_s_overlay/run.log
+          grep -q HEAD4_RESEARCH_CANDIDATE_PRODUCTION_S_OVERLAY_OK /tmp/head4_production_s_overlay/run.log
+          grep -q "9月_UNREAD" /tmp/head4_production_s_overlay/run.log
+          grep -q "本番変更なし" /tmp/head4_production_s_overlay/run.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-research-candidate-production-s-overlay
+          path: /tmp/head4_production_s_overlay/
