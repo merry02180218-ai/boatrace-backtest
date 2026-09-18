@@ -2395,3 +2395,45 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - noneはsoft units
 - まず既存1head LIVE workflow内のodds fetch位置とJSON入出力を監査し、結果/払戻endpointへ触れず追加可能か確認する。
 - September outcomes unread。
+
+
+## AFTER — current-odds allocation shadow plumbing 完了
+- profile commit `5b896f73c1b119cab80880fc59318a6d4b3227f3`
+  - `CURRENT_ODDS_ALLOC_SHADOW_PROFILE_NAME = 1HEAD_CURRENT_ODDS_ALLOC_SHADOW_V382_SOFT35_WALL3_114`
+  - soft odds ratio threshold=3.5 / research_only=true。
+- current-odds shadow script commit `5086d9ff36138dd123c78e76ef8f614b4b24813e`
+  - `run_1head_v351_live_current_odds_shadow.py`
+  - formal LIVE JSON確定後に BOAT RACE official current odds3t だけ取得。
+  - result/payout endpointは使用しない。
+  - WALL3:100/100/400優先。
+  - FIVE6-only: soft発火時2x soft、非発火200/200/200。
+  - NONE: soft発火時200/100/0系、非発火100/100/100。
+  - formal tickets / official stakesは変更しない。
+- v384 regression:
+  - script commit `8f8802084b2a7b5949b3a08732952b9963518670`
+  - workflow commit `e25e108fb59258fa89aa930df5c3a9266162622f`
+  - Run `35365441930` / Job `105666647818` success / Artifact `10556525324`
+  - digest `sha256:47c86692208263673081bca95ca8df162e6ddedae51cf9c0632362090b227406`
+  - synthetic 4 cases all pass:
+    - WALL3 -> 100/100/400
+    - FIVE6-only soft -> 400/200/0
+    - NONE soft -> 200/100/0
+    - NONE no-soft -> 100/100/100
+  - result_or_payout_used=false / AUDIT_OK=true。
+- LIVE workflow plumbing:
+  - manual workflow commit `b3ed27542281c461469ebce2b90d1578f280cc39`
+  - chat workflow commit `5677a4f71109479779bca8dfaf1425a5dafea5e6`
+  - formal finalize成功後にcurrent odds shadowを取得。
+  - `continue-on-error: true` なのでオッズshadow取得失敗で正式判定を失敗扱いにしない。
+  - artifactへcurrent odds shadow JSONを追加。
+- formal regression after profile extension:
+  - v356 Run `35365352106` success
+  - v364 Run `35365352148` success
+  - v377 Run `35365352095` success
+  - formal wall3 / five6 tickets / existing stake shadowにdriftなし。
+- 現運用:
+  - **正式stakeは100/100/100のまま**。
+  - existing EITHER2x shadow + WALL3 allocation shadowも維持。
+  - current-odds combined shadowを追加しただけで、formal化していない。
+- 今後ユーザーが「判別して」と依頼したLIVEでは、formal判定artifactに加え、その時点のofficial oddsでcurrent-odds allocation shadowを確認可能。
+- September outcomes unread / production unchanged。
