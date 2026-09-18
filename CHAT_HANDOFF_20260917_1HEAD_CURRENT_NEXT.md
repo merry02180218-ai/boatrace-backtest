@@ -2939,3 +2939,19 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 今後ChatGPTが1head直前判定を返す際は、formal買い目（official 100/100/100）と明確に分離して「Shadow」として仮想stakes/発火理由も併記する。
 - production/formal stake変更なし。research_only維持。
 - September outcomes/payoutsはUNREAD維持。
+
+
+## BEFORE — 2026-09-19 v387 4HEAD-style added71 exhibition rescue
+- ユーザー指示: 1HEAD実運用も4HEADのように「本線＋拡張候補→展示後救済」にすると買うレースを増やせるか研究を続行。
+- current formal LIVE165は一切変更しない。
+- 拡張候補は frozen v360 Artifact `10539401122` の `H078_M375 236R - LIVE165 165R = added71R` に限定。
+- added71は HEAD>=.780 / opponent mass>=.375 / env_w=.05 / q=.70 の外側帯。現LIVE165はHEAD>=.790。
+- 研究構造:
+  1. LIVE165を本線固定。
+  2. added71だけに二次 rescue score を作る。
+  3. scoreはPREの `p_head` と同一時点で利用可能な展示後 `v332_score/attack_core` 等の小数特徴だけを使い、結果/払戻はscore入力にしない。
+  4. Feb-Jun DEVのみでweight/thresholdを比較。
+  5. Jul-Aug SUPPORTはcandidate凍結後に評価。
+  6. current formal wall3 + 5>6 ticket machineryを追加帯にも適用した3点100円均等でROI/頭率/exact3を評価。
+- 目標は全71Rを買うことではなく、+20〜40R程度を追加してcombined volumeを185〜205R付近へ伸ばせるかを見る。
+- September outcomes/payoutsはUNREAD維持。production/LIVE official gateは変更しない。
