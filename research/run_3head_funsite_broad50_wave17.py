@@ -98,7 +98,7 @@ def main():
 
     all_data=pd.concat([octo,nov,dec,jan,feb],ignore_index=True,sort=False)
     base_feats,enh_feats,new_feats=choose_features(all_data)
-    feature_sets={'BASE':base_feats,'ENHANCED':enh_feats}
+    feature_sets={'ENHANCED':enh_feats}
 
     histories={
       'nov':pd.concat([octo,nov],ignore_index=True,sort=False),
@@ -110,7 +110,7 @@ def main():
     preds={m:walk_predictions(histories[m],targets[m],feature_sets) for m in targets}
 
     results={}
-    for family in ['BASE','ENHANCED']:
+    for family in ['ENHANCED']:
         rows=[]
         for c in candidate_universe(family):
             ms={m:month_eval(preds[m],c) for m in ['nov','dec','jan']}
