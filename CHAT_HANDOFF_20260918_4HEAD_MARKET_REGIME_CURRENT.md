@@ -2997,3 +2997,30 @@ Exact restart point:
 - otherwise operate fixed156 production and collect prospective September outcomes.
 
 Status: `HEAD4_NEWFEATURE_FIXED156_PRODUCTION_ACTIVE__167R_VOLUME_CANDIDATE_READY`
+
+
+## BEFORE — production feasibility + leakage audit for HEAD4_NEWFEATURE_FIXED156_V1
+User requested one full production-readiness validation and leakage audit before relying on the newly promoted model.
+
+Scope:
+1. Re-read latest main, production artifact, fast runner, daily-state builder, strict monitor and watchdog.
+2. Production feasibility:
+   - verify a current-day new-feature daily-state artifact exists and is result-blind;
+   - verify strict/watchdog can resolve and prefer the new state;
+   - verify runner, production artifact, notifier and contracts compile/run together;
+   - verify fail-closed behavior for stale/missing new-feature state;
+   - verify official BET/PASS path reports profile HEAD4_NEWFEATURE_FIXED156_V1 only.
+3. Leakage audit:
+   - target-race result/payout must never enter scoring or decision;
+   - target-date daily-state results must be excluded;
+   - motor prior-win history must end before target date and use 2025-11-01 start for the new feature;
+   - current exhibition may be used only after exhibition is published;
+   - market odds may be used only before deadline for official decision;
+   - Apr-Jun ECDF references/weights/threshold are frozen in artifact;
+   - Jul-Aug labels/results may not enter LIVE score transforms;
+   - September target outcomes remain UNREAD for research/model selection;
+   - identify any research-selection contamination separately from operational leakage.
+4. Produce an explicit PASS/WARN/FAIL report and do not change production thresholds during the audit.
+5. If a real current-day race is no longer prospectively runnable, do not fabricate a post-hoc BET; validate the production path with contract/integration tests and keep target outcomes unread.
+
+Status: HEAD4_NEWFEATURE_PRODUCTION_FEASIBILITY_LEAKAGE_AUDIT_START
