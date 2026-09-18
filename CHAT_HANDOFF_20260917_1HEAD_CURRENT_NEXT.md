@@ -187,3 +187,13 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 最新Run 35302023710 はまだaudit in_progress。前回head 379190b... -> 最新head 28cc9dc... で1号艇gridコード差分なし。ただしcache比較ではslim元データは完全一致、second cacheも完全一致だが、base-third/third予測値に最大約1e-3の微小な再学習差があり、一部順位も変動するため、最新Runのsentinel通過を最終確定条件とする。
 - 9/17 result/payoutは未使用・UNREAD維持。
 - 次の再開地点: Run 35302023710 / Job 105468495136 がcompletedになったら final artifactを回収し、上記数値との一致/差分を確認。sentinelが通れば robust候補(.790,.375,.05,.70)をproduction昇格せず、追加のsupport/paired監査候補として扱う。
+
+
+## BEFORE — 2026-09-18 1号艇LIVE運用ルール変更
+- ユーザー決定:
+  - 基本候補 = HEAD >= .790 / opponent mass >= .375 / exhibition env_w=.05 / q=.70
+  - 注目レース = HEAD >= .790 / opponent mass >= .425 / exhibition env_w=.05 / q=.70
+- ticket=v320 HYBRID alpha=.70 3点、opponent core G2=.45/G3=1.00、v345 attackCore weightsは変更しない。
+- 過去の正式v351 276R sentinelと履歴再現コードは凍結維持する。既存 PROFILE_NAME / PRODUCTION_EXPECTED_* を上書きして過去監査を壊さず、LIVE_OPERATION_* / WATCH_* を別定義して実運用のみ切り替える。
+- 既存2026-09-18 daily cacheはp_head/opp_mass等の因果ベース値自体は再利用可能な設計にし、finalize/gateで新運用条件を適用する。
+- 9/17 result/payout UNREAD、chronology guard維持。
