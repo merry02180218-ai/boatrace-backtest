@@ -65,16 +65,6 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 joblib
-      - name: Frozen canonical artifacts
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          gh run download 34383567078 --repo ${{ github.repository }} --name v243-3head-expand-feature-audit --dir golden_v243
-          cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
-          gh run download 34326743303 --repo ${{ github.repository }} --name v234-3head-waku10-restored-replay --dir golden_v234
-          cp golden_v234/analysis_v234_waku10_reconstruction_coverage.csv .
-          mkdir -p data/audit
-          cp -r golden_v234/data/audit/v234_waku10 data/audit/
       - name: Frozen March odds
         env:
           GH_TOKEN: ${{ github.token }}
@@ -84,23 +74,22 @@ jobs:
           mkdir -p data/official_closing_odds3t
           cp -r /tmp/odds/* data/official_closing_odds3t/
       - run: python prepare_v288_historical_pre_input.py --date '${{ matrix.date }}'
-      - name: Build February-28 frozen full downstream cache
-        run: >-
-          python build_3head_v288_operational_month_day.py
-          --date '${{ matrix.date }}'
-          --month-first 2026-03-01
-          --month-next 2026-04-01
-          --history-cutoff 2026-02-28
-          --bias-start 2026-02-01
-          --force-full-cache
-      - name: Freeze candidate universe to adopted A
+      - name: Build fast February-28 frozen V221 pair cache
         run: |
           DAY8=$(echo '${{ matrix.date }}' | tr -d '-')
-          python research/prepare_3head_a_v288_ticket_cache.py --date '${{ matrix.date }}' --cache "live_outputs/v288_operational/$DAY8/live_cache.joblib"
-      - name: Pair-only diagnostic replay
+          mkdir -p "pair_fast_cache/$DAY8"
+          python research/build_3head_a_paironly_fast_cache.py \
+            --date '${{ matrix.date }}' \
+            --history-cutoff 2026-02-28 \
+            --bias-start 2026-02-01 \
+            --out "pair_fast_cache/$DAY8/cache.joblib"
+      - name: Fast pair-only diagnostic replay
         run: |
           DAY8=$(echo '${{ matrix.date }}' | tr -d '-')
-          python replay_v288_historical_day.py             --date '${{ matrix.date }}'             --cache "live_outputs/v288_operational/$DAY8/live_cache.joblib"             --outdir "a_pair_only_march/$DAY8"             --expected-history-cutoff 2026-02-28             --downstream-mode pair_only
+          python research/replay_3head_a_paironly_fast_day.py \
+            --date '${{ matrix.date }}' \
+            --cache "pair_fast_cache/$DAY8/cache.joblib" \
+            --outdir "a_pair_only_march/$DAY8"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
