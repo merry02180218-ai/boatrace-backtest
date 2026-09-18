@@ -341,3 +341,25 @@ Changes in research/run_3head_funsite_broad50.py:
 - February selection should use two chronological halves plus four-week diagnostics. Freeze a 50% candidate only if both halves are >=50%, each has >=20 races, at least 3/4 weeks are >=45% when weekly support >=5, and venue dispersion is >=8 in each half. This deliberately raises support versus Waves 3-5.
 - Optimize useful volume within the Feb-stable 50% pool; separately report a precision-first candidate. March remains one-shot after freeze; no Wave6 threshold may be changed from March results.
 - September outcomes remain UNREAD; production v288 unchanged.
+
+
+## AFTER WORK — Broad50 Wave6 final verified (Run 35310708203, 2026-09-18)
+- Final optimized SUCCESS: Run **35310708203** / Job **105491979426** / Artifact **10533467415**; head SHA **4dddda79cdd087cb49bc19b1a7ddd2cd0a61d6b5**.
+- Performance-only cache changes were verified against prior successful Run 35310282353; substantive outputs are identical.
+- Cross-source February winner validation: canonical Wave21 vs BoatraceCSV `results/realtime` **3,970/3,970 = 100.0% agreement**.
+- Fail-closed recent-session date audit: Jan/Feb/Mar all complete (31/28/31 days), **0 bad races / 0 bad sessions** where a previous-meet end date was on/after target date.
+- Clean populations: January train **4,963R**, February selection **3,970R**, March test **4,482R**; 372 PRE features.
+- Candidate search: **190,340** January-trained candidates across early-race bands, opponent attack scores, model percentile gates and combinations.
+- Result: **0 strict50 stable candidates** and **0 near50 candidates** under the predeclared February support/stability requirements. No candidate was frozen, therefore March was **not opened** for Wave6 selection.
+- Interpretation: Wave4's Feb-internal 50% structures do not transfer even from immediately preceding January into February at >=47% with useful support. This is strong evidence of temporal/nonstationary calibration rather than a durable fixed-threshold 50% rule.
+- Wave6 therefore rejects the fixed January-trained/static-threshold route. Production v288 unchanged; September outcomes UNREAD.
+
+## BEFORE WORK — Broad50 Wave7 leakage-safe daily walk-forward adaptation (2026-09-18)
+- Motivation comes from Wave6 February failure only; no Wave6 March outcome was opened because nothing froze.
+- New family: generate each target day's prediction using only PRE features for that day and labels strictly from dates **before** that target day. This simulates a live daily-refresh model and directly addresses temporal drift.
+- February is the sole model-family/threshold selection period. For every February date, train/refit on a trailing calendar window using January + earlier-February labels only. Candidate trailing windows: **14 / 21 / 28 / 42 days** with minimum training support.
+- Use a compact adaptive ensemble to control compute/variance: logistic regression + histogram gradient boosting; optionally their mean percentile. Also compute rolling percentile-normalized opponent attack score centered on boat3-vs-boat2 national 2-rate and ST edges plus inner-player support, with small support-feature variants.
+- Candidate dimensions frozen before March: trailing window, early-race band (R1-4/R1-6/R1-8/R1-10/R1-12), attack-score gate, model percentile gate, model/attack conjunction.
+- Feb freeze requirement remains demanding: both chronological halves >=50%, each >=20R and >=8 venues; >=3 eligible weeks at >=45%. Optimize volume within this strict pool; separately record precision-first.
+- March is a **single chronological replay** using the frozen candidate. Daily model refits may consume only earlier March outcomes because those would have been known before the next day's races; March outcomes never alter the frozen window/band/gate/weights. No second March-guided iteration is allowed.
+- September outcomes remain UNREAD; production v288 unchanged.
