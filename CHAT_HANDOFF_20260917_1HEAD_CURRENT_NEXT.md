@@ -2192,3 +2192,41 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - SUPPORT lost0
   - threshold近傍plateau
 - production/LIVE stakeは変更しない。September outcomes unread。
+
+
+## AFTER — v373 soft-Dutch LOMO
+- Run `35363316170` / Job `105659633519` completed success / Artifact `10555323741` / head `ac1d49c09d8c69727779528565ab88e08e9f0733`。
+- 各DEV月holdout再選定:
+  - Feb: threshold3.5 / hit loss0 / ROI差0
+  - Mar: 3.5 / loss0 / +9.49pt
+  - Apr: 3.5 / loss0 / +3.84pt
+  - May: 3.5 / loss0 / +10.31pt
+  - Jun: 3.7 / loss0 / +0
+- LOMO 5/5月 lost hit=0、5/5月 ROI非悪化。
+- LOMO aggregate DEV:
+  - baseline ROI129.44%
+  - policy ROI **134.50%**
+  - +5.06pt、stake同額。
+- fixed3.5もFeb-Aug全7月 lost hit=0、全月ROI非悪化。
+- SUPPORT fixed3.5: ROI125.00→128.69%、loss0。
+- threshold選定の月依存性は小さく、3.5 coreが4/5 LOMOで再選択、残りも3.7。
+- production/stake policy未変更。September outcomes unread / AUDIT_OK=true。
+
+## BEFORE — v374 soft-Dutch expanded-universe generalization
+- fixed threshold **3.5** を再最適化せず、v360 preparedの拡大母集団へ適用。
+- universes:
+  - LIVE165
+  - H078_M375 236R
+  - H0775_M375 269R
+  - H0775_M350 313R
+  - PROD276
+- 各raceではcurrent formal ticket machinery相当（opponentCore後 + wall3 + 5>6）から3点を作り、official closing odds比だけで300円配分を変更。
+- ルール固定: max/min odds >=3.5なら最長0 / 最短200 / 中間100。
+- 評価:
+  - exact3 baseline vs policy
+  - lost hit
+  - equal ROI vs policy ROI
+  - disjoint nested bands（165外71R / 次33R / 次44R）の独立成績
+- odds source: repo official closing CSV first、missingのみBOAT RACE公式web fallback。outcomeからodds逆算なし。
+- v372/v373で選んだthresholdは固定し、拡大母集団結果を選定には使わない。
+- production/LIVE stake未変更。September outcomes unread。
