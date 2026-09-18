@@ -807,3 +807,30 @@ Audit objectives:
 5. September outcomes remain UNREAD; production unchanged.
 
 Status: `HEAD4_PRE_CANDIDATE_AUDIT_START`
+
+
+## UNIFIED LEAKAGE RUN — FINAL
+- Run: `35306188702`
+- Job: `105478741668`
+- conclusion: **SUCCESS**
+- Artifact: `10531229990` / `head4-120r-leakage-and-replay`
+- Artifact digest: `sha256:9994f3b23d8d723a6d294a48c5106ea13ecfb733e6a58e2d41b049d04c2cfcc5`
+- independent membership replay: 120R
+- membership SHA256: `37057b43e344309e3fd06dfa1f2b519cfaad16379e92bfda51166da42834844c`
+- OUTCOME leakage: PASS
+- TEMPORAL leakage: PASS
+- MARKET timing: WARN closing-odds proxy
+- MODEL selection: NON-PRISTINE Apr-Aug
+- September: UNREAD
+- production: unchanged
+
+## PRE-CANDIDATE IMPLEMENTATION STATUS
+- audit script: `472db83813a7b2f7bc64977e653512d612ab294c`
+- workflow: `6539fa8adf516627439b08cbdec7c98790b4f442`
+- trigger: `ee5fe25101912d6d437a7722a2228b090be61367`
+- Run: `35310003505`
+- Job: `105489898968`
+- current status: IN_PROGRESS
+- PRE wide rule uses only causal motor/player + race-card motor data and explicitly excludes current exhibition, opponent_mass, odds, result and payout.
+
+Status: `HEAD4_PRE_CANDIDATE_RUN_IN_PROGRESS__LEAKAGE_FINAL_SUCCESS`
