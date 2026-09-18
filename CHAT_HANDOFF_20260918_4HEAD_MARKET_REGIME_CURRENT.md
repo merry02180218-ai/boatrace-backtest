@@ -1169,3 +1169,23 @@ Operational rule remains:
 - September outcomes remain UNREAD.
 
 Status: `HEAD4_120R_PRE_LIVE_TRIAL_SUCCESS__19_DISPLAY__29_INTERNAL_WATCH`
+
+
+## USER RULE UPDATE — 2026-09-18 — September may be used for LIVE learning/history
+User explicitly clarified that this is an operational model and **September 2026 data may be included in learning/history updates**.
+
+Revised causality rule for LIVE operation:
+- Results from **completed prior dates**, including September dates before the target date, MAY be used for causal model/history state.
+- Current target race result/payout must never be read before the decision.
+- Current target-day same-race result remains prohibited.
+- Do not use future races/results relative to the decision timestamp.
+- Historical September data may be used for operational updating, but any retrospective performance claim must clearly state the training/evaluation overlap and must not be described as untouched holdout evidence.
+
+This supersedes prior handoff statements that required September outcomes to remain entirely UNREAD for LIVE operation.
+
+Immediate consequence:
+- the previously noted blocker that `build_4head_player_history_live.py` and other causal history builders may read 2026-09-01..target_date-1 is **no longer a blocker**, provided they remain strictly date-causal and do not read target-day/future outcomes.
+- Continue to fail closed on target-race result/payout access before decision.
+- Production/live optimization may now update causal states through the previous completed day.
+
+Status: `HEAD4_LIVE_SEPTEMBER_HISTORY_ALLOWED__TARGET_RACE_RESULT_STILL_FORBIDDEN`
