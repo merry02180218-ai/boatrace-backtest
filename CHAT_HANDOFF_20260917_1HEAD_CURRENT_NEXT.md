@@ -1820,3 +1820,52 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - true LOMOでgate再選定の安定性も確認。
 - 評価: ROI/profit/maxDD/profit÷maxDD/月別、active R、target hit。
 - closing oddsはhistorical最終表示proxyであり、LIVEでは直前current odds順位へ置換する前提。production変更なし。
+
+
+## AFTER — v378 overlay内 3点資金配分 audit
+- Run `35360135917` / Job `105649077585` success / Artifact `10554227933` / digest `sha256:7aac075cd5db1c40a8f3ab94e6449ad27c3dfe9438b7ffd16e82b87a766d2a30`。
+- baseline = current EITHER 2x shadow:
+  - overlay36Rを200/200/200、それ以外100/100/100
+  - stake60,300 / return81,340 / profit+21,040 / ROI134.892%。
+- overlay36R hit rank:
+  - rank1 9/21 hit / return6,210
+  - rank2 5/21 / return5,360
+  - rank3 7/21 / return6,070
+- EITHER一括weightsは不安定:
+  - DEV raw 1:4:1 -> support ROI100%、ALL ROI132.31%でbaseline未満
+  - robust 1:3:2 -> ALL133.48%でbaseline未満。
+- FIVE6だけreweight:
+  - raw1:4:1 ALL138.82%だがsupport102.95%で大幅悪化
+  - robust1:3:2 ALL136.45%だがsupport122.48%、不安定。
+- **WALL3だけreweight 1:1:4**:
+  - DEV ROI143.82%（baseline134.22%）
+  - SUPPORT ROI135.14%（baseline138.10%、ただしsupport WALL3は1Rのみ）
+  - ALL ROI **142.305%**
+  - stake60,300固定 / profit **+25,510**
+  - baseline EITHER2x比 +7.41pp / +4,470円。
+- WALL3 fixed/reselected LOMO:
+  - Feb 0 / Mar0 / Apr+21.28pp / May+6.79pp / Jun+9.92pp
+  - 5/5 holdoutで非悪化、毎回1:1:4が選ばれた。
+- WALL3 category rank:
+  - ALL 11R / 7hit: rank1=3, rank2=1, rank3=3
+  - DEV 10R / 6hit: rank1=2, rank2=1, rank3=3
+  - rank3払戻2,660 vs rank1 2,310 vs rank2 520。
+- conclusion: overlay全体/rank2厚めは不安定。WALL3時のみrank3厚めは有望だがsupport1Rのため独立拡大監査が必要。
+- production/official stake/shadow stake unchanged / September outcomes unread / AUDIT_OK=true。
+
+## BEFORE — v379 fixed WALL3 rank3 overweight expanded robustness
+- v378でDEV選定された自然な固定ruleを**再チューニングなし**で監査:
+  - non-overlay: 100/100/100
+  - five6-only: 200/200/200
+  - wall3（BOTH含む）: **100/100/400**
+- current EITHER2x equal shadow（overlay全て200/200/200）と総stakeは各universeで同額。
+- 使用入力: v374 Artifact `10548879270` rows_LIVE165 / H078_M375 / H0775_M375 / H0775_M350 / PROD276。
+- 評価:
+  - 5 universes all/dev/support
+  - LIVE165 fixed month LOO
+  - LIVE165 all month subsets size>=4
+  - env=.05 chain disjoint added bands
+  - WALL3 hit-rank distribution by universe
+- parameter searchなし。support結果でrule変更しない。
+- 目的: rank3厚めがcurrent165固有でなく、拡大母集団でもbaseline EITHER2x equalに非劣化か確認。
+- 2026-09 outcomes/payouts unread。LIVE shadowはv377 EITHER2x equalのまま維持。
