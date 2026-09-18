@@ -1,0 +1,41 @@
+name: v355 1-head watch wall3 overlay audit
+on:
+  push:
+    paths:
+      - 'run_v355_1head_watch_wall3_overlay_audit.py'
+      - '.github/workflows/v355-1head-watch-wall3-overlay.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Download v353 artifact
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10534735142/zip" > /tmp/v353.zip
+          mkdir -p /tmp/v353
+          unzip -q /tmp/v353.zip -d /tmp/v353
+          test -f /tmp/v353/race_predictions.csv
+      - name: Run combined overlay audit
+        run: python run_v355_1head_watch_wall3_overlay_audit.py --race-predictions /tmp/v353/race_predictions.csv
+      - name: Show result
+        if: always()
+        run: |
+          cat /tmp/v355-watch-wall3-overlay/result.json 2>/dev/null || true
+          cat /tmp/v355-watch-wall3-overlay/monthly.csv 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v355-watch-wall3-overlay-${{ github.run_id }}
+          path: /tmp/v355-watch-wall3-overlay/
+          retention-days: 30
