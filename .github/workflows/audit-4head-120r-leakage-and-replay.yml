@@ -1,0 +1,32 @@
+name: audit-4head-120r-leakage-and-replay
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/audit-4head-120r-leakage-and-replay.txt'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy scikit-learn requests joblib beautifulsoup4 lxml
+      - name: Run independent replay and leakage audit
+        run: |
+          mkdir -p /tmp/head4_120r_leakage_replay
+          python audit_4head_120r_leakage_and_replay.py | tee /tmp/head4_120r_leakage_replay/run.log
+          grep -q 'HEAD4_120R_INDEPENDENT_REPLAY_OK' /tmp/head4_120r_leakage_replay/run.log
+          grep -q 'HEAD4_120R_OUTCOME_LEAKAGE_PASS' /tmp/head4_120r_leakage_replay/run.log
+          grep -q 'HEAD4_120R_TEMPORAL_LEAKAGE_PASS' /tmp/head4_120r_leakage_replay/run.log
+          grep -q 'HEAD4_120R_MARKET_TIMING_WARN_CLOSING_ODDS_PROXY' /tmp/head4_120r_leakage_replay/run.log
+          grep -q 'HEAD4_120R_MODEL_SELECTION_NON_PRISTINE' /tmp/head4_120r_leakage_replay/run.log
+          grep -q '9月_UNREAD' /tmp/head4_120r_leakage_replay/run.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-120r-leakage-and-replay
+          path: /tmp/head4_120r_leakage_replay/
