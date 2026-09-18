@@ -724,3 +724,25 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 出力に profile / eligible / applied / st_gap / score6 / shadow tickets / research_only を追加。
 - 既存wall3正式tickets、HEAD/BASIC/WATCH判定、historical production sentinelは変更しない。
 - September outcomesは読まない。
+
+
+## AFTER — 5>6 ST LIVE shadow導入完了
+- profile commit `8671e6d57c5cb2249e5db3c50c6a55e23249a609`
+  - `FIVE6_SHADOW_PROFILE_NAME = 1HEAD_5TO6_ST_SHADOW_V361_SCORE6_060_STGAP040_G2_000_G3_075`
+  - score6>=.60 / ST6-ST5>=.40 / SECOND g2=0 / THIRD g3=.75。
+- finalizer commit `63d5023ca1e4b52063dfdb1fc4aa698970d14084`
+  - official wall3適用後のp2/pcを再構成し、その後に5>6 shadowを適用。
+  - 新規出力: `five6_shadow_profile`, `five6_shadow_eligible`, `five6_shadow_applied`, `five6_shadow_score6`, `five6_shadow_st_gap_6_minus_5`, `five6_shadow_tickets`, `five6_shadow_research_only=true`。
+  - 正式 `tickets` / `ticket_profile` は変更なし。
+- 既存v356 LIVE回帰:
+  - Run `35329105346` / Job `105549046425` success / Artifact `10540292732`。
+  - びわこ7R保存済み直前入力で official tickets は引き続き `1-4-5 / 1-4-3 / 1-2-4`。
+  - five6 shadowは score6=.49 / ST6-ST5=.20 のため applied=false、shadow ticketsも正式3点と同じ。
+  - result_or_payout_used=false / AUDIT_OK=true。
+- v362 combined監査の有望値:
+  - official wall3 83/165 ROI118.485%
+  - +5>6 STRICT -> 86/165 ROI126.889%, gain3/loss0
+  - +5>6 BROAD40 -> 87/165 ROI128.687%, gain4/loss0
+- 現時点で5>6はshadowのみ。正式production/LIVE ticketsへは未昇格。
+- 今後の「判別して」では、正式wall3 ticketsに加え、5>6 shadowが発火した場合はshadow3点も確認可能。
+- September outcomes unread / production historical sentinel unchanged。
