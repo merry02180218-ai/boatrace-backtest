@@ -8,8 +8,36 @@ on:
 permissions:
   contents: read
   actions: read
+
 jobs:
+  prepare_odds:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas
+      - name: Download frozen Wave21 canonical source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api repos/${{ github.repository }}/actions/artifacts/10317157868/zip > /tmp/wave21.zip
+          unzip -oq /tmp/wave21.zip -d /tmp/wave21
+          SRC=$(find /tmp/wave21 -type f -name 'analysis_v289_3head_wave21_allrace_feature_settled.csv' | head -1)
+          test -n "$SRC"
+          cp "$SRC" analysis_v289_3head_wave21_allrace_feature_settled.csv
+      - name: Materialize frozen March closing odds
+        run: python research/materialize_3head_a_march_closing_odds.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: a-march-closing-odds
+          path: |
+            data/official_closing_odds3t/
+            research_3head_a_march_closing_odds_manifest.json
+
   replay:
+    needs: prepare_odds
     strategy:
       fail-fast: false
       max-parallel: 6
@@ -58,6 +86,18 @@ jobs:
           cp golden_v234/analysis_v234_waku10_reconstruction_coverage.csv .
           mkdir -p data/audit
           cp -r golden_v234/data/audit/v234_waku10 data/audit/
+      - name: Download frozen March closing odds
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/odds
+          gh run download "${{ github.run_id }}" --repo "${{ github.repository }}" --name a-march-closing-odds --dir /tmp/odds
+          mkdir -p data/official_closing_odds3t
+          if [ -d /tmp/odds/data/official_closing_odds3t ]; then
+            cp -r /tmp/odds/data/official_closing_odds3t/* data/official_closing_odds3t/
+          else
+            cp -r /tmp/odds/* data/official_closing_odds3t/
+          fi
       - name: Prepare result-blind historical PRE inputs
         run: python prepare_v288_historical_pre_input.py --date '${{ matrix.date }}'
       - name: Build February-28 frozen full v288 downstream cache
@@ -107,6 +147,8 @@ jobs:
       - name: Aggregate March A + v288 ticket audit
         run: python research/aggregate_3head_a_v288_ticket_march.py --root all_days
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: audit-3head-a-v288-ticket-march
           path: research_3head_a_v288_ticket_march_summary.json
+          if-no-files-found: ignore
