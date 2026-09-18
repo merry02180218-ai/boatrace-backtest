@@ -86,9 +86,10 @@ jobs:
           /usr/bin/time -f 'DAILY_STATE_WALL_SECONDS=%e' python prepare_4head_120r_daily_state.py             --target-date 2026-09-18 --data-root brcsv --out /tmp/head4_daily_state.json 2>&1 | tee /tmp/daily_state.log
       - name: Fast last-minute benchmark Marugame 4R
         run: |
-          /usr/bin/time -f 'FAST120_WALL_SECONDS=%e' python run_4head_120r_lastminute_fast.py             --date 20260918 --jcd 15 --race 4 --deadline-jst 16:42             --race-cards "$CARD" --waku10 "$WAKU" --pre-all "$PRE"             --daily-state /tmp/head4_daily_state.json             --allow-unmonitored-benchmark --out /tmp/fast120_marugame4.json 2>&1 | tee /tmp/fast120.log
+          /usr/bin/time -f 'FAST120_WALL_SECONDS=%e' python run_4head_120r_lastminute_fast.py             --date 20260918 --jcd 15 --race 4 --deadline-jst 16:42             --race-cards "$CARD" --waku10 "$WAKU" --pre-all "$PRE"             --daily-state /tmp/head4_daily_state.json             --allow-unmonitored-benchmark --performance-benchmark --out /tmp/fast120_marugame4.json 2>&1 | tee /tmp/fast120.log
           grep -q 'HEAD4_120R_FAST_LASTMINUTE_OK' /tmp/fast120.log
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: head4-120r-fast-lastminute-benchmark
           path: |
