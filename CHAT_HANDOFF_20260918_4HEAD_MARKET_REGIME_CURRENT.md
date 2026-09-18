@@ -1529,3 +1529,11 @@ Status: `HEAD4_120R_LASTMINUTE_SPEED_CONFIRMED__2P23S_ADDITIONAL_LIVE_BENCHMARK`
 - Next resume point: rerun the same strict workflow once exhibition is available for one of those races; no code change should be needed. A successful complete-data run must end in semantic BET or PASS while retaining `monitoring_parent=true` and no target result/payout access.
 
 Status: `HEAD4_120R_STRICT_MONITOR_GATE_AND_FAILCLOSED_PASS__FINAL_BET_PASS_PENDING_EXHIBITION`
+
+
+## BEFORE WORK — true-parent complete-data benchmark while waiting for next live exhibition (2026-09-18 18:19 JST)
+- Full corrected PRE artifact was unpacked and all 29 monitoring-parent rows inspected, including the 10 WATCH_ONLY hidden rows.
+- There is no earlier remaining true parent before Marugame 10R. Upcoming order remains Marugame 10R 19:39, Omura 6R 19:56, Gamagori 11R 20:15.
+- Since the prospective BET/PASS proof cannot exist before exhibition publication, use the otherwise idle interval to close a separate technical gap: run a **completed true monitoring-parent race** through the complete exhibition -> v283 -> odds -> frozen 120R path in `--performance-benchmark` mode.
+- This benchmark must still reject non-parent rows, must not read target result/payout, and is explicitly not prospective / not a profitability proof. Its purpose is only to prove that a real `monitoring_parent=true` row can traverse complete current-data inputs and produce the internal selected/PASS state without the unmonitored override.
+- Use Gamagori 4R (race_code 202609180704, monitoring_parent=true, head_prob ~0.4021) as the benchmark target because Gamagori current-source availability has already been demonstrated today.
