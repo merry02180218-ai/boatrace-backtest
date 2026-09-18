@@ -1,0 +1,47 @@
+name: v358 1-head generic exhibition ticket rerank
+on:
+  push:
+    paths:
+      - 'run_v358_1head_generic_exhibition_ticket_rerank.py'
+      - '.github/workflows/v358-1head-generic-exhibition-ticket-rerank.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Download frozen v353 caches
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          for pair in "10533112695 prep" "10533397688 second" "10533282609 basethird" "10533362695 third"; do
+            set -- $pair
+            gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$1/zip" > "/tmp/$2.zip"
+            unzip -q -o "/tmp/$2.zip" -d .
+          done
+          test -f cache_v321_julaug_nonpristine_slim.csv.gz
+          test -f cache_v321_julaug_nonpristine_head.csv
+          test -f cache_v321_julaug_second.pkl
+          test -f cache_v321_julaug_base_pc.pkl
+          test -f cache_v321_julaug_third.pkl
+      - name: Run generic exhibition ticket rerank audit
+        run: python run_v358_1head_generic_exhibition_ticket_rerank.py
+      - name: Show result
+        if: always()
+        run: |
+          cat /tmp/v358-generic-exhibition-rerank/result.json 2>/dev/null || true
+          head -25 /tmp/v358-generic-exhibition-rerank/grid.csv 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v358-generic-exhibition-rerank-${{ github.run_id }}
+          path: /tmp/v358-generic-exhibition-rerank/
+          retention-days: 30
