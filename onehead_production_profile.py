@@ -93,6 +93,20 @@ CURRENT_ODDS_ALLOC_SHADOW_PROFILE_NAME = "1HEAD_CURRENT_ODDS_ALLOC_SHADOW_V382_S
 CURRENT_ODDS_SOFT_RATIO_MIN = 3.50
 CURRENT_ODDS_ALLOC_SHADOW_RESEARCH_ONLY = True
 
+# Research-only value-gated current-odds telemetry from v373 execution audit.
+# Closing-odds research core is C=2.25 / E=1.10. The current-odds D20 gate
+# translates those thresholds under a 20% adverse odds move; D30 is a more
+# conservative p95-rounded telemetry scenario. Neither changes official stakes.
+CURRENT_ODDS_VALUE_GATE_SHADOW_PROFILE_NAME = "1HEAD_CURRENT_ODDS_VALUE_GATE_SHADOW_V373_D20"
+CURRENT_ODDS_VALUE_GATE_D20 = 0.20
+CURRENT_ODDS_VALUE_GATE_D20_COMBINED_MIN = 2.8125
+CURRENT_ODDS_VALUE_GATE_D20_VALUE_MIN = 1.375
+CURRENT_ODDS_VALUE_GATE_D30 = 0.30
+CURRENT_ODDS_VALUE_GATE_D30_COMBINED_MIN = 3.2142857142857144
+CURRENT_ODDS_VALUE_GATE_D30_VALUE_MIN = 1.5714285714285716
+CURRENT_ODDS_VALUE_GATE_EXTRA_UNITS = 3
+CURRENT_ODDS_VALUE_GATE_SHADOW_RESEARCH_ONLY = True
+
 # v345 adopted HEAD-side component weights. Historical names are retained for
 # compatibility with frozen research modules.
 ATTACK_CORE_VERSION = "v345"
