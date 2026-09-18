@@ -203,3 +203,12 @@
   - support100 freeze: combined 115/447=25.73%, worst-half **24.51%**.
 - Diagnostic-only February frontier among the pre-frozen pool reached ENHANCED worst-half **34.55%** at >=20/30/50 support (130R combined), vs BASE **32.54%** (298R combined). This shows the unused PRE fields contain real incremental signal, but candidate choice using February labels must not be promoted.
 - Conclusion: adding previously-unused leakage-safe PRE improves some medium-support transfer (especially support30), but does **not** produce a robust 40-50% useful-volume selector. The strongest strict result is ENHANCED 130R / 45 heads = 34.62% combined with 34.55% worst-half. Continue only with genuinely new information/representation; do not keep tuning thresholds against February.
+
+
+## BEFORE WORK — Broad50 Wave17 ~50 races/month precision target (2026-09-18)
+- User explicitly changed the operational volume target: **~50 races/month is sufficient**. Previous support targets of ~100-300 races/month are no longer necessary.
+- Reuse Wave16 ENHANCED leakage-safe PRE family (370 total features) and daily walk-forward protocol; do not add new raw fields in this wave.
+- Candidate settings are frozen from Nov-Dec-Jan only. Target practical monthly volume **40-70 races/month** in each pre-Feb month, with half-month minimum support >=8 and >=6 venues per half. Also report a slightly wider 30-80/month diagnostic.
+- Expand score thresholds into the extreme tail: q = .95/.96/.97/.975/.98/.985/.99/.9925/.995, because the user now accepts much lower volume in exchange for precision. Bands include R1-4/R1-6/R1-8/R1-10/R1-12; windows 21/42; model score = logit/hist/mean.
+- Freeze primary candidate by maximum **worst half-month head rate across all six Nov/Dec/Jan halves**, then persistent combined rate, then closeness of average monthly volume to 50. No February label may affect candidate choice.
+- February is reference one-shot for the frozen candidate. Because February has already been inspected in prior waves, label this result as NON-PRISTINE/reference, not a new untouched holdout. March stays untouched in this wave; September UNREAD; production v288 unchanged.
