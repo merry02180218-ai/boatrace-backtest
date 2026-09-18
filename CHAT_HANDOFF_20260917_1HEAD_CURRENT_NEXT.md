@@ -1281,3 +1281,32 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - Jul-Aug SUPPORTは完全holdout。
 - DEV LOMOでも同じrobust selectionを4月trainで再選定しholdout確認。
 - 現formal100/100/100は変更しない。v371はresearch only。
+
+
+## BEFORE — v372 purchase-time pre-close validation of v371 edge boost
+- v371 closing-odds research coreを固定:
+  - mode=COND
+  - edge = formal pair_prob × odds
+  - threshold=.70
+  - max_extra=2
+  - base100/100/100は必ず購入。
+- pre-close source監査:
+  - BoatraceCSV `data/previews/od3`
+  - `取得日時 < 締切時刻` のsnapshotのみ
+  - raceごとにT-10分に最も近いものを使用
+  - 過去v112/v134で平均約9.1分前、履歴は2026-07-19以降。
+- 重要: v371 threshold=.70はFeb-Jun DEVのclosing oddsで選定済み。このv372ではJul19-Augのpre-close結果を見てthreshold/最大点数を変更しない。
+- current formal LIVE165のうち、pre-close coverageがあるJul19-Aug subsetだけをoperational validation対象にする。
+- 比較:
+  1) base100/100/100
+  2) fixed v371 coreをclosing oddsで適用（同一subset）
+  3) fixed v371 coreをT-10 pre-close oddsで適用（本命）
+- 指標:
+  - coverage R / lead time
+  - preclose vs closingでboost対象ticket一致率・race-level allocation一致率
+  - ROI / profit / extra units
+  - closing-edgeとの差
+  - Jul19-31 / Aug別
+- pre-close oddsはdecision featureのみ、actual payout100はsettlement-only。
+- threshold再選定なし。production/LIVE stakingは変更しない。
+- 2026-09 outcomesは読まない。
