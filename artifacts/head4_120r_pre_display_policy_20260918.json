@@ -1,0 +1,70 @@
+{
+  "id": "HEAD4_120R_PRE_DISPLAY_POLICY_RESEARCH_20260918",
+  "status": "RESEARCH_ONLY_NON_PRISTINE",
+  "purpose": "pre-exhibition user-facing shortlist plus wider internal monitoring parent for frozen 120R post-exhibition research rule",
+  "monitoring_parent": {
+    "rule": {
+      "motor_win_diff_4v3_min": -0.0299361318939513,
+      "motor_2ren_diff_4v3_min": -7.08,
+      "player4_all_win_min": 0.215605
+    },
+    "uses_current_exhibition": false,
+    "uses_odds": false,
+    "historical_apr_aug": {
+      "candidate_R": 3743,
+      "avg_per_calendar_day": 24.464052287581698,
+      "final120_recall_R": 120,
+      "final120_recall_pct": 100
+    }
+  },
+  "display_shortlist": {
+    "parent": "monitoring_parent",
+    "rule": "head_prob >= 0.18 OR v250_PRE >= 0.12; missing head_prob is kept/flagged fail-open",
+    "historical_apr_aug": {
+      "candidate_R": 2408,
+      "avg_per_calendar_day": 15.738562091503267,
+      "p90_per_active_day": 22,
+      "max_per_day": 38,
+      "final120_recall_R": 119,
+      "final120_recall_pct": 99.16666666666667,
+      "monthly_final120_recall_pct": {
+        "2026-04": 100,
+        "2026-05": 96.42857142857143,
+        "2026-06": 100,
+        "2026-07": 100,
+        "2026-08": 100
+      },
+      "historical_final120_ticket_hits_retained": "30/30",
+      "historical_final120_payout_retained_pct": 100,
+      "omitted_final120_R": 1,
+      "omitted_final120_code": "202605132210",
+      "omitted_final120_raw_hit": 0
+    },
+    "operational_role": "DISPLAY_PRIORITY_ONLY_NOT_A_HARD_GATE"
+  },
+  "final_stage": {
+    "timing": "post-exhibition / last-minute",
+    "rule_ref": "HEAD4_RESEARCH_NESTED_LINEAR_120R_20260918",
+    "monitoring_scope": "all monitoring_parent races, not only display_shortlist",
+    "display_omission_can_promote_after_exhibition": true
+  },
+  "caveats": [
+    "Apr-Aug was used to select and evaluate these display thresholds; metrics are NON_PRISTINE.",
+    "v250_PRE historical scores are monthly walk-forward diagnostics; prospective live scoring must use the frozen live model semantics.",
+    "head_prob model must be frozen for live reproducibility before formal promotion.",
+    "Display shortlist must never block the wider final-stage scan.",
+    "Historical closing-odds ROI is retrospective only and not used in the PRE mask."
+  ],
+  "evidence": {
+    "pre_parent_run": 35310772723,
+    "pre_parent_artifact": 10533587079,
+    "detailed_headprob_run": 35310003505,
+    "detailed_headprob_artifact": 10533178842,
+    "v250_pre_run": 35311685276,
+    "v250_pre_artifact": 10534055421,
+    "headprob_leakage_run": 35234326600,
+    "headprob_leakage_artifact": 10503431028
+  },
+  "september_2026_results": "UNREAD",
+  "production_changed": false
+}
