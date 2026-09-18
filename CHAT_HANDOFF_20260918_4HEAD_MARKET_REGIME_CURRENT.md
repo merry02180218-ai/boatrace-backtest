@@ -2757,3 +2757,243 @@ Volume research in parallel:
 - Do not automatically promote a larger-volume threshold until its audit is complete.
 
 Status: HEAD4_NEWFEATURE_PRODUCTION_PROMOTION_AND_VOLUME_EXTENSION_START
+
+
+## AFTER — HEAD4 new-feature fixed156 formally promoted; volume frontier extended
+User explicitly approved formal adoption of the wall3+motor new-feature model and asked whether race count can be increased.
+
+### Formal production profile
+New official profile:
+- `HEAD4_NEWFEATURE_FIXED156_V1`
+- frozen production artifact:
+  - `artifacts/head4_newfeature_fixed156_production.json`
+  - artifact commit `0cf9600c2bcdf90191cbba6d44b1ee596af103d2`
+  - promotion workflow Run `35364735286`
+  - Job `105664304785`
+  - SUCCESS.
+- fixed score threshold: **12.293333333333333**
+- frozen weights:
+  - hp 2
+  - opponent mass 4
+  - ST 1
+  - ORIG 1
+  - market confidence 2
+  - reverse motor prior-win diff 4
+  - reverse motor 2-ren diff 3
+  - attack4 3
+  - ST-wall center 2
+  - reverse wall score 1
+- frozen transforms: Apr-Jun empirical CDF from the 50 nonbase dev rows; missing wall rank=.5.
+- official selection:
+  1. frozen base120 remains unchanged;
+  2. if not base120, require ST>=-0.80 and ORIG>=-0.35;
+  3. add when new-feature score >=12.293333333333333.
+- legacy `HEAD4_156R_ROI_EXPANSION_V1` is retained only as comparison output / compatibility test, not official decision.
+
+Historical NON-PRISTINE diagnostic at the production threshold:
+- **156R**
+- 73 heads = **46.79%**
+- exact3 **40**
+- ROI **140.99%**
+- Apr ROI233.08
+- May123.54
+- Jun140.42
+- Jul126.81
+- Aug87.21
+- monthly floor **87.21%**
+- Jul-Aug ROI **113.18%**.
+These figures are retrospective diagnostics, not prospective profit guarantees.
+
+### LIVE implementation
+- fast runner official decision switched to new profile:
+  - `run_4head_120r_lastminute_fast.py`
+  - production switch commit `ed9ea72325932b76d57e1901dbfb237aeb1ec733`
+- official output now contains:
+  - `profile=HEAD4_NEWFEATURE_FIXED156_V1`
+  - `newfeature_score`
+  - `newfeature_threshold`
+  - `newfeature_score_margin`
+  - `newfeature_expanded_added`
+  - wall/motor raw features and frozen ranks
+  - legacy156 comparison fields.
+- selection policy artifact now points to:
+  - `artifacts/head4_newfeature_fixed156_production.json`.
+- old `decide()` restored as a legacy compatibility wrapper only:
+  - commit `82c601612278dbe524f50f66b8980795eabc38a4`
+  - main still calls `newfeature_decide()`.
+
+### Exact motor-history parity fix
+Research motor prior-win semantics start 2025-11-01; previous LIVE daily state motor history started 2025-10-01.
+To remove this mismatch:
+- `prepare_4head_120r_daily_state.py` now keeps the existing motor state unchanged AND adds:
+  - `motors_newfeature_nov2025`
+  - `newfeature_motor_history_start=2025-11-01`
+- commit `7033b487ee5f0e9e3fdd3752a6f054732cd9844c`.
+- runner fails closed with `NO_BET_DATA_NOT_READY / NEWFEATURE_STATE` if an old state artifact lacks this new motor history:
+  - commit `d6dfb2801eea6d74cc30cb31260bca1238831d28`.
+This prevents silently scoring with research/LIVE motor-history mismatch.
+
+### New production daily-state workflow
+Added:
+- `.github/workflows/live-4head-newfeature-daily-state.yml`
+- commit `8379aa0e79f8d146e8754c8067ef1bc87e6d7814`
+- scheduled 09:15 JST plus manual dispatch.
+Validation for 2026-09-19:
+- Run `35365210195`
+- Job `105665877139`
+- Artifact `10555802521`
+- name `head4-newfeature-daily-state-20260919`
+- SUCCESS
+- target date 2026-09-19
+- history_end 2026-09-18
+- newfeature motors 1,528
+- target-date results unused.
+
+### strict/watchdog integration
+Both live workflows now prefer a same-day artifact named:
+- `head4-newfeature-daily-state-YYYYMMDD`
+even when an older state Run ID remains in the trigger/watchlist.
+They fall back to the old configured state only if no new artifact exists; the runner then fails closed if it lacks the new motor state.
+- strict workflow commit `2b653de7b7e02a25e8dd5a51ee251e56f39dd9dc`
+- watchdog workflow commit `34af0f37f8ea05203b84fd4270f2501d3d6bd1c1`.
+Contract checks now require `profile == HEAD4_NEWFEATURE_FIXED156_V1` on BET/PASS.
+Watchdog push smoke:
+- Run `35365374327`
+- Job `105666427505`
+- SUCCESS.
+
+### Independent production parity
+Parity audit:
+- script `audit_4head_newfeature_production_parity.py`
+- workflow `.github/workflows/test-4head-newfeature-production-parity.yml`
+- initial formal Run `35364988032`
+- Job `105665139180`
+- Artifact `10555419545`
+- SUCCESS.
+Verified using the actual LIVE artifact + scoring helper:
+- 156R / 73 heads / exact3 40 / ROI140.9916667
+- monthly floor87.2142857
+- Jul-Aug ROI113.1754098
+- motor raw unit parity
+- wall raw unit parity
+- September unread.
+
+After fail-closed and compatibility changes:
+- latest production parity Run `35365304930`
+- Job `105666189043`
+- SUCCESS.
+Legacy compatibility:
+- `test-4head-156r-policy` Run `35365305016`
+- Job `105666189236`
+- SUCCESS.
+Wall3 legacy-shadow compatibility:
+- Run `35365304987`
+- Job `105666189007`
+- SUCCESS.
+
+### BET GitHub notification updated
+BET Issue body now shows:
+- newfeature_expanded_added
+- newfeature_score
+- newfeature_threshold
+- legacy_156r_selected
+instead of the old expanded156 field.
+- notifier commit `f65cb981d050b5006b6833c33920e5da70e5ac5c`
+- notifier test update `9b02371bb56aa9b0ce6c1df69cc2f2c7fb3d1f05`
+- test Run `35365184355`
+- Job `105665790372`
+- SUCCESS.
+Direct @mention notification remains enabled.
+
+### Volume extension — can race count increase?
+YES. Same frozen weights; only lower the fixed score threshold. Thresholds are defined from Apr-Jun score ranks and applied unchanged to Jul-Aug; Jul-Aug outcomes do not choose the thresholds.
+
+Prior sensitivity around current production:
+- 156R threshold12.2933:
+  - head rate46.79%
+  - exact3 40
+  - ROI140.99%
+  - monthly floor87.21
+  - support ROI113.18
+- 157R threshold12.2711:
+  - head rate46.50%
+  - ROI140.09%
+- 158R threshold12.2078:
+  - head rate46.20%
+  - ROI139.21%
+- 159R threshold12.1089:
+  - head rate45.91%
+  - ROI138.33%
+- 160R threshold12.0389:
+  - head rate45.63%
+  - ROI137.47%
+- 162R threshold11.8678:
+  - head rate45.06%
+  - ROI135.77%
+  - floor83.25
+- 165R threshold11.7156:
+  - head rate44.24%
+  - ROI133.30%
+  - floor79.63.
+
+Extended volume audit:
+- script `audit_4head_newfeature_volume_extension.py`
+- workflow `.github/workflows/audit-4head-newfeature-volume-extension.yml`
+- Run `35364790928`
+- Job `105664492714`
+- Artifact `10554894418`
+- SUCCESS.
+
+Key extended frontier:
+- **167R**, threshold **11.59**
+  - 74 heads = **44.31%**
+  - exact3 40
+  - ROI **131.70%**
+  - Jul-Aug ROI **106.21%**
+  - monthly floor **79.63%**
+- 171R, threshold11.1056
+  - 76 heads = **44.44%**
+  - exact3 40
+  - ROI **128.62%**
+  - support ROI101.53%
+  - floor79.63%.
+- 173R, threshold10.6611
+  - 76 heads =43.93%
+  - exact3 40
+  - ROI127.14%
+  - support ROI100.05%
+  - floor76.31%.
+- 181R, threshold10.3967
+  - 79 heads =43.65%
+  - exact3 41
+  - ROI124.40%
+  - support ROI100.33%
+  - floor73.26%.
+- 199R, threshold9.0356
+  - 80 heads =40.20%
+  - exact3 41
+  - ROI113.14%
+  - support ROI89.45%
+  - floor63.16%.
+
+Audit summary:
+- max volume with ROI>=130% AND head rate>=44%: **167R**
+- max volume with head rate>=43% AND ROI>=125%: **173R**.
+Interpretation:
+- 167R is the strongest practical next expansion point if volume is prioritized without giving up the newly gained 44%+ head-rate / 130%+ aggregate ROI regime.
+- 171R is still viable on aggregate metrics, but ROI falls below130 and support ROI is near101.5.
+- beyond173R deterioration becomes much clearer, especially August/monthly floor.
+
+### Production decision now
+- **FORMALLY ACTIVE:** `HEAD4_NEWFEATURE_FIXED156_V1`, threshold12.293333333333333.
+- Historical reference:156R /46.79% head / ROI140.99%.
+- New-feature daily state is required and auto-preferred.
+- GitHub BET direct-mention notification follows this new official decision.
+- September target outcomes remain unread.
+- 167R is researched and ready as the next volume candidate, but is NOT yet production because user approval so far was for formal adoption of the new model, not specifically the lower 11.59 threshold.
+
+Exact restart point:
+- if user chooses more volume, promote **167R / threshold11.59** next and rerun the same production parity + LIVE contract checks.
+- otherwise operate fixed156 production and collect prospective September outcomes.
+
+Status: `HEAD4_NEWFEATURE_FIXED156_PRODUCTION_ACTIVE__167R_VOLUME_CANDIDATE_READY`
