@@ -960,3 +960,70 @@ Next step:
 - rerun v250 score persistence started at Run `35311685276`.
 
 Status: `HEAD4_PRE_SHORTLIST_DISPLAY_ONLY__HARD_FILTER_REJECTED_PENDING_WINNER_RESCUE`
+
+
+## PRE-DISPLAY DUAL-SCORE RESULT — 2026-09-18
+The v250 PRE per-race score persistence rerun completed:
+- Run `35311685276`
+- Job `105494865314`
+- conclusion: **SUCCESS**
+- Artifact `10534055421` / `head4-v250-pre-recall-120r`
+- digest `sha256:88451dbd23e0fbec29e074a307ddc8f042353d9c61b7199e74b09a4b7f277cd8`
+
+By merging three already-successful audited artifacts:
+- wide PRE parent,
+- leakage-audited race-card `head_prob`,
+- v250 PRE scores,
+
+the best clean user-facing shortlist found is:
+
+1. first require the 100%-recall wide causal parent:
+   - `motor_win_diff_4v3 >= -0.029936...`
+   - `motor_2ren_diff_4v3 >= -7.08`
+   - `player4_all_win >= .215605`
+2. DISPLAY candidate if:
+   - `head_prob >= .18`
+   - OR `v250_PRE >= .12`
+   - historical missing head_prob is kept/flagged fail-open.
+
+Apr-Aug historical diagnostics:
+- **2,408 PRE display candidates**
+- avg **15.74R/day**
+- p90 active day 22R
+- max 38R
+- frozen final120 captured **119/120 = 99.17%**
+- monthly final120 recall:
+  - Apr 100%
+  - May 96.43%
+  - Jun 100%
+  - Jul 100%
+  - Aug 100%
+- historical final120 trifecta ticket hits retained: **30/30**
+- historical final120 payout retained: **100%**
+- the only omitted final120 race is `202605132210`, which was a historical miss.
+- retained 119R retrospective ROI = 128.79%, but this is outcome-exposed/non-pristine and must NOT be interpreted as validation improvement.
+
+This is materially better than:
+- v250 PRE alone: low recall at practical candidate counts;
+- head_prob alone: practical cuts dropped known winning final120 races;
+- 24.46R/day wide parent: 100% recall but too broad for user-facing display.
+
+### Operational architecture decision
+- **Internal monitoring parent**: wide causal 24.46R/day historical rate. This is the hard parent for post-exhibition scanning.
+- **User-facing PRE shortlist**: dual-score rule above, ~15.74R/day historical rate.
+- **PRE shortlist is DISPLAY PRIORITY ONLY, never a hard gate.**
+- Post-exhibition 120R final scan must evaluate the full internal monitoring parent, allowing a race omitted from the PRE display to promote later.
+- This prevents a pre-ranking miss from suppressing a valid last-minute BET.
+
+Frozen research policy artifact:
+- `artifacts/head4_120r_pre_display_policy_20260918.json`
+- commit `056c2e579369522f32bbf030df7529ec491eb72f`
+
+Caveats:
+- Apr-Aug thresholds are outcome-exposed / NON-PRISTINE.
+- v250 historical PRE is monthly walk-forward; prospective live semantics use the frozen cutoff through 2026-06-30.
+- race-card head_prob must be frozen into a static inference artifact before live deployment.
+- September outcomes remain UNREAD.
+- production unchanged.
+
+Status: `HEAD4_120R_PRE_DISPLAY_DUAL_SCORE_RESEARCH_FROZEN__LIVE_ARTIFACT_NEXT`
