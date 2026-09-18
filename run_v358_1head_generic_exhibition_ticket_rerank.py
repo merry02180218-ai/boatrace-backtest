@@ -7,6 +7,7 @@ policy is reconstructed first, then additional generic exhibition overlays are
 tested without changing ticket count.
 """
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
 from datetime import date,timedelta
 from pathlib import Path
 import json, math
@@ -48,27 +49,41 @@ def tickets(p2,pc):
 
 def generic_exhibition(ids:set[str]):
  days=sorted({date(int(c[:4]),int(c[4:6]),int(c[6:8])) for c in ids})
- dayset=set(days);last=max(days);sums=defaultdict(list);allv=[];out=[];d=v337.PRELOAD
+ dayset=set(days);last=max(days);sums=defaultdict(list);allv=[];out=[]
+ all_days=[];d=v337.PRELOAD
  while d<=last:
-  ymd=d.strftime('%Y/%m/%d');strows=rows(f'data/previews/stt/{ymd}.csv');bias=v326.st_bias(sums,allv)
+  all_days.append(d);d+=timedelta(days=1)
+ def fetch_day(d):
+  ymd=d.strftime('%Y/%m/%d')
+  strows=rows(f'data/previews/stt/{ymd}.csv')
   if d in dayset:
-   tkz=v326.bycode(rows(f'data/previews/tkz/{ymd}.csv'));stt=v326.bycode(strows);orig=v326.bycode(rows(f'data/previews/original_exhibition/{ymd}.csv'))
-   prefix=d.strftime('%Y%m%d')
+   tkz=v326.bycode(rows(f'data/previews/tkz/{ymd}.csv'))
+   orig=v326.bycode(rows(f'data/previews/original_exhibition/{ymd}.csv'))
+  else:
+   tkz={};orig={}
+  return d,strows,tkz,orig
+ # Network retrieval is parallel, but bias/scoring below remains strictly chronological.
+ with ThreadPoolExecutor(max_workers=16) as ex:
+  fetched={d:(strows,tkz,orig) for d,strows,tkz,orig in ex.map(fetch_day,all_days)}
+ for d in all_days:
+  strows,tkz,orig=fetched[d];bias=v326.st_bias(sums,allv)
+  if d in dayset:
+   stt=v326.bycode(strows);prefix=d.strftime('%Y%m%d')
    for code in sorted(c for c in ids if c.startswith(prefix)):
     tr=tkz.get(code,{});sr=stt.get(code,{});orr=orig.get(code,{})
     audit=v326.raw_completeness(tr,sr,orr)
     ready=all(audit[k] for k in ('tkz_all6','stt_all6','orig_straight_all6','orig_avg_all6'))
     rec={'race_code':code,'ex_ready':bool(ready)}
     if ready:
-     ex,st,os=v326.corrected_direct(code,tkz,stt,orig,bias)
+     exv,st,os=v326.corrected_direct(code,tkz,stt,orig,bias)
      for b in BOATS:
-      rec[f'ex{b}']=float(ex[b]);rec[f'st{b}']=float(st[b]);rec[f'straight{b}']=float(os[b]['straight']);rec[f'avg{b}']=float(os[b]['avg'])
-      rec[f'score{b}']=(prod.WALL3_SHADOW_W_EX*float(ex[b])+prod.WALL3_SHADOW_W_ST*float(st[b])+
+      rec[f'ex{b}']=float(exv[b]);rec[f'st{b}']=float(st[b]);rec[f'straight{b}']=float(os[b]['straight']);rec[f'avg{b}']=float(os[b]['avg'])
+      rec[f'score{b}']=(prod.WALL3_SHADOW_W_EX*float(exv[b])+prod.WALL3_SHADOW_W_ST*float(st[b])+
                         prod.WALL3_SHADOW_W_STRAIGHT*float(os[b]['straight'])+prod.WALL3_SHADOW_W_ORIG_AVG*float(os[b]['avg']))
-      rec[f'core{b}']=(prod.ATTACK_CORE_W_ONE_EX*float(ex[b])+prod.ATTACK_CORE_W_ONE_ST*float(st[b])+
+      rec[f'core{b}']=(prod.ATTACK_CORE_W_ONE_EX*float(exv[b])+prod.ATTACK_CORE_W_ONE_ST*float(st[b])+
                        prod.ATTACK_CORE_W_ONE_STRAIGHT*float(os[b]['straight'])+prod.ATTACK_CORE_W_ONE_ORIG_AVG*float(os[b]['avg']))
     out.append(rec)
-  v326.update_st(strows,sums,allv);d+=timedelta(days=1)
+  v326.update_st(strows,sums,allv)
  return pd.DataFrame(out)
 
 def apply_vec(p2,pc,vec,g2,g3):
@@ -158,6 +173,7 @@ def main():
  basic=grid.eval_cfg(ym,v352.BASIC['head'],v352.BASIC['env_w'],v352.BASIC['env_q'])
  if (len(basic),int(basic.head_hit.sum()))!=(165,140):raise RuntimeError(f'BASIC selection drift R={len(basic)} head={int(basic.head_hit.sum())}')
  ids=set(basic.race_code);features=generic_exhibition(ids)
+ features.to_csv(OUT/'generic_exhibition_features.csv',index=False)
  cores={}
  for _,fr in features[features.ex_ready.fillna(False)].iterrows():
   cores[str(fr.race_code).zfill(12)]={b:float(fr[f'core{b}']) for b in BOATS}
@@ -185,6 +201,8 @@ def main():
  sm['dev_floor_score']=sm.dev_roi
  best=sm.sort_values(['dev_exact3','dev_roi','changed_R'],ascending=[False,False,True]).iloc[0]
  rz=pd.concat(races,ignore_index=True)
+ rz.to_csv(OUT/'race_predictions.csv',index=False)
+ off.to_csv(OUT/'official_wall3_baseline.csv',index=False)
  pick=rz[(rz.family==best.family)&(rz.scope==best.scope)&np.isclose(rz.attack_min,float(best.attack_min))&
          np.isclose(rz.g2,float(best.g2))&np.isclose(rz.g3,float(best.g3))].copy()
  cmp=off[['race_code','month','actual_combo','tickets','hit']].rename(columns={'tickets':'official_tickets_ref','hit':'official_hit_ref'}).merge(
