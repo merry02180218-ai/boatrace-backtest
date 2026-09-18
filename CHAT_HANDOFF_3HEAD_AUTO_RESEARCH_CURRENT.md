@@ -260,3 +260,23 @@ Changes in research/run_3head_funsite_broad50.py:
 - Threshold grids/venue sets/race bands are frozen from February data. Minimum support is enforced in both Feb validation blocks; tiny-N 50% remains diagnostic only.
 - Freeze a 50% candidate only from February evidence; if no strict candidate exists, report relaxed frontier separately rather than silently lowering the target.
 - March is one-shot after freeze. Do not iterate Wave3 from its March result.
+
+
+## AFTER WORK — Broad50 Wave3 verified (Run 35304942169, 2026-09-18)
+- SUCCESS: Run **35304942169** / Job **105475097100** / Artifact **10531373195**; head SHA **f95aa9e8a21886a86710051e7f16f385e9090d8e**.
+- Split: Feb train 1,954 / validation-1 904 / validation-2 1,112; March 4,482; 292 PRE-only features; 1,303 candidate structures.
+- Strict >=50% with support >=12 in both Feb validation blocks: **0 candidates**. Near-50 (>=45% in both with support >=15 and combined >=47%): **0 candidates**.
+- Closest diagnostic 50% structure (fails support by one race in v1, so NOT frozen): R1-4 only; boat3-vs-boat2 national 2-rate gap >=25pt; boat3 ST edge vs boat2 >=0.03; inner-player attack score >=17.83375. Feb v1 **11R/6=54.55%**, v2 **12R/6=50.0%**. Another R1-4 rank variant was 11R/6 and 8R/5.
+- Frozen 0.50: null; March 0.50 therefore remained unopened for Wave3.
+- Frozen 0.45: rule+model consensus = vs2 national2 gap >=25pt + vs2 ST edge >=0.03 + vs1 national2 gap >=7.2pt + at least 4/6 models at >=75th percentile. Feb v1 **13R/6=46.15%**, v2 **20R/9=45.0%**. March one-shot **93R/40=43.0108%**, early 23/46=50.0%, late 17/47=36.17%, across 23 venues.
+- Frozen 0.40: vs2 national2 gap >=9.5pt + vs4 national2 gap >=29.235pt + at least 2/6 models at >=85th percentile. Feb v1 22R/9=40.91%, v2 26R/11=42.31%; March **122R/35=28.6885%**. Reject.
+- Interpretation: Wave3 improves the transferable 45%-target March rate to 43.0%, but still does not establish a 50% useful-volume model. The strongest Feb-only 50% clue is concentrated in early races R1-4 and boat3-vs-boat2 player/ST superiority; it was not opened on March because it failed the predeclared support floor.
+- Production v288 unchanged; September outcomes UNREAD.
+
+## BEFORE WORK — Broad50 Wave4 early-race specialist / continuous attack score (2026-09-18)
+- Wave4 is a new family motivated only by Wave3 February frontier structure, not by Wave3 March outcomes.
+- Primary objective: convert the R1-4 diagnostic 50% structure into >=50% with >=12-15 support in both Feb validation blocks, then expand volume toward >=100 March races if it freezes.
+- Train dedicated early-race models (R1-4, R1-6, R1-8) rather than a global model; create train-percentile normalized continuous attack scores combining vs2 player gap, vs2 ST edge, inner-player edge, vs1/vs4 control, motor and recent form.
+- Search fixed coarse weight grids and score quantile gates using February only; test specialized model consensus and score+model consensus. Also test unions of complementary Feb-stable archetypes to increase volume without lowering precision.
+- Require venue dispersion and the same two chronological February validation blocks. Freeze 50% only if both blocks satisfy target and support; otherwise expose diagnostic frontier without opening March for the 50% target.
+- September outcomes remain UNREAD; production v288 unchanged.
