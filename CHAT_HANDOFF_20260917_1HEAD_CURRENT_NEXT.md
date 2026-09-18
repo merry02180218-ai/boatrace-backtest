@@ -1310,3 +1310,61 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - pre-close oddsはdecision featureのみ、actual payout100はsettlement-only。
 - threshold再選定なし。production/LIVE stakingは変更しない。
 - 2026-09 outcomesは読まない。
+
+
+## AFTER — v371 base300 + positive-edge boost staking
+- Run `35346333370` / Job `105603666579` completed success / Artifact `10546911950` / head `3897f9baf8bf6c47707bc8f8432a632f42c01bd3`。
+- all165 / formal3点は全て100円購入し、edgeの高い券だけ+100円。
+- DEV robust選択:
+  - edge=`formal pair_prob * official closing odds`
+  - threshold=.70
+  - 1R最大2券boost
+- ALL:
+  - equal baseline stake49,500 / return63,700 / profit+14,200 / ROI128.687%
+  - boost stake70,600 / return97,350 / profit**+26,750** / ROI**137.890%**
+  - ROI +9.20pp / profit +12,550。
+- DEV ROI138.29%（equal129.44%）、SUPPORT ROI135.98%（equal125.00%）。
+- fixed core月別: Feb +35.27pp, Mar +6.88, Apr +6.42, May -1.58, Jun +14.66, Jul +21.51, Aug +6.12。7月中6月改善。
+- ただしLOMO再選定は5月中3月のみ非悪化でparameter selectionは完全安定ではない。
+- closing oddsは購入時点で同値を保証できないためformal採用せず、v372でpre-close operational validationへ。
+
+## AFTER — v372 T-10 pre-close validation
+- script commit `2ac2521f0046b2f329b12d2a45bf8aadf723a2d6`
+- workflow commit `3faf7a3f3305b084bc63bba83ea284266c0c30b0`
+- Run `35346829065` / Job `105605266732` completed success / Artifact `10547476108` / digest `sha256:2a481aee6b948829db2c386c44bc07ddbd2b15544bdb7c30e1bbd77340163465`。
+- fixed v371 core (.70 / max2)を一切再調整せず、BoatraceCSV `data/previews/od3` の取得時刻<締切、T-10に最も近いsnapshotへ適用。
+- current formal rows in historical preclose period=21R / coverage21R / missing0。
+- snapshot lead: mean9.42分前 / median9.58 / min8.39 / max9.67。
+- closing allocationとのrace-level完全一致 14/21=66.7%、ticket-level 56/63=88.9%。
+- 同一21R:
+  - equal100/100/100: stake6,300 / return7,370 / profit+1,070 / ROI**116.98%**
+  - closing-edge boost: stake9,100 / return10,870 / profit+1,770 / ROI119.45%
+  - **T-10 preclose-edge boost: stake9,600 / return9,710 / profit+110 / ROI101.15%**
+  - equal比 -15.84pp / profit -960。
+- Aug19Rだけでも equal115.09% -> closing121.20% -> preclose102.30%。
+- 結論: v371のclosing-odds edge boostは実運用T-10へ転送できずREJECT。formal stakingは100/100/100維持。
+- thresholdはv372で再選定していない。September outcomes unread / production unchanged / AUDIT_OK=true。
+
+## BEFORE — v373 model-only dynamic boost research
+- オッズ依存を完全に外し、直前判定時点で確定しているmodel/exhibition情報だけで追加100円を配る。
+- formal3点・165R・各100円baseは固定。race skip/ticket削除なし。
+- ticket-level features:
+  - formal ticket rank 1/2/3
+  - formal pair probability p_i
+  - p1-p2 / p2-p3 / p_i / p1 ratio
+- race-level causal features:
+  - HEAD probability
+  - opponent mass
+  - wall3 applied/risk
+  - five6 applied / ST6-ST5 / score6
+- candidate boost ruleは最大1券+100円を基本にし、必要なら最大2券も比較。
+- p閾値・rank subset・gap・HEAD/mass・overlay発火でsimple rule gridを作る。
+- DEV Feb-Junで選定する際は:
+  - DEV全体ROI改善
+  - 月別4/5以上非悪化
+  - worst-month悪化を制限
+  - boost件数最低sample guard
+- Jul-Aug SUPPORT完全holdout。
+- LOMO再選定、近傍plateauも監査。
+- closing/preclose oddsはfeatureとして使用しない。actual payoutはsettlementのみ。
+- formal LIVE tickets / 100/100/100 stakingはv373完了まで変更しない。
