@@ -271,3 +271,11 @@
 - Exhibition source is archived previews/tkz + previews/stt + previews/original_exhibition. Common-ready requires all-six 展示タイム and スタート展示. Head features include boat3 field-relative exhibition time, start-exhibition edges vs 1/2/4, exhibition course shift, tilt/weight-adjustment, and available original-exhibition turn/straight/lap relative edges. Original metrics are optional with explicit availability flags.
 - Post models are daily rolling logistic gates, trained only on prior days. Compare PRE-only, MOTOR, EXHIBIT, and BOTH (motor+exhibition) using the same PRE score as an input. No same-day result enters training.
 - Freeze broad PRE threshold + post-score threshold using Nov-Dec-Jan only. Candidate grid targets final 40-70 races/month in each month, half-month >=8 and >=6 venues. Rank by worst of six half-month head rates, then combined rate, then closeness to 50/month. February is NON-PRISTINE/reference only; March remains unopened. September **2026** outcomes remain UNREAD; production v288 unchanged.
+
+
+### Wave19 implementation / active run checkpoint (2026-09-18)
+- Added `research/run_3head_wave19_motor_exhibition_gate.py`: commit **e4e2e47d6209da5bb3ac0d0f82e3b02fc99835b5**.
+- Added `.github/workflows/research-3head-wave19-motor-exhibition-gate.yml`: commit **761410a77c557235d3a4842fc177a75606643fa4**.
+- Fresh official run **35336822315** / Job **105573463674** is currently executing from head SHA **761410a77c557235d3a4842fc177a75606643fa4**.
+- The run compares four final head gates under identical Nov-Dec-Jan freeze rules: PRE, MOTOR, EXHIBIT, BOTH. Final target is 40-70 races/month. Motor state is snapshotted before same-day results; exhibition enters only after the broad PRE gate. February is reference-only; March/September-2026 remain unopened.
+- Restart point if interrupted: check Run 35336822315. If success, extract best per variant + overall and append AFTER result. If failure, inspect Job 105573463674 logs and issue a fresh run after implementation-only repair.
