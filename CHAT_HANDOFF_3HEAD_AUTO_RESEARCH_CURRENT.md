@@ -244,3 +244,20 @@
 - Exact cause: candidates with a zero-support half-month had `rate=None`; `pre_metrics()` called `min()` across those values and raised `TypeError`. This is an implementation bug only; course-history reconstruction itself completed.
 - Fix commit **97bd4de7794381783fc01084c518618a1111c734**: zero-support candidates receive `persistent_worst=-1` and are naturally rejected by the existing support/rate eligibility gate. No feature, threshold, monthly-volume rule, or train/test split changed.
 - Fresh run from current main is required; failed Run 35328363382 must not be used as a result.
+
+
+## AFTER WORK — Wave18 causal course/ST/deciding-move enrichment (Run 35329805431, 2026-09-18)
+- SUCCESS: Run **35329805431** / Job **105551285628** / Artifact **10540539135**; head SHA **97bd4de7794381783fc01084c518618a1111c734**.
+- Causal history source: 2025-04-01..2026-02-28; 334 calendar days checked, 302 race-card days, 120 result days, 17,510 matched result races, 104,834 boat-course events. Same-day outcomes were explicitly excluded; all course-history features used only prior dates.
+- Added **120 new causal course-history features** to Wave16 ENHANCED 370 features = **COURSEPLUS 490 features**. Included expected-course racer win/top2/top3, avg/ST SD/EWMA ST, frame-to-course stability, deciding-move rates, venue×course and venue×race-number×course priors, and boat3-vs-1/2/4 course/ST matchup gaps.
+- Operational target remained 40-70 races/month, frozen on Nov-Dec-Jan only, February NON-PRISTINE reference only. March unopened; September UNREAD; production v288 unchanged.
+- 10 strict 40-70/month candidates and 22 wide 30-80/month candidates existed.
+- Primary strict COURSEPLUS candidate: trailing window21 / all R1-12 / logistic percentile q=.9925.
+  - Nov: 43R / 12 heads = **27.91%**; H1 6/17=35.29%, H2 6/26=23.08%.
+  - Dec: 62R / 18 heads = **29.03%**; H1 11/30=36.67%, H2 7/32=21.88%.
+  - Jan: 56R / 24 heads = **42.86%**; H1 15/31=48.39%, H2 9/25=36.00%.
+  - Pre-Feb total **161R / 54 heads = 33.54%**, avg **53.67R/month**, persistent worst half-month **21.88%**.
+- February NON-PRISTINE reference for the frozen candidate: H1 5/13=38.46%, H2 13/43=30.23%, total **18/56=32.14%**, worst-half 30.23%.
+- Wave17 baseline was pre-Feb total 128R/44 heads = **34.38%**, avg 42.67R/month, persistent worst half 28.57%; Feb reference 36.67%. Therefore COURSEPLUS was **worse** on both pre-Feb combined precision (-0.84pt) and temporal stability (-6.70pt), and worse on Feb reference (-4.52pt).
+- Several COURSEPLUS settings show strong January rates (roughly 40-47%) but materially weak November/December rates (roughly 19-32%), confirming severe temporal instability rather than a missing static course-history signal.
+- Conclusion: adding causal actual-course/ST/deciding-move/venue-course history did **not** break the ~34-35% ceiling. The new course-history family should not be promoted. Current evidence strongly suggests the remaining limitation is not simply absence of course-specific historical strength; future research should shift toward a qualitatively different information source or objective rather than stacking more historical PRE aggregates.
