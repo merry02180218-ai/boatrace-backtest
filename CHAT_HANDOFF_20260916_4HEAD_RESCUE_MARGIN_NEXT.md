@@ -79,3 +79,22 @@ Status: `JOINT_HEADPROB_OPPONENT_MASS_LASTMINUTE_GRID_PREPARING`
 - Keep exact 164R / THIRD0.10 / JPY10,000 Dutch semantics. No production change. September `UNREAD`.
 
 Status: `JOINT_GRID_ABLATION_PREPARING`
+
+
+## AFTER — JOINT GRID ABLATION
+- Run `35294996618`, Job `105445615892`, Artifact `10528471677`, SUCCESS.
+- Best ablation was opponent mass only at >=0.30: Apr-Jun ROI 148.9953%; Jul-Aug ROI 89.9027% (75 BET R / 52 added / 16 hits).
+- Head probability and last-minute/original-exhibition gates did not improve Jul-Aug validation ROI in this grid.
+- Production unchanged; September `UNREAD`.
+
+## BEFORE — JUL-AUG ROI COLLAPSE ATTRIBUTION
+- User requested direct cause analysis of why Jul-Aug ROI is much lower.
+- Reconstruct exact fixed 164R and frozen THIRD0.10 tickets.
+- Trace funnel by month/period: candidate -> head4 -> raw ticket hit -> current comp>=7 BET -> payout/ROI.
+- Compare composite-odds distributions for winning-ticket races vs losing races, especially Apr-Jun vs Jul-Aug.
+- Quantify how many winning-ticket races are rejected by comp>=7 and their composite-odds bands.
+- Inspect payout contribution / average winning odds so hit-rate effects can be separated from price effects.
+- Produce race-level detail for Jul-Aug failures without accessing September.
+- No production change. September remains `UNREAD`.
+
+Status: `JULAUG_ROI_COLLAPSE_ATTRIBUTION_PREPARING`
