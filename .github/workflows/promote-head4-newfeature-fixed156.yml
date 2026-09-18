@@ -1,0 +1,75 @@
+name: promote-head4-newfeature-fixed156
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/promote-head4-newfeature-fixed156.yml'
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Download frozen fixed-threshold artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p seed artifacts
+          gh run download 35363910244 -n head4-newfeature-fixed-threshold -D seed
+          test -f seed/shadow_artifact.json
+      - name: Freeze production artifact
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          src=json.loads(Path('seed/shadow_artifact.json').read_text())
+          src.update({
+            'profile':'HEAD4_NEWFEATURE_FIXED156_V1',
+            'research_only':False,
+            'production_applied':True,
+            'production_threshold':12.293333333333333,
+            'primary_threshold':12.293333333333333,
+            'threshold_source':'Run 35363910244 threshold_sensitivity dev_target_k=24',
+            'explicit_expansion_structural_gate':{
+              'st4_adv_inside_min':-0.80,
+              'orig4_adv_inside_min':-0.35
+            },
+            'selection':'base120 OR (not base120 AND st4_adv_inside>=-0.80 AND orig4_adv_inside>=-0.35 AND newfeature_score>=12.293333333333333)',
+            'historical_diagnostic':{
+              'R':156,
+              'head4':73,
+              'head4_rate_pct':46.794871794871796,
+              'exact3':40,
+              'ROI_pct':140.99166666666667,
+              'monthly_floor_ROI_pct':87.21428571428571,
+              'support_JulAug_ROI_pct':113.17540983606557,
+              'non_pristine':True
+            },
+            'promotion_approved_by_user':True,
+            'target_result_used':False,
+            'payout_used_for_live_score':False,
+            'september_outcomes_used':False
+          })
+          src.pop('primary_threshold_rule',None)
+          src.pop('threshold_boundary',None)
+          Path('artifacts/head4_newfeature_fixed156_production.json').write_text(
+            json.dumps(src,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          PY
+      - name: Commit production artifact
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add artifacts/head4_newfeature_fixed156_production.json
+          if git diff --cached --quiet; then
+            echo "no artifact change"
+          else
+            git commit -m "prod: freeze HEAD4 new-feature fixed156 artifact"
+            git push origin HEAD:main
+          fi
