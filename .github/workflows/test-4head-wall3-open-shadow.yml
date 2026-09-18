@@ -1,0 +1,48 @@
+name: test-4head-wall3-open-shadow
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_4head_120r_lastminute_fast.py'
+      - '.github/workflows/test-4head-wall3-open-shadow.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Compile
+        run: python -m py_compile run_4head_120r_lastminute_fast.py
+      - name: Shadow contract
+        run: |
+          python - <<'PY'
+          from run_4head_120r_lastminute_fast import wall3_open_shadow
+          def exh(v3,v4):
+              return {'current_boats':{
+                  '3':{'cur_ex':v3,'cur_st':v3,'cur_orig_straight':v3,'cur_orig_avg':v3},
+                  '4':{'cur_ex':v4,'cur_st':v4,'cur_orig_straight':v4,'cur_orig_avg':v4},
+              }}
+          # Weak lane3 / open path: PASS can become shadow rescue.
+          a=wall3_open_shadow(.15,.42,3.0,exh(.2,.8),False)
+          assert a['production_applied'] is False
+          assert a['research_only'] is True
+          assert a['wall_score'] < 0 and a['open_risk'] > 0
+          assert a['would_rescue'] is True, a
+          # Already-selected official BET must never be reclassified by shadow.
+          b=wall3_open_shadow(.15,.42,3.0,exh(.2,.8),True)
+          assert b['would_rescue'] is False, b
+          # Strong lane3 is not a veto or rescue.
+          c=wall3_open_shadow(.15,.42,3.0,exh(.8,.2),False)
+          assert c['wall_score'] > 0 and c['open_risk'] == 0
+          assert c['would_rescue'] is False, c
+          print('HEAD4_WALL3_OPEN_SHADOW_CONTRACT_OK')
+          PY
