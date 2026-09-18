@@ -181,3 +181,25 @@
 - Create boat3-vs-1/2/4 and inner-mean gaps for the new numeric fields; keep raw six-boat values so models can learn non-monotonic age/experience effects.
 - Compare two model families under an identical leakage-safe daily walk-forward protocol: BASE=current sig_* features vs ENHANCED=BASE+new PRE features. Freeze model/window/band/percentile settings using Nov-Dec-Jan only, ranked by minimum H1/H2 rate across all three months with support/venue floors. February is a one-shot transfer.
 - Primary output: Feb worst-half support frontier at >=20/30/50/75/100 per half for BASE vs ENHANCED. Improvement only counts if ENHANCED beats BASE and Wave9 at the same support tier. March unopened; September UNREAD; production v288 unchanged.
+
+
+## AFTER WORK — Broad50 Wave16 enhanced unused-PRE transfer (Run 35319514745, 2026-09-18)
+- SUCCESS: Run **35319514745** / Job **105518649837** / Artifact **10536369864**; head SHA **a934ec7b8c8aa667ea2b202d2b9a27c31fdd36fe**.
+- Source integrity: Nov 3,825R / Dec 4,647R / Jan 4,963R / Feb 3,970R; Feb canonical-vs-realtime winner agreement **3970/3970 = 100%**. March unopened; September UNREAD; production v288 unchanged.
+- Feature counts: BASE **128**; new unused-PRE derived features **242**; ENHANCED **370** total. Added leakage-safe fields from age/class/period/branch/other-race schedule and exact recent-meet/grade/location context; current-meet 節D1..D7 and exhibition remained excluded.
+- IMPORTANT methodology note: the JSON `feb_support_frontier` selects the best row among the already frozen candidate pool using February labels and is therefore **diagnostic only**, not a deployable one-shot result. Formal result must use the single pre-Feb best row selected from Nov-Dec-Jan for each support stratum before opening February.
+- Formal pre-Feb-frozen BASE results on February:
+  - support15/20 freeze: H1 16/45=35.56%, H2 20/65=30.77%, combined 36/110=32.73%, worst-half **30.77%**.
+  - support30 freeze: H1 27/90=30.00%, H2 36/126=28.57%, combined 63/216=29.17%, worst-half **28.57%**.
+  - support50 freeze: combined 76/263=28.90%, worst-half **28.32%**.
+  - support75 freeze: combined 49/164=29.88%, worst-half **27.69%**.
+  - support100 freeze: combined 110/394=27.92%, worst-half **27.72%**.
+- Formal pre-Feb-frozen ENHANCED results on February:
+  - support15 freeze: H1 15/40=37.50%, H2 16/52=30.77%, combined 31/92=33.70%, worst-half **30.77%**.
+  - support20 freeze: H1 28/82=34.15%, H2 33/111=29.73%, combined 61/193=31.61%, worst-half **29.73%**.
+  - support30 freeze: H1 19/55=34.55%, H2 26/75=34.67%, combined **45/130=34.62%**, worst-half **34.55%**. This is the strongest strict Wave16 result and materially better than the strict BASE support30 row (28.57%), but still below 40%.
+  - support50 freeze: combined 68/225=30.22%, worst-half **27.27%**.
+  - support75 freeze: combined 97/361=26.87%, worst-half **25.00%**.
+  - support100 freeze: combined 115/447=25.73%, worst-half **24.51%**.
+- Diagnostic-only February frontier among the pre-frozen pool reached ENHANCED worst-half **34.55%** at >=20/30/50 support (130R combined), vs BASE **32.54%** (298R combined). This shows the unused PRE fields contain real incremental signal, but candidate choice using February labels must not be promoted.
+- Conclusion: adding previously-unused leakage-safe PRE improves some medium-support transfer (especially support30), but does **not** produce a robust 40-50% useful-volume selector. The strongest strict result is ENHANCED 130R / 45 heads = 34.62% combined with 34.55% worst-half. Continue only with genuinely new information/representation; do not keep tuning thresholds against February.
