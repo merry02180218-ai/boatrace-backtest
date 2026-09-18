@@ -331,3 +331,51 @@
 - Formal aggregate must fail if either arm does not cover all **52 A races / 25 dates**, has any decision/input error, or uses a non-canonical odds source.
 - Implementation commits before fresh run: A-authoritative dual-arm wrapper **fef6bb719bcac2b6435e53eb1ab0a4b1303bec17**; dual-arm aggregator **69bce6ca522b745d5e6e23634d268072c1183f50**.
 - Any earlier A+v288 March runs are now implementation probes only and must not be used for the final production conclusion.
+
+
+## AFTER WORK — frozen A + existing v288 downstream March audit (2026-09-19)
+- Formal audit Run **35366460730** completed **SUCCESS**. Aggregate Job **105696615726**. Aggregate Artifact **10559014235**.
+- Frozen population: exact adopted-A March **52R / 21 heads = 40.38%**.
+- Downstream v288 thresholds were not retuned; decisions were frozen before settlement; September-2026 outcomes were not used.
+- Coverage/results:
+  - candidate_count_replayed **52**
+  - live_evaluable **50**
+  - input_or_decision_errors **2**
+  - genuine NO_BET **39**
+  - BET **11**
+  - ticket hits **3/11 = 27.27%**
+  - stake **110,000 yen**
+  - payout **90,250 yen**
+  - profit **-19,750 yen**
+  - ROI **82.05%**
+- Route breakdown:
+  - A route 4 bets / 1 hit / ROI 74.675%
+  - B route 3 bets / 1 hit / ROI 98.6%
+  - S route 4 bets / 1 hit / ROI 77.0%
+- Structural diagnosis:
+  - all adopted-A March candidates: head rate **21/52 = 40.38%**
+  - v288 BET subset: actual boat3 head **4/11 = 36.36%**
+  - evaluable v288 NO_BET subset: actual boat3 head **16/39 = 41.03%**
+  - one of the two input-error races was also a boat3 head.
+  - Therefore the existing v288 S/A/B buy/skip gating does **not** enrich boat3-head probability inside the new A population; it filters it slightly downward.
+  - When boat3 actually won within the 11 BETs, downstream opponent/ticket coverage was **3/4 = 75%**. The larger weakness is the old buy/skip gate, not primarily pair capture.
+- Input errors:
+  - 202603010307: archived original exhibition unavailable / direct historical Boatcast 403; actual 3-6-4.
+  - 202603160304: archived original exhibition unavailable / direct historical Boatcast 403; actual 1-2-3.
+- Conclusion: **Do not connect A directly to unchanged v288 S/A/B production betting.** A remains formally adopted as the head gate; downstream needs A-specific operationalization.
+
+## BEFORE WORK — A + pair-only downstream March diagnostic (2026-09-19)
+- Purpose: isolate whether the old S/A/B buy/skip gate is the source of the ROI loss.
+- Frozen A head population remains exactly the same 52 March races; no A threshold or PRE/motor/exhibition definition changes are allowed.
+- One-shot diagnostic: remove only v288 S/A/B route gating and use existing v288 pair ranking + existing v242 choose_n variable 5-10 tickets + exact 10,000-yen Dutch whenever v242 says BET.
+- March is already OPENED, so this result is **diagnostic only** and cannot be cited as an independent holdout or final production-selection proof.
+- A positive result would justify building an A-specific downstream on an earlier development window and then finding a truly untouched later confirmation month. A negative result would indicate the pair/ticket layer also needs redesign.
+- Diagnostic implementation commits:
+  - replay optional pair_only mode **0b13f9387e9c342bdad036b1d9cdf2d0ec71513c**
+  - aggregate script **364ccaf76e6ea5d1eca1c2734c7a661b0c5a5368**
+  - workflow **28ae3f25c0d268eb0b935297e3a9f0de194327cc**
+- Operational feature freeze also completed:
+  - Run **35366354468** SUCCESS
+  - Artifact **10556868870**
+  - exact static PRE feature count **370/370 unique**, policy 3HEAD_A_PRECISION_V1.
+  - daily shadow now pins this artifact via commit **14ad70388d3b54f45225c6be108b5061d058e4ae**.
