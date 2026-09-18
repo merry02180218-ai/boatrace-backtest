@@ -91,7 +91,7 @@ def main():
     truth={str(r.race_code).zfill(12):(int(float(r.winner)),int(float(r.second)),int(float(r.third)))
            for _,r in d.iterrows() if str(r.get('valid_result','0')) in ('1','1.0')}
     pmeta=pool.set_index('race_code')
-    odds_cache={}; rows=[]
+    odds_cache={}; rows=[]; excluded_odds=[]
 
     for code,g in long.groupby('race_code'):
         sr=[]
@@ -105,12 +105,23 @@ def main():
         ds=str(g.date.iloc[0]); mon=ds[:7]
         oq=odds_cache.setdefault(ds,oddsmod.odds_for_date(ds))
         oo=oq[oq.race_code.astype(str)==str(code)] if len(oq) else oq
-        if len(oo)!=1: raise RuntimeError(f'ODDS_COVERAGE {code} {len(oo)}')
+        if len(oo)!=1:
+            if int(pmeta.loc[code].is_old164)==1:
+                raise RuntimeError(f'ODDS_COVERAGE_OLD164 {code} {len(oo)}')
+            excluded_odds.append({'race_code':code,'reason':f'odds_rows_{len(oo)}'})
+            continue
         ovs=[]
         for t in tickets:
             v=pd.to_numeric(oo.iloc[0].get(t),errors='coerce')
-            if pd.isna(v) or float(v)<=0: raise RuntimeError(f'ODDS_BAD {code} {t}')
+            if pd.isna(v) or float(v)<=0:
+                if int(pmeta.loc[code].is_old164)==1:
+                    raise RuntimeError(f'ODDS_BAD_OLD164 {code} {t}')
+                excluded_odds.append({'race_code':code,'reason':f'bad_ticket_odds_{t}'})
+                ovs=[]
+                break
             ovs.append(float(v))
+        if not ovs:
+            continue
         comp=live.composite_odds(ovs)
         actual=truth.get(str(code))
         actual_combo=f'4-{actual[1]}-{actual[2]}' if actual and actual[0]==4 else ''
@@ -129,7 +140,8 @@ def main():
           'raw_hit':int(hit),'payout_if_bet':payout,
         })
     z=pd.DataFrame(rows)
-    if len(z)!=226: raise RuntimeError(f'v283 rows {len(z)} != 226')
+    if len(z)+len(excluded_odds)!=226: raise RuntimeError(f'coverage accounting rows={len(z)} excluded={len(excluded_odds)}')
+    if int(z.is_old164.sum())!=164: raise RuntimeError('old164 lost during odds fail-closed')
 
     # Reconstruct the frozen 120R only inside the old164 candidate.
     z['base77']=z.is_old164.eq(1) & (
@@ -186,6 +198,9 @@ def main():
 
     result={
       'pool_R':226,
+      'verified_odds_pool_R':int(len(z)),
+      'excluded_no_verified_odds_R':int(len(excluded_odds)),
+      'excluded_no_verified_odds':excluded_odds,
       'base120':bm,
       'grid_cells':int(len(g)),
       'dev_selected_targets':targets,
