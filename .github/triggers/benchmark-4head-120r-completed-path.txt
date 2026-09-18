@@ -1,3 +1,4 @@
 trigger 2026-09-18 completed-source speed benchmark
 rerun with capped waits and concurrency
 rerun after wrapped-ST parser fix
+rerun after original-exhibition wrap fix
