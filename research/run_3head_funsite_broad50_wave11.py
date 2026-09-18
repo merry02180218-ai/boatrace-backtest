@@ -119,9 +119,15 @@ def candidate_universe(interactions):
     return out
 
 def evaluate(cache,c):
-    arr=cache[(c['window'],c['gate_mode'])]
+    key=(c['window'],c['gate_mode'])
+    if key not in cache:
+        return None
+    arr=cache[key]
+    ikey='i_'+c['interaction']
+    if ikey not in arr:
+        return None
     rn=arr['rn'];lo,hi=c['band']
-    m=(rn>=lo)&(rn<=hi)&(arr['i_'+c['interaction']]>=c['q'])
+    m=(rn>=lo)&(rn<=hi)&(arr[ikey]>=c['q'])
     d=arr['day'];z=dict(c)
     z['h1']=met(m&(d<=15),arr);z['h2']=met(m&(d>=16),arr)
     return z
@@ -166,7 +172,8 @@ def evaluate_frozen_on_feb(pred,frozen):
     for z in frozen:
         if z['interaction'] not in available:continue
         c={k:z[k] for k in ['window','gate_mode','band','interaction','members','q']}
-        out.append(evaluate(cache,c))
+        z=evaluate(cache,c)
+        if z is not None:out.append(z)
     return out
 
 def summarize(z):
@@ -209,7 +216,7 @@ def main():
     jan_hist=pd.concat([dec,jan],ignore_index=True,sort=False)
     jan_pair_pred=walk_scores(jan_hist,jan,pairs)
     jan_pair_cache=build_cache(jan_pair_pred)
-    pair_evals=[evaluate(jan_pair_cache,c) for c in candidate_universe(pairs)]
+    pair_evals=[z for c in candidate_universe(pairs) if (z:=evaluate(jan_pair_cache,c)) is not None]
     frozen_pairs,pair_strata=stratified_freeze(pair_evals)
 
     # Stage B: choose only the signal vocabulary for triples from January pair evidence.
@@ -219,7 +226,7 @@ def main():
     triple_evals=[]
     if len(jan_triple_pred):
         tc=build_cache(jan_triple_pred)
-        triple_evals=[evaluate(tc,c) for c in candidate_universe(triples)]
+        triple_evals=[z for c in candidate_universe(triples) if (z:=evaluate(tc,c)) is not None]
     frozen_triples,triple_strata=stratified_freeze(triple_evals) if triple_evals else ([],{})
 
     # Freeze formula identities from January before any February scoring.
