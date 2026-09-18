@@ -46,7 +46,7 @@ permissions:
 jobs:
   final:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -110,6 +110,10 @@ jobs:
           /usr/bin/time -f 'STRICT_MONITOR_WALL_SECONDS=%e' python run_4head_120r_lastminute_fast.py \
             --date "$TARGET_DATE" --jcd "$JCD" --race "$RACE" --deadline-jst "$DEADLINE_JST" \
             --race-cards "$CARD" --waku10 "$WAKU" --pre-all "$PRE" --daily-state "$STATE" \
+            --poll-interval 2 \
+            --exhibition-safety-seconds 75 --max-exhibition-wait-seconds 1800 \
+            --odds-safety-seconds 45 --max-odds-wait-seconds 15 \
+            --decision-safety-seconds 60 \
             --out "$OUT" 2>&1 | tee "$LOG"
           grep -Eq 'HEAD4_120R_FAST_LASTMINUTE_OK|HEAD4_120R_FAST_NO_BET_DATA_NOT_READY' "$LOG"
       - name: Contract check
