@@ -1570,3 +1570,22 @@ Status: `HEAD4_120R_POSTRACE_ODDS_NOT_RETAINED__PROSPECTIVE_TRUE_PARENT_PROOF_RE
 - Keep 2-second exhibition polling, existing odds/final safety guards, strict monitoring_parent gating, and result/payout prohibition.
 - Increase workflow timeout so the runner can remain alive across the full pre-deadline window.
 - Update the scheduled 19:22 automation instructions to require this persistent-wait behavior.
+
+
+## AFTER WORK — strict monitored workflow now waits until exhibition or safety cutoff
+- Updated `.github/workflows/live-4head-120r-true-monitor.yml`.
+- Commit: `fedaae1095990940b395acf33c1b20f85f74af23`.
+- Workflow timeout increased from 10 to 25 minutes.
+- One invocation now uses:
+  - exhibition polling interval: 2s
+  - exhibition safety cutoff: 75s before deadline
+  - max exhibition wait: 1800s (therefore the safety cutoff, not a 30s timer, controls normal stopping)
+  - odds safety cutoff: 45s
+  - max odds wait: 15s
+  - final decision safety cutoff: 60s
+- For Marugame 10R starting at 19:22 and deadline 19:39, the job will remain alive if exhibition is not yet published. It will continue polling until exhibition becomes complete, then immediately run v283 -> opponent_mass -> live odds -> frozen 120R decision.
+- If exhibition still is not complete by the 75-second safety boundary, it will fail closed as `NO_BET_DATA_NOT_READY`; it will not force a late/stale bet.
+- The scheduled 19:22 task instructions were also updated to require this persistent-wait behavior.
+- Strict parent gate and result/payout prohibition remain unchanged.
+
+Status: `HEAD4_120R_STRICT_MONITOR_PERSIST_UNTIL_EXHIBITION_OR_75S_CUTOFF`
