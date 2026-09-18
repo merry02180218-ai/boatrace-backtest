@@ -37,9 +37,14 @@ WATCH_OPPONENT_MASS_MIN = 0.425
 WATCH_EXHIBITION_ENV_W = 0.05
 WATCH_EXHIBITION_Q = 0.70
 
-# Research-only LIVE shadow for WATCH ticket rerank. This must not replace the
-# official production tickets until forward evidence is reviewed.
-WALL3_SHADOW_PROFILE_NAME = "1HEAD_WATCH_WALL3_TICKET_SHADOW_V355_SCORE_A406_G2_300_G3_050"
+# Promoted LIVE WATCH ticket rerank, adopted 2026-09-18 after v353-v355 audit.
+# Historical production sentinels above remain frozen; this only changes the
+# LIVE ticket choice for WATCH races when the wall3 risk actually fires.
+WALL3_LIVE_TICKET_PROFILE_NAME = "1HEAD_WATCH_WALL3_TICKET_V355_SCORE_A406_G2_300_G3_050"
+WALL3_LIVE_TICKET_PROMOTED = True
+
+# Backward-compatible alias retained for v356 research regression/history.
+WALL3_SHADOW_PROFILE_NAME = WALL3_LIVE_TICKET_PROFILE_NAME
 WALL3_SHADOW_ATTACK4_MIN = 0.60
 WALL3_SHADOW_SECOND_G2 = 3.00
 WALL3_SHADOW_THIRD_G3 = 0.50
