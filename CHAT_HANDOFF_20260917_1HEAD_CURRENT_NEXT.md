@@ -1221,3 +1221,16 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - 月別・DEV LOMO・近傍plateauを確認。
 - returnは結果の公式100円払戻×購入unitsで計算し、closing oddsそのものを払戻として使わない。
 - 2026-09 outcomes/payoutは読まない。production/LIVE ticket compositionは変更しない。
+
+
+## v370 initial failure — closing odds coverage gap
+- Run `35345276839` / Job `105600270321` failure。
+- 原因: current repo `data/official_closing_odds3t` だけではLIVE165のうち144R coverage、Jul-Aug 21Rが欠損。
+- missing例: `202607231508`, `202608030402`, `202608061001`, `202608112101` 等、計21R。
+- 研究/モデル/正式ticketのfailureではなく、repo archive coverageの問題。
+- 旧v340 sharded auditは276/276公式締切オッズcoverageを達成済みで、各shard artifactの `odds_N.csv` にrace_codeごとの `odds_json`（1頭固定20通り）を保存していることをコード監査で確認。
+- 修正方針:
+  - repo公式締切odds CSVを第一ソース
+  - 欠損のみv340 shard artifacts（IDs 10329564703 / 10330810260 / 10330651756 / 10329684566 / 10330273057 / 10330357729）からfallback
+  - 165/165にならなければfail
+- decision/staking gridは一切変更しない。fresh Runで再監査。
