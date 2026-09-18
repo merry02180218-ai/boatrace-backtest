@@ -63,6 +63,8 @@ jobs:
             data/previews/stt/2026/08
             data/previews/stt/2026/09
       - run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Verify corrected POST/ST parser
+        run: python verify_4head_post_live.py
       - name: Reuse corrected 2026-09-18 PRE artifact
         uses: actions/download-artifact@v4
         with:
