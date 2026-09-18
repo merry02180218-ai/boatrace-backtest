@@ -62,3 +62,20 @@ Status: `HEADPROB_PASS_RESCUE_ROI_INTEGRATION_PREPARING`
 - September 2026 outcomes/results remain strictly `UNREAD`; v96 prohibited; closing odds retrospective diagnostic only.
 
 Status: `JOINT_HEADPROB_OPPONENT_MASS_LASTMINUTE_GRID_PREPARING`
+
+
+## AFTER — JOINT HEAD PROBABILITY × OPPONENT MASS × LAST-MINUTE GRID
+- Run `35290923983`, Job `105433371006`, Artifact `10526661988`, head `b4039f9921c0ab38cceec7f8a800968fea228bfe`, SUCCESS.
+- Reproduction guards passed: 164R / 70 head4 / 817 tickets / 35 raw hits.
+- Robust criterion (Apr-Jun ROI>=100 AND Jul-Aug ROI>=100 AND Jul-Aug added rescue >=5) found `0` cells.
+- Therefore no joint rescue rule is adopted from this grid. Production unchanged. September `UNREAD`.
+
+## BEFORE — ABLATION / BOTTLENECK ANALYSIS
+- User approved continuation.
+- Next objective: do not stop at robust=0; isolate which gate is destroying validation ROI.
+- Compare head-probability only, opponent-mass only, last-minute/original-exhibition only, and all pairwise combinations against the same current comp>=7 baseline.
+- Also rank near-miss cells from the full joint grid, including ROI below 100, to quantify the trade-off between added rescue count and validation ROI.
+- Report Apr-Jun and Jul-Aug separately, plus monthly Jul/Aug stability where useful.
+- Keep exact 164R / THIRD0.10 / JPY10,000 Dutch semantics. No production change. September `UNREAD`.
+
+Status: `JOINT_GRID_ABLATION_PREPARING`
