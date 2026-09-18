@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fast post-exhibition final decision for HEAD4 156R ROI-expansion operational line.
+"""Fast post-exhibition final decision for HEAD4 new-feature fixed156 production line.
 
 Per-race path intentionally avoids the heavy POST/ENV/A full production chain.
 It uses:
@@ -13,7 +13,7 @@ It uses:
 No target-race result/payout access.
 """
 from __future__ import annotations
-import argparse,csv,json,math,time,hashlib,re
+import argparse,csv,json,math,time,hashlib,re,bisect
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime,time as dtime
 from pathlib import Path
@@ -328,8 +328,8 @@ def structural_advantages(exh):
       'orig4_adv_inside':float(float(b['4']['cur_orig_avg'])-orig_inside),
     }
 
-def decide(head_prob,mass,comp,exh):
-    """Exact historical semantics for user-approved HEAD4_156R_ROI_EXPANSION_V1."""
+def legacy_decide(head_prob,mass,comp,exh):
+    """Legacy HEAD4_156R_ROI_EXPANSION_V1 semantics, retained for comparison."""
     s=structural_advantages(exh)
     cur=comp>=7.0
     base77_formula=(cur and mass>=.425) or ((not cur) and head_prob>=.22 and mass>=.375 and comp>=3.0)
@@ -355,6 +355,137 @@ def decide(head_prob,mass,comp,exh):
       'linear_score':float(score),
       **s,
     }
+
+
+NEWFEATURE_ARTIFACT=Path(__file__).resolve().parent/'artifacts'/'head4_newfeature_fixed156_production.json'
+
+def _float_card(v):
+    try:
+        x=float(str(v).replace('%','').strip())
+        return x if math.isfinite(x) else None
+    except Exception:
+        return None
+
+def _ecdf_rank(value, refs, missing_rank=.5):
+    if value is None:
+        return float(missing_rank)
+    try:
+        x=float(value)
+    except Exception:
+        return float(missing_rank)
+    if not math.isfinite(x) or not refs:
+        return float(missing_rank)
+    return float(bisect.bisect_right(refs,x)/len(refs))
+
+def load_newfeature_artifact():
+    a=json.loads(NEWFEATURE_ARTIFACT.read_text(encoding='utf-8'))
+    if a.get('profile')!='HEAD4_NEWFEATURE_FIXED156_V1':
+        raise Fast120Error(f"newfeature artifact profile mismatch: {a.get('profile')}")
+    if a.get('production_applied') is not True:
+        raise Fast120Error('newfeature artifact is not production-applied')
+    return a
+
+def newfeature_motor_raw(card,state,jcd):
+    hist=state.get('motors_newfeature_nov2025') or {}
+    if state.get('newfeature_motor_history_start') not in (None,'2025-11-01'):
+        raise Fast120Error(f"newfeature motor history start mismatch: {state.get('newfeature_motor_history_start')}")
+    venue=f'{int(jcd):02d}'
+    def prior_rate(b):
+        mno=str(card.get(f'艇{b}_モーター番号','')).strip()
+        if not mno:
+            return None
+        r=hist.get(f'{venue}|{mno}')
+        if not r:
+            return None
+        n=int(r.get('n',0)); w=int(r.get('w',0))
+        return (w/n) if n>0 else None
+    r4=prior_rate(4); r3=prior_rate(3)
+    win_diff=(r4-r3) if r4 is not None and r3 is not None else None
+    p4=_float_card(card.get('艇4_モーター2連対率'))
+    p3=_float_card(card.get('艇3_モーター2連対率'))
+    ren2_diff=(p4-p3) if p4 is not None and p3 is not None else None
+    return {
+      'motor4_win_prior':r4,'motor3_win_prior':r3,
+      'motor_win_diff_4v3':win_diff,
+      'motor4_2ren':p4,'motor3_2ren':p3,
+      'motor_2ren_diff_4v3':ren2_diff,
+    }
+
+def newfeature_wall_raw(exh):
+    b3=exh['current_boats']['3']; b4=exh['current_boats']['4']
+    ex_gap=float(b3['cur_ex'])-float(b4['cur_ex'])
+    st_gap=float(b3['cur_st'])-float(b4['cur_st'])
+    straight_gap=float(b3['cur_orig_straight'])-float(b4['cur_orig_straight'])
+    avg_gap=float(b3['cur_orig_avg'])-float(b4['cur_orig_avg'])
+    wall=(.20*ex_gap+.40*st_gap+.25*straight_gap+.15*avg_gap)
+    attack4=(.20*float(b4['cur_ex'])+.40*float(b4['cur_st'])+
+             .25*float(b4['cur_orig_straight'])+.15*float(b4['cur_orig_avg']))
+    return {
+      'ex_wall_gap':ex_gap,'st_wall_gap':st_gap,
+      'straight_wall_gap':straight_gap,'avg_wall_gap':avg_gap,
+      'wall_score':wall,'attack4_score':attack4,
+    }
+
+def score_newfeature_raw(raw,artifact):
+    refs=artifact['ecdf_sorted_reference']; weights=artifact['weights']
+    missing=float(artifact.get('score_transform',{}).get('missing_value_rank',.5))
+    ranks={}
+    for name,w in weights.items():
+        ranks[name]=_ecdf_rank(raw.get(name),refs.get(name) or [],missing)
+    score=sum(float(weights[k])*float(ranks[k]) for k in weights)
+    return float(score),ranks
+
+def newfeature_decide(head_prob,mass,comp,exh,card,state,jcd):
+    legacy=legacy_decide(head_prob,mass,comp,exh)
+    s={'st4_adv_inside':legacy['st4_adv_inside'],'orig4_adv_inside':legacy['orig4_adv_inside']}
+    motor=newfeature_motor_raw(card,state,jcd)
+    wall=newfeature_wall_raw(exh)
+    raw={
+      'hp':float(head_prob),
+      'mass':float(mass),
+      'st':float(s['st4_adv_inside']),
+      'orig':float(s['orig4_adv_inside']),
+      'market_conf':-math.log(max(float(comp),1e-12)),
+      'motor_win_rev':(-float(motor['motor_win_diff_4v3']) if motor['motor_win_diff_4v3'] is not None else None),
+      'motor_2ren_rev':(-float(motor['motor_2ren_diff_4v3']) if motor['motor_2ren_diff_4v3'] is not None else None),
+      'attack4':float(wall['attack4_score']),
+      'stwall_center':-abs(float(wall['st_wall_gap'])-.10),
+      'wall_rev':-float(wall['wall_score']),
+    }
+    art=load_newfeature_artifact()
+    score,ranks=score_newfeature_raw(raw,art)
+    threshold=float(art['production_threshold'])
+    gate=art.get('explicit_expansion_structural_gate') or {}
+    st_min=float(gate.get('st4_adv_inside_min',-.80))
+    orig_min=float(gate.get('orig4_adv_inside_min',-.35))
+    expansion=bool(
+      (not legacy['base120_selected']) and
+      s['st4_adv_inside']>=st_min and s['orig4_adv_inside']>=orig_min and
+      score>=threshold
+    )
+    selected=bool(legacy['base120_selected'] or expansion)
+    return {
+      'profile':'HEAD4_NEWFEATURE_FIXED156_V1',
+      'selected':selected,
+      'base77':bool(legacy['base77']),
+      'base120_selected':bool(legacy['base120_selected']),
+      'newfeature_expanded_added':expansion,
+      'newfeature_score':float(score),
+      'newfeature_threshold':threshold,
+      'newfeature_score_margin':float(score-threshold),
+      'newfeature_raw':raw,
+      'newfeature_ranks':ranks,
+      'newfeature_motor':motor,
+      'newfeature_wall':wall,
+      'legacy_156r_selected':bool(legacy['selected']),
+      'legacy_156r_expanded_added':bool(legacy['expanded156_added']),
+      'legacy_156r_linear_score':float(legacy['linear_score']),
+      'old164_struct':bool(legacy['old164_struct']),
+      'current_comp7':bool(legacy['current_comp7']),
+      'st4_adv_inside':float(s['st4_adv_inside']),
+      'orig4_adv_inside':float(s['orig4_adv_inside']),
+    }
+
 
 def wall3_open_shadow(head_prob,mass,comp,exh,current_selected):
     """Research-only 3-vs-4 open-path rescue diagnostic.
@@ -484,7 +615,7 @@ def main():
         persist_no_bet_not_ready(a,code,deadline,'ODDS',e,total0,stages,monitored,hp,state)
         return
     stages['fetch_odds_s']=time.perf_counter()-t
-    vals=[float(odds[x]) for x in tickets];comp=composite_odds(vals);d=decide(hp,mass,comp,exh)
+    vals=[float(odds[x]) for x in tickets];comp=composite_odds(vals);d=newfeature_decide(hp,mass,comp,exh,cards[code],state,a.jcd)
     wallshadow=wall3_open_shadow(hp,mass,comp,exh,d['selected'])
     if a.performance_benchmark:
         now=datetime.now(JST)
@@ -501,7 +632,7 @@ def main():
       'schema':'head4_120r_fast_lastminute_v1','race_code':code,'monitoring_parent':monitored,'benchmark_unmonitored':bool(a.allow_unmonitored_benchmark and not monitored),
       'head_prob':hp,'opponent_mass':mass,'tickets':tickets,'ticket_odds':dict(zip(tickets,vals)),'composite_odds':comp,
       **d,'decision':('PERFORMANCE_BENCHMARK_ONLY' if a.performance_benchmark else ('BET' if d['selected'] and monitored else ('BENCHMARK_ONLY' if not monitored else 'PASS'))),
-      'selection_policy_artifact':'artifacts/head4_156r_roi_expansion_20260918.json',
+      'selection_policy_artifact':'artifacts/head4_newfeature_fixed156_production.json',
       'wall3_open_shadow':wallshadow,
       'daily_state_history_end':state.get('history_end'),'september_prior_history_allowed':True,
       'target_race_result_used':False,'payout_used':False,'current_exhibition_used':True,'predeadline_odds_used':(not a.performance_benchmark),'performance_benchmark':bool(a.performance_benchmark),'odds_source':meta.get('source'),
