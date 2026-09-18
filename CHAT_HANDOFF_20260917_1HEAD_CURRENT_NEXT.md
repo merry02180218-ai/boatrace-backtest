@@ -3108,3 +3108,50 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - Also evaluate LIVE165 + all added71 and LIVE165 + v389 selected42 under the frozen expansion policy.
 - Formal LIVE165 ticket policy remains unchanged. This is expansion-lane research only.
 - September outcomes/payouts unread. Production unchanged.
+
+
+## AFTER — v390 expansion-specific 3-ticket policy
+- implementation:
+  - script commit `9dad32c77236029339826a979c5492ae1fc79051`
+  - workflow commit `469b1419a022237b8aba664807a87499f82e0e2c`
+- Actions:
+  - Run `35383091482`
+  - Job `105723627299`
+  - Artifact `10562852500`
+  - digest `sha256:77826d8d72359b482b0527b96cf8037b58e0391130e92c4bf1a5a536a83be892`
+  - SUCCESS / AUDIT_OK=true.
+- Sentinel:
+  - LIVE165 87/165 / ROI128.69%
+  - added71 current HYBRID a=.70 = 33/71 / ROI100.28%.
+- 30 expansion-only 3-ticket policies were compared on DEV only.
+- DEV robustness selection chose **current HYBRID alpha=.70 itself**.
+  - DEV 27/53=50.94%, ROI112.77%, nonnegative 3/5 months.
+  - SUPPORT 6/18=33.33%, ROI63.52%.
+- Therefore simply replacing the added-band 3-ticket ordering does not solve the Jul-Aug deterioration.
+- ROI-oriented diagnostic:
+  - JOINT a=.90 / SECOND1X3 families had DEV ROI124.21% but lower DEV exact3 24/53.
+  - On frozen v389 selected42, those policies showed all-period ROI108.97% vs current101.98%, yielding LIVE165+42 combined ROI124.69% vs 123.27%.
+  - This was not the formal v390 selection because v390 required no DEV exact3 degradation.
+- Existing v366-v368 conditional 4th research was rechecked:
+  - it can raise hit rate but previously lowered official baseline ROI (128.69 -> ~123.17 for robust joint core).
+  - user had explicitly decided not to promote hit-rate-only/ROI-lowering 4th-ticket logic.
+- production unchanged / September outcomes unread.
+
+## BEFORE — v391 ROI-first policy on frozen v389 added42
+- User priority from prior decision: do not trade away ROI merely for hit rate.
+- Freeze v389 expansion selection exactly:
+  - CONSENSUS_MASS q=.35
+  - 42 additional races (34 DEV + 8 SUPPORT).
+- Keep 3 tickets only; no conditional 4th.
+- Compare the same strategy/alpha family specifically inside frozen added42.
+- Select using DEV only with ROI-first robustness:
+  - prioritize nonnegative DEV months,
+  - require exact3 not to collapse materially vs current selected42,
+  - then maximize DEV ROI/profit.
+- SUPPORT 8R remains untouched holdout.
+- Report:
+  - added42 DEV/SUPPORT/ALL
+  - LIVE165 + added42 combined volume/ROI
+  - exact3 change as secondary diagnostic.
+- This is still research-only because SUPPORT n=8 is small.
+- September outcomes/payouts unread. Production unchanged.
