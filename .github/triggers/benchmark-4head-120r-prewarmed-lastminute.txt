@@ -1,1 +1,2 @@
 trigger 2026-09-18 Marugame 7R prewarmed deadline benchmark
+rerun after 1.5s odds timeout and 60s final safety guard
