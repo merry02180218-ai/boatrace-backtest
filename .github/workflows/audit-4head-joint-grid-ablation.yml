@@ -1,0 +1,22 @@
+name: audit-4head-joint-grid-ablation
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy scikit-learn requests joblib beautifulsoup4
+      - name: 判定別アブレーション
+        run: python audit_4head_joint_grid_ablation.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-joint-grid-ablation
+          path: /tmp/head4_joint_ablation/
+          if-no-files-found: error
