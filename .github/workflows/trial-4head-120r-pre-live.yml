@@ -22,14 +22,60 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Sparse checkout historical data locally
+        uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards/2025/10
+            data/programs/race_cards/2025/11
+            data/programs/race_cards/2025/12
+            data/programs/race_cards/2026/01
+            data/programs/race_cards/2026/02
+            data/programs/race_cards/2026/03
+            data/programs/race_cards/2026/04
+            data/programs/race_cards/2026/05
+            data/programs/race_cards/2026/06
+            data/programs/race_cards/2026/07
+            data/programs/race_cards/2026/08
+            data/programs/race_cards/2026/09
+            data/results/realtime/2025/10
+            data/results/realtime/2025/11
+            data/results/realtime/2025/12
+            data/results/realtime/2026/01
+            data/results/realtime/2026/02
+            data/results/realtime/2026/03
+            data/results/realtime/2026/04
+            data/results/realtime/2026/05
+            data/results/realtime/2026/06
+            data/results/realtime/2026/07
+            data/results/realtime/2026/08
+            data/results/realtime/2026/09
+            data/previews/stt/2025/10
+            data/previews/stt/2025/11
+            data/previews/stt/2025/12
+            data/previews/stt/2026/01
+            data/previews/stt/2026/02
+            data/previews/stt/2026/03
+            data/previews/stt/2026/04
+            data/previews/stt/2026/05
+            data/previews/stt/2026/06
+            data/previews/stt/2026/07
+            data/previews/stt/2026/08
+            data/previews/stt/2026/09
       - run: pip install pandas numpy scipy scikit-learn requests joblib beautifulsoup4 lxml
+      - name: Build daily causal state
+        run: |
+          python prepare_4head_120r_daily_state.py --target-date "$TARGET_DATE" --data-root brcsv --out /tmp/head4_daily_state.json | tee /tmp/head4_daily_state.log
       - name: Fetch result-blind current PRE inputs
         run: python fetch_4head_v291_pre_inputs_live.py --date "$TARGET_DATE"
       - name: Run 120R PRE live trial
         run: |
-          python scan_4head_120r_pre_live.py --date "$TARGET_DATE" | tee /tmp/head4_120r_pre_live.log
+          python scan_4head_120r_pre_live.py --date "$TARGET_DATE" --daily-state /tmp/head4_daily_state.json | tee /tmp/head4_120r_pre_live.log
           grep -q 'HEAD4_120R_PRE_LIVE_TRIAL_OK' /tmp/head4_120r_pre_live.log
-          grep -q '9月結果_UNREAD' /tmp/head4_120r_pre_live.log
+          grep -q 'TARGET_DAY_RESULTS_UNREAD' /tmp/head4_120r_pre_live.log
           grep -q '本番変更なし' /tmp/head4_120r_pre_live.log
       - uses: actions/upload-artifact@v4
         with:
@@ -38,3 +84,5 @@ jobs:
             current_input/v291/20260918/
             live_outputs/head4_120r_pre/20260918/
             /tmp/head4_120r_pre_live.log
+            /tmp/head4_daily_state.json
+            /tmp/head4_daily_state.log
