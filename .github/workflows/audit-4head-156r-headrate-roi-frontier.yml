@@ -1,0 +1,40 @@
+name: audit-4head-156r-headrate-roi-frontier
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'audit_4head_156r_headrate_roi_frontier.py'
+      - '.github/workflows/audit-4head-156r-headrate-roi-frontier.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas
+      - name: Download frozen Stage2 grid
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p seed
+          gh run download 35339005302 -n head4-expanded-pool-stage2 -D seed
+          GRID="$(find seed -type f -name 'expanded_grid.csv' | head -1)"
+          test -n "$GRID"
+          echo "EXPANDED_GRID=$GRID" >> "$GITHUB_ENV"
+      - name: Run frontier audit
+        run: python audit_4head_156r_headrate_roi_frontier.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-156r-headrate-roi-frontier
+          path: /tmp/head4_156r_headrate_roi_frontier/
+          retention-days: 30
