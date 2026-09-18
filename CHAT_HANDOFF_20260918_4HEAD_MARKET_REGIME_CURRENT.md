@@ -834,3 +834,59 @@ Status: `HEAD4_PRE_CANDIDATE_AUDIT_START`
 - PRE wide rule uses only causal motor/player + race-card motor data and explicitly excludes current exhibition, opponent_mass, odds, result and payout.
 
 Status: `HEAD4_PRE_CANDIDATE_RUN_IN_PROGRESS__LEAKAGE_FINAL_SUCCESS`
+
+
+## PRE-CANDIDATE FAST AUDIT — official result
+- Run: `35310772723`
+- Job: `105492167010`
+- conclusion: **SUCCESS**
+- Artifact: `10533587079` / `head4-pre-candidate-fast-tiers`
+- digest: `sha256:572a7b66b6d033432c33191e978d51fffd41aaae1b05dbd7b0a6e54d0bf0f27e`
+- head SHA: `65e1a39c6c794a4d4cb46d73743881bca58b07f3`
+
+### Wide pre-only parent
+Uses only:
+- causal motor win-rate difference
+- race-card motor 2-ren difference
+- causal player4 prior win rate
+No current exhibition, odds, result or payout.
+
+Result:
+- 3,743 candidates / 153 calendar days
+- avg **24.46R/day**
+- median active day 25R
+- p90 32R
+- max 42R/day
+- final120 captured **120/120 = 100%**
+- all five months 100% recall
+
+Conclusion:
+- good as a guaranteed-recall parent universe,
+- **too broad for user-facing daily candidate output**.
+
+### Tightened pre-only tiers
+95% overall recall:
+- 3,555 candidates
+- avg 23.24R/day
+- 114/120 captured
+- rule chosen by grid: `motor_win_diff_4v3 >= -0.0232551586`
+- monthly recall falls to ~93.5–96.4%.
+
+~90% overall recall:
+- 3,186 candidates
+- avg 20.82R/day
+- 109/120 = 90.83%
+- `player4_all_win >= 0.228915663`
+- May/Aug recall drops to 85.71% / 83.33%.
+
+Decision:
+- raw motor/player-only PRE layer is not sufficient as the practical daily shortlist;
+- use it only as a parent/fail-safe layer.
+- next preferred route is the existing result-blind v250 PRE probability scorer and measure its frozen120 recall vs candidate volume.
+
+v250 PRE recall audit:
+- Run `35310957111`
+- Job `105492712848`
+- currently IN_PROGRESS.
+
+Status: `HEAD4_PRE_WIDE_PARENT_100PCT_RECALL_TOO_BROAD__V250_PRE_RECALL_RUNNING`
