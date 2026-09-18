@@ -81,20 +81,28 @@ def parse_day(s: str) -> pd.Timestamp:
     return d
 
 
-def freeze_feature_names() -> list[str]:
+def freeze_feature_names() -> tuple[list[str], str]:
+    frozen = ROOT / "research" / "3head_a_frozen_pre_features.json"
+    if frozen.exists():
+        z = json.loads(frozen.read_text(encoding="utf-8"))
+        enh = list(z.get("features") or [])
+        if z.get("policy") != "3HEAD_A_PRECISION_V1":
+            raise RuntimeError("frozen PRE feature policy mismatch")
+        if int(z.get("feature_count", -1)) != 370 or len(enh) != 370 or len(set(enh)) != 370:
+            raise RuntimeError(f"frozen enhanced feature manifest invalid: {len(enh)}")
+        return enh, "STATIC_FROZEN_MANIFEST"
+
     frames = []
-    audits = []
     for a, b in FEATURE_FREEZE_MONTHS:
-        x, _, audit = build_pre_enhanced(a, b, False)
+        x, _, _ = build_pre_enhanced(a, b, False)
         if x.empty:
             raise RuntimeError(f"feature-freeze source empty: {a}..{b}")
         frames.append(x)
-        audits.append(audit)
     all_data = pd.concat(frames, ignore_index=True, sort=False)
     _, enh, _ = choose_features(all_data)
     if len(enh) != 370:
         raise RuntimeError(f"frozen enhanced feature count changed: {len(enh)} != 370")
-    return enh
+    return enh, "DYNAMIC_REDERIVE_FALLBACK"
 
 
 def build_pre_for_target(day: pd.Timestamp, enh: list[str]):
@@ -102,12 +110,17 @@ def build_pre_for_target(day: pd.Timestamp, enh: list[str]):
     hist_end = (day - pd.Timedelta(days=1)).strftime("%Y-%m-%d")
     target_s = day.strftime("%Y-%m-%d")
 
-    hx, hr, ha = build_pre_enhanced(hist_start, hist_end, True)
+    # Fail fast when current-day result-blind PRE sources are not published yet.
     tx, _, ta = build_pre_enhanced(target_s, target_s, False)
-
-    if hx.empty or hr.empty or tx.empty:
+    if tx.empty:
         raise RuntimeError(
-            f"PRE source incomplete hist_rows={len(hx)} results={len(hr)} target_rows={len(tx)}"
+            f"PRE target source not ready: target={target_s} target_rows=0 audit={ta}"
+        )
+
+    hx, hr, ha = build_pre_enhanced(hist_start, hist_end, True)
+    if hx.empty or hr.empty:
+        raise RuntimeError(
+            f"PRE history source incomplete hist_rows={len(hx)} results={len(hr)} target_rows={len(tx)}"
         )
 
     hist = hx.merge(hr[["rc", "result_winner"]], on="rc", how="inner")
@@ -247,7 +260,7 @@ def main():
     args = ap.parse_args()
     day = parse_day(args.date)
 
-    enh = freeze_feature_names()
+    enh, feature_source = freeze_feature_names()
     pre, pre_audit = build_pre_for_target(day, enh)
     motor, motor_audit = build_target_motor_edges(day)
 
@@ -291,6 +304,7 @@ def main():
             "exhibition_rank_required": 1,
         },
         "enhanced_pre_feature_count": len(enh),
+        "enhanced_pre_feature_source": feature_source,
         "pre_audit": pre_audit,
         "motor_audit": motor_audit,
         "pre_motor_candidates": candidates,
@@ -303,6 +317,7 @@ def main():
         "target_date": str(day.date()),
         "cache_path": str(out_path),
         "enhanced_pre_feature_count": len(enh),
+        "enhanced_pre_feature_source": feature_source,
         "all_race_rows": int(len(q)),
         "pre_motor_candidate_count": len(candidates),
         "pre_motor_candidate_race_codes": list(candidates),
