@@ -219,3 +219,12 @@ Changes in research/run_3head_funsite_broad50.py:
 - Search two Feb stability blocks with: (a) models trained on the new representation, (b) model intersection/consensus quantile gates, and (c) explicit single/pair rule gates whose thresholds come only from the Feb training block.
 - Require minimum-support reporting and expose both strict and relaxed discovery stability; tiny-N 50% remains diagnostic only.
 - Freeze candidates from February only. March remains one-shot for any Wave2 candidate that passes the Feb support/stability gate; do not iterate Wave2 rules from March outcomes.
+
+
+## AFTER CODE — Broad50 Wave2 ready for fresh dispatch (2026-09-18)
+- Wave2 research script added: `research/run_3head_funsite_broad50_wave2.py` at commit **0fd5e59f1209632115261abae5a14e0a419ceecb**.
+- Workflow added: `.github/workflows/research_3head_funsite_broad50_wave2.yml` at commit **5ded9948ea6c11278101e197cb25f278e697ac43**.
+- New representation: boat3 good-direction ranks among six; explicit inner 1/2 player/ST/motor/recent edges; separate vs1/vs2/vs4 margins; balanced attack composite.
+- New selection families: six model score diagnostics, cross-model percentile consensus/intersection gates, and Feb-train-quantile single/pair rule gates with support in both Feb validation blocks.
+- Freeze logic remains February-only. Wave2 March is opened only for a candidate frozen from February; September outcomes remain UNREAD; production v288 unchanged.
+- Verification is pending a **fresh workflow_dispatch** of `research-3head-funsite-broad50-wave2` from current main. A commit is not completion; inspect fresh Run/Job/Artifact before drawing conclusions.
