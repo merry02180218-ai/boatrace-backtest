@@ -771,3 +771,11 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   6) disjoint bandsで165R外に独立gainが残るか
 - promotion候補条件: DEV loss=0、SUPPORT loss=0、LOMO全月非悪化、近傍plateauあり、combined LIVE165でwall3比改善。
 - 2026-09結果/払戻は読まない。現正式wall3は維持、v363完了までは5→6正式昇格しない。
+
+
+## v363 初回failure — payout union不足
+- Run `35331971241` / Job `105558128284` failure。
+- 原因: payout辞書を313Rだけから作成したが、disjoint band評価で別universe由来の `202607071001` を参照し KeyError。
+- DEV grid / plateau選定部分は通過済み。研究ロジック自体のfailureではない。
+- 修正: payout/cache対象を `LIVE165 / H078_M375 / H0775_M375 / H0775_M350` のrace unionへ拡張。
+- grid・選定・LOMO条件は一切変更しない。fresh Runで再監査。
