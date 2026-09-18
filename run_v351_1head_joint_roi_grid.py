@@ -50,7 +50,7 @@ def main():
  sm=pd.DataFrame(rows);mo=pd.DataFrame(mons);pr=sm[(sm.head_cutoff.eq(.78))&(sm.opponent_mass_min.eq(.375))&(sm.env_w.eq(.1))&(sm.env_q.eq(.65))]
  if len(pr)!=1:raise RuntimeError('production cell missing')
  p=pr.iloc[0]
- if (int(p.R),int(p.head),int(p.exact3))!=(276,241,131):raise RuntimeError(f'PRODUCTION_SENTINEL_DRIFT {p.to_dict()}')
+ if (int(p['R']),int(p['head']),int(p['exact3']))!=(276,241,131):raise RuntimeError(f'PRODUCTION_SENTINEL_DRIFT {p.to_dict()}')
  sm['head_rate']=sm.head/sm.R;sm['exact3_rate']=sm.exact3/sm.R;sm=sm.sort_values(['roi','profit_yen','R'],ascending=False);sm.to_csv(OUT/'summary.csv',index=False);mo.to_csv(OUT/'monthly.csv',index=False)
  result={'grid_cells':len(sm),'production_cell':pr.iloc[0].to_dict(),'best_raw_roi':sm.iloc[0].to_dict(),'official_fallback_codes':sorted(pay.OFFICIAL_FALLBACK_CODES),'TODAY_20260917_RESULT_OR_PAYOUT_USED':False,'PRODUCTION_CHANGED':False,'AUDIT_OK':True};(OUT/'result.json').write_text(json.dumps(result,indent=2,default=str));print(json.dumps(result,indent=2,default=str))
 if __name__=='__main__':main()
