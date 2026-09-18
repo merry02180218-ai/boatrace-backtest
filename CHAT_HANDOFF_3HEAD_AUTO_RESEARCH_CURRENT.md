@@ -141,3 +141,11 @@
 - Freeze regime selectors for K=2/3/4, per-cluster support floors 5/8/12/16, and top-1 or top-2 union per cluster. Every selector definition is frozen from Nov-Dec-Jan only.
 - Pre-Feb selector diagnostics must report each month H1/H2 support/rate. February is then a one-shot transfer: each day is assigned a regime from PRE descriptors and only the frozen interaction(s) for that regime may fire.
 - Primary February comparison remains worst-half rate at >=20/30/50/75/100 races per half versus Wave9. March stays unopened. September outcomes UNREAD; production v288 unchanged.
+
+
+### Wave14 failure/repair note (Run 35318413001)
+- Initial Wave14 Run **35318413001** / Job **105515130842** failed before any regime-transfer result was produced.
+- Cause: some daily regime descriptor columns were entirely missing/NaN across Nov-Dec-Jan, so the historical median itself was NaN and KMeans rejected the matrix.
+- Repair is implementation-only: drop descriptor dimensions with no finite historical median, median-impute the remaining dimensions, and fail if fewer than 5 finite regime features remain. Research definitions (K values, interaction library, support floors, February protocol) are unchanged.
+- Performance-only improvement in the same repair: candidate statistics are scanned once per K and cached for all support/top-N variants; research gates are unchanged.
+- A fresh run from current main is required; do not reuse failed Run 35318413001.
