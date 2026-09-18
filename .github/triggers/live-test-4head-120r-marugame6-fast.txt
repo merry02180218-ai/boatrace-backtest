@@ -1,1 +1,2 @@
 trigger 2026-09-18 Marugame 6R hardened fast live test
+rerun after forced UTF-8 BOATCAST decode
