@@ -51,6 +51,8 @@ def install_preview_cache():
         ymd=d.strftime('%Y/%m/%d')
         for kind in ('stt','tkz','original_exhibition'):
             paths.append(f'data/previews/{kind}/{ymd}.csv')
+        if d>=pd.Timestamp('2026-02-01').date():
+            paths.append(f'data/results/payouts/{ymd}.csv')
         d+=timedelta(days=1)
     original=backtest.fetch
     def one(path):
