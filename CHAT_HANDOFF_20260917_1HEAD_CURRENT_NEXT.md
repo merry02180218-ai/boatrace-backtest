@@ -3048,3 +3048,63 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - Jul-Aug SUPPORT is evaluated only after freezing the candidate.
 - Goal remains +15〜35R rescue with formal 3-ticket count unchanged.
 - September outcomes/payouts unread. Production unchanged.
+
+
+## AFTER — v389 added71 ticket-policy consensus
+- implementation:
+  - script commit `67a6abe93c6868a7318b04e48b4a0cc422451c99`
+  - workflow commit `e8e74a1e4d4b059cbabd6b64177bda84b9a452b8`
+- Actions:
+  - Run `35382849358`
+  - Job `105722855421`
+  - Artifact `10562248620`
+  - digest `sha256:8ab5c1d1e09addb5258abac451551e2deaf01c3ca2ff121640bd12cd40bf7c91`
+  - SUCCESS / AUDIT_OK=true.
+- baseline sentinel reproduced:
+  - LIVE165 87/165 / ROI128.69%
+  - added71 33/71 / ROI100.28%.
+- Candidate selection used DEV Feb-Jun + DEV LOMO only; SUPPORT outcomes were not used.
+- DEV-LOMO robust pick:
+  - family `CONSENSUS_MASS`
+  - q=.35
+  - score = ticket-policy consensus + formal top3 pair-probability mass
+  - selected 42/71 additional races.
+- Selected42:
+  - ALL: exact3 21/42=50.0%, ROI101.98%
+  - DEV: 34R / 18 hits=52.94% / ROI107.35%
+  - SUPPORT: 8R / 3 hits=37.5% / ROI79.17%.
+- DEV LOMO:
+  - pooled 33R / exact3 54.55% / ROI110.61%
+  - nonnegative 3/5 months
+  - worst month ROI66.11%.
+- LIVE165 + selected42:
+  - **207R**
+  - ROI **123.27%**
+  - profit +14,450
+  - DEV171R ROI125.05%
+  - SUPPORT36R ROI **114.81%**.
+- Interpretation:
+  - 4HEAD-style separate expansion lane can increase race count materially (+42R, +25.5%) while keeping total historical ROI >120%.
+  - However added42 itself is only about break-even and DEV LOMO is not uniformly stable; not ready for formal promotion.
+  - Consensus filtering is meaningfully better than v388 scalar-margin pick on SUPPORT, but ticket ranking remains the main improvement target.
+- production unchanged / September outcomes unread.
+
+## BEFORE — v390 expansion-specific 3-ticket policy
+- Keep the race-selection side frozen for the first pass: evaluate all added71, not retune head gate.
+- Hypothesis: added71 has excellent head rate (88.73%) but current formal HYBRID alpha=.70 is not the best opponent 3-ticket policy for this outer expansion band.
+- After current formal wall3+5>6 p2/pc reranks, compare exactly 3 tickets using:
+  - HYBRID
+  - JOINT
+  - TOP2XTOP2
+  - SECOND1X3
+  - SECOND3X1
+  across alpha .40/.50/.60/.70/.80/.90.
+- Current HYBRID alpha=.70 must reproduce added71 33/71 / ROI100.28% as sentinel.
+- Select policy only on Feb-Jun DEV using:
+  - exact3
+  - ROI
+  - per-month/LOMO robustness.
+- Freeze winning expansion-only ticket policy, then evaluate Jul-Aug SUPPORT once.
+- Also evaluate LIVE165 + all added71 and LIVE165 + v389 selected42 under the frozen expansion policy.
+- Formal LIVE165 ticket policy remains unchanged. This is expansion-lane research only.
+- September outcomes/payouts unread. Production unchanged.
