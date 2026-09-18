@@ -285,3 +285,14 @@
 - Current-day rolling PRE may use already-settled prior-day outcomes only as causal training inputs, matching the frozen research algorithm. No September performance labels/metrics are exposed for tuning; target-day outcomes remain forbidden.
 - Frozen ticket-source inspection Run **35364993228** SUCCESS / Artifact **10556361488**: source has complete closing-odds JSON and settlement/payout fields, so downstream A ticket/ROI audit is feasible. It does not contain precomputed v288 feature columns, so current exhibition/v288 features must be reconstructed result-blind.
 - Next restart point: inspect current JST daily shadow Run **35365531567**. If success, report pre+motor candidates for 2026-09-19 and use the live exhibition gate only when explicitly requested / before deadline. Do not connect A to real-money v288 tickets until downstream ticket compatibility/ROI audit is complete.
+
+
+## BEFORE WORK — adopted A + frozen v288 downstream March ticket audit (2026-09-19)
+- Head gate is already frozen and parity-verified: A precision, March 52R/21 heads, marker 3HEAD_A_MARCH_PARITY_OK. This audit MUST NOT alter A thresholds or select a new head gate.
+- Objective: test whether the existing v288 downstream pair ranking / current-feature gates / variable 5-10 tickets / exact 10,000-yen Dutch are compatible with the frozen A head population.
+- Population is exactly the 52 March A race codes frozen in research/3head_a_march_parity_codes.json.
+- Each March day reconstructs a February-28 frozen v288 head/pair cache result-blind, then replaces only the old PRE-candidate list with the already-frozen A race codes for that day. v288 downstream thresholds are not retuned.
+- Current exhibition/original data are reconstructed from archived/direct pre-race sources; decisions/tickets are frozen before settlement join.
+- Odds are pinned to the same frozen Wave21 canonical source closing_odds__json (120 trifecta combinations), materialized once for March. This avoids missing external archived odds changing the comparison.
+- Official workflow/run for this audit is **audit-3head-a-v288-ticket-march Run 35366460730**, head **f20af7753974368b38b77ceee7b4826207232359**. Earlier queued Run 35366186680 is superseded and must not be used for the formal result.
+- Report: 52-race coverage, LIVE-evaluable count/errors, genuine NO_BET count, BET count, hits, ROI/profit, route breakdown, and head-gate-to-bet conversion. Sep-2026 outcomes are not used in this March ticket audit.
