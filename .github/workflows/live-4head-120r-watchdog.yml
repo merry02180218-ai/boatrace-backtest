@@ -2,11 +2,14 @@ name: live-4head-120r-watchdog
 
 on:
   schedule:
-    - cron: '*/15 0-12 * * *' # every 15 min, 09:00-21:59 JST only
+    - cron: '*/5 21-23 * * *' # 06:00-08:59 JST
+    - cron: '*/5 0-13 * * *'  # 09:00-22:59 JST
   workflow_dispatch:
   push:
     paths:
       - '.github/live/head4_120r_watchlist.json'
+      - 'resolve_4head_watchdog_targets.py'
+      - 'run_4head_120r_lastminute_fast.py'
       - '.github/workflows/live-4head-120r-watchdog.yml'
 
 permissions:
@@ -14,67 +17,81 @@ permissions:
   contents: read
   issues: write
 
-concurrency:
-  group: live-4head-120r-watchdog
-  cancel-in-progress: false
-
 jobs:
-  watchdog:
-    runs-on: ubuntu-latest
-    timeout-minutes: 45
+  resolve:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    outputs:
+      count: ${{ steps.targets.outputs.count }}
+      matrix: ${{ steps.targets.outputs.matrix }}
     steps:
-      - name: Resolve current watch target without checkout
+      - name: Fetch watchlist and resolver from this revision
         env:
           GH_TOKEN: ${{ github.token }}
-        shell: bash
         run: |
-          gh api "repos/$GITHUB_REPOSITORY/contents/.github/live/head4_120r_watchlist.json?ref=$GITHUB_SHA" --jq '.content' | base64 -d > /tmp/head4_120r_watchlist.json
-          python - <<'PY'
-          import json, os
-          from datetime import datetime, timedelta
-          from zoneinfo import ZoneInfo
-          JST=ZoneInfo('Asia/Tokyo')
-          z=json.load(open('/tmp/head4_120r_watchlist.json',encoding='utf-8'))
-          now=datetime.now(JST)
-          if z.get('date') != now.strftime('%Y%m%d'):
-              print('WATCHDOG_NO_TARGET date mismatch', z.get('date'), now.isoformat())
-              with open(os.environ['GITHUB_ENV'],'a') as f:f.write('SHOULD_RUN=0\n')
-              raise SystemExit
-          hits=[]
-          for t in z.get('targets',[]):
-              hh,mm=map(int,t['deadline_jst'].split(':'))
-              dl=now.replace(hour=hh,minute=mm,second=0,microsecond=0)
-              start=dl-timedelta(minutes=float(t.get('watch_minutes_before',20)))
-              safe=dl-timedelta(seconds=75)
-              if start <= now < safe:
-                  hits.append((dl,t))
-          if not hits:
-              print('WATCHDOG_NO_TARGET window', now.isoformat())
-              with open(os.environ['GITHUB_ENV'],'a') as f:f.write('SHOULD_RUN=0\n')
-              raise SystemExit
-          _,t=sorted(hits,key=lambda x:x[0])[0]
-          mp={
-            'SHOULD_RUN':'1','TARGET_DATE':z['date'],'JCD':str(t['jcd']),
-            'RACE':str(t['race']),'DEADLINE_JST':t['deadline_jst'],
-            'PRE_RUN_ID':str(t['pre_run_id']),'PRE_ARTIFACT_NAME':t['pre_artifact_name'],
-            'STATE_RUN_ID':str(t['state_run_id']),'STATE_ARTIFACT_NAME':t['state_artifact_name'],
-          }
-          with open(os.environ['GITHUB_ENV'],'a',encoding='utf-8') as f:
-              for k,v in mp.items():f.write(f'{k}={v}\n')
-          print('WATCHDOG_TARGET',z['date'],t['jcd'],t['race'],t['deadline_jst'],now.isoformat())
-          PY
+          gh api "repos/$GITHUB_REPOSITORY/contents/.github/live/head4_120r_watchlist.json?ref=$GITHUB_SHA" --jq '.content' | base64 -d > /tmp/watchlist.json
+          gh api "repos/$GITHUB_REPOSITORY/contents/resolve_4head_watchdog_targets.py?ref=$GITHUB_SHA" --jq '.content' | base64 -d > /tmp/resolve.py
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?per_page=100" \
+            --jq '.artifacts[] | select(.expired==false) | .name' > /tmp/artifact_names.txt
 
-      - name: Skip if already completed
-        if: env.SHOULD_RUN == '1'
+      - name: Resolve every active target
+        id: targets
+        shell: bash
+        run: |
+          python /tmp/resolve.py \
+            --watchlist /tmp/watchlist.json \
+            --completed-names /tmp/artifact_names.txt \
+            --out /tmp/resolved.json
+          COUNT="$(python - <<'PY'
+          import json
+          print(json.load(open('/tmp/resolved.json'))['count'])
+          PY
+          )"
+          MATRIX="$(python - <<'PY'
+          import json
+          z=json.load(open('/tmp/resolved.json'))
+          print(json.dumps({'include':z['include']},separators=(',',':')))
+          PY
+          )"
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
+          echo "HEAD4_WATCHDOG_ACTIVE_COUNT=$COUNT"
+          cat /tmp/resolved.json
+
+  monitor:
+    needs: resolve
+    if: needs.resolve.outputs.count != '0'
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix: ${{ fromJSON(needs.resolve.outputs.matrix) }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    concurrency:
+      group: head4-watchdog-${{ matrix.target_date }}-${{ matrix.jcd }}-${{ matrix.race }}
+      cancel-in-progress: false
+    env:
+      TARGET_DATE: ${{ matrix.target_date }}
+      JCD: ${{ matrix.jcd }}
+      RACE: ${{ matrix.race }}
+      DEADLINE_JST: ${{ matrix.deadline_jst }}
+      PRE_RUN_ID: ${{ matrix.pre_run_id }}
+      PRE_ARTIFACT_NAME: ${{ matrix.pre_artifact_name }}
+      STATE_RUN_ID: ${{ matrix.state_run_id }}
+      STATE_ARTIFACT_NAME: ${{ matrix.state_artifact_name }}
+      ARTIFACT_NAME: ${{ matrix.artifact_name }}
+    steps:
+      - name: Per-race idempotency guard
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
-          NAME="head4-120r-watchdog-${TARGET_DATE}-${JCD}-${RACE}"
-          COUNT="$(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=$NAME" --jq '.total_count')"
+          COUNT="$(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=$ARTIFACT_NAME&per_page=20" --jq '.artifacts | map(select(.expired==false)) | length')"
           if [ "$COUNT" -gt 0 ]; then
-            echo "WATCHDOG_ALREADY_COMPLETED $NAME"
+            echo "HEAD4_WATCHDOG_ALREADY_COMPLETED $ARTIFACT_NAME"
             echo "SHOULD_RUN=0" >> "$GITHUB_ENV"
+          else
+            echo "SHOULD_RUN=1" >> "$GITHUB_ENV"
           fi
 
       - uses: actions/checkout@v4
@@ -89,7 +106,7 @@ jobs:
         if: env.SHOULD_RUN == '1'
         run: pip install -q numpy requests beautifulsoup4 lxml
 
-      - name: Download corrected PRE and daily state
+      - name: Download frozen PRE and daily state
         if: env.SHOULD_RUN == '1'
         env:
           GH_TOKEN: ${{ github.token }}
@@ -97,14 +114,12 @@ jobs:
         run: |
           mkdir -p preseed stateseed
           gh run download "$PRE_RUN_ID" -n "$PRE_ARTIFACT_NAME" -D preseed
-          NEW_STATE_NAME="head4-newfeature-daily-state-${TARGET_DATE}"
-          NEW_STATE_RUN="$(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=$NEW_STATE_NAME&per_page=20" --jq '.artifacts | map(select(.expired==false)) | sort_by(.created_at) | reverse | .[0].workflow_run.id // empty')"
-          if [ -n "$NEW_STATE_RUN" ]; then
-            echo "HEAD4_STATE_SOURCE newfeature run=$NEW_STATE_RUN artifact=$NEW_STATE_NAME"
-            gh run download "$NEW_STATE_RUN" -n "$NEW_STATE_NAME" -D stateseed
+          if [ "$STATE_RUN_ID" = "$PRE_RUN_ID" ] && [ "$STATE_ARTIFACT_NAME" = "$PRE_ARTIFACT_NAME" ]; then
+            cp -a preseed/. stateseed/
+            echo "HEAD4_STATE_SOURCE same_artifact run=$STATE_RUN_ID artifact=$STATE_ARTIFACT_NAME"
           else
-            echo "HEAD4_STATE_SOURCE fallback run=$STATE_RUN_ID artifact=$STATE_ARTIFACT_NAME"
             gh run download "$STATE_RUN_ID" -n "$STATE_ARTIFACT_NAME" -D stateseed
+            echo "HEAD4_STATE_SOURCE referenced run=$STATE_RUN_ID artifact=$STATE_ARTIFACT_NAME"
           fi
 
       - name: Locate frozen inputs
@@ -125,8 +140,8 @@ jobs:
         if: env.SHOULD_RUN == '1'
         shell: bash
         run: |
-          OUT="/tmp/head4_watchdog_${JCD}_${RACE}.json"
-          LOG="/tmp/head4_watchdog.log"
+          OUT="/tmp/head4_watchdog_$JCD_$RACE.json"
+          LOG="/tmp/head4_watchdog_$JCD_$RACE.log"
           echo "OUT=$OUT" >> "$GITHUB_ENV"
           echo "LOG=$LOG" >> "$GITHUB_ENV"
           /usr/bin/time -f 'WATCHDOG_WALL_SECONDS=%e' python run_4head_120r_lastminute_fast.py \
@@ -146,12 +161,12 @@ jobs:
           python - <<'PY'
           import json, os
           z=json.load(open(os.environ['OUT'],encoding='utf-8'))
-          assert z.get('monitoring_parent') is True, z
-          assert z.get('target_race_result_used') is False, z
-          assert z.get('payout_used') is False, z
-          assert z.get('decision') in {'BET','PASS','NO_BET_DATA_NOT_READY'}, z
+          assert z.get('monitoring_parent') is True,z
+          assert z.get('target_race_result_used') is False,z
+          assert z.get('payout_used') is False,z
+          assert z.get('decision') in {'BET','PASS','NO_BET_DATA_NOT_READY'},z
           if z.get('decision') in {'BET','PASS'}:
-              assert z.get('profile') == 'HEAD4_NEWFEATURE_FIXED156_V1', z
+              assert z.get('profile') == 'HEAD4_NEWFEATURE_FIXED156_V1',z
           print('HEAD4_WATCHDOG_CONTRACT_OK',z.get('decision'),z.get('race_code'))
           PY
 
@@ -169,9 +184,9 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: env.SHOULD_RUN == '1' && always()
         with:
-          name: head4-120r-watchdog-${{ env.TARGET_DATE }}-${{ env.JCD }}-${{ env.RACE }}
+          name: ${{ env.ARTIFACT_NAME }}
           path: |
             /tmp/head4_watchdog_*.json
-            /tmp/head4_watchdog.log
+            /tmp/head4_watchdog_*.log
           if-no-files-found: warn
           retention-days: 30
