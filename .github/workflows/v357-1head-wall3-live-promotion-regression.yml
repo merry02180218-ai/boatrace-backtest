@@ -1,0 +1,46 @@
+name: v357 1-head wall3 live promotion regression
+on:
+  push:
+    paths:
+      - 'run_v357_1head_wall3_live_promotion_regression.py'
+      - '.github/workflows/v357-1head-wall3-live-promotion-regression.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Download saved causal inputs
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10512844501/zip" > /tmp/base.zip
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10530454019/zip" > /tmp/biwako.zip
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10529988459/zip" > /tmp/naruto.zip
+          mkdir -p /tmp/base /tmp/biwako /tmp/naruto
+          unzip -q /tmp/base.zip -d /tmp/base
+          unzip -q /tmp/biwako.zip -d /tmp/biwako
+          unzip -q /tmp/naruto.zip -d /tmp/naruto
+          test -f /tmp/base/202609181107.json
+          test -f /tmp/base/202609181409.json
+          test -f /tmp/biwako/gate_202609181107.json
+          test -f /tmp/naruto/gate_202609181409.json
+      - name: Run promotion regression
+        run: python run_v357_1head_wall3_live_promotion_regression.py --base-dir /tmp/base --biwako-live-dir /tmp/biwako --naruto-live-dir /tmp/naruto --outdir /tmp/v357-wall3-promotion
+      - name: Show result
+        if: always()
+        run: cat /tmp/v357-wall3-promotion/result.json 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v357-wall3-live-promotion-${{ github.run_id }}
+          path: /tmp/v357-wall3-promotion/
+          retention-days: 30
