@@ -1,0 +1,45 @@
+name: v356 1-head live wall3 shadow regression
+on:
+  push:
+    paths:
+      - 'run_v356_1head_live_wall3_shadow_regression.py'
+      - 'run_1head_v351_live_finalize.py'
+      - 'onehead_production_profile.py'
+      - '.github/workflows/v356-1head-live-wall3-shadow-regression.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Download saved pre-race inputs
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10512844501/zip" > /tmp/base.zip
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10530454019/zip" > /tmp/live.zip
+          mkdir -p /tmp/base /tmp/live
+          unzip -q /tmp/base.zip -d /tmp/base
+          unzip -q /tmp/live.zip -d /tmp/live
+          test -f /tmp/base/202609181107.json
+          test -f /tmp/live/gate_202609181107.json
+          test -f /tmp/live/window_202609181107.json
+      - name: Run saved-input regression
+        run: python run_v356_1head_live_wall3_shadow_regression.py --base /tmp/base/202609181107.json --gate /tmp/live/gate_202609181107.json --window /tmp/live/window_202609181107.json --outdir /tmp/v356-wall3-shadow
+      - name: Show result
+        if: always()
+        run: cat /tmp/v356-wall3-shadow/result.json 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v356-wall3-shadow-${{ github.run_id }}
+          path: /tmp/v356-wall3-shadow/
+          retention-days: 30
