@@ -12,6 +12,7 @@ on:
 permissions:
   actions: read
   contents: read
+  issues: write
 
 concurrency:
   group: live-4head-120r-watchdog
@@ -143,6 +144,17 @@ jobs:
           assert z.get('decision') in {'BET','PASS','NO_BET_DATA_NOT_READY'}, z
           print('HEAD4_WATCHDOG_CONTRACT_OK',z.get('decision'),z.get('race_code'))
           PY
+
+      - name: Notify GitHub Issue on BET
+        if: env.SHOULD_RUN == '1'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          python notify_head4_bet_github_issue.py \
+            --decision-json "$OUT" \
+            --target-date "$TARGET_DATE" \
+            --jcd "$JCD" --race "$RACE" \
+            --deadline-jst "$DEADLINE_JST"
 
       - uses: actions/upload-artifact@v4
         if: env.SHOULD_RUN == '1' && always()
