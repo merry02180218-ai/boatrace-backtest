@@ -1,0 +1,31 @@
+name: research-3head-a-purchase-gate-dev
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'research/run_3head_a_purchase_gate_dev.py'
+      - '.github/workflows/research-3head-a-purchase-gate-dev.yml'
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install pandas numpy scikit-learn
+      - name: Download frozen source
+        env: {GH_TOKEN: ${{ github.token }}}
+        run: |
+          gh api repos/${{ github.repository }}/actions/artifacts/10317157868/zip > /tmp/src.zip
+          unzip -oq /tmp/src.zip -d /tmp/src
+          SRC=$(find /tmp/src -type f -name 'analysis_v289_3head_wave21_allrace_feature_settled.csv' | head -1)
+          test -n "$SRC"
+          cp "$SRC" analysis_v289_3head_wave21_allrace_feature_settled.csv
+      - run: python research/run_3head_a_purchase_gate_dev.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-3head-a-purchase-gate-dev
+          path: research_3head_a_purchase_gate_dev_result.json
