@@ -1,0 +1,113 @@
+name: v392 1-head expansion shadow regression
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'run_1head_v351_live_expansion_shadow.py'
+      - '.github/workflows/v392-1head-expansion-shadow-regression.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+
+      - name: Download saved result-blind Marugame11 LIVE artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10543318656/zip" > /tmp/live.zip
+          mkdir -p /tmp/live
+          unzip -q /tmp/live.zip -d /tmp/live
+          INP=$(find /tmp/live -name 'final_input_202609181511.json' -print -quit)
+          FORMAL=$(find /tmp/live -name 'live_v351_final_202609181511.json' -print -quit)
+          test -n "$INP"
+          test -n "$FORMAL"
+          echo "INP=$INP" >> "$GITHUB_ENV"
+          echo "FORMAL=$FORMAL" >> "$GITHUB_ENV"
+
+      - name: Guard saved input and run expansion Shadow
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json,os
+          x=json.load(open(os.environ['INP']))
+          f=json.load(open(os.environ['FORMAL']))
+          assert x['result_or_payout_used'] is False and x['chronology_guard'] is True
+          assert f['result_or_payout_used'] is False and f['chronology_guard'] is True
+          assert f['status']=='DROP'
+          assert .780 <= float(x['final_head_p']) < .790
+          assert float(x['opp_mass']) >= .375
+          assert x['head_exhibition_pass'] is True
+          print('SAVED_LIVE_INPUT_GUARD_OK',x['race_code'],x['final_head_p'],x['opp_mass'])
+          PY
+          python run_1head_v351_live_expansion_shadow.py judge             --input "$INP"             --formal "$FORMAL"             --out /tmp/expansion_shadow.json
+
+      - name: Assert research-only contract
+        run: |
+          python - <<'PY'
+          import json
+          x=json.load(open('/tmp/expansion_shadow.json'))
+          assert x['profile']=='1HEAD_EXPANSION_SHADOW_V392_CONSENSUS_MASS_Q035'
+          assert x['formal_status']=='DROP'
+          assert x['status'] in {'EXPANSION_SHADOW_PASS','EXPANSION_CONFIDENCE_DROP'}
+          assert x['result_or_payout_used'] is False
+          assert x['chronology_guard'] is True
+          assert x['research_only'] is True
+          assert len(x['candidate_tickets'])==3
+          if x['active']:
+              assert x['tickets']==x['candidate_tickets']
+              assert x['stakes_yen']==[100,100,100]
+              assert x['total_stake_yen']==300
+          else:
+              assert x['tickets']==[]
+              assert x['stakes_yen']==[]
+              assert x['total_stake_yen']==0
+          print('V392_EXPANSION_SHADOW_CONTRACT_OK',json.dumps({
+              'race_code':x['race_code'],'status':x['status'],'score':x['consensus_score'],
+              'threshold':x['consensus_threshold'],'tickets':x['candidate_tickets'],
+              'wall3':x['wall3_applied'],'five6':x['five6_applied'],
+              'result_or_payout_used':False
+          },ensure_ascii=False))
+          PY
+
+      - name: Test PRE scanner contract
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/scan
+          python - <<'PY'
+          import json,os
+          x=json.load(open(os.environ['INP']))
+          keep={k:x[k] for k in ['race_code','final_head_p','opp_mass','result_or_payout_used','chronology_guard']}
+          open('/tmp/scan/'+str(x['race_code'])+'.json','w').write(json.dumps(keep))
+          PY
+          python run_1head_v351_live_expansion_shadow.py scan             --cache-dir /tmp/scan             --csv-out /tmp/expansion_pre_shadow.csv             --json-out /tmp/expansion_pre_shadow_meta.json
+          python - <<'PY'
+          import csv,json
+          rows=list(csv.DictReader(open('/tmp/expansion_pre_shadow.csv',encoding='utf-8-sig')))
+          m=json.load(open('/tmp/expansion_pre_shadow_meta.json'))
+          assert len(rows)==1 and m['candidate_R']==1
+          assert rows[0]['race_code']=='202609181511'
+          print('V392_PRE_SCAN_CONTRACT_OK')
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v392-expansion-shadow-regression-${{ github.run_id }}
+          path: |
+            /tmp/expansion_shadow.json
+            /tmp/expansion_pre_shadow.csv
+            /tmp/expansion_pre_shadow_meta.json
+          retention-days: 30
