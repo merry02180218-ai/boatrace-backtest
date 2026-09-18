@@ -363,3 +363,27 @@ Changes in research/run_3head_funsite_broad50.py:
 - Feb freeze requirement remains demanding: both chronological halves >=50%, each >=20R and >=8 venues; >=3 eligible weeks at >=45%. Optimize volume within this strict pool; separately record precision-first.
 - March is a **single chronological replay** using the frozen candidate. Daily model refits may consume only earlier March outcomes because those would have been known before the next day's races; March outcomes never alter the frozen window/band/gate/weights. No second March-guided iteration is allowed.
 - September outcomes remain UNREAD; production v288 unchanged.
+
+
+## AFTER WORK — Broad50 Wave7 verified (Run 35311233787, 2026-09-18)
+- SUCCESS: Run **35311233787** / Job **105493530857** / Artifact **10533845010**; head SHA **9d785d7bea83dbb5ce98f60b4f838627247fa028**.
+- Leakage-safe daily walk-forward was executed over trailing 14/21/28/42-day windows. Each target date used only labels from earlier dates; target-day labels were never in training.
+- Inputs/audit unchanged and clean: Jan 4,963 / Feb 3,970 / Mar 4,482; February cross-source winners 3,970/3,970 = 100%; previous-session date violations 0.
+- Adaptive model family used 128 PRE `sig_*` features, logistic + histogram gradient boosting, rolling percentile-normalized opponent attack scores, five race bands, and conjunction gates.
+- February generated 15,880 prediction rows across 4 rolling windows; **15,780 candidate structures** were evaluated.
+- Result: **0 strict50 stable candidates** and **0 near50 (>=47% both halves with useful support) candidates**. Therefore nothing froze and March replay was **not opened**.
+- Interpretation: neither fixed January training (Wave6) nor leakage-safe daily rolling adaptation (Wave7) sustains a useful-volume 47-50% head rate across February halves. The 50% structures from Wave4 are not temporally robust enough for production.
+- Production v288 unchanged; September outcomes UNREAD.
+
+## BEFORE WORK — Broad50 Wave8 stable-rate Pareto frontier (2026-09-18)
+- Stop forcing a 50% target. Use the already-defined Wave7 walk-forward family and February only to measure the highest reproducible precision/volume frontier.
+- Candidate family remains unchanged from Wave7; no new feature, band, weight, window or model gate is introduced from March evidence.
+- Predeclare stable floors and support requirements:
+  - floor 47%: both Feb halves >=47%, >=25R each, >=8 venues each;
+  - floor 45%: both halves >=45%, >=30R each, >=8 venues each;
+  - floor 42.5%: both halves >=42.5%, >=40R each, >=8 venues each;
+  - floor 40%: both halves >=40%, >=50R each, >=8 venues each.
+- For each floor, require >=3 eligible weeks (week support >=5) at no worse than floor-5pt. Freeze the highest-volume candidate satisfying the floor, plus report a precision-first Pareto candidate.
+- Only after all February freezes are fixed, run a single March chronological replay for the frozen candidates. Earlier March outcomes may update later-day models exactly as in Wave7; no March result may change the candidate definitions.
+- Primary decision output: honest achievable head-rate/volume frontier, not a forced 50% claim.
+- September outcomes remain UNREAD; production v288 unchanged.
