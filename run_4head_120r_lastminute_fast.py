@@ -125,6 +125,34 @@ def fetch_current(hd,jcd,rno,timeout):
         ft=ex.submit(_get_fast,tu,timeout,2);fs=ex.submit(_get_fast,su,timeout,2);fo=ex.submit(_get_fast,ou,timeout,2)
         return ft.result(),fs.result(),fo.result()
 
+def wait_exhibition_ready(hd,jcd,rno,bias,deadline,timeout=4,poll_interval=2.0,safety_seconds=75):
+    attempts=0; last=''
+    while True:
+        attempts+=1
+        try:
+            tkz,st,orig=fetch_current(hd,jcd,rno,timeout)
+            exh=build_exhibition_boatcast(hd,jcd,rno,tkz,st,orig,bias)
+            return exh,attempts,last
+        except Exception as e:
+            last=f'{type(e).__name__}: {e}'
+            remain=(deadline-datetime.now(JST)).total_seconds()
+            if remain<=safety_seconds:
+                raise Fast120Error(f'exhibition not ready before safety margin; attempts={attempts}; remain={remain:.1f}s; last={last}')
+            time.sleep(min(poll_interval,max(0.2,remain-safety_seconds)))
+
+def wait_odds_ready(hd,jcd,rno,deadline,timeout=4,poll_interval=1.5,safety_seconds=45):
+    attempts=0; last=''
+    while True:
+        attempts+=1
+        try:
+            return (*fetch_boatcast_odds(hd,jcd,rno,deadline,timeout),attempts,last)
+        except Exception as e:
+            last=f'{type(e).__name__}: {e}'
+            remain=(deadline-datetime.now(JST)).total_seconds()
+            if remain<=safety_seconds:
+                raise Fast120Error(f'odds not ready before safety margin; attempts={attempts}; remain={remain:.1f}s; last={last}')
+            time.sleep(min(poll_interval,max(0.2,remain-safety_seconds)))
+
 def parse_od3(body):
     lines=body.splitlines()
     if len(lines)<8 or not lines[0].lstrip().startswith('data=') or lines[1].split('\t')[0].strip()!='1':
@@ -204,7 +232,7 @@ def main():
     ap.add_argument('--deadline-jst',required=True)
     ap.add_argument('--race-cards',required=True);ap.add_argument('--waku10',required=True)
     ap.add_argument('--pre-all',required=True);ap.add_argument('--daily-state',required=True)
-    ap.add_argument('--timeout',type=int,default=8);ap.add_argument('--allow-unmonitored-benchmark',action='store_true')
+    ap.add_argument('--timeout',type=int,default=4);ap.add_argument('--poll-interval',type=float,default=2.0);ap.add_argument('--exhibition-safety-seconds',type=int,default=75);ap.add_argument('--odds-safety-seconds',type=int,default=45);ap.add_argument('--allow-unmonitored-benchmark',action='store_true')
     ap.add_argument('--out',required=True)
     a=ap.parse_args(); total0=time.perf_counter(); stages={}
     deadline=parse_deadline_flexible(a.date,a.deadline_jst); live.require_before_deadline(deadline,'fast120 startup')
@@ -217,13 +245,16 @@ def main():
     if state.get('target_date')!=f'{a.date[:4]}-{a.date[4:6]}-{a.date[6:8]}':raise Fast120Error('daily-state target mismatch')
     if state.get('target_date_results_used') is not False:raise Fast120Error('daily state contamination')
 
-    t=time.perf_counter(); tkz,st,orig=fetch_current(a.date,a.jcd,a.race,a.timeout);stages['fetch_exhibition_s']=time.perf_counter()-t
     bias={int(k):float(v) for k,v in state['st_bias'].items()}
-    t=time.perf_counter(); exh=build_exhibition_boatcast(a.date,a.jcd,a.race,tkz,st,orig,bias);stages['build_exhibition_s']=time.perf_counter()-t
+    t=time.perf_counter(); exh,ex_attempts,ex_last=wait_exhibition_ready(
+        a.date,a.jcd,a.race,bias,deadline,a.timeout,a.poll_interval,a.exhibition_safety_seconds
+    );stages['fetch_and_build_exhibition_s']=time.perf_counter()-t
     t=time.perf_counter(); pf=player_flat(cards[code],state); src=make_boats(cards[code],waku[code],exh,pf);stages['build_v283_inputs_s']=time.perf_counter()-t
     art=load_artifact()
     t=time.perf_counter(); sr,cr=derive(src,art);p2=score_second(sr,art);pc=score_conditional_third(cr,art);tickets=live.production_tickets(p2,pc);pairs=[tuple(map(int,x.split('-')[1:])) for x in tickets];mass=pair_mass(p2,pc,pairs);stages['v283_inference_s']=time.perf_counter()-t
-    t=time.perf_counter();odds,meta=fetch_boatcast_odds(a.date,a.jcd,a.race,deadline,a.timeout);stages['fetch_odds_s']=time.perf_counter()-t
+    t=time.perf_counter();odds,meta,od_attempts,od_last=wait_odds_ready(
+        a.date,a.jcd,a.race,deadline,a.timeout,min(1.5,a.poll_interval),a.odds_safety_seconds
+    );stages['fetch_odds_s']=time.perf_counter()-t
     vals=[float(odds[x]) for x in tickets];comp=live.composite_odds(vals);d=decide(hp,mass,comp)
     now=live.require_before_deadline(deadline,'before fast120 persist')
     out={
@@ -232,6 +263,8 @@ def main():
       **d,'decision':'BET' if d['selected'] and monitored else ('BENCHMARK_ONLY' if not monitored else 'PASS'),
       'daily_state_history_end':state.get('history_end'),'september_prior_history_allowed':True,
       'target_race_result_used':False,'payout_used':False,'current_exhibition_used':True,'predeadline_odds_used':True,'odds_source':'BOATCAST_bc_smt_od3',
+      'exhibition_attempts':ex_attempts,'exhibition_last_retry_error':ex_last,'odds_attempts':od_attempts,'odds_last_retry_error':od_last,
+      'safety_seconds':{'exhibition':a.exhibition_safety_seconds,'odds':a.odds_safety_seconds},
       'odds_snapshot':meta,'deadline_jst':deadline.isoformat(),'decision_time_jst':now.isoformat(),
       'stages_seconds':stages,'total_seconds':time.perf_counter()-total0,
     }
