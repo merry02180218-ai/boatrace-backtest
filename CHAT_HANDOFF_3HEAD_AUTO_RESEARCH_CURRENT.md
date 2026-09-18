@@ -303,3 +303,22 @@ Changes in research/run_3head_funsite_broad50.py:
 - Select/freeze Wave5 only from February. Optimize volume subject to both Feb blocks >=50% and >=12 support; expose a precision-first alternative too.
 - Only after Wave5 freeze evaluate March one-shot. Do not tune Wave5 aggregation thresholds from March outcomes.
 - September outcomes remain UNREAD; production v288 unchanged.
+
+
+## AFTER WORK — Broad50 Wave5 verified (Run 35305921651, 2026-09-18)
+- SUCCESS: Run **35305921651** / Job **105477975800** / Artifact **10530928522**; head SHA **dd33b46bb1bb7cbdf0c600c27eee1ff6718418de**.
+- Reconstructed Wave4 strict50 candidates using February only: 40 raw strict50 candidates / **22 unique masks**.
+- Aggregation search produced **188** Feb-strict50 vote/union/intersection candidates.
+- Volume-frozen greedy union: Feb v1 **21R/11=52.38%**, v2 **30R/15=50.0%** (51 validation races total). March one-shot **106R/44=41.51%**, early 27/53=50.94%, late 17/53=32.08%, 24 venues.
+- Precision-frozen pair intersection: Feb v1 **13R/7=53.85%**, v2 **13R/7=53.85%**. March one-shot **36R/16=44.44%**, early 10/18=55.56%, late 6/18=33.33%, 16 venues.
+- Conclusion: aggregation expands Feb support while preserving 50%, but does NOT improve March generalization versus Wave4's 84R/38=45.24%. Recombining the same information family is exhausted for now.
+- Strong repeated observation (diagnostic only, NOT a threshold-tuning input): Wave4/Wave5 March early halves are around 50%+, while late halves weaken materially. Treat this as evidence to improve temporal generalization, not as permission to exclude March dates.
+- Production v288 unchanged; September outcomes UNREAD.
+
+## BEFORE WORK — Source horizon / recent-meet leakage audit before Wave6 (2026-09-18)
+- Before adding another model family, verify whether the frozen Wave21 settled source contains January or earlier races that can safely be used as additional pre-Feb training history.
+- Inspect source min/max date and monthly row counts without reading September outcomes.
+- Inspect BoatraceCSV/fun-site `recent_national` / `recent_local` schema for date fields associated with previous meets; verify whether prior-meet end/start dates are available and can be fail-closed checked against target race date.
+- If January settled labels are available, preferred Wave6 is: January training -> February rolling/stability selection -> March one-shot, using the early-race/opponent-specific representation. This is a materially new temporal-training design and does not tune from March.
+- If January labels are not available, retain February-only labels and use only schema-verified recency/freshness features whose timestamps strictly precede target race date.
+- September outcomes remain UNREAD; production v288 unchanged.
