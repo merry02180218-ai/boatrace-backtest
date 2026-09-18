@@ -1,5 +1,6 @@
 from __future__ import annotations
 import csv, io, json, re, urllib.request, warnings
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import numpy as np
 import pandas as pd
 from sklearn.pipeline import make_pipeline
@@ -129,25 +130,35 @@ def load_canonical():
 
 def build_pre(start,end,need_results=False):
     rows=[];res=[];bad_races=0;bad_sessions=0;days_ok=0
-    for day in pd.date_range(start,end):
-        parts={k:fetch(k,day.date()) for k in ['programs/race_cards','programs/recent_national','programs/recent_local']}
+    days=list(pd.date_range(start,end))
+    kinds=['programs/race_cards','programs/recent_national','programs/recent_local']
+    if need_results:kinds.append('results/realtime')
+    cache={}
+    with ThreadPoolExecutor(max_workers=16) as ex:
+        fut={ex.submit(fetch,k,day.date()):(day,k) for day in days for k in kinds}
+        for f in as_completed(fut):
+            day,k=fut[f]
+            try:cache[(day,k)]=f.result()
+            except Exception:cache[(day,k)]=[]
+    for day in days:
+        parts={k:cache.get((day,k),[]) for k in ['programs/race_cards','programs/recent_national','programs/recent_local']}
         if not all(parts.values()):continue
         days_ok+=1
         maps={k:{str(r.get('レースコード','')):r for r in v} for k,v in parts.items()}
         keys=set.intersection(*[set(m) for m in maps.values()])
-        for c in keys:
-            if not c.isdigit():continue
-            o,bad=make_row(maps['programs/race_cards'][c],maps['programs/recent_national'][c],maps['programs/recent_local'][c],pd.Timestamp(day.date()))
+        for rc_code in keys:
+            if not rc_code.isdigit():continue
+            o,bad=make_row(maps['programs/race_cards'][rc_code],maps['programs/recent_national'][rc_code],maps['programs/recent_local'][rc_code],pd.Timestamp(day.date()))
             if o is None:
                 bad_races+=1;bad_sessions+=bad;continue
             o['date']=pd.Timestamp(day.date())
             rows.append(o)
         if need_results:
-            for rr in fetch('results/realtime',day.date()):
-                c=str(rr.get('レースコード',''))
+            for rr in cache.get((day,'results/realtime'),[]):
+                rc_code=str(rr.get('レースコード',''))
                 w=str(rr.get('1着_艇番','')).strip()
-                if c.isdigit() and w in {'1','2','3','4','5','6'}:
-                    res.append({'rc':int(c),'result_winner':int(w),'result_date':pd.Timestamp(day.date())})
+                if rc_code.isdigit() and w in {'1','2','3','4','5','6'}:
+                    res.append({'rc':int(rc_code),'result_winner':int(w),'result_date':pd.Timestamp(day.date())})
     x=pd.DataFrame(rows)
     if len(x):
         x=x.drop_duplicates('rc')
@@ -313,7 +324,7 @@ def main():
     for band in BANDS:
         if int(band_mask(jan,band).sum())<300:continue
         used,mats=signal_context(jan,frames,band)
-        stacks=model_context(jan,frames,band,feats)
+        stacks=model_context(jan,{'jan':jan,'feb':feb,'mar':mar},band,feats)
         bf=band_mask(feb,band);bm=band_mask(mar,band)
 
         # Model-only percentile consensus.
@@ -327,8 +338,7 @@ def main():
 
         # Mean model-percentile score.
         meanf=np.nanmean(stacks['feb'],axis=1);meanm=np.nanmean(stacks['mar'],axis=1)
-        train_stack=model_context(jan,{'jan':jan},band,feats)['jan']
-        meanj=np.nanmean(train_stack,axis=1)
+        meanj=np.nanmean(stacks['jan'],axis=1)
         ref=meanj[band_mask(jan,band)&np.isfinite(meanj)]
         for q in QS:
             th=float(np.quantile(ref,q))
