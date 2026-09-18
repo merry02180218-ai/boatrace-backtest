@@ -61,3 +61,7 @@ BASE: 131 hits, stake 82800, return 86390, profit +3590, ROI 104.34%.
 - 失敗時にも result/summary とartifactを可能な範囲で残すよう `if: always()` を追加。
 - 修正commit: `53b1a4f9b8bdcb9c6f202ba96dfef5e5552687c7`
 - **次の再開地点:** `.github/workflows/v351-1head-joint-roi-grid.yml` を手動発火し、fresh Runのaudit jobを確認。成功ならArtifactの `summary.csv/monthly.csv/result.json` を回収し、441セルのraw best + 周辺安定帯 + production比較を監査する。失敗ならログから次の原因を特定し、盲目的rerunしない。
+
+## BEFORE — Run 35238661088 failure fix
+- Run 35238661088 / Job 105261103198 logs verified: dependency install succeeded, then `cache_v321_julaug_nonpristine_head.csv` missing in `v337.load_candidate_base()`.
+- これからやること: 正常監査と同じ v321 prepare/second/base-third/third cache pipelineをjoint ROI workflowへ追加し、audit jobへ全cacheをdownloadしてから441-cell scriptを実行する。9/17 result/payout UNREAD guardは維持。
