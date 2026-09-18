@@ -386,6 +386,8 @@ def load_newfeature_artifact():
     return a
 
 def newfeature_motor_raw(card,state,jcd):
+    if 'motors_newfeature_nov2025' not in state:
+        raise Fast120NotReady('daily state lacks motors_newfeature_nov2025; rebuild state with current prepare_4head_120r_daily_state.py')
     hist=state.get('motors_newfeature_nov2025') or {}
     if state.get('newfeature_motor_history_start') not in (None,'2025-11-01'):
         raise Fast120Error(f"newfeature motor history start mismatch: {state.get('newfeature_motor_history_start')}")
@@ -615,7 +617,13 @@ def main():
         persist_no_bet_not_ready(a,code,deadline,'ODDS',e,total0,stages,monitored,hp,state)
         return
     stages['fetch_odds_s']=time.perf_counter()-t
-    vals=[float(odds[x]) for x in tickets];comp=composite_odds(vals);d=newfeature_decide(hp,mass,comp,exh,cards[code],state,a.jcd)
+    vals=[float(odds[x]) for x in tickets];comp=composite_odds(vals)
+    try:
+        d=newfeature_decide(hp,mass,comp,exh,cards[code],state,a.jcd)
+    except Fast120NotReady as e:
+        stages['newfeature_state_s']=0.0
+        persist_no_bet_not_ready(a,code,deadline,'NEWFEATURE_STATE',e,total0,stages,monitored,hp,state)
+        return
     wallshadow=wall3_open_shadow(hp,mass,comp,exh,d['selected'])
     if a.performance_benchmark:
         now=datetime.now(JST)
