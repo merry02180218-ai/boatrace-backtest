@@ -211,12 +211,52 @@ def candidate_universe(pred):
                             's1':s1,'q1':q1,'s2':s2,'q2':q2})
     return out
 
-def evaluate(pred,c):
-    sub=pred[(pred.window==c['window'])&(pred.gate_mode==c['gate_mode'])].copy()
-    m=mask_candidate(sub,c);day=sub.date.dt.day.to_numpy()
+def build_eval_cache(pred):
+    cache={}
+    for window in WINDOWS:
+      for gate_mode in ['pct','positive']:
+        sub=pred[(pred.window==window)&(pred.gate_mode==gate_mode)].copy()
+        if len(sub)==0:continue
+        venues=pd.factorize(sub.venue.astype(str))[0]
+        arrays={
+          'sub':sub,
+          'rn':pd.to_numeric(sub.race_no,errors='coerce').to_numpy(float),
+          'day':sub.date.dt.day.to_numpy(),
+          'y':sub.y.to_numpy(dtype=int),
+          'venue_codes':venues,
+        }
+        for col in sub.columns:
+            if col.startswith('s_') or col in ['p_logit','p_hist','p_mean']:
+                arrays[col]=pd.to_numeric(sub[col],errors='coerce').to_numpy(float)
+        cache[(window,gate_mode)]=arrays
+    return cache
+
+def fast_metric(mask,arr):
+    m=np.asarray(mask,bool);n=int(m.sum());y=arr['y']
+    return {'n':n,'hits':int(y[m].sum()) if n else 0,
+            'rate':float(y[m].mean()) if n else None,
+            'venues':int(np.unique(arr['venue_codes'][m]).size) if n else 0}
+
+def evaluate_fast(cache,c):
+    arr=cache[(c['window'],c['gate_mode'])]
+    rn=arr['rn'];lo,hi=c['band'];m=(rn>=lo)&(rn<=hi)
+    if c['kind']=='scenario':
+        m &= arr['s_'+c['scenario']]>=c['q']
+    elif c['kind']=='model':
+        m &= arr[c['model']]>=c['q']
+    elif c['kind']=='scenario_model':
+        m &= arr['s_'+c['scenario']]>=c['sq']
+        m &= arr[c['model']]>=c['mq']
+    else:
+        m &= arr['s_'+c['s1']]>=c['q1']
+        m &= arr['s_'+c['s2']]>=c['q2']
+    day=arr['day']
     z=dict(c)
-    z['h1']=metric(m&(day<=14),sub);z['h2']=metric(m&(day>=15),sub)
-    z['weeks']=weekly(m,sub)
+    z['h1']=fast_metric(m&(day<=14),arr);z['h2']=fast_metric(m&(day>=15),arr)
+    weeks=[]
+    for lo2,hi2 in [(1,7),(8,14),(15,21),(22,28)]:
+        w=fast_metric(m&(day>=lo2)&(day<=hi2),arr);w['week']=f'{lo2:02d}-{hi2:02d}';weeks.append(w)
+    z['weeks']=weeks
     return z
 
 def summarize(z):
@@ -247,7 +287,8 @@ def main():
     history=pd.concat([jan,feb],ignore_index=True,sort=False)
     pred=walk_predictions(history,feb)
     universe=candidate_universe(pred)
-    evals=[evaluate(pred,c) for c in universe]
+    eval_cache=build_eval_cache(pred)
+    evals=[evaluate_fast(eval_cache,c) for c in universe]
 
     frontier={}
     for mn in SUPPORTS:
