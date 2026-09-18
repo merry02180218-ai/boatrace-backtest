@@ -324,3 +324,84 @@ Status: `MARKET_REGIME_COMPLETE__PRODUCTION_S_OVERLAY_TRIGGERED`
 5. Explicitly determine the **minimum number/share of current BETs that must be removed** before Jul-Aug retrospective ROI can reach >=100 while keeping final race count near or above baseline.
 
 Status: `VOLUME_PRESERVING_ROTATION_RESEARCH_START`
+
+
+## VOLUME-PRESERVING ROI RESEARCH — interim exact replay from official Run 35302541048 artifact
+User priority: reduce BET race count as little as possible, but raise ROI.
+
+### 1) Expansion-only ceiling
+- Keep every current comp>=7 BET and only add rescue races.
+- Across the audited rescue grid, Jul-Aug retrospective ROI cannot reach 100%.
+- Best Jul-Aug expansion-only point is approximately:
+  - final 55R
+  - ROI 88.89%
+  - rescue: head_prob>=0.20 / opponent_mass>=0.375 / no lower comp cut
+- Conclusion: **zero-removal expansion is insufficient**. Some current high-comp BET replacement is necessary if the goal is ROI>=100 in Jul-Aug.
+
+### 2) Minimum-removal hindsight attribution
+These are Jul-Aug outcome-aware diagnostics only; NOT eligible for direct promotion.
+- Pooled Jul-Aug ROI>=100 while final R>=current 23R:
+  - minimum current BET removals: 6/23
+  - rescue additions: 26
+  - final 43R
+  - ROI ~101.27%
+  - but August remains only ~59.87%, so monthly stability fails.
+- Requiring both July and August ROI>=100 while final Jul-Aug R>=23:
+  - minimum current BET removals: 18/23
+  - rescue additions: 30
+  - final 35R
+  - Jul ROI ~113.10%
+  - Aug ROI ~100.76%
+  - pooled Jul-Aug ROI ~108.52%
+- Interpretation: total race count can be preserved/increased, but the old high-comp portfolio itself would need substantial rotation. A tiny prune is not enough for both months.
+
+### 3) New Apr-Aug NON-PRISTINE model-selection candidate
+Because Jul/Aug are already research-exposed, a NEW candidate may use Apr-Aug for model selection while keeping September fully UNREAD.
+Selection constraints:
+- Apr-Jun final R >= current 22
+- Jul-Aug final R >= current 23
+- total final R >= current 45
+- overall retrospective ROI > current 124.8622%
+- maximize 5-month minimum ROI first, then overall ROI, then R
+
+Balanced selected rule from the exact 164R replay:
+- KEEP current BET only when `opponent_mass >= 0.425`
+- ADD current PASS when:
+  - `head_prob >= 0.22`
+  - `opponent_mass >= 0.375`
+  - `composite_odds >= 3.0`
+- no additional drop-head-probability condition
+
+Balanced result:
+- current baseline: 45R / retrospective ROI 124.86% / monthly floor 0%
+- balanced candidate: **77R / retrospective ROI 141.17% / monthly floor 85.80%**
+- Apr-Jun: 53R / ROI 133.49%
+- Jul-Aug: 24R / ROI 158.12%
+Monthly:
+- Apr: 15R / ROI 197.63%
+- May: 20R / ROI 88.81%
+- Jun: 18R / ROI 129.69%
+- Jul: 16R / ROI 194.29%
+- Aug: 8R / ROI 85.80%
+This candidate improves both total race volume and aggregate ROI, and removes the 0%-ROI months, but still has May/Aug below 100. Therefore it is a **research candidate**, not production proof.
+
+Neighborhood evidence around selected point:
+- selected neighborhood uses drop_mass .40/.425/.45, rescue_head .20/.22/.24, rescue_mass .35/.375/.40, rescue comp 0/3/3.5.
+- multiple neighboring cells remain above current overall ROI with >=45R; the selected cell is chosen for the best 5-month ROI floor under the no-volume-reduction constraints.
+- further reproducibility/Actions audit is required before any promotion.
+
+### GitHub implementation
+- volume-preserving rotation audit script: `6f5398d5788bb4a1f9a78fc82a99c0755d600d41`
+- workflow: `237558a54fba1cea072d0c104d5295f01f505330`
+- trigger: `a1b4c01b6dcdbbb18c02afe18e946407cef1033c`
+- balanced selection audit script: `b05fa95145c2edb6b7fd876cb72481407aef8313`
+- balanced workflow: `75bac232a1a3def4a6b4a25fa8a43b93a31b9b7c`
+- balanced trigger: `1f68f9d95ec0ce77cf4e863366df07ac7cd679d9`
+
+### Guardrails
+- All figures above use archived/closing odds retrospective diagnostics only.
+- Formal prospective ROI remains NOT_COMPUTABLE.
+- September 2026 outcomes/results remain UNREAD.
+- Production remains unchanged pending reproducibility audit and explicit promotion decision.
+
+Status: `VOLUME_ROI_BALANCED_CANDIDATE_TRIGGERED`
