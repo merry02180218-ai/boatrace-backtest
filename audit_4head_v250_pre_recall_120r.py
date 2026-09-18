@@ -41,6 +41,10 @@ def main():
         miss=sorted(final-set(z.race_code))
         raise RuntimeError(f'final120 absent from PRE universe: {miss[:10]}')
 
+    # Persist per-race PRE scores for downstream pre-candidate combination audits.
+    z[['date','month','race_code','p4head','y4head']].rename(columns={'p4head':'v250_PRE'}).to_csv(OUT/'pre_scores_all.csv',index=False)
+    z[z.race_code.isin(final)][['date','month','race_code','p4head','y4head']].rename(columns={'p4head':'v250_PRE'}).to_csv(OUT/'pre_scores_final120.csv',index=False)
+
     rows=[]
     for cut in CUTS:
         m=z.p4head.ge(cut)
