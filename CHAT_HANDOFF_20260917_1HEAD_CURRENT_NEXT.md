@@ -1651,3 +1651,11 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - 10329564703 / 10330810260 / 10330651756 / 10329684566 / 10330273057 / 10330357729
 - 修正方針: repo archiveを第一source、欠損のみv340 frozen shard `odds_json` をfallbackとして使う。ネット再取得はしない。
 - 165/165 coverageを必須sentinelにしてfresh Run。
+
+
+## v370 second coverage failure — current LIVE固有1R
+- Run `35358619903` / Job `105644044180` failure。
+- repo archive + v340 frozen shardsで missing 21R -> **1R** まで回復。
+- 残り `202608210402` はcurrent LIVE165には含まれるが旧v340 production276には含まれず、frozen shardにも存在しない。
+- 修正: この1Rのみ v340と同じ BOAT RACE公式historical `odds3t` endpointをfallback使用。取得sourceをrace_inputs/resultへ明記し、今回Artifactに固定。
+- 165/165 coverage必須は維持。allocation条件は変更しない。
