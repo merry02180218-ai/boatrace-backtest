@@ -433,3 +433,17 @@ Changes in research/run_3head_funsite_broad50.py:
   - >=200R/half: H1 **64/224=28.57%**, H2 **74/268=27.61%**; worst-half **27.61%**; combined **138/492=28.05%**.
 - Important secondary diagnostic: at >=20R/half, the highest **combined** rate was 25/59=42.37%, but it was temporally broken: H1 **4/20=20.0%** vs H2 **21/39=53.85%**. This demonstrates why combined head rate alone is misleading for this problem.
 - Conclusion: with the current leakage-safe PRE information family, the empirical February walk-forward ceiling is **just under 40% even at only ~20-30 races per half**; by >=50 races/half it is ~34-35%, and by >=100 races/half ~32-33%. A useful-volume 50% target is not supported by this feature family. This is an empirical ceiling for the tested family/time period, not a proof that no materially new PRE information can exceed it.
+
+
+## BEFORE WORK — Broad50 Wave10 nonlinear PRE interaction / scenario-score research (2026-09-18)
+- User explicitly requested testing whether existing PRE variables can be **multiplied/interacted into new information-bearing features** rather than adding new external data.
+- Keep the Wave7 leakage-safe daily walk-forward protocol and **February-only evaluation**. March must remain unopened in Wave10. September outcomes UNREAD; production v288 unchanged.
+- For each target day/window, normalize base PRE signals against the trailing-training distribution only, then construct interpretable nonlinear scenario components:
+  1. **WALL_BREAK** = joint boat3-vs-boat2 player-strength and ST superiority;
+  2. **INNER_COLLAPSE** = joint boat3 superiority versus boats 1 and 2 (player/ST), representing an inside pair vulnerable to boat3 attack;
+  3. **ATTACK_SYNERGY** = interaction of boat3 inner-player, start, motor and recent-form attack signals;
+  4. **COUNTER_SAFETY** = joint boat3 superiority/control versus boat4, reducing counter-attack risk.
+- Build multiple nonlinear aggregators without outcome peeking: geometric mean, multiplicative product, harmonic/bottleneck-style minimum, and selected pair/triple products. All transformations are fixed in code before February labels are scored.
+- Train compact logistic/hist models on the derived scenario features and also test direct scenario-score gates / scenario+model conjunctions.
+- Primary benchmark is Wave9's support-size ceiling, using the exact same metric: maximize worst-half Feb head rate subject to >=8 venues and minimum support per half 20/30/50/75/100 (plus 150/200 if available).
+- Wave10 counts as useful only if it materially raises the **worst-half** ceiling, not merely combined head rate or one-half performance. Weekly diagnostics remain mandatory.
