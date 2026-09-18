@@ -37,3 +37,10 @@
 - `research_v289_3head_addon.json`
 - `research_v289_3head_addon.md`
 
+
+## BEFORE WORK — fun-site 横持ち修正 (2026-09-18)
+- Failed Run 35237419155 / Job 105256810260 was inspected.
+- Root cause: fun-site race_cards/recent_* are one-row-per-race wide CSVs keyed by レースコード, with 艇1_..艇6_.. columns; previous script incorrectly assumed boat-level long rows.
+- Rewrite feature builder to join race_cards + recent_national + recent_local by レースコード, use only pre-deadline fields, and derive boat3 own/relative features plus prior-session summaries.
+- February-only model/threshold selection; March one-shot diagnostic only. September outcomes remain UNREAD.
+- Production v288 unchanged.
