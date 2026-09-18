@@ -8,6 +8,7 @@ on:
     branches: [ main ]
     paths:
       - 'fetch_1head_v351_biyori_cards.py'
+      - 'run_1head_v351_live_expansion_shadow.py'
       - '.github/workflows/prepare-1head-v351-daily-0300-jst.yml'
 
 permissions:
@@ -37,6 +38,13 @@ jobs:
         run: python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
       - name: Build all-race v351 cache
         run: python prepare_1head_v351_live_cache.py --date "$ISO_DATE" --cards "$CARDS" --out /tmp/daily
+      - name: Build expansion PRE Shadow candidates
+        run: |
+          python run_1head_v351_live_expansion_shadow.py scan \
+            --cache-dir /tmp/daily \
+            --csv-out /tmp/daily/expansion_pre_shadow.csv \
+            --json-out /tmp/daily/expansion_pre_shadow_meta.json
+
       - name: Build PRE candidate summary
         run: |
           python - <<'PY'
