@@ -1,0 +1,20 @@
+{
+  "run_id": 35378456509,
+  "run_url": "https://github.com/merry02180218-ai/boatrace-backtest/actions/runs/35378456509",
+  "head_sha": "bf2c8a417c26c9153ce264e89a17fb9d7a852677",
+  "jobs": [
+    {
+      "id": 105708674939,
+      "name": "audit",
+      "status": "in_progress",
+      "conclusion": null
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 10561425801,
+      "name": "v372-value-gated-lomo-preclose-35378456509",
+      "size_in_bytes": 30792
+    }
+  ]
+}
