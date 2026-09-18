@@ -1,3 +1,4 @@
 trigger 2026-09-18 Gamagori 5R full-path live test
 rerun after stale live reference fix
 rerun after ticket normalization fix
+rerun with official odds3t primary
