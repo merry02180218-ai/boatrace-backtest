@@ -1560,3 +1560,13 @@ Status: `HEAD4_120R_STRICT_MONITOR_GATE_AND_FAILCLOSED_PASS__FINAL_BET_PASS_PEND
 - Next required action is unchanged: execute the strict monitored workflow on Marugame 10R after exhibition publication and before the official deadline.
 
 Status: `HEAD4_120R_POSTRACE_ODDS_NOT_RETAINED__PROSPECTIVE_TRUE_PARENT_PROOF_REQUIRED`
+
+
+## BEFORE WORK — keep strict monitored job alive until exhibition or safety cutoff
+- User approved changing the Marugame 10R live behavior so a 19:22 start does not stop after only ~30 seconds when exhibition is still unpublished.
+- Change the reusable strict monitored workflow so one invocation keeps polling exhibition until either:
+  1. complete exhibition data becomes available, then immediately continue v283 -> odds -> BET/PASS; or
+  2. deadline headroom reaches the existing exhibition safety cutoff (75 seconds), then fail closed as NO_BET_DATA_NOT_READY.
+- Keep 2-second exhibition polling, existing odds/final safety guards, strict monitoring_parent gating, and result/payout prohibition.
+- Increase workflow timeout so the runner can remain alive across the full pre-deadline window.
+- Update the scheduled 19:22 automation instructions to require this persistent-wait behavior.
