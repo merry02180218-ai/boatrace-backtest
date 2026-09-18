@@ -26,8 +26,19 @@ jobs:
           mkdir -p /tmp/v360
           unzip -q /tmp/v360.zip -d /tmp/v360
           test -f /tmp/v360/prepared_rows.pkl
+      - name: Download frozen v340 official odds fallback
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/v340frozen
+          for id in 10329564703 10330810260 10330651756 10329684566 10330273057 10330357729; do
+            gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$id/zip" > "/tmp/v340-$id.zip"
+            unzip -q -o "/tmp/v340-$id.zip" -d /tmp/v340frozen
+          done
+          ls -l /tmp/v340frozen/odds_*.csv
       - name: Run dynamic odds staking audit
-        run: python run_v370_1head_dynamic_odds_staking.py --prepared /tmp/v360/prepared_rows.pkl
+        run: python run_v370_1head_dynamic_odds_staking.py --prepared /tmp/v360/prepared_rows.pkl --frozen-odds /tmp/v340frozen
       - name: Show result
         if: always()
         run: |
