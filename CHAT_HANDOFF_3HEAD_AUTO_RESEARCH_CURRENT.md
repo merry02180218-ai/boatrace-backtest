@@ -176,3 +176,11 @@ Changes in research/run_3head_funsite_broad50.py:
 - Before each new research modification fetch latest main + latest handoff SHA.
 - Append BEFORE before work and AFTER after verified Actions result with exact commit SHA / Run / Job / Artifact / conclusion / next restart.
 - Never claim completion just because code was committed; verify the fresh Actions run.
+
+
+## BEFORE WORK — Broad50 Run 35302745294 failure repair (2026-09-18)
+- Fresh workflow_dispatch was verified: Run **35302745294** / Job **105468616620**, head SHA **fafada437d6771bc5be14a476727b4133b246f0e**.
+- Run failed inside `research/run_3head_funsite_broad50.py`; exact root cause is implementation-only: `s2` is a NumPy ndarray but line 73 calls `s2.assign(...)`.
+- Secondary defect found during source inspection before patching: the newly added `diagnostic_topn` block was written as literal `\\n` text on one physical comment line, which would leave `out` undefined after the first failure is fixed.
+- Repair both defects only; preserve February-only selection/stability logic, March frozen one-shot semantics, v288 production unchanged, July/August NON-PRISTINE, and September outcomes UNREAD.
+- After patch, require a fresh run from a new main SHA; do not rerun Run 35302745294.
