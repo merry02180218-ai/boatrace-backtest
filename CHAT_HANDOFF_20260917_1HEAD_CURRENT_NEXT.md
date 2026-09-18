@@ -2665,3 +2665,13 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - repoにhistorical pre-close odds snapshotが存在するか調査。
 - snapshotがなければ、v371はupper-bound研究として保存し、今後forward LIVEで判定時オッズを保存するlogger設計へ進む。
 - formal tickets/race setは変更しない。
+
+## BEFORE — 2026-09-19 v372 LOMO + pre-close odds feasibility continuation
+- ユーザー指示: dynamic staking / BOAT RACE公式締切3連単オッズを使った買い方研究の続き。
+- 最新main/handoff確認済み。v371は165R全購入・formal 3点固定のvalue-gated top-upで ALL ROI 142.10%、SUPPORT 131.92%だが、closing odds使用のためexecution upper-bound扱い。
+- これからやること:
+  1. v371 familyをDEV Feb-JunでLOMO再選定し、各holdout月の外部月差を監査。
+  2. v371 DEV plateau 8 cellsをSUPPORT Jul-Augへ固定適用してrobustnessのみ診断（SUPPORTで選定しない）。
+  3. repo内のhistorical pre-close/current odds snapshot保存実装の有無を監査。
+  4. snapshotが無ければforward LIVE用に判定時オッズを保存するlogger設計/実装へ進む。
+- formal race set/ticketsは変更しない。September outcomes/payoutsはUNREAD維持。production/LIVE betting ruleはこの研究だけでは変更しない。
