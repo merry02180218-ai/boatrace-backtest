@@ -85,6 +85,14 @@ WALL3_RANK3_ALLOC_SHADOW_FIVE6_ONLY_STAKES_YEN = (200, 200, 200)
 WALL3_RANK3_ALLOC_SHADOW_NONE_STAKES_YEN = (100, 100, 100)
 WALL3_RANK3_ALLOC_SHADOW_RESEARCH_ONLY = True
 
+
+# Research-only current-odds allocation shadow.
+# This does NOT change formal tickets or official stakes. It is evaluated only
+# after formal LIVE tickets are fixed, using BOAT RACE official current odds3t.
+CURRENT_ODDS_ALLOC_SHADOW_PROFILE_NAME = "1HEAD_CURRENT_ODDS_ALLOC_SHADOW_V382_SOFT35_WALL3_114"
+CURRENT_ODDS_SOFT_RATIO_MIN = 3.50
+CURRENT_ODDS_ALLOC_SHADOW_RESEARCH_ONLY = True
+
 # v345 adopted HEAD-side component weights. Historical names are retained for
 # compatibility with frozen research modules.
 ATTACK_CORE_VERSION = "v345"
