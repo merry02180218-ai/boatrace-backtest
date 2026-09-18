@@ -1,0 +1,39 @@
+name: research-3head-wave22-march-frozen
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'research/run_3head_wave22_march_frozen.py'
+      - '.github/workflows/research-3head-wave22-march-frozen.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  wave22:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn
+      - name: Download frozen Wave21 source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api repos/${{ github.repository }}/actions/artifacts/10317157868/zip > /tmp/wave21.zip
+          unzip -oq /tmp/wave21.zip -d /tmp/wave21
+          SRC=$(find /tmp/wave21 -type f -name 'analysis_v289_3head_wave21_allrace_feature_settled.csv' | head -1)
+          test -n "$SRC"
+          cp "$SRC" analysis_v289_3head_wave21_allrace_feature_settled.csv
+          test -s analysis_v289_3head_wave21_allrace_feature_settled.csv
+      - name: Run frozen March diagnostic
+        run: python research/run_3head_wave22_march_frozen.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-3head-wave22-march-frozen
+          path: research_3head_wave22_march_frozen_result.json
+          if-no-files-found: ignore
