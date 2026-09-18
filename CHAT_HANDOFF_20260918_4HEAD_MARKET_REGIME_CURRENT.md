@@ -3189,3 +3189,36 @@ Production remains active and unchanged:
 - 167R expansion remains research-only/not promoted.
 
 Status: `HEAD4_NEWFEATURE_PRODUCTION_OPERATIONAL_LEAKAGE_PASS__LIVE_FAILCLOSED_VERIFIED__NONPRISTINE_RESEARCH_WARN`
+
+
+## BEFORE — 2026-09-19 production start + venue-aware original exhibition handling
+User approved starting real operation today and specifically flagged that original exhibition data differs by venue. User asked to use the 1HEAD model as the reference.
+
+Confirmed 1HEAD production semantics from latest main:
+- venue-aware required original channels:
+  - JCD03 江戸川 / JCD09 津: no original-exhibition channels required.
+  - JCD12 住之江 / JCD13 尼崎 / JCD18 徳山: avg + turn required; straight is not required.
+  - most other venues: avg + turn + straight required.
+- 1HEAD never assumes all three original channels exist at all venues.
+- metric labels are normalized (直線, まわり足/回り足/ターン, 一周/ラップ) before use.
+- missing venue-nonpublished channels are not treated as a source error.
+
+HEAD4 issue found before first real operation:
+- current fast runner still requires every parsed original value/channel to be present.
+- this can incorrectly force NO_BET_DATA_NOT_READY for legitimate venue schemas.
+- HEAD4 research also used venue-dependent availability: structural pool required orig_avg_available, while wall-family features can be missing and production score freezes missing wall ranks at 0.5.
+- therefore venue handling must preserve frozen research semantics rather than inventing straight/avg information.
+
+Work now:
+1. audit the frozen 208R / production156 population by venue and original-channel availability;
+2. import the 1HEAD ORIG_REQUIRED venue contract into HEAD4;
+3. make BOATCAST original fetch optional at venues that do not publish it;
+4. require only venue-published channels and all-six completeness for those channels;
+5. preserve neutral .5 for venue-nonpublished optional wall channels, exactly matching the frozen missing-wall score contract;
+6. do NOT fabricate orig4_adv_inside: if the venue has no usable original average, any orig-dependent expansion/base structural decision must fail closed rather than silently using a synthetic value;
+7. run venue-schema unit tests for JCD03/09, 12/13/18, and standard 3-channel venues;
+8. rerun production parity/leakage tests and keep September outcomes UNREAD.
+
+No threshold/weight retuning is permitted during this fix.
+
+Status: HEAD4_PRODUCTION_START_VENUE_AWARE_ORIGINAL_FIX_BEGIN
