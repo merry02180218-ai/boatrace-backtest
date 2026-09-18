@@ -2995,3 +2995,56 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - DEV Feb-Jun only for threshold/family comparison; SUPPORT Jul-Aug evaluated after freezing.
 - Objective: determine whether +15〜35 rescue races can preserve added-band exact3/ROI better than head/exhibition score alone.
 - No current/closing odds required in this pass. September outcomes unread. Production unchanged.
+
+
+## AFTER — v388 added71 opponent-confidence rescue
+- Initial implementation:
+  - script commit `84faa62cf4e7aed7906b3bd47bc762af421e8368`
+  - workflow commit `e73e5007c83f3d9b459cb7cb87fe6d90de446705`
+- Initial Run `35382453687` / Job `105721568220` / Artifact `10562747789` is **INVALID FOR ANALYTIC CONCLUSIONS**:
+  - bug: confidence feature calculation accidentally used raw pair-probability order as the actual 3 tickets.
+  - baseline drifted to LIVE165 73 hits instead of formal87; therefore all selection metrics from that run are rejected.
+- Bug fix commit `032312577aa541bbb283343342e69570699e5f43`:
+  - formal tickets frozen to current HYBRID strategy after formal wall3+5>6.
+  - pair-confidence features are additive only.
+- Corrected Run:
+  - Run `35382584562`
+  - Job `105721997631`
+  - Artifact `10562702937`
+  - digest `sha256:34474ed65dc2548223b9b2df5c529946bbee376cee69a4abb9a24497576dc43a`
+  - SUCCESS / AUDIT_OK=true.
+- Corrected baseline identity:
+  - LIVE165 = 165R / 87 exact3 / return63,700 / ROI128.69%.
+  - added71 = 71R / 33 exact3 / return21,360 / ROI100.28%.
+  - DEV added53 ROI112.77%; SUPPORT added18 ROI63.52%.
+- DEV-only volume-first selection:
+  - family `PAIR_MARGIN` / q=.35
+  - selected 43R total = DEV34 + SUPPORT9
+  - DEV: exact3 18/34=52.94%, ROI117.55%, profit+1,790
+  - SUPPORT: **0/9 exact3, ROI0%, profit-2,700**
+  - combined LIVE+rescue 208R: ROI121.30%
+  - combined SUPPORT 37R: ROI94.59%.
+- Some stricter cells happen to improve SUPPORT (e.g. PAIR_CONC q=.55 support 3/5, ROI126.67%), but those are not DEV-selected and their DEV ROI is below100%; SUPPORT must not be used to cherry-pick them.
+- Conclusion:
+  - a single opponent-confidence scalar is not temporally stable enough.
+  - expansion head quality remains strong, but added-band ticket ranking/coverage is regime-sensitive.
+  - production unchanged / September outcomes unread.
+
+## BEFORE — v389 added71 ticket-policy consensus
+- Keep LIVE165 formal path fixed and added71 as the only expansion pool.
+- Hypothesis: added-band opponent ranking is safer when multiple pre-race ticket-ordering views agree, instead of relying on one probability-margin scalar.
+- Build result-free consensus features from the SAME post-wall3+5>6 p2/pc distribution:
+  - HYBRID top3 (formal)
+  - JOINT top3
+  - TOP2XTOP2 top3
+  - SECOND1X3 top3
+  - SECOND3X1 top3
+  - overlap counts with formal HYBRID
+  - number of formal tickets supported by multiple strategies
+  - formal 3-ticket pair-prob mass
+  - best-outside probability / weakest-formal probability risk ratio
+- Candidate rules are selected on Feb-Jun DEV only.
+- Include DEV leave-one-month-out stability when choosing among comparable volume candidates.
+- Jul-Aug SUPPORT is evaluated only after freezing the candidate.
+- Goal remains +15〜35R rescue with formal 3-ticket count unchanged.
+- September outcomes/payouts unread. Production unchanged.
