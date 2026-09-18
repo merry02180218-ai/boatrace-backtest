@@ -215,3 +215,30 @@ Run `35302541048`
   6. classify persistent-vs-month-specific-vs-observable-structure-vs-sample-noise,
   7. only if justified, design the next pre-result conditional gate.
 - September 2026 results remain `UNREAD`; production remains unchanged.
+
+
+## BEFORE — 2026-09-18 — production S-score overlay on 164R research candidate
+- Market-regime Run `35302541048` remains in progress, so continuation is not blocked on its official artifact.
+- Important population distinction confirmed from GitHub history:
+  - 164R (Apr-Jun 86R / Jul-Aug 78R) is the independently audited **head-rate research candidate**.
+  - production S itself is still frozen `PRE>=.28 / POST>=.25 / ENV_ENTRY>=.224790`.
+  - therefore the 164R set must not be called the production candidate population.
+- Local reconstruction of the current market-regime audit from prior verified race_detail shows:
+  - Jul and Aug both have zero ticket hits on comp>=7 (July 16R, August 7R), so the reversal is not July-only.
+  - head_prob does not deteriorate materially on the high-comp side.
+  - opponent_mass shifts materially lower on Jul-Aug high-comp, while orig4 advantage does not explain the collapse.
+  - simple comp<7 inversion is not monthly robust because August comp<7 ROI remains below 100%.
+- Next diagnostic: overlay the exact frozen production PRE/POST/ENV_ENTRY scores onto the same 164R research population without changing any thresholds.
+- Implementation added:
+  - `audit_4head_research_candidate_production_s_overlay.py` commit `9102c4c543b5fb031bb981e2f20e9ca923dc4751`
+  - workflow commit `5ae95d325844b3a0cc0221c04185bb5a799f0194`
+- The overlay audit:
+  1. fits only the frozen PRE state through 2026-06-30 and parity-checks June lineage,
+  2. uses the persisted frozen POST/ENV_ENTRY artifact through 2026-06-30,
+  3. reconstructs Apr-Aug pre-result features,
+  4. applies only the existing frozen S cuts,
+  5. reports whether the bad Jul-Aug comp>=7 research races would already have failed production S before the result,
+  6. never retunes thresholds and never promotes a rule from this diagnostic.
+- September 2026 outcomes remain `UNREAD`; v96 remains prohibited; production unchanged.
+
+Status: `PRODUCTION_S_OVERLAY_READY_TO_RUN`
