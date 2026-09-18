@@ -1610,3 +1610,28 @@ Status: `HEAD4_120R_STRICT_MONITOR_PERSIST_UNTIL_EXHIBITION_OR_75S_CUTOFF`
 - Report: R, changes vs base120, head4 rate, exact3 hits, retrospective ROI, Apr-Jun vs Jul-Aug, every month, monthly ROI floor, wall-score strata.
 - Selection preference: higher monthly ROI floor first, then overall ROI/head4 rate, with smaller set churn and R closer to 120.
 - This is retrospective research, not production proof. No automatic promotion even if improved.
+
+
+## INTERIM — formal wall3 audit first result / fine rescue follow-up
+- Official successful audit:
+  - Run `35334723879`
+  - Job `105566807656`
+  - Artifact `10541624968`
+  - head `1bc801f5f27e5bcbc5b178864546093a5b1f4496`
+  - SUCCESS / AUDIT_OK / September outcomes unread.
+- Frozen 120R reproduced exactly: 120R / head4 53 (44.17%) / exact3 30 / retrospective ROI 127.7217% / monthly floor 101.75%.
+- Formal wall available for 144/164 research-universe races.
+- Critical directional finding:
+  - positive/strong wall3 is **not** a useful 4-head DROP signal. BASE120 wall_score>=.20 was 10R / head4 60% / exact3 50% / retrospective ROI 351.02%; penalizing positive wall generally worsened results.
+  - therefore do NOT use the 1HEAD concept symmetrically as a strong-wall 4-head veto.
+- Pure open-wall rescue at the **same frozen 120R thresholds** is promising:
+  - keep every existing 120R;
+  - comp>=2.5 / base quality threshold .82 unchanged;
+  - add only `0.10 * max(0,-wall_score)` to extra-layer quality;
+  - no attack4 minimum, no block penalty.
+  - Result: **123R**, head4 **56/123 = 45.53%**, exact3 **31**, ROI **132.4943%**.
+  - This is exactly +3 races vs base120, and all 3 added races were 4-head wins; one was an exact3 hit.
+  - Added races: 202604251508, 202605110811, 202605181406. All are Apr-May development; Jul-Aug set is unchanged, so this is promising but not support-validated.
+- A dev-selected 120R rotation (comp floor 2.7 + open beta .1) improved Apr-Jun but reduced Aug ROI to 91.76%; reject as current preference because it sacrifices the all-month >=100 property.
+- Next follow-up: fine-grid **expansion-only** audit around open beta .025-.20 and nearby thresholds. Existing 120R must never be removed. Measure rescue-set stability/plateau and whether any Jul-Aug open-wall rescues can be added without breaking ROI/monthly floor.
+- Production/LIVE unchanged.
