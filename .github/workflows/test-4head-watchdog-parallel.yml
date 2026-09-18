@@ -1,0 +1,88 @@
+name: test-4head-watchdog-parallel
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'resolve_4head_watchdog_targets.py'
+      - '.github/workflows/live-4head-120r-watchdog.yml'
+      - '.github/workflows/live-4head-newfeature-pre-daily.yml'
+      - '.github/workflows/test-4head-watchdog-parallel.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile resolver
+        run: python -m py_compile resolve_4head_watchdog_targets.py
+      - name: Synthetic overlapping-window test
+        run: |
+          cat > /tmp/watch.json <<'JSON'
+          {
+            "date":"20260919",
+            "targets":[
+              {
+                "jcd":"23","race":7,"deadline_jst":"11:33","watch_minutes_before":35,
+                "pre_run_id":"1","pre_artifact_name":"pre",
+                "state_run_id":"1","state_artifact_name":"pre",
+                "race_code":"202609192307"
+              },
+              {
+                "jcd":"17","race":3,"deadline_jst":"11:37","watch_minutes_before":35,
+                "pre_run_id":"1","pre_artifact_name":"pre",
+                "state_run_id":"1","state_artifact_name":"pre",
+                "race_code":"202609191703"
+              },
+              {
+                "jcd":"05","race":4,"deadline_jst":"11:57","watch_minutes_before":35,
+                "pre_run_id":"1","pre_artifact_name":"pre",
+                "state_run_id":"1","state_artifact_name":"pre",
+                "race_code":"202609190504"
+              }
+            ]
+          }
+          JSON
+          : > /tmp/completed.txt
+          python resolve_4head_watchdog_targets.py             --watchlist /tmp/watch.json             --now-jst '2026-09-19T11:10:00+09:00'             --completed-names /tmp/completed.txt             --out /tmp/resolved.json
+          python - <<'PY'
+          import json
+          z=json.load(open('/tmp/resolved.json'))
+          assert z['count']==2,z
+          got={(x['jcd'],x['race']) for x in z['include']}
+          assert got=={('23',7),('17',3)},got
+          print('HEAD4_WATCHDOG_OVERLAP_TWO_TARGETS_OK',sorted(got))
+          PY
+      - name: Completed-race dedupe test
+        run: |
+          echo 'head4-120r-watchdog-20260919-23-7' > /tmp/completed.txt
+          python resolve_4head_watchdog_targets.py             --watchlist /tmp/watch.json             --now-jst '2026-09-19T11:10:00+09:00'             --completed-names /tmp/completed.txt             --out /tmp/resolved2.json
+          python - <<'PY'
+          import json
+          z=json.load(open('/tmp/resolved2.json'))
+          assert z['count']==1,z
+          x=z['include'][0]
+          assert (x['jcd'],x['race'])==('17',3),x
+          print('HEAD4_WATCHDOG_COMPLETED_DEDUPE_OK')
+          PY
+      - name: Schedule contract
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          wd=Path('.github/workflows/live-4head-120r-watchdog.yml').read_text()
+          pre=Path('.github/workflows/live-4head-newfeature-pre-daily.yml').read_text()
+          assert "*/5 21-23 * * *" in wd
+          assert "*/5 0-13 * * *" in wd
+          assert "max-parallel: 8" in wd
+          assert "group: head4-watchdog-" in wd
+          assert "30 20 * * *" in pre
+          assert "30 21 * * *" in pre
+          print('HEAD4_WATCHDOG_SCHEDULE_CONTRACT_OK')
+          PY
