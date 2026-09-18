@@ -81,7 +81,12 @@ def main():
 
     long=oddsmod.build_long_all(d)
     art=load_artifact(); sf=list(art['v283_SECOND']['features']); cf=list(art['v283_COND_THIRD']['features'])
-    hps=hpmod.headprob_scores(); hps['race_code']=hps.race_code.astype(str).str.zfill(12)
+    hpfile=os.environ.get('HEADPROB_SCORED')
+    if hpfile:
+        hps=pd.read_csv(hpfile,dtype={'race_code':str})[['race_code','head_prob']].copy()
+        hps['race_code']=hps.race_code.astype(str).str.zfill(12)
+    else:
+        hps=hpmod.headprob_scores(); hps['race_code']=hps.race_code.astype(str).str.zfill(12)
     hpmap=dict(zip(hps.race_code,hps.head_prob))
     truth={str(r.race_code).zfill(12):(int(float(r.winner)),int(float(r.second)),int(float(r.third)))
            for _,r in d.iterrows() if str(r.get('valid_result','0')) in ('1','1.0')}
