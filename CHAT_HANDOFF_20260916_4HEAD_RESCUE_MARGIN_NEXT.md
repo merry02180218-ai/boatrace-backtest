@@ -98,3 +98,23 @@ Status: `JOINT_GRID_ABLATION_PREPARING`
 - No production change. September remains `UNREAD`.
 
 Status: `JULAUG_ROI_COLLAPSE_ATTRIBUTION_PREPARING`
+
+
+## AFTER — JUL-AUG ROI COLLAPSE ATTRIBUTION
+- Run `35298033779`, Job `105454524498`, Artifact `10528619280`, head `b68559710aca47fda70a8618ed26a9f850968be7`, SUCCESS.
+- Apr-Jun: ALL 86R / 19 hits / ROI 148.9953%; comp>=7 22R / 5 hits / ROI 255.40%; comp<7 64R / 14 hits / ROI 112.4188%.
+- Jul-Aug: ALL 78R / 16 hits / ROI 86.4449%; comp>=7 23R / 0 hits / ROI 0%; comp<7 55R / 16 hits / ROI 122.5945%.
+- Head4 rate itself improved Apr-Jun 40.70% -> Jul-Aug 44.87%; collapse is downstream of head selection.
+- Winning-race composite-odds median shifted 6.1571 -> 4.0428. All 16 Jul-Aug ticket hits were below comp 7.
+- Therefore current comp>=7 market filter reversed sign in Jul-Aug; investigate whether this is explainable by observable race structure or merely regime/sample variance.
+- Production unchanged. September `UNREAD`.
+
+## BEFORE — MARKET-REGIME / STRUCTURE SHIFT ATTRIBUTION
+- User approved continuation.
+- Compare Apr-Jun vs Jul-Aug and comp<7 vs comp>=7 using only pre-result observables already available in the reconstructed 164R: head probability, opponent mass, original-exhibition advantage, ticket count, composite odds, and race/stadium identifiers if safely recoverable.
+- Quantify which observable distributions shifted, and whether Jul-Aug comp>=7 races are structurally weaker before results.
+- Separate July and August to detect whether the reversal is one-month concentration or persistent across both.
+- Analyze composite-odds bands more finely and test monotonicity rather than selecting a new threshold from one isolated band.
+- Do not promote a rule from this retrospective diagnostic alone. September `UNREAD`; production unchanged.
+
+Status: `MARKET_REGIME_STRUCTURE_SHIFT_PREPARING`
