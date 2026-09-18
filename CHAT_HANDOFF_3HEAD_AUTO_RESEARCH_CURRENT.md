@@ -122,3 +122,28 @@
 - Selection metric is predeclared for this stability audit: maximize **minimum monthly head rate across Nov/Dec/Jan**, then three-month combined head rate, then persistent worst-half rate, then closeness to 50/month. This directly addresses Wave20's December weakness while preserving useful volume.
 - Report venue concentration and leave-one-venue-out combined rate range for the selected candidate to detect dependence on one venue. Candidate must not be promoted if one venue dominates or leave-one-venue-out behavior is unstable.
 - February is reference-only and must not affect candidate selection. March unopened; September-2026 outcomes UNREAD; v288 unchanged.
+
+
+## AFTER WORK — Wave21 MOTOR_EX local-neighborhood stability audit (Run 35357990437, 2026-09-18)
+- SUCCESS: Run **35357990437** / Job **105641962771** / Artifact **10553536727**; head SHA **9b14ef8e44e72a7ff8d8f8762a82626e82a2467c**.
+- Search was intentionally local around Wave20 MOTOR_EX only: 78 neighboring gates, 780 total PRE×gate candidates, 123 strict 40-70/month eligible. Feb canonical agreement remained **3970/3970 = 100%**. Motor history prior-day only; same-day results unused; March unopened; Sep-2026 UNREAD; v288 unchanged.
+- Formal stability-rank winner (minimum monthly rate first): R1-8 / PRE q=.925 / `motor_inner_top2_gap >= .05` AND exhibition rank3 <=2.
+  - Nov **40R/15 = 37.50%**
+  - Dec **47R/20 = 42.55%**
+  - Jan **63R/24 = 38.10%**
+  - total **150R/59 = 39.33%**, exactly **50.0R/month average**; minimum monthly rate **37.50%**.
+  - Half-month rates: 50.0%, 30.77%, 47.62%, 38.46%, 45.24%, 23.81%; persistent worst-half **23.81%**, so intra-month instability remains.
+  - Venue audit is healthy: largest single venue share only **8.67%**; leave-one-venue-out combined rate range **37.76%-40.69%**, so the 39.33% is not explained by one venue.
+  - Feb NON-PRISTINE reference: **36R/12 = 33.33%**. Therefore this exact stability-selected row does not transfer strongly to Feb.
+- More important precision/stability neighborhood: R1-12 / PRE q=.925 / exhibition rank3 <=1 with boat3 motor EWMA-rank edge vs2 near neutral-positive is robust across nearby thresholds:
+  - motor rank edge >= **0.00**: Nov 44R/17=38.64%, Dec 60R/22=36.67%, Jan 64R/30=46.88%; **168R/69 = 41.07%**, avg 56/month, min month 36.67%, worst half 28.57%.
+  - motor rank edge >= **+0.20**: Nov 41R/15=36.59%, Dec 53R/20=37.74%, Jan 63R/30=47.62%; **157R/65 = 41.40%**, avg **52.33/month**, min month 36.59%, worst half 28.57%.
+  - motor rank edge >= **-0.20**: Nov 47R/17=36.17%, Dec 66R/25=37.88%, Jan 70R/31=44.29%; **183R/73 = 39.89%**, avg 61/month, min month 36.17%, worst half 28.57%.
+- This local plateau is important: the ~40-41% signal is **not a single knife-edge threshold**. The repeating structure is `boat3 exhibition-time rank = 1` plus `boat3 current motor EWMA rank not materially worse than boat2`, on a broad PRE q=.925 R1-12 pool.
+- Compared with PRE-only 34.38%, this plateau gives about **+5.5 to +7.0 percentage points** pre-Feb at ~52-61 races/month.
+- No production promotion yet. The current evidence supports freezing candidates before opening the pristine March diagnostic.
+- PREDECLARED candidates for the next one-shot March diagnostic (freeze now; do not change after March labels are opened):
+  - **A precision candidate**: R1-12 / PRE q=.925 / motor EWMA-rank edge vs2 >= **+0.20** / exhibition rank3 <= **1**. Pre-Feb 157R/65 = **41.40%**, avg 52.33/month.
+  - **B stability candidate**: R1-8 / PRE q=.925 / motor inner top2 gap >= **+.05** / exhibition rank3 <= **2**. Pre-Feb 150R/59 = **39.33%**, avg 50/month, min-month 37.5%, but Feb reference 33.33%.
+  - **Control**: Wave17 PRE-only R1-8 / q=.99.
+- Restart point: if proceeding, run a single March diagnostic for exactly A/B/control, with no March-based tuning or additional thresholds afterward. Also report March volume/head rate and half-month/venue stability. If A fails materially, do not rescue it by adjusting thresholds against March.
