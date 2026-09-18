@@ -858,3 +858,39 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - historical production 276R sentinel / HEAD gate / BASIC/WATCH gateは変更しない。
 - 2026-09結果/払戻は読まない。保存済みcausal LIVE入力とhistorical prepared causal rowsで回帰する。
 - ROI定義確認: 各3点100円、1R300円。的中時に実3連単払戻100円分を加算し、総払戻/総投資。数学的な合成オッズを事前計算した値ではなく、3点買いポートフォリオの実回収率。
+
+
+## AFTER — 5>6 ST買い目 正式LIVE採用完了
+- ユーザー明示許可により5>6 ST rerankを正式LIVE採用。
+- profile commit `f8fb309fc9df6c27bf3347ae6c46d4ffefa95023`
+  - `FIVE6_LIVE_TICKET_PROFILE_NAME = 1HEAD_5TO6_ST_TICKET_V363_SCORE6_060_STGAP040_G2_000_G3_075`
+  - `FIVE6_LIVE_TICKET_PROMOTED = True`
+  - backward alias `FIVE6_SHADOW_PROFILE_NAME` は同profileへ。
+- finalizer commit `2d95939fdcdb8051b5eb542d35e9de943984c349`
+  - 現正式wall3の後段で5>6条件が発火した時、5>6補正後3点を正式 `tickets` に採用。
+  - wall3後・5>6前の買い目を `pre_five6_tickets` に保持。
+  - `five6_ticket_promoted`, `five6_ticket_applied` を追加。
+  - ticket_profileは5>6発火時 `1HEAD_5TO6_ST_TICKET_V363_SCORE6_060_STGAP040_G2_000_G3_075`。
+- 非発火回帰:
+  - v356 Run `35333715902` completed success on finalizer commit。
+  - びわこ7Rのformal wall3 ticketsは5>6非発火のため従来のまま。
+- 発火回帰:
+  - v364 script commit `60f1fe919b0defae449cfcad2243a51936805f2d`
+  - workflow commit `8d438994cc429aad51c8d2a6d9bd6fb34ebb1b58`
+  - Run `35333921236` / Job `105564287024` success / Artifact `10541834290`
+  - causal historical row `202605141610` で、
+    - pre-five6: `1-2-3 / 1-2-4 / 1-3-2`
+    - formal tickets: **`1-2-3 / 1-2-6 / 1-3-2`**
+    - score6=.68 / ST6-ST5=.80
+    - five6_ticket_applied=true
+    - result_or_payout_used=false / September outcomes unread / AUDIT_OK=true。
+- 採用根拠:
+  - v362 current LIVE165: wall3 only 83/165 ROI118.485% -> wall3+5>6 87/165 ROI128.687%、gain4/loss0。
+  - v363: 1200-cell robustness / plateau126 cells / LOMO全5月非悪化 / current core再選択 / 近傍delta_hits>=0 100%。
+- historical production 276R sentinel / HEAD/BASIC/WATCH gateは変更なし。
+- ROI定義:
+  - 3点各100円、1R=300円 stake。
+  - 選択3点のどれかが的中した場合、その3連単の公式100円払戻をreturnへ加算。
+  - `ROI = total return / total stake`。
+  - したがって数学的な「合成オッズ」そのものではなく、3点均等買いポートフォリオの実現回収率。呼び方として「3点合成ROI」は可だが、合成オッズとは区別する。
+- 今後のLIVE「判別して」ではwall3→5>6 STの順に正式rerankし、最終 `tickets` を正式買い目として返す。
