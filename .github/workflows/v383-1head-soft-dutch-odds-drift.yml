@@ -1,0 +1,37 @@
+name: v383 1-head soft Dutch odds drift
+on:
+  push:
+    paths:
+      - 'run_v383_1head_soft_dutch_odds_drift.py'
+      - '.github/workflows/v383-1head-soft-dutch-odds-drift.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Download v360 prepared artifact
+        env: {GH_TOKEN: '${{ github.token }}'}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/v360
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10539401122/zip" > /tmp/v360.zip
+          unzip -q /tmp/v360.zip -d /tmp/v360
+          test -f /tmp/v360/prepared_rows.pkl
+      - name: Run odds drift stress
+        run: python run_v383_1head_soft_dutch_odds_drift.py --prepared /tmp/v360/prepared_rows.pkl
+      - name: Show result
+        if: always()
+        run: cat /tmp/v383-odds-drift/result.json 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v383-odds-drift-${{ github.run_id }}
+          path: /tmp/v383-odds-drift/
+          retention-days: 30
