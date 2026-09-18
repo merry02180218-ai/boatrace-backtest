@@ -1,0 +1,45 @@
+name: audit-4head-wall3-open-rescue-fine
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'audit_4head_wall3_open_rescue_fine.py'
+      - '.github/workflows/audit-4head-wall3-open-rescue-fine.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas
+      - name: Download successful formal wall audit artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p seed
+          gh run download 35334723879 -n head4-wall3-head-rotation -D seed
+          WALL_UNIVERSE="$(find seed -type f -name 'universe_with_wall.csv' | head -1)"
+          test -n "$WALL_UNIVERSE"
+          echo "WALL_UNIVERSE=$WALL_UNIVERSE" >> "$GITHUB_ENV"
+      - name: Run fine expansion-only audit
+        run: python audit_4head_wall3_open_rescue_fine.py
+      - name: Show result
+        if: always()
+        run: |
+          cat /tmp/head4_wall3_open_rescue_fine/result.json 2>/dev/null || true
+          head -30 /tmp/head4_wall3_open_rescue_fine/rescue_set_plateaus.csv 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-wall3-open-rescue-fine
+          path: /tmp/head4_wall3_open_rescue_fine/
+          retention-days: 30
