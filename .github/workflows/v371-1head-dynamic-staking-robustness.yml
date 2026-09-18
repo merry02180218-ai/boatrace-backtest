@@ -1,0 +1,42 @@
+name: v371 1-head dynamic staking robustness
+on:
+  push:
+    paths:
+      - 'run_v371_1head_dynamic_staking_robustness.py'
+      - '.github/workflows/v371-1head-dynamic-staking-robustness.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas
+      - name: Download v370 frozen race inputs
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10553791049/zip" > /tmp/v370.zip
+          mkdir -p /tmp/v370
+          unzip -q /tmp/v370.zip -d /tmp/v370
+          test -f /tmp/v370/race_inputs.csv
+      - name: Run dynamic staking robustness audit
+        run: python run_v371_1head_dynamic_staking_robustness.py --race-inputs /tmp/v370/race_inputs.csv
+      - name: Show result
+        if: always()
+        run: |
+          cat /tmp/v371-staking-robustness/result.json 2>/dev/null || true
+          cat /tmp/v371-staking-robustness/selected_support_all.csv 2>/dev/null || true
+          cat /tmp/v371-staking-robustness/lomo_reselected.csv 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v371-dynamic-staking-robustness-${{ github.run_id }}
+          path: /tmp/v371-staking-robustness/
+          retention-days: 30
