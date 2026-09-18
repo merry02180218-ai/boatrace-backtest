@@ -219,3 +219,24 @@
 - Motor state stays strict prior-day; same-day outcomes prohibited. No April threshold search or rescue tuning.
 - Required report: April total/H1/H2 head rates, venue concentration, leave-one-venue-out ranges, winner cross-check, and cumulative clean confirmation summary excluding non-pristine February.
 - April becomes OPENED after this run. Sep-2026 outcomes stay UNREAD; production v288 stays unchanged.
+
+
+## AFTER WORK — Wave23 unavailable April + formal A adoption decision (2026-09-19)
+- Wave23 Run **35362293256** / Job **105656232207** completed **FAILURE**, but this was not a model/rule failure.
+- Exact failure: frozen canonical source contains **0 April-2026 rows** (RuntimeError: canonical April too small: 0). Therefore no April A/B/control performance result exists and April was **not** used to tune or reject any rule.
+- User approved adoption after recovery of the completion state.
+- **FORMALLY ADOPTED HEAD GATE: A_precision** as the new 3-head candidate/head gate:
+  - race band **R1-12**
+  - frozen enhanced PRE percentile **q >= .925**
+  - boat3 prior-day motor EWMA-rank edge vs boat2 **>= +0.20**
+  - boat3 current exhibition-time rank **= 1**
+- Evidence frozen at adoption:
+  - Nov-Dec-Jan selection/reference: **157R / 65 heads = 41.40%**
+  - one-shot frozen March: **52R / 21 heads = 40.38%**
+  - clean combined excluding non-pristine Feb: **209R / 86 heads = 41.15%**
+  - March halves: 40.00% / 40.91%
+  - March venue share max 11.54%; leave-one-venue-out 37.50%-43.48%.
+- **B_stability is not the primary adopted rule**. Keep only as shadow/reference.
+- Adoption semantics: A is the official **head-candidate gate**. Existing v288 downstream ordered-pair/ticket logic and exact 10,000-yen Dutch are not implicitly changed by this decision. Do not pretend existing v288 PRE q/score is equivalent to A's PRE q=.925; A requires its own frozen enhanced-PRE reproduction.
+- Before routing real money through A, production implementation must reproduce the frozen enhanced PRE score, strict prior-day motor state, and current exhibition rank with fail-closed inputs, then pass a parity/smoke audit. No threshold changes are allowed during operationalization.
+- September-2026 research outcomes remain UNREAD; do not inspect September settlements to tune A. Production v288 remains active until the A live layer is parity-verified.
