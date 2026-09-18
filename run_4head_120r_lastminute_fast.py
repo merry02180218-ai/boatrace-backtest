@@ -489,6 +489,11 @@ def newfeature_decide(head_prob,mass,comp,exh,card,state,jcd):
     }
 
 
+def decide(head_prob,mass,comp,exh):
+    """Compatibility wrapper for historical HEAD4_156R_ROI_EXPANSION_V1 tests."""
+    return legacy_decide(head_prob,mass,comp,exh)
+
+
 def wall3_open_shadow(head_prob,mass,comp,exh,current_selected):
     """Research-only 3-vs-4 open-path rescue diagnostic.
 
