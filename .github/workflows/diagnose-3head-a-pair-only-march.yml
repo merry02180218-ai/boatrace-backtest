@@ -19,10 +19,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: {python-version: '3.11'}
+        with:
+          python-version: '3.11'
       - run: pip install -q pandas
       - name: Download frozen Wave21 source
-        env: {GH_TOKEN: ${{ github.token }}}
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           gh api repos/${{ github.repository }}/actions/artifacts/10317157868/zip > /tmp/wave21.zip
           unzip -oq /tmp/wave21.zip -d /tmp/wave21
@@ -72,10 +74,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: {python-version: '3.11'}
+        with:
+          python-version: '3.11'
       - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 joblib
       - name: Frozen canonical artifacts
-        env: {GH_TOKEN: ${{ github.token }}}
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           gh run download 34383567078 --repo ${{ github.repository }} --name v243-3head-expand-feature-audit --dir golden_v243
           cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
@@ -84,7 +88,8 @@ jobs:
           mkdir -p data/audit
           cp -r golden_v234/data/audit/v234_waku10 data/audit/
       - name: Frozen March odds
-        env: {GH_TOKEN: ${{ github.token }}}
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p /tmp/odds
           gh run download "${{ github.run_id }}" --repo "${{ github.repository }}" --name a-march-closing-odds-pair-only --dir /tmp/odds
@@ -122,10 +127,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: {python-version: '3.11'}
+        with:
+          python-version: '3.11'
       - run: pip install -q pandas
       - name: Download day artifacts
-        env: {GH_TOKEN: ${{ github.token }}}
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p all_days
           gh run download "${{ github.run_id }}" --repo "${{ github.repository }}" --pattern 'a-pair-only-march-*' --dir all_days || true
