@@ -76,3 +76,8 @@ BASE: 131 hits, stake 82800, return 86390, profit +3590, ROI 104.34%.
 ## BEFORE — Run 35290276441 sentinel access fix
 - Run 35290276441: prepare/second/base-third/third success, audit Job 105433770003 failed at final production sentinel.
 - 原因: pandas Series `p.head` が列 `head` ではなく method を返し `int(p.head)` で TypeError。これから bracket access `p['head']` 等へ修正し、sentinel自体は緩めず 276/241/131 を必須維持する。
+
+## AFTER — sentinel access fix
+- 修正commit `6bd95e5603858abf69697642e4161f9fc6f1a998`。
+- `p.R/p.head/p.exact3` を `p['R']/p['head']/p['exact3']` に変更。276/241/131 sentinel条件そのものは変更なし。
+- 次: fresh workflow_dispatch。成功時はproduction sentinel/ROIと441セル上位・周辺安定帯を回収。9/17 result/payout UNREAD維持。
