@@ -37,7 +37,9 @@ def main():
     s = base.requests.Session()
     s.headers.update({'User-Agent':'Mozilla/5.0 (compatible; v291-pre-live/1.0)','Accept':'text/html,application/json'})
     cards=[]; waku=[]; failures=[]; active=[]
-    for jo in range(1,25):
+    raw_venues=os.environ.get('ACTIVE_VENUES','').strip()
+    venues=[int(x) for x in raw_venues.split(',') if x.strip()] if raw_venues else list(range(1,25))
+    for jo in venues:
         try:
             referer,token,meta=base.get_meta(s,jo)
         except Exception as e:
