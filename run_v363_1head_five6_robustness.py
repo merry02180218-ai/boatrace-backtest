@@ -154,7 +154,11 @@ def main():
     x=pickle.load(args.prepared.open('rb'));allrows=x['rows']
     rows313=allrows['H0775_M350']; rows165=allrows['LIVE165']
     if len(rows313)!=313 or len(rows165)!=165:raise RuntimeError('prepared universe drift')
-    prefetch=install_payout_cache(rows313);payouts=payouts_for(rows313)
+    union_by_code={}
+    for name in ('LIVE165','H078_M375','H0775_M375','H0775_M350'):
+        for r in allrows[name]: union_by_code[str(r['race_code']).zfill(12)]=r
+    unionrows=list(union_by_code.values())
+    prefetch=install_payout_cache(unionrows);payouts=payouts_for(unionrows)
     dev=[r for r in rows313 if str(r['month']) in DEV];sup=[r for r in rows313 if str(r['month']) in SUP]
 
     grid=[];monthly_cache={}
