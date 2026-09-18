@@ -314,3 +314,26 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 既存 opponentCore 補正後に、wall3 riskに応じて4号艇をsoft boost / 3号艇をsoft demote。SECOND/THIRD別gamma、4号艇attackCore閾値、risk定義（ST / wall score / combo）をgrid探索。
 - 3点固定。BASIC/WATCH gate固定。HEAD判定は変更しない。
 - びわこ7Rのように「現行3点すべて4なし・3中心」なのに3<4展示となるケースが、wall-aware rerankでどう変わるかを研究対象とする。
+
+
+## AFTER — v353 wall3連動3点買い目rerank 初回監査
+- Run `35310326328` completed success / audit Job `105492805563` / Artifact `10534735142`。
+- AUDIT_OK=true / September outcomes unread / production unchanged。
+- BASIC baseline 165R / exact3 80 / ROI 112.505%。best BASICは ST / attack4>=.60 / g2=.5 / g3=2.0 だが、80的中のままROI 113.010%（+0.51pp）、変更19R。的中改善なし。
+- WATCH baseline 77R / exact3 44 / ROI 129.004%。
+- raw best WATCH: SCORE / attack4>=.60 / g2=3.0 / g3=.5
+  - 77R / exact3 47 (+3) / ROI 141.818% (+12.81pp)
+  - Feb-Jun 69R: 39 -> 42 hits / ROI 130.870% -> 145.169%
+  - Jul-Aug 8R: 5 -> 5 hits / ROI 112.917%（不変）
+  - 買い目変更12R。race-level比較では +hit 3R / -hit 0R。
+  - gain例: 202604102412 actual 1-4-2、202604202408 actual 1-2-4、202606032008 actual 1-4-3 を新たに拾う。
+- 近傍にも改善帯あり。SCORE/attack4=.60 では g2=1.5～3.0、g3=0～.5 に 46～47 hits / ROI約139.5～141.8%のplateauがある。
+- 解釈: wall3補正はBASIC全体より、MASS>=.425のWATCHで相手rerankとして効いている可能性が高い。
+- ただしsupport 8Rで増分0のため、raw bestを即LIVE昇格しない。
+
+## BEFORE — v354 WATCH wall3 ticket robustness audit
+- v353 raw bestの過学習を確認するため、WATCH専用候補群を月別・近傍・paired gain/lossで追加監査する。
+- 主対象: SCORE / attack4>=.60、g2=1.5/2.0/3.0、g3=0/.5/1.0 とbaseline。
+- 既存v353 Artifactのrace_predictionsを使用し、Feb-Augの各月について3点的中、払戻ROI、買い目変更数、gain/lossを再計算。
+- devの月別最低値、改善月数、Jul/Aug個別、近傍plateauを確認。単一raw bestではなく運用に耐える簡潔な候補があるかを見る。
+- 2026-09結果/払戻は読まない。production/LIVEは未変更。
