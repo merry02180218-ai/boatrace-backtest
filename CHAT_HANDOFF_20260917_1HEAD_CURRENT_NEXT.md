@@ -1437,3 +1437,53 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - ticket compositionは各rowにcurrent wall3→5>6を適用して再構成。race selection自体は各母集団固定。
 - 目標: 165R固有の偶然ではなく、拡大母集団でもoverlay群のROI優位が残るか確認。
 - 2026-09 outcomes/payoutsは読まない。production/LIVE stakeはv374完了まで変更しない。
+
+
+## AFTER — v374 formal-overlay race-level stake concentration
+- Run `35351286759` / Job `105619772837` completed success / Artifact `10548879270` / head `6c617dfb9b50bc75293141da53b6dfe96ac093f4`。
+- parameter tuningなし / odds featureなし / current formal overlay flagのみをstake signalに使用。
+- LIVE165 baseline: 165R / 87hit / stake49,500 / return63,700 / ROI128.687%。
+- overlay EITHER (wall3 OR five6):
+  - 36R / 21hit / subgroup ROI **163.33%**
+  - NONE 129R / 66hit / ROI119.02%
+  - DEV overlay29R ROI156.78%
+  - SUPPORT overlay7R ROI190.48%
+- overlay時だけ3点均等を2倍（200/200/200）:
+  - stake60,300 / return81,340 / profit+21,040 / ROI **134.892%**
+  - baseline比 +6.21pp / profit +6,840。
+  - DEV ROI129.44 ->134.22%
+  - SUPPORT ROI125.00 ->138.10%
+- multiplier 3x: ROI139.21%、4x:142.39%（当然overlay subgroup ROI163.33%へ近づく）。倍率自体は未選定。
+- expanded universesでもoverall overlay subgroupはbaselineより高い:
+  - 236R overlay49R ROI150.48%
+  - 269R overlay58R ROI132.93%
+  - 313R overlay65R ROI129.79%
+  - PROD276 overlay60R ROI141.78%
+- 2x portfolioも全expanded universeでoverall ROI改善。
+- ただしdisjoint追加帯は不均一:
+  - +71R overlay13R ROI114.87%
+  - +33R overlay9R ROI37.41%（明確に弱い）
+  - +45R overlay7R ROI103.81%
+  よって「overlayなら普遍的に高ROI」ではなく、current core165内で特に強い可能性あり。
+- LIVE165 category:
+  - FIVE6を含む25R ROI162.0%（DEV148.42 / SUPPORT205.0）
+  - WALL3を含む12R ROI180.0%（DEV186.97 / SUPPORT1Rのみ103.33）
+  - NONE129R ROI119.02%。
+- 月別EITHER overlay ROIは Feb0 / Mar41.11 / Apr217.22 / May77.88 / Jun323.33 / Jul296.67 / Aug172.78。月単位では振れが大きい。
+- production/LIVE stake unchanged / September outcomes unread / AUDIT_OK=true。
+
+## BEFORE — v375 fixed overlay-stake robustness
+- v374で見えたstake signalを**新規チューニングなし**で頑健性監査する。
+- fixed candidateは自然な最小倍率2xのみ:
+  1) EITHER: wall3 OR five6 発火レースを200/200/200
+  2) FIVE6: five6発火レースのみ200/200/200
+  3) WALL3: wall3発火レースのみ200/200/200
+- current LIVE165を主対象。
+- 監査:
+  - 各月単体delta ROI/profit
+  - leave-one-month-out（固定signal、再選定なし）
+  - 7か月の全month subsets（4か月以上）でbaseline比ROI非悪化率
+  - DEV Feb-Jun / SUPPORT Jul-Aug
+  - expanded universe全体とdisjoint band
+- signal選定に新しい閾値や払戻最適化は使わない。FIVE6/WALL3/EITHERは既にformal overlay componentとして事前定義済み。
+- 目的: stake shadowとしてforward運用に回せるほど安定かを見る。正式stake採用はユーザー許可まで行わない。
