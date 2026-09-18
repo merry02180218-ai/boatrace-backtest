@@ -774,3 +774,36 @@ Production blockers remain:
 5. September outcomes remain unread until the future evaluation checkpoint.
 
 Status: `HEAD4_120R_RESEARCH_FROZEN__LEAK_AUDIT_PASS_WITH_WARNINGS__PRODUCTION_UNCHANGED`
+
+
+## USER QUESTION — 2026-09-18 — can 4head pre-candidates be emitted?
+Yes. The 120R rule itself is post-exhibition, but a separate broad pre-exhibition candidate layer can be built.
+
+### BEFORE — pre-candidate design
+Goal:
+- emit candidates before exhibition;
+- use no current-race exhibition / original-exhibition / last-minute odds;
+- preserve as much recall of the frozen 120R final selections as possible;
+- keep candidate volume practical enough for daily operation.
+
+First exact pre-only parent gate, derived by removing only the exhibition-dependent filters from the audited 164R research population:
+- `motor_win_diff_4v3 >= -0.0299361318939513`  (causal prior motor win-rate difference)
+- `motor_2ren_diff_4v3 >= -7.08` (race-card motor 2-ren difference)
+- `player4_all_win >= 0.215605` (causal prior player win rate)
+
+Explicitly excluded from PRE candidate:
+- `basic_complete`
+- current exhibition time / current exhibition ST
+- original exhibition
+- `opponent_mass`
+- `composite_odds`
+- any result / payout fields
+
+Audit objectives:
+1. count all Apr-Aug pre-candidates from program-card/prior-only rows;
+2. verify frozen 120R final selections are a subset;
+3. calculate daily candidate distribution;
+4. test optional pre-only `head_prob` tiers for smaller candidate lists while reporting final120 recall loss;
+5. September outcomes remain UNREAD; production unchanged.
+
+Status: `HEAD4_PRE_CANDIDATE_AUDIT_START`
