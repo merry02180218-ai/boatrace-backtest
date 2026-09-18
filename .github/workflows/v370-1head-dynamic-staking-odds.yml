@@ -26,8 +26,19 @@ jobs:
           mkdir -p /tmp/v360
           unzip -q /tmp/v360.zip -d /tmp/v360
           test -f /tmp/v360/prepared_rows.pkl
+      - name: Download v340 official-closing odds shards
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/v340odds
+          for id in 10329564703 10330810260 10330651756 10329684566 10330273057 10330357729; do
+            gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$id/zip" > "/tmp/$id.zip"
+            unzip -q -o "/tmp/$id.zip" -d /tmp/v340odds
+          done
+          ls -la /tmp/v340odds
       - name: Run dynamic staking audit
-        run: python run_v370_1head_dynamic_staking_odds.py --prepared /tmp/v360/prepared_rows.pkl
+        run: python run_v370_1head_dynamic_staking_odds.py --prepared /tmp/v360/prepared_rows.pkl --fallback-dir /tmp/v340odds
       - name: Show result
         if: always()
         run: |
