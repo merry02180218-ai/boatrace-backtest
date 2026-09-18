@@ -1,0 +1,39 @@
+name: v380 1-head wall3 rank3 risk
+on:
+  push:
+    paths:
+      - 'run_v380_1head_wall3_rank3_risk.py'
+      - '.github/workflows/v380-1head-wall3-rank3-risk.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas
+      - name: Download v374 frozen overlay rows
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10548879270/zip" > /tmp/v374.zip
+          mkdir -p /tmp/v374
+          unzip -q /tmp/v374.zip -d /tmp/v374
+          test -f /tmp/v374/rows_LIVE165.csv
+      - name: Run wall3 rank3 risk audit
+        run: python run_v380_1head_wall3_rank3_risk.py --v374-dir /tmp/v374
+      - name: Show result
+        if: always()
+        run: cat /tmp/v380-wall3-rank3-risk/result.json 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v380-wall3-rank3-risk-${{ github.run_id }}
+          path: /tmp/v380-wall3-rank3-risk/
+          retention-days: 30
