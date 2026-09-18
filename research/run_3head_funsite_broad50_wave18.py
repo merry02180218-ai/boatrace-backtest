@@ -311,7 +311,7 @@ def main():
     _,enh_feats,_=choose_features(all_data)
     course_feats=[c for c in all_data.columns if c.startswith('course_') and
                   pd.api.types.is_numeric_dtype(all_data[c]) and all_data[c].notna().sum()>=200]
-    feature_sets={'ENHANCED':enh_feats,'COURSEPLUS':sorted(set(enh_feats+course_feats))}
+    feature_sets={'COURSEPLUS':sorted(set(enh_feats+course_feats))}
 
     histories={
       'nov':pd.concat([octo,nov],ignore_index=True,sort=False),
@@ -322,7 +322,7 @@ def main():
     targets={'nov':nov,'dec':dec,'jan':jan,'feb':feb}
     preds={m:walk_predictions(histories[m],targets[m],feature_sets) for m in targets}
 
-    results={fam:eval_family(preds,fam) for fam in ['ENHANCED','COURSEPLUS']}
+    results={'COURSEPLUS':eval_family(preds,'COURSEPLUS')}
 
     out={
       'policy':{
@@ -339,6 +339,7 @@ def main():
       'feature_counts':{'enhanced':len(enh_feats),'course_new':len(course_feats),
                         'courseplus':len(feature_sets['COURSEPLUS'])},
       'course_feature_names':course_feats,
+      'wave17_enhanced_baseline':{'avg_month_n':42.666666666666664,'pre_feb_combined_rate':0.34375,'persistent_worst':0.2857142857142857,'feb_reference_rate':0.36666666666666664},
       'results':results
     }
     with open('research_3head_funsite_broad50_wave18_result.json','w') as f:
