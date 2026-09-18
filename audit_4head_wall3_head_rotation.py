@@ -11,8 +11,10 @@ Research only.
 from __future__ import annotations
 
 from pathlib import Path
+import csv
 import json
 import math
+import os
 
 import numpy as np
 import pandas as pd
@@ -22,6 +24,22 @@ import run_v352_1head_wall3_risk_audit as wall1
 
 OUT=Path('/tmp/head4_wall3_head_rotation')
 OUT.mkdir(parents=True,exist_ok=True)
+
+# Optional local mirror for the formal 1HEAD wall builder.  This changes only
+# I/O, not feature semantics: the same archived BoatraceCSV files are read.
+_local_root=os.environ.get('BOATRACECSV_LOCAL_ROOT')
+if _local_root:
+    _brroot=Path(_local_root)
+    def _local_rows(path):
+        p=_brroot/path
+        if not p.is_file():
+            return []
+        try:
+            with p.open(encoding='utf-8-sig',newline='') as fh:
+                return list(csv.DictReader(fh))
+        except Exception:
+            return []
+    wall1.rows=_local_rows
 
 DEV=('2026-04','2026-05','2026-06')
 SUP=('2026-07','2026-08')
