@@ -594,3 +594,40 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 母集団選定・展示再構築・opponent map構築は再び正常通過。
 - 今回は `rr.` 属性参照を全件検索して、Series用 `rr.get(...)` 以外をゼロ化する。
 - 同時に重い前半完了時点の `prepared_rows.pkl` をartifactへ保存。以後後半failureなら重い前半を再計算せずresume可能にする。
+
+
+## AFTER — v360 母集団拡大 展示後rerank監査
+- 最終成功 Run `35324836153` / Job `105535377393` / Artifact `10539401122` / head `16cbc8f91f451091c27a2d404a681586beac6af0`。
+- Artifactに `prepared_rows.pkl`, `expanded_exhibition_features.csv`, `race_predictions.csv`, `summary.csv`, `monthly.csv`, `generalization.csv`, `result.json` を保存。以後は重い展示再取得なしで追加研究可能。
+- 母集団baseline:
+  - LIVE165: 165R / 80 hit / ROI112.51%
+  - H078_M375: 236R / 113 hit / ROI107.75%
+  - H0775_M375: 269R / 128 hit / ROI106.59%
+  - H0775_M350: 313R / 142 hit / ROI102.31%
+  - PROD276: 276R / 131 hit / ROI104.34%
+- fixed generic rerank (.60 / g2=.5 / g3=.5) generalization:
+  - `5>6 / MASS425`: 全5母集団で +1 hit / loss0、mean ROI +1.63pp。ただしgainは全母集団共通の同一race `202605141610` (actual 1-2-6) 1件で、独立再現ではない。
+  - `4>5 / ALL`: 全5母集団で +1 hit / loss0、mean ROI +1.79pp。ただしgainは全母集団共通の `202608030402` (actual 1-3-5) 1件で、Jul-Aug support由来。
+  - `3>4 / MASS425` のgeneric弱補正は不安定/悪化。これは正式wall3 (g2=3.0 / g3=.5 / WATCH-only) と設定が異なるので、正式wall3否定ではない。
+- 重複しない追加帯:
+  - LIVE165外の +71R: 5>6 MASS425は±0
+  - 次の +33R: ±0
+  - さらにmass .350-.375の +44R: 5>6 MASS425は±0
+  - ただし `5>6 / ALL` はこの外側44Rで新規gain `202607091004` actual 1-2-6 を1件追加。opp_mass=.373437。
+- `5>6 / ALL` 313R全体では gain2 / loss1。lossは `202603120604` actual 1-2-5、gainは `202605141610` と `202607091004`。
+- 結論: 母集団拡大により、5→6補正は高mass限定だけでなく低mass側にも別gainが存在することを確認。ただし固定設定ではlossも出るので閾値/強度の再探索が必要。
+- September outcomes unread / production unchanged / AUDIT_OK=true。
+
+## BEFORE — v361 313R expanded adjacent grid
+- v360成功artifactの `prepared_rows.pkl` を再利用し、展示再構築・モデル再学習は行わない。
+- 313R母集団を主研究面とし、165/236/269/276Rにも同じ選定候補を横展開して一般性を確認。
+- 主対象: `5>6`, `4>5`。比較で `2>3`, generic `3>4` も保持。
+- grid候補:
+  - attack outer score min .40/.50/.60/.70/.80
+  - pair score gap min 0/.10/.20/.30
+  - mass scope ALL/.350/.375/.400/.425/.450
+  - SECOND gamma .25/.5/1.0/1.5/2.0/3.0
+  - THIRD gamma .25/.5/1.0/1.5
+- 選定はFeb-Jun devのみ。Jul-Aug supportは選定に使わない。
+- 目的は unique gainを増やしつつ lossを抑え、特に165R外の追加148Rでも新規gainが出る設定を探す。
+- 現正式wall3/LIVE設定は変更しない。2026-09結果払戻は読まない。
