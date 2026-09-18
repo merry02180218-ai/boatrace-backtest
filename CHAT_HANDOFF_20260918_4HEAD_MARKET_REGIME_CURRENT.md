@@ -711,3 +711,37 @@ Interim leakage conclusion:
 - production promotion: **BLOCKED pending unified run success + pre-deadline live implementation**
 
 Status: `HEAD4_120R_LEAKAGE_AUDIT_RUNNING__INTERIM_PASS_WITH_WARNINGS`
+
+
+## 120R CORE REPLAY — official Actions verification
+The frozen 120R core replay has completed successfully while the leakage run continues.
+
+- Run: `35305395486`
+- Job: `105476437527`
+- conclusion: SUCCESS
+- Artifact: `10532065363` / `head4-nested-linear-high-volume`
+- Artifact digest:
+  `sha256:e0e68ff7befc42e011a2802b9dcf25392361346672d5255956136aa52263cd2c`
+- Run head SHA: `32768422d453d7fa7ef924acb3738f922b208c8a`
+
+Official replay confirms:
+- fixed 164R population replay OK;
+- base77 = 77R / ROI 141.1688%;
+- preferred120 = **120R / ROI 127.7217% / 5-month floor 101.75%**;
+- monthly:
+  - Apr 22R / 158.1364%
+  - May 28R / 133.9464%
+  - Jun 21R / 111.1619%
+  - Jul 31R / 126.8129%
+  - Aug 18R / 101.75%
+- fine-grid maximum with all five months >=100 is 121R; preferred remains 120R because it keeps the cleaner composite floor 2.5.
+- selection period explicitly marked `2026-04..2026-08 NON_PRISTINE_MODEL_SELECTION`.
+- September marker: UNREAD.
+- production marker: unchanged.
+
+Operational timing note:
+- frozen v283 opponent features include current-race exhibition/ST/original-exhibition inputs (`cur_ex`, `cur_st`, `cur_orig_lap/turn/straight/avg` and conditional equivalents).
+- Therefore the 120R rule is a **post-exhibition / last-minute decision rule**, not a pre-exhibition candidate rule.
+- This is not leakage; it is a timing/availability constraint.
+
+Status: `HEAD4_120R_CORE_REPLAY_SUCCESS__LEAKAGE_RUN_STILL_IN_PROGRESS`
