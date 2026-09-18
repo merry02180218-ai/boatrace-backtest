@@ -113,3 +113,20 @@
 - Build triple vocabulary only from signals appearing repeatedly among pair candidates that are jointly stable in December+January. Triple settings must also pass the same two-month persistence test before freeze.
 - Freeze candidate settings separately for minimum support 15/20/30/50/75/100 per half-month, deduplicate exact definitions, and then evaluate the frozen set once on February.
 - Primary output is February worst-half support frontier vs Wave11 (40.0% at >=20R/half) and Wave9. No March. September UNREAD; production v288 unchanged.
+
+
+## AFTER WORK — Broad50 Wave13 multi-month persistent interaction transfer (Run 35317690758, 2026-09-18)
+- SUCCESS: Run **35317690758** / Job **105512857146** / Artifact **10535234565**; head SHA **4b2c2660e27fc7231e9ba761863deadb6e85d4bb**.
+- Source/audit clean: Nov 3,825R / Dec 4,647R / Jan 4,963R / Feb 3,970R; February canonical-vs-realtime winner agreement remained 100%; previous-session date violations remained 0. March unopened; September UNREAD; production v288 unchanged.
+- Used the same 19 oriented PRE signals -> 171 pair interactions; triple vocabulary was derived only from interactions jointly stable in December+January. Candidate settings were frozen using the minimum rate across Dec H1 / Dec H2 / Jan H1 / Jan H2, with venue/support floors, before February was scored.
+- Interesting pre-Feb persistence existed: at >=15R/half-month, pair vs1 national2 × vs2 national2 reached persistent worst 50.0%; at >=20R, best persistent worst was 40.74%; at >=30R 37.93%; >=50R 37.74%; >=75R 36.05%; >=100R 34.62%.
+- Frozen set: **222 settings / 28 unique interactions**.
+- One-shot February transfer:
+  - >=20R/half: best H1 **7/22=31.82%**, H2 **11/29=37.93%**; worst-half **31.82%**, combined 18/51=35.29%. Formula: positive window42 / R1-8 / q=.925, b1_pressure × vs1 national2 × b2_wall_break.
+  - >=30R/half: H1 10/30=33.33%, H2 13/41=31.71%; worst-half **31.71%**, combined 23/71=32.39%.
+  - >=50R/half: H1 16/53=30.19%, H2 20/64=31.25%; worst-half **30.19%**, combined 36/117=30.77%.
+  - >=75R/half: worst-half **25.0%**, combined 55/183=30.05%.
+  - >=100R/half: worst-half **24.0%**, combined 62/213=29.11%.
+- Comparison: Wave13 is worse than Wave11 at >=20R (-8.18pt) and worse than Wave9 at every support tier. It only marginally exceeds Wave11 at >=50R (+1.62pt), while still well below Wave9.
+- Conclusion: requiring December+January persistence does not rescue fixed multiplicative interactions. There are strong-looking interaction pockets in individual prior months, but they do not transfer reliably into February. This materially strengthens the conclusion that the current PRE feature family is regime-sensitive/nonstationary rather than missing only a simple interaction formula.
+- Recommended next direction: stop searching more static pair/triple products from the same signals. If continuing with current PRE only, move to regime detection / conditional model selection (learn which interaction family is active from contemporaneous PRE distribution without target labels), or switch objective from raw head-rate to odds-aware EV where 30-40% pockets may still be valuable.
