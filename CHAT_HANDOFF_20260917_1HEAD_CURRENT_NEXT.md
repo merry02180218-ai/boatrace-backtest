@@ -2467,3 +2467,36 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - worst month
 - supportを見て閾値変更しない。これは「想定drift幅を選んだ時の機械的安全マージン」評価。
 - production/official stakeは変更しない。current-odds shadowもresearch_onlyのまま。September outcomes unread。
+
+
+## AFTER — v385 current-odds safety-margin audit
+- Run `35367849832` / Job `105674519902` success / Artifact `10557427105` / digest `sha256:da066892fb55df97463c6d4ca28e28260cdc28626c4bf0bf1a31d721879a0fa1`。
+- v382 closing-based core:
+  - threshold3.5 / stake60,300 / return88,530 / profit+28,230 / ROI146.816%。
+- v379 odds-independent allocation baseline:
+  - stake60,300 / return85,810 / profit+25,510 / ROI142.305%。
+- current->close relative drift ±d を想定した機械的安全閾値:
+  - `T_safe = 3.5*(1+d)/(1-d)`, 実装値は0.1刻み切上げ。
+- practical results LIVE165:
+  - d=0% / T=3.5: soft21R / ROI146.816% / profit+28,230
+  - d=5% / T=3.9: soft12R / ROI144.163% / profit+26,630
+  - d=10% / T=4.3: soft7R / ROI142.935% / profit+25,890
+  - d=15% / T=4.8: soft4R / ROI142.935% / profit+25,890
+  - d=20% / T=5.3: soft2R / ROI142.305% / profit+25,510
+- maxDDは全候補 **3,320円で不変**。worst10R=-2,760 / worst20R=-2,670も不変。
+- SUPPORT ROIは全候補 **135.143%で不変**。
+- 3.9はv379比+1.86pp、4.3/4.8は+0.63pp。5.3でv379と同値。
+- 解釈:
+  - 3.5のclosing optimumから安全側へ寄せてもROI改善の大半は残る。
+  - **3.9〜4.3がcurrent oddsで使う安全マージン候補**。ただしsupport結果で閾値を選ばず、想定drift幅に応じて機械的に決める。
+- production/official stake/current-odds shadow未変更 / September unread / AUDIT_OK=true。
+
+## BEFORE — v386 expanded current-odds safety-margin audit
+- v385の安全閾値を再最適化せず、拡大5母集団へ固定適用。
+- data source:
+  - v374 overlay Artifact `10548879270`
+  - v374 soft-Dutch Artifact `10555204782`
+- universes: LIVE165 / H078_M375 / H0775_M375 / H0775_M350 / PROD276。
+- thresholds: 3.5 / 3.9 / 4.3 / 4.8 / 5.3（drift0/5/10/15/20%由来）。
+- disjoint bandsも監査。
+- Run `35368163224` 発火済み、現在queued。production変更なし。
