@@ -293,3 +293,34 @@ Status: `PRODUCTION_S_OVERLAY_READY_TO_RUN`
 - Goal of next run: determine whether Jul-Aug comp>=7 research races already fail frozen production `PRE>=.28 / POST>=.25 / ENV_ENTRY>=.224790` before results. Thresholds remain fixed; this is overlay/diagnostic only.
 
 Status: `MARKET_REGIME_COMPLETE__PRODUCTION_S_OVERLAY_TRIGGERED`
+
+
+## USER PRIORITY — 2026-09-18 — volume preservation first
+- User preference: **できるだけ買うレース数は減らさず、ROIを上げたい**.
+- Research objective is therefore changed from pure ROI maximization to a volume-preserving Pareto objective.
+- Priority order:
+  1. avoid reducing total BET race count where possible;
+  2. if removal is unavoidable, minimize removed current BET races;
+  3. replace removed weak races with stronger PASS-race rescues when possible;
+  4. only then optimize retrospective ROI;
+  5. prefer broad/neighboring parameter plateaus and monthly stability over an isolated maximum.
+- Do not promote a rule merely because aggregate Apr-Aug ROI is high.
+- Apr-Jun remains development / Jul-Aug remains fixed retrospective validation for research.
+- September outcomes remain UNREAD; production unchanged until explicit approval.
+
+### Immediate research design
+1. **Expansion-only ceiling**: keep every current comp>=7 BET and add rescue races. This tests whether ROI can improve without removing a single race.
+2. **Minimal-removal rotation**: if expansion-only cannot restore ROI, drop the smallest possible weak subset of current BETs and replace them with stronger PASS races using only pre-result observables.
+3. Candidate observables stay simple: head_prob, opponent_mass, composite_odds; original-exhibition is not prioritized because prior ablation showed weak validation benefit.
+4. Report, for every candidate:
+   - current BET kept / removed,
+   - rescue BET added,
+   - final BET R and volume ratio,
+   - Apr-Jun ROI,
+   - Jul-Aug ROI,
+   - Jul and Aug separately,
+   - monthly minimum ROI,
+   - neighboring-threshold stability.
+5. Explicitly determine the **minimum number/share of current BETs that must be removed** before Jul-Aug retrospective ROI can reach >=100 while keeping final race count near or above baseline.
+
+Status: `VOLUME_PRESERVING_ROTATION_RESEARCH_START`
