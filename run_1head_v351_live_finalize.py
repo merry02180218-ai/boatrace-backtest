@@ -59,6 +59,31 @@ def wall3_shadow(p2,pc,x,watch_pass):
   q3=out
  return {'profile':prod.WALL3_SHADOW_PROFILE_NAME,'eligible':True,'applied':applied,'risk':risk,'wall_score':wall_score,'attack4_score':attack4,'gaps':gaps,'tickets':ticket_list(q2,q3)}
 
+def five6_shadow(p2,pc,x,head_pass):
+ ex=x['corrected_ex']; st=x['corrected_st']; straight=x['corrected_straight']; avg=x['corrected_orig_avg']
+ score6=(prod.WALL3_SHADOW_W_EX*float(ex['6'])+prod.WALL3_SHADOW_W_ST*float(st['6'])+
+         prod.WALL3_SHADOW_W_STRAIGHT*float(straight['6'])+prod.WALL3_SHADOW_W_ORIG_AVG*float(avg['6']))
+ st_gap=float(st['6'])-float(st['5'])
+ applied=bool(head_pass and score6>=prod.FIVE6_SHADOW_SCORE6_MIN and st_gap>=prod.FIVE6_SHADOW_ST_GAP_MIN)
+ q2={b:float(p2[b]) for b in BOATS};q3={(int(s),int(t)):float(v) for (s,t),v in pc.items()}
+ if applied:
+  out={}
+  for s in BOATS:
+   q={t:q3[(s,t)] for t in BOATS if t!=s}
+   if 6 in q:q[6]*=math.exp(prod.FIVE6_SHADOW_THIRD_G3*st_gap)
+   if 5 in q:q[5]*=math.exp(-prod.FIVE6_SHADOW_THIRD_G3*st_gap)
+   q=norm(q)
+   for t,v in q.items():out[(s,t)]=v
+  q3=out
+ return {
+  'profile':prod.FIVE6_SHADOW_PROFILE_NAME,
+  'eligible':bool(head_pass),
+  'applied':applied,
+  'score6':score6,
+  'st_gap_6_minus_5':st_gap,
+  'tickets':ticket_list(q2,q3) if head_pass else [],
+ }
+
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--input',required=True,type=Path);ap.add_argument('--out',required=True,type=Path);a=ap.parse_args()
  t0=time.perf_counter();x=json.loads(a.input.read_text())
@@ -71,12 +96,27 @@ def main():
  head_pass=ph>=prod.LIVE_HEAD_CUTOFF and mass>=prod.LIVE_OPPONENT_MASS_MIN and bool(x['head_exhibition_pass'])
  watch_pass=head_pass and ph>=prod.WATCH_HEAD_CUTOFF and mass>=prod.WATCH_OPPONENT_MASS_MIN
  tickets=[];pre_wall3_tickets=[];core={};shadow={'profile':prod.WALL3_LIVE_TICKET_PROFILE_NAME,'eligible':False,'applied':False,'risk':0.0,'wall_score':None,'attack4_score':None,'gaps':{},'tickets':[]}
+ five6={'profile':prod.FIVE6_SHADOW_PROFILE_NAME,'eligible':False,'applied':False,'score6':None,'st_gap_6_minus_5':None,'tickets':[]}
  if head_pass:
   core=opponent_core(x['corrected_ex'],x['corrected_st'],x['corrected_straight'],x['corrected_orig_avg'])
   p2,pc=adjust(x['p2'],x['pc'],core)
   pre_wall3_tickets=ticket_list(p2,pc)
   shadow=wall3_shadow(p2,pc,x,watch_pass)
   tickets=shadow['tickets'] if (prod.WALL3_LIVE_TICKET_PROMOTED and shadow['applied']) else pre_wall3_tickets
+  post_p2={b:float(p2[b]) for b in BOATS};post_pc={(int(s),int(t)):float(v) for (s,t),v in pc.items()}
+  if prod.WALL3_LIVE_TICKET_PROMOTED and shadow['applied']:
+   risk=float(shadow['risk'])
+   post_p2[4]*=math.exp(prod.WALL3_SHADOW_SECOND_G2*risk);post_p2[3]*=math.exp(-prod.WALL3_SHADOW_SECOND_G2*risk);post_p2=norm(post_p2)
+   tmp={}
+   for s in BOATS:
+    q={t:post_pc[(s,t)] for t in BOATS if t!=s}
+    if 4 in q:q[4]*=math.exp(prod.WALL3_SHADOW_THIRD_G3*risk)
+    if 3 in q:q[3]*=math.exp(-prod.WALL3_SHADOW_THIRD_G3*risk)
+    q=norm(q)
+    for t,v in q.items():tmp[(s,t)]=v
+   post_pc=tmp
+   if ticket_list(post_p2,post_pc)!=tickets: raise RuntimeError('wall3 post-probability reconstruction drift')
+  five6=five6_shadow(post_p2,post_pc,x,head_pass)
  out={k:x.get(k) for k in ['race_code','pre_class','legacy_pre_p','deadline_jst','evaluated_at_jst','minutes_to_deadline','training_cutoff','exhibition_hashes']}
  out.update({
   'status':'PASS' if head_pass else 'DROP',
@@ -108,6 +148,13 @@ def main():
   'wall3_shadow_gaps':shadow['gaps'],
   'wall3_shadow_tickets':shadow['tickets'],
   'wall3_shadow_research_only':False,
+  'five6_shadow_profile':five6['profile'],
+  'five6_shadow_eligible':five6['eligible'],
+  'five6_shadow_applied':five6['applied'],
+  'five6_shadow_score6':five6['score6'],
+  'five6_shadow_st_gap_6_minus_5':five6['st_gap_6_minus_5'],
+  'five6_shadow_tickets':five6['tickets'],
+  'five6_shadow_research_only':True,
   'result_or_payout_used':False,
   'chronology_guard':True,
   'finalized':True,
