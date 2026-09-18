@@ -71,5 +71,6 @@ jobs:
             echo "no artifact change"
           else
             git commit -m "prod: freeze HEAD4 new-feature fixed156 artifact"
+            git pull --rebase origin main
             git push origin HEAD:main
           fi
