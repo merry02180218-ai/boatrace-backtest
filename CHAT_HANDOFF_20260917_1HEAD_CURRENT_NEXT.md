@@ -1533,3 +1533,45 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - DEV / SUPPORTも別集計。
 - 目的はROI最大の倍率を選ぶことではなく、**追加リスク1円あたりの利益**とDDの増え方を比較し、forward stake shadowの自然な倍率を決めること。
 - 2026-09 outcomes/payoutsは読まない。formal stakingは変更しない。
+
+
+## AFTER — v376 overlay staking bankroll / drawdown audit
+- Run `35352111242` / Job `105622465377` completed success / Artifact `10550135945` / digest `sha256:36f1660db43aac2698db949485db19079f319bdab449a85fa48f63596577afa2` / head `97daff8edf55df0d009dddfd365e78e80f6a755d`。
+- formal baseline 100/100/100:
+  - stake49,500 / return63,700 / profit+14,200 / ROI128.687%
+  - max DD 2,240円 / worst10R -1,930 / worst20R -1,580 / longest losing streak7。
+- EITHER 2x:
+  - stake60,300 / return81,340 / profit**+21,040** / ROI**134.892%**
+  - extra stake10,800 / extra return17,640 / extra profit+6,840 / incremental ROI163.33%
+  - max DD **3,320円**（baseline比+1,080）
+  - worst10R -2,760 / worst20R -2,670 / longest losing streak7。
+- FIVE6 2x:
+  - profit+18,850 / ROI133.07%
+  - max DD3,020（+780）
+  - extra profit+4,650 / incremental ROI162.0%。
+- WALL3 2x:
+  - profit+17,080 / ROI132.17%
+  - max DD2,610（+370）
+  - extra profit+2,880 / incremental ROI180.0%。
+- 3x/4xはhistorical subgroup ROIが高いためROI/利益も機械的に増えるが、maxDDも大きく増加:
+  - EITHER 3x maxDD4,820 / 4x6,320
+  - FIVE6 3x4,220 / 4x5,420
+  - WALL3 3x3,210 / 4x3,810。
+- 結論: forward shadowの自然な最小非自明倍率は **2x**。3x/4xはhistorical結果を見て倍率を上げる形になるので現時点では採用根拠にしない。
+- production/LIVE official stake unchanged / September outcomes unread / AUDIT_OK=true。
+
+## BEFORE — v377 LIVE overlay stake shadow
+- formal tickets・formal stakeは変更しない。
+- current official stake = 各ticket100円（100/100/100）。
+- research-only stake shadow:
+  - formal wall3_ticket_applied OR five6_ticket_applied のとき **200/200/200**
+  - それ以外は100/100/100
+  - profile名を固定し、`research_only=true`。
+- LIVE final JSONに official_stakes / stake_shadow_profile / stake_shadow_signal / stake_shadow_applied / stake_shadow_stakes / stake_shadow_total を追加。
+- 保存済みcausal inputで
+  1) wall3発火
+  2) five6発火
+  3) overlay非発火
+  の3ケース回帰を作る。
+- formal ticket identity / HEAD / BASIC/WATCH / historical production sentinelは不変。
+- 2026-09 outcomes/payoutsは読まない。
