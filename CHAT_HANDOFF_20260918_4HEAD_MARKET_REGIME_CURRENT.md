@@ -2126,3 +2126,22 @@ Operational note:
 - No external webhook or ChatGPT automation is required for the BET notification path.
 
 Status: `HEAD4_BET_GITHUB_ISSUE_NOTIFICATION_READY`
+
+
+## BEFORE — switch 4HEAD BET notification to direct @mention
+User requested changing GitHub BET notification so GitHub Mobile can use Direct mentions rather than relying on Assigned Issues.
+
+Verified repository owner:
+- login: `merry02180218-ai`
+- type: User
+Therefore a body mention `@merry02180218-ai` is a valid direct user mention target.
+
+Implementation plan:
+1. Keep existing Issue assignment as a secondary notification path.
+2. Add `@merry02180218-ai` as the first line of every BET Issue body.
+3. PASS / NO_BET_DATA_NOT_READY remain no-notification.
+4. Exact-title duplicate suppression remains unchanged.
+5. Update notifier contract test to assert the mention appears in the BET dry-run payload.
+6. Do not create a synthetic real Issue during testing.
+
+Status: HEAD4_BET_DIRECT_MENTION_NOTIFICATION_START
