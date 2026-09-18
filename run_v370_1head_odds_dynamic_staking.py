@@ -8,6 +8,7 @@ Realized return uses official 100-yen payout. DEV Feb-Jun selects parameters;
 Jul-Aug SUPPORT is evaluation only.
 """
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor
 import argparse, json, math, pickle
 import requests
 import numpy as np
@@ -62,16 +63,19 @@ def load_daily_odds(codes):
         out[code]=om if len(om)==20 else None
         source[code]='repo_csv' if out[code] is not None else 'repo_incomplete'
     # Fallback only for missing historical closing odds; same official source as v340.
-    sess=requests.Session();sess.headers.update({'User-Agent':'Mozilla/5.0 v370 research audit'})
-    for code in sorted(out):
-        if out[code] is not None:continue
+    missing=[code for code in sorted(out) if out[code] is None]
+    req=[f'1-{s}-{t}' for s in (2,3,4,5,6) for t in (2,3,4,5,6) if s!=t]
+    def fetch_one(code):
+        sess=requests.Session();sess.headers.update({'User-Agent':'Mozilla/5.0 v370 research audit'})
         om,url=v340.fetch_odds(code,sess)
-        if om is not None:
-            req=[f'1-{s}-{t}' for s in (2,3,4,5,6) for t in (2,3,4,5,6) if s!=t]
-            if all(x in om for x in req):
-                out[code]={x:float(om[x]) for x in req};source[code]='official_web_fallback'
-            else:source[code]='official_web_incomplete'
-        else:source[code]='official_web_failed'
+        return code,om,url
+    with ThreadPoolExecutor(max_workers=6) as ex:
+        for code,om,url in ex.map(fetch_one,missing):
+            if om is not None:
+                if all(x in om for x in req):
+                    out[code]={x:float(om[x]) for x in req};source[code]='official_web_fallback'
+                else:source[code]='official_web_incomplete'
+            else:source[code]='official_web_failed'
     return out,source
 
 def formal_record(r,payout100,odmap):
