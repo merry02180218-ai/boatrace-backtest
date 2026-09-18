@@ -2500,3 +2500,34 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - thresholds: 3.5 / 3.9 / 4.3 / 4.8 / 5.3（drift0/5/10/15/20%由来）。
 - disjoint bandsも監査。
 - Run `35368163224` 発火済み、現在queued。production変更なし。
+
+
+## BEFORE — v370 current formal 3-ticket dynamic staking with official closing odds
+- ユーザー要望: 買い方研究を継続。
+- v369で固定rank配分はperiod反転が大きく、100/100/100均等をformal維持。
+- 過去v340にBOAT RACE公式締切3連単オッズ276/276の履歴とDutch実装があるため再利用する。
+- 重要: 今回はv340の「低合成オッズ見送り/買い目追加」は使わない。**現正式LIVE165Rを全件購入し、正式3点も固定**。
+- 市場オッズはv340 sharded artifact:
+  - shard0 `10329564703`
+  - shard1 `10330810260`
+  - shard2 `10330651756`
+  - shard3 `10329684566`
+  - shard4 `10330273057`
+  - shard5 `10330357729`
+  を結合。current LIVE165全件coverageを最初に監査する。不足分があればhistorical公式ページから補完し、coverage不足のまま比較しない。
+- 現formal ticketsは v360 prepared Artifact `10539401122` + current wall3+5>6正式ロジックから再構成。baseline sentinel 87/165 / return63,700 / ROI128.687%を要求。
+- 研究対象（全レース最低100円×3は維持）:
+  1) equal 100/100/100 baseline
+  2) fixed 600円/R odds-Dutch（逆オッズ）
+  3) fixed 600円/R model-proportional
+  4) fixed 600円/R value-proportional（model pair probability × closing odds）
+  5) dynamic extra units: baseline300円に対し、pre-race market/model edgeが強い時だけ+100〜+300円を1〜3点へ追加
+- dynamic gate候補:
+  - combined odds
+  - max ticket edge = p_head × pair_prob × odds
+  - top3 normalized model-vs-market disagreement
+  - rank probability concentration
+- DEV Feb-Junのみでルール選定。SUPPORT Jul-Augはholdout。
+- ROIは実払戻100円単位×購入unitで計算。closing oddsそのものをreturn計算には使わない。
+- exact closing oddsは実運用で完全には先取りできないため、v370はまず**execution upper-bound / market-informed research**。正式LIVE採用は別途live snapshot再現が必要。
+- 2026-09結果/払戻は読まない。production/LIVE ticketsは変更しない。
