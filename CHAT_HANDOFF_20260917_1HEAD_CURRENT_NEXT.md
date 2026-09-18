@@ -2081,3 +2081,55 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - max/min stake distribution
 - strategy式はSUPPORT結果を見る前に固定。budgetは採用判断時に安定plateauを見る。
 - production/LIVE ticket内容は変更しない。September outcomes unread。
+
+
+## AFTER — v371 confidence-weighted value staking
+- Run `35362589423` / Job `105657218973` completed success / Artifact `10555121550` / head `88bd494b88d2c4da9dca580ac6adfc861cc49170`。
+- pre-specified `CONF_EV = pair_prob^2 * closing_odds` をbudget 600〜3000円/Rで感度監査。
+- equalは各budgetが3で割り切れるため完全均等、ROIはformal baselineと同じ。
+- CONF_EV robust budgets（DEV/SUPPORT双方でequalよりROI改善）:
+  - **900, 1200, 1500, 1800, 2100, 2400, 3000円/R**
+  - 600円のみSUPPORTで-1.85pt。
+- 900円/R:
+  - DEV131.74%, SUPPORT126.83%, ALL130.90%
+  - equal比 +2.30 / +1.83 / +2.22pt。
+- 1200円/R:
+  - DEV **132.55%**
+  - SUPPORT **132.53%**
+  - ALL **132.55%**
+  - equal比 +3.11 / +7.53 / +3.86pt
+  - average units rank1/2/3 = 3.94 / 4.45 / 3.61（100円unit）。
+- 1500円/R: ALL132.56%, SUPPORT131.02%
+- 1800円/R: ALL132.68%, SUPPORT125.63%
+- 2400円/R: ALL132.41%, SUPPORT128.60%
+- 3000円/R: ALL133.18%, SUPPORT128.36%
+- 1200円月別equal差: Feb +23.28pt, Mar -1.99, Apr -1.97, May -3.59, Jun +9.77, Jul +7.50, Aug +7.54。
+- 結論: `p^2*odds` は予算900円以上で広いbudget plateauがあり、単純Dutchより明確に頑健。ただし元の300円/Rから資金量を3〜10倍にするため、ROI改善と同時に資金リスクも増える。
+- production/stake policyは未変更。September outcomes unread / AUDIT_OK=true。
+
+## BEFORE — v372 same-300-yen soft Dutch / odds-spread reallocation
+- 目的: **総投資300円/Rを増やさず**ROI改善できるか。
+- current formal3は100/100/100。
+- pre-race closing oddsだけで次の単純ルールを監査:
+  - selected3の `max_odds / min_odds >= threshold` の時、
+  - 最長オッズticketを100円→0円、
+  - 最短オッズticketを100円→200円、
+  - 中間は100円維持。
+  - 合計300円/R固定。
+- threshold grid 2.5〜6.0（0.1刻み）。
+- DEV Feb-Junのみでthreshold選定:
+  1) formal hitを1件も落とさないことを最優先
+  2) DEV ROI最大
+  3) 変更Rが少ない方
+- SUPPORT Jul-Augは完全holdout。
+- 評価:
+  - hit / lost hit / ROI / profit
+  - 月別
+  - threshold plateau
+  - どのrankを削ってどのrankへ増額したか
+  - omitted ticketが実際に当たったケース
+- ローカル診断:
+  - threshold3.5: DEV 71hit維持 / ROI135.52%, SUPPORT16hit維持 / ROI128.69%, ALL87hit維持 / ROI134.36%
+  - threshold3.5〜4.8でDEV/SUPPORTともhit loss0の帯を確認。
+- 結果を見てthresholdを選ばないよう、正式v372ではDEV-only selectionを固定してからSUPPORT評価。
+- production/LIVE stakeは変更しない。September outcomes unread。
