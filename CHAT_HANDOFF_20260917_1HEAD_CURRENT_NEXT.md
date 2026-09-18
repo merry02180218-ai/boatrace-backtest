@@ -218,3 +218,18 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 9/17 result/payout UNREAD、chronology guard維持。
 - Run 35302023710 / audit Job 105468495136 はこの記録時点もin_progress。これは旧production sentinel確認用Runであり、今回のLIVE運用変更とは分離する。
 - BEFORE handoff commit: `cab1067583c19e50dd82d60cc528b7a933d0fd80`。
+
+
+## BEFORE — 2026-09-18 3号艇「壁」リスク独立監査
+- ユーザー指示: HEADモデルで3号艇の壁役が十分加味されているか、鳴門9Rのような「3が遅く4が攻める」ケースを踏まえて研究する。
+- 現行v308には `attack23_*`、`v298_wall2_*_vs_attack34`、`v298_inner23_*_vs4` など間接的な内壁/攻撃特徴はあるが、**3号艇対4号艇を単独で評価する wall3 特徴は明示的にない**。v307 causal interactionも主に1対2。
+- 今回は現行LIVE基本セル `HEAD=.790 / MASS=.375 / env_w=.05 / q=.70` を固定し、ticket v320 3点・opponentCore G2=.45/G3=1.00も固定。
+- まず同一165R母集団に対して、3対4の事前壁特徴と展示後壁特徴を別々に付与し、
+  1) 弱壁帯で実際に1頭率/3点ROIが悪化するか、
+  2) targeted DROPで母数をなるべく維持しながらROI/頭率を改善できるか、
+  3) Feb-Jun dev / Jul-Aug support / 月別で再現するか
+  を監査する。
+- 展示後候補は corrected ST / 展示 / 直線 / original avg の3号艇−4号艇差、特に `ST3 << ST4` と4号艇攻撃力の組合せを重視。鳴門9R型の専用 `WALL3_RISK` を想定。
+- HEAD学習へ当日展示を直接混ぜない。展示はpost-ranking/final gateのみ。事前壁特徴を試す場合もPRE/strictly-prior情報のみ。
+- 2026-09-17 result/payout UNREADを維持。9/18 LIVE結果も研究へ混ぜない。
+- production/LIVE設定はこの監査では変更しない。良い結果が出ても自動昇格しない。
