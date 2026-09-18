@@ -2298,3 +2298,31 @@ Robustness finding:
 - September target outcomes remain unread.
 
 Status: `HEAD4_156R_HEADRATE_CAN_IMPROVE_WITH_STABILITY_TRADEOFF__PRODUCTION_UNCHANGED`
+
+
+## BEFORE — exact156 swap optimization for head rate + monthly stability
+User approved the next research step after the exact156 rerank frontier.
+
+Objective:
+- keep frozen base120 unchanged;
+- keep total selected races exactly 156R;
+- start from the 44.87% / ROI139.97% alternative concept, but repair the weak August/month-floor behavior by swapping expansion-layer races;
+- target head-rate near 44% while restoring monthly floor toward >=90%;
+- require overall ROI >= current production156 ROI 128.5865%;
+- inspect support Jul-Aug ROI as a secondary robustness metric.
+
+Method:
+1. Operate only on the 88 verified non-base120 candidates in the frozen Stage2 208R odds-covered universe.
+2. Expansion layer size remains exactly 36R.
+3. Build causal predecision ranking scores from head_prob, opponent_mass, composite_odds, ST and ORIG only.
+4. Search score weights and choose exactly top36, rather than requiring one rectangular threshold box.
+5. Report:
+   - max head-rate under exact156 + ROI>=current;
+   - max head-rate additionally requiring monthly floor >=85 / >=90 / >=current;
+   - support ROI constraints;
+   - development-first variants selected using Apr-Jun metrics, with Jul-Aug only reported afterward.
+6. September outcomes remain unread.
+7. NON-PRISTINE Apr-Aug retrospective audit only.
+8. Production/LIVE remains unchanged unless separately approved after robustness review.
+
+Status: HEAD4_156R_SWAP_OPTIMIZATION_START
