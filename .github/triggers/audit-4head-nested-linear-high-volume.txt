@@ -1,1 +1,2 @@
 trigger 2026-09-18 nested linear high-volume audit
+rerun after 120R candidate freeze
