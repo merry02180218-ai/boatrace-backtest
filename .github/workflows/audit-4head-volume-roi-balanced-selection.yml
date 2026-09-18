@@ -1,0 +1,22 @@
+name: audit-4head-volume-roi-balanced-selection
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/audit-4head-volume-roi-balanced-selection.txt'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy scikit-learn requests joblib beautifulsoup4 lxml
+      - run: mkdir -p /tmp/head4_volume_roi_balanced && python audit_4head_volume_roi_balanced_selection.py | tee /tmp/head4_volume_roi_balanced/run.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-volume-roi-balanced-selection
+          path: /tmp/head4_volume_roi_balanced/
