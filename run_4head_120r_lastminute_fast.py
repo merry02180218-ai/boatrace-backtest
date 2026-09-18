@@ -322,6 +322,45 @@ def decide(head_prob,mass,comp):
     sel=base77 or ((not base77) and comp>=2.5 and score>=.82)
     return {'selected':bool(sel),'base77':bool(base77),'current_comp7':bool(cur),'linear_score':float(score)}
 
+def wall3_open_shadow(head_prob,mass,comp,exh,current_selected):
+    """Research-only 3-vs-4 open-path rescue diagnostic.
+
+    This never changes the official selected/BET/PASS decision.
+    Canonical profile is frozen from the 2026-09-18 retrospective audit:
+      quality = head_prob + 1.50*opponent_mass
+      shadow_quality = quality + 0.10*max(0,-wall_score)
+      rescue iff current PASS, comp>=2.5 and shadow_quality>=0.82.
+    """
+    b3=exh['current_boats']['3']; b4=exh['current_boats']['4']
+    gaps={
+      'ex':float(b3['cur_ex'])-float(b4['cur_ex']),
+      'st':float(b3['cur_st'])-float(b4['cur_st']),
+      'straight':float(b3['cur_orig_straight'])-float(b4['cur_orig_straight']),
+      'orig_avg':float(b3['cur_orig_avg'])-float(b4['cur_orig_avg']),
+    }
+    wall=(.20*gaps['ex']+.40*gaps['st']+.25*gaps['straight']+.15*gaps['orig_avg'])
+    attack4=(.20*float(b4['cur_ex'])+.40*float(b4['cur_st'])+
+             .25*float(b4['cur_orig_straight'])+.15*float(b4['cur_orig_avg']))
+    open_risk=max(0.0,-wall)
+    base_quality=float(head_prob)+1.50*float(mass)
+    shadow_quality=base_quality+.10*open_risk
+    eligible=bool((not current_selected) and float(comp)>=2.5 and open_risk>0)
+    rescue=bool(eligible and shadow_quality>=.82)
+    return {
+      'profile':'HEAD4_WALL3_OPEN_RESCUE_SHADOW_V1_BETA010_Q082_COMP250',
+      'research_only':True,
+      'production_applied':False,
+      'eligible_current_pass':eligible,
+      'would_rescue':rescue,
+      'wall_score':wall,
+      'open_risk':open_risk,
+      'attack4_score':attack4,
+      'base_quality':base_quality,
+      'shadow_quality':shadow_quality,
+      'thresholds':{'open_beta':.10,'quality':.82,'composite_odds':2.5},
+      'gaps':gaps,
+    }
+
 def parse_deadline_flexible(date8,s):
     v=str(s).strip()
     if len(v) in (5,8) and v[2]==':':
@@ -412,6 +451,7 @@ def main():
         return
     stages['fetch_odds_s']=time.perf_counter()-t
     vals=[float(odds[x]) for x in tickets];comp=composite_odds(vals);d=decide(hp,mass,comp)
+    wallshadow=wall3_open_shadow(hp,mass,comp,exh,d['selected'])
     if a.performance_benchmark:
         now=datetime.now(JST)
     else:
@@ -427,6 +467,7 @@ def main():
       'schema':'head4_120r_fast_lastminute_v1','race_code':code,'monitoring_parent':monitored,'benchmark_unmonitored':bool(a.allow_unmonitored_benchmark and not monitored),
       'head_prob':hp,'opponent_mass':mass,'tickets':tickets,'ticket_odds':dict(zip(tickets,vals)),'composite_odds':comp,
       **d,'decision':('PERFORMANCE_BENCHMARK_ONLY' if a.performance_benchmark else ('BET' if d['selected'] and monitored else ('BENCHMARK_ONLY' if not monitored else 'PASS'))),
+      'wall3_open_shadow':wallshadow,
       'daily_state_history_end':state.get('history_end'),'september_prior_history_allowed':True,
       'target_race_result_used':False,'payout_used':False,'current_exhibition_used':True,'predeadline_odds_used':(not a.performance_benchmark),'performance_benchmark':bool(a.performance_benchmark),'odds_source':meta.get('source'),
       'exhibition_attempts':ex_attempts,'exhibition_last_retry_error':ex_last,'odds_attempts':od_attempts,'odds_last_retry_error':od_last,
