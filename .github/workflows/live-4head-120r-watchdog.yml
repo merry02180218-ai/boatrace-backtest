@@ -2,7 +2,7 @@ name: live-4head-120r-watchdog
 
 on:
   schedule:
-    - cron: '*/10 0-12 * * *' # every 10 min, 09:00-21:59 JST only
+    - cron: '*/15 0-12 * * *' # every 15 min, 09:00-21:59 JST only
   workflow_dispatch:
   push:
     paths:
@@ -22,17 +22,18 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Resolve current watch target
+      - name: Resolve current watch target without checkout
+        env:
+          GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
+          gh api "repos/$GITHUB_REPOSITORY/contents/.github/live/head4_120r_watchlist.json?ref=$GITHUB_SHA" --jq '.content' | base64 -d > /tmp/head4_120r_watchlist.json
           python - <<'PY'
           import json, os
           from datetime import datetime, timedelta
           from zoneinfo import ZoneInfo
           JST=ZoneInfo('Asia/Tokyo')
-          z=json.load(open('.github/live/head4_120r_watchlist.json',encoding='utf-8'))
+          z=json.load(open('/tmp/head4_120r_watchlist.json',encoding='utf-8'))
           now=datetime.now(JST)
           if z.get('date') != now.strftime('%Y%m%d'):
               print('WATCHDOG_NO_TARGET date mismatch', z.get('date'), now.isoformat())
@@ -74,6 +75,9 @@ jobs:
             echo "WATCHDOG_ALREADY_COMPLETED $NAME"
             echo "SHOULD_RUN=0" >> "$GITHUB_ENV"
           fi
+
+      - uses: actions/checkout@v4
+        if: env.SHOULD_RUN == '1'
 
       - uses: actions/setup-python@v5
         if: env.SHOULD_RUN == '1'
