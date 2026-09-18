@@ -166,3 +166,11 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 3. successならartifact回収し、production cell 276/241/131 + race/ticket SHA完全一致を確認。その後441セルのROI上位、月別、dev/support、隣接plateauを解析。
 4. failureならaudit logを最後まで読み、原因を特定してから修正。sentinelは弱めない。
 5. substantive作業の前後で本handoffへ必ず追記。
+
+
+## BEFORE — 2026-09-18 Run 35302023710 final確認 / 441セル解析
+- ユーザー指示: Run 35302023710 / audit Job 105468495136 の結果確認から継続。
+- 最新確認時点: prepare/base-third/third/second は success、audit は step「441-cell joint ROI audit」in_progress。開始後数分で、直前成功Run 35298138766 のaudit所要約21分と比較して正常範囲。
+- Run 35298138766 / audit Job 105456877514 / Artifact 10529736068 は修正後コードで success、AUDIT_OK=true。production cell 276/241/131、race SHA / ticket SHA完全一致。
+- 35298138766 head 379190b... -> 最新Run head 28cc9dc... の差分は3号艇研究ファイルのみで、1号艇 joint ROI workflow/scriptは変更なし。
+- これからやること: 最新Run完了を確認しつつ、成功Artifactの summary.csv / monthly.csv / result.json から raw best、Feb-Jun dev、Jul-Aug support、月別、平均的中オッズ、隣接plateau安定性を解析。sentinelは弱めない。9/17 result/payout UNREAD維持。自動production昇格はしない。
