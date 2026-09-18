@@ -18,7 +18,7 @@ HTML = '''<html><body><table>
 <tr><td>6</td><td>6.84</td><td>0.0</td></tr>
 </table></body></html>'''
 
-ST = '''data=\n1\t6\n1\tx\tx\tx\t.14\t\n2\tx\tx\tx\t.13\t\n3\tx\tx\tx\t.16\t\n4\tx\tx\tx\t.12\t\n5\tx\tx\tx\t.15\t\n6\tx\tx\tx\t.18\t\n'''
+ST = '''data=\n1\t6\n1\t1\tA\tx\t.14\t\n2\t2\tB\tx\t.13\t\n3\t3\tC\tx\t.16\t\n5\t4\tD\tx\t.12\t\n4\t5\tE\tx\t.15\t\n6\t6\tF\tx\t.18\t\n'''
 
 ORIG = '''data=\n1\t3\n一周\tまわり足\t直線\n1\tA\t37.20\t5.60\t7.40\n2\tB\t37.10\t5.55\t7.35\n3\tC\t37.00\t5.50\t7.30\n4\tD\t36.90\t5.45\t7.25\n5\tE\t37.30\t5.65\t7.45\n6\tF\t37.40\t5.70\t7.50\n'''
 
@@ -60,7 +60,7 @@ def main():
     assert q['orig_straight4'] == 0.5
 
     # Required lane 3/4 ST missing/L => fail closed.
-    expect_fail(lambda: build_from_sources('20260630',1,1,HTML,ST.replace('4\tx\tx\tx\t.12\t','4\tx\tx\tx\t.12\tL'),ORIG))
+    expect_fail(lambda: build_from_sources('20260630',1,1,HTML,ST.replace('5\t4\tD\tx\t.12\t','5\t4\tD\tx\t.12\tL'),ORIG))
     # Original exhibition not measured => fail closed.
     expect_fail(lambda: build_from_sources('20260630',1,1,HTML,ST,ORIG.replace('1\t3','0\t3',1)))
     # Tilt absent => fail closed.
