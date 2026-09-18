@@ -199,3 +199,19 @@ Run `35302541048`
 - User may manually fire workflows; after `発火した`, verify exact run.
 - Always give exact Run/Job/Artifact/commit IDs when available.
 - Never claim success before verified.
+
+
+## BEFORE — 2026-09-18 12:22 JST — Run 35302541048 result confirmation / continuation
+- User requested continuation from Run `35302541048`.
+- Re-read this handoff and latest main-visible project state before continuing.
+- Verified Run `35302541048` Job `105467993604` is still `in_progress`.
+- Current executing step: `市場構造シフト分解`; artifact not yet created.
+- Plan after SUCCESS:
+  1. fetch job logs and artifact,
+  2. parse July/August separately,
+  3. compare comp<7 vs comp>=7 head4/hit/ROI,
+  4. inspect head_prob / opponent_mass / orig4_adv_inside distributions,
+  5. inspect fine comp bands and LOW/HIGH monotonic sweep,
+  6. classify persistent-vs-month-specific-vs-observable-structure-vs-sample-noise,
+  7. only if justified, design the next pre-result conditional gate.
+- September 2026 results remain `UNREAD`; production remains unchanged.
