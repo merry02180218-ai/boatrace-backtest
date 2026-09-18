@@ -1,0 +1,64 @@
+name: benchmark-4head-120r-completed-path
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/benchmark-4head-120r-completed-path.txt'
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Sparse checkout historical data locally
+        uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          sparse-checkout: |
+            data/programs/race_cards
+            data/programs/waku10
+            data/results/realtime
+            data/previews/stt
+      - run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Reuse corrected 2026-09-18 PRE artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: head4-120r-pre-live-trial-20260918
+          path: seed
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: 35317588703
+      - name: Locate current inputs
+        run: |
+          CARD="$(find seed -type f -path '*/current_input/v291/20260918/race_cards.csv' | head -1)"
+          WAKU="$(find seed -type f -path '*/current_input/v291/20260918/waku10.csv' | head -1)"
+          PRE="$(find seed -type f -path '*/live_outputs/head4_120r_pre/20260918/pre_all.csv' | head -1)"
+          test -n "$CARD" && test -n "$WAKU" && test -n "$PRE"
+          echo "CARD=$CARD" >> "$GITHUB_ENV"
+          echo "WAKU=$WAKU" >> "$GITHUB_ENV"
+          echo "PRE=$PRE" >> "$GITHUB_ENV"
+      - name: Build once-daily state through Sep 17
+        run: |
+          /usr/bin/time -f 'DAILY_STATE_WALL_SECONDS=%e' python prepare_4head_120r_daily_state.py             --target-date 2026-09-18 --data-root brcsv --out /tmp/head4_daily_state.json 2>&1 | tee /tmp/daily_state.log
+      - name: Completed-source speed benchmark Biwako 12R
+        run: |
+          /usr/bin/time -f 'FAST120_WALL_SECONDS=%e' python run_4head_120r_lastminute_fast.py             --date 20260918 --jcd 11 --race 12 --deadline-jst 23:59             --race-cards "$CARD" --waku10 "$WAKU" --pre-all "$PRE"             --daily-state /tmp/head4_daily_state.json             --exhibition-safety-seconds 75 --odds-safety-seconds 45             --out /tmp/fast120_biwako12.json 2>&1 | tee /tmp/fast120.log
+          grep -q 'HEAD4_120R_FAST_LASTMINUTE_OK' /tmp/fast120.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-120r-completed-path-benchmark
+          path: |
+            /tmp/head4_daily_state.json
+            /tmp/daily_state.log
+            /tmp/fast120_biwako12.json
+            /tmp/fast120.log
