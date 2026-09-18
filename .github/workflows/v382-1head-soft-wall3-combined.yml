@@ -1,0 +1,50 @@
+name: v382 1-head soft Dutch plus wall3 allocation
+on:
+  push:
+    paths:
+      - 'run_v382_1head_soft_wall3_combined.py'
+      - '.github/workflows/v382-1head-soft-wall3-combined.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download frozen overlay artifact
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/v374overlay
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10548879270/zip" > /tmp/v374overlay.zip
+          unzip -q /tmp/v374overlay.zip -d /tmp/v374overlay
+          test -f /tmp/v374overlay/rows_LIVE165.csv
+      - name: Download frozen soft-Dutch expanded artifact
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/v374soft
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10555204782/zip" > /tmp/v374soft.zip
+          unzip -q /tmp/v374soft.zip -d /tmp/v374soft
+          test -f /tmp/v374soft/LIVE165_race_level.csv
+      - run: pip install -q numpy pandas
+      - name: Run fixed combined audit
+        run: python run_v382_1head_soft_wall3_combined.py --overlay-dir /tmp/v374overlay --soft-dir /tmp/v374soft
+      - name: Show result
+        if: always()
+        run: |
+          cat /tmp/v382-soft-wall3-combined/result.json 2>/dev/null || true
+          cat /tmp/v382-soft-wall3-combined/summary.csv 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v382-soft-wall3-combined-${{ github.run_id }}
+          path: /tmp/v382-soft-wall3-combined/
+          retention-days: 30
