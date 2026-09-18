@@ -23,15 +23,18 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml joblib
-      - name: Download frozen expanded 208R feature table
+      - name: Download frozen Stage1 + expanded 208R feature tables
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          mkdir -p seed
+          mkdir -p seed stage1
           gh run download 35361685459 -n head4-208-expanded-features -D seed
+          gh run download 35337846162 -n head4-expanded-pool-stage1 -D stage1
           F="$(find seed -type f -name 'expanded_features_208.csv' | head -1)"
-          test -n "$F"
+          P="$(find stage1 -type f -name 'selected_pool.csv' | head -1)"
+          test -n "$F" && test -n "$P"
           echo "EXPANDED_FEATURES_208=$F" >> "$GITHUB_ENV"
+          echo "STAGE1_POOL=$P" >> "$GITHUB_ENV"
       - name: Compile live code
         run: |
           python -m py_compile head4_original_venue_schema.py
