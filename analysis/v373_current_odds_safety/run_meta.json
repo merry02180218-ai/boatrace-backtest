@@ -1,0 +1,20 @@
+{
+  "run_id": 35378979553,
+  "run_url": "https://github.com/merry02180218-ai/boatrace-backtest/actions/runs/35378979553",
+  "head_sha": "b4e1d9d6497062f73a92f8784ac87160e8b64fdf",
+  "jobs": [
+    {
+      "id": 105710361495,
+      "name": "audit",
+      "status": "in_progress",
+      "conclusion": null
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 10560887429,
+      "name": "v373-current-odds-safety-35378979553",
+      "size_in_bytes": 4817
+    }
+  ]
+}
