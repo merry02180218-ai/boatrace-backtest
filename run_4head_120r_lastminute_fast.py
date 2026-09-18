@@ -303,6 +303,18 @@ def pair_mass(p2,pc,pairs):
     den=sum(vals.values())
     return sum(vals[x]/den for x in pairs)
 
+def fetch_odds_timing_only(date,jcd,race):
+    """Performance-only odds fetch. No decision/claim of pre-deadline validity."""
+    t0=time.perf_counter()
+    params={'rno':race,'jcd':f'{jcd:02d}','hd':date}
+    resp=live.safe_get(live.BASE,params)
+    parsed=live.parse_odds(resp.text)
+    if set(parsed)!=live.expected_combos() or len(parsed)!=120:
+        raise Fast120Error(f'official odds3t incomplete in benchmark: {len(parsed)}/120')
+    odds={f'{a}-{b}-{cc}':float(o) for (a,b,cc),o in parsed.items()}
+    return odds,{'source':'BOAT RACE official odds3t timing-only','count':120,'timing_only':True,
+                 'fetched_at_jst':datetime.now(JST).isoformat(),'elapsed_s':time.perf_counter()-t0}
+
 def decide(head_prob,mass,comp):
     cur=comp>=7.0
     base77=(cur and mass>=.425) or ((not cur) and head_prob>=.22 and mass>=.375 and comp>=3.0)
@@ -399,7 +411,7 @@ def main():
     out={
       'schema':'head4_120r_fast_lastminute_v1','race_code':code,'monitoring_parent':monitored,'benchmark_unmonitored':bool(a.allow_unmonitored_benchmark and not monitored),
       'head_prob':hp,'opponent_mass':mass,'tickets':tickets,'ticket_odds':dict(zip(tickets,vals)),'composite_odds':comp,
-      **d,'decision':'BET' if d['selected'] and monitored else ('BENCHMARK_ONLY' if not monitored else 'PASS'),
+      **d,'decision':('PERFORMANCE_BENCHMARK_ONLY' if a.performance_benchmark else ('BET' if d['selected'] and monitored else ('BENCHMARK_ONLY' if not monitored else 'PASS'))),
       'daily_state_history_end':state.get('history_end'),'september_prior_history_allowed':True,
       'target_race_result_used':False,'payout_used':False,'current_exhibition_used':True,'predeadline_odds_used':True,'odds_source':meta.get('source'),
       'exhibition_attempts':ex_attempts,'exhibition_last_retry_error':ex_last,'odds_attempts':od_attempts,'odds_last_retry_error':od_last,
