@@ -110,10 +110,10 @@ def build_frozen_aug31_state():
                 if mk[1]:
                     motor_hist[mk][1]+=1
                     motor_hist[mk][0]+=int(winner==b)
-                name=clean_name(card.get(f'艇{b}_選手名',''))
-                if name:
-                    player_hist[name][1]+=1
-                    player_hist[name][0]+=int(winner==b)
+                reg=str(card.get(f'艇{b}_登録番号','')).strip()
+                if reg:
+                    player_hist[reg][1]+=1
+                    player_hist[reg][0]+=int(winner==b)
         d+=timedelta(days=1)
     return motor_hist,player_hist
 
@@ -123,10 +123,13 @@ def frozen_parent_features(card,motor_hist,player_hist):
     mw3=a3[0]/a3[1] if a3[1] else np.nan
     motor_win_diff=mw4-mw3 if np.isfinite(mw4) and np.isfinite(mw3) else np.nan
     motor_2ren_diff=ff(card.get('艇4_モーター2連対率'))-ff(card.get('艇3_モーター2連対率'))
-    name4=clean_name(card.get('艇4_選手名',''))
-    ph=player_hist.get(name4,(0,0))
+    reg4=str(card.get('艇4_登録番号','')).strip()
+    ph=player_hist.get(reg4,(0,0))
     player4=ph[0]/ph[1] if ph[1] else np.nan
-    missing=not (np.isfinite(motor_win_diff) and np.isfinite(motor_2ren_diff) and np.isfinite(player4))
+    miss_motor_win=not np.isfinite(motor_win_diff)
+    miss_motor_2ren=not np.isfinite(motor_2ren_diff)
+    miss_player=not np.isfinite(player4)
+    missing=miss_motor_win or miss_motor_2ren or miss_player
     parent=(missing or (
         motor_win_diff>=WIN_CUT and motor_2ren_diff>=REN2_CUT and player4>=PLAYER_CUT
     ))
@@ -134,6 +137,9 @@ def frozen_parent_features(card,motor_hist,player_hist):
       'motor_win_diff_4v3':motor_win_diff,
       'motor_2ren_diff_4v3':motor_2ren_diff,
       'player4_all_win_frozen_aug31':player4,
+      'parent_missing_motor_win':int(miss_motor_win),
+      'parent_missing_motor_2ren':int(miss_motor_2ren),
+      'parent_missing_player':int(miss_player),
       'parent_feature_missing':int(missing),
       'monitoring_parent':int(parent),
     }
@@ -269,6 +275,10 @@ def main():
       'current_rows':len(df),
       'monitoring_parent_R':len(watch),
       'display_R':len(disp),
+      'parent_missing_any_R':int(df.parent_feature_missing.sum()),
+      'parent_missing_motor_win_R':int(df.parent_missing_motor_win.sum()),
+      'parent_missing_motor_2ren_R':int(df.parent_missing_motor_2ren.sum()),
+      'parent_missing_player_R':int(df.parent_missing_player.sum()),
       'display_rule':'monitoring_parent AND (head_prob>=.18 OR v250_PRE>=.12); missing headprob fail-open',
       'display_is_hard_gate':False,
       'production_changed':False,
@@ -279,6 +289,7 @@ def main():
        f'- 全レース: {len(df)}R',
        f'- 内部監視候補: {len(watch)}R',
        f'- 表示用事前候補: **{len(disp)}R**',
+       f'- 親条件欠損: {int(df.parent_feature_missing.sum())}R（motor_win {int(df.parent_missing_motor_win.sum())} / motor2連 {int(df.parent_missing_motor_2ren.sum())} / player {int(df.parent_missing_player.sum())}）',
        '- 展示・直前オッズ・9月結果は不使用。',
        '- 表示外でも内部監視候補は展示後の最終判定対象。',
        '',
