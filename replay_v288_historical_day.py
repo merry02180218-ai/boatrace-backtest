@@ -111,7 +111,7 @@ def write_csv(path,rs):
 
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--date',required=True);ap.add_argument('--cache',required=True);ap.add_argument('--outdir',required=True);ap.add_argument('--expected-history-cutoff',default='2026-08-31');a=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--date',required=True);ap.add_argument('--cache',required=True);ap.add_argument('--outdir',required=True);ap.add_argument('--expected-history-cutoff',default='2026-08-31');ap.add_argument('--downstream-mode',choices=['v288','pair_only'],default='v288');a=ap.parse_args()
     day=datetime.strptime(a.date,'%Y-%m-%d').date();day8=day.strftime('%Y%m%d');ymd=day.strftime('%Y/%m/%d')
     z=joblib.load(a.cache)
     if str(z.get('date'))!=day8:raise RuntimeError(f'cache date mismatch {z.get("date")} != {day8}')
@@ -175,11 +175,15 @@ def main():
             scond=bool(r['c_b3_minus_b4_waku_st']<=prod.S_WAKU_MAX and r['c_b3_minus_b4_st']>=prod.S_ST_MIN and r['c_b3_meetst']<=prod.S_MEET_MAX)
             acond=bool(r['c_b3_minus_b4_st']>=prod.A_ST_MIN and r['c_wall12_weak']<=prod.A_WALL_MAX)
             bcond=bool(r['c_b3_minus_b2_motor']>=prod.B_MOTOR_MIN and r['c_b3_inside_nst']<=prod.B_NST_MAX)
-            route,S,A,B=prod.select_v288_route(v243pass,buyable,scond,acond,bcond)
+            if a.downstream_mode=='pair_only':
+                route='PAIR_ONLY' if buyable else None
+                S=A=B=False
+            else:
+                route,S,A,B=prod.select_v288_route(v243pass,buyable,scond,acond,bcond)
             tickets=[]
             if route:
                 vals=[float(odds[x]) for x in ts[:int(top_n)]];tickets=prod.dutch(ts[:int(top_n)],vals)
-            rec.update({'decision':'BET' if route else 'NO_BET','evaluation_status':'EVALUABLE','error_type':'','error':'','route':route or '','p3_live':p3,'v242_action':action,
+            rec.update({'decision':'BET' if route else 'NO_BET','evaluation_status':'EVALUABLE','error_type':'','error':'','route':route or '','downstream_mode':a.downstream_mode,'p3_live':p3,'v242_action':action,
                 'raw_top_n':raw_n,'raw_comp_odds':ch.get('raw_comp'),'top_n':top_n,'comp_odds':comp,
                 'v243_pass':int(v243pass),'v243_base':int(base),'v243_keep':int(keep),'v243_rescue':int(rescue),
                 'S_condition':int(scond),'A_condition':int(acond),'B_condition':int(bcond),
@@ -214,7 +218,7 @@ def main():
 
     bets=[r for r in settled if r['decision']=='BET'];stake=sum(r['total_stake'] for r in bets);ret=sum(r['return_yen'] for r in bets);hits=sum(r['hit'] for r in bets)
     evaluable=[r for r in settled if r.get('evaluation_status')=='EVALUABLE'];errors=[r for r in settled if r.get('evaluation_status')!='EVALUABLE']
-    summary={'date':a.date,'policy':'3HEAD_V288_PRODUCTION_RETROSPECTIVE_REPLAY','history_cutoff':str(a.expected_history_cutoff),'pre_candidates':len(decisions),
+    summary={'date':a.date,'policy':'3HEAD_V288_PRODUCTION_RETROSPECTIVE_REPLAY' if a.downstream_mode=='v288' else '3HEAD_A_PAIR_ONLY_DIAGNOSTIC','downstream_mode':a.downstream_mode,'history_cutoff':str(a.expected_history_cutoff),'pre_candidates':len(decisions),
              'live_evaluable':len(evaluable),'input_or_decision_errors':len(errors),'genuine_no_bets':sum(r['decision']=='NO_BET' for r in evaluable),
              'bets':len(bets),'hits':hits,'hit_rate':hits/len(bets) if bets else None,'stake':stake,'payout':ret,'profit':ret-stake,'roi':100*ret/stake if stake else None,
              'decision_sha256_before_results':decision_sha,'result_or_payout_used_for_decision':False,'results_joined_only_after_freeze':True,
