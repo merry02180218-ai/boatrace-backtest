@@ -126,6 +126,21 @@ def main():
  stake_shadow_applied=bool(stake_shadow_signal)
  stake_shadow_stakes=([prod.LIVE_OFFICIAL_STAKE_YEN_PER_TICKET*prod.OVERLAY_STAKE_SHADOW_MULTIPLIER for _ in tickets]
                       if stake_shadow_applied else official_stakes[:])
+ allocation_shadow_wall3=bool(head_pass and prod.WALL3_LIVE_TICKET_PROMOTED and shadow['applied'])
+ allocation_shadow_five6=bool(head_pass and prod.FIVE6_LIVE_TICKET_PROMOTED and five6['applied'])
+ if not head_pass:
+  allocation_shadow_signal='DROP'
+  allocation_shadow_stakes=[]
+ elif allocation_shadow_wall3:
+  allocation_shadow_signal='WALL3_RANK3'
+  allocation_shadow_stakes=list(prod.WALL3_RANK3_ALLOC_SHADOW_WALL3_STAKES_YEN)
+ elif allocation_shadow_five6:
+  allocation_shadow_signal='FIVE6_EQUAL2X'
+  allocation_shadow_stakes=list(prod.WALL3_RANK3_ALLOC_SHADOW_FIVE6_ONLY_STAKES_YEN)
+ else:
+  allocation_shadow_signal='NONE'
+  allocation_shadow_stakes=list(prod.WALL3_RANK3_ALLOC_SHADOW_NONE_STAKES_YEN)
+ allocation_shadow_applied=bool(allocation_shadow_wall3 or allocation_shadow_five6)
  out.update({
   'status':'PASS' if head_pass else 'DROP',
   'attention_level':'WATCH' if watch_pass else ('BASIC' if head_pass else 'DROP'),
@@ -177,6 +192,12 @@ def main():
   'stake_shadow_stakes_yen':stake_shadow_stakes,
   'stake_shadow_total_stake_yen':sum(stake_shadow_stakes),
   'stake_shadow_research_only':bool(prod.OVERLAY_STAKE_SHADOW_RESEARCH_ONLY),
+  'allocation_shadow_profile':prod.WALL3_RANK3_ALLOC_SHADOW_PROFILE_NAME,
+  'allocation_shadow_signal':allocation_shadow_signal,
+  'allocation_shadow_applied':allocation_shadow_applied,
+  'allocation_shadow_stakes_yen':allocation_shadow_stakes,
+  'allocation_shadow_total_stake_yen':sum(allocation_shadow_stakes),
+  'allocation_shadow_research_only':bool(prod.WALL3_RANK3_ALLOC_SHADOW_RESEARCH_ONLY),
   'result_or_payout_used':False,
   'chronology_guard':True,
   'finalized':True,
