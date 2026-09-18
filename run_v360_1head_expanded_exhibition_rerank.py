@@ -11,7 +11,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import timedelta
 import urllib.request
 from pathlib import Path
-import json, math
+import json, math, pickle
 import numpy as np
 import pandas as pd
 
@@ -137,8 +137,8 @@ def evaluate(rows,label,pairs,scope,cache):
   if changed:
    for x in tr:triggers[x]+=1
   rec.append({'month':str(rr['month']),'race_code':str(rr['race_code']).zfill(12),'head_hit':int(rr['head_hit']),
-              'actual_combo':actual,'tickets':ts,'hit':hit,'base_tickets':rr.base_tickets,
-              'base_hit':int(rr['base_hit']),'changed':changed,'opp_mass':float(rr.opp_mass)})
+              'actual_combo':actual,'tickets':ts,'hit':hit,'base_tickets':rr['base_tickets'],
+              'base_hit':int(rr['base_hit']),'changed':changed,'opp_mass':float(rr['opp_mass'])})
  z=pd.DataFrame(rec)
  a=met(z,cache);dv=met(z[z.month.isin(DEV)],cache);sp=met(z[z.month.isin(SUP)],cache)
  m={'variant':label,'scope':scope,**{f'all_{k}':v for k,v in a.items()},**{f'dev_{k}':v for k,v in dv.items()},
@@ -165,9 +165,12 @@ def main():
  cores={}
  for _,r in features[features.ex_ready.fillna(False)].iterrows():
   cores[str(r.race_code).zfill(12)]={b:float(r[f'core{b}']) for b in BOATS}
+ prepared_rows={uname:baseline_rows(sel,features,maps,cores) for uname,sel in sels.items()}
+ with (OUT/'prepared_rows.pkl').open('wb') as fh:
+  pickle.dump({'rows':prepared_rows,'prefetch':prefetch,'universes':UNIVERSES},fh,pickle.HIGHEST_PROTOCOL)
+ print('prepared_rows_checkpoint', {k:len(v) for k,v in prepared_rows.items()}, flush=True)
  summaries=[];monthly=[];paired=[];bases={}
- for uname,sel in sels.items():
-  rows=baseline_rows(sel,features,maps,cores)
+ for uname,rows in prepared_rows.items():
   bz,bm=baseline_metrics(rows,cache);bm['universe']=uname;summaries.append(bm);bases[uname]=bm
   for mon,g in bz.groupby('month'):
    mm=met(g,cache);monthly.append({'universe':uname,'variant':'BASE','scope':'NA','month':mon,**mm})
