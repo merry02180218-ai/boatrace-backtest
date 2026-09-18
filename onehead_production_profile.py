@@ -66,6 +66,15 @@ FIVE6_SHADOW_ST_GAP_MIN = 0.40
 FIVE6_SHADOW_SECOND_G2 = 0.00
 FIVE6_SHADOW_THIRD_G3 = 0.75
 
+
+# Research-only LIVE stake shadow from v374-v376.
+# Official stake remains 100 yen per formal ticket. When either already-formal
+# post-exhibition overlay fires, shadow only doubles all three formal tickets.
+LIVE_OFFICIAL_STAKE_YEN_PER_TICKET = 100
+OVERLAY_STAKE_SHADOW_PROFILE_NAME = "1HEAD_OVERLAY_STAKE_SHADOW_V375_EITHER_2X"
+OVERLAY_STAKE_SHADOW_MULTIPLIER = 2
+OVERLAY_STAKE_SHADOW_RESEARCH_ONLY = True
+
 # v345 adopted HEAD-side component weights. Historical names are retained for
 # compatibility with frozen research modules.
 ATTACK_CORE_VERSION = "v345"
