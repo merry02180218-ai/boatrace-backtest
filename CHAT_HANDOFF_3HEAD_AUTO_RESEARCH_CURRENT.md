@@ -322,3 +322,22 @@ Changes in research/run_3head_funsite_broad50.py:
 - If January settled labels are available, preferred Wave6 is: January training -> February rolling/stability selection -> March one-shot, using the early-race/opponent-specific representation. This is a materially new temporal-training design and does not tune from March.
 - If January labels are not available, retain February-only labels and use only schema-verified recency/freshness features whose timestamps strictly precede target race date.
 - September outcomes remain UNREAD; production v288 unchanged.
+
+
+## AFTER WORK — Source horizon / recent-meet audit verified (Run 35306224550, 2026-09-18)
+- SUCCESS: Run **35306224550** / Job **105478845560** / Artifact **10531158605**; head SHA **8e2cabff1ad03943726a810f69ef5c904b02d628**.
+- Frozen Wave21 settled source begins **2026-02-01** and contains no January rows. Pre-September monthly row counts: Feb 4,100 / Mar 4,607 / Apr 4,244 / May 4,832 / Jun 4,488 / Jul 4,920 / Aug 4,920.
+- BoatraceCSV/fun-site PRE files `race_cards`, `recent_national`, `recent_local` are available on **all 31 January days** (nonzero daily files; one day may have different race-card row count but still available).
+- `recent_national` and `recent_local` expose `前1節..前5節_開始日/終了日`; samples confirm dates precede the target race date. Therefore Wave6 can fail-closed verify every nonblank prior-meet end date < target race date.
+- January outcome labels are available separately from BoatraceCSV `results/realtime` (`1着_艇番`). Before using them for training, Wave6 must cross-check February `results/realtime` winners against canonical Wave21 `settle__winner` on the common usable population and fail if agreement is below 99.5%.
+- `programs/waku10` is documented as PRE, but historical files for Jan/Feb/Mar 2026 are not present; at least Aug 2026 files exist. **Do not use waku10 in this clean Feb/March study.**
+- September outcome columns were not loaded in the source-horizon audit; production v288 unchanged.
+
+## BEFORE WORK — Broad50 Wave6 January-training + fail-closed recency (2026-09-18)
+- New temporal design: train predictive models on January only, select all score thresholds/weights/consensus gates using February only, then evaluate March exactly once.
+- Build January labels from `results/realtime` only after February cross-source winner agreement with canonical Wave21 is >=99.5%.
+- PRE inputs: race_cards static fields + recent_national/recent_local; reject any race where a nonblank recent-session end date is on/after the target date. Add recency-days and recent-vs-older form trend/consistency features from timestamp-verified sessions.
+- Keep the opponent-specific early-race family from Wave4 (boat3-vs-boat2 player/ST edge, inner-player support, vs1/vs4 control), but model fitting now uses January rather than February labels.
+- February selection should use two chronological halves plus four-week diagnostics. Freeze a 50% candidate only if both halves are >=50%, each has >=20 races, at least 3/4 weeks are >=45% when weekly support >=5, and venue dispersion is >=8 in each half. This deliberately raises support versus Waves 3-5.
+- Optimize useful volume within the Feb-stable 50% pool; separately report a precision-first candidate. March remains one-shot after freeze; no Wave6 threshold may be changed from March results.
+- September outcomes remain UNREAD; production v288 unchanged.
