@@ -75,6 +75,16 @@ OVERLAY_STAKE_SHADOW_PROFILE_NAME = "1HEAD_OVERLAY_STAKE_SHADOW_V375_EITHER_2X"
 OVERLAY_STAKE_SHADOW_MULTIPLIER = 2
 OVERLAY_STAKE_SHADOW_RESEARCH_ONLY = True
 
+
+# Research-only second stake-allocation shadow from v378-v380.
+# Keeps the same total stake as OVERLAY_STAKE_SHADOW, but reallocates WALL3
+# races toward formal ticket rank3. Official and existing shadow stakes remain unchanged.
+WALL3_RANK3_ALLOC_SHADOW_PROFILE_NAME = "1HEAD_WALL3_RANK3_ALLOC_SHADOW_V379_114"
+WALL3_RANK3_ALLOC_SHADOW_WALL3_STAKES_YEN = (100, 100, 400)
+WALL3_RANK3_ALLOC_SHADOW_FIVE6_ONLY_STAKES_YEN = (200, 200, 200)
+WALL3_RANK3_ALLOC_SHADOW_NONE_STAKES_YEN = (100, 100, 100)
+WALL3_RANK3_ALLOC_SHADOW_RESEARCH_ONLY = True
+
 # v345 adopted HEAD-side component weights. Historical names are retained for
 # compatibility with frozen research modules.
 ATTACK_CORE_VERSION = "v345"
