@@ -1,0 +1,87 @@
+name: test-4head-156r-policy
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_4head_120r_lastminute_fast.py'
+      - 'audit_4head_156r_policy_parity.py'
+      - 'artifacts/head4_156r_roi_expansion_20260918.json'
+      - '.github/workflows/test-4head-156r-policy.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+
+      - name: Download official Stage2 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p seed
+          gh run download 35339005302 -n head4-expanded-pool-stage2 -D seed
+          GRID="$(find seed -type f -name 'expanded_grid.csv' | head -1)"
+          test -n "$GRID"
+          echo "EXPANDED_GRID=$GRID" >> "$GITHUB_ENV"
+
+      - name: Historical frozen-policy parity
+        run: python audit_4head_156r_policy_parity.py
+
+      - name: LIVE decision semantics contract
+        run: |
+          python - <<'PY'
+          from run_4head_120r_lastminute_fast import decide
+
+          def exh(st_inside, st4, orig_inside, orig4):
+              boats={}
+              for b in range(1,7):
+                  boats[str(b)]={
+                    'cur_st': st_inside if b in (1,2,3) else st4,
+                    'cur_orig_avg': orig_inside if b in (1,2,3) else orig4,
+                  }
+              return {'current_boats':boats}
+
+          # Historical base120 structure + 120 score => selected through base120.
+          a=decide(.30,.40,4.0,exh(.50,.60,.50,.60))
+          assert a['base120_selected'] is True and a['expanded156_selected'] is True, a
+
+          # Outside old164 but inside relaxed 156 structure => expansion-only add.
+          b=decide(.20,.40,3.5,exh(.30,1.00,.50,.30))
+          assert b['old164_struct'] is False, b
+          assert b['base120_selected'] is False, b
+          assert b['expanded156_added'] is True and b['selected'] is True, b
+
+          # Same quality but comp below 3.5 => no 156 add.
+          c=decide(.20,.40,3.49,exh(.30,1.00,.50,.30))
+          assert c['expanded156_added'] is False and c['selected'] is False, c
+
+          # 120 formula alone must NOT pass if historical structural gate fails,
+          # and relaxed 156 structure fails too.
+          d=decide(.30,.40,4.0,exh(.10,1.00,.50,.10))
+          assert d['base77_formula'] is True, d
+          assert d['old164_struct'] is False, d
+          assert d['base120_selected'] is False, d
+          assert d['expanded156_added'] is False and d['selected'] is False, d
+
+          print('HEAD4_156R_LIVE_DECISION_CONTRACT_OK')
+          PY
+
+      - name: Compile
+        run: python -m py_compile run_4head_120r_lastminute_fast.py audit_4head_156r_policy_parity.py
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-156r-policy-parity
+          path: /tmp/head4_156r_policy_parity/
+          retention-days: 30
