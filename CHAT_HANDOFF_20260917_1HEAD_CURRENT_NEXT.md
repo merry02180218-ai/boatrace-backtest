@@ -197,3 +197,24 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 過去の正式v351 276R sentinelと履歴再現コードは凍結維持する。既存 PROFILE_NAME / PRODUCTION_EXPECTED_* を上書きして過去監査を壊さず、LIVE_OPERATION_* / WATCH_* を別定義して実運用のみ切り替える。
 - 既存2026-09-18 daily cacheはp_head/opp_mass等の因果ベース値自体は再利用可能な設計にし、finalize/gateで新運用条件を適用する。
 - 9/17 result/payout UNREAD、chronology guard維持。
+
+
+## AFTER — 2026-09-18 1号艇LIVE運用ルール変更 完了
+- ユーザー決定を実装:
+  - BASIC: HEAD>=.790 / opponent mass>=.375 / env_w=.05 / q=.70
+  - WATCH（注目）: HEAD>=.790 / opponent mass>=.425 / env_w=.05 / q=.70
+- 過去正式v351の `HEAD_CUTOFF=.78 / MASS=.375 / env_w=.10 / q=.65` と 276/241/131 sentinelは履歴再現用として凍結維持。過去監査を壊していない。
+- `onehead_production_profile.py` に `LIVE_OPERATION_*` と `WATCH_*` を追加。commit `0ccd14df777a19c8c2a272a7d7f5424e3a203f04`。
+- `prepare_1head_v351_live_cache.py` はLIVE HEAD cutoff=.790を使用。commit `44c45f3e93a0fc495612d8f9140e82cf4e29af00`。
+- `run_1head_v351_live_exhibition_gate.py` はLIVE env_w=.05 / q=.70を使用。commit `d6444a955d089c2e76dd8b24abeba13d3e0f66bf`。
+- `run_1head_v351_live_finalize.py` はBASIC/WATCHを判定し、`attention_level` と `watch_pass` を出力。既存daily cache（historical base profile）も再利用可能。commit `07f45eb2db1456401158f98354831a420ecfe69c`。
+- daily cache各race JSONへ `operating_pre_class = WATCH_PRE / BASIC_PRE / NON_CANDIDATE` を追加。commit `9b319603ccc11543570d607326084e8589acf4dd`。
+- ticket=v320 HYBRID alpha=.70 3点、opponent core G2=.45/G3=1.00、attackCore weightsは変更なし。
+- 既存2026-09-18 cache値を新しい事前閾値へ読み替えると:
+  - WATCH_PRE: 平和島12R (.80106/.48589), びわこ7R (.80156/.42809), 福岡7R (.80293/.48411)
+  - BASIC_PRE: 鳴門9R (.81101/.41645)
+  - DROP（HEAD不足）: 丸亀11R (.78232/.44548)
+  - ただし最終PASS/WATCHは新 q=.70 / env_w=.05 の展示gate通過が必要。旧q=.65での直前結果は新ルールの最終結果として流用しない。
+- 9/17 result/payout UNREAD、chronology guard維持。
+- Run 35302023710 / audit Job 105468495136 はこの記録時点もin_progress。これは旧production sentinel確認用Runであり、今回のLIVE運用変更とは分離する。
+- BEFORE handoff commit: `cab1067583c19e50dd82d60cc528b7a933d0fd80`。
