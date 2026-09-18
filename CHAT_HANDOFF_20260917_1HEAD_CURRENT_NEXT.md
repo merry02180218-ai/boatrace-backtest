@@ -1640,3 +1640,14 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - v370実装時のbudget補正:
   - 1000円/Rは3点均等を100円単位で表現できず4:3:3のrank biasが入るため不採用。
   - 比較budgetは **600 / 900 / 1200円/R**（2:2:2 / 3:3:3 / 4:4:4が完全均等）。
+
+
+## v370 初回failure — Jul/Aug closing odds archive 21R不足
+- Run `35358284121` / Job `105642936999` failure。
+- 原因: repo `data/official_closing_odds3t` のcurrent LIVE165対象でclosing oddsが21R不足。
+- missing例: `202607231508`, `202607282409`, `202608012209`, `202608030402`, `202608041001`, `202608061001` 等。
+- formal ticket/payout baselineやallocationロジックのfailureではない。
+- v340 sharded official odds auditは276/276 coverage成功済みで、公式closing oddsを6 shard Artifactに凍結保存:
+  - 10329564703 / 10330810260 / 10330651756 / 10329684566 / 10330273057 / 10330357729
+- 修正方針: repo archiveを第一source、欠損のみv340 frozen shard `odds_json` をfallbackとして使う。ネット再取得はしない。
+- 165/165 coverageを必須sentinelにしてfresh Run。
