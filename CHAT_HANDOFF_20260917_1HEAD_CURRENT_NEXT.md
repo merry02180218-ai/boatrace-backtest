@@ -570,3 +570,10 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 評価: exact3 / ROI / gain-loss / 月別 / Feb-Jun / Jul-Aug / pair別寄与 / 変更R。
 - 選定はdevのみ、Jul-Augはsupport扱い。2026-09結果/払戻は読まない。
 - 現正式wall3 ticket profileは維持し、この拡大研究から自動昇格しない。
+
+
+## v360高速版 初回failureと修正開始
+- Run `35321221764` / Job `105523920554` failure。
+- 原因: preview prefetch高速化で `v337.PRELOAD` を参照したが、`run_v337_1head_head_cutoff_volume as v337` のimport漏れ。
+- データ/研究ロジック/母集団条件の問題ではなくNameError。rerunせずコード修正してfresh Runを発火する。
+- 修正はimport追加のみ。研究条件は 165/236/269/313/276R の5母集団比較を維持。
