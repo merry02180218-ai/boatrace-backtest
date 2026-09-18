@@ -121,6 +121,11 @@ def main():
   if prod.FIVE6_LIVE_TICKET_PROMOTED and five6['applied']:
    tickets=five6['tickets']
  out={k:x.get(k) for k in ['race_code','pre_class','legacy_pre_p','deadline_jst','evaluated_at_jst','minutes_to_deadline','training_cutoff','exhibition_hashes']}
+ official_stakes=[prod.LIVE_OFFICIAL_STAKE_YEN_PER_TICKET for _ in tickets] if head_pass else []
+ stake_shadow_signal=bool(head_pass and ((prod.WALL3_LIVE_TICKET_PROMOTED and shadow['applied']) or (prod.FIVE6_LIVE_TICKET_PROMOTED and five6['applied'])))
+ stake_shadow_applied=bool(stake_shadow_signal)
+ stake_shadow_stakes=([prod.LIVE_OFFICIAL_STAKE_YEN_PER_TICKET*prod.OVERLAY_STAKE_SHADOW_MULTIPLIER for _ in tickets]
+                      if stake_shadow_applied else official_stakes[:])
  out.update({
   'status':'PASS' if head_pass else 'DROP',
   'attention_level':'WATCH' if watch_pass else ('BASIC' if head_pass else 'DROP'),
@@ -164,6 +169,14 @@ def main():
   'five6_shadow_st_gap_6_minus_5':five6['st_gap_6_minus_5'],
   'five6_shadow_tickets':five6['tickets'],
   'five6_shadow_research_only':False,
+  'official_stakes_yen':official_stakes,
+  'official_total_stake_yen':sum(official_stakes),
+  'stake_shadow_profile':prod.OVERLAY_STAKE_SHADOW_PROFILE_NAME,
+  'stake_shadow_signal':'EITHER_FORMAL_OVERLAY',
+  'stake_shadow_applied':stake_shadow_applied,
+  'stake_shadow_stakes_yen':stake_shadow_stakes,
+  'stake_shadow_total_stake_yen':sum(stake_shadow_stakes),
+  'stake_shadow_research_only':bool(prod.OVERLAY_STAKE_SHADOW_RESEARCH_ONLY),
   'result_or_payout_used':False,
   'chronology_guard':True,
   'finalized':True,
