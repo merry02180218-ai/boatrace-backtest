@@ -1,0 +1,57 @@
+name: test-head4-bet-github-notify
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'notify_head4_bet_github_issue.py'
+      - '.github/workflows/test-head4-bet-github-notify.yml'
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q requests
+      - name: Compile notifier
+        run: python -m py_compile notify_head4_bet_github_issue.py
+      - name: PASS creates no notification
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          cat > /tmp/pass.json <<'JSON'
+          {"decision":"PASS"}
+          JSON
+          python notify_head4_bet_github_issue.py --decision-json /tmp/pass.json --target-date 20260918 --jcd 7 --race 11 --deadline-jst 20:15 | tee /tmp/pass.log
+          grep -q 'HEAD4_NOTIFY_SKIP decision=PASS' /tmp/pass.log
+      - name: BET payload dry-run
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          cat > /tmp/bet.json <<'JSON'
+          {
+            "decision":"BET",
+            "profile":"HEAD4_156R_ROI_EXPANSION_V1",
+            "head_prob":0.21,
+            "opponent_mass":0.36,
+            "composite_odds":4.8,
+            "base120_selected":false,
+            "expanded156_added":true,
+            "st4_adv_inside":-0.2,
+            "orig4_adv_inside":0.1,
+            "tickets":["4-1-2","4-1-3"],
+            "ticket_odds":{"4-1-2":30.1,"4-1-3":42.0},
+            "decision_time_jst":"2026-09-18T20:00:00+09:00",
+            "odds_source":"TEST"
+          }
+          JSON
+          python notify_head4_bet_github_issue.py --dry-run --decision-json /tmp/bet.json --target-date 20260918 --jcd 7 --race 11 --deadline-jst 20:15 | tee /tmp/bet.log
+          grep -q 'HEAD4_BET_GITHUB_ISSUE_DRY_RUN_OK' /tmp/bet.log
+          grep -q 'expanded156_added' /tmp/bet.log
