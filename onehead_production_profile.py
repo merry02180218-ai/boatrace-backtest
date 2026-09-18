@@ -37,6 +37,17 @@ WATCH_OPPONENT_MASS_MIN = 0.425
 WATCH_EXHIBITION_ENV_W = 0.05
 WATCH_EXHIBITION_Q = 0.70
 
+# Research-only LIVE shadow for WATCH ticket rerank. This must not replace the
+# official production tickets until forward evidence is reviewed.
+WALL3_SHADOW_PROFILE_NAME = "1HEAD_WATCH_WALL3_TICKET_SHADOW_V355_SCORE_A406_G2_300_G3_050"
+WALL3_SHADOW_ATTACK4_MIN = 0.60
+WALL3_SHADOW_SECOND_G2 = 3.00
+WALL3_SHADOW_THIRD_G3 = 0.50
+WALL3_SHADOW_W_EX = 0.20
+WALL3_SHADOW_W_ST = 0.40
+WALL3_SHADOW_W_STRAIGHT = 0.25
+WALL3_SHADOW_W_ORIG_AVG = 0.15
+
 # v345 adopted HEAD-side component weights. Historical names are retained for
 # compatibility with frozen research modules.
 ATTACK_CORE_VERSION = "v345"
