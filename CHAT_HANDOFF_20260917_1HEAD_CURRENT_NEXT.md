@@ -688,3 +688,39 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - LIVE165について official wall3 baselineとの差分 exact3/ROI/gain/loss/月別/変更raceを算出。
 - 5→6の拡大母集団単独成績はv361を根拠にし、combinedのproduction候補評価は現LIVE165に限定する。
 - 9月結果払戻は読まない。productionはcombined監査完了まで変更しない。
+
+
+## AFTER — v362 formal wall3 + 5>6 ST combined audit
+- Run `35328786125` / Job `105548027749` completed success / Artifact `10540352040` / head `e3002bbc7455612d036b7dcc1ce5f84ea8d5bfa9`。
+- official wall3 sentinelをprepared rowsから完全再現:
+  - 165R / 83 hit / return 58,650 / profit +9,150 / ROI **118.485%**
+  - DEV 69/137 ROI121.41%、SUPPORT 14/28 ROI104.17%。
+- wall3後に5>6 STを追加:
+  - STRICT (score6>=.60, ST6-ST5>=.50, mass>=.375, g2=0,g3=.75)
+    - 86/165 / return 62,810 / profit +13,310 / ROI **126.889%**
+    - wall3比 +3 hits / +8.40pp / gain3 loss0
+    - DEV 71/137 ROI129.44%、SUPPORT 15/28 ROI114.40%
+  - BROAD50 (mass制限なし) はLIVE165自体がmass>=.375なのでSTRICTと完全同一。
+  - BROAD40 (score6>=.60, ST gap>=.40, mass制限なし, g2=0,g3=.75)
+    - **87/165** / return **63,700** / profit **+14,200** / ROI **128.687%**
+    - wall3比 **+4 hits / +10.20pp / gain4 loss0**
+    - DEV 71/137 / return53,200 / ROI129.44%（wall3比+2 hit）
+    - SUPPORT 16/28 / return10,500 / ROI**125.00%**（wall3比+2 hit）
+- BROAD40の追加gain（wall3比）:
+  - `202605141610` actual 1-2-6, ST gap .8
+  - `202606131912` actual 1-2-6, ST gap .6
+  - `202607080801` actual 1-3-6, ST gap .4
+  - `202608112101` actual 1-2-6, ST gap 1.0
+  - loss 0。
+- 月別: Feb/Mar/Apr変更なし、May +1、Jun +1、Jul +1、Aug +1。改善月がdevとsupportに分散。
+- v361 broad plateauでも ST gap .30/.40 はDEV完全同一、313R 147/313・ROI109.51%・gain5/loss0。単一点cutoff依存ではない。
+- ただしBROAD40をsupport結果を見て選ぶと選定リークになるため、現時点ではproduction自動昇格しない。
+
+## BEFORE — 5>6 ST LIVE shadow導入
+- 現正式 `tickets`（wall3込み）は変更しない。
+- PASSレースに対し、wall3適用後のp2/pcへ5>6 ST BROAD40を追加した `five6_shadow_tickets` を研究用に出力する。
+- 条件: score6>=.60 / corrected ST6-ST5>=.40 / SECOND g2=0 / THIRD g3=.75。
+- 現LIVE PASSはmass>=.375なので別mass gateは不要。
+- 出力に profile / eligible / applied / st_gap / score6 / shadow tickets / research_only を追加。
+- 既存wall3正式tickets、HEAD/BASIC/WATCH判定、historical production sentinelは変更しない。
+- September outcomesは読まない。
