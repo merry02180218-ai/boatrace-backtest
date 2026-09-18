@@ -147,8 +147,10 @@ def main():
     if len(live)!=165 or len(add)!=71: raise RuntimeError('build count drift')
     needed=['p_head','opp_mass','v332_score','attack_core']
     if add[needed].isna().any().any(): raise RuntimeError('missing rescue feature')
-    if not ((add.p_head>=.78-1e-12)&(add.p_head<.79+1e-12)).all():
-        raise RuntimeError(f'added p_head range drift {add.p_head.min()} {add.p_head.max()}')
+    if not (add.p_head>=.78-1e-12).all():
+        raise RuntimeError(f'added p_head floor drift {add.p_head.min()} {add.p_head.max()}')
+    added_below079=int((add.p_head<.79-1e-12).sum())
+    added_ge079=int((add.p_head>=.79-1e-12).sum())
 
     live_base=metric(live); add_base=metric(add)
     live_dev=metric(live[live.month.isin(DEV)]); live_sup=metric(live[live.month.isin(SUP)])
@@ -178,6 +180,8 @@ def main():
       'band':'H078_M375 minus LIVE165',
       'band_R':len(add),
       'p_head_range':[float(add.p_head.min()),float(add.p_head.max())],
+      'added_below_079_R':added_below079,'added_ge_079_R':added_ge079,
+      'band_note':'set difference of H078_M375 and LIVE165; not a pure p_head interval because exhibition gate is refit on each PRE universe',
       'live165_baseline':live_base,'added71_baseline':add_base,
       'live165_dev':live_dev,'live165_support':live_sup,
       'added71_dev':add_dev,'added71_support':add_sup,
