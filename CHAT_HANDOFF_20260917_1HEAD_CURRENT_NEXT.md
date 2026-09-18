@@ -2133,3 +2133,62 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - threshold3.5〜4.8でDEV/SUPPORTともhit loss0の帯を確認。
 - 結果を見てthresholdを選ばないよう、正式v372ではDEV-only selectionを固定してからSUPPORT評価。
 - production/LIVE stakeは変更しない。September outcomes unread。
+
+
+## AFTER — v372 same-300-yen soft Dutch
+- Run `35363056059` / Job `105658776084` completed success / Artifact `10554908463` / head `840de0c9623e3680c8ca70cedf0aa2d905c83f90`。
+- DEV-only selected threshold = **max_odds / min_odds >= 3.5**。
+- rule:
+  - 最長オッズticket 100円→0円
+  - 最短オッズticket 100円→200円
+  - 中間100円
+  - 合計300円/R固定。
+- DEV:
+  - 137R / 71hit維持 / lost hit0
+  - changed22R / doubled winning ticket6R
+  - return53,200→55,700
+  - ROI129.44→**135.52%** (+6.08pt)
+- SUPPORT:
+  - 28R / 16hit維持 / lost hit0
+  - changed3R / doubled win1R
+  - return10,500→10,810
+  - ROI125.00→**128.69%** (+3.69pt)
+- ALL:
+  - **87/165 hit完全維持**
+  - changed25R / lost hit0 / doubled win7R
+  - stake49,500据え置き
+  - return63,700→**66,510**
+  - profit14,200→**17,010**
+  - ROI128.687→**134.364%** (+5.68pt)
+- 削減元rank: rank1=0R / rank2=13R / rank3=12R。第1買い目は1度も削らない。
+- 増額先rank: rank1=14R / rank2=4R / rank3=7R。
+- threshold 3.5〜6.0の**26 cellsすべてDEV/SUPPORT lost hit=0**。
+  - 3.5がDEV ROI最大。
+  - 3.6-3.7でもALL ROI133.52%、lost0。
+  - 4.0-4.8でもALL130.08%、lost0。
+- 月別selected3.5:
+  - Feb ±0
+  - Mar +9.49pt
+  - Apr +3.84
+  - May +10.31
+  - Jun +4.24
+  - Jul ±0
+  - Aug +5.44
+  - 全月hit loss0、ROI非悪化。
+- production/stake policy未変更。September outcomes unread / AUDIT_OK=true。
+
+## BEFORE — v373 soft-Dutch LOMO robustness
+- v372 threshold selectionの月依存性を監査。
+- Feb-Jun DEVで各holdout月を1つ外し、残り4月だけで:
+  1) lost hit=0のthresholdを抽出
+  2) ROI最大
+  3) 同率なら変更R少ない
+  でthresholdを再選定。
+- 選んだthresholdをholdout月へ適用し、hit loss / ROI差を見る。
+- fixed threshold3.5についてもFeb-Aug各月を再確認。
+- promotion候補条件:
+  - LOMO 5/5月 lost hit=0
+  - LOMO total ROI非悪化
+  - SUPPORT lost0
+  - threshold近傍plateau
+- production/LIVE stakeは変更しない。September outcomes unread。
