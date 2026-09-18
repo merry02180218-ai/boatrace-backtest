@@ -1,0 +1,43 @@
+name: audit-4head-156r-newfeature-temporal-holdout
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'audit_4head_156r_newfeature_temporal_holdout.py'
+      - '.github/workflows/audit-4head-156r-newfeature-temporal-holdout.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas
+      - name: Download frozen expanded feature table
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p seed
+          gh run download 35361685459 -n head4-208-expanded-features -D seed
+          F="$(find seed -type f -name 'expanded_features_208.csv' | head -1)"
+          test -n "$F"
+          echo "EXPANDED_FEATURES_208=$F" >> "$GITHUB_ENV"
+      - name: Run temporal holdout audit
+        run: python audit_4head_156r_newfeature_temporal_holdout.py
+      - name: Show result
+        if: always()
+        run: cat /tmp/head4_156r_newfeature_temporal_holdout/result.json 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-156r-newfeature-temporal-holdout
+          path: /tmp/head4_156r_newfeature_temporal_holdout/
+          retention-days: 30
