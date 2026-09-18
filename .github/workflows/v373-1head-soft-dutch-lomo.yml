@@ -1,0 +1,41 @@
+name: v373 1-head soft Dutch LOMO
+on:
+  push:
+    paths:
+      - 'run_v373_1head_soft_dutch_lomo.py'
+      - '.github/workflows/v373-1head-soft-dutch-lomo.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas
+      - name: Download v370 successful artifact
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10554711567/zip" > /tmp/v370.zip
+          mkdir -p /tmp/v370
+          unzip -q /tmp/v370.zip -d /tmp/v370
+          test -f /tmp/v370/race_level.csv
+      - name: Run soft-Dutch LOMO audit
+        run: python run_v373_1head_soft_dutch_lomo.py --race-level /tmp/v370/race_level.csv
+      - name: Show result
+        if: always()
+        run: |
+          cat /tmp/v373-soft-dutch-lomo/result.json 2>/dev/null || true
+          cat /tmp/v373-soft-dutch-lomo/lomo.csv 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v373-soft-dutch-lomo-${{ github.run_id }}
+          path: /tmp/v373-soft-dutch-lomo/
+          retention-days: 30
