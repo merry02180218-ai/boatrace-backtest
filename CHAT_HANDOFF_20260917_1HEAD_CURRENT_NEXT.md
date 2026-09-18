@@ -894,3 +894,28 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - `ROI = total return / total stake`。
   - したがって数学的な「合成オッズ」そのものではなく、3点均等買いポートフォリオの実現回収率。呼び方として「3点合成ROI」は可だが、合成オッズとは区別する。
 - 今後のLIVE「判別して」ではwall3→5>6 STの順に正式rerankし、最終 `tickets` を正式買い目として返す。
+
+
+## BEFORE — v365 exact3 hit-rate push after formal wall3 + 5>6
+- ユーザー要望: 「もう少し3連単的中率は上げたい」。
+- 現正式LIVE165基準:
+  - 165R
+  - exact3 87/165 = **52.73%**
+  - 3点買いROI **128.687%**
+  - wall3 + 5>6 ST正式採用済み。
+- 目標: まず3点固定のまま **91〜92/165（55%前後）** を狙う。ROIは大きく崩さない。
+- v365方針:
+  1) current formal wall3→5>6を完全再現してbaseline化。
+  2) その後段にまだ正式化していない展示後rerankを追加:
+     - 2>3
+     - 4>5
+     - 必要に応じて両方のcombo
+  3) basisは corrected SCORE / ST / COMBO を比較。
+  4) score outer threshold / pair gap / THIRD gamma / optional SECOND gamma をgrid。
+  5) 165R exact3最大化を主目的にするが、DEV選定・SUPPORT確認・313R拡大母集団のgeneralizationも必須。
+- selection discipline:
+  - Feb-Jun DEVのみで候補選定。
+  - Jul-Aug SUPPORTは選定に使わない。
+  - loss増加よりnet exact3を優先しつつ、3点買いROI floorは **120%** を目安に確認。
+- もし3点固定で55%へ届かなければ、次段で「条件付き4点目」を別研究として比較する。既存正式3点ロジックはその時点まで変更しない。
+- 2026-09結果/払戻は読まない。historical production sentinel / HEAD / BASIC / WATCH gateは変更しない。
