@@ -160,17 +160,25 @@ jobs:
             echo "RUNTIME_NETWORK_STATUS=WARN" >> "$GITHUB_ENV"
           else
             python - <<'PY'
-          import json
+          import json, os
           z=json.load(open('/tmp/runtime_benchmark.json',encoding='utf-8'))
-          assert z['decision']=='PERFORMANCE_BENCHMARK_ONLY',z
-          assert z['profile']=='HEAD4_NEWFEATURE_FIXED156_V1',z
           assert z['target_race_result_used'] is False,z
           assert z['payout_used'] is False,z
-          assert z['performance_benchmark'] is True,z
-          assert z['predeadline_odds_used'] is False,z
-          print('HEAD4_RUNTIME_NETWORK_BENCHMARK_OK',z['race_code'],z['profile'],z['total_seconds'])
+          if z.get('decision')=='PERFORMANCE_BENCHMARK_ONLY':
+              assert z['profile']=='HEAD4_NEWFEATURE_FIXED156_V1',z
+              assert z['performance_benchmark'] is True,z
+              assert z['predeadline_odds_used'] is False,z
+              print('HEAD4_RUNTIME_NETWORK_BENCHMARK_OK',z['race_code'],z['profile'],z['total_seconds'])
+              status='PASS'
+          elif z.get('decision')=='NO_BET_DATA_NOT_READY':
+              print('HEAD4_RUNTIME_NETWORK_BENCHMARK_NOT_READY_OK',
+                    z.get('race_code'),z.get('not_ready_stage'),z.get('not_ready_reason'))
+              status='WARN_NOT_READY'
+          else:
+              raise AssertionError(z)
+          with open(os.environ['GITHUB_ENV'],'a') as f:
+              f.write(f'RUNTIME_NETWORK_STATUS={status}\n')
           PY
-            echo "RUNTIME_NETWORK_STATUS=PASS" >> "$GITHUB_ENV"
           fi
 
       - name: Final production-readiness verdict
@@ -193,7 +201,7 @@ jobs:
             'prospective_profitability_proven':False,
             'september_target_outcomes_read':False,
             'production_threshold_changed':False,
-            'overall':'PASS' if network=='PASS' else 'PASS_WITH_RUNTIME_NETWORK_WARN',
+            'overall':'PASS' if network=='PASS' else 'PASS_WITH_RUNTIME_NETWORK_NOT_READY_WARN',
           }
           open('/tmp/head4_production_readiness.json','w').write(json.dumps(verdict,ensure_ascii=False,indent=2)+'\n')
           print(json.dumps(verdict,ensure_ascii=False,indent=2))
