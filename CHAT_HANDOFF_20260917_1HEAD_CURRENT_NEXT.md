@@ -1575,3 +1575,35 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   の3ケース回帰を作る。
 - formal ticket identity / HEAD / BASIC/WATCH / historical production sentinelは不変。
 - 2026-09 outcomes/payoutsは読まない。
+
+
+## AFTER — v377 LIVE overlay stake shadow
+- profile commit `e8c256499d2a6108a0d38ddd88379af2f9dcb3f8`
+  - official stake = 100円/ticket
+  - shadow profile = `1HEAD_OVERLAY_STAKE_SHADOW_V375_EITHER_2X`
+  - multiplier=2
+  - research_only=true。
+- finalizer commit `830c0a452e7ea100b4eb321fb00da6ab740f5488`
+  - formal tickets/stakingは不変。
+  - PASS時 `official_stakes_yen=[100,100,100]` / total300。
+  - formal wall3 OR five6 が発火した時のみ shadow `[200,200,200]` / total600。
+  - 非発火はshadowも100/100/100。
+  - 新規出力: official_stakes_yen / official_total_stake_yen / stake_shadow_profile / stake_shadow_signal / stake_shadow_applied / stake_shadow_stakes_yen / stake_shadow_total_stake_yen / stake_shadow_research_only。
+- v377 regression:
+  - script commit `5d295af9886e7aa626b2a8fbd03490c6ecac4ec2`
+  - workflow commit `f0de6cf7944b6faa8dc6b7b1f040c5659df76dab`
+  - Run `35352429954` / Job `105623519742` success / Artifact `10550325833`
+  - digest `sha256:5e0e03fd05144c6b2e44d049e642932cec1dd2869b177a5094ff3844815643bb`
+  - wall-only causal case `202603290511`: official100/100/100, shadow200/200/200。
+  - five6-only causal case `202602222401`: official100/100/100, shadow200/200/200。
+  - no-overlay causal case `202602012104`: official100/100/100, shadow100/100/100。
+  - result_or_payout_used=false / September outcomes unread / AUDIT_OK=true。
+- existing formal ticket regressions after finalizer change:
+  - v356 Run `35352354794` success
+  - v364 Run `35352354777` success
+  - formal wall3 / five6 ticket identities unchanged。
+- 現時点の運用:
+  - **正式買い方は引き続き100/100/100**
+  - stake shadowのみ overlay発火時200/200/200
+  - 今後のmanual LIVE「判別して」では正式買い目と併せてshadow stake発火有無を確認できる。
+- forward結果を読む許可が得られるまで、shadowの実戦成績でformal昇格は行わない。
