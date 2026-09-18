@@ -1,0 +1,99 @@
+name: audit-4head-expanded-pool-stage1
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'audit_4head_expanded_pool_stage1.py'
+      - '.github/workflows/audit-4head-expanded-pool-stage1.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Sparse checkout causal archive
+        uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards/2025/10
+            data/programs/race_cards/2025/11
+            data/programs/race_cards/2025/12
+            data/programs/race_cards/2026/01
+            data/programs/race_cards/2026/02
+            data/programs/race_cards/2026/03
+            data/programs/race_cards/2026/04
+            data/programs/race_cards/2026/05
+            data/programs/race_cards/2026/06
+            data/programs/race_cards/2026/07
+            data/programs/race_cards/2026/08
+            data/results/realtime/2025/10
+            data/results/realtime/2025/11
+            data/results/realtime/2025/12
+            data/results/realtime/2026/01
+            data/results/realtime/2026/02
+            data/results/realtime/2026/03
+            data/results/realtime/2026/04
+            data/results/realtime/2026/05
+            data/results/realtime/2026/06
+            data/results/realtime/2026/07
+            data/results/realtime/2026/08
+            data/previews/tkz/2025/10
+            data/previews/tkz/2025/11
+            data/previews/tkz/2025/12
+            data/previews/tkz/2026/01
+            data/previews/tkz/2026/02
+            data/previews/tkz/2026/03
+            data/previews/tkz/2026/04
+            data/previews/tkz/2026/05
+            data/previews/tkz/2026/06
+            data/previews/tkz/2026/07
+            data/previews/tkz/2026/08
+            data/previews/stt/2025/10
+            data/previews/stt/2025/11
+            data/previews/stt/2025/12
+            data/previews/stt/2026/01
+            data/previews/stt/2026/02
+            data/previews/stt/2026/03
+            data/previews/stt/2026/04
+            data/previews/stt/2026/05
+            data/previews/stt/2026/06
+            data/previews/stt/2026/07
+            data/previews/stt/2026/08
+            data/previews/original_exhibition/2025/10
+            data/previews/original_exhibition/2025/11
+            data/previews/original_exhibition/2025/12
+            data/previews/original_exhibition/2026/01
+            data/previews/original_exhibition/2026/02
+            data/previews/original_exhibition/2026/03
+            data/previews/original_exhibition/2026/04
+            data/previews/original_exhibition/2026/05
+            data/previews/original_exhibition/2026/06
+            data/previews/original_exhibition/2026/07
+            data/previews/original_exhibition/2026/08
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Run expanded pool stage1
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: python audit_4head_expanded_pool_stage1.py
+      - name: Show result
+        if: always()
+        run: |
+          cat /tmp/head4_expanded_pool_stage1/result.json 2>/dev/null || true
+          head -25 /tmp/head4_expanded_pool_stage1/pool_grid.csv 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-expanded-pool-stage1
+          path: /tmp/head4_expanded_pool_stage1/
+          retention-days: 30
