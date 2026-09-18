@@ -369,7 +369,7 @@ def main():
     ap.add_argument('--deadline-jst',required=True)
     ap.add_argument('--race-cards',required=True);ap.add_argument('--waku10',required=True)
     ap.add_argument('--pre-all',required=True);ap.add_argument('--daily-state',required=True)
-    ap.add_argument('--timeout',type=int,default=4);ap.add_argument('--poll-interval',type=float,default=2.0);ap.add_argument('--exhibition-safety-seconds',type=int,default=75);ap.add_argument('--odds-safety-seconds',type=int,default=45);ap.add_argument('--max-exhibition-wait-seconds',type=float,default=30);ap.add_argument('--max-odds-wait-seconds',type=float,default=15);ap.add_argument('--allow-unmonitored-benchmark',action='store_true');ap.add_argument('--performance-benchmark',action='store_true')
+    ap.add_argument('--timeout',type=int,default=4);ap.add_argument('--poll-interval',type=float,default=2.0);ap.add_argument('--exhibition-safety-seconds',type=int,default=75);ap.add_argument('--odds-safety-seconds',type=int,default=45);ap.add_argument('--max-exhibition-wait-seconds',type=float,default=30);ap.add_argument('--max-odds-wait-seconds',type=float,default=15);ap.add_argument('--decision-safety-seconds',type=int,default=60);ap.add_argument('--allow-unmonitored-benchmark',action='store_true');ap.add_argument('--performance-benchmark',action='store_true')
     ap.add_argument('--out',required=True)
     a=ap.parse_args(); total0=time.perf_counter(); stages={}
     deadline=parse_deadline_flexible(a.date,a.deadline_jst)
@@ -404,7 +404,7 @@ def main():
     t=time.perf_counter()
     try:
         odds,meta,od_attempts,od_last=wait_odds_ready(
-            a.date,a.jcd,a.race,io_deadline,a.timeout,min(1.5,a.poll_interval),a.odds_safety_seconds,a.max_odds_wait_seconds
+            a.date,a.jcd,a.race,io_deadline,min(1.5,a.timeout),min(1.0,a.poll_interval),a.odds_safety_seconds,a.max_odds_wait_seconds
         )
     except Fast120NotReady as e:
         stages['fetch_odds_s']=time.perf_counter()-t
@@ -412,7 +412,17 @@ def main():
         return
     stages['fetch_odds_s']=time.perf_counter()-t
     vals=[float(odds[x]) for x in tickets];comp=composite_odds(vals);d=decide(hp,mass,comp)
-    now=datetime.now(JST) if a.performance_benchmark else require_before_deadline(deadline,'before fast120 persist')
+    if a.performance_benchmark:
+        now=datetime.now(JST)
+    else:
+        now=require_before_deadline(deadline,'before fast120 persist')
+        remain=(deadline-now).total_seconds()
+        if remain<a.decision_safety_seconds:
+            stages['decision_headroom_s']=remain
+            persist_no_bet_not_ready(a,code,deadline,'DECISION_HEADROOM',
+                f'only {remain:.1f}s remain < safety {a.decision_safety_seconds}s',
+                total0,stages,monitored,hp,state)
+            return
     out={
       'schema':'head4_120r_fast_lastminute_v1','race_code':code,'monitoring_parent':monitored,'benchmark_unmonitored':bool(a.allow_unmonitored_benchmark and not monitored),
       'head_prob':hp,'opponent_mass':mass,'tickets':tickets,'ticket_odds':dict(zip(tickets,vals)),'composite_odds':comp,
@@ -420,7 +430,7 @@ def main():
       'daily_state_history_end':state.get('history_end'),'september_prior_history_allowed':True,
       'target_race_result_used':False,'payout_used':False,'current_exhibition_used':True,'predeadline_odds_used':(not a.performance_benchmark),'performance_benchmark':bool(a.performance_benchmark),'odds_source':meta.get('source'),
       'exhibition_attempts':ex_attempts,'exhibition_last_retry_error':ex_last,'odds_attempts':od_attempts,'odds_last_retry_error':od_last,
-      'safety_seconds':{'exhibition':a.exhibition_safety_seconds,'odds':a.odds_safety_seconds},
+      'safety_seconds':{'exhibition':a.exhibition_safety_seconds,'odds':a.odds_safety_seconds,'decision':a.decision_safety_seconds},
       'odds_snapshot':meta,'deadline_jst':deadline.isoformat(),'decision_time_jst':now.isoformat(),
       'stages_seconds':stages,'total_seconds':time.perf_counter()-total0,
     }
