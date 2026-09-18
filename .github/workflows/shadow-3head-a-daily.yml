@@ -7,11 +7,9 @@ on:
         required: false
         default: ''
         type: string
-  push:
-    branches: [main]
-    paths:
-      - 'build_3head_a_daily_shadow.py'
-      - '.github/workflows/shadow-3head-a-daily.yml'
+  schedule:
+    - cron: '5 21 * * *'
+    - cron: '35 21 * * *'
 permissions:
   contents: read
 jobs:
