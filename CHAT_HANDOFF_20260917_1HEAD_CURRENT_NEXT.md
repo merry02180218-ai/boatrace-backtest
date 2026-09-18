@@ -282,3 +282,26 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   → 「3が弱く4が攻められる」鳴門9R型のwall3警戒ケースに該当し得る。これは現行判定をまだ上書きしない。v352歴史監査の結果待ち。
 - result/payout used=false / chronology_guard=true。9/17結果払戻UNREAD維持。
 - 次: v352 wall3 risk audit Run 35305095666 を最後まで確認し、こうしたケースを落とすと165R母集団のHEAD率/3点ROIが改善するかを判断する。
+
+
+## AFTER — v352 3号艇wall3リスク独立監査
+- Run `35305095666` / audit Job `105477488167` completed success。
+- Artifact `10532605117` name `v352-wall3-risk-35305095666`。
+- production sentinelは 276/241/131 + race SHA / ticket SHA 完全一致、AUDIT_OK=true。9月結果未読、production変更なし。
+- BASIC baseline (.790/.375/.05/.70): 165R / HEAD 140=84.85% / exact3 80=48.48% / ROI 112.51%。
+- WATCH baseline (.790/.425/.05/.70): 77R / HEAD 67=87.01% / exact3 44=57.14% / ROI 129.00%。
+- 重要所見: corrected STの3-4差で「weak」帯は BASIC 40R / HEAD 35=87.5% と頭は高いのに exact3 15=37.5% / ROI 76.5%。WATCHでも weak 23R / HEAD 20=86.96% / exact3 11=47.83% / ROI 85.94%。
+- 一方 strong帯は BASIC 41R ROI 163.17%、WATCH 14R ROI 229.29%。very_strongも高ROI。
+- よって wall3 は単純な「1頭DROP」より、**1は残るが2/3着相手順位がズレる問題**として扱う価値が高い。
+- 強いwall filterはROIを上げるが母数を大きく削り、BASICではHEAD率自体は改善しないものも多い。例 EX_ST_GAP_GT_0: 89R / HEAD82.02% / ROI131.01%。
+- 母数80%以上維持の自動選定候補 EX_SCORE_GT_-0.30 は143R / ROI112.21%でbaseline112.51%を上回らず、単純DROPの昇格根拠は弱い。
+- 結論: wall3はHEAD gateの追加より、相手選び（SECOND/THIRD rerank）研究を優先。
+
+## BEFORE — v353 wall3連動 3点買い目rerank研究
+- ユーザー指摘: 「こうなると買い目も変わるんじゃない？」
+- 現行v351相手選びは opponent attackCore で各艇を個別にtiltするが、**3号艇と4号艇の相対壁関係を直接使っていない**。
+- v352所見に基づき、現行BASIC/WATCH母集団とHEAD gateは固定したまま、3点買い目だけを研究する。
+- 展示wall risk（主に corrected ST3-ST4、wall score、4号艇attack score）に応じて、4号艇のSECOND/THIRD確率を上げ、3号艇を下げるsoft rerankをgrid探索する。
+- 3点固定、HEAD/mass/env gate固定、opponentCore既存補正を先に適用。その上にwall3 overlayを加える。
+- 評価は all / Feb-Jun dev / Jul-Aug support / 月別、exact3、ROI、買い目変更数、baselineからのgain/lossを確認。
+- 9月結果は読まない。production/LIVEは研究完了まで変更しない。
