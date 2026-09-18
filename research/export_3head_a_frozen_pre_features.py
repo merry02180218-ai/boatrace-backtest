@@ -41,6 +41,7 @@ def main():
     Path("research/3head_a_frozen_pre_features.json").write_text(
         json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8"
     )
+    print(json.dumps(out,ensure_ascii=False,indent=2))
     print("3HEAD_A_FROZEN_PRE_FEATURES_OK",len(enh))
 
 if __name__=="__main__":
