@@ -149,3 +149,20 @@
 - Repair is implementation-only: drop descriptor dimensions with no finite historical median, median-impute the remaining dimensions, and fail if fewer than 5 finite regime features remain. Research definitions (K values, interaction library, support floors, February protocol) are unchanged.
 - Performance-only improvement in the same repair: candidate statistics are scanned once per K and cached for all support/top-N variants; research gates are unchanged.
 - A fresh run from current main is required; do not reuse failed Run 35318413001.
+
+
+## AFTER WORK — Broad50 Wave14 PRE-distribution regime switching (Run 35318638285, 2026-09-18)
+- Initial Run 35318413001 failed before results because 3 descriptor dimensions were all-NaN across the historical regime-fit window. Implementation-only repair dropped all-NaN dimensions, median-imputed the remaining 54 descriptor dimensions, and cached candidate scans. Fresh Run **35318638285** / Job **105515840810** / Artifact **10536705768** succeeded; head SHA **ad493755bf5de44199cfe8cae605e1e53aa844ae**.
+- Regime definition used PRE distribution only: 19 oriented signals × median/q75/positive-share, KMeans K=2/3/4 fitted on Nov+Dec+Jan descriptors without outcomes. Candidate library: 171 pairs + 56 fixed pre-Feb triples = 227 interactions / 43,584 settings.
+- 24 regime-selector variants were constructed entirely from Nov-Dec-Jan. Only 2 unique selectors survived the pre-Feb half-month support/venue freeze.
+- Best precision pre-Feb selector (K=2, cluster floor16, top1) had persistent worst half **47.83%**, combined **55.56%** across Nov-Dec-Jan. February one-shot: H1 **5/10=50.0%**, H2 **9/25=36.0%**, total 14/35=40.0%; H1 support/venue dispersion was too small for the >=20R/half frontier.
+- Broader selector (K=4, cluster floor8, top2) had pre-Feb persistent worst **46.67%**, combined **54.59%**. February one-shot: H1 **5/18=27.78%**, H2 **14/42=33.33%**, total 19/60=31.67%.
+- Therefore February support frontier had **0 eligible selectors** at >=20/30/50/75/100 races per half. Regime switching did not rescue useful-volume transfer; the high pre-Feb precision again collapsed or lost support in February.
+- Conclusion: within the current 19-signal PRE family, static interactions, multi-month persistence, voting/union, and PRE-distribution regime switching have all failed to produce a robust useful-volume 40-50% selector. March remains unopened; September UNREAD; production v288 unchanged.
+
+## BEFORE WORK — Wave15 unused PRE field audit (2026-09-18)
+- Before abandoning PRE head-rate research, audit the raw BoatraceCSV program sources for PRE columns that the current feature builder never consumes.
+- Compare actual schemas and non-null/cardinality coverage for race_cards, recent_national and recent_local over representative pre-Feb dates. Classify every field as: currently used, identifier/text-only, potentially numeric/categorical PRE, current-meet/session-derived, or post-exhibition/unsafe.
+- Explicitly preserve the current rule that current-meet session fields are excluded unless independently shown to be pre-deadline and leakage-safe. Exhibition/original-exhibition remains excluded from PRE.
+- If materially useful unused PRE fields exist with broad historical coverage, next wave should add only those fields and repeat strict time-split/walk-forward validation. If none exist, shift the research objective to odds-aware EV or external PRE sources.
+- March outcomes stay unopened for this audit. September outcomes UNREAD; production v288 unchanged.
