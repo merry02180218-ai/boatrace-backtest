@@ -72,3 +72,7 @@ BASE: 131 hits, stake 82800, return 86390, profit +3590, ROI 104.34%.
 - auditは全cache生成成功後のみ441セルを開始。結果表示/artifactは `if: always()` 維持。
 - 2026-09-17 result/payoutを読む処理は追加していない。UNREAD維持。
 - 次の再開地点: fresh workflow_dispatch -> 各Job確認 -> audit完了ならartifact回収、sentinel 276/241/131確認、ROI/安定帯解析。
+
+## BEFORE — Run 35290276441 sentinel access fix
+- Run 35290276441: prepare/second/base-third/third success, audit Job 105433770003 failed at final production sentinel.
+- 原因: pandas Series `p.head` が列 `head` ではなく method を返し `int(p.head)` で TypeError。これから bracket access `p['head']` 等へ修正し、sentinel自体は緩めず 276/241/131 を必須維持する。
