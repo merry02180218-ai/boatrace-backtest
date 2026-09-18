@@ -40,8 +40,14 @@ def scan_score_contract():
     expected={'hp','mass','st','orig','market_conf','motor_win_rev','motor_2ren_rev','attack4','stwall_center','wall_rev'}
     must(set(weights)==expected,f'weight feature drift: {set(weights)}')
     must(set(refs)==expected,f'ECDF feature drift: {set(refs)}')
+    expected_ref_n={
+      'hp':50,'mass':50,'st':50,'orig':50,'market_conf':50,
+      'motor_win_rev':50,'motor_2ren_rev':50,
+      'attack4':45,'stwall_center':45,'wall_rev':45,
+    }
+    must(float(art.get('score_transform',{}).get('missing_value_rank'))==0.5,'missing wall rank drift')
     for k,v in refs.items():
-        must(len(v)==50,f'{k} ECDF expected 50 Apr-Jun refs, got {len(v)}')
+        must(len(v)==expected_ref_n[k],f'{k} ECDF expected {expected_ref_n[k]} Apr-Jun nonmissing refs, got {len(v)}')
         must(all(math.isfinite(float(x)) for x in v),f'{k} ECDF nonfinite')
         must(list(v)==sorted(v),f'{k} ECDF not sorted')
 
@@ -62,6 +68,8 @@ def scan_score_contract():
       'threshold':art['production_threshold'],
       'feature_count':len(weights),
       'ecdf_reference_rows_per_feature':{k:len(v) for k,v in refs.items()},
+      'wall_missing_dev_rows':5,
+      'missing_wall_rank':0.5,
       'outcome_like_tokens_in_score_source':bad,
       'status':'PASS',
     }
