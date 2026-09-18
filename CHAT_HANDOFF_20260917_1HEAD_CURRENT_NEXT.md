@@ -1154,3 +1154,45 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 固定配分はDEVでROI最大の配分を選び、SUPPORTで確認する。supportを選定には使わない。
 - baselineは各100円の300円/R、87/165、return63,700、ROI128.687%。
 - 2026-09結果/払戻は読まない。production/LIVE ticketsは変更しない。
+
+
+## AFTER — v369 formal ticket rank / staking audit
+- Run `35344087154` / Job `105596491873` completed success / Artifact `10546631786` / head `89e151b0e18b81ac97c0543e40841ccf2d19e440`。
+- current formal baseline完全再現:
+  - 165R / 87 hit / return63,700 / stake49,500 / ROI128.687%。
+- 87的中のticket rank内訳:
+  - **第1買い目: 34 hit (39.08%)**
+  - **第2買い目: 28 hit (32.18%)**
+  - **第3買い目: 25 hit (28.74%)**
+- ただし払戻寄与:
+  - rank1 return19,770 (31.04%) / avg581円 / median500円
+  - rank2 return22,710 (**35.65%**) / avg811円 / median680円
+  - rank3 return21,220 (33.31%) / avg849円 / median770円
+- rank単独100円/Rの全165R ROI:
+  - rank1 119.82%
+  - rank2 **137.64%**
+  - rank3 128.61%
+- period差が非常に大きい:
+  - DEV Feb-Jun: rank1 24hit ROI99.27%, rank2 25hit ROI152.77%, rank3 22hit ROI136.28%
+  - SUPPORT Jul-Aug: rank1 10hit ROI220.36%, rank2 3hit ROI63.57%, rank3 3hit ROI91.07%
+  - つまり固定でrank2を厚くするルールはDEVに強いがsupportで逆転する。
+- rank組合せ100円ずつ:
+  - 1+2: 62/165 / ROI128.73%
+  - 1+3: 59/165 / ROI124.21%
+  - 2+3: 53/165 / ROI133.12%だがsupport ROI77.32%で不安定
+  - 1+2+3: 87/165 / ROI128.69%。
+- DEVだけで選んだ固定all-three配分:
+  - 400円/R best = 1:2:1 (100/200/100)
+    - DEV ROI135.27%
+    - SUPPORT ROI109.64%
+    - ALL ROI130.92%
+  - 500円/R best = 1:3:1
+    - DEV138.77%, SUPPORT100.43%, ALL132.27%
+  - 600円/R best = 1:4:1
+    - DEV141.11%, SUPPORT94.29%, ALL133.16%
+- 結論:
+  - 的中頻度はrank1最多だが、収益性はrank2/rank3の高配当寄与が大きい。
+  - rank傾向がDEVとSUPPORTで大きく反転しており、**固定順位ウェイトは頑健ではない**。
+  - 現時点では100/100/100均等買いをformal維持。
+  - 次の買い方研究はrank番号固定ではなく、各レースのpair probability gap / conditional THIRD gap / wall3・5>6発火 / 市場オッズ等を使ったdynamic stakeが本命。
+- September outcomes unread / production unchanged / AUDIT_OK=true。
