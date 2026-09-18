@@ -139,6 +139,17 @@ jobs:
           print('MANUAL_LIVE_FINAL',json.dumps({'race_code':x['race_code'],'status':x['status'],'final_head_p':x['final_head_p'],'opp_mass':x['opp_mass'],'head_exhibition_pass':x['head_exhibition_pass'],'tickets':x['tickets'],'result_or_payout_used':False,'chronology_guard':True},ensure_ascii=False))
           PY
 
+      - name: Evaluate 1HEAD expansion Shadow
+        if: env.MODE == 'judge'
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          python run_1head_v351_live_expansion_shadow.py judge \
+            --input /tmp/final_input.json \
+            --formal "/tmp/result/${RACE_CODE}.json" \
+            --out "/tmp/result/${RACE_CODE}_expansion_shadow.json" \
+            | tee /tmp/expansion_shadow_stdout.json
+
       - name: Fetch current odds allocation shadow
         if: env.MODE == 'judge'
         continue-on-error: true
