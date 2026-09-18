@@ -1791,3 +1791,180 @@ Status: HEAD4_WATCHDOG_LOW_PRESSURE_15MIN_DAYTIME_ONLY
 - Production/LIVE remains unchanged until separate approval.
 
 Status: HEAD4_EXPANDED_UNIVERSE_VOLUME_RESEARCH_START
+
+
+## AFTER — 4HEAD expanded-universe volume research (2026-09-18)
+User requested trying to increase final BET volume beyond the frozen 120R line.
+
+### Stage 1 — label-independent structural expansion
+Implementation:
+- `audit_4head_expanded_pool_stage1.py`
+- script commits: `fccbd1a0a048f633076ed1d9211ddfbba0b47220`, local-mirror update `eecca4adf8548e1098ae852740143b691cf2bb9c`
+- workflow commit: `623ebcbc3e632d2b85960de101e3b18c3918fff7`
+
+Runs:
+- first Run `35337572466` / Job `105575864985`: FAILURE because the initial assumed 250–650 structural pool did not exist.
+- diagnostic fix commit: `47af824c3b19fb22979d00e04f359384ed097144`.
+- successful Run `35337846162` / Job `105576723385`.
+- Artifact `10544200764` / `head4-expanded-pool-stage1`.
+
+Result:
+- wide causal PRE parent: **262R**
+- full structural data ready: **235R**
+- frozen old164 reproduced exactly: **164R / 70 heads**
+- largest simple expansion-only structural pool while retaining all 164R: **226R**
+- chosen purely by target count (head outcomes NOT used):
+  - `st4_adv_inside >= -0.80`
+  - `orig4_adv_inside >= -0.35`
+- selected pool: **226R / 87 heads = 38.50%**
+- old164 recall: **164/164**
+- monthly pool count: Apr33 / May51 / Jun37 / Jul59 / Aug46
+- September outcomes read: false.
+
+### Stage 2 — frozen v283 + archived official-odds expansion search
+Implementation:
+- `audit_4head_expanded_pool_stage2_v283.py`
+- initial commit `5e725e724f25d76df04400ff3dcae0ca7a8e05ab`
+- workflow `1df8e84278c3743318d0436cb7efa89d2f2c80b3`
+- frozen headprob-artifact reuse:
+  - script `9ba895189565268cae0ce9e534b509fc2d17c833`
+  - workflow `60badb598e84f1ebc53d0ebf5608c8b0b16e9c09`
+- first Stage2 runs failed on missing historical closing odds outside old164:
+  - Run `35338111527` / Job `105577566689`: FAILURE
+  - Run `35338685737` / Job `105579387897`: FAILURE
+- failure was NOT v283-feature coverage. Example missing odds row `202607211502` was outside old164.
+- corrected fail-closed semantics:
+  - old164 missing odds => hard failure;
+  - only expanded-outside-old164 rows without verified closing odds are excluded from ROI research.
+  - fix commit `0884ca290e106e0b5494b04332a912945d59ea9e`.
+
+Successful official Stage2:
+- Run `35339005302`
+- Job `105580381798`
+- Artifact `10543978730` / `head4-expanded-pool-stage2`
+- SUCCESS / `HEAD4_EXPANDED_POOL_STAGE2_OK`.
+- 226R pool -> **208R with verified official closing odds**.
+- 18 rows excluded fail-closed for missing closing odds; **all are outside old164**.
+- old164/120 coverage remains intact.
+- frozen120 parity exactly reproduced:
+  - 120R
+  - 53 heads = 44.17%
+  - exact3 30
+  - retrospective ROI 127.7217%
+  - monthly floor 101.75%.
+- grid cells: **38,808**.
+
+### Dev-only selected larger-volume profiles
+These profile choices use Apr-Jun outcomes for ranking; Jul-Aug is report-only for that ranking. Note Jul-Aug is historically research-exposed elsewhere, so this is not a pristine holdout.
+
+Approx 160 target:
+- **157R** (+37)
+- rule for additions:
+  - comp >= 1.5
+  - quality `head_prob + 1.50*opponent_mass >= .775`
+  - head_prob >= .16
+  - opponent_mass >= .375
+  - ST >= -.80
+  - ORIG >= -.35
+- all ROI 120.69%
+- Jul-Aug ROI 98.98%
+- monthly floor 83.25% (Aug).
+
+Approx 180 target:
+- **171R**
+- all ROI 110.20%
+- Jul-Aug ROI 92.42%
+- monthly floor 67.83%
+- clearly weaker.
+
+Approx 200 target:
+- **193R**
+- all ROI 116.53%
+- Jul-Aug ROI 98.55%
+- monthly floor 67.83%
+- not attractive for current preference.
+
+### Apr-Aug NON-PRISTINE frontier diagnostics
+These rows use all five months for diagnostic constraints and therefore are NOT prospective proof.
+
+1. **134R conservative expansion**
+- +14 vs base120; all 14 additions are outside old164.
+- rule:
+  - comp >= 3.0
+  - quality >= .90
+  - head_prob >= .12
+  - opponent_mass >= .40
+  - ST >= -.80
+  - ORIG >= -.35
+- 57 heads / 134 = 42.54%
+- exact3 33
+- ROI **128.32%**
+- monthly floor **101.75%**
+- monthly ROI: Apr151.26 / May125.75 / Jun132.14 / Jul126.62 / Aug101.75.
+- This is the maximum volume found that both keeps every month >=100 and keeps overall ROI >= frozen120 ROI.
+
+2. **151R all-month-positive expansion**
+- +31; all 31 additions are outside old164 for this profile.
+- rule:
+  - comp >= 2.5
+  - quality >= .825
+  - head_prob floor 0
+  - opponent_mass >= .20
+  - ST >= -.80
+  - ORIG >= -.35
+- ROI **115.85%**
+- Jul-Aug ROI **111.57%**
+- monthly floor **101.75%**
+- monthly ROI: Apr124.25 / May114.36 / Jun117.98 / Jul116.35 / Aug101.75.
+- More volume, but aggregate ROI gives up ~11.9pt versus frozen120.
+
+3. **156R higher-volume / ROI-preserving diagnostic**
+- +36
+- rule:
+  - comp >= 3.5
+  - quality >= .75
+  - head_prob >= .16
+  - opponent_mass >= .30
+  - ST >= -.80
+  - ORIG >= -.35
+- 65 heads / 156 = 41.67%
+- exact3 37
+- ROI **128.59%**
+- Jul-Aug ROI **115.05%**
+- monthly floor **91.58%**
+- monthly ROI: Apr177.97 / May109.63 / Jun141.85 / Jul125.71 / Aug91.58.
+- This is the maximum volume found with overall ROI >= frozen120 and monthly floor >=90.
+
+4. **162R volume-forward diagnostic**
+- +42
+- rule:
+  - comp >= 2.75
+  - quality >= .75
+  - head_prob >= .16
+  - opponent_mass >= .30
+  - ST >= -.80
+  - ORIG >= -.35
+- ROI **125.67%**
+- Jul-Aug ROI **113.28%**
+- monthly floor **91.58%**
+- monthly ROI: Apr164.79 / May111.57 / Jun136.96 / Jul122.92 / Aug91.58.
+- 56 nearby grid cells in the 150–162R range still satisfy ROI>=125 and monthly floor>=85, so the general 150–160 expansion shape is not a one-cell accident.
+- Still NON-PRISTINE and not approved for official BET.
+
+### Main conclusion
+- Expanding the old structural universe works, but the verified historical ceiling is much lower than 250 because:
+  - wide causal parent is only 262R;
+  - full exhibition structure ready is 235R;
+  - simple old164-preserving structural pool max is 226R;
+  - verified official closing odds exist for 208R.
+- **150–162R is the useful next frontier.**
+- 180–200R profiles materially weaken monthly stability / support ROI.
+- For user's stated preference to increase buys without destroying ROI:
+  - conservative: 134R;
+  - balanced higher-volume research target: **150–156R**;
+  - volume-forward shadow target: **162R**.
+- To reach ~1.5–2 final BET/day historically, the PRE parent itself must be relaxed beyond the current 100%-recall wide parent; that is a separate new research layer and should not be conflated with the validated 150–162R expansion.
+- No production/LIVE decision changed in this work.
+- September outcomes remain unread.
+
+Status: `HEAD4_EXPANDED_UNIVERSE_SUCCESS__150_162R_FRONTIER_PROMISING__PRODUCTION_UNCHANGED`
