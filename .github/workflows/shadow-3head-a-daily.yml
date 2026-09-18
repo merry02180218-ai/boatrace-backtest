@@ -23,6 +23,23 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install pandas numpy scikit-learn joblib
+      - name: Download frozen A PRE feature manifest
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api repos/${{ github.repository }}/actions/artifacts/10556868870/zip > /tmp/a_features.zip
+          mkdir -p /tmp/a_features research
+          unzip -oq /tmp/a_features.zip -d /tmp/a_features
+          SRC=$(find /tmp/a_features -type f -name '3head_a_frozen_pre_features.json' | head -1)
+          test -n "$SRC"
+          cp "$SRC" research/3head_a_frozen_pre_features.json
+          python - <<'PY'
+          import json
+          z=json.load(open('research/3head_a_frozen_pre_features.json',encoding='utf-8'))
+          assert z['policy']=='3HEAD_A_PRECISION_V1'
+          assert z['feature_count']==370 and len(z['features'])==370 and len(set(z['features']))==370
+          print('FROZEN_A_PRE_FEATURES_READY',z['feature_count'])
+          PY
       - name: Install frozen A PRE feature manifest
         env:
           GH_TOKEN: ${{ github.token }}
