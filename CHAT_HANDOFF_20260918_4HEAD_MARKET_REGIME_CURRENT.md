@@ -2171,3 +2171,27 @@ Operational guidance:
 - Assigned-Issue notification is no longer required for the primary BET alert path.
 
 Status: `HEAD4_BET_DIRECT_MENTION_NOTIFICATION_READY`
+
+
+## BEFORE — 4HEAD exact-volume head-rate optimization under ROI constraint
+User asks whether 4-head hit rate can be increased while keeping ROI and race count around the current 156R line.
+
+Research objective:
+1. Hold final race count exactly at 156R first.
+2. Require overall retrospective ROI >= current 156R ROI (128.5865%).
+3. Maximize 4-head rate within the existing 38,808 Stage2 threshold cells.
+4. Separately test stronger robustness constraints:
+   - monthly ROI floor >= current 91.575%;
+   - support Jul-Aug ROI >= current 115.0453%.
+5. Report whether higher head rate is possible only by sacrificing month/support stability.
+6. If exact-threshold family cannot improve robustly, proceed to swap/re-ranking research rather than simply lowering/raising a single threshold.
+7. September target outcomes remain unread; this is Apr-Aug NON-PRISTINE retrospective research only.
+8. Production/LIVE 156R policy remains unchanged until separately approved.
+
+Preliminary local diagnostic before formal audit:
+- current156: 156R / 65 heads = 41.67% / exact3 37 / ROI 128.59 / support ROI 115.05 / monthly floor 91.58.
+- an exact156 alternative exists with 69 heads = 44.23%, exact3 38, ROI 129.64%, but monthly floor only 76.31% and support ROI 113.79%.
+- under exact156 + ROI>=current + monthly_floor>=current, only the current membership-equivalent cells remain; no head-rate gain.
+This must now be reproduced in a committed audit.
+
+Status: HEAD4_156R_HEADRATE_ROI_CONSTRAINED_RESEARCH_START
