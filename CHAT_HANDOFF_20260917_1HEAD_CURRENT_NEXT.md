@@ -363,3 +363,12 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 期待上は WATCHでgain3/loss0のため、BASIC全体 exact3 80 -> 83、stake不変。これをartifactから再構成して厳密監査する。
 - all / Feb-Jun / Jul-Aug / 月別ROI、買い目変更数、gain/loss、race identityを確認。
 - レース数とHEAD gateは一切変更しない。9月結果未読、production/LIVEは監査完了まで変更しない。
+
+
+## v355初回 failure — WATCH定義差を検出
+- Run `35314956926` / Job `105504520058` failure。
+- 原因: v353の独立WATCHセル77Rは MASS=.425母集団で exhibition thresholdを再較正した研究セル。一方、現行LIVEのWATCHは共通BASIC gate通過後に `opp_mass>=.425` をラベル付けするため、必ずBASIC subsetになる。
+- artifact比較では独立WATCH77RとBASIC165Rの共通は73R、独立WATCH側に4R非共通。
+- v355が `WATCH not subset of BASIC` でfailしたのは正しい検知。sentinel/条件を緩めて通さない。
+- これから: v337 candidate baseの `opp_mass` を用いてBASIC165R内から **現行LIVE定義のWATCH subset** を再構成し、そのsubsetだけwall3 rerankを適用するようv355を修正。
+- 必要cacheはv353 Runのprepare/second/base-third/third artifactsを利用。HEAD/exhibition gateは再計算せず、既存BASIC165R identityを固定してmassラベルだけ復元する。
