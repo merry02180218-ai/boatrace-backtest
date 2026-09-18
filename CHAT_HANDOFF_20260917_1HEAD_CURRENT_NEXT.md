@@ -1391,3 +1391,49 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - settlement returnは結果から公式100円払戻を使うが、stake決定には結果/払戻を一切使わない。
 - **重要な時系列制約**: archived `official_closing_odds3t` は締切時表示オッズであり、historical explorationには使えるがLIVE購入時点より後になる可能性がある。v370結果だけで正式採用しない。採用前に現在のLIVE odds parserで取得可能な時点へ移植/forward確認が必要。
 - 2026-09 outcomes/payoutsはUNREAD。production/LIVE stakeは変更しない。
+
+
+## AFTER — v373 model-only ticket boost
+- Run `35347241967` / Job `105606588151` completed success / Artifact `10547917067` / head `954eaba129168dcd2b1755c6356a6cea36006a23`。
+- odds feature完全不使用。current formal100/100/100 baseline 165R / stake49,500 / return63,700 / ROI128.687%。
+- DEV robust-selected:
+  - rank2のみ
+  - pair probability <= .085
+  - p1-p2 gap <= .020
+  - mass>=.375
+  - overlay ANY
+  - +100円最大1ticket
+- DEV: +20units / extra return5,620 / incremental ROI281% / total ROI136.47%。
+- ALL: +25units / extra return5,620 / stake52,000 / return69,320 / ROI133.31%。
+- しかし SUPPORT Jul-Aug:
+  - +5unitsに対して extra return **0円**
+  - equal ROI125.00% -> total117.98%
+  - Jul/Augとも悪化。
+- LOMO再選定は5/5 holdout月でROI悪化、nonnegative=0。モデルonly ticket-level boostもREJECT。
+- production/LIVE stakingは100/100/100維持。
+
+## BEFORE — v374 formal-overlay race-level stake concentration audit
+- v369〜v373でrank固定・closing odds・T-10 odds・model-only ticket boostはいずれもperiod反転あり。
+- 新仮説: **すでに正式採用済みのwall3 / 5>6 ST overlayが発火するレースだけ、3点を均等に厚くする**。
+- これは新しい結果最適化gateではなく、現formal ticket rerankのcausal状態フラグをそのままstake signalに使う。
+- current LIVE165 preliminary descriptive:
+  - overlay EITHER =36R / 3点均等 subgroup ROI **163.33%**
+  - NONE=129R / ROI **119.02%**
+  - DEV overlay29R ROI156.78%
+  - SUPPORT overlay7R ROI190.48%
+  - category: FIVE6-only24R ROI155.0%, WALL3-only11R ROI166.36%, BOTH1R ROI330%。
+- v374では閾値を再調整せず、formal overlay定義を固定したまま母集団拡大:
+  - LIVE165
+  - H078_M375 236R
+  - H0775_M375 269R
+  - H0775_M350 313R
+  - PROD276
+- 各母集団で:
+  - equal100/100/100 baseline
+  - overlay EITHER subgroup ROI
+  - NONE subgroup ROI
+  - overlay発火時だけ 200/200/200 (2x), 300/300/300 (3x), 400/400/400 (4x)
+  - DEV/SUPPORT/月別/disjoint added bands
+- ticket compositionは各rowにcurrent wall3→5>6を適用して再構成。race selection自体は各母集団固定。
+- 目標: 165R固有の偶然ではなく、拡大母集団でもoverlay群のROI優位が残るか確認。
+- 2026-09 outcomes/payoutsは読まない。production/LIVE stakeはv374完了まで変更しない。
