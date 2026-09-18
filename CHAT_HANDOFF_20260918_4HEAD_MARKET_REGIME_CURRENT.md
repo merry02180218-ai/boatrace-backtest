@@ -2009,3 +2009,77 @@ Historical NON-PRISTINE reference for this chosen line:
 These are research diagnostics, not prospective profitability proof.
 
 Status: HEAD4_156R_ROI_EXPANSION_PROMOTION_START
+
+
+## AFTER — HEAD4 156R ROI-focused expansion promoted to LIVE decision profile
+User approved the ROI-focused expansion. The operational last-minute 4HEAD decision now uses:
+`HEAD4_156R_ROI_EXPANSION_V1`.
+
+### Frozen policy
+- Policy artifact: `artifacts/head4_156r_roi_expansion_20260918.json`
+- commit: `0f30deb84aaecefbb3e1d1dd1c01f32e07697405`
+- Historical NON-PRISTINE reference:
+  - 156R / 65 heads = 41.67%
+  - exact3 37
+  - retrospective ROI 128.59%
+  - Jul-Aug ROI 115.05%
+  - monthly floor 91.58%.
+
+### Critical LIVE parity correction
+Before promotion, the fast 120R runner applied the 120 formula over the full wide monitoring parent but did not explicitly re-check the old historical structural ST/ORIG gates. That could allow a LIVE race outside the historical old164 structure to satisfy the 120 formula.
+
+Promotion fixes this mismatch:
+- current structural features are now computed exactly as research:
+  - `st4_adv_inside = mean(cur_st[1:3]) - cur_st[4]`
+  - `orig4_adv_inside = cur_orig_avg[4] - mean(cur_orig_avg[1:3])`
+- all current original-exhibition values must be numeric before a final decision; incomplete original data fails closed / continues polling.
+- base120 is now selected only inside:
+  - ST >= -0.60
+  - ORIG >= -0.057777777777777706.
+- 156R expansion then adds a base120 PASS iff:
+  - comp >= 3.5
+  - quality = head_prob + 1.50*opponent_mass >= .75
+  - head_prob >= .16
+  - opponent_mass >= .30
+  - ST >= -.80
+  - ORIG >= -.35.
+- every historical base120 selection is preserved by construction.
+- wall3 open rescue remains research-only and does not change the official decision.
+
+LIVE runner commit:
+- `af0d1d67dbd0cea22db85be678881c223853d25f`
+- compatibility filename remains `run_4head_120r_lastminute_fast.py`, but output `profile` identifies the active 156R policy.
+- output now includes:
+  - `base120_selected`
+  - `expanded156_added`
+  - `expanded156_selected`
+  - `old164_struct`
+  - `st4_adv_inside`
+  - `orig4_adv_inside`
+  - `selection_policy_artifact`.
+- official BET/PASS follows `expanded156_selected`.
+
+### Independent verification
+- parity script: `audit_4head_156r_policy_parity.py`
+- script commit: `13a020bbf57510a3da62d5078ebb2fbb221c5a4f`
+- test workflow commit: `2554542de5637629b45915baf782a41c376393a9`
+- Run `35341234767`
+- Job `105587361122`
+- Artifact `10545292057` / `head4-156r-policy-parity`
+- conclusion: **SUCCESS**
+- verified:
+  1. exact historical 156R grid row: 156R / +36 / 65 heads / 37 exact3 / ROI ~128.59 / support ROI ~115.05 / monthly floor ~91.58;
+  2. old164 + base120 formula => base120 selected;
+  3. outside old164 but within relaxed 156 structure => expansion add;
+  4. comp<3.5 => no expansion;
+  5. old120 formula alone does NOT select when both historical structures fail;
+  6. runner compiles successfully.
+
+### Operational status
+- Wide PRE monitoring parent remains unchanged and is sufficient for this 156R line.
+- Existing strict/watchdog workflows automatically consume the updated runner on main.
+- No result/payout is used before a LIVE decision.
+- September target-race outcome remains unread by selection.
+- Historical Apr-Aug ROI is NON-PRISTINE and not prospective proof.
+
+Status: `HEAD4_156R_ROI_EXPANSION_LIVE_READY__PARITY_VERIFIED`
