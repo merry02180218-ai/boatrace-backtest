@@ -834,3 +834,27 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 次の再開地点:
   1) forward LIVEで5>6 shadow発火例を蓄積、または
   2) current shadowを固定した追加独立期間/非重複母集団監査。
+
+
+## BEFORE — 2026-09-18 5>6 ST買い目 正式LIVE採用
+- ユーザー明示指示: 「正式採用でいいよ」。
+- 採用対象: current wall3正式補正の後段に、5>6 ST補正を正式適用。
+- 採用core:
+  - score6 >= .60
+  - corrected ST6-ST5 >= .40
+  - SECOND g2=0
+  - THIRD g3=.75
+  - 現LIVE PASSはmass>=.375なので別mass gateなし。
+- v363 robustness:
+  - 1,200 cells、DEV plateau 126 cells
+  - 近傍162 cellsのdelta_hits>=0は100%、loss0は92.6%
+  - LOMO 5/5月でcore `.60/.40/g2=0/g3=.75/mass=.375` を再選択、全月非悪化。
+- v362 current LIVE165 combined:
+  - wall3 only 83/165 / return58,650 / ROI118.485%
+  - wall3 + 5>6 core 87/165 / return63,700 / ROI128.687%
+  - gain4 / loss0
+  - DEV +2、SUPPORT +2
+- 正式採用後も `pre_five6_tickets` としてwall3後・5>6前の3点を保持し監査可能にする。
+- historical production 276R sentinel / HEAD gate / BASIC/WATCH gateは変更しない。
+- 2026-09結果/払戻は読まない。保存済みcausal LIVE入力とhistorical prepared causal rowsで回帰する。
+- ROI定義確認: 各3点100円、1R300円。的中時に実3連単払戻100円分を加算し、総払戻/総投資。数学的な合成オッズを事前計算した値ではなく、3点買いポートフォリオの実回収率。
