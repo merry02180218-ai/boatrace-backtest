@@ -24,7 +24,8 @@ import requests
 from build_4head_post_live import boatcast_st_url,boatcast_orig_url,BOATCAST,UA
 from build_4head_v283_current_exhibition_live import parse_boatcast_st,parse_boatcast_original,original_corrected,_rank_strength
 from backtest_v3 import CORR
-from backtest_v51_lane_corrected_tickets import rank_scores
+from backtest_v51_lane_corrected_tickets import rank_scores,norm_metric
+from head4_original_venue_schema import ORIG_REQUIRED,required_orig,publishes_original
 from build_4head_v93_primitives_live import build as build_v93
 from build_4head_v283_rows_live import derive
 from head4_v291_downstream_inference import load_artifact,score_second,score_conditional_third,v283_top4,BOATS
@@ -107,6 +108,27 @@ def parse_tkz_display(body):
     if set(vals)!=set(range(1,7)):raise Fast120Error(f'tkz rows incomplete {sorted(vals)}')
     return vals
 
+def _orig_live_audit(labels,oraw):
+    norms=[norm_metric(x) for x in labels]
+    avg_all6=bool(labels) and all(
+      len(oraw.get(b,[]))>=len(labels) and all(oraw[b][k] is not None for k in range(len(labels)))
+      for b in range(1,7)
+    )
+    def metric_all6(kind):
+        idx=[k for k,m in enumerate(norms) if (
+          (kind=='turn' and m in ('まわり足','回り足')) or
+          (kind=='straight' and m=='直線') or
+          (kind=='lap' and m=='一周')
+        )]
+        return bool(idx) and any(all(oraw[b][k] is not None for b in range(1,7)) for k in idx)
+    return {
+      'orig_avg_available':bool(avg_all6),
+      'orig_turn_available':bool(metric_all6('turn')),
+      'orig_straight_available':bool(metric_all6('straight')),
+      'orig_lap_available':bool(metric_all6('lap')),
+      'orig_labels_norm':norms,
+    }
+
 def build_exhibition_boatcast(hd,jcd,rno,tkz_text,st_text,orig_text,bias):
     disp=parse_tkz_display(tkz_text)
     exraw={b:disp[b]+CORR[b]['展示'] for b in range(1,7)}
@@ -116,10 +138,26 @@ def build_exhibition_boatcast(hd,jcd,rno,tkz_text,st_text,orig_text,bias):
     st_raw={b:float(parsed[b]) for b in range(1,7)}
     st_corr={b:st_raw[b]-float(bias.get(b,0.0)) for b in range(1,7)}
     rr,rs=_rank_strength(st_raw);cr,cs=_rank_strength(st_corr)
-    labels,oraw=parse_boatcast_original(orig_text)
-    if any(v is None for b in range(1,7) for v in oraw[b]):
-        raise Fast120Error('original exhibition values incomplete')
+
+    req=required_orig(jcd)
+    if publishes_original(jcd):
+        if orig_text is None:
+            raise Fast120Error(f'original exhibition missing for venue {int(jcd):02d}')
+        labels,oraw=parse_boatcast_original(orig_text)
+        oa=_orig_live_audit(labels,oraw)
+        missing=[]
+        if 'avg' in req and not oa['orig_avg_available']:missing.append('avg')
+        if 'turn' in req and not oa['orig_turn_available']:missing.append('turn')
+        if 'straight' in req and not oa['orig_straight_available']:missing.append('straight')
+        if missing:
+            raise Fast120Error(f'original exhibition venue schema incomplete jcd={int(jcd):02d} missing={missing} labels={labels}')
+    else:
+        labels=[];oraw={b:[] for b in range(1,7)}
+        oa={'orig_avg_available':False,'orig_turn_available':False,'orig_straight_available':False,
+            'orig_lap_available':False,'orig_labels_norm':[]}
+
     os=original_corrected(labels,oraw)
+    wall_ready=bool(oa['orig_avg_available'] and oa['orig_straight_available'])
     boats={};st_flat={}
     for b in range(1,7):
         boats[str(b)]={'cur_ex':float(ex[b]),'cur_st':float(cs[b]),
@@ -127,14 +165,27 @@ def build_exhibition_boatcast(hd,jcd,rno,tkz_text,st_text,orig_text,bias):
           'cur_orig_straight':float(os[b]['straight']),'cur_orig_avg':float(os[b]['avg'])}
         st_flat[f'st_raw_b{b}']=st_raw[b];st_flat[f'st_raw_rank_b{b}']=rr[b];st_flat[f'st_corr_rank_b{b}']=cr[b]
         st_flat[f'st_raw_strength_b{b}']=round(rs[b],4);st_flat[f'st_corr_strength_b{b}']=round(cs[b],4)
-    return {'schema':'head4_v283_current_exhibition_fast_v1','race_code':f'{hd}{jcd:02d}{rno:02d}',
-      'current_boats':boats,'st_flat':st_flat,'result_blind':True,'odds_used':False}
+    return {'schema':'head4_v283_current_exhibition_fast_v2_venue_aware','race_code':f'{hd}{jcd:02d}{rno:02d}',
+      'current_boats':boats,'st_flat':st_flat,
+      'venue_original_required':list(req),'venue_original_published':bool(publishes_original(jcd)),
+      'orig_avg_available':bool(oa['orig_avg_available']),
+      'orig_turn_available':bool(oa['orig_turn_available']),
+      'orig_straight_available':bool(oa['orig_straight_available']),
+      'orig_lap_available':bool(oa['orig_lap_available']),
+      'orig_labels_norm':list(oa['orig_labels_norm']),
+      'wall_exhibition_ready':wall_ready,
+      'result_blind':True,'odds_used':False}
 
 def fetch_current(hd,jcd,rno,timeout):
-    tu=boatcast_tkz_url(hd,jcd,rno);su=boatcast_st_url(hd,jcd,rno);ou=boatcast_orig_url(hd,jcd,rno)
-    with ThreadPoolExecutor(max_workers=3) as ex:
-        ft=ex.submit(_get_fast,tu,timeout,2);fs=ex.submit(_get_fast,su,timeout,2);fo=ex.submit(_get_fast,ou,timeout,2)
-        return ft.result(),fs.result(),fo.result()
+    tu=boatcast_tkz_url(hd,jcd,rno);su=boatcast_st_url(hd,jcd,rno)
+    if publishes_original(jcd):
+        ou=boatcast_orig_url(hd,jcd,rno)
+        with ThreadPoolExecutor(max_workers=3) as ex:
+            ft=ex.submit(_get_fast,tu,timeout,2);fs=ex.submit(_get_fast,su,timeout,2);fo=ex.submit(_get_fast,ou,timeout,2)
+            return ft.result(),fs.result(),fo.result()
+    with ThreadPoolExecutor(max_workers=2) as ex:
+        ft=ex.submit(_get_fast,tu,timeout,2);fs=ex.submit(_get_fast,su,timeout,2)
+        return ft.result(),fs.result(),None
 
 def wait_exhibition_ready(hd,jcd,rno,bias,deadline,timeout=4,poll_interval=2.0,safety_seconds=75,max_wait_seconds=30):
     attempts=0; last=''; started=time.perf_counter()
@@ -322,10 +373,15 @@ def structural_advantages(exh):
     b=exh['current_boats']
     inside=(1,2,3)
     st_inside=sum(float(b[str(i)]['cur_st']) for i in inside)/3.0
-    orig_inside=sum(float(b[str(i)]['cur_orig_avg']) for i in inside)/3.0
+    orig_ready=bool(exh.get('orig_avg_available',True))
+    orig_adv=None
+    if orig_ready:
+        orig_inside=sum(float(b[str(i)]['cur_orig_avg']) for i in inside)/3.0
+        orig_adv=float(float(b['4']['cur_orig_avg'])-orig_inside)
     return {
       'st4_adv_inside':float(st_inside-float(b['4']['cur_st'])),
-      'orig4_adv_inside':float(float(b['4']['cur_orig_avg'])-orig_inside),
+      'orig4_adv_inside':orig_adv,
+      'orig_avg_available':orig_ready,
     }
 
 def legacy_decide(head_prob,mass,comp,exh):
@@ -334,12 +390,13 @@ def legacy_decide(head_prob,mass,comp,exh):
     cur=comp>=7.0
     base77_formula=(cur and mass>=.425) or ((not cur) and head_prob>=.22 and mass>=.375 and comp>=3.0)
     score=head_prob+1.50*mass
-    old164_struct=(s['st4_adv_inside']>=-.6000000000000001 and
+    old164_struct=(s['orig_avg_available'] and s['orig4_adv_inside'] is not None and
+                   s['st4_adv_inside']>=-.6000000000000001 and
                    s['orig4_adv_inside']>=-.057777777777777706)
     base77=old164_struct and base77_formula
     base120=old164_struct and (base77_formula or (comp>=2.5 and score>=.82))
-    expansion156=((not base120) and comp>=3.5 and score>=.75 and
-                  head_prob>=.16 and mass>=.30 and
+    expansion156=((not base120) and s['orig_avg_available'] and s['orig4_adv_inside'] is not None and
+                  comp>=3.5 and score>=.75 and head_prob>=.16 and mass>=.30 and
                   s['st4_adv_inside']>=-.80 and s['orig4_adv_inside']>=-.35)
     sel=base120 or expansion156
     return {
@@ -414,6 +471,15 @@ def newfeature_motor_raw(card,state,jcd):
     }
 
 def newfeature_wall_raw(exh):
+    # Frozen research semantics: all wall-family values were NaN unless both
+    # orig_avg and orig_straight were available for all six boats.
+    if not bool(exh.get('wall_exhibition_ready',True)):
+        return {
+          'wall_exhibition_ready':False,
+          'ex_wall_gap':None,'st_wall_gap':None,
+          'straight_wall_gap':None,'avg_wall_gap':None,
+          'wall_score':None,'attack4_score':None,
+        }
     b3=exh['current_boats']['3']; b4=exh['current_boats']['4']
     ex_gap=float(b3['cur_ex'])-float(b4['cur_ex'])
     st_gap=float(b3['cur_st'])-float(b4['cur_st'])
@@ -423,6 +489,7 @@ def newfeature_wall_raw(exh):
     attack4=(.20*float(b4['cur_ex'])+.40*float(b4['cur_st'])+
              .25*float(b4['cur_orig_straight'])+.15*float(b4['cur_orig_avg']))
     return {
+      'wall_exhibition_ready':True,
       'ex_wall_gap':ex_gap,'st_wall_gap':st_gap,
       'straight_wall_gap':straight_gap,'avg_wall_gap':avg_gap,
       'wall_score':wall,'attack4_score':attack4,
@@ -439,20 +506,21 @@ def score_newfeature_raw(raw,artifact):
 
 def newfeature_decide(head_prob,mass,comp,exh,card,state,jcd):
     legacy=legacy_decide(head_prob,mass,comp,exh)
-    s={'st4_adv_inside':legacy['st4_adv_inside'],'orig4_adv_inside':legacy['orig4_adv_inside']}
+    s={'st4_adv_inside':legacy['st4_adv_inside'],'orig4_adv_inside':legacy['orig4_adv_inside'],
+       'orig_avg_available':bool(legacy.get('orig_avg_available',True))}
     motor=newfeature_motor_raw(card,state,jcd)
     wall=newfeature_wall_raw(exh)
     raw={
       'hp':float(head_prob),
       'mass':float(mass),
       'st':float(s['st4_adv_inside']),
-      'orig':float(s['orig4_adv_inside']),
+      'orig':(float(s['orig4_adv_inside']) if s['orig4_adv_inside'] is not None else None),
       'market_conf':-math.log(max(float(comp),1e-12)),
       'motor_win_rev':(-float(motor['motor_win_diff_4v3']) if motor['motor_win_diff_4v3'] is not None else None),
       'motor_2ren_rev':(-float(motor['motor_2ren_diff_4v3']) if motor['motor_2ren_diff_4v3'] is not None else None),
-      'attack4':float(wall['attack4_score']),
-      'stwall_center':-abs(float(wall['st_wall_gap'])-.10),
-      'wall_rev':-float(wall['wall_score']),
+      'attack4':(float(wall['attack4_score']) if wall['attack4_score'] is not None else None),
+      'stwall_center':(-abs(float(wall['st_wall_gap'])-.10) if wall['st_wall_gap'] is not None else None),
+      'wall_rev':(-float(wall['wall_score']) if wall['wall_score'] is not None else None),
     }
     art=load_newfeature_artifact()
     score,ranks=score_newfeature_raw(raw,art)
@@ -461,7 +529,8 @@ def newfeature_decide(head_prob,mass,comp,exh,card,state,jcd):
     st_min=float(gate.get('st4_adv_inside_min',-.80))
     orig_min=float(gate.get('orig4_adv_inside_min',-.35))
     expansion=bool(
-      (not legacy['base120_selected']) and
+      (not legacy['base120_selected']) and s['orig_avg_available'] and
+      s['orig4_adv_inside'] is not None and
       s['st4_adv_inside']>=st_min and s['orig4_adv_inside']>=orig_min and
       score>=threshold
     )
@@ -485,7 +554,11 @@ def newfeature_decide(head_prob,mass,comp,exh,card,state,jcd):
       'old164_struct':bool(legacy['old164_struct']),
       'current_comp7':bool(legacy['current_comp7']),
       'st4_adv_inside':float(s['st4_adv_inside']),
-      'orig4_adv_inside':float(s['orig4_adv_inside']),
+      'orig4_adv_inside':(float(s['orig4_adv_inside']) if s['orig4_adv_inside'] is not None else None),
+      'orig_avg_available':bool(s['orig_avg_available']),
+      'wall_exhibition_ready':bool(wall.get('wall_exhibition_ready')),
+      'venue_original_required':list(exh.get('venue_original_required',required_orig(jcd))),
+      'venue_schema_supported_for_selection':bool(s['orig_avg_available']),
     }
 
 
