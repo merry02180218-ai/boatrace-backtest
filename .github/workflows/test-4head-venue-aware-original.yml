@@ -1,0 +1,60 @@
+name: test-4head-venue-aware-original
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'head4_original_venue_schema.py'
+      - 'run_4head_120r_lastminute_fast.py'
+      - 'audit_4head_venue_aware_original.py'
+      - '.github/workflows/test-4head-venue-aware-original.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml joblib
+      - name: Download frozen expanded 208R feature table
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p seed
+          gh run download 35361685459 -n head4-208-expanded-features -D seed
+          F="$(find seed -type f -name 'expanded_features_208.csv' | head -1)"
+          test -n "$F"
+          echo "EXPANDED_FEATURES_208=$F" >> "$GITHUB_ENV"
+      - name: Compile live code
+        run: |
+          python -m py_compile head4_original_venue_schema.py
+          python -m py_compile run_4head_120r_lastminute_fast.py
+          python -m py_compile audit_4head_venue_aware_original.py
+      - name: Venue-aware original audit
+        run: |
+          python audit_4head_venue_aware_original.py | tee /tmp/venue.log
+          grep -q 'HEAD4_VENUE_AWARE_ORIGINAL_OK' /tmp/venue.log
+          grep -q 'SEPTEMBER_UNREAD' /tmp/venue.log
+      - name: Production parity regression
+        env:
+          EXPANDED_FEATURES_208: ${{ env.EXPANDED_FEATURES_208 }}
+        run: |
+          python audit_4head_newfeature_production_parity.py | tee /tmp/parity.log
+          grep -q 'HEAD4_NEWFEATURE_PRODUCTION_PARITY_OK' /tmp/parity.log
+          grep -q 'SEPTEMBER_UNREAD' /tmp/parity.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-venue-aware-original
+          path: |
+            /tmp/head4_venue_aware_original/
+            /tmp/venue.log
+            /tmp/parity.log
+          retention-days: 30
