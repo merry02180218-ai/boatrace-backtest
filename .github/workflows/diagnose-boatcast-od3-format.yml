@@ -1,0 +1,35 @@
+name: diagnose-boatcast-od3-format
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/diagnose-boatcast-od3-format.txt'
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Fetch and print BOATCAST od3 structure
+        shell: bash
+        run: |
+          python - <<'PY'
+          import urllib.request
+          urls=[
+            "https://race.boatcast.jp/txt/07/bc_smt_od3_20260918_07_05.txt",
+            "https://race.boatcast.jp/txt/24/bc_smt_od3_20260918_24_06.txt",
+          ]
+          for url in urls:
+              print("===URL===",url)
+              req=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0"})
+              try:
+                  body=urllib.request.urlopen(req,timeout=5).read().decode("utf-8-sig","replace")
+              except Exception as e:
+                  print("FETCH_ERROR",repr(e));continue
+              print("BYTES",len(body.encode()))
+              lines=body.splitlines()
+              print("LINES",len(lines))
+              for i,line in enumerate(lines[:20]):
+                  print(i,repr(line))
+          PY
