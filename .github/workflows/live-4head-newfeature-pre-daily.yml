@@ -1,0 +1,188 @@
+name: live-4head-newfeature-pre-daily
+
+on:
+  schedule:
+    - cron: '20 0 * * *' # 09:20 JST
+  workflow_dispatch:
+    inputs:
+      target_date:
+        description: 'Target date YYYY-MM-DD (blank = today JST)'
+        required: false
+        type: string
+  push:
+    paths:
+      - '.github/workflows/live-4head-newfeature-pre-daily.yml'
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: live-4head-newfeature-pre-daily
+  cancel-in-progress: false
+
+jobs:
+  pre:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Resolve target date
+        shell: bash
+        run: |
+          if [ -n "${{ inputs.target_date }}" ]; then
+            D='${{ inputs.target_date }}'
+          else
+            D=$(TZ=Asia/Tokyo date +%F)
+          fi
+          echo "TARGET_DATE=$D" >> "$GITHUB_ENV"
+          echo "TARGET_DAY=${D//-/}" >> "$GITHUB_ENV"
+          echo "PRE_ARTIFACT=head4-newfeature-pre-live-${D//-/}" >> "$GITHUB_ENV"
+
+      - name: Sparse checkout causal history
+        uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards/2025/10
+            data/programs/race_cards/2025/11
+            data/programs/race_cards/2025/12
+            data/programs/race_cards/2026/01
+            data/programs/race_cards/2026/02
+            data/programs/race_cards/2026/03
+            data/programs/race_cards/2026/04
+            data/programs/race_cards/2026/05
+            data/programs/race_cards/2026/06
+            data/programs/race_cards/2026/07
+            data/programs/race_cards/2026/08
+            data/programs/race_cards/2026/09
+            data/results/realtime/2025/10
+            data/results/realtime/2025/11
+            data/results/realtime/2025/12
+            data/results/realtime/2026/01
+            data/results/realtime/2026/02
+            data/results/realtime/2026/03
+            data/results/realtime/2026/04
+            data/results/realtime/2026/05
+            data/results/realtime/2026/06
+            data/results/realtime/2026/07
+            data/results/realtime/2026/08
+            data/results/realtime/2026/09
+            data/previews/stt/2025/10
+            data/previews/stt/2025/11
+            data/previews/stt/2025/12
+            data/previews/stt/2026/01
+            data/previews/stt/2026/02
+            data/previews/stt/2026/03
+            data/previews/stt/2026/04
+            data/previews/stt/2026/05
+            data/previews/stt/2026/06
+            data/previews/stt/2026/07
+            data/previews/stt/2026/08
+            data/previews/stt/2026/09
+
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml joblib
+
+      - name: Build fresh result-blind daily state
+        run: |
+          python prepare_4head_120r_daily_state.py \
+            --target-date "$TARGET_DATE" --data-root brcsv \
+            --out /tmp/head4_daily_state.json | tee /tmp/head4_daily_state.log
+          python - <<'PY'
+          import json
+          z=json.load(open('/tmp/head4_daily_state.json',encoding='utf-8'))
+          assert z['target_date_results_used'] is False,z
+          assert z['newfeature_motor_history_start']=='2025-11-01',z
+          print('HEAD4_NEWFEATURE_PRE_STATE_OK',z['target_date'],z['history_end'])
+          PY
+
+      - name: Fetch result-blind current PRE inputs
+        run: |
+          python fetch_4head_v291_pre_inputs_live.py --date "$TARGET_DATE" | tee /tmp/head4_pre_fetch.log
+          python - <<'PY'
+          import json,os
+          p=f"current_input/v291/{os.environ['TARGET_DAY']}/input_manifest.json"
+          z=json.load(open(p,encoding='utf-8'))
+          assert z['result_blind'] is True,z
+          assert z['current_exhibition_used'] is False,z
+          assert z['race_rows']>0,z
+          print('HEAD4_NEWFEATURE_PRE_INPUT_OK',z['race_rows'],z['active_venues'])
+          PY
+
+      - name: Run production monitoring-parent PRE scan
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: |
+          python scan_4head_120r_pre_live.py \
+            --date "$TARGET_DATE" --daily-state /tmp/head4_daily_state.json | tee /tmp/head4_pre_scan.log
+          grep -q 'HEAD4_120R_PRE_LIVE_TRIAL_OK' /tmp/head4_pre_scan.log
+          grep -q 'TARGET_DAY_RESULTS_UNREAD' /tmp/head4_pre_scan.log
+          python - <<'PY'
+          import json,os
+          p=f"live_outputs/head4_120r_pre/{os.environ['TARGET_DAY']}/audit.json"
+          z=json.load(open(p,encoding='utf-8'))
+          assert z['target_day_results_read'] is False,z
+          assert z['current_exhibition_used'] is False,z
+          assert z['current_odds_used'] is False,z
+          print('HEAD4_NEWFEATURE_PRE_SCAN_OK',z['current_rows'],z['monitoring_parent_R'],z['display_R'])
+          PY
+
+      - name: Build official-deadline watchdog list
+        run: |
+          python build_4head_newfeature_watchlist.py \
+            --date "$TARGET_DATE" \
+            --pre-monitoring "live_outputs/head4_120r_pre/$TARGET_DAY/pre_monitoring_parent.csv" \
+            --pre-run-id "$GITHUB_RUN_ID" --pre-artifact-name "$PRE_ARTIFACT" \
+            --state-run-id "$GITHUB_RUN_ID" --state-artifact-name "$PRE_ARTIFACT" \
+            --watch-minutes-before 35 \
+            --out .github/live/head4_120r_watchlist.json | tee /tmp/head4_watchlist.log
+          grep -q 'HEAD4_NEWFEATURE_WATCHLIST_OK' /tmp/head4_watchlist.log
+          grep -q 'TARGET_DAY_RESULTS_UNREAD' /tmp/head4_watchlist.log
+
+      - name: Validate and commit today's watchlist
+        run: |
+          python - <<'PY'
+          import json,os
+          p='.github/live/head4_120r_watchlist.json'
+          z=json.load(open(p,encoding='utf-8'))
+          assert z['date']==os.environ['TARGET_DAY'],z
+          assert z['profile']=='HEAD4_NEWFEATURE_FIXED156_V1',z
+          assert z['target_day_results_used'] is False,z
+          assert z['payouts_used'] is False,z
+          assert z['target_count']==len(z['targets']),z
+          print('HEAD4_NEWFEATURE_WATCHLIST_CONTRACT_OK',z['target_count'])
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/live/head4_120r_watchlist.json
+          if git diff --cached --quiet; then
+            echo "HEAD4_WATCHLIST_NO_CHANGE"
+          else
+            git commit -m "live: refresh HEAD4 new-feature watchlist $TARGET_DAY"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ${{ env.PRE_ARTIFACT }}
+          path: |
+            current_input/v291/${{ env.TARGET_DAY }}/
+            live_outputs/head4_120r_pre/${{ env.TARGET_DAY }}/
+            /tmp/head4_daily_state.json
+            /tmp/head4_daily_state.log
+            /tmp/head4_pre_fetch.log
+            /tmp/head4_pre_scan.log
+            /tmp/head4_watchlist.log
+            .github/live/head4_120r_watchlist.json
+          if-no-files-found: warn
+          retention-days: 7
