@@ -1990,3 +1990,32 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 保存済みcausal inputで wall3-only / five6-only / no-overlay を回帰。
 - formal tickets / official stake / existing shadow / HEAD gatesは変更しない。
 - 2026-09 outcomes/payouts unread。
+
+
+## BEFORE — v370 current formal3 odds-aware dynamic staking
+- ユーザー要望: 買い方研究の続行。
+- v369結論: ticket rank固定ウェイトはDEV/SUPPORTで反転し頑健でない。
+- repo内に `data/official_closing_odds3t/YYYY/MM/DD.csv` のBOAT RACE公式締切3連単オッズ履歴が存在することを確認。
+- v340で公式closing odds / combined odds / Dutch実装済みだが旧production276R・旧買い目用。今回は**現正式165R / wall3+5>6後の3点**へ再監査する。
+- レース選定・買い目3点は固定。研究対象は資金配分のみ。
+- realized returnは公式結果の100円払戻を使い、stake配分の意思決定には締切オッズ＋モデル確率のみを使う。
+- 研究1: fixed-total allocation（全レース同額）
+  - 600円/R（6 units）・1000円/R（10 units）、各ticket最低100円。
+  - equal
+  - odds Dutch（stake ∝ 1/odds）
+  - model probability power
+  - odds/model power grid: score = pair_prob^a * odds^b
+- 研究2: selective boost
+  - 毎R baseline 100/100/100を必ず買う。
+  - formal3の中で model_prob*closing_odds（value score）が最も高い1点だけ、閾値を超えた時に+100〜+500円。
+  - value threshold / top-vs-second marginをgrid。
+- 選定: Feb-Jun DEVのみ。Jul-Aug SUPPORTは選定に使わない。
+- 評価:
+  - ROI / profit / total stake
+  - SUPPORT ROI
+  - 月別
+  - odds coverage
+  - stake distribution
+  - baseline 100/100/100 = 165R / 87hit / stake49,500 / return63,700 / ROI128.687%
+- race数・hit率は資金配分だけなので原則不変。
+- production/LIVE買い目は変更しない。2026-09結果/払戻は読まない。
