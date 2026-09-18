@@ -1,0 +1,178 @@
+{
+  "cases": [
+    {
+      "case": "D20_ONLY",
+      "legacy_stakes": [
+        100,
+        100,
+        100
+      ],
+      "D20": {
+        "profile": "1HEAD_CURRENT_ODDS_VALUE_GATE_SHADOW_V373_D20",
+        "status": "READY",
+        "d": 0.2,
+        "combined_min": 2.8125,
+        "value_min": 1.375,
+        "extra_units": 3,
+        "ticket_pair_probs": {
+          "1-2-3": 0.12,
+          "1-2-4": 0.11,
+          "1-3-2": 0.09
+        },
+        "combined_odds": 2.9647058823529413,
+        "ticket_values": {
+          "1-2-3": 1.44,
+          "1-2-4": 0.99,
+          "1-3-2": 0.63
+        },
+        "max_ticket_value": 1.44,
+        "active": true,
+        "units": [
+          2,
+          2,
+          2
+        ],
+        "stakes_yen": [
+          200,
+          200,
+          200
+        ],
+        "total_stake_yen": 600,
+        "research_only": true
+      },
+      "D30": {
+        "profile": "1HEAD_CURRENT_ODDS_VALUE_GATE_SHADOW_V373_D20",
+        "status": "READY",
+        "d": 0.3,
+        "combined_min": 3.2142857142857144,
+        "value_min": 1.5714285714285716,
+        "extra_units": 3,
+        "ticket_pair_probs": {
+          "1-2-3": 0.12,
+          "1-2-4": 0.11,
+          "1-3-2": 0.09
+        },
+        "combined_odds": 2.9647058823529413,
+        "ticket_values": {
+          "1-2-3": 1.44,
+          "1-2-4": 0.99,
+          "1-3-2": 0.63
+        },
+        "max_ticket_value": 1.44,
+        "active": false,
+        "units": [
+          1,
+          1,
+          1
+        ],
+        "stakes_yen": [
+          100,
+          100,
+          100
+        ],
+        "total_stake_yen": 300,
+        "research_only": true
+      }
+    },
+    {
+      "case": "D20_D30",
+      "legacy_stakes": [
+        100,
+        100,
+        100
+      ],
+      "D20": {
+        "profile": "1HEAD_CURRENT_ODDS_VALUE_GATE_SHADOW_V373_D20",
+        "status": "READY",
+        "d": 0.2,
+        "combined_min": 2.8125,
+        "value_min": 1.375,
+        "extra_units": 3,
+        "ticket_pair_probs": {
+          "1-2-3": 0.15,
+          "1-2-4": 0.1,
+          "1-3-2": 0.08
+        },
+        "combined_odds": 3.4285714285714284,
+        "ticket_values": {
+          "1-2-3": 2.25,
+          "1-2-4": 1.0,
+          "1-3-2": 0.64
+        },
+        "max_ticket_value": 2.25,
+        "active": true,
+        "units": [
+          3,
+          2,
+          1
+        ],
+        "stakes_yen": [
+          300,
+          200,
+          100
+        ],
+        "total_stake_yen": 600,
+        "research_only": true
+      },
+      "D30": {
+        "profile": "1HEAD_CURRENT_ODDS_VALUE_GATE_SHADOW_V373_D20",
+        "status": "READY",
+        "d": 0.3,
+        "combined_min": 3.2142857142857144,
+        "value_min": 1.5714285714285716,
+        "extra_units": 3,
+        "ticket_pair_probs": {
+          "1-2-3": 0.15,
+          "1-2-4": 0.1,
+          "1-3-2": 0.08
+        },
+        "combined_odds": 3.4285714285714284,
+        "ticket_values": {
+          "1-2-3": 2.25,
+          "1-2-4": 1.0,
+          "1-3-2": 0.64
+        },
+        "max_ticket_value": 2.25,
+        "active": true,
+        "units": [
+          3,
+          2,
+          1
+        ],
+        "stakes_yen": [
+          300,
+          200,
+          100
+        ],
+        "total_stake_yen": 600,
+        "research_only": true
+      }
+    },
+    {
+      "case": "BACKWARD_COMPAT_NO_PROBS",
+      "legacy_stakes": [
+        100,
+        100,
+        100
+      ],
+      "D20_status": "UNAVAILABLE_NO_PAIR_PROBS"
+    },
+    {
+      "case": "FINAL_PAIR_PROB_HELPER",
+      "tickets": [
+        "1-2-3",
+        "1-2-4",
+        "1-3-2"
+      ],
+      "ticket_pair_probs": {
+        "1-2-3": 0.07174233000956212,
+        "1-2-4": 0.06581029785019568,
+        "1-3-2": 0.06929152478143079
+      }
+    }
+  ],
+  "RESULT_OR_PAYOUT_USED": false,
+  "SEPTEMBER_OUTCOMES_READ": false,
+  "FORMAL_STAKES_CHANGED": false,
+  "AUDIT_OK": true
+}

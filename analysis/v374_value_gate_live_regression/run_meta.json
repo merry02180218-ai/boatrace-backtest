@@ -1,0 +1,20 @@
+{
+  "run_id": 35379286090,
+  "run_url": "https://github.com/merry02180218-ai/boatrace-backtest/actions/runs/35379286090",
+  "head_sha": "cbf1c4c624581c8c48f23e3e9275ea6459146f2a",
+  "jobs": [
+    {
+      "id": 105711349027,
+      "name": "audit",
+      "status": "in_progress",
+      "conclusion": null
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 10561117781,
+      "name": "v374-value-gate-live-regression-35379286090",
+      "size_in_bytes": 1691
+    }
+  ]
+}
