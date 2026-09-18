@@ -1968,3 +1968,44 @@ These rows use all five months for diagnostic constraints and therefore are NOT 
 - September outcomes remain unread.
 
 Status: `HEAD4_EXPANDED_UNIVERSE_SUCCESS__150_162R_FRONTIER_PROMISING__PRODUCTION_UNCHANGED`
+
+
+## BEFORE — promote ROI-focused 156R expansion to operational candidate (2026-09-18)
+User explicitly chose: 「ROI重視拡張にしようか」 => adopt the 156R ROI-focused expansion as the next operational 4HEAD line.
+
+Important parity correction discovered before promotion:
+- Historical frozen120/156 research was evaluated inside structural post-exhibition gates.
+- Current fast LIVE `decide()` applies the 120 formula across every wide monitoring-parent race and does not explicitly re-check:
+  - old164 ST gate `st4_adv_inside >= -0.60`
+  - old164 ORIG gate `orig4_adv_inside >= -0.057777777777777706`.
+- Therefore promotion must NOT simply append the 156 extra thresholds to the existing `decide()`; first restore exact structural semantics so LIVE matches historical membership.
+
+Frozen operational candidate semantics to implement:
+1. Compute from current exhibition:
+   - `st4_adv_inside = mean(cur_st[1],cur_st[2],cur_st[3]) - cur_st[4]`
+   - `orig4_adv_inside = cur_orig_avg[4] - mean(cur_orig_avg[1],cur_orig_avg[2],cur_orig_avg[3])`
+2. Historical base120:
+   - old164_struct = ST>=-0.60 AND ORIG>=-0.057777777777777706
+   - within old164_struct apply frozen 77R + 120R nested-linear logic exactly.
+3. ROI-focused expansion:
+   - preserve every base120 selection;
+   - add current PASS when:
+     - comp >= 3.5
+     - quality = head_prob + 1.50*opponent_mass >= .75
+     - head_prob >= .16
+     - opponent_mass >= .30
+     - ST >= -.80
+     - ORIG >= -.35.
+4. Output both `base120_selected` and `expanded156_selected`; official BET/PASS follows expanded156.
+5. Keep wall3 open rescue research-only and non-applied.
+6. Freeze a JSON policy artifact and run independent historical parity/contract checks before treating LIVE as ready.
+7. No target-race result or payout may be read during LIVE decisions.
+
+Historical NON-PRISTINE reference for this chosen line:
+- 156R / 65 heads (41.67%) / exact3 37
+- retrospective ROI 128.59%
+- Jul-Aug ROI 115.05%
+- monthly floor 91.58%.
+These are research diagnostics, not prospective profitability proof.
+
+Status: HEAD4_156R_ROI_EXPANSION_PROMOTION_START
