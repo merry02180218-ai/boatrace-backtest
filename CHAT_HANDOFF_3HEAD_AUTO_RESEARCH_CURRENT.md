@@ -62,3 +62,9 @@
 - Freeze the top diverse January-stable interactions, their thresholds, window/band definitions and any small interaction ensemble before February evaluation.
 - February is then a one-shot transfer test for the frozen interaction family. Report the same support-size ceiling (20/30/50/75/100 per half) and direct comparison to Wave9. Do not iterate Wave11 formulas from February result.
 - March remains unopened. September outcomes UNREAD; production v288 unchanged.
+
+
+### Wave11 failure/repair note (Run 35316102805)
+- Initial Wave11 Run **35316102805** / Job **105507965184** failed before any February transfer result was produced.
+- Cause: candidate universe was generated from globally available base signals, while some rolling window/mode caches legitimately lacked an interaction column when one member signal had insufficient finite trailing support. Evaluator raised `KeyError` instead of treating that candidate as unavailable for that cache.
+- Repair is implementation-only: fail-closed skip candidates whose exact interaction column is absent in that window/mode cache. Discovery rules, support floors, formulas and February transfer protocol remain unchanged. A fresh run from current main is required; do not rerun the stale failed SHA.
