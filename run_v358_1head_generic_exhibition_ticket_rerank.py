@@ -20,6 +20,7 @@ import run_v326_1head_ticketaware_exhibition as v326
 import run_v337_1head_head_cutoff_volume as v337
 import run_v347_1head_opponent_attackcore as v347
 import run_v351_1head_production_regression as base
+import run_v346_1head_v345_production_regression as v346
 import run_v351_1head_joint_roi_grid as grid
 import run_v352_1head_wall3_risk_audit as v352
 
@@ -64,6 +65,8 @@ def generic_exhibition(ids:set[str]):
       rec[f'ex{b}']=float(ex[b]);rec[f'st{b}']=float(st[b]);rec[f'straight{b}']=float(os[b]['straight']);rec[f'avg{b}']=float(os[b]['avg'])
       rec[f'score{b}']=(prod.WALL3_SHADOW_W_EX*float(ex[b])+prod.WALL3_SHADOW_W_ST*float(st[b])+
                         prod.WALL3_SHADOW_W_STRAIGHT*float(os[b]['straight'])+prod.WALL3_SHADOW_W_ORIG_AVG*float(os[b]['avg']))
+      rec[f'core{b}']=(prod.ATTACK_CORE_W_ONE_EX*float(ex[b])+prod.ATTACK_CORE_W_ONE_ST*float(st[b])+
+                       prod.ATTACK_CORE_W_ONE_STRAIGHT*float(os[b]['straight'])+prod.ATTACK_CORE_W_ONE_ORIG_AVG*float(os[b]['avg']))
     out.append(rec)
   v326.update_st(strows,sums,allv);d+=timedelta(days=1)
  return pd.DataFrame(out)
@@ -149,10 +152,16 @@ def evaluate(rows,family,scope,amin,g2,g3,cache):
 
 def main():
  if not prod.SEPTEMBER_OUTCOMES_MUST_REMAIN_UNREAD:raise RuntimeError('September guard disabled')
- y=grid.universe();maps=v347.opponent_maps();cores=v347.build_opponent_attackcore(set(y.race_code));cache={}
- basic=v352.selected(y,**v352.BASIC,maps=maps,cores=cores)
- if (len(basic),int(basic.head_hit.sum()),int(basic.hit.sum()))!=(165,140,80):raise RuntimeError('BASIC selection drift')
- ids=set(basic.race_code);features=generic_exhibition(ids);rows=build_rows(basic,features,maps,cores)
+ y=grid.universe();maps=v347.opponent_maps();cache={}
+ ym=y[pd.to_numeric(y.opp_mass,errors='coerce').ge(v352.BASIC['mass'])].copy()
+ ym=v346.apply_v345_attack_core(ym)
+ basic=grid.eval_cfg(ym,v352.BASIC['head'],v352.BASIC['env_w'],v352.BASIC['env_q'])
+ if (len(basic),int(basic.head_hit.sum()))!=(165,140):raise RuntimeError(f'BASIC selection drift R={len(basic)} head={int(basic.head_hit.sum())}')
+ ids=set(basic.race_code);features=generic_exhibition(ids)
+ cores={}
+ for _,fr in features[features.ex_ready.fillna(False)].iterrows():
+  cores[str(fr.race_code).zfill(12)]={b:float(fr[f'core{b}']) for b in BOATS}
+ rows=build_rows(basic,features,maps,cores)
  # Current promoted wall3 policy must reproduce v355 83 exact3.
  off=pd.DataFrame([{'month':str(r['month']),'race_code':str(r['race_code']).zfill(12),'head_hit':int(r['head_hit']),
                     'actual_combo':str(r['actual_combo']),'tickets':r['official_tickets'],
