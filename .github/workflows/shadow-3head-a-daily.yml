@@ -1,0 +1,27 @@
+name: shadow-3head-a-daily
+on:
+  workflow_dispatch:
+    inputs:
+      target_date:
+        description: 'Target date YYYY-MM-DD'
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn joblib
+      - name: Build A pre-motor shadow cache
+        run: python build_3head_a_daily_shadow.py --date "${{ inputs.target_date }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shadow-3head-a-daily-${{ inputs.target_date }}
+          path: live_outputs/a_precision/
+          if-no-files-found: error
