@@ -30,6 +30,15 @@ def ticket_list(p2,pc):
  if len(out)!=3 or len(set(out))!=3: raise RuntimeError('invalid ticket set')
  return out
 
+def ticket_pair_probs(p2,pc,tickets):
+ pair=v299.pair_prob(p2,pc,prod.TICKET_ALPHA)
+ out={}
+ for ticket in tickets:
+  a,s,t=map(int,str(ticket).split('-'))
+  if a!=1 or s not in BOATS or t not in BOATS or s==t: raise RuntimeError(f'invalid formal ticket {ticket}')
+  out[ticket]=float(pair[(s,t)])
+ return out
+
 def wall3_shadow(p2,pc,x,watch_pass):
  ex=x['corrected_ex']; st=x['corrected_st']; straight=x['corrected_straight']; avg=x['corrected_orig_avg']
  gaps={
@@ -95,7 +104,7 @@ def main():
  ph=float(x['final_head_p']); mass=float(x['opp_mass'])
  head_pass=ph>=prod.LIVE_HEAD_CUTOFF and mass>=prod.LIVE_OPPONENT_MASS_MIN and bool(x['head_exhibition_pass'])
  watch_pass=head_pass and ph>=prod.WATCH_HEAD_CUTOFF and mass>=prod.WATCH_OPPONENT_MASS_MIN
- tickets=[];pre_wall3_tickets=[];pre_five6_tickets=[];core={};shadow={'profile':prod.WALL3_LIVE_TICKET_PROFILE_NAME,'eligible':False,'applied':False,'risk':0.0,'wall_score':None,'attack4_score':None,'gaps':{},'tickets':[]}
+ tickets=[];pre_wall3_tickets=[];pre_five6_tickets=[];final_pair_prob_map={};core={};shadow={'profile':prod.WALL3_LIVE_TICKET_PROFILE_NAME,'eligible':False,'applied':False,'risk':0.0,'wall_score':None,'attack4_score':None,'gaps':{},'tickets':[]}
  five6={'profile':prod.FIVE6_LIVE_TICKET_PROFILE_NAME,'eligible':False,'applied':False,'score6':None,'st_gap_6_minus_5':None,'tickets':[]}
  if head_pass:
   core=opponent_core(x['corrected_ex'],x['corrected_st'],x['corrected_straight'],x['corrected_orig_avg'])
@@ -118,8 +127,20 @@ def main():
    if ticket_list(post_p2,post_pc)!=tickets: raise RuntimeError('wall3 post-probability reconstruction drift')
   pre_five6_tickets=tickets[:]
   five6=five6_shadow(post_p2,post_pc,x,head_pass)
+  final_p2={b:float(post_p2[b]) for b in BOATS};final_pc={(int(s),int(t)):float(v) for (s,t),v in post_pc.items()}
   if prod.FIVE6_LIVE_TICKET_PROMOTED and five6['applied']:
    tickets=five6['tickets']
+   st_gap=float(five6['st_gap_6_minus_5'])
+   tmp={}
+   for s in BOATS:
+    q={t:final_pc[(s,t)] for t in BOATS if t!=s}
+    if 6 in q:q[6]*=math.exp(prod.FIVE6_SHADOW_THIRD_G3*st_gap)
+    if 5 in q:q[5]*=math.exp(-prod.FIVE6_SHADOW_THIRD_G3*st_gap)
+    q=norm(q)
+    for t,v in q.items():tmp[(s,t)]=v
+   final_pc=tmp
+   if ticket_list(final_p2,final_pc)!=tickets: raise RuntimeError('five6 post-probability reconstruction drift')
+  final_pair_prob_map=ticket_pair_probs(final_p2,final_pc,tickets)
  out={k:x.get(k) for k in ['race_code','pre_class','legacy_pre_p','deadline_jst','evaluated_at_jst','minutes_to_deadline','training_cutoff','exhibition_hashes']}
  official_stakes=[prod.LIVE_OFFICIAL_STAKE_YEN_PER_TICKET for _ in tickets] if head_pass else []
  stake_shadow_signal=bool(head_pass and ((prod.WALL3_LIVE_TICKET_PROMOTED and shadow['applied']) or (prod.FIVE6_LIVE_TICKET_PROMOTED and five6['applied'])))
@@ -157,6 +178,7 @@ def main():
   'live_q':prod.LIVE_EXHIBITION_Q,
   'head_exhibition_pass':bool(x['head_exhibition_pass']),
   'tickets':tickets,
+  'ticket_pair_probs':final_pair_prob_map,
   'pre_wall3_tickets':pre_wall3_tickets,
   'pre_five6_tickets':pre_five6_tickets,
   'ticket_profile':(
