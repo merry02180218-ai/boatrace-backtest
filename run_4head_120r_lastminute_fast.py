@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fast post-exhibition final decision for HEAD4 120R research/live line.
+"""Fast post-exhibition final decision for HEAD4 156R ROI-expansion operational line.
 
 Per-race path intentionally avoids the heavy POST/ENV/A full production chain.
 It uses:
@@ -8,7 +8,7 @@ It uses:
 - current official/BOATCAST exhibition sources
 - frozen v283 opponent models
 - official pre-deadline trifecta odds
-- frozen 120R selection rule
+- frozen 156R ROI-expansion selection rule
 
 No target-race result/payout access.
 """
@@ -116,7 +116,10 @@ def build_exhibition_boatcast(hd,jcd,rno,tkz_text,st_text,orig_text,bias):
     st_raw={b:float(parsed[b]) for b in range(1,7)}
     st_corr={b:st_raw[b]-float(bias.get(b,0.0)) for b in range(1,7)}
     rr,rs=_rank_strength(st_raw);cr,cs=_rank_strength(st_corr)
-    labels,oraw=parse_boatcast_original(orig_text);os=original_corrected(labels,oraw)
+    labels,oraw=parse_boatcast_original(orig_text)
+    if any(v is None for b in range(1,7) for v in oraw[b]):
+        raise Fast120Error('original exhibition values incomplete')
+    os=original_corrected(labels,oraw)
     boats={};st_flat={}
     for b in range(1,7):
         boats[str(b)]={'cur_ex':float(ex[b]),'cur_st':float(cs[b]),
@@ -315,12 +318,43 @@ def fetch_odds_timing_only(date,jcd,race):
     return odds,{'source':'BOAT RACE official odds3t timing-only','count':120,'timing_only':True,
                  'fetched_at_jst':datetime.now(JST).isoformat(),'elapsed_s':time.perf_counter()-t0}
 
-def decide(head_prob,mass,comp):
+def structural_advantages(exh):
+    b=exh['current_boats']
+    inside=(1,2,3)
+    st_inside=sum(float(b[str(i)]['cur_st']) for i in inside)/3.0
+    orig_inside=sum(float(b[str(i)]['cur_orig_avg']) for i in inside)/3.0
+    return {
+      'st4_adv_inside':float(st_inside-float(b['4']['cur_st'])),
+      'orig4_adv_inside':float(float(b['4']['cur_orig_avg'])-orig_inside),
+    }
+
+def decide(head_prob,mass,comp,exh):
+    """Exact historical semantics for user-approved HEAD4_156R_ROI_EXPANSION_V1."""
+    s=structural_advantages(exh)
     cur=comp>=7.0
-    base77=(cur and mass>=.425) or ((not cur) and head_prob>=.22 and mass>=.375 and comp>=3.0)
+    base77_formula=(cur and mass>=.425) or ((not cur) and head_prob>=.22 and mass>=.375 and comp>=3.0)
     score=head_prob+1.50*mass
-    sel=base77 or ((not base77) and comp>=2.5 and score>=.82)
-    return {'selected':bool(sel),'base77':bool(base77),'current_comp7':bool(cur),'linear_score':float(score)}
+    old164_struct=(s['st4_adv_inside']>=-.6000000000000001 and
+                   s['orig4_adv_inside']>=-.057777777777777706)
+    base77=old164_struct and base77_formula
+    base120=old164_struct and (base77_formula or (comp>=2.5 and score>=.82))
+    expansion156=((not base120) and comp>=3.5 and score>=.75 and
+                  head_prob>=.16 and mass>=.30 and
+                  s['st4_adv_inside']>=-.80 and s['orig4_adv_inside']>=-.35)
+    sel=base120 or expansion156
+    return {
+      'profile':'HEAD4_156R_ROI_EXPANSION_V1',
+      'selected':bool(sel),
+      'base77':bool(base77),
+      'base77_formula':bool(base77_formula),
+      'base120_selected':bool(base120),
+      'expanded156_added':bool(expansion156),
+      'expanded156_selected':bool(sel),
+      'old164_struct':bool(old164_struct),
+      'current_comp7':bool(cur),
+      'linear_score':float(score),
+      **s,
+    }
 
 def wall3_open_shadow(head_prob,mass,comp,exh,current_selected):
     """Research-only 3-vs-4 open-path rescue diagnostic.
@@ -450,7 +484,7 @@ def main():
         persist_no_bet_not_ready(a,code,deadline,'ODDS',e,total0,stages,monitored,hp,state)
         return
     stages['fetch_odds_s']=time.perf_counter()-t
-    vals=[float(odds[x]) for x in tickets];comp=composite_odds(vals);d=decide(hp,mass,comp)
+    vals=[float(odds[x]) for x in tickets];comp=composite_odds(vals);d=decide(hp,mass,comp,exh)
     wallshadow=wall3_open_shadow(hp,mass,comp,exh,d['selected'])
     if a.performance_benchmark:
         now=datetime.now(JST)
@@ -467,6 +501,7 @@ def main():
       'schema':'head4_120r_fast_lastminute_v1','race_code':code,'monitoring_parent':monitored,'benchmark_unmonitored':bool(a.allow_unmonitored_benchmark and not monitored),
       'head_prob':hp,'opponent_mass':mass,'tickets':tickets,'ticket_odds':dict(zip(tickets,vals)),'composite_odds':comp,
       **d,'decision':('PERFORMANCE_BENCHMARK_ONLY' if a.performance_benchmark else ('BET' if d['selected'] and monitored else ('BENCHMARK_ONLY' if not monitored else 'PASS'))),
+      'selection_policy_artifact':'artifacts/head4_156r_roi_expansion_20260918.json',
       'wall3_open_shadow':wallshadow,
       'daily_state_history_end':state.get('history_end'),'september_prior_history_allowed':True,
       'target_race_result_used':False,'payout_used':False,'current_exhibition_used':True,'predeadline_odds_used':(not a.performance_benchmark),'performance_benchmark':bool(a.performance_benchmark),'odds_source':meta.get('source'),
