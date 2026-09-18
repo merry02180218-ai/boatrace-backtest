@@ -28,6 +28,7 @@ from backtest_v51_lane_corrected_tickets import rank_scores
 from build_4head_v93_primitives_live import build as build_v93
 from build_4head_v283_rows_live import derive
 from head4_v291_downstream_inference import load_artifact,score_second,score_conditional_third,v283_top4,BOATS
+import fetch_live_trifecta_odds as official_odds
 
 JST=ZoneInfo('Asia/Tokyo')
 PL=('all_p2','all_win','frame_p2','recent_p2','frame_win')
@@ -143,19 +144,46 @@ def wait_exhibition_ready(hd,jcd,rno,bias,deadline,timeout=4,poll_interval=2.0,s
                 raise Fast120NotReady(f'exhibition not ready; attempts={attempts}; remain={remain:.1f}s; elapsed={elapsed:.1f}s; last={last}')
             time.sleep(min(poll_interval,max(0.2,remain-safety_seconds)))
 
+def fetch_official_odds(hd,jcd,rno,deadline,timeout=4):
+    require_before_deadline(deadline,'before official odds fetch')
+    req=datetime.now(JST)
+    params={'rno':rno,'jcd':f'{jcd:02d}','hd':hd}
+    resp=official_odds.safe_get(official_odds.BASE,params,timeout=timeout)
+    body=resp.text
+    fetched=require_before_deadline(deadline,'after official odds fetch')
+    parsed=official_odds.parse_odds(body)
+    exp=official_odds.expected_combos()
+    if set(parsed)!=exp or len(parsed)!=120:
+        raise Fast120Error(f'official odds incomplete {len(parsed)}/120')
+    odds={f'{a}-{b}-{d}':float(v) for (a,b,d),v in parsed.items()}
+    return odds,{'source':'BOAT RACE official odds3t','url':resp.url,'count':120,
+      'requested_at_jst':req.isoformat(),'fetched_at_jst':fetched.isoformat(),
+      'sha256':hashlib.sha256(body.encode('utf-8',errors='replace')).hexdigest(),'complete':True,
+      'result_endpoint_requested':False,'payout_endpoint_requested':False}
+
 def wait_odds_ready(hd,jcd,rno,deadline,timeout=4,poll_interval=1.5,safety_seconds=45,max_wait_seconds=15):
     attempts=0; last=''; started=time.perf_counter()
     while True:
         attempts+=1
+        errs=[]
         try:
-            return (*fetch_boatcast_odds(hd,jcd,rno,deadline,timeout),attempts,last)
+            odds,meta=fetch_official_odds(hd,jcd,rno,deadline,timeout)
+            meta['fallback_used']=False
+            return odds,meta,attempts,last
         except Exception as e:
-            last=f'{type(e).__name__}: {e}'
-            remain=(deadline-datetime.now(JST)).total_seconds()
-            elapsed=time.perf_counter()-started
-            if remain<=safety_seconds or elapsed>=max_wait_seconds:
-                raise Fast120NotReady(f'odds not ready; attempts={attempts}; remain={remain:.1f}s; elapsed={elapsed:.1f}s; last={last}')
-            time.sleep(min(poll_interval,max(0.2,remain-safety_seconds)))
+            errs.append(f'official={type(e).__name__}: {e}')
+        try:
+            odds,meta=fetch_boatcast_odds(hd,jcd,rno,deadline,timeout)
+            meta['fallback_used']=True
+            return odds,meta,attempts,'; '.join(errs)
+        except Exception as e:
+            errs.append(f'boatcast={type(e).__name__}: {e}')
+        last='; '.join(errs)
+        remain=(deadline-datetime.now(JST)).total_seconds()
+        elapsed=time.perf_counter()-started
+        if remain<=safety_seconds or elapsed>=max_wait_seconds:
+            raise Fast120NotReady(f'odds not ready; attempts={attempts}; remain={remain:.1f}s; elapsed={elapsed:.1f}s; last={last}')
+        time.sleep(min(poll_interval,max(0.2,remain-safety_seconds)))
 
 def parse_od3(body):
     lines=body.splitlines()
