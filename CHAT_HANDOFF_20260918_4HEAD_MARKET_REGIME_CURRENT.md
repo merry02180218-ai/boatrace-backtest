@@ -3222,3 +3222,34 @@ Work now:
 No threshold/weight retuning is permitted during this fix.
 
 Status: HEAD4_PRODUCTION_START_VENUE_AWARE_ORIGINAL_FIX_BEGIN
+
+
+## BEFORE — 2026-09-19 operational watchdog repair
+User requested immediate production-operation repair after the venue-aware original exhibition fix.
+
+Confirmed current operational defects on latest main:
+- today's watchlist is correctly refreshed to 20260919 with 15 monitoring-parent targets.
+- current watchdog schedule starts at 09:00 JST, so early target 鳴門2R 08:58 can be missed.
+- current watchdog chooses only the earliest active target and then waits inside that one runner.
+- close deadlines therefore conflict:
+  - 唐津7R 11:33 / 宮島3R 11:37
+  - 江戸川10R 15:22 / 浜名湖9R 15:32
+- a single global concurrency group plus a potentially long exhibition wait can block another target.
+- daily production PRE workflow is scheduled 09:20 JST, too late for morning races.
+
+Repair now:
+1. move daily production PRE/watchlist generation to early morning before the first normal race window;
+2. run watchdog every 5 minutes across the full BOAT RACE operating day;
+3. change watchdog resolver to emit ALL currently active, not-yet-completed targets;
+4. execute targets as independent matrix jobs in parallel;
+5. use per-race concurrency keys rather than one global watchdog lock;
+6. keep per-race artifact idempotency and BET Issue dedupe;
+7. preserve target-result/payout blindness and HEAD4_NEWFEATURE_FIXED156_V1 contract;
+8. add a synthetic overlap test proving two targets in one window are both emitted.
+
+Original-exhibition expectation:
+- this fix does not change the frozen 156R historical policy or threshold.
+- relative to the previously buggy LIVE implementation, it can increase executable/finally-decided races because valid partial original schemas no longer become false NO_BET_DATA_NOT_READY.
+- it does NOT imply every recovered race becomes BET; recovered races can still PASS after scoring.
+
+Status: HEAD4_OPERATION_WATCHDOG_PARALLEL_REPAIR_BEGIN
