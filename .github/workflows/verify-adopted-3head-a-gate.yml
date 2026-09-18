@@ -1,0 +1,20 @@
+name: verify-adopted-3head-a-gate
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'threehead_head_gate_a_adopted.py'
+      - 'test_threehead_head_gate_a_adopted.py'
+      - '.github/workflows/verify-adopted-3head-a-gate.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python test_threehead_head_gate_a_adopted.py
