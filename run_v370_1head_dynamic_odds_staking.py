@@ -9,6 +9,7 @@ closing odds. DEV Feb-Jun selects; Jul-Aug SUPPORT is holdout.
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 import argparse, json, math, pickle, urllib.request
+import requests
 import numpy as np
 import pandas as pd
 
@@ -17,6 +18,7 @@ import onehead_production_profile as prod
 import run_v299_1head_trifecta3_policy_search as v299
 import run_v351_1head_third_close_margin_audit as pay
 import run_v365_1head_exact3_hit_push as v365
+import run_v340_1head_adaptive_odds_dutch as v340
 
 OUT=Path('/tmp/v370-dynamic-staking'); OUT.mkdir(parents=True,exist_ok=True)
 BOATS=(2,3,4,5,6)
@@ -120,6 +122,7 @@ def odds_map(code,cache,frozen):
 
 def build(rows,payouts,frozen):
     odds_cache={};rec=[];miss=[];source_counts={}
+    sess=requests.Session();sess.headers.update({'User-Agent':'Mozilla/5.0 v370 dynamic staking audit'})
     for r in rows:
         code=str(r['race_code']).zfill(12);actual=str(r['actual_combo'])
         p2,pc=v365.formal_post_five6(r)
@@ -128,6 +131,9 @@ def build(rows,payouts,frozen):
         ts=[f'1-{s}-{t}' for s,t in top]
         if len(ts)!=3 or len(set(ts))!=3:raise RuntimeError(f'invalid formal tickets {code}')
         odr,source=odds_map(code,odds_cache,frozen)
+        if odr is None:
+            odr,url=v340.fetch_odds(code,sess)
+            source='official_network_fallback' if odr is not None else None
         if odr is None:
             miss.append(code);continue
         source_counts[source]=source_counts.get(source,0)+1
