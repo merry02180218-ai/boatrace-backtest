@@ -648,3 +648,43 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - SUPPORT: 26 -> 29 / gain3 / loss0
   - 165R: 80 -> 84、236R:113->117、269R:128->132、276R:131->136
 - GitHub正式監査でROI/LOMOを確定するまでproduction変更なし。
+
+
+## AFTER — v361 expanded adjacent grid
+- 修正版 Run `35328290547` / Job `105546435242` completed success / Artifact `10539299417` / head `502be1be4b0e693ba2a8cfd78300bce7cb06b653`。
+- payout prefetch 166日すべて取得、September outcomes unread、AUDIT_OK=true。
+- 313R baseline: 142 hit / return 96,070 / ROI 102.31%。
+- DEV-only正式選択 best:
+  - pair=`5>6`
+  - basis=`ST`
+  - 6号艇 exhibition composite score >= .60
+  - ST6-ST5 >= .50
+  - mass >= .375
+  - SECOND g2=0 / THIRD g3=.75
+- strict best:
+  - DEV 247R: 116 -> **118** / return 79,120 -> 82,420 / ROI 106.77% -> **111.23%** / gain2 loss0
+  - SUPPORT 66R: 26 -> **27** / return 16,950 -> 17,810 / ROI85.61% -> **89.95%** / gain1 loss0
+  - ALL313: 142 -> **145** / return 96,070 -> 100,230 / ROI102.31% -> **106.74%** / gain3 loss0
+- 同一strictを各母集団へ横展開:
+  - 165R: 80->83 / ROI112.51->120.91 / gain3 loss0
+  - 236R: 113->116 / ROI107.75->113.63 / gain3 loss0
+  - 269R: 128->131 / ROI106.59->111.75 / gain3 loss0
+  - 313R: 142->145 / ROI102.31->106.74 / gain3 loss0
+  - PROD276: 131->135 / ROI104.34->110.25 / gain4 loss0
+- LOMO: Feb-Jun 5 holdout月すべて delta_hits>=0、合計+1。Jun holdoutのみ+1、他0。
+- dev上ではstrictと同率のplateauが広い。
+  - mass制限なし / ST gap>=.50: DEVは同じ118 hit/ROI111.23%、support +2、313R 146 hit / ROI108.56% / gain4 loss0。
+  - mass制限なし / ST gap>=.30 or .40: DEVは同じ118 hit/ROI111.23%、support 26->29 / ROI103.08%、313R 142->147 / ROI**109.51%** / gain5 loss0。
+- broad plateauの5 unique gains（313R）: `202605141610`, `202606131912` (DEV) + `202607080801`, `202607091004`, `202608112101` (SUPPORT)。loss0。
+- 注意: broad設定の選択にsupportを使ってはいないが、strictとのdev同率plateau内のどれを採るかはdevだけでは一意に決まらない。supportで広い側が良く見えるため、即昇格ではなくcombined監査を実施する。
+
+## BEFORE — v362 formal wall3 + 5>6 ST combined overlay audit
+- 現正式LIVE165 wall3 baseline（83/165、ROI118.485%、gain3/loss0）をprepared rowsから完全再現する。
+- その上に5>6 STを順次適用し、相互干渉を監査する。
+- 比較:
+  1) STRICT: score6>=.60 / ST6-ST5>=.50 / mass>=.375 / g2=0 / g3=.75
+  2) BROAD50: score6>=.60 / ST gap>=.50 / mass制限なし / g2=0 / g3=.75
+  3) BROAD40: score6>=.60 / ST gap>=.40 / mass制限なし / g2=0 / g3=.75
+- LIVE165について official wall3 baselineとの差分 exact3/ROI/gain/loss/月別/変更raceを算出。
+- 5→6の拡大母集団単独成績はv361を根拠にし、combinedのproduction候補評価は現LIVE165に限定する。
+- 9月結果払戻は読まない。productionはcombined監査完了まで変更しない。
