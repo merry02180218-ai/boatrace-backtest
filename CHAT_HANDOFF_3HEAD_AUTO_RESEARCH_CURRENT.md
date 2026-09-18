@@ -237,3 +237,10 @@
 - New venue priors: venue×course win rate and venue×race-number×course win rate, both computed only from prior dates with shrinkage toward the historical global course rate.
 - Add derived matchup gaps (3 vs 1/2/4 course win strength and ST edge) and attack/defense composites. Raw racer IDs are join keys only and must not enter the model numerically.
 - Compare ENHANCED (Wave16 370 PRE features) versus COURSEPLUS (ENHANCED + causal course/ST/move features) under the same leakage-safe daily walk-forward model. Operational target remains ~50 races/month: candidate freeze on Nov-Dec-Jan only with 40-70 races/month, half-month >=8R and >=6 venues, high percentile thresholds .95-.995. February is NON-PRISTINE/reference only. March stays unopened. September outcomes UNREAD. production v288 unchanged.
+
+
+### Wave18 implementation-failure note (2026-09-18)
+- Run **35328363382** / Job **105546668199** reached the post-feature candidate-evaluation stage but failed before producing a research result.
+- Exact cause: candidates with a zero-support half-month had `rate=None`; `pre_metrics()` called `min()` across those values and raised `TypeError`. This is an implementation bug only; course-history reconstruction itself completed.
+- Fix commit **97bd4de7794381783fc01084c518618a1111c734**: zero-support candidates receive `persistent_worst=-1` and are naturally rejected by the existing support/rate eligibility gate. No feature, threshold, monthly-volume rule, or train/test split changed.
+- Fresh run from current main is required; failed Run 35328363382 must not be used as a result.
