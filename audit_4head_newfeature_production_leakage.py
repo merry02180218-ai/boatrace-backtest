@@ -79,7 +79,7 @@ def scan_state_contract():
     must("NEWFEATURE_MOTOR_START=date(2025,11,1)" in src,'newfeature motor start drift')
     must("while d<target:" in src,'daily state no target-date exclusion loop')
     must("'target_date_results_used':False" in src,'target result false marker missing')
-    must("'history_end':str(target-timedelta(days=1))" in src,'history_end target-1 missing')
+    must("'history_end':(target-timedelta(days=1)).isoformat()" in src,'history_end target-1 missing')
     must("'newfeature_motor_history_start':NEWFEATURE_MOTOR_START.isoformat()" in src,'newfeature history marker missing')
 
     motor_src=source_of(live.newfeature_motor_raw)
