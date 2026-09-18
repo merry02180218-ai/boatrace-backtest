@@ -1,0 +1,40 @@
+name: audit-4head-156r-swap-score-fast
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'audit_4head_156r_swap_score_fast.py'
+      - '.github/workflows/audit-4head-156r-swap-score-fast.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas
+      - name: Download frozen Stage2 detail
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p seed
+          gh run download 35339005302 -n head4-expanded-pool-stage2 -D seed
+          DETAIL="$(find seed -type f -name 'race_detail_226.csv' | head -1)"
+          test -n "$DETAIL"
+          echo "RACE_DETAIL_226=$DETAIL" >> "$GITHUB_ENV"
+      - name: Run fast swap score search
+        run: python audit_4head_156r_swap_score_fast.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-156r-swap-score-fast
+          path: /tmp/head4_156r_swap_score_fast/
+          retention-days: 30
