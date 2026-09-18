@@ -2230,3 +2230,23 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - odds source: repo official closing CSV first、missingのみBOAT RACE公式web fallback。outcomeからodds逆算なし。
 - v372/v373で選んだthresholdは固定し、拡大母集団結果を選定には使わない。
 - production/LIVE stake未変更。September outcomes unread。
+
+
+## BEFORE — v370 current formal3 dynamic odds staking
+- ユーザー指示: 買い方研究を継続。
+- v369で固定ticket-rankウェイトはDEV/SUPPORTで順位傾向が逆転し、formalは100/100/100維持。
+- 過去v340を再確認:
+  - BOAT RACE公式締切3連単オッズを履歴保存済み。
+  - 旧276Rでは低合成オッズskip中心のadaptive DutchがROI93.03%→115.53%。
+  - 今回はユーザー意図に合わせ**レース選別は行わず165R全購入固定**。v340のofficial odds / Dutch実装だけ再利用する。
+- 現formal買い目はwall3→5>6後の3点を固定。買い目自体は変更しない。
+- 資金配分を比較するため、各レース総額600円（6 units、100円単位、各3点最低100円）に統一:
+  1) EQUAL: 2/2/2 units
+  2) DUTCH: 締切オッズ逆数で払戻均等化
+  3) MODEL: formal pair probability比例
+  4) EDGE: model pair probability × closing odds のedgeに応じて追加3 units配分
+  5) HYBRID_SCORE: p^a × odds^b のscoreで追加3 units配分。a/bはDEV Feb-Junでgrid選択。
+- ROI比較は全方式同一stake 600円/Rなので純粋な配分差。
+- DEVでパラメータ選択、SUPPORT Jul-Augは選定に使わない。
+- official closing odds coverage 165/165を要求。欠損があれば採用判定しない。
+- September outcomes/payoutsは読まない。production/LIVEは変更しない。
