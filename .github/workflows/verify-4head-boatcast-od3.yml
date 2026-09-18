@@ -1,0 +1,19 @@
+name: verify-4head-boatcast-od3
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/verify-4head-boatcast-od3.txt'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy requests beautifulsoup4
+      - run: python verify_4head_boatcast_od3.py
