@@ -511,3 +511,24 @@ GitHub:
 - Both new Actions workflows have been trigger-committed; run IDs/artifacts must still be verified before any promotion.
 
 Status: `HIGHER_VOLUME_NESTED_AUDITS_TRIGGERED__AWAIT_RUN_VERIFICATION`
+
+
+## USER CONTINUATION — 2026-09-18 — target 110–130R with better monthly floor
+User approved continuation and wants still more race volume.
+
+### BEFORE
+New research target:
+- preserve the full 77R balanced candidate;
+- add races only (nested expansion);
+- focus on 110–130R;
+- overall Apr-Aug retrospective ROI must stay above current baseline 124.8622%;
+- explicitly search for a rule where **every Apr-Aug month remains >=100% retrospective ROI** if possible;
+- prefer a simple smooth quality score using existing pre-result observables over another brittle rectangular threshold;
+- September 2026 outcomes/results remain UNREAD;
+- production remains unchanged.
+
+Planned simple score family:
+`quality = head_prob + weight * opponent_mass`,
+combined with a minimum composite-odds floor and always OR-ed with the frozen 77R research candidate.
+
+Status: `NESTED_LINEAR_SCORE_FRONTIER_START`
