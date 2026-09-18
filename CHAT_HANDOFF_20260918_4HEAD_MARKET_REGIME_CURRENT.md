@@ -2145,3 +2145,29 @@ Implementation plan:
 6. Do not create a synthetic real Issue during testing.
 
 Status: HEAD4_BET_DIRECT_MENTION_NOTIFICATION_START
+
+
+## AFTER — 4HEAD BET notifications now use direct @mention
+- Repository owner verified as user `merry02180218-ai`.
+- BET Issue body now begins with:
+  - `@merry02180218-ai`
+- Existing assignment to the same user remains as a secondary path.
+- PASS / NO_BET_DATA_NOT_READY still create no Issue.
+- Duplicate suppression remains unchanged.
+- notifier update commit:
+  - `173efb9f31f885eba706c84cf8ef2853ea206dbb`
+- test assertion update commit:
+  - `c59096aa46d2985a2a8891de21873c6c911ca2f8`
+- validation:
+  - Run `35349787016`
+  - Job `105614895160`
+  - SUCCESS
+  - BET dry-run payload contains `@merry02180218-ai`;
+  - PASS path still skips notification;
+  - no synthetic real Issue was created.
+
+Operational guidance:
+- In GitHub Mobile, enable **Direct mentions / ダイレクトメンション** push notifications.
+- Assigned-Issue notification is no longer required for the primary BET alert path.
+
+Status: `HEAD4_BET_DIRECT_MENTION_NOTIFICATION_READY`
