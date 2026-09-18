@@ -2531,3 +2531,46 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - ROIは実払戻100円単位×購入unitで計算。closing oddsそのものをreturn計算には使わない。
 - exact closing oddsは実運用で完全には先取りできないため、v370はまず**execution upper-bound / market-informed research**。正式LIVE採用は別途live snapshot再現が必要。
 - 2026-09結果/払戻は読まない。production/LIVE ticketsは変更しない。
+
+
+## AFTER — v370 current formal dynamic staking with closing odds
+- Run `35377022445` / Job `105703985847` completed success / Artifact `10560443188` / digest `sha256:5bd74f3f2a0cb9386e2c3a7d3c209cfbc141f9afca8003b94bbea926632c5d2d`。
+- closing odds coverage 165/165:
+  - repo official CSV 144R
+  - v340 shard fallback 20R
+  - official page fetch 1R
+- equal 600円/R（2:2:2）はformal baselineを完全再現:
+  - 165R / return127,400 / stake99,000 / ROI128.687%
+  - DEV129.44% / SUPPORT125.00%。
+- DEV raw best = EDGE threshold .8:
+  - DEV ROI143.75%
+  - ALL ROI137.89%
+  - しかし SUPPORT ROI109.23%（equal125.00%から-15.77pt）
+  - LOMOも5月中3月・5月で悪化。raw bestは過学習傾向、正式候補にしない。
+- 固定rank 600円配分もperiod反転:
+  - DEVではrank2厚めが良いがSUPPORTで悪化。v369結論を再確認。
+- closing oddsはexecution upper-bound featureであり、正式採用にはlive snapshot再現が別途必要。
+- September outcomes unread / production unchanged / AUDIT_OK=true。
+
+## BEFORE — v371 value-gated top-up robustness
+- v370 artifact `10560443188` の `formal_with_closing_odds.csv` を直接再利用し、オッズ再取得しない。
+- 全165Rを買う。formal 3点も固定。各レース最低100/100/100を維持。
+- 構造を事前固定:
+  - gate A: top3合成オッズ >= C
+  - gate B: max conditional value score = max(pair_prob × closing_odds) >= E
+  - A&Bを満たす時だけextra 1〜3 unitsを追加
+  - 追加後の全unitsはvalue score比例で3点へ配分、各点最低1unit
+- DEV grid:
+  - C=2.00〜4.00（.25刻み）
+  - E=.70〜1.50（.10刻み）
+  - extra=1/2/3
+- raw DEV bestをそのまま選ばず、DEV bestからROI 2.5pt以内のplateauを作り、そのplateauのparameter medoidをDEV-only coreとして選ぶ。
+- さらにFeb-Jun各月のdelta ROI / worst month / nonnegative month数を記録。
+- Jul-Augはcore固定後にholdout評価。
+- ROI計算は実払戻×unit。closing oddsはgate/配分特徴だけ。
+- 正式採用条件候補:
+  - ALL ROI > equal baseline
+  - SUPPORT ROI >= equal baseline
+  - DEV month robustnessが極端に偏らない
+  - parameter plateauが広い
+- production/LIVE betting remains unchanged。
