@@ -2815,3 +2815,51 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - payoutは各固定candidateの診断にのみ使い、d選定には使わない。
 - full165 closing odds上でも安全閾値によるtrigger縮小とROI残存を診断。
 - formal tickets/stakes/productionは変更しない。September outcomes UNREAD。
+
+
+## AFTER — v373 current-odds safety translation
+- 実装:
+  - `run_v373_1head_value_gated_current_odds_safety.py`
+  - workflow `.github/workflows/v373-1head-current-odds-safety.yml`
+- commits:
+  - v372 AFTER / v373 BEFORE handoff `a400d5c244b611754215307e33b76ab8de7ad6cd`
+  - script `239a0993700f16d4b4ef4f40a257df4664154792`
+  - workflow `b4e1d9d6497062f73a92f8784ac87160e8b64fdf`
+  - audit publish `e45d2148f413b439282bc4733260a38803a51e92`
+- Actions:
+  - Run `35378979553`
+  - Job `105710361495`
+  - Artifact `10560887429`
+  - digest `sha256:3c0b283ce5589a61773a034f1d98e59ad54f52747919c20963f28a0428ae68c0`
+  - SUCCESS / AUDIT_OK=true。
+- safety dの選定にpayout/resultは不使用。
+- closing gate = combined>=2.25 / max(pair_prob×odds)>=1.10 / extra3。
+- covered21Rのmarket transitionだけで:
+  - zero false-positive + triggered allocation完全一致となる最小d = 18%。
+  - 5%刻み安全側切上げ = **d=20%**。
+  - combined |drift| p95=28.18% -> 5%刻み conservative = d=30%。
+- d=20% research shadow:
+  - current/pre-close threshold = **combined>=2.8125 / max(pair_prob×odds)>=1.375**。
+  - covered21R pre-closeでは trigger3R。raw closing coreの3Rと発火集合・配分が完全一致。
+  - covered21R payout診断（選定には未使用）: stake7,200 / return8,150 / profit+950 / ROI113.19%。
+- d=30% conservative shadow:
+  - threshold combined>=3.2143 / value>=1.5714。
+  - covered21R trigger1 / payout診断 ROI123.48%。ただしこのROIでdは選んでいない。
+- full165 closing oddsへ安全側thresholdだけを固定適用するdiagnostic:
+  - d=20%: trigger13 / ROI138.73% / profit+20,680、DEV142.24%、SUPPORT120.69%。
+  - d=30%: trigger4 / ROI135.13% / profit+17,810、DEV137.14%、SUPPORT125.00%。
+- 結論:
+  - raw v371をcurrent oddsへ直接適用せず、まずd=20%をresearch-only prospective shadowとしてforward収集する価値がある。
+  - sample21Rのためformal stake昇格はしない。
+  - September outcomes unread / formal unchanged。
+
+## BEFORE — prospective v373 value-gate current-odds telemetry
+- 既存current odds shadowにはsoft-Dutch ratio 3.5/3.9/4.3 telemetryが並行実装済み。
+- v373は別ロジック（combined odds + pair_prob×odds）なので、既存soft-Dutch outputを変更せずadditive fieldとして保存する。
+- final LIVE JSONにformal最終3点のpair probabilityをresult-freeで追加する。
+- current odds shadowで:
+  - d20: combined>=2.8125 / max(pair_prob×current odds)>=1.375 / extra3
+  - d30: combined>=3.2142857 / value>=1.5714286 / extra3
+  をresearch-only telemetryとして出力。
+- formal `official_stakes_yen` / tickets / existing current-odds `stakes_yen` は変更しない。
+- regressionを追加し、既存shadow semantics不変・value gate telemetryのみ追加を確認する。
