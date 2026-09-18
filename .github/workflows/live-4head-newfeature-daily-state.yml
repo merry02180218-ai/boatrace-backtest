@@ -1,0 +1,100 @@
+name: live-4head-newfeature-daily-state
+
+on:
+  schedule:
+    - cron: '15 0 * * *' # 09:15 JST
+  workflow_dispatch:
+    inputs:
+      target_date:
+        description: 'Target date YYYY-MM-DD (blank = today JST)'
+        required: false
+        type: string
+  push:
+    paths:
+      - 'prepare_4head_120r_daily_state.py'
+      - '.github/workflows/live-4head-newfeature-daily-state.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  state:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Resolve target date
+        shell: bash
+        run: |
+          if [ -n "${{ inputs.target_date }}" ]; then
+            D='${{ inputs.target_date }}'
+          else
+            D=$(TZ=Asia/Tokyo date +%F)
+          fi
+          echo "TARGET_DATE=$D" >> "$GITHUB_ENV"
+          echo "TARGET_DAY=${D//-/}" >> "$GITHUB_ENV"
+      - name: Sparse checkout causal history
+        uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards/2025/10
+            data/programs/race_cards/2025/11
+            data/programs/race_cards/2025/12
+            data/programs/race_cards/2026/01
+            data/programs/race_cards/2026/02
+            data/programs/race_cards/2026/03
+            data/programs/race_cards/2026/04
+            data/programs/race_cards/2026/05
+            data/programs/race_cards/2026/06
+            data/programs/race_cards/2026/07
+            data/programs/race_cards/2026/08
+            data/programs/race_cards/2026/09
+            data/results/realtime/2025/10
+            data/results/realtime/2025/11
+            data/results/realtime/2025/12
+            data/results/realtime/2026/01
+            data/results/realtime/2026/02
+            data/results/realtime/2026/03
+            data/results/realtime/2026/04
+            data/results/realtime/2026/05
+            data/results/realtime/2026/06
+            data/results/realtime/2026/07
+            data/results/realtime/2026/08
+            data/results/realtime/2026/09
+            data/previews/stt/2025/10
+            data/previews/stt/2025/11
+            data/previews/stt/2025/12
+            data/previews/stt/2026/01
+            data/previews/stt/2026/02
+            data/previews/stt/2026/03
+            data/previews/stt/2026/04
+            data/previews/stt/2026/05
+            data/previews/stt/2026/06
+            data/previews/stt/2026/07
+            data/previews/stt/2026/08
+            data/previews/stt/2026/09
+      - name: Build production daily state
+        run: |
+          mkdir -p /tmp/head4_newfeature_state
+          python prepare_4head_120r_daily_state.py             --target-date "$TARGET_DATE"             --data-root brcsv             --out /tmp/head4_newfeature_state/head4_daily_state.json | tee /tmp/head4_newfeature_state/build.log
+      - name: Contract check
+        run: |
+          python - <<'PY'
+          import json
+          z=json.load(open('/tmp/head4_newfeature_state/head4_daily_state.json',encoding='utf-8'))
+          assert z.get('target_date_results_used') is False
+          assert z.get('newfeature_motor_history_start')=='2025-11-01'
+          assert 'motors_newfeature_nov2025' in z and len(z['motors_newfeature_nov2025'])>0
+          print('HEAD4_NEWFEATURE_DAILY_STATE_OK',z['target_date'],z['history_end'],len(z['motors_newfeature_nov2025']))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-newfeature-daily-state-${{ env.TARGET_DAY }}
+          path: /tmp/head4_newfeature_state/
+          retention-days: 7
