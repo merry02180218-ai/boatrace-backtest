@@ -2440,3 +2440,34 @@ The same is true at the current floor >=91.575%.
 - September target outcomes remain unread.
 
 Status: `HEAD4_156R_SWAP_FRONTIER_CONFIRMED__NEW_FEATURES_REQUIRED__PRODUCTION_UNCHANGED`
+
+
+## BEFORE — expanded-universe wall3 / exhibition / motor exact156 research
+User said to continue after the exact156 swap frontier showed that existing features cannot reach ~44% head rate while keeping monthly-floor ROI around 90%.
+
+Objective:
+- keep frozen base120 unchanged;
+- keep total selection exactly 156R;
+- enrich the 88 expansion candidates with genuinely new causal/post-exhibition features;
+- first add the already-audited 1HEAD wall3 semantics to the full Stage2 odds-covered 208R universe;
+- reuse expanded Stage1 motor/exhibition features where available;
+- search exact36 expansion memberships using only predecision/current-exhibition features;
+- primary target: head4 rate >=44% with overall ROI >= current156 128.5865%, monthly floor >=90% if achievable;
+- secondary target: determine the best frontier if the 90% floor remains unreachable.
+
+New candidate features to inspect:
+- wall_score / open_risk / block_risk;
+- attack4_score;
+- ex_wall_gap, st_wall_gap, straight_wall_gap, avg_wall_gap;
+- motor_win_diff_4v3, motor_2ren_diff_4v3;
+- existing st4_adv_inside / orig4_adv_inside;
+- head_prob, opponent_mass, composite_odds.
+
+Research discipline:
+1. September outcomes remain UNREAD.
+2. Production/LIVE remains `HEAD4_156R_ROI_EXPANSION_V1`.
+3. No promotion without a separate parity/robustness audit.
+4. Apr-Aug search remains NON-PRISTINE and is not prospective proof.
+5. Selection scores themselves may use only information available by the last-minute decision point; outcomes/payouts are evaluation-only.
+
+Status: HEAD4_156R_EXPANDED_FEATURE_RESEARCH_START
