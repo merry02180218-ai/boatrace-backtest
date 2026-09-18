@@ -206,3 +206,16 @@
 - Interpretation: the MOTOR_EX signal survived the first truly frozen March diagnostic. A stayed almost exactly on its pre-March ~41% level and had unusually balanced March halves; B also cleared 40% and retained healthy venue robustness. Both beat the PRE-only control in March, but March sample sizes are only 52/61 races, so this is supportive validation rather than evidence of a stable 50% head rate.
 - **March is now OPENED** and may never be used for holdout-valid retuning. Do not change A/B thresholds and then cite March as independent evidence.
 - Research status after Wave22: A is the cleaner precision candidate; B is a viable broader stability alternative. Neither is promoted to production yet. The next valid confirmation, if an untouched later month is available, must reuse these exact frozen definitions without modification.
+
+
+## BEFORE WORK — Wave23 frozen April confirmation (2026-09-19)
+- Wave22 opened March and validated the exact frozen A/B candidates at 40.38% / 40.98% vs PRE control 37.50%.
+- Repository/code search found no prior 3-head April-2026 diagnostic or April-specific tuning. April will therefore be treated as the next untouched confirmation month for this branch.
+- Wave23 must reuse the **exact same definitions** with no edits:
+  - A precision: R1-12 / PRE q=.925 / motor EWMA-rank edge vs2 >=+.20 / exhibition rank3=1.
+  - B stability: R1-8 / PRE q=.925 / motor inner top2 gap >=+.05 / exhibition rank<=2.
+  - Control: PRE-only R1-8 / q=.99.
+- PRE feature names remain frozen from Oct-Feb, exactly as Wave22. Model fitting for April may use only causal prior 42-day outcomes available before each April race, including March because it is now historical.
+- Motor state stays strict prior-day; same-day outcomes prohibited. No April threshold search or rescue tuning.
+- Required report: April total/H1/H2 head rates, venue concentration, leave-one-venue-out ranges, winner cross-check, and cumulative clean confirmation summary excluding non-pristine February.
+- April becomes OPENED after this run. Sep-2026 outcomes stay UNREAD; production v288 stays unchanged.
