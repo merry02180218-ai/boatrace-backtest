@@ -86,3 +86,10 @@ BASE: 131 hits, stake 82800, return 86390, profit +3590, ROI 104.34%.
 - Run 35294726696 / audit Job 105446582746: cache jobs all success; production cell got 276/241/129, expected 276/241/131, sentinel correctly stopped.
 - Code comparison confirmed joint grid order was wrong: it applied v332 fit/filter first and v345 attack-core after selection. Formal production does `build_exhibition -> apply_v345_attack_core -> eval_cut(v332 fit/filter) -> v351 opponentCore ticket rerank`.
 - これからやること: broad universeは HEAD min=.75 を保持して massだけ.35へ拡張し、各massごとに v345 attack-coreを先に適用、その後 custom env CFGでproduction-equivalent evalを行う。production cellは race/ticket identityまで正式v351と一致させる。sentinelは緩めない。9/17結果/払戻UNREAD維持。
+
+## AFTER — production-order repair
+- 修正commit `5d6743ce2c4bf2d4512e7fe29fa11d624b4d716e`。
+- 原因確定: joint gridが `v332 fit/filter -> v345 attackCore` の逆順だった。正式v351と同じ `mass universe -> v345 attackCore -> HEAD/env v332 filter -> v351 opponentCore tickets` に変更。
+- broad universeはmassのみ.35へ拡張し、v337のHEAD floor=.75を保持。productionセルの学習母集団を変えない。
+- production sentinelを 276/241/131 に加え race SHA / ticket SHA まで正式profileと一致必須へ強化。sentinel緩和なし。
+- 次: fresh workflow_dispatch。成功後artifact回収、441セルraw ROIと安定帯を監査。9/17 result/payout UNREAD維持。
