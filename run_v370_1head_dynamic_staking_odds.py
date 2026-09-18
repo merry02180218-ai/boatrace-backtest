@@ -8,6 +8,7 @@ DEV Feb-Jun selects parameters; Jul-Aug is untouched support.
 """
 from pathlib import Path
 import argparse, json, math, pickle, glob
+import requests
 import numpy as np
 import pandas as pd
 
@@ -15,6 +16,7 @@ import onehead_production_profile as prod
 import run_v299_1head_trifecta3_policy_search as v299
 import run_v351_1head_third_close_margin_audit as pay
 import run_v365_1head_exact3_hit_push as v365
+import run_v340_1head_adaptive_odds_dutch as v340
 
 OUT=Path('/tmp/v370-dynamic-staking');OUT.mkdir(parents=True,exist_ok=True)
 BOATS=(2,3,4,5,6)
@@ -41,7 +43,7 @@ def load_fallback_dir(path):
             except Exception:continue
     return out
 
-def load_odds(code,fallback=None):
+def load_odds(code,fallback=None,session=None):
     code=str(code).zfill(12)
     y,m,d=code[:4],code[4:6],code[6:8]
     jcd=code[8:10];rno=int(code[10:12])
@@ -66,6 +68,10 @@ def load_odds(code,fallback=None):
                 if out:return out,'repo_csv'
     if fallback and code in fallback:
         return fallback[code],'v340_shard'
+    if session is not None:
+        om,_=v340.fetch_odds(code,session)
+        if om:
+            return {str(k):float(v) for k,v in om.items()},'official_page_fetch'
     return None,None
 
 def actual_payout100(code,combo,cache):
@@ -104,11 +110,11 @@ def alloc_edge(ps,ods,t):
     scores=[max(p*o-t,0.0) for p,o in zip(ps,ods)]
     return alloc_from_scores(scores)
 
-def make_rows(rows,fallback=None):
+def make_rows(rows,fallback=None,session=None):
     payout_cache={};rec=[];missing=[]
     for r in rows:
         code=str(r['race_code']).zfill(12);actual=str(r['actual_combo'])
-        od,source=load_odds(code,fallback)
+        od,source=load_odds(code,fallback,session)
         if od is None:
             missing.append(code);continue
         p2,pc=formal_dist(r)
@@ -176,7 +182,8 @@ def main():
     x=pickle.load(args.prepared.open('rb'));rows=x['rows']['LIVE165']
     if len(rows)!=165:raise RuntimeError(f'LIVE165 drift {len(rows)}')
     fallback=load_fallback_dir(args.fallback_dir)
-    z,missing=make_rows(rows,fallback)
+    sess=requests.Session();sess.headers.update({'User-Agent':'Mozilla/5.0 v370 staking audit'})
+    z,missing=make_rows(rows,fallback,sess)
     if missing or len(z)!=165:
         raise RuntimeError(f'closing odds coverage drift covered={len(z)} missing={missing[:20]} total_missing={len(missing)}')
     if not set(z.month).issubset(set(DEV)|set(SUP)):raise RuntimeError('unexpected month')
