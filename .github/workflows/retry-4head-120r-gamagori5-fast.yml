@@ -1,0 +1,65 @@
+name: retry-4head-120r-gamagori5-fast
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/retry-4head-120r-gamagori5-fast.txt'
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  retry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy requests beautifulsoup4
+      - name: Reuse PRE artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: head4-120r-pre-live-trial-20260918
+          path: seed
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: 35317588703
+      - name: Reuse daily state from prior live run
+        uses: actions/download-artifact@v4
+        with:
+          name: head4-120r-live-test-gamagori5
+          path: state
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: 35323003067
+      - name: Locate cached inputs
+        run: |
+          CARD="$(find seed -type f -path '*/current_input/v291/20260918/race_cards.csv' | head -1)"
+          WAKU="$(find seed -type f -path '*/current_input/v291/20260918/waku10.csv' | head -1)"
+          PRE="$(find seed -type f -path '*/live_outputs/head4_120r_pre/20260918/pre_all.csv' | head -1)"
+          STATE="$(find state -type f -name 'head4_daily_state.json' | head -1)"
+          test -n "$CARD" && test -n "$WAKU" && test -n "$PRE" && test -n "$STATE"
+          echo "CARD=$CARD" >> "$GITHUB_ENV"
+          echo "WAKU=$WAKU" >> "$GITHUB_ENV"
+          echo "PRE=$PRE" >> "$GITHUB_ENV"
+          echo "STATE=$STATE" >> "$GITHUB_ENV"
+      - name: Fast retry Gamagori 5R
+        run: |
+          /usr/bin/time -f 'FAST120_WALL_SECONDS=%e' python run_4head_120r_lastminute_fast.py \
+            --date 20260918 --jcd 7 --race 5 --deadline-jst 17:17 \
+            --race-cards "$CARD" --waku10 "$WAKU" --pre-all "$PRE" \
+            --daily-state "$STATE" --allow-unmonitored-benchmark \
+            --timeout 3 --poll-interval 1 \
+            --max-exhibition-wait-seconds 20 --max-odds-wait-seconds 180 \
+            --exhibition-safety-seconds 60 --odds-safety-seconds 30 \
+            --out /tmp/fast120_gamagori5_retry.json 2>&1 | tee /tmp/fast120_retry.log
+          grep -Eq 'HEAD4_120R_FAST_LASTMINUTE_OK|HEAD4_120R_FAST_NO_BET_DATA_NOT_READY' /tmp/fast120_retry.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-120r-gamagori5-fast-retry
+          path: |
+            /tmp/fast120_gamagori5_retry.json
+            /tmp/fast120_retry.log
