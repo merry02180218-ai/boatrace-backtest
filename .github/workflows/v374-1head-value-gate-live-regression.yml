@@ -1,0 +1,70 @@
+name: v374 1-head value-gate live telemetry regression
+on:
+  push:
+    paths:
+      - 'onehead_production_profile.py'
+      - 'run_1head_v351_live_finalize.py'
+      - 'run_1head_v351_live_current_odds_shadow.py'
+      - 'run_v374_1head_value_gate_live_regression.py'
+      - '.github/workflows/v374-1head-value-gate-live-regression.yml'
+permissions:
+  contents: write
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Run regression
+        run: |
+          set -o pipefail
+          python run_v374_1head_value_gate_live_regression.py 2>&1 | tee /tmp/v374_run.log
+      - name: Show result
+        if: always()
+        run: cat /tmp/v374-value-gate-live-regression/result.json 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v374-value-gate-live-regression-${{ github.run_id }}
+          path: |
+            /tmp/v374-value-gate-live-regression/
+            /tmp/v374_run.log
+          retention-days: 30
+      - name: Publish compact audit record
+        if: always()
+        continue-on-error: true
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json,os,subprocess
+          from pathlib import Path
+          repo=os.environ['GITHUB_REPOSITORY'];run=os.environ['GITHUB_RUN_ID']
+          def gh(path):
+              p=subprocess.run(['gh','api',path],text=True,capture_output=True)
+              if p.returncode:return {}
+              try:return json.loads(p.stdout)
+              except:return {}
+          jobs=gh(f'/repos/{repo}/actions/runs/{run}/jobs');arts=gh(f'/repos/{repo}/actions/runs/{run}/artifacts')
+          meta={'run_id':int(run),'run_url':f'https://github.com/{repo}/actions/runs/{run}','head_sha':os.environ.get('GITHUB_SHA'),
+                'jobs':[{'id':x.get('id'),'name':x.get('name'),'status':x.get('status'),'conclusion':x.get('conclusion')} for x in jobs.get('jobs',[])],
+                'artifacts':[{'id':x.get('id'),'name':x.get('name'),'size_in_bytes':x.get('size_in_bytes')} for x in arts.get('artifacts',[])]}
+          Path('/tmp/v374_meta.json').write_text(json.dumps(meta,indent=2),encoding='utf-8')
+          PY
+          git fetch origin main
+          git reset --hard origin/main
+          mkdir -p analysis/v374_value_gate_live_regression
+          cp /tmp/v374_meta.json analysis/v374_value_gate_live_regression/run_meta.json
+          cp /tmp/v374_run.log analysis/v374_value_gate_live_regression/run.log 2>/dev/null || true
+          cp /tmp/v374-value-gate-live-regression/result.json analysis/v374_value_gate_live_regression/result.json 2>/dev/null || true
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add analysis/v374_value_gate_live_regression
+          git commit -m "audit: publish v374 result run ${GITHUB_RUN_ID}" || exit 0
+          git push origin HEAD:main
