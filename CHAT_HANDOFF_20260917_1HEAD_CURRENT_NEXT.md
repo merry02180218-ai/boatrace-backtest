@@ -1234,3 +1234,12 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - 欠損のみv340 shard artifacts（IDs 10329564703 / 10330810260 / 10330651756 / 10329684566 / 10330273057 / 10330357729）からfallback
   - 165/165にならなければfail
 - decision/staking gridは一切変更しない。fresh Runで再監査。
+
+
+## v370 second failure — one-race closing odds gap
+- Run `35345499496` / Job `105600982926` failure。
+- repo CSV + v340 shard fallbackで **164/165** まで復元。
+- 残るmissingは `202608210402` 1Rのみ。旧v340 production276対象外のためshardにも存在しない。
+- 修正: repo CSV -> v340 shard -> BOAT RACE公式 historical odds3t fetch（旧v340と同じfetch関数）の3段fallback。
+- 公式fetchもclosing trifecta oddsのみで、結果/払戻はdecision featureに使わない。
+- 165/165にならなければ引き続きfail。staking gridは変更なし。
