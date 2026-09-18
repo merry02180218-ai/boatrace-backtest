@@ -319,3 +319,15 @@
 - Workflow commit **df61b1c307345857db1d595ed0b706a41d5117af** installs the frozen feature artifact before the morning build.
 - Shadow schedule remains 06:05 / 06:35 JST plus manual dispatch. Target-day results/payouts/exhibition/odds remain prohibited in the morning cache.
 - Formal downstream A+v288 March audit has been superseded again for methodology hardening. The only formal run to use is **35367702417**, head **9d444dd20cfb433372477aec28f26f00cbfec8d0**. It forces the frozen Wave21 canonical closing-odds archive through `research/replay_3head_a_v288_ticket_day.py`; older queued Runs 35366186680 / 35366460730 / 35367212642 are non-authoritative.
+
+
+## BEFORE WORK — corrected A-authoritative downstream March audit (2026-09-19)
+- Important semantic correction before reading the formal downstream result: because A_precision is now the **official head gate**, the legacy v243/v288 head filters must not be silently stacked as the primary production rule.
+- The formal audit is now frozen as TWO non-retuned arms on the exact same 52 March A races:
+  1. **PRIMARY A_HEAD_PLUS_PAIR_TICKET_ENGINE**: A is authoritative for head selection; reuse existing v288/v242 pair ranking, `choose_n` variable 5-10 tickets, and exact 10,000-yen Dutch. Do NOT require legacy v243 head pass or v288 S/A/B route pass.
+  2. **DIAGNOSTIC A_HEAD_PLUS_FULL_V288_ROUTE_OVERLAY**: same A 52 races, but additionally stack the old v243 + v288 S/A/B head-route filters. This is diagnostic only.
+- No A threshold, pair model threshold, ticket-count rule, Dutch rule, or legacy v288 threshold is tuned from March.
+- Both arms force the frozen Wave21 canonical 120-way closing odds, freeze decisions/tickets before settlement, and use no Sep-2026 outcomes.
+- Formal aggregate must fail if either arm does not cover all **52 A races / 25 dates**, has any decision/input error, or uses a non-canonical odds source.
+- Implementation commits before fresh run: A-authoritative dual-arm wrapper **fef6bb719bcac2b6435e53eb1ab0a4b1303bec17**; dual-arm aggregator **69bce6ca522b745d5e6e23634d268072c1183f50**.
+- Any earlier A+v288 March runs are now implementation probes only and must not be used for the final production conclusion.
