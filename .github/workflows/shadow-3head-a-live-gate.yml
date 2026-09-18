@@ -1,0 +1,58 @@
+name: shadow-3head-a-live-gate
+on:
+  workflow_dispatch:
+    inputs:
+      daily_run_id:
+        description: 'Run ID from shadow-3head-a-daily'
+        required: true
+        type: string
+      target_date:
+        description: 'Target date YYYYMMDD'
+        required: true
+        type: string
+      jcd:
+        description: 'JCD 1..24'
+        required: true
+        type: string
+      race:
+        description: 'Race 1..12'
+        required: true
+        type: string
+      deadline_jst:
+        description: 'ISO8601 purchase deadline in JST'
+        required: true
+        type: string
+permissions:
+  contents: read
+  actions: read
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests joblib
+      - name: Download A daily shadow cache
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ inputs.daily_run_id }}
+        run: |
+          ART_ID=$(gh api repos/${{ github.repository }}/actions/runs/$RUN_ID/artifacts --jq '.artifacts[] | select(.name | startswith("shadow-3head-a-daily-")) | .id' | head -1)
+          test -n "$ART_ID"
+          gh api repos/${{ github.repository }}/actions/artifacts/$ART_ID/zip > /tmp/a_daily.zip
+          mkdir -p /tmp/a_daily
+          unzip -oq /tmp/a_daily.zip -d /tmp/a_daily
+          CACHE=$(find /tmp/a_daily -type f -name 'a_pre_motor_cache.joblib' | head -1)
+          test -n "$CACHE"
+          echo "CACHE=$CACHE" >> "$GITHUB_ENV"
+      - name: Evaluate adopted A live head gate
+        run: |
+          python run_3head_a_live_gate_shadow.py             --date "${{ inputs.target_date }}"             --jcd "${{ inputs.jcd }}"             --race "${{ inputs.race }}"             --cache "$CACHE"             --deadline-jst "${{ inputs.deadline_jst }}"             | tee a_live_gate_result.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: shadow-3head-a-live-gate-${{ inputs.target_date }}-${{ inputs.jcd }}-${{ inputs.race }}
+          path: a_live_gate_result.json
+          if-no-files-found: ignore
