@@ -504,3 +504,40 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - どのadjacent pairが何R変更を起こしたか
 - 過学習対策: 単一点raw bestではなく、近傍plateau・月別・LOMOを後段で監査。
 - 2026-09結果/払戻は読まない。現正式LIVE wall3はこの研究中も維持し、自動置換しない。
+
+
+## AFTER — v358 汎用展示後rerank 初回有効結果
+- チャット表示がフリーズしたがGitHub作業は継続。Run `35317736874` が先に completed success。
+- Artifact `10536741516` name `v358-generic-exhibition-rerank-35317736874`。
+- 基準は正式採用済み wall3 ticket profile:
+  - 165R / HEAD140 / exact3 **83** / ROI **118.485%** / profit +9,150円。
+- dev選択best:
+  - family=`EXTRA_ADJ`
+  - scope=`WATCH_ONLY`
+  - attack_min=.60（.50も同成績）
+  - SECOND g2=.50 / THIRD g3=.50
+  - 165R維持 / exact3 **84** / ROI **120.848%** / profit +10,320円
+  - Feb-Jun 137R: 69 -> **70 hits** / ROI 121.411% -> **124.258%**
+  - Jul-Aug 28R: 14 hits / ROI 104.167% **完全据え置き**
+  - 買い目変更12R / gain 1 / loss 0
+- gainは `202605141610`, actual `1-2-6`:
+  - 現正式: `1-2-3 / 1-2-4 / 1-3-2`
+  - generic adjacent: `1-2-3 / 1-2-6 / 1-3-2`
+- 変更trigger集計（重複あり）: 2>3=5R / 4>5=3R / 5>6=5R。
+- 改善はあるが +1 hit のみで、現wall3ほど強い差ではない。単純GLOBAL全艇tiltはgain/lossが相殺しやすく、現時点では隣接pair補正の方が有望。
+- 一部ALL_BASIC設定はsupportで改善するが、supportを選定に使わないため採用根拠にはしない。
+- September outcomes unread / production unchanged / AUDIT_OK=true。
+- 最新並列cache保存版 Run `35318855846` は同一ロジックの速度改善・再現確認用として継続中。
+
+## BEFORE — v359 汎用adjacent rerank robustness
+- v358の +1 hit / loss0 が偶然か確認する。
+- 最新cache保存版artifactが出たら全config race predictionsを使い、
+  - 月別
+  - dev LOMO
+  - attack_min .50/.60近傍
+  - g2=.5周辺 / g3=.25/.5周辺
+  - pair別寄与
+  - gain/loss
+を監査する。
+- Jul-Augはsupportのみで選定に使わない。
+- 正式wall3 profileは維持し、汎用adjacentは自動昇格しない。
