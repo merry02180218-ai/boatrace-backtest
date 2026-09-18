@@ -307,3 +307,15 @@
 - The failed current-day run did not request/use target-day result, payout, exhibition, or odds data.
 - Separate PRE-feature-name freeze is being built so the operational daily scorer can stop re-deriving the 370-feature list from Oct-Feb on every run; this is an implementation/performance freeze only and may not change the selected feature list.
 - Formal March downstream ticket audit is **Run 35366460730**. It remains the only official A+v288 ticket audit run; superseded Run 35366186680 must not be used for conclusions.
+
+
+## AFTER WORK — adopted A PRE feature freeze + morning shadow hardening (2026-09-19)
+- PRE feature freeze Run **35366279621** / Job **105669424401** / Artifact **10556723042** SUCCESS; head SHA **d6e185332533fc8eeef48c0f0849451e1a0490a8**.
+- Marker: **3HEAD_A_FROZEN_PRE_FEATURES_OK 370**.
+- Frozen manifest policy is **3HEAD_A_PRECISION_V1**, freeze period 2025-10-01..2026-02-28, feature_count **370**, unique feature names **370**, new-feature count 242.
+- Source audit in the frozen manifest: Oct 31/31 days, Nov 30/30, Dec 31/31, Jan 31/31, Feb 28/28; bad_races=0 and bad_sessions=0 for all months.
+- Morning shadow workflow now pins Artifact **10556723042** by ID and validates policy/count/uniqueness before building. It no longer needs to re-select the 370 feature names from live Oct-Feb source data.
+- Daily builder commit **a0eb1e70c065619051cb5512345b384428ed9c97** checks current-day PRE source first and fails fast if not yet published; successful-day scoring logic is unchanged.
+- Workflow commit **df61b1c307345857db1d595ed0b706a41d5117af** installs the frozen feature artifact before the morning build.
+- Shadow schedule remains 06:05 / 06:35 JST plus manual dispatch. Target-day results/payouts/exhibition/odds remain prohibited in the morning cache.
+- Formal downstream A+v288 March audit has been superseded again for methodology hardening. The only formal run to use is **35367702417**, head **9d444dd20cfb433372477aec28f26f00cbfec8d0**. It forces the frozen Wave21 canonical closing-odds archive through `research/replay_3head_a_v288_ticket_day.py`; older queued Runs 35366186680 / 35366460730 / 35367212642 are non-authoritative.
