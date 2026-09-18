@@ -1,0 +1,41 @@
+name: v364 1-head 5to6 live promotion regression
+on:
+  push:
+    paths:
+      - 'run_v364_1head_five6_live_promotion_regression.py'
+      - 'run_1head_v351_live_finalize.py'
+      - 'onehead_production_profile.py'
+      - '.github/workflows/v364-1head-five6-live-promotion-regression.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Download v360 prepared artifact
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10539401122/zip" > /tmp/v360.zip
+          mkdir -p /tmp/v360
+          unzip -q /tmp/v360.zip -d /tmp/v360
+          test -f /tmp/v360/prepared_rows.pkl
+      - name: Run five6 live promotion regression
+        run: python run_v364_1head_five6_live_promotion_regression.py --prepared /tmp/v360/prepared_rows.pkl --outdir /tmp/v364-five6-promotion
+      - name: Show result
+        if: always()
+        run: cat /tmp/v364-five6-promotion/result.json 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v364-five6-live-promotion-${{ github.run_id }}
+          path: /tmp/v364-five6-promotion/
+          retention-days: 30
