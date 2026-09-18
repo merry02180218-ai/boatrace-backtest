@@ -81,3 +81,8 @@ BASE: 131 hits, stake 82800, return 86390, profit +3590, ROI 104.34%.
 - 修正commit `6bd95e5603858abf69697642e4161f9fc6f1a998`。
 - `p.R/p.head/p.exact3` を `p['R']/p['head']/p['exact3']` に変更。276/241/131 sentinel条件そのものは変更なし。
 - 次: fresh workflow_dispatch。成功時はproduction sentinel/ROIと441セル上位・周辺安定帯を回収。9/17 result/payout UNREAD維持。
+
+## BEFORE — Run 35294726696 production identity repair
+- Run 35294726696 / audit Job 105446582746: cache jobs all success; production cell got 276/241/129, expected 276/241/131, sentinel correctly stopped.
+- Code comparison confirmed joint grid order was wrong: it applied v332 fit/filter first and v345 attack-core after selection. Formal production does `build_exhibition -> apply_v345_attack_core -> eval_cut(v332 fit/filter) -> v351 opponentCore ticket rerank`.
+- これからやること: broad universeは HEAD min=.75 を保持して massだけ.35へ拡張し、各massごとに v345 attack-coreを先に適用、その後 custom env CFGでproduction-equivalent evalを行う。production cellは race/ticket identityまで正式v351と一致させる。sentinelは緩めない。9/17結果/払戻UNREAD維持。
