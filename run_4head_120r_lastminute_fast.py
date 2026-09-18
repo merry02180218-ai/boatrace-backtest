@@ -110,10 +110,17 @@ def parse_tkz_display(body):
 
 def _orig_live_audit(labels,oraw):
     norms=[norm_metric(x) for x in labels]
-    avg_all6=bool(labels) and all(
-      len(oraw.get(b,[]))>=len(labels) and all(oraw[b][k] is not None for k in range(len(labels)))
-      for b in range(1,7)
-    )
+    # Match v326.orig_avg_all6 exactly: a metric column that is entirely blank
+    # is ignored; every metric column that has any value must have all six.
+    used=0;avg_all6=True
+    for k in range(len(labels)):
+        vals=[oraw.get(b,[])[k] if k<len(oraw.get(b,[])) else None for b in range(1,7)]
+        if not any(v is not None for v in vals):
+            continue
+        used+=1
+        if not all(v is not None for v in vals):
+            avg_all6=False
+    avg_all6=bool(used>0 and avg_all6)
     def metric_all6(kind):
         idx=[k for k,m in enumerate(norms) if (
           (kind=='turn' and m in ('まわり足','回り足')) or
@@ -139,22 +146,29 @@ def build_exhibition_boatcast(hd,jcd,rno,tkz_text,st_text,orig_text,bias):
     st_corr={b:st_raw[b]-float(bias.get(b,0.0)) for b in range(1,7)}
     rr,rs=_rank_strength(st_raw);cr,cs=_rank_strength(st_corr)
 
+    # 1HEAD venue map is used as the minimum expected LIVE contract, but HEAD4
+    # also consumes any optional original channels that are actually published.
     req=required_orig(jcd)
-    if publishes_original(jcd):
-        if orig_text is None:
-            raise Fast120Error(f'original exhibition missing for venue {int(jcd):02d}')
-        labels,oraw=parse_boatcast_original(orig_text)
-        oa=_orig_live_audit(labels,oraw)
-        missing=[]
-        if 'avg' in req and not oa['orig_avg_available']:missing.append('avg')
-        if 'turn' in req and not oa['orig_turn_available']:missing.append('turn')
-        if 'straight' in req and not oa['orig_straight_available']:missing.append('straight')
-        if missing:
-            raise Fast120Error(f'original exhibition venue schema incomplete jcd={int(jcd):02d} missing={missing} labels={labels}')
-    else:
-        labels=[];oraw={b:[] for b in range(1,7)}
-        oa={'orig_avg_available':False,'orig_turn_available':False,'orig_straight_available':False,
-            'orig_lap_available':False,'orig_labels_norm':[]}
+    labels=[];oraw={b:[] for b in range(1,7)}
+    oa={'orig_avg_available':False,'orig_turn_available':False,'orig_straight_available':False,
+        'orig_lap_available':False,'orig_labels_norm':[]}
+    if orig_text is not None:
+        try:
+            labels,oraw=parse_boatcast_original(orig_text)
+            oa=_orig_live_audit(labels,oraw)
+        except Exception:
+            if req:
+                raise
+            labels=[];oraw={b:[] for b in range(1,7)}
+    elif req:
+        raise Fast120Error(f'original exhibition missing for venue {int(jcd):02d}')
+
+    missing=[]
+    if 'avg' in req and not oa['orig_avg_available']:missing.append('avg')
+    if 'turn' in req and not oa['orig_turn_available']:missing.append('turn')
+    if 'straight' in req and not oa['orig_straight_available']:missing.append('straight')
+    if missing:
+        raise Fast120Error(f'original exhibition venue schema incomplete jcd={int(jcd):02d} missing={missing} labels={labels}')
 
     os=original_corrected(labels,oraw)
     wall_ready=bool(oa['orig_avg_available'] and oa['orig_straight_available'])
@@ -165,9 +179,9 @@ def build_exhibition_boatcast(hd,jcd,rno,tkz_text,st_text,orig_text,bias):
           'cur_orig_straight':float(os[b]['straight']),'cur_orig_avg':float(os[b]['avg'])}
         st_flat[f'st_raw_b{b}']=st_raw[b];st_flat[f'st_raw_rank_b{b}']=rr[b];st_flat[f'st_corr_rank_b{b}']=cr[b]
         st_flat[f'st_raw_strength_b{b}']=round(rs[b],4);st_flat[f'st_corr_strength_b{b}']=round(cs[b],4)
-    return {'schema':'head4_v283_current_exhibition_fast_v2_venue_aware','race_code':f'{hd}{jcd:02d}{rno:02d}',
+    return {'schema':'head4_v283_current_exhibition_fast_v3_dynamic_venue_aware','race_code':f'{hd}{jcd:02d}{rno:02d}',
       'current_boats':boats,'st_flat':st_flat,
-      'venue_original_required':list(req),'venue_original_published':bool(publishes_original(jcd)),
+      'onehead_venue_original_required_reference':list(req),
       'orig_avg_available':bool(oa['orig_avg_available']),
       'orig_turn_available':bool(oa['orig_turn_available']),
       'orig_straight_available':bool(oa['orig_straight_available']),
@@ -177,15 +191,19 @@ def build_exhibition_boatcast(hd,jcd,rno,tkz_text,st_text,orig_text,bias):
       'result_blind':True,'odds_used':False}
 
 def fetch_current(hd,jcd,rno,timeout):
-    tu=boatcast_tkz_url(hd,jcd,rno);su=boatcast_st_url(hd,jcd,rno)
-    if publishes_original(jcd):
-        ou=boatcast_orig_url(hd,jcd,rno)
-        with ThreadPoolExecutor(max_workers=3) as ex:
-            ft=ex.submit(_get_fast,tu,timeout,2);fs=ex.submit(_get_fast,su,timeout,2);fo=ex.submit(_get_fast,ou,timeout,2)
-            return ft.result(),fs.result(),fo.result()
-    with ThreadPoolExecutor(max_workers=2) as ex:
-        ft=ex.submit(_get_fast,tu,timeout,2);fs=ex.submit(_get_fast,su,timeout,2)
-        return ft.result(),fs.result(),None
+    tu=boatcast_tkz_url(hd,jcd,rno);su=boatcast_st_url(hd,jcd,rno);ou=boatcast_orig_url(hd,jcd,rno)
+    with ThreadPoolExecutor(max_workers=3) as ex:
+        ft=ex.submit(_get_fast,tu,timeout,2)
+        fs=ex.submit(_get_fast,su,timeout,2)
+        fo=ex.submit(_get_fast,ou,timeout,2)
+        tkz=ft.result();st=fs.result()
+        try:
+            orig=fo.result()
+        except Exception:
+            if required_orig(jcd):
+                raise
+            orig=None
+        return tkz,st,orig
 
 def wait_exhibition_ready(hd,jcd,rno,bias,deadline,timeout=4,poll_interval=2.0,safety_seconds=75,max_wait_seconds=30):
     attempts=0; last=''; started=time.perf_counter()
@@ -557,7 +575,7 @@ def newfeature_decide(head_prob,mass,comp,exh,card,state,jcd):
       'orig4_adv_inside':(float(s['orig4_adv_inside']) if s['orig4_adv_inside'] is not None else None),
       'orig_avg_available':bool(s['orig_avg_available']),
       'wall_exhibition_ready':bool(wall.get('wall_exhibition_ready')),
-      'venue_original_required':list(exh.get('venue_original_required',required_orig(jcd))),
+      'venue_original_required':list(exh.get('onehead_venue_original_required_reference',required_orig(jcd))),
       'venue_schema_supported_for_selection':bool(s['orig_avg_available']),
     }
 
