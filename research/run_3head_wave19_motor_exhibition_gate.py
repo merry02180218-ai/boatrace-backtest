@@ -232,10 +232,15 @@ def make_pre_scores(frames):
     for m in order:
         acc=pd.concat([acc,frames[m]],ignore_index=True,sort=False)
         histories[m]=acc.copy()
-    preds={m:walk_predictions(histories[m],frames[m],feature_sets) for m in order}
+    score_months=['nov','dec','jan','feb']
+    preds={m:walk_predictions(histories[m],frames[m],feature_sets) for m in score_months}
     out={}
     for m,p in preds.items():
+        if p.empty or 'family' not in p.columns:
+            raise RuntimeError(f'no PRE predictions for {m}')
         q=p[(p.family=='ENHANCED')&(p.window==42)][['rc','date','venue','race_no','y','p_logit']].copy()
+        if q.empty:
+            raise RuntimeError(f'no ENHANCED window42 PRE predictions for {m}')
         q=q.rename(columns={'p_logit':'pre_score'})
         out[m]=q.drop_duplicates('rc')
     return out,len(enh)
@@ -317,7 +322,7 @@ def main():
     post,audit=build_motor_exhibition(days,cache)
 
     months={}
-    for m in ['oct','nov','dec','jan','feb']:
+    for m in ['nov','dec','jan','feb']:
         q=prescores[m].merge(post,on=['rc','date'],how='left',validate='one_to_one')
         q['month']=m
         months[m]=q
@@ -333,7 +338,7 @@ def main():
         for name,feats,req in [('MOTOR',motor_inputs,False),('EXHIBIT',exhibit_inputs,True),('BOTH',both_inputs,True)]:
             sc=rolling_post_scores(allrows,m,feats,req).rename(columns={'score':f'post_score_{name.lower()}'})
             months[m]=months[m].merge(sc,on='rc',how='left')
-    # Keep October only as model history; selector evaluation starts Nov.
+    # October remains PRE-model history only; post-gate evaluation/training starts in November.
     score_cols={'MOTOR':'post_score_motor','EXHIBIT':'post_score_exhibit','BOTH':'post_score_both'}
 
     candidates=[]
