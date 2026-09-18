@@ -53,6 +53,15 @@ WALL3_SHADOW_W_ST = 0.40
 WALL3_SHADOW_W_STRAIGHT = 0.25
 WALL3_SHADOW_W_ORIG_AVG = 0.15
 
+
+# Research-only post-wall3 5->6 ST ticket shadow from v361/v362.
+# Do not replace official tickets without an explicit later promotion.
+FIVE6_SHADOW_PROFILE_NAME = "1HEAD_5TO6_ST_SHADOW_V361_SCORE6_060_STGAP040_G2_000_G3_075"
+FIVE6_SHADOW_SCORE6_MIN = 0.60
+FIVE6_SHADOW_ST_GAP_MIN = 0.40
+FIVE6_SHADOW_SECOND_G2 = 0.00
+FIVE6_SHADOW_THIRD_G3 = 0.75
+
 # v345 adopted HEAD-side component weights. Historical names are retained for
 # compatibility with frozen research modules.
 ATTACK_CORE_VERSION = "v345"
