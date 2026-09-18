@@ -268,3 +268,20 @@
 - This is implementation-only; no candidate rows, labels, thresholds, or performance results were produced.
 - Repair commit **3f17dc80cbbcd732d75b4ed634cd7e193120bed5** adds only the research module import path. Frozen A thresholds remain unchanged.
 - A fresh current-main run is required; the failed run must not be used for parity conclusions.
+
+
+## AFTER WORK — adopted A March operational parity + shadow LIVE scaffold (2026-09-19)
+- Formal operational parity fresh Run **35364404883** / Job **105663215083** / Artifact **10555737897** SUCCESS; head SHA **3f17dc80cbbcd732d75b4ed634cd7e193120bed5**.
+- Marker **3HEAD_A_MARCH_PARITY_OK**.
+- Exact parity: enhanced PRE features **370**, selected **52R**, heads **21**, rate **40.384615%** — exactly the frozen Wave22 March A result.
+- Initial Run 35364306315 was import-path-only failure and is superseded.
+- Therefore the adopted module `threehead_head_gate_a_adopted.py` reproduces the research definition exactly on the clean March diagnostic.
+- LIVE shadow scaffold added:
+  - `build_3head_a_daily_shadow.py`: morning PRE + prior-day motor cache; target-day result/payout/exhibition are not used.
+  - `run_3head_a_live_gate_shadow.py`: deadline-safe current Boatcast exhibition-time rank; no odds/results/payouts and no bet construction.
+  - manual workflows `shadow-3head-a-daily.yml` and `shadow-3head-a-live-gate.yml`.
+- Shadow gate smoke Runs **35364685214** and **35364894525** SUCCESS, including compile check and exact research rank semantics.
+- Daily A shadow workflow is now permitted to run on current JST day on a code/workflow push, but remains SHADOW: it does not alter existing v288 production and does not construct bets.
+- Current-day rolling PRE may use already-settled prior-day outcomes only as causal training inputs, matching the frozen research algorithm. No September performance labels/metrics are exposed for tuning; target-day outcomes remain forbidden.
+- Frozen ticket-source inspection Run **35364993228** SUCCESS / Artifact **10556361488**: source has complete closing-odds JSON and settlement/payout fields, so downstream A ticket/ROI audit is feasible. It does not contain precomputed v288 feature columns, so current exhibition/v288 features must be reconstructed result-blind.
+- Next restart point: inspect current JST daily shadow Run **35365531567**. If success, report pre+motor candidates for 2026-09-19 and use the live exhibition gate only when explicitly requested / before deadline. Do not connect A to real-money v288 tickets until downstream ticket compatibility/ROI audit is complete.
