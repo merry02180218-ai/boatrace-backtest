@@ -746,3 +746,28 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 現時点で5>6はshadowのみ。正式production/LIVE ticketsへは未昇格。
 - 今後の「判別して」では、正式wall3 ticketsに加え、5>6 shadowが発火した場合はshadow3点も確認可能。
 - September outcomes unread / production historical sentinel unchanged。
+
+
+## BEFORE — v363 5>6 ST 近傍robustness / 正式採用判定
+- ユーザー指示: 「お願いします」。
+- 目的: v361/v362で有望だった5→6 ST補正を正式採用前に近傍監査し、単一点cutoff依存・support選定依存を排除する。
+- prepared source: v360 Artifact `10539401122` の `prepared_rows.pkl`。展示再取得/再学習なし。
+- 基準:
+  - expanded 313R baseline
+  - current LIVE165 official wall3 baseline = 83/165, return 58,650, ROI118.485%
+- 近傍grid:
+  - score6 min .50/.55/.60/.65/.70
+  - ST6-ST5 min .30/.35/.40/.45/.50/.55
+  - THIRD gamma .50/.625/.75/.875/1.00
+  - SECOND gamma 0/.25
+  - mass min .35/.375/.40/.425（313R用。LIVE165は既に>=.375）
+- 選定はFeb-Jun DEVのみ。Jul-Aug SUPPORTは選定に使わない。
+- 評価:
+  1) 313R dev/all/support
+  2) current LIVE165でwall3適用後に重ねたcombined成績
+  3) 月別
+  4) DEV LOMO
+  5) 近傍plateau（同等hit/loss0の設定数と閾値幅）
+  6) disjoint bandsで165R外に独立gainが残るか
+- promotion候補条件: DEV loss=0、SUPPORT loss=0、LOMO全月非悪化、近傍plateauあり、combined LIVE165でwall3比改善。
+- 2026-09結果/払戻は読まない。現正式wall3は維持、v363完了までは5→6正式昇格しない。
