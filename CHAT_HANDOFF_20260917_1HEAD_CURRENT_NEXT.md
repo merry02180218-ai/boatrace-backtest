@@ -1869,3 +1869,62 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - parameter searchなし。support結果でrule変更しない。
 - 目的: rank3厚めがcurrent165固有でなく、拡大母集団でもbaseline EITHER2x equalに非劣化か確認。
 - 2026-09 outcomes/payouts unread。LIVE shadowはv377 EITHER2x equalのまま維持。
+
+
+## AFTER — v379 fixed WALL3 rank3 overweight expanded robustness
+- Run `35360355015` / Job `105649804384` success / Artifact `10554033465` / digest `sha256:297304a0960345f388609ad989f817f2c573c55b3bcdb3da6d9e2100c8f70ce2`。
+- fixed rule（再チューニングなし）:
+  - non-overlay 100/100/100
+  - five6-only 200/200/200
+  - wall3（BOTH含む） **100/100/400**
+- baseline = current EITHER2x equal shadow（overlay全部200/200/200）。
+- LIVE165:
+  - stakeは両方60,300円で完全同一
+  - baseline return81,340 / profit+21,040 / ROI134.892%
+  - candidate return85,810 / profit**+25,510** / ROI**142.305%**
+  - +4,470円 / +7.41pp。
+- 5 expanded universes ALLで全てbaseline以上:
+  - LIVE165 +7.41pp
+  - H078_M375 +3.15pp
+  - H0775_M375 +3.80pp
+  - H0775_M350 +4.12pp
+  - PROD276 +4.40pp。
+- SUPPORT:
+  - LIVE/H078/PRODはwall3 supportサンプルが1〜2Rで少なく小幅悪化
+  - H0775_M375/H0775_M350は改善。
+- fixed LIVE leave-one-month-out（rule再選定なし）7/7非悪化。
+- 4か月以上の全month subset:
+  - nonnegative 98.44%
+  - positive 98.44%
+  - median +8.02pp
+  - worst -1.52pp。
+- disjoint bands:
+  - LIVE165 +7.41pp
+  - +71R帯 -7.06pp（唯一明確な弱帯）
+  - +33R帯 +8.25pp
+  - +45R帯 +6.03pp
+  - 3/4帯非悪化。
+- wall3 rank distributionもexpandedでrank3優位が持続:
+  - LIVE165: rank3 4hit / return3,650（rank1 3hit/2,310、rank2 1hit/520）
+  - H0775_M350: rank3 6hit/4,640（rank1 4hit/3,490、rank2 2hit/1,120）
+  - PROD276: rank3 7hit/4,980（rank1 5hit/4,010、rank2 3hit/1,510）。
+- parameter searchなし / total stake identical / September unread / production unchanged / AUDIT_OK=true。
+- 結論: WALL3時rank3厚めはかなり有望。ただしLIVE165 wall3対象12Rと小標本、+71R disjoint帯で悪化があるため正式stake変更前に時系列risk監査を行う。
+
+## BEFORE — v380 WALL3 rank3 overweight bankroll/risk audit
+- v379 fixed candidateを再最適化せず監査。
+- 比較:
+  - baseline current EITHER2x equal shadow
+  - candidate wall3=100/100/400, five6-only=200/200/200, none=100/100/100
+- 両者total stakeは各raceで同一。
+- LIVE165 race_code時系列順で:
+  - total ROI/profit
+  - max drawdown円
+  - drawdown race span
+  - longest losing streak
+  - worst10R / 20R rolling profit
+  - monthly profit std / worst month
+  - peak-to-trough
+- wall3対象12Rだけのincremental cashflowも別監査。
+- expanded universesでは総DDとprofit/DD比も比較。
+- parameter searchなし。official/shadow stakeは変更しない。
