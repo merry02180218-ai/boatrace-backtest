@@ -102,8 +102,14 @@ def main():
             row[f'{mon}_head4_rate']=100*float(g.head4.mean()) if len(g) else np.nan
         rows.append(row)
     grid=pd.DataFrame(rows)
+    grid.to_csv(OUT/'pool_grid.csv',index=False)
     good=grid[(grid.old164_recall.eq(164)) & grid.R.between(250,650)].copy()
-    if good.empty: raise RuntimeError('no 250-650 expanded pool')
+    fallback_used=False
+    if good.empty:
+        fallback_used=True
+        good=grid[(grid.old164_recall.eq(164)) & grid.R.ge(164)].copy()
+    if good.empty:
+        raise RuntimeError('no expansion-only structural pool')
     # Pool selection deliberately ignores head4 labels.
     good=good.sort_values(['distance_target','R','st_cut','orig_cut'],
                           ascending=[True,True,False,False])
@@ -112,7 +118,6 @@ def main():
     pool=q[sel].copy()
     pool['is_old164']=pool.old164.astype(int)
 
-    grid.to_csv(OUT/'pool_grid.csv',index=False)
     q.to_csv(OUT/'wide_parent_with_exhibition.csv',index=False)
     pool.to_csv(OUT/'selected_pool.csv',index=False)
     result={
@@ -121,6 +126,9 @@ def main():
       'old164_R':int(len(old)),
       'old164_head4':int(old.head4.sum()),
       'target_pool_R':TARGET_POOL,
+      'grid_R_min':int(grid.R.min()),
+      'grid_R_max':int(grid.R.max()),
+      'fallback_outside_250_650':fallback_used,
       'selected_pool':best,
       'selected_pool_month_R':{m:int((pool.month==m).sum()) for m in MONTHS},
       'selection_used_head_outcomes':False,
