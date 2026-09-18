@@ -1,0 +1,79 @@
+{
+  "schema": "head4_156r_roi_expansion_policy_v1",
+  "frozen_at_jst": "2026-09-18",
+  "status": "USER_APPROVED_OPERATIONAL_CANDIDATE",
+  "profile": "HEAD4_156R_ROI_EXPANSION_V1",
+  "selection": {
+    "base120": {
+      "structural": {
+        "st4_adv_inside_min": -0.6000000000000001,
+        "orig4_adv_inside_min": -0.057777777777777706
+      },
+      "base77": {
+        "high_comp": {
+          "composite_odds_min": 7,
+          "opponent_mass_min": 0.425
+        },
+        "low_comp": {
+          "composite_odds_max_exclusive": 7,
+          "head_prob_min": 0.22,
+          "opponent_mass_min": 0.375,
+          "composite_odds_min": 3
+        }
+      },
+      "nested_extra": {
+        "composite_odds_min": 2.5,
+        "quality_formula": "head_prob + 1.50 * opponent_mass",
+        "quality_min": 0.82
+      }
+    },
+    "roi_expansion": {
+      "apply_only_when_not_base120": true,
+      "composite_odds_min": 3.5,
+      "quality_formula": "head_prob + 1.50 * opponent_mass",
+      "quality_min": 0.75,
+      "head_prob_min": 0.16,
+      "opponent_mass_min": 0.3,
+      "st4_adv_inside_min": -0.8,
+      "orig4_adv_inside_min": -0.35
+    }
+  },
+  "current_exhibition_semantics": {
+    "st4_adv_inside": "mean(cur_st[1],cur_st[2],cur_st[3]) - cur_st[4]",
+    "orig4_adv_inside": "cur_orig_avg[4] - mean(cur_orig_avg[1],cur_orig_avg[2],cur_orig_avg[3])",
+    "require_all6_start_display": true,
+    "require_all6_original_values": true
+  },
+  "historical_non_pristine_reference": {
+    "window": "2026-04-01..2026-08-31",
+    "final_R": 156,
+    "added_vs_base120_R": 36,
+    "head4": 65,
+    "head4_rate_pct": 41.6666666667,
+    "exact3": 37,
+    "retrospective_roi_pct": 128.59,
+    "jul_aug_roi_pct": 115.05,
+    "monthly_floor_roi_pct": 91.58,
+    "monthly_roi_pct": {
+      "2026-04": 177.97,
+      "2026-05": 109.63,
+      "2026-06": 141.85,
+      "2026-07": 125.71,
+      "2026-08": 91.58
+    },
+    "note": "Apr-Aug is research-exposed/NON-PRISTINE; not prospective proof."
+  },
+  "provenance": {
+    "stage1_run_id": 35337846162,
+    "stage1_artifact_id": 10544200764,
+    "stage2_run_id": 35339005302,
+    "stage2_job_id": 105580381798,
+    "stage2_artifact_id": 10543978730
+  },
+  "live_guardrails": {
+    "target_race_result_used": false,
+    "payout_used": false,
+    "predeadline_odds_required": true,
+    "wall3_open_shadow_applied": false
+  }
+}
