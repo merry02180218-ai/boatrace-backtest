@@ -4,6 +4,10 @@ import argparse
 from collections import defaultdict
 from datetime import datetime,timedelta
 from pathlib import Path
+import sys
+
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
 import joblib,numpy as np,pandas as pd
 
 import scan_20260911_3head_v288_pre as pre
