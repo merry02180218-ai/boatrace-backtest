@@ -445,3 +445,39 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - historical production constants / 276R sentinelは凍結維持。今回の変更はLIVE ticket policy昇格のみ。
 - 出力には旧3点も `pre_wall3_tickets` として残し、監査可能性を維持する。
 - びわこ7R保存済み直前データで正式採用後の回帰を実施し、正式ticketsが `1-4-5 / 1-4-3 / 1-2-4` へ変わること、結果払戻未使用を確認する。
+
+
+## AFTER — WATCH wall3買い目 正式LIVE採用完了
+- ユーザー許可によりv355 wall3 ticket rerankを正式LIVE採用。
+- profile commit `e875f00b7152019e425ab399dbb09a2763d06572`
+  - `WALL3_LIVE_TICKET_PROFILE_NAME = 1HEAD_WATCH_WALL3_TICKET_V355_SCORE_A406_G2_300_G3_050`
+  - `WALL3_LIVE_TICKET_PROMOTED = True`
+  - historical production constants / 276R sentinel値は変更なし。
+- finalizer commit `8d0bbdcd75803b6393136dcffc96d3a0fda08573`
+  - WATCH/PASSかつwall3 risk発火時は補正後3点を正式 `tickets` に採用。
+  - 補正前3点は `pre_wall3_tickets` に保持。
+  - `ticket_profile`, `wall3_ticket_promoted`, `wall3_ticket_applied` を追加。
+  - BASIC-onlyおよびwall3 risk非発火は従来買い目を維持。
+- v356期待値更新 commit `18d63a8d14330738a95e90c55ae376e59feecc6c`。
+  - 旧期待値のRun `35316655193` failureは正式採用でticketsが変わったため想定どおり。
+  - 更新後 Run `35316692936` / Job `105509780027` success / Artifact `10534928066`。
+  - びわこ7R保存済み直前入力:
+    - pre-wall3: `1-3-5 / 1-3-2 / 1-2-3`
+    - 正式tickets: **`1-4-5 / 1-4-3 / 1-2-4`**
+    - wall3 applied=true / risk=.47 / result_or_payout_used=false / AUDIT_OK=true。
+- 最終二重回帰:
+  - script commit `31add391786b95a2e338010e4acae12f791455e4`
+  - workflow commit `992cc0a6b3703e8447dc9d19ea8116e93bb90dd7`
+  - Run `35316919281` / Job `105510479216` success / Artifact `10534987269`
+  - `historical_production_constants_frozen=true`, `AUDIT_OK=true`
+  - びわこ7R WATCH: wall3適用、正式3点=`1-4-5 / 1-4-3 / 1-2-4`
+  - 鳴門9R BASIC: wall3非適用、従来3点=`1-2-5 / 1-2-4 / 1-5-2` を維持
+  - September outcomes unread / result_or_payout_used=false。
+- 採用根拠 v355:
+  - BASIC全165R維持
+  - exact3 80→83
+  - ROI 112.505%→118.485%
+  - gain3 / loss0
+  - Jul-Aug 14/28・ROI104.167%据え置き。
+- 今後のLIVE「判別して」では、WATCHでwall3条件が発火した場合は補正後3点が**正式買い目**として返る。shadow扱いではない。
+- 次の再開地点: 次回LIVE判定から正式wall3 ticket profileを通常運用。必要ならforward実績を別途蓄積して再監査。
