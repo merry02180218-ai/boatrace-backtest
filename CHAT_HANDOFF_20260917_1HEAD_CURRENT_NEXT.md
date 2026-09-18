@@ -1138,3 +1138,19 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - v367/v368 joint hit-push（94/165=56.97%, ROI123.17%）は研究結果として保存するが、正式LIVEへは昇格しない。
 - 条件付き4点目も正式採用しない。
 - 今後は「的中率だけ上げるためにROIを落とす」変更は優先しない。ROIを維持/改善しつつ的中率も上がる案のみ再検討対象。
+
+
+## BEFORE — v369 formal ticket rank / staking audit
+- ユーザー要望: 「あとは買い方を研究したい。3連単買い目の当たったときの的中買い目が1から3でどれが多いかみたい」。
+- 現正式LIVE165（wall3 + 5>6 ST）を固定し、買い目内容は変更しない。
+- まず87的中をticket rank別に分解:
+  - 第1買い目 / 第2買い目 / 第3買い目の的中数・構成比
+  - 各rankの総払戻・平均/中央値払戻・全returnへの寄与
+  - 月別 / DEV Feb-Jun / SUPPORT Jul-Aug
+- 買い方研究:
+  1) rank1のみ / rank2のみ / rank3のみ
+  2) 1+2 / 1+3 / 2+3 / 1+2+3均等
+  3) 3点を残した固定資金配分（合計600円/R = 6 units、各rank>=100円）の全組合せ
+- 固定配分はDEVでROI最大の配分を選び、SUPPORTで確認する。supportを選定には使わない。
+- baselineは各100円の300円/R、87/165、return63,700、ROI128.687%。
+- 2026-09結果/払戻は読まない。production/LIVE ticketsは変更しない。
