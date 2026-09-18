@@ -577,3 +577,11 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 原因: preview prefetch高速化で `v337.PRELOAD` を参照したが、`run_v337_1head_head_cutoff_volume as v337` のimport漏れ。
 - データ/研究ロジック/母集団条件の問題ではなくNameError。rerunせずコード修正してfresh Runを発火する。
 - 修正はimport追加のみ。研究条件は 165/236/269/313/276R の5母集団比較を維持。
+
+
+## v360 拡大母集団Run failure — 評価部dict参照バグ
+- Run `35320996193` failure / Artifact `10537748051`。
+- Run `35321326920` failure / Artifact `10537094730`。
+- 共通原因: `baseline_rows()` はrace rowをdict化して返すが、`evaluate()` 内で `rr.actual_combo`, `rr.base_tickets` 等の属性参照をしていたため `AttributeError: 'dict' object has no attribute 'actual_combo'`。
+- 重要: 5母集団の選定・展示特徴再構築・opponentCore構築までは通過しており、母集団定義やデータ取得のfailureではない。
+- 修正方針: `rr['...']` へ統一。研究条件・母集団・パラメータは一切変更しない。fresh Runで再監査。
