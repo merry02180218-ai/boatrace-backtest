@@ -2750,3 +2750,68 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - forward sampleで current ratio → 締切ratio drift を蓄積し、5%安全margin(3.9) / 10%margin(4.3) のどちらが実測に合うかを結果ではなくodds drift自体で判定する。
   - これが十分貯まるまではclosing-odds historical ROIだけでformal stakeへ昇格しない。
 - September outcomes unread / production unchanged。
+
+
+## AFTER — 2026-09-19 v372 LOMO + pre-close execution audit
+- 実装:
+  - `run_v372_1head_value_gated_lomo_preclose.py`
+  - workflow `.github/workflows/v372-1head-value-gated-lomo-preclose.yml`
+- commits:
+  - handoff BEFORE `434fcddbfb0b64a1bd168139abfd32761a41da88`
+  - script `c3b9b507de6b2ce7421f12448bfa835b8addcb7e`
+  - workflow `34b85911f3d8b048b0e92fe19e4e6277def962a2`
+  - self-publish metadata `bf2c8a417c26c9153ce264e89a17fb9d7a852677`
+  - audit result publish `705e758c7a4b1ede2b12e284dfad96f28bbd5e61`
+- Actions:
+  - Run `35378456509`
+  - Job `105708674939`
+  - Artifact `10561425801`
+  - digest `sha256:cdb44e32c9f13f328b4cc57f02287d6542f77531a63ebe0458fa83b6d2bffda9`
+  - completed SUCCESS / AUDIT_OK=true.
+- closing v371 identity reproduced exactly:
+  - core = combined>=2.25 / max(pair_prob×odds)>=1.10 / extra3 units.
+  - ALL 165R: trigger40 / stake61,500 / return87,390 / profit+25,890 / ROI142.10%.
+  - DEV 137R: ROI144.05%.
+  - SUPPORT 28R: ROI131.92%.
+- DEV内LOMO:
+  - Feb -17.05pt / Mar +20.14pt / Apr 0.00pt / May -3.12pt / Jun +17.69pt.
+  - 非悪化 3/5月。
+  - LOMO合計profit差は baseline比 +3,240円。
+  - よってclosing coreは完全な一月依存ではないが、月ごとの選定parameterは動く。
+- DEV plateau 8セルをSUPPORTへ固定診断:
+  - baseline以上は4/8セル = 50%。
+  - medoid core自体はSUPPORT +6.92ptだが、plateau全域が強いわけではない。
+- BoatraceCSV `data/previews/od3` のpre-close snapshotを current formal165Rへjoin:
+  - coverage 21/165のみ。
+  - Feb-Jun 0R、Jul 2/9、Aug 19/19。
+  - 21Rの取得lead time median 574.5秒（約9分35秒前）、range 503.3〜580.1秒。
+- covered同一21R比較:
+  - equal 100/100/100 baseline: stake6,300 / return7,370 / profit+1,070 / ROI116.98%。
+  - closing odds v371 core: trigger3 / stake7,200 / return8,150 / profit+950 / ROI113.19%。
+  - pre-close oddsへ同coreをそのまま適用: trigger8 / stake8,700 / return8,620 / profit-80 / ROI99.08%。
+- closing vs pre-close market drift 21R:
+  - trigger agreement 76.19% / Jaccard .375。
+  - allocation exact match 76.19%。
+  - combined odds |relative drift| median15.59% / p90 27.49% / p95 28.18%。
+  - signed combined drift median -14.12%、21R中17R(80.95%)でclosing combined oddsの方がpre-closeより低い。
+  - つまり約9分前はclosingより高い合成オッズを示しやすく、raw v371 gateが過剰発火しやすい。
+- LIVE current odds infrastructureは既に存在:
+  - `boatrace_live_odds3t.py`
+  - `run_1head_v351_live_current_odds_shadow.py`
+  - formal3点のcurrent official odds + fetched_atをartifactへ保存可能。
+- 結論:
+  - closing v371はexecution upper-boundとして維持。
+  - raw closing thresholdをcurrent/pre-close oddsへそのまま適用しない。
+  - production/formal stakeは変更なし。September outcomes/payouts UNREAD維持。
+
+## BEFORE — v373 current-odds safety translation
+- v372 covered21Rの結果/払戻ではなく、closing↔pre-closeの市場変動だけで安全マージンを決める。
+- v371 closing gate C=2.25 / E=1.10 に対し、current oddsからclosing oddsが最大d下落すると仮定し:
+  - C_safe = 2.25/(1-d)
+  - E_safe = 1.10/(1-d)
+  を機械的に適用する。
+- 1%刻みで「pre-close safe triggerがclosing core triggerのsubsetになり、allocationも一致する最小d」をmarket-onlyで求める。
+- さらにcombined odds absolute drift p95を5%刻み切上げしたconservative dも作る。
+- payoutは各固定candidateの診断にのみ使い、d選定には使わない。
+- full165 closing odds上でも安全閾値によるtrigger縮小とROI残存を診断。
+- formal tickets/stakes/productionは変更しない。September outcomes UNREAD。
