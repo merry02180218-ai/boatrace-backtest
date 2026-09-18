@@ -70,7 +70,7 @@ def main():
   for t in [.50,.45,.40]:
    p=prefix(s1,v1.y,t,5)
    if p:
-    sel=s2.assign(score=s2)[s2>=p['threshold']]; candidates.append({'family':n,'target':t,'threshold':p['threshold'],'v1_n':p['n'],'v1_rate':p['rate'],'v2_n':len(sel),'v2_rate':float(sel.y.mean()) if len(sel) else None})
+    scored_v2=v2.assign(score=s2);sel=scored_v2[scored_v2.score>=p['threshold']];candidates.append({'family':n,'target':t,'threshold':p['threshold'],'v1_n':p['n'],'v1_rate':p['rate'],'v2_n':len(sel),'v2_rate':float(sel.y.mean()) if len(sel) else None})
  # choose only Feb-stable gates: v2 >= target-0.05, max v2 N
  frozen={}
  for t in [.50,.45,.40]:
@@ -103,6 +103,14 @@ def main():
   sel=mar.assign(score=score)[score>=z['threshold']].copy();sel=sel.sort_values(['date','rc']);half=len(sel)//2
   venues=sel.groupby('venue').y.agg(['count','sum','mean']).sort_values('count',ascending=False).head(12).reset_index().to_dict('records')
   results[key]={'frozen':z,'march_n':len(sel),'march_hits':int(sel.y.sum()),'march_rate':float(sel.y.mean()) if len(sel) else None,'early_n':half,'early_hits':int(sel.iloc[:half].y.sum()),'late_n':len(sel)-half,'late_hits':int(sel.iloc[half:].y.sum()),'venues_top12':venues}
- # diagnostics: always expose model score frontiers even when frozen stability gate rejects all\n diag={}\n for n in names:\n  m=model(n);m.fit(tr[feats],tr.y);s1=m.predict_proba(v1[feats])[:,1];s2=m.predict_proba(v2[feats])[:,1]\n  diag[n]={}\n  for k in [10,20,30,50,75,100,150,200]:\n   if k<=len(v1) and k<=len(v2):\n    i1=np.argsort(-s1)[:k];i2=np.argsort(-s2)[:k];diag[n][str(k)]={'v1_rate':float(v1.y.iloc[i1].mean()),'v2_rate':float(v2.y.iloc[i2].mean())}\n out={'diagnostic_topn':diag,'policy':{'feb_only_selection':True,'march_one_shot':True,'september_outcomes_read':False,'current_meet_used':False},'joined_feb':len(feb),'joined_mar':len(mar),'features':len(feats),'feb_candidates':candidates,'frozen':frozen,'march_results':results}
+ # diagnostics: always expose model score frontiers even when frozen stability gate rejects all
+ diag={}
+ for n in names:
+  m=model(n);m.fit(tr[feats],tr.y);s1=m.predict_proba(v1[feats])[:,1];s2=m.predict_proba(v2[feats])[:,1]
+  diag[n]={}
+  for k in [10,20,30,50,75,100,150,200]:
+   if k<=len(v1) and k<=len(v2):
+    i1=np.argsort(-s1)[:k];i2=np.argsort(-s2)[:k];diag[n][str(k)]={'v1_rate':float(v1.y.iloc[i1].mean()),'v2_rate':float(v2.y.iloc[i2].mean())}
+ out={'diagnostic_topn':diag,'policy':{'feb_only_selection':True,'march_one_shot':True,'september_outcomes_read':False,'current_meet_used':False},'joined_feb':len(feb),'joined_mar':len(mar),'features':len(feats),'feb_candidates':candidates,'frozen':frozen,'march_results':results}
  open('research_3head_funsite_broad50_result.json','w').write(json.dumps(out,ensure_ascii=False,indent=2,default=str));print(json.dumps(out,ensure_ascii=False,indent=2,default=str))
 if __name__=='__main__':main()
