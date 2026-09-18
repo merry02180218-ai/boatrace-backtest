@@ -337,3 +337,29 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 既存v353 Artifactのrace_predictionsを使用し、Feb-Augの各月について3点的中、払戻ROI、買い目変更数、gain/lossを再計算。
 - devの月別最低値、改善月数、Jul/Aug個別、近傍plateauを確認。単一raw bestではなく運用に耐える簡潔な候補があるかを見る。
 - 2026-09結果/払戻は読まない。production/LIVEは未変更。
+
+
+## AFTER — v354 WATCH wall3 ticket robustness
+- Run `35314731622` / Job `105503844822` completed success / Artifact `10533694328`。
+- fixed dev-selected = `SCORE / attack4>=.60 / g2=3.0 / g3=.5`。
+- WATCH 77R: 44 -> 47 hits、ROI 129.004% -> 141.818%、変更12R、gain 3 / loss 0。
+- Feb-Jun: 39 -> 42 hits、ROI 130.870% -> 145.169%。
+- Jul-Aug: 5 -> 5 hits、ROI 112.917%据え置き。
+- fixed candidate月別:
+  - Feb 3/5 ROI128.0%（baseline同じ）
+  - Mar 4/6 ROI180.0%（同じ）
+  - Apr 12/16 ROI181.04%（baseline10/16 ROI149.17%、+2 hits）
+  - May 12/28 ROI82.26%（同じ）
+  - Jun 11/14 ROI221.19%（baseline10/14 ROI187.14%、+1 hit）
+  - Jul 0/3 ROI0%（同じ）
+  - Aug 5/5 ROI180.67%（同じ）
+- LOMO: 各dev月を外して残り4か月で候補選定。5か月すべてdelta_hits>=0、合計+1 hit。April holdoutのみ+1、他0。JuneはROI -3.33ppだがhit数不変。
+- 近傍9候補でも g2=1.5～3.0 / g3=0～.5 に 46～47 hitsの改善plateau。単点だけの偶然ではない。
+- ただしsupportは8Rしかなく増分0。production即昇格ではなく、次にBASIC全体へ「WATCHだけwall3 rerank / BASIC-onlyは従来」の合成監査を行う。
+
+## BEFORE — v355 BASIC全母数維持 + WATCH-only wall3 ticket overlay
+- 目的: BASIC 165Rを1Rも削らず、WATCH subset 77Rだけv354 fixed candidateの買い目rerankを適用。
+- BASIC-only 88Rは現行3点のまま。WATCH 77Rだけ `SCORE / attack4>=.60 / g2=3.0 / g3=.5`。
+- 期待上は WATCHでgain3/loss0のため、BASIC全体 exact3 80 -> 83、stake不変。これをartifactから再構成して厳密監査する。
+- all / Feb-Jun / Jul-Aug / 月別ROI、買い目変更数、gain/loss、race identityを確認。
+- レース数とHEAD gateは一切変更しない。9月結果未読、production/LIVEは監査完了まで変更しない。
