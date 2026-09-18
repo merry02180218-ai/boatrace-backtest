@@ -2250,3 +2250,45 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - DEVでパラメータ選択、SUPPORT Jul-Augは選定に使わない。
 - official closing odds coverage 165/165を要求。欠損があれば採用判定しない。
 - September outcomes/payoutsは読まない。production/LIVEは変更しない。
+
+
+## BEFORE — v382 fixed soft-Dutch + WALL3 allocation combined audit
+- 買い方研究の継続。
+- 新規パラメータ探索は行わない。
+- 固定済み2ルールを合成:
+  1) v372-v374 soft Dutch threshold=3.5
+     - odds ratio max/min>=3.5時、最長odds 0 / 最短odds 200 / 中間100
+     - total300円、LIVE165 87hit維持 / ROI134.364%
+     - expanded 5 universes + 全disjoint bandsでlost hit0、ROI改善。
+  2) v379-v380 WALL3 allocation
+     - WALL3時100/100/400
+     - five6-only時200/200/200
+     - none時100/100/100
+     - total stakeはEITHER2x baselineとrace-by-race同一
+     - LIVE165 ROI142.305%、maxDD非悪化。
+- v382 fixed combined rules:
+  - WALL3（BOTH含む）: **100/100/400を最優先**
+  - five6-only:
+    - soft Dutch非発火: 200/200/200
+    - soft Dutch発火: shortest/middle/longest oddsへ **400/200/0**（v372比率を2x）
+  - NONE:
+    - soft Dutch非発火:100/100/100
+    - soft Dutch発火:200/100/0
+- 比較:
+  - official 100/100/100
+  - soft Dutch only
+  - v379 allocation only
+  - v382 combined
+- v379 allocationとv382 combinedは**各race total stake完全同一**にして、純粋な配分差を比較。
+- 既存Artifactのみ使用:
+  - overlay rows: v374 Artifact 10548879270
+  - soft Dutch expanded rows: v374-soft Artifact 10555204782
+- 評価:
+  - 5 universes ALL
+  - DEV/SUPPORT
+  - disjoint bands
+  - LIVE165月別
+  - time-series maxDD / worst10R / worst20R / losing streak
+  - lost formal hit
+- support/expanded結果でルール変更しない。
+- production/official stake/shadows変更なし。September outcomes unread。
