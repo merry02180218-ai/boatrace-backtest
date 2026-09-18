@@ -416,3 +416,20 @@ Changes in research/run_3head_funsite_broad50.py:
   3. weekly diagnostics for the selected ceiling candidate, including eligible-week minimum rate where week support >=5.
 - Report both half rates, total support/hits, combined rate, venue dispersion, window/band/gates, and weekly breakdown. Tiny-N candidates remain diagnostic only.
 - Purpose: quantify the actual precision/volume Pareto ceiling of the current PRE information family before deciding whether materially new PRE data is required.
+
+
+## AFTER WORK — Broad50 Wave9 support-size ceiling verified (Run 35314799800, 2026-09-18)
+- SUCCESS: Run **35314799800** / Job **105504048875** / Artifact **10534524414**; head SHA **2c377870e8864ded1452cc2476bcbfa31594fdd2**.
+- Reused Wave7 candidate family unchanged; February-only diagnostic. **March outcomes were not opened**. September outcomes remain UNREAD; production v288 unchanged.
+- Clean audit remained intact: Feb cross-source winner agreement **3970/3970 = 100%**; January/February previous-session date violations 0.
+- Evaluated **15,780** walk-forward candidates. Primary ceiling metric = maximize the worse of Feb H1/H2 head rates, with >=8 venues in both halves.
+- Practical support ceiling by minimum races **per half**:
+  - >=20R/half: best H1 **9/23=39.13%**, H2 **13/33=39.39%**; worst-half **39.13%**; combined **22/56=39.29%**. Window14 / R1-8 / attack p30_st20 q=.85 + logistic q=.95. Weekly rates: 40.0%, 38.89%, **25.0%**, 47.62%.
+  - >=30R/half: H1 **13/34=38.24%**, H2 **18/48=37.50%**; worst-half **37.50%**; combined **31/82=37.80%**. Window14 / R1-8 / motor attack q=.85 + logistic q=.85.
+  - >=50R/half: H1 **27/77=35.06%**, H2 **32/93=34.41%**; worst-half **34.41%**; combined **59/170=34.71%**. Window21 / R1-8 / mean-model q=.925.
+  - >=75R/half: same optimum as >=50R: worst-half **34.41%**, combined **34.71%**, 170R total.
+  - >=100R/half: H1 **44/136=32.35%**, H2 **61/187=32.62%**; worst-half **32.35%**; combined **105/323=32.51%**. Window42 / R1-6 / mean-model q=.85.
+  - >=150R/half: H1 **52/171=30.41%**, H2 **69/232=29.74%**; worst-half **29.74%**; combined **121/403=30.02%**.
+  - >=200R/half: H1 **64/224=28.57%**, H2 **74/268=27.61%**; worst-half **27.61%**; combined **138/492=28.05%**.
+- Important secondary diagnostic: at >=20R/half, the highest **combined** rate was 25/59=42.37%, but it was temporally broken: H1 **4/20=20.0%** vs H2 **21/39=53.85%**. This demonstrates why combined head rate alone is misleading for this problem.
+- Conclusion: with the current leakage-safe PRE information family, the empirical February walk-forward ceiling is **just under 40% even at only ~20-30 races per half**; by >=50 races/half it is ~34-35%, and by >=100 races/half ~32-33%. A useful-volume 50% target is not supported by this feature family. This is an empirical ceiling for the tested family/time period, not a proof that no materially new PRE information can exceed it.
