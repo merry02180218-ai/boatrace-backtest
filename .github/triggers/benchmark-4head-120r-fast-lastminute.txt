@@ -9,3 +9,4 @@ rerun with bounded exhibition/odds polling
 rerun after local sparse-history perf fix
 rerun after stale live reference fix
 rerun timing-only benchmark after deadline-safe perf mode
+rerun after benchmark-mode merge on latest runner
