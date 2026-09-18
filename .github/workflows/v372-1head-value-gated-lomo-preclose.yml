@@ -1,0 +1,43 @@
+name: v372 1-head value-gated LOMO preclose
+on:
+  push:
+    paths:
+      - 'run_v372_1head_value_gated_lomo_preclose.py'
+      - '.github/workflows/v372-1head-value-gated-lomo-preclose.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas requests
+      - name: Download v370 frozen closing-odds features
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10560443188/zip" > /tmp/v370.zip
+          mkdir -p /tmp/v370
+          unzip -q /tmp/v370.zip -d /tmp/v370
+          test -f /tmp/v370/formal_with_closing_odds.csv
+      - name: Run v372 LOMO and pre-close replay
+        run: python run_v372_1head_value_gated_lomo_preclose.py --features /tmp/v370/formal_with_closing_odds.csv
+      - name: Show result
+        if: always()
+        run: |
+          cat /tmp/v372-value-gated-lomo-preclose/result.json 2>/dev/null || true
+          cat /tmp/v372-value-gated-lomo-preclose/closing_lomo.csv 2>/dev/null || true
+          cat /tmp/v372-value-gated-lomo-preclose/preclose_coverage_by_month.csv 2>/dev/null || true
+          cat /tmp/v372-value-gated-lomo-preclose/preclose_lomo.csv 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v372-value-gated-lomo-preclose-${{ github.run_id }}
+          path: /tmp/v372-value-gated-lomo-preclose/
+          retention-days: 30
