@@ -1,0 +1,56 @@
+name: v391 1-head added42 ROI policy
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'run_v391_1head_added42_roi_policy.py'
+      - '.github/workflows/v391-1head-added42-roi-policy.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas numpy scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+
+      - name: Download frozen artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10539401122/zip" > /tmp/v360.zip
+          mkdir -p /tmp/v360
+          unzip -q /tmp/v360.zip -d /tmp/v360
+          PREP=$(find /tmp/v360 -name prepared_rows.pkl -print -quit)
+          test -n "$PREP"
+          echo "PREP=$PREP" >> "$GITHUB_ENV"
+
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10562248620/zip" > /tmp/v389.zip
+          mkdir -p /tmp/v389
+          unzip -q /tmp/v389.zip -d /tmp/v389
+          SEL=$(find /tmp/v389 -name selected_added.csv -print -quit)
+          test -n "$SEL"
+          echo "SEL=$SEL" >> "$GITHUB_ENV"
+
+      - name: Run ROI-first policy audit
+        run: python run_v391_1head_added42_roi_policy.py --prepared "$PREP" --selected "$SEL"
+
+      - name: Show result
+        if: always()
+        run: cat /tmp/v391-added42-roi-policy/result.json 2>/dev/null || true
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v391-added42-roi-policy-${{ github.run_id }}
+          path: /tmp/v391-added42-roi-policy/
+          retention-days: 30
