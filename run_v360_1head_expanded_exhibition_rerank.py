@@ -127,18 +127,18 @@ def baseline_rows(sel,features,maps,cores):
 def evaluate(rows,label,pairs,scope,cache):
  rec=[];triggers=defaultdict(int)
  for rr in rows:
-  r=pd.Series(rr);active=(scope=='ALL') or float(rr.opp_mass)>=prod.WATCH_OPPONENT_MASS_MIN
+  r=pd.Series(rr);active=(scope=='ALL') or float(rr['opp_mass'])>=prod.WATCH_OPPONENT_MASS_MIN
   p2,pc=rr['_p2'],rr['_pc'];vec={b:0.0 for b in BOATS};tr=[]
   if active and bool(rr.get('ex_ready',False)):
    vec,tr=adj_vec(r,pairs)
    if any(abs(x)>0 for x in vec.values()):p2,pc=apply_vec(p2,pc,vec)
-  ts=tickets(p2,pc);actual=str(rr.actual_combo);hit=int(actual in ts.split(';'))
-  changed=int(ts!=rr.base_tickets)
+  ts=tickets(p2,pc);actual=str(rr['actual_combo']);hit=int(actual in ts.split(';'))
+  changed=int(ts!=rr['base_tickets'])
   if changed:
    for x in tr:triggers[x]+=1
-  rec.append({'month':str(rr.month),'race_code':str(rr.race_code).zfill(12),'head_hit':int(rr.head_hit),
+  rec.append({'month':str(rr['month']),'race_code':str(rr['race_code']).zfill(12),'head_hit':int(rr['head_hit']),
               'actual_combo':actual,'tickets':ts,'hit':hit,'base_tickets':rr.base_tickets,
-              'base_hit':int(rr.base_hit),'changed':changed,'opp_mass':float(rr.opp_mass)})
+              'base_hit':int(rr['base_hit']),'changed':changed,'opp_mass':float(rr.opp_mass)})
  z=pd.DataFrame(rec)
  a=met(z,cache);dv=met(z[z.month.isin(DEV)],cache);sp=met(z[z.month.isin(SUP)],cache)
  m={'variant':label,'scope':scope,**{f'all_{k}':v for k,v in a.items()},**{f'dev_{k}':v for k,v in dv.items()},
