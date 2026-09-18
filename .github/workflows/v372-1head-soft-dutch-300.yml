@@ -1,0 +1,41 @@
+name: v372 1-head soft Dutch 300
+on:
+  push:
+    paths:
+      - 'run_v372_1head_soft_dutch_300.py'
+      - '.github/workflows/v372-1head-soft-dutch-300.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas
+      - name: Download v370 successful artifact
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10554711567/zip" > /tmp/v370.zip
+          mkdir -p /tmp/v370
+          unzip -q /tmp/v370.zip -d /tmp/v370
+          test -f /tmp/v370/race_level.csv
+      - name: Run same-budget soft Dutch audit
+        run: python run_v372_1head_soft_dutch_300.py --race-level /tmp/v370/race_level.csv
+      - name: Show result
+        if: always()
+        run: |
+          cat /tmp/v372-soft-dutch-300/result.json 2>/dev/null || true
+          cat /tmp/v372-soft-dutch-300/zero_loss_plateau.csv 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v372-soft-dutch-300-${{ github.run_id }}
+          path: /tmp/v372-soft-dutch-300/
+          retention-days: 30
