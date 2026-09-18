@@ -1,0 +1,90 @@
+name: audit-4head-208-expanded-features
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'audit_4head_208_expanded_features.py'
+      - '.github/workflows/audit-4head-208-expanded-features.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Sparse checkout archived exhibition data
+        uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/previews/tkz/2025/10
+            data/previews/tkz/2025/11
+            data/previews/tkz/2025/12
+            data/previews/tkz/2026/01
+            data/previews/tkz/2026/02
+            data/previews/tkz/2026/03
+            data/previews/tkz/2026/04
+            data/previews/tkz/2026/05
+            data/previews/tkz/2026/06
+            data/previews/tkz/2026/07
+            data/previews/tkz/2026/08
+            data/previews/stt/2025/10
+            data/previews/stt/2025/11
+            data/previews/stt/2025/12
+            data/previews/stt/2026/01
+            data/previews/stt/2026/02
+            data/previews/stt/2026/03
+            data/previews/stt/2026/04
+            data/previews/stt/2026/05
+            data/previews/stt/2026/06
+            data/previews/stt/2026/07
+            data/previews/stt/2026/08
+            data/previews/original_exhibition/2025/10
+            data/previews/original_exhibition/2025/11
+            data/previews/original_exhibition/2025/12
+            data/previews/original_exhibition/2026/01
+            data/previews/original_exhibition/2026/02
+            data/previews/original_exhibition/2026/03
+            data/previews/original_exhibition/2026/04
+            data/previews/original_exhibition/2026/05
+            data/previews/original_exhibition/2026/06
+            data/previews/original_exhibition/2026/07
+            data/previews/original_exhibition/2026/08
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1'
+      - name: Download frozen Stage1 and Stage2 artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p stage1 stage2
+          gh run download 35337846162 -n head4-expanded-pool-stage1 -D stage1
+          gh run download 35339005302 -n head4-expanded-pool-stage2 -D stage2
+          P="$(find stage1 -type f -name 'selected_pool.csv' | head -1)"
+          D="$(find stage2 -type f -name 'race_detail_226.csv' | head -1)"
+          test -n "$P" && test -n "$D"
+          echo "STAGE1_POOL=$P" >> "$GITHUB_ENV"
+          echo "RACE_DETAIL_226=$D" >> "$GITHUB_ENV"
+      - name: Build expanded feature table
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: python audit_4head_208_expanded_features.py
+      - name: Show result
+        if: always()
+        run: |
+          cat /tmp/head4_208_expanded_features/result.json 2>/dev/null || true
+          head -80 /tmp/head4_208_expanded_features/feature_strata.csv 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-208-expanded-features
+          path: /tmp/head4_208_expanded_features/
+          retention-days: 30
