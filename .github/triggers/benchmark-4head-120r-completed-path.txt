@@ -1,1 +1,2 @@
 trigger 2026-09-18 completed-source speed benchmark
+rerun with capped waits and concurrency
