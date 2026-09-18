@@ -1,0 +1,46 @@
+name: v375 1-head overlay staking robustness
+on:
+  push:
+    paths:
+      - 'run_v375_1head_overlay_staking_robustness.py'
+      - '.github/workflows/v375-1head-overlay-staking-robustness.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas numpy
+      - name: Download v374 artifact
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10548879270/zip" > /tmp/v374.zip
+          mkdir -p /tmp/v374
+          unzip -q /tmp/v374.zip -d /tmp/v374
+          test -f /tmp/v374/rows_LIVE165.csv
+          test -f /tmp/v374/rows_H078_M375.csv
+          test -f /tmp/v374/rows_H0775_M375.csv
+          test -f /tmp/v374/rows_H0775_M350.csv
+          test -f /tmp/v374/rows_PROD276.csv
+      - name: Run fixed overlay staking robustness
+        run: python run_v375_1head_overlay_staking_robustness.py --v374-dir /tmp/v374
+      - name: Show result
+        if: always()
+        run: |
+          cat /tmp/v375-overlay-staking-robustness/result.json 2>/dev/null || true
+          cat /tmp/v375-overlay-staking-robustness/leave_one_month_out.csv 2>/dev/null || true
+          cat /tmp/v375-overlay-staking-robustness/universes.csv 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v375-overlay-staking-robustness-${{ github.run_id }}
+          path: /tmp/v375-overlay-staking-robustness/
+          retention-days: 30
