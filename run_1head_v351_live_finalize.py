@@ -95,8 +95,8 @@ def main():
  ph=float(x['final_head_p']); mass=float(x['opp_mass'])
  head_pass=ph>=prod.LIVE_HEAD_CUTOFF and mass>=prod.LIVE_OPPONENT_MASS_MIN and bool(x['head_exhibition_pass'])
  watch_pass=head_pass and ph>=prod.WATCH_HEAD_CUTOFF and mass>=prod.WATCH_OPPONENT_MASS_MIN
- tickets=[];pre_wall3_tickets=[];core={};shadow={'profile':prod.WALL3_LIVE_TICKET_PROFILE_NAME,'eligible':False,'applied':False,'risk':0.0,'wall_score':None,'attack4_score':None,'gaps':{},'tickets':[]}
- five6={'profile':prod.FIVE6_SHADOW_PROFILE_NAME,'eligible':False,'applied':False,'score6':None,'st_gap_6_minus_5':None,'tickets':[]}
+ tickets=[];pre_wall3_tickets=[];pre_five6_tickets=[];core={};shadow={'profile':prod.WALL3_LIVE_TICKET_PROFILE_NAME,'eligible':False,'applied':False,'risk':0.0,'wall_score':None,'attack4_score':None,'gaps':{},'tickets':[]}
+ five6={'profile':prod.FIVE6_LIVE_TICKET_PROFILE_NAME,'eligible':False,'applied':False,'score6':None,'st_gap_6_minus_5':None,'tickets':[]}
  if head_pass:
   core=opponent_core(x['corrected_ex'],x['corrected_st'],x['corrected_straight'],x['corrected_orig_avg'])
   p2,pc=adjust(x['p2'],x['pc'],core)
@@ -116,7 +116,10 @@ def main():
     for t,v in q.items():tmp[(s,t)]=v
    post_pc=tmp
    if ticket_list(post_p2,post_pc)!=tickets: raise RuntimeError('wall3 post-probability reconstruction drift')
+  pre_five6_tickets=tickets[:]
   five6=five6_shadow(post_p2,post_pc,x,head_pass)
+  if prod.FIVE6_LIVE_TICKET_PROMOTED and five6['applied']:
+   tickets=five6['tickets']
  out={k:x.get(k) for k in ['race_code','pre_class','legacy_pre_p','deadline_jst','evaluated_at_jst','minutes_to_deadline','training_cutoff','exhibition_hashes']}
  out.update({
   'status':'PASS' if head_pass else 'DROP',
@@ -135,9 +138,15 @@ def main():
   'head_exhibition_pass':bool(x['head_exhibition_pass']),
   'tickets':tickets,
   'pre_wall3_tickets':pre_wall3_tickets,
-  'ticket_profile':prod.WALL3_LIVE_TICKET_PROFILE_NAME if (prod.WALL3_LIVE_TICKET_PROMOTED and shadow['applied']) else prod.OPPONENT_CORE_VERSION,
+  'pre_five6_tickets':pre_five6_tickets,
+  'ticket_profile':(
+   prod.FIVE6_LIVE_TICKET_PROFILE_NAME if (prod.FIVE6_LIVE_TICKET_PROMOTED and five6['applied'])
+   else (prod.WALL3_LIVE_TICKET_PROFILE_NAME if (prod.WALL3_LIVE_TICKET_PROMOTED and shadow['applied']) else prod.OPPONENT_CORE_VERSION)
+  ),
   'wall3_ticket_promoted':bool(prod.WALL3_LIVE_TICKET_PROMOTED),
   'wall3_ticket_applied':bool(prod.WALL3_LIVE_TICKET_PROMOTED and shadow['applied']),
+  'five6_ticket_promoted':bool(prod.FIVE6_LIVE_TICKET_PROMOTED),
+  'five6_ticket_applied':bool(prod.FIVE6_LIVE_TICKET_PROMOTED and five6['applied']),
   'opponent_core':core,
   'wall3_shadow_profile':shadow['profile'],
   'wall3_shadow_eligible':shadow['eligible'],
@@ -154,7 +163,7 @@ def main():
   'five6_shadow_score6':five6['score6'],
   'five6_shadow_st_gap_6_minus_5':five6['st_gap_6_minus_5'],
   'five6_shadow_tickets':five6['tickets'],
-  'five6_shadow_research_only':True,
+  'five6_shadow_research_only':False,
   'result_or_payout_used':False,
   'chronology_guard':True,
   'finalized':True,
