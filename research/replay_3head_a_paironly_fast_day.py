@@ -2,6 +2,10 @@
 from __future__ import annotations
 import argparse,hashlib,json
 from pathlib import Path
+import sys
+
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
 import joblib,pandas as pd
 
 import analyze_v242_3head_target_comp3_min5_max10 as v242
