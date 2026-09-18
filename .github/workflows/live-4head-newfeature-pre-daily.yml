@@ -2,7 +2,8 @@ name: live-4head-newfeature-pre-daily
 
 on:
   schedule:
-    - cron: '20 0 * * *' # 09:20 JST
+    - cron: '30 20 * * *' # 05:30 JST primary
+    - cron: '30 21 * * *' # 06:30 JST refresh/fallback
   workflow_dispatch:
     inputs:
       target_date:
