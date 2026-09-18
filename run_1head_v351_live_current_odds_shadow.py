@@ -51,6 +51,52 @@ def stakes_for_threshold(final,odds,threshold):
       'total_stake_yen':sum(stakes),
     }
 
+def value_gate_scenario(final,tickets,odds,combined_min,value_min,d):
+    pmap=final.get('ticket_pair_probs') or {}
+    missing=[t for t in tickets if t not in pmap]
+    if missing:
+        return {
+          'profile':prod.CURRENT_ODDS_VALUE_GATE_SHADOW_PROFILE_NAME,
+          'status':'UNAVAILABLE_NO_PAIR_PROBS',
+          'missing_tickets':missing,
+          'd':float(d),'combined_min':float(combined_min),'value_min':float(value_min),
+          'research_only':True,
+        }
+    probs=[float(pmap[t]) for t in tickets]
+    if any((not math.isfinite(p) or p<=0) for p in probs):
+        raise RuntimeError(f'invalid ticket pair probabilities {probs}')
+    combined=1.0/sum(1.0/float(o) for o in odds)
+    values=[p*float(o) for p,o in zip(probs,odds)]
+    active=bool(combined>=float(combined_min) and max(values)>=float(value_min))
+    units=[1,1,1]
+    if active:
+        extra=int(prod.CURRENT_ODDS_VALUE_GATE_EXTRA_UNITS)
+        target=[extra*v/sum(values) for v in values]
+        floor=[int(math.floor(x)) for x in target]
+        units=[1+x for x in floor]
+        left=extra-sum(floor)
+        frac=[target[i]-floor[i] for i in range(3)]
+        for i in sorted(range(3),key=lambda i:(-frac[i],-values[i],i))[:left]:
+            units[i]+=1
+    stakes=[100*x for x in units]
+    return {
+      'profile':prod.CURRENT_ODDS_VALUE_GATE_SHADOW_PROFILE_NAME,
+      'status':'READY',
+      'd':float(d),
+      'combined_min':float(combined_min),
+      'value_min':float(value_min),
+      'extra_units':int(prod.CURRENT_ODDS_VALUE_GATE_EXTRA_UNITS),
+      'ticket_pair_probs':{t:p for t,p in zip(tickets,probs)},
+      'combined_odds':combined,
+      'ticket_values':{t:v for t,v in zip(tickets,values)},
+      'max_ticket_value':max(values),
+      'active':active,
+      'units':units,
+      'stakes_yen':stakes,
+      'total_stake_yen':sum(stakes),
+      'research_only':bool(prod.CURRENT_ODDS_VALUE_GATE_SHADOW_RESEARCH_ONLY),
+    }
+
 def allocate(final,odds_map,fetched_at=None,source='provided'):
     if final.get('result_or_payout_used') is not False or not final.get('chronology_guard'):
         raise RuntimeError('unsafe finalized input')
@@ -80,6 +126,16 @@ def allocate(final,odds_map,fetched_at=None,source='provided'):
       '3.9':stakes_for_threshold(final,odds,3.9),
       '4.3':stakes_for_threshold(final,odds,4.3),
     }
+    value_gate_scenarios={
+      'D20':value_gate_scenario(final,tickets,odds,
+                                prod.CURRENT_ODDS_VALUE_GATE_D20_COMBINED_MIN,
+                                prod.CURRENT_ODDS_VALUE_GATE_D20_VALUE_MIN,
+                                prod.CURRENT_ODDS_VALUE_GATE_D20),
+      'D30':value_gate_scenario(final,tickets,odds,
+                                prod.CURRENT_ODDS_VALUE_GATE_D30_COMBINED_MIN,
+                                prod.CURRENT_ODDS_VALUE_GATE_D30_VALUE_MIN,
+                                prod.CURRENT_ODDS_VALUE_GATE_D30),
+    }
     return {
       'profile':prod.CURRENT_ODDS_ALLOC_SHADOW_PROFILE_NAME,
       'status':'SHADOW_READY',
@@ -99,6 +155,7 @@ def allocate(final,odds_map,fetched_at=None,source='provided'):
       'formal_evaluated_at_jst':final.get('evaluated_at_jst'),
       'formal_minutes_to_deadline':final.get('minutes_to_deadline'),
       'safety_scenarios':safety_scenarios,
+      'value_gate_scenarios':value_gate_scenarios,
       'research_only':bool(prod.CURRENT_ODDS_ALLOC_SHADOW_RESEARCH_ONLY),
       'result_or_payout_used':False,
       'chronology_guard':True,
