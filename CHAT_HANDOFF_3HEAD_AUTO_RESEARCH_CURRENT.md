@@ -66,3 +66,10 @@
 - Manual motor primitives: boat3-vs-2 and boat3-vs-4 current motor top2/top3 gaps, EWMA-rank advantage, EWMA-ST advantage, and boat3-vs-inner motor advantage. Motor state remains strict prior-day only.
 - Test single primitives plus predeclared 2-way/3-way conjunction families that represent an attack scenario (e.g. exhibition stretch + ST edge vs2; motor edge vs2 + exhibition edge; motor+exhibition+ST). Do not generate arbitrary feature products or fit labels into thresholds.
 - Candidate selection is Nov-Dec-Jan only, ranked by worst of six half-month head rates, then combined rate, then closeness to 50 races/month. February remains NON-PRISTINE/reference only. March remains unopened; September-2026 outcomes UNREAD; production v288 unchanged.
+
+
+### Wave20 implementation failure / repair (2026-09-18)
+- Initial Run **35350314199** / Job **105616609920** failed after source build and gate evaluation began. Exact cause: some strict manual gates produced a zero-support half-month; `summary()` called `min()` across rates containing `None`, raising `TypeError`.
+- This is implementation-only. Data retrieval, causal motor state, PRE score construction, and exhibition merge completed before the failure. No research result was produced and the failed run must not be used.
+- Repair commit **02c6d4d74369482b187243e3d7ba1d2f4d0a0b04** assigns `persistent_worst=-1` whenever any half-month has no rate; such rows are then rejected by the unchanged support/venue eligibility gate. No thresholds, gate definitions, volume target, or train/test split changed.
+- A fresh current-main run is required for the official Wave20 result.
