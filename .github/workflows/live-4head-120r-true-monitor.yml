@@ -1,0 +1,134 @@
+name: live-4head-120r-true-monitor
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_date:
+        description: YYYYMMDD
+        required: true
+        default: '20260918'
+      jcd:
+        description: JCD numeric
+        required: true
+        default: '15'
+      race:
+        description: Race number
+        required: true
+        default: '10'
+      deadline_jst:
+        description: Official deadline HH:MM
+        required: true
+        default: '19:39'
+      pre_run_id:
+        description: Corrected PRE run id
+        required: true
+        default: '35317588703'
+      pre_artifact_name:
+        description: Corrected PRE artifact name
+        required: true
+        default: 'head4-120r-pre-live-trial-20260918'
+      state_run_id:
+        description: Daily-state source run id
+        required: true
+        default: '35326011735'
+      state_artifact_name:
+        description: Daily-state artifact name
+        required: true
+        default: 'head4-120r-live-deadline-benchmark'
+  push:
+    paths:
+      - '.github/triggers/live-4head-120r-true-monitor.json'
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  final:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy requests beautifulsoup4 lxml
+      - name: Resolve target
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "TARGET_DATE=${{ inputs.target_date }}" >> "$GITHUB_ENV"
+            echo "JCD=${{ inputs.jcd }}" >> "$GITHUB_ENV"
+            echo "RACE=${{ inputs.race }}" >> "$GITHUB_ENV"
+            echo "DEADLINE_JST=${{ inputs.deadline_jst }}" >> "$GITHUB_ENV"
+            echo "PRE_RUN_ID=${{ inputs.pre_run_id }}" >> "$GITHUB_ENV"
+            echo "PRE_ARTIFACT_NAME=${{ inputs.pre_artifact_name }}" >> "$GITHUB_ENV"
+            echo "STATE_RUN_ID=${{ inputs.state_run_id }}" >> "$GITHUB_ENV"
+            echo "STATE_ARTIFACT_NAME=${{ inputs.state_artifact_name }}" >> "$GITHUB_ENV"
+          else
+            python - <<'PY'
+          import json, os
+          z=json.load(open('.github/triggers/live-4head-120r-true-monitor.json',encoding='utf-8'))
+          mp={
+            'TARGET_DATE':'target_date','JCD':'jcd','RACE':'race','DEADLINE_JST':'deadline_jst',
+            'PRE_RUN_ID':'pre_run_id','PRE_ARTIFACT_NAME':'pre_artifact_name',
+            'STATE_RUN_ID':'state_run_id','STATE_ARTIFACT_NAME':'state_artifact_name'
+          }
+          with open(os.environ['GITHUB_ENV'],'a',encoding='utf-8') as f:
+              for env,key in mp.items():
+                  f.write(f"{env}={z[key]}\n")
+          PY
+          fi
+      - name: Download corrected PRE and daily state
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          mkdir -p preseed stateseed
+          gh run download "$PRE_RUN_ID" -n "$PRE_ARTIFACT_NAME" -D preseed
+          gh run download "$STATE_RUN_ID" -n "$STATE_ARTIFACT_NAME" -D stateseed
+      - name: Locate frozen inputs
+        shell: bash
+        run: |
+          DAY="$TARGET_DATE"
+          CARD="$(find preseed -type f -path "*/current_input/v291/$DAY/race_cards.csv" | head -1)"
+          WAKU="$(find preseed -type f -path "*/current_input/v291/$DAY/waku10.csv" | head -1)"
+          PRE="$(find preseed -type f -path "*/live_outputs/head4_120r_pre/$DAY/pre_all.csv" | head -1)"
+          STATE="$(find stateseed -type f -name 'head4_daily_state.json' | head -1)"
+          test -n "$CARD" && test -n "$WAKU" && test -n "$PRE" && test -n "$STATE"
+          echo "CARD=$CARD" >> "$GITHUB_ENV"
+          echo "WAKU=$WAKU" >> "$GITHUB_ENV"
+          echo "PRE=$PRE" >> "$GITHUB_ENV"
+          echo "STATE=$STATE" >> "$GITHUB_ENV"
+      - name: Strict monitored post-exhibition decision
+        shell: bash
+        run: |
+          OUT="/tmp/head4_true_monitor_${JCD}_${RACE}.json"
+          LOG="/tmp/head4_true_monitor.log"
+          echo "OUT=$OUT" >> "$GITHUB_ENV"
+          echo "LOG=$LOG" >> "$GITHUB_ENV"
+          /usr/bin/time -f 'STRICT_MONITOR_WALL_SECONDS=%e' python run_4head_120r_lastminute_fast.py \
+            --date "$TARGET_DATE" --jcd "$JCD" --race "$RACE" --deadline-jst "$DEADLINE_JST" \
+            --race-cards "$CARD" --waku10 "$WAKU" --pre-all "$PRE" --daily-state "$STATE" \
+            --out "$OUT" 2>&1 | tee "$LOG"
+          grep -Eq 'HEAD4_120R_FAST_LASTMINUTE_OK|HEAD4_120R_FAST_NO_BET_DATA_NOT_READY' "$LOG"
+      - name: Contract check
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os
+          z=json.load(open(os.environ['OUT'],encoding='utf-8'))
+          assert z.get('monitoring_parent') is True, z
+          assert z.get('target_race_result_used') is False, z
+          assert z.get('payout_used') is False, z
+          assert z.get('decision') in {'BET','PASS','NO_BET_DATA_NOT_READY'}, z
+          print('STRICT_MONITOR_CONTRACT_OK', z.get('decision'), z.get('race_code'))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-120r-true-monitor-${{ github.run_number }}
+          path: |
+            /tmp/head4_true_monitor_*.json
+            /tmp/head4_true_monitor.log
+          if-no-files-found: warn
