@@ -2712,3 +2712,48 @@ Objective:
 10. September target outcomes remain unread.
 
 Status: HEAD4_NEWFEATURE_FIXED_THRESHOLD_OPERATIONALIZATION_START
+
+
+## BEFORE — promote new-feature fixed-threshold model to production and extend volume frontier
+User explicitly approved formal adoption of the new wall3+motor feature model and asked whether race count can be increased.
+
+Promotion choice:
+- Use the operational fixed-threshold score, not retrospective monthly top-k.
+- Preserve the same 156R historical volume for the initial formal production cut.
+- From Run 35363910244 sensitivity, exact156 corresponds to:
+  - frozen temporal weights from Apr-Jun-only audit;
+  - fixed score threshold >= **12.293333333333333** (dev_target_k=24);
+  - 156R / 73 heads = **46.79%**
+  - exact3 40
+  - ROI **140.99%**
+  - monthly floor **87.21%**
+  - Jul-Aug ROI **113.18%**.
+- This is chosen as the initial operational production cut because it is a single per-race threshold and preserves the previous 156R volume while materially improving retrospective head rate and ROI.
+- The earlier all-period top-k 48.08% / floor91.575 result is NOT used as the production rule because it is not directly operational per race.
+
+Promotion work:
+1. Freeze a versioned production artifact containing:
+   - Apr-Jun ECDF references;
+   - fixed weights;
+   - fixed threshold 12.293333333333333;
+   - feature semantics;
+   - missing wall feature rank=.5.
+2. Update fast last-minute runner so official decision becomes:
+   - frozen base120 unchanged;
+   - otherwise apply new-feature fixed score threshold;
+   - old HEAD4_156R_ROI_EXPANSION_V1 values remain emitted for comparison only.
+3. Compute causal motor prior-win difference from daily state + current race card.
+4. Compute current race-card motor 2-ren difference.
+5. Compute wall3/attack4 from current exhibition.
+6. Add parity tests against frozen Apr-Aug research membership/metrics.
+7. Keep GitHub BET notification unchanged; it follows official decision.
+8. September target outcomes remain unread.
+
+Volume research in parallel:
+- extend the same fixed score sensitivity beyond 165R to roughly 170-190R;
+- do not retune weights;
+- report head rate, exact3, overall ROI, Jul-Aug ROI, monthly floor;
+- identify practical volume frontier.
+- Do not automatically promote a larger-volume threshold until its audit is complete.
+
+Status: HEAD4_NEWFEATURE_PRODUCTION_PROMOTION_AND_VOLUME_EXTENSION_START
