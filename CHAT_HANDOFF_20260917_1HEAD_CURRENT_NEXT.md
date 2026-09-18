@@ -1759,3 +1759,64 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - 近傍（weight 10通り）でsupport非悪化有無
 - 比較baseline: EITHER 2x equal = 200/200/200 on overlay, 100/100/100 otherwise。
 - 2026-09 outcomes/payoutsは読まない。formal tickets / official stake / shadow stakeは変更しない。
+
+
+## AFTER — v371 dynamic staking robustness
+- Run `35359641195` / Job `105647445277` success / Artifact `10553427745` / digest `sha256:d2a6fe568f57d95a8eef5dc96b23b662d89ab5af785e1b51dec5fbee7a055463` / head `36005c8b82d9f15ec41b81c3b6f2b032e2ee3bb2`。
+- frozen v370 165R inputsのみ使用。再取得なし。AUDIT_OK=true / September unread。
+- 360-cell gridのDEV raw/robust bestは全budgetで同じ:
+  - mode=TOP
+  - alpha=0
+  - beta=.5
+  - score = `odds^0.5`
+  - つまり実質 **3点の中で最高オッズの1点へ残資金を全投入**。モデル確率は使わない。
+- DEV:
+  - B600 ROI152.97% / drawdown6,390 / 4/5月でequal以上
+  - B900 ROI160.81% / drawdown11,150
+  - B1200 ROI164.73% / drawdown15,950
+- SUPPORT:
+  - B600 ROI126.79% vs equal125.00% (+1.79pt)
+  - B900 127.38% (+2.38pt)
+  - B1200 127.68% (+2.68pt)
+- ALL:
+  - B600 **148.53%** / profit48,040 / maxDD6,390
+  - B900 **155.14%** / profit81,880 / maxDD11,150
+  - B1200 **158.44%** / profit115,720 / maxDD15,950
+- target rank構成 ALL: rank1=9R / rank2=71R / rank3=85R。ほぼrank2/3を動的に選ぶ。
+- TOP plateauは各budget 7 cellsで同一DEV ROI:
+  - alpha 0〜.25 / beta .5〜1.5。
+  - 最高オッズ順位が変わらない範囲で同じ配分になるため。
+- true LOMO再選定は不安定:
+  - holdout Feb/Junはequal超え
+  - Mar/Apr/Mayはequal割れ、特にMarで大幅悪化。
+  - よって「alpha/beta最適化」をproduction化する根拠は弱い。
+- 一方、固定した単純 highest-odds rule はDEV5月中4月でequal非劣化、SUPPORT合計もequal超え。
+- risk-adjusted private check（同じfrozen165R）:
+  - B400 ALL ROI138.61%, maxDD3,430
+  - B500 144.56%, maxDD4,910
+  - B600 148.53%, maxDD6,390
+  - B900 155.14%, maxDD11,150
+  - B1200 158.44%, maxDD15,950
+  - profit/maxDDはB500〜600近辺が良く、budget増ほどROIは上がるがdrawdownも急増。
+- production/LIVE stakingは未変更。
+
+## BEFORE — v372 simple highest-odds staking / gate audit
+- 目的: v371の複雑チューニングを捨て、「formal3点の最高オッズへ追加stake」の単純買い方を固定監査する。
+- frozen input: v370 Artifact `10553791049/race_inputs.csv`。
+- 基本:
+  - 全165R購入
+  - formal3点は変更しない
+  - 各3点100円を必ず購入
+  - 追加stakeのみ最高closing-odds ticketへ。
+- extra stake grid: +100 / +200 / +300 / +400 / +500 / +600 / +900円。
+- no-gate（全Rで追加）を主baseline。
+- さらにDEVだけで条件付き追加を研究:
+  - target highest odds max 8/10/12/15/20/∞
+  - odds ratio(top/2nd) max 1.4/1.6/2.0/∞
+  - formal3点 combined odds max 1.8/2.0/2.2/2.5/∞
+  - min active 20R
+  - DEV月3/5以上でequal非劣化をrobust条件。
+- SUPPORT Jul-Augは選定に使わない。
+- true LOMOでgate再選定の安定性も確認。
+- 評価: ROI/profit/maxDD/profit÷maxDD/月別、active R、target hit。
+- closing oddsはhistorical最終表示proxyであり、LIVEでは直前current odds順位へ置換する前提。production変更なし。
