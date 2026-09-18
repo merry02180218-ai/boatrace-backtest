@@ -118,8 +118,11 @@ def parse_boatcast_st(text: str) -> dict[int, float | None]:
         cols = raw.rstrip("\r\n").split("\t")
         if len(cols) < 6:
             continue
+        # BOATCAST bc_j_stt pinned layout:
+        # [0]=entry course, [1]=boat number, [4]=ST value, [5]=F/L flag.
+        # Never key by course; course changes would otherwise masquerade as boat identity.
         try:
-            boat = int(_clean(cols[0]))
+            boat = int(_clean(cols[1]))
         except Exception:
             continue
         if not 1 <= boat <= 6:
