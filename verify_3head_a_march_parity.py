@@ -1,7 +1,11 @@
 from __future__ import annotations
 
 import json
+import sys
+from pathlib import Path
 import pandas as pd
+
+sys.path.insert(0, str(Path(__file__).resolve().parent / 'research'))
 
 from threehead_head_gate_a_adopted import passes_adopted_head_gate
 from run_3head_wave22_march_frozen import (
