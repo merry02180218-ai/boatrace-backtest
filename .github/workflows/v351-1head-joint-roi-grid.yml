@@ -3,8 +3,92 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  actions: read
 jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - run: python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v351-joint-roi-prepare-${{ github.run_id }}
+          retention-days: 2
+          path: |
+            cache_v321_julaug_nonpristine_slim.csv.gz
+            cache_v321_julaug_nonpristine_head.csv
+            cache_v321_julaug_nonpristine_meta.csv
+
+  second:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v351-joint-roi-prepare-${{ github.run_id }}
+          path: .
+      - run: python run_v321_1head_julaug_nonpristine_validation.py --stage second
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v351-joint-roi-second-${{ github.run_id }}
+          retention-days: 2
+          path: cache_v321_julaug_second.pkl
+
+  base-third:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v351-joint-roi-prepare-${{ github.run_id }}
+          path: .
+      - run: python run_v321_1head_julaug_nonpristine_validation.py --stage base-third
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v351-joint-roi-base-third-${{ github.run_id }}
+          retention-days: 2
+          path: cache_v321_julaug_base_pc.pkl
+
+  third:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v351-joint-roi-prepare-${{ github.run_id }}
+          path: .
+      - run: python run_v321_1head_julaug_nonpristine_validation.py --stage third
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v351-joint-roi-third-${{ github.run_id }}
+          retention-days: 2
+          path: cache_v321_julaug_third.pkl
+
   audit:
+    needs: [prepare, second, base-third, third]
     runs-on: ubuntu-24.04
     timeout-minutes: 360
     steps:
@@ -13,6 +97,22 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v351-joint-roi-prepare-${{ github.run_id }}
+          path: .
+      - uses: actions/download-artifact@v4
+        with:
+          name: v351-joint-roi-second-${{ github.run_id }}
+          path: .
+      - uses: actions/download-artifact@v4
+        with:
+          name: v351-joint-roi-base-third-${{ github.run_id }}
+          path: .
+      - uses: actions/download-artifact@v4
+        with:
+          name: v351-joint-roi-third-${{ github.run_id }}
+          path: .
       - name: Run 441-cell joint ROI audit
         run: python run_v351_1head_joint_roi_grid.py
       - name: Show top rows
