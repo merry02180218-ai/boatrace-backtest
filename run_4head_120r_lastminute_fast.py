@@ -27,14 +27,15 @@ from backtest_v3 import CORR
 from backtest_v51_lane_corrected_tickets import rank_scores
 from build_4head_v93_primitives_live import build as build_v93
 from build_4head_v283_rows_live import derive
-from head4_v291_downstream_inference import load_artifact,score_second,score_conditional_third,BOATS
-import run_4head_v291_third010_live as live
+from head4_v291_downstream_inference import load_artifact,score_second,score_conditional_third,v283_top4,BOATS
 
 JST=ZoneInfo('Asia/Tokyo')
 PL=('all_p2','all_win','frame_p2','recent_p2','frame_win')
 ST=('raw','raw_strength','raw_rank','corr_strength','corr_rank')
 V93=('grade','national','local','motor','nst')
 CUR=('cur_ex','cur_st','cur_orig_lap','cur_orig_turn','cur_orig_straight','cur_orig_avg')
+ALPHA2=0.60
+THIRD_GAP=0.10
 
 class Fast120Error(RuntimeError):pass
 class Fast120NotReady(Fast120Error):pass
@@ -182,7 +183,7 @@ def parse_od3(body):
     return out
 
 def fetch_boatcast_odds(hd,jcd,rno,deadline,timeout=4):
-    live.require_before_deadline(deadline,'before BOATCAST odds fetch')
+    require_before_deadline(deadline,'before BOATCAST odds fetch')
     url=f'{BOATCAST}/txt/{jcd:02d}/bc_smt_od3_{hd}_{jcd:02d}_{rno:02d}.txt'
     req=datetime.now(JST);body=_get_fast(url,timeout,2);fetched=live.require_before_deadline(deadline,'after BOATCAST odds fetch')
     odds=parse_od3(body)
@@ -204,12 +205,41 @@ def make_boats(card,waku,exh,pflat):
         out[str(b)]=z
     return {'boats':out}
 
+def require_before_deadline(deadline,stage):
+    now=datetime.now(JST)
+    if now>=deadline:
+        raise Fast120Error(f'deadline passed at {stage}: now={now.isoformat()} deadline={deadline.isoformat()}')
+    return now
+
+
+def production_tickets(p2,pc):
+    tickets=list(v283_top4(p2,pc))
+    second_rank=sorted(BOATS,key=lambda s:(-float(p2[s]),s))
+    for s in second_rank[:2]:
+        thirds=sorted((t for t in BOATS if t!=s),key=lambda t:(-float(pc[(s,t)]),t))
+        gap23=float(pc[(s,thirds[1])])-float(pc[(s,thirds[2])])
+        if gap23<=THIRD_GAP:
+            extra=f'4-{s}-{thirds[2]}'
+            if extra not in tickets:
+                tickets.append(extra)
+    if not (4<=len(tickets)<=6) or len(set(tickets))!=len(tickets):
+        raise Fast120Error(f'ticket invariant failed: {tickets}')
+    return tickets
+
+
+def composite_odds(vals):
+    a=[float(x) for x in vals]
+    if not (4<=len(a)<=6) or any((not math.isfinite(x) or x<=0) for x in a):
+        raise Fast120Error(f'invalid odds list: {a}')
+    return 1.0/sum(1.0/x for x in a)
+
+
 def pair_mass(p2,pc,pairs):
     vals={}
     for s in BOATS:
         for t in BOATS:
             if s==t:continue
-            vals[(s,t)]=math.exp(live.ALPHA2*math.log(max(float(p2[s]),1e-12))+(1-live.ALPHA2)*math.log(max(float(pc[(s,t)]),1e-12)))
+            vals[(s,t)]=math.exp(ALPHA2*math.log(max(float(p2[s]),1e-12))+(1-live.ALPHA2)*math.log(max(float(pc[(s,t)]),1e-12)))
     den=sum(vals.values())
     return sum(vals[x]/den for x in pairs)
 
@@ -226,7 +256,13 @@ def parse_deadline_flexible(date8,s):
         hh,mm,*rest=v.split(':')
         ss=rest[0] if rest else '00'
         return datetime(int(date8[:4]),int(date8[4:6]),int(date8[6:8]),int(hh),int(mm),int(ss),tzinfo=JST)
-    return live.parse_deadline(v)
+    try:
+        dt=datetime.fromisoformat(v)
+    except Exception as e:
+        raise Fast120Error(f'invalid deadline {v!r}') from e
+    if dt.tzinfo is None:
+        dt=dt.replace(tzinfo=JST)
+    return dt.astimezone(JST)
 
 def persist_no_bet_not_ready(a,code,deadline,stage,reason,total0,stages,monitored,hp,state):
     now=datetime.now(JST)
@@ -287,7 +323,7 @@ def main():
     stages['fetch_and_build_exhibition_s']=time.perf_counter()-t
     t=time.perf_counter(); pf=player_flat(cards[code],state); src=make_boats(cards[code],waku[code],exh,pf);stages['build_v283_inputs_s']=time.perf_counter()-t
     art=load_artifact()
-    t=time.perf_counter(); sr,cr=derive(src,art);p2=score_second(sr,art);pc=score_conditional_third(cr,art);tickets=live.production_tickets(p2,pc);pairs=[tuple(map(int,x.split('-')[1:])) for x in tickets];mass=pair_mass(p2,pc,pairs);stages['v283_inference_s']=time.perf_counter()-t
+    t=time.perf_counter(); sr,cr=derive(src,art);p2=score_second(sr,art);pc=score_conditional_third(cr,art);tickets=production_tickets(p2,pc);pairs=[tuple(map(int,x.split('-')[1:])) for x in tickets];mass=pair_mass(p2,pc,pairs);stages['v283_inference_s']=time.perf_counter()-t
     t=time.perf_counter()
     try:
         odds,meta,od_attempts,od_last=wait_odds_ready(
@@ -298,7 +334,7 @@ def main():
         persist_no_bet_not_ready(a,code,deadline,'ODDS',e,total0,stages,monitored,hp,state)
         return
     stages['fetch_odds_s']=time.perf_counter()-t
-    vals=[float(odds[x]) for x in tickets];comp=live.composite_odds(vals);d=decide(hp,mass,comp)
+    vals=[float(odds[x]) for x in tickets];comp=composite_odds(vals);d=decide(hp,mass,comp)
     now=live.require_before_deadline(deadline,'before fast120 persist')
     out={
       'schema':'head4_120r_fast_lastminute_v1','race_code':code,'monitoring_parent':monitored,'benchmark_unmonitored':bool(a.allow_unmonitored_benchmark and not monitored),
