@@ -213,7 +213,7 @@ def require_before_deadline(deadline,stage):
 
 
 def production_tickets(p2,pc):
-    tickets=list(v283_top4(p2,pc))
+    tickets=[f'4-{s}-{t}' for s,t in v283_top4(p2,pc)]
     second_rank=sorted(BOATS,key=lambda s:(-float(p2[s]),s))
     for s in second_rank[:2]:
         thirds=sorted((t for t in BOATS if t!=s),key=lambda t:(-float(pc[(s,t)]),t))
