@@ -1,0 +1,42 @@
+name: v385 1-head current-odds safety margin
+on:
+  push:
+    paths:
+      - 'run_v385_1head_current_odds_margin_audit.py'
+      - '.github/workflows/v385-1head-current-odds-margin.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas
+      - name: Download v382 combined artifact
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10555891309/zip" > /tmp/v382.zip
+          mkdir -p /tmp/v382
+          unzip -q /tmp/v382.zip -d /tmp/v382
+          test -f /tmp/v382/live_alloc_detail.csv
+          test -f /tmp/v382/live_combined_detail.csv
+      - name: Run current-odds safety-margin audit
+        run: python run_v385_1head_current_odds_margin_audit.py --artifact-dir /tmp/v382
+      - name: Show result
+        if: always()
+        run: |
+          cat /tmp/v385-current-odds-margin/result.json 2>/dev/null || true
+          cat /tmp/v385-current-odds-margin/thresholds.csv 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v385-current-odds-margin-${{ github.run_id }}
+          path: /tmp/v385-current-odds-margin/
+          retention-days: 30
