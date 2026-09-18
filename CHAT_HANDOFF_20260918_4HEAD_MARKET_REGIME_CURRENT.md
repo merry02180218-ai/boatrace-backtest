@@ -1712,3 +1712,12 @@ Status: `HEAD4_WALL3_OPEN_RESCUE_PROMISING__123R_SHADOW_ONLY__NO_SUPPORT_RESCUES
 - No production thresholds, tickets, monitoring parent, or live decision semantics changed.
 
 Status: `HEAD4_WALL3_OPEN_RESCUE_SHADOW_LIVE_READY__OFFICIAL_DECISION_UNCHANGED`
+
+
+## INCIDENT / BEFORE — Marugame 10R scheduled task did not launch strict GitHub run; recover with Omura 6R
+- Scheduled task last_run_time was 2026-09-18 19:24:04 JST, but no trigger-file mutation / strict GitHub Actions Run / Artifact was created for Marugame 10R.
+- Therefore Marugame 10R has **no valid prospective final BET/PASS judgment**. Deadline 19:39 JST has passed; do not reconstruct it post hoc and do not read target result/payout to pretend a live decision.
+- Root operational issue: the scheduled chat task executed, but it did not perform the GitHub trigger mutation required by the push-triggered workflow.
+- Immediate recovery target: Omura 6R (JCD24), deadline 19:56 JST, already confirmed as a corrected-PRE monitoring_parent=true race.
+- Trigger the existing strict monitored workflow directly by updating `.github/triggers/live-4head-120r-true-monitor.json`.
+- Keep persistent exhibition polling / fail-closed safety cutoffs. Do not use benchmark override. Results/payout remain unread.
