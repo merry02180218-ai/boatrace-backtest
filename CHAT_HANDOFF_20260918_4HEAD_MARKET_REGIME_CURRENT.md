@@ -1289,3 +1289,109 @@ Dedicated report:
 
 Status:
 `HEAD4_120R_FAST_LASTMINUTE_INFRA_SUCCESS__TRUE_MONITORED_LIVE_NEXT`
+
+
+## FAST POST-EXHIBITION LIVE HARDENING — 2026-09-18
+
+User concern:
+- post-exhibition decisions historically error or run too slowly to make the deadline.
+- user explicitly clarified that September completed prior-date outcomes MAY be used for operational learning/history.
+
+### Causal September rule
+Operational LIVE now allows:
+- completed prior dates, including Sep 1..target_date-1, in causal history/model state;
+- NEVER target-race result/payout before decision;
+- NEVER future-relative outcomes.
+This supersedes the earlier blanket September-UNREAD rule for LIVE operation.
+
+### Bottleneck found and fixed
+Original daily state replay was slow because it fetched ~350 historical dates one-by-one from GitHub raw.
+Replaced with local sparse checkout and local-file replay.
+
+Measured daily-state cache:
+- history through 2026-09-17
+- settled races loaded: 47,520
+- players: 1,641
+- wall time: **4.18s** (another run 4.28s / 4.59s)
+- this is intended to run once per day, not per race.
+
+### Fast 120R last-minute path
+New fast runner:
+- `run_4head_120r_lastminute_fast.py`
+- skips the heavy POST/ENV/A full chain for the 120R research/live rule;
+- uses only:
+  1. current race card + Waku10,
+  2. daily causal player/ST state through previous day,
+  3. current exhibition/direct-info sources,
+  4. frozen v283 SECOND/conditional THIRD inference,
+  5. opponent_mass,
+  6. pre-deadline trifecta odds,
+  7. frozen 120R selection rule.
+
+Reliability additions present in latest runner:
+- exhibition polling/retry;
+- 4s request timeout;
+- exhibition fail-closed safety margin: 75s before deadline;
+- odds polling/retry;
+- official BOAT RACE + BOATCAST odds are fetched in parallel;
+- first complete 120-combo source wins;
+- odds fail-closed safety margin: 45s before deadline;
+- unavailable data => `NO_BET_DATA_NOT_READY`, never stale/incomplete BET;
+- target result/payout never read.
+
+### Actual pre-deadline benchmark
+Official schedule: Gamagori 6R deadline 17:48 JST.
+Run:
+- `35326011735`
+- Job: `105539098237`
+- conclusion: SUCCESS
+- Artifact: `10538984321`
+- digest: `sha256:7adcb4b75c29c2ec48cd20a28a2706e0fbd69857f74f6b98b193f99960182c3e`
+- run head SHA: `265921a616b239fcc27ee08af5dd90184de52518`
+
+Timing:
+- daily state: **4.18s**
+- fast last-minute runner wall: **5.18s**
+- exhibition fetch + build: **0.521s**
+- v283 input build: **0.00033s**
+- v283 inference: **0.00168s**
+- odds fetch: **4.238s**
+- decision timestamp: **17:46:22.302 JST**
+- deadline: **17:48:00 JST**
+- completed about **97.7s before deadline**
+
+Important failure/fallback evidence:
+- official BOAT RACE odds source timed out at 4s;
+- BOATCAST parallel odds source succeeded in the same first polling round;
+- `fallback_used=true`;
+- `odds_attempts=1`;
+- exhibition attempts=1.
+This demonstrates the fallback path actually works under a real official-source timeout.
+
+The benchmark race was not in the 29R internal parent, so its semantic output was `BENCHMARK_ONLY`; however the full exhibition/v283/odds timing path is identical to a monitored race. No betting decision was promoted from this benchmark.
+
+### Workflow-start overhead
+The one-off GitHub Actions test was created at ~17:45:37 and decision completed 17:46:22, about 45s end-to-end including:
+- runner allocation,
+- checkout/setup,
+- package install,
+- sparse historical checkout,
+- daily state generation,
+- final 5.18s decision.
+
+For real operation, daily state and PRE inputs should be prepared once in the morning so per-race workflow does not repeat history checkout/cache creation.
+
+### Current confidence / remaining work
+- Core inference speed: PASS.
+- Live predeadline fetch + inference: PASS.
+- Official odds timeout fallback: PASS.
+- Missing-data fail-closed: PASS.
+- Target-result causality: PASS by code contract.
+- Remaining hardening:
+  1. bundle daily state into the morning PRE artifact;
+  2. remove sparse history checkout from per-race runs;
+  3. trim per-race dependencies to lower Actions startup;
+  4. run the same actual-deadline test on one of today's true 29R monitoring-parent races when its exhibition is available.
+- Future monitored candidates from today's 29R still upcoming at this point include e.g. Marugame 10R, Omura 6R, Gamagori 11R; display/watch status must be taken from the corrected PRE artifact.
+
+Status: `HEAD4_120R_FAST_LASTMINUTE_PREDEADLINE_PASS__5P18S_CORE__CACHE_PREWARM_NEXT`
