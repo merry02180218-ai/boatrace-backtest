@@ -400,3 +400,28 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - outputへ shadow profile / applied / risk / wall score / attack4 score / shadow tickets を追加。
 - 既存status / attention_level / tickets / historical production sentinelは変更しない。
 - 9/17および9/18結果払戻は使わない。
+
+
+## AFTER — LIVE wall3 shadow tickets 実装・回帰完了
+- shadow profile constants commit `ccd707022a1448bfb3df434306d4c1998f02d910`。
+- LIVE finalizer shadow出力 commit `f402e3ee8c567893ccd0777115267084ad720188`。
+- 既存 `tickets` / status / attention_level / WATCH判定は変更していない。WATCH/PASS時のみ研究用 `wall3_shadow_*` を追加。
+- shadow設定:
+  - profile `1HEAD_WATCH_WALL3_TICKET_SHADOW_V355_SCORE_A406_G2_300_G3_050`
+  - attack4 >= .60
+  - wall score weights EX=.20 / ST=.40 / straight=.25 / orig_avg=.15
+  - risk=max(0,-wall_score)
+  - SECOND g2=3.0 / THIRD g3=.5
+- saved pre-race びわこ7Rで回帰:
+  - regression script commit `6bd75dab70edc580f845629c8932df23d3c37c2c`
+  - workflow commit `c2bf9ee0d89c5072def5428db46eca646dc8adec`
+  - Run `35315958216` / Job `105507538521` success
+  - Artifact `10535710397`
+  - AUDIT_OK=true / result_or_payout_used=false
+  - official ticketsは完全不変: `1-3-5 / 1-3-2 / 1-2-3`
+  - wall3 shadow: `1-4-5 / 1-4-3 / 1-2-4`
+  - wall_score=-.47 / attack4_score=.63 / risk=.47 / shadow applied=true
+- したがって、今後のLIVE「判別して」では従来の正式3点に加えて、WATCHでwall3リスクが発火した場合はshadow3点も同じfinal JSONから取得可能。
+- まだproduction ticket置換はしていない。forward evidenceを貯めるまでは research-only。
+- September 9/17 outcomes UNREAD、9/18結果/払戻もこの研究・回帰では未使用。
+- 次の再開地点: 次回WATCH LIVE判定で official tickets と wall3_shadow_tickets を併記し、前向きサンプルを蓄積。別研究としては operational WATCH73Rに対する周辺設定の追加paired監査/forward promotion条件設計が可能。
