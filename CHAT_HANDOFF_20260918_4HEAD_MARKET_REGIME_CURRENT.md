@@ -1721,3 +1721,31 @@ Status: `HEAD4_WALL3_OPEN_RESCUE_SHADOW_LIVE_READY__OFFICIAL_DECISION_UNCHANGED`
 - Immediate recovery target: Omura 6R (JCD24), deadline 19:56 JST, already confirmed as a corrected-PRE monitoring_parent=true race.
 - Trigger the existing strict monitored workflow directly by updating `.github/triggers/live-4head-120r-true-monitor.json`.
 - Keep persistent exhibition polling / fail-closed safety cutoffs. Do not use benchmark override. Results/payout remain unread.
+
+
+## AFTER — Marugame scheduler incident root fix: GitHub-native watchdog
+- The prior ChatGPT one-time automation was not sufficient: it executed its prompt but did not mutate the trigger file, so Marugame 10R never got a strict GitHub Run.
+- Root operational fix is now implemented **inside GitHub Actions**, so the final live launch no longer depends on a ChatGPT scheduled task.
+- Added watchlist:
+  - `.github/live/head4_120r_watchlist.json`
+  - initial remaining target: Gamagori 11R, deadline 20:15 JST, watch window begins 20 minutes before deadline.
+  - commit `e86f4e184da776fcdba962c6e17fa72c7f0be185`.
+- Added workflow:
+  - `.github/workflows/live-4head-120r-watchdog.yml`
+  - GitHub cron every 5 minutes + workflow_dispatch + push trigger;
+  - reads JST watchlist;
+  - enters a target only during [deadline-20min, deadline-75sec);
+  - once inside the window, starts the strict monitored runner and keeps polling exhibition every 2s;
+  - same fail-closed safety cutoffs (exhibition 75s / odds 45s / final 60s);
+  - checks existing target-named artifact to suppress duplicate completed decisions;
+  - workflow-level concurrency prevents parallel duplicate watchdog decisions.
+  - commit `be9bedf9b5f1f9663e2e27a7c03e7962885620bb`.
+- Immediate validation:
+  - Run `35336187123`
+  - Job `105571450311`
+  - SUCCESS
+  - at 19:44:39 JST it correctly logged `WATCHDOG_NO_TARGET window` because Gamagori 11R's 20-minute window had not yet opened.
+- This fixes the specific Marugame failure mode: no external chat reminder is needed to mutate a GitHub trigger at the right moment.
+- Omura 6R recovery remains separately running from direct trigger Run `35335946046`.
+
+Status: `HEAD4_LIVE_TRIGGER_ROOT_FIXED_GITHUB_NATIVE_WATCHDOG`
