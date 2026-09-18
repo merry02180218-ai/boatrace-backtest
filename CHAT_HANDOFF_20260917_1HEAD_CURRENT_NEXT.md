@@ -241,3 +241,10 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 現在時刻確認: 2026-09-18 12:59 JST。直前判定は既存LIVE workflow `.github/workflows/chat-live-1head-v351-request.yml` を使い、daily cache -> deadline -> exhibition probe -> 新LIVE gate（env_w=.05 / q=.70）-> finalize の順で実施する。
 - 2026-09-18結果/払戻は使用しない。2026-09-17結果/払戻もUNREAD維持。
 - 同時にv352 wall3 risk audit Run 35305095666を継続監視する。
+
+
+## BEFORE — びわこ7R LIVE展示未公開の再試行修正
+- 初回LIVE Run 35305252945 / Job 105476026971 は daily base resolve 成功後、`Deadline exhibition and v351 final` で failure。
+- ログ上は13:00:14 JSTから4回probeを行い約1分後にexit 1。公式BOAT RACE びわこ7R直前情報でも13:02 JST時点で展示タイム/ST展示が未掲載。締切予定は13:17。
+- 判定ロジックのDROPではなく展示未公開。結果/払戻は未使用。
+- これから: LIVE workflowのartifact uploadを `if: always()` にし、deadline/window/exhibition_errorも失敗時に残す。その後、展示公開後に同raceを再発火して新LIVE gateで最終判定する。
