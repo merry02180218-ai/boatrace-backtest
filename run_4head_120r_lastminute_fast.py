@@ -162,22 +162,32 @@ def fetch_official_odds(hd,jcd,rno,deadline,timeout=4):
       'result_endpoint_requested':False,'payout_endpoint_requested':False}
 
 def wait_odds_ready(hd,jcd,rno,deadline,timeout=4,poll_interval=1.5,safety_seconds=45,max_wait_seconds=15):
+    """Poll two independent pre-result odds sources in parallel.
+
+    First complete 120-combo snapshot wins. This avoids serial timeout stacking.
+    """
     attempts=0; last=''; started=time.perf_counter()
     while True:
         attempts+=1
         errs=[]
-        try:
-            odds,meta=fetch_official_odds(hd,jcd,rno,deadline,timeout)
-            meta['fallback_used']=False
-            return odds,meta,attempts,last
-        except Exception as e:
-            errs.append(f'official={type(e).__name__}: {e}')
-        try:
-            odds,meta=fetch_boatcast_odds(hd,jcd,rno,deadline,timeout)
-            meta['fallback_used']=True
+        with ThreadPoolExecutor(max_workers=2) as ex:
+            futs=[
+              ('official',ex.submit(fetch_official_odds,hd,jcd,rno,deadline,timeout)),
+              ('boatcast',ex.submit(fetch_boatcast_odds,hd,jcd,rno,deadline,timeout)),
+            ]
+            results=[]
+            for name,fut in futs:
+                try:
+                    odds,meta=fut.result()
+                    results.append((name,odds,meta))
+                except Exception as e:
+                    errs.append(f'{name}={type(e).__name__}: {e}')
+        if results:
+            # Prefer official when both complete in the same polling round.
+            results.sort(key=lambda z:0 if z[0]=='official' else 1)
+            name,odds,meta=results[0]
+            meta['fallback_used']=(name!='official')
             return odds,meta,attempts,'; '.join(errs)
-        except Exception as e:
-            errs.append(f'boatcast={type(e).__name__}: {e}')
         last='; '.join(errs)
         remain=(deadline-datetime.now(JST)).total_seconds()
         elapsed=time.perf_counter()-started
@@ -186,14 +196,35 @@ def wait_odds_ready(hd,jcd,rno,deadline,timeout=4,poll_interval=1.5,safety_secon
         time.sleep(min(poll_interval,max(0.2,remain-safety_seconds)))
 
 def parse_od3(body):
+    """Parse BOATCAST bc_smt_od3.
+
+    Observed live format:
+      line0=data=
+      line1=1
+      lines2..7 = racer-name + 20 odds + 5 trailing zero fields (+ optional empty tab)
+
+    Only the first 20 fields after the racer name are odds. Trailing zero/status
+    fields are deliberately ignored.
+    """
     lines=body.splitlines()
     if len(lines)<8 or not lines[0].lstrip().startswith('data=') or lines[1].split('\t')[0].strip()!='1':
-        raise Fast120Error('od3 not ready/status!=1')
+        raise Fast120Error(f'od3 not ready/status!=1 lines={len(lines)}')
     vals=[]
-    for row in lines[2:8]:
+    for row_idx,row in enumerate(lines[2:8],start=1):
         cells=row.split('\t')
-        if len(cells)<21:raise Fast120Error('od3 row incomplete')
-        vals.extend([x.strip() for x in cells[1:21]])
+        # Keep empty trailing cells for diagnostics but only consume positions 1..20.
+        if len(cells)<21:
+            raise Fast120Error(f'od3 row incomplete first={row_idx} cells={len(cells)} raw={row[:160]!r}')
+        odds_cells=[x.strip().replace(',','') for x in cells[1:21]]
+        if len(odds_cells)!=20:
+            raise Fast120Error(f'od3 row odds-count first={row_idx} count={len(odds_cells)}')
+        for pos,v in enumerate(odds_cells,1):
+            try:x=float(v)
+            except:
+                raise Fast120Error(f'bad od3 value first={row_idx} pos={pos} value={v!r}')
+            if not math.isfinite(x) or x<=0:
+                raise Fast120Error(f'nonpositive od3 first={row_idx} pos={pos} value={x}')
+            vals.append(x)
     if len(vals)!=120:raise Fast120Error(f'od3 count {len(vals)}')
     combos=[]
     for a in range(1,7):
@@ -202,13 +233,9 @@ def parse_od3(body):
             for d in range(1,7):
                 if d in (a,b):continue
                 combos.append(f'{a}-{b}-{d}')
-    out={}
-    for k,v in zip(combos,vals):
-        try:x=float(v)
-        except:raise Fast120Error(f'bad od3 value {k}={v!r}')
-        if x<=0:raise Fast120Error(f'nonpositive od3 {k}={x}')
-        out[k]=x
-    return out
+    if len(combos)!=120 or len(set(combos))!=120:
+        raise Fast120Error('internal trifecta combo ordering invariant failed')
+    return dict(zip(combos,vals))
 
 def fetch_boatcast_odds(hd,jcd,rno,deadline,timeout=4):
     require_before_deadline(deadline,'before BOATCAST odds fetch')
@@ -369,7 +396,7 @@ def main():
       'head_prob':hp,'opponent_mass':mass,'tickets':tickets,'ticket_odds':dict(zip(tickets,vals)),'composite_odds':comp,
       **d,'decision':'BET' if d['selected'] and monitored else ('BENCHMARK_ONLY' if not monitored else 'PASS'),
       'daily_state_history_end':state.get('history_end'),'september_prior_history_allowed':True,
-      'target_race_result_used':False,'payout_used':False,'current_exhibition_used':True,'predeadline_odds_used':True,'odds_source':'BOATCAST_bc_smt_od3',
+      'target_race_result_used':False,'payout_used':False,'current_exhibition_used':True,'predeadline_odds_used':True,'odds_source':meta.get('source'),
       'exhibition_attempts':ex_attempts,'exhibition_last_retry_error':ex_last,'odds_attempts':od_attempts,'odds_last_retry_error':od_last,
       'safety_seconds':{'exhibition':a.exhibition_safety_seconds,'odds':a.odds_safety_seconds},
       'odds_snapshot':meta,'deadline_jst':deadline.isoformat(),'decision_time_jst':now.isoformat(),
