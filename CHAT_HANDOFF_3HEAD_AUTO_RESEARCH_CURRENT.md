@@ -184,3 +184,13 @@ Changes in research/run_3head_funsite_broad50.py:
 - Secondary defect found during source inspection before patching: the newly added `diagnostic_topn` block was written as literal `\\n` text on one physical comment line, which would leave `out` undefined after the first failure is fixed.
 - Repair both defects only; preserve February-only selection/stability logic, March frozen one-shot semantics, v288 production unchanged, July/August NON-PRISTINE, and September outcomes UNREAD.
 - After patch, require a fresh run from a new main SHA; do not rerun Run 35302745294.
+
+
+## AFTER WORK — Broad50 Run 35302745294 failure repair (2026-09-18)
+- FAILED run inspected: Run **35302745294** / Job **105468616620**, head SHA **fafada437d6771bc5be14a476727b4133b246f0e**.
+- Exact runtime error: `AttributeError: 'numpy.ndarray' object has no attribute 'assign'` in base-family v2 selection.
+- Repair commit: **54a1219dc0d912d13a04de53fcb22c8ca080010a** (`fix: repair broad50 v2 selection and diagnostic block`).
+- Base-family v2 selection now assigns scores onto `v2` DataFrame before thresholding; no research gate/target was changed.
+- The malformed literal `\\n` diagnostic block was converted to real source lines, so `diagnostic_topn` for N=10/20/30/50/75/100/150/200 can be emitted.
+- production v288 unchanged; September outcomes remain UNREAD; July/August remain NON-PRISTINE.
+- Verification is NOT complete until a fresh `research-3head-funsite-broad50` run uses commit 54a1219d... or a later main containing it. Do not rerun old Run 35302745294.
