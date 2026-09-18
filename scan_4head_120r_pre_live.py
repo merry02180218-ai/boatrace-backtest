@@ -6,14 +6,15 @@ Target:
 - keep a wider internal monitoring parent for later post-exhibition 120R scoring;
 - never read target-day or September-2026 result files.
 
-September discipline
---------------------
-The wide-parent motor/player histories are frozen at 2026-08-31 so this scanner
-does not consume September outcome files at all. Current race-card data is allowed
-because it is pre-result input.
+LIVE causal discipline
+----------------------
+The wide-parent motor/player histories may use completed prior dates, including
+September, through target_date-1. Target-date results/payouts are never read.
+Current race-card data is allowed because it is pre-result input.
 
-The v250 PRE scorer uses its existing frozen fit through 2026-06-30 and only
-program/preview state afterwards. It does not read post-cutoff result labels.
+The v250 PRE scorer keeps its frozen label-fit cutoff through 2026-06-30 for
+research compatibility, while its causal feature state may advance through prior
+completed dates.
 
 User-facing display:
   monitoring_parent AND (head_prob >= .18 OR v250_PRE >= .12)
@@ -88,6 +89,25 @@ def venue(card):
 def mkey(card,b):
     return venue(card),str(card.get(f'艇{b}_モーター番号','')).strip()
 
+def load_daily_parent_state(path,day):
+    obj=json.loads(Path(path).read_text(encoding='utf-8'))
+    if obj.get('schema')!='head4_120r_daily_state_v1':
+        raise RuntimeError('daily-state schema mismatch')
+    if obj.get('target_date')!=str(day):
+        raise RuntimeError(f"daily-state target mismatch {obj.get('target_date')} != {day}")
+    if obj.get('target_date_results_used') is not False:
+        raise RuntimeError('daily-state target-date contamination')
+    mh={}
+    for k,v in (obj.get('motors') or {}).items():
+        if '|' not in k:
+            continue
+        venue_code,motor_no=k.split('|',1)
+        mh[(venue_code,motor_no)]=[int(v.get('w',0)),int(v.get('n',0))]
+    ph={}
+    for reg,v in (obj.get('players') or {}).items():
+        ph[str(reg)]=[int(v.get('w',0)),int(v.get('n',0))]
+    return mh,ph,obj
+
 def build_frozen_aug31_state():
     """Build player and motor win histories through Aug-31 only.
 
@@ -136,7 +156,7 @@ def frozen_parent_features(card,motor_hist,player_hist):
     return {
       'motor_win_diff_4v3':motor_win_diff,
       'motor_2ren_diff_4v3':motor_2ren_diff,
-      'player4_all_win_frozen_aug31':player4,
+      'player4_all_win_prior':player4,
       'parent_missing_motor_win':int(miss_motor_win),
       'parent_missing_motor_2ren':int(miss_motor_2ren),
       'parent_missing_player':int(miss_player),
@@ -199,7 +219,7 @@ def v250_scores(day,cards,waku):
     return dict(zip(q.race_code,q.v250_PRE))
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--date');args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--date');ap.add_argument('--daily-state');args=ap.parse_args()
     day=resolve_date(args.date)
     if day<date(2026,9,1):
         raise RuntimeError('LIVE trial scanner is intended for September+ only')
@@ -214,8 +234,15 @@ def main():
     if not cards or len(waku)!=len(cards):
         raise RuntimeError(f'invalid current inputs cards={len(cards)} waku={len(waku)}')
 
-    # Explicit target-day/result guard: there is no code path opening Sep results.
-    motor_hist,player_hist=build_frozen_aug31_state()
+    if args.daily_state:
+        motor_hist,player_hist,daily_meta=load_daily_parent_state(args.daily_state,day)
+        parent_state_cutoff=daily_meta.get('history_end')
+        september_prior_history_allowed=bool(daily_meta.get('september_prior_results_allowed'))
+    else:
+        motor_hist,player_hist=build_frozen_aug31_state()
+        daily_meta={}
+        parent_state_cutoff='2026-08-31'
+        september_prior_history_allowed=False
     ha=load_head_model()
     p250=v250_scores(day,cards,waku)
 
@@ -266,8 +293,9 @@ def main():
       'policy':'HEAD4_120R_PRE_DISPLAY_RESEARCH',
       'target_date':str(day),
       'target_day_results_read':False,
-      'september_result_files_read':False,
-      'motor_player_state_cutoff':'2026-08-31',
+      'target_day_results_read':False,
+      'september_prior_history_allowed':september_prior_history_allowed,
+      'motor_player_state_cutoff':parent_state_cutoff,
       'racecard_headprob_fit_cutoff':'2026-06-30',
       'v250_fit_label_cutoff':'2026-06-30',
       'current_exhibition_used':False,
@@ -290,7 +318,7 @@ def main():
        f'- 内部監視候補: {len(watch)}R',
        f'- 表示用事前候補: **{len(disp)}R**',
        f'- 親条件欠損: {int(df.parent_feature_missing.sum())}R（motor_win {int(df.parent_missing_motor_win.sum())} / motor2連 {int(df.parent_missing_motor_2ren.sum())} / player {int(df.parent_missing_player.sum())}）',
-       '- 展示・直前オッズ・9月結果は不使用。',
+       f'- 展示・直前オッズは不使用。親履歴は {parent_state_cutoff} までの完了レースを使用。',
        '- 表示外でも内部監視候補は展示後の最終判定対象。',
        '',
        '|場|R|4号艇|head_prob|v250 PRE|理由|',
@@ -301,7 +329,7 @@ def main():
     (outdir/'pre_display.md').write_text(md,encoding='utf-8')
     print(md)
     print('HEAD4_120R_PRE_LIVE_TRIAL_OK')
-    print('9月結果_UNREAD')
+    print('TARGET_DAY_RESULTS_UNREAD')
     print('本番変更なし')
 
 if __name__=='__main__':
