@@ -7,12 +7,16 @@ keeping each universe fixed and changing only the 3-ticket opponent ordering.
 September outcomes are forbidden.
 """
 from collections import defaultdict
+from concurrent.futures import ThreadPoolExecutor
+from datetime import timedelta
+import urllib.request
 from pathlib import Path
 import json, math
 import numpy as np
 import pandas as pd
 
 import onehead_production_profile as prod
+import backtest
 import run_v299_1head_trifecta3_policy_search as v299
 import run_v346_1head_v345_production_regression as v346
 import run_v347_1head_opponent_attackcore as v347
@@ -37,6 +41,32 @@ ATTACK_MIN=.60
 G2=.50
 G3=.50
 
+
+def install_preview_cache():
+    paths=[]
+    d=v337.PRELOAD
+    last=pd.Timestamp('2026-08-31').date()
+    while d<=last:
+        ymd=d.strftime('%Y/%m/%d')
+        for kind in ('stt','tkz','original_exhibition'):
+            paths.append(f'data/previews/{kind}/{ymd}.csv')
+        d+=timedelta(days=1)
+    original=backtest.fetch
+    def one(path):
+        try:
+            with urllib.request.urlopen(backtest.BASE+path,timeout=30) as r:
+                return path,r.read().decode('utf-8-sig')
+        except Exception:
+            return path,''
+    cache={}
+    with ThreadPoolExecutor(max_workers=32) as ex:
+        for path,txt in ex.map(one,paths):
+            cache[path]=txt
+    def cached(path):
+        if path in cache:return cache[path]
+        return original(path)
+    backtest.fetch=cached
+    return {'paths':len(paths),'nonempty':sum(bool(v) for v in cache.values())}
 
 def norm(q):
  s=sum(max(float(v),0.0) for v in q.values())
@@ -123,6 +153,7 @@ def baseline_metrics(rows,cache):
 
 def main():
  if not prod.SEPTEMBER_OUTCOMES_MUST_REMAIN_UNREAD:raise RuntimeError('September guard disabled')
+ prefetch=install_preview_cache();print('preview_cache',prefetch,flush=True)
  y=grid.universe();maps=v347.opponent_maps();cache={}
  sels={name:select_universe(y,cfg,maps,{}) for name,cfg in UNIVERSES.items()}
  union=set().union(*(set(s.race_code) for s in sels.values()))
@@ -161,7 +192,7 @@ def main():
  robust=grp[(grp.nonnegative_all>=4)&(grp.positive_dev>=2)&(grp.nonnegative_support>=4)].sort_values(
      ['positive_all','positive_dev','mean_delta_hits','mean_delta_roi_pp'],ascending=False)
  grp.to_csv(OUT/'generalization.csv',index=False)
- result={'universes':{k:{'cfg':UNIVERSES[k],'baseline':bases[k]} for k in UNIVERSES},
+ result={'preview_cache':prefetch,'universes':{k:{'cfg':UNIVERSES[k],'baseline':bases[k]} for k in UNIVERSES},
          'fixed_attack_min':ATTACK_MIN,'fixed_g2':G2,'fixed_g3':G3,
          'best_generalization':robust.iloc[0].to_dict() if len(robust) else None,
          'SEPTEMBER_OUTCOMES_READ':False,'PRODUCTION_CHANGED':False,'AUDIT_OK':True}
