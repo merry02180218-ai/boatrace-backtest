@@ -30,11 +30,12 @@ FAMILIES={
 def build_one(r,payout):
     p2,pc=v365.formal_post_five6(r)
     pair=v299.pair_prob(p2,pc,prod.TICKET_ALPHA)
-    ranked=sorted(pair.items(),key=lambda kv:(-float(kv[1]),kv[0]))
-    top=ranked[:3]
-    ts=';'.join(f'1-{s}-{t}' for (s,t),_ in top)
+    hybrid=v299.STRATEGIES['HYBRID'](p2,pc,pair)
+    if len(hybrid)<4: raise RuntimeError('HYBRID ranking shorter than 4')
+    formal=hybrid[:3]
+    ts=';'.join(f'1-{s}-{t}' for s,t in formal)
     actual=str(r['actual_combo']); hit=int(actual in ts.split(';'))
-    vals=np.array([max(float(v),1e-15) for _,v in ranked],dtype=float)
+    vals=np.array([max(float(v),1e-15) for v in pair.values()],dtype=float)
     vals=vals/vals.sum()
     ent=float(-(vals*np.log(vals)).sum()/math.log(len(vals))) if len(vals)>1 else 0.0
     return {
@@ -42,11 +43,11 @@ def build_one(r,payout):
       'head_hit':int(r['head_hit']),'actual_combo':actual,'tickets':ts,'hit':hit,
       'payout100':int(payout),'p_head':float(r['p_head']),'opp_mass':float(r['opp_mass']),
       'v332_score':float(r['v332_score']),
-      'top3_mass':float(sum(float(v) for _,v in top)),
-      'margin34':float(ranked[2][1]-ranked[3][1]),
+      'top3_mass':float(sum(float(pair[x]) for x in formal)),
+      'margin34':float(pair[formal[2]]-pair[hybrid[3]]),
       'concentration':float(1.0-ent),
       'pair_entropy_norm':ent,
-      'top1_pair_prob':float(ranked[0][1]),
+      'top1_pair_prob':float(pair[formal[0]]),
     }
 
 def metric(z):
