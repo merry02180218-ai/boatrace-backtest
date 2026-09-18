@@ -65,6 +65,7 @@ jobs:
           python run_1head_v351_live_finalize.py --input "final_input_$RACE_CODE.json" --out "live_v351_final_$RACE_CODE.json"
 
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: live-v351-final-${{ env.RACE_CODE }}
           retention-days: 14
@@ -75,3 +76,4 @@ jobs:
             window_*.json
             exhibition_*.json
             gate_*.json
+            exhibition_error_*.txt
