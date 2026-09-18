@@ -1725,3 +1725,10 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - score最大ticketのrank構成/的中寄与
 - 採用候補は「ALL ROI最大」ではなく、SUPPORTでequal非劣化・LOMO多数月非悪化・過度な集中を避けるものを優先。
 - production/LIVE stakingはv371完了まで変更しない。
+
+
+## v371 初回failure — pandas mode列名衝突
+- Run `35359370762` / Job `105646533493` failure / partial Artifact `10554156750`。
+- 原因: plateau抽出で `g.mode.eq('TOP')` と書き、DataFrame.modeメソッドと列名が衝突してAttributeError。
+- DEV grid / raw+robust選定 / support/all評価 / true LOMO計算までは実行済み。データ・研究条件のfailureではない。
+- 修正: `g['mode'].eq('TOP')` のみ。fresh Runで最終Artifactを作る。
