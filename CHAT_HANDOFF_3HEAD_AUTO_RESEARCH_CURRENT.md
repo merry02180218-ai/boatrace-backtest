@@ -387,3 +387,20 @@ Changes in research/run_3head_funsite_broad50.py:
 - Only after all February freezes are fixed, run a single March chronological replay for the frozen candidates. Earlier March outcomes may update later-day models exactly as in Wave7; no March result may change the candidate definitions.
 - Primary decision output: honest achievable head-rate/volume frontier, not a forced 50% claim.
 - September outcomes remain UNREAD; production v288 unchanged.
+
+
+## AFTER WORK — Broad50 Wave8 stable-rate frontier verified (Run 35311523017, 2026-09-18)
+- SUCCESS: Run **35311523017** / Job **105494382527** / Artifact **10533398792**; head SHA **bbbf31a24c3bfbfceb3abeceaf984571b6d814ed**.
+- Wave7 walk-forward candidate family was reused unchanged; February-only freeze logic, no March-guided tuning.
+- Clean populations/audits unchanged: Jan 4,963 / Feb 3,970 / Mar 4,482; February cross-source winner agreement 100%; previous-session date violations 0; September outcomes UNREAD.
+- Evaluated **15,780** candidate structures over rolling 14/21/28/42-day windows.
+- Stable frontier result under predeclared useful-support / venue / weekly requirements:
+  - floor 47%: **0 candidates**
+  - floor 45%: **0 candidates**
+  - floor 42.5%: **0 candidates**
+  - floor 40%: **0 candidates**
+- Therefore no February candidate froze at any of these useful-volume floors and **March remained unopened** for Wave8.
+- The Pareto top contains tiny-N 50%+ structures, but they fail support/venue/weekly requirements (examples include only 1-8 races per half). These are diagnostics only and must not be promoted.
+- Conclusion: under the current PRE feature family and leakage-safe walk-forward protocol, there is no evidence of a temporally stable >=40% 3-head selector with useful support. The earlier Wave4 50% Feb result is best treated as an unstable regime-specific pattern, not production signal.
+- Production v288 unchanged; September outcomes UNREAD.
+- Recommended next research direction: stop optimizing a hard head-rate target on the same feature family. Reframe around calibrated expected value / odds interaction and/or materially new PRE information sources, while preserving strict time-split evaluation.
