@@ -15,7 +15,7 @@ No target-race result/payout access.
 from __future__ import annotations
 import argparse,csv,json,math,time
 from concurrent.futures import ThreadPoolExecutor
-from datetime import datetime
+from datetime import datetime,time as dtime
 from pathlib import Path
 from typing import Any
 from zoneinfo import ZoneInfo
@@ -101,6 +101,14 @@ def decide(head_prob,mass,comp):
     sel=base77 or ((not base77) and comp>=2.5 and score>=.82)
     return {'selected':bool(sel),'base77':bool(base77),'current_comp7':bool(cur),'linear_score':float(score)}
 
+def parse_deadline_flexible(date8,s):
+    v=str(s).strip()
+    if len(v) in (5,8) and v[2]==':':
+        hh,mm,*rest=v.split(':')
+        ss=rest[0] if rest else '00'
+        return datetime(int(date8[:4]),int(date8[4:6]),int(date8[6:8]),int(hh),int(mm),int(ss),tzinfo=JST)
+    return live.parse_deadline(v)
+
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument('--date',required=True,help='YYYYMMDD')
@@ -111,7 +119,7 @@ def main():
     ap.add_argument('--timeout',type=int,default=8);ap.add_argument('--allow-unmonitored-benchmark',action='store_true')
     ap.add_argument('--out',required=True)
     a=ap.parse_args(); total0=time.perf_counter(); stages={}
-    deadline=live.parse_deadline(a.deadline_jst); live.require_before_deadline(deadline,'fast120 startup')
+    deadline=parse_deadline_flexible(a.date,a.deadline_jst); live.require_before_deadline(deadline,'fast120 startup')
     code=f'{a.date}{a.jcd:02d}{a.race:02d}'
     cards=bycode(rows_local(a.race_cards));waku=bycode(rows_local(a.waku10));pre=bycode(rows_local(a.pre_all))
     if code not in cards or code not in waku or code not in pre:raise Fast120Error(f'missing current row {code}')
