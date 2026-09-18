@@ -585,3 +585,12 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 共通原因: `baseline_rows()` はrace rowをdict化して返すが、`evaluate()` 内で `rr.actual_combo`, `rr.base_tickets` 等の属性参照をしていたため `AttributeError: 'dict' object has no attribute 'actual_combo'`。
 - 重要: 5母集団の選定・展示特徴再構築・opponentCore構築までは通過しており、母集団定義やデータ取得のfailureではない。
 - 修正方針: `rr['...']` へ統一。研究条件・母集団・パラメータは一切変更しない。fresh Runで再監査。
+
+
+## v360 修正版2回目failure — dict属性参照の残存2箇所
+- Run `35323403108` / Job `105530825105` failure / Artifact `10538226681`。
+- 前回の `rr.actual_combo` は修正され、その先へ進行。
+- 新しいfailure: `evaluate()` の出力recordで `rr.base_tickets`（および同じ行群に `rr.opp_mass`）が残っていた。
+- 母集団選定・展示再構築・opponent map構築は再び正常通過。
+- 今回は `rr.` 属性参照を全件検索して、Series用 `rr.get(...)` 以外をゼロ化する。
+- 同時に重い前半完了時点の `prepared_rows.pkl` をartifactへ保存。以後後半failureなら重い前半を再計算せずresume可能にする。
