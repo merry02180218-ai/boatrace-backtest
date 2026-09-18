@@ -2955,3 +2955,43 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   6. current formal wall3 + 5>6 ticket machineryを追加帯にも適用した3点100円均等でROI/頭率/exact3を評価。
 - 目標は全71Rを買うことではなく、+20〜40R程度を追加してcombined volumeを185〜205R付近へ伸ばせるかを見る。
 - September outcomes/payoutsはUNREAD維持。production/LIVE official gateは変更しない。
+
+
+## AFTER — v387 4HEAD-style added71 exhibition rescue
+- Script commit `f75e3b47ef8393d5579f6933e2adc0eb6bb524f4`; set-difference fix `22c247c183c156d81d0778f4550fbc1ba157481e`.
+- Workflow commit `cf0fc1afa4ca5eaab1721df0d87a89c1cba5d1f2`.
+- First Run `35382004598` failed only because code incorrectly assumed added71 was pure p_head<.79; actual set difference includes 1 race >=.79 because exhibition gate is refit per PRE universe.
+- Corrected success:
+  - Run `35382176160`
+  - Job `105720673428`
+  - Artifact `10562742211`
+  - digest `sha256:0239ecd455880a33ead43d6c7e67371b341a1bfaeceebe02e34a4705e38b8571`
+  - AUDIT_OK=true / September unread / production unchanged.
+- added71 identity = `H078_M375 236R - LIVE165 165R`:
+  - p_head range .78006〜.81530
+  - 70R are <.790, 1R is >=.790.
+- Current formal wall3+5>6 tickets, equal 100x3:
+  - LIVE165: head 140/165=84.85%, exact3 87/165=52.73%, ROI128.69%.
+  - added71: **head 63/71=88.73%**, exact3 33/71=46.48%, ROI100.28%.
+  - DEV added53: head88.68%, exact3 27/53, ROI112.77%.
+  - SUPPORT added18: head88.89%, exact3 6/18, ROI63.52%.
+- Main finding: expansion head quality is NOT the bottleneck; added71 head rate is even higher than LIVE165. SUPPORT deterioration is from opponent-3-ticket capture/payout, not 1-head selection.
+- DEV-only volume-first rescue score picked HEAD_EX_MASS q=.35:
+  - all selected48R, head93.75%, ROI114.03%
+  - DEV34R head94.12%, ROI135.69%
+  - SUPPORT14R head92.86%, ROI61.43%
+  - LIVE+rescue combined 213R ROI125.38%; SUPPORT combined42R ROI103.81%.
+- DEV LOMO for chosen rescue was positive in all five holdout months (ROI 114.6/152.0/121.7/124.3/137.1), but Jul-Aug SUPPORT ticket ROI still collapsed.
+- Therefore a head/exhibition rescue gate alone is insufficient. The next bottleneck is opponent/ticket confidence in the added band.
+
+## BEFORE — v388 added71 opponent-confidence rescue
+- Keep LIVE165 fixed and keep 3-ticket count fixed.
+- Use the same frozen added71 and current formal wall3+5>6 distributions.
+- Build result-free opponent confidence features after formal reranks:
+  - top3 pair probability mass
+  - pair rank3-vs-rank4 probability margin
+  - pair distribution concentration/entropy
+  - optional combination with exhibition score.
+- DEV Feb-Jun only for threshold/family comparison; SUPPORT Jul-Aug evaluated after freezing.
+- Objective: determine whether +15〜35 rescue races can preserve added-band exact3/ROI better than head/exhibition score alone.
+- No current/closing odds required in this pass. September outcomes unread. Production unchanged.
