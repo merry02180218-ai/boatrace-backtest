@@ -160,8 +160,10 @@ def summary(ms):
     rates=[ms[m][h]['rate'] for m in ['nov','dec','jan'] for h in ['h1','h2']]
     monthly={m:combined(ms[m]) for m in ['nov','dec','jan']}
     n=sum(x['n'] for x in monthly.values());h=sum(x['hits'] for x in monthly.values())
+    valid=[r for r in rates if r is not None]
+    persistent_worst=min(valid) if len(valid)==len(rates) else -1.0
     return {
-      'persistent_worst':min(rates),
+      'persistent_worst':persistent_worst,
       'combined_n':n,'combined_hits':h,'combined_rate':h/n if n else None,
       'avg_month_n':sum(x['n'] for x in monthly.values())/3,
       'monthly':monthly
