@@ -92,3 +92,24 @@
 - Select/freeze ensemble definitions using January only, stratified by useful support. February does **not** select N, k, members, thresholds, windows or formula settings.
 - Replay the frozen ensembles once on February and report worst-half precision at >=20/30/50/75/100 races per half. Primary comparison is Wave11 40.0% at >=20R/half and Wave9 volume ceilings.
 - March remains unopened; September outcomes UNREAD; production v288 unchanged.
+
+
+## AFTER WORK — Broad50 Wave12 January-frozen interaction ensemble result (Run 35316568275, 2026-09-18)
+- SUCCESS: Run **35316568275** / Job **105509396833** / Artifact **10535217625**; head SHA **da6f4e9189027815dd6217d142046f6347cd161b**.
+- January-only ensemble search itself produced strong in-sample stability (e.g. n_top=12,k=3: Jan H1 24/43=55.81%, H2 16/29=55.17%; n_top=20,k=5 at >=30R: 27/53=50.94%, 19/37=51.35%).
+- But the frozen January ensembles did not transfer to February:
+  - >=20R/half: best Feb H1 9/24=37.50%, H2 13/38=34.21%, worst-half **34.21%**, combined 22/62=35.48%.
+  - >=30R/half: worst-half **34.00%**, combined 29/83=34.94%.
+  - >=50R/half: worst-half **26.25%**, combined 54/195=27.69%.
+  - >=75R/half: worst-half **26.25%**.
+  - >=100R/half: worst-half **21.60%**, combined 88/370=23.78%.
+- This is materially below Wave11's narrow single-interaction pocket (40.0% at >=20R/half) and below Wave9 at useful volumes. Conclusion: January-only voting/union over frozen interactions amplifies month-specific overfit rather than producing robust volume.
+- March unopened; September UNREAD; production v288 unchanged.
+
+## BEFORE WORK — Broad50 Wave13 multi-month persistent interaction freeze (2026-09-18)
+- Goal: remove the remaining prior-month overfit by requiring interaction settings to survive **both December and January** before any February evaluation.
+- Use November 2025 only as history for December walk-forward; December outcomes are first validation month. January is second validation month. February is a one-shot transfer month and does not select formulas/settings.
+- Enumerate the same 19 oriented PRE base signals and pair interactions. For each exact candidate setting (window/mode/band/interaction/q), compute December H1/H2 and January H1/H2. Rank by the minimum rate across all four half-month blocks, with support/venue floors enforced in both months.
+- Build triple vocabulary only from signals appearing repeatedly among pair candidates that are jointly stable in December+January. Triple settings must also pass the same two-month persistence test before freeze.
+- Freeze candidate settings separately for minimum support 15/20/30/50/75/100 per half-month, deduplicate exact definitions, and then evaluate the frozen set once on February.
+- Primary output is February worst-half support frontier vs Wave11 (40.0% at >=20R/half) and Wave9. No March. September UNREAD; production v288 unchanged.
