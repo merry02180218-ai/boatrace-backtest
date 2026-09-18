@@ -1,0 +1,39 @@
+name: v368 1-head joint hit robustness
+on:
+  push:
+    paths:
+      - 'run_v368_1head_joint_hit_robustness.py'
+      - '.github/workflows/v368-1head-joint-hit-robustness.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Download v360 prepared artifact
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10539401122/zip" > /tmp/v360.zip
+          mkdir -p /tmp/v360
+          unzip -q /tmp/v360.zip -d /tmp/v360
+          test -f /tmp/v360/prepared_rows.pkl
+      - name: Run joint robustness
+        run: python run_v368_1head_joint_hit_robustness.py --prepared /tmp/v360/prepared_rows.pkl
+      - name: Show result
+        if: always()
+        run: cat /tmp/v368-joint-robustness/result.json 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v368-joint-hit-robustness-${{ github.run_id }}
+          path: /tmp/v368-joint-robustness/
+          retention-days: 30
