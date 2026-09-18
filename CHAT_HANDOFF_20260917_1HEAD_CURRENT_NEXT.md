@@ -248,3 +248,37 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - ログ上は13:00:14 JSTから4回probeを行い約1分後にexit 1。公式BOAT RACE びわこ7R直前情報でも13:02 JST時点で展示タイム/ST展示が未掲載。締切予定は13:17。
 - 判定ロジックのDROPではなく展示未公開。結果/払戻は未使用。
 - これから: LIVE workflowのartifact uploadを `if: always()` にし、deadline/window/exhibition_errorも失敗時に残す。その後、展示公開後に同raceを再発火して新LIVE gateで最終判定する。
+
+
+## AFTER — 2026-09-18 びわこ7R 直前判定
+- race_code=`202609181107`
+- 初回 Run 35305252945 / Job 105476026971 は展示未公開でprobe 4回後 failure。公式でも13:02時点では展示未掲載。判定ロジックのDROPではない。
+- failure時のdebug artifactを残すよう LIVE workflowを補強。commit `9bb93dbe3377a6b849e781f662ac5d7c80c197ba`。
+- 再試行 commit `8d5ff6f245baf594ce06caed07c38dd41c3aab7f`。
+- 再試行 Run `35305544461` / Job `105476877677` completed success。
+- Artifact `10530454019` name `live-v351-final-202609181107`。
+- deadline 13:17 JST / evaluated 13:05:45 JST / 約12.13分前。
+- 現行LIVE最終: **PASS / WATCH**。
+  - HEAD=.8015607255
+  - opponent mass=.4280898422
+  - head_exhibition_pass=true
+  - BASIC threshold .790/.375, WATCH mass .425
+  - env_w=.05 / q=.70
+  - tickets: `1-3-5 / 1-3-2 / 1-2-3`
+- 展示:
+  - 展示タイム: 1=6.73, 2=6.79, 3=6.80, 4=6.71, 5=6.77, 6=6.82
+  - ST展示: 1=-.04, 2=.02, 3=.12, 4=.02, 5=.09, 6=.04
+  - corrected ST: 3=0.0 / 4=0.6
+  - corrected EX: 3=.2 / 4=1.0
+  - corrected straight: 3=.2 / 4=.4
+  - corrected orig_avg: 3=.4667 / 4=.6
+- v352 wall3候補式を参考にした**未昇格の診断値**では、
+  - ST wall gap (3-4)=-.6
+  - EX wall gap=-.8
+  - straight wall gap=-.2
+  - avg wall gap≈-.133
+  - exhibition wall score≈-.47
+  - attack4 score≈.63
+  → 「3が弱く4が攻められる」鳴門9R型のwall3警戒ケースに該当し得る。これは現行判定をまだ上書きしない。v352歴史監査の結果待ち。
+- result/payout used=false / chronology_guard=true。9/17結果払戻UNREAD維持。
+- 次: v352 wall3 risk audit Run 35305095666 を最後まで確認し、こうしたケースを落とすと165R母集団のHEAD率/3点ROIが改善するかを判断する。
