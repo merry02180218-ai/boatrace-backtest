@@ -890,3 +890,73 @@ v250 PRE recall audit:
 - currently IN_PROGRESS.
 
 Status: `HEAD4_PRE_WIDE_PARENT_100PCT_RECALL_TOO_BROAD__V250_PRE_RECALL_RUNNING`
+
+
+## PRE-CANDIDATE DETAIL AUDIT — official result + practical-filter warning
+
+### Detailed head_prob PRE audit
+- Run: `35310003505`
+- Job: `105489898968`
+- conclusion: **SUCCESS**
+- Artifact: `10533178842` / `head4-pre-candidate-for-120r`
+- digest: `sha256:95ff090ac800265fb7db0145e60099d34c1cf2c96befaf83bb9b9a242ec2ff9a`
+- wide parent: 3,743R / avg 24.46R/day / final120 recall 120/120.
+- head_prob>=.10: 2,438R / avg 15.93R/day / 116/120 = 96.67% recall.
+- head_prob>=.14: 1,770R / avg 11.57R/day / 112/120 = 93.33% recall.
+
+### Existing v250 PRE model is NOT a good parent for frozen120
+- Run: `35310957111`
+- Job: `105492712848`
+- conclusion: SUCCESS
+- Artifact: `10533133682`
+- fixed PRE>=.28: 702R / avg 4.59R/day but only 57/120 = **47.5%** recall.
+- To reach 95% recall with v250 PRE alone requires PRE>=.135 -> 5,124R / avg 33.49R/day.
+- Therefore v250 PRE score alone is not suitable as the 120R pre-candidate parent.
+
+### Artifact-merge practical PRE research
+Using the successful wide-pre artifact and successful leakage-audited head_prob artifact, a simple PRE-only rescue family was tested.
+
+Clean practical rule candidate:
+- first require the wide causal parent:
+  - motor_win_diff_4v3 >= -0.029936...
+  - motor_2ren_diff_4v3 >= -7.08
+  - player4_all_win >= .215605
+- then shortlist if:
+  - `head_prob >= .14`
+  - OR `motor_win_diff_4v3 >= .12 AND motor_2ren_diff_4v3 >= 3.0`
+  - historical missing head_prob kept fail-open / NEEDS_SCORE
+- result: ~1,935R / avg **12.65R/day**
+- final120 captured 115/120 = **95.83%**
+- monthly recall:
+  - Apr 95.45%
+  - May 96.43%
+  - Jun 90.48%
+  - Jul 100%
+  - Aug 94.44%
+
+### CRITICAL WARNING: recall alone is not enough
+The 5 final120 races dropped by the practical 95.83% PRE shortlist contain:
+- 2 boat4 heads
+- **2 winning trifecta tickets**
+- total retrospective payout 187,760 JPY
+- those 5 omitted races alone retrospectively return 375.52%.
+
+If the 120R final set is filtered by that PRE shortlist:
+- 115R retained
+- retrospective ROI falls from 127.72% to **116.95%**
+- Jun retained subset ROI falls to ~51.49%
+- Aug retained subset ROI falls to ~77.05%
+
+Therefore the 95%-recall shortlist is **NOT approved** as a hard filter.
+It can only be used as a display-priority tier unless the missed profitable races are rescued by another pre-only signal.
+
+Specific missed winners:
+- 202606192105: head_prob .0471 / motor_win_diff .0051 / motor_2ren_diff +20.1 / player4 win .2590 / payout 135,600
+- 202608071409: head_prob .0928 / motor_win_diff -.0285 / motor_2ren_diff -1.6 / player4 win .2178 / payout 52,160
+
+Next step:
+- combine the leakage-audited head_prob with the existing v250 PRE score and other pre-only signals as OR-rescue;
+- require preservation of historical winning final120 races / payout mass in addition to raw final120 recall;
+- rerun v250 score persistence started at Run `35311685276`.
+
+Status: `HEAD4_PRE_SHORTLIST_DISPLAY_ONLY__HARD_FILTER_REJECTED_PENDING_WINNER_RESCUE`
