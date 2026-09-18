@@ -39,104 +39,93 @@ def numeric_features(d):
     ex={'rc','venue','date','settle__winner','y'}
     return [c for c in d.columns if c not in ex and pd.api.types.is_numeric_dtype(d[c]) and d[c].notna().sum()>=30]
 
-def in_band(frame,band):
+def band_mask(frame,band):
     rn=pd.to_numeric(frame.race_no,errors='coerce').to_numpy()
     return (rn>=band[0])&(rn<=band[1])
 
-def pct_ref(ref,x):
-    a=np.asarray(ref,float); a=a[np.isfinite(a)]
-    if len(a)==0:return np.full(len(x),np.nan)
-    a=np.sort(a)
+def pct_ref_sorted(sorted_ref,x):
     xx=np.asarray(x,float)
-    out=np.searchsorted(a,xx,side='right')/len(a)
+    out=np.searchsorted(sorted_ref,xx,side='right')/max(1,len(sorted_ref))
     out[~np.isfinite(xx)]=np.nan
     return out
 
-def band_signal_context(tr,band):
-    sub=tr.loc[in_band(tr,band)].copy()
+def make_signal_context(tr,frames,band):
+    bt=band_mask(tr,band)
     refs={}
-    for c in SIGNALS:
-        if c in sub.columns:
-            refs[c]=pd.to_numeric(sub[c],errors='coerce').to_numpy()
-    return sub,refs
-
-def signal_matrix(frame,refs):
-    cols=[]
     used=[]
     for c in SIGNALS:
-        if c in refs and c in frame.columns:
-            cols.append(pct_ref(refs[c],pd.to_numeric(frame[c],errors='coerce').to_numpy()))
-            used.append(c)
-    return np.column_stack(cols),used
+        if c not in tr.columns:continue
+        a=pd.to_numeric(tr.loc[bt,c],errors='coerce').to_numpy(dtype=float)
+        a=a[np.isfinite(a)]
+        if len(a)<50:continue
+        refs[c]=np.sort(a);used.append(c)
+    mats={}
+    for key,frame in frames.items():
+        cols=[]
+        for c in used:
+            x=pd.to_numeric(frame[c],errors='coerce').to_numpy(dtype=float)
+            cols.append(pct_ref_sorted(refs[c],x))
+        mats[key]=np.column_stack(cols)
+    return used,mats
 
-def score_from_weights(frame,refs,weights):
-    mat,used=signal_matrix(frame,refs)
-    w=np.array([weights.get(c,0.0) for c in used],float)
+def score_matrix(mat,w):
     valid=np.isfinite(mat)
     num=np.nansum(mat*w,axis=1)
-    den=np.nansum(valid*w,axis=1)
-    return np.divide(num,den,out=np.full(len(frame),np.nan),where=den>0)
+    den=np.sum(valid*w,axis=1)
+    return np.divide(num,den,out=np.full(len(mat),np.nan),where=den>0)
 
-def weight_grid():
+def weight_grid(used):
+    support_patterns=[
+      {},
+      {'sig_b1_pressure':.5},
+      {'sig_b4_counter_margin':.5},
+      {'sig_attack_motor_inner':.5},
+      {'sig_attack_recent_inner':.5},
+      {'sig_b1_pressure':.5,'sig_b4_counter_margin':.5},
+      {'sig_attack_motor_inner':.5,'sig_attack_recent_inner':.5},
+    ]
     rows=[]
     for wa in [1.5,2.0,2.5]:
       for wb in [1.5,2.0,2.5]:
        for wc in [.5,1.0,1.5]:
-        for wd in [0,.5]:
-         for we in [0,.5]:
-          for wf in [0,.5]:
-           for wg in [0,.5]:
-            w={
-              'sig_vs2_全国2連対率':wa,
-              'sig_vs2_全国平均ST':wb,
-              'sig_attack_player_inner':wc,
-              'sig_b1_pressure':wd,
-              'sig_b4_counter_margin':we,
-              'sig_attack_motor_inner':wf,
-              'sig_attack_recent_inner':wg,
-              'sig_rank_全国2連対率':.5,
-              'sig_rank_全国平均ST':.5,
-            }
-            rows.append(w)
+        for sp in support_patterns:
+         d={
+           'sig_vs2_全国2連対率':wa,
+           'sig_vs2_全国平均ST':wb,
+           'sig_attack_player_inner':wc,
+           'sig_rank_全国2連対率':.5,
+           'sig_rank_全国平均ST':.5,
+         }
+         d.update(sp)
+         rows.append({c:float(d.get(c,0.0)) for c in used})
     return rows
 
-def fit_band_models(tr,band,feats):
-    btr=tr.loc[in_band(tr,band)].copy()
-    models={}
-    train_scores={}
+def make_model_context(tr,frames,band,feats):
+    bt=band_mask(tr,band)
+    btr=tr.loc[bt].copy()
+    percs={key:[] for key in frames}
     for n in MODEL_NAMES:
         m=wave2_model(n);m.fit(btr[feats],btr.y)
-        models[n]=m
-        train_scores[n]=m.predict_proba(btr[feats])[:,1]
-    return btr,models,train_scores
+        sr=m.predict_proba(btr[feats])[:,1]
+        sr=np.sort(sr[np.isfinite(sr)])
+        for key,frame in frames.items():
+            s=m.predict_proba(frame[feats])[:,1]
+            percs[key].append(pct_ref_sorted(sr,s))
+    stacks={k:np.column_stack(v) for k,v in percs.items()}
+    gates={}
+    for q in MODEL_Q:
+        for k in MODEL_K:
+            gates[(q,k)]={key:((arr>=q).sum(axis=1)>=k) for key,arr in stacks.items()}
+    return gates
 
-def model_consensus(frame,band,models,train_scores,q,k):
-    bm=in_band(frame,band)
-    idx=np.where(bm)[0]
-    out=np.zeros(len(frame),dtype=bool)
-    if len(idx)==0:return out
-    sub=frame.iloc[idx]
-    votes=np.zeros(len(sub),dtype=int)
-    for n,m in models.items():
-        s=m.predict_proba(sub[FEATS])[:,1]
-        p=pct_ref(train_scores[n],s)
-        votes += (p>=q)
-    out[idx]=votes>=k
-    return out
-
-def attack_mask(frame,band,refs,weights,threshold):
-    bm=in_band(frame,band)
-    score=score_from_weights(frame,refs,weights)
-    return bm & np.isfinite(score) & (score>=threshold)
+def usable(z,min_n=8):
+    return z['v1']['n']>=min_n and z['v2']['n']>=min_n and z['v1']['venues']>=5 and z['v2']['venues']>=5
 
 def candidate_key(z):
     return (min(z['v1']['rate'] or 0,z['v2']['rate'] or 0),
             z['v1']['n']+z['v2']['n'],
             min(z['v1']['n'],z['v2']['n']),
             z['v1']['venues']+z['v2']['venues'])
-
-def usable(z,min_n=8):
-    return z['v1']['n']>=min_n and z['v2']['n']>=min_n and z['v1']['venues']>=5 and z['v2']['venues']>=5
 
 def freeze(rows,target):
     strict=[z for z in rows if usable(z,12) and z['v1']['rate'] is not None and z['v2']['rate'] is not None
@@ -150,73 +139,61 @@ def freeze(rows,target):
     out=dict(best);out['strict']=bool(strict)
     return out
 
-def march_eval(cand,mar,contexts):
-    ctx=contexts[tuple(cand['band'])]
-    if cand['kind']=='attack_score':
-        m=attack_mask(mar,tuple(cand['band']),ctx['refs'],cand['weights'],cand['threshold'])
-    elif cand['kind']=='model_consensus':
-        m=model_consensus(mar,tuple(cand['band']),ctx['models'],ctx['train_scores'],cand['q'],cand['k'])
-    else:
-        a=attack_mask(mar,tuple(cand['band']),ctx['refs'],cand['weights'],cand['threshold'])
-        b=model_consensus(mar,tuple(cand['band']),ctx['models'],ctx['train_scores'],cand['q'],cand['k'])
-        m=a&b
-    sel=mar.loc[m].sort_values(['date','rc']).copy()
-    n=len(sel);h=n//2
-    return {'n':n,'hits':int(sel.y.sum()),'rate':float(sel.y.mean()) if n else None,
-            'early_n':h,'early_hits':int(sel.iloc[:h].y.sum()),
-            'late_n':n-h,'late_hits':int(sel.iloc[h:].y.sum()),
-            'venue_count':int(sel.venue.nunique()) if n else 0}
+def public_candidate(z):
+    return {k:v for k,v in z.items() if not k.startswith('_')}
 
 def main():
-    global FEATS
     d,_=load_data()
     feb,mar,tr,v1,v2=split_feb(d)
-    FEATS=numeric_features(d)
+    feats=numeric_features(d)
+    frames={'tr':tr,'v1':v1,'v2':v2,'mar':mar}
     contexts={}
     rows=[]
-    wg=weight_grid()
 
     for band in BANDS:
-        btr,refs=band_signal_context(tr,band)
-        if len(btr)<200:continue
-        _,models,train_scores=fit_band_models(tr,band,FEATS)
-        contexts[band]={'refs':refs,'models':models,'train_scores':train_scores}
+        bt=band_mask(tr,band)
+        if int(bt.sum())<200:continue
+        used,mats=make_signal_context(tr,frames,band)
+        gates=make_model_context(tr,frames,band,feats)
+        bm={key:band_mask(frame,band) for key,frame in frames.items()}
+        contexts[band]={'used':used,'mats':mats,'gates':gates,'bm':bm}
 
-        # Continuous attack-score family.
         attack_rows=[]
-        for weights in wg:
-            st=score_from_weights(btr,refs,weights)
-            finite=st[np.isfinite(st)]
-            if len(finite)<100:continue
+        for weights in weight_grid(used):
+            w=np.array([weights[c] for c in used],float)
+            scores={key:score_matrix(mat,w) for key,mat in mats.items()}
+            ref=scores['tr'][bm['tr']]
+            ref=ref[np.isfinite(ref)]
+            if len(ref)<100:continue
             for q in QS:
-                th=float(np.nanquantile(finite,q))
-                m1=attack_mask(v1,band,refs,weights,th)
-                m2=attack_mask(v2,band,refs,weights,th)
+                th=float(np.quantile(ref,q))
+                masks={key:(bm[key]&np.isfinite(scores[key])&(scores[key]>=th)) for key in ['v1','v2','mar']}
                 z={'kind':'attack_score','band':list(band),'q':q,'threshold':th,'weights':weights,
-                   'v1':metric(m1,v1),'v2':metric(m2,v2)}
+                   'v1':metric(masks['v1'],v1),'v2':metric(masks['v2'],v2),
+                   '_mar_mask':masks['mar']}
                 if usable(z,8):
                     attack_rows.append(z);rows.append(z)
 
-        # Dedicated early-race model consensus.
-        model_rows=[]
-        for q in MODEL_Q:
-            for k in MODEL_K:
-                m1=model_consensus(v1,band,models,train_scores,q,k)
-                m2=model_consensus(v2,band,models,train_scores,q,k)
-                z={'kind':'model_consensus','band':list(band),'q':q,'k':k,
-                   'v1':metric(m1,v1),'v2':metric(m2,v2)}
-                if usable(z,8):
-                    model_rows.append(z);rows.append(z)
+        for (q,k),gm in gates.items():
+            z={'kind':'model_consensus','band':list(band),'q':q,'k':k,
+               'v1':metric(bm['v1']&gm['v1'],v1),'v2':metric(bm['v2']&gm['v2'],v2),
+               '_mar_mask':bm['mar']&gm['mar']}
+            if usable(z,8):rows.append(z)
 
-        # Attack score + specialist model consensus.
-        top_attack=sorted(attack_rows,key=candidate_key,reverse=True)[:60]
+        top_attack=sorted(attack_rows,key=candidate_key,reverse=True)[:40]
         for a in top_attack:
+            w=np.array([a['weights'][c] for c in used],float)
+            sv1=score_matrix(mats['v1'],w);sv2=score_matrix(mats['v2'],w);sm=score_matrix(mats['mar'],w)
+            am1=bm['v1']&np.isfinite(sv1)&(sv1>=a['threshold'])
+            am2=bm['v2']&np.isfinite(sv2)&(sv2>=a['threshold'])
+            amm=bm['mar']&np.isfinite(sm)&(sm>=a['threshold'])
             for q in [.75,.80,.85,.90]:
                 for k in [2,3,4]:
-                    m1=attack_mask(v1,band,refs,a['weights'],a['threshold']) & model_consensus(v1,band,models,train_scores,q,k)
-                    m2=attack_mask(v2,band,refs,a['weights'],a['threshold']) & model_consensus(v2,band,models,train_scores,q,k)
+                    gm=gates[(q,k)]
                     z={'kind':'attack_model','band':list(band),'score_q':a['q'],'threshold':a['threshold'],
-                       'weights':a['weights'],'q':q,'k':k,'v1':metric(m1,v1),'v2':metric(m2,v2)}
+                       'weights':a['weights'],'q':q,'k':k,
+                       'v1':metric(am1&gm['v1'],v1),'v2':metric(am2&gm['v2'],v2),
+                       '_mar_mask':amm&gm['mar']}
                     if usable(z,8):rows.append(z)
 
     rows=sorted(rows,key=candidate_key,reverse=True)
@@ -225,17 +202,30 @@ def main():
     near50=[z for z in rows if usable(z,12) and z['v1']['rate'] is not None and z['v2']['rate'] is not None
             and z['v1']['rate']>=.47 and z['v2']['rate']>=.47]
 
-    frozen={str(t):freeze(rows,t) for t in [.50,.45,.40]}
-    march={k:(None if z is None else march_eval(z,mar,contexts)) for k,z in frozen.items()}
+    frozen_raw={str(t):freeze(rows,t) for t in [.50,.45,.40]}
+    march={}
+    frozen={}
+    for key,z in frozen_raw.items():
+        if z is None:
+            frozen[key]=None;march[key]=None;continue
+        m=z['_mar_mask'];sel=mar.loc[m].sort_values(['date','rc']).copy();n=len(sel);h=n//2
+        frozen[key]=public_candidate(z)
+        march[key]={'n':n,'hits':int(sel.y.sum()),'rate':float(sel.y.mean()) if n else None,
+                    'early_n':h,'early_hits':int(sel.iloc[:h].y.sum()),
+                    'late_n':n-h,'late_hits':int(sel.iloc[h:].y.sum()),
+                    'venue_count':int(sel.venue.nunique()) if n else 0}
 
     out={
       'policy':{'feb_only_selection':True,'march_one_shot':True,'september_outcomes_read':False,
-                'production_v288_changed':False,'wave4_motivated_by_wave3_feb_only':True},
+                'production_v288_changed':False,'wave4_motivated_by_wave3_feb_only':True,
+                'cached_computation_only_no_research_gate_change':True},
       'split':{'train_n':len(tr),'v1_n':len(v1),'v2_n':len(v2),'feb_n':len(feb),'march_n':len(mar)},
-      'features':len(FEATS),'candidate_count':len(rows),
+      'features':len(feats),'candidate_count':len(rows),
       'strict50_count':len(strict50),'near50_count':len(near50),
-      'strict50_frontier':strict50[:30],'near50_frontier':near50[:30],
-      'overall_frontier':rows[:50],'frozen':frozen,'march_results':march
+      'strict50_frontier':[public_candidate(z) for z in strict50[:30]],
+      'near50_frontier':[public_candidate(z) for z in near50[:30]],
+      'overall_frontier':[public_candidate(z) for z in rows[:50]],
+      'frozen':frozen,'march_results':march
     }
     with open('research_3head_funsite_broad50_wave4_result.json','w') as f:
         json.dump(out,f,ensure_ascii=False,indent=2,default=str)
