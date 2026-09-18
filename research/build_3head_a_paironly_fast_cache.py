@@ -15,7 +15,7 @@ import analyze_v165_3head_monthly_walkforward as v165
 import analyze_v221_3head_scenario_pair as v221
 import analyze_v222_3head_broad_feature_audit as v222
 import analyze_v224_3head_national_form_decompose as v224
-from backtest import rows
+from backtest import rows, race_features, grade_score, clamp, pct_motor
 
 def target_bias(day,bias_start):
     sums=defaultdict(list);allv=[];d=bias_start;e=day-timedelta(days=1)
@@ -101,6 +101,39 @@ def main():
 
     tr=d[d._date<first].copy();today=d[d._date==pd.Timestamp(day)].copy()
     if today.empty:raise RuntimeError('no pair current rows')
+
+    # Production parity: v288 LIVE update_current_features expects the static
+    # v222 current-state fields (motor/wr/waku/nst/past/meet) to already exist
+    # in the morning cache.  These are result-blind and come only from the
+    # target-day card + waku10.  Exhibition/ST/original fields are deliberately
+    # NOT populated here; LIVE replay overwrites them from the frozen pre-race
+    # snapshots before pair ordering.
+    static_by_code={}
+    for code,card in cards.items():
+        wr=waku.get(code,{})
+        try:x=race_features(card,wr)
+        except Exception as e:
+            raise RuntimeError(f'static current feature build failed {code}: {e}')
+        q={}
+        for b in range(1,7):
+            zz=x[b]
+            q[f'c_b{b}_wr']=clamp((zz['wr']-3)/5)
+            q[f'c_b{b}_local']=clamp((zz['local']-2.5)/5.5)
+            q[f'c_b{b}_motor']=.62*pct_motor(zz['motor2'])+.38*pct_motor(zz['motor3'])
+            q[f'c_b{b}_waku_wr']=clamp(zz['waku_wr']/8)
+            q[f'c_b{b}_nst']=clamp((.24-zz['nst'])/.14)
+            q[f'c_b{b}_waku_st']=clamp((.24-zz['waku_st'])/.14)
+            q[f'c_b{b}_waku_sr']=clamp((6-zz['waku_sr'])/5)
+            q[f'c_b{b}_pastwin']=zz['past_win']
+            q[f'c_b{b}_meetst']=.5 if zz['meet_st'] is None else clamp((.22-zz['meet_st'])/.12)
+            q[f'c_b{b}_grade']=grade_score(zz['grade'])
+        static_by_code[str(code).zfill(12)]=q
+    for ix,r in today.iterrows():
+        code=str(r.get('race_code','')).zfill(12)
+        q=static_by_code.get(code)
+        if q is None:raise RuntimeError(f'missing static current features {code}')
+        for k,v in q.items():today.at[ix,k]=v
+
     pair,audit=finite_pair_fit(tr)
     out=Path(a.out);out.parent.mkdir(parents=True,exist_ok=True)
     joblib.dump({
