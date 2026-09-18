@@ -44,6 +44,7 @@ def main() -> None:
     ap.add_argument('--month-next',required=True)
     ap.add_argument('--history-cutoff',required=True)
     ap.add_argument('--bias-start',required=True)
+    ap.add_argument('--force-full-cache',action='store_true',help='audit-only: build head/pair models even when original v288 PRE scan is empty')
     a=ap.parse_args()
 
     day=datetime.strptime(a.date,'%Y-%m-%d').date()
@@ -173,7 +174,7 @@ def main() -> None:
         pre.build_augmented=lambda:bundle
         pre.main()
         q=pd.read_csv(pre_csv,dtype={'race_code':str}) if pre_csv.exists() and pre_csv.stat().st_size else pd.DataFrame()
-        if q.empty:
+        if q.empty and not a.force_full_cache:
             d=bundle[0]
             today=d[d._date==pd.Timestamp(day)].copy()
             joblib.dump({
@@ -213,7 +214,8 @@ def main() -> None:
       'cards_sha256':sha256(cards_path),'waku_sha256':sha256(waku_path),'cache_sha256':sha256(cache_path),
       'evaluation_month_rows_removed_from_training_frame':True,
       'pre_score_training_filtered_before_month_first':True,
-      'zero_pre_fast_path':len(candidates)==0,
+      'zero_pre_fast_path':len(candidates)==0 and not a.force_full_cache,
+      'force_full_cache':bool(a.force_full_cache),
       'pair_training_finite_guard':pair_audit,
       'rule_version':'v288-fixed-later; operational replay, not pristine model-selection evidence'
     }
