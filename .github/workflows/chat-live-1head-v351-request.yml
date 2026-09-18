@@ -64,6 +64,16 @@ jobs:
           PY
           python run_1head_v351_live_finalize.py --input "final_input_$RACE_CODE.json" --out "live_v351_final_$RACE_CODE.json"
 
+      - name: Evaluate 1HEAD expansion Shadow
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          python run_1head_v351_live_expansion_shadow.py judge \
+            --input "final_input_${RACE_CODE}.json" \
+            --formal "live_v351_final_${RACE_CODE}.json" \
+            --out "live_v351_expansion_shadow_${RACE_CODE}.json" \
+            | tee "expansion_shadow_stdout_${RACE_CODE}.json"
+
       - name: Fetch current odds allocation shadow
         continue-on-error: true
         run: |
@@ -83,6 +93,8 @@ jobs:
             live_v351_final_*.json
             live_v351_current_odds_shadow_*.json
             current_odds_shadow_stdout_*.json
+            live_v351_expansion_shadow_*.json
+            expansion_shadow_stdout_*.json
             deadline_*.json
             window_*.json
             exhibition_*.json
