@@ -90,7 +90,11 @@ def period_metrics(q:pd.DataFrame)->dict:
     return out
 
 def prepare()->pd.DataFrame:
-    rd=src.rebuild()
+    frozen=os.environ.get('HEAD4_FROZEN_RACE_DETAIL')
+    if frozen:
+        rd=pd.read_csv(frozen,dtype={'race_code':str})
+    else:
+        rd=src.rebuild()
     rd['race_code']=rd.race_code.astype(str).str.zfill(12)
     rd['month']=rd.month.astype(str)
     if len(rd)!=164:
