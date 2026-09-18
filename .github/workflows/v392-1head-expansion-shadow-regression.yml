@@ -22,7 +22,7 @@ jobs:
           python-version: '3.11'
       - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
 
-      - name: Download saved result-blind Marugame11 LIVE artifact
+      - name: Reconstruct saved result-blind Marugame11 LIVE input
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -30,11 +30,35 @@ jobs:
           gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10543318656/zip" > /tmp/live.zip
           mkdir -p /tmp/live
           unzip -q /tmp/live.zip -d /tmp/live
-          INP=$(find /tmp/live -name 'final_input_202609181511.json' -print -quit)
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10512844501/zip" > /tmp/cache.zip
+          mkdir -p /tmp/cache
+          unzip -q /tmp/cache.zip -d /tmp/cache
+
+          BASE=$(find /tmp/cache -name '202609181511.json' -print -quit)
+          GATE=$(find /tmp/live -name 'gate_202609181511.json' -print -quit)
+          WINDOW=$(find /tmp/live -name 'window_202609181511.json' -print -quit)
           FORMAL=$(find /tmp/live -name 'live_v351_final_202609181511.json' -print -quit)
-          test -n "$INP"
+          test -n "$BASE"
+          test -n "$GATE"
+          test -n "$WINDOW"
           test -n "$FORMAL"
-          echo "INP=$INP" >> "$GITHUB_ENV"
+          python - "$BASE" "$GATE" "$WINDOW" "$FORMAL" /tmp/final_input_202609181511.json <<'PY'
+          import json,sys
+          b=json.load(open(sys.argv[1])); g=json.load(open(sys.argv[2]))
+          w=json.load(open(sys.argv[3])); f=json.load(open(sys.argv[4]))
+          assert b['result_or_payout_used'] is False and b['chronology_guard'] is True
+          assert g['result_or_payout_used'] is False and g['chronology_guard'] is True
+          b.update(g)
+          b.update({
+            'exhibition_ready':True,
+            'deadline_jst':w['deadline_jst'],
+            'minutes_to_deadline':w['remaining_minutes'],
+            'evaluated_at_jst':f.get('evaluated_at_jst'),
+            'result_or_payout_used':False,'chronology_guard':True,
+          })
+          json.dump(b,open(sys.argv[5],'w'),ensure_ascii=False,indent=2)
+          PY
+          echo "INP=/tmp/final_input_202609181511.json" >> "$GITHUB_ENV"
           echo "FORMAL=$FORMAL" >> "$GITHUB_ENV"
 
       - name: Guard saved input and run expansion Shadow
