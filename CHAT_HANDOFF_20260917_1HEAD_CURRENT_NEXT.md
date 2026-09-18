@@ -1059,3 +1059,72 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - SUPPORT非悪化
   - ROI>=120%
 - current LIVE ticketsはv368完了まで変更しない。
+
+
+## AFTER — v365 3点固定 hit-rate push
+- Run `35336816467` / Job `105573443464` completed success / Artifact `10543264376` / head `fade334bb5108ffa5a3eb423a3ef416759c82fd0`。
+- current formal baseline 87/165 / ROI128.687%。
+- DEV-only best3点rerank:
+  - 4>5 / COMBO
+  - outer score>=.50 / risk>=.40 / mass>=.40
+  - SECOND g2=0 / THIRD g3=.50
+  - DEV 71->72 / ROI129.44->131.80 / gain1 loss0
+  - SUPPORT 16->15 / gain0 loss1
+  - ALL 87->87 / ROI128.69->129.49 / gain1 loss1
+- 313Rもhit数不変、PROD276では-1 hit。
+- LOMOはMar holdoutで-1 hit。3点固定だけではexact3 hit-rate向上は再現せず、正式採用根拠なし。
+- target55%未達。production unchanged。
+
+## AFTER — v367 joint 2>3 rerank + conditional 4th
+- Run `35337939828` / Job `105577022436` success / Artifact `10542749548`。
+- DEV-selected:
+  - 2>3 SCORE: score3>=.40 / score3-score2>=.20 / mass>=.40 / g2=.25 / g3=.25
+  - conditional 4th: THIRD gap<=.10 / extra pair prob>=.075 / dominant SECOND p2>=.35
+- result:
+  - DEV 76/137=55.47%, ROI120.52%
+  - SUPPORT 18/28=64.29%, ROI136.53%
+  - ALL **94/165=56.97%**
+  - stake57,400 / return70,700 / profit+13,300 / ROI **123.17%**
+  - current formal87比 **+7 hits / loss0**
+- sparse .015 diagnostic: 91/165=55.15% / ROI130.75% / profit+15,960だが、DEV単独では.005にdominateされるため正式候補選定には使わない。
+- production unchanged。
+
+## AFTER — v368 joint hit-push robustness
+- Run `35338296659` / Job `105578163902` completed success / Artifact `10544315420` / head `c78f38136b630fa678fac717d170e46aabef169a`。
+- v367 core sentinel完全再現:
+  - **94/165=56.97%**
+  - gain7 / loss0
+  - expanded79R
+  - stake57,400 / return70,700 / profit+13,300 / ROI123.17%。
+- DEV:
+  - 76/137=55.47%
+  - gain5 / loss0
+  - ROI120.52%。
+- SUPPORT:
+  - 18/28=64.29%
+  - gain2 / loss0
+  - ROI136.53%。
+- 近傍14,580 cells、DEV plateau **1,728 cells** と広い。
+  - c23 score min .35-.50
+  - c23 risk min .15-.25
+  - mass .40-.425
+  - c23 g2 .125-.375 / g3 .125-.375
+  - 4th gap .075-.125
+  - pair min .070-.075
+  - p2 min .30-.40
+- fixed-core month holdout:
+  - Feb +0 / Mar +0 / Apr +0 / May +2 / Jun +3
+  - **全DEV月でhit非悪化、loss0**
+  - LOMO total +5 hits。
+- SUPPORT month:
+  - Jul +0 / Aug +2
+  - **全support月でhit非悪化、loss0**。
+- ROIは追加券コストでFeb/Mar/Aprでは低下するが、全165Rでは123.17%を維持。
+- 結論:
+  - hit-rate優先なら現時点の最有力はv367/v368 joint core。
+  - current formal 52.73% -> **56.97%**（+4.24pt）。
+  - ROI 128.69% -> **123.17%**（-5.52pt）だが依然120%超。
+  - formal hitを1件も落とさず+7R拾えており、パラメータplateauも広い。
+  - ただしユーザーの明示許可前なのでproduction/LIVEへはまだ未昇格。
+- September outcomes unread / production unchanged / AUDIT_OK=true。
+- 次の再開地点: ユーザーが正式採用を指示したら、wall3 -> 5>6 -> 2>3 hit-push -> conditional 4th の順でLIVE finalizerへ昇格し、pre-hit-push ticketsを監査用に保持して回帰。
