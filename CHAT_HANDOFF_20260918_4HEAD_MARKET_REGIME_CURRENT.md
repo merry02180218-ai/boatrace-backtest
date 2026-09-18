@@ -1189,3 +1189,103 @@ Immediate consequence:
 - Production/live optimization may now update causal states through the previous completed day.
 
 Status: `HEAD4_LIVE_SEPTEMBER_HISTORY_ALLOWED__TARGET_RACE_RESULT_STILL_FORBIDDEN`
+
+
+## POST-EXHIBITION LIVE HARDENING — AFTER
+User concern: exhibition-after decision often errors or arrives too late.
+
+### Final finding from live tests
+The computational path is fast enough. The historical failures were mostly plumbing/input problems, not model inference cost.
+
+Fast architecture:
+- once-daily causal state through prior completed day (September prior results allowed);
+- pre-arm runner before exhibition;
+- fetch exhibition sources in parallel;
+- frozen v283 inference only;
+- THIRD .10 expansion + opponent_mass;
+- official odds3t and BOATCAST odds in parallel;
+- 120R rule;
+- fail closed before deadline safety margin.
+
+### Measured daily-state cost
+Run `35322680749`:
+- daily state ~3.52 sec
+- history through Sep17
+- 47,520 settled prior races / 1,641 players
+
+Run `35323003067`:
+- daily state ~4.16 sec
+
+This is a once-daily/pre-race cost.
+
+### Bugs found/fixed
+- legacy live import pulled unrelated heavy pandas chain -> decoupled: `ff201458...`
+- stale legacy references after decoupling -> `5f669def...`
+- tuple/string ticket mix -> `d51f0d7c...`
+- BOATCAST original wrapped records -> `02af3c2c...`, test `ff0d529f...`
+- BOATCAST od3 requests auto-decoding split Japanese name bytes as line breaks -> force UTF-8-sig: `5b2a504f...`
+- official/BOATCAST odds were serial -> parallel first-complete source: `e131abfd...`
+
+### Odds parser verification
+Diagnostic:
+- Run `35323673970` SUCCESS
+- observed BOATCAST od3:
+  - 8 lines
+  - data=/1 header
+  - 6 racer rows
+  - racer name + 20 odds + 5 trailing zeros
+
+Parser verification:
+- Run `35324173389`
+- Job `105533279813`
+- SUCCESS
+- fixture 120/120
+- live 大村6R 120/120
+- combo ordering fixture checked
+
+### Successful full path benchmark — 丸亀6R
+- Run `35324180062`
+- Job `105533301948`
+- SUCCESS
+- Artifact `10538226164`
+- digest `sha256:00acc48a7671f800f88adc6bf18910d8646e77aa0801d3cdc1ec555f1500e64d`
+
+Race was not monitoring-parent -> intentionally `BENCHMARK_ONLY`.
+
+Timing:
+- start ~17:24:25
+- final freeze 17:25:03.355
+- configured deadline 17:34
+- total runner 36.884 sec
+- exhibition wait/fetch/build 33.621 sec because runner started before exhibition publication
+- v283 input 0.00034 sec
+- v283 inference 0.00164 sec
+- odds fetch 3.174 sec
+
+Interpretation:
+- once exhibition is available, model + market path is ~3.2 sec in this test.
+- v283 compute itself is ~0.002 sec.
+- pre-arming before exhibition is preferable to starting after it.
+- fail closed rather than wait through T-30/T-45 sec.
+
+Benchmark values:
+- head_prob .07504
+- opponent_mass .41208
+- composite 76.98
+- linear .69316
+- selected false
+- target result/payout unused.
+
+Dedicated report:
+- `HEAD4_120R_POST_EXHIBITION_LIVE_HARDENING_20260918.md`
+- commit `2841b127aad63a52d51169f947259fefecb7eb2a`
+
+### Decision
+- infrastructure/timing concern is substantially resolved;
+- do NOT yet call production fully proven until a true monitoring-parent race runs end-to-end without benchmark override;
+- production unchanged.
+- user-approved September prior results may be used in causal state.
+- if the race-card head_prob model itself is retrained on September labels, re-calibration/audit of the 120R threshold is required because score semantics change.
+
+Status:
+`HEAD4_120R_FAST_LASTMINUTE_INFRA_SUCCESS__TRUE_MONITORED_LIVE_NEXT`
