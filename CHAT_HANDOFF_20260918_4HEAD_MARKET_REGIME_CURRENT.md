@@ -3253,3 +3253,189 @@ Original-exhibition expectation:
 - it does NOT imply every recovered race becomes BET; recovered races can still PASS after scoring.
 
 Status: HEAD4_OPERATION_WATCHDOG_PARALLEL_REPAIR_BEGIN
+
+
+## AFTER — 2026-09-19 venue-aware original + operational watchdog repair COMPLETE
+
+### 1. Venue-aware original exhibition fix
+The initial idea of copying the 1HEAD venue map literally was rejected after auditing HEAD4's actual frozen research data.
+
+Correct final HEAD4 semantics:
+- use the 1HEAD venue map as a minimum LIVE expectation/reference;
+- always consume any original-exhibition channels actually published for the race;
+- an original metric column that is blank for all six boats is ignored;
+- any metric column that has at least one value must have all six values to participate in orig_avg;
+- orig_avg is built only from the actually usable metric columns;
+- wall-family features require both orig_avg and straight completeness, matching frozen research;
+- if wall-family is unavailable, the three new-feature wall-derived inputs are missing and score at frozen neutral ECDF rank 0.5;
+- no synthetic straight/orig value is invented.
+
+Key implementation:
+- head4_original_venue_schema.py
+  - commit fc688700b92c437550560a904b547e87a5c34cf5
+- run_4head_120r_lastminute_fast.py
+  - initial venue-aware commit f5ca759cecc779b0b6f920178ff77d4b92609b06
+  - wall shadow alignment 4f5fdb73303c92c2c7132327c85da5d47311135d
+  - final dynamic actual-published-channel semantics 0be71ef01e5dc6bf50e090a166375da831b2c3fb
+- audit:
+  - audit_4head_venue_aware_original.py
+  - commits 34aebf2f6ec744e46ad8ca86099cdbeaaf91aa7e and 1181bb73a5342985a8a7511c1d4c28416e598bd2
+  - workflow commit 32c4a77361ce57d43e0e56e697a15d74c82913bf
+  - leakage regression added dfedd037cc0e5ee6c513f329db5e1c7bb164ab69
+
+Final combined venue/parity/leakage Run:
+- Run 35378020616
+- Job 105707264777
+- Artifact 10560409745
+- SUCCESS
+- HEAD4_VENUE_AWARE_ORIGINAL_OK
+- HEAD4_NEWFEATURE_PRODUCTION_PARITY_OK
+- HEAD4_NEWFEATURE_PRODUCTION_LEAKAGE_AUDIT_OK
+- HEAD4_OPERATIONAL_LEAKAGE_PASS
+- SEPTEMBER_UNREAD
+
+Frozen production parity remains:
+- profile HEAD4_NEWFEATURE_FIXED156_V1
+- 156R
+- 73 heads = 46.79%
+- 40 exact3
+- historical Apr-Aug ROI 140.9917%
+- support Jul-Aug ROI 113.1754%
+- monthly floor 87.2143%
+Historical performance remains NON-PRISTINE and is not a prospective guarantee.
+
+Venue research consistency:
+- frozen expanded universe: 208R
+- orig_avg research-ready: 208/208
+- JCD09 津: 13R, all 13 had usable avg/straight under actual-published semantics.
+- JCD12/13/18: total 25R; avg/turn usable but straight 0R and wall-ready 0R.
+- research wall-ready formula matched the new LIVE availability rule on all 208R.
+
+### 2. Quantified effect of the original-exhibition LIVE bug fix
+Dedicated audit:
+- audit_4head_original_live_recovery.py
+  - commit 8b9bed08b33722c6015fef5b331ae3aa182da504
+- workflow:
+  - .github/workflows/audit-4head-original-live-recovery.yml
+  - commit 00036e3fb37ea98a32d826e719655054e9f6a1fa
+- Run 35381757576
+- Job 105719315367
+- Artifact 10562171065
+- SUCCESS
+
+Result on frozen 208R:
+- old buggy LIVE all-labeled-cells-ready: 197R
+- corrected research-semantic ready: 208R
+- 11R recovered as actually decidable
+- of those, 11R/11R are frozen production-selected races
+
+Recovered production selections by venue:
+- JCD04 平和島: +1
+- JCD07 蒲郡: +2
+- JCD08 常滑: +1
+- JCD09 津: +2
+- JCD10 三国: +1
+- JCD17 宮島: +1
+- JCD20 若松: +3
+
+Interpretation:
+- this does not expand or retune the 156R research policy;
+- it repairs a LIVE-only false-NOT_READY bug;
+- historically, the buggy LIVE readiness check could have blocked 11 of the 156 frozen production selections in the 208R research universe;
+- therefore the user's intuition was correct: practical executed/BET opportunities can increase versus the buggy LIVE implementation.
+
+### 3. 2026-09-19 daily production PRE/watchlist
+Production PRE/watchlist run:
+- Run 35378401712
+- Job 105708503896
+- Artifact 10561217678
+- SUCCESS
+- watchlist date 20260919
+- internal monitoring targets: 15R
+- official BOAT RACE racelist deadline source only
+- target-day result/payout unused.
+
+Current 15 targets:
+- 鳴門2R 08:58
+- 唐津4R 10:02
+- 唐津7R 11:33
+- 宮島3R 11:37
+- 多摩川4R 11:57
+- 江戸川4R 12:35
+- 平和島6R 13:22
+- 多摩川8R 14:02
+- 浜名湖8R 14:59
+- 江戸川10R 15:22
+- 浜名湖9R 15:32
+- 平和島12R 16:40
+- 住之江7R 17:59
+- 丸亀8R 18:45
+- 丸亀12R 20:45
+
+### 4. Operational watchdog repair
+Defects fixed:
+- old watchdog only ran 09:00-21:59 JST;
+- old watchdog selected only the earliest active target;
+- one long-running target could block a nearby deadline;
+- daily PRE at 09:20 JST was too late for early races.
+
+New architecture:
+- daily PRE/watchlist:
+  - 05:30 JST primary
+  - 06:30 JST refresh/fallback
+- watchdog:
+  - every 5 minutes
+  - 06:00-22:59 JST
+- resolver emits all active, not-yet-completed targets.
+- each race becomes an independent GitHub Actions matrix job.
+- max-parallel: 8.
+- concurrency key is per race: head4-watchdog-<date>-<jcd>-<race>
+- same race is serialized/deduped, different races can run simultaneously.
+- per-race artifact idempotency remains.
+- BET GitHub Issue notification/dedupe remains.
+- target result/payout remain prohibited.
+
+Implementation:
+- resolve_4head_watchdog_targets.py
+  - commit 4b176b840d1c9c2deec1539cf6d21db404982f24
+- parallel/early watchdog:
+  - commit cab4c68cf4773c4c7dea81fddd3f9b58e7f394bd
+  - output-name fix 7179b1bce5a07b95d83603ee1d4d2d275932bc63
+- early PRE schedule:
+  - commit 1d01503727945d3cf68a76eed31ab2e3a86de38d
+- synthetic overlap workflow:
+  - .github/workflows/test-4head-watchdog-parallel.yml
+  - commit 4c0112c8292a23d40c1c581250172fde227aa1e8
+
+Operational workflow validation:
+- watchdog push Run 35381546444
+  - Job 105718626760
+  - SUCCESS
+  - resolver executed correctly; at about 03:40 JST active target count was 0, as expected.
+- parallel synthetic test Run 35381587359
+  - Job 105718760419
+  - SUCCESS
+  - at synthetic 11:10 JST:
+    - 唐津7R 11:33
+    - 宮島3R 11:37
+    were both emitted simultaneously (count=2).
+  - when 唐津7R artifact was marked complete, resolver emitted only 宮島3R (count=1).
+  - schedule contract PASS.
+
+### Current production state
+Operational profile remains:
+- HEAD4_NEWFEATURE_FIXED156_V1
+- threshold unchanged: 12.293333333333333
+- no threshold/weight retuning in this repair.
+- GitHub BET Issue/direct-mention notification remains active.
+- September target outcomes remain UNREAD for prospective operation.
+
+The current main may contain unrelated newer research commits from other concurrent workstreams; as of verification, the HEAD4 production files/watchlist remain present and intact. Latest observed main at AFTER preparation was 356436b7d44021a6c93c87518c992f5b227d34b3.
+
+Next restart point:
+1. observe first real matrix watchdog target on 2026-09-19;
+2. for each completed target, verify artifact + decision + profile + deadline timing;
+3. on BET, confirm GitHub Issue notification payload;
+4. record prospective 9/19 decisions without using target outcomes before each decision.
+
+Status: HEAD4_20260919_LIVE_OPERATION_READY__VENUE_ORIGINAL_RECOVERY_PLUS_PARALLEL_WATCHDOG
