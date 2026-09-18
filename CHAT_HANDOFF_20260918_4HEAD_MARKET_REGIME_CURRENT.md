@@ -617,3 +617,24 @@ This materially reduces concern that 120R is a one-cell threshold accident, alth
 - Production remains unchanged.
 
 Status: `HEAD4_120R_NESTED_LINEAR_FROZEN_RESEARCH__AWAIT_INDEPENDENT_REPLAY`
+
+
+## USER REQUEST — 2026-09-18 — leakage audit alongside 120R replay
+User explicitly requested a **リーク監査** together with the independent 120R replay.
+
+### BEFORE — leakage audit scope
+Audit the frozen 120R research candidate on four separate dimensions:
+1. **Outcome leakage**: verify no result / finishing-order / payout / hit fields enter the selection rule or upstream score features for the same race.
+2. **Temporal leakage**: verify model/state inputs used for `head_prob` and `opponent_mass` are trained/frozen only on data available before the scored race; check any rolling/aggregate feature construction for same-day/future contamination.
+3. **Market timing leakage**: identify whether `composite_odds` uses closing/final odds and therefore is retrospective-only; distinguish this from result leakage. Any production/live implementation must replace it with a timestamped pre-deadline odds snapshot or explicitly remain diagnostic-only.
+4. **Selection / research leakage**: document that Apr-Aug was used to select/tune the 120R thresholds, so Apr-Aug ROI is NON-PRISTINE and cannot be treated as an independent holdout. September outcomes remain UNREAD and are the untouched future test.
+
+Required outputs:
+- source/provenance map for `head_prob`, `opponent_mass`, `composite_odds`;
+- forbidden-column scan and same-row dependency checks;
+- training cutoff / artifact cutoff checks;
+- explicit PASS / WARN / FAIL per leakage class;
+- independent 120R membership replay and parity hash;
+- no production change.
+
+Status: `HEAD4_120R_REPLAY_PLUS_LEAKAGE_AUDIT_START`
