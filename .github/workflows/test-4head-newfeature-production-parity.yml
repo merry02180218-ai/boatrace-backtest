@@ -1,0 +1,47 @@
+name: test-4head-newfeature-production-parity
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'run_4head_120r_lastminute_fast.py'
+      - 'prepare_4head_120r_daily_state.py'
+      - 'artifacts/head4_newfeature_fixed156_production.json'
+      - 'audit_4head_newfeature_production_parity.py'
+      - '.github/workflows/test-4head-newfeature-production-parity.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Download expanded feature table
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p seed
+          gh run download 35361685459 -n head4-208-expanded-features -D seed
+          F="$(find seed -type f -name 'expanded_features_208.csv' | head -1)"
+          test -n "$F"
+          echo "EXPANDED_FEATURES_208=$F" >> "$GITHUB_ENV"
+      - name: Compile changed live code
+        run: |
+          python -m py_compile run_4head_120r_lastminute_fast.py
+          python -m py_compile prepare_4head_120r_daily_state.py
+      - name: Verify production parity
+        run: python audit_4head_newfeature_production_parity.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-newfeature-production-parity
+          path: /tmp/head4_newfeature_production_parity/
+          retention-days: 30
