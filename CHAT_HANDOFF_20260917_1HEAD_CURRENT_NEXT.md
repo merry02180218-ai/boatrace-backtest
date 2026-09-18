@@ -1928,3 +1928,65 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - wall3対象12Rだけのincremental cashflowも別監査。
 - expanded universesでは総DDとprofit/DD比も比較。
 - parameter searchなし。official/shadow stakeは変更しない。
+
+
+## AFTER — v371 dynamic closing-odds staking robustness
+- 修正版 Run `35359641195` / Job `105647445277` success / Artifact `10553427745` / digest `sha256:d2a6fe568f57d95a8eef5dc96b23b662d89ab5af785e1b51dec5fbee7a055463`。
+- DEV raw/robustは全budgetで同一: TOP / alpha=0 / beta=.5（実質odds順位中心）。
+- ALL ROI:
+  - B600 148.53%
+  - B900 155.14%
+  - B1200 158.44%
+  - supportもequal比わずかにプラス。
+- ただしtrue LOMO再選定は各budgetとも5 holdout月中 **2月のみ明確プラス**、Mar/Apr/Mayが大幅悪化。
+  - B600 delta pp: +35.56 / -49.62 / -15.51 / -2.36 / +33.89
+  - B900: +47.41 / -66.15 / -20.67 / -3.15 / +45.19
+  - B1200: +53.33 / -74.42 / -23.26 / -3.55 / +50.83
+- 結論: closing odds最終値での3点内集中はhistorical ROIは強いがmonth generalizationが弱い。production/LIVE採用しない。closing odds自体も発注前に完全同値を保証しないproxy。
+- September unread / production unchanged / AUDIT_OK=true。
+
+## AFTER — v380 WALL3 rank3 overweight bankroll/risk
+- Run `35360578646` / Job `105650549805` success / Artifact `10554293618` / digest `sha256:c26398fe195d79aaf5ba3bccff22a75a1e847980172c92e29160074ddef906aa`。
+- fixed candidate:
+  - wall3: 100/100/400
+  - five6-only: 200/200/200
+  - non-overlay: 100/100/100
+- current EITHER2x equal baselineと**各race total stake同一**。
+- LIVE165:
+  - baseline stake60,300 / return81,340 / profit+21,040 / ROI134.892%
+  - candidate stake60,300 / return85,810 / profit**+25,510** / ROI**142.305%**
+  - +4,470円 / +7.41pp。
+- risk:
+  - maxDD 3,320 -> **3,320（不変）**
+  - DD span19 ->19
+  - longest losing streak7 ->7
+  - worst10R -2,760 -> -2,760
+  - worst20R -2,670 -> -2,670
+  - profit/maxDD 6.34 -> **7.68**
+  - monthly profit stdは4,021 ->4,634へ増えるが、worst monthは -1,740 -> **-640**。
+- WALL3 12R incremental:
+  - rank1 hit3 / rank2 hit1 / rank3 hit4 / miss4
+  - positive delta4R / negative4R / zero4R
+  - total +4,470
+  - worst single -1,430 / best +3,140。
+- expanded risk:
+  - H078 / H0775_M375: maxDD不変
+  - H0775_M350: +10円のみ
+  - PROD276: maxDD 5,000 -> **4,490**。
+- parameter searchなし / total stake identical / September unread / production unchanged / AUDIT_OK=true。
+- conclusion: forward shadowへ進める価値あり。正式stake変更はまだしない。
+
+## BEFORE — v381 LIVE wall3 rank3 allocation shadow
+- official stakesは引き続き100/100/100。
+- existing stake shadow v377も維持:
+  - wall3 OR five6時 200/200/200
+  - otherwise100/100/100。
+- 新しい第二研究shadowを追加:
+  - wall3_ticket_applied=true: **100/100/400**
+  - wall3=false & five6=true: 200/200/200
+  - overlayなし:100/100/100
+  - BOTH時はwall3 ruleを優先。
+- 新規fieldは allocation shadow専用にし、既存stake_shadowの意味を変えない。
+- 保存済みcausal inputで wall3-only / five6-only / no-overlay を回帰。
+- formal tickets / official stake / existing shadow / HEAD gatesは変更しない。
+- 2026-09 outcomes/payouts unread。
