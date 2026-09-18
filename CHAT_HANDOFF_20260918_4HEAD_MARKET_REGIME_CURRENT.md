@@ -638,3 +638,76 @@ Required outputs:
 - no production change.
 
 Status: `HEAD4_120R_REPLAY_PLUS_LEAKAGE_AUDIT_START`
+
+
+## LEAKAGE AUDIT — interim verified evidence while Actions replay runs
+### Existing dynamic head-probability leakage audit
+- Workflow Run: `35234326600`
+- Job: `105246227265`
+- Conclusion: SUCCESS
+- Artifact: `10503431028` / `head4-boatracecsv-leakage-audit`
+- Artifact digest: `sha256:a51cb2320691ca816f4eac9852027cb6b62aca64f44514a53273ad0516ee02a9`
+- Current `audit_4head_boatracecsv_headprob_leakage.py` blob SHA is exactly unchanged from that run:
+  `24b5a2e7748d50707dd6882577eddb5ef2d3451b`
+- Dynamic result:
+  - Apr-Jun training rows: 13,221 / boat4 wins 1,276
+  - Jul-Aug model-validation rows: 9,610 / boat4 wins 964
+  - features: 78 race-card-only model inputs
+  - Jul-Aug AUC: **0.727090**
+  - shuffled-target negative-control AUC mean: **0.503484**
+  - September: UNREAD
+- Interpretation: no evidence that same-race outcome labels are leaking into the `head_prob` feature matrix.
+
+### Static/frozen-artifact causality checks completed
+Frozen downstream artifact `artifacts/head4_v291_downstream_20260630.json`:
+- frozen cutoff: 2026-06-30
+- `jul_aug_labels_used=false`
+- `september_labels_used=false`
+- parity: PASS
+- v283 max training date: 2026-06-29
+- feature counts: POST 16 / ENV_ENTRY 25 / v283 SECOND 25 / v283 conditional THIRD 69
+- no outcome/result/payout-like feature names found
+- no odds-named frozen model features found
+
+Causal source-order checks:
+- motor history: current-day features are frozen before current-day results are ingested -> PASS
+- player/motor priors: same-day feature rows emitted before daily results are ingested -> PASS
+- exhibition ST bias history: bias is computed before same-day ST rows update history -> PASS
+
+### Important warnings
+1. **Market timing / odds proxy**
+   - retrospective `composite_odds` and `current_bet` use `official_closing / closing_displayed`.
+   - this is not result leakage, but it is NOT proof of an immutable pre-deadline market snapshot.
+   - therefore Apr-Aug ROI remains retrospective diagnostic only.
+2. **Model-selection leakage / non-pristine period**
+   - Apr-Aug outcomes/ROI were used to select the 120R thresholds.
+   - therefore Apr-Aug ROI is NOT an independent holdout result.
+   - September remains the untouched future test.
+3. **Retrospective sample-selection warning**
+   - the fixed 164R reconstruction starts from historically settled rows requiring valid result / archived-odds coverage.
+   - this is a coverage/sample-selection bias risk, not direct target leakage.
+
+### Independent membership parity
+- independently reconstructed 120R membership count: 120
+- membership SHA256:
+  `37057b43e344309e3fd06dfa1f2b519cfaad16379e92bfda51166da42834844c`
+- this hash is now stored in the frozen 120R research artifact.
+
+### Current unified audit
+- script: `755993acb6a64d861433de4a4db985fe6f866bf2`
+- workflow: `41fed51929861ac43daca905ff81107cf176c110`
+- trigger: `9450106726151aa60d48bc773a1b82b9f411e05d`
+- Actions Run: `35306188702`
+- Job: `105478741668`
+- current state at this handoff write: IN_PROGRESS
+- 120R artifact leakage annotation commit: `6f70ac1a0871b7a480fda1cf63bce0263f2ed6cd`
+
+Interim leakage conclusion:
+- OUTCOME leakage: **PASS**
+- temporal feature leakage: **PASS on audited contracts/frozen artifact**
+- market timing: **WARN — closing odds proxy**
+- Apr-Aug selection leakage: **PRESENT / NON-PRISTINE by design**
+- September contamination: **PASS / UNREAD**
+- production promotion: **BLOCKED pending unified run success + pre-deadline live implementation**
+
+Status: `HEAD4_120R_LEAKAGE_AUDIT_RUNNING__INTERIM_PASS_WITH_WARNINGS`
