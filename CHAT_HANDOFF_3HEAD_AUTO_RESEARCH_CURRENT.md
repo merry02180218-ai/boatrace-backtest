@@ -147,3 +147,24 @@
   - **B stability candidate**: R1-8 / PRE q=.925 / motor inner top2 gap >= **+.05** / exhibition rank3 <= **2**. Pre-Feb 150R/59 = **39.33%**, avg 50/month, min-month 37.5%, but Feb reference 33.33%.
   - **Control**: Wave17 PRE-only R1-8 / q=.99.
 - Restart point: if proceeding, run a single March diagnostic for exactly A/B/control, with no March-based tuning or additional thresholds afterward. Also report March volume/head rate and half-month/venue stability. If A fails materially, do not rescue it by adjusting thresholds against March.
+
+
+## AFTER WORK — Wave20 interpretable manual motor/exhibition gates (Run 35351033915, 2026-09-18)
+- Official fresh Run **35351033915** / Job **105618951554** / Artifact **10549734884** SUCCESS; head SHA **02c6d4d74369482b187243e3d7ba1d2f4d0a0b04**.
+- Methodology: no second-stage black-box model. 185 explicit interpretable gates over causal prior-day motor state and archived exhibition/start/original-exhibition features; 2,590 PRE+gate candidates. Nov-Dec-Jan only for selection; February NON-PRISTINE/reference; March unopened; Sep-2026 UNREAD; production v288 unchanged. Feb canonical/realtime agreement 3970/3970 = 100%.
+- Strict final volume rule (40-70 races/month each Nov-Dec-Jan, half-month >=8R and >=6 venues) retained **298** candidates; wide 30-80 retained 673.
+- PRE-only baseline reproduced: R1-8 / q=.99, **128R / 44 heads = 34.375%**, avg 42.67R/month, persistent worst-half 28.57%.
+- Highest combined-rate strict manual gate was **MOTOR_EX**: PRE R1-8 / q=.95 + `post_motor_rank_edge2 >= 0` + `post_ex_rank3 <= 2` (boat3 motor EWMA-rank no worse than boat2, and boat3 exhibition time top-2 of field).
+  - Nov: **47R / 18 = 38.30%**
+  - Dec: **60R / 20 = 33.33%**
+  - Jan: **68R / 31 = 45.59%**
+  - Combined: **175R / 69 = 39.43%**, avg **58.33R/month**; persistent worst half **28.00%**.
+  - This improves combined head rate by **+5.05pt** versus PRE-only (39.43% vs 34.38%) while staying within the user's desired ~50R/month regime, though half-month stability does not improve.
+  - Feb NON-PRISTINE canonical reference: **34R / 14 = 41.18%** (H1 46.15%, H2 38.10%). Treat only as supporting reference because Feb was already seen in previous waves.
+- Second MOTOR_EX option: R1-8 / q=.95 + motor top2 gap vs2 >=0 + exhibition rank top2: **170R / 65 = 38.24%**, avg 56.67/month, worst-half 26.67%.
+- MOTOR-only strong option: R1-8 / q=.985 + motor top2 rate vs2 >=0: **131R / 50 = 38.17%**, avg 43.67/month; Nov 40.0%, Dec 34.09%, Jan 40.43%, worst-half 26.32%.
+- Exact ~50/month MOTOR option: R1-12 / q=.985 + motor top2 vs2 >=0: **150R / 56 = 37.33%**, avg exactly 50/month.
+- EXHIBIT-only best: PRE R1-8 / q=.95 + boat3 exhibition-time rank 1st: **152R / 54 = 35.53%**, avg 50.67/month. Helpful but much weaker than MOTOR_EX.
+- START-only, EX+ST, original-exhibition and triple motor+exhibition+ST gates did not beat the MOTOR_EX combined-rate result. Best stability-ranked overall candidate was MOTOR_ST (`motor top2 gap vs2 >=.03` + start-exhibition rank top2) with worst-half 29.41% but only 32.34% combined, so it is not the preferred precision candidate.
+- Conclusion: unlike Wave19's learned post classifier, an interpretable manual gate **does reveal incremental signal**. The most promising branch is specifically **boat3 motor form relative to boat2 + boat3 exhibition-time rank**, not generic start-exhibition or original-exhibition metrics. This is the first new-information branch to lift the ~34-35% combined ceiling to ~39.4% at useful monthly volume. It still does not achieve robust 50% head rate and the month/half-month instability remains material.
+- Recommended next research: narrow around the MOTOR_EX relationship only, preserving predeclared causal logic: vary PRE q/band minimally around the existing frontier and inspect motor-vs2 residual definitions + exhibition rank/edge thresholds. Do not reopen generic 185-gate search, do not tune on Feb, and keep March untouched until a single predeclared freeze candidate is chosen.
