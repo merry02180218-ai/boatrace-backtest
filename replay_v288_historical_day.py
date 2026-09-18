@@ -111,11 +111,11 @@ def write_csv(path,rs):
 
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--date',required=True);ap.add_argument('--cache',required=True);ap.add_argument('--outdir',required=True);a=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--date',required=True);ap.add_argument('--cache',required=True);ap.add_argument('--outdir',required=True);ap.add_argument('--expected-history-cutoff',default='2026-08-31');a=ap.parse_args()
     day=datetime.strptime(a.date,'%Y-%m-%d').date();day8=day.strftime('%Y%m%d');ymd=day.strftime('%Y/%m/%d')
     z=joblib.load(a.cache)
     if str(z.get('date'))!=day8:raise RuntimeError(f'cache date mismatch {z.get("date")} != {day8}')
-    if str(z.get('history_cutoff'))!='2026-08-31':raise RuntimeError('history cutoff drift')
+    if str(z.get('history_cutoff'))!=str(a.expected_history_cutoff):raise RuntimeError(f'history cutoff drift {z.get("history_cutoff")} != {a.expected_history_cutoff}')
     if z.get('target_result_or_payout_used') is not False:raise RuntimeError('cache leakage guard failed')
 
     # DECISION PHASE: no result/payout reads are allowed above the DECISIONS_FROZEN marker.
@@ -214,7 +214,7 @@ def main():
 
     bets=[r for r in settled if r['decision']=='BET'];stake=sum(r['total_stake'] for r in bets);ret=sum(r['return_yen'] for r in bets);hits=sum(r['hit'] for r in bets)
     evaluable=[r for r in settled if r.get('evaluation_status')=='EVALUABLE'];errors=[r for r in settled if r.get('evaluation_status')!='EVALUABLE']
-    summary={'date':a.date,'policy':'3HEAD_V288_PRODUCTION_RETROSPECTIVE_REPLAY','history_cutoff':'2026-08-31','pre_candidates':len(decisions),
+    summary={'date':a.date,'policy':'3HEAD_V288_PRODUCTION_RETROSPECTIVE_REPLAY','history_cutoff':str(a.expected_history_cutoff),'pre_candidates':len(decisions),
              'live_evaluable':len(evaluable),'input_or_decision_errors':len(errors),'genuine_no_bets':sum(r['decision']=='NO_BET' for r in evaluable),
              'bets':len(bets),'hits':hits,'hit_rate':hits/len(bets) if bets else None,'stake':stake,'payout':ret,'profit':ret-stake,'roi':100*ret/stake if stake else None,
              'decision_sha256_before_results':decision_sha,'result_or_payout_used_for_decision':False,'results_joined_only_after_freeze':True,
