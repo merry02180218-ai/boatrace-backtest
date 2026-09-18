@@ -87,7 +87,15 @@ jobs:
         run: |
           mkdir -p preseed stateseed
           gh run download "$PRE_RUN_ID" -n "$PRE_ARTIFACT_NAME" -D preseed
-          gh run download "$STATE_RUN_ID" -n "$STATE_ARTIFACT_NAME" -D stateseed
+          NEW_STATE_NAME="head4-newfeature-daily-state-${TARGET_DATE}"
+          NEW_STATE_RUN="$(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=$NEW_STATE_NAME&per_page=20" --jq '.artifacts | map(select(.expired==false)) | sort_by(.created_at) | reverse | .[0].workflow_run.id // empty')"
+          if [ -n "$NEW_STATE_RUN" ]; then
+            echo "HEAD4_STATE_SOURCE newfeature run=$NEW_STATE_RUN artifact=$NEW_STATE_NAME"
+            gh run download "$NEW_STATE_RUN" -n "$NEW_STATE_NAME" -D stateseed
+          else
+            echo "HEAD4_STATE_SOURCE fallback run=$STATE_RUN_ID artifact=$STATE_ARTIFACT_NAME"
+            gh run download "$STATE_RUN_ID" -n "$STATE_ARTIFACT_NAME" -D stateseed
+          fi
       - name: Locate frozen inputs
         shell: bash
         run: |
@@ -127,6 +135,8 @@ jobs:
           assert z.get('target_race_result_used') is False, z
           assert z.get('payout_used') is False, z
           assert z.get('decision') in {'BET','PASS','NO_BET_DATA_NOT_READY'}, z
+          if z.get('decision') in {'BET','PASS'}:
+              assert z.get('profile') == 'HEAD4_NEWFEATURE_FIXED156_V1', z
           print('STRICT_MONITOR_CONTRACT_OK', z.get('decision'), z.get('race_code'))
           PY
       - name: Notify GitHub Issue on BET
