@@ -260,3 +260,11 @@
 - Required parity is **exactly 52 selected / 21 heads**. Any mismatch blocks LIVE connection.
 - No September-2026 settlement/result analysis is allowed. Existing v288 real-money production remains unchanged during this audit.
 - After parity succeeds, next implementation step is a dedicated A daily/shadow layer: PRE + prior-day motor are cached before the race; current exhibition rank is evaluated live; missing inputs fail closed. Downstream v288 ticket/Dutch logic remains unchanged unless separately verified.
+
+
+### A March parity initial failure / repair (2026-09-19)
+- Initial parity Run **35364306315** / Job **105662896034** failed before any research computation.
+- Exact cause: root-level verifier imported Wave22 module without adding the repository `research/` directory to `sys.path`, raising `ModuleNotFoundError: run_3head_wave22_march_frozen`.
+- This is implementation-only; no candidate rows, labels, thresholds, or performance results were produced.
+- Repair commit **3f17dc80cbbcd732d75b4ed634cd7e193120bed5** adds only the research module import path. Frozen A thresholds remain unchanged.
+- A fresh current-main run is required; the failed run must not be used for parity conclusions.
