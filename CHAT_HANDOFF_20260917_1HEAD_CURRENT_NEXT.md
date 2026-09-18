@@ -1659,3 +1659,69 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 残り `202608210402` はcurrent LIVE165には含まれるが旧v340 production276には含まれず、frozen shardにも存在しない。
 - 修正: この1Rのみ v340と同じ BOAT RACE公式historical `odds3t` endpointをfallback使用。取得sourceをrace_inputs/resultへ明記し、今回Artifactに固定。
 - 165/165 coverage必須は維持。allocation条件は変更しない。
+
+
+## AFTER — v370 dynamic odds staking
+- Final success Run `35358877372` / Job `105644898048` / Artifact `10553791049` / digest `sha256:e43c00bc770b52ea7175905662a2e0106a738c4db8d01f6a371ad6c48a9783b9` / head `1a5eccc4e09fa58b632db0682f71104c2f14e9c1`。
+- odds coverage 165/165:
+  - repo archive 144R
+  - v340 frozen official odds 20R
+  - official historical endpoint fallback 1R (`202608210402`)
+- formal equal300 sentinel: 87/165 / stake49,500 / return63,700 / ROI128.687%。
+- DEV-only bestは全budgetで同じ:
+  - `VALUE_TOP`
+  - score = `p^0.5 * closing_odds^1.0`
+  - 3点最低100円、残unitをscore最大の1点へ全投入。
+- B600:
+  - DEV ROI148.11%
+  - SUPPORT ROI126.79% vs equal125.00%
+  - ALL ROI **144.49%** / stake99,000 / return143,050 / profit+44,050
+  - equal600 ROI128.69%比 +15.81pt。
+- B900:
+  - DEV154.34%
+  - SUPPORT127.38%
+  - ALL **149.76%** / profit+73,900 / +21.08pt vs equal。
+- B1200:
+  - DEV157.45%
+  - SUPPORT127.68%
+  - ALL **152.40%** / profit+103,750 / +23.71pt vs equal。
+- allocation pattern:
+  - score最大rankは rank1=15R / rank2=75R / rank3=75R。
+  - したがって「rank2固定厚め」ではなく、オッズ×モデル確率でrank2/3を選び分ける動的配分。
+  - score最大ticketが実際に的中したのは24/165R（rank1 3 / rank2 11 / rank3 10）。
+- named baseline:
+  - DUTCHはALL ROI117.05〜119.25%でequalを下回る。
+  - MODEL probability比例もALL ROI125.29〜128.29%でequalを超えない。
+  - 改善源はVALUE_TOP。
+- 月別VALUE_TOP:
+  - Feb/Mar/Jun/Augでequal超え
+  - Apr/May/Julでequal割れ。
+  - SUPPORT合計はプラスだがJul悪化/Aug改善で相殺傾向。
+- 重要注意:
+  - closing oddsはhistorical最終表示で、LIVE発注直前に同値を保証しないため、現時点ではallocation研究proxy。
+  - budgetを増やすほどALL ROIは上がるが、資金集中・分散のリスクも増すためそのまま採用しない。
+- September outcomes unread / production unchanged / AUDIT_OK=true。
+
+## BEFORE — v371 dynamic staking robustness / concentration audit
+- 目的: v370 VALUE_TOPの過学習・closing-odds依存・資金集中を監査。
+- v370 Artifact `10553791049` の `race_inputs.csv` を固定入力として使用し、オッズ再取得なし。
+- candidate score:
+  - `p^alpha * odds^beta`
+  - alpha 0/.25/.5/.75/1.0/1.25
+  - beta .5/.75/1.0/1.25/1.5
+- allocation:
+  1) TOP: base1unitずつ + 残り全部をscore最大
+  2) TOP2: 残unitをscore上位2点へ2:1で配分
+  3) PROP: score比例
+  4) CAP67: score最大の総stake比を約2/3以下にし、残りをscore2位へ
+- budget 600/900/1200。
+- 選定はFeb-Jun DEVのみ。
+- robustness:
+  - actual DEV LOMO: 1月holdoutごとに残4月で再選定→holdout評価
+  - Jul-Aug SUPPORT完全holdout
+  - 近傍plateau
+  - 月別ROI
+  - max drawdown / losing streak / profit volatility
+  - score最大ticketのrank構成/的中寄与
+- 採用候補は「ALL ROI最大」ではなく、SUPPORTでequal非劣化・LOMO多数月非悪化・過度な集中を避けるものを優先。
+- production/LIVE stakingはv371完了まで変更しない。
