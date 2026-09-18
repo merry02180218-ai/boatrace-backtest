@@ -6,6 +6,7 @@ from build_4head_post_live import (
     build_from_sources,
     parse_start_timing,
     parse_boatcast_original,
+    parse_boatcast_st,
 )
 
 HTML = '''<html><body><table>
@@ -35,6 +36,13 @@ def main():
     assert parse_start_timing('.08', 'F') == -0.08
     assert parse_start_timing('.08', '') == 0.08
     assert parse_start_timing('.08', 'L') is None
+
+    # BOATCAST can physically wrap a player-name field mid-record.
+    st_wrapped = '''data=\n1\n1\t1\tA\t.19\t.10\t\t3.0\n2\t2\tB\t.14\t.26\t\t1.5\n3\t3\tC\t.17\t.14\t\t4.0\n4\t4\tD_PART
+\t.19\t.15\t\t4.0\n5\t5\tE\t.19\t.19\t\t5.5\n6\t6\tF\t.31\t.22\t\t6.0\n'''
+    pst = parse_boatcast_st(st_wrapped)
+    assert set(pst) == set(range(1,7))
+    assert pst[4] == 0.15
 
     labels, rows = parse_boatcast_original(ORIG)
     assert labels == ['一周', 'まわり足', '直線']
