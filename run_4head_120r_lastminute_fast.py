@@ -75,8 +75,13 @@ def _get_fast(url,timeout=4,attempts=2):
     for k in range(attempts):
         try:
             r=requests.get(url,headers=UA,timeout=timeout,allow_redirects=False)
-            if r.status_code==200 and r.text.strip() and not r.text.lstrip().startswith('<'):
-                return r.text
+            try:
+                text=r.content.decode('utf-8-sig')
+            except UnicodeDecodeError as de:
+                last=Fast120Error(f'UTF-8 decode failed {url}: {de}')
+                continue
+            if r.status_code==200 and text.strip() and not text.lstrip().startswith('<'):
+                return text
             last=Fast120Error(f'HTTP/body invalid {r.status_code} {url}')
         except Exception as e:
             last=e
