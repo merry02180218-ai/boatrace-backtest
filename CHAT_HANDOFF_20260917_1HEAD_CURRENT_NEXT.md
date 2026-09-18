@@ -1732,3 +1732,30 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 原因: plateau抽出で `g.mode.eq('TOP')` と書き、DataFrame.modeメソッドと列名が衝突してAttributeError。
 - DEV grid / raw+robust選定 / support/all評価 / true LOMO計算までは実行済み。データ・研究条件のfailureではない。
 - 修正: `g['mode'].eq('TOP')` のみ。fresh Runで最終Artifactを作る。
+
+
+## BEFORE — v378 overlay内 3点資金配分 audit
+- 買い方研究を継続。
+- current formal ticketsは固定（87/165）。
+- current stake shadowも総額レベルでは固定:
+  - formal wall3 OR five6発火レース: total600円
+  - その他: total300円
+- 今回は**総stakeを変えず、overlay36Rの600円を3点へどう配るかだけ**を研究。
+- 候補は100円単位・各ticket最低100円・合計6 units:
+  - 全positive integer composition of 6 = 10通り
+  - 例 2/2/2, 1/2/3, 1/1/4 等
+- 主比較:
+  1) EITHER overlay36Rすべて同一weights
+  2) FIVE6発火のみweights変更、その他overlayは2/2/2
+  3) WALL3発火のみweights変更、その他overlayは2/2/2
+- DEV Feb-Junのみでweights選定。
+- SUPPORT Jul-Augは完全holdout。
+- 評価:
+  - overall ROI/profit（stakeはEITHER2x baselineと同額60,300円）
+  - overlay subset ROI
+  - rank別hit/return寄与
+  - 月別
+  - fixed-weight leave-one-month-out
+  - 近傍（weight 10通り）でsupport非悪化有無
+- 比較baseline: EITHER 2x equal = 200/200/200 on overlay, 100/100/100 otherwise。
+- 2026-09 outcomes/payoutsは読まない。formal tickets / official stake / shadow stakeは変更しない。
