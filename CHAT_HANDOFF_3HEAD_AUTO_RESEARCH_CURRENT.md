@@ -130,3 +130,14 @@
 - Comparison: Wave13 is worse than Wave11 at >=20R (-8.18pt) and worse than Wave9 at every support tier. It only marginally exceeds Wave11 at >=50R (+1.62pt), while still well below Wave9.
 - Conclusion: requiring December+January persistence does not rescue fixed multiplicative interactions. There are strong-looking interaction pockets in individual prior months, but they do not transfer reliably into February. This materially strengthens the conclusion that the current PRE feature family is regime-sensitive/nonstationary rather than missing only a simple interaction formula.
 - Recommended next direction: stop searching more static pair/triple products from the same signals. If continuing with current PRE only, move to regime detection / conditional model selection (learn which interaction family is active from contemporaneous PRE distribution without target labels), or switch objective from raw head-rate to odds-aware EV where 30-40% pockets may still be valuable.
+
+
+## BEFORE WORK — Broad50 Wave14 PRE-distribution regime switching (2026-09-18)
+- Wave13 strengthens the nonstationarity hypothesis: fixed pair/triple interactions can look strong in prior months but do not transfer reliably. Wave14 therefore changes the mechanism rather than searching more static formulas.
+- Regime assignment must use **PRE distribution only**. No outcome, payout, exhibition or same-day result enters regime features.
+- Build one descriptor per race day from the cross-race distribution of the existing 19 oriented PRE signals (median / upper quartile / positive-share). Fit StandardScaler + KMeans on **Nov+Dec+Jan descriptors only** for K=2/3/4; assign February days using the frozen scaler/centroids.
+- Candidate interaction library is fixed before February: all 171 pairs from the 19 signals plus the 56 triples from the Wave11 January-only top-8 signal vocabulary. Do not add formulas based on Wave11/12/13 February results.
+- For each pre-Feb regime cluster, evaluate each exact interaction setting separately on Nov / Dec / Jan using leakage-safe daily walk-forward scores. Candidate settings must have minimum per-month cluster support; rank by the **worst monthly head rate** across Nov/Dec/Jan, then combined rate/support.
+- Freeze regime selectors for K=2/3/4, per-cluster support floors 5/8/12/16, and top-1 or top-2 union per cluster. Every selector definition is frozen from Nov-Dec-Jan only.
+- Pre-Feb selector diagnostics must report each month H1/H2 support/rate. February is then a one-shot transfer: each day is assigned a regime from PRE descriptors and only the frozen interaction(s) for that regime may fire.
+- Primary February comparison remains worst-half rate at >=20/30/50/75/100 races per half versus Wave9. March stays unopened. September outcomes UNREAD; production v288 unchanged.
