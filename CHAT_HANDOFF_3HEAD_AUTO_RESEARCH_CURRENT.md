@@ -166,3 +166,18 @@
 - Explicitly preserve the current rule that current-meet session fields are excluded unless independently shown to be pre-deadline and leakage-safe. Exhibition/original-exhibition remains excluded from PRE.
 - If materially useful unused PRE fields exist with broad historical coverage, next wave should add only those fields and repeat strict time-split/walk-forward validation. If none exist, shift the research objective to odds-aware EV or external PRE sources.
 - March outcomes stay unopened for this audit. September outcomes UNREAD; production v288 unchanged.
+
+
+## AFTER WORK — Wave15 raw PRE schema audit (2026-09-18)
+- Compared the current feature builder against actual BoatraceCSV race_cards / recent_national / recent_local schema. The current builder consumes only 13 race-card performance fields plus aggregated finish strings and date-derived recency.
+- Material unused **pre-race** fields found in race_cards: racer age, class (級別), period (期別), branch/origin, prize-exclusion flag, motor/boat flags, and 早見 (same-day other-race schedule). Registration/name and motor/boat IDs are identifiers and should not be used as naive ordinal predictors.
+- Material unused fields in recent_national/recent_local: per-meet grade, per-meet venue, and exact per-meet finish sequences. Current features collapse all five meets into aggregate finish rates, losing last-meet/second-meet form and competition-grade context. Start/end dates are already audited and used for fail-closed recency.
+- Current-meet 節D1..D7 fields remain excluded by policy. Exhibition/original-exhibition remain post-PRE and excluded. No change to production v288; March outcomes remain unopened; September UNREAD.
+
+## BEFORE WORK — Broad50 Wave16 enhanced unused-PRE transfer test (2026-09-18)
+- Add only generalizable, leakage-safe derived fields from the audited unused schema; do not use racer name, raw registration number, raw motor/boat number, or current-meet outcomes.
+- New race-card features per boat: age, period number, ordinal class score (A1>A2>B1>B2), prize-exclusion indicator, motor/boat flags, home-branch-at-current-venue indicator, same-day-other-race flag, second-appearance flag, and other-race number delta.
+- New historical-meet features per boat/source: exact last-meet and second-meet starts/mean/win/top2/top3, last/mean/max grade score, grade-weighted finish rates, national recent venue diversity and same-current-venue share. All prior-meet end dates must remain strictly < target date.
+- Create boat3-vs-1/2/4 and inner-mean gaps for the new numeric fields; keep raw six-boat values so models can learn non-monotonic age/experience effects.
+- Compare two model families under an identical leakage-safe daily walk-forward protocol: BASE=current sig_* features vs ENHANCED=BASE+new PRE features. Freeze model/window/band/percentile settings using Nov-Dec-Jan only, ranked by minimum H1/H2 rate across all three months with support/venue floors. February is a one-shot transfer.
+- Primary output: Feb worst-half support frontier at >=20/30/50/75/100 per half for BASE vs ENHANCED. Improvement only counts if ENHANCED beats BASE and Wave9 at the same support tier. March unopened; September UNREAD; production v288 unchanged.
