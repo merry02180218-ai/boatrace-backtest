@@ -112,3 +112,13 @@
 - START-only and EX_ST gates did not materially improve precision. Three-way MOTOR+EX+ST also underperformed the two-way MOTOR_EX signal, implying start exhibition adds noise once motor current-form + display rank are known.
 - Compared with PRE-only Wave17-equivalent **128R/44 = 34.38%**, the best MOTOR_EX result improves combined head rate by about **+5.05pt** while keeping useful volume (~58/month). However temporal half-month stability is not improved (28.0% worst vs PRE 28.57%), so this is a promising research candidate, **not yet production promotion**.
 - Next justified work: targeted local-neighborhood/stability audit around MOTOR_EX only (PRE q .925/.95/.97/.98, motor rank/top2 thresholds around neutral, exhibition rank 1/2/3 and modest edge thresholds), checking month/half/venue stability without opening March or retuning on February. Avoid broad new feature search.
+
+
+## BEFORE WORK — Wave21 MOTOR_EX local-neighborhood stability audit (2026-09-18)
+- Wave20 produced the first materially stronger interpretable candidate: PRE R1-8 q=.95 + boat3 motor EWMA-rank edge vs2 >=0 + exhibition rank <=2, 175R/69=39.43%, avg 58.3/month, but Dec=33.33% and persistent worst-half=28.0%.
+- Wave21 is a **local stability audit only**, not a new broad feature search. Reuse the same causal PRE/motor/exhibition data construction and do not add new information sources.
+- Search only neighboring MOTOR_EX gates: PRE q=.925/.95/.97/.98/.985; band R1-8 and R1-12; motor rank edge vs2 thresholds -0.20/0/.20/.40; motor top2 gap vs2 -0.03/0/.03/.05/.08; exhibition rank <=1/2/3; exhibition edge vs2 >= -0.02/0/.01/.02/.03. Also limited motor-inner/ex-rank variants as sensitivity checks.
+- Strict volume remains 40-70 races in **each** Nov/Dec/Jan month, half-month >=8 and >=6 venues.
+- Selection metric is predeclared for this stability audit: maximize **minimum monthly head rate across Nov/Dec/Jan**, then three-month combined head rate, then persistent worst-half rate, then closeness to 50/month. This directly addresses Wave20's December weakness while preserving useful volume.
+- Report venue concentration and leave-one-venue-out combined rate range for the selected candidate to detect dependence on one venue. Candidate must not be promoted if one venue dominates or leave-one-venue-out behavior is unstable.
+- February is reference-only and must not affect candidate selection. March unopened; September-2026 outcomes UNREAD; v288 unchanged.
