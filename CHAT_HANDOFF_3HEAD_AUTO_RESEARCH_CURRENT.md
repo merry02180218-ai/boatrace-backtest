@@ -247,3 +247,16 @@ Changes in research/run_3head_funsite_broad50.py:
 - Interpretation: Wave2 found a structurally interpretable Feb pattern around boat3 superiority over boat2 (player gap + ST edge), but the 50% precision did not transfer to March. Do NOT promote or tune that exact threshold from March.
 - Important positive signal: unlike generic Wave1, Wave2 produced a useful-volume March population (106R) at **37.7%**, indicating the opponent-specific representation is materially better than the generic model search direction even though it missed 50%.
 - Next research should preserve the opponent/archetype representation but improve temporal stability: rolling/leave-one-week-out Feb threshold selection, venue/race-number regime stratification with support caps, and consensus between interpretable rule score and model score. March should remain untouched for the new family until its thresholds are re-frozen from February-only resampling.
+
+
+## BEFORE WORK — Broad50 Wave3 temporal-stability/regime/consensus search (2026-09-18)
+- Continue from Wave2 Run 35304121579. Wave2's exact March outcomes must NOT be used to tune Wave3 thresholds; they only motivate changing the selection method toward temporal robustness.
+- Keep production v288 unchanged; September outcomes UNREAD; July/August NON-PRISTINE.
+- Wave3 candidate family is defined before its March evaluation and uses February only for design/selection:
+  1. opponent-specific rule score centered on boat3-vs-boat2 player/ST edges, plus motor/recent/vs1/vs4 support;
+  2. coarse race-number bands (1-4 / 5-8 / 9-12) and venue sets learned from February training only with minimum support;
+  3. rule + model-percentile consensus gates;
+  4. chronological Feb train -> validation-1 -> validation-2 plus weekly stability reporting.
+- Threshold grids/venue sets/race bands are frozen from February data. Minimum support is enforced in both Feb validation blocks; tiny-N 50% remains diagnostic only.
+- Freeze a 50% candidate only from February evidence; if no strict candidate exists, report relaxed frontier separately rather than silently lowering the target.
+- March is one-shot after freeze. Do not iterate Wave3 from its March result.
