@@ -140,8 +140,8 @@ jobs:
         if: env.SHOULD_RUN == '1'
         shell: bash
         run: |
-          OUT="/tmp/head4_watchdog_$JCD_$RACE.json"
-          LOG="/tmp/head4_watchdog_$JCD_$RACE.log"
+          OUT="/tmp/head4_watchdog_\${JCD}_\${RACE}.json"
+          LOG="/tmp/head4_watchdog_\${JCD}_\${RACE}.log"
           echo "OUT=$OUT" >> "$GITHUB_ENV"
           echo "LOG=$LOG" >> "$GITHUB_ENV"
           /usr/bin/time -f 'WATCHDOG_WALL_SECONDS=%e' python run_4head_120r_lastminute_fast.py \
