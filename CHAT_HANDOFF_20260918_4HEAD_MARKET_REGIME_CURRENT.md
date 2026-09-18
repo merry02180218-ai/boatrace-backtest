@@ -1537,3 +1537,26 @@ Status: `HEAD4_120R_STRICT_MONITOR_GATE_AND_FAILCLOSED_PASS__FINAL_BET_PASS_PEND
 - Since the prospective BET/PASS proof cannot exist before exhibition publication, use the otherwise idle interval to close a separate technical gap: run a **completed true monitoring-parent race** through the complete exhibition -> v283 -> odds -> frozen 120R path in `--performance-benchmark` mode.
 - This benchmark must still reject non-parent rows, must not read target result/payout, and is explicitly not prospective / not a profitability proof. Its purpose is only to prove that a real `monitoring_parent=true` row can traverse complete current-data inputs and produce the internal selected/PASS state without the unmonitored override.
 - Use Gamagori 4R (race_code 202609180704, monitoring_parent=true, head_prob ~0.4021) as the benchmark target because Gamagori current-source availability has already been demonstrated today.
+
+
+## AFTER WORK — completed true-parent benchmark limitation identified
+- Added benchmark workflow `.github/workflows/benchmark-4head-120r-true-parent-complete.yml` at commit `b4d9ac7b7ff90ff23ba4beb1cbfe5e47efac81e3`.
+- Trigger commit: `552d0a07be252330e3356d274757f06f029d39ff`.
+- Target: Gamagori 4R, a real corrected-PRE `monitoring_parent=true` row (race_code 202609180704).
+- Run: `35329141795`
+- Job: `105549161759`
+- Artifact: `10540630528`
+- Run conclusion: failure only because the benchmark intentionally required a complete current odds snapshot.
+- What succeeded:
+  - strict parent gate: `monitoring_parent=true`
+  - exhibition fetch/build succeeded in ~0.712s
+  - no target result/payout access
+- What failed:
+  - post-race trifecta odds are no longer available from either live source;
+  - official source timed out and BOATCAST od3 returned status-not-ready/lines=2;
+  - runner correctly ended `NO_BET_DATA_NOT_READY` at ODDS after ~15.1s rather than fabricating/staling odds.
+- Important conclusion: a completed race cannot be used to manufacture the missing complete-data proof. This preserves the integrity of the prospective audit. The final real proof must be collected on an upcoming race while its pre-deadline odds/exhibition are live.
+- At 18:19 JST all 29 internal parent rows were inspected; no earlier remaining true-parent race exists before Marugame 10R 19:39. Next are Omura 6R 19:56 and Gamagori 11R 20:15.
+- Next required action is unchanged: execute the strict monitored workflow on Marugame 10R after exhibition publication and before the official deadline.
+
+Status: `HEAD4_120R_POSTRACE_ODDS_NOT_RETAINED__PROSPECTIVE_TRUE_PARENT_PROOF_REQUIRED`
