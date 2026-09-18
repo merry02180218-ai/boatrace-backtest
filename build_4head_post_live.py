@@ -188,8 +188,29 @@ def parse_boatcast_original(text: str) -> tuple[list[str], dict[int, list[float 
     labels = [_norm_label(x) for x in lines[2].split("\t") if _norm_label(x)]
     if not 1 <= len(labels) <= 3:
         raise PostBuildError(f"original exhibition: unexpected labels={labels}")
-    rows: dict[int, list[float | None]] = {}
+    # BOATCAST can physically wrap the player-name field mid-record.
+    logical_rows: list[str] = []
+    cur: str | None = None
     for raw in lines[3:]:
+        cols = raw.split("\t")
+        is_start = False
+        if cols:
+            try:
+                boat0 = int(_clean(cols[0]))
+                is_start = 1 <= boat0 <= 6
+            except Exception:
+                is_start = False
+        if is_start:
+            if cur is not None:
+                logical_rows.append(cur)
+            cur = raw
+        elif cur is not None:
+            cur += raw
+    if cur is not None:
+        logical_rows.append(cur)
+
+    rows: dict[int, list[float | None]] = {}
+    for raw in logical_rows:
         cols = raw.split("\t")
         if len(cols) < 2 + len(labels):
             continue
