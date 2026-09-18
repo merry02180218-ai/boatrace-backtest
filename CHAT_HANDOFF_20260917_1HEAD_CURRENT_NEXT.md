@@ -3155,3 +3155,58 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - exact3 change as secondary diagnostic.
 - This is still research-only because SUPPORT n=8 is small.
 - September outcomes/payouts unread. Production unchanged.
+
+
+## AFTER — v391 ROI-first policy on frozen v389 added42
+- implementation:
+  - script commit `e95f08d538218b22ad5ada2222ae38e3e04cb5c1`
+  - workflow commit `4bb4066f0e88372473d1b5017bcdc2632db000cf`
+- Actions:
+  - Run `35383365308`
+  - Job `105724535129`
+  - Artifact `10562512931`
+  - digest `sha256:8163af6ed45b36d616fe7d7b8c770c058f61a5d45f536c741b979325e9461de5`
+  - SUCCESS / AUDIT_OK=true.
+- Frozen v389 selected42 formal baseline:
+  - ALL 42R / 21 hits / ROI101.98% / profit+250.
+  - DEV 34R / 18 hits / ROI107.35% / profit+750.
+  - SUPPORT 8R / 3 hits / ROI79.17% / profit-500.
+- ROI-first DEV selection still chose the same effective 3-ticket set (`HYBRID_a40`; a40-a90/HYBRID and several TOP2XTOP2 variants are identical on this frozen42):
+  - DEV 18/34 / ROI107.35%.
+  - SUPPORT 3/8 / ROI79.17%.
+  - ALL 21/42 / ROI101.98%.
+  - LIVE165 + added42 = 207R / ROI123.27% / profit+14,450.
+  - combined SUPPORT 36R / ROI114.81%.
+- Higher-ROI diagnostic JOINT_a90 / SECOND1X3:
+  - DEV 15/34 / ROI124.80% but nonnegative only2/5 months.
+  - SUPPORT 2/8 / ROI41.67%.
+  - combined207 ROI124.69%, but stability/hit degradation is too large; DEV-only robust rule does not select it.
+- Conclusion:
+  - further retrospective ticket-policy tuning does not provide a robust improvement over v389 current tickets.
+  - best current expansion research remains v389: base165 fixed + 42R separate expansion lane, 207R historical combined ROI123.27%.
+  - support selected42 is only8R, so formal promotion is premature.
+  - next step should be prospective Shadow collection rather than deeper retrospective tuning.
+- production unchanged / September outcomes unread.
+
+## BEFORE — v392 prospective 1HEAD expansion Shadow operation
+- Objective: translate the 4HEAD-style concept into executable 1HEAD operation without changing formal production.
+- Formal lane remains exactly:
+  - HEAD>=.790 / mass>=.375 / current LIVE exhibition gate.
+- Expansion PRE Shadow lane:
+  - HEAD>=.780 and <.790
+  - opponent mass>=.375
+  - current LIVE exhibition gate must PASS after exhibition.
+- Expansion post-exhibition confidence:
+  - freeze v389 `CONSENSUS_MASS q=.35` calibration from DEV only:
+    - consensus_mean mean=.7735849056603774 / sd=.05920808296780732
+    - formal_mass mean=.3101037496572021 / sd=.049786286582581996
+    - score=(z_consensus + .75*z_mass)/1.75
+    - threshold=-.2340695124317066.
+  - opponent distribution uses the same current opponentCore + wall3 + 5>6 causal exhibition adjustments before calculating HYBRID formal3 and cross-policy consensus.
+- If expansion Shadow passes:
+  - output 3 research-only tickets x100yen.
+  - do NOT convert formal DROP to official PASS.
+- Add daily cache PRE list so HEAD .78-.79 / mass>=.375 races are surfaced before exhibition.
+- Add per-race expansion Shadow JSON to manual/chat LIVE artifacts.
+- Validate with result-blind saved LIVE input where possible; do not read race outcome/payout.
+- September outcomes/payouts remain UNREAD. Production/official stake unchanged.
