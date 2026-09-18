@@ -305,3 +305,12 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 3点固定、HEAD/mass/env gate固定、opponentCore既存補正を先に適用。その上にwall3 overlayを加える。
 - 評価は all / Feb-Jun dev / Jul-Aug support / 月別、exact3、ROI、買い目変更数、baselineからのgain/lossを確認。
 - 9月結果は読まない。production/LIVEは研究完了まで変更しない。
+
+
+## v353 wall3連動3点買い目rerank — 実装/発火
+- 実装commit `7b9a783a62c4381f08e8a478e89683d58702217d`: `run_v353_1head_wall3_ticket_rerank.py`。
+- workflow commit `e01c97ad8736d80d4bd0f9fd90c5b8f5182e8469`: `.github/workflows/v353-1head-wall3-ticket-rerank.yml`。
+- Run `35310326328` 発火済み。
+- 既存 opponentCore 補正後に、wall3 riskに応じて4号艇をsoft boost / 3号艇をsoft demote。SECOND/THIRD別gamma、4号艇attackCore閾値、risk定義（ST / wall score / combo）をgrid探索。
+- 3点固定。BASIC/WATCH gate固定。HEAD判定は変更しない。
+- びわこ7Rのように「現行3点すべて4なし・3中心」なのに3<4展示となるケースが、wall-aware rerankでどう変わるかを研究対象とする。
