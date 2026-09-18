@@ -571,11 +571,19 @@ def wall3_open_shadow(head_prob,mass,comp,exh,current_selected):
     """Research-only 3-vs-4 open-path rescue diagnostic.
 
     This never changes the official selected/BET/PASS decision.
-    Canonical profile is frozen from the 2026-09-18 retrospective audit:
-      quality = head_prob + 1.50*opponent_mass
-      shadow_quality = quality + 0.10*max(0,-wall_score)
-      rescue iff current PASS, comp>=2.5 and shadow_quality>=0.82.
+    Canonical profile is frozen from the 2026-09-18 retrospective audit.
+    Frozen wall research required orig straight + orig avg; otherwise no shadow.
     """
+    if not bool(exh.get('wall_exhibition_ready',True)):
+        return {
+          'profile':'HEAD4_WALL3_OPEN_RESCUE_SHADOW_V1_BETA010_Q082_COMP250',
+          'research_only':True,'production_applied':False,
+          'eligible_current_pass':False,'would_rescue':False,
+          'wall_score':None,'open_risk':None,'attack4_score':None,
+          'base_quality':float(head_prob)+1.50*float(mass),'shadow_quality':None,
+          'thresholds':{'open_beta':.10,'quality':.82,'composite_odds':2.5},
+          'gaps':{},'not_ready_reason':'venue wall schema unavailable',
+        }
     b3=exh['current_boats']['3']; b4=exh['current_boats']['4']
     gaps={
       'ex':float(b3['cur_ex'])-float(b4['cur_ex']),
