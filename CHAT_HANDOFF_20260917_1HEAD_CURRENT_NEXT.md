@@ -2621,3 +2621,47 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - September outcomes/payoutsはUNREAD維持。
   - current formal LIVE ticketsは変更しない。
   - ROIを落としてhit率だけ上げる案は不採用方針。
+
+
+## AFTER — v371 value-gated top-up robustness
+- Run `35377804773` / Job `105706558975` completed success / Artifact `10560801328` / digest `sha256:96b71a89bca7b500c979022e3e80a349a409b8b59cf77e43d00fde9268589305`。
+- formal baseline:
+  - 165R / stake49,500 / return63,700 / profit+14,200 / ROI128.687%
+  - DEV129.44% / SUPPORT125.00%。
+- DEV raw best:
+  - combined>=2.50 / conditional value>=1.30 / extra3 units
+  - DEV ROI145.68%だが月別非悪化3/5、worst -17.05pt。
+- DEV plateau:
+  - bestから2.5 ROI pt以内 = 8 cells
+  - combined 2.00〜2.50 / value .90〜1.30 / extra=3固定。
+- DEV-only medoid core:
+  - combined>=**2.25**
+  - max(pair_prob×closing_odds)>=**1.10**
+  - gate発火時extra **3 units**
+  - total unitsはvalue score比例、各formal ticket最低1unit。
+- medoid core:
+  - DEV: 35R trigger / stake51,600 / return74,330 / profit+22,730 / ROI **144.05%**
+  - SUPPORT: 5R trigger / stake9,900 / return13,060 / profit+3,160 / ROI **131.92%**
+  - ALL: 40R trigger / stake61,500 / return87,390 / profit **+25,890** / ROI **142.10%**
+  - baseline比 ALL +13.41 ROI pt / profit +11,690円
+  - SUPPORT +6.92 ROI pt。
+- 月別:
+  - Feb +1.96pt
+  - Mar +20.14pt
+  - Apr +16.44pt
+  - May -7.33pt
+  - Jun +40.10pt
+  - Jul +27.41pt
+  - Aug -3.88pt
+- 近傍18 cellsはDEV delta ROI>=0が100%。
+- closing oddsは正式締切後に確定するexecution upper-boundであり、**このままLIVE正式採用はしない**。
+- September outcomes unread / production unchanged / AUDIT_OK=true。
+
+## BEFORE — v372 value-gated staking LOMO + live-odds feasibility
+- v371 family/medoid方式をDEV内LOMOで再選定:
+  - 各holdout月を除く4DEV月でplateau medoidを再選定
+  - holdout月のROI差を監査
+- DEV plateau 8 cells全件についてSUPPORT成績も「選定には使わず」robustness診断。
+- repoにhistorical pre-close odds snapshotが存在するか調査。
+- snapshotがなければ、v371はupper-bound研究として保存し、今後forward LIVEで判定時オッズを保存するlogger設計へ進む。
+- formal tickets/race setは変更しない。
