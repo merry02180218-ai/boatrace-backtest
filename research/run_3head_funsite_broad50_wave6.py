@@ -322,6 +322,16 @@ def main():
     rows=[]
     candidate_count=0
 
+    yfeb=feb.y.to_numpy(dtype=int)
+    vfeb=feb.venue.astype(str).to_numpy()
+    def half_metric_fast(mask,half):
+        m=np.asarray(mask,bool)&np.asarray(half,bool)
+        n=int(m.sum())
+        hits=int(yfeb[m].sum()) if n else 0
+        rate=float(hits/n) if n else None
+        venues=int(np.unique(vfeb[m]).size) if n>=20 and (rate or 0)>=.47 else 0
+        return {'n':n,'hits':hits,'rate':rate,'venues':venues}
+
     def keep_half(h1m,h2m):
         strict_half=(h1m['n']>=20 and h2m['n']>=20 and h1m['venues']>=8 and h2m['venues']>=8 and
                      (h1m['rate'] or 0)>=.50 and (h2m['rate'] or 0)>=.50)
@@ -331,9 +341,16 @@ def main():
 
     for band in BANDS:
         if int(band_mask(jan,band).sum())<300:continue
-        used,mats=signal_context(jan,frames,band)
+        used,mats=signal_context(jan,{'jan':jan,'feb':feb,'mar':mar},band)
         stacks=model_context(jan,{'jan':jan,'feb':feb,'mar':mar},band,feats)
         bf=band_mask(feb,band);bm=band_mask(mar,band)
+        gate_pairs=[(.70,2),(.75,2),(.75,3),(.80,2),(.80,3),(.85,2),(.85,3)]
+        cached_gates={
+            (mq,mk):(
+                ((stacks['feb']>=mq).sum(axis=1)>=mk),
+                ((stacks['mar']>=mq).sum(axis=1)>=mk)
+            ) for mq,mk in gate_pairs
+        }
 
         # Model-only percentile consensus.
         for q in MODEL_Q:
@@ -341,7 +358,7 @@ def main():
                 mf=bf&((stacks['feb']>=q).sum(axis=1)>=k)
                 mm=bm&((stacks['mar']>=q).sum(axis=1)>=k)
                 candidate_count+=1
-                h1m=metric(mf&h1,feb);h2m=metric(mf&h2,feb)
+                h1m=half_metric_fast(mf,h1);h2m=half_metric_fast(mf,h2)
                 if keep_half(h1m,h2m):
                     z={'kind':'jan_model_consensus','band':list(band),'q':q,'k':k,
                        'h1':h1m,'h2':h2m,'weeks':weekly_metrics(mf,feb),'_mar':mm}
@@ -355,7 +372,7 @@ def main():
             th=float(np.quantile(ref,q))
             mf=bf&np.isfinite(meanf)&(meanf>=th);mm=bm&np.isfinite(meanm)&(meanm>=th)
             candidate_count+=1
-            h1m=metric(mf&h1,feb);h2m=metric(mf&h2,feb)
+            h1m=half_metric_fast(mf,h1);h2m=half_metric_fast(mf,h2)
             if keep_half(h1m,h2m):
                 z={'kind':'jan_model_mean','band':list(band),'q':q,'threshold':th,
                    'h1':h1m,'h2':h2m,'weeks':weekly_metrics(mf,feb),'_mar':mm}
@@ -363,7 +380,7 @@ def main():
 
         # Opponent-specific continuous score and score+model.
         wgrid=score_weights(used)
-        sjmat=signal_context(jan,{'jan':jan},band)[1]['jan']
+        sjmat=mats['jan']
         for weights in wgrid:
             w=np.array([weights[c] for c in used],float)
             sj=weighted_score(sjmat,w);sf=weighted_score(mats['feb'],w);sm=weighted_score(mats['mar'],w)
@@ -373,16 +390,17 @@ def main():
                 th=float(np.quantile(ref,q))
                 basef=bf&np.isfinite(sf)&(sf>=th);basem=bm&np.isfinite(sm)&(sm>=th)
                 candidate_count+=1
-                h1m=metric(basef&h1,feb);h2m=metric(basef&h2,feb)
+                h1m=half_metric_fast(basef,h1);h2m=half_metric_fast(basef,h2)
                 if keep_half(h1m,h2m):
                     z={'kind':'jan_attack_score','band':list(band),'q':q,'threshold':th,'weights':weights,
                        'h1':h1m,'h2':h2m,'weeks':weekly_metrics(basef,feb),'_mar':basem}
                     rows.append(z)
-                for mq,mk in [(.70,2),(.75,2),(.75,3),(.80,2),(.80,3),(.85,2),(.85,3)]:
-                    mf=basef&((stacks['feb']>=mq).sum(axis=1)>=mk)
-                    mm=basem&((stacks['mar']>=mq).sum(axis=1)>=mk)
+                for mq,mk in gate_pairs:
+                    gf,gm=cached_gates[(mq,mk)]
+                    mf=basef&gf
+                    mm=basem&gm
                     candidate_count+=1
-                    h1m=metric(mf&h1,feb);h2m=metric(mf&h2,feb)
+                    h1m=half_metric_fast(mf,h1);h2m=half_metric_fast(mf,h2)
                     if keep_half(h1m,h2m):
                         zz={'kind':'jan_attack_model','band':list(band),'q':q,'threshold':th,'weights':weights,
                             'model_q':mq,'model_k':mk,
