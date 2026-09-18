@@ -125,8 +125,8 @@ def fetch_current(hd,jcd,rno,timeout):
         ft=ex.submit(_get_fast,tu,timeout,2);fs=ex.submit(_get_fast,su,timeout,2);fo=ex.submit(_get_fast,ou,timeout,2)
         return ft.result(),fs.result(),fo.result()
 
-def wait_exhibition_ready(hd,jcd,rno,bias,deadline,timeout=4,poll_interval=2.0,safety_seconds=75):
-    attempts=0; last=''
+def wait_exhibition_ready(hd,jcd,rno,bias,deadline,timeout=4,poll_interval=2.0,safety_seconds=75,max_wait_seconds=30):
+    attempts=0; last=''; started=time.perf_counter()
     while True:
         attempts+=1
         try:
@@ -136,12 +136,13 @@ def wait_exhibition_ready(hd,jcd,rno,bias,deadline,timeout=4,poll_interval=2.0,s
         except Exception as e:
             last=f'{type(e).__name__}: {e}'
             remain=(deadline-datetime.now(JST)).total_seconds()
-            if remain<=safety_seconds:
-                raise Fast120Error(f'exhibition not ready before safety margin; attempts={attempts}; remain={remain:.1f}s; last={last}')
+            elapsed=time.perf_counter()-started
+            if remain<=safety_seconds or elapsed>=max_wait_seconds:
+                raise Fast120Error(f'exhibition not ready; attempts={attempts}; remain={remain:.1f}s; elapsed={elapsed:.1f}s; last={last}')
             time.sleep(min(poll_interval,max(0.2,remain-safety_seconds)))
 
-def wait_odds_ready(hd,jcd,rno,deadline,timeout=4,poll_interval=1.5,safety_seconds=45):
-    attempts=0; last=''
+def wait_odds_ready(hd,jcd,rno,deadline,timeout=4,poll_interval=1.5,safety_seconds=45,max_wait_seconds=15):
+    attempts=0; last=''; started=time.perf_counter()
     while True:
         attempts+=1
         try:
@@ -149,8 +150,9 @@ def wait_odds_ready(hd,jcd,rno,deadline,timeout=4,poll_interval=1.5,safety_secon
         except Exception as e:
             last=f'{type(e).__name__}: {e}'
             remain=(deadline-datetime.now(JST)).total_seconds()
-            if remain<=safety_seconds:
-                raise Fast120Error(f'odds not ready before safety margin; attempts={attempts}; remain={remain:.1f}s; last={last}')
+            elapsed=time.perf_counter()-started
+            if remain<=safety_seconds or elapsed>=max_wait_seconds:
+                raise Fast120Error(f'odds not ready; attempts={attempts}; remain={remain:.1f}s; elapsed={elapsed:.1f}s; last={last}')
             time.sleep(min(poll_interval,max(0.2,remain-safety_seconds)))
 
 def parse_od3(body):
@@ -232,7 +234,7 @@ def main():
     ap.add_argument('--deadline-jst',required=True)
     ap.add_argument('--race-cards',required=True);ap.add_argument('--waku10',required=True)
     ap.add_argument('--pre-all',required=True);ap.add_argument('--daily-state',required=True)
-    ap.add_argument('--timeout',type=int,default=4);ap.add_argument('--poll-interval',type=float,default=2.0);ap.add_argument('--exhibition-safety-seconds',type=int,default=75);ap.add_argument('--odds-safety-seconds',type=int,default=45);ap.add_argument('--allow-unmonitored-benchmark',action='store_true')
+    ap.add_argument('--timeout',type=int,default=4);ap.add_argument('--poll-interval',type=float,default=2.0);ap.add_argument('--exhibition-safety-seconds',type=int,default=75);ap.add_argument('--odds-safety-seconds',type=int,default=45);ap.add_argument('--max-exhibition-wait-seconds',type=float,default=30);ap.add_argument('--max-odds-wait-seconds',type=float,default=15);ap.add_argument('--allow-unmonitored-benchmark',action='store_true')
     ap.add_argument('--out',required=True)
     a=ap.parse_args(); total0=time.perf_counter(); stages={}
     deadline=parse_deadline_flexible(a.date,a.deadline_jst); live.require_before_deadline(deadline,'fast120 startup')
@@ -247,13 +249,13 @@ def main():
 
     bias={int(k):float(v) for k,v in state['st_bias'].items()}
     t=time.perf_counter(); exh,ex_attempts,ex_last=wait_exhibition_ready(
-        a.date,a.jcd,a.race,bias,deadline,a.timeout,a.poll_interval,a.exhibition_safety_seconds
+        a.date,a.jcd,a.race,bias,deadline,a.timeout,a.poll_interval,a.exhibition_safety_seconds,a.max_exhibition_wait_seconds
     );stages['fetch_and_build_exhibition_s']=time.perf_counter()-t
     t=time.perf_counter(); pf=player_flat(cards[code],state); src=make_boats(cards[code],waku[code],exh,pf);stages['build_v283_inputs_s']=time.perf_counter()-t
     art=load_artifact()
     t=time.perf_counter(); sr,cr=derive(src,art);p2=score_second(sr,art);pc=score_conditional_third(cr,art);tickets=live.production_tickets(p2,pc);pairs=[tuple(map(int,x.split('-')[1:])) for x in tickets];mass=pair_mass(p2,pc,pairs);stages['v283_inference_s']=time.perf_counter()-t
     t=time.perf_counter();odds,meta,od_attempts,od_last=wait_odds_ready(
-        a.date,a.jcd,a.race,deadline,a.timeout,min(1.5,a.poll_interval),a.odds_safety_seconds
+        a.date,a.jcd,a.race,deadline,a.timeout,min(1.5,a.poll_interval),a.odds_safety_seconds,a.max_odds_wait_seconds
     );stages['fetch_odds_s']=time.perf_counter()-t
     vals=[float(odds[x]) for x in tickets];comp=live.composite_odds(vals);d=decide(hp,mass,comp)
     now=live.require_before_deadline(deadline,'before fast120 persist')
