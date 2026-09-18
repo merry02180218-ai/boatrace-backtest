@@ -2029,3 +2029,55 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 修正: repo CSVをfirst sourceとし、missingのみv340と同じBOAT RACE公式 `odds3t` closing pageから取得するfallbackを追加。
 - 結果/払戻からのodds逆算は禁止。fallbackもpre-race market informationのみ。
 - 研究grid・DEV選定条件は変更しない。
+
+
+## AFTER — v370 odds-aware dynamic staking
+- Run `35361600631` / Job `105653943807` completed success / Artifact `10554711567` / head `e88e8257fad713ddc17d25ab1d62d1d097d2ea79`。
+- official closing odds coverage 165/165:
+  - repo CSV 144R
+  - BOAT RACE official web fallback 21R（全Jul/Aug）
+  - outcome/payoutからのodds逆算なし。
+- formal equal100 baseline完全再現:
+  - 87/165 / stake49,500 / return63,700 / profit+14,200 / ROI128.687%。
+- named fixed-total:
+  - Dutch 600円/R: ALL ROI122.84%（悪化）
+  - MODEL_P 600円/R: 128.14%（ほぼ同等）
+  - VALUE p*odds 600円/R: **130.44%**、DEV131.93%、SUPPORT123.15%
+  - VALUE p*odds 1000円/R: ALL134.30%、DEV136.68%、SUPPORT122.64%（support悪化）
+- raw DEV best fixed powerは高odds寄せ（a=0,b=1）:
+  - 600円/R ALL131.23%だが SUPPORT121.13%
+  - 1000円/R ALL137.19%だが SUPPORT119.14%
+  - DEV最適をそのまま採用するのはoverfit傾向。
+- selective p*odds boost DEV-selected:
+  - value>=1.4 / margin>=.1 / +500円
+  - DEV ROI164.15%、ALL156.07%だが SUPPORT111.70%、support boost2Rとも外れ。
+  - 明確に不安定なので不採用。
+- grid診断では confidence-weighted value `score = p^2 * odds` が有望:
+  - 900円/R: DEV131.74 / SUPPORT126.83 / ALL130.90%
+  - 1200円/R: DEV132.55 / SUPPORT132.53 / ALL132.55%
+  - 1500円/R: DEV132.88 / SUPPORT131.02 / ALL132.56%
+  - 2400円/R: DEV133.19 / SUPPORT128.60 / ALL132.41%
+  - 3000円/R: DEV134.17 / SUPPORT128.36 / ALL133.18%
+- `p^2*odds` はEV=`p*odds`にconfidence pをもう1回掛けた理論的なrisk-adjusted value。SUPPORTを見て後付け選定するのではなく、v371でpre-specified strategyとしてbudget感度を正式監査する。
+- September outcomes unread / production unchanged / AUDIT_OK=true。
+
+## BEFORE — v371 confidence-weighted value staking robustness
+- current formal3買い目は固定、レース165R固定。
+- pre-specified staking formulasを比較:
+  1) EQUAL
+  2) DUTCH = odds^-1
+  3) MODEL = p
+  4) EV = p*odds
+  5) CONF_EV = p^2*odds
+  6) SOFT_EV = p*sqrt(odds)
+- 100円unit / 各ticket最低100円。
+- total budgetは3で割り切れる `600/900/1200/1500/1800/2100/2400/3000円/R` を比較し、equal配分が完全に均等になるようにする。
+- 主要仮説: CONF_EVは高オッズ追随を抑えつつvalueを厚くでき、DEV/SUPPORT双方でequal ROIを上回る。
+- 評価:
+  - DEV / SUPPORT / ALL ROI, profit
+  - 月別equal差
+  - budget感度
+  - 各rank平均stake
+  - max/min stake distribution
+- strategy式はSUPPORT結果を見る前に固定。budgetは採用判断時に安定plateauを見る。
+- production/LIVE ticket内容は変更しない。September outcomes unread。
