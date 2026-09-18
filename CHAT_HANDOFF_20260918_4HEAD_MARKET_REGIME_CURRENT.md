@@ -1065,3 +1065,40 @@ Next resume point:
 5. use timestamped pre-deadline odds only at final market stage.
 
 Status: `HEAD4_PRE_DESIGN_READY__NEXT_FREEZE_HEADPROB_AND_LIVE_SCANNER`
+
+
+## USER APPROVED LIVE PRE TRIAL — 2026-09-18
+User: 「まあ試してみよう」
+
+### BEFORE / implementation state
+Goal: run the new 4head 120R PRE design on **today 2026-09-18** without reading September outcomes.
+
+Implemented:
+- frozen race-card head_prob artifact:
+  - `artifacts/head4_racecard_headprob_frozen_20260630.json`
+  - commit `3feb7a6f64b9b0beba3d050b98351d161793f9a6`
+  - fit Apr-Jun only, 13,221 rows / 78 race-card features
+  - parity vs audited probabilities max abs error ~6.09e-14
+- research-only LIVE PRE scanner:
+  - `scan_4head_120r_pre_live.py`
+  - commit `7778b1d490e5e178668592941fc5d82a1384e2ef`
+- workflow:
+  - `.github/workflows/trial-4head-120r-pre-live.yml`
+  - commit `c52339380aa3910ed3c92f8c3ddcc94e82ecf697`
+
+LIVE safety semantics:
+- current race cards / Waku10 only for target day;
+- current exhibition not used;
+- current odds not used;
+- race-card headprob is frozen through Jun-30;
+- v250 labels frozen through Jun-30;
+- wide-parent motor/player win-history state explicitly stops at Aug-31;
+- no September result files are opened by the new scanner;
+- display shortlist is NOT a hard gate; monitoring parent remains eligible for later post-exhibition promotion;
+- production unchanged.
+
+Next immediate action:
+- trigger 2026-09-18 LIVE PRE trial;
+- verify Run/Job/Artifact;
+- report today's display shortlist and internal monitoring count.
+Status: `HEAD4_120R_PRE_LIVE_TRIAL_READY_TO_TRIGGER`
