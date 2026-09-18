@@ -4,3 +4,4 @@ rerun after flexible deadline fix
 rerun BOATCAST-only fast path
 rerun after flexible deadline + fast BOATCAST path
 rerun after ST boat-number parser fix
+rerun after ST verifier fixture correction
