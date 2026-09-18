@@ -212,3 +212,17 @@
 - Expand score thresholds into the extreme tail: q = .95/.96/.97/.975/.98/.985/.99/.9925/.995, because the user now accepts much lower volume in exchange for precision. Bands include R1-4/R1-6/R1-8/R1-10/R1-12; windows 21/42; model score = logit/hist/mean.
 - Freeze primary candidate by maximum **worst half-month head rate across all six Nov/Dec/Jan halves**, then persistent combined rate, then closeness of average monthly volume to 50. No February label may affect candidate choice.
 - February is reference one-shot for the frozen candidate. Because February has already been inspected in prior waves, label this result as NON-PRISTINE/reference, not a new untouched holdout. March stays untouched in this wave; September UNREAD; production v288 unchanged.
+
+
+## AFTER WORK — Wave17 ~50 races/month precision target (Run 35325973943, 2026-09-18)
+- SUCCESS: Run **35325973943** / Job **105538984352** / Artifact **10538494568**; head SHA **198620ffea0baf18efc343ea4dcd7cb337454d5f**.
+- User operational target changed to ~50 races/month. Wave17 therefore searched only high-score ENHANCED candidates around 40-70 races/month pre-Feb, using Nov-Dec-Jan for freeze and February as NON-PRISTINE reference only. March remained unopened; September UNREAD; production v288 unchanged.
+- 8 strict 40-70/month candidates and 26 wide 30-80/month candidates were found.
+- Primary pre-Feb candidate: ENHANCED / trailing window42 / races R1-8 / logistic percentile q=.99.
+  - Nov: 41R / 14 heads = **34.15%**; H1 7/17=41.18%, H2 7/24=29.17%.
+  - Dec: 41R / 13 heads = **31.71%**; H1 5/13=38.46%, H2 8/28=28.57%.
+  - Jan: 46R / 17 heads = **36.96%**; H1 13/32=40.63%, H2 4/14=28.57%.
+  - Pre-Feb average volume **42.67 races/month**; total 128R / 44 heads = **34.38%**; persistent worst half-month **28.57%**.
+- February NON-PRISTINE reference for the frozen candidate: H1 3/5=60.0%, H2 8/25=32.0%, total **11/30=36.67%**, worst-half 32.0%. February volume fell below the desired 40-70 band, so this is not yet a production-ready ~50/month selector.
+- A candidate centered even closer to 50/month existed (window42 / R1-12 / logistic q=.99): pre-Feb avg 49.67/month, but persistent worst half-month only **25.0%** (Nov 49R/16=32.65%, Dec 47R/13=27.66%, Jan 53R/19=35.85%). Thus simply forcing exact 50/month worsened stability.
+- Conclusion: lowering the volume target from ~130/month to ~50/month helps concentration, but the current ENHANCED PRE model still does not show a stable 40-50% head rate across prior months. Best pre-Feb precision/stability compromise is about **34-35% at ~43 races/month**. Do not claim 50% achievable yet from this family.
