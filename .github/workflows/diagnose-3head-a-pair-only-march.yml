@@ -8,6 +8,8 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/diagnose-3head-a-pair-only-march.yml'
+      - 'replay_v288_historical_day.py'
+      - 'research/aggregate_3head_a_pair_only_march.py'
 permissions:
   contents: read
   actions: read
