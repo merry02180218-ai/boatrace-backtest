@@ -1,3 +1,4 @@
+# trigger: wall3 audit after chat-timeout recovery
 name: v352 1-head wall3 risk audit
 on:
   workflow_dispatch:
