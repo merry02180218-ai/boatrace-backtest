@@ -2919,3 +2919,23 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 3. D20が「currentで発火した後もclosing core条件を保つ」率を十分な件数で確認する。
 4. 件数が貯まるまでD20/D30はresearch shadowのまま。closing v371 ROIを理由にformal stakeへ昇格しない。
 5. September outcomesはUNREAD維持。production変更なし。
+
+
+## 2026-09-19 USER DIRECTIVE — dynamic stakeはShadow表示で継続
+### BEFORE
+- ユーザー指示: 母数がまだ少ないためformal増額には昇格せず、「一応Shadowで出して」運用を継続する。
+- 既存LIVE実装を確認し、formal買い目/official stakeを変えずにShadowがartifactへ出ることを再確認する。
+
+### AFTER
+- 既存LIVE workflowを確認:
+  - `.github/workflows/manual-1head-v351-live.yml`
+  - `.github/workflows/chat-live-1head-v351-request.yml`
+  - どちらもformal finalize後に `run_1head_v351_live_current_odds_shadow.py` を実行し、current odds Shadow JSONをartifactへ保存済み。
+- Shadowで既に観測できる内容:
+  - WALL3: 100/100/400
+  - FIVE6-only: 基本200/200/200、current odds soft発火時はsoft配分
+  - current odds safety 3.5 / 3.9 / 4.3
+  - value gate D20 / D30
+- 今後ChatGPTが1head直前判定を返す際は、formal買い目（official 100/100/100）と明確に分離して「Shadow」として仮想stakes/発火理由も併記する。
+- production/formal stake変更なし。research_only維持。
+- September outcomes/payoutsはUNREAD維持。
