@@ -1,6 +1,6 @@
 name: diagnose-3head-a-pair-only-march
 concurrency:
-  group: diagnose-3head-a-pair-only-march
+  group: diagnose-3head-a-pair-only-march-fast-v221
   cancel-in-progress: true
 on:
   workflow_dispatch:
