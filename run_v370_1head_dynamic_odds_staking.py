@@ -79,7 +79,20 @@ def equal_units(total_units):
     if total_units%3: raise RuntimeError('budget not divisible by 3 units')
     return (total_units//3,)*3
 
-def odds_row(code,cache):
+def load_frozen_odds(path):
+    out={}
+    if path is None:return out
+    path=Path(path)
+    if not path.exists():return out
+    for p in sorted(path.glob('odds_*.csv')):
+        try:d=pd.read_csv(p,dtype={'race_code':str})
+        except pd.errors.EmptyDataError:continue
+        for _,r in d.iterrows():
+            code=str(r.race_code).zfill(12)
+            out[code]={str(k):float(v) for k,v in json.loads(r.odds_json).items()}
+    return out
+
+def odds_map(code,cache,frozen):
     code=str(code).zfill(12); day=code[:8];jcd=code[8:10];rno=int(code[10:12])
     if day>='20260901': raise RuntimeError(f'September odds entered {code}')
     if day not in cache:
@@ -91,13 +104,22 @@ def odds_row(code,cache):
             d['jcd']=d.jcd.astype(str).str.zfill(2)
             cache[day]=d
     d=cache[day]
-    if d is None:return None
-    q=d[(d.jcd.eq(jcd))&(pd.to_numeric(d.rno,errors='coerce').eq(rno))]
-    if len(q)!=1:return None
-    return q.iloc[0]
+    if d is not None:
+        q=d[(d.jcd.eq(jcd))&(pd.to_numeric(d.rno,errors='coerce').eq(rno))]
+        if len(q)==1:
+            row=q.iloc[0];out={}
+            for k,v in row.items():
+                if isinstance(k,str) and k.count('-')==2:
+                    try:
+                        x=float(v)
+                        if math.isfinite(x) and x>0:out[k]=x
+                    except Exception:pass
+            if len(out)>=20:return out,'repo_archive'
+    if code in frozen:return frozen[code],'v340_frozen'
+    return None,None
 
-def build(rows,payouts):
-    odds_cache={};rec=[];miss=[]
+def build(rows,payouts,frozen):
+    odds_cache={};rec=[];miss=[];source_counts={}
     for r in rows:
         code=str(r['race_code']).zfill(12);actual=str(r['actual_combo'])
         p2,pc=v365.formal_post_five6(r)
@@ -105,9 +127,10 @@ def build(rows,payouts):
         top=v299.STRATEGIES['HYBRID'](p2,pc,probs)[:3]
         ts=[f'1-{s}-{t}' for s,t in top]
         if len(ts)!=3 or len(set(ts))!=3:raise RuntimeError(f'invalid formal tickets {code}')
-        odr=odds_row(code,odds_cache)
+        odr,source=odds_map(code,odds_cache,frozen)
         if odr is None:
             miss.append(code);continue
+        source_counts[source]=source_counts.get(source,0)+1
         ods=[];ps=[]
         bad=False
         for pair,t in zip(top,ts):
@@ -127,7 +150,7 @@ def build(rows,payouts):
           'wall3_like':int(float(r['score4'])>=prod.WALL3_SHADOW_ATTACK4_MIN and float(r['score4'])>float(r['score3']) and float(r['opp_mass'])>=prod.WATCH_OPPONENT_MASS_MIN),
           'five6_like':int(float(r['score6'])>=prod.FIVE6_SHADOW_SCORE6_MIN and float(r['st6'])-float(r['st5'])>=prod.FIVE6_SHADOW_ST_GAP_MIN),
         })
-    return pd.DataFrame(rec),miss
+    return pd.DataFrame(rec),miss,source_counts
 
 def cfg_name(mode,budget,alpha=None,beta=None):
     if alpha is None:return f'{mode}|B{budget}'
@@ -171,11 +194,12 @@ def evaluate(z,mode,budget,alpha=1.0,beta=0.0,detail=False):
     }
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--prepared',required=True,type=Path);args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--prepared',required=True,type=Path);ap.add_argument('--frozen-odds',type=Path,default=None);args=ap.parse_args()
     x=pickle.load(args.prepared.open('rb'));rows=x['rows']['LIVE165']
     if len(rows)!=165:raise RuntimeError(f'LIVE165 drift {len(rows)}')
     prefetch=install_payout_cache(rows);payouts=payouts_for(rows)
-    z,missing=build(rows,payouts)
+    frozen=load_frozen_odds(args.frozen_odds)
+    z,missing,source_counts=build(rows,payouts,frozen)
     if missing: raise RuntimeError(f'closing odds missing {len(missing)} examples={missing[:10]}')
     if len(z)!=165:raise RuntimeError(f'odds coverage drift {len(z)}')
     # Equal 300 yen sentinel uses actual payout, matching formal ROI.
@@ -260,7 +284,7 @@ def main():
     result={
       'formal_equal300':formal300,
       'odds_source':'repo official_closing_odds3t closing_displayed',
-      'odds_coverage_R':len(z),'odds_missing_R':len(missing),
+      'odds_coverage_R':len(z),'odds_missing_R':len(missing),'odds_source_counts':source_counts,
       'budgets':list(BUDGETS),'dev_selected_by_budget':pd.DataFrame(final).to_dict('records'),
       'notes':{
         'all_races_bought':True,'all_three_tickets_min_100':True,
