@@ -2326,3 +2326,117 @@ Method:
 8. Production/LIVE remains unchanged unless separately approved after robustness review.
 
 Status: HEAD4_156R_SWAP_OPTIMIZATION_START
+
+
+## AFTER — exact156 causal swap optimization completed
+User approved replacing weak expansion-layer races while keeping total volume at 156R.
+
+### Implementation / validation
+- initial broad score-search script:
+  - `audit_4head_156r_swap_score_search.py`
+  - commit `d5f0f868a6b4b6505a4c16d661fceb453834bfc2`
+- initial broad workflow:
+  - `.github/workflows/audit-4head-156r-swap-score-search.yml`
+  - commit `a8abc00e0d033215bd9f48bd2ffe483afda811bc`
+  - Run `35358441813` was computationally heavy and remained in-progress during the chat.
+- focused fast search:
+  - `audit_4head_156r_swap_score_fast.py`
+  - vectorized commit `fade6106dc4485918ea7643e0c752366421bbf69`
+- workflow:
+  - `.github/workflows/audit-4head-156r-swap-score-fast.yml`
+  - workflow commit `35f5f0d90db00302e4e03c84d848d75c33c90c60`
+- final formal validation:
+  - Run `35360824382`
+  - Job `105651366180`
+  - Artifact `10553214378` / `head4-156r-swap-score-fast`
+  - SUCCESS
+  - `AUDIT_OK=true`
+  - `SEPTEMBER_OUTCOMES_READ=false`
+  - `PRODUCTION_CHANGED=false`
+  - selection scores use no race outcomes; search evaluation itself is NON-PRISTINE Apr-Aug retrospective.
+
+### Search design
+- frozen base120 remains unchanged.
+- expansion layer remains exactly 36R => total exactly 156R.
+- 88 non-base120 verified-odds candidates considered.
+- per-race ranking uses only causal/predecision features:
+  - head_prob
+  - opponent_mass
+  - ST advantage
+  - ORIG advantage
+  - market confidence derived from composite_odds
+  - balance rank between head_prob and opponent_mass
+- 3,600 weight cells x 13 eligibility profiles.
+- 10,314 unique exact156 memberships evaluated.
+- 1,869 memberships preserved overall ROI >= current156.
+
+### Current156 reference
+- 156R
+- 65 heads / **41.67%**
+- exact3 37
+- ROI **128.5865%**
+- support Jul-Aug ROI **115.0453%**
+- monthly floor **91.575%**.
+
+### Best aggregate ROI-preserving head-rate set
+- 156R
+- 71 heads / **45.51%**
+- exact3 39
+- ROI **131.19%**
+- monthly floor **76.31%**
+- support ROI **112.09%**.
+This improves head rate strongly but materially weakens August/month stability.
+
+### With monthly floor >=80%
+Best:
+- 156R
+- 69 heads / **44.23%**
+- exact3 **40**
+- ROI **134.00%**
+- support ROI **117.85%**
+- monthly floor **83.25%**
+- monthly ROI:
+  - Apr177.97
+  - May120.45
+  - Jun150.45
+  - Jul136.41
+  - Aug83.25.
+This is the strongest balanced head-rate improvement found in the tested score family.
+
+### With monthly floor >=85%
+Best:
+- 156R
+- 66 heads / **42.31%**
+- exact3 38
+- ROI **138.91%**
+- support ROI **115.05%**
+- monthly floor **87.21%**
+- monthly ROI:
+  - Apr216.44
+  - May118.76
+  - Jun141.85
+  - Jul128.64
+  - Aug87.21.
+
+### With monthly floor >=90%
+Only one ROI-preserving membership survived and it did **not improve head rate**:
+- 156R
+- 65 heads / **41.67%**
+- exact3 37
+- ROI **128.59%**
+- monthly floor **91.575%**
+- support ROI **113.28%**.
+The same is true at the current floor >=91.575%.
+
+### Conclusion
+- The exact156 swap idea works if some monthly-floor relaxation is accepted.
+- Clear frontier:
+  - floor ~83% => head rate 44.23%, ROI134.00%, exact3 40.
+  - floor ~87% => head rate 42.31%, ROI138.91%, exact3 38.
+  - floor >=90% => no head-rate gain over current 41.67%.
+- Therefore the user target of ~44% head rate + exact156 + ROI>=current + monthly floor around90% is **not achieved with the currently tested causal feature family**.
+- To break this frontier, the next research should add genuinely new discriminatory features rather than further threshold tuning, e.g. expanded-universe wall3/open-path variables, motor/exhibition interaction, or attack-style features.
+- LIVE/production remains `HEAD4_156R_ROI_EXPANSION_V1`; no promotion was made.
+- September target outcomes remain unread.
+
+Status: `HEAD4_156R_SWAP_FRONTIER_CONFIRMED__NEW_FEATURES_REQUIRED__PRODUCTION_UNCHANGED`
