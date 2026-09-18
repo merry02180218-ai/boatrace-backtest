@@ -1635,3 +1635,53 @@ Status: `HEAD4_120R_STRICT_MONITOR_PERSIST_UNTIL_EXHIBITION_OR_75S_CUTOFF`
 - A dev-selected 120R rotation (comp floor 2.7 + open beta .1) improved Apr-Jun but reduced Aug ROI to 91.76%; reject as current preference because it sacrifices the all-month >=100 property.
 - Next follow-up: fine-grid **expansion-only** audit around open beta .025-.20 and nearby thresholds. Existing 120R must never be removed. Measure rescue-set stability/plateau and whether any Jul-Aug open-wall rescues can be added without breaking ROI/monthly floor.
 - Production/LIVE unchanged.
+
+
+## AFTER — 4HEAD wall3 formal + fine expansion audit complete
+- Formal audit success:
+  - Run `35334723879`
+  - Job `105566807656`
+  - Artifact `10541624968`
+  - workflow head `1bc801f5f27e5bcbc5b178864546093a5b1f4496`
+  - 8,820 grid cells / 2,681 eligible near-120 cells.
+- Fine expansion-only audit success:
+  - Run `35335191819`
+  - Job `105568291313`
+  - Artifact `10542531161`
+  - workflow head `0a47a76f85d45563e64ee97bed079e08a7c2b49e`
+  - 4,536 fine cells / 100 unique rescue sets / 180 non-deteriorating cells.
+- Baseline reproduced exactly: 120R / head4 53 = 44.17% / exact3 30 / ROI 127.7217% / monthly floor 101.75%.
+- Directional result:
+  - **Strong/positive wall3 must NOT be used as a 4-head veto.** BASE120 wall_score>=.20 was 10R / head4 60% / exact3 50% / ROI 351.02%; block penalties generally worsened the portfolio.
+  - **Weak/open wall3 is promising only as a one-way PASS rescue.**
+- Clean canonical overlay that leaves the frozen 120R untouched:
+  - current base quality = head_prob + 1.50*opponent_mass;
+  - only for a current PASS: `wall_open=max(0,-wall_score)`;
+  - shadow quality = base quality + **0.10*wall_open**;
+  - require comp>=2.5 and shadow quality>=.82;
+  - no block penalty; no attack4 minimum.
+- Historical effect for that pure overlay:
+  - base 120R stays intact;
+  - +3 rescued races => **123R**;
+  - head4 53 -> **56** (all 3 added races were 4-head wins);
+  - exact3 30 -> **31**;
+  - ROI 127.7217% -> **132.4943%**;
+  - monthly floor stays **101.75%**.
+- Rescue races:
+  - 202604251508: quality .79358 / wall -.27 / 4-head / exact3 hit / payout-if-bet 97,020;
+  - 202605110811: quality .81140 / wall -.64 / 4-head / exact3 miss;
+  - 202605181406: quality .80636 / wall -.76 / 4-head / exact3 miss.
+- Fine-grid robustness:
+  - the exact 3-race rescue set reappeared in **110 nearby parameter cells**;
+  - therefore it is not a one-cell threshold accident.
+  - however all 3 rescues are Apr-May development; **Jul-Aug support added_R=0** for this clean profile.
+  - support-expanding wall settings generally lowered August / total ROI; no evidence supports production promotion yet.
+- Research conclusion:
+  - wall3 is usable for 4HEAD, but in the opposite operational role from a symmetric gate:
+    - do not DROP 4 because lane3 looks strong;
+    - allow a **weak-lane3 open-path rescue shadow** for current PASS races.
+  - keep current official BET/PASS unchanged until forward evidence exists.
+- Next implementation: expose this canonical open-wall rescue as a research-only field in the fast last-minute JSON, with `production_applied=false`. No betting decision changes.
+- September outcomes remain unread by these audits; production unchanged.
+
+Status: `HEAD4_WALL3_OPEN_RESCUE_PROMISING__123R_SHADOW_ONLY__NO_SUPPORT_RESCUES`
