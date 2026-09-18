@@ -54,9 +54,13 @@ WALL3_SHADOW_W_STRAIGHT = 0.25
 WALL3_SHADOW_W_ORIG_AVG = 0.15
 
 
-# Research-only post-wall3 5->6 ST ticket shadow from v361/v362.
-# Do not replace official tickets without an explicit later promotion.
-FIVE6_SHADOW_PROFILE_NAME = "1HEAD_5TO6_ST_SHADOW_V361_SCORE6_060_STGAP040_G2_000_G3_075"
+# Promoted LIVE post-wall3 5->6 ST ticket rerank, adopted 2026-09-18
+# after v361-v363 robustness audits.
+FIVE6_LIVE_TICKET_PROFILE_NAME = "1HEAD_5TO6_ST_TICKET_V363_SCORE6_060_STGAP040_G2_000_G3_075"
+FIVE6_LIVE_TICKET_PROMOTED = True
+
+# Backward-compatible alias retained for research/history fields.
+FIVE6_SHADOW_PROFILE_NAME = FIVE6_LIVE_TICKET_PROFILE_NAME
 FIVE6_SHADOW_SCORE6_MIN = 0.60
 FIVE6_SHADOW_ST_GAP_MIN = 0.40
 FIVE6_SHADOW_SECOND_G2 = 0.00
