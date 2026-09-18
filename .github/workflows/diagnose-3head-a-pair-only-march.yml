@@ -10,6 +10,9 @@ on:
       - '.github/workflows/diagnose-3head-a-pair-only-march.yml'
       - 'replay_v288_historical_day.py'
       - 'research/aggregate_3head_a_pair_only_march.py'
+      - 'research/aggregate_3head_a_pair_only_march_fast.py'
+      - 'research/build_3head_a_paironly_fast_cache.py'
+      - 'research/replay_3head_a_paironly_fast_day.py'
 permissions:
   contents: read
   actions: read
