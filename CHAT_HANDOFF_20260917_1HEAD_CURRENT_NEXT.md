@@ -2343,3 +2343,55 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - decision stability率
 - これはreal pre-close distributionの予測ではなく、closing odds依存性のstress test。結果を見てthreshold変更しない。
 - production/LIVE stake変更なし。September outcomes unread。
+
+
+## AFTER — v383 soft-Dutch odds-drift stress
+- Run `35364966275` / Job `105665061552` success / Artifact `10555697457` / digest `sha256:c2f143b67a001d12a45729df11510c66d965b49fede66e62031c108a0c5e0533`。
+- fixed combined closing-odds sentinel:
+  - stake60,300 / return88,530 / ROI146.816%。
+- closing odds各ticket独立relative drift stress、threshold3.5固定、1000 simulations/delta:
+  - ±5%:
+    - allocation fully stable 149/165=90.3%
+    - mean ROI145.21%
+    - p05 141.94%
+    - v379 alloc ROI142.31%以上 88.8%
+    - official ROI128.69%以上 100%
+  - ±10%:
+    - stable 137/165=83.0%
+    - mean ROI143.37%
+    - p05 137.13%
+    - alloc以上67.4%
+    - official以上100%
+  - ±15%:
+    - stable 123/165=74.5%
+    - mean ROI141.93%
+    - p05 134.23%
+    - alloc以上52.5%
+    - official以上100%
+  - ±20%:
+    - stable108/165=65.5%
+    - mean ROI140.95%
+    - p05133.17%
+    - alloc以上42.8%
+    - official以上99.9%
+- 解釈:
+  - closing-based146.82%は当然best寄りだが、±10〜20%程度のrelative odds driftを入れても平均ROIは141〜143%台。
+  - downside p05でも133〜137%台でofficial均等128.69%より上。
+  - ただしこれはreal pre-close odds distributionの実測ではなくstress test。closing odds完全同値が買付時に利用できるとは扱わない。
+- production/official stake/shadows変更なし / September outcomes unread / AUDIT_OK=true。
+
+## BEFORE — current-odds allocation shadow plumbing
+- 目的: historical closing-odds研究を、実LIVE購入時に取得可能なcurrent official oddsでprospective shadow観測できる形へ繋ぐ。
+- formal ticketsは変更しない。
+- official stakesも100/100/100のまま。
+- current finalizerの既存stake shadows:
+  - EITHER2x equal
+  - WALL3 rank3 allocation
+  を維持。
+- 追加候補shadow:
+  - current odds比 max/min>=3.5
+  - WALL3時は1:1:4優先
+  - five6-onlyはsoft units x2
+  - noneはsoft units
+- まず既存1head LIVE workflow内のodds fetch位置とJSON入出力を監査し、結果/払戻endpointへ触れず追加可能か確認する。
+- September outcomes unread。
