@@ -240,3 +240,14 @@
 - Adoption semantics: A is the official **head-candidate gate**. Existing v288 downstream ordered-pair/ticket logic and exact 10,000-yen Dutch are not implicitly changed by this decision. Do not pretend existing v288 PRE q/score is equivalent to A's PRE q=.925; A requires its own frozen enhanced-PRE reproduction.
 - Before routing real money through A, production implementation must reproduce the frozen enhanced PRE score, strict prior-day motor state, and current exhibition rank with fail-closed inputs, then pass a parity/smoke audit. No threshold changes are allowed during operationalization.
 - September-2026 research outcomes remain UNREAD; do not inspect September settlements to tune A. Production v288 remains active until the A live layer is parity-verified.
+
+
+## AFTER WORK — adopted A gate freeze verification (2026-09-19)
+- Formal adopted rule module: threehead_head_gate_a_adopted.py
+- Boundary test: test_threehead_head_gate_a_adopted.py
+- Official adoption note: OFFICIAL_3HEAD_A_PRECISION_ADOPTED_20260919.md
+- Verification workflow: verify-adopted-3head-a-gate
+- Run **35364050300** / Job **105662052982** SUCCESS.
+- Exact boundary marker behavior verified: R1-12, PRE >=.925, motor EWMA-rank edge vs2 >=+.20, exhibition rank3 <=1; wrong-side thresholds and missing/non-finite inputs fail closed.
+- Freeze commits: rule **839638e23a1f9766b6ecc0fd61b2dccfd375f5a9**; test **6582900d46c983bf22b329fbbc71917df89ec376**; official note **c9b85c3bc314d966aad63b67e6ed0dfc3b7ff894**; workflow **ec42248b899a0e146879d89fce05cb186886654a**.
+- Current status: A is formally adopted as the 3-head head-candidate gate. Existing v288 real-money production remains unchanged until the new A live feature/PRE layer passes parity/smoke verification.
