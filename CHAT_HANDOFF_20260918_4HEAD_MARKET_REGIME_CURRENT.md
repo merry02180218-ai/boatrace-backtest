@@ -2690,3 +2690,25 @@ Exact restart point:
 3. If acceptable, add the new score as a LIVE shadow first (no decision change), then collect prospective September decisions/outcomes before promotion.
 
 Status: `HEAD4_NEWFEATURE_FRONTIER_BROKEN__TEMPORAL_HEADRATE_CONFIRMED__OPERATIONALIZATION_NEXT__PRODUCTION_UNCHANGED`
+
+
+## BEFORE — operationalize temporal new-feature score as a fixed per-race threshold
+The previous stage closed with a strong exact156 temporal result, but that result used fixed monthly top-k quotas and is not directly suitable for LIVE one-race-at-a-time decisions.
+
+Objective:
+1. Freeze the Apr-Jun-only weight vector from Run 35362985518.
+2. Freeze Apr-Jun ECDF transforms for all 10 score inputs.
+3. Choose the operational threshold using Apr-Jun only, with no Jul-Aug labels/volume used for threshold selection.
+4. Natural primary threshold rule: retain the same Apr-Jun expansion count as current156 (21 additions across Apr-Jun), then apply that single numeric threshold unchanged to Jul-Aug.
+5. Report threshold sensitivity around the primary point (dev top18..30) as diagnostics only; do not use Jul-Aug to choose the primary threshold.
+6. Audit resulting total R, head rate, exact3, ROI, monthly floor, and Jul-Aug behavior.
+7. Convert the frozen transform/weights/threshold into a versioned artifact suitable for LIVE shadow evaluation.
+8. Before any LIVE change, verify that the fast runner can compute all inputs:
+   - head_prob / opponent_mass / composite odds;
+   - ST/ORIG structural advantages;
+   - current wall3/attack4 features;
+   - prior motor win diff and current race-card motor 2-ren diff.
+9. Shadow only: official `decision` remains `HEAD4_156R_ROI_EXPANSION_V1`; no production promotion.
+10. September target outcomes remain unread.
+
+Status: HEAD4_NEWFEATURE_FIXED_THRESHOLD_OPERATIONALIZATION_START
