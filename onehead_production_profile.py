@@ -21,6 +21,22 @@ EXHIBITION_MODEL = "v332_ATTACK_ENV_SOFT_V345_ATTACKCORE"
 EXHIBITION_ENV_W = 0.10
 EXHIBITION_Q = 0.65
 
+# LIVE operating profile adopted 2026-09-18 from the 441-cell joint ROI audit.
+# Keep the historical production constants above frozen for reproducibility.
+LIVE_OPERATION_PROFILE_NAME = "1HEAD_LIVE_20260918_HEAD079_MASS0375_ENV005_Q070"
+LIVE_HEAD_CUTOFF = 0.790
+LIVE_OPPONENT_MASS_MIN = 0.375
+LIVE_EXHIBITION_ENV_W = 0.05
+LIVE_EXHIBITION_Q = 0.70
+
+# Stricter subset surfaced as 注目レース. It shares the same HEAD/exhibition
+# settings as the basic LIVE profile and differs only by opponent mass.
+WATCH_PROFILE_NAME = "1HEAD_WATCH_20260918_HEAD079_MASS0425_ENV005_Q070"
+WATCH_HEAD_CUTOFF = 0.790
+WATCH_OPPONENT_MASS_MIN = 0.425
+WATCH_EXHIBITION_ENV_W = 0.05
+WATCH_EXHIBITION_Q = 0.70
+
 # v345 adopted HEAD-side component weights. Historical names are retained for
 # compatibility with frozen research modules.
 ATTACK_CORE_VERSION = "v345"
