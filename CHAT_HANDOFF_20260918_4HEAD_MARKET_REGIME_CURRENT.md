@@ -1767,3 +1767,27 @@ Status: `HEAD4_LIVE_TRIGGER_ROOT_FIXED_GITHUB_NATIVE_WATCHDOG`
 - Rationale: preserve live reliability while reducing routine watchdog Actions creation by ~82% versus the initial 5-minute/24h design.
 
 Status: HEAD4_WATCHDOG_LOW_PRESSURE_15MIN_DAYTIME_ONLY
+
+
+## BEFORE — 4HEAD expanded-universe volume research (2026-09-18)
+- User explicitly wants more final BET races than the current 120R line.
+- Target is no longer limited to the fixed 164R research candidate; investigate expansion from the 100%-recall wide PRE parent.
+- September 2026 target outcomes/results/payouts remain unread; historical research window stays Apr-Aug 2026.
+- Preserve the existing frozen 120R membership as a mandatory base. New work is expansion-only unless explicitly reported otherwise.
+- Stage 1 (lightweight): start from the wide causal parent:
+  - motor_win_diff_4v3 >= -0.0299361318939513
+  - motor_2ren_diff_4v3 >= -7.08
+  - player4_all_win >= .215605
+  - no current-result/payout fields in selection.
+- Relax only the post-exhibition structural gates that created the old 164R:
+  - st4_adv_inside around the frozen -0.60 boundary;
+  - orig4_adv_inside around the frozen -0.057777... boundary;
+  - keep basic_complete and required exhibition availability fail-closed.
+- Goal of Stage 1: identify simple expanded post-exhibition pools around 250–600R with usable 4-head rate and stable monthly coverage, while proving the old 164R / frozen120 are subsets.
+- Stage 2: on a selected expanded pool only, rerun frozen v283 SECOND/conditional THIRD, 4–6 tickets, opponent_mass, archived closing-odds retrospective diagnostics and nested final selection.
+- Search final expansion targets around 180 / 200 / 220 / 250R while preserving all existing 120R.
+- Rank candidates by: monthly ROI floor, overall ROI, head4 rate, then higher volume. Do not promote a profile merely from Apr-Aug hindsight.
+- Existing wall3 shadow remains research-only and is not used to define the broad pool initially.
+- Production/LIVE remains unchanged until separate approval.
+
+Status: HEAD4_EXPANDED_UNIVERSE_VOLUME_RESEARCH_START
