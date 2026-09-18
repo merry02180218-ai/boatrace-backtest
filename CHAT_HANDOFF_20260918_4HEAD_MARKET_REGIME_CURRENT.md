@@ -2083,3 +2083,46 @@ LIVE runner commit:
 - Historical Apr-Aug ROI is NON-PRISTINE and not prospective proof.
 
 Status: `HEAD4_156R_ROI_EXPANSION_LIVE_READY__PARITY_VERIFIED`
+
+
+## AFTER — GitHub Issue notification for 4HEAD BET enabled
+User selected GitHub notification for successful last-minute BET decisions.
+
+Implementation:
+- notifier script: `notify_head4_bet_github_issue.py`
+  - initial commit `a88310793a3564a6083099d73e3354b7fa1ef5dc`
+  - dry-run test support `755a54e259b90f35ff715638d45a75e05395c127`
+- behavior:
+  - only `decision == BET` creates an Issue;
+  - PASS / NO_BET_DATA_NOT_READY produce no Issue;
+  - deterministic title: `[4HEAD BET] YYYYMMDD JCDxx nR`;
+  - exact-title dedupe prevents duplicate notification for the same race;
+  - Issue is assigned to the repository owner so normal GitHub assigned-Issue notifications can surface it;
+  - body contains venue/race, deadline, active 156R profile, head_prob, opponent_mass, composite_odds, base120/expanded156 flags, ST/ORIG advantages, ticket list and live odds, decision timestamp, odds source, and confirms target result/payout unused.
+- strict monitor workflow:
+  - adds `issues: write`;
+  - calls notifier after contract check;
+  - commit `04af733bba177c5df71e9dd880a58000bb03a62a`.
+- GitHub-native watchdog workflow:
+  - adds `issues: write`;
+  - calls notifier only when an actual target job ran;
+  - commit `f6baf73deb76a514e301adeff0aeab2cba471410`.
+- watchdog workflow syntax/runtime validation:
+  - Run `35343805368`
+  - Job `105595567198`
+  - SUCCESS.
+- dedicated notifier contract test:
+  - workflow `.github/workflows/test-head4-bet-github-notify.yml`
+  - commit `dbaa2279fee6fa7511b1dfdf883e6e46c82b9f3c`
+  - Run `35343870070`
+  - Job `105595774368`
+  - SUCCESS
+  - verified PASS skips notification;
+  - verified BET builds full Issue payload in dry-run;
+  - no synthetic test Issue was created, avoiding notification spam.
+
+Operational note:
+- Actual GitHub app/email/push delivery depends on the user's GitHub notification settings for assigned Issues/repository activity.
+- No external webhook or ChatGPT automation is required for the BET notification path.
+
+Status: `HEAD4_BET_GITHUB_ISSUE_NOTIFICATION_READY`
