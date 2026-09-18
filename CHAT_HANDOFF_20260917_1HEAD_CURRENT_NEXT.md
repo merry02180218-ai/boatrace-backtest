@@ -93,3 +93,76 @@ BASE: 131 hits, stake 82800, return 86390, profit +3590, ROI 104.34%.
 - broad universeはmassのみ.35へ拡張し、v337のHEAD floor=.75を保持。productionセルの学習母集団を変えない。
 - production sentinelを 276/241/131 に加え race SHA / ticket SHA まで正式profileと一致必須へ強化。sentinel緩和なし。
 - 次: fresh workflow_dispatch。成功後artifact回収、441セルraw ROIと安定帯を監査。9/17 result/payout UNREAD維持。
+
+# 2026-09-18 CHAT END HANDOFF — 次チャットはここから
+
+## このチャットで確定したこと
+- 441セル joint ROI監査の production再現ズレを調査・修正した。
+- Run 35294726696 / audit Job 105446582746 は production cell が 276R / HEAD241 / exact3 129 となり、期待131に対して `PRODUCTION_SENTINEL_DRIFT` で停止。sentinelは正しく機能。
+- 原因は joint grid の処理順。旧コードは HEAD/MASS絞り -> v332 fit/filter -> v345 attackCore だったが、正式v351は build_exhibition -> v345 attackCore -> v337/v332 exhibition filter -> v351 opponentCore ticket rerank。
+- 修正commit `5d6743ce2c4bf2d4512e7fe29fa11d624b4d716e`。broad universeは opponent massのみ.35へ拡張し、v337 HEAD floor=.75を維持。productionセルの学習母集団を変えない。
+- production sentinelは 276/241/131 に加え race identity SHA / ticket identity SHA まで正式profileと完全一致必須。絶対にsentinelを弱めて通さない。
+- 修正前後handoff commits: BEFORE `b68559710aca47fda70a8618ed26a9f850968be7`, AFTER `379190b2715f359493aeb9a75453cc84d0467c38`。
+
+## 441セル監査 — 最新状態
+Workflow: `.github/workflows/v351-1head-joint-roi-grid.yml`
+最新Run: `35302023710`
+URL: https://github.com/merry02180218-ai/boatrace-backtest/actions/runs/35302023710
+Run head SHA: `28cc9dcfb375fd8e01a04ba1e4fcaa3e5ac9101f` (message: fix: parse R-suffixed race number in broad50)
+handoff記録時点: **in_progress**
+Jobs:
+- prepare `105466461575`: success
+- base-third `105467483200`: success
+- third `105467483222`: success
+- second `105467483225`: success
+- audit `105468495136`: in_progress
+重要: ユーザーは「441セル監査がエラー」と言ったが、GitHub確認時点では最新Runはエラー終了ではなくaudit実行中。1つ前のRun `35298138766` は全Jobs success。次チャットではまず最新Run 35302023710 の最終status/log/artifactを確認すること。失敗ならログを読んで原因修正、成功ならartifactを回収してproduction sentinelと441セル結果を詳細監査。
+
+### 441セル探索仕様
+HEAD: .775/.7775/.780/.7825/.785/.7875/.790
+MASS: .350/.3625/.375/.3875/.400/.4125/.425
+ENV_W: .05/.10/.15
+ENV_Q: .60/.65/.70
+計441セル。
+固定: ticket v320 HYBRID alpha=.70 3点、opponent core G2=.45/G3=1.00。close-margin 4点化は混ぜない。
+production cell=.78/.375/.10/.65。
+正式 baseline: 276R / HEAD241 / exact3 131 / stake 82,800 / return 86,390 / profit +3,590 / ROI 104.34%。
+正式 race SHA: `08eb41e04c36d25074d6a1e471ff9334fafd34c8306cd5d336923772b613b8bd`
+正式 ticket SHA: `21631473d2a8b82f4fe93d18f8292d777837c26a47c408917fd8b722d1898cd7`
+Feb-Jun: 220R / exact3 107。Jul-Aug: 56R / exact3 24, NON_PRISTINE_SUPPORT_ONLY。
+最終評価ではraw ROIだけでなく、月別、Feb-Jun dev、Jul-Aug support、平均的中オッズ、隣接セル/plateau安定性も見る。孤立最高値だけでproduction昇格しない。自動昇格禁止。
+
+## 本日 2026-09-18 1号艇LIVE
+Daily cache Run `35257663423` success / Artifact `10512844501` name `v351-1head-live-cache-20260918`。
+metadata candidate_R=180 は summary bugで、pre_candidates.csvが全180R NON_CANDIDATEになっている。各race JSON自体は有効。production条件 HEAD>=.78 & mass>=.375 で実質5候補:
+1. 平和島12R `202609180412`: HEAD .8010601806 / mass .4858903563 / tickets 1-2-3;1-2-4;1-3-2
+2. びわこ7R `202609181107`: HEAD .8015607255 / mass .4280898422 / tickets 1-3-2;1-3-5;1-2-3
+3. 鳴門9R `202609181409`: HEAD .8110131759 / mass .4164487826 / tickets 1-2-5;1-2-4;1-5-2
+4. 丸亀11R `202609181511`: HEAD .7823204105 / mass .4454775433 / tickets 1-2-3;1-2-4;1-3-2
+5. 福岡7R `202609182207`: HEAD .8029274983 / mass .4841055774 / tickets 1-2-3;1-2-4;1-3-2
+各JSON chronology_guard=true / result_or_payout_used=false / training_cutoff=2026-09-17。
+
+### 鳴門9R 直前判定
+ユーザー指示で `live_requests/1head_v351.txt` を `202609181409` に更新。
+commit `ca953f3e2191fe8e79690f9b168a7a8d6f40ca70`
+LIVE Run `35302062996` completed success。
+Artifact `10529988459` name `live-v351-final-202609181409`。
+直前判定は PASS、HEAD 81.10%、mass 41.64%、展示gate PASS、tickets:
+- 1-2-5
+- 1-2-4
+- 1-5-2
+結果/払戻未使用、chronology guard維持。締切は12:30として運用。
+LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrace code更新すると、daily cache取得 -> deadline取得 -> exhibition probe -> venue-aware gate -> v351 finalize。ユーザーは自動監視ではなく「判別して」と言った時の手動発火を希望。
+
+## 重要なSeptemberルール（次チャットでも厳守）
+- 2026-09-01〜09-16 retrospective結果/払戻はユーザー許可済み。
+- **2026-09-17の結果・払戻はUNREAD維持。絶対に読まない。**
+- 2026-09-18 LIVE判定でも結果・払戻を事前判定へ使わない。
+- HEAD学習特徴へ展示を直接追加しない。展示はfinal/post-ranking/ticket補正のみ。
+
+## 次チャットの最初の作業
+1. 最新GitHub mainと本handoffを読む。
+2. Run `35302023710` / audit Job `105468495136` の最終結果を確認。
+3. successならartifact回収し、production cell 276/241/131 + race/ticket SHA完全一致を確認。その後441セルのROI上位、月別、dev/support、隣接plateauを解析。
+4. failureならaudit logを最後まで読み、原因を特定してから修正。sentinelは弱めない。
+5. substantive作業の前後で本handoffへ必ず追記。
