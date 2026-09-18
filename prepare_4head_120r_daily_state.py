@@ -44,7 +44,7 @@ def main():
     target=date.fromisoformat(a.target_date)
     if target<=START:raise SystemExit('target_date too early')
     t0=time.perf_counter()
-    players=defaultdict(blank); st_sums=defaultdict(list); st_all=[]
+    players=defaultdict(blank); motors=defaultdict(lambda:[0,0]); st_sums=defaultdict(list); st_all=[]
     days=0; races=0; result_days=0
     d=START
     while d<target:
@@ -61,7 +61,13 @@ def main():
                 w=_ii(rr.get('1着_艇番')); sec=_ii(rr.get('2着_艇番'))
                 if w not in BOATS or sec not in BOATS or w==sec: continue
                 races+=1
+                venue=str(card.get('レース場コード','')).zfill(2)
                 for b in BOATS:
+                    motor_no=str(card.get(f'艇{b}_モーター番号','')).strip()
+                    if venue and motor_no:
+                        mk=f'{venue}|{motor_no}'
+                        motors[mk][1]+=1
+                        motors[mk][0]+=int(w==b)
                     reg=str(card.get(f'艇{b}_登録番号','')).strip()
                     if not reg: continue
                     s=players[reg]
@@ -94,8 +100,8 @@ def main():
       'september_prior_results_allowed':True,
       'target_date_results_used':False,
       'payout_used':False,'odds_used':False,
-      'players':pjson,'st_bias':bias,
-      'stats':{'days_loaded':days,'result_days':result_days,'settled_races_loaded':races,'players':len(pjson)},
+      'players':pjson,'motors':{k:{'w':int(v[0]),'n':int(v[1])} for k,v in motors.items()},'st_bias':bias,
+      'stats':{'days_loaded':days,'result_days':result_days,'settled_races_loaded':races,'players':len(pjson),'motors':len(motors)},
       'seconds':time.perf_counter()-t0,
     }
     Path(a.out).parent.mkdir(parents=True,exist_ok=True)
