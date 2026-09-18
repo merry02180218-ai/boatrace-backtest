@@ -1,0 +1,37 @@
+name: audit-4head-wall3-head-rotation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'audit_4head_wall3_head_rotation.py'
+      - '.github/workflows/audit-4head-wall3-head-rotation.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Run 4HEAD formal wall3 rotation audit
+        run: python audit_4head_wall3_head_rotation.py
+      - name: Show result
+        if: always()
+        run: |
+          cat /tmp/head4_wall3_head_rotation/result.json 2>/dev/null || true
+          head -25 /tmp/head4_wall3_head_rotation/dev_ranked_top200.csv 2>/dev/null || true
+          cat /tmp/head4_wall3_head_rotation/wall_strata.csv 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-wall3-head-rotation
+          path: /tmp/head4_wall3_head_rotation/
+          retention-days: 30
