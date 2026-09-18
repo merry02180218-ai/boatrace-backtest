@@ -251,3 +251,12 @@
 - Exact boundary marker behavior verified: R1-12, PRE >=.925, motor EWMA-rank edge vs2 >=+.20, exhibition rank3 <=1; wrong-side thresholds and missing/non-finite inputs fail closed.
 - Freeze commits: rule **839638e23a1f9766b6ecc0fd61b2dccfd375f5a9**; test **6582900d46c983bf22b329fbbc71917df89ec376**; official note **c9b85c3bc314d966aad63b67e6ed0dfc3b7ff894**; workflow **ec42248b899a0e146879d89fce05cb186886654a**.
 - Current status: A is formally adopted as the 3-head head-candidate gate. Existing v288 real-money production remains unchanged until the new A live feature/PRE layer passes parity/smoke verification.
+
+
+## BEFORE WORK — adopted A operationalization parity audit (2026-09-19)
+- User asked to continue after formal A adoption.
+- Goal: productionize without changing the frozen rule.
+- First step is a strict March parity audit: rebuild the exact Wave22 March inputs and pass them through the adopted production gate module.
+- Required parity is **exactly 52 selected / 21 heads**. Any mismatch blocks LIVE connection.
+- No September-2026 settlement/result analysis is allowed. Existing v288 real-money production remains unchanged during this audit.
+- After parity succeeds, next implementation step is a dedicated A daily/shadow layer: PRE + prior-day motor are cached before the race; current exhibition rank is evaluated live; missing inputs fail closed. Downstream v288 ticket/Dutch logic remains unchanged unless separately verified.
