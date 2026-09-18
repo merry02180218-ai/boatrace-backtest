@@ -1,4 +1,7 @@
 name: audit-3head-a-v288-ticket-march
+concurrency:
+  group: audit-3head-a-v288-ticket-march
+  cancel-in-progress: true
 on:
   workflow_dispatch:
   push:
