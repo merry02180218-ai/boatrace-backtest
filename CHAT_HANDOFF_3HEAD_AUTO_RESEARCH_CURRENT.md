@@ -404,3 +404,15 @@ Changes in research/run_3head_funsite_broad50.py:
 - Conclusion: under the current PRE feature family and leakage-safe walk-forward protocol, there is no evidence of a temporally stable >=40% 3-head selector with useful support. The earlier Wave4 50% Feb result is best treated as an unstable regime-specific pattern, not production signal.
 - Production v288 unchanged; September outcomes UNREAD.
 - Recommended next research direction: stop optimizing a hard head-rate target on the same feature family. Reframe around calibrated expected value / odds interaction and/or materially new PRE information sources, while preserving strict time-split evaluation.
+
+
+## BEFORE WORK — Broad50 Wave9 support-size ceiling audit (2026-09-18)
+- User requested the practical ceiling by sample size after Wave8 showed no useful-volume >=40% stable selector.
+- Reuse the **exact Wave7 walk-forward candidate family** and February predictions; do not introduce new features, windows, bands, thresholds or models.
+- This is a February-only diagnostic. **Do not open March at all.** September outcomes remain UNREAD; production v288 unchanged.
+- For minimum support per February half **20 / 30 / 50 / 75 / 100 races** (plus 150/200 when available), require >=8 venues in both halves and compute:
+  1. the candidate maximizing the **worst-half head rate** `min(h1_rate, h2_rate)` — primary practical ceiling;
+  2. the candidate maximizing combined head rate subject to the same support floor — secondary diagnostic;
+  3. weekly diagnostics for the selected ceiling candidate, including eligible-week minimum rate where week support >=5.
+- Report both half rates, total support/hits, combined rate, venue dispersion, window/band/gates, and weekly breakdown. Tiny-N candidates remain diagnostic only.
+- Purpose: quantify the actual precision/volume Pareto ceiling of the current PRE information family before deciding whether materially new PRE data is required.
