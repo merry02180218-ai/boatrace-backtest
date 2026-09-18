@@ -13,15 +13,18 @@ It uses:
 No target-race result/payout access.
 """
 from __future__ import annotations
-import argparse,csv,json,math,time
+import argparse,csv,json,math,time,hashlib,re
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime,time as dtime
 from pathlib import Path
 from typing import Any
 from zoneinfo import ZoneInfo
 
-from build_4head_post_live import _fetch,beforeinfo_url,boatcast_st_url,boatcast_orig_url,BOATCAST
-from build_4head_v283_current_exhibition_live import build_from_sources as build_exhibition
+import requests
+from build_4head_post_live import boatcast_st_url,boatcast_orig_url,BOATCAST,UA
+from build_4head_v283_current_exhibition_live import parse_boatcast_st,parse_boatcast_original,original_corrected,_rank_strength
+from backtest_v3 import CORR
+from backtest_v51_lane_corrected_tickets import rank_scores
 from build_4head_v93_primitives_live import build as build_v93
 from build_4head_v283_rows_live import derive
 from head4_v291_downstream_inference import load_artifact,score_second,score_conditional_third,BOATS
@@ -64,13 +67,98 @@ def player_flat(card,state):
         for k,v in ps.items():out[f'b{b}_pl_{k}']=round(float(v),12)
     return out
 
+def _get_fast(url,timeout=4,attempts=2):
+    last=None
+    for k in range(attempts):
+        try:
+            r=requests.get(url,headers=UA,timeout=timeout,allow_redirects=False)
+            if r.status_code==200 and r.text.strip() and not r.text.lstrip().startswith('<'):
+                return r.text
+            last=Fast120Error(f'HTTP/body invalid {r.status_code} {url}')
+        except Exception as e:
+            last=e
+        if k+1<attempts: time.sleep(.35*(k+1))
+    raise Fast120Error(f'fetch failed after {attempts} attempts: {url}: {last}')
+
+def boatcast_tkz_url(hd,jcd,rno):
+    return f'{BOATCAST}/hp_txt/{jcd:02d}/bc_j_tkz_{hd}_{jcd:02d}_{rno:02d}.txt'
+
+def parse_tkz_display(body):
+    lines=body.splitlines()
+    if len(lines)<8 or not lines[0].lstrip().startswith('data=') or lines[1].split('\t')[0].strip()!='1':
+        raise Fast120Error('tkz not ready')
+    vals={}; boat=1
+    for raw in lines[2:]:
+        if not raw.strip(): continue
+        cols=raw.split('\t')
+        if len(cols)<2: continue
+        try:v=float(cols[1].strip())
+        except: raise Fast120Error(f'tkz exhibition missing boat {boat}')
+        vals[boat]=v;boat+=1
+        if boat==7: break
+    if set(vals)!=set(range(1,7)):raise Fast120Error(f'tkz rows incomplete {sorted(vals)}')
+    return vals
+
+def build_exhibition_boatcast(hd,jcd,rno,tkz_text,st_text,orig_text,bias):
+    disp=parse_tkz_display(tkz_text)
+    exraw={b:disp[b]+CORR[b]['展示'] for b in range(1,7)}
+    ex=rank_scores(exraw,True)
+    parsed=parse_boatcast_st(st_text)
+    if any(parsed[b] is None for b in range(1,7)):raise Fast120Error('start display incomplete/L')
+    st_raw={b:float(parsed[b]) for b in range(1,7)}
+    st_corr={b:st_raw[b]-float(bias.get(b,0.0)) for b in range(1,7)}
+    rr,rs=_rank_strength(st_raw);cr,cs=_rank_strength(st_corr)
+    labels,oraw=parse_boatcast_original(orig_text);os=original_corrected(labels,oraw)
+    boats={};st_flat={}
+    for b in range(1,7):
+        boats[str(b)]={'cur_ex':float(ex[b]),'cur_st':float(cs[b]),
+          'cur_orig_lap':float(os[b]['lap']),'cur_orig_turn':float(os[b]['turn']),
+          'cur_orig_straight':float(os[b]['straight']),'cur_orig_avg':float(os[b]['avg'])}
+        st_flat[f'st_raw_b{b}']=st_raw[b];st_flat[f'st_raw_rank_b{b}']=rr[b];st_flat[f'st_corr_rank_b{b}']=cr[b]
+        st_flat[f'st_raw_strength_b{b}']=round(rs[b],4);st_flat[f'st_corr_strength_b{b}']=round(cs[b],4)
+    return {'schema':'head4_v283_current_exhibition_fast_v1','race_code':f'{hd}{jcd:02d}{rno:02d}',
+      'current_boats':boats,'st_flat':st_flat,'result_blind':True,'odds_used':False}
+
 def fetch_current(hd,jcd,rno,timeout):
-    bu=beforeinfo_url(hd,jcd,rno); su=boatcast_st_url(hd,jcd,rno); ou=boatcast_orig_url(hd,jcd,rno)
+    tu=boatcast_tkz_url(hd,jcd,rno);su=boatcast_st_url(hd,jcd,rno);ou=boatcast_orig_url(hd,jcd,rno)
     with ThreadPoolExecutor(max_workers=3) as ex:
-        fb=ex.submit(_fetch,bu,'https://www.boatrace.jp/owpc/pc/race/beforeinfo',timeout)
-        fs=ex.submit(_fetch,su,f'{BOATCAST}/hp_txt/{jcd:02d}/bc_j_stt_',timeout)
-        fo=ex.submit(_fetch,ou,f'{BOATCAST}/txt/{jcd:02d}/bc_oriten_',timeout)
-        return fb.result(),fs.result(),fo.result()
+        ft=ex.submit(_get_fast,tu,timeout,2);fs=ex.submit(_get_fast,su,timeout,2);fo=ex.submit(_get_fast,ou,timeout,2)
+        return ft.result(),fs.result(),fo.result()
+
+def parse_od3(body):
+    lines=body.splitlines()
+    if len(lines)<8 or not lines[0].lstrip().startswith('data=') or lines[1].split('\t')[0].strip()!='1':
+        raise Fast120Error('od3 not ready/status!=1')
+    vals=[]
+    for row in lines[2:8]:
+        cells=row.split('\t')
+        if len(cells)<21:raise Fast120Error('od3 row incomplete')
+        vals.extend([x.strip() for x in cells[1:21]])
+    if len(vals)!=120:raise Fast120Error(f'od3 count {len(vals)}')
+    combos=[]
+    for a in range(1,7):
+        for b in range(1,7):
+            if b==a:continue
+            for d in range(1,7):
+                if d in (a,b):continue
+                combos.append(f'{a}-{b}-{d}')
+    out={}
+    for k,v in zip(combos,vals):
+        try:x=float(v)
+        except:raise Fast120Error(f'bad od3 value {k}={v!r}')
+        if x<=0:raise Fast120Error(f'nonpositive od3 {k}={x}')
+        out[k]=x
+    return out
+
+def fetch_boatcast_odds(hd,jcd,rno,deadline,timeout=4):
+    live.require_before_deadline(deadline,'before BOATCAST odds fetch')
+    url=f'{BOATCAST}/txt/{jcd:02d}/bc_smt_od3_{hd}_{jcd:02d}_{rno:02d}.txt'
+    req=datetime.now(JST);body=_get_fast(url,timeout,2);fetched=live.require_before_deadline(deadline,'after BOATCAST odds fetch')
+    odds=parse_od3(body)
+    return odds,{'source':'BOATCAST aggregating bc_smt_od3','url':url,'count':len(odds),
+      'requested_at_jst':req.isoformat(),'fetched_at_jst':fetched.isoformat(),
+      'sha256':hashlib.sha256(body.encode()).hexdigest(),'complete':len(odds)==120,
+      'result_endpoint_requested':False,'payout_endpoint_requested':False}
 
 def make_boats(card,waku,exh,pflat):
     v93=build_v93(card,waku,exh)
@@ -129,13 +217,13 @@ def main():
     if state.get('target_date')!=f'{a.date[:4]}-{a.date[4:6]}-{a.date[6:8]}':raise Fast120Error('daily-state target mismatch')
     if state.get('target_date_results_used') is not False:raise Fast120Error('daily state contamination')
 
-    t=time.perf_counter(); before,st,orig=fetch_current(a.date,a.jcd,a.race,a.timeout);stages['fetch_exhibition_s']=time.perf_counter()-t
+    t=time.perf_counter(); tkz,st,orig=fetch_current(a.date,a.jcd,a.race,a.timeout);stages['fetch_exhibition_s']=time.perf_counter()-t
     bias={int(k):float(v) for k,v in state['st_bias'].items()}
-    t=time.perf_counter(); exh=build_exhibition(a.date,a.jcd,a.race,before,st,orig,bias);stages['build_exhibition_s']=time.perf_counter()-t
+    t=time.perf_counter(); exh=build_exhibition_boatcast(a.date,a.jcd,a.race,tkz,st,orig,bias);stages['build_exhibition_s']=time.perf_counter()-t
     t=time.perf_counter(); pf=player_flat(cards[code],state); src=make_boats(cards[code],waku[code],exh,pf);stages['build_v283_inputs_s']=time.perf_counter()-t
     art=load_artifact()
     t=time.perf_counter(); sr,cr=derive(src,art);p2=score_second(sr,art);pc=score_conditional_third(cr,art);tickets=live.production_tickets(p2,pc);pairs=[tuple(map(int,x.split('-')[1:])) for x in tickets];mass=pair_mass(p2,pc,pairs);stages['v283_inference_s']=time.perf_counter()-t
-    t=time.perf_counter();odds,meta=live.fetch_odds(a.date,a.jcd,a.race,deadline);stages['fetch_odds_s']=time.perf_counter()-t
+    t=time.perf_counter();odds,meta=fetch_boatcast_odds(a.date,a.jcd,a.race,deadline,a.timeout);stages['fetch_odds_s']=time.perf_counter()-t
     vals=[float(odds[x]) for x in tickets];comp=live.composite_odds(vals);d=decide(hp,mass,comp)
     now=live.require_before_deadline(deadline,'before fast120 persist')
     out={
@@ -143,7 +231,7 @@ def main():
       'head_prob':hp,'opponent_mass':mass,'tickets':tickets,'ticket_odds':dict(zip(tickets,vals)),'composite_odds':comp,
       **d,'decision':'BET' if d['selected'] and monitored else ('BENCHMARK_ONLY' if not monitored else 'PASS'),
       'daily_state_history_end':state.get('history_end'),'september_prior_history_allowed':True,
-      'target_race_result_used':False,'payout_used':False,'current_exhibition_used':True,'official_predeadline_odds_used':True,
+      'target_race_result_used':False,'payout_used':False,'current_exhibition_used':True,'predeadline_odds_used':True,'odds_source':'BOATCAST_bc_smt_od3',
       'odds_snapshot':meta,'deadline_jst':deadline.isoformat(),'decision_time_jst':now.isoformat(),
       'stages_seconds':stages,'total_seconds':time.perf_counter()-total0,
     }
