@@ -1,0 +1,22 @@
+name: verify-3head-a-shadow-smoke
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'run_3head_a_live_gate_shadow.py'
+      - 'threehead_head_gate_a_adopted.py'
+      - 'test_3head_a_shadow_gate.py'
+      - '.github/workflows/verify-3head-a-shadow-smoke.yml'
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install requests joblib
+      - run: python test_3head_a_shadow_gate.py
