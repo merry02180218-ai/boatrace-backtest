@@ -2019,3 +2019,13 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - baseline 100/100/100 = 165R / 87hit / stake49,500 / return63,700 / ROI128.687%
 - race数・hit率は資金配分だけなので原則不変。
 - production/LIVE買い目は変更しない。2026-09結果/払戻は読まない。
+
+
+## v370 initial failure — closing odds repo coverage不足
+- Run `35361383408` / Job `105653205939` failure。
+- 原因: current165Rのうちrepo内 `data/official_closing_odds3t` coverageが144/165。missing21RはすべてJul/Aug SUPPORT:
+  `202607231508, 202607282409, 202608012209, 202608030402, 202608041001, 202608061001, 202608061704, 202608081508, 202608100901, 202608112101, 202608112301, 202608112311, 202608150110, 202608171508, 202608180509, 202608181110, 202608202301, 202608210402, 202608212407, 202608242010, 202608301612`。
+- DEV Feb-Junのofficial closing oddsはrepo内でcoverage済み。
+- 修正: repo CSVをfirst sourceとし、missingのみv340と同じBOAT RACE公式 `odds3t` closing pageから取得するfallbackを追加。
+- 結果/払戻からのodds逆算は禁止。fallbackもpre-race market informationのみ。
+- 研究grid・DEV選定条件は変更しない。
