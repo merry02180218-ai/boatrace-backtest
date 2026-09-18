@@ -555,3 +555,18 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 最終判定: **DROP / 見送り**。tickets=[]。WATCH用wall3 ticket補正は、展示gate DROPのため非適用。
 - result_or_payout_used=false / chronology_guard=true。2026-09-18結果払戻未使用、2026-09-17結果払戻UNREAD維持。
 - 補足: このチャットではLIVE発火を先に行い、作業前handoff追記を先行できなかった。未実施を実施済みとして記録しない。
+
+
+## BEFORE — v360 展示後rerank 母集団拡大研究
+- ユーザー指示: 「母集団が少なすぎるから165Rから拡大してやってみれば」。
+- 方針: 現正式LIVEの165Rは変更せず、研究母集団だけ段階的に拡大して展示後rerankの一般性を検証する。
+- 目的: wall3 / adjacent補正が165R固有の偶然ではなく、より広い1頭候補でも再現するかを見る。
+- 比較候補:
+  1) 現BASIC 165R（基準）
+  2) HEAD>=.790でmass条件を緩めた拡大母集団
+  3) HEAD>=.780系のより広い母集団
+  4) formal production 276R identity相当
+- 各母集団でレース選定は固定し、3点固定。展示後に買い目だけrerankする。
+- 評価: exact3 / ROI / gain-loss / 月別 / Feb-Jun / Jul-Aug / pair別寄与 / 変更R。
+- 選定はdevのみ、Jul-Augはsupport扱い。2026-09結果/払戻は読まない。
+- 現正式wall3 ticket profileは維持し、この拡大研究から自動昇格しない。
