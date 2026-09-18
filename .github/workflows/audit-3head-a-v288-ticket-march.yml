@@ -1,0 +1,108 @@
+name: audit-3head-a-v288-ticket-march
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  replay:
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        date:
+          - '2026-03-01'
+          - '2026-03-02'
+          - '2026-03-03'
+          - '2026-03-05'
+          - '2026-03-06'
+          - '2026-03-07'
+          - '2026-03-08'
+          - '2026-03-09'
+          - '2026-03-10'
+          - '2026-03-11'
+          - '2026-03-12'
+          - '2026-03-13'
+          - '2026-03-14'
+          - '2026-03-15'
+          - '2026-03-16'
+          - '2026-03-18'
+          - '2026-03-19'
+          - '2026-03-20'
+          - '2026-03-21'
+          - '2026-03-22'
+          - '2026-03-24'
+          - '2026-03-27'
+          - '2026-03-28'
+          - '2026-03-29'
+          - '2026-03-30'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 joblib
+      - name: Download frozen canonical model artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo ${{ github.repository }} --name v243-3head-expand-feature-audit --dir golden_v243
+          cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
+          gh run download 34326743303 --repo ${{ github.repository }} --name v234-3head-waku10-restored-replay --dir golden_v234
+          cp golden_v234/analysis_v234_waku10_reconstruction_coverage.csv .
+          mkdir -p data/audit
+          cp -r golden_v234/data/audit/v234_waku10 data/audit/
+      - name: Prepare result-blind historical PRE inputs
+        run: python prepare_v288_historical_pre_input.py --date '${{ matrix.date }}'
+      - name: Build February-28 frozen full v288 downstream cache
+        run: >-
+          python build_3head_v288_operational_month_day.py
+          --date '${{ matrix.date }}'
+          --month-first 2026-03-01
+          --month-next 2026-04-01
+          --history-cutoff 2026-02-28
+          --bias-start 2026-02-01
+          --force-full-cache
+      - name: Replace original PRE candidates with frozen A-head candidates
+        run: |
+          DAY8=$(echo '${{ matrix.date }}' | tr -d '-')
+          python research/prepare_3head_a_v288_ticket_cache.py             --date '${{ matrix.date }}'             --cache "live_outputs/v288_operational/$DAY8/live_cache.joblib"
+      - name: Replay v288 downstream on frozen A candidates
+        run: |
+          DAY8=$(echo '${{ matrix.date }}' | tr -d '-')
+          python replay_v288_historical_day.py             --date '${{ matrix.date }}'             --cache "live_outputs/v288_operational/$DAY8/live_cache.joblib"             --outdir "a_v288_march/$DAY8"             --expected-history-cutoff 2026-02-28
+          cp "current_input/v288/$DAY8/historical_input_manifest.json" "a_v288_march/$DAY8/input_manifest.json"
+          cp "live_outputs/v288_operational/$DAY8/daily_manifest.json" "a_v288_march/$DAY8/production_manifest.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: a-v288-march-${{ matrix.date }}
+          retention-days: 30
+          path: a_v288_march/
+          if-no-files-found: ignore
+
+  aggregate:
+    needs: replay
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas
+      - name: Download all day artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p all_days
+          gh run download "${{ github.run_id }}" --repo "${{ github.repository }}" --pattern 'a-v288-march-*' --dir all_days || true
+          find all_days -type f | sort | head -200
+      - name: Aggregate March A + v288 ticket audit
+        run: python research/aggregate_3head_a_v288_ticket_march.py --root all_days
+      - uses: actions/upload-artifact@v4
+        with:
+          name: audit-3head-a-v288-ticket-march
+          path: research_3head_a_v288_ticket_march_summary.json
