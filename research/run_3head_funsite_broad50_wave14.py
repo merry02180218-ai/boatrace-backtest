@@ -41,17 +41,23 @@ def daily_descriptors(frame,signals):
 
 def fit_regimes(descs,k):
     hist=pd.concat([descs['nov'],descs['dec'],descs['jan']],ignore_index=True,sort=False)
-    feats=[c for c in hist.columns if c!='date']
-    med=hist[feats].median(numeric_only=True)
-    X=hist[feats].fillna(med).to_numpy(float)
+    raw_feats=[c for c in hist.columns if c!='date']
+    hx=hist[raw_feats].apply(pd.to_numeric,errors='coerce').replace([np.inf,-np.inf],np.nan)
+    med=hx.median(numeric_only=True)
+    feats=[c for c in raw_feats if c in med.index and np.isfinite(med[c])]
+    if len(feats)<5:
+        raise RuntimeError(f'insufficient finite regime features: {len(feats)}')
+    med=med[feats]
+    X=hx[feats].fillna(med).to_numpy(float)
     scaler=StandardScaler().fit(X)
     km=KMeans(n_clusters=k,random_state=140+k,n_init=30).fit(scaler.transform(X))
     maps={}
     for name,d in descs.items():
-        z=d[feats].fillna(med).to_numpy(float)
+        z=d[feats].apply(pd.to_numeric,errors='coerce').replace([np.inf,-np.inf],np.nan).fillna(med).to_numpy(float)
         lab=km.predict(scaler.transform(z))
         maps[name]={pd.Timestamp(dt).normalize():int(cl) for dt,cl in zip(d.date,lab)}
-    return maps,{'k':k,'feature_count':len(feats),'cluster_sizes':dict(pd.Series(km.labels_).value_counts().sort_index())}
+    return maps,{'k':k,'feature_count':len(feats),'dropped_all_nan_features':len(raw_feats)-len(feats),
+                 'cluster_sizes':{str(int(a)):int(b) for a,b in pd.Series(km.labels_).value_counts().sort_index().items()}}
 
 def pred_cache(pred,cluster_map):
     cache={}
@@ -100,20 +106,27 @@ def rank_tuple(month_stats):
     if any(r is None for r in rates):return (-1,-1,-1)
     return (min(rates),combined_month_stats(month_stats),sum(x['n'] for x in month_stats))
 
-def top_candidates_by_cluster(caches,universe,k,support_floor,topn):
-    # Keep a small ranked list per cluster; all ranking is Nov-Dec-Jan only.
-    best={cl:[] for cl in range(k)}
+def precompute_cluster_tops(caches,universe,k):
+    # One scan per K. Keep only the top-2 rows needed for every support floor.
+    best={(cl,sf):[] for cl in range(k) for sf in CLUSTER_SUPPORTS}
     for c in universe:
         for cl in range(k):
             stats=[eval_cluster(caches[m],c,cl) for m in ['nov','dec','jan']]
             if any(x is None for x in stats):continue
-            if any(x['n']<support_floor or x['venues']<min(4,support_floor) for x in stats):continue
             key=rank_tuple(stats)
             if key[0] < 0:continue
-            best[cl].append((key,c,stats))
+            for sf in CLUSTER_SUPPORTS:
+                if any(x['n']<sf or x['venues']<min(4,sf) for x in stats):continue
+                arr=best[(cl,sf)]
+                arr.append((key,c,stats))
+                arr.sort(key=lambda z:z[0],reverse=True)
+                if len(arr)>max(TOP_PER_CLUSTER):del arr[max(TOP_PER_CLUSTER):]
+    return best
+
+def choices_from_precomputed(best,k,support_floor,topn):
     out={}
-    for cl,rows in best.items():
-        rows=sorted(rows,key=lambda z:z[0],reverse=True)[:topn]
+    for cl in range(k):
+        rows=best.get((cl,support_floor),[])[:topn]
         if len(rows)<topn:return None
         out[cl]=rows
     return out
@@ -265,9 +278,10 @@ def main():
         maps,meta=fit_regimes(descs,k)
         cluster_meta[str(k)]=meta;regime_maps[k]=maps
         caches={m:pred_cache(preds[m],maps[m]) for m in frames}
+        precomputed=precompute_cluster_tops(caches,universe,k)
         for sf in CLUSTER_SUPPORTS:
             for topn in TOP_PER_CLUSTER:
-                choices=top_candidates_by_cluster(caches,universe,k,sf,topn)
+                choices=choices_from_precomputed(precomputed,k,sf,topn)
                 if choices is None:continue
                 all_variants.append(build_variant(k,sf,topn,choices,frames,caches))
 
