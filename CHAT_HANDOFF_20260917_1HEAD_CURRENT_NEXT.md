@@ -1636,3 +1636,7 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - baselineは同budgetの均等配分と、現行300円 equalの両方を表示。
 - 月別、rank別stake、profit、ROI、support劣化を監査。
 - 2026-09 outcomes/payoutsは読まない。LIVE tickets/productionは変更しない。
+
+- v370実装時のbudget補正:
+  - 1000円/Rは3点均等を100円単位で表現できず4:3:3のrank biasが入るため不採用。
+  - 比較budgetは **600 / 900 / 1200円/R**（2:2:2 / 3:3:3 / 4:4:4が完全均等）。
