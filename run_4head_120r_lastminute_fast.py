@@ -37,6 +37,7 @@ V93=('grade','national','local','motor','nst')
 CUR=('cur_ex','cur_st','cur_orig_lap','cur_orig_turn','cur_orig_straight','cur_orig_avg')
 
 class Fast120Error(RuntimeError):pass
+class Fast120NotReady(Fast120Error):pass
 
 def rows_local(path):
     with Path(path).open(encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
@@ -138,7 +139,7 @@ def wait_exhibition_ready(hd,jcd,rno,bias,deadline,timeout=4,poll_interval=2.0,s
             remain=(deadline-datetime.now(JST)).total_seconds()
             elapsed=time.perf_counter()-started
             if remain<=safety_seconds or elapsed>=max_wait_seconds:
-                raise Fast120Error(f'exhibition not ready; attempts={attempts}; remain={remain:.1f}s; elapsed={elapsed:.1f}s; last={last}')
+                raise Fast120NotReady(f'exhibition not ready; attempts={attempts}; remain={remain:.1f}s; elapsed={elapsed:.1f}s; last={last}')
             time.sleep(min(poll_interval,max(0.2,remain-safety_seconds)))
 
 def wait_odds_ready(hd,jcd,rno,deadline,timeout=4,poll_interval=1.5,safety_seconds=45,max_wait_seconds=15):
@@ -152,7 +153,7 @@ def wait_odds_ready(hd,jcd,rno,deadline,timeout=4,poll_interval=1.5,safety_secon
             remain=(deadline-datetime.now(JST)).total_seconds()
             elapsed=time.perf_counter()-started
             if remain<=safety_seconds or elapsed>=max_wait_seconds:
-                raise Fast120Error(f'odds not ready; attempts={attempts}; remain={remain:.1f}s; elapsed={elapsed:.1f}s; last={last}')
+                raise Fast120NotReady(f'odds not ready; attempts={attempts}; remain={remain:.1f}s; elapsed={elapsed:.1f}s; last={last}')
             time.sleep(min(poll_interval,max(0.2,remain-safety_seconds)))
 
 def parse_od3(body):
@@ -227,6 +228,32 @@ def parse_deadline_flexible(date8,s):
         return datetime(int(date8[:4]),int(date8[4:6]),int(date8[6:8]),int(hh),int(mm),int(ss),tzinfo=JST)
     return live.parse_deadline(v)
 
+def persist_no_bet_not_ready(a,code,deadline,stage,reason,total0,stages,monitored,hp,state):
+    now=datetime.now(JST)
+    out={
+      'schema':'head4_120r_fast_lastminute_v1',
+      'race_code':code,
+      'monitoring_parent':bool(monitored),
+      'head_prob':float(hp),
+      'selected':False,
+      'decision':'NO_BET_DATA_NOT_READY',
+      'not_ready_stage':stage,
+      'not_ready_reason':str(reason),
+      'daily_state_history_end':state.get('history_end'),
+      'september_prior_history_allowed':True,
+      'target_race_result_used':False,
+      'payout_used':False,
+      'deadline_jst':deadline.isoformat(),
+      'decision_time_jst':now.isoformat(),
+      'stages_seconds':stages,
+      'total_seconds':time.perf_counter()-total0,
+    }
+    Path(a.out).parent.mkdir(parents=True,exist_ok=True)
+    Path(a.out).write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
+    print(json.dumps(out,ensure_ascii=False,indent=2))
+    print('HEAD4_120R_FAST_NO_BET_DATA_NOT_READY')
+    return out
+
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument('--date',required=True,help='YYYYMMDD')
@@ -248,15 +275,29 @@ def main():
     if state.get('target_date_results_used') is not False:raise Fast120Error('daily state contamination')
 
     bias={int(k):float(v) for k,v in state['st_bias'].items()}
-    t=time.perf_counter(); exh,ex_attempts,ex_last=wait_exhibition_ready(
-        a.date,a.jcd,a.race,bias,deadline,a.timeout,a.poll_interval,a.exhibition_safety_seconds,a.max_exhibition_wait_seconds
-    );stages['fetch_and_build_exhibition_s']=time.perf_counter()-t
+    t=time.perf_counter()
+    try:
+        exh,ex_attempts,ex_last=wait_exhibition_ready(
+            a.date,a.jcd,a.race,bias,deadline,a.timeout,a.poll_interval,a.exhibition_safety_seconds,a.max_exhibition_wait_seconds
+        )
+    except Fast120NotReady as e:
+        stages['fetch_and_build_exhibition_s']=time.perf_counter()-t
+        persist_no_bet_not_ready(a,code,deadline,'EXHIBITION',e,total0,stages,monitored,hp,state)
+        return
+    stages['fetch_and_build_exhibition_s']=time.perf_counter()-t
     t=time.perf_counter(); pf=player_flat(cards[code],state); src=make_boats(cards[code],waku[code],exh,pf);stages['build_v283_inputs_s']=time.perf_counter()-t
     art=load_artifact()
     t=time.perf_counter(); sr,cr=derive(src,art);p2=score_second(sr,art);pc=score_conditional_third(cr,art);tickets=live.production_tickets(p2,pc);pairs=[tuple(map(int,x.split('-')[1:])) for x in tickets];mass=pair_mass(p2,pc,pairs);stages['v283_inference_s']=time.perf_counter()-t
-    t=time.perf_counter();odds,meta,od_attempts,od_last=wait_odds_ready(
-        a.date,a.jcd,a.race,deadline,a.timeout,min(1.5,a.poll_interval),a.odds_safety_seconds,a.max_odds_wait_seconds
-    );stages['fetch_odds_s']=time.perf_counter()-t
+    t=time.perf_counter()
+    try:
+        odds,meta,od_attempts,od_last=wait_odds_ready(
+            a.date,a.jcd,a.race,deadline,a.timeout,min(1.5,a.poll_interval),a.odds_safety_seconds,a.max_odds_wait_seconds
+        )
+    except Fast120NotReady as e:
+        stages['fetch_odds_s']=time.perf_counter()-t
+        persist_no_bet_not_ready(a,code,deadline,'ODDS',e,total0,stages,monitored,hp,state)
+        return
+    stages['fetch_odds_s']=time.perf_counter()-t
     vals=[float(odds[x]) for x in tickets];comp=live.composite_odds(vals);d=decide(hp,mass,comp)
     now=live.require_before_deadline(deadline,'before fast120 persist')
     out={
