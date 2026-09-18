@@ -320,6 +320,14 @@ def main():
     h1=(feb.date.dt.day<=14).to_numpy();h2=~h1
     frames={'feb':feb,'mar':mar}
     rows=[]
+    candidate_count=0
+
+    def keep_half(h1m,h2m):
+        strict_half=(h1m['n']>=20 and h2m['n']>=20 and h1m['venues']>=8 and h2m['venues']>=8 and
+                     (h1m['rate'] or 0)>=.50 and (h2m['rate'] or 0)>=.50)
+        near_half=(h1m['n']>=25 and h2m['n']>=25 and h1m['venues']>=8 and h2m['venues']>=8 and
+                   (h1m['rate'] or 0)>=.47 and (h2m['rate'] or 0)>=.47)
+        return strict_half or near_half
 
     for band in BANDS:
         if int(band_mask(jan,band).sum())<300:continue
@@ -332,9 +340,12 @@ def main():
             for k in MODEL_K:
                 mf=bf&((stacks['feb']>=q).sum(axis=1)>=k)
                 mm=bm&((stacks['mar']>=q).sum(axis=1)>=k)
-                z={'kind':'jan_model_consensus','band':list(band),'q':q,'k':k,
-                   'h1':metric(mf&h1,feb),'h2':metric(mf&h2,feb),'weeks':weekly_metrics(mf,feb),'_mar':mm}
-                rows.append(z)
+                candidate_count+=1
+                h1m=metric(mf&h1,feb);h2m=metric(mf&h2,feb)
+                if keep_half(h1m,h2m):
+                    z={'kind':'jan_model_consensus','band':list(band),'q':q,'k':k,
+                       'h1':h1m,'h2':h2m,'weeks':weekly_metrics(mf,feb),'_mar':mm}
+                    rows.append(z)
 
         # Mean model-percentile score.
         meanf=np.nanmean(stacks['feb'],axis=1);meanm=np.nanmean(stacks['mar'],axis=1)
@@ -343,9 +354,12 @@ def main():
         for q in QS:
             th=float(np.quantile(ref,q))
             mf=bf&np.isfinite(meanf)&(meanf>=th);mm=bm&np.isfinite(meanm)&(meanm>=th)
-            z={'kind':'jan_model_mean','band':list(band),'q':q,'threshold':th,
-               'h1':metric(mf&h1,feb),'h2':metric(mf&h2,feb),'weeks':weekly_metrics(mf,feb),'_mar':mm}
-            rows.append(z)
+            candidate_count+=1
+            h1m=metric(mf&h1,feb);h2m=metric(mf&h2,feb)
+            if keep_half(h1m,h2m):
+                z={'kind':'jan_model_mean','band':list(band),'q':q,'threshold':th,
+                   'h1':h1m,'h2':h2m,'weeks':weekly_metrics(mf,feb),'_mar':mm}
+                rows.append(z)
 
         # Opponent-specific continuous score and score+model.
         wgrid=score_weights(used)
@@ -358,16 +372,22 @@ def main():
             for q in [.80,.85,.90,.925,.95,.965,.975,.985,.99]:
                 th=float(np.quantile(ref,q))
                 basef=bf&np.isfinite(sf)&(sf>=th);basem=bm&np.isfinite(sm)&(sm>=th)
-                z={'kind':'jan_attack_score','band':list(band),'q':q,'threshold':th,'weights':weights,
-                   'h1':metric(basef&h1,feb),'h2':metric(basef&h2,feb),'weeks':weekly_metrics(basef,feb),'_mar':basem}
-                rows.append(z)
+                candidate_count+=1
+                h1m=metric(basef&h1,feb);h2m=metric(basef&h2,feb)
+                if keep_half(h1m,h2m):
+                    z={'kind':'jan_attack_score','band':list(band),'q':q,'threshold':th,'weights':weights,
+                       'h1':h1m,'h2':h2m,'weeks':weekly_metrics(basef,feb),'_mar':basem}
+                    rows.append(z)
                 for mq,mk in [(.70,2),(.75,2),(.75,3),(.80,2),(.80,3),(.85,2),(.85,3)]:
                     mf=basef&((stacks['feb']>=mq).sum(axis=1)>=mk)
                     mm=basem&((stacks['mar']>=mq).sum(axis=1)>=mk)
-                    zz={'kind':'jan_attack_model','band':list(band),'q':q,'threshold':th,'weights':weights,
-                        'model_q':mq,'model_k':mk,
-                        'h1':metric(mf&h1,feb),'h2':metric(mf&h2,feb),'weeks':weekly_metrics(mf,feb),'_mar':mm}
-                    rows.append(zz)
+                    candidate_count+=1
+                    h1m=metric(mf&h1,feb);h2m=metric(mf&h2,feb)
+                    if keep_half(h1m,h2m):
+                        zz={'kind':'jan_attack_model','band':list(band),'q':q,'threshold':th,'weights':weights,
+                            'model_q':mq,'model_k':mk,
+                            'h1':h1m,'h2':h2m,'weeks':weekly_metrics(mf,feb),'_mar':mm}
+                        rows.append(zz)
 
     stable=[z for z in rows if stability(z)]
     near=[z for z in rows if near_stability(z)]
@@ -393,7 +413,7 @@ def main():
       'cross_source_feb_winner_check':{'n':len(fc),'agreement':agree},
       'source_audit':{'jan':ja,'feb':fa,'mar':ma},
       'rows':{'jan_train':len(jan),'feb_select':len(feb),'march_test':len(mar)},
-      'features':len(feats),'candidate_count':len(rows),
+      'features':len(feats),'candidate_count':candidate_count,'retained_half_stable_candidates':len(rows),
       'strict50_stable_count':len(stable),'near50_count':len(near),
       'strict50_frontier':[public(z) for z in stable[:30]],
       'near50_frontier':[public(z) for z in near[:30]],
