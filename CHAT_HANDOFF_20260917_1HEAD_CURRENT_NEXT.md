@@ -1368,3 +1368,26 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - LOMO再選定、近傍plateauも監査。
 - closing/preclose oddsはfeatureとして使用しない。actual payoutはsettlementのみ。
 - formal LIVE tickets / 100/100/100 stakingはv373完了まで変更しない。
+
+
+## BEFORE — v370 current formal 3-ticket dynamic staking with official odds
+- ユーザー指示: 「研究続けて」。v369後の買い方研究を継続。
+- repo確認で公式締切3連単オッズ履歴 `data/official_closing_odds3t/2026/MM/DD.csv` と旧v340 adaptive odds Dutchを発見。
+- 旧v340は低合成オッズの大量skipがROI改善の主因だったが、今回はユーザー意向に合わせ**165R全部・正式3点全部を最低100円買う**。レース/買い目は削らない。
+- current formal baseline:
+  - wall3 + 5>6 ST
+  - 165R / 87hit / 52.73%
+  - 100/100/100 = stake49,500 / return63,700 / ROI128.687%。
+- v370目的:
+  1) current formal3点にBOAT RACE公式締切3連単オッズを結合。
+  2) formal post-wall3+5>6 probabilitiesから各ticketの conditional pair probability と `p_head * pair_prob * odds` のmarket-EV proxyを作る。
+  3) 全レース最低1/1/1 unit(各100円)を維持し、DEV Feb-Junだけで「追加unit」を選定。
+  4) 比較:
+     - fixed 600円/R equal 2:2:2
+     - fixed 600円/R Dutch（inverse odds）
+     - fixed 600円/R model-prob配分
+     - base300円 + EV/combined-odds gate時のみ100〜300円bonusを最有力ticketへ
+  5) DEV選定→SUPPORT Jul-Aug確認。月別・近傍・bonus回数も監査。
+- settlement returnは結果から公式100円払戻を使うが、stake決定には結果/払戻を一切使わない。
+- **重要な時系列制約**: archived `official_closing_odds3t` は締切時表示オッズであり、historical explorationには使えるがLIVE購入時点より後になる可能性がある。v370結果だけで正式採用しない。採用前に現在のLIVE odds parserで取得可能な時点へ移植/forward確認が必要。
+- 2026-09 outcomes/payoutsはUNREAD。production/LIVE stakeは変更しない。
