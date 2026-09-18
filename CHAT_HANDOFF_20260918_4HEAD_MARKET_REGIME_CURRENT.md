@@ -3024,3 +3024,168 @@ Scope:
 5. If a real current-day race is no longer prospectively runnable, do not fabricate a post-hoc BET; validate the production path with contract/integration tests and keep target outcomes unread.
 
 Status: HEAD4_NEWFEATURE_PRODUCTION_FEASIBILITY_LEAKAGE_AUDIT_START
+
+
+## AFTER — production feasibility + leakage audit for HEAD4_NEWFEATURE_FIXED156_V1
+User requested a real production-readiness test plus leakage audit before relying on the newly promoted model.
+
+### Audit implementation
+Added:
+- `audit_4head_newfeature_production_leakage.py`
+- initial commit `138bae5aa64fec1064de97add45e058d18d9c171`
+- missing-wall ECDF contract corrected so the frozen Apr-Jun reference sizes are:
+  - hp/mass/ST/ORIG/market/motor-win/motor-2ren = 50
+  - attack4/st-wall/wall-score = 45
+  - missing wall rank = 0.5
+- readiness workflow:
+  - `.github/workflows/audit-4head-newfeature-production-readiness.yml`
+  - initial commit `7d5246456e6a1cefbf12b4c80f252fd93f79ab19`
+
+### Operational leakage audit result
+A later readiness attempt, Run `35368696343` / Job `105677251718`, reached and PASSED the static leakage audit before continuing through the current-day production path.
+
+Static audit result:
+- SAME_RACE_OUTCOME_LEAKAGE: **PASS**
+  - LIVE score/decision source has no result/payout/finish target fields.
+- TEMPORAL_STATE_LEAKAGE: **PASS**
+  - daily state uses only dates through target_date-1.
+  - new motor history starts 2025-11-01.
+  - stale/missing new-feature motor state fails closed.
+- FROZEN_TRANSFORM_LEAKAGE: **PASS**
+  - production weights, threshold and empirical-CDF references are frozen in the artifact.
+- JULAUG_LABELS_IN_LIVE_SCORE: **PASS**
+  - Jul-Aug outcomes are not inputs to LIVE score transforms.
+- SEPTEMBER_TARGET_OUTCOME_CONTAMINATION: **PASS**
+  - September target-race outcomes remain unread.
+- MARKET_TIMING: **PASS_OPERATIONAL**
+  - official decision path has pre-deadline startup/persist guards and identifies predeadline odds.
+- MODEL_SELECTION_CONTAMINATION: **WARN_NON_PRISTINE**
+  - Apr-Aug outcomes/ROI were used during research/model selection, so historical ROI/head-rate are development evidence, not independent prospective proof.
+
+Overall static conclusion:
+- `PASS_WITH_NONPRISTINE_RESEARCH_WARNING`
+- prospective profitability proven: **false**
+- September outcomes read: **false**
+- production threshold changed by audit: **false**
+
+Markers from Run 35368696343:
+- `HEAD4_NEWFEATURE_PRODUCTION_LEAKAGE_AUDIT_OK`
+- `HEAD4_OPERATIONAL_LEAKAGE_PASS`
+- `HEAD4_MODEL_SELECTION_NONPRISTINE_WARN`
+- `SEPTEMBER_UNREAD`
+
+### Independent production parity rechecked
+Same Run 35368696343 independently replayed the actual production artifact + LIVE scorer:
+- profile `HEAD4_NEWFEATURE_FIXED156_V1`
+- 156R
+- 73 heads = 46.7949%
+- exact3 40
+- ROI 140.9917%
+- monthly floor 87.2143%
+- Jul-Aug ROI 113.1754%
+- marker: `HEAD4_NEWFEATURE_PRODUCTION_PARITY_OK`
+- September unread.
+
+### Fresh 2026-09-19 production-state validation
+Run 35368696343 rebuilt a fresh causal daily state for 2026-09-19:
+- history_end: **2026-09-18**
+- target_date_results_used: **false**
+- newfeature motor history start: **2025-11-01**
+- motors_newfeature: 1,528
+- marker: `HEAD4_FRESH_STATE_RESULT_BLIND_OK 2026-09-18 1528`.
+
+### Fresh 2026-09-19 PRE production-path validation
+Current result-blind PRE inputs were fetched successfully:
+- 156 current race rows
+- active venues:
+  - 02,03,04,05,06,12,13,14,15,16,17,23,24
+- result_blind=true
+- current exhibition not used.
+
+Fresh PRE scanner result:
+- all current races: **156R**
+- internal monitoring parent: **15R**
+- user-facing display candidates: **10R**
+- parent feature missing: **0R**
+- motor/player history cutoff: **2026-09-18**
+- current exhibition: unused
+- current odds: unused
+- target-day results: unread.
+- markers:
+  - `HEAD4_120R_PRE_LIVE_TRIAL_OK`
+  - `TARGET_DAY_RESULTS_UNREAD`
+  - `HEAD4_CURRENT_PRE_SCAN_LEAKAGE_OK 156 15 10`.
+
+Display candidates produced prospectively for 2026-09-19:
+- 江戸川4R
+- 平和島6R
+- 多摩川4R
+- 多摩川8R
+- 浜名湖8R
+- 住之江7R
+- 鳴門2R
+- 宮島3R
+- 唐津4R
+- 唐津7R
+
+### Current-network runtime behavior
+The runtime benchmark selected 唐津7R while exhibition was not yet published.
+BOATCAST exhibition endpoint returned 403/not-ready.
+The runner correctly returned:
+- `decision=NO_BET_DATA_NOT_READY`
+- `not_ready_stage=EXHIBITION`
+- target result unused
+- payout unused
+- no BET/PASS fabrication.
+This is the intended fail-closed behavior.
+
+The readiness workflow initially treated this valid NOT_READY result as a test failure.
+Workflow was corrected so unpublished exhibition is recorded as a runtime-network WARN rather than as a runner defect:
+- commit `093c32657133c0190a05716ec738a696025c1901`.
+
+### Important production reliability issue discovered and fixed
+Leakage/readiness audit also surfaced that the live wait budget was larger than the job timeout:
+- strict monitor had timeout 25m vs possible exhibition wait 30m.
+- watchdog had timeout 30m vs possible exhibition wait 30m plus setup/odds overhead.
+
+This was a genuine production-readiness risk.
+Main was fixed to:
+- strict timeout: **45m**
+  - commit `f19bd632e99ced1a4691db81bebdb218df97b513`
+- watchdog timeout: **45m**
+  - commit `252bb397299983b8bd607912a9ec4605bc9abfb6`.
+
+Current main verification:
+- strict timeout-minutes = 45
+- watchdog timeout-minutes = 45
+- both contract-check `HEAD4_NEWFEATURE_FIXED156_V1`.
+
+### Final all-in-one rerun
+A final readiness rerun was triggered after the timeout fixes:
+- workflow commit `d52644b874cf7a9fca415717279034244dfc7ca0`
+- Run `35370601347`
+- Job `105683386274`
+- at the time of this handoff update it remained **queued due GitHub Actions runner availability**.
+This queued run does not invalidate the already completed leakage/parity/state/PRE checks above; it is only the consolidated all-in-one confirmation.
+
+### Final practical conclusion
+Production feasibility:
+- **PASS for model/scoring/state/PRE/contracts/fail-closed behavior.**
+- Full current-race exhibition→odds→BET/PASS benchmark cannot be completed before exhibition exists; the early-morning network probe correctly refused to decide.
+
+Leakage:
+- **No operational target/outcome leakage found.**
+- **No target-date temporal leakage found.**
+- **No Jul-Aug label leakage into LIVE transforms found.**
+- **September target outcomes remain UNREAD.**
+- Only material warning remains:
+  - historical Apr-Aug ROI/head-rate are NON-PRISTINE because model/threshold selection used those outcomes.
+  - prospective profitability is not yet proven.
+
+Production remains active and unchanged:
+- `HEAD4_NEWFEATURE_FIXED156_V1`
+- threshold `12.293333333333333`
+- GitHub BET direct-mention notification active.
+- 167R expansion remains research-only/not promoted.
+
+Status: `HEAD4_NEWFEATURE_PRODUCTION_OPERATIONAL_LEAKAGE_PASS__LIVE_FAILCLOSED_VERIFIED__NONPRISTINE_RESEARCH_WARN`
