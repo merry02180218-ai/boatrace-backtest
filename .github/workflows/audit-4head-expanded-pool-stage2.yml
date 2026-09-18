@@ -30,6 +30,15 @@ jobs:
           POOL="$(find stage1 -type f -name 'selected_pool.csv' | head -1)"
           test -n "$POOL"
           echo "EXPANDED_POOL=$POOL" >> "$GITHUB_ENV"
+      - name: Download frozen all-race headprob scores
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p hpseed
+          gh run download 35234326600 -n head4-boatracecsv-leakage-audit -D hpseed
+          HP="$(find hpseed -type f -name 'corrected_scored_races.csv' | head -1)"
+          test -n "$HP"
+          echo "HEADPROB_SCORED=$HP" >> "$GITHUB_ENV"
       - name: Run frozen v283 expanded search
         run: python audit_4head_expanded_pool_stage2_v283.py
       - name: Show result
