@@ -7,14 +7,14 @@ not head outcomes, to avoid using labels to pick the relaxed structural cuts.
 """
 from __future__ import annotations
 from pathlib import Path
-import json, os
+import csv, json, os
 import numpy as np
 import pandas as pd
 
 import analyze_4head_headrate_3ren_player_st as prior
 import analyze_4head_exhibition_original_trainonly as ex
 from analyze_4head_b4_minus_b3_motor_full_universe import settle_all
-from analyze_4head_b4_minus_b3_motor_win_2ren import build_motor_features
+import analyze_4head_b4_minus_b3_motor_win_2ren as motor
 
 OUT=Path('/tmp/head4_expanded_pool_stage1'); OUT.mkdir(parents=True,exist_ok=True)
 MONTHS=('2026-04','2026-05','2026-06','2026-07','2026-08')
@@ -24,6 +24,21 @@ PLAYER=.215605
 FROZEN_ST=-0.6000000000000001
 FROZEN_ORIG=-0.057777777777777706
 TARGET_POOL=450
+
+_local_root=os.environ.get('BOATRACECSV_LOCAL_ROOT')
+if _local_root:
+    _root=Path(_local_root)
+    def _rows(path):
+        p=_root/path
+        if not p.is_file(): return []
+        try:
+            with p.open(encoding='utf-8-sig',newline='') as fh:
+                return list(csv.DictReader(fh))
+        except Exception:
+            return []
+    prior.rows=_rows
+    ex.rows=_rows
+    motor.rows=_rows
 ST_CUTS=(-1.20,-1.00,-.90,-.80,-.70,-.60)
 ORIG_CUTS=(-.35,-.30,-.25,-.20,-.15,-.10,FROZEN_ORIG)
 
@@ -38,7 +53,7 @@ def main():
     if any(m.startswith('2026-09') for m in MONTHS):
         raise RuntimeError('SEPTEMBER OUTCOME ACCESS')
     z=settle_all(months=MONTHS)
-    z=z.merge(build_motor_features(),on=['date','month','race_code'],how='left')
+    z=z.merge(motor.build_motor_features(),on=['date','month','race_code'],how='left')
     pf=prior.build_prior_features()[['date','month','race_code','player4_all_win']]
     z=z.merge(pf,on=['date','month','race_code'],how='left')
     z['race_code']=z.race_code.astype(str).str.zfill(12)
