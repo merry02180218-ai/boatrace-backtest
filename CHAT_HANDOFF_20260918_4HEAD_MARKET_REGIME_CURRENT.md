@@ -1395,3 +1395,46 @@ For real operation, daily state and PRE inputs should be prepared once in the mo
 - Future monitored candidates from today's 29R still upcoming at this point include e.g. Marugame 10R, Omura 6R, Gamagori 11R; display/watch status must be taken from the corrected PRE artifact.
 
 Status: `HEAD4_120R_FAST_LASTMINUTE_PREDEADLINE_PASS__5P18S_CORE__CACHE_PREWARM_NEXT`
+
+
+## FAST LAST-MINUTE RELIABILITY — FINAL UPDATE
+Dedicated report:
+- `HEAD4_120R_LASTMINUTE_RELIABILITY_20260918.md`
+- commit `b31b717b418f6cc7b1452ae5453cc6ed57577f23`
+
+Latest hardening commits:
+- daily-state motor history: `23038945472ac21b9e7ab7460e232d0ddb9e28c0`
+- PRE scanner accepts causal daily state through previous day: `294a07147f0e4e906dfb8c2fee2695e4c41bee1a`
+- morning PRE workflow prewarms daily state: `1b587bf55c5def4336a5062e279335859913d1bb`
+- fast runner odds-timeout + final safety guard: `60fafc4c237fa236e296fb062b88513cdbc7fdc2`
+- prewarmed benchmark workflow: `00b5d1587c462c4a771fc640c6cb60d670e4024f`
+- final rerun trigger: `a487d3aabba5050b8dfc8151b12a460d4d807fb1`
+
+Latest actual-deadline prewarmed benchmark:
+- Run `35326922081`
+- Job `105542003899`
+- conclusion SUCCESS
+- Artifact `10539536100`
+- digest `sha256:d08db8e50ed642d6686efd7fea8678e0f49616b1a6da84dc33b940dbafff645c`
+- Marugame 7R deadline 18:02
+- decision time 17:56:37.326
+- last-minute runner wall **3.43s**
+- exhibition **0.754s**
+- v283 build+inference ~**0.0021s**
+- odds **1.882s**
+- Actions create -> decision about **21s**
+- official odds source timed out at 1.5s; BOATCAST fallback succeeded
+- final decision safety guard = 60s
+- missing data remains fail-closed NO_BET.
+
+Operational conclusion:
+- the major historical latency problem is no longer model computation;
+- PRE/day-state should be prepared once in the morning;
+- per-race final path is now lightweight and has demonstrated actual pre-deadline completion twice;
+- one test used a non-parent benchmark race, so a true monitored-parent live semantic BET/PASS example is still useful, but the technical path is identical.
+
+September operational rule remains:
+- completed prior September dates may be used causally;
+- target-race result/payout and future-relative outcomes remain forbidden.
+
+Status: `HEAD4_120R_FAST_LASTMINUTE_HARDENED__3P43S_CORE__21S_ACTIONS_E2E`
