@@ -1,0 +1,29 @@
+name: audit-4head-pre-candidate-for-120r
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/audit-4head-pre-candidate-for-120r.txt'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy scikit-learn requests joblib beautifulsoup4 lxml
+      - name: Run pre-candidate audit
+        run: |
+          mkdir -p /tmp/head4_pre_candidate_audit
+          python audit_4head_pre_candidate_for_120r.py | tee /tmp/head4_pre_candidate_audit/run.log
+          grep -q 'HEAD4_PRE_CANDIDATE_AUDIT_OK' /tmp/head4_pre_candidate_audit/run.log
+          grep -q '9月_UNREAD' /tmp/head4_pre_candidate_audit/run.log
+          grep -q '本番変更なし' /tmp/head4_pre_candidate_audit/run.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-pre-candidate-for-120r
+          path: /tmp/head4_pre_candidate_audit/
