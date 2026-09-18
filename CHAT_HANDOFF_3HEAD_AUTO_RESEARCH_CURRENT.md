@@ -92,3 +92,23 @@
 - Learned Wave19 gates had failed, but Wave20 shows an interpretable relative **motor-vs-2 + exhibition-rank** gate contains incremental head signal. This is the first post-Wave17 branch to lift combined pre-Feb precision close to 40% at useful monthly volume.
 - Do NOT promote yet: Nov-Dec-Jan were used for gate/threshold selection and February is NON-PRISTINE. The correct next step is to freeze the primary MOTOR_EX rule above **without any more threshold tuning**, then use still-unopened March as the one-shot diagnostic. If March is opened, no post-March retuning may be presented as holdout-valid.
 - March remains unopened as of this AFTER record; September-2026 outcomes UNREAD; production v288 unchanged.
+
+
+## AFTER WORK — Wave20 interpretable manual exhibition/motor gates (Run 35351033915, 2026-09-18)
+- Official fresh Run **35351033915** / Job **105618951554** / Artifact **10549734884** SUCCESS; head SHA **02c6d4d74369482b187243e3d7ba1d2f4d0a0b04**.
+- Feb universe was repaired to exact canonical 3,970R with realtime winner agreement **3970/3970 = 100%**. Motor state remained strict prior-day only; no same-day results; March unopened; September-2026 outcomes UNREAD; production v288 unchanged.
+- Manual grid: 185 interpretable gates × PRE bands/thresholds = **2,590 candidates**. Strict 40-70/month eligible: **298**; wide 30-80/month: **673**.
+- Formal overall ranking by persistent worst-half selected MOTOR_ST `m_top2_vs2_3__st_rank2` (R1-8, PRE q=.925): 167R/54 heads = **32.34%**, avg 55.67/month, persistent worst half **29.41%**. This is not the preferred precision candidate because combined head rate is low.
+- Most important precision result: **MOTOR_EX** candidate `m_rank_vs2_0__ex_rank2`, R1-8, PRE q=.95:
+  - Gate = boat3 prior-day motor EWMA-rank advantage vs boat2 **>= 0** (boat3 motor no worse than boat2) AND boat3 exhibition-time rank **<= 2**.
+  - Nov **47R / 18 heads = 38.30%**.
+  - Dec **60R / 20 heads = 33.33%**.
+  - Jan **68R / 31 heads = 45.59%**.
+  - Pre-Feb total **175R / 69 heads = 39.43%**, avg **58.33R/month**, persistent worst half **28.0%**.
+  - Feb NON-PRISTINE reference: **34R / 14 heads = 41.18%** (H1 6/13=46.15%, H2 8/21=38.10%). This is reference-only, not a fresh holdout.
+- Neighboring MOTOR_EX `motor_top2_vs2>=0 AND ex_rank<=2`, R1-8 PRE q=.95: **170R / 65 = 38.24%**, avg 56.67/month, showing the main effect is not unique to one motor encoding.
+- Pure MOTOR candidate `motor_top2_vs2>=0`, R1-8 PRE q=.985: **131R / 50 = 38.17%**, avg 43.67/month. R1-12 q=.985 version lands exactly 50/month: **150R / 56 = 37.33%**.
+- Pure EXHIBIT best `ex_rank3<=1`, R1-8 PRE q=.95: **152R / 54 = 35.53%**, avg 50.67/month. Thus exhibition alone adds modest precision; motor+exhibition together are materially stronger.
+- START-only and EX_ST gates did not materially improve precision. Three-way MOTOR+EX+ST also underperformed the two-way MOTOR_EX signal, implying start exhibition adds noise once motor current-form + display rank are known.
+- Compared with PRE-only Wave17-equivalent **128R/44 = 34.38%**, the best MOTOR_EX result improves combined head rate by about **+5.05pt** while keeping useful volume (~58/month). However temporal half-month stability is not improved (28.0% worst vs PRE 28.57%), so this is a promising research candidate, **not yet production promotion**.
+- Next justified work: targeted local-neighborhood/stability audit around MOTOR_EX only (PRE q .925/.95/.97/.98, motor rank/top2 thresholds around neutral, exhibition rank 1/2/3 and modest edge thresholds), checking month/half/venue stability without opening March or retuning on February. Avoid broad new feature search.
