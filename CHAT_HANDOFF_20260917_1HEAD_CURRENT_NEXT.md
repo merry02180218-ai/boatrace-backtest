@@ -940,3 +940,18 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 主目的: exact3 hit率55%以上。ROI floorはまず **115%**、120%以上残る候補を優先。
 - current formal 3点は変更しない。v366完了までは4点目は研究のみ。
 - 2026-09結果/払戻は読まない。
+
+
+## AFTER — 2026-09-18 丸亀11R LIVE直前判定
+- ユーザー指示: 「丸亀11の直前判定出して」。
+- race_code=`202609181511`。LIVE request更新commit `dcea29efdf5f48b4dfb0784e83d59fad66d62ae4`。
+- chat-live Run `35337502009` / Job `105575648238` completed success / Artifact `10543318656` name `live-v351-final-202609181511`。
+- 締切 20:10 JST / evaluated 20:02:47 JST / 約8.75分前。
+- 事前値: HEAD=.7823204105 / opponent mass=.4454775433。
+- 現行LIVE BASIC cutoffは HEAD>=.790 / mass>=.375、WATCHはBASIC通過かつ mass>=.425。massはWATCH水準だがHEADが.790未満。
+- 展示gate自体は PASS: head_exhibition_pass=true / attack_core=.8766667 / threshold=.5010534。
+- 展示: EX 1=6.71,2=6.76,3=6.75,4=6.75,5=6.77,6=6.85。ST展示 1=-.03,2=.15,3=.34,4=-.01,5=.02,6=.08。
+- original: 1号艇 一周36.93 / まわり足5.40 / 直線6.13。
+- 最終判定: **DROP / 見送り**。理由はHEAD=.78232 < LIVE cutoff=.790。tickets=[]。
+- 展示が良くてもHEAD gateを上書きしない。WATCH/wall3/five6 ticket補正もBASIC不通過のため非適用。
+- result_or_payout_used=false / chronology_guard=true。2026-09-18結果払戻未使用、2026-09-17結果払戻UNREAD維持。
