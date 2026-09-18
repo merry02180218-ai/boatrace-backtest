@@ -1,0 +1,49 @@
+name: v352 1-head wall3 risk fast audit
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/v352-1head-wall3-risk-fast.yml'
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Download frozen caches from Run 35302023710
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          for pair in             "10530437790 prepare.zip"             "10529644546 second.zip"             "10529728949 base-third.zip"             "10529419720 third.zip"; do
+            set -- $pair
+            gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$1/zip" > "/tmp/$2"
+            unzip -q -o "/tmp/$2" -d .
+          done
+          test -f cache_v321_julaug_nonpristine_slim.csv.gz
+          test -f cache_v321_julaug_nonpristine_head.csv
+          test -f cache_v321_julaug_second.pkl
+          test -f cache_v321_julaug_base_pc.pkl
+          test -f cache_v321_julaug_third.pkl
+      - name: Run wall3 risk audit
+        run: python run_v352_1head_wall3_risk_audit.py
+      - name: Show result
+        if: always()
+        run: |
+          cat /tmp/v352-wall3-risk/result.json 2>/dev/null || true
+          head -30 /tmp/v352-wall3-risk/rules.csv 2>/dev/null || true
+          cat /tmp/v352-wall3-risk/strata.csv 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v352-wall3-risk-fast-${{ github.run_id }}
+          path: /tmp/v352-wall3-risk/
+          retention-days: 30
