@@ -37,3 +37,10 @@
 - `research_v289_3head_addon.json`
 - `research_v289_3head_addon.md`
 
+
+
+### Wave19 failure/repair + official rerun (2026-09-18)
+- Run **35336822315** / Job **105573463674** failed before producing results. Exact cause: October was incorrectly requested as a PRE-score target even though October is only the historical training month in the Wave17 protocol; its prediction frame could be empty, leading to `AttributeError: DataFrame has no attribute family`.
+- Implementation-only repair commit **ebf7dc23095de8a0bab2702f2b1b49bd9d443377**: score only Nov-Dec-Jan-Feb and keep October as PRE history. Research gates/features/thresholds unchanged. Fresh Run **35345961408** started but is superseded by the performance-only rerun below.
+- Performance-only commit **ec7ed0bcf300544c3b66fc02a2586bcab6d20a2d**: Wave19 uses only the frozen 42-day Logistic PRE score actually needed by the candidate grid, instead of recomputing unused 21-day and HistGradient models. Also removes unused September-2025 PRE build; October remains the training-history month exactly as in Wave17. No selection rule, labels, or feature definitions changed.
+- New official fresh Run **35346043952** from head SHA **ec7ed0bcf300544c3b66fc02a2586bcab6d20a2d**. Use this run for the formal Wave19 result. Run 35345961408 is superseded even if it completes.
