@@ -296,3 +296,14 @@
 - Odds are pinned to the same frozen Wave21 canonical source closing_odds__json (120 trifecta combinations), materialized once for March. This avoids missing external archived odds changing the comparison.
 - Official workflow/run for this audit is **audit-3head-a-v288-ticket-march Run 35366460730**, head **f20af7753974368b38b77ceee7b4826207232359**. Earlier queued Run 35366186680 is superseded and must not be used for the formal result.
 - Report: 52-race coverage, LIVE-evaluable count/errors, genuine NO_BET count, BET count, hits, ROI/profit, route breakdown, and head-gate-to-bet conversion. Sep-2026 outcomes are not used in this March ticket audit.
+
+
+### Current-day A shadow early-source failure + schedule repair (2026-09-19)
+- Current JST-day shadow Run **35365531567** / Job **105666944598** targeted **2026-09-19** and failed before producing candidates.
+- Exact cause: at about 01:07 JST the external BoatraceCSV current-day enhanced-PRE source had not published the required target-day recent-national / recent-local universe. History was available (hist_rows=6756, settled results rows=6622) but target_rows=0.
+- This is **source readiness**, not an A-model failure. No 2026-09-19 candidate result exists from that failed run and it must not be interpreted as zero candidates.
+- Fail-closed behavior is correct: do not invent or impute missing target-day recent-form inputs.
+- Shadow daily workflow commit **0d4285a5f6610f60463b093c29419ee08d6ca7f2** now runs at **06:05 JST and 06:35 JST** plus manual dispatch, aligned with the existing v288 morning operating window instead of forcing a 01:00 JST build.
+- The failed current-day run did not request/use target-day result, payout, exhibition, or odds data.
+- Separate PRE-feature-name freeze is being built so the operational daily scorer can stop re-deriving the 370-feature list from Oct-Feb on every run; this is an implementation/performance freeze only and may not change the selected feature list.
+- Formal March downstream ticket audit is **Run 35366460730**. It remains the only official A+v288 ticket audit run; superseded Run 35366186680 must not be used for conclusions.
