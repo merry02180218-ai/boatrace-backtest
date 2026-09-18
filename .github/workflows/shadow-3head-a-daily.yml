@@ -3,9 +3,15 @@ on:
   workflow_dispatch:
     inputs:
       target_date:
-        description: 'Target date YYYY-MM-DD'
-        required: true
+        description: 'Target date YYYY-MM-DD; blank = today JST'
+        required: false
+        default: ''
         type: string
+  push:
+    branches: [main]
+    paths:
+      - 'build_3head_a_daily_shadow.py'
+      - '.github/workflows/shadow-3head-a-daily.yml'
 permissions:
   contents: read
 jobs:
@@ -18,10 +24,21 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install pandas numpy scikit-learn joblib
+      - name: Resolve target date
+        id: date
+        env:
+          INPUT_DATE: ${{ inputs.target_date }}
+        run: |
+          if [ -n "${INPUT_DATE:-}" ]; then
+            TARGET_DATE="$INPUT_DATE"
+          else
+            TARGET_DATE=$(TZ=Asia/Tokyo date +%F)
+          fi
+          echo "target_date=$TARGET_DATE" >> "$GITHUB_OUTPUT"
       - name: Build A pre-motor shadow cache
-        run: python build_3head_a_daily_shadow.py --date "${{ inputs.target_date }}"
+        run: python build_3head_a_daily_shadow.py --date "${{ steps.date.outputs.target_date }}"
       - uses: actions/upload-artifact@v4
         with:
-          name: shadow-3head-a-daily-${{ inputs.target_date }}
+          name: shadow-3head-a-daily-${{ steps.date.outputs.target_date }}
           path: live_outputs/a_precision/
           if-no-files-found: error
