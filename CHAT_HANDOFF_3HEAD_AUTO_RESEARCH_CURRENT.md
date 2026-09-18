@@ -168,3 +168,15 @@
 - START-only, EX+ST, original-exhibition and triple motor+exhibition+ST gates did not beat the MOTOR_EX combined-rate result. Best stability-ranked overall candidate was MOTOR_ST (`motor top2 gap vs2 >=.03` + start-exhibition rank top2) with worst-half 29.41% but only 32.34% combined, so it is not the preferred precision candidate.
 - Conclusion: unlike Wave19's learned post classifier, an interpretable manual gate **does reveal incremental signal**. The most promising branch is specifically **boat3 motor form relative to boat2 + boat3 exhibition-time rank**, not generic start-exhibition or original-exhibition metrics. This is the first new-information branch to lift the ~34-35% combined ceiling to ~39.4% at useful monthly volume. It still does not achieve robust 50% head rate and the month/half-month instability remains material.
 - Recommended next research: narrow around the MOTOR_EX relationship only, preserving predeclared causal logic: vary PRE q/band minimally around the existing frontier and inspect motor-vs2 residual definitions + exhibition rank/edge thresholds. Do not reopen generic 185-gate search, do not tune on Feb, and keep March untouched until a single predeclared freeze candidate is chosen.
+
+
+## BEFORE WORK — Wave22 frozen March one-shot diagnostic (2026-09-19)
+- Wave21 is complete and already froze the next diagnostic set before any March outcomes are opened.
+- Wave22 will open **March 2026 exactly once** and evaluate only the three predeclared rules below. No threshold search, neighborhood rescue, feature-family search, or March-based retuning is allowed.
+  - **A precision**: R1-12 / PRE q=.925 / boat3 motor EWMA-rank edge vs2 >= +0.20 / boat3 exhibition-time rank = 1.
+  - **B stability**: R1-8 / PRE q=.925 / boat3 motor inner top2 gap >= +.05 / boat3 exhibition-time rank <=2.
+  - **Control**: Wave17 PRE-only R1-8 / q=.99.
+- PRE feature list remains frozen from the pre-March Oct-Feb construction. March labels may enter only causal rolling history for races later in March after those races have settled; candidate definitions remain fixed.
+- Motor state remains strict prior-day snapshots; same-day race results must not enter motor features. March exhibition sources are current-race pre-settlement only.
+- Required report: March total volume/head rate, H1/H2 rates and venue support for A/B/control; venue concentration and leave-one-venue-out range for A/B; source/result cross-check and causal audit.
+- March results are considered opened once this run executes. After that, no threshold adjustment may be described as holdout-valid. September-2026 outcomes remain UNREAD and production v288 remains unchanged.
