@@ -1,0 +1,44 @@
+name: v386 1-head expanded current-odds margin
+on:
+  push:
+    paths:
+      - 'run_v386_1head_expanded_current_odds_margin.py'
+      - '.github/workflows/v386-1head-expanded-current-odds-margin.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas
+      - name: Download frozen v374 artifacts
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10548879270/zip" > /tmp/overlay.zip
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10555204782/zip" > /tmp/soft.zip
+          mkdir -p /tmp/overlay /tmp/soft
+          unzip -q /tmp/overlay.zip -d /tmp/overlay
+          unzip -q /tmp/soft.zip -d /tmp/soft
+          test -f /tmp/overlay/rows_LIVE165.csv
+          test -f /tmp/soft/LIVE165_race_level.csv
+      - name: Run expanded safety-margin audit
+        run: python run_v386_1head_expanded_current_odds_margin.py --overlay-dir /tmp/overlay --soft-dir /tmp/soft
+      - name: Show result
+        if: always()
+        run: |
+          cat /tmp/v386-expanded-current-odds-margin/universes.csv 2>/dev/null || true
+          cat /tmp/v386-expanded-current-odds-margin/bands.csv 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v386-expanded-current-odds-margin-${{ github.run_id }}
+          path: /tmp/v386-expanded-current-odds-margin/
+          retention-days: 30
