@@ -65,3 +65,10 @@ BASE: 131 hits, stake 82800, return 86390, profit +3590, ROI 104.34%.
 ## BEFORE — Run 35238661088 failure fix
 - Run 35238661088 / Job 105261103198 logs verified: dependency install succeeded, then `cache_v321_julaug_nonpristine_head.csv` missing in `v337.load_candidate_base()`.
 - これからやること: 正常監査と同じ v321 prepare/second/base-third/third cache pipelineをjoint ROI workflowへ追加し、audit jobへ全cacheをdownloadしてから441-cell scriptを実行する。9/17 result/payout UNREAD guardは維持。
+
+## AFTER — cache pipeline修正完了
+- workflow commit: `0f8c666e3100d119636048d8784afc505e34e681`。
+- `prepare -> second/base-third/third -> audit` の依存関係を追加し、正常稼働close-margin監査と同じ4種cacheをauditへdownloadする構成に修正。
+- auditは全cache生成成功後のみ441セルを開始。結果表示/artifactは `if: always()` 維持。
+- 2026-09-17 result/payoutを読む処理は追加していない。UNREAD維持。
+- 次の再開地点: fresh workflow_dispatch -> 各Job確認 -> audit完了ならartifact回収、sentinel 276/241/131確認、ROI/安定帯解析。
