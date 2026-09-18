@@ -1589,3 +1589,24 @@ Status: `HEAD4_120R_POSTRACE_ODDS_NOT_RETAINED__PROSPECTIVE_TRUE_PARENT_PROOF_RE
 - Strict parent gate and result/payout prohibition remain unchanged.
 
 Status: `HEAD4_120R_STRICT_MONITOR_PERSIST_UNTIL_EXHIBITION_OR_75S_CUTOFF`
+
+
+## BEFORE WORK — 4HEAD formal wall3 head-gate/rotation audit (2026-09-18)
+- User approved testing the 1HEAD formal 3-vs-4 wall concept on the current 4HEAD model.
+- Freeze the current 4HEAD 120R nested-linear rule and current v283 tickets. Do not retrain head_prob, opponent models, or change production/LIVE.
+- Reuse the exact 1HEAD formal same-day wall semantics from `run_v352_1head_wall3_risk_audit.exhibition_wall`:
+  - wall_score = .20*(EX3-EX4)+.40*(ST3-ST4)+.25*(straight3-straight4)+.15*(origavg3-origavg4)
+  - negative wall_score means lane 3 is weaker than lane 4 / lane 4 has a more open attack path;
+  - attack4_score uses the same component weights on boat 4.
+- Historical audit population stays Apr-Aug 2026 only; September outcomes/results/payouts remain UNREAD.
+- Baseline must exactly reproduce the frozen 120R research profile:
+  - preserve the 77R base;
+  - extra gate comp>=2.5 and head_prob + 1.50*opponent_mass >= .82;
+  - expected 120R and previously recorded ROI/monthly profile.
+- Primary new family is a **volume-preserving rotation of only the extra layer**, never removing the frozen 77R base:
+  - quality_wall = head_prob + 1.50*opponent_mass + open_beta*max(0,-wall_score)*I(attack4>=A4) - block_beta*max(0,wall_score)
+  - search nearby quality/comp thresholds and beta strengths;
+  - target 115-125R, prefer ~120R, keep all base77.
+- Report: R, changes vs base120, head4 rate, exact3 hits, retrospective ROI, Apr-Jun vs Jul-Aug, every month, monthly ROI floor, wall-score strata.
+- Selection preference: higher monthly ROI floor first, then overall ROI/head4 rate, with smaller set churn and R closer to 120.
+- This is retrospective research, not production proof. No automatic promotion even if improved.
