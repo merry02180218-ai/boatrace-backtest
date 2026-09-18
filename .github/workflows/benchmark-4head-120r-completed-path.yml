@@ -55,7 +55,7 @@ jobs:
           /usr/bin/time -f 'DAILY_STATE_WALL_SECONDS=%e' python prepare_4head_120r_daily_state.py             --target-date 2026-09-18 --data-root brcsv --out /tmp/head4_daily_state.json 2>&1 | tee /tmp/daily_state.log
       - name: Completed-source speed benchmark Biwako 12R
         run: |
-          /usr/bin/time -f 'FAST120_WALL_SECONDS=%e' python run_4head_120r_lastminute_fast.py             --date 20260918 --jcd 11 --race 12 --deadline-jst 23:59             --race-cards "$CARD" --waku10 "$WAKU" --pre-all "$PRE"             --daily-state /tmp/head4_daily_state.json             --exhibition-safety-seconds 75 --odds-safety-seconds 45             --out /tmp/fast120_biwako12.json 2>&1 | tee /tmp/fast120.log
+          /usr/bin/time -f 'FAST120_WALL_SECONDS=%e' python run_4head_120r_lastminute_fast.py             --date 20260918 --jcd 11 --race 12 --deadline-jst 23:59             --race-cards "$CARD" --waku10 "$WAKU" --pre-all "$PRE"             --daily-state /tmp/head4_daily_state.json             --exhibition-safety-seconds 75 --odds-safety-seconds 45             --max-exhibition-wait-seconds 8 --max-odds-wait-seconds 6             --out /tmp/fast120_biwako12.json 2>&1 | tee /tmp/fast120.log
           grep -q 'HEAD4_120R_FAST_LASTMINUTE_OK' /tmp/fast120.log
       - uses: actions/upload-artifact@v4
         if: always()
