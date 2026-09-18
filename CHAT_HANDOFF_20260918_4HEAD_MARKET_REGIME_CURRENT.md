@@ -532,3 +532,88 @@ Planned simple score family:
 combined with a minimum composite-odds floor and always OR-ed with the frozen 77R research candidate.
 
 Status: `NESTED_LINEAR_SCORE_FRONTIER_START`
+
+
+## NESTED LINEAR HIGH-VOLUME FRONTIER — 2026-09-18 AFTER
+The higher-volume continuation found a materially better shape than the rectangular nested gate.
+
+### Preferred 120R research profile
+Preserve **all 77R** from the prior balanced candidate, then add races satisfying:
+- `composite_odds >= 2.5`
+- `head_prob + 1.50 * opponent_mass >= 0.82`
+
+Retrospective Apr-Aug diagnostics:
+- **120R**
+- +43R beyond the 77R base
+- overall ROI **127.7217%**
+- Apr-Jun: 71R / ROI **134.7028%**
+- Jul-Aug: 49R / ROI **117.6061%**
+- monthly floor: **101.75%**
+
+Monthly:
+- Apr: 22R / **158.14%**
+- May: 28R / **133.95%**
+- Jun: 21R / **111.16%**
+- Jul: 31R / **126.81%**
+- Aug: 18R / **101.75%**
+
+This is the first current high-volume nested candidate in this line that:
+1. keeps every 77R base race,
+2. reaches ~120R total,
+3. remains above the original current-policy aggregate ROI baseline (124.8622%),
+4. and has **all five Apr-Aug months >=100% retrospective ROI**.
+
+### Frontier tradeoff
+- 115R stability profile:
+  - comp>=2.5
+  - score `head_prob + 1.50*opponent_mass >= .83`
+  - ROI **133.27%**
+  - monthly floor **107.74%**
+- 120R preferred:
+  - score >= .82
+  - ROI **127.72%**
+  - monthly floor **101.75%**
+- 127R volume profile:
+  - comp>=2.5
+  - `head_prob + 1.65*opponent_mass >= .8525`
+  - ROI **128.32%**
+  - monthly floor **96.39%** (Aug 96.39)
+- 130R aggressive profile:
+  - comp>=2.5
+  - `head_prob + 1.75*opponent_mass >= .8825`
+  - ROI **125.36%**
+  - monthly floor **91.58%** (Aug 91.58)
+
+Interpretation:
+- 120R is the clean boundary where the research replay still keeps every month >=100.
+- 127R is viable only if accepting a sub-100 August.
+- 130R is too close to the aggregate baseline for the added instability.
+
+### Fine-grid robustness
+Fine search around comp 2.30–2.70, weight 1.20–1.80, score threshold .70–.95:
+- maximum R with **all five months >=100** is 121R.
+- the 121R max uses lower comp floor ~2.30–2.40 and is therefore less clean than the 120R comp>=2.5 profile.
+- local 120R neighborhood (comp=2.5, weight 1.40–1.60, nearby thresholds):
+  - 107 cells checked;
+  - 55 cells have 115–125R, ROI above 124.8622%, and monthly floor >=95%;
+  - 43 cells have 115–125R, ROI above 124.8622%, and all five months >=100%;
+  - 6 nearby parameterizations reproduce the exact same 120R selected set.
+This materially reduces concern that 120R is a one-cell threshold accident, although Apr-Aug is still fully non-pristine.
+
+### GitHub
+- BEFORE handoff: `772c0ca58465b480e1e81aeeece0ce452d4bbf65`
+- linear frontier audit: `680da10cfcaad125ef61adba980268f6115bc40d`
+- workflow: `a1dde6f591eabb714957e9354adc37f6cdc01f9c`
+- first trigger: `1ae08ba67852b59d3e7568e43d99f8ebbdccbc16`
+- frozen research-candidate JSON: `c132f8950382dee0ced6198b2054e10929f5bec0`
+- rerun trigger after freeze: `32768422d453d7fa7ef924acb3738f922b208c8a`
+
+### Decision
+- **Research preference now moves from 110R nested to 120R nested-linear.**
+- Do not promote to production yet.
+- Next required step is independent Actions/replay verification of the frozen 120R JSON and, if it reproduces, prepare a live-safe implementation that computes the score from already-available pre-result inputs.
+- Formal prospective ROI remains NOT_COMPUTABLE.
+- September 2026 results remain **UNREAD**.
+- Production remains unchanged.
+
+Status: `HEAD4_120R_NESTED_LINEAR_FROZEN_RESEARCH__AWAIT_INDEPENDENT_REPLAY`
