@@ -2195,3 +2195,106 @@ Preliminary local diagnostic before formal audit:
 This must now be reproduced in a committed audit.
 
 Status: HEAD4_156R_HEADRATE_ROI_CONSTRAINED_RESEARCH_START
+
+
+## AFTER — exact-156 head-rate optimization under ROI constraint
+Goal: raise 4-head hit rate while keeping the current 156R volume and at least the current overall retrospective ROI.
+
+### Audit 1 — existing Stage2 threshold family
+- script: `audit_4head_156r_headrate_roi_frontier.py`
+- script commit: `1685c062da9d10be1f8f8a86c4d75510b7e93995`
+- workflow: `.github/workflows/audit-4head-156r-headrate-roi-frontier.yml`
+- workflow commit: `accc271c3f3de6fe2c38a5916f90966576405f14`
+- Run `35350987322`
+- Job `105618801877`
+- Artifact `10549923633` / `head4-156r-headrate-roi-frontier`
+- SUCCESS.
+
+Current156 reference:
+- 156R / 65 heads = 41.67%
+- exact3 37
+- ROI 128.5865%
+- support Jul-Aug ROI 115.0453%
+- monthly floor 91.575%.
+
+Existing-grid exact156 + ROI>=current:
+- 25 cells.
+- best head-rate cell:
+  - 156R / 69 heads = **44.23%**
+  - exact3 38
+  - ROI **129.64%**
+  - head-rate gain +2.56pp / +4 heads
+  - support ROI 113.79% (-1.26pp)
+  - monthly floor **76.31%** (-15.26pp).
+- therefore exact count + overall ROI can be preserved while raising head rate, but only by materially worsening month stability within this family.
+- exact156 + ROI>=current + monthly floor>=current: only current-membership-equivalent cells; **no head-rate gain**.
+- exact156 + ROI>=current + support ROI>=current: likewise no head-rate gain.
+- near 150–162 with ROI>=current and monthly floor>=current:
+  - best head-rate is 150R / 64 heads = 42.67% / ROI129.73%;
+  - this drops 6 races, so it does not meet exact-volume user intent.
+
+### Audit 2 — re-rank only the 36-race expansion layer
+Frozen base120 is preserved exactly. Only the 36 additional races are re-selected. Search expands the quality weight from fixed
+`head_prob + 1.50*opponent_mass`
+to
+`head_prob + beta*opponent_mass`
+with beta .50..2.50 plus comp/head/mass/ST/ORIG thresholds.
+
+- script: `audit_4head_156r_expansion_rerank.py`
+- script commit: `64a2d88807a071b30c17ae3bef2b101cfaf41e9c`
+- workflow: `.github/workflows/audit-4head-156r-expansion-rerank.yml`
+- workflow commit: `642a667aa3ef2994d70a86d7c00b2ce85374d692`
+- Run `35351343313`
+- Job `105619960509`
+- Artifact `10549914403` / `head4-156r-expansion-rerank`
+- SUCCESS.
+
+Best exact156 with overall ROI>=current:
+- beta 1.25
+- quality cut .55
+- comp >=1.5 (same membership through comp 2.25 plateau)
+- head_prob >=.16
+- mass >=.20
+- ST >=-.50
+- ORIG >=-.35
+- total: **156R / 70 heads = 44.87%**
+- exact3 **39**
+- ROI **139.97%**
+- head-rate gain **+3.21pp / +5 heads**
+- exact3 +2
+- ROI +11.38pp
+- Jul-Aug ROI **112.09%**
+- monthly floor **79.63%** (August)
+- month ROI:
+  - Apr 252.51
+  - May 116.03
+  - Jun 141.85
+  - Jul 129.05
+  - Aug 79.63.
+- development Apr-Jun: 89R / 35 heads =39.33% / ROI160.96.
+- support Jul-Aug: 67R /35 heads=52.24% / ROI112.09.
+
+Robustness finding:
+- exact156 + ROI>=current + monthly floor>=current had only 2 cells, both current membership-equivalent:
+  - 65 heads / 41.67%
+  - no head-rate improvement.
+- even relaxing monthly floor to >=85 produced no head-rate-improving exact156 cell.
+- at monthly floor >=80, best available:
+  - 156R / 66 heads = **42.31%**
+  - exact3 37
+  - ROI **136.91%**
+  - monthly floor **83.25%**
+  - support ROI **106.83%**.
+- Thus simple threshold/re-ranking features show a clear trade-off:
+  - higher head rate and higher aggregate ROI are achievable at exact 156R;
+  - preserving current month-floor/support stability at the same time is not achieved.
+
+### Conclusion
+- Literal user objective (same 156R + overall ROI not lower + higher head rate): **YES**, retrospectively.
+- Current best discovered: 44.87% head rate vs 41.67%, ROI139.97% vs128.59%, same156R.
+- But this alternative weakens August/monthly floor to79.63 and support ROI to112.09.
+- If monthly stability is also treated as a hard constraint, current156 remains the frontier under the tested feature family.
+- Production/LIVE remains `HEAD4_156R_ROI_EXPANSION_V1`; no automatic promotion from this NON-PRISTINE research.
+- September target outcomes remain unread.
+
+Status: `HEAD4_156R_HEADRATE_CAN_IMPROVE_WITH_STABILITY_TRADEOFF__PRODUCTION_UNCHANGED`
