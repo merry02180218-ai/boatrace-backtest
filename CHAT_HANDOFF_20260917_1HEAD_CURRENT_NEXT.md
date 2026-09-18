@@ -2574,3 +2574,50 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - DEV month robustnessが極端に偏らない
   - parameter plateauが広い
 - production/LIVE betting remains unchanged。
+
+
+## NEXT CHAT HANDOFF — dynamic staking / official closing odds research
+- ユーザー希望により、重くなったため次チャットへ移行。
+- 現正式LIVE買い目は変更なし:
+  - wall3正式 + 5>6 ST正式
+  - 87/165 = 52.73%
+  - 3点各100円の均等買いROI 128.687%
+- v369 ticket-rank監査完了:
+  - rank1: 34hit (39.08%), return19,770, solo ROI119.82%
+  - rank2: 28hit (32.18%), return22,710, solo ROI137.64%
+  - rank3: 25hit (28.74%), return21,220, solo ROI128.61%
+  - ただしDEVとSUPPORTでrank傾向が大きく反転するため、固定rankウェイトは不採用。
+  - v369 Run 35344087154 / Job 105596491873 / Artifact 10546631786 / AUDIT_OK=true。
+- 買い方研究の次テーマ:
+  - 固定順位ウェイトではなく、**レースごとの動的資金配分**。
+  - 3点の買い目自体は固定したまま、公式締切3連単オッズとモデル確率を使って配分を変える。
+- 既存研究として v340 adaptive odds Dutch が発見済み:
+  - handoff: CHAT_HANDOFF_20260914_1HEAD_V340_ODDS_DUTCH.md
+  - 旧正式276RでBOAT RACE公式締切3連単オッズ coverage 276/276。
+  - Run 34796402852 / Artifact 10329904344。
+  - ユーザー指定adaptive policyでは bought33R / ROI115.53% vs baseline276R ROI93.03%。
+  - 主効果は低合成オッズraceのskipで、今回はrace数を減らすのが主目的ではないため、**v340のDutch配分・公式closing odds取得部分だけ再利用する**。
+- 次チャットで最初に読むもの:
+  1) CHAT_HANDOFF_20260917_1HEAD_CURRENT_NEXT.md
+  2) CHAT_HANDOFF_20260914_1HEAD_V340_ODDS_DUTCH.md
+  3) run_v340_prepare_rankings.py
+  4) run_v340_odds_shard.py
+  5) run_v340_aggregate_shards.py
+  6) run_v322_1head_composite_odds.py
+  7) data/official_closing_odds3t/*
+- 次にやる研究:
+  1) 現正式165Rの各3点に公式締切オッズをjoin。
+  2) 100/100/100均等をbaseline。
+  3) 同総額300円または600円で、
+     - Dutch均等払戻型
+     - model probability比例
+     - model probability × odds期待値型
+     - conservative capped Kelly風
+     を比較。
+  4) DEV Feb-Junだけで配分ルール選定、SUPPORT Jul-Augは完全holdout。
+  5) 買うrace数は原則165R固定。skip型は比較参考のみ。
+  6) ROI / profit / 最大1R投入 / rank別寄与 / 月別安定性を監査。
+- 重要:
+  - September outcomes/payoutsはUNREAD維持。
+  - current formal LIVE ticketsは変更しない。
+  - ROIを落としてhit率だけ上げる案は不採用方針。
