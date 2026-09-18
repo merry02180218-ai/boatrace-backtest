@@ -64,6 +64,15 @@ jobs:
           PY
           python run_1head_v351_live_finalize.py --input "final_input_$RACE_CODE.json" --out "live_v351_final_$RACE_CODE.json"
 
+      - name: Fetch current odds allocation shadow
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          python run_1head_v351_live_current_odds_shadow.py \
+            --final "live_v351_final_${RACE_CODE}.json" \
+            --out "live_v351_current_odds_shadow_${RACE_CODE}.json" \
+            | tee "current_odds_shadow_stdout_${RACE_CODE}.json"
+
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -72,6 +81,8 @@ jobs:
           if-no-files-found: error
           path: |
             live_v351_final_*.json
+            live_v351_current_odds_shadow_*.json
+            current_odds_shadow_stdout_*.json
             deadline_*.json
             window_*.json
             exhibition_*.json
