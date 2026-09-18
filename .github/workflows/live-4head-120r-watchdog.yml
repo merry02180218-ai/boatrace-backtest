@@ -1,0 +1,149 @@
+name: live-4head-120r-watchdog
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/live/head4_120r_watchlist.json'
+      - '.github/workflows/live-4head-120r-watchdog.yml'
+
+permissions:
+  actions: read
+  contents: read
+
+concurrency:
+  group: live-4head-120r-watchdog
+  cancel-in-progress: false
+
+jobs:
+  watchdog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Resolve current watch target
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os
+          from datetime import datetime, timedelta
+          from zoneinfo import ZoneInfo
+          JST=ZoneInfo('Asia/Tokyo')
+          z=json.load(open('.github/live/head4_120r_watchlist.json',encoding='utf-8'))
+          now=datetime.now(JST)
+          if z.get('date') != now.strftime('%Y%m%d'):
+              print('WATCHDOG_NO_TARGET date mismatch', z.get('date'), now.isoformat())
+              with open(os.environ['GITHUB_ENV'],'a') as f:f.write('SHOULD_RUN=0\n')
+              raise SystemExit
+          hits=[]
+          for t in z.get('targets',[]):
+              hh,mm=map(int,t['deadline_jst'].split(':'))
+              dl=now.replace(hour=hh,minute=mm,second=0,microsecond=0)
+              start=dl-timedelta(minutes=float(t.get('watch_minutes_before',20)))
+              safe=dl-timedelta(seconds=75)
+              if start <= now < safe:
+                  hits.append((dl,t))
+          if not hits:
+              print('WATCHDOG_NO_TARGET window', now.isoformat())
+              with open(os.environ['GITHUB_ENV'],'a') as f:f.write('SHOULD_RUN=0\n')
+              raise SystemExit
+          _,t=sorted(hits,key=lambda x:x[0])[0]
+          mp={
+            'SHOULD_RUN':'1','TARGET_DATE':z['date'],'JCD':str(t['jcd']),
+            'RACE':str(t['race']),'DEADLINE_JST':t['deadline_jst'],
+            'PRE_RUN_ID':str(t['pre_run_id']),'PRE_ARTIFACT_NAME':t['pre_artifact_name'],
+            'STATE_RUN_ID':str(t['state_run_id']),'STATE_ARTIFACT_NAME':t['state_artifact_name'],
+          }
+          with open(os.environ['GITHUB_ENV'],'a',encoding='utf-8') as f:
+              for k,v in mp.items():f.write(f'{k}={v}\n')
+          print('WATCHDOG_TARGET',z['date'],t['jcd'],t['race'],t['deadline_jst'],now.isoformat())
+          PY
+
+      - name: Skip if already completed
+        if: env.SHOULD_RUN == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          NAME="head4-120r-watchdog-${TARGET_DATE}-${JCD}-${RACE}"
+          COUNT="$(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=$NAME" --jq '.total_count')"
+          if [ "$COUNT" -gt 0 ]; then
+            echo "WATCHDOG_ALREADY_COMPLETED $NAME"
+            echo "SHOULD_RUN=0" >> "$GITHUB_ENV"
+          fi
+
+      - name: Install runtime
+        if: env.SHOULD_RUN == '1'
+        run: pip install -q numpy requests beautifulsoup4 lxml
+
+      - name: Download corrected PRE and daily state
+        if: env.SHOULD_RUN == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          mkdir -p preseed stateseed
+          gh run download "$PRE_RUN_ID" -n "$PRE_ARTIFACT_NAME" -D preseed
+          gh run download "$STATE_RUN_ID" -n "$STATE_ARTIFACT_NAME" -D stateseed
+
+      - name: Locate frozen inputs
+        if: env.SHOULD_RUN == '1'
+        shell: bash
+        run: |
+          CARD="$(find preseed -type f -path "*/current_input/v291/$TARGET_DATE/race_cards.csv" | head -1)"
+          WAKU="$(find preseed -type f -path "*/current_input/v291/$TARGET_DATE/waku10.csv" | head -1)"
+          PRE="$(find preseed -type f -path "*/live_outputs/head4_120r_pre/$TARGET_DATE/pre_all.csv" | head -1)"
+          STATE="$(find stateseed -type f -name 'head4_daily_state.json' | head -1)"
+          test -n "$CARD" && test -n "$WAKU" && test -n "$PRE" && test -n "$STATE"
+          echo "CARD=$CARD" >> "$GITHUB_ENV"
+          echo "WAKU=$WAKU" >> "$GITHUB_ENV"
+          echo "PRE=$PRE" >> "$GITHUB_ENV"
+          echo "STATE=$STATE" >> "$GITHUB_ENV"
+
+      - name: Strict monitored decision
+        if: env.SHOULD_RUN == '1'
+        shell: bash
+        run: |
+          OUT="/tmp/head4_watchdog_${JCD}_${RACE}.json"
+          LOG="/tmp/head4_watchdog.log"
+          echo "OUT=$OUT" >> "$GITHUB_ENV"
+          echo "LOG=$LOG" >> "$GITHUB_ENV"
+          /usr/bin/time -f 'WATCHDOG_WALL_SECONDS=%e' python run_4head_120r_lastminute_fast.py \
+            --date "$TARGET_DATE" --jcd "$JCD" --race "$RACE" --deadline-jst "$DEADLINE_JST" \
+            --race-cards "$CARD" --waku10 "$WAKU" --pre-all "$PRE" --daily-state "$STATE" \
+            --poll-interval 2 \
+            --exhibition-safety-seconds 75 --max-exhibition-wait-seconds 1800 \
+            --odds-safety-seconds 45 --max-odds-wait-seconds 15 \
+            --decision-safety-seconds 60 \
+            --out "$OUT" 2>&1 | tee "$LOG"
+          grep -Eq 'HEAD4_120R_FAST_LASTMINUTE_OK|HEAD4_120R_FAST_NO_BET_DATA_NOT_READY' "$LOG"
+
+      - name: Contract check
+        if: env.SHOULD_RUN == '1'
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os
+          z=json.load(open(os.environ['OUT'],encoding='utf-8'))
+          assert z.get('monitoring_parent') is True, z
+          assert z.get('target_race_result_used') is False, z
+          assert z.get('payout_used') is False, z
+          assert z.get('decision') in {'BET','PASS','NO_BET_DATA_NOT_READY'}, z
+          print('HEAD4_WATCHDOG_CONTRACT_OK',z.get('decision'),z.get('race_code'))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: env.SHOULD_RUN == '1' && always()
+        with:
+          name: head4-120r-watchdog-${{ env.TARGET_DATE }}-${{ env.JCD }}-${{ env.RACE }}
+          path: |
+            /tmp/head4_watchdog_*.json
+            /tmp/head4_watchdog.log
+          if-no-files-found: warn
+          retention-days: 30
