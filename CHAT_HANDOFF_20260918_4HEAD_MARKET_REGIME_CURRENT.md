@@ -469,8 +469,12 @@ Base 77R is preserved exactly:
 - retrospective ROI **128.65%**
 - 5-month floor **79.83%**
 - extra gate: head_prob >= .20 / opponent_mass >= .375 / composite_odds >= 2.5
-- monthly:
-  - Apr 19? exact workflow artifact will be authoritative; local replay summary produced 93R profile with floor 79.825%.
+- monthly exact local replay:
+  - Apr 16R / 185.28%
+  - May 22R / 80.73%
+  - Jun 20R / 116.72%
+  - Jul 23R / 170.92%
+  - Aug 12R / 79.83%
 - This is the maximum-R nested profile found while retaining overall ROI above current 124.8622% and every month >=75%.
 
 #### High-volume nested profile
