@@ -1027,3 +1027,41 @@ Caveats:
 - production unchanged.
 
 Status: `HEAD4_120R_PRE_DISPLAY_DUAL_SCORE_RESEARCH_FROZEN__LIVE_ARTIFACT_NEXT`
+
+
+## PRE-CANDIDATE DESIGN — FINAL FOR THIS ITERATION
+Dedicated design report:
+- `HEAD4_120R_PRE_CANDIDATE_DESIGN_20260918.md`
+- commit: `63b071bfe976c062aa4e0619efd11661a1cff16c`
+
+Research policy artifact:
+- `artifacts/head4_120r_pre_display_policy_20260918.json`
+- commit: `056c2e579369522f32bbf030df7529ec491eb72f`
+
+Current design:
+- INTERNAL WATCH parent: ~24.46R/day historical, 120/120 final recall.
+- USER PRE DISPLAY: wide parent AND (`head_prob>=.18 OR v250_PRE>=.12`).
+  - ~15.74R/day historical
+  - 119/120 final recall = 99.17%
+  - monthly final recall floor 96.43%
+  - historical final ticket hits retained 30/30
+  - historical final payout retained 100%
+- DISPLAY IS NOT A HARD GATE.
+- Full watch parent must still be rescored after exhibition, so an unlisted PRE race can promote to final BET.
+
+Local parity check for freezing race-card head_prob:
+- fitting the unchanged audited model recipe on the official leakage-audit training rows (Apr-Jun, 13,221 rows / 78 features) reproduces stored audit probabilities with max abs error ~6.09e-14.
+- This supports freezing a static race-card headprob inference artifact next.
+- No production promotion yet.
+
+Next resume point:
+1. freeze static race-card head_prob model artifact through 2026-06-30;
+2. implement research-only LIVE PRE display scanner using current race cards:
+   - causal monitoring parent,
+   - frozen race-card head_prob,
+   - existing frozen-cutoff v250 PRE;
+3. output shortlist by deadline/order;
+4. keep full monitoring parent for post-exhibition 120R final scan;
+5. use timestamped pre-deadline odds only at final market stage.
+
+Status: `HEAD4_PRE_DESIGN_READY__NEXT_FREEZE_HEADPROB_AND_LIVE_SCANNER`
