@@ -1438,3 +1438,50 @@ September operational rule remains:
 - target-race result/payout and future-relative outcomes remain forbidden.
 
 Status: `HEAD4_120R_FAST_LASTMINUTE_HARDENED__3P43S_CORE__21S_ACTIONS_E2E`
+
+
+## ADDITIONAL LIVE SPEED EVIDENCE — Gamagori 7R
+Additional actual-live benchmark after the reliability hardening:
+
+- Run: `35327673270`
+- Job: `105544450846`
+- conclusion: **SUCCESS**
+- Artifact: `10539547449`
+- digest: `sha256:f3f82cfe358f5e15c1bdc025d8a1c860a6e769fd7b0c357b1493cae09d8f4b25`
+- run head SHA: `12cf45287bd3673bff852e007a5b27297f52ac6b`
+- benchmark target: 2026-09-18 Gamagori 7R
+- official scheduled deadline: 18:17 JST
+- decision timestamp: 18:05:43.826 JST
+- headroom: ~676 sec / ~11m16s
+
+Measured:
+- daily causal state through Sep17: **4.63s wall**
+- fast runner wall: **2.51s**
+- runner internal total: **2.2298s**
+- exhibition fetch/build: **0.5697s**
+- v283 input build: sub-ms
+- v283 inference: ~0.0018s
+- odds fetch: **1.6230s**
+- exhibition attempts: 1
+- odds attempts: 1
+- BOATCAST odds fallback used successfully
+
+Benchmark semantics:
+- target was not an internal monitoring-parent race, so output was intentionally `PERFORMANCE_BENCHMARK_ONLY`;
+- the frozen 120R formula itself evaluated selected=true:
+  - head_prob .11713
+  - opponent_mass .55126
+  - composite 7.6373
+  - base77=true
+  - linear score .94402
+- no target result/payout was used.
+
+Operational conclusion remains:
+- computational latency is no longer the limiting factor;
+- prewarm daily state in morning PRE workflow;
+- typical post-exhibition model+market path demonstrated at ~2.2–5.2s in live tests;
+- one-off Actions startup can add tens of seconds, but prewarmed workflow demonstrated ~21s create-to-decision;
+- fail-closed guards prevent betting on stale/incomplete data or with insufficient deadline headroom.
+- completed prior September dates are allowed in causal state; target-race/future outcomes remain forbidden.
+
+Status: `HEAD4_120R_LASTMINUTE_SPEED_CONFIRMED__2P23S_ADDITIONAL_LIVE_BENCHMARK`
