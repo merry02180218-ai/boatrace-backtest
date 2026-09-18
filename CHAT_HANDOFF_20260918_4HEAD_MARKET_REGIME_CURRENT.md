@@ -405,3 +405,19 @@ Neighborhood evidence around selected point:
 - Production remains unchanged pending reproducibility audit and explicit promotion decision.
 
 Status: `VOLUME_ROI_BALANCED_CANDIDATE_TRIGGERED`
+
+
+## USER UPDATE — 2026-09-18 — increase race count beyond 77R
+User explicitly wants **more races than the current 77R balanced candidate** while still raising/maintaining ROI.
+
+### BEFORE
+Objective for this continuation:
+1. treat 77R as the previous balanced reference, not the target ceiling;
+2. explore higher-volume frontiers around 90R / 100R / 110R / 120R;
+3. require overall Apr-Aug retrospective ROI to remain above the current baseline 124.8622%;
+4. prefer candidates with stronger 5-month ROI floor and neighboring-threshold support;
+5. quantify the volume-vs-stability tradeoff rather than maximize one metric only;
+6. keep September 2026 outcomes/results strictly UNREAD;
+7. do not change production without explicit user approval and a successful reproducibility audit.
+
+Status: `HIGHER_VOLUME_FRONTIER_RESEARCH_START`
