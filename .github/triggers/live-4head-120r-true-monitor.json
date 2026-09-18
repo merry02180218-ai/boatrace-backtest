@@ -1,11 +1,11 @@
 {
   "target_date": "20260918",
-  "jcd": "15",
-  "race": "10",
-  "deadline_jst": "19:39",
+  "jcd": "24",
+  "race": "6",
+  "deadline_jst": "19:56",
   "pre_run_id": "35317588703",
   "pre_artifact_name": "head4-120r-pre-live-trial-20260918",
   "state_run_id": "35326011735",
   "state_artifact_name": "head4-120r-live-deadline-benchmark",
-  "purpose": "strict monitoring_parent smoke; fail-closed is expected before exhibition"
+  "purpose": "strict monitoring_parent live recovery after Marugame10 scheduled trigger miss; persistent exhibition polling"
 }
