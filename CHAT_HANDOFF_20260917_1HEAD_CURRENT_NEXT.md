@@ -955,3 +955,52 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - 最終判定: **DROP / 見送り**。理由はHEAD=.78232 < LIVE cutoff=.790。tickets=[]。
 - 展示が良くてもHEAD gateを上書きしない。WATCH/wall3/five6 ticket補正もBASIC不通過のため非適用。
 - result_or_payout_used=false / chronology_guard=true。2026-09-18結果払戻未使用、2026-09-17結果払戻UNREAD維持。
+
+
+## AFTER — v366 conditional fourth-ticket audit
+- Run `35337461131` / Job `105575518121` completed success / Artifact `10542829009` / head `e5f1a630f53ab6cd8be78877efe707dca2f52093`。
+- current formal wall3+5>6 baseline:
+  - 87/165 = **52.73%**
+  - stake 49,500 / return 63,700 / profit +14,200 / ROI **128.687%**。
+- DEV-only selected 4th-ticket gate:
+  - conditional THIRD rank2-rank3 gap <= .10
+  - extra pair prob >= .075
+  - p2 dominant SECOND >= .35
+  - pc_extra制限なし
+  - DEV 75/137 =54.74%、69R expansion、ROI118.77%
+  - SUPPORT 18/28 =64.29%、11R expansion、ROI136.53%
+  - ALL 93/165 = **56.36%**、80R expansion、stake57,500 / return69,980 / profit+12,480 / ROI **121.704%**
+  - formal比 +6 hits、target55%達成。
+- always 4th:
+  - 95/165=57.58%だがROI **109.32%**。常時4点化は非効率。
+- gap-only benchmarks:
+  - <=.005: 88/165 ROI129.34%
+  - <=.010: 89/165 ROI129.37%
+  - <=.015: **90/165=54.55% / ROI129.61%**
+  - <=.075: 92/165=55.76% / ROI119.67%
+  - <=.10: 93/165=56.36% / ROI118.21%
+- LOMO再選定では5 holdout月すべてdelta_hits=0で、ROIは全月低下。したがって広い条件付き4点目はhit-rate向上効果は大きいがcross-month robustnessは弱く、現時点で単独正式採用はしない。
+- September outcomes unread / production unchanged / AUDIT_OK=true。
+
+## BEFORE — v367 2>3 rerank + sparse 4th ticket joint search
+- 目的: 3点固定rerankと条件付き4点目を合成し、**55%以上のexact3 hit率を保ちながらROI125〜130%台を狙う**。
+- current formal 87/165 / ROI128.687%を基準。
+- まずFeb-Jun DEVだけで2>3 exhibition rerank候補を探索:
+  - basis SCORE/ST/COMBO
+  - score3 min .40/.50/.60/.70
+  - pair risk min 0/.10/.20/.30
+  - mass min .375/.400/.425
+  - SECOND g2 0/.25/.50
+  - THIRD g3 .25/.50/.75
+- DEV上位候補だけをshortlistし、その後にconditional 4thをjoint探索:
+  - gap max .005/.01/.015/.02/.03/.05/.075/.10
+  - extra pair prob min 0/.075/.09
+  - dominant SECOND p2 min 0/.35/.40
+- joint選定はDEVのみ。SUPPORT Jul-Augは完全holdout。
+- 優先順位:
+  1) DEV exact3最大
+  2) DEV ROI >=120%
+  3) expansion少
+  4) loss少
+- ALL165で55%以上か、ROIがcurrent formal以上/近傍か、SUPPORT非悪化かを確認。
+- production/LIVEは研究完了まで変更しない。
