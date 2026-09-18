@@ -1,0 +1,41 @@
+name: v378 1-head overlay internal allocation
+on:
+  push:
+    paths:
+      - 'run_v378_1head_overlay_internal_allocation.py'
+      - '.github/workflows/v378-1head-overlay-internal-allocation.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas
+      - name: Download v374 frozen overlay rows
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10548879270/zip" > /tmp/v374.zip
+          mkdir -p /tmp/v374
+          unzip -q /tmp/v374.zip -d /tmp/v374
+          test -f /tmp/v374/rows_LIVE165.csv
+      - name: Run overlay internal allocation audit
+        run: python run_v378_1head_overlay_internal_allocation.py --v374-dir /tmp/v374
+      - name: Show result
+        if: always()
+        run: |
+          cat /tmp/v378-overlay-internal-allocation/result.json 2>/dev/null || true
+          cat /tmp/v378-overlay-internal-allocation/selected.csv 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v378-overlay-internal-allocation-${{ github.run_id }}
+          path: /tmp/v378-overlay-internal-allocation/
+          retention-days: 30
