@@ -1,0 +1,22 @@
+name: audit-4head-market-regime-structure-shift
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy scikit-learn requests joblib beautifulsoup4
+      - name: 市場構造シフト分解
+        run: python audit_4head_market_regime_structure_shift.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-market-regime-structure-shift
+          path: /tmp/head4_market_regime_shift/
+          if-no-files-found: error
