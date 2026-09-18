@@ -1196,3 +1196,28 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - 現時点では100/100/100均等買いをformal維持。
   - 次の買い方研究はrank番号固定ではなく、各レースのpair probability gap / conditional THIRD gap / wall3・5>6発火 / 市場オッズ等を使ったdynamic stakeが本命。
 - September outcomes unread / production unchanged / AUDIT_OK=true。
+
+
+## BEFORE — v370 closing-odds dynamic stake allocation
+- ユーザー指示: 「研究続けて」。
+- v369固定rank配分はDEV/SUPPORTで反転したため、固定1:2:1等は正式採用しない。
+- repoには `data/official_closing_odds3t/YYYY/MM/DD.csv` と旧v340 adaptive odds Dutch研究が存在。BOAT RACE公式締切時3連単オッズを165Rのbuying featureとして再利用する。
+- 旧v340のrace skip/点数追加ルールは現formalへそのまま移植しない。今回は**165R全件・現正式3点を固定**し、レース数も買い目も減らさず資金配分だけ研究する。
+- 公平比較:
+  - 1R総額600円固定（6 units ×100円）
+  - 3点すべて最低100円
+  - equal baseline = 200/200/200。ROIは100/100/100と同一理論値128.687%。
+- dynamic allocation candidate:
+  - 各ticketのformal pair probability `p_i`
+  - 公式締切odds `o_i`
+  - score = `p_i^alpha * o_i^beta`
+  - alpha=0/.5/1/1.5/2、beta=-1/-.5/0/.5/1
+  - 残り3unitsをscore比例で100円単位配分。
+  - alpha=0,beta=-1 はDutch寄り、alpha=1,beta=0 はmodel確率寄り、alpha=1,beta=1 はmodel×odds（EV寄り）。
+  - positive-edge `max(p*odds-threshold,0)` 系も比較する。
+- 選定:
+  - Feb-Jun DEVのみでROI最大/安定候補を選ぶ。
+  - Jul-Aug SUPPORTは完全holdout。
+  - 月別・DEV LOMO・近傍plateauを確認。
+- returnは結果の公式100円払戻×購入unitsで計算し、closing oddsそのものを払戻として使わない。
+- 2026-09 outcomes/payoutは読まない。production/LIVE ticket compositionは変更しない。
