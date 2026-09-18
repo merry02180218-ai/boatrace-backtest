@@ -280,3 +280,26 @@ Changes in research/run_3head_funsite_broad50.py:
 - Search fixed coarse weight grids and score quantile gates using February only; test specialized model consensus and score+model consensus. Also test unions of complementary Feb-stable archetypes to increase volume without lowering precision.
 - Require venue dispersion and the same two chronological February validation blocks. Freeze 50% only if both blocks satisfy target and support; otherwise expose diagnostic frontier without opening March for the 50% target.
 - September outcomes remain UNREAD; production v288 unchanged.
+
+
+## AFTER WORK — Broad50 Wave4 verified (Run 35305700561, 2026-09-18)
+- Optimized fresh SUCCESS: Run **35305700561** / Job **105477333719** / Artifact **10530738540**; head SHA **11eca852d036cf344d2d78e9f53d9eb552615bb4**. Earlier Run 35305250388 was superseded because its implementation redundantly recomputed identical scores; optimization changed computation only, not research gates.
+- Feb split unchanged: train 1,954 / v1 904 / v2 1,112; March 4,482; 292 PRE-only features.
+- Wave4 searched 5,108 early-race specialist attack-score / specialist-model / score+model candidates across R1-4, R1-6, R1-8.
+- Major result: **40 strict 50% candidates** satisfied >=12 support, >=5 venues, and >=50% head rate in BOTH Feb validation blocks. Near50 count 65.
+- Frozen 0.50 candidate (volume-first within strict pool): R1-8 attack-score + model consensus; attack score trained at q=.975, weighting vs2 national2 gap 2.5, vs2 ST edge 2.5, inner-player attack 0.5, rank national2 0.5, rank ST 0.5; plus >=2/6 specialist models above 75th percentile.
+  - Feb v1: **15R / 8 = 53.3333%**, 10 venues.
+  - Feb v2: **22R / 11 = 50.0000%**, 13 venues.
+  - March one-shot: **84R / 38 = 45.2381%**, early **21/42=50.0%**, late **17/42=40.4762%**, 24 venues.
+- Frozen 0.45 attack-score-only candidate: Feb 20R/9=45.0%, 31R/14=45.16%; March **100R/44=44.0%**.
+- Frozen 0.40 attack-score-only candidate: Feb 19R/8=42.11%, 37R/15=40.54%; March **109R/49=44.9541%**.
+- Interpretation: early-race specialist representation is the best broad50 direction so far. It moved frozen 50-target March from Wave2's 37.74% to **45.24% at 84R**, and produced 40 independently Feb-stable strict50 variants. Still not production-ready at 50% because March overall missed the target and late-half weakened.
+- Production v288 unchanged; September outcomes UNREAD.
+
+## BEFORE WORK — Broad50 Wave5 strict50 consensus/union expansion (2026-09-18)
+- Wave5 candidate family is built from Wave4's **February-defined strict50 set only**. Wave4 March results motivate trying robustness aggregation but MUST NOT choose Wave5 vote/union thresholds.
+- Reconstruct Wave4 early-race candidates and identify strict50 members using only Feb v1/v2 labels/support/venue dispersion.
+- Deduplicate highly correlated masks, then test: (a) vote-count/consensus thresholds across strict50 members, (b) pairwise/greedy unions that increase Feb validation volume while retaining >=50% in both blocks, and (c) intersections that may raise precision with useful support.
+- Select/freeze Wave5 only from February. Optimize volume subject to both Feb blocks >=50% and >=12 support; expose a precision-first alternative too.
+- Only after Wave5 freeze evaluate March one-shot. Do not tune Wave5 aggregation thresholds from March outcomes.
+- September outcomes remain UNREAD; production v288 unchanged.
