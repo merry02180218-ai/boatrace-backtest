@@ -1,0 +1,43 @@
+name: audit-4head-expanded-pool-stage2
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'audit_4head_expanded_pool_stage2_v283.py'
+      - '.github/workflows/audit-4head-expanded-pool-stage2.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Download Stage1 expanded pool
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p stage1
+          gh run download 35337846162 -n head4-expanded-pool-stage1 -D stage1
+          POOL="$(find stage1 -type f -name 'selected_pool.csv' | head -1)"
+          test -n "$POOL"
+          echo "EXPANDED_POOL=$POOL" >> "$GITHUB_ENV"
+      - name: Run frozen v283 expanded search
+        run: python audit_4head_expanded_pool_stage2_v283.py
+      - name: Show result
+        if: always()
+        run: cat /tmp/head4_expanded_pool_stage2/result.json 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-expanded-pool-stage2
+          path: /tmp/head4_expanded_pool_stage2/
+          retention-days: 30
