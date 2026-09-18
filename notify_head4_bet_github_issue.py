@@ -3,7 +3,8 @@
 
 - PASS / NO_BET_DATA_NOT_READY: no issue
 - exact-title dedupe prevents duplicate notifications for the same race
-- assign repository owner so GitHub notification settings can surface it
+- direct-mention repository owner in the Issue body for GitHub Mobile push
+- also assign repository owner as a secondary notification path
 """
 from __future__ import annotations
 
@@ -68,6 +69,8 @@ def main():
     odds=z.get("ticket_odds") or {}
     venue=VENUE.get(args.jcd, f"JCD{args.jcd:02d}")
     lines=[
+        f"@{owner}",
+        "",
         f"# 4号艇 BET通知 — {venue} {args.race}R",
         "",
         f"- 判定: **{decision}**",
