@@ -174,3 +174,16 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - Run 35298138766 / audit Job 105456877514 / Artifact 10529736068 は修正後コードで success、AUDIT_OK=true。production cell 276/241/131、race SHA / ticket SHA完全一致。
 - 35298138766 head 379190b... -> 最新Run head 28cc9dc... の差分は3号艇研究ファイルのみで、1号艇 joint ROI workflow/scriptは変更なし。
 - これからやること: 最新Run完了を確認しつつ、成功Artifactの summary.csv / monthly.csv / result.json から raw best、Feb-Jun dev、Jul-Aug support、月別、平均的中オッズ、隣接plateau安定性を解析。sentinelは弱めない。9/17 result/payout UNREAD維持。自動production昇格はしない。
+
+
+## AFTER — 441セル成功Artifact解析（Run 35298138766を先行解析）
+- 直前成功Run 35298138766 / audit Job 105456877514 / Artifact 10529736068 を展開。AUDIT_OK=true、productionは 276R / HEAD241 / exact3 131 / ROI 104.3357%、race SHA=08eb... / ticket SHA=2163... 完全一致。
+- raw best: HEAD=.790 / MASS=.425 / env_w=.05 / q=.70、77R / exact3 44 / ROI 129.0043%。Feb-Jun 69R ROI 130.87%、Jul-Aug 8R ROI 112.92%。sampleが小さいためraw best単独では昇格不可。
+- 「devとsupport両方ROI>=100%」は441セル中7セルのみ。すべて HEAD=.790 かつ q=.70。
+- その中で最大母数の安定候補: HEAD=.790 / MASS=.375 / env_w=.05 / q=.70。165R / HEAD140 (84.85%) / exact3 80 (48.48%) / ROI 112.5051%、平均的中オッズ約6.96倍。Feb-Jun 137R ROI 114.21%、Jul-Aug 28R ROI 104.17%。
+- この候補の月別ROI: Feb 144.89 / Mar 99.23 / Apr 142.53 / May 83.10 / Jun 118.38 / Jul 112.96 / Aug 100.00%。productionは Jul 78.94 / Aug 87.06%。
+- overallの1-step隣接plateauは候補周辺24セルすべてROI>=100.70%、平均108.11%。ただしJul-Aug supportだけを見ると周辺平均87.94%、100%超は24セル中1セルで、support安定性はまだ弱い。よってproduction自動昇格はしない。
+- パラメータ傾向: HEADは.790が平均ROI最高、MASSは.425がraw ROI最高だが母数減、env_q=.70が平均ROI最高、env_wは.05がわずかに優位。
+- 最新Run 35302023710 はまだaudit in_progress。前回head 379190b... -> 最新head 28cc9dc... で1号艇gridコード差分なし。ただしcache比較ではslim元データは完全一致、second cacheも完全一致だが、base-third/third予測値に最大約1e-3の微小な再学習差があり、一部順位も変動するため、最新Runのsentinel通過を最終確定条件とする。
+- 9/17 result/payoutは未使用・UNREAD維持。
+- 次の再開地点: Run 35302023710 / Job 105468495136 がcompletedになったら final artifactを回収し、上記数値との一致/差分を確認。sentinelが通れば robust候補(.790,.375,.05,.70)をproduction昇格せず、追加のsupport/paired監査候補として扱う。
