@@ -1,0 +1,130 @@
+name: v353 1-head wall3 ticket rerank
+on:
+  push:
+    paths:
+      - 'run_v353_1head_wall3_ticket_rerank.py'
+      - '.github/workflows/v353-1head-wall3-ticket-rerank.yml'
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - run: python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v353-wall3-prepare-${{ github.run_id }}
+          retention-days: 2
+          path: |
+            cache_v321_julaug_nonpristine_slim.csv.gz
+            cache_v321_julaug_nonpristine_head.csv
+            cache_v321_julaug_nonpristine_meta.csv
+
+  second:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v353-wall3-prepare-${{ github.run_id }}
+          path: .
+      - run: python run_v321_1head_julaug_nonpristine_validation.py --stage second
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v353-wall3-second-${{ github.run_id }}
+          retention-days: 2
+          path: cache_v321_julaug_second.pkl
+
+  base-third:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v353-wall3-prepare-${{ github.run_id }}
+          path: .
+      - run: python run_v321_1head_julaug_nonpristine_validation.py --stage base-third
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v353-wall3-base-third-${{ github.run_id }}
+          retention-days: 2
+          path: cache_v321_julaug_base_pc.pkl
+
+  third:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v353-wall3-prepare-${{ github.run_id }}
+          path: .
+      - run: python run_v321_1head_julaug_nonpristine_validation.py --stage third
+      - uses: actions/upload-artifact@v4
+        with:
+          name: v353-wall3-third-${{ github.run_id }}
+          retention-days: 2
+          path: cache_v321_julaug_third.pkl
+
+  audit:
+    needs: [prepare, second, base-third, third]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - uses: actions/download-artifact@v4
+        with:
+          name: v353-wall3-prepare-${{ github.run_id }}
+          path: .
+      - uses: actions/download-artifact@v4
+        with:
+          name: v353-wall3-second-${{ github.run_id }}
+          path: .
+      - uses: actions/download-artifact@v4
+        with:
+          name: v353-wall3-base-third-${{ github.run_id }}
+          path: .
+      - uses: actions/download-artifact@v4
+        with:
+          name: v353-wall3-third-${{ github.run_id }}
+          path: .
+      - name: Run wall3 ticket rerank audit
+        run: python run_v353_1head_wall3_ticket_rerank.py
+      - name: Show result
+        if: always()
+        run: cat /tmp/v353-wall3-ticket/result.json 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v353-wall3-ticket-${{ github.run_id }}
+          path: /tmp/v353-wall3-ticket/
+          retention-days: 30
