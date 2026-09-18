@@ -2437,3 +2437,33 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - current-odds combined shadowを追加しただけで、formal化していない。
 - 今後ユーザーが「判別して」と依頼したLIVEでは、formal判定artifactに加え、その時点のofficial oddsでcurrent-odds allocation shadowを確認可能。
 - September outcomes unread / production unchanged。
+
+
+## BEFORE — v385 current-odds safety-margin audit
+- 買い方研究をv384のcurrent-odds shadowから継続。
+- 現候補v382:
+  - WALL3は100/100/400固定
+  - five6-onlyはsoft発火時400/200/0、非発火200/200/200
+  - NONEはsoft発火時200/100/0、非発火100/100/100
+  - soft発火閾値 = selected3 odds max/min >= 3.5
+  - historical closing oddsでLIVE165 ROI146.816% / stake60,300 / profit+28,230。
+- v383でclosing odds relative drift ±5/10/15/20% stressは通したが、実LIVEで3.5ぎりぎり発火はcurrent→closeで反転しやすい。
+- v385では**パラメータ再最適化せず**、3.5 coreに対して数学的なsafety bufferだけを導出:
+  - relative odds drift ±d の時、ratio worst shrink factor=(1-d)/(1+d)
+  - closingで3.5を保証するcurrent ratio閾値 = 3.5*(1+d)/(1-d)
+  - d=5/10/15/20%を評価。
+- v382 Artifact 10555891309のrace-level
+  - live_alloc_detail.csv（softなしv379配分）
+  - live_combined_detail.csv（threshold3.5 combined）
+  を再利用。
+- WALL3はodds非依存なので常にalloc側とcombined側同一扱い。
+- non-WALL3で closing odds ratio がcandidate threshold以上ならcombined配分、未満ならalloc配分へ戻す。
+- 評価:
+  - ALL / DEV / SUPPORT / 月別
+  - changed R
+  - ROI / profit
+  - v379 alloc142.305%比
+  - v382 closing146.816%比
+  - worst month
+- supportを見て閾値変更しない。これは「想定drift幅を選んだ時の機械的安全マージン」評価。
+- production/official stakeは変更しない。current-odds shadowもresearch_onlyのまま。September outcomes unread。
