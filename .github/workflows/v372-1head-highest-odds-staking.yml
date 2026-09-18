@@ -1,0 +1,42 @@
+name: v372 1-head highest-odds staking
+on:
+  push:
+    paths:
+      - 'run_v372_1head_highest_odds_staking.py'
+      - '.github/workflows/v372-1head-highest-odds-staking.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas
+      - name: Download v370 frozen race inputs
+        env:
+          GH_TOKEN: '${{ github.token }}'
+        run: |
+          set -euo pipefail
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10553791049/zip" > /tmp/v370.zip
+          mkdir -p /tmp/v370
+          unzip -q /tmp/v370.zip -d /tmp/v370
+          test -f /tmp/v370/race_inputs.csv
+      - name: Run highest-odds staking audit
+        run: python run_v372_1head_highest_odds_staking.py --race-inputs /tmp/v370/race_inputs.csv
+      - name: Show result
+        if: always()
+        run: |
+          cat /tmp/v372-highest-odds-staking/result.json 2>/dev/null || true
+          cat /tmp/v372-highest-odds-staking/simple_no_gate.csv 2>/dev/null || true
+          cat /tmp/v372-highest-odds-staking/selected_gates.csv 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v372-highest-odds-staking-${{ github.run_id }}
+          path: /tmp/v372-highest-odds-staking/
+          retention-days: 30
