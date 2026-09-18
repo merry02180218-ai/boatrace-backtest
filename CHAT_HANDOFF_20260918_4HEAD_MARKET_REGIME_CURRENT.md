@@ -1485,3 +1485,12 @@ Operational conclusion remains:
 - completed prior September dates are allowed in causal state; target-race/future outcomes remain forbidden.
 
 Status: `HEAD4_120R_LASTMINUTE_SPEED_CONFIRMED__2P23S_ADDITIONAL_LIVE_BENCHMARK`
+
+
+## BEFORE WORK — strict monitored fast-live workflow (2026-09-18 18:10 JST)
+- Resume point: fast last-minute path has already passed actual predeadline latency/fallback benchmarks, including Run 35327673270 / Job 105544450846 / Artifact 10539547449.
+- The only remaining live-semantic gap is one true internal `monitoring_parent=1` race completing the strict path to BET/PASS without `--allow-unmonitored-benchmark`.
+- Corrected PRE Artifact 10535553060 / Run 35317588703 contains 29 internal monitoring-parent races for 2026-09-18. Current upcoming true parents include Marugame 10R (JCD15, deadline 19:39), Omura 6R (JCD24, deadline 19:56), and Gamagori 11R (JCD07, deadline 20:15).
+- Build a reusable strict live workflow that consumes the frozen corrected PRE artifact and prewarmed causal daily-state artifact, rejects non-parent races, runs `run_4head_120r_lastminute_fast.py` without benchmark override, and uploads the full decision JSON/log.
+- First smoke target: Marugame 10R. Because current time is well before exhibition, an immediate run is expected to fail closed as `NO_BET_DATA_NOT_READY`; that is a safety-path check, not the final BET/PASS proof.
+- Preserve causal rule: prior completed Sep dates through Sep17 allowed; target-race result/payout/future outcomes forbidden. Production/research thresholds unchanged.
