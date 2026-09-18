@@ -233,3 +233,11 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - HEAD学習へ当日展示を直接混ぜない。展示はpost-ranking/final gateのみ。事前壁特徴を試す場合もPRE/strictly-prior情報のみ。
 - 2026-09-17 result/payout UNREADを維持。9/18 LIVE結果も研究へ混ぜない。
 - production/LIVE設定はこの監査では変更しない。良い結果が出ても自動昇格しない。
+
+
+## BEFORE — 2026-09-18 びわこ7R 直前判定
+- ユーザー指示: 「びわこ7Rの直前判定して」。
+- 対象 race_code=`202609181107`。事前値は HEAD=.8015607255 / opponent mass=.4280898422 で、新運用では WATCH_PRE（HEAD>=.790, mass>=.425）。
+- 現在時刻確認: 2026-09-18 12:59 JST。直前判定は既存LIVE workflow `.github/workflows/chat-live-1head-v351-request.yml` を使い、daily cache -> deadline -> exhibition probe -> 新LIVE gate（env_w=.05 / q=.70）-> finalize の順で実施する。
+- 2026-09-18結果/払戻は使用しない。2026-09-17結果/払戻もUNREAD維持。
+- 同時にv352 wall3 risk audit Run 35305095666を継続監視する。
