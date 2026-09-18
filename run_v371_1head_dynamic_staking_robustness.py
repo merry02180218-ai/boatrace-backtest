@@ -190,7 +190,7 @@ def main():
     # Plateau around v370 core alpha=.5 beta=1 TOP, using same budget:
     plateau=[]
     for budget in BUDGETS:
-        q=g[(g.budget.eq(budget))&(g.mode.eq('TOP'))].copy()
+        q=g[(g.budget.eq(budget))&(g['mode'].eq('TOP'))].copy()
         best=float(q.dev_roi.max())
         p=q[q.dev_roi.ge(best-.02)].copy()
         plateau.append({'budget':budget,'cells':len(p),
