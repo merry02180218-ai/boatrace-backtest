@@ -37,3 +37,18 @@
 - `research_v289_3head_addon.json`
 - `research_v289_3head_addon.md`
 
+
+## AFTER WORK — fun-site wide-schema baseline (Run 35296265896)
+- SUCCESS: Run 35296265896 / Job 105449323190 / Artifact 10527334659.
+- Head SHA f2730aeb81922a0f6c31d38c7e652f5e84ba4432; wide-schema parser commit 5b6b19de7e5c2d541ec5b6a50cbebdbfee911ae6.
+- Sources 59/59 days each; fun-site 8,707 races; joined Feb 3,970 / Mar 4,482; 180 PRE features; current-meet session fields excluded; September outcomes UNREAD.
+- March frozen one-shot: 50%-target 29R/6=20.69%; 45%-target 107R/36=33.64%; 40%-target 169R/59=34.91% (early 84/30=35.71%, late 85/29=34.12%).
+- Conclusion: simple balanced logistic + one score threshold does NOT achieve 50%; do not promote.
+
+## BEFORE WORK — broader 50% head-rate search (2026-09-18)
+- User explicitly requests broader hypothesis search; do not stop at the 169R/59 baseline.
+- Keep production v288 unchanged and September outcomes UNREAD.
+- Search materially different PRE-only model families and interactions: nonlinear tree/boosting models, calibrated logistic variants, explicit boat3-vs-each-opponent matchup features, rank/margin features, recent national/local form interactions, venue/grade/race-number regimes where available, and ensemble/consensus gates.
+- February remains the only model/threshold selection period; use chronological splits / stability constraints inside February. March labels are one-shot diagnostics per frozen candidate family, not iterative tuning feedback.
+- Report Pareto frontier emphasizing >=50% March head rate with meaningful N; also >=45/40 bands, early/late stability, venue dispersion, and incremental/overlap versus prior 169R baseline/Wave54 where reproducible.
+- Explicitly guard against tiny-N 50% artifacts and feature leakage.
