@@ -6,3 +6,4 @@ rerun after flexible deadline + fast BOATCAST path
 rerun after ST boat-number parser fix
 rerun after ST verifier fixture correction
 rerun with bounded exhibition/odds polling
+rerun after local sparse-history perf fix
