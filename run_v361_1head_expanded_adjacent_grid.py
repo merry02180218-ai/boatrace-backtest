@@ -123,7 +123,11 @@ def main():
     x=pickle.load(args.prepared.open('rb'));allrows=x['rows']
     rows313=allrows['H0775_M350']
     if len(rows313)!=313:raise RuntimeError(f'prepared 313 drift {len(rows313)}')
-    prefetch=install_payout_cache(rows313);payouts=payout_values(rows313)
+    union_by_code={}
+    for rr in allrows.values():
+        for r in rr: union_by_code[str(r['race_code']).zfill(12)]=r
+    unionrows=list(union_by_code.values())
+    prefetch=install_payout_cache(unionrows);payouts=payout_values(unionrows)
     dev=[r for r in rows313 if str(r['month']) in DEV];sup=[r for r in rows313 if str(r['month']) in SUP]
     bdev=base_metrics(dev,payouts);bsup=base_metrics(sup,payouts);ball=base_metrics(rows313,payouts)
 
