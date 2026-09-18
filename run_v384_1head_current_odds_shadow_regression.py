@@ -16,6 +16,9 @@ def main():
         for name,wall,five,ods,exp_stakes,exp_signal in CASES:
             fin={'race_code':'202609181107','status':'PASS','tickets':TICKETS,
                  'wall3_ticket_applied':wall,'five6_ticket_applied':five,
+                 'deadline_jst':'2026-09-18T13:17:00+09:00',
+                 'evaluated_at_jst':'2026-09-18T13:05:00+09:00',
+                 'minutes_to_deadline':12.0,
                  'result_or_payout_used':False,'chronology_guard':True}
             odds={'fetched_at_jst':'2026-09-18T13:05:00+09:00','odds':dict(zip(TICKETS,ods))}
             fp=td/f'{name}_final.json';op=td/f'{name}_odds.json';rp=td/f'{name}_result.json'
@@ -27,8 +30,21 @@ def main():
             assert z['signal']==exp_signal,(name,z)
             assert z['result_or_payout_used'] is False and z['chronology_guard'] is True
             assert z['research_only'] is True
+            assert z['formal_deadline_jst']=='2026-09-18T13:17:00+09:00'
+            assert z['formal_minutes_to_deadline']==12.0
+            assert set(z['safety_scenarios'])=={'3.5','3.9','4.3'}
+            if wall:
+                for key in ('3.5','3.9','4.3'):
+                    assert z['safety_scenarios'][key]['stakes_yen']==[100,100,400],(name,key,z)
+            elif name in ('five6','none_soft'):
+                assert z['safety_scenarios']['3.5']['soft_applied'] is True
+                assert z['safety_scenarios']['3.9']['soft_applied'] is True
+                assert z['safety_scenarios']['4.3']['soft_applied'] is True
+            else:
+                assert all(z['safety_scenarios'][key]['soft_applied'] is False for key in ('3.5','3.9','4.3'))
             out.append({'case':name,'signal':z['signal'],'stakes_yen':z['stakes_yen'],
-                        'total_stake_yen':z['total_stake_yen'],'odds_ratio':z['odds_ratio_max_min']})
+                        'total_stake_yen':z['total_stake_yen'],'odds_ratio':z['odds_ratio_max_min'],
+                        'safety_scenarios':z['safety_scenarios']})
     result={'cases':out,'SEPTEMBER_OUTCOMES_READ':False,'RESULT_OR_PAYOUT_USED':False,'AUDIT_OK':True}
     Path('/tmp/v384-current-odds-shadow-regression').mkdir(parents=True,exist_ok=True)
     Path('/tmp/v384-current-odds-shadow-regression/result.json').write_text(json.dumps(result,indent=2))
