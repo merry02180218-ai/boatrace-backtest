@@ -126,11 +126,17 @@ def _coalesce_boatcast_st_records(text: str) -> list[str]:
         line = raw.rstrip("\r\n")
         cols = line.split("\t")
         is_start = False
-        if len(cols) >= 2:
+        if len(cols) >= 3:
             try:
-                course = int(_clean(cols[0]))
-                boat = int(_clean(cols[1]))
-                is_start = 1 <= course <= 6 and 1 <= boat <= 6
+                first = int(_clean(cols[0]))
+                if 1 <= first <= 6:
+                    # Live BOATCAST: [course, boat, name, ...].
+                    # Legacy fixtures: [boat, nonnumeric placeholder, ...].
+                    try:
+                        second = int(_clean(cols[1]))
+                        is_start = 1 <= second <= 6
+                    except Exception:
+                        is_start = len(cols) >= 5
             except Exception:
                 is_start = False
         if is_start:
@@ -156,7 +162,10 @@ def parse_boatcast_st(text: str) -> dict[int, float | None]:
         try:
             boat = int(_clean(cols[1]))
         except Exception:
-            continue
+            try:
+                boat = int(_clean(cols[0]))
+            except Exception:
+                continue
         if not 1 <= boat <= 6:
             continue
         out[boat] = parse_start_timing(cols[4], cols[5])
