@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
-      - name: Download v353 artifact
+      - name: Download v353 artifact and frozen caches
         env:
           GH_TOKEN: '${{ github.token }}'
         run: |
@@ -26,6 +26,15 @@ jobs:
           mkdir -p /tmp/v353
           unzip -q /tmp/v353.zip -d /tmp/v353
           test -f /tmp/v353/race_predictions.csv
+          for pair in "10533112695 prep" "10533397688 second" "10533282609 basethird" "10533362695 third"; do
+            set -- $pair
+            gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$1/zip" > "/tmp/$2.zip"
+            unzip -q -o "/tmp/$2.zip" -d .
+          done
+          test -f cache_v321_julaug_nonpristine_head.csv
+          test -f cache_v321_julaug_second.pkl
+          test -f cache_v321_julaug_base_pc.pkl
+          test -f cache_v321_julaug_third.pkl
       - name: Run combined overlay audit
         run: python run_v355_1head_watch_wall3_overlay_audit.py --race-predictions /tmp/v353/race_predictions.csv
       - name: Show result
