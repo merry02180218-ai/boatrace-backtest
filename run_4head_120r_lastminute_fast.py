@@ -185,7 +185,7 @@ def parse_od3(body):
 def fetch_boatcast_odds(hd,jcd,rno,deadline,timeout=4):
     require_before_deadline(deadline,'before BOATCAST odds fetch')
     url=f'{BOATCAST}/txt/{jcd:02d}/bc_smt_od3_{hd}_{jcd:02d}_{rno:02d}.txt'
-    req=datetime.now(JST);body=_get_fast(url,timeout,2);fetched=live.require_before_deadline(deadline,'after BOATCAST odds fetch')
+    req=datetime.now(JST);body=_get_fast(url,timeout,2);fetched=require_before_deadline(deadline,'after BOATCAST odds fetch')
     odds=parse_od3(body)
     return odds,{'source':'BOATCAST aggregating bc_smt_od3','url':url,'count':len(odds),
       'requested_at_jst':req.isoformat(),'fetched_at_jst':fetched.isoformat(),
@@ -239,7 +239,7 @@ def pair_mass(p2,pc,pairs):
     for s in BOATS:
         for t in BOATS:
             if s==t:continue
-            vals[(s,t)]=math.exp(ALPHA2*math.log(max(float(p2[s]),1e-12))+(1-live.ALPHA2)*math.log(max(float(pc[(s,t)]),1e-12)))
+            vals[(s,t)]=math.exp(ALPHA2*math.log(max(float(p2[s]),1e-12))+(1-ALPHA2)*math.log(max(float(pc[(s,t)]),1e-12)))
     den=sum(vals.values())
     return sum(vals[x]/den for x in pairs)
 
@@ -300,7 +300,7 @@ def main():
     ap.add_argument('--timeout',type=int,default=4);ap.add_argument('--poll-interval',type=float,default=2.0);ap.add_argument('--exhibition-safety-seconds',type=int,default=75);ap.add_argument('--odds-safety-seconds',type=int,default=45);ap.add_argument('--max-exhibition-wait-seconds',type=float,default=30);ap.add_argument('--max-odds-wait-seconds',type=float,default=15);ap.add_argument('--allow-unmonitored-benchmark',action='store_true')
     ap.add_argument('--out',required=True)
     a=ap.parse_args(); total0=time.perf_counter(); stages={}
-    deadline=parse_deadline_flexible(a.date,a.deadline_jst); live.require_before_deadline(deadline,'fast120 startup')
+    deadline=parse_deadline_flexible(a.date,a.deadline_jst); require_before_deadline(deadline,'fast120 startup')
     code=f'{a.date}{a.jcd:02d}{a.race:02d}'
     cards=bycode(rows_local(a.race_cards));waku=bycode(rows_local(a.waku10));pre=bycode(rows_local(a.pre_all))
     if code not in cards or code not in waku or code not in pre:raise Fast120Error(f'missing current row {code}')
@@ -335,7 +335,7 @@ def main():
         return
     stages['fetch_odds_s']=time.perf_counter()-t
     vals=[float(odds[x]) for x in tickets];comp=composite_odds(vals);d=decide(hp,mass,comp)
-    now=live.require_before_deadline(deadline,'before fast120 persist')
+    now=require_before_deadline(deadline,'before fast120 persist')
     out={
       'schema':'head4_120r_fast_lastminute_v1','race_code':code,'monitoring_parent':monitored,'benchmark_unmonitored':bool(a.allow_unmonitored_benchmark and not monitored),
       'head_prob':hp,'opponent_mass':mass,'tickets':tickets,'ticket_odds':dict(zip(tickets,vals)),'composite_odds':comp,
