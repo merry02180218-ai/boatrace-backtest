@@ -61,6 +61,15 @@ jobs:
             data/previews/original_exhibition/2026/07
             data/previews/original_exhibition/2026/08
       - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Download frozen 164R source artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p frozen164
+          gh run download 35302541048 -n head4-market-regime-structure-shift -D frozen164
+          RACE_DETAIL="$(find frozen164 -type f -name 'race_detail.csv' | head -1)"
+          test -n "$RACE_DETAIL"
+          echo "HEAD4_FROZEN_RACE_DETAIL=$RACE_DETAIL" >> "$GITHUB_ENV"
       - name: Run 4HEAD formal wall3 rotation audit
         env:
           BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
