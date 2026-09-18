@@ -43,3 +43,22 @@ Repo: `merry02180218-ai/boatrace-backtest`
 - Production remains unchanged until explicit approval. v96 prohibited. September remains `UNREAD`.
 
 Status: `HEADPROB_PASS_RESCUE_ROI_INTEGRATION_PREPARING`
+
+
+## AFTER — HEAD PROBABILITY × CURRENT 164R × THIRD0.10 × COMPOSITE ODDS
+- Workflow `.github/workflows/audit-4head-headprob-pass-rescue.yml` Run `35238737384`, Job `105261364738`, Artifact `10505011547`, head `474377dca21094c8cc6781a31b496cf573bc75cf`, SUCCESS.
+- Reproduction guards passed: fixed 164R / 70 head4; THIRD0.10 817 tickets / 35 raw hits.
+- Head-probability-only PASS rescue did not produce a robust profitable Jul-Aug validation rule. Best visible broad rescue reference was head_prob>=.21 with no composite-odds lower bound: 72 BET R / 15 hits / ROI 86.40%.
+- Therefore simple head-probability-only rescue is not adopted. Current production remains unchanged.
+- September remains `UNREAD`.
+
+## BEFORE — JOINT HEAD PROBABILITY × OPPONENT MASS × PRE-RACE/LAST-MINUTE GATE GRID
+- User approved continuation.
+- Objective: vary head probability, opponent-mass/ticket-structure confidence, and pre-race/last-minute gate values jointly, then find robust regions for JPY10,000 Dutch composite-odds ROI rather than optimizing head probability alone.
+- Preserve exact frozen 164R population and v283 + THIRD0.10 ticket semantics first; do not alter production during research.
+- Development/validation split remains Apr-Jun vs Jul-Aug. Do not select from Apr-Aug aggregate alone.
+- Evaluate BET count, added races, raw hits, stake, payout, profit, ROI, monthly stability, and sensitivity around neighboring threshold cells.
+- Prefer plateau/robust regions over a single isolated maximum cell.
+- September 2026 outcomes/results remain strictly `UNREAD`; v96 prohibited; closing odds retrospective diagnostic only.
+
+Status: `JOINT_HEADPROB_OPPONENT_MASS_LASTMINUTE_GRID_PREPARING`
