@@ -38,7 +38,7 @@ def features(rc,rn,rl):
   o[f'b3_min_gap_{c}']=b3-np.nanmax(z) if np.isfinite(b3) and np.isfinite(z).any() else np.nan
   for x in [1,2,4,5,6]:o[f'b3_gap{x}_{c}']=b3-o.get(f'b{x}_{c}',np.nan)
  return o
-def prefix(score,y,target,minn=20):
+def prefix(score,y,target,minn=5):
  ix=np.argsort(-score); yy=np.asarray(y)[ix]; ss=np.asarray(score)[ix]; cum=np.cumsum(yy); n=np.arange(1,len(yy)+1); rate=cum/n
  ok=np.where((rate>=target)&(n>=minn))[0]
  if not len(ok):return None
@@ -68,13 +68,13 @@ def main():
  for n in names:
   m=model(n);m.fit(tr[feats],tr.y);s1=m.predict_proba(v1[feats])[:,1];s2=m.predict_proba(v2[feats])[:,1]
   for t in [.50,.45,.40]:
-   p=prefix(s1,v1.y,t)
+   p=prefix(s1,v1.y,t,5)
    if p:
     sel=s2.assign(score=s2)[s2>=p['threshold']]; candidates.append({'family':n,'target':t,'threshold':p['threshold'],'v1_n':p['n'],'v1_rate':p['rate'],'v2_n':len(sel),'v2_rate':float(sel.y.mean()) if len(sel) else None})
  # choose only Feb-stable gates: v2 >= target-0.05, max v2 N
  frozen={}
  for t in [.50,.45,.40]:
-  q=[z for z in candidates if z['target']==t and z['v2_n']>=20 and z['v2_rate'] is not None and z['v2_rate']>=t-.05]
+  q=[z for z in candidates if z['target']==t and z['v2_n']>=10 and z['v2_rate'] is not None and z['v2_rate']>=t-.10]
   frozen[str(t)]=max(q,key=lambda z:(z['v2_n'],z['v2_rate'])) if q else None
  # ensemble rank-average family, selected strictly on Feb split
  ms=[]
@@ -84,10 +84,10 @@ def main():
   arr=np.column_stack([m.predict_proba(frame[feats])[:,1] for m in ms]);return np.mean(pd.DataFrame(arr).rank(pct=True).to_numpy(),axis=1)
  e1,e2=ens(v1),ens(v2)
  for t in [.50,.45,.40]:
-  p=prefix(e1,v1.y,t)
+  p=prefix(e1,v1.y,t,5)
   if p:
    sel=v2.assign(score=e2)[e2>=p['threshold']];z={'family':'ensemble','target':t,'threshold':p['threshold'],'v1_n':p['n'],'v1_rate':p['rate'],'v2_n':len(sel),'v2_rate':float(sel.y.mean()) if len(sel) else None};candidates.append(z)
-   if z['v2_n']>=20 and z['v2_rate'] is not None and z['v2_rate']>=t-.05:
+   if z['v2_n']>=10 and z['v2_rate'] is not None and z['v2_rate']>=t-.10:
     old=frozen[str(t)]
     if old is None or (z['v2_n'],z['v2_rate'])>(old['v2_n'],old['v2_rate']):frozen[str(t)]=z
  # one-shot March: refit chosen family on all Feb; ensemble likewise
@@ -103,6 +103,6 @@ def main():
   sel=mar.assign(score=score)[score>=z['threshold']].copy();sel=sel.sort_values(['date','rc']);half=len(sel)//2
   venues=sel.groupby('venue').y.agg(['count','sum','mean']).sort_values('count',ascending=False).head(12).reset_index().to_dict('records')
   results[key]={'frozen':z,'march_n':len(sel),'march_hits':int(sel.y.sum()),'march_rate':float(sel.y.mean()) if len(sel) else None,'early_n':half,'early_hits':int(sel.iloc[:half].y.sum()),'late_n':len(sel)-half,'late_hits':int(sel.iloc[half:].y.sum()),'venues_top12':venues}
- out={'policy':{'feb_only_selection':True,'march_one_shot':True,'september_outcomes_read':False,'current_meet_used':False},'joined_feb':len(feb),'joined_mar':len(mar),'features':len(feats),'feb_candidates':candidates,'frozen':frozen,'march_results':results}
+ # diagnostics: always expose model score frontiers even when frozen stability gate rejects all\n diag={}\n for n in names:\n  m=model(n);m.fit(tr[feats],tr.y);s1=m.predict_proba(v1[feats])[:,1];s2=m.predict_proba(v2[feats])[:,1]\n  diag[n]={}\n  for k in [10,20,30,50,75,100,150,200]:\n   if k<=len(v1) and k<=len(v2):\n    i1=np.argsort(-s1)[:k];i2=np.argsort(-s2)[:k];diag[n][str(k)]={'v1_rate':float(v1.y.iloc[i1].mean()),'v2_rate':float(v2.y.iloc[i2].mean())}\n out={'diagnostic_topn':diag,'policy':{'feb_only_selection':True,'march_one_shot':True,'september_outcomes_read':False,'current_meet_used':False},'joined_feb':len(feb),'joined_mar':len(mar),'features':len(feats),'feb_candidates':candidates,'frozen':frozen,'march_results':results}
  open('research_3head_funsite_broad50_result.json','w').write(json.dumps(out,ensure_ascii=False,indent=2,default=str));print(json.dumps(out,ensure_ascii=False,indent=2,default=str))
 if __name__=='__main__':main()
