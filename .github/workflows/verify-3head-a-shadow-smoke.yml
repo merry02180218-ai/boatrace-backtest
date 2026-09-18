@@ -19,4 +19,5 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install requests joblib
+      - run: python -m py_compile build_3head_a_daily_shadow.py run_3head_a_live_gate_shadow.py threehead_head_gate_a_adopted.py
       - run: python test_3head_a_shadow_gate.py
