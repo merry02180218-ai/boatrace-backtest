@@ -919,3 +919,24 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - loss増加よりnet exact3を優先しつつ、3点買いROI floorは **120%** を目安に確認。
 - もし3点固定で55%へ届かなければ、次段で「条件付き4点目」を別研究として比較する。既存正式3点ロジックはその時点まで変更しない。
 - 2026-09結果/払戻は読まない。historical production sentinel / HEAD / BASIC / WATCH gateは変更しない。
+
+
+## BEFORE — v366 条件付き4点目でexact3 hit-rate向上
+- v365 3点固定rerankはRun `35336816467` 実行中。
+- ローカルcausal再現では3点固定の追加2>3/4>5 rerankは現時点で約89/165（53.9%）付近が上限に見える。
+- 一方、current formal wall3+5>6後の確率から「dominant SECONDに対するconditional THIRD rank3」を4点目候補にすると、extra-hit候補が8R存在。
+- 単純gap閾値ローカル確認:
+  - gap<=.015: 23Rだけ4点化、90/165=54.55%
+  - gap<=.075: 80Rだけ4点化、92/165=55.76%
+  - gap<=.10: 97Rだけ4点化、93/165=56.36%
+  - 全件近く4点化なら最大95/165=57.58%。
+- v366では結果を見ずに使えるpre-race条件だけで4点目追加を選ぶ:
+  - conditional THIRD rank2-rank3 gap max
+  - extra pair probability min
+  - conditional pc(extra) min
+  - optional dominant SECOND p2 min
+- stakeは正式3点=300円/R + expansion時100円。returnは実3連単100円払戻。
+- DEV Feb-Junのみで選定。SUPPORT Jul-Augは選定に使わない。
+- 主目的: exact3 hit率55%以上。ROI floorはまず **115%**、120%以上残る候補を優先。
+- current formal 3点は変更しない。v366完了までは4点目は研究のみ。
+- 2026-09結果/払戻は読まない。
