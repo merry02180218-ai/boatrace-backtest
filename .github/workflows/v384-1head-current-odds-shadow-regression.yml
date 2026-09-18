@@ -1,0 +1,29 @@
+name: v384 1-head current odds shadow regression
+on:
+  push:
+    paths:
+      - 'run_1head_v351_live_current_odds_shadow.py'
+      - 'run_v384_1head_current_odds_shadow_regression.py'
+      - 'onehead_production_profile.py'
+      - '.github/workflows/v384-1head-current-odds-shadow-regression.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q requests beautifulsoup4
+      - run: python run_v384_1head_current_odds_shadow_regression.py
+      - name: Show result
+        if: always()
+        run: cat /tmp/v384-current-odds-shadow-regression/result.json 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: v384-current-odds-shadow-regression-${{ github.run_id }}
+          path: /tmp/v384-current-odds-shadow-regression/
+          retention-days: 30
