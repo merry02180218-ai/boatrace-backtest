@@ -421,3 +421,89 @@ Objective for this continuation:
 7. do not change production without explicit user approval and a successful reproducibility audit.
 
 Status: `HIGHER_VOLUME_FRONTIER_RESEARCH_START`
+
+
+## HIGHER-VOLUME CONTINUATION — 2026-09-18 AFTER
+User asked to increase race count beyond the 77R balanced candidate.
+
+### A. Re-rotation higher-volume frontier
+A finer Apr-Aug NON-PRISTINE search was added for 100R+ profiles.
+Primary search constraint:
+- final R >= 100
+- overall Apr-Aug retrospective ROI > current baseline 124.8622%
+- 5-month minimum ROI >=75%
+- maximize overall ROI, then volume
+
+Current exact replay candidate:
+- **110R**
+- retrospective ROI **141.32%**
+- 5-month floor **77.05%**
+- removed current BET 17R / added rescue 82R
+- rule:
+  - keep current unless BOTH opponent_mass < .400 and head_prob < .26
+  - add current PASS when head_prob >= .22 / opponent_mass >= .325 / composite_odds >= 2.5
+- monthly:
+  - Apr 19R / 318.96%
+  - May 23R / 77.22%
+  - Jun 20R / 150.15%
+  - Jul 31R / 109.57%
+  - Aug 17R / 77.05%
+- local neighborhood around this point contains multiple 100R+ / baseline-beating / floor>=75 cells, so this is not an isolated single cell.
+
+GitHub:
+- BEFORE handoff: `a56861adb51b014ed893d09fccffcbfeacd5f791`
+- audit script: `31d0c108c3c7ab8dffbb3dd27a27539d3d35dcee`
+- workflow: `0304f91c03c48a0b51be54e73ca5e5f5c9790c82`
+- trigger: `ede7968a321d4f8ea4b9442d11b4f56395295ee5`
+
+### B. Preferred interpretation of user's request: nested expansion from the 77R candidate
+Because the user asked for **more races**, not necessarily replacement of the 77R set, a second audit was added that NEVER removes a race from the 77R balanced candidate and only adds races outside it.
+
+Base 77R is preserved exactly:
+- current BET kept when opponent_mass >= .425
+- current PASS added when head_prob >= .22 / opponent_mass >= .375 / composite_odds >= 3.0
+
+#### Stable nested profile
+- preserve all 77R
+- add 16R -> **93R**
+- retrospective ROI **128.65%**
+- 5-month floor **79.83%**
+- extra gate: head_prob >= .20 / opponent_mass >= .375 / composite_odds >= 2.5
+- monthly:
+  - Apr 19? exact workflow artifact will be authoritative; local replay summary produced 93R profile with floor 79.825%.
+- This is the maximum-R nested profile found while retaining overall ROI above current 124.8622% and every month >=75%.
+
+#### High-volume nested profile
+- preserve all 77R
+- add 33R -> **110R**
+- retrospective ROI **137.24%**
+- 5-month floor **72.77%**
+- extra gate: head_prob >= .23 / opponent_mass >= .2625 / composite_odds >= 2.5
+- monthly exact local replay:
+  - Apr 18R / 282.78%
+  - May 24R / 74.00%
+  - Jun 19R / 158.05%
+  - Jul 31R / 126.37%
+  - Aug 18R / 72.77%
+- neighboring extra_mass .25/.2625/.275 around this gate gives very similar 110-111R behavior, so the point is not purely isolated.
+- This profile is more faithful to the user's request because **none of the 77R candidate races are removed**.
+
+GitHub:
+- nested audit script: `97147b60862eb63ed63b899b1abbda2006325305`
+- workflow: `2fcfa34ec028a5400976b97855beafa9264391b3`
+- trigger: `617887e3302d28c94866f666d987e53104e8c32e`
+
+### Current research preference
+- Stability-first expansion: **93R nested**
+- Volume-first expansion: **110R nested**
+- Re-rotation 110R has slightly higher ROI/floor than nested 110R but changes/removes some of the original 77R choices.
+- Given the user's stated preference to increase race count, the **nested family is preferred conceptually** unless later reproducibility evidence rejects it.
+
+### Guardrails / status
+- All ROI here is retrospective closing-odds diagnostic.
+- Formal prospective ROI: NOT_COMPUTABLE.
+- September 2026 outcomes/results remain **UNREAD**.
+- Production remains unchanged.
+- Both new Actions workflows have been trigger-committed; run IDs/artifacts must still be verified before any promotion.
+
+Status: `HIGHER_VOLUME_NESTED_AUDITS_TRIGGERED__AWAIT_RUN_VERIFICATION`
