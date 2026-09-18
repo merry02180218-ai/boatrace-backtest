@@ -1,0 +1,22 @@
+name: audit-4head-volume-preserving-rotation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/audit-4head-volume-preserving-rotation.txt'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scipy scikit-learn requests joblib beautifulsoup4 lxml
+      - run: mkdir -p /tmp/head4_volume_preserving_rotation && python audit_4head_volume_preserving_rotation.py | tee /tmp/head4_volume_preserving_rotation/run.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-volume-preserving-rotation
+          path: /tmp/head4_volume_preserving_rotation/
