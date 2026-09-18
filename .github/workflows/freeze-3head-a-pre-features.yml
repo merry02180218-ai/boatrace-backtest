@@ -1,4 +1,7 @@
 name: freeze-3head-a-pre-features
+concurrency:
+  group: freeze-3head-a-pre-features
+  cancel-in-progress: true
 on:
   workflow_dispatch:
   push:
