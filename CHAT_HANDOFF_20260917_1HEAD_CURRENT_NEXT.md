@@ -1004,3 +1004,58 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   4) loss少
 - ALL165で55%以上か、ROIがcurrent formal以上/近傍か、SUPPORT非悪化かを確認。
 - production/LIVEは研究完了まで変更しない。
+
+
+## AFTER — v367 joint 2>3 rerank + conditional 4th
+- Run `35337939828` / Job `105577022436` completed success / Artifact `10542749548` / head `2e5d8ae9504c333ce817055d76d482b2b29e385f`。
+- current formal baseline:
+  - 87/165 =52.73%
+  - stake49,500 / return63,700 / profit+14,200 / ROI128.687%。
+- DEV-only selected 2>3:
+  - basis SCORE
+  - score3>=.40
+  - score3-score2>=.20
+  - mass>=.40
+  - SECOND g2=.25 / THIRD g3=.25
+- DEV-only selected conditional 4th:
+  - THIRD rank2-rank3 gap<=.10
+  - extra pair prob>=.075
+  - dominant SECOND p2>=.35
+- frozen selected:
+  - DEV 76/137 = **55.47%**, 68R expansion, ROI **120.52%**
+  - SUPPORT 18/28 =64.29%, 11R expansion, ROI136.53%
+  - ALL 94/165 = **56.97%**, 79R expansion
+  - stake57,400 / return70,700 / profit+13,300 / ROI **123.171%**
+- formal比で最終hitは **+7 / loss0**。
+  - gains: 202605061107, 202605211711, 202606141601, 202606252104, 202606300106, 202608030402, 202608061001。
+- 月別: Feb/Mar/Apr +0、May +2、Jun +3、Jul +0、Aug +2。
+- sparse diagnostic after selected 2>3:
+  - gap<=.015のみ4点化: 24R expansion / **91/165=55.15%**
+  - stake51,900 / return67,860 / profit+15,960 / ROI **130.751%**
+  - ただしDEVでは73/137で、.005と同hitのためDEVだけなら.015は選ばれない。supportにより良く見えるので正式候補選定には使わない。
+- v366単独4thよりjointで +1 hit（94 vs93）かつROI +1.47pp（123.17 vs121.70）。
+- September outcomes unread / production unchanged / AUDIT_OK=true。
+
+## BEFORE — v368 joint hit-push robustness
+- 目的: v367 DEV-selected joint案を正式採用候補として近傍・LOMO監査する。
+- current formal87/165とv367 94/165をsentinel。
+- 2>3近傍:
+  - score3 min .35/.40/.45/.50
+  - score gap min .15/.20/.25
+  - mass .375/.40/.425
+  - g2 .125/.25/.375
+  - g3 .125/.25/.375
+- 4th近傍:
+  - gap max .075/.09/.10/.11/.125
+  - pair min .07/.075/.08
+  - p2 min .30/.35/.40
+- DEV-onlyで各近傍を評価、最大hit帯のplateau幅・loss/ROIを見る。
+- fixed v367 coreのDEV LOMO（各月holdout）を実施し、hit非悪化を確認。
+- SUPPORTは選定に使わず確認のみ。
+- 正式採用候補条件:
+  - current formal比 hit増
+  - formal hit loss=0または極小
+  - DEV LOMOで非悪化月多数
+  - SUPPORT非悪化
+  - ROI>=120%
+- current LIVE ticketsはv368完了まで変更しない。
