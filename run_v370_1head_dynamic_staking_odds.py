@@ -7,7 +7,7 @@ in six 100-yen units, with at least one unit on each of the three formal tickets
 DEV Feb-Jun selects parameters; Jul-Aug is untouched support.
 """
 from pathlib import Path
-import argparse, json, math, pickle
+import argparse, json, math, pickle, glob
 import numpy as np
 import pandas as pd
 
@@ -29,30 +29,44 @@ MIN_UNITS=1
 def formal_dist(r):
     return v365.formal_post_five6(r)
 
-def load_odds(code):
+def load_fallback_dir(path):
+    out={}
+    if not path:return out
+    for fn in sorted(glob.glob(str(Path(path)/'odds_*.csv'))):
+        try:df=pd.read_csv(fn,dtype={'race_code':str})
+        except Exception:continue
+        if 'race_code' not in df.columns or 'odds_json' not in df.columns:continue
+        for _,r in df.iterrows():
+            try:out[str(r.race_code).zfill(12)]={str(k):float(v) for k,v in json.loads(r.odds_json).items()}
+            except Exception:continue
+    return out
+
+def load_odds(code,fallback=None):
     code=str(code).zfill(12)
     y,m,d=code[:4],code[4:6],code[6:8]
     jcd=code[8:10];rno=int(code[10:12])
     p=Path(f'data/official_closing_odds3t/{y}/{m}/{d}.csv')
-    if not p.exists(): return None
-    df=pd.read_csv(p,dtype={'jcd':str})
-    if 'jcd' not in df.columns or 'rno' not in df.columns:return None
-    df['jcd']=df.jcd.astype(str).str.zfill(2)
-    q=df[(df.jcd==jcd)&(pd.to_numeric(df.rno,errors='coerce').eq(rno))]
-    if len(q)!=1:return None
-    row=q.iloc[0]
-    out={}
-    for s in range(1,7):
-      for t in range(1,7):
-       if s==t:continue
-       for u in range(1,7):
-        if u in (s,t):continue
-        k=f'{s}-{t}-{u}'
-        if k in row.index:
-          try:v=float(row[k])
-          except:continue
-          if math.isfinite(v) and v>0:out[k]=v
-    return out
+    if p.exists():
+        df=pd.read_csv(p,dtype={'jcd':str})
+        if 'jcd' in df.columns and 'rno' in df.columns:
+            df['jcd']=df.jcd.astype(str).str.zfill(2)
+            q=df[(df.jcd==jcd)&(pd.to_numeric(df.rno,errors='coerce').eq(rno))]
+            if len(q)==1:
+                row=q.iloc[0];out={}
+                for s in range(1,7):
+                  for t in range(1,7):
+                   if s==t:continue
+                   for u in range(1,7):
+                    if u in (s,t):continue
+                    k=f'{s}-{t}-{u}'
+                    if k in row.index:
+                      try:v=float(row[k])
+                      except:continue
+                      if math.isfinite(v) and v>0:out[k]=v
+                if out:return out,'repo_csv'
+    if fallback and code in fallback:
+        return fallback[code],'v340_shard'
+    return None,None
 
 def actual_payout100(code,combo,cache):
     if code in cache:return cache[code]
@@ -90,11 +104,11 @@ def alloc_edge(ps,ods,t):
     scores=[max(p*o-t,0.0) for p,o in zip(ps,ods)]
     return alloc_from_scores(scores)
 
-def make_rows(rows):
+def make_rows(rows,fallback=None):
     payout_cache={};rec=[];missing=[]
     for r in rows:
         code=str(r['race_code']).zfill(12);actual=str(r['actual_combo'])
-        od=load_odds(code)
+        od,source=load_odds(code,fallback)
         if od is None:
             missing.append(code);continue
         p2,pc=formal_dist(r)
@@ -107,7 +121,7 @@ def make_rows(rows):
         ods=[float(od[t]) for t in tickets]
         payout100=actual_payout100(code,actual,payout_cache)
         rec.append({
-          'race_code':code,'month':str(r['month']),'actual_combo':actual,
+          'race_code':code,'month':str(r['month']),'actual_combo':actual,'odds_source':source,
           'ticket1':tickets[0],'ticket2':tickets[1],'ticket3':tickets[2],
           'p1':ps[0],'p2':ps[1],'p3':ps[2],
           'odds1':ods[0],'odds2':ods[1],'odds3':ods[2],
@@ -158,10 +172,11 @@ def fixed_rank(w):
     return lambda r:list(w)
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--prepared',required=True,type=Path);args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--prepared',required=True,type=Path);ap.add_argument('--fallback-dir',type=Path,default=None);args=ap.parse_args()
     x=pickle.load(args.prepared.open('rb'));rows=x['rows']['LIVE165']
     if len(rows)!=165:raise RuntimeError(f'LIVE165 drift {len(rows)}')
-    z,missing=make_rows(rows)
+    fallback=load_fallback_dir(args.fallback_dir)
+    z,missing=make_rows(rows,fallback)
     if missing or len(z)!=165:
         raise RuntimeError(f'closing odds coverage drift covered={len(z)} missing={missing[:20]} total_missing={len(missing)}')
     if not set(z.month).issubset(set(DEV)|set(SUP)):raise RuntimeError('unexpected month')
@@ -262,8 +277,9 @@ def main():
     pd.DataFrame(allm['details']).to_csv(OUT/'chosen_allocations.csv',index=False)
 
     result={
-      'odds_source':'repo official closing trifecta odds3t',
+      'odds_source':'repo official closing odds3t with v340 official-closing shard fallback',
       'odds_coverage_R':len(z),'odds_missing_R':len(missing),
+      'odds_source_counts':{str(k):int(v) for k,v in z.odds_source.value_counts().to_dict().items()},
       'formal_hits':base_hits,
       'equal_600':{k:v for k,v in equal.items() if k!='details'},
       'equal_dev':{k:v for k,v in equal_dev.items() if k!='details'},
