@@ -242,3 +242,54 @@ Run `35302541048`
 - September 2026 outcomes remain `UNREAD`; v96 remains prohibited; production unchanged.
 
 Status: `PRODUCTION_S_OVERLAY_READY_TO_RUN`
+
+
+## AFTER — Run 35302541048 market-regime / structure-shift attribution
+- Workflow Run `35302541048`: **SUCCESS**
+- Job `105467993604`: **SUCCESS**
+- Artifact `10531205819`: `head4-market-regime-structure-shift`
+- Run head SHA: `ca953f3e2191fe8e79690f9b168a7a8d6f40ca70`
+- Official marker: `4号艇_市場構造シフト分解_OK`
+- Reproduction marker: `HEAD4_FROZEN_INDEPENDENT_REPLAY_OK ... 164`
+- Official artifact exactly matches the prior equivalent reconstruction used while the run was still executing.
+
+### Core result
+- Apr-Jun comp>=7: 22R / head4 8 (36.36%) / ticket hits 5 (22.73%) / retrospective ROI 255.40%.
+- Jul-Aug comp>=7: 23R / head4 3 (13.04%) / ticket hits 0 / retrospective ROI 0%.
+- July comp>=7: 16R / head4 3 / hits 0 / ROI 0%.
+- August comp>=7: 7R / head4 0 / hits 0 / ROI 0%.
+- Therefore the high-composite collapse is persistent across both July and August, not a July-only concentration.
+
+### Observable shift
+- high-comp mean head probability: Apr-Jun 0.19236 -> Jul-Aug 0.20692. Head probability did **not** deteriorate.
+- high-comp mean opponent mass: Apr-Jun 0.43042 -> Jul-Aug 0.37496. This is the largest clear observable structural shift among the monitored variables.
+- high-comp mean original-exhibition advantage: Apr-Jun 0.20758 -> Jul-Aug 0.31594. This does not explain the collapse.
+- high-comp mean composite odds: Apr-Jun 13.1086 -> Jul-Aug 10.4323.
+- ticket count is nearly unchanged: 4.73 -> 4.83.
+- correlations on 164R: head_prob vs comp `-0.4424`; opponent_mass vs ticket_count `+0.6227`; opponent_mass vs comp only `-0.0955`.
+
+### Composite-band / monotonicity result
+- Every Jul-Aug band at comp>=7 had zero ticket hits.
+- But simple inversion to LOW comp is not monthly robust:
+  - Jul comp<7: 31R / 11 hits / ROI 158.43%.
+  - Aug comp<7: 24R / 5 hits / ROI 76.31%.
+- Across LOW cuts 6.5-8.5, Jul-Aug pooled ROI can exceed 100 for a range, but August remains below 100 throughout the useful neighborhood.
+- Jul-Aug HIGH side never reaches ROI 100 in the monotonic sweep; best HIGH-side pooled point is comp>=3.0 at ROI 83.56%.
+- Conclusion: there is strong retrospective evidence that the market filter's sign changed in Jul-Aug, but **no robust single composite-odds inversion/cut is justified**.
+
+### Interpretation / decision
+- The evidence is consistent with a downstream opponent/ticket-coverage regime shift, especially lower `opponent_mass`, rather than deterioration of 4-head probability.
+- This is diagnostic evidence, not proof of a stable future regime gate. Sample sizes are small (22 vs 23 high-comp races).
+- No production threshold or market gate is changed from this run.
+- Formal prospective ROI remains `NOT_COMPUTABLE`; closing odds remain retrospective diagnostic only.
+- September 2026 outcomes remain `UNREAD`; v96 remains prohibited.
+
+### Continuation already prepared
+- Exact frozen production S-score overlay on the 164R **research-candidate** population has been implemented and trigger commit created:
+  - script commit `9102c4c543b5fb031bb981e2f20e9ca923dc4751`
+  - workflow commit `5ae95d325844b3a0cc0221c04185bb5a799f0194`
+  - BEFORE handoff commit `93b39ca2c0a082b38fa039530b41b4359c42172c`
+  - trigger commit `2729eb0f50eb7bd8311e83d43acca8e3f68641b8`
+- Goal of next run: determine whether Jul-Aug comp>=7 research races already fail frozen production `PRE>=.28 / POST>=.25 / ENV_ENTRY>=.224790` before results. Thresholds remain fixed; this is overlay/diagnostic only.
+
+Status: `MARKET_REGIME_COMPLETE__PRODUCTION_S_OVERLAY_TRIGGERED`
