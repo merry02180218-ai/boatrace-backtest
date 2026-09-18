@@ -68,3 +68,27 @@
 - Initial Wave11 Run **35316102805** / Job **105507965184** failed before any February transfer result was produced.
 - Cause: candidate universe was generated from globally available base signals, while some rolling window/mode caches legitimately lacked an interaction column when one member signal had insufficient finite trailing support. Evaluator raised `KeyError` instead of treating that candidate as unavailable for that cache.
 - Repair is implementation-only: fail-closed skip candidates whose exact interaction column is absent in that window/mode cache. Discovery rules, support floors, formulas and February transfer protocol remain unchanged. A fresh run from current main is required; do not rerun the stale failed SHA.
+
+
+## AFTER WORK — Broad50 Wave11 prior-month automated interaction transfer (Run 35316272342, 2026-09-18)
+- Repaired fresh SUCCESS: Run **35316272342** / Job **105508476110** / Artifact **10535127216**; head SHA **690b2d0cc12cf0b4fca818566dfa0ef985fab0a2**. Initial Run 35316102805 failed on a rolling-cache missing interaction column and produced no result; repair only added fail-closed skipping for unavailable columns.
+- Discovery used December history + January labels only. February was a one-shot transfer and did not choose interaction formulas. March unopened; September UNREAD; production v288 unchanged.
+- Clean source: Dec 4,647R / Jan 4,963R / Feb 3,970R; previous-session date violations 0; canonical-vs-realtime Feb winners 3970/3970 = 100%.
+- Automated base set: 19 oriented PRE signals -> **171 pair interactions**. January pair discovery could reach worst-half 50% at >=20/30R per half; top signal vocabulary then generated 56 triple interactions.
+- Top prior-month interaction vocabulary: vs1 national2, attack-player-inner, b1 pressure, vs2 national2, attack-start-inner, vs2 ST, vs1 ST, b2 wall-break.
+- Frozen from January before February: **258 candidate settings / 33 unique interactions**.
+- February transfer support frontier:
+  - >=20R/half: **H1 9/22=40.91%, H2 12/30=40.00%, worst-half 40.00%, combined 21/52=40.38%**. This is **+0.87pt** worst-half over Wave9's 39.13%. Winning formula: positive-gated window21 / R1-10 / q=.95, triple `sig_vs1_全国2連対率 × sig_attack_player_inner × sig_b1_pressure`.
+  - >=30R/half: worst-half **31.82%** (below Wave9 37.50%).
+  - >=50R/half: **28.57%** (below 34.41%).
+  - >=75R/half: **25.00%** (below 34.41%).
+  - >=100R/half: **24.00%** (below 32.35%).
+- Interpretation: automated prior-month interaction discovery finds a real-looking **narrow high-precision pocket around pressure on boat1**, and is the first cross-month interaction test to edge above the Wave9 20R/half ceiling. It does not yet scale in volume; larger-support transfer deteriorates sharply.
+
+## BEFORE WORK — Broad50 Wave12 January-frozen interaction ensemble / union expansion (2026-09-18)
+- Goal: test whether the narrow ~40% cross-month interaction pocket can be expanded in volume without selecting ensemble rules from February.
+- Reconstruct the exact Wave11 January discovery/freeze procedure. For each unique frozen interaction, choose its representative setting using January worst-half precision/support only.
+- Build January-only ensemble candidates over the top representative interactions: top-N sets (3/5/8/12/20/all available), vote thresholds including union (k=1), small-k consensus, and fractional-majority gates.
+- Select/freeze ensemble definitions using January only, stratified by useful support. February does **not** select N, k, members, thresholds, windows or formula settings.
+- Replay the frozen ensembles once on February and report worst-half precision at >=20/30/50/75/100 races per half. Primary comparison is Wave11 40.0% at >=20R/half and Wave9 volume ceilings.
+- March remains unopened; September outcomes UNREAD; production v288 unchanged.
