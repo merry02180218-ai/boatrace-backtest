@@ -1,0 +1,71 @@
+name: benchmark-4head-120r-true-parent-complete
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/benchmark-4head-120r-true-parent-complete.txt'
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy requests beautifulsoup4 lxml
+      - name: Download corrected PRE and daily state
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p preseed stateseed
+          gh run download 35317588703 -n head4-120r-pre-live-trial-20260918 -D preseed
+          gh run download 35326011735 -n head4-120r-live-deadline-benchmark -D stateseed
+      - name: Locate inputs
+        run: |
+          CARD="$(find preseed -type f -path '*/current_input/v291/20260918/race_cards.csv' | head -1)"
+          WAKU="$(find preseed -type f -path '*/current_input/v291/20260918/waku10.csv' | head -1)"
+          PRE="$(find preseed -type f -path '*/live_outputs/head4_120r_pre/20260918/pre_all.csv' | head -1)"
+          STATE="$(find stateseed -type f -name 'head4_daily_state.json' | head -1)"
+          test -n "$CARD" && test -n "$WAKU" && test -n "$PRE" && test -n "$STATE"
+          echo "CARD=$CARD" >> "$GITHUB_ENV"
+          echo "WAKU=$WAKU" >> "$GITHUB_ENV"
+          echo "PRE=$PRE" >> "$GITHUB_ENV"
+          echo "STATE=$STATE" >> "$GITHUB_ENV"
+      - name: True-parent complete-data benchmark Gamagori 4R
+        run: |
+          /usr/bin/time -f 'TRUE_PARENT_BENCH_WALL_SECONDS=%e' python run_4head_120r_lastminute_fast.py \
+            --date 20260918 --jcd 7 --race 4 --deadline-jst 23:59 \
+            --race-cards "$CARD" --waku10 "$WAKU" --pre-all "$PRE" --daily-state "$STATE" \
+            --performance-benchmark --out /tmp/true_parent_complete.json 2>&1 | tee /tmp/true_parent_complete.log
+          grep -q 'HEAD4_120R_FAST_LASTMINUTE_OK' /tmp/true_parent_complete.log
+      - name: Contract check
+        run: |
+          python - <<'PY'
+          import json
+          z=json.load(open('/tmp/true_parent_complete.json',encoding='utf-8'))
+          assert z.get('monitoring_parent') is True, z
+          assert z.get('benchmark_unmonitored') is False, z
+          assert z.get('decision') == 'PERFORMANCE_BENCHMARK_ONLY', z
+          assert z.get('target_race_result_used') is False, z
+          assert z.get('payout_used') is False, z
+          assert z.get('tickets') and 4 <= len(z['tickets']) <= 6, z
+          assert z.get('opponent_mass') is not None, z
+          assert z.get('composite_odds') is not None, z
+          assert z.get('selected') in (True,False), z
+          print('TRUE_PARENT_COMPLETE_CONTRACT_OK', z['race_code'], 'selected=', z['selected'])
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-120r-true-parent-complete
+          path: |
+            /tmp/true_parent_complete.json
+            /tmp/true_parent_complete.log
+          if-no-files-found: warn
