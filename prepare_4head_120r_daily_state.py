@@ -13,12 +13,11 @@ State contains:
 This replaces per-race history replay in the last-minute path.
 """
 from __future__ import annotations
-import argparse,json,time
+import argparse,json,time,csv
 from collections import defaultdict,deque
 from datetime import date,timedelta
 from pathlib import Path
 from statistics import mean
-from backtest import rows
 
 START=date(2025,10,1)
 BOATS=range(1,7)
@@ -34,8 +33,14 @@ def _ff(x):
 def blank():
     return {'n':0,'w':0,'p2':0,'nf':defaultdict(int),'wf':defaultdict(int),'p2f':defaultdict(int),'r':deque(maxlen=30)}
 
+def local_rows(root, rel):
+    p=Path(root)/rel
+    if not p.is_file(): return []
+    with p.open(encoding='utf-8-sig',newline='') as fh:
+        return list(csv.DictReader(fh))
+
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--target-date',required=True);ap.add_argument('--out',required=True);a=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--target-date',required=True);ap.add_argument('--out',required=True);ap.add_argument('--data-root',required=True);a=ap.parse_args()
     target=date.fromisoformat(a.target_date)
     if target<=START:raise SystemExit('target_date too early')
     t0=time.perf_counter()
@@ -44,9 +49,9 @@ def main():
     d=START
     while d<target:
         ymd=d.strftime('%Y/%m/%d')
-        cards=rows(f'data/programs/race_cards/{ymd}.csv')
-        results={str(r.get('レースコード','')).zfill(12):r for r in rows(f'data/results/realtime/{ymd}.csv')}
-        strows=rows(f'data/previews/stt/{ymd}.csv')
+        cards=local_rows(a.data_root,f'data/programs/race_cards/{ymd}.csv')
+        results={str(r.get('レースコード','')).zfill(12):r for r in local_rows(a.data_root,f'data/results/realtime/{ymd}.csv')}
+        strows=local_rows(a.data_root,f'data/previews/stt/{ymd}.csv')
         if cards:
             days+=1
             if results: result_days+=1
