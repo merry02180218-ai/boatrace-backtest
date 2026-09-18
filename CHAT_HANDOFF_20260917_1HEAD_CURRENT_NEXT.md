@@ -1128,3 +1128,13 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - ただしユーザーの明示許可前なのでproduction/LIVEへはまだ未昇格。
 - September outcomes unread / production unchanged / AUDIT_OK=true。
 - 次の再開地点: ユーザーが正式採用を指示したら、wall3 -> 5>6 -> 2>3 hit-push -> conditional 4th の順でLIVE finalizerへ昇格し、pre-hit-push ticketsを監査用に保持して回帰。
+
+
+## USER DECISION — hit-rate pushは正式採用せず現行維持
+- ユーザー判断: 「ROI下がるならこのままでいいかな」。
+- 正式LIVEは **現行 wall3 + 5>6 ST** を維持:
+  - 87/165 = 52.73%
+  - 3点買いROI **128.687%**
+- v367/v368 joint hit-push（94/165=56.97%, ROI123.17%）は研究結果として保存するが、正式LIVEへは昇格しない。
+- 条件付き4点目も正式採用しない。
+- 今後は「的中率だけ上げるためにROIを落とす」変更は優先しない。ROIを維持/改善しつつ的中率も上がる案のみ再検討対象。
