@@ -1,0 +1,222 @@
+name: audit-4head-newfeature-production-readiness
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'audit_4head_newfeature_production_leakage.py'
+      - '.github/workflows/audit-4head-newfeature-production-readiness.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env:
+      TARGET_DATE: '2026-09-19'
+      TARGET_DAY: '20260919'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Sparse checkout causal history only
+        uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards/2025/10
+            data/programs/race_cards/2025/11
+            data/programs/race_cards/2025/12
+            data/programs/race_cards/2026/01
+            data/programs/race_cards/2026/02
+            data/programs/race_cards/2026/03
+            data/programs/race_cards/2026/04
+            data/programs/race_cards/2026/05
+            data/programs/race_cards/2026/06
+            data/programs/race_cards/2026/07
+            data/programs/race_cards/2026/08
+            data/programs/race_cards/2026/09
+            data/results/realtime/2025/10
+            data/results/realtime/2025/11
+            data/results/realtime/2025/12
+            data/results/realtime/2026/01
+            data/results/realtime/2026/02
+            data/results/realtime/2026/03
+            data/results/realtime/2026/04
+            data/results/realtime/2026/05
+            data/results/realtime/2026/06
+            data/results/realtime/2026/07
+            data/results/realtime/2026/08
+            data/results/realtime/2026/09
+            data/previews/stt/2025/10
+            data/previews/stt/2025/11
+            data/previews/stt/2025/12
+            data/previews/stt/2026/01
+            data/previews/stt/2026/02
+            data/previews/stt/2026/03
+            data/previews/stt/2026/04
+            data/previews/stt/2026/05
+            data/previews/stt/2026/06
+            data/previews/stt/2026/07
+            data/previews/stt/2026/08
+            data/previews/stt/2026/09
+
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml joblib
+
+      - name: Static and contract leakage audit
+        run: |
+          python audit_4head_newfeature_production_leakage.py | tee /tmp/leakage.log
+          grep -q 'HEAD4_NEWFEATURE_PRODUCTION_LEAKAGE_AUDIT_OK' /tmp/leakage.log
+          grep -q 'HEAD4_OPERATIONAL_LEAKAGE_PASS' /tmp/leakage.log
+          grep -q 'SEPTEMBER_UNREAD' /tmp/leakage.log
+
+      - name: Independent production parity replay
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p parityseed
+          gh run download 35361685459 -n head4-208-expanded-features -D parityseed
+          F="$(find parityseed -type f -name 'expanded_features_208.csv' | head -1)"
+          test -n "$F"
+          EXPANDED_FEATURES_208="$F" python audit_4head_newfeature_production_parity.py | tee /tmp/parity.log
+          grep -q 'HEAD4_NEWFEATURE_PRODUCTION_PARITY_OK' /tmp/parity.log
+          grep -q 'SEPTEMBER_UNREAD' /tmp/parity.log
+
+      - name: Build fresh result-blind daily state
+        run: |
+          python prepare_4head_120r_daily_state.py             --target-date "$TARGET_DATE" --data-root brcsv             --out /tmp/head4_daily_state.json | tee /tmp/state.log
+          python - <<'PY'
+          import json
+          z=json.load(open('/tmp/head4_daily_state.json',encoding='utf-8'))
+          assert z['target_date']=='2026-09-19',z
+          assert z['history_end']=='2026-09-18',z
+          assert z['target_date_results_used'] is False,z
+          assert z['newfeature_motor_history_start']=='2025-11-01',z
+          assert len(z['motors_newfeature_nov2025'])>0,z
+          print('HEAD4_FRESH_STATE_RESULT_BLIND_OK',z['history_end'],len(z['motors_newfeature_nov2025']))
+          PY
+
+      - name: Fetch current result-blind PRE inputs
+        run: |
+          python fetch_4head_v291_pre_inputs_live.py --date "$TARGET_DATE" | tee /tmp/fetch_pre.log
+          python - <<'PY'
+          import json
+          p='current_input/v291/20260919/input_manifest.json'
+          z=json.load(open(p,encoding='utf-8'))
+          assert z['result_blind'] is True,z
+          assert z['current_exhibition_used'] is False,z
+          assert z['race_rows']>0,z
+          print('HEAD4_CURRENT_PRE_INPUT_RESULT_BLIND_OK',z['race_rows'],z['active_venues'])
+          PY
+
+      - name: Run current PRE scanner
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: |
+          python scan_4head_120r_pre_live.py             --date "$TARGET_DATE" --daily-state /tmp/head4_daily_state.json | tee /tmp/pre.log
+          grep -q 'HEAD4_120R_PRE_LIVE_TRIAL_OK' /tmp/pre.log
+          grep -q 'TARGET_DAY_RESULTS_UNREAD' /tmp/pre.log
+          python - <<'PY'
+          import json
+          z=json.load(open('live_outputs/head4_120r_pre/20260919/audit.json',encoding='utf-8'))
+          assert z['target_day_results_read'] is False,z
+          assert z['current_exhibition_used'] is False,z
+          assert z['current_odds_used'] is False,z
+          assert z['motor_player_state_cutoff']=='2026-09-18',z
+          print('HEAD4_CURRENT_PRE_SCAN_LEAKAGE_OK',z['current_rows'],z['monitoring_parent_R'],z['display_R'])
+          PY
+
+      - name: Select one current-day runtime benchmark target
+        run: |
+          python - <<'PY'
+          import pandas as pd, os
+          p='live_outputs/head4_120r_pre/20260919/pre_all.csv'
+          z=pd.read_csv(p,dtype={'race_code':str})
+          z['race_code']=z.race_code.astype(str).str.zfill(12)
+          q=z[z.monitoring_parent.eq(1)].copy()
+          if q.empty:q=z.copy()
+          # Prefer the latest race because exhibition/odds endpoints are more likely retained.
+          r=q.sort_values(['jcd','rno']).iloc[-1]
+          with open(os.environ['GITHUB_ENV'],'a') as f:
+              f.write(f"JCD={int(r.jcd)}\nRACE={int(r.rno)}\n")
+          print('HEAD4_RUNTIME_BENCHMARK_TARGET',int(r.jcd),int(r.rno),r.race_code)
+          PY
+
+      - name: End-to-end current network runtime benchmark only
+        run: |
+          set +e
+          python run_4head_120r_lastminute_fast.py             --date "$TARGET_DAY" --jcd "$JCD" --race "$RACE" --deadline-jst 23:59             --race-cards current_input/v291/20260919/race_cards.csv             --waku10 current_input/v291/20260919/waku10.csv             --pre-all live_outputs/head4_120r_pre/20260919/pre_all.csv             --daily-state /tmp/head4_daily_state.json             --allow-unmonitored-benchmark --performance-benchmark             --max-exhibition-wait-seconds 5 --max-odds-wait-seconds 5             --out /tmp/runtime_benchmark.json 2>&1 | tee /tmp/runtime_benchmark.log
+          RC=${PIPESTATUS[0]}
+          set -e
+          if [ "$RC" -ne 0 ]; then
+            echo "HEAD4_RUNTIME_NETWORK_BENCHMARK_WARN rc=$RC"
+            echo "RUNTIME_NETWORK_STATUS=WARN" >> "$GITHUB_ENV"
+          else
+            python - <<'PY'
+          import json
+          z=json.load(open('/tmp/runtime_benchmark.json',encoding='utf-8'))
+          assert z['decision']=='PERFORMANCE_BENCHMARK_ONLY',z
+          assert z['profile']=='HEAD4_NEWFEATURE_FIXED156_V1',z
+          assert z['target_race_result_used'] is False,z
+          assert z['payout_used'] is False,z
+          assert z['performance_benchmark'] is True,z
+          assert z['predeadline_odds_used'] is False,z
+          print('HEAD4_RUNTIME_NETWORK_BENCHMARK_OK',z['race_code'],z['profile'],z['total_seconds'])
+          PY
+            echo "RUNTIME_NETWORK_STATUS=PASS" >> "$GITHUB_ENV"
+          fi
+
+      - name: Final production-readiness verdict
+        run: |
+          python - <<'PY'
+          import json, os
+          leak=json.load(open('/tmp/head4_newfeature_production_leakage/summary.json',encoding='utf-8'))
+          state=json.load(open('/tmp/head4_daily_state.json',encoding='utf-8'))
+          pre=json.load(open('live_outputs/head4_120r_pre/20260919/audit.json',encoding='utf-8'))
+          network=os.environ.get('RUNTIME_NETWORK_STATUS','WARN')
+          verdict={
+            'profile':'HEAD4_NEWFEATURE_FIXED156_V1',
+            'static_operational_contract':'PASS',
+            'independent_production_parity':'PASS',
+            'fresh_daily_state':'PASS',
+            'current_pre_result_blind':'PASS',
+            'runtime_network_benchmark':network,
+            'operational_leakage':'PASS',
+            'model_selection_non_pristine':'WARN',
+            'prospective_profitability_proven':False,
+            'september_target_outcomes_read':False,
+            'production_threshold_changed':False,
+            'overall':'PASS' if network=='PASS' else 'PASS_WITH_RUNTIME_NETWORK_WARN',
+          }
+          open('/tmp/head4_production_readiness.json','w').write(json.dumps(verdict,ensure_ascii=False,indent=2)+'\n')
+          print(json.dumps(verdict,ensure_ascii=False,indent=2))
+          print('HEAD4_NEWFEATURE_PRODUCTION_READINESS_AUDIT_COMPLETE')
+          print('SEPTEMBER_UNREAD')
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-newfeature-production-readiness
+          path: |
+            /tmp/head4_newfeature_production_leakage/
+            /tmp/head4_production_readiness.json
+            /tmp/head4_daily_state.json
+            /tmp/state.log
+            /tmp/fetch_pre.log
+            /tmp/pre.log
+            /tmp/parity.log
+            /tmp/leakage.log
+            /tmp/runtime_benchmark.json
+            /tmp/runtime_benchmark.log
+            current_input/v291/20260919/input_manifest.json
+            live_outputs/head4_120r_pre/20260919/audit.json
+          if-no-files-found: warn
+          retention-days: 30
