@@ -180,3 +180,29 @@
 - Motor state remains strict prior-day snapshots; same-day race results must not enter motor features. March exhibition sources are current-race pre-settlement only.
 - Required report: March total volume/head rate, H1/H2 rates and venue support for A/B/control; venue concentration and leave-one-venue-out range for A/B; source/result cross-check and causal audit.
 - March results are considered opened once this run executes. After that, no threshold adjustment may be described as holdout-valid. September-2026 outcomes remain UNREAD and production v288 remains unchanged.
+
+
+## AFTER WORK — Wave22 frozen March one-shot diagnostic (Run 35361010238, 2026-09-19)
+- SUCCESS: Run **35361010238** / Job **105651984470** / Artifact **10554880837**; head SHA **6648edc4da532009669349bc380cceb20454c11e**.
+- Implementation commits: BEFORE handoff **1716df623ad446d33b0393c1ea82d5e4bd407618**; frozen diagnostic script **544416d9860b8e35480b6751a8a3b241c3fcebee**; workflow **6648edc4da532009669349bc380cceb20454c11e**.
+- The diagnostic evaluated exactly the three Wave21-predeclared rules. No March threshold search, rescue tuning, or new feature-family search was performed. PRE feature names were frozen from Oct-Feb; motor state remained strict prior-day; same-day motor results unused. Sep-2026 outcomes remain UNREAD; production v288 unchanged.
+- March source audit was clean: 31/31 days, 4,482 scored races, canonical vs realtime winner agreement **4482/4482 = 100%**. Post builder covered 274 motor days / 182 post days / 132,205 motor events / 26,376 post rows.
+- **A precision candidate** (R1-12 / PRE q=.925 / motor EWMA-rank edge vs2 >=+.20 / exhibition rank3=1):
+  - March **52R / 21 heads = 40.38%**.
+  - H1 **30R/12 = 40.00%**; H2 **22R/9 = 40.91%**.
+  - 21 venues; largest venue share **11.54%**.
+  - Leave-one-venue-out combined range **37.50%-43.48%**.
+  - Frozen pre-March Nov-Dec-Jan reference was 157R/65=41.40%. Combining only clean selection period + fresh March gives **209R / 86 = 41.15%** (Feb excluded because non-pristine).
+- **B stability candidate** (R1-8 / PRE q=.925 / motor inner top2 gap >=+.05 / exhibition rank<=2):
+  - March **61R / 25 heads = 40.98%**.
+  - H1 **34R/13 = 38.24%**; H2 **27R/12 = 44.44%**.
+  - 20 venues; largest venue share **11.48%**.
+  - Leave-one-venue-out combined range **38.89%-43.86%**.
+  - Frozen pre-March Nov-Dec-Jan reference was 150R/59=39.33%. Combining selection period + fresh March gives **211R / 84 = 39.81%**.
+- **Control PRE-only** (R1-8 / q=.99):
+  - March **64R / 24 heads = 37.50%**.
+  - H1 42R/16=38.10%; H2 22R/8=36.36%.
+  - Selection period + fresh March: **192R / 68 = 35.42%**.
+- Interpretation: the MOTOR_EX signal survived the first truly frozen March diagnostic. A stayed almost exactly on its pre-March ~41% level and had unusually balanced March halves; B also cleared 40% and retained healthy venue robustness. Both beat the PRE-only control in March, but March sample sizes are only 52/61 races, so this is supportive validation rather than evidence of a stable 50% head rate.
+- **March is now OPENED** and may never be used for holdout-valid retuning. Do not change A/B thresholds and then cite March as independent evidence.
+- Research status after Wave22: A is the cleaner precision candidate; B is a viable broader stability alternative. Neither is promoted to production yet. The next valid confirmation, if an untouched later month is available, must reuse these exact frozen definitions without modification.
