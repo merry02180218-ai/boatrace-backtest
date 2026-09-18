@@ -194,3 +194,18 @@ Changes in research/run_3head_funsite_broad50.py:
 - The malformed literal `\\n` diagnostic block was converted to real source lines, so `diagnostic_topn` for N=10/20/30/50/75/100/150/200 can be emitted.
 - production v288 unchanged; September outcomes remain UNREAD; July/August remain NON-PRISTINE.
 - Verification is NOT complete until a fresh `research-3head-funsite-broad50` run uses commit 54a1219d... or a later main containing it. Do not rerun old Run 35302745294.
+
+
+## AFTER WORK — Broad50 repaired fresh run verified (2026-09-18)
+- SUCCESS: Run **35303255628** / Job **105470148639** / Artifact **10531015248**.
+- Run head SHA **3661e125e25a89d91238eefd700992eb5bdf3799**; includes the Broad50 repair from 54a1219dc0d912d13a04de53fcb22c8ca080010a.
+- Data: joined Feb **3,970** / Mar **4,482**; **196** PRE-only features; current-meet unused; September outcomes UNREAD.
+- Feb TopN diagnostics show no stable ~50% region across both Feb validation blocks:
+  - logit N10: v1 30% / v2 40%; N100: 21% / 25%.
+  - extra N10: 0% / 40%; N100: 25% / 23%.
+  - rf N10: 0% / 50%; N20: 10% / 40%; N100: 23% / 25%.
+  - hist N10: 10% / 30%; N100: 18% / 24%.
+- Only discovered prefix candidate was logit target .40: v1 7R / 42.86%, v2 5R / 40.0%; it fails the >=10R stability support gate.
+- Frozen candidates: 0.50=null, 0.45=null, 0.40=null; therefore no March candidate was opened/evaluated in this wave.
+- Conclusion: these four generic families (logit / ExtraTrees / RF / HistGB + existing ensemble discovery) do not provide a Feb-stable 50% useful-volume region. RF v2 10R=50% is a tiny-N one-block artifact because the paired v1 block is 0/10.
+- Do NOT stop research. Next wave should change representation/selection family: rank-based features, explicit 3-vs-1/2/4 attack archetypes, Feb-only model intersections/consensus/disagreement gates, and rule/tree searches with minimum support and two-block stability. Production v288 unchanged; September outcomes UNREAD.
