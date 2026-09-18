@@ -1,0 +1,75 @@
+{
+  "id": "HEAD4_RESEARCH_NESTED_LINEAR_120R_20260918",
+  "status": "RESEARCH_ONLY_NON_PRISTINE",
+  "population": "fixed_164R_headrate_research_candidate",
+  "selection_period": "2026-04-01..2026-08-31",
+  "base77": {
+    "preserve_all": true,
+    "rule": "(current_bet && opponent_mass>=0.425) || (!current_bet && head_prob>=0.22 && opponent_mass>=0.375 && composite_odds>=3.0)"
+  },
+  "extra_gate": {
+    "composite_odds_min": 2.5,
+    "score_formula": "head_prob + 1.50 * opponent_mass",
+    "score_min": 0.82
+  },
+  "retrospective_metrics": {
+    "races": 120,
+    "added_beyond_base77": 43,
+    "roi_pct": 127.72166666666666,
+    "apr_jun": {
+      "races": 71,
+      "roi_pct": 134.70281690140845
+    },
+    "jul_aug": {
+      "races": 49,
+      "roi_pct": 117.60612244897959
+    },
+    "monthly": {
+      "2026-04": {
+        "races": 22,
+        "roi_pct": 158.13636363636363
+      },
+      "2026-05": {
+        "races": 28,
+        "roi_pct": 133.94642857142858
+      },
+      "2026-06": {
+        "races": 21,
+        "roi_pct": 111.16190476190476
+      },
+      "2026-07": {
+        "races": 31,
+        "roi_pct": 126.81290322580645
+      },
+      "2026-08": {
+        "races": 18,
+        "roi_pct": 101.75
+      }
+    },
+    "monthly_floor_roi_pct": 101.75
+  },
+  "comparison_profiles": {
+    "volume127": {
+      "races": 127,
+      "roi_pct": 128.32125984251968,
+      "monthly_floor_roi_pct": 96.39473684210526
+    },
+    "aggressive130": {
+      "races": 130,
+      "roi_pct": 125.36,
+      "monthly_floor_roi_pct": 91.575
+    }
+  },
+  "robustness": {
+    "local_grid_cells": 107,
+    "cells_r115_125_roi_above_current_floor95": 55,
+    "cells_r115_125_roi_above_current_all_months_ge100": 43,
+    "exact_same_120R_selection_nearby_parameterizations": 6
+  },
+  "guardrails": {
+    "september_2026_results": "UNREAD",
+    "formal_prospective_roi": "NOT_COMPUTABLE",
+    "production_changed": false,
+    "v96_prohibited": true
+  }
+}
