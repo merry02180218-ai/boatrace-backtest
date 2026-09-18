@@ -9,6 +9,7 @@ Jul-Aug SUPPORT is evaluation only.
 """
 from pathlib import Path
 import argparse, json, math, pickle
+import requests
 import numpy as np
 import pandas as pd
 
@@ -16,6 +17,7 @@ import onehead_production_profile as prod
 import run_v299_1head_trifecta3_policy_search as v299
 import run_v365_1head_exact3_hit_push as v365
 import run_v369_1head_ticket_rank_staking as v369
+import run_v340_1head_adaptive_odds_dutch as v340
 
 OUT=Path('/tmp/v370-odds-dynamic-staking');OUT.mkdir(parents=True,exist_ok=True)
 DEV=('2026-02','2026-03','2026-04','2026-05','2026-06')
@@ -31,11 +33,12 @@ BOOST_ODDS_CAP=(0.0,20.0,40.0,80.0)  # 0 means no cap
 def load_daily_odds(codes):
     bydate={}
     out={}
+    source={}
     for code in sorted(set(str(x).zfill(12) for x in codes)):
         y,m,d=code[:4],code[4:6],code[6:8]
         path=Path(f'data/official_closing_odds3t/{y}/{m}/{d}.csv')
         if not path.exists():
-            out[code]=None;continue
+            out[code]=None;source[code]='repo_missing';continue
         key=str(path)
         if key not in bydate:
             df=pd.read_csv(path,dtype={'jcd':str,'rno':int})
@@ -44,7 +47,7 @@ def load_daily_odds(codes):
         df=bydate[key];jcd=code[8:10];rno=int(code[10:12])
         q=df[(df.jcd.eq(jcd))&(df.rno.eq(rno))]
         if len(q)!=1:
-            out[code]=None;continue
+            out[code]=None;source[code]='repo_row_missing';continue
         r=q.iloc[0]
         om={}
         for s in (2,3,4,5,6):
@@ -57,7 +60,19 @@ def load_daily_odds(codes):
                         if v>0:om[k]=v
                     except: pass
         out[code]=om if len(om)==20 else None
-    return out
+        source[code]='repo_csv' if out[code] is not None else 'repo_incomplete'
+    # Fallback only for missing historical closing odds; same official source as v340.
+    sess=requests.Session();sess.headers.update({'User-Agent':'Mozilla/5.0 v370 research audit'})
+    for code in sorted(out):
+        if out[code] is not None:continue
+        om,url=v340.fetch_odds(code,sess)
+        if om is not None:
+            req=[f'1-{s}-{t}' for s in (2,3,4,5,6) for t in (2,3,4,5,6) if s!=t]
+            if all(x in om for x in req):
+                out[code]={x:float(om[x]) for x in req};source[code]='official_web_fallback'
+            else:source[code]='official_web_incomplete'
+        else:source[code]='official_web_failed'
+    return out,source
 
 def formal_record(r,payout100,odmap):
     code=str(r['race_code']).zfill(12);actual=str(r['actual_combo'])
@@ -146,7 +161,7 @@ def main():
     x=pickle.load(args.prepared.open('rb'));rows=x['rows']['LIVE165']
     if len(rows)!=165:raise RuntimeError(f'LIVE165 drift {len(rows)}')
     v369.install_payout_cache(rows);payouts=v369.payouts_for(rows)
-    codes=[str(r['race_code']).zfill(12) for r in rows];odds=load_daily_odds(codes)
+    codes=[str(r['race_code']).zfill(12) for r in rows];odds,odds_source=load_daily_odds(codes)
     rec=[];missing=[]
     for r in rows:
         code=str(r['race_code']).zfill(12)
@@ -154,7 +169,10 @@ def main():
         if rr is None:missing.append(code)
         else:rec.append(rr)
     z=pd.DataFrame(rec)
-    coverage={'selected_R':len(rows),'covered_R':len(z),'missing_R':len(missing),'missing_codes':missing}
+    coverage={'selected_R':len(rows),'covered_R':len(z),'missing_R':len(missing),'missing_codes':missing,
+              'repo_csv_R':sum(v=='repo_csv' for v in odds_source.values()),
+              'official_web_fallback_R':sum(v=='official_web_fallback' for v in odds_source.values()),
+              'source_counts':pd.Series(list(odds_source.values())).value_counts().to_dict()}
     if len(z)!=165:raise RuntimeError(f'closing odds coverage incomplete {coverage}')
     base=baseline_eval(z)
     if (base['hits'],base['return_yen'],base['stake_yen'])!=(87,63700,49500):
