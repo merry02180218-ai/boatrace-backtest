@@ -7,7 +7,7 @@ available; no name-based inference. September outcomes are not read.
 """
 from pathlib import Path
 import csv,json,os
-import pandas as pd, numpy as np, requests
+import pandas as pd, numpy as np
 OUT=Path('/tmp/head4_female_mixed_audit');OUT.mkdir(parents=True,exist_ok=True)
 MONTHS=('2026-04','2026-05','2026-06','2026-07','2026-08')
 def rc(x): return str(x).replace('.0','').zfill(12)
@@ -24,16 +24,7 @@ def main():
  add=(nb.composite_odds.ge(3.5)&nb.quality.ge(.75)&nb.head_prob.ge(.16)&nb.opponent_mass.ge(.30)&nb.st4_adv_inside.ge(-.80)&nb.orig4_adv_inside.ge(-.35))
  nb['extension36']=add.astype(int); ext=nb[add].copy(); comb=pd.concat([z[z.base120],ext],ignore_index=True)
  female_ids=set()
- for term in ('20261','20262'):
-  html=requests.get(f'https://boatrace-db.net/trank/wracer/term/{term}/',timeout=30,headers={'User-Agent':'Mozilla/5.0'}).text
-  found=0
-  for t in pd.read_html(html):
-   for col in t.columns:
-    if str(col).strip() in ('登番','登録番号'):
-     ids=pd.to_numeric(t[col],errors='coerce').dropna().astype(int)
-     female_ids.update(str(x) for x in ids if 2000<=x<=6000); found+=len(ids)
-  if not found: raise RuntimeError(f'female registry parse failed {term}')
- print(f'female_registry={len(female_ids)}')
+ all_ids=set()
  cards={}
  for m in MONTHS:
   y,mo=m.split('-'); d=root/'data/programs/race_cards'/y/mo
@@ -42,11 +33,29 @@ def main():
     for r in csv.DictReader(fh): cards[rc(r.get('レースコード',''))]=r
  def reg(r,b):
   return str(r.get(f'艇{b}_登録番号','')).strip().replace('.0','')
+
+ # Resolve only registration numbers actually needed by the 208R universe.
+ needed=set()
+ for code in z.race_code:
+  r=cards.get(code,{})
+  needed.update(x for x in (reg(r,b) for b in range(1,7)) if len(x)==4 and x.isdigit())
+ import urllib.parse, urllib.request, re
+ for rid in sorted(needed):
+  url='https://www.boatrace.jp/owpc/pc/data/racersearch/result?prevpgid=TDAT320&toban_left='+urllib.parse.quote(rid)
+  try:
+   html=urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'}),timeout=15).read().decode('utf-8','ignore')
+  except Exception as e:
+   raise RuntimeError(f'official racer lookup failed {rid}: {e}')
+  if rid not in html: raise RuntimeError(f'official racer lookup missing registration {rid}')
+  all_ids.add(rid)
+  # Official result marks female racers with a female icon/alt in the result row.
+  if re.search(r'(女子|female|woman|lady|icon[^"\']*female|alt=["\'][^"\']*女子)',html,re.I): female_ids.add(rid)
+ print(f'official_registry_needed={len(needed)} resolved={len(all_ids)} female={len(female_ids)}')
  def enrich(q):
   q=q.copy(); vals=[]
   for code in q.race_code:
    r=cards.get(code,{})
-   sx=[sexval(r,b) for b in range(1,7)]
+   sx=[('女' if reg(r,b) in female_ids else ('男' if reg(r,b) in all_ids else '')) for b in range(1,7)]
    vals.append((sx[3],sum(male(x) for x in sx),sum(female(x) for x in sx),sum(bool(x) for x in sx)))
   q[['boat4_sex','male_count','female_count','sex_known_count']]=pd.DataFrame(vals,index=q.index)
   q['target_female_mixed']=(q.boat4_sex.eq('女')&q.male_count.ge(2)&q.sex_known_count.eq(6))
