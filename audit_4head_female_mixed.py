@@ -49,8 +49,18 @@ def main():
   if rr.status_code!=200:
    if page==1: raise RuntimeError(f'Macour female registry fetch failed: HTTP {rr.status_code}')
    break
+  html=rr.text
   txt=BeautifulSoup(rr.content,'lxml').get_text(' ',strip=True)
   ids=set(re.findall(r'(?<!\\d)([3-5]\\d{3})(?!\\d)',txt))
+  if page==1:
+   # Diagnostic dump: identify client-side API/JSON endpoints used by Macour.
+   pats=sorted(set(re.findall(r'(?:https?:)?//[^"\\'<> ]+|/[A-Za-z0-9_./?=&%-]+',html)))
+   interesting=[x for x in pats if any(k in x.lower() for k in ('api','ajax','boatracer','search','gender','graphql','json'))]
+   print('MACOUR_ENDPOINT_CANDIDATES_BEGIN')
+   for x in interesting[:200]: print(x[:500])
+   print('MACOUR_ENDPOINT_CANDIDATES_END')
+   for needle in ('4938','小芦','gender-female','__NEXT_DATA__','application/json'):
+    print(f'macour_probe {needle}={needle in html}')
   pages.append((rr.text,ids))
   # stop when pagination no longer adds racer IDs
   union=set().union(*(x[1] for x in pages))
