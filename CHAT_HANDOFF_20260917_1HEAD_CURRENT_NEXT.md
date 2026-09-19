@@ -3252,3 +3252,30 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - Bypass only wall-clock expiry; do not use result/payout as model input.
 - Evaluate both formal 1HEAD LIVE finalizer and v392 expansion Shadow because PRE HEAD=.78660 lies below formal .790 and was an expansion PRE candidate.
 - Production unchanged.
+
+
+## AFTER — 2026-09-19 Marugame12 LIVE judgment
+- A true pre-deadline manual LIVE run already existed and supersedes retrospective replay:
+  - Run `35440826019`
+  - Job `105891183532`
+  - Artifact `10583448742`
+  - digest `sha256:74b74c26ca12535a5cdd9fb25d2f851c7d4288e5f83b6edffd3787b8614430ea`
+  - race code `202609191512`
+  - deadline `20:45 JST`
+  - finalized around `20:43:12 JST`.
+- Inputs were causal only; result_or_payout_used=false.
+- PRE:
+  - final_head_p=.7866014997584395
+  - opponent mass=.37932330277036885
+  - expansion PRE band eligible.
+- Exhibition:
+  - head_exhibition_pass=false.
+- Formal LIVE:
+  - status=DROP / no tickets / official stake0.
+- v392 expansion Shadow:
+  - status=EXPANSION_EXHIBITION_DROP
+  - active=false / no tickets / stake0.
+- Current-odds allocation Shadow:
+  - NO_BET because formal status not PASS.
+- Therefore Marugame12 was a complete NO_BET across formal + expansion Shadow + odds Shadow.
+- Production unchanged.
