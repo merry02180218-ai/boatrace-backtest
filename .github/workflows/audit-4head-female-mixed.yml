@@ -25,7 +25,7 @@ jobs:
             data/programs/race_cards/2026/06
             data/programs/race_cards/2026/07
             data/programs/race_cards/2026/08
-      - run: pip install -q pandas numpy
+      - run: pip install -q pandas numpy requests lxml
       - name: Download frozen 208R feature table
         env:
           GH_TOKEN: ${{ github.token }}
