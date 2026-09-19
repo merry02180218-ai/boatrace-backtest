@@ -23,13 +23,26 @@ def main():
  nb=z[~z.base120].copy()
  add=(nb.composite_odds.ge(3.5)&nb.quality.ge(.75)&nb.head_prob.ge(.16)&nb.opponent_mass.ge(.30)&nb.st4_adv_inside.ge(-.80)&nb.orig4_adv_inside.ge(-.35))
  nb['extension36']=add.astype(int); ext=nb[add].copy(); comb=pd.concat([z[z.base120],ext],ignore_index=True)
- female_ids=set()\n for term in ('20261','20262'):\n  html=requests.get(f'https://boatrace-db.net/trank/wracer/term/{term}/',timeout=30,headers={'User-Agent':'Mozilla/5.0'}).text\n  found=0\n  for t in pd.read_html(html):\n   for col in t.columns:\n    if str(col).strip() in ('登番','登録番号'):\n     ids=pd.to_numeric(t[col],errors='coerce').dropna().astype(int)\n     female_ids.update(str(x) for x in ids if 2000<=x<=6000); found+=len(ids)\n  if not found: raise RuntimeError(f'female registry parse failed {term}')\n print(f'female_registry={len(female_ids)}')\n cards={}
+ female_ids=set()
+ for term in ('20261','20262'):
+  html=requests.get(f'https://boatrace-db.net/trank/wracer/term/{term}/',timeout=30,headers={'User-Agent':'Mozilla/5.0'}).text
+  found=0
+  for t in pd.read_html(html):
+   for col in t.columns:
+    if str(col).strip() in ('登番','登録番号'):
+     ids=pd.to_numeric(t[col],errors='coerce').dropna().astype(int)
+     female_ids.update(str(x) for x in ids if 2000<=x<=6000); found+=len(ids)
+  if not found: raise RuntimeError(f'female registry parse failed {term}')
+ print(f'female_registry={len(female_ids)}')
+ cards={}
  for m in MONTHS:
   y,mo=m.split('-'); d=root/'data/programs/race_cards'/y/mo
   for f in sorted(d.glob('*.csv')):
    with f.open(encoding='utf-8-sig',newline='') as fh:
     for r in csv.DictReader(fh): cards[rc(r.get('レースコード',''))]=r
- def reg(r,b):\n  return str(r.get(f'艇{b}_登録番号','')).strip().replace('.0','')\n def enrich(q):
+ def reg(r,b):
+  return str(r.get(f'艇{b}_登録番号','')).strip().replace('.0','')
+ def enrich(q):
   q=q.copy(); vals=[]
   for code in q.race_code:
    r=cards.get(code,{})
@@ -49,6 +62,7 @@ def main():
    out[name][f'female_mixed_male{males}']=metrics(g)
   t=target.copy();t['scope']=name;details.append(t)
  pd.concat(details,ignore_index=True).to_csv(OUT/'female_mixed_detail.csv',index=False)
- (OUT/'result.json').write_text(json.dumps({'definition':'boat4 female AND total male_count >= 2','results':out,'SEPTEMBER_OUTCOMES_READ':False,'AUDIT_OK':True},ensure_ascii=False,indent=2)+'\n')
+ (OUT/'result.json').write_text(json.dumps({'definition':'boat4 female AND total male_count >= 2','results':out,'SEPTEMBER_OUTCOMES_READ':False,'AUDIT_OK':True},ensure_ascii=False,indent=2)+'
+')
  print(json.dumps(out,ensure_ascii=False,indent=2));print('HEAD4_FEMALE_MIXED_AUDIT_OK');print('SEPTEMBER_UNREAD')
 if __name__=='__main__':main()
