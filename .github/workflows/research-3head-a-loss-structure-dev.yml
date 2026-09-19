@@ -1,0 +1,21 @@
+name: research-3head-a-loss-structure-dev
+'on':
+  workflow_dispatch: {}
+  push:
+    paths: ['.github/triggers/research-3head-a-loss-structure-dev.txt']
+permissions:
+  contents: read
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 joblib
+      - run: python research/run_3head_a_loss_structure_dev.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: research-3head-a-loss-structure-dev
+          path: research_3head_a_loss_structure_dev.json
