@@ -3,3 +3,4 @@ boat1 escape direct diagnostic
 fix winner column and rerun
 attach diagnostic winner before prep reduction
 preserve native rc dtype rerun
+reattach winner after scoring
