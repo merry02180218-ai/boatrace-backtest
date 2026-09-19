@@ -1,0 +1,52 @@
+name: unified-head-watchlist-shadow
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '35 21 * * *'
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  merge:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Resolve date
+        run: echo "DAY=$(TZ=Asia/Tokyo date +%Y%m%d)" >> "$GITHUB_ENV"
+      - name: Download latest PRE artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail; mkdir -p /tmp/one /tmp/four
+          ONE=$(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-cache-$DAY&per_page=10" --jq '.artifacts|map(select(.expired==false))|sort_by(.created_at)|last|.id')
+          FOUR=$(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=head4-newfeature-pre-live-$DAY&per_page=10" --jq '.artifacts|map(select(.expired==false))|sort_by(.created_at)|last|.id')
+          test "$ONE" != null; test "$FOUR" != null
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/$ONE/zip" > /tmp/one.zip
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/$FOUR/zip" > /tmp/four.zip
+          unzip -q /tmp/one.zip -d /tmp/one; unzip -q /tmp/four.zip -d /tmp/four
+      - name: Merge result-blind feeds
+        run: |
+          ONE=$(find /tmp/one -name unified_1head_pre_feed.json | head -1); FOUR=$(find /tmp/four -name head4_120r_watchlist.json | head -1)
+          test -n "$ONE"; test -n "$FOUR"
+          python convert_head_watchlist_to_unified_feed.py --model 4HEAD --input "$FOUR" --out /tmp/4head_feed.json
+          python build_unified_head_watchlist.py --date "$DAY" --feed "$ONE" --feed /tmp/4head_feed.json --out /tmp/unified.json
+          python resolve_unified_head_watchdog_targets.py --watchlist /tmp/unified.json --out /tmp/resolved.json
+          python - <<'PY'
+          import json
+          z=json.load(open('/tmp/unified.json'))
+          assert z['target_day_results_used'] is False and z['payouts_used'] is False
+          assert z['target_count']==len(z['targets'])
+          print('UNIFIED_HEAD_SHADOW_CONTRACT_OK',z['target_count'],z['models'])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: unified-head-watchlist-shadow-${{ env.DAY }}
+          path: |
+            /tmp/unified.json
+            /tmp/4head_feed.json
+            /tmp/resolved.json
+          retention-days: 7
