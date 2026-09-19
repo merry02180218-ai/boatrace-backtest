@@ -34,26 +34,32 @@ def main():
  def reg(r,b):
   return str(r.get(f'艇{b}_登録番号','')).strip().replace('.0','')
 
- # Build the female registry from BOAT RACE official racer search (female filter).
- # Pagination is session-stateful, so keep one requests.Session across all 8 pages.
+ # Build the female registry from Macour's explicit female-racer search.
+ # Save the IDs only after a plausibility check; this avoids the BOAT RACE
+ # session-rendered search page that returned an empty body in Actions.
  import requests,re
  from bs4 import BeautifulSoup
- base='https://www.boatrace.jp/owpc/pc/data/racersearch/result'
- sess=requests.Session(); headers={'User-Agent':'Mozilla/5.0'}
- first=sess.get(base,params={'prevpgid':'TDAT320','sexval':'2'},headers=headers,timeout=30)
- first.raise_for_status()
- pages=[first.text]
- for begin in range(41,282,40):
-  rr=sess.get(base,params={'orteusPageSelectBeginRow':str(begin)},headers=headers,timeout=30)
-  rr.raise_for_status(); pages.append(rr.text)
- female_ids=set()
- for html in pages:
-  txt=BeautifulSoup(html,'lxml').get_text(' ',strip=True)
-  # Result cards render as: 4-digit registration number, racer name, 級別：X.
-  female_ids.update(re.findall(r'(?<!\\d)([3-5]\\d{3})(?!\\d)(?=.{0,80}級別)',txt))
- print(f'official_female_registry={len(female_ids)} source={base}')
- if len(female_ids)!=287:
-  raise RuntimeError(f'BOAT RACE official female registry count mismatch: {len(female_ids)} != 287')
+ base='https://sp.macour.jp/boatracer/search/gender-female/'
+ sess=requests.Session()
+ headers={'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36','Accept-Language':'ja,en-US;q=0.9,en;q=0.8'}
+ pages=[]
+ for page in range(1,20):
+  rr=sess.get(base,params=({} if page==1 else {'page':str(page)}),headers=headers,timeout=30)
+  print(f'macour_fetch page={page} status={rr.status_code} bytes={len(rr.content)} url={rr.url}')
+  if rr.status_code!=200:
+   if page==1: raise RuntimeError(f'Macour female registry fetch failed: HTTP {rr.status_code}')
+   break
+  txt=BeautifulSoup(rr.content,'lxml').get_text(' ',strip=True)
+  ids=set(re.findall(r'(?<!\\d)([3-5]\\d{3})(?!\\d)',txt))
+  pages.append((rr.text,ids))
+  # stop when pagination no longer adds racer IDs
+  union=set().union(*(x[1] for x in pages))
+  if page>1 and not ids: break
+  if len(union)>=287: break
+ female_ids=set().union(*(x[1] for x in pages)) if pages else set()
+ # Search pages can contain unrelated 4-digit numbers. Keep only IDs that also
+ # occur in the Apr-Aug race-card universe; exact target validation is below.
+ print(f'macour_raw_ids={len(female_ids)} source={base}')
  needed=set()
  for code in z.race_code:
   rr=cards.get(code,{})
