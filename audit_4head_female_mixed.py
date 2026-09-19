@@ -52,7 +52,7 @@ def main():
   html=rr.text
   txt=BeautifulSoup(rr.content,'lxml').get_text(' ',strip=True)
   # Registration numbers are present in hrefs such as /boatracer/4938/.
-  ids=set(re.findall(r'/boatracer/([3-5]\\d{3})/',html))
+  ids=set(re.findall('/boatracer/([3-5][0-9]{3})/',html))
   if page==1:
    # Diagnostic dump: identify client-side API/JSON endpoints used by Macour.
    pats=sorted(set(re.findall(r"(?:https?:)?//[^\\\"'<> ]+|/[A-Za-z0-9_./?=&%-]+",html)))
