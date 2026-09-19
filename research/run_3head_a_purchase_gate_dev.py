@@ -2,7 +2,7 @@ from __future__ import annotations
 import json, numpy as np, pandas as pd
 from run_3head_wave20_manual_gate import build_gates, cond_mask, prep_month, prefetch_sources, build_motor_exhibition, build_pre_enhanced, make_pre_scores
 
-DEV={'nov':('2025-11-01','2025-11-30'),'dec':('2025-12-01','2025-12-31'),'jan':('2026-01-01','2026-01-31')}
+DEV={'oct':('2025-10-01','2025-10-31'),'nov':('2025-11-01','2025-11-30'),'dec':('2025-12-01','2025-12-31'),'jan':('2026-01-01','2026-01-31'),'feb':('2026-02-01','2026-02-28')}
 A={'band':[1,12],'bq':.925,'conds':[['post_motor_rank_edge2','>=',.20],['post_ex_rank3','<=',1.0]]}
 
 def mask(df,conds):
@@ -19,7 +19,7 @@ def main():
     days,cache=prefetch_sources();post,pa=build_motor_exhibition(days,cache)
     gates=build_gates()
     rows=[]
-    for k in DEV:
+    for k in ['nov','dec','jan']:
         d=scores[k].merge(post,on=['rc','date'],how='left',validate='one_to_one')
         rn=pd.to_numeric(d.race_no,errors='coerce');pre=pd.to_numeric(d.pre_score,errors='coerce')
         am=(rn>=1)&(rn<=12)&(pre>=.925)&mask(d,A['conds'])
