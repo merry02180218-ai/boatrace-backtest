@@ -54,7 +54,7 @@ def main():
   ids=set(re.findall(r'(?<!\\d)([3-5]\\d{3})(?!\\d)',txt))
   if page==1:
    # Diagnostic dump: identify client-side API/JSON endpoints used by Macour.
-   pats=sorted(set(re.findall(r'(?:https?:)?//[^"\\'<> ]+|/[A-Za-z0-9_./?=&%-]+',html)))
+   pats=sorted(set(re.findall(r"(?:https?:)?//[^\\\"'<> ]+|/[A-Za-z0-9_./?=&%-]+",html)))
    interesting=[x for x in pats if any(k in x.lower() for k in ('api','ajax','boatracer','search','gender','graphql','json'))]
    print('MACOUR_ENDPOINT_CANDIDATES_BEGIN')
    for x in interesting[:200]: print(x[:500])
