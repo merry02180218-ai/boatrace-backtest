@@ -5,7 +5,7 @@ This stage freezes the cohort and measures current V221 ordered-pair coverage be
 """
 import json, pandas as pd
 from run_3head_a_loss_structure_dev import DEV,A,mask
-from run_3head_wave20_manual_gate import prep_month,prefetch_sources,build_motor_exhibition,build_pre_enhanced,make_pre_scores
+from run_3head_wave20_manual_gate import prep_month,prefetch_sources,build_motor_exhibition,build_pre_enhanced,make_pre_scores\nfrom run_3head_funsite_broad50_wave6 import fetch
 
 def main():
  raw={}
@@ -21,12 +21,16 @@ def main():
   q=d[m].copy()
   if len(q)==0: continue
   # Settlement winner only for conditional opponent diagnostics; never a feature.
-  rr=raw[k][1].copy(); key='rc' if 'rc' in rr.columns else 'race_code'
-  w='winner' if 'winner' in rr.columns else 'result_winner'
-  sec=next((c for c in ['second','result_second','2着_艇番','second_boat'] if c in rr.columns),None)
-  third=next((c for c in ['third','result_third','3着_艇番','third_boat'] if c in rr.columns),None)
-  if sec is None or third is None: raise RuntimeError('second/third settlement columns unavailable: '+str(list(rr.columns)))
-  sm=rr[[key,w,sec,third]].rename(columns={key:'rc',w:'winner',sec:'second',third:'third'})
+  # build exact 1st/2nd/3rd settlement from the same realtime result source; build_pre_enhanced only retains winner.
+  ds=pd.to_datetime(q.date).dt.date.unique(); settled=[]
+  for day in ds:
+   for rr in fetch('results/realtime',day):
+    code=str(rr.get('レースコード','')).strip()
+    a=[str(rr.get(f'{i}着_艇番','')).strip() for i in (1,2,3)]
+    if code.isdigit() and all(x in {'1','2','3','4','5','6'} for x in a):
+     settled.append({'rc':int(code),'winner':int(a[0]),'second':int(a[1]),'third':int(a[2])})
+  sm=pd.DataFrame(settled).drop_duplicates('rc')
+  if sm.empty: raise RuntimeError('no full trifecta settlement rows')
   try: sm['rc']=sm['rc'].astype(q.rc.dtype)
   except: sm['rc']=pd.to_numeric(sm.rc,errors='coerce').astype(q.rc.dtype)
   q=q.merge(sm,on='rc',how='left',validate='one_to_one'); q['month']=k
