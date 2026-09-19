@@ -51,7 +51,7 @@ def main():
  for ds,de,jcd in women_meetings:
   d=datetime.strptime(ds,'%Y%m%d'); e=datetime.strptime(de,'%Y%m%d')
   while d<=e:
-   day=d.strftime('%Y%m%d'); f=root/'data/programs/race_cards'/day[:4]/day[4:6]/f'{day}.csv'
+   day=d.strftime('%Y%m%d'); f=root/'data/programs/race_cards'/day[:4]/day[4:6]/f'{day[6:8]}.csv'
    if f.exists():
     with f.open(encoding='utf-8-sig',newline='') as fh:
      for rr in csv.DictReader(fh):
