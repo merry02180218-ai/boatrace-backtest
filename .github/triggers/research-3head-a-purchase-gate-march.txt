@@ -1,1 +1,2 @@
 trigger 2026-09-20 venue-aware Edogawa rerun
+forward loss-filter diagnostic edge1 fixed 1.0247765679169158
