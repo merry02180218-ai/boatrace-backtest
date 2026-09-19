@@ -24,7 +24,7 @@ jobs:
           set -euo pipefail; mkdir -p /tmp/one /tmp/four
           ONE=$(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-cache-$DAY&per_page=10" --jq '.artifacts|map(select(.expired==false))|sort_by(.created_at)|last|.id')
           FOUR=$(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=head4-newfeature-pre-live-$DAY&per_page=10" --jq '.artifacts|map(select(.expired==false))|sort_by(.created_at)|last|.id')
-          test "$ONE" != null; test "$FOUR" != null
+          test -n "$ONE"; test "$ONE" != "null"; test -n "$FOUR"; test "$FOUR" != "null"
           gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/$ONE/zip" > /tmp/one.zip
           gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/$FOUR/zip" > /tmp/four.zip
           unzip -q /tmp/one.zip -d /tmp/one; unzip -q /tmp/four.zip -d /tmp/four
