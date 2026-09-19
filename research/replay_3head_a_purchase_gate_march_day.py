@@ -13,6 +13,7 @@ from run_3head_wave19_motor_exhibition_gate import new_motor, update_motor, moto
 import analyze_v242_3head_target_comp3_min5_max10 as v242
 import run_20260911_3head_v288_live as prod
 import replay_v288_historical_day as base
+import head4_original_venue_schema as venue_schema
 from backtest import rows
 
 BANK=10000
@@ -65,10 +66,20 @@ def main():
         if code not in tkzm or code not in sttm:
             rec['error_type']='input_missing';rec['error']='missing tkz/stt';decisions.append(rec);continue
         origrow=origm.get(code)
-        if origrow is None:
+        jcd=int(code[8:10])
+        orig_required=venue_schema.publishes_original(jcd)
+        if origrow is None and orig_required:
             try:origrow,_,_=base.direct_historical_orig(day8,code)
             except Exception as e:
-                rec['error_type']='input_missing';rec['error']=f'original exhibition unavailable: {e}';decisions.append(rec);continue
+                rec['error_type']='input_missing';rec['error']=f'original exhibition unavailable at required venue: {e}';decisions.append(rec);continue
+        if origrow is None and not orig_required:
+            # Match HEAD4 venue-aware contract: venues such as Edogawa (JCD03)
+            # legitimately publish no original exhibition. Keep TKZ/ST usable and
+            # pass an empty original row so current-feature construction degrades
+            # original-derived fields to missing/neutral instead of ERROR.
+            origrow={}
+            rec['original_exhibition_optional_absent']=True
+            rec['original_exhibition_venue_policy']='HEAD4_VENUE_AWARE_OPTIONAL'
         odds=base.odds_map(odm[code]) if code in odm else {}
         if len(odds)!=120:odds=official.get(code,{})
         if len(odds)!=120:
