@@ -4,6 +4,9 @@ concurrency:
   cancel-in-progress: true
 'on':
   workflow_dispatch: {}
+  push:
+    paths:
+      - '.github/triggers/research-3head-a-purchase-gate-march.txt'
 permissions:
   contents: read
   actions: read
