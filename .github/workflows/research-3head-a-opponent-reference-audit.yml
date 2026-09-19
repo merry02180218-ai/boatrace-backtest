@@ -13,7 +13,8 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: '3.11'}
       - run: pip install pandas numpy scikit-learn requests
-      - run: cd research && python run_3head_a_opponent_reference_audit.py
+      - name: Preflight compile and import
+        run: |\n          python -m py_compile research/run_3head_a_opponent_reference_audit.py\n          cd research\n          python -c "import run_3head_a_opponent_reference_audit"\n      - name: Run opponent audit\n        run: cd research && python run_3head_a_opponent_reference_audit.py
       - uses: actions/upload-artifact@v4
         with:
           name: research-3head-a-opponent-reference-audit
