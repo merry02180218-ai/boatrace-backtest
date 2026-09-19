@@ -31,7 +31,8 @@ def main():
         errs=df[df.evaluation_status!="EVALUABLE"].copy()
         bet_head=int(bets.head3_actual.sum()); no_head=int(nob.head3_actual.sum())
         head_capture=bet_head/int(df.head3_actual.sum()) if int(df.head3_actual.sum()) else None
-        detail=bets[["date","race_code","actual_combo","head3_actual","hit","return_yen","top_n","comp_odds","route"]].to_dict("records")
+        detail_cols=["date","race_code","actual_combo","head3_actual","hit","return_yen","top_n","comp_odds","route","purchase_gate_value","purchase_gate_pass"]
+        detail=bets.reindex(columns=detail_cols).to_dict("records")
         errors=errs[["date","race_code","error_type","error","actual_combo","head3_actual"]].to_dict("records")
     else:
         bet_head=no_head=0;head_capture=None;detail=[];errors=[]
