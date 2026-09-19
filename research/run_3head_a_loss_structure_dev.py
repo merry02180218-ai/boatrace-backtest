@@ -35,8 +35,8 @@ def main():
  if len(z)!=118 or int(z.y.sum())!=54: raise RuntimeError(f'frozen dev drift {len(z)}/{int(z.y.sum())}')
  stats=[stat(z,c) for c in FEATURES if c in z]
  # Directly isolate the dominant failure mode: boat1 wins vs boat3 wins.
- rw=pd.to_numeric(z.get('result_winner'),errors='coerce')
- z13=z[(rw==1)|(rw==3)].copy(); z13['target3']=(pd.to_numeric(z13.result_winner,errors='coerce')==3).astype(int)
+ rw=pd.to_numeric(z['winner'],errors='coerce') if 'winner' in z.columns else pd.to_numeric(z['result_winner'],errors='coerce')
+ z13=z[(rw==1)|(rw==3)].copy(); z13['target3']=(rw.loc[z13.index]==3).astype(int)
  direct=[]
  for c in FEATURES:
   if c not in z13: continue
