@@ -13,10 +13,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: {python-version: '3.11'}
+        with:
+          python-version: '3.11'
       - run: pip install -q pandas
       - name: Download frozen Wave21 source
-        env: {GH_TOKEN: ${{ github.token }}}
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           gh api repos/${{ github.repository }}/actions/artifacts/10317157868/zip > /tmp/w.zip
           unzip -oq /tmp/w.zip -d /tmp/w
@@ -24,7 +26,9 @@ jobs:
           cp "$SRC" analysis_v289_3head_wave21_allrace_feature_settled.csv
       - run: python research/materialize_3head_a_march_closing_odds.py
       - uses: actions/upload-artifact@v4
-        with: {name: a-march-odds-purchase-gate, path: data/official_closing_odds3t/}
+        with:
+          name: a-march-odds-purchase-gate
+          path: data/official_closing_odds3t/
   replay:
     needs: prepare_odds
     strategy:
@@ -37,10 +41,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: {python-version: '3.11'}
+        with:
+          python-version: '3.11'
       - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 joblib
       - name: Frozen odds
-        env: {GH_TOKEN: ${{ github.token }}}
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p /tmp/odds
           gh run download "${{ github.run_id }}" --repo "${{ github.repository }}" --name a-march-odds-purchase-gate --dir /tmp/odds
@@ -64,10 +70,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: {python-version: '3.11'}
+        with:
+          python-version: '3.11'
       - run: pip install -q pandas
       - name: Download
-        env: {GH_TOKEN: ${{ github.token }}}
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p all_days
           gh run download "${{ github.run_id }}" --repo "${{ github.repository }}" --pattern 'a-purchase-march-*' --dir all_days || true
