@@ -38,6 +38,9 @@ def main():
  rows=[]
  for k in ['nov','dec','jan']:
   d=scores[k].merge(post,on=['rc','date'],how='left',validate='one_to_one')
+  # make diagnostic winner survive score construction explicitly
+  if 'diag_winner' not in d.columns:
+   w=frames[k][['rc','diag_winner']].drop_duplicates('rc'); d=d.merge(w,on='rc',how='left',validate='one_to_one')
   rn=pd.to_numeric(d.race_no,errors='coerce');pre=pd.to_numeric(d.pre_score,errors='coerce')
   m=(rn>=1)&(rn<=12)&(pre>=.925)&mask(d,A['conds'])&(pd.to_numeric(d.post_motor_inner_rank_edge,errors='coerce')>=.60)
   q=d[m].copy();q['month']=k;rows.append(q)
