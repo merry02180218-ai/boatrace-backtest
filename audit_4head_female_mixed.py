@@ -62,7 +62,6 @@ def main():
    out[name][f'female_mixed_male{males}']=metrics(g)
   t=target.copy();t['scope']=name;details.append(t)
  pd.concat(details,ignore_index=True).to_csv(OUT/'female_mixed_detail.csv',index=False)
- (OUT/'result.json').write_text(json.dumps({'definition':'boat4 female AND total male_count >= 2','results':out,'SEPTEMBER_OUTCOMES_READ':False,'AUDIT_OK':True},ensure_ascii=False,indent=2)+'
-')
+  (OUT/'result.json').write_text(json.dumps({'definition':'boat4 female AND total male_count >= 2','results':out,'SEPTEMBER_OUTCOMES_READ':False,'AUDIT_OK':True},ensure_ascii=False,indent=2)+chr(10))
  print(json.dumps(out,ensure_ascii=False,indent=2));print('HEAD4_FEMALE_MIXED_AUDIT_OK');print('SEPTEMBER_UNREAD')
 if __name__=='__main__':main()
