@@ -3220,3 +3220,26 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - Bypass only the wall-clock expiry guard because races have finished; do not read result/payout in replay.
 - Goal: distinguish PRE-candidate miss from post-exhibition DROP vs formal PASS.
 - Production unchanged.
+
+
+## AFTER — 2026-09-19 finished PRE candidates retrospective LIVE replay
+- Replay implementation commit: `116a376c21ebfd4c1fcbb93707769eae4569829a`.
+- Run `35432827987` / Job `105870320065` / Artifact `10581670738`.
+- Artifact digest: `sha256:92a0b356171f15e88c3589fea7e9f7ee73fa1cd140b770bad11727e751d2b1dc`.
+- Replay input used frozen 2026-09-19 all-race cache Artifact `10563970683` + Boatcast exhibition only; result/payout not used in model replay.
+- Completed targets:
+  - Amagasaki12 `202609191312`: HEAD=.792445 / mass=.472159, exhibition FAIL -> formal DROP, no tickets.
+  - Toda12 `202609190212`: HEAD=.808875 / mass=.458428, exhibition FAIL -> formal DROP, no tickets.
+  - Heiwajima12 `202609190412`: HEAD=.794761 / mass=.432572, exhibition PASS -> formal PASS/WATCH.
+    - formal tickets: 1-4-2 / 1-4-3 / 1-2-4
+    - WALL3 formal applied=true; FIVE6=false.
+    - official stake=300 yen.
+    - stake Shadow 2x=600 yen; allocation Shadow WALL3=100/100/400.
+- Public outcome cross-check after replay:
+  - Amagasaki12: 3-1-4, 1 boat 2nd -> replay DROP correctly avoided loss.
+  - Toda12: 1-4-6, 1 boat won -> replay DROP missed a winning head race.
+  - Heiwajima12: 3-2-4, 1 boat 4th -> formal PASS lost all 3 tickets.
+- Completed formal BET summary at this point: 1 BET / 0 hits / stake300 / return0 / profit -300 / ROI0%.
+- PRE candidate head summary: 1-head winners 1/3 (Toda only).
+- Shadow on Heiwajima also missed: 2x shadow -600; WALL3 allocation shadow -600.
+- Production unchanged.
