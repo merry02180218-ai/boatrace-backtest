@@ -1,0 +1,50 @@
+name: audit-4head-female-mixed
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Checkout Apr-Aug race cards
+        uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards/2026/04
+            data/programs/race_cards/2026/05
+            data/programs/race_cards/2026/06
+            data/programs/race_cards/2026/07
+            data/programs/race_cards/2026/08
+      - run: pip install -q pandas numpy
+      - name: Download frozen 208R feature table
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p f208
+          gh run download 35361685459 -n head4-208-expanded-features -D f208
+          P="$(find f208 -type f -name expanded_features_208.csv | head -1)"
+          test -n "$P"
+          echo "EXPANDED_FEATURES_208=$P" >> "$GITHUB_ENV"
+      - name: Audit female boat4 in mixed fields
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: python audit_4head_female_mixed.py
+      - name: Show result
+        if: always()
+        run: cat /tmp/head4_female_mixed_audit/result.json 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-female-mixed-audit
+          path: /tmp/head4_female_mixed_audit/
+          retention-days: 30
