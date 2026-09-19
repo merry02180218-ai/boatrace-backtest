@@ -1,0 +1,80 @@
+name: research-3head-a-purchase-gate-march
+concurrency:
+  group: research-3head-a-purchase-gate-march
+  cancel-in-progress: true
+'on':
+  workflow_dispatch: {}
+permissions:
+  contents: read
+  actions: read
+jobs:
+  prepare_odds:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q pandas
+      - name: Download frozen Wave21 source
+        env: {GH_TOKEN: ${{ github.token }}}
+        run: |
+          gh api repos/${{ github.repository }}/actions/artifacts/10317157868/zip > /tmp/w.zip
+          unzip -oq /tmp/w.zip -d /tmp/w
+          SRC=$(find /tmp/w -type f -name 'analysis_v289_3head_wave21_allrace_feature_settled.csv' | head -1)
+          cp "$SRC" analysis_v289_3head_wave21_allrace_feature_settled.csv
+      - run: python research/materialize_3head_a_march_closing_odds.py
+      - uses: actions/upload-artifact@v4
+        with: {name: a-march-odds-purchase-gate, path: data/official_closing_odds3t/}
+  replay:
+    needs: prepare_odds
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        date: ['2026-03-02','2026-03-03','2026-03-05','2026-03-06','2026-03-08','2026-03-09','2026-03-12','2026-03-14','2026-03-19','2026-03-21','2026-03-22','2026-03-24','2026-03-27']
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scikit-learn catboost requests beautifulsoup4 joblib
+      - name: Frozen odds
+        env: {GH_TOKEN: ${{ github.token }}}
+        run: |
+          mkdir -p /tmp/odds
+          gh run download "${{ github.run_id }}" --repo "${{ github.repository }}" --name a-march-odds-purchase-gate --dir /tmp/odds
+          mkdir -p data/official_closing_odds3t
+          cp -r /tmp/odds/* data/official_closing_odds3t/
+      - run: python prepare_v288_historical_pre_input.py --date '${{ matrix.date }}'
+      - run: |
+          D=$(echo '${{ matrix.date }}'|tr -d '-'); mkdir -p "cache/$D"
+          python research/build_3head_a_paironly_fast_cache.py --date '${{ matrix.date }}' --history-cutoff 2026-02-28 --bias-start 2026-02-01 --out "cache/$D/cache.joblib"
+          python research/replay_3head_a_purchase_gate_march_day.py --date '${{ matrix.date }}' --cache "cache/$D/cache.joblib" --outdir "out/$D"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: a-purchase-march-${{ matrix.date }}
+          path: out/
+          if-no-files-found: ignore
+  aggregate:
+    needs: replay
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q pandas
+      - name: Download
+        env: {GH_TOKEN: ${{ github.token }}}
+        run: |
+          mkdir -p all_days
+          gh run download "${{ github.run_id }}" --repo "${{ github.repository }}" --pattern 'a-purchase-march-*' --dir all_days || true
+      - run: python research/aggregate_3head_a_pair_only_march.py --root all_days --out research_3head_a_purchase_gate_march_summary.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-3head-a-purchase-gate-march
+          path: research_3head_a_purchase_gate_march_summary.json
+          if-no-files-found: ignore
