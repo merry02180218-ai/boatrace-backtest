@@ -19,6 +19,7 @@ from backtest import rows
 BANK=10000
 PURCHASE_GATE_COL='post_motor_inner_rank_edge'
 PURCHASE_GATE_MIN=0.60
+LOSS_FILTER_MOTOR_EDGE1_MIN=1.0247765679169158
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--date',required=True);ap.add_argument('--cache',required=True);ap.add_argument('--outdir',required=True);a=ap.parse_args()
@@ -99,6 +100,12 @@ def main():
             rec['purchase_gate_min']=PURCHASE_GATE_MIN
             rec['purchase_gate_value']=None if pd.isna(gate_val) else float(gate_val)
             rec['purchase_gate_pass']=bool(pd.notna(gate_val) and gate_val>=PURCHASE_GATE_MIN)
+            # Forward diagnostic fixed on Nov-Jan only: boat3 motor EWMA-rank edge vs boat1.
+            # March is evaluation only; do not retune this threshold here.
+            edge1=per[1]['ewma_rank']-per[3]['ewma_rank']
+            rec['loss_filter_motor_edge1']=None if pd.isna(edge1) else float(edge1)
+            rec['loss_filter_motor_edge1_min']=LOSS_FILTER_MOTOR_EDGE1_MIN
+            rec['loss_filter_motor_edge1_pass']=bool(pd.notna(edge1) and edge1>=LOSS_FILTER_MOTOR_EDGE1_MIN)
             if not rec['purchase_gate_pass']:
                 rec.update({'decision':'NO_BET','evaluation_status':'EVALUABLE','error_type':'','error':'','route':'A_PURCHASE_GATE_SKIP'})
                 decisions.append(rec);continue
