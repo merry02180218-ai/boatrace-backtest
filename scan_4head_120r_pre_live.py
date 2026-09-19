@@ -48,6 +48,7 @@ REN2_CUT=-7.080000000000001
 PLAYER_CUT=.215605
 HEADPROB_DISPLAY=.18
 V250_DISPLAY=.12
+ULTRALOW_SHADOW_CUT=.10
 
 VENUE_NAMES={
  1:'桐生',2:'戸田',3:'江戸川',4:'平和島',5:'多摩川',6:'浜名湖',
@@ -276,6 +277,10 @@ def main():
         else:
             reason='WATCH_ONLY'
         row['pre_reason']=reason
+        # Operational reporting class only: ultra-low head probability stays monitored,
+        # but must never be mixed into normal newfeature BET performance.
+        row['ultralow_shadow']=int(row['monitoring_parent']==1 and hp<ULTRALOW_SHADOW_CUT)
+        row['operational_class']='超低頭確率Shadow' if row['ultralow_shadow'] else ('内部ウォッチ' if row['monitoring_parent']==1 else '見送り')
         out.append(row)
 
     df=pd.DataFrame(out).sort_values(['display_candidate','head_prob','v250_PRE'],
@@ -308,6 +313,8 @@ def main():
       'parent_missing_motor_2ren_R':int(df.parent_missing_motor_2ren.sum()),
       'parent_missing_player_R':int(df.parent_missing_player.sum()),
       'display_rule':'monitoring_parent AND (head_prob>=.18 OR v250_PRE>=.12); missing headprob fail-open',
+      'ultralow_shadow_rule':'monitoring_parent AND head_prob < .10; reporting-only separation from normal newfeature performance',
+      'ultralow_shadow_R':int(df.ultralow_shadow.sum()),
       'display_is_hard_gate':False,
       'production_changed':False,
     }
