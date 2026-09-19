@@ -7,7 +7,7 @@ from pathlib import Path
 import json, pandas as pd, numpy as np
 
 ROOT=Path(__file__).resolve().parents[1]
-DETAIL=ROOT/'research_3head_a_purchase_gate_march_detail.csv'
+SUMMARY=ROOT/'research_3head_a_purchase_gate_march_summary.json'
 OUT=ROOT/'analysis_3head_a_adopted_loss_patterns.csv'
 SUM=ROOT/'summary_3head_a_adopted_loss_patterns.md'
 
@@ -15,8 +15,10 @@ def rate(g):
     return {'R':len(g),'H':int(g.head3_actual.sum()),'head_rate':float(g.head3_actual.mean()) if len(g) else None}
 
 def main():
-    if not DETAIL.exists(): raise RuntimeError(f'missing {DETAIL}')
-    z=pd.read_csv(DETAIL,dtype={'race_code':str})
+    if not SUMMARY.exists(): raise RuntimeError(f'missing {SUMMARY}')
+    src=json.loads(SUMMARY.read_text(encoding='utf-8'))
+    z=pd.DataFrame(src.get('bets_detail',[]))
+    if z.empty: raise RuntimeError('summary has no bets_detail')
     z['race_code']=z.race_code.astype(str).str.zfill(12)
     if z.race_code.str.startswith('202609').any(): raise RuntimeError('SEPTEMBER ACCESS')
     z=z[(z.purchase_gate_pass==True)|(z.purchase_gate_pass.astype(str).str.lower()=='true')].copy()
