@@ -67,6 +67,8 @@ def main():
               'state_run_id':str(a.state_run_id),'state_artifact_name':a.state_artifact_name,
               'head_prob':float(r.head_prob) if 'head_prob' in r and pd.notna(r.head_prob) else None,
               'pre_reason':str(r.pre_reason) if 'pre_reason' in r else 'WATCH_ONLY',
+              'ultralow_shadow':int(r.ultralow_shadow) if 'ultralow_shadow' in r and pd.notna(r.ultralow_shadow) else int(float(r.head_prob)<.10) if 'head_prob' in r and pd.notna(r.head_prob) else 0,
+              'operational_class':str(r.operational_class) if 'operational_class' in r else ('超低頭確率Shadow' if ('head_prob' in r and pd.notna(r.head_prob) and float(r.head_prob)<.10) else '内部ウォッチ'),
               'note':'HEAD4_NEWFEATURE_FIXED156_V1 monitoring_parent; result-blind daily watchlist',
             })
         targets.sort(key=lambda x:(x['deadline_jst'],x['jcd'],x['race']))
