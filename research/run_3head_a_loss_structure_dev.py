@@ -30,7 +30,10 @@ def main():
   if wcol is None: raise RuntimeError(f'no winner column in raw result for {k}: {list(rr.columns)}')
   key='rc' if 'rc' in rr.columns else 'race_code'
   wm=rr[[key,wcol]].copy().rename(columns={key:'rc',wcol:'diag_winner'}); wm['rc']=wm.rc.astype(str)
-  frames[k]['rc']=frames[k].rc.astype(str); frames[k]=frames[k].merge(wm,on='rc',how='left',validate='one_to_one')
+  # Preserve the native rc dtype used by downstream score/post merges; normalize winner-map to it.
+  try: wm['rc']=wm['rc'].astype(frames[k]['rc'].dtype)
+  except Exception: wm['rc']=pd.to_numeric(wm['rc'],errors='coerce').astype(frames[k]['rc'].dtype)
+  frames[k]=frames[k].merge(wm,on='rc',how='left',validate='one_to_one')
  scores,_=make_pre_scores(frames);days,cache=prefetch_sources();post,_=build_motor_exhibition(days,cache)
  rows=[]
  for k in ['nov','dec','jan']:
