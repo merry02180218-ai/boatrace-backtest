@@ -13,6 +13,8 @@ on:
   push:
     paths:
       - '.github/workflows/live-4head-newfeature-pre-daily.yml'
+      - 'scan_4head_120r_pre_live.py'
+      - 'build_4head_newfeature_watchlist.py'
 
 permissions:
   contents: write
