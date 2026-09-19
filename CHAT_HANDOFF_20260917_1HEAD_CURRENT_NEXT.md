@@ -3243,3 +3243,12 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - PRE candidate head summary: 1-head winners 1/3 (Toda only).
 - Shadow on Heiwajima also missed: 2x shadow -600; WALL3 allocation shadow -600.
 - Production unchanged.
+
+
+## BEFORE — 2026-09-19 Marugame12 retrospective LIVE replay
+- User requested Marugame12 judgment after the scheduled deadline.
+- Race code: 202609191512.
+- Use frozen 2026-09-19 all-race cache + Boatcast exhibition only.
+- Bypass only wall-clock expiry; do not use result/payout as model input.
+- Evaluate both formal 1HEAD LIVE finalizer and v392 expansion Shadow because PRE HEAD=.78660 lies below formal .790 and was an expansion PRE candidate.
+- Production unchanged.
