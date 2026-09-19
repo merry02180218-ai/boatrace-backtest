@@ -23,9 +23,9 @@ jobs:
           gh api repos/${{ github.repository }}/actions/artifacts/10588428193/zip > /tmp/a.zip
           unzip -oq /tmp/a.zip -d /tmp/a
           find /tmp/a -type f -maxdepth 3 -print
-          D=$(find /tmp/a -type f -name '*detail*.csv' | head -1)
+          D=$(find /tmp/a -type f -name '*summary*.json' | head -1)
           test -n "$D"
-          cp "$D" research_3head_a_purchase_gate_march_detail.csv
+          cp "$D" research_3head_a_purchase_gate_march_summary.json
       - run: python research/analyze_3head_a_adopted_loss_patterns.py
       - uses: actions/upload-artifact@v4
         with:
