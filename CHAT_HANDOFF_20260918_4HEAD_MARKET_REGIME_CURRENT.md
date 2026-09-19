@@ -3439,3 +3439,11 @@ Next restart point:
 4. record prospective 9/19 decisions without using target outcomes before each decision.
 
 Status: HEAD4_20260919_LIVE_OPERATION_READY__VENUE_ORIGINAL_RECOVERY_PLUS_PARALLEL_WATCHDOG
+
+
+## 2026-09-19 mixed-gender female boat4 audit definition
+- User refinement: define target mixed race as boat4 = female AND at least 2 male racers among the other five boats.
+- Exclude female-only races and one-male "ほぼ女子/企画" style races from this audit.
+- Compare base120 / newfeature extension / combined156 on R, head4 rate, exact3, stake, payout, ROI, and mean head_prob.
+- Rationale: official BOAT RACE has run planned fields with 5 women + 1 man, so male>=2 avoids treating those as ordinary mixed competition.
+- Status: definition frozen for next audit; September outcomes remain outside historical fit/audit dataset.
