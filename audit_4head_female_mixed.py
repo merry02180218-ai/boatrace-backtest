@@ -51,7 +51,8 @@ def main():
    break
   html=rr.text
   txt=BeautifulSoup(rr.content,'lxml').get_text(' ',strip=True)
-  ids=set(re.findall(r'(?<!\\d)([3-5]\\d{3})(?!\\d)',txt))
+  # Registration numbers are present in hrefs such as /boatracer/4938/.
+  ids=set(re.findall(r'/boatracer/([3-5]\\d{3})/',html))
   if page==1:
    # Diagnostic dump: identify client-side API/JSON endpoints used by Macour.
    pats=sorted(set(re.findall(r"(?:https?:)?//[^\\\"'<> ]+|/[A-Za-z0-9_./?=&%-]+",html)))
@@ -70,6 +71,8 @@ def main():
  # Search pages can contain unrelated 4-digit numbers. Keep only IDs that also
  # occur in the Apr-Aug race-card universe; exact target validation is below.
  print(f'macour_raw_ids={len(female_ids)} source={base}')
+ if not (250 <= len(female_ids) <= 320):
+  raise RuntimeError(f'Macour female registry count implausible: {len(female_ids)}')
  needed=set()
  for code in z.race_code:
   rr=cards.get(code,{})
