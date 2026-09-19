@@ -3454,3 +3454,17 @@ Status: HEAD4_20260919_LIVE_OPERATION_READY__VENUE_ORIGINAL_RECOVERY_PLUS_PARALL
 - BoatraceCSV has registration numbers but no sex field.
 - Next: use a repository-local authoritative female registration-number master, then join locally; no name inference.
 - Audit definition remains boat4 female AND male_count>=2; September outcomes remain outside this historical audit.
+
+
+## AFTER 2026-09-20 female mixed audit — SAVE / NO MODEL CHANGE
+- Audit Run: 35464037853 — SUCCESS.
+- Commit used: cca3a1ab8d78fbd86c91cd6d29791be27bbd8a91.
+- Macour female racer registry extraction succeeded: 287 female registration IDs.
+- Race-card universe needed racers: 844; female-registry overlap: 136.
+- Audit definition: boat4=female AND at least 2 male racers in the six-boat field; female-only and one-male near-all-female fields excluded.
+- combined156 overall: 156R, head4 rate 41.6667%, exact3 37, ROI 128.5865%.
+- female mixed male2plus subset: 5R, head4 rate 20.0%, exact3 1, ROI 194.04%.
+- non-target remainder: head4 rate 42.3841%, exact3 36, ROI 126.4192%.
+- Conclusion agreed with user: do NOT add a sex/gender correction, bonus, or exclusion to the current 4-head model. Preserve the female-mixed data for future re-audit only; sample n=5 is too small for model change.
+- September outcomes remained UNREAD in this historical audit (SEPTEMBER_OUTCOMES_READ=false).
+- Status: FEMALE_MIXED_DATA_SAVED__NO_MODEL_CHANGE.
