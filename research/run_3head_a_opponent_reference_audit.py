@@ -5,7 +5,8 @@ This stage freezes the cohort and measures current V221 ordered-pair coverage be
 """
 import json, pandas as pd
 from run_3head_a_loss_structure_dev import DEV,A,mask
-from run_3head_wave20_manual_gate import prep_month,prefetch_sources,build_motor_exhibition,build_pre_enhanced,make_pre_scores\nfrom run_3head_funsite_broad50_wave6 import fetch
+from run_3head_wave20_manual_gate import prep_month,prefetch_sources,build_motor_exhibition,build_pre_enhanced,make_pre_scores
+from run_3head_funsite_broad50_wave6 import fetch
 
 def main():
  raw={}
