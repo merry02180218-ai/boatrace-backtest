@@ -24,6 +24,13 @@ def main():
  for k,(a,b) in DEV.items():
   x,r,audit=build_pre_enhanced(a,b,True);raw[k]=(x,r,audit)
  frames={k:prep_month(x,r) for k,(x,r,_) in raw.items()}
+ # prep_month intentionally reduces settlement to binary y; attach winner only for this diagnostic.
+ for k,(x,r,_) in raw.items():
+  rr=r.copy(); wcol='winner' if 'winner' in rr.columns else ('result_winner' if 'result_winner' in rr.columns else None)
+  if wcol is None: raise RuntimeError(f'no winner column in raw result for {k}: {list(rr.columns)}')
+  key='rc' if 'rc' in rr.columns else 'race_code'
+  wm=rr[[key,wcol]].copy().rename(columns={key:'rc',wcol:'diag_winner'}); wm['rc']=wm.rc.astype(str)
+  frames[k]['rc']=frames[k].rc.astype(str); frames[k]=frames[k].merge(wm,on='rc',how='left',validate='one_to_one')
  scores,_=make_pre_scores(frames);days,cache=prefetch_sources();post,_=build_motor_exhibition(days,cache)
  rows=[]
  for k in ['nov','dec','jan']:
@@ -35,7 +42,7 @@ def main():
  if len(z)!=118 or int(z.y.sum())!=54: raise RuntimeError(f'frozen dev drift {len(z)}/{int(z.y.sum())}')
  stats=[stat(z,c) for c in FEATURES if c in z]
  # Directly isolate the dominant failure mode: boat1 wins vs boat3 wins.
- rw=pd.to_numeric(z['winner'],errors='coerce') if 'winner' in z.columns else pd.to_numeric(z['result_winner'],errors='coerce')
+ rw=pd.to_numeric(z['diag_winner'],errors='coerce')
  z13=z[(rw==1)|(rw==3)].copy(); z13['target3']=(rw.loc[z13.index]==3).astype(int)
  direct=[]
  for c in FEATURES:
