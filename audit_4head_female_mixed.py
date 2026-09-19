@@ -41,7 +41,16 @@ def main():
   html=urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'}),timeout=30).read().decode('utf-8','ignore')
  except Exception as e:
   raise RuntimeError(f'official female registry fetch failed: {e}')
- female_ids=set(re.findall(r'(?<!\\d)([3-5]\\d{3})(?!\\d)',html))
+ # The official page is paginated. Extract registration numbers from profile links/text,
+ # then follow pages 1..8 with the same female filter.
+ female_ids=set()
+ for page in range(1,9):
+  purl=url+('&page='+str(page) if page>1 else '')
+  try:
+   ph=urllib.request.urlopen(urllib.request.Request(purl,headers={'User-Agent':'Mozilla/5.0'}),timeout=30).read().decode('utf-8','ignore')
+  except Exception as e:
+   raise RuntimeError(f'official female registry page {page} fetch failed: {e}')
+  female_ids.update(re.findall(r'(?<!\\d)([3-5]\\d{3})(?!\\d)',ph))
  if len(female_ids)<200: raise RuntimeError(f'official female registry parse too small: {len(female_ids)}')
  needed=set()
  for code in z.race_code:
