@@ -37,11 +37,3 @@
 - `research_v289_3head_addon.json`
 - `research_v289_3head_addon.md`
 
-
-
-## 2026-09-19 A-gate purchase-gate research — START
-- A head gate is frozen/adopted; do not retune it.
-- Formal March pair/ticket diagnostic Run 35379126207: 52 candidates, 50 evaluable, 42 pair-only BET, 16 head3 winners, 12 ticket hits, stake 420,000, payout 351,800, ROI 83.7619%.
-- Main diagnosis: V221/v242 opponent capture conditional on head3 is 75%; old buy/skip gating is the larger problem.
-- Next work: build a separate A-inside purchase gate using only pre-March development information; March is evaluation only. Focus on PRE-safe player/ST/motor/wall-relative structure. Do not read Sep-2026 outcomes. Do not modify v288 production.
-- Preserve frozen PRE 370-feature artifact 10556868870 and exact adopted A thresholds.
