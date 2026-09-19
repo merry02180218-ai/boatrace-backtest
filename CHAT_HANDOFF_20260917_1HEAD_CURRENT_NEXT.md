@@ -3279,3 +3279,33 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
   - NO_BET because formal status not PASS.
 - Therefore Marugame12 was a complete NO_BET across formal + expansion Shadow + odds Shadow.
 - Production unchanged.
+
+
+## 2026-09-19 daily result summary (user explicitly requested today's outcomes)
+- Scope permission: 2026-09-19 outcomes are READ for today's summary only. Other September outcomes remain UNREAD unless separately authorized.
+- PRE targets:
+  1. Amagasaki12 202609191312 — WATCH_PRE -> exhibition FAIL -> formal DROP. Result 3-1-4. No bet.
+  2. Toda12 202609190212 — WATCH_PRE -> exhibition FAIL -> formal DROP. Result 1-4-6. No bet.
+  3. Heiwajima12 202609190412 — WATCH_PRE -> exhibition PASS -> formal PASS/WATCH. Tickets 1-4-2 / 1-4-3 / 1-2-4, stake 300. Result 3-2-4. Return 0, P/L -300.
+  4. Suminoe10 202609191210 — BASIC_PRE -> exhibition FAIL -> formal DROP. Result 3-1-6. No bet.
+  5. Marugame12 202609191512 — expansion PRE Shadow -> exhibition FAIL -> formal DROP + EXPANSION_EXHIBITION_DROP. Result 1-4-6. No bet.
+- Formal production daily totals:
+  - PRE formal candidates: 4
+  - post-exhibition formal BETs: 1
+  - hits: 0
+  - stake: 300 yen
+  - return: 0 yen
+  - profit: -300 yen
+  - ROI: 0.00%
+- Expansion Shadow:
+  - PRE candidates: 1 (Marugame12)
+  - post-exhibition active: 0
+- 1-head result rate:
+  - formal PRE 4R: 1/4 = 25.0% (Toda12 only)
+  - all 5 including expansion PRE: 2/5 = 40.0% (Toda12, Marugame12)
+- Suminoe10 replay audit:
+  - Run 35451999613 / Job 105920665933 / Artifact 10586962168
+  - digest sha256:fffc652df0dc1fd6c53ce691ce8161e129bb5ccbbe48c44a3020ef3912435008
+  - result_or_payout_used=false during model replay
+  - HEAD=.7970355449543567 / mass=.3830110769706324 / exhibition FAIL -> DROP.
+- Production unchanged.
