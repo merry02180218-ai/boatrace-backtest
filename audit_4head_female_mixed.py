@@ -34,17 +34,26 @@ def main():
  def reg(r,b):
   return str(r.get(f'艇{b}_登録番号','')).strip().replace('.0','')
 
- # Build the female registry directly from Ladies Information's current racer directory.
- # The directory is explicitly the all-female racer directory and exposes registration numbers.
+ # Build the female registry from BOAT RACE official racer search (female filter).
+ # Pagination is session-stateful, so keep one requests.Session across all 8 pages.
  import requests,re
- url='https://www.ladies-info.jp/list/'
- html=requests.get(url,timeout=30,headers={'User-Agent':'Mozilla/5.0'}).text
- # Registration numbers are four digits; constrain extraction to racer-profile/list markup around current directory.
- female_ids=set(re.findall(r'(?<!\\d)([3-5]\\d{3})(?!\\d)',html))
- # Fail closed: never silently fall back to "not female = male" with an implausible registry.
- if not (270 <= len(female_ids) <= 310):
-  raise RuntimeError(f'Ladies Information female registry count implausible: {len(female_ids)} (expected around 287)')
- print(f'ladies_info_registry={len(female_ids)} source={url}')
+ from bs4 import BeautifulSoup
+ base='https://www.boatrace.jp/owpc/pc/data/racersearch/result'
+ sess=requests.Session(); headers={'User-Agent':'Mozilla/5.0'}
+ first=sess.get(base,params={'prevpgid':'TDAT320','sexval':'2'},headers=headers,timeout=30)
+ first.raise_for_status()
+ pages=[first.text]
+ for begin in range(41,282,40):
+  rr=sess.get(base,params={'orteusPageSelectBeginRow':str(begin)},headers=headers,timeout=30)
+  rr.raise_for_status(); pages.append(rr.text)
+ female_ids=set()
+ for html in pages:
+  txt=BeautifulSoup(html,'lxml').get_text(' ',strip=True)
+  # Result cards render as: 4-digit registration number, racer name, 級別：X.
+  female_ids.update(re.findall(r'(?<!\\d)([3-5]\\d{3})(?!\\d)(?=.{0,80}級別)',txt))
+ print(f'official_female_registry={len(female_ids)} source={base}')
+ if len(female_ids)!=287:
+  raise RuntimeError(f'BOAT RACE official female registry count mismatch: {len(female_ids)} != 287')
  needed=set()
  for code in z.race_code:
   rr=cards.get(code,{})
