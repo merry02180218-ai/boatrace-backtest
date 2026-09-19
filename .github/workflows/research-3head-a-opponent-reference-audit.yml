@@ -1,0 +1,20 @@
+name: research-3head-a-opponent-reference-audit
+on:
+  push:
+    paths:
+      - '.github/triggers/research-3head-a-opponent-reference-audit.txt'
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install pandas numpy scikit-learn requests
+      - run: cd research && python run_3head_a_opponent_reference_audit.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: research-3head-a-opponent-reference-audit
+          path: research/research_3head_a_opponent_reference_audit.json
