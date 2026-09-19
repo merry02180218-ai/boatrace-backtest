@@ -3447,3 +3447,10 @@ Status: HEAD4_20260919_LIVE_OPERATION_READY__VENUE_ORIGINAL_RECOVERY_PLUS_PARALL
 - Compare base120 / newfeature extension / combined156 on R, head4 rate, exact3, stake, payout, ROI, and mean head_prob.
 - Rationale: official BOAT RACE has run planned fields with 5 women + 1 man, so male>=2 avoids treating those as ordinary mixed competition.
 - Status: definition frozen for next audit; September outcomes remain outside historical fit/audit dataset.
+
+
+## BEFORE 2026-09-20 female mixed audit recovery
+- Stop scraping BOAT RACE official from Actions; rendered search results are not present in fetched HTML.
+- BoatraceCSV has registration numbers but no sex field.
+- Next: use a repository-local authoritative female registration-number master, then join locally; no name inference.
+- Audit definition remains boat4 female AND male_count>=2; September outcomes remain outside this historical audit.
