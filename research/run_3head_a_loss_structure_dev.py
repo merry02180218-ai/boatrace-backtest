@@ -34,6 +34,15 @@ def main():
  z=pd.concat(rows,ignore_index=True)
  if len(z)!=118 or int(z.y.sum())!=54: raise RuntimeError(f'frozen dev drift {len(z)}/{int(z.y.sum())}')
  stats=[stat(z,c) for c in FEATURES if c in z]
+ # Directly isolate the dominant failure mode: boat1 wins vs boat3 wins.
+ rw=pd.to_numeric(z.get('result_winner'),errors='coerce')
+ z13=z[(rw==1)|(rw==3)].copy(); z13['target3']=(pd.to_numeric(z13.result_winner,errors='coerce')==3).astype(int)
+ direct=[]
+ for c in FEATURES:
+  if c not in z13: continue
+  q=pd.to_numeric(z13[c],errors='coerce'); a=q[z13.target3==1].dropna(); b=q[z13.target3==0].dropna()
+  direct.append({'feature':c,'head3_n':len(a),'boat1win_n':len(b),'head3_median':float(a.median()) if len(a) else None,'boat1win_median':float(b.median()) if len(b) else None,'boat1_minus_head3':float(b.median()-a.median()) if len(a) and len(b) else None})
+ direct=sorted(direct,key=lambda r:abs(r['boat1_minus_head3'] or 0),reverse=True)
  # descriptive thresholds from development quantiles; report kept volume/head rate, not auto-adopt.
  tails=[]
  for c in FEATURES:
@@ -50,7 +59,7 @@ def main():
     tails.append({'feature':c,'op':op,'threshold':t,'n':n,'heads':h,'head_rate':h/n,'month_min_n':month_min})
  tails=sorted(tails,key=lambda r:(r['head_rate'],r['n']),reverse=True)
  out={'policy':{'A_frozen':True,'purchase_gate_min':.60,'development':['2025-11','2025-12','2026-01'],'march_used_for_selection':False,'september_2026_used':False},
- 'baseline':{'n':len(z),'heads':int(z.y.sum()),'head_rate':float(z.y.mean())},'feature_head_vs_loss':stats,'descriptive_tail_top40':tails[:40]}
+ 'baseline':{'n':len(z),'heads':int(z.y.sum()),'head_rate':float(z.y.mean()),'boat1_wins':int((rw==1).sum())},'boat3_vs_boat1_direct':direct,'feature_head_vs_loss':stats,'descriptive_tail_top40':tails[:40]}
  open('research_3head_a_loss_structure_dev.json','w').write(json.dumps(out,ensure_ascii=False,indent=2))
  print(json.dumps(out,ensure_ascii=False,indent=2))
 if __name__=='__main__':main()
