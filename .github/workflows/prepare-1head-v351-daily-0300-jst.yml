@@ -59,6 +59,13 @@ jobs:
           json.dump({'date':os.environ['ISO_DATE'],'candidate_R':len(rows),'card_source':'BOATRACE_BIYORI_RETRY','result_or_payout_used':False,'chronology_guard':True},open('/tmp/daily/pre_candidates_meta.json','w'),indent=2)
           print(f"PRE_SUMMARY_R={len(rows)}")
           PY
+      - name: Build unified 1HEAD PRE feed
+        run: |
+          python build_1head_unified_pre_feed.py \
+            --date "$DATE" --cache-dir /tmp/daily \
+            --run-id "$GITHUB_RUN_ID" --artifact "v351-1head-live-cache-$DATE" \
+            --out /tmp/daily/unified_1head_pre_feed.json
+
       - uses: actions/upload-artifact@v4
         with:
           name: v351-1head-live-cache-${{ env.DATE }}
