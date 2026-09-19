@@ -3210,3 +3210,13 @@ LIVE workflow: `.github/workflows/chat-live-1head-v351-request.yml`。pushでrac
 - Add per-race expansion Shadow JSON to manual/chat LIVE artifacts.
 - Validate with result-blind saved LIVE input where possible; do not read race outcome/payout.
 - September outcomes/payouts remain UNREAD. Production/official stake unchanged.
+
+
+## BEFORE — 2026-09-19 finished PRE candidates retrospective LIVE replay
+- User asked how today's completed 1HEAD targets performed.
+- Completed PRE targets at current time: Amagasaki12 (202609191312), Toda12 (202609190212), Heiwajima12 (202609190412).
+- Public race outcomes will be used only after replay for reporting, not as model inputs.
+- Replay each race from frozen 2026-09-19 all-race cache + official/Boatcast exhibition data using current causal exhibition gate/finalizer.
+- Bypass only the wall-clock expiry guard because races have finished; do not read result/payout in replay.
+- Goal: distinguish PRE-candidate miss from post-exhibition DROP vs formal PASS.
+- Production unchanged.
