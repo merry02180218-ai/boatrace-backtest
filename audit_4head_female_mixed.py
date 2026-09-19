@@ -34,48 +34,17 @@ def main():
  def reg(r,b):
   return str(r.get(f'艇{b}_登録番号','')).strip().replace('.0','')
 
- # Build female registry locally from known women-only meetings in BoatraceCSV.
- # These meetings are official Venus / All-Ladies / Ladies Championship dates.
- women_meetings=[
-  ('20260401','20260406','22'), # 福岡 Venus 1
-  ('20260408','20260413','23'), # 唐津 All Ladies
-  ('20260415','20260420','09'), # 津 Venus 2
-  ('20260422','20260427','20'), # 若松 All Ladies
-  ('20260429','20260504','14'), # 鳴門 All Ladies
-  ('20260505','20260510','15'), # 丸亀 Ladies All Stars
-  ('20260512','20260517','07'), # 蒲郡 Venus 3
-  ('20260518','20260523','18'), # 徳山 All Ladies
-  ('20260524','20260529','24'), # 大村 Venus 4
-  ('20260530','20260604','05'), # 多摩川 All Ladies
-  ('20260606','20260611','15'), # 丸亀 Venus 5
-  ('20260612','20260617','22'), # 福岡 All Ladies
-  ('20260618','20260623','02'), # 戸田 Venus 6
-  ('20260624','20260629','12'), # 住之江 Venus 7
-  ('20260707','20260712','11'), # びわこ Venus 8
-  ('20260713','20260718','13'), # 尼崎 All Ladies
-  ('20260719','20260724','01'), # 桐生 All Ladies
-  ('20260725','20260730','04'), # 平和島 Venus 9
-  ('20260731','20260805','19'), # 下関 All Ladies
-  ('20260806','20260811','18'), # 徳山 Ladies Championship
-  ('20260812','20260817','24'), # 大村 All Ladies
-  ('20260818','20260823','16'), # 児島 Venus 10
-  ('20260824','20260829','10'), # 三国 Venus 11
-  ('20260830','20260831','06'), # 浜名湖 All Ladies (Aug portion)
- ]
- from datetime import datetime,timedelta
- female_ids=set()
- for ds,de,jcd in women_meetings:
-  d=datetime.strptime(ds,'%Y%m%d'); e=datetime.strptime(de,'%Y%m%d')
-  while d<=e:
-   day=d.strftime('%Y%m%d'); f=root/'data/programs/race_cards'/day[:4]/day[4:6]/f'{day[6:8]}.csv'
-   if f.exists():
-    with f.open(encoding='utf-8-sig',newline='') as fh:
-     for rr in csv.DictReader(fh):
-      code=rc(rr.get('レースコード',''))
-      if code[8:10]==jcd:
-       female_ids.update(x for x in (reg(rr,b) for b in range(1,7)) if len(x)==4 and x.isdigit())
-   d+=timedelta(days=1)
- if len(female_ids)<100: raise RuntimeError(f'women-only BoatraceCSV registry too small: {len(female_ids)}')
+ # Build the female registry directly from Ladies Information's current racer directory.
+ # The directory is explicitly the all-female racer directory and exposes registration numbers.
+ import requests,re
+ url='https://www.ladies-info.jp/list/'
+ html=requests.get(url,timeout=30,headers={'User-Agent':'Mozilla/5.0'}).text
+ # Registration numbers are four digits; constrain extraction to racer-profile/list markup around current directory.
+ female_ids=set(re.findall(r'(?<!\\d)([3-5]\\d{3})(?!\\d)',html))
+ # Fail closed: never silently fall back to "not female = male" with an implausible registry.
+ if not (270 <= len(female_ids) <= 310):
+  raise RuntimeError(f'Ladies Information female registry count implausible: {len(female_ids)} (expected around 287)')
+ print(f'ladies_info_registry={len(female_ids)} source={url}')
  needed=set()
  for code in z.race_code:
   rr=cards.get(code,{})
