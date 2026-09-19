@@ -1,0 +1,142 @@
+name: replay-1head-20260919-finished-targets
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/replay-1head-20260919-finished-targets.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q requests beautifulsoup4 lxml numpy pandas scipy 'scikit-learn==1.6.1'
+
+      - name: Download frozen 20260919 all-race cache
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          NAME="v351-1head-live-cache-20260919"
+          ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=$NAME&per_page=20" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id')
+          test -n "$ID" && test "$ID" != null
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$ID/zip" > /tmp/cache.zip
+          mkdir -p /tmp/cache
+          unzip -q /tmp/cache.zip -d /tmp/cache
+          echo "CACHE_ARTIFACT_ID=$ID" >> "$GITHUB_ENV"
+
+      - name: Replay result-blind exhibition and finalizer
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/replay
+          python - <<'PY'
+          import hashlib,json,os,subprocess,sys
+          from pathlib import Path
+          import requests
+          import run_20260911_3head_v288_live as live3
+          import run_v326_1head_ticketaware_exhibition as v326
+
+          UA={'User-Agent':'Mozilla/5.0'}
+          ORIG_REQUIRED={
+              1:('avg','turn','straight'),2:('avg','turn','straight'),3:(),
+              4:('avg','turn','straight'),5:('avg','turn','straight'),6:('avg','turn','straight'),
+              7:('avg','turn','straight'),8:('avg','turn','straight'),9:(),
+              10:('avg','turn','straight'),11:('avg','turn','straight'),12:('avg','turn'),
+              13:('avg','turn'),14:('avg','turn','straight'),15:('avg','turn','straight'),
+              16:('avg','turn','straight'),17:('avg','turn','straight'),18:('avg','turn'),
+              19:('avg','turn','straight'),20:('avg','turn','straight'),21:('avg','turn','straight'),
+              22:('avg','turn','straight'),23:('avg','turn','straight'),24:('avg','turn','straight')}
+          AUDIT_KEY={'avg':'orig_avg_all6','turn':'orig_turn_all6','straight':'orig_straight_all6'}
+          targets=[
+              ('202609191312','2026-09-19T16:23:00+09:00'),
+              ('202609190212','2026-09-19T16:35:00+09:00'),
+              ('202609190412','2026-09-19T16:40:00+09:00'),
+          ]
+          def get(url):
+              r=requests.get(url,headers=UA,timeout=15);r.raise_for_status()
+              return r.content.decode('utf-8',errors='replace')
+
+          summary=[]
+          for code,deadline in targets:
+              jcd=int(code[8:10]); race=int(code[10:12]); jo=f'{jcd:02d}'; rr=f'{race:02d}'
+              d=Path('/tmp/replay')/code; d.mkdir(parents=True,exist_ok=True)
+              basep=Path('/tmp/cache')/f'{code}.json'
+              if not basep.exists(): raise RuntimeError(f'missing base {code}')
+              base=json.load(open(basep))
+              assert base['result_or_payout_used'] is False and base['chronology_guard'] is True
+
+              urls={
+                'tkz':f'https://race.boatcast.jp/hp_txt/{jo}/bc_j_tkz_20260919_{jo}_{rr}.txt',
+                'stt':f'https://race.boatcast.jp/hp_txt/{jo}/bc_j_stt_20260919_{jo}_{rr}.txt',
+                'orig':f'https://race.boatcast.jp/txt/{jo}/bc_oriten_20260919_{jo}_{rr}.txt'}
+              bodies={k:get(u) for k,u in urls.items()}
+              tkz=live3.parse_tkz(bodies['tkz'],code)[code]
+              stt=live3.parse_stt(bodies['stt'],code)[code]
+              orig=live3.parse_orig(bodies['orig'],code)[code]
+              audit=v326.raw_completeness(tkz,stt,orig)
+              req_orig=ORIG_REQUIRED[jcd]
+              req_keys=['tkz_all6','stt_all6']+[AUDIT_KEY[x] for x in req_orig]
+              ready=all(audit.get(k,False) for k in req_keys)
+              probe={'race_code':code,'ready':bool(ready),'required_orig':list(req_orig),
+                     'required_audit_keys':req_keys,'audit':audit,
+                     'sha256':{k:hashlib.sha256(v.encode()).hexdigest() for k,v in bodies.items()},
+                     'tkz':tkz,'stt':stt,'orig':orig,
+                     'result_or_payout_used':False}
+              json.dump(probe,open(d/'probe.json','w'),ensure_ascii=False,indent=2)
+              if not ready: raise RuntimeError(f'exhibition not ready {code} {audit}')
+
+              subprocess.run([
+                 sys.executable,'run_1head_v351_live_exhibition_gate.py',
+                 '--probe',str(d/'probe.json'),
+                 '--base',str(basep),
+                 '--history-cutoff',str(base['training_cutoff']),
+                 '--out',str(d/'gate.json')],check=True)
+              gate=json.load(open(d/'gate.json'))
+              assert gate['result_or_payout_used'] is False and gate['chronology_guard'] is True
+              fin=dict(base)
+              fin.update({
+                 'deadline_jst':deadline,'exhibition_ready':True,
+                 'head_exhibition_pass':bool(gate['head_exhibition_pass']),
+                 'corrected_ex':gate['corrected_ex'],'corrected_st':gate['corrected_st'],
+                 'corrected_straight':gate['corrected_straight'],
+                 'corrected_orig_avg':gate['corrected_orig_avg'],
+                 'exhibition_hashes':gate['exhibition_hashes'],
+                 'result_or_payout_used':False,'chronology_guard':True})
+              json.dump(fin,open(d/'final_input.json','w'),ensure_ascii=False,indent=2)
+              subprocess.run([
+                 sys.executable,'run_1head_v351_live_finalize.py',
+                 '--input',str(d/'final_input.json'),
+                 '--out',str(d/'final.json')],check=True)
+              f=json.load(open(d/'final.json'))
+              assert f['result_or_payout_used'] is False and f['chronology_guard'] is True
+              summary.append({
+                'race_code':code,'formal_status':f['status'],
+                'attention_level':f['attention_level'],
+                'final_head_p':f['final_head_p'],'opp_mass':f['opp_mass'],
+                'head_exhibition_pass':f['head_exhibition_pass'],
+                'tickets':f['tickets'],
+                'wall3_applied':f['wall3_ticket_applied'],
+                'five6_applied':f['five6_ticket_applied'],
+                'result_or_payout_used':False})
+          json.dump({'cache_artifact_id':os.environ.get('CACHE_ARTIFACT_ID'),
+                     'targets':summary,'result_or_payout_used':False,
+                     'chronology_guard':True,'PRODUCTION_CHANGED':False},
+                    open('/tmp/replay/summary.json','w'),ensure_ascii=False,indent=2)
+          print(json.dumps(summary,ensure_ascii=False,indent=2))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: replay-1head-20260919-finished-targets-${{ github.run_id }}
+          path: /tmp/replay/
+          retention-days: 30
