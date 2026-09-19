@@ -8,7 +8,7 @@ from zoneinfo import ZoneInfo
 
 JST=ZoneInfo("Asia/Tokyo")
 SAFETY_SECONDS=75
-ALLOWED_MODELS={"1HEAD","4HEAD"}
+MODEL_KEY_RE = __import__("re").compile(r"^[1-6]HEAD$")
 
 def parse_now(v):
     if not v:return datetime.now(JST)
@@ -22,7 +22,7 @@ def resolve(z,now,completed=None):
         return {"date":day,"now_jst":now.isoformat(),"count":0,"include":[],"reason":"date_mismatch:"+str(z.get("date"))}
     for t in z.get("targets",[]):
         model=str(t["model"]).upper()
-        if model not in ALLOWED_MODELS: raise ValueError("unsupported model "+model)
+        if not MODEL_KEY_RE.match(model): raise ValueError("unsupported model key "+model)\n        adapter=str(t.get("adapter") or model.lower())
         hh,mm=map(int,str(t["deadline_jst"]).split(":"))
         dl=now.replace(hour=hh,minute=mm,second=0,microsecond=0)
         start=dl-timedelta(minutes=float(t.get("watch_minutes_before",35)))
@@ -30,7 +30,7 @@ def resolve(z,now,completed=None):
         jcd=f'{int(t["jcd"]):02d}'; race=int(t["race"])
         artifact=str(t.get("artifact_name") or f'head-live-{model.lower()}-{day}-{jcd}-{race}')
         if artifact in completed:continue
-        x=dict(t); x.update(model=model,target_date=day,jcd=jcd,race=race,
+        x=dict(t); x.update(model=model,adapter=adapter,target_date=day,jcd=jcd,race=race,
           race_code=str(t.get("race_code") or f"{day}{jcd}{race:02d}"),artifact_name=artifact)
         out.append(x)
     out.sort(key=lambda x:(x["deadline_jst"],x["model"],x["jcd"],x["race"]))
