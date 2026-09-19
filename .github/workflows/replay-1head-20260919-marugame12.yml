@@ -1,0 +1,131 @@
+name: replay-1head-20260919-marugame12
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/replay-1head-20260919-marugame12.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q requests beautifulsoup4 lxml numpy pandas scipy 'scikit-learn==1.6.1'
+
+      - name: Download frozen 20260919 cache
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          ID=10563970683
+          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$ID/zip" > /tmp/cache.zip
+          mkdir -p /tmp/cache
+          unzip -q /tmp/cache.zip -d /tmp/cache
+          test -f /tmp/cache/202609191512.json
+          echo "CACHE_ARTIFACT_ID=$ID" >> "$GITHUB_ENV"
+
+      - name: Replay Marugame12 result-blind
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/replay
+          python - <<'PY'
+          import hashlib,json,os,subprocess,sys
+          from pathlib import Path
+          import requests
+          import run_20260911_3head_v288_live as live3
+          import run_v326_1head_ticketaware_exhibition as v326
+
+          code='202609191512'; jcd=15; race=12; jo='15'; rr='12'
+          deadline='2026-09-19T20:45:00+09:00'
+          basep=Path('/tmp/cache')/f'{code}.json'
+          b=json.load(open(basep))
+          assert b['result_or_payout_used'] is False and b['chronology_guard'] is True
+
+          UA={'User-Agent':'Mozilla/5.0'}
+          def get(url):
+              r=requests.get(url,headers=UA,timeout=15); r.raise_for_status()
+              return r.content.decode('utf-8',errors='replace')
+
+          urls={
+            'tkz':f'https://race.boatcast.jp/hp_txt/{jo}/bc_j_tkz_20260919_{jo}_{rr}.txt',
+            'stt':f'https://race.boatcast.jp/hp_txt/{jo}/bc_j_stt_20260919_{jo}_{rr}.txt',
+            'orig':f'https://race.boatcast.jp/txt/{jo}/bc_oriten_20260919_{jo}_{rr}.txt'}
+          bodies={k:get(u) for k,u in urls.items()}
+          tkz=live3.parse_tkz(bodies['tkz'],code)[code]
+          stt=live3.parse_stt(bodies['stt'],code)[code]
+          orig=live3.parse_orig(bodies['orig'],code)[code]
+          audit=v326.raw_completeness(tkz,stt,orig)
+          req=['tkz_all6','stt_all6','orig_avg_all6','orig_turn_all6','orig_straight_all6']
+          ready=all(audit.get(k,False) for k in req)
+          probe={'race_code':code,'ready':bool(ready),'required_orig':['avg','turn','straight'],
+                 'required_audit_keys':req,'audit':audit,
+                 'sha256':{k:hashlib.sha256(v.encode()).hexdigest() for k,v in bodies.items()},
+                 'tkz':tkz,'stt':stt,'orig':orig,'result_or_payout_used':False}
+          json.dump(probe,open('/tmp/replay/probe.json','w'),ensure_ascii=False,indent=2)
+          if not ready: raise RuntimeError(f'exhibition not ready {audit}')
+
+          subprocess.run([sys.executable,'run_1head_v351_live_exhibition_gate.py',
+              '--probe','/tmp/replay/probe.json','--base',str(basep),
+              '--history-cutoff',str(b['training_cutoff']),'--out','/tmp/replay/gate.json'],check=True)
+          g=json.load(open('/tmp/replay/gate.json'))
+          assert g['result_or_payout_used'] is False and g['chronology_guard'] is True
+
+          fin=dict(b)
+          fin.update({'deadline_jst':deadline,'exhibition_ready':True,
+              'head_exhibition_pass':bool(g['head_exhibition_pass']),
+              'corrected_ex':g['corrected_ex'],'corrected_st':g['corrected_st'],
+              'corrected_straight':g['corrected_straight'],
+              'corrected_orig_avg':g['corrected_orig_avg'],
+              'exhibition_hashes':g['exhibition_hashes'],
+              'result_or_payout_used':False,'chronology_guard':True})
+          json.dump(fin,open('/tmp/replay/final_input.json','w'),ensure_ascii=False,indent=2)
+
+          subprocess.run([sys.executable,'run_1head_v351_live_finalize.py',
+              '--input','/tmp/replay/final_input.json','--out','/tmp/replay/final.json'],check=True)
+
+          subprocess.run([sys.executable,'run_1head_v351_live_expansion_shadow.py','judge',
+              '--input','/tmp/replay/final_input.json','--formal','/tmp/replay/final.json',
+              '--out','/tmp/replay/expansion_shadow.json'],check=True)
+
+          f=json.load(open('/tmp/replay/final.json'))
+          e=json.load(open('/tmp/replay/expansion_shadow.json'))
+          assert f['result_or_payout_used'] is False and e['result_or_payout_used'] is False
+          out={'race_code':code,'base':{'final_head_p':b['final_head_p'],'opp_mass':b['opp_mass']},
+               'gate':{'head_exhibition_pass':g['head_exhibition_pass'],
+                       'corrected_ex':g['corrected_ex'],'corrected_st':g['corrected_st'],
+                       'corrected_straight':g['corrected_straight'],
+                       'corrected_orig_avg':g['corrected_orig_avg']},
+               'formal':f,'expansion_shadow':e,
+               'result_or_payout_used':False,'chronology_guard':True,'PRODUCTION_CHANGED':False}
+          json.dump(out,open('/tmp/replay/summary.json','w'),ensure_ascii=False,indent=2)
+          print(json.dumps({
+             'race_code':code,
+             'formal_status':f['status'],'formal_attention':f['attention_level'],
+             'head_p':f['final_head_p'],'mass':f['opp_mass'],
+             'exhibition_pass':f['head_exhibition_pass'],'formal_tickets':f['tickets'],
+             'expansion_status':e['status'],'expansion_active':e['active'],
+             'expansion_tickets':e.get('tickets',[]),
+             'candidate_tickets':e.get('candidate_tickets',[]),
+             'consensus_score':e.get('consensus_score'),
+             'consensus_threshold':e.get('consensus_threshold'),
+             'wall3_applied':e.get('wall3_applied'),
+             'five6_applied':e.get('five6_applied'),
+             'result_or_payout_used':False
+          },ensure_ascii=False,indent=2))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: replay-1head-marugame12-${{ github.run_id }}
+          path: /tmp/replay/
+          retention-days: 30
