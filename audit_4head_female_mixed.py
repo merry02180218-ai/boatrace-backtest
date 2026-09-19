@@ -34,23 +34,23 @@ def main():
  def reg(r,b):
   return str(r.get(f'艇{b}_登録番号','')).strip().replace('.0','')
 
- # Resolve only registration numbers actually needed by the 208R universe.
+ # Resolve gender in one official request, then join locally by BoatraceCSV registration number.
+ import urllib.request, re
+ url='https://www.boatrace.jp/owpc/pc/data/racersearch/result?prevpgid=TDAT320&sexval=2'
+ try:
+  html=urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'}),timeout=30).read().decode('utf-8','ignore')
+ except Exception as e:
+  raise RuntimeError(f'official female registry fetch failed: {e}')
+ female_ids=set(re.findall(r'(?<!\\d)([3-5]\\d{3})(?!\\d)',html))
+ if len(female_ids)<200: raise RuntimeError(f'official female registry parse too small: {len(female_ids)}')
  needed=set()
  for code in z.race_code:
   r=cards.get(code,{})
   needed.update(x for x in (reg(r,b) for b in range(1,7)) if len(x)==4 and x.isdigit())
- import urllib.parse, urllib.request, re
- for rid in sorted(needed):
-  url='https://www.boatrace.jp/owpc/pc/data/racersearch/result?prevpgid=TDAT320&toban_left='+urllib.parse.quote(rid)
-  try:
-   html=urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0'}),timeout=15).read().decode('utf-8','ignore')
-  except Exception as e:
-   raise RuntimeError(f'official racer lookup failed {rid}: {e}')
-  if rid not in html: raise RuntimeError(f'official racer lookup missing registration {rid}')
-  all_ids.add(rid)
-  # Official result marks female racers with a female icon/alt in the result row.
-  if re.search(r'(女子|female|woman|lady|icon[^"\']*female|alt=["\'][^"\']*女子)',html,re.I): female_ids.add(rid)
- print(f'official_registry_needed={len(needed)} resolved={len(all_ids)} female={len(female_ids)}')
+ all_ids=set(needed)
+ print(f'official_female_registry={len(female_ids)} needed_racers={len(needed)}')
+ def male(x): return x=='男'
+ def female(x): return x=='女'
  def enrich(q):
   q=q.copy(); vals=[]
   for code in q.race_code:
