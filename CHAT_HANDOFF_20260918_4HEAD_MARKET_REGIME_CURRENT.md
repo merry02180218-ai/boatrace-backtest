@@ -3468,3 +3468,13 @@ Status: HEAD4_20260919_LIVE_OPERATION_READY__VENUE_ORIGINAL_RECOVERY_PLUS_PARALL
 - Conclusion agreed with user: do NOT add a sex/gender correction, bonus, or exclusion to the current 4-head model. Preserve the female-mixed data for future re-audit only; sample n=5 is too small for model change.
 - September outcomes remained UNREAD in this historical audit (SEPTEMBER_OUTCOMES_READ=false).
 - Status: FEMALE_MIXED_DATA_SAVED__NO_MODEL_CHANGE.
+
+
+## BEFORE 2026-09-20 1HEAD + 4HEAD LIVE integration
+- User approved integration direction.
+- Preserve model logic independently: 1HEAD production thresholds/gates remain 1HEAD-owned; 4HEAD remains HEAD4_NEWFEATURE_FIXED156_V1 threshold 12.293333333333333.
+- Reuse 4HEAD operational pattern for both models: daily PRE/watchlist, deadline ordering, 5-minute watchdog, all-active-target resolver, per-race matrix jobs, max-parallel 8, artifact idempotency, fast exhibition acquisition, current odds, BET/SKIP output and notification.
+- Do NOT merge training/features/thresholds between head models.
+- First implementation target: a model-tagged common watchlist/resolver contract that can carry 1HEAD and 4HEAD targets while dispatching to model-specific finalizers.
+- Preserve result-blind chronology guards and existing September outcome-read boundaries.
+- Status: UNIFIED_LIVE_IMPLEMENTATION_STARTED.
