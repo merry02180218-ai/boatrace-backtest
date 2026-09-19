@@ -22,7 +22,8 @@ def resolve(z,now,completed=None):
         return {"date":day,"now_jst":now.isoformat(),"count":0,"include":[],"reason":"date_mismatch:"+str(z.get("date"))}
     for t in z.get("targets",[]):
         model=str(t["model"]).upper()
-        if not MODEL_KEY_RE.match(model): raise ValueError("unsupported model key "+model)\n        adapter=str(t.get("adapter") or model.lower())
+        if not MODEL_KEY_RE.match(model): raise ValueError("unsupported model key "+model)
+        adapter=str(t.get("adapter") or model.lower())
         hh,mm=map(int,str(t["deadline_jst"]).split(":"))
         dl=now.replace(hour=hh,minute=mm,second=0,microsecond=0)
         start=dl-timedelta(minutes=float(t.get("watch_minutes_before",35)))
