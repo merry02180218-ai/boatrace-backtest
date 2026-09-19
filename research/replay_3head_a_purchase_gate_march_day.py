@@ -7,6 +7,8 @@ import sys
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
 import joblib,pandas as pd
+from collections import defaultdict
+from run_3head_wave19_motor_exhibition_gate import new_motor, update_motor, motor_summary, rank_map, actual_st_by_boat, ival
 
 import analyze_v242_3head_target_comp3_min5_max10 as v242
 import run_20260911_3head_v288_live as prod
@@ -30,6 +32,29 @@ def main():
     origm=base.bycode(rows(f'data/previews/original_exhibition/{ymd}.csv'))
     odm=base.bycode(rows(f'data/previews/od3/{ymd}.csv'))
     official=base.official_closing_odds(day)
+    # Rebuild the purchase-gate motor state exactly as the development research:
+    # same MOTOR_START, same prior-day snapshot rule, same EWMA update.
+    state=defaultdict(new_motor);global_venue=defaultdict(new_motor)
+    hist_days=pd.date_range('2025-07-01', day-pd.Timedelta(days=1))
+    for hd in hist_days:
+        hy=hd.strftime('%Y/%m/%d')
+        try:
+            cards=base.bycode(rows(f'data/programs/race_cards/{hy}.csv'))
+            results=base.bycode(rows(f'data/results/realtime/{hy}.csv'))
+        except Exception:
+            cards={};results={}
+        for hcode,rr in results.items():
+            rc=cards.get(hcode)
+            if rc is None:continue
+            venue=str(rc.get('レース場コード','')).zfill(2)
+            rm=rank_map(rr);stm=actual_st_by_boat(rr)
+            for b in range(1,7):
+                mid=ival(rc.get(f'艇{b}_モーター番号'))
+                if mid is None:continue
+                er=rm.get(b);est=stm.get(b,float('nan'))
+                update_motor(state[(venue,mid)],er,est,hd)
+                update_motor(global_venue[venue],er,est,hd)
+    today_cards=base.bycode(rows(f'data/programs/race_cards/{ymd}.csv'))
     cur=z['current_rows'];decisions=[]
 
     for code in codes:
@@ -50,7 +75,15 @@ def main():
             rec['error_type']='input_missing';rec['error']=f'odds incomplete {len(odds)}/120';decisions.append(rec);continue
         try:
             r=prod.update_current_features(q.iloc[0],{code:tkzm[code]},{code:sttm[code]},{code:origrow},z['st_bias'])
-            gate_val=pd.to_numeric(pd.Series([r.get(PURCHASE_GATE_COL)]),errors='coerce').iloc[0]
+            rc=today_cards.get(code)
+            if rc is None: raise RuntimeError('missing race card for purchase motor gate')
+            venue=str(rc.get('レース場コード','')).zfill(2)
+            per={}
+            for b in range(1,4):
+                mid=ival(rc.get(f'艇{b}_モーター番号'))
+                ms=state[(venue,mid)] if mid is not None else new_motor()
+                per[b]=motor_summary(ms,global_venue[venue],day)
+            gate_val=((per[1]['ewma_rank']+per[2]['ewma_rank'])/2)-per[3]['ewma_rank']
             rec['purchase_gate_col']=PURCHASE_GATE_COL
             rec['purchase_gate_min']=PURCHASE_GATE_MIN
             rec['purchase_gate_value']=None if pd.isna(gate_val) else float(gate_val)
