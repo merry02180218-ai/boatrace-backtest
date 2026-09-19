@@ -79,6 +79,7 @@ jobs:
         run: |
           mkdir -p all_days
           gh run download "${{ github.run_id }}" --repo "${{ github.repository }}" --pattern 'a-purchase-march-*' --dir all_days || true
+          find all_days -type f -maxdepth 5 -print
       - run: python research/aggregate_3head_a_pair_only_march.py --root all_days --out research_3head_a_purchase_gate_march_summary.json
       - uses: actions/upload-artifact@v4
         if: always()
