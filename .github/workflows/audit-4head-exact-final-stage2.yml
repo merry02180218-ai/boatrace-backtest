@@ -15,10 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: {python-version: '3.11'}
+        with:
+          python-version: '3.11'
       - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
       - name: Download exact parent exhibition
-        env: {GH_TOKEN: ${{ github.token }}}
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p s1
           gh run download 35486864940 -n head4-exact-final-replay-stage1 -D s1
