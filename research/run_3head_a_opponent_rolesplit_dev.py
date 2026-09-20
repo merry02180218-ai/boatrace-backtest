@@ -74,6 +74,21 @@ def role_order(r,m,role,sec=0):
   p=float(m.predict_proba(candidate_vec(r,b,role,sec).reshape(1,-1))[0,1]);z.append((p,b))
  return sorted(z,key=lambda q:(-q[0],q[1]))
 
+def hybrid_order(r,sm,direct,alpha):
+ # V221 direct-pair probability remains the base; SECOND role probability is a bounded reranking prior.
+ # alpha=0 exactly reproduces V221 ordering. No current-month outcomes/odds enter this score.
+ ss=dict((b,p) for p,b in role_order(r,sm,'SECOND'))
+ z=[]
+ for s in OPP:
+  for t in OPP:
+   if s==t:
+    continue
+   pdirect=float(direct.predict_proba(np.asarray([v221.pairvec(r,s,t,True)],float))[0,1])
+   score=np.log(max(pdirect,1e-12))+float(alpha)*np.log(max(ss[s],1e-12))
+   z.append((score,s,t))
+ z.sort(key=lambda q:(-q[0],q[1],q[2]))
+ return z
+
 def pair_order(r,sm,tm):
  ss=role_order(r,sm,'SECOND');z=[]
  for ps,s in ss:
@@ -131,6 +146,7 @@ def main():
   selected[k]=set(str(int(x)).zfill(12) for x in q.loc[m,'rc'])
  if sum(map(len,selected.values()))!=118:raise RuntimeError('adopted cohort drift')
  rec=[]
+ alphas=[0.0,0.15,0.30,0.50,0.75,1.0]
  for mon in MONTHS:
   first=pd.Timestamp(mon+'-01');nextm=first+pd.offsets.MonthBegin(1);tr=d[d._date<first]
   parsed_train=tr.actual_combo.map(combo); audit_mask=parsed_train.map(lambda a: bool(isinstance(a,(list,tuple)) and len(a)==3 and a[0]==3)); audit_n=int(audit_mask.astype('int64').sum()); print('train_audit',mon,len(tr),audit_n,flush=True)
@@ -142,7 +158,10 @@ def main():
    ss=role_order(r,sm,'SECOND');tt=role_order(r,tm,'THIRD',a[1]);po=pair_order(r,sm,tm)
    sr,trr,pr=ranks((a[1],a[2]),ss,tt,po)
    vo=v221.order(r,direct,True);actual=f'3-{a[1]}-{a[2]}';vr=vo.index(actual)+1
-   rec.append({'month':mon,'race_code':str(r.race_code).zfill(12),'second':a[1],'third':a[2],'second_rank':sr,'third_rank_cond_actual_second':trr,'pair_rank_factorized':pr,'pair_rank_v221':vr})
+   hr={}
+   for aa in alphas:
+    ho=hybrid_order(r,sm,direct,aa); hr[f'hybrid_rank_a{aa:.2f}']=next(i+1 for i,(_,s,t) in enumerate(ho) if s==a[1] and t==a[2])
+   rec.append({'month':mon,'race_code':str(r.race_code).zfill(12),'second':a[1],'third':a[2],'second_rank':sr,'third_rank_cond_actual_second':trr,'pair_rank_factorized':pr,'pair_rank_v221':vr,**hr})
  z=pd.DataFrame(rec)
  if len(z)<20:raise RuntimeError(f'Dec-Jan head-win evaluation unexpectedly small: {len(z)}')
  print('eval_audit',{'months':MONTHS,'head_wins':int(len(z)),'nov_role_split':'NOT_EVALUATED_COLD_START_NO_PRIOR_FEATURE_FRAME'},flush=True)
@@ -151,8 +170,11 @@ def main():
    'third_top1':float((g.third_rank_cond_actual_second<=1).mean()),'third_top2':float((g.third_rank_cond_actual_second<=2).mean()),
    **{f'factor_pair_top{k}':float((g.pair_rank_factorized<=k).mean()) for k in [1,2,4,6,10]},
    **{f'v221_pair_top{k}':float((g.pair_rank_v221<=k).mean()) for k in [1,2,4,6,10]}}
+ hybrid={}
+ for aa in alphas:
+  col=f'hybrid_rank_a{aa:.2f}'; hybrid[f'a{aa:.2f}']={f'top{k}':float((z[col]<=k).mean()) for k in [1,2,4,6,10]}
  out={'policy':{'head_purchase':'A+.60 frozen','selection_months':MONTHS,'nov_policy':'cold-start excluded from role-split selection; no leakage/fabricated prior training','march_used':False,'sep2026_used':False,'odds_used':False},
-      'overall':met(z),'monthly':{m:met(g) for m,g in z.groupby('month')},'rows':z.to_dict('records')}
+      'overall':met(z),'hybrid':hybrid,'monthly':{m:met(g) for m,g in z.groupby('month')},'rows':z.to_dict('records')}
  open('research_3head_a_opponent_rolesplit_dev.json','w').write(json.dumps(out,ensure_ascii=False,indent=2))
  z.to_csv('research_3head_a_opponent_rolesplit_dev.csv',index=False)
  # Error decomposition: isolate whether losses originate in SECOND, conditional THIRD, or factorized ordering.
