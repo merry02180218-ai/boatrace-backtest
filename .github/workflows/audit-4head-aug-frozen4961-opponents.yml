@@ -7,7 +7,7 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
-      - run: pip install -q pandas numpy scikit-learn requests beautifulsoup4 scipy
+      - uses: actions/checkout@v4\n        with:\n          repository: BoatraceCSV/boatracecsv.github.io\n          path: brcsv\n          fetch-depth: 1\n          sparse-checkout: |\n            data/programs/race_cards/2026/03\n            data/programs/race_cards/2026/04\n            data/programs/race_cards/2026/05\n            data/programs/race_cards/2026/06\n            data/programs/race_cards/2026/07\n            data/programs/race_cards/2026/08\n            data/results/realtime/2026/03\n            data/results/realtime/2026/04\n            data/results/realtime/2026/05\n            data/results/realtime/2026/06\n            data/results/realtime/2026/07\n            data/results/realtime/2026/08\n      - run: pip install -q pandas numpy scikit-learn requests beautifulsoup4 scipy
       - name: Download strict August universe
         env: {GH_TOKEN: "${{ github.token }}"}
         run: |
@@ -20,8 +20,8 @@ jobs:
           mkdir -p v93
           gh run download 35487172647 -n head4-v93-all-parent -D v93
           echo "V93_ROWS=$(find v93 -name v93_all_parent.csv | head -1)" >> "$GITHUB_ENV"
-      - run: python -m py_compile audit_4head_aug_frozen4961_opponents.py
-      - run: python audit_4head_aug_frozen4961_opponents.py
+      - run: python -m py_compile audit_4head_aug_frozen4961_opponents.py\n        env:\n          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+      - run: python audit_4head_aug_frozen4961_opponents.py\n        env:\n          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
       - uses: actions/upload-artifact@v4
         if: always()
         with:
