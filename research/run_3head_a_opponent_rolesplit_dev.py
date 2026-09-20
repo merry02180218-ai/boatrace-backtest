@@ -242,6 +242,29 @@ def main():
     'captured6_mean':float(vv[~s4d.tail6].mean()) if vv[~s4d.tail6].notna().any() else None}
   s4d.to_csv('research_3head_a_v221_second4_audit.csv',index=False)
  out['v221_second4_audit']=s4audit
+ # Descriptive rescue sweep only: never changes head/purchase cohort. Promote pairs with SECOND=4
+ # into Top6 when pre-settlement p4 turn signal clears a threshold; count added tickets and rescued true pairs.
+ rescue={}
+ if len(s4d):
+  # Evaluate across all 41 head-win rows so false additions are visible, not only actual SECOND=4 winners.
+  for th in [0.40,0.45,0.50,0.55,0.60]:
+   rescued=0; added=0; eligible=0
+   for _,r in z.iterrows():
+    src=d[d.race_code.astype(str).str.zfill(12)==str(r.race_code).zfill(12)]
+    if src.empty: continue
+    q=src.iloc[0]; turn=pd.to_numeric(pd.Series([v221.xtra(q,4,'vh_p12_turn')]),errors='coerce').iloc[0]
+    if pd.isna(turn) or turn<th: continue
+    eligible+=1
+    # candidate SECOND=4 pairs are 4-{1,2,5,6}; add only those currently outside V221 Top6.
+    actual=(int(r.second),int(r.third))
+    order=r['_v221_order'] if '_v221_order' in r.index else []
+    cand=[(4,t) for t in [1,2,5,6]]
+    outside=[p for p in cand if p not in order[:6]]
+    added+=len(outside)
+    if actual in outside: rescued+=1
+   rescue[f'turn_ge_{th:.2f}']={'eligible_races':eligible,'added_pair_slots':added,'rescued_true_pairs':rescued,
+    'rescues_per_added_slot':(rescued/added if added else 0.0)}
+ out['v221_second4_rescue_sweep']=rescue
  # Error decomposition: isolate whether losses originate in SECOND, conditional THIRD, or factorized ordering.
  dec={
   'second_top1_miss':int((z.second_rank>1).sum()),'second_top2_miss':int((z.second_rank>2).sum()),
