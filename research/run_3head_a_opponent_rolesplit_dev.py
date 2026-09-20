@@ -316,6 +316,33 @@ def main():
   protected[f'turn_ge_{th:.2f}']={'eligible_swaps':eligible,'base_hits':base,'rescued_hits':rescued,'lost_hits':lost,
    'net_hits':rescued-lost,'new_hits':nh,'new_top6_rate':nh/len(z),'rows':detail}
  out['v221_second4_fixed6_protected']=protected
+ # Diagnose protected-swap rescued vs lost cases using only pre-settlement canonical features.
+ # No new threshold is selected here; this is descriptive evidence for the next rule.
+ case_rows=[]
+ th=.50
+ for _,r in z.iterrows():
+  src=d[d.race_code.astype(str).str.zfill(12)==str(r.race_code).zfill(12)]
+  if src.empty: continue
+  q=src.iloc[0]; turn4=pd.to_numeric(pd.Series([v221.xtra(q,4,'vh_p12_turn')]),errors='coerce').iloc[0]
+  if pd.isna(turn4) or turn4<th: continue
+  vo=str(r['_v221_order']).split('|'); old=vo[:6]; actual=f"3-{int(r.second)}-{int(r.third)}"; oldhit=actual in old
+  cand=[x for x in vo if x.startswith('3-4-') and x not in old]; drop_idx=[i for i,x in enumerate(old) if not x.startswith('3-4-')]
+  if not cand or not drop_idx: continue
+  promoted=cand[0]; dropped=old[drop_idx[-1]]; new=list(old); new[drop_idx[-1]]=promoted; newhit=actual in new
+  label='RESCUED' if (not oldhit and newhit) else ('LOST' if (oldhit and not newhit) else 'NEUTRAL')
+  if label=='NEUTRAL': continue
+  def xf(boat,key): return v221.xtra(q,boat,key)
+  case_rows.append({'label':label,'race_code':r.race_code,'actual':actual,'promoted':promoted,'dropped':dropped,'turn4':float(turn4),
+   'p4_display':xf(4,'vh_p12_display'),'p4_turn':xf(4,'vh_p12_turn'),
+   'p1_display':xf(1,'vh_p12_display'),'p1_turn':xf(1,'vh_p12_turn'),
+   'p2_display':xf(2,'vh_p12_display'),'p2_turn':xf(2,'vh_p12_turn'),
+   'p5_display':xf(5,'vh_p12_display'),'p5_turn':xf(5,'vh_p12_turn'),
+   'p6_display':xf(6,'vh_p12_display'),'p6_turn':xf(6,'vh_p12_turn'),
+   'structure_3makuri':v221.ff(q.get('structure_3makuri'),v221.ff(q.get('score_3makuri'),.5)),
+   'structure_3makurizashi':v221.ff(q.get('structure_3makurizashi'),v221.ff(q.get('score_3makurizashi'),.5))})
+ cases=pd.DataFrame(case_rows)
+ if len(cases): cases.to_csv('research_3head_a_v221_protected_swap_cases.csv',index=False)
+ out['v221_second4_protected_case_audit']={'n':len(case_rows),'rows':case_rows}
  # Error decomposition: isolate whether losses originate in SECOND, conditional THIRD, or factorized ordering.
  dec={
   'second_top1_miss':int((z.second_rank>1).sum()),'second_top2_miss':int((z.second_rank>2).sum()),
