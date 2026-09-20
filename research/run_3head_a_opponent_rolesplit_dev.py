@@ -140,11 +140,16 @@ def main():
   x,res,audit=w20.build_pre_enhanced(a,b,True);rr[k]=(x,res)
  fr={k:w20.prep_month(x,res) for k,(x,res) in rr.items()};scores,_=w20.make_pre_scores(fr);days,cache=w20.prefetch_sources();post,_=w20.build_motor_exhibition(days,cache)
  selected={}
- for k in ['nov','dec','jan']:
+ for k in ['nov','dec','jan','feb']:
   q=scores[k].merge(post,on=['rc','date'],how='left',validate='one_to_one');rn=pd.to_numeric(q.race_no,errors='coerce');pre=pd.to_numeric(q.pre_score,errors='coerce')
   m=(rn>=1)&(rn<=12)&(pre>=.925)&ls.mask(q,ls.A['conds'])&(pd.to_numeric(q.post_motor_inner_rank_edge,errors='coerce')>=.60)
   selected[k]=set(str(int(x)).zfill(12) for x in q.loc[m,'rc'])
  cohort_counts={k:len(v) for k,v in selected.items()}; cohort_total=sum(cohort_counts.values()); print('cohort_audit',{'counts':cohort_counts,'total':cohort_total},flush=True)
+ # Feb is constructed with the already-frozen A+.60 rule for availability/count audit only. Do not read Feb outcomes here.
+ feb_q=scores['feb'].merge(post,on=['rc','date'],how='left',validate='one_to_one')
+ feb_codes=selected.get('feb',set())
+ feb_feature=d[(d._date>=pd.Timestamp('2026-02-01'))&(d._date<pd.Timestamp('2026-03-01'))&d.race_code.astype(str).str.zfill(12).isin(feb_codes)].copy()
+ print('feb_unread_audit',{'selected_codes':len(feb_codes),'feature_rows':len(feb_feature),'outcomes_read_for_opponent_rule':False},flush=True)
  # Upstream source snapshots can evolve. Preserve the frozen Dec/Jan evaluation race codes from the prior successful audit instead of aborting on unrelated Nov drift.
  # Hard-fail only if the actual Dec/Jan evaluation cohort changes from the frozen 41 head-win audit downstream; emit total drift diagnostically.
  if cohort_total!=118: print('WARNING adopted cohort reconstruction drift',{'expected_total':118,'actual_total':cohort_total},flush=True)
@@ -178,7 +183,7 @@ def main():
  for aa in alphas:
   col=f'hybrid_rank_a{aa:.2f}'; hybrid[f'a{aa:.2f}']={f'top{k}':float((z[col]<=k).mean()) for k in [1,2,4,6,10]}
  z_public=z.drop(columns=['_v221_order'],errors='ignore')
- out={'policy':{'head_purchase':'A+.60 frozen','selection_months':MONTHS,'nov_policy':'cold-start excluded from role-split selection; no leakage/fabricated prior training','march_used':False,'sep2026_used':False,'odds_used':False},
+ out={'feb_unread_availability':{'selected_codes':len(feb_codes),'feature_rows':len(feb_feature),'outcomes_read_for_opponent_rule':False},'policy':{'head_purchase':'A+.60 frozen','selection_months':MONTHS,'nov_policy':'cold-start excluded from role-split selection; no leakage/fabricated prior training','march_used':False,'sep2026_used':False,'odds_used':False},
       'overall':met(z),'hybrid':hybrid,'monthly':{m:met(g) for m,g in z.groupby('month')},'rows':z_public.to_dict('records')}
  open('research_3head_a_opponent_rolesplit_dev.json','w').write(json.dumps(out,ensure_ascii=False,indent=2))
  z.to_csv('research_3head_a_opponent_rolesplit_dev.csv',index=False)
