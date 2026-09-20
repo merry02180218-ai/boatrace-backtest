@@ -26,7 +26,8 @@ jobs:
           gh run download 35486864940 -n head4-exact-final-replay-stage1 -D s1
           P="$(find s1 -name parent_exhibition.csv | head -1)"; test -n "$P"; echo "PARENT_EXHIBITION=$P" >> "$GITHUB_ENV"
       - name: Download frozen headprob
-        env: {GH_TOKEN: ${{ github.token }}}
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p hp
           gh run download 35234326600 -n head4-boatracecsv-leakage-audit -D hp
