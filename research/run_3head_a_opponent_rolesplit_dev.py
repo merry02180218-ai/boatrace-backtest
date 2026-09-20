@@ -144,7 +144,7 @@ def main():
   q=scores[k].merge(post,on=['rc','date'],how='left',validate='one_to_one');rn=pd.to_numeric(q.race_no,errors='coerce');pre=pd.to_numeric(q.pre_score,errors='coerce')
   m=(rn>=1)&(rn<=12)&(pre>=.925)&ls.mask(q,ls.A['conds'])&(pd.to_numeric(q.post_motor_inner_rank_edge,errors='coerce')>=.60)
   selected[k]=set(str(int(x)).zfill(12) for x in q.loc[m,'rc'])
- cohort_counts={k:len(v) for k,v in selected.items()}; cohort_total=sum(cohort_counts.values()); print('cohort_audit',{'counts':cohort_counts,'total':cohort_total},flush=True)
+ cohort_counts={k:len(v) for k,v in selected.items()}; cohort_total=sum(cohort_counts[k] for k in ['nov','dec','jan']) print('cohort_audit',{'counts':cohort_counts,'total':cohort_total},flush=True)
  # Feb is constructed with the already-frozen A+.60 rule for availability/count audit only. Do not read Feb outcomes here.
  feb_q=scores['feb'].merge(post,on=['rc','date'],how='left',validate='one_to_one')
  feb_codes=selected.get('feb',set())
