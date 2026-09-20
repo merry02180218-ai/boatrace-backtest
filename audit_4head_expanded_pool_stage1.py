@@ -146,6 +146,21 @@ def main():
           'max':int(x.max()),'days_ge_today_parent34':int((x>=34).sum())
         }
 
+    # Scale-normalized parent diagnostics: daily counts alone are misleading when
+    # the number of settled races differs by day. Compare parent rate as well.
+    daily_all=z.groupby('date').size().astype(int).reindex(all_days,fill_value=0)
+    daily_parent_rate=(daily_parent/daily_all.replace(0,np.nan)).fillna(0.0)
+    parent_rate_diag={
+      'mean_all_race_R_per_day':float(daily_all.mean()),
+      'median_all_race_R_per_day':float(daily_all.median()),
+      'max_all_race_R_per_day':int(daily_all.max()),
+      'mean_parent_rate':float(daily_parent_rate.mean()),
+      'median_parent_rate':float(daily_parent_rate.median()),
+      'p95_parent_rate':float(daily_parent_rate.quantile(.95)),
+      'max_parent_rate':float(daily_parent_rate.max()),
+      'daily_all_R':{str(k):int(v) for k,v in daily_all.items()},
+    }
+
     parent_daily={
       'days_in_settled_universe':int(len(daily_parent)),
       'total_monitoring_parent':int(daily_parent.sum()),
@@ -171,6 +186,7 @@ def main():
       'selected_pool_month_R':{m:int((pool.month==m).sum()) for m in MONTHS},
       'live_comparable_monitoring_parent_daily':parent_daily,
       'live_comparable_gate_daily_summary':gate_summary,
+      'live_comparable_parent_rate_diagnostic':parent_rate_diag,
       'selection_used_head_outcomes':False,
       'old164_subset':bool(set(old.race_code).issubset(set(pool.race_code))),
       'SEPTEMBER_OUTCOMES_READ':False,
