@@ -3534,3 +3534,9 @@ Status: HEAD4_20260919_LIVE_OPERATION_READY__VENUE_ORIGINAL_RECOVERY_PLUS_PARALL
 - Important archive finding: exhibition struct_ready is zero Nov-Feb in this builder, then Mar 3,550 (77.1%), Apr 3,282 (77.3%), May 4,260 (88.2%), Jun 4,049 (90.2%), Jul 4,487 (91.2%), Aug 4,227 (85.9%). Therefore full current exhibition feature parity is directly available for Mar-Aug = six months; Nov-Feb can still support PRE/all-race head baseline but not exact current exhibition feature replay without changing feature definition.
 - Raw all-race 4-head rate is stable around 9.46%-10.78% monthly, useful baseline only, not model performance.
 - Next: construct six-month Mar-Aug chronological head-model research/evaluation split from current live-available features; do not optimize on Aug alone. Keep Jul19-Aug exact od3 for execution-layer ROI validation.
+
+
+## 2026-09-20 BEFORE — clean 6m monthly stability + motor study
+- Clean 6m baseline Run 35500144059: p>=.36 chosen from Jun only; DEV Mar-May 165/67=40.61%, Jun 68/28=41.18%, untouched Jul-Aug 170/79=46.47%.
+- Exhibition audit Run 35500981477 / Job 106052579488 SUCCESS. ORIG>=-.06: DEV 124/49=39.52%, Jun 50/24=48.0%, untouched Jul-Aug 127/63=49.61%. Strong ST>=-.60 is unstable and not preferred.
+- Next: month-by-month stability and current prior-only motor-difference interaction. Do not tune using Jul-Aug; report holdout separately. September UNREAD; no legacy candidate gate/Waku10 backfill; production unchanged.
