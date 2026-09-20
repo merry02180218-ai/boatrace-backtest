@@ -25,7 +25,10 @@ jobs:
           BOATRACECSV_LOCAL_ROOT: boatracecsv
           START_DATE: '2025-11-01'
           END_DATE: '2026-08-31'
-        run: python audit_4head_clean_long_preflight.py
+        run: |
+          python audit_4head_clean_long_preflight.py
+          echo '--- RESULT_JSON ---'
+          cat /tmp/head4_long_preflight/result.json
       - uses: actions/upload-artifact@v4
         with:
           name: head4-clean-long-preflight
