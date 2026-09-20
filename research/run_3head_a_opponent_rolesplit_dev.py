@@ -257,9 +257,9 @@ def main():
     if pd.isna(turn) or turn<th: continue
     eligible+=1
     # candidate SECOND=4 pairs are 4-{1,2,5,6}; add only those currently outside V221 Top6.
-    actual=(int(r.second),int(r.third))
-    order=r['_v221_order'] if '_v221_order' in r.index else []
-    cand=[(4,t) for t in [1,2,5,6]]
+    actual=f"3-{int(r.second)}-{int(r.third)}"
+    order=str(r['_v221_order']).split('|') if '_v221_order' in r.index else []
+    cand=[f'3-4-{t}' for t in [1,2,5,6]]
     outside=[p for p in cand if p not in order[:6]]
     added+=len(outside)
     if actual in outside: rescued+=1
