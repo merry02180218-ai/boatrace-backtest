@@ -58,11 +58,15 @@ def main():
     z=z.merge(pf,on=['date','month','race_code'],how='left')
     z['race_code']=z.race_code.astype(str).str.zfill(12)
     z['head4']=pd.to_numeric(z.actual_head4,errors='coerce').fillna(0).astype(int)
-    wide=z[
+    # LIVE-comparable monitoring parent: same frozen motor/player thresholds as
+    # scan_4head_120r_pre_live. Historical archive is complete here, so the
+    # LIVE missing-feature fail-open branch is not expected to add rows.
+    parent_mask=(
       z.motor_win_diff_4v3.ge(WIN) &
       z.motor_2ren_diff_4v3.ge(REN2) &
       z.player4_all_win.ge(PLAYER)
-    ].copy()
+    )
+    wide=z[parent_mask].copy()
     if wide.empty: raise RuntimeError('wide parent empty')
 
     ef=ex.build_ex(set(wide.race_code))
@@ -120,6 +124,24 @@ def main():
 
     q.to_csv(OUT/'wide_parent_with_exhibition.csv',index=False)
     pool.to_csv(OUT/'selected_pool.csv',index=False)
+    # Diagnostic only: daily concentration at the LIVE monitoring-parent stage.
+    # This is the correct denominator for comparison with current LIVE watchlist,
+    # unlike the later 226R/208R research pools.
+    daily_parent=wide.groupby('date').size().astype(int)
+    all_days=pd.Index(sorted(z.date.astype(str).unique()))
+    daily_parent=daily_parent.reindex(all_days,fill_value=0)
+    parent_daily={
+      'days_in_settled_universe':int(len(daily_parent)),
+      'total_monitoring_parent':int(daily_parent.sum()),
+      'mean_monitoring_parent_per_day':float(daily_parent.mean()),
+      'median_monitoring_parent_per_day':float(daily_parent.median()),
+      'p95_monitoring_parent_per_day':float(daily_parent.quantile(.95)),
+      'max_monitoring_parent_per_day':int(daily_parent.max()),
+      'days_ge_7_parent':int((daily_parent>=7).sum()),
+      'share_days_ge_7_parent':float((daily_parent>=7).mean()),
+      'daily_counts':{str(k):int(v) for k,v in daily_parent.items()},
+    }
+
     result={
       'wide_parent_R':int(len(wide)),
       'struct_ready_R':int(q.struct_ready.sum()),
@@ -131,6 +153,7 @@ def main():
       'fallback_outside_250_650':fallback_used,
       'selected_pool':best,
       'selected_pool_month_R':{m:int((pool.month==m).sum()) for m in MONTHS},
+      'live_comparable_monitoring_parent_daily':parent_daily,
       'selection_used_head_outcomes':False,
       'old164_subset':bool(set(old.race_code).issubset(set(pool.race_code))),
       'SEPTEMBER_OUTCOMES_READ':False,
