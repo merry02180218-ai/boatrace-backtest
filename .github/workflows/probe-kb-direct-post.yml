@@ -1,0 +1,11 @@
+name: probe-kb-direct-post
+on:
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Direct POST probe
+        run: python probe_kb_direct_post.py
