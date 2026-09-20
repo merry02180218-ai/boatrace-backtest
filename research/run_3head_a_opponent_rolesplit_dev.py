@@ -164,7 +164,7 @@ def main():
    hr={}
    for aa in alphas:
     ho=hybrid_order(r,sm,direct,aa); hr[f'hybrid_rank_a{aa:.2f}']=next(i+1 for i,(_,s,t) in enumerate(ho) if s==a[1] and t==a[2])
-   rec.append({'month':mon,'race_code':str(r.race_code).zfill(12),'second':a[1],'third':a[2],'second_rank':sr,'third_rank_cond_actual_second':trr,'pair_rank_factorized':pr,'pair_rank_v221':vr,**hr})
+   rec.append({'month':mon,'race_code':str(r.race_code).zfill(12),'second':a[1],'third':a[2],'second_rank':sr,'third_rank_cond_actual_second':trr,'pair_rank_factorized':pr,'pair_rank_v221':vr,'_v221_order':'|'.join(vo),**hr})
  z=pd.DataFrame(rec)
  if len(z)!=41: raise RuntimeError(f'Dec-Jan frozen head-win eval drift expected 41 got {len(z)}; cohort_counts={cohort_counts}')
  if len(z)<20:raise RuntimeError(f'Dec-Jan head-win evaluation unexpectedly small: {len(z)}')
@@ -265,6 +265,31 @@ def main():
    rescue[f'turn_ge_{th:.2f}']={'eligible_races':eligible,'added_pair_slots':added,'rescued_true_pairs':rescued,
     'rescues_per_added_slot':(rescued/added if added else 0.0)}
  out['v221_second4_rescue_sweep']=rescue
+ # Fixed-six replacement audit. When p4 turn is strong, replace only the weakest V221 Top6 slot
+ # with the highest-ranked 3-4-X pair currently outside Top6. This keeps ticket count at exactly 6.
+ swap={}
+ for th in [0.50,0.55,0.60]:
+  n_eligible=rescued=lost=unchanged_hit=0; rows_swap=[]
+  for _,r in z.iterrows():
+   src=d[d.race_code.astype(str).str.zfill(12)==str(r.race_code).zfill(12)]
+   if src.empty: continue
+   q=src.iloc[0]; turn=pd.to_numeric(pd.Series([v221.xtra(q,4,'vh_p12_turn')]),errors='coerce').iloc[0]
+   vo=str(r['_v221_order']).split('|'); old=vo[:6]; actual=f"3-{int(r.second)}-{int(r.third)}"; oldhit=actual in old
+   new=list(old); promoted=None; dropped=None
+   if pd.notna(turn) and turn>=th:
+    cand=[x for x in vo if x.startswith('3-4-') and x not in old]
+    if cand:
+     n_eligible+=1; promoted=cand[0]; dropped=new[-1]; new[-1]=promoted
+   newhit=actual in new
+   if (not oldhit) and newhit: rescued+=1
+   elif oldhit and (not newhit): lost+=1
+   elif oldhit and newhit: unchanged_hit+=1
+   if promoted is not None:
+    rows_swap.append({'race_code':r.race_code,'turn4':float(turn),'old_hit':bool(oldhit),'new_hit':bool(newhit),'promoted':promoted,'dropped':dropped,'actual':actual})
+  base_hits=int((z.pair_rank_v221<=6).sum()); new_hits=base_hits+rescued-lost
+  swap[f'turn_ge_{th:.2f}']={'eligible_swaps':n_eligible,'base_hits':base_hits,'rescued_hits':rescued,'lost_hits':lost,
+   'net_hits':rescued-lost,'new_hits':new_hits,'new_top6_rate':new_hits/len(z),'rows':rows_swap}
+ out['v221_second4_fixed6_swap']=swap
  # Error decomposition: isolate whether losses originate in SECOND, conditional THIRD, or factorized ordering.
  dec={
   'second_top1_miss':int((z.second_rank>1).sum()),'second_top2_miss':int((z.second_rank>2).sum()),
