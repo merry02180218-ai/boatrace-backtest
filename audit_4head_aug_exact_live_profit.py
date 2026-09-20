@@ -191,7 +191,9 @@ def main():
  d=pd.DataFrame(decisions)
  if len(d)!=851:raise RuntimeError(f"DECISION_COUNT_{len(d)}")
  # Freeze complete. Only now join August truth.
- tr=truth(); missing_truth=set(d.race_code)-set(tr)\n if missing_truth:raise RuntimeError(f"MISSING_AUG_TRUTH_{len(missing_truth)}_{sorted(missing_truth)[:10]}")\n pays=[];hits=[];head=[]
+ tr=truth(); missing_truth=set(d.race_code)-set(tr)
+ if missing_truth:raise RuntimeError(f"MISSING_AUG_TRUTH_{len(missing_truth)}_{sorted(missing_truth)[:10]}")
+ pays=[];hits=[];head=[]
  for _,r in d.iterrows():
   a=tr.get(r.race_code); head.append(int(a is not None and a[0]==4)); actual=f"{a[0]}-{a[1]}-{a[2]}" if a else ""
   plan=json.loads(r.stake_plan); hit=0;pay=0.0
