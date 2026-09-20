@@ -1,6 +1,10 @@
 name: audit-4head-aug-exact-live-profit
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'audit_4head_aug_exact_live_profit.py'
+      - '.github/workflows/audit-4head-aug-exact-live-profit.yml'
 permissions:
   contents: read
   actions: read
