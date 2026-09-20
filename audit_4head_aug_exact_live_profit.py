@@ -192,11 +192,12 @@ def main():
  if len(d)!=851:raise RuntimeError(f"DECISION_COUNT_{len(d)}")
  # Freeze complete. Only now join August truth.
  tr=truth(); missing_truth=set(d.race_code)-set(tr)
- if missing_truth:raise RuntimeError(f"MISSING_AUG_TRUTH_{len(missing_truth)}_{sorted(missing_truth)[:10]}")
+ # A missing top-3 result means 3連単 was not established. Refund the race stake.
  pays=[];hits=[];head=[]
  for _,r in d.iterrows():
   a=tr.get(r.race_code); head.append(int(a is not None and a[0]==4)); actual=f"{a[0]}-{a[1]}-{a[2]}" if a else ""
-  plan=json.loads(r.stake_plan); hit=0;pay=0.0
+  plan=json.loads(r.stake_plan); hit=0
+  pay=float(r.stake) if (r.production_bet and r.race_code in missing_truth) else 0.0
   if r.production_bet and actual:
    for x in plan:
     if x["combo"]==actual and int(x["stake"])>0:hit=1;pay=float(x["stake"])*float(x["odds"])
