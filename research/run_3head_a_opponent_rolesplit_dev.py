@@ -177,8 +177,9 @@ def main():
  hybrid={}
  for aa in alphas:
   col=f'hybrid_rank_a{aa:.2f}'; hybrid[f'a{aa:.2f}']={f'top{k}':float((z[col]<=k).mean()) for k in [1,2,4,6,10]}
+ z_public=z.drop(columns=['_v221_order'],errors='ignore')
  out={'policy':{'head_purchase':'A+.60 frozen','selection_months':MONTHS,'nov_policy':'cold-start excluded from role-split selection; no leakage/fabricated prior training','march_used':False,'sep2026_used':False,'odds_used':False},
-      'overall':met(z),'hybrid':hybrid,'monthly':{m:met(g) for m,g in z.groupby('month')},'rows':z.to_dict('records')}
+      'overall':met(z),'hybrid':hybrid,'monthly':{m:met(g) for m,g in z.groupby('month')},'rows':z_public.to_dict('records')}
  open('research_3head_a_opponent_rolesplit_dev.json','w').write(json.dumps(out,ensure_ascii=False,indent=2))
  z.to_csv('research_3head_a_opponent_rolesplit_dev.csv',index=False)
  # Diagnose V221 tail misses only; descriptive Dec-Jan audit, no March/Sep and no threshold selection.
