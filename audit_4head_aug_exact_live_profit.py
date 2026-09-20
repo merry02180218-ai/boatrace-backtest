@@ -81,15 +81,28 @@ def od3():
  return out
 
 def truth():
+ # Result source is BoatraceCSV public realtime CSV. This function is called
+ # only after the full 851-race decision table has been frozen.
+ import requests
+ from io import StringIO
  out={}
  for ds in pd.date_range("2026-08-01","2026-08-31"):
-  ymd=str(ds.date()).replace("-","/")
-  for r in rows(f"data/results/realtime/{ymd}.csv"):
-   code=rc(r.get("レースコード","")); a=[]
-   for k in ("1着_艇番","2着_艇番","3着_艇番"):
-    try:a.append(int(float(r.get(k))))
-    except:a=[]
-   if len(a)==3:out[code]=tuple(a)
+  if ds>=pd.Timestamp("2026-09-01"):raise RuntimeError("SEPTEMBER_RESULT_ACCESS_BLOCKED")
+  url=f"https://boatracecsv.github.io/data/results/realtime/{ds:%Y/%m/%d}.csv"
+  resp=requests.get(url,timeout=20)
+  if resp.status_code==404:continue
+  resp.raise_for_status(); q=pd.read_csv(StringIO(resp.text))
+  rcc=next((x for x in q.columns if "レース" in str(x) and "コード" in str(x)),None)
+  c1=next((x for x in q.columns if "1着" in str(x) and "艇" in str(x)),None)
+  c2=next((x for x in q.columns if "2着" in str(x) and "艇" in str(x)),None)
+  c3=next((x for x in q.columns if "3着" in str(x) and "艇" in str(x)),None)
+  if not all((rcc,c1,c2,c3)):raise RuntimeError(f"RESULT_SCHEMA_{ds.date()}_{list(q.columns)}")
+  for _,r in q.iterrows():
+   code=rc(r.get(rcc,""))
+   try:a=(int(float(r[c1])),int(float(r[c2])),int(float(r[c3])))
+   except:continue
+   out[code]=a
+ if not out:raise RuntimeError("NO_AUGUST_TRUTH")
  return out
 
 def motor_priors():
@@ -178,7 +191,7 @@ def main():
  d=pd.DataFrame(decisions)
  if len(d)!=851:raise RuntimeError(f"DECISION_COUNT_{len(d)}")
  # Freeze complete. Only now join August truth.
- tr=truth(); pays=[];hits=[];head=[]
+ tr=truth(); missing_truth=set(d.race_code)-set(tr)\n if missing_truth:raise RuntimeError(f"MISSING_AUG_TRUTH_{len(missing_truth)}_{sorted(missing_truth)[:10]}")\n pays=[];hits=[];head=[]
  for _,r in d.iterrows():
   a=tr.get(r.race_code); head.append(int(a is not None and a[0]==4)); actual=f"{a[0]}-{a[1]}-{a[2]}" if a else ""
   plan=json.loads(r.stake_plan); hit=0;pay=0.0
