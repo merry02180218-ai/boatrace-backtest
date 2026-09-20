@@ -102,8 +102,15 @@ def main():
         counts=dg.production_selected.sum().astype(int)
         base_counts=dg.base120.sum().astype(int)
         add_counts=(dg.production_selected.sum()-dg.base120.sum()).astype(int)
+        # Calendar-day denominator must be Apr-Aug calendar days, not only dates
+        # represented by the narrowed 208-row research universe.
+        full_days=pd.date_range('2026-04-01','2026-08-31',freq='D').strftime('%Y-%m-%d')
+        counts=counts.reindex(full_days,fill_value=0)
+        base_counts=base_counts.reindex(full_days,fill_value=0)
+        add_counts=add_counts.reindex(full_days,fill_value=0)
         daily_bet={
           'date_column':date_col,
+          'calendar_days_apr_aug':int(len(full_days)),
           'days_in_universe':int(counts.size),
           'total_selected':int(counts.sum()),
           'mean_bets_per_universe_day':float(counts.mean()),
@@ -111,6 +118,8 @@ def main():
           'max_bets_per_universe_day':int(counts.max()),
           'days_ge_7_bets':int((counts>=7).sum()),
           'share_days_ge_7_bets':float((counts>=7).mean()),
+          'p95_bets_per_calendar_day':float(counts.quantile(.95)),
+          'days_ge_5_bets':int((counts>=5).sum()),
           'daily_counts':{str(k):{'selected':int(counts.loc[k]),'base120':int(base_counts.loc[k]),'newfeature_add':int(add_counts.loc[k])} for k in counts.index}
         }
 
