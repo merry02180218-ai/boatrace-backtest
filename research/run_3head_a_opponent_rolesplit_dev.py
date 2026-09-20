@@ -77,6 +77,23 @@ def main():
  raw=pd.read_csv(v221.SRC,dtype={'race_code':str});dc=v221.v165.pc(raw,['date','race_date','ymd']);vc=v221.v165.pc(raw,['venue','jcd','stadium','place'])
  y,_=v221.v165.target(raw);basefs=v221.v165.feats(raw);raw['_date']=pd.to_datetime(raw[dc].astype(str),errors='coerce');raw['_y']=y
  raw=raw[raw._date.notna()&raw._y.notna()&(raw._date<v221.CONTAM)].copy();d=v221.build(raw,dc)
+ # v221 source may not carry actual_combo/valid_result in the feature frame; attach causal settlement labels from results/realtime.
+ settled=[]
+ from datetime import timedelta
+ day=v221.PRELOAD
+ while day<=v221.END:
+  try:
+   for rr in v221.rows(f"data/results/realtime/{day.strftime('%Y/%m/%d')}.csv"):
+    code=str(rr.get('レースコード','')).zfill(12); a=[str(rr.get(f'{i}着_艇番','')).strip() for i in (1,2,3)]
+    if code.isdigit() and all(x in {'1','2','3','4','5','6'} for x in a): settled.append({'race_code':code,'actual_combo':'-'.join(a),'valid_result':1})
+  except Exception: pass
+  day += timedelta(days=1)
+ smap=pd.DataFrame(settled).drop_duplicates('race_code')
+ d['race_code']=d['race_code'].astype(str).str.zfill(12)
+ if 'actual_combo' in d.columns: d=d.drop(columns=['actual_combo'])
+ if 'valid_result' in d.columns: d=d.drop(columns=['valid_result'])
+ d=d.merge(smap,on='race_code',how='left',validate='many_to_one')
+ if d.actual_combo.notna().sum()<1000: raise RuntimeError(f'settlement attach too small {d.actual_combo.notna().sum()}')
  # Cohort membership is reconstructed from frozen A+.60 race codes produced by the adopted loss-structure development.
  sys.path.insert(0,str(v221.ROOT/'research'))
  import run_3head_a_loss_structure_dev as ls
