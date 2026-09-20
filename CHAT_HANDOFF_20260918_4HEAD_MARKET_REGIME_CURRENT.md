@@ -3502,3 +3502,15 @@ Status: HEAD4_20260919_LIVE_OPERATION_READY__VENUE_ORIGINAL_RECOVERY_PLUS_PARALL
 - Next: reconstruct all historical PRE-parent rows through exhibition -> v283 tickets/opponent mass -> official closing odds -> frozen base120/newfeature final decision, if archive coverage permits.
 - Must keep September outcomes/payouts UNREAD. Production unchanged during audit.
 - Existing 156R ROI 140.99% and closing-odds stress remain diagnostics, not proof of all-parent LIVE parity.
+
+
+## 2026-09-20 BEFORE — clean-slate 4HEAD rebuild + >=6 month backtest preparation
+- User confirmed current 4HEAD should be treated as the clean-slate rebuild, not restored to legacy v20/v74/v83 candidate gates.
+- Root-cause finding: old 120R/156R research path consumed v93-derived rows whose ancestry includes v74 strict candidates. Therefore those ROI figures are not proof for the unrestricted current LIVE universe.
+- Do NOT restore legacy v20 structural gates merely to reduce BET volume. Legacy fields may be evaluated only as diagnostic features, not mandatory inherited eligibility.
+- New baseline is the exact current-LIVE August replay: strict 851R -> 323 production BET, 53 exact3 hits, ROI 94.1080%, profit -190,310 JPY, max DD 524,560 JPY, max losing streak 19, mean 10.77 BET/day. This is the baseline to improve without silently narrowing to the old v74/v93 universe.
+- Rebuild objective: all races -> current PRE information -> exhibition/final head4 decision -> opponent/tickets -> pre-deadline odds -> staking. All candidate/head gates must be learnable/reproducible from information available before purchase.
+- Prepare a >=6 month backtest framework with month-configurable replay, chronological prior-only feature state, explicit coverage accounting, pre-deadline od3, result join only after decisions freeze, monthly/venue/daily metrics, DD/losing streak, and leakage assertions.
+- September 2026 outcomes/payouts remain UNREAD. Waku10 retrospective backfill remains prohibited.
+- First historical target: use the longest contiguous period with honest source coverage; report coverage by month before interpreting ROI. Do not fabricate missing Waku10/v93-era inputs.
+- Status: CLEAN_SLATE_REBUILD_AND_LONG_BACKTEST_PREP_STARTED
