@@ -41,6 +41,7 @@ def main():
         add=(not bool(r.base120) and float(r.st4_adv_inside)>=-.80 and float(r.orig4_adv_inside)>=-.35 and score>=float(art['production_threshold']))
         sels.append(bool(r.base120) or add)
     z['live_newfeature_score']=scores;z['production_selected']=sels
+    z['selection_path']=z.apply(lambda r: ('base120' if bool(r.base120) else ('newfeature_add' if bool(r.production_selected) else 'not_selected')),axis=1)
     q=z[z.production_selected].copy()
     R=len(q);heads=int(q.head4.sum());hits=int(q.raw_hit.sum());roi=100*float(q.payout_if_bet.sum())/(10000*R)
     if (R,heads,hits)!=(156,73,40):raise RuntimeError(f'production parity count drift {(R,heads,hits)}')
@@ -81,8 +82,18 @@ def main():
         payout=float(g.payout_if_bet.sum()) if Rb else 0.0
         hp_bands[name]={'R':Rb,'head4':hb,'head4_rate':(100*hb/Rb if Rb else None),'exact3':xb,'stake':stake,'payout':payout,'ROI':(100*payout/stake if stake else None),'mean_head_prob':(float(g.head_prob.mean()) if Rb else None)}
 
+    # Diagnostic only: decompose frozen 156 by selection path and head-probability band.
+    path_band={}
+    for path in ('base120','newfeature_add'):
+        pg=q[q.selection_path.eq(path)]
+        path_band[path]={'R':len(pg),'head4':int(pg.head4.sum()),'exact3':int(pg.raw_hit.sum()),'ROI':(100*float(pg.payout_if_bet.sum())/(10000*len(pg)) if len(pg) else None),'bands':{}}
+        for lo,hi,name in bands:
+            g=pg[(pg.head_prob>=lo)&(pg.head_prob<hi)]
+            rb=len(g); payout=float(g.payout_if_bet.sum()) if rb else 0.0
+            path_band[path]['bands'][name]={'R':rb,'head4':int(g.head4.sum()) if rb else 0,'head4_rate':(100*float(g.head4.sum())/rb if rb else None),'exact3':int(g.raw_hit.sum()) if rb else 0,'ROI':(100*payout/(10000*rb) if rb else None)}
+
     z.to_csv(OUT/'parity_rows.csv',index=False)
-    result={'profile':art['profile'],'R':R,'head4':heads,'head4_rate':100*heads/R,'exact3':hits,'ROI':roi,'monthly':month,'monthly_floor_ROI':floor,'support_ROI':suproi,'motor_unit':mf,'wall_unit':wf,'head_prob_bands':hp_bands,'SEPTEMBER_OUTCOMES_READ':False,'AUDIT_OK':True}
+    result={'profile':art['profile'],'R':R,'head4':heads,'head4_rate':100*heads/R,'exact3':hits,'ROI':roi,'monthly':month,'monthly_floor_ROI':floor,'support_ROI':suproi,'motor_unit':mf,'wall_unit':wf,'head_prob_bands':hp_bands,'selection_path_head_prob_bands':path_band,'SEPTEMBER_OUTCOMES_READ':False,'AUDIT_OK':True}
     (OUT/'result.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps(result,ensure_ascii=False,indent=2))
     print('HEAD4_NEWFEATURE_PRODUCTION_PARITY_OK');print('SEPTEMBER_UNREAD')
