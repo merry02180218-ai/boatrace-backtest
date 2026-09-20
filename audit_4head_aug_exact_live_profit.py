@@ -186,7 +186,7 @@ def main():
   selected=bool(base120 or expansion); shadow=hp<.10
   stakes=live.dutch(tickets,ovs) if selected and not shadow else [{"combo":t,"odds":o,"stake":0} for t,o in zip(tickets,ovs)]
   decisions.append({"date":str(rr.date),"race_code":code,"jcd":code[8:10],"rno":int(code[10:12]),"head_prob":hp,"mass":mass,"comp":comp,
-   "base120":int(base120),"newfeature_add":int(expansion),"selected":int(selected),"shadow":int(shadow),"production_bet":int(selected and not shadow),
+   "old164":int(old164),"baseformula":int(baseformula),"rescue082":int(old164 and comp>=2.5 and hp+1.5*mass>=.82),"base120":int(base120),"newfeature_add":int(expansion),"selected":int(selected),"shadow":int(shadow),"production_bet":int(selected and not shadow),
    "tickets":"|".join(tickets),"ticket_count":len(tickets),"stake":sum(x["stake"] for x in stakes),"stake_plan":json.dumps(stakes,ensure_ascii=False),"nf_score":score})
  d=pd.DataFrame(decisions)
  if len(d)!=851:raise RuntimeError(f"DECISION_COUNT_{len(d)}")
@@ -208,7 +208,7 @@ def main():
  loss=mx=0
  for x in b.hit:
   loss=loss+1 if not x else 0;mx=max(mx,loss)
- venue=b.groupby("jcd").agg(R=("race_code","size"),stake=("stake","sum"),payout=("payout","sum"),profit=("profit","sum"),hits=("hit","sum")).reset_index();venue["roi"]=100*venue.payout/venue.stake
+ venue=b.groupby("jcd").agg(R=("race_code","size"),stake=("stake","sum"),payout=("payout","sum"),profit=("profit","sum"),hits=("hit","sum"),base120=("base120","sum"),newfeature_add=("newfeature_add","sum")).reset_index();venue["roi"]=100*venue.payout/venue.stake
  daily=b.groupby("date").agg(R=("race_code","size"),stake=("stake","sum"),payout=("payout","sum"),profit=("profit","sum")).reset_index();daily["roi"]=100*daily.payout/daily.stake
  out={"strict_R":851,"decision_R":len(d),"production_BET_R":len(b),"shadow_selected_R":int(((d.selected==1)&(d.shadow==1)).sum()),
       "bet_per_day_mean":float(daily.R.mean()),"bet_per_day_median":float(daily.R.median()),"bet_per_day_max":int(daily.R.max()),
@@ -216,7 +216,7 @@ def main():
       "roi":float(100*b.payout.sum()/b.stake.sum()),"max_drawdown":float(dd.max()),"max_losing_streak":int(mx),
       "base120_BET_R":int((b.base120==1).sum()),"newfeature_add_BET_R":int((b.newfeature_add==1).sum()),"trifecta_not_established_R":int(len(missing_truth)),"trifecta_not_established_BET_R":int(b.race_code.isin(missing_truth).sum()),
       "SEPTEMBER_OUTCOMES_READ":False,"PRODUCTION_CHANGED":False}
- d.to_csv(OUT/"race_detail.csv",index=False);daily.to_csv(OUT/"daily.csv",index=False);venue.to_csv(OUT/"venue.csv",index=False)
+ d.to_csv(OUT/"race_detail.csv",index=False);daily.to_csv(OUT/"daily.csv",index=False);venue.to_csv(OUT/"venue.csv",index=False)\n # Diagnose why current LIVE base120 is much broader than the frozen 120R research sample.\n diag={k:int(b[k].sum()) for k in ("old164","baseformula","rescue082","base120","newfeature_add")}\n diag["base120_via_baseformula_R"]=int(((b.base120==1)&(b.baseformula==1)).sum())\n diag["base120_via_rescue_only_R"]=int(((b.base120==1)&(b.baseformula==0)&(b.rescue082==1)).sum())\n diag["base120_headprob_lt018_R"]=int(((b.base120==1)&(b.head_prob<.18)).sum())\n diag["base120_headprob_ge018_R"]=int(((b.base120==1)&(b.head_prob>=.18)).sum())\n (OUT/"base120_diagnostic.json").write_text(json.dumps(diag,ensure_ascii=False,indent=2)+"\\n")\n print("BASE120_DIAGNOSTIC",json.dumps(diag,ensure_ascii=False))
  (OUT/"result.json").write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n")
  print(json.dumps(out,ensure_ascii=False,indent=2));print(venue.to_string(index=False));print("HEAD4_AUG_EXACT_LIVE_PROFIT_OK");print("SEPTEMBER_UNREAD")
 if __name__=="__main__":main()
