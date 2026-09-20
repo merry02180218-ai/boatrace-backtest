@@ -1,0 +1,45 @@
+name: rebuild-4head-v93-all-parent
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'rebuild_4head_v93_all_parent.py'
+      - '.github/workflows/rebuild-4head-v93-all-parent.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  rebuild:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards
+            data/programs/waku10
+            data/results/realtime
+            data/previews/tkz
+            data/previews/stt
+            data/previews/original_exhibition
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Download exact parent exhibition
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p s1
+          gh run download 35486864940 -n head4-exact-final-replay-stage1 -D s1
+          P="$(find s1 -name parent_exhibition.csv | head -1)"; test -n "$P"; echo "PARENT_EXHIBITION=$P" >> "$GITHUB_ENV"
+      - env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: python rebuild_4head_v93_all_parent.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-v93-all-parent
+          path: /tmp/head4_v93_all_parent/
+          retention-days: 30
