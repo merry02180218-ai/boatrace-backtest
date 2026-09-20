@@ -70,8 +70,19 @@ def main():
     expected=.20*.1+.40*.1+.25*.1+.15*.1
     if abs(wf['wall_score']-expected)>1e-12:raise RuntimeError(f'wall parity failed {wf}')
 
+    # Diagnostic only: head-probability bands inside frozen production selections.
+    # This does not alter production and does not access September.
+    bands=[(-1.0,.10,'lt_010'),(.10,.18,'010_018'),(.18,1.01,'ge_018')]
+    hp_bands={}
+    for lo,hi,name in bands:
+        g=q[(q.head_prob>=lo)&(q.head_prob<hi)].copy()
+        Rb=len(g); hb=int(g.head4.sum()) if Rb else 0; xb=int(g.raw_hit.sum()) if Rb else 0
+        stake=10000*Rb
+        payout=float(g.payout_if_bet.sum()) if Rb else 0.0
+        hp_bands[name]={'R':Rb,'head4':hb,'head4_rate':(100*hb/Rb if Rb else None),'exact3':xb,'stake':stake,'payout':payout,'ROI':(100*payout/stake if stake else None),'mean_head_prob':(float(g.head_prob.mean()) if Rb else None)}
+
     z.to_csv(OUT/'parity_rows.csv',index=False)
-    result={'profile':art['profile'],'R':R,'head4':heads,'head4_rate':100*heads/R,'exact3':hits,'ROI':roi,'monthly':month,'monthly_floor_ROI':floor,'support_ROI':suproi,'motor_unit':mf,'wall_unit':wf,'SEPTEMBER_OUTCOMES_READ':False,'AUDIT_OK':True}
+    result={'profile':art['profile'],'R':R,'head4':heads,'head4_rate':100*heads/R,'exact3':hits,'ROI':roi,'monthly':month,'monthly_floor_ROI':floor,'support_ROI':suproi,'motor_unit':mf,'wall_unit':wf,'head_prob_bands':hp_bands,'SEPTEMBER_OUTCOMES_READ':False,'AUDIT_OK':True}
     (OUT/'result.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps(result,ensure_ascii=False,indent=2))
     print('HEAD4_NEWFEATURE_PRODUCTION_PARITY_OK');print('SEPTEMBER_UNREAD')
