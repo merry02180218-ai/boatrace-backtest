@@ -217,6 +217,31 @@ def main():
   tail['rank_gt10_rows']=md[md.v221_rank>10].to_dict('records')
   md.to_csv('research_3head_a_v221_tail_misses.csv',index=False)
  out['v221_tail_audit']=tail
+ # Focused audit: actual SECOND=4. Compare all such head-win races with the V221 tail misses,
+ # retaining only pre-settlement features already present in the canonical frame.
+ s4=[]
+ for _,r in z[z.second==4].iterrows():
+  src=d[d.race_code.astype(str).str.zfill(12)==str(r.race_code).zfill(12)]
+  if src.empty: continue
+  q=src.iloc[0]
+  s4.append({'month':r.month,'race_code':r.race_code,'v221_rank':int(r.pair_rank_v221),'third':int(r.third),
+   'tail6':bool(r.pair_rank_v221>6),'tail10':bool(r.pair_rank_v221>10),
+   'p4_display':v221.xtra(q,4,'vh_p12_display'),'p4_turn':v221.xtra(q,4,'vh_p12_turn'),
+   'p4_st':v221.xtra(q,4,'vh_p12_st'),'p4_motor':v221.xtra(q,4,'vh_p12_motor'),
+   'p2_display':v221.xtra(q,2,'vh_p12_display'),'p2_turn':v221.xtra(q,2,'vh_p12_turn'),
+   'p1_display':v221.xtra(q,1,'vh_p12_display'),'p1_turn':v221.xtra(q,1,'vh_p12_turn')})
+ s4d=pd.DataFrame(s4)
+ s4audit={'n':int(len(s4d))}
+ if len(s4d):
+  s4audit.update({'top6_capture':float((s4d.v221_rank<=6).mean()),'top10_capture':float((s4d.v221_rank<=10).mean()),
+   'rank_counts':s4d.v221_rank.value_counts().sort_index().to_dict()})
+  for col in ['p4_display','p4_turn','p4_st','p4_motor']:
+   vv=pd.to_numeric(s4d[col],errors='coerce')
+   s4audit[col]={'all_mean':float(vv.mean()) if vv.notna().any() else None,
+    'tail6_mean':float(vv[s4d.tail6].mean()) if vv[s4d.tail6].notna().any() else None,
+    'captured6_mean':float(vv[~s4d.tail6].mean()) if vv[~s4d.tail6].notna().any() else None}
+  s4d.to_csv('research_3head_a_v221_second4_audit.csv',index=False)
+ out['v221_second4_audit']=s4audit
  # Error decomposition: isolate whether losses originate in SECOND, conditional THIRD, or factorized ordering.
  dec={
   'second_top1_miss':int((z.second_rank>1).sum()),'second_top2_miss':int((z.second_rank>2).sum()),
