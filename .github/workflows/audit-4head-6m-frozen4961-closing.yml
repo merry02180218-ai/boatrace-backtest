@@ -1,0 +1,49 @@
+name: audit-4head-6m-frozen4961-closing
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards
+            data/programs/waku10
+            data/results/realtime
+            data/previews/tkz
+            data/previews/stt
+            data/previews/original_exhibition
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Preflight
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: |
+          python -m py_compile prepare_4head_6m_v93_neutral_waku.py
+          python -m py_compile audit_4head_6m_frozen4961_closing.py
+      - name: Prepare clean six-month opponent primitives
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: python prepare_4head_6m_v93_neutral_waku.py
+      - name: Run frozen six-month closing-odds replay
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+          STRICT_ROWS: /tmp/head4_clean_long_dataset/dataset.csv
+          V93_ROWS: /tmp/head4_v93_all_parent/v93_all_parent.csv
+        run: python audit_4head_6m_frozen4961_closing.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-6m-frozen4961-closing
+          path: |
+            /tmp/head4_6m_frozen4961_closing/
+            /tmp/head4_v93_all_parent/6m_meta.json
+          retention-days: 30
