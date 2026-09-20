@@ -1,0 +1,29 @@
+name: research-3head-a-opponent-rolesplit-dev
+on:
+  push:
+    paths:
+      - '.github/triggers/research-3head-a-opponent-rolesplit-dev.txt'
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests
+      - name: Preflight
+        run: |
+          python -m py_compile research/run_3head_a_opponent_rolesplit_dev.py
+          cd research
+          python -c "import run_3head_a_opponent_rolesplit_dev"
+      - name: Run role split development
+        run: cd research && python run_3head_a_opponent_rolesplit_dev.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: research-3head-a-opponent-rolesplit-dev
+          path: |
+            research/research_3head_a_opponent_rolesplit_dev.json
+            research/research_3head_a_opponent_rolesplit_dev.csv
