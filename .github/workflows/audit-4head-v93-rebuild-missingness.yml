@@ -1,0 +1,45 @@
+name: audit-4head-v93-rebuild-missingness
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'audit_4head_v93_rebuild_missingness.py'
+      - '.github/workflows/audit-4head-v93-rebuild-missingness.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards
+            data/programs/waku10
+            data/previews/tkz
+            data/previews/stt
+            data/previews/original_exhibition
+      - run: pip install -q pandas numpy scipy scikit-learn
+      - name: Download inputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p s1 vr
+          gh run download 35486864940 -n head4-exact-final-replay-stage1 -D s1
+          gh run download 35487172647 -n head4-v93-all-parent -D vr
+          echo "PARENT_EXHIBITION=$(find s1 -name parent_exhibition.csv | head -1)" >> "$GITHUB_ENV"
+          echo "V93_REBUILT=$(find vr -name v93_all_parent.csv | head -1)" >> "$GITHUB_ENV"
+      - env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: python audit_4head_v93_rebuild_missingness.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-v93-rebuild-missingness
+          path: /tmp/head4_v93_missingness/
