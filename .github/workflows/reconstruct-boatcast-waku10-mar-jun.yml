@@ -1,0 +1,14 @@
+name: reconstruct-boatcast-waku10-mar-jun
+on:
+  workflow_dispatch:
+jobs:
+  reconstruct:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - run: python reconstruct_boatcast_waku10_mar_jun.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: boatcast-waku10-mar-jun
+          path: data/reconstructed_waku10_boatcast
