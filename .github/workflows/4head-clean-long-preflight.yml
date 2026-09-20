@@ -15,8 +15,15 @@ jobs:
       - name: Checkout BoatraceCSV
         uses: actions/checkout@v4
         with:
-          repository: BoatraceCSV/fun-site
+          repository: BoatraceCSV/boatracecsv.github.io
           path: boatracecsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards
+            data/previews/tkz
+            data/previews/stt
+            data/previews/original_exhibition
+            data/previews/od3
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
