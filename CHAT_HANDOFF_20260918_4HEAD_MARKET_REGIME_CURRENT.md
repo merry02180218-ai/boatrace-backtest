@@ -3514,3 +3514,11 @@ Status: HEAD4_20260919_LIVE_OPERATION_READY__VENUE_ORIGINAL_RECOVERY_PLUS_PARALL
 - September 2026 outcomes/payouts remain UNREAD. Waku10 retrospective backfill remains prohibited.
 - First historical target: use the longest contiguous period with honest source coverage; report coverage by month before interpreting ROI. Do not fabricate missing Waku10/v93-era inputs.
 - Status: CLEAN_SLATE_REBUILD_AND_LONG_BACKTEST_PREP_STARTED
+
+
+## 2026-09-20 BEFORE — 10-month clean-slate 4HEAD head-model research dataset
+- User approved the two-layer plan: (A) long-period head-model validation without requiring historical od3, then (B) Jul19-Aug exact pre-close odds validation for opponent/tickets/staking.
+- Unified LIVE orchestration remains separate infrastructure; do not let 1HEAD/unified routing gates contaminate 4HEAD model research. A validated 4HEAD adapter can be plugged back into unified LIVE afterward.
+- Verified source preflight Run 35494641284 / Job 106035351000 SUCCESS using BoatraceCSV/boatracecsv.github.io. Exhibition all3 coverage is substantial from Nov 2025-Aug 2026; od3 begins only Jul 2026 and is complete-ish in Aug.
+- Next work: build a chronological 10-month clean-slate research dataset from all races/current PRE/exhibition inputs, with no legacy v20/v74/v83/v93 eligibility gate and no Waku10 retrospective backfill. September outcomes remain UNREAD.
+- Status: LONG_HEAD_DATASET_BUILD_STARTED
