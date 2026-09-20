@@ -17,6 +17,14 @@ for i,p in enumerate(cases,1):
             try:
                 obj=json.loads(b)
                 print("TOP_KEYS",list(obj.keys()))
+                kl=obj.get("kako_list",{})
+                for kk,vv in kl.items():
+                    print("KAKO",kk,"TYPE",type(vv).__name__,"LEN",len(vv) if hasattr(vv,"__len__") else None)
+                    if isinstance(vv,list):
+                        for z in vv[:3]: print("KAKO_SAMPLE",kk,json.dumps(z,ensure_ascii=False)[:3000])
+                    elif isinstance(vv,dict):
+                        print("KAKO_KEYS",kk,list(vv.keys())[:50])
+                        print("KAKO_SAMPLE",kk,json.dumps(vv,ensure_ascii=False)[:5000])
                 for k,v in obj.items():
                     if isinstance(v,list):
                         print("LIST",k,"LEN",len(v),"SAMPLE_KEYS",list(v[0].keys())[:80] if v and isinstance(v[0],dict) else [])
