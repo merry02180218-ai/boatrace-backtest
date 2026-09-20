@@ -43,6 +43,5 @@ for name,mask in gates.items():
  cm=base|mask
  for per,months in [("DEV_MAR_MAY",["2026-03","2026-04","2026-05"]),("VAL_JUN",["2026-06"]),("HOLD_JUL_AUG",["2026-07","2026-08"])]:
   s=d[cm&d.month.isin(months)];rec.append({"gate":"BASE_PLUS_"+name,"period":per,"R":len(s),"H":int(s.head4.sum()),"rate":float(s.head4.mean()) if len(s) else None})
-out=Path("/tmp/head4_clean_lowp_rescue");out.mkdir(exist_ok=True);pd.DataFrame(rec).to_csv(out/"compare.csv",index=False);(out/"result.json").write_text(json.dumps({"records":rec,"p_band":[.32,.36],"orig_gate":-.06,"thresholds_predeclared":True,"holdout_used_for_selection":False,"SEPTEMBER_OUTCOMES_READ":False,"PRODUCTION_CHANGED":False},indent=2)+"
-")
+out=Path("/tmp/head4_clean_lowp_rescue");out.mkdir(exist_ok=True);pd.DataFrame(rec).to_csv(out/"compare.csv",index=False);(out/"result.json").write_text(json.dumps({"records":rec,"p_band":[.32,.36],"orig_gate":-.06,"thresholds_predeclared":True,"holdout_used_for_selection":False,"SEPTEMBER_OUTCOMES_READ":False,"PRODUCTION_CHANGED":False},indent=2)+"\\n")
 print("LOWP_RESCUE_RESULT");print(pd.DataFrame(rec).to_string(index=False));print("SEPTEMBER_UNREAD")
