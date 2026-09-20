@@ -4,7 +4,9 @@ Selection/development: Nov 2025-Jan 2026 only. March never used here. Sep-2026 u
 Architecture follows 1HEAD/4HEAD: separate SECOND and conditional THIRD, compared with V221 direct pair.
 """
 from __future__ import annotations
-import json, numpy as np, pandas as pd
+import json, sys, numpy as np, pandas as pd
+from pathlib import Path
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
@@ -76,7 +78,7 @@ def main():
  y,_=v221.v165.target(raw);basefs=v221.v165.feats(raw);raw['_date']=pd.to_datetime(raw[dc].astype(str),errors='coerce');raw['_y']=y
  raw=raw[raw._date.notna()&raw._y.notna()&(raw._date<v221.CONTAM)].copy();d=v221.build(raw,dc)
  # Cohort membership is reconstructed from frozen A+.60 race codes produced by the adopted loss-structure development.
- import sys;sys.path.insert(0,str(v221.ROOT/'research'))
+ sys.path.insert(0,str(v221.ROOT/'research'))
  import run_3head_a_loss_structure_dev as ls
  import run_3head_wave20_manual_gate as w20
  rr={}
