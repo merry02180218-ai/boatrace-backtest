@@ -130,6 +130,22 @@ def main():
     daily_parent=wide.groupby('date').size().astype(int)
     all_days=pd.Index(sorted(z.date.astype(str).unique()))
     daily_parent=daily_parent.reindex(all_days,fill_value=0)
+    # Per-gate pass diagnostics for explaining unusually large LIVE parent days.
+    gate_daily=pd.DataFrame({
+      'date':z.date.astype(str),
+      'motor_win_pass':z.motor_win_diff_4v3.ge(WIN).astype(int),
+      'motor_2ren_pass':z.motor_2ren_diff_4v3.ge(REN2).astype(int),
+      'player_pass':z.player4_all_win.ge(PLAYER).astype(int),
+      'parent_pass':parent_mask.astype(int),
+    }).groupby('date').sum().reindex(all_days,fill_value=0)
+    gate_summary={}
+    for c in ('motor_win_pass','motor_2ren_pass','player_pass','parent_pass'):
+        x=gate_daily[c]
+        gate_summary[c]={
+          'mean':float(x.mean()),'median':float(x.median()),'p95':float(x.quantile(.95)),
+          'max':int(x.max()),'days_ge_today_parent34':int((x>=34).sum())
+        }
+
     parent_daily={
       'days_in_settled_universe':int(len(daily_parent)),
       'total_monitoring_parent':int(daily_parent.sum()),
@@ -154,6 +170,7 @@ def main():
       'selected_pool':best,
       'selected_pool_month_R':{m:int((pool.month==m).sum()) for m in MONTHS},
       'live_comparable_monitoring_parent_daily':parent_daily,
+      'live_comparable_gate_daily_summary':gate_summary,
       'selection_used_head_outcomes':False,
       'old164_subset':bool(set(old.race_code).issubset(set(pool.race_code))),
       'SEPTEMBER_OUTCOMES_READ':False,
