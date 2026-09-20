@@ -27,7 +27,13 @@ def combo(x):
    a=z.split(sep)
    if len(a)==3 and all(v in {'1','2','3','4','5','6'} for v in a): return [int(v) for v in a]
  if len(z)==3 and all(v in '123456' for v in z): return [int(v) for v in z]
- return v221.v166.combo(x)
+ try:
+  a=v221.v166.combo(x)
+  if isinstance(a,(list,tuple)) and len(a)==3:
+   b=[ii(v,-1) for v in a]
+   if all(v in OPP+[3] for v in b): return b
+ except Exception: pass
+ return []
 
 def candidate_vec(r,b,role,sec=0):
  # Candidate-local player/history + prior exhibition, plus position and 3-attack context.
@@ -124,7 +130,7 @@ def main():
  rec=[]
  for mon in MONTHS:
   first=pd.Timestamp(mon+'-01');nextm=first+pd.offsets.MonthBegin(1);tr=d[d._date<first]
-  parsed_train=tr.actual_combo.map(combo); audit_n=int(parsed_train.map(lambda a: len(a)==3 and a[0]==3).sum()); print('train_audit',mon,len(tr),audit_n,flush=True)
+  parsed_train=tr.actual_combo.map(combo); audit_mask=parsed_train.map(lambda a: bool(isinstance(a,(list,tuple)) and len(a)==3 and a[0]==3)); audit_n=int(audit_mask.astype('int64').sum()); print('train_audit',mon,len(tr),audit_n,flush=True)
   sm,ns=fit_role(tr,'SECOND');tm,nt=fit_role(tr,'THIRD');direct,_=v221.fit_pair(tr,True)
   te=d[(d._date>=first)&(d._date<nextm)&d.race_code.astype(str).str.zfill(12).isin(selected[{'2025-11':'nov','2025-12':'dec','2026-01':'jan'}[mon]])].copy()
   for _,r in te.iterrows():
