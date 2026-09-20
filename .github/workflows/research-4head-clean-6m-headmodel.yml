@@ -1,0 +1,43 @@
+name: research-4head-clean-6m-headmodel
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research_4head_clean_6m_headmodel.py'
+      - '.github/workflows/research-4head-clean-6m-headmodel.yml'
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards/2026/03
+            data/programs/race_cards/2026/04
+            data/programs/race_cards/2026/05
+            data/programs/race_cards/2026/06
+            data/programs/race_cards/2026/07
+            data/programs/race_cards/2026/08
+            data/results/realtime/2026/03
+            data/results/realtime/2026/04
+            data/results/realtime/2026/05
+            data/results/realtime/2026/06
+            data/results/realtime/2026/07
+            data/results/realtime/2026/08
+      - run: pip install -q numpy pandas scikit-learn
+      - env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: python research_4head_clean_6m_headmodel.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-clean-6m-headmodel
+          path: /tmp/head4_clean_6m_headmodel/
+          retention-days: 30
