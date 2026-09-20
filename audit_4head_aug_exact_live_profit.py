@@ -213,7 +213,7 @@ def main():
       "bet_per_day_mean":float(daily.R.mean()),"bet_per_day_median":float(daily.R.median()),"bet_per_day_max":int(daily.R.max()),
       "head4":int(b.head4.sum()),"hits":int(b.hit.sum()),"stake":int(b.stake.sum()),"payout":float(b.payout.sum()),"profit":float(b.profit.sum()),
       "roi":float(100*b.payout.sum()/b.stake.sum()),"max_drawdown":float(dd.max()),"max_losing_streak":int(mx),
-      "base120_BET_R":int((b.base120==1).sum()),"newfeature_add_BET_R":int((b.newfeature_add==1).sum()),
+      "base120_BET_R":int((b.base120==1).sum()),"newfeature_add_BET_R":int((b.newfeature_add==1).sum()),"trifecta_not_established_R":int(len(missing_truth)),"trifecta_not_established_BET_R":int(b.race_code.isin(missing_truth).sum()),
       "SEPTEMBER_OUTCOMES_READ":False,"PRODUCTION_CHANGED":False}
  d.to_csv(OUT/"race_detail.csv",index=False);daily.to_csv(OUT/"daily.csv",index=False);venue.to_csv(OUT/"venue.csv",index=False)
  (OUT/"result.json").write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n")
