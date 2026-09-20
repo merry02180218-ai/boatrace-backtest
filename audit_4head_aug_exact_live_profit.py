@@ -216,7 +216,15 @@ def main():
       "roi":float(100*b.payout.sum()/b.stake.sum()),"max_drawdown":float(dd.max()),"max_losing_streak":int(mx),
       "base120_BET_R":int((b.base120==1).sum()),"newfeature_add_BET_R":int((b.newfeature_add==1).sum()),"trifecta_not_established_R":int(len(missing_truth)),"trifecta_not_established_BET_R":int(b.race_code.isin(missing_truth).sum()),
       "SEPTEMBER_OUTCOMES_READ":False,"PRODUCTION_CHANGED":False}
- d.to_csv(OUT/"race_detail.csv",index=False);daily.to_csv(OUT/"daily.csv",index=False);venue.to_csv(OUT/"venue.csv",index=False)\n # Diagnose why current LIVE base120 is much broader than the frozen 120R research sample.\n diag={k:int(b[k].sum()) for k in ("old164","baseformula","rescue082","base120","newfeature_add")}\n diag["base120_via_baseformula_R"]=int(((b.base120==1)&(b.baseformula==1)).sum())\n diag["base120_via_rescue_only_R"]=int(((b.base120==1)&(b.baseformula==0)&(b.rescue082==1)).sum())\n diag["base120_headprob_lt018_R"]=int(((b.base120==1)&(b.head_prob<.18)).sum())\n diag["base120_headprob_ge018_R"]=int(((b.base120==1)&(b.head_prob>=.18)).sum())\n (OUT/"base120_diagnostic.json").write_text(json.dumps(diag,ensure_ascii=False,indent=2)+"\\n")\n print("BASE120_DIAGNOSTIC",json.dumps(diag,ensure_ascii=False))
+ d.to_csv(OUT/"race_detail.csv",index=False);daily.to_csv(OUT/"daily.csv",index=False);venue.to_csv(OUT/"venue.csv",index=False)
+ # Diagnose why current LIVE base120 is much broader than the frozen 120R research sample.
+ diag={k:int(b[k].sum()) for k in ("old164","baseformula","rescue082","base120","newfeature_add")}
+ diag["base120_via_baseformula_R"]=int(((b.base120==1)&(b.baseformula==1)).sum())
+ diag["base120_via_rescue_only_R"]=int(((b.base120==1)&(b.baseformula==0)&(b.rescue082==1)).sum())
+ diag["base120_headprob_lt018_R"]=int(((b.base120==1)&(b.head_prob<.18)).sum())
+ diag["base120_headprob_ge018_R"]=int(((b.base120==1)&(b.head_prob>=.18)).sum())
+ (OUT/"base120_diagnostic.json").write_text(json.dumps(diag,ensure_ascii=False,indent=2)+"\n")
+ print("BASE120_DIAGNOSTIC",json.dumps(diag,ensure_ascii=False))
  (OUT/"result.json").write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n")
  print(json.dumps(out,ensure_ascii=False,indent=2));print(venue.to_string(index=False));print("HEAD4_AUG_EXACT_LIVE_PROFIT_OK");print("SEPTEMBER_UNREAD")
 if __name__=="__main__":main()
