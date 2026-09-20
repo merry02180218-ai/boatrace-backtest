@@ -20,6 +20,13 @@ def ii(x,d=0):
  except:return d
 
 def combo(x):
+ if isinstance(x,(list,tuple)) and len(x)==3: return [ii(v) for v in x]
+ z=str(x or '').strip().replace(' ','')
+ for sep in ['-','>','_','/']:
+  if sep in z:
+   a=z.split(sep)
+   if len(a)==3 and all(v in {'1','2','3','4','5','6'} for v in a): return [int(v) for v in a]
+ if len(z)==3 and all(v in '123456' for v in z): return [int(v) for v in z]
  return v221.v166.combo(x)
 
 def candidate_vec(r,b,role,sec=0):
@@ -94,6 +101,9 @@ def main():
  if 'valid_result' in d.columns: d=d.drop(columns=['valid_result'])
  d=d.merge(smap,on='race_code',how='left',validate='many_to_one')
  if d.actual_combo.notna().sum()<1000: raise RuntimeError(f'settlement attach too small {d.actual_combo.notna().sum()}')
+ parsed=d.actual_combo.map(combo); n3=int(parsed.map(lambda a: len(a)==3 and a[0]==3).sum())
+ print('settlement_audit',{'attached':int(d.actual_combo.notna().sum()),'parsed3head':n3,'sample':d.actual_combo.dropna().astype(str).head(5).tolist()},flush=True)
+ if n3<100: raise RuntimeError(f'parsed boat3-win labels too small {n3}')
  # Cohort membership is reconstructed from frozen A+.60 race codes produced by the adopted loss-structure development.
  sys.path.insert(0,str(v221.ROOT/'research'))
  import run_3head_a_loss_structure_dev as ls
