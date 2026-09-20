@@ -291,6 +291,31 @@ def main():
   swap[f'turn_ge_{th:.2f}']={'eligible_swaps':n_eligible,'base_hits':base_hits,'rescued_hits':rescued,'lost_hits':lost,
    'net_hits':rescued-lost,'new_hits':new_hits,'new_top6_rate':new_hits/len(z),'rows':rows_swap}
  out['v221_second4_fixed6_swap']=swap
+ # Protected fixed-six swap: never drop an existing SECOND=4 ticket when promoting another SECOND=4 ticket.
+ # Among non-4-second tickets in current Top6, drop the weakest (lowest V221 rank = last eligible slot).
+ protected={}
+ for th in [0.45,0.50,0.55,0.60]:
+  eligible=rescued=lost=0; detail=[]
+  for _,r in z.iterrows():
+   src=d[d.race_code.astype(str).str.zfill(12)==str(r.race_code).zfill(12)]
+   if src.empty: continue
+   q=src.iloc[0]; turn=pd.to_numeric(pd.Series([v221.xtra(q,4,'vh_p12_turn')]),errors='coerce').iloc[0]
+   vo=str(r['_v221_order']).split('|'); old=vo[:6]; actual=f"3-{int(r.second)}-{int(r.third)}"; oldhit=actual in old
+   new=list(old); promoted=dropped=None
+   if pd.notna(turn) and turn>=th:
+    cand=[x for x in vo if x.startswith('3-4-') and x not in old]
+    drop_idx=[i for i,x in enumerate(new) if not x.startswith('3-4-')]
+    if cand and drop_idx:
+     eligible+=1; promoted=cand[0]; di=drop_idx[-1]; dropped=new[di]; new[di]=promoted
+   newhit=actual in new
+   if not oldhit and newhit: rescued+=1
+   elif oldhit and not newhit: lost+=1
+   if promoted is not None:
+    detail.append({'race_code':r.race_code,'turn4':float(turn),'old_hit':bool(oldhit),'new_hit':bool(newhit),'promoted':promoted,'dropped':dropped,'actual':actual})
+  base=int((z.pair_rank_v221<=6).sum()); nh=base+rescued-lost
+  protected[f'turn_ge_{th:.2f}']={'eligible_swaps':eligible,'base_hits':base,'rescued_hits':rescued,'lost_hits':lost,
+   'net_hits':rescued-lost,'new_hits':nh,'new_top6_rate':nh/len(z),'rows':detail}
+ out['v221_second4_fixed6_protected']=protected
  # Error decomposition: isolate whether losses originate in SECOND, conditional THIRD, or factorized ordering.
  dec={
   'second_top1_miss':int((z.second_rank>1).sum()),'second_top2_miss':int((z.second_rank>2).sum()),
