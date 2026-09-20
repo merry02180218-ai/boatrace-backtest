@@ -80,6 +80,9 @@ jobs:
       STATE_RUN_ID: ${{ matrix.state_run_id }}
       STATE_ARTIFACT_NAME: ${{ matrix.state_artifact_name }}
       ARTIFACT_NAME: ${{ matrix.artifact_name }}
+      ULTRALOW_SHADOW: ${{ matrix.ultralow_shadow }}
+      OPERATIONAL_CLASS: ${{ matrix.operational_class }}
+      PRE_REASON: ${{ matrix.pre_reason }}
     steps:
       - name: Per-race idempotency guard
         env:
@@ -171,7 +174,7 @@ jobs:
           PY
 
       - name: Notify GitHub Issue on BET
-        if: env.SHOULD_RUN == '1'
+        if: env.SHOULD_RUN == '1' && env.ULTRALOW_SHADOW != '1'
         env:
           GITHUB_TOKEN: ${{ github.token }}
         run: |
@@ -180,6 +183,11 @@ jobs:
             --target-date "$TARGET_DATE" \
             --jcd "$JCD" --race "$RACE" \
             --deadline-jst "$DEADLINE_JST"
+
+      - name: Shadow notification guard
+        if: env.SHOULD_RUN == '1' && env.ULTRALOW_SHADOW == '1'
+        run: |
+          echo "HEAD4_SHADOW_NO_PRODUCTION_NOTIFICATION class=$OPERATIONAL_CLASS pre_reason=$PRE_REASON"
 
       - uses: actions/upload-artifact@v4
         if: env.SHOULD_RUN == '1' && always()
