@@ -1,0 +1,32 @@
+name: 4HEAD clean long preflight
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'audit_4head_clean_long_preflight.py'
+      - '.github/workflows/4head-clean-long-preflight.yml'
+permissions:
+  contents: read
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout BoatraceCSV
+        uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/fun-site
+          path: boatracecsv
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Audit historical source coverage
+        env:
+          BOATRACECSV_LOCAL_ROOT: boatracecsv
+          START_DATE: '2025-11-01'
+          END_DATE: '2026-08-31'
+        run: python audit_4head_clean_long_preflight.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-clean-long-preflight
+          path: /tmp/head4_long_preflight/
