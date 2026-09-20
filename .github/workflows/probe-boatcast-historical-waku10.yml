@@ -1,0 +1,10 @@
+name: probe-boatcast-historical-waku10
+on:
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: python probe_boatcast_historical_waku10.py
