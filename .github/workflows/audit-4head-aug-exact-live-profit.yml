@@ -28,6 +28,13 @@ jobs:
           mkdir -p v93
           gh run download 35487172647 -n head4-v93-all-parent -D v93
           echo "V93_ROWS=$(find v93 -name v93_all_parent.csv | head -1)" >> "$GITHUB_ENV"
+      - name: Preflight compile/import validation
+        run: |
+          python -m py_compile audit_4head_aug_exact_live_profit.py
+          python - <<'PY'
+          import audit_4head_aug_exact_live_profit
+          print('PREFLIGHT_IMPORT_OK')
+          PY
       - name: Run exact August current-LIVE profit replay
         run: python audit_4head_aug_exact_live_profit.py
       - uses: actions/upload-artifact@v4
