@@ -19,10 +19,11 @@ import run_4head_v291_third010_live as live
 
 OUT=Path("/tmp/head4_6m_frozen4961_closing"); OUT.mkdir(parents=True,exist_ok=True)
 ROOT=Path(__file__).resolve().parent
+DATA_ROOT=Path(os.environ.get("BOATRACECSV_LOCAL_ROOT", str(ROOT)))
 BOATS=(1,2,3,5,6); BANK=10000
 
 def rows(path):
- p=ROOT/path
+ p=DATA_ROOT/path
  if not p.is_file(): return []
  with p.open(encoding="utf-8-sig",newline="") as f:return list(csv.DictReader(f))
 def rc(x):
