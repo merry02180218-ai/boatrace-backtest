@@ -14,5 +14,14 @@ for i,p in enumerate(cases,1):
             print("CASE",i,"STATUS",r.status,"BYTES",len(b),"CTYPE",r.headers.get("content-type"))
             print("HEAD",b[:1500].replace("\n"," "))
             print("KEYS",{k:(k in b) for k in ["枠別","10走","1着率","データ取得中","waku"]})
+            try:
+                obj=json.loads(b)
+                print("TOP_KEYS",list(obj.keys()))
+                for k,v in obj.items():
+                    if isinstance(v,list):
+                        print("LIST",k,"LEN",len(v),"SAMPLE_KEYS",list(v[0].keys())[:80] if v and isinstance(v[0],dict) else [])
+                    elif isinstance(v,dict):
+                        print("DICT",k,"KEYS",list(v.keys())[:80])
+            except Exception as je: print("JSON_PARSE_ERROR",repr(je))
     except Exception as e: print("CASE",i,"ERROR",repr(e))
 print("DIRECT_POST_PROBE_OK")
