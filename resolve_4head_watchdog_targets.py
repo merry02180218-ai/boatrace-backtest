@@ -50,6 +50,9 @@ def resolve(watchlist:dict, now:datetime, completed:set[str]|None=None)->dict:
               'state_artifact_name':str(t['state_artifact_name']),
               'artifact_name':artifact,
               'race_code':str(t.get('race_code') or f'{day}{jcd}{race:02d}'),
+              'ultralow_shadow':int(t.get('ultralow_shadow',0) or 0),
+              'operational_class':str(t.get('operational_class','内部ウォッチ')),
+              'pre_reason':str(t.get('pre_reason','WATCH_ONLY')),
             })
     out.sort(key=lambda x:(x['deadline_jst'],x['jcd'],x['race']))
     return {'date':day,'now_jst':now.isoformat(),'count':len(out),'include':out,'reason':'ok'}
