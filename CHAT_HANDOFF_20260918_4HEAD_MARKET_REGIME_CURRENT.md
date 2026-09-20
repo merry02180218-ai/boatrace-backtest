@@ -3478,3 +3478,14 @@ Status: HEAD4_20260919_LIVE_OPERATION_READY__VENUE_ORIGINAL_RECOVERY_PLUS_PARALL
 - First implementation target: a model-tagged common watchlist/resolver contract that can carry 1HEAD and 4HEAD targets while dispatching to model-specific finalizers.
 - Preserve result-blind chronology guards and existing September outcome-read boundaries.
 - Status: UNIFIED_LIVE_IMPLEMENTATION_STARTED.
+
+
+## BEFORE — 2026-09-20 — excessive BET notification / Shadow routing audit
+- User reported unusually many GitHub 4HEAD BET notifications during live operation.
+- Direct inspection confirmed at least six distinct BET Issues by ~11:15 JST, so this is not duplicate-notification noise.
+- Critical routing defect identified: daily watchlist carries `ultralow_shadow` / `operational_class=超低頭確率Shadow`, but `resolve_4head_watchdog_targets.py` drops those fields. The monitor job therefore cannot distinguish Shadow from production-eligible monitoring rows, and the fast runner can emit production `BET` for a Shadow row.
+- Concrete example: 20260920 多摩川3R, PRE head_prob≈0.084 and operational_class=超低頭確率Shadow, nevertheless emitted production BET notification.
+- Immediate repair plan: preserve operational_class/ultralow_shadow through resolver matrix; production watchdog must not send Shadow rows through the production BET notification path. Shadow may still be evaluated/recorded separately but cannot create a production BET Issue.
+- After routing repair, separately audit non-Shadow BET frequency and parity against frozen HEAD4_NEWFEATURE_FIXED156_V1 selection semantics; do not retune threshold/weights during this operational fix.
+- September target results/payout remain unread; this audit uses only PRE/live pre-deadline decision metadata and GitHub notification payloads.
+- Status: HEAD4_SHADOW_ROUTING_REPAIR_BEGIN
