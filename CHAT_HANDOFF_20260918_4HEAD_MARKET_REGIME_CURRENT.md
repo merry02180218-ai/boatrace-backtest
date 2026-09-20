@@ -3495,3 +3495,10 @@ Status: HEAD4_20260919_LIVE_OPERATION_READY__VENUE_ORIGINAL_RECOVERY_PLUS_PARALL
 - Prior z-based daily comparison is invalid for LIVE volume because settle_all is already a narrowed settled universe.
 - Next audit will replay Apr-Aug from all race_cards with the exact LIVE frozen_parent_features semantics, day-frozen prior history, and no September outcomes.
 - Goal: all races/day -> monitoring_parent -> head_prob/display PRE where reproducible -> later final BET comparison. Production unchanged.
+
+## 2026-09-20 BEFORE — exact all-parent final BET replay
+- Goal: explain why LIVE 2026-09-20 reached >=7 valid BET while frozen 156 research universe maxed at 6/day.
+- Exact PRE parent replay already proved 34/168 (20.24%) is normal vs Apr-Aug historical mean 19.75%.
+- Next: reconstruct all historical PRE-parent rows through exhibition -> v283 tickets/opponent mass -> official closing odds -> frozen base120/newfeature final decision, if archive coverage permits.
+- Must keep September outcomes/payouts UNREAD. Production unchanged during audit.
+- Existing 156R ROI 140.99% and closing-odds stress remain diagnostics, not proof of all-parent LIVE parity.
