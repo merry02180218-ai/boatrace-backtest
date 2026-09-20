@@ -1,0 +1,27 @@
+name: audit-4head-aug-live-od3-coverage
+on:
+  push:
+    paths:
+      - 'audit_4head_aug_live_od3_coverage.py'
+      - '.github/workflows/audit-4head-aug-live-od3-coverage.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q pandas
+      - name: Download strict universe
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p strict
+          gh run download 35487460383 -n head4-live-profitability-coverage -D strict
+          echo "STRICT_ROWS=$(find strict -name strict_executable_rows.csv | head -1)" >> "$GITHUB_ENV"
+      - run: python audit_4head_aug_live_od3_coverage.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-aug-live-od3-coverage
+          path: /tmp/head4_aug_live_od3/
