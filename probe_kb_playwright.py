@@ -17,7 +17,8 @@ with sync_playwright() as p:
             except: pass
         events.append(item)
     page.on("request",req); page.on("response",resp)
-    page.goto(URL,wait_until="domcontentloaded",timeout=60000)\n    page.wait_for_timeout(12000)
+    page.goto(URL,wait_until="domcontentloaded",timeout=60000)
+    page.wait_for_timeout(12000)
     page.wait_for_timeout(5000)
     html=page.content()
     (out/"page.html").write_text(html,encoding="utf-8")
