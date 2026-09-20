@@ -1,0 +1,10 @@
+name: compare-kb-boatracecsv-waku10
+on:
+  workflow_dispatch:
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: python compare_kb_boatracecsv_waku10.py
