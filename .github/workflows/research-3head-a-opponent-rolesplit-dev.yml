@@ -18,7 +18,7 @@ jobs:
         run: |
           python -m py_compile research/run_3head_a_opponent_rolesplit_dev.py
           cd research
-          python -c "import run_3head_a_opponent_rolesplit_dev"
+          python -c "import run_3head_a_opponent_rolesplit_dev; import analyze_v221_3head_scenario_pair"
       - name: Run role split development
         run: cd research && python run_3head_a_opponent_rolesplit_dev.py
       - uses: actions/upload-artifact@v4
