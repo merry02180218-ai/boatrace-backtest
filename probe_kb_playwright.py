@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from playwright.sync_api import sync_playwright
 import json, re, pathlib
-URL="https://kyoteibiyori.com/race_shusso.php?hiduke=20260728&place_no=9&race_no=3&slider=8"
+URL="https://kyoteibiyori.com/race_shusso.php?hiduke=20260716&place_no=11&race_no=1&slider=1"
 out=pathlib.Path("/tmp/kb_pw"); out.mkdir(exist_ok=True)
 events=[]
 with sync_playwright() as p:
@@ -17,7 +17,7 @@ with sync_playwright() as p:
             except: pass
         events.append(item)
     page.on("request",req); page.on("response",resp)
-    page.goto(URL,wait_until="networkidle",timeout=60000)
+    page.goto(URL,wait_until="domcontentloaded",timeout=60000)\n    page.wait_for_timeout(12000)
     page.wait_for_timeout(5000)
     html=page.content()
     (out/"page.html").write_text(html,encoding="utf-8")
