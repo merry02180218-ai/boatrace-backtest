@@ -1,0 +1,20 @@
+name: probe-kb-playwright
+on:
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Playwright
+        run: |
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Probe browser network
+        run: python probe_kb_playwright.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: kb-playwright-probe
+          path: /tmp/kb_pw/
+          retention-days: 7
