@@ -123,6 +123,18 @@ def main():
           'daily_counts':{str(k):{'selected':int(counts.loc[k]),'base120':int(base_counts.loc[k]),'newfeature_add':int(add_counts.loc[k])} for k in counts.index}
         }
 
+    # Closing-odds executable-price stress test. The Stage2 composite odds and
+    # payout_if_bet are built from data/official_closing_odds3t rows filtered to
+    # source_type=official_closing and snapshot_type=closing_displayed.
+    # Stress payout only (stake fixed at 10,000/race) to measure how much price
+    # deterioration the historical edge can absorb.
+    stress={}
+    for haircut in (0.00,0.05,0.10,0.15,0.20,0.25):
+        pay=float(pd.to_numeric(q.payout_if_bet,errors='coerce').fillna(0).sum())*(1.0-haircut)
+        stake=10000.0*len(q)
+        stress[f'haircut_{int(haircut*100):02d}pct']={'payout_yen':pay,'profit_yen':pay-stake,'ROI':100*pay/stake}
+    break_even_haircut=1.0-(100.0/roi)
+
     # Operational profitability diagnostics on the frozen 156 selections.
     # payout_if_bet is the existing historical archived-odds proxy; this block
     # does not claim live executable fills.
@@ -152,7 +164,7 @@ def main():
     }
 
     z.to_csv(OUT/'parity_rows.csv',index=False)
-    result={'profile':art['profile'],'R':R,'head4':heads,'head4_rate':100*heads/R,'exact3':hits,'ROI':roi,'monthly':month,'monthly_floor_ROI':floor,'support_ROI':suproi,'motor_unit':mf,'wall_unit':wf,'head_prob_bands':hp_bands,'selection_path_head_prob_bands':path_band,'daily_bet_concentration':daily_bet,'profitability_proxy':profitability,'SEPTEMBER_OUTCOMES_READ':False,'AUDIT_OK':True}
+    result={'profile':art['profile'],'R':R,'head4':heads,'head4_rate':100*heads/R,'exact3':hits,'ROI':roi,'monthly':month,'monthly_floor_ROI':floor,'support_ROI':suproi,'motor_unit':mf,'wall_unit':wf,'head_prob_bands':hp_bands,'selection_path_head_prob_bands':path_band,'daily_bet_concentration':daily_bet,'profitability_proxy':profitability,'closing_odds_stress':stress,'break_even_payout_haircut':break_even_haircut,'SEPTEMBER_OUTCOMES_READ':False,'AUDIT_OK':True}
     (OUT/'result.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps(result,ensure_ascii=False,indent=2))
     print('HEAD4_NEWFEATURE_PRODUCTION_PARITY_OK');print('SEPTEMBER_UNREAD')
