@@ -123,8 +123,36 @@ def main():
           'daily_counts':{str(k):{'selected':int(counts.loc[k]),'base120':int(base_counts.loc[k]),'newfeature_add':int(add_counts.loc[k])} for k in counts.index}
         }
 
+    # Operational profitability diagnostics on the frozen 156 selections.
+    # payout_if_bet is the existing historical archived-odds proxy; this block
+    # does not claim live executable fills.
+    pq=q.copy()
+    pq['_audit_date']=pq[date_col].astype(str).str[:10] if date_col else ''
+    pq['_stake']=10000.0
+    pq['_profit']=pd.to_numeric(pq.payout_if_bet,errors='coerce').fillna(0.0)-pq['_stake']
+    pq['_cum_profit']=pq['_profit'].cumsum()
+    running_peak=pq['_cum_profit'].cummax().clip(lower=0)
+    pq['_drawdown']=pq['_cum_profit']-running_peak
+    daily_profit=pq.groupby('_audit_date')['_profit'].sum() if date_col else pd.Series(dtype=float)
+    monthly_profit=pq.groupby(pq.month.astype(str)).agg(R=('race_code','size'),stake=('_stake','sum'),payout=('payout_if_bet','sum'),profit=('_profit','sum'))
+    monthly_profit['ROI']=100*monthly_profit.payout/monthly_profit.stake
+    loss=(pq['_profit']<0).astype(int).tolist(); max_losing_streak=cur=0
+    for v in loss:
+        cur=cur+1 if v else 0; max_losing_streak=max(max_losing_streak,cur)
+    profitability={
+      'basis':'historical archived-odds proxy; not guaranteed live executable fill',
+      'R':int(len(pq)),'stake_yen':float(pq._stake.sum()),
+      'payout_yen':float(pd.to_numeric(pq.payout_if_bet,errors='coerce').fillna(0).sum()),
+      'profit_yen':float(pq._profit.sum()),
+      'ROI':100*float(pd.to_numeric(pq.payout_if_bet,errors='coerce').fillna(0).sum())/float(pq._stake.sum()),
+      'max_drawdown_yen':float(-pq._drawdown.min()),
+      'max_losing_streak_races':int(max_losing_streak),
+      'profitable_days':int((daily_profit>0).sum()),'losing_days':int((daily_profit<0).sum()),
+      'monthly':{str(k):{kk:float(vv) if kk!='R' else int(vv) for kk,vv in row.items()} for k,row in monthly_profit.iterrows()}
+    }
+
     z.to_csv(OUT/'parity_rows.csv',index=False)
-    result={'profile':art['profile'],'R':R,'head4':heads,'head4_rate':100*heads/R,'exact3':hits,'ROI':roi,'monthly':month,'monthly_floor_ROI':floor,'support_ROI':suproi,'motor_unit':mf,'wall_unit':wf,'head_prob_bands':hp_bands,'selection_path_head_prob_bands':path_band,'daily_bet_concentration':daily_bet,'SEPTEMBER_OUTCOMES_READ':False,'AUDIT_OK':True}
+    result={'profile':art['profile'],'R':R,'head4':heads,'head4_rate':100*heads/R,'exact3':hits,'ROI':roi,'monthly':month,'monthly_floor_ROI':floor,'support_ROI':suproi,'motor_unit':mf,'wall_unit':wf,'head_prob_bands':hp_bands,'selection_path_head_prob_bands':path_band,'daily_bet_concentration':daily_bet,'profitability_proxy':profitability,'SEPTEMBER_OUTCOMES_READ':False,'AUDIT_OK':True}
     (OUT/'result.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps(result,ensure_ascii=False,indent=2))
     print('HEAD4_NEWFEATURE_PRODUCTION_PARITY_OK');print('SEPTEMBER_UNREAD')
