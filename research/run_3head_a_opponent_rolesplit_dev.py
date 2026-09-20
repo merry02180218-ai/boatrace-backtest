@@ -13,7 +13,9 @@ from sklearn.linear_model import LogisticRegression
 import analyze_v221_3head_scenario_pair as v221
 
 OPP=[1,2,4,5,6]
-MONTHS=['2025-11','2025-12','2026-01']
+MONTHS=['2025-12','2026-01']
+# Nov is a cold-start month for this canonical feature frame: v221 itself starts walk-forward evaluation in Dec.
+# Do not fabricate/leak a Nov role model; keep Nov out of architecture selection and report it explicitly.
 
 def ii(x,d=0):
  try:return int(float(x))
@@ -109,6 +111,7 @@ def main():
  # build() may preserve an old _date with incompatible/NaT values after source joins; re-anchor date from race_code YYYYMMDD.
  rcdate=pd.to_datetime(d.race_code.astype(str).str.slice(0,8),format='%Y%m%d',errors='coerce')
  if rcdate.notna().sum()>0: d['_date']=rcdate
+ print('date_audit',{'n':int(d['_date'].notna().sum()),'min':str(d['_date'].min()),'max':str(d['_date'].max()),'pre_nov':int((d['_date']<pd.Timestamp('2025-11-01')).sum()),'nov':int(((d['_date']>=pd.Timestamp('2025-11-01'))&(d['_date']<pd.Timestamp('2025-12-01'))).sum())},flush=True)
  if d.actual_combo.notna().sum()<1000: raise RuntimeError(f'settlement attach too small {d.actual_combo.notna().sum()}')
  parsed=d.actual_combo.map(combo); n3=int(parsed.map(lambda a: len(a)==3 and a[0]==3).sum())
  print('settlement_audit',{'attached':int(d.actual_combo.notna().sum()),'parsed3head':n3,'sample':d.actual_combo.dropna().astype(str).head(5).tolist()},flush=True)
@@ -141,13 +144,14 @@ def main():
    vo=v221.order(r,direct,True);actual=f'3-{a[1]}-{a[2]}';vr=vo.index(actual)+1
    rec.append({'month':mon,'race_code':str(r.race_code).zfill(12),'second':a[1],'third':a[2],'second_rank':sr,'third_rank_cond_actual_second':trr,'pair_rank_factorized':pr,'pair_rank_v221':vr})
  z=pd.DataFrame(rec)
- if len(z)!=54:raise RuntimeError(f'head-win cohort drift {len(z)} !=54')
+ if len(z)<20:raise RuntimeError(f'Dec-Jan head-win evaluation unexpectedly small: {len(z)}')
+ print('eval_audit',{'months':MONTHS,'head_wins':int(len(z)),'nov_role_split':'NOT_EVALUATED_COLD_START_NO_PRIOR_FEATURE_FRAME'},flush=True)
  def met(g):
   return {'n':len(g),'second_top1':float((g.second_rank<=1).mean()),'second_top2':float((g.second_rank<=2).mean()),
    'third_top1':float((g.third_rank_cond_actual_second<=1).mean()),'third_top2':float((g.third_rank_cond_actual_second<=2).mean()),
    **{f'factor_pair_top{k}':float((g.pair_rank_factorized<=k).mean()) for k in [1,2,4,6,10]},
    **{f'v221_pair_top{k}':float((g.pair_rank_v221<=k).mean()) for k in [1,2,4,6,10]}}
- out={'policy':{'head_purchase':'A+.60 frozen','selection_months':MONTHS,'march_used':False,'sep2026_used':False,'odds_used':False},
+ out={'policy':{'head_purchase':'A+.60 frozen','selection_months':MONTHS,'nov_policy':'cold-start excluded from role-split selection; no leakage/fabricated prior training','march_used':False,'sep2026_used':False,'odds_used':False},
       'overall':met(z),'monthly':{m:met(g) for m,g in z.groupby('month')},'rows':z.to_dict('records')}
  open('research_3head_a_opponent_rolesplit_dev.json','w').write(json.dumps(out,ensure_ascii=False,indent=2))
  z.to_csv('research_3head_a_opponent_rolesplit_dev.csv',index=False)
