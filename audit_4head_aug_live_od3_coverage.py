@@ -27,3 +27,5 @@ def main():
  out={"aug_strict_post_executable_R":len(z),"od3_covered_R":int(z.od3_covered.sum()),"od3_coverage_rate":float(z.od3_covered.mean()),"median_minutes_before_close":float(z.loc[z.od3_covered,"minutes_before_close"].median()),"min_minutes_before_close":float(z.loc[z.od3_covered,"minutes_before_close"].min()),"max_minutes_before_close":float(z.loc[z.od3_covered,"minutes_before_close"].max()),"SEPTEMBER_OUTCOMES_READ":False,"PRODUCTION_CHANGED":False}
  z.to_csv(OUT/"aug_strict_od3_rows.csv",index=False);(OUT/"result.json").write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n");print(json.dumps(out,ensure_ascii=False,indent=2));print("HEAD4_AUG_LIVE_OD3_COVERAGE_OK");print("SEPTEMBER_UNREAD")
 if __name__=="__main__":main()
+
+# workflow trigger
