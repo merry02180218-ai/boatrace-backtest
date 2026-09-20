@@ -100,6 +100,9 @@ def main():
  if 'actual_combo' in d.columns: d=d.drop(columns=['actual_combo'])
  if 'valid_result' in d.columns: d=d.drop(columns=['valid_result'])
  d=d.merge(smap,on='race_code',how='left',validate='many_to_one')
+ # build() may preserve an old _date with incompatible/NaT values after source joins; re-anchor date from race_code YYYYMMDD.
+ rcdate=pd.to_datetime(d.race_code.astype(str).str.slice(0,8),format='%Y%m%d',errors='coerce')
+ if rcdate.notna().sum()>0: d['_date']=rcdate
  if d.actual_combo.notna().sum()<1000: raise RuntimeError(f'settlement attach too small {d.actual_combo.notna().sum()}')
  parsed=d.actual_combo.map(combo); n3=int(parsed.map(lambda a: len(a)==3 and a[0]==3).sum())
  print('settlement_audit',{'attached':int(d.actual_combo.notna().sum()),'parsed3head':n3,'sample':d.actual_combo.dropna().astype(str).head(5).tolist()},flush=True)
@@ -121,6 +124,7 @@ def main():
  rec=[]
  for mon in MONTHS:
   first=pd.Timestamp(mon+'-01');nextm=first+pd.offsets.MonthBegin(1);tr=d[d._date<first]
+  parsed_train=tr.actual_combo.map(combo); audit_n=int(parsed_train.map(lambda a: len(a)==3 and a[0]==3).sum()); print('train_audit',mon,len(tr),audit_n,flush=True)
   sm,ns=fit_role(tr,'SECOND');tm,nt=fit_role(tr,'THIRD');direct,_=v221.fit_pair(tr,True)
   te=d[(d._date>=first)&(d._date<nextm)&d.race_code.astype(str).str.zfill(12).isin(selected[{'2025-11':'nov','2025-12':'dec','2026-01':'jan'}[mon]])].copy()
   for _,r in te.iterrows():
