@@ -177,6 +177,42 @@ def main():
       'overall':met(z),'hybrid':hybrid,'monthly':{m:met(g) for m,g in z.groupby('month')},'rows':z.to_dict('records')}
  open('research_3head_a_opponent_rolesplit_dev.json','w').write(json.dumps(out,ensure_ascii=False,indent=2))
  z.to_csv('research_3head_a_opponent_rolesplit_dev.csv',index=False)
+ # Diagnose V221 tail misses only; descriptive Dec-Jan audit, no March/Sep and no threshold selection.
+ def bucket(v):
+  try:
+   x=float(v)
+   if x<.40:return 'LOW'
+   if x>.60:return 'HIGH'
+   return 'MID'
+  except:return 'NA'
+ miss=[]
+ for _,r in z.iterrows():
+  if int(r.pair_rank_v221)<=6: continue
+  src=d[d.race_code.astype(str).str.zfill(12)==str(r.race_code).zfill(12)]
+  if src.empty: continue
+  q=src.iloc[0]
+  mak=v221.ff(q.get('structure_3makuri'),v221.ff(q.get('score_3makuri'),.5))
+  ms=v221.ff(q.get('structure_3makurizashi'),v221.ff(q.get('score_3makurizashi'),.5))
+  miss.append({'month':r.month,'race_code':r.race_code,'actual_second':int(r.second),'actual_third':int(r.third),
+   'v221_rank':int(r.pair_rank_v221),'attack_shape':'MAKURI' if mak>ms else 'MAKURIZASHI',
+   'makuri_bucket':bucket(mak),'makurizashi_bucket':bucket(ms),
+   'second_zone':'INNER' if int(r.second) in (1,2) else 'OUTER',
+   'third_zone':'INNER' if int(r.third) in (1,2) else 'OUTER',
+   'second_display':v221.xtra(q,int(r.second),'vh_p12_display'),
+   'second_turn':v221.xtra(q,int(r.second),'vh_p12_turn'),
+   'third_display':v221.xtra(q,int(r.third),'vh_p12_display'),
+   'third_turn':v221.xtra(q,int(r.third),'vh_p12_turn')})
+ md=pd.DataFrame(miss)
+ tail={'top6_miss_n':int((z.pair_rank_v221>6).sum()),'top10_miss_n':int((z.pair_rank_v221>10).sum())}
+ if len(md):
+  tail['attack_shape']=md.attack_shape.value_counts().to_dict()
+  tail['second_zone']=md.second_zone.value_counts().to_dict()
+  tail['third_zone']=md.third_zone.value_counts().to_dict()
+  tail['actual_second']=md.actual_second.value_counts().sort_index().to_dict()
+  tail['actual_third']=md.actual_third.value_counts().sort_index().to_dict()
+  tail['rank_gt10_rows']=md[md.v221_rank>10].to_dict('records')
+  md.to_csv('research_3head_a_v221_tail_misses.csv',index=False)
+ out['v221_tail_audit']=tail
  # Error decomposition: isolate whether losses originate in SECOND, conditional THIRD, or factorized ordering.
  dec={
   'second_top1_miss':int((z.second_rank>1).sum()),'second_top2_miss':int((z.second_rank>2).sum()),
