@@ -3489,3 +3489,9 @@ Status: HEAD4_20260919_LIVE_OPERATION_READY__VENUE_ORIGINAL_RECOVERY_PLUS_PARALL
 - After routing repair, separately audit non-Shadow BET frequency and parity against frozen HEAD4_NEWFEATURE_FIXED156_V1 selection semantics; do not retune threshold/weights during this operational fix.
 - September target results/payout remain unread; this audit uses only PRE/live pre-deadline decision metadata and GitHub notification payloads.
 - Status: HEAD4_SHADOW_ROUTING_REPAIR_BEGIN
+
+
+## 2026-09-20 BEFORE — exact PRE/live parent historical replay
+- Prior z-based daily comparison is invalid for LIVE volume because settle_all is already a narrowed settled universe.
+- Next audit will replay Apr-Aug from all race_cards with the exact LIVE frozen_parent_features semantics, day-frozen prior history, and no September outcomes.
+- Goal: all races/day -> monitoring_parent -> head_prob/display PRE where reproducible -> later final BET comparison. Production unchanged.
