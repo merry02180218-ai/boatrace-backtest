@@ -1,0 +1,10 @@
+name: audit-boatcast-waku10-leak
+on:
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: python audit_boatcast_waku10_leak.py
