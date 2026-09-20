@@ -1,0 +1,60 @@
+name: audit-4head-aug-frozen4961-second-features
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards/2026/03
+            data/programs/race_cards/2026/04
+            data/programs/race_cards/2026/05
+            data/programs/race_cards/2026/06
+            data/programs/race_cards/2026/07
+            data/programs/race_cards/2026/08
+            data/results/realtime/2026/03
+            data/results/realtime/2026/04
+            data/results/realtime/2026/05
+            data/results/realtime/2026/06
+            data/results/realtime/2026/07
+            data/results/realtime/2026/08
+      - run: pip install -q pandas numpy scikit-learn requests beautifulsoup4 scipy
+      - name: Download strict August universe
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p strict
+          gh run download 35487460383 -n head4-live-profitability-coverage -D strict
+          echo "STRICT_ROWS=$(find strict -name strict_executable_rows.csv | head -1)" >> "$GITHUB_ENV"
+      - name: Download all-parent V93 rebuild
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p v93
+          gh run download 35487172647 -n head4-v93-all-parent -D v93
+          echo "V93_ROWS=$(find v93 -name v93_all_parent.csv | head -1)" >> "$GITHUB_ENV"
+      - name: Preflight
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: |
+          python -m py_compile audit_4head_aug_frozen4961_second_features.py
+          python -m py_compile research_4head_clean_6m_headmodel.py
+      - name: Run opponent decomposition
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: python audit_4head_aug_frozen4961_second_features.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-aug-frozen4961-second-features
+          path: /tmp/head4_aug_frozen4961_profit/
