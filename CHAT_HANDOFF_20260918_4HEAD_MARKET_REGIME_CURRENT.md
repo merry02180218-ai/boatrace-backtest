@@ -3522,3 +3522,15 @@ Status: HEAD4_20260919_LIVE_OPERATION_READY__VENUE_ORIGINAL_RECOVERY_PLUS_PARALL
 - Verified source preflight Run 35494641284 / Job 106035351000 SUCCESS using BoatraceCSV/boatracecsv.github.io. Exhibition all3 coverage is substantial from Nov 2025-Aug 2026; od3 begins only Jul 2026 and is complete-ish in Aug.
 - Next work: build a chronological 10-month clean-slate research dataset from all races/current PRE/exhibition inputs, with no legacy v20/v74/v83/v93 eligibility gate and no Waku10 retrospective backfill. September outcomes remain UNREAD.
 - Status: LONG_HEAD_DATASET_BUILD_STARTED
+
+
+## 2026-09-20 AFTER — clean long dataset build completed
+- Commit c17818661a624b0e83f2a0b9295ed65f28edb270: build_4head_clean_long_dataset.py
+- Commit a7c3bbf04912c13f0beb9aa3a1f066570d680281: build workflow
+- Run 35499385294 / Job 106048295704 SUCCESS
+- Artifact 10601458257, SHA256 42dd501d20861efd74452bf837dccc67e48e667c87658dd6325232cc05aea19c
+- Period 2025-11-01..2026-08-31, warmup 2025-10, all races 45,761.
+- No legacy candidate gate, no Waku10 backfill, September outcomes unread, production unchanged.
+- Important archive finding: exhibition struct_ready is zero Nov-Feb in this builder, then Mar 3,550 (77.1%), Apr 3,282 (77.3%), May 4,260 (88.2%), Jun 4,049 (90.2%), Jul 4,487 (91.2%), Aug 4,227 (85.9%). Therefore full current exhibition feature parity is directly available for Mar-Aug = six months; Nov-Feb can still support PRE/all-race head baseline but not exact current exhibition feature replay without changing feature definition.
+- Raw all-race 4-head rate is stable around 9.46%-10.78% monthly, useful baseline only, not model performance.
+- Next: construct six-month Mar-Aug chronological head-model research/evaluation split from current live-available features; do not optimize on Aug alone. Keep Jul19-Aug exact od3 for execution-layer ROI validation.
