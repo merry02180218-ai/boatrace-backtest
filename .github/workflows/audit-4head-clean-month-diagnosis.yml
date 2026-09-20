@@ -1,0 +1,52 @@
+name: audit-4head-clean-month-diagnosis
+on:
+  workflow_dispatch:
+  push:
+    paths: ['audit_4head_clean_month_diagnosis.py','.github/workflows/audit-4head-clean-month-diagnosis.yml']
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards/2025/10
+            data/programs/race_cards/2025/11
+            data/programs/race_cards/2025/12
+            data/programs/race_cards/2026/01
+            data/programs/race_cards/2026/02
+            data/programs/race_cards/2026/03
+            data/programs/race_cards/2026/04
+            data/programs/race_cards/2026/05
+            data/programs/race_cards/2026/06
+            data/programs/race_cards/2026/07
+            data/programs/race_cards/2026/08
+            data/results/realtime/2025/10
+            data/results/realtime/2025/11
+            data/results/realtime/2025/12
+            data/results/realtime/2026/01
+            data/results/realtime/2026/02
+            data/results/realtime/2026/03
+            data/results/realtime/2026/04
+            data/results/realtime/2026/05
+            data/results/realtime/2026/06
+            data/results/realtime/2026/07
+            data/results/realtime/2026/08
+            data/previews/tkz
+            data/previews/stt
+            data/previews/original_exhibition
+      - run: pip install -q numpy pandas scipy scikit-learn
+      - env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: python audit_4head_clean_month_diagnosis.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-clean-month-diagnosis
+          path: /tmp/head4_clean_month_diagnosis/
+          retention-days: 30
