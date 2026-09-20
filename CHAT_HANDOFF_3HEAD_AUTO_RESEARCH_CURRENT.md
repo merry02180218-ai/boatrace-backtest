@@ -37,13 +37,3 @@
 - `research_v289_3head_addon.json`
 - `research_v289_3head_addon.md`
 
-
-## 2026-09-20 A-head + purchase gate — USER ADOPT / NEXT RESEARCH
-- User decision: adopt this head model as the working 3HEAD head-selection model.
-- Frozen A head gate remains unchanged: PRE percentile >= .925, boat3 prior-day motor EWMA-rank edge vs boat2 >= +.20, boat3 current exhibition-time rank = 1st.
-- Separate purchase gate adopted for working use: post_motor_inner_rank_edge >= +.60. Threshold was selected on Nov-Jan development only; March was one-shot evaluation, not retuning.
-- Full March venue-aware audit Run 35456035513 / aggregate Job 105932827239 / Artifact 10588428193: 52/52 evaluable, 0 errors, 33 BET, 19 NO_BET, 12 ticket hits, stake 330,000, payout 351,800, profit +21,800, ROI 106.61%; BET head3 16/33=48.48%; captured 16/21 March head3 winners=76.19%.
-- Edogawa JCD03 has no original exhibition. 3HEAD replay now follows HEAD4 venue-aware original-exhibition contract; do not treat Edogawa missing original exhibition as an error.
-- September 2026 settlement outcomes remain UNREAD / unused.
-- Next order explicitly requested by user: (1) research losing patterns inside the adopted head/purchase model WITHOUT changing the frozen head gate or .60 purchase threshold; (2) after loss-pattern research, design/research the opponent model / ticket ranking.
-- Keep opponent work separate from head-model research so head selection is not retuned to ticket outcomes.
