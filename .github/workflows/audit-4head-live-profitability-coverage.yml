@@ -1,0 +1,34 @@
+name: audit-4head-live-profitability-coverage
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'audit_4head_live_profitability_coverage.py'
+      - '.github/workflows/audit-4head-live-profitability-coverage.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q pandas
+      - name: Download frozen inputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p s1 v93 mis hp
+          gh run download 35486864940 -n head4-exact-final-replay-stage1 -D s1
+          gh run download 35487172647 -n head4-v93-all-parent -D v93
+          gh run download 35487276665 -n head4-v93-rebuild-missingness -D mis
+          gh run download 35234326600 -n head4-boatracecsv-leakage-audit -D hp
+          echo "PARENT_EXHIBITION=$(find s1 -name parent_exhibition.csv | head -1)" >> "$GITHUB_ENV"
+          echo "V93_REBUILT=$(find v93 -name v93_all_parent.csv | head -1)" >> "$GITHUB_ENV"
+          echo "MISSINGNESS=$(find mis -name missingness_rows.csv | head -1)" >> "$GITHUB_ENV"
+          echo "HEADPROB_SCORED=$(find hp -name corrected_scored_races.csv | head -1)" >> "$GITHUB_ENV"
+      - run: python audit_4head_live_profitability_coverage.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-live-profitability-coverage
+          path: /tmp/head4_live_profitability/
