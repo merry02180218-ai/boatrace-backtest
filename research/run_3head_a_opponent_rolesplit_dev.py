@@ -155,5 +155,17 @@ def main():
       'overall':met(z),'monthly':{m:met(g) for m,g in z.groupby('month')},'rows':z.to_dict('records')}
  open('research_3head_a_opponent_rolesplit_dev.json','w').write(json.dumps(out,ensure_ascii=False,indent=2))
  z.to_csv('research_3head_a_opponent_rolesplit_dev.csv',index=False)
+ # Error decomposition: isolate whether losses originate in SECOND, conditional THIRD, or factorized ordering.
+ dec={
+  'second_top1_miss':int((z.second_rank>1).sum()),'second_top2_miss':int((z.second_rank>2).sum()),
+  'second_top1_hit_third_top1_miss':int(((z.second_rank<=1)&(z.third_rank_cond_actual_second>1)).sum()),
+  'second_top2_hit_third_top2_miss':int(((z.second_rank<=2)&(z.third_rank_cond_actual_second>2)).sum()),
+  'roles_both_top2_but_pair_outside_top4':int(((z.second_rank<=2)&(z.third_rank_cond_actual_second<=2)&(z.pair_rank_factorized>4)).sum()),
+  'factor_worse_than_v221':int((z.pair_rank_factorized>z.pair_rank_v221).sum()),
+  'factor_equal_v221':int((z.pair_rank_factorized==z.pair_rank_v221).sum()),
+  'factor_better_than_v221':int((z.pair_rank_factorized<z.pair_rank_v221).sum())}
+ out['decomposition']=dec
+ open('research_3head_a_opponent_rolesplit_dev.json','w').write(json.dumps(out,ensure_ascii=False,indent=2))
+ print('decomposition',json.dumps(dec,ensure_ascii=False),flush=True)
  print(json.dumps({k:v for k,v in out.items() if k!='rows'},ensure_ascii=False,indent=2))
 if __name__=='__main__':main()
