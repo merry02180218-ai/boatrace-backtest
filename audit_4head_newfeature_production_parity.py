@@ -92,8 +92,30 @@ def main():
             rb=len(g); payout=float(g.payout_if_bet.sum()) if rb else 0.0
             path_band[path]['bands'][name]={'R':rb,'head4':int(g.head4.sum()) if rb else 0,'head4_rate':(100*float(g.head4.sum())/rb if rb else None),'exact3':int(g.raw_hit.sum()) if rb else 0,'ROI':(100*payout/(10000*rb) if rb else None)}
 
+    # Diagnostic: historical BET concentration by calendar date in the 208-row research universe.
+    # Uses only Apr-Aug historical rows; September remains unread.
+    date_col=next((c for c in ('date','race_date','target_date') if c in z.columns),None)
+    daily_bet={}
+    if date_col:
+        dz=z.copy(); dz['_audit_date']=dz[date_col].astype(str).str[:10]
+        dg=dz.groupby('_audit_date',dropna=False)
+        counts=dg.production_selected.sum().astype(int)
+        base_counts=dg.base120.sum().astype(int)
+        add_counts=(dg.production_selected.sum()-dg.base120.sum()).astype(int)
+        daily_bet={
+          'date_column':date_col,
+          'days_in_universe':int(counts.size),
+          'total_selected':int(counts.sum()),
+          'mean_bets_per_universe_day':float(counts.mean()),
+          'median_bets_per_universe_day':float(counts.median()),
+          'max_bets_per_universe_day':int(counts.max()),
+          'days_ge_7_bets':int((counts>=7).sum()),
+          'share_days_ge_7_bets':float((counts>=7).mean()),
+          'daily_counts':{str(k):{'selected':int(counts.loc[k]),'base120':int(base_counts.loc[k]),'newfeature_add':int(add_counts.loc[k])} for k in counts.index}
+        }
+
     z.to_csv(OUT/'parity_rows.csv',index=False)
-    result={'profile':art['profile'],'R':R,'head4':heads,'head4_rate':100*heads/R,'exact3':hits,'ROI':roi,'monthly':month,'monthly_floor_ROI':floor,'support_ROI':suproi,'motor_unit':mf,'wall_unit':wf,'head_prob_bands':hp_bands,'selection_path_head_prob_bands':path_band,'SEPTEMBER_OUTCOMES_READ':False,'AUDIT_OK':True}
+    result={'profile':art['profile'],'R':R,'head4':heads,'head4_rate':100*heads/R,'exact3':hits,'ROI':roi,'monthly':month,'monthly_floor_ROI':floor,'support_ROI':suproi,'motor_unit':mf,'wall_unit':wf,'head_prob_bands':hp_bands,'selection_path_head_prob_bands':path_band,'daily_bet_concentration':daily_bet,'SEPTEMBER_OUTCOMES_READ':False,'AUDIT_OK':True}
     (OUT/'result.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps(result,ensure_ascii=False,indent=2))
     print('HEAD4_NEWFEATURE_PRODUCTION_PARITY_OK');print('SEPTEMBER_UNREAD')
