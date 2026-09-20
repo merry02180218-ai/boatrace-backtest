@@ -37,3 +37,16 @@
 - `research_v289_3head_addon.json`
 - `research_v289_3head_addon.md`
 
+
+
+## 2026-09-20 — Adopted A+.60 opponent-model stage
+- Adopted head gate remains frozen: PRE q>=.925, boat3 motor EWMA-rank edge vs boat2 >= +0.20, boat3 current exhibition rank=1.
+- Adopted purchase gate remains frozen: post_motor_inner_rank_edge >= +0.60.
+- Nov-Jan development cohort reproduced: 118R / 54 boat3 wins = 45.76%.
+- March venue-aware forward audit remains 33 purchases / 16 boat3 wins / 12 ticket hits / ROI 106.61%; March is validation only, not tuning.
+- Loss-pattern research complete. motor-edge1 extra filter was rejected; do not alter A or +0.60.
+- Opponent reference audit SUCCESS: Run 35467021760 / Job 105961123488 / Artifact 10591343589.
+- Among 54 boat3 wins: SECOND counts 1=20,4=18,2=10,5=5,6=1; THIRD counts 6=15,4=12,5=11,2=8,1=8.
+- Reference architecture frozen for next research: 1HEAD factorized SECOND+THIRD preferred over direct ordered pair; 4HEAD separate SECOND and scenario/conditional THIRD, then TOP2xTOP2 composition.
+- Existing 3HEAD baseline remains V221 direct ordered-pair ranking + v242 variable TopN/Dutch.
+- Next: develop role-split SECOND + conditional THIRD on Nov-Jan/earlier causal data, compare against V221 by SECOND Top1/Top2, THIRD Top1/Top2, exact-pair Top1/2/4/6/10 and monthly stability. Do not use March for selection; after freeze, one-shot March compare against current 12/16 opponent/ticket capture. September 2026 outcomes remain UNREAD.
