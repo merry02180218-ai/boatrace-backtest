@@ -150,3 +150,9 @@ Follow-up static audit found and fixed nonexistent w20.pct_ref reference.
 Critical firewall fix: previous wrapper called original V221 day_fetch before clearing res, which could still request March result files. Commit 4d66a4ae749e61bd3594f96727e538a2e0823a4d now bypasses original day_fetch entirely for dates >= 2026-03-01 and directly requests cards/tkz/original only with res=[].
 Workflow preflight strengthened in eec4c7e9d5aac9682f92ceaad6aa35d61a587ffc. Do not claim March UNREAD after any future run unless logs/code confirm this firewall was the executed revision.
 
+### March pre-settlement dry-run SUCCESS / predictions frozen
+Run 35557725947 / Job 106204537001 / Artifact 10621281342 SUCCESS. Executed head SHA 840611614c76e9f5a09788b33dfb9121c5b0207b.
+Artifact audit: 33 selected races / 33 decisions / 18 protected swaps. Every base and protected ticket set has exactly 6 unique tickets. Policy says dry_run_only=true, threshold=.50, tickets=6, march_settlement_loaded=false, sep2026_loaded=false. Recursive artifact audit found no actual/result/hit/ROI/payout/odds fields; only the policy key march_settlement_loaded contains a settlement-related word.
+March predictions are now FROZEN in Artifact 10621281342. Do not alter threshold/features/ticket replacement before March one-shot settlement. March remains UNREAD at this point.
+Next: build a separate settlement-only evaluator that consumes the frozen artifact decisions and March official outcomes, without recomputing predictions. Preflight must verify artifact/prediction identity before revealing outcomes.
+
