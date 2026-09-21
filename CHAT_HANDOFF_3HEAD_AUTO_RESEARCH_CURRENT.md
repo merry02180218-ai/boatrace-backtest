@@ -191,3 +191,10 @@ Do not fire again until this dependency is located/restored and the whole workfl
 - User approved avoiding another ~1h full v288 rebuild.
 - Replace the heavy identity diagnostic with an artifact-only/lightweight audit using Run 35607152183 Artifact 10645188056 plus frozen v243 membership. Do not rebuild seven daily month caches.
 - Goal unchanged: explain the 6/8 identity mismatches causally; no February outcome tuning and September remains UNREAD.
+
+
+## 2026-09-22 — lightweight CORE identity result / feature-diff START
+- Run 35621511526 / Job 106405441280 SUCCESS, source Artifact 10648922545.
+- Frozen CORE 8, native codes 7, exact matches 2, mismatches 6. Same-date replacement exists for every mismatch.
+- Exact matches: 202602191910, 202602171607. Replacements: 202602150404->150806; 02071007->071602; 02161108->160712; 02171911->171607; 02120606->120601; 02270507->270807 (full 12-digit codes in run output).
+- Next: lightweight feature/grade/route diff for each frozen-vs-native same-date pair. Reuse frozen v243 CSV and prior successful Artifact 10645188056; no seven-day cache rebuild. September remains UNREAD; no outcome tuning.
