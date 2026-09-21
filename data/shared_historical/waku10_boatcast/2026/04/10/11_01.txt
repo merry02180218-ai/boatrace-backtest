@@ -1,0 +1,8 @@
+data=
+1	0
+廣瀬　　篤哉	8.20	0.16	3.6	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	４		IP	５		IP	２		IP
+山本　　英志	6.00	0.12	2.5	４		IP	３		IP	２		IP	２		IP	２		IP	４		IP	３		IP	３		IP	３		IP	４		IP
+野長瀬　正孝	4.30	0.14	2.2	５		IP	４		IP	４		IP	３		IP	６		IP	４		IP	３		IP	２		IP	４		IP	５		IP
+木場　　悠介	4.30	0.15	2.6	４		IP	６		IP	４		G3	２		G3	３		IP	６		IP	４		IP	３		IP	６		IP	２		IP
+藤山　　湧太	2.50	0.20	4.7	５	6	IP	６		IP	６		IP	６	6	IP	３		IP	４		IP	５		IP	転	6	IP	４		IP	４		IP
+大橋　純一郎	3.70	0.19	4.5	５	5	IP	４		IP	５		IP	６		IP	２		IP	１	5	IP	６		IP	６		IP	５		IP	３	5	IP

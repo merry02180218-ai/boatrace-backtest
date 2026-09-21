@@ -1,0 +1,8 @@
+data=
+1	0
+堀本　　裕也	6.60	0.22	4.5	３		IP	１		IP	２		IP	５		IP	３		IP	５		IP	２		IP	２		IP	３		IP	１		IP
+北山　　康介	5.90	0.19	3.5	１		IP	３		IP	３		IP	６	3	IP	３		IP	４		IP	４		IP	２		IP	２		IP	３		IP
+竹井　　貴史	6.90	0.14	2.4	２		G2	４		IP	３		IP	１		IP	４		IP	３		IP	３		IP	１	2	IP	３		IP	２		IP
+小林　　基樹	4.70	0.20	5.0	３		IP	４		IP	５		IP	４		IP	３		IP	２		IP	１		IP	５		IP	６		IP	４		IP
+香月　　大輝	4.20	0.20	3.2	３		IP	６		IP	５		IP	２	6	IP	２		IP	６		IP	３		IP	５		IP	５		IP	３		IP
+山崎　　裕司	2.40	0.20	4.0	４	5	IP	６		IP	５	5	IP	６		IP	６		IP	４		IP	６		IP	５		IP	５	5	IP	５	5	IP

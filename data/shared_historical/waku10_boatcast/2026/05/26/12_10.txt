@@ -1,0 +1,8 @@
+data=
+1	0
+平田　　忠則	9.20	0.15	3.4	１		IP	１		IP	３		IP	１		IP	３		G1	１		G1	１		IP	１		IP	２		G3	１		G3
+高岡　　竜也	7.00	0.14	3.2	４		IP	２		IP	２		IP	２		IP	２		IP	４		IP	２		IP	１		IP	４		IP	２		IP
+井上　　尚悟	6.80	0.16	2.4	１	4	IP	４		IP	１		IP	２	2	IP	２		G3	１	4	G3	５		IP	３		IP	３		IP	４		IP
+津久井　拓也	6.00	0.13	2.5	２		IP	５		G2	６		IP	１		IP	４		IP	２		IP	５		IP	１		IP	４		IP	２		IP
+澁川　　　夏	4.90	0.13	3.4	２		IP	４		IP	５		IP	６	6	IP	２		IP	４		IP	３		IP	５		IP	２		IP	３		IP
+若林　　樹蘭	3.80	0.20	3.9	４		IP	３		IP	３		IP	４		IP	６		IP	６		IP	３		IP	５		IP	４		IP	４		IP

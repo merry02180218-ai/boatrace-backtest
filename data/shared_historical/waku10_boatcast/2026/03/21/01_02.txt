@@ -1,0 +1,8 @@
+data=
+1	0
+丸山　　祐也	7.40	0.22	4.0	２		IP	転		IP	１		IP	２		IP	２	2	IP	２		IP	２		IP	２		IP	３		IP	１		IP
+小林　　孝彰	5.30	0.13	2.5	５		IP	２		IP	２		IP	３		IP	６		IP	２		IP	２		IP	２		IP	５		IP	５		IP
+萩原　丈太朗	1.67	0.21	3.2	４		IP	落		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	５	4	IP
+竹内　　　来	3.00	0.15	1.7	６		IP	５	6	IP	３		IP	５		IP	６	6	IP	１		IP	６		IP	４		IP	５		IP	６		IP
+齊藤　　　廉	4.22	0.16	2.9	４		IP	４		IP	２		IP	４		IP	１		IP	６	6	IP	３		IP	６		IP	転	4	IP	転		IP
+鳥居塚　嶺王	2.90	0.19	4.3	６		IP	３	5	IP	６		IP	６		IP	４		IP	６		IP	６		IP	３		IP	３		IP	５		IP

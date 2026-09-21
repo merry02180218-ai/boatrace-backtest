@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　真広	9.20	0.18	3.3	２		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP
+福来　　　剛	7.30	0.14	2.4	３		G1	１		G1	２		G1	３		IP	１		IP	転		IP	３		IP	１	1	IP	４		IP	１		IP
+山崎　　　祥	5.10	0.19	3.3	３		IP	４		IP	３		IP	３		IP	１		IP	５		IP	３		IP	５		IP	５		IP	３		IP
+新田　　洋一	4.80	0.14	2.5	６		IP	４		IP	３		IP	３		IP	２		IP	２		IP	６		G3	３		IP	３		IP	５		G3
+鶴田　　勇雄	4.80	0.18	3.9	５		IP	３		IP	４		IP	４		IP	５		IP	３		IP	４		IP	４		IP	２		IP	２		IP
+得山　　大輝	1.30	0.11	1.7	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP

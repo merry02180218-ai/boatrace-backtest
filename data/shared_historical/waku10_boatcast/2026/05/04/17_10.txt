@@ -1,0 +1,8 @@
+data=
+1	0
+大上　　卓人	9.30	0.14	3.0	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		SG	３		G1	１		G1	５		G1
+船岡　洋一郎	6.80	0.14	3.1	１		IP	２		IP	４		G1	３		IP	４		G1	４		IP	５		IP	３		IP	１	3	G1	１		G2
+入海　　　馨	6.40	0.14	3.8	３	4	IP	１	4	IP	３		G1	２		G1	Ｆ		IP	６		G1	２		G1	５		G1	２		G1	２		G1
+宗行　　治哉	5.70	0.18	4.2	２	3	IP	４		IP	６		IP	２		IP	３		IP	４		IP	３		IP	２		IP	２		IP	５		G2
+岸本　　　隆	2.80	0.18	3.7	５		IP	４		G3	５		IP	６		IP	３		IP	４		IP	５		IP	５		IP	６		IP	４		IP
+正木　　聖賢	5.60	0.22	4.3	１	2	IP	２	3	IP	５	2	IP	５	2	IP	３	3	IP	２	2	IP	３	2	IP	４	3	IP	４	3	IP	３	3	IP

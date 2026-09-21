@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　晃大	7.40	0.14	3.3	３		IP	１		IP	１		IP	４		IP	３		IP	３		IP	４		IP	１		IP	１		IP	２		IP
+西岡　　蒼志	4.50	0.17	3.7	４		IP	転		IP	１		IP	２		IP	４		IP	２		IP	４		IP	６		IP	５		IP	４		IP
+川辺　　郭人	3.00	0.14	2.6	４		IP	４	4	IP	３		IP	４		IP	６	6	IP	５		IP	４		IP	６		IP	６		IP	エ		IP
+平野　　和明	5.00	0.18	3.8	３		IP	３		IP	２		IP	３		IP	５		IP	４		IP	４		IP	４		IP	３		IP	４		IP
+松本　　弓雄	4.90	0.13	2.7	５		IP	６		IP	１		IP	４		IP	１		IP	３		IP	５		IP	２		IP	５		IP	４		IP
+樋口　　　亮	4.80	0.19	4.2	５		IP	５		IP	５		IP	４		IP	１		IP	５		IP	２		IP	１		IP	３		G3	５		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+土屋　　智則	8.80	0.15	3.4	２		IP	３		IP	４		IP	１		G1	２		G1	１		G1	３		G1	１		IP	１		IP	１		SG
+松村　　　敏	6.30	0.13	2.8	１		IP	５		IP	２		IP	１		IP	６		IP	４		IP	３		IP	２		IP	１		IP	４		IP
+尾嶋　　一広	5.40	0.16	4.2	２		G1	５		G1	３		G1	４		IP	３		IP	３		IP	２		IP	３		IP	６		IP	４		IP
+小池　　修平	7.60	0.14	3.2	６		G1	１		G1	２		G1	３		G1	２		IP	１	3	IP	２		IP	４	3	IP	２		G1	３		G1
+永井　　　源	4.80	0.16	3.3	３		IP	４		IP	５		G1	２		G1	４		IP	１		IP	５		IP	５		IP	落		IP	４		IP
+山田　　祐也	5.20	0.18	3.5	１		G1	３	5	IP	５		IP	２		IP	３	5	G3	５	5	G3	６		IP	１		IP	５		G1	５		G1

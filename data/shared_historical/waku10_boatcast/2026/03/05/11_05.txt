@@ -1,0 +1,8 @@
+data=
+1	0
+三嶌　さらら	5.67	0.21	4.0	１		IP	４		IP	転		G3	４		G3	１		IP	６		IP	４		IP	３		IP	５		IP	１		IP
+山下　　奈緒	6.10	0.19	3.8	３		IP	１		IP	２		G3	４		G3	２		G3	１		G3	４		IP	６	5	IP	２		IP	５		IP
+中川　　りな	4.90	0.16	3.3	２		IP	５		IP	５		IP	５		IP	２		IP	３		G3	１		G3	４	5	IP	６		IP	３		G3
+落合　　直子	5.60	0.16	2.3	５		G3	１		IP	２		G3	５		IP	２		IP	３		G3	５		G3	３		G3	４		G3	２		IP
+武藤　　綾子	3.10	0.19	3.6	４		IP	４		IP	３		IP	５		IP	５		IP	５		G3	５		G3	４		IP	６		IP	４	6	G3
+樋江井　　舞	2.30	0.13	3.2	５		IP	６		IP	６		IP	５		IP	４		IP	５		IP	６		IP	３		IP	５		IP	５		IP

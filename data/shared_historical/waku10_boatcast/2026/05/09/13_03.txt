@@ -1,0 +1,8 @@
+data=
+1	0
+柳内　　敬太	8.90	0.12	1.8	１		IP	１		IP	１		IP	１		IP	３		IP	３		IP	２		IP	２		IP	１		IP	１		IP
+田路　　朋史	4.70	0.19	3.2	６		IP	４		IP	５		IP	１		IP	２		IP	３		IP	３		IP	６		IP	６		IP	２		IP
+向所　　浩二	4.70	0.15	2.8	５		IP	２		IP	４		IP	２		IP	４		IP	３		IP	６		IP	４		IP	３		IP	４		IP
+藤岡　　俊介	7.80	0.11	2.8	２		IP	２	5	IP	２		IP	３		IP	２		IP	１		IP	４		G1	１		G1	３		IP	２		IP
+安田　　政彦	4.00	0.20	4.4	４		IP	４		G3	４		IP	５		IP	５	6	IP	４		IP	２	4	IP	５		IP	３		IP	４		IP
+今村　天次朗	2.50	0.18	3.1	４		IP	６		IP	４		IP	６		IP	転		IP	４		IP	６		IP									IP

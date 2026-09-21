@@ -1,0 +1,8 @@
+data=
+1	0
+大森　　　翼	6.00	0.21	4.3	２		IP	６		IP	６		IP	２		IP	１		IP	２		IP	１		IP	５		IP	５		IP	１		IP
+新井　　英孝	5.60	0.16	3.6	２		IP	２		IP	５		IP	３		IP	４		IP	５		IP	２		IP	２		IP	２		IP	５		IP
+吉田　慎二郎	7.80	0.20	3.0	１		IP	１	4	G3	１	4	G3	４		IP	２		IP	１		IP	１		IP	４		IP	５		IP	１		IP
+浜崎　　準也	3.70	0.19	2.9	１		IP	４		IP	３		IP	６		IP	３		IP	４		IP	５		IP	６		IP	６		IP	５		IP
+深川　　真二	6.70	0.19	3.8	３	2	IP	２	2	IP	１	1	IP	５	2	IP	２	2	IP	１	1	IP	３	2	IP	５	2	G1	３	2	IP	２	1	IP
+山口　　隼人	1.33	0.23	5.0	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	５		IP	６		IP			IP

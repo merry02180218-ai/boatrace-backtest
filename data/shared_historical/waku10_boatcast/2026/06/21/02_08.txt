@@ -1,0 +1,8 @@
+data=
+1	0
+寺田　　千恵	9.40	0.14	2.7	１		IP	１		IP	３		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		G2	１		G2
+黒澤　めぐみ	6.40	0.21	4.2	３		IP	３		IP	４		IP	３		IP	１		IP	２		IP	５	3	IP	４		IP	１		IP	２		IP
+篠木　亜衣花	3.50	0.26	4.7	Ｆ		IP	５		IP	４		IP	５		G3	６		IP	１		G3	５		G3	５		IP	５		IP	１		IP
+柴田　　愛梨	2.50	0.24	4.0	４		G3	６		IP	２		IP	６		IP	６		IP	４		IP	５		IP	６		IP	５		IP	６		IP
+滝沢　　織寧	3.20	0.15	3.0	Ｆ		IP	３	4	IP	５		IP	２		IP	５		IP	３		IP	６		IP	５		IP	４		IP	６		IP
+湯淺　　紀香	2.60	0.23	5.4	５		IP	６		IP	５		IP	２	2	IP	６		G2	６		G3	６		G3	４		G3	６		IP	４		IP

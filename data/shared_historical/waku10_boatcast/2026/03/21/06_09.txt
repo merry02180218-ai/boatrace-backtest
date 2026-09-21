@@ -1,0 +1,8 @@
+data=
+1	0
+上田　　健太	8.20	0.19	2.9	２		IP	１		IP	Ｆ		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	２		IP
+井川　　大作	5.60	0.14	3.6	５		IP	４		IP	５		IP	２		IP	２		IP	３		IP	２		IP	４		IP	２		IP	３		IP
+島村　　隆幸	7.80	0.12	2.3	２		IP	２		IP	２		IP	１		IP	１		G3	２		G3	２		IP	３	2	IP	２		G3	４		G3
+中　　　亮太	7.80	0.10	2.3	１		IP	５		IP	１		IP	２		IP	２		G2	１		G2	２		IP	４		IP	１		IP	３		IP
+東本　　勝利	5.20	0.18	3.7	４		IP	３		IP	３		IP	２		IP	４		IP	３		IP	５		IP	４		IP	３	6	IP	４		IP
+守屋　　大地	2.50	0.17	3.2	６		IP	６		IP	２		IP	３		IP	５		IP	６		IP	５		IP	５		IP	６		IP	６	5	IP

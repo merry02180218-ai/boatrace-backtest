@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　　祭	8.10	0.16	2.8	１		IP	１		IP	１		IP	６		G2	２		G2	１		IP	２		IP	２		IP	２		IP	３		IP
+古結　　　宏	7.40	0.12	3.0	６		IP	１		IP	１		IP	２		IP	２		IP	２		IP	１	3	G1	６		G1	１	1	G1	４		G1
+白井　　友晴	5.00	0.15	3.0	４		IP	３		IP	１		IP	３		IP	５		IP	４		IP	５		IP	４		IP	１		IP	５	4	IP
+寺嶋　　　雄	5.40	0.16	3.6	３		IP	５		IP	４		IP	３		IP	３		IP	４		IP	１		IP	５		IP	１		IP	４		IP
+大久保信一郎	4.50	0.15	3.2	４		IP	３		IP	１		IP	妨		IP	４		G3	５		G3	２		IP	６		IP	４		IP	３	6	IP
+幸野　　史明	1.80	0.16	2.9	６		IP	６		IP	５	5	IP	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	３		IP

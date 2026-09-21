@@ -1,0 +1,8 @@
+data=
+1	0
+谷川　　将太	9.00	0.14	1.7	１		IP	２		IP	１		IP	２		IP	１		IP	４	2	IP	１		IP	１		IP	１		IP	１		IP
+宮崎　　　奨	5.50	0.17	3.2	５		IP	５		IP	２		IP	５		G3	６		IP	２		IP	２		G3	３		G3	２		G1	２		G1
+山地　　正樹	6.90	0.17	3.2	３		IP	１		IP	２		IP	２		IP	６		IP	３		IP	２		IP	２		IP	２		IP	３		IP
+津田　　裕絵	6.80	0.15	3.1	１		IP	３		G3	２		IP	２		IP	２		IP	４		IP	１		IP	４		IP	４		IP	３		IP
+後藤　　隼之	4.50	0.15	3.1	３		IP	４		IP	６		IP	５		IP	４	4	IP	２		IP	３		IP	４		IP	３	4	IP	４	4	IP
+原　　　豊土	4.00	0.19	4.3	４		IP	４		IP	２		IP	３	5	IP	４		IP	５	5	IP	５		IP	４		IP	４		IP	５		IP

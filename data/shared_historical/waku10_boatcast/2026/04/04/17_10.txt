@@ -1,0 +1,8 @@
+data=
+1	0
+坂井　　康嗣	5.20	0.19	4.4	２		IP	６		IP	６		IP	２		IP	２		IP	２		IP	３		IP	６		IP	１		IP	６		IP
+占部　　一真	6.00	0.18	3.3	１		IP	４		IP	４		IP	２		IP	４		IP	２		IP	３		IP	３		IP	２		IP	５		IP
+山崎　　裕司	6.10	0.17	3.9	３		IP	３		IP	３		IP	２		IP	２		IP	３		IP	６		IP	４		IP	２		IP	２	4	IP
+伊藤　　喜智	5.10	0.16	3.4	３		IP	１		IP	６		IP	３		IP	４		IP	３		IP	３		IP	５		IP	３		IP	４		IP
+矢野　真梨菜	3.20	0.22	3.4	４		G3	６		G3	３		G3	６		G3	４		G3	５		IP	３		IP	５		IP	４		G3	５		G3
+仲谷　　颯仁	5.00	0.14	3.2	４		SG	５		G1	６		G1	４		G1	５		G1	転		IP	４	5	IP	３		SG	３	5	IP	３		SG

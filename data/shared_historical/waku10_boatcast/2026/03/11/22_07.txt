@@ -1,0 +1,8 @@
+data=
+1	0
+酒井　　陽祐	6.70	0.16	2.5	６	2	IP	４		IP	２		IP	１		IP	３		IP	３		IP	４		IP	１		IP	２		IP	１		IP
+上田　　健太	6.20	0.15	3.1	２		IP	１		IP	１		IP	３		IP	６		IP	３		IP	１		IP	５		IP	６		IP	２		IP
+佐藤　　駿介	4.00	0.19	3.9	２		IP	３		IP	５		IP	４		IP	６		IP	３		IP	５		IP	６		IP	４		IP	３		IP
+沢田　　昭宏	4.90	0.20	3.5	３		IP	２		IP	４	5	IP	４		IP	４		IP	２		IP	６		IP	４		IP	２		IP	５	5	IP
+峰重　　力也	4.60	0.09	1.9	５		IP	２		IP	６		IP	３		IP	２		IP	５		IP	５		IP	６		IP	２		IP	２		IP
+蜂須　　瑞生	3.50	0.19	3.7	４		IP	５		IP	５		IP	６		IP	６		IP	３	5	IP	６		IP	２		IP	３		IP	５		IP

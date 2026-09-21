@@ -1,0 +1,8 @@
+data=
+1	0
+馬場　　　剛	9.11	0.12	1.3	欠		IP	１		IP	１		IP	１		IP	１		IP	１		G3	２		G3	４		IP	１		IP	１		IP
+池永　　　太	6.70	0.12	2.9	２		IP	２		IP	２		IP	３		G1	４		G1	１		G1	２		G1	２		IP	転		G1	５		G1
+末永　　由楽	5.80	0.15	1.7	５		IP	３		IP	２		IP	１		IP	４		IP	４		IP	３		IP	４		IP	３		IP	２		IP
+松尾　　　祭	3.70	0.19	4.4	５		IP	６		IP	６		IP	３		IP	２		IP	４		IP	５		IP	５		IP	５		G1	２		IP
+井上　　一輝	5.20	0.14	3.1	６		IP	５		IP	５		IP	３		IP	１		IP	１		IP	１		IP	６		IP	５		G1	４		G1
+飛田　　江己	5.22	0.10	1.2	４		IP	４		IP	４		IP	３		IP	２		IP	３		IP	２		G1	５		G1	欠		G1	５		G1

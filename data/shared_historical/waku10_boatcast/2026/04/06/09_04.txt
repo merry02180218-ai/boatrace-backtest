@@ -1,0 +1,8 @@
+data=
+1	0
+實森　　美祐	8.90	0.16	2.8	２		G1	２		IP	１		IP	１		IP	１		IP	６		IP	１		IP	１		IP	１		G1	１		IP
+松本　　純平	6.70	0.15	3.4	４		IP	２		IP	５		IP	２		IP	２		IP	３		G1	３		IP	２		IP	５		IP	１		IP
+中島　　孝平	7.80	0.12	2.1	４		G1	３		G1	２		G1	２		IP	２		G1	３		G1	３		IP	１		G2	２		IP	３		SG
+黒井　　達矢	5.10	0.16	2.6	５		G1	６		IP	４	5	G1	３		IP	１		IP	２	3	IP	２		IP	Ｆ		IP	４	5	IP	４		IP
+西山　　貴浩	6.40	0.14	3.4	２		G1	４		SG	６		G1	３		G1	３		G1	２	4	G1	４		SG	６		G1	４		SG	２		SG
+北野　　輝季	5.90	0.15	2.9	２		G1	６		IP	４		IP	１	4	IP	４		G1	６	5	G1	１		IP	３	5	IP	１	5	IP	５		IP

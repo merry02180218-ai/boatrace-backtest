@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　裕平	10.00	0.11	2.2	１		IP	１		IP	１		IP	１		IP	４		G1	１		G1	１		G1	１		G1	１		G1	１		G1
+定松　　勇樹	8.90	0.14	3.2	１	1	IP	２		IP	２		G1	２		G1	４		G1	１		SG	４		G2	１		G2	１		G1	３		G1
+石本　　裕武	7.70	0.15	3.1	３		IP	１		IP	２		G1	３		G1	１		IP	３		IP	６		G1	１		G1	１		IP	３		IP
+桑原　　　悠	5.70	0.14	2.2	１		IP	４		IP	４		IP	６		IP	１		IP	４		IP	４		IP	３		G3	１		IP	６		G1
+馬場　　貴也	4.60	0.13	3.6	１		IP	５		G1	３		G1	５		G1	６		G1	１	4	SG	５		G1	５		G1	６		G3	６		G1
+佐藤　　　翼	4.30	0.14	4.1	５	5	IP	４		IP	６		G1	２		G1	６		G1	３		G1	６		G1	３		G1	６		SG	６		SG

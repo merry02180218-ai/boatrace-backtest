@@ -1,0 +1,8 @@
+data=
+1	0
+馬場　　貴也	9.10	0.12	2.6	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	４		G1	３		G1	１		G1	１		G1
+南野　　利騰	4.40	0.14	2.8	２	3	IP	３		IP	５		IP	４		IP	５		IP	３		IP	４		IP	４		IP	５		IP	３		IP
+深井　　利寿	6.60	0.16	3.0	４		IP	３		IP	１		IP	２		IP	１		IP	１	4	IP	５		IP	６	2	IP	３		IP	２		IP
+青木　　玄太	6.90	0.14	2.6	６		IP	１		IP	３		IP	２		G1	１		G3	２		G3	１		G3	５		IP	２	5	IP	５		G1
+香川　　颯太	3.60	0.16	3.1	１		IP	４		IP	５		IP	３		IP	６		IP	４		IP	４		IP	６		IP	５		IP	５		IP
+木村　　仁紀	4.90	0.15	3.5	６		IP	３		IP	２		IP	１	5	IP	５		G1	６		G1	６		IP	３		IP	３		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+篠原　　晟弥	9.10	0.11	2.5	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	６		IP
+佐藤　　　航	8.40	0.13	3.0	２		IP	１		IP	２		IP	１		IP	１		IP	３		IP	１		G2	５		IP	２		IP	１		IP
+上野　真之介	6.40	0.09	2.1	２		G1	２		G1	１		G1	２		G1	６		G1	６	4	IP	２		IP	５		SG	３		G1	５		SG
+横田　　貴満	5.70	0.19	3.1	１		IP	３	3	IP	６		G1	５		G1	１		IP	２		IP	３		IP	５		IP	４		IP	４		IP
+辻　　　栄蔵	6.33	0.15	2.4	５		G1	３		G1	２		IP	４		G1	３		G1	３		IP	欠		G1	４		G1	２		IP	２		IP
+古賀　　智之	3.50	0.22	4.0	５		IP	２		IP	３		IP	６		IP	５		IP	５		IP	５		G3	落		G3	５		IP	２		IP

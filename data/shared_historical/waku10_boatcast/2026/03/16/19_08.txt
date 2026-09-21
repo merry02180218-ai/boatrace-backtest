@@ -1,0 +1,8 @@
+data=
+1	0
+坂本　　奈央	5.20	0.18	4.4	３		G3	６		G3	５		IP	１		G3	６		G3	３		G3	２		IP	４		IP	３		IP	２		G3
+奥村　明日香	5.00	0.24	4.7	２		IP	３		IP	５	3	G3	２		IP	４		IP	２		IP	６		G3	４		G3	２		IP	６		IP
+深見　亜由美	4.10	0.20	3.3	４		IP	５		IP	４		IP	５		IP	３		IP	２		IP	６		IP	３		IP	３		IP	５		IP
+中北　　　涼	3.60	0.18	3.6	５	5	IP	５		IP	４		IP	５		IP	６		G3	３	3	IP	６		IP	２		IP	３		IP	４		IP
+土屋　　　南	4.33	0.16	3.7	６		G1	４		G1	５	6	IP	４		IP	欠		IP	２	4	IP	３		IP	５		IP	３		IP	４		IP
+伊藤　　玲奈	3.20	0.30	5.5	５		IP	４		IP	６		IP	３		IP	２		IP	５		IP	４		IP	５	5	IP	５		IP	６		IP

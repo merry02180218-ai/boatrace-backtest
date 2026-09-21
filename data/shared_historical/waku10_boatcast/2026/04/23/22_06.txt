@@ -1,0 +1,8 @@
+data=
+1	0
+今出　　晋二	4.20	0.19	5.0	４		IP	２		IP	１		IP	Ｆ		IP	５		IP	２		IP	５		IP	４		IP	５		IP	５		G3
+荒川　　健太	5.20	0.16	3.3	４		IP	２		IP	３		G3	５		IP	２		IP	２		IP	４		IP	６		IP	５		IP	２		IP
+池本　　輝明	4.60	0.16	3.3	３		IP	５		IP	５		IP	５		IP	１	4	IP	４		IP	４		IP	２		IP	３		IP	５		IP
+原村　　百那	1.70	0.17	3.3	５		IP	Ｆ		IP	５		IP	４		IP	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP
+篠崎　　元志	5.10	0.15	3.4	４		G1	５		G1	４		G1	３		G3	５		G1	６		G1	２		G1	２		IP	３		G1	５		G1
+小林　　愛実	3.20	0.14	3.4	５		IP	６		IP	５		IP	４		IP	５		IP	６	5	IP	５		IP	３		IP	２		IP	４		IP

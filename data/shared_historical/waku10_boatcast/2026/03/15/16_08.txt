@@ -1,0 +1,8 @@
+data=
+1	0
+都築　　正治	8.10	0.16	3.3	１		IP	１		IP	４		IP	４		IP	１		IP	３		IP	２		IP	１		IP	２		IP	１		IP
+谷口　　　丞	5.50	0.16	2.5	５	3	IP	２		IP	１	4	IP	２		IP	４		IP	６		IP												IP
+栗山　　繁洋	4.40	0.25	4.2	１		IP	４	4	IP	５		IP	５		IP	６		IP	２	4	IP	５		IP	６		IP	３		IP	２		IP
+鈴木　　章司	3.90	0.24	4.5	４		IP	６		IP	１		IP	４		IP	６	5	IP	６		IP	５		IP	５		IP	１		IP	４		IP
+川崎　　誠志	4.10	0.24	5.2	３		IP	３		IP	６		IP	４	6	IP	６	6	IP	２		IP	１		IP	５		IP	５		IP	６		IP
+西島　　義則	6.20	0.22	4.1	転	2	IP	２	1	IP	２	1	IP	５	1	IP	１	2	IP	３	2	IP	１	1	IP	２	2	IP	２	2	IP	５	1	G3

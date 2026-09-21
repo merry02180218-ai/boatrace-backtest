@@ -1,0 +1,8 @@
+data=
+1	0
+小松　　卓司	9.00	0.15	3.3	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	２		IP	１		IP	３		IP	１		IP
+島田　　賢人	6.80	0.17	3.5	２		IP	２		IP	２		IP	２		IP	３		IP	３		IP	２		IP	１		IP	４		IP	５		IP
+西岡　　蒼志	4.00	0.16	3.2	４		IP	６		IP	２		IP	５		IP	４		IP	５	2	IP	６		IP	５	2	IP	１		IP	３		IP
+久田　　　武	5.70	0.17	3.8	３		IP	５		IP	６		IP	２		IP	２		IP	３		IP	３		IP	２		IP	２		IP	４		IP
+平田　さやか	5.40	0.16	2.8	２		G3	５		G3	２	3	G3	３	3	IP	４		IP	２		IP	４	4	IP	５		IP	２		IP	４		IP
+今村　天次朗	2.20	0.16	3.0	４		IP	６		IP	５		IP	６		IP	６		IP	６		IP	４		IP	５		IP	５		IP	４		IP

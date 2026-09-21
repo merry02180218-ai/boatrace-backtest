@@ -1,0 +1,8 @@
+data=
+1	0
+橋口　　真樹	5.60	0.24	5.4	５		IP	６		IP	４		IP	２		IP	４		IP	２		IP	６		IP	２		IP	１		IP	１		G3
+畔柳　　俊吾	5.90	0.20	3.6	３	1	IP	４		IP	２		IP	１		IP	６		IP	４	3	IP	２		IP	１		IP	３		IP	５		IP
+杉江　　浩明	5.50	0.22	4.4	６		IP	６		IP	２		IP	２		IP	１	4	IP	３		IP	５		IP	６		IP	１		IP	２		IP
+古川　　誠之	5.60	0.14	2.7	２		IP	２		IP	４		IP	２		IP	２		IP	５		IP	５		IP	４		IP	５		IP	１		IP
+大塚　　浩二	2.10	0.22	4.2	５		IP	４		IP	４		IP	６		IP	４		IP	６	4	IP	５	4	IP	５		IP	Ｆ		IP	６		IP
+北野　　輝季	4.70	0.13	3.4	６		IP	６		G1	５		G1	２		G1	６		IP	４		IP	１	4	IP	４		G1	６	5	G1	１		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+富永　　正人	5.90	0.14	3.6	５		IP	４		IP	４		IP	２		IP	２		IP	２		IP	４		IP	１		IP	６		IP	１		IP
+吉原　　聖人	3.89	0.16	3.8	５		IP	５		IP	４		IP	３		IP	３		IP	２		IP	欠		IP	４	3	IP	６		IP	５		IP
+秋山　　広一	6.80	0.13	2.8	３		IP	２		IP	５		G1	２		IP	４		IP	２		IP	１		IP	４		IP	１		IP	３		IP
+須藤　　博倫	4.80	0.12	2.8	３		IP	３		IP	５		IP	３		IP	４	5	IP	３		IP	５		IP	４		G2	５		G2	２		IP
+志賀　　美優	0.88	0.19	4.7	Ｆ	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP						IP
+坂口　　　周	4.20	0.22	4.0	３	5	IP	３		IP	４		IP	６		IP	４	5	IP	５		G2	４		IP	４		IP	４		IP	３		IP

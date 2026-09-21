@@ -1,0 +1,8 @@
+data=
+1	0
+丸野　　一樹	10.60	0.13	2.2	３		G1	１		SG	１		SG	１		SG	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP
+森高　　一真	6.60	0.15	4.6	４		G1	３		SG	４		G1	６		G1	３		G1	４		G1	２		G1	２		SG	３		SG	３		G1
+小坂　　尚哉	7.50	0.08	2.1	１		G1	１		IP	４		IP	４		IP	１		IP	２		IP	３		IP	３		IP	１		IP	３		IP
+井口　　佳典	5.90	0.16	3.5	２		G1	２		G3	１		G3	転		G1	６		G1	６		G1	２		G2	３		G2	６		G1	２		G1
+高橋　　正男	5.50	0.17	2.7	２		G1	４	4	IP	４		IP	５		IP	４		IP	３		IP	２		IP	５		IP	１		IP	３		IP
+菅　　　章哉	4.00	0.17	3.9	６		G1	６		G1	２		SG	５		SG	６		IP	４		IP	５		IP	５		IP	１		IP	５		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+梶原　　　正	7.00	0.18	3.0	４		IP	１		IP	２		IP	１		IP	３		IP	４		IP	１		IP	１		IP	３		IP	５		IP
+長野　　道臣	6.30	0.17	3.6	１		IP	３		IP	２		IP	２		IP	４		IP	６		IP	３		IP	２		IP	４		IP	２		IP
+佐藤　　大佑	8.00	0.15	3.2	２		IP	１		IP	３		IP	１		IP	３		IP	１		IP	２		IP	２		IP	４		IP	１		IP
+浜田　亜理沙	4.90	0.17	3.8	５		IP	４		G1	６		G1	２		G1	６		G1	２		IP	２		IP	５		G1	５		IP	２		G3
+森　　　智也	4.60	0.21	5.4	５		IP	４		IP	５	4	IP	３		IP	３	4	IP	５	6	IP	３		IP	４		IP	２		IP	３		IP
+石田　　政吾	2.60	0.19	4.6	６		IP	６		IP	３		IP	６		IP	４		IP	６		IP	６		IP	５		IP	６		IP	２		IP

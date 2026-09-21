@@ -1,0 +1,8 @@
+data=
+1	0
+川北　　浩貴	7.20	0.13	1.8	２		IP	３		IP	１		IP	１		IP	４		IP	５		IP	１		IP	２		IP	４		IP	１		IP
+池田　　雷太	3.70	0.16	3.3	４		IP	５	5	IP	１	3	IP	６		IP	４		IP	５		IP	４		IP	５		IP	５		IP	３		IP
+都築　　正治	4.50	0.18	3.6	２		IP	６		IP	１		IP	５	4	IP	２		IP	５		IP	１		IP	６		G3	６		G3	５		IP
+佐竹　　恒彦	5.33	0.16	3.4	３	3	IP	４		IP	４		IP	２		IP	４		IP	５		IP	２		IP	３		IP	３	5	IP	欠		IP
+大澤　　普司	5.10	0.21	3.7	３		G1	６		G1	１		IP	２		IP	６		IP	６	6	IP	６		IP	１		IP	５		IP	２		G3
+大塚　　浩二	1.40	0.22	4.6	６		IP	５		IP	５	5	IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP

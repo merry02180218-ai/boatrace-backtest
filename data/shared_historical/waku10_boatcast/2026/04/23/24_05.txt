@@ -1,0 +1,8 @@
+data=
+1	0
+大原　　祥昌	9.20	0.12	2.2	１		IP	１		IP	１		IP	１		G3	３		G3	１		IP	３		IP	１		IP	１		IP	１		IP
+登玉　　隼百	5.00	0.18	2.8	３		IP	２		IP	４	3	IP	６		IP	５		IP	１	4	IP	６		IP	１		IP	４		IP	５		IP
+高井　　駿弥	5.30	0.15	3.1	３		IP	２		IP	３		IP	３		IP	５		IP	４		IP	３		IP	６		IP	３		IP	２		IP
+篠原　　飛翔	6.30	0.14	2.9	２		IP	１		IP	３		IP	５		IP	６		IP	３		IP	３		IP	２		IP	３		IP	１		IP
+吉原　　快誓	1.10	0.15	3.9	６		IP	４		IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	落	6	IP	Ｆ	6	IP	６	6	IP
+近藤　　颯斗	3.40	0.17	3.6	３		IP	５		IP	４		IP	５		IP	４		IP	５		IP	６		IP	６		IP	４		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+水原　　　慎	7.00	0.12	2.5	１		IP	２		IP	１		IP	１		G3	１		G3	６		IP	１		G3	２		G3	６		IP	５		IP
+大神　　康司	5.70	0.15	2.6	６		IP	５		IP	２		IP	２		IP	３		IP	５		IP	２		IP	４		IP	２		IP	１		IP
+高木　　圭大	4.78	0.17	3.4	４		IP	３		IP	不		IP	３		IP	６		IP	５		IP	２		IP	４		IP	４		IP	２		IP
+田頭　　虎親	5.90	0.14	2.6	３		IP	２		IP	６		IP	１		IP	５		IP	３		IP	１		IP	３		IP	５		IP	２	5	IP
+木下　　陽介	3.90	0.12	1.7	３		IP	３		IP	５		IP	３		IP	４		IP	６		IP	２		IP	５		IP	４		IP	転		IP
+真庭　　明志	4.40	0.18	2.4	５		IP	３	5	IP	５		IP	２	5	IP	５	5	IP	５		IP	２		IP	３	4	IP	３		IP	５		IP

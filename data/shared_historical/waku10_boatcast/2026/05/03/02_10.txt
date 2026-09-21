@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　　博	9.40	0.14	3.1	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP
+田中　瀬里奈	1.86	0.30	4.3	４	5	IP	６		IP	６	3	IP	６		IP	６	6	IP	６		IP	４		IP									IP
+桐生　　順平	6.50	0.12	3.5	６		G1	４		G1	４		SG	１		G1	４		G1	５		G1	３		G1	１		G1	２		G1	３		IP
+赤羽　　克也	6.40	0.16	3.0	２		IP	２		IP	５		IP	２		IP	２		IP	４		IP	１	2	IP	３		IP	５		IP	２		IP
+後藤　　　浩	2.50	0.14	3.1	５		IP	５		IP	５		IP	６		IP	２		IP	４		IP	５		IP	６		IP	６		IP	５		IP
+松本　　純平	4.70	0.17	3.6	５		IP	２		IP	６		G1	３		G1	６		G1	１	5	IP	３		IP	５		IP	６		IP	３		G1

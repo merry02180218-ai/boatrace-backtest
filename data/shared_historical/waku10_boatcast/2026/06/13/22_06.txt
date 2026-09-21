@@ -1,0 +1,8 @@
+data=
+1	0
+古賀　　千晶	6.80	0.11	1.9	１		IP	４		G3	１		G3	２		G3	２		G3	１		IP	４		G3	４		G3	２		IP	５		IP
+喜井　つかさ	7.30	0.13	2.2	１		G3	１		G3	３		IP	４		IP	１		IP	１		G3	２		G3	６		G3	２		G3	３		G3
+平田　さやか	6.60	0.14	2.7	３		G3	２		G3	３	2	IP	２		IP	３		IP	２		IP	２		IP	２		IP	４		IP	４		IP
+真子　奈津実	3.50	0.14	2.5	６		IP	６		IP	５		IP	２		IP	４		IP	４		IP	５		IP	６		IP	３		IP	３		IP
+本部　めぐみ	3.00	0.21	4.6	５		G3	５		IP	４		G3	５		IP	４		IP	３		IP	５		IP	５		IP	４		IP	５		IP
+長嶋　　万記	4.60	0.14	2.9	２		G2	５	5	IP	５		IP	２	5	IP	５		IP	４		IP	３		G3	４		G3	３		IP	５	5	IP

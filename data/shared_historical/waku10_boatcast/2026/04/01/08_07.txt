@@ -1,0 +1,8 @@
+data=
+1	0
+河野　　　大	9.70	0.13	2.7	１		IP	１		G2	１		IP	１		IP	１		IP	１		IP	２		IP	２		G1	２		G2	１		IP
+永田　　　楽	2.30	0.24	3.7	５		IP	落	5	IP	３	5	IP	６		IP	６		IP	５		IP	１		IP	転	3	IP	転		IP	６		IP
+河村　　　了	6.00	0.15	2.7	２		IP	４		IP	４		IP	２		IP	３		IP	１		IP	４		IP	３		IP	３		G3	４		G3
+吉田　　宗弘	5.00	0.22	3.8	４		IP	３		IP	２		IP	６		IP	１		IP	２	2	IP	３		IP	４		IP	６		IP	５		IP
+佐口　　達也	4.60	0.20	4.2	３	4	IP	３		IP	２		IP	３		IP	５		IP	３		IP	５		IP	３		IP	５		IP	５		IP
+鈴木　結平太	1.20	0.16	2.5	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP

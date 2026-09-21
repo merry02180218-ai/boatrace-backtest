@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　紘章	5.60	0.21	3.2	５		IP	１		IP	５		IP	５		IP	２		IP	１		IP	２		IP	転		IP	１		IP	４		IP
+渡邊　　雄斗	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+坂口　　　周	6.60	0.18	3.4	３		IP	３		IP	３		IP	１		IP	１		IP	３		IP	２		IP	５		IP	２		IP	４		IP
+安藤　　裕貴	4.60	0.15	2.5	２		IP	２		IP	２		IP	４		IP	６		IP	５	5	IP	３		IP	４		IP	６		IP	４		IP
+松尾　　　充	5.60	0.13	3.2	６		G1	１		G1	４		G1	３	4	IP	４		IP	１		IP	４		IP	２		IP	６		IP	５		G1
+豊田　健士郎	4.50	0.14	3.7	４	5	IP	２		G3	６		G1	６		G2	３		G2	６		G1	５		G1	１		IP	５		IP	４		G1

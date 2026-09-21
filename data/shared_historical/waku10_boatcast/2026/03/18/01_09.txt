@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　慧人	4.00	0.18	3.8	１		IP	５		IP	６		IP	６		IP	３		IP	４		IP												IP
+鰐部　太空海	6.60	0.15	2.2	３		IP	３		IP	３		IP	１		IP	１		G1	欠		IP	３		IP	５		IP	２		IP	１		IP
+小宮　　涼雅	4.00	0.15	2.5	６		IP	５	2	IP	２		IP	６		IP	５		IP	５		IP	３		IP	３		IP	１		IP	５		IP
+若林　　義人	7.30	0.10	1.7	４		IP	１		IP	６		IP	３		IP	１		IP	１		IP	６		G1	１		IP	２		IP	１		IP
+塚越　　海斗	6.00	0.18	3.0	１		IP	２		IP	６	3	IP	１		IP	１	4	IP	６		IP	２		IP	２		IP	６		IP	５		IP
+梅原　　祥平	2.11	0.18	3.8	６		IP	５		IP	転		IP	５		IP	５		IP	４		IP	５		IP	６		IP	６		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+平野　　和明	8.40	0.18	2.5	１		IP	３		IP	２		IP	１		IP	１		IP	１		IP	３		IP	１		IP	３		IP	２		IP
+松竹　　大輔	8.90	0.16	2.8	２		IP	１		IP	１		IP	１		IP	１		IP	２		G3	２		G3	１		IP	２		IP	３	3	IP
+和合　　俊介	2.90	0.20	3.3	２		IP	５		IP	５		IP	６		IP	６		IP	５		IP	６		IP	４		IP	３		IP	５		IP
+坪口　　竜也	4.60	0.17	2.8	４		IP	６		IP	３		IP	６		IP	３		IP	３		IP	１		IP	３		IP	５		G3	４		G3
+増本　　杏珠	3.30	0.18	3.4	４		IP	Ｆ		IP	３		IP	５		IP	３		IP	５		IP	３		IP	６		IP	５	6	IP	４		IP
+黒井　　達矢	4.80	0.21	4.4	５		IP	３		IP	３	4	IP	３		IP	３		IP	６	5	IP	３		IP	５		G1	４	5	IP	２	3	IP

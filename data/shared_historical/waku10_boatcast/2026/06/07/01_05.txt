@@ -1,0 +1,8 @@
+data=
+1	0
+桑原　　　啓	8.00	0.16	2.8	１		G3	２		IP	２		IP	１		IP	４		IP	２		IP	２		IP	１		IP	１		IP	４		IP
+塚越　　海斗	7.60	0.17	2.4	１	3	G3	２		IP	２		IP	２		IP	４		IP	２		IP	４		IP	１		IP	１		IP	３		IP
+柘植　　政浩	5.20	0.13	3.3	５		IP	３		IP	３		IP	５		IP	２		IP	３		IP	１		IP	４		IP	３		IP	５		IP
+松本　　庸平	3.50	0.24	5.6	２	3	IP	６		IP	６		IP	３		IP	５	5	IP	２		IP	５		IP	４		IP	６		IP	５		IP
+港　　　理樹	2.60	0.20	4.1	５	6	IP	５		IP	４		IP	４	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	３	6	IP	４	6	IP
+君島　　秀三	4.20	0.16	3.3	３		IP	４		IP	５		G1	４		IP	４	5	IP	２		IP	６		IP	４		IP	４		IP	４		IP

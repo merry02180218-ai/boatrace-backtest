@@ -1,0 +1,8 @@
+data=
+1	0
+菅　　　章哉	8.60	0.12	3.6	１		G1	１		G1	６		SG	１		IP	１		IP	１		IP	Ｆ		IP	１		IP	１		IP	１		G1
+西山　　貴浩	7.30	0.16	3.5	２		G1	４		SG	２		SG	５		G1	１		IP	３		G1	５		G1	４		G1	２		G1	２		SG
+深谷　　知博	6.40	0.12	2.6	４		G1	５		SG	２		SG	３		G1	１		G1	２		IP	３		G1	４		G1	４		IP	５		G1
+赤岩　　善生	6.60	0.17	3.3	５		G1	３	2	G1	５		G1	６	3	G3	１	3	G3	１	2	IP	１	3	IP	１	3	IP	１		IP	６		G1
+大峯　　　豊	5.50	0.13	2.6	３		G1	４		G1	３		IP	３		G2	４		G3	２		IP	５		IP	３		IP	３		IP	４		IP
+吉田　　拡郎	6.00	0.11	2.6	３		G1	６		G1	４		G2	２	5	IP	１		IP	５		IP	１		IP	６	5	IP	３	5	IP	３		G1

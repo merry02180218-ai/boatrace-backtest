@@ -1,0 +1,8 @@
+data=
+1	0
+坪口　　竜也	9.20	0.12	3.0	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+中島　　秀治	6.10	0.17	4.0	４		G2	２		IP	３		IP	２		IP	３		IP	３		IP	３		IP	３		IP	２		IP	６		IP
+下出　　卓矢	6.33	0.16	2.8	５		G2	１		IP	２		IP	２		IP	４		IP	１		IP	２		IP	５		IP	欠		IP	４		IP
+山口　　達也	5.00	0.16	3.8	４		G2	２		IP	転		IP	２		G2	１		IP	６		SG	６		G1	６		G1	６		G1	２		G1
+坂元　　浩仁	5.90	0.17	3.4	５		G2	４		IP	３	4	IP	４		IP	５		IP	４		G2	１		G2	４	6	IP	１		IP	１		IP
+榎　　　幸司	4.30	0.22	5.0	３		G2	１		IP	３		IP	５		IP	４	4	IP	５		IP	５		IP	４		IP	４		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+本吉　　正樹	6.30	0.17	3.3	６		IP	４		IP	１		IP	１		IP	１		IP	１		IP	１		IP	エ		IP	５		IP	３		IP
+松山　　裕基	4.50	0.17	3.8	２		IP	４		IP	４		IP	４		IP	５		IP	５		IP	３		IP	３		IP	６		IP	２		IP
+須藤　　隆雄	4.60	0.17	2.1	１		IP	５		IP	３		IP	５		IP	３		IP	６		IP	４		IP	６		IP	２		IP	３		IP
+樋江井　　舞	5.67	0.17	2.7	欠		IP	３		IP	３		IP	３		IP	４	5	IP	６		IP	２		IP	１		IP	２		IP	５		IP
+三好　　勇人	3.10	0.16	3.4	２		IP	５		IP	４		IP	６		IP	４		IP	４		IP	５		IP	５		IP	５		IP	５		IP
+森林　　　太	2.80	0.27	5.2	５		IP	６		IP	５		IP	６		IP	４		IP	４		IP	４	5	IP	５		IP	４		IP	５		IP

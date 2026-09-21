@@ -1,0 +1,8 @@
+data=
+1	0
+内堀　　　学	8.00	0.16	4.3	１		IP	１		IP	３		IP	６		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+福来　　　剛	7.30	0.12	2.5	３		IP	５		IP	１		IP	４		G1	２		IP	１		IP	４		IP	２		IP	３		G1	１		G1
+長田　　頼宗	7.78	0.14	2.7	２		IP	１	2	IP	５		G1	２		G1	１		IP	３		G1	２		G1	３		G1	３		G1	欠		G1
+栗城　　　匠	7.90	0.11	2.0	３		IP	４		G1	２		G1	４	3	IP	１		G1	１		IP	転		G1	１		G1	１		IP	１		IP
+田中　　　豪	5.90	0.15	2.9	３		IP	４		IP	２		IP	１		IP	５		IP	１	4	IP	２		IP	６		IP	４		IP	３		IP
+杉山　　貴博	5.40	0.18	4.2	４		IP	３	5	IP	４		IP	２		IP	３		IP	４		IP	３		IP	２		IP	５		IP	３		IP

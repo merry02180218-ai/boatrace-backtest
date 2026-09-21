@@ -1,0 +1,8 @@
+data=
+1	0
+三品　　隆浩	5.50	0.19	3.3	２		IP	５		IP	６		IP	５		IP	４		IP	２		IP	１		IP	１		IP	２		IP	５		IP
+尾形　　栄治	5.10	0.21	3.7	２		IP	２		IP	６		IP	３		IP	５		IP	３		IP	４		IP	４		IP	３		IP	３		IP
+渡辺　　　豊	5.30	0.21	4.2	３		IP	４		IP	６		IP	５		IP	３		IP	３		IP	３	4	IP	２		IP	３		IP	２		IP
+尾道　　佳諭	3.50	0.17	2.4	４		IP	３		IP	５		IP	６	3	IP	４		IP	６		IP	６		IP	５		IP	３		IP	２		IP
+多田　　有佑	2.40	0.23	4.9	４		IP	５		IP	５		IP	６		IP	４		IP	４		IP	６		IP	６		IP	４		IP	６		IP
+森作　　雄大	2.89	0.13	2.6	６		IP	エ		IP	１	5	IP	５		IP	５		IP	５		IP	６		IP	５		IP	４		IP	５		IP

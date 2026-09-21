@@ -1,0 +1,8 @@
+data=
+1	0
+堀越　　雄貴	8.10	0.16	4.1	１		IP	１		IP	１		IP	２		IP	１		IP	３		IP	２		IP	２		IP	６		IP	１		IP
+小玉　　啓太	5.30	0.13	2.7	２		IP	５		IP	３		IP	転		IP	３		IP	３		IP	２		IP	１		IP	３		IP	６		IP
+山下　　拓巳	4.40	0.15	2.8	４		IP	５		IP	３		IP	３		IP	３		IP	３		IP	６		IP	６		IP	５		IP	１		IP
+江藤　　敦宏	3.70	0.16	3.5	５		IP	６		IP	５		IP	２		IP	５		IP	５	5	IP	３		IP	１		IP	５	5	IP	５		IP
+安河内鈴之介	6.70	0.16	2.8	２		IP	２		IP	５		IP	１		IP	２		IP	５		G2	２		IP	２		IP	５		IP	１		IP
+庄島　　潤成	1.70	0.20	4.7	５		IP	５		IP	５		IP	６		IP	３		IP	６		IP	６	5	IP	６		IP	６		IP	落		IP

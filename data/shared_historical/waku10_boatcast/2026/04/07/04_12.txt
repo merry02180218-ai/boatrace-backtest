@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　雄朗	6.90	0.16	3.3	１		IP	１		IP	６		G1	３		G1	１		G1	４		G1	４		IP	３		IP	４		IP	１		IP
+萩原　　知哉	5.20	0.16	2.5	２		IP	４		IP	３		IP	１		IP	５		IP	３		IP	４		IP	３		IP	５		IP	４		IP
+相原　　利章	5.90	0.13	2.0	１		IP	３		IP	２		IP	４		IP	３		IP	４		IP	４		IP	２	5	IP	２		IP	６		IP
+原田　才一郎	5.30	0.17	4.4	１	3	IP	２		IP	２		G1	４		IP	３		G1	４		G1	４		G1	５		IP	６		IP	６		G1
+永井　　　源	5.60	0.16	3.0	３		IP	５		IP	３		IP	４		IP	３		IP	４		IP	５		G1	２		G1	４		IP	１		IP
+上條　　嘉嗣	4.90	0.20	4.2	６		IP	３	4	IP	３		IP	３	4	IP	３		IP	５		IP	４		IP	２		IP	３	5	IP	５		IP

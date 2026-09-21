@@ -1,0 +1,8 @@
+data=
+1	0
+安河内　　健	9.30	0.15	3.1	１		IP	５		G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+野中　　一平	6.30	0.10	1.7	４		G1	２		G1	３		IP	４		IP	５		G1	４		G1	３		IP	１		IP	３	3	IP	２		IP
+羽野　　直也	6.40	0.12	2.3	１		G1	４		G1	３		IP	１		G1	２		IP	６		IP	５		SG	１		IP	Ｆ		G1	３		G1
+蒲原　　健太	3.70	0.22	3.7	４		IP	転	3	IP	２		IP	６		IP	６		IP	６		IP	３		IP	４		IP	３		IP	３	3	IP
+武富　　智亮	5.90	0.17	2.9	４		IP	３		IP	３		IP	２		G1	５		IP	２		IP	４		IP	３		IP	２		IP	４		IP
+市川　　哲也	4.30	0.14	2.8	４	3	IP	６		IP	３	5	IP	４		IP	３		IP	５		IP	１	5	IP	３		IP	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+松井　　洪弥	7.80	0.12	2.5	６		IP	３		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	４		G1
+筒井　　美琴	2.30	0.16	3.4	５		IP	６		IP	６		IP	４		IP	５		IP	５		IP	５		G3	５		IP	３		IP	６		IP
+長畑　　友輔	6.00	0.16	2.3	１		IP	４		IP	３		IP	２		IP	４		IP	４		IP	４		IP	３		IP	１		IP	４		IP
+川崎　　誠志	2.80	0.19	4.5	４		IP	６	5	IP	６		IP	６		IP	２		IP	３		IP	５		IP	５		IP	６		IP	５		IP
+津留　浩一郎	1.90	0.20	4.5	６		IP	５		IP	６		IP	６		IP	５		IP	５		IP	６		IP	４		IP	４		IP	６		IP
+中尾　　優香	1.80	0.25	5.1	６		IP	６		IP	６		IP	６		IP	転		IP	３		IP	６		IP	４		IP	５		IP	６		G3

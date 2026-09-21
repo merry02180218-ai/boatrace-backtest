@@ -1,0 +1,8 @@
+data=
+1	0
+佐竹　　恒彦	8.00	0.13	1.8	１		G3	１		G3	２		IP	１		IP	２		IP	３		IP	３		IP	２		IP	４		IP	１		IP
+松田　　隆司	4.90	0.15	2.9	２		IP	３		IP	２		IP	４		IP	６		IP	６		IP	６		IP	３		IP	３		IP	２		IP
+新開　　　航	8.10	0.13	3.3	３		G1	５		G1	１		IP	２		IP	１		IP	３		G1	４		G1	２		G2	１		IP	１		G1
+白井　　友晴	4.80	0.14	3.8	５	5	IP	４		IP	２		IP	３		IP	４		IP	４		IP	４		IP	４		IP	３	5	IP	３		IP
+栗原　　謙治	1.40	0.24	5.2	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５	6	IP	６		IP
+井上　　大輔	4.30	0.19	3.2	５		IP	４		IP	３	5	IP	３		IP	６		IP	３		G3	５		IP	４		IP	５		IP	２		IP

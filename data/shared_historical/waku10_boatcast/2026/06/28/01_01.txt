@@ -1,0 +1,8 @@
+data=
+1	0
+深澤　　達徳	7.00	0.18	3.3	２		IP	５		IP	１		IP	２		IP	１		G3	１		IP	３		IP	１		IP	５		IP	４		IP
+尾崎　　雄二	5.30	0.19	3.7	５		IP	１		IP	５		IP	２		IP	５		IP	２		IP	３		IP	２		IP	３		IP	６		IP
+黒野　　元基	6.80	0.13	2.3	３		IP	４		IP	２	2	IP	３		IP	１		IP	３		IP	１		IP	３		G1	３		G1	５		G1
+藤田　　靖弘	6.50	0.17	3.0	２		IP	２		IP	３	5	IP	６		IP	２		IP	２		IP	１		IP	１		IP	４		IP	５		IP
+石原　　　光	3.90	0.18	3.8	２		IP	３		IP	６	6	IP	６		IP	６	6	IP	４		IP	３	6	IP	４		IP	４		IP	４		IP
+鈴木　　勝博	4.40	0.16	3.2	６		IP	３	5	IP	２		IP	３		IP	５		IP	３		IP	３		IP	６		IP	５		IP	３		IP

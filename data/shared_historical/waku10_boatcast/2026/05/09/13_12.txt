@@ -1,0 +1,8 @@
+data=
+1	0
+宮田　　龍馬	9.00	0.11	1.9	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	Ｆ		IP	１		G3	１		G3	１		G3
+吉川　　元浩	5.30	0.14	2.8	２		IP	４		G1	４		G1	３		IP	４		G1	２		G1	４		G1	２		IP	エ		IP	５		IP
+古結　　　宏	4.70	0.10	3.2	３		IP	３		G1	５	1	G1	２		IP	２		IP	６		G1	４		G1	５		IP	４	4	IP	５		IP
+高野　　哲史	5.90	0.13	3.2	２		IP	２		IP	２		IP	３		IP	６		G1	１		G1	３		G1	４		IP	６		G1	５		G1
+吉田　　俊彦	6.10	0.15	3.0	３		IP	４		IP	３		IP	４		IP	１		IP	３		IP	４		IP	３		IP	２	4	IP	４		G1
+和田　　兼輔	4.30	0.12	2.5	３	5	IP	２	4	IP	３		IP	６		G1	５		G1	５		G1	３		IP	５		G1	４		IP	５		IP

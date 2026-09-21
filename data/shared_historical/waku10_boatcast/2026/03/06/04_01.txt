@@ -1,0 +1,8 @@
+data=
+1	0
+喜多　那由夏	6.40	0.18	3.6	２		IP	３		IP	２		IP	１		IP	４		G3	３		IP	２		IP	５		IP	５		G3	１		IP
+秋田　健太郎	4.30	0.16	3.0	４		IP	３		IP	３		IP	４		IP	１		IP	５		IP	５		IP	５		IP	６		IP	３		IP
+中村　　栄治	5.00	0.24	3.4	４		IP	３		IP	２		IP	４		IP	３		IP	６		IP	３		IP	６	4	IP	３		IP	２	2	IP
+富永　　大一	4.50	0.17	2.9	３		IP	４		IP	６		IP	６		IP	６	6	IP	４		IP	３		IP	３		IP	１		IP	３		IP
+杉山　　裕也	4.90	0.18	2.9	５		IP	５		IP	１		IP	５		G1	１		IP	４		IP	３		IP	３		IP	４		IP	６		G1
+塚越　　陸斗	1.78	0.18	3.6	５		IP	６		IP	４		IP	転		IP	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP

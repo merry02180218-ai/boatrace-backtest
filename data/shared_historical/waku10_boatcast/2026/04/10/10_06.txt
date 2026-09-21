@@ -1,0 +1,8 @@
+data=
+1	0
+秋山　　広一	8.40	0.15	3.6	１		IP	１		IP	１		IP	３		IP	６		IP	１		G1	１		IP	３		IP	１		IP	１		IP
+松尾　　宣邦	5.40	0.17	3.9	３		IP	５		IP	５		IP	５		IP	２		IP	４		IP	３		IP	２		IP	２		IP	２		IP
+阪本　　勇介	5.20	0.20	4.3	４		IP	４		IP	４		IP	３		IP	３		IP	３	4	IP	４		IP	３		IP	４		IP	２		IP
+四宮　　与寛	4.33	0.16	3.1	６		IP	１		IP	６		IP	５		IP	６	5	IP	３		IP	３		IP	２		IP	４		IP	転		G1
+馬袋　　義則	6.60	0.18	3.7	２	3	IP	２	3	IP	３	4	IP	５		IP	３	4	IP	２	3	IP	４	2	IP	１	3	IP	２	2	IP	４		IP
+日高　龍之介	2.70	0.16	3.2	５		IP	４		IP	５		IP	６		IP	５		IP	６		IP	３		IP	６		IP	４		IP	４		IP

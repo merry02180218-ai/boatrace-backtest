@@ -1,0 +1,8 @@
+data=
+1	0
+金田　　幸子	7.00	0.13	2.7	１		IP	３		IP	１		IP	４		IP	２		IP	１		IP	２		IP	５		IP	１		IP	５		IP
+前田　　紗希	7.67	0.14	2.3	４		G1	欠		IP	３		G3	２		G3	２		G3	１		IP	３		IP	２		IP	１		IP	２		G3
+島倉　　　都	2.90	0.18	3.2	５		IP	６		IP	４		IP	３		IP	４		IP	４		IP	６		IP	５		IP	６		IP	４		IP
+久保田　凪紗	1.00	0.20	3.2	６	6	IP	６		G3	５		G3	Ｆ	6	IP	６	5	IP															IP
+今井　　美亜	5.40	0.15	3.4	３		G1	５		G1	３		IP	４		IP	３		IP	３		IP	４		IP	２		IP	２		G3	５	6	IP
+佐々木　裕美	2.00	0.19	3.4	５	4	IP	５		IP	６		G3	２		IP	６		IP	６		IP	５		G3	６	4	IP	６		G3	６		IP

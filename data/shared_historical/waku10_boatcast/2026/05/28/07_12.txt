@@ -1,0 +1,8 @@
+data=
+1	0
+高野　　哲史	9.80	0.13	2.7	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+金田　　智博	6.90	0.17	3.1	１	1	IP	２		G2	５		IP	６		IP	２		IP	６		IP	２		IP	１		IP	１		IP	１		IP
+川田　　正人	4.70	0.17	4.6	５		IP	１	4	IP	４	4	IP	３		IP	３		IP	６		IP	３		IP	５		IP	３		IP	４		IP
+重成　　一人	5.50	0.14	3.0	５		IP	４		IP	６		G1	３		IP	２		IP	２		IP	４		IP	１		IP	５		G1	３		G1
+沢田　　昭宏	6.80	0.19	3.0	３		IP	３		IP	１		IP	２		IP	４		IP	２	4	IP	４		IP	２		G3	２		IP	４	4	IP
+山下　　大輝	4.20	0.16	3.3	３		IP	３		IP	５		IP	６		IP	２		IP	４		IP	６		G1	５		G1	５		IP	２		IP

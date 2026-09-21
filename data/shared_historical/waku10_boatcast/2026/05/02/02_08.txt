@@ -1,0 +1,8 @@
+data=
+1	0
+浅見　　宗孝	6.20	0.16	3.3	１		IP	２		IP	４		IP	４		IP	４		IP	２		IP	１		IP	５		IP	２		IP	４		IP
+秋元　　　哲	7.30	0.14	2.1	２		IP	２	1	IP	２	3	G3	１		G3	３		G1	２		IP	４		IP	２		IP	３		G1	４		G1
+小川　　時光	4.78	0.13	2.7	３	2	IP	５		IP	２		IP	転		IP	３		IP	６		IP	６		IP	６		IP	１	4	IP	２		IP
+中里　　昌志	3.50	0.18	3.9	６		IP	６		IP	３		IP	５	5	IP	４		IP	４		IP	４		IP	３		IP	６		IP	３		IP
+中田　　竜太	5.50	0.13	2.9	６		G1	４		G1	４		G1	５		G2	３		G1	２		G1	４		IP	２		IP	３		G1	５		G1
+清埜　　翔子	3.50	0.15	3.3	３		IP	３		IP	５	5	IP	４		IP	６		IP	４		IP	６		IP	４		G3	４	5	G1	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+安井　　瑞紀	7.60	0.22	3.8	２		IP	１		G1	１		IP	６		IP	１		IP	１		IP	５		IP	２		IP	３		IP	１		G3
+丹下　　　健	4.80	0.19	3.3	３		IP	６	3	IP	２		IP	５		IP	２		IP	２		IP	３		IP	６		IP	５		IP	３		IP
+長野　　道臣	5.50	0.19	3.5	１		IP	２		IP	５		IP	３		IP	２		IP	２		IP	６		IP	４		G3	４		IP	４	4	IP
+浜本　　裕己	6.00	0.15	3.2	４		IP	３		IP	３	5	IP	１		IP	４		IP	４	5	IP	２		IP	３		IP	２		IP	４		IP
+寺島　　美里	5.10	0.11	2.6	３		IP	３		IP	４		G1	１		G1	４		IP	３		IP	４		G3	３		G3	５		IP	６		G3
+乙藤　　智史	3.33	0.18	3.8	３		IP	６	5	IP	５		IP	５		IP	２		IP	３		IP	転	5	IP	５		IP	６		IP	５		IP

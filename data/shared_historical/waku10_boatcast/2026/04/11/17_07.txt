@@ -1,0 +1,8 @@
+data=
+1	0
+佐々木　英樹	6.40	0.16	3.3	４		IP	２		IP	１		IP	３		IP	５		IP	２		IP	４		IP	１		IP	４		IP	２		G3
+泉　　　具巳	5.70	0.15	3.2	２		IP	２	4	IP	４		IP	１		IP	５		IP	６		IP	３		IP	２		IP	３		IP	４		IP
+山田　　和佐	5.80	0.17	3.1	４		IP	４		IP	４		IP	５		IP	３		IP	２		IP	３		IP	２		IP	２		IP	２		IP
+中北　　　涼	3.20	0.18	4.1	５		G3	３		G3	３		IP	５	5	IP	５		IP	４		IP	５		IP	６		G3	３	3	IP	６		IP
+早川　　尚人	3.50	0.25	4.7	５		IP	５		IP	３	6	IP	２		IP	５	6	IP	６		IP	５		IP	２	6	IP	５		IP	５	4	IP
+近藤　　稔也	3.60	0.17	4.1	６		IP	５		IP	４		IP	５		IP	３	5	IP	２		IP	３	5	IP	４	5	IP	５		IP	６		IP

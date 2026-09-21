@@ -1,0 +1,8 @@
+data=
+1	0
+桂林　　　寛	5.30	0.18	4.2	５		IP	２		IP	４		IP	２		IP	３		IP	２		IP	１		IP	６		IP	４		IP	５		IP
+中澤　　和志	6.90	0.16	3.4	２		IP	３		IP	２		IP	２		IP	５		G1	１		G1	５		IP	２		IP	１		IP	４		G1
+宮内　　直哉	3.70	0.17	3.1	Ｆ		IP	６		IP	１	4	IP	２		IP	４		IP	３		IP	４		IP	６	4	IP	６		IP	５		IP
+角山　　雄哉	2.80	0.16	2.9	３	5	IP	５	5	IP	６		IP	３		IP	５	5	IP	６	5	IP	６		IP	６		IP	４		IP	４		G3
+本村　　　大	2.80	0.19	4.0	４		IP	５		IP	５		IP	４		IP	欠		IP	５	6	IP	６		IP	１	4	IP	５		IP	６		IP
+石倉　　洋行	3.70	0.12	2.5	３		IP	５	5	IP	５		G1	３		IP	５		IP	４		IP	６		G1	３		IP	５		IP	４		IP

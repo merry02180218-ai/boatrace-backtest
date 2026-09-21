@@ -1,0 +1,8 @@
+data=
+1	0
+小池　　哲也	7.00	0.14	3.5	１		IP	４		IP	１		IP	２		IP	１		IP	１		IP	３		IP	妨		IP	５		IP	１		IP
+中　　　亮太	7.10	0.15	2.1	４		G3	３		IP	１		IP	２		IP	１		IP	２	3	IP	３		IP	２		G3	２		G3	５		IP
+吉田　　拡郎	6.80	0.12	2.5	４		IP	３		IP	４		G1	２		G1	５		G1	２		G1	１		G1	３		IP	２		IP	３		G1
+中田　　竜太	6.30	0.13	3.1	３		IP	２		IP	３		IP	１		IP	４		G1	６		G1	４		G1	１		G1	５		G2	３		G2
+石原　　　翼	5.40	0.12	2.5	４	6	IP	４		IP	２		IP	２		IP	２	4	IP	２	6	G2	４		IP	５		IP	３		IP	６		IP
+安達　　裕樹	4.60	0.17	3.5	５		G2	４		IP	６		IP	３		IP	４		IP	３		IP	３		IP	２	5	IP	４		IP	４		IP

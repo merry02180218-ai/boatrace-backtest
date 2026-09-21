@@ -1,0 +1,8 @@
+data=
+1	0
+芹澤　　克彦	7.40	0.15	2.9	１		IP	１		IP	４		IP	２		IP	１		IP	３		IP	１		IP	５		IP	４		IP	１		IP
+石塚　　久也	7.20	0.17	3.9	１		IP	２		IP	２		IP	３		IP	１		IP	３		IP	４		IP	２		IP	４		IP	２		IP
+毒島　　　誠	8.60	0.15	2.3	５	4	IP	２		IP	３		SG	１		SG	５		IP	１	1	IP	１		IP	１		IP	１		IP	１		SG
+倉田　　茂将	4.80	0.16	3.7	３	5	IP	５	3	IP	２		IP	３		IP	３		IP	５		IP	４		IP	４		G3	５		G3	２		IP
+山本　　浩次	4.30	0.18	3.3	４		G3	４	4	IP	６	1	G3	４		IP	２		IP	２	3	IP	６		IP	３		IP	３		IP	６		IP
+中北　　将史	2.50	0.18	3.8	６		IP	６		IP	５		IP	４		G3	３	5	IP	６		IP	５		IP	４		IP	５		IP	５		IP

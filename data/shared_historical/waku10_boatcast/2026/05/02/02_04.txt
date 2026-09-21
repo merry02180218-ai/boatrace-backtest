@@ -1,0 +1,8 @@
+data=
+1	0
+田中　瀬里奈	2.50	0.26	4.7	５		IP	６		IP	６		IP	２		IP	６		IP	５		IP												IP
+黒井　　達矢	4.90	0.14	3.1	１		IP	３		G1	５		IP	２		G1	６		G1	２		IP	６	1	IP	３		IP	５		IP	６		G1
+平石　　和男	5.60	0.19	4.7	３		IP	５		IP	３		IP	３	2	IP	２		IP	５		IP	４		IP	４		IP	１		IP	２		IP
+楠　　将太郎	4.30	0.15	2.9	３		IP	４		IP	４		IP	６		IP	２		IP	６		IP	６	6	IP	３		IP	５	6	IP	１		IP
+砂長　　知輝	5.30	0.19	4.3	６		G1	３		G1	Ｆ		G1	６		SG	４	6	SG	１		IP	３		IP	３		IP	２		G1	５		IP
+成田　　華音	1.00	0.13	3.0	６		IP																											IP

@@ -1,0 +1,8 @@
+data=
+1	0
+新田　　芳美	5.40	0.20	4.1	４		IP	１		IP	１		IP	６		IP	６		IP	６		IP	５		G1	１		IP	２		IP	３		IP
+中北　　　涼	5.10	0.16	3.2	５	3	IP	６		IP	４		IP	４		G3	４		IP	２		IP	５		IP	２		IP	２		IP	１		G3
+原　　加央理	5.67	0.15	2.3	４		IP	４		IP	３	4	IP	２		IP	２		IP	６		IP	３		IP	２		IP	落	2	IP	３		IP
+菅野　はやか	3.00	0.16	3.4	５		G3	６		IP	４		IP	４		G3	４		G3	２		IP	６		IP	４		IP	６		IP	６		G3
+豊田　　　結	3.60	0.19	2.4	５		IP	４		G3	３		G3	５		IP	１		IP	４		IP	４		IP	５		IP	６		IP	６		IP
+日隈　　　茜	1.20	0.20	4.1	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

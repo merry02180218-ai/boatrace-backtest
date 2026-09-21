@@ -1,0 +1,8 @@
+data=
+1	0
+西田　　　靖	7.60	0.17	3.4	４		IP	１		G3	１		IP	３		IP	１		IP	１		IP	２		IP	５		IP	２		IP	２		IP
+浦田　　信義	5.00	0.17	4.0	４		IP	６		IP	４		IP	４		IP	２		IP	２		IP	３		IP	６		IP	２		IP	３		IP
+後藤　　隼之	7.00	0.15	2.5	３		IP	１		IP	２		IP	４		IP	１		IP	３		IP	２		IP	３		IP	２		IP	４		IP
+伏見　　俊介	4.70	0.10	1.9	４	5	IP	５	5	IP	６	6	IP	１		IP	２	6	IP	Ｆ		IP	６	6	IP	６		IP	１		IP	１		IP
+米本　　圭佑	1.60	0.26	5.4	６	6	IP	５	6	IP	５	6	IP	６	6	IP	６	6	IP	５	6	IP	６	6	IP	４	6	IP	６	6	IP	６	6	IP
+杉村　　賢也	2.00	0.24	4.5	５		IP	６		IP	５		IP	Ｆ		IP	６		IP	Ｆ		IP	５		IP	４		IP	３		IP	５		IP

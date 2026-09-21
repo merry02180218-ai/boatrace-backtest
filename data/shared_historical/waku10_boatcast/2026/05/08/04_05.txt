@@ -1,0 +1,8 @@
+data=
+1	0
+深水　慎一郎	7.50	0.17	3.4	１		IP	１		IP	１		IP	６		IP	１		IP	１		IP	４		IP	４		IP	２		IP	２		IP
+阿波　　勝哉	4.30	0.18	4.1	４		IP	２		IP	２		IP	２		IP	５		IP	５		IP	６		IP	５		IP	４	3	IP	４		IP
+小澤　　和也	4.60	0.18	2.5	６		IP	４		IP	４		IP	６		IP	３		IP	４		IP	５		IP	２		IP	１		IP	３		IP
+渡邉　真奈美	5.10	0.17	2.3	２		IP	４		G3	３		G3	５		IP	４		IP	３		IP	４		IP	１		G3	３		IP	６		G3
+齊藤　　　仁	4.20	0.17	4.0	５		IP	３	6	G1	５		IP	５		G3	４		G1	５		G1	５		G1	２		G1	３		IP	６		IP
+入澤　　友治	2.40	0.18	3.7	６		IP	６		IP	５		IP	４		IP	６	5	IP	５		IP	３		IP	５	5	IP	４		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+畑　　　和宏	8.00	0.13	2.2	１		IP	１		IP	２		IP	４		IP	１		IP	３		IP	１		IP	３		IP	３		IP	１		IP
+作間　　　章	6.20	0.19	3.4	２		IP	３		IP	１		IP	２		IP	４		G1	６		G1	３		IP	６		IP	２		IP	２		IP
+真庭　　明志	5.00	0.14	3.2	６		IP	２		IP	２		IP	６		IP	５		IP	３		IP	４		IP	４	2	IP	２		IP	２		IP
+松尾　　基成	1.90	0.17	3.6	６		IP	５		IP	５		IP	６	5	IP	５		IP	５		IP	５		IP	５		IP	４		IP	６		IP
+吉川　　颯汰	1.00	0.18	4.5	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP
+加藤　　啓太	3.20	0.18	4.6	５		IP	２		IP	６		IP	４		IP	３		IP	４		IP	５		IP	６		IP	５		IP	５		IP

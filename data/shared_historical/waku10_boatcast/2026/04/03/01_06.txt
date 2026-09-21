@@ -1,0 +1,8 @@
+data=
+1	0
+川崎　　智幸	8.10	0.18	3.7	５		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	１		IP	１		G1	４		IP
+橋本　　英一	3.00	0.15	3.0	６		IP	４		IP	６		IP	４		IP	６		IP	３		IP	５		IP	４	3	IP	６	3	IP	３		IP
+橋本　　久和	6.30	0.20	3.6	１		G3	３		IP	３		IP	４		IP	１		IP	３		IP	６		IP	２		IP	５		IP	１		IP
+渡邊　　裕貴	4.70	0.16	2.7	１		IP	５	3	IP	１		IP	２		IP	４		IP	４		IP	６		IP	５	5	IP	４	5	IP	５		IP
+井田　　涼介	1.50	0.28	4.8	６		IP	６		IP	６		IP	４		IP	６		IP	６		IP	６	6	IP	５		IP	５	4	IP	６	6	IP
+杢野　　誓良	3.00	0.14	2.7	６		IP	５		IP	６		IP	２		IP	４		IP	６		IP	６		IP	３		IP	５		IP	４		IP

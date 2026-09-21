@@ -1,0 +1,8 @@
+data=
+1	0
+浦田　　信義	7.60	0.21	4.3	１		IP	２		IP	Ｆ		IP	２		IP	１		IP	１		IP	３		IP	４		IP	１		IP	１		IP
+大場　　　敏	7.00	0.16	3.4	３		IP	２		IP	３	3	IP	３		IP	３		IP	２		IP	４		IP	２		IP	２		IP	１		IP
+下河　　誉史	5.70	0.15	3.3	４		IP	３		IP	４		IP	１		IP	３		IP	３		IP	６		IP	３		IP	２		IP	３		IP
+松下　　直也	5.20	0.20	3.2	２		IP	５		IP	２		IP	４		IP	３		IP	５		IP	３		IP	４		IP	４		IP	２	5	IP
+武田　　光史	5.70	0.18	3.6	２		IP	２	4	IP	２	4	IP	２		IP	４		IP	６		IP	４		IP	４		G1	５		G1	２		IP
+恵良　　琴美	3.11	0.16	2.7	５		IP	３		IP	４		IP	６		IP	３		IP	エ		IP	Ｆ		IP	３		IP	５		IP	６		IP

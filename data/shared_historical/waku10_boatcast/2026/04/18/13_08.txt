@@ -1,0 +1,8 @@
+data=
+1	0
+麻生　　慎介	8.10	0.14	2.3	１		G1	５		IP	１		IP	４		IP	２		G1	３		G1	１		IP	１		IP	２		IP	１		IP
+淺香　　文武	4.30	0.16	2.5	３		IP	４		IP	１		IP	５		IP	５		IP	６		IP	３		IP	４		IP	５		IP	４		IP
+岩永　　節也	5.00	0.18	3.7	５		IP	３		IP	５		IP	１		IP	６		IP	６		IP	３		IP	２		IP	３		IP	２		IP
+佐藤　　大介	6.10	0.17	4.3	４		IP	３		IP	２		IP	３		IP	２		IP	３	5	IP	３		G1	２		IP	４		IP	４		IP
+荻野　　裕介	4.00	0.22	4.5	５		G3	３		IP	４		IP	２	6	IP	５	6	IP	３		IP	５		IP	５	6	IP	３		IP	５		IP
+四宮　　与寛	3.80	0.14	4.0	３		IP	６		IP	２		IP	３		IP	４		IP	４		IP	６		IP	３		IP	６	5	IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+島川　　海輝	8.70	0.15	2.5	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP	６		IP	１		IP
+竹間　　隆晟	8.00	0.13	2.7	３		IP	１		IP	１		IP	２		IP	４		G1	３		G1	２		IP	３		IP	１		IP	１		IP
+中野　　希一	7.50	0.12	2.6	２		IP	３		IP	２		IP	４		IP	１		IP	２		IP	３		IP	３		IP	１		IP	２		IP
+長谷川　晴哉	5.60	0.16	3.0	５		IP	１	5	IP	３		IP	４		IP	３		IP	４		IP	３		IP	４		IP	３		IP	２		IP
+宮田　　龍馬	5.50	0.14	2.9	４		IP	２		IP	６		G3	４		G1	３		IP	４		IP	４		G1	５		G1	１		IP	２		IP
+澁川　　　夏	4.30	0.18	4.8	３		IP	４		IP	４		IP	５		IP	３		IP	６		IP	５		IP	４		IP	３		IP	２	5	IP

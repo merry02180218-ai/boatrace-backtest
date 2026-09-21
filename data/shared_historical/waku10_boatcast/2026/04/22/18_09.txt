@@ -1,0 +1,8 @@
+data=
+1	0
+榮田　　将彦	6.10	0.17	4.1	２		IP	２		IP	１		IP	３		IP	３		IP	３		IP	３		IP	６		G3	２		IP	５		G3
+奈須　　啓太	4.80	0.11	1.5	２		IP	３		IP	４		IP	３		IP	５		IP	５		IP	２		IP	５		IP	２		IP	６		G2
+上野　真之介	7.50	0.08	2.3	１		G1	１		G2	２		G1	２		G1	１		G1	２		G1	６		G1	６	4	IP	２		IP	５		SG
+植田　　太一	4.70	0.19	3.7	６		IP	５		IP	６		G3	３		G3	２		IP	２		IP	６		IP	３		IP	３	5	G1	４		G1
+庄島　　潤成	2.20	0.18	3.1	３		IP	６		IP	５		IP	４	6	IP	６		IP	６		IP	６		IP	４		IP	６		IP	６		IP
+岡部　　大輔	3.10	0.21	4.7	３		IP	５		IP	６		IP	４		IP	５		IP	３		IP	６		IP	４		IP	６		IP	４		IP

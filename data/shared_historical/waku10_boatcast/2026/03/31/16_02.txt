@@ -1,0 +1,8 @@
+data=
+1	0
+長尾　　萌加	6.30	0.15	2.7	４		IP	１		IP	４		IP	１		IP	２		IP	３		IP	３		IP	２		IP	６		IP	３		IP
+小林　　基樹	5.20	0.20	4.5	５		IP	４		IP	４		IP	２		IP	５		IP	５		IP	１		IP	３		IP	３		IP	２		IP
+山本　　英志	6.30	0.14	2.7	３		IP	３		IP	２		IP	３		IP	２		IP	２		IP	１		IP	３		IP	６		IP	５		IP
+正木　　聖賢	4.30	0.16	2.7	５		IP	３		IP	３		IP	４		IP	４		IP	５	2	IP	６	5	IP	３		IP	４		IP	２		IP
+永井　　亮次	3.70	0.18	3.2	６		IP	４	4	IP	６		IP	６		IP	６		IP	２	4	IP	１		IP	５		IP	６		IP	３		IP
+中嶋　　世奈	1.56	0.21	5.0	５	5	IP	６		IP	６		IP	６		IP	６		IP	Ｌ		IP	６		IP	６		IP	５		IP	４		IP

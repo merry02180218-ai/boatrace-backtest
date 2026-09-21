@@ -1,0 +1,8 @@
+data=
+1	0
+藤原　　仙二	9.90	0.18	2.7	１		IP	１		IP	１		IP	１		G2	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+丸野　　一樹	6.90	0.15	3.8	３		IP	２		IP	１		IP	６		G1	３		G1	５		SG	１		SG	６		IP	２		IP	２		G1
+君島　　秀三	6.30	0.13	2.1	２		IP	３		G1	１		IP	３		IP	４		IP	１		IP	５		IP	２		IP	５		IP	３		IP
+香川　　颯太	3.30	0.20	3.1	６		IP	６	6	IP	５		IP	３		IP	２		IP	４		IP	２		IP	６		IP	６	6	IP	６		IP
+木下　　雄介	4.89	0.17	3.7	５		IP	１		IP	２		IP	５		IP	転		IP	６		IP	６		IP	２		IP	１		IP	５		IP
+守田　　俊介	3.60	0.13	2.6	４	2	IP	５		G1	６	5	IP	２	5	IP	４		SG	３	3	IP	６		G1	６		G1	６		G1	６		G1

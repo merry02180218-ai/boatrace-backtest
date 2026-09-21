@@ -1,0 +1,8 @@
+data=
+1	0
+國分　将太郎	7.50	0.16	2.9	１		IP	１		IP	３		IP	１		G3	１		IP	１		IP	２		IP	５		IP	２		IP	６		IP
+永井　　聖美	6.80	0.17	3.3	２		IP	２		IP	２		IP	２		IP	２		IP	５		IP	２		IP	２		G3	５		G3	２		G3
+村田　　修次	7.20	0.12	2.7	１		IP	２		IP	４		IP	３		IP	３		IP	１		IP	３		IP	２		IP	２		IP	３	2	IP
+鈴木　　　猛	4.00	0.16	3.1	４		IP	５		IP	１		IP	５		IP	４		IP	５		IP	５		IP	５		IP	４		IP	２		IP
+宮之原　輝紀	5.22	0.12	2.1	２		G1	４		SG	２		SG	６		G1	６		G1	５		G1	６	6	G1	５		G1	１		IP	欠		G2
+松本　　浩貴	3.60	0.17	3.6	４		IP	２	4	IP	６		IP	４	5	IP	５		IP	３		IP	４	5	IP	４		IP	５		IP	６		IP

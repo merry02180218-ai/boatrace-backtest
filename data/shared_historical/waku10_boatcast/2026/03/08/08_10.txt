@@ -1,0 +1,8 @@
+data=
+1	0
+天野　　友和	9.00	0.17	3.3	１		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+佐藤　　大佑	6.90	0.15	3.0	６		IP	２		IP	４		IP	１		IP	２		IP	１		IP	２		IP	２		IP	４		IP	３		IP
+田中　太一郎	4.70	0.18	3.5	４	4	IP	１		IP	３		IP	４		IP	２		IP	６		IP	６		IP	４		IP	６		IP	２		G3
+西村　　豪洋	3.20	0.25	3.6	３		IP	６		IP	６		IP	４	3	IP	６		IP	３		IP	３		IP	６		IP	５		IP	４		IP
+藤堂　　里香	3.40	0.19	3.2	４	4	G1	４		G1	５		IP	５		IP	１		G3	５		G3	５		IP	６		IP	６		IP	４		IP
+東口　　　晃	2.70	0.16	3.9	５		IP	６		IP	４		IP	５		IP	６		IP	４		IP	３		IP	４		IP	６		IP	５		IP

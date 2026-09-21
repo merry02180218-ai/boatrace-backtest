@@ -1,0 +1,8 @@
+data=
+1	0
+川合　　理司	5.30	0.12	2.6	３		IP	１		IP	４		IP	３		IP	２		IP	５		IP	４		IP	４		IP	６		IP	２		IP
+小澤　　　学	3.20	0.24	5.9	３		IP	５		IP	５		IP	６		IP	６		IP	５	3	IP	２		IP	２		IP	６		IP	６		IP
+太田　　和美	6.10	0.10	1.9	４		IP	５		IP	４		IP	２		IP	４	4	G1	６		G1	１		G1	３		G1	１		IP	２		IP
+土屋　　太朗	4.00	0.18	3.7	４		IP	３		IP	４		IP	４		G3	６	6	G3	６		IP	３		IP	４		IP	３		IP	４		IP
+久田　　　武	3.70	0.15	3.4	４		IP	６		IP	４		IP	４		IP	６		IP	１		IP	６	4	IP	３		IP	４		IP	５		IP
+前田　健太郎	3.10	0.18	3.2	６		IP	６		IP	４		IP	６		IP	４	5	IP	２		IP	４		IP	５		IP	４	5	IP	５		IP

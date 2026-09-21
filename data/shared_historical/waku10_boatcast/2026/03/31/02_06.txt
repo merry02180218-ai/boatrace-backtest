@@ -1,0 +1,8 @@
+data=
+1	0
+下河　　雅史	8.60	0.15	3.7	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	３		IP	３		IP	１		IP
+三浦　洋次朗	7.60	0.16	3.0	１		IP	４		IP	２		IP	３		IP	２		IP	４		IP	２		IP	１		IP	１		IP	２		IP
+古賀　　繁輝	5.60	0.12	2.8	１		IP	１		G2	４		G2	６		G1	６		G1	５		IP	５		IP	１		IP	３	4	IP	４	4	G1
+戸田　海咲音	1.80	0.25	4.3	６		IP	Ｆ	6	G3	転		G3	４		IP	４		IP	５		IP	６		IP	４		IP	６		IP	６		IP
+飯島　　　誠	2.90	0.19	4.0	４	6	IP	６		IP	６		IP	５		IP	６		IP	４		IP	５		IP	３		IP	５		IP	３		IP
+石原　　凪紗	3.10	0.23	4.6	３		IP	６		IP	６		IP	４		IP	４		IP	４		IP	４	5	G3	６		IP	５		IP	４		IP

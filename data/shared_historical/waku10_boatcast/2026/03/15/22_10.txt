@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　昂明	9.60	0.14	2.6	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP
+神里　　琴音	5.30	0.17	3.6	２		IP	３		IP	１		IP	５		IP	４		IP	３		IP	６		IP	５		IP	３		IP	２		IP
+楠原　　正剛	5.50	0.17	2.6	３		IP	３		IP	２		IP	２		IP	６	4	G1	６		G1	２		IP	４		IP	６		IP	１		IP
+土屋　　智則	7.00	0.17	4.2	２	3	IP	３		IP	３		IP	２		IP	６		G1	３		G1	３		G1	１		IP	３		IP	２		SG
+渡邉　　優美	5.00	0.14	4.1	６		IP	５		G1	４		G1	１		IP	４	6	G1	６		G1	４		G1	３		IP	６		IP	２	6	G1
+森口　　和紀	3.30	0.22	4.2	２		IP	２		IP	４		IP	５		IP	５		IP	６		IP	４		IP	６		IP	５		IP	６		IP

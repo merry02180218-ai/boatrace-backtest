@@ -1,0 +1,8 @@
+data=
+1	0
+吉島　　祥之	5.80	0.19	3.8	２		IP	５		IP	５		IP	１		IP	４		IP	２		IP	４		IP	３		IP	１		IP	４		IP
+角浜　　　修	4.40	0.16	3.6	２		IP	３		IP	４		IP	５		IP	２		IP	６		IP	４		IP	６		IP	２		IP	５		IP
+松田　　隆司	4.60	0.19	3.6	４		IP	６		IP	５		IP	３		IP	５		IP	６		IP	２		IP	４	4	IP	２		IP	２	4	IP
+石田　　貴洋	5.60	0.15	2.9	３	6	IP	１		IP	３		IP	４		IP	３		IP	１		IP	３		IP	４		IP	５		IP	５		IP
+岡瀬　　正人	4.10	0.19	4.5	４		IP	エ	4	IP	３		IP	４		IP	３		IP	４		IP	６		IP	４		IP	３		IP	３		IP
+中村　　将隆	3.30	0.15	3.8	Ｆ		IP	６		IP	５		IP	４		G3	３		IP	４		IP	６		IP	４		IP	１		IP	６		IP

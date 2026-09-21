@@ -1,0 +1,8 @@
+data=
+1	0
+高野　　心吾	5.50	0.13	2.2	３		IP	６	5	IP	１		IP	６		IP	５		IP	１		IP	４	2	IP	６		IP	１		IP	１		IP
+河野　　主樹	7.20	0.15	2.3	３	3	IP	２		IP	５		IP	３		IP	２		IP	３	4	IP	２		IP	１		IP	２		IP	１		IP
+楠原　　翔太	5.00	0.20	4.3	６		IP	４		IP	３		IP	４		IP	１		IP	１		IP	６		G3	３		G3	４		IP	４		IP
+樫葉　　新心	2.00	0.19	4.2	５		IP	３		G3	６		IP	５		IP	６		G3	５		G3	６		IP	５		IP	６		IP	５		G3
+井手　　良太	5.00	0.10	2.0	３		IP	３		IP	５		IP	３		IP	１		IP	２		IP	６		IP	５		IP	５		IP	３		IP
+中川　　海虹	1.00	0.25	5.4	６		IP	６		IP	６		IP	６		IP	６		IP															IP

@@ -1,0 +1,8 @@
+data=
+1	0
+三品　　隆浩	5.70	0.21	4.2	６		IP	５		IP	４		IP	２		IP	１		IP	１		IP	２		IP	５		IP	１		IP	５		IP
+石原　　凪紗	4.60	0.22	4.5	２		IP	６		IP	５		IP	４		IP	６		IP	４		IP	３		IP	１		IP	２		IP	５		G3
+田中　　和也	6.70	0.19	2.9	１		IP	４		IP	６	2	IP	２	2	IP	３		IP	２	2	IP	１		IP	３		IP	２		IP	３		IP
+藤田　　竜弘	6.00	0.18	3.2	５		IP	２		IP	１		IP	３		IP	５		IP	５		IP	３	3	IP	１	3	IP	３		IP	２		IP
+川田　　正人	5.50	0.15	3.0	５		IP	４	4	IP	６		IP	４		IP	３		IP	２		IP	１		IP	５		IP	２		IP	１		IP
+黒澤　めぐみ	3.20	0.23	4.5	４		G3	６		G3	３		G3	４		IP	４		IP	５		IP	６		IP	４		G3	４		IP	５		IP

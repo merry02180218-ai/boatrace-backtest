@@ -1,0 +1,8 @@
+data=
+1	0
+黒田　　誠司	5.70	0.15	3.3	３		IP	１		IP	３		IP	４		IP	６		IP	３		IP	４		IP	５		IP	２		IP	１		IP
+荒牧　　凪沙	4.80	0.19	3.4	４		IP	３		IP	４		IP	５		IP	４		IP	４		IP	４		IP	５		IP	２		IP	１		G3
+坂本　　一真	3.40	0.20	2.9	６		IP	６		IP	２		IP	２		IP	３		IP	５		IP	５		IP	６		IP	６		IP	４		IP
+川島　　拓郎	5.89	0.10	2.4	２		IP	４		IP	１		IP	２		IP	３		IP	４		IP	転	5	IP	６		IP	３		IP	３		IP
+三品　　隆浩	4.10	0.21	3.7	５		IP	４		IP	４		IP	２		IP	４		IP	４		IP	６		IP	２		IP	４		IP	５	6	IP
+伊藤　　　栞	1.50	0.19	4.2	６		IP	６		IP	５		IP	５		IP	５		IP	６		IP	６		IP	６		G3	５		IP	５		IP

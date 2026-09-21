@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　順一	6.30	0.18	2.8	１		IP	６		IP	４		IP	１		IP	２		IP	４		IP	３		IP	２		IP	４		IP	２		IP
+立間　　充宏	5.44	0.20	4.1	２		IP	３		IP	４		IP	４		IP	２		IP	３		IP	転		IP	６		IP	４		IP	２		IP
+森口　　和紀	4.70	0.18	4.4	３		IP	６		IP	６		IP	３		IP	５		IP	３		IP	６		IP	２		IP	３		IP	１		IP
+福西　広太郎	2.00	0.16	3.2	落	5	IP	５		IP	５		IP	６	6	IP	６		IP	４		IP	６	6	IP	転		IP	２	5	IP	６		IP
+稲生　　夏季	4.70	0.23	4.7	３		IP	６		IP	３		IP	４		IP	１		IP	Ｆ		G3	３		G3	３		G3	４		IP	４		IP
+廣瀬　　篤哉	4.00	0.15	3.7	５		IP	２	5	IP	４		IP	４		IP	３		IP	３		IP	６		IP	４		IP	５		IP	５		IP

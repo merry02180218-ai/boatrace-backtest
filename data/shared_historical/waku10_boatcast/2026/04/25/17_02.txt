@@ -1,0 +1,8 @@
+data=
+1	0
+中辻　　崇人	9.33	0.16	4.9	１		G1	１		IP	１		IP	１		IP	転		IP	１		IP	２		IP	１		IP	５		SG	１		G1
+太田　　和美	6.60	0.15	3.4	３		G1	４		G1	２		G1	５		G1	２		IP	２		IP	１		IP	２		IP	６		IP	３		G1
+伊藤　　将吉	7.10	0.15	3.4	１	4	IP	４		IP	２		IP	１		IP	２		IP	２		IP	４		G1	２		IP	５		IP	２		IP
+君島　　秀三	6.90	0.15	3.0	２		IP	３		IP	３		IP	２	6	IP	３		IP	３		IP	１		IP	４		IP	３		IP	２		G1
+江口　　晃生	7.90	0.12	2.6	３	2	G1	２	2	IP	２	2	IP	１	2	IP	１	2	IP	２	2	IP	１	1	IP	４	2	IP	１	2	IP	４	2	IP
+森高　　一真	4.10	0.16	4.1	５		G1	４		G1	２		G1	５		SG	６		G1	４		G1	５		G1	４		G1	６		G1	５		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+新田　　雄史	9.30	0.12	2.2	２		IP	１		IP	１		IP	２		G1	５		G1	１		G1	１		G1	３		SG	２		G1	１		G1
+前田　　将太	5.60	0.20	4.9	２		IP	６		IP	４		IP	２		IP	４		G2	２		G1	４		G1	６		IP	３		IP	３		G1
+池田　　浩二	8.80	0.10	1.9	１		IP	１		IP	１		G1	６		G1	２		G1	３		SG	３		SG	１		G1	２		G1	２		G1
+定松　　勇樹	6.90	0.11	2.5	２		IP	４		IP	４		IP	１	5	G1	３	5	G1	５		G1	４		G1	１		SG	５		SG	２	3	G2
+佐藤　　　翼	6.50	0.13	3.6	３		IP	３		G1	６		G1	２		SG	２		G1	３		G1	３		G1	５		G1	２		IP	３		IP
+藤原　　碧生	6.20	0.17	3.9	４		IP	４		G1	１		G1	４		G1	３		G1	５		IP	４		IP	４		G1	１		G1	３		IP

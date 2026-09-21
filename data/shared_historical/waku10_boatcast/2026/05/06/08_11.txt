@@ -1,0 +1,8 @@
+data=
+1	0
+磯部　　　誠	9.80	0.09	2.3	１		IP	６		G1	１		G1	１		G1	１		SG	２		SG	２		G1	１		G1	１		G1	１		G1
+安田　　吉宏	4.90	0.18	3.5	３		IP	５		IP	３		IP	４		IP	５		IP	３		IP	６		IP	３		IP	２		IP	２		IP
+仲口　　博崇	5.30	0.19	2.9	５		G1	２		IP	３		G3	３		IP	３		IP	５	2	IP	１		IP	２		IP	６		IP	５		G1
+西尾　　亮輔	4.10	0.16	3.3	６		IP	１		IP	４		IP	２		IP	６		IP	４		IP	３		IP	５		IP	６		IP	４		IP
+後藤　　陽介	3.50	0.20	3.9	５		IP	４		IP	４		IP	５		IP	６	6	IP	５		IP	６		IP	２		IP	１		IP	６		IP
+川上　　聡介	4.80	0.14	3.0	４		IP	３	5	IP	２		IP	４		IP	１	5	IP	６		IP	５		IP	４		IP	６		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+柳生　　泰二	8.90	0.13	2.0	１		IP	６		IP	１		G1	１		G1	１		G1	２		IP	１		IP	３		IP	１		IP	１		IP
+岡村　　将也	6.00	0.13	2.6	６		IP	２		IP	２		IP	６		IP	３		IP	２		IP	１		IP	５		IP	２		IP	２		IP
+森　　　竜也	4.00	0.17	3.3	４		IP	６		IP	６		IP	４		IP	５		IP	２		IP	２		IP	２		IP	５		IP	５	2	IP
+貫地谷　直人	4.60	0.23	4.6	４		IP	２		IP	４		IP	３	3	IP	５		IP	５	5	IP	３		IP	５	6	IP	４		IP	２		IP
+櫻井　　　隼	2.10	0.20	4.1	５	6	IP	転	6	IP	４	6	IP	Ｆ	6	IP	４	6	IP	６	6	IP	６	6	IP	４	6	IP	６	6	IP	４	6	IP
+花田　　和明	3.10	0.19	3.2	５	2	IP	６	3	IP	５	2	IP	６	4	IP	２	4	IP	５	3	IP	５	2	G3	１	2	IP	６	2	IP	５	4	IP

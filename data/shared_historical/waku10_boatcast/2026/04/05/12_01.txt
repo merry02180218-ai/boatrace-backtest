@@ -1,0 +1,8 @@
+data=
+1	0
+和田　　兼輔	10.20	0.12	2.1	１		IP	１		IP	１		IP	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1
+竹間　　隆晟	7.50	0.17	3.5	２		IP	３		IP	１		IP	１		IP	２		IP	４		G1	２		IP	２	3	IP	２		IP	４		IP
+松尾　　　充	7.40	0.13	2.7	１	4	IP	２		IP	３		IP	１		IP	２		IP	５		IP	１		IP	４		G1	４		G1	１		IP
+関　　　浩哉	7.70	0.10	2.6	５		SG	２		SG	３		G1	２		G1	５		G1	２		IP	２		IP	２		SG	２		G1	２		G1
+谷野　　錬志	5.00	0.15	3.2	５	6	G1	６		G1	３		IP	４		G1	１	4	IP	４		IP	４		IP	３		IP	５		IP	２		G3
+渡邉　　和将	5.90	0.21	4.2	６		SG	２	5	IP	３		IP	１	5	IP	５		G1	５		G1	４		IP	３		IP	２	4	IP	３		IP

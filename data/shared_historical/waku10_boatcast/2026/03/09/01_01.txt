@@ -1,0 +1,8 @@
+data=
+1	0
+柳瀬　　幹太	7.00	0.14	3.0	１		IP	１		IP	１		IP	１		IP	６		IP	５		IP	６		G3	１		IP	３		IP	１		IP
+松本　　博昭	6.40	0.21	4.1	２		IP	２		IP	４		IP	３		IP	４		IP	２		IP	１		IP	２		IP	４		IP	４	3	IP
+田中　　　豪	7.40	0.13	1.9	２		IP	２		IP	３		IP	１		IP	３		IP	２		IP	３		IP	２	4	IP	４		IP	１		G3
+藤生　　雄人	5.40	0.21	3.4	３		IP	１		IP	５		IP	３		IP	５		IP	５		IP	３		IP	１		IP	４		IP	４		IP
+三品　　隆浩	4.30	0.23	3.8	４		IP	２		IP	４		IP	４		IP	６		IP	２		IP	４		IP	５	6	IP	４		IP	４		IP
+柳橋　　宏紀	3.90	0.15	2.5	６		IP	２		IP	４		IP	４		IP	４	5	IP	３		IP	３		G3	５		IP	５		IP	５		IP

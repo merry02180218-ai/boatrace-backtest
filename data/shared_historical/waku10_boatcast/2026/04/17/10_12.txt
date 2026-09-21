@@ -1,0 +1,8 @@
+data=
+1	0
+前田　　篤哉	7.90	0.16	3.4	４		IP	３		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		G3	１		IP	３		IP
+富山　　弘幸	5.40	0.16	3.0	２		IP	５		IP	１		IP	６		IP	２		IP	２		IP	３		IP	４		IP	３		IP	６		IP
+樋口　　　亮	7.40	0.16	3.0	４		IP	２		IP	２		IP	２		IP	１		IP	２		IP	３		IP	２		IP	２		IP	４		IP
+若林　　樹蘭	4.80	0.18	3.2	４	5	IP	４		IP	１		IP	３		IP	Ｆ		IP	３		IP	３		IP	５		IP	４		IP	３		IP
+前野　　竜一	4.40	0.15	2.6	４		IP	６		IP	４		IP	３		IP	５		IP	２		IP	１		IP	５		IP	３		IP	６		IP
+平石　　和男	3.60	0.21	5.0	４		IP	２		IP	６	5	IP	４		IP	６		IP	３		IP	６		IP	６		IP	４		IP	４		IP

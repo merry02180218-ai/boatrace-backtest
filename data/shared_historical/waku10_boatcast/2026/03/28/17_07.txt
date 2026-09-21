@@ -1,0 +1,8 @@
+data=
+1	0
+嘉手苅　徹哉	4.30	0.18	3.3	１		IP	４		IP	１		IP	１		IP	５	4	IP	５		IP	６		IP	５		IP	６		IP	６		IP
+田村　　　慶	5.40	0.19	4.2	４		IP	４		IP	５		IP	４		IP	１		IP	２		IP	３		IP	４		IP	４		IP	２		IP
+桑島　　和宏	4.10	0.15	3.6	２		IP	６		IP	５		IP	６		G1	２		G1	６		G1	３		IP	３		IP	４		IP	６		IP
+荒牧　　凪沙	6.10	0.16	3.1	４		IP	４		IP	５		IP	６		IP	２		IP	１		IP	２		IP	４		IP	１		G3	１		G3
+松村　　康太	5.80	0.20	3.7	５		IP	４		IP	１		IP	３		IP	１	4	IP	３		IP	４		IP	３		IP	４		IP	３		IP
+福来　　　剛	5.80	0.13	2.5	３		IP	５		IP	３		G1	２		G1	５		G1	１		IP	３		IP	２		IP	６		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+天野　　晶夫	6.67	0.15	2.8	Ｆ		IP	１		IP	２		IP	Ｆ		IP	２		IP	２		IP	２		G3	２		IP	１		IP	転		IP
+山下　　和彦	6.20	0.16	3.3	１		IP	４		IP	３		IP	１		IP	５		IP	５		IP	２		IP	１		G3	２		IP	５		IP
+黒崎　　竜也	7.00	0.15	2.7	３		G3	２		IP	３		IP	２		IP	４		IP	３		IP	２		IP	３		IP	１		IP	２	4	IP
+泉　　　啓文	3.00	0.18	3.6	２		IP	５		IP	６		IP	５		IP	５		IP	４		IP	５		IP	６	6	IP	５	5	IP	３		IP
+梶原　　　正	4.00	0.15	3.9	４		G3	６		G3	６		IP	２		IP	３		IP	５		IP	６		IP	６		IP	３		IP	１	4	IP
+齊藤　　　仁	4.20	0.24	4.7	５		G1	６		G3	４		G3	３		G3	３		G3	４		G3	６		IP	３		IP	３		IP	４		G1

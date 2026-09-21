@@ -1,0 +1,8 @@
+data=
+1	0
+伏田　　裕隆	7.50	0.16	3.4	１		IP	３		IP	１		IP	３		IP	１	4	G3	３	6	G3	６		IP	１		IP	１		IP	３		IP
+鈴木　　秀茉	4.40	0.13	3.2	５		IP	５		G3	５		G3	１		IP	６		IP	２		IP	３		IP	１		IP	６	3	IP	５		IP
+松尾　　宣邦	4.90	0.19	3.4	５		IP	２		IP	６		IP	５		IP	６		IP	１		IP	６		IP	２		IP	３		IP	１		IP
+馬袋　　義則	5.60	0.09	2.5	２		IP	４		IP	２		IP	５		IP	１		IP	６		IP	１		IP	６		IP	４		IP	２		IP
+岡部　　　哲	2.80	0.17	3.6	５		IP	３		IP	４		IP	５		IP	５		IP	６		IP	６		IP	６		IP	２		IP	６		IP
+田中　　和也	5.10	0.22	3.5	６		IP	２	5	IP	エ		IP	２		IP	５	5	IP	４		IP	４		IP	２		IP	３	4	IP	１	3	IP

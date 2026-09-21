@@ -1,0 +1,8 @@
+data=
+1	0
+三嶌　こころ	5.80	0.16	3.8	４		IP	１		IP	２		G3	４		G3	転		G3	４		IP	３		IP	３		IP	１		IP	３		IP
+廣中　智紗衣	5.78	0.21	4.2	２		G1	５		G3	５		G3	６		IP	２		IP	４	3	IP	１		IP	転		IP	１		IP	３		IP
+福岡　　泉水	4.90	0.21	3.8	６		IP	２		IP	１		IP	５		IP	２		IP	５		IP	３		IP	２		IP	５		IP	Ｆ		IP
+平川　　香織	5.80	0.23	4.2	１		G3	５		IP	２		G3	４		G3	３		G3	４		IP	４		IP	４		IP	２		IP	２		IP
+高憧　　四季	4.10	0.16	4.0	４		G1	５	6	IP	６		IP	４		G1	６	4	G1	３		G3	５		G3	４		IP	４		IP	２		G3
+古園井　綾南	1.00	0.15	3.9	６		G3	６		G3	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+島村　　隆幸	10.00	0.12	2.0	２		IP	１		IP	１		IP	１		G3	１		G3	１		G3	１		G3	１		IP	１		IP	１		IP
+中　　　亮太	7.30	0.11	1.8	１		IP	２	3	IP	３		IP	２		G3	２		G3	５		IP	２		IP	４		IP	２		IP	１		IP
+石渡　翔一郎	4.80	0.17	3.5	２		IP	２		IP	５		IP	６		IP	４	4	IP	６		IP	２		IP	２		IP	５		IP	３		IP
+妹尾　　忠幸	5.30	0.18	3.6	５		IP	４	5	IP	１		IP	２		IP	３	5	IP	５		IP	２		IP	６	1	G1	４		G2	３		IP
+黄金井　力良	4.40	0.15	3.2	５		G3	３		G3	５		G3	２		IP	４		IP	５	6	IP	４		IP	５		IP	３		IP	３		IP
+松田　　淳平	4.30	0.13	2.4	４	4	IP	４		IP	６		IP	５		IP	３		IP	１	5	IP	４		IP	５		IP	３		IP	４	5	IP

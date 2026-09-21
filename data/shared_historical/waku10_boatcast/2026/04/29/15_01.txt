@@ -1,0 +1,8 @@
+data=
+1	0
+中岡　　健人	6.70	0.13	2.6	１		IP	６		IP	３		IP	１		IP	２		IP	２		IP	１		IP	２		IP	欠		IP	３		IP
+大西　　隆洋	5.10	0.20	3.9	３		IP	５		IP	４		IP	２		IP	４		IP	２		IP	２	3	IP	４		IP	６		IP	３		IP
+西原　　明生	2.30	0.23	4.6	６		IP	５		IP	４		IP	６		IP	５		IP	５		IP	５		IP	４		IP	６		IP	４		IP
+松下　　知幸	4.00	0.18	4.1	３		IP	５	5	IP	５		IP	６	5	IP	１		IP	２	5	IP	４		IP	４		IP	６		IP	５		IP
+村越　　　篤	4.10	0.15	3.4	６		IP	３		IP	６		IP	２		IP	５		IP	３		IP	２		IP	４		G3	５		IP	５		G1
+中岡　　　駿	1.30	0.16	3.6	６		IP	６		IP	６		IP	５		IP	落		IP	６		IP	６		IP	５		IP	５		IP	５		IP

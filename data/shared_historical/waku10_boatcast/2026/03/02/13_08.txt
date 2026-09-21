@@ -1,0 +1,8 @@
+data=
+1	0
+岡瀬　　正人	9.40	0.13	3.1	１		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+松下　　直也	5.60	0.20	3.1	５		IP	６		IP	４		IP	６		IP	２		IP	３		IP	２		IP	２		IP	１		IP	２		IP
+土井　　歩夢	5.30	0.16	3.5	２		IP	２		IP	３		IP	３		IP	４		IP	３		IP	５		IP	４		IP	５		G2	３		IP
+土屋　　智則	6.30	0.17	4.1	３		IP	２		IP	６		G1	３		G1	３		G1	１		IP	３		IP	２		SG	５		SG	５		G1
+牧原　　　崇	5.60	0.21	4.1	３		IP	５		IP	３		IP	５		IP	１		IP	４		IP	２		IP	４		IP	２		IP	３		IP
+沢田　　昭宏	3.90	0.19	4.2	５		IP	４		IP	３	5	IP	５		IP	４		IP	５		IP	５		IP	６		IP	２		IP	３	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　良昭	5.70	0.18	3.0	２		IP	５		IP	１		IP	３		IP	２		IP	２		IP	４		IP	２		IP	５		IP	６		IP
+里岡　　右貴	8.60	0.12	1.8	３		IP	１		IP	３		G3	２	3	G3	３		IP	１	3	IP	１	3	IP	１		IP	１	3	G1	２		IP
+西丸　侑太朗	6.20	0.13	3.0	３		IP	４		G1	３		IP	３		IP	４		IP	６		IP	２		IP	２		IP	３		G1	１	4	G1
+堂原　　洋史	4.20	0.15	2.7	３		IP	４		IP	４		IP	５		IP	３		IP	２		IP	３		IP	６		IP	６		IP	４		IP
+出畑　　孝典	2.67	0.12	3.2	５	6	IP	落		IP	５		IP	４		IP	６		IP	４	4	IP	３		IP	欠		IP	６		IP	４		G3
+畔柳　　俊吾	2.10	0.22	4.5	４		IP	４		IP	５		IP	５		IP	６		IP	６		IP	６		IP	転	5	IP	４		IP	５		IP

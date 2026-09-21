@@ -1,0 +1,8 @@
+data=
+1	0
+吉川　　喜継	8.50	0.10	1.3	５		IP	３		IP	１		IP	２		IP	２		IP	１		IP	１		G1	１		IP	１		IP	１		IP
+岩崎　　芳美	5.50	0.16	3.1	４		G3	１		G3	２		G1	２		G1	２		G3	５		G3	５		G3	６		G3	２		IP	５		IP
+高倉　　孝太	6.20	0.15	3.1	４		IP	２		IP	２		IP	１	5	IP	３		IP	１		IP	２		IP	５		IP	５		G3	４		G3
+鈴木　　裕隆	5.30	0.17	3.9	３		IP	３		IP	６	5	IP	１		IP	４		IP	４		IP	４		IP	４		IP	４		IP	１		IP
+山崎　　義明	4.80	0.17	3.7	６		G3	２		IP	３		IP	２		IP	３		IP	４	6	IP	３		IP	５		IP	６		IP	３		IP
+富永　　修一	3.90	0.16	3.0	５		IP	３		IP	５		IP	５		IP	４		IP	３		IP	５		G1	６		G1	１	5	G3	５		G3

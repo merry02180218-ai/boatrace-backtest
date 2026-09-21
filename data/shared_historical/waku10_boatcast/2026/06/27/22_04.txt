@@ -1,0 +1,8 @@
+data=
+1	0
+野末　　智一	8.10	0.17	3.0	２		IP	１		IP	６		IP	１		IP	２		IP	１		IP	２		IP	３		IP	１		IP	１		IP
+國弘　　翔平	4.40	0.16	2.8	３		IP	３		IP	２		IP	４		IP	５		IP	４		IP	妨		IP	３		IP	３		IP	５		IP
+片岡　　秀樹	4.00	0.15	3.6	５		IP	３		IP	３	4	IP	４		IP	２		IP	５		IP	３		IP	６		IP	６		IP	４	4	IP
+北川　　敏弘	2.90	0.18	2.8	４		IP	６		IP	６	5	IP	５		IP	４	5	IP	５		IP	５		IP	２		IP	６		IP	４		IP
+佐藤　　大介	6.00	0.18	3.9	５		IP	２		IP	３		IP	２		IP	４		IP	３		IP	２		IP	３		IP	４		IP	２		IP
+吉川　　颯汰	1.10	0.26	5.3	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP

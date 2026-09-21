@@ -1,0 +1,8 @@
+data=
+1	0
+柴田　　　光	9.22	0.16	2.7	１		G1	３		G1	欠		IP	２		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP
+池田　　浩二	7.10	0.11	3.1	６		G1	４		SG	２		G1	３		G1	２		G1	３		G1	２		G1	３		G1	４		G1	１	3	IP
+笠原　　　亮	7.30	0.18	3.8	５	6	G1	２		SG	１		IP	１		IP	３		IP	２		IP	２		G1	５		G2	２		IP	３		G3
+平田　　忠則	7.40	0.19	4.2	２	5	IP	２		IP	３		G3	１		IP	４		IP	２		G1	４		IP	１		IP	３		IP	２		IP
+山口　　裕二	5.70	0.17	3.6	３		IP	２		IP	５		IP	４		IP	１	4	IP	４		IP	１		IP	３		IP	４		IP	６		IP
+寺田　　千恵	4.20	0.13	3.2	５		G3	４		G3	２	5	G3	４		G3	５		G1	３		G3	４		G3	６		IP	５	5	IP	２	5	IP

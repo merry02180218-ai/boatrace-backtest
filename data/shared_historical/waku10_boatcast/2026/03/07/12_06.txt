@@ -1,0 +1,8 @@
+data=
+1	0
+金児　　隆太	6.70	0.22	4.2	６		IP	４		IP	１		IP	１		IP	１		IP	２		IP	３		IP	１		IP	４		IP	４		IP
+江夏　　　満	7.30	0.19	3.4	３		IP	４		IP	２		IP	２		IP	２		G1	３		IP	２		IP	３		IP	２		IP	１		IP
+竹田　　辰也	7.60	0.16	2.8	１		IP	５		IP	２		IP	３		IP	２		IP	３		IP	２		IP	１		IP	２		IP	１		IP
+金子　　　萌	4.56	0.13	2.4	３		IP	６		IP	１		IP	４		G2	４		IP	６		IP	転		IP	３		IP	３		IP	５		IP
+池田　　剛規	3.20	0.13	2.7	２	3	IP	４		IP	６		IP	４		IP	４		IP	５		IP	５		IP	６		IP	４		IP	５		IP
+飯島　　　誠	3.11	0.21	3.4	１		IP	２		IP	６		IP	５		IP	６		IP	５		IP	５		IP	６		IP	転		IP	６		IP

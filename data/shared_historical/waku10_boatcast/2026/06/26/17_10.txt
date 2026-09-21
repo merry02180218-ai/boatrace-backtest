@@ -1,0 +1,8 @@
+data=
+1	0
+伊久間　陽優	8.60	0.10	1.9	２		IP	１		IP	１		IP	１		IP	１		IP	３		IP	３		IP	２		IP	１		IP	２		IP
+廣瀬　　将亨	5.10	0.13	2.5	３		IP	６		IP	３		IP	６		G2	６		G2	２		IP	２		IP	２		IP	３		IP	４		IP
+篠原　　飛翔	6.40	0.16	3.2	１		IP	２		IP	Ｆ		IP	２		IP	３		IP	２		IP	３		IP	２		IP	４		IP	３		IP
+坂東　　　満	3.70	0.18	3.8	５		IP	６		IP	４		IP	２		IP	６	5	IP	３		IP	６		IP	３		IP	５		IP	３		IP
+松本　　弓雄	3.90	0.15	2.7	２		IP	４		IP	３		IP	６		IP	５	6	IP	３		IP	５		IP	４	4	IP	４		IP	５		IP
+中村　　栄治	3.20	0.24	5.5	４		IP	６		IP	４		G3	６		G3	５		IP	５		IP	３		IP	５	5	IP	４		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+宮脇　　遼太	9.78	0.14	2.8	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	落		IP	１		IP	１		IP
+山口　真喜子	6.20	0.17	2.9	５		IP	２		IP	３		G2	５		G2	６		IP	１		IP	４		IP	２		IP	３		IP	１		G1
+北山　　康介	7.40	0.12	2.4	１		IP	３		IP	４		IP	４		IP	３		IP	２		IP	１		IP	２		IP	２		IP	１		IP
+小山　　　勉	7.00	0.16	4.2	１		IP	３	6	IP	２		IP	２		IP	２		IP	３		IP	３	5	IP	５		IP	３		IP	２		IP
+上野　真之介	7.40	0.13	2.9	３		IP	３		IP	２	4	IP	２		IP	２		G1	２		IP	３		IP	５		G2	１		G1	２		G1
+汐崎　　正則	3.40	0.18	3.0	３		IP	５		IP	６		IP	３	5	IP	４		IP	５		IP	６		IP	５		IP	３		IP	４		IP

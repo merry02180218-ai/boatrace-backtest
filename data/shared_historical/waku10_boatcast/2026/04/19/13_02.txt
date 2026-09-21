@@ -1,0 +1,8 @@
+data=
+1	0
+町田　　洸希	8.10	0.14	1.5	６		IP	１		G3	１		IP	１		IP	３		IP	１		IP	４		IP	１		IP	１		IP	１		IP
+木下　　陽介	4.10	0.14	2.3	５		IP	６	3	IP	３		IP	落		IP	６		IP	２		IP	６		IP	１		IP	３		IP	３		IP
+品川　二千翔	6.50	0.17	3.7	１	5	IP	１		IP	３		IP	１		IP	２	4	IP	６		IP	４		IP	２		IP	３	4	IP	５		IP
+四宮　　与寛	4.50	0.18	3.3	３	5	IP	６		IP	１		IP	６		IP	５		IP	６	5	IP	３		IP	３		IP	２		IP	４		IP
+鈴木　　秀茉	4.40	0.17	3.4	１	4	IP	５		G3	６		G3	２		IP	６		IP	４		IP	４		IP	３		IP	３		IP	５		IP
+廣部　　大明	2.60	0.21	4.0	６		IP	３		IP	４		IP	５		IP	Ｆ		IP	４		IP	５		IP	４		IP	５		IP	６		IP

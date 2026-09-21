@@ -1,0 +1,8 @@
+data=
+1	0
+大谷　　直弘	7.80	0.21	3.5	３		IP	１		IP	１		IP	２		IP	３		IP	３		IP	５		IP	１		IP	１		IP	１		IP
+金田　　　諭	3.70	0.14	3.2	１		IP	５		IP	４		G1	２		IP	４		G3	５		IP	４		IP	６		IP	転		IP	６		G3
+後藤　　正宗	6.00	0.18	4.4	１		IP	４		IP	２		IP	５		IP	４		IP	３		IP	２		IP	４		IP	２		IP	３		IP
+中島　　友和	5.10	0.12	3.1	４		IP	６		IP	５		IP	３		IP	３		IP	３		IP	５		IP	１		IP	３		IP	２		IP
+都築　　正治	3.00	0.16	2.6	６		IP	３		IP	６	6	IP	５		IP	３		IP	３		IP	６		G3	５		G3	６		IP	４		IP
+細川　　明人	3.20	0.24	5.0	６		IP	６		IP	６		IP	４		IP	４		IP	３		IP	６		IP	５		IP	２		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+重冨　　勇哉	7.00	0.17	2.7	１		IP	１		IP	２		IP	１		IP	５		IP	５		IP	３		IP	１		IP	２		IP	４		IP
+柳生　　泰二	6.30	0.15	2.9	６		G1	４		G1	４		G1	１		G1	５		SG	１		IP	２		IP	３		IP	６	3	IP	１		G1
+吉田　　祐貴	3.20	0.14	3.6	４		IP	４		IP	３		IP	５	4	IP	６		IP	４		IP	５		IP	５		IP	６		IP	３	5	IP
+大田　　直弥	4.11	0.22	4.3	６		IP	３		IP	５		IP	３		IP	転		IP	３		IP	５		IP	４		IP	５		IP	２		IP
+武重　　雄介	3.10	0.19	4.7	６		IP	４		IP	５		IP	５		IP	６		IP	４		IP	５		IP	３		IP	２		IP	６		IP
+瀬川　　大地	1.90	0.24	4.5	５		IP	４		IP	６		IP	６		IP	５		IP	６		IP	５		IP	５		IP	５		IP	５		IP

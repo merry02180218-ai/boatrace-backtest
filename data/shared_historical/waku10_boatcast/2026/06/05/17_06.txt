@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　隆太郎	8.20	0.18	3.4	６		SG	３		G2	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP
+上平　　真二	8.40	0.15	2.9	２		IP	２		IP	１		IP	２		IP	５		G1	１		G1	１		IP	２		IP	２		IP	１		IP
+関　　　浩哉	7.00	0.13	3.5	１		SG	６		SG	４		G1	３		G1	１		G1	６	4	G1	２		G1	１		G1	６		SG	３		G1
+小池　　修平	5.80	0.13	2.7	１		IP	２		IP	２		IP	２		IP	４		G1	２		G1	４		SG	転		G1	６		IP	６		G1
+上野　真之介	7.40	0.14	4.0	１		SG	５		SG	３	3	IP	３		IP	３		IP	２	4	IP	２		IP	２		G1	２		IP	３		IP
+岩瀬　　裕亮	6.00	0.12	3.7	１		G2	３		IP	４		IP	１		IP	６		G1	６		G1	４	5	G1	３		G1	３		IP	３		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+上原　　　崚	8.70	0.16	2.5	２		IP	１		IP	１		IP	３		IP	３		IP	１		IP	３		IP	１		IP	１		G2	１		IP
+黒澤　めぐみ	6.00	0.20	3.9	４		IP	１		IP	２		IP	１		G3	３		G3	２		G3	４		IP	４		IP	４	3	IP	５		IP
+西田　　　靖	2.50	0.20	4.6	５	2	IP	６	2	G3	６	2	IP	４	2	IP	３	2	IP	４	2	IP	５	2	IP	５	2	IP	５	2	IP	６	2	IP
+三浦　　裕貴	4.70	0.16	3.0	３	3	IP	２		IP	３		IP	５		IP	５		IP	１		IP	転	5	IP	６		IP	４	5	IP	２	3	IP
+長田　　頼宗	4.70	0.19	3.4	３	4	IP	２		G1	５		IP	５		G1	６		G1	５		G1	５		G1	５		G1	２		G1	３	4	G1
+渡邉　　　健	3.30	0.15	2.6	Ｆ		IP	５		IP	６		G3	６		IP	５		IP	２		IP	５	5	IP	３		IP	６		IP	２		IP

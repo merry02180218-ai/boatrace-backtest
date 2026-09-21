@@ -1,0 +1,8 @@
+data=
+1	0
+多羅尾　達之	6.90	0.18	3.3	１		IP	２		IP	２		IP	５		IP	４		IP	１		IP	２		IP	６		IP	２		IP	１		IP
+草場　　康幸	5.80	0.15	2.5	３		IP	１		IP	５		IP	３		IP	３		IP	４		IP	４		IP	２		IP	２		IP	４		IP
+黒野　　元基	6.40	0.14	2.5	４		IP	１	4	IP	１		IP	５		IP	４		G1	１		IP	２		IP	６		IP	３		IP	３		IP
+吉永　　則雄	6.00	0.15	2.4	３		IP	３		IP	３		IP	５		IP	１		IP	２		IP	４		IP	２		IP	４		IP	３		IP
+鈴木　　智啓	3.20	0.19	4.5	６		IP	３		IP	５		IP	４		IP	６	4	IP	４		IP	４		IP	４		IP	４		IP	５		IP
+前出　　達吉	4.00	0.19	3.5	５		IP	３	5	IP	６	5	IP	５		IP	６		G3	４		G3	２		IP	３	5	IP	５		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+鹿島　　敏弘	7.20	0.16	2.1	５		IP	１		IP	１		IP	２		IP	１		IP	２		IP	２		IP	４		IP	１		IP	５		IP
+岩崎　　麗子	1.90	0.21	3.9	５		G3	６		IP	６		IP	４		IP	４		IP	５		IP	５		IP	６		IP	６		IP	６		IP
+金子　　拓矢	6.90	0.16	3.1	４		IP	２		IP	６		G1	２	4	G1	６		G1	３		IP	１		IP	１		IP	２		IP	１		IP
+塚越　　海斗	7.90	0.11	2.5	２		IP	３		IP	２		IP	２		IP	１		IP	１		IP	４		IP	２		IP	２		IP	２		IP
+外崎　　　悟	5.30	0.13	2.1	４		G3	４		IP	１		IP	６		IP	４		IP	４		IP	２		IP	３		IP	５		IP	２		IP
+栗原　　一馬	3.30	0.19	4.2	５		IP	２	5	IP	５		IP	６		IP	４		IP	２		IP	５		IP	６		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+天野　　　誠	6.50	0.17	4.0	１		IP	２		IP	２		IP	Ｆ		IP	１		IP	１		G3	３		G3	３		IP	３		IP	６		IP
+松井　　友汰	5.80	0.18	3.3	１		IP	１		IP	５		IP	５		IP	５		IP	５		IP	２		IP	２		IP	３		IP	２	3	IP
+石岡　　将太	4.80	0.18	3.8	４		IP	４		IP	４		IP	４		IP	１		IP	５		IP	２		IP	４		IP	４		IP	５		IP
+東　　　潤樹	3.90	0.17	4.2	３		IP	２		IP	６		IP	４		IP	５	5	IP	５		IP	２		IP	４		IP	５		IP	５	3	IP
+藤森　　陸斗	6.00	0.14	3.1	２		IP	２		IP	１		IP	４	6	IP	４		IP	転		IP	３		IP	５		IP	４		IP	２		IP
+後藤　　陽介	1.90	0.17	3.3	６		IP	４		IP	５		IP	６		IP	５		IP	５		IP	５		IP	５	5	IP	６		IP	５		IP

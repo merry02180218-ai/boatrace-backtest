@@ -1,0 +1,8 @@
+data=
+1	0
+山本　景士郎	7.10	0.17	4.0	４		IP	２		IP	２		IP	３		IP	６		IP	１		IP	１		IP	２		IP	３		IP	１		IP
+西村　美智子	5.30	0.18	3.3	４		IP	２		IP	３		IP	６		IP	２		IP	２	3	IP	４		IP	４		IP	２		IP	５		IP
+石田　　章央	6.40	0.13	3.1	１		IP	５		IP	１		IP	３		IP	１		IP	３		IP	５		IP	３		IP	２		IP	４		IP
+太田　　和美	5.30	0.15	4.0	３		IP	５		IP	６		IP	２	2	IP	４		IP	４		G1	２		G1	６		G1	１		IP	４		IP
+川合　　理司	2.90	0.20	3.6	６		IP	６		IP	４		IP	４		IP	４		IP	５		IP	５	6	IP	４		IP	６		IP	３		IP
+藤田　　浩人	3.90	0.20	4.4	３		IP	４		IP	５		IP	６		IP	３		IP	６		IP	３		IP	３		IP	４		G2	５		IP

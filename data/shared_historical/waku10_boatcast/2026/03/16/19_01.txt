@@ -1,0 +1,8 @@
+data=
+1	0
+奥平　　拓也	7.00	0.19	3.7	４		IP	３		IP	３		IP	３		IP	２		IP	１		G3	４		G3	１		IP	２		IP	２		IP
+松田　　憲幸	4.11	0.22	4.8	５		IP	１		IP	転		IP	６		IP	６		IP	１		IP	６		IP	５		IP	３		IP	４		IP
+大町　　利克	6.40	0.18	3.7	５		IP	３		IP	４		IP	４		IP	１		IP	２		IP	２		IP	４		IP	２		IP	１		IP
+寺嶋　　　雄	5.50	0.17	2.4	６		IP	６		IP	２		IP	４		IP	１		IP	４		IP	６		IP	１		IP	３		IP	１		IP
+浜崎　　準也	3.70	0.20	4.3	５		IP	５		IP	２		IP	５		IP	５	4	IP	６		IP	２		IP	５		IP	４		IP	３		IP
+江本　　真治	4.00	0.16	3.5	３		IP	２		IP	６		IP	４		IP	３		IP	６		IP	２	5	G1	５		IP	５		IP	６		IP

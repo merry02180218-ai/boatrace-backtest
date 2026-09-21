@@ -1,0 +1,8 @@
+data=
+1	0
+長田　　頼宗	9.20	0.11	2.6	１		G2	１		G2	２		G2	４		IP	１		IP	４		G1	１		G1	１		G1	１		IP	１		IP
+塩田　　北斗	6.10	0.12	2.8	２		IP	１		IP	４		G1	４		G1	１		G1	転		G1	３		G1	４		G1	５		G1	３	3	G1
+平田　　忠則	6.40	0.19	3.9	２		IP	５		IP	１		IP	３		IP	２		G1	４		G1	３	4	IP	２		IP	３		G3	４		IP
+福田　　宗平	4.80	0.12	2.4	４	5	IP	３		IP	２		IP	５		IP	６		IP	６		IP	３		IP	１		IP	５		IP	２		IP
+山本　　修一	3.80	0.22	4.1	６		IP	５		IP	６		G3	３		IP	４		IP	４		IP	４		IP	５	6	IP	２		IP	４		IP
+若林　　義人	4.20	0.14	3.2	６		IP	６		IP	３		IP	４	5	IP	５		IP	３		IP	３		G1	６	2	IP	２	3	IP	３		IP

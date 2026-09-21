@@ -1,0 +1,8 @@
+data=
+1	0
+船岡　洋一郎	10.00	0.14	2.4	１		IP	１		IP	１		IP	１		IP	Ｌ		IP	１		IP	１		G1	１		G1	１		G2	３		G2
+海野　康志郎	7.40	0.17	3.4	４		G1	２		G1	５		G1	１	1	IP	１	1	IP	１		IP	５		IP	２		G1	１		IP	３		IP
+有賀　　達也	6.10	0.14	1.9	２		IP	６		IP	３		G1	５		G1	２		IP	２		IP	２		IP	２		IP	４		IP	３		IP
+茅原　　悠紀	7.40	0.12	2.1	２		SG	３		SG	４		G1	１		G1	４		G1	３		G1	２	5	IP	４		G1	３		SG	３		G1
+豊田　健士郎	5.20	0.12	3.4	３	4	G2	６		G1	２		IP	３		IP	３		G1	５		IP	３		G2	３		IP	５		SG	５		G1
+新開　　　航	5.30	0.17	4.5	２		G2	１		IP	３		G1	５		G1	３		G1	４		IP	６		G1	６		G1	５		G1	３		IP

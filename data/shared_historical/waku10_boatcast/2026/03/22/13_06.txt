@@ -1,0 +1,8 @@
+data=
+1	0
+浜野　　孝志	8.60	0.16	3.6	１		IP	３		IP	１		IP	１		IP	３		IP	１		IP	２		IP	１		IP	３		IP	１		IP
+伊久間　陽優	5.60	0.14	3.2	２		IP	６		IP	１	4	IP	２		IP	５	4	IP	２		IP	５		IP	５		IP	３		IP	２		IP
+尾道　　佳諭	4.40	0.18	2.7	４		IP	４		IP	１		IP	４		IP	５		IP	４		IP	６		IP	６		IP	２		IP	３		IP
+小坂　　尚哉	6.20	0.15	2.9	６		G3	２		G3	２		IP	２	5	IP	６		G1	２		IP	２		IP	３		IP	５		IP	１		IP
+市川　　健太	2.40	0.20	3.3	６		IP	５		IP	６		IP	３		IP	落		IP	６		G3	４	6	IP	４		IP	６		IP	４		IP
+野見山　拓己	4.10	0.13	2.7	２	5	IP	６		IP	１		IP	６		IP	３		IP	４		IP	５		IP	４		IP	６		IP	４		IP

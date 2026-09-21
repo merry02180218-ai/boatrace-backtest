@@ -1,0 +1,8 @@
+data=
+1	0
+三浦　洋次朗	7.20	0.18	3.2	１		IP	１		IP	３		IP	３		IP	３		IP	１		IP	５		IP	１		IP	５		IP	１		IP
+富田　　恕生	5.80	0.20	4.0	３		IP	３		IP	２		IP	４		G3	３		G3	５		IP	３		IP	４		IP	２		IP	２		IP
+蒲原　　健太	6.30	0.18	3.8	３		IP	３		IP	１	4	IP	１		G2	２		G2	１		IP	６		IP	４		IP	４		IP	５		IP
+佐竹　　友樹	4.70	0.12	2.6	５		IP	１		IP	３		IP	３		IP	５		IP	４		IP	４		IP	６		IP	１		IP	５		IP
+村岡　　　賢	4.20	0.17	3.1	４		IP	５		IP	４		IP	６		IP	２		IP	３		IP	６		IP	５		IP	３		IP	２		IP
+藤井　　　徹	2.60	0.22	5.3	６	2	IP	５	5	IP	４		IP	６		IP	５		IP	５		IP	４	5	IP	４	5	IP	５	3	IP	４	3	IP

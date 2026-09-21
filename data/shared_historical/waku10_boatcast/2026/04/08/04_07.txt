@@ -1,0 +1,8 @@
+data=
+1	0
+小川　日紀太	5.60	0.17	2.9	３		IP	１		IP	５		IP	６		G3	４		IP	４		IP	６		IP	２		IP	１		IP	１		IP
+上條　　嘉嗣	6.80	0.19	3.7	１	1	IP	３	3	IP	１		IP	２		IP	２		IP	５		IP	１		IP	４		IP	２		IP	５		IP
+浅見　　宗孝	4.70	0.21	4.0	５		IP	６		IP	１		IP	３		IP	３		IP	４		IP	６		IP	６	4	IP	２		IP	２		IP
+川上　　清人	4.60	0.18	3.9	３	5	IP	４		IP	６		IP	２		IP	２		IP	３		IP	５		IP	３	5	IP	６		IP	４		IP
+畔柳　　俊吾	4.40	0.22	4.5	６		IP	４		IP	１		IP	２		IP	５	4	IP	３		IP	６		IP	３		IP	５		IP	４		IP
+井澤　　聖奈	2.30	0.20	4.5	６		IP	６		IP	４		IP	６		IP	４		IP	６		IP	転		IP	３		IP	４		IP	６		IP

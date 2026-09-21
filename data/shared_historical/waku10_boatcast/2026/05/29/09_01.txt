@@ -1,0 +1,8 @@
+data=
+1	0
+荒川　　健太	9.90	0.12	2.3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+汐崎　　正則	5.30	0.16	4.0	５		IP	３		IP	２		IP	１		IP	４		IP	６		IP	３		IP	３		IP	４		IP	３		IP
+豊田　　訓靖	4.00	0.21	4.3	５		IP	３		IP	３		IP	４		IP	３		IP	５		IP	５		IP	２		IP	５		IP	５		IP
+角浜　　　修	3.60	0.21	4.4	６		IP	５		IP	４		IP	５		IP	４		IP	５		IP	４		IP	２		IP	２		IP	６		IP
+胡本　　悟志	4.90	0.19	2.8	５		IP	５		IP	１		IP	６		IP	１		IP	３	6	IP	５		IP	２		IP	３		IP	５		IP
+小黒　　竜吾	2.40	0.19	4.3	６		IP	５		IP	５		IP	６		IP	４		IP	２		IP	６		IP	６		IP	５		IP	５		IP

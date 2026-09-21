@@ -1,0 +1,8 @@
+data=
+1	0
+中野　　夢斗	7.70	0.14	2.8	２		IP	２		IP	１		IP	６		IP	１		IP	１		G3	３		G3	１		IP	１		IP	４		IP
+齊藤　　　廉	5.60	0.19	3.2	５		IP	１		IP	５		IP	２		IP	２		IP	４		IP	２		IP	２		IP	４		IP	５		IP
+鈴木　　秀茉	6.20	0.12	2.2	４		IP	２		G3	２		IP	２		IP	４		IP	１		IP	３		IP	１		IP	５		IP	５		IP
+谷口　　健一	2.10	0.18	3.5	５		IP	４	5	IP	４		IP	５		IP	６		IP	５		IP	６	6	IP	５		IP	６		IP	５		IP
+日高　龍之介	1.30	0.19	3.8	６		IP	６		IP	５	6	IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP
+吉岡　　　誠	2.40	0.21	4.6	６		IP	６		IP	５	5	IP	４		IP	６		IP	５		IP	４		IP	４		IP	４		IP	６		IP

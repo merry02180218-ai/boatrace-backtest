@@ -1,0 +1,8 @@
+data=
+1	0
+富永　　大一	7.40	0.17	2.5	１		IP	２		IP	１		IP	２		IP	３		IP	３		IP	４	2	IP	３		IP	２		IP	２		IP
+熊本　　英一	3.40	0.23	5.3	５		IP	２		IP	６		IP	６		IP	３		IP	６		IP	４		IP	４		IP	３		IP	６		IP
+為本　　智也	6.30	0.20	4.1	５		IP	６		IP	２		IP	３		IP	１		IP	６		IP	３		G3	２		G3	１		G3	１		IP
+佐々木　翔斗	4.70	0.23	3.0	６		IP	６		G2	５		G2	５		IP	１		IP	３		IP	３		IP	２		IP	６		IP	２		IP
+丹下　　　将	5.50	0.14	2.4	１		IP	３		IP	３		IP	２		IP	６		IP	１		IP	４		IP	４		IP	４		IP	５		IP
+向井田　直弥	4.33	0.13	3.0	６		IP	４		IP	転		IP	５		IP	４		IP	５		IP	１		IP	１		IP	転		IP	３		IP

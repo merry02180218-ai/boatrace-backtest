@@ -1,0 +1,8 @@
+data=
+1	0
+藤丸　　光一	5.50	0.20	4.4	３		IP	４		IP	２		IP	６		IP	４		IP	４		G3	４		IP	３		IP	１		IP	２		IP
+野末　　智一	5.70	0.18	3.4	６		IP	５		IP	５		IP	２		IP	４		IP	２		IP	１		IP	４	3	IP	２		IP	１	1	IP
+山崎　　裕司	5.60	0.18	3.8	３		IP	３		IP	２		IP	２		IP	３		IP	６		IP	４		IP	２		IP	２	4	IP	６		IP
+西村　　豪洋	3.70	0.20	3.5	１		IP	４		IP	５		IP	５		IP	３		IP	６		IP	６		IP	４	3	IP	６		IP	３		IP
+村松　　遥輝	3.10	0.15	2.6	５		IP	４	6	IP	Ｆ		IP	５		IP	４		IP	５		IP	５		IP	１		IP	４		IP	６		IP
+谷　　　勝幸	3.40	0.18	3.9	４		IP	４		IP	５	5	IP	６		IP	５	5	IP	５		G3	２	5	IP	６		IP	５		G3	２	5	IP

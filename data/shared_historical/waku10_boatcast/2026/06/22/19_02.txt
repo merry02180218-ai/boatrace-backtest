@@ -1,0 +1,8 @@
+data=
+1	0
+田添　　康介	4.00	0.20	4.6	６		IP	３		IP	６		IP	５		IP	２		IP	３		IP	Ｌ		IP	３		IP	欠		IP	１		IP
+柴田　　大輔	6.30	0.17	4.0	４		IP	４		IP	６		IP	２		IP	２		IP	１		IP	３		G3	４		IP	１		IP	２		IP
+天野　　　誠	3.90	0.20	4.2	６		IP	４		IP	４		IP	３		IP	５		IP	５		IP	３		IP	５		IP	２		IP	４		IP
+西尾　　亮輔	4.60	0.15	3.0	５		IP	３	3	IP	５		IP	３		IP	３		IP	６		IP	１		IP	４		IP	２		IP	６		IP
+前出　　達吉	4.20	0.17	3.0	３	6	IP	５		IP	５		IP	４		IP	５		G3	３		IP	４		IP	５		IP	３		IP	３		IP
+平尾　　崇典	4.40	0.14	4.1	４		IP	５		IP	１		IP	５		G2	５		G2	２		IP	６		G1	３	2	IP	５		G1	５		G1

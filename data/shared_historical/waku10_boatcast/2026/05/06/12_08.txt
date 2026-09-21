@@ -1,0 +1,8 @@
+data=
+1	0
+渋谷　　明憲	8.90	0.14	3.0	１		IP	１		IP	１		IP	２		IP	１		IP	１		G3	１		IP	２		IP	１		IP	５		IP
+石野　　貴之	7.00	0.13	2.7	６		IP	４		G1	１	1	G1	３		G1	３		G1	２		G1	４		G1	１		IP	３		G1	２		IP
+新井　　英孝	4.50	0.16	3.6	５		IP	２		IP	４		IP	５		IP	３		IP	５		IP	３		IP	１		IP	６	4	IP	４		IP
+権藤　　俊光	5.22	0.14	2.8	５		IP	４		IP	３		IP	３	3	IP	５	5	G1	２	3	SG	５	5	SG	転		G1	５		G1	２		G1
+石本　　裕武	6.60	0.14	2.2	転		IP	１		G1	１		IP	６		G1	３		G1	１		IP	１		IP	６		G1	５	6	G1	１		G1
+岩川　　仁士	3.60	0.22	3.9	６		IP	３		IP	６		IP	６		IP	２		IP	５		IP	６		IP	４	5	IP	４		IP	３	5	IP

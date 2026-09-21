@@ -1,0 +1,8 @@
+data=
+1	0
+山口　　　剛	10.60	0.14	3.2	１		IP	１		IP	２		SG	１		SG	１		G1	１		G1	１		G1	１		G1	２		G1	１		G1
+下寺　　秀和	8.50	0.16	2.3	１		IP	２		IP	１		IP	１		IP	１		IP	２		IP	６		IP	１		IP	２		IP	１		IP
+津田　　陸翔	7.20	0.16	3.0	２		IP	３		IP	２		IP	４		IP	１		IP	５		G2	１		IP	３		IP	１		IP	３		IP
+亀本　　勇樹	4.20	0.19	3.9	１		IP	４	2	IP	５		IP	３		IP	６		IP	２		IP	５	5	IP	５	5	IP	６		IP	３		IP
+新田　　泰章	4.30	0.13	3.7	４	4	IP	３		IP	３		IP	３		G1	６		G1	５		IP	５		IP	４	4	IP	４		IP	３		IP
+永田　　義紘	3.30	0.19	4.2	２	5	IP	５		IP	５		IP	６	5	IP	６		IP	５	5	IP	６		IP	４		IP	４		IP	２		IP

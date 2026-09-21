@@ -1,0 +1,8 @@
+data=
+1	0
+奥村　明日香	6.90	0.20	3.6	５		IP	１		IP	１		G3	１		IP	２		G3	５		G3	１		IP	２		IP	２		G3	６		IP
+三好　　勇人	5.30	0.17	2.8	４		IP	２		IP	５		IP	６		IP	２		IP	５		IP	２		IP	２		IP	４		IP	２		IP
+田添　　康介	3.22	0.11	3.3	５		IP	４		IP	欠		IP	５		IP	５		IP	３		IP	５		IP	４		IP	６		IP	３		IP
+野末　　智一	5.90	0.17	4.3	３		IP	２		IP	２		IP	３		IP	４		IP	６		IP	３		IP	４		IP	１	1	IP	３		IP
+森林　　　太	4.30	0.22	4.9	５		IP	３		IP	２		IP	４		IP	４		IP	５		IP	３		IP	５		IP	２		IP	６		IP
+樋江井　　舞	1.70	0.15	2.6	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	５		IP	４		IP	５		IP	６		IP

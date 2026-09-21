@@ -1,0 +1,8 @@
+data=
+1	0
+前野　　竜一	8.80	0.16	2.6	４		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	３		IP
+松本　　　怜	6.20	0.18	3.5	３		IP	４		IP	２		IP	２		IP	１		IP	３		IP	５		IP	４		IP	３		IP	２		IP
+犬童　　千秋	4.90	0.13	2.6	２		IP	６	5	IP	２		IP	４		IP	５		IP	４	4	G3	２		G3	５		IP	１		G3	５		G3
+原村　　拓也	5.20	0.16	3.5	６		IP	１		IP	４		IP	５		IP	３		IP	３		IP	４		IP	１		IP	２		IP	６		IP
+垂水　　　悠	4.60	0.09	2.0	６		IP	３		G3	１		IP	６		IP	４		IP	５		G1	５		G1	１		IP	３		IP	５		IP
+西岡　　蒼志	2.70	0.19	3.4	５		IP	５		IP	４		IP	６		IP	３		IP	５		IP	３		IP	６		IP	６		IP	５	5	IP

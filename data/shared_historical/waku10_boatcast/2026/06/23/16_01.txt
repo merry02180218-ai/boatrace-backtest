@@ -1,0 +1,8 @@
+data=
+1	0
+平野　　和明	8.80	0.14	2.4	１		IP	２		IP	１		G3	３		G3	１		IP	１		IP	３		IP	２		IP	１		IP	１		IP
+山下　　流心	5.30	0.18	4.0	３		IP	４		IP	４		IP	３		IP	４		G3	６		G3	２		IP	１		IP	５		IP	２		IP
+寺島　　美里	5.10	0.11	2.4	５	4	IP	５		IP	５		IP	２		IP	３		G1	３		IP	４		IP	２		G3	２		G3	４		IP
+星野　　太郎	5.10	0.17	3.1	５	3	IP	４		IP	１		IP	３		IP	４	3	IP	４		IP	２		IP	６		IP	５		IP	１		IP
+野村　　羽玖	2.50	0.18	4.8	５	6	IP	６	6	IP	３	6	IP	６	6	IP																		IP
+梅原　　祥平	3.60	0.10	2.3	５		IP	４	5	IP	５		IP	４		IP	３		IP	４		IP	５		IP	３		IP	４		IP	５		IP

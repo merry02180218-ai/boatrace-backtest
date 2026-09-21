@@ -1,0 +1,8 @@
+data=
+1	0
+大廣　　咲季	5.70	0.15	3.6	６		IP	１		IP	２		IP	５		IP	２		G3	５		G3	１		IP	４		IP	５	2	IP	１		G3
+岩崎　　麗子	2.20	0.21	4.0	４		IP	６		IP	５		G3	６		IP	６		IP	４		IP	４		IP	５		IP	５		IP	６		IP
+門田　　　栞	6.40	0.18	4.1	４		IP	２		IP	３		IP	１		IP	２		G2	４	2	G2	２		IP	２		IP	５		G3	４		G3
+松本　　　怜	5.60	0.17	4.2	３		IP	４		IP	５		IP	４	5	IP	３		IP	２		IP	３		IP	３		IP	１		IP	５		IP
+角　　ひとみ	4.78	0.21	4.5	５		IP	４		IP	５		IP	４		G3	転		G3	２		G3	２		G3	３		G3	５		G3	３		G3
+鎌倉　　　涼	4.30	0.16	4.5	６		G1	４		G1	６		SG	２		IP	２		G2	６		G1	６		SG	６		SG	５		G3	４	5	G3

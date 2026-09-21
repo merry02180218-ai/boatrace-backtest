@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　龍治	8.20	0.17	2.5	１		IP	１		IP	２		IP	１		IP	１		IP	４		IP	１		IP	２		IP	４		IP	２		IP
+安河内　　将	6.30	0.13	2.3	１		IP	６		G1	２		IP	２		IP	妨		G1	５		G1	４		IP	２		IP	１		IP	１		IP
+津留　浩一郎	5.00	0.16	3.4	６		IP	４		IP	４		IP	１	4	IP	５		IP	６		IP	１		IP	４		IP	２		IP	３		IP
+古賀　　繁輝	5.70	0.09	2.9	３		IP	５		IP	１		IP	３		IP	１		G2	６	6	G1	６		G1	３		IP	３		IP	３		IP
+桑原　　　啓	3.10	0.18	3.1	５		IP	６		IP	３		IP	６		IP	６		IP	３		IP	６		G3	５		IP	６		IP	１		IP
+藤田　　浩人	3.90	0.20	4.4	５		IP	６		IP	３		IP	６		IP	３		IP	３		IP	４		G2	５		IP	４		IP	３		IP

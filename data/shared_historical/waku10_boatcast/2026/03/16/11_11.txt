@@ -1,0 +1,8 @@
+data=
+1	0
+赤羽　　克也	7.60	0.17	3.7	２		IP	１		IP	１		IP	６	2	IP	６		IP	２		IP	１		IP	１		IP	２		IP	１		IP
+福来　　　剛	7.10	0.13	2.8	４		IP	２		IP	３		G1	１		G1	２		G1	３		IP	１		IP	転		IP	３		IP	１	1	IP
+岡瀬　　正人	5.60	0.15	3.5	２		IP	３		IP	２	4	IP	４	4	IP	３	4	IP	３		IP	４		IP	５		IP	４		IP	２		IP
+島崎　丈一朗	3.40	0.21	3.7	３		IP	６		IP	６		IP	５		IP	３		IP	５		IP	１		IP	４		IP	６		IP	６		IP
+金田　　　諭	4.60	0.18	2.6	１	4	IP	４		IP	５		IP	５		G1	２		IP	６		IP	転		G3	５		IP	２	4	IP	２		IP
+富永　　大一	3.60	0.20	3.5	６		IP	２		IP	４		IP	５		IP	２		IP	転		IP	４		IP	３		IP	５		IP	６		IP

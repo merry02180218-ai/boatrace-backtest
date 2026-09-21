@@ -1,0 +1,8 @@
+data=
+1	0
+青木　幸太郎	9.80	0.14	2.6	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+船岡　洋一郎	6.60	0.14	3.3	５		G3	１	1	G1	５		G2	２		G2	４		IP	２	3	IP	１		IP	２		IP	４		G1	３		IP
+岸本　　　隆	4.20	0.12	2.2	５		IP	１	4	IP	５		G3	３		IP	３		IP	３		IP	５		IP	３		IP	６		G3	６		IP
+池田　　雄祐	5.90	0.15	2.5	３		IP	４		IP	６		IP	２		IP	４		IP	２		IP	４	3	IP	２		IP	４		IP	１	5	IP
+山本　　光雄	5.00	0.17	3.4	６		IP	４		IP	６		G3	３	4	IP	３	4	IP	５	4	IP	１		IP	２		IP	３		IP	３		IP
+岩川　　仁士	3.30	0.24	4.8	６		IP	４		IP	５		G3	４		IP	４		IP	３		IP	４		IP	６		IP	３		IP	６		IP

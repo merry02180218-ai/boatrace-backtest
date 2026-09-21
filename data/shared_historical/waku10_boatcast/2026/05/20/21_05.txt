@@ -1,0 +1,8 @@
+data=
+1	0
+西山　　貴浩	10.50	0.11	2.2	１		G1	２		IP	１		IP	１		IP	２		G1	１		G1	１		G1	１		SG	１		SG	１		G1
+入海　　　馨	4.70	0.14	3.2	４		G1	２		IP	２		IP	６		G1	６		G1	２		G1	５		G1	４		G1	５		G1	６		G1
+中嶋　健一郎	5.30	0.12	2.4	５		G1	４		IP	１		IP	６		G1	３		G1	４		IP	３	4	IP	２		IP	６		IP	２		IP
+新田　　雄史	7.10	0.12	2.9	５		G1	１		IP	１		IP	４	3	G1	３		G1	３	3	SG	５	3	SG	３		G1	２		G1	３		G1
+篠崎　　仁志	5.40	0.15	2.1	４		G1	２		IP	２		IP	４		IP	５		IP	４		G1	４		G1	４	6	G1	１	4	IP	６		G1
+松田　大志郎	6.70	0.14	3.5	３		G1	２	5	IP	３		IP	３		IP	４		G1	４		G1	２	4	IP	３		IP	２		IP	２	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+宮之原　輝紀	11.00	0.12	2.3	１		SG	１		SG	１		G1	１		G1	１		G1	１		G1	１		G1	１		IP	１		G2	１		IP
+秋元　　　哲	7.80	0.12	2.5	２		IP	４		IP	２		IP	３		G1	４		G1	１		IP	２		G1	１		IP	２		IP	２		IP
+尾嶋　　一広	5.30	0.16	4.3	２		G3	４		IP	５		IP	５		IP	２		IP	２		G1	５		G1	３		G1	４		IP	３		IP
+瓜生　　正義	6.80	0.17	3.8	３		IP	４		G1	２	3	IP	６		G1	３		G1	１	3	G1	３		IP	４		SG	３		SG	２		G1
+中山　　翔太	6.00	0.15	2.8	転		IP	５	3	IP	４		G1	５		G1	３		IP	１	4	IP	３		IP	２		IP	２		IP	不		IP
+入海　　　馨	5.90	0.19	4.4	１		IP	３		IP	４		IP	３		IP	３		IP	３		G1	４		G1	３		G1	５		G1	４		G1

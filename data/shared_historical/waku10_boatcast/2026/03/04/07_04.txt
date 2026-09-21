@@ -1,0 +1,8 @@
+data=
+1	0
+藤丸　　光一	5.30	0.18	4.1	４		IP	２		IP	６		IP	４		IP	４		G3	４		IP	３		IP	１		IP	２		IP	４		IP
+中澤　　宏奈	5.10	0.14	2.8	２		IP	６		G3	４		IP	６		IP	２		IP	２		IP	１		IP	５		IP	６		IP	２		IP
+大須賀　　友	6.40	0.15	3.1	１		IP	２		IP	３		IP	３		IP	５		IP	１		IP	３		IP	３		IP	２		IP	６		IP
+長畑　　友輔	4.30	0.17	3.7	６		IP	１	5	IP	３		IP	２		IP	３		IP	５	6	IP	６		IP	６		IP	５		IP	３		IP
+杉山　　正樹	5.40	0.18	4.1	６		G1	２		G1	６		G1	１		IP	２		IP	５		IP	２		IP	３		IP	３		IP	６		IP
+熊本　　英一	2.20	0.25	5.5	４		IP	４		IP	５		IP	６		IP	６		IP	５		IP	３		IP	６		IP	転		IP	６		IP

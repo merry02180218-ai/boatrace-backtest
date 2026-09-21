@@ -1,0 +1,8 @@
+data=
+1	0
+権藤　　俊光	9.20	0.13	2.7	１		IP	１		IP	２		IP	１		IP	１		G1	１		G1	４	2	SG	２		G1	４		G1	１		G1
+野末　　智一	5.70	0.16	3.4	３		IP	２		IP	２		IP	６		IP	５		IP	５		IP	２		IP	４		IP	２		IP	１		IP
+籾山　　佳岳	6.00	0.15	2.1	５		IP	１		IP	５		IP	４		IP	３		IP	１		IP	２		IP	１		IP	４		IP	４		IP
+高田　　　綾	3.90	0.25	4.2	２		IP	３		IP	４		IP	６		IP	６		G3	６		IP	１		IP	６		IP	６		IP	３		IP
+大瀧　明日香	5.10	0.18	3.1	４		IP	１		IP	３		G3	３		G3	５		IP	６		IP	５		G1	５		G1	２		IP	２		IP
+小林　　　泰	2.50	0.14	2.5	６		IP	５		IP	６		IP	３		IP	６		IP	４		IP	６		IP	３		IP	６		IP	５		IP

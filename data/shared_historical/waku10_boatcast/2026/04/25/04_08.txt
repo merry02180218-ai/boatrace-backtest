@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　　萌	8.00	0.14	2.2	２		IP	１		IP	１		IP	１		IP	１		IP	３		IP	転		IP	１		IP	１		IP	３		IP
+仁科　さやか	3.10	0.14	3.8	４	3	IP	５		IP	４		IP	４		IP	３		IP	４		IP	Ｆ		IP	５		IP	４		IP	６		IP
+杉山　　太陽	4.50	0.15	3.0	３		IP	３		IP	２		IP	３		IP	３		IP	５		IP	５		IP	４		IP	４		IP	６	4	IP
+平本　　真之	7.90	0.12	2.7	２		G1	３	5	G1	３		G1	２		SG	２	5	IP	１		IP	３		G1	３		G1	３		G1	３	2	IP
+渡邉　　英児	6.40	0.15	2.4	２		IP	２		IP	５	6	IP	２	4	IP	２		IP	２	4	IP	４	3	IP	４		IP	２		IP	３		IP
+小川　　広大	2.00	0.21	5.3	５		IP	６		IP	５	5	IP	５		IP	４		IP	５		IP	６		IP	５		IP	５		IP	５		IP

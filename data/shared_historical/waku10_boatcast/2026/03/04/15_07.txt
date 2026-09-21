@@ -1,0 +1,8 @@
+data=
+1	0
+小野　　信樹	8.20	0.18	3.4	１		IP	１		IP	２		IP	１		IP	１		IP	５		IP	１		IP	１		IP	５		IP	１		IP
+渥美　　卓郎	4.40	0.18	3.6	５		IP	３		IP	４		IP	４		IP	３		IP	５		IP	３		IP	４		IP	３		IP	４	1	IP
+大田　　直弥	3.20	0.17	2.9	５		IP	５		IP	４		IP	５		IP	５		IP	４		IP	５		IP	５	5	IP	２		IP	４		IP
+吉永　　則雄	5.60	0.15	2.9	３		IP	３		IP	５		IP	１		IP	２		IP	４		IP	２		IP	４		IP	３		IP	５		IP
+近藤　　来希	1.40	0.20	4.6	５	6	IP	５		IP	５	6	IP	６	6	IP	６		IP	６		IP	６	6	IP	５		IP	６	6	IP	６		IP
+吉川　　貴仁	7.20	0.19	2.9	１	5	IP	１	4	IP	５		IP	Ｆ		IP	１		IP	１		IP	２		IP	４		IP	１	5	IP	２		IP

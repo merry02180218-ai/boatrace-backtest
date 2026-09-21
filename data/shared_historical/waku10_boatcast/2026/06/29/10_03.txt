@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　日向	10.00	0.11	1.9	１		G2	１		G2	２		IP	１		IP	１		G2	２		IP	１		IP	１		IP	１		IP	１		IP
+城間　　盛渚	6.60	0.15	2.9	２		IP	１		IP	１		IP	５		IP	２		IP	３		IP	３		IP	１		IP	４		IP	５	3	IP
+山下　　和彦	6.40	0.21	3.5	２	2	G3	３		IP	３		IP	４		IP	３		IP	３		IP	１		G3	２		G3	２		IP	５		IP
+野相　　弘司	3.40	0.16	3.0	転		IP	４		IP	６		IP	６		IP	２		IP	６		IP	４		IP	６		IP	４		IP	１		IP
+中里　　優子	4.30	0.16	3.5	６		IP	３		IP	５		G3	４		G3	３		IP	３		IP	５		G3	４		G3	４		IP	３		IP
+岡本　　亜子	1.10	0.20	5.1	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+加倉　　侑征	7.00	0.14	2.7	２		IP	２		IP	１		IP	２		IP	１		IP	３		IP	５		IP	３		IP	１		IP	５		IP
+戸塚　　邦好	5.40	0.18	3.6	４		IP	３		G1	５		G1	２		IP	３		IP	４		IP	２		G3	４		G3	３		IP	４		IP
+田邉　　亮蔵	4.10	0.18	3.1	４		IP	４		IP	２		IP	２		IP	３		IP	６		IP	５		IP	５		IP	４		IP	５		IP
+小林　　甘寧	6.00	0.14	2.9	欠		IP	３	5	IP	４		IP	３		IP	４		IP	２		IP	２		IP	１		IP	２		IP	３		IP
+佐竹　　太一	4.40	0.15	2.8	２		IP	３		IP	３		IP	４		IP	４		IP	６		IP	６		IP	１		IP	６		G3	６		G3
+井田　　涼介	1.90	0.22	3.8	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	Ｆ		IP	４		IP	６		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+岩津　　徹郎	8.00	0.14	2.6	１		IP	２		IP	３	2	IP	１		IP	１		IP	１		IP	３		IP	５		IP	１		IP	２		G3
+宮野　　　仁	6.10	0.20	4.0	５		IP	４		IP	２		IP	４		IP	２		IP	２		IP	１	3	IP	６		IP	２		IP	２		IP
+三木　　晴斗	5.70	0.15	2.7	５	4	IP	３		IP	１		IP	２		IP	５		IP	２		IP	６	5	IP	４		IP	１		IP	３	4	IP
+葛原　　大陽	4.56	0.15	3.0	５		IP	転	5	IP	４		IP	５		G1	２		G1	３		IP	２		IP	５		G1	５		G1	６		IP
+樫葉　　次郎	2.10	0.16	3.0	Ｆ		IP	４	3	IP	５		IP	４		IP	６		IP	５		IP	６		IP	４		IP	５		IP	６		IP
+山田　　祐也	5.40	0.14	3.4	３		G1	４	5	G1	６		G1	５		SG	４	5	SG	６		G2	４		G1	３		IP	１		G1	３	5	IP

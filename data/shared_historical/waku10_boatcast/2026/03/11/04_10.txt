@@ -1,0 +1,8 @@
+data=
+1	0
+谷津　　幸宏	9.70	0.12	2.4	１		IP	１		IP	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP
+森野　　正弘	6.80	0.10	2.0	４		IP	２		IP	２		IP	２		IP	５		IP	１		IP	３		G1	１		G2	２		IP	落		IP
+内堀　　　学	8.20	0.17	1.8	１	1	IP	２	2	IP	１		IP	２		IP	１	1	IP	５		IP	１		IP	２		IP	１	1	IP	３		IP
+小川　　知行	4.20	0.17	2.7	３		IP	３	3	IP	２		IP	６		IP	２		IP	５		IP	３	5	IP	５		IP	６		IP	５		IP
+門田　　　栞	3.30	0.16	3.0	３		IP	６	6	IP	４	6	IP	５		IP	５		IP	４		IP	５		IP	１		IP	５		IP	Ｆ		IP
+倉持　　莉々	4.70	0.14	3.4	５	5	G1	３		G1	６		G1	６		G3	４		G3	２		IP	４		IP	３		IP	２		IP	４	5	IP

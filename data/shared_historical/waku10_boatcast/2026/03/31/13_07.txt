@@ -1,0 +1,8 @@
+data=
+1	0
+南　　　佑典	8.40	0.18	3.7	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	２		IP	Ｆ		IP
+山本　　兼士	4.50	0.20	4.2	５		IP	５		IP	３	4	IP	１		IP	３	3	IP	６		IP	５		IP	３		IP	２		IP	５		G3
+松浦　　　勝	3.70	0.16	3.5	５		IP	１		IP	６		IP	４		IP	２		IP	４		IP	６		IP	５		IP	４		IP	６		IP
+高村　　　諒	1.80	0.22	4.8	４		IP	６		IP	６		IP	６		IP	６		IP	５		IP	４		IP	６	6	IP	５		IP	６		IP
+馬袋　　義則	6.20	0.18	3.9	３	4	IP	５		IP	３	4	IP	２	3	IP	４	2	IP	１	3	IP	２	2	IP	４		IP	４		IP	２	4	IP
+茶谷　　信次	4.10	0.27	5.6	５		IP	３		IP	３		IP	４	5	IP	３		IP	欠		IP	４		IP	５		IP	３		IP	４		IP

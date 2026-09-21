@@ -1,0 +1,8 @@
+data=
+1	0
+岩永　　節也	4.40	0.18	4.3	５		IP	４		IP	４		IP	１		IP	６		IP	５		IP	１		IP	５		IP	２		IP	６		IP
+成貞　　琳平	4.20	0.19	3.1	４		IP	５		IP	４		IP	４		IP	４		IP	４		IP	５		IP	３		IP	３	3	IP	３		IP
+宮地　　博士	3.20	0.21	3.8	５		IP	４		IP	５		IP	３		IP	４		IP	転	4	IP	２		IP	６		IP	４		IP	６		IP
+渡　　　修平	3.40	0.24	4.7	４		IP	４		IP	６		G3	２		IP	６		IP	２		IP	４		IP	５		IP	６	6	IP	６		IP
+香川　　陽太	4.10	0.18	4.2	５		IP	６		IP	３	4	IP	３		IP	６	6	IP	５	6	IP	６		IP	２	4	IP	４		IP	２		IP
+山田　　陽翔	1.10	0.17	4.1	欠		IP	６		IP	５	5	IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP

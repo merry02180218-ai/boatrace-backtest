@@ -1,0 +1,8 @@
+data=
+1	0
+山口　　晃朋	8.60	0.16	3.5	１		IP	３		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	４		IP
+伊藤　　将吉	5.40	0.13	3.6	３		G1	６		G1	４		IP	５		IP	６		IP	３		IP	２		IP	３		IP	２		IP	１		IP
+石田　　章央	6.40	0.13	3.3	１		IP	３		IP	１		IP	３		IP	５		IP	３		IP	２		IP	４		IP	３		IP	３		IP
+芹澤　　克彦	3.90	0.13	3.3	２		IP	４		IP	４		IP	５		IP	４		IP	４		IP	５		IP	６		IP	２		IP	５		IP
+池田　　雄一	3.80	0.14	3.8	５		IP	３		IP	３		IP	３		IP	４		G1	３		G1	６		IP	５		IP	６		IP	５		IP
+幸田　　智裕	4.10	0.17	3.5	３		IP	５		IP	５		IP	５		IP	４	5	IP	３		IP	６		IP	４		IP	３		IP	２		IP

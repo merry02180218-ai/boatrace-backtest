@@ -1,0 +1,8 @@
+data=
+1	0
+品田　　直樹	7.80	0.19	3.4	３		IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	５	2	IP
+寺本　　昇平	4.20	0.23	4.2	４		IP	２	3	IP	４		IP	３		IP	４		IP	３		IP	４		IP	５		IP	５		IP	５		IP
+倉富　　大誠	5.33	0.14	2.7	５	4	IP	４		IP	４		IP	５		IP	２		IP	３		IP	落	4	IP	１		IP	２		IP	４		IP
+田中　太一郎	4.90	0.16	3.2	６		IP	６		IP	２		IP	６		IP	３		IP	２		IP	２		IP	５		IP	２		IP	３		IP
+青木　　玄太	5.80	0.17	4.0	２		IP	２		IP	４		IP	１		IP	５		G1	３		G3	５		IP	３		IP	４		IP	３		G1
+細川　　明人	1.30	0.24	5.2	６	5	IP	６		IP	６	4	IP	６		IP	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP

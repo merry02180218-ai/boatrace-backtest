@@ -1,0 +1,8 @@
+data=
+1	0
+長尾　　萌加	6.50	0.15	2.4	２		IP	４		IP	１		IP	４		IP	１		IP	２		IP	３		IP	３		IP	２		IP	６		IP
+細川　　裕子	6.70	0.21	4.9	５		IP	２		IP	２		IP	４		G3	１		G1	２		IP	２		G3	３		IP	４		IP	２		IP
+畑田　　希咲	1.70	0.20	4.2	６		IP	６	4	IP	５		IP	５		IP	５	5	IP	５	5	IP	６	2	IP	６		IP	４		IP	６		IP
+長野　　未来	2.25	0.22	3.6	６	6	IP	６	6	IP	３	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	３	6	IP						IP
+井上　　遥妃	6.30	0.16	2.2	４		IP	６		IP	１		IP	３		G1	５		G1	２		G3	１		G3	３		G3	３		G3	２		G3
+蜂須　　瑞生	2.50	0.18	3.9	４		IP	６		G3	４	5	G3	５		IP	５		IP	４		IP	５		IP	５		IP	６		IP	６		IP

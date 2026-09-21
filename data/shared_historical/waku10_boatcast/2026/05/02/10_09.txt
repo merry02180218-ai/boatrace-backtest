@@ -1,0 +1,8 @@
+data=
+1	0
+坂野　さくら	5.80	0.19	3.5	１		IP	６		IP	１		G3	６		G3	３	2	IP	３		G3	１		G3	５		IP	１		G3	５		IP
+中本　　大樹	6.60	0.19	4.5	１		IP	３		IP	２		IP	４	3	IP	４		IP	２		IP	４		IP	１		IP	３		IP	３		IP
+平田　健之佑	5.00	0.12	2.1	３		IP	転		IP	３		IP	４		IP	１		IP	Ｆ		IP	３		G1	４		IP	５		IP	３		IP
+松村　　康太	5.00	0.17	3.9	４		IP	４		IP	２		IP	３		IP	３		IP	５		IP	３		IP	３		IP	３		IP	５		IP
+丹下　　　健	1.80	0.24	4.9	５		IP	６		IP	５		IP	６		IP	Ｆ		IP	５		IP	６		IP	３		IP	５	4	IP	６		IP
+下出　　卓矢	4.30	0.14	3.7	２		IP	２		IP	６		IP	２		IP	５		IP	６		IP	１		IP	６		G2	６		G2	６		IP

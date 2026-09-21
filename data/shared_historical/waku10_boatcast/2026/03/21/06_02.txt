@@ -1,0 +1,8 @@
+data=
+1	0
+宮本　　夏樹	7.00	0.21	3.1	エ		IP	１		IP	２		IP	２		IP	１		IP	１		IP	５		IP	５		IP	１		IP	１		IP
+宇留田　翔平	6.20	0.16	2.6	２		IP	２		IP	５		IP	１		IP	４		IP	３		IP	３		IP	３		IP	４		IP	２		IP
+吉村　　　誠	5.60	0.15	3.3	４		G3	２		G3	６		G1	６		G1	２		IP	１		IP	２		IP	５		IP	１		IP	６		G1
+小林　　遼太	3.50	0.19	4.1	５		IP	３		IP	５	6	IP	５		IP	３		IP	３		IP	５		IP	３		IP	６		IP	５		IP
+上田　　健太	4.50	0.19	3.9	４		IP	２		IP	６		IP	５		IP	１		IP	３		IP	５		IP	５		IP	３		IP	４		IP
+安部　　慎一	2.70	0.13	2.8	３		IP	６		IP	５		IP	６		IP	３		IP	４		IP	５		IP	５		IP	５		IP	６		IP

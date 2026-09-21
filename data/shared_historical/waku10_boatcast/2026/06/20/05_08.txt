@@ -1,0 +1,8 @@
+data=
+1	0
+松井　　友汰	8.40	0.19	2.5	５		IP	１		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP	３		IP
+櫻井　　　優	5.60	0.17	3.2	５		IP	２		IP	２		IP	４		IP	２		IP	２		IP	２		IP	５		IP	４		IP	４	3	IP
+西川　　真人	3.30	0.17	3.7	４		IP	３		IP	４		IP	６		IP	６		IP	５	4	IP	５		IP	３		IP	６		IP	３		IP
+鹿島　　敏弘	4.80	0.16	3.9	３		IP	４		IP	３	5	IP	３		IP	４		IP	５		IP	４		IP	３		IP	５		IP	２		IP
+小原　　聡将	4.40	0.17	3.8	３		G2	５		G2	４		IP	３		IP	５		IP	３		IP	３		IP	２		IP	６		IP	６		IP
+金子　　貴志	3.80	0.18	4.7	３		IP	６		IP	３		IP	４		IP	４		IP	５		IP	４		IP	２		IP	５		IP	６		IP

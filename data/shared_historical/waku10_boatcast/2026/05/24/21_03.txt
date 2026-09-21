@@ -1,0 +1,8 @@
+data=
+1	0
+深川　　真二	9.20	0.08	2.2	１		IP	３		IP	１		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP
+山田　　竜一	7.33	0.13	1.9	エ		IP	４		IP	１		IP	２		IP	２		IP	２		IP	３		IP	３		IP	２		IP	２		IP
+中田　　友也	5.60	0.20	4.7	２		IP	Ｆ		IP	２		IP	２		IP	５		IP	３		IP	２		IP	４		IP	２		IP	４		IP
+新井　　英孝	4.60	0.18	3.6	３		IP	２		IP	転		IP	６		IP	４		IP	５		IP	３		IP	１		IP	２		IP	６		IP
+土屋　実沙希	4.50	0.17	3.9	６		IP	４		IP	３	4	IP	３		IP	４		IP	２		IP	４		IP	３		IP	４		IP	５		IP
+山口　　隼人	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中里　　英夫	8.60	0.18	3.6	２		IP	１		IP	２		IP	２		IP	１		IP	１		IP	２		IP	３		IP	１		IP	２		IP
+岩永　　節也	4.60	0.15	3.1	３	3	IP	５	3	IP	４		IP	５		IP	３		IP	３		IP	３		IP	３		IP	３		IP	５		IP
+宮村　　勇哉	5.30	0.12	2.4	２		IP	３		IP	３		IP	３		IP	４		IP	２		IP	４		IP	３		IP	４		IP	６		IP
+小山　　　勉	6.40	0.16	4.5	３	6	IP	２		IP	２		IP	２		IP	３		IP	３	5	IP	５		IP	３		IP	２		IP	４		IP
+荻野　　裕介	5.20	0.22	4.6	３		IP	３		IP	２		IP	４		IP	５		G3	３		IP	４		IP	２	6	IP	５	6	IP	３		IP
+清水　　愛海	3.90	0.18	3.6	６		G2	４		IP	６		IP	４		G1	５		IP	３		G1	転		G1	１		G3	Ｆ		G3	２		G3

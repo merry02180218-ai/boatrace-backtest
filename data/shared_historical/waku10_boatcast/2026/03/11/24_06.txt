@@ -1,0 +1,8 @@
+data=
+1	0
+権藤　　俊光	9.70	0.14	2.8	４		G1	１		G1	１		G1	１		G1	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+峰　　　竜太	6.70	0.12	3.6	５		G1	２		G1	４		G1	５		G1	３		IP	１		IP	１		SG	６		G1	２		G1	３		SG
+堀本　　和也	7.00	0.13	1.9	６		G1	１		G1	５		G1	２		G3	１		IP	２		IP	１		IP	２		IP	４		IP	３		G3
+中辻　　崇人	6.67	0.16	3.1	欠		G1	２		IP	１		IP	３		G1	３		G1	２	3	IP	４		IP	１		G3	５	6	G3	４		G3
+松井　　洪弥	5.50	0.11	3.2	６		G1	５		G1	５		IP	３		IP	１		IP	４		IP	３		IP	２		IP	１		IP	５		IP
+瓜生　　正義	5.10	0.13	3.1	３		IP	３	5	IP	４		G1	３		G1	６		G1	６	5	G1	４		G1	３		IP	２	5	IP	５		SG

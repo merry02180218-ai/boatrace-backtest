@@ -1,0 +1,8 @@
+data=
+1	0
+川原　　祐明	9.40	0.15	3.2	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP
+安河内　　健	5.60	0.16	3.7	２		IP	１	3	IP	２		IP	２	3	IP	６		IP	５		IP	３		G2	６		IP	３		IP	５		G1
+照屋　　厚仁	6.20	0.13	2.6	６		IP	３		IP	１		IP	２		IP	１		IP	６		IP	２		IP	５		IP	１		IP	３		IP
+谷口　　　丞	5.60	0.12	2.3	１		IP	６		IP	２		IP	６		IP	４		IP	１		IP	５		IP	２		IP	３		IP	３	5	IP
+枝尾　　　賢	5.20	0.13	3.1	５		G2	６		G2	４	4	IP	４		IP	３		G3	４		G3	２		IP	２	4	IP	６		IP	１		IP
+数原　　　魁	5.10	0.21	3.8	４		IP	１	5	IP	４		IP	１		IP	６		IP	５		IP	１		IP	５		IP	３		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+阪本　　勇介	6.20	0.16	3.5	２		IP	４		IP	３		IP	１		IP	２		IP	３		IP	４		IP	２		IP	４		IP	４	2	IP
+森野　　正弘	7.30	0.10	2.0	２		IP	２		IP	２		IP	５		IP	１		IP	３		G1	１		G2	２		IP	落		IP	２		G1
+常盤　　海心	5.67	0.18	3.5	３	4	IP	転		IP	１	4	IP	３		IP	５		IP	６		IP	４		IP	２	4	IP	４		IP	１		IP
+有山　　　望	3.30	0.17	3.0	４		IP	５		IP	６	5	IP	２		IP	３		IP	４		IP	６		IP	５		IP	６		IP	４		IP
+松井　　賢治	4.20	0.17	3.4	３		IP	１		IP	１		IP	６		IP	５		IP	５		IP	６		IP	５		IP	５	6	IP	３	4	IP
+島川　　海輝	3.10	0.18	4.6	５		IP	５		IP	５		IP	４		IP	４		IP	５		IP	３		IP	５		IP	６		IP	３		IP

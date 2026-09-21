@@ -1,0 +1,8 @@
+data=
+1	0
+松村　　　敏	9.90	0.11	1.8	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	２		G1	１		IP	１		IP
+安達　　美帆	3.60	0.20	3.1	５	5	IP	４		G3	５		G3	２		G3	５		G3	５		G3	５		G3	４		G3	５		G3	２		G3
+石丸　　海渡	6.50	0.11	2.6	２		G1	３		IP	２		IP	２		IP	３		IP	４		IP	５		G1	１		G1	４		IP	３		IP
+山室　　展弘	5.56	0.13	3.3	１		IP	６		IP	２		IP	１		IP	６		IP	３		IP	２		IP	４		IP	欠		IP	５		IP
+山田　　晃大	3.90	0.12	2.5	３		IP	６		IP	５		IP	３		IP	２		IP	３		IP	６		IP	５		IP	５		IP	４		IP
+成田　　華音	1.50	0.19	4.5	４		IP	転		IP	６		IP	６		IP	５		IP	６		IP												IP

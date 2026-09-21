@@ -1,0 +1,8 @@
+data=
+1	0
+長田　　頼宗	9.20	0.11	2.4	１		G2	２		G2	４		IP	１		IP	４		G1	１		G1	１		G1	１		IP	１		IP	１		G1
+澤田　　尚也	6.50	0.11	3.0	６		G2	２		IP	４		IP	１		IP	２		IP	２		IP	２		IP	１		IP	４		G1	６		G1
+三浦　洋次朗	7.70	0.17	2.6	４		G2	３		IP	１		IP	１		IP	１		IP	１		IP	３		IP	２		IP	４		IP	２		IP
+廣瀬　　将亨	4.90	0.16	3.8	６		G2	３		IP	５		IP	２		IP	１		IP	４		IP	１	3	IP	６	6	IP	４		IP	５		IP
+平高　　奈菜	4.50	0.11	2.8	５		G2	６		G2	４		SG	６		SG	１		G3	６		G1	３	3	IP	５		IP	６		G1	２		G1
+島村　　隆幸	6.90	0.18	4.4	４		G2	３		IP	１	5	IP	４		IP	２		IP	５		IP	１	5	IP	２		IP	３		IP	１		IP

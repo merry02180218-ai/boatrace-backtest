@@ -1,0 +1,8 @@
+data=
+1	0
+下寺　　秀和	10.10	0.15	2.6	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+川上　　聡介	4.30	0.13	2.8	４		IP	５		IP	５		IP	２	3	IP	５		IP	２		IP	６		IP	３		IP	２	3	IP	５		IP
+鈴木　　茂高	5.60	0.17	2.7	４		IP	２		IP	２		IP	２		IP	転	4	IP	２	5	IP	２		IP	４		G3	４		G3	４		IP
+馬場　　貴也	6.20	0.15	3.4	３		G1	３		G1	５		SG	３		G1	６		G1	２		G1	２		G1	２		G1	６		G1	３		IP
+川上　　　剛	4.60	0.16	3.0	３		IP	６		IP	４		IP	３		IP	１	4	IP	１	4	G3	４	6	IP	５		IP	５		IP	６		IP
+為本　　智也	3.78	0.19	3.1	３		IP	転		IP	３		IP	４		IP	４		IP	４	5	IP	５		G3	５		G3	４	5	IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　右京	4.20	0.24	3.7	４	2	IP	５		IP	５		IP	６	2	IP	４		IP	４		IP	２		IP	１		IP	３		IP	６		IP
+表　　　健太	4.20	0.19	2.8	６		IP	６		IP	４		IP	１		IP	３		IP	３		IP	３		IP	３		IP	６		IP	６		IP
+栗原　　直也	3.90	0.15	3.2	５		IP	６		IP	Ｆ		IP	Ｆ		IP	２		IP	４	4	IP	４		IP	２		IP	４		IP	２	4	IP
+佐々木　和伸	6.30	0.13	2.8	３		IP	２		IP	４		IP	２		IP	１		IP	５		IP	６		IP	２		IP	４		IP	１		IP
+小玉　　啓太	3.80	0.16	3.1	６		IP	３		IP	５		IP	４		IP	６		IP	４		IP	４		IP	３		IP	２		IP	５		IP
+春園　　功太	2.10	0.14	3.4	６		IP	５		IP	６		IP	６		IP	４		IP	４		IP	４		G3	６		G3	５		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+佐々木　裕美	6.90	0.18	3.9	２		G3	１		G3	１		G3	５		G3	２		G3	４		IP	１		G3	６		G3	２		IP	２		IP
+間野　　兼礼	6.80	0.17	3.2	４		IP	５		IP	２		IP	３		IP	１		IP	３	4	IP	１		IP	２	3	IP	２		IP	３		IP
+山田　　亮太	5.33	0.18	3.3	４		IP	２		G2	３		IP	１		IP	落		IP	６		G3	５	4	G3	２	4	G3	５		IP	３		IP
+岩井　　　繁	3.10	0.19	4.8	６		IP	５		IP	５		IP	４		IP	６		IP	３		IP	５		IP	３		IP	３		IP	６		IP
+村松　　修二	3.40	0.19	3.7	６		G2	５		IP	６		IP	６		IP	１		IP	５		IP	２		IP	５		IP	５		IP	４		IP
+丹下　　　将	3.00	0.16	3.8	４		IP	５		IP	３		IP	４		IP	６		IP	５		IP	５		IP	５		IP	３		IP	６		IP

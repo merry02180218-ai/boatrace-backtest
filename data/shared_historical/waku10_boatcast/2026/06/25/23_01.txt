@@ -1,0 +1,8 @@
+data=
+1	0
+野中　　一平	8.70	0.13	2.1	１		IP	１		G1	１		IP	１		IP	４		IP	１		IP	１		IP	２		IP	４		IP	１		IP
+板倉　　敦史	5.90	0.14	2.9	２		IP	３		IP	１		IP	３		IP	５		IP	２		IP	３		G3	６		G3	４		IP	２		IP
+待鳥　　雄紀	3.70	0.13	2.2	５		IP	３		IP	６	4	G3	４	4	G3	３		IP	３		IP	２		IP	６		G3	５	4	IP	６		IP
+牧山　　敦也	4.30	0.18	4.3	３		IP	４		IP	３		G3	６		IP	５		IP	４		IP	３		IP	４		IP	３		IP	４		IP
+川田　　正人	3.80	0.17	3.6	Ｆ		IP	１		IP	３		IP	６		IP	４		IP	５		IP	４	4	IP	６		IP	４		IP	３		IP
+橋本　　　明	4.30	0.19	4.1	４		IP	６	5	G3	４	5	G3	３		IP	２		IP	５		IP	３		IP	４		IP	４		IP	４		IP

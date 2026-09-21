@@ -1,0 +1,8 @@
+data=
+1	0
+川上　　清人	5.90	0.19	3.2	１		IP	６		IP	３		IP	６		IP	４	2	IP	３		IP	１		IP	１		IP	１		IP	６		IP
+上田　　隆章	5.00	0.20	4.1	３		IP	４	3	IP	５		IP	２		IP	欠		IP	３		IP	６		IP	５		IP	２		IP	２		IP
+松尾　　夏海	7.70	0.14	2.5	２		IP	１		IP	３		IP	１		IP	１		IP	１		IP	６		IP	１		IP	６		G1	１		G3
+大廣　　咲季	4.50	0.14	3.2	５		IP	３		G3	４		G3	３		G3	６		G3	４		IP	５		IP	３		IP	４	6	IP	１		IP
+竹田　　和哉	4.20	0.16	3.7	３		IP	３		IP	４		IP	５		G1	３		IP	５		IP	１		IP	６		IP	６		IP	６		IP
+水谷　　理人	5.50	0.16	4.4	３		IP	３		IP	１	5	IP	４		IP	３		IP	５		IP	２	4	IP	３		IP	４		G1	６		G1

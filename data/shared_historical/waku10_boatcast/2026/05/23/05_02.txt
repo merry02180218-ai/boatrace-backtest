@@ -1,0 +1,8 @@
+data=
+1	0
+滝沢　　芳行	7.40	0.17	2.4	３		IP	２		IP	３		IP	１		IP	１		G3	１		IP	４		IP	１		IP	３		IP	４		IP
+渡邉　　睦広	6.10	0.17	3.2	２		IP	３		IP	２		IP	６		IP	６		IP	５		IP	３		IP	１		IP	２	3	IP	１		IP
+大谷　　健太	4.70	0.19	3.6	３		IP	４		IP	６		IP	４		IP	３		IP	５		IP	１		IP	２		IP	４		IP	５		IP
+土山　　卓也	4.50	0.13	3.6	６		IP	４		IP	３		IP	４		IP	４		IP	２		IP	３		IP	４		IP	４		IP	４		IP
+山本　　兼士	3.00	0.24	4.2	６		IP	６		IP	６		IP	３		IP	４		IP	６		IP	６	6	IP	４		IP	６		IP	１		IP
+金子　　怜央	1.50	0.18	3.6	６		IP	５		IP	６		IP	５		IP	５		IP	６		IP	５		IP	６		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+嶋　　　義信	9.20	0.13	1.5	１		IP	１		IP	１		IP	３		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+市橋　　卓士	5.10	0.13	2.7	３		IP	４		IP	５	3	IP	６		IP	３		IP	２		IP	５		IP	２		IP	５		IP	１		IP
+菅沼　　佳昭	5.00	0.16	3.1	５		IP	３		IP	４		IP	４		IP	２	4	IP	１		IP	６		IP	３		IP	２		IP	６		IP
+田中　信一郎	5.80	0.15	3.0	５		IP	６		G1	１	5	G1	６		G1	４		G1	２		IP	３		IP	１		IP	１		IP	５		IP
+山田　　　丈	2.90	0.17	3.8	６		IP	３		IP	５		IP	６		IP	５		IP	６		IP	５		IP	３		IP	３		IP	５		IP
+蒲原　　健太	3.40	0.21	4.6	６		IP	６		IP	５	4	IP	６		IP	５		IP	３		IP	２	4	IP	５		IP	６		G2	２		IP

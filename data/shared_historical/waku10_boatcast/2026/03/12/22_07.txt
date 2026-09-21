@@ -1,0 +1,8 @@
+data=
+1	0
+嶋　　　義信	8.40	0.14	1.8	１		IP	１		IP	２		IP	１		IP	１		IP	５		IP	２		IP	１		IP	３		IP	１		IP
+池田　　雄祐	7.30	0.13	2.3	１		IP	１		IP	６		IP	２		IP	１		IP	１		IP	４		IP	２		IP	２		IP	４	3	IP
+澤崎　　雄哉	5.90	0.16	4.0	５	2	G3	６		IP	３		IP	１		IP	５		IP	２		IP	４		IP	２		IP	１		IP	２		IP
+楠原　　正剛	6.30	0.13	2.4	１		IP	３		IP	１		IP	２		G1	６		G1	５		IP	３		IP	２		IP	４		IP	３		IP
+中野　　夢斗	5.40	0.18	3.5	５	4	G3	３	4	G3	４		IP	３		IP	５		IP	２		IP	１		IP	２		IP	４		IP	４		IP
+大西　　　賢	3.10	0.24	4.4	３		IP	３		IP	６		IP	６		IP	５		IP	６		IP	５		IP	４		IP	４		IP	４		IP

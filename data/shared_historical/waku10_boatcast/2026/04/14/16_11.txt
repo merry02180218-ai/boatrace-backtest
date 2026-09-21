@@ -1,0 +1,8 @@
+data=
+1	0
+北村　　征嗣	9.00	0.15	2.4	１		IP	４		IP	１		IP	１		G3	１		G3	１		IP	２		IP	１		IP	１		IP	２		IP
+守田　　俊介	6.10	0.14	2.4	４		IP	２		IP	３		SG	２		IP	６		G1	５		G1	１		IP	６		IP	１		IP	４		G1
+酒見　　峻介	4.67	0.19	4.0	転		IP	１		IP	５	4	IP	４		IP	３		IP	４		IP	４		IP	５	4	IP	４		IP	３		IP
+松村　　康太	5.40	0.18	4.0	２		IP	３		IP	３		IP	５		IP	３		IP	３		IP	３		IP	５		IP	３		IP	３		IP
+溝口　海義也	5.50	0.14	2.9	４		IP	２		IP	３		G2	５		G2	２		IP	４		IP	１		IP	３		G2	５		IP	５		IP
+垂水　　　悠	3.90	0.15	2.6	５		IP	１		G3	６		G3	３		IP	２		IP	４		IP	６		G1	６		IP	６		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+海野　ゆかり	9.80	0.17	3.7	１		IP	１		G3	１		G3	１		G3	１		G2	２		IP	１		IP	２		IP	１		IP	１		IP
+野相　　弘司	6.40	0.17	3.0	３		IP	３		IP	２		IP	３		IP	２		IP	２		IP	１		IP	５		IP	４		IP	３		IP
+品川　二千翔	7.20	0.17	3.1	２		IP	６		IP	２		IP	１		IP	１	5	IP	１		IP	３		IP	１		IP	２	4	IP	６		IP
+市橋　　卓士	5.10	0.13	2.8	４		IP	３	5	IP	５		IP	５	5	IP	６		IP	３		IP	２		IP	２		IP	１		IP	４		IP
+飯山　　　泰	4.70	0.18	3.0	２		IP	４		IP	５		IP	２		G2	４		IP	５		IP	１		IP	４	3	IP	５		IP	５		IP
+河内　　一馬	3.10	0.19	3.7	６		IP	５		IP	６		IP	６		IP	５		IP	２		IP	６		IP	６		IP	１	5	IP	４		IP

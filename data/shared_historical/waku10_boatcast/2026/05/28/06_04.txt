@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　康二	10.70	0.11	1.8	１		G2	１		IP	１		IP	１		IP	１		G1	１		G1	１		G1	１		G1	１		SG	１		IP
+佐藤　隆太郎	7.30	0.15	3.8	５		G2	２		IP	２		IP	４		IP	１		IP	２		IP	３		IP	１		IP	１		G1	４		G1
+鰐部　太空海	5.10	0.13	2.4	６		SG	１		IP	６		IP	２		IP	６		IP	５		IP	４		IP	５		IP	１		IP	１		IP
+馬場　　貴也	7.70	0.13	3.3	５		G1	２		G1	１		IP	１		IP	１		IP	１		IP	３		G1	３		G1	５		SG	３		G1
+松井　　　繁	3.80	0.16	4.1	５	4	IP	５		G1	５	4	G1	５	4	G1	２	2	G1	４		SG	６	6	SG	６		SG	５		G1	５		G1
+米丸　　乃絵	4.00	0.21	4.2	６		IP	３	5	G2	５		G2	３	5	G3	４		IP	６		IP	３		IP	４		IP	５		IP	３	5	IP

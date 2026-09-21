@@ -1,0 +1,8 @@
+data=
+1	0
+藤原　　仙二	9.90	0.17	2.5	１		IP	１		IP	１		G2	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+守田　　俊介	6.40	0.12	3.0	２		G1	２	3	IP	５		IP	４		IP	２		IP	３		SG	２		IP	６		G1	５		G1	１		IP
+深井　　利寿	6.80	0.15	3.0	３		IP	１		IP	２		IP	１		IP	１	4	IP	５		IP	６	2	IP	３		IP	２		IP	３		IP
+大町　　利克	2.40	0.19	3.3	４		IP	６		IP	４		IP	５		IP	６		IP	６		IP	５		IP	３		IP	５	5	IP	６		IP
+繁野谷　圭介	4.70	0.21	4.3	５		IP	６		IP	４		IP	６		IP	１		IP	１		IP	２		IP	２		IP	５		IP	６		IP
+橋本　　年光	5.20	0.25	5.0	２		IP	３		IP	４		IP	２		IP	３		IP	３		IP	６		IP	４	5	IP	４		IP	４		IP

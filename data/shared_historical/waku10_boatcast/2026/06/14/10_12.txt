@@ -1,0 +1,8 @@
+data=
+1	0
+毒島　　　誠	10.00	0.11	1.9	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		SG	１		SG	１		IP
+古結　　　宏	7.90	0.12	2.8	１		IP	１		IP	２		IP	２		IP	２		IP	１	3	G1	６		G1	１	1	G1	４		G1	３		IP
+松尾　　　祭	3.90	0.16	2.9	６		IP	３		IP	２		G2	６		G2	６		G2	６		G2	６		IP	３		IP	４		IP	３		IP
+乙藤　　智史	6.40	0.11	1.6	１		IP	３		IP	３		IP	３		IP	３	5	IP	４		IP	３		IP	１		IP	５		IP	２	3	IP
+大久保信一郎	4.70	0.15	3.0	３		IP	１		IP	妨		IP	４		G3	５		G3	２		IP	６		IP	４		IP	３	6	IP	３		IP
+大田　　直弥	2.70	0.22	4.5	４		IP	５		IP	５		IP	３		IP	６		IP	５		IP	５		IP	５		IP	４	5	IP	５		IP

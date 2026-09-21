@@ -1,0 +1,8 @@
+data=
+1	0
+河野　　　大	8.80	0.17	3.3	１		IP	１		IP	１		IP	２		IP	２		IP	２		IP	１		IP	４		IP	１		IP	１		IP
+水摩　　　敦	6.00	0.18	4.3	３		IP	２		IP	１		IP	５	3	IP	２		IP	２		IP	４		IP	３		IP	５		IP	３		IP
+春園　　功太	8.10	0.17	3.2	１		IP	１		IP	５		IP	１		IP	２		IP	１		G3	２		G3	４		IP	２		IP	１	4	IP
+永田　　義紘	4.80	0.12	2.1	５		IP	１		IP	１		IP	１		IP	６		IP	４		IP	３		IP	５		IP	５		IP	６	5	IP
+栗原　　直也	5.10	0.20	4.3	４		IP	５	6	IP	３		IP	２		IP	６		IP	４		IP	２		IP	４	6	IP	３		IP	２		IP
+原田　　雄次	4.30	0.25	4.7	３		IP	３		IP	４		IP	１	5	IP	６		IP	６		IP	６		IP	３		IP	４		IP	４		IP

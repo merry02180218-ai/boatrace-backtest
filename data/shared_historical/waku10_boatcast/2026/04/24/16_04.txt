@@ -1,0 +1,8 @@
+data=
+1	0
+清水　　紀克	5.20	0.21	3.2	６		IP	５		IP	１		IP	３		IP	３		IP	４		IP	５		IP	６		IP	１		IP	１		IP
+秦　　　英悟	5.60	0.15	3.9	５	3	G1	４		IP	５		SG	２		G1	３		G1	４		G1	１		IP	６		G1	４		G1	３		G2
+藤井　　公人	5.70	0.14	2.6	６	4	IP	５		IP	２		IP	２		IP	３		G3	３		IP	１		IP	３		IP	３		IP	４		IP
+岩津　　徹郎	4.60	0.17	3.5	４		IP	３		IP	４		IP	３		IP	２		IP	３		IP	５		IP	４		IP	４	5	IP	６	6	IP
+森安　　弘雅	2.80	0.23	4.5	５		IP	２		IP	６		IP	５		IP	３		IP	６		IP	４		IP	６		IP	６	4	IP	５		IP
+室田　　泰史	4.00	0.13	2.4	４	5	IP	５		IP	４	5	IP	２	5	IP	６		IP	３		IP	４		IP	４		IP	３		IP	６		IP

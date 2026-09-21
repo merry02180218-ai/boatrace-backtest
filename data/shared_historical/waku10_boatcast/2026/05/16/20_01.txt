@@ -1,0 +1,8 @@
+data=
+1	0
+東　　　健介	7.00	0.17	2.6	１		IP	６		IP	２		IP	４		IP	３		IP	１		IP	１		IP	４		IP	１		IP	転		IP
+中村　　守成	4.70	0.16	3.9	６		IP	２		IP	２		IP	２		IP	４		IP	６		IP	６		IP	５		IP	３		IP	２		IP
+内田　　　圭	4.30	0.16	2.6	３		IP	４		IP	６		IP	５		IP	５		IP	４		IP	５		IP	３		IP	２		IP	２		IP
+増本　　杏珠	2.89	0.18	3.9	４		IP	４		IP	６		IP	４		IP	６		IP	３		IP	６		IP	４		IP	欠		IP	６		IP
+汐崎　　正則	3.70	0.19	3.6	５		IP	４		IP	３		IP	３		IP	６	6	IP	４		IP	２		IP	６		IP	４		IP	６		IP
+松江　　秀徳	2.50	0.18	3.4	５		IP	４	2	IP	６		IP	５	2	IP	２	4	IP	６		IP	５		IP	５		IP	５		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+山本　稔太朗	8.60	0.14	2.5	２		IP	４		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		G3	２		G3	２		IP
+坂東　　　満	5.00	0.17	2.5	３		IP	１		IP	６		IP	６		IP	２		IP	５		IP	失		IP	１	3	IP	５		IP	１		IP
+齊藤　　大将	4.70	0.16	3.3	６	6	IP	６		IP	４		IP	３		IP	２		IP	６		IP	２		IP	５		IP	２	4	IP	３		IP
+為本　　智也	6.60	0.17	2.6	１	5	IP	１		IP	１	5	G3	３		G3	１		IP	３		IP	１		IP	６		IP	５		IP	６		IP
+小林　　　泰	3.00	0.14	3.5	３		IP	４		IP	５		IP	３		IP	６		IP	６		IP	５		G3	５		G3	４		IP	５		G3
+安達　　裕樹	5.20	0.18	3.3	２	5	IP	４		IP	４		IP	２		IP	４		G2	４		G2	５		IP	４		IP	３	5	IP	４	5	IP

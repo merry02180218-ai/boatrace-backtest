@@ -1,0 +1,8 @@
+data=
+1	0
+永井　　彪也	9.00	0.14	3.0	１		G3	１		G1	２		G1	１		IP	３		IP	１		IP	１		G3	４		G3	１		G3	１		IP
+西川　　拓利	6.30	0.11	2.5	６		G3	３		IP	３		IP	１		IP	３		IP	３		IP	２		IP	３		IP	４		G3	１		G3
+関根　　彰人	5.80	0.15	3.3	５	5	G3	２		IP	６		IP	３		IP	６		IP	１		IP	２		IP	２		IP	３		IP	２		IP
+尾崎　　雄二	7.00	0.12	2.5	４		G3	１		IP	１		IP	６		IP	１		IP	１		IP	６		IP	２		IP	１		IP	３		IP
+神田　　達也	3.70	0.20	3.8	５		G3	３		IP	４	6	IP	Ｆ		IP	４		IP	２		IP	３	6	IP	４		IP	６		IP	５		IP
+長谷川　　充	2.70	0.21	5.0	６		G3	４		IP	５		IP	５		IP	５		IP	６	5	IP	５		IP	６		IP	２		IP	４		IP

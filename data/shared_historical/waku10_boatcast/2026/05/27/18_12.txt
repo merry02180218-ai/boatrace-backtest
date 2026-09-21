@@ -1,0 +1,8 @@
+data=
+1	0
+辻　　　栄蔵	9.90	0.13	2.6	２		G1	１		IP	１		IP	１		IP	１		G1	１		IP	１		IP	１		G2	１		G1	３		G1
+長野　壮志郎	7.60	0.18	3.4	２		IP	２		IP	１		IP	３		IP	１		IP	１		IP	５		IP	４		IP	１		IP	２		IP
+末永　　祐輝	5.60	0.12	2.1	５		IP	４		IP	１		IP	３	4	IP	２		IP	１		IP	４		IP	５		IP	５		IP	２		IP
+渡邊　雄一郎	5.30	0.17	3.8	５	5	IP	６		IP	４		IP	１		IP	３		IP	３		IP	４		IP	２		IP	３		IP	４		IP
+金子　　賢志	5.90	0.11	2.3	６		G1	２		IP	２		IP	４		G1	４		IP	２		IP	１		IP	３		IP	５		G1	４		G1
+宮脇　　遼太	4.50	0.15	4.2	６		IP	３		IP	６		IP	２		IP	３		IP	５		IP	２		IP	４		IP	２		IP	６		IP

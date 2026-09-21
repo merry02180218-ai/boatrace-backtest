@@ -1,0 +1,8 @@
+data=
+1	0
+深尾　　巴恵	8.10	0.23	3.7	１		IP	１		IP	６		IP	４		IP	３		IP	１		IP	１		G3	１		G3	１		G3	１		G3
+佐藤　　　旭	5.80	0.17	3.9	４		IP	２		G3	５		G3	１		IP	５		IP	３		IP	５		IP	３		IP	１		IP	２		IP
+庄司　樹良々	4.70	0.16	2.7	５		IP	４		IP	４		IP	３		IP	３		IP	１		IP	４		IP	４		IP	３		G3	６		G3
+笠置　　博之	6.10	0.15	2.4	１		IP	５	6	IP	１		IP	５	5	IP	１		IP	３		IP	３	5	IP	４	6	IP	６		IP	１		IP
+白井　　友晴	3.40	0.15	4.3	４		IP	５		IP	３	6	IP	４		IP	４		IP	６		IP	５		IP	６		IP	４		IP	３		IP
+原　　　豊土	4.40	0.23	5.0	５		IP	４		IP	４		IP	５		IP	４		IP	１	5	IP	３		IP	４		IP	５		IP	３		G3

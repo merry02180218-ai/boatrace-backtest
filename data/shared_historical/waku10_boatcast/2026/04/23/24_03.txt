@@ -1,0 +1,8 @@
+data=
+1	0
+屋良　　龍紀	7.40	0.10	1.7	２		IP	３		IP	５		IP	２		IP	１		IP	５		IP	１		IP	１		IP	２		IP	１		IP
+大島　隆乃介	4.80	0.14	2.6	５		IP	３		IP	１		IP	４		IP	１		IP	２		IP	４	4	IP	転		IP	５		IP	５		IP
+沼田　　大都	6.90	0.20	4.5	４		IP	２		IP	６		IP	１		IP	２		IP	１		IP	３		IP	２		IP	３		IP	２	4	IP
+鳥居塚　嶺王	4.80	0.15	3.6	６		IP	４		IP	２		IP	２		IP	４		IP	５		IP	６		IP	５		IP	２		IP	１		IP
+瀬川　　大地	3.30	0.13	4.0	５		IP	４		IP	４	6	IP	５	6	IP	６		IP	６		IP	６		IP	４		IP	２		IP	３		IP
+山下　　心一	3.00	0.18	3.6	４		IP	５	5	IP	６		IP	４		IP	６		IP	４		IP	５		IP	４		IP	３		IP	５		IP

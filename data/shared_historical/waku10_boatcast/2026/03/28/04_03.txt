@@ -1,0 +1,8 @@
+data=
+1	0
+島崎　丈一朗	6.40	0.20	4.4	３		IP	１		IP	４		IP	１		IP	１		IP	５		IP	１		IP	４		IP	４		IP	４		IP
+竹間　　隆晟	7.50	0.16	3.5	３		IP	１		IP	１		IP	２		IP	４		G1	２		IP	２	3	IP	２		IP	４		IP	２		IP
+鈴木　　唯央	4.40	0.15	2.6	６		IP	４		IP	３		IP	５		IP	４		IP	１		IP	３		IP	２		IP	６		IP	５		IP
+鈴木　　章司	3.70	0.21	4.1	５	5	IP	４		IP	６		IP	１		IP	４		IP	６	5	IP	６		IP	５		IP	５		IP	１		IP
+岩下　　巧斗	3.70	0.18	3.6	３		IP	５		IP	１		IP	５		IP	６		IP	３	4	IP	３		IP	６		IP	５		IP	６		IP
+早川　　颯太	1.20	0.21	4.9	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+桐本　　康臣	8.40	0.16	2.9	１		IP	３		IP	２		IP	２		IP	１		IP	２		IP	１		IP	３		IP	２		IP	１		IP
+渡辺　　　豊	4.70	0.22	4.5	３		IP	２		IP	４		IP	４		IP	４		IP	妨		IP	３		IP	６		IP	２		IP	３		IP
+岡部　　　哲	5.20	0.18	2.8	２		IP	３		IP	３		IP	３		IP	３		IP	５	2	IP	５		IP	３		IP	４		IP	３		IP
+藤田　　靖弘	6.70	0.18	3.0	２		IP	１		IP	１		IP	４		IP	５		IP	６		IP	１		IP	２		IP	３		IP	２		G3
+石渡　翔一郎	3.90	0.19	2.8	３		IP	３		IP	５		IP	５		IP	３		IP	６	6	IP	５	6	IP	６		IP	６		IP	１		IP
+小山　　　勉	3.60	0.20	5.0	４		IP	６		IP	６		IP	５		IP	２		IP	５	5	IP	３		IP	６		G1	４	5	IP	３	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+楠原　　翔太	8.89	0.12	1.8	４		IP	２		G3	１		G3	１		IP	１		IP	落		IP	１		IP	１		IP	１		IP	２		IP
+坂井　　康嗣	4.22	0.20	4.0	３		IP	３		IP	落		IP	６		IP	６		IP	２	1	IP	落		IP	３		IP	３		IP	４		IP
+下寺　　秀和	7.00	0.13	2.1	１		IP	３		IP	１		IP	２		IP	３		IP	３		IP	２		IP	２		IP	３		IP	６		IP
+村松　　栄太	2.90	0.19	3.6	５		IP	４		IP	５		IP	５		IP	５	6	IP	４		IP	４		IP	４		IP	４		IP	６	5	IP
+石川　　真二	6.00	0.14	3.0	１	2	IP	３	2	IP	６	2	IP	３	2	IP	５	2	IP	２	2	IP	１	2	IP	６	2	G1	３	2	G1	２	2	IP
+安藤　　瑠希	4.80	0.14	3.0	５		IP	５		IP	４		IP	２		IP	１		IP	５		IP	３		IP	１		IP	５		IP	５		IP

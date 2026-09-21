@@ -1,0 +1,8 @@
+data=
+1	0
+荒井　　翔伍	8.10	0.15	2.3	１		IP	１		IP	２		IP	１		IP	２		IP	２		IP	６		IP	１		IP	１		IP	３		IP
+高岡　　竜也	7.60	0.14	3.2	４		IP	２		IP	１		IP	４		IP	２		IP	３		IP	２		IP	１	3	IP	１		IP	２		IP
+大池　　佑来	7.70	0.13	2.6	１		IP	１		IP	２		IP	４		IP	３		G1	２		G1	２		G1	５		G1	３		IP	１		IP
+佐藤　謙史朗	4.20	0.17	3.4	５		IP	６		IP	５		IP	１		IP	３		IP	６		IP	４		IP	５		IP	１		IP	４		IP
+星野　　太郎	3.10	0.16	2.9	６		IP	５		IP	６		IP	４		IP	６		IP	５		IP	３		IP	５		IP	２		IP	４		IP
+武藤　　綾子	2.20	0.21	4.7	６		IP	５		G3	３		IP	６		IP	６		IP	６		IP	３	5	G3	５		IP	６		G3	６		G3

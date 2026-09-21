@@ -1,0 +1,8 @@
+data=
+1	0
+樫葉　　新心	4.60	0.16	2.7	３		G3	４		IP	６		IP	６		G3	１		IP	４		IP	３		G3	５		IP	１		IP	５		IP
+松田　　真実	6.10	0.18	3.4	５		G3	２		IP	２		IP	６		IP	３		IP	２		IP	３		IP	２		IP	２		IP	３		G3
+本部　めぐみ	3.70	0.24	4.2	５		G3	５		IP	４		IP	６		IP	３		G3	３		G3	４		IP	５		G3	４		G3	３		IP
+藤堂　　里香	5.10	0.16	3.3	３		G3	５		IP	２		IP	６		IP	５		IP	３		G1	２		G1	３	5	IP	５		IP	２		G3
+山崎　小葉音	3.33	0.17	2.7	３		G3	３		G3	３		IP	５		IP	６		IP	６		IP	３		IP	６		IP	６		IP	転		IP
+堀内　　亜海	1.00	0.17	4.3	６		G3	６		G3	６		G3	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

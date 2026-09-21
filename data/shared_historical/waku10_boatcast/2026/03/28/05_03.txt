@@ -1,0 +1,8 @@
+data=
+1	0
+森　　　竜也	8.50	0.15	3.5	６		IP	１		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	２		IP	１		IP
+尾形　　栄治	4.90	0.18	3.5	３		IP	５		IP	３		IP	４		IP	４		IP	３		IP	３		IP	６		IP	４	5	IP	１		IP
+前原　　大道	7.70	0.16	2.8	３		IP	３		IP	１		IP	１		G1	２		G1	４		G1	５		IP	２		IP	１		IP	２		IP
+倉田　　茂将	5.00	0.14	3.2	３		IP	３		IP	５		IP	４		IP	４		G3	５		G3	２		IP	１		IP	失		IP	２	5	IP
+齋藤　　達希	4.30	0.19	3.9	６		G3	５		G3	５	6	IP	３		IP	４		IP	５		IP	３		IP	２		IP	４		IP	２		IP
+佐々木　翔斗	3.70	0.17	3.8	６		G2	５		G2	５		IP	２		IP	６		IP	４		IP	５		IP	６		IP	２		IP	４		IP

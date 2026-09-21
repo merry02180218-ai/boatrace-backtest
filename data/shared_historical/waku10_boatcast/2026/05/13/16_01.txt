@@ -1,0 +1,8 @@
+data=
+1	0
+新田　　泰章	9.90	0.13	2.8	１		IP	２		IP	１		IP	１		IP	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP
+尾道　　佳諭	4.20	0.16	2.8	３		IP	４		IP	２		IP	６	6	IP	４		IP	２	4	IP	４		IP	５		IP	６		IP	４		IP
+加木　　　郁	5.20	0.18	3.5	２		IP	３		IP	５		IP	３		IP	５		IP	２		IP	５		IP	４		IP	３		IP	２		IP
+佐藤　　右京	2.80	0.26	5.0	５		IP	５		IP	４		IP	５	5	IP	５		IP	６		IP	３		IP	４		IP	６		IP	４		IP
+坂本　　奈央	2.80	0.22	3.3	５		G3	６		IP	６		IP	６		G3	６		IP	２		G3	４	4	G3	６		G3	２		G3	６		G3
+中村　かなえ	1.90	0.14	2.6	６		IP	４		IP	４	5	G3	５		G3	５		IP	６	5	IP	６		IP	６		IP	５		IP	６		IP

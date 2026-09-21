@@ -1,0 +1,8 @@
+data=
+1	0
+藤生　　雄人	9.60	0.11	2.4	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+吉川　　晴人	6.70	0.19	4.3	２		IP	２		IP	３		IP	６		IP	３		IP	２		IP	２		IP	１		IP	２		G2	６		G2
+畑田　　汰一	5.75	0.11	2.7	４		G1	５		G1	落		G1	６		IP	２	2	IP	転		IP	３		IP	５		G1	１		IP	１		IP
+佐竹　　太一	4.30	0.21	4.4	６		IP	５		IP	１		IP	４		IP	２		IP	４	5	IP	６		IP	６		IP	１		IP	５		G3
+井上　　尚悟	3.30	0.12	2.9	３		G3	落		G3	５		IP	４		IP	６		IP	４		IP	４		IP	５		IP	５		IP	２		IP
+重木　　輝彦	5.40	0.18	4.3	３		G1	４		G1	３		G1	３	5	IP	５		IP	３		IP	４		IP	４		G1	３		G1	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　孝平	10.00	0.14	1.8	１		G1	１		G1	２		G1	１		G1	１		IP	１		G2	１		G2	１		IP	１		IP	３		IP
+中澤　　和志	6.70	0.11	2.4	１		IP	１		G1	６		G1	６		G1	２		IP	２		IP	４		IP	４		IP	１		IP	２		IP
+中村　　晃朋	6.30	0.15	3.1	３		IP	２		G1	５		G1	１		IP	２		IP	２		IP	Ｆ		IP	１		IP	３		IP	５		G1
+實森　　美祐	6.40	0.15	2.9	転		IP	２		IP	２		G1	６		IP	１		IP	３		IP	３		IP	２		IP	２		G2	３		G3
+和田　　拓也	5.40	0.12	2.9	２	6	IP	４		IP	３		IP	３		G1	６		G1	２		IP	３		IP	３		IP	３		G2	Ｆ		IP
+海野　ゆかり	4.80	0.26	4.5	６		G1	５		G1	３		G3	２		G3	３		G3	５		G1	４		IP	４		IP	５		IP	１	3	IP

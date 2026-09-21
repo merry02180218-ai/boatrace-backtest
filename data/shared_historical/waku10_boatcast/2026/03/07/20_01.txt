@@ -1,0 +1,8 @@
+data=
+1	0
+川辺　　郭人	5.70	0.19	3.4	２		IP	６		IP	４		IP	４		IP	１		IP	２		IP	１		IP	１		IP	６		IP	６		IP
+梅木　　敬太	4.50	0.19	4.2	４		IP	５		IP	４		IP	６		IP	２		IP	４		IP	５		IP	２		IP	２		IP	４		IP
+西村　　秀樹	2.90	0.22	4.2	６		IP	３		IP	５		IP	５		IP	６		IP	６		IP	５		IP	２		IP	５		IP	４		IP
+後藤　　　浩	5.50	0.18	3.3	５	3	IP	３		IP	３		IP	１		IP	４		IP	１		IP	６		IP	４		IP	３		IP	３		IP
+山川　　雄大	7.20	0.17	3.6	６	4	IP	２		IP	１		IP	１		IP	３		G3	１		IP	６		IP	１		IP	３		IP	１		IP
+岩津　　徹郎	4.40	0.18	4.5	４		IP	３		IP	３		IP	４		IP	３		IP	２		IP	６		IP	６		IP	５		IP	３	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+樋口　由加里	7.40	0.18	2.4	１		G3	５		G3	１		G3	４		IP	１		IP	２		IP	１		IP	５		IP	１		IP	２		IP
+安達　　美帆	3.70	0.20	3.6	２		G3	５		G3	５		G3	５		G3	４		G3	５		G3	２		G3	３		IP	６		IP	５		IP
+喜多　那由夏	5.00	0.18	3.0	４		G3	５		IP	１		IP	３		IP	３		IP	３		IP	３		IP	５		IP	４		IP	４		G3
+櫻本　あゆみ	7.10	0.17	2.8	３	5	IP	４		IP	１		IP	５	5	IP	２		IP	２		IP	１		IP	３		IP	１		IP	３		IP
+西岡　　育未	4.10	0.20	3.1	３		G3	２		G3	５		G3	５		IP	４		IP	５		IP	２		G3	３		IP	６		IP	５		IP
+淺田　千亜希	3.40	0.13	2.7	１		G3	６		IP	３		G3	５		IP	６		IP	５		IP	５		IP	５		IP	Ｆ		IP	２		IP

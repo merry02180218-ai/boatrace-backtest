@@ -1,0 +1,8 @@
+data=
+1	0
+北川　　敏弘	6.50	0.16	2.8	２		IP	１		IP	２		IP	４		IP	６		IP	２		IP	１		IP	３		IP	２		IP	５		IP
+田中　太一郎	4.00	0.16	3.3	６		IP	４		IP	６		IP	４		IP	２		IP	４		IP	１		IP	３		IP	６		IP	６		IP
+佐藤　謙史朗	4.70	0.18	4.2	６		IP	３		IP	３		IP	４		IP	４		IP	３		IP	４		IP	２		IP	４		IP	４		IP
+中田　　友也	5.20	0.19	4.0	２		IP	６	5	IP	１		IP	２		IP	４		IP	６		IP	３		IP	４		IP	３		IP	４		IP
+小倉　　康典	3.20	0.14	2.9	５		IP	転	4	IP	６		IP	６		IP	４		IP	６		IP	４		IP	２		IP	１		IP	６		IP
+池田　　剛規	3.90	0.15	3.2	２		IP	５		IP	転		IP	５	5	IP	３		IP	４		IP	５		IP	６		IP	２		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+安河内鈴之介	8.60	0.15	2.9	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	６		G3	４		G2
+沼田　　大都	4.70	0.22	4.9	４		IP	３		IP	５		IP	６		IP	３		IP	４		IP	４		IP	１		IP	２		IP	５		IP
+仲道　　大輔	5.50	0.20	3.5	５	2	IP	６	4	IP	５		IP	３	2	IP	３		IP	２		IP	２		IP	４	4	IP	１		IP	２		IP
+熊倉　　幹太	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+富永　夏哉人	3.90	0.20	3.9	５		IP	３		IP	４		IP	４		IP	６		IP	２		IP	５		IP	４		IP	３		IP	５		IP
+黒田　　　剛	2.10	0.17	4.5	５		IP	４	5	IP	５		IP	６		IP	６		IP	６		IP	５		IP	５		IP	５		IP	４		IP

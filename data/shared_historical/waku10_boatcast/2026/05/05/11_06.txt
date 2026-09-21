@@ -1,0 +1,8 @@
+data=
+1	0
+吉川　　昭男	7.80	0.15	2.8	１		IP	１		IP	５		IP	４		IP	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP
+高山　　智至	6.40	0.16	3.0	３		IP	２		IP	１		IP	４		IP	３		IP	２		IP	１		IP	２		IP	５		IP	５		IP
+大町　　利克	4.80	0.14	3.6	６	4	IP	６		IP	３		IP	２		IP	３		IP	５		IP	３		IP	４		IP	４		IP	１		IP
+君島　　秀三	6.80	0.10	2.4	５		IP	２		G1	３	5	G1	２		IP	３		IP	３		IP	２	6	IP	３		IP	３		IP	１		IP
+廣瀬　　　凜	7.60	0.18	2.7	１		IP	３		IP	３		IP	３		IP	４		IP	２		IP	１		IP	２		IP	１		IP	２		IP
+高村　　　諒	1.50	0.16	4.2	６		IP	４		IP	６		IP	転		IP	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+川島　　拓郎	8.60	0.17	2.2	１		IP	１		IP	１		IP	１		IP	２		IP	３	2	IP	１		IP	５		IP	１		IP	１		IP
+中島　　昂章	5.70	0.17	4.1	２		IP	４		IP	２		IP	２		IP	１		IP	妨		IP	６		G3	２		G3	２		IP	５		IP
+真庭　　明志	5.00	0.13	2.9	２		IP	２		IP	６		IP	５		IP	３		IP	４		IP	４	2	IP	２		IP	２		IP	６		IP
+石井　　孝之	5.20	0.15	1.8	５		IP	１		IP	３		IP	２		IP	５		IP	６		IP	１	3	IP	１		IP	６	5	IP	５	5	IP
+土屋　　千明	3.90	0.15	2.2	３		IP	１		IP	５		G3	６		G3	転		IP	５		IP	３		IP	４		IP	４		IP	５	4	IP
+今坂　　晃広	2.80	0.18	4.9	６		IP	６		IP	４		IP	５		IP	３		IP	４		IP	６		IP	３		IP	６		IP	５		IP

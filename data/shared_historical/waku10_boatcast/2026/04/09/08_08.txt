@@ -1,0 +1,8 @@
+data=
+1	0
+武藤　　綾子	8.30	0.15	3.1	１		G3	３		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		G3	１		G3	６		IP
+松崎　祐太郎	5.40	0.15	2.7	２		IP	５		IP	４		IP	３		IP	２		IP	３		IP	３		IP	４		IP	不		IP	１		IP
+天野　　　誠	4.50	0.22	4.8	３		IP	５		IP	２		IP	４		IP	２		IP	４		IP	５		IP	３		IP	４		IP	６		IP
+鈴木　　　博	5.60	0.15	2.7	４		IP	４	5	IP	２		IP	５		IP	１		IP	４		IP	４		IP	２		IP	１		IP	５	5	IP
+寺嶋　　　雄	4.50	0.15	2.7	３		IP	６		IP	５		IP	４		IP	２		IP	２		IP	２		IP	５	6	IP	５		IP	４		IP
+渡辺　　真至	4.30	0.12	3.5	４		IP	６		IP	４		IP	２		IP	５		IP	５		IP	４		IP	２	5	IP	５		IP	２	5	IP

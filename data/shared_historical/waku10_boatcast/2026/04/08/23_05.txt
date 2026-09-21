@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　理央	9.30	0.14	3.3	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		G1
+菅野　はやか	3.90	0.20	4.5	２		IP	３		IP	６		IP	６		IP	６		IP	３		G3	３		IP	５		IP	４		IP	４		IP
+喜井　つかさ	6.30	0.14	1.7	２		G3	３		IP	３		IP	６		IP	５		IP	２		IP	４		G3	１	4	IP	１		G3	２		IP
+池田　　浩美	5.30	0.18	3.5	１		IP	５	3	IP	３		IP	６		IP	２		G3	４		IP	６		IP	２		IP	１		IP	５		IP
+前田　　紗希	5.00	0.11	2.7	５		IP	２		G1	４		G3	２		G3	４		G3	欠		G3	３		IP	３	4	IP	５		IP	４		G3
+福山　恵里奈	2.20	0.16	3.6	６		IP	６		IP	６		IP	５		G3	５		G3	３		IP	６		G3	３		IP	６		IP	６		G3

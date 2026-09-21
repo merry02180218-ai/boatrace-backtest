@@ -1,0 +1,8 @@
+data=
+1	0
+岩瀬　　裕亮	9.60	0.15	2.2	１		G1	１		G1	１		G1	１		G1	６		IP	１		IP	１		G2	１		IP	１		IP	１		IP
+入海　　　馨	6.10	0.13	3.4	２		G1	６		G1	２		G1	３		G1	６		G1	４		G1	６		SG	１		SG	３		G1	４		G1
+桐生　　順平	7.80	0.11	2.9	３		G1	１		G1	２		G1	３		IP	２	2	IP	４		G1	３		SG	１		G1	３		G1	４		SG
+長田　　頼宗	4.70	0.16	3.9	６		G1	４		G1	５		G1	４		G1	５		G1	５		IP	３		IP	３		SG	６		IP	１		IP
+深谷　　知博	5.80	0.15	3.3	４		G1	４		G1	２		G1	６		G1	２		G1	３		G1	５		G1	４		IP	３	3	IP	３		SG
+高野　　哲史	4.70	0.15	2.2	４		IP	５	5	G1	４		IP	３		IP	５	5	IP	６		IP	４		IP	１	5	IP	１	5	IP	５		G1

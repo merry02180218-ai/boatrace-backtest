@@ -1,0 +1,8 @@
+data=
+1	0
+倉尾　　大介	6.10	0.18	3.1	３		IP	１		IP	２		IP	４		IP	５		IP	１		IP	４		IP	１		IP	６		IP	３		IP
+明石　　正之	7.00	0.13	3.4	１		IP	４		G3	２		IP	３		IP	１		IP	２		IP	２		IP	２		IP	５		IP	３		IP
+大谷　　健太	4.50	0.18	3.6	６		IP	４		IP	３		IP	５		IP	１		IP	２		IP	４		IP	５		IP	４		IP	４		IP
+武藤　　綾子	4.40	0.18	3.3	３		IP	５		G3	３		IP	５		IP	３		IP	３		IP	６		IP	１		IP	４		IP	６	6	G3
+松瀬　　弘美	3.30	0.22	4.4	３		IP	２		G3	６		G3	５		G3	５	6	IP	４		IP	５		IP	６		IP	６		IP	３		IP
+森定　　晃史	4.40	0.19	4.6	２	5	IP	５		IP	４		IP	４		IP	３		IP	３		IP	３	4	IP	４		IP	５		IP	５		IP

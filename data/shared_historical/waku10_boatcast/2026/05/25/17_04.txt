@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　真聖	7.70	0.13	3.2	１		IP	６		IP	１		IP	２		IP	１		IP	１		IP	２		IP	４		IP	３		IP	１		IP
+松崎　祐太郎	6.40	0.14	2.9	３		IP	１		IP	３		IP	５	3	IP	１		IP	２		IP	５		IP	４		IP	３		IP	２		IP
+多田　　有佑	4.10	0.23	3.9	２		IP	５		IP	４	2	IP	４		IP	５		IP	５	4	IP	２		IP	４		IP	６		IP	３		IP
+葛原　　大陽	5.11	0.15	2.7	２		IP	５		IP	転	5	IP	４		IP	５		G1	２		G1	３		IP	２		IP	５		G1	５		G1
+石塚　　久也	5.90	0.16	3.2	３		IP	２		IP	２		IP	６		IP	４		IP	５		IP	４		IP	１		IP	４		IP	１		IP
+神田　　達也	3.40	0.16	3.0	５		IP	５		IP	６		IP	４		IP	２		IP	５		IP	４		IP	３		IP	４		IP	６		IP

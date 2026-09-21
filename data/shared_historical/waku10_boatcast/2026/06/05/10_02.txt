@@ -1,0 +1,8 @@
+data=
+1	0
+畑田　　汰一	9.10	0.12	1.9	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP	２		IP	１		IP	１		IP
+岩下　　巧斗	5.20	0.14	4.2	２		IP	５		IP	３		IP	２		IP	３		IP	２		IP	３		IP	５		IP	５		IP	４		IP
+高山　　敬悟	5.90	0.13	2.8	４		IP	１		IP	１		IP	２		IP	５		IP	２		IP	３		IP	３		G3	６		G3	４		IP
+福西　広太郎	2.90	0.15	2.7	３		IP	３		IP	４		IP	３		IP	６		IP	落	5	IP	５		IP	５		IP	６	6	IP	６		IP
+藤原　　仙二	6.78	0.16	3.3	４		G2	転		IP	３		IP	３		IP	２		IP	１		IP	２		IP	４		G2	４		G2	２		IP
+大月　　遊雅	3.10	0.18	3.7	６		IP	６		IP	２		IP	２		IP	４	5	IP	５	5	IP	６		IP	５		IP	５		IP	５		IP

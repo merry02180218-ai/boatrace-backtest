@@ -1,0 +1,8 @@
+data=
+1	0
+楠原　　翔太	8.60	0.11	1.8	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	４		IP
+中野　　和裕	2.60	0.18	3.1	５		IP	６		IP	４		IP	６		IP	４		IP	４		IP	５	3	IP	６		IP	６		IP	３		IP
+池田　　紫乃	4.80	0.17	4.0	５		IP	２		IP	６		IP	１		G3	２		IP	６		G3	３		G3	５		IP	２		IP	５		IP
+常盤　　海心	4.20	0.16	4.5	４		IP	３	5	IP	３		IP	６	5	IP	６		IP	５		IP	５		IP	１		IP	４		IP	３		IP
+滝沢　　芳行	4.20	0.11	2.2	６	4	IP	２		IP	５		IP	４		IP	６		IP	１		IP	４		G3	３		G3	５		IP	４		IP
+長嶺　真李愛	1.57	0.28	5.3	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP	６		IP									IP

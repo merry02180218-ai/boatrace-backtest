@@ -1,0 +1,8 @@
+data=
+1	0
+岡村　　慶太	8.40	0.16	3.2	１		G3	１		G3	１		IP	１		IP	６		G1	５		IP	１		IP	１		IP	１		IP	１		IP
+盛本　　真輔	5.90	0.18	4.0	２		IP	４		IP	２		IP	２		IP	５		IP	３		IP	３		IP	６		IP	１		IP	３		IP
+森野　　正弘	7.30	0.14	3.1	１	2	IP	５		IP	４	4	IP	２		IP	３		G1	２		G1	３		G2	２	2	IP	２		IP	１		IP
+木幡　　純也	5.00	0.22	4.4	３		IP	３		IP	５		IP	４		IP	２		IP	３		IP	２		IP	３		IP	５		IP	５		IP
+向井　　美鈴	5.50	0.22	5.2	５		IP	３		G1	３		IP	４		IP	２		IP	３		IP	３		G3	２		IP	３		IP	５	6	IP
+田川　　大貴	3.20	0.14	3.1	４		IP	５		IP	４		IP	６		IP	２		IP	３		IP	６		IP	４	5	IP	５		IP	転		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+鹿島　　敏弘	8.00	0.14	1.8	１		IP	１		IP	２		IP	１		IP	２		IP	２		IP	４		IP	１		IP	５		IP	１		IP
+石田　　勇斗	5.90	0.16	3.3	２		IP	３		IP	５		IP	３		IP	６		IP	４		IP	２		IP	２		IP	２		IP	２		IP
+馬場　　貴也	8.30	0.14	3.7	１		G1	３		G1	２		SG	３		SG	２		G1	４		G3	２		G1	３		G1	３		G1	１		G1
+山本　　幸也	3.80	0.18	3.3	１		IP	５		IP	５	6	IP	１	5	IP	６		IP	２		IP	５		IP	６		IP	落		IP	５		IP
+鈴木　結平太	2.30	0.18	3.0	２		IP	６	6	IP	４		IP	６		G3	６		IP	６		IP	６		IP	５		IP	落		IP	４		IP
+川上　　聡介	4.00	0.13	2.7	４		IP	１	5	IP	６		IP	５		IP	４		IP	６		IP	２		IP	５		IP	３		IP	５		G3

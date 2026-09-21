@@ -1,0 +1,8 @@
+data=
+1	0
+麻生　　慎介	8.50	0.16	2.9	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		G1	５		IP	１		IP	４		IP
+北川　　敏弘	4.70	0.18	3.4	４		IP	３		IP	２		IP	４		IP	１		IP	４		IP	４		IP	６		IP	Ｆ		IP	３	3	IP
+谷口　　知優	5.10	0.13	2.9	１		IP	４		IP	１		IP	６		IP	４		IP	４		IP	１		IP	４	2	IP	４		IP	転		IP
+井上　　未都	5.00	0.14	3.0	５		IP	６		IP	３	3	IP	５		IP	４		IP	３		IP	３		IP	３		IP	３		IP	１		G1
+松尾　　基成	3.20	0.17	3.7	５		IP	５		IP	２		IP	３		IP	５		IP	５		IP	６	6	IP	４		IP	６		IP	４		IP
+土屋　実沙希	4.56	0.21	4.7	６		IP	１	5	IP	転		IP	転		IP	３		IP	４		IP	２		IP	４	5	IP	５		IP	３		IP

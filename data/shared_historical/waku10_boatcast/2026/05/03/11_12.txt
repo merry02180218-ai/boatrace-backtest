@@ -1,0 +1,8 @@
+data=
+1	0
+馬場　　貴也	9.40	0.12	2.4	１		IP	１		IP	１		IP	１		IP	４		G1	３		G1	１		G1	１		G1	３		G1	１		SG
+松山　　将吾	7.60	0.15	2.9	２		IP	１		IP	４		IP	１		IP	２		G3	３	3	G3	２	6	IP	１	3	IP	２		G1	６		G1
+藤原　　孝斗	5.30	0.15	3.7	４		IP	３		IP	１		IP	５		IP	５	4	IP	２		IP	１		IP	６		IP	５		IP	２		IP
+夏山　　亮平	5.78	0.12	2.4	３		IP	５		IP	欠		IP	５		G3	４		IP	２		IP	３		IP	３		IP	１		IP	２		IP
+泥谷　　一毅	4.00	0.17	4.6	３	4	IP	４		IP	４	4	IP	４		IP	４		IP	４		IP	４		IP	４		IP	５		IP	４		IP
+廣瀬　　　凜	5.10	0.19	4.9	３		IP	４	5	IP	３		IP	５		IP	３		IP	３		IP	５		IP	２		IP	３	5	IP	４		G2

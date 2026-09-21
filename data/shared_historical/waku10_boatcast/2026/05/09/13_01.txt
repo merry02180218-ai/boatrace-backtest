@@ -1,0 +1,8 @@
+data=
+1	0
+松下　　直也	4.90	0.21	4.1	１		IP	５		IP	６		IP	１		IP	２		IP	４		IP	６		IP	６		IP	４		IP	２		IP
+大崎　　　翔	5.40	0.15	3.5	３		IP	６		IP	６		IP	１		IP	４		IP	４		IP	２		IP	２		IP	５		IP	１		IP
+小坂　　尚哉	6.70	0.10	2.5	３		IP	３		IP	１		IP	３		IP	３		IP	４		G3	２		IP	５		IP	２	4	IP	１		G1
+森安　　弘雅	6.00	0.18	4.0	５		IP	３		IP	３		IP	１		IP	４		IP	３		IP	４		IP	３		IP	２		IP	２		IP
+小野寺　智洋	3.60	0.12	2.6	３		IP	５		IP	４		IP	５		IP	５		IP	４		G3	５		G3	３		IP	３	6	IP	５		IP
+薗頭　　　心	2.00	0.17	3.5	６		IP	６		IP	６		IP	５		IP	５		IP	５		IP	６		IP	６		IP	６		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+原田　　篤志	9.40	0.16	2.9	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	３		IP
+加木　　　郁	4.50	0.19	4.7	４		IP	５		IP	３		IP	２		IP	６		IP	３		IP	３		IP	４		IP	３		IP	５		IP
+後藤　　翔之	5.40	0.12	2.4	１		IP	３		IP	３		IP	１		IP	５		IP	５		IP	１		IP	４		IP	５		G2	６		IP
+杉村　　賢也	3.89	0.18	3.3	３	3	IP	５	6	IP	３		IP	不		IP	５		IP	５		IP	５		IP	６		G3	１		IP	４		IP
+楠原　　正剛	3.90	0.14	2.4	５		IP	５		IP	３		IP	６		IP	３		IP	５		IP	２		IP	２		IP	５		G1	６	6	IP
+三川　　昂暁	3.80	0.21	4.4	３		IP	３		IP	５		IP	６		IP	５		IP	４		IP	３		IP	３		IP	４		IP	６		IP

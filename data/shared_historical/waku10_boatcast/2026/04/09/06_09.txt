@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　宏典	7.20	0.21	4.7	５		IP	５		IP	１		IP	１		IP	５		IP	１		IP	２		IP	１		IP	２		IP	１		IP
+宮脇　　遼太	6.70	0.17	2.9	１		IP	３		IP	２		IP	３		IP	３		IP	２		IP	１		IP	１		IP	６		IP	５		IP
+藤原　　　駿	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+浦野　　　海	3.10	0.18	3.5	５		IP	３		IP	２		IP	６		IP	６		IP	５		IP	５	3	IP	５		IP	６		IP	３		IP
+島川　　海輝	4.80	0.19	3.7	２	6	IP	４		G2	５		G2	４		IP	４		IP	２	4	IP	４		IP	３		IP	４		IP	５		IP
+牧村　　俊輝	3.10	0.22	4.3	６		IP	５		IP	４		IP	６		IP	５	5	IP	４		IP	６		IP	３		IP	４		IP	３		IP

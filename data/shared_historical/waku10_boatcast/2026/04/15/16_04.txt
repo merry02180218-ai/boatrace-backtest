@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　勝博	5.80	0.24	4.5	５		IP	５		IP	１		IP	５		IP	１		IP	１		IP	４		IP	２		IP	３		IP	４		IP
+真庭　　明志	5.50	0.13	3.0	転		IP	３		IP	２		IP	２		IP	２		IP	２		IP	１		IP	６		IP	４		IP	５		IP
+酒見　　峻介	4.11	0.19	4.0	６		IP	転		IP	１		IP	５	4	IP	４		IP	３		IP	４		IP	４		IP	５	4	IP	４		IP
+中辻　　崇人	7.22	0.17	3.4	３		IP	４		G1	欠		G1	２		IP	１		IP	３		G1	３		G1	２	3	IP	４		IP	１		G3
+谷口　　知優	3.80	0.19	3.2	５		IP	６		IP	６		IP	２		IP	５		IP	３	6	IP	４		IP	３		IP	４		IP	４	4	IP
+高橋　　嗣穏	1.10	0.17	3.6	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	転		IP	６		IP

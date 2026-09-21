@@ -1,0 +1,8 @@
+data=
+1	0
+中尾　　彩香	8.40	0.18	2.9	２		IP	１		IP	１		IP	３		IP	２		G3	１		G3	３		IP	１		IP	２		IP	２		IP
+大塚　　康雅	4.70	0.15	3.1	２		IP	１		IP	４		IP	５	3	IP	６		IP	４	3	IP	５		IP	２		IP	３		IP	５		IP
+入澤　　友治	4.80	0.12	2.4	３		IP	６		IP	５		IP	３		IP	５	5	IP	６		IP	３		IP	２		IP	３		IP	１	4	IP
+服部　　幸男	7.20	0.14	2.7	５		IP	３	5	G1	２		IP	４		IP	２		IP	３		IP	２		IP	２		IP	１	6	IP	１		IP
+長野　　未来	1.30	0.26	5.2	６		IP	５	6	IP	５		IP	６		IP	６		IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP
+鈴木　　孝明	3.40	0.17	2.7	６		IP	４		IP	５		IP	５		IP	３		IP	６		IP	３		IP	５		IP	４		IP	３		IP

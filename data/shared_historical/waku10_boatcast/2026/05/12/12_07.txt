@@ -1,0 +1,8 @@
+data=
+1	0
+石倉　　洋行	9.10	0.15	2.9	１		IP	１		IP	１		G1	２		G1	１		IP	１		IP	１		IP	１		IP	２		IP	５		G1
+今泉　　　徹	5.50	0.18	3.6	４		IP	２		IP	６		IP	３		IP	４		IP	４		IP	２		IP	２		IP	４		IP	２		IP
+樋口　由加里	5.70	0.18	3.2	３		G3	６		G3	４		IP	２		IP	４		IP	１		IP	２		IP	２		IP	５		G1	４		G1
+田邉　　亮蔵	4.40	0.20	3.1	５		IP	５		IP	４		IP	５		IP	２		IP	２		IP	３		IP	４		IP	５		IP	３		IP
+堀内　　亜海	1.40	0.21	4.5	５	6	G3	６	6	G3	６	6	G3	６		G3	６	6	IP	６		IP	６		IP	６		IP	６		IP	４	6	IP
+井内　将太郎	4.70	0.16	3.1	３		IP	５		IP	３		IP	３		IP	４	5	IP	３	5	IP	４		IP	６		IP	４		IP	２	4	IP

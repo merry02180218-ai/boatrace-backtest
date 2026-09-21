@@ -1,0 +1,8 @@
+data=
+1	0
+村上　　彰一	6.00	0.16	4.1	２		IP	５		IP	４	2	IP	２		IP	２		IP	２		IP	３		IP	５		IP	３		IP	２		IP
+岡田　　憲行	4.70	0.20	3.7	１		IP	６		IP	３		IP	５		IP	３		IP	４		IP	４		IP	５		IP	３		IP	３		IP
+海老澤　泰行	4.10	0.16	3.2	３		IP	４		IP	２		IP	５		IP	２		IP	Ｆ		IP	６		IP	４		IP	４		IP	４		IP
+金子　　賢志	5.80	0.12	2.2	４		IP	５		IP	２		IP	２		IP	２		G1	５		IP	３		IP	４		IP	１		IP	４		G1
+井上　　　茂	4.30	0.16	3.4	３		IP	６		IP	２	4	IP	２		IP	６		IP	６	4	IP	５		IP	３		IP	４		IP	４		IP
+原田　　朱理	1.30	0.21	5.4	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP	転		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+後藤　　孝義	6.00	0.18	3.3	１		IP	５		IP	１		IP	４		IP	エ		IP	２		IP	１		IP	２		IP	６		IP	６	3	IP
+渡邉　　和将	7.00	0.15	2.6	６		IP	４		IP	１		IP	３		IP	６		G1	２		G1	１		IP	１		IP	２	1	IP	１		IP
+上村　　宏太	6.60	0.18	3.6	４		IP	３	4	IP	２		IP	３		IP	４		IP	１		IP	４		IP	４		IP	１		IP	１		IP
+安達　　裕樹	7.50	0.16	3.0	２		IP	１		IP	４		IP	１		IP	３		G2	５		G2	２		IP	２		IP	２		IP	２		IP
+吉田　　宗弘	2.20	0.26	5.4	３		IP	６		IP	５		IP	６		IP	６		IP	５		IP	５		IP	５		IP	４		IP	６		IP
+井手　　良太	4.40	0.14	4.1	３	5	IP	２		IP	５		IP	３		IP	５		IP	６		IP	２		IP	３		IP	４		IP	６		IP

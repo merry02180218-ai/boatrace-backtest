@@ -1,0 +1,8 @@
+data=
+1	0
+石丸　　海渡	10.00	0.10	2.5	１		IP	２		IP	１		G1	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+大野　　芳顕	7.40	0.12	2.3	２		IP	２		IP	２		IP	２		IP	２		IP	１		IP	４		G3	３		G3	３		G3	２		IP
+乃村　　康友	6.00	0.16	3.4	６		IP	２		IP	３		G3	６		G3	１		IP	３		IP	２	4	IP	２		IP	２		IP	４		IP
+眞鳥　　章太	4.70	0.18	3.3	４		IP	６		IP	３		IP	１		IP	Ｆ	5	IP	２		IP	４		IP	１		IP	５		IP	５		IP
+森　　　陽多	1.70	0.18	3.0	６	6	IP	６		IP	６		IP	６	6	IP	５		IP	転		IP	５		IP	５	6	IP	６		IP	３		IP
+堤　　　啓輔	3.30	0.21	4.0	２	3	IP	４		IP	６		IP	５	5	IP	４		IP	６		IP	６	5	IP	１		IP	６		IP	６		IP

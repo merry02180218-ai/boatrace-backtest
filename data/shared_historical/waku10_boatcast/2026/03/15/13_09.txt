@@ -1,0 +1,8 @@
+data=
+1	0
+齊藤　　　仁	9.56	0.14	1.8	１		G1	１		G1	欠		IP	１		IP	１		IP	１		IP	１		IP	４		G3	１		G3	１		IP
+片岡　　雅裕	7.20	0.10	2.5	６		G1	１		G1	６		G1	１		IP	２		G1	１	4	G1	２	3	IP	３		IP	６		IP	１		SG
+中澤　　和志	7.50	0.18	3.0	２		IP	２	4	IP	１		IP	１		IP	１		G1	３		G1	５		G1	１		IP	３		IP	５		IP
+高野　　哲史	4.60	0.16	3.4	３		G1	４		IP	６		G1	５		G1	転		IP	５		IP	２		IP	３		IP	３		G1	３		IP
+大上　　卓人	6.20	0.16	2.9	５		G1	６		G1	４		G1	３		G1	１		IP	５		G1	１		IP	２		G1	３		SG	４		G1
+萩原　　秀人	4.80	0.14	3.9	１	5	IP	２		IP	４		G3	６		G3	５		G1	４		G1	５		G1	４		IP	３		IP	６		G2

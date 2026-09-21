@@ -1,0 +1,8 @@
+data=
+1	0
+四宮　　与寛	5.90	0.14	3.1	６		IP	２	2	IP	６		IP	１		IP	２		IP	６		IP	１		IP	２		G1	１		IP	６		IP
+榮田　　将彦	5.30	0.15	2.7	４		IP	２		IP	５		IP	１		IP	３		IP	２		IP	６		IP	５	3	G3	２		G3	４		IP
+仁科　さやか	4.60	0.14	3.4	６		IP	１		IP	５	4	IP	６		IP	５		IP	２		IP	２		G3	２		G3	５		G3	４		IP
+大神　　康司	5.40	0.16	2.0	３	3	IP	３	2	IP	１	2	IP	４	2	IP	４	2	IP	４	1	IP	３	3	IP	４		IP	３	3	IP	４		IP
+田中　　孝明	3.90	0.20	4.3	６		IP	４		IP	４		IP	２		IP	４		IP	５		IP	４		IP	４	6	IP	４		IP	４		IP
+垂水　　　悠	3.40	0.13	2.5	２		IP	４		IP	６		G1	６		IP	６		IP	４		IP	４		IP	５		IP	４		IP	４		IP

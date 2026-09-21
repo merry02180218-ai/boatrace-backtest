@@ -1,0 +1,8 @@
+data=
+1	0
+森　　　弘行	4.30	0.23	4.4	４		IP	５		IP	４		IP	３		IP	５		IP	１		IP	２		IP	６		IP	５		IP	４		IP
+服部　　　剛	5.70	0.23	4.4	５		IP	２		IP	３		IP	２		IP	２		IP	６		IP	５		IP	４		IP	２		IP	１		IP
+小池　　修平	8.00	0.16	2.5	３		G1	３	4	SG	２		G1	１	4	IP	５		G1	２		G1	２		IP	３		IP	１		IP	１	2	IP
+三村　　岳人	6.50	0.08	2.4	３		IP	１		IP	１		IP	３		IP	１		IP	２		IP	５		IP	２		IP	６		IP	４		IP
+鈴木　　　博	5.10	0.18	3.5	４		IP	３		IP	５		IP	３		IP	６		IP	２	4	IP	３		IP	４		IP	２		IP	３		IP
+杉江　　浩明	4.20	0.19	4.2	３		IP	４		IP	３		IP	３	5	IP	６		IP	３		IP	２	5	IP	５		IP	５		IP	６		IP

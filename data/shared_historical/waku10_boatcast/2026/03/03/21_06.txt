@@ -1,0 +1,8 @@
+data=
+1	0
+瀧川　　千依	5.90	0.23	4.3	１		IP	５		IP	１		IP	４		IP	３		IP	３		IP	４		IP	１		IP	６		IP	３		IP
+岡谷　　健吾	5.00	0.17	3.6	６		IP	６		IP	３		IP	５	5	IP	１		IP	２		IP	２	5	IP	４		IP	５		IP	２		IP
+西村　　　歩	4.50	0.18	3.8	６		IP	４		IP	４		IP	２		G3	４		G3	２		IP	５		G3	３		G3	３		G3	５		G3
+高橋　　二朗	3.40	0.20	3.4	４		IP	３		IP	６		IP	３	3	IP	転		IP	６		IP	４		IP	５		IP	５		IP	２		G3
+吉武　　真也	1.90	0.22	4.7	５		IP	５		IP	５		IP	６		IP	５		IP	５		IP	４		IP	６		IP	６		IP	５		IP
+長尾　　章平	5.00	0.18	4.3	４		IP	３	5	IP	４		G1	２		IP	４	4	IP	５	5	IP	３	5	G1	２	5	IP	５		G1	５		G1

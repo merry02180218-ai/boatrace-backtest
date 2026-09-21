@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　　航	9.50	0.12	2.8	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		G2	１		IP	２		IP	１		IP
+竹井　　貴史	9.00	0.19	3.8	１		IP	４		IP	２		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP
+久田　　敏之	7.40	0.14	2.5	１		IP	２		IP	３		IP	５	4	G1	３		G1	２		G1	２		G1	２		IP	５		G1	２		G1
+船岡　洋一郎	6.70	0.12	2.8	５		IP	２		IP	１		IP	５	6	IP	１		IP	２		IP	４		IP	３		G1	２		IP	３		IP
+上田　　龍星	5.90	0.14	3.2	１	3	IP	３		IP	２		IP	転	2	IP	３		G1	４		G1	１	4	SG	５		IP	２		G1	妨		G2
+寺田　　　祥	4.80	0.13	3.2	４		IP	４		G1	４	5	IP	６		IP	１	5	IP	４		IP	３	4	G1	４	5	IP	４		G1	４	4	IP

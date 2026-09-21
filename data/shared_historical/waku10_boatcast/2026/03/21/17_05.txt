@@ -1,0 +1,8 @@
+data=
+1	0
+大山　　千広	9.90	0.11	1.5	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+西田　　和加	2.00	0.25	4.4	４		IP	６		IP	５		IP	４		IP	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP
+長尾　　萌加	5.10	0.16	3.3	３		IP	３		IP	４		IP	４		IP	２		IP	３		IP	４		IP	６		IP	４		IP	２		IP
+池田　　浩美	4.40	0.19	3.8	５	3	IP	３		IP	６		IP	２		G3	４		IP	６		IP	２		IP	１		IP	５		IP	６	6	IP
+實森　　美祐	4.11	0.17	3.0	４		IP	３	4	IP	３		IP	５		IP	転		G1	５		G1	６		IP	３		IP	３		IP	５		G1
+野田　　亜湖	1.10	0.31	5.8	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

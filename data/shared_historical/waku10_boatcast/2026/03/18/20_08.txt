@@ -1,0 +1,8 @@
+data=
+1	0
+川原　　祐明	9.70	0.16	4.3	４		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1	１		G1	１		IP
+興津　　　藍	7.50	0.13	2.9	３		IP	２		IP	３		IP	２		G1	２		IP	１		IP	２		IP	３		IP	３		IP	２		IP
+村田　　修次	6.67	0.17	2.6	３	2	IP	３		IP	不		IP	３		IP	１		IP	２		IP	４		IP	４		IP	１		G2	４		G2
+佐藤　ほのか	5.40	0.15	2.5	２		IP	２	3	IP	２		G3	２		G3	６		IP	２		G3	５		IP	６		IP	５		IP	２		IP
+熊本　　英一	2.20	0.22	4.8	５	6	IP	６		IP	６		IP	６	6	IP	６	6	IP	２		IP	６		IP	５		IP	４		IP	６		IP
+上岡　　巧汰	2.00	0.16	3.7	５		IP	６		IP	４		IP	５		IP	欠		IP	６		IP	６		IP	５		IP	６		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+徳増　　秀樹	9.90	0.15	2.3	１		IP	１		IP	１		IP	１		IP	１		G1	１		IP	１		IP	１		IP	１		IP	２		IP
+後藤　　正宗	5.80	0.19	3.4	４		IP	３	3	IP	３	3	IP	２		IP	５		IP	３		IP	２		IP	５		IP	２		IP	２		G3
+飯山　　　泰	5.50	0.14	3.0	２		IP	２		IP	５		G1	４		G1	６		G1	６		IP	４		IP	３		IP	１		IP	２		IP
+杉田　　篤光	5.11	0.25	4.4	５		IP	４		IP	４		IP	１		IP	４		IP	落		IP	３		IP	３		IP	５		IP	２		IP
+大澤　　普司	4.80	0.20	3.5	３		IP	３		G1	６		G1	１		IP	２		IP	６		IP	６	6	IP	６		IP	１		IP	５		IP
+大平　誉史明	4.50	0.20	4.8	３		IP	４		IP	３		IP	６		IP	４		IP	５		IP	４		IP	３		G3	５		IP	１	5	IP

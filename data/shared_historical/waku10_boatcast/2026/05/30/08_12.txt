@@ -1,0 +1,8 @@
+data=
+1	0
+寺田　　千恵	9.80	0.14	2.5	１		IP	２		IP	１		IP	１		G2	１		G2	２		G2	２		G1	１		G3	１		G3	１		G3
+木下　　大將	6.80	0.13	2.4	１		IP	５		IP	１		IP	１		IP	４		IP	３		IP	３		IP	２		IP	２		IP	４		IP
+山本　　光雄	5.20	0.20	3.9	１		IP	４		IP	５	2	IP	５		IP	２		IP	２		IP	４		IP	４		IP	２		IP	５		IP
+香川　　颯太	3.40	0.18	3.1	５	5	IP	６		IP	６	6	IP	５		IP	３		IP	２		IP	４		IP	２		IP	６		IP	６	6	IP
+近江　　翔吾	5.50	0.14	3.0	５	6	IP	４		IP	３		IP	２		G1	５		IP	２		IP	４		IP	２		IP	２		IP	４		IP
+赤羽　　克也	3.60	0.17	4.5	５		IP	４		IP	３		IP	５		IP	５		IP	５		IP	４	5	IP	４	5	IP	４		IP	３	5	IP

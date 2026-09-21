@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　英児	8.44	0.20	4.1	２		IP	５		IP	１		IP	２		IP	１		IP	１		IP	欠		IP	１		IP	２		IP	１		IP
+横澤　　剛治	6.50	0.16	2.7	５		IP	２		IP	２		IP	１		IP	３		IP	４		IP	５		G1	４		IP	１		IP	１		IP
+長野　　道臣	5.50	0.22	4.1	５		IP	３		IP	３		IP	６		IP	３		IP	１		IP	２		IP	５		IP	３		IP	２		IP
+藤田　　康生	1.60	0.10	2.5	５	6	IP	６	6	IP	Ｆ	6	IP	６	6	IP	４	6	IP															IP
+石田　　章央	5.60	0.15	3.1	４		IP	６		IP	１		IP	３		IP	６	6	IP	２		IP	２		IP	２		IP	５		IP	３		IP
+杉田　　篤光	3.70	0.27	5.0	５		IP	６		IP	５		IP	３		G3	４		G3	３	5	IP	２		IP	３		IP	６		IP	６		IP

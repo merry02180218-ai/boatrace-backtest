@@ -1,0 +1,8 @@
+data=
+1	0
+馬場　　貴也	10.00	0.10	2.1	１		G1	１		SG	１		SG	３		G1	１		G1	１		IP	３		IP	１		IP	１		IP	１		IP
+實森　　美祐	8.00	0.14	3.7	２		SG	５		G2	３		IP	２		IP	２		IP	１		IP	２		IP	２		IP	２		G1	１		IP
+藤原　　碧生	6.10	0.16	3.5	３		SG	５		G1	２		IP	３		IP	３		IP	２		IP	６		G1	１		G1	５		G1	５		G1
+永井　　彪也	7.20	0.10	1.6	１		IP	２		IP	２		G3	３		IP	３		G3	４		IP	１		IP	１		IP	５		G1	３		G1
+桑原　　　悠	7.00	0.15	3.3	２		G1	１		G1	４		IP	２		IP	１		IP	２		IP	４		IP	４		IP	４		G1	３		G1
+山田　　和佐	4.56	0.14	2.9	２		IP	３		IP	２		IP	５		IP	２		IP	６		IP	５		IP	５		IP	転		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+後藤　　美翼	7.70	0.22	3.7	２		IP	１		IP	１		G3	１		G3	１		G3	２		G3	６		IP	３		IP	２		IP	３		IP
+松尾　　夏海	6.30	0.15	3.1	４		IP	１		IP	３		G1	２		G1	１		G3	２		IP	落		G3	４		G3	５		G2	２		IP
+松本　　　怜	4.90	0.22	3.4	３		IP	１		IP	３		IP	１		IP	４		IP	５		IP	５		IP	５		IP	６		IP	３		IP
+宮崎　　安奈	4.40	0.13	2.5	４	2	IP	４		IP	３		IP	５		IP	４		IP	５		IP	４		IP	１	5	IP	４		IP	４		IP
+瀧川　　千依	3.50	0.20	4.2	６		IP	４		IP	落		IP	４		IP	４		IP	４		IP	５		IP	２		IP	４		IP	４		IP
+阿部　　未侑	1.10	0.20	3.9	６		IP	６		IP	６		IP	転		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP

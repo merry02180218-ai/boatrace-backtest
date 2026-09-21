@@ -1,0 +1,8 @@
+data=
+1	0
+竹間　　隆晟	7.70	0.12	2.4	１		IP	１		IP	１		IP	２		IP	１		G1	１		IP	４		IP	５		IP	５		IP	１		IP
+河内　　一馬	3.70	0.23	4.5	５		IP	５	3	IP	４		IP	４		IP	３		IP	３		IP	４		IP	３	4	IP	６		IP	５		IP
+佐藤　　太亮	5.10	0.18	4.2	３		IP	５	2	IP	２		IP	５		IP	２		IP	５		IP	３		IP	２		IP	６		IP	２		IP
+田中　　駿兵	6.40	0.14	2.0	１		IP	１		IP	３		G1	５		IP	２		IP	２		IP	４		IP	３		IP	６		IP	２		IP
+屋良　　龍紀	2.80	0.15	2.8	６		IP	５		IP	６		IP	３		IP	４		IP	３	4	IP	５		IP	５	6	IP	６		IP	５		IP
+高山　　弘斗	3.40	0.20	2.9	４		IP	２		IP	６		IP	５		IP	６		IP	６		IP	６		IP	２		IP	４		IP	４		IP

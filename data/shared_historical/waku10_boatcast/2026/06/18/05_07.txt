@@ -1,0 +1,8 @@
+data=
+1	0
+柳内　　敬太	9.40	0.16	2.7	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+一柳　　和孝	4.00	0.15	3.0	５		G3	６	3	G3	３		IP	Ｆ		IP	２		IP	２		IP	３		IP	６		IP	４	3	IP	４		IP
+青木　　玄太	7.00	0.14	3.2	５		G1	５		G1	２		IP	１		IP	５		IP	１		IP	２		IP	２		IP	２		G1	２		G3
+川口　　貴久	4.00	0.18	3.4	３		IP	３		IP	４		IP	６		IP	６	5	IP	５	3	IP	１	5	IP	４		IP	４		IP	５		IP
+真田　　聖也	1.30	0.12	2.9	６		IP	５	6	IP	６		IP	５		IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP
+大町　　利克	1.80	0.23	5.4	６		IP	６		IP	４		IP	６		IP	６		IP	５		IP	５		IP	５		IP	５		IP	５	5	IP

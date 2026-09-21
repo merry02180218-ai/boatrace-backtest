@@ -1,0 +1,8 @@
+data=
+1	0
+近藤　雄一郎	8.00	0.15	2.6	１		IP	１		IP	４		G3	１		IP	２		IP	３		IP	１		IP	２		IP	３		IP	２		IP
+佐々木　和伸	7.00	0.15	2.9	６		IP	３		IP	６		IP	１		IP	２		IP	２		IP	２		IP	１		IP	１		IP	２		IP
+小川　　時光	4.56	0.13	2.8	３	4	IP	３	2	IP	５		IP	２		IP	転		IP	３		IP	６		IP	６		IP	６		IP	１	4	IP
+樋口　　範政	2.20	0.17	4.8	６		IP	６		IP	４		IP	５	5	IP	５		IP	４		IP	６		IP	５		IP	６		IP	４		IP
+金子　　　萌	6.50	0.12	2.9	２		IP	２	4	IP	２	6	IP	３		IP	６	4	IP	２		IP	３		IP	３		IP	４		IP	２		IP
+池永　　　太	4.20	0.15	3.8	６		G2	２		IP	４		G1	５		G1	５		IP	３	5	IP	６		G1	４		G1	５		G1	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+浜本　　裕己	9.00	0.13	1.8	１		IP	４		IP	２		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+森　　　悠稀	5.90	0.18	3.0	２		IP	３		IP	３		IP	３		IP	２		IP	５		IP	２		G2	２		IP	４		IP	５		IP
+下河　　誉史	4.60	0.18	3.5	６		IP	６		IP	３		IP	５		IP	４		IP	３		IP	４		IP	１		IP	３		IP	３		IP
+秋山　　広一	5.70	0.20	3.4	６		IP	５		IP	３		IP	１		IP	２		G1	１		G1	４		IP	３		IP	Ｆ		IP	２		IP
+宮本　　琉正	1.90	0.21	2.3	３		IP	６		IP	５		IP	５	6	IP	５		IP	６		IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP
+宮武　　英司	3.10	0.18	3.7	４	5	IP	３		IP	５		IP	５		IP	４		IP	５		IP	５		IP	５		IP	６		IP	３		IP

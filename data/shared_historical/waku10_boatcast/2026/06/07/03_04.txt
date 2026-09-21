@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　　猛	7.00	0.20	3.1	５		IP	１		IP	３		IP	１		IP	２		IP	３		IP	２		IP	１		IP	５		IP	２		IP
+植田　　太一	5.50	0.16	3.5	３		IP	６		IP	４		IP	３		IP	４		IP	３		IP	４		IP	１	1	IP	３		IP	２		IP
+中嶋　　達也	2.11	0.19	4.5	５		IP	５		IP	５		IP	５		IP	転	4	IP	４	4	IP	５		IP	５		IP	６		IP	５		IP
+大崎　　　翔	3.50	0.14	3.7	３		IP	５		IP	２		IP	２		IP	６	6	IP	５		IP	６		IP	５		IP	４		IP	６		IP
+櫻井　　　隼	2.40	0.29	5.3	３		IP	６	6	IP	４		IP	５		IP	６	6	IP	不	6	IP	３	6	IP	６	6	IP	５	6	IP	６	6	IP
+大澤　　誠也	2.40	0.21	4.3	６		IP	６		IP	５		IP	４		IP	６		IP	４		IP	６		IP	４		IP	４		IP	５		IP

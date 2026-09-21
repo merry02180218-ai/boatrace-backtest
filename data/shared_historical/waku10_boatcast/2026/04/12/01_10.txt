@@ -1,0 +1,8 @@
+data=
+1	0
+白井　　英治	8.50	0.13	2.9	１		G1	１		G1	４		SG	３	2	SG	１		G1	２		G3	６		G3	１		G1	２		G1	２		G1
+吉田　　拡郎	5.30	0.13	3.1	３		G1	２		G1	６		G1	２		G1	２		IP	６		IP	６		G1	３		G1	４		G1	５		G1
+和田　　兼輔	7.00	0.14	3.1	３		G1	１		IP	５		G1	５		G1	２	4	IP	２		IP	１	2	IP	５	4	G1	３		G1	１		IP
+山崎　　　郡	6.70	0.14	2.6	３		G1	５		G1	１		IP	３		G1	３		G1	５		IP	１		IP	４		G1	４		G1	１		G1
+金子　　拓矢	8.10	0.13	2.5	３		IP	４		IP	２		IP	１		IP	１		IP	２	4	IP	１		IP	２		IP	２		IP	２		IP
+秦　　　英悟	5.20	0.13	3.2	５		IP	２		IP	６		SG	４		G1	４		G1	６		G1	１		IP	１	5	IP	６		G1	４		G2

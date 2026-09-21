@@ -1,0 +1,8 @@
+data=
+1	0
+宮崎　心之介	7.29	0.15	2.9	３		IP	１		IP	４		IP	１		IP	１		IP	６		IP	１		IP									IP
+江夏　　　満	5.40	0.18	3.8	２		IP	５		IP	３		IP	５		G1	５		G1	１		IP	３		IP	３		IP	３		IP	４		IP
+黒崎　　竜也	7.20	0.15	2.9	３		IP	２		IP	４		IP	３		IP	２		IP	３		IP	１		IP	２	4	IP	３	6	IP	１		IP
+中島　　　航	2.30	0.24	4.0	６		IP	６		G3	５		G3	４		IP	４		IP	６		IP	６	6	IP	５		IP	３		IP	６		IP
+幸野　　史明	4.00	0.14	3.8	３		IP	４		IP	３		IP	６	6	IP	３		IP	３		IP	６	6	IP	６		IP	６		IP	２		IP
+松本　　一毅	3.00	0.18	4.1	４	5	IP	４		IP	６		IP	３		IP	３		IP	６		IP	４		IP	６		IP	６		IP	５		IP

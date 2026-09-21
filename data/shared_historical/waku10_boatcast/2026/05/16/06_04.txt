@@ -1,0 +1,8 @@
+data=
+1	0
+前田　　聖文	7.80	0.15	3.3	１		IP	１		IP	１		IP	２		IP	４		IP	６		IP	１		G1	１		IP	３		IP	２		IP
+渥美　　卓郎	4.40	0.21	3.7	３		IP	５	4	IP	４		IP	１		IP	３		IP	５		IP	５		IP	５		IP	３		IP	４		IP
+堂原　　洋史	3.22	0.15	3.4	４		IP	６		IP	５		IP	転		IP	５	4	IP	４	4	IP	５		IP	５		IP	３		IP	３		IP
+太田　　　潮	2.30	0.16	3.3	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	３		IP	３		IP	４		IP	６		IP
+土屋　　太朗	3.90	0.21	4.4	５		IP	３		IP	５		IP	５	6	IP	２	4	G3	５		IP	４		IP	６		IP	３		IP	３		IP
+三原　　　司	5.10	0.19	4.2	１	3	IP	３	5	IP	３		G3	３		IP	６	5	IP	５		IP	５		IP	３		IP	５		IP	２		IP

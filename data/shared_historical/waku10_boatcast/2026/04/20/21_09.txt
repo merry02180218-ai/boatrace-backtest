@@ -1,0 +1,8 @@
+data=
+1	0
+柴田　　朋哉	6.10	0.16	2.7	５		IP	６		IP	１		IP	３		IP	５		IP	１		IP	３		IP	１		IP	３		IP	２		IP
+森　　　智也	6.30	0.16	3.6	５		IP	３		IP	１		IP	１		IP	１		IP	３	4	IP	２		IP	６		IP	３		IP	４		IP
+日笠　　勝弘	2.70	0.15	4.1	４		IP	４		IP	５		IP	５		IP	６		IP	４		IP	３		IP	５		IP	エ		IP	５		IP
+田中　太一郎	4.80	0.15	2.9	６		IP	３		IP	２		IP	２		IP	５		IP	２		IP	３		IP	４		IP	６		IP	４		IP
+楠原　　正剛	4.20	0.19	3.4	３		IP	５		IP	２		IP	２		IP	５		G1	６	6	IP	４		IP	４		IP	４		IP	５		G3
+飯田　　庄吾	2.40	0.22	4.9	５		IP	６		IP	４		IP	６		IP	６		IP	３		IP	５		IP	５		IP	６		IP	４		IP

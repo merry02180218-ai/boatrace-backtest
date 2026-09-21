@@ -1,0 +1,8 @@
+data=
+1	0
+烏野　　賢太	9.22	0.16	4.1	１		IP	１		IP	１		IP	３		IP	１		G1	３		IP	１		IP	１		IP	１		IP	転		IP
+吉岡　　　誠	4.80	0.18	3.2	１		IP	４		IP	２		IP	４		IP	６		IP	３		IP	３		IP	３		IP	６		IP	５		IP
+眞鳥　　章太	5.70	0.15	2.9	４		IP	３		IP	２		IP	６		IP	３		IP	４		IP	１		IP	５		IP	１		IP	３		IP
+池田　　浩美	3.90	0.20	4.1	６		IP	２		G3	４		IP	６		IP	２		IP	１		IP	５		IP	６	6	IP	５		IP	６		IP
+宮本　　琉正	1.60	0.21	3.0	６	6	IP	６	6	IP	６	6	IP	５	6	IP	５	6	IP	６	6	IP	４	6	IP	５	6	IP	６	6	IP	６	6	IP
+横田　　海人	1.80	0.20	3.5	６		IP	５		IP	６		IP	６		IP	５		IP	５	5	IP	６	5	IP	３		IP	６		IP	６		IP

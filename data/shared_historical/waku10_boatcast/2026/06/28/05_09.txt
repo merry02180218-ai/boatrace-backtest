@@ -1,0 +1,8 @@
+data=
+1	0
+繁野谷　圭介	8.60	0.21	4.3	１		G3	１		G3	１		IP	１		IP	３		IP	１		IP	４		IP	１		IP	２		IP	２		IP
+田路　　朋史	4.70	0.14	3.0	３		IP	６		IP	２		IP	１		IP	６		IP	４		IP	６		IP	４		IP	５		IP	１		IP
+伊藤　　雄二	2.30	0.16	2.2	３	5	G3	６		IP	４		IP	６		IP	４		IP	６		IP	５		IP	５		IP	６		IP	６		IP
+牧　　　宏次	6.00	0.17	3.3	４		IP	２		IP	３		IP	２		IP	２		IP	２		IP	４		IP	３		IP	４		IP	４		IP
+石塚　　裕介	3.30	0.20	4.2	５		IP	６		G3	６		G3	４		IP	６		IP	４		IP	４	6	IP	３		IP	２	4	IP	５		IP
+荒木　　颯斗	3.00	0.19	3.9	２		IP	６		IP	４	5	G3	４		IP	６		IP	６		IP	３		IP	５		IP	６		IP	５		IP

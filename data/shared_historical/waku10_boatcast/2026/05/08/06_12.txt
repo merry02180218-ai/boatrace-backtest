@@ -1,0 +1,8 @@
+data=
+1	0
+菊地　　孝平	8.90	0.12	1.8	１		IP	２		IP	１		IP	１		G1	３		G1	４		G1	１		G1	１		G1	１		G2	４		G2
+服部　　幸男	5.30	0.15	2.4	１		IP	１		IP	３		G1	２		G1	２		IP	５		IP	５		IP	６		IP	５		IP	６		G1
+横澤　　剛治	6.70	0.17	3.2	２		IP	６		IP	１		IP	２		IP	５		IP	３		IP	２		IP	３		G1	３	2	G1	１		IP
+河合　　佑樹	5.10	0.19	4.1	４		IP	５		IP	６	2	IP	１	3	IP	１		IP	２		IP	６		G1	６		G1	３		G1	５		G1
+吉村　　　誠	6.89	0.09	3.1	２		IP	４	4	IP	２		G3	４		G3	転		G3	４	6	G1	２		G1	２		IP	３	4	IP	１		IP
+佐々木　康幸	4.40	0.12	2.8	５	4	IP	６	4	G1	３	2	IP	５	3	IP	２	5	IP	１	5	IP	４	4	IP	６		G1	４		IP	４	4	IP

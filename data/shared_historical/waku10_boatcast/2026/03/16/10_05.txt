@@ -1,0 +1,8 @@
+data=
+1	0
+大谷　　直弘	6.90	0.23	3.5	６		IP	３		IP	１		IP	１		IP	２		IP	３		IP	３		IP	５		IP	１		IP	１		IP
+坪内　　　実	4.20	0.21	4.0	６		IP	４		IP	２		IP	１		IP	３		IP	６		IP	２		IP	５		IP	６		IP	６		IP
+森作　　雄大	4.80	0.14	2.8	２	2	IP	２		IP	１		IP	４		IP	５	4	IP	５		IP	５		IP	４		IP	３		IP	５		IP
+栗原　　直也	3.90	0.16	2.6	６		IP	５		IP	５		IP	１		IP	２		IP	５		IP	２		IP	４		IP	５		G3	転		G3
+齋藤　　真之	3.60	0.16	3.3	６	6	IP	３		IP	５		IP	４		IP	２	3	IP	４		IP	６		IP	３		IP	５		IP	５		IP
+久田　　敏之	6.89	0.12	2.4	３	5	G1	４		IP	３		G1	６		G1	３		IP	２	5	IP	１		IP	１		IP	２	5	IP	欠		G1

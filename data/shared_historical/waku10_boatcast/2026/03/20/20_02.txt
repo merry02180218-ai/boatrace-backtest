@@ -1,0 +1,8 @@
+data=
+1	0
+石川　　　諒	8.30	0.15	2.2	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	６		IP	３		IP
+松尾　　光広	5.00	0.19	4.3	１		IP	６		IP	４		IP	３		IP	３		IP	６	6	IP	５		IP	４		IP	１	1	IP	３		IP
+森林　　　太	5.10	0.18	4.2	４		IP	５		IP	５		IP	１		IP	２		IP	１		IP	４		IP	４		IP	６		IP	３		IP
+上岡　　巧汰	1.80	0.24	4.8	６		IP	５	5	IP	４	6	IP	６	6	IP	６	6	IP															IP
+渡邉　　　翼	4.30	0.15	3.3	３		IP	４		IP	３		IP	１		IP	５		IP	６		IP	６		G3	２		G3	４		IP	６		IP
+前原　　大道	6.50	0.22	4.7	４	5	IP	４		G1	１	5	IP	２		IP	３		IP	３	5	IP	２		IP	３		IP	３		IP	３		IP

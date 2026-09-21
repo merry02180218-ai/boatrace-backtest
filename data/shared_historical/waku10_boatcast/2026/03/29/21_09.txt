@@ -1,0 +1,8 @@
+data=
+1	0
+枝尾　　　賢	8.20	0.13	2.4	１		G3	５		IP	１		IP	１		IP	２		IP	１		IP	１		IP	４		IP	１		IP	２		IP
+鈴木　　秀茉	6.20	0.12	3.2	１		IP	６		IP	２		IP	３		IP	１		IP	６	3	IP	５		IP	２		IP	２		G3	２		G3
+山本　　寛久	4.70	0.15	3.1	２		G3	６		IP	５		IP	２		IP	４		IP	４		IP	３		IP	１		IP	６		G1	６		G1
+國崎　　良春	3.00	0.21	3.7	６		G3	５		IP	２	3	IP	６		IP	４		IP	２		IP	６		IP	５		IP	５		IP	６		IP
+柳橋　　宏紀	6.00	0.13	2.1	４		G3	３		IP	３		IP	５		IP	４		IP	１		IP	１		IP	２		IP	２		IP	５		G3
+前沢　　丈史	3.70	0.19	3.0	４		G3	転		IP	２	5	IP	２		IP	５		IP	４		IP	６		G1	５		IP	３		IP	６		IP

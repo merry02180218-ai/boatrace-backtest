@@ -1,0 +1,8 @@
+data=
+1	0
+松山　　裕基	6.60	0.15	2.3	４		IP	３		IP	５		IP	１		IP	１		IP	４		IP	４		IP	３		IP	１		IP	１		IP
+吉永　　泰弘	5.70	0.17	3.3	２		IP	２	1	IP	４		IP	４		IP	４		IP	６		IP	１		IP	３		IP	２		IP	４		IP
+樋江井　　舞	3.56	0.15	2.8	欠		IP	４		IP	２		IP	２		IP	５		IP	４		IP	５		IP	５		IP	６		IP	６		IP
+村田　　修次	5.11	0.16	3.8	３		IP	４		IP	４		IP	２		IP	４		IP	エ	3	IP	３		IP	３		IP	４		IP	４		IP
+間庭　　菜摘	4.60	0.16	3.2	５		IP	６		IP	５		IP	２		IP	５		G1	６		G1	２		G3	２		IP	３		IP	３		IP
+深川　　真二	5.90	0.15	2.2	６	2	IP	４	2	IP	１	2	G2	４	2	IP	２	2	IP	２	2	G1	５	2	G1	３	2	IP	６	2	IP	１	2	IP

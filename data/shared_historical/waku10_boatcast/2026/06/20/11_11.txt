@@ -1,0 +1,8 @@
+data=
+1	0
+長野　壮志郎	7.10	0.15	3.8	５		IP	１		IP	２		IP	３		IP	１		IP	４		IP	６		IP	１		IP	１		IP	１		IP
+土山　　卓也	6.50	0.16	3.2	２		IP	２		IP	３		IP	５		IP	１		IP	６		IP	５		IP	１		IP	１		IP	２		IP
+川尻　　泰輔	5.90	0.12	2.1	５		IP	３		IP	２		IP	２		IP	２		IP	１		IP	４		IP	４		IP	２		IP	６	4	IP
+深尾　　巴恵	5.50	0.15	3.0	Ｆ		G3	５		IP	４	5	IP	４		IP	１		IP	２		IP	１		IP	１		IP	６		IP	３		IP
+前原　　大道	5.60	0.18	3.0	４		G1	４		G1	２		IP	３		IP	１		IP	３		IP	３		IP	４		IP	６	6	G1	４		IP
+森　　晋太郎	3.40	0.13	3.0	４	5	IP	５		IP	２		IP	５		IP	５		IP	４		IP	５		IP	５		IP	５		IP	３		IP

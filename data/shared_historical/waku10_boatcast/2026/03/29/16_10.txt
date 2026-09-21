@@ -1,0 +1,8 @@
+data=
+1	0
+喜多須　杏奈	6.60	0.13	2.4	４		IP	３		G1	Ｆ		IP	３		G3	６		IP	１		IP	１		G3	２		G3	１		IP	１		G3
+津田　　陸翔	7.60	0.22	4.5	３		G2	２		IP	２		IP	１		IP	３		IP	３		IP	２		IP	２		IP	３		IP	２		IP
+鈴木　　賢一	4.70	0.13	3.0	３		G3	６		G3	３		IP	４	5	IP	３		IP	３	5	IP	３		IP	２		IP	５		IP	５		IP
+末永　　由楽	6.30	0.15	3.8	４		IP	３		IP	３		IP	２		IP	３		IP	３		IP	３		IP	２		IP	３		IP	３		IP
+徳増　　秀樹	4.90	0.13	2.8	３		G1	５		G1	４	4	IP	１		IP	６	6	G1	６		IP	４		IP	２	3	IP	３		IP	５		IP
+永井　　亮次	3.30	0.21	3.8	３		IP	６		IP	６		IP	４		IP	４		IP	６		IP	２		IP	３		IP	６		IP	６		IP

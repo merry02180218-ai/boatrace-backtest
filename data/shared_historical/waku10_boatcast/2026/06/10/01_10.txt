@@ -1,0 +1,8 @@
+data=
+1	0
+今垣　光太郎	8.30	0.13	3.1	１		IP	６		IP	４		SG	２		G1	１		IP	３		IP	１		G1	１		G1	２		G1	１		IP
+稗田　　聖也	7.80	0.14	2.8	４		IP	１		IP	１		IP	２		IP	４		IP	１		IP	２		IP	２		IP	１		IP	３		IP
+牧　　　宏次	7.00	0.14	1.9	１		IP	２		IP	１		IP	４		IP	３		IP	２		IP	４		IP	２		IP	３		IP	３		IP
+下寺　　秀和	7.40	0.18	3.3	５		IP	４		IP	１	3	IP	１		IP	３		IP	３		IP	１		IP	２		IP	１		IP	２		IP
+繁野谷　圭介	5.60	0.16	3.3	４	4	IP	１		IP	３		IP	２		IP	５		IP	６		IP	４		IP	６		IP	１		IP	１		IP
+竹之内　　極	3.10	0.18	4.1	５		IP	５		IP	２		IP	２		IP	５		IP	５		IP	５		IP	５		IP	６		IP	５		IP

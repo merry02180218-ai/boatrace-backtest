@@ -1,0 +1,8 @@
+data=
+1	0
+原田　　雄次	4.60	0.14	2.5	６		IP	６		IP	１		IP	妨		IP	１		IP	４		IP	２	2	IP	５		IP	５		IP	２		IP
+渡邊　　雄斗	3.00	0.19	5.0	４		IP	５		IP																								IP
+近藤　雄一郎	5.20	0.16	2.6	４		IP	３		IP	１		IP	４		IP	４		IP	１		IP	４		IP	５		IP	３		IP	５		IP
+金子　　　萌	6.40	0.14	2.6	３		IP	１		IP	１		IP	３		IP	４		IP	５		IP	３		IP	１		IP	３		IP	４		IP
+今井　　貴士	4.10	0.18	3.4	３		IP	４		IP	４		IP	４		IP	３		IP	６		IP	４		G1	５		G1	３		G1	６		G3
+小坂　　尚哉	5.44	0.17	3.0	３		IP	エ		IP	６		IP	４		IP	３	5	IP	３		IP	１	5	IP	４		G3	４		G3	２	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+大澤　　大夢	8.80	0.16	2.2	３		IP	１		IP	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP	２		IP	１		IP
+久田　　　武	5.90	0.19	3.2	２		IP	３		IP	２		IP	３	3	IP	６		IP	２		IP	４		IP	２		IP	２		IP	５		IP
+高田　　　明	7.20	0.19	4.0	５		IP	５		G1	２		IP	１		IP	２		IP	３		G3	１		IP	１		IP	３		IP	２	4	IP
+石丸　　海渡	6.10	0.08	1.6	３	6	IP	２		IP	２		IP	２	5	IP	１		IP	２		G1	６		IP	３		IP	４	5	IP	６		IP
+森野　　正弘	4.20	0.13	2.8	５		IP	２	4	IP	５		IP	６		IP	４		G1	６		G2	４		IP	５		G1	３		IP	３		IP
+小野　　信樹	2.50	0.19	4.2	６		IP	４	5	IP	５		IP	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP	２		IP

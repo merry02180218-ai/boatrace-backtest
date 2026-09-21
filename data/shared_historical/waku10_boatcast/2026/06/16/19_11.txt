@@ -1,0 +1,8 @@
+data=
+1	0
+柴田　　　光	8.44	0.15	2.9	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	６		G1	１		G1	３		G1	欠		IP
+北村　　征嗣	6.70	0.13	2.6	４		IP	２		G3	１		IP	４		IP	２		G1	６	3	G1	２		IP	２		IP	３		IP	２		G3
+池永　　　太	4.30	0.13	3.2	３	4	IP	６		IP	６		IP	５		G2	５		IP	４		G1	６		G1	２		G1	２		IP	３		IP
+山一　　鉄也	4.40	0.19	3.4	５		IP	５		IP	２		IP	２		IP	４		IP	６		IP	３		IP	６		IP	３		IP	３		IP
+高橋　　　勲	6.40	0.13	2.9	３	3	IP	２		G3	４	6	IP	４	4	IP	２		IP	２		IP	３		IP	２		IP	１	4	IP	５		IP
+松田　　隆司	3.40	0.20	3.6	３	5	IP	６		IP	３		IP	４		IP	５		IP	６		IP	５		IP	４		IP	４		IP	４		IP

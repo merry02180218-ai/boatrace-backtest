@@ -1,0 +1,8 @@
+data=
+1	0
+宮田　　龍馬	8.60	0.12	2.8	１		IP	Ｆ		IP	１		G3	１		G3	１		G3	１		G1	１		G1	１		IP	４		IP	１		IP
+坂井　　滉哉	4.70	0.19	4.3	５	3	IP	４		IP	２		IP	２		IP	３		IP	４	4	IP	５		IP	２		IP	４	3	IP	６		IP
+荒木　　颯斗	6.20	0.14	3.3	１	4	IP	６		IP	２		IP	２		IP	６		IP	３		IP	２		IP	３		IP	２	2	IP	３		IP
+石本　　裕武	6.90	0.13	2.1	２		G1	１		G1	１		IP	４		IP	６		G1	６		G1	２		IP	２		IP	２		IP	３		G1
+鐘ヶ江　真司	2.70	0.18	3.5	５		IP	４		IP	５		IP	５		G2	５		IP	５		IP	５	6	IP	５		IP	３		IP	５	6	IP
+岡崎　　凪汰	1.90	0.16	2.6	６		IP	５		IP	６		IP	６		IP	６		IP	Ｆ		IP	５		IP	４		IP	３		IP	６		IP

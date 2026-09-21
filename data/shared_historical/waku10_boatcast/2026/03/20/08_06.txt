@@ -1,0 +1,8 @@
+data=
+1	0
+樋口　由加里	7.90	0.13	1.5	５		IP	１		IP	２		IP	１		IP	１		IP	５		G1	１		IP	１		IP	２		G3	２		G3
+武田　　光史	5.50	0.15	3.2	２		IP	２		IP	６		IP	５		IP	２		IP	１		IP	５		IP	４		IP	４		IP	２		IP
+鈴木　　茂高	5.20	0.15	2.4	転	4	IP	２	5	IP	２		IP	４		G3	４		G3	４		IP	５		IP	１		IP	４		IP	２	5	IP
+下河　　誉史	3.80	0.17	3.7	６		IP	５		IP	３		IP	２		IP	３		IP	５		IP	４		IP	３	3	IP	６		IP	６		IP
+井上　　尚悟	2.80	0.12	2.5	６		IP	４		IP	４		IP	５		IP	５		IP	２		IP	５		IP	５		IP	５		IP	６		IP
+池本　　輝明	3.00	0.26	5.3	６		IP	５		IP	５		IP	４	4	IP	５		IP	３		IP	５		IP	３	4	IP	６		G3	４		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+菅　　　章哉	9.00	0.11	2.1	１		IP	４		G1	１		G1	１		G1	１		IP	２		IP	１		G1	１		IP	５	4	IP	１		SG
+佐藤　　　翼	8.20	0.13	3.1	２		G1	２		G1	２		G1	３		G1	１		G1	５		G1	１		IP	２		IP	１		IP	３		IP
+山口　　達也	6.90	0.17	3.1	４		G1	６		G1	６		G1	６		G1	２		G1	２		IP	２		IP	１		G1	１		G1	１		IP
+平本　　真之	6.50	0.15	3.0	２	5	IP	１		IP	３		G1	３		G1	３		G1	３	2	IP	４		G1	６		G1	４	5	IP	２	5	IP
+常住　　　蓮	6.60	0.14	3.0	２	4	IP	２		IP	２		G1	４		G1	２		IP	３		IP	２		IP	５		G1	５		G1	２		IP
+平高　　奈菜	5.78	0.17	3.7	１	5	G3	１	5	G3	６	3	G1	３		IP	５		G1	４		G1	６		G1	不	5	IP	２		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+坂本　　一真	6.20	0.13	2.1	１		IP	４		IP	３		IP	４		IP	１		IP	３		IP	１		IP	３		IP	４		IP	５		IP
+藤森　　陸斗	4.20	0.15	3.3	４		IP	２		G1	３	4	IP	４		IP	１		IP	５	3	IP	５		IP	５		IP	６		IP	５		IP
+村松　　栄太	5.30	0.16	3.1	３		IP	１		IP	３		IP	１		IP	３		IP	６		IP	５		IP	４		IP	４		IP	４		IP
+若林　　義人	7.00	0.12	2.0	３		IP	１		IP	１		IP	６		G1	１		IP	２		IP	１		IP	３		IP	３		IP	５		IP
+佐野　　優都	5.30	0.14	2.4	１		IP	４	6	IP	３	6	IP	４	6	IP	３		IP	６		IP	５		IP	２		IP	４		IP	３		IP
+小柳　　勝希	2.70	0.20	4.4	５		IP	６		IP	６		IP	５		IP	４		IP	６		IP	４		IP	２		IP	５		IP	５		IP

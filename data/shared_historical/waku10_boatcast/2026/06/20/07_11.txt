@@ -1,0 +1,8 @@
+data=
+1	0
+小芦　るり華	8.90	0.12	1.6	１		IP	２		IP	１		IP	２		IP	３		IP	１		IP	２		G2	１		G3	１		G3	２		G3
+酒見　　峻介	4.20	0.15	3.8	３		IP	３		G2	４		G2	４		IP	５		IP	５		IP	５		IP	４		IP	２		IP	５		IP
+芝田　　浩治	5.00	0.16	3.2	１		IP	３		IP	３		IP	５		IP	５		IP	６		IP	６		IP	１		IP	１		IP	５		IP
+鳥居塚　嶺王	3.00	0.17	2.3	５	6	IP	１		IP	６		IP	５		IP	５		IP	３		IP	６		IP	６		IP	６		IP	４		IP
+宇留田　翔平	4.60	0.13	3.3	２		IP	５		IP	４		IP	３		IP	３		IP	４		IP	６		IP	６	6	IP	３		IP	２		G3
+香川　　颯太	3.50	0.18	3.7	６		IP	２		IP	２		IP	５		IP	６		IP	５		IP	４		IP	６		IP	５		IP	４		IP

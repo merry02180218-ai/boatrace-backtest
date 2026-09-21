@@ -1,0 +1,8 @@
+data=
+1	0
+今泉　　友吾	10.10	0.15	2.6	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+古川　　誠之	5.50	0.15	3.6	３		IP	１	3	IP	３		IP	５		IP	４		IP	３		IP	６		IP	２	3	IP	２		IP	４		IP
+長尾　　章平	5.70	0.17	3.5	６		IP	４		IP	１		IP	２		IP	６		IP	２		IP	２		IP	２		IP	６		IP	２		IP
+中越　　博紀	5.70	0.19	3.7	１		IP	３	5	IP	２	3	IP	３		IP	４		IP	５		IP	３		IP	６		IP	３		G3	２	3	G3
+藤田　　靖弘	4.30	0.17	3.1	２	6	IP	１		IP	４		IP	５		IP	４		IP	５		IP	６		G3	４		G3	５		IP	３		IP
+上原　　　崚	4.90	0.15	4.0	４		G2	６		G2	１	5	IP	３		IP	１	5	IP	４		IP	４		IP	５		IP	６		G2	４		IP

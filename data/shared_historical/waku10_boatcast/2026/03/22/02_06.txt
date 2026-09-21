@@ -1,0 +1,8 @@
+data=
+1	0
+久保原　秀人	4.00	0.22	4.5	５		IP	１		IP	５		IP	６		IP	６		IP	２		IP	４		IP	５		IP	２		IP	５		IP
+田中　信一郎	6.78	0.13	3.0	５		IP	３		IP	２		IP	２		G1	２		IP	５		IP	欠		G3	１		IP	２		IP	２		G3
+阪本　　勇介	4.90	0.19	4.4	４		IP	３		IP	３		IP	３	4	IP	４		IP	３		IP	４		IP	２		IP	４		IP	６		IP
+金子　　良昭	3.10	0.18	4.3	６		IP	６		IP	５		IP	４	2	IP	６		IP	３		IP	４	5	IP	５		IP	２		IP	５		IP
+富永　　修一	4.60	0.13	2.9	２		IP	６		IP	３		IP	５		G1	３		G3	４		G3	３		IP	４		IP	４		IP	４		IP
+赤松　　咲香	2.10	0.22	5.0	６		IP	６		IP	６		IP	４		IP	６		IP	５		G3	６		G3	６		G3	６		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+平本　　真之	10.20	0.13	3.1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1	２		G1	１		G1	２		SG
+河村　　　了	5.50	0.17	4.5	４		IP	５		IP	３		IP	４		IP	２		IP	１		IP	３		IP	１		IP	４		IP	６		IP
+宇佐見　　淳	4.90	0.12	2.2	２	4	IP	３		IP	５		IP	１		G3	３		IP	５		IP	３		IP	６		IP	５		IP	３		IP
+北川　　潤二	4.20	0.15	3.2	５		IP	５	3	IP	２		IP	２		IP	３		G3	４		G3	３	2	IP	５		IP	５		G3	５		G3
+川上　　聡介	4.10	0.12	3.5	２		IP	６		IP	３		IP	２		IP	６	6	IP	５		IP	５		IP	６		IP	４		IP	２		G3
+丹下　　　将	3.50	0.16	3.2	３		IP	４		IP	６		IP	５		IP	５		IP	５		IP	３		IP	６		IP	４		IP	３		IP

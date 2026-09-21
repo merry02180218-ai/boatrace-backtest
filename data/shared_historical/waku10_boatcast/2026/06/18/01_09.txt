@@ -1,0 +1,8 @@
+data=
+1	0
+出口　舞有子	9.00	0.17	2.2	１		IP	１		IP	３		IP	１		IP	１		IP	２		G3	１		IP	１		IP	３		IP	１		IP
+吉田　　一心	5.00	0.20	4.0	５		IP	３		IP	２		IP	２		IP	２		IP	４		IP	２		IP	転		IP	４		IP	５		IP
+栗原　　直也	4.30	0.17	3.5	３		IP	１		IP	５		IP	６		IP	Ｆ		IP	Ｆ		IP	２		IP	４	4	IP	４		IP	２		IP
+本橋　　克洋	5.10	0.20	3.9	２		IP	６		IP	５		IP	４		IP	３	3	IP	５		IP	４		IP	２	2	IP	２		IP	２		IP
+今坂　　晃広	2.60	0.22	4.2	３		IP	６	6	G3	５	6	G3	６		IP	５		IP	４		IP	３		IP	６		IP	６	6	IP	５		IP
+岡本　翔太郎	3.50	0.15	3.2	３		IP	５		IP	３		IP	４		IP	Ｆ		IP	５	5	IP	５		IP	３		IP	３		IP	６		G3

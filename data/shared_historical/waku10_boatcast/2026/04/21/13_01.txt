@@ -1,0 +1,8 @@
+data=
+1	0
+廣部　　大明	2.20	0.21	3.6	５		IP	４		IP	６		IP	５	2	IP	５		IP															IP
+小野　　勇作	5.10	0.20	3.9	４		IP	１	3	IP	１	3	IP	６		IP	５		IP	２		IP	２		IP	６		IP	６		IP	３		IP
+中山　　翔太	7.20	0.16	3.5	２		IP	２		G1	３		G1	３		G1	２		G1	４	4	IP	２		IP	２		IP	２	2	IP	４		IP
+木下　　陽介	4.10	0.16	2.6	６		IP	６		IP	５	5	IP	５		IP	３		IP	６		IP	２		IP	３		IP	３		IP	２		IP
+尾形　　栄治	3.90	0.19	3.9	４		IP	５		IP	５		IP	４		IP	４		IP	４		IP	３		IP	６	6	IP	４		IP	２		IP
+町田　　洸希	3.40	0.25	4.8	６		IP	４		IP	６		G3	５		IP	５		IP	４		IP	５		IP	５		IP	２	5	IP	２	5	IP

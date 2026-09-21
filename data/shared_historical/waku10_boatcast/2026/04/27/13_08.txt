@@ -1,0 +1,8 @@
+data=
+1	0
+岡本　　　大	6.40	0.15	2.9	３		IP	２		IP	６		IP	２		IP	６		IP	３		IP	３		IP	２		IP	１		IP	１		IP
+佐藤　　大佑	7.50	0.14	2.5	３		IP	３		IP	１		IP	１		IP	１		IP	１		IP	６		IP	２		IP	４		IP	１		IP
+酒井　　俊弘	4.40	0.12	2.2	５		IP	５		IP	３		IP	５		IP	２		IP	１		IP	２		IP	５		IP	６	5	IP	５		IP
+桑原　　　悠	5.00	0.17	3.2	６		IP	１		IP	４		IP	４		IP	３		G3	１		IP	６		G1	３		G3	４		G1	６		G1
+山田　　雄太	4.30	0.15	3.1	３		IP	４	6	IP	６	6	IP	６		IP	３	6	IP	４		IP	４		IP	３		IP	１		IP	６		IP
+遠藤　　エミ	5.00	0.16	4.5	４		G2	６		G2	３		G1	１	5	IP	４		G1	６		G1	３		G1	５		G1	３		G3	６		SG

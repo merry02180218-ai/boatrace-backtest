@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　兼士	7.70	0.15	2.7	３		IP	１		IP	２		IP	１		IP	３		IP	６	3	IP	１	4	IP	１		IP	３		IP	１		G3
+小林　　文彦	6.50	0.18	4.1	１		IP	４		IP	３		IP	３		IP	１		IP	２		IP	３		IP	６		IP	２		IP	３		IP
+山田　　康二	7.90	0.13	3.2	２		G1	５		G1	１		G1	１		G1	５		G1	２		G1	２		G1	１		IP	３		IP	３		SG
+富永　　大一	4.30	0.17	3.0	４		IP	３		IP	４		IP	６		IP	６		IP	６	6	IP	４		IP	３		IP	３		IP	１		IP
+廣部　　大明	2.20	0.16	2.8	４	6	IP	６		IP	４	6	IP	６	4	IP	５		IP	４		IP	６		IP	６		IP	５		IP	５	6	IP
+黒野　　元基	6.30	0.14	2.2	２		IP	２	5	IP	２		IP	３		IP	１	5	IP	５		G1	３		G1	４		IP	２		IP	６		IP

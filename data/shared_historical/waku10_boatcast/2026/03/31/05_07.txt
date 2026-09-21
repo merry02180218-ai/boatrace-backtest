@@ -1,0 +1,8 @@
+data=
+1	0
+西尾　　亮輔	6.70	0.17	3.2	４		IP	２		IP	２		IP	２		IP	２		IP	１		IP	６		IP	３		IP	１		IP	４		IP
+村田　　　敦	3.80	0.16	3.7	６		IP	３		IP	６		IP	５		IP	４		IP	２	3	IP	６		IP	３		IP	６		IP	２		IP
+山田　　雄太	5.00	0.12	3.4	６		IP	５		IP	２	4	IP	１		IP	３		IP	２		IP	４		IP	２		IP	６		IP	６		IP
+柳沢　　　一	5.90	0.15	3.4	２		IP	３	3	IP	３		G1	２		G1	２		IP	６		G1	６		IP	３		IP	３		IP	３		IP
+北中　　元樹	6.00	0.18	3.4	２		IP	４		IP	５		IP	２	4	IP	３		IP	５		IP	１		IP	２		IP	３		IP	３		IP
+真田　　聖也	1.10	0.09	1.5	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

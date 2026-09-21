@@ -1,0 +1,8 @@
+data=
+1	0
+平川　　香織	8.20	0.19	2.8	１		IP	１		IP	２		IP	２		G3	１		IP	４		IP	４		G3	１		G3	２		IP	１		IP
+神里　　琴音	6.10	0.14	3.4	１		IP	１		IP	４		IP	２		IP	３		IP	１		IP	５		IP	４		IP	３		IP	６		IP
+篠木　亜衣花	3.90	0.25	4.6	４		IP	５		G3	６		IP	１		G3	５		G3	５		IP	５		IP	１		IP	４		IP	５		G3
+川野　　芽唯	6.40	0.20	3.7	３		IP	４		IP	２		IP	６		IP	３	5	IP	１		G1	４		IP	２		G1	５		G1	２		IP
+吉田　　彩乃	4.00	0.18	3.3	２		IP	５		IP	５		IP	５		IP	５		IP	４		IP	３		IP	４		IP	２		IP	５		G3
+高橋　　涼夏	1.80	0.18	3.9	６		IP	４	5	IP	６		IP	６		IP	４		IP	５		IP	Ｆ		IP	５		IP	５		IP	６		IP

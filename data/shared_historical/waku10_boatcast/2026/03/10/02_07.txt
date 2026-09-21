@@ -1,0 +1,8 @@
+data=
+1	0
+中野　　希一	7.20	0.17	3.4	１		IP	２		IP	６		G1	５		G1	１		IP	２		IP	３		IP	３		IP	１		IP	２		IP
+長谷川　　暖	4.10	0.07	2.2	５		IP	３		IP	１		IP	６		IP	３		IP	４		IP	４		IP	３		IP	６		IP	６		IP
+上野　　俊樹	5.13	0.18	3.5	４		G3	４		G3	転		IP	６		IP	１		IP	落		IP	３		IP	４		IP	３		IP	３		IP
+香月　　大輝	3.80	0.15	3.0	４		IP	１		IP	４		IP	６		IP	６		IP	４		IP	２		IP	６		IP	６		IP	４		IP
+堀越　　雄貴	4.80	0.20	4.6	３		IP	４		IP	３		IP	３		IP	２		IP	４		IP	６		IP	２	6	IP	４		IP	６		IP
+楠　　将太郎	5.70	0.14	3.1	６		IP	５		IP	４		IP	２		IP	３		IP	３		IP	３		IP	２		IP	１		IP	３		IP

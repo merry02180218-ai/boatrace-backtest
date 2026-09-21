@@ -1,0 +1,8 @@
+data=
+1	0
+森作　　雄大	6.10	0.15	2.6	１		IP	２		IP	１		IP	５		IP	１		IP	４		IP	５		IP	１		IP	６		IP	４		IP
+坪内　　　実	4.30	0.20	4.1	５		IP	６		IP	４		IP	２		IP	１		IP	３		IP	６		IP	２		IP	５		IP	６		IP
+横川　　聖志	4.90	0.13	2.9	４		IP	５		IP	２		IP	４		IP	５		IP	６		G1	６		G1	２	2	IP	２		IP	２		IP
+井上　　　茂	4.22	0.20	4.0	３		IP	５		IP	３		IP	１		IP	５		IP	落		IP	４		IP	５		IP	５		IP	４		IP
+冨田　　秀幸	3.40	0.14	3.3	５		IP	２		IP	６		IP	４		IP	４		IP	５		IP	３		IP	６		IP	５	6	IP	４	4	IP
+上野　　拓馬	3.20	0.16	3.9	３		IP	５		IP	３		IP	６		IP	４		IP	５		IP	４		IP	５		IP	４		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+池上　　隆行	6.20	0.14	2.7	３		IP	１		IP	４		IP	５		IP	１		IP	１		IP	３		IP	５		IP	２		IP	４		IP
+星野　　政彦	3.70	0.18	3.6	２		IP	４		IP	３		IP	６	3	IP	５		IP	５		IP	６		IP	６		IP	５		IP	１		IP
+中里　　昌志	4.80	0.18	3.7	３		IP	２		IP	６	4	IP	６		IP	３		IP	４		IP	３		IP	３		IP	３		IP	４		IP
+大井　　清貴	6.40	0.19	3.5	３		IP	３		IP	４	3	IP	２		IP	２		IP	４		IP	１		IP	２		IP	４		IP	３	5	IP
+寳田　　亮治	4.40	0.18	4.0	２		IP	４		IP	３		IP	３		IP	４		IP	６		IP	２		IP	５		IP	５		IP	６		IP
+酒見　　峻介	2.30	0.22	4.7	６		IP	４		IP	６	4	IP	５		IP	６		IP	５		IP	５	3	IP	５		IP	３		IP	５		IP

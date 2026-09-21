@@ -1,0 +1,8 @@
+data=
+1	0
+森下　　　勇	6.90	0.16	2.6	４		IP	２		IP	２		IP	２		IP	２		IP	６	3	IP	１		IP	４		IP	１		IP	２		IP
+上原　　　崚	4.50	0.17	4.5	５		IP	３		IP	６		G2	４		IP	２		IP	４		IP	６		IP	２		IP	２		IP	５		IP
+福田　　　理	4.20	0.18	3.9	３		IP	６		IP	５		IP	３		IP	４		IP	１		IP	６		IP	５		IP	２		IP	５		IP
+佐藤　謙史朗	4.00	0.20	4.0	３		IP	６		IP	４		IP	５		IP	１		IP	４		IP	５		IP	５		IP	２	5	IP	６		IP
+小原　　聡将	3.90	0.14	3.2	６		IP	６		IP	５		IP	２	6	IP	４	6	IP	２	4	IP	５		IP	６		IP	３		IP	３		IP
+村本　　大成	1.70	0.22	4.6	６		IP	５		IP	５	5	IP	６		IP	６		IP	６		IP	４		IP	６		IP	５		IP	５		IP

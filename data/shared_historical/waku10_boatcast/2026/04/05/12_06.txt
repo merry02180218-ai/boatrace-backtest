@@ -1,0 +1,8 @@
+data=
+1	0
+石野　　貴之	9.40	0.14	2.6	６		G1	１		G1	２		IP	１		IP	１		IP	１		IP	１		G1	１		G1	１		IP	１		G3
+谷野　　錬志	6.20	0.15	2.5	１		IP	４		IP	４		IP	６		G1	１		IP	６		G1	６		G1	１		IP	２		IP	１		IP
+白神　　　優	7.40	0.13	2.2	３		IP	３		IP	３		IP	３		G1	２		IP	１		IP	３		IP	１		G1	２		G1	４		G1
+石本　　裕武	6.60	0.11	2.0	１		IP	４		IP	６		G1	６		G1	２		IP	２		IP	２		IP	３		G1	３		G1	１		IP
+岡　　　祐臣	3.80	0.20	4.7	３		IP	３		IP	４		IP	２		IP	５		IP	５		IP	６		IP	４		IP	４		IP	６		IP
+今泉　　友吾	5.00	0.17	4.5	４		G1	４		G1	２	5	G1	６		G1	４		IP	４		IP	３		IP	５		G1	４		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+赤岩　　善生	8.60	0.15	2.6	２		G1	１		IP	２		IP	１		IP	５		IP	１		IP	３		G1	２		G1	１		IP	１		G1
+仲口　　博崇	7.40	0.19	3.5	２		G1	１		IP	１		G3	２		IP	２		IP	６		IP	１	1	G1	３		IP	６		G3	１	1	G3
+江口　　晃生	6.00	0.15	3.1	５	2	G1	５	2	G1	１	2	IP	１	2	IP	Ｆ	2	IP	２	2	IP	４	2	IP	３	2	IP	３	2	IP	１	2	IP
+今垣　光太郎	7.40	0.15	2.7	１	5	G1	４		G1	２		IP	３		G1	６		G1	４		IP	１		IP	１		G1	４	3	IP	１		IP
+平尾　　崇典	5.60	0.16	3.3	４		G1	３		IP	２		IP	２		IP	３	6	G1	３		IP	４		G1	６		G2	２		IP	６		IP
+徳増　　秀樹	5.80	0.17	3.3	４		G1	３	5	IP	３	3	IP	１	5	IP	５	4	G1	１	4	IP	２	3	IP	４	5	IP	４	4	G1	６	4	IP

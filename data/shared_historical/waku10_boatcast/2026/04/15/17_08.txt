@@ -1,0 +1,8 @@
+data=
+1	0
+田村　　隆信	9.50	0.12	1.8	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	４		IP	１		IP	１		G1	１		IP
+湯淺　　紀香	5.90	0.18	5.0	１	3	IP	５		IP	２		IP	２		IP	３		IP	２		IP	６		G3	５		G3	１		G3	４		G3
+野田部　宏子	6.60	0.12	1.8	３		IP	３		IP	２		IP	４		IP	２		IP	５		IP	２		IP	１		IP	１		IP	４		IP
+荒井　　輝年	5.20	0.15	3.1	３	5	IP	２	5	IP	５		IP	転		IP	６		IP	６		IP	２		IP	２		IP	２		IP	１		IP
+川上　　聡介	3.60	0.12	3.5	３		IP	２		IP	６	6	IP	５		IP	５		IP	６		IP	４		IP	２		G3	５	6	G3	５		IP
+為本　　智也	4.22	0.19	2.8	転		IP	３		IP	４		IP	４		IP	４	5	IP	５		G3	５		G3	４	5	IP	５		IP	１		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+西田　　　靖	7.80	0.15	2.8	１		IP	１		IP	２		IP	５		IP	２		IP	２		IP	４		IP	１		IP	２		IP	１		IP
+深川　　和仁	5.20	0.22	4.3	５		G3	５		G3	２		IP	３		IP	４		IP	３		IP	２		IP	４		IP	２		IP	４		IP
+柴田　　百恵	5.10	0.18	3.2	６		G3	３		G3	３		IP	２		IP	４		IP	２		IP	４		IP	５		IP	３		IP	３		IP
+田邉　　亮蔵	4.90	0.21	3.7	２		IP	３		IP	４		IP	５		IP	３		IP	６		IP	２		IP	４		IP	３		IP	４		IP
+瓜生　　正義	5.90	0.13	3.2	４		G1	２		IP	４	6	G1	３		G1	３		G1	５		G1	２		IP	６		SG	２	6	G1	５		SG
+小畑　　楓夏	1.20	0.19	3.8	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP

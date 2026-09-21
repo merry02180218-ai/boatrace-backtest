@@ -1,0 +1,8 @@
+data=
+1	0
+石井　　伸長	5.11	0.20	4.9	１		IP	６		IP	転		IP	１		IP	３		IP	４		IP	３		IP	４		IP	４		IP	６		IP
+荒牧　　凪沙	5.50	0.21	2.8	６		IP	１		IP	２		IP	３		IP	４		IP	５		IP	１		IP	４		IP	３		IP	４		IP
+東　　　健介	3.90	0.14	3.1	４		G3	４		G3	６		G3	５		IP	１		IP	５		IP	４	2	IP	６		IP	１		IP	６		IP
+木村　　仁紀	5.30	0.13	3.5	１		IP	４		IP	２		IP	１		IP	４		G2	５		IP	４		G1	６		G1	４		G1	５		IP
+籾山　　佳岳	4.30	0.17	3.4	６		IP	３		IP	４		IP	５		IP	１		IP	４		IP	６	6	IP	６		IP	４		IP	１		IP
+上村　慎太郎	3.30	0.23	5.6	４		IP	４		IP	３		IP	６		IP	３		IP	５		IP	５		IP	３		IP	６		IP	６		IP

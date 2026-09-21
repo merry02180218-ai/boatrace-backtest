@@ -1,0 +1,8 @@
+data=
+1	0
+中北　　　涼	5.70	0.19	3.9	１		IP	３		IP	１		IP	３		G3	５		IP	４		IP	６		G3	４		IP	４		IP	１		IP
+三嶌　さらら	5.90	0.15	2.9	４		IP	５		IP	３		IP	２		IP	２		IP	１	1	IP	２		IP	６		IP	４		IP	２		IP
+水野　　望美	6.20	0.17	3.2	３		IP	６		IP	５		IP	３		G3	１		G3	２		IP	３		IP	４		IP	２		IP	１		IP
+山崎　小葉音	3.40	0.18	3.0	４		IP	３		G3	６		IP	５		IP	５		IP	５		IP	５		IP	６		IP	２		IP	３	5	IP
+平山　　智加	6.10	0.12	2.5	３		IP	３		IP	３		IP	４		G2	５		G2	１	3	G3	４		G3	４		G3	３		IP	１	4	IP
+大豆生田　蒼	3.70	0.23	4.6	３		IP	４		IP	６		IP	２		IP	５		IP	４		G1	５		G3	６		G3	４		G3	５		IP

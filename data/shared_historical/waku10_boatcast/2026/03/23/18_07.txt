@@ -1,0 +1,8 @@
+data=
+1	0
+芹澤　　克彦	6.60	0.16	2.8	４		IP	２		IP	１		IP	３		IP	１		IP	５		IP	４		IP	１		IP	５		IP	１		IP
+藤山　　雅弘	3.44	0.17	3.0	５		IP	６		IP	４		IP	２		IP	３		IP	５		IP	５		IP	５		IP	欠		IP	４	3	IP
+田上　　　凜	5.20	0.17	3.3	５		IP	２		IP	２	6	IP	４		IP	３	5	IP	４	5	IP	４		G3	３	5	IP	５	6	IP	２		IP
+松井　　貫太	3.40	0.21	4.9	３		IP	６		IP	４		IP	６		G1	５		IP	４		IP	４		IP	２	3	IP	５	5	IP	６		IP
+加藤　　　翔	2.50	0.24	4.3	５		IP	４		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	６	6	IP	１		IP
+高岡　　竜也	4.40	0.17	3.8	３		IP	６		IP	１	5	IP	４		IP	４		IP	５		IP	４	5	IP	６		IP	５	5	IP	１		IP

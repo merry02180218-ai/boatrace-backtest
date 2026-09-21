@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　竜矢	10.00	0.15	1.9	２	2	IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1	１		IP
+近藤　　友宝	4.90	0.14	2.5	３	3	IP	６		IP	４		IP	２		IP	４		IP	５		IP	２		IP	３		IP	４		IP	３		IP
+畑　　　和宏	4.70	0.16	2.6	５		IP	５		IP	４		IP	６		IP	２		IP	３		IP	２		IP	５		IP	２	4	IP	３	4	IP
+井上　　恵一	4.60	0.20	3.2	６		IP	５		IP	４		IP	２	3	IP	１	5	IP	２		IP	４		IP	６		IP	４		IP	４		IP
+武井　莉里佳	5.20	0.17	3.5	４		IP	４		IP	３		IP	２		IP	５		G1	３		G1	４		G3	５		G3	２		G3	６		IP
+河野　　主樹	3.30	0.13	2.8	４		IP	３		IP	３		IP	５		IP	６		IP	５		G3	４	5	G3	５	5	IP	４		IP	５		IP

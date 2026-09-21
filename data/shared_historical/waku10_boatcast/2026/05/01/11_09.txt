@@ -1,0 +1,8 @@
+data=
+1	0
+君島　　秀三	8.90	0.14	2.0	５		G1	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP
+片橋　　幸貴	6.20	0.18	3.5	２		IP	２	3	IP	１		IP	２		IP	４		IP	５		IP	３		IP	３		IP	４		IP	３		IP
+繁野谷　圭介	3.70	0.19	4.0	４		IP	３		IP	５		IP	３		IP	５		IP	３		IP	６		IP	３		IP	５	2	IP	５		IP
+宮迫　　暢彦	4.00	0.18	3.9	３		IP	６		IP	５		IP	４		IP	２		IP	５		IP	３		IP	６		IP	３		IP	４		IP
+是澤　　孝宏	4.20	0.19	3.8	６		IP	４	6	IP	２	6	IP	３	4	IP	４		G3	５		G3	４		G3	２		IP	４		IP	６		IP
+北中　　元樹	3.70	0.17	4.3	５		IP	６		IP	６		IP	３		IP	２		IP	６		IP	３		IP	４		IP	３		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中村　かなえ	7.40	0.10	2.5	５		IP	２		IP	１		IP	１		G3	２		IP	５		IP	４		IP	１		IP	１		IP	１		IP
+高田　ひかる	7.60	0.20	3.4	２		IP	５		G1	４		G1	１		IP	１		IP	２		IP	１		IP	４		IP	２		IP	１		IP
+伊藤　　　栞	2.80	0.18	3.0	Ｆ	4	IP	１		IP	３		G3	６		G3	４		IP	６		IP	６		IP	５		IP	６	4	IP	５		IP
+滝川　真由子	5.10	0.21	2.9	２		IP	３		IP	５	5	IP	２		IP	４		IP	１		IP	１		G3	５		IP	６	5	IP	Ｆ		IP
+平川　　香織	5.10	0.22	4.0	４		IP	２		IP	６		IP	２	4	IP	３		IP	４	4	IP	３		G3	４		G3	３		IP	４	6	IP
+森田　　梨湖	1.60	0.22	3.9	４	5	IP	６		IP	５		IP	５	5	G3	６		G3	６		G3	６		G3	５		IP	６		IP	６		IP

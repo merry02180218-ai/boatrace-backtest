@@ -1,0 +1,8 @@
+data=
+1	0
+尾形　　栄治	7.70	0.18	3.0	３		IP	１		IP	１		IP	２		IP	２		IP	１		IP	４		IP	６		IP	１		IP	１		IP
+関根　　彰人	5.44	0.18	3.7	３		IP	１		IP	５		IP	６		IP	３		IP	５		IP	２		IP	エ		IP	４		IP	１		IP
+小原　　聡将	4.50	0.16	3.1	５		IP	２		IP	３		IP	５		IP	４		IP	５		IP	１		IP	２		IP	Ｆ		IP	６		IP
+齋藤　　　勇	4.20	0.19	3.6	５		IP	５		IP	１		IP	４		IP	５		IP	４		IP	１		IP	４		IP	５		IP	５		IP
+上村　　宏太	3.20	0.15	3.5	４		IP	５		IP	６		IP	６		IP	６		IP	４		IP	６		IP	３		IP	２		IP	４		IP
+早川　　颯太	1.60	0.19	4.3	４	5	IP	５		IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

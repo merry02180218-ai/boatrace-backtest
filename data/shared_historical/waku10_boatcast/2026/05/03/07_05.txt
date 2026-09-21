@@ -1,0 +1,8 @@
+data=
+1	0
+市川　　美宏	5.20	0.20	2.7	２		IP	３		IP	６		IP	６		IP	４		IP	１		IP	４		IP	５		IP	１		IP	３		IP
+鈴木　　智啓	6.50	0.19	4.0	３		IP	２		IP	落		IP	３		IP	６		IP	１		IP	２		IP	２		IP	１		IP	２		IP
+川原　　　涼	6.40	0.16	3.3	４		IP	２		IP	１		IP	３		IP	５		IP	３		IP	２		IP	５		IP	１		IP	２		IP
+谷本　　幸司	4.60	0.19	3.0	２		IP	２	6	IP	３	5	IP	５		IP	２		IP	６		IP	６	3	IP	５		IP	４		IP	３		IP
+池田　　浩二	7.40	0.13	2.9	１		G1	４		G1	１		G1	３		SG	６		G1	３		G1	４		G1	３		G1	３		G1	１		G1
+伊藤　　誠二	3.80	0.16	3.2	４		IP	４		IP	３		IP	６		IP	３		IP	６		IP	６		IP	１	3	IP	４	4	IP	６		IP

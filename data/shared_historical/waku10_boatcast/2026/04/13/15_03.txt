@@ -1,0 +1,8 @@
+data=
+1	0
+中澤　　宏奈	6.20	0.20	3.5	３		IP	１		IP	４		G3	１		IP	４	2	IP	１		G3	６		G3	６		IP	１		IP	３		IP
+深見　亜由美	4.40	0.28	4.4	４	3	IP	６		IP	６	3	IP	５		IP	２		IP	３		IP	５		IP	４		IP	２		IP	２		IP
+乙津　　康志	6.10	0.14	2.8	２		IP	５		IP	３		IP	１		IP	２		IP	２		IP	４		IP	３		IP	２		IP	６		IP
+渡部　　　悟	4.00	0.14	4.0	３		IP	４		IP	５	5	IP	６		IP	２		IP	４		IP	４		IP	３		IP	４		IP	６		IP
+是澤　　孝宏	4.50	0.18	3.6	３	4	IP	４		G3	５		G3	４		G3	２		IP	４		IP	６		IP	５		IP	２		IP	３		IP
+深川　　真二	5.90	0.13	2.4	１	2	IP	６	2	IP	４	2	IP	１	2	G2	４	2	IP	２	2	IP	２	2	G1	５	2	G1	３	2	IP	６	2	IP

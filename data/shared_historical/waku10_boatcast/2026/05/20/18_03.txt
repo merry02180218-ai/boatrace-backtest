@@ -1,0 +1,8 @@
+data=
+1	0
+寺田　　空詩	6.60	0.18	3.7	１		IP	１		IP	１		IP	３		IP	妨		IP	２		IP	６		IP	６		IP	１		IP	１		IP
+古賀　　千晶	4.11	0.20	4.4	２		G3	２		G3	３		G3	５		IP	４		G3	５		IP	５		IP	欠		IP	４		IP	６		IP
+竹井　　奈美	6.60	0.18	2.7	２		IP	６		IP	１		IP	２		IP	１		IP	５		G3	１		G1	３		IP	５		IP	２		IP
+片岡　　恵里	3.40	0.17	3.4	３		G3	３		IP	４		G3	３		G3	５		IP	６		IP	６		G3	４		G3	５		G3	５		G3
+三松　　直美	2.11	0.18	4.4	６	6	IP	５		IP	５		G3	５		G3	３		G3	転		G3	６		IP	５	6	IP	６	6	IP	５		IP
+登　　みひ果	3.60	0.16	3.3	１		G2	５		IP	６		IP	６		G3	５		IP	５		G3	３		G1	５		IP	３		G3	５		IP

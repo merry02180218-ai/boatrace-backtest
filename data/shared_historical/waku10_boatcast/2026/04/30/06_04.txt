@@ -1,0 +1,8 @@
+data=
+1	0
+亀山　　雅幸	8.80	0.17	3.3	３		IP	２		IP	１		IP	１		IP	２		IP	１		IP	３		IP	１		IP	１		IP	１		IP
+間野　　兼礼	7.80	0.15	3.0	３		IP	１		IP	３	4	IP	１		IP	２	3	IP	２		IP	３		IP	１		IP	３		IP	２		IP
+白井　　友晴	4.80	0.19	3.5	４		IP	５		IP	４		IP	１		IP	５	4	IP	１		IP	３		IP	５		IP	５		IP	３		IP
+阿波　　勝哉	4.50	0.19	4.0	６	6	IP	１	6	IP	５	6	IP	２		IP	４		IP	１	6	IP	４		IP	５	6	IP	５	3	IP	５	6	IP
+河合　　三弘	2.90	0.19	3.9	５		IP	４		IP	６		G3	４		G3	６		IP	４		IP	３		IP	６		IP	５		IP	４		IP
+齋藤　　智裕	2.30	0.19	3.7	５		IP	６		IP	６		IP	５		IP	６		IP	５	5	IP	５		IP	５		IP	３		IP	４		IP

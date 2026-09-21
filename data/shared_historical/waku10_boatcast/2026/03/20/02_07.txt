@@ -1,0 +1,8 @@
+data=
+1	0
+三嶌　　誠司	9.40	0.17	3.5	１		IP	１		IP	２		IP	２	2	G1	１		G1	２		IP	１		IP	１		IP	２		IP	１		IP
+小林　　愛実	4.00	0.14	2.9	６		IP	６		IP	１		IP	１		IP	６		IP	２		IP	４		IP	５		IP	５		IP	６		IP
+芝田　　京介	3.70	0.19	3.7	３		IP	４		IP	４		IP	３		IP	２		IP	６		IP	３		IP	転		IP	６		IP	６		IP
+藤生　　雄人	5.20	0.20	3.4	５		IP	３		IP	１		IP	５		IP	３		IP	５		IP	５		IP	３		IP	１		IP	４		IP
+富山　　弘幸	3.80	0.16	2.8	６		IP	５		IP	４		IP	５		IP	６		IP	４		IP	４		IP	３		IP	２		IP	３		IP
+川口　　貴久	5.30	0.12	2.1	１		IP	４		IP	５		IP	５		IP	３		IP	３		IP	６		IP	４		IP	１	5	IP	３		IP

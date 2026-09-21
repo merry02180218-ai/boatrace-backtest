@@ -1,0 +1,8 @@
+data=
+1	0
+和田　　兼輔	9.70	0.13	2.0	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1	１		IP	１		IP	４		G2
+阿波　　勝哉	4.30	0.20	4.4	６		IP	５		IP	４	3	IP	４		IP	５		IP	４		IP	３	6	IP	３		IP	３	6	IP	２		IP
+上野　　拓馬	3.90	0.17	3.6	２		IP	５		IP	３		IP	４		IP	４		IP	５		IP	６		IP	４		IP	３		IP	５		IP
+土屋　　太朗	4.30	0.20	4.5	４		IP	３		IP	４		IP	５		IP	３		IP	６		IP	５		IP	３	5	IP	３	3	IP	３		IP
+孫崎　　百世	2.50	0.25	5.1	２	4	IP	４		IP	４	6	IP	５		IP	６		IP	６	6	IP	５		IP	妨		IP	６		IP	５		IP
+山下　　心一	3.30	0.20	3.4	６		IP	４		IP	５		IP	４		IP	３		IP	５		IP	６		IP	６		IP	２		IP	４		IP

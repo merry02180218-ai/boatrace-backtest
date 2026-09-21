@@ -1,0 +1,8 @@
+data=
+1	0
+嶋　　　義信	8.20	0.14	2.0	１		IP	３		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	５		IP	２		IP
+広次　　　修	7.60	0.16	3.5	２		IP	３		IP	２		IP	１		IP	１		IP	３		IP	１		IP	４		IP	２		IP	３		IP
+服部　　　剛	4.70	0.20	4.2	４	6	IP	３		IP	３		IP	６		IP	５		IP	４		IP	４		IP	２		IP	５		IP	１		IP
+真庭　　明志	3.60	0.18	3.2	４		IP	３		IP	６		IP	４		IP	５		IP	３		IP	４		IP	５		IP	６		IP	３		IP
+鶴田　　勇雄	4.20	0.16	3.6	３		IP	４		IP	４		IP	５		IP	３		IP	４		IP	４		IP	５		IP	３		IP	４		IP
+吉永　　浩則	2.80	0.22	5.0	５		IP	４		IP	５		IP	４		IP	４		IP	５		IP	６		IP	６		G3	５		G3	３		IP

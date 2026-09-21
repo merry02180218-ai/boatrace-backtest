@@ -1,0 +1,8 @@
+data=
+1	0
+湯川　　浩司	9.60	0.14	3.5	１		IP	１		IP	１		IP	２		G1	１		G1	１		G1	１		G1	６		G1	１		G1	１		IP
+井上　　　茂	6.00	0.15	3.2	２		IP	２		IP	３		IP	５		IP	１		IP	４		IP	４		IP	３		IP	３		IP	３		IP
+池田　　雄一	6.50	0.15	3.0	２		IP	１		IP	５		IP	１		G1	５		IP	４	2	IP	４		IP	３		IP	２		IP	１		IP
+富澤　　祐作	5.00	0.12	2.7	３		IP	４		IP	６		IP	４		IP	６		IP	２	5	IP	１		IP	１		IP	４		IP	６		IP
+廣瀬　　将亨	4.80	0.14	2.7	３		IP	４		IP	６	4	IP	３		G2	４		IP	３	6	G3	４		IP	３		IP	３		IP	４		IP
+藤丸　　光一	4.00	0.21	4.5	３	2	IP	４	4	IP	２	2	IP	５	3	IP	５		G3	５	2	IP	２	4	IP	４	4	IP	５	2	IP	５	4	IP

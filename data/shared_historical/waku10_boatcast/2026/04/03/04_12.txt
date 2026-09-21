@@ -1,0 +1,8 @@
+data=
+1	0
+守田　　俊介	9.70	0.12	2.5	３		SG	１		SG	４		IP	１		IP	１		IP	１		G1	１		G1	１		G1	１		IP	１		IP
+飯島　　昌弘	6.40	0.20	3.6	３		IP	３		G1	２		G1	２		IP	３		IP	３		IP	Ｆ		IP	４		IP	１		IP	２		IP
+大瀧　明日香	5.60	0.17	2.7	４		G3	４		G3	２		IP	４		IP	１		G1	２		IP	４		G1	４		IP	４		IP	４		IP
+里岡　　右貴	4.90	0.13	2.2	４		IP	１		G3	４		IP	５		IP	６		G1	転		IP	５		G1	１		IP	２	3	IP	３		IP
+上條　　嘉嗣	4.90	0.24	4.5	３		IP	２		IP	３	3	IP	５		IP	１	3	IP	転	6	IP	２		IP	６		IP	４		IP	４		IP
+渡邉　　雄朗	6.80	0.20	3.7	４	5	G1	４		G1	６		G1	１		IP	２		IP	１	5	IP	２		IP	５		IP	１		IP	２		IP

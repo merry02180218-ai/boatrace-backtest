@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　雅希	7.80	0.18	4.6	１		IP	５		IP	１		IP	３		IP	１		IP	１		IP	３		IP	２		IP	２		IP	２		IP
+後藤　　隼之	4.50	0.17	3.5	５		IP	５		IP	３		IP	１	1	IP	５		IP	６		IP	５	3	IP	２	3	IP	３		IP	３		IP
+村上　宗太郎	4.30	0.19	3.5	４		IP	４		IP	１		IP	６		IP	４		IP	３		IP	４		IP	４		IP	５		IP	４		IP
+寺島　　美里	3.30	0.14	2.8	５		IP	５		IP	４		IP	５	5	IP	５		G1	４		G1	４		IP	３		G3	６		G3	４		IP
+栗城　　　匠	5.70	0.17	2.4	１	4	IP	４	4	IP	３		G1	３		IP	１	4	IP	５	6	G1	６		IP	妨		G1	３		IP	１		IP
+若林　　　将	5.00	0.13	2.3	エ		G3	３		IP	３		IP	６		IP	２		IP	２		IP	６		G1	３		IP	３	5	IP	５	5	IP

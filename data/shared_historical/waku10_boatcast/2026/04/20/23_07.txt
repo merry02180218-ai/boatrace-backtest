@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　基樹	5.50	0.16	3.6	４		IP	２		IP	５		IP	４		IP	妨		IP	１		IP	３		IP	６		IP	１		IP	１		IP
+草場　　康幸	5.20	0.14	3.0	３		IP	３		IP	５		IP	３		IP	１		IP	５		IP	３		IP	３		IP	４		IP	４		IP
+田邉　　亮蔵	4.30	0.18	3.5	４		IP	４		IP	４		IP	４		IP	２		IP	２		IP	３		IP	６		IP	５		IP	５		IP
+角浜　　　修	5.10	0.17	3.5	５		IP	４		IP	２		IP	２		IP	６		IP	１		IP	４		IP	５		IP	１	3	IP	５		IP
+佐藤　　世那	2.20	0.17	4.0	６		IP	６		IP	５		IP	５	6	IP	４		IP	５		IP	３		IP	６		IP	５		IP	６		IP
+浅井　　　翼	2.33	0.22	4.1	６		IP	６		IP	６		IP	６		IP	１		IP	５		IP	６		IP	５		IP	転		IP	５		IP

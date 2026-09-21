@@ -1,0 +1,8 @@
+data=
+1	0
+佐竹　　友樹	4.40	0.19	4.0	５		IP	６		IP	４		IP	３		IP	１		IP	６		IP	１		IP	１		IP	Ｆ		IP	Ｆ		IP
+溝口　海義也	7.10	0.14	2.4	１		IP	２		IP	１		G2	２		G2	４		IP	１		IP	６		IP	４		IP	３		IP	２		IP
+松本　　　怜	5.80	0.18	3.0	５		IP	４		IP	３		IP	４	4	IP	３		IP	３		IP	１		IP	３		IP	１		IP	４		IP
+松尾　　　祭	5.30	0.20	4.2	３		IP	２		IP	４		IP	５		IP	５		IP	５		G1	２		IP	３		IP	３		IP	２		IP
+萩原　　秀人	5.40	0.13	2.3	４		IP	４		G1	２		IP	６		G1	６		G1	２		G3	３		G1	３		G1	５		G1	２		IP
+浮田　　圭浩	3.70	0.24	5.3	５		IP	６		IP	６	5	IP	２		IP	１	5	IP	３		IP	６		IP	５		IP	５		IP	４		IP

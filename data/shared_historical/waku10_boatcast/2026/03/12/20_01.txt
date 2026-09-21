@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　真二	7.10	0.16	2.8	１		IP	４		IP	２		IP	１		IP	４		IP	２		IP	２		IP	６		G3	２		IP	１		IP
+小林　　孝弘	5.10	0.19	3.4	１		IP	６		IP	３		IP	３		IP	５		IP	３		IP	３		IP	２		IP	４		IP	５		IP
+夏山　　亮平	4.70	0.16	3.2	２		IP	２		IP	３		IP	１		IP	５	4	IP	４		IP	６		IP	４		IP	５		G3	５		G3
+沖島　　広和	5.70	0.14	3.2	５		IP	３		IP	４		IP	２		IP	３		IP	２		IP	４	3	IP	３		IP	２		IP	４		IP
+川添　　英正	4.00	0.15	3.4	６		IP	４		IP	５		IP	６	4	IP	２		IP	２		IP	４		IP	２	4	IP	５		IP	５		IP
+滝沢　　芳行	3.90	0.17	3.5	３		IP	２	4	IP	４	4	IP	４		IP	２		IP	６		IP	５	5	IP	５		IP	５		IP	６		G3

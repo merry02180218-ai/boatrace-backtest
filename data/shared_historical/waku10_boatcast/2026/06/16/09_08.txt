@@ -1,0 +1,8 @@
+data=
+1	0
+小澤　　　学	4.30	0.24	5.4	３		IP	２		IP	４		IP	５		IP	５		IP	２		IP	５		IP	２		IP	５		IP	６		IP
+松本　　弓雄	3.80	0.22	3.7	６		IP	５		IP	６		IP	５		IP	５		IP	３		IP	５		IP	３		IP	３		IP	１	3	IP
+松村　　　敏	6.60	0.12	2.1	３		IP	６		IP	６		IP	１		IP	２		IP	２		IP	４		G1	３	4	G1	１		IP	１		IP
+橋本　　年光	4.80	0.17	4.3	２		IP	３		IP	５		IP	２		IP	４		IP	５		IP	４		IP	３		IP	５		IP	３		IP
+別府　　昌樹	3.70	0.22	3.7	４		IP	１		IP	３		IP	４	6	IP	４	6	IP	５		IP	５		IP	５	6	IP	５	6	IP	６		IP
+塚越　　陸斗	1.10	0.22	3.7	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP

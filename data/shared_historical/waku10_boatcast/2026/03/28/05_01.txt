@@ -1,0 +1,8 @@
+data=
+1	0
+村田　　　敦	4.70	0.16	2.5	２		IP	６		IP	５	2	IP	３		IP	３		IP	６		IP	６		IP	４		IP	２		IP	１		IP
+南野　　利騰	3.50	0.16	3.1	５		IP	３		IP	４		IP	４		IP	５		IP	３		IP	６		IP	４		IP	５		IP	４		IP
+大橋　純一郎	7.20	0.15	2.3	１		IP	３		IP	２		IP	２		IP	１		IP	４		IP	２		IP	３		IP	２		IP	４		IP
+金子　　和之	5.70	0.11	2.5	６		IP	１		IP	３		IP	３		IP	３		IP	４		IP	２		IP	３		IP	３		IP	４		IP
+渡邉　　俊介	4.50	0.13	2.4	２		IP	３		IP	５		IP	５		IP	３		IP	６		IP	５		IP	３		IP	３		IP	４		IP
+生方　　靖亜	2.60	0.16	4.1	４		IP	４		G3	５		G3	５		IP	６		IP	２	5	IP	５		IP	６		IP	６		IP	６		IP

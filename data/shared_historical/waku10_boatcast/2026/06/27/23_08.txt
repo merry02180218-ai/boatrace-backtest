@@ -1,0 +1,8 @@
+data=
+1	0
+松井　　貫太	6.80	0.15	3.9	４		IP	１		IP	５		IP	２		IP	２		IP	３		IP	４		IP	１		IP	３		IP	１		IP
+原村　　拓也	6.00	0.21	3.9	２		IP	５		IP	４		IP	２		IP	４		IP	３		IP	４		IP	２		IP	２		IP	２		IP
+古賀　　繁輝	5.40	0.15	3.1	６		IP	４		IP	２		IP	１		IP	３		IP	３		IP	６		IP	Ｆ	4	G1	１		IP	２		IP
+板倉　　敦史	4.90	0.16	3.8	４	5	IP	６		IP	１		IP	４		IP	３		IP	５		IP	３		IP	４		IP	４		IP	２		IP
+小川　　晃司	4.60	0.16	3.6	３	6	IP	６	6	IP	４	6	IP	４	6	IP	４	6	IP	３	6	IP	３	6	IP	２	6	G3	６	6	G3	３	6	G3
+久保　　翔耶	2.30	0.20	3.9	３		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	２		IP

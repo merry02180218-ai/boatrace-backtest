@@ -1,0 +1,8 @@
+data=
+1	0
+木田　峰由季	8.20	0.14	2.4	３		IP	１		IP	１		IP	Ｆ		IP	１		IP	１		IP	２		G3	１		G3	２		IP	１		IP
+田中　　勇輔	3.60	0.14	2.9	２		IP	４		IP	３		IP	６		IP	５		IP	２		IP	４		IP	妨		IP	５		IP	６		G3
+佐藤　　世那	5.90	0.16	3.1	１		IP	３		IP	１		IP	１		IP	５	4	IP	６		IP	５		IP	４		IP	４		IP	１		IP
+吉田　　宗弘	5.20	0.21	3.5	４		IP	４		IP	３		IP	２		IP	６		IP	１		IP	２	2	IP	３		IP	４		IP	６		IP
+川原　　祐明	5.30	0.14	3.1	４	4	IP	４		IP	５		IP	５		IP	３		IP	１		IP	１		G1	４		IP	４		IP	３		IP
+下河　　誉史	4.60	0.20	4.1	５		IP	５		IP	６		IP	２	5	IP	２	4	IP	２	2	IP	５	5	IP	６	5	IP	３	4	IP	２	2	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+高野　　哲史	10.20	0.15	2.8	１		IP	１		G1	１		G1	１		G1	２		IP	１		G1	１		IP	１		IP	１		IP	１		IP
+沢田　　昭宏	4.20	0.16	4.0	３		IP	２		IP	３		G3	６		G3	３		IP	５		IP	５	4	IP	５		IP	２	3	IP	６		IP
+岡村　　　仁	5.90	0.15	2.6	４		IP	３		G3	３		G3	３		IP	５		G1	転		G1	２		G1	３		G1	３	4	IP	１		IP
+伯母　　芳恒	3.50	0.17	3.1	５		G3	３		IP	３		IP	６		IP	６		IP	５		IP	６		IP	５		IP	３		IP	２		IP
+野長瀬　正孝	6.20	0.18	3.2	４	4	IP	２		IP	４	3	IP	２	4	IP	２	4	IP	２	4	IP	４		IP	２	3	IP	２	4	IP	５		IP
+高倉　　孝太	3.60	0.14	2.9	５		IP	４		IP	１		IP	６		IP	５		IP	６	5	IP	５		IP	４		IP	３		IP	５		G3

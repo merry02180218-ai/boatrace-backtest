@@ -1,0 +1,8 @@
+data=
+1	0
+和田　　操拓	6.40	0.12	2.5	６		IP	１		IP	１		IP	２		IP	４		IP	１		IP	５		IP	４	2	IP	１		IP	４		G2
+大塚　　康雅	4.90	0.15	3.2	５	3	IP	６		IP	４	3	IP	５		IP	２		IP	３		IP	５		IP	２		IP	１		IP	３		IP
+大澤　　大夢	5.30	0.17	2.9	４		IP	４		IP	５		IP	２		IP	２		IP	３		IP	１		IP	４		IP	３		IP	６		IP
+中田　　友也	5.20	0.18	4.0	３		IP	４		IP	２		IP	６	5	IP	１		IP	２		IP	４		IP	６		IP	３		IP	４		IP
+崎　　　利仁	3.70	0.26	4.2	５		IP	３		IP	４		IP	４		IP	４		IP	５		IP	５		IP	６		IP	１	6	IP	５		IP
+藤田　　康生	4.10	0.14	2.7	５		IP	５		IP	５		IP	６		IP	４		IP	１		IP	４		IP	４		IP	４		IP	２		IP

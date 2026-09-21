@@ -1,0 +1,8 @@
+data=
+1	0
+山口　　　剛	8.70	0.12	2.9	１		G1	１		G1	２		G1	１		G1	１		G1	１		G1	６		G1	１		G1	Ｆ		IP	１		IP
+平尾　　崇典	6.33	0.17	4.5	落		IP	３		G1	２		G2	２		IP	５		IP	３		IP	３		IP	３		IP	３		IP	３		IP
+杉山　　裕也	5.00	0.16	2.7	３		IP	４		IP	５		G1	３		IP	３		IP	６		IP	２	5	IP	５		IP	３		IP	２		IP
+大上　　卓人	5.40	0.15	2.5	４		G1	６		G1	２		G1	３		G1	５		G1	４		G1	２		IP	４	3	IP	４		IP	３		G1
+高野　　哲史	3.00	0.14	2.9	５		G1	６		G1	４		IP	２		IP	４		G1	６		G1	転		IP	６		IP	５		IP	６		IP
+末永　　和也	5.30	0.16	3.6	３		G1	４		G1	４		G1	５		G1	３		G1	５		G1	２		IP	４		IP	２	4	IP	５		G1

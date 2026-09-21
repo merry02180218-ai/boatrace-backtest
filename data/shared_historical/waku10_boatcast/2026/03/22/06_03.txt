@@ -1,0 +1,8 @@
+data=
+1	0
+垂水　　　悠	7.20	0.12	3.2	６		IP	１		IP	１		G1	１		IP	６		IP	３		IP	１		IP	２		IP	４		IP	１		IP
+島村　　隆幸	9.30	0.11	2.1	２		IP	２		IP	２		IP	１		IP	１		IP	１		G3	２		IP	１		IP	１		IP	１		IP
+北川　　潤二	4.80	0.18	2.3	２		IP	６		IP	６		IP	４		IP	５		IP	２		IP	２		IP	３	2	IP	３		IP	５		IP
+杉山　　正樹	7.30	0.14	2.8	１		IP	１		IP	３		IP	４		G1	４		G1	４		IP	４		IP	１		IP	１		IP	２		G1
+中島　　　航	4.00	0.20	4.8	２		IP	２	6	IP	４	6	IP	６		IP	４		IP	５		IP	４		IP	３	4	IP	６		IP	５		IP
+渡邉　　　健	3.80	0.14	2.5	６		IP	５		IP	２		IP	５	5	IP	３		IP	６		IP	２		IP	５		IP	５		IP	４		IP

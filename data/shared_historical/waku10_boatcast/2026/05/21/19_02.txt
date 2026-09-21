@@ -1,0 +1,8 @@
+data=
+1	0
+渡辺　　　豊	6.80	0.20	3.9	４		IP	３		IP	１		IP	２		IP	１		IP	１		IP	３		IP	２		IP	５		IP	４		IP
+淺香　　文武	4.60	0.15	3.2	６		IP	３		IP	４		IP	２		IP	３		IP	４		IP	１		IP	５		IP	５		IP	６		IP
+森野　　正弘	6.70	0.10	1.7	１		G3	２		G3	３		IP	２		IP	５		IP	２		IP	４		IP	１		IP	６		IP	１	2	IP
+佐藤　ほのか	6.00	0.13	2.0	３		IP	５		IP	４		G3	２		IP	４		IP	４		IP	２		IP	２	3	IP	２		G3	２		G3
+塩崎　　優司	3.70	0.15	3.4	６		IP	５		IP	２		IP	６		IP	転		IP	２		IP	５		IP	３		IP	２		IP	６	6	IP
+福田　　柊人	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP

@@ -1,0 +1,8 @@
+data=
+1	0
+服部　　　剛	7.80	0.20	3.7	５		IP	２		IP	２		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	４		IP
+古澤　　光紀	6.00	0.16	2.8	１		IP	５		IP	２		IP	３		IP	６	3	IP	２		IP	２	3	IP	２		IP	６		IP	２		IP
+一色　　颯輝	5.90	0.17	3.3	Ｆ		IP	１		IP	４		IP	２		IP	４		IP	２		IP	２		IP	２		IP	６		IP	２		IP
+後藤　　　浩	3.70	0.17	3.3	６		IP	２		IP	５		IP	６		IP	２		IP	５		IP	５		IP	３		IP	６		IP	３		IP
+植竹　　玲奈	1.89	0.21	4.2	６		IP	４		IP	６		IP	４		IP	６		IP	欠		IP	６		IP	５		IP	５		IP	６	6	IP
+土屋　実沙希	3.63	0.21	4.7	欠		IP	６		IP	６		IP	３		IP	６		IP	１	5	IP	転		IP	転		IP	３		IP	４		IP

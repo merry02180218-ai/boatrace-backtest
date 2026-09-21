@@ -1,0 +1,8 @@
+data=
+1	0
+葛原　　大陽	7.40	0.14	3.0	１		IP	１		IP	６		IP	１		IP	１		IP	１		IP	１		IP	５		G1	２		IP	６		G1
+藤田　　美代	4.20	0.21	3.4	４		IP	４		IP	６		G3	５		G3	２		G3	４		G3	３		IP	６		IP	５		IP	１		IP
+堀越　　雄貴	7.60	0.19	4.0	２		IP	５		IP	３		IP	４		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+山下　　和彦	4.40	0.16	3.5	５		IP	３	3	IP	５		IP	３		IP	６		G3	２		IP	３	5	IP	２		IP	６	6	IP	４		IP
+山川　　雄大	5.10	0.21	4.3	５		IP	３		IP	６		IP	６		IP	１		IP	１		IP	５		IP	６	4	IP	２		IP	１		IP
+渡邉　　和将	5.30	0.16	3.2	１		IP	３		IP	３	5	IP	３		IP	４		IP	５		G1	６		G1	４		G1	６		SG	２	5	IP

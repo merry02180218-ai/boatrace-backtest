@@ -1,0 +1,8 @@
+data=
+1	0
+富永　夏哉人	7.20	0.18	2.8	１		IP	５		IP	３		IP	１		IP	２		IP	１		IP	２		IP	４		IP	３		IP	２		IP
+池上　　隆行	3.10	0.16	3.5	３		IP	５		IP	５		IP	５		IP	５		IP	６		IP	３		IP	５		IP	５		IP	３		IP
+松浦　　　勝	3.70	0.26	3.4	６		IP	５	4	IP	２		IP	４	4	IP	４		IP	４	5	IP	６	4	IP	５		IP	１		IP	６		IP
+森　　　雄利	2.30	0.17	2.9	６	5	IP	６		IP	５		IP	５	5	IP	１	5	IP	６		IP	６		IP	６		IP	５		IP	５		IP
+小川　　晃司	4.20	0.15	3.7	６	6	IP	４	6	IP	４	6	IP	４	6	IP	３	6	IP	３	6	IP	２	6	G3	６	6	G3	３	6	G3	５	6	IP
+上條　　嘉嗣	3.30	0.21	5.0	６		IP	４		IP	５	5	IP	４	5	IP	６		IP	２		IP	４	5	G3	５	5	IP	６		IP	３	4	IP

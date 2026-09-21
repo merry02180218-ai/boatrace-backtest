@@ -1,0 +1,8 @@
+data=
+1	0
+石倉　　洋行	9.60	0.11	1.7	１		IP	３		IP	１		IP	１		IP	１		IP	１		G1	２		G1	１		IP	１		IP	１		IP
+角　　ひとみ	5.10	0.20	4.0	４		IP	３		G3	６		G3	２		G3	２	1	IP	３		G3	６		IP	６		IP	２		IP	２		G3
+眞田　　英二	5.80	0.16	3.1	３		IP	４		IP	１		IP	３		IP	５		IP	２		IP	５		IP	２		IP	２		IP	４		G3
+佐々木　大河	6.56	0.12	1.8	３		IP	２		IP	２		IP	３		IP	２		IP	５		IP	３		G2	転		IP	３		IP	２		IP
+松下　　知幸	3.00	0.17	4.0	４		IP	６	6	IP	６		IP	５		IP	６		IP	１	6	IP	５		IP	６		IP	５		IP	３		IP
+伊藤　　将吉	4.00	0.15	3.1	６		IP	４		IP	５		G1	６		G1	６		IP	２		IP	２		IP	６		IP	４		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+郷原　　章平	7.70	0.14	3.3	１		IP	３		IP	４		IP	３		G1	１		IP	４		IP	３		IP	１		IP	１		IP	１		IP
+野口　　勝弘	8.00	0.15	2.7	２		IP	１		IP	１		IP	３		IP	１		IP	２		IP	２		IP	２		IP	１	3	IP	５		IP
+天野　　晶夫	5.70	0.18	3.4	４		IP	２		IP	５	4	IP	３		IP	２		IP	６		IP	４		IP	１		IP	３		IP	２		IP
+山下　　昂大	5.70	0.14	2.5	２		IP	１		IP	４		IP	４		IP	４		IP	６		IP	２		IP	４		IP	２		IP	４	6	G3
+齋藤　　達希	4.70	0.19	4.3	５	6	IP	３		IP	４		IP	５		IP	３		IP	２		IP	４		IP	２		IP	６		IP	３		IP
+梶山　　涼斗	3.00	0.19	4.3	５		IP	２		IP	５		IP	５		IP	５		IP	４		IP	５		IP	５		IP	４		IP	５		IP

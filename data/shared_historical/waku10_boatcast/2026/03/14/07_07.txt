@@ -1,0 +1,8 @@
+data=
+1	0
+烏野　　賢太	9.10	0.16	4.1	１		IP	２		IP	１		IP	１		IP	１		IP	３		IP	１		G1	３		IP	１		IP	１		IP
+眞田　　英二	6.20	0.20	3.6	４		G3	４	4	G3	２		IP	３		IP	４		IP	４		IP	３		IP	１		IP	３		IP	１		IP
+飯山　　　泰	4.80	0.14	3.2	６		IP	２		IP	２		IP	５		G1	４		G1	６		G1	６		IP	４		IP	３		IP	１		IP
+三好　　勇人	4.11	0.15	2.5	６		IP	５		IP	３		IP	４		IP	落		IP	４		IP	４		IP	３		IP	４		IP	３		IP
+犬童　　千秋	2.78	0.13	2.9	６		IP	５		IP	３		G3	４		G3	エ		IP	４		G3	６		IP	５		IP	６		IP	４		IP
+藤本　　元輝	2.60	0.24	4.8	４		IP	６		IP	６		IP	５		IP	５		IP	５		IP	３		IP	３		IP	６		IP	６		IP

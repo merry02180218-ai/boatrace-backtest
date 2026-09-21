@@ -1,0 +1,8 @@
+data=
+1	0
+田中　太一郎	5.60	0.19	3.3	３		IP	２		IP	５		IP	６		IP	６		IP	５	2	IP	１		IP	３		IP	１		IP	１		IP
+井上　　大輔	4.40	0.18	3.5	３		IP	２		IP	５		IP	６		IP	５		IP	１	1	IP	４		IP	６		G3	５		G3	２		G3
+樅山　　拓馬	4.20	0.15	2.6	４		IP	４		IP	５	4	IP	４		IP	２		IP	６		IP	４		IP	２		IP	３		IP	６		IP
+佐々木　完太	6.20	0.18	3.8	５		G1	４		IP	５		IP	１		IP	４		G1	２		IP	３		IP	１	5	IP	２		G1	５		G1
+下河　　誉史	3.40	0.21	4.0	５		IP	４		IP	６		IP	５		IP	４		IP	３	4	IP	５		IP	６	6	IP	４		IP	２		IP
+澤　　　大介	3.50	0.26	4.4	４		G3	６		IP	６		IP	３	5	IP	５		IP	３		IP	５		IP	４	5	IP	６		IP	２		IP

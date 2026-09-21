@@ -1,0 +1,8 @@
+data=
+1	0
+中曽　　瑠華	5.33	0.14	3.0	４		IP	２		IP	６		IP	１		IP	６		G3	２		IP	１		IP	４		IP	５		IP			IP
+三角　　哲男	5.80	0.14	2.4	２		IP	１		IP	５		IP	１		IP	５		IP	３		IP	６		IP	２		IP	５		G1	２		IP
+上原　　　崚	5.60	0.15	2.2	５		IP	４	4	IP	４		IP	５		IP	２		IP	３		IP	３		IP	４		IP	１		IP	１		IP
+栗城　　　匠	7.70	0.11	1.6	４		G1	２		G1	４	3	IP	１		G1	１		IP	転		G1	１		G1	１		IP	１		IP	４		IP
+西田　　　靖	2.80	0.18	3.1	６	2	G3	６	1	G3	４	2	IP	５	2	IP	４	2	IP	４	2	IP	３	2	IP	３	2	IP	Ｆ	3	IP	妨	2	IP
+市川　　瑚幸	1.40	0.19	3.9	６		IP	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+藤田　　靖弘	9.20	0.12	1.6	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+天野　　晶夫	5.80	0.16	3.1	４		IP	３		IP	４		IP	２		IP	４		IP	３		IP	２		IP	３		IP	３		IP	３		IP
+古田　　祐貴	6.33	0.14	3.4	１		IP	転		IP	４	4	IP	３	4	IP	２		G1	６		IP	２		IP	６		IP	１		IP	２		IP
+夏山　　亮平	4.90	0.14	2.5	４		IP	２		IP	３		IP	３		IP	１		IP	２		IP	６		IP	５		IP	５		IP	５		IP
+岡村　　慶太	5.30	0.15	3.8	２		IP	２		IP	１		IP	５		G1	５	6	G1	６		IP	４		IP	４		IP	４		IP	３		IP
+木谷　　賢太	3.90	0.21	4.9	５	5	IP	３		IP	４		IP	５		IP	５		G1	５		IP	４		IP	３		IP	４	5	IP	３	5	IP

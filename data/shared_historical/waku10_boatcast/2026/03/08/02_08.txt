@@ -1,0 +1,8 @@
+data=
+1	0
+河内　　一馬	5.13	0.14	2.7	２		IP	５		IP	５		IP	転		IP	６		IP	５		IP	２		IP	１		IP	２		IP			IP
+塚越　　海斗	8.00	0.17	3.7	２		IP	３		IP	１		IP	３		IP	１		IP	３		IP	１	1	IP	１	1	IP	１		IP	４		IP
+竹間　　隆晟	4.90	0.15	3.5	２	4	IP	４		IP	４		G1	６	6	G1	１		IP	５		IP	１		IP	６		IP	６	6	IP	３		IP
+鈴木　　唯央	3.90	0.21	3.6	４		IP	４		IP	５		IP	５		IP	５		IP	２	5	IP	４		IP	３		IP	３		IP	６	5	IP
+楠　　将太郎	5.00	0.17	2.8	２		IP	４		IP	２		IP	２		IP	６		IP	５		IP	６		IP	５		IP	２	6	IP	２		IP
+堀越　　雄貴	3.80	0.21	4.8	４		IP	３		IP	６		IP	５		IP	５		IP	３		IP	４		IP	４		IP	６		G3	２		IP

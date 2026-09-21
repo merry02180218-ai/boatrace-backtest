@@ -1,0 +1,8 @@
+data=
+1	0
+前原　　大道	9.80	0.16	2.9	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３	2	IP	１		G1	１		IP	１		IP
+松本　　博昭	7.60	0.17	3.8	２		IP	２		IP	１		IP	２		IP	３		IP	２		IP	２		IP	２		IP	５	3	IP	１		IP
+福田　　　理	2.70	0.18	4.7	６		IP	４		IP	６		IP	６		IP	４		IP	６		IP	６		IP	５		IP	３		IP	３		IP
+佐々木　和伸	6.50	0.13	2.9	４		IP	２		IP	１		IP	５		IP	６		IP	２		IP	４		IP	１		IP	２		IP	２		IP
+秦　　　英悟	4.30	0.09	2.4	４		IP	５		IP	４		IP	３		IP	６		IP	６		SG	３		SG	５	6	G1	５		G1	２		G1
+高井　　駿弥	3.11	0.16	4.7	６	4	IP	５		IP	６		IP	２	5	IP	３		IP	５		IP	４		IP	５		IP	転		IP	５		IP

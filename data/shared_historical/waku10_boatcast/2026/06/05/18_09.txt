@@ -1,0 +1,8 @@
+data=
+1	0
+土屋　　　南	9.50	0.15	2.8	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	１		G3	１		IP
+清水　　紀克	3.90	0.19	3.2	６	3	IP	４		IP	５		IP	４		IP	２		IP	３		IP	２		IP	６		IP	６		IP	４		IP
+松村　　　敏	7.50	0.11	1.9	６		IP	１		IP	２		IP	２		IP	４		G1	３	4	G1	１		IP	１		IP	２		IP	２		IP
+津久井　拓也	5.60	0.15	2.7	４		IP	２		IP	５		G2	６		IP	１		IP	４		IP	２		IP	５		IP	１		IP	４		IP
+秋山　　広一	4.10	0.22	4.2	４		IP	６		G3	６		G3	４		IP	５		IP	１		IP	４		IP	３	4	IP	５		G1	３		IP
+岡部　　　哲	3.80	0.18	3.9	５		IP	２		IP	４		IP	５		IP	４		IP	６		IP	５		IP	６		IP	３		IP	２		IP

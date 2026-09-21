@@ -1,0 +1,8 @@
+data=
+1	0
+上原　　　崚	8.60	0.18	2.6	１		IP	４		G2	１		G2	１		IP	２		IP	１		IP	１		IP	３		IP	３		IP	１		IP
+深山　　祐二	4.40	0.17	3.6	２		IP	５		IP	５		IP	４		IP	２		IP	５		IP	６		IP	２		IP	６		IP	２		IP
+高濱　　芳久	5.90	0.18	4.0	３		IP	２		IP	５	4	IP	２		IP	６		IP	３		IP	２		IP	３		IP	２		IP	３		IP
+長尾　　章平	5.90	0.18	4.3	３		IP	６		IP	３		IP	４		IP	２		IP	２		IP	１		IP	２		IP	５		IP	３		IP
+後藤　　隼之	4.20	0.16	3.2	３		IP	６		IP	３		IP	４		IP	６		IP	５		IP	４	4	IP	２		IP	３		IP	４		IP
+久保　　翔耶	1.80	0.18	3.8	５		IP	６		IP	６		IP	６		IP	２		IP	６		IP	６		IP	５		IP	６		IP	転		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+酒見　　峻介	7.10	0.17	3.5	４		IP	１		IP	３		IP	１		IP	１		IP	２		IP	４		IP	２		IP	１		IP	６		IP
+西川　新太郎	5.40	0.16	3.6	２		IP	２		IP	欠		IP	４		IP	５		IP	１		IP	４		IP	２		IP	５		IP	２		G3
+寺田　　　祥	7.10	0.15	3.6	２		IP	３		IP	１		IP	２		IP	４		IP	２		G1	２		IP	５		G1	４		G1	１		IP
+向井　　美鈴	5.20	0.23	3.5	４		IP	６		G1	４		G1	６		IP	４		IP	３		IP	３		IP	２		IP	２		IP	２		IP
+出穂　　和鼓	1.80	0.22	4.4	５		IP	６		IP	６		IP	６		IP	６		IP	４	6	IP	５	6	IP	４	6	IP	６	6	G3	６		G3
+盛本　　真輔	2.67	0.19	3.3	４		IP	６		IP	３		IP	６		IP	６		IP	５	5	IP	３		IP	５		IP	６		IP	転	5	IP

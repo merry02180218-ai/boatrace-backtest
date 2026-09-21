@@ -1,0 +1,8 @@
+data=
+1	0
+落合　　直子	8.60	0.13	1.8	２		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	２		IP	３		G3	１		IP
+吉永　　泰弘	5.10	0.18	3.6	２	1	IP	４		IP	４		IP	４		IP	６		IP	１		IP	３		IP	２		IP	４		IP	５		G3
+深川　　和仁	4.50	0.19	3.8	２		IP	６		G3	１		IP	５		IP	４		IP	４		IP	４		IP	５		IP	３		IP	４		IP
+長岡　　良也	4.00	0.19	3.2	１		IP	６		IP	６		IP	５		G1	４		IP	３		IP	５	3	IP	６		IP	５		IP	１		IP
+荒井　　輝年	5.20	0.18	3.2	４		IP	３		IP	３		IP	２		IP	５		IP	５		IP	４		IP	４	6	IP	３		IP	２		IP
+龍田　　真白	2.20	0.12	2.0	６		IP	４		IP	６		IP	５		IP	５		IP	４		IP	５		IP	４		IP	６		IP	６		IP

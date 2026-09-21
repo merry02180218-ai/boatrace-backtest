@@ -1,0 +1,8 @@
+data=
+1	0
+森野　　正弘	10.00	0.15	2.0	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		G1	１		G1
+永田　　義紘	5.40	0.14	2.7	１		IP	４		IP	４		IP	５		IP	４		IP	３	3	IP	２		IP	２		IP	５		IP	３		IP
+赤峰　　和也	1.90	0.19	3.2	６		IP	５		IP	５		IP	６		IP	５		IP	６	6	IP	６		IP	５		IP	６		IP	３		IP
+西川　　真人	4.20	0.18	3.4	４		IP	５		IP	５		IP	５		IP	４		IP	５		IP	３		IP	１		IP	５	5	IP	２		IP
+角浜　　　修	3.30	0.18	3.8	５		IP	６		IP	５		IP	２		IP	５		IP	２	4	IP	３	4	IP	５	4	IP	６		IP	６		IP
+小林　　基樹	2.90	0.23	5.1	４		IP	４	5	IP	６		IP	５		IP	５		IP	６		IP	６		IP	４	3	IP	４		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+山口　　　剛	10.70	0.13	4.1	１		G1	１		G1	１		IP	１		IP	１		IP	１		IP	２		SG	１		SG	１		G1	１		G1
+服部　　幸男	7.30	0.15	2.4	１		IP	２		IP	３		IP	１		IP	１		IP	３		G1	２		G1	２		IP	５		IP	５		IP
+鰐部　太空海	5.00	0.14	2.8	１		IP	６		IP	２		IP	６		IP	５		IP	４		IP	５		IP	１		IP	１		IP	５		IP
+西岡　　顕心	7.10	0.13	3.2	３		IP	３		IP	２		G1	２		G1	６		G1	１		G2	６	5	G1	２		G1	２		G1	２	5	IP
+清水　　愛海	5.30	0.19	3.7	６		IP	２		G2	６		G2	１		IP	６	6	IP	３		IP	３		IP	２		G1	３		G1	６	6	G1
+桐生　　順平	5.60	0.14	4.1	５		G1	２		G1	４		G1	３		G1	３		G1	４		G1	Ｆ		G1	３		SG	４		G1	３		G1

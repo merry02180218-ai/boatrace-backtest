@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　駿兵	9.00	0.15	2.9	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	４		IP	１		IP
+佐々木　和伸	7.80	0.13	2.4	１		IP	２		IP	２		IP	２		IP	１		IP	１		IP	２		IP	２	1	IP	４		IP	４		IP
+河野　　　大	5.50	0.12	2.5	１		IP	５		IP	５		IP	４		IP	３		IP	６		IP	４		G2	１	4	G2	２		IP	３		IP
+市橋　　卓士	6.50	0.14	2.7	６		IP	３		IP	２		IP	２		IP	１		IP	４		IP	３		IP	２		IP	３	2	IP	２		IP
+小坂　　宗司	4.90	0.14	3.4	６		IP	３		IP	４		IP	５		G3	３		G3	２		IP	４	4	IP	３		IP	４		IP	２		IP
+中岡　　正彦	6.50	0.15	3.3	４	2	IP	６	2	SG	５	5	SG	２	2	IP	４		IP	５	2	IP	１	2	IP	１	2	IP	１	3	IP	１	3	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+志道　　吉和	5.60	0.16	2.9	６		IP	２		IP	３		IP	Ｆ		IP	１		IP	１		IP	２		IP	１		IP	６		IP	５		IP
+川崎　　誠志	5.50	0.21	5.3	３		IP	３		IP	４		IP	３		IP	６		IP	１		IP	２	1	IP	５		IP	３		IP	３		IP
+上村　慎太郎	4.00	0.18	5.3	６		IP	３		IP	４		IP	３		IP	６		IP	４		IP	４		IP	３		IP	４	4	IP	４		IP
+小澤　　和也	2.30	0.16	3.4	５		IP	５	2	IP	４		IP	５		IP	４		IP	５		IP	５	5	IP	６		IP	５		IP	５		IP
+草場　　康幸	4.50	0.14	2.1	４		IP	２	4	IP	４		IP	３		IP	４		IP	６		IP	１		IP	５		IP	落		IP	３		IP
+菅沼　　佳昭	3.10	0.23	4.1	５		IP	５		IP	４		IP	３		IP	６		IP	３	4	IP	５		IP	５	3	IP	５		IP	４		IP

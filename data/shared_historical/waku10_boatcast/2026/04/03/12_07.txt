@@ -1,0 +1,8 @@
+data=
+1	0
+土屋　　智則	7.80	0.16	3.1	１		G3	１		G3	５		IP	１		IP	１		IP	２		IP	１		IP	２		IP	３		IP	４		IP
+田中　信一郎	6.11	0.13	3.1	５		IP	３		IP	５		IP	３		IP	２		IP	２		G1	２		IP	５		IP	欠		G3	１		IP
+定松　　勇樹	9.00	0.13	2.8	１		SG	１		G2	２		G1	２		G1	２		G3	３		G3	１		G3	６		G1	１		G1	１	2	IP
+渡邉　　和将	4.60	0.14	3.2	４		SG	２		IP	４		IP	４		G1	６		G1	３		IP	１		IP	６		IP	６		IP	６		SG
+山田　　哲也	5.30	0.09	1.6	２		IP	１	4	IP	５		IP	４		IP	２	4	IP	５		IP	５		G1	３		G1	６		G1	４	6	IP
+谷野　　錬志	2.90	0.19	4.1	５		IP	６		G1	６		G1	６		G1	３		IP	４	4	IP	６		G1	６		G1	３		IP	６		IP

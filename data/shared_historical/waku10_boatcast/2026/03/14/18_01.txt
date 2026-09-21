@@ -1,0 +1,8 @@
+data=
+1	0
+岩崎　　芳美	8.10	0.13	3.2	２		G3	２		G1	６		G1	３		G1	１		G1	１		G3	３		G3	２		G3	１		IP	１		IP
+笠野　友紀恵	3.00	0.24	5.3	５		G3	４		IP	６		IP	３		IP	６		G3	５		IP	４		IP	４		IP	４		G3	５		IP
+石井　　裕美	4.20	0.16	3.3	４		G3	４		IP	３	4	IP	５		G3	３		G3	４		IP	５		IP	４		IP	４		IP	３		G3
+西澤　日花里	2.80	0.20	3.8	５		IP	３		IP	３		IP	５		IP	６		IP	６	5	IP	６		IP	５		IP	３		IP	６		IP
+佐々木　裕美	3.00	0.18	2.7	５		IP	６		IP	４		IP	５		G3	６		IP	６		IP	６		IP	２		IP	２		IP	５		IP
+寺田　　夢生	1.70	0.20	3.7	５		G3	３		G3	６		G3	６		G3	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP

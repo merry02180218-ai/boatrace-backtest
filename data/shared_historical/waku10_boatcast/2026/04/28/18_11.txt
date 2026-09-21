@@ -1,0 +1,8 @@
+data=
+1	0
+廣中　　良一	6.90	0.17	2.3	５		IP	１		G3	１		IP	１		IP	１		IP	６		IP	４		IP	２		IP	４		IP	１		IP
+竹田　　辰也	7.70	0.12	2.0	２		IP	２		IP	２		IP	５		IP	２		IP	１		G1	３		G1	１		IP	３		IP	２		IP
+柳瀬　　興志	6.30	0.17	3.2	６		IP	２		IP	４		IP	３		IP	３		IP	２		IP	３		IP	３		IP	２		IP	１		IP
+清水　　攻二	5.40	0.16	3.7	４		IP	５		IP	２		IP	２		IP	１	2	IP	５		IP	５	2	IP	２		IP	１		IP	落		IP
+阪本　　勇介	4.90	0.17	3.7	２		IP	３		IP	１		IP	６		IP	５	6	IP	３		IP	３		IP	５		IP	３		IP	５		IP
+楠原　　正剛	4.70	0.14	3.7	４		IP	５		IP	４		IP	３	5	IP	４		IP	１		IP	４	5	G1	５	5	IP	５		IP	２		IP

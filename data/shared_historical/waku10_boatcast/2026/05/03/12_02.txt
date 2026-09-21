@@ -1,0 +1,8 @@
+data=
+1	0
+野間　　大樹	7.20	0.17	2.9	１		IP	２		IP	１		IP	１		IP	Ｆ		IP	３		IP	３		G3	２		IP	１		IP	４		IP
+有山　　　望	8.00	0.12	2.0	２		IP																											IP
+田中　信一郎	7.30	0.14	2.5	４		G1	６		G1	１		IP	２		IP	２		IP	２		IP	４		G1	１		IP	１		IP	３		IP
+岩川　　仁士	5.00	0.14	2.5	５		IP	２		IP	４		IP	６	5	IP	３		IP	２		IP	５		IP	２		IP	１		IP	６		IP
+湯川　　浩司	5.50	0.12	2.4	５		G1	４	2	G1	６		G1	２		G2	４		G2	２	4	IP	３		G1	５		G1	４		G1	３		G1
+藤本　　遼磨	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP

@@ -1,0 +1,8 @@
+data=
+1	0
+西橋　　奈未	8.70	0.12	2.1	１		IP	２		IP	５		G1	１		IP	１		IP	２		G3	２		G3	１		G1	１		G2	２		IP
+中里　　昌志	5.70	0.20	4.5	５		IP	２		IP	６	4	IP	２		IP	３		IP	２		IP	２		IP	３		IP	４		IP	３		IP
+森　　　智也	6.50	0.15	3.3	２		IP	６		IP	１		IP	２		IP	５	4	IP	２		IP	３		IP	１		IP	４		IP	２		IP
+藤堂　　里香	5.40	0.17	3.7	５		IP	３		G1	２		G1	３	5	IP	５		IP	２		G3	２		IP	４		IP	５		IP	３		IP
+田中　太一郎	3.60	0.14	3.5	５		IP	１	4	IP	５		IP	６		IP	３		IP	６		IP	５		IP	５		IP	４		IP	３		IP
+川口　　貴久	4.50	0.12	2.3	４		IP	５		IP	５		IP	３		IP	３		IP	６		IP	４		IP	１	5	IP	３		IP	５	5	IP

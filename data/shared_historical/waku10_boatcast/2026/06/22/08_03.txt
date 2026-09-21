@@ -1,0 +1,8 @@
+data=
+1	0
+小野　　信樹	7.40	0.16	3.2	２		IP	１		IP	４		IP	４		IP	４		IP	３		IP	１		IP	１		IP	２		IP	１		IP
+市川　　哲也	7.38	0.14	2.9	１		IP	３		IP	欠		IP	２		IP	３		IP	欠		IP	１	1	IP	２		IP	６	1	G2	２		G2
+國分　将太郎	5.70	0.16	2.4	３		IP	４		IP	３		IP	２		IP	１		IP	２		IP	１		IP	５		G3	５	4	G3	６	5	G3
+平田　健之佑	7.67	0.16	2.1	落		IP	２		IP	２		IP	３	3	IP	２		IP	４		IP	２		IP	２		IP	２		IP	１		G1
+渡邊　　雄斗	3.40	0.17	2.9	５		IP	５		IP	３	6	IP	１		IP	５		IP	４		IP	５		IP	６		IP	６		IP	４		IP
+後藤　　陽介	2.30	0.21	4.1	６		IP	４		IP	４		IP	３	5	IP	６		IP	５		IP	５		IP	６		IP	６		IP	６		IP

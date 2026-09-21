@@ -1,0 +1,8 @@
+data=
+1	0
+野間　　大樹	7.60	0.15	2.8	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	Ｆ		IP	３		IP	３		G3	２		IP
+秋田　健太郎	5.10	0.15	2.7	４		IP	３		IP	６		IP	４		IP	２		IP	２		IP	４		IP	３		IP	３		IP	４		IP
+飯山　　　泰	7.80	0.17	2.5	２		IP	２		IP	２		IP	１		G2	１		IP	１		IP	３		IP	２		IP	６		IP	２		IP
+向井田　直弥	3.10	0.11	3.1	５		IP	５		IP	５		IP	６		IP	Ｆ	6	IP	５	6	IP	５	6	IP	２	6	IP	１	5	IP	５	6	IP
+西村　　　勝	3.90	0.16	3.2	３		IP	２		IP	２		IP	２	6	IP	６		IP	５		IP	５		IP	５		IP	６	6	IP	６		IP
+岡村　　慶太	5.50	0.13	2.3	３	5	IP	５		IP	３		IP	３		IP	１		IP	４		IP	３		IP	６		IP	１		IP	４		IP

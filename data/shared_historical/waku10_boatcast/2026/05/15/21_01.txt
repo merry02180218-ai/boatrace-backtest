@@ -1,0 +1,8 @@
+data=
+1	0
+仲谷　　颯仁	10.30	0.14	3.4	１		IP	１		IP	１		IP	１		G1	１		G1	２		IP	１		IP	１		SG	１		G1	２		G1
+佐藤　　　翼	5.90	0.13	3.1	６		IP	５		G1	５		G1	５		SG	６		SG	２		G1	２		G1	２		G1	３		G1	１		G1
+末永　　和也	7.60	0.11	2.7	１	4	IP	１		G1	２		G1	３		G1	２		SG	５		SG	２		SG	５		G1	５		G1	２		G1
+丸野　　一樹	6.40	0.12	2.4	２	5	IP	１		IP	２		IP	２		G1	６	5	SG	４		G1	４		G1	２		IP	４		G1	６		G1
+大上　　卓人	5.10	0.13	3.4	２		IP	４		IP	６		IP	３		SG	６		G1	３		G1	５		G1	６		G1	４		G1	３		G1
+石本　　裕武	5.60	0.15	3.3	３		IP	４		IP	２		IP	２		IP	１		IP	６		G1	４		IP	１	5	IP	５		G1	６		IP

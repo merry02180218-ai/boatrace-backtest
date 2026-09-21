@@ -1,0 +1,8 @@
+data=
+1	0
+眞田　　英二	8.60	0.20	3.7	１		IP	２		IP	１		IP	３		IP	３		G3	１		IP	１		IP	３		IP	１		IP	１		IP
+山田　　雄太	5.10	0.15	3.0	エ		IP	６	3	IP	４		IP	１		IP	２		IP	２		IP	４		IP	２		IP	５		IP	３		IP
+井本　　昌也	8.00	0.12	2.3	１		IP	２		G1	５		G1	２		G2	１		G1	３		G1	２		IP	２		IP	２	2	IP	３		G1
+太田　　　潮	3.50	0.16	3.0	６		IP	６		IP	６		IP	６		IP	３		IP	３		IP	４		IP	６		IP	１		IP	４	5	IP
+大月　　遊雅	2.40	0.18	3.6	４		IP	６	6	IP	６		IP	６	6	IP	６		IP	６		IP	５		IP	５		IP	１		IP	６		IP
+畔柳　　俊吾	2.20	0.22	4.7	３	4	IP	６		IP	４		IP	４		IP	５		IP	５		IP	６		IP	６		IP	６		IP	転	5	IP

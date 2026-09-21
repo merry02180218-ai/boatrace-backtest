@@ -1,0 +1,8 @@
+data=
+1	0
+佐々木　康幸	9.90	0.11	1.8	１		IP	１		G1	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+竹腰　　正樹	5.30	0.18	3.6	６		IP	６		IP	６		IP	４	3	IP	２		IP	３		IP	１		IP	４		IP	１		IP	２		IP
+大場　　　敏	6.20	0.11	1.7	３		IP	３		IP	４		IP	１		IP	３		IP	４		IP	４		IP	２		IP	３		IP	２		IP
+田村　　　慶	4.10	0.23	4.2	５	5	IP	５		IP	６		IP	３	6	IP	３		IP	４		IP	２		IP	５		IP	２		IP	５		IP
+石川　　　諒	5.00	0.13	2.1	５		IP	１	6	IP	５		IP	２	4	IP	４		IP	４	4	IP	４		IP	４		IP	５		IP	１		IP
+吉田　　俊彦	4.30	0.19	3.8	４	5	IP	１	4	IP	６		IP	６	4	IP	６	5	IP	３	4	IP	４		G1	４	5	IP	２	4	IP	５		G1

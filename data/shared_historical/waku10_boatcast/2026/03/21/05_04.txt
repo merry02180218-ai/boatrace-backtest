@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　小葉音	7.50	0.17	3.0	２		IP	４		IP	３		IP	１		IP	２		IP	１		IP	１		IP	６		G3	１		G3	２		IP
+赤澤　　文香	4.80	0.19	3.7	４		IP	２		IP	１		G3	２		G3	５		G3	４		G3	６		IP	２		IP	５		IP	６		IP
+喜多　那由夏	3.80	0.20	3.1	３		IP	３		IP	５		IP	４		IP	４		G3	５		IP	４	2	IP	５		IP	４		IP	４		IP
+石井　　裕美	4.40	0.16	3.0	２		G3	６	5	IP	３		IP	５		G3	４		G3	１		G3	５		IP	６		IP	４		IP	３		G3
+関野　　　文	4.56	0.14	3.0	４		G3	５		IP	５		IP	６		IP	３		G3	２		G3	３		IP	転		IP	４		IP	２		IP
+倉持　　莉々	4.90	0.13	3.4	３	5	IP	５	5	G1	３		G1	６		G1	６		G3	４		G3	２		IP	４		IP	３		IP	２		IP

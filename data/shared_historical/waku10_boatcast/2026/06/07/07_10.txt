@@ -1,0 +1,8 @@
+data=
+1	0
+富山　　弘幸	6.70	0.18	3.6	３		IP	４		IP	６		IP	４		IP	３		IP	３		IP	１		IP	１		IP	１		IP	１		IP
+中　　　亮太	7.60	0.15	1.9	４	3	IP	１		G2	４		G3	３		IP	１		IP	２		IP	１		IP	２	3	IP	３		IP	２		G3
+山本　　修一	6.20	0.17	3.3	４		IP	２	2	IP	２		G3	４		IP	４		IP	４		IP	２		IP	１		IP	１		IP	５		IP
+塩田　　北斗	6.00	0.13	3.1	５	5	IP	３	5	G1	３		G1	４		IP	２		IP	３		IP	４		G1	５		G1	１		G1	３		G1
+井手　　良太	5.10	0.11	1.8	３		IP	４		IP	３		IP	３		IP	５		IP	３		IP	１		IP	２		IP	６		IP	５		IP
+杉田　　篤光	2.80	0.23	4.9	６		IP	５		IP	５		IP	５		IP	５		IP	６		IP	５		IP	３		G3	４		G3	３	5	IP

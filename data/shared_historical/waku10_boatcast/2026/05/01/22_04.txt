@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　幸也	4.80	0.19	4.2	２		IP	５		IP	５		IP	１		IP	３		IP	４		IP	５		IP	５		IP	５		IP	１		IP
+富永　　大一	4.70	0.16	3.8	２		IP	６		IP	３		IP	６		IP	４		IP	２		IP	６		IP	４		IP	１		IP	４		IP
+占部　　一真	4.20	0.14	2.8	４		IP	３		IP	３	4	IP	６		IP	３		IP	４		IP	５		IP	２		IP	６		IP	４		IP
+宮脇　　遼太	7.30	0.17	3.1	５		IP	４	5	IP	２		IP	１		IP	４		IP	１		IP	５		IP	１		IP	１		IP	１		IP
+西川　　拓利	6.50	0.11	2.2	３		IP	１		IP	４		G3	６		G3	２		IP	３		IP	１		IP	１		IP	２		IP	５		IP
+大山　　千広	3.60	0.16	3.0	６		IP	６		IP	５		IP	２		IP	４		IP	６		IP	３		IP	６		IP	３		IP	５		IP

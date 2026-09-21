@@ -1,0 +1,8 @@
+data=
+1	0
+中越　　博紀	8.60	0.18	4.2	２		IP	２		G3	１		G3	１		IP	１		IP	６		G1	２		IP	１		IP	１		IP	１		IP
+鈴木　　　博	6.00	0.19	3.7	４		IP	４		IP	３		IP	２		IP	３		IP	５		IP	２		IP	３		IP	２		IP	２		IP
+佐藤　　永梧	3.40	0.14	2.9	２		IP	５		IP	６	4	IP	６	4	IP	３		IP	２		IP	６		IP	５		IP	４		IP	６		IP
+大谷　　健太	4.10	0.17	3.1	３		IP	５	5	IP	１		IP	５		IP	３		IP	５	3	IP	４		IP	４		IP	４		IP	６		IP
+高橋　　竜矢	3.70	0.14	3.7	２		IP	６		IP	５		IP	４		G1	６		G1	４		IP	妨		G1	５	6	G1	４		IP	３		IP
+中岡　　健人	3.20	0.19	5.0	６		IP	４		IP	４		IP	４		IP	３		IP	５	5	IP	６		IP	４		IP	５		IP	４		IP

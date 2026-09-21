@@ -1,0 +1,8 @@
+data=
+1	0
+田邉　　亮蔵	6.20	0.19	2.6	２		IP	６		IP	２		IP	２		IP	５		IP	４		IP	１		IP	１		IP	１		IP	６		IP
+長尾　京志郎	4.30	0.17	3.4	３		IP	５		IP	２		IP	４		IP	３		IP	４		IP	５		IP	５		IP	２		IP	６		IP
+浮田　　圭浩	4.70	0.19	3.7	１		IP	２		IP	６		IP	２		IP	６		IP	３		IP	５		IP	６		IP	３	4	IP	４		IP
+金子　　怜央	2.60	0.17	3.2	４		IP	６		IP	６		IP	２		IP	６		IP	６		IP	６		IP	５	5	IP	６		IP	３		IP
+奥平　　拓也	3.56	0.26	3.7	欠		IP	６		IP	４		IP	４	6	IP	５		IP	３		IP	３		IP	６		IP	５	6	G3	３		IP
+泉　　　啓文	2.40	0.18	4.4	５		G3	６		G3	５		IP	６		IP	６		IP	５		IP	２	5	IP	５		IP	４		IP	６		IP

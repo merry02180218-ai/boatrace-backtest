@@ -1,0 +1,8 @@
+data=
+1	0
+君島　　秀三	9.30	0.12	1.8	１		IP	３		IP	２		G1	１		IP	１		IP	１		G3	１		G3	１		IP	１		IP	２		IP
+竹本　　太樹	6.20	0.16	3.3	１		IP	３		IP	４		IP	２		IP	２		IP	３		IP	４		IP	５		IP	２		IP	３		IP
+越智　　照浩	3.70	0.21	4.5	５		IP	５		IP	２	4	IP	４	5	IP	５		IP	２		IP	４		IP	４		IP	５		IP	６		IP
+植田　　太一	4.60	0.19	3.8	３		IP	３	5	G1	４		G1	６		IP	６		IP	５		IP	３		IP	３		IP	２		IP	４		IP
+橋本　　　明	4.40	0.15	3.1	３		IP	５	6	IP	５		IP	２		IP	４	4	IP	３		IP	４		IP	４		IP	４		IP	４		IP
+小林　　一樹	2.70	0.11	2.7	５		IP	５	4	IP	６		IP	４	5	IP	４		IP	６		IP	６		IP	４		IP	３		IP	５		IP

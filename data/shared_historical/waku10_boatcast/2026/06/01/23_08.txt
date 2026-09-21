@@ -1,0 +1,8 @@
+data=
+1	0
+秋田　健太郎	6.50	0.14	3.2	１		IP	５		IP	１		IP	１		IP	６		IP	４		IP	１		IP	２		IP	２		IP	５		IP
+川合　　理司	2.70	0.16	3.5	５		IP	６		IP	５		IP	５		IP	２		IP	５		IP	５		IP	４		IP	５		IP	５		IP
+鈴木　　雅希	6.20	0.18	4.2	３		IP	６		IP	２		IP	２		IP	２		IP	１		IP	２		IP	３		IP	３		IP	６		IP
+内田　　　圭	2.70	0.15	3.2	４		IP	６		IP	６		IP	３		IP	３		IP	６		IP	５		IP	５		IP	５		IP	５		IP
+眞田　　英二	3.80	0.18	4.1	５		IP	３	6	IP	４		IP	３		IP	３		IP	４		IP	５		IP	６		G3	６		G3	３		IP
+前田　　　滉	5.00	0.14	3.8	１	4	IP	６		SG	４		IP	３		IP	４		G1	５		G1	５		G1	５		IP	５		IP	１		IP

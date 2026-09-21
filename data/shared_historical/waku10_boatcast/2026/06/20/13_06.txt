@@ -1,0 +1,8 @@
+data=
+1	0
+吉島　　祥之	6.40	0.17	3.8	１		IP	２		IP	５		IP	５		IP	１		IP	４		IP	２		IP	４		IP	３		IP	１		IP
+渡　　　修平	4.20	0.18	4.4	４		IP	６		G3	３		IP	５		IP	６		IP	２		IP	４		IP	５		IP	３	3	IP	２		IP
+中岡　　健人	4.70	0.16	2.7	５		IP	１		IP	３		IP	２		IP	２		IP	４	5	IP	５		IP	４		IP	６		IP	５	4	IP
+浜先　　真範	4.90	0.13	2.2	５		G1	３		IP	４		IP	２		IP	２		IP	６		G1	５		G1	６		IP	３		IP	２		IP
+山本　　兼士	2.70	0.25	4.3	４		IP	５		IP	３		IP	６		IP	６		IP	６		IP	３		IP	４		IP	６		IP	６	6	IP
+小森　　信雄	2.60	0.22	4.8	４		IP	５		IP	６		IP	６		IP	４	5	IP	６		IP	５		IP	４		IP	６		IP	３		IP

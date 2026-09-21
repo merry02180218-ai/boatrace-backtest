@@ -1,0 +1,8 @@
+data=
+1	0
+中辻　　崇人	8.00	0.15	4.0	５		SG	１		G1	１		G1	５		G1	Ｆ		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+今垣　光太郎	7.90	0.18	3.1	５		G2	２		G1	１		IP	２		IP	１		IP	３		G1	１		IP	３		IP	１		IP	４		G1
+石渡　　鉄兵	7.50	0.12	2.6	２		SG	３		G1	３		G1	３		G1	３		G2	１		IP	２		SG	３		G1	３		G1	６		SG
+北村　　征嗣	6.20	0.15	4.5	５		G3	５		G3	２		IP	４		IP	１		IP	３		G1	２		G1	４		IP	３		IP	１	3	IP
+渡邉　　優美	4.20	0.13	3.6	６		SG	５		SG	５		IP	６		IP	５		G1	４		G1	１		IP	４	6	G1	６		G1	４		G1
+常住　　　蓮	5.40	0.19	3.9	２	5	SG	３		SG	５		IP	４		G1	４		G1	３	3	IP	４		IP	３		G1	５		G1	４		IP

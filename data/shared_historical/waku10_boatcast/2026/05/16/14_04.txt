@@ -1,0 +1,8 @@
+data=
+1	0
+北村　　征嗣	9.10	0.15	2.6	２		IP	１		IP	２		G1	１		IP	１		IP	１		IP	４		IP	１		IP	１		G3	１		G3
+竹之内　　極	5.70	0.18	4.2	３		IP	２		IP	１		IP	２		IP	３		IP	２		IP	５		IP	４		IP	４		IP	６		IP
+竹腰　　正樹	5.60	0.16	3.9	６		IP	１		IP	３		IP	６		IP	３		IP	２		IP	２		IP	３		IP	３		IP	４		IP
+上田　　健太	5.60	0.19	3.4	２		IP	３		G3	２		G3	４		IP	６	5	IP	３		IP	４		IP	２		IP	４		IP	３		IP
+飯島　　　誠	2.70	0.19	3.7	６	6	IP	６		IP	１		IP	４	6	IP	６		IP	６		IP	５		IP	６		IP	４		IP	５		IP
+広次　　　修	3.90	0.19	4.4	５		IP	４	5	IP	３		IP	５		IP	３	5	IP	４		IP	２		IP	４		IP	５		IP	６		IP

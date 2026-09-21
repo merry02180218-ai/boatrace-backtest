@@ -1,0 +1,8 @@
+data=
+1	0
+河内　　一馬	4.90	0.16	3.4	４		IP	２		IP	５		IP	１		IP	１		IP	６		IP	５	2	IP	２		IP	５		IP	５		IP
+豊田　　泰洋	4.20	0.22	4.6	６	3	IP	６		IP	２		IP	５		IP	１		IP	５		IP	４		IP	３		IP	４		IP	４		IP
+東　　　潤樹	5.10	0.16	3.7	５		IP	３		G3	２		G3	４		IP	６		IP	５		IP	３		IP	３		IP	２		IP	２		IP
+丸山　　祐也	2.70	0.21	5.0	４		IP	５		IP	４		IP	５		IP	転		IP	４		IP	４		IP	４		IP	５		IP	６		IP
+岸本　　　隆	3.50	0.17	3.5	３		IP	３	4	IP	５	6	IP	５		IP	４		G3	５		IP	６		IP	３		IP	４		IP	５		IP
+島倉　　　都	1.80	0.19	3.7	６		IP	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP	６		G3	３		IP	６		IP

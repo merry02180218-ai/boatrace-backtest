@@ -1,0 +1,8 @@
+data=
+1	0
+竹腰　　正樹	7.20	0.16	3.1	１		IP	２		IP	２		IP	２		IP	４		IP	１		IP	３		IP	１		IP	５		IP	３		IP
+佐竹　　恒彦	7.20	0.16	3.2	１		IP	２		G3	４		IP	２		IP	１		IP	１		IP	５		IP	１		IP	４		IP	３		IP
+宮地　　博士	3.60	0.20	3.2	５		IP	３		IP	４		IP	転	4	IP	２		IP	６		IP	４		IP	６		IP	２		IP	５		IP
+山一　　鉄也	4.80	0.19	3.1	５		IP	２		IP	２		IP	４		IP	６		IP	３		IP	６		IP	３		IP	３		IP	３		G3
+石渡　　鉄兵	6.10	0.10	2.1	２		IP	２		IP	５		IP	３		G1	５		G1	２		IP	４		SG	６		SG	２		G1	３		G1
+森　　　貴洋	2.30	0.22	4.2	５		IP	５		IP	３		IP	３		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

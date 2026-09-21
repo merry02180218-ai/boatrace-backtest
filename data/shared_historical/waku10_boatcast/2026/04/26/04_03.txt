@@ -1,0 +1,8 @@
+data=
+1	0
+石岡　　将太	7.40	0.16	2.8	３		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	２		IP	５		IP	５		IP
+筒井　　美琴	3.30	0.16	3.3	５		IP	５		IP	５		G3	５		IP	３		IP	６		IP	１		IP	５		IP	４		IP	５		G3
+高憧　　四季	7.40	0.18	3.5	２		IP	２		IP	５		IP	５		IP	１		G3	２		G1	２		G1	１		IP	３		G1	２		G1
+伊久間　陽優	4.30	0.10	2.6	５		IP	６		IP	５		IP	５		IP	３		IP	３		IP	４		IP	３		IP	４		IP	１		IP
+古賀　　智之	5.30	0.17	3.5	１		IP	６		IP	２		G2	４	6	G2	２		IP	４		IP	４		IP	２		G3	６		G3	６		IP
+櫻井　　　隼	2.20	0.24	5.7	６		IP	４		IP	５		IP	３		IP	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP

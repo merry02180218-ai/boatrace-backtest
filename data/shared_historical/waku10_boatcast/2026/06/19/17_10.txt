@@ -1,0 +1,8 @@
+data=
+1	0
+長野　　道臣	7.40	0.16	3.1	２		IP	２		IP	５		IP	１		IP	２		IP	２		IP	５	2	IP	１		IP	２		IP	１		IP
+深井　　利寿	6.50	0.18	2.7	３		G3	４		IP	４		IP	２		G2	３		IP	１		IP	２		IP	５		IP	３		IP	２		IP
+吉原　　聖人	4.20	0.17	3.5	６		IP	３		IP	２	4	IP	４		IP	４		IP	６	5	IP	５		IP	１		IP	５		IP	４		IP
+東　　　健介	4.00	0.17	3.2	５		IP	５		IP	４		IP	５		IP	５	3	IP	１	2	IP	３		IP	５	3	IP	３		IP	４		IP
+繁野谷　圭介	5.20	0.16	3.4	３		IP	４	4	IP	１		IP	３		IP	２		IP	５		IP	６		IP	４		IP	６		IP	１		IP
+平田　　忠則	5.00	0.16	3.7	３		IP	２	5	IP	２		IP	３		G1	４	4	IP	４	5	IP	５		G3	６		G3	　		IP	４		G1

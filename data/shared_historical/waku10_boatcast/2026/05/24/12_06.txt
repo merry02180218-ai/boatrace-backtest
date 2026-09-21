@@ -1,0 +1,8 @@
+data=
+1	0
+津久井　拓也	6.80	0.14	3.0	４		G2	２		IP	１		IP	３		IP	４	2	IP	１		IP	２		IP	３		IP	６		IP	１		IP
+平田　　忠則	6.70	0.13	3.1	２		IP	２		IP	５		IP	３		IP	１		G1	４		IP	５		IP	２	3	G3	１		G3	２		IP
+高木　　圭大	4.67	0.14	2.4	５		IP	３		IP	３		IP	２		IP	５		IP	４		IP	４		IP	４		IP	３		IP	不		IP
+山本　　浩次	3.70	0.19	3.5	５		IP	６		IP	１		IP	４		G3	６		G3	６		IP	５		G3	５		IP	４		IP	１		IP
+鈴木　　勝博	6.90	0.16	3.1	１		IP	２		IP	１		IP	６		IP	２		IP	４		IP	２		IP	４		IP	３		IP	１		IP
+中井　　俊祐	1.80	0.15	3.2	６		IP	６		IP	４		IP	５		IP	６		IP	６		IP	４	5	IP	６		IP	５		IP	６		IP

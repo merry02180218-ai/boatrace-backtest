@@ -1,0 +1,8 @@
+data=
+1	0
+竹井　　奈美	8.50	0.15	3.2	１		IP	２		IP	１		IP	１		IP	１		G3	１		G3	１		G3	２		G3	Ｆ		G1	２		G1
+平川　　香織	6.50	0.18	3.1	２		IP	１	3	IP	１		IP	２		IP	２		G3	１		IP	４		G3	４		IP	６		IP	５		IP
+米丸　　乃絵	7.44	0.16	3.0	４		IP	２		IP	２		IP	３		IP	１		G1	１		IP	落	4	G1	４		G1	３		G3	２		G3
+中川　　りな	5.50	0.20	3.1	３		IP	５	3	IP	３		IP	５		IP	２		IP	３		IP	６		IP	１	6	IP	１		IP	４		G3
+大山　　千広	4.70	0.16	2.3	３		IP	５		IP	３		IP	２		IP	２		IP	３		IP	５		IP	５		IP	６		IP	３		IP
+井上　　未都	3.50	0.14	3.0	３	5	IP	３		IP	４		IP	６		G1	４	5	G3	６		G3	６		IP	５		IP	３		IP	６		IP

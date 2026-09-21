@@ -1,0 +1,8 @@
+data=
+1	0
+奥田　　　誠	8.40	0.17	3.6	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	３		IP	４		IP	２		IP	１		IP
+林　　　恵祐	3.10	0.21	5.0	３		IP	４		IP	２		IP	６		IP	３		IP	５		IP	６		IP	６		IP	６		IP	６		IP
+山田　　佑樹	4.10	0.17	3.7	６		IP	４		IP	６		IP	４	4	IP	１		IP	５		IP	４		IP	４		IP	２		IP	６	5	IP
+松浦　　　勝	3.50	0.16	3.8	６	6	IP	６		IP	３		IP	２		IP	４		IP	６		IP	３		IP	３		IP	６		IP	６		IP
+渡邊　雄一郎	7.33	0.16	3.8	不		IP	１	4	IP	３		IP	３		IP	１		IP	４		IP	１		IP	４	4	IP	２		IP	３		IP
+坂本　　一真	2.50	0.17	4.2	転		IP	５		IP	４	5	IP	５	5	IP	６		IP	４		IP	４		IP	５		IP	５		IP	４		IP

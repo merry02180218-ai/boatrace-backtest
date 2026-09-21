@@ -1,0 +1,8 @@
+data=
+1	0
+佐口　　達也	7.10	0.17	3.1	１		IP	２		IP	２		IP	４		IP	１		IP	６		IP	４		IP	２		IP	２		IP	１		IP
+中辻　　博訓	8.00	0.10	1.7	３		IP	１		IP	２		IP	２		IP	１		IP	２		IP	１		IP	１		IP	３		IP	４		IP
+北中　　元樹	5.60	0.13	2.3	２		IP	３		IP	２		IP	２		IP	５		IP	４		IP	転	4	IP	２		IP	２		IP	４		IP
+佐々木　和伸	6.50	0.13	2.6	２		IP	２		IP	３		IP	２		IP	４		IP	２		IP	１		IP	５		IP	６		IP	２		IP
+金子　　　萌	6.50	0.13	2.8	５		IP	１		IP	２		IP	２	4	IP	２	6	IP	３		IP	６	4	IP	２		IP	３		IP	３		IP
+南野　　利騰	3.50	0.19	3.2	４		IP	５		IP	４	5	IP	５		IP	５		IP	３		IP	３		IP	６		IP	４		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+木下　　雄介	8.60	0.19	4.6	１		IP	２		IP	４		IP	１		IP	１		IP	１		IP	３		IP	１	2	IP	２		IP	１		IP
+生方　　靖亜	6.80	0.09	1.9	４		IP	１		IP	１		IP	４		G3	２		G3	３		IP	１		IP	４		IP	２		IP	４		IP
+花本　　　剛	4.80	0.16	3.0	５		IP	３		IP	３		IP	６		IP	１		IP	６		IP	５	4	IP	３		IP	３		IP	２		IP
+渡辺　　真至	5.10	0.13	3.0	Ｆ		IP	２		IP	４		IP	３		IP	２		IP	４		IP	１		IP	３		IP	４		IP	６		IP
+坪井　　康晴	5.33	0.13	3.6	５	4	IP	６		G1	４		G1	転		G1	１		IP	１		IP	６		G1	４		G1	３		G1	４		G1
+松田　　隆司	3.90	0.21	3.5	４		IP	５		IP	６		IP	５		IP	４		IP	４		IP	４		IP	１	4	IP	４		IP	４		IP

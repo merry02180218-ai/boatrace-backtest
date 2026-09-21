@@ -1,0 +1,8 @@
+data=
+1	0
+門田　　　栞	7.40	0.20	4.1	１		IP	２		IP	２		IP	１		G2	２		IP	６		IP	４		G3	４		G3	１		IP	１		IP
+小芦　るり華	6.80	0.13	2.2	４		IP	２		IP	２		IP	４		G2	４		G2	４		G3	２		G3	２		G3	２		G3	１		IP
+三嶌　さらら	6.80	0.15	2.1	４		IP	１		IP	２		IP	２		IP	１		IP	１		IP	４		IP	５		IP	２		IP	４		IP
+安井　　瑞紀	4.70	0.16	3.0	１		IP	６		IP	２		IP	６	5	IP	４		IP	５		IP	４		G3	２		IP	６		IP	２		IP
+来田　　衣織	2.40	0.15	3.2	５		IP	５		IP	６		IP	６		IP	６		IP	５		IP	５		IP	２		IP	４	4	IP	６		IP
+平高　　奈菜	5.80	0.14	3.5	２	5	IP	５		IP	３		G2	６		G2	３		G2	５		SG	１	5	G3	１	5	G3	６	3	G1	３		IP

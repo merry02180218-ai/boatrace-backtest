@@ -1,0 +1,8 @@
+data=
+1	0
+市川　　健太	7.70	0.21	3.6	１		IP	５		IP	６		IP	１		IP	１		IP	１		IP	２		G3	３		IP	１		IP	１		IP
+飯島　　昌弘	7.20	0.14	3.2	２		IP	２		IP	４		IP	２		IP	１		IP	４		IP	３		IP	３		G1	２		G1	２		IP
+大田　　直弥	6.30	0.19	3.6	３		IP	３		IP	１		IP	４		IP	４		IP	２		IP	１		IP	２		IP	３		IP	６		IP
+牧山　　敦也	4.70	0.17	4.2	３		G3	６		IP	５		IP	４		IP	３		IP	４		IP	３		IP	４		IP	２	5	IP	３		IP
+白井　　友晴	4.10	0.17	4.6	５	4	IP	３		IP	２		IP	４	4	IP	４		IP	５		IP	３	6	IP	４		IP	４		IP	６		IP
+長尾　　章平	6.70	0.19	4.1	２		IP	５		IP	２		IP	６		IP	２	5	IP	１		IP	２		IP	２		IP	２		IP	３	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+石本　　裕武	8.60	0.15	3.0	５		IP	１		IP	１		IP	１		G1	妨		IP	１		IP	１		IP	１		IP	１		G1	１		G1
+中田　　竜太	6.30	0.16	3.6	３		G2	２		G1	２		IP	２	3	IP	５		G1	３		G1	２		IP	２		IP	５		G1	５		IP
+村上　　　遼	7.00	0.12	2.6	１		IP	２		IP	３		G1	６		IP	３		IP	１		IP	２		IP	４		IP	３		IP	１		IP
+田中　信一郎	6.90	0.17	3.9	２		IP	３		IP	１		IP	１		IP	５		IP	２		G1	３		IP	４		IP	２		G3	３		IP
+土屋　　智則	6.50	0.17	3.4	２		G3	２	2	G3	２		IP	２	3	IP	２		IP	６		IP	４		IP	１		G1	５		G1	３		IP
+池永　　　太	4.78	0.16	4.3	５		IP	３	5	IP	６		G1	４		G1	５		G1	４		IP	１		IP	不		G1	６		IP	２		IP

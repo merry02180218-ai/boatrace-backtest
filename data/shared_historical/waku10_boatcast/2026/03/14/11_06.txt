@@ -1,0 +1,8 @@
+data=
+1	0
+草場　　康幸	7.20	0.17	3.8	妨		IP	３		IP	１		IP	１		IP	２		IP	１		IP	１		IP	５		IP	３		IP	１		IP
+品田　　直樹	6.30	0.17	3.3	２		IP	４		IP	５	3	IP	１		IP	２		IP	３		IP	３		IP	４		IP	３		IP	２		IP
+三宅　　　潤	6.40	0.19	2.8	５		IP	２		IP	２		IP	２		IP	４		IP	２		IP	３		IP	１		IP	５		IP	２		IP
+岡瀬　　正人	4.90	0.17	4.0	２		IP	２	5	IP	２		IP	５		IP	５		IP	６		IP	４		IP	４		IP	２		IP	４		IP
+小林　　文彦	4.10	0.24	4.6	４		IP	４		IP	２		IP	６		IP	２		IP	４		IP	５		IP	３		IP	５		IP	５		IP
+福来　　　剛	6.20	0.12	2.4	５		IP	３		G1	２		G1	５		G1	１		IP	３		IP	２		IP	６		IP	３		IP	１	5	IP

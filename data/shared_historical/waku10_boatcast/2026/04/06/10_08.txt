@@ -1,0 +1,8 @@
+data=
+1	0
+阪本　　勇介	6.80	0.17	3.7	３		IP	３		IP	１		IP	２		IP	４		IP	３		IP	１		IP	２		IP	３		IP	４		IP
+柳内　　敬太	5.70	0.17	3.5	２		IP	３		IP	１		IP	１		IP	６		IP	２		IP	３		IP	４		IP	５		IP	５		IP
+川田　　正人	4.30	0.19	3.4	５		IP	３		IP	４		IP	６		IP	２		IP	Ｆ		IP	２		IP	４		IP	３	4	IP	４		IP
+田中　　和也	6.20	0.15	2.7	５		IP	４	3	IP	２		IP	２		IP	３		IP	４		IP	１		IP	２		IP	３		IP	４		IP
+室田　　泰史	2.50	0.14	3.4	５		IP	５		IP	６		IP	２		IP	５		IP	５		IP	６		IP	６		IP	５		IP	４		IP
+石井　　孝之	3.10	0.09	2.3	２		IP	６		IP	６		IP	５		IP	５		IP	３		IP	５		IP	５		IP	６		IP	３		IP

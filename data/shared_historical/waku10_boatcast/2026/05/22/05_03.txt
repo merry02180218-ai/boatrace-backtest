@@ -1,0 +1,8 @@
+data=
+1	0
+今坂　　晃広	7.10	0.15	3.4	４		IP	６		IP	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP	４		IP
+畔柳　　俊吾	6.30	0.21	4.3	３		IP	３		IP	１		IP	３	1	IP	４		IP	２		IP	１		IP	６		IP	４	3	IP	２		IP
+河上　　年昭	3.70	0.11	2.2	５		IP	３		IP	４		IP	４		IP	４		IP	２		IP	５		IP	４		IP	６		IP	５		IP
+佐藤　　永梧	5.40	0.14	2.2	３		IP	２		IP	６		IP	２		IP	４		IP	３	6	IP	１		IP	６		IP	２	5	IP	５		IP
+金子　　怜央	2.50	0.16	2.5	５	6	IP	６		IP	５		IP	６		IP	５		IP	１		IP	６		IP	６	6	IP	４		IP	６		IP
+吉永　　則雄	3.40	0.16	4.0	５	3	IP	２	5	IP	４	5	IP	４		IP	５		IP	５		IP	６	4	IP	４		IP	６		IP	３	5	IP

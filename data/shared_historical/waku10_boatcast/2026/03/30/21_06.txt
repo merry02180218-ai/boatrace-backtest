@@ -1,0 +1,8 @@
+data=
+1	0
+板倉　　敦史	6.60	0.20	4.0	２		IP	１		IP	４		IP	３		IP	３		IP	１		IP	１		IP	２		IP	５		IP	５		IP
+宮田　　龍馬	8.33	0.14	2.4	３		G3	１		G1	１		IP	沈		IP	１		IP	３		G1	３		G1	２		IP	２		IP	２	3	IP
+三宅　　健太	6.70	0.15	2.9	１		G3	３		IP	１		IP	３		IP	６	4	IP	２		IP	４		IP	４		IP	１		G3	２		G3
+青木　　玄太	6.40	0.15	2.8	２		G3	１		G3	５		IP	２	5	IP	５		G1	２		G1	５		G1	５		G2	２		IP	２		IP
+齊藤　　　優	3.80	0.16	2.6	５		G3	２		G3	５		IP	３		IP	４		IP	３		IP	５		IP	４		IP	５		IP	５		IP
+北川　　太一	6.20	0.14	2.5	５		G3	３		IP	３		IP	１		IP	２		IP	３		IP	２		IP	１	4	IP	４		IP	５		G3

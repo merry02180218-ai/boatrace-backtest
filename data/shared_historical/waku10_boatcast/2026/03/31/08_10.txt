@@ -1,0 +1,8 @@
+data=
+1	0
+芦澤　　　望	8.80	0.14	2.5	４		IP	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+村越　　　篤	5.70	0.18	4.1	６		IP	４		G3	３		G1	１	1	G1	６		IP	３		IP	３	3	IP	１		IP	６		IP	１		IP
+神田　　達也	5.80	0.14	2.9	４		IP	３		IP	３		IP	３		IP	３		IP	２		IP	２		IP	４		IP	２		IP	５		IP
+岩崎　　正哉	5.30	0.19	4.1	３		IP	３		IP	２		IP	６		IP	２		IP	５		IP	３		IP	４	5	IP	４		IP	２		IP
+小林　　愛実	4.10	0.16	3.1	５	6	IP	５		IP	３		IP	６		IP	転		IP	４		IP	２		IP	４		IP	３		IP	２		IP
+鈴木　結平太	1.20	0.14	2.5	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP

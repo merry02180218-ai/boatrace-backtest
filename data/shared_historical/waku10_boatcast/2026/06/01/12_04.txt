@@ -1,0 +1,8 @@
+data=
+1	0
+石田　　貴洋	8.50	0.21	4.0	１		IP	２		IP	３		IP	１		IP	５		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+大峯　　　豊	8.22	0.14	3.0	２		G2	２		G2	２		G3	１		G3	１		IP	欠		G1	１		IP	３		G1	６		G1	２		G1
+前田　　聖文	7.40	0.12	2.4	１		IP	３		IP	３	2	IP	１		IP	３		IP	５		G1	３		G1	２		IP	２		IP	１		IP
+菅野　はやか	3.60	0.14	3.5	５		IP	３		G3	５		G3	６		IP	４		IP	４		G3	４		G3	２		IP	６		IP	４		IP
+森作　　雄大	3.60	0.10	2.5	５		IP	４		IP	６		G2	６		G2	３		IP	２		IP	３		IP	５		IP	５		IP	５		IP
+山谷　　　央	3.80	0.15	2.7	４		IP	４		IP	４		IP	５		IP	５	5	IP	３		IP	４		IP	４	5	IP	５	5	IP	３		IP

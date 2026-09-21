@@ -1,0 +1,8 @@
+data=
+1	0
+三宅　　　潤	8.60	0.15	3.1	４		IP	１		IP	１		IP	１		IP	２		IP	４		IP	１		IP	１		IP	１		IP	１		IP
+抹香　　雄三	6.60	0.15	3.7	２		IP	４		IP	１		IP	５		IP	３		IP	２		IP	１		IP	２		IP	４		IP	３		IP
+森永　　　隆	6.70	0.15	1.8	２	2	G3	６		IP	５		IP	１		IP	３		IP	２		IP	２		IP	２		IP	３		IP	１		IP
+栗原　　一馬	3.30	0.18	3.0	１		IP	５		IP	５	5	IP	６	6	IP	５	5	IP	５	5	IP	５		IP	４		IP	５		IP	３		IP
+垂水　　　悠	3.10	0.09	1.7	５		IP	４		IP	４		IP	５		IP	４		IP	Ｆ		IP	３		IP	５	6	IP	６		IP	３		G3
+前川　　守嗣	5.10	0.15	1.9	１	5	IP	５		IP	２	5	IP	６		IP	５		IP	４		IP	２		IP	１		IP	４		IP	５		IP

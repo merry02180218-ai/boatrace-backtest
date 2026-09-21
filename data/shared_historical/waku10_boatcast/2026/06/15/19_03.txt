@@ -1,0 +1,8 @@
+data=
+1	0
+高村　　　諒	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+吉永　　泰弘	6.30	0.13	3.1	６		G3	１		IP	４		IP	３		IP	１	3	IP	３		IP	３	3	IP	２		IP	２	1	IP	４		IP
+黒柳　　浩孝	4.80	0.13	2.6	４		IP	４		G2	５		G2	４		IP	４		IP	３		IP	５		IP	４		IP	２		IP	２		IP
+柴田　　　光	5.67	0.14	4.2	１		IP	２	3	IP	３		IP	５		IP	４		IP	２		G1	４	3	G1	転		IP	３	2	IP	６	2	IP
+森　　　貴洋	5.00	0.14	3.1	２		IP	１		IP	４		IP	５		IP	５	4	IP	３		IP	３		IP	５		IP	２		IP	５		IP
+池永　　　太	3.90	0.15	3.8	６		IP	６		G2	２		IP	４		G1	５		G1	５		IP	３	5	IP	６		G1	４		G1	５		G1

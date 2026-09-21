@@ -1,0 +1,8 @@
+data=
+1	0
+福岡　　泉水	7.00	0.19	3.3	２		G3	１		IP	３		IP	３		IP	１		IP	２		IP	５	2	IP	転		G3	１		G3	１		IP
+竹田　　広樹	5.10	0.20	3.8	５	3	IP	２		IP	４		IP	１		IP	３		IP	５		IP	５		IP	２		IP	２		IP	６		IP
+瓜生　　正義	7.80	0.15	2.8	２		IP	３		G1	１		IP	３		G1	２		G1	２		G1	６		G1	２		IP	１		IP	２		IP
+深川　　和仁	4.50	0.18	4.2	３		IP	６		G3	４		G3	１	5	IP	６		IP	３		IP	６		IP	４	5	IP	４		IP	２		IP
+坂井　　滉哉	2.50	0.15	3.6	４		IP	５		IP	５		IP	６		IP	４		IP	４		IP	５		IP	５		IP	５		IP	５		IP
+小畑　　実成	2.00	0.19	4.6	５		IP	４		IP	６		IP	５		IP	６		IP	６	5	IP	５		IP	６		IP	５		IP	４	5	IP

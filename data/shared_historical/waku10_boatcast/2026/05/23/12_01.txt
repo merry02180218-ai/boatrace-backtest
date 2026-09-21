@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　一心	7.80	0.16	3.1	１		IP	１		IP	２		IP	１		IP	転		IP	２		IP	１		IP	１		IP	４	2	IP	２		IP
+古賀　　智之	7.40	0.15	2.6	３		IP	２		IP	４		IP	１		IP	１		IP	４		IP	２		IP	３		G2	３		G2	１		IP
+山崎　　昂介	7.50	0.16	3.4	４		IP	１	5	IP	１		IP	４		IP	６		IP	１		IP	３		IP	２		IP	１		IP	１		IP
+市川　　健太	3.80	0.15	3.8	５		IP	２		IP	２		IP	５		IP	６		IP	５		IP	６		IP	４		IP	３		IP	４	5	IP
+岡本　翔太郎	5.22	0.12	2.9	５		IP	２		IP	落		IP	３		IP	３		IP	１		IP	２		IP	５		G3	６	4	G3	４		IP
+出口　　飛龍	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP

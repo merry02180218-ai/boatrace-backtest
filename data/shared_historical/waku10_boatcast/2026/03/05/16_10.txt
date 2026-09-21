@@ -1,0 +1,8 @@
+data=
+1	0
+菅　　　章哉	8.50	0.13	2.7	１		G1	１		G1	１		IP	２		IP	１		G1	１		IP	５	4	IP	１		SG	６		SG	３		G1
+末永　　和也	7.50	0.15	3.3	３		G1	１		G1	２		G1	１		IP	１		IP	６		IP	６		SG	２		G1	４		G1	２		SG
+高野　　哲史	7.30	0.13	3.2	２		IP	３		IP	４		G1	１		G1	２		IP	５		IP	１		IP	１		IP	３		IP	３		G1
+山口　　達也	6.70	0.14	3.8	６		G1	２		G1	１		IP	４		G1	４		G1	１		IP	１	3	IP	３		IP	４		IP	３	2	IP
+上野　真之介	6.50	0.12	2.1	２		G1	４		G1	５	6	G1	５		G1	１		IP	２		IP	２		IP	３		SG	３		G1	５		SG
+豊田　健士郎	6.78	0.19	3.6	１		IP	５		IP	４		G1	２		IP	転		G2	３		G2	２	5	IP	１	5	IP	３		IP	４		IP

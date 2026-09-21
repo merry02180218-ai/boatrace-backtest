@@ -1,0 +1,8 @@
+data=
+1	0
+林　　　美憲	7.30	0.16	3.6	５		IP	２		IP	２		IP	２		IP	１		IP	１		IP	４		G1	２		G1	４		IP	２		IP
+今垣　光太郎	7.60	0.18	2.8	６		G1	２		G1	２		IP	５		G2	２		G1	１		IP	２		IP	１		IP	３		G1	１		IP
+江夏　　　満	6.50	0.13	2.5	４		IP	１		IP	２		IP	１		IP	５		IP	６		IP	２		IP	２		IP	１		IP	４		IP
+白井　　英治	6.80	0.11	1.7	４		G1	３		G1	２		G1	３		SG	１		SG	６		G1	４		G3	５		G1	２		G1	２		G1
+石渡　　鉄兵	4.50	0.11	3.0	５		G1	２		IP	４		SG	６		SG	２		G1	３		G1	５		G1	６		G1	６		G1	５		IP
+清水　　敦揮	5.50	0.20	4.3	４	5	IP	３		IP	３		IP	５		IP	２		IP	３	5	G1	４		IP	３		IP	５		IP	１		IP

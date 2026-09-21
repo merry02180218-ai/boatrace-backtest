@@ -1,0 +1,8 @@
+data=
+1	0
+胡本　　悟志	6.60	0.16	3.2	５		IP	１		IP	１		IP	４		IP	４		IP	４		IP	１		IP	３		IP	２		IP	２		IP
+高橋　　　勲	6.70	0.15	3.1	４		IP	２		IP	２		IP	２		IP	２		IP	３		IP	２		IP	３		IP	２		IP	５		IP
+荒川　　健太	5.20	0.16	3.6	３		IP	１		IP	２		IP	４		IP	３		IP	６		IP	４		IP	２		IP	４		G3	６		G3
+梶原　　　正	4.50	0.13	2.4	２	5	IP	５		IP	５		IP	４		IP	２		IP	４		IP	６	6	IP	４		IP	４		IP	２		IP
+小川　　晃司	3.70	0.23	4.0	５	6	IP	２	6	IP	５	6	IP	４	6	IP	５	6	IP	３	6	IP	６	6	IP	３	6	IP	落	6	IP	３	6	IP
+吉川　　元浩	6.00	0.13	1.9	３		G1	１	5	IP	６		G1	４	5	IP	４		G1	４		G1	５		G1	３		IP	１	5	IP	２	4	IP

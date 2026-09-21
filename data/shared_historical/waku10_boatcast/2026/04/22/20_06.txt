@@ -1,0 +1,8 @@
+data=
+1	0
+中谷　　朋子	6.40	0.20	4.1	３		G3	１		G3	Ｆ		G3	４		G3	３		G3	３		IP	１		IP	２		G3	１		IP	４		IP
+藤田　　美代	5.00	0.18	3.3	２		G3	４		G3	３		IP	６		IP	５		IP	１		IP	１		IP	３		IP	６		IP	５		IP
+加藤　　奈月	4.50	0.20	3.4	５		G3	３		G3	２		G3	６		IP	４		IP	３		IP	４		IP	２		IP	５		IP	４		IP
+五反田　　忍	3.70	0.14	2.6	６		IP	６	5	IP	３		IP	２		IP	６	5	IP	６		IP	６		IP	２		IP	２		IP	５		IP
+平山　　智加	5.90	0.17	3.0	４		G3	４		G3	３		IP	１	4	IP	５		G1	２		IP	１		IP	２		IP	５		IP	４		IP
+米丸　　乃絵	3.70	0.22	4.0	４		IP	６		IP	３		IP	４		IP	５		IP	３	5	IP	６		IP	３		G1	６		IP	４		G1

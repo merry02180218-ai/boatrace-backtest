@@ -1,0 +1,8 @@
+data=
+1	0
+加木　　　郁	7.00	0.18	4.4	１		IP	１		IP	２		IP	４		IP	２		IP	１		IP	３		IP	５		IP	３		IP	３		IP
+尾上　　雅也	6.33	0.14	3.0	４		IP	３		IP	２		IP	４		G1	２		G1	転		IP	２		IP	１		G3	３		G3	６		IP
+高石　　梨菜	6.33	0.14	3.7	３		G3	５		G3	２		IP	１		IP	６		IP	欠		IP	３		IP	１		G3	３		IP	２		IP
+古場　　輝義	5.10	0.15	3.1	４	1	G3	４	5	IP	３		G3	５		G3	２		IP	１		IP	２		IP	５		IP	３		IP	６		IP
+廣瀬　　真也	4.50	0.11	2.5	３		IP	３		IP	３		IP	５		IP	４		IP	５		IP	４		IP	４	6	IP	３		IP	４	6	IP
+本橋　　克洋	3.40	0.21	3.9	３		IP	６		IP	６		IP	５		IP	３	5	IP	４	4	IP	３	5	IP	４		IP	５		IP	５	5	IP

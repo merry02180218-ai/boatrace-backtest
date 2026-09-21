@@ -1,0 +1,8 @@
+data=
+1	0
+南　　　彩寧	5.38	0.29	4.9	２		G3	４		G3	１		IP	６		IP	１		IP	５		IP	５		IP	３		G3						IP
+山下　　昂大	5.30	0.19	3.4	５		IP	５		IP	３		IP	３	3	IP	４		IP	３		IP	２		IP	６		IP	２		G3	１		IP
+田中　　　堅	4.50	0.20	4.0	２		IP	３		IP	４		IP	３		IP	５		IP	６		IP	４		IP	３		IP	３		IP	５		IP
+石井　　裕美	4.30	0.14	2.6	３		IP	５		G3	４		G3	１		G3	５		IP	６		IP	４		IP	３		G3	４		G3	４		IP
+盛本　　真輔	4.80	0.20	3.1	１	4	IP	５		IP	２	4	IP	５		IP	２		IP	５		IP	４		IP	４		IP	５	6	IP	３	4	IP
+木下　　翔太	6.30	0.18	3.3	２	5	IP	３		G1	５		G1	３		IP	２	5	IP	２		IP	３	5	IP	３		IP	２		IP	５		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+川添　　英正	7.20	0.18	4.2	１		IP	５		IP	４		IP	１		IP	１		IP	１		IP	３		G3	２		IP	５		IP	１		IP
+安田　　吉宏	5.30	0.16	3.3	２	3	IP	２		IP	２		IP	３		IP	４		IP	６		IP	３		IP	５		IP	３		IP	４		IP
+岩瀬　　裕亮	7.10	0.14	2.9	６		G1	２		G1	３		G2	３		IP	３		IP	１		IP	２		IP	２		G1	４		G1	２		G1
+三品　　隆浩	3.50	0.20	3.6	６		IP	３		IP	４		IP	２		IP	５		IP	６	6	IP	４		IP	３		IP	５		IP	６		IP
+幸野　　史明	3.70	0.14	3.3	４	6	IP	５	6	IP	６		IP	３		IP	４		IP	３		IP	６	6	IP	３		IP	３		IP	６	6	IP
+峰重　　力也	3.20	0.09	2.7	１		IP	５		IP	５		IP	５		IP	Ｆ		IP	６		IP	２		IP	６		IP	４		IP	５		IP

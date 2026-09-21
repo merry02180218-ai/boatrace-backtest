@@ -1,0 +1,8 @@
+data=
+1	0
+浜本　　裕己	8.20	0.14	2.9	１		IP	３		IP	３		IP	１		IP	１		IP	１		IP	４		IP	２		IP	１		IP	２		IP
+雑賀　　勇貴	4.40	0.16	3.7	２		IP	２		IP	３		IP	４		IP	２		IP	６		IP	５		IP	４		IP	６		IP	５		IP
+原田　　秀弥	5.50	0.16	3.3	２		IP	５		IP	１		IP	６		IP	４		IP	３		IP	２		IP	５		G3	２		G3	３		G3
+笠置　　博之	6.20	0.14	2.4	５	5	IP	１	6	IP	１		IP	５	6	IP	１		IP	５	5	IP	１		IP	３		IP	３	5	IP	４	6	IP
+吉田　　一心	3.67	0.14	2.9	６		IP	３		IP	４	6	IP	Ｌ		IP	４		IP	４		IP	３		IP	５		IP	Ｆ		IP	３		IP
+藤本　　遼磨	1.29	0.20	5.1	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP									IP

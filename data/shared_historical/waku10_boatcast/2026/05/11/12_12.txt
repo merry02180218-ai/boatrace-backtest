@@ -1,0 +1,8 @@
+data=
+1	0
+守屋　　美穂	8.00	0.13	1.6	４		IP	３		IP	６		IP	２		IP	１		IP	１		G3	１		G3	１		G3	１		G1	１		IP
+深川　　真二	7.50	0.13	2.5	３		IP	３		IP	３		IP	４		IP	３		IP	１		IP	１		G2	２		IP	１		IP	２		IP
+重成　　一人	7.10	0.13	2.4	３	5	IP	２		G1	５		G1	１		IP	６		IP	３		G1	２		G1	１		G1	４		G1	１		IP
+澤田　　尚也	6.50	0.13	2.4	２		IP	１		IP	１		IP	１		IP	３		IP	５		IP	１		IP	６		G1	４		G1	６		G1
+畑田　　汰一	5.50	0.09	2.8	３		IP	１		IP	２		IP	５		IP	３		G1	５		G1	４		G1	３		G1	４		G1	６		G1
+中山　　翔太	4.50	0.13	2.8	３		IP	５		IP	５		G1	不		IP	６		IP	３		G1	４		IP	２		IP	２	5	IP	３		IP

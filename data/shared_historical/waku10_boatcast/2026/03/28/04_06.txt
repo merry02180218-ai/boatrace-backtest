@@ -1,0 +1,8 @@
+data=
+1	0
+上野　　俊樹	6.30	0.19	3.4	４		IP	４		IP	２		G3	２		IP	１		IP	４		IP	２		IP	１		IP	６		IP	３		IP
+藤森　　陸斗	5.40	0.16	3.9	１		IP	５		IP	６		IP	３		IP	４		IP	２		G1	３	4	IP	４		IP	１		IP	５	3	IP
+常盤　　海心	5.22	0.16	4.2	３		IP	５		IP	２		IP	３		IP	３	4	IP	転		IP	１	4	IP	３		IP	５		IP	６		IP
+近藤　　来希	1.60	0.19	4.1	６		IP	Ｆ		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP	３		IP
+牧村　　俊輝	2.30	0.22	4.8	６		IP	４		IP	５	6	IP	５		IP	６		IP	６		IP	６		IP	２		IP	５	6	IP	６		IP
+鰐部　太空海	5.70	0.16	2.8	３		IP	５		IP	３		G1	５		IP	２		IP	２		IP	２		IP	４		IP	３		IP	３		IP

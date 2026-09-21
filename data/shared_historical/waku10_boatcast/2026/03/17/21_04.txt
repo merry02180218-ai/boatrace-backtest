@@ -1,0 +1,8 @@
+data=
+1	0
+大橋　栄里佳	8.70	0.17	3.1	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	６		IP	１		IP
+村田　　浩司	4.20	0.15	3.7	３		IP	５		G3	１	1	G3	６		IP	４		IP	４		IP	４		IP	２		IP	６		IP	５	3	IP
+雑賀　　勇貴	4.60	0.16	3.1	５		IP	６		IP	４		IP	３		IP	１		IP	５		IP	３		IP	４		IP	６		IP	１		IP
+深井　　利寿	6.40	0.18	3.4	転		IP	３		IP	３		IP	１		IP	１		IP	２		IP	４		IP	３	5	IP	２		IP	３		G3
+広次　　　修	5.80	0.17	2.3	４		IP	５		IP	２		IP	２		IP	３		IP	３		IP	５		IP	４		IP	２		IP	１		IP
+草川　　壮良	2.50	0.16	2.7	６		IP	６		IP	４		IP	５		IP	２		IP	６		IP	落		IP	５		IP	４		IP	５		IP

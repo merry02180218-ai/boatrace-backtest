@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　一樹	7.90	0.11	2.1	３		IP	６		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	３		IP
+一色　　凌雅	4.30	0.16	3.6	３		IP	６		IP	４		IP	２		IP	６		IP	３		IP	５		IP	２		IP	３		IP	６		IP
+木場　　悠介	6.50	0.17	3.4	４		IP	１		IP	３		IP	２		IP	２		IP	３		IP	２	2	IP	２		IP	６		G3	３		G3
+若林　　義人	5.10	0.12	2.6	５		IP	２		IP	５		IP	５		IP	３		G1	６	3	IP	１		IP	４		IP	１		IP	６		IP
+香川　　陽太	3.90	0.20	4.4	３		IP	６	6	IP	５	6	IP	６		IP	２	4	IP	４		IP	２		IP	５		IP	４		IP	６		IP
+横田　　海人	1.90	0.18	4.2	３		IP	６		IP	６		IP	５		IP	６		IP	６		IP	５	5	IP	５		IP	６		IP	５		IP

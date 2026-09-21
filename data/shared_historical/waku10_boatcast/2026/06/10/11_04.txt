@@ -1,0 +1,8 @@
+data=
+1	0
+登　　みひ果	6.60	0.14	2.3	３		IP	４		G3	２		G2	１		IP	２		IP	１		G3	３		IP	４		G3	４		G1	４		IP
+中村　　守成	5.20	0.19	4.7	４	3	IP	２		IP	４		IP	３		IP	６		IP	２		IP	２		IP	２		IP	４		IP	６		IP
+亀山　　雅幸	7.20	0.15	2.6	１		IP	２		IP	２		IP	６		IP	６	4	IP	２		IP	１		IP	１		IP	２		IP	２		IP
+中澤　　和志	7.80	0.12	2.3	１		IP	２	5	IP	４		IP	１		G1	２		G1	３		IP	３		IP	３		G1	３		G1	１	5	IP
+益田　　啓司	5.80	0.17	2.7	６		IP	２		IP	２		IP	３		IP	２	6	G1	４		IP	３		IP	４		IP	５		IP	１		IP
+野田　　亜湖	1.20	0.19	4.7	６		IP	６		IP	５		IP	６		G3	６		G3	６		IP	５		IP	６		IP	６		IP	６		IP

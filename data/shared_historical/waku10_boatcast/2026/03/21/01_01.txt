@@ -1,0 +1,8 @@
+data=
+1	0
+岩下　　巧斗	7.30	0.15	3.8	５		IP	５		IP	１		IP	１		IP	１		IP	２		IP	６		IP	１		IP	１		IP	１		IP
+小宮　　涼雅	4.80	0.18	3.6	５		IP	４		IP	２		IP	２		IP	４		IP	３		IP	３		IP	５		IP	４		IP	４		IP
+横田　　海人	3.00	0.13	2.8	２		IP	６		IP	１		IP	６		IP	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP
+江藤　　敦宏	2.80	0.17	3.5	５	5	IP	５		IP	５	5	IP	５		IP	４		IP	６		IP	３		IP	３		IP	６	5	IP	５		IP
+金子　　怜央	3.50	0.13	2.1	３		IP	６		IP	４		IP	６		IP	１		IP	５		IP	５		IP	３		IP	５	4	IP	６		IP
+高橋　　龍治	3.22	0.12	3.8	４		IP	５		IP	４		IP	６		IP	４		IP	欠		IP	２		IP	６		IP	６		IP	４		IP

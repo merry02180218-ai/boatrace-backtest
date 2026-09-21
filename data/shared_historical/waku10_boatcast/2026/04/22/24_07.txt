@@ -1,0 +1,8 @@
+data=
+1	0
+荒木　　颯斗	8.40	0.14	2.9	１		IP	２		IP	２		IP	１		IP	４		IP	２		IP	１		IP	２		IP	２		IP	１		IP
+瀬川　　大地	3.30	0.17	3.8	６		IP	４		IP	４		IP	３		IP	３		IP	５		IP	３		IP	６		IP	６		IP	５		IP
+小宮　　涼雅	3.80	0.15	3.0	５		IP	２		IP	２		IP	３		IP	６	4	IP	６		IP	６		IP	５	2	IP	２		IP	６		IP
+大島　隆乃介	4.40	0.16	3.7	４		IP	２		IP	１		IP	４	5	IP	３		IP	６		IP	６		IP	３		IP	５		IP	５		G3
+牧村　　俊輝	3.20	0.21	4.6	５	6	IP	１	6	IP	６		IP	４		IP	５	6	IP	５		IP	６		IP	６		IP	６		IP	２		IP
+加倉　　侑征	4.80	0.16	2.9	３		IP	３		IP	２		IP	５	5	IP	１		IP	５		IP	４		IP	５		IP	６		IP	３		IP

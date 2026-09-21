@@ -1,0 +1,8 @@
+data=
+1	0
+今垣　光太郎	8.30	0.13	3.1	１		IP	１		IP	６		IP	４		SG	２		G1	１		IP	３		IP	１		G1	１		G1	２		G1
+中　　　亮太	7.70	0.15	1.9	１		IP	４	3	IP	１		G2	４		G3	３		IP	１		IP	２		IP	１		IP	２	3	IP	３		IP
+重成　　一人	4.70	0.16	3.4	６	6	IP	２		IP	６		IP	６		IP	３	5	IP	２		G1	５		G1	１		IP	６		IP	３		G1
+寺田　　　祥	5.80	0.18	2.9	４		IP	２		IP	３		IP	５		G2	６		IP	３		IP	２		IP	２		IP	２		IP	６		G1
+山口　　達也	4.30	0.12	3.5	４	1	IP	６		IP	６	3	IP	３		IP	１		G2	３		G2	３		IP	６		SG	６	6	G1	６		G1
+坂口　　　周	4.80	0.17	3.9	６		G3	３		IP	５		G3	４		G3	６	5	IP	２	4	IP	２	5	IP	４		IP	３		IP	３	5	IP

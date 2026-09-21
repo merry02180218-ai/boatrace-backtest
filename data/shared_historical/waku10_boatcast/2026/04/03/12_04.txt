@@ -1,0 +1,8 @@
+data=
+1	0
+白神　　　優	9.40	0.09	1.7	１		IP	１		IP	３		IP	１		IP	３		IP	１		IP	１		G1	１		G1	１		IP	１		IP
+砂長　　知輝	8.70	0.16	3.4	２		SG	２		SG	２		IP	１		IP	４		IP	１		G1	１		IP	３		IP	２		IP	１		IP
+湯川　　浩司	7.00	0.15	4.1	３	4	G2	１		IP	３		G1	１		G1	６		G1	３		G1	２	2	IP	５		IP	２		IP	３		SG
+吉川　　元浩	5.56	0.15	2.8	落		G1	３		G1	２		G1	６		G1	２		IP	６		IP	３		IP	４		IP	３		IP	３		IP
+平本　　真之	6.50	0.12	3.0	３		SG	５		SG	２		IP	６		G1	３		G1	４		G1	１		G1	４		IP	２		G1	３		G1
+井上　　忠政	6.10	0.18	4.9	２		G1	３		G1	６		G1	４		G1	２		G1	６		G1	４		G1	２		IP	４		G1	３		G1

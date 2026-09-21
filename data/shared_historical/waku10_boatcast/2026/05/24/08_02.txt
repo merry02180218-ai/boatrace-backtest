@@ -1,0 +1,8 @@
+data=
+1	0
+井川　　大作	7.40	0.19	3.4	２		IP	１		IP	５		IP	３		IP	２		IP	１		IP	３		IP	３		IP	２		IP	１		IP
+松本　　博昭	7.20	0.16	4.1	４	3	IP	４		IP	２		IP	２		IP	１		IP	２		IP	３		IP	２		IP	２		IP	２		IP
+前原　　大道	6.70	0.17	2.9	２		IP	１		IP	１		IP	２		G1	２		G1	５		G1	４		IP	５		IP	３		IP	３		IP
+西田　　　靖	4.60	0.19	3.9	３	2	IP	５	2	G3	６	2	G3	４	2	IP	４	2	IP	５	2	IP	１	2	IP	１	2	IP	３	2	IP	６	2	IP
+高井　　駿弥	2.80	0.15	3.7	５		IP	６	6	IP	４		IP	３		IP	４		IP	６		IP	５		IP	５		IP	５		IP	４		IP
+樫葉　　新心	1.80	0.19	4.2	６		IP	５		G3	６		IP	５		IP	６		G3	５		IP	６		IP	６		IP	３		G3	６		IP

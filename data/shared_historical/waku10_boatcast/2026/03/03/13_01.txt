@@ -1,0 +1,8 @@
+data=
+1	0
+土井　　歩夢	7.00	0.17	2.9	４		IP	２		IP	５		IP	Ｆ		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP
+坂井　　康嗣	4.22	0.24	3.8	６		IP	２	1	IP	落		IP	３		IP	３		IP	４		IP	１		IP	６		IP	転		IP	５		IP
+佐藤　　博亮	4.10	0.14	3.7	６		IP	１		IP	５		G1	４		G1	２		IP	６		IP	３		IP	落		IP	６		IP	４		IP
+上村　　宏太	6.80	0.15	2.5	４	5	IP	１		IP	２		IP	２		IP	４		IP	３		IP	１		IP	４	6	IP	３	5	IP	２		IP
+中嶋　　達也	4.40	0.17	2.8	３		IP	６		IP	３		IP	５		IP	４	4	IP	５		IP	３		IP	４		IP	１		IP	６		IP
+宮崎　　奏磨	1.00	0.16	3.6	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	転		IP	６		IP

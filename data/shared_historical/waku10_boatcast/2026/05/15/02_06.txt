@@ -1,0 +1,8 @@
+data=
+1	0
+杉江　　浩明	5.80	0.23	4.8	１		IP	４		IP	６		IP	１		IP	５		IP	１		IP	１		IP	４		IP	６		IP	３		IP
+服部　　幸男	5.80	0.15	2.5	３		IP	１		IP	１		IP	３		G1	２		G1	２		IP	５		IP	５		IP	６		IP	５		IP
+山田　　晃大	5.70	0.11	2.1	１		IP	６		IP	２		IP	３		IP	２		IP	３		IP	３		IP	５		IP	２		IP	５		IP
+吉永　　浩則	2.30	0.18	3.9	６		IP	５	6	IP	６	5	IP	６		IP	６	5	IP	５		IP	６		IP	２		IP	４		IP	５		IP
+大澤　　普司	5.90	0.19	2.9	３		IP	６		G1	１		IP	４		IP	２		IP	５		IP	１		IP	４	6	IP	３		IP	３		G1
+北中　　元樹	3.30	0.19	4.0	５		IP	５		IP	５		IP	６		IP	６		IP	３		IP	２		IP	６		IP	３		IP	４		IP

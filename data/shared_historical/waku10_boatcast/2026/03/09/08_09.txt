@@ -1,0 +1,8 @@
+data=
+1	0
+鳥居塚　孝博	9.20	0.13	1.7	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	４		IP	１		IP	１		IP	１		IP
+乙藤　　智史	5.00	0.16	4.1	５	3	IP	５	4	IP	２		IP	２		IP	２		IP	６		IP	欠		IP	５		IP	３		IP	２		IP
+坂本　　一真	3.30	0.19	3.0	３		IP	５		IP	５		IP	６		IP	６		IP	４		IP	６		IP	３		IP	２		IP	５		IP
+酒見　　峻介	5.50	0.17	2.9	３		IP	４		IP	５		IP	２		IP	Ｆ		IP	５		IP	２		IP	２	3	IP	３	2	IP	２		G2
+黄金井　力良	4.10	0.12	2.4	５	6	IP	４		IP	５		IP	３		IP	３		IP	５		IP	５		IP	６		IP	２		IP	３		IP
+梶原　　　正	3.10	0.20	3.5	４		IP	５		IP	４		IP	５		IP	６		IP	４		IP	４	5	IP	４		G3	４		G3	５		IP

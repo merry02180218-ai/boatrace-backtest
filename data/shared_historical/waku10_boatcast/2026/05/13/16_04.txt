@@ -1,0 +1,8 @@
+data=
+1	0
+高田　　　綾	7.30	0.17	2.6	１		IP	１		IP	６		IP	４		G3	１		IP	３		IP	１		IP	３		IP	２		IP	２		IP
+谷村　　一哉	6.80	0.14	3.0	２		IP	２		IP	３		IP	２		IP	１		IP	２		IP	５		IP	３		IP	１		IP	５		IP
+間野　　兼礼	6.80	0.19	3.2	１		IP	５		IP	３		IP	２		IP	４		IP	２	4	IP	２		IP	１		IP	３		IP	３		IP
+松尾　　昂明	3.80	0.15	3.0	４		IP	４		IP	５		IP	６		IP	５		IP	４		IP	６		IP	３		IP	１		IP	４		IP
+品田　　直樹	4.60	0.18	4.3	４		IP	６		IP	４		IP	３		IP	３		IP	３		IP	６		IP	４		IP	１		IP	４		IP
+後藤　　翔之	4.70	0.17	4.0	５		IP	４		IP	３		IP	５		IP	３		IP	４		IP	４	5	IP	３		IP	３		IP	３		G2

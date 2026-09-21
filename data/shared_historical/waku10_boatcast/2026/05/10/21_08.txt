@@ -1,0 +1,8 @@
+data=
+1	0
+齋藤　　和政	6.00	0.16	3.0	３		IP	５		IP	１		IP	５		IP	３		IP	２		IP	１		IP	２		IP	３		IP	５		IP
+上村　　宏太	3.90	0.16	3.0	３		IP	６		IP	４		IP	６		IP	６		IP	５		IP	２		IP	４	3	IP	２		IP	４	5	IP
+三嶌　　誠司	5.10	0.17	2.5	４		IP	４	2	IP	６		IP	２		IP	３		IP	５		IP	２		IP	１		IP	５		IP	３		IP
+安武　　一也	1.67	0.17	3.4	６		IP	５		IP	５		IP	６		IP	５		IP	Ｌ	5	IP	６		IP	６		IP	６	6	IP	４		IP
+金子　　龍斗	3.78	0.15	2.9	３		IP	６		IP	３		IP	５		IP	１		IP	６		IP	転		IP	６		IP	６		IP	４		IP
+池本　　輝明	2.70	0.26	5.2	６		IP	６		IP	６		IP	５		IP	５		IP	４	4	IP	５		IP	３		IP	５		IP	３	4	IP

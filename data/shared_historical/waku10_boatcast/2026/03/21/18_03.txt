@@ -1,0 +1,8 @@
+data=
+1	0
+金田　　　諭	9.60	0.13	3.0	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		G1	２		G1	１		IP	２		IP
+山崎　　　祥	5.50	0.20	4.1	６		IP	３	3	IP	２		IP	４		IP	５		IP	２		IP	４		IP	２		IP	１		IP	４		IP
+八木　　治樹	2.90	0.13	3.1	４		IP	４		IP	転		IP	４		IP	４		IP	４		IP	６		IP	６	4	G3	３		G3	６		IP
+下出　　卓矢	5.80	0.15	3.2	４		IP	４	5	IP	２		IP	５		IP	２		IP	４		G2	１		IP	２		IP	３		IP	５		IP
+西村　美智子	3.80	0.13	2.7	３		IP	４		IP	５		IP	４		IP	４		IP	４		IP	４		G3	５		IP	３	6	IP	５		G3
+青木　幸太郎	3.70	0.17	3.9	４		IP	６		IP	４		IP	６		IP	５		IP	５		IP	１	5	IP	６		IP	１		IP	５		IP

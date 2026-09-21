@@ -1,0 +1,8 @@
+data=
+1	0
+門田　　　栞	6.50	0.22	4.5	６		IP	１		IP	２		IP	２		IP	１		G2	２		IP	６		IP	４		G3	４		G3	１		IP
+西村　　　歩	5.50	0.22	4.1	６		IP	１		IP	２		IP	３		IP	１		IP	２		IP	６		IP	６		G3	２		G3	５		G3
+井上　　遥妃	3.90	0.09	2.1	６		IP	４		IP	４		G1	５		SG	６		SG	６		G2	６		IP	６		IP	２		IP	１		IP
+小芦　るり華	8.40	0.16	3.2	５		IP	１		IP	２	3	IP	３		G2	２		G2	１		G3	３	3	G3	１		G3	１	3	IP	１		IP
+樫葉　　新心	2.70	0.17	4.7	５		G3	Ｆ		G3	３		IP	６		IP	３		G3	５		G3	３		IP	５		IP	６		IP	６		G3
+志賀　　美優	2.00	0.17	4.0	４		IP	６		IP	５		IP	６		IP	６		IP	３		IP	６		IP	６		IP	６		IP	５		IP

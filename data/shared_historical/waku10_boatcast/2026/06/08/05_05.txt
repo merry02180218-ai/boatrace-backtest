@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　豪洋	6.20	0.19	3.0	３		IP	５		IP	１		G3	５		IP	３		IP	１		IP	２		IP	５		IP	３		IP	１		IP
+廣瀬　　将亨	6.20	0.13	2.1	６		G2	６		G2	２		IP	２		IP	２		IP	３		IP	４		IP	２		IP	２		IP	２		IP
+木村　　亮太	4.20	0.20	4.1	２		IP	６		IP	４		IP	２	2	IP	６		IP	５		IP	４		IP	４		IP	４	4	IP	３		IP
+米本　　圭佑	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+椎名　　　豊	4.80	0.14	2.5	５		G3	１		IP	３		IP	２		IP	５		IP	３		IP	６		IP	６		IP	２		IP	５		G1
+坂口　　貴彦	2.30	0.20	4.7	５		IP	３		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	４		IP	４		IP

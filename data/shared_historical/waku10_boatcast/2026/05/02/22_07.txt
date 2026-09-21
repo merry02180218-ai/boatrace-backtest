@@ -1,0 +1,8 @@
+data=
+1	0
+楠原　　翔太	8.89	0.12	1.7	２		IP	４		IP	２		G3	１		G3	１		IP	１		IP	落		IP	１		IP	１		IP	１		IP
+三原　　　司	3.20	0.19	3.9	５	3	IP	６	3	IP	転		G3	６		G3	１		IP	３	3	IP	２		IP	６		IP	６		IP	５		IP
+黒田　　　剛	5.00	0.16	2.4	５		IP	１		IP	３		IP	２		IP	３		IP	２		IP	４	4	IP	４		IP	６		IP	６		IP
+仲谷　　颯仁	6.60	0.16	4.1	２		G1	２		IP	５		SG	３		SG	３		G1	２		G1	１		G1	６		G1	４		G1	５	5	G1
+富永　　大一	5.30	0.19	4.7	３		IP	３		IP	２		IP	２		IP	２		IP	６		IP	５		IP	３		IP	３		IP	５		IP
+柴田　　直哉	3.67	0.22	4.2	１	5	IP	４		IP	４		IP	６		IP	５		IP	６		IP	欠		IP	２		IP	５		IP	６		IP

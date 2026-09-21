@@ -1,0 +1,8 @@
+data=
+1	0
+飯山　　晃三	6.90	0.18	3.9	２		IP	５	2	IP	１		IP	１		IP	２		IP	６		IP	３		IP	１		IP	３		IP	２		IP
+小宮　　涼雅	3.10	0.20	4.1	６		IP	６		IP	６		IP	５		IP	５		IP	３		IP	４		IP	５		IP	４		IP	２		IP
+宮内　　直哉	4.70	0.16	3.2	１	4	IP	２		IP	４		IP	３		IP	４		IP	６	4	IP	６		IP	５		IP	１		IP	６		IP
+大石　　真央	4.00	0.17	2.6	４		IP	１		IP	６		IP	５		IP	１		IP	３		IP	６		IP	５		IP	５	5	IP	５		IP
+泉　　　啓文	3.40	0.18	4.1	６		IP	４		IP	５	6	IP	６	6	IP	２		IP	２		IP	５		IP	４		IP	５		IP	５		IP
+生方　　靖亜	3.80	0.17	3.9	２		IP	３		IP	５		IP	６		IP	４		IP	４		G3	５		G3	５		IP	６		IP	２	5	IP

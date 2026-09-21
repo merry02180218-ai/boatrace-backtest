@@ -1,0 +1,8 @@
+data=
+1	0
+荻野　　裕介	7.10	0.21	3.3	２		IP	２		IP	２		IP	３		IP	１		IP	６	2	IP	１		IP	１		IP	２		IP	５		IP
+渡邉　　俊介	7.40	0.12	2.6	５		IP	２		IP	２		IP	３		IP	１		IP	２		IP	２		IP	１		IP	３		IP	２		IP
+増本　　杏珠	3.20	0.18	3.9	Ｆ		IP	５	6	IP	６		IP	５		IP	３	4	IP	２		IP	３		IP	６		IP	５		IP	４		IP
+黒井　　達矢	5.60	0.15	3.7	３		IP	４		IP	２		IP	２		IP	３		IP	２		G1	５		G1	６		IP	４	5	G1	３		IP
+東　　　健介	3.70	0.17	3.3	６		IP	４	3	IP	３	2	IP	３		IP	５		IP	４		IP	４		IP	４		IP	４		IP	５		IP
+小林　　一樹	3.11	0.14	3.0	３		IP	３	5	IP	６		IP	不	5	IP	５		IP	５		IP	５	4	IP	６		IP	４	5	IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+楠原　　翔太	8.40	0.11	2.0	１		IP	４		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	４		IP	２		G3
+森林　　　太	3.90	0.20	4.8	５		IP	４		IP	２		IP	３		IP	５		IP	６		IP	４		IP	４		IP	４		IP	４		IP
+谷津　　幸宏	5.50	0.12	1.7	２		IP	４		IP	１		IP	３		IP	５		IP	４		IP	２		IP	６		IP	１		IP	５		IP
+浦田　　晃嗣	4.00	0.15	3.5	５		IP	６		IP	５		IP	３		IP	２		IP	２		IP	６		IP	４		IP	３		IP	５		IP
+松尾　　昂明	5.40	0.16	3.3	１		IP	２		IP	６		IP	４		IP	３		IP	２		IP	３	4	IP	４		IP	３		IP	６		IP
+栗山　　繁洋	2.20	0.24	4.5	５		IP	６		IP	６	5	IP	５		IP	４		IP	６		IP	３		IP	５		IP	６		IP	５	5	IP

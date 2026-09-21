@@ -1,0 +1,8 @@
+data=
+1	0
+金田　　幸子	8.20	0.13	2.6	１		G3	２		G3	２		G3	１		IP	３		IP	１		IP	４		IP	２		IP	１		IP	２		IP
+横澤　　剛治	6.10	0.16	2.8	２		IP	１		IP	３		IP	４		IP	５		G1	４		IP	１		IP	１		IP	４		IP	５		IP
+天野　　　誠	4.60	0.21	4.8	５		IP	３		IP	５		IP	２		IP	４		IP	２		IP	４		IP	５		IP	３		IP	４		IP
+西川　新太郎	4.40	0.15	2.6	４		IP	４		IP	５		IP	５		IP	１		IP	２		IP	６		IP	６		IP	４		IP	２		IP
+石田　　章央	5.80	0.14	3.0	６		IP	１		IP	３		IP	６	6	IP	２		IP	２		IP	２		IP	５		IP	３		IP	３		IP
+上村　　純一	5.10	0.14	3.3	４		G1	５		G1	４		IP	２		IP	１		IP	４		G1	５		G1	４		G1	５		G1	４		G1

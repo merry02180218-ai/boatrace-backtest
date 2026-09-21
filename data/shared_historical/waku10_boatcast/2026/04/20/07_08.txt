@@ -1,0 +1,8 @@
+data=
+1	0
+渡邊　　哲也	7.10	0.15	2.6	１		IP	６		IP	４	2	IP	４		IP	１		IP	２		IP	２		IP	３		IP	１		IP	１		IP
+田中　　京介	6.40	0.15	2.8	２		IP	２		IP	４		IP	４		IP	２		IP	４		IP	２		IP	３		IP	１		IP	４	1	IP
+萬　　　正嗣	4.00	0.20	3.9	２		IP	５		IP	６	5	IP	５		IP	１	4	IP	６		IP	３	5	IP	５		IP	４		IP	４		IP
+鈴木　　柊介	4.40	0.13	2.5	５	5	IP	５	6	IP	２		IP	４		IP	６		IP	１	5	IP	３		IP	６		IP	３		IP	４		IP
+中川　　りな	3.60	0.15	3.7	３		IP	２		IP	５	6	IP	５		IP	６		IP	５		IP	３		IP	５		IP	６		IP	３		IP
+萩原　　知哉	3.10	0.21	3.9	３		IP	３		IP	５		IP	４		IP	６		IP	５		IP	６		IP	４		IP	４		IP	６		IP

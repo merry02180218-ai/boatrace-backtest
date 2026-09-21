@@ -1,0 +1,8 @@
+data=
+1	0
+中山　　　将	10.10	0.11	2.1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+酒井　　俊弘	4.50	0.17	2.9	２		IP	５		IP	３		IP	３		IP	６		IP	３		IP	５		IP	４		IP	４		IP	３		IP
+武藤　　綾子	4.40	0.19	3.4	２		IP	３		IP	４		IP	５		G3	４		G3	５		IP	３		IP	３		IP	４		G3	５		G3
+重野　　哲之	5.40	0.09	1.6	３		IP	２		IP	５		IP	２		IP	３		IP	６		IP	１		IP	６		IP	２		IP	４	5	IP
+川合　　理司	2.40	0.18	3.5	６	6	IP	６		IP	６		IP	６		IP	４		IP	４		IP	４		IP	５		IP	５	6	IP	４		IP
+寳田　　亮治	3.30	0.21	4.3	６		IP	４		IP	２		IP	６		IP	５		IP	５		IP	３		IP	４		IP	６		IP	４		IP

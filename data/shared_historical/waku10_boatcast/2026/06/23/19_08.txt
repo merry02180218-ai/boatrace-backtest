@@ -1,0 +1,8 @@
+data=
+1	0
+森林　　　太	5.70	0.24	4.4	４		IP	３		IP	２		IP	１		IP	３		IP	５		IP	１		IP	２		IP	６		IP	５		IP
+浜本　　裕己	6.00	0.13	2.4	２		IP	２		IP	３		IP	５		IP	５		IP	４		IP	３		IP	３		IP	１		IP	２		IP
+藤田　　竜弘	6.00	0.18	3.3	５		IP	１		IP	３		IP	３		IP	１		IP	５		IP	３		IP	６		IP	１		IP	欠		IP
+赤羽　　克也	6.10	0.16	3.4	４		IP	２		IP	６		IP	４		IP	１		IP	２		IP	２		IP	５		IP	２		IP	２		IP
+金田　　大輔	3.70	0.14	3.0	６		IP	５		IP	４		IP	２		IP	６		IP	５		IP	６	6	IP	１		IP	３		IP	５		IP
+恵良　　琴美	1.90	0.22	4.7	６		IP	６		IP	６		IP	４		IP	４		IP	６		IP	６		IP	４		IP	６		IP	６		IP

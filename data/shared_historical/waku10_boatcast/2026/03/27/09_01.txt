@@ -1,0 +1,8 @@
+data=
+1	0
+池永　　　太	9.70	0.11	1.6	１		IP	１		G1	１		G1	２		IP	１		IP	１		IP	３		G1	２		IP	１		IP	１		IP
+滝川　真由子	7.10	0.18	3.2	３	3	IP	１		G3	５		IP	４	3	IP	２		IP	１		IP	１		IP	２		IP	２		IP	４		IP
+橋本　　年光	4.50	0.17	4.1	５		IP	２		IP	６		IP	４		IP	４		IP	３		IP	３		IP	４		IP	３		IP	４		IP
+金子　　怜央	2.90	0.17	3.0	６	6	IP	６		IP	５		IP	４		IP	４		IP	４		IP	６		IP	４		IP	３		IP	５		IP
+渡邊　　雄斗	3.70	0.16	3.1	４		IP	５		IP	６		IP	６		IP	４		IP	３	6	IP	２		IP	５	6	IP	６	6	IP	２		IP
+牧原　　　崇	2.80	0.20	4.5	３		IP	６		IP	６	5	IP	５		IP	５		IP	３		IP	４		IP	４		IP	６		IP	６		IP

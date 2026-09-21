@@ -1,0 +1,8 @@
+data=
+1	0
+菊地　　敬介	5.50	0.19	3.1	５		IP	エ		IP	１		IP	２		IP	１		IP	１		IP	３		IP	５		IP	６		IP	３		IP
+中尾　　優香	6.30	0.15	3.6	１		IP	３		IP	２		IP	１		IP	６		IP	Ｆ		IP	２		IP	１		IP	５		IP	２		IP
+赤池　　修平	7.40	0.16	3.6	１		IP	２		IP	２		IP	３		IP	５		IP	２		IP	１		IP	１	4	IP	５	6	IP	１		IP
+神田　　達也	3.30	0.17	3.4	５		IP	６		IP	６		IP	３		IP	６		IP	４		IP	１		IP	５		IP	５		IP	４		IP
+山道　　諄也	3.00	0.15	3.7	４		IP	４		IP	５		IP	５		IP	５		IP	３		IP	６		IP	３		IP	６		IP	５		IP
+深川　　真二	6.60	0.15	2.3	１	2	G2	４	2	IP	２	2	IP	２	2	G1	５	2	G1	３	2	IP	６	2	IP	１	2	IP	１	2	IP	５	2	IP

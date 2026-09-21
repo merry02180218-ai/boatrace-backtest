@@ -1,0 +1,8 @@
+data=
+1	0
+河野　　　大	8.80	0.16	3.1	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	２		IP	１		IP	４		IP	１		IP
+瀬川　　大地	4.70	0.16	4.0	４		IP	２		IP	３		IP	４		IP	５		IP	２		IP	６		IP	４		IP	４		IP	３		IP
+下田　　哲也	3.30	0.16	3.1	４		IP	６		IP	６		IP	３		IP	４		IP	１		IP	５		IP	５		IP	６		IP	５		IP
+本村　　　大	2.10	0.16	3.7	６		IP	４		IP	５		IP	６	5	IP	３		IP	５		IP	６		IP	６		IP	５		IP	６	5	IP
+羽田　　妃希	4.00	0.19	4.8	４		IP	６		IP	４		IP	６		IP	４		IP	４		IP	５	4	IP	４		IP	２		IP	２		IP
+田中　　きら	1.00	0.22	4.4	６		IP	６		IP	６		IP	６		IP	６		IP															IP

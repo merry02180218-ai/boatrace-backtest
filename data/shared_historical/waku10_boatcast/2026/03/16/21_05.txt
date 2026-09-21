@@ -1,0 +1,8 @@
+data=
+1	0
+川野　　芽唯	9.60	0.16	2.6	１		IP	１		IP	１		G1	１		G1	５		IP	１		G1	１		G1	１		IP	１		IP	１		IP
+五反田　　忍	4.10	0.18	2.8	３		IP	３		IP	２	3	IP	４		IP	２		IP	６		IP	５		IP	４		IP	６		IP	６		IP
+大橋　栄里佳	5.80	0.17	3.5	１		IP	４		IP	４		IP	２		IP	２		IP	２		IP	２		IP	５		IP	５		IP	４		IP
+津田　　裕絵	5.80	0.15	3.6	１		IP	４		IP	４		IP	３		IP	１		IP	２		IP	６		G1	４		IP	４		IP	３		G3
+中村　かなえ	4.20	0.17	3.2	６		IP	６	6	IP	１		G3	２		G3	３		IP	６	6	IP	３		IP	３		IP	６	6	IP	５		IP
+山川　　波乙	2.40	0.20	3.8	４		IP	５		IP	２		G3	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

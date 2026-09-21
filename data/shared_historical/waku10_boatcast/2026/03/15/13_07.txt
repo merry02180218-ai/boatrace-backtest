@@ -1,0 +1,8 @@
+data=
+1	0
+近江　　翔吾	8.20	0.11	1.9	１		IP	１		IP	Ｆ		IP	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	２		IP
+和田　　拓也	7.40	0.16	3.2	２		IP	４	1	IP	１		IP	３		IP	１		IP	１		G1	４		G1	４		IP	２	3	IP	２		IP
+佐藤　　　翼	6.90	0.15	2.7	４		G1	３		G1	２		G1	１		G1	４		G1	４		IP	４		SG	５		G1	２		SG	２		G1
+徳増　　秀樹	4.50	0.17	3.7	２		IP	６		IP	５		IP	４		IP	２		G1	６		G1	２		IP	３		IP	５		IP	５		G1
+吉川　　元浩	6.10	0.14	3.0	１		G1	２		G1	５		G1	６		IP	１		IP	２	4	IP	２		SG	６		SG	５		G1	５		G1
+宮之原　輝紀	4.60	0.14	3.4	５		G1	４		G1	３		G1	３		G1	３		IP	５		G2	４		IP	６		IP	３		IP	５		IP

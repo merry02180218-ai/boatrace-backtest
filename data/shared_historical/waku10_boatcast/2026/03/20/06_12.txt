@@ -1,0 +1,8 @@
+data=
+1	0
+土屋　　智則	7.80	0.17	3.8	５		IP	１		IP	１		IP	２		IP	１		IP	２		IP	３		IP	４		IP	１		G1	２		G1
+板橋　　侑我	7.33	0.12	2.7	５		G1	１		G1	２		G1	４		G1	転		IP	２		IP	３		G1	２		G1	３		IP	２		IP
+平田　　忠則	7.10	0.17	2.8	４		IP	１		IP	４		G1	１		IP	３		IP	２		IP	５		IP	３		IP	２		SG	１		IP
+島村　　隆幸	6.30	0.17	3.3	２		IP	３	3	IP	１		IP	１		IP	欠		IP	４	5	G3	３		IP	３	3	IP	３		IP	３		IP
+杉山　　正樹	5.50	0.17	3.7	３		IP	３		IP	６		IP	６		G1	２		G1	６		G1	１		IP	２		IP	５		IP	２		IP
+吉村　　　誠	4.20	0.16	2.3	４		G3	４		G1	４	5	IP	５		IP	４		IP	３	5	IP	３		IP	５		G1	５	5	IP	３		IP

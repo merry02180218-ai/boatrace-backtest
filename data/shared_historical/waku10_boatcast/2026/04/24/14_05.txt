@@ -1,0 +1,8 @@
+data=
+1	0
+富澤　　祐作	8.20	0.12	2.0	４		IP	１		IP	２		IP	１		IP	２		IP	２		IP	１		IP	４		IP	１		IP	１		IP
+垂水　　　悠	5.30	0.11	2.2	４		IP	３		IP	１		IP	５		IP	３		G3	２		IP	３		IP	６		IP	３		G1	５		G1
+松井　　貫太	3.80	0.22	4.6	４		IP	３		IP	２		IP	６		IP	２		IP	５		IP	５		IP	５		IP	５		G1	５		IP
+酒見　　峻介	5.40	0.18	3.1	２		IP	２		IP	１	5	IP	５		IP	５		IP	５		IP	３		IP	４		IP	５		IP	２		IP
+渡辺　　浩司	5.90	0.14	3.3	６		G1	２		IP	２		IP	３		IP	２		IP	３	4	IP	２		IP	３		G1	６		G1	４		IP
+佐々木　完太	6.10	0.15	3.0	３		G1	４		G1	１		IP	１		IP	５	5	SG	５		IP	４		G1	６		G1	２		G1	３	5	G1

@@ -1,0 +1,8 @@
+data=
+1	0
+宮内　由紀英	4.00	0.19	4.2	６		IP	４		IP	５		IP	４		IP	２		IP	３		IP	２		IP	５		IP	６		IP	４		IP
+松井　　　繁	7.00	0.14	3.4	４		SG	４		SG	２		IP	３		IP	６		G1	３		G1	５		G1	１		G1	１		SG	２		G1
+楠原　　正剛	4.90	0.17	2.3	５		G3	５		IP	６	4	IP	３	4	IP	４		IP	３		IP	３		IP	３		IP	２		IP	２		IP
+志道　　吉和	2.20	0.17	4.0	６		IP	３		IP	６		IP	５		IP	Ｆ		IP	４		IP	６		IP	４	5	IP	５	5	IP	６		IP
+坂口　　諒宗	1.00	0.20	1.0	６	6	IP																											IP
+永嶋　　裕一	5.56	0.15	3.0	落		IP	３		IP	３		IP	２	5	IP	１		IP	３	5	IP	４		IP	４		IP	５		IP	４	5	IP

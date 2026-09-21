@@ -1,0 +1,8 @@
+data=
+1	0
+吉武　　真也	8.40	0.13	2.6	２		IP	３		IP	１		IP	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP	３		IP
+岩橋　　裕馬	5.30	0.17	3.7	２		IP	２		IP	２		IP	２		IP	６		G3	３		IP	４		IP	４		IP	４		IP	５		G3
+中島　　　航	2.40	0.24	5.1	５		IP	５		IP	４	5	G3	２		IP	６		IP	６		IP	６		IP	５		G3	６		G3	５		IP
+品田　　直樹	4.90	0.16	3.3	６		IP	３		IP	３		IP	３		IP	２		IP	５		IP	３		IP	５	3	IP	４		IP	２		IP
+小野寺　智洋	3.50	0.14	3.5	５		IP	６		IP	５		IP	３		IP	２	6	IP	落		IP	４		IP	３		IP	５		IP	４		IP
+木山　　大聖	2.70	0.11	2.0	５		IP	６		IP	３		IP	３		IP	６		IP	３		IP	６		IP	５		IP	６		IP	６		IP

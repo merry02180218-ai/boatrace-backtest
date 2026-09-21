@@ -1,0 +1,8 @@
+data=
+1	0
+秦　　　英悟	10.20	0.12	2.3	１		G1	１		G1	１		G1	１		IP	２		IP	１		G1	２		G2	１		G2	１		IP	１		IP
+砂長　　知輝	8.30	0.18	3.5	２		SG	２		IP	１		IP	４		IP	１		G1	１		IP	３		IP	２		IP	１		IP	３		IP
+丸野　　一樹	6.50	0.13	2.6	３		SG	５		G1	３		G1	２		G1	１		IP	５		G1	２		G1	３		G1	３		G1	６		G1
+関　　　浩哉	7.60	0.12	2.7	２		SG	３		G1	２		G1	５		G1	２		IP	２		IP	２		SG	２		G1	２		G1	５		G1
+原田　　幸哉	5.30	0.12	2.8	５		SG	２		G1	４		G3	６		G1	４	4	G1	４		G1	６		SG	６		SG	３		G1	１		G1
+鎌倉　　　涼	3.90	0.16	2.8	６		SG	５		G3	４	5	G3	６		G1	３		IP	６	4	IP	３		IP	５		IP	５		G1	２	5	IP

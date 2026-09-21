@@ -1,0 +1,8 @@
+data=
+1	0
+角山　　雄哉	7.10	0.17	2.4	１		IP	１		IP	３		IP	４		IP	６		IP	１		IP	４		IP	２		IP	１		G3	２		IP
+外崎　　　悟	6.60	0.14	3.0	転	3	IP	２		G3	１		IP	１		IP	２		IP	４		IP	５		IP	４		IP	１		IP	１	3	IP
+後藤　　陽介	4.80	0.18	3.3	３	4	IP	３		IP	５		IP	２		IP	４		IP	２		IP	６		IP	２	4	IP	４		IP	６		IP
+中澤　　和志	7.80	0.12	2.5	２	5	IP	４		IP	１		G1	２		G1	３		IP	３		IP	３		G1	３		G1	１	5	IP	１		IP
+品川　　賢次	4.30	0.23	4.1	１	4	IP	６		IP	６		IP	３		IP	４		IP	３		IP	４		IP	６		IP	３		IP	４		IP
+松井　　洪弥	3.60	0.13	3.3	２	4	IP	４		IP	６		IP	３	5	IP	６		G1	６		G1	６		G1	４		G1	４		G3	６		G1

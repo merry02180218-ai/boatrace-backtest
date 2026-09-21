@@ -1,0 +1,8 @@
+data=
+1	0
+鳥飼　　　眞	8.50	0.19	2.3	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	６		IP	１		IP	２		IP
+田村　　　慶	3.80	0.21	4.8	５		IP	６		IP	５		IP	２		IP	６		IP	４		IP	４		IP	５		IP	４		IP	１		IP
+金児　　隆太	4.10	0.22	3.5	６		IP	３		IP	１		IP	５		IP	６		G3	６		IP	６		IP	５		IP	３		IP	１		IP
+市橋　　卓士	5.30	0.14	2.9	３	5	IP	５		IP	５	5	IP	６		IP	３		IP	２		IP	２		IP	１		IP	４		IP	３		IP
+小柳　　勝希	3.50	0.18	3.6	３		IP	４		IP	４		IP	３		IP	６		IP	６		IP	３	6	IP	５		IP	６		IP	４		IP
+河野　　真也	3.30	0.20	5.2	５		IP	４	5	IP	３		IP	５		IP	６		IP	５		IP	６		IP	４		IP	１		IP	６		IP

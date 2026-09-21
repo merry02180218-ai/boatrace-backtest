@@ -1,0 +1,8 @@
+data=
+1	0
+水摩　　　敦	7.10	0.20	3.6	１		IP	３		IP	１		IP	６		IP	２		IP	３		IP	２		IP	３		IP	１		IP	３		IP
+山川　　雄大	5.44	0.20	4.7	２		IP	５		IP	２		IP	３		IP	５		IP	１		IP	６		IP	エ		IP	２		IP	４		IP
+鈴木　　裕隆	5.20	0.16	3.6	４		IP	４		IP	３		IP	６		IP	１	1	IP	２		IP	６		IP	４		IP	４		IP	１		IP
+福田　　雅一	6.20	0.17	2.9	５		IP	４		IP	２		IP	４		IP	２		IP	１		IP	３		IP	５		IP	２		IP	１		IP
+西村　　秀樹	2.89	0.15	4.3	３		IP	４		IP	転		IP	４		IP	６		IP	５		IP	６	6	IP	５		IP	５		IP	４		IP
+中田　　元泰	5.50	0.16	3.4	６		IP	３	5	IP	３		IP	２		IP	１	5	IP	４		IP	３		IP	５		IP	３		IP	３		IP

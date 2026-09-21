@@ -1,0 +1,8 @@
+data=
+1	0
+篠原　　晟弥	9.30	0.10	2.4	１		IP	１		IP	５		G2	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+津田　　陸翔	8.00	0.19	3.9	２		IP	１		IP	３		G2	２		IP	２		IP	１		IP	３		IP	３		IP	２		IP	２		IP
+石田　　勇斗	4.89	0.13	3.0	２		IP	１		IP	４		IP	３		IP	４		IP	転		IP	６		IP	６		IP	５		IP	２		IP
+森　　　智哉	5.67	0.12	2.8	３		IP	２		IP	５		IP	３		IP	６		IP	落		IP	２		IP	１		IP	４		IP	３		IP
+坂本　　雄紀	5.60	0.12	1.9	２		IP	１	4	IP	２		IP	３		IP	５		IP	１		IP	５		IP	３		IP	５		IP	５		IP
+濱野　　斗馬	5.10	0.13	3.7	３		IP	５	5	G2	５		IP	３		IP	５		IP	３		G1	３		G1	２		IP	３		IP	４		IP

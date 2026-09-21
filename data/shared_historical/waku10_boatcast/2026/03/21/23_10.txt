@@ -1,0 +1,8 @@
+data=
+1	0
+定松　　勇樹	10.40	0.14	3.2	１		G2	１		G1	１		G3	２		G3	１		G1	１		G1	１		G1	１		IP	１		IP	１		IP
+湯川　　浩司	8.00	0.14	2.9	２		G2	１		IP	１		G1	２		G1	４		G1	６		G1	１		G1	２		G1	２		IP	３		IP
+遠藤　　エミ	6.90	0.10	1.7	２		G1	３		IP	Ｆ		G1	４		G1	２		G3	３		G1	４		SG	２		G1	２		G2	１		IP
+羽野　　直也	6.50	0.16	3.5	２		G2	４		G1	５	6	G1	３	5	IP	３		G1	３		G1	３		IP	３		IP	３		SG	２		IP
+島川　　海輝	3.70	0.18	3.5	５		G2	４		IP	４		IP	２	4	IP	４		IP	３		IP	４		IP	５		IP	６		IP	６		IP
+石原　　　翼	2.10	0.17	3.8	６		G2	６		IP	４		IP	５		IP	３		IP	６	5	IP	６		IP	６		IP	５		IP	６		IP

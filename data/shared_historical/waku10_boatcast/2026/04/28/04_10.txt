@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　一輝	9.80	0.13	3.0	１		IP	４		IP	１		IP	１		IP	１		G1	１		G1	１		IP	１		IP	１		IP	１		IP
+木下　　翔太	7.80	0.16	3.6	１		IP	２		G1	３		G1	２		G1	４		G1	３		IP	３		IP	１	1	G1	１		G1	４		IP
+大須賀　　友	7.50	0.18	3.3	５		IP	２		IP	２		IP	４		IP	１		IP	１		IP	２		IP	１		IP	２		IP	３		IP
+和田　　拓也	5.00	0.10	1.8	５		IP	３		IP	２		IP	２		IP	４		IP	３		IP	６		G1	３		IP	４		IP	５		IP
+雑賀　　勇貴	4.10	0.21	3.8	３		IP	４		IP	５		IP	５		IP	２	4	IP	４		IP	５		IP	１	4	IP	５		IP	６		IP
+冨田　　秀幸	3.70	0.17	4.0	４		IP	４		IP	５		IP	４		IP	４		IP	４		IP	３		IP	６		IP	５		IP	３		IP

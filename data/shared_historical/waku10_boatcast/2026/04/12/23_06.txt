@@ -1,0 +1,8 @@
+data=
+1	0
+安達　　美帆	5.00	0.19	3.9	６		G3	３		G3	５		IP	１		G3	４		G3	２		G3	６		IP	３		G3	５		G3	１		G3
+谷川　　里江	5.70	0.17	3.5	５		G3	２		G3	２		G3	５		IP	２		G3	６		G3	５		IP	１		IP	１		G3	３		G3
+藤原　　早菜	4.20	0.18	4.6	３		G3	１		G3	５	4	IP	妨		IP	４		IP	３		IP	４		IP	２		IP	転		G1	６		G1
+関野　　　文	2.50	0.18	3.1	５		G3	３		IP	６		IP	６		IP	６		IP	６		G3	３		G3	５		IP	６	6	IP	４		IP
+中尾　　優香	3.90	0.17	2.9	２	3	IP	５		IP	３		IP	４		IP	６		IP	４		IP	６		IP	６	6	IP	４		IP	２		G3
+前田　　紗希	5.70	0.14	2.7	４		IP	２	5	G3	１		G3	４		G1	６		IP	２		G3	６		G3	３		IP	１		IP	５	5	IP

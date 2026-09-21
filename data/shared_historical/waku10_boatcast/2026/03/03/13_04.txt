@@ -1,0 +1,8 @@
+data=
+1	0
+上野　　拓馬	5.50	0.17	3.0	１		IP	３		IP	４		IP	１		IP	５		IP	６		IP	３	2	IP	１		IP	５		IP	４		IP
+木下　　大將	8.00	0.16	3.0	２		IP	４		IP	２		IP	１		IP	１		IP	４	3	IP	２		IP	２		IP	１		IP	１		IP
+数原　　　魁	6.20	0.13	2.9	５		IP	３		IP	５		IP	２		IP	２		IP	２		IP	４		IP	１	4	IP	３		IP	２		IP
+水摩　　　敦	4.80	0.19	3.4	５		IP	２		IP	４		IP	３	5	IP	３	2	IP	４		IP	４		IP	５		IP	２		IP	４		IP
+尾崎　　雄二	3.00	0.17	4.0	５		IP	１		IP	５		IP	３		IP	５		IP	６		IP	５		IP	５		IP	５		IP	６	4	IP
+永井　　　源	5.00	0.19	3.3	４		IP	２		G1	６		IP	２		IP	５		IP	３		IP	５	5	IP	４		IP	２		IP	３		G3

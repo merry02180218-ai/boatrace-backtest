@@ -1,0 +1,8 @@
+data=
+1	0
+土山　　卓也	10.00	0.13	2.3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+汐崎　　正則	5.90	0.15	3.2	１		IP	１		G3	５		G3	５		IP	３		IP	２		IP	１		IP	４		IP	６		IP	３		IP
+前川　　守嗣	5.50	0.11	1.9	２		IP	４		IP	６		IP	３		IP	２		IP	２		IP	５		IP	２		IP	４		IP	３		IP
+豊田　　泰洋	3.00	0.21	3.9	５		IP	３		IP	５		IP	５	5	IP	６		IP	６		IP	５		IP	３		IP	４		IP	４		IP
+小川　　時光	1.90	0.15	3.3	４		IP	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	５	6	IP	４		IP
+出口　　飛龍	1.00	0.19	4.8	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

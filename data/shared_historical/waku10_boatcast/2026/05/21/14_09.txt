@@ -1,0 +1,8 @@
+data=
+1	0
+竹腰　　正樹	6.80	0.19	3.6	２		IP	４		IP	１		IP	３		IP	１		IP	５		IP	３		IP	３		IP	３		IP	１		IP
+志道　　吉和	3.10	0.14	3.2	６		IP	５		IP	３		IP	６		IP	３		IP	４		IP	５		IP	３		IP	６		IP	５		IP
+宮地　　秀祈	5.90	0.16	3.1	１		IP	５		IP	３		IP	４		IP	２		IP	２		IP	４		IP	６		IP	２		IP	２		IP
+田村　　　慶	4.10	0.22	4.4	５	5	IP	５	5	IP	５		IP	６		IP	３	6	IP	３		IP	４		IP	２		IP	５		IP	２		IP
+伊藤　　雄二	1.70	0.18	4.2	５		IP	５		IP	５	6	IP	６		IP	６	6	IP	６	6	IP	６		IP	６		IP	５		IP	４		IP
+前野　　竜一	4.70	0.18	3.2	６		IP	４		IP	４		IP	３		IP	１		IP	３		IP	４		IP	４		IP	４		IP	５		IP

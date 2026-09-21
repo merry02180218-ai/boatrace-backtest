@@ -1,0 +1,8 @@
+data=
+1	0
+今井　　裕梨	8.60	0.14	2.4	１		IP	２		G3	４		G3	１		IP	３		IP	１		IP	１		IP	２		G3	１		G3	１		IP
+加藤　　啓太	3.30	0.13	2.4	１	3	IP	５		IP	４		IP	５		IP	４	5	IP	４	3	IP	６		IP	５		IP	５		IP	５	3	IP
+吉永　　泰弘	5.00	0.17	3.7	３		IP	２		IP	４		IP	５		G3	２		IP	３		IP	３		IP	３		IP	５		IP	５		IP
+桐本　　康臣	5.20	0.14	2.6	２		IP	６		IP	５		IP	１		IP	６		IP	３		IP	３		IP	１	5	IP	５		IP	３		IP
+西村　　拓也	7.70	0.13	2.6	４		IP	１	2	IP	１	1	IP	４		IP	２		IP	２		IP	３		IP	２		IP	１		IP	２		IP
+池田　　紫乃	2.10	0.21	4.5	６		IP	５		IP	４		IP	６		IP	６		IP	５		IP	６		G3	６		G3	３		IP	５	5	G3

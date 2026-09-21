@@ -1,0 +1,8 @@
+data=
+1	0
+市橋　　卓士	9.60	0.12	1.4	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	２		IP
+山道　　諄也	4.67	0.22	3.0	２		IP	４		IP	５		IP																					IP
+丹下　　　将	5.40	0.16	2.8	６	4	IP	２		IP	６		IP	２		IP	１		IP	３		IP	４		IP	５		IP	４		IP	２		IP
+海老澤　泰行	4.40	0.17	3.3	６		IP	２		IP	４		IP	４		IP	３		IP	３		IP	３		IP	３		IP	６		IP	５	5	IP
+南野　　利騰	3.60	0.15	3.2	４		IP	５		IP	３	6	IP	３		IP	４		IP	５		IP	３		IP	４		IP	６		IP	６		IP
+伏見　　俊介	3.22	0.15	3.0	４		IP	６		IP	６		IP	５		IP	６		IP	２		IP	転		IP	６		IP	１		IP	６		IP

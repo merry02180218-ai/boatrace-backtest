@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　康二	9.80	0.11	2.0	１		G1	１		G1	１		G1	１		IP	４		IP	１		IP	１		G1	１		IP	１		IP	１		IP
+畑田　　汰一	5.40	0.11	2.8	５		G1	２		G1	３		G1	３		G1	６		G1	５		IP	２		IP	２		IP	４		IP	４		IP
+高野　　哲史	7.30	0.14	3.4	３		G1	２		IP	３		IP	４		G1	１		G1	２		IP	５		IP	１		IP	１		IP	３		IP
+豊田　健士郎	5.80	0.13	2.8	３		G1	３		G1	４		G1	５		IP	５		G2	１		IP	２	3	IP	４		IP	６		SG	２		G1
+海野　康志郎	6.40	0.16	3.5	６		G1	１		IP	２		IP	３		G1	５	3	G1	２	3	IP	３		IP	３	2	IP	５		SG	２		SG
+稲田　　浩二	5.20	0.12	2.5	３		G1	３		G1	６		G1	３		G1	３		IP	１		IP	４		IP	６		IP	４	5	G1	６		G1

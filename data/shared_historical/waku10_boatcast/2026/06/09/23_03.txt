@@ -1,0 +1,8 @@
+data=
+1	0
+妹尾　　忠幸	8.00	0.14	3.6	１		IP	５		IP	１		IP	２		IP	４		IP	２		IP	１		IP	１		IP	２		IP	１		IP
+信濃　　由行	4.50	0.17	3.8	２		IP	４		IP	６		IP	３		IP	２		IP	６		IP	６		IP	５		IP	３		IP	２		IP
+木場　　悠介	6.30	0.15	3.1	４	2	IP	４		IP	１		IP	３		IP	２		IP	２		IP	３		IP	２	2	IP	２		IP	６		G3
+大森　　　翼	5.70	0.17	4.1	２		IP	３		IP	６	3	IP	３		IP	３		IP	５		IP	３		IP	４		IP	１		IP	２		IP
+篠崎　　元志	5.80	0.16	2.9	５		SG	１	3	IP	２	4	IP	４	4	IP	１	4	IP	４		G1	５		G1	４		G1	３		G3	５		G1
+西村　　仁吾	1.40	0.24	4.6	５		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP

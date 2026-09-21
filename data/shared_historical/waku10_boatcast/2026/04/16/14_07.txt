@@ -1,0 +1,8 @@
+data=
+1	0
+川崎　　公靖	5.90	0.14	3.4	２		IP	２		IP	１		IP	６		IP	５		IP	４		IP	３		IP	４		IP	２		IP	２		IP
+加藤　　　翔	5.89	0.17	4.7	２	3	IP	５		IP	４		IP	４		IP	２		IP	１		IP	２		IP	６		IP	落		IP	２		IP
+山田　　佑樹	5.30	0.11	2.3	５		IP	４		IP	４		IP	２		IP	６	5	IP	１		IP	１		IP	６		IP	６		IP	１		IP
+品川　　賢次	4.67	0.14	3.3	３		IP	５		IP	２		IP	５		IP	３		IP	５		IP	落		IP	３		IP	４		IP	３		IP
+峰重　　侑治	3.00	0.16	3.8	６		IP	５		IP	３		IP	４		IP	４		IP	６		IP	３		IP	６		G3	６		IP	４	4	IP
+興津　　　藍	2.50	0.17	3.5	４		IP	５		IP	４	2	IP	６		IP	４	4	IP	６		IP	４		G1	６		G1	６		IP	６		IP

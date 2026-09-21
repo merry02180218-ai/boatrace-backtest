@@ -1,0 +1,8 @@
+data=
+1	0
+松田　　隆司	7.90	0.17	2.9	２		IP	１		IP	１		IP	６	2	IP	１		IP	２		IP	１		IP	１		IP	３		IP	３		IP
+上之　　晃弘	5.50	0.17	4.1	５		IP	２		IP	２		IP	３		IP	４		IP	５		G3	１		G3	２		IP	６		IP	３		IP
+横澤　　剛治	6.10	0.14	3.8	４		G1	２		G1	３		IP	３		IP	４		IP	２		IP	６		IP	１		IP	２		IP	５		IP
+甲斐　　貴大	1.63	0.22	4.0	４	5	IP	６		IP	５	5	IP	６		IP	６		IP	５	6	IP	６	6	IP	６	6	IP						IP
+吉川　　颯汰	1.00	0.20	5.1	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６		IP
+間嶋　　仁志	3.50	0.15	2.9	６	2	IP	４	2	G3	６	2	G3	５	4	IP	３	2	IP	６	3	IP	５	2	IP	３	4	IP	４	2	IP	３	1	IP

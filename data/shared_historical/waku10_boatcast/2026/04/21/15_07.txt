@@ -1,0 +1,8 @@
+data=
+1	0
+横田　　　茂	8.00	0.15	2.7	１		IP	１		IP	２		IP	２		IP	２		IP	１		IP	５		IP	１		IP	２		IP	３		IP
+倉田　　郁美	5.00	0.17	3.4	４		IP	２		IP	３		IP	転		IP	３		IP	４		IP	５		IP	４		IP	３		IP	１		IP
+伏田　　裕隆	4.50	0.21	3.4	５		IP	５		IP	５		IP	２		IP	４	5	G3	６		G3	５		IP	２		IP	１		IP	３	5	IP
+森定　　晃史	6.80	0.18	3.2	３		IP	２		IP	１		IP	４		IP	２		IP	４		IP	２		IP	２		IP	３		IP	３		IP
+宮地　　秀祈	4.00	0.19	3.5	６	3	IP	５		IP	６		IP	４		IP	３		IP	３		IP	５		IP	２		IP	５		IP	２		IP
+大池　　佑来	3.40	0.14	3.5	２		IP	５		IP	３		IP	５		IP	６		IP	４		IP	４		G1	５		G1	６		G1	６		IP

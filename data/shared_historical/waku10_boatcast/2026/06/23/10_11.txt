@@ -1,0 +1,8 @@
+data=
+1	0
+西野　　雄貴	9.33	0.13	2.3	１		IP	１		IP	１		IP	２		IP	１		IP	３		IP	１		IP	欠		IP	１		IP	１		IP
+一色　　颯輝	3.10	0.22	3.7	２		IP	５		IP	４		IP	５		IP	６		IP	１		IP	６	3	IP	６		IP	６		IP	６		IP
+伊藤　　将吉	8.10	0.14	3.2	１		IP	３		IP	２		IP	２		IP	２	4	G1	１	4	IP	４		IP	２		IP	１		IP	２		IP
+塩崎　　桐加	4.80	0.18	2.9	３		IP	４		G3	３		G3	３		G3	３		IP	４	5	IP	４		IP	３		IP	５		IP	４		IP
+中野　　孝二	4.78	0.21	4.0	２	4	IP	４		IP	４		IP	６		IP	転		IP	３		IP	６		IP	２		IP	６	6	IP	１		IP
+佐々木　和伸	4.50	0.20	5.0	４		IP	５		IP	１		IP	６		IP	４		IP	５		IP	４		IP	３		IP	３		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+松村　　　敏	9.30	0.15	2.5	２	2	IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	２		IP
+前沢　　丈史	7.00	0.11	2.7	１		IP	１		IP	５		IP	３		IP	２		G2	３		G2	４		IP	２		IP	３		IP	２		IP
+中村　　泰平	6.40	0.14	2.9	２		IP	２		IP	１		IP	２		IP	３		IP	４		IP	５		G3	２		G3	６		G1	２		IP
+高倉　　和士	6.90	0.14	2.1	２		IP	６		G1	１		G1	２		IP	２		IP	２		IP	５		IP	３		G1	３		G1	３		IP
+赤坂　　俊輔	5.11	0.15	3.2	４		IP	３		IP	３		IP	２		IP	欠		IP	４		IP	４		IP	３		IP	４		IP	４		IP
+山下　　大輝	4.20	0.15	3.5	４	5	IP	３		IP	３		IP	３		IP	５		IP	６		IP	２		IP	４		IP	６		G1	５		G1

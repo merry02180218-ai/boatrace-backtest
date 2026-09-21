@@ -1,0 +1,8 @@
+data=
+1	0
+長尾　　萌加	7.30	0.19	3.6	３		IP	１		IP	６		IP	１		IP	３		IP	２		IP	１		IP	２		IP	４		IP	１		IP
+野田　　昇吾	2.90	0.13	2.9	６		IP	４		IP	４		IP	６		IP	６		IP	４		IP	３		IP	４		IP	５		IP	５		IP
+星野　　太郎	4.20	0.18	3.6	４		IP	５	4	IP	４		IP	１		IP	４		IP	６		IP	６		IP	３		IP	４		IP	３		IP
+内田　　　壮	1.50	0.16	3.6	５		IP	５		IP	６		IP	６		IP	６		IP	４		IP	６		IP	転	6	IP						IP
+佐藤　　駿介	4.60	0.19	3.9	６		IP	３		IP	４	6	IP	２		IP	３	4	IP	４		IP	２		IP	３		IP	５		IP	６		IP
+小畑　　実成	2.10	0.17	4.1	６		IP	５	5	IP	６		IP	４	5	IP	５		IP	５		IP	４	5	IP	６		IP	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+松井　　賢治	9.20	0.15	2.8	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+広瀬　　聖仁	4.40	0.20	4.0	５		IP	５		IP	２		IP	２		IP	５		IP	４		IP	４		IP	５		IP	２		IP	４		IP
+川北　　浩貴	7.56	0.15	2.8	２		IP	落		IP	２		IP	２		IP	２		IP	２		IP	１		IP	３		IP	４		IP	２		IP
+高憧　　四季	7.70	0.16	3.4	３		IP	１		IP	１		IP	２		G3	１		G1	４		IP	３		G1	４		G1	１		IP	３		IP
+森作　　広大	2.40	0.20	4.7	５		IP	５		IP	５		IP	５		IP	３	6	IP	６		IP	５		IP	４	6	IP	５		IP	６		IP
+宮城　　那菜	1.80	0.11	2.5	６		IP	５	5	IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	４		IP	４		IP

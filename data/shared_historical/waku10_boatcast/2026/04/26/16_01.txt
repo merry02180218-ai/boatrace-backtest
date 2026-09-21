@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　一毅	7.80	0.18	2.7	３		IP	４		IP	２		IP	２		IP	１		IP	３	2	IP	２		IP	１		IP	２		IP	１		IP
+小松　　卓司	5.70	0.13	2.9	３		IP	５		IP	３		IP	１		IP	２		IP	４		IP	６		IP	３		IP	３	4	IP	２		IP
+三宅　　健太	5.40	0.16	3.5	４		IP	２		IP	５		IP	３		IP	６		G3	１		G3	３		IP	１		IP	３		IP	６	4	IP
+原村　　拓也	5.00	0.17	3.7	３		IP	６		IP	６		IP	１		IP	４		IP	５		IP	３		IP	３		IP	４		IP	１		IP
+得山　　大輝	1.50	0.17	3.8	６	6	IP	６	6	IP	６	6	IP	４	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	５		IP
+一色　　颯輝	5.20	0.24	4.5	５		IP	３		IP	４	5	IP	２		IP	３		IP	２		IP	３		IP	５		IP	４	5	IP	３		IP

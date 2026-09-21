@@ -1,0 +1,8 @@
+data=
+1	0
+尾嶋　　一広	9.00	0.15	2.4	１		G3	１		IP	１		IP	３		G1	１		G1	１		G1	１		IP	６		IP	１		IP	１		IP
+齊藤　　　仁	7.00	0.15	3.1	２		G1	６		G1	２		G1	２		G1	２		IP	２		IP	１		G3	１		IP	転		IP	４		G1
+北川　　太一	5.90	0.15	2.7	２		G3	３		IP	２	4	IP	２		IP	５		IP	１		IP	４		IP	６		G3	５		IP	１		IP
+井上　　大輔	6.10	0.15	2.1	６		G3	３		IP	２		IP	３	5	IP	１		IP	４		IP	４		IP	２		IP	１		IP	４	1	IP
+河合　　三弘	3.50	0.18	3.4	４		G3	６		IP	４		IP	３		IP	６		IP	５		IP	４		IP	３	4	IP	３	6	IP	６		IP
+宮田　　龍馬	4.60	0.18	4.4	３		G3	６		G1	６		G1	５		G1	５		IP	４		IP	３		G1	３		IP	４		IP	１		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　夏海	9.30	0.15	2.6	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	６		G1
+小野　　　桜	5.40	0.16	4.1	２		IP	３		IP	４		IP	２		IP	４		IP	２		G3	３		G3	転		IP	５		IP	２		G3
+大石　　真央	5.10	0.17	3.4	３	4	IP	６		IP	５		IP	５		IP	１		IP	３		IP	２	2	IP	５		IP	２		IP	３		IP
+川井　　　萌	4.10	0.19	4.1	５		IP	３		IP	４		G1	３		IP	落		IP	３	3	IP	４		G3	Ｆ		IP	６		SG	２		G2
+菅野　はやか	2.50	0.20	3.2	５		IP	３		IP	５		IP	５		IP	６		IP	５		G3	６		IP	３		IP	６		IP	５		G3
+来田　　衣織	3.10	0.15	2.5	６		IP	４	4	IP	５		IP	１	5	IP	５		IP	４	5	G3	５		G3	６	5	IP	４		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+石川　　　諒	7.20	0.15	2.7	転		IP	１		IP	４		IP	３	2	IP	３		IP	１		IP	１		IP	１		IP	３		IP	１		IP
+柘植　　政浩	7.60	0.16	3.9	２		IP	５	3	IP	２		IP	２		IP	４		IP	１		IP	２		IP	２		IP	１		IP	１	3	IP
+天野　　　誠	4.60	0.20	4.6	４		IP	４		IP	３		IP	５		IP	５		IP	３		IP	５		IP	２		IP	４		IP	２		IP
+繁野谷　圭介	4.40	0.19	4.0	５	3	IP	５		IP	４		IP	３		IP	４		IP	５		IP	２		IP	５		IP	３		IP	２		IP
+竹之内　　極	4.30	0.16	4.1	５		IP	４		IP	３		IP	５		IP	２		IP	６		IP	４		IP	３		IP	４		IP	３		IP
+仲谷　　颯仁	5.60	0.16	3.2	４		SG	４		G1	５		G1	１	5	IP	１	5	IP	４		G1	３		IP	４		SG	５		G1	６		G1

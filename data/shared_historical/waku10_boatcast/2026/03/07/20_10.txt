@@ -1,0 +1,8 @@
+data=
+1	0
+篠原　　飛翔	9.00	0.19	3.8	１		IP	２		IP	１		IP	１		IP	２		IP	４		IP	１		IP	１		IP	１		IP	１		IP
+宗行　　治哉	6.30	0.18	4.0	１		IP	３		IP	４		IP	２		IP	２		IP	３		IP	５		G2	２		IP	３		IP	４		IP
+山崎　　　祥	5.40	0.20	3.4	１		IP	３		IP	４		IP	３		IP	３		IP	１		IP	５		IP	３		IP	５		IP	５		IP
+小松　　卓司	6.60	0.17	2.7	３		IP	３		IP	３	5	IP	１		IP	３		IP	４		IP	３		IP	３		G3	２		G3	２		IP
+大江　　　純	3.70	0.16	3.4	２	4	IP	２	6	IP	５		IP	６		IP	５		IP	６	6	IP	３		IP	６		IP	３		IP	５		IP
+倉田　　茂将	3.70	0.16	3.3	４		IP	５		IP	２	5	IP	６		G3	４		IP	６	4	IP	２	5	IP	４	4	IP	５		IP	６	3	IP

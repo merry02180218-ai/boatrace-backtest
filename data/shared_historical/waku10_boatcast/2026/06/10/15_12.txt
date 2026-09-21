@@ -1,0 +1,8 @@
+data=
+1	0
+山川　美由紀	7.90	0.11	2.1	６		IP	妨		G3	１		G3	２		G2	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+西岡　　育未	6.20	0.14	3.1	３		IP	１		IP	６		IP	３		IP	１		IP	６		G3	３		G3	３		G3	１		G3	３		G3
+津田　　裕絵	5.30	0.19	4.1	４		IP	２		IP	２		IP	４		IP	５		IP	６	4	IP	２		G3	３		G3	４		IP	２	4	IP
+福岡　　泉水	3.20	0.17	3.7	５		IP	５		IP	転		IP	６	5	IP	４		IP	２		IP	６		IP	４		IP	３		G3	４		G3
+山崎　小葉音	3.60	0.15	2.6	６		IP	６		IP	３		IP	３		G3	３		G3	３		G3	３		IP	５		IP	６		IP	６		IP
+森下　　愛梨	3.80	0.22	4.6	６		IP	２		IP	４		IP	３		IP	４		IP	６		IP	５		IP	３		IP	５		IP	４		IP

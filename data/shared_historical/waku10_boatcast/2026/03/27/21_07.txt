@@ -1,0 +1,8 @@
+data=
+1	0
+三原　　　司	6.40	0.16	3.4	１		IP	２		IP	４		IP	１		IP	１		IP	２		IP	５		IP	２		IP	５		IP	５		IP
+小野寺　智洋	6.30	0.15	3.4	３		IP	４		IP	２		IP	３		IP	１		IP	３		IP	１		IP	６		IP	４		IP	２		IP
+高山　　敬悟	3.50	0.19	4.3	４		IP	４		IP	１		IP	６		IP	５		IP	４		IP	６		IP	５		IP	６		IP	３		IP
+廣中　　良一	3.80	0.16	2.2	２		IP	６		IP	４		IP	６		IP	１		IP	３	5	IP	４		IP	６		IP	５		IP	６		IP
+板倉　　敦史	3.70	0.24	5.0	６		IP	６		IP	５		IP	５		IP	２		IP	２		IP	２		IP	５		IP	６		IP	４		IP
+長谷川　雅和	2.90	0.15	2.6	６		IP	５		IP	６		IP	５		IP	５		IP	６	5	IP	３		IP	３		IP	４		IP	５		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+佐々木　完太	9.60	0.13	2.0	１		G1	１		IP	１		IP	１		IP	２		IP	１		G1	１		IP	５		IP	１		SG	１		SG
+金子　　賢志	5.80	0.13	2.9	５		G1	３		IP	２		IP	４		G1	６		G1	５	3	IP	１		IP	１		IP	２		IP	６		G1
+新開　　　航	7.70	0.13	3.5	５		G1	１		IP	２		IP	１		IP	３		G1	４		G1	２		G2	１		IP	１		G1	５		G1
+山崎　　　郡	5.60	0.15	3.0	４		IP	３		IP	４		G1	４		G1	３		G1	５		G1	１		IP	３		G1	３		G1	５		IP
+瓜生　　正義	5.70	0.15	3.3	４		G1	１		IP	２		IP	１		G1	５		G1	４		G1	５		G1	４		G1	５		IP	４		G1
+山口　　　剛	6.40	0.20	4.5	６		G1	２		IP	３		SG	２		G1	６		G1	３		G1	４		G1	５		G1	１		G1	２	5	G1

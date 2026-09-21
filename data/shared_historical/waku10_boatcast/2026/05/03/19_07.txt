@@ -1,0 +1,8 @@
+data=
+1	0
+森永　　　隆	7.80	0.13	2.4	１		IP	２		IP	１		IP	５		IP	１		IP	１		IP	３		IP	２		IP	３		IP	２		IP
+佐藤　　駿介	5.90	0.14	3.2	２		IP	２		IP	３		IP	５		IP	２		IP	２		IP	６	3	IP	２	3	IP	４		IP	３		IP
+福山　恵里奈	4.50	0.14	2.7	５	4	IP	４		IP	２		IP	１		G3	６		IP	５	4	IP	６		IP	１		G3	６		IP	３		IP
+前原　　大道	5.60	0.17	2.7	３		IP	２		G1	５		G1	３		IP	５		IP	４	5	G1	５		IP	１	3	IP	３	5	IP	３		IP
+寺田　　夢生	2.00	0.16	2.8	６	6	IP	６	6	G3	５		IP	６		IP	３	6	IP	６	6	IP	４		G3	５	6	G3	６		G3	６		IP
+柳生　　泰二	5.20	0.15	3.5	１	4	IP	６		G1	６		G1	５		G1	５		SG	４		SG	５		IP	２		IP	３		IP	２	5	G1

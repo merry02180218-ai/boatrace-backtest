@@ -1,0 +1,8 @@
+data=
+1	0
+宇野　　博之	4.80	0.15	3.5	３		IP	２		IP	３		IP	４		IP	６		IP	６		IP	４		IP	２		IP	２		IP	５		IP
+吉田　　翔悟	6.40	0.16	2.4	５		IP	５		IP	１	3	IP	４		IP	５		IP	２		IP	２		IP	１	3	IP	２		IP	１		IP
+重木　　輝彦	7.10	0.13	1.8	４		G1	３		G1	２		G1	３		IP	３		IP	２		IP	２		IP	４		IP	１		IP	２		IP
+喜多　那由夏	3.10	0.16	3.4	５		IP	６		IP	３		IP	４		IP	４		G3	３		G3	４		IP	６		IP	５		IP	６		IP
+加藤　　翔馬	4.80	0.21	4.7	４		IP	４		G1	６		G1	４		IP	３		IP	３		IP	６	6	IP	１		IP	６		G1	２		IP
+大場　　　敏	3.90	0.22	5.2	３		IP	６		IP	４		IP	６		IP	４		IP	４		IP	１	5	IP	４		IP	６		IP	４		IP

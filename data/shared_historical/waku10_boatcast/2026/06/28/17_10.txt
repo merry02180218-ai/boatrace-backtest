@@ -1,0 +1,8 @@
+data=
+1	0
+庄司　　孝輔	7.90	0.15	2.5	１		IP	１		IP	１		IP	２		IP	３		IP	２		IP	１		IP	６		G3	３		IP	１		IP
+大橋　栄里佳	5.60	0.21	4.4	４		G3	２		G3	３		IP	１		G3	２		G3	４		G3	３		G3	５		IP	４		IP	４		G3
+中岡　　健人	4.90	0.14	2.3	４		IP	５		IP	１		IP	３		IP	２		IP	２		IP	４	5	IP	５		IP	４		IP	６		IP
+大町　　利克	2.10	0.17	2.6	６		IP	４		IP	６		IP	４		IP	６		IP	４		IP	５		IP	６		IP	６		IP	５		IP
+稲田　　浩二	6.70	0.16	3.1	２		IP	３		G2	２		G1	２		IP	２		IP	５		G1	１		IP	３		IP	３		IP	６		G3
+丸山　　祐也	2.80	0.26	5.7	６		IP	４		IP	５		IP	５		IP	６		IP	５		IP	５		IP	４	5	IP	３	4	IP	４		IP

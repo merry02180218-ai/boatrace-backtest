@@ -1,0 +1,8 @@
+data=
+1	0
+高田　ひかる	8.70	0.22	4.0	１		IP	１		IP	３		IP	１		IP	Ｆ		IP	１		IP	１		IP	１		G1	１		IP	１		IP
+石田　　貴洋	6.50	0.12	2.3	６	3	IP	１		IP	２	3	IP	５		IP	１		IP	４		IP	３		IP	２	3	IP	２		G3	３		G3
+田中　　京介	5.70	0.16	2.6	５		IP	４		IP	３		IP	６		IP	１		IP	３		IP	２		IP	３		IP	１	4	IP	４		IP
+半田　　尚也	3.30	0.16	3.8	６	5	IP	４	5	IP	５		IP	４	5	IP	１		IP	６		IP	６		IP	５		IP	４		IP	４		IP
+黒澤　めぐみ	4.22	0.20	3.8	転		IP	５		IP	６		IP	３		G3	２		G3	４		IP	５		IP	６		IP	３		G3	２		G3
+吉原　　快誓	1.40	0.20	4.0	６		IP	６		IP	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP	５		IP	６		IP

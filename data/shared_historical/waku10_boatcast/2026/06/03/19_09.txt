@@ -1,0 +1,8 @@
+data=
+1	0
+上原　　　崚	8.20	0.17	2.5	４		G2	１		G2	１		IP	２		IP	１		IP	１		IP	３		IP	３		IP	１		IP	３		IP
+中尾　　彩香	5.50	0.16	2.3	４		IP	５		IP	１		IP	３		IP	６		IP	２		IP	５		G3	２		G3	３		IP	２		IP
+福田　　　理	2.10	0.18	5.1	４		IP	５		IP	６		IP	４		IP	６		IP	６		IP	４		IP	６		IP	６		IP	５		IP
+木村　紗友希	3.40	0.19	3.2	２		IP	５		IP	３		IP	６		IP	６		G3	５		G3	５		IP	４		G3	３		IP	５		IP
+武重　　雄介	2.70	0.21	4.4	４		IP	５		IP	６	6	IP	１		IP	Ｆ		IP	６		IP	４		IP	５		IP	５		IP	６		IP
+大町　　利克	2.10	0.21	5.1	６		IP	４		IP	６		IP	６		IP	５		IP	５		IP	５		IP	５		IP	５	5	IP	４		IP

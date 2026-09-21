@@ -1,0 +1,8 @@
+data=
+1	0
+丹下　　　将	8.20	0.16	3.6	４		IP	１		IP	２		IP	３		IP	１		IP	２		IP	２		IP	２	2	IP	１		IP	１		IP
+木村　　光宏	3.10	0.18	4.3	５		IP	３		G3	４		G3	６	3	IP	１		IP	５		IP	５		IP	５		IP	６		IP	６		IP
+四宮　　与寛	5.00	0.14	3.0	２		IP	３		IP	５		IP	５		IP	３		IP	５		IP	５		IP	１		IP	４		IP	２		IP
+鈴木　　賢一	4.40	0.22	3.9	６		G3	２		G3	１		IP	５		IP	５	5	IP	４		IP	６		IP	４		IP	３		IP	３		IP
+長尾　　萌加	3.10	0.19	3.2	４		IP	４		IP	４		IP	４		IP	５		IP	５		IP	エ		IP	３		IP	４		IP	６		IP
+松井　　貫太	2.70	0.20	5.0	６		IP	５		IP	６		IP	６		G1	４		IP	３		IP	５		IP	５		IP	６	5	IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+土屋　　太朗	7.20	0.17	3.2	１		IP	１		IP	１		G3	４		IP	２		IP	５		IP	５		IP	２		IP	１		IP	２		IP
+毒島　　　誠	7.30	0.21	3.4	１		IP	１		IP	５		IP	２		SG	４	3	IP	４		IP	１	1	IP	２		G1	６		G1	１		IP
+飯島　　昌弘	6.70	0.14	2.9	２		IP	５		IP	３		IP	２		IP	１		IP	３		IP	２		IP	２		G1	６		G1	２		IP
+金子　　猛志	4.40	0.19	4.5	２		IP	６		IP	３		IP	４		IP	５		IP	４		IP	２		IP	３		IP	４		IP	６	6	IP
+植木　　美帆	2.70	0.18	3.7	６		G3	６		G3	６	6	G3	６		IP	５		IP	４		IP	１		IP	５		IP	６		IP	４		IP
+金児　　隆太	4.20	0.19	4.6	４		G3	５		IP	５		IP	４		IP	２		IP	４		IP	４		IP	３		IP	５		IP	３		IP

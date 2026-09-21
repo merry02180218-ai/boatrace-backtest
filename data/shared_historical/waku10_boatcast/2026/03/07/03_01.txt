@@ -1,0 +1,8 @@
+data=
+1	0
+若林　　　麗	8.20	0.19	2.2	１		IP	１		IP	１		IP	２		IP	２		IP	４		IP	１		IP	２		IP	３		IP	２		IP
+森下　　　勇	3.30	0.18	3.3	３		IP	６		IP	５		IP	６		IP	５		IP	４		IP	３		IP	６		IP	３		IP	４		IP
+村本　　大成	4.50	0.13	3.2	３		IP	５		IP	４		IP	４		IP	６		IP	４		IP	３		IP	３		IP	２		IP	４		IP
+中島　　　航	4.50	0.17	3.4	６		IP	６	6	IP	５		IP	３		IP	６		IP	２		IP	４	3	IP	３		IP	１		IP	３		IP
+坪内　　　実	2.50	0.15	3.2	４		IP	４		IP	５		IP	６		IP	６		IP	６		IP	４		IP	５		IP	５		IP	４		IP
+佐藤　謙史朗	2.20	0.20	4.4	６		IP	６		IP	４		IP	５		IP	５		IP	５		IP	６		IP	６	5	IP	４	5	IP	４	5	IP

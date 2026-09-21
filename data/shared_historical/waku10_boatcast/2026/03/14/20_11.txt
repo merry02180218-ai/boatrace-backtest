@@ -1,0 +1,8 @@
+data=
+1	0
+山一　　鉄也	8.30	0.13	2.0	１		G3	１		G3	１		IP	６		IP	２		IP	１		IP	２		IP	１		IP	１		IP	３		IP
+前田　　篤哉	4.20	0.13	3.6	２		G3	４		IP	６		G1	６		G1	２		IP	６		G2	５		G2	６		IP	４		IP	２		IP
+高田　　　明	6.50	0.20	3.8	４		G3	４		IP	５		IP	５		G1	２		IP	１		IP	２		IP	３		G3	１		IP	１		IP
+後藤　　正宗	7.50	0.13	1.8	５	5	G3	２		G3	３		IP	１	5	IP	３		IP	１		IP	１	3	IP	４		IP	２		IP	１		IP
+原田　　秀弥	5.00	0.17	3.6	５		G3	１		IP	３		IP	４		IP	５		IP	１		IP	６	6	IP	４		IP	６		IP	１		G3
+藤田　　靖弘	3.50	0.18	4.8	６		G3	４	5	IP	５		IP	６		IP	２		IP	５		IP	３		IP	６		IP	４		IP	３	5	IP

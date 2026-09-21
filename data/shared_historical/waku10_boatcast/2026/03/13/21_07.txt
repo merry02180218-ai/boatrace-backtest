@@ -1,0 +1,8 @@
+data=
+1	0
+林　　　恵祐	6.90	0.15	3.0	１		IP	１		IP	６		IP	５		IP	３	2	IP	２		IP	１		IP	１		IP	４		IP	２		IP
+武田　　信一	4.60	0.12	2.6	６		IP	３		IP	６		IP	２		IP	２		IP	４		IP	２		IP	４		IP	５		IP	４		IP
+伊藤　　喜智	7.20	0.16	2.6	５		IP	１	2	IP	１		IP	１		IP	２		IP	１		IP	５		IP	３		IP	４	4	IP	１		IP
+香川　　颯太	2.30	0.16	2.9	２		IP	６		IP	６	6	IP	６		IP	５		IP	６		IP	５		IP	５		IP	４		IP	６		IP
+雑賀　　勇貴	3.50	0.23	3.7	５		IP	２	4	IP	４		IP	５		IP	１	4	IP	５		IP	６		IP	６		IP	６		IP	４		IP
+小柳　　勝希	2.90	0.21	4.3	４		IP	３		IP	４		IP	４		IP	５		IP	６		IP	６		IP	５		IP	４		IP	６		IP

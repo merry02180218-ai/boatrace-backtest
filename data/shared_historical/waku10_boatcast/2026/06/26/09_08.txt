@@ -1,0 +1,8 @@
+data=
+1	0
+坂本　　一真	3.70	0.16	3.2	５		IP	４		IP	６		IP	５		IP	２		IP	４		IP	５		IP	５		IP	１		IP	５		IP
+齋藤　　　勇	3.80	0.17	3.8	４		IP	３		IP	４		IP	２		IP	６		IP	５		IP	５		IP	４		IP	６		IP	３		IP
+佐竹　　友樹	3.40	0.18	3.7	５		IP	１		IP	２		IP	６	2	IP	５		IP	６		IP	６		IP	３		IP	６		IP	５		IP
+大場　　広孝	4.60	0.17	3.8	３	5	IP	２		IP	３		IP	４		IP	６		IP	４		IP	２		IP	４		IP	６	6	IP	４		IP
+成田　　華音	1.50	0.27	4.8	５	6	IP	６	6	IP	５	6	IP	６	6	IP	５	6	IP	６	6	IP												IP
+市橋　　卓士	4.90	0.18	2.9	４		IP	４		IP	１	4	IP	４		IP	３	3	IP	５		IP	４		IP	６		IP	５	5	IP	２	5	IP

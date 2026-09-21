@@ -1,0 +1,8 @@
+data=
+1	0
+孫崎　　百世	8.00	0.22	5.2	１		IP	２		IP	１		IP	１		IP	２		IP	４		IP	１		IP	４		IP	３		IP	１		IP
+池田　　紫乃	4.40	0.19	4.1	６		IP	５		IP	５		IP	６		G3	２		G3	５		IP	２		IP	１		IP	５		G3	２		IP
+井上　　未都	6.30	0.12	2.2	１		IP	１		IP	２		IP	４		IP	２		IP	５		IP	４		IP	２		IP	３		IP	５		G1
+来田　　衣織	3.90	0.15	2.8	２		IP	５		IP	６		IP	５		IP	５		IP	６		IP	２		IP	２		IP	３		IP	６		IP
+滝川　真由子	3.00	0.21	4.6	５		IP	２		IP	５		IP	５		IP	４		IP	６		IP	６		G3	５		G3	４		IP	４		IP
+植竹　　玲奈	2.50	0.26	4.6	３		IP	６		IP	６		IP	５		IP	６		IP	４	4	IP	４		IP	６		IP	６		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中里　　昌志	5.40	0.18	3.4	４		IP	３		IP	６		IP	３		IP	５		IP	３		IP	１		IP	２		IP	１		IP	６		IP
+田中　瀬里奈	1.75	0.28	4.0	６		IP	４	5	IP	６		IP	６	3	IP	６		IP	６	6	IP	６		IP	４		IP						IP
+伊藤　　雄二	2.40	0.16	2.6	６		IP	５		IP	５		IP	６		IP	６		IP	５	4	IP	６		IP	５		IP	４		IP	２		IP
+浅見　　昌克	5.00	0.14	3.2	２		IP	６	6	G1	５	6	G1	３		IP	１		IP	２		IP	４		IP	６		IP	３		IP	５		IP
+成田　　華音	1.00	0.20	5.0	６	6	IP																											IP
+楠　　将太郎	3.50	0.24	4.6	５		IP	３		IP	５		IP	６		IP	３		IP	３	5	IP	６		IP	２		IP	６		IP	５		IP

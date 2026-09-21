@@ -1,0 +1,8 @@
+data=
+1	0
+西川　　拓利	9.70	0.12	1.8	１		IP	１		IP	２		IP	１		IP	１		IP	１		G3	１		IP	１		IP	１		IP	２		IP
+江藤　　敦宏	6.00	0.18	4.4	４		IP	３		IP	４		IP	４		IP	１		IP	１		IP	２		IP	５		IP	３		IP	欠		IP
+村松　　遥輝	4.30	0.16	2.4	６		IP	５		IP	６		IP	３		IP	２		IP	２	1	IP	２	4	IP	４		IP	４		IP	６		IP
+青木　　　蓮	6.50	0.12	3.1	３		IP	３		IP	４		IP	２		IP	２		IP	３		IP	３		IP	１		IP	１		IP	６		IP
+小林　　礼央	3.00	0.13	2.9	３		IP	５		IP	６		IP	４		IP	６		IP	４		IP	５		IP	５	4	IP	４	6	IP	４		IP
+花田　　凱成	2.50	0.18	2.9	５		IP	５		IP	５		IP	３		IP	５		IP	５		IP	６	5	IP	４		IP	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+有賀　　達也	9.50	0.13	2.8	１		IP	２		IP	３		IP	２		IP	１		IP	１		G1	１		G1	１		IP	１		IP	１		G1
+照屋　　厚仁	7.20	0.17	3.3	３		IP	１		IP	５		IP	２		IP	２		IP	２		IP	１	1	IP	３	3	IP	３		IP	２		IP
+松竹　　大輔	5.50	0.15	2.4	２		IP	５		IP	６		IP	３		IP	４		IP	１		IP	３		IP	５		IP	１		IP	４		G3
+小林　　遼太	4.20	0.19	4.0	５	5	IP	３		IP	６		IP	２		IP	２		IP	２	5	IP	６		G3	５		G3	４		G3	５		IP
+鈴木　　雅希	5.20	0.20	3.4	５		IP	５		IP	２		IP	４		IP	５	6	IP	２		IP	３		IP	２		IP	３		IP	３		IP
+谷口　　知優	3.20	0.15	3.6	５		IP	６		IP	２		IP	２	5	IP	６		IP	６		IP	６		IP	５		IP	３		IP	５		IP

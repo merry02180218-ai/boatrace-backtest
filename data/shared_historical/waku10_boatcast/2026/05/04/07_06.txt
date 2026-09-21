@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　裕平	10.00	0.11	2.4	１		IP	１		IP	４		G1	１		G1	１		G1	１		G1	１		G1	１		G1	１		IP	１		IP
+河内　　一馬	3.30	0.25	4.2	４		IP	５		IP	２		IP	３		IP	５		IP	６		IP	５		IP	５		IP	５	3	IP	４		IP
+谷本　　幸司	8.00	0.12	2.4	４		IP	２		IP	１		IP	２		IP	２		IP	１	2	IP	３		IP	１		IP	２		IP	２		IP
+野口　　勝弘	6.60	0.15	2.8	６		IP	１		IP	２		IP	１		IP	１		IP	３	5	IP	４		G3	３		IP	３		IP	４		IP
+鈴木　　茂高	4.80	0.19	3.6	５		IP	４	4	IP	４		IP	３		IP	１		IP	４		IP	４		IP	２		G3	５		IP	４		IP
+佐藤　　博亮	4.70	0.12	2.9	５		IP	５		IP	４		IP	３		IP	５		IP	２		IP	５		IP	１		IP	５		IP	２		G1

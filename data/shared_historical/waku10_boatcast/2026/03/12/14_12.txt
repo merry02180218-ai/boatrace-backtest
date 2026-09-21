@@ -1,0 +1,8 @@
+data=
+1	0
+菅　　　章哉	8.30	0.13	2.4	４		G1	１		G1	１		G1	１		IP	２		IP	１		G1	１		IP	５	4	IP	１		SG	６		SG
+杉山　　正樹	5.80	0.17	3.9	６	3	IP	１		IP	２		IP	４		G1	４		G1	５		G1	２		IP	２		IP	２		IP	６		IP
+佐々木　康幸	7.40	0.14	2.3	１		IP	３		IP	３		IP	４		G1	１		IP	２		IP	３		IP	３		IP	２		IP	２		IP
+高田　ひかる	7.20	0.15	2.5	４		IP	１		IP	１		IP	６		G1	５		IP	２	5	IP	１		IP	１		IP	２		IP	３		IP
+河村　　　了	6.10	0.20	4.1	５		IP	３		IP	２		IP	４		IP	１		IP	２		IP	３		IP	２		G3	２		IP	沈		IP
+伊藤　　将吉	4.20	0.17	3.4	６		IP	４		IP	２		IP	４		G1	６		G1	３		IP	３		IP	５		IP	３		IP	５		IP

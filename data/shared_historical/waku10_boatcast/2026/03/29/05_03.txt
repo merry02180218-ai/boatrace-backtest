@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　喜智	9.00	0.15	4.1	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP
+木山　　誠一	5.60	0.13	2.5	３		IP	２		IP	３		IP	４		IP	５		IP	３	3	IP	２	3	IP	４		IP	４		IP	２		IP
+佐々木　翔斗	5.50	0.14	3.3	５		G2	５		IP	２		IP	妨		IP	３		IP	２		IP	３	2	IP	１		IP	３		IP	３		IP
+柳沢　　　一	5.80	0.14	3.3	３	3	IP	３		G1	２		G1	２		IP	６		G1	６		IP	３		IP	３		IP	３		IP	３		G1
+桑原　　将光	5.44	0.16	3.5	３		IP	２		IP	６		IP	５		IP	２		IP	４		IP	３		IP	落		IP	２		IP	３		IP
+照屋　　厚仁	5.20	0.20	3.8	３		IP	６		IP	５		IP	１	5	IP	３		IP	２		IP	４	5	IP	３	5	IP	６		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+香川　　陽太	5.90	0.18	3.7	６		IP	１		IP	２		IP	２		IP	１		IP	５	3	IP	６		IP	２		IP	６		IP	１		IP
+今泉　　　徹	5.10	0.16	3.3	４		IP	４		IP	２		IP	６		IP	３		IP	４		IP	４		IP	２		IP	２		IP	４		IP
+佐藤　　永梧	4.90	0.14	2.8	２		IP	４		IP	１		IP	２		IP	５		IP	６	4	IP	６	4	IP	３		IP	２		IP	６		IP
+守屋　　美穂	6.10	0.18	3.9	６		IP	３		IP	２		IP	２		IP	４		G3	１		G1	１		IP	２		IP	５		G1	６		G1
+栗原　　謙治	1.50	0.22	5.2	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５	6	IP	６		IP	５		IP
+田中　　　結	1.25	0.28	5.2	６		IP	６		IP	５		IP	６		IP																		IP

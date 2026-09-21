@@ -1,0 +1,8 @@
+data=
+1	0
+福田　　宗平	8.20	0.16	3.2	５		IP	１		IP	２		IP	１		IP	１		IP	５		IP	１		G3	１		G3	１		IP	１		IP
+品田　　直樹	7.20	0.16	2.9	５		IP	１		IP	１		IP	１		IP	１		IP	５		IP	３		IP	１		IP	１		IP	６		IP
+杉村　　賢也	7.00	0.10	2.0	４	2	IP	４		IP	３	4	IP	３		IP	２		IP	１		IP	１		IP	２		G3	４		IP	１		IP
+眞鳥　　康太	3.40	0.21	3.5	６	6	IP	６		IP	５	6	IP	６	6	IP	６	6	IP	３	6	IP	３	6	IP	２	6	IP	４	5	IP	４	6	IP
+小川　　晃司	3.90	0.23	3.6	２	6	IP	５	6	IP	４	6	IP	５	6	IP	３	6	IP	６	6	IP	３	6	IP	落	6	IP	３	6	IP	４	6	IP
+楠原　　正剛	4.70	0.17	4.4	４	5	IP	３		IP	５		IP	４		IP	５		IP	４		IP	３	5	IP	４		IP	１		IP	４	5	G1

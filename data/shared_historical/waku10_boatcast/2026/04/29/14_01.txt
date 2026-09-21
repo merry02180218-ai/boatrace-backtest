@@ -1,0 +1,8 @@
+data=
+1	0
+西岡　　育未	5.70	0.17	3.1	３		G3	２		G3	２		G3	５		IP	１		IP	３		G3	１		G3	４		IP	６		IP	５		IP
+伊藤　　　栞	1.10	0.20	4.0	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP
+高橋　　淳美	3.40	0.15	3.1	３		IP	６		IP	６		IP	４		IP	３		IP	６		IP	２		IP	５		IP	６		IP	４		G3
+赤松　　咲香	2.70	0.22	4.1	６		IP	６	6	IP	２		IP	４		IP	６	6	IP	３		IP	６	5	IP	６	6	IP	５		G3	５		G3
+大橋　栄里佳	4.90	0.23	4.4	６		IP	６		IP	２		G3	３		IP	４		IP	１		IP	６		IP	５		IP	２	4	IP	３		IP
+中北　　　涼	2.90	0.19	4.1	５		IP	５		IP	４		G3	４		IP	５		IP	４	5	IP	４		IP	４		G3	６		IP	５		IP

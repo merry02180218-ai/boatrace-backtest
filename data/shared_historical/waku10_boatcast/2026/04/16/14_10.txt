@@ -1,0 +1,8 @@
+data=
+1	0
+大塚　　雅治	5.80	0.17	3.1	１		IP	６		IP	１		IP	１		IP	１		IP	３		IP	５		IP	６		IP	４		IP	４		IP
+松本　　一毅	4.78	0.16	3.3	２		IP	３		IP	２		IP	１		IP	４		IP	６		IP	６		IP	欠		G3	４		IP	６		IP
+河野　　　大	5.90	0.12	1.9	４		IP	３		IP	６		IP	４		G2	１	4	G2	２		IP	３		IP	１		IP	５		G1	４		G2
+渡邉　　　翼	6.20	0.17	3.5	２		IP	３		IP	２		IP	５		IP	５		IP	２		IP	３		IP	３		G3	２		IP	２		IP
+村越　　　篤	4.60	0.17	3.3	６		IP	２		IP	５		IP	３		IP	２		IP	４		G3	５		IP	５		G1	４		IP	２		IP
+田中　　孝明	2.80	0.28	5.8	６		IP	４		IP	３		IP	４		IP	４		IP	６		IP	６		IP	４		IP	５		IP	６		IP

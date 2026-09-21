@@ -1,0 +1,8 @@
+data=
+1	0
+塩田　　北斗	7.60	0.18	2.9	１		IP	Ｆ		G1	２		IP	１		IP	１		IP	１		IP	１		G1	１		G1	５		G1	５		G1
+堤　　　　昇	5.80	0.15	2.8	４		IP	３		IP	３		IP	３		IP	２		IP	５		G3	３		IP	４		IP	３		IP	１		IP
+大谷　　直弘	5.60	0.20	3.2	２		IP	１		IP	５		IP	４		IP	３		IP	５		IP	１		IP	１		IP	妨		IP	４		IP
+山本　　修一	5.50	0.20	4.5	３		IP	４	5	G3	４		G3	３		IP	４		IP	２		IP	４	5	IP	３		IP	３		IP	３		IP
+若林　　義人	4.60	0.16	3.4	４		IP	５		IP	１		IP	３		IP	３		IP	６		G1	４		G1	６		IP	５		IP	３	4	IP
+中　　　亮太	4.70	0.16	3.7	４		G2	２		G3	６		G3	４		IP	２		IP	５		IP	３		IP	４		G3	６		G3	２	5	IP

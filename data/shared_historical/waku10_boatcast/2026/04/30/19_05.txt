@@ -1,0 +1,8 @@
+data=
+1	0
+島川　　海輝	7.70	0.14	2.5	１		IP	１		IP	２		IP	６		IP	１		IP	１		IP	１		G2	６		IP	１		IP	３		IP
+松田　　憲幸	4.90	0.22	4.6	３		IP	３		IP	４		IP	５		IP	５		G3	６		G3	２		IP	２		IP	５		IP	１		IP
+佐藤　　駿介	3.60	0.16	3.0	３		IP	４		IP	６	6	IP	５		IP	５		IP	６		IP	２		IP	３		IP	５		IP	４		IP
+安河内　　健	5.30	0.14	3.5	２		IP	３		IP	４		IP	６		G2	３		G2	３		IP	２		G1	５		G1	４	5	IP	４		IP
+高岡　　竜也	5.50	0.21	2.8	４	6	IP	４		IP	３	4	IP	３		IP	２		IP	３		IP	１		IP	５		IP	６		IP	３		IP
+重冨　　勇哉	3.70	0.17	3.8	２	4	IP	５		IP	２	3	IP	６		IP	５		IP	５	3	IP	６		IP	３	4	IP	３		IP	６		IP

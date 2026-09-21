@@ -1,0 +1,8 @@
+data=
+1	0
+麻生　　慎介	9.40	0.17	3.3	２		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+鈴木　　賢一	6.10	0.13	4.1	６		IP	２		IP	２		IP	２		IP	２		IP	３		IP	転		IP	２		IP	２		G3	３		G3
+山下　　和彦	7.00	0.20	3.3	３		IP	４		IP	３		IP	３		IP	１		G3	２		G3	２		IP	５		IP	１		IP	１	1	IP
+谷川　　祐一	5.00	0.14	2.4	１		IP	６		IP	４		G3	５		G3	３		G3	１		IP	１		IP	５		IP	４		IP	６		IP
+近藤　　来希	1.67	0.20	3.9	４	6	IP	６		IP	６		IP	６		IP	４	6	IP	落		IP	落		IP	６		IP	６		IP	５	6	IP
+今村　天次朗	1.80	0.18	3.4	５		IP	６		IP	６		IP	６		IP	４		IP	５		IP	５		IP	４		IP	６		IP	欠		IP

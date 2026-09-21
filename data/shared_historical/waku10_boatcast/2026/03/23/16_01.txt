@@ -1,0 +1,8 @@
+data=
+1	0
+泉　　　啓文	7.30	0.17	3.2	３		IP	１		IP	５		IP	１		IP	６		IP	２		IP	１		IP	２		IP	２		IP	１		IP
+鹿島　　敏弘	5.10	0.16	3.0	３		IP	４		IP	２		IP	４		IP	６		IP	２		IP	３		IP	３		IP	５		IP	３		IP
+大塚　　康雅	4.90	0.19	3.3	６		IP	３		IP	２		IP	１		IP	６		IP	４		IP	２		IP	６		IP	５		IP	２		IP
+山下　　拓巳	4.20	0.17	4.1	５		IP	１		IP	３		IP	５		IP	５		IP	６		IP	３		IP	６		IP	２	5	IP	４		IP
+川上　　清人	4.10	0.17	2.9	４		IP	５		IP	６		IP	３		IP	６		IP	３		IP	２		IP	２		IP	６		IP	４		IP
+山本　　凱立	1.00	0.20	4.2	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

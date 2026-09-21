@@ -1,0 +1,8 @@
+data=
+1	0
+新井　　英孝	7.50	0.09	1.7	２		IP	１		IP	１		IP	４		IP	１		IP	６		IP	４		IP	１		IP	１		IP	２		IP
+松浦　　　勝	4.20	0.20	3.8	６		IP	６		IP	２		IP	５		IP	５		IP	５		IP	３		IP	２		IP	４		IP	２		IP
+松井　　賢治	5.80	0.14	2.7	２	4	IP	２		IP	２		IP	５		IP	１		IP	５		IP	３		IP	５		IP	２	4	IP	４		IP
+古川　　　健	4.50	0.17	3.5	３		IP	５	5	IP	６		IP	４	5	IP	６		IP	１		IP	３		IP	４		IP	６	6	IP	１		IP
+林　　　風音	1.10	0.24	4.9	５	6	IP	欠		IP	６	6	IP	６	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP
+山本　　浩次	2.70	0.16	2.5	６		G3	５		G3	３	5	IP	６		IP	４		IP	６	4	IP	５		IP	５		IP	４		IP	４	4	IP

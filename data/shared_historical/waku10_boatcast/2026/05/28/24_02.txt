@@ -1,0 +1,8 @@
+data=
+1	0
+山川　　波乙	8.70	0.15	3.1	１		IP	１		IP	１		IP	１		IP	６		IP	１		IP	１		IP	１		IP	２		IP	２		G3
+伊藤　　　栞	1.50	0.15	3.3	５		IP	６		IP	４		G3	５		G3	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP
+山口　真喜子	5.67	0.18	3.1	３		IP	２		IP	３		G2	３		IP	転		IP	２		IP	５		IP	４		IP	Ｆ		IP	１		IP
+嶋田　　有里	4.10	0.19	3.6	２		IP	４		IP	６		IP	３		IP	４		IP	５		IP	５		IP	３		IP	４		IP	４		IP
+森田　　梨湖	2.30	0.23	4.0	４		IP	４		IP	３		IP	６		IP	６		IP	５		IP	６		IP	５		G3	６		G3	６		G3
+安井　　瑞紀	3.00	0.17	3.9	５		IP	６		IP	４		G3	５		IP	５		IP	３		G3	５		IP	３		IP	６		G1	５		G1

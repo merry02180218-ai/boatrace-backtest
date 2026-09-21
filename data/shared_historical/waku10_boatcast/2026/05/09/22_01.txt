@@ -1,0 +1,8 @@
+data=
+1	0
+清水　　敦揮	7.70	0.13	2.4	６		G1	１		IP	１		IP	３		IP	１		IP	５	2	IP	１		IP	３		IP	１		IP	１		G1
+草場　　康幸	5.80	0.15	2.9	１		IP	３		IP	３		IP	５		IP	３		IP	１		IP	５		IP	３		IP	３		IP	４		IP
+坂本　　一真	4.20	0.20	2.4	３		IP	４		IP	４		IP	６		IP	６		IP	２		IP	２		IP	３		IP	５		IP	５		IP
+大西　　隆洋	2.90	0.17	3.6	４		IP	５		IP	４		IP	２	5	IP	５		IP	６	5	IP	６		IP	５		IP	６		IP	４		IP
+林　　　恵祐	3.30	0.15	4.2	６		IP	３		IP	５		IP	３		IP	６		IP	５		IP	２		IP	５		IP	４	4	IP	６		IP
+田中　　大輝	1.00	0.29	6.0	６		IP																											IP

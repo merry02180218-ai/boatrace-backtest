@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　真二	7.10	0.17	2.9	１		G3	１		IP	４		IP	２		IP	１		IP	４		IP	２		IP	２		IP	６		G3	２		IP
+木村　　光宏	3.30	0.18	4.4	４		G3	６	3	IP	１		IP	５		IP	５		IP	５		IP	６		IP	６		IP	５		IP	３		IP
+渡辺　　　崇	5.78	0.18	3.5	５		G3	２		IP	５		IP	５		IP	２		IP	３		IP	１		IP	１		IP	エ	4	IP	４		IP
+重富　　伸也	3.80	0.16	2.9	４	5	G3	５		IP	６	6	IP	６	5	IP	１	6	IP	５	6	IP	６		IP	６		IP	３	6	IP	１	6	IP
+岩橋　　裕馬	4.20	0.14	2.9	５		G3	４		IP	４		IP	２		IP	４	4	IP	３		IP	４		IP	５		IP	５		IP	３		IP
+山崎　　義明	3.00	0.19	4.3	６		G3	６		IP	６		IP	４		IP	５	5	IP	５		IP	３		IP	１		IP	６		IP	６		IP

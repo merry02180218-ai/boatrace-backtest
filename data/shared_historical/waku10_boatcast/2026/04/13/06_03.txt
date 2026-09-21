@@ -1,0 +1,8 @@
+data=
+1	0
+森　　　智哉	6.70	0.18	3.1	１		IP	４		IP	５		IP	１		IP	２		IP	６	2	IP	１		IP	１		IP	１		IP	５		IP
+藤森　　陸斗	5.60	0.15	3.7	２		IP	３		IP	１		IP	５		IP	６		IP	３		IP	４		IP	２		G1	３	4	IP	４		IP
+小林　　孝彰	6.10	0.16	3.0	１		IP	３		IP	２		IP	５		IP	６		IP	２		IP	３		IP	３	2	IP	３		IP	２		IP
+川辺　　郭人	1.40	0.22	3.7	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP
+田中　　駿兵	7.30	0.14	2.5	３		IP	１		IP	３		IP	２	6	IP	４		IP	１		IP	１		IP	２		IP	２		IP	５		G1
+鈴木　　唯央	4.20	0.17	3.9	６		IP	４	5	IP	６		IP	２		IP	３		IP	６		IP	３		IP	６	5	IP	３		IP	２		IP

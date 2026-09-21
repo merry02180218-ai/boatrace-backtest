@@ -1,0 +1,8 @@
+data=
+1	0
+蒲原　　健太	8.40	0.16	3.4	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	４		IP	１		IP
+黒野　　元基	8.10	0.15	3.1	３		IP	１		IP	１		IP	３		IP	１		IP	２		G1	６		G1	１		IP	２		IP	１		IP
+村松　　将平	6.60	0.13	2.8	３		IP	３	4	IP	３		IP	４		IP	２		IP	２		IP	３		IP	１		IP	４		IP	２		IP
+山川　　雄大	4.20	0.24	5.0	３		IP	６		IP	５		IP	６		IP	３		IP	５		IP	４	5	IP	３		IP	２		IP	３		IP
+山口　　修路	2.90	0.26	5.2	４		IP	４		G3	６		IP	６	6	IP	４		IP	６		IP	５		IP	５		IP	３		IP	４		IP
+出口　　飛龍	1.10	0.21	4.8	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

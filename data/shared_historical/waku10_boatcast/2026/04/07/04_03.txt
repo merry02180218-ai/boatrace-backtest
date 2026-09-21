@@ -1,0 +1,8 @@
+data=
+1	0
+田代　　達也	4.70	0.16	3.3	３	2	IP	５		IP	６		IP	５		IP	２		IP	６		IP	２		IP	２		IP	１	2	IP	６		IP
+福田　　翔吾	5.50	0.15	3.8	２		IP	５		IP	沈		IP	４		IP	２		IP	２		IP	６		IP	２		IP	２		IP	２		IP
+倉田　　郁美	5.50	0.20	2.9	２	4	IP	４		IP	３		IP	３		IP	６		IP	４		IP	１		IP	２		IP	４		IP	４		IP
+登玉　　隼百	5.40	0.12	2.4	２		IP	６	5	IP	２		IP	６		IP	４		IP	１		IP	１		IP	５		IP	３		IP	４		IP
+藤山　　雅弘	3.40	0.24	4.0	１		IP	４		IP	２		IP	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP	５	4	IP
+渡邉　　雄朗	6.10	0.20	3.6	６		IP	４	5	G1	４		G1	６		G1	１		IP	２		IP	１	5	IP	２		IP	５		IP	１		IP

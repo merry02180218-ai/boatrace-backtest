@@ -1,0 +1,8 @@
+data=
+1	0
+岸本　　雄貴	8.80	0.12	2.0	１		IP	１		IP	１		IP	Ｆ		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+木山　　和幸	4.60	0.19	4.6	５		IP	５		IP	１		IP	２		IP	２		G3	５		G3	４		IP	３		IP	４		IP	Ｆ		IP
+廣中　　良一	3.30	0.17	3.3	６		IP	４		IP	６		IP	３		IP	５		G3	５		G3	３		G3	５		IP	６		IP	２		IP
+金田　　　諭	5.60	0.17	3.1	４		IP	３		IP	３		IP	２		IP	１		IP	４	5	IP	３		IP	３		IP	５		IP	４		IP
+池田　奈津美	4.80	0.14	3.2	６	3	IP	４	2	IP	６	2	G3	２	2	IP	３	2	IP	３	2	IP	転	3	IP	２	3	IP	２	3	IP	３	2	IP
+河野　　真也	3.20	0.20	5.2	４	5	IP	３		IP	５		IP	６		IP	５		IP	６		IP	４		IP	１		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+江夏　　　満	9.20	0.14	2.5	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	３		G1	１		IP
+尾道　　佳諭	5.50	0.16	3.3	２	4	IP	４		IP	５		IP	６		IP	４		IP	４		IP	１		IP	２		IP	１		IP	４		IP
+中里　　英夫	4.70	0.17	3.8	３	4	IP	５		IP	４		IP	５		IP	４		IP	３		IP	３	4	IP	６	4	IP	３		IP	１		IP
+豊田　　訓靖	4.60	0.20	3.4	５	5	IP	４		IP	２		IP	６		IP	６		IP	２		IP	５		IP	２		IP	４		IP	２		IP
+林　　　祐介	3.40	0.18	3.8	３		IP	３	4	IP	５	3	IP	２		IP	６		IP	５		G3	４		G3	６		IP	５		IP	５		IP
+石井　　伸長	3.33	0.18	4.2	３		IP	５		IP	３		IP	転		IP	１		IP	５		IP	６		IP	６		IP	６		IP	６		IP

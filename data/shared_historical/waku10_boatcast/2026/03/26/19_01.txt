@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　孝弘	6.90	0.16	3.7	６		G3	Ｆ		IP	１		IP	２		IP	１		IP	１		IP	２		IP	３		IP	３		IP	１		IP
+草場　　康幸	5.60	0.14	2.6	５		IP	３		IP	１		IP	５		IP	３		IP	３		IP	４		IP	４		IP	２		IP	２		IP
+村本　　大成	4.30	0.16	3.0	５		IP	３		IP	５		IP	４		IP	４		IP	６		IP	４		IP	３		IP	３		IP	２		IP
+近藤　　稔也	3.50	0.23	3.1	４		IP	６		IP	４		IP	５		IP	６		IP	３		IP	４		IP	３		IP	６		IP	３		IP
+宇恵　　有香	3.90	0.16	3.4	６		IP	６		IP	５		IP	５		IP	１		IP	３		IP	３		IP	５		IP	６		IP	２		IP
+中村　　辰也	3.90	0.19	4.4	６		IP	６	5	IP	２	5	IP	４	5	IP	３		IP	３		IP	４		IP	５		IP	４		IP	６		IP

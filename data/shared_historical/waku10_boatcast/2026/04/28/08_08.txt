@@ -1,0 +1,8 @@
+data=
+1	0
+片岡　　大地	8.00	0.14	2.7	１		IP	３		IP	２		IP	４		IP	２		IP	１		IP	１		IP	２		IP	１		IP	３		IP
+金山　　立樹	5.80	0.24	5.0	６		IP	２		IP	３		IP	３		IP	１		IP	６		IP	５		IP	２		IP	１		IP	３		IP
+上田　　龍星	4.70	0.15	3.4	４	2	IP	６		G1	６		G1	５		G1	３		G1	３		SG	２		IP	５		G1	４		G1	４		G2
+野中　　一平	5.20	0.13	2.0	４		IP	２	3	IP	６		G1	２		G1	５		G2	５	5	G2	４		G1	１		IP	６		G1	３		IP
+熊本　　英一	2.40	0.25	5.4	３		IP	６		IP	５		IP	５	6	IP	６		IP	６		IP	６	6	IP	６	6	IP	２		IP	６		IP
+牟田　　奨太	2.20	0.21	4.1	６		IP	５		IP	Ｆ	4	IP	２	5	IP	６		IP	６		IP	６		IP	５		IP	４		IP	５		IP

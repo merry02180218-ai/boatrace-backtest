@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　日向	9.60	0.14	2.8	１		SG	２		G1	２		G1	１		G1	４		G1	１		IP	１		G1	２		IP	１		SG	２		G1
+平本　　真之	7.20	0.15	3.7	１	1	SG	２		G1	２		G1	５		G1	１		IP	５		IP	１	1	G1	４		IP	３		IP	５		SG
+砂長　　知輝	7.70	0.12	3.3	５		SG	２		IP	３		IP	２		IP	１		IP	１		IP	４		IP	４		IP	１		G1	１		IP
+山田　　祐也	6.90	0.17	3.3	６		SG	２		G2	１		G2	４		G1	２		G1	２		IP	２		IP	３		G1	４		IP	４	6	G1
+石渡　　鉄兵	5.30	0.12	3.6	６		SG	２		G1	３		G1	５		G1	６		G1	６		G1	５		IP	２		G2	１		IP	４		SG
+濱崎　　直矢	4.30	0.16	3.9	５		SG	１	4	IP	５		IP	５		IP	３		IP	５		G1	４		IP	４		IP	３		IP	５		IP

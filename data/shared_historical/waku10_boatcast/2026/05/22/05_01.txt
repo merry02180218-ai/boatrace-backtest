@@ -1,0 +1,8 @@
+data=
+1	0
+松山　　裕基	5.80	0.16	3.2	２		IP	４		IP	４		IP	３		IP	５		IP	１		IP	１		IP	４		IP	４		IP	３		IP
+川原　　正明	7.00	0.11	2.1	２		G3	５		G3	２		IP	１		IP	２		IP	３		IP	１	3	IP	２		IP	５		IP	２		IP
+鈴木　　裕隆	5.60	0.19	3.5	６		IP	１	1	IP	２		IP	６		IP	４		IP	４		IP	１		IP	２		IP	３		IP	４		IP
+松下　　直也	5.70	0.15	2.8	２		IP	２		IP	３		IP	４		IP	２		IP	３		IP	４		IP	６		IP	５		IP	１		IP
+杉山　　喜一	3.78	0.13	2.7	４		IP	５		IP	１		IP	４		IP	５		G3	落		IP	４		G3	６		G3	６		G3	３		IP
+堀井　　涼平	1.00	0.22	4.3	６		IP	６		IP	６		IP																					IP

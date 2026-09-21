@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　辰彦	8.30	0.14	3.0	６		IP	２		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+黒田　　誠司	3.10	0.24	4.2	５		IP	４		IP	５	3	IP	６		IP	５		IP	６		IP	２		IP	６		IP	４		IP	３		IP
+澁川　　　夏	5.30	0.13	3.3	６		IP	４		IP	３		IP	３		IP	３		IP	３		IP	３		IP	転		IP	１		IP	２		IP
+上田　　隆章	3.70	0.25	4.9	２		IP	５		IP	６		IP	３		IP	２		IP	６		IP	６		IP	４	5	IP	５		IP	４	5	IP
+林　　　恵祐	3.60	0.16	4.0	４		IP	４		IP	６		IP	３		IP	５		IP	３		IP	６		IP	５		IP	２		IP	５		IP
+栗城　　　匠	4.20	0.16	3.9	５		G2	３		G1	４		IP	３	4	IP	５		G1	６		G1	５		IP	２		G1	６		G1	５		IP

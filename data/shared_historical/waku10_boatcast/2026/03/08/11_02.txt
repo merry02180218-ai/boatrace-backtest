@@ -1,0 +1,8 @@
+data=
+1	0
+池田　　紫乃	7.40	0.20	3.7	５		IP	１		G3	１		IP	４	2	IP	３		G3	１		IP	２		IP	１		G3	４		G3	１		G3
+樋口　由加里	6.40	0.12	2.1	３		IP	２		IP	３		IP	３		G1	２		IP	３		G3	３		G3	２		G3	６		G3	２		IP
+真子　奈津実	4.90	0.14	2.1	２		IP	５		IP	２		IP	４		IP	６		IP	２		G3	４		G3	３		IP	５		IP	３		IP
+戸田　海咲音	1.80	0.26	4.8	４		IP	５		IP	６		IP	４		IP	６		IP	６		IP	６	5	IP	６	6	IP	５	6	IP	６		IP
+柴田　　愛梨	2.44	0.25	5.2	沈		IP	４		IP	４		IP	６	6	IP	６		IP	４		IP	４		IP	６		IP	５		G3	６		G3
+三嶌　さらら	3.50	0.18	3.8	５		IP	６		IP	１		G3	１		G3	４		IP	６		IP	６		IP	６		IP	４		IP	６		IP

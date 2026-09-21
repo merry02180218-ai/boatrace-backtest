@@ -1,0 +1,8 @@
+data=
+1	0
+三好　　勇人	9.00	0.13	1.3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	４		IP	３		IP	１		IP
+中野　　仁照	6.00	0.18	4.0	２		IP	４		G1	６		G1	３	3	IP	２		IP	１		IP	６		IP	５		IP	３		IP	１		IP
+井手　　良太	5.80	0.15	3.2	５		IP	１		IP	３		IP	３		IP	１		IP	２		IP	３		IP	３		IP	４		IP	Ｆ		IP
+藤岡　　俊介	7.00	0.12	2.9	３		IP	２		IP	１		IP	４		G1	１		G1	３		IP	２		IP	５		G1	４		G1	２		IP
+久永　　祥平	7.00	0.15	2.9	３		IP	４	6	IP	３		IP	３		IP	４		IP	１		IP	１		IP	２		IP	２		IP	２		IP
+庄司　　孝輔	5.10	0.19	4.2	３		G3	４		G3	３		IP	５		IP	５		G3	３		IP	２		IP	３		IP	２		IP	５		IP

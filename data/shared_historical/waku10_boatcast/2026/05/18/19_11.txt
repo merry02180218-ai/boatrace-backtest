@@ -1,0 +1,8 @@
+data=
+1	0
+松田　　淳平	9.00	0.11	1.7	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	３		IP	２		IP	１		IP	１		IP
+安河内鈴之介	6.67	0.15	3.0	４		IP	４		IP	２		IP	転		IP	４		IP	２		IP	２		IP	１		G2	２		G2	４		IP
+長谷川　晴哉	5.78	0.19	3.8	４		IP	２		IP	３		IP	４		IP	３		IP	４		IP	転		IP	２		IP	１		IP	５		IP
+中野　　希一	8.60	0.09	1.6	１		IP	２		IP	４		IP	２		IP	２		IP	１		IP	１		IP	２	2	IP	１		IP	１		IP
+若林　　義人	4.70	0.17	3.3	１		IP	３		IP	３		IP	６		G1	４		G1	６		IP	５		IP	３	4	IP	５		IP	４	3	G1
+澁川　　　夏	3.60	0.17	4.7	６		IP	３		IP	４		IP	４		IP	５		IP	３		IP	６		IP	５		IP	４		IP	３		IP

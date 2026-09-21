@@ -1,0 +1,8 @@
+data=
+1	0
+久保原　秀人	4.10	0.25	4.6	３		IP	６		IP	５		IP	２		IP	５		IP	１		IP	５		IP	６		IP	６		IP	２		IP
+松本　　庸平	3.40	0.23	5.1	６		IP	５		IP	２		IP	２		IP	６		IP	６		IP	３		IP	４		IP	５		IP	６		IP
+沢田　　昭宏	6.60	0.18	3.9	３		IP	２		IP	１		IP	３		IP	６		IP	２		IP	１		G3	３		G3	６		IP	１		IP
+畑　　　竜生	6.40	0.13	2.4	１		IP	５		IP	１		IP	３		IP	３		IP	２		IP	３		IP	２	3	IP	５		IP	３	3	IP
+桑原　　　啓	3.00	0.19	4.4	５		G3	６		G3	６		IP	２		IP	４		IP	６		IP	５		IP	５		IP	６		IP	３		IP
+天野　　　誠	2.30	0.20	4.5	５	5	IP	５		IP	５		IP	５	5	IP	４		IP	５		IP	５		IP	５		IP	６		IP	４	4	IP

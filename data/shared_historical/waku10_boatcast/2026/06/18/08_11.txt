@@ -1,0 +1,8 @@
+data=
+1	0
+平本　　真之	10.90	0.12	2.4	１		G1	１		G1	１		SG	１		SG	１		G1	１		G1	１		IP	１		IP	１		IP	１		IP
+山崎　　　郡	6.30	0.15	3.4	４		G1	１	3	G1	３	1	G1	５		SG	５		SG	４		G1	６		G1	１		IP	３		IP	２		IP
+桑原　　　悠	7.80	0.14	2.2	４		G1	５		G1	３		G1	４		G1	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+上野　真之介	7.50	0.12	3.0	３	5	G1	３		G1	２		G1	１		SG	２		IP	１		IP	５		IP	６		IP	２		IP	２		G1
+久田　　敏之	6.80	0.11	2.7	３		G1	４		G1	２		G2	５		IP	２		IP	１		IP	５		G1	２		SG	１		IP	６	4	G1
+磯部　　　誠	6.60	0.10	1.6	６		G1	４		G1	４		G1	４		G1	５		SG	２		G1	２		IP	３		G1	１		G1	３		SG

@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　孝彰	9.40	0.14	2.4	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	２		IP
+石田　　勇斗	5.00	0.16	2.9	６		IP	３		IP	２		IP	３		IP	５		IP	３		IP	６		IP	４		IP	２		IP	２		IP
+山下　　拓巳	4.10	0.14	2.8	５		IP	３		IP	３		IP	３		IP	３		IP	６		IP	６		IP	５		IP	１		IP	６		IP
+楠　　将太郎	4.10	0.13	2.9	２		IP	３		IP	４		IP	４		IP	６		IP	２		IP	６		IP	６	6	IP	３		IP	５	6	IP
+瀬川　　大地	2.20	0.16	3.9	５		IP	６		IP	４		IP	５		IP	４		IP	４	6	IP	５	6	IP	６		IP	６		IP	６		IP
+竹下　　大樹	5.20	0.13	2.9	３		IP	３		IP	６		G1	４		G1	４		G1	３		IP	２	5	IP	４		IP	３		IP	４	5	G3

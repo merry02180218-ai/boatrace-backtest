@@ -1,0 +1,8 @@
+data=
+1	0
+浜本　　裕己	8.60	0.14	3.0	１		IP	２		IP	２		IP	１		IP	２		IP	１		IP	３		IP	３		IP	１		IP	１		IP
+宇土　　泰就	5.50	0.19	4.3	３		IP	１		IP	６		IP	５		IP	５		IP	２		IP	４		IP	２		IP	２		IP	３		IP
+高橋　　二朗	4.40	0.19	4.2	４		IP	４		IP	５		IP	６		IP	２		IP	３		IP	６		IP	３		IP	３		IP	３		IP
+東　　　潤樹	4.70	0.16	3.2	４		IP	２	6	IP	４		G3	５		G3	３		IP	３		IP	５		IP	６		IP	３		IP	２		IP
+福来　　　剛	5.80	0.12	1.7	２		IP	１		IP	４		G2	４		G2	２		IP	４		IP	２		IP	５		G1	３		G1	転		IP
+羽野　　　諒	3.20	0.14	3.1	５		IP	５		IP	３		IP	２		IP	５		IP	６		IP	４	5	IP	４		IP	５		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+幸田　　智裕	7.20	0.14	2.9	１		IP	２		IP	４		IP	２		IP	４		IP	３		IP	１		IP	２		IP	４		IP	１		IP
+小林　　文彦	6.90	0.18	4.0	１		IP	２		IP	１		IP	４		IP	３		IP	３		IP	１		IP	２		IP	３		IP	６		IP
+品田　　直樹	5.89	0.19	3.2	３		IP	１		IP	３	2	IP	エ		IP	１		IP	５		IP	６		IP	３		IP	４		IP	２		IP
+上田　　隆章	3.20	0.27	5.2	６		IP	６		IP	４	5	IP	５		IP	４	5	IP	４	5	IP	６		IP	３		IP	６		IP	２		IP
+小林　　礼央	5.30	0.08	2.1	５	4	IP	４	6	IP	４		IP	３		IP	１		IP	３		IP	５		IP	２		IP	２		IP	６		IP
+金子　　賢志	5.20	0.15	2.5	５		IP	３		IP	２	5	IP	３		IP	５		IP	６		IP	３		G1	５		IP	１		IP	４		IP

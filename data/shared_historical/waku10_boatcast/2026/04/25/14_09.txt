@@ -1,0 +1,8 @@
+data=
+1	0
+松井　　貫太	6.50	0.17	4.0	４		IP	１		IP	３		IP	１		IP	３		IP	１		IP	６	2	IP	２		IP	３		IP	４		IP
+中里　　昌志	5.30	0.19	4.3	３		IP	４		IP	３		IP	４		IP	５		IP	２		IP	６	4	IP	２		IP	３		IP	２		IP
+貫地谷　直人	3.90	0.25	3.9	２		IP	４		IP	５		IP	６		IP	２	5	IP	４		IP	６		IP	６		IP	４		IP	３	4	IP
+安藤　　裕貴	4.00	0.16	2.7	２		IP	２		IP	４		IP	６		IP	５	5	IP	３		IP	４		IP	６		IP	４		IP	５		IP
+金子　　猛志	4.70	0.14	3.1	５		IP	６		IP	５		IP	３		IP	２		IP	３		IP	４		IP	５	6	IP	１		IP	３		IP
+岡谷　　健吾	4.80	0.13	3.2	３		IP	３	5	IP	４		IP	３		IP	６		IP	４	4	IP	２		IP	６		IP	４		IP	２	5	IP

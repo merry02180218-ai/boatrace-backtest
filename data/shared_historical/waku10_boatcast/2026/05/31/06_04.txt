@@ -1,0 +1,8 @@
+data=
+1	0
+濱野谷　憲吾	10.00	0.10	1.8	１		SG	１		G1	１		G1	１		IP	１		IP	２		IP	１		G1	２		G1	３		G1	１		G1
+松井　　　繁	7.20	0.14	3.7	４		SG	２		IP	３		IP	６		G1	３		G1	５		G1	１		G1	１		SG	２		G1	３		G1
+吉田　　裕平	6.50	0.09	2.0	５		SG	３		G1	３		IP	３		IP	４		G1	４		G1	２		G1	２		G1	１		G1	５		G1
+池田　　浩二	5.90	0.12	2.0	５		SG	４		G1	１		IP	２		G1	３		G1	５		G1	４		G1	５		SG	５		SG	３		G1
+河合　　佑樹	6.60	0.13	3.2	２		SG	３		G1	４		G1	５		IP	４	4	IP	１		IP	３		IP	４		G1	３		G1	２		G1
+石本　　裕武	5.70	0.16	3.6	６		SG	６		G1	３		IP	４		IP	２		IP	２		IP	１		IP	６		G1	４		IP	１	5	IP

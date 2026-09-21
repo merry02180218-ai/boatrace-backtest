@@ -1,0 +1,8 @@
+data=
+1	0
+山下　　和彦	8.20	0.18	3.9	４		IP	１		G3	１		G3	３		IP	２		IP	１		IP	１		IP	４		IP	１		IP	１		IP
+新出　　浩司	5.00	0.14	2.7	４		IP	１	5	IP	６	3	G3	４	3	G3	２		IP	２		IP	６		IP	４		IP	３		IP	４		IP
+松本　　純平	6.70	0.15	3.2	２		IP	３		G1	２		G1	２		IP	５		IP	２		IP	１		IP	５		G1	２		G1	５		G1
+金子　　貴志	4.70	0.15	3.9	３		IP	６		IP	２		IP	４		IP	１		IP	５	5	IP	５		IP	４	3	IP	４		IP	３		IP
+平瀬　　城啓	2.30	0.16	2.8	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	３		IP	４		IP	５		IP	４		IP
+抹香　　雄三	3.50	0.15	3.2	４		IP	１		IP	４	5	IP	５	5	IP	５		IP	３		IP	５		IP	５		IP	６	5	IP	５		IP

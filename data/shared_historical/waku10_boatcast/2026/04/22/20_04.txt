@@ -1,0 +1,8 @@
+data=
+1	0
+西澤　日花里	6.30	0.21	3.7	１		IP	６		IP	１		G3	３		IP	１		IP	３		IP	４		IP	５		IP	３		IP	２		IP
+大久保　佑香	4.90	0.19	2.7	１		IP	１		G3	２		IP	３		IP	６		IP	６		IP	４		IP	３		G3	５		G3	６		IP
+池田　奈津美	3.90	0.13	2.2	３		IP	４		IP	６		IP	５		IP	５		IP	５		IP	３		IP	５		IP	１		IP	４		G3
+川野　　芽唯	6.60	0.18	3.3	２		IP	３		IP	２		IP	３		IP	４		IP	２		IP	６		IP	３	5	IP	１		G1	４		IP
+岩崎　　麗子	2.30	0.17	3.6	６		IP	５		IP	６		G3	５		IP	４		IP	５	4	IP	５		IP	５		IP	３		IP	６	6	IP
+前田　　紗希	5.50	0.14	2.6	５		G3	４		IP	２	5	G3	１		G3	４		G1	６		IP	２		G3	６		G3	３		IP	１		IP

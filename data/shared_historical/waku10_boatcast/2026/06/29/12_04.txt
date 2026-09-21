@@ -1,0 +1,8 @@
+data=
+1	0
+中北　　　涼	5.70	0.18	3.9	３		IP	２		IP	１		IP	３		IP	１		IP	３		G3	５		IP	４		IP	６		G3	４		IP
+谷口　　佳蓮	7.80	0.17	3.0	３	3	IP	１		IP	１		IP	６		G2	１		IP	１		IP	１		IP	２		IP	５		IP	１		IP
+西村　　　歩	4.30	0.18	3.1	６	4	IP	３		IP	２		IP	６		IP	６		IP	４		IP	５		IP	３		IP	１		G3	４		G3
+高橋　　淳美	6.70	0.13	3.1	１		IP	４		IP	３		IP	６		IP	１		G3	２		IP	２		IP	５		IP	２		IP	１		IP
+小芦　るり華	4.40	0.17	2.8	３		IP	２	3	IP	３		IP	５		IP	５		G2	４		G2	５		G3	４	4	IP	４		G2	５		G2
+林　　　風音	1.10	0.22	4.6	６		IP	６		IP	６		IP	６		IP	６		G3	６		G3	５		G3	６		G3	６		G3	６		IP

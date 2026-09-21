@@ -1,0 +1,8 @@
+data=
+1	0
+有賀　　達也	10.20	0.11	2.5	２		IP	１		IP	１		G1	１		G1	１		IP	１		IP	１		G1	１		IP	１		IP	１		IP
+栗原　　謙治	3.60	0.21	4.3	５		IP	５		IP	１		IP	５		IP	４		IP	３		IP	６		IP	３		IP	６		IP	５		IP
+広次　　　修	4.40	0.16	3.1	２		IP	２		IP	６		IP	６	2	IP	５		IP	３		IP	３		IP	２		IP	５		IP	５		IP
+尾形　　栄治	4.80	0.17	3.8	２		IP	４	5	IP	３		IP	２		IP	６		IP	５		IP	６		IP	３		IP	３		IP	３		IP
+田中　太一郎	1.60	0.16	3.7	５		IP	６	6	IP	５		IP	５		IP	６	4	IP	６		IP	６		IP	５		IP	５		IP	５		IP
+下河　　誉史	3.90	0.21	4.6	５	5	IP	４	4	IP	５	4	IP	５		IP	５		IP	６		IP	２	5	IP	２	4	IP	２	2	IP	５	5	IP

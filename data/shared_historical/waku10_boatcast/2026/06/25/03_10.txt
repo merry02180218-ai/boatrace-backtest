@@ -1,0 +1,8 @@
+data=
+1	0
+森作　　雄大	8.00	0.13	2.2	２		IP	１		IP	２		IP	１		IP	３		IP	２		G2	３		G2	３		IP	２		IP	２		IP
+吉武　　真也	5.80	0.16	2.8	３		IP	５		IP	４		IP	２		IP	３		IP	５		IP	２		IP	３		IP	２		IP	２		IP
+寺島　　吉彦	4.10	0.18	4.2	５	5	IP	４		IP	２		IP	４		IP	５		IP	５	6	IP	２		IP	６		IP	４		IP	３		IP
+片橋　　幸貴	5.10	0.11	2.4	２		IP	２		IP	６		IP	６	5	IP	１		IP	６		IP	５		IP	３		IP	１		IP	４	5	IP
+杉山　　正樹	5.70	0.13	4.0	６		G1	２		IP	３		G2	３		G2	３		IP	６		IP	２		G1	４		G1	４		IP	３		G1
+石岡　　将太	3.60	0.16	4.1	６		IP	５		IP	３		IP	３		IP	５		IP	５		IP	３	5	IP	３	5	IP	４		IP	６		IP

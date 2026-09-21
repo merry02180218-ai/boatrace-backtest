@@ -1,0 +1,8 @@
+data=
+1	0
+黒崎　　竜也	7.33	0.13	2.5	２		IP	Ｆ		IP	１		IP	５		IP	欠		IP	２		IP	１		IP	２		IP	１		IP	１		IP
+堂原　　洋史	5.20	0.16	2.1	４		IP	２		IP	２		IP	４		IP	５		IP	３		IP	４		IP	４		IP	３		IP	３		IP
+幸野　　史明	4.40	0.15	2.7	６		IP	３		IP	１		IP	３	4	IP	６		IP	４		IP	１		IP	６	6	IP	４	5	IP	６	6	IP
+関口　　智久	4.30	0.15	3.6	４		IP	２		IP	６		IP	６		IP	５	5	IP	２		IP	３		IP	６		IP	２		IP	４		IP
+増田　　　進	3.40	0.19	3.8	４		IP	４		IP	６		IP	５		IP	５		IP	２		IP	６		IP	５		IP	３		IP	４		IP
+四宮　　与寛	3.00	0.13	4.2	３		IP	４		IP	４		IP	６		IP	３		IP	６	5	IP	６		IP	５	5	IP	転		G1	５		IP

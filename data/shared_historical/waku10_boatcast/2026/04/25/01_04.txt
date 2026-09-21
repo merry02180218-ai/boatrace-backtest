@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　駿介	7.00	0.15	2.9	１		IP	１		IP	５		IP	５		IP	３		IP	１		IP	３		IP	３		IP	２		IP	１		IP
+菊池　　峰晴	6.20	0.21	3.0	５		IP	５		IP	１		IP	３		IP	２		IP	１		IP	４		IP	２		IP	３	1	IP	３		IP
+大場　　広孝	5.70	0.15	3.1	４		IP	３		IP	２		IP	４		IP	２		IP	３		IP	２		IP	４		IP	２		IP	６		IP
+濱崎　　　誠	5.50	0.19	3.2	１	5	IP	５		IP	３		IP	１		IP	６		IP	６		IP	６		IP	２		IP	３		IP	２	3	IP
+藤原　　早菜	3.40	0.17	4.0	４		IP	５		G3	５		G3	４		G3	３		G3	５		IP	３		IP	５		IP	５		IP	４		IP
+鶴本　　崇文	3.30	0.21	4.6	３		IP	６		IP	４		IP	６		IP	５		IP	２	5	IP	６		IP	５		G1	５		G1	４		IP

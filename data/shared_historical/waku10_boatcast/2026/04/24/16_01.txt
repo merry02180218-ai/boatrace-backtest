@@ -1,0 +1,8 @@
+data=
+1	0
+金田　　智博	8.80	0.17	2.8	１		IP	２		IP	４		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP
+向井田　佑紀	5.60	0.15	2.8	２		IP	６		IP	５		IP	１		IP	２		IP	２		IP	３		IP	６		IP	４		IP	２		G3
+小松　　卓司	4.10	0.15	2.6	２		IP	５	4	IP	４		IP	４		IP	４		IP	３		IP	５		IP	６		IP	２		IP	５		G3
+渥美　　卓郎	2.20	0.20	4.6	６		IP	６		IP	６		IP	４		IP	５	3	IP	５		IP	６		IP	２	5	IP	６	3	IP	６		IP
+平岡　　重典	3.00	0.16	3.1	４		IP	４		IP	６		IP	５		IP	５		IP	４		IP	４		IP	３	6	IP	５		IP	６		IP
+井上　　大輔	4.90	0.14	2.6	６		IP	３		G3	５		IP	４		IP	５		IP	２		IP	３		IP	２	2	IP	５		IP	２		IP

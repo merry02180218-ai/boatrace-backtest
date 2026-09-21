@@ -1,0 +1,8 @@
+data=
+1	0
+木村　　仁紀	8.10	0.15	2.6	３		IP	３		IP	１		IP	転		G2	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+林　　　祐介	5.60	0.18	3.5	１		IP	１		IP	３		IP	２		IP	３		IP	６		IP	６		IP	５		IP	３		IP	３		IP
+小池　　公生	7.50	0.14	2.8	１		IP	４		IP	１		IP	３		IP	３		IP	１		IP	２		IP	１		IP	１		IP	６		IP
+権藤　　俊光	5.80	0.15	3.0	５		IP	１		IP	４		G2	２		IP	５		IP	４		IP	３		IP	３	3	IP	５	5	G1	２	3	SG
+石塚　　久也	5.50	0.18	3.4	２		IP	４		IP	３		IP	２		IP	３		IP	２		IP	２		IP	６		IP	４		IP	５		IP
+井上　　　茂	3.11	0.19	4.1	４		IP	４		IP	５		IP	転		IP	６		IP	５		IP	２		IP	５		IP	６		IP	４		IP

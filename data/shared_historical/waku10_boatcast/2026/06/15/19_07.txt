@@ -1,0 +1,8 @@
+data=
+1	0
+登玉　　隼百	8.80	0.14	2.2	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	４		IP	２		IP
+佐藤　　　旭	4.80	0.15	3.8	５		IP	５		G3	４	3	G3	３		IP	５		IP	２		IP	４		IP	２		G3	５		G3	１		IP
+岩永　　節也	3.60	0.17	3.1	２		IP	６		IP	４		IP	５		IP	５		IP	２		IP	５		IP	６		IP	５		IP	３		IP
+竹腰　　正樹	3.90	0.16	3.8	５		IP	３		IP	３		IP	４		IP	４	3	IP	４		IP	３		IP	４		IP	６	5	IP	５		IP
+吉川　　喜継	3.60	0.14	3.6	３		IP	５		IP	２	4	IP	６	3	IP	３		IP	３		IP	５	4	IP	６	4	IP	５		IP	６		G1
+井上　　大輔	3.70	0.19	3.5	５		IP	５		IP	４		IP	３	5	IP	３		IP	６		IP	３		G3	５		IP	４		IP	５		IP

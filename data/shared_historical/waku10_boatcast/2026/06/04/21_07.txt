@@ -1,0 +1,8 @@
+data=
+1	0
+羽野　　　諒	7.10	0.17	2.0	１		IP	５		IP	１		IP	５		IP	２		IP	６		IP	１		IP	１		IP	２		IP	１		IP
+中野　　和裕	3.00	0.18	3.0	６		IP	４		IP	６		IP	４		IP	４		IP	５	3	IP	６		IP	６		IP	３		IP	３		IP
+菅沼　　佳昭	5.10	0.15	2.9	５		IP	５		IP	３		IP	４		IP	４		IP	２	4	IP	１		IP	６		IP	３		IP	２		IP
+佐藤　　世那	3.60	0.17	3.6	５		IP	２		IP	５		IP	５		IP	５		IP	５		IP	２		IP	４		IP	４		IP	５		IP
+浦田　　晃嗣	2.40	0.20	4.2	４		IP	５		IP	５		IP	４		IP	５		IP	６		IP	５		IP	６		IP	４		IP	５		IP
+長嶺　真李愛	1.80	0.30	5.4	６		IP	６		IP	４		IP	５		IP	６		IP															IP

@@ -1,0 +1,8 @@
+data=
+1	0
+細川　　裕子	9.70	0.21	3.5	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP
+南　　　彩寧	3.10	0.18	3.3	５		IP	５		IP	３		IP	２		IP	３		IP	６		IP	５		IP	６		IP	５		IP	６		IP
+遠藤　　エミ	6.10	0.10	2.0	２		G2	６		G2	２		G1	３		IP	Ｆ		G1	４		G1	２		G3	３		G1	４		SG	２		G1
+山下　　夏鈴	4.40	0.16	2.9	５		IP	６		IP	３		IP	３		IP	６		IP	４		IP	４		IP	２		IP	５		IP	１		IP
+中西　　月輝	1.10	0.19	4.3	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	Ｆ	6	IP	６	6	IP	６	6	IP	５	6	IP	６	6	IP
+武井　莉里佳	5.20	0.16	4.1	２		IP	６		IP	３	5	IP	６		IP	１		IP	２		G1	４		G3	６		IP	４		G3	３		G3

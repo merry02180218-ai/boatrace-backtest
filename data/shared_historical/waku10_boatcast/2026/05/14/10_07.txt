@@ -1,0 +1,8 @@
+data=
+1	0
+川崎　　誠志	7.60	0.22	4.1	１		IP	１		IP	２		IP	２		IP	３		IP	１		IP	５	2	IP	１		IP	２		IP	４		IP
+木下　　翔太	7.40	0.16	3.1	２		IP	４		IP	１		IP	１		IP	２		G1	３		G1	２		G1	４		G1	３		IP	３		IP
+石田　　政吾	5.50	0.14	3.0	５		IP	５	4	IP	６		IP	３		IP	３		IP	３		IP	２		IP	３		IP	２		IP	１		IP
+石井　　裕美	3.70	0.17	2.5	２		G3	５		G3	６		IP	４		IP	６		IP	２		G3	６	5	IP	３		IP	５		G3	４		G3
+小林　　遼太	4.60	0.18	4.0	６		IP	４		IP	２	6	IP	６		IP	２	6	G3	３		IP	２		IP	５		IP	３		IP	５		IP
+原　　　豊土	4.00	0.18	4.4	４		IP	２		IP	３	5	IP	４		IP	５	5	IP	５		IP	４		IP	４		IP	５		IP	４		IP

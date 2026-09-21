@@ -1,0 +1,8 @@
+data=
+1	0
+豊田　　泰洋	6.10	0.16	3.0	３		IP	１		IP	１		IP	５		IP	４		IP	６		IP	１		IP	１		IP	５		IP	３		IP
+松井　　賢治	6.80	0.14	3.0	２		IP	５		IP	２		IP	２		IP	２		IP	２		IP	４		IP	１		IP	２		IP	４		IP
+吉田　凌太朗	6.60	0.14	2.7	４		IP	４		IP	１		IP	３		IP	１		IP	６		IP	６	2	G1	２		IP	１		IP	２		IP
+淺香　　文武	6.10	0.18	2.8	６		IP	２		IP	１		IP	３		IP	４		IP	４		IP	１		IP	２	5	IP	５		IP	２		IP
+木村　　浩士	2.70	0.18	3.6	５	6	IP	５		IP	３		IP	６		IP	３		IP	５		IP	４		IP	５		IP	６		G3	６	6	G3
+木下　　陽介	2.67	0.14	2.8	欠		IP	５		IP	４		IP	１		IP	６		IP	５	5	IP	６		IP	６		IP	６		IP	５		IP

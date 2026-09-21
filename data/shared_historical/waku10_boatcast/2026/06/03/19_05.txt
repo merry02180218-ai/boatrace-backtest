@@ -1,0 +1,8 @@
+data=
+1	0
+富永　　大一	6.80	0.14	2.8	６		IP	１		IP	１		IP	５		IP	４		IP	１		IP	６		IP	１		IP	１		IP	１		IP
+貫地谷　直人	3.80	0.21	4.6	３		IP	５		IP	６		IP	６		IP	６		IP	４		IP	３		IP	２		IP	６		IP	２	3	IP
+広瀬　　聖仁	4.20	0.12	2.8	４		IP	１		IP	２		IP	５		IP	５		IP	５		IP	２		IP	５	4	IP	５		IP	５		IP
+福田　　　理	5.00	0.13	2.6	３		IP	１		IP	２		IP	１		IP	５	5	IP	５		IP	６		IP	６		IP	５		IP	２		IP
+田中　　辰彦	4.00	0.16	3.0	５		IP	４		IP	５		IP	３		IP	３		IP	４		IP	２	4	IP	エ		IP	４		IP	４		IP
+山田　　　丈	3.80	0.21	4.4	１	4	IP	５		IP	５		IP	５	5	IP	５		IP	３		IP	３		IP	５		IP	５		IP	４		IP

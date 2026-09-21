@@ -1,0 +1,8 @@
+data=
+1	0
+三宅　　　潤	8.20	0.15	2.7	１		IP	１		IP	２		IP	４		IP	１		IP	１		IP	１		IP	１		IP	５		IP	２		IP
+中野　　夢斗	3.60	0.13	3.5	４		IP	３		IP	４		IP	５		IP	１		IP	５		IP	５		IP	６		IP	６		IP	４		IP
+大石　　真央	4.20	0.18	3.2	３		IP	２		IP	５		IP	４		IP	６		IP	４		IP	３	5	IP	６		IP	３		IP	４		IP
+鈴木　　成美	2.70	0.12	2.2	５		IP	２		G3	４		G3	６		IP	４		IP	５		IP	５		IP	６		IP	６		IP	５		IP
+小川　日紀太	3.90	0.19	3.2	５		IP	４		IP	４		IP	６		IP	２		IP	１		IP	６		IP	３		IP	５		IP	６		G3
+重成　　一人	4.40	0.12	2.9	３	5	IP	４		IP	２		IP	５		IP	４		IP	６		IP	２		IP	６	5	G1	５		G1	３		IP

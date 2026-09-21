@@ -1,0 +1,8 @@
+data=
+1	0
+林　　　祐介	6.90	0.17	3.8	１		IP	２		IP	６		IP	１		IP	４		IP	３		IP	２		G3	２		G3	４		IP	１		IP
+小山　　　勉	7.50	0.18	3.4	３		IP	２		IP	２		G1	２		IP	２		IP	１		IP	２		IP	３		IP	３		IP	３		IP
+宇土　　泰就	4.40	0.15	3.5	４		IP	４		IP	６		IP	３		IP	６		IP	４		IP	５		IP	２		IP	２		IP	３		IP
+荒川　　健太	5.00	0.18	3.7	３		IP	４		IP	２		IP	３		IP	５		IP	４		IP	１		IP	５		IP	４		IP	４		IP
+塚越　　陸斗	1.40	0.22	3.4	６	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	５	6	IP	６	6	IP	５	6	IP	５	6	IP	６	6	IP
+枝尾　　　賢	5.60	0.14	3.6	４		IP	３		IP	３		IP	２		IP	５		IP	５		IP	２	5	IP	４		IP	１		IP	４		IP

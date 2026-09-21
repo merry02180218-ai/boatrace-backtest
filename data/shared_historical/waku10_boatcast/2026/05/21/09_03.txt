@@ -1,0 +1,8 @@
+data=
+1	0
+松瀬　　弘美	6.20	0.21	4.7	６		IP	３		G3	２		IP	１		G3	２		G3	１		G3	６		IP	２		IP	５		IP	２		IP
+安河内　　健	5.60	0.17	3.9	１	3	IP	２		IP	２	3	IP	６		IP	５		IP	３		G2	６		IP	３		IP	５		G1	２		IP
+樋江井　　舞	5.33	0.16	3.0	３		IP	１		IP	３		IP	１		IP	６		IP	４		IP	３		IP	６	4	IP	欠		IP	４		IP
+柳瀬　　興志	5.10	0.16	3.0	３		IP	３		IP	５		IP	４		IP	１		IP	４	5	IP	６		IP	１		IP	３		IP	５		IP
+山下　　昂大	5.70	0.13	2.5	１		IP	６		IP	４	6	IP	４	4	IP	２		G3	２		G3	５		IP	３	6	IP	２		IP	３		IP
+枝尾　　　賢	5.20	0.15	2.8	５		G2	３		IP	４		IP	２	5	IP	１	2	G3	６		G3	３		IP	４		IP	４	5	IP	４		IP

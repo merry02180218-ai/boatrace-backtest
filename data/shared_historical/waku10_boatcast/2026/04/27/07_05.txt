@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　世那	7.10	0.16	3.7	１		IP	１		IP	５		IP	２		IP	２		IP	６		IP	４		IP	１		IP	１		IP	２		IP
+島田　　賢人	6.20	0.16	2.8	３		IP	２		IP	１		IP	４		IP	５		IP	３		IP	２		IP	Ｆ		IP	１		IP	２		IP
+上村　　純一	6.70	0.13	2.6	２		G1	１		IP	３		IP	２		IP	２		IP	６		IP	４		G1	２		G1	３		G1	５		G1
+東口　　　晃	4.40	0.19	3.7	５		IP	６		IP	４		IP	６		IP	３		IP	４		IP	１		IP	２		IP	５		IP	３		IP
+眞崎　　武蔵	1.70	0.23	4.8	６		IP	５		IP	６	6	IP	５		IP	４		IP	６		IP	６		IP	６		IP	５		IP	５		IP
+久田　　敏之	5.80	0.11	2.9	２	4	IP	３		G1	４		G1	５		SG	４		SG	２		IP	３	5	G1	４		IP	３		G1	６		G1

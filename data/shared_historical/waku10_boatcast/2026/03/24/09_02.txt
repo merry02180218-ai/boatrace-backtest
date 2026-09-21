@@ -1,0 +1,8 @@
+data=
+1	0
+上野　　拓馬	5.90	0.17	3.0	４		IP	３		IP	１		IP	３		IP	４		IP	１		IP	５		IP	６		IP	３	2	IP	１		IP
+佐竹　　友樹	4.80	0.18	3.1	３		IP	４		IP	１		IP	５		IP	３		IP	２		IP	６		IP	４		IP	３		IP	６	6	IP
+赤峰　　和也	2.30	0.18	2.7	５		IP	６		IP	５		IP	６	6	IP	６		IP	５		IP	６		IP	３		IP	６		IP	３		IP
+多田　　有佑	4.00	0.25	5.1	６		IP	４		IP	５		IP	６		IP	６		IP	６		IP	２		IP	３		IP	２	5	IP	２		IP
+小池　　礼乃	3.60	0.18	3.1	５		IP	４		IP	３	4	IP	６	3	IP	３		IP	４		IP	６		IP	５		G3	３		IP	４		IP
+鳥本　　智史	1.40	0.21	3.8	６		IP	６		IP	転		IP	５		IP	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP

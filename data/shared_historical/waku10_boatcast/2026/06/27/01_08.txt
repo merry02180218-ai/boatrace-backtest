@@ -1,0 +1,8 @@
+data=
+1	0
+烏野　　賢太	8.80	0.13	2.6	１		IP	２		IP	２		IP	３		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP
+西川　　拓利	7.20	0.11	2.2	３		IP	３		IP	１		IP	３		IP	３		IP	２		IP	３		IP	４		G3	１		G3	１		IP
+川島　　拓郎	5.80	0.16	3.1	２		IP	４		IP	４		IP	４		G3	２		G3	２		IP	４		IP	２		IP	５		IP	２		IP
+深水　慎一郎	7.10	0.15	3.0	２		IP	６		IP	２		IP	２		IP	１		IP	４		IP	４		IP	２		IP	１		IP	１		IP
+黒野　　元基	5.70	0.13	2.9	５		IP	３		IP	２	4	IP	１	4	IP	２	4	IP	２		IP	３		IP	４		G1	６		G1	６		G1
+上野　　俊樹	3.80	0.20	4.0	４		IP	３		IP	４	5	IP	３		IP	６		IP	４		IP	６		G2	６		IP	４		IP	３		G3

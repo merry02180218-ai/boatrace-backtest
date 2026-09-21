@@ -1,0 +1,8 @@
+data=
+1	0
+広瀬　　聖仁	5.20	0.16	3.4	４		IP	１		IP	４		IP	２		IP	Ｆ		IP	３		IP	１		IP	５		IP	５		IP	３		IP
+渡邉　　俊介	7.80	0.14	2.2	２		IP	１		IP	３		IP	２		IP	３		IP	３		IP	２		IP	２	3	IP	１		IP	２		IP
+松尾　　　充	6.00	0.14	2.9	２		IP	５		IP	１		IP	４		G1	４		G1	１		IP	４		IP	Ｆ		IP	２		IP	２		IP
+長谷川　親王	3.80	0.20	4.0	３		IP	４		IP	３		IP	５		IP	６	5	IP	３		IP	５		IP	４		IP	３		IP	６		IP
+中田　　友也	3.60	0.19	4.7	６		IP	４		IP	６		IP	６		IP	４		IP	６		IP	３		IP	３		IP	２		IP	４		IP
+北川　　敏弘	2.80	0.18	4.0	６		IP	６		IP	５		IP	５		IP	４		IP	２	5	IP	３		IP	５	5	IP	６		IP	６		IP

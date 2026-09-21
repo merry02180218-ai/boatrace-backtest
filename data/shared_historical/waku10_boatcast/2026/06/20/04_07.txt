@@ -1,0 +1,8 @@
+data=
+1	0
+山下　　拓巳	8.40	0.15	3.6	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	２		IP	５		IP	２		IP	１		IP
+廣瀬　　将亨	5.30	0.14	2.5	６		IP	３		IP	６		G2	６		G2	２		IP	２		IP	２		IP	３		IP	４		IP	２		IP
+三浦　　裕貴	5.60	0.18	3.1	１		IP	転		IP	２		IP	５		IP	３		IP	４		IP	１		IP	２		IP	３	4	IP	５		IP
+栗原　　謙治	2.10	0.24	5.2	４		IP	５	5	IP	５	5	IP	５	6	IP	５		IP	４		IP	６		IP	５	6	IP	６		IP	６		IP
+吉村　　　誠	5.30	0.14	3.7	４		IP	２		IP	４		IP	３		IP	６		IP	５		IP	２		IP	４	4	IP	２		G3	４		G3
+豊田　　泰洋	2.00	0.25	5.3	５		IP	５	5	IP	６		IP	６		IP	５		IP	６		IP	４		IP	５		IP	６		IP	４		IP

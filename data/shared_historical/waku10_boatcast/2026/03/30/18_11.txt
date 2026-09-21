@@ -1,0 +1,8 @@
+data=
+1	0
+寳田　　亮治	7.10	0.20	3.6	２		IP	６		IP	１		IP	２		IP	２		IP	２		IP	２		IP	４		G3	２		IP	２		IP
+田川　　大貴	5.00	0.14	2.8	Ｆ		IP	２		IP	６		IP	６		IP	２		IP	３		IP	２		IP	２		IP	２		IP	５		IP
+山川　　波乙	4.20	0.17	2.8	５		IP	５		IP	２		IP	３		IP	２		G3	５		G3	３		IP	６		IP	６		IP	３		IP
+上村　慎太郎	4.00	0.25	5.4	５		IP	６		IP	３		IP	５		IP	３		IP	４		IP	３		IP	６		IP	４		IP	２		IP
+三嶌　　誠司	4.90	0.14	3.0	５		IP	４		IP	５		IP	２		IP	２		G1	５		IP	４		IP	５		IP	１		IP	３		IP
+島川　　光男	2.90	0.17	3.7	５		IP	５		IP	２		IP	６		IP	６		IP	５		IP	４		IP	５	5	IP	３	5	IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+杉村　　賢也	7.56	0.13	2.9	１		IP	２		IP	２		IP	２		G3	１		IP	５		IP	欠		IP	２		IP	１		IP	４		IP
+廣部　　大明	2.10	0.20	3.7	５		IP	５		IP	５		IP	５		IP	５		IP	６		IP	６		IP	３		IP	５	4	IP	６		IP
+齋藤　　達希	4.10	0.14	3.4	５		G3	５	4	IP	５		IP	６		IP	２		IP	３		IP	５		IP	５		IP	２		IP	２		IP
+麻生　　慎介	8.33	0.13	2.1	５		G1	１		IP	１		IP	２		G1	３		IP	２		IP	転		IP	２		IP	１		IP	１		IP
+山下　　拓巳	3.70	0.18	3.1	６		IP	６		IP	３		IP	５		IP	４		IP	４	6	IP	６		IP	１		IP	５		IP	３	4	IP
+滝沢　　芳行	4.00	0.17	3.5	６		IP	６		IP	４		G3	３		IP	２	4	IP	４	4	IP	４		IP	２		IP	６		IP	５	5	IP

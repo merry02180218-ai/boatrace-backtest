@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　喜智	7.70	0.13	3.6	１		IP	３		IP	３		IP	１		IP	６		IP	２		IP	１		IP	１		IP	３		IP	１		IP
+榎　　　幸司	7.80	0.16	3.4	２		IP	１		IP	２		IP	２		IP	４		IP	２		IP	１		IP	２		IP	３		IP	３		IP
+山口　　裕二	5.60	0.15	3.0	２		IP	３		IP	２	4	IP	１		IP	Ｆ		IP	４		IP	３	4	G1	５		G1	４		IP	３		IP
+志賀　　美優	1.50	0.32	5.2	６		IP	６	5	IP	６		IP	４	6	IP	６	6	IP	６	6	IP												IP
+渡邊　雄一郎	6.89	0.15	3.6	４		IP	５		IP	３		IP	不		IP	１	4	IP	３		IP	３		IP	１		IP	４		IP	１		IP
+北川　　幸典	2.40	0.20	4.4	３	5	IP	６		IP	６		IP	６		IP	４		IP	４		G3	６		G3	４		IP	６		IP	６		IP

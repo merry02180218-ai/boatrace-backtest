@@ -1,0 +1,8 @@
+data=
+1	0
+豊田　　祥生	6.00	0.18	3.3	１		IP	６		IP	１		IP	１		IP	５		IP	４		IP	１		IP	４		IP	２		IP	６		IP
+宮下　　元胤	7.60	0.17	3.1	２		IP	３		IP	２		IP	２		IP	２		IP	１		IP	４		IP	２	4	IP	２	3	IP	２		IP
+石田　　章央	6.40	0.15	3.3	３		IP	１		IP	３		IP	５		IP	３		IP	２		IP	４		IP	３		IP	３		IP	１		IP
+佐藤　　世那	2.60	0.19	3.7	５		IP	５		IP	５		IP	２		IP	４		IP	４		IP	５		IP	６		IP	Ｆ		IP	６		IP
+金田　　幸子	5.10	0.18	3.3	３		IP	１		G3	５		G3	５		IP	２		IP	２		IP	２		IP	４		IP	５		IP	６		IP
+長尾　　萌加	4.00	0.19	4.1	５		IP	３		IP	４		IP	４		IP	６		IP	６		IP	２		IP	３		IP	４		IP	４		IP

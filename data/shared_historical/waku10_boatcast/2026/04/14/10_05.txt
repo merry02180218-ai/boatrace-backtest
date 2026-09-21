@@ -1,0 +1,8 @@
+data=
+1	0
+宮内　由紀英	5.90	0.16	3.5	２		IP	３		IP	２		IP	５		IP	６		IP	４		IP	１		IP	４		IP	２		IP	２	2	IP
+石塚　　久也	6.60	0.21	4.0	２		IP	３		IP	１		IP	３		IP	４		IP	２		IP	４		IP	２		IP	３		IP	３		IP
+桐本　　康臣	5.90	0.16	3.4	２		IP	３		IP	２		IP	２		IP	１		IP	３		IP	４	4	IP	３		IP	６		IP	５		IP
+深川　麻奈美	4.67	0.18	4.2	６		IP	４		IP	３		IP	２		IP	欠		G1	６		G1	２		IP	２		IP	４		IP	６		G3
+三宅　　健太	4.10	0.15	3.5	４		G3	４		G3	５		IP	４		IP	３		IP	３		G3	４		G3	４		IP	５	6	IP	５	6	IP
+鈴木　　雄登	4.40	0.22	4.0	６		IP	４		IP	５		IP	４		IP	３		IP	４		IP	６		IP	２		IP	４		IP	１		IP

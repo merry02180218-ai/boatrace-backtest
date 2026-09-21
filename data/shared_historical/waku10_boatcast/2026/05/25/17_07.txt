@@ -1,0 +1,8 @@
+data=
+1	0
+小宮　　涼雅	5.30	0.16	2.8	５		IP	５		IP	２		IP	６		IP	２		IP	１		IP	転		IP	３		IP	２		IP	２		IP
+村田　　浩司	6.20	0.12	2.8	３		IP	２		IP	２		IP	３		IP	５		IP	２		IP	２		IP	２		IP	３		IP	５		G3
+奥田　　　誠	6.90	0.13	2.3	２		IP	２		IP	２		IP	６		IP	１		IP	３		IP	５		IP	１		IP	２		IP	２		IP
+山川　　雄大	3.80	0.23	4.1	５		IP	６		IP	３		IP	５		IP	４	5	IP	３		IP	２		IP	３		IP	５		IP	６		G3
+佐藤　謙史朗	3.22	0.17	3.4	６		IP	４		IP	４		IP	３		IP	３		IP	４		IP	欠		IP	６		IP	５		IP	６		IP
+坂口　　貴彦	2.30	0.20	4.6	３		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	４		IP	４		IP	５		IP

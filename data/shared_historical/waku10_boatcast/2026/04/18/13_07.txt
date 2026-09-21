@@ -1,0 +1,8 @@
+data=
+1	0
+小野　　勇作	7.70	0.16	4.0	３		IP	１		IP	６		IP	１		IP	１		IP	２		IP	２		IP	３		IP	１		IP	２		IP
+谷川　　祐一	4.70	0.19	3.5	５		IP	４		IP	２		IP	３		IP	２		IP	４		IP	５		IP	６		IP	２		IP	４	3	IP
+小原　　聡将	4.50	0.16	3.0	３		IP	５		IP	４		IP	５		IP	１		IP	２		IP	Ｆ		IP	６		IP	３		IP	３		IP
+鳥本　　智史	1.00	0.07	2.0	６	6	IP																											IP
+齋藤　　達希	4.50	0.20	3.7	１		IP	６		G3	５		G3	５	6	IP	３		IP	４		IP	５		IP	３		IP	２		IP	４		IP
+加藤　　翔馬	4.40	0.16	4.2	２		IP	４		IP	６		IP	２		G3	３	5	IP	６		IP	３		IP	５		IP	６		G1	３		IP

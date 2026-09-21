@@ -1,0 +1,8 @@
+data=
+1	0
+柳沢　　　一	9.60	0.14	1.6	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	２		IP
+川北　　浩貴	7.22	0.15	2.7	２		IP	６		IP	２		IP	２		IP	３		IP	２		IP	欠		IP	１		IP	２		IP	２		IP
+田頭　　　実	6.80	0.16	2.4	１	2	IP	２	2	IP	１		IP	４		IP	６	2	IP	１	2	IP	１	2	IP	６	2	IP	１	1	IP	４	2	IP
+原田　　篤志	6.20	0.21	3.7	４		IP	５		IP	４		IP	１		IP	３		IP	４		IP	３		IP	３		IP	１		IP	２		IP
+沢田　　昭宏	6.80	0.18	3.4	４		IP	３		IP	３		IP	１		IP	２		IP	４		IP	２	4	IP	４		IP	２		G3	２		IP
+村田　　修次	3.70	0.21	4.7	６		IP	５		IP	４		IP	２	5	IP	５		IP	５		IP	６		IP	３		IP	２	5	IP	６		IP

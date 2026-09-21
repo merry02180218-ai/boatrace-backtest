@@ -1,0 +1,8 @@
+data=
+1	0
+山口　真喜子	8.10	0.14	4.1	４		G2	１		IP	２		IP	４		IP	１		IP	１		IP	１		IP	１		G1	２		G1	４		IP
+渡辺　　空依	7.33	0.15	3.0	２		IP	３		IP	２		IP	３		IP	２		IP	４		IP	１		IP	２		IP	２		IP	転		IP
+小山　　　勉	7.50	0.17	2.8	１		IP	３		IP	２		IP	１		IP	５		IP	４		IP	１		IP	３		G1	１		IP	２		IP
+荻野　　裕介	5.20	0.20	4.5	２		IP	２		IP	５		IP	４		G3	４		G3	４		IP	４	6	IP	３	5	IP	２		IP	４		IP
+坪口　　竜也	5.10	0.17	3.5	４	4	IP	２		IP	４		IP	３		IP	２		IP	２		IP	６		IP	１	6	IP	６	4	G3	６		IP
+岡部　　　哲	4.60	0.17	3.5	２		IP	４		IP	５		IP	４		IP	６		IP	５		IP	６		IP	３		IP	２		IP	１		IP

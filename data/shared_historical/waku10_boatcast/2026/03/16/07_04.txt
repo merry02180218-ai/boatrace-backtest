@@ -1,0 +1,8 @@
+data=
+1	0
+高濱　　芳久	8.60	0.16	3.5	２		IP	１		IP	１		IP	１		IP	２		IP	３		IP	２		IP	３		IP	１		IP	１		IP
+上村　慎太郎	4.00	0.27	5.4	４		IP	２		IP	１		IP	６		IP	３		IP	５		IP	５	3	IP	５		IP	４		IP	６	3	IP
+高橋　　淳美	3.20	0.17	3.6	６		IP	２		IP	５		IP	６		IP	４		G3	５		G3	５		IP	３		IP	４		IP	５		IP
+仲口　　博崇	6.80	0.16	4.0	３		IP	２		IP	４		IP	６		IP	３		IP	１		IP	２		IP	２		G1	２	2	IP	２	3	G3
+野長瀬　正孝	6.44	0.17	2.9	４	3	IP	２	4	IP	２	4	IP	２	4	IP	４		IP	２	3	IP	２	4	IP	５		IP	２	2	IP	欠		IP
+志賀　　美優	2.22	0.20	3.5	転		IP	６		IP	５		IP	６		IP	６		IP	１		IP	６		IP	６		IP	５		IP	６		IP

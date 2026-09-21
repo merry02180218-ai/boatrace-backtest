@@ -1,0 +1,8 @@
+data=
+1	0
+本田　　　愛	5.00	0.24	5.1	４		IP	５		IP	３		IP	２		IP	３		IP	５		IP	３		IP	４		IP	３		IP	３		IP
+宇野　　弥生	5.70	0.16	2.8	２		G3	３		G2	６		IP	１		IP	２		G3	１		G3	６		G3	５		IP	４		IP	３		IP
+金田　　大輔	4.60	0.20	3.8	２		IP	３		IP	３	4	IP	６		IP	４		IP	２		IP	５		IP	２		IP	６		IP	５	4	IP
+吉川　　貴仁	7.33	0.14	2.6	３		IP	１		IP	３		IP	３		IP	不		IP	３		IP	４		IP	２		IP	１		IP	１		IP
+伏見　　俊介	3.10	0.11	2.2	２		IP	３	6	IP	６		IP	４		IP	４		IP	６		IP	４		IP	６		IP	６	4	IP	６		IP
+市川　　哲也	3.50	0.13	2.9	４	4	IP	６		IP	５		IP	４	4	G2	４	3	IP	６		IP	３	5	IP	４		IP	３		IP	５		IP

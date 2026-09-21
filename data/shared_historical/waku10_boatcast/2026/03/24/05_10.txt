@@ -1,0 +1,8 @@
+data=
+1	0
+芝田　　浩治	9.20	0.15	3.0	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+栗城　　　匠	5.70	0.14	3.9	２		IP	３		G1	２		G1	４		IP	６		G1	１	3	IP	１		IP	６		IP	５		G1	５		G1
+廣瀬　　篤哉	4.80	0.18	3.8	４		IP	３		IP	２		IP	１		IP	２		IP	４		IP	５		IP	６		IP	６		IP	４		IP
+内堀　　　学	6.50	0.12	2.5	２		IP	３		IP	１		IP	５	1	IP	４		IP	２		IP	６		IP	２	3	IP	２		IP	１		IP
+宇佐見　　淳	5.20	0.15	2.4	４		IP	５		IP	５	4	IP	３		G3	６		G3	２		IP	５		G1	２		IP	２		IP	１		IP
+樅山　　拓馬	3.60	0.20	5.0	４		IP	４		IP	３		IP	５		G3	２	5	G3	４	5	IP	落		IP	Ｆ		IP	３		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+間野　　兼礼	7.10	0.19	3.0	３		IP	１		IP	６		IP	３		IP	５		IP	２		IP	１		IP	１		IP	１		IP	２		IP
+乙津　　康志	4.40	0.19	4.5	６		IP	５		IP	３		IP	６		IP	３		IP	４		IP	３		IP	３		IP	３		IP	３		IP
+仲　　　航太	3.60	0.22	3.2	４		IP	４		IP	落		IP	４	4	IP	４		IP	６		IP	５		IP	６		IP	１		IP	３		IP
+井田　　涼介	1.80	0.19	3.3	５	5	IP	５		IP	６	6	IP	５		IP	４		IP	５	5	IP	５		IP	６		IP	６		IP	６		IP
+大町　　利克	2.80	0.22	4.0	６		IP	６		IP	３		IP	５		IP	４		IP	６		IP	２	4	IP	５		IP	６		IP	５		IP
+小川　　時光	1.90	0.17	3.8	６		IP	５		IP	６		IP	４		IP	４	5	IP	６		IP	６		IP	５	5	IP	６		IP	５	5	IP

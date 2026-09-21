@@ -1,0 +1,8 @@
+data=
+1	0
+尾崎　　雄二	8.00	0.13	3.1	１		IP	１		IP	１		IP	２		IP	２		IP	４		G3	５		IP	１		IP	２		IP	１		IP
+宇田川　信一	3.10	0.21	5.0	６		IP	３		IP	４		IP	６		IP	４		IP	５		IP	５		IP	５		IP	２	3	IP	６	3	IP
+野長瀬　正孝	3.70	0.13	3.4	４		IP	３		IP	２		IP	４		IP	５		IP	５		IP	４		IP	４		IP	６		IP	５		IP
+西山　　　育	1.00	0.28	6.0	６	6	IP	６	6	IP																								IP
+中島　　秀治	6.30	0.17	2.5	３		IP	３		IP	１		IP	１		G3	５	6	G3	２		IP	２		IP	４		IP	２		IP	６		IP
+尾嶋　　一広	4.60	0.21	3.2	４		G1	６		G1	５		G1	３		IP	５		IP	２		IP	５		IP	５		IP	２		IP	３		IP

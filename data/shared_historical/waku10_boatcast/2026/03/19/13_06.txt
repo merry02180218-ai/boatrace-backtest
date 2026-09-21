@@ -1,0 +1,8 @@
+data=
+1	0
+松井　　　繁	9.30	0.16	3.8	１		G1	１		G1	１		G1	２		G1	２		IP	１		G1	１		G1	５		IP	２		SG	２		G1
+徳増　　秀樹	6.90	0.15	3.4	２		G1	１		IP	６		G1	２		IP	３		IP	２		IP	１		IP	６		IP	２		G3	３		G1
+吉田　　俊彦	4.60	0.16	3.5	４		G1	１		G1	３		IP	５		IP	５		G1	５		G1	３		IP	６		IP	６		IP	２		IP
+佐藤　　　翼	6.50	0.12	2.8	２		G1	６		G1	５		G1	４		G1	４		G1	２		G1	６		G1	２		G1	１		IP	１		IP
+入海　　　馨	5.90	0.14	3.0	３		G1	３		G1	４	6	G1	３		G1	３		G1	４		G1	５		SG	３		SG	５		G1	３		IP
+秦　　　英悟	4.90	0.14	2.8	４		G1	６		G1	１		IP	１	5	IP	６		G1	４		G2	６		IP	２		IP	５		IP	４		IP

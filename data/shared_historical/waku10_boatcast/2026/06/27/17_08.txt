@@ -1,0 +1,8 @@
+data=
+1	0
+大橋　栄里佳	6.20	0.21	4.1	５		G3	３		G3	Ｆ		IP	１		G3	２		G3	２		IP	４		IP	１		G3	２		G3	３		IP
+坂東　　　満	3.60	0.15	3.1	５		IP	Ｆ		IP	５		IP	４		IP	５		IP	３		IP	１		IP	６		IP	６		IP	２		IP
+浦田　　晃嗣	4.10	0.15	3.3	３		IP	１		IP	５		IP	５		IP	６		IP	３		IP	６	4	IP	３	5	IP	３		IP	６		IP
+中　　　亮太	6.60	0.13	2.2	１		G2	３		G2	２		IP	２		G2	３		G3	３		G3	４		IP	４		IP	５		IP	２		IP
+渥美　　卓郎	3.10	0.19	4.2	５		IP	５	6	IP	５		IP	４	4	IP	５		IP	６		IP	５		IP	４		IP	５		IP	１		IP
+中岡　　健人	3.50	0.17	4.4	５		IP	５		IP	６		IP	５		IP	３		IP	３		IP	１		IP	５		IP	６		IP	６		IP

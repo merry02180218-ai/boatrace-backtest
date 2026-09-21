@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　太陽	4.20	0.20	3.4	１		IP	４		IP	１		IP	６		IP	３		IP	４		IP	４		IP	６		IP	６		IP	６		IP
+中本　　大樹	5.80	0.17	4.2	６		IP	４		IP	２		IP	３		IP	６		IP	１		IP	１		IP	３		IP	２		IP	４	3	IP
+田中　　勇輔	7.00	0.16	2.5	４		IP	２		IP	１		IP	４	5	IP	１		IP	２		IP	２		IP	５		IP	２		IP	２		IP
+安河内鈴之介	5.10	0.13	2.1	３		IP	６		IP	２		IP	３		IP	３		IP	２		IP	２		IP	５		IP	転		G3	４		G2
+大月　　遊雅	3.70	0.15	2.8	４		IP	４		IP	３		IP	５		IP	６	4	IP	１		IP	６		IP	４		IP	４		IP	６	6	IP
+石井　　伸長	3.40	0.16	4.4	６		IP	６		IP	６		IP	５		IP	６		IP	３	5	IP	２		IP	３		IP	５		IP	３		IP

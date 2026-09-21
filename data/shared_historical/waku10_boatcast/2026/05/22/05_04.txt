@@ -1,0 +1,8 @@
+data=
+1	0
+平岡　　重典	5.60	0.16	3.1	５		IP	３		IP	４		IP	２		IP	１		IP	４		IP	４	2	IP	１		IP	４		IP	４		IP
+富澤　　祐作	4.90	0.14	3.0	４		IP	３		IP	２		IP	１		IP	６		IP	２		IP	６		IP	６		IP	２		IP	５		IP
+天野　　晶夫	5.10	0.16	3.3	５		IP	３		IP	３		IP	２		G3	４		IP	２		IP	５	4	IP	３		IP	２		IP	６		IP
+前田　　　滉	8.50	0.14	3.2	１		IP	２		IP	１	5	SG	１		SG	５		IP	４		IP	１		IP	６		G1	１		G1	１		G1
+村岡　　賢人	4.70	0.15	3.1	３		IP	４		IP	５	6	IP	３		IP	６		G1	２		G1	４		G1	３		G1	３		IP	Ｆ		IP
+櫻井　　　隼	2.20	0.23	5.8	５		IP	５		IP	６		IP	６		IP	５		IP	６		IP	４		IP	５		IP	３		IP	６		IP

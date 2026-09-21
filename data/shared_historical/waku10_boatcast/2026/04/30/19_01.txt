@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　基樹	5.30	0.17	3.5	２		IP	４		IP	２		IP	５		IP	４		IP	妨		IP	１		IP	３		IP	６		IP	１		IP
+山田　　真聖	6.50	0.15	2.4	４	3	IP	２		IP	２		IP	２		IP	３		IP	４		IP	２	3	IP	６		IP	１		IP	２	3	IP
+栗山　　繁洋	3.50	0.25	4.4	６		IP	４		IP	５		IP	６	4	IP	１		IP	４	4	IP	５		IP	５		IP	６		IP	２	4	IP
+庄島　　潤成	2.40	0.14	3.6	６	5	IP	５		IP	５	5	IP	６		IP	４		IP	６	6	IP	落	5	IP	２	6	IP	４		IP	６		IP
+川崎　　公靖	3.00	0.15	3.1	５		IP	２		IP	６		IP	５		IP	４		IP	６		IP	３		IP	６		IP	６		IP	４		IP
+百武　　　翔	3.60	0.23	5.4	３		IP	６		IP	５		IP	６		IP	２		IP	４		IP	３		G3	５		G3	５		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+坪井　　康晴	8.80	0.12	3.1	６		G1	２		G1	２		G1	１		G1	２		G1	２		G2	１		G2	１		IP	２		IP	１		IP
+和田　　兼輔	7.80	0.13	2.0	１		IP	２		IP	３		IP	２		IP	２		G1	１	3	G1	５		IP	４		IP	２		G2	１		G2
+山口　　達也	7.20	0.16	3.1	６		G1	６		G1	６		G1	２		G1	２		IP	２		IP	１		G1	１		G1	１		IP	２		IP
+齊藤　　　仁	5.75	0.20	3.8	６		G1	５		G1	転		G1	転		IP	１		IP	６	5	IP	４		IP	２		G3	２		G3	１		IP
+佐藤　　　翼	6.00	0.14	3.3	３		G1	３		G1	５		G1	２		IP	３		IP	３		G1	３		SG	６		SG	３		G1	５		G1
+篠崎　　元志	6.20	0.13	2.8	２		G3	３		G3	５		G1	４		G1	２	5	IP	２	4	IP	４		G1	２	5	IP	２	5	IP	６		SG

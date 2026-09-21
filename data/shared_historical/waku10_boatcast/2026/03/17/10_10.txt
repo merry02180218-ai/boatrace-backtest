@@ -1,0 +1,8 @@
+data=
+1	0
+内山　　文典	7.40	0.16	2.8	２		IP	１		IP	４		IP	３		IP	１		IP	２		IP	１		IP	３		IP	３		IP	３		IP
+本橋　　克洋	6.60	0.18	3.6	２		IP	４		IP	２		IP	４		IP	２		IP	３		IP	３		IP	２		IP	２		IP	３	1	IP
+横川　　聖志	5.50	0.13	3.0	５		IP	２		IP	４		IP	５		IP	６		G1	６		G1	２	2	IP	２		IP	２		IP	１		IP
+藤原　啓史朗	6.30	0.14	3.2	３		G1	２		IP	３		IP	４		IP	５		G1	４		G2	１		IP	３		IP	３		G1	３		G1
+坪内　　　実	2.70	0.18	3.8	５		IP	３		IP	４		IP	４		IP	５		IP	６		IP	６		IP	６		IP	４		IP	５		IP
+鳥本　　智史	1.60	0.21	3.6	５		IP	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP

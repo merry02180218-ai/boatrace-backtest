@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　基成	5.90	0.14	2.1	５		IP	５		IP	３		IP	３		IP	４		IP	６		IP	２		IP	１		IP	１		IP	１		G3
+菊池　　宏志	3.70	0.16	3.2	２		IP	４		G3	５		IP	５		IP	６		IP	３		G3	５		G3	６		IP	６		G3	１		G3
+田中　　宏典	3.89	0.18	3.3	６		IP	３		IP	４		IP	３		IP	５		IP	４		IP	４		IP	３		IP	５	4	IP	転		IP
+藤森　　拓海	3.00	0.16	3.9	３		IP	５	5	IP	３		IP	６		IP	６		IP	４	6	IP	６		IP	３		IP	６		IP	５		IP
+浅見　　宗孝	4.80	0.22	4.1	３		IP	６		IP	１		IP	５		IP	６		IP	１		IP	４		IP	５		IP	２		G3	４		IP
+高木　　圭大	2.11	0.18	3.8	４		IP	５		IP	６		IP	４		IP	５	5	IP	６		IP	６		IP	５		IP	５		IP	転		IP

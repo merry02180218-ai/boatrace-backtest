@@ -1,0 +1,8 @@
+data=
+1	0
+小川　　時光	4.80	0.18	3.6	６		IP	４		IP	１		IP	６		IP	６		IP	１		IP	１		IP	６	2	IP	２		IP	５		IP
+宮地　　秀祈	3.90	0.18	4.4	６		IP	４		IP	２		IP	４		IP	２		IP	４		IP	３		IP	６		IP	５		IP	６		IP
+深山　　祐二	4.60	0.18	3.4	５		IP	２		IP	６		IP	３		IP	５		IP	３		IP	６		IP	２		IP	４		IP	２		IP
+久保田　凪紗	1.14	0.19	3.2	６		G3	５		G3	６	6	IP	６		G3	５		G3	Ｆ	6	IP	６	5	IP									IP
+石原　　凪紗	4.70	0.20	3.8	６		IP	２		IP	４		IP	６	6	IP	２		IP	２		IP	３		IP	４		G3	５		IP	４		IP
+小倉　　康典	3.10	0.18	3.9	４		IP	５		IP	５		IP	５		IP	６		IP	３		IP	２		IP	５		IP	５		IP	５		IP

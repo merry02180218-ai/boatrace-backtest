@@ -1,0 +1,8 @@
+data=
+1	0
+一瀬　　　明	9.00	0.18	3.3	４		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP
+柳橋　　宏紀	3.90	0.17	3.0	３		G3	４	3	G3	４		IP	２		IP	５		IP	６		IP	５		IP	４		G3	３		G3	５		IP
+北村　　征嗣	6.60	0.18	3.4	２		G3	３		G3	妨		IP	４		IP	３		G1	４	4	G1	１		IP	１	4	IP	１		IP	３		G3
+広次　　　修	3.70	0.16	3.0	５		IP	５		IP	４		IP	３		IP	３		IP	５		IP	６		IP	３	5	IP	５		IP	３		IP
+宮地　　博士	3.70	0.26	4.8	４		IP	５		IP	５		IP	６		IP	２		IP	５		IP	３	6	IP	３		IP	４		IP	５		IP
+竹腰　　正樹	3.40	0.19	4.3	３	5	IP	６		IP	５		IP	６		IP	６		IP	３		IP	３		IP	５		IP	４		IP	４	5	IP

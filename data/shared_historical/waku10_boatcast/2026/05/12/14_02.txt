@@ -1,0 +1,8 @@
+data=
+1	0
+樫葉　　次郎	5.00	0.12	2.6	２		IP	２		IP	２		IP	３		IP	１		IP	５		IP	５		IP	４		IP	６		IP	６	2	IP
+吉永　　泰弘	6.00	0.15	3.2	４		IP	３		IP	１	3	IP	３		IP	３	3	IP	２		IP	２	1	IP	４		IP	４		IP	４		IP
+松本　　弓雄	5.00	0.19	3.9	転		IP	２		IP	４		IP	４		IP	５		IP	４		IP	４		IP	１		IP	１		IP	４		IP
+河野　　　大	6.90	0.13	2.8	１		IP	４		IP	２		IP	３	5	IP	４	6	G2	２		IP	１		IP	２		IP	５		IP	２		IP
+村岡　　　賢	4.00	0.18	4.0	２		IP	５		IP	４	6	IP	４		IP	５		IP	４		IP	６		IP	２		IP	３		IP	６		IP
+林　　　美憲	5.00	0.15	2.5	５		G1	４		G1	３	2	IP	６	3	IP	４	2	IP	３	4	IP	５	4	G1	２	3	IP	２	4	IP	３	3	IP

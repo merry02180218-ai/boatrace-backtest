@@ -1,0 +1,8 @@
+data=
+1	0
+尾道　　佳諭	5.60	0.14	2.4	１		IP	４		IP	４		IP	４		IP	１		IP	１		IP	５		IP	５		IP	Ｆ		IP	１		IP
+高井　　駿弥	4.50	0.17	3.0	５		IP	６		IP	２		IP	４		IP	３		IP	５		IP	４		IP	３		IP	２		IP	４		IP
+浅井　　　翼	2.80	0.16	3.4	６		IP	６		IP	６		IP	２		IP	転		IP	４		IP	３		IP	５		IP	４		IP	６		IP
+仲本　　　舜	3.00	0.20	3.5	５		IP	６		IP	３	5	IP	５	5	IP	６	5	IP	５		IP	５		IP	４		IP	３		IP	４		IP
+中本　　大樹	5.00	0.14	3.0	２		IP	２		IP	５		IP	６		IP	３		IP	６		IP	３		IP	５		IP	１		IP	３		IP
+永松　　良教	2.10	0.23	5.8	４		IP	６		IP	６		IP	５		IP	５		IP	５		IP	６		IP	６		IP	６		IP	３		IP

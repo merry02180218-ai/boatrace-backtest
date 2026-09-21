@@ -1,0 +1,8 @@
+data=
+1	0
+西山　　貴浩	10.20	0.12	2.3	１		G1	１		G1	５		G1	１		G1	１		G1	１		SG	２		G1	１		SG	１		G1	１		G1
+山田　　康二	6.90	0.13	2.9	転		G1	１		IP	１		IP	３		IP	２		IP	６		IP	１		IP	１		SG	６		G1	３		SG
+河合　　佑樹	6.90	0.13	3.4	１		G1	５		G1	２		G1	５		IP	１		IP	４		IP	２	2	IP	２		G1	５		G1	２		IP
+茅原　　悠紀	7.70	0.14	2.8	４		G1	３		G1	２	5	IP	４		G1	３		SG	３		G1	２		G1	２		SG	２		SG	３		G1
+中村　　魁生	5.60	0.16	3.0	５		IP	４		IP	２		IP	３		IP	４		IP	１	4	IP	３		IP	５		IP	４		IP	３		IP
+佐々木　完太	6.20	0.20	4.6	２		G1	３	5	G1	５		G1	６		IP	２		G1	４		G1	５		G1	３		IP	１	5	IP	２	4	IP

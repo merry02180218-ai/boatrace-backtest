@@ -1,0 +1,8 @@
+data=
+1	0
+中辻　　崇人	7.44	0.16	4.8	１		IP	転		IP	１		IP	２		IP	１		IP	５		SG	１		G1	１		G1	５		G1	Ｆ		IP
+浅見　　昌克	7.11	0.13	3.1	４		IP	４		IP	１		IP	３		IP	欠		IP	３		IP	２		IP	３		IP	１		IP	１		IP
+石岡　　将太	6.00	0.20	4.1	３		IP	２		IP	２		IP	２		IP	５		IP	４		IP	４		IP	４		IP	４		IP	１		IP
+丸岡　　正典	5.70	0.16	3.6	１		IP	４		IP	２		IP	３		G2	６		G2	５		IP	２		IP	３		IP	４		IP	３		IP
+松村　　康太	6.00	0.22	4.4	３	4	IP	３		IP	５		IP	４		IP	１		IP	３		IP	１	4	IP	３		IP	４		IP	３		IP
+川野　　芽唯	3.90	0.15	3.6	３		IP	３		IP	４		IP	５		G1	６		IP	４		IP	４		G1	６		G1	５		IP	４		IP

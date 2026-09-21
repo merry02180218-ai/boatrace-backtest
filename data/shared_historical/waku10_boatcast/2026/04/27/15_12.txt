@@ -1,0 +1,8 @@
+data=
+1	0
+片岡　　雅裕	8.90	0.14	3.1	１		IP	５		G1	１		G1	２		G1	３		G1	１		G1	３		G1	１		IP	１		IP	１		IP
+石丸　　海渡	6.40	0.10	2.6	５		G1	２		G1	１		IP	２		IP	５		IP	２		IP	５		IP	２		IP	１		G1	６		G1
+川原　　祐明	8.00	0.14	2.6	２		IP	２		IP	１		IP	１		IP	５		IP	２		IP	１		IP	２		IP	３		IP	２		G1
+松尾　　夏海	5.60	0.15	2.2	１		IP	１		IP	２		IP	２		IP	３		IP	転		IP	６	5	IP	２		IP	６		G1	５		G1
+村越　　　篤	4.40	0.16	3.5	３		IP	６		IP	２		IP	５		IP	３		IP	２		IP	４		G3	５		IP	５		G1	４		IP
+中越　　博紀	2.60	0.21	4.2	４		IP	６		IP	４		IP	５		IP	５		IP	５		G3	６		G3	６		IP	３		IP	５		G1

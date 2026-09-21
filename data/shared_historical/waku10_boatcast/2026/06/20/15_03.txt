@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　勇輔	6.50	0.12	1.4	Ｆ		IP	１		IP	４		IP	１		IP	３		IP	３		IP	１		IP	１		IP	２		IP	６		IP
+仲本　　　舜	4.20	0.13	2.2	欠		IP	５		IP	５		IP	１		IP	４		IP	５		IP	２		IP	４		IP	５		IP	２		IP
+竹間　　隆晟	6.40	0.11	2.6	１		IP	２		IP	５		IP	３		IP	３		IP	４		IP	３		IP	２		IP	５		G1	１		G1
+石井　　伸長	5.00	0.16	2.7	２	5	IP	４		IP	４		IP	４		IP	２		IP	６		IP	３		IP	１		IP	６		IP	４	5	IP
+安河内鈴之介	5.10	0.14	3.0	６		IP	３		IP	６		IP	４		IP	２		IP	２		IP	５		IP	１		IP	２		IP	５		G2
+遠藤　　圭吾	2.90	0.19	4.7	４		IP	６		IP	３		IP	６		IP	４		IP	４	5	IP	５		IP	５		IP	６		IP	４		IP

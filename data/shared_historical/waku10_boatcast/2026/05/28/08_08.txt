@@ -1,0 +1,8 @@
+data=
+1	0
+永田　　　楽	5.30	0.27	4.2	１		IP	１		G3	６		IP	５		IP	１	5	IP	５		IP	４		IP	５	2	IP	４		G3	２		IP
+赤羽　　克也	5.90	0.17	3.4	５		IP	４		IP	４		IP	１		IP	１		IP	３		IP	１		IP	５		IP	１		IP	６	3	IP
+伊藤　　紘章	5.67	0.18	3.6	６		IP	５		IP	３		IP	４		IP	２		IP	１		IP	４		IP	転		IP	１		IP	３		IP
+近江　　翔吾	5.60	0.13	3.5	５		IP	２		IP	３		IP	２		IP	６		G1	２		G1	６		IP	３		IP	２		IP	４		IP
+高山　　弘斗	2.60	0.18	3.4	沈		IP	５		IP	２		IP	６	6	IP	４		IP	５		IP	５		IP	５	6	IP	４		IP	６		IP
+原田　　佑実	2.70	0.14	2.8	５		IP	６		IP	５		G3	６		IP	２		G3	６		G3	３		IP	４		IP	６		IP	６		IP

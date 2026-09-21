@@ -1,0 +1,8 @@
+data=
+1	0
+大場　　　敏	8.90	0.15	1.7	１		IP	１		IP	１		IP	６		IP	２		G3	１		G3	１		IP	１		IP	１		IP	１		IP
+大須賀　　友	6.70	0.19	3.4	３		IP	２		IP	１		IP	１		IP	Ｆ		IP	４		IP	２		IP	５		IP	１		IP	２		IP
+木村　　仁紀	6.20	0.10	2.3	３		IP	１		IP	３		IP	５		IP	１		G2	２		G2	５		IP	５		IP	４		G1	２		G1
+石塚　　久也	6.30	0.17	3.1	３		IP	４		IP	２		IP	６		IP	２		IP	１		IP	３	5	IP	２		IP	３		IP	３		IP
+権藤　　俊光	6.20	0.17	3.9	４		IP	１		IP	２		IP	３		IP	５		G2	５		G2	２		IP	２	3	IP	３		IP	３		IP
+平高　　奈菜	5.80	0.15	3.9	５		IP	３		IP	２	5	IP	５		IP	３		G2	６		G2	３		G2	５		SG	１	5	G3	１	5	G3

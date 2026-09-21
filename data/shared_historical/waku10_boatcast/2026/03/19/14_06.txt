@@ -1,0 +1,8 @@
+data=
+1	0
+尾崎　　雄二	8.00	0.13	3.0	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	４		G3	５		IP	１		IP	２		IP
+広瀬　　聖仁	6.00	0.21	3.9	２		IP	２		IP	５		IP	４		IP	４		IP	５		IP	２		IP	４		IP	１		IP	１		IP
+吉武　　真也	4.89	0.18	3.3	３		IP	転	4	IP	３		IP	５		IP	５		IP	４		IP	３		IP	３		IP	３		IP	３		IP
+渡邊　雄一郎	6.70	0.20	3.9	３		IP	４		IP	２		IP	３		IP	４		IP	３		IP	３		IP	３		IP	１		IP	１		IP
+渡邉　　俊介	4.70	0.14	2.1	３		IP	５		IP	５		IP	３		IP	６		IP	５		IP	３		IP	３		IP	４		IP	１	4	IP
+三浦　　裕貴	3.80	0.16	4.3	３		IP	５		IP	４		IP	３		IP	６		IP	６		IP	３		IP	３		IP	４		IP	５		G3

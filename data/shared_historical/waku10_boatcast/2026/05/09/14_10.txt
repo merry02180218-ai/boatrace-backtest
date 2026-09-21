@@ -1,0 +1,8 @@
+data=
+1	0
+井川　　大作	8.00	0.20	3.7	３		IP	２		IP	１		IP	３		IP	３		IP	２		IP	１		IP	２		IP	１		IP	２		IP
+山田　　祐也	7.00	0.15	4.0	２		G1	６	3	G1	１		SG	５		SG	２		G2	６		G1	２		IP	３		G1	２		IP	２		G1
+樫葉　　次郎	3.80	0.20	3.6	４		IP	５		IP	３		IP	５		IP	５		IP	３		IP	５		IP	４		IP	２		IP	５		IP
+河野　　　大	6.70	0.13	2.8	４		IP	２		IP	３	5	IP	４	6	G2	２		IP	１		IP	２		IP	５		IP	２		IP	２		IP
+垂水　　　悠	3.60	0.08	2.1	５		IP	４		IP	Ｆ		IP	３		IP	５	6	IP	６		IP	３		G3	１		IP	６		IP	４		IP
+小坂　　宗司	4.70	0.16	4.0	３	5	IP	２		G3	３	5	IP	３	5	IP	３		IP	５		IP	６		IP	４		IP	５		IP	３	5	IP

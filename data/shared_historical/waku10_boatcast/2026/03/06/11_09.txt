@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　ほのか	3.33	0.21	3.4	転		G3	５		G3	１		IP	６		G3	５		IP	５		IP	４		IP	４		G3	４		IP	６		IP
+櫻本　あゆみ	7.10	0.13	3.3	３		IP	３		IP	３		IP	２		IP	３		IP	３		IP	１		IP	２		G3	３		IP	２		IP
+長尾　　萌加	5.70	0.14	3.3	４		IP	２		IP	３		IP	４		IP	６		IP	４		IP	２		IP	２		G3	３		G3	２		IP
+原村　　百那	2.10	0.16	3.7	６		IP	６		IP	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP	６		IP	２		IP
+山川　美由紀	4.00	0.16	3.2	２		G3	６		G1	４		G3	３		G3	６		G3	３		G3	４		IP	３		G3	５		G3	６		G3
+柴田　　愛梨	2.80	0.30	5.2	４	5	IP	２		IP	５	5	IP	６		IP	６		IP	６		IP	６		IP	５		G3	５		G3	３		G3

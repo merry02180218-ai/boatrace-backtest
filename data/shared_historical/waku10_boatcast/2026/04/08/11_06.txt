@@ -1,0 +1,8 @@
+data=
+1	0
+宇土　　泰就	5.60	0.23	4.5	１		IP	１		IP	５	2	IP	６		IP	２		IP	６		IP	１		IP	２		IP	４		IP	５		IP
+大池　　佑来	5.90	0.13	2.8	３		IP	５		IP	３		IP	６		G1	２		G1	２		G1	１		IP	６		IP	２		IP	３		IP
+松本　　弓雄	6.00	0.16	3.3	４		IP	１		IP	１		IP	４		IP	１		IP	６		IP	３		IP	３		IP	６		IP	２		IP
+天野　　友和	6.40	0.17	3.0	４		IP	１		IP	４		IP	３	5	IP	３		IP	３	5	IP	３		IP	３		IP	２		IP	２		IP
+梅原　　祥平	3.50	0.16	2.4	５		IP	４	6	IP	４		IP	６		IP	５		IP	５	4	IP	５		IP	５		IP	１		IP	３		IP
+藤本　　佳史	2.50	0.22	4.7	６		G3	６	4	G3	６		G3	６		IP	６		IP	３		IP	５		IP	３	5	IP	４		IP	５		IP

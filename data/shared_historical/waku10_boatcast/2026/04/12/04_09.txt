@@ -1,0 +1,8 @@
+data=
+1	0
+津田　　裕絵	8.40	0.19	3.8	１		IP	２		IP	１		IP	５		IP	１		IP	２		IP	１		IP	３		IP	１		IP	１		IP
+岡本　翔太郎	4.40	0.12	1.9	２		IP	６		G3	４		IP	４		IP	３		IP	５		IP	３		IP	６		G3	２		IP	４		IP
+鳥居塚　孝博	4.20	0.17	3.2	５		IP	３		IP	２		IP	６		IP	３		IP	５		IP	３		IP	４		IP	６		IP	３		IP
+梶原　　　正	4.10	0.14	2.5	４		IP	６	6	IP	４		IP	４		IP	２		IP	５		IP	４		IP	５		IP	４		IP	２		IP
+田中　　辰彦	4.70	0.17	3.0	２	4	IP	エ		IP	４		IP	４		IP	５		G1	６	6	G1	３		IP	２		IP	１		IP	５		IP
+笠置　　博之	5.70	0.15	2.6	６	5	IP	２		IP	５		IP	３	5	IP	１	4	IP	３	4	IP	１	5	IP	１	5	IP	６		IP	６		IP

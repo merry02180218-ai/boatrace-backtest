@@ -1,0 +1,8 @@
+data=
+1	0
+吉川　　勇作	9.00	0.08	1.5	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	３		IP	１		IP	１		IP
+今出　　晋二	3.60	0.18	3.9	４		IP	２		IP	６		IP	５		IP	５		IP	６		IP	５		IP	３		IP	４		G3	３		G3
+田口　　節子	7.30	0.13	2.6	３		G1	６		IP	３		G1	２		IP	３	4	G3	２		IP	１		IP	２		IP	２		IP	１		IP
+坪口　　竜也	5.30	0.19	4.1	５		G3	４		G3	２		G3	３		IP	４		IP	６		IP	１		IP	２	5	IP	３		IP	４		IP
+西村　　　歩	4.70	0.19	3.2	３		IP	３		IP	２	6	IP	６		G3	４		G3	２		IP	２		G3	６		G3	４		G3	６		G3
+鈴木　　章司	3.50	0.22	4.6	４		IP	５		IP	４		IP	５		IP	２		IP	２	5	IP	６	5	IP	６		IP	６		IP	４		IP

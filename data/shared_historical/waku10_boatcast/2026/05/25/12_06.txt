@@ -1,0 +1,8 @@
+data=
+1	0
+渡邊　伸太郎	9.20	0.13	2.2	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	２		IP	１		IP	２		IP
+吉川　　喜継	6.80	0.16	3.0	３		IP	４		IP	３		IP	２		IP	２		IP	２		IP	１		IP	２		IP	５		IP	２		IP
+桑島　　和宏	5.90	0.13	2.7	１		G2	３		IP	４		IP	６		IP	１		IP	３		IP	２		IP	４		IP	２		IP	６		IP
+大西　　隆洋	3.10	0.18	3.7	５		IP	６		IP	３		IP	４		IP	５		IP	４		IP	２	5	IP	５		IP	６	5	IP	６		IP
+若林　　樹蘭	5.30	0.15	3.1	２		IP	３		IP	２		IP	５		IP	５	6	IP	５		IP	３		IP	６	4	IP	１		IP	２		IP
+出口　　飛龍	1.00	0.33	5.5	６		IP	６		IP																								IP

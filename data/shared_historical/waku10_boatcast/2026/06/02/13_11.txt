@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　魁生	8.40	0.15	3.9	１		IP	３		IP	１		IP	１		IP	１		IP	３		IP	１		IP	５		IP	１		IP	１		IP
+丹下　　　将	5.50	0.15	3.3	６		IP	２		IP	３		IP	１		IP	４		IP	５		IP	１	3	IP	４		IP	４	3	IP	３		IP
+山下　　智己	4.50	0.21	3.2	５		IP	１		IP	２		IP	５		IP	４		IP	２		IP	３		IP	６		IP	４		IP	Ｆ		IP
+三原　　　司	4.20	0.17	3.7	２		IP	３		IP	４		IP	６		IP	３		G3	４		G3	３		G3	５		IP	６		IP	４		IP
+向井田　佑紀	5.30	0.16	2.1	２	4	IP	３	4	IP	５		IP	３		IP	１	4	IP	５		IP	３		IP	２		IP	４	4	IP	６		IP
+松尾　　　祭	3.40	0.18	3.9	５		G2	５		G2	４		IP	６		IP	４		IP	６		IP	５		IP	５		IP	２		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+丹下　　　健	5.70	0.15	3.4	４		IP	２		IP	６		IP	１		IP	５		IP	２		IP	５		IP	１		IP	５		IP	１		IP
+長野　壮志郎	6.50	0.16	3.4	１		IP	２		IP	１		IP	２	3	G1	５	3	IP	４	3	IP	４	3	IP	４		IP	２		IP	３		IP
+森　　　智也	6.10	0.14	3.3	６		IP	１		IP	２		IP	５	4	IP	２		IP	３		IP	１		IP	４		IP	２		IP	４		IP
+山口　　　亮	4.67	0.17	3.7	３		IP	３		IP	６		IP	欠		IP	３		IP	６		G3	４		G3	２		IP	５		IP	２		IP
+鳥居塚　孝博	5.60	0.13	2.8	４		IP	３		IP	１	4	IP	４		IP	３		IP	２	4	IP	２		IP	５		IP	４		IP	４		IP
+本岡　　勝利	2.30	0.25	4.7	５		IP	６		IP	４		IP	６		IP	３		IP	５		IP	５		IP	５		IP	６	5	IP	５		IP

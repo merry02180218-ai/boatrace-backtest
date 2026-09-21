@@ -1,0 +1,8 @@
+data=
+1	0
+中里　　英夫	8.60	0.18	3.6	２		IP	２		IP	１		IP	１		IP	２		IP	３		IP	１		IP	２		IP	２		IP	１		IP
+北村　　寧々	5.60	0.15	2.8	６		IP	３		IP	６		IP	５		IP	２		IP	２		IP	２		IP	３		IP	２		G3	２		G3
+表　　　健太	3.70	0.17	4.1	２		IP	５		IP	６	4	IP	４		IP	１	4	IP	６		IP	６		IP	２		IP	落		IP	５	4	IP
+宮野　　　仁	3.70	0.22	5.2	６	5	IP	５		IP	３		IP	５		IP	４		IP	５	5	IP	３		IP	２		IP	４		IP	５		IP
+花本　　　剛	2.40	0.19	3.9	４		IP	５		IP	４		IP	５		IP	６		IP	６	6	IP	６	6	IP	３		IP	５		IP	６		IP
+渡邉　　雄朗	5.70	0.22	3.7	３		IP	６		IP	４	5	G1	４		G1	６		G1	１		IP	２		IP	１	5	IP	２		IP	５		IP

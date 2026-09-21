@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　寛久	8.90	0.16	2.7	４		G3	１		IP	２		IP	１		IP	１		IP	２		IP	１		G1	２		IP	１		IP	１		IP
+江本　　真治	4.90	0.17	3.4	３		IP	５		IP	４		IP	２		IP	２		G1	３		IP	６		IP	６		IP	２		IP	４		IP
+荒川　　健太	6.70	0.22	3.6	６		G3	２		IP	１		IP	１		IP	２		IP	３		IP	１		IP	４		IP	４	4	IP	３	4	IP
+松山　　将吾	5.30	0.15	2.8	１		IP	２		IP	５		G1	６		G1	６		IP	２		IP	４		IP	１		IP	３		IP	６		IP
+北川　　太一	5.30	0.10	2.7	２		IP	６		IP	３		IP	５		IP	２		IP	２		IP	２		G3	５		IP	５		IP	２	4	IP
+濱本　　優一	4.50	0.18	3.8	６		G3	１		IP	６		IP	３		IP	４		IP	３		IP	６		IP	４		IP	３		IP	５		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+松下　　一也	7.20	0.14	2.4	１		IP	１		IP	４		IP	２		IP	６		IP	２		IP	１		IP	６		IP	１		IP	１		IP
+柳瀬　　幹太	4.50	0.16	4.3	４		IP	２		IP	３		IP	４		IP	４		G3	４		IP	２		IP	４		IP	５		IP	６		IP
+金子　　賢志	6.20	0.13	2.4	６		G1	２	5	IP	５		IP	３		IP	１		IP	２		G1	１		IP	４		IP	３		IP	４		IP
+岩永　　節也	5.20	0.18	4.0	２	3	IP	４		IP	４		IP	２		IP	２		IP	３		IP	６		IP	６	6	IP	４		IP	２		IP
+平山　　智加	5.80	0.12	2.8	３		IP	３		IP	４		G2	５		G2	１	3	G3	４		G3	４		G3	３		IP	１	4	IP	５		G1
+直江　　健成	1.17	0.21	4.3	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP												IP

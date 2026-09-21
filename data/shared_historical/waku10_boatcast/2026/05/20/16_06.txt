@@ -1,0 +1,8 @@
+data=
+1	0
+真子　奈津実	7.60	0.16	2.4	２		IP	１		IP	１		IP	１		IP	６		IP	６		IP	１		IP	１		G3	３		G3	１		IP
+有賀　　達也	7.11	0.13	3.1	４		G1	２		G1	２		IP	２		IP	２		IP	５		IP	４		G1	１		G1	２		IP	転		IP
+森永　　　隆	7.20	0.15	2.5	３		IP	２		IP	２		IP	２		IP	３		IP	１		IP	２		IP	２	4	IP	６		IP	２		IP
+森　　　貴洋	4.10	0.21	3.3	４		IP	４		IP	５		IP	５		IP	６		IP	５		IP	４		IP	３		IP	２		IP	２	5	IP
+浦田　　信義	3.40	0.17	3.6	５		IP	５	6	IP	３		IP	５		IP	６		IP	４	6	IP	５		IP	６		IP	２		IP	３		IP
+宮野　　　仁	2.40	0.28	5.3	６		IP	４		IP	３		IP	６		IP	４		IP	４		IP	６		IP	６		IP	６		IP	６		IP

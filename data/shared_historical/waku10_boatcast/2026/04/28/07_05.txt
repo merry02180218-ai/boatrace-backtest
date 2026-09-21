@@ -1,0 +1,8 @@
+data=
+1	0
+大谷　　直弘	7.50	0.20	3.3	２		IP	３		IP	１		IP	１		IP	６		IP	３		IP	１		IP	１		IP	２		IP	３		IP
+平川　　香織	7.80	0.17	2.8	３		IP	３		IP	２		IP	２		IP	１	3	IP	１		IP	２		IP	２		G3	１		IP	４		G3
+後藤　　　浩	6.00	0.17	3.8	２		IP	２		IP	１		IP	２		IP	６		IP	２		IP	２		IP	５		IP	３		IP	６		IP
+齊藤　　　優	6.89	0.15	3.0	１		IP	３		IP	３		G3	３	5	G3	転		IP	４		IP	４		IP	１		IP	３		IP	１		IP
+稲田　　浩二	5.00	0.14	2.7	３		IP	６		G3	５		G1	４		G1	５		IP	５		IP	６	6	G1	３		G1	２		G1	１	6	G1
+眞崎　　武蔵	1.80	0.23	5.3	５		IP	６		IP	６		IP	６		IP	５		IP	３		IP	６		IP	６		IP	５		IP	６		IP

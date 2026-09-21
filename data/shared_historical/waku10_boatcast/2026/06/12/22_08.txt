@@ -1,0 +1,8 @@
+data=
+1	0
+細川　　裕子	8.30	0.21	3.4	４		G3	１		G3	１		IP	１		IP	２		IP	２		G2	１		IP	５		IP	１		IP	１		IP
+塩崎　　桐加	5.70	0.19	3.2	３		G3	１		G3	６		IP	２		IP	４		IP	５		IP	３		IP	４		IP	２		IP	２		IP
+沼田　　七華	2.40	0.15	3.9	４		IP	５		IP	５		IP	４		IP	６		IP	６		IP	６		G3	３		IP	５		IP	６		G3
+喜多　那由夏	3.70	0.23	3.3	３		IP	５		IP	２		G3	４	3	IP	６		IP	５		IP	５		IP	２		IP	５		IP	５		IP
+堀之内紀代子	3.60	0.14	3.1	６		G3	２		G3	５		G2	５		IP	３		IP	５		IP	３		IP	４		IP	６		IP	６		IP
+真子　奈津実	2.80	0.13	3.8	４		IP	５		IP	５		IP	４		IP	４		IP	６		IP	６	5	IP	５		G3	４		G3	４		IP

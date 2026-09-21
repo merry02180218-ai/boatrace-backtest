@@ -1,0 +1,8 @@
+data=
+1	0
+今坂　　晃広	7.80	0.15	3.3	１		IP	１		IP	５		IP	１		IP	４		IP	１		IP	１		IP	５		IP	１		IP	１		IP
+北川　　潤二	6.40	0.13	2.7	３		G3	２		G3	２		IP	４		IP	２		IP	３		IP	４		IP	２		IP	２		IP	４		IP
+西岡　　蒼志	6.80	0.18	3.2	２		IP	４		IP	１		IP	１		IP	１		IP	５		IP	３		IP	４		IP	２		IP	３		IP
+中野　　和裕	3.00	0.20	3.8	６		IP	６		IP	転		IP	欠		IP	４		IP	１		IP	４	6	IP	３		IP	５		IP	５		IP
+小野　　達哉	6.00	0.14	2.9	５		IP	６		IP	１		IP	２		IP	１		IP	５		IP	３		IP	５		IP	１		IP	２	6	IP
+高田　　　綾	2.30	0.24	4.6	６	5	IP	４		G3	３		G3	６		G3	５		IP	５		IP	４		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+重冨　　勇哉	6.00	0.19	3.1	５		IP	３		IP	１		IP	２		IP	４		IP	２		IP	３		IP	４		IP	５	2	IP	１		IP
+松本　　弓雄	4.60	0.23	4.5	６		IP	４		IP	５		IP	６		IP	４		IP	１		IP	４		IP	２		IP	４		IP	２		IP
+浦田　　信義	5.20	0.16	3.9	４		IP	３		IP	５		IP	２		IP	４		IP	２		IP	２		IP	３	4	IP	５		IP	４		IP
+中岡　　健人	6.80	0.20	2.9	３		IP	２		IP	３		IP	２		IP	１		IP	５		IP	２		IP	４		IP	１		IP	３		IP
+篠原　　飛翔	4.20	0.21	3.9	５		IP	３		IP	４		IP	３		IP	３		IP	４	4	IP	５		IP	３		IP	４		IP	５		IP
+深川　　真二	6.50	0.15	2.7	２	2	IP	２	2	G1	５	2	G1	３	2	IP	６	2	IP	１	2	IP	１	2	IP	５	2	IP	４	2	IP	１	2	IP

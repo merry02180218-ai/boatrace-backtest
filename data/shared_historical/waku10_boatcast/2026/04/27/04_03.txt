@@ -1,0 +1,8 @@
+data=
+1	0
+乙津　　康志	6.20	0.19	4.5	５		IP	１		IP	１		IP	５		IP	５		IP	２		IP	１		IP	４		IP	４		IP	１		IP
+井上　　遥妃	8.10	0.13	2.6	４		IP	１		IP	転		IP	２		G1	１		IP	１		IP	２		G1	１		G1	１		G3	３	3	G3
+金子　　　萌	7.40	0.13	2.5	５		IP	２		IP	４		IP	３		IP	３		IP	１	5	IP	２	2	IP	１		IP	１		IP	２		IP
+宇野　　弥生	5.30	0.10	1.9	３		G3	１		G3	４		G3	４		G3	５		IP	１		IP	６		IP	４		IP	１		IP	６	6	G1
+吉田　　宗弘	3.00	0.25	4.6	４	6	IP	６		IP	１	4	IP	５		IP	３		IP	６		IP	５		IP	６		IP	６		IP	５		IP
+宮城　　那菜	1.60	0.12	2.4	５		IP	６		IP	５	5	IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	４		IP

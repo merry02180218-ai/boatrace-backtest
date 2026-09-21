@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　和也	8.70	0.15	3.9	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	６		IP
+荒井　　輝年	6.40	0.13	2.8	３		IP	２	3	IP	４	4	IP	５		IP	１		IP	２		IP	５		IP	２		IP	３		IP	１		IP
+吉田　　翔悟	3.70	0.15	3.1	２		IP	５		IP	６		IP	５		IP	５		IP	４		IP	４		IP	２		IP	５		IP	４		IP
+平野　　和明	5.20	0.16	3.1	３		IP	３		IP	５		IP	４		IP	３		IP	３		IP	３		IP	２		IP	３		IP	５		IP
+佐藤　　博亮	6.50	0.14	2.5	５	6	IP	４	3	IP	２		IP	３		IP	２		IP	５		IP	１		G1	２		IP	２		IP	２		IP
+龍田　　真白	2.50	0.15	2.3	４		IP	６		IP	５		IP	５		IP	４		IP	５		IP	４		IP	６		IP	６		IP	４		IP

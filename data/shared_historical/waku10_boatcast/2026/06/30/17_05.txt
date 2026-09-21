@@ -1,0 +1,8 @@
+data=
+1	0
+中　　　亮太	9.10	0.12	2.2	１		IP	２		G2	１		IP	２		G2	３		G2	２		G3	２		G3	１		IP	１		IP	１		IP
+浦田　　晃嗣	3.70	0.17	3.3	４		IP	３		IP	３		IP	６		IP	５		IP	３		IP	５		IP	４		IP	５		IP	４		IP
+伊久間　陽優	5.50	0.11	1.9	３		IP	３		IP	３		IP	４		IP	２		IP	６		IP	４		IP	２		IP	２		IP	４	5	IP
+池田　　浩美	4.90	0.15	3.3	３		IP	５		IP	４		G3	２		G3	４		IP	３		G3	１		IP	５	3	IP	３		IP	６		IP
+泥谷　　一毅	4.40	0.19	4.3	４		IP	５		IP	５		IP	４	4	IP	６		IP	１		IP	２	2	IP	６		IP	３	4	IP	４		IP
+下寺　　秀和	5.70	0.15	3.9	３		IP	３		IP	６		IP	１	4	IP	２		IP	３	5	IP	３		IP	２		IP	５		IP	４	5	IP

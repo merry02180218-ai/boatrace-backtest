@@ -1,0 +1,8 @@
+data=
+1	0
+本岡　　勝利	6.00	0.19	3.6	Ｆ		IP	１		IP	５		IP	４		IP	１		IP	１		IP	３		IP	４		IP	１		IP	４		IP
+野口　　勝弘	7.80	0.13	2.9	４		IP	５		IP	１		IP	１		IP	２		IP	１		G3	２		IP	１		IP	１		IP	３		IP
+高野　　哲史	7.60	0.16	3.2	２		IP	２		IP	２		IP	２		IP	２		IP	５		IP	１		IP	３		IP	１		IP	３		G1
+篠崎　　元志	5.90	0.17	3.7	６	3	SG	２	3	IP	５		IP	２	3	IP	２		IP	４		G1	１		G3	５	5	G1	４		G1	４		G1
+信濃　　由行	2.60	0.18	3.8	１		IP	６		IP	４		IP	５		IP	５		IP	６		IP	５		IP	６	4	IP	６		IP	５		IP
+山口　　隼人	1.38	0.23	5.0	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	５		IP	６		IP						IP

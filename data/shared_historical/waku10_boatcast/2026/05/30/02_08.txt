@@ -1,0 +1,8 @@
+data=
+1	0
+宮地　　博士	7.00	0.17	3.2	３		IP	４	2	IP	２		IP	２		IP	３		IP	１		IP	４		IP	１		IP	２		IP	３		IP
+有賀　　達也	7.20	0.13	3.0	２		IP	２		IP	４		G1	２		G1	２		IP	２		IP	２		IP	５		IP	４		G1	１		G1
+澤　　　大介	3.60	0.17	4.1	１		G3	４		G3	２	4	IP	５		IP	６		IP	転		IP	４		IP	６		IP	５		IP	４		IP
+倉富　　大誠	5.80	0.15	3.4	１		IP	２		IP	５		IP	４		IP	１		IP	５		IP	１		IP	４		IP	３		IP	５		IP
+寺本　　昇平	4.10	0.19	3.7	４	2	IP	１		IP	４	4	IP	５		IP	４		IP	３		IP	５		IP	６		IP	５		IP	３		IP
+山田　　雄太	2.70	0.15	2.9	５		IP	５		IP	４	5	IP	４		IP	４		IP	５		IP	５		IP	４		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+村越　　　篤	7.40	0.15	3.0	１		IP	１		IP	６		IP	１		IP	１		IP	１		IP	６		IP	５		IP	１		IP	１		IP
+石川　　哲秀	3.90	0.13	2.2	４		IP	４		IP	６		IP	４		IP	６		IP	３		IP	２		IP	６		IP	２		IP	５		IP
+松本　　真広	5.70	0.16	2.9	４		IP	４		IP	３		IP	６		IP	３		IP	２		IP	２		IP	１		IP	２		IP	５		IP
+鈴木　　柊介	2.70	0.13	2.4	５		IP	５		IP	６	6	IP	６		IP	４		IP	６		IP	５	5	IP	５	6	IP	２		IP	４		IP
+中北　　将史	2.60	0.17	3.2	５		IP	６		IP	５		IP	６		IP	５		IP	６		IP	５		IP	４		IP	１		IP	６		IP
+丹下　　　将	2.50	0.17	4.3	６		IP	６	5	IP	４		IP	５		IP	３		IP	４		IP	６		IP	５		IP	５		IP	５		IP

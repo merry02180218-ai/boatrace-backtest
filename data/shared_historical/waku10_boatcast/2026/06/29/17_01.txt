@@ -1,0 +1,8 @@
+data=
+1	0
+廣瀬　　将亨	8.60	0.17	2.9	１		IP	１		IP	１		IP	１		IP	１		IP	６		G2	２		IP	３		IP	１		IP	１		IP
+中村　　守成	5.30	0.20	4.7	５		IP	４	3	IP	２		IP	４		IP	３		IP	６		IP	２		IP	２		IP	２		IP	４		IP
+鈴木　　成美	3.80	0.12	2.3	４		IP	６		IP	６		IP	２		G3	３		IP	５		IP	４		IP	４		IP	５		IP	３		IP
+村岡　　　賢	4.50	0.19	4.3	６		IP	６		IP	４		IP	３		IP	１		IP	６		IP	３		IP	３		IP	５	5	IP	２	3	IP
+石田　　政吾	2.80	0.16	3.1	６		IP	４		IP	３		IP	６		IP	４	6	IP	６		IP	６		IP	６		IP	６		IP	２		IP
+浦田　　晃嗣	3.20	0.19	3.6	４		IP	５		IP	６		IP	６		IP	６		IP	６		IP	１		IP	３		IP	５		IP	４		IP

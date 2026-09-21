@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　太陽	3.33	0.22	3.7	６		IP	３		IP	４		IP	４		IP	６		IP	６		IP	６		IP	５		IP	欠		IP	１		IP
+廣瀬　　　凜	8.10	0.15	2.8	３		G2	４		IP	１		IP	１		IP	３		IP	２		IP	２		IP	２		IP	１		IP	１		IP
+井上　　慧人	4.00	0.19	3.6	２		IP	５		IP	６		IP	３	6	IP	５	4	IP	２		IP	６		IP	３		IP	５		IP	４		IP
+大月　　遊雅	4.40	0.28	3.9	３		IP	６		IP	５	5	IP	６	5	IP	３	3	IP	１		IP	２		IP	５		IP	４		IP	４		IP
+遠藤　　圭吾	3.10	0.18	4.0	３		IP	６	6	IP	２		IP	３		IP	６		IP	４		IP	５		IP	６	6	IP	６		IP	６		IP
+中野　　希一	5.10	0.12	3.3	４		IP	２		IP	４		IP	２		IP	５		IP	２		IP	３		IP	３	5	IP	６		IP	５		G1

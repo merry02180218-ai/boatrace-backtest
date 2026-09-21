@@ -1,0 +1,8 @@
+data=
+1	0
+香川　　素子	8.70	0.17	2.5	１		G3	１		G3	４		IP	１		IP	１		IP	１		IP	１		G3	１		IP	２		IP	４		G1
+山崎　小葉音	5.80	0.13	2.2	３		G3	１		G3	４		IP	２		IP	４		IP	４		IP	５		IP	２		IP	５		IP	１		IP
+永田　　　楽	4.60	0.21	3.4	１		G3	１		G3	１		IP	５		IP	６	6	IP	４	4	IP	４	6	IP	５		IP	６		IP	５		IP
+原　　加央理	7.80	0.14	1.9	３		G3	１		IP	３	3	IP	２		IP	３		IP	１		IP	２		IP	１		IP	３		IP	２		G3
+石原　　凪紗	3.50	0.16	3.9	２		G3	５		IP	４		IP	５		IP	６		IP	４		IP	６		IP	２		IP	４		IP	６	6	IP
+後藤　　美翼	4.30	0.24	5.2	３		G3	３	5	IP	４		IP	５		IP	４		G3	５		G3	３		IP	３	5	IP	６		IP	３		IP

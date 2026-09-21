@@ -1,0 +1,8 @@
+data=
+1	0
+丸野　　一樹	9.90	0.14	3.3	５		G1	１		SG	１		G1	１		G1	１		IP	２		IP	１		G1	１		G1	１		G1	１		G1
+常住　　　蓮	8.60	0.13	2.2	２		G1	２		IP	３		IP	２		SG	２		SG	２		IP	１		IP	１		IP	４		G1	３		G1
+鶴本　　崇文	6.30	0.17	3.3	３		IP	１		IP	５		IP	３		IP	１		IP	６		IP	１		G1	３		IP	６		IP	１		IP
+塩田　　北斗	5.60	0.13	2.7	４		G1	５		G1	１		G1	３		G1	５		G1	４		G1	５		G1	２		IP	２		G1	５		IP
+重木　　輝彦	6.10	0.18	3.7	２		G1	２	4	IP	５		G1	５		IP	２		IP	１		G1	２		G1	３		G1	５		IP	５		IP
+畑田　　汰一	4.90	0.17	3.7	４	5	G1	６		G1	４		G1	４		IP	３		IP	４		IP	１	4	IP	３		IP	６		IP	３	3	IP

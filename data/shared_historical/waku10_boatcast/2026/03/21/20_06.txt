@@ -1,0 +1,8 @@
+data=
+1	0
+森安　　弘雅	6.50	0.22	4.4	１		IP	３		IP	３		IP	１		IP	６		IP	３		IP	１		IP	Ｆ		IP	２		IP	２		IP
+椎名　　　豊	7.30	0.15	2.7	１		IP	４		G1	２		IP	１		IP	３		G1	３		G1	５	3	IP	２		IP	３		IP	１		IP
+山本　　英志	6.00	0.17	3.9	３		IP	２		IP	２		IP	１		IP	３		IP	６		IP	５		IP	６		IP	２		IP	２		IP
+日隈　　　茜	1.00	0.17	3.8	６	5	IP	６	5	IP	６		IP	６		IP	６		IP	６	6	IP	６		IP	６		IP	６		IP	６		IP
+村田　　修次	5.30	0.17	3.9	２		IP	６		IP	４		IP	１		IP	４		IP	４		IP	４		IP	３		IP	４		IP	３		IP
+森林　　　太	2.80	0.27	4.9	６		IP	５		IP	６		IP	４		IP	４		IP	４	5	IP	５		IP	４		IP	５		IP	５		IP

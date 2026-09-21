@@ -1,0 +1,8 @@
+data=
+1	0
+川上　　聡介	7.20	0.14	2.2	１		IP	３		IP	１		IP	Ｆ		IP	１		IP	１		IP	２		IP	２		IP	転		IP	１		IP
+後藤　　隼之	4.30	0.16	3.6	４		IP	５		IP	５		IP	３		IP	１	1	IP	５		IP	６		IP	５	3	IP	２	3	IP	３		IP
+柴田　　朋哉	7.20	0.14	2.8	２	4	IP	２		IP	３		IP	１		IP	４		IP	４		IP	２		IP	３		IP	２		IP	１		IP
+田中　　孝明	3.00	0.20	5.0	３		IP	５		IP	６		IP	５		IP	５		IP	５		IP	４		IP	６		IP	３		IP	４		IP
+中曽　　瑠華	2.70	0.22	3.8	５		IP	６	6	IP	５		IP	６		IP	６		IP	４	6	IP	４	4	IP	４		G3	４		G3	４	6	IP
+菅野　はやか	1.40	0.23	5.4	５		G3	５		G3	６		G3	５		IP	６		IP	６		IP	６		G3	５	5	IP	６		IP	６		IP

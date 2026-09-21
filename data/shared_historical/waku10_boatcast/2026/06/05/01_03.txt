@@ -1,0 +1,8 @@
+data=
+1	0
+竹之内　　極	9.40	0.15	2.5	１		IP	２	2	IP	１		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP
+小野　　信樹	3.30	0.18	3.9	６		IP	４		IP	４		IP	５		IP	５		IP	２		IP	６		IP	６		IP	５		IP	２		IP
+塚越　　海斗	6.70	0.15	2.3	１	4	G3	１	2	IP	２		IP	２	1	IP	２		IP	４		IP	６		IP	３		IP	３		IP	３		IP
+下出　　卓矢	4.60	0.16	3.0	６	6	IP	６		IP	１		IP	２		IP	３		IP	５		IP	４		IP	４	5	IP	２		IP	５		IP
+牧　　　宏次	4.00	0.17	3.3	１		IP	３		IP	５		IP	２		IP	６		IP	２		IP	５		G3	６		IP	６		IP	６		IP
+中野　　孝二	2.30	0.20	5.0	２		IP	５	5	IP	５		IP	６		IP	５		IP	６		IP	５		IP	５		IP	６		IP	５	5	IP

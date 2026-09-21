@@ -1,0 +1,8 @@
+data=
+1	0
+國弘　　翔平	5.90	0.15	3.2	３		IP	１		IP	５		IP	４		IP	１		IP	５		IP	１		IP	１		IP	４		IP	６		IP
+松竹　　大輔	6.40	0.15	3.6	３	3	IP	１		IP	２	3	IP	４		IP	５		IP	３		IP	２		IP	１		IP	２		IP	５		IP
+廣瀬　　真也	5.60	0.15	2.5	５		IP	３		IP	３		IP	２		IP	１		IP	４		IP	３		IP	５		IP	４		IP	２		IP
+佐藤　　　悠	5.30	0.16	3.0	１		IP	１	5	IP	１		IP	４		IP	４		IP	Ｆ		IP	６		IP	２		IP	４		IP	５		IP
+前原　　大道	6.80	0.16	3.7	４		IP	２		G1	５		G1	１		IP	４		IP	４		IP	１		IP	２		IP	１		IP	３		IP
+伊倉　　　光	3.40	0.23	4.1	６		IP	５		IP	５		IP	５		IP	５	5	IP	４		IP	６		IP	４		G3	２		IP	２		IP

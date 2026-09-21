@@ -1,0 +1,8 @@
+data=
+1	0
+木下　　翔太	9.50	0.16	3.5	１		G2	１		IP	２		IP	１		G2	１		G2	４		IP	１		IP	１		IP	１		IP	１		IP
+寺田　　　祥	5.90	0.13	2.8	３		IP	２		IP	１		IP	５		G2	３		G2	１		IP	６		G1	６		G1	２		IP	６		G1
+秋山　　広一	5.90	0.17	3.2	２		G2	４		G2	４		IP	６		IP	４		IP	１		IP	２		IP	５		IP	１	4	G3	３		IP
+田村　　隆信	4.90	0.13	3.0	５		G1	４		G1	６		G2	５	3	IP	２		IP	６	3	IP	５		IP	４		IP	１		IP	１		IP
+重成　　一人	4.30	0.14	3.5	５	6	IP	５	6	IP	２		IP	４	6	IP	６		IP	５		IP	６		G1	１		IP	４		IP	２		IP
+上田　　龍星	4.90	0.18	3.6	５		G2	５		G1	１		G2	２	5	IP	６		IP	６		IP	２		IP	２		IP	５		G1	５		G1

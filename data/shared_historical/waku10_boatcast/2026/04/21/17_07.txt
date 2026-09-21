@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　将吉	8.90	0.13	2.7	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP	５		IP	１		IP	１		IP
+君島　　秀三	6.80	0.13	2.7	２		IP	３		IP	１		IP	２		IP	４		IP	２		IP	２		IP	４		G1	５		G1	２		IP
+辻　　　栄蔵	7.00	0.16	2.2	欠		IP	１		IP	２		IP	２		G2	３		G1	３		IP	４		G1	２		IP	２		IP	２		G1
+寺田　　千恵	5.60	0.13	1.9	４		G3	３		G3	３		G3	４		G3	３		G3	２		G3	５		G1	５		G1	３		G3	１		IP
+湯川　　浩司	5.30	0.12	2.1	４	2	G1	６		G1	２		G2	４		G2	２	4	IP	３		G1	５		G1	４		G1	３		G1	６		IP
+寺田　　　祥	4.70	0.13	2.8	４	5	IP	６		IP	１	5	IP	４		IP	３	4	G1	４	5	IP	４		G1	４	4	IP	６		G1	３		IP

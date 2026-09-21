@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　貴志	6.30	0.19	4.1	６		IP	１		IP	３		IP	３		IP	４		IP	２		IP	１		IP	３		IP	１		IP	５		IP
+松田　　隆司	4.40	0.13	2.7	６		IP	６		IP	６		IP	３		IP	３		IP	２		IP	２		IP	３		IP	３		IP	６		IP
+堀之内紀代子	6.20	0.16	2.8	３		IP	２		IP	２		G3	４		G1	４		G3	４		IP	４		IP	１		IP	２		IP	４		IP
+佐々木　完太	6.10	0.18	3.8	３		IP	１	5	IP	２		G1	５		G1	３		G1	２		G1	５	5	IP	５		G1	４	3	IP	２		IP
+赤松　　咲香	1.40	0.17	4.1	６		IP	６		IP	６		IP	６		IP	６		IP	５		G3	６		G3	４		IP	６		IP	６		IP
+村岡　　　賢	3.10	0.17	3.6	４	5	IP	４		IP	４		IP	６		IP	５		IP	４	5	IP	６		IP	４		IP	４		IP	６		IP

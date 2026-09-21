@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　宏典	6.40	0.21	4.5	５		IP	５		IP	５		IP	１		IP	１		IP	５		IP	１		IP	２		IP	１		IP	２		IP
+大庭　　元明	4.50	0.20	3.7	２		IP	４		IP	５		IP	４		IP	６		IP	３		IP	３		IP	２		IP	５		IP	４		IP
+木下　　大將	4.60	0.16	3.5	４	4	IP	３		IP	１		IP	６		IP	５		IP	２		IP	２		IP	５		IP	４		IP	６		IP
+水原　　　慎	3.10	0.22	2.7	５		IP	６		IP	２	3	IP	５		IP	６		IP	６		IP	５		IP	４	5	G3	５		IP	２		IP
+藤井　　　徹	2.90	0.21	4.1	５		IP	３		IP	５		IP	６		IP	５		IP	４		IP	６		IP	３		IP	４		IP	６		IP
+白神　　　優	5.40	0.19	3.4	４	5	G1	６		G1	６		G1	Ｆ		G1	２		IP	２	5	IP	３		IP	２		IP	２	5	IP	３		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+野田部　宏子	6.60	0.16	3.1	５		IP	３		IP	４		IP	１		IP	４		IP	１		IP	２		IP	１		IP	５		IP	１		IP
+入澤　　友治	5.00	0.18	3.2	４		IP	４		IP	２		IP	２		IP	６	3	IP	６		IP	３		IP	５		IP	１		IP	３		IP
+大澤　　風葵	7.67	0.14	2.8	６	4	IP	１		IP	１		IP	２		IP	不		IP	２		IP	２		IP	１		IP	３		IP	３		IP
+折下　　寛法	4.80	0.13	1.9	３		IP	３		IP	５		IP	３		IP	２		IP	４		G3	５		IP	５		IP	３		IP	３	3	G3
+谷島　　咲希	1.00	0.20	4.5	６	6	IP	６	6	IP																								IP
+渡邉　　俊介	6.20	0.17	3.9	２		IP	４		IP	１		IP	３		IP	３	5	IP	３		IP	２		IP	４		IP	２		IP	５		IP

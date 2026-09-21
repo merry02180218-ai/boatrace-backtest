@@ -1,0 +1,8 @@
+data=
+1	0
+白水　　勝也	9.60	0.13	2.6	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+松本　　弓雄	5.00	0.22	4.3	３		IP	１	3	IP	６		IP	４		IP	５		IP	６		IP	４		IP	１		IP	４		IP	２		IP
+赤峰　　和也	2.50	0.17	2.4	６		IP	５		IP	６	6	IP	６		IP	５		IP	６		IP	３		IP	６		IP	３		IP	４		IP
+角浜　　　修	3.30	0.18	4.0	６		IP	１		IP	４		IP	５		IP	１	3	IP	５		IP	６		IP	６		IP	６		IP	６		IP
+高野　　心吾	2.20	0.22	4.3	４		IP	５		IP	６		IP	４		IP	５		IP	６		IP	４		IP	５		IP	６		IP	６		IP
+小澤　　　学	3.00	0.31	5.7	５		IP	３		IP	５	5	IP	６		IP	４		IP	３		IP	６		IP	５		IP	４		IP	５		IP

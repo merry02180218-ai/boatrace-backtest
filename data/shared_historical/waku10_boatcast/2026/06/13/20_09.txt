@@ -1,0 +1,8 @@
+data=
+1	0
+前田　　聖文	8.40	0.16	3.0	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	４		IP	６		IP	１		G1	１		IP
+松田　　憲幸	3.60	0.21	4.9	５		IP	５		IP	２		IP	５		IP	５		IP	３		IP	３		IP	４		IP	５		IP	５		G3
+金子　　　萌	7.90	0.12	2.2	１		IP	１		IP	１		IP	１		IP	４		IP	１		IP	２		IP	５		IP	２		IP	４		IP
+岩橋　　裕馬	3.50	0.15	2.7	５	5	IP	５	5	IP	２		IP	５		G3	４		IP	６		IP	２		IP	５		IP	４		IP	５		IP
+尾崎　　雄二	4.90	0.17	3.7	６		IP	４		IP	１		IP	４		IP	４		IP	２		IP	４		IP	５		IP	１		IP	５		IP
+竹田　　吉行	2.60	0.16	3.8	６		IP	５	5	IP	４		IP	５		IP	５		IP	４		IP	５		IP	４		IP	６		IP	４		IP

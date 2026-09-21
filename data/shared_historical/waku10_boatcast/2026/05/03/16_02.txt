@@ -1,0 +1,8 @@
+data=
+1	0
+金田　　幸子	7.50	0.13	2.9	６		IP	１		G3	２		G3	２		G3	１		IP	３		IP	１		IP	４		IP	２		IP	１		IP
+峰重　　力也	5.00	0.11	2.0	４		IP	２		IP	４		IP	３		IP	５		IP	４		IP	２		IP	４		IP	４		IP	３		IP
+岡瀬　　正人	5.10	0.18	4.4	６		IP	２		IP	２		IP	５		IP	５		IP	４		IP	２		IP	３		IP	２	4	IP	４	4	IP
+諏訪　　玲奈	2.90	0.17	3.7	３		IP	４		IP	４		IP	６	6	IP	５	6	IP	４		IP	５		IP	４		IP	６		IP	６	5	IP
+木山　　和幸	3.70	0.19	3.7	６		G3	５		IP	４		IP	５	4	IP	３		IP	３		IP	１		IP	６	6	IP	４		G3	６		G3
+松下　　誉士	3.00	0.22	3.8	４		IP	６		IP	３		IP	５		IP	５		IP	５		IP	４		IP	３		IP	５		IP	６		IP

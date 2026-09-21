@@ -1,0 +1,8 @@
+data=
+1	0
+新田　　智彰	6.50	0.16	3.0	１		G3	２		IP	２		IP	３		IP	３		IP	６		IP	２		IP	５		IP	１		IP	３		IP
+東口　　　晃	5.30	0.20	4.0	４		IP	６		IP	１		IP	３		IP	４		IP	６		IP	２		IP	１		IP	６		IP	２		IP
+真庭　　明志	6.40	0.17	2.5	６		IP	３		IP	２		IP	１		IP	６		IP	１		IP	２		IP	３		IP	３	2	IP	２		IP
+松尾　　　祭	4.40	0.14	4.0	２		IP	３		IP	３		G2	５		G2	５		G2	３		G2	５		IP	６		IP	６		IP	３		IP
+平尾　　崇典	5.20	0.12	3.1	６		IP	１	4	IP	５		G2	５		IP	３		IP	５		G1	４		G1	３		IP	２		IP	２		IP
+渡邊　　哲也	1.30	0.25	5.2	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP

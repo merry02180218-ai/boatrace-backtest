@@ -1,0 +1,8 @@
+data=
+1	0
+篠崎　　仁志	10.30	0.13	2.2	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1	１		G1	２		G1	１		G1
+関　　　浩哉	6.20	0.18	4.1	１		IP	１		IP	４		G1	２		G1	６		SG	６		SG	３		G1	２		G1	５		G1	５		G1
+平本　　真之	6.60	0.13	2.3	３		IP	２		IP	１		IP	５		G1	５		G1	３		G1	３		SG	６		SG	２		IP	２		G1
+石本　　裕武	6.80	0.13	2.4	３		IP	２		IP	２		G1	１		G1	１		IP	４		IP	６		G1	６		G1	２		IP	２		IP
+仲谷　　颯仁	5.30	0.17	4.5	５		IP	２		G1	３		IP	４		IP	５		SG	３	3	SG	４		G1	３		G1	５		G1	４	6	G1
+今垣　光太郎	4.56	0.17	4.2	５		IP	３	4	IP	５		G1	５		G1	２		G1	欠		G2	５		G1	３		G1	６		G1	３		IP

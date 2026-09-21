@@ -1,0 +1,8 @@
+data=
+1	0
+廣瀬　　真也	8.20	0.13	1.7	５		IP	１		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	２		IP
+堂原　　洋史	4.60	0.19	2.9	２		IP	４		IP	５		IP	３		IP	４		IP	４		IP	３		IP	３		IP	５		IP	４		IP
+関　　　裕也	3.80	0.16	3.4	６		IP	３		IP	３		IP	５		IP	５		IP	６		IP	２		IP	３		IP	４		IP	５		IP
+芹澤　　克彦	4.90	0.13	2.8	５		IP	６		IP	２		IP	５		IP	５		IP	１		IP	４		IP	４		IP	２		IP	２		IP
+市川　　哲也	5.44	0.13	2.3	６	4	IP	２		IP	５		IP	３		IP	３		IP	２		IP	転		IP	１	3	IP	３		G3	５		IP
+相原　　利章	3.70	0.11	1.7	５		IP	５		IP	５		IP	６		IP	３		IP	４	5	IP	３		IP	４		IP	３		IP	４		IP

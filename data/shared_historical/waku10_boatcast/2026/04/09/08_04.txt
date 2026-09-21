@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　永梧	5.00	0.19	2.3	１		IP	２		IP	２		IP	落	2	IP	５		IP	６		IP	１		IP	６		IP	５		IP	２		IP
+渡邉　　睦広	5.80	0.18	2.4	６		IP	５		IP	３		IP	１		IP	２	3	IP	１		IP	２		IP	２		IP	５		IP	５		G3
+水口　　由紀	3.67	0.18	4.5	４		IP	６		G3	３		G3	２		IP	４		IP	６	4	IP	転		G3	６		IP	２		G3	転		IP
+岡村　　　仁	5.40	0.13	2.2	４		IP	２		G3	２		IP	２		IP	６		G1	５		G1	２		G1	５		G1	５		G1	３		IP
+西村　　　歩	5.70	0.23	3.7	２		G3	３		G3	５		IP	３		IP	３		IP	２	6	IP	６		G3	４		G3	２		IP	２		G3
+中岡　　健人	2.90	0.19	4.7	６		IP	６		IP	４		IP	４		IP	４		IP	３		IP	５	5	IP	６		IP	４		IP	５		IP

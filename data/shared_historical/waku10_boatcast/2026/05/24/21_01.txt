@@ -1,0 +1,8 @@
+data=
+1	0
+鶴田　　勇雄	9.50	0.12	2.6	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	２		G3	１		G3	１		IP	２	2	IP
+村田　　　敦	3.60	0.15	2.9	６		IP	３		IP	３		IP	６		IP	３		IP	６		IP	５		IP	４		IP	２	3	IP	６		IP
+深澤　　達徳	4.50	0.17	3.4	３		IP	５		IP	３		G3	２	4	G3	４		IP	６		IP	４		IP	３		IP	５		IP	３		IP
+服部　　　剛	3.60	0.22	4.3	５		IP	５		IP	１		IP	２		IP	５		IP	６		IP	４		IP	５		IP	４		IP	６		IP
+羽野　　　諒	4.10	0.17	1.8	５		IP	３		IP	２		IP	４		IP	３		IP	５		IP	５		IP	６		IP	４		IP	３		IP
+西岡　　育未	2.50	0.18	3.9	６		IP	６		IP	６		IP	４		G3	５	5	G3	２		G3	６		IP	６		IP	４		G3	５		G3

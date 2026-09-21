@@ -1,0 +1,8 @@
+data=
+1	0
+犬童　　千秋	6.00	0.23	4.1	５		IP	２		IP	３		G3	２		IP	５		G3	５	2	IP	１		IP	２		IP	２		G3	３		IP
+五反田　　忍	4.60	0.18	2.9	３	3	IP	３		IP	３		IP	２	3	IP	４		IP	２		IP	６		IP	５		IP	４		IP	６		IP
+松本　　　怜	5.60	0.19	2.7	３		IP	４	4	IP	３		IP	３		IP	１		IP	３		IP	１		IP	４		IP	５		IP	５		IP
+新田　　芳美	3.90	0.19	3.2	４	3	IP	４		IP	３		IP	４		IP	６		G1	５		G1	３		IP	２		IP	６		IP	６		IP
+小畑　　楓夏	1.00	0.16	2.8	６	6	IP	６	6	IP	６	6	IP	６		IP	６		IP	６	6	IP	６	6	IP	６		IP	６	6	IP	６	6	IP
+関野　　　文	3.90	0.14	2.6	４		IP	５		IP	５	5	G3	３	5	G3	３		IP	６		IP	５		IP	４		G3	２	5	IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　友和	7.90	0.11	1.8	１		IP	１		IP	１		IP	２		IP	４		IP	１		IP	２		IP	１		IP	６		IP	２		IP
+中野　　希一	6.60	0.12	2.8	６		IP	１		IP	２		IP	２		IP	２		IP	２		IP	１		IP	４		IP	５		G1	４		IP
+池本　　輝明	4.40	0.17	3.5	５		IP	５		IP	５		IP	１	4	IP	４		IP	４		IP	２		IP	３		IP	５		IP	４		IP
+中野　　和裕	3.40	0.22	3.9	５		IP	３		IP	６		IP	６		IP	転		IP	欠		IP	４		IP	１		IP	４	6	IP	３		IP
+占部　　一真	2.80	0.15	2.9	２		IP	３		IP	６		IP	４	4	IP	６		IP	６		IP	５		IP	５		IP	６		G3	５		IP
+堀本　　和也	3.40	0.13	2.9	５	5	IP	３		IP	５	5	SG	６		G1	５		G1	６		G1	５		G1	３	5	G1	４		G3	６		G3

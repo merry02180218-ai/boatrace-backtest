@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　魁生	9.00	0.15	3.9	１		IP	１		IP	１		IP	３		IP	２		IP	１		IP	３		IP	１		IP	１		IP	１		IP
+松下　　知幸	3.60	0.16	3.3	６		IP	４		IP	５		IP	１		IP	４		IP	４		IP	４		IP	５		IP	４		IP	６		IP
+春園　　功太	7.70	0.17	3.0	３		IP	２		IP	１		IP	１		IP	５		IP	１		IP	２		IP	１		G3	２		G3	４		IP
+待鳥　　雄紀	4.10	0.14	3.0	５		IP	２		G3	５	5	G3	５		IP	５		IP	６		G3	３		G3	４		IP	３		IP	２	5	IP
+森　　　雄利	2.80	0.13	3.1	５		IP	３		IP	５		IP	４		IP	６		IP	３		IP	５		IP	５		IP	５		IP	６		IP
+中島　　昂章	2.90	0.20	5.4	５		IP	６		IP	６		IP	６		IP	５		IP	３	5	IP	５		IP	４		IP	２		IP	５		IP

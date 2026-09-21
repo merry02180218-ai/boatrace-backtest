@@ -1,0 +1,8 @@
+data=
+1	0
+藤原　　碧生	6.70	0.16	4.4	６		G1	Ｆ		SG	６		G1	１		IP	２		IP	３		G1	１		IP	３		IP	１		G1	１		G1
+有賀　　達也	8.00	0.12	2.7	２		IP	２		IP	１		IP	２		IP	２		IP	４		G1	２		G1	２		IP	２		IP	２		IP
+北山　　康介	7.50	0.12	2.5	１	4	IP	２	4	IP	１		IP	３		IP	４		IP	４		IP	３		IP	２		IP	１		IP	２		IP
+船岡　洋一郎	6.90	0.13	3.0	２	6	G1	３		G2	５		IP	２		IP	１		IP	５	6	IP	１		IP	２		IP	４		IP	３		G1
+佐藤　　博亮	5.10	0.14	2.1	５		IP	１		IP	４		IP	６		IP	３		IP	５		IP	２		IP	２		IP	３		IP	５	6	IP
+富永　　修一	3.80	0.18	3.8	３		IP	１		IP	５		IP	５		IP	５		IP	５		IP	３		IP	５		IP	５		IP	４		IP

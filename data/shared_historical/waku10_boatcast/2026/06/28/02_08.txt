@@ -1,0 +1,8 @@
+data=
+1	0
+大久保信一郎	8.60	0.10	1.7	１		IP	１		IP	１		IP	１		G3	１		IP	４		IP	５		IP	１		IP	１		IP	１		IP
+大澤　　風葵	7.10	0.14	3.4	４		IP	２		IP	６		IP	１		IP	２		IP	１		IP	２		IP	２		IP	４		IP	２		IP
+森永　　　淳	8.60	0.12	2.3	１	4	G3	１		G3	６		G1	１	4	IP	２		IP	３		G1	１		IP	１		IP	１		IP	２		G2
+岩井　　　繁	2.90	0.20	4.8	３		G3	４		G3	６		IP	５	6	IP	６		IP	５		IP	５		IP	４		IP	６		IP	３		IP
+角浜　　　修	3.20	0.19	4.2	３	4	G3	２		G3	３		IP	６		IP	６		IP	６		IP	４		IP	５		IP	６		IP	５		IP
+澁澤　　周羽	1.50	0.18	4.2	６		IP	３		IP	６		IP	落		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP

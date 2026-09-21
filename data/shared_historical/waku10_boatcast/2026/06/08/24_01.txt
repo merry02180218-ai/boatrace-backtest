@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　基樹	5.60	0.19	3.8	５		IP	１		IP	２		IP	２		IP	４		IP	２		IP	５		IP	４		IP	妨		IP	１		IP
+井川　　大作	4.20	0.16	3.4	３		IP	３		IP	２		IP	５		IP	６		IP	１		IP	６		G3	５		IP	４		IP	５		IP
+香川　　素子	7.00	0.13	2.8	１		IP	１		G3	２		G3	３		IP	２		IP	３		IP	５		IP	２		IP	４		IP	２		G3
+亀本　　勇樹	4.70	0.14	3.5	４		IP	４		IP	３		IP	１		IP	４	2	IP	５		IP	３		IP	６		IP	２		IP	５	5	IP
+竹井　　貴史	6.30	0.16	1.7	Ｆ		G2	１		G2	５		IP	１		IP	５		IP	１	4	IP	２		IP	３	4	IP	４		IP	１		IP
+渡辺　　　豊	2.10	0.19	4.7	６		IP	５	5	IP	５		IP	４		IP	５		IP	６		IP	４		IP	５	2	IP	６		IP	５		IP

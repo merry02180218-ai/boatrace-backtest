@@ -1,0 +1,8 @@
+data=
+1	0
+平尾　　崇典	8.90	0.12	2.7	１		IP	３		G1	１		IP	１		G1	１		G1	４		G2	３		G2	１		IP	１		IP	２		IP
+佐藤　　　航	8.60	0.13	2.7	１		G2	２		G2	２		IP	１		IP	２		IP	１		IP	１		IP	３		IP	１		G2	５		IP
+後藤　　隼之	7.60	0.15	2.7	１		IP	３		IP	２		IP	３		IP	２		IP	４		IP	１	2	IP	１		IP	１		IP	４		IP
+横井　　健太	1.90	0.19	4.1	６		IP	６		IP	６		IP	４		IP	５		IP	５		IP	４		IP	５		IP	妨		IP	５		IP
+本村　　　大	3.10	0.22	4.0	４		IP	欠		IP	５	6	IP	６		IP	１	4	IP	５		IP	６		IP	３		IP	６		IP	４		IP
+藤田　　浩人	4.80	0.19	4.4	４		G2	５		IP	４		IP	３		IP	３		IP	２		IP	５		IP	６		IP	１	4	IP	４		IP

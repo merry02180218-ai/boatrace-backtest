@@ -1,0 +1,8 @@
+data=
+1	0
+西尾　　亮輔	6.70	0.18	3.2	１		IP	４		IP	４		IP	１		IP	６		IP	２		IP	１		IP	２		IP	４		IP	２		IP
+岡　　　祐臣	5.70	0.15	3.4	３		IP	６		IP	２		IP	３		IP	５		IP	１	3	IP	４		IP	３		IP	２		G1	５		G1
+牧村　　俊輝	2.90	0.18	4.1	５		IP	５		IP	５		IP	６		IP	５		IP	１		IP	５		IP	４		IP	５	4	IP	５		IP
+伊藤　　尚汰	4.00	0.16	3.2	５		IP	１		IP	３		IP	５		IP	４		IP	５		IP	２		IP	６		IP	６		IP	４		IP
+長谷川　晴哉	5.00	0.13	3.6	５		IP	４		IP	３		IP	４		IP	２		IP	３		IP	４		IP	５		IP	２		IP	３		IP
+市川　　瑚幸	1.80	0.20	4.9	４		IP	６		IP	６		IP	４		IP	５		IP	６		IP	５		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+伊久間　陽優	8.80	0.11	1.8	１		IP	１		IP	１		IP	３		IP	３		IP	２		IP	１		IP	２		IP	１		IP	１		IP
+小黒　　竜吾	4.50	0.17	3.7	２		IP	５		IP	４		IP	５		IP	４		IP	２		IP	５		IP	３		IP	６		IP	２		IP
+高橋　　真吾	4.40	0.12	3.1	３		IP	６	6	IP	６		IP	３	5	IP	２	4	IP	２		IP	６		G3	２	4	G3	４	4	G3	６	4	IP
+山崎　　　郡	6.10	0.15	3.0	４		G1	４		G1	３		G1	５		G1	１		IP	３		G1	３		G1	５		IP	１		IP	４		G1
+宮城　　那菜	3.30	0.14	2.4	５		IP	４		IP	６		IP	２		IP	６		IP	３		IP	６		IP	２		IP	６		IP	６		IP
+宇野　　弥生	3.90	0.13	2.1	４		G3	５		G3	３		G3	６		IP	６		IP	４	5	IP	６		G1	１		IP	２		IP	６		G3

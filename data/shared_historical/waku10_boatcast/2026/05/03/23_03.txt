@@ -1,0 +1,8 @@
+data=
+1	0
+安河内　　将	9.20	0.15	2.4	１		IP	２		IP	２		IP	３		IP	１		G1	１		IP	１		IP	１		G1	１		IP	２		IP
+松江　　秀徳	4.90	0.16	3.9	３		IP	４		IP	４		IP	３		IP	４		IP	２		IP	２		IP	６		IP	３		IP	５		IP
+中野　　和裕	5.50	0.18	3.3	２		IP	１		IP	４		IP	６		IP	１		IP	３		IP	４		IP	３		IP	４		IP	５		IP
+山田　　康二	7.60	0.12	2.9	１		IP	３		G1	３		G1	３		SG	２		IP	３		G1	１		G1	１		G1	５		G1	４		IP
+飯田　　庄吾	3.50	0.22	4.3	２		IP	５		IP	６		IP	２		IP	６		IP	４		IP	５	6	IP	６		IP	５		IP	３		IP
+小柳　　勝希	2.90	0.24	4.5	４		IP	６		IP	４		IP	６		IP	４		IP	６		IP	４		IP	４		IP	４		IP	５		IP

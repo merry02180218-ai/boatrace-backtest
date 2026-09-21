@@ -1,0 +1,8 @@
+data=
+1	0
+古場　　輝義	7.00	0.18	3.2	２		IP	３		IP	６		IP	６		IP	２		IP	１		IP	１		IP	２		IP	２		IP	１		IP
+齊藤　　　優	6.00	0.17	2.6	１		IP	４		IP	５		IP	５		IP	４		IP	４		IP	１		IP	２		IP	２		IP	２		IP
+植田　　太一	5.00	0.15	3.2	６		IP	５		IP	５		IP	２	2	IP	４		IP	３	4	G1	１		IP	５		IP	３		IP	３	4	IP
+楠原　　翔太	5.60	0.16	3.9	５		IP	４		IP	３		IP	２		IP	３	5	IP	３		IP	４		IP	２		IP	３	6	IP	３		IP
+松田　　憲幸	3.70	0.18	4.4	６		IP	３		IP	６		IP	５		IP	１		IP	５		IP	３		IP	４	4	IP	４		IP	６		IP
+岡村　　　仁	6.30	0.20	4.1	１		IP	１		IP	６		G1	３		G1	６		G1	３		G1	３		G1	２		IP	３		IP	４		IP

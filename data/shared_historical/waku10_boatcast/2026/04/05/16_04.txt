@@ -1,0 +1,8 @@
+data=
+1	0
+浜野　　孝志	8.60	0.16	4.1	１		IP	１		IP	３		IP	１		IP	１		IP	３		IP	１		IP	２		IP	１		IP	３		IP
+山一　　鉄也	7.00	0.17	3.0	３		IP	１		IP	１		G3	４		IP	４		IP	１		IP	１		IP	４		IP	２		IP	４	3	IP
+山下　　昂大	6.90	0.17	2.0	１		IP	３		IP	４		G3	２		IP	１		IP	３		IP	６		IP	２		IP	２		IP	２		IP
+大峯　　　豊	6.70	0.13	2.9	４		G3	４		G1	３		G1	２		G1	４		IP	３		IP	５		IP	１		G2	３		G2	１		IP
+冨田　　秀幸	4.00	0.15	3.2	１		IP	５		IP	２		IP	６		IP	４		IP	４		IP	５		IP	３		IP	６		IP	５	6	IP
+福岡　　泉水	2.60	0.16	3.2	４		IP	６		G3	４		IP	４		IP	４		IP	５		IP	６		IP	５		IP	５		IP	５		G3

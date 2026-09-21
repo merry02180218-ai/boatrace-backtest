@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　日向	9.80	0.13	2.5	１		G1	１		SG	１		SG	２		G1	２		G1	１		G1	４		G1	１		IP	１		G1	２		IP
+山地　　正樹	6.00	0.18	3.7	２	3	IP	２		IP	２		IP	３		IP	５		IP	４		IP	３		IP	２		IP	２		IP	５		IP
+原田　　雄次	3.60	0.18	3.3	１		IP	４		IP	転		IP	３		IP	６	5	IP	６	6	IP	６		IP	１		IP	６	4	IP	５		IP
+浅見　　昌克	5.90	0.13	2.4	１		IP	２		IP	４		IP	６		IP	３		IP	５		IP	２	5	IP	２		IP	２		IP	４		IP
+萩原　　秀人	5.50	0.13	2.1	４		G1	２		IP	６		G1	６		G1	２		G3	３		G1	３		G1	５		G1	２		IP	４		G2
+高橋　　嗣穏	1.10	0.25	4.0	６		IP	５		IP	５		IP	６		IP	６		IP	転		IP	６		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+小池　　公生	7.50	0.20	4.1	１		IP	４		IP	１		IP	１		IP	２		IP	２		IP	４		IP	６		IP	１		IP	１		IP
+吉田　　祐貴	2.60	0.22	4.7	６		IP	Ｆ		IP	６		IP	４		IP	６	3	IP	６		IP	３		IP	３		IP	５		IP	４		IP
+石川　　真二	5.80	0.16	3.4	４	2	IP	２	2	IP	４	2	IP	２	2	IP	２	2	IP	５	2	IP	１	1	IP	４	1	G1	６	2	IP	３	2	IP
+山田　　真聖	5.50	0.16	2.7	３		IP	６		IP	４		IP	１		IP	３	5	IP	４	5	IP	１		IP	５		IP	１		IP	５		IP
+寺田　　夢生	2.00	0.18	3.3	６	6	G3	５		IP	６		IP	３	6	IP	６	6	IP	４		G3	５	6	G3	６		G3	６		IP	６		IP
+柳生　　泰二	4.80	0.15	3.4	６		G1	６		G1	５		G1	５		SG	４		SG	５		IP	２		IP	３		IP	２	5	G1	３		IP

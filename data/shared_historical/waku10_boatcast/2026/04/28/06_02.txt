@@ -1,0 +1,8 @@
+data=
+1	0
+山道　　諄也	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+藤田　　靖弘	5.80	0.14	2.6	４		IP	２		IP	２		IP	３		IP	３		G3	５		IP	４		IP	４		IP	２		IP	２		IP
+村松　　遥輝	4.60	0.16	2.0	５		IP	６		IP	３		IP	２		IP	２	1	IP	２	4	IP	４		IP	４		IP	６		IP	４	4	IP
+栗原　　直也	3.90	0.15	2.3	１		IP	４		IP	５		IP	５		IP	５		IP	４		IP	６		IP	５		IP	５		IP	１		IP
+吉島　　祥之	6.10	0.18	3.3	１		IP	５		IP	３		IP	３		IP	３		G3	６	4	IP	３		IP	２		IP	２		IP	２		IP
+河合　　三弘	2.80	0.20	3.8	５	5	IP	２		IP	５		G3	５		IP	３		IP	６		IP	５		IP	６		IP	６		IP	６		IP

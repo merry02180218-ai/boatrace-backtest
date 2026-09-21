@@ -1,0 +1,8 @@
+data=
+1	0
+宇恵　　有香	5.40	0.16	2.8	２		IP	１		IP	３		G3	３		IP	６		IP	４		IP	４		IP	３		IP	２		IP	６		IP
+佐口　　達也	5.80	0.12	2.9	４		IP	４		IP	３		IP	３		IP	４		IP	１		IP	２		IP	５	3	IP	２		IP	３		IP
+金子　　和之	5.80	0.14	2.7	３		IP	４		IP	３		IP	４		IP	１		IP	４		IP	４		IP	２	4	G3	１		G3	５		G3
+山田　　晃大	6.00	0.12	2.1	３		IP	２		IP	５		IP	１		IP	４		IP	１		IP	５		IP	４		IP	４		IP	１		IP
+中村　　栄治	3.90	0.18	4.6	３	6	IP	２		IP	６		IP	５		IP	２		G3	６		IP	５		IP	６		IP	２		IP	５		IP
+西野　　雄貴	5.50	0.14	3.1	５	5	IP	１		IP	４		IP	４		IP	３		IP	３	5	IP	２		IP	３		IP	５		G1	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+三浦　　敬太	8.90	0.16	3.1	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	１		IP
+牧山　　敦也	5.40	0.15	3.3	３	3	IP	３		IP	２		IP	５		IP	５		IP	５		IP	２		IP	２		IP	３		IP	３		G3
+松尾　　光広	4.00	0.20	3.9	６		IP	６		IP	３		IP	３		IP	２		IP	３		IP	６		IP	６		IP	３		IP	４	4	IP
+松井　　賢治	5.00	0.16	3.4	４		IP	３		IP	４		IP	３	5	IP	４	3	IP	５		IP	５		IP	１		IP	２		IP	４		IP
+石倉　　洋行	5.80	0.11	2.7	２		IP	５		G1	５		G1	１		IP	３		IP	５		IP	５		IP	２		IP	３	6	IP	１		IP
+大賀　龍之介	3.30	0.16	3.2	３		IP	６	5	IP	２		IP	６		IP	４		IP	４		IP	６		IP	４		IP	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+烏野　　賢太	9.40	0.16	4.0	１		IP	２		IP	１		IP	１		IP	１		G3	２		G3	１		IP	１		IP	１		IP	２		IP
+西岡　　蒼志	5.20	0.19	3.4	１		IP	４		IP	３		IP	５		IP	４		IP	４		IP	転		IP	１		IP	２		IP	４		IP
+丸尾　　義孝	6.90	0.15	2.0	３		IP	２		IP	２		IP	２	4	IP	４		IP	２		IP	２		IP	２		IP	５		G1	２		IP
+赤池　　修平	3.80	0.14	3.0	１		IP	６	5	IP	６		IP	２		IP	５	5	IP	４		IP	５	6	IP	５		IP	３		IP	５	5	IP
+四宮　　与寛	5.20	0.17	3.2	５		IP	３		IP	４		IP	４		IP	２		IP	３		IP	２		IP	３		IP	５		IP	３		IP
+吉永　　泰弘	3.70	0.23	4.8	２		IP	３	4	IP	５		IP	５		IP	５		IP	４	5	IP	４		IP	４		IP	５		IP	６		IP

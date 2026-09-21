@@ -1,0 +1,8 @@
+data=
+1	0
+山ノ内　雅人	8.80	0.12	1.9	１		IP	３		IP	１		IP	１		IP	１		IP	２		IP	１		IP	４		IP	１		IP	１		IP
+石井　　孝之	3.50	0.15	3.9	５		IP	５		IP	５		IP	３		IP	５		IP	３		IP	５		IP	６	3	IP	１		IP	５	5	IP
+岡本　　　大	5.40	0.14	2.2	沈		IP	３		IP	５		IP	２		IP	４		IP	２		IP	４		IP	２		IP	３		IP	２		IP
+松本　　真広	4.20	0.16	4.0	３		IP	４		IP	６		IP	４		IP	２		IP	３		IP	６		IP	５		IP	２	5	IP	５		IP
+橋本　　年光	5.30	0.17	3.9	３		IP	３		IP	４		IP	５		IP	２		IP	２		IP	３		IP	２	4	IP	４		IP	６	4	IP
+八木　　治樹	3.00	0.17	4.0	６		IP	６		IP	３		IP	６		IP	４		IP	４	5	IP	４	5	IP	６	5	IP	５	5	IP	３	5	G3

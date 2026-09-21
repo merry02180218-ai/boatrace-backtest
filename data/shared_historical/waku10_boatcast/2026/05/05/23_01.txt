@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　梨菜	8.80	0.16	3.1	１		IP	４		G3	１		G3	１		G3	１		G3	１		IP	１		IP	３		G3	１		G3	２		IP
+中野　　和裕	3.40	0.16	2.5	４		IP	４		IP	５	3	IP	６		IP	６		IP	３		IP	３		IP	４		IP	４		IP	５		IP
+田中　　宏典	4.50	0.18	3.3	５		IP	４		IP	２		IP	３		IP	４		IP	４		IP	３		IP	６		IP	３		IP	４		IP
+津留　浩一郎	2.90	0.13	3.1	３	3	IP	３		IP	欠		IP	４		IP	３		IP	５		IP	５		IP	６	5	IP	６	3	IP	６		IP
+岩永　　節也	2.80	0.22	4.8	６		IP	４	4	IP	５		IP	４		IP	５		IP	２		IP	５		IP	５		IP	６		IP	５		IP
+久保田　凪紗	1.30	0.17	4.0	４		IP	６		IP	６		G3	６		G3	６		G3	６		G3	６		G3	６		G3	６		G3	６		G3

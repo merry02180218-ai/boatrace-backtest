@@ -1,0 +1,8 @@
+data=
+1	0
+三嶌　さらら	5.33	0.24	4.2	４		IP	４		IP	１		IP	６		IP	１		IP	４		IP	転		G3	４		G3	１		IP	６		IP
+谷口　　知優	5.60	0.17	3.1	転		IP	４		IP	３		IP	２		IP	３		IP	１		IP	２		IP	３		IP	５		IP	３		IP
+西村　美智子	5.00	0.13	2.2	４		IP	１		IP	２		IP	４	2	IP	１		IP	３		IP	４		IP	５		IP	６		IP	６		IP
+竹田　　和哉	4.60	0.19	4.0	６		G1	４		G1	４		IP	６		IP	２		IP	５		G1	６		G1	２		G1	３		IP	４		IP
+中岡　　　駿	2.10	0.20	3.7	６		IP	４		IP	６		IP	５		IP	６		IP	５		IP	５		IP	５	6	IP	４	4	IP	５		IP
+松尾　　　祭	3.00	0.21	4.3	６		IP	４		IP	６		IP	５		IP	５		IP	２		IP	３		IP	６		IP	５		IP	５		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+高田　　　明	8.50	0.19	2.3	４		IP	１		G3	１		G3	１		IP	１		G1	１		IP	１		IP	Ｆ		IP	１		IP	１		IP
+品田　　直樹	6.10	0.16	2.7	５		IP	３		IP	１		IP	１		IP	６		IP	２		IP	４		IP	５	3	IP	１		IP	２		IP
+重冨　　勇哉	5.00	0.20	3.2	６		IP	１	2	IP	３		IP	２		IP	２		IP	６		IP	５		IP	４		IP	２		IP	５		IP
+岩崎　　芳美	5.70	0.14	2.0	３		IP	５		IP	３		G3	１		G1	４		G1	３		G1	１		G3	４		G3	５		IP	４		IP
+出畑　　孝典	3.70	0.15	4.0	３	4	IP	４		IP	３		IP	２		IP	５	6	IP	落		IP	５		IP	４		IP	６		IP	４	4	IP
+齋藤　　真之	1.60	0.21	5.1	４		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	５		IP

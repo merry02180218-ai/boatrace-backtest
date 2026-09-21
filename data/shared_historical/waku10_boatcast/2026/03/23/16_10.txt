@@ -1,0 +1,8 @@
+data=
+1	0
+浜先　　真範	9.50	0.13	2.3	１		IP	１		IP	２		G1	１		IP	２		IP	２		IP	１		IP	２		G1	１		IP	１		IP
+赤坂　　俊輔	7.00	0.13	2.3	３		IP	６		G1	１		IP	２		IP	２		G1	２		G1	３		IP	２		IP	３		IP	３		IP
+松本　　博昭	6.80	0.17	3.9	２		IP	２		IP	３		IP	１		IP	５		IP	１		IP	４		IP	２		IP	３		IP	３		IP
+佐々木　英樹	6.40	0.20	3.0	３		IP	２		IP	６		IP	４		IP	１		IP	１		IP	６		IP	３		IP	２		IP	１		IP
+久富　　政弘	2.70	0.20	4.4	４		IP	５		IP	５		IP	６		IP	６		IP	４		IP	５		IP	４		IP	６		IP	３		G3
+宇土　　泰就	3.20	0.17	3.7	５		IP	４		IP	４		IP	３		IP	６		IP	６		IP	５		IP	４		IP	４		IP	４		IP

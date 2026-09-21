@@ -1,0 +1,8 @@
+data=
+1	0
+山本　稔太朗	8.80	0.14	2.7	１		IP	２		IP	４		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		G3	２		G3
+大澤　　大夢	5.90	0.19	3.3	４		IP	６		IP	３		IP	２		IP	１		IP	５		IP	２		IP	３		IP	２		IP	３		IP
+上村　　宏太	5.30	0.17	3.6	３		IP	６		IP	４		IP	３	4	IP	２		IP	３		IP	４		IP	１		IP	４		IP	４		IP
+杉田　　篤光	4.89	0.27	4.6	５		IP	３		IP	５		IP	４		IP	４		IP	１		IP	４		IP	落		IP	３		IP	３		IP
+高橋　　二朗	3.60	0.21	4.4	５	6	IP	４		IP	５		IP	４		IP	５		IP	４		IP	４		IP	５		G3	３		G3	３		IP
+坂東　　　満	2.00	0.20	4.2	６		IP	３		IP	６		IP	６		IP	４		IP	６		IP	６		IP	５		IP	５		IP	６		IP

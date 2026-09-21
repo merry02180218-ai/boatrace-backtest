@@ -1,0 +1,8 @@
+data=
+1	0
+谷口　　　丞	6.38	0.17	3.4	１		IP	２		IP	１		IP	２		IP	１		IP	５		IP	５		IP	６		IP						IP
+藤原　　仙二	7.56	0.21	3.5	３		IP	Ｆ		G2	欠		IP	１		IP	２		IP	１		IP	１	3	IP	２		IP	１	4	G2	４		G2
+水谷　　理人	7.20	0.14	3.0	１	2	IP	１	2	IP	６	4	G3	１		G3	２		IP	１		IP	４		IP	３		IP	３	4	IP	４	2	IP
+杉山　　太陽	3.70	0.21	4.7	４		IP	５		IP	４		IP	５		IP	４		IP	５	5	IP	６		IP	２		IP	３		IP	４		IP
+中野　　希一	4.80	0.14	2.6	６		IP	１		IP	４		IP	１		IP	２		IP	６		IP	２		IP	４		IP	６		IP	６		IP
+金子　　龍斗	3.00	0.20	3.2	５		IP	５		IP	４		IP	６		IP	Ｆ		IP	１		IP	４		IP	６	5	IP	転		IP	３		IP

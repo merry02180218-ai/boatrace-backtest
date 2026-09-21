@@ -1,0 +1,8 @@
+data=
+1	0
+石田　　政吾	7.10	0.16	3.1	１		IP	２		IP	３		IP	４		IP	２		IP	１		IP	３		IP	２		IP	６		IP	１		IP
+大塚　　浩二	4.50	0.19	3.6	４		IP	２		IP	３		IP	５		IP	４		IP	３		IP	１		IP	６		IP	５		IP	５		IP
+森下　　　勇	3.30	0.17	3.6	６		IP	４		IP	３		IP	６		IP	３		IP	３		IP	６		IP	５		IP	５		IP	４		IP
+山本　　兼士	3.80	0.16	3.1	４		IP	６		IP	５		IP	３	5	IP	３		IP	２		IP	３		IP	５		IP	６		IP	５		IP
+深山　　祐二	2.70	0.17	4.7	６		IP	５		IP	６		IP	４		IP	４		IP	４		IP	３		IP	５		IP	５		IP	６		IP
+上馬場　風依	1.30	0.19	4.0	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

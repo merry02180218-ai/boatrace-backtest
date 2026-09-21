@@ -1,0 +1,8 @@
+data=
+1	0
+石本　　裕武	8.00	0.17	4.2	２		IP	１		IP	３		IP	１		IP	１		G1	６		G1	５		IP	１		IP	１		IP	１		G1
+宮之原　輝紀	5.70	0.16	4.5	２		IP	３		G1	６		SG	６	1	SG	６		G1	４		G1	６		G1	３		G1	２		G1	１		IP
+石丸　　海渡	6.00	0.11	2.4	３		IP	２		IP	２		IP	３		IP	４		IP	５		G1	１		G1	４		IP	３		IP	４		IP
+松田　大志郎	7.50	0.10	1.6	Ｆ		G1	５		IP	２		IP	３		G1	３		G1	１		G1	１		IP	１		IP	１		IP	１		IP
+瓜生　　正義	6.00	0.17	3.7	１		IP	２		IP	１		G1	５		G1	４		G1	５		G1	４		G1	５		IP	４		G1	２		IP
+入海　　　馨	5.10	0.21	4.7	５		IP	６		G1	５		G1	１		IP	３		IP	４		IP	３		IP	３		IP	３		G1	４		G1

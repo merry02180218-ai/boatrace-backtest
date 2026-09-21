@@ -1,0 +1,8 @@
+data=
+1	0
+杉田　　篤光	8.50	0.19	3.5	１		IP	６		IP	２		IP	１		G3	２		G3	１		IP	２		IP	１		IP	１		IP	１		IP
+服部　　幸男	5.00	0.14	2.5	３		G1	２		G1	２		IP	５		IP	５		IP	６		IP	５		IP	６		G1	２		G1	２		IP
+服部　　　剛	4.90	0.21	4.5	２		IP	３		IP	４	6	IP	３		IP	３		IP	６		IP	５		IP	４		IP	４		IP	２		IP
+安藤　　瑠希	1.00	0.16	6.0	６	6	IP																											IP
+重野　　哲之	4.70	0.10	2.3	３		IP	５		IP	５		IP	３		IP	６		IP	２		G1	５		G1	５		IP	３		IP	１		IP
+庄司　　孝輔	5.30	0.18	4.0	４	5	IP	３		G3	４		G3	３		IP	５		IP	５		G3	３		IP	２		IP	３		IP	２		IP

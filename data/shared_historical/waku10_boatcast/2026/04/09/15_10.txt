@@ -1,0 +1,8 @@
+data=
+1	0
+大須賀　　友	9.20	0.12	1.9	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+亀山　　雅幸	5.60	0.14	3.4	３		IP	２		IP	６		IP	４		IP	２		IP	３		IP	２		IP	２		IP	３		IP	６		IP
+加藤　　政彦	5.50	0.15	2.8	５		IP	４		IP	６		G1	５		G1	４		IP	２		IP	１		IP	２		IP	２		IP	３		G3
+渡部　　　悟	4.20	0.14	4.0	４		IP	５	5	IP	６		IP	２		IP	４		IP	４		IP	３		IP	４		IP	６		IP	２		IP
+立間　　充宏	5.00	0.18	3.5	４		IP	３		IP	５		IP	４		IP	１		IP	３		IP	１		IP	５		IP	４		IP	５		IP
+武重　　雄介	2.10	0.23	5.0	６		IP	６		IP	５		IP	４		IP	４		IP	６		IP	５		IP	６		IP	６		IP	４		IP

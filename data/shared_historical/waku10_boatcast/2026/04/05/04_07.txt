@@ -1,0 +1,8 @@
+data=
+1	0
+清埜　　翔子	9.00	0.13	2.0	１		IP	２		IP	１		G3	１		G3	１		G1	１		G1	１		IP	５		IP	１		G1	３		G1
+福田　　翔吾	4.80	0.15	3.3	５		IP	沈		IP	４		IP	２		IP	２		IP	６		IP	２		IP	２		IP	２		IP	６		IP
+大瀧　明日香	6.00	0.17	2.8	２		IP	４		G3	４		G3	２		IP	４		IP	１		G1	２		IP	４		G1	４		IP	４		IP
+藤山　　雅弘	5.80	0.18	3.7	６		IP	３		IP	４		IP	６		IP	２		IP	２		IP	３		IP	２		IP	２		IP	２		IP
+宗行　　治哉	5.20	0.19	4.8	３		IP	３		IP	４		IP	２		IP	２		IP	５		G2	３		IP	６		IP	３		IP	５	6	IP
+堂原　　洋史	1.89	0.18	3.9	４		IP	６		IP	５		IP	５		IP	６		IP	転		IP	５		IP	５		IP	６		IP	５		IP

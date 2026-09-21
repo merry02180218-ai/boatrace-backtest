@@ -1,0 +1,8 @@
+data=
+1	0
+中本　　大樹	6.70	0.16	2.8	妨		IP	１		IP	３		IP	１		IP	５		IP	２		IP	１		IP	１		IP	６		IP	１		IP
+石倉　　拓美	3.50	0.18	4.4	５		IP	６		IP	６		IP	３		IP	３		IP	２		IP	５	6	IP	５		IP	３		IP	６		IP
+西川　　拓利	6.80	0.14	3.1	４		IP	２		IP	１		IP	２		G3	２		G3	５		IP	１	4	IP	２		IP	５		IP	２		IP
+庄島　　潤成	2.20	0.18	4.1	転		IP	６		IP	４	6	IP	６		IP	３	5	IP	６	5	IP	５		IP	５	5	IP	６		IP	４		IP
+石田　　勇斗	3.50	0.12	2.6	４		IP	６		IP	１		IP	６		IP	３		IP	５		IP	５		IP	４		IP	６		IP	４	6	IP
+長谷川　晴哉	4.00	0.18	3.8	６		IP	６		IP	３		IP	６		IP	３		IP	３	5	IP	２		IP	６		IP	４		IP	３		IP

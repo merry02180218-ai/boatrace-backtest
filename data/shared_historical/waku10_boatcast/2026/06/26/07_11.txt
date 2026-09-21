@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　晃朋	7.90	0.16	3.8	３		IP	４		G1	妨		IP	１		IP	１		IP	２		IP	１		G3	１		G3	１		IP	１		IP
+野口　　勝弘	8.20	0.14	2.8	１		IP	２		IP	１		IP	１		IP	４		IP	５		IP	１		IP	１		IP	２		IP	１		G3
+雑賀　　勇貴	4.89	0.17	4.0	３		IP	５		IP	４		IP	３		IP	４		IP	５	4	IP	転		IP	２		IP	４		IP	２		IP
+西村　　拓也	6.90	0.10	2.6	５		IP	２		IP	２	2	IP	２		IP	５		IP	３		IP	１		IP	１		IP	２		IP	４		IP
+鈴木　　孝明	7.30	0.13	2.5	２		IP	２		IP	２		IP	１		IP	３		IP	３		IP	２		IP	１		IP	２		IP	６		IP
+樅山　　拓馬	3.60	0.18	4.3	６		IP	３		IP	４		IP	３	5	IP	６		IP	５	5	IP	５		IP	４		IP	４		IP	３		IP

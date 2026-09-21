@@ -1,0 +1,8 @@
+data=
+1	0
+大橋　純一郎	9.30	0.12	3.0	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP
+松井　　貫太	4.40	0.17	3.4	３		IP	１		IP	６		IP	３		IP	３		IP	転		IP	３		IP	６		IP	４		IP	４		IP
+加藤　　啓太	4.70	0.15	4.1	３		IP	４		IP	６		IP	４		IP	３		IP	３		IP	３		IP	５		IP	３		IP	３		IP
+鈴木　　智啓	2.10	0.23	4.8	５		IP	３	3	IP	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	４		IP	６	5	IP
+榮田　　将彦	3.70	0.13	2.6	６		IP	４	6	IP	３		IP	６		IP	３	6	IP	２		IP	３		IP	５		IP	５		IP	６	6	IP
+刑部　亜里紗	4.10	0.14	4.6	３		G2	３		G2	５		IP	５		IP	５		IP	４		IP	６		IP	４		IP	５		IP	２		IP

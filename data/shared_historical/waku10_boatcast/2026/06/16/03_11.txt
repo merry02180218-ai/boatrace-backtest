@@ -1,0 +1,8 @@
+data=
+1	0
+仲道　　大輔	8.90	0.13	2.3	１		IP	１		IP	６		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+城間　　盛渚	6.60	0.15	2.7	１		IP	１		IP	５		IP	２		IP	３		IP	３		IP	１		IP	４		IP	５	3	IP	２		IP
+藤原　　仙二	7.60	0.17	4.0	４		IP	１		IP	３		IP	１	4	IP	１		G2	４	4	IP	３		IP	２		IP	２		IP	２		IP
+澁川　　　夏	4.30	0.15	3.4	４		IP	２		IP	４		IP	４		IP	５		IP	５		IP	３		IP	６		IP	３		IP	３		IP
+佐藤　　右京	2.90	0.20	3.5	５	6	IP	３		IP	２		IP	５		IP	４		IP	６		IP	６		IP	６		IP	５		IP	５		IP
+鐘ヶ江　真司	3.60	0.22	4.6	４		IP	５		IP	３	5	IP	３		IP	４		IP	４		IP	５		IP	４		IP	６		G2	６		G2

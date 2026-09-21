@@ -1,0 +1,8 @@
+data=
+1	0
+吉原　　聖人	6.60	0.16	2.6	２		IP	１		IP	２		IP	１		IP	３		IP	４		IP	４		IP	３		IP	２		IP	５		IP
+真庭　　明志	5.70	0.14	3.1	４		IP	転		IP	３		IP	２		IP	２		IP	２		IP	２		IP	１		IP	６		IP	４		IP
+八戸　　琉楓	1.63	0.19	4.6	６		IP	６		IP	６		IP	エ	4	IP	５		IP	５		IP	５	6	IP	４		IP						IP
+山下　　和彦	4.20	0.16	3.6	６		G3	２		IP	３	5	IP	２		IP	６	6	IP	４		IP	３		IP	５		IP	５		IP	４		IP
+森　　　智也	3.50	0.22	5.5	５	3	IP	６		IP	４		IP	５		IP	４		IP	５	4	IP	３		IP	３	4	IP	５	6	IP	３		IP
+泉　　　啓文	3.30	0.19	4.0	２	5	IP	５		IP	４		IP	６		IP	６		IP	３		IP	５		IP	４		IP	６		IP	４		IP

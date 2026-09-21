@@ -1,0 +1,8 @@
+data=
+1	0
+栗原　　一馬	5.40	0.14	2.5	２		IP	２		IP	５		IP	５		IP	１		IP	６		IP	３		IP	１		IP	６		IP	３		IP
+東口　　　晃	5.40	0.20	4.0	１		IP	３		IP	４		IP	６		IP	２		IP	１		IP	６		IP	２		IP	５		IP	４		IP
+山口　　裕二	4.60	0.15	3.7	Ｆ		IP	４		IP	３	4	G1	５		G1	４		IP	３		IP	２		IP	５		IP	２		IP	４		IP
+村田　　修次	5.40	0.14	3.9	２		IP	５		IP	２		IP	５		IP	２	5	IP	３		IP	４		IP	４		IP	２		IP	４		IP
+堂原　　洋史	3.30	0.18	3.2	４		IP	５		IP	５		IP	５		IP	４		IP	２		IP	５		IP	４		IP	４		IP	６	6	IP
+高橋　　正男	6.20	0.19	3.4	２		IP	２		IP	２		IP	１		IP	１		IP	３		IP	４		IP	６		IP	５		IP	４		IP

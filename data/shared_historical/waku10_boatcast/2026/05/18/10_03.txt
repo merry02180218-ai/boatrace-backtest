@@ -1,0 +1,8 @@
+data=
+1	0
+津田　　裕絵	8.00	0.18	4.3	２		IP	１		IP	１		G3	３		G3	３		IP	１		IP	２		IP	１		IP	５		IP	１		IP
+石井　　裕美	5.00	0.19	3.1	４		IP	３		G3	３		G3	５		IP	１		IP	３		IP	５		G3	５		IP	３		G3	３		G3
+倉持　　莉々	5.60	0.12	3.0	３	4	IP	４		G2	６		G2	５		IP	３		IP	４		IP	２		IP	１		IP	１		IP	５		IP
+小野　　　桜	5.50	0.21	3.8	５		IP	６		IP	３		G3	４	5	G3	４		IP	３		IP	２		IP	３		IP	１		IP	２		G3
+菅野　はやか	2.50	0.20	3.7	５		IP	４		G3	６		G3	６		G3	４	6	IP	５		IP	３		IP	５		IP	５		IP	６		IP
+中曽　　瑠華	1.70	0.24	4.4	６		IP	５		IP	５		IP	５		IP	４		IP	５		IP	６		IP	６		G3	６		IP	６		IP

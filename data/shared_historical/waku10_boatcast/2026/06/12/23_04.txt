@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　誠二	8.10	0.11	2.7	妨		G3	１		G3	１		G3	１		IP	６		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+野口　　勝弘	8.20	0.12	2.9	１		IP	４		IP	５		IP	１		IP	１		IP	２		IP	１		G3	２		IP	１		IP	１		IP
+上之　　晃弘	6.80	0.14	2.5	１		IP	１		IP	１		G3	２		IP	２		IP	３		IP	４		IP	３		IP	５		IP	４		IP
+木村　　仁紀	4.60	0.15	3.7	１		IP	４		G2	５		IP	４		G1	６		G1	４		G1	５		IP	５		IP	１		IP	５		G1
+小川　　晃司	4.50	0.17	3.8	３	6	IP	２	6	G3	６	6	G3	３	6	G3	５	6	IP	２	6	IP	５	6	IP	４	6	IP	５	6	IP	３	6	IP
+花本　　夏樹	2.70	0.24	5.2	６		IP	３	4	IP	６	5	IP	５	3	IP	４	4	IP	６		IP	６		IP	２		IP	６		IP	５	5	IP

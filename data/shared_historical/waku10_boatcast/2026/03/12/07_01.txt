@@ -1,0 +1,8 @@
+data=
+1	0
+平見　　真彦	9.00	0.16	3.0	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	２		IP	４		IP	１		G3	１		G3
+深水　慎一郎	6.60	0.21	4.0	４		IP	２		IP	４		IP	３		IP	５		IP	１	3	IP	２		IP	１		IP	２		IP	３		IP
+藤田　　美代	2.30	0.24	4.4	６		IP	６		IP	４		IP	６		IP	５	4	IP	６		IP	６		IP	３		IP	４		IP	５		IP
+乃村　　康友	4.10	0.19	3.1	５	5	IP	４		IP	３	5	IP	３	5	IP	４		IP	６		IP	３		IP	５		IP	３		IP	５		IP
+松下　　知幸	2.50	0.16	3.8	６		IP	４		IP	４		IP	４		IP	５		IP	５		IP	６		IP	５		IP	６		IP	４		IP
+志賀　　美優	2.20	0.17	3.0	６		IP	１		IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP	５		IP	６		IP

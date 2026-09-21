@@ -1,0 +1,8 @@
+data=
+1	0
+上田　　健太	8.20	0.17	2.6	１		IP	３	3	G3	１		G3	２		IP	１		IP	Ｆ		IP	１		IP	１		IP	２		IP	１		IP
+藤田　　靖弘	5.60	0.13	2.6	２		IP	３		IP	３		G3	５		IP	４		IP	４		IP	２		IP	２		IP	５		IP	２		IP
+西村　　秀樹	3.00	0.21	4.1	６		IP	３		IP	３		IP	４		IP	６		IP	３		IP	５		IP	５		IP	６		IP	６		IP
+諏訪　　玲奈	2.10	0.16	4.1	５	6	IP	４		IP	５		IP	４		IP	６		IP	６	5	IP	６		IP	５		IP	５		IP	５		IP
+西川　　真人	1.90	0.18	3.9	５		IP	６		IP	６		IP	５		IP	６		IP	３		IP	６	6	IP	６		IP	５		IP	５		IP
+服部　　幸男	3.20	0.18	4.1	５		IP	６		IP	６		IP	４	4	IP	６	4	IP	４	5	IP	６		IP	６		IP	２	5	IP	４		G1

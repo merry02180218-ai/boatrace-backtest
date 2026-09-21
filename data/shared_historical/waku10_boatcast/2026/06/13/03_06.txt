@@ -1,0 +1,8 @@
+data=
+1	0
+塩嶋　　泰空	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+飛田　　江己	7.70	0.10	1.9	２		IP	６		IP	２		IP	２		G2	１		G2	１		IP	２		IP	３		IP	２		IP	２		IP
+坂本　　一真	4.10	0.19	2.4	６		IP	５		IP	３		IP	４		IP	４		IP	６		IP	６		IP	２		IP	２		IP	３		IP
+富永　夏哉人	3.20	0.18	3.3	５		IP	５		IP	４		IP	１		IP	６	2	IP	６		IP	３		G3	５		G3	５		G3	５		IP
+早川　　颯太	2.10	0.15	3.6	６		IP	６		IP	転		IP	３		IP	６	6	IP	４		IP	６		IP	６		IP	５		IP	４		IP
+城間　　盛渚	2.44	0.19	3.9	落		IP	４		IP	６		IP	５		IP	６		IP	落		IP	５		IP	３		IP	５		IP	５		IP

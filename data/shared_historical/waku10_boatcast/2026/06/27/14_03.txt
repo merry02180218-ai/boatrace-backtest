@@ -1,0 +1,8 @@
+data=
+1	0
+上野　真之介	10.60	0.10	1.9	２		SG	１		G1	１		G1	１		G1	１		G1	１		SG	１		IP	１		IP	１		IP	１		IP
+吉田　　裕平	6.90	0.12	2.4	６		SG	２		G1	２		SG	５		SG	３		IP	１		IP	２		IP	３		IP	６		G1	２		G1
+深谷　　知博	7.30	0.12	2.9	１		SG	４		G1	５		SG	２		SG	３		G1	１		G1	２		IP	３		G1	４		G1	４		IP
+上條　　暢嵩	7.10	0.12	3.5	６		SG	３		G1	２		SG	２		SG	４		G1	３		IP	２		IP	２		IP	３		G1	３		G1
+森高　　一真	5.80	0.13	3.1	５		G1	４		SG	３		G1	３		G1	５		G1	２		G1	３		G1	３		G1	５	4	SG	４		G1
+菅　　　章哉	3.50	0.17	4.2	４		SG	６		G1	６		G1	６		G1	２		SG	５		SG	６		IP	４		IP	５		IP	５		IP

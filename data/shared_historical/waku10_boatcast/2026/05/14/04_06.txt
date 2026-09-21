@@ -1,0 +1,8 @@
+data=
+1	0
+中里　　優子	7.60	0.17	2.9	２		G3	２		IP	１		IP	３		IP	２		IP	２		G3	１		G3	１		IP	３		IP	５		G3
+高橋　　淳美	4.00	0.15	2.7	４		G3	６		IP	６		IP	５		IP	１		IP	３		IP	３		IP	５		IP	５		IP	３		IP
+表　　　健太	3.50	0.16	3.6	Ｆ		IP	４		IP	４		IP	２		IP	５		IP	６	4	IP	４		IP	１	4	IP	６		IP	６		IP
+竹井　　貴史	7.20	0.13	2.1	３		IP	５		IP	３		IP	２		IP	２		IP	２		IP	１		IP	１		IP	４		IP	１		IP
+木村　　仁紀	3.80	0.10	2.7	４		IP	５		IP	５		G1	３		G1	３		G1	６	4	IP	６		IP	６		IP	４		G1	３		G1
+冨成　　謙児	1.80	0.22	5.1	５		IP	６		IP	５		IP	６		IP	４		IP	６		IP	５	5	IP	５		IP	６		IP	５		IP

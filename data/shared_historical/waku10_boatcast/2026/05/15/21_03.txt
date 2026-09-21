@@ -1,0 +1,8 @@
+data=
+1	0
+石丸　　海渡	9.80	0.10	2.2	２		IP	１		IP	１		IP	２		IP	１		G1	１		G1	１		IP	１		IP	１		IP	１		IP
+高倉　　和士	7.20	0.16	3.6	３		IP	３		IP	１		IP	６		G1	１		G1	２		IP	２		IP	１		IP	３		IP	４		G1
+吉田　　裕平	7.20	0.10	1.9	３		IP	３		IP	４		G1	４		G1	２		G1	２		G1	１		G1	５		G1	２		G1	２		G1
+瓜生　　正義	6.60	0.18	3.1	４		G1	３		G1	２		G1	３		IP	４		G1	２	3	IP	６		G1	３		G1	１	3	G1	３		IP
+新田　　雄史	8.00	0.15	3.2	１		IP	２		G1	２		G1	２		SG	１		G1	３		G1	３		G1	４		G1	６		G1	１		IP
+尾上　　雅也	4.80	0.14	3.3	４		IP	２	5	IP	４		IP	３		IP	４		G3	６		IP	３		IP	４		IP	３		IP	５		IP

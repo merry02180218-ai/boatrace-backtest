@@ -1,0 +1,8 @@
+data=
+1	0
+平野　　和明	8.20	0.19	2.2	２		IP	１		IP	１		IP	１		IP	３		IP	１		IP	３		IP	２		IP	１		IP	４		IP
+安田　　吉宏	4.20	0.19	3.8	６		IP	３		IP	５		IP	３		IP	４		IP	５		IP	３		IP	６		IP	３		IP	２		IP
+渥美　　卓郎	3.80	0.21	3.8	６		IP	６		IP	６		IP	４		IP	１		IP	５		IP	４		IP	２		IP	３		IP	６		IP
+塩崎　　優司	3.10	0.18	3.1	５	5	IP	３		IP	５	3	IP	６		IP	５		IP	４		IP	５		IP	５		IP	２	3	IP	５		IP
+加藤　　　翔	3.00	0.19	3.7	３		IP	３		IP	５		IP	３		IP	６		IP	６		IP	６	4	IP	５		IP	４		IP	６		IP
+横田　　海人	1.40	0.14	3.6	６		IP	５		IP	６		IP	６		IP	５	5	IP	５		IP	６		IP	５		IP	６		IP	６		IP

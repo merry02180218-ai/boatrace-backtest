@@ -1,0 +1,8 @@
+data=
+1	0
+平田　さやか	7.30	0.16	2.7	２		IP	４		IP	３		IP	５		IP	２		IP	１		IP	１		G3	１		G3	２		G3	３		G1
+寺本　　重宣	5.89	0.16	2.9	２		G3	３		G3	エ	3	IP	４		IP	４		IP	１		G3	３		G3	３		IP	２		IP	６		IP
+若林　　　将	7.40	0.15	2.6	６	4	G3	２		G3	２		IP	４		IP	１		IP	２		IP	２		IP	３		IP	１		G1	３		G1
+鈴木　　雅希	5.90	0.15	3.5	１		IP	６		IP	４		IP	４		IP	２	5	IP	２		IP	１		IP	５		IP	４		IP	３		IP
+三角　　哲男	5.50	0.18	2.8	３		IP	１		IP	欠		IP	２		IP	５		IP	４		IP	４		G1	２		IP	３		IP	３		IP
+塚田　　修二	4.60	0.19	3.2	６		IP	１		IP	４		IP	４		IP	３		IP	６		IP	２		IP	４		IP	５		IP	３		IP

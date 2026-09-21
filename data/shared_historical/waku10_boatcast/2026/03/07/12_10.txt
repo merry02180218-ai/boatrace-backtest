@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　　萌	8.50	0.14	2.1	１		IP	１		IP	３		IP	１		IP	４		IP	３		G2	１		IP	１		IP	２		IP	１		IP
+松田　大志郎	7.30	0.16	3.7	１		IP	２		IP	４		IP	１		IP	５		G1	３		IP	２		IP	１		IP	２		IP	３		IP
+妹尾　　忠幸	5.20	0.14	3.7	６	6	IP	１		IP	４	4	IP	４	4	IP	４		G1	３		G1	２		G2	５		IP	２		IP	５		IP
+関根　　彰人	3.30	0.16	3.9	５		IP	５		IP	６	6	IP	２		IP	３		IP	５		IP	６		IP	１		IP	６		IP	妨		IP
+濱崎　　　誠	3.80	0.18	4.3	２		IP	４		IP	４		IP	２		IP	６		IP	６		IP	５		IP	４		IP	５		IP	４		IP
+重野　　哲之	3.80	0.12	2.9	５		IP	５		G1	３		IP	２		IP	４		IP	３		IP	５		IP	５		IP	４		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+安達　　裕樹	8.90	0.14	1.8	３		G2	１		G2	１		IP	６		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+岡部　　　哲	6.00	0.16	2.3	１		IP	４		IP	１		IP	２		IP	３		IP	１		IP	５		IP	５		IP	３		IP	５		IP
+田中　　京介	6.80	0.13	3.3	５		G3	３		G3	３	4	IP	１		IP	３		IP	１		IP	２		IP	３		IP	１	4	IP	４		IP
+山下　　奈緒	2.60	0.25	5.6	６		IP	５		G3	３		G3	４	5	IP	５		IP	６		IP	４		IP	５		IP	５		IP	５		IP
+茅原　　悠紀	6.90	0.12	3.4	４		SG	２		IP	４	4	G1	４		G1	４		G1	２		G1	３		SG	１		G1	５		G1	２		G1
+堤　　　啓輔	3.30	0.21	4.1	３	5	IP	６	4	IP	４		IP	５		IP	２	3	IP	４		IP	６		IP	５	5	IP	４		IP	６		IP

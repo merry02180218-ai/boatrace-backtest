@@ -1,0 +1,8 @@
+data=
+1	0
+仲道　　大輔	8.10	0.17	3.3	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	６		IP	２		IP	４		IP
+黒田　　　剛	3.50	0.16	3.0	５		IP	２	3	IP	３		IP	６		IP	５		IP	５		IP	６		IP	１		IP	５		IP	６		IP
+佐藤　　太亮	3.80	0.18	4.0	６		IP	５		IP	６		IP	３		IP	５	2	IP	２		IP	５		IP	２		IP	５		IP	３		IP
+森　　　智哉	5.44	0.12	2.8	２		IP	５		IP	３		IP	６		IP	落		IP	２		IP	１		IP	４		IP	３		IP	４		IP
+坂本　　一真	2.60	0.19	4.0	２		IP	６		IP	２		IP	６		IP	６		IP	６		IP	６		IP	エ		IP	６		IP	４	6	IP
+八戸　　琉楓	2.60	0.18	4.5	１		IP	６		IP	６		IP	５		IP	６		IP	６		IP	４		IP	６		IP	４		IP	６		IP

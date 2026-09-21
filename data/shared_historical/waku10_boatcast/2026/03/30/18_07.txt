@@ -1,0 +1,8 @@
+data=
+1	0
+濱崎　　　誠	8.80	0.15	2.4	１		IP	１		IP	１		IP	１		IP	３		IP	２		IP	１		IP	３		IP	１		IP	２	2	G3
+中山　　　将	6.90	0.09	1.2	３		IP	２		IP	２		IP	１		IP	３		IP	６		IP	２		IP	４		IP	２		IP	１		IP
+原　　加央理	6.33	0.15	2.5	２		IP	２		IP	６		IP	３		IP	２		IP	落	2	IP	３		IP	１		IP	２		G3	５		G3
+大神　　康司	5.20	0.13	2.0	５	3	IP	２	2	IP	５	2	IP	３	3	IP	３	2	IP	１	2	IP	４	2	IP	４	2	IP	４	1	IP	３	3	IP
+越智　　照浩	3.11	0.18	4.1	５		IP	エ		IP	４		IP	６		IP	４		IP	４	4	IP	３		IP	６		IP	５	6	IP	４		IP
+田川　　大貴	3.60	0.15	3.0	５		IP	４		IP	４		IP	５		IP	４		IP	６		IP	２		IP	３		IP	６		IP	４	5	IP

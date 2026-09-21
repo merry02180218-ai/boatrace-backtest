@@ -1,0 +1,8 @@
+data=
+1	0
+赤池　　修平	4.80	0.20	4.3	３		IP	５		IP	５		IP	１		IP	６		IP	２		IP	３		IP	１		IP	５		IP	６		IP
+伊藤　　　栞	1.90	0.20	3.9	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	３		IP	４		IP	６		IP
+栗山　　繁洋	3.30	0.24	4.1	５		IP	６	4	IP	１		IP	４	4	IP	５		IP	５		IP	６		IP	２	4	IP	５		IP	６		IP
+市橋　　卓士	5.90	0.12	2.8	４		IP	３		IP	２		IP	３	2	IP	２		IP	２		IP	３		IP	４		G1	３		IP	５		IP
+山本　　幸也	2.10	0.28	5.0	４		IP	２		IP	５		IP	６		IP	６		IP	６	6	IP	６		IP	６	6	IP	６	6	IP	６	6	IP
+津田　　裕絵	3.70	0.18	4.8	６		IP	５		IP	３		IP	４		IP	４		IP	３		G1	５		IP	６		G3	５		G3	２		G3

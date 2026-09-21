@@ -1,0 +1,8 @@
+data=
+1	0
+庄司　　孝輔	7.90	0.14	2.2	１		IP	１		IP	２		IP	３		IP	２		IP	１		IP	６		G3	３		IP	１		IP	１		IP
+宮下　　元胤	6.80	0.15	3.2	２	3	IP	４		IP	４		IP	１	3	IP	３		IP	３		IP	１		IP	３		IP	２		IP	３		IP
+大澤　　風葵	7.89	0.15	3.1	２		IP	６	4	IP	１		IP	１		IP	２		IP	不		IP	２		IP	２		IP	１		IP	３		IP
+塚越　　海斗	7.70	0.12	2.6	１		IP	６		G3	３		G3	１		IP	１		IP	２		IP	３		IP	２		IP	２		IP	１		IP
+伯母　　芳恒	5.20	0.17	3.6	５		IP	３		IP	５		IP	３		IP	５		G3	２		G3	４		G3	３		IP	３		IP	１		IP
+乙津　　康志	3.50	0.19	4.8	６		IP	６		IP	３		IP	３		IP	４		IP	３		IP	６		IP	４		IP	４		IP	５		IP

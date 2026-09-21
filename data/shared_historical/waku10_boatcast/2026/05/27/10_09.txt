@@ -1,0 +1,8 @@
+data=
+1	0
+杉田　　篤光	7.90	0.19	3.7	１		IP	１		IP	２		IP	４		IP	１		IP	６		IP	２		IP	１		G3	２		G3	１		IP
+大澤　　誠也	4.60	0.20	3.9	２		IP	転		IP	５		IP	４		IP	６		IP	６	3	IP	４		IP	１		IP	２		IP	２		IP
+吉川　　昭男	4.00	0.16	3.4	６		IP	４		IP	２		IP	３		IP	６		IP	Ｆ		IP	２		IP	１		IP	６		IP	６		IP
+浜崎　　準也	2.70	0.19	3.2	４		IP	３		IP	６		IP	３		IP	４		IP	５		IP	６		IP	６		IP	５		IP	転		IP
+江本　　真治	4.70	0.14	3.5	４		IP	５		G3	５		G3	３		IP	２		IP	４		G3	２		G3	３		G3	６		IP	３		IP
+宮崎　　奏磨	1.10	0.25	4.0	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP

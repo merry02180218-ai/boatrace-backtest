@@ -1,0 +1,8 @@
+data=
+1	0
+蜂須　　瑞生	8.20	0.17	2.4	１		IP	１		IP	５		G3	２		G3	３		IP	２		IP	１		IP	１		IP	２		IP	１		IP
+土屋　　太朗	6.50	0.16	3.8	１		IP	４		G3	２		IP	５		IP	２		IP	２		IP	６		IP	１		IP	３		IP	２		IP
+椎名　　　豊	7.90	0.12	2.3	１		IP	２		IP	３		IP	２		IP	３		IP	１		IP	５		IP	１		IP	１		IP	２		G1
+岩崎　　麗子	2.80	0.15	2.7	５		G3	４	3	G3	６		IP	Ｆ	5	G3	６		G3	４		G3	２		IP	５		IP	４		IP	５		IP
+澁澤　　周羽	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+橋本　　久和	3.40	0.27	5.5	４		IP	５		G3	３		IP	５		IP	２		IP	３		IP	５		IP	６	4	IP	６		IP	５		IP

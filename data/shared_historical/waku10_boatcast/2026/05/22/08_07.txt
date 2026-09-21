@@ -1,0 +1,8 @@
+data=
+1	0
+小川　日紀太	5.20	0.19	3.5	４		IP	１		IP	１		IP	３		IP	１		IP	５		IP	６		G3	４		IP	４		IP	６		IP
+麻生　　慎介	5.70	0.12	3.5	３		IP	１		IP	３		IP	５		IP	２		IP	３		IP	２		IP	６		G1	４		G1	４	3	IP
+渡邉　　英児	6.10	0.14	2.8	２		IP	３		IP	２		IP	１		IP	６		IP	４		IP	４		IP	３		IP	１		IP	４		IP
+楠原　　翔太	5.00	0.18	3.4	１		IP	３		IP	４		IP	５		IP	５		IP	３		G3	２		G3	５		IP	４		IP	３		IP
+秦　　　英悟	4.00	0.10	2.5	３		IP	４		IP	５		IP	４		IP	３		IP	６		IP	６		SG	３		SG	５	6	G1	５		G1
+高橋　　　勲	5.20	0.15	2.6	２		IP	３		IP	３	5	IP	５	4	IP	４		IP	３	5	IP	５		IP	１	4	IP	５		IP	３	4	IP

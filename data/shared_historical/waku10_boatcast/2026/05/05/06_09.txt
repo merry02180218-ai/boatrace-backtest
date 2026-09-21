@@ -1,0 +1,8 @@
+data=
+1	0
+豊田　　祥生	6.70	0.17	3.4	２		IP	１		IP	６		IP	１		IP	１		IP	５		IP	４		IP	１		IP	４		IP	２		IP
+菊地　　孝平	6.40	0.13	3.0	３		G1	５		G1	１		G1	４		G2	４		G1	４		IP	２		IP	４		G1	４		G1	２		G1
+池田　　雄一	5.00	0.17	3.4	３		IP	４		IP	２		IP	４		IP	転		IP	４	4	IP	４		IP	２		IP	１		IP	５		IP
+幸田　　智裕	4.80	0.20	3.4	３	5	IP	５		IP	３		IP	５	5	IP	３		IP	３		IP	１		IP	５		IP	５		IP	３		IP
+杉田　　篤光	3.90	0.28	5.1	２		IP	５		IP	５		IP	５	6	G3	４	6	IP	２		IP	３		IP	６		IP	５		IP	４		IP
+中嶋　　世奈	2.60	0.20	4.2	４	4	IP	６		IP	５		IP	５	5	IP	４	5	IP	６		IP	５	5	IP	４		IP	４		IP	５		IP

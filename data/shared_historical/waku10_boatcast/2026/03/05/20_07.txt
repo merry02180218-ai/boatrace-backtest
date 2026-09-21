@@ -1,0 +1,8 @@
+data=
+1	0
+鶴田　　勇雄	7.20	0.16	2.1	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	４		IP	６		IP	６		IP	１		IP
+前沢　　丈史	8.70	0.16	2.5	１		G1	２		IP	２		IP	１		IP	３		IP	３		IP	２		IP	１		IP	２		IP	１		IP
+今出　　晋二	5.80	0.18	3.0	２		IP	２		IP	３		IP	３		IP	３		IP	４		IP	４		IP	１		IP	５		IP	４		G3
+畑　　　和宏	4.00	0.16	3.6	６		IP	５		IP	２		IP	５		IP	４		IP	５		IP	６	3	IP	４		IP	２		IP	２		IP
+浦田　　信義	4.56	0.17	3.7	４	6	IP	５		IP	６		IP	２		IP	３		IP	３		IP	欠		IP	２		IP	５		IP	４		IP
+山田　　晃大	4.20	0.17	2.4	２		IP	５		IP	４		IP	６		IP	３		IP	５		IP	２		IP	６		IP	４		IP	３		IP

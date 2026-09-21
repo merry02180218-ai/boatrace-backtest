@@ -1,0 +1,8 @@
+data=
+1	0
+北野　　輝季	9.78	0.16	2.6	２		IP	１		IP	１		G1	１		G1	１		G1	１		G3	１		G3	１		G3	落		G2	３		IP
+山本　　英志	7.00	0.12	2.5	１		IP	４	3	IP	２		G3	２		G3	４		IP	２		IP	２		IP	２		IP	４		IP	２		IP
+北川　　潤二	7.00	0.12	3.1	１		IP	２		IP	４		IP	２		IP	２		IP	２	2	IP	３		IP	３		IP	３		G3	３	4	G3
+野中　　一平	4.90	0.11	1.9	４		IP	２		IP	４		G1	２		IP	４		IP	６		IP	４	3	IP	６		IP	５		IP	１		IP
+岩津　　徹郎	4.00	0.18	3.8	３		IP	２		IP	２		IP	３	4	IP	５		IP	転		IP	５	6	IP	４		IP	５		IP	５		IP
+今出　　晋二	3.20	0.22	4.7	３	5	IP	Ｆ		IP	６		IP	６		IP	３		IP	５		IP	５	5	IP	２	5	IP	４	5	IP	５		IP

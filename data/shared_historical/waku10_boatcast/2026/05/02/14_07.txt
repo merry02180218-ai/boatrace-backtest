@@ -1,0 +1,8 @@
+data=
+1	0
+山下　　奈緒	8.40	0.17	4.1	２		IP	３		IP	２		IP	２		IP	１		IP	１		G3	１		G3	２		IP	３		IP	１		G3
+西岡　　育未	5.30	0.17	3.7	３		G3	３		G3	１		G3	３		G3	３		IP	４		IP	６		IP	４		G3	３		IP	４		IP
+香川　　素子	6.70	0.14	3.4	２		G3	３		IP	２		IP	３		IP	５		IP	２		IP	４		IP	２		G3	３		IP	１		G1
+樫葉　　新心	1.80	0.19	4.2	６		IP	５		IP	６		G3	５		G3	６		IP	５		IP	６		IP	５		G3	４		G3	５		IP
+坂　　咲友理	3.80	0.19	3.9	６	4	IP	４		G3	５		IP	４		IP	３		IP	４		IP	３		IP	４		G3	３		G3	６		IP
+武藤　　綾子	2.20	0.22	4.5	６		IP	６		IP	５		G3	３		IP	６		IP	６		IP	６		IP	３	5	G3	５		IP	６		G3

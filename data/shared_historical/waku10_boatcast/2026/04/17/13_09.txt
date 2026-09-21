@@ -1,0 +1,8 @@
+data=
+1	0
+泥谷　　一毅	8.00	0.21	3.9	２		IP	１		IP	２		IP	２		IP	２		IP	２		IP	３		IP	１		IP	１		IP	４		IP
+小野　　勇作	5.70	0.19	3.5	１	3	IP	１	3	IP	６		IP	５		IP	２		IP	２		IP	６		IP	６		IP	３		IP	１		IP
+四宮　　与寛	5.20	0.15	2.5	１		IP	４		IP	４		IP	２		IP	２		IP	３		IP	５		IP	５		IP	３		IP	５		IP
+八木　　治樹	3.50	0.14	2.0	４		IP	３		IP	３		IP	５		IP	１		IP	６		IP	６		G3	５		G3	６		IP	５		IP
+杉村　　賢也	3.00	0.15	3.1	３		IP	５		IP	６		IP	５		G3	３	3	IP	不		IP	６		IP	６	4	IP	５		IP	４		IP
+木村　　亮太	4.20	0.16	3.9	４		IP	５		IP	５		IP	１		IP	４		IP	３		IP	２		IP	６		IP	４		IP	６		IP

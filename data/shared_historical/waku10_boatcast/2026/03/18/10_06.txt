@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　　茂	7.80	0.15	2.7	１		IP	２		IP	１		IP	２		IP	２		IP	１		IP	３		IP	２		IP	Ｆ		G3	１		IP
+石渡　翔一郎	5.30	0.18	4.0	５		IP	５		IP	６		IP	３		IP	３		IP	２		IP	４		IP	４		IP	１		IP	１		IP
+岡村　　将也	4.60	0.16	2.9	５		IP	４		IP	２		IP	６		IP	５		IP	３	4	IP	５		IP	６		IP	２		IP	１		IP
+西岡　　蒼志	3.30	0.12	2.2	５	6	IP	２		IP	３		IP	４		IP	５		IP	３		IP	６	6	IP	５		IP	５		IP	転	6	IP
+茶谷　　信次	6.60	0.16	2.6	４		IP	２		IP	５		IP	２		IP	３	4	IP	１	3	IP	３		IP	４		IP	２	4	IP	１		IP
+藤原　啓史朗	4.30	0.10	2.5	４		G1	５		G1	２		IP	４		IP	６		IP	５		IP	５		G1	４		G2	４		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+久保原　秀人	4.80	0.20	3.9	５		IP	６		IP	６		IP	２		IP	４		IP	５		IP	２		IP	５		IP	１		IP	１		IP
+黒田　　誠司	2.78	0.22	4.5	６		IP	２		IP	６		IP	４		IP	３		IP	５		IP	６		IP	６		IP	転		IP	６		IP
+岡本　　慎治	6.10	0.16	3.1	１		IP	１		IP	５		IP	１		IP	３	4	IP	２		IP	６		IP	５		IP	４		IP	２		IP
+坂元　　浩仁	7.40	0.14	3.2	３		IP	３		G2	４		G2	３		IP	２		IP	１		IP	２		IP	３		IP	２		IP	１		IP
+和合　　俊介	2.30	0.19	4.5	５		IP	６	4	IP	６		IP	６		IP	４		IP	５		IP	３		IP	６		IP	６	6	IP	４		IP
+田中　　　豪	4.80	0.16	3.4	５		IP	４	5	IP	１		IP	３		IP	４		IP	６		IP	１	3	IP	３		IP	５		IP	６		G3

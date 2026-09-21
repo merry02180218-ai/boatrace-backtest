@@ -1,0 +1,8 @@
+data=
+1	0
+平見　　真彦	7.70	0.17	2.6	４		IP	６		IP	３		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	２		IP
+亀山　　雅幸	6.70	0.13	3.4	１		IP	２		IP	３		IP	２		IP	６		IP	４		IP	２		IP	３		IP	２		IP	２		IP
+渡辺　　空依	4.80	0.17	2.4	４		IP	３		IP	５		IP	４		IP	３		IP	２		IP	６		IP	１		IP	３	4	IP	６		IP
+馬野　　　耀	5.10	0.16	2.3	２		IP	２		IP	６		IP	転		IP	４		IP	１		IP	３		IP	５		IP	２		IP	４		G3
+伊倉　　　光	4.40	0.15	2.2	４		IP	４		IP	１		IP	４		IP	６		IP	３		IP	５		IP	１		IP	６		IP	５		IP
+樋江井　　舞	3.00	0.15	2.3	２		IP	２		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	５		IP	４		IP

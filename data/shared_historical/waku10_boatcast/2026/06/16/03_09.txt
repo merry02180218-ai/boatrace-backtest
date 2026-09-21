@@ -1,0 +1,8 @@
+data=
+1	0
+沼田　　大都	7.00	0.19	3.3	２		IP	６		IP	１		IP	１		IP	２		IP	６		IP	１		IP	１		IP	５		IP	１		IP
+塩嶋　　泰空	1.50	0.17	4.5	５		IP	６		IP																								IP
+齊藤　　　廉	4.60	0.15	2.5	５		IP	５		IP	１		IP	４		IP	２		IP	３	4	IP	６		IP	２		IP	４		IP	６	2	IP
+出畑　　孝成	5.22	0.14	3.2	２		IP	落		IP	１		IP	６		IP	６		IP	２		IP	５		IP	２		IP	６		IP	２		IP
+西丸　侑太朗	5.70	0.14	3.5	６		IP	４		IP	４		IP	４		IP	４		G3	２		IP	１		IP	２	6	G1	３	6	G1	３		IP
+花田　　凱成	2.30	0.16	2.4	６		IP	６		IP	４		IP	５		IP	５		IP	５		IP	３		IP	５		IP	５		IP	６	5	IP

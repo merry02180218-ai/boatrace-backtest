@@ -1,0 +1,8 @@
+data=
+1	0
+西原　　明生	7.30	0.15	3.7	６		IP	１		IP	３		IP	２		IP	１		IP	５		IP	２		IP	１		IP	１		IP	２		IP
+渡邊　雄一郎	7.80	0.17	3.5	３		IP	１		IP	３	3	IP	４		IP	２		IP	２		IP	２		IP	１	3	IP	１		IP	２		IP
+泉　　　具巳	4.40	0.17	3.2	３		IP	４		IP	１		IP	３		IP	６		IP	６		IP	１		IP	６		IP	６		IP	５		IP
+坂本　　一真	3.90	0.16	3.5	２		IP	２		IP	４		IP	５		IP	４		IP	３		IP	６		IP	６		IP	６		IP	４		IP
+岡村　　将也	5.50	0.16	3.8	５		IP	１		IP	２		IP	１		IP	４		IP	４		IP	６		IP	３	6	IP	２		IP	５		IP
+熊本　　英一	2.20	0.26	5.1	５		IP	５		IP	５		IP	５		IP	４		IP	４		IP	５		IP	６		IP	６		IP	５		IP

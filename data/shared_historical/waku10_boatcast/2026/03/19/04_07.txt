@@ -1,0 +1,8 @@
+data=
+1	0
+藤田　　竜弘	7.80	0.17	3.1	３		IP	４		IP	１		IP	１		IP	５		IP	２		IP	１		IP	１		IP	２		IP	１		IP
+北野　　輝季	6.80	0.15	2.6	２	3	IP	２	3	IP	３		G1	４		G1	２		G1	３		G1	３		IP	４		IP	１		IP	４		IP
+岩崎　　正哉	5.90	0.17	2.7	３		IP	１		IP	２	4	IP	２		IP	２		IP	３		IP	４		IP	４		IP	６		IP	４		IP
+川島　　拓郎	4.44	0.12	2.7	３		IP	４		IP	転	5	IP	６		IP	３		IP	３		IP	５		IP	３		IP	２		IP	６		IP
+吉田　慎二郎	4.50	0.18	3.2	４		IP	４		IP	５		IP	６		IP	２	4	IP	４		IP	４		IP	４		IP	１	6	IP	４		IP
+港　　　理樹	2.60	0.22	3.5	５		IP	６		IP	５		IP	５		IP	３		IP	６		IP	６		IP	４		IP	３		IP	６		IP

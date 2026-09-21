@@ -1,0 +1,8 @@
+data=
+1	0
+仲口　　博崇	8.60	0.19	3.3	２		G3	２		IP	１		IP	２		IP	３		IP	１		G1	１		IP	１		IP	１		IP	４		IP
+越智　　照浩	4.60	0.18	3.5	４		IP	３		IP	３	3	IP	３		IP	５	3	IP	２		IP	２		IP	４		IP	６		IP	６		IP
+坂口　　　周	7.00	0.16	3.0	２	2	G3	２		IP	３		IP	２		G3	２		G3	４		IP	３		IP	３		IP	３		IP	１		IP
+興津　　　藍	3.80	0.15	2.9	３		IP	４	3	IP	３		IP	５		IP	５	6	IP	６	5	IP	４		IP	３		IP	６		IP	３		IP
+北村　　征嗣	4.60	0.15	3.6	４		IP	６		G1	３		G1	３		IP	４		IP	４		G3	５		G3	３		IP	３		IP	４		IP
+宮迫　　暢彦	2.40	0.26	4.6	５		G3	６		G3	３		IP	６		IP	６		IP	５	5	IP	５		IP	５		IP	６		IP	３		G3

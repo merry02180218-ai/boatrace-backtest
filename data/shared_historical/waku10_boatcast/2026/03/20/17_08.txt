@@ -1,0 +1,8 @@
+data=
+1	0
+永田　　　楽	5.70	0.23	4.4	５		IP	４		IP	５	2	IP	４		G3	２		IP	２		IP	６		IP	１		IP	２		IP	１		IP
+森田　　梨湖	4.00	0.19	4.4	２		IP	３		IP	５		IP	２		IP	３		IP	４		IP	５		IP	６	3	IP	５		G3	６		G3
+角　　ひとみ	5.30	0.20	4.1	４		IP	２		G3	２		G3	１		G3	３		IP	６		IP	４		IP	５		IP	４		IP	３		IP
+井澤　　聖奈	2.00	0.26	5.0	４		IP	６		IP	５		IP	６	6	IP	４		IP	６		IP	６		IP	５		IP	５		IP	５		IP
+瀧川　　千依	3.50	0.20	4.4	４		IP	６		IP	４		IP	落		IP	４		IP	４		IP	４		IP	５		IP	２		IP	４		IP
+植竹　　玲奈	2.20	0.27	5.7	４		IP	６		IP	６		IP	４		IP	５		IP	６		IP	６		IP	４		IP	５		IP	５		IP

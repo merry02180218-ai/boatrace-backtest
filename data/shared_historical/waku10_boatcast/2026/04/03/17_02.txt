@@ -1,0 +1,8 @@
+data=
+1	0
+坂元　　浩仁	9.50	0.15	4.4	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	４		G2	１		G2
+塩田　　雄一	2.90	0.20	4.3	５		IP	６		IP	６		IP	２		IP	５		IP	４		IP	２		IP	６		IP	５		IP	Ｆ		IP
+仲谷　　颯仁	8.40	0.14	4.1	２		SG	４		G1	２		G1	１		G1	２		G1	４		G1	１		G1	２		IP	４		SG	２		SG
+岡本　　　大	3.10	0.17	3.4	４		IP	２		IP	３		IP	５		IP	５		IP	５		IP	５		IP	５		IP	５		IP	６		IP
+下出　　卓矢	5.70	0.17	3.0	５		IP	４		IP	４	3	IP	５		G2	１		IP	１		IP	６		IP	１		IP	３		IP	３	6	G1
+東　　　潤樹	4.40	0.18	4.3	３		IP	３		IP	３	5	IP	６		IP	６		IP	２		IP	３		IP	２		IP	６		IP	６		IP

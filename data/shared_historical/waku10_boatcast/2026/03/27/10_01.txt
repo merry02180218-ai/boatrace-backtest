@@ -1,0 +1,8 @@
+data=
+1	0
+西橋　　奈未	8.33	0.12	2.0	転		G3	２		G2	１		G2	３		IP	１		IP	２		IP	５		G1	１		IP	１		IP	２		G3
+中尾　　彩香	3.90	0.20	3.4	３		IP	２		IP	２		IP	５		IP	３		IP	６		IP	４		IP	５		IP	転		IP	５		G3
+水口　　由紀	4.00	0.15	4.3	２		IP	４		IP	６	4	IP	転		G3	６		IP	２		G3	転		IP	２		IP	５		IP	４		IP
+岩崎　　麗子	3.10	0.14	2.3	４		G3	２		IP	５		IP	４		IP	５		IP	５		IP	４		IP	５		IP	６		IP	５		IP
+濱崎　寿里矢	2.40	0.18	3.3	６		IP	５		IP	５		IP	３		IP	３		IP	６		IP	６		IP	５		IP	６		G3	５		IP
+武藤　　綾子	2.50	0.21	4.5	３		IP	６		IP	６		IP	６		IP	３	5	G3	５		IP	６		G3	６		G3	４		G3	５		IP

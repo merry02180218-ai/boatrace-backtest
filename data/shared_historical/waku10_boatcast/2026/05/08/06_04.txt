@@ -1,0 +1,8 @@
+data=
+1	0
+重野　　哲之	9.40	0.13	2.3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	４		IP	１		IP
+芹澤　　克彦	5.30	0.14	2.9	５		IP	４		IP	２		IP	３		IP	３		IP	３		IP	２		IP	１		IP	５		IP	６		IP
+松瀬　　弘美	4.90	0.15	2.2	２		IP	６		G3	４		G3	５		IP	２		IP	２		G3	３		G3	４		G3	５		G3	３		IP
+金子　　良昭	3.70	0.16	4.2	４		IP	１	3	IP	３		IP	５		IP	６		IP	６		IP	５		IP	４	2	IP	６		IP	３		IP
+本田　　　愛	2.80	0.19	3.5	５		IP	３		IP	５		IP	３		IP	６		IP	４	6	IP	６	6	IP	５		IP	５	6	IP	５		IP
+安藤　　瑠希	2.40	0.14	3.0	６		IP	６		IP	５		IP	２		IP	６		IP	５		IP	６		IP	５		IP	５		IP	４		IP

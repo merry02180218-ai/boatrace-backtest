@@ -1,0 +1,8 @@
+data=
+1	0
+小池　　公生	8.20	0.20	3.8	２		IP	１		IP	３		IP	１		IP	１		IP	２		IP	３		IP	１		IP	４		IP	１		IP
+新田　　智彰	5.50	0.17	3.2	６		IP	６	4	G3	１		IP	３		IP	１		IP	４		IP	１		IP	３		IP	３		IP	６		IP
+岩津　　徹郎	4.90	0.16	3.3	２		IP	転		IP	２		IP	５		IP	４		IP	２		IP	６		IP	３		IP	５		IP	１		IP
+東口　　　晃	3.30	0.20	3.4	５		IP	４		IP	４		IP	４		IP	３		IP	４		IP	５		IP	５		IP	６		IP	４		IP
+牧山　　敦也	5.20	0.20	4.3	３		IP	５	6	G3	３	6	G3	４		IP	５		IP	３		IP	３		IP	２		IP	４		IP	２		IP
+早川　　理稀	1.30	0.17	3.8	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP

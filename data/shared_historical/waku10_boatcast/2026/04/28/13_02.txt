@@ -1,0 +1,8 @@
+data=
+1	0
+常盤　　海心	5.60	0.23	4.7	１		IP	２		IP	４		IP	５		IP	６		IP	６		IP	２		IP	２		IP	２		IP	３		IP
+井上　　恵一	4.70	0.17	3.5	４		IP	３		IP	５		IP	３		IP	３		IP	３		IP	２		IP	６		IP	５		IP	３		IP
+岩橋　　裕馬	4.70	0.15	3.0	４		IP	２		IP	４		G3	４		G3	４		IP	５		IP	４		IP	６		IP	２		IP	２		IP
+大串　　重幸	5.40	0.20	4.1	４		IP	２		IP	３	3	IP	３		IP	２	5	IP	４		G3	３		G3	転		IP	３		IP	３		IP
+遠藤　　エミ	6.00	0.12	2.7	４		G2	３		G1	１		IP	３		IP	６		G1	２		G1	２	4	G3	４		SG	４		G1	６		G1
+鈴木　結平太	2.10	0.19	2.9	４		IP	３		IP	６		IP	５		IP	５		IP	６		IP	５		IP	６		IP	６		IP	６		IP

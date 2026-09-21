@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　翔馬	8.70	0.16	2.8	１		IP	３		IP	１		G3	１		G3	２		IP	５		IP	１		IP	１		G1	１		IP	１		IP
+今泉　　　徹	5.30	0.20	4.0	４		IP	２		IP	２		IP	４		IP	２		IP	４		IP	２		IP	４	3	IP	６		IP	４		IP
+木村　紗友希	4.00	0.18	3.5	３		IP	１		G3	５		IP	３		IP	６		IP	３		IP	４	2	IP	５		IP	６		IP	５	4	IP
+池田　　雄一	5.90	0.18	3.3	１		IP	６		IP	３		IP	６		IP	３		G1	１	5	IP	２	5	IP	５		IP	２		IP	３		IP
+宮内　　直哉	2.20	0.20	4.6	５		IP	５		IP	５		IP	６		IP	５		IP	６		IP	２		IP	５		IP	６		IP	６		G3
+水摩　　　敦	4.70	0.17	3.5	３		IP	５	5	IP	３	5	IP	５		G3	１		G3	３		IP	４	2	IP	３		IP	４		IP	６		IP

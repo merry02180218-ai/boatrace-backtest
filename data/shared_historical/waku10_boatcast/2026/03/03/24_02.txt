@@ -1,0 +1,8 @@
+data=
+1	0
+西丸　　敦基	9.00	0.17	2.9	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	３		IP
+小野　　京平	2.50	0.22	4.9	５		IP	３		IP	５		IP	６		IP	４		IP	６		IP	４		IP	５		IP	６		IP	５		IP
+坂本　　一真	2.80	0.18	3.2	５		IP	５		IP	６		IP	６		IP	４		IP	６		IP	３		IP	２		IP	５		IP	６		IP
+佐野　　優都	4.80	0.12	2.5	６		IP	２		IP	４	6	IP	６		IP	２		IP	４		IP	５		IP	４	3	IP	３		IP	１		IP
+長谷川　　暖	3.70	0.16	3.4	３		IP	５		IP	６		IP	６	6	IP	３		IP	６		IP	転		IP	２		IP	３		IP	３		IP
+出畑　　孝成	3.90	0.24	5.3	５		IP	４		IP	６		IP	５		IP	５		IP	２		IP	４		IP	５		IP	２		IP	３	5	IP

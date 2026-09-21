@@ -1,0 +1,8 @@
+data=
+1	0
+池田　　雄祐	8.60	0.14	2.7	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	１		IP	Ｆ		IP	１		IP
+後藤　　隼之	4.90	0.14	2.8	６		IP	１		G3	３		G3	５		IP	３		IP	１	1	IP	４		IP	５		IP	５		IP	３		IP
+小澤　　和也	2.20	0.15	3.0	５		IP	２		IP	４		IP	６		IP	６		IP	Ｆ	1	IP	５	2	IP	５		IP	６		IP	６		IP
+馬袋　　義則	7.60	0.12	2.4	１		IP	１		G3	３		G3	３		IP	１		IP	１		IP	５		IP	２		IP	２		IP	３		IP
+永井　　亮次	2.89	0.18	4.5	５	6	IP	転	6	G3	２		IP	５		G3	５		G3	６		IP	５		IP	６		IP	４		IP	４		IP
+新田　　洋一	3.90	0.13	3.4	６		IP	５		IP	４		IP	６		IP	３		IP	２		IP	３	5	IP	５		IP	４		IP	４		IP

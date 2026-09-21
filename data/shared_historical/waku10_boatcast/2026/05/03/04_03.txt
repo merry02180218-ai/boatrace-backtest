@@ -1,0 +1,8 @@
+data=
+1	0
+川尻　　泰輔	9.20	0.14	3.4	１		IP	３		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		G3	１		G3
+佐藤　　世那	5.60	0.17	3.7	２		IP	１		IP	２		IP	１		IP	５		IP	４		IP	６		IP	６		IP	３		IP	３		IP
+渡邉　　睦広	5.30	0.17	3.4	４		IP	２		IP	１		IP	４		IP	２		IP	２		IP	６		IP	５		IP	３		IP	５		G3
+櫻井　　　優	5.30	0.13	2.7	６		IP	５		IP	２		IP	３		IP	３		IP	４		IP	２		IP	２		IP	５		IP	２		IP
+相原　　利章	3.00	0.16	2.8	４		IP	４	4	IP	３		IP	５		IP	６		IP	４		IP	５		IP	５		IP	６	6	IP	４		IP
+一瀬　　　明	4.50	0.16	3.1	４	4	IP	２	5	IP	４		IP	６		IP	４		IP	３		IP	４	5	IP	２		IP	５		IP	４		IP

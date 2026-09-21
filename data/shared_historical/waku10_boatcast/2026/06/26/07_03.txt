@@ -1,0 +1,8 @@
+data=
+1	0
+森　　　陽多	5.67	0.17	3.2	２		IP	６		IP	１		IP	欠		IP	１		IP	６		IP	３		IP	４		G3	６		IP	１		G3
+加藤　　啓太	2.50	0.14	2.5	５		IP	４		IP	５		IP	４	5	IP	４	3	IP	６		IP	５		IP	５		IP	５	3	IP	５		IP
+松山　　裕基	3.70	0.18	4.4	４		IP	６		IP	５		IP	２		IP	２		IP	４		IP	５		IP	Ｆ		IP	３		IP	５	2	IP
+永井　　　源	5.30	0.15	2.3	６		IP	５		IP	６		IP	１		IP	１		IP	６		IP	４		IP	２		IP	３		G3	１		G3
+今井　　裕梨	4.20	0.16	2.9	３		IP	３		G3	５		IP	４		IP	６		G3	３		IP	６		IP	４		G1	６		IP	２		IP
+松下　　哲也	2.00	0.17	2.8	４		IP	５		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	５		IP	４		IP

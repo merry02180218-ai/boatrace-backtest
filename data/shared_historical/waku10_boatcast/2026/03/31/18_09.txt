@@ -1,0 +1,8 @@
+data=
+1	0
+香川　　颯太	8.10	0.17	3.1	１		IP	１		IP	２		IP	６		IP	２		IP	１		IP	１		IP	４		IP	１		IP	１		IP
+越智　　照浩	3.50	0.19	3.8	３		IP	５	3	IP	２		IP	２		IP	４		IP	６		IP	６		IP	５		IP	６		IP	５		IP
+島川　　光男	5.20	0.16	2.6	４		IP	６	2	IP	２		IP	２		IP	６		IP	５		IP	１		IP	４		IP	２		IP	３		IP
+前田　　将太	5.70	0.14	3.1	３		G2	６		G2	２		G1	５		G1	１		IP	５		IP	６		G1	１	3	IP	２		SG	５		IP
+櫻井　　　優	6.10	0.17	3.1	４		IP	３		IP	６		IP	３		IP	２		IP	２		IP	３		IP	１		IP	１		IP	５		IP
+大神　　康司	5.10	0.18	2.9	２	2	IP	６	2	IP	１	2	IP	５	3	IP	２	2	IP	４	5	IP	５	2	IP	３	2	IP	５	2	IP	２	2	IP

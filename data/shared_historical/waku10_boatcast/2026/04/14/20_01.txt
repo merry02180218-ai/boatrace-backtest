@@ -1,0 +1,8 @@
+data=
+1	0
+城間　　盛渚	9.20	0.21	3.8	１		IP	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	２		IP
+久保原　秀人	3.20	0.17	3.9	５	3	IP	４		IP	２		IP	２		IP	６		IP	６		IP	５		IP	５		IP	５		IP	５		IP
+間野　　兼礼	6.50	0.19	3.4	４		IP	２	4	IP	２		IP	１		IP	３		IP	３		IP	２		IP	３		IP	６		IP	２		IP
+浜崎　　準也	3.10	0.19	3.6	５		IP	６		IP	６		IP	５		IP	転		IP	４		IP	２		IP	４		IP	６		IP	２		IP
+恵良　　琴美	1.90	0.19	3.8	３		IP	５		IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP	５		IP	６		IP
+久富　　政弘	2.50	0.27	5.2	５		IP	４		IP	６		IP	６		IP	５		IP	５		IP	６		IP	５		IP	４		IP	３		G3

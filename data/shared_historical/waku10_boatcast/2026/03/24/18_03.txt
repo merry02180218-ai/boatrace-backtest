@@ -1,0 +1,8 @@
+data=
+1	0
+藤山　　雅弘	8.10	0.15	2.2	１		IP	６		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	２		IP
+下出　　卓矢	5.40	0.13	1.8	４		IP	２		IP	５		IP	２		IP	６		G2	３		IP	６		IP	３		IP	４		IP	１		G1
+新出　　浩司	3.70	0.18	3.6	２		IP	５		IP	４		IP	２		IP	６		IP	６		IP	３	4	IP	５		IP	６		IP	４	5	IP
+前出　　達吉	7.40	0.13	2.4	１		IP	２		IP	２		IP	３		IP	１		IP	２		IP	２		IP	４		IP	３		IP	３		G3
+山崎　　聖司	3.00	0.19	3.9	６		IP	５		IP	４	6	IP	６		IP	３		IP	６		IP	６		IP	３		IP	５		IP	３	4	IP
+胡本　　悟志	3.60	0.18	3.5	５		IP	４		IP	４		IP	３		IP	４		IP	５		IP	４		IP	４		IP	４	5	IP	５		IP

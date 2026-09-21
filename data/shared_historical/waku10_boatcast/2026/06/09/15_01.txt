@@ -1,0 +1,8 @@
+data=
+1	0
+大廣　　咲季	6.60	0.15	3.1	１		IP	２		IP	５		IP	２		G3	５		G3	１		IP	４		IP	５	2	IP	１		G3	１		G3
+中北　　　涼	4.50	0.16	3.9	４		IP	５		IP	３		IP	２		IP	３		G3	２		G3	５	3	IP	６		IP	４		IP	４		G3
+赤井　星璃菜	5.90	0.15	2.6	４		G3	４		G3	１		IP	２		IP	５		IP	６		IP	３		IP	３		IP	２		IP	１		IP
+松田　　真実	3.00	0.18	4.0	６		IP	５		IP	５		IP	４		IP	５		G3	４		IP	２		IP	４		IP	６		IP	５		G3
+中尾　　優香	4.90	0.19	4.0	３		IP	３		IP	６		IP	２		IP	１		IP	５		IP	６		IP	４		IP	６	4	G3	１		G3
+中澤　　里桜	2.20	0.19	4.4	５		IP	２		IP	６		IP	４		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP

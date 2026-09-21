@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　一輝	8.70	0.14	2.2	１		G1	１		G1	１		G1	２		G1	１		IP	５		IP	１		IP	１		IP	４		IP	２		IP
+西山　　貴浩	8.00	0.14	3.9	２		G1	１		G1	２		G1	１		G1	６		G1	５		G1	２		G1	１		SG	５		SG	３		SG
+吉村　　　誠	6.40	0.16	3.2	２		IP	１		IP	２		IP	５		IP	１		IP	６		G1	２		IP	４	4	IP	３		IP	３		IP
+高野　　哲史	4.70	0.16	3.5	４		IP	６		G1	５		G1	転		IP	５		IP	２		IP	３		IP	３		G1	３		IP	２		IP
+岩瀬　　裕亮	6.40	0.18	3.7	４		G1	５		G1	２		IP	１		G2	２		G2	３	4	IP	３		IP	４		IP	５	6	SG	３		IP
+藤原　　碧生	5.00	0.20	4.1	４		G1	３		G1	５		IP	４		IP	４		G1	１		G1	３		IP	３		IP	落		G3	６		G1

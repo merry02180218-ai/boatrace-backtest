@@ -1,0 +1,8 @@
+data=
+1	0
+谷口　　健一	4.20	0.17	3.4	１		IP	３		IP	１		IP	５		IP	６		IP	６		IP	４		IP	５		IP	５		G3	４		IP
+泥谷　　一毅	6.40	0.20	4.3	２		IP	３		IP	３		IP	３		IP	２		IP	２		IP	４		IP	３		IP	３		IP	３		IP
+齊藤　　　廉	3.70	0.17	3.1	６		IP	５		IP	２		IP	５		IP	３		IP	５		IP	６		IP	６	4	IP	１		IP	４		IP
+桑原　　　悠	4.30	0.17	3.4	４		IP	４		IP	３		G3	１		IP	６		G1	３		G3	４		G1	６		G1	５		G1	６		IP
+向井田　佑紀	4.50	0.16	3.6	２		IP	４	4	IP	６		IP	５		IP	３		IP	４		IP	３		G3	３		IP	４		IP	４		IP
+平野　　和明	3.56	0.16	4.0	５		IP	２		IP	４		IP	３	4	IP	５		IP	６		IP	欠		IP	６		IP	４		IP	４		IP

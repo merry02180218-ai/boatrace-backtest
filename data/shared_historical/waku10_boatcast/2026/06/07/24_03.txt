@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　祐美子	4.90	0.16	3.3	６		IP	６	2	IP	２		IP	３		IP	３		G3	４		G3	２		G3	６		IP	１		G3	４		IP
+三馬　　崇史	4.90	0.16	3.0	２		IP	５		IP	２		IP	６		IP	５		G2	３		G2	５	3	IP	３		IP	４		IP	２		IP
+北山　　康介	7.30	0.12	2.5	２	4	IP	１		IP	３		IP	４		IP	４		IP	３		IP	２		IP	１		IP	２		IP	２		IP
+堀本　　裕也	3.50	0.14	2.6	２		IP	６		IP	４		IP	４		IP	１		IP	４	5	IP	６		IP	６		IP	６		IP	６		IP
+藤丸　　光一	4.40	0.23	4.8	６	4	IP	４		IP	５	1	IP	３	2	IP	５	4	IP	３	2	IP	１	1	IP	６	4	IP	５	3	IP	１	2	IP
+山崎　　昂介	3.10	0.19	4.1	５		IP	４		IP	５		IP	４		IP	２		IP	４		IP	６		IP	５		IP	５		IP	５		IP

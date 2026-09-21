@@ -1,0 +1,8 @@
+data=
+1	0
+島川　　海輝	8.80	0.14	2.3	１		G2	６		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+青木　　　蓮	5.40	0.13	2.3	６	3	IP	２		IP	６	1	IP	１		IP	３		IP	２		IP	２		IP	５		G1	４		G1	６		G1
+木場　雄二郎	4.90	0.17	3.7	２		IP	３		IP	４		IP	６		IP	２		IP	３	4	IP	６		IP	３		IP	６		IP	２		IP
+原　　　豊土	6.40	0.17	2.7	４		IP	１		IP	２		IP	３		IP	２		IP	１		IP	５		IP	２		IP	３		IP	５		IP
+小倉　　康典	3.20	0.14	2.8	６		IP	５		IP	転	4	IP	６		IP	６		IP	４		IP	６		IP	４		IP	２		IP	１		IP
+市川　　瑚幸	1.00	0.21	4.7	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		G3	６		G3	６		G3	６		G3

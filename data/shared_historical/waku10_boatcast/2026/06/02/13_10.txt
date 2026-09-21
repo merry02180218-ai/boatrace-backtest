@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　亮太	8.40	0.15	2.4	２		IP	２		G2	１		G2	１		IP	２		IP	３		G3	１		IP	１		IP	５	2	IP	１		IP
+溝口　海義也	8.10	0.15	2.5	６		G2	３		G2	２		G3	２		G3	１		IP	２		IP	１		IP	２		IP	１		G2	２		G2
+下河　　雅史	6.20	0.16	3.9	２		IP	４		IP	２		IP	３		IP	４		IP	３	4	IP	３		IP	３		IP	３		IP	２	4	IP
+片岡　　恵里	3.60	0.16	3.0	４		G3	３		G3	３		IP	４		G3	３		G3	５		IP	６		IP	６		G3	４		G3	５		G3
+古結　　　宏	5.40	0.14	2.5	１	4	IP	１		IP	４		G1	６		G1	３	2	G1	４		IP	３		G1	６		IP	妨		IP	２		IP
+植木　　美帆	1.90	0.26	4.7	６		G3	６		IP	４		G3	５		IP	５		IP	５		IP	４	5	IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+岸本　　雄貴	8.60	0.13	2.4	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	Ｆ		IP	１		IP	１		IP	２		IP
+冨成　　謙児	6.50	0.14	3.0	１		IP	２		IP	６		IP	２		IP	４		IP	５		IP	２		IP	２		IP	２		IP	２		IP
+飯島　　昌弘	6.60	0.13	2.7	３		IP	２		IP	２		IP	２		IP	２		IP	４		IP	２		IP	５		IP	３		IP	２		IP
+吉川　　勇作	2.70	0.15	2.6	５		IP	４		IP	４		IP	２		IP	５	6	IP	５		IP	６		IP	６		IP	６		IP	５		IP
+成田　　華音	1.57	0.25	4.6	５	6	IP	５	6	IP	６	6	IP	５	6	IP	６	6	IP	５	6	IP	６	6	IP									IP
+三品　　隆浩	3.40	0.23	4.8	４	5	IP	６		IP	５		IP	５		IP	６		IP	１		IP	５	5	IP	５		IP	５		IP	２		IP

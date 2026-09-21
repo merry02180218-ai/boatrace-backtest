@@ -1,0 +1,8 @@
+data=
+1	0
+長岡　　良也	8.20	0.21	4.4	１		IP	３		IP	１		IP	２		IP	１		IP	５		IP	１		IP	２		IP	１		IP	２		IP
+栗山　　繁洋	4.70	0.14	3.4	２		IP	２		IP	４		IP	２		IP	１	3	IP	５		IP	５		IP	５		IP	６		IP	５		IP
+櫻本　あゆみ	5.50	0.15	2.4	４	5	IP	４		IP	４		IP	１		IP	２		G3	３		IP	４		IP	３		IP	６		IP	３		IP
+上田　　洋平	4.50	0.15	3.2	１		IP	４		IP	２		IP	２		IP	６		IP	３	5	IP	６		IP	６		IP	５		IP	４		IP
+古賀　　智之	5.44	0.20	4.1	４		IP	６	4	IP	５	6	IP	４		IP	３		IP	不		IP	３		IP	１		IP	３		IP	１		IP
+加藤　　　翔	2.20	0.21	4.6	６		IP	５		IP	３		IP	５		IP	６		IP	５		IP	５		IP	５	5	IP	５		IP	５		IP

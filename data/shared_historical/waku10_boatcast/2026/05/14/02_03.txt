@@ -1,0 +1,8 @@
+data=
+1	0
+大塚　　康雅	6.00	0.18	3.0	４		IP	３		IP	２		IP	３		IP	１		IP	１		IP	３		IP	６		IP	６		IP	２		IP
+横井　　健太	4.90	0.16	3.5	５		IP	３		IP	２		IP	４		IP	５		IP	４	3	IP	１	3	IP	２		IP	６		IP	４		IP
+石田　　章央	6.00	0.12	2.9	５		IP	１		IP	３		IP	１		IP	３		IP	５		IP	３		IP	２		IP	４		IP	３		IP
+中村　　　尊	5.30	0.19	3.5	４		G1	６		G1	４	5	IP	３	5	IP	３		IP	２		IP	１		IP	５	5	IP	３		IP	４		IP
+柴田　　直哉	2.70	0.23	4.3	５		IP	４		IP	５	6	IP	５		IP	５		IP	４	6	IP	６	6	IP	４		IP	４		IP	５		IP
+蜂須　　瑞生	2.80	0.26	4.3	３		IP	４		IP	５		IP	５		IP	６		IP	５		IP	４		IP	６		G3	４	5	G3	５		IP

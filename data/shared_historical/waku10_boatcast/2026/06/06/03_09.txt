@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　猛志	6.40	0.15	3.4	４		IP	６		IP	６		IP	１		IP	２		IP	４		IP	２		IP	２		IP	１		IP	１		IP
+松尾　　　拓	6.40	0.15	2.8	２		IP	２		IP	１	4	IP	３		IP	２		IP	４		IP	３		G1	３		G1	５		IP	４		IP
+藤原　　孝斗	4.00	0.17	3.5	２		IP	６		IP	６		IP	４		IP	５		IP	４		IP	３		IP	１		IP	５		IP	５	4	IP
+福来　　　剛	6.80	0.13	2.6	２		IP	４		G2	３		IP	１		IP	２		IP	２		G1	３		IP	５		IP	４		IP	１		IP
+櫻井　　　隼	2.00	0.28	5.0	６	6	IP	４		IP	５		IP	６	6	IP	不	6	IP	３	6	IP	６	6	IP	５	6	IP	６	6	IP	５	6	IP
+井田　　涼介	1.60	0.20	3.4	６		IP	３		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

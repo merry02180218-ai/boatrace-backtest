@@ -1,0 +1,8 @@
+data=
+1	0
+多田　　有佑	6.10	0.21	4.7	２		IP	３		IP	２		IP	６		IP	６		IP	６		IP	１		IP	１		IP	３		IP	１		IP
+木田　峰由季	6.60	0.16	3.3	２		IP	３		IP	５		G3	６		G3	１		IP	２		IP	２		IP	２		IP	１		IP	４		IP
+三村　　岳人	5.30	0.19	3.4	３		IP	２		IP	２		IP	５		IP	３		IP	４		IP	４		IP	２		IP	６		IP	３		IP
+室田　　泰史	4.50	0.10	1.3	２		IP	４		IP	４		IP	６		IP	３		IP	３		IP	３		IP	６		IP	６		IP	２		IP
+和田　　兼輔	6.20	0.12	2.3	２		IP	５		G1	４		IP	２		IP	２		IP	４		G1	５	6	G1	２		IP	３	6	IP	２		G2
+中越　　博紀	2.70	0.22	4.4	５		IP	５		IP	５		G3	６		G3	６		IP	３		IP	５		G1	２	5	IP	落		IP	５		IP

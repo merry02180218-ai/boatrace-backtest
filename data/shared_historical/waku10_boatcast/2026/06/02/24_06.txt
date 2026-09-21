@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　友和	8.40	0.11	2.6	２		IP	３		IP	１		IP	１		IP	１		IP	１		IP	２		IP	４		IP	１		IP	２		IP
+豊田　健士郎	8.50	0.11	2.9	１		G2	１		G3	１		G3	２		IP	３		IP	２		IP	３	3	G3	１		G3	３		G3	２		G3
+西川　　真人	3.50	0.16	3.7	３		IP	４		IP	６		IP	６		IP	５	4	IP	５		IP	３		IP	６		IP	３		IP	３		IP
+藤山　　湧太	1.38	0.21	4.7	６		IP	６	6	IP	６		IP	６	6	IP	５		IP	Ｆ	6	IP	６	6	IP	４	6	IP						IP
+小林　　遼太	5.00	0.20	4.1	３		IP	６		IP	４		IP	２	6	IP	６		IP	２	6	G3	３		IP	２		IP	５		IP	３		IP
+井上　　恵一	4.20	0.22	3.4	６		IP	５	5	IP	３	3	IP	４	3	IP	２	4	IP	４		IP	６	2	IP	４	4	IP	２	5	IP	４	4	IP

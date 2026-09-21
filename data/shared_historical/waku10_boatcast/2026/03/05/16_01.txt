@@ -1,0 +1,8 @@
+data=
+1	0
+山口　　達也	8.90	0.14	2.9	１		G1	１		IP	１		IP	２		G1	１		G1	５		IP	３		IP	１		IP	１		IP	２		IP
+齊藤　　　仁	6.70	0.16	3.1	２		G1	２		G1	２		IP	２		IP	１		G3	１		IP	転		IP	４		G1	６		G1	３		G3
+坪井　　康晴	7.90	0.12	2.1	４		G1	４		G1	３		G1	２		G2	２		IP	２		IP	３		IP	２		G1	１		G1	１		G2
+大上　　卓人	5.40	0.16	2.8	６		G1	２		G1	３		G1	５		G1	４		G1	２		IP	４	3	IP	４		IP	３		G1	４	5	G1
+桐生　　順平	6.70	0.17	4.0	２		G1	４		G1	３		IP	４		G1	５		SG	６		SG	２		SG	１		G1	２	4	G1	４		G1
+藤原　啓史朗	4.20	0.10	2.5	２		IP	４		IP	６		IP	５		IP	５		G1	４		G2	４		IP	２		IP	３	5	IP	６		IP

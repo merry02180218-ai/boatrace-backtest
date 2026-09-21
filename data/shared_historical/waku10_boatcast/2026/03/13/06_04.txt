@@ -1,0 +1,8 @@
+data=
+1	0
+大瀧　明日香	7.90	0.14	3.0	１		G1	１		G1	１		IP	５		IP	５		G1	１		IP	１		IP	３		IP	３		IP	１		IP
+佐口　　達也	3.30	0.24	4.4	２		IP	４		IP	５		IP	５		IP	５		IP	３		IP	５		IP	４		IP	５		IP	６		IP
+牧　　　宏次	6.80	0.15	1.9	２		G3	２		IP	４		IP	４		IP	４		IP	２		IP	２		IP	２		IP	１		IP	３		IP
+野中　　義生	3.44	0.15	2.4	６	5	IP	６		IP	４		IP	６		IP	エ		IP	１		G3	４		IP	４		IP	５		IP	４		IP
+柴田　　友和	4.60	0.22	3.4	６		IP	６	6	IP	３		IP	５		IP	１		IP	５		IP	２		IP	４		IP	４		IP	２		IP
+杢野　　誓良	3.10	0.13	2.7	５		IP	６		IP	２		IP	４		IP	６		IP	６		IP	３		IP	５		IP	４		IP	５	5	IP

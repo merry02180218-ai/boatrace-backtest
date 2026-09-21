@@ -1,0 +1,8 @@
+data=
+1	0
+北中　　元樹	8.80	0.16	3.6	１		IP	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	３		IP	２		IP
+佐藤　　大佑	6.70	0.17	3.2	１		IP	２		IP	２	5	IP	２		G3	４		G3	１	4	G3	２		G2	５	5	IP	５		IP	３		IP
+妹尾　　忠幸	6.50	0.16	2.8	１		IP	１	4	IP	４		IP	３		IP	５		IP	１		IP	６		IP	２		IP	１		IP	４		IP
+長嶋　　万記	6.80	0.17	3.7	４		IP	２		G3	３		G2	５		G2	２		IP	５		IP	２		IP	１		IP	１		IP	３		G1
+宮地　　秀祈	3.60	0.16	4.0	４		IP	１		IP	５		IP	５		IP	３		IP	４		IP	６	3	IP	５		IP	６		IP	４		IP
+佐口　　達也	2.50	0.22	5.0	５	5	IP	５		IP	５		IP	３	3	IP	６		IP	４		IP	４		IP	６		IP	５		IP	６		IP

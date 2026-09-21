@@ -1,0 +1,8 @@
+data=
+1	0
+後藤　　正宗	8.60	0.20	3.4	１		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	４		IP	１		G3
+坪口　　竜也	5.80	0.16	3.0	１	3	IP	３		G2	４		IP	４		IP	４	3	IP	６		IP	２		IP	５		IP	１		IP	２		IP
+樋口　　範政	6.80	0.19	2.9	３		IP	４		IP	３		IP	３		IP	３		IP	１		IP	３		IP	１		IP	２		IP	３		IP
+藤田　　俊祐	5.40	0.20	3.7	４		IP	４		IP	１		IP	４		IP	２		IP	３	5	IP	４		IP	５		IP	１		IP	５		IP
+小坂　　風太	1.60	0.19	3.7	５		IP	６	6	IP	５		IP	沈		IP	５		IP	５		IP	５		IP	６		IP	５		IP	５		IP
+堀井　　涼平	2.70	0.16	4.0	６		IP	６		IP	６		IP	６		IP	１		IP	５		IP	２		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+長谷川　晴哉	8.60	0.18	2.9	２		IP	１		IP	１		IP	３		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+青木　　　蓮	5.30	0.13	2.6	６	1	IP	１		IP	３		IP	２		IP	２		IP	５		G1	４		G1	６		G1	６		G2	３		IP
+藤森　　陸斗	7.80	0.16	3.5	１	4	IP	３		IP	３		IP	２		IP	６		G1	２		IP	１		IP	１		IP	２		IP	１		IP
+齊藤　　　廉	3.30	0.09	1.8	５		IP	５		IP	３	5	IP	４		IP	２		IP	５		IP	５		IP	６		IP	４		IP	５		IP
+鰐部　太空海	7.10	0.16	2.6	３		IP	６		IP	２		IP	１		IP	１		IP	１		G1	３		G1	５		IP	２	4	IP	２		IP
+小林　　京平	2.90	0.19	3.0	５		IP	Ｆ		IP	４	5	IP	４		IP	５		IP	６		IP	３		IP	２		IP	６		IP	６		IP

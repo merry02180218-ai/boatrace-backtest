@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　真広	6.90	0.17	3.3	１		IP	Ｆ		IP	１		IP	６		IP	５		IP	２		IP	１		IP	１		IP	１		IP	２		IP
+原村　　拓也	6.20	0.21	4.1	５		IP	４		IP	２		IP	４		IP	３		IP	４		IP	２		IP	２		IP	２		IP	１		IP
+荒井　　翔伍	6.60	0.17	3.7	３		IP	２		IP	２		IP	３		IP	３		G2	４		G2	３		IP	４		IP	２		IP	２		IP
+山下　　大輝	8.40	0.13	2.1	１		IP	２		IP	６		IP	１		IP	２		IP	１		IP	１		IP	１		IP	３		IP	１		G1
+金子　　怜央	2.60	0.15	2.7	４		IP	５		IP	６	6	IP	５	6	IP	６		IP	５		IP	６		IP	５		IP	１		IP	６		IP
+眞鳥　　康太	3.10	0.24	4.6	３		IP	５		IP	４		IP	５		G3	６		G3	５		G3	Ｆ	5	G3	３		IP	４		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+岡本　翔太郎	8.80	0.13	2.1	１		IP	１		IP	２		IP	３		IP	２		G3	２		G3	１		IP	１		IP	２		IP	１		IP
+大野　　芳顕	7.00	0.12	2.3	３		IP	５		IP	２		IP	２		IP	２		IP	２		IP	２		IP	２		IP	１		IP	４		G3
+仲口　　博崇	5.00	0.17	3.8	５		IP	２		IP	６		G3	２		G3	６		IP	１		IP	６		IP	２		IP	５		G1	２		IP
+廣瀬　　真也	4.80	0.15	3.1	４		IP	２		IP	４		IP	３		IP	１		IP	６		IP	３		IP	５		IP	６		IP	３		IP
+崎　　　利仁	3.80	0.20	3.2	３		IP	１		IP	４		IP	５		IP	６		IP	６		G1	６		IP	５		IP	３		IP	４		IP
+高石　　梨菜	4.10	0.19	3.6	３	4	G3	５		IP	４		IP	３	5	G3	３		G3	４		IP	２		IP	６		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+原田　　秀弥	8.60	0.17	3.5	１		IP	２		IP	１		IP	３		IP	１		IP	２		IP	１		G3	２		IP	１		IP	３		IP
+太田　　和美	7.00	0.14	3.0	１	3	G1	３		G1	４		G1	２		G1	５		G1	２		IP	２		IP	１		IP	２		IP	６		IP
+井上　　一輝	7.10	0.17	3.6	１		IP	２		IP	３		IP	１		IP	３		G1	２		IP	５		IP	１		IP	５		G1	３		G1
+石野　　貴之	6.20	0.14	3.3	２		G1	１		G1	５		G1	６		G2	４		G1	４		G1	１	3	IP	６		G1	４		G1	１		IP
+河野　　主樹	4.30	0.14	3.0	３		IP	６		IP	２		IP	５		IP	５		IP	３	4	IP	５		IP	４		IP	２		IP	４		G3
+藤本　　遼磨	1.50	0.22	4.8	６		IP	６		IP	５		IP	５		IP																		IP

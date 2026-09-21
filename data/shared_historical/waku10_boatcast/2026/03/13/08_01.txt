@@ -1,0 +1,8 @@
+data=
+1	0
+石橋　　道友	10.20	0.09	1.7	１		IP	１		IP	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+梶原　　　正	4.10	0.17	2.7	４		IP	４		IP	３	3	IP	２		IP	６		IP	６		IP	２		IP	３	3	IP	５		IP	６		IP
+中里　　昌志	4.60	0.18	4.0	４		IP	３		IP	３		IP	３		IP	４		IP	４	2	IP	４		IP	６		IP	６		IP	１	4	G3
+東口　　　晃	4.70	0.22	4.0	１		IP	２		IP	５		IP	３		IP	５		IP	５		IP	６		IP	５		IP	２		IP	３		IP
+本岡　　勝利	3.20	0.22	4.0	５		IP	４		IP	４		IP	４		IP	４		IP	４		IP	５		IP	４		IP	５		IP	５		IP
+市川　　瑚幸	1.00	0.23	4.9	６		IP	６		IP	６		IP	６		IP	６		G3	６		G3	６		G3	６		G3	６		G3	６		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+白神　　　優	9.60	0.12	2.7	３		G1	１		G1	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		G1	２		G1
+辻　　　栄蔵	7.60	0.15	3.2	２		G1	２		IP	２		IP	５		G1	２		G1	４		IP	２		IP	３		G1	２		G1	２		IP
+平本　　真之	7.10	0.14	2.7	３		G1	２		G1	２		G1	３		SG	３		SG	６		G1	３		IP	２		IP	１		IP	５		G1
+山崎　　　郡	5.80	0.13	3.4	１		G1	１		G1	６		SG	５		G1	４		IP	３		IP	４		G1	４		G1	３		G1	５		G1
+海野　康志郎	6.30	0.15	2.7	６		G1	４		G1	３		IP	２	4	IP	１	2	IP	１	3	IP	４		IP	１		IP	４		G1	５		G1
+原田　　幸哉	4.70	0.12	3.2	３		G1	４	5	SG	５		G1	２		IP	３		IP	３		G1	６	3	G1	６		G1	６	4	SG	５		G1

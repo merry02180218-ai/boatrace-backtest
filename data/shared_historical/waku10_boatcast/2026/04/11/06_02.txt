@@ -1,0 +1,8 @@
+data=
+1	0
+遠藤　　圭吾	7.00	0.18	3.8	４		IP	１		IP	Ｆ		IP	４		IP	１		IP	１		IP	４		IP	１		IP	１		IP	２		IP
+石井　　伸長	6.20	0.22	4.3	１		IP	２		IP	５		IP	３		IP	３		IP	１		IP	２		IP	４		IP	４		IP	４		IP
+宮脇　　遼太	7.90	0.16	3.5	２		IP	２		IP	１		IP	１		IP	３		IP	２		IP	１		IP	４		IP	４		IP	１	4	IP
+鳥居塚　嶺王	6.00	0.14	3.6	２		IP	１		IP	４		IP	３		IP	３	5	IP	２		IP	４		IP	５		IP	４		IP	２		IP
+小林　　甘寧	4.00	0.17	3.3	３		IP	６		IP	４		IP	５		IP	２		IP	６		IP	５	6	IP	３		IP	３		IP	４		IP
+青木　　　蓮	5.20	0.11	2.2	３		IP	１	5	IP	３		IP	１		IP	３		IP	５		IP	５		IP	３		IP	６		G1	６		G1

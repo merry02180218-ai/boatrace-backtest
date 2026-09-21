@@ -1,0 +1,8 @@
+data=
+1	0
+飯山　　晃三	7.50	0.17	3.1	２		IP	６		IP	３		IP	１		IP	３		IP	２		IP	１		IP	２		IP	２		IP	１		IP
+高岡　　竜也	7.80	0.18	3.5	２		IP	３		IP	２		IP	１	3	IP	１		IP	２		IP	１		IP	２		IP	５		IP	２		IP
+谷　　　勝幸	4.50	0.15	2.1	６		IP	４		IP	３		IP	３		IP	６		IP	４		IP	３		IP	６		IP	２		IP	２		IP
+小澤　　　学	3.40	0.28	5.3	３		IP	２		IP	６		IP	４		IP	６		IP	６		IP	５		IP	３		IP	６		IP	４		IP
+杉山　　正樹	5.40	0.19	4.2	６		IP	６		G1	２		G1	６		G1	１		IP	２		IP	５		IP	２		IP	３		IP	３		IP
+楠原　　翔太	3.30	0.18	4.1	６		IP	２	5	IP	６		IP	３		IP	５		IP	４		IP	３		IP	５	5	IP	６		IP	５		IP

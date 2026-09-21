@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　京介	6.30	0.10	1.7	２		IP	１		G3	１		IP	１		IP	５		IP	５		IP	２		IP	１		IP	５	2	G3	６		IP
+山崎　　鉄平	5.20	0.22	4.2	６		IP	３		IP	２		IP	２		IP	６		IP	５		IP	１		IP	５		IP	３		IP	２		IP
+今泉　　　徹	4.20	0.16	3.0	４		IP	５		IP	３		IP	５		IP	５		IP	４		IP	３		IP	４	4	IP	３		IP	３		IP
+小林　　京平	5.00	0.19	3.5	３		IP	２		IP	５	6	IP	５		IP	２		IP	５		IP	５		IP	４		IP	３		IP	１		IP
+佐藤　謙史朗	3.44	0.20	3.8	６		IP	４		IP	６		IP	４		IP	４		IP	３		IP	３		IP	４		IP	欠		IP	６		IP
+茅原　　悠紀	5.50	0.12	3.9	４	5	IP	２		SG	４		SG	２	5	IP	５		G1	５		G1	５		G1	４		SG	３		G1	４		G1

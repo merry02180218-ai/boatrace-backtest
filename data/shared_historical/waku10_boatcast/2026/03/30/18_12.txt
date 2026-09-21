@@ -1,0 +1,8 @@
+data=
+1	0
+前田　　将太	7.70	0.15	3.3	２	2	G2	５		G2	３		G1	１		IP	１		IP	４		G1	１		IP	１		IP	１		IP	６		SG
+海野　ゆかり	6.20	0.18	3.7	１		IP	２		IP	２		G1	２		G3	６		G3	２		G1	５		G1	５		IP	４		IP	２		IP
+一瀬　　　明	5.70	0.17	3.3	６		IP	３		IP	１		IP	４		IP	１		IP	２		IP	５		IP	５		IP	３		IP	２		IP
+赤坂　　俊輔	6.60	0.14	2.6	３		IP	４		G1	５		G1	１		IP	転		G1	２		G1	２		G1	２		IP	３		IP	１		IP
+飛田　　江己	4.70	0.13	2.5	６	4	IP	３		IP	１		IP	５		G1	６		G1	６		G1	２		G1	４		IP	６		IP	２		IP
+中山　　　将	3.70	0.13	3.0	６		IP	６		IP	４		IP	３		IP	４		IP	３	5	IP	３		IP	５		IP	４		IP	６		IP

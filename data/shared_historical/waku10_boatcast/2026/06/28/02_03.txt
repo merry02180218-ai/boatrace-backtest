@@ -1,0 +1,8 @@
+data=
+1	0
+伯母　　芳恒	7.20	0.18	3.9	３		IP	３		IP	２		IP	２		IP	１		IP	４		IP	２		IP	２		G3	２		G3	３		IP
+芝田　　浩治	5.30	0.19	3.3	６		IP	５		IP	１		IP	２		IP	２		IP	１		IP	１		IP	５		IP	６		IP	６		IP
+角浜　　　修	4.70	0.18	4.1	６	4	G3	２		G3	２		G3	２		G3	１		IP	６		IP	５		IP	５		IP	６	4	IP	３		IP
+樋口　　範政	3.40	0.19	4.6	３		IP	３		IP	５		IP	３		IP	６		IP	６		IP	４		IP	５	5	IP	５		IP	４		IP
+赤坂　　俊輔	5.11	0.12	3.3	４		IP	４		IP	４		IP	３		IP	３		IP	２		IP	欠		IP	４		IP	４		IP	３		IP
+笹木　　香吾	2.30	0.14	3.7	６		G3	４		G3	３		IP	５		IP	５		IP	５		IP	６		IP	６		IP	６		IP	５		G2

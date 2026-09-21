@@ -1,0 +1,8 @@
+data=
+1	0
+清水　　攻二	7.60	0.16	1.7	３		IP	２		IP	２		IP	１		IP	１		IP	３		IP	Ｆ		IP	１		IP	１		IP	２		IP
+横井　　健太	5.70	0.20	4.2	２		IP	６		IP	４		IP	４		IP	２		IP	２		IP	４		IP	１		IP	３		IP	４		IP
+江口　　晃生	6.10	0.15	3.0	２	2	IP	４	2	IP	３	2	IP	３	2	IP	１	2	IP	１	2	IP	３	2	IP	６	2	IP	５	2	IP	２	1	IP
+鈴木　　勝博	5.10	0.15	3.6	５		IP	２		IP	４		IP	５		IP	１		IP	６		IP	１		IP	５	5	IP	６	5	IP	１		IP
+堀内　　亜海	1.00	0.26	4.3	６	6	IP	６	6	IP	６	6	IP	６		IP	６		IP	６		IP	６		IP	６		IP	６	6	IP	６		IP
+須藤　　博倫	3.20	0.20	3.4	３		IP	４		IP	４	5	IP	６		IP	４		IP	６		IP	５		G2	４		IP	６		IP	６		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+芝田　　浩治	9.20	0.14	3.0	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+栗城　　　匠	6.20	0.14	3.7	２		IP	２		IP	３		G1	２		G1	４		IP	６		G1	１	3	IP	１		IP	６		IP	５		G1
+加藤　　翔馬	5.80	0.16	3.6	２		IP	２		IP	２		G3	３		IP	２	4	IP	６		G1	１		G1	３		IP	６		IP	Ｆ		G1
+伊藤　　将吉	5.40	0.15	3.3	１		IP	４		IP	３		IP	３		IP	６		G1	６	5	IP	２	6	IP	６		IP	１		IP	３		IP
+澤田　　尚也	4.90	0.14	2.5	４		IP	１		G1	５		G1	６		G1	４		G1	２		G1	４		IP	６		G2	３		G2	５		IP
+廣瀬　　篤哉	3.00	0.19	4.3	３		IP	６		IP	４		IP	５		IP	５		IP	６		IP	４	5	IP	４		IP	５		IP	４		IP

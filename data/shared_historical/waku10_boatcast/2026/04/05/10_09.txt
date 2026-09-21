@@ -1,0 +1,8 @@
+data=
+1	0
+伊達　　正利	7.90	0.14	3.0	６		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	５		IP	１		IP	１		IP
+泥谷　　一毅	6.20	0.20	4.2	３		IP	３		IP	３		IP	２		IP	２		IP	４		IP	３		IP	３		IP	３		IP	３		IP
+森安　　弘雅	4.70	0.19	4.4	５		IP	２	4	IP	２		IP	２		IP	３		IP	５		IP	５		IP	６		IP	２		IP	５		IP
+中野　　夢斗	4.30	0.15	2.6	６		IP	６		IP	４		IP	１		G3	４	3	G3	１		IP	４	5	IP	３		IP	５	5	IP	６		IP
+永田　　秀二	5.00	0.20	2.9	５		IP	４		IP	４		IP	５		IP	４		IP	３		IP	２		IP	２		IP	４	2	IP	２		IP
+丸山　　祐也	3.00	0.28	5.8	５		IP	５		IP	４	5	IP	３	4	IP	４		IP	６		IP	４		IP	６		IP	４		IP	５		IP

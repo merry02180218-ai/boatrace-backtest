@@ -1,0 +1,8 @@
+data=
+1	0
+佐口　　達也	6.30	0.17	3.1	２		IP	２		IP	４		IP	１		IP	６		IP	４		IP	２		IP	２		IP	１		IP	５		IP
+鈴木　　秀茉	4.90	0.16	3.1	３		IP	２		IP	１		IP	２		IP	６		IP	３		IP	４		IP	５		IP	５		IP	５		G3
+金子　　良昭	6.00	0.16	2.8	３		IP	３	2	IP	２		IP	２		IP	２		IP	４		IP	２		IP	６		IP	４		IP	３		IP
+高橋　　涼夏	1.90	0.17	3.6	５		IP	６		IP	４	5	IP	６		IP	５		IP	６		IP	５		IP	６		IP	４		IP	６	5	IP
+塩崎　　優司	3.60	0.14	3.2	４	6	IP	４		IP	６		IP	５		IP	２		IP	６		IP	転		IP	２		IP	５		IP	３		IP
+上田　　健太	3.10	0.18	4.4	３	5	IP	５		IP	３		IP	６		IP	６		IP	６		IP	５		IP	４		G3	４		G3	５		IP

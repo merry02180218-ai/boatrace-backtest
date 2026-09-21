@@ -1,0 +1,8 @@
+data=
+1	0
+重冨　　勇哉	6.60	0.17	2.7	Ｆ		IP	１		IP	１		IP	２		IP	１		IP	５		IP	５		IP	３		IP	１		IP	２		IP
+和田　　拓也	6.40	0.17	2.6	６		IP	２		IP	１		IP	２		IP	３		IP	２		IP	２		IP	１		IP	５		IP	６		G1
+生方　　靖亜	5.30	0.15	2.6	５		IP	２		IP	５		IP	１		IP	３		IP	３		IP	６		G3	３		IP	５		IP	１		IP
+渋谷　　明憲	6.40	0.16	3.4	３		IP	３		IP	３		IP	４		G3	３		G3	１		IP	２		IP	５		IP	２		IP	２		IP
+坪井　　康晴	5.89	0.13	3.2	１		IP	５	4	IP	６		G1	４		G1	転		G1	１		IP	１		IP	６		G1	４		G1	３		G1
+後藤　　盛也	3.80	0.13	3.1	５		IP	４		IP	３		IP	２		IP	４		IP	６		IP	４	5	IP	６		IP	４		G3	４		IP

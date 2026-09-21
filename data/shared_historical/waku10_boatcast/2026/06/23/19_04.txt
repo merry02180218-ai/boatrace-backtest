@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　喜一	6.70	0.15	2.9	１		IP	５		IP	３		IP	２		IP	１		IP	６		IP	２		IP	１		G3	１		G3	５		IP
+村上　　功祐	5.10	0.15	2.9	６		IP	５		IP	２		IP	４		IP	２		IP	２		IP	２		IP	４		IP	５	3	G3	３		IP
+山崎　　鉄平	3.70	0.17	3.8	５		IP	５		IP	４		IP	２		IP	４		IP	５	4	IP	４		IP	６		IP	５	4	IP	２		IP
+岡村　　　仁	5.20	0.15	3.4	４		IP	１	1	IP	６		IP	Ｆ		IP	３		G2	３	3	IP	２		IP	４		IP	２		IP	４		IP
+井本　　昌也	5.60	0.16	3.4	２		IP	４		IP	４		IP	４		IP	１		IP	２		IP	２		IP	６		IP	６	3	IP	２	4	IP
+水野　　望美	3.00	0.20	4.7	３		IP	５		IP	５		IP	６		IP	５		G3	４		IP	６		IP	５	5	IP	３		IP	４		IP

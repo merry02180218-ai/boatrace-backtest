@@ -1,0 +1,8 @@
+data=
+1	0
+富永　　修一	8.60	0.13	2.2	１		IP	１		IP	４		IP	１		IP	２		IP	２		IP	２		IP	２		G1	２		G1	１		G3
+飛田　　江己	7.00	0.15	2.4	４		IP	３		G1	２		G1	１		G1	５		G1	１		G1	３		G1	３		IP	４		IP	２	3	IP
+永嶋　　裕一	5.50	0.17	2.7	６		IP	２		IP	２		IP	５		IP	４		IP	４		IP	３		IP	３		IP	２		IP	２		IP
+小原　　聡将	4.90	0.15	2.7	４	5	IP	３	3	IP	１		IP	４		IP	６		IP	３		IP	５		IP	３		IP	５		IP	２		IP
+富山　　弘幸	4.00	0.14	2.5	２		IP	６		IP	５		IP	４		IP	５		IP	６		IP	４		IP	４		IP	３		IP	２		IP
+廣瀬　　真也	3.40	0.15	3.6	３		IP	５		IP	６		IP	１		IP	３		IP	６		IP	３		IP	６		IP	６		IP	転		IP

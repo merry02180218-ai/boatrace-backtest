@@ -1,0 +1,8 @@
+data=
+1	0
+藤原　　孝斗	7.50	0.18	2.8	２		IP	６		IP	１		IP	１		IP	３		IP	１		IP	２		IP	１		IP	２		IP	４		IP
+松村　　康太	5.60	0.17	4.0	５	3	IP	４		IP	３		IP	３		IP	２		IP	２		IP	５		IP	２		IP	３		IP	３		IP
+桂林　　　寛	3.90	0.12	2.6	５	4	IP	１		IP	３		IP	３		IP	５		IP	５	2	IP	６		G3	５	4	G3	３		IP	５		IP
+岩橋　　裕馬	4.80	0.18	3.4	３		G3	４		G3	３		IP	４	5	IP	３		IP	４		IP	２		IP	５		IP	４		IP	４		IP
+後藤　　翔之	6.89	0.18	3.3	４		G2	２	6	IP	１	4	IP	欠		G2	６		G2	２		IP	１		IP	３		IP	５		IP	２		IP
+前田　　聖文	4.50	0.19	4.0	５		IP	３		G1	３		IP	２	5	IP	５		IP	１	5	IP	５		IP	５		IP	５		IP	４		IP

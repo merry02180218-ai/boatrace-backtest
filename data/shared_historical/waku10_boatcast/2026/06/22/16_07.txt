@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　庸平	5.70	0.19	3.9	２		IP	２		IP	４		IP	１		IP	２		IP	６		IP	２		IP	２		IP	５		IP	Ｆ		IP
+石塚　　久也	6.60	0.14	3.3	２		IP	４		IP	４		IP	２		IP	２		IP	４		IP	３		IP	３		IP	１		IP	２		IP
+馬野　　　耀	6.70	0.19	2.8	４		IP	２		G2	３		IP	１		IP	４		IP	３		IP	３		IP	２		IP	２		IP	３		IP
+服部　　幸男	5.30	0.16	3.6	４		IP	５		IP	４		SG	６		SG	２		IP	５		IP	３	5	G1	２		IP	４		IP	２		IP
+堀本　　裕也	3.40	0.17	2.9	５		IP	５		IP	２		IP	２		IP	６		IP	３		IP	６		IP	５		IP	５		IP	５		IP
+藤本　　遼磨	1.60	0.19	5.1	５		IP	６		IP	４		IP	５		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP

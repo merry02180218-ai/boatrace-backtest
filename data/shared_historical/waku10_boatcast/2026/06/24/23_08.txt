@@ -1,0 +1,8 @@
+data=
+1	0
+有山　　　望	6.40	0.09	3.0	Ｆ		IP	１		IP	１		IP	５		IP	１		IP															IP
+待鳥　　雄紀	4.70	0.15	3.2	１		IP	４		G3	５	3	IP	３		IP	３		IP	２		G3	４		G3	５		IP	６		IP	４		IP
+富永　夏哉人	3.60	0.18	4.1	２		IP	３		IP	４		IP	６		IP	５		IP	３		IP	４	4	IP	５		IP	５		IP	６		IP
+中村　　魁生	5.50	0.15	2.8	３		IP	３		IP	１		IP	４		IP	５		IP	３		IP	３		IP	２		IP	４		IP	５	6	IP
+板倉　　敦史	3.70	0.17	4.0	２		IP	６		IP	５		IP	５		IP	４		IP	４		G3	３		G3	２		G3	６		IP	６		IP
+八戸　　琉楓	1.20	0.26	4.3	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

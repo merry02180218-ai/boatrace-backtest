@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　　祭	8.50	0.17	3.0	３		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	２		IP	４		G1	１		IP
+菊地　　敬介	6.40	0.10	2.3	２		IP	５		IP	１		IP	３		IP	２		IP	２		IP	５		IP	５	4	IP	２		IP	１		IP
+日笠　　勝弘	2.40	0.17	4.2	５		IP	５		IP	６		IP	４		IP	３		IP	５		IP	エ		IP	５		IP	６		IP	４	6	IP
+山本　　幸也	3.20	0.20	3.8	５		IP	５	6	IP	１	5	IP	６		IP	２		IP	５		IP	６		IP	落		IP	５		IP	４		IP
+森永　　　淳	6.20	0.15	2.7	２		IP	５	6	G2	２		IP	３		IP	２		IP	２		IP	５		IP	６		IP	１		IP	２		IP
+中尾　　優香	2.50	0.18	3.9	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	１		IP	５		IP	５		IP

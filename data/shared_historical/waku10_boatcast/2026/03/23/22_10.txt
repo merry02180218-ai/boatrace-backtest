@@ -1,0 +1,8 @@
+data=
+1	0
+水摩　　　敦	9.00	0.17	3.5	１		G3	３		G3	１		IP	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP
+田中　　和也	6.10	0.18	4.0	２		IP	１		IP	２		IP	２		IP	２		IP	２		IP	５		IP	５		IP	４		IP	５		IP
+角山　　雄哉	4.22	0.14	3.2	３		IP	落		IP	２		IP	６		G3	６		G3	転		IP	３	4	IP	４		IP	４		IP	２		IP
+小畑　　実成	4.50	0.17	4.0	３		IP	６		IP	４		IP	１		IP	１		IP	６		IP	５		IP	４		IP	６		IP	３		IP
+吉永　　泰弘	4.20	0.20	3.5	６		IP	４	4	IP	６		IP	４	4	IP	３		IP	２		IP	落		IP	５		IP	１		IP	３		G3
+高田　ひかる	4.30	0.22	5.0	５		IP	４		IP	６		IP	１	5	IP	４		IP	２		IP	５		G1	４		G1	落	5	IP	４		IP

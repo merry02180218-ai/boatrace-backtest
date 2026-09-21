@@ -1,0 +1,8 @@
+data=
+1	0
+森下　　　勇	6.10	0.16	2.4	４		IP	２		IP	１		IP	５		IP	４		IP	２		IP	２		IP	２		IP	２		IP	６	3	IP
+吉武　　真也	5.20	0.16	3.2	３		IP	５		IP	２		IP	３		IP	２		IP	２		IP	３		IP	５		IP	５		IP	４		IP
+大塚　　浩二	3.00	0.19	3.7	３		IP	４		IP	６		IP	６		IP	６		IP	３		IP	５		IP	４	5	IP	６		IP	４		IP
+幸野　　史明	3.30	0.15	3.2	５		IP	５		IP	３		IP	６		IP	６		IP	４		IP	４		IP	６		IP	２		IP	４		IP
+尾形　　栄治	3.30	0.21	4.0	４		IP	５		IP	４		IP	５		IP	５		IP	４		IP	４		IP	４		IP	３		IP	６	6	IP
+鈴木　　柊介	1.70	0.11	2.9	６		IP	６		IP	６		IP	６		IP	４		IP	６	5	IP	４		IP	６		IP	６		IP	５		IP

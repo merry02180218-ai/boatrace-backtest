@@ -1,0 +1,8 @@
+data=
+1	0
+楠　　将太郎	6.60	0.19	3.2	１		IP	１		IP	３		IP	４		IP	２		IP	１		IP	４		IP	４		IP	３		IP	４		IP
+田中　　勇輔	3.40	0.14	2.9	４		IP	３		IP	６		IP	５		IP	２		IP	４		IP	妨		IP	５		IP	６		G3	３		G3
+間野　　兼礼	6.30	0.18	3.4	２	4	IP	２		IP	１		IP	３		IP	３		IP	２		IP	３		IP	６		IP	２		IP	５		IP
+石川　　吉鎬	5.67	0.17	4.1	３		IP	５		IP	２		IP	欠		IP	３		IP	４		IP	３		IP	６		IP	１		IP	２	5	IP
+永田　　秀二	5.40	0.20	3.3	４		IP	４		IP	５		IP	４		IP	３		IP	２		IP	２		IP	４	2	IP	２		IP	３		IP
+得山　　大輝	1.20	0.12	2.3	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP

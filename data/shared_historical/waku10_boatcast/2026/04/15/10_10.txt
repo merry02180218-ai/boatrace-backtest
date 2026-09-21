@@ -1,0 +1,8 @@
+data=
+1	0
+前田　健太郎	6.20	0.16	2.7	１		IP	２		IP	１		IP	５		IP	１		IP	３		IP	４		IP	４		IP	５		IP	３		IP
+一瀬　　　明	7.11	0.17	4.1	４		IP	２		IP	転		IP	１		IP	２		IP	２		IP	２		IP	４		IP	１		IP	４		IP
+平石　　和男	6.40	0.19	4.1	３		IP	３	2	IP	２		IP	５		IP	４		IP	４		IP	１		IP	２		IP	２		IP	２		IP
+宮内　由紀英	3.80	0.16	3.1	２		IP	４	5	IP	４		IP	３		IP	３		IP	６		IP	６		IP	６		IP	３		IP	６	5	IP
+深川　麻奈美	3.44	0.16	4.0	５		IP	４		IP	５		IP	６		IP	転		G1	６		G1	２		IP	５		IP	４		G3	３		G3
+島川　　光男	2.80	0.18	4.3	５		IP	４		IP	５		IP	５		IP	２		IP	６		IP	６		IP	５		IP	４		IP	５	5	IP

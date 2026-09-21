@@ -1,0 +1,8 @@
+data=
+1	0
+三嶌　　誠司	7.80	0.16	2.9	１		IP	２		IP	１		IP	１		IP	４		IP	３		IP	Ｆ		IP	１		IP	１		IP	１		IP
+石橋　　道友	5.60	0.19	4.9	１		IP	２		IP	１		IP	６		IP	５		G3	４		IP	４	3	IP	２	3	G1	落		G1	２		IP
+山本　　英志	6.80	0.14	2.9	１		IP	３		IP	１		IP	４		IP	１		IP	３		IP	５		IP	３		IP	３		IP	２		IP
+岡谷　　健吾	6.60	0.20	3.7	２	3	IP	３		IP	４		IP	４		IP	２		IP	４		IP	２		IP	２		IP	１		IP	３		IP
+中島　　昂章	4.30	0.21	4.3	２		IP	２		IP	４		IP	３		IP	４		IP	５	6	IP	３		IP	転		IP	６		IP	４		IP
+河野　　　大	4.60	0.15	2.5	３		IP	４		IP	６		IP	５		IP	４		IP	４	5	IP	３		IP	５		G2	２		IP	２		IP

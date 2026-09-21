@@ -1,0 +1,8 @@
+data=
+1	0
+白井　　友晴	7.80	0.14	3.8	１		IP	２		IP	２		IP	１		IP	２		IP	１	2	IP	１		IP	５		IP	２		IP	４		IP
+下河　　誉史	5.60	0.16	3.4	３		IP	４		IP	３		IP	３		IP	４		IP	３		IP	３		IP	３		IP	５		IP	１		IP
+品田　　直樹	7.11	0.16	3.2	４		IP	１		IP	３		IP	２		IP	４	4	IP	１		IP	３		IP	１		IP	３	2	IP	エ		IP
+西村　　秀樹	2.50	0.17	3.5	５		IP	４		IP	５		IP	４		IP	５		IP	６		IP	６	5	IP	５		IP	６	6	IP	３		IP
+倉富　　大誠	4.00	0.18	4.6	６	6	IP	３		IP	４	6	IP	２		IP	４		IP	３		IP	５		IP	６	6	IP	５	6	IP	３		IP
+佐々木　完太	5.60	0.14	3.4	６		G1	３		IP	４		IP	３		IP	３		G1	４		G1	１		IP	１		IP	５	5	SG	５		IP

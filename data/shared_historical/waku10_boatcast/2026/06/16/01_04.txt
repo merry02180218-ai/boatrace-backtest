@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　文彦	8.60	0.13	2.6	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	４		IP	３		IP	１		IP	１		IP
+若林　　義人	5.80	0.13	2.6	６		IP	１		IP	６		IP	５		IP	４		IP	２		G1	６		IP	２		IP	１		IP	１		IP
+尾形　　栄治	5.70	0.19	2.7	３		IP	１		IP	１		IP	５		IP	６		IP	５		IP	２		IP	２		IP	４		IP	３		IP
+河野　　真也	4.10	0.19	3.6	５		IP	５		IP	５		IP	２		IP	２		IP	２		IP	６		IP	５		IP	３	5	IP	５		IP
+笠野　友紀恵	3.30	0.20	3.4	６		G3	６		IP	１		G3	４		IP	３		IP	６		IP	４		G3	４		G3	６		IP	６		IP
+芦澤　　　望	3.20	0.15	3.0	３		IP	６		IP	３		IP	４		IP	４		IP	４		IP	欠		IP	６		IP	４		IP	５		IP

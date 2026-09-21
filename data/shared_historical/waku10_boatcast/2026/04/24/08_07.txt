@@ -1,0 +1,8 @@
+data=
+1	0
+富山　　弘幸	8.00	0.19	3.9	１		IP	１		IP	１		IP	１		IP	１		IP	４		IP	２		IP	５		IP	１		IP	３		IP
+中田　　夕貴	4.40	0.19	4.3	４		IP	４		IP	６		IP	４		G1	３		G1	３		IP	３		IP	２		IP	５		IP	６	3	IP
+高田　　　綾	5.67	0.14	2.8	４		IP	１		IP	転		IP	Ｆ		G3	３		IP	２		IP	３		IP	２	4	IP	６		IP	２		IP
+籾山　　佳岳	5.80	0.13	2.3	３		IP	５		IP	３		IP	２	5	IP	５		IP	３		IP	１		IP	３		IP	３		IP	３		IP
+上條　　暢嵩	5.00	0.16	3.5	４		G1	３		G1	５		G1	６		G1	５		SG	１		G1	２		G3	４	4	G1	６		G1	５		G1
+片岡　　大地	5.80	0.13	2.0	３		IP	３		IP	３		IP	１	5	IP	５	5	IP	３		IP	２		IP	３		IP	５	5	IP	３		IP

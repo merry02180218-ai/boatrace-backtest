@@ -1,0 +1,8 @@
+data=
+1	0
+是澤　　孝宏	8.40	0.16	3.0	２		G3	１		IP	５		IP	１		IP	１		IP	２		IP	３		IP	１		IP	１		IP	１		IP
+齊藤　　　優	5.00	0.17	2.9	５		G3	４		G3	１		IP	４		IP	５		IP	５		IP	４		IP	４		IP	１		IP	２		IP
+中北　　将史	5.00	0.15	2.1	２	2	G3	２		IP	６	4	IP	５		IP	２		IP	６		IP	３	4	IP	３		IP	３		IP	４		IP
+松田　　憲幸	4.50	0.20	4.3	５		G3	６	5	IP	３		IP	４	5	IP	５	5	IP	２		IP	３		IP	５		IP	３		IP	２		IP
+板倉　　敦史	4.10	0.22	4.5	２		G3	６		IP	６		IP	５		IP	５		IP	２		IP	２		IP	２		IP	５		IP	６		IP
+奥平　　拓也	3.20	0.20	5.4	５		G3	６		IP	３		IP	６		IP	２	5	IP	６		IP	４		G3	５		IP	３		IP	６		IP

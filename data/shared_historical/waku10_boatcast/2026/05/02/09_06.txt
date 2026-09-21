@@ -1,0 +1,8 @@
+data=
+1	0
+中北　　将史	6.60	0.17	2.6	１		IP	５		IP	２		IP	１		G3	３		IP	６		IP	１		IP	６		IP	２		IP	１		IP
+坂口　　　周	5.00	0.16	3.3	３		IP	３		IP	５		IP	３		IP	２		IP	５		IP	３		IP	５		IP	４		IP	２		IP
+伊藤　　紘章	6.56	0.20	3.5	３		IP	４		IP	２		IP	１		IP	４		IP	転		IP	１		IP	３		IP	６		IP	１		IP
+花本　　夏樹	2.30	0.24	5.2	４		IP	５	2	IP	６		IP	５		IP	６		IP	６	5	IP	５		IP	３		IP	５	5	IP	５		IP
+鳥本　　智史	1.90	0.17	3.3	５	6	IP	６	6	IP	６	6	IP	２	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	５	6	IP	落	6	IP
+新田　　雄史	6.40	0.19	4.8	３		G1	３		G1	６		SG	２	5	G1	５		G1	２		G1	４		G1	３		IP	１		SG	６		SG

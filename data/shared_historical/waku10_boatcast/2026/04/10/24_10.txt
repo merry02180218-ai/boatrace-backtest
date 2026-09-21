@@ -1,0 +1,8 @@
+data=
+1	0
+森永　　　隆	8.40	0.15	2.6	１		IP	１		IP	３		IP	２		IP	３		IP	２		IP	１		IP	１		IP	３		IP	１		IP
+大賀　龍之介	5.00	0.15	3.6	１		IP	４	3	IP	２		IP	４		IP	１		IP	４		IP	６		IP	３		IP	５		IP	６		IP
+田中　　　豪	7.00	0.14	2.4	３		IP	２		IP	２		IP	３		IP	１		IP	３		IP	２		IP	３		IP	２	4	IP	４		IP
+廣瀬　　将亨	6.60	0.19	3.9	１	3	IP	６	6	IP	４		IP	５		IP	１		IP	３		IP	１	5	IP	６		IP	１		IP	１		IP
+重成　　一人	6.00	0.14	2.4	４		IP	２		IP	３		G1	４		G1	５		G1	１		IP	１		IP	２		IP	６		IP	４		IP
+鶴本　　崇文	3.10	0.21	4.9	４		IP	６		IP	５		IP	２	5	IP	６		IP	５		G1	５		G1	４		IP	６		IP	４		IP

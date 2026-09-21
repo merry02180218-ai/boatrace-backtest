@@ -1,0 +1,8 @@
+data=
+1	0
+黒野　　元基	9.90	0.13	2.2	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		G1	１		G1
+木村　　仁紀	6.60	0.17	3.0	２		IP	５		G1	３		G1	３		IP	３		IP	３		G1	３		IP	１		IP	３		G2	４		G2
+小林　　文彦	4.20	0.19	4.1	３		IP	４		IP	３		IP	２		IP	３		IP	６		IP	５		IP	３		IP	５		IP	６		IP
+廣瀬　　　凜	6.90	0.17	3.8	３		IP	２		IP	１	5	IP	３		IP	４		G2	２		IP	２		G3	２		IP	２		IP	５		IP
+前出　　達吉	5.10	0.15	3.1	３		IP	３		IP	３	4	IP	５		IP	６		IP	２		IP	４		G3	３	6	IP	１		IP	５		IP
+服部　　幸男	3.80	0.17	3.8	６		IP	４	4	IP	６	4	IP	４	5	IP	６		IP	６		IP	２	5	IP	４		G1	３		G1	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+片岡　　雅裕	8.10	0.16	4.7	１		IP	１		IP	Ｆ		G2	１		G2	１		IP	１		IP	５		G1	１		G1	２		G1	３		G1
+海野　康志郎	7.50	0.12	3.0	１		IP	２		IP	１		IP	６		IP	１		IP	２		G1	５		G1	１		G1	１		G1	６		G1
+山地　　正樹	6.90	0.16	3.0	１		IP	２		IP	４		IP	３		IP	１		IP	２		IP	２		IP	６		IP	３		IP	２		IP
+三浦　洋次朗	5.90	0.17	4.1	６		IP	４		G2	５		IP	２		IP	２		IP	６		IP	２		IP	３		IP	１		IP	２		IP
+高田　　　明	3.30	0.20	3.7	５		IP	５		G2	Ｆ		IP	５		IP	６		IP	１		IP	４		IP	６		G3	４		G3	４	4	IP
+大場　　恒季	5.20	0.18	3.4	２	4	IP	３	5	IP	４		IP	４	5	IP	４		IP	６		G2	２		IP	１		IP	４		IP	５		IP

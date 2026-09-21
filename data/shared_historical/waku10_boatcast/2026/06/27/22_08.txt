@@ -1,0 +1,8 @@
+data=
+1	0
+北川　　敏弘	6.30	0.20	4.6	３		IP	３		IP	２		IP	３		IP	５		IP	６		IP	１		IP	３		IP	２		IP	１		IP
+間嶋　　仁志	4.70	0.19	4.2	４		IP	３		IP	５	1	G3	２		IP	５		IP	６	3	IP	２		IP	３		IP	４		IP	３		IP
+西村　　秀樹	3.40	0.14	3.4	４		IP	１		IP	４		IP	５		IP	３		IP	６		IP	５		IP	５		IP	５		IP	６		IP
+片岡　　秀樹	4.30	0.15	2.2	４		IP	３		IP	６		IP	３		IP	４		IP	３		IP	５		IP	３		IP	５		IP	３		IP
+上平　　真二	5.20	0.21	3.8	４		IP	４		G1	４		G1	４	3	IP	３		IP	３		IP	４		IP	４		IP	３		G1	３		IP
+甲斐　　貴大	2.30	0.20	3.5	３		IP	６		IP	３		IP	６		IP	６		IP	５		IP	６		IP	５		IP	５		IP	６		IP

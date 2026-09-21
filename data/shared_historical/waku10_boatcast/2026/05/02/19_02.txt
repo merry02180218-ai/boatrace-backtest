@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　真聖	7.70	0.14	3.1	６		IP	１		IP	２		IP	１		IP	１		IP	２		IP	４		IP	３		IP	１		IP	１		IP
+胡本　　悟志	4.00	0.15	2.4	５		IP	５		IP	５		IP	６		IP	６		IP	３		IP	２		IP	３		IP	２		IP	４		IP
+上瀧　　絢也	5.00	0.18	4.0	１		IP	１		IP	４		IP	２		IP	５		IP	５		IP	５		IP	５		IP	３	4	IP	４		IP
+菊池　　宏志	4.00	0.18	3.1	４		IP	５		IP	６		IP	６		IP	１		IP	６		G3	４		IP	６		IP	１		IP	３		G3
+大井　　清貴	2.60	0.20	4.8	４	6	IP	４		IP	６		IP	３		IP	４		IP	６		IP	５		IP	５	6	IP	６		IP	６		IP
+出穂　　和鼓	1.50	0.25	4.8	６		IP	６		IP	６		IP	５		IP	５		IP	４		IP	５		IP	妨		IP	６		IP	６		IP

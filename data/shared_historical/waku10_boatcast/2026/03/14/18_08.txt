@@ -1,0 +1,8 @@
+data=
+1	0
+角　　ひとみ	6.60	0.23	4.0	１		G3	１		IP	５		IP	１		IP	２		IP	１		IP	４		IP	１		IP	６		IP	６		IP
+大澤　　真菜	5.30	0.16	3.4	５		G3	２		G3	４		G3	３		G3	１		IP	６		IP	３		IP	２		IP	３		IP	５		G3
+金田　　幸子	4.20	0.22	3.5	６		G3	３		IP	６	4	IP	４		IP	２		IP	６		IP	３		IP	６		IP	４		IP	２		IP
+福岡　　泉水	4.70	0.21	3.0	４		G3	１		IP	３		IP	５		IP	２		IP	３		IP	５		IP	３		IP	５	5	IP	６		IP
+寺田　　夢生	1.11	0.22	4.5	６		G3	６		IP	６		IP	６		IP	６		IP	６		IP	転		IP	５	6	IP	６	6	IP	６		IP
+前田　　紗希	5.70	0.15	3.3	１		G3	４		G1	６		IP	２		G3	６		G3	３		IP	１		IP	５	5	IP	４		IP	２		IP

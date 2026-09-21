@@ -1,0 +1,8 @@
+data=
+1	0
+大上　　卓人	10.00	0.13	2.7	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		SG	３		G1	１		G1
+新開　　　航	7.80	0.19	4.5	３		IP	１		IP	６		G1	１		G1	３		G1	２	3	G2	３		IP	３		G1	１		G1	２		G1
+森高　　一真	9.30	0.11	2.9	１	5	G1	２		G1	２		G1	３		SG	３		G1	２		G1	１		G1	３		G1	１		G1	１		G1
+池田　　浩二	6.80	0.11	2.0	１		IP	２		G1	３		G1	５		G1	４		G1	５		SG	５		SG	３		G1	２		G1	２		G1
+金子　　賢志	6.50	0.13	2.5	２		IP	２		IP	４		G1	４		IP	２		IP	１		IP	３		IP	５		G1	４		G1	２		IP
+前田　　将太	3.90	0.14	3.2	５		IP	５		IP	５		G1	４		IP	４		IP	４		G2	１		G2	５		G1	５		IP	５	5	G1

@@ -1,0 +1,8 @@
+data=
+1	0
+徳増　　秀樹	9.70	0.12	2.3	４		IP	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1
+松下　　一也	7.11	0.13	2.1	５		IP	２		IP	欠		IP	２		IP	４		IP	１	3	IP	１		IP	２		IP	４		IP	１		IP
+金子　　良昭	5.00	0.17	3.4	２		IP	２		IP	４		IP	２		IP	６		IP	４		IP	３		IP	５		IP	４		IP	４		IP
+本田　　　愛	3.30	0.23	3.8	２		IP	２	5	IP	５		IP	６		IP	６		IP	５	6	IP	３	6	IP	５	5	IP	６	5	IP	５		IP
+星　　　栄爾	3.70	0.14	2.6	５		IP	３		IP	６		IP	２		IP	５		G3	５	6	IP	５		IP	２		IP	４		IP	５		IP
+若林　　義人	4.90	0.16	3.4	５		IP	３		IP	３		G1	６	2	IP	２	3	IP	３		IP	３		IP	６		G1	３		G1	４		IP

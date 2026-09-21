@@ -1,0 +1,8 @@
+data=
+1	0
+篠原　　晟弥	9.30	0.11	2.4	５		G2	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+西舘　　　健	6.40	0.16	3.2	４		IP	１		IP	２		IP	２		IP	３		IP	２	3	IP	４	3	IP	３		IP	５		IP	２		IP
+上之　　晃弘	3.70	0.17	3.5	５		IP	４		IP	２		IP	２		IP	６		IP	５		IP	４		IP	４		IP	５		IP	５		IP
+北川　　幸典	5.00	0.17	2.4	６	5	IP	３		G3	２		IP	３		IP	Ｆ		IP	１		G3	４		IP	４		IP	１		IP	６		IP
+小松　　卓司	3.90	0.19	3.3	４		IP	３		IP	５	6	IP	３		IP	３		IP	３		IP	５		IP	４		IP	５		IP	６		IP
+蒲原　　健太	4.30	0.21	4.8	６		G2	２		IP	６		IP	６	3	IP	３		IP	４		IP	２		IP	４	4	IP	２	4	IP	６	5	IP

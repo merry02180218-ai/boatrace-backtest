@@ -1,0 +1,8 @@
+data=
+1	0
+河内　　一馬	4.22	0.16	3.0	１		IP	１		IP	６		IP	５	2	IP	２		IP	５		IP	５		IP	転		IP	６		IP	５		IP
+小玉　　啓太	6.10	0.15	2.9	３		IP	３		IP	２		IP	１		IP	３		IP	６		IP	３		IP	２		IP	５		IP	２		IP
+若林　　義人	9.00	0.13	2.3	２		G1	１	2	IP	１		IP	１		IP	６		IP	１		IP	２		IP	２		IP	１		IP	１		G1
+齊藤　　　廉	3.10	0.13	2.6	５		IP	６		IP	５		IP	５		IP	５		IP	３	5	IP	４		IP	２		IP	５		IP	５		IP
+大森　　　翼	3.90	0.15	3.4	１		IP	６		IP	６		IP	６		IP	４		IP	２		IP	６		IP	６		IP	３	6	IP	３	4	IP
+佐藤　　太亮	2.70	0.17	4.1	６		IP	４		IP	５		IP	５		IP	３		IP	５	5	IP	３		IP	６		IP	６		IP	５		IP

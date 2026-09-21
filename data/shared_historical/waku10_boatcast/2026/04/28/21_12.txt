@@ -1,0 +1,8 @@
+data=
+1	0
+羽野　　直也	9.40	0.13	3.8	２		IP	６		G1	１		G1	１		G2	１		G2	１		G1	１		IP	２		IP	１		G1	１		G1
+里岡　　右貴	7.70	0.12	2.3	３		IP	４		IP	３		IP	１		IP	３		G3	２	3	G3	３		IP	１	3	IP	１	3	IP	１		IP
+池田　　剛規	4.50	0.12	2.2	６		IP	６		IP	２		IP	４		IP	３		IP	３		IP	２		IP	４	2	IP	６		IP	３		IP
+永田　　啓二	7.30	0.09	1.5	２		IP	４	5	IP	２		IP	２		IP	２		IP	１		IP	１		IP	２		IP	３		IP	６		IP
+稗田　　聖也	4.60	0.12	1.5	２		IP	６		IP	１	4	IP	２		IP	１		IP	５	4	IP	６		IP	６		IP	６		IP	５		IP
+河野　　真也	2.70	0.23	5.7	６		IP	５		IP	６		IP	４		IP	１		IP	６		IP	６		IP	４		IP	６		IP	５		IP

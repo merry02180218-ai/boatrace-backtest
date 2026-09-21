@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　宗弘	6.10	0.18	3.5	１		IP	４		IP	６		IP	４		IP	４		IP	３		IP	３		IP	１		IP	３		IP	１		IP
+渡邊　伸太郎	5.40	0.20	4.2	４		IP	４		IP	５		IP	４		IP	２		IP	２		IP	２		IP	３		IP	５		IP	２		IP
+鳥飼　　　眞	5.89	0.19	4.0	２		IP	４		IP	３		IP	３		IP	４		IP	６		IP	２		IP	欠		IP	３		IP	１		IP
+古澤　　光紀	4.70	0.13	4.2	４		IP	３		IP	６		IP	２		IP	４		IP	２		IP	６		IP	６	5	G1	２	5	G1	４		IP
+笠野　友紀恵	2.40	0.19	3.9	４		G3	４		G3	６		IP	６		IP	６		IP	３		IP	６	4	IP	４		G3	６		G3	６		IP
+芦澤　　　望	4.10	0.15	2.7	５		IP	２		IP	６		IP	５		IP	２	5	IP	４		IP	５		IP	４		IP	３		IP	４	3	IP

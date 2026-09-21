@@ -1,0 +1,8 @@
+data=
+1	0
+村本　　大成	6.30	0.15	3.5	３		IP	１		IP	３		IP	３		IP	１		IP	６		IP	２		IP	１		IP	５		IP	４		IP
+新田　　洋一	5.10	0.16	3.3	５		IP	１		IP	４		IP	１		IP	４		IP	６	3	IP	２		IP	５		IP	４		IP	３		IP
+藤田　　浩人	5.60	0.17	2.7	４		IP	２		IP	３		IP	４		IP	４		IP	５		IP	３		IP	３		IP	２	4	IP	２	4	IP
+奥田　　　誠	5.20	0.17	3.1	２		IP	２		IP	６		IP	５		IP	３		IP	４		IP	３		IP	２		IP	６		IP	２		IP
+柳瀬　　幹太	4.10	0.14	2.9	Ｆ		IP	６		IP	１	4	IP	５		IP	５		IP	４		IP	５		IP	３		G3	５	6	IP	１		IP
+白水　　勝也	5.60	0.15	2.9	３	5	IP	５		IP	３	5	IP	４	5	IP	２	3	IP	３	5	IP	１	4	IP	３		IP	３		IP	５		IP

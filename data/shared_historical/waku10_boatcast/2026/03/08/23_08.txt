@@ -1,0 +1,8 @@
+data=
+1	0
+古賀　　千晶	5.40	0.19	3.0	４		G3	４		G3	２		IP	５		IP	１		IP	２		G3	１		G3	３		IP	５		IP	Ｆ		G3
+竹田　　広樹	5.10	0.19	3.8	２		IP	４		IP	１		IP	３		IP	５		IP	５		IP	２		IP	２		IP	６		IP	５		IP
+仁科　さやか	4.30	0.15	3.6	６	4	IP	６		IP	１		IP	５	4	IP	６		IP	５		IP	２		IP	２		G3	２		G3	５		G3
+佐藤　　　旭	3.50	0.20	4.8	６		IP	３		IP	３		IP	６		IP	６		IP	５	3	IP	４		IP	３		IP	３		IP	５		IP
+大神　　康司	6.30	0.19	3.0	１	2	IP	５	3	IP	２	2	IP	２	2	IP	３	2	IP	３	2	IP	２	3	IP	６	2	IP	１	3	IP	４	2	IP
+川崎　　公靖	4.20	0.17	4.0	４		IP	５	5	IP	６		IP	２	5	IP	５		IP	２	5	IP	４	5	IP	２		IP	６		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+幸田　　智裕	6.40	0.15	2.8	２		IP	５		IP	４		IP	１		IP	２		IP	４		IP	２		IP	４		IP	３		IP	１		IP
+黄金井　力良	5.80	0.16	2.6	１	1	IP	２		G3	３		G3	３		IP	４		IP	３		IP	４		IP	５	1	IP	４		IP	２		IP
+川合　　理司	3.90	0.19	3.3	３		IP	４	4	IP	５		IP	４		IP	３		IP	４	4	IP	６		IP	４		IP	５	4	IP	３		IP
+小野　　達哉	5.30	0.14	2.9	３		IP	６		IP	５		IP	５		IP	２		IP	１		IP	３		IP	３		IP	２		IP	４		IP
+金子　　怜央	3.10	0.15	1.9	５		IP	１		IP	６		IP	６	6	IP	４		IP	６		IP	３		IP	６		IP	４		IP	６		IP
+高橋　　英之	3.50	0.17	4.7	５		IP	２		IP	５	5	IP	４		IP	５		IP	３	5	IP	５		IP	６		IP	５		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+三川　　昂暁	7.60	0.20	3.6	２		IP	３		IP	３		IP	１		IP	２		IP	２		IP	３		IP	２		IP	２		IP	２		IP
+深水　慎一郎	5.20	0.18	3.6	１		IP	５		IP	３		IP	６		IP	６		IP	１	3	IP	４		IP	２		IP	４		IP	３		IP
+天野　　友和	5.10	0.13	2.0	３		IP	６		IP	５		IP	４		IP	５		IP	４		IP	２		IP	３		IP	１		IP	２		IP
+高橋　　二朗	1.90	0.26	5.1	４		IP	５		IP	６		IP	６		IP	６		IP	６		IP	５	6	IP	５		IP	６		IP	４		IP
+岡田　　憲行	6.78	0.16	3.1	３	2	IP	２		IP	４		IP	２		IP	１	1	IP	４		IP	２		IP	転		IP	４		IP	２		IP
+新田　　泰章	4.30	0.18	3.6	５		IP	５		IP	４		IP	３		IP	６		G1	４		IP	３	5	IP	４		IP	２		IP	６		IP

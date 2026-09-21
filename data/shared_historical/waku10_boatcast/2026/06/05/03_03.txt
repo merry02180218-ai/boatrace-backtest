@@ -1,0 +1,8 @@
+data=
+1	0
+本橋　　克洋	7.80	0.19	4.6	１		IP	３		IP	１		IP	１		IP	４		IP	１		IP	１		IP	２		IP	３		IP	４		IP
+抹香　　雄三	6.40	0.13	3.0	５		IP	３		IP	２		IP	１		IP	２		IP	４		IP	３		IP	２		IP	２		IP	４		IP
+中村　　晃朋	6.00	0.16	3.8	６		IP	２		IP	２		G3	６		G3	３		G1	２		G1	２		IP	３		IP	２		G1	５		G1
+菊池　　宏志	3.60	0.20	3.0	３		IP	３		IP	４		IP	５		IP	６		IP	６		IP	１		IP	６		G3	４		IP	６		IP
+品川　　賢次	4.00	0.22	3.7	６		IP	１	4	IP	６		IP	６		IP	３		IP	４		IP	３		IP	４		IP	６		IP	３		IP
+坪内　　　実	2.60	0.18	4.7	５		IP	５		IP	６		IP	５		IP	５	5	IP	３		IP	６		IP	６		IP	６		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　俊介	9.10	0.15	2.4	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	３		IP	１		IP	１		IP	２		IP
+常住　　　蓮	8.60	0.14	1.8	１		IP	２		IP	２		IP	２		IP	２		G1	２		IP	３		IP	２		SG	２		SG	２		IP
+関野　　　文	5.50	0.13	3.2	３		IP	２		IP	３		IP	５		IP	３		G3	２		G3	５		IP	２		IP	２		IP	６		IP
+荻野　　裕介	4.90	0.21	4.6	６		IP	２		IP	２		IP	５		IP	４		G3	４		G3	４		IP	４	6	IP	３	5	IP	２		IP
+岡部　　　哲	3.00	0.16	3.4	５		IP	５		IP	５		IP	４		IP	４	6	IP	５		IP	３		IP	４		IP	５		IP	５		IP
+龍田　　真白	2.20	0.17	3.3	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP	２		IP	４		IP

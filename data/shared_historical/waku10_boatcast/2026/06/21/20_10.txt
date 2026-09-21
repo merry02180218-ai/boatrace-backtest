@@ -1,0 +1,8 @@
+data=
+1	0
+渡部　　　悟	9.40	0.14	2.7	１		IP	１		IP	１		IP	２		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP
+砂長　　知輝	6.80	0.15	3.7	５		IP	２		IP	２		IP	１		IP	３		IP	４		IP	２		G1	２		G1	６		G1	２		SG
+浦田　　晃嗣	4.10	0.15	3.2	１		IP	５		IP	５		IP	６		IP	３		IP	６	4	IP	３	5	IP	３		IP	６		IP	３		IP
+柳沢　　　一	5.70	0.15	2.6	２		IP	５		G1	４	5	IP	１	3	IP	１		IP	３		IP	４		IP	４		IP	４		IP	４		IP
+佐々木　大河	6.70	0.15	2.7	３		IP	２	4	IP	２		IP	２		IP	３		IP	６		IP	４		IP	２		IP	２		G2	２		G2
+榮田　　将彦	2.00	0.15	2.7	４		IP	６		IP	５	3	IP	６		IP	５		IP	６		IP	５		IP	６		IP	５		IP	４		IP

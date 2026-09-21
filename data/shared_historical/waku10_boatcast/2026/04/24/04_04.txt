@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　唯央	6.10	0.10	2.5	３		IP	４		IP	２		IP	１		IP	５		IP	６		IP	１		IP	１		IP	５	2	IP	２		IP
+佐々木　和伸	5.00	0.15	2.7	１		IP	２		IP	２	1	IP	４		IP	４		IP	６		G1	３		IP	４		IP	５		IP	５		IP
+森作　　広大	4.80	0.18	2.8	６		IP	５		IP	２		IP	４		IP	２		IP	６		IP	５		IP	３		IP	３		IP	１		IP
+渡邉　　英児	4.88	0.18	2.9	３		IP	６		IP	２		IP	３		IP	転		IP	欠		IP	３		IP	４		IP	５	5	IP	３		IP
+高憧　　四季	5.40	0.17	2.9	４		IP	３		IP	５		IP	１		IP	３		IP	１		IP	４		G3	５		G3	４		G1	５	6	IP
+真田　　聖也	1.22	0.14	3.0	６		IP	６		IP	転		IP	Ｆ		IP	６		IP	６		IP	６		IP	６		IP	４		IP	６		IP

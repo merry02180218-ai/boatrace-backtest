@@ -1,0 +1,8 @@
+data=
+1	0
+吉永　　則雄	9.20	0.19	4.6	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	３		IP	１		IP	１		IP
+滝沢　　織寧	2.80	0.16	2.8	４		IP	４		IP	４		IP	５		IP	４		IP	５		IP	６		IP	６		IP	４		G3	５		G3
+荒木　　颯斗	6.00	0.14	3.2	４		IP	２		IP	２		IP	３		IP	１	4	IP	６		IP	２		IP	２		IP	６		IP	３		IP
+松下　　直也	4.90	0.15	3.2	５		IP	２		IP	２		IP	３		IP	４		IP	２		IP	３		IP	４		IP	６		IP	５		IP
+藤井　　　徹	2.70	0.22	4.2	３	4	IP	５	2	IP	６		IP	５		IP	３		IP	５		IP	６		IP	５		IP	４		IP	６		IP
+若狭　奈美子	3.80	0.20	3.6	５		IP	４		IP	３	5	IP	４		IP	５		G3	４		G3	５		G3	５	5	IP	３	4	IP	３		IP

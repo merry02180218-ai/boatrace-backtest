@@ -1,0 +1,8 @@
+data=
+1	0
+小坂　　宗司	5.90	0.14	3.1	２		IP	２		IP	１		IP	４		IP	１		IP	６		G3	Ｆ		IP	２		IP	３		IP	４		IP
+本橋　　克洋	4.00	0.17	4.0	５		IP	３		IP	３		IP	Ｆ		IP	６		IP	３		IP	６		IP	３		IP	２		IP	４		IP
+吉田　　一郎	6.30	0.16	2.8	２	4	IP	４		IP	２		IP	３		IP	３		IP	１		IP	２		IP	２		IP	６		IP	４		IP
+芦澤　　　望	3.00	0.20	3.6	４		IP	５		IP	３		IP	６	6	IP	６		IP	６		IP	４		IP	４		IP	３		IP	６		IP
+菊地　　敬介	3.70	0.17	3.5	６		IP	４		IP	４		IP	６		IP	３		IP	２		IP	６		IP	３		IP	５		IP	４		IP
+冨田　　秀幸	2.80	0.24	5.5	６		IP	４		IP	３		IP	５		IP	５		IP	５		IP	６		IP	５		IP	４		IP	４		IP

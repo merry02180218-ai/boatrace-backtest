@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　淳美	3.60	0.17	3.3	１		IP	６		G3	４		G3	６		IP	６		IP	２		IP	５		IP	４		IP	４		IP	６		IP
+郷原　　章平	6.90	0.11	3.0	１		IP	５		IP	５		IP	１		IP	４		IP	３		IP	１		IP	２		IP	１		IP	３	3	IP
+向後　　龍一	7.44	0.14	3.2	１		G2	４		G2	１		G2	２		IP	転		IP	２		IP	２		IP	４		IP	２		IP	５		IP
+土性　　雅也	3.60	0.18	3.1	６		IP	４		IP	２		IP	３		IP	２		IP	４	5	IP	５		IP	６		IP	転		IP	５		IP
+坂元　　浩仁	6.10	0.15	3.3	４		IP	５		IP	４		G2	１		G2	４	6	IP	１		IP	１		IP	６		IP	３		IP	２		IP
+今出　　晋二	2.80	0.20	4.3	６		IP	３		IP	５		IP	５	5	IP	２	5	IP	４	5	IP	５		IP	６		IP	６		IP	６		IP

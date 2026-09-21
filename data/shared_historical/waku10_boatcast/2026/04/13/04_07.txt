@@ -1,0 +1,8 @@
+data=
+1	0
+前原　　　哉	5.20	0.13	3.2	４		IP	６		IP	１		IP	２		IP	Ｆ		IP	６		IP	１		IP	１		IP	３		IP	５		IP
+笠置　　博之	6.20	0.14	2.9	１		IP	１	5	IP	６	5	IP	１	4	IP	２		IP	４	1	IP	４		IP	６	6	IP	１	4	IP	４		IP
+安部　　慎一	4.00	0.16	2.5	３		G3	３		IP	２		IP	４		IP	５		IP	２		IP	６		IP	６		IP	５		IP	５		IP
+米丸　　乃絵	5.70	0.16	3.6	３		IP	２	5	IP	５		IP	３		IP	Ｆ		IP	１		G1	４		G1	４		IP	３		G1	２		G3
+岡本　翔太郎	4.50	0.14	2.4	２		IP	５		G3	６	4	G3	４		IP	５		IP	１		IP	３		IP	４		IP	５		G3	３		IP
+中山　　　将	4.20	0.13	3.0	５		IP	２		IP	６		IP	６		IP	４		IP	３		IP	４		IP	３	5	IP	３		IP	５		IP

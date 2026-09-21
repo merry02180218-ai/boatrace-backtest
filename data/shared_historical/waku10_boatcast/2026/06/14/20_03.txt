@@ -1,0 +1,8 @@
+data=
+1	0
+宮内　　直哉	4.60	0.20	4.2	１		IP	４		IP	４		IP	５		IP	５		IP	１		IP	５		IP	５		IP	４		IP	３		IP
+尾崎　　雄二	5.90	0.17	3.7	１		IP	５		IP	２		IP	５		IP	２		IP	３		IP	２		IP	３		IP	６		IP	２		IP
+赤池　　修平	5.70	0.17	3.2	１		IP	４		IP	６	5	IP	２		IP	６		IP	６		IP	４		IP	１	4	IP	１		IP	２		IP
+溝口　海義也	5.50	0.13	2.7	３		IP	５		IP	４		G2	１		G3	３		IP	３		IP	３		IP	５		IP	１	5	IP	５		IP
+竹田　　吉行	4.60	0.17	3.5	５		IP	６		IP	６		IP	３		IP	４		IP	５		IP	２	4	IP	２		IP	１		IP	４		IP
+吉田　　祐貴	2.80	0.22	3.5	４		IP	６		IP	６		IP	５		IP	５		IP	６		IP	４		IP	６		IP	４		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+富田　　恕生	6.80	0.16	3.2	４		IP	１		IP	１		IP	６		IP	６		IP	１		G3	１		IP	４		IP	２		IP	１		IP
+南　　　彩寧	4.10	0.17	3.9	６		IP	３		G3	２		IP	６		IP	３		IP	６		IP	５		IP	５		IP	３		IP	２		IP
+福来　　　剛	7.50	0.12	1.4	４		IP	１		IP	１	2	IP	２		G2	２		IP	３	4	IP	１		IP	４		IP	３		IP	２		IP
+羽田　　妃希	2.70	0.21	4.3	５		IP	６		IP	６		IP	５	6	IP	６	5	IP	３		IP	５		IP	４		IP	４	5	IP	４		IP
+寺田　　夢生	1.40	0.19	4.3	６		IP	５		IP	６		G3	６		G3	６		G3	６		G3	６		IP	４	6	IP	６	6	IP	６	6	IP
+佐藤　　太亮	4.10	0.16	3.7	２		IP	３		IP	４		IP	６		IP	４		IP	５		IP	５		IP	３		IP	５	5	IP	３		IP

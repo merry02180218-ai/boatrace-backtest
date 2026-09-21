@@ -1,0 +1,8 @@
+data=
+1	0
+中嶋　　達也	5.10	0.16	3.2	５		IP	１		IP	３		IP	６		IP	１		IP	１		IP	５		IP	２		IP	６		IP	６		IP
+福来　　　剛	7.30	0.13	2.9	１		IP	２		G2	５		G2	２		IP	３		IP	５		IP	１		IP	４		G1	２		IP	１		IP
+佐藤　　駿介	3.80	0.19	3.4	４		IP	２		IP	５		IP	６	6	IP	２		IP	３		IP	４		IP	６	6	IP	５		IP	５		IP
+井芹　　大志	3.60	0.18	4.7	４		IP	５		IP	２		IP	５		IP	６		IP	５		IP	６		IP	４		IP	３		IP	３		IP
+嶋　　　義信	4.10	0.16	3.2	３		IP	４		IP	３		IP	６		IP	４		IP	５	6	IP	４		IP	２		IP	５		IP	４		IP
+大崎　　　翔	4.50	0.16	3.4	２	5	IP	５	5	IP	３		IP	３		IP	６		IP	５		IP	３		IP	４		IP	４		IP	３		IP

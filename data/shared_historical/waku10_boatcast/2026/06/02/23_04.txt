@@ -1,0 +1,8 @@
+data=
+1	0
+冨成　　謙児	7.50	0.18	2.8	１		IP	６		IP	２		IP	３		IP	２		IP	１		IP	１		IP	４		IP	２		IP	１		IP
+水口　　由紀	4.00	0.21	4.0	６		IP	２		IP	３		IP	４		IP	５		G3	３		G3	５		IP	２		IP	６		IP	５		IP
+森　　晋太郎	5.20	0.14	2.9	３		IP	４	4	IP	２		IP	３		IP	４		IP	５		IP	１		IP	Ｆ		IP	２		IP	４	4	IP
+村上　　功祐	5.70	0.15	2.8	２		IP	３		IP	３		IP	４		IP	４		IP	３		IP	５		IP	２		IP	１		IP	６		G3
+蒲原　　健太	3.30	0.22	4.3	６		IP	２	3	IP	５	4	IP	４		IP	６	4	IP	６		IP	４		IP	６		IP	３		IP	４		G2
+前田　健太郎	3.00	0.16	3.3	６		IP	６		IP	６		IP	４		IP	６		IP	４	5	IP	２		IP	４		IP	５		IP	４	5	IP

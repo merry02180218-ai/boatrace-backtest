@@ -1,0 +1,8 @@
+data=
+1	0
+森永　　　隆	8.40	0.13	2.1	１		IP	１		IP	１		IP	２		IP	１		IP	５		IP	１		IP	１		IP	３		IP	２		IP
+松浦　　　勝	3.20	0.17	2.9	３	3	IP	５		IP	５		IP	６		IP	６		IP	２		IP	５		IP	５		IP	５		IP	３		IP
+林　　　恵祐	3.50	0.14	2.4	４	4	IP	６		IP	２		IP	１		IP	５		IP	６		IP	３		IP	６		IP	６		IP	６		IP
+西原　　明生	3.10	0.24	4.9	５		IP	４		IP	１		IP	４		IP	５	5	IP	６		IP	６		IP	５		IP	６		IP	４		IP
+木谷　　賢太	7.40	0.18	2.6	３		IP	３		IP	１		IP	４		IP	１		IP	３		IP	３		IP	２		IP	２	4	G3	１	4	G3
+田中　　大輝	1.86	0.20	3.9	６		IP	４		IP	６		IP	６		IP	４		IP	６		IP	６		IP									IP

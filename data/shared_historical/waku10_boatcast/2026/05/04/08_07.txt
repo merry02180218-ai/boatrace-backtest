@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　喜一	7.50	0.14	2.1	１		IP	６		IP	２		IP	１		G3	１		G3	５		IP	１		G3	１		IP	２		IP	３		IP
+後藤　　陽介	4.30	0.17	3.2	２		IP	３		IP	３		IP	４		IP	４		IP	５		IP	３		IP	６		IP	５		IP	４		IP
+高井　　雄基	3.30	0.16	3.4	４		G3	６		IP	５		IP	６		IP	２		IP	１		IP	４		IP	６		IP	６		IP	６		IP
+鈴木　　裕隆	4.40	0.19	3.6	４		IP	４		IP	２		IP	６		IP	４	3	IP	４		IP	３		IP	３		IP	３		IP	６	5	IP
+岸本　　雄貴	3.60	0.21	4.1	６		IP	４	4	IP	３	6	IP	６		IP	５	6	IP	３		IP	６		IP	６		IP	３		IP	２		IP
+赤岩　　善生	5.80	0.17	2.6	５	5	G1	２	5	G1	３	4	IP	１	2	IP	５	4	G1	２	2	IP	Ｆ	2	IP	５	5	G1	２	2	IP	２	2	IP

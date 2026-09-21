@@ -1,0 +1,8 @@
+data=
+1	0
+若林　　　将	9.80	0.13	2.3	１		IP	１		IP	１		IP	１		G1	１		G1	４		IP	１		IP	１		IP	１		IP	１		IP
+鶴本　　崇文	6.20	0.14	3.5	４		IP	４		IP	３		G1	２		IP	６		IP	２		IP	２		IP	２		IP	３		IP	２		IP
+川上　　　剛	7.80	0.15	2.2	１		IP	１		IP	３		IP	３		IP	２		IP	１		IP	３		IP	１		IP	１		IP	５		IP
+宮田　　龍馬	6.50	0.12	2.5	３		IP	４		IP	６		IP	３		IP	３		G1	５		G1	１		IP	２		IP	１		IP	１		IP
+寺本　　重宣	5.70	0.16	3.4	２		IP	３		G3	２		G3	４		IP	１		IP	２		IP	５		IP	６		IP	２		IP	６		G2
+栗城　　　匠	4.50	0.16	3.9	２		G1	６		G1	５		IP	１		IP	６		IP	３		IP	３		G1	５		G1	５	5	G1	６		G1

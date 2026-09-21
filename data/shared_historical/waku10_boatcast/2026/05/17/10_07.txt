@@ -1,0 +1,8 @@
+data=
+1	0
+菅野　はやか	5.30	0.23	4.2	２		G3	４		G3	５		G3	３		IP	４		IP	１		IP	４		IP	６		IP	３		G3	２		IP
+水摩　　　敦	5.40	0.20	3.8	５	3	IP	２		IP	２		IP	４		IP	３		IP	５		IP	３		IP	３		IP	３		G3	３		IP
+平瀬　　城啓	2.80	0.20	3.5	３	2	IP	６		IP	５		IP	３		IP	４		IP	６		IP	６		IP	４	5	IP	６		IP	５		IP
+柏野　　幸二	4.40	0.12	2.0	３		IP	３		IP	５		IP	３		IP	４		IP	４		IP	５		IP	２		IP	３		IP	落	3	IP
+櫻井　　　優	3.60	0.22	4.0	５		IP	５		IP	１		IP	６		IP	４		IP	５		IP	４	6	IP	４		IP	３		IP	６		IP
+遠藤　　エミ	4.90	0.15	4.0	６		G2	６		IP	３		IP	４		G2	６		G2	３		G1	１	5	IP	４		G1	６		G1	３		G1

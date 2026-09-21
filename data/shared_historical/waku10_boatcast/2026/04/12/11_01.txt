@@ -1,0 +1,8 @@
+data=
+1	0
+野長瀬　正孝	6.90	0.16	3.3	２		IP	４		IP	１		IP	５		IP	６		IP	１		IP	３		IP	２		IP	１		IP	１		IP
+伊藤　　玲奈	4.50	0.21	4.6	１		G3	４		IP	６		IP	３		IP	６		IP	５		IP	１		IP	６		IP	３		IP	４		IP
+一色　　颯輝	6.10	0.15	3.3	２		IP	２		IP	６		IP	２		IP	５		IP	４		IP	３		IP	２		IP	２		IP	２		IP
+高橋　　直哉	3.10	0.21	4.3	５		IP	６		IP	５		IP	１		IP	６		IP	５		IP	６		G3	３		G3	４		IP	５		IP
+梅原　　祥平	3.50	0.16	2.6	３		IP	５		IP	４	6	IP	４		IP	６		IP	５		IP	５	4	IP	５		IP	５		IP	１		IP
+藤山　　湧太	3.10	0.21	4.4	６		IP	５		IP	６		IP	４		IP	６		IP	３		IP	４		IP	３		IP	５		IP	４		IP

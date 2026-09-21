@@ -1,0 +1,8 @@
+data=
+1	0
+橋本　　　明	9.40	0.16	2.9	１		IP	１		G3	３		G3	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+大平　誉史明	5.50	0.14	2.9	１		IP	３		IP	２		G3	５		G3	５		IP	４		IP	５		IP	２		IP	２		IP	４		IP
+明石　　正之	5.70	0.18	3.2	５		IP	５		IP	２		IP	２		IP	３	4	IP	２		IP	１	5	IP	６		IP	４	4	G3	２		IP
+東本　　勝利	6.00	0.17	4.0	４		IP	３		IP	４		G3	４		G3	３		IP	４	5	IP	１		IP	３		IP	２	5	IP	３		IP
+藤井　　公人	4.60	0.14	3.1	３	6	IP	６		IP	３		IP	６		IP	５		IP	２	6	IP	４		IP	１	4	IP	４		IP	４		IP
+水摩　　　敦	5.40	0.16	2.7	４		IP	６		IP	６		IP	２	2	IP	１	4	IP	２		IP	２		IP	３		IP	３		IP	５	5	IP

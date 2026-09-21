@@ -1,0 +1,8 @@
+data=
+1	0
+重木　　輝彦	9.90	0.17	3.3	１		G1	１		IP	１		IP	２		IP	１		IP	１		IP	２		G1	１		G1	１		IP	１		IP
+木下　　翔太	7.20	0.16	4.0	２		G1	４		G1	３		IP	３		IP	１	1	G1	１		G1	４		IP	３		IP	３		IP	３		IP
+實森　　美祐	7.10	0.13	2.4	３		G1	１	2	IP	５	4	IP	５		IP	２	2	IP	１		IP	４		G1	３		G1	１		IP	１		IP
+葛原　　大陽	4.50	0.14	3.0	２		G1	３		IP	２		IP	５		G1	５		G1	６		IP	３		IP	６		IP	４	3	G1	６		IP
+黒井　　達矢	5.90	0.17	3.0	６		G1	５		IP	３		IP	１	4	IP	５		G1	３		G1	３		G1	２		IP	２		IP	３	3	IP
+竹田　　和哉	3.90	0.15	3.8	５		G1	５		IP	４		IP	６		G1	３		G1	３		G1	５		IP	４		IP	３		IP	５		IP

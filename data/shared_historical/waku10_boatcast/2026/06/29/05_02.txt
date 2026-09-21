@@ -1,0 +1,8 @@
+data=
+1	0
+石塚　　裕介	5.60	0.19	3.0	３		IP	１		G3	４		IP	妨		IP	Ｆ		IP	３		IP	１		IP	２		IP	５		IP	１		IP
+藤山　　雅弘	7.30	0.18	2.9	１		IP	３		IP	４	4	IP	２		IP	１		IP	２		IP	６		IP	２		IP	２		IP	１		IP
+篠田　　優也	6.20	0.20	3.1	３		IP	５		IP	３		IP	３		IP	２		IP	３		IP	１		IP	２	4	IP	２		IP	５		IP
+堂原　　洋史	3.30	0.16	3.4	４		IP	４		IP	６		IP	５	6	IP	４		IP	５		IP	５		IP	３		IP	４		IP	４		IP
+福田　　翔吾	4.20	0.17	3.7	５		IP	３	4	IP	４		IP	４		IP	２		IP	４		IP	５	6	IP	５		IP	３		IP	４		IP
+港　　　理樹	2.80	0.17	4.0	４		IP	５		IP	５		IP	３		IP	５		IP	５		IP	落		IP	３		IP	５		IP	５		IP

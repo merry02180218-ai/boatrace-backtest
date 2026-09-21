@@ -1,0 +1,8 @@
+data=
+1	0
+栗原　　一馬	6.40	0.16	2.8	６		IP	３		IP	１		IP	６		IP	３		IP	１		IP	１		IP	２		IP	２		IP	４		IP
+後藤　　隼之	6.10	0.15	3.0	２	3	IP	３		IP	３		IP	２		IP	６		IP	３	1	IP	２		IP	４		IP	４		G3	１		IP
+信濃　　由行	2.90	0.20	3.4	６		IP	６		IP	３		IP	４	1	IP	６		IP	２		IP	６		IP	６		IP	４		IP	５		IP
+田頭　　　実	5.80	0.11	2.2	４	2	IP	３	2	IP	３	2	IP	４	2	IP	１	2	IP	３	2	IP	２	2	G3	５	2	IP	５	3	IP	１	2	IP
+松下　　直也	4.10	0.18	3.8	４		IP	３		IP	４		IP	３		IP	６		IP	３		IP	２		IP	４		IP	６		IP	６		IP
+馬袋　　義則	5.70	0.16	3.4	１	3	IP	２	5	IP	２	2	IP	５	2	IP	４		IP	２	2	IP	４		IP	２	4	IP	６		G3	４	3	G3

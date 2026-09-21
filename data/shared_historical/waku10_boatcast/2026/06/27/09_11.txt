@@ -1,0 +1,8 @@
+data=
+1	0
+太田　　和美	8.30	0.14	3.4	１		IP	２		IP	２		IP	１		IP	２		G1	２		IP	２		IP	１		IP	１		IP	５		IP
+山地　　正樹	6.80	0.17	3.6	１		IP	２		IP	３		IP	４		IP	１		IP	２		IP	４		IP	２		IP	５		IP	２		IP
+小林　　文彦	6.60	0.17	4.3	１		IP	１		IP	２		IP	３	4	IP	５		IP	３		IP	４		IP	１		IP	５	5	IP	２		IP
+古場　　輝義	5.40	0.20	3.4	３		IP	４	2	IP	５		IP	４	1	G3	４	5	IP	３		G3	５		G3	２		IP	１		IP	２		IP
+飯島　　昌弘	5.40	0.18	4.0	５		IP	１		IP	２		IP	３		IP	２		IP	５		IP	５		IP	３		IP	４		IP	４		IP
+大谷　　直弘	4.60	0.20	4.0	６		IP	２		IP	５		IP	３	5	IP	３	5	IP	２		IP	４		IP	４		IP	３		IP	６		IP

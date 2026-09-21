@@ -1,0 +1,8 @@
+data=
+1	0
+冨成　　謙児	8.60	0.14	1.7	２		IP	１		IP	２		IP	２		IP	１		IP	２		IP	１		IP	３		IP	１		IP	２		IP
+天野　　　誠	4.20	0.19	4.1	４		IP	３		IP	６		IP	４		IP	３		IP	３		IP	３		IP	３		IP	６	3	G3	５		G3
+松尾　　夏海	4.50	0.14	3.9	１		IP	６		G1	１		G3	４		G3	５		IP	６		IP	２		G3	６		G2	５		IP	４		IP
+眞鳥　　康太	4.10	0.21	4.3	２	6	IP	４	5	IP	４	6	IP	６	6	IP	３	5	IP	３		IP	３		IP	５	5	G3	５		G3	５	6	IP
+平山　　智加	5.60	0.17	2.8	５		G1	２		IP	１		IP	２		IP	５		IP	４		IP	４		G3	３		G3	２		G3	５		G1
+明石　　正之	3.60	0.19	4.5	５		IP	３		IP	５		IP	５		IP	５	5	IP	５		IP	４		IP	４		IP	５		G3	２	5	G3

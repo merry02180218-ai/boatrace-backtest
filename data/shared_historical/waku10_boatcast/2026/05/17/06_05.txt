@@ -1,0 +1,8 @@
+data=
+1	0
+喜多　那由夏	5.60	0.18	3.2	６		G3	４		G3	６		IP	２		IP	２		IP	５		IP	１		IP	２		IP	３		IP	２		IP
+森定　　晃史	5.80	0.17	3.2	２		IP	５		IP	２		IP	３		IP	２		IP	３		IP	５		IP	４		IP	３		IP	２		IP
+高橋　　正男	6.50	0.14	3.3	６		IP	２		IP	２		IP	４		IP	２		IP	２		IP	２		IP	３		IP	５		IP	１		IP
+片岡　　大地	2.80	0.15	2.7	５		IP	６		IP	４		IP	５		IP	６		IP	３		IP	５		IP	４		IP	４		IP	５		IP
+為本　　智也	4.00	0.13	2.6	４		IP	２	4	IP	欠		IP	４	6	IP	１		IP	３		IP	６		IP	６		IP	４		G3	５		IP
+栗原　　一馬	3.50	0.19	3.9	４		IP	５		IP	２	5	IP	５		IP	６		IP	４		IP	２		IP	５		IP	６		IP	６		IP

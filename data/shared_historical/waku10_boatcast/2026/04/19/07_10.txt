@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　京介	7.30	0.12	2.6	２		IP	１		IP	５	2	G3	６		IP	２		IP	１		IP	２		IP	２		IP	２		IP	１		IP
+亀本　　勇樹	5.44	0.16	3.8	１		IP	５		IP	４		IP	４		IP	６		IP	３		IP	２		IP	エ		IP	３		IP	２		IP
+中越　　博紀	4.10	0.21	4.8	２		IP	６		IP	６	5	G3	４		IP	５		G1	５	4	IP	４		IP	３		IP	１		IP	６		IP
+上原　　　崚	4.90	0.17	3.0	６		IP	５		IP	３		IP	１		IP	４		IP	３		IP	６		IP	４		G2	２		IP	４	5	IP
+田上　　　凜	4.60	0.16	2.7	６	6	IP	１	4	IP	５		IP	５		IP	４		IP	４		IP	３		IP	６		IP	３		G3	１		IP
+出畑　　孝成	3.20	0.20	4.2	２		IP	２		IP	６		IP	５	5	IP	５		IP	５		IP	５		IP	４		IP	６		IP	５		IP

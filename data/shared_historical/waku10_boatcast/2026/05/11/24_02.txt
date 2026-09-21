@@ -1,0 +1,8 @@
+data=
+1	0
+山戸　　信二	4.30	0.18	4.3	５		IP	６		IP	６		IP	１		IP	６		IP	４		IP	１		IP	１		IP	５		IP	５		IP
+仁科　さやか	2.70	0.17	4.0	６		IP	６		IP	６		IP	４	3	IP	５		IP	４		IP	４		IP	３		IP	４		IP	Ｆ		IP
+嶋田　　有里	4.80	0.20	4.3	２		IP	５		IP	３		IP	１		IP	３		IP	５		IP	４		IP	４		IP	４		IP	５		IP
+阪本　　勇介	4.50	0.21	4.2	５		IP	４		IP	３		IP	２		IP	３		IP	２		IP	４		IP	４		IP	６		IP	５	6	IP
+山田　　陽翔	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+小池　　礼乃	2.40	0.21	4.3	６		IP	５		IP	４		IP	４		IP	３		IP	６		IP	６		IP	５		IP	５		G3	６		G3

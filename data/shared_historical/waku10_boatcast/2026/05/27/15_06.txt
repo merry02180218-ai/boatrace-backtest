@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　京介	6.30	0.12	2.1	１		IP	１		IP	５		IP	５		IP	２		IP	１		IP	５	2	G3	６		IP	２		IP	１		IP
+桑原　　将光	6.20	0.14	3.9	３	3	IP	３		IP	２		IP	１		IP	５		IP	２		IP	３		IP	４		IP	４		IP	２	3	IP
+大江　　　純	5.00	0.18	2.9	６	4	IP	５		IP	２		IP	１		IP	６		IP	３		IP	４		G3	２		G3	３	4	IP	４		IP
+正木　　聖賢	4.60	0.17	2.9	１		IP	４		IP	５		IP	３		IP	転		IP	３		IP	５		IP	３		IP	３		IP	４		IP
+安河内　　将	5.50	0.16	3.9	３		IP	４		IP	２		IP	３		IP	３		IP	２		G1	４		IP	４		IP	６		IP	４		G1
+新出　　浩司	2.90	0.18	3.4	５		IP	５		IP	６		IP	４		IP	６		IP	３		IP	４	5	IP	５		IP	６		IP	４		IP

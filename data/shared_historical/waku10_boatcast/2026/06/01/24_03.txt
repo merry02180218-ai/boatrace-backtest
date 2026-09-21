@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　義明	8.00	0.15	3.7	１		IP	３		G3	２		IP	１		IP	４		IP	１		IP	２		IP	１		IP	１		G3	４		G3
+森口　　和紀	5.30	0.20	4.2	１		IP	５		IP	６	4	IP	６		IP	１		IP	５		IP	１	3	IP	２		IP	２		IP	６		IP
+渡邊　　裕貴	5.60	0.18	3.3	３	4	IP	５		IP	２		IP	１		IP	４		IP	２		IP	４		IP	４		IP	３		IP	４		IP
+秦　　　英悟	6.20	0.16	2.7	２		IP	６		IP	１		IP	２		IP	３		IP	２		SG	２		G1	５		G1	４		IP	５		G1
+西川　　真人	3.50	0.15	4.1	２	4	IP	４		IP	３		IP	５		IP	４		IP	６		IP	３	4	IP	５		IP	６		IP	６		IP
+山一　　鉄也	3.90	0.16	4.3	２		IP	２		IP	３		IP	５	5	IP	６		IP	５		IP	５		IP	３	5	IP	５		IP	５		IP

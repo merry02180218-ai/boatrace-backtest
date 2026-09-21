@@ -1,0 +1,8 @@
+data=
+1	0
+向後　　龍一	9.40	0.12	2.8	１		IP	２		IP	１		IP	１		IP	１		G3	１		G3	１		IP	２		IP	１		IP	２		IP
+土井　　歩夢	6.40	0.20	3.5	２		IP	５		G3	４		IP	２		IP	５		IP	１		IP	３		IP	２		IP	１		IP	３		IP
+丸野　　一樹	6.90	0.12	2.4	５		G1	２		G1	３		SG	３		SG	５		G1	３		G1	２		G1	１		IP	５		G1	２		G1
+菊池　　峰晴	6.30	0.20	3.9	１	5	IP	４		IP	２		IP	６		IP	２		IP	４		IP	３		IP	４		IP	２		IP	１		IP
+三松　　直美	2.44	0.16	4.0	５		IP	５		G3	５		G3	３		G3	転		G3	６		IP	５	6	IP	６	6	IP	５		IP	４		G3
+増田　　　進	3.70	0.23	5.0	４		IP	４		IP	４		IP	４		IP	５		IP	３		IP	２	5	IP	５		IP	６		IP	５		IP

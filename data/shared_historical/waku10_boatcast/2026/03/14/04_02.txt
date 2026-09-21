@@ -1,0 +1,8 @@
+data=
+1	0
+長谷川　　巌	4.90	0.18	2.8	４		IP	１		IP	２		IP	４		IP	Ｆ		IP	６		G3	２		G3	４		G3	５		G3	２		IP
+乙津　　康志	6.10	0.18	3.8	３		IP	４		IP	１		IP	３		IP	３		IP	２		IP	２		IP	２		IP	４		IP	６		IP
+宇留田　翔平	4.80	0.15	1.7	２	4	IP	３		IP	４		IP	５	2	IP	転		IP	２		IP	２		IP	３		IP	４		IP	５	4	IP
+小川　　時光	3.20	0.16	3.3	５		IP	６		IP	３		IP	４		IP	２		IP	５		IP	５		IP	５		IP	６		IP	４		IP
+渡邉　真奈美	4.90	0.13	2.9	１		IP	５		IP	４		IP	６		IP	５		IP	２		G3	３		G3	１		IP	５		IP	４		G3
+小川　　知行	3.90	0.15	3.0	３		IP	３		IP	４		IP	６		IP	３		IP	３	5	IP	４		IP	６		IP	６		IP	５		IP

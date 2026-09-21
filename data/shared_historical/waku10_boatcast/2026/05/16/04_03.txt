@@ -1,0 +1,8 @@
+data=
+1	0
+野中　　義生	5.20	0.20	3.7	３		IP	２		IP	１		G3	１		G3	５		IP	４		IP	５		IP	妨		IP	４		IP	３		IP
+赤羽　　克也	6.30	0.16	3.3	４		IP	４		IP	１		IP	１		IP	３		IP	１		IP	５		IP	１		IP	６	3	IP	３		IP
+高橋　　淳美	3.70	0.15	2.9	２		IP	６		G3	６		G3	３		IP	６		IP	６		IP	４		IP	３		IP	６		IP	２		IP
+伊藤　　喜智	5.10	0.16	3.3	４		IP	３		IP	５		IP	３		IP	１		IP	６		IP	３		IP	４		IP	３		IP	３		IP
+吉田　慎二郎	5.10	0.15	2.6	１		IP	４		IP	４		IP	１		IP	１		IP	５		IP	４		IP	４		IP	５		IP	６		IP
+岸本　　　隆	5.40	0.19	3.5	３		IP	３		G3	４		G3	２	5	IP	４		IP	４		IP	４		IP	４		IP	２		IP	３		IP

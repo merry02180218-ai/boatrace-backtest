@@ -1,0 +1,8 @@
+data=
+1	0
+福来　　　剛	7.80	0.14	2.0	１		IP	１		IP	６		IP	Ｆ		IP	１		IP	３		G2	１		IP	１		IP	１		IP	１		IP
+末永　　由楽	5.80	0.12	2.7	２		IP	４		IP	２		IP	５		G2	６		G2	４		IP	６		IP	１		IP	２		IP	１		IP
+中　　　亮太	7.20	0.13	2.5	２		G2	４		IP	１		IP	６		G2	２		G3	３		IP	２		IP	２		IP	３		IP	１		IP
+畑田　　汰一	6.10	0.14	2.0	５		IP	５		IP	２		IP	２		IP	２		IP	６	2	IP	４		IP	１		IP	１		G1	４		G1
+常住　　　蓮	6.20	0.13	3.0	４	4	G1	４		SG	４		IP	４		IP	２		IP	２		IP	５		G1	６		G1	１		SG	２	4	IP
+田川　　大貴	2.70	0.19	3.4	６		IP	４		IP	４		IP	６		IP	６		IP	５		IP	４		IP	４		IP	５		IP	４		IP

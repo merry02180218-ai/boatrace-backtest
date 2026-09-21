@@ -1,0 +1,8 @@
+data=
+1	0
+長尾　　萌加	7.40	0.18	2.5	１		IP	２		IP	４		IP	１		IP	４		IP	１		IP	２		IP	３		IP	３		IP	２		IP
+眞崎　　武蔵	2.60	0.24	4.6	６		IP	６		IP	５		IP	６		IP	６		IP	２		IP	６		IP	４		IP	６		IP	３		IP
+宮下　　元胤	5.40	0.17	3.2	２		IP	５		IP	２		IP	３		IP	２		IP	３		IP	５		IP	３		IP	４		IP	４		IP
+宮崎　心之介	4.30	0.17	3.2	３		IP	２		IP	３		IP	Ｆ		IP	５		IP	１		IP	５		IP	６		IP	５	5	IP	３		IP
+津久井　拓也	5.40	0.14	2.8	３		IP	２		IP	３	4	IP	５		IP	４		IP	３		IP	３		IP	３		IP	４		IP	３		IP
+塚越　　陸斗	2.10	0.18	3.8	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP	２		IP	６		IP	５		IP

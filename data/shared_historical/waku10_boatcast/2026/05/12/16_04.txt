@@ -1,0 +1,8 @@
+data=
+1	0
+村上　　彰一	5.50	0.16	4.1	２		IP	６	2	IP	２		IP	５		IP	４	2	IP	２		IP	２		IP	２		IP	３		IP	５		IP
+上田　　紗奈	6.30	0.13	2.0	１		IP	１		IP	４		IP	５		IP	４		IP	３	3	IP	１		IP	３		G1	４		G1	４		IP
+高田　　　綾	5.33	0.15	2.9	４		IP	５		IP	４		IP	１		IP	転		IP	Ｆ		G3	３		IP	２		IP	３		IP	２	4	IP
+前原　　大道	5.60	0.17	2.8	３	5	IP	３		IP	２		G1	５		G1	３		IP	５		IP	４	5	G1	５		IP	１	3	IP	３	5	IP
+天野　　友和	5.20	0.17	3.8	１		IP	２		IP	２		IP	６		IP	５		IP	３		IP	５		IP	３	6	IP	４		IP	４		IP
+平見　　真彦	4.60	0.17	4.0	２		IP	３	5	IP	３		IP	３	5	IP	６	5	IP	５		IP	３		IP	６		IP	５		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+永田　　啓二	7.80	0.12	2.3	１		IP	２		IP	５		IP	１		IP	３		IP	１		IP	６		G1	１		IP	２		IP	１		IP
+正木　　聖賢	3.80	0.16	3.7	３		IP	２		IP	５		IP	６		IP	５		IP	２		IP	６	3	IP	３		IP	転		IP	４	3	IP
+四宮　　与寛	4.50	0.15	3.2	３		IP	５		IP	５		IP	３		IP	５		IP	５		IP	１		IP	４		IP	２		IP	５		G1
+重成　　一人	7.90	0.16	2.6	１		IP	５		G1	３		G1	３		IP	１		IP	１		IP	２		IP	４		IP	１		G1	１		IP
+岡瀬　　正人	5.10	0.18	4.2	４		IP	３		IP	３		IP	３	4	IP	３		IP	６		IP	４		IP	３		IP	２		IP	４		G3
+橋口　　真樹	2.90	0.22	4.1	４		IP	４		IP	４	5	IP	１		IP	６		IP	６		IP	５		IP	６		G3	６		G3	６		IP

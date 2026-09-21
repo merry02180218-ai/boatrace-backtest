@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　雄朗	9.10	0.12	2.9	１		IP	１		G2	２		G2	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	６		G1
+上村　　純一	6.20	0.11	2.4	１		IP	６		G2	３		IP	２		IP	３		G1	６		G1	５		IP	１		IP	３		IP	３		G1
+富永　　大一	4.40	0.18	3.4	２		IP	２		IP	４		IP	３		IP	６		IP	４		IP	４		IP	６		IP	３		IP	５		IP
+山本　　寛久	7.20	0.12	2.1	３		IP	２		IP	２		IP	３		IP	２		IP	２		IP	３		IP	３		IP	２		IP	２		IP
+妻鳥　　晋也	3.50	0.19	4.3	５		IP	４		IP	６		IP	５		IP	５		IP	３		IP	５		IP	５		IP	３		IP	２		IP
+堤　　　啓輔	3.70	0.21	3.7	４		IP	５		IP	２	3	IP	４		IP	６		IP	５	5	IP	４		IP	６		IP	６	5	IP	１		IP

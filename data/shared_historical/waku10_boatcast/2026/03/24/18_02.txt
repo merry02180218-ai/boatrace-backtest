@@ -1,0 +1,8 @@
+data=
+1	0
+山一　　鉄也	8.80	0.13	1.9	１		IP	１		G3	１		G3	１		G3	１		G3	１		IP	６		IP	２		IP	１		IP	２		IP
+上田　　紗奈	5.60	0.15	2.8	４		IP	３	3	IP	１		IP	３		G1	４		G1	４		IP	６		IP	５		IP	３		IP	１		IP
+青木　幸太郎	5.60	0.18	3.3	３		IP	１		IP	４		IP	３		IP	５		IP	１		IP	４		IP	４		IP	４		IP	３		IP
+石田　　勇斗	3.90	0.16	2.6	５		IP	４		IP	５		IP	３		IP	６	6	IP	４	5	IP	２		IP	３		IP	４		IP	５		IP
+加藤　　　翔	1.60	0.24	4.4	６	4	IP	５		IP	４		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	６	6	IP
+金田　　　諭	6.10	0.14	3.1	３	5	IP	３		IP	２	5	IP	１		IP	３		IP	３		IP	６		G1	５		G1	２		IP	３		IP

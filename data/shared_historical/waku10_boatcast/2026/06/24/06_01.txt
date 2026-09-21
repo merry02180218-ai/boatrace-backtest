@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　　翔	6.10	0.20	5.2	１		IP	５		IP	１		IP	５		IP	２		IP	３		IP	２		IP	６		IP	１		IP	４		IP
+古賀　　智之	5.70	0.17	3.5	４	3	IP	３		IP	３		IP	１		IP	６		IP	３		IP	３		IP	３		IP	２		IP	４		IP
+加藤　　優弥	6.20	0.13	2.2	２		IP	１		IP	２		IP	５	4	IP	４		IP	５		IP	１		IP	１		IP	４		IP	４		IP
+稲生　　夏季	3.70	0.20	4.4	６	6	IP	４		G3	４		G3	３		G3	６		IP	４		IP	３		IP	６		IP	２		IP	５		G3
+下河　　雅史	4.30	0.16	4.0	３		IP	４		IP	３		IP	６		IP	４		IP	５	6	IP	３		IP	４	6	IP	３	4	IP	４		IP
+谷島　　咲希	1.90	0.20	4.4	４		IP	５		IP	６		IP	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP	５		IP

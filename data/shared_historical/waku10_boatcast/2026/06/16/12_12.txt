@@ -1,0 +1,8 @@
+data=
+1	0
+飯山　　　泰	9.20	0.18	2.7	２		IP	２		IP	２		IP	１		IP	１		IP	１		IP	１		G2	２		G2	１		IP	２		IP
+佐藤　　大佑	6.50	0.15	2.6	２	5	IP	２		G3	４		G3	１	4	G3	２		G2	５	5	IP	５		IP	３		IP	３		IP	１		IP
+楠原　　正剛	4.10	0.16	3.0	４		IP	５		IP	２		IP	５		G3	５		IP	６	4	IP	３	4	IP	４		IP	３		IP	３		IP
+長谷川　雅和	4.90	0.18	2.9	１		IP	３		IP	５		IP	３	5	IP	６	5	IP	５		IP	４		IP	３		IP	３		IP	３		IP
+島川　　海輝	5.20	0.17	3.3	６		IP	２	4	IP	４		IP	２		IP	５		IP	３		IP	６		IP	３		IP	２	4	IP	２	6	IP
+葛原　　大陽	4.30	0.15	2.3	３	4	IP	３		IP	４		IP	４		IP	６		IP	５		IP	３		IP	３	5	IP	６		G1	３		IP

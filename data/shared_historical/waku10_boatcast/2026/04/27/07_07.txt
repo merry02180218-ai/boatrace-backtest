@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　拡郎	10.30	0.13	2.4	１		IP	１		G1	１		G1	１		G1	１		G1	２		G1	２		G1	１		G1	１		IP	１	2	IP
+長尾　　萌加	4.90	0.16	3.6	２		IP	４		IP	６	3	IP	３		IP	３		IP	５		IP	４		IP	２		IP	２		IP	５		IP
+樋口　　範政	3.00	0.19	4.5	３		IP	６		IP	４		IP	４		IP	５		IP	５		IP	４		IP	５		IP	６		IP	４		IP
+金子　　和之	4.70	0.12	2.7	４		IP	４		G3	４		IP	５		IP	６		IP	１		IP	３		IP	３		IP	３		IP	４		IP
+根岸　　真優	1.90	0.16	3.9	５		IP	６		IP	５		IP	５		IP	６	6	IP	６		IP	６		IP	３		IP	５		IP	６		G3
+岩下　　巧斗	2.50	0.17	3.3	４	5	IP	５		IP	５		IP	４		IP	４		IP	６		IP	４	5	IP	５		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+近江　　翔吾	9.10	0.11	1.6	１		IP	１		IP	１		IP	１		IP	１		G1	１		G1	１		IP	１		IP	Ｆ		IP	２		IP
+海老澤　泰行	5.40	0.16	3.0	４		IP	３		IP	３		IP	３		IP	４		IP	３		IP	３		IP	３		IP	４		IP	３		IP
+伯母　　芳恒	3.60	0.15	3.0	３		IP	３		IP	４		IP	６		G3	６		IP	５		IP	４		IP	４		IP	３		IP	５		IP
+山本　　兼士	3.30	0.14	3.3	２		IP	３		IP	５		IP	６		IP	５		IP	４		IP	３		IP	６		IP	５		IP	６	3	IP
+泉　　　啓文	3.30	0.17	4.4	６		IP	５		IP	６		IP	４		IP	５	6	IP	６	6	IP	２		IP	２		IP	５		IP	４		IP
+加藤　　雅之	2.50	0.23	5.0	６		IP	５		IP	６		IP	５		IP	５		IP	２		IP	４		IP	５		IP	６	5	IP	５		IP

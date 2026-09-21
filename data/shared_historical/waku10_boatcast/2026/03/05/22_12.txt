@@ -1,0 +1,8 @@
+data=
+1	0
+篠崎　　仁志	10.30	0.13	2.5	１		IP	１		IP	１		IP	１		G1	１		G1	１		G1	１		G1	１		IP	１		IP	２		G1
+蒲原　　健太	5.70	0.18	3.5	１		IP	１		IP	３		IP	４		IP	６		IP	４		IP	５		IP	３		IP	３	3	IP	２		IP
+酒井　　俊弘	4.50	0.11	1.7	１		IP	２		IP	５		IP	６	5	IP	５		IP	３	6	IP	２	5	IP	３		IP	６	4	IP	６	5	IP
+前田　　　滉	6.80	0.17	3.5	１		IP	６		G1	１		G1	１		G1	５		G1	３		IP	３		SG	３		G1	４		G1	４		G1
+下寺　　秀和	4.60	0.16	3.0	５		IP	５		IP	３		IP	６		IP	１		IP	６		IP	２		IP	３		IP	４		IP	３		IP
+沖島　　広和	1.90	0.20	4.7	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	２	5	IP

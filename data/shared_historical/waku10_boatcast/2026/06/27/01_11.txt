@@ -1,0 +1,8 @@
+data=
+1	0
+北村　　征嗣	9.70	0.15	2.4	１		IP	１		IP	１		IP	１		G3	１		G3	１		IP	２		IP	１		IP	２		G1	１		IP
+真庭　　明志	5.10	0.15	3.0	３		IP	４		IP	１		IP	３		IP	３		IP	６		IP	４		IP	１		IP	４		IP	転		IP
+大池　　佑来	7.70	0.13	2.4	１		IP	４		IP	２		IP	２		G2	３		IP	１		IP	１		IP	２		IP	４		IP	３		G1
+中村　　　真	4.70	0.15	2.8	６		IP	６		IP	３		IP	４		IP	２	5	IP	１	3	IP	２		IP	６		G3	５		IP	３		IP
+高橋　　真吾	3.80	0.14	3.0	５		IP	６		IP	４		IP	２		IP	６		IP	６	6	IP	６		IP	２		IP	２		IP	４		IP
+木下　　大將	4.78	0.16	2.9	４		IP	６		IP	３		IP	３		IP	４		IP	３		IP	５		IP	欠		IP	２		IP	３		IP

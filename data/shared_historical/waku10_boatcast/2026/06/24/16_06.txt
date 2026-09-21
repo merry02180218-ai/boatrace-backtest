@@ -1,0 +1,8 @@
+data=
+1	0
+野田　　昇吾	4.30	0.14	2.6	３		IP	２		IP	５	2	IP	６		IP	４		IP	４		IP	１		IP	４		IP	４		IP	Ｆ		IP
+森定　　晃史	6.40	0.12	2.2	２		IP	２		IP	４		IP	３		IP	３		IP	２		IP	５		IP	２		IP	３		IP	２		IP
+高橋　　正男	6.40	0.17	3.3	５		G1	４		G1	２		IP	２		IP	２		IP	１		IP	６		IP	２		IP	２		IP	４		IP
+鈴木　　秀茉	4.10	0.18	2.7	３		IP	１	5	IP	６		IP	２		IP	４	5	IP	４		IP	５		IP	４		IP	６		G3	６		G3
+平野　　和明	4.00	0.19	3.5	３		IP	５		G3	４		G3	４		IP	４		IP	５		IP	４		IP	３	4	IP	４		IP	４	6	IP
+星野　　太郎	3.40	0.24	4.8	６	5	IP	６		IP	４		IP	１		IP	３		IP	６		IP	４		IP	６		IP	５		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　賢一	7.90	0.10	2.6	６		IP	１		IP	１		IP	１		G3	２		IP	２		IP	３		IP	１		IP	１		IP	３		IP
+金子　　貴志	7.00	0.23	4.0	３		IP	２		IP	１	3	IP	４		IP	２		IP	２		IP	３		IP	１		IP	２		IP	５		IP
+小坂　　尚哉	6.40	0.11	2.5	２		IP	３		IP	３		IP	１		IP	３		IP	３		IP	４		G3	２		IP	５		IP	２	4	IP
+大場　　　敏	3.80	0.17	3.6	５		IP	３		IP	５		IP	５		IP	２		IP	４		IP	２		IP	６		IP	５		IP	６		IP
+近藤　　稔也	2.80	0.17	2.4	４		IP	４		IP	Ｆ	4	IP	６		IP	４		IP	６		IP	３		IP	５		IP	４		IP	５		IP
+志道　　吉和	2.20	0.28	5.1	４		IP	５		IP	５		IP	５		IP	５		IP	６		IP	５		IP	５		IP	４	5	IP	６		IP

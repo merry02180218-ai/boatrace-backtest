@@ -1,0 +1,8 @@
+data=
+1	0
+松下　　直也	5.10	0.20	4.2	１		IP	１		IP	５		IP	６		IP	１		IP	２		IP	４		IP	６		IP	６		IP	４		IP
+天野　　晶夫	5.40	0.16	3.4	４		IP	３		IP	２		IP	３		IP	４		G3	４		IP	３		IP	４		IP	２		IP	４		IP
+渡邉　　睦広	5.50	0.13	2.6	５		IP	５		IP	２		IP	４		IP	２		IP	１		IP	４		IP	２		IP	２		IP	６		IP
+藤井　　　徹	2.30	0.23	5.0	５		IP	６		IP	４		IP	４		IP	５	5	IP	５		IP	５		IP	６		IP	４		IP	６		IP
+松尾　　　拓	5.00	0.17	3.9	３	4	IP	１		IP	２		IP	２		IP	６		G1	５		G1	６		G1	３		IP	５		IP	５	6	G1
+櫻井　　　隼	2.10	0.23	5.9	５		IP	６		IP	６		IP	５		IP	６		IP	４		IP	５		IP	３		IP	６		IP	６		IP

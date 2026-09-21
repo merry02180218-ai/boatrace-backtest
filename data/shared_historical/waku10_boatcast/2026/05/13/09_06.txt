@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　修一	8.00	0.17	3.8	１		G3	１		IP	１		IP	４		IP	３		IP	１		IP	１		IP	５		IP	１		IP	２		IP
+松尾　　宣邦	4.40	0.19	3.5	４		G3	５		IP	３		IP	２	3	IP	３		IP	５		IP	５		IP	５		IP	２		IP	４		IP
+谷川　　祐一	5.40	0.15	3.1	２		G3	４		IP	２		IP	２		IP	５		IP	５		IP	３		IP	４		IP	３		IP	３		IP
+上之　　晃弘	4.60	0.15	3.1	５		G3	４		IP	１		IP	４		IP	１		IP	４		IP	２		IP	６	5	IP	６		IP	５		IP
+溝口　海義也	6.80	0.14	2.6	２		G3	２		IP	２		IP	４		IP	２		IP	３		G2	５		G2	２		IP	４		IP	１		IP
+豊田　健士郎	4.60	0.14	3.5	５		G3	３		IP	４	5	IP	２		G3	６		G1	６		G2	３		G2	６		G1	５		G1	１		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+松田　大志郎	9.40	0.17	2.5	１		IP	５		G1	１		G1	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+池田　　剛規	4.30	0.18	3.5	３		IP	６		IP	５		IP	２		IP	４		IP	５		IP	５		IP	５		IP	１		IP	３		IP
+松田　　隆司	4.60	0.17	3.0	５		IP	６		IP	２		IP	４	4	IP	２		IP	２	4	IP	５		IP	６		IP	５		IP	１		IP
+長野　壮志郎	7.10	0.13	2.2	４		IP	３		IP	３		IP	２		IP	２		IP	４		IP	３		IP	１		IP	１		IP	２	5	IP
+高倉　　和士	4.10	0.14	2.8	６	6	G1	５		IP	２		IP	４		IP	３		IP	５	6	G1	４		IP	４		IP	４	6	IP	５		IP
+安河内鈴之介	4.20	0.17	3.7	４		IP	５		IP	５		G2	４		G2	３		IP	４		IP	５		IP	４		G1	５	5	IP	３		IP

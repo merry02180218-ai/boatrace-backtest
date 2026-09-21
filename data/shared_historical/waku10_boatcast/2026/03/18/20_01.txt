@@ -1,0 +1,8 @@
+data=
+1	0
+稗田　　聖也	7.90	0.15	1.8	１		IP	６		IP	１		IP	２		IP	１		IP	４		IP	２		IP	１		IP	２		IP	１		IP
+樫葉　　次郎	4.20	0.13	1.8	４		IP	４		IP	４		IP	４		IP	２		IP	転		IP	３		IP	５		IP	３		IP	４		IP
+小野　　信樹	5.00	0.15	3.5	４	2	IP	５		IP	５		IP	３		IP	３		IP	４	4	IP	２		IP	２		IP	５	4	IP	２	2	IP
+大澤　　誠也	3.50	0.19	3.5	４		IP	３		IP	４		IP	５		IP	６		IP	３		IP	５		IP	５		IP	３		IP	５		IP
+上岡　　巧汰	2.10	0.13	3.0	４		IP	５		IP	６		IP	４		IP	６	6	IP	６	6	IP	５	6	IP	６	6	IP	６	6	IP	４	6	IP
+幸田　　智裕	3.80	0.16	3.2	３		IP	６		IP	４		IP	３		IP	２		IP	５		IP	５		IP	３		IP	５		IP	６		IP

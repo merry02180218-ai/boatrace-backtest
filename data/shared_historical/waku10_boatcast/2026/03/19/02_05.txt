@@ -1,0 +1,8 @@
+data=
+1	0
+廣瀬　　真也	8.40	0.12	1.4	１		IP	５		IP	１		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+伊達　　正利	6.20	0.18	3.5	１		IP	１		IP	２		IP	４		IP	６		IP	３		IP	６		IP	３		IP	２		IP	２		IP
+金子　　貴志	4.22	0.22	4.0	６		IP	３		IP	沈		IP	１	4	IP	５		IP	４		IP	２		IP	３		IP	転		G3	６		IP
+田中　信一郎	7.10	0.16	3.7	３		IP	１		IP	１		IP	５		IP	２		G1	３		IP	４		IP	２		G3	３		IP	１	5	G3
+小松　　卓司	3.80	0.16	3.0	５	6	IP	３		IP	３		IP	３		IP	５		IP	４		IP	５		IP	６		IP	２		IP	６		G3
+芝田　　京介	2.90	0.18	4.8	２		IP	５		IP	６		IP	６		IP	５		IP	５		IP	６		IP	Ｆ		IP	１		IP	５		IP

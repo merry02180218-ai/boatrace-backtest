@@ -1,0 +1,8 @@
+data=
+1	0
+川辺　　郭人	6.60	0.17	2.9	１		IP	２		IP	６		IP	４		IP	４		IP	１		IP	２		IP	１		IP	１		IP	６		IP
+西川　　拓利	7.20	0.13	1.7	２		IP	２		IP	１		IP	１		IP	２		IP	６		IP	１		IP	６		IP	２		IP	２		IP
+瀬川　　大地	2.70	0.12	3.1	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP	５		IP	６		IP	２		IP	３	4	IP
+藤森　　陸斗	6.20	0.10	2.6	３	5	IP	５		IP	４		IP	２	5	IP	４		IP	３		IP	１		IP	２		IP	１		IP	４		IP
+金子　　怜央	3.10	0.13	2.2	４		IP	６		IP	１		IP	５		IP	５		IP	３		IP	５	4	IP	６		IP	５		IP	６		IP
+青木　　　蓮	3.90	0.11	2.0	１		IP	３		IP	５		IP	５		IP	３		IP	６		G1	６		G1	６		G2	５		G2	４		IP

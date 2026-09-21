@@ -1,0 +1,8 @@
+data=
+1	0
+江本　　真治	7.80	0.16	3.7	１		IP	１		IP	２		IP	１		IP	２		G3	５		G3	１		IP	２		IP	２		IP	４		IP
+高野　　心吾	5.30	0.14	3.3	２	3	IP	３		IP	４		IP	５		IP	１		IP	５		IP	６	3	IP	２		IP	３		IP	３		IP
+大庭　　元明	5.30	0.16	3.7	４		IP	４		IP	５	4	IP	１		IP	２		IP	５	2	IP	６	4	IP	２		IP	４		IP	１		IP
+堤　　　啓輔	4.40	0.15	3.0	５		IP	３		IP	２	5	IP	５	2	IP	５	3	IP	６	2	IP	１		IP	５		IP	１	1	IP	６		IP
+柴田　　大輔	3.50	0.16	4.0	２		IP	４		IP	４		IP	Ｆ		IP	４	6	IP	６		IP	４		IP	５		G3	４	4	IP	４		IP
+田添　　康介	1.60	0.14	2.2	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	５		IP	６		IP	４		IP

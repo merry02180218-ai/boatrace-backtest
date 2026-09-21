@@ -1,0 +1,8 @@
+data=
+1	0
+高山　　弘斗	5.67	0.22	3.6	５		IP	１		IP	２		IP	１		IP	３		IP	５		IP	４		IP	２		IP	６		IP	エ		IP
+前川　　守嗣	5.50	0.14	2.4	５		IP	６		IP	５		IP	１		IP	２		IP	２		IP	４		IP	３		IP	３	3	IP	２		IP
+樅山　　拓馬	4.40	0.18	2.8	５	4	IP	４		IP	２		IP	６		IP	４		IP	２		IP	３		IP	６		IP	４		G3	３		IP
+安河内　　健	5.44	0.15	3.3	転		IP	２		IP	３		IP	４		IP	６		G2	３		G2	３		IP	２		G1	５		G1	４	5	IP
+岡本　翔太郎	5.44	0.12	2.5	落		IP	３		IP	３		IP	１		IP	２		IP	５		G3	６	4	G3	４		IP	５		IP	１		IP
+今泉　　博人	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP

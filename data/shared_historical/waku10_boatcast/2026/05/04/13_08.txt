@@ -1,0 +1,8 @@
+data=
+1	0
+安田　　政彦	5.30	0.16	3.3	４		G3	５	2	G3	１		IP	１		IP	５		IP	４		IP	２		IP	６		IP	５		IP	１		IP
+照屋　　厚仁	7.80	0.15	3.2	２		IP	１	1	IP	３	3	IP	３		IP	２		IP	１		IP	１	3	IP	１	3	IP	５		IP	２		IP
+小野寺　智洋	7.00	0.12	2.6	１		IP	２		IP	２		IP	３		G3	４		G3	３		IP	２		IP	２		IP	５		IP	２		IP
+吉川　　元浩	5.22	0.13	2.4	４		G1	４		G1	落		G1	３		G1	２		G1	６		G1	２		IP	６		IP	３		IP	４		IP
+来田　　衣織	4.60	0.16	3.1	５		IP	５		IP	２		IP	４	4	IP	６		IP	６	6	IP	１		IP	１		IP	２		IP	転		IP
+鈴谷　　一平	4.20	0.14	2.9	４		IP	５	5	IP	６		IP	６		IP	１	5	IP	１	5	IP	６		G1	２		IP	５		IP	５		IP

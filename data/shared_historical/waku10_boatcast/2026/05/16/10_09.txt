@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　孝明	6.30	0.15	2.5	２		IP	２		IP	１		IP	５		IP	４	2	IP	３		IP	６		IP	１		IP	２		IP	３		IP
+柴田　　朋哉	5.00	0.19	4.1	３		IP	３		IP	４		IP	６		IP	６		IP	２		IP	４		IP	２		IP	２		IP	４		IP
+浅見　　昌克	6.10	0.13	2.2	２		IP	１		IP	２	4	G1	Ｆ	4	IP	３		IP	５		IP	１		IP	１		IP	５		IP	４		IP
+高野　　哲史	6.40	0.13	3.0	３		IP	５		IP	２		IP	２		IP	２		IP	３		IP	６		G1	１		G1	３		G1	４		IP
+小野　　　桜	3.70	0.16	3.3	４		IP	４		IP	２		G3	４		G3	６		IP	６		IP	５		IP	３		IP	３		IP	６		IP
+今村　天次朗	2.22	0.17	3.2	４		IP	６		IP	欠		IP	４		IP	６		IP	４		IP	６		IP	転		IP	４		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+土屋　　　南	9.40	0.15	2.4	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	１		G3	１		IP	３		G1
+田中　　博子	2.90	0.26	4.8	４		IP	５		IP	４		IP	５		IP	６		IP	６		IP	６		IP	４		IP	３		IP	４		IP
+濱崎　寿里矢	2.70	0.19	3.7	６		IP	４		IP	４		G3	４		G3	６		IP	５		IP	４		IP	４		IP	５		IP	６		IP
+大瀧　明日香	7.40	0.15	2.0	３		IP	１		IP	１		IP	２		IP	３	5	IP	１		IP	６		IP	３		IP	３		IP	１		G3
+森　　　陽多	1.20	0.22	3.9	６	6	IP	６		IP	６	6	IP	６		IP	６		IP	６	6	IP	５		IP	転		IP	５		IP	５	6	IP
+植竹　　玲奈	2.10	0.28	5.1	６		IP	６		IP	５		IP	６		IP	４	4	IP	４		IP	６		IP	６		IP	４		IP	５		IP

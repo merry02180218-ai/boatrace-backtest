@@ -1,0 +1,8 @@
+data=
+1	0
+池上　　隆行	6.30	0.14	2.7	５		IP	１		IP	１		IP	３		IP	５		IP	２		IP	４		IP	６		IP	１		IP	１		IP
+加藤　　高史	4.40	0.23	4.0	５		IP	６		IP	６		IP	２		IP	４		IP	３		IP	３		IP	４		IP	４		IP	２		IP
+國崎　　良春	7.00	0.15	3.0	２		IP	２		IP	２		IP	２		IP	２		IP	３		G3	２		G3	４		IP	３		IP	３		IP
+安田　　政彦	4.80	0.28	4.7	３		IP	４		IP	３		IP	４		IP	１		IP	３		IP	５		IP	５		IP	４		IP	４		G3
+太田　　和美	6.20	0.16	2.9	１		IP	３		IP	２		IP	６		G1	４		G1	１		IP	５		G2	２		IP	４		IP	３		G3
+黄金井　力良	3.20	0.18	3.8	５		IP	２		IP	３	5	IP	５		IP	５	5	IP	６		IP	６		IP	４		IP	５		IP	４		IP

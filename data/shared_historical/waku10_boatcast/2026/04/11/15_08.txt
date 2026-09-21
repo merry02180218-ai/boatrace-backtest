@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　政彦	5.50	0.16	4.0	１		IP	１		IP	５		G1	１		IP	４		IP	２		IP	５		IP	４		IP	Ｆ		IP	４		IP
+大須賀　　友	6.70	0.20	2.9	Ｆ		IP	４		IP	２		IP	５		IP	１		IP	２		IP	１		IP	２		IP	３		IP	１		IP
+松山　　裕基	3.30	0.21	4.2	５		IP	Ｆ		IP	３		IP	５	2	IP	６		IP	４	4	IP	３		IP	５		IP	４		IP	３		IP
+坪口　　竜也	5.90	0.17	3.7	１		IP	３		IP	５		G3	４		G3	２		G3	３		IP	４		IP	６		IP	１		IP	２	5	IP
+田添　　康介	3.60	0.22	3.9	４		IP	４		IP	５		IP	３		IP	３		IP	４		IP	転		IP	５		IP	３		IP	５		IP
+須藤　　隆雄	2.70	0.20	4.1	転		IP	５		IP	４		IP	５	4	IP	５	5	IP	６	5	IP	５		IP	５		IP	３		IP	３		IP

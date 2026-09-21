@@ -1,0 +1,8 @@
+data=
+1	0
+渡部　　　悟	7.90	0.15	3.0	５		IP	６		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+天野　　晶夫	5.60	0.17	3.2	３		IP	４		G3	４		IP	３		IP	４		IP	２		IP	４		IP	３		IP	２		IP	３		IP
+松井　　友汰	5.40	0.16	3.9	５		IP	Ｆ		IP	５		IP	２		IP	３		IP	１		IP	４		IP	１		IP	２		IP	４		IP
+三嶌　こころ	3.00	0.26	5.1	６	6	IP	６		IP	４		IP	６		G3	６		G3	２		IP	６		IP	２		IP	６		IP	４		IP
+上之　　晃弘	2.50	0.16	3.6	６		IP	４		IP	６		IP	３		IP	３		IP	６		IP	５		IP	６	6	IP	５	6	IP	６		IP
+原村　　百那	1.11	0.16	3.5	６		IP	６		IP	６		IP	落		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP

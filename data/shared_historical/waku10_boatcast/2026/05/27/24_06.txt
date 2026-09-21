@@ -1,0 +1,8 @@
+data=
+1	0
+中嶋　　世奈	3.50	0.24	4.5	２		IP	６		IP	４		IP	６		G3																		IP
+安井　　瑞紀	6.60	0.17	3.5	４		IP	２		IP	２		G3	４		G3	２		IP	３		IP	２		IP	２		G3	１		G3	５		G3
+仁科　さやか	2.50	0.19	4.1	５		IP	６		IP	４		IP	６	4	IP	６	4	IP	６		IP	１		IP	５	4	IP	６		IP	５		IP
+大澤　　真菜	3.00	0.21	3.8	６		IP	６		IP	１		IP	４		IP	４		IP	５		G3	４		G3	６		G3	５		G3	６		G3
+津田　　裕絵	3.90	0.20	4.5	６		IP	６		IP	４		IP	３		IP	２		G3	５		G3	５		IP	６		IP	４		IP	１		IP
+嶋田　　有里	2.40	0.22	4.3	６		IP	３		IP	６		IP	６		IP	６		IP	４		IP	６		IP	４		IP	４		IP	６		IP

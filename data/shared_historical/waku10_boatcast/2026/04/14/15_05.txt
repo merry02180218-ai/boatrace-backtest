@@ -1,0 +1,8 @@
+data=
+1	0
+渡部　　　悟	7.90	0.15	2.9	１		IP	１		IP	５		IP	６		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP
+三好　　勇人	5.10	0.18	2.9	３		IP	４		IP	２		IP	５		IP	６		IP	２		IP	５		IP	２		IP	２		IP	４		IP
+古賀　　智之	4.80	0.15	3.3	３		IP	２		IP	４		IP	５		G2	２		G2	４		IP	５		IP	３		IP	転		IP	３		IP
+杉山　　喜一	4.20	0.14	3.2	４		IP	４		G3	２		G3	６		IP	３		G3	３		IP	６		IP	３		IP	４		IP	５		IP
+間庭　　菜摘	4.20	0.15	3.2	５	6	IP	５		IP	６		IP	５		IP	２		IP	５		G1	６		G1	２		G3	２		IP	３		IP
+北山　　康介	3.00	0.16	2.8	４		IP	４		IP	５		IP	６		IP	５	5	IP	５		IP	５		IP	４		IP	６		IP	２		IP

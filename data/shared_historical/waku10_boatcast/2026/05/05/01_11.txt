@@ -1,0 +1,8 @@
+data=
+1	0
+関　　　浩哉	9.90	0.13	3.2	１		IP	１		G1	２		G1	１		G1	４		SG	１		G1	１		G1	１		G1	２		G1	１		IP
+橋本　　久和	4.90	0.21	4.3	２		IP	４		IP	２		IP	６		G3	４		G3	５		IP	１		IP	３		IP	４		IP	５		IP
+塚越　　海斗	5.70	0.14	2.4	２	1	IP	２		IP	４		IP	６		IP	３		IP	３		IP	３		IP	３		IP	２		IP	４		IP
+金子　　猛志	5.30	0.17	4.0	１	5	IP	２		IP	６		IP	３		IP	４		IP	５		IP	４		IP	２		IP	３		IP	４		IP
+金子　　拓矢	7.40	0.12	2.7	３		IP	５		G1	３		IP	４		IP	２		IP	１		IP	１		IP	２	4	IP	１		IP	２		IP
+野村　　　誠	3.90	0.17	3.2	６		IP	１		IP	４	5	IP	３		IP	６		G3	６		G3	３		IP	４		IP	４	5	IP	５		IP

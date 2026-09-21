@@ -1,0 +1,8 @@
+data=
+1	0
+宮嵜　隆太郎	4.90	0.12	2.7	５		IP	６		IP	６		IP	１		IP	４		IP	５		IP	１		IP	２		IP	６	2	IP	１		G3
+吉永　　泰弘	5.10	0.17	3.6	４		IP	４		IP	４		IP	６		IP	１		IP	３		IP	２		IP	４		IP	５		G3	２		G3
+野口　　勝弘	7.11	0.15	2.8	２		G3	１		IP	２		IP	不		IP	１		IP	３		IP	５		IP	４		IP	３		IP	１		IP
+加木　　　郁	3.60	0.21	4.0	５	5	IP	３		IP	５		IP	１		IP	６		IP	５		IP	６		IP	２		IP	５		IP	５		IP
+大串　　重幸	3.00	0.18	4.2	３		G3	４		G3	５		IP	１		IP	５		IP	転		IP	５		IP	５		IP	６		IP	６		IP
+福岡　　泉水	2.40	0.16	2.8	６		G3	４		IP	４		IP	４		IP	５		IP	６		IP	５		IP	５		IP	５		G3	５		IP

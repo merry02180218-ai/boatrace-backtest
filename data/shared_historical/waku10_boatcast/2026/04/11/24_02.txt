@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　真広	7.90	0.15	3.3	１		IP	６		IP	５		IP	２		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+横川　　聖志	5.60	0.12	2.6	４		IP	５		IP	３		IP	４		IP	１	1	IP	２		IP	６		G1	１	3	IP	５		IP	２		IP
+尾崎　　雄二	5.10	0.16	2.9	２		IP	６		IP	６		IP	６		IP	２		IP	３		IP	２		IP	５		IP	２		IP	２		IP
+東　　　健介	3.40	0.18	3.7	１	2	IP	３		IP	５	3	IP	３		IP	４		IP	６		IP	５		IP	Ｆ		IP	５		IP	６	5	IP
+齋藤　　　勇	3.10	0.19	3.9	５		IP	５		IP	６		IP	５		IP	５		IP	５		IP	３		IP	４		IP	４		IP	３		IP
+小池　　公生	2.20	0.27	5.4	６		IP	４		IP	５	5	IP	４		IP	４		IP	５		IP	６		IP	５		IP	６		IP	６		IP

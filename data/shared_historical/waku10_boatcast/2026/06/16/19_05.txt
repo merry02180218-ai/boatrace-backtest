@@ -1,0 +1,8 @@
+data=
+1	0
+植田　　太一	8.10	0.13	2.1	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	６		IP	１		IP	５		IP	１		IP
+佐竹　　恒彦	7.20	0.16	3.3	３		IP	１		IP	２		G3	４		IP	２		IP	１		IP	１		IP	５		IP	１		IP	４		IP
+山崎　　　祥	5.00	0.19	3.8	１		IP	５		IP	５	4	IP	４		IP	５		IP	２	2	IP	５		IP	４		IP	１		IP	３		IP
+井上　　大輔	3.50	0.12	2.8	３		IP	５		IP	４		IP	５		IP	４		IP	３		IP	５		IP	５		G3	６		G3	３		IP
+吉川　　喜継	4.20	0.14	3.4	２		IP	３		IP	５		IP	２	4	IP	６	3	IP	３		IP	３		IP	５	4	IP	６	4	IP	５		IP
+藤森　　陸斗	3.20	0.20	4.2	３		IP	５		IP	４		IP	６		IP	６		IP	５		IP	４		IP	４		IP	４		IP	４		IP

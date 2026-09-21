@@ -1,0 +1,8 @@
+data=
+1	0
+新開　　　航	10.30	0.12	2.5	１		G1	２		G2	１		G2	１		IP	２		IP	１		G1	１		G1	１		G1	１		G1	１		IP
+松田　　憲幸	4.22	0.23	4.7	４		IP	５		IP	５		G3	６		G3	２		IP	２		IP	５		IP	１		IP	転		IP	６		IP
+青木　　玄太	7.00	0.14	2.9	２		G1	２		G3	３		IP	３		G1	５		G1	１		IP	２		G2	１		IP	３		G3	６		G1
+島崎　丈一朗	3.50	0.20	3.7	２		IP	３		IP	５		IP	６		IP	３		IP	６		IP	６		IP	５		IP	３		IP	５		IP
+椎名　　　豊	4.60	0.13	2.3	３		IP	６		IP	６		IP	２		IP	５		G1	６		IP	３		IP	３		G1	５		G1	１		IP
+藤森　　陸斗	3.30	0.16	2.9	４		IP	４		IP	４		IP	２		IP	５		IP	５		IP	６		G1	６		IP	４		IP	５		IP

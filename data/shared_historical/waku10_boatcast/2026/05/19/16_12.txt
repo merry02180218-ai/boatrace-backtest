@@ -1,0 +1,8 @@
+data=
+1	0
+茅原　　悠紀	11.20	0.09	2.5	１		G1	１		G1	１		G1	１		G1	１		SG	１		SG	１		G1	１		G1	１		G1	１		G1
+長尾　　章平	7.90	0.15	3.3	１		IP	２		IP	２		IP	２		IP	３		IP	２		IP	２		IP	１		IP	３		IP	４		IP
+平山　　智加	6.60	0.14	2.6	５		G2	４		G2	４		G3	２		G3	２		IP	３		IP	１		IP	２		IP	４		G1	２		G1
+永井　　彪也	7.00	0.12	1.9	２		G3	３		IP	３		G3	４		IP	１		IP	１		IP	５		G1	３		G1	２		G1	３		G1
+有賀　　達也	5.70	0.16	2.9	転		G1	５		G1	２		G1	２		IP	２		IP	３		IP	Ｆ		IP	３		G1	２		IP	２	4	IP
+井内　将太郎	4.50	0.16	3.2	３	5	IP	３		IP	５		IP	３		IP	３		IP	４	5	IP	３	5	IP	４		IP	６		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+栗原　　一馬	7.00	0.14	2.3	１		IP	６		IP	３		IP	１		IP	６		IP	３		IP	１		IP	１		IP	２		IP	２		IP
+田頭　　　実	5.70	0.12	2.1	４		IP	２		IP	４		IP	６		IP	２		IP	３		IP	５		IP	２		IP	１		IP	４		IP
+近藤　　友宝	6.60	0.16	2.9	４		IP	２		IP	１		IP	２		IP	３		IP	５		IP	３		IP	２		IP	３		IP	２		IP
+大場　　　敏	4.00	0.16	3.9	６		IP	５		IP	６		IP	４		IP	２		IP	３		IP	５		IP	３		IP	４		IP	４		IP
+後藤　　隼之	4.10	0.19	3.6	４		IP	３	4	IP	４	4	IP	４		IP	４	4	IP	２		IP	６		IP	３	4	IP	５		G3	５		IP
+柴田　　直哉	2.33	0.26	4.7	６		IP	５		IP	６		IP	欠		IP	２		IP	５		IP	６		IP	４		IP	５		IP	妨	5	IP

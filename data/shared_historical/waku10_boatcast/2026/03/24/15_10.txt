@@ -1,0 +1,8 @@
+data=
+1	0
+相原　　利章	7.70	0.11	2.7	１		IP	１		IP	３		IP	４		IP	２		IP	１		IP	２		IP	１		IP	６		IP	１		IP
+上條　　嘉嗣	5.30	0.21	4.0	２		IP	２		IP	５		IP	１		IP	４		IP	２		IP	５		IP	２	1	IP	５		IP	６		IP
+藤田　　靖弘	6.50	0.14	2.7	２		IP	３		IP	４		IP	３		G3	３		IP	１		IP	１		IP	２		IP	３		IP	６		IP
+庄司　　孝輔	6.30	0.20	3.7	１		IP	４		IP	１	5	IP	１		IP	４		G3	３	5	G3	５	5	IP	４		IP	２		IP	４		IP
+谷口　　知優	4.70	0.19	2.7	６		IP	２		IP	５		IP	３	6	IP	４		IP	３		IP	４		IP	４	4	IP	３		IP	３		G3
+山ノ内　雅人	3.80	0.16	3.7	５		IP	４		IP	３		IP	６		IP	２		IP	３		IP	３		IP	５		IP	５		IP	６		IP

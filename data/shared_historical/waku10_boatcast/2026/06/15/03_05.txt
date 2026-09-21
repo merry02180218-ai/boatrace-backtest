@@ -1,0 +1,8 @@
+data=
+1	0
+富永　夏哉人	8.00	0.18	3.2	３		IP	１		IP	２		IP	１		IP	２		IP	４		IP	３		IP	２		IP	１		G3	１		IP
+沼田　　大都	4.70	0.20	4.7	５		IP	４		IP	３		IP	５		IP	６		IP	３		IP	４		IP	４		IP	１		IP	２		IP
+城間　　盛渚	5.80	0.15	2.1	３		IP	３		IP	３		IP	３		IP	１		IP	６		IP	２		IP	１		IP	４		IP	６	4	IP
+有山　　　望	4.40	0.14	3.3	４		IP	４		IP	３		IP	６		IP	２		IP	４		IP	１		IP	５		IP	６		IP	４		IP
+仲道　　大輔	4.60	0.20	3.6	３		IP	６		IP	６		IP	２		IP	３		IP	５		IP	３		IP	３		IP	３		IP	５	2	IP
+高山　　弘斗	2.90	0.20	4.1	６		IP	５		IP	５		IP	４	5	IP	２	5	IP	６		IP	６		IP	５		IP	４		IP	４	5	IP

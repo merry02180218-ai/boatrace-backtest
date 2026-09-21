@@ -1,0 +1,8 @@
+data=
+1	0
+古結　　　宏	9.00	0.16	3.0	４		G1	３		G1	１		IP	１		IP	１		IP	１		IP	１		G1	エ		IP	２		IP	１		IP
+海老澤　泰行	4.40	0.18	3.4	４		IP	３		IP	３		IP	３		IP	４		IP	３		IP	４		IP	３	4	IP	６		IP	６		IP
+三苫　　晃幸	5.80	0.14	3.7	３		IP	２		IP	１		G3	４		IP	３		IP	５	5	IP	３		G3	５		G3	３		G3	２		IP
+抹香　　雄三	4.30	0.15	2.4	４		IP	４		IP	３		IP	５		IP	３		IP	Ｆ		IP	４		IP	６		IP	１		IP	３		IP
+上田　　隆章	2.89	0.26	5.2	２		IP	４		IP	落		IP	４		IP	５		IP	６		IP	６	6	IP	６		IP	６		IP	４		IP
+佐藤　　駿介	1.50	0.21	4.4	５		IP	６	5	IP	５		IP	６		IP	６		IP	５	5	IP	５		IP	６	5	IP	５		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+門田　　　栞	6.70	0.19	4.1	４		G3	１		IP	１		IP	１		IP	３		IP	３		IP	６		IP	２		IP	２		IP	４		IP
+橋谷田　佳織	3.90	0.24	5.6	２		G3	３		G3	３		G3	６		G3	３		IP	６		G3	６		G3	３		G3	５		G3	５		G3
+平山　　智加	8.00	0.15	2.5	２		IP	３		IP	１		IP	２		IP	４		G1	２		G1	３		IP	１		IP	２		IP	１		G3
+宇野　　弥生	4.00	0.11	1.8	４		G3	４		G3	５		IP	１		IP	６		IP	４		IP	１		IP	６	6	G1	６	6	G1	６		IP
+樋口　由加里	2.90	0.15	2.7	６		IP	５		IP	６		IP	５		IP	１		IP	４		IP	５		IP	５		G1	５		G1	６		IP
+菅野　はやか	2.20	0.23	4.8	５		IP	６		IP	６		IP	６		G3	５	5	IP	６		IP	６		IP	２	5	IP	６		IP	４		G3

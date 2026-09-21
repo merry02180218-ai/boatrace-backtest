@@ -1,0 +1,8 @@
+data=
+1	0
+八木　　治樹	6.40	0.17	3.3	３		IP	４		IP	１		IP	２		IP	１		IP	６		IP	１		G3	４		IP	１		IP	６		G3
+南野　　利騰	3.50	0.16	3.0	５		IP	４		IP	５		IP	３		IP	４		IP	４		IP	５		IP	３		IP	６		IP	４		IP
+麻生　　慎介	6.50	0.15	2.7	６		IP	３		G1	１		IP	２		IP	３	4	IP	１		IP	３		IP	３		IP	１		IP	転		IP
+豊田　　泰洋	4.11	0.20	4.6	３		IP	４		IP	４		IP	５		IP	６		IP	４		IP	転		IP	３		IP	３		IP	４		IP
+荻野　　裕介	4.20	0.22	4.3	４		IP	５		G3	３		IP	４		IP	２	6	IP	５	6	IP	３		IP	５		IP	５	6	IP	３		IP
+杉村　　賢也	3.33	0.19	3.2	Ｆ		IP	５		IP	４		IP	３		IP	５		IP	欠		G3	４		IP	５		IP	３	5	IP	４	5	IP

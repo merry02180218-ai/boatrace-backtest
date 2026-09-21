@@ -1,0 +1,8 @@
+data=
+1	0
+菊池　　峰晴	5.90	0.24	4.4	転		IP	１		IP	３		IP	２	4	IP	６		IP	３	2	IP	２		IP	４		IP	２		IP	２		IP
+谷本　　幸司	4.00	0.15	2.9	５		IP	６		IP	６	3	IP	４		IP	５		IP	１		IP	５		IP	４		IP	２		IP	３		IP
+出畑　　孝典	6.30	0.17	3.7	４		IP	１		IP	２		IP	２		IP	３		IP	２		IP	３		IP	３		IP	３		IP	６		IP
+上平　　真二	6.00	0.17	4.4	４		IP	３		IP	３		IP	５		G1	３		G1	３		IP	３		IP	２		IP	１	3	IP	４		IP
+泉　　　啓文	3.10	0.17	4.4	５		IP	６		IP	５		IP	６		IP	４		IP	５	6	IP	６	6	IP	２		IP	２		IP	５		IP
+江本　　真治	4.80	0.17	3.0	５		G3	４		G3	２	5	IP	４		IP	６		IP	６		IP	４		G3	２		G3	１		IP	３		IP

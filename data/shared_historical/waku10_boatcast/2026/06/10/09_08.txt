@@ -1,0 +1,8 @@
+data=
+1	0
+今出　　晋二	5.00	0.18	4.4	３		IP	４		IP	４		IP	４		IP	４		IP	２		IP	１		IP	Ｆ		IP	５		IP	２		IP
+郷原　　章平	7.30	0.11	2.5	１		IP	１		IP	５		IP	５		IP	１		IP	４		IP	３		IP	１		IP	２		IP	１		IP
+北中　　元樹	5.60	0.14	2.6	３		IP	２		IP	２		IP	５		IP	４		IP	転	4	IP	２		IP	２		IP	４		IP	２		IP
+小林　　甘寧	6.10	0.13	2.2	４		IP	３		IP	２		IP	２		IP	４		IP	３	5	IP	１		IP	４		IP	６		IP	１	5	IP
+村本　　大成	2.44	0.19	4.0	６		IP	６		IP	４		IP	６	6	IP	５		IP	５		IP	６		IP	欠		IP	５		IP	２		IP
+向後　　龍一	3.50	0.17	3.7	６		G2	５		G2	３	5	IP	４		IP	３	5	IP	４		IP	４		IP	６		G3	４		G3	６	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+堀之内紀代子	7.40	0.18	3.3	妨		IP	５		IP	１		IP	１		G3	１		G3	１		G3	１		G3	１		G1	Ｆ		G3	１		IP
+村上　　奈穂	6.10	0.12	2.8	３		IP	３		IP	２		IP	５		IP	１		IP	２		IP	４		IP	６		IP	２		IP	２		IP
+樋江井　　舞	4.22	0.14	2.8	６		IP	４		IP	３		IP	６	4	IP	欠		IP	４		IP	２		IP	２		IP	５		IP	４		IP
+岩崎　　芳美	6.30	0.15	2.1	２	5	IP	４		IP	３		IP	５		IP	３		G3	１		G1	４		G1	３		G1	１		G3	４		G3
+土屋　　　蘭	3.40	0.12	2.5	４		IP	４		IP	４		IP	４		IP	６		IP	５		IP	６		IP	１	4	IP	５		IP	５		IP
+大豆生田　蒼	3.10	0.22	4.4	６		IP	２		IP	５		IP	４		G1	５		G3	６		G3	４		G3	５		IP	５		IP	５		IP

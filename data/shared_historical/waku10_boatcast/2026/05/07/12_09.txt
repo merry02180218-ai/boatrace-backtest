@@ -1,0 +1,8 @@
+data=
+1	0
+小池　　修平	8.70	0.12	2.8	１		IP	１		IP	１		IP	１		IP	１		IP	５		G1	１		G1	６		SG	２		G1	１		IP
+上田　　龍星	6.50	0.10	3.0	１		IP	３		IP	２		G1	３		G1	６		G1	６		SG	２		IP	５		G1	１		G2	３		IP
+竹間　　隆晟	6.80	0.13	2.8	４		IP	３		IP	２		IP	５		G1	１		G1	２		IP	３		IP	２		IP	２		IP	３		IP
+澁川　　　夏	5.00	0.15	3.4	３		IP	６		IP	３		IP	３		IP	３		IP	３		IP	２		IP	６		IP	４		IP	３		IP
+湯川　　浩司	5.40	0.12	2.4	３		IP	５		G1	４	2	G1	６		G1	２		G2	４		G2	２	4	IP	３		G1	５		G1	４		G1
+北村　　征嗣	4.20	0.15	4.7	５		IP	６		G1	５		IP	５	5	IP	３		G3	３		IP	３		IP	２	5	IP	４		G1	６		IP

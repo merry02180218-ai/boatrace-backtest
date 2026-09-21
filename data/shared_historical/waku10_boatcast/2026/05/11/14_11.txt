@@ -1,0 +1,8 @@
+data=
+1	0
+林　　　美憲	7.90	0.15	3.6	１		IP	２		G1	２		G1	５		IP	２		IP	２		IP	２		IP	１		IP	１		IP	４		G1
+中岡　　正彦	5.80	0.17	4.4	３		IP	６		SG	４		IP	６		IP	２		IP	１		IP	４		IP	２		IP	４		G1	４		G1
+西岡　　蒼志	6.90	0.14	2.9	６		IP	５	2	IP	１		IP	３		IP	２		IP	２		IP	４		IP	１		IP	１		IP	１		IP
+岩津　　徹郎	5.50	0.17	3.1	１		IP	４		IP	３		IP	４		IP	３		IP	２		IP	３		IP	５		IP	４		IP	４	5	IP
+菅　　　章哉	6.30	0.13	2.4	３	6	IP	６		G1	６	6	SG	２		IP	１	6	G1	６		G1	１		IP	２	6	G1	６	6	G1	１		IP
+三好　　勇人	4.80	0.24	4.6	１	4	IP	３	5	IP	５		IP	６	5	IP	４		IP	６		IP	２		IP	４		IP	３		IP	３		IP

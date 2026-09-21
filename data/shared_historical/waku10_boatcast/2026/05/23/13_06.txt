@@ -1,0 +1,8 @@
+data=
+1	0
+中野　　希一	9.10	0.12	2.5	１		IP	１		IP	４		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+網代　　良芽	5.20	0.13	2.4	２		IP	４		IP	６		IP	１	3	IP	２		IP	６		IP	４		IP	３		IP	４		IP	３		IP
+一色　　颯輝	5.50	0.16	3.4	４		IP	２		IP	４		IP	２		IP	２		IP	２		IP	６		IP	２		IP	５		IP	４		IP
+長谷川　晴哉	5.20	0.15	3.2	３		IP	４		IP	５		IP	１	5	IP	３		IP	４		IP	３		IP	４		IP	３		IP	４		IP
+中村　　　楓	3.00	0.12	2.1	３		IP	５		IP	５		IP	６	6	IP	４	6	IP	５		IP	３	6	IP	６	6	IP	４		IP	５	6	IP
+鐘ヶ江　真司	4.10	0.20	4.2	３	5	IP	３		IP	４		IP	４		IP	５		IP	４		IP	６		G2	６		G2	１		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+眞田　　英二	8.40	0.19	3.3	１		IP	２		IP	１		IP	２		IP	１		IP	３		IP	３		G3	１		IP	１		IP	３		IP
+伊藤　　啓三	6.60	0.18	3.4	１		IP	５		IP	１		IP	５		IP	４		IP	１		IP	５		IP	１		IP	２		IP	２		IP
+安河内鈴之介	4.80	0.13	2.5	４		IP	２		IP	２		IP	１		IP	６		G2	６		IP	５		IP	１		IP	５		G1	妨	2	IP
+齊藤　　大将	2.80	0.17	3.4	６		IP	６		IP	４		IP	４	5	IP	６		IP	５		IP	５		IP	３		IP	３		IP	６		IP
+高倉　　和士	4.70	0.12	2.6	３		IP	２		IP	６	6	G1	５		IP	２		IP	４		IP	３		IP	５	6	G1	４		IP	４		IP
+五反田　　忍	3.60	0.19	3.0	６		G3	欠		IP	１		IP	５		IP	６		IP	６		IP	２		IP	２		IP	６	5	IP	４		IP

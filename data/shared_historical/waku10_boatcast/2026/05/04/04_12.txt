@@ -1,0 +1,8 @@
+data=
+1	0
+宮之原　輝紀	11.10	0.13	2.2	１		G1	１		G1	１		SG	１		SG	１		G1	１		G1	１		G1	１		G1	１		G1	１		IP
+栗原　　直也	4.60	0.18	4.2	３		IP	５		IP	５		IP	５		IP	４	3	IP	３		IP	２		IP	５		IP	１		IP	４		IP
+高橋　　英之	5.00	0.12	2.0	６		IP	転		IP	２	2	IP	２		IP	４		IP	４		IP	２		IP	１		IP	Ｆ		IP	５		IP
+阿波　　勝哉	4.90	0.18	3.9	３		IP	６	6	IP	１	6	IP	５	6	IP	２		IP	４		IP	１	6	IP	４		IP	５	6	IP	５	3	IP
+尾上　　雅也	5.10	0.15	3.7	６		G3	２		G3	５		IP	６		IP	２		IP	４		IP	１		IP	５		IP	２		IP	４		G1
+小倉　　康典	3.00	0.17	4.1	６		IP	５		IP	３		IP	２		IP	５		IP	４		IP	５		IP	５		IP	５		IP	６		IP

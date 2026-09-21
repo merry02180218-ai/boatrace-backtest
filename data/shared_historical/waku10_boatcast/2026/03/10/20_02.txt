@@ -1,0 +1,8 @@
+data=
+1	0
+木村　　光宏	6.60	0.15	2.2	６		IP	２		IP	４		IP	３		IP	１		IP	２		IP	１		IP	６		IP	１		IP	２		IP
+岡村　　慶太	6.60	0.11	3.2	２		IP	２		IP	１		IP	６		G1	３		G1	３		IP	４	3	IP	２		IP	３		IP	３		IP
+寺本　　重宣	8.33	0.15	3.5	１		IP	２		IP	３		IP	２		IP	２		G3	２	2	G3	１		IP	転		IP	２		IP	２		IP
+滝沢　　芳行	6.80	0.12	2.3	１		IP	２		IP	３		IP	２		IP	１		IP	２		IP	４		IP	２		IP	５		IP	４		IP
+木場　　悠介	4.20	0.16	3.7	３		IP	２		IP	４		IP	５		IP	５		IP	５		IP	５		IP	３		IP	５		IP	２	4	IP
+原田　　秀弥	4.00	0.19	5.2	５		IP	４		IP	６		IP	４	5	IP	５		IP	２	5	IP	１		IP	４		IP	４		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+松崎　祐太郎	7.70	0.14	2.1	１		IP	２		IP	１		IP	１		IP	３		IP	５		IP	１		IP	１		IP	１		IP	６		IP
+西野　　翔太	5.10	0.15	2.8	２		IP	４		IP	４		G3	４		IP	２	3	IP	２	3	IP	３		IP	４		IP	４		IP	６		IP
+若狭　奈美子	5.40	0.17	3.3	３		IP	５		IP	４		G3	２		IP	３		IP	３		IP	１		IP	５		IP	４		IP	４		IP
+森定　　晃史	7.00	0.17	3.1	２		IP	２		IP	３		IP	３		IP	２		IP	１		IP	４		IP	２		IP	４		IP	２		IP
+花本　　夏樹	1.90	0.22	5.4	６		IP	６		IP	４		IP	５		IP	６		IP	６		IP	６		IP	６		IP	３		IP	６		IP
+石塚　　久也	4.10	0.19	4.2	４		IP	３		IP	５		IP	４	5	IP	３		IP	６		IP	５		IP	３		IP	３		IP	５		IP

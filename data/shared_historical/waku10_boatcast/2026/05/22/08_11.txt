@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　和之	7.00	0.14	2.7	４		IP	１		IP	３		IP	１		G3	１		G3	６		IP	６		IP	２		IP	１		IP	１		IP
+前原　　大道	7.40	0.17	3.2	４		IP	２		IP	４		IP	２		G1	２		IP	３		IP	１		IP	３		IP	１		IP	２		IP
+高野　　心吾	4.50	0.16	3.4	２		IP	６		IP	３		IP	３		IP	１		IP	２		IP	５	2	IP	６		IP	５		IP	６		IP
+深山　　祐二	4.40	0.14	3.2	６		IP	５		IP	３		IP	６		IP	２		IP	１		IP	３		IP	５	6	IP	４		IP	４		IP
+楠原　　翔太	4.20	0.17	3.5	３		IP	４		IP	３		IP	６		G3	５		IP	３		IP	３		IP	３		IP	４		IP	６		IP
+常盤　　海心	2.80	0.21	4.9	３		IP	６		IP	６		IP	３		IP	６		IP	２	5	IP	６		IP	５		IP	落		IP	５		IP

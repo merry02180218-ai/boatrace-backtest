@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　守成	6.70	0.21	4.4	２		IP	６		IP	１		IP	１		IP	１		IP	５		IP	４		IP	１		IP	１		IP	５		IP
+北山　　康介	5.90	0.17	3.6	３		IP	６	3	IP	３		IP	４		IP	４		IP	２		IP	２		IP	３		IP	１		IP	４		SG
+渡辺　　空依	5.50	0.18	2.3	２		IP	３		IP	４		IP	３		IP	５		IP	４		IP	３		IP	２		IP	６		IP	１		IP
+上野　真之介	6.80	0.12	2.2	１		IP	５		IP	６		IP	２		IP	２		G1	１		IP	２		G2	５		G2	４		G2	２		G1
+中里　　英夫	3.50	0.20	4.0	６		IP	５		IP	２		IP	６		IP	６		IP	５		IP	３		IP	４		IP	２		IP	５		IP
+龍田　　真白	2.80	0.15	3.0	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP	２		IP	４		IP	３		IP	５		IP

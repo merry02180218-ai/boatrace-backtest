@@ -1,0 +1,8 @@
+data=
+1	0
+鎌倉　　　涼	9.20	0.12	2.4	１		IP	１		G2	１		G2	６		G1	１		SG	１		G3	３		G3	２		G3	１		G1	１		G1
+後藤　　　浩	4.70	0.21	4.6	２		IP	５		IP	１		IP	４	3	IP	４		IP	３		IP	６		IP	５		IP	２		IP	５		IP
+池田　奈津美	3.78	0.13	2.3	３		IP	２		IP	転		IP	４		IP	６		G3	５		G3	３		IP	４		IP	６		IP	５		IP
+高山　　智至	4.60	0.21	3.8	２		IP	４		IP	３		IP	３		IP	４		IP	５		IP	４		IP	４		IP	３		IP	５		IP
+抹香　　雄三	5.20	0.17	3.1	５		IP	３		IP	３		IP	４		IP	４		IP	３		IP	４		IP	４	4	IP	２		IP	２		IP
+吉村　　　誠	3.70	0.10	2.0	Ｆ		IP	５		IP	５		IP	３		IP	４		IP	２		IP	２	5	IP	６		G3	５		G3	４		G3

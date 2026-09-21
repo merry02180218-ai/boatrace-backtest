@@ -1,0 +1,8 @@
+data=
+1	0
+栗城　　　匠	8.90	0.12	3.5	２		IP	１		G1	１		IP	１		IP	２		IP	２		IP	３		IP	２		G1	２		IP	１		G1
+田中　　　豪	5.60	0.15	2.4	３		IP	５		IP	４		IP	１		IP	４		IP	２		IP	３		IP	転		IP	３		IP	２		IP
+福来　　　剛	6.60	0.11	1.8	３	4	IP	１		IP	４		IP	３		IP	２		IP	２		IP	５		G1	２		G1	２		IP	４		IP
+塚田　　修二	2.44	0.22	4.3	６		IP	５		IP	４		IP	５		IP	６		IP	３		IP	６		IP	欠		IP	６		IP	４		IP
+後藤　　隼之	4.30	0.15	3.3	６		IP	５		IP	４	4	IP	２		IP	３		IP	４		IP	３	4	IP	４	4	IP	４		IP	４	4	IP
+阿部　　未侑	1.10	0.34	5.5	６		IP	６		IP	５	5	IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

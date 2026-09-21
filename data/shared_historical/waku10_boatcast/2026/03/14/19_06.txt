@@ -1,0 +1,8 @@
+data=
+1	0
+河合　　佑樹	7.90	0.13	2.4	１		G1	１		G1	１		G1	Ｆ		G1	１		G1	１		IP	５		IP	６		G1	１		IP	１		IP
+深見　亜由美	5.50	0.22	4.4	２		IP	３		IP	５		IP	４		IP	２		IP	２		IP	１		IP	３		IP	６		IP	５		G3
+大井　　清貴	3.80	0.21	4.2	３		IP	５		IP	４		IP	５		IP	Ｆ		IP	３		IP	５		G3	３		IP	３		IP	４		IP
+葛原　　大陽	3.50	0.16	4.3	５		G1	５		G1	６		IP	３		IP	６		IP	４	3	G1	６		IP	３		IP	３		IP	６		IP
+谷口　　健一	3.10	0.20	3.7	５		IP	３	6	IP	５		IP	５		IP	３	4	IP	６		IP	４		IP	４		IP	転		IP	４		IP
+松本　　一毅	2.40	0.19	3.3	６		IP	５		IP	４		IP	４		IP	６		IP	５		IP	５		G3	６		IP	６		IP	３	5	IP

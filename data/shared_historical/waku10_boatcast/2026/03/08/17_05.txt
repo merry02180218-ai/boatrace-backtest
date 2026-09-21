@@ -1,0 +1,8 @@
+data=
+1	0
+新田　　泰章	10.30	0.12	2.3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1	１		IP	１		IP	１		IP
+金子　　順一	2.80	0.17	3.9	５	1	IP	３	1	IP	５		IP	５		IP	６		IP	６		IP	３		IP	５		IP	４	3	IP	５		IP
+鈴木　　裕隆	5.20	0.17	3.7	３		IP	４		IP	５		IP	３		IP	４		IP	３		IP	３		IP	１		IP	３		IP	５	4	G3
+村田　　修次	4.00	0.15	3.8	エ	3	IP	３		IP	３		IP	４		IP	４		IP	４		G2	６		G2	３	5	IP	６		IP	５		IP
+仲道　　大輔	6.22	0.18	3.5	５	2	IP	１		IP	３		IP	３		IP	転		IP	３		IP	３		IP	１		IP	５		IP	３		IP
+上田　　隆章	2.70	0.21	5.1	６		IP	３		IP	５		IP	５		IP	４		IP	５		IP	４	5	IP	４		IP	６		IP	６		IP

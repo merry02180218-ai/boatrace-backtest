@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　一輝	8.90	0.13	1.9	１		IP	１		IP	１		IP	４		G1	１		G1	１		G1	１		G1	２		G1	１		IP	５		IP
+松井　　賢治	7.20	0.15	3.2	２		IP	２		IP	２		IP	４		IP	１		IP	２		IP	４		IP	３		IP	２		IP	２		IP
+三好　　勇人	7.20	0.14	2.4	１	4	IP	２		IP	１	2	IP	３		IP	１		IP	３		IP	４	4	IP	２		IP	３		IP	４		IP
+松尾　　　充	5.00	0.14	4.1	１	5	IP	３		IP	４	5	IP	４		IP	２		IP	４		G1	６		G1	２		IP	５	3	IP	６		IP
+立間　　充宏	5.80	0.19	3.3	５		IP	４		IP	１		IP	３		IP	１		IP	５		IP	４		IP	５		IP	１		IP	２		IP
+石川　　　諒	4.00	0.13	2.4	３		IP	５		IP	５		IP	６		IP	３		IP	２	5	IP	６		IP	３		IP	５		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　貴博	7.70	0.12	2.3	１		IP	３		IP	２		IP	６		IP	１		IP	１		IP	４		IP	２		IP	１		IP	１		IP
+荻野　　裕介	6.00	0.21	4.5	２		IP	５		IP	６		G3	２		IP	２		IP	６		IP	１		IP	１		IP	３		IP	３		IP
+鈴木　　雅希	6.60	0.15	3.8	２		IP	２		IP	２		IP	１		IP	２		IP	３		IP	３		IP	６		IP	１		IP	６	4	IP
+若林　　樹蘭	4.80	0.17	3.0	２		IP	５		IP	４	5	IP	４		IP	１		IP	３		IP	Ｆ		IP	３		IP	３		IP	５		IP
+福来　　　剛	4.30	0.12	2.1	４		IP	２		IP	５		G1	３		G1	転		IP	１		IP	６		IP	５		IP	６		IP	４		G1
+杉村　　賢也	2.00	0.22	4.3	６		IP	５		IP	Ｆ		IP	６		IP	Ｆ		IP	５		IP	４		IP	３		IP	５		IP	欠		G3

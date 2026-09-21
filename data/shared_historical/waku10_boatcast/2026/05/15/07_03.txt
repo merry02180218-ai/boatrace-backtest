@@ -1,0 +1,8 @@
+data=
+1	0
+飯塚　　　響	3.33	0.21	4.7	１		IP	Ｆ		IP	５		G3	１		IP	６		IP	６		IP	５		IP	５		IP	５		G3	転		IP
+豊田　　　結	5.70	0.14	3.6	３		G3	２		G3	６		IP	２		IP	１		G3	２		G3	３	4	IP	５		IP	５		IP	３		IP
+寺島　　美里	5.30	0.12	2.6	５		IP	５		IP	２		IP	３		G1	３		IP	４		IP	２		G3	２		G3	４		IP	４		IP
+井澤　　聖奈	1.90	0.26	5.1	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP	５	3	IP	４		IP	６		IP	５		IP
+安井　　瑞紀	6.60	0.17	3.3	４		G3	２		G3	５		IP	３		IP	２		IP	１		G3	１	4	G3	３		IP	１		IP	６		G1
+出口　舞有子	2.30	0.17	3.3	４		IP	６		G3	６	5	IP	６		IP	３		IP	６		IP	４		IP	６		IP	５		IP	５		G3

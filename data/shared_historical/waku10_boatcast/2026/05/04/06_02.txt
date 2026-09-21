@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　秀茉	7.90	0.12	2.5	２		IP	１		IP	３		IP	３		G3	２		IP	３		IP	２		IP	２		IP	２		IP	１		IP
+庄司　　孝輔	5.60	0.23	3.7	２		IP	４		G3	４		IP	２		IP	５		G3	２		IP	２		IP	５		IP	３		IP	３		IP
+横澤　　剛治	6.40	0.17	3.3	１		IP	２		IP	５		IP	３		IP	２		IP	３		G1	３	2	G1	１		IP	４		IP	５		IP
+伊藤　　将吉	4.20	0.17	3.6	６	5	G1	６	5	G1	２		IP	５	3	IP	Ｆ		IP	１		IP	４		IP	３		IP	３		IP	６		G1
+金子　　　萌	5.90	0.12	3.0	３		IP	６	4	IP	２		IP	３		IP	３		IP	４		IP	２		IP	２		IP	４	6	IP	３		IP
+渡邉　　英児	4.90	0.17	3.5	３		IP	３	4	IP	４		IP	５	5	IP	４		IP	３		IP	３	5	IP	２	5	IP	３	5	IP	６	4	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+藤原　　孝斗	7.30	0.17	3.3	２		IP	５		IP	１		IP	２		IP	６		IP	１		IP	１		IP	３		IP	１		IP	２		IP
+前野　　竜一	6.56	0.12	2.5	２		IP	２		IP	３		IP	３	3	IP	４		IP	転		IP	３		IP	５	3	IP	１		IP	２		IP
+興津　　　藍	6.10	0.14	3.2	３		IP	４		IP	２		IP	２		IP	６		IP	５		IP	２		IP	２		IP	１		IP	３		IP
+森口　　和紀	4.00	0.16	2.8	３		IP	６		IP	２		IP	２		IP	６		IP	４		IP	４		IP	３		IP	転	3	IP	５		IP
+竹腰　　正樹	4.00	0.16	2.6	６		IP	３		IP	３		IP	２		IP	５		IP	６		IP	４		IP	２		IP	Ｆ		IP	４		IP
+石川　　　諒	4.20	0.11	1.8	３	5	IP	５		IP	２		IP	６		IP	３		IP	５		IP	５		IP	６		IP	３		IP	２	5	IP

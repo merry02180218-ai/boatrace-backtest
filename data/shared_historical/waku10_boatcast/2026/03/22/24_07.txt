@@ -1,0 +1,8 @@
+data=
+1	0
+石田　　章央	8.60	0.17	2.3	１		IP	２		IP	１		IP	３		IP	１		IP	４		IP	１		IP	１		IP	１		IP	２		IP
+畑　　　和宏	7.00	0.14	2.7	２		IP	３		IP	４		IP	３		IP	３		IP	４		IP	１		IP	２		IP	１		IP	２		IP
+松尾　　　祭	7.30	0.18	2.7	４		IP	３		IP	２		IP	１		IP	５		IP	１		G1	１		IP	２		IP	４		IP	１		IP
+高木　　圭大	3.30	0.14	3.1	３		IP	４		IP	６		IP	４		IP	４		IP	２		IP	５		IP	転		IP	５		IP	５		IP
+吉川　　颯汰	1.10	0.18	4.6	６	6	IP	６	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP
+橋本　　英一	2.50	0.18	4.0	５		IP	６		IP	６		IP	５		IP	４		IP	５		IP	３		IP	５		IP	６		IP	４		IP

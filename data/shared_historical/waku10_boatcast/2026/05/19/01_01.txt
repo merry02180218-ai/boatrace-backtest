@@ -1,0 +1,8 @@
+data=
+1	0
+今泉　　　徹	4.60	0.20	3.5	２		IP	５		IP	１		IP	５		IP	３		IP	４		IP	５		IP	２		IP	５		IP	５		IP
+小澤　　和也	4.67	0.15	3.3	２		IP	３		IP	４		IP	５		IP	４		IP	２		IP	５		IP	転		IP	５		IP	３		IP
+山本　　英志	6.40	0.14	2.8	３		IP	１		IP	４		IP	１		IP	３		IP	５		IP	３		IP	３		IP	２		IP	３		IP
+森　　晋太郎	4.20	0.12	1.9	４		IP	６		IP	３	5	IP	６		IP	５		IP	５		IP	１		IP	３		IP	２		IP	５		IP
+後藤　　正宗	6.80	0.15	2.2	３		IP	２		IP	２		IP	２		IP	５		IP	１		G3	４		IP	３		IP	３		IP	１		IP
+鈴木　　茂高	2.70	0.26	5.7	６		IP	５		IP	６		IP	３		IP	５		IP	６	5	IP	３		IP	５		G3	４		G3	５		IP

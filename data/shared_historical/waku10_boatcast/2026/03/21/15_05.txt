@@ -1,0 +1,8 @@
+data=
+1	0
+庄司　　孝輔	7.60	0.16	3.5	１		IP	４		G3	１		IP	３		IP	１		IP	３		IP	１		IP	２		IP	３		IP	３		IP
+安田　　政彦	4.70	0.21	4.6	５		IP	３	3	IP	３		IP	６		IP	４		IP	３		IP	４		IP	４		IP	２		IP	３		IP
+原田　　篤志	7.10	0.18	3.0	２		IP	２		G1	３		IP	３		IP	２		IP	２		IP	３		G1	３		G1	２		G1	６		IP
+村上　　　遼	6.70	0.14	2.5	６		G1	２		G1	２		IP	３		IP	２		IP	１		IP	３		IP	２		IP	２		IP	５		IP
+原田　　雄次	4.50	0.24	4.9	４		IP	２		IP	４	4	IP	３		IP	５	6	IP	４		IP	６		IP	５		IP	１		IP	４		IP
+齋藤　　智裕	2.70	0.19	4.4	５		IP	６		IP	５	5	IP	５		IP	５		IP	３		IP	４		IP	５		IP	５		IP	４		IP

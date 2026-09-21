@@ -1,0 +1,8 @@
+data=
+1	0
+森下　　愛梨	5.78	0.21	4.3	１		IP	５	2	IP	５		IP	１		IP	転	2	IP	１		IP	Ｆ		G3	１		IP	４		IP	４		IP
+野長瀬　正孝	6.20	0.17	3.3	１		IP	４		IP	４		IP	２		IP	３		IP	１	3	IP	２		IP	３		IP	４		IP	５		IP
+花本　　　剛	4.20	0.19	3.3	５		IP	５		IP	３		IP	３		IP	６		IP	１		IP	６		IP	５	4	IP	３		IP	３		IP
+山本　　寛久	7.20	0.13	2.5	２		IP	２		IP	３		IP	２		IP	２		IP	３		IP	３		IP	２		IP	２		IP	３		G3
+立間　　充宏	5.00	0.18	4.0	４		IP	４		IP	３	6	IP	４		IP	４		IP	３		IP	５		IP	４		IP	１		IP	３		IP
+大西　　　賢	3.11	0.28	4.9	４		IP	４		IP	転		IP	６		IP	４		IP	６		IP	３		IP	３		IP	６		IP	６		IP

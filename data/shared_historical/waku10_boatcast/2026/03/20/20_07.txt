@@ -1,0 +1,8 @@
+data=
+1	0
+村田　　修次	9.40	0.17	2.9	３		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+三嶌　こころ	5.10	0.19	4.8	２		G3	３		G3	６		IP	２		IP	３		IP	５		G3	４		IP	４		IP	２		G3	４	3	G3
+椎名　　　豊	6.40	0.17	4.0	２		G1	４		IP	４		IP	５		G1	２		G1	３		IP	３	4	IP	４	4	IP	２		G1	１		IP
+大久保信一郎	7.20	0.19	3.7	６		IP	３		IP	２		IP	１		IP	３		IP	３		IP	１		IP	３		IP	２		IP	１		IP
+池田　　美優	1.10	0.26	4.9	６	6	IP	６	6	IP	５	6	IP	５	6	IP	６	6	IP	６	6	IP	Ｆ	6	IP	６	6	IP	６	6	IP	６	6	IP
+小池　　公生	2.20	0.25	5.3	４		IP	４		IP	５		IP	６		IP	５		IP	６		IP	６		IP	６		G3	４		IP	５		IP

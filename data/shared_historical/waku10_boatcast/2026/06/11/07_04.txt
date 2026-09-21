@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　竜一	7.70	0.15	1.9	１		IP	４		IP	１		IP	１		IP	１		IP	２		IP	１		IP	４		IP	６	2	IP	１		IP
+河合　　三弘	5.90	0.20	4.1	６		IP	５		IP	１	3	IP	２		IP	２		IP	３		G3	３		G3	１		IP	４		IP	４		IP
+峰重　　侑治	6.00	0.21	3.5	５		IP	３		IP	３		IP	２		IP	４		IP	落		IP	３		IP	３		IP	１		IP	３	4	IP
+倉持　　莉々	7.90	0.13	2.5	２		G3	１		IP	３		IP	４	3	G2	１		IP	３		IP	２		IP	２		IP	２		IP	１		IP
+都築　　正治	6.60	0.15	2.6	１	4	IP	４		IP	５		IP	１		IP	２		IP	３	4	IP	２	4	IP	３	3	IP	３		IP	３		IP
+赤澤　　文香	3.20	0.22	5.0	３		IP	５		IP	５		G3	５		IP	５		IP	４		IP	３	5	IP	３		G3	６		G3	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+菅野　はやか	4.70	0.21	4.2	３		IP	５	4	IP	２		G3	４		G3	５		G3	３		IP	４		IP	１		IP	４		IP	６		IP
+村松　　修二	5.70	0.14	2.9	１		IP	３		IP	６		IP	５		IP	２		IP	４		IP	２		G2	６		IP	３	3	IP	１		IP
+嶋　　　義信	6.90	0.15	2.4	６		IP	５		G3	４		G3	１	4	IP	２		IP	２	4	IP	２		IP	１		IP	２		IP	１		IP
+庄司　　孝輔	5.20	0.17	3.2	１		IP	１		IP	５		IP	３		IP	４	5	IP	５		IP	２	2	IP	３	3	IP	５		IP	５		G3
+中島　　昂章	4.50	0.18	4.3	６		IP	４	6	IP	６		IP	３		IP	２	2	IP	６		IP	４		IP	２		IP	２		IP	４		IP
+山浦　　　槙	1.30	0.25	5.1	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP

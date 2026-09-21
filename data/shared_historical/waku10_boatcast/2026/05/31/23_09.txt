@@ -1,0 +1,8 @@
+data=
+1	0
+長谷川　　充	7.80	0.18	3.3	１		IP	１		IP	３		IP	２		IP	３		IP	５		IP	２		IP	１		IP	２		IP	１		IP
+渡邉　　優美	8.20	0.12	2.5	１		G2	１		G2	１		G3	１		G1	４		G1	３		G1	４		IP	４		SG	１		IP	３		G1
+山本　景士郎	5.80	0.18	3.6	６	4	IP	６		IP	３		IP	２		IP	１		IP	２		IP	２		IP	２		IP	３		IP	５		IP
+村上　　功祐	5.70	0.15	3.0	３		IP	３		IP	４		IP	４		IP	３		IP	５		IP	２		IP	１		IP	６		G3	２		IP
+北中　　元樹	4.60	0.18	3.2	５		IP	３		IP	４	4	IP	４		IP	５		IP	２		IP	４		IP	５		IP	２	4	IP	３		IP
+蒲原　　健太	2.70	0.23	4.9	６		IP	６		IP	６		IP	５	4	IP	６		IP	５		IP	３		IP	２	4	IP	５		IP	６		G2

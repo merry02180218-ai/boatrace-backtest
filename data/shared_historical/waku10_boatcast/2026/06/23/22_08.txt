@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　一毅	7.60	0.18	4.1	１		IP	５		IP	１		IP	２		IP	１		IP	４		IP	２		IP	１		IP	４		IP	１		IP
+小林　　孝弘	5.60	0.17	2.6	６		IP	２		IP	２		IP	６		IP	４		IP	２		IP	３		IP	２		IP	５		G3	１		IP
+米玉利　大悟	3.50	0.17	3.3	１		IP	５		IP	５		IP	３		IP	５		IP	６		IP	４	4	IP	落		IP	３	4	IP	５		IP
+広瀬　　聖仁	3.80	0.14	3.0	６		IP	５		IP	６	5	IP	２		IP	１		IP	６		IP	４		IP	６		IP	２		IP	５		IP
+福西　広太郎	2.30	0.19	3.7	５		IP	６		IP	５		IP	４		IP	４		IP	６		IP	６		IP	３	6	IP	６		IP	６	6	IP
+上平　　真二	5.20	0.20	5.1	４		G1	３	4	IP	２		IP	６		G1	４		IP	４	5	IP	５	5	IP	３		IP	３		IP	３		IP

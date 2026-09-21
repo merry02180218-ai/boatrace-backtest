@@ -1,0 +1,8 @@
+data=
+1	0
+幸田　　智裕	7.20	0.14	2.6	１		IP	１		IP	３		IP	２		IP	３		IP	２		IP	５		IP	４		IP	１		IP	２		IP
+山田　　竜一	6.89	0.12	1.8	４		IP	２		IP	エ		IP	４		IP	１		IP	２		IP	２		IP	２		IP	３		IP	３		IP
+山田　　　丈	6.44	0.15	2.6	１		IP	３		IP	１	4	IP	５		IP	４		IP	２		IP	落		IP	２		IP	５		IP	２		IP
+赤澤　　文香	4.00	0.17	3.5	４		IP	２		G3	６		G3	４	5	IP	５		IP	４		IP	４		IP	４		IP	２		IP	６		G3
+木山　　大聖	3.20	0.10	2.2	２		IP	６		IP	５		IP	５		IP	４		IP	５		IP	６	6	IP	３	6	IP	４		IP	５		IP
+寺田　　　祥	5.10	0.13	3.5	１	5	IP	６		G2	４		IP	４		G1	４	5	IP	６		IP	１	5	IP	４		IP	３	4	G1	４	5	IP

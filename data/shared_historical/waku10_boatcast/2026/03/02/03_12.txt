@@ -1,0 +1,8 @@
+data=
+1	0
+鶴本　　崇文	8.80	0.17	2.5	１		G1	３		G1	１		IP	１		IP	２		IP	３		IP	２		IP	２		IP	１		IP	１		IP
+長谷川　　充	6.10	0.16	3.8	５		IP	４		IP	２		IP	５		IP	６		IP	２		IP	１		IP	１		G3	２		IP	２		G3
+楠原　　正剛	4.90	0.18	3.0	２		IP	６	4	G1	６		G1	２		IP	４		IP	６		IP	１		IP	４		G3	４	2	G3	３		IP
+加藤　　啓太	4.60	0.21	2.8	４		IP	６		IP	３		IP	５		IP	４		IP	６		IP	４		IP	３		IP	２		IP	１		IP
+香川　　陽太	5.44	0.18	3.6	６		IP	６		IP	３		IP	２		IP	落		IP	２		IP	６	6	IP	２		IP	１		IP	３		IP
+入澤　　友治	4.60	0.19	3.4	５	5	IP	４		IP	６		IP	６		IP	３	5	IP	４		IP	４		IP	２		IP	２		IP	２		IP

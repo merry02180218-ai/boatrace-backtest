@@ -1,0 +1,8 @@
+data=
+1	0
+磯村　　　匠	9.20	0.14	2.1	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+品田　　直樹	6.30	0.14	2.4	１		IP	１		IP	５		IP	３		IP	１		IP	１		IP	６		IP	２		IP	４		IP	５	3	IP
+戸塚　　邦好	4.60	0.13	2.2	３		IP	６		IP	３		IP	４		IP	３		IP	３		G1	４		IP	４		IP	４		G3	４		IP
+荒井　　翔伍	3.70	0.19	3.3	３		IP	６		IP	６		IP	５		IP	３		IP	４		IP	３		IP	６		IP	４		IP	３		IP
+田邉　　亮蔵	4.40	0.19	3.7	５		IP	５	6	IP	２		IP	３		IP	３		IP	３		IP	４		IP	５		IP	６		IP	３		IP
+港　　　理樹	2.50	0.24	4.8	４		IP	２		IP	５		IP	６		IP	６		IP	５		IP	５		IP	６		IP	５		IP	５		IP

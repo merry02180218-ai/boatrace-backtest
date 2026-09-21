@@ -1,0 +1,8 @@
+data=
+1	0
+田川　　大貴	6.40	0.20	4.0	１		IP	４		IP	１		IP	１		IP	１		IP	３		IP	６		IP	２		IP	６		IP	４		IP
+塩崎　　優司	6.30	0.19	4.0	６		IP	２		IP	２		IP	３	3	IP	２		IP	３		IP	３	3	IP	３		IP	１		IP	４		IP
+大庭　　元明	5.90	0.14	3.2	２		IP	５	2	IP	６	4	IP	２		IP	４		IP	１		IP	１		IP	３		IP	５		IP	２		IP
+早川　　尚人	4.40	0.17	2.8	４		IP	４		IP	４		IP	４		IP	４		IP	５		IP	２		IP	５		IP	４	3	IP	２		IP
+東　　　潤樹	4.10	0.23	4.9	３		IP	４		IP	５		IP	３		IP	４	6	IP	３		IP	２		IP	５		IP	６		IP	５		IP
+牧山　　敦也	3.00	0.22	4.9	５		IP	５		IP	４		IP	２	5	IP	４		IP	５		IP	６		IP	５		IP	４		IP	６		IP

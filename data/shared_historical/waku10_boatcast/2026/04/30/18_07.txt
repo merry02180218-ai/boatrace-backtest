@@ -1,0 +1,8 @@
+data=
+1	0
+幸野　　史明	6.70	0.15	3.6	１		IP	１		IP	６		IP	２		IP	１		IP	１		IP	１		IP	３		IP	６		IP	６		IP
+森野　　正弘	5.80	0.10	2.6	３		IP	４		IP	５		IP	３		IP	２		IP	４		IP	２		IP	２		IP	２		IP	５		IP
+内田　　　圭	4.30	0.18	2.6	４		IP	６		IP	５		IP	５		IP	４		IP	５		IP	３		IP	２		IP	２		IP	３		IP
+内田　　　壮	0.00	0.32	5.0	転	6	IP																											IP
+山本　　修一	4.10	0.22	4.6	４		IP	４		IP	５	6	IP	２		IP	４		IP	５		IP	３	4	IP	２		IP	６		IP	６	6	G1
+中渡　　修作	4.60	0.18	4.3	５		IP	３	5	IP	４		IP	２		IP	３		IP	６		IP	４		IP	６		IP	２		IP	３		IP

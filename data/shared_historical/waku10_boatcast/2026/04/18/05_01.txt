@@ -1,0 +1,8 @@
+data=
+1	0
+阿波　　勝哉	7.40	0.19	3.1	２		IP	１	5	IP	４		IP	１		IP	４		IP	１	6	IP	３	2	IP	３	2	IP	３		IP	１		IP
+前田　　光昭	3.20	0.17	3.3	６		IP	６		IP	５		IP	２		IP	６		IP	３		IP	３		IP	４		IP	６		G3	５		G3
+花田　　和明	4.20	0.17	2.5	３		IP	４		IP	３		IP	５		IP	４		IP	４		IP	５		IP	４		IP	２		IP	５		G3
+村上　　功祐	5.40	0.13	2.2	５		IP	２		IP	１		IP	６		G3	２		IP	４		IP	６		IP	５		IP	１		IP	３		IP
+後藤　　正宗	6.20	0.15	2.3	５		IP	１		G3	４		IP	３		IP	３		IP	１		IP	４		IP	３		IP	４		IP	１		IP
+吉田　　和仁	3.30	0.22	4.5	３	5	IP	３		IP	６		IP	５		IP	４		IP	６		IP	６	4	IP	転		IP	４		IP	２	4	IP

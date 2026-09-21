@@ -1,0 +1,8 @@
+data=
+1	0
+山本　景士郎	7.70	0.16	3.9	２		IP	２		IP	３		IP	６		IP	１		IP	１		IP	２		IP	３		IP	１		IP	１		IP
+乙津　　康志	6.00	0.17	4.4	３		IP	４		IP	３		IP	３		IP	３		IP	３		IP	４		IP	１		IP	３		IP	３		IP
+畔柳　　俊吾	4.30	0.22	4.2	６		IP	４		IP	２		IP	５		IP	５		IP	４		IP	２		IP	３		IP	Ｆ		IP	３		IP
+石岡　　将太	5.50	0.15	3.9	２		IP	５		IP	３		IP	６		IP	３		IP	２		IP	１		IP	３		IP	３		IP	５		IP
+前田　健太郎	3.30	0.15	3.7	６		IP	６		IP	６		IP	６		IP	５		IP	６	6	IP	３		IP	５	6	IP	２		IP	１		IP
+鈴木　結平太	2.33	0.18	3.4	転		IP	５		IP	６		IP	５		IP	５		IP	６		IP	４		IP	３		IP	６		IP	５		IP

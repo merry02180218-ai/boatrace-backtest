@@ -1,0 +1,8 @@
+data=
+1	0
+佐々木　翔斗	8.30	0.16	1.9	２		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	６		IP
+藤原　　仙二	7.40	0.23	3.4	１		IP	１		IP	４		IP	４		IP	１	1	IP	３		IP	２		IP	４		IP	１		IP	２		IP
+濱野谷　憲吾	5.50	0.15	2.8	６		IP	２		IP	２		G1	４		G1	３		G1	６		G1	２		IP	４		IP	４		IP	３		G1
+島川　　海輝	4.60	0.14	2.8	５	5	IP	５		IP	５		IP	２		IP	３		IP	１		IP	４	5	IP	３		IP	４		IP	６		G2
+定松　　勇樹	9.20	0.14	2.6	１		G3	１		G1	１		G1	１		G1	１	2	IP	１	1	IP	２		G1	２		IP	３	4	IP	４		IP
+河野　　　大	6.70	0.13	2.6	２		IP	２		IP	２		IP	４		IP	２		G1	２		G2	３		IP	６		IP	５		IP	１		IP

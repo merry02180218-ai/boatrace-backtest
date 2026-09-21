@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　　健	5.90	0.14	3.5	１		IP	６		IP	１		IP	１		IP	６		IP	５		IP	６	2	IP	１		IP	４		IP	１		IP
+中　　　亮太	6.50	0.12	2.8	５		IP	２		IP	４		IP	２		IP	１		IP	３		G2	２		IP	３		IP	４		IP	２		IP
+杉山　　喜一	6.50	0.15	2.8	４		G3	４		G3	１		IP	３		IP	１		IP	３		IP	４		IP	１		IP	６		IP	１		IP
+中村　　泰平	6.50	0.15	3.5	３		G3	５		G1	６		G1	４		IP	２		IP	２		G1	２		G1	１	3	IP	３	6	IP	２	5	IP
+大江　　　純	3.50	0.15	3.6	４	4	G3	５		IP	２	4	IP	２	6	IP	５		IP	６		IP	５		IP	６	6	IP	３		IP	６		IP
+東本　　勝利	4.40	0.17	4.6	２		IP	５		IP	３		IP	４	5	IP	３		IP	４		IP	６		IP	６		IP	４		IP	３		IP

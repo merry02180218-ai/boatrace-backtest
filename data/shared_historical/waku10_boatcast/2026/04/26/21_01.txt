@@ -1,0 +1,8 @@
+data=
+1	0
+川上　　　剛	8.60	0.17	3.0	１		IP	１		IP	４		IP	１		IP	１		IP	３		IP	１		G3	３		G3	１		IP	１		IP
+林　　　恵祐	1.90	0.19	4.3	６		IP	３		IP	５		IP	６		IP	６		IP	６		IP	６		IP	４		IP	６	3	IP	６		IP
+森口　　和紀	5.00	0.25	4.9	６		IP	３		IP	５		IP	３		IP	６		IP	２		IP	３		IP	１		IP	２		IP	５		IP
+待鳥　　雄紀	4.00	0.17	3.4	６		G3	３		G3	４		IP	３		IP	２	5	IP	５		IP	６		IP	４		IP	４		IP	４		IP
+梶原　　　正	4.00	0.17	3.3	５		IP	６		IP	６		IP	３		IP	１	4	IP	５		IP	３		IP	３		IP	５		IP	４	4	IP
+松田　　隆司	3.60	0.23	3.7	５		IP	６		IP	５		IP	４		IP	４		IP	４		IP	１	4	IP	４		IP	４		IP	６		IP

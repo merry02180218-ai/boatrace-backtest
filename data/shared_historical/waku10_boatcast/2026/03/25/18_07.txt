@@ -1,0 +1,8 @@
+data=
+1	0
+胡本　　悟志	6.20	0.17	3.0	４		IP	４		IP	４		IP	１		IP	３		IP	２		IP	２		IP	３		IP	４		IP	２		IP
+松井　　貫太	4.20	0.18	4.5	６		IP	４		IP	４		IP	６		IP	５		IP	３		IP	２		IP	４		IP	５		IP	１		IP
+加藤　　　翔	3.80	0.21	4.1	５		IP	６		IP	３		IP	３		IP	５		IP	６		IP	４	4	IP	４		IP	３		IP	３		IP
+村田　　浩司	4.00	0.17	3.0	５		IP	３		IP	５		G3	６		IP	３		IP	４		IP	６		IP	３		IP	２		IP	４		IP
+八木　　治樹	2.00	0.13	2.6	６		IP	転		IP	３		IP	４		IP	６		IP	６	6	IP	６		G3	６		G3	５		IP	６		IP
+上村　　宏太	2.80	0.17	3.1	６		IP	４		IP	転	5	IP	５		IP	２		IP	５		IP	５		IP	６		IP	３		IP	５		IP

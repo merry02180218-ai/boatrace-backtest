@@ -1,0 +1,8 @@
+data=
+1	0
+山一　　鉄也	8.80	0.17	2.9	１		IP	１		IP	５		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+岡部　　貴司	5.00	0.20	2.7	４		IP	１		IP	２		IP	３		IP	４		IP	３		IP	４		IP	３		IP	５		IP	Ｆ	3	IP
+伯母　　芳恒	4.30	0.16	3.0	６		IP	１		IP	２		IP	３		IP	３		IP	４		IP	６		G3	６		IP	５		IP	４		IP
+尾嶋　　一広	5.90	0.15	3.4	３		IP	５		IP	２		IP	３		IP	３		G1	４		G1	４		G1	３		G3	２		G3	３		IP
+村上　宗太郎	3.20	0.27	4.8	２		IP	６		IP	４	4	IP	４	6	IP	６		IP	３		IP	６	6	IP	４	6	IP	６	6	IP	５	6	IP
+表　　　憲一	3.90	0.19	3.9	３		IP	４		IP	６		IP	４		IP	５		IP	６		IP	６		IP	２		IP	３		IP	３		IP

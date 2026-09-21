@@ -1,0 +1,8 @@
+data=
+1	0
+中谷　　朋子	7.60	0.19	4.4	３		G3	３		IP	１		IP	２		G3	１		IP	４		IP	４		IP	２		IP	１		IP	１		IP
+大久保　佑香	4.30	0.20	2.5	２		IP	３		IP	６		IP	６		IP	４		IP	３		G3	５		G3	６		IP	３		IP	２		IP
+小野　　生奈	6.50	0.14	2.4	４		G1	２		G1	２		G1	６		G1	３		G1	５		G1	５		IP	２		G3	１		IP	２		IP
+黒澤　めぐみ	4.50	0.22	3.2	２		IP	３		IP	５		IP	２		IP	２	3	IP	５		G3	３		IP	５		G3	６		G3	５		G3
+中北　　　涼	3.60	0.22	3.7	４		IP	３		IP	５		IP	３		IP	６		G3	４		G3	６	4	IP	３		IP	５	6	IP	４		IP
+喜井　つかさ	4.40	0.18	3.5	５		IP	５		IP	５		IP	５	5	IP	２		IP	３	5	IP	３	5	IP	４		IP	３		G3	３	5	IP

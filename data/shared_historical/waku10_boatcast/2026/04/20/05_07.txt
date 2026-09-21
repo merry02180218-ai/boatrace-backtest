@@ -1,0 +1,8 @@
+data=
+1	0
+飯島　　　誠	8.60	0.15	2.9	１		IP	２		IP	３		IP	２		IP	２		IP	１		IP	１		IP	２		IP	２		IP	１		IP
+松山　　将吾	7.40	0.16	2.7	４		IP	１		IP	２		G3	３	3	G3	２	6	IP	１	3	IP	２		G1	６		G1	２		IP	２		IP
+杉江　　浩明	6.90	0.21	4.0	２		IP	２		IP	１	4	IP	３		IP	５		IP	６		IP	１		IP	２		IP	２		IP	２		IP
+野長瀬　正孝	6.22	0.20	3.8	２		IP	１		IP	１		IP	２		IP	４		IP	３		IP	５		IP	欠		IP	４		IP	４		IP
+横井　　健太	2.70	0.22	4.2	６		IP	６		IP	５		IP	４		IP	６		IP	４		IP	２		IP	６	6	IP	４		IP	６		IP
+森　　　弘行	2.44	0.16	2.8	２		IP	５		IP	５		IP	欠		IP	５	5	IP	５		IP	５		IP	６	5	IP	６		IP	５		IP

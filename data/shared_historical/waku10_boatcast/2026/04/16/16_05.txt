@@ -1,0 +1,8 @@
+data=
+1	0
+山地　　正樹	8.00	0.18	3.8	１		IP	３		IP	１		IP	１		IP	２		IP	４		IP	１		IP	２		IP	１		IP	４		IP
+金子　　順一	3.30	0.17	3.9	３		IP	１		IP	５		IP	６		IP	５	1	IP	３	1	IP	５		IP	５		IP	６		IP	６		IP
+真庭　　明志	4.60	0.14	3.3	３		IP	５		IP	２	2	IP	４	4	IP	３		IP	６		IP	２		IP	２		IP	６		IP	５		IP
+安河内　　健	5.30	0.15	3.7	３		IP	４		IP	６		G2	３		G2	３		IP	２		G1	５		G1	４	5	IP	４		IP	２		IP
+守田　　俊介	3.80	0.11	2.4	３		IP	３		IP	５		IP	４		SG	６		IP	２	2	IP	妨		G1	６		G1	４		G1	６		G1
+中辻　　崇人	4.80	0.12	3.1	５		IP	３		IP	３		SG	４		SG	４		SG	５		G1	４		G1	３		IP	６		G1	４		IP

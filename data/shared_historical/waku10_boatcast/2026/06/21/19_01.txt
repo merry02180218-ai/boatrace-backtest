@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　順一	6.50	0.17	3.5	４		IP	１		IP	２		IP	３		IP	１		IP	６		IP	４		IP	１		IP	２		IP	４		IP
+稗田　　聖也	7.30	0.14	3.3	６		IP	４		IP	１		IP	１		IP	２		IP	４		IP	１		IP	２		IP	２		IP	１		IP
+田添　　康介	2.22	0.17	4.1	６		IP	５		IP	５		IP	４		IP	６		IP	５		IP	５	4	IP	５		IP	４		IP	欠		IP
+樋江井　　舞	4.22	0.14	2.7	転		IP	４		IP	６		G3	４		IP	２		IP	６		IP	２		IP	５		IP	４		IP	３		IP
+坂口　　貴彦	6.60	0.17	3.0	３		IP	４		IP	２		IP	１		IP	２		IP	３		IP	３		IP	３	6	IP	２		IP	５		IP
+恵良　　琴美	2.10	0.22	4.5	６		IP	４		IP	４		IP	６		IP	６		IP	４		IP	６		IP	６		IP	５	5	IP	５		IP

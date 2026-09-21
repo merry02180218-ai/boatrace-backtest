@@ -1,0 +1,8 @@
+data=
+1	0
+守田　　俊介	9.70	0.11	2.6	１		IP	１		IP	３		SG	１		SG	４		IP	１		IP	１		IP	１		G1	１		G1	１		G1
+藤山　　雅弘	4.50	0.17	3.1	１		IP	２		IP	５		IP	６		IP	４		IP	２		IP	３		IP	５		IP	５		IP	５		IP
+山崎　　義明	5.00	0.20	3.8	２		IP	２		IP	２		G3	４		G3	４		IP	３		IP	５		IP	６		IP	２		IP	６		IP
+妹尾　　忠幸	5.90	0.16	3.6	１		IP	２		IP	３	5	IP	５		IP	２		IP	６	1	G1	４		G2	３		IP	３		IP	３		IP
+福田　　翔吾	5.10	0.18	3.3	５		IP	３		IP	４		IP	２		IP	６		IP	３		IP	２		IP	５		IP	３		IP	２		IP
+西丸　侑太朗	4.30	0.12	2.7	３		IP	４		IP	５		IP	４		G1	６		G1	５		IP	２	5	IP	６		IP	１	3	IP	５		G1

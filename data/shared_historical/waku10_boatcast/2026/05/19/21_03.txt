@@ -1,0 +1,8 @@
+data=
+1	0
+原田　　幸哉	9.60	0.12	2.6	１		G1	１		IP	４		G1	１		G1	１		G1	１		G1	５		G1	１		SG	１		G1	１		G1
+石本　　裕武	7.10	0.12	2.7	２		G1	１		IP	３		IP	Ｆ		IP	１		IP	１		G1	４		G1	１		IP	２		G1	６		IP
+入海　　　馨	6.00	0.13	3.7	３		G1	３		IP	４	4	IP	３	4	IP	１	4	IP	３		G1	２		G1	Ｆ		IP	６		G1	２		G1
+尾上　　雅也	6.90	0.16	2.6	１		IP	２		IP	５		IP	６		G3	２	5	G3	１		IP	２		IP	３		IP	２	3	IP	２		IP
+辻　　　栄蔵	5.00	0.13	2.6	５	6	G1	１		IP	６	3	G1	転		IP	３		IP	４		IP	３		G2	５		G1	３		G1	２		IP
+河合　　佑樹	5.30	0.19	3.5	５		IP	２		IP	２		IP	３	4	IP	３	5	IP	５		IP	３		G1	３	5	G1	４		G1	６		G1

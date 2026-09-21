@@ -1,0 +1,8 @@
+data=
+1	0
+前田　　　翔	8.90	0.12	2.7	１		IP	３		IP	１		IP	３		IP	３		IP	１		IP	１		G1	１		IP	１		IP	１		IP
+高橋　　龍治	7.00	0.12	2.5	３		IP	２		IP	２		IP	２		IP	４		IP	３		IP	２		IP	２		IP	３		IP	２	3	IP
+豊田　　祥生	3.60	0.13	2.3	３		IP	５		IP	５	4	IP	５		IP	３		IP	３		IP	５		IP	５	4	IP	５		IP	３		IP
+丸山　　祐也	2.50	0.25	5.4	４		IP	５		IP	６		IP	４		IP	６		IP	５		IP	４		IP	５		IP	６		IP	４		IP
+大月　　遊雅	2.50	0.17	4.0	６		IP	５		IP	５		IP	１		IP	６		IP	６		IP	４		IP	６		IP	５		IP	６	6	IP
+濱野　　斗馬	5.00	0.15	4.3	３		IP	５		IP	３		G1	３		G1	２		IP	３		IP	４		IP	４		IP	５		IP	４		IP

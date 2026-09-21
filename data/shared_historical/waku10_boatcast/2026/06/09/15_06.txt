@@ -1,0 +1,8 @@
+data=
+1	0
+原田　　佑実	8.30	0.16	2.2	１		IP	４		IP	１		IP	６		IP	１		G3	２		G3	１		G3	１		G3	１		IP	１		IP
+山川　美由紀	6.50	0.17	3.5	３		IP	２		G3	６		G3	４		G3	１		G2	２		IP	１		IP	４		IP	６		G3	１		G3
+平山　　智加	6.00	0.14	2.6	３	4	IP	２		IP	３		IP	２		IP	４		IP	５		G2	４		G2	４		G3	２		G3	２		IP
+山川　　波乙	3.30	0.23	4.3	５		IP	６		IP	３		IP	２		IP	３		IP	６		IP	５		IP	５		IP	４		IP	６		IP
+長尾　　萌加	4.40	0.20	3.9	３		IP	５		IP	４		IP	５		IP	４		IP	５		IP	５		IP	１		IP	３		IP	４		IP
+赤井　　　睦	2.90	0.12	2.6	４	5	IP	６		IP	６		G3	６		G1	Ｆ		G1	４		IP	３		IP	５		G1	４		G3	４		IP

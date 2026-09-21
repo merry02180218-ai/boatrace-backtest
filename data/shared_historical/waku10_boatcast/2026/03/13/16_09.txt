@@ -1,0 +1,8 @@
+data=
+1	0
+森下　　愛梨	7.00	0.18	3.0	１		IP	Ｆ		G3	１		IP	４		IP	４		IP	１		IP	２		IP	２		IP	３		IP	１		IP
+佐藤　　博亮	7.90	0.13	3.1	５		IP	２		G1	２		IP	１		IP	１		IP	１		IP	４		IP	３		IP	１		IP	１		IP
+古場　　輝義	4.20	0.22	4.2	３		IP	２		IP	６		IP	２		IP	２		IP	６		IP	６		IP	５		IP	３		IP	６		IP
+長谷川　雅和	3.80	0.19	3.1	６	5	IP	５		IP	４		IP	３		IP	３		IP	３		IP	４		IP	３		IP	５		IP	６		IP
+高倉　　孝太	5.60	0.12	2.1	２		IP	４		IP	５		IP	１		IP	６		IP	３	4	IP	６	6	IP	３		IP	４		G3	１		IP
+香川　　素子	3.40	0.21	3.9	５		G1	５		IP	５		IP	５		IP	２		IP	４		IP	５		IP	６		IP	３	4	G3	４		G3

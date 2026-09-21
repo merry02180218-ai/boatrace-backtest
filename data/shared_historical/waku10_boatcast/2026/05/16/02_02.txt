@@ -1,0 +1,8 @@
+data=
+1	0
+桑原　　　啓	7.80	0.15	3.0	２		IP	１		IP	４		IP	２		IP	２		IP	１		IP	１		IP	４		IP	２		IP	２		IP
+北中　　元樹	5.40	0.19	4.6	２		IP	４		IP	６		IP	６		IP	２		IP	２		IP	２		IP	２		IP	５		IP	３		IP
+蜂須　　瑞生	6.80	0.15	2.8	４		IP	１		IP	２		G3	４		IP	３		IP	３		IP	２		IP	３		IP	３		IP	１		IP
+柴田　　直哉	5.00	0.18	3.2	３		IP	５		IP	４		IP	２	5	IP	２		IP	３		IP	３		IP	５		IP	４		IP	４		IP
+萩原　　秀人	5.50	0.14	2.6	２		IP	４		G1	５		G1	１		IP	４		IP	４		G1	２		IP	６		G1	６		G1	２		G3
+三浦　　裕貴	3.00	0.16	4.6	４		IP	６	5	IP	４	5	IP	６		IP	３		IP	５		IP	４		IP	３		IP	６		IP	６		IP

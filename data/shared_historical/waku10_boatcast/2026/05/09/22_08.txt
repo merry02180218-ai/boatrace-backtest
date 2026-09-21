@@ -1,0 +1,8 @@
+data=
+1	0
+村越　　　篤	7.90	0.19	4.0	６		IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		G3	２		G3	１		IP	２		IP
+林　　　恵祐	2.90	0.21	4.8	４		IP	２		IP	６		IP	３		IP	５		IP	６		IP	６		IP	６		IP	６		IP	４		IP
+田添　　康介	2.56	0.13	4.1	６		IP	５		IP	５	4	IP	５		IP	４		IP	欠		IP	５		IP	５		IP	３		IP	５		IP
+長野　壮志郎	6.30	0.13	2.4	２		IP	５		IP	４		IP	３		IP	３		IP	２		IP	２		IP	４		IP	３		IP	１		IP
+松浦　　　勝	2.20	0.17	3.5	５		IP	６		IP	６		IP	４		IP	４		IP	５	4	IP	６		IP	６		IP	４		IP	５		IP
+菊地　　敬介	3.00	0.15	3.7	５		IP	５		IP	４		IP	５		IP	４		IP	６		IP	４		IP	５		IP	２		IP	６		IP

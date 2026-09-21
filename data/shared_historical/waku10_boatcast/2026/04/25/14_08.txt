@@ -1,0 +1,8 @@
+data=
+1	0
+中井　　俊祐	7.20	0.16	3.1	３		IP	１		IP	２		IP	２		IP	１		IP	４		IP	１		IP	５		IP	１		IP	４		IP
+黒柳　　浩孝	5.40	0.16	4.2	２		IP	３		IP	２	4	IP	４	4	IP	４		IP	５		IP	２		IP	２		IP	４		IP	５		IP
+一柳　　和孝	6.40	0.13	2.5	４		IP	３		IP	３		IP	１		IP	３		IP	４		IP	３		IP	２		IP	２		IP	３		IP
+寳田　　亮治	4.10	0.27	4.0	４		IP	５		IP	６		IP	５		IP	５		IP	１		IP	４		IP	２		IP	４		IP	４		IP
+星野　　政彦	3.30	0.12	2.8	２	4	IP	３		IP	Ｆ		IP	５		IP	５		IP	４		IP	３		IP	６		IP	Ｆ		IP	４		IP
+上瀧　　絢也	1.90	0.18	3.4	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	５		IP	３	5	IP	６		IP	５		IP

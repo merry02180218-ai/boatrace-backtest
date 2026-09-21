@@ -1,0 +1,8 @@
+data=
+1	0
+重成　　一人	8.60	0.16	3.7	１		G2	１		G2	５		IP	１		IP	１		IP	１		IP	３		IP	１		IP	３		IP	１		IP
+井芹　　大志	4.90	0.18	3.9	５		IP	２		IP	２		IP	６		IP	４		IP	１		IP	３		IP	２		IP	６		IP	６		IP
+岡　　　祐臣	7.50	0.14	3.4	２	4	IP	２		IP	２		IP	１	4	IP	２		IP	１		IP	２		IP	２		G1	５		G1	６		G1
+酒井　　陽祐	5.10	0.13	3.1	２		IP	３		IP	６		G3	５		G3	３		IP	３		IP	３	5	G3	３		IP	４		IP	３		IP
+北中　　元樹	4.80	0.15	2.6	１	4	IP	３		IP	５		IP	４		IP	５		IP	３		IP	４	4	IP	４		IP	５		IP	２		IP
+安河内　　健	4.10	0.21	4.1	４		G3	３		IP	２		IP	４		IP	５		IP	４	5	IP	６		IP	５		G2	５		G2	３		IP

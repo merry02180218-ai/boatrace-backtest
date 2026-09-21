@@ -1,0 +1,8 @@
+data=
+1	0
+堤　　　　昇	7.40	0.18	3.5	１		IP	４		IP	１		IP	２		IP	２		IP	１		IP	３		IP	２		IP	４		IP	３		IP
+中村　　　真	3.30	0.18	3.1	４		IP	５		IP	４		G3	６		IP	２	3	IP	３		IP	５		IP	４		IP	６		IP	６		IP
+木村　　亮太	4.70	0.17	3.7	５		IP	４		IP	４		IP	４	4	IP	３		IP	３		IP	１		IP	６		IP	４		IP	３		IP
+尾上　　雅也	7.10	0.17	2.6	２		IP	３		IP	２	3	IP	２		IP	３		G1	２		IP	転		IP	２		IP	２		IP	１	5	IP
+樋口　　範政	2.70	0.21	4.4	６		IP	４		IP	５	6	IP	５		IP	５		IP	５		IP	５		IP	４		IP	４		IP	４		IP
+椎名　　　豊	4.00	0.18	4.2	１		IP	５		G1	４		G1	６		IP	５	5	G1	６		IP	３		IP	Ｌ		IP	６		G1	４		G1

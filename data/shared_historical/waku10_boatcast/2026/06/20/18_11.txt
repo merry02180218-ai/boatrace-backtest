@@ -1,0 +1,8 @@
+data=
+1	0
+原田　　篤志	9.20	0.13	1.9	１		G3	１		G3	１		IP	２		IP	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP
+杉山　　裕也	6.30	0.19	4.6	１		G3	２		G3	５		IP	１		IP	６		IP	６		IP	１		IP	２		IP	４		IP	２		G1
+船岡　洋一郎	6.00	0.12	2.6	２		G3	２	4	G1	４	4	G1	２		G2	３		G2	６		IP	３		IP	４	2	IP	２		IP	５		G1
+鳥飼　　　眞	5.20	0.17	3.2	３		G3	３		IP	４		IP	２		IP	３		IP	３	5	IP	４		IP	転		IP	２		IP	４		IP
+照屋　　厚仁	4.20	0.14	2.7	５		G3	４		G3	４		IP	４		IP	４		IP	４	6	IP	４		IP	３		IP	３		IP	４		IP
+花田　　和明	4.50	0.19	2.6	２	2	G3	４	4	IP	４	4	IP	５	4	IP	４		IP	２	4	IP	６	4	IP	３	2	IP	３	4	IP	５	2	IP

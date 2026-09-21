@@ -1,0 +1,8 @@
+data=
+1	0
+清水　　攻二	8.10	0.21	2.2	１		IP	６		IP	１		IP	２		IP	１		IP	２		IP	２		IP	１		IP	１		IP	３		IP
+横田　　　茂	4.60	0.12	2.7	２		IP	６		IP	５		G1	６		IP	３	3	IP	４		IP	３		IP	６		IP	２		IP	２		IP
+仁科　さやか	2.60	0.25	4.7	４	4	IP	６		G3	５		G3	５		IP	２		IP	５		IP	６		IP	４		IP	６	4	IP	６	4	IP
+山田　　和佐	3.40	0.16	3.8	４		IP	１		IP	６		IP	４		G1	６		IP	３		IP	４		IP	６	6	IP	転		IP	５	5	IP
+宮城　　那菜	2.90	0.14	2.8	５	6	IP	３		IP	５		IP	５	6	IP	５	6	IP	６	6	IP	３		IP	３	6	IP	６		IP	６	6	IP
+高橋　　英之	4.00	0.13	2.7	６		IP	３		IP	２		IP	３	5	IP	４		IP	６		IP	４		IP	４		IP	４		IP	５		IP

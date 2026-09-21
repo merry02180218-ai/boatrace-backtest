@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　　悠	8.40	0.13	2.2	１		IP	３		IP	１		IP	１		IP	３		IP	４		IP	１		IP	２		IP	１		IP	１		IP
+丸岡　　正典	7.30	0.17	3.0	２		IP	１		IP	２		IP	２		IP	４		IP	３		IP	２		G2	６		IP	１		IP	２		IP
+石野　　貴之	7.50	0.13	2.9	１		G1	１		IP	２		G1	３		IP	２		G3	４		IP	１		IP	４		G1	４		IP	２		IP
+武富　　智亮	3.90	0.15	3.1	６		IP	３		IP	６		IP	５		IP	３		IP	４		G1	４	5	G1	２		IP	４		IP	６		IP
+笹木　　香吾	6.40	0.12	2.2	１		IP	３		IP	５		IP	５		IP	４		IP	２		IP	２		IP	４	4	IP	１	6	IP	１		G3
+中島　　秀治	4.20	0.17	3.4	４		IP	５		IP	３		IP	４		IP	３		IP	５		G3	３		IP	４		IP	４		IP	５	5	IP

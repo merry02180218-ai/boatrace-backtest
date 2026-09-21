@@ -1,0 +1,8 @@
+data=
+1	0
+乙藤　　智史	7.40	0.19	3.0	２		IP	１		IP	４		IP	４		IP	１		IP	３		IP	１		IP	５		IP	１		IP	１		IP
+向井　　美鈴	7.10	0.22	3.5	４		IP	２		IP	２		G1	１		IP	２		IP	３		IP	１		IP	４		IP	４		IP	２		G3
+長畑　　友輔	4.10	0.17	2.8	５		IP	５		IP	５		IP	６		IP	２		IP	５		IP	４	4	IP	３		IP	３		IP	２		IP
+井内　将太郎	7.40	0.10	1.8	２		IP	３		IP	２	5	IP	１		IP	３		IP	３		IP	３		IP	１	6	IP	３		IP	２	3	IP
+森野　　正弘	4.20	0.13	2.7	４		IP	４		IP	１		IP	５		IP	５		IP	２	4	IP	５		IP	６		IP	４		G1	６		G2
+野相　　弘司	2.20	0.29	5.4	６		IP	６		IP	５		IP	６		IP	４		IP	６		IP	４		G3	５		IP	４		IP	５		IP

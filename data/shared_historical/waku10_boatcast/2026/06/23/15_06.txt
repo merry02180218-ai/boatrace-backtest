@@ -1,0 +1,8 @@
+data=
+1	0
+永松　　良教	7.20	0.10	2.2	１		IP	４	3	IP	１		IP	１		IP	３		IP	３		IP	２		IP	２		IP	５		IP	２		IP
+牧村　　俊輝	3.80	0.16	3.7	６		IP	４		IP	２		IP	５		IP	５		IP	６		IP	３		IP	４		IP	３		IP	４		IP
+大月　　遊雅	4.00	0.17	2.6	３		IP	３		IP	２		IP	５		IP	５		IP	５		IP	４		IP	５		IP	３		IP	５		IP
+井上　　慧人	3.50	0.17	4.1	３	5	IP	５		IP	６		IP	６		IP	６		IP	３		IP	４		IP	４		IP	３		IP	４		IP
+西岡　　顕心	6.30	0.15	3.0	１		G1	２		G1	５		SG	５		SG	４	6	SG	３		G2	１		IP	６		G1	４		G1	４		G2
+藤原　　仙二	4.60	0.20	4.9	５		IP	６		G2	３		G2	５		G2	２		IP	２		IP	３		IP	４		IP	５		IP	５		IP

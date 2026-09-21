@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　秀樹	4.60	0.14	2.9	５		IP	２		IP	４		IP	６		IP	２		IP	６	3	IP	５		IP	２		IP	４		IP	２		IP
+上野　　秀和	6.50	0.15	3.7	２		IP	１		IP	２		IP	６		IP	２		IP	３		IP	４		G3	３		IP	２	3	IP	３	3	IP
+永田　　啓二	6.00	0.10	2.2	１	2	IP	３		IP	４		IP	３		IP	４		IP	３		IP	３		IP	２		IP	３		IP	５	4	G1
+田中　　孝明	3.00	0.20	5.3	５		IP	６		IP	５		IP	５		IP	５		IP	４		IP	６		IP	３		IP	４		IP	３		IP
+中　　　亮太	6.70	0.15	2.1	２		IP	２		IP	４		IP	３		G3	１	4	IP	４		IP	１		IP	２		G2	５		IP	３		IP
+浦野　　　海	2.50	0.30	5.6	６		IP	５		IP	５		IP	５		IP	３		IP	６		IP	６		IP	２		IP	６		IP	６		IP

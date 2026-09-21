@@ -1,0 +1,8 @@
+data=
+1	0
+飯山　　晃三	6.80	0.18	3.4	６		IP	１		IP	２		IP	１		IP	２		IP	５	2	IP	１		IP	１		IP	２		IP	６		IP
+天野　　友和	7.20	0.15	2.8	２		IP	３		IP	５		IP	２		IP	２	3	IP	３		IP	２		IP	２		IP	２		IP	１		IP
+山一　　鉄也	5.40	0.14	2.4	５		IP	１		IP	２		IP	４		IP	５		IP	２		IP	４		IP	４		G3	３		IP	４		IP
+平瀬　　城啓	4.30	0.19	3.7	４	3	IP	５		IP	３		IP	３		IP	５		IP	４	6	IP	３		IP	６		IP	３		IP	３		IP
+森口　　和紀	4.00	0.17	3.0	１		IP	６		IP	３		IP	６		IP	５		IP	６		IP	１		IP	４		IP	４		IP	６		IP
+伯母　　芳恒	5.10	0.21	3.9	２	5	IP	３		IP	６		IP	２		IP	４		G3	１		IP	４		IP	４		IP	５		IP	４		IP

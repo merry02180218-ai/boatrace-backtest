@@ -1,0 +1,8 @@
+data=
+1	0
+崎　　　利仁	5.40	0.23	4.3	１		IP	２		IP	６		IP	３		IP	４		IP	４		IP	６		IP	５		IP	２		IP	１		IP
+平見　　真彦	6.80	0.18	2.9	２		IP	３		IP	１		IP	２		IP	３		IP	２		IP	１		IP	３		IP	４		IP	５		IP
+和田　　操拓	5.00	0.14	2.4	４		IP	３		IP	４		IP	２		IP	４		IP	３		IP	３		IP	５		IP	２		IP	５		IP
+中里　　昌志	4.30	0.18	3.8	３		IP	５	5	IP	４		IP	４		IP	４		IP	３		IP	６		IP	３		IP	４		IP	３		IP
+川崎　　智幸	5.00	0.17	3.4	２		IP	５		IP	３		IP	５		IP	２		IP	２		IP	１		IP	５		G1	６		G1	６		IP
+黒柳　　浩孝	3.70	0.16	3.0	６		IP	６		IP	３		IP	３		IP	５		IP	３	5	IP	５		IP	２		IP	６		IP	４		IP

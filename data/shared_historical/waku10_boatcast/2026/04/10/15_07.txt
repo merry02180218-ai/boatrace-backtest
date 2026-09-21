@@ -1,0 +1,8 @@
+data=
+1	0
+乙津　　康志	6.20	0.17	4.4	５		IP	５		IP	２		IP	１		IP	４		IP	４		IP	１		IP	３		IP	２		IP	２		IP
+今井　　裕梨	6.90	0.15	2.7	１		G1	２		IP	２		IP	１		IP	１		G3	４		IP	２		IP	６		G3	６		G3	２		IP
+河野　　真也	4.78	0.23	4.4	４		IP	１		IP	６		IP	６		IP	４		IP	４		IP	２		IP	不		IP	６	4	IP	１		IP
+徳増　　秀樹	5.90	0.14	3.1	１		IP	１		IP	３		IP	３		G1	６		G1	２		IP	６		IP	５		IP	４		IP	２		G1
+成貞　　琳平	3.60	0.24	5.0	５	6	IP	２	4	IP	３		IP	５		IP	４	4	IP	５		IP	６		IP	５		IP	６		IP	２		IP
+上瀧　　絢也	1.90	0.19	3.8	６		IP	５		IP	５		IP	６		IP	６		IP	５		IP	３	5	IP	６		IP	５		IP	６		IP

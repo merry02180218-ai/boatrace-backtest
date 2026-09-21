@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　孝明	7.60	0.19	3.6	２		IP	１		IP	４		IP	２		IP	５		IP	３		IP	２		IP	１		IP	１		IP	１		IP
+坪口　　竜也	6.40	0.15	2.8	５		IP	１		IP	２		IP	５		IP	５		IP	２		G3	１		IP	１		IP	４		IP	２		IP
+永井　　亮次	5.00	0.17	3.3	４		IP	２		IP	４		IP	２		IP	６		IP	６		IP	２		IP	４		IP	３		IP	３		IP
+中西　　月輝	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+伊藤　　喜智	5.60	0.18	2.9	３		IP	２		IP	４	6	IP	５		IP	２		IP	５	6	IP	２	6	IP	１		IP	４		IP	４	3	IP
+高野　　哲史	3.80	0.16	3.5	６		IP	３		IP	４		IP	４		G1	５		G1	６		G1	４		IP	５	5	G1	４		IP	３		IP

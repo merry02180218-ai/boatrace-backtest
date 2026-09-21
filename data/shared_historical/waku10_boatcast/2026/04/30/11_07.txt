@@ -1,0 +1,8 @@
+data=
+1	0
+表　　　憲一	6.90	0.18	3.6	１		IP	６		IP	２		IP	４		IP	３		IP	１		IP	１		IP	Ｆ		IP	１		IP	１		IP
+西川　　真人	4.50	0.18	4.4	６		IP	６		IP	３		IP	２		IP	３		IP	２		IP	６		IP	４		IP	５		IP	２		IP
+木村　　仁紀	6.70	0.13	3.7	４		G1	２		G1	５		G1	４		G1	３		IP	２		IP	１		IP	６		G1	１		IP	２		G1
+藤原　　仙二	6.60	0.17	3.5	４		IP	２		IP	２		IP	３		G2	３		G2	２		IP	３		IP	４		IP	３		IP	２		IP
+井上　　尚悟	2.70	0.14	3.2	５		IP	３		G3	落		G3	５		IP	４		IP	６		IP	４		IP	４		IP	５		IP	５		IP
+泥谷　　一毅	3.80	0.23	4.4	５	5	IP	３		IP	３		IP	５		IP	６		IP	３		IP	３		IP	６		IP	４		IP	４	5	IP

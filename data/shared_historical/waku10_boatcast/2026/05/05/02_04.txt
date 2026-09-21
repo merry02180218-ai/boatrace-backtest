@@ -1,0 +1,8 @@
+data=
+1	0
+後藤　　　浩	8.00	0.14	2.8	４		IP	２		IP	３		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+中澤　　和志	6.20	0.15	3.4	２		IP	５		G1	１		G1	５		IP	２		IP	１		IP	４		G1	５		G1	５		IP	１		IP
+黄金井　力良	6.40	0.14	2.1	４		IP	３		IP	１	5	IP	３		IP	２		G3	２		G3	４		IP	４		IP	４		IP	１		IP
+鈴木　　賢一	3.30	0.22	4.1	５	5	IP	５		IP	６		IP	６		G3	２		G3	１		IP	５		IP	５	5	IP	４		IP	６		IP
+小川　　時光	2.50	0.19	4.3	５		IP	６		IP	６		IP	５	6	IP	４		IP	６		IP	６		IP	６		IP	４		IP	２		IP
+西田　　和加	1.10	0.17	3.7	６		IP	６		IP	６		IP	６		G3	６		G3	５		IP	６		IP	６		IP	６		IP	６		IP

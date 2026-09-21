@@ -1,0 +1,8 @@
+data=
+1	0
+眞田　　英二	8.00	0.20	3.9	３		G3	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	２		IP	５		IP	２		IP
+伊藤　　誠二	5.60	0.16	2.8	２		IP	２		IP	１		IP	５		IP	６		IP	１		IP	３		IP	４		IP	３		IP	６		IP
+高橋　　淳美	3.50	0.16	3.5	２		IP	５		IP	６		IP	４		G3	５		G3	５		IP	３		IP	４		IP	５		IP	４		G3
+高濱　　芳久	4.20	0.21	4.1	１		IP	６	6	IP	５		IP	１		IP	３		IP	４		IP	４		IP	６		IP	５	6	IP	５		IP
+岡村　　　仁	5.10	0.13	3.2	５		G1	６		G1	２		G1	１		IP	５		IP	２	6	IP	２		IP	６		IP	３		IP	６		IP
+志賀　　美優	2.20	0.17	2.9	６		IP	６		IP	１		IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP	５		IP

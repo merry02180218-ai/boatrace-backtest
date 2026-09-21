@@ -1,0 +1,8 @@
+data=
+1	0
+花田　　和明	9.80	0.12	2.3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+橋本　　年光	4.80	0.16	3.1	４		IP	４		IP	２		IP	４		IP	２		IP	６		IP	２		IP	４		IP	６		IP	３		IP
+森下　　　勇	3.40	0.22	4.1	３		IP	６		IP	５		IP	５		IP	４		IP	４		IP	６		IP	５	4	IP	４	6	IP	２		IP
+松本　　一毅	3.40	0.17	3.3	４		IP	３	5	IP	５		IP	４		IP	５		IP	４		IP	６		IP	５		IP	６		IP	３		IP
+尾形　　栄治	3.60	0.21	4.1	４		IP	４		IP	５		IP	４		IP	５		IP	５		IP	４		IP	４		IP	４		IP	３		IP
+松井　　洪弥	3.50	0.13	3.3	４		IP	６		IP	３	5	IP	６		G1	６		G1	６		G1	４		G1	４		G3	６		G1	３		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+西川　　真人	8.20	0.13	2.5	３		IP	１		IP	２		IP	１		IP	３		IP	２		IP	１		IP	１		IP	４		IP	１		IP
+宇留田　翔平	5.60	0.17	2.8	１		IP	４		IP	３		IP	３		IP	３		IP	４		IP	２		IP	３		IP	５		IP	４		IP
+杉村　　賢也	6.20	0.12	2.1	２		G3	４		IP	１		IP	４	1	IP	１		IP	４	4	IP	５		IP	３		IP	１		IP	４		IP
+北川　　潤二	4.40	0.17	2.5	３		IP	５		IP	４		IP	３		IP	４		IP	４		IP	５		IP	５		IP	３		IP	２		IP
+中村　　桃佳	3.80	0.17	3.9	５		G1	３		G1	６		IP	５		IP	５		IP	６		IP	４		IP	２		IP	４		IP	４		IP
+藤田　　康生	2.60	0.16	3.3	３		IP	５		IP	６		IP	５		IP	５		IP	６		IP	４		IP	５		IP	５		IP	４		IP

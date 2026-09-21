@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　賢一	7.20	0.13	3.1	２		IP	２		IP	３		IP	１		IP	１		IP	３		IP	３	2	IP	４		IP	２		IP	３		IP
+山下　　流心	4.78	0.14	2.9	３		IP	３		IP	６	3	IP	２		IP	５		IP	４		IP	２		IP	沈		IP	４		IP	４		IP
+小林　　孝弘	4.90	0.12	2.1	１		IP	１		IP	５		IP	３		IP	４		IP	６		IP	６	4	IP	３	4	IP	２		IP	６		IP
+郷原　　章平	4.60	0.15	3.3	４		IP	４		IP	６		G1	６		G1	５		IP	３	3	IP	１		IP	５		IP	２		IP	３		IP
+山下　　昂大	5.40	0.12	2.5	５		IP	３	6	IP	２		IP	３		IP	１		IP	５		IP	３		IP	４		IP	３		IP	４		IP
+前田　　篤哉	6.70	0.14	3.1	３		IP	４		IP	３		G1	２		IP	３		G2	４		G2	１	5	IP	３	4	IP	４		IP	１	3	IP

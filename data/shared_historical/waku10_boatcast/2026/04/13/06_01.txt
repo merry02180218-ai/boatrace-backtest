@@ -1,0 +1,8 @@
+data=
+1	0
+石井　　伸長	4.33	0.23	4.9	４		IP	４		IP	６		IP	４		IP	４		IP	５		IP	３		IP	１		IP	４		IP			IP
+瀬川　　大地	3.10	0.17	3.5	４		IP	３		IP	３		IP	５		IP	３		IP	６		IP	６		IP	５		IP	５		IP	６		IP
+佐藤　　右京	5.30	0.21	3.8	５	4	IP	落		IP	３		IP	２		IP	３		IP	２		IP	６		IP	２		IP	３		IP	２		IP
+小林　　甘寧	5.00	0.16	3.1	１		IP	５		IP	１		IP	２	5	IP	５		IP	５		IP	欠		IP	３	5	IP	４		IP	３		IP
+香川　　陽太	3.56	0.19	3.7	５		IP	４		IP	６		IP	６		IP	６		IP	３		IP	２		IP	落		IP	２		IP	６	6	IP
+安藤　　瑠希	4.70	0.14	2.5	４		IP	２		IP	１		IP	５		IP	３		IP	１		IP	５		IP	５		IP	５		IP	６		IP

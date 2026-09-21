@@ -1,0 +1,8 @@
+data=
+1	0
+上田　　洋平	7.00	0.16	3.6	３		IP	４		IP	１		IP	１		IP	１		IP	３		IP	４		IP	４		G3	１		IP	３		IP
+須藤　　隆雄	5.30	0.17	2.8	４		IP	６	3	IP	３		IP	２		IP	１		IP	５	3	IP	２		IP	５		IP	３		IP	３		IP
+中島　　秀治	5.00	0.14	2.8	５		IP	５	4	IP	４		IP	４		IP	２		IP	１		IP	１	4	IP	３		G3	５		G3	５		IP
+松本　　庸平	3.30	0.25	5.4	６		IP	５		IP	６	5	IP	５		IP	４		IP	４	3	IP	２		IP	３		IP	６		IP	４		IP
+清水　　攻二	4.40	0.22	4.7	５		IP	６		IP	５		IP	１		IP	４		IP	６		IP	５		G3	２		G3	２		IP	３		IP
+宮崎　　奏磨	1.10	0.18	3.4	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

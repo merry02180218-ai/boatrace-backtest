@@ -1,0 +1,8 @@
+data=
+1	0
+上野　真之介	10.60	0.09	1.6	１		G1	１		G1	１		G1	１		G1	１		SG	１		IP	１		IP	１		IP	１		IP	１		IP
+中島　　孝平	7.80	0.14	2.7	３		G1	２		G3	１		G1	２		IP	１		IP	３		G1	２		G1	３		G1	２		IP	６		G1
+海野　康志郎	6.10	0.11	1.9	４	2	G1	２		G1	３		G1	１		IP	４		IP	３		IP	６		IP	２		IP	５		G1	３		G1
+関　　　浩哉	6.20	0.12	3.1	３		G1	２		G1	５		SG	５		G1	３		G1	１		IP	４	6	G1	５		G1	５		SG	２		SG
+茅原　　悠紀	6.80	0.13	3.4	２	3	IP	４		SG	２		IP	４	4	G1	４		G1	４		G1	２		G1	３		SG	１		G1	５		G1
+渡辺　　浩司	6.30	0.14	3.5	３		G1	２		IP	２		IP	３		IP	４		IP	３		IP	４		IP	３		IP	３		G1	４		G1

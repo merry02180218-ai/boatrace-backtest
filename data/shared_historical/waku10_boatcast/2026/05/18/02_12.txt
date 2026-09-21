@@ -1,0 +1,8 @@
+data=
+1	0
+石田　　章央	7.80	0.16	3.3	３		IP	１		IP	１		IP	２		IP	４		IP	２		IP	１		IP	５		IP	１		IP	１		IP
+萩原　　秀人	7.20	0.11	3.3	２		IP	１		IP	２		G1	３		IP	４		G1	６		G1	２		IP	２		IP	２		G1	３		G1
+田口　　節子	5.60	0.13	2.7	１		IP	４		G2	３		G1	６		G3	２		G3	６	5	IP	４		IP	１		IP	３		G1	６		IP
+川尻　　泰輔	4.60	0.11	2.5	４		IP	５		IP	４		IP	６		IP	４		IP	２		IP	２		IP	３		IP	２		IP	６		G3
+中村　　桃佳	6.50	0.13	2.6	２		IP	６		G2	１		G2	２		IP	３		IP	３		IP	３		IP	２		IP	５		G1	３		G1
+山田　　晃大	3.50	0.12	2.0	５		IP	４		IP	６		IP	５		IP	４		IP	３		IP	４		IP	４		IP	４		IP	４		IP

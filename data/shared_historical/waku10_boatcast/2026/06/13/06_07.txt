@@ -1,0 +1,8 @@
+data=
+1	0
+土屋　　千明	9.40	0.14	2.6	１		IP	１		IP	１		G3	１		G3	２		IP	１		IP	２		IP	２		IP	１		IP	１		IP
+菅野　はやか	4.00	0.19	4.3	６		IP	６	4	IP	２		G3	２		G3	５		G3	４		G3	２		IP	３		IP	６		IP	６		IP
+田口　　節子	6.20	0.12	2.5	２		G3	３		IP	１		IP	４		G2	３		G1	６		G3	２		G3	６	5	IP	４		IP	１		IP
+池田　　浩美	5.30	0.15	3.5	４		G3	２		G3	４		IP	３		G3	１		IP	５	3	IP	３		IP	６		IP	２		G3	４		IP
+原　　加央理	4.30	0.22	3.4	２		IP	６	4	IP	２		IP	３		G3	４		G3	５		IP	３		IP	５		IP	４	4	IP	５		IP
+永井　　聖美	3.50	0.14	3.1	４		G3	４	5	G3	３		IP	６		IP	３		IP	５		IP	４		IP	４		IP	５		IP	５		IP

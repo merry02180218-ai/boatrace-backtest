@@ -1,0 +1,8 @@
+data=
+1	0
+平高　　奈菜	8.30	0.15	3.4	１		G2	６		SG	１		G3	２		G3	５		G1	１		IP	２		IP	２		G1	１		G1	１		IP
+宮崎　　安奈	4.50	0.15	2.8	２		IP	６		IP	２		IP	２		IP	４		IP	５	1	IP	２		IP	４		IP	６		IP	６		IP
+今井　　美亜	5.90	0.11	2.1	６		G2	４		IP	１		IP	１		IP	１		G3	３		G3	４		G1	６		G1	４		IP	３		IP
+遠藤　　エミ	7.60	0.15	3.0	６		G2	２		IP	３		IP	２		G2	３		G1	１		G1	２		IP	４		G1	２		G1	１		G3
+清水　　愛海	4.70	0.18	3.8	６		G2	１		IP	６	6	IP	３		IP	３		IP	２		G1	３		G1	６	6	G1	転		G3	４		IP
+神里　　琴音	3.30	0.16	4.4	２		G2	３		G3	３		IP	４		IP	６		IP	５		IP	５		IP	６		IP	６		IP	６		IP

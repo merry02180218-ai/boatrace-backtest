@@ -1,0 +1,8 @@
+data=
+1	0
+浦野　　　海	7.40	0.13	2.3	１		IP	１		IP	３		IP	Ｆ		IP	１		IP	２		IP	１		IP	２		IP	５		IP	１		IP
+常盤　　海心	3.00	0.19	5.3	２		IP	６	3	IP	６		IP	６		IP	４		IP	５		IP	５		IP	２		IP	６		IP	５		IP
+鹿島　　敏弘	4.40	0.17	2.9	５		IP	５		IP	３		IP	５		IP	３		IP	２		IP	４		IP	３		IP	４		IP	４		IP
+田中　　　結	1.00	0.20	6.0	６	6	IP																											IP
+西田　　　靖	3.80	0.18	3.0	２	2	IP	５	2	IP	６	2	G3	６	1	G3	４	2	IP	５	2	IP	４	2	IP	４	2	IP	３	2	IP	３	2	IP
+細川　　裕子	5.20	0.24	3.9	１	5	IP	３		G2	５		IP	２		IP	６		IP	２	5	IP	３		IP	４		G3	５		G1	５		G1

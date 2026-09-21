@@ -1,0 +1,8 @@
+data=
+1	0
+宮地　　元輝	10.80	0.13	2.9	１		G1	１		G1	１		G1	１		G1	１		G1	１		G1	１		G1	１		G1	１		IP	１		IP
+池永　　　太	5.50	0.14	2.8	５		G1	３		G1	４		G1	１		IP	５		G1	３		IP	１	1	IP	２		IP	５		IP	６		IP
+稲田　　浩二	6.56	0.19	3.0	４		G1	２		G1	２		G1	５		G1	１		IP	転		IP	４		IP	２		IP	２		IP	６		G1
+杉山　　裕也	5.70	0.14	2.8	５		IP	３	3	IP	６		G1	２		G1	２	3	IP	４	3	IP	２		IP	４	3	IP	３		IP	２		IP
+秦　　　英悟	4.90	0.13	3.0	２		G1	５		G1	１		IP	６		G1	３		G2	３		IP	６		IP	５		IP	３		G1	６		G1
+海野　康志郎	7.60	0.15	2.2	５	4	G1	１	1	IP	１	1	IP	４	1	IP	５	4	G1	１		IP	２	2	IP	２		IP	１	1	IP	２		SG

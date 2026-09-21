@@ -1,0 +1,8 @@
+data=
+1	0
+横澤　　剛治	9.10	0.19	3.3	１		IP	４		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		G1	１		IP	１		IP
+田路　　朋史	5.60	0.20	3.0	５		IP	１		IP	２		IP	３		IP	３		IP	６		IP	６		IP	２		IP	３		IP	２		IP
+東口　　　晃	4.10	0.19	3.2	３	4	IP	５	6	IP	５		IP	６		IP	６		IP	不		IP	１		IP	１		IP	６		IP	２		IP
+福田　　　理	4.00	0.17	3.5	５		IP	６		IP	６		IP	５		IP	２		IP	４		IP	２		IP	４		IP	４		IP	３	5	IP
+塚越　　陸斗	1.40	0.26	4.5	５	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	５	6	IP	６	6	IP
+久田　　敏之	5.60	0.10	2.6	３		G1	４		G1	５		SG	４		SG	２		IP	３	5	G1	４		IP	３		G1	６		G1	３		IP

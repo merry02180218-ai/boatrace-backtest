@@ -1,0 +1,8 @@
+data=
+1	0
+藤堂　　里香	7.30	0.19	4.3	３		G1	４		IP	１		IP	１		G3	１		IP	１		IP	２		IP	３		IP	３		IP	６		IP
+本岡　　勝利	3.90	0.17	4.0	５		IP	４		IP	６		IP	４		IP	６		IP	２		IP	３		IP	４		IP	６		IP	２		IP
+山ノ内　雅人	7.00	0.15	2.4	１		IP	３		IP	３		IP	２		IP	３		IP	５		IP	１		IP	２		IP	４		IP	１		IP
+長野　　道臣	5.60	0.15	2.7	３		IP	３		IP	２		IP	１		IP	３		IP	２		IP	６		IP	６		IP	４	5	IP	３		IP
+中里　　昌志	2.50	0.18	3.7	６		IP	２		IP	５		IP	４	4	IP	５	4	IP	６		IP	５	4	G3	５		G3	６	4	IP	５		IP
+太田　　和美	4.70	0.14	3.7	３		IP	４		IP	５	5	IP	５		G1	２	3	IP	２		IP	４		G2	４		G2	５		IP	４		IP

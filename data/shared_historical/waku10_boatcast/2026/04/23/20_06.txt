@@ -1,0 +1,8 @@
+data=
+1	0
+小野　　　桜	7.60	0.18	3.5	４		IP	２		IP	１		IP	１		IP	１		IP	２		IP	１		IP	４		IP	４		G3	２		G3
+落合　　直子	7.00	0.13	2.4	２		G3	４		IP	３		IP	１		IP	２		IP	４		IP	１		IP	４		IP	３		IP	１		IP
+岩崎　　麗子	3.50	0.15	2.9	４		IP	６		IP	６		G3	２		IP	１		IP	４		IP	５		IP	５		IP	６		IP	５	4	IP
+魚谷　　香織	5.10	0.19	4.0	３		G3	３		IP	６		IP	４		IP	４		G3	２		G3	３	5	IP	３		IP	５		G3	２		G3
+土屋　　千明	4.10	0.15	2.3	３		IP	４		IP	４		IP	４		IP	３		IP	１		IP	５		G3	６		G3	転		IP	５		IP
+藤田　　美代	2.30	0.17	4.0	５		G3	６		IP	６	5	IP	４		IP	３		IP	４		IP	６		IP	６		IP	６		IP	５		IP

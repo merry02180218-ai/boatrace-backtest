@@ -1,0 +1,8 @@
+data=
+1	0
+塩嶋　　泰空	1.00	0.02	1.0	６		IP																											IP
+羽田　　妃希	3.40	0.23	4.9	６		IP	５		IP	６		IP	１		IP	３		IP	転		IP	５		IP	３		IP	５		IP	４		IP
+室田　　泰史	5.00	0.13	2.4	４		IP	３		IP	４		IP	３		IP	２		IP	３		IP	２		IP	４		IP	５		IP	５		IP
+笠原　　　亮	6.40	0.17	4.0	１		IP	２		G1	１		IP	４		G2	３		G2	３		G3	４		G3	４	5	G1	６	6	G1	４		G1
+栗山　　繁洋	3.00	0.14	3.0	３		IP	６		IP	４		IP	４		IP	５		IP	５		IP	３		IP	６		IP	５		IP	５		IP
+古賀　　智之	2.60	0.16	4.1	６		IP	５		IP	６		IP	５		IP	４		IP	６		IP	６		IP	５		IP	４		IP	３		IP

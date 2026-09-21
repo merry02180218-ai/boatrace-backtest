@@ -1,0 +1,8 @@
+data=
+1	0
+小山　　　勉	8.70	0.15	3.1	２		IP	１		IP	１		IP	３		IP	１		IP	２		IP	１		G1	２		IP	３		IP	１		IP
+川崎　　智稔	6.20	0.18	3.0	２		IP	４		IP	３		IP	４		IP	５		IP	３		IP	３		IP	２		IP	２		IP	１		IP
+泉　　　具巳	4.60	0.18	3.2	６		IP	６		IP	１		IP	６		IP	６		IP	５		IP	２		IP	２		IP	４		IP	２		IP
+向井田　直弥	4.40	0.12	2.4	５	6	IP	５	6	IP	２	6	IP	１	5	IP	５	6	IP	５	6	IP	６	6	IP	６	6	IP	１	5	IP	３	5	IP
+近藤　　稔也	3.50	0.18	2.7	６		IP	４		IP	６		IP	３		IP	５		IP	４		IP	５		IP	３		IP	２		IP	６		IP
+小野　　京平	2.70	0.24	4.8	４		IP	６		IP	５		IP	５		IP	３		IP	４		IP	６		IP	４		IP	５	5	IP	６		IP

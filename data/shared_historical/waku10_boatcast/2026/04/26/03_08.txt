@@ -1,0 +1,8 @@
+data=
+1	0
+田邉　　亮蔵	7.30	0.16	2.0	４		IP	１		IP	１		IP	１		IP	６		IP	２		IP	１		IP	３		IP	４		IP	１		IP
+荒井　　翔伍	4.40	0.17	4.0	４		IP	３		IP	３		IP	５		IP	４		IP	３		IP	３	3	IP	妨		IP	２		IP	５		IP
+本吉　　正樹	4.30	0.18	3.7	１		IP	４		IP	４		IP	１		IP	５		IP	５		IP	５		IP	６		IP	５		IP	３		IP
+宇田川　信一	2.60	0.20	4.1	２		IP	６		IP	５		IP	５		IP	５	3	IP	６		IP	５		IP	５	5	IP	５		IP	４		IP
+山本　　英志	4.80	0.12	1.7	４		IP	４		IP	４		IP	４		IP	２		IP	５		IP	４		IP	３		IP	２		IP	４		IP
+高山　　弘斗	3.50	0.21	4.0	５		IP	４		IP	４	5	IP	６		IP	２		IP	４		IP	２		IP	６		IP	５		IP	６		IP

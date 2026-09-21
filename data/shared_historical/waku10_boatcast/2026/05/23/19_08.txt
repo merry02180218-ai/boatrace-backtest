@@ -1,0 +1,8 @@
+data=
+1	0
+西原　　明生	7.30	0.17	3.6	２		IP	６		IP	１		IP	３		IP	２		IP	１		IP	５		IP	２		IP	１		IP	１		IP
+池本　　輝明	5.60	0.18	3.7	４		IP	５		IP	２		IP	４		IP	３		IP	４		IP	２		IP	３		IP	２		IP	３		IP
+谷津　　幸宏	5.50	0.13	2.0	４		IP	１		IP	３		IP	５		IP	４		IP	２		IP	６		IP	１		IP	５		IP	２	2	G3
+西川　　真人	3.60	0.16	3.6	４		IP	３		IP	４		IP	５		IP	５		IP	２		IP	４		IP	５		IP	５		IP	５		IP
+井上　　　茂	4.80	0.20	3.9	４		IP	６		IP	３		IP	４	4	IP	５		IP	３		IP	３		IP	６		IP	２	4	IP	２		IP
+福田　　柊人	1.50	0.26	6.0	５		IP	６		IP																								IP

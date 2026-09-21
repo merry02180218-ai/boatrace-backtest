@@ -1,0 +1,8 @@
+data=
+1	0
+桑島　　和宏	8.60	0.17	3.7	４		IP	１		IP	２		IP	１		IP	１		IP	１		IP	５		G1	２		G1	１		G1	１		G1
+重冨　　勇哉	6.00	0.21	3.5	１	1	IP	６		IP	２		IP	２		IP	４		IP	２		IP	４		IP	６		IP	２		IP	２		IP
+山下　　奈緒	4.40	0.21	3.9	妨		IP	３		IP	３		IP	２		IP	５		IP	５		IP	３		IP	３		IP	３		IP	５		IP
+大月　　遊雅	4.90	0.18	3.3	２		IP	５		IP	４		IP	４		IP	１		IP	１		IP	６		IP	６		IP	２		IP	６		IP
+齋藤　　真之	3.30	0.16	3.4	Ｆ	6	IP	６		IP	６	6	IP	３		IP	５		IP	４		IP	２	3	IP	４		IP	６		IP	３		IP
+高橋　　淳美	2.60	0.29	5.2	５		IP	５		IP	４	5	IP	６		IP	４		IP	５		G3	５		G3	６		IP	４		IP	４		G3

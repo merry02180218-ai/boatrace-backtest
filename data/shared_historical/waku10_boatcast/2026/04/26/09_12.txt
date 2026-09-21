@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　賢志	9.30	0.10	2.1	１		G1	６	2	G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+上原　健次郎	7.20	0.18	3.3	３		IP	２		IP	１		IP	４		IP	３		IP	２		IP	１		IP	３		IP	３		IP	２		IP
+池田　　雄一	5.50	0.16	3.3	４		IP	２		IP	４		IP	転		IP	４	4	IP	４		IP	２		IP	１		IP	５		IP	１		G1
+毒島　　　誠	8.90	0.15	2.6	２		IP	２		SG	２	3	SG	２	3	IP	２		IP	２	2	IP	１		IP	１		G1	１		SG	５		SG
+野田　なづき	5.00	0.19	3.4	４		G3	４		G3	３		G3	２		IP	２		IP	６		IP	１		G3	４		G3	４		IP	６		IP
+下出　　卓矢	4.50	0.15	3.8	２		IP	６		IP	２		IP	５		IP	６		IP	１		IP	６		G2	６		G2	６		IP	１		IP

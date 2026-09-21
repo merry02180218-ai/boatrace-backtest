@@ -1,0 +1,8 @@
+data=
+1	0
+川原　　　涼	8.00	0.20	3.0	１		IP	２		IP	１		IP	１		IP	４		IP	１		IP	１		IP	２		IP	５		IP	２		IP
+大池　　佑来	6.50	0.14	3.2	２		IP	３		IP	２		IP	２		G2	６		IP	３		IP	２		IP	１		IP	３		IP	５		IP
+豊田　　泰洋	2.50	0.16	3.1	５	5	IP	５		IP	６	4	IP	４		IP	４		IP	５		IP	５		IP	６		IP	６	4	IP	３		IP
+三宅　　　潤	4.80	0.15	3.7	６		IP	２		IP	２		IP	３		IP	４		IP	３		IP	５	5	IP	４		IP	２		IP	６		IP
+高岡　　竜也	5.70	0.15	2.6	１		IP	５	6	IP	２		IP	２		IP	２		IP	１		IP	５		IP	６		IP	４		IP	４	6	IP
+山崎　　昂介	3.00	0.20	4.2	６		IP	５		IP	４		IP	５		IP	４		IP	２		IP	４		IP	６		IP	５		IP	５		IP

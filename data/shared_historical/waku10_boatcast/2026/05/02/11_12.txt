@@ -1,0 +1,8 @@
+data=
+1	0
+丸野　　一樹	9.60	0.14	2.7	１		IP	１		IP	１		IP	１		IP	５		G1	１		SG	１		G1	１		G1	１		IP	２		IP
+柘植　　政浩	8.60	0.16	2.9	１		IP	２		IP	２		IP	１		IP	１	3	IP	１		IP	２		IP	２		IP	３		IP	２	3	IP
+藤原　　仙二	5.89	0.16	3.4	２		IP	２		IP	２		IP	５		G2	６	4	IP	３		IP	２		IP	４		IP	３	5	IP	落		IP
+濱崎　　　誠	5.70	0.17	3.0	１		IP	１	5	IP	５		IP	３		IP	１		IP	６		IP	６		IP	６		IP	２		IP	３		IP
+吉川　　晴人	4.20	0.15	2.7	５		IP	４		IP	２		IP	４		IP	５		IP	６		IP	５		IP	１		IP	３		IP	５		G2
+表　　　憲一	3.20	0.20	4.5	４		IP	５		IP	６		IP	６		IP	２		IP	３		IP	３		IP	６		IP	５		IP	６		IP

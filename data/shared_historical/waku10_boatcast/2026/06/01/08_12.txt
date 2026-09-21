@@ -1,0 +1,8 @@
+data=
+1	0
+黒野　　元基	9.20	0.14	2.0	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	２		IP	１		G1	１		G1
+石丸　　海渡	6.10	0.11	3.1	２		IP	５		IP	２		IP	５		G1	２		G1	１		IP	２		IP	５		IP	２		IP	５		IP
+近江　　翔吾	7.80	0.13	2.5	２		IP	３		IP	２		IP	５		G1	１		IP	２		IP	４		IP	１		IP	１		IP	１	4	IP
+寺田　　千恵	5.80	0.16	2.9	２		IP	３		IP	３		G2	２		G1	６		G1	４		G3	３		G3	３		G3	４		G3	３		G3
+木下　　大將	4.90	0.12	3.0	３		IP	２		IP	３		IP	２		IP	５	4	IP	５		IP	２		IP	５		IP	６		IP	３		IP
+赤羽　　克也	3.60	0.17	4.6	３		IP	５		IP	４		IP	３		IP	５		IP	５		IP	５		IP	４	5	IP	４	5	IP	４		IP

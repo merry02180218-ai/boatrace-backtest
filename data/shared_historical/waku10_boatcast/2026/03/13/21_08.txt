@@ -1,0 +1,8 @@
+data=
+1	0
+松江　　秀徳	7.40	0.17	2.9	１		IP	１		IP	１		IP	１		IP	６		IP	４		IP	１		IP	６		IP	２		IP	１		IP
+浅井　　　翼	3.50	0.25	4.9	欠		IP	３		IP	５		IP	１		IP	３	3	IP	６		IP	４		IP	４	3	IP	６		IP	６		IP
+小坂　　宗司	6.30	0.17	3.5	３		IP	１		IP	１		IP	１		IP	５		IP	３		IP	３		IP	３		IP	４	4	IP	５		IP
+妻鳥　　晋也	5.70	0.17	4.8	４		G3	１	3	G3	２		IP	６		IP	３		IP	３		IP	２		IP	５		IP	４		IP	２		IP
+広次　　　修	5.80	0.18	2.4	５		IP	２		IP	２		IP	３		IP	３		IP	５		IP	４		IP	２		IP	１		IP	４		IP
+井上　　一輝	4.10	0.13	3.1	５		G1	５		G1	５		G1	３		G1	６		G1	４		IP	５		IP	２	5	IP	６		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+砂長　　知輝	9.80	0.12	2.2	１		G1	１		G1	１		SG	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	１		G1
+堂原　　洋史	4.44	0.16	3.0	５		IP	欠		IP	５		IP	４		IP	４		IP	２		IP	２		IP	４		IP	５		IP	３		IP
+関口　　智久	4.70	0.14	3.0	１		IP	６		IP	５		IP	３		IP	５		IP	４	4	IP	４		IP	４		IP	４		IP	１		IP
+滝沢　　芳行	5.60	0.13	2.7	５		IP	５		IP	３		IP	５		G3	５		G3	１		IP	２		IP	３		IP	２		IP	１		IP
+小川　竜太朗	4.40	0.15	3.2	３		IP	５		IP	１		IP	５		IP	４		IP	２		IP	５	6	IP	５	6	IP	４		IP	４		IP
+浅見　　宗孝	4.50	0.20	5.3	４		IP	３	5	IP	５		IP	５		IP	４		IP	２		IP	３		IP	６		IP	３	4	IP	３		IP

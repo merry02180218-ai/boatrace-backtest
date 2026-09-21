@@ -1,0 +1,8 @@
+data=
+1	0
+丸岡　　正典	10.00	0.13	3.7	１		IP	１		IP	１		G2	１		G2	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+高田　ひかる	7.40	0.19	3.3	１		IP	３		IP	２		IP	５		G1	４		G1	１		IP	１		IP	２		IP	１		IP	４		IP
+大場　　恒季	5.40	0.16	3.4	２		IP	５		IP	４		IP	６		IP	２		IP	４		IP	３		IP	３		IP	３		IP	２		IP
+椎名　　　豊	6.90	0.14	2.8	２		IP	３		G3	２		IP	３	6	IP	２		IP	４		IP	４		IP	２		IP	２		IP	２		IP
+佐藤　　博亮	5.10	0.14	2.2	１		IP	４		IP	６		IP	３		IP	５		IP	２		IP	２		IP	３		IP	５	6	IP	４	3	IP
+宮之原　輝紀	4.50	0.13	3.7	３	5	IP	５		G1	４		IP	２		IP	４		G1	６		G1	５		G1	４		SG	４		G1	５		G1

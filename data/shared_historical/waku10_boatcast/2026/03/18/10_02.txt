@@ -1,0 +1,8 @@
+data=
+1	0
+横川　　聖志	8.20	0.14	1.9	２		IP	１		IP	１		IP	４		G1	２		IP	１		IP	１		IP	６		IP	１		IP	１		IP
+柳生　　泰二	7.20	0.16	3.0	２		IP	３		IP	６	3	IP	１		G1	５		IP	１		IP	３		G1	２		G1	２		G1	２		G2
+花田　　和明	4.20	0.16	2.4	５		IP	４		IP	４		IP	５		IP	４		IP	２		IP	５		G3	４		IP	４		IP	２		IP
+上野　　拓馬	5.00	0.20	4.5	４		IP	１		IP	３		IP	３		IP	５		IP	３		IP	３	5	IP	３		IP	５		IP	５		IP
+相馬　　　翔	3.60	0.20	3.4	６	6	IP	５		IP	５		IP	３		IP	３		IP	５		IP	３	6	IP	６		IP	４		IP	３		IP
+齋藤　　真之	1.60	0.18	4.6	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	５		IP	５		IP	５	5	IP	５		IP

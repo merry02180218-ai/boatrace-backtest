@@ -1,0 +1,8 @@
+data=
+1	0
+尾上　　雅也	9.70	0.12	2.6	１		IP	１		IP	１		IP	１		G1	１		IP	３		IP	１		IP	１		IP	１		G3	１		IP
+東口　　　晃	5.20	0.19	3.9	４		IP	４		IP	４		IP	６		IP	１		IP	３		IP	４		IP	６		IP	２		IP	１		IP
+菊池　　峰晴	5.30	0.22	4.6	１		IP	４		IP	６		IP	６		IP	３		IP	１		IP	６		IP	２		IP	２		IP	４		IP
+渡邉　　俊介	6.00	0.12	1.9	１		IP	１		IP	３		IP	１		IP	５		IP	５		IP	３	5	IP	３		IP	３	3	IP	５		IP
+伊藤　　喜智	5.70	0.14	3.0	２		IP	３		IP	３		IP	５	6	IP	２		IP	５		IP	３	4	IP	３		IP	２		IP	４	6	IP
+山本　　幸也	2.20	0.16	4.3	６		IP	６		IP	６		IP	５		IP	４		IP	３		IP	６		IP	６		IP	４		IP	６		IP

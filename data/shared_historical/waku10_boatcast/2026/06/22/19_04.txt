@@ -1,0 +1,8 @@
+data=
+1	0
+浜本　　裕己	8.40	0.13	2.5	２		IP	１		IP	２		IP	２		IP	１		IP	２		IP	１		IP	３		IP	３		IP	１		IP
+樋江井　　舞	4.50	0.17	3.1	５		IP	６		IP	２		G3	６		G3	５		IP	６		IP	５		IP	１		IP	２		IP	１		IP
+金田　　大輔	5.90	0.17	3.1	１		IP	３	5	IP	２		IP	３		IP	３	4	IP	６		IP	４		IP	２		IP	５		IP	２		IP
+久保田　凪紗	2.00	0.27	3.9	６		IP	５		IP	６	5	IP	３		G3	４		G3	６		G3	６		IP	６		IP	６		G3	５		G3
+金子　　良昭	3.70	0.16	2.5	６		IP	６		IP	３		IP	１	3	IP	４	4	IP	５		IP	４	3	IP	３	4	IP	６	2	IP	５	2	IP
+岡村　　　仁	5.20	0.15	3.0	２	1	IP	６		IP	４		IP	２		IP	１	5	IP	６		G2	５		G2	５		IP	２		IP	３		IP

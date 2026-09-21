@@ -1,0 +1,8 @@
+data=
+1	0
+神里　　琴音	8.50	0.16	3.6	１		IP	１		IP	５		G2	１		G3	１		G3	１		IP	１		IP	２		IP	３		IP	２		IP
+笠原　　　亮	6.00	0.13	2.8	４		G2	２		G3	３		G3	５		G1	５		G1	６		G1	２		SG	２		IP	２		IP	３		IP
+高田　　　綾	2.67	0.18	3.2	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP	４		IP	１		IP	転		IP	Ｆ		G3
+宮本　　夏樹	5.60	0.13	3.6	５	5	IP	４	6	IP	４		IP	１		IP	２		IP	２		G3	２		G3	５	5	IP	２		IP	５		IP
+都築　　正治	5.50	0.16	2.8	５		IP	１		IP	２		IP	３	4	IP	２	4	IP	３	3	IP	３		IP	３		IP	５		IP	６		IP
+岩崎　　芳美	4.20	0.16	4.0	４		G3	５		G3	３		G2	６		G2	４	5	G2	４		IP	５		IP	５	5	IP	３		IP	２		IP

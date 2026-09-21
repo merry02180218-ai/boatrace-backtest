@@ -1,0 +1,8 @@
+data=
+1	0
+尾形　　栄治	8.00	0.18	2.8	２		IP	３		IP	１		IP	３		IP	１		IP	１		IP	２		IP	２		IP	１		IP	４		IP
+栗原　　直也	4.80	0.17	4.6	３		IP	２		IP	２		IP	４		IP	３		IP	５		IP	５		IP	５		IP	４	3	IP	３		IP
+冨田　　秀幸	4.00	0.20	4.2	４	4	IP	５		IP	４		IP	５		IP	４		IP	４		IP	４		IP	２		IP	３		IP	５		IP
+木谷　　賢太	5.40	0.14	3.7	６		IP	３		IP	６		IP	２		IP	２		IP	１		IP	３	6	IP	３		IP	３		G3	５	5	IP
+加木　　　郁	4.80	0.19	4.4	２		IP	６		IP	４		IP	２		IP	２		IP	５		IP	６		IP	４		IP	２		IP	４		IP
+吉永　　則雄	3.50	0.14	3.5	３	5	IP	５	4	IP	５	3	IP	２	5	IP	４	5	IP	４		IP	５		IP	５		IP	６	4	IP	４		IP

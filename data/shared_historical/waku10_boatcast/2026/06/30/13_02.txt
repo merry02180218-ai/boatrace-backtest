@@ -1,0 +1,8 @@
+data=
+1	0
+塚田　　修二	4.00	0.22	5.1	４		IP	４		IP	６	2	IP	３		IP	５		IP	４		IP	３		IP	２		IP	４		IP	６		IP
+小澤　　　学	3.60	0.25	5.8	４		IP	３		IP	２		IP	４		IP	３		IP	５		IP	５		IP	６		IP	６		IP	５	3	IP
+瀬川　　大地	3.60	0.13	3.1	２		IP	５		IP	４		IP	５		IP	３		IP	５		IP	６		IP	６		IP	４		IP	３		IP
+福田　　雅一	5.60	0.16	3.0	２		IP	４		IP	５		IP	４		IP	２		IP	４		IP	２		IP	１		IP	３		IP	５		IP
+岡　　　暢祐	2.30	0.17	3.9	４		IP	６		IP	転	6	IP	５		IP	５		IP	６		IP	５	6	IP	５		IP	２		IP	６		IP
+吉岡　　　誠	2.10	0.21	4.8	６		IP	４		IP	４	5	IP	６		IP	６		IP	６		IP	５	5	IP	４		IP	６		IP	５		IP

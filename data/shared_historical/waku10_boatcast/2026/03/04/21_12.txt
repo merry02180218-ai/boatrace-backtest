@@ -1,0 +1,8 @@
+data=
+1	0
+長尾　　章平	9.30	0.11	2.3	１		IP	５		IP	１		IP	２		IP	１		IP	１		IP	１		G1	１		G1	１		IP	１		IP
+金子　　猛志	3.60	0.15	3.3	６		IP	３		IP	２		IP	６		IP	５		IP	４		IP	６		IP	４		IP	２		IP	６		IP
+安達　　裕樹	5.80	0.12	3.0	２		IP	１		IP	３		IP	４		IP	５		G2	３		G2	５		IP	４		IP	４		IP	１		IP
+滝川　真由子	5.30	0.17	3.0	１		IP	１		G3	５		IP	６	5	IP	Ｆ		IP	４		IP	１		IP	２		IP	５		IP	３		G3
+中渡　　修作	3.10	0.20	3.4	６		IP	５		IP	５		IP	５		IP	６		IP	３		IP	２		IP	６		IP	３		IP	５		IP
+真庭　　明志	4.80	0.18	3.0	２	5	IP	５	5	IP	５		IP	２		IP	３	4	IP	３		IP	５		IP	４		IP	４		IP	３		IP

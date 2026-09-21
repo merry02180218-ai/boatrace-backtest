@@ -1,0 +1,8 @@
+data=
+1	0
+重富　　伸也	6.10	0.14	2.9	１		IP	２		IP	６		IP	５		IP	２		IP	２		G3	５	2	IP	２		IP	１		IP	４	6	IP
+小林　　文彦	5.50	0.18	3.5	５		IP	２	3	IP	４		IP	５		IP	６		IP	１		IP	２		IP	１		IP	４		IP	３		IP
+秋末　　秦悟	5.40	0.13	3.1	２		IP	１		IP	５		IP	２		IP	２		IP	６		IP	２		IP	３		IP	５		IP	６		IP
+木山　　誠一	4.60	0.11	2.5	５		IP	２		IP	６		IP	１		IP	３		IP	２		IP	５	5	IP	５		IP	６		IP	３		IP
+櫻井　　　隼	2.40	0.27	5.3	６		IP	３		IP	６	6	IP	４		IP	５		IP	６	6	IP	不	6	IP	３	6	IP	６	6	IP	５	6	IP
+岩瀬　　裕亮	6.10	0.12	3.2	３		G1	３		G1	１		G2	３		IP	４		IP	１		IP	６		G1	６		G1	４	5	G1	３		G1

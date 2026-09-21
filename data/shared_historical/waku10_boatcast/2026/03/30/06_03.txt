@@ -1,0 +1,8 @@
+data=
+1	0
+本岡　　勝利	6.40	0.19	2.3	１		IP	１		IP	３		IP	４		IP	１		IP	４		IP	４		IP	２		IP	５		IP	３		IP
+三浦　　敬太	6.30	0.16	2.7	２		IP	４		IP	１		IP	２		IP	４		IP	１		IP	２		IP	５		IP	６		IP	２		IP
+上野　　秀和	5.70	0.21	4.6	２		IP	５		IP	３		IP	３		IP	２	4	IP	１		IP	２		IP	５		IP	３		G3	６		G3
+岡部　　大輝	5.50	0.17	3.1	４		IP	６		IP	３	5	IP	４		IP	５		G3	１		IP	２	3	IP	２		IP	４		IP	２	2	IP
+鈴木　　柊介	3.50	0.15	2.5	５	6	IP	３	6	IP	６		IP	４		IP	３		IP	６		IP	４		IP	２		IP	６		IP	５		IP
+小林　　文彦	4.50	0.24	4.7	３	5	IP	３		IP	３		IP	５		IP	４		IP	４		IP	３		IP	３		IP	４	5	IP	６		IP

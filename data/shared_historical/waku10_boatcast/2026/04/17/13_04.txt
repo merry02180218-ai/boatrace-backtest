@@ -1,0 +1,8 @@
+data=
+1	0
+木下　　陽介	6.90	0.14	2.3	６		IP	４		IP	１		IP	１		IP	２		IP	５		IP	２		IP	２		IP	１		IP	２		IP
+中山　　翔太	7.10	0.17	2.6	３		G1	１		IP	１	3	IP	１		IP	５		IP	２		IP	２		IP	３		IP	２		IP	５		IP
+南野　　利騰	3.40	0.14	2.5	５		IP	２		IP	５		IP	５		IP	６		IP	４		IP	４		IP	４		IP	６		IP	３		IP
+川崎　　誠志	3.90	0.21	5.0	５		IP	５		IP	６		IP	５		IP	２		IP	２		IP	２	5	IP	５		IP	５		IP	４	5	IP
+四宮　　与寛	4.50	0.18	3.6	４		IP	２		IP	３		IP	２		IP	３		IP	５		IP	３		IP	６		IP	５		IP	６		G1
+高山　　智至	4.10	0.23	5.7	４		IP	４		IP	６		IP	４	5	IP	５		IP	５		IP	２		IP	３		IP	４		IP	３		IP

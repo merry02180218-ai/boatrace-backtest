@@ -1,0 +1,8 @@
+data=
+1	0
+羽田　　妃希	6.80	0.24	4.6	３		IP	１		IP	４		IP	２		IP	１		IP	４		IP	１		IP	４		IP	３		IP	３		IP
+中澤　　和志	6.20	0.18	3.9	４		IP	６		IP	６		IP	１		IP	２		IP	３		IP	２		IP	２		IP	５		G1	１		G1
+本吉　　正樹	6.20	0.18	2.9	１		IP	２		IP	５		IP	３		IP	３		IP	１		IP	４		IP	４		IP	１		IP	５		IP
+丸尾　　義孝	4.60	0.15	3.2	４		IP	６		IP	６		IP	３		IP	５		IP	３		IP	２		IP	１		IP	３		IP	５		IP
+天野　　友和	5.80	0.16	2.9	１		IP	５	6	IP	５	6	IP	２		IP	３		IP	１		IP	２		IP	２		IP	６		IP	５		IP
+加藤　　優弥	2.40	0.14	2.8	５		IP	６		IP	５		IP	３		IP	６		IP	３		IP	５		IP	５		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　裕隆	6.90	0.19	3.6	１		IP	３		IP	１		IP	２		IP	１		IP	３		IP	６		IP	２		IP	４		IP	３		IP
+中村　　辰也	4.78	0.17	3.1	６		IP	３	3	IP	３		IP	３		IP	５		IP	５		IP	２		IP	欠		IP	１		IP	５		IP
+白井　　友晴	4.80	0.19	3.5	５		IP	４		IP	１		IP	５	4	IP	１		IP	３		IP	５		IP	５		IP	３		IP	４		IP
+小川　　知行	4.30	0.14	2.8	２		IP	４	5	IP	３	6	IP	５		IP	６		IP	６		IP	３		IP	３	3	IP	２		IP	６		IP
+和田　　兼輔	5.70	0.12	2.8	２	6	G1	３		G1	５		IP	２		IP	５		G1	４		IP	２		IP	２		IP	４		G1	５	6	G1
+芝田　　浩治	3.30	0.17	3.9	６		IP	４		IP	４		IP	３		IP	４		IP	５		IP	５	5	IP	５		IP	４		IP	４	5	IP

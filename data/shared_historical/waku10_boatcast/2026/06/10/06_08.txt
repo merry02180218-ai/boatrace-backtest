@@ -1,0 +1,8 @@
+data=
+1	0
+大串　　重幸	7.80	0.16	3.2	１		IP	２		IP	５		IP	４		IP	１		IP	１		IP	２		IP	１		IP	３		G3	１		IP
+萬　　　正嗣	5.40	0.14	2.7	１	3	IP	２		IP	３		IP	３		IP	２		IP	３		IP	４		IP	６		IP	４		IP	６		IP
+南野　　利騰	4.50	0.14	2.5	２		IP	３	4	IP	４		IP	５		IP	２		IP	４		IP	６		IP	５		IP	２		IP	５		IP
+前野　　竜一	5.00	0.12	2.3	４	5	IP	４		IP	２	5	IP	４		IP	４		IP	２	5	IP	３		IP	４		IP	５	5	IP	３		IP
+星野　　太郎	3.50	0.15	3.2	３		IP	３		IP	３		IP	３		IP	５		IP	６		IP	５		IP	６		IP	４		IP	６		IP
+伊藤　　尚汰	2.80	0.19	3.7	２		IP	５		IP	４		IP	５		IP	６		IP	４		IP	４		IP	６		IP	６		IP	６		IP

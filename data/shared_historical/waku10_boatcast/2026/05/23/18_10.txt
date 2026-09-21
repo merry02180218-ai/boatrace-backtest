@@ -1,0 +1,8 @@
+data=
+1	0
+堀之内紀代子	8.20	0.17	3.4	１		G3	１		G3	１		G2	１		IP	２		IP	妨		IP	５		IP	１		IP	１		G3	１		G3
+中川　　りな	7.20	0.11	2.5	３		G3	３		IP	２		IP	２	3	IP	３		IP	３	3	IP	２		IP	２		IP	２	3	IP	２		IP
+角　　ひとみ	6.67	0.23	3.4	５		G3	１		G3	３		G3	２		G3	３		IP	２	2	G3	転		IP	２	2	IP	４		IP	２		G3
+竹井　　奈美	5.50	0.16	3.4	５		G3	３		G3	６		IP	１		IP	４		IP	３		G3	５		G3	１		G3	１		G1	５	5	G1
+鈴木　　成美	2.80	0.14	3.2	６		G3	２		G3	５		IP	６	6	IP	５		IP	６		IP	６	6	IP	５		IP	３		IP	４		IP
+福山　恵里奈	1.10	0.19	4.0	６		G3	６		G3	６		IP	５		IP	６		G3	６		G3	６		G3	６		IP	６		IP	６		IP

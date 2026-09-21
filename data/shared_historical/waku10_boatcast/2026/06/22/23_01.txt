@@ -1,0 +1,8 @@
+data=
+1	0
+北川　　潤二	8.60	0.12	2.7	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	５		IP	１		IP	１		IP
+関　　　裕也	4.50	0.16	3.5	５		IP	４		IP	２		IP	３		IP	４		IP	４		IP	３		IP	５		IP	２	1	IP	６		IP
+松井　　貫太	3.50	0.23	4.7	２		IP	２		IP	６		IP	６		IP	６		IP	６		IP	４		IP	６		IP	４		IP	３		IP
+松下　　知幸	5.10	0.15	3.3	３		IP	５		IP	１		IP	３		IP	５	5	IP	５		IP	６	5	IP	１		IP	２	5	IP	４		IP
+早川　　尚人	3.20	0.21	4.9	６		IP	３		IP	５	4	IP	５	6	IP	６		IP	５		IP	５		IP	３	6	IP	２		IP	５	6	IP
+林　　　恵祐	1.20	0.19	4.5	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+宮地　　秀祈	7.60	0.15	2.9	１		IP	４		IP	３		IP	４		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+栗原　　直也	4.60	0.18	4.4	４		IP	３		IP	５		IP	５		IP	５		IP	４	3	IP	３		IP	２		IP	５		IP	１		IP
+田村　　　慶	4.22	0.22	4.4	４		IP	３		IP	６		IP	１		IP	３		IP	６		IP	４		IP	落		IP	５		IP	４		IP
+橋本　　久和	5.80	0.15	2.6	１		IP	４		IP	４		IP	１		IP	４	3	IP	２	5	G3	５		IP	５		IP	１		IP	４		IP
+木村　　亮太	3.60	0.17	2.9	５		IP	６		IP	６		IP	１		IP	４		IP	６		IP	６		IP	４		IP	３		IP	３		IP
+吉田　凌太朗	4.30	0.15	3.3	２		IP	６		IP	６		IP	３		IP	５		IP	６		G1	３		G1	５		IP	２		IP	３		IP

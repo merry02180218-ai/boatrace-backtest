@@ -1,0 +1,8 @@
+data=
+1	0
+定松　　勇樹	10.40	0.14	3.2	１		SG	３		G1	１		IP	１		IP	２		G1	１		G1	１		SG	１		G2	１		G2	１		G1
+森高　　一真	6.80	0.14	4.4	２		G1	４		G1	３		SG	４		G1	６		G1	３		G1	４		G1	２		G1	２		SG	３		SG
+平本　　真之	7.50	0.14	2.7	３		G1	３		G1	２		G1	２		G1	３		SG	３		SG	６		G1	３		IP	２		IP	１		IP
+上野　真之介	7.10	0.12	3.0	４		G1	３	5	G1	３		G1	２		G1	１		SG	２		IP	１		IP	５		IP	６		IP	２		IP
+河合　　佑樹	6.50	0.14	3.5	３		G1	３		SG	２		SG	３		G1	４		G1	５		IP	４	4	IP	１		IP	３		IP	４		G1
+中田　　竜太	5.60	0.19	4.2	２		IP	６		G2	５		G2	３		IP	３		IP	３	5	G1	３		G1	４		G2	３		G2	４		G1

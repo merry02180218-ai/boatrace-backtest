@@ -1,0 +1,8 @@
+data=
+1	0
+川崎　　公靖	7.30	0.15	3.1	３		IP	２		IP	６		IP	１		IP	２		IP	１		IP	４		IP	２		IP	２		IP	１		IP
+河上　　年昭	3.70	0.24	4.6	４		IP	Ｆ		IP	３		IP	５		IP	１		IP	６		IP	４		IP	５		IP	４		IP	４		IP
+下出　　卓矢	6.67	0.17	2.7	２		IP	２		IP	４		IP	１		IP	２		IP	５		IP	欠		IP	４		IP	３		IP	１		IP
+島崎　丈一朗	3.70	0.18	3.3	４		IP	３		IP	５		IP	６		IP	２		IP	３		IP	５		IP	６		IP	３		IP	６		IP
+小野　　信樹	2.80	0.15	2.5	１		IP	５		IP	４		IP	５		IP	６		IP	４		IP	５		IP	６		IP	６		IP	６		IP
+港　　　理樹	2.50	0.20	4.3	３		IP	５		IP	５		IP	落		IP	３		IP	５		IP	５		IP	６		IP	転		IP	４		IP

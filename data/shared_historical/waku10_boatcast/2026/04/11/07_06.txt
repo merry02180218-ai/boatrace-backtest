@@ -1,0 +1,8 @@
+data=
+1	0
+石川　　吉鎬	7.40	0.17	3.7	３		IP	４		IP	２		IP	１		IP	５	2	IP	１		IP	４		IP	１		IP	１		IP	１		IP
+川原　　正明	6.60	0.13	2.7	２		IP	３		IP	１	3	IP	２		IP	５		IP	２		IP	１		IP	１		IP	４		IP	Ｆ		IP
+山口　　晃朋	6.30	0.13	3.0	３	4	IP	５		IP	１		IP	２		IP	５		IP	１		IP	６		IP	１		IP	１		IP	４		IP
+西田　　和加	1.50	0.22	4.3	５		IP	５		G3	５		IP	６		IP	５		IP	５		IP	６	5	IP	６		IP	６		IP	６		IP
+諏訪　　玲奈	2.70	0.21	4.6	６		IP	６		IP	４	6	IP	３		IP	５		IP	６		IP	６	6	IP	３		IP	４		IP	６		IP
+宮田　　龍馬	4.10	0.16	4.2	４		IP	３		IP	４		IP	３		IP	５		IP	３		G3	３		G3	６		G1	６		G1	５		G1

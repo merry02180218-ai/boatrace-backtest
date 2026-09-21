@@ -1,0 +1,8 @@
+data=
+1	0
+前田　　篤哉	8.90	0.15	3.2	４		IP	１		IP	１		IP	２		IP	１		IP	１		G3	１		IP	３		IP	１		IP	１		IP
+渡邊　　裕貴	6.30	0.20	4.2	３		IP	１		IP	６		IP	４		IP	３		IP	１		IP	１		IP	３	3	IP	４		IP	３		IP
+崎　　　利仁	5.50	0.21	3.4	２		IP	２		IP	４		IP	３		IP	２		IP	４		IP	５		IP	４		IP	１		IP	６		IP
+河野　　主樹	3.90	0.15	3.3	３		IP	４		IP	４		G3	６		G3	４		IP	４		IP	３		IP	４		IP	４		IP	５	6	IP
+金田　　　諭	4.20	0.19	3.1	３		IP	３		IP	１	4	IP	４		IP	５		IP	５		G1	２		IP	６		IP	転		G3	５		IP
+中里　　昌志	3.70	0.16	4.1	５		IP	３		IP	６	5	IP	４	5	IP	３		IP	３		IP	４		IP	３		IP	６	5	IP	６		IP

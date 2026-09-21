@@ -1,0 +1,8 @@
+data=
+1	0
+荒木　　颯斗	8.40	0.15	2.8	２		IP	２		IP	１		IP	４		IP	２		IP	１		IP	２		IP	２		IP	１		IP	１		IP
+登玉　　隼百	4.60	0.18	3.0	２		IP	４	3	IP	６		IP	５		IP	１	4	IP	６		IP	１		IP	４		IP	５		IP	５		IP
+富永　夏哉人	6.20	0.18	3.6	２		IP	４		IP	２		IP	４		IP	１		IP	３		G3	２		IP	３		IP	５		IP	３		IP
+村本　　大成	3.70	0.19	3.4	５		IP	３		IP	４		IP	５		IP	３		IP	３		IP	５		IP	３		IP	５		IP	６		IP
+鳥居塚　嶺王	3.10	0.19	3.8	５		IP	４		IP	１	4	IP	５		IP	３		IP	５		IP	６		IP	６		IP	６		IP	５		IP
+近藤　　颯斗	2.90	0.19	4.3	４		IP	５		IP	４		IP	５		IP	６		IP	６		IP	４		IP	３		IP	５		IP	６		IP

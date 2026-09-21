@@ -1,0 +1,8 @@
+data=
+1	0
+今村　　暢孝	9.00	0.13	2.1	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	３		IP	３		IP	１		IP	１		IP
+津田　　裕絵	5.10	0.16	3.4	４		G3	６		G3	５		IP	２		IP	４		IP	５		IP	２		IP	１		IP	３		IP	３		IP
+久保原　秀人	4.20	0.15	3.7	４		IP	６		IP	４		IP	６		IP	３		IP	５		IP	３		IP	３		IP	３		IP	３		IP
+大須賀　　友	7.40	0.14	2.5	４		IP	３		IP	２		IP	１	3	IP	２		IP	４		IP	２		IP	１	3	IP	１		IP	３		IP
+浜崎　　準也	2.40	0.18	3.7	５		IP	５		IP	５		IP	６		IP	５		IP	５		IP	６		IP	５		IP	５		IP	２		IP
+福西　広太郎	3.50	0.18	3.4	４		IP	５		IP	６		IP	３		IP	４		IP	５		IP	３		IP	５		IP	３		IP	５	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+吉原　　聖人	7.40	0.20	3.3	１		IP	６		G3	１		G3	２		IP	６		IP	２		IP	２		IP	１		IP	２		IP	１		IP
+胡本　　悟志	3.50	0.17	3.4	５		IP	５		IP	５		G3	６		G3	３		IP	４		IP	３		IP	２		IP	５		IP	５		IP
+辻　　　栄蔵	7.80	0.12	2.9	１	4	IP	３		G1	３		G1	２		G1	６		G1	１		IP	２		G1	２		IP	２		G1	３		G1
+西村　　　勝	2.60	0.08	2.4	Ｆ		IP	３		IP	６		IP	３		IP	６		IP	５		IP	４		IP	６		IP	４		IP	６		IP
+芝田　　浩治	4.60	0.21	3.7	５		IP	５		IP	３		IP	６		IP	３	4	IP	２		IP	１		IP	３		IP	６		IP	５		IP
+櫻井　　　優	4.00	0.17	3.9	６		IP	４		IP	５		IP	６		IP	１		IP	３		IP	５		IP	４		IP	５		IP	２	5	IP

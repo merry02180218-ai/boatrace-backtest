@@ -1,0 +1,8 @@
+data=
+1	0
+永嶋　　裕一	7.90	0.15	1.8	１		IP	２		IP	１		IP	１		IP	２		IP	６		IP	１		IP	１		IP	２		IP	４		IP
+井芹　　大志	3.00	0.22	4.7	６		IP	６		IP	６		IP	４		IP	３		IP	６		IP	６		IP	３		IP	６		IP	２		IP
+柳瀬　　幹太	4.10	0.22	3.9	６		IP	３		IP	５		IP	２		IP	６		IP	３		IP	２	2	IP	３		IP	５		IP	６		G3
+伯母　　芳恒	4.10	0.17	3.3	３		IP	６		IP	６		IP	５		IP	６		IP	５		IP	３		IP	２		IP	２		IP	３		IP
+中村　　有裕	3.60	0.19	3.5	５	6	IP	４		IP	３		IP	２		IP	５	4	IP	４		IP	５		IP	５	3	IP	５		IP	４	4	IP
+鈴木　　柊介	1.40	0.17	2.7	６		IP	６		IP	５		IP	５		IP	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP

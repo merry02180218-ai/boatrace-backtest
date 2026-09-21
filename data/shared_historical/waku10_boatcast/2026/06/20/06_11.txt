@@ -1,0 +1,8 @@
+data=
+1	0
+益田　　啓司	9.00	0.13	1.6	１		IP	１		IP	１		IP	６		IP	１		IP	１		IP	１		IP	２	2	G1	１		IP	１		IP
+蜂須　　瑞生	6.80	0.17	3.3	１		IP	２		IP	３		IP	１		IP	５		IP	４		IP	１		IP	３		G3	４		G3	２		IP
+下河　　雅史	5.60	0.15	3.9	５		IP	２		IP	４		IP	２		IP	３		IP	４		IP	３	4	IP	３		IP	３		IP	３		IP
+乃村　　康友	5.60	0.16	3.0	４		IP	１		IP	３		IP	４		IP	２		IP	３		G3	２		IP	４		IP	４		IP	５	5	IP
+吉田　凌太朗	6.90	0.19	3.5	２		G1	１		IP	２		IP	３		IP	２		IP	５		IP	３		IP	３		IP	３	6	IP	２		IP
+渡邉　　睦広	4.80	0.17	3.1	１		G3	２		G3	６		IP	４		IP	５		IP	６		IP	３		IP	２		IP	５		IP	３		IP

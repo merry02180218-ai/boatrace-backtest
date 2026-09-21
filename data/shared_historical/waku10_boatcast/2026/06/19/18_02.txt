@@ -1,0 +1,8 @@
+data=
+1	0
+藤原　　碧生	6.60	0.15	4.0	１		G3	６		G1	Ｆ		SG	６		G1	１		IP	２		IP	３		G1	１		IP	３		IP	１		G1
+倉田　　茂将	4.70	0.15	3.4	６		IP	６		IP	３		IP	４		IP	６		IP	３		IP	３		IP	５		IP	１		IP	１		IP
+小林　　遼太	5.80	0.19	3.4	４		G3	３		IP	３		IP	３		IP	２		IP	２		IP	５		IP	２		G3	４		G3	３		IP
+中野　　希一	7.10	0.09	2.0	６		G3	１	3	IP	２		IP	２		IP	３		IP	２		IP	１		IP	２		IP	４		IP	２		IP
+上原　　　崚	6.40	0.15	2.7	３		IP	３		G2	６		G2	５		G2	２	6	IP	２		IP	２	6	IP	２		IP	３		IP	２		IP
+花田　　和明	3.80	0.20	3.1	４	4	IP	４	4	IP	５	4	IP	４		IP	２	4	IP	６	4	IP	３	2	IP	３	4	IP	５	2	IP	６	3	IP

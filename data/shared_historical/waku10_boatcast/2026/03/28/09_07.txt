@@ -1,0 +1,8 @@
+data=
+1	0
+三宅　　　潤	8.80	0.17	2.8	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	Ｆ		IP
+阿波　　勝哉	3.70	0.20	4.5	５		IP	６		IP	５		IP	４	3	IP	４		IP	５		IP	４		IP	３	6	IP	３		IP	３	6	IP
+高橋　　　勲	3.80	0.13	2.1	３		IP	６		IP	５		IP	３		IP	５		IP	１		IP	６		IP	５		IP	３		IP	５		G3
+池永　　　太	5.90	0.15	2.4	１		IP	５		G1	４		G1	５		G1	４		G1	１	5	IP	６		G1	３		G1	２		IP	３		IP
+安河内　　将	5.00	0.14	2.8	６		IP	４		G1	３		IP	２		IP	６		IP	５		G1	３		G1	３	4	IP	４		IP	２		G1
+杉山　　太陽	1.60	0.24	4.0	４		IP	５		IP	６		IP	５		IP	５		IP	転		IP	６		IP	６		IP	５		IP	６		IP

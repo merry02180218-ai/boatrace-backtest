@@ -1,0 +1,8 @@
+data=
+1	0
+原田　　幸哉	9.50	0.12	2.6	２		SG	１		G1	１		G1	１		IP	４		G1	１		G1	１		G1	１		G1	５		G1	１		SG
+海野　康志郎	8.20	0.11	3.0	２		IP	１		IP	２		IP	１		IP	６		IP	１		IP	２		G1	５		G1	１		G1	１		G1
+北野　　輝季	6.22	0.13	2.6	６		G3	３		G2	３		IP	２		G1	２		G1	転		G1	５		G1	１		IP	２		IP	５		G1
+浜先　　真範	4.80	0.14	2.3	３		IP	４		IP	２		IP	２		IP	６		G1	５		G1	６		IP	３		IP	２		IP	６		G1
+馬場　　貴也	5.90	0.15	4.0	５		SG	３		SG	３		G1	１		IP	５		G1	３		G1	５		G1	６		G1	１	4	SG	５		G1
+井上　　遥妃	3.30	0.16	3.8	４		SG	６		G2	６		G2	２		IP	４	5	IP	６		IP	６		G1	４		IP	５		IP	６		G1

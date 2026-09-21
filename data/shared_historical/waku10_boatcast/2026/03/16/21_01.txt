@@ -1,0 +1,8 @@
+data=
+1	0
+丹下　　　将	8.40	0.16	3.6	２		IP	３		IP	１		IP	２		IP	２		IP	２	2	IP	１		IP	１		IP	３		IP	１		IP
+中嶋　誠一郎	5.50	0.15	2.7	５		IP	１		IP	１		IP	４		IP	３		IP	２		IP	４		IP	６		IP	５		IP	２		IP
+林　　　恵祐	2.80	0.15	2.7	６		IP	３		IP	６		IP	６		IP	６		IP	６		IP	５		IP	４		IP	１		IP	６		IP
+小柳　　勝希	3.70	0.19	3.7	３		IP	４		IP	３		IP	６		IP	５	3	IP	５	5	IP	１		IP	５		IP	５	6	IP	５	5	IP
+北川　　幸典	3.40	0.18	3.3	５	6	IP	３		G3	５		G3	５		IP	２		IP	５		IP	６	4	IP	３		IP	４		IP	６		G3
+武田　　信一	2.70	0.22	4.3	６		IP	６		IP	４		IP	４		IP	４		IP	５		IP	４		IP	４		IP	６		IP	５		IP

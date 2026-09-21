@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　翔馬	8.40	0.12	2.2	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP	３		IP
+南野　　利騰	4.00	0.13	2.9	５		IP	２	3	IP	３		IP	５		IP	４		IP	５		IP	３		IP	４		IP	４		IP	５		IP
+清水　　紀克	4.30	0.13	2.7	４		IP	１	2	IP	２	2	IP	４	2	IP	４		IP	６	2	IP	６	2	IP	６	2	IP	２	2	IP	５	2	IP
+芹澤　　克彦	3.70	0.16	3.9	４		IP	４		IP	２		IP	４		IP	４		IP	５		IP	４		IP	４		IP	５		IP	６		IP
+広瀬　　聖仁	4.10	0.19	3.5	４		IP	４	6	IP	４		IP	４		IP	２		IP	４	4	IP	６		IP	５		IP	３	4	IP	４		IP
+今泉　　　徹	2.60	0.18	4.3	３	5	IP	６		IP	５		IP	６		IP	４	5	IP	６		IP	４		IP	６		IP	５		IP	４		IP

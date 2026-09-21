@@ -1,0 +1,8 @@
+data=
+1	0
+木下　　陽介	8.40	0.13	2.2	１		IP	１		IP	２		IP	５		IP	２		IP	２		IP	１		IP	２		IP	１		IP	１		IP
+清水　　敦揮	7.00	0.15	2.8	５		IP	２		IP	２		IP	４		IP	１		IP	４		G1	３		G1	２		IP	２		IP	１		IP
+若狭　奈美子	6.10	0.16	3.3	４		IP	４		IP	２		IP	３		G3	３		G3	４	4	G1	３		IP	５		IP	２		G3	１		G3
+君島　　秀三	7.10	0.17	2.9	３		IP	３		IP	１		IP	４		IP	３		IP	２		G1	３		IP	１		G3	２		IP	３		IP
+植田　　太一	3.00	0.17	2.4	４		IP	６		IP	５		IP	６		IP	４		G1	３		IP	６		IP	５	4	IP	４		IP	４		IP
+小林　　一樹	2.70	0.11	2.7	５		IP	５		IP	５	4	IP	６		IP	４	5	IP	４		IP	６		IP	６		IP	４		IP	３		IP

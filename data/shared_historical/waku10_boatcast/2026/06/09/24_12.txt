@@ -1,0 +1,8 @@
+data=
+1	0
+梅木　　敬太	7.00	0.15	3.4	１		IP	４		IP	１		IP	２		IP	１		IP	１		IP	５		IP	１		IP	４		IP	５		IP
+宇恵　　有香	5.44	0.18	3.3	３		IP	３		IP	３		IP	４		IP	１		G3	６		G3	２		IP	転		IP	３		IP	５		IP
+香月　　大輝	6.30	0.19	3.5	５		IP	２		IP	５		IP	６	4	IP	２		IP	１		IP	３		IP	１		IP	１		IP	３		IP
+長尾　京志郎	4.10	0.17	3.8	２		IP	３		IP	５		IP	３		IP	３		IP	エ	6	IP	３		IP	５		IP	６	6	IP	４		IP
+山崎　　昂介	3.20	0.19	4.1	６		IP	４		IP	４		IP	５		IP	４		IP	５		IP	４		IP	３		IP	６		IP	４		IP
+村松　　栄太	4.00	0.18	3.9	２	5	IP	２		IP	５		IP	６		IP	３		IP	６		IP	３		IP	５		IP	４		IP	５		IP

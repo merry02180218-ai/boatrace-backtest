@@ -1,0 +1,8 @@
+data=
+1	0
+泥谷　　一毅	6.60	0.20	3.9	２		IP	２		IP	３		IP	１		IP	１		IP	４		IP	転		IP	１		IP	Ｆ		IP	１		IP
+吉田　　宗弘	4.90	0.18	4.0	５		IP	３		IP	６		IP	５	3	IP	２		IP	２		IP	３		IP	３		IP	２		IP	５		IP
+長谷川　　充	6.40	0.18	3.6	１		IP	４		IP	３		IP	４	5	IP	１		IP	５		IP	１		IP	２		IP	２		IP	５		G3
+坂東　　　満	4.40	0.18	3.6	３		IP	６		IP	３		IP	５		IP	３		IP	６		IP	１		IP	３		IP	５		IP	４		IP
+坂口　　　周	5.50	0.18	3.5	２	3	IP	３		IP	５		IP	４		IP	３		G2	５		G2	３		IP	３		IP	２		IP	４		IP
+山本　稔太朗	4.10	0.16	3.4	５		IP	６	2	IP	１	1	IP	２		IP	５		IP	４		IP	６		IP	３	5	IP	３		G3	６		G3

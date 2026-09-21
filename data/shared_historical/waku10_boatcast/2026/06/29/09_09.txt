@@ -1,0 +1,8 @@
+data=
+1	0
+佐竹　　友樹	5.90	0.18	3.8	２		IP	３		IP	１		IP	１		IP	２		IP	１		IP	５		IP	６		IP	５		IP	５		IP
+坂井　　康嗣	6.20	0.18	3.5	２		IP	２		IP	２		IP	４		IP	２		IP	５		IP	２		IP	４	3	IP	３		IP	３		IP
+土屋　　太朗	3.90	0.16	3.9	４		IP	６		IP	５		IP	３	2	IP	４		IP	３		IP	５		IP	４		IP	３		IP	４	4	G3
+川添　　英正	4.40	0.17	3.7	４		IP	５		IP	５		IP	４		IP	５		IP	４		IP	５		IP	１		IP	２		G3	３		IP
+冨成　　謙児	3.80	0.17	3.9	５		IP	６		IP	３		IP	３		IP	５		IP	２		IP	４	4	IP	４		IP	６		IP	４		IP
+米本　　圭佑	2.67	0.22	4.3	５		IP	４	5	IP	４		IP	６		IP	３		IP	転		IP	６		IP	４		IP	６		IP	６		IP

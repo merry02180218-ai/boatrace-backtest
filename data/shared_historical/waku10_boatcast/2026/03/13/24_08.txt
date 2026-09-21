@@ -1,0 +1,8 @@
+data=
+1	0
+丸野　　一樹	9.60	0.13	2.9	１		G1	１		IP	２		IP	１		G1	１		G1	１		G1	１		G1	６		G1	１		IP	１		IP
+板橋　　侑我	7.67	0.11	2.4	１		G1	２		G1	４		G1	転		IP	２		IP	３		G1	２		G1	３		IP	２		IP	３		IP
+松田　　祐季	6.20	0.14	3.0	１		G1	４		G1	３		G1	５		G1	２		G1	３		IP	４		IP	３		IP	２		IP	６		IP
+前田　　将太	5.60	0.14	3.2	５		G1	１		IP	５		IP	６		G1	１	3	IP	２		SG	５		IP	４		G3	３	5	G3	３		G1
+浜先　　真範	6.90	0.14	2.8	４		G1	１		IP	３		IP	３		IP	４		G1	２		IP	３		IP	１		IP	２		IP	４		IP
+谷野　　錬志	3.10	0.19	4.0	６		G1	６		G1	３		IP	４	4	IP	６		G1	６		G1	３		IP	６		IP	４		IP	５		IP

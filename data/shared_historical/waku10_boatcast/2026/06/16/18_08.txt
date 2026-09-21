@@ -1,0 +1,8 @@
+data=
+1	0
+岸本　　　隆	7.60	0.13	2.6	４		IP	３		IP	１		IP	２		IP	１		G3	１		G3	２		IP	１		IP	５		IP	２		IP
+原田　　篤志	6.30	0.15	3.6	３		IP	３		IP	２		IP	３		IP	５		IP	３		IP	５		IP	１		IP	２		IP	２		IP
+鈴木　　雅希	6.50	0.19	4.2	４		IP	３		IP	６		IP	２		IP	２		IP	２		IP	１		IP	２		IP	３		IP	３		IP
+妻鳥　　晋也	6.00	0.19	4.1	３		IP	２		IP	２		IP	５		IP	４		IP	４		IP	２		IP	３		IP	４		G3	１	3	G3
+鳥飼　　　眞	4.56	0.21	4.0	１	4	IP	６	4	IP	４		IP	５		IP	２		IP	４		IP	５		IP	２	4	IP	５		IP	転	2	IP
+有賀　　達也	4.20	0.17	3.4	５		IP	３		IP	４		G1	４		G1	４		IP	妨		IP	２		IP	４	5	IP	４		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+大平　誉史明	8.50	0.17	3.7	１		IP	６		IP	１		IP	１		IP	２		IP	１		IP	２		IP	２		IP	１		IP	１		IP
+作間　　　章	6.20	0.19	3.0	２		IP	２		IP	３		IP	１		IP	２		IP	４		G1	６		G1	３		IP	６		IP	２		IP
+末永　　由楽	6.20	0.16	2.3	４		IP	３		IP	４		IP	３		IP	２		IP	２		IP	１		IP	３		IP	４		IP	３		IP
+佐野　　優都	3.70	0.14	2.8	３	6	IP	５		IP	４		IP	５		IP	６		IP	６		IP	２		IP	４	6	IP	６		IP	２		IP
+眞田　　英二	3.40	0.21	4.4	４		IP	５		IP	６		G3	６		G3	３		IP	４		IP	３		IP	５	6	IP	５		IP	３		IP
+甲斐　　貴大	1.30	0.16	3.3	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

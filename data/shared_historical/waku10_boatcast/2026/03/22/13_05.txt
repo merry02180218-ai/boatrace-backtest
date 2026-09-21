@@ -1,0 +1,8 @@
+data=
+1	0
+待鳥　　雄紀	6.10	0.17	3.5	１		IP	１		IP	６		IP	４		IP	６		IP	６		IP	１		IP	１		G3	４		IP	１		IP
+金子　　拓矢	7.60	0.12	2.2	１		IP	２		IP	１		IP	３		IP	４		IP	２		IP	１		IP	２		IP	６		IP	２		IP
+池田　　雄祐	5.90	0.15	2.1	５		IP	１		IP	６		IP	２		IP	３		IP	１		IP	５		IP	１		IP	５		IP	２		IP
+長野　　道臣	5.40	0.14	2.8	４	6	IP	３		IP	３		IP	２		IP	１		IP	３		IP	２		IP	６		IP	６		IP	４	5	IP
+松山　　裕基	2.70	0.19	3.0	４		IP	５	4	IP	６		IP	５		IP	４		IP	１		IP	６	6	IP	６		IP	６		IP	６		IP
+竹井　　貴史	6.00	0.17	2.3	５		IP	３		IP	２		IP	１		IP	４		IP	３	5	IP	２		IP	３		IP	４		IP	３		IP

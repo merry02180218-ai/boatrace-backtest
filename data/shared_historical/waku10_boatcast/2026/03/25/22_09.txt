@@ -1,0 +1,8 @@
+data=
+1	0
+柴田　　百恵	7.00	0.16	3.4	２		G3	１		G3	４		IP	１		IP	２		IP	１		IP	５		IP	Ｆ		IP	２		IP	１		IP
+三川　　昂暁	6.80	0.13	3.9	２		IP	５	6	IP	５		IP	２		IP	１		IP	１		IP	２		IP	２		IP	１		IP	５		IP
+平野　　和明	6.60	0.16	3.6	２		IP	２		IP	１		IP	３		IP	２		IP	４		IP	３		IP	４		IP	３		IP	３		IP
+瓜生　　正義	7.10	0.17	3.6	４		G1	２	3	IP	６		G1	３		G1	１	3	G1	３		IP	４		SG	３		SG	２		G1	２		G1
+柳瀬　　幹太	5.50	0.14	2.9	１		IP	６		IP	２		IP	３		IP	５		IP	３		IP	２		IP	４		G3	２		IP	５		IP
+金子　　順一	1.50	0.21	5.0	６		IP	４		IP	６	3	IP	５	5	IP	６		IP	６		IP	６		IP	６	3	IP	６	4	IP	５		IP

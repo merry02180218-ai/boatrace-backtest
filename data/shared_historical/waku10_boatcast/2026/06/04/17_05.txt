@@ -1,0 +1,8 @@
+data=
+1	0
+菊地　　孝平	9.70	0.12	2.4	１		SG	２		SG	３		G1	１		G1	１		IP	１		IP	２		IP	１		IP	１		G1	３		G1
+土屋　　智則	7.60	0.14	3.2	３	3	IP	４		IP	１		IP	５		IP	１		IP	２		G1	２		G1	３		G1	２		G1	１		G3
+海野　康志郎	6.10	0.12	2.4	１		IP	４		IP	３		IP	６		IP	２		IP	５		G1	３		G1	２		G1	３		G1	４		G1
+中野　　次郎	5.60	0.14	3.0	５		G3	４	5	G3	３		G2	５		G2	４		IP	３		IP	４		G1	１		IP	１		IP	５		G1
+上平　　真二	6.30	0.20	3.9	４	3	IP	３		IP	３		IP	４		IP	４		IP	３		G1	３		IP	１		IP	２		IP	３	4	IP
+井上　　忠政	5.50	0.17	4.6	１	2	IP	５		IP	４		IP	４		IP	３		G1	５		G1	２		G1	３		G1	６		G1	４		G1

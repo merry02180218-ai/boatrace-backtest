@@ -1,0 +1,8 @@
+data=
+1	0
+関根　　彰人	7.10	0.13	2.5	１		IP	１		IP	２		IP	１		IP	２		IP	３		IP	３		IP	５		IP	６		IP	１		IP
+安藤　　裕貴	6.30	0.16	4.2	２		IP	５		IP	２		IP	６		IP	１		IP	２		IP	２		IP	３		IP	２		IP	４		IP
+富山　　弘幸	5.10	0.19	3.0	３		IP	６		IP	５		IP	３		IP	３		IP	３		IP	１		IP	４		IP	２		IP	５		IP
+金児　　隆太	3.90	0.18	4.1	６		IP	５		IP	４		IP	５		IP	２		IP	４	5	IP	５		IP	３		IP	３		IP	４		IP
+野相　　弘司	4.40	0.21	4.3	６		IP	２		IP	３		IP	４		IP	６		IP	３		IP	５		IP	４		IP	３	4	G3	３		G3
+森永　　　隆	5.10	0.16	3.1	３	5	IP	４		IP	４		IP	４		IP	４	4	G1	２	4	G1	５		G1	５		IP	２		IP	３		IP

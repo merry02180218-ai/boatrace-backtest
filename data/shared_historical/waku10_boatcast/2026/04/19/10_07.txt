@@ -1,0 +1,8 @@
+data=
+1	0
+東口　　　晃	5.60	0.18	3.3	１		IP	４		IP	３		IP	４		IP	６	2	IP	１		IP	１		IP	３		IP	６		IP	４		IP
+小倉　　康典	4.50	0.16	3.4	４		IP	３		IP	３	3	IP	１		IP	６		IP	２		IP	３		IP	５		IP	６		IP	６		IP
+島倉　　　都	3.30	0.16	3.4	４		IP	３		IP	４		IP	６		G3	６		G3	４		G3	５		IP	６		IP	４		IP	３		IP
+井上　　大輔	5.10	0.13	2.4	５		IP	５		G3	６		G3	３		IP	２		IP	３	5	IP	１		IP	４		IP	４		IP	２		IP
+村上　　奈穂	3.40	0.22	4.0	６		IP	５		IP	６	4	IP	４		IP	２	3	IP	３		IP	６		IP	３		IP	５		IP	６		IP
+山本　　兼士	4.20	0.19	4.5	５		IP	４		IP	６		IP	６		IP	５		IP	４	4	IP	２		IP	２		IP	１		IP	５		IP

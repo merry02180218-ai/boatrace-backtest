@@ -1,0 +1,8 @@
+data=
+1	0
+田邉　　亮蔵	7.10	0.18	2.4	２		IP	２		IP	５		IP	４		IP	１		IP	１		IP	１		IP	６		IP	２		IP	１		IP
+庄司　樹良々	5.70	0.17	4.0	３		IP	２		IP	１		IP	３		IP	１		IP	５		IP	３		IP	６		IP	３		IP	５		IP
+中岡　　健人	4.70	0.18	2.9	３		IP	２		IP	２		IP	４	5	IP	５		IP	４		IP	６		IP	５	4	IP	３		IP	３		IP
+小松　　卓司	4.50	0.20	4.4	２		IP	５		IP	４		IP	４		IP	６		IP	５		IP	３		IP	３		IP	３		IP	３		IP
+大澤　　風葵	6.40	0.14	2.6	６		IP	３		IP	５		IP	２		IP	５		IP	３		IP	１		IP	１		IP	２		IP	１		IP
+鈴木　　柊介	2.10	0.12	3.1	５		IP	５		IP	３		IP	５		IP	６		IP	６		IP	６		IP	６		IP	４		IP	６	5	IP

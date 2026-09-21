@@ -1,0 +1,8 @@
+data=
+1	0
+井口　　佳典	7.50	0.16	4.0	５		G1	３		G1	Ｆ		G1	１		G1	１		G1	３		G1	１		G1	６		SG	１		G1	１		G1
+中田　　竜太	6.60	0.16	3.4	２		G1	２		IP	２	3	IP	５		G1	３		G1	２		IP	２		IP	５		G1	５		IP	１		IP
+笹木　　香吾	7.30	0.16	2.5	２		IP	３		IP	２		IP	１		IP	１		IP	６		IP	１		IP	２		IP	１		IP	転		IP
+丸岡　　正典	5.90	0.17	3.8	５		IP	２		IP	３		IP	４		IP	３		IP	４		G2	１		IP	４		IP	２		IP	３		IP
+古賀　　繁輝	5.60	0.12	2.2	６		G1	４	6	IP	５		G1	１		IP	２		IP	１		IP	３		IP	５		IP	３		IP	４		IP
+前田　　将太	4.10	0.16	4.2	５		G1	５		IP	５	5	G1	４		IP	６		IP	５		SG	２	5	IP	５		G3	４	5	G1	２		G1

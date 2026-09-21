@@ -1,0 +1,8 @@
+data=
+1	0
+森永　　　隆	9.00	0.12	1.9	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	５		IP	１		IP
+茅原　　悠紀	8.20	0.14	2.5	２		IP	４		G1	６		G1	２		SG	２		G1	１		G1	２		G1	１		G1	３		G1	２		SG
+井内　将太郎	7.40	0.14	2.6	１		IP	２		IP	２		IP	３		IP	５		IP	１		IP	１		IP	３		IP	２		IP	３		IP
+有賀　　達也	6.10	0.18	3.6	１		IP	１		IP	４		G1	４		G1	４		G1	６		G1	５	3	IP	５		IP	２		G1	１		G1
+平山　　智加	5.90	0.15	2.9	３		IP	４		G2	５		G2	１	3	G3	４		G3	４		G3	３		IP	１	4	IP	５		G1	２		IP
+堤　　　　昇	2.60	0.18	3.5	３	4	IP	５		IP	４	4	IP	６		G3	６		G3	６		IP	６	5	IP	４	5	IP	４	5	IP	５		IP

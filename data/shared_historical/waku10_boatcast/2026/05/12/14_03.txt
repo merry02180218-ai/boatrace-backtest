@@ -1,0 +1,8 @@
+data=
+1	0
+竹田　　吉行	8.20	0.15	2.3	１		IP	１		IP	３		IP	１		IP	３		IP	２		IP	４		IP	２		IP	１		IP	１		IP
+水原　　　慎	3.10	0.17	3.9	６		IP	５		IP	６		IP	４		IP	６		IP	４	3	IP	欠		IP	２		IP	２		IP	５		IP
+原村　　拓也	4.20	0.17	3.9	５		IP	３		IP	３		IP	４		IP	６		IP	４		IP	６		IP	３		IP	２		IP	４		IP
+三好　　勇人	4.90	0.16	3.2	１		IP	２		IP	３		IP	５		IP	４		IP	４		IP	３		IP	６		IP	５		IP	３		IP
+岡部　　　浩	2.70	0.16	3.5	５		IP	６	6	IP	５		IP	５	6	IP	５		IP	６		IP	４		IP	４		IP	６		IP	２		IP
+山田　　祐也	5.20	0.12	3.9	４		IP	３		G1	４	5	G1	６		G1	５		SG	４	5	SG	６		G2	４		G1	３		IP	１		G1

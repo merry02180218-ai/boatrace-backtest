@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　幸也	4.80	0.18	3.7	１		IP	３		IP	４		IP	５		IP	５		IP	５		IP	１		IP	６		IP	６		IP	１		IP
+竹腰　　正樹	5.80	0.17	3.0	３		IP	１		IP	４		IP	１		IP	２		IP	５		IP	５		IP	５		IP	３		IP	２		IP
+須藤　　博倫	6.30	0.16	2.5	１		IP	２		IP	４	4	IP	１	4	IP	１		IP	３		G2	４		G2	５		IP	６		IP	３		IP
+宮内　由紀英	2.90	0.15	3.2	４		IP	３		IP	３		IP	６		IP	６		IP	６		IP	３		IP	６	5	IP	６		IP	５		IP
+堀内　　亜海	1.10	0.24	4.2	６		IP	６		IP	６		IP	６		IP	６		IP	６	6	IP	６		IP	６	6	IP	６	6	IP	５	6	IP
+赤岩　　善生	6.20	0.19	3.3	１	2	IP	５	4	G1	２	2	IP	Ｆ	2	IP	５	5	G1	２	2	IP	２	2	IP	１	4	IP	３	2	IP	４	4	SG

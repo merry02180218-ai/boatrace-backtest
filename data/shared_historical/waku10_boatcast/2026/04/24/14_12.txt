@@ -1,0 +1,8 @@
+data=
+1	0
+木村　　仁紀	8.90	0.14	2.4	１		IP	６		G1	２		G1	３		IP	１		IP	１		IP	１		IP	１		G1	１		IP	１		G1
+佐々木　完太	6.11	0.13	3.4	１		G1	６	3	G1	落		IP	４		IP	１		SG	２		IP	４	3	IP	２		G1	６		G1	５		G1
+田中　　駿兵	7.80	0.12	1.5	３		IP	１		IP	１		IP	２		IP	１		IP	２		IP	３		IP	４		G1	３		G1	２		IP
+小林　　甘寧	5.10	0.14	2.4	１	5	IP	３	5	IP	６		IP	１		IP	５		IP	１		IP	２	5	IP	５		IP	５		IP	欠		IP
+中渡　　修作	2.60	0.17	3.1	４	4	IP	５		IP	３		IP	６		IP	６		IP	３		IP	６		IP	６		IP	５		IP	５		IP
+垂水　　　悠	4.80	0.14	2.5	２		IP	３		IP	５		IP	１		G3	６		G3	３		IP	２		IP	４		IP	６		G1	６		IP

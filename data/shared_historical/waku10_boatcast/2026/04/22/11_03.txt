@@ -1,0 +1,8 @@
+data=
+1	0
+栗原　　一馬	5.80	0.15	2.7	５		IP	５		IP	１		IP	６		IP	３		IP	１		IP	６		IP	３		IP	１		IP	１		IP
+鈴木　　茂高	4.80	0.19	3.2	５		IP	２		IP	２		IP	３		IP	２		IP	５		G3	５		IP	５		IP	５		IP	２		IP
+若林　　　麗	2.20	0.20	3.9	６		IP	６		IP	３		IP	５		IP	５		IP	６		IP	６		IP	６		IP	３	4	IP	６		IP
+中島　　秀治	6.10	0.12	1.8	４		IP	４		IP	５		IP	１		G2	３		IP	５		IP	１		IP	５		IP	１		IP	１		IP
+坂井　　康嗣	3.60	0.19	3.7	２		IP	６		IP	３		IP	１		IP	６		IP	６		IP	３		IP	欠		IP	５		IP	６		IP
+鈴木　結平太	1.40	0.20	3.1	６		IP	５		IP	５		IP	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP

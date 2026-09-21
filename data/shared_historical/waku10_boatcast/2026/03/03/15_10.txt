@@ -1,0 +1,8 @@
+data=
+1	0
+石丸　　海渡	9.10	0.13	1.9	１		IP	１		IP	１		IP	３		G1	３		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+島川　　海輝	5.10	0.17	3.5	６		IP	６	3	IP	１		IP	２		IP	６		IP	１		IP	４		IP	５		IP	１		IP	５		IP
+吉永　　則雄	6.80	0.17	2.7	３		IP	２		IP	１		IP	２		IP	４		IP	３		IP	２		IP	２		IP	２		IP	５		IP
+中島　　真二	3.20	0.15	3.1	２		IP	６		IP	５		IP	４		IP	６	5	IP	３		IP	５		IP	６		IP	３		IP	６		IP
+米玉利　大悟	2.11	0.21	3.8	５		IP	４		IP	６		IP	５	6	IP	４		IP	５		IP	６	6	IP	転		IP	５		IP	６	6	IP
+丹下　　　将	4.10	0.19	3.3	３		IP	３	5	IP	４		IP	６		IP	１	5	IP	５		IP	６		IP	４	5	IP	５		IP	４		IP

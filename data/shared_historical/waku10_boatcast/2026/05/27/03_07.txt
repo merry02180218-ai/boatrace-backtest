@@ -1,0 +1,8 @@
+data=
+1	0
+石田　　勇斗	6.80	0.13	1.8	１		IP	３		IP	５		IP	６	2	IP	１		IP	２		IP	１		IP	１		IP	６		IP	１		IP
+市川　　哲也	7.22	0.14	2.8	２		IP	３		IP	欠		IP	１	1	IP	２		IP	６	1	G2	２		G2	２		IP	３		IP	２		IP
+若林　　義人	8.90	0.12	2.2	４		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	２		G1	１	2	IP	１		IP
+加木　　　郁	4.20	0.17	4.2	５		IP	４		IP	４		IP	３		IP	４		IP	４		IP	２		IP	５		IP	５	5	IP	３		IP
+西山　　　育	1.50	0.24	4.9	６		IP	４	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	６	6	IP	５	6	IP	６	6	IP
+近藤　　颯斗	3.40	0.20	4.7	２		IP	４		IP	５		IP	Ｆ		IP	５		IP	３		IP	５		IP	４		IP	５		IP	４		IP

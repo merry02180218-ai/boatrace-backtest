@@ -1,0 +1,8 @@
+data=
+1	0
+岡谷　　健吾	6.30	0.19	3.5	６		IP	２		IP	２		IP	６		IP	１		IP	６		IP	１		IP	１		IP	４		IP	１		IP
+森林　　　太	4.60	0.23	4.8	４		IP	６		IP	４		IP	２		IP	５		IP	２		IP	２		IP	２		IP	５		IP	６		IP
+大澤　　誠也	4.50	0.19	3.5	５		IP	４		IP	３		IP	５		IP	２		G3	６		IP	３		IP	３		IP	５	4	IP	２		IP
+日隈　　　茜	1.10	0.19	4.0	６	5	IP	６		IP	６		IP	６		IP	６	6	IP	６		IP	６		IP	６		IP	６		IP	５		IP
+宮下　　元胤	4.60	0.16	4.3	５		IP	３		IP	５		IP	３		IP	５		IP	４		IP	２		IP	３		IP	４		IP	３		IP
+椎名　　　豊	3.33	0.19	4.2	５		G1	４		G1	６		IP	５	5	G1	６		IP	３		IP	Ｌ		IP	６		G1	４		G1	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　弓雄	6.60	0.18	3.4	３		IP	３		IP	２		IP	１		IP	１		IP	４		IP	１		IP	４		IP	４		IP	４		IP
+赤羽　　克也	5.70	0.17	3.5	３		IP	１		IP	５		IP	１		IP	６	3	IP	３		IP	４		IP	３		IP	４		IP	２		IP
+須藤　　博倫	7.40	0.18	2.7	２		IP	１		IP	１		IP	２		IP	４	4	IP	１	4	IP	１		IP	３		G2	４		G2	５		IP
+西澤　日花里	3.30	0.21	3.6	３		G3	３		G3	５		IP	３		IP	３		IP	５		IP	６		IP	６	5	IP	６		IP	５		IP
+泥谷　　一毅	3.00	0.17	4.5	４		IP	４		IP	４		IP	４		IP	４		IP	５		IP	４		IP	６	4	IP	６		IP	５	4	IP
+入海　　　馨	5.20	0.17	4.1	４		IP	３		IP	３		IP	３		G1	４		G1	３		G1	５		G1	４		G1	２		G1	転		G1

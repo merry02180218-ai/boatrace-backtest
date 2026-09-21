@@ -1,0 +1,8 @@
+data=
+1	0
+西舘　　　健	8.40	0.13	1.7	１		IP	１		IP	１		IP	５		IP	１		IP	４		IP	１		IP	１		IP	２		IP	１		IP
+上野　真之介	5.60	0.12	2.0	３		IP	２		G2	４		G1	５		G1	１		G1	６		G1	５		G1	２		G1	４		IP	４		IP
+篠原　　晟弥	6.80	0.15	2.9	１	4	IP	４		G2	２		IP	３		IP	４		IP	６		IP	１		IP	４		IP	１		IP	１		IP
+平尾　　崇典	5.90	0.16	3.1	５		IP	６	5	G1	６		G1	５		G1	３		G1	２		G2	１		IP	１		IP	２		IP	３		IP
+山本　　梨菜	3.80	0.18	3.9	２		IP	６		G3	４		IP	３	4	IP	３		IP	６		G1	６		G1	４		G3	６		G3	４		IP
+蒲原　　健太	4.40	0.23	4.7	２	4	IP	５		IP	６		G2	２		IP	６		IP	６	3	IP	３		IP	４		IP	２		IP	４	4	IP

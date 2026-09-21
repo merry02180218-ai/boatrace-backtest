@@ -1,0 +1,8 @@
+data=
+1	0
+栗原　　一馬	5.60	0.16	2.7	６		IP	２		IP	２		IP	２		IP	５		IP	５		IP	１		IP	６		IP	３		IP	１		IP
+中里　　優子	5.70	0.18	3.7	６		IP	２		IP	２		G3	１		IP	４		IP	４	3	G3	５		IP	３		IP	３		IP	２		IP
+平瀬　　城啓	3.30	0.18	3.4	５		IP	４		IP	６		IP	３		IP	３	2	IP	６		IP	５		IP	３		IP	４		IP	６		IP
+森野　　正弘	6.50	0.14	2.3	６		IP	１		IP	５		IP	１		IP	１		IP	３		G3	３		G3	２		IP	４		IP	２		IP
+福田　　宗平	3.80	0.12	3.3	３		IP	３		IP	５		IP	５		IP	５		IP	４		IP	４		IP	４		IP	５	6	IP	３		IP
+城間　　盛渚	2.67	0.18	4.1	４		IP	落		IP	４		IP	６		IP	５		IP	６		IP	落		IP	５		IP	３		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+滝沢　　織寧	3.70	0.22	4.1	２		IP	３		IP	Ｆ		IP	５		G3	４		IP	２		IP	４		IP	５		IP	５		IP	６		IP
+廣中　　良一	5.40	0.18	3.0	３		IP	６		G3	２		IP	５		IP	５		IP	２		IP	２		IP	６		IP	１		IP	２		IP
+山田　　竜一	6.22	0.15	3.0	４		IP	３		IP	１		IP	３		IP	３		IP	３		IP	欠		IP	２		IP	４		IP	３		IP
+恵良　　琴美	3.50	0.23	5.4	６	6	IP	６	6	IP	６		IP	４		IP	６	5	IP	３		IP	６		IP	４		IP	３		IP	１		IP
+浜崎　　準也	2.30	0.21	4.0	６		IP	５		IP	５		IP	６		IP	５		IP	５		IP	２		IP	５		IP	５	4	IP	６		IP
+横田　　海人	1.50	0.18	3.2	６		IP	５	5	IP	５		IP	６		IP	５		IP	６		IP	６		IP	５		IP	５	5	IP	６	5	IP

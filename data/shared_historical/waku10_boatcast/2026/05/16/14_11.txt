@@ -1,0 +1,8 @@
+data=
+1	0
+大場　　　敏	9.40	0.11	2.0	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	２		IP	１		IP	１		IP	１		IP
+角谷　　健吾	6.60	0.16	3.1	３		IP	５		IP	１		IP	２		IP	２		IP	５		IP	２		IP	１		IP	２		IP	４		IP
+下出　　卓矢	6.00	0.17	2.7	２		IP	４		IP	１		IP	２		IP	５		IP	欠		IP	４		IP	３		IP	１		IP	５		IP
+興津　　　藍	3.80	0.15	2.7	４	3	IP	３		IP	５		IP	５	6	IP	６	5	IP	４		IP	３		IP	６		IP	３		IP	３		IP
+國崎　　良春	3.10	0.16	3.3	５		IP	３	4	IP	３		G3	６		IP	３		IP	６		IP	６		IP	６		IP	３		IP	６		IP
+前野　　竜一	5.00	0.19	3.5	４		IP	４		IP	３		IP	１		IP	３		IP	４		IP	４		IP	４		IP	５		IP	４		IP

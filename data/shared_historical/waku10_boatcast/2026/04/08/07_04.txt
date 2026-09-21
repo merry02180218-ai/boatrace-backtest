@@ -1,0 +1,8 @@
+data=
+1	0
+高山　　弘斗	5.67	0.22	4.4	２		IP	１		IP	３		IP	５		IP	４		IP	２		IP	６		IP	エ		IP	４		IP	２		IP
+安藤　　裕貴	5.30	0.13	4.1	５		IP	２		IP	４		IP	５	3	IP	２		IP	５		IP	２		IP	６		IP	１		IP	２		IP
+竹井　　貴史	7.40	0.18	3.0	１	2	IP	３		IP	２		IP	５		IP	１		IP	１		IP	転		IP	１		IP	１		IP	２	2	IP
+松山　　将吾	5.80	0.13	2.4	４		G3	２		G3	１		IP	２		IP	５		G1	６		G1	６		IP	２		IP	４		IP	１		IP
+石川　　吉鎬	3.80	0.22	4.5	４		IP	３		IP	転		IP	４		IP	５		IP	４		IP	４		IP	５		IP	３		IP	３		IP
+諏訪　　玲奈	1.20	0.19	4.7	６		IP	６	5	IP	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP

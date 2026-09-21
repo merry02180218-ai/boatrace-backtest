@@ -1,0 +1,8 @@
+data=
+1	0
+川北　　浩貴	6.80	0.14	2.3	３		IP	２		IP	１		IP	６		IP	６		IP	１		IP	２		IP	２		IP	３		IP	１		IP
+雑賀　　勇貴	3.80	0.18	3.4	４		IP	２		IP	６		IP	５		IP	４		IP	６		IP	５		IP	１	1	IP	５		IP	４		IP
+重野　　哲之	7.50	0.08	1.2	１		IP	３		IP	２		IP	２		IP	２		IP	２		IP	２		IP	４		G1	４		IP	１		IP
+高憧　　四季	7.70	0.15	3.4	３		IP	３		IP	１		IP	１		IP	２		G3	１		G1	４		IP	３		G1	４		G1	１		IP
+小黒　　竜吾	4.20	0.16	3.5	４		IP	６		IP	４		IP	３		IP	５		IP	６		IP	４		IP	２		IP	２		IP	４		IP
+宮城　　那菜	1.30	0.12	2.0	６		IP	５		IP	６		IP	５	5	IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP

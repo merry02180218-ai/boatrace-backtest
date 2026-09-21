@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　翔悟	6.70	0.16	2.0	転		IP	３		IP	６		IP	１		IP	２		IP	３		IP	２		IP	１		IP	１		IP	２		IP
+宮嵜　隆太郎	3.00	0.17	3.3	６	3	IP	５		IP	６		IP	転		IP	２		IP	６		IP	１	3	IP	５		IP	６		IP	６		IP
+末永　　祐輝	6.50	0.15	2.5	４		IP	２		IP	１		IP	３		IP	６		IP	２		IP	３		IP	２		IP	２	2	IP	３	4	IP
+柳内　　敬太	6.50	0.14	1.6	３		IP	２	3	IP	１		IP	４		IP	２		IP	３		IP	２		IP	６		IP	２		IP	３		IP
+小野　　勇作	4.80	0.19	3.9	２		IP	５		IP	４		IP	５		IP	５		IP	５		IP	２		IP	５		IP	１		IP	３		IP
+平野　　和明	3.56	0.17	3.8	２		IP	４		IP	３	4	IP	５		IP	６		IP	欠		IP	６		IP	４		IP	４		IP	５	4	IP

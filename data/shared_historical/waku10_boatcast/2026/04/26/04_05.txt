@@ -1,0 +1,8 @@
+data=
+1	0
+平本　　真之	10.00	0.17	3.6	１		IP	１		G1	２		G1	１		G1	２		SG	２		IP	２		IP	１		G1	１		G1	１		G1
+豊田　　訓靖	2.60	0.20	4.3	４		IP	６		IP	４		IP	５		IP	６		IP	５		IP	６		IP	６		IP	３		IP	４		IP
+鈴木　　唯央	4.90	0.15	2.4	４		IP	４		IP	６		IP	４		IP	３		IP	５		IP	４		IP	１		IP	３		IP	２		IP
+杉山　　太陽	3.90	0.21	3.9	４		IP	５		IP	４		IP	５	5	IP	６		IP	２		IP	３		IP	４		IP	４		IP	４		IP
+乙津　　康志	4.50	0.19	3.8	５		IP	６		IP	４		IP	１		IP	３		IP	４		IP	５		IP	４	3	IP	３		IP	３	4	IP
+真田　　聖也	0.89	0.15	3.6	６		IP	６		IP	６		IP	６		IP	転		IP	Ｆ		IP	６		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+板倉　　敦史	7.40	0.15	3.2	１		IP	２		IP	１		IP	５		G3	２		IP	１		IP	４		IP	３		IP	３		IP	１		IP
+亀山　　雅幸	8.90	0.15	3.1	２		IP	１		IP	１		IP	１		IP	２	3	IP	２		IP	２		IP	２		IP	１		IP	２		IP
+石田　　章央	7.00	0.12	2.6	１		IP	１		IP	５		IP	１		IP	３		IP	１		IP	３		IP	５		IP	３		IP	２		IP
+籾山　　佳岳	4.50	0.13	2.4	５		IP	５		IP	１		IP	６		IP	３		IP	５		IP	３		IP	２	5	IP	５		IP	３		IP
+中澤　　和志	4.90	0.12	2.8	１		IP	３		IP	６		IP	３		IP	５		IP	５		G1	４		IP	３		IP	４		IP	３		IP
+恵良　　琴美	1.50	0.21	3.7	６		IP	４		IP	６		IP	６		IP	５	5	IP	５		IP	６		IP	６		IP	６		IP	６		IP

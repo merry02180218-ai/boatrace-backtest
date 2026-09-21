@@ -1,0 +1,8 @@
+data=
+1	0
+佐口　　達也	6.30	0.17	3.2	２		IP	１		IP	５		IP	１		IP	１		IP	４		IP	３		IP	６		IP	３		IP	３		IP
+刑部　亜里紗	6.50	0.18	3.9	６		G1	２		G1	２		IP	２		IP	１		IP	２		IP	６		IP	２		IP	１		IP	６		IP
+荒川　　健太	5.80	0.22	3.2	１		IP	２		IP	３		IP	１		IP	４		IP	４	4	IP	３	4	IP	５	2	IP	４		IP	５		IP
+須藤　　博倫	5.00	0.12	2.8	３		IP	５		IP	３		IP	４	5	IP	３		IP	５		IP	４		G2	５		G2	２		IP	２		IP
+青木　　玄太	5.90	0.18	4.3	３		G1	５		G1	２		IP	３		G2	５		IP	２		IP	３		G3	１		G3	６	6	G1	４		IP
+横井　　健太	2.00	0.22	5.0	４		IP	５		IP	４		IP	５		IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP

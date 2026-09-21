@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　和将	10.10	0.11	1.9	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+山ノ内　雅人	5.40	0.15	4.0	５		IP	３		IP	２		IP	２		IP	２		IP	３		IP	３		IP	３		IP	５		IP	５		IP
+渡邉　　　健	4.00	0.12	3.1	６	5	IP	６		IP	３		IP	４		IP	５	4	IP	４		G3	５		G3	３		IP	２		IP	３		IP
+柘植　　政浩	3.90	0.19	4.0	２		IP	５	3	IP	６		IP	３		IP	４		IP	５		IP	３		IP	５		IP	４		IP	４	5	IP
+松本　　庸平	2.10	0.24	5.1	５		IP	４		IP	６		IP	６		IP	６		IP	４	4	IP	５		IP	６		IP	６	6	IP	４		IP
+君島　　秀三	4.20	0.16	3.3	４		IP	３		IP	４		IP	５		G1	４		IP	４	5	IP	２		IP	６		IP	４		IP	４		IP

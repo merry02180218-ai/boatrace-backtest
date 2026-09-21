@@ -1,0 +1,8 @@
+data=
+1	0
+岡崎　　凪汰	5.63	0.12	3.0	６		IP	５		IP	５		IP	２		IP	２		IP	３		IP	２		IP	１		IP						IP
+小川　竜太朗	6.20	0.18	4.0	１		IP	３		IP	２		IP	１		IP	５		IP	４		IP	２		IP	２		IP	４		IP	５		IP
+黒田　　　剛	3.80	0.16	2.4	２		IP	３		IP	２		IP	４	4	IP	４		IP	６		IP	６		IP	６		IP	６		IP	４		IP
+仲道　　大輔	6.90	0.16	3.3	４		IP	２		IP	３		IP	３	5	IP	２		IP	２		IP	３		IP	１	3	IP	５	2	IP	１		IP
+近藤　　来希	1.20	0.20	4.4	落		IP	６		IP	６		IP	５	6	IP	５		IP	５	6	IP	６	6	IP	６		IP	６		IP	６	6	IP
+河内　　一馬	2.60	0.17	3.9	６		IP	６		IP	１	5	IP	４		IP	６	5	IP	６		IP	５		IP	６		IP	６		IP	４		IP

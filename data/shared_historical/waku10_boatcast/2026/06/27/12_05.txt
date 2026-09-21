@@ -1,0 +1,8 @@
+data=
+1	0
+片岡　　恵里	7.80	0.17	3.5	３		IP	１		IP	１		IP	５		IP	４		IP	２		G3	１		G3	１		G3	２		IP	１		IP
+土屋　　　南	5.30	0.17	2.9	４	3	IP	３	3	IP	３		IP	４		IP	１		IP	３		IP	２		IP	６		IP	３		IP	５		G3
+赤井　星璃菜	5.50	0.12	2.7	３		IP	２		IP	４		G3	４		G3	１		IP	２		IP	５		IP	６		IP	３		IP	３		IP
+嶋田　　有里	4.50	0.19	3.2	５		G3	２		IP	２		IP	２		IP	４		IP	６		IP	３		IP	４		IP	５		IP	５		IP
+林　　　風音	1.30	0.19	3.8	６	6	IP	６	6	G3	６	6	G3	６	6	G3	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	４	6	IP
+鎌倉　　　涼	4.30	0.18	4.7	３	5	IP	５		IP	６		G1	４		G1	６		SG	２		IP	２		G2	６		G1	６		SG	６		SG

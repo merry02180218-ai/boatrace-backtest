@@ -1,0 +1,8 @@
+data=
+1	0
+西橋　　奈未	10.60	0.13	3.0	１		IP	１		SG	１		G2	１		G2	１		G2	１		G3	１		G3	１		G3	２		G3	１		G1
+山下　　奈緒	4.33	0.20	3.9	５		IP	６		IP	４		G3	３		G3	欠		IP	４		IP	４		IP	４		IP	２		IP	３		IP
+渡邉　真奈美	6.70	0.13	2.4	１		IP	４		IP	２		IP	６		IP	５		G3	１		G3	４		G3	１		IP	１		IP	２		IP
+土屋　　　南	5.20	0.16	3.1	５		IP	２		IP	１		IP	３		IP	６		IP	２		IP	３		IP	４		IP	６		IP	３		G3
+黒澤　めぐみ	5.11	0.17	3.4	１		IP	４		IP	４		IP	３		IP	２		IP	４		G3	３	6	G3	５		IP	転		IP	５		IP
+田中　　　結	1.70	0.23	5.1	５		IP	６		IP	５		IP	６		IP	４		IP	６		IP	転		IP	６		IP	４		IP	６		IP

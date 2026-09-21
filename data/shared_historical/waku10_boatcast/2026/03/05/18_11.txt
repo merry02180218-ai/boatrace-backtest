@@ -1,0 +1,8 @@
+data=
+1	0
+岩崎　　正哉	9.40	0.18	2.4	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP
+吉田　　一郎	7.00	0.15	1.8	２		IP	３		IP	３		IP	３		IP	１		IP	２		IP	３		IP	２		IP	１		IP	５		IP
+山崎　　　郡	6.20	0.13	2.9	３		IP	３		IP	２		G1	２		G1	２		G1	５		G1	４		G1	４		G1	４		IP	４		IP
+冨田　　秀幸	4.00	0.17	3.3	４	5	IP	３		IP	３		IP	４		IP	５	5	IP	５		IP	２		IP	５		IP	４		IP	５		IP
+畑　　　竜生	5.80	0.18	4.1	３		IP	３		IP	３		IP	４		IP	４		IP	３		IP	２		IP	２		IP	４		IP	３		IP
+末永　　祐輝	4.20	0.19	4.4	３		IP	３	2	IP	４	4	IP	５		IP	４		IP	２		IP	３		IP	５		IP	５		IP	５		IP

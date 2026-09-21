@@ -1,0 +1,8 @@
+data=
+1	0
+向井　　美鈴	7.90	0.16	3.1	１		IP	３		IP	２		IP	１		IP	１		IP	２		IP	２		IP	３		IP	５		G1	１		IP
+烏野　　賢太	5.90	0.18	4.7	３		IP	３		G3	２		IP	３		IP	３		IP	２		IP	５		IP	３	3	IP	６		G1	３		G1
+久保原　秀人	4.90	0.17	3.3	６		IP	３		IP	５		IP	３		IP	３		IP	３		IP	３		IP	４		IP	１		IP	５		IP
+武富　　智亮	4.10	0.16	3.2	３		IP	４		IP	４		G2	６		IP	３		IP	６		IP	５		IP	３		IP	４		G1	４	5	G1
+赤澤　　文香	3.90	0.22	4.3	３		IP	４	4	IP	４		IP	５		IP	４		IP	４		IP	４		G3	４		G3	６		IP	３		IP
+横田　　海人	1.50	0.18	3.7	６		IP	６		IP	５	5	IP	５		IP	６		IP	５		IP	６		IP	６		IP	５		IP	５	5	IP

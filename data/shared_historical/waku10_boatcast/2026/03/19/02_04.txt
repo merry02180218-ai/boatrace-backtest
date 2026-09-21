@@ -1,0 +1,8 @@
+data=
+1	0
+伊倉　　　光	9.00	0.15	2.3	４		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	２		IP	１		IP	１		G3
+谷本　　幸司	5.10	0.17	2.5	５		IP	４		IP	２		IP	３		IP	２		IP	６		IP	３	3	IP	１		IP	４		IP	５		IP
+金子　　良昭	5.30	0.19	3.8	３		IP	５		IP	４		IP	４		IP	２		IP	６		IP	４		IP	２		IP	２		IP	２	2	IP
+小林　　愛実	4.70	0.14	3.4	６		IP	４		IP	４		IP	３		IP	４		IP	３		IP	５		IP	２		IP	１		IP	５		IP
+占部　　一真	2.60	0.13	2.6	６		IP	５		IP	５		IP	６		G3	５		IP	６		IP	３		IP	２		IP	５		IP	６		IP
+飛田　　江己	4.33	0.12	2.6	２		G1	５		G1	欠		G1	５		G1	６		IP	３		IP	３	5	IP	６		IP	４		IP	４		IP

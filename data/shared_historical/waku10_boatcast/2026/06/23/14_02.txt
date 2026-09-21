@@ -1,0 +1,8 @@
+data=
+1	0
+大上　　卓人	10.40	0.14	2.2	１		G1	１		G1	１		G1	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+新田　　雄史	9.00	0.11	2.3	２		G1	１		G1	２		G1	２		SG	２		SG	６		G1	１		IP	２		G1	１		G1	２		G1
+河合　　佑樹	7.00	0.16	3.3	５		G1	１		SG	Ｆ		G1	２		IP	１		IP	３		IP	２		IP	２		IP	２		IP	３		IP
+長田　　頼宗	6.70	0.17	4.5	２	5	IP	２		IP	１	3	IP	３		G2	５		G2	３		G2	２		G2	５		G2	２		IP	５		G1
+瓜生　　正義	6.90	0.12	2.8	３		G1	５		G1	２		G1	６		SG	３		SG	４		G1	４		G1	１		IP	２		IP	１		G1
+山田　　康二	5.56	0.14	3.6	５		G1	４		SG	沈		G2	４		IP	５		G1	４		G1	５		G1	４		G1	３		SG	１		SG

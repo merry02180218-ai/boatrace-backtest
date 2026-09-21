@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　智啓	7.90	0.16	3.6	１		IP	１		IP	２		IP	４		IP	１		IP	６		IP	１		IP	２		IP	１		IP	２		IP
+小澤　　和也	4.00	0.19	3.7	４		IP	５		IP	４		IP	２		IP	５		IP	転		IP	５		IP	３		IP	５		IP	３		IP
+川崎　　公靖	5.50	0.15	2.1	４		IP	４		IP	１		IP	３		IP	２		IP	２		IP	６		IP	５		IP	４		IP	２	4	IP
+國分　将太郎	4.10	0.18	3.5	２		IP	１	5	IP	６		G3	５	5	IP	５		IP	２		IP	４		IP	６		IP	５		IP	６		IP
+矢野　真梨菜	2.90	0.22	3.4	５		IP	６		IP	４		G3	６		G3	３		G3	６		G3	４		G3	５		IP	３		IP	５		IP
+堀本　　和也	3.70	0.12	3.1	４		IP	５	5	IP	３		IP	５	5	SG	６		G1	５		G1	６		G1	５		G1	３	5	G1	４		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　浩貴	4.40	0.21	4.5	２		IP	１		IP	５	2	IP	６		IP	２		IP	６		IP	２		IP	５		IP	５		IP	５		IP
+門間　　雄大	5.33	0.19	2.8	３		IP	４		IP	４		IP	２		IP	転		IP	５		IP	２		IP	１		IP	４		G3	５		G3
+篠原　　晟弥	6.60	0.15	2.8	４		G2	２		IP	３		IP	４		IP	６		IP	１		IP	４		IP	１		IP	１		IP	２		IP
+横田　　貴満	6.10	0.19	3.0	３		G2	４		G2	１		IP	３	3	IP	６		G1	５		G1	１		IP	２		IP	３		IP	５		IP
+原村　　百那	2.22	0.18	3.1	３		IP	６		IP	３		IP	落		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６	6	IP
+平尾　　崇典	5.60	0.13	3.1	５		G1	５		G1	３		IP	５		G1	５		G1	１	5	G2	４		G2	３		IP	２	5	IP	２		IP

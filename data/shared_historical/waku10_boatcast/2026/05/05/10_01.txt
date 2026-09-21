@@ -1,0 +1,8 @@
+data=
+1	0
+土山　　卓也	9.20	0.18	2.5	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP
+樋口　　喜彦	3.40	0.20	3.8	５		IP	３		IP	３		IP	５		IP	５		IP	２		IP	４		IP	５		IP	６		IP	６		IP
+小坂　　風太	3.30	0.20	3.9	５		IP	４		IP	２		IP	５		IP	６		IP	４		IP	５		IP	３		IP	５		IP	５		IP
+加藤　　優弥	4.30	0.13	2.8	３		IP	２		IP	６		IP	６		IP	４		IP	４		IP	６		IP	３		IP	５		IP	１		IP
+直江　　健成	1.00	0.35	6.0	６	6	IP																											IP
+加藤　　奈月	2.30	0.19	4.5	５		G3	６		G3	３		G3	６		G3	６		IP	５		IP	３		IP	６		IP	６		IP	５		IP

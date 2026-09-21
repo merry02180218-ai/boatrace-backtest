@@ -1,0 +1,8 @@
+data=
+1	0
+表　　　憲一	6.50	0.18	3.4	１		IP	２		IP	５		IP	２		IP	２		IP	１		IP	６		IP	２		IP	４		IP	３		IP
+塩嶋　　泰空	1.25	0.16	3.8	６		IP	６		IP	５		IP	６		IP																		IP
+長岡　　良也	4.70	0.19	3.3	４		IP	１		IP	４		IP	５		IP	２		IP	５		IP	６		IP	３		IP	３	4	IP	４		IP
+深川　　真二	8.00	0.20	3.4	１	2	IP	２	2	IP	１	2	IP	４	2	IP	３	2	IP	２	2	IP	２	2	IP	２	2	IP	３	2	IP	１	2	IP
+竹井　　貴史	6.30	0.17	1.9	２		IP	３		IP	Ｆ		G2	１		G2	５		IP	１		IP	５		IP	１	4	IP	２		IP	３	4	IP
+蜂須　　瑞生	3.00	0.26	3.8	４		IP	４		IP	３		IP	４		IP	５		IP	５		IP	６		IP	５		IP	４		IP	６		G3

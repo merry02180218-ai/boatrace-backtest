@@ -1,0 +1,8 @@
+data=
+1	0
+小倉　　康典	5.30	0.12	2.0	３		IP	４		IP	４		IP	４		IP	５		IP	２		IP	６		IP	３		IP	１		IP	２		IP
+佐藤　隆太郎	7.10	0.13	4.0	１		IP	１		G1	４		G1	３		IP	１		IP	３		IP	６		SG	２		G1	６		G1	２		G2
+一色　　凌雅	4.00	0.19	3.9	６		IP	６		IP	６		G3	１		IP	５	2	IP	２		IP	６		IP	３		IP	転		IP	１	4	IP
+三角　　哲男	6.20	0.12	2.9	３	5	IP	４		IP	２		IP	２		IP	６		IP	１		IP	４		G1	６		G1	１		IP	２		IP
+丸岡　　正典	4.70	0.17	3.2	４		IP	６		G2	５	4	IP	２		IP	４		IP	２		IP	５		G2	２		IP	５		IP	３		IP
+木場　雄二郎	4.20	0.15	2.6	４		IP	５		IP	６		IP	１	5	IP	５		IP	６		IP	５		IP	２		IP	３		IP	３		IP

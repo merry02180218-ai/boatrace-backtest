@@ -1,0 +1,8 @@
+data=
+1	0
+北村　　寧々	8.20	0.19	3.6	１		IP	１		IP	６		G2	４		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP
+百武　　　翔	5.80	0.18	3.8	４		IP	２		IP	２		IP	４		IP	３		IP	４		IP	２		IP	１		IP	４		IP	６		IP
+市橋　　卓士	5.20	0.12	2.0	５		IP	２		IP	４	2	IP	３		IP	３		IP	４		IP	３		IP	２		IP	４		IP	４		IP
+永田　　義紘	5.60	0.15	2.9	６		IP	２		IP	４		IP	５		IP	１		IP	１		IP	１		IP	６		IP	４		IP	３		IP
+岡部　　大輝	4.90	0.14	3.5	５		IP	３		IP	１		G3	６		G3	５		IP	３		IP	４		IP	４		IP	１		IP	４		IP
+川添　　英正	2.10	0.24	4.5	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		G3	４		IP	５	5	IP	３		IP

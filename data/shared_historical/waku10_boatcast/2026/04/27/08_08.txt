@@ -1,0 +1,8 @@
+data=
+1	0
+吉川　　勇作	8.00	0.10	1.9	３		IP	５		IP	１		IP	４		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+牧原　　　崇	5.90	0.17	3.2	６	4	IP	２		IP	３		IP	２		IP	４		IP	３		IP	２		IP	３		IP	２		IP	４		IP
+一瀬　　　明	5.10	0.18	3.6	４		IP	４	4	IP	５		IP	６		IP	３		IP	１		IP	４		IP	１		IP	２		IP	５		IP
+中嶋　　世奈	2.20	0.23	4.2	６	6	IP	６	6	IP	６	6	IP	６	6	IP	５		IP	５		IP	３	3	IP	４		IP	５		IP	５		IP
+上條　　暢嵩	5.70	0.16	3.3	１		IP	４		G1	３		G1	５		G1	６		G1	５		SG	１		G1	２		G3	４	4	G1	６		G1
+杉田　　篤光	3.80	0.27	5.0	５		IP	３		G3	４		G3	３	5	IP	２		IP	３		IP	６		IP	６		IP	５		IP	５		IP

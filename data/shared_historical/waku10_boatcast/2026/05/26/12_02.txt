@@ -1,0 +1,8 @@
+data=
+1	0
+黒田　　誠司	5.50	0.15	3.3	２		IP	２		IP	３		IP	１		IP	３		IP	４		IP	６		IP	３		IP	４		IP	５		IP
+渡邊　伸太郎	4.40	0.20	4.7	４		IP	４		IP	４		IP	３		IP	４		IP	３		IP	３		IP	４		IP	４		IP	５		IP
+市川　　健太	4.40	0.19	3.3	２		IP	３	4	IP	６		IP	６		IP	２		IP	５		IP	３		IP	５		IP	４	6	IP	３		IP
+金子　　猛志	4.90	0.16	4.0	５		IP	４		IP	１	5	IP	２		IP	６		IP	３		IP	４		IP	５		IP	４		IP	２		IP
+津久井　拓也	5.80	0.14	2.6	３		IP	２		IP	３	4	IP	３		IP	２		IP	３	4	IP	５		IP	４		IP	３		IP	３		IP
+出口　　飛龍	1.00	0.30	5.8	６		IP	６		IP	６		IP	６		IP																		IP

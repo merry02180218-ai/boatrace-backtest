@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　純平	9.40	0.16	3.0	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		G1	３		G1
+笹木　　香吾	3.78	0.17	4.5	４		IP	転		IP	５		IP	５		G2	２		IP	５		IP	５		IP	２		IP	４		IP	６		IP
+加藤　　啓太	4.40	0.13	3.7	２		IP	６	4	IP	３		IP	４		IP	６		IP	４		IP	３		IP	３		IP	３		IP	５		IP
+西原　　明生	2.90	0.23	4.9	５		IP	５		IP	４		IP	１		IP	４		IP	５	5	IP	６		IP	６		IP	５		IP	６		IP
+守屋　　大地	2.80	0.14	3.0	６	6	IP	６		IP	４		IP	５		IP	５		IP	４		IP	４		IP	４		IP	５		G3	４		IP
+赤松　　咲香	1.40	0.18	3.9	６		IP	妨		IP	４		G3	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	６		IP

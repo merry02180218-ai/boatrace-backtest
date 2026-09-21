@@ -1,0 +1,8 @@
+data=
+1	0
+森清　　友翔	6.40	0.14	3.0	１		IP	４		IP	３		IP	４		IP	１		IP	１		IP	１		IP	落		IP	３		IP	４		G3
+佐藤　　右京	5.10	0.25	3.9	１		IP	１		IP	２		IP	４		IP	６		IP	３		IP	４		IP	６		IP	６		IP	３		IP
+田頭　　虎親	7.20	0.15	3.6	４		IP	２		IP	２		IP	２		IP	２		IP	２		IP	２		IP	２		IP	１		IP	５		IP
+澤　　　大介	3.30	0.19	4.1	６		IP	６		IP	５		IP	４	3	IP	２		G3	４		IP	３		IP	６		IP	５		IP	４		IP
+富田　　恕生	3.50	0.17	3.3	５		IP	５		IP	２		IP	５		IP	４		IP	３		IP	５	4	IP	４		IP	４		IP	６		IP
+長野　　未来	1.50	0.24	4.4	４		IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

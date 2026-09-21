@@ -1,0 +1,8 @@
+data=
+1	0
+谷村　　一哉	9.20	0.18	3.0	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	２		IP	３		IP	１		IP	１		IP
+松井　　貫太	4.90	0.18	4.4	４		IP	６		IP	５		IP	３		IP	２		IP	４		IP	５		IP	１		IP	４		IP	２		IP
+中村　かなえ	3.90	0.15	2.4	４	5	IP	３		G3	４		IP	５		IP	６		IP	３		IP	４		IP	５		IP	３		IP	４		IP
+宮崎　　　奨	3.60	0.19	3.9	５		IP	５		G3	４		G3	４		G1	３		IP	６		IP	３		IP	５	3	IP	３		IP	５		IP
+川尻　　泰輔	5.00	0.16	3.1	２		IP	５		IP	５		IP	３		IP	３		G3	５		G3	２		IP	４		IP	５		IP	１		IP
+安武　　一也	1.30	0.22	4.3	５		IP	６		IP	６		IP	５	5	IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

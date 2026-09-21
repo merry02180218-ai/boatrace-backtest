@@ -1,0 +1,8 @@
+data=
+1	0
+田頭　　虎親	6.50	0.19	3.1	６		IP	１		IP	１		IP	４		IP	２		IP	１		IP	５		IP	３		IP	１		IP	４		IP
+佐藤　謙史朗	4.44	0.21	3.4	５		IP	３		IP	３		IP	５		IP	５		IP	欠		IP	４		IP	５		IP	２		IP	２		IP
+川口　　貴久	5.40	0.15	3.6	３		IP	５		IP	４		IP	２		IP	４		IP	２		IP	２		IP	２		IP	５		IP	４		IP
+福嶋　　智之	4.40	0.16	3.2	１		IP	４		IP	５		IP	３		IP	５		IP	５		IP	５	6	IP	２		IP	４		IP	４		IP
+永井　　亮次	3.50	0.18	3.4	４		IP	６		IP	４	4	IP	６		IP	６		IP	６		IP	２	4	IP	１		IP	５		IP	６		IP
+松浦　　　勝	2.00	0.20	4.2	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	２	5	IP	６		IP	５		IP

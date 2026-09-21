@@ -1,0 +1,8 @@
+data=
+1	0
+米田　　隆弘	8.60	0.19	2.9	２		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	４		IP	２		IP	１		IP
+坂本　　奈央	4.00	0.27	4.4	４		IP	５		G3	６		G3	５		IP	６		IP	１		IP	３		G3	３		IP	４		G3	エ		G3
+尾道　　佳諭	3.30	0.16	3.0	５		IP	６		IP	６		IP	４		IP	６		IP	４		IP	４		IP	１		IP	４		IP	５		IP
+森　　　弘行	2.90	0.17	4.7	５		IP	５		IP	３		IP	５		IP	６		IP	２		IP	５		IP	５		IP	５		IP	５		IP
+渡　　　修平	4.10	0.17	4.0	６		IP	５		IP	６	6	IP	３		IP	３		IP	３		IP	６		IP	５	6	IP	２		IP	２		IP
+西丸　　敦基	4.50	0.12	3.0	４		IP	４		IP	３		IP	４		IP	５		IP	２		G3	４		IP	４		IP	２		IP	６		IP

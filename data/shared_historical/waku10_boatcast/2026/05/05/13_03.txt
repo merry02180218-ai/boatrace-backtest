@@ -1,0 +1,8 @@
+data=
+1	0
+中嶋　　達也	5.50	0.18	3.8	６		IP	１		IP	１		IP	５		IP	２		IP	６		IP	６		IP	３		IP	１		IP	３		IP
+柳内　　敬太	6.90	0.13	2.4	３		IP	１		IP	３		IP	５		IP	３		IP	４		IP	２		IP	３		IP	１		IP	１		IP
+来田　　衣織	3.00	0.18	3.8	５		IP	６		IP	６		IP	５		IP	６		IP	３		IP	６		IP	４		IP	１		IP	５		IP
+藤岡　　俊介	7.30	0.12	2.8	２	5	IP	２		IP	３		IP	２		IP	１		IP	４		G1	１		G1	３		IP	２		IP	５		G1
+芝田　　浩治	5.00	0.20	3.5	３		IP	６		IP	３	4	IP	２		IP	１		IP	３		IP	６		IP	５		IP	３		IP	５		IP
+今村　天次朗	1.00	0.23	3.0	６		IP																											IP

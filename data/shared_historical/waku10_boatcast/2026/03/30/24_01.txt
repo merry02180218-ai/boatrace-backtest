@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　二朗	3.20	0.18	4.0	５		IP	６		IP	６		IP	４		IP	５		IP	３		IP	２		IP	４		IP	４		G3	欠		IP
+北川　　幸典	6.70	0.18	2.9	１		IP	６		G3	１		G3	３		IP	２		IP	２		IP	５		IP	３		IP	３		IP	１		IP
+桑原　　　啓	4.10	0.15	3.2	４		IP	２		IP	５		IP	６		IP	３	4	IP	２	4	IP	５		IP	５		IP	４		IP	４		IP
+松本　　浩貴	3.90	0.22	4.3	５	3	IP	２		IP	４		IP	落		IP	４		IP	４	5	IP	６		IP	２		IP	５		IP	３	3	IP
+原村　　百那	2.22	0.18	3.1	６	6	IP	３		IP	６		IP	３		IP	落		IP	６		IP	６		IP	６		IP	５		IP	６		IP
+小松　　卓司	3.40	0.22	4.1	５		IP	３		IP	５		IP	４		IP	４		IP	６		IP	３		IP	４		IP	４		IP	６		G3

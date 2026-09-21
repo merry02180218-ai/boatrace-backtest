@@ -1,0 +1,8 @@
+data=
+1	0
+作間　　　章	9.60	0.15	3.8	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP
+角浜　　　修	4.80	0.15	3.6	３		IP	２		IP	３		IP	４		IP	５		IP	２		IP	６		IP	４		IP	６		IP	２		IP
+中島　　孝平	7.00	0.14	3.1	２		G1	５		IP	３		G1	２		G1	４		G1	４		G1	３		G1	２		G1	２		IP	２		G1
+平野　　和明	5.00	0.17	4.0	２		IP	３		IP	４		IP	５		IP	２		IP	４		IP	３		IP	３		IP	５		IP	４		IP
+森　　　竜也	3.20	0.18	3.8	６		IP	６		IP	４		IP	５		G3	２		G3	３		IP	６		IP	６		IP	４	3	IP	４		IP
+渡邉　　睦広	3.90	0.18	3.1	６		IP	４		IP	５		IP	６		IP	３		IP	２		IP	５		IP	３		IP	２		IP	６		IP

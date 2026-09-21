@@ -1,0 +1,8 @@
+data=
+1	0
+木谷　　賢太	9.40	0.10	1.6	１		G3	１		IP	１		IP	１		IP	３		IP	２		IP	１		IP	１		G1	１		G1	２		IP
+加藤　　翔馬	7.90	0.17	3.6	２		G3	１		IP	３		IP	３		IP	３		G1	２		G1	３		IP	１		IP	２		IP	２		G1
+木場　　悠介	5.80	0.18	3.1	３		G3	３		IP	１		IP	２		IP	５		IP	４		IP	２		IP	２		IP	５		IP	４		IP
+吉村　　　誠	5.90	0.16	3.5	１		G3	５		G1	５		G1	５		IP	３		IP	２		IP	４		IP	３		IP	１		IP	４		G1
+大串　　重幸	3.20	0.19	4.3	４		G3	５		IP	１		IP	５		IP	転		IP	５		IP	５		IP	６		IP	６		IP	２		IP
+夏山　　亮平	3.00	0.18	4.0	３	5	G3	６		IP	６		IP	６		IP	４		IP	４		IP	６	5	IP	５		IP	３		IP	４		G3

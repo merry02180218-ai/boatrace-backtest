@@ -1,0 +1,8 @@
+data=
+1	0
+川崎　　智幸	6.80	0.17	3.2	１		IP	２		IP	６		IP	１		IP	６		IP	１		IP	３		IP	５		IP	１		IP	１		IP
+赤坂　　俊輔	6.30	0.11	2.3	４		IP	４		IP	３	3	IP	２		IP	３		IP	３		IP	６		G1	１		IP	２		IP	２		G1
+中田　　元泰	5.30	0.17	3.9	４		IP	４		IP	４		IP	２		IP	１		IP	４		IP	３		IP	６		IP	６		G1	２		IP
+浅見　　宗孝	3.50	0.16	3.7	５		IP	６		IP	３	5	IP	６		IP	６		IP	４		IP	４		IP	２		IP	４		IP	５		IP
+佐々木　大河	6.10	0.16	2.9	６		IP	４		IP	２		IP	２		G2	２		G2	４		IP	２		IP	５		IP	２		IP	２		IP
+都築　　正治	2.80	0.14	3.3	５		IP	４		IP	６		IP	４		IP	６		IP	５		IP	５		IP	４		IP	４		IP	４		IP

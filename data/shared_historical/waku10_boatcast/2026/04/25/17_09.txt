@@ -1,0 +1,8 @@
+data=
+1	0
+森高　　一真	9.10	0.15	5.4	４		G1	２		G1	１		G1	１		G1	１		G1	２		SG	２		SG	１		G1	１		G1	６		G1
+柴田　　　光	7.33	0.16	3.6	５		G1	４		G1	欠		IP	２		IP	２		IP	１		G3	２		G3	２		IP	２		IP	３		SG
+北村　　征嗣	6.60	0.17	2.7	４	4	G1	１		IP	１	4	IP	１		IP	３		G3	４		G3	１		IP	３		IP	５		IP	５		G1
+平尾　　崇典	5.80	0.15	3.3	２		G1	２		IP	４		IP	５		IP	６	5	G1	６		G1	５		G1	３		G1	２		G2	１		IP
+佐々木　康幸	4.20	0.11	2.0	４		G1	３		IP	１		IP	４		IP	５		IP	３		IP	６		IP	４		G1	６		G1	６		IP
+仲口　　博崇	2.50	0.23	4.6	６	5	G1	３	3	IP	５	5	G3	４	5	G3	５	4	IP	妨	4	IP	４	5	IP	６	3	IP	６		G1	５	4	IP

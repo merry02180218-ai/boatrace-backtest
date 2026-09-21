@@ -1,0 +1,8 @@
+data=
+1	0
+谷川　　里江	6.20	0.20	3.9	５		G3	３		G3	６		G3	１		G3	６		IP	１		IP	４		G3	２		G3	１		IP	１		IP
+榮田　　将彦	3.50	0.14	3.0	４	3	IP	６		IP	５		IP	４		IP	５		IP	２		IP	４		IP	５		IP	５		IP	３		IP
+松本　　純平	6.80	0.18	3.5	５		IP	２		IP	１		IP	５		G1	２		G1	５		G1	２		IP	２	4	IP	１		IP	３		G1
+赤松　　咲香	4.00	0.21	3.9	転		G3	４		G3	１		G3	６		IP	６	6	IP	２		IP	４		IP	６	6	IP	３		IP	６	5	IP
+西原　　明生	2.60	0.22	4.8	５		IP	５	6	IP	５		IP	６		IP	４		IP	５		IP	４		IP	４		IP	４		IP	６		IP
+下寺　　秀和	5.50	0.16	3.3	２		IP	３	5	IP	３		IP	２		IP	５		IP	４	5	IP	２		IP	２		IP	６		IP	４		IP

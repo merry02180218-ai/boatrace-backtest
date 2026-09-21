@@ -1,0 +1,8 @@
+data=
+1	0
+入海　　　馨	8.50	0.13	2.9	１		IP	１		G1	２		G1	１		G1	１		G1	５		G1	２		G1	６		G1	１		G1	３		SG
+新田　　泰章	6.90	0.15	3.1	６		IP	４		IP	５		G1	１		G1	３		IP	２		IP	２		IP	１		IP	２		IP	１		IP
+岩井　　　繁	3.90	0.20	4.3	３		IP	５		IP	４	4	IP	５	5	IP	３		IP	６		IP	５		IP	４		IP	４		IP	２		IP
+齋藤　　真之	3.10	0.18	3.7	５		IP	４		IP	５		IP	５		IP	２		IP	４		IP	４		IP	５	5	IP	５		IP	６		IP
+豊田　　泰洋	2.70	0.19	4.3	５		IP	６		IP	４		IP	５		IP	５		IP	５		IP	５		IP	４		IP	５		IP	３	4	IP
+辻　　　栄蔵	6.30	0.14	3.9	３		G1	４	5	G1	６	4	IP	３		G2	３	5	G2	４	5	G1	４		G1	３		IP	１	5	IP	２		G1

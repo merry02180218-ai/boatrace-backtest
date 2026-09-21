@@ -1,0 +1,8 @@
+data=
+1	0
+向井　　美鈴	8.90	0.17	3.4	５		G1	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		G3	１		G3
+中村　　桃佳	6.80	0.16	2.6	３		G1	２		G1	２		IP	３		IP	２		IP	２		IP	２		IP	１		IP	５		IP	５		IP
+金子　　龍斗	6.56	0.10	2.1	１		IP	４		IP	欠		IP	２		IP	１		IP	２		IP	６		IP	３		IP	１		IP	５		IP
+東本　　勝利	3.80	0.21	4.4	５		IP	６		IP	５		IP	３		IP	６		IP	３		IP	３		IP	３	5	IP	５		IP	３	5	IP
+今泉　　　徹	3.70	0.19	3.9	５		IP	５		IP	５		IP	４		IP	４		IP	１		IP	３		IP	６	6	IP	４		IP	５		IP
+宇留田　翔平	4.00	0.14	3.5	５		IP	４		IP	４	5	IP	６		IP	２		IP	４		IP	６		IP	１	5	IP	４		IP	５		IP

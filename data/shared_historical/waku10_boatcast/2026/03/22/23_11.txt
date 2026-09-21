@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　祐也	10.10	0.14	3.0	２		G2	１		G1	１		IP	１		IP	１		G1	１		G1	１		G1	１		IP	３		IP	１		G1
+西岡　　顕心	7.30	0.13	2.9	２		G2	２		G1	６		G1	４		G1	１		G1	１		G1	４		IP	２		IP	１	3	IP	６		G1
+島川　　海輝	6.20	0.16	3.0	４		G2	２		IP	５		IP	６		IP	４		IP	３		IP	２		IP	２		IP	１		IP	１	4	IP
+石原　　　翼	5.90	0.18	3.2	４		G2	４		IP	２		IP	４		IP	２		IP	１		IP	３		IP	３		IP	５		IP	３	3	IP
+井本　　昌也	5.90	0.16	3.6	４		G2	５		G1	４		IP	４	4	IP	３		G1	３		IP	４		IP	３		IP	１		G1	２		G1
+佐藤　　　航	6.10	0.13	2.9	６		G2	５	4	IP	５		IP	２		IP	１	5	IP	１		IP	２		G2	５		IP	２		IP	３		IP

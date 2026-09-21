@@ -1,0 +1,8 @@
+data=
+1	0
+上瀧　　絢也	6.40	0.21	3.7	４		IP	２		IP	１		IP	４		IP	５		IP	３		IP	１		IP	２		IP	１		IP	５		IP
+谷口　　　丞	5.11	0.15	2.4	２		IP	６		IP	４	3	IP	５	3	IP	２		IP	１	4	IP	２		IP	４		IP	６		IP			IP
+吉永　　泰弘	2.80	0.16	3.7	５		IP	４		IP	５		IP	６		IP	６		IP	５		IP	５		IP	３		IP	３	2	IP	５		IP
+奥村　明日香	4.90	0.20	2.9	３		IP	４		IP	２		G3	１		IP	５		IP	４		IP	６		IP	４		G3	５		IP	３		IP
+堀本　　和也	4.80	0.13	2.9	４	4	SG	３		SG	６		G1	２		G1	転	6	G1	４		G1	４		G1	４		G3	２		G3	６		IP
+榮田　　将彦	2.50	0.15	3.5	５		IP	４		IP	４		IP	６		IP	５		IP	３		IP	６		G3	６		G3	５		G3	５		G3

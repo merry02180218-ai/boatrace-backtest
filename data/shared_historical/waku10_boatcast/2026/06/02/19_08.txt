@@ -1,0 +1,8 @@
+data=
+1	0
+向井　　美鈴	9.00	0.15	2.6	１		IP	１		IP	１		IP	１		IP	３		IP	２		IP	１		IP	１		IP	２		IP	２		IP
+広瀬　　聖仁	5.00	0.17	3.6	５	3	IP	４		IP	２		IP	４		IP	１		IP	５		IP	５		IP	２		IP	２		IP	５		IP
+大町　　利克	4.44	0.14	3.7	Ｌ	2	IP	３		IP	６	4	IP	６		IP	３		IP	２		IP	３		IP	５		IP	３		IP	４		IP
+上原　　　崚	5.50	0.16	2.8	６		G2	２		G2	４		G2	２		IP	１		IP	３		IP	３	6	IP	６		IP	５		IP	３		IP
+野見山　拓己	3.40	0.13	2.1	３		IP	６		IP	４		IP	６		G3	４		IP	４		IP	５		IP	２		IP	５		IP	５		IP
+宮田　　　栞	1.33	0.28	5.3	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP												IP

@@ -1,0 +1,8 @@
+data=
+1	0
+青木　　　蓮	7.20	0.13	2.6	３		IP	３		IP	１		IP	１		IP	１		IP	Ｆ		IP	１		IP	４		IP	１		IP	３		IP
+大月　　遊雅	5.80	0.16	3.3	５		IP	３		IP	３		IP	２		IP	５		IP	３		IP	４		IP	１		IP	２		IP	３		IP
+小林　　孝彰	6.70	0.15	3.0	３		IP	６		IP	１		IP	２		IP	１	2	IP	３		IP	１		IP	３		IP	２		IP	５		IP
+高井　　雄基	4.80	0.17	3.8	４		IP	５	6	G3	４		IP	４		IP	３		IP	２		IP	４		IP	５		IP	１		IP	４	5	IP
+鈴木　　唯央	3.89	0.15	3.0	２		IP	Ｆ		IP	６		IP	５		IP	３		IP	エ		IP	４		IP	４		IP	３		IP	４		IP
+上野　　拓馬	4.30	0.13	2.9	３		IP	４		IP	４	5	IP	４		IP	３		IP	３		IP	５		IP	３		IP	６		IP	４		IP

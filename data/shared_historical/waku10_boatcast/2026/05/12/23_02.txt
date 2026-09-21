@@ -1,0 +1,8 @@
+data=
+1	0
+大神　　康司	8.60	0.17	2.2	１		IP	１		IP	２		IP	１		IP	４		IP	１		IP	２		IP	３		IP	１		IP	１		IP
+鐘ヶ江　真司	3.75	0.16	3.1	５		IP	４		IP	２		IP	妨		IP	５		IP	４		IP	転		IP	３		IP	４		IP			IP
+大田　　直弥	4.90	0.19	3.2	４		IP	４		IP	２		IP	１		IP	２		IP	３		IP	６		IP	４		IP	５		IP	５		IP
+長谷川　親王	3.10	0.19	4.1	５		IP	５		IP	５		IP	５	5	IP	６		IP	４		IP	３		IP	４		IP	３		IP	５		IP
+中島　　浩哉	3.80	0.20	3.8	３		IP	５		IP	４		IP	４		IP	６	6	G3	５		G3	３		IP	２		IP	６		IP	４		IP
+今泉　　博人	2.00	0.37	6.0	５		IP	５		IP																								IP

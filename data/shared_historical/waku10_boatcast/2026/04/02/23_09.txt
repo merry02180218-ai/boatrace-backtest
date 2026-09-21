@@ -1,0 +1,8 @@
+data=
+1	0
+森口　　和紀	8.60	0.19	3.6	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	４		IP	３		IP	１		IP	３		IP
+小池　　公生	6.40	0.18	3.5	４		IP	１		IP	４		IP	２		IP	３		IP	２		IP	３		IP	２		IP	２		IP	５		IP
+渡　　　修平	4.00	0.17	4.0	３		IP	５		IP	５		IP	２		IP	転		IP	６		IP	６		IP	４		IP	３		IP	１	4	IP
+中島　　友和	3.60	0.16	3.4	６		IP	５		IP	３		IP	４		IP	６		IP	５		IP	３		IP	３		IP	３		IP	５		IP
+堤　　　　昇	4.10	0.19	3.7	５	4	IP	３	4	IP	２		IP	４	4	IP	４		IP	４	4	IP	５		IP	５	4	IP	２	3	IP	６		IP
+横田　　　茂	2.22	0.15	3.8	５		IP	転	5	IP	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP	２	5	IP	５	5	IP

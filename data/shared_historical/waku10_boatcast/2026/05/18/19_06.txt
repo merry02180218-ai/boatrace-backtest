@@ -1,0 +1,8 @@
+data=
+1	0
+宮田　　龍馬	8.70	0.11	2.3	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	Ｆ		IP
+澁川　　　夏	7.20	0.19	2.8	３		IP	２		IP	２		IP	２		IP	２		IP	３		IP	３		IP	２		IP	３		IP	２		IP
+上野　　拓馬	3.80	0.17	3.8	６		IP	５		IP	２		IP	５		IP	６		IP	２		IP	５		IP	３		IP	４		IP	４		IP
+内田　　　壮	1.50	0.20	4.2	６		IP	４		IP	６		IP	転	6	IP																		IP
+津田　　陸翔	5.40	0.17	3.9	４		IP	４		IP	１		IP	１		IP	６		IP	落		IP	６		IP	２	6	IP	１	4	IP	３		IP
+山下　　心一	2.67	0.18	3.7	２		IP	６		IP	４		IP	落		IP	５		IP	６		IP	転		IP	５		IP	４		IP	５	5	IP

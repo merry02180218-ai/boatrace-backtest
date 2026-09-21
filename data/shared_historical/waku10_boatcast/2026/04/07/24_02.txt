@@ -1,0 +1,8 @@
+data=
+1	0
+岩井　　　繁	6.00	0.19	3.2	１		IP	２		IP	２		IP	２		IP	４		IP	２		IP	２		IP	４		IP	６		IP	６		IP
+鈴木　　智啓	6.70	0.17	4.0	６		IP	１		IP	２		IP	２		IP	１		IP	２		IP	３		IP	４		IP	４		IP	２		IP
+松尾　　光広	4.90	0.21	4.0	６		IP	３		IP	３		IP	２		IP	３		IP	６		IP	６		IP	３		IP	４	4	IP	１	4	IP
+三浦　　敬太	6.00	0.15	3.7	１		IP	４		IP	３		IP	３		IP	２		IP	２		IP	５		IP	３		IP	５		IP	２		IP
+加木　　　郁	4.30	0.20	4.0	４		IP	３		IP	３		IP	５		IP	４		IP	５	4	IP	２		IP	３		IP	６		IP	４		IP
+山本　　光雄	2.70	0.18	4.3	５		IP	４		IP	５		IP	Ｆ		IP	４		IP	５		IP	３		IP	４		IP	６		IP	５		IP

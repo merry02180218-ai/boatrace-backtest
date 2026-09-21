@@ -1,0 +1,8 @@
+data=
+1	0
+上田　　洋平	8.20	0.17	3.6	１		IP	１		IP	３		IP	１		IP	２		IP	２		IP	１		IP	３		IP	４		IP	１		IP
+半田　　尚也	3.20	0.16	4.2	４		IP	５		IP	Ｆ		IP	４		IP	１		IP	５		IP	５		IP	５	3	IP	４		IP	５		IP
+原田　　雄次	6.00	0.17	3.5	３		IP	３		IP	３		IP	１		IP	１		IP	５		IP	１		IP	４		IP	転		IP	３		IP
+花田　　和明	4.20	0.15	3.1	５		IP	３		IP	２		IP	５		IP	５		IP	６		IP	６	3	IP	３		IP	２	2	IP	３		IP
+小玉　　啓太	4.20	0.16	2.8	３		IP	６		IP	３		IP	５		IP	４		IP	６		IP	４		IP	４		IP	３		IP	２		IP
+竹田　　広樹	2.10	0.23	5.2	４		IP	５		IP	６		IP	６		IP	６		IP	４		IP	４		IP	６		IP	５	5	IP	６		IP

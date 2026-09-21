@@ -1,0 +1,8 @@
+data=
+1	0
+高山　　秀雄	7.50	0.18	4.3	１		IP	２		IP	３		IP	３		IP	１		IP	２		IP	１		G3	１		G3	３		IP	６		G3
+谷口　　健一	4.70	0.18	4.0	６		IP	３		IP	４		IP	５	3	IP	３		IP	３		IP	２		IP	１		IP	５		IP	５		IP
+小黒　　竜吾	5.40	0.20	3.8	４		IP	３		IP	２		IP	５		IP	３		IP	５		IP	２	4	IP	３		IP	３		IP	３		IP
+池田　　雄一	6.00	0.19	3.2	６		IP	３		G1	１	5	IP	２	5	IP	５		IP	２		IP	３		IP	５		IP	２	3	IP	２		IP
+西村　　　勝	2.30	0.18	2.8	６	6	IP	６		IP	６		IP	６		IP	３		IP	６		IP	５		IP	３		IP	５		IP	５		IP
+原　　　豊土	5.10	0.20	4.6	１	5	IP	３		IP	４		IP	５		IP	３		G3	５		G3	２		IP	５		IP	６		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+眞田　　英二	8.60	0.20	3.9	１		IP	３		IP	３		G3	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	２		IP
+丹下　　　将	5.90	0.17	3.3	４		IP	４	3	IP	３		IP	３		IP	３		IP	６		IP	３		IP	１		IP	３		IP	２		IP
+川添　　英正	6.80	0.19	3.6	１		G3	２		G3	１		IP	３		IP	３		IP	３		IP	３		IP	４		IP	４		IP	２		IP
+永田　　啓二	6.90	0.09	1.5	２		IP	２		IP	２		IP	１		IP	１		IP	２		IP	３		IP	６		IP	４	5	G1	５	5	G1
+正木　　聖賢	4.10	0.19	3.2	４	2	IP	５	2	IP	６	2	IP	３	2	IP	４	2	IP	５	4	IP	１	3	IP	２	2	IP	５	2	IP	５	3	IP
+草川　　壮良	2.50	0.14	2.2	５		IP	６		IP	６		IP	４		IP	５		IP	２		IP	６		IP	落		IP	５		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+松田　　祐季	9.90	0.20	3.6	１		G1	１		G1	１		G1	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+中辻　　崇人	7.20	0.16	3.4	４		G1	２		IP	２		G1	２		IP	３		IP	３		G3	１	3	G3	２		G3	２		IP	４		IP
+松井　　洪弥	6.70	0.12	1.8	６		G1	６		G1	３		G1	２		IP	２		IP	２		IP	２		IP	２		IP	２		IP	２		IP
+権藤　　俊光	7.70	0.13	1.8	２		G1	１		G1	２		G1	１		IP	３		IP	３		IP	２		IP	１		IP	４		IP	４		IP
+谷野　　錬志	5.50	0.13	3.1	３		IP	４		G1	１	4	IP	４		IP	４		IP	３		IP	５		IP	２		G3	４		G3	３		IP
+村上　　　遼	5.10	0.20	2.8	３		IP	５		IP	２		IP	３		IP	Ｆ		IP	３		IP	４		IP	３		IP	３	5	IP	３		IP

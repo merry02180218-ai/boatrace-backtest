@@ -1,0 +1,8 @@
+data=
+1	0
+三原　　　司	7.80	0.15	3.4	３		IP	１		IP	１		G3	１		IP	２		IP	４		IP	１		IP	１		IP	２		IP	５		IP
+井上　　忠政	8.50	0.15	4.1	２		IP	２		IP	１		IP	２		G1	２		G1	１		G1	３		G1	５		G1	１		G1	２		G1
+鈴木　　　博	7.20	0.16	4.3	２		IP	１		IP	２		IP	３		IP	３		IP	３		IP	３		IP	２		IP	２		IP	３		IP
+為本　　智也	7.60	0.16	2.9	３		IP	２		IP	３		IP	４		IP	１	5	IP	１		IP	１	5	G3	３		G3	１		IP	３		IP
+大須賀　　友	7.30	0.14	2.3	４		IP	４		IP	３		IP	３		IP	１	3	IP	２	4	IP	１		IP	１		IP	１		IP	４		IP
+安達　　美帆	1.70	0.29	5.6	５		G3	６		G3	５		G3	６		G3	５		G3	５		G3	５		G3	５	5	IP	６		G3	５		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+金田　　大輔	8.30	0.15	2.3	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	６		IP	２		IP	３		IP	１		IP
+上野　真之介	6.60	0.10	2.0	２		G1	２	1	IP	３		IP	２		G2	４		G1	５		G1	１		G1	６		G1	５		G1	２		G1
+島崎　丈一朗	6.60	0.16	2.5	２		IP	２		IP	２		IP	３	6	IP	３		IP	５		IP	３		IP	１	5	IP	４		IP	２		IP
+庄島　　潤成	4.00	0.16	3.8	４		IP	６	6	IP	落	5	IP	２	6	IP	４		IP	６		IP	５		IP	３		IP	３		IP	２	6	IP
+河上　　年昭	3.80	0.16	2.4	５		IP	４		IP	５		IP	６		IP	１		IP	４		IP	５		IP	２		IP	４		IP	６		G3
+鳥居塚　孝博	4.70	0.18	3.8	３		IP	５		IP	４		IP	２	5	IP	２		IP	２		IP	６		IP	６		IP	５		IP	３		IP

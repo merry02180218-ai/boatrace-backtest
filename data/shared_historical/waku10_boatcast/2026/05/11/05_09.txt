@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　英志	9.40	0.14	2.0	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP
+岩下　　巧斗	4.80	0.14	3.3	２		IP	３		IP	２		IP	３		IP	５		IP	５		IP	４		IP	４		IP	３		IP	５		IP
+網代　　良芽	6.20	0.10	2.1	３		IP	３		IP	６		IP	６	5	IP	１		IP	１		IP	３		IP	１	4	IP	３		IP	３		IP
+松井　　賢治	5.80	0.15	3.1	３		IP	３		IP	２		IP	２		IP	４		IP	４		IP	２		IP	４		IP	３		IP	４		IP
+高橋　　真吾	4.00	0.17	3.2	２		IP	６		IP	６	6	IP	６		IP	２		IP	２		IP	４		IP	６		IP	３		IP	５		IP
+中村　　裕将	2.60	0.14	3.0	５		IP	５		IP	３		IP	２		IP	６		IP	５		IP	５		IP	６		IP	６		IP	６		IP

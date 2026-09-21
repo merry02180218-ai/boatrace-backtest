@@ -1,0 +1,8 @@
+data=
+1	0
+内山　　七海	7.60	0.19	3.0	３		IP	３		IP	１		IP	１		IP	５		IP	２		IP	２		IP	２		IP	２		IP	１		IP
+柴田　　百恵	6.20	0.17	3.2	２		G3	２		G3	３	3	G3	３		IP	５		IP	５	3	IP	３		G3	４		G3	１	1	IP	１		IP
+中田　　夕貴	6.10	0.14	3.4	１	2	IP	３		IP	３		IP	３		IP	２		IP	２		IP	５		G1	５		IP	２		IP	４		IP
+井上　　遥妃	3.80	0.17	3.7	３		IP	６		IP	４		IP	６	5	IP	６		IP	６		G1	５		G1	４		G1	３		IP	２		G1
+北村　　寧々	4.50	0.16	3.4	１		IP	５		IP	５		IP	６		IP	２		IP	４		G3	５		IP	３		IP	２		IP	５	4	IP
+平山　　智加	4.70	0.15	3.3	２		G3	４		G3	３		IP	５		G1	４		G1	５		IP	４		IP	５		G3	３		G3	３		G3

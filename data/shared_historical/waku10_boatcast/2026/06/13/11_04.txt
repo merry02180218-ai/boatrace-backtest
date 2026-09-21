@@ -1,0 +1,8 @@
+data=
+1	0
+三品　　隆浩	4.70	0.19	3.6	４		IP	５		IP	４		IP	１		IP	１		IP	２		IP	５		IP	６		IP	５		IP	４		IP
+籾山　　佳岳	5.60	0.15	2.8	２		IP	３		IP	５		IP	２		IP	３	5	IP	４		IP	１		IP	妨		IP	４		IP	２		IP
+亀山　　雅幸	6.80	0.15	2.4	４		IP	１		IP	２		IP	２		IP	６		IP	６	4	IP	２		IP	１		IP	１		IP	２		IP
+野田　　亜湖	1.30	0.24	5.1	６		IP	６		IP	６		IP	６		G3	６		G3	６		G3	６		G3	６	5	IP	４		IP	６		IP
+東本　　勝利	4.20	0.16	3.8	３		IP	２	6	G3	５		IP	２		IP	４		IP	５	4	IP	５		IP	５		IP	５		G3	４		IP
+石田　　章央	4.70	0.13	3.2	５		IP	２		IP	４		IP	２		IP	６		IP	５		IP	２		IP	５		IP	４		IP	２		IP

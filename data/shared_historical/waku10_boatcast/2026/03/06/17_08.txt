@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　太陽	4.44	0.20	3.7	６		IP	５		IP	欠		IP	１		IP	１		IP	５		IP	５		IP	１		IP	６		IP	５		IP
+吉川　　喜継	7.20	0.16	3.2	２		IP	５		IP	２		IP	１		IP	３		IP	２		G1	３		G1	３		IP	３		IP	１		IP
+山本　　英志	5.60	0.18	4.3	１		IP	３		IP	６		IP	５		IP	６		IP	２		IP	２		IP	４		IP	２		IP	３		IP
+白井　　友晴	5.40	0.18	3.4	３	5	IP	３		IP	３		IP	４		IP	２		IP	３		IP	４		IP	５		IP	３		IP	３		IP
+奥田　　　誠	3.80	0.18	3.7	２		IP	５		IP	４		IP	５		IP	６		IP	３		IP	６		IP	４		IP	２		IP	５		IP
+鈴木　　裕隆	3.80	0.20	3.9	３		IP	４	5	IP	５		IP	２		IP	３		IP	６		IP	６		IP	３		IP	５		IP	５		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+正木　　聖賢	8.80	0.18	4.2	２		IP	２		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP
+加木　　　郁	4.40	0.19	3.7	２		IP	６		IP	３		IP	３		IP	４		IP	３		IP	５		IP	４		IP	３		IP	６		IP
+森永　　　隆	5.80	0.21	4.1	２		IP	２	4	IP	６		IP	２		IP	４		IP	１		IP	６	4	IP	１		IP	６		IP	３		IP
+松下　　直也	5.30	0.19	3.3	２		IP	３		IP	４		IP	６		IP	５		IP	１		IP	２		IP	５		IP	２		IP	４		IP
+横川　　聖志	4.70	0.13	2.8	２	4	IP	３		IP	４	4	IP	６	6	IP	５		IP	６		IP	５		G1	２		IP	３		IP	２		IP
+宇田川　信一	2.60	0.21	5.1	４		IP	６		IP	５		IP	４		IP	４		IP	６		IP	２		IP	６		IP	６		IP	転		IP

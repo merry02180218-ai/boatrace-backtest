@@ -1,0 +1,8 @@
+data=
+1	0
+竹田　　吉行	8.40	0.13	2.0	１		IP	２		IP	２		IP	２		IP	１		IP	１		IP	３		IP	１		IP	３		IP	２		IP
+川上　　清人	5.44	0.16	4.3	６		IP	２		IP	５		IP	１		IP	エ	3	IP	４		IP	４		IP	２		IP	３		IP	３		IP
+都築　　正治	5.40	0.15	2.4	４	2	IP	３		IP	６		IP	５		IP	２		IP	１		IP	１		IP	５		IP	１		IP	６		IP
+喜多須　杏奈	5.50	0.19	4.6	６		G3	４		G2	５		G2	２		IP	３		G3	１		G3	３		IP	２		IP	３		IP	５		IP
+高田　　　明	3.40	0.19	3.4	５		G2	Ｆ		IP	５		IP	６		IP	１		IP	４		IP	６		G3	４		G3	４	4	IP	５		G1
+藤本　　遼磨	1.30	0.19	4.7	５		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP

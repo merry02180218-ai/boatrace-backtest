@@ -1,0 +1,8 @@
+data=
+1	0
+藤森　　陸斗	8.80	0.16	1.6	２		IP	１		IP	１		IP	２		IP	１		IP	５	2	IP	１		IP	１		IP	１		IP	１		IP
+齊藤　　　廉	5.40	0.20	3.0	５		IP	２		IP	２		IP	４		IP	２		IP	２		IP	４		IP	５		IP	５		IP	２		IP
+仲道　　大輔	6.00	0.19	3.4	４	4	IP	１		IP	２		IP	３		IP	４		IP	１		IP	Ｆ		IP	５		IP	３		IP	１		IP
+宮崎　　奏磨	1.50	0.20	4.5	６		IP	５		IP	６		IP	５		IP	６		IP	６	5	IP	４	5	IP	６		IP	６		IP	６		IP
+竹内　　　来	1.90	0.15	2.5	６		IP	５		IP	６		IP	５	6	IP	４		IP	６		IP	５		IP	４		IP	６		IP	６		IP
+木山　　大聖	2.00	0.17	3.3	５		IP	６		IP	４		IP	Ｆ		IP	５		IP	５		IP	５		IP	４		IP	５		IP	６		IP

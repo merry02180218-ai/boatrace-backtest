@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　雅希	8.40	0.18	4.2	１		IP	３		IP	１		IP	１		IP	３		IP	２		IP	２		IP	２		IP	２		G3	１		IP
+石川　　吉鎬	6.10	0.20	4.4	６		IP	２		IP	１		IP	４		IP	４		IP	１		IP	２		IP	４		IP	４		IP	２		IP
+刑部　亜里紗	5.90	0.16	3.3	３		IP	１		IP	３		G1	２		IP	６		IP	５		IP	１		IP	６		IP	１		IP	４		IP
+細川　　明人	3.50	0.20	4.0	５		IP	４		IP	６		IP	５		IP	１		IP	４		IP	６		IP	２	5	IP	５		IP	６		IP
+高山　　弘斗	3.60	0.21	3.9	４		IP	５		IP	５		IP	５	6	IP	４		IP	６		IP	３		IP	６		IP	３		IP	２		IP
+佐々木　康幸	5.20	0.12	2.6	５	3	IP	２	5	IP	１	5	IP	４	4	IP	６		G1	４		IP	４	4	IP	２	4	IP	５		IP	２		IP

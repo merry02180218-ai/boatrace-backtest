@@ -1,0 +1,8 @@
+data=
+1	0
+永井　　　源	6.89	0.18	4.0	２		IP	Ｌ		IP	２		IP	２		IP	１		IP	１		IP	６		IP	６		G3	３		G3	１		IP
+登　　みひ果	7.20	0.16	3.1	３		IP	４		G3	２		G3	２		G2	１		G2	５		IP	２		IP	１		G3	３		IP	２		G3
+菊池　　峰晴	4.70	0.23	4.1	６		IP	６		IP	３		IP	１		IP	６		IP	２		IP	２		IP	４		IP	５		IP	３		IP
+畑　　　和宏	5.80	0.16	3.4	３	5	IP	３		IP	６		IP	４		IP	１		IP	１	3	IP	４		IP	３		IP	１		IP	６		IP
+烏野　　賢太	3.80	0.16	3.6	５		IP	４		IP	４		IP	５		IP	３		IP	５		IP	３		IP	４		G3	５		G3	３	4	IP
+中澤　　和志	3.90	0.13	3.0	５		IP	４		IP	４		IP	４		IP	４		G1	５		IP	６		IP	４		IP	２	5	G1	４	4	IP

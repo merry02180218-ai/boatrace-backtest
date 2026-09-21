@@ -1,0 +1,8 @@
+data=
+1	0
+稗田　　聖也	7.50	0.16	2.0	６		IP	１		IP	２		IP	１		IP	４		IP	２		IP	１		IP	２		IP	１		IP	３		IP
+吉川　　喜継	7.40	0.16	3.3	５		IP	２		IP	１		IP	３		IP	２		G1	３		G1	３		IP	３		IP	１		IP	１		IP
+吉田　　和仁	5.60	0.19	2.4	４	6	IP	１		IP	５		IP	６		IP	６		IP	２		IP	２		IP	３		IP	２		IP	２		IP
+岸蔭　　　亮	3.70	0.21	3.9	６		IP	６	6	IP	３	3	IP	５		IP	４		IP	１		IP	４		IP	５		IP	６	5	IP	３		G3
+上條　　嘉嗣	5.50	0.22	4.4	５		IP	１	3	IP	転	6	IP	２		IP	６		IP	４		IP	４		IP	２	4	IP	１	3	IP	２		IP
+下條　雄太郎	4.40	0.18	3.7	４		IP	４		G1	５		G1	５		IP	３		IP	４		IP	５	5	IP	５		IP	３		IP	１	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+安河内鈴之介	7.70	0.13	2.4	６		G3	４		G2	１		IP	１		IP	１		IP	６		IP	１		IP	１		IP	１		IP	１		IP
+大場　　　敏	6.00	0.19	3.9	４		IP	４		IP	２		IP	３		IP	２		IP	３	3	IP	３		IP	３		IP	２		IP	４		IP
+内田　　　圭	4.40	0.20	2.5	５		IP	５		IP	４		IP	５		IP	３		IP	２		IP	２		IP	３		IP	５		IP	４	4	IP
+高野　　哲史	4.50	0.16	3.6	６		G1	１		G1	３		G1	４		IP	６		G1	５		G1	転		IP	５		IP	２		IP	３		IP
+吉田　　和仁	4.10	0.18	3.4	５		IP	３		IP	６		IP	６		IP	３		IP	３	6	IP	６		IP	２		IP	２		IP	５		IP
+中曽　　瑠華	1.60	0.23	4.4	５		IP	４		IP	５		IP	６		IP	６		G3	６		IP	６		IP	５		IP	６	5	IP	６		IP

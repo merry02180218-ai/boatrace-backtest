@@ -1,0 +1,8 @@
+data=
+1	0
+籾山　　佳岳	8.40	0.13	2.1	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP	２		IP	２		IP	４		IP	１		IP
+丹下　　　将	5.50	0.17	3.5	１		IP	４		IP	５		IP	１	3	IP	４		IP	４	3	IP	３		IP	３		IP	３		IP	６		IP
+松本　　庸平	4.80	0.19	4.0	６		IP	２		IP	６		IP	６		IP	６		IP	２		IP	４		IP	２		IP	２		IP	２	2	IP
+仲口　　博崇	6.00	0.18	3.7	２	3	IP	６		G1	４	3	G1	５		IP	６		G3	１		G3	２	2	IP	１		IP	３		IP	２		IP
+渥美　　卓郎	3.20	0.21	4.1	６		IP	５		IP	４		IP	５		IP	１		IP	５	6	IP	５		IP	５		IP	６		IP	３		IP
+荒木　　颯斗	2.80	0.16	4.2	６		IP	３		IP	５		IP	６		IP	５		IP	３		IP	６		IP	６		IP	３		IP	５		IP

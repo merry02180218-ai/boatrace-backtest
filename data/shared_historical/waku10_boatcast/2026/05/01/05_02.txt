@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　聖司	6.60	0.18	2.8	１		IP	１		IP	３		IP	Ｆ		IP	５		IP	１		IP	３		IP	１		IP	４		IP	２		IP
+若林　　樹蘭	5.80	0.18	4.0	４		IP	２		IP	１		IP	３		IP	４		IP	２		IP	２		IP	５		IP	４		IP	４		IP
+三角　　哲男	6.80	0.14	2.7	２		IP	３		IP	３		IP	４		IP	５		IP	２		IP	３		IP	１	2	IP	１		IP	３		G1
+上原　　　崚	4.90	0.18	3.2	３		IP	３	6	IP	６		IP	５		IP	３		IP	１		IP	４		IP	３		IP	６		IP	４		G2
+多羅尾　達之	3.40	0.15	2.6	５	4	IP	３		IP	４		IP	６		IP	４		IP	６		IP	１		IP	６		IP	６		IP	４	4	IP
+米本　　圭佑	1.10	0.31	5.6	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP

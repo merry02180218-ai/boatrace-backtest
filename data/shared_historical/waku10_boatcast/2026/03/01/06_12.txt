@@ -1,0 +1,8 @@
+data=
+1	0
+徳増　　秀樹	9.70	0.14	2.7	１		IP	１		IP	１		G1	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	１		IP
+三角　　哲男	7.10	0.11	2.3	２		IP	５		G1	２		IP	１		IP	５		IP	３		IP	２		IP	２		IP	２		IP	２		IP
+平石　　和男	6.20	0.23	4.0	１		IP	２		IP	２		IP	２		IP	６	4	IP	２		IP	２		IP	６		IP	２		IP	５		IP
+佐々木　康幸	6.40	0.14	2.3	３		IP	２		IP	３		IP	３		G1	２		IP	４		IP	４		IP	２		IP	５		IP	１		G3
+伊藤　　将吉	5.20	0.15	3.4	３		IP	５		IP	６		G1	４	6	IP	２		IP	５	4	IP	２		IP	５		IP	２		IP	１		IP
+大澤　　普司	5.20	0.17	3.4	６		G1	２		IP	３		IP	３		IP	４		IP	４		IP	４	5	G3	２		IP	５		G3	２		IP

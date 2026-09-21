@@ -1,0 +1,8 @@
+data=
+1	0
+池田　奈津美	7.10	0.16	2.5	２		IP	１		IP	２		IP	１		IP	３		IP	６		G3	３		G3	１		G3	５		IP	１		IP
+松本　　弓雄	4.80	0.24	4.4	３		IP	３		IP	１	3	IP	６		IP	４		IP	５		IP	６		IP	４		IP	１		IP	４		IP
+吉原　　聖人	4.10	0.18	3.7	６	5	IP	５		IP	１		IP	５		IP	４		IP	５		IP	５		IP	５		IP	２	2	G3	２		G3
+乃村　　康友	4.10	0.18	3.1	４		IP	４		IP	５	5	IP	４		IP	３	5	IP	３	5	IP	４		IP	６		IP	３		IP	５		IP
+得山　　大輝	2.22	0.21	3.8	４	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	５		IP	転	6	IP	４	6	IP	４	6	IP
+吉田　　一郎	7.00	0.21	3.7	５		IP	３	4	IP	１	3	IP	２	3	IP	１	2	IP	１	2	IP	４	4	IP	１	3	IP	４		IP	３	5	IP

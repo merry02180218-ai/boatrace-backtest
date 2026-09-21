@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　雄朗	6.50	0.15	3.4	１		IP	６		G1	３		G1	１		G1	４		G1	４		IP	３		IP	４		IP	１		IP	４		IP
+中尾　　彩香	4.70	0.20	3.3	５		G3	２		G3	３		IP	２		IP	２		IP	５		IP	３		IP	６		IP	４		IP	５		IP
+倉富　　大誠	6.00	0.13	2.7	５		IP	２		IP	３		IP	落	4	IP	１		IP	２		IP	４		IP	３		IP	４	6	IP	３		IP
+角山　　雄哉	3.20	0.17	3.2	５	5	IP	６	5	IP	６		IP	６		IP	４		IP	４		G3	６		IP	２		IP	５	5	IP	２		IP
+中嶋　　世奈	1.40	0.21	3.9	６		IP	４		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP
+吉武　　真也	2.33	0.23	5.1	５		IP	欠		IP	５		IP	６		IP	６		IP	４		IP	４		IP	５		IP	４	5	IP	６		IP

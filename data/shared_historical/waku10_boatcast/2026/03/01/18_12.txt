@@ -1,0 +1,8 @@
+data=
+1	0
+黒野　　元基	10.40	0.12	1.6	１		IP	１		IP	１		IP	１		IP	１		G1	１		G1	１		IP	１		IP	１		IP	１		IP
+末永　　祐輝	5.90	0.14	3.1	２		IP	３		IP	２		IP	４		IP	２		IP	５		IP	３		IP	６		IP	２		IP	２		IP
+冨田　　秀幸	4.20	0.15	3.1	３		IP	４		IP	４		IP	５		IP	４		IP	５		IP	５		IP	３		IP	１		IP	５		IP
+栗原　　直也	4.20	0.17	2.5	５		IP	５		IP	１		IP	２		IP	５		IP	２		IP	４		IP	５		G3	転		G3	４		IP
+山本　　浩次	4.20	0.18	3.4	２		IP	２	3	IP	６		IP	３		IP	３		IP	６		IP	６		IP	３		IP	４	4	IP	６		IP
+竹井　　貴史	5.60	0.15	2.5	４		IP	３	5	IP	２		IP	３		IP	４		IP	３		IP	４	5	IP	４		IP	３		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+出口　舞有子	5.50	0.20	2.8	１		IP	１		IP	３		IP	１		IP	６		IP	６		IP	１		IP	４		IP	５		G3	６		IP
+安井　　瑞紀	5.00	0.16	3.8	５		IP	２		G1	３		G1	６		G1	６		IP	３		IP	４		IP	２		IP	２		IP	６		IP
+伊藤　　玲奈	5.60	0.20	4.0	４		IP	２		IP	３		IP	５		IP	４		IP	４		IP	３		IP	３		IP	１		G3	３		IP
+大瀧　明日香	5.10	0.14	2.8	４		IP	２		IP	５		IP	４		G1	３		IP	６		G1	３		IP	４		IP	１		G3	４		IP
+西村　　　歩	4.80	0.19	3.3	５		IP	３		IP	３		IP	２	6	IP	６		G3	４		G3	２		IP	２		G3	６		G3	４		G3
+河内　悠利杏	1.60	0.25	4.1	６		IP	６		IP	６		IP	３	3	IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

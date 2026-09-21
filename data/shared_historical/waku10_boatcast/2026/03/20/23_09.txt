@@ -1,0 +1,8 @@
+data=
+1	0
+深川　　真二	9.70	0.11	2.2	１		G2	３		IP	１		IP	１		IP	１		IP	１		G1	１		G1	１		IP	２		IP	１		IP
+石原　　　翼	6.80	0.15	2.5	１	3	IP	２		IP	５		IP	５		IP	１		IP	１		IP	３		IP	２		IP	１		IP	５		IP
+島川　　海輝	6.60	0.17	3.3	２		IP	５		IP	６		IP	４		IP	３		IP	２		IP	２		IP	１		IP	１	4	IP	２		IP
+市川　　哲也	5.40	0.15	2.4	４		IP	４		IP	２		IP	落		IP	４		IP	２		IP	５		IP	２		IP	２		IP	２		IP
+佐藤　　　悠	4.10	0.16	3.2	６		G2	４		IP	２		IP	５		IP	４		IP	３		IP	６	6	IP	３		IP	５		IP	３		IP
+濱野　　斗馬	4.80	0.15	4.1	５		IP	３		IP	５		IP	３		G1	３		G1	２		IP	３		IP	４		IP	４		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+大橋　純一郎	9.30	0.14	2.6	１		IP	１		IP	１		IP	１		IP	３		IP	２		IP	１		IP	２		IP	１		IP	１		IP
+飯山　　　泰	4.10	0.16	3.4	３		IP	５		IP	６		G1	３		G1	５		G1	６		IP	２		IP	４		IP	４		IP	４		IP
+深水　慎一郎	4.00	0.21	3.8	４		IP	４		IP	６		IP	５		IP	３		IP	３	2	IP	６		IP	４	4	IP	４		IP	２		IP
+野長瀬　正孝	4.44	0.21	4.4	５		IP	欠		IP	４		IP	４		IP	２	3	IP	５		IP	３		IP	４		IP	３		IP	４		IP
+日笠　　勝弘	3.50	0.12	3.1	６	6	IP	４		IP	５		IP	３		IP	５		IP	５		IP	１		IP	６	6	IP	６	6	IP	３		IP
+近藤　　颯斗	2.60	0.14	3.2	５		IP	６		IP	６		IP	４		IP	３		IP	５		IP	６		IP	４		IP	６		IP	５		IP

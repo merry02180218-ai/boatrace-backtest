@@ -1,0 +1,8 @@
+data=
+1	0
+井内　将太郎	7.80	0.11	2.3	１		IP	５		IP	１		IP	１		IP	１		IP	１		IP	Ｆ		IP	１		IP	２		IP	２		IP
+下條　雄太郎	6.00	0.14	3.7	２		G1	２		IP	４		G1	３		G1	１	3	G1	４		IP	２		IP	６		G3	４		G1	６		G1
+秋山　　広一	5.60	0.17	3.5	４		G2	４		IP	６		IP	４		IP	１		IP	２		IP	５		IP	１	4	G3	３		IP	３		IP
+坪口　　竜也	4.20	0.17	2.4	６		G2	４		IP	４		IP	２		IP	４		IP	６		IP	３		IP	６		IP	３		IP	３		IP
+河野　　　大	5.90	0.15	2.2	４		IP	３		IP	３		IP	１	4	IP	６		IP	２		IP	２	4	IP	４		IP	３		IP	３		IP
+渡邉　　優美	4.80	0.15	3.5	３		IP	２		IP	６		G2	４		G2	４		G2	５		G2	２		G3	４		G3	４		G1	５		IP

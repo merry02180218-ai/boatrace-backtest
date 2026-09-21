@@ -1,0 +1,8 @@
+data=
+1	0
+上田　　紗奈	8.30	0.12	2.4	５		G1	１		IP	２		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+石川　　真二	5.60	0.13	3.3	３	1	G1	４		G1	５		IP	２		IP	１		IP	１	1	IP	３		IP	４		IP	４		IP	Ｆ	1	IP
+東口　　　晃	4.30	0.16	3.2	６		IP	不		IP	１		IP	１		IP	６		IP	２		IP	５		IP	５		IP	６		IP	２		IP
+坂本　　一真	2.40	0.16	3.8	４		IP	３		IP	６		IP	６		IP	６		IP	４		IP	６		IP	４		IP	６		IP	６		IP
+加藤　　高史	4.20	0.19	3.1	５		IP	５		IP	２		IP	４		IP	３		IP	５		IP	４		IP	３		IP	５	6	IP	３		IP
+浜田　亜理沙	5.20	0.17	3.6	６		IP	３		G1	４		G1	５		G1	３		IP	３		IP	２		IP	４		G3	５		G3	１		IP

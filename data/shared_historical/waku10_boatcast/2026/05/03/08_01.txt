@@ -1,0 +1,8 @@
+data=
+1	0
+前田　　聖文	7.20	0.14	3.5	１		IP	２		IP	４		IP	６		IP	１		G1	１		IP	３		IP	２		IP	２		IP	３		IP
+神田　　達也	5.10	0.18	3.2	２		IP	３		IP	１		IP	４		IP	６		IP	３		IP	５		IP	５		IP	３	4	IP	３		IP
+一色　　颯輝	5.70	0.15	3.3	４		IP	２		IP	２		IP	２		IP	６		IP	２		IP	５		IP	４		IP	３		IP	２		IP
+西尾　　亮輔	5.00	0.16	3.3	１		IP	４		IP	２		IP	６		IP	４		IP	３		IP	５		IP	６		IP	４		IP	１		IP
+成貞　　琳平	3.40	0.19	4.1	６		IP	３		IP	６		IP	５		IP	５		IP	５	6	IP	２	4	IP	３		IP	５		IP	４	4	IP
+杢野　　誓良	2.20	0.15	3.0	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	２		IP	４		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+津留　浩一郎	5.80	0.12	2.5	３	2	IP	３		IP	２		IP	１		IP	３		IP	６		IP	２		IP	１		IP	５		G3	６		IP
+岸本　　　隆	6.40	0.16	2.9	３		IP	２		IP	２		IP	１		IP	２		IP	３		IP	３		IP	５		IP	２		IP	５		IP
+川上　　　剛	7.30	0.15	1.9	４		G3	１		G3	６		IP	１		IP	１		IP	３		IP	３		IP	２		IP	１		IP	３		IP
+谷野　　錬志	7.40	0.14	1.9	６		G1	２		IP	１		IP	６	5	G1	１		IP	２		IP	２		IP	１		IP	３		IP	１		IP
+山崎　　聖司	3.10	0.17	4.0	５		IP	４	6	IP	６		IP	３		IP	６		IP	６		IP	３		IP	５		IP	３	4	IP	５		G3
+上田　　紗奈	3.90	0.19	3.3	５		IP	４		IP	５		G1	３	5	IP	５		IP	１		IP	２	5	IP	５		IP	６		IP	６		IP

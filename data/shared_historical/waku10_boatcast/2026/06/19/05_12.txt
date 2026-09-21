@@ -1,0 +1,8 @@
+data=
+1	0
+須藤　　博倫	8.40	0.14	2.9	１		IP	２		IP	３		IP	１		G2	２		IP	３		IP	２		IP	３		IP	１		IP	１		IP
+森　　　悠稀	5.60	0.15	3.3	３		IP	５		G2	３		G2	５		IP	４		IP	２		IP	３		IP	２		IP	３		IP	３		IP
+藤原　啓史朗	8.00	0.13	2.1	２		G1	１		G2	４		IP	５		IP	１		IP	２		G1	２		G1	２		SG	２		G1	３		G1
+安藤　　裕貴	4.60	0.14	1.6	３		IP	５		IP	６		IP	２		IP	２		IP	２		IP	４		IP	６		IP	５	5	IP	３		IP
+川口　　貴久	4.90	0.17	3.3	２		IP	３	6	IP	３		IP	５	6	IP	４		IP	６		IP	４		IP	３		IP	４		IP	２		IP
+柳内　　敬太	3.00	0.16	3.9	３		IP	５		IP	Ｆ		IP	６		IP	５		IP	６		IP	４		IP	３		IP	４	5	IP	４		IP

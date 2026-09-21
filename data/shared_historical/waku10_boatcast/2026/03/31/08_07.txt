@@ -1,0 +1,8 @@
+data=
+1	0
+羽田　　妃希	7.00	0.24	4.7	４		IP	２		IP	１		IP	４		IP	１		IP	４		IP	３		IP	３		IP	２		IP	１		IP
+梶野　　学志	5.70	0.18	3.7	３		IP	３		IP	２		IP	３		IP	６		IP	２		IP	５		IP	２		IP	１		IP	５		IP
+鋤柄　　貴俊	5.40	0.16	2.4	２		IP	２		IP	５		IP	３		IP	３		IP	３		IP	５		IP	５		IP	４		IP	１		IP
+中尾　　優香	3.60	0.19	3.7	５		IP	２		IP	６		IP	３	5	IP	３		IP	４	3	IP	６		IP	６		IP	３		IP	６		IP
+菊地　　敬介	3.90	0.16	2.8	３		IP	２		IP	６		IP	３		IP	５		IP	４		IP	４		IP	転		IP	３		IP	５		IP
+永田　　　楽	1.40	0.20	3.5	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		G3	５		IP	５		IP

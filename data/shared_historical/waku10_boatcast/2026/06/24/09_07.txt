@@ -1,0 +1,8 @@
+data=
+1	0
+古場　　輝義	5.40	0.18	2.3	５		IP	２		G3	２		G3	１		IP	５		G3	２		IP	３		IP	６		IP	６		IP	２		IP
+鈴木　　唯央	5.40	0.14	3.5	２		IP	５		IP	１		IP	３		IP	５		IP	５		IP	４		IP	３		IP	３		IP	２		IP
+森　　　弘行	2.80	0.19	4.1	３		IP	５		IP	３		IP	５		IP	６		IP	６		IP	６	4	IP	５		IP	６		IP	３		IP
+櫻井　　　隼	2.20	0.22	4.8	４		IP	６		IP	６		IP	４		IP	６		IP	５	6	IP	５	6	IP	５	6	IP	６	6	IP	４	6	IP
+吉川　　勇作	1.60	0.14	3.3	６		IP	４		IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	５		IP
+里岡　　右貴	4.50	0.12	2.0	３		IP	４		IP	３		IP	６		IP	３		IP	５		IP	５		IP	５		IP	３		IP	１	4	IP

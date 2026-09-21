@@ -1,0 +1,8 @@
+data=
+1	0
+長田　　頼宗	9.10	0.14	3.5	１		IP	１		IP	１		IP	１		IP	１		G2	１		G2	２		G2	４		IP	１		IP	４		G1
+山本　　寛久	6.30	0.15	3.2	４		IP	１		IP	３		IP	５		IP	２		IP	２		IP	１		IP	６		IP	２		IP	３		IP
+市橋　　卓士	5.40	0.13	2.5	２		IP	４	2	IP	３		IP	３		IP	４		IP	３		IP	２		IP	４		IP	４		IP	４		IP
+里岡　　右貴	7.10	0.12	1.9	１		IP	２		IP	４	3	IP	１		IP	３		IP	２		IP	２	3	IP	１		IP	６		IP	３		IP
+高橋　　竜矢	4.70	0.15	3.1	２		G1	３		IP	２		IP	５		IP	５		IP	５		IP	２		IP	６		IP	５		IP	４		G1
+井上　　遥妃	3.40	0.14	3.4	６		G1	４		G1	６		G1	４		SG	６		G2	６		G2	２		IP	４	5	IP	６		IP	６		G1

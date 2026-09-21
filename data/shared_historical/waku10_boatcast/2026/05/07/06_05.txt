@@ -1,0 +1,8 @@
+data=
+1	0
+谷野　　錬志	8.30	0.15	3.4	１	2	IP	１		IP	１		IP	１		G1	３		G1	１		IP	１		IP	４		IP	Ｆ		G1	１		IP
+石原　　　光	5.40	0.16	3.3	落		IP	２		IP	５		IP	４		IP	５		IP	１		IP	２		IP	３		G3	１		IP	４		IP
+堤　　　　昇	4.00	0.11	2.6	４		IP	４		IP	２		G3	５		IP	３		IP	３		IP	５	2	IP	３		IP	６		IP	６		IP
+藤田　　康生	1.50	0.12	3.2	６	5	IP	５	6	IP	６	6	IP	Ｆ	6	IP	６	6	IP	４	6	IP												IP
+板橋　　侑我	6.56	0.18	3.3	３		IP	エ		G1	４		G1	６		G1	５		G3	３		G1	１		G1	３		G1	１		G1	３		G1
+菊地　　孝平	5.10	0.14	3.8	１	2	IP	５		G1	６		G1	５		G1	２		G2	４		G1	４		G1	４	4	IP	２	5	IP	６		G1

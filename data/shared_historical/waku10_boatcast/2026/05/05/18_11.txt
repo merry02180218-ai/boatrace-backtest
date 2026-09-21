@@ -1,0 +1,8 @@
+data=
+1	0
+藤井　　　徹	6.40	0.18	3.6	５		IP	２		IP	４		IP	２		IP	４		IP	３		IP	４		IP	１		IP	２		IP	１		IP
+広次　　　修	7.10	0.15	3.1	１		IP	２	3	IP	６		IP	３		IP	４		IP	２		IP	３		IP	２		IP	１		IP	１		IP
+中村　　辰也	5.56	0.13	2.8	５		IP	２		IP	２		IP	５		IP	３		IP	２		IP	４		IP	３		IP	３		IP	欠		IP
+近江　　翔吾	5.60	0.13	3.6	２		IP	３		IP	２		IP	６		G1	２		G1	６		IP	３		IP	２		IP	４		IP	６		G1
+安河内鈴之介	6.50	0.16	3.0	５		IP	１		IP	２		IP	５		G2	２		IP	２		IP	５		IP	１		IP	４		IP	１	2	IP
+藤田　　美代	2.20	0.19	4.1	６		G3	５		G3	６		IP	６	5	IP	４		IP	３		IP	４		IP	６		IP	６		IP	６		IP

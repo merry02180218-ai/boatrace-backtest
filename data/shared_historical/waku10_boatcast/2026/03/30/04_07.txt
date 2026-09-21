@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　唯央	6.50	0.11	2.5	４		IP	２		IP	１		IP	５		IP	６		IP	１		IP	１		IP	５	2	IP	２		IP	１		IP
+坂本　　一真	3.30	0.18	4.0	４		IP	６		IP	６		IP	４		IP	２		IP	４		IP	４		IP	６		IP	５		IP	４		IP
+牧村　　俊輝	2.30	0.16	3.4	４		IP	５		IP	５		IP	４		IP	６		IP	６		IP	５		IP	４		IP	６	5	IP	５		IP
+近藤　　来希	1.20	0.17	4.1	５		IP	６		IP	Ｆ		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP
+河内　　一馬	2.80	0.18	3.8	４		IP	５		IP	６		IP	６	6	IP	６		IP	６		IP	３		IP	２		IP	５		IP	５		IP
+田中　　駿兵	7.30	0.14	2.9	４	5	IP	１		IP	１		IP	２		IP	２		IP	１		IP	４		G1	３		IP	４		IP	２		IP

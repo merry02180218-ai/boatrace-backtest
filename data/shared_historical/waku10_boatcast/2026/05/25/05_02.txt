@@ -1,0 +1,8 @@
+data=
+1	0
+関口　　智久	5.50	0.19	4.7	１		IP	４		IP	２		IP	４		IP	１		IP	１		IP	５		IP	６		IP	４		IP	５		IP
+中里　　昌志	4.10	0.16	4.5	３		IP	５		IP	３	1	IP	６		IP	４		IP	３		IP	４		IP	３		IP	４		IP	５		IP
+川原　　正明	6.50	0.11	2.1	３		IP	３		IP	３		G3	１		G3	６		IP	３		IP	４		IP	１		IP	２		IP	３		IP
+今坂　　晃広	3.90	0.20	3.6	４		IP	３		IP	４		IP	６	6	IP	６		IP	３		IP	５	6	IP	１		IP	６		IP	４	5	IP
+鈴木　　　猛	4.80	0.19	3.9	４		IP	４		IP	３		IP	５		IP	３	4	IP	５		IP	４		IP	４		IP	３		IP	１		IP
+中嶋　　達也	3.10	0.17	3.5	１		IP	４	5	IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	２	4	IP

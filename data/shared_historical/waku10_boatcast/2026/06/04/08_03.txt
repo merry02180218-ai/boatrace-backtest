@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　貴志	6.30	0.17	3.8	４		IP	３		IP	２		IP	２		IP	１		IP	６		IP	１		IP	３		IP	３		IP	４		IP
+渡邉　　雄朗	7.44	0.21	4.4	４		IP	４		G2	２		IP	１		IP	１		IP	１		IP	５		G1	２		G1	不		IP	２		IP
+香川　　陽太	5.90	0.13	2.8	３		IP	６		IP	３		IP	３		IP	２	4	IP	２		IP	２		IP	４		IP	２	4	IP	４		IP
+長野　　未来	2.11	0.27	4.4	６		IP	６		IP	６		IP	転		IP	３		IP	６	6	IP	６	6	IP	３	6	IP	６	6	IP	６	6	IP
+永嶋　　裕一	4.50	0.15	3.1	３		IP	４		IP	欠		IP	１		IP	５		IP	２		IP	３		IP	４		IP	６		IP	４		IP
+仲　　　航太	2.00	0.27	5.1	４		IP	５		IP	５		IP	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+小芦　るり華	8.30	0.12	2.0	３		IP	１		IP	２		G2	１		G3	１		G3	２		G3	３		G3	２		IP	３		IP	１		IP
+平山　　智加	6.40	0.15	2.2	２	3	IP	１		IP	１		G2	１		G3	４		G3	３		G3	６		IP	５	3	IP	６		G1	１		IP
+樋口　由加里	6.30	0.16	3.1	４	2	IP	２		IP	２		IP	２		IP	３		G3	６		G3	４		IP	２		IP	４		IP	１		IP
+西村　美智子	3.90	0.12	3.0	５		IP	６		IP	Ｆ		IP	３		IP	４		IP	４		IP	５		IP	２		IP	４		IP	２		IP
+松田　　真実	3.80	0.23	4.2	５		IP	６		IP	３	4	IP	２		IP	５		G3	３		G3	４		IP	４		IP	４		IP	６		IP
+田上　　　凜	5.60	0.11	2.3	４		IP	妨		IP	３		IP	１		IP	１		G2	５		IP	３		IP	６		IP	２		G3	２		G3

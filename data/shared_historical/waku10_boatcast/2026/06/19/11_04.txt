@@ -1,0 +1,8 @@
+data=
+1	0
+抹香　　雄三	6.89	0.14	2.2	１		IP	２		IP	１		IP	５		IP	１		IP	１		IP	転		IP	５		IP	転		IP	１		IP
+齋藤　　真之	4.70	0.15	3.1	１		IP	５		IP	２		IP	６		IP	６		IP	３		IP	５		IP	３		IP	６		IP	１	1	IP
+池田　　剛規	4.20	0.12	2.5	５		IP	４		IP	５		IP	３		IP	４		IP	１		IP	６		IP	６		IP	２		IP	４		IP
+堂原　　洋史	3.10	0.17	3.5	４		IP	６		IP	５	6	IP	４		IP	５		IP	５		IP	３		IP	４		IP	４		IP	５		IP
+松田　大志郎	5.70	0.17	4.4	５		IP	１		G1	４		G1	４		G1	４		IP	４		IP	４		G1	５		G1	３		G1	１		G1
+日笠　　勝弘	2.30	0.17	4.0	５		IP	５		IP	６		IP	４		IP	５		IP	６	5	IP	４		IP	４		IP	６		IP	５		IP

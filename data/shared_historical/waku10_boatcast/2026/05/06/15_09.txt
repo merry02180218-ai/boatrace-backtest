@@ -1,0 +1,8 @@
+data=
+1	0
+三浦　　永理	9.30	0.13	2.6	１		G3	２		G3	１		G3	３		IP	１		IP	１		IP	２		G3	１		G3	１		G3	１		IP
+川野　　芽唯	8.00	0.16	3.5	２		G3	４		G3	２		G3	２		IP	２		IP	２		IP	２		IP	１		IP	２		IP	１		IP
+井上　　遥妃	4.90	0.13	2.6	６		IP	６		IP	２		IP	１		IP	２		IP	沈		IP	４		G1	２		G1	６		IP	３		IP
+清水　　愛海	4.20	0.23	4.8	２		IP	１		IP	２		IP	６		IP	６		IP	沈		IP	６		G1	６		IP	３		G1	５		G1
+田上　　　凜	4.60	0.16	2.6	１	4	IP	６	6	IP	１	4	IP	５		IP	５		IP	４		IP	４		IP	３		IP	６		IP	３		G3
+山口　真喜子	4.60	0.16	4.5	４		IP	４		IP	１	5	IP	４		G1	６		G1	５		G1	４		IP	４		IP	４		IP	３		IP

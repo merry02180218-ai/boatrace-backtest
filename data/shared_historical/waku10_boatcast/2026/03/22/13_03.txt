@@ -1,0 +1,8 @@
+data=
+1	0
+竹之内　　極	8.60	0.15	2.5	２		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP	４		IP	２		G3
+中里　　英夫	6.90	0.14	3.6	５	3	IP	６		IP	２		IP	２		IP	２		IP	２		IP	２		IP	１		IP	３		IP	１		G3
+太田　　　潮	4.00	0.16	3.1	６		IP	２		IP	４		IP	６		IP	６		IP	５		IP	３		IP	６		IP	２		IP	２		IP
+宮地　　博士	3.20	0.20	3.9	６		IP	４		IP	４		IP	５		IP	５		IP	３		IP	４		IP	５		IP	６		IP	３		IP
+藤原　　　駿	1.70	0.21	4.9	６	6	IP	４	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	４	6	IP	６	6	IP	６	6	IP	６	6	IP
+西島　　義則	6.20	0.20	4.3	５	2	IP	２	2	IP	転	2	IP	２	1	IP	２	1	IP	５	1	IP	１	2	IP	３	2	IP	１	1	IP	２	2	IP

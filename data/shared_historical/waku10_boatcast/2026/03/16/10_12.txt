@@ -1,0 +1,8 @@
+data=
+1	0
+平本　　真之	10.60	0.14	2.9	１		G1	１		G1	１		G1	１		G1	１		G1	２		IP	１		IP	１		G1	１		G1	１		G1
+久田　　敏之	7.10	0.13	2.8	３		G1	２		IP	２		IP	３		G1	５		G1	５		IP	２		IP	２	3	IP	１		IP	１		IP
+松田　大志郎	7.00	0.15	3.4	３		IP	１		IP	５		IP	１		IP	２		G1	１	4	G1	５		IP	２		IP	５		IP	１		IP
+柳生　　泰二	7.70	0.15	2.9	１		IP	１		IP	２		G1	１		IP	２		IP	３		IP	１		IP	４		G1	５		G1	５		G2
+藤原　啓史朗	5.90	0.11	3.2	２		G1	１	4	IP	４		IP	３		IP	６	4	G1	４		G2	４		G2	４		IP	２		G1	４		G1
+上田　　龍星	4.90	0.19	4.8	２		G1	５		G1	５	5	G2	４		G2	４		IP	６	5	IP	３		IP	３	5	IP	３		IP	３		IP

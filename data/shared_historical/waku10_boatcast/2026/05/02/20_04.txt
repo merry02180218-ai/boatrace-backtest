@@ -1,0 +1,8 @@
+data=
+1	0
+森清　　友翔	6.20	0.13	3.0	１		IP	１		IP	落		IP	３		IP	４		G3	１		IP	４		IP	４		IP	４		IP	１		IP
+高山　　敬悟	4.89	0.16	3.3	３		IP	２		IP	６		G3	５		G3	３		G3	６		IP	２		IP	２		IP	転		IP	４		IP
+塩田　　北斗	7.20	0.15	3.1	４		IP	２		IP	３		G1	３		G1	３		G1	２		G1	６		G1	１		G1	２		G1	３		IP
+伊藤　　尚汰	4.40	0.17	3.5	５		IP	２		IP	６		IP	６		IP	４		IP	４		IP	２		IP	１		IP	５		IP	４		IP
+平田　　忠則	5.90	0.20	4.7	４		G1	６		G1	３		IP	２		G3	３		G3	３		IP	１	4	IP	１	4	IP	５		IP	４		IP
+益田　　啓司	5.00	0.15	3.1	６		G1	５		G1	２		IP	５		IP	２		IP	３		IP	２	5	IP	６		G1	３		G1	５		IP

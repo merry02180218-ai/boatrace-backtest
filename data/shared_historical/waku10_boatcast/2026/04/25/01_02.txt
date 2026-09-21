@@ -1,0 +1,8 @@
+data=
+1	0
+佐竹　　太一	7.20	0.15	2.5	５		IP	１		IP	２		IP	１		IP	２		IP	２		IP	１		IP	５		IP	１		IP	４		G3
+井上　　尚悟	6.20	0.19	4.0	２		IP	２		G3	３		G3	２		IP	５		IP	２		IP	２		IP	４		IP	２		IP	５	3	IP
+吉川　　晴人	5.10	0.20	4.7	５		IP	１		IP	１		IP	６		IP	５		IP	４		IP	６		G2	３		IP	３		IP	２		IP
+本岡　　勝利	2.90	0.17	3.3	３		IP	６		IP	６		IP	５		IP	３		IP	６		IP	４		IP	５		IP	４		IP	５		IP
+田中　瀬里奈	1.40	0.18	3.5	５		IP	６	6	IP	５	6	IP	６		IP	５		IP	６	6	IP	６	6	IP	６	6	IP	５		IP	６	6	IP
+木場　　悠介	2.90	0.15	2.8	６		IP	５		IP	３		G3	５		IP	６		IP	５		IP	６		IP	３		IP	５		IP	３		IP

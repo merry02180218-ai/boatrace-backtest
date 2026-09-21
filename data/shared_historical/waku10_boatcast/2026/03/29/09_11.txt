@@ -1,0 +1,8 @@
+data=
+1	0
+木田　峰由季	8.70	0.13	2.6	１		IP	Ｆ		IP	１		IP	１		IP	２		G3	１		G3	２		IP	１		IP	１		IP	１		IP
+三村　　岳人	7.60	0.11	1.9	２		IP	２		IP	３		IP	３		IP	１		IP	２	3	IP	１		IP	３		IP	４		IP	１		IP
+岩瀬　　裕亮	6.70	0.16	3.3	２		IP	３		G1	１		G1	６		G1	３		G1	４		G1	５		IP	２		G2	３		G2	２		IP
+多田　　有佑	4.20	0.26	5.2	１		IP	６		IP	４		IP	５		IP	６		IP	６		IP	６		IP	２		IP	３		IP	２	5	IP
+本橋　　克洋	3.10	0.16	3.6	６		IP	４		IP	４		IP	４		IP	５		IP	６		IP	６		IP	４		IP	３		IP	４		IP
+室田　　泰史	3.60	0.14	3.1	３		IP	４		IP	４		IP	３		IP	６		IP	５		IP	３		IP	４		G3	６		G3	５		IP

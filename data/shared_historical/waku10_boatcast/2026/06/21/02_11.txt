@@ -1,0 +1,8 @@
+data=
+1	0
+平山　　智加	8.90	0.12	2.5	１		IP	１		IP	１		IP	３		IP	１		IP	２		IP	２		IP	１		IP	３		IP	１		G2
+平川　　香織	8.40	0.15	3.1	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	２		IP	３		IP	３		IP	２		IP
+中田　　夕貴	5.50	0.13	3.1	３		IP	Ｌ	6	G3	６		G2	１	2	IP	３		IP	３		IP	３		IP	２		IP	２		IP	５		G1
+原村　　百那	1.80	0.15	2.7	６		IP	５		IP	６	5	IP	５		IP	Ｆ		IP	５		IP	４		IP	４		IP	６		IP	６		IP
+矢野　真梨菜	2.50	0.18	2.7	５		IP	４		IP	５		IP	５		IP	６		IP	５		IP	６		IP	４		G3	６		G3	３		G3
+森下　　愛梨	3.50	0.21	4.2	６		IP	６		IP	２		IP	４		IP	３		IP	４		IP	６		IP	５		IP	３		IP	５		IP

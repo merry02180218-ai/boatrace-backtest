@@ -1,0 +1,8 @@
+data=
+1	0
+相原　　利章	8.20	0.10	2.2	２		IP	４		IP	１		IP	２		IP	１		IP	２		IP	２		IP	１		IP	１		IP	３		IP
+柴田　　友和	4.20	0.17	3.9	２		IP	６		IP	３		IP	６		IP	６		IP	６		IP	２		IP	３		IP	５		IP	２		IP
+山口　真喜子	5.33	0.19	3.2	３		G2	３		IP	転		IP	２		IP	５		IP	４		IP	Ｆ		IP	１		IP	６		IP	１		G3
+笠　　　雅雄	7.50	0.18	2.5	１		IP	３		IP	４		IP	１		IP	１		IP	１	3	IP	１		IP	２		IP	３		IP	６	2	IP
+常住　　　蓮	6.90	0.13	2.6	４		IP	２		IP	２		IP	５		G1	６		G1	１		SG	２	4	IP	２		IP	２		G1	４		G1
+中村　　守成	2.40	0.20	4.5	５		IP	５		IP	４		IP	４		IP	５		IP	５		IP	５		IP	６		IP	６		IP	４		IP

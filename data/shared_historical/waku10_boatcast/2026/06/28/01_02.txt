@@ -1,0 +1,8 @@
+data=
+1	0
+川島　　拓郎	7.00	0.14	2.7	１		IP	６		IP	５		G3	１		IP	１		IP	６		IP	１		IP	１		IP	３		IP	１		IP
+高橋　　　勲	7.40	0.16	3.1	２		IP	２		IP	２		G3	２		G3	４		IP	２		IP	２		IP	２		IP	２		IP	３		IP
+佃　　　來紀	5.10	0.16	3.0	５		IP	２		G3	２		IP	２		IP	４		IP	３		IP	２		IP	４		IP	６		IP	５		IP
+大池　　佑来	6.60	0.16	2.9	２		IP	４		IP	１		IP	２		IP	２		IP	１		IP	２		IP	４		IP	４		IP	６		G1
+島川　　海輝	4.80	0.16	3.5	４		IP	６		IP	２	4	IP	４		IP	２		IP	５		IP	３		IP	６		IP	３		IP	２	4	IP
+寺本　　昇平	4.20	0.16	4.1	３	4	IP	３		IP	５		IP	６		IP	４		IP	３		IP	６		IP	３		IP	２		IP	５		IP

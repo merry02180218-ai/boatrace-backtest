@@ -1,0 +1,8 @@
+data=
+1	0
+北山　　康介	9.00	0.15	3.6	１		IP	１		IP	１		IP	２		IP	１		IP	３		IP	１		IP	４		SG	１		IP	１		IP
+新田　　智彰	5.20	0.19	3.7	５		IP	３		IP	３		IP	５		IP	２		IP	４		IP	３		IP	２		IP	４	4	IP	３		IP
+黒崎　　竜也	6.00	0.18	3.5	２	4	IP	３	6	IP	１		IP	３		IP	２		IP	５		IP	４		IP	２		IP	３		G3	５		G3
+重野　　哲之	5.40	0.10	1.4	４	5	IP	３		IP	５		G1	３		IP	３		IP	６		IP	３		IP	５		IP	１		IP	１		IP
+後藤　　盛也	4.30	0.12	1.7	６		G3	１		G3	２		IP	５		IP	６		IP	５		IP	３		IP	１		IP	５		IP	６		IP
+星　　　栄爾	2.20	0.22	4.2	４		IP	５		IP	６		IP	６		IP	４	5	IP	６		IP	５		IP	６		IP	４		IP	５	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中北　　将史	6.60	0.16	2.4	１		IP	１		IP	５		IP	２		IP	１		G3	３		IP	６		IP	１		IP	６		IP	２		IP
+畑　　　竜生	5.10	0.19	3.2	２		IP	２		IP	６		IP	１		IP	５		IP	４		IP	５		IP	３		IP	３		IP	４		IP
+澤　　　大介	2.70	0.16	3.3	５		IP	６		IP	転		IP	４		IP	６		IP	５		IP	４		IP	２		IP	６	4	IP	４		IP
+松尾　　　拓	5.50	0.16	4.1	２		IP	２		IP	４		IP	５		IP	４		G1	３		IP	４		G1	３		IP	６		IP	１		IP
+倉富　　大誠	3.80	0.16	4.0	２		IP	４		IP	３		IP	５		IP	６	6	IP	５	6	IP	３		IP	６	6	IP	３		IP	５		IP
+花本　　夏樹	3.20	0.27	5.4	４	4	IP	６		IP	６		IP	２		IP	６		IP	５	5	IP	６	5	IP	３		IP	３		IP	５	5	IP

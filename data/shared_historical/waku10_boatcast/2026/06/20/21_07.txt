@@ -1,0 +1,8 @@
+data=
+1	0
+木幡　　純也	6.10	0.21	3.8	６		IP	３		IP	２		IP	５		IP	１		IP	４		IP	２		IP	４		IP	１		IP	２		IP
+川添　　英正	5.50	0.15	4.2	２		IP	５		IP	３		IP	６		IP	４		IP	３		IP	２		IP	３		IP	２		IP	３		G3
+冨成　　謙児	4.80	0.15	3.6	４	4	IP	４		IP	５		IP	３		IP	３		IP	５		IP	２		IP	５		IP	２		IP	３		IP
+中嶋　誠一郎	4.20	0.18	4.1	１		IP	３		IP	４		IP	６		G3	３		G3	４		IP	３		IP	５		IP	６		IP	５		IP
+安武　　一也	1.50	0.17	4.4	６		IP	５		IP	６	6	IP	６	6	IP	６	4	IP	６		IP	５		IP	６		IP	４		IP	６		IP
+増本　　杏珠	2.10	0.28	5.4	３		IP	５		IP	５		IP	６	5	IP	６		IP	５		IP	６		IP	６		IP	４		IP	６		IP

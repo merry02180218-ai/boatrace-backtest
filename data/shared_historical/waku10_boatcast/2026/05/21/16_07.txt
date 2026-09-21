@@ -1,0 +1,8 @@
+data=
+1	0
+土屋　　　蘭	5.70	0.18	3.5	落		G2	１		IP	６		IP	３	2	IP	１		IP	１		IP	３		IP	３		IP	３		IP	５		IP
+森永　　　隆	6.70	0.15	3.0	５	4	IP	２	4	IP	１	3	IP	３		IP	２		IP	２		IP	４		IP	２		IP	３		IP	３		IP
+池田　　雷太	5.00	0.21	2.4	５		IP	５	4	IP	３		IP	５		IP	１		IP	４		IP	３		IP	４		IP	４		IP	１		IP
+井内　将太郎	4.80	0.11	1.8	６		IP	６		IP	３		IP	転		IP	３		IP	２		IP	５		IP	３		IP	２		IP	２		IP
+谷　　　勝幸	2.60	0.18	3.1	５		IP	４		IP	５		IP	６		IP	５		IP	４		IP	５	4	IP	４		IP	４	6	IP	６		IP
+乙藤　　智史	4.00	0.19	3.6	６		IP	５		IP	５		IP	３		IP	１		IP	３		IP	６	5	IP	５		IP	５		IP	２		IP

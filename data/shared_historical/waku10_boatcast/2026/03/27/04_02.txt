@@ -1,0 +1,8 @@
+data=
+1	0
+小川　竜太朗	6.70	0.13	3.1	２		IP	２		IP	２		IP	２		IP	５		IP	２		IP	１		IP	２		IP	３		IP	６		IP
+廣瀬　　　凜	7.10	0.14	2.4	１		IP	３		IP	３		IP	１		IP	３		IP	３		IP	１		IP	２		G2	３		G2	６		IP
+大島　隆乃介	4.70	0.18	3.4	３		IP	３		IP	４		IP	３		IP	４		IP	２		IP	３		IP	６		IP	３	2	IP	妨	2	IP
+島崎　丈一朗	3.40	0.20	3.6	６		IP	３		IP	６		IP	６		IP	５		IP	３		IP	５		IP	１		IP	４		IP	６		IP
+森　　　智哉	5.00	0.17	2.7	２		IP	４		IP	５		IP	３		IP	３		IP	３		IP	５		IP	４		IP	５		IP	１		IP
+出畑　　孝成	2.90	0.22	4.9	５	5	IP	５		IP	５		IP	５		IP	４		IP	６		IP	５		IP	５		IP	２		IP	４		IP

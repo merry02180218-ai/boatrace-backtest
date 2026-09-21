@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　右京	4.40	0.27	4.4	２		IP	６		IP	４	2	IP	５		IP	５		IP	６	2	IP	４		IP	４		IP	２		IP	１		IP
+川辺　　郭人	4.40	0.22	3.9	６		IP	４		IP	３		IP	１		IP	５	4	IP	４		IP	４	3	IP	５		IP	１		IP	６		IP
+米玉利　大悟	2.90	0.18	3.7	５		IP	５		IP	３		IP	５		IP	６		IP	４	4	IP	落		IP	３	4	IP	５		IP	４		IP
+西丸　侑太朗	5.50	0.14	2.8	３		IP	１		IP	６		IP	２		IP	３		G3	５		G1	５		IP	１		IP	４		G1	４		IP
+高山　　弘斗	2.80	0.20	3.6	５		IP	３		IP	５		IP	６		IP	沈		IP	５		IP	２		IP	６	6	IP	４		IP	５		IP
+八戸　　琉楓	1.20	0.25	4.1	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP

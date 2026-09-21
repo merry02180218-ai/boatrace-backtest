@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　義明	7.20	0.13	3.2	４		G3	２		IP	１		IP	４		IP	２		IP	３		IP	１		IP	３		IP	１		IP	３		IP
+梶山　　涼斗	5.70	0.16	3.8	３		G3	５	3	IP	１		IP	６		IP	５		IP	３		IP	３		IP	２		IP	２		IP	２		IP
+吉村　　　誠	6.00	0.16	3.2	２		G3	６		G1	６		G1	２		IP	１		IP	２		IP	５		IP	１		IP	６		G1	２		IP
+深川　　和仁	5.00	0.17	3.8	４		G3	１	5	IP	６		IP	３		IP	６		IP	４	5	IP	４		IP	２		IP	３		IP	３		IP
+里岡　　右貴	6.56	0.11	2.1	１		IP	２		IP	１		G1	４		IP	欠		IP	３		IP	４	4	IP	３		IP	３		IP	４		IP
+水摩　　　敦	4.00	0.19	3.6	１		G3	３		IP	４	2	IP	３		IP	４		IP	６		IP	４		IP	５	5	IP	６		IP	５		IP

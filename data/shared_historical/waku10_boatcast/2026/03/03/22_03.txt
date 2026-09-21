@@ -1,0 +1,8 @@
+data=
+1	0
+羽田　　妃希	7.20	0.22	4.1	１		IP	４		IP	１		IP	４		IP	３		IP	３		IP	２		IP	１		IP	４		IP	１		IP
+沖島　　広和	5.56	0.17	3.6	１		IP	２		IP	３	3	IP	４		IP	４		IP	５		IP	２		IP	転		IP	５		IP	３		IP
+蒲原　　健太	4.00	0.22	3.9	６		IP	４		IP	４		IP	５		IP	４		IP	２		IP	６		IP	３		IP	４		IP	３		IP
+岡部　　　浩	3.60	0.21	5.1	３		IP	２	5	IP	６	6	IP	４		IP	５		IP	６		IP	５		IP	４		IP	４		IP	４		IP
+藤森　　拓海	2.30	0.16	3.8	４		IP	３		IP	６		IP	転		IP	５		IP	３		IP	６		IP	６		IP	６		IP	６		IP
+下河　　雅史	2.60	0.19	4.4	３		IP	６		IP	５		IP	６		IP	５		IP	５		IP	４	5	IP	４		IP	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　賢志	9.30	0.10	2.1	６	2	G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1
+石丸　　海渡	6.90	0.10	2.5	２		G1	１		IP	２		IP	５		IP	２		IP	５		IP	２		IP	１		G1	６		G1	２		IP
+崎　　　利仁	5.60	0.21	3.6	５		IP	２		IP	２		IP	４		IP	３		IP	２		IP	４		IP	５		IP	４		IP	１		IP
+石渡　　鉄兵	6.80	0.15	3.2	５		G1	１		IP	４		SG	５		SG	２		G1	１		G1	４		G1	４		G1	４		G1	１		IP
+定松　　勇樹	8.50	0.15	2.7	５		G1	３		G1	４	4	SG	４		SG	２		G2	１		G3	１		G1	１		G1	１		G1	１	2	IP
+古賀　　繁輝	4.30	0.13	2.5	６		G1	６		G1	４		IP	１		G2	５		G1	４		IP	５		IP	６		G1	６		G1	１		G1

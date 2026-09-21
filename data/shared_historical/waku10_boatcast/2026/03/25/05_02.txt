@@ -1,0 +1,8 @@
+data=
+1	0
+樅山　　拓馬	8.00	0.14	3.5	１		IP	３		IP	１		IP	１		IP	１		G3	１		G3	４		IP	３		IP	１		IP	４		IP
+中里　　優子	3.40	0.20	3.8	３		IP	３		IP	２		IP	５		IP	３		G3	５		G3	６		IP	６		IP	６		IP	６		G3
+木下　　雄介	6.00	0.17	3.2	２	2	IP	３		IP	欠		IP	３		IP	２		IP	１		IP	４		IP	４		IP	３		IP	５		IP
+石井　　裕美	3.90	0.17	2.8	６		IP	２		G3	６	5	IP	３		IP	５		G3	４		G3	１		G3	５		IP	６		IP	４		IP
+渡邉　　英児	5.60	0.16	2.9	５	6	IP	２	4	IP	２		IP	２	4	IP	４	3	IP	４		IP	２		IP	３		IP	４		IP	４		IP
+田村　　美和	2.30	0.14	2.8	５		IP	６		G3	５		G3	４		IP	５		G3	６		IP	５		IP	６		IP	３		IP	５		IP

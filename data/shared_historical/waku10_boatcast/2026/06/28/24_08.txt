@@ -1,0 +1,8 @@
+data=
+1	0
+山ノ内　雅人	8.60	0.14	2.0	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	２		IP	１		IP	４		IP
+嘉手苅　徹哉	4.10	0.13	2.8	６		IP	４		IP	６		IP	１		IP	２		IP	４		IP	６		IP	３		IP	５		IP	４		IP
+原田　　篤志	4.90	0.21	4.1	２		IP	４		G3	５		IP	６		IP	２		IP	５	4	IP	３		IP	３		IP	２		IP	４		IP
+木場　　悠介	4.50	0.13	1.9	６		IP	４		IP	１		IP	６		IP	１	5	IP	４		IP	６	6	IP	３	5	IP	４		IP	４		IP
+西村　　仁吾	1.80	0.20	4.4	６	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	２	6	IP
+一柳　　和孝	3.89	0.21	4.9	６		IP	４		G3	３		G3	転		IP	４		IP	４		IP	５		IP	５		IP	４		IP	２	5	IP

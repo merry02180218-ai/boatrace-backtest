@@ -1,0 +1,8 @@
+data=
+1	0
+三浦　洋次朗	7.90	0.18	3.0	５		G2	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	３		IP	３		IP	３		IP
+藤本　　佳史	6.20	0.14	2.7	３		IP	２		IP	１		IP	３		IP	４		IP	２		IP	２		IP	６		IP	６		G3	１	3	IP
+岩崎　　芳美	6.90	0.15	2.6	３		G3	２		G3	３		G2	Ｆ		IP	２		IP	３		IP	１	4	IP	２	4	IP	２		IP	２		G3
+佐々木　大河	6.56	0.13	1.9	２		IP	２		IP	３		IP	２		IP	５		IP	３		G2	転		IP	３		IP	２		IP	３		IP
+加藤　　政彦	3.80	0.14	4.0	６		IP	１		IP	２	4	IP	５		G1	５		G1	６		G1	５		G1	５		IP	５		IP	４		IP
+武富　　智亮	4.20	0.16	4.0	５		IP	２		IP	３		IP	３		IP	５		IP	３		G2	５		IP	４		IP	６		IP	４		IP

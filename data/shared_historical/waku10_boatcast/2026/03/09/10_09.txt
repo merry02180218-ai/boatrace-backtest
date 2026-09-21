@@ -1,0 +1,8 @@
+data=
+1	0
+片岡　　大地	9.40	0.14	2.2	１		IP	１		IP	２		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+佐藤　　　悠	6.80	0.17	2.9	４		IP	４		IP	２		IP	２		IP	２		IP	１		IP	２	3	IP	３		IP	２		IP	４		IP
+中山　　　将	6.20	0.12	2.3	３		IP	２		IP	６		IP	１		IP	５		IP	３		IP	１		IP	２		IP	３		IP	４		G2
+守屋　　大地	5.60	0.18	3.5	４	5	IP	４		IP	４		IP	２		IP	１		IP	５		IP	４		IP	４		IP	３		IP	２		IP
+横田　　貴満	5.30	0.18	4.0	３		IP	４	6	IP	１		IP	４		IP	３		G1	３	6	G1	５		IP	４		IP	４		IP	４		IP
+市川　　哲也	4.70	0.15	3.0	６		IP	３	5	IP	４		IP	３		IP	５		IP	１	5	IP	３		IP	５		IP	５		IP	２	5	IP

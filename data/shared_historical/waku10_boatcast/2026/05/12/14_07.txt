@@ -1,0 +1,8 @@
+data=
+1	0
+長谷川　雅和	8.00	0.17	3.0	１		IP	１		IP	２		IP	Ｆ		G3	２		IP	３		IP	２		IP	１		IP	１		IP	１		IP
+川田　　正人	6.40	0.17	3.6	３		IP	３		IP	３	3	IP	３		IP	５		IP	２		IP	３		IP	２		IP	２		IP	２		IP
+馬野　　　耀	6.80	0.21	3.4	１		IP	４		IP	３		IP	３		IP	２		IP	２		IP	３		IP	４		IP	２		IP	２		IP
+片岡　　秀樹	4.20	0.15	2.4	３		IP	４		IP	３		IP	５		IP	３		IP	５		IP	３		IP	２		IP	６	6	IP	６		IP
+吉永　　泰弘	2.60	0.20	4.3	５	4	IP	転		IP	５		IP	５		IP	３		IP	４		IP	６		IP	４	4	IP	６		IP	４	4	IP
+田中　　駿兵	7.00	0.15	2.6	２		IP	５		IP	２		IP	５		IP	４	5	IP	１		IP	１		IP	２		IP	２		IP	１		IP

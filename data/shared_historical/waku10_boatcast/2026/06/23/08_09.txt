@@ -1,0 +1,8 @@
+data=
+1	0
+濱本　　優一	7.40	0.14	2.5	１		IP	１		IP	４		IP	１		IP	１		IP	２		IP	６		IP	６		G3	１		G3	１		IP
+渡邊　　雄斗	4.67	0.18	4.0	２		IP	４		IP	５		IP																					IP
+平田　健之佑	6.75	0.14	2.1	欠		IP	２		IP	２		IP	４		IP	２		IP	３		IP	転		IP	３		IP	４		IP	１		IP
+大賀　龍之介	5.30	0.15	3.3	５		IP	２		IP	５		IP	１	3	IP	１		IP	３		IP	５		IP	６		IP	３		IP	３		IP
+赤池　　修平	2.40	0.22	4.7	３	6	IP	５		IP	６		IP	３		IP	４		IP	６		IP	６		IP	６		IP	６		IP	６	6	IP
+興津　　　藍	2.70	0.18	4.2	４		IP	５		IP	４		G3	５		IP	５		IP	６		IP	４		IP	５		IP	４		IP	５		IP

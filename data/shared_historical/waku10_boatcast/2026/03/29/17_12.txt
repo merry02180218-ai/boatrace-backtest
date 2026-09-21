@@ -1,0 +1,8 @@
+data=
+1	0
+下寺　　秀和	9.80	0.15	2.1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+桑島　　和宏	4.90	0.13	2.8	３		IP	２		IP	６		IP	４		IP	５		G1	５		G1	５		IP	２		IP	４		IP	１		IP
+鈴木　　智啓	4.30	0.20	4.1	３		IP	３		IP	２	2	IP	２		IP	４		IP	５		IP	６		IP	転		IP	４	4	IP	４		IP
+福来　　　剛	7.10	0.18	2.3	１		IP	５		IP	２		IP	２		IP	１		G1	１		G1	６		G1	４		G1	３		IP	２		IP
+倉尾　　大介	3.90	0.21	4.7	３		IP	６		IP	４		IP	４		IP	３		IP	５		IP	４		IP	５		IP	４		IP	４		IP
+亀山　　雅幸	4.20	0.16	3.9	２	5	IP	５		IP	３		IP	４		IP	３		IP	５		IP	４		IP	５		IP	５		IP	３		IP

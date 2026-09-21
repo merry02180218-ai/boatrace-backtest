@@ -1,0 +1,8 @@
+data=
+1	0
+渥美　　卓郎	7.20	0.18	3.0	２		IP	５		IP	４		IP	３		IP	３		IP	１		IP	２		IP	２		IP	１		IP	１		IP
+横井　　健太	5.10	0.19	4.3	６		IP	４		IP	４		IP	２		IP	２		IP	４		IP	１		IP	３		IP	４		IP	５	4	IP
+櫻井　　　優	6.60	0.16	3.2	１		IP	１		IP	４		IP	４		IP	１		IP	４		IP	２		IP	３		IP	５		IP	３		IP
+中北　　将史	4.50	0.18	3.1	５		IP	５		IP	４		IP	２		IP	４		IP	４		IP	３		IP	３		IP	２		IP	６		IP
+宮内　由紀英	2.50	0.23	5.1	４		IP	５		IP	６		IP	６		IP	欠		IP	４	2	IP	６		IP	３		IP	４		IP	５		IP
+林　　　風音	2.00	0.16	3.3	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	２		IP	５		IP	６		IP

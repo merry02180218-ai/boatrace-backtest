@@ -1,0 +1,8 @@
+data=
+1	0
+富永　　大一	6.80	0.17	2.7	１		IP	１		IP	６		IP	１		IP	１		IP	５		IP	４		IP	１		IP	６		IP	１		IP
+石岡　　将太	6.80	0.18	3.4	２		IP	２		IP	４		IP	２		IP	３		IP	４		IP	４		IP	１		IP	２		IP	２		IP
+関根　　彰人	5.80	0.16	2.9	６		IP	３		IP	６		IP	１		IP	２		IP	２		IP	３		IP	２		IP	５		IP	２		IP
+塩田　　北斗	5.70	0.14	3.1	４		IP	５	5	IP	３	5	G1	３		G1	４		IP	２		IP	３		IP	４		G1	５		G1	１		G1
+後藤　　正宗	5.90	0.15	2.4	６		IP	３		IP	２		IP	２		IP	２		IP	５		IP	１		G3	４		IP	３		IP	３		IP
+原　　加央理	2.60	0.16	3.7	５		IP	６		IP	５		G3	５		IP	５		IP	３		IP	４		IP	４		IP	５		G3	６		G3

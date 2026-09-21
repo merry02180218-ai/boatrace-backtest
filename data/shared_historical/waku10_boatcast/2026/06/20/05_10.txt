@@ -1,0 +1,8 @@
+data=
+1	0
+青木　　玄太	9.80	0.14	2.7	１		IP	２		G1	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+小林　　　泰	5.30	0.16	2.9	１		IP	２		IP	５		IP	２		G2	３		IP	１		IP	４	3	IP	欠		IP	５		IP	５		IP
+大澤　　風葵	7.89	0.15	3.5	３		IP	２		IP	６	4	IP	１		IP	１		IP	２		IP	不		IP	２		IP	２		IP	１		IP
+樋口　　範政	2.50	0.19	4.9	５		IP	３		IP	６		IP	６		IP	４		IP	５	5	IP	５		IP	４		IP	６		IP	５		IP
+柳内　　敬太	5.10	0.15	2.0	６		IP	３		IP	６		IP	１		IP	３		IP	１		IP	６		IP	５		IP	２		IP	３		IP
+折下　　寛法	3.50	0.15	2.7	３		IP	１	5	IP	５		IP	３		G3	６		IP	６		IP	５		G3	５		IP	６		IP	４		IP

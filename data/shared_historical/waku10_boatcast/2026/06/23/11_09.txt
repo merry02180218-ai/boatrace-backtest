@@ -1,0 +1,8 @@
+data=
+1	0
+土屋　実沙希	6.40	0.16	2.9	３		IP	４		IP	５		IP	１		IP	４		IP	１		IP	２		IP	３		IP	３		IP	２		IP
+堂原　　洋史	2.89	0.19	3.9	５		IP	５		IP	４		IP	４		IP	５		IP	５		IP	欠		IP	５		IP	４		IP	４		IP
+谷口　　健一	3.40	0.17	3.7	６		IP	５		IP	４		IP	４		IP	６	4	IP	６		IP	２		IP	２		IP	６		IP	４		IP
+塩崎　　優司	4.10	0.16	3.1	１		IP	５		IP	４		IP	２		IP	５	5	IP	３		IP	５	3	IP	６		IP	５		IP	４		IP
+土山　　卓也	4.10	0.22	3.7	３		IP	５		IP	５		IP	４		IP	５		IP	２		IP	５		IP	６		IP	１		IP	４		IP
+池田　　剛規	3.50	0.15	3.5	６		IP	３	5	IP	３		IP	６		IP	６		IP	５		IP	４		IP	４		IP	２		IP	５		IP

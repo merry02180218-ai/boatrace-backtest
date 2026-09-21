@@ -1,0 +1,8 @@
+data=
+1	0
+山地　　正樹	7.00	0.19	4.3	１		IP	１		IP	２		IP	４		IP	１		IP	２		IP	１		IP	４		IP	４		G3	５		IP
+半田　　尚也	3.00	0.19	4.7	５		IP	５		IP	５	3	IP	４		IP	５		IP	４		IP	５		IP	５		IP	５		IP	２		IP
+深水　慎一郎	4.60	0.19	3.2	１		IP	２		IP	４		IP	４		IP	６		IP	５		IP	３		IP	３	2	IP	６		IP	４	4	IP
+横井　　健太	1.80	0.19	4.2	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP	５		IP	４		IP	５		IP	妨		IP
+福山　恵里奈	2.50	0.14	2.9	６		IP	６	6	IP	５		G3	６		G3	３		IP	２		IP	６		G3	６		G3	５		IP	５	6	IP
+宮本　　琉正	1.60	0.18	3.1	５		IP	５		IP	６		IP	６		IP	５		IP	５		IP	５		IP	６		IP	５		IP	６		IP

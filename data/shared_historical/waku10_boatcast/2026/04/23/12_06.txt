@@ -1,0 +1,8 @@
+data=
+1	0
+山戸　　信二	5.80	0.16	4.0	６		IP	１		IP	６		IP	４		IP	１		IP	１		IP	５		IP	５		IP	２		IP	１		IP
+藤岡　　俊介	7.10	0.14	2.2	３		IP	３		IP	２	3	IP	１		IP	３		IP	６		G1	１		IP	１		IP	１		IP	５		G1
+小野寺　智洋	6.60	0.12	2.6	２		IP	２		IP	３		G3	４		G3	３		IP	２		IP	２		IP	５		IP	２		IP	３		IP
+興津　　　藍	4.50	0.16	3.1	５		IP	５	6	IP	６	5	IP	４		IP	３		IP	６		IP	３		IP	３		IP	１		G1	４		IP
+出口　舞有子	3.10	0.15	2.6	５		G3	６		G3	３		IP	５		IP	４		IP	４		IP	５		IP	５		IP	５		IP	３		IP
+谷　　　勝幸	3.40	0.19	4.3	３	5	IP	４		IP	４		IP	４		IP	５	5	IP	６		IP	５	5	IP	５		G3	２	5	IP	６		IP

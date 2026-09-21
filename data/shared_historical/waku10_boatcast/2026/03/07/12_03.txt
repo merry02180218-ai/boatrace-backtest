@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　遼太	6.90	0.16	3.2	１		IP	２		IP	３		IP	５		IP	１		IP	６		IP	１		IP	１		IP	１		IP	５		IP
+重野　　哲之	5.70	0.14	2.6	２		IP	３		IP	６		G1	２		G1	３		IP	３		IP	１		IP	３		IP	５		IP	５		IP
+安河内　　将	7.90	0.15	3.4	２		IP	６		IP	１		IP	２		IP	３		G1	１		IP	４		G1	１		G1	１		IP	３		G1
+新田　　智彰	5.60	0.13	2.4	３		IP	４		IP	１		IP	３		IP	１		IP	２		IP	５		IP	３		IP	５		IP	５		IP
+谷本　　幸司	4.20	0.16	3.4	６		IP	４		IP	４		IP	３		IP	６		IP	４		IP	４		IP	３		IP	３		G3	３		G3
+黒崎　　竜也	5.50	0.20	3.5	４		IP	４		IP	４		IP	２		IP	１		IP	２		IP	３	5	IP	４		IP	３		IP	６		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+小野寺　智洋	9.00	0.12	2.6	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		G3	１		IP	４		IP
+北村　　征嗣	7.10	0.13	2.7	２		G3	１		IP	４		IP	２		G1	６	3	G1	２		IP	２		IP	３		IP	２		G3	２		G3
+木場　雄二郎	4.30	0.17	3.6	３		IP	３		IP	３		IP	６		IP	６		IP	３		IP	３		IP	６		IP	５		IP	２		IP
+吉川　　喜継	5.60	0.16	3.6	４		IP	１		IP	４		IP	１		IP	４		IP	２		IP	４		IP	２		IP	５		IP	５		IP
+植田　　太一	5.00	0.15	3.4	４		IP	３		IP	６		IP	３		IP	２		IP	５		IP	３		IP	６		IP	２		G3	２		IP
+松尾　　光広	4.30	0.23	5.3	５		IP	４		IP	３		IP	３		IP	４		IP	６		IP	５		IP	１		IP	３	5	IP	５		IP

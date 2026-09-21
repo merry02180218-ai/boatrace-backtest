@@ -1,0 +1,8 @@
+data=
+1	0
+石橋　　道友	10.00	0.10	1.8	２		IP	１		IP	１		IP	１		IP	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP
+新田　　泰章	8.00	0.15	3.5	２		IP	１		IP	２		IP	１		IP	４		IP	４		G1	２		G1	１		IP	３		IP	１		IP
+宗行　　治哉	7.10	0.18	3.3	２		IP	４		IP	３		IP	２	4	IP	１		IP	４		G2	１		IP	３		IP	２	4	IP	３		IP
+岡部　　　哲	2.70	0.19	3.5	５		IP	２		IP	５		IP	５		IP	５		IP	４		IP	６		IP	６		IP	６		IP	４		IP
+真庭　　明志	2.90	0.14	3.0	３		IP	６		IP	６		IP	６		IP	５		IP	５		IP	１	4	IP	５		IP	５		IP	５		IP
+大池　　佑来	3.50	0.14	3.6	６		IP	４		IP	４		G1	５		G1	６		G1	６		IP	６		SG	４		G1	２		G1	５		IP

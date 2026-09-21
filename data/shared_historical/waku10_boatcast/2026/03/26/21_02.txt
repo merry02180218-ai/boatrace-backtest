@@ -1,0 +1,8 @@
+data=
+1	0
+烏野　　賢太	9.10	0.16	4.3	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	３		IP	１		G1	３		IP
+廣中　　良一	5.70	0.19	3.2	２		IP	５		IP	５		IP	２		IP	２		IP	６		IP	１		IP	２		IP	２	3	IP	５		IP
+長谷川　雅和	4.30	0.19	3.7	４		IP	３		IP	４		IP	４		IP	３		IP	３		IP	１		IP	６		IP	６		IP	６		IP
+青木　　玄太	4.90	0.15	2.7	５		IP	２	5	IP	５		G1	２		G1	５		G1	５		G2	２		IP	２		IP	６		G3	６	6	G1
+中北　　将史	2.60	0.16	3.2	５		IP	４		IP	６		IP	５		IP	３		IP	５		IP	５		IP	６		IP	５		IP	４		IP
+田中　　宏樹	2.80	0.19	5.0	４		IP	６		IP	４		IP	３		IP	５		IP	３		IP	６		IP	６		IP	６		IP	５		IP

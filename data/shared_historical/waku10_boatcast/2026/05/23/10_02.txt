@@ -1,0 +1,8 @@
+data=
+1	0
+吉川　　昭男	6.70	0.14	3.3	６		IP	２		IP	１		IP	１		IP	５		IP	４		IP	１		IP	１		IP	１		IP	５		IP
+原田　才一郎	9.20	0.15	3.0	３		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１	3	IP	１	3	IP	２		G1
+谷本　　幸司	8.00	0.10	2.3	２		IP	２		IP	４		IP	２		IP	１		IP	２		IP	２		IP	１	2	IP	３		IP	１		IP
+黄金井　力良	6.80	0.16	2.6	３		IP	４		IP	１		IP	４		IP	２		IP	２		G3	３		IP	３		IP	３		IP	１		IP
+深水　慎一郎	2.90	0.18	3.8	６		IP	６	6	IP	６	6	IP	５		IP	５		IP	６		IP	６		IP	２		IP	２		IP	４		IP
+泉　　　啓文	3.10	0.19	4.4	６		IP	５		IP	２	5	IP	５		IP	４		IP	６		IP	６		IP	３		IP	５		IP	４		IP

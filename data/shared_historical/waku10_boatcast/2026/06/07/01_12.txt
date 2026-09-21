@@ -1,0 +1,8 @@
+data=
+1	0
+仲谷　　颯仁	10.80	0.13	2.7	１		SG	１		SG	１		SG	２		G1	１		G1	１		IP	１		IP	１		IP	１		G1	１		G1
+泥谷　　一毅	6.40	0.18	4.2	２		IP	１		IP	２		IP	５		IP	３		IP	４	3	IP	３		IP	４		IP	２	3	IP	２		IP
+今垣　光太郎	3.60	0.14	3.7	３		SG	６		G1	６		G1	４		IP	５		G1	６		G1	落		IP	４		IP	２		G1	６		G1
+荒牧　　凪沙	4.80	0.15	3.4	５		IP	３	5	IP	６		IP	１		IP	１		IP	４		IP	４		IP	５		IP	６		IP	２		IP
+西原　　明生	2.70	0.24	4.9	５		IP	５		IP	５	6	IP	５		IP	６		IP	４		IP	５		IP	４		IP	４		IP	４		IP
+柘植　　政浩	3.10	0.18	3.3	２		IP	６		IP	５		IP	４		IP	６		IP	４		IP	３		IP	６		IP	５		IP	５		IP

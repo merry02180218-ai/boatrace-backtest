@@ -1,0 +1,8 @@
+data=
+1	0
+榮田　　将彦	5.60	0.16	4.4	３		IP	３		IP	３		IP	３		IP	６		G3	２		IP	５		G3	６		IP	１		IP	１		IP
+金子　　猛志	4.10	0.15	3.1	３	3	IP	６		IP	３		IP	２		IP	６		IP	５		IP	４		IP	６		IP	４		IP	２		IP
+北山　　康介	7.00	0.15	2.9	２		IP	１		IP	２		IP	２		IP	５		IP	４		IP	４		IP	２		SG	２		IP	２		IP
+酒井　　俊弘	6.40	0.12	2.2	４	3	IP	２		IP	１		IP	６	6	IP	４		IP	２		IP	１	5	IP	１		IP	２	5	IP	６	5	IP
+渡邊　　雄斗	4.00	0.17	3.4	４		IP	３	6	IP	２		IP	５	6	IP	６	6	IP	２		IP	５	4	IP	６	4	IP	４		IP	４		IP
+篠原　　飛翔	4.30	0.15	3.0	５	5	IP	２		IP	６		IP	３		IP	４		IP	３		IP	５		IP	２		IP	４		IP	５		IP

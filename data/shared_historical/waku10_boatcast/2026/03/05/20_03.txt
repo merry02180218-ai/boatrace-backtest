@@ -1,0 +1,8 @@
+data=
+1	0
+西岡　　蒼志	7.11	0.17	3.4	２		IP	１		IP	２		IP	１		IP	４		IP	４		IP	３		IP	１		IP	４		IP			IP
+北中　　元樹	7.10	0.17	3.6	３		IP	２		IP	３		IP	２		IP	１		IP	１		IP	４		IP	２		IP	２		IP	５		IP
+大江　　　純	5.70	0.12	2.2	４	2	IP	３		IP	１		IP	１	4	IP	６		IP	２		IP	３	5	IP	１		IP	６	4	IP	６		IP
+樋口　　　亮	5.80	0.14	3.0	４	5	IP	１		IP	１	5	IP	５		IP	２		IP	４		IP	４	5	IP	１		IP	４		G3	５		IP
+谷　　海夏人	3.60	0.22	4.3	６	6	IP	３	6	IP	５	6	IP	２	6	IP	５	6	IP	３	6	IP	４	6	IP	４	6	IP	６	6	IP	５	6	IP
+篠原　　飛翔	4.50	0.15	2.8	２		IP	６		IP	３		IP	４		IP	３		IP	５		IP	２		IP	４		IP	５		IP	４		IP

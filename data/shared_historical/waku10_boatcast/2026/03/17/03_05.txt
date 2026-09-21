@@ -1,0 +1,8 @@
+data=
+1	0
+花本　　　剛	6.60	0.18	3.3	１		IP	４		IP	３		IP	１		IP	３		IP	１		IP	２		IP	１		IP	６		IP	６		IP
+金田　　智博	7.80	0.16	2.8	３		IP	２		IP	１		IP	２		IP	３		IP	２		IP	３		IP	２		IP	２		IP	２		IP
+吉川　　貴仁	7.50	0.12	2.0	３	2	IP	２		IP	１		IP	２		IP	２		IP	１		IP	２		IP	４		IP	２		G3	４		G3
+萩原　　知哉	3.89	0.13	2.4	４		IP	５		IP	落		IP	２		IP	４		IP	６		IP	３		IP	６		IP	６		IP	２		IP
+東　　　潤樹	3.90	0.22	4.6	５		IP	３		IP	４	6	IP	３		IP	２		IP	５		IP	６		IP	５		IP	４		IP	４		IP
+早川　　颯太	1.10	0.21	4.7	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

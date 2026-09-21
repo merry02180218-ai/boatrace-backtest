@@ -1,0 +1,8 @@
+data=
+1	0
+蒲原　　健太	7.00	0.18	3.9	１		IP	５		IP	４		IP	１		IP	３		G2	１		IP	１		IP	６		IP	２		IP	２		IP
+相馬　　　翔	7.00	0.14	3.1	１		IP	３		IP	２		IP	５		IP	４		IP	２		IP	２		IP	２		IP	３		IP	１		IP
+塩崎　　優司	6.60	0.15	2.8	２		IP	５		IP	４		IP	４		IP	１	4	IP	２		IP	２		IP	３		IP	２		IP	２		IP
+重富　　伸也	3.30	0.18	4.1	６		IP	３		IP	２		IP	３	5	IP	Ｆ	5	IP	４		G3	４	5	G3	５		IP	６	6	IP	６	5	IP
+村上　　彰一	2.80	0.23	4.9	４		IP	５		IP	５		IP	５		IP	３		IP	６		IP	６		IP	４		IP	４	6	IP	５		IP
+高木　　圭大	2.50	0.16	3.5	２		IP	６		IP	６		IP	４		IP	５		IP	６		IP	４		IP	５	5	IP	６		IP	６		IP

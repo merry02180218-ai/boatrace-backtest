@@ -1,0 +1,8 @@
+data=
+1	0
+小黒　　竜吾	6.30	0.12	2.4	６		IP	３		IP	１		IP	４	2	IP	１		IP	２		IP	３		IP	５		IP	２		IP	２		IP
+藤原　　早菜	6.40	0.20	4.4	３		IP	６		IP	３		IP	１		IP	２	3	G1	２		IP	３		IP	５		IP	３		IP	１		IP
+安部　　慎一	4.60	0.16	2.8	２		IP	４		IP	５		IP	２		IP	６		IP	６		IP	５		IP	５		IP	２		IP	１	5	IP
+赤井　星璃菜	3.70	0.16	3.3	４		IP	３		IP	６		IP	５		IP	６		IP	４		IP	１		IP	３		IP	６		IP	５		IP
+塩嶋　　泰空	1.40	0.23	4.7	５		IP	６	6	IP	５		IP	６	6	IP	６	6	IP	５	6	IP	５	6	IP	６	6	IP	６		IP	６	6	IP
+山本　　寛久	2.78	0.20	4.7	５	5	IP	５		G1	２		IP	５		IP	欠		IP	６		IP	４		IP	５		IP	６		IP	５		IP

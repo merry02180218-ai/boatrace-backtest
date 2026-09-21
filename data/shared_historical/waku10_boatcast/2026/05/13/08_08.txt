@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　　航	6.60	0.18	3.7	２		IP	１		G3	１		IP	５		IP	４		IP	５		IP	１		IP	４		IP	３		IP	１		IP
+中村　　泰平	7.50	0.18	3.5	２		IP	２		IP	２		G3	３		G1	２		IP	４		IP	３		IP	２	4	G1	２		IP	２		IP
+藤原　　仙二	6.10	0.15	3.7	３		IP	２		IP	２		IP	２		IP	２		IP	５		G2	６	4	IP	３		IP	２		IP	４		IP
+一ノ木　　匠	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+花田　　和明	3.20	0.20	4.2	６	4	IP	６	4	IP	５	3	IP	６	4	IP	５	2	IP	１	4	IP	４		IP	５	2	IP	２	3	IP	６	2	IP
+大橋　純一郎	4.20	0.20	4.8	２		IP	２		IP	５		IP	６		IP	３		IP	５	5	IP	４		IP	５		IP	６		IP	２		IP

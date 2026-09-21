@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　拡郎	10.30	0.12	2.4	１		G1	１		G1	１		G1	１		G1	２		G1	２		G1	１		G1	１		IP	１	2	IP	１		IP
+平川　　香織	7.60	0.17	2.7	３		IP	２		IP	２		IP	１	3	IP	１		IP	２		IP	２		G3	１		IP	４		G3	４		IP
+齊藤　　　優	5.40	0.18	2.9	１		IP	３		IP	４		G3	５		G3	３		IP	３		IP	２		IP	４	2	IP	４		IP	４		IP
+金子　　拓矢	6.70	0.17	2.6	３		G1	５		G1	５		G1	１		IP	３		IP	１	3	IP	１		IP	３		IP	４		IP	３		IP
+上村　　純一	2.80	0.11	2.8	６		IP	６		IP	４		G1	５		G1	６		G1	４		G1	３	6	IP	６		IP	５		IP	５		IP
+田路　　朋史	3.10	0.16	3.4	５		IP	６		IP	４		IP	６		IP	６		IP	５		IP	４		IP	４		IP	５		IP	１		IP

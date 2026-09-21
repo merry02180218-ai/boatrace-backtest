@@ -1,0 +1,8 @@
+data=
+1	0
+中里　　昌志	5.60	0.18	3.7	３		IP	６		IP	３		IP	５		IP	３		IP	１		IP	２		IP	１		IP	６		IP	３		IP
+鈴木　　　博	5.60	0.23	4.0	４		IP	２		IP	４		IP	４		IP	３		IP	２		IP	３		IP	５		IP	２		IP	３		IP
+飛田　　江己	7.10	0.10	2.2	１		IP	１		IP	２		IP	３		IP	１		IP	５		IP	２		G1	５		G1	３		G1	３		IP
+平石　　和男	6.60	0.17	3.8	５		IP	１		IP	６	3	IP	３		IP	３		IP	１		IP	４		IP	２		IP	２		IP	１	3	IP
+佐藤　　　翼	6.60	0.12	3.2	３		G1	６		G1	２		SG	２		G1	３		G1	３		G1	５		G1	２		IP	３		IP	３		G1
+谷島　　咲希	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP

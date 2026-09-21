@@ -1,0 +1,8 @@
+data=
+1	0
+谷口　　知優	8.40	0.16	2.7	１		IP	２		IP	１		IP	３		IP	２		IP	２		IP	３		IP	１		IP	１		IP	２		IP
+中岡　　健人	4.00	0.24	3.8	４		IP	６		IP	３		IP	５		IP	３		IP	３		IP	６		IP	３		IP	５		IP	３		IP
+水谷　　理人	7.00	0.13	3.1	４		IP	３		IP	３	4	IP	４	2	IP	２		IP	３		IP	３		IP	１		IP	１	4	IP	３	5	G1
+石井　　伸長	5.70	0.14	2.2	３		IP	１		IP	６		IP	４	5	IP	１		IP	３		IP	２		IP	５		IP	５		IP	２	5	IP
+三嶌　さらら	5.00	0.18	3.6	５		IP	４		IP	４		IP	２		IP	３		IP	４		IP	４	6	IP	４		IP	１		IP	４		G3
+松尾　　夏海	5.00	0.18	2.9	２		IP	４		IP	６		IP	１		IP	３		G1	３		G3	５	5	G3	４		IP	５		IP	３		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+松山　　裕基	5.80	0.15	4.3	４		IP	２		IP	５		IP	１		IP	２		IP	４		IP	４		IP	３		IP	５		IP	１		IP
+中村　　晃朋	4.90	0.16	2.9	２		IP	６		G1	６		G1	１		IP	３		G3	４		IP	５		IP	６		G1	６		IP	１		IP
+今井　　裕梨	3.90	0.16	2.6	２		G3	６		G3	３		IP	６		IP	３		IP	５		IP	４		G3	３		G3	４		IP	６		IP
+中村　紋夕梨	3.60	0.22	4.7	５		IP	５		IP	３		IP	３		IP	６	5	IP	３		IP	６		IP	５		IP	３	3	IP	４		IP
+中里　　英夫	3.00	0.15	4.5	６		IP	４		IP	４		IP	４		IP	４		IP	６		IP	５		IP	２		IP	６		IP	６		IP
+佐藤　　右京	2.50	0.20	4.1	５		IP	６		IP	６		IP	６		IP	４		IP	６		IP	４		IP	３		IP	４		IP	６		IP

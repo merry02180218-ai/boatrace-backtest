@@ -1,0 +1,8 @@
+data=
+1	0
+三宅　　健太	7.60	0.17	2.7	１		IP	２		IP	１		IP	４		IP	２		IP	１		G3	２		IP	３		IP	１		IP	５		IP
+荻野　　裕介	5.60	0.21	4.6	４		IP	４		IP	２		IP	５		IP	６		G3	２		IP	２		IP	６		IP	１		IP	１		IP
+澤崎　　雄哉	5.30	0.15	3.0	２		IP	２		IP	１		IP	５		IP	４		IP	３		IP	３		IP	５	2	G3	６		IP	３		IP
+宮村　　勇哉	3.80	0.23	3.8	２		IP	６	5	IP	６		IP	５		IP	４		IP	４		IP	５	6	IP	５		IP	３		IP	２		IP
+内田　　　圭	3.00	0.21	3.6	４		IP	１		IP	６		IP	６		IP	６		IP	２		IP	６		IP	５		IP	６		IP	６		IP
+田中　　　堅	1.70	0.24	4.6	６		IP	６		IP	４		IP	５		IP	５		IP	６		IP	６		IP	５		IP	５		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+松田　　淳平	9.00	0.14	1.8	１		IP	１		IP	３		IP	１		IP	３		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+小玉　　啓太	5.10	0.14	2.8	５		IP	３		IP	転		IP	３		IP	３		IP	２		IP	１		IP	３		IP	６		IP	３		IP
+加倉　　侑征	5.20	0.13	2.8	４		IP	５		IP	４		IP	３		IP	２		IP	３		IP	５		IP	１		IP	５		IP	２		IP
+花田　　凱成	4.00	0.17	2.8	３		IP	５		IP	３		IP	４		IP	１		IP	４		IP	６		IP	６		IP	４		IP	５		IP
+川原　　　涼	5.30	0.19	3.4	３		IP	２		IP	３		IP	３		IP	４	6	IP	６	4	IP	２		IP	１		IP	５		IP	５		IP
+石倉　　拓美	1.00	0.23	3.9	６	5	IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

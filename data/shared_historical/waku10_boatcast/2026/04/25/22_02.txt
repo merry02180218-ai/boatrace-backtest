@@ -1,0 +1,8 @@
+data=
+1	0
+孫崎　　百世	7.40	0.22	4.5	１		IP	２		IP	４		IP	１		IP	４		IP	３		IP	１		IP	２		IP	３		IP	２		IP
+池本　　輝明	5.90	0.16	3.8	３		IP	４		IP	２		IP	３		IP	２		IP	３		IP	２		IP	６		IP	２		IP	４		IP
+高山　　敬悟	3.90	0.16	4.1	３		IP	３		G3	６		G3	４		IP	４		IP	１		IP	６		IP	５		IP	４		IP	６		IP
+藤本　　佳史	4.50	0.17	3.7	２		IP	５		IP	４		G3	２		IP	５		IP	４		IP	６		IP	３		IP	５		IP	２		IP
+國分　将太郎	3.40	0.19	3.6	２		IP	６	4	G3	６	6	G3	３		IP	３		IP	４		IP	６		IP	５		IP	４		IP	６	6	IP
+諏訪　　玲奈	1.90	0.19	3.8	６		IP	３		IP	６		IP	４		IP	６		IP	６		IP	６	5	IP	６		IP	６		IP	５		IP

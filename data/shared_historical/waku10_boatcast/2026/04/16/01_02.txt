@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　哲也	9.50	0.13	2.3	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	２		IP	２		G1	１		G1	１		G1
+原田　　幸哉	4.67	0.12	2.1	６		G1	５		SG	５		SG	転		G1	１		G1	４	1	G3	５		G1	４		G1	６		G1	３		G1
+柴田　　　光	5.50	0.17	3.5	５		G1	２		IP	５	2	IP	３		IP	３		G3	４		IP	３		IP	３		IP	５	2	SG	１		IP
+松井　　　繁	6.00	0.12	3.8	５	5	G1	３		G1	４		G1	６		G1	１		G1	２		G1	３	3	IP	３		IP	３		G1	５		SG
+木村　　仁紀	4.10	0.11	2.8	３		G1	３		G1	６	4	IP	６		IP	６		IP	４		G1	３		G1	６		G1	４		IP	４		IP
+久田　　敏之	5.70	0.11	2.7	４		G1	５		SG	４		SG	２		IP	３	5	G1	４		IP	３		G1	６		G1	３		IP	２	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+木山　　誠一	8.00	0.13	1.6	３		IP	４		IP	２		IP	２		IP	１		IP	１		IP	１		IP	３		IP	１		IP	２		IP
+飯島　　昌弘	7.40	0.13	3.2	１		IP	２		IP	２		IP	４		IP	２		IP	１		IP	４		IP	３		IP	３		G1	２		G1
+高木　　圭大	4.20	0.12	2.4	４	4	IP	５		IP	５		IP	３		IP	３		IP	２		IP	５		IP	４		IP	４		IP	４		IP
+秋末　　秦悟	3.10	0.16	3.5	３	5	IP	４	5	IP	４		IP	２		IP	６		IP	６		IP	４		IP	６		IP	６	5	IP	６		IP
+山地　　正樹	6.50	0.16	3.3	２	3	IP	２	3	IP	２	2	IP	２	3	IP	１	2	IP	５	2	IP	５	2	IP	１	2	IP	２	2	IP	６		IP
+森　　　弘行	5.00	0.14	2.7	１		IP	１		IP	５		IP	６		IP	２		IP	２		IP	５		IP	５		IP	欠		IP	５	5	IP

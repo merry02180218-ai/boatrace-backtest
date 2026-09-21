@@ -1,0 +1,8 @@
+data=
+1	0
+入澤　　友治	5.80	0.17	3.5	２		IP	５		IP	１		IP	３		IP	６		IP	２		IP	３		IP	２		IP	６		IP	２		IP
+本田　　　愛	5.00	0.17	3.8	６		IP	２		IP	５		IP	３		IP	６		IP	５		IP	２		IP	２		IP	２		IP	３		IP
+鈴谷　　一平	6.00	0.14	3.2	３		IP	４		IP	１		IP	５		IP	１		IP	５	4	IP	２		IP	５		IP	４		IP	２		IP
+木幡　　純也	4.60	0.21	4.4	２		IP	４		IP	５		IP	４		IP	５		IP	３		IP	３		IP	５		IP	４		IP	２		IP
+川添　　英正	3.40	0.18	4.2	６		IP	５		IP	６		IP	２		IP	５		IP	２		IP	６		G3	３		G3	６		IP	４		IP
+谷島　　咲希	1.33	0.21	5.0	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP												IP

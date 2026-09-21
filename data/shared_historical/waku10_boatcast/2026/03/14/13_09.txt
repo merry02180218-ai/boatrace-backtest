@@ -1,0 +1,8 @@
+data=
+1	0
+宮之原　輝紀	9.20	0.13	2.2	１		G1	１		G1	１		G1	１		G1	１		IP	１		G2	１		IP	５		IP	４		IP	１		IP
+深谷　　知博	5.40	0.14	3.6	６		G1	２		G1	６		G1	３		G1	２		G1	６		G1	４		G1	２		IP	４		IP	３		IP
+宮田　　龍馬	7.60	0.13	1.8	２		IP	１		IP	１		G1	３		IP	２		IP	１		IP	４		IP	３		IP	５		IP	１		IP
+茅原　　悠紀	8.10	0.13	2.3	１		G1	４		G1	３		G1	２	5	IP	４		G1	３		SG	３		G1	２		G1	２		SG	２		SG
+萩原　　秀人	6.90	0.12	1.5	２		G3	３		G1	３		G1	５		G1	２		IP	４		G2	３		G2	３		IP	２		IP	２		SG
+山崎　　　郡	5.00	0.12	2.2	２		IP	３		IP	６		G1	５		G1	５		G1	４		G1	２		IP	６		IP	２		IP	３		IP

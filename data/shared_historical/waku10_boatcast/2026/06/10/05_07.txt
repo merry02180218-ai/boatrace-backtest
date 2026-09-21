@@ -1,0 +1,8 @@
+data=
+1	0
+石塚　　久也	9.75	0.15	2.3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	欠		IP	１		IP	エ		IP	２		IP
+横井　　健太	5.20	0.15	3.7	３		IP	２		IP	５		IP	５		IP	３		IP	２		IP	４		IP	５		IP	４	3	IP	１	3	IP
+佐口　　達也	3.80	0.15	3.1	４		IP	３		IP	６		IP	５		IP	４		IP	４		IP	２		IP	６		IP	５		IP	３	2	IP
+坂口　　貴彦	7.40	0.16	2.5	３		IP	３		IP	１		IP	１		IP	２		IP	２		IP	５		IP	２		IP	３		IP	１		IP
+木下　　翔太	6.40	0.13	2.5	２		IP	２		G2	１	2	IP	４		IP	４	4	IP	５		IP	４		G1	４		G1	１		G1	３		IP
+丸岡　　正典	5.00	0.19	4.6	３	5	IP	４		G2	４		IP	１		IP	５		IP	２		IP	５		IP	６		IP	４		IP	２		IP

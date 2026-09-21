@@ -1,0 +1,8 @@
+data=
+1	0
+谷津　　幸宏	8.00	0.12	2.2	１		IP	２		IP	１		IP	５		IP	１		IP	２		IP	２		IP	１		IP	１		IP	４		G3
+常盤　　海心	3.20	0.19	5.2	４	3	IP	２		IP	６	3	IP	６		IP	６		IP	４		IP	５		IP	５		IP	２		IP	６		IP
+横川　　聖志	5.50	0.11	2.3	２	4	IP	１		IP	３		IP	５		IP	５		IP	２		IP	４		IP	４		IP	５		IP	２		IP
+大瀧　明日香	7.40	0.14	2.1	１		IP	３		IP	１		IP	１		IP	２		IP	３	5	IP	１		IP	６		IP	３		IP	３		IP
+出畑　　孝典	4.50	0.16	3.7	４		IP	３	4	IP	３		IP	６		IP	５		IP	３	4	IP	４		IP	３		IP	２		IP	５	6	IP
+大橋　純一郎	4.30	0.20	4.4	２		IP	５	5	IP	２		IP	２		IP	５		IP	６		IP	３		IP	５	5	IP	４		IP	５		IP

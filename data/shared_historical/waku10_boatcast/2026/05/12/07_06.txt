@@ -1,0 +1,8 @@
+data=
+1	0
+寺島　　美里	7.10	0.15	1.4	４		IP	１		IP	Ｆ		IP	１		IP	５		G1	１		IP	１		IP	１		G3	１		IP	４		IP
+安井　　瑞紀	6.50	0.17	3.3	２		G3	４		G3	２		IP	３		IP	２		IP	２		G3	１		G3	５		G3	５		IP	２		G1
+水野　　望美	6.70	0.16	2.8	３		G3	１		G3	２		IP	３		IP	４		IP	２		IP	１		IP	４		IP	５	4	IP	２		IP
+井澤　　聖奈	1.90	0.26	4.8	６		IP	６		IP	６		IP	４		IP	５		IP	５	3	IP	４		IP	６		IP	５		IP	６	6	IP
+千葉　　真弥	5.00	0.15	2.9	３		IP	４		IP	５		IP	４		IP	４		IP	２	4	IP	５		IP	１		IP	４		IP	３		IP
+鈴木　祐美子	3.50	0.22	3.6	３	5	IP	３	5	IP	３		G3	４		G3	４		G3	６		IP	６		G3	５		IP	４		G3	６		IP

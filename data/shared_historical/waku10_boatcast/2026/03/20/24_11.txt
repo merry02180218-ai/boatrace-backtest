@@ -1,0 +1,8 @@
+data=
+1	0
+古澤　　光紀	8.30	0.16	3.3	１		IP	１		IP	４		IP	１		IP	１		IP	５		G1	１		IP	１		IP	３		IP	１		IP
+畑　　　和宏	7.00	0.14	2.7	３		IP	４		IP	３		IP	３		IP	４		IP	１		IP	２		IP	１		IP	２		IP	２		IP
+石橋　　道友	6.30	0.19	3.3	３	4	IP	３		IP	４		IP	３		G1	２		IP	４		IP	２		IP	１		IP	５		IP	２		IP
+今坂　　晃広	4.20	0.19	3.7	４	5	IP	６		IP	５	5	IP	３		IP	６		IP	４		IP	４		IP	３		IP	３		IP	２		IP
+品川　二千翔	4.90	0.16	3.8	４		IP	２		IP	５		IP	２		IP	６		IP	４	6	G2	５		IP	２		IP	６		IP	１	6	IP
+田路　　朋史	3.00	0.17	3.2	６		IP	４		IP	６		IP	６		IP	５		IP	４		IP	４		IP	５		IP	１		IP	６		IP

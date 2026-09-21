@@ -1,0 +1,8 @@
+data=
+1	0
+岡部　　　哲	7.00	0.17	3.6	２		IP	３		IP	６		IP	２		IP	２		IP	１		IP	１		IP	２		IP	６	2	IP	１		IP
+大池　　佑来	6.50	0.12	2.3	３		IP	６		G1	２		G1	２		G1	１		IP	６		IP	２		IP	３		IP	２		IP	３		IP
+石田　　章央	6.60	0.17	3.1	３		IP	１		IP	１		IP	４		IP	５		IP	３		IP	４		IP	２		IP	２		IP	２		IP
+田中　　宏典	6.40	0.14	2.8	５		IP	１		IP	３	5	IP	２		IP	２	5	IP	１		IP	４	6	IP	４	3	IP	４		IP	２		IP
+小林　　一樹	3.44	0.15	2.8	２		IP	６		IP	６	4	IP	５		IP	３		IP	６		IP	転		IP	５		IP	３	4	IP	４	4	IP
+坂口　　貴彦	3.50	0.21	3.5	４		IP	５		IP	２		IP	６		IP	４		IP	５	5	G3	３		IP	６		IP	６		IP	３		IP

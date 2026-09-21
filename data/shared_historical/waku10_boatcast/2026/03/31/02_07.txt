@@ -1,0 +1,8 @@
+data=
+1	0
+前田　　紗希	9.30	0.11	2.0	２		IP	１		G3	１		G3	１		G3	１		G3	２		G1	１		G1	１		G1	１		IP	５		G3
+西川　新太郎	5.60	0.17	4.3	３		IP	３		IP	２		IP	２		IP	欠		IP	４		IP	５		IP	１		IP	４		IP	２		IP
+堤　　　啓輔	5.30	0.12	2.3	Ｆ	2	IP	１		IP	６		IP	１		IP	４		IP	１		IP	転		IP	５		IP	１	4	IP	３		IP
+渡辺　　　崇	5.40	0.20	3.9	４		G3	１		IP	２		IP	５		IP	３		IP	２		IP	５	3	IP	３		IP	５		IP	３		IP
+市川　　瑚幸	1.00	0.26	5.4	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	G3	６	6	G3	６	6	G3	６	6	IP	６	6	IP	６	6	IP
+上田　　洋平	4.10	0.19	3.5	５		IP	５		IP	３		IP	６		IP	４		IP	４		IP	４	4	IP	４		IP	２		IP	３	5	IP

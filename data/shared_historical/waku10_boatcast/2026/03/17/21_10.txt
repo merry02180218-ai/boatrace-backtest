@@ -1,0 +1,8 @@
+data=
+1	0
+広次　　　修	8.60	0.16	2.9	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP	３		IP	１		IP	１		IP	２		IP
+吉島　　祥之	4.80	0.15	3.5	２		IP	５		G3	４	3	IP	３		IP	５		IP	３		IP	３		IP	２		IP	４		IP	５		IP
+中村　　辰也	6.11	0.11	3.2	２		IP	４		IP	３		IP	３		IP	欠		IP	２		IP	２		IP	６	4	IP	２		IP	３		IP
+淺香　　文武	5.40	0.18	2.7	１		IP	３		IP	４		IP	４		IP	１		IP	２	5	IP	５		IP	２		IP	６		IP	６		G3
+谷村　　一哉	4.90	0.15	3.2	６		IP	３		IP	３		IP	３		IP	４	6	IP	２		IP	３		IP	４		IP	４		IP	４	4	IP
+大橋　栄里佳	4.40	0.25	4.9	３		IP	４		IP	５		IP	３		IP	４		IP	６		IP	５		IP	４	5	IP	３		IP	２		IP

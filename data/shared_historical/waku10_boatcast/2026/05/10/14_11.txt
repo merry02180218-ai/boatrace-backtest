@@ -1,0 +1,8 @@
+data=
+1	0
+中岡　　正彦	9.70	0.12	2.4	２		SG	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+丸尾　　義孝	6.00	0.13	3.5	５		IP	１		IP	４		IP	１		IP	２		IP	２		IP	２		IP	４		G1	６		IP	４		IP
+竹田　　吉行	6.20	0.16	3.7	５		IP	２		IP	２		IP	３	4	IP	６		IP	２		IP	３		IP	３		IP	３	2	G1	１	4	IP
+長谷川　雅和	4.30	0.18	2.9	３		IP	５		IP	３	5	IP	６	5	IP	５		IP	４		IP	３		IP	３		IP	３		IP	４		IP
+三木　　晴斗	4.20	0.14	2.5	１		IP	４	6	IP	５		IP	５		IP	３		IP	５	4	IP	４		IP	５		IP	３		IP	４		IP
+垂水　　　悠	4.90	0.13	2.3	５		IP	２		IP	３		IP	５		IP	１		G3	６		G3	３		IP	２		IP	４		IP	６		G1

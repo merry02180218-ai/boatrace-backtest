@@ -1,0 +1,8 @@
+data=
+1	0
+梅木　　敬太	7.00	0.15	3.1	２		IP	１		IP	１		IP	５		IP	１		IP	４		IP	５		IP	１		IP	１		IP	４		IP
+一色　　颯輝	3.10	0.27	4.2	６		IP	６		IP	６		IP	４		IP	６		IP	１		IP	６	6	IP	４		IP	４		IP	４		IP
+松尾　　基成	3.20	0.16	2.8	４		IP	６	4	IP	４		IP	４		IP	４		IP	５		IP	５		IP	３		IP	４		IP	６	4	IP
+松本　　一毅	3.40	0.17	2.9	５		IP	４		IP	５		IP	４		IP	６		IP	５		IP	６		IP	３		IP	３		IP	４		IP
+清水　　紀克	3.50	0.20	3.9	６	2	IP	６	2	IP	５	2	IP	２	3	IP	３	3	IP	４	4	IP	４	3	IP	４	2	IP	６	2	IP	４	2	IP
+得山　　大輝	1.30	0.13	2.7	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP

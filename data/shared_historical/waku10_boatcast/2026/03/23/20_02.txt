@@ -1,0 +1,8 @@
+data=
+1	0
+村松　　栄太	7.70	0.16	2.2	１		IP	１		IP	３		IP	１		IP	６		IP	２		IP	３		IP	１		IP	３		IP	１		IP
+松尾　　光広	4.60	0.19	4.3	５		IP	１		IP	６		IP	４		IP	３		IP	３		IP	６	6	IP	５		IP	４		IP	１	1	IP
+坪井　　爽佑	5.60	0.17	2.8	２		IP	３		IP	１		IP	６	4	IP	３	5	IP	６		IP	４		IP	１		IP	５		IP	２		IP
+熊本　　英一	3.30	0.20	4.9	５		IP	６		IP	１		IP	４		IP	５		IP	６		IP	６		IP	３		IP	４		IP	５		IP
+山下　　夏鈴	4.80	0.15	2.3	３		IP	２		IP	５		IP	２		IP	５		IP	２		G3	４		G3	４		IP	４		IP	５		IP
+日隈　　　茜	1.00	0.23	3.7	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

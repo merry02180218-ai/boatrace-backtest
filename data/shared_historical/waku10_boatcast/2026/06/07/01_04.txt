@@ -1,0 +1,8 @@
+data=
+1	0
+荒牧　　凪沙	6.10	0.16	3.8	２		IP	１		IP	５		IP	６		IP	４		IP	２		IP	１		IP	２		IP	１		IP	Ｆ		IP
+牧　　　宏次	5.00	0.14	3.1	６		IP	２		IP	３		IP	２	4	IP	５		IP	４		IP	１		IP	３		IP	６		IP	４		G3
+山口　　達也	4.70	0.17	4.2	６		IP	２		IP	６		SG	４		SG	４		G1	６		G1	６		G1	６		G1	２		G1	２		IP
+稗田　　聖也	6.90	0.12	2.2	５	5	IP	２		IP	３		IP	２		IP	１		IP	２		IP	１		IP	４		IP	３		IP	３		IP
+沢田　　昭宏	5.50	0.16	3.4	６	6	IP	５	6	IP	４		IP	３		IP	３		IP	１		IP	２		IP	４		IP	２	4	IP	４		IP
+西田　　　靖	3.10	0.19	3.2	６	2	IP	４	2	IP	５	2	G3	３	2	IP	３	3	IP	５	2	IP	妨	2	IP	６	2	IP	６	3	IP	２	2	IP

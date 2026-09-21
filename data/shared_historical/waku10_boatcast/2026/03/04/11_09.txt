@@ -1,0 +1,8 @@
+data=
+1	0
+武藤　　綾子	7.80	0.16	3.0	１		IP	１		IP	１		IP	１		IP	１		G3	１		G3	６		IP	３		G3	１		G3	６		IP
+長尾　　萌加	5.67	0.16	3.8	４		IP	２		IP	２		IP	５		IP	４		IP	欠		IP	１		IP	６		IP	２		IP	３		IP
+大山　　千広	7.20	0.11	2.3	１		IP	２	2	IP	４		IP	３		IP	２		IP	２		IP	３		IP	２		IP	１		IP	４		IP
+堀内　　亜海	1.00	0.21	4.3	６	6	IP	６	6	IP	６	6	IP																					IP
+池田　　紫乃	3.10	0.19	4.5	５		G3	３		IP	６		IP	５		IP	４	6	G3	５		IP	５		IP	１		G3	６		G3	６		G3
+永井　　聖美	3.89	0.13	3.2	５		IP	５		IP	６		IP	３		IP	３	5	G3	４		G3	４	5	IP	転		IP	４		IP	３	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+澁川　　　夏	6.80	0.19	3.8	１		IP	３		IP	１		IP	２		IP	２		IP	１		IP	５		IP	１		IP	Ｆ		IP	４	2	IP
+西川　　拓利	8.00	0.10	1.8	３		IP	２		IP	３		IP	４		G3	１		G3	１		IP	２		IP	２		IP	１		IP	１		IP
+青木　　　蓮	4.50	0.12	2.5	６		IP	２		IP	５		IP	６		IP	１		IP	６		IP	５		IP	５		IP	１		IP	２		IP
+石倉　　拓美	1.80	0.17	3.3	５		IP	６		IP	５		IP	６	6	IP	４	5	IP	４		IP	６		IP	６	5	IP	６		IP	６		IP
+齊藤　　　廉	4.60	0.16	3.3	５		IP	５		IP	３		IP	５	6	IP	４		IP	４		IP	４		IP	２		IP	４		IP	１		IP
+宮田　　龍馬	5.60	0.17	3.9	１		IP	３		IP	３		IP	４		IP	３		IP	４		IP	３		IP	５		IP	３		G3	３		G3

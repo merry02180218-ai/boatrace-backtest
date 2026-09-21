@@ -1,0 +1,8 @@
+data=
+1	0
+重野　　哲之	9.40	0.13	2.3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP
+長野　　道臣	6.20	0.20	4.2	４		IP	３		IP	５		IP	４		IP	４		IP	１		IP	１		IP	３		IP	２		IP	２		IP
+深谷　　知博	5.60	0.12	2.4	３		G1	４		G1	４		IP	５		G1	３		G1	４		G1	５		G1	４		G1	３		G1	１		IP
+原　　　豊土	6.60	0.16	2.5	４	5	IP	２		IP	３		IP	４		IP	１		IP	２		IP	３		IP	２		IP	１		IP	５		IP
+徳増　　秀樹	4.90	0.11	2.7	６		G1	２	4	IP	３		IP	３		G1	５		G1	４	4	IP	１		IP	６	6	G1	６		IP	４		IP
+山口　　晃朋	4.20	0.14	2.9	３		IP	４		IP	１	5	IP	５		IP	４		IP	４		IP	６		IP	３		IP	４		IP	６		IP

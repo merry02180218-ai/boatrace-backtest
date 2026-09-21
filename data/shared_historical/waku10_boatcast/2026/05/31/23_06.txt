@@ -1,0 +1,8 @@
+data=
+1	0
+水口　　由紀	6.90	0.23	4.1	１		IP	３		IP	２		IP	６		IP	１		G3	２		IP	２		IP	１		IP	転		G3	２		IP
+前田　　　滉	5.90	0.17	3.6	１		IP	５		IP	２		IP	６	6	SG	４	3	SG	５		IP	２		IP	１		IP	４		G1	４		G1
+前田　健太郎	2.40	0.17	3.8	６		IP	４		IP	６		IP	５		IP	４		IP	５		IP	４		IP	４	5	IP	６		IP	６	4	IP
+川合　　理司	3.90	0.19	3.5	６		IP	４		IP	３		IP	２		IP	４		IP	５		IP	６		IP	６	5	IP	２		IP	４	6	IP
+古澤　　光紀	4.10	0.14	2.9	６		IP	５		IP	３		IP	２	4	IP	５		IP	４	6	IP	２		IP	５		IP	５		IP	４		IP
+花田　　凱成	2.70	0.17	2.9	４		IP	５		IP	５		IP	５		IP	３		IP	５		IP	５		IP	６	5	IP	４		IP	５		IP

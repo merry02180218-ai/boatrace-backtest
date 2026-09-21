@@ -1,0 +1,8 @@
+data=
+1	0
+沼田　　大都	6.70	0.17	3.0	１		IP	１		IP	２		IP	６		IP	１		IP	１		IP	５		IP	１		IP	４		IP	５		IP
+藤原　　仙二	8.00	0.19	3.5	Ｆ		G2	欠		IP	１		IP	２		IP	１		IP	１	3	IP	２		IP	１	4	G2	４		G2	１		IP
+山本　　幸也	3.44	0.17	2.6	２		IP	５		IP	２		IP	転		IP	３		IP	６		IP	６		IP	５	4	IP	５		IP	６		IP
+中野　　希一	7.80	0.09	2.2	２		IP	２		IP	３		IP	２		IP	１		IP	２		IP	４		IP	２		IP	２		IP	１		IP
+杉山　　太陽	3.50	0.20	3.9	４		IP	６		IP	２		IP	５		IP	５		IP	３	6	IP	２		IP	５		IP	６		IP	６		IP
+遠藤　　圭吾	2.60	0.18	4.9	６		IP	３		IP	６		IP	４		IP	４	5	IP	５		IP	５		IP	６		IP	４		IP	６		IP

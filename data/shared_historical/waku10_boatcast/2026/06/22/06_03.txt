@@ -1,0 +1,8 @@
+data=
+1	0
+田中　瀬里奈	2.33	0.23	4.6	６		G3	４		G3	６		IP	５		IP	６		IP	６		IP	２		IP	６		IP	５		IP			IP
+笠原　　　亮	6.50	0.16	2.8	２		G1	２		G1	１		IP	４		IP	２		IP	４		G2	２		G3	３		G3	５		G1	５		G1
+天野　　友和	4.30	0.14	2.8	３		IP	４		IP	２		IP	３		IP	３		IP	６		IP	５		IP	４		IP	５		IP	４		IP
+松本　　浩貴	2.70	0.23	4.2	５	5	IP	５		IP	５	5	IP	４		IP	５		IP	６		IP	５	3	IP	２		IP	４		IP	落		IP
+丸尾　　義孝	5.00	0.17	2.9	１	4	IP	３		IP	４		IP	５		IP	３		IP	４		IP	４		IP	５		IP	５	4	IP	１		IP
+乃村　　康友	3.60	0.22	5.3	３		IP	６		IP	６		IP	１		IP	６		IP	５		IP	６		G3	５		IP	３		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+藤森　　陸斗	7.60	0.15	2.1	１		IP	４		IP	４		IP	２		IP	１		IP	１		IP	２		IP	１		IP	５	2	IP	１		IP
+中村　　魁生	5.70	0.20	3.6	４		IP	３		IP	２	1	IP	４		G1	Ｆ		IP	２		IP	２		IP	１		IP	５	3	IP	３		IP
+西川　　拓利	6.00	0.13	2.6	２		G3	２		G3	５		IP	１	4	IP	２		IP	５		IP	２		IP	３		IP	６		IP	転		IP
+島川　　海輝	5.00	0.15	3.0	６		IP	４		IP	１		G2	５	5	IP	５		IP	５		IP	２		IP	３		IP	１		IP	４	5	IP
+豊田　　祥生	3.20	0.17	3.4	６		IP	６		IP	６		IP	２		IP	３		IP	５		IP	３		IP	５	6	IP	６		IP	４		IP
+小林　　甘寧	2.70	0.15	2.5	５	5	IP	５		IP	５		IP	６		IP	５		IP	５		IP	５		IP	５		IP	２		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　駿兵	10.00	0.11	3.1	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+峰　　　竜太	7.90	0.12	3.4	３		SG	３		SG	４		G1	３		G1	１		IP	４		G1	３		G1	２		G1	１		SG	５		G1
+原田　才一郎	6.80	0.14	3.4	１	4	IP	５		IP	２		IP	３		IP	３	4	IP	５		IP	４		IP	１		IP	２	4	IP	１		G1
+加藤　　翔馬	7.40	0.17	3.1	２		IP	２		IP	１		IP	３		IP	１		IP	２		IP	５		IP	２		IP	３	5	IP	２		G3
+松田　　祐季	5.44	0.14	3.6	４	4	IP	２		IP	落	4	IP	３		IP	２		IP	５		G3	３		IP	１	4	IP	５		G1	６		G1
+秦　　　英悟	5.10	0.11	3.1	１	5	IP	４		IP	６		G1	５		IP	２		IP	６		SG	４		G1	４		G1	６		G1	１		IP

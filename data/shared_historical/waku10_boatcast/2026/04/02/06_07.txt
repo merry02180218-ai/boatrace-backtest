@@ -1,0 +1,8 @@
+data=
+1	0
+中田　　元泰	9.60	0.13	2.2	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		G1	１		IP	２		IP	１		IP
+山川　　雄大	5.67	0.17	4.3	１		IP	６		IP	エ		IP	２		IP	４		IP	４		IP	４		IP	３		G3	２		G3	３		IP
+上野　　秀和	6.20	0.21	4.6	３		IP	２		IP	５		IP	３		IP	３		IP	２	4	IP	１		IP	２		IP	５		IP	３		G3
+幸田　　智裕	5.00	0.23	3.9	５	5	IP	３		IP	３		IP	１		IP	５		IP	５		IP	３		IP	３		IP	５		IP	２		IP
+齋藤　　和政	3.00	0.19	3.7	４		IP	５		IP	２		IP	６		IP	５		IP	４		IP	４		IP	５		IP	６		IP	５		IP
+小林　　礼央	3.60	0.13	3.0	４	5	IP	４		IP	４		IP	５		IP	４		IP	６		IP	２		IP	６		IP	５		IP	３		IP

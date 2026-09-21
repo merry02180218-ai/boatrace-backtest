@@ -1,0 +1,8 @@
+data=
+1	0
+泉　　　具巳	6.70	0.18	3.5	１		IP	２		IP	１		IP	６		IP	２		IP	２		IP	２		IP	５		IP	２		IP	４		IP
+江夏　　　満	6.90	0.18	3.4	３		IP	３		IP	４		IP	２		IP	２		IP	２		G1	３		IP	２		IP	３		IP	２		IP
+宮地　　博士	5.50	0.20	3.8	６		IP	２		IP	５		IP	１		IP	４		IP	２		IP	４		IP	４		IP	２		IP	３		IP
+高山　　弘斗	3.60	0.11	3.0	４		IP	６		IP	６		IP	５		IP	１		IP	２		IP	６		IP	５		IP	６	6	IP	３		IP
+豊田　　訓靖	3.00	0.20	3.6	３		IP	４		IP	５		IP	４	6	IP	６		IP	５		IP	４		IP	５		IP	４		IP	６		G3
+古田　　祐貴	2.80	0.20	4.9	６		G3	５		G3	６		IP	４		IP	６		IP	５		IP	４		IP	５		IP	３		IP	４		G1

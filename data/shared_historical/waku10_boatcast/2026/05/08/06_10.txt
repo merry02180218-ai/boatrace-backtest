@@ -1,0 +1,8 @@
+data=
+1	0
+野末　　智一	8.20	0.17	3.2	１		IP	１		IP	３		IP	３		IP	１		IP	２		IP	１		IP	４		IP	１		IP	２		IP
+池田　　雄一	5.90	0.17	3.1	５	3	IP	４		IP	１		IP	５		IP	２		IP	２		IP	４		IP	２		IP	１		G1	６		G1
+原　　　豊土	5.44	0.14	2.6	２		IP	Ｌ		IP	６		IP	２		IP	３		IP	４		IP	４		IP	１	4	IP	２		IP	欠		IP
+後藤　　正宗	4.60	0.14	3.1	３		IP	５		IP	２		IP	４		IP	４		IP	６		G3	５		G3	５	5	G3	２		G3	３		IP
+板橋　　侑我	6.22	0.17	3.2	４		IP	３		IP	エ		G1	４		G1	６		G1	５		G3	３		G1	１		G1	３		G1	１		G1
+山口　　晃朋	4.50	0.12	2.9	４		IP	３		IP	４		IP	１	5	IP	５		IP	４		IP	４		IP	６		IP	３		IP	４		IP

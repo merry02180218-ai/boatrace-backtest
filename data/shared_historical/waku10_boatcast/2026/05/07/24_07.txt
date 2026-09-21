@@ -1,0 +1,8 @@
+data=
+1	0
+樋口　　　亮	8.00	0.19	3.7	２		IP	１		IP	２		IP	２		IP	２		IP	４		IP	１		IP	２		IP	１		IP	３		IP
+榎　　　幸司	6.60	0.18	3.6	４		IP	２		IP	１		IP	２		IP	３		IP	３		IP	４		IP	２		IP	４		IP	３		IP
+岡　　　暢祐	4.10	0.15	3.2	５		IP	２		IP	４		IP	５		IP	４		IP	６		IP	２		IP	３		IP	５		IP	４		IP
+岡谷　　健吾	6.40	0.16	3.7	２		IP	４		IP	２		IP	２		IP	１		IP	３		IP	５		IP	３		IP	１		IP	５		IP
+野田部　宏子	4.20	0.11	2.6	６		IP	４		IP	４		IP	６		IP	５		IP	３		IP	４		IP	５		IP	１		IP	２		IP
+山田　　陽翔	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP

@@ -1,0 +1,8 @@
+data=
+1	0
+石岡　　将太	7.80	0.16	2.8	５		IP	３		IP	２		IP	３		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP
+三松　　直美	3.20	0.19	3.2	２		G3	３	3	G3	６	6	IP	６		IP	６		G3	２		G3	６		G3	６		G3	４	3	G3	６	4	G3
+塩田　　北斗	7.30	0.15	3.0	２		IP	２		IP	４		IP	２		IP	３		G1	３		G1	３		G1	２		G1	６		G1	１		G1
+桐本　　康臣	5.90	0.15	3.0	１		IP	６		IP	３		IP	３		IP	１	5	IP	５		IP	３		IP	５		IP	３		IP	１		IP
+森安　　弘雅	3.20	0.22	4.6	５		IP	５		IP	５		IP	３		IP	５		IP	２		IP	６		IP	５		IP	３		IP	６		IP
+島川　　光男	4.10	0.19	4.1	４		IP	５		IP	１		IP	３		IP	５		IP	４		IP	５		IP	５		IP	２		IP	６		IP

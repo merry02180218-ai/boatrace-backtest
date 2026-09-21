@@ -1,0 +1,8 @@
+data=
+1	0
+品川　二千翔	10.00	0.15	2.0	１		IP	１		IP	欠		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+木場　　悠介	7.20	0.18	2.7	３		IP	１		IP	２		IP	２		IP	４		IP	２		G3	２		G3	２		IP	４		IP	２		IP
+上田　　紗奈	6.50	0.15	2.6	２		IP	６		IP	２		IP	５		IP	１		IP	１		IP	２		IP	１		IP	６		G1	３		IP
+天野　　友和	6.60	0.14	2.5	２	3	IP	１		IP	４		IP	２		IP	５		IP	４		IP	２		IP	２		IP	４		IP	１		IP
+中田　　友也	3.30	0.20	4.4	４		IP	５		IP	１		IP	３		IP	５		IP	５		IP	６		IP	４		IP	６		IP	６		IP
+出畑　　孝典	4.30	0.17	4.7	６		IP	４		IP	４		IP	５		IP	４	5	IP	４		IP	４		IP	３		IP	２		IP	３		IP

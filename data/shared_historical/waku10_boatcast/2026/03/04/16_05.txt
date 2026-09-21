@@ -1,0 +1,8 @@
+data=
+1	0
+坪井　　康晴	9.20	0.12	3.0	２		G1	２		G1	１		G1	２		G1	２		G2	１		G2	１		IP	２		IP	１		IP	３		IP
+中村　　魁生	5.40	0.17	3.0	Ｆ		IP	２		IP	２		IP	１		IP	５	3	IP	３		IP	３		IP	５		IP	３		IP	３		IP
+白神　　　優	7.67	0.12	2.3	２		IP	１		IP	３		IP	１		G1	２		G1	４		G1	１		IP	転		IP	３		IP	４		IP
+稲田　　浩二	5.90	0.11	2.7	２		G1	３		G1	４		G1	２		IP	２		IP	３		IP	４		G1	５		IP	２		G1	欠		IP
+菅　　　章哉	5.90	0.12	2.8	６		G1	１		IP	２	6	G1	６	6	G1	１		IP	４	6	IP	１	6	SG	４	6	G1	６	6	G1	６	6	SG
+中野　　次郎	3.90	0.18	4.8	４		IP	６		IP	６		IP	４		G1	４		IP	６		G3	３		IP	３		SG	４		G1	４		IP

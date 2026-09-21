@@ -1,0 +1,8 @@
+data=
+1	0
+浜先　　真範	8.80	0.11	1.5	１		IP	３		G1	３		IP	１		IP	１		IP	１		IP	１		IP	４		IP	１		G1	１		IP
+水口　　由紀	4.30	0.21	3.7	４		IP	２		IP	５	3	IP	６		IP	２		IP	３		IP	４		IP	５		G3	３		G3	５		IP
+野中　　義生	4.90	0.16	3.0	Ｆ		G3	５		IP	１	4	IP	１	4	IP	６		G3	４		IP	２		IP	４		IP	５		IP	２		IP
+馬場　　　剛	6.50	0.12	3.0	２		IP	２		G2	４		G2	４		G2	２		G2	３	5	IP	３		IP	１		IP	３		G3	６		IP
+小黒　　竜吾	3.50	0.15	4.1	５		IP	６		G3	５		G3	４		IP	１		IP	６		IP	４		IP	６		IP	４		IP	３		IP
+大森　　　翼	3.00	0.20	4.3	３		IP	５		IP	４		IP	５		IP	６		IP	４		IP	４		IP	５		IP	４		IP	６		IP

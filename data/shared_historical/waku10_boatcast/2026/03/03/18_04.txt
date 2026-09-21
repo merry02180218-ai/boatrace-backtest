@@ -1,0 +1,8 @@
+data=
+1	0
+森定　　晃史	8.10	0.16	2.4	１		IP	２		IP	１		IP	２		IP	１		IP	２		IP	２		IP	１		IP	２		IP	６		IP
+廣中　　良一	5.90	0.19	3.0	２		IP	２		IP	６		IP	１		IP	２		IP	２	3	IP	５		IP	３		IP	２		IP	妨		IP
+渡邊　　裕貴	5.10	0.15	3.4	４		IP	５		IP	２		IP	２		IP	５		IP	５		IP	６		IP	２	6	IP	３		IP	１		IP
+齋藤　　真之	2.30	0.19	3.2	４		IP	５	5	IP	５		IP	６		IP	５		IP	６		IP	５		IP	６		IP	５		IP	３		IP
+花田　　凱成	5.30	0.18	2.8	４		IP	３		IP	２	3	IP	２		IP	５		IP	３		IP	６		IP	４		IP	２		IP	３		IP
+竹井　　貴史	5.80	0.14	2.2	１		IP	４		IP	３	5	IP	２		IP	３		IP	４		IP	３		IP	４	5	IP	４		IP	３		IP

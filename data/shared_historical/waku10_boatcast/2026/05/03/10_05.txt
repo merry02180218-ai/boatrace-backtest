@@ -1,0 +1,8 @@
+data=
+1	0
+黒柳　　浩孝	8.20	0.17	2.9	２		IP	２		IP	１		IP	３		IP	４		IP	１		IP	２		IP	２		IP	１		IP	１		IP
+日笠　　勝弘	5.70	0.15	3.1	４	3	IP	１		IP	２		IP	５		IP	２		IP	２		IP	２		IP	３		IP	６		IP	５	3	IP
+下出　　卓矢	6.44	0.17	2.4	１		IP	２		IP	５		IP	欠		IP	４		IP	３		IP	１		IP	５		IP	２		IP	２		IP
+塩嶋　　泰空	1.20	0.21	3.9	６		IP	６		IP	６	6	IP	５		IP	６		IP	６	6	IP	６		IP	５		IP	６		IP	６		IP
+酒井　　俊弘	3.89	0.11	2.0	３	6	IP	４	6	IP	５		IP	４	6	IP	６		IP	５		IP	落		IP	１		IP	４	6	IP	５	6	IP
+武田　　光史	5.40	0.15	2.2	１	4	IP	４	4	IP	２	4	IP	１	4	IP	４	5	IP	５		IP	６		IP	４		IP	１		IP	６	5	IP

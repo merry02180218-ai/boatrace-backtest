@@ -1,0 +1,8 @@
+data=
+1	0
+澤　　　大介	5.60	0.20	3.9	５		IP	１		IP	３		IP	５		G3	３		IP	１		IP	２		IP	２		IP	４		IP	Ｆ		IP
+木村　　亮太	6.60	0.14	3.0	２		IP	４		IP	２		IP	４		IP	２		IP	５		IP	２		IP	１		IP	１		IP	４		IP
+中村　　晃朋	5.50	0.16	3.4	４		IP	２		G1	６		G1	３		IP	６		IP	２		IP	２		G3	６		G3	３		G1	２		G1
+吉田　　一心	3.90	0.23	5.1	３		IP	３		IP	３		IP	４		IP	４		IP	５		IP	４		IP	４		IP	６		IP	５	5	IP
+安田　　政彦	4.30	0.20	4.2	６		IP	３		IP	３		IP	２		IP	５		IP	３		IP	５		IP	４		IP	４		G3	４		IP
+倉富　　大誠	3.10	0.19	4.8	５		IP	３		IP	５		IP	５		IP	３		IP	６		IP	３		IP	４		IP	６		IP	６		IP

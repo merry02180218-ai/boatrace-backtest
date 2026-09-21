@@ -1,0 +1,8 @@
+data=
+1	0
+久永　　祥平	8.80	0.10	2.0	１		IP	３		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	３		IP
+庄司　　孝輔	5.80	0.23	3.6	４		G3	４		IP	２		IP	５		G3	２		IP	２		IP	５		IP	３		IP	３		IP	１		IP
+河村　　　了	6.30	0.15	3.0	３		IP	５		IP	２	4	IP	３		IP	２		IP	４		IP	４		IP	２		IP	３		IP	１		IP
+杢野　　誓良	2.90	0.16	3.7	５		IP	６		IP	６		IP	４		IP	５		IP	４	5	IP	３		IP	６		IP	４		IP	４		IP
+田添　　康介	3.50	0.22	3.9	６		IP	４		IP	４		IP	５		IP	３		IP	３		IP	４		IP	転		IP	５		IP	３		IP
+照屋　　厚仁	5.00	0.17	3.3	６		IP	４		IP	３		IP	６		IP	５		IP	１	5	IP	３		IP	２		IP	４	5	IP	３	5	IP

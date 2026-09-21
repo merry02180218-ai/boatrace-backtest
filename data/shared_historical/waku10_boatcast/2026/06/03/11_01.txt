@@ -1,0 +1,8 @@
+data=
+1	0
+宮嵜　隆太郎	3.90	0.11	1.9	２		IP	１		IP	欠		IP	６	2	IP	５		IP	６		IP	６		IP	１		IP	４		IP	５		IP
+近藤　雄一郎	4.70	0.21	3.5	４		IP	６		IP	５		IP	５		G3	４		IP	２		IP	３		IP	１		IP	５		IP	２		IP
+竹田　　広樹	4.50	0.18	3.4	５		IP	５		IP	５		IP	３		IP	３		IP	３		IP	４		IP	６		IP	２		IP	２		IP
+金子　　和之	4.00	0.13	2.7	６		IP	５	5	IP	１		IP	２		IP	４		IP	４		IP	４		G3	４		IP	５		IP	６		IP
+河野　　主樹	3.50	0.14	3.2	５		IP	４		IP	５		IP	３		IP	６		IP	２		IP	５		IP	５		IP	３	4	IP	５		IP
+高橋　　嗣穏	1.30	0.23	4.4	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	５		IP

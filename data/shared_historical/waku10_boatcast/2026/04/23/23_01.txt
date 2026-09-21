@@ -1,0 +1,8 @@
+data=
+1	0
+木下　　大將	10.00	0.14	1.9	転		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+田中　　宏典	5.20	0.20	4.5	４		IP	４		IP	５		IP	２		IP	５		IP	４		IP	２		IP	４		IP	２		IP	２		IP
+井上　　　茂	5.50	0.15	3.6	３		IP	１		IP	６		IP	５		IP	５	5	IP	１		IP	２		IP	３		IP	２		IP	５		IP
+小野　　信樹	3.30	0.17	2.9	６		IP	３		IP	６		IP	４		IP	１		IP	６		IP	５		IP	３	5	IP	６		IP	６		IP
+酒井　　陽祐	4.20	0.19	4.0	４		G3	５		IP	３		IP	５		IP	５		IP	２		IP	４		IP	３		IP	４		IP	４		IP
+東　　　潤樹	4.40	0.19	4.3	６		IP	３		IP	３		IP	３	5	IP	６		IP	６		IP	２		IP	３		IP	２		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+奈須　　啓太	9.00	0.15	1.9	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	２		IP	１		IP
+細川　　明人	3.00	0.22	4.0	６		IP	６		IP	４		IP	６		IP	２		IP	５		IP	４		IP	６		IP	３		IP	５		IP
+國弘　　翔平	5.90	0.19	3.4	３		IP	４	6	IP	２		IP	６		IP	２		IP	２		IP	３		IP	１		IP	４		IP	４		IP
+田中　　　堅	5.60	0.16	3.7	５		IP	３	3	IP	２		IP	４		IP	２		IP	４		IP	２	5	IP	４		IP	３		IP	３		IP
+堂原　　洋史	3.60	0.19	3.1	５		IP	４		IP	２		IP	５		IP	４		IP	４		IP	６	6	IP	２		IP	６		IP	５		IP
+庄島　　潤成	1.50	0.21	4.4	６		IP	６	5	IP	６		IP	６		IP	落		IP	６		IP	３		IP	５		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+齊藤　　　仁	7.80	0.14	2.7	３		IP	３		G1	１		G1	１		IP	３		IP	２		IP	１		G3	１		G3	６		G3	２		G1
+松本　　浩貴	4.60	0.16	4.1	６		IP	２		IP	４		IP	４		IP	４		IP	６		IP	３		IP	２		IP	２		IP	５		IP
+西舘　　　健	5.10	0.12	2.1	４		IP	５		IP	２		IP	４	4	IP	１		IP	５		IP	４		IP	１		IP	６		IP	３		IP
+梶野　　学志	5.90	0.18	3.5	４	5	IP	３		IP	２		IP	３		IP	２		IP	１		IP	６		IP	２		IP	４		IP	４		IP
+島崎　丈一朗	2.60	0.21	4.3	６		IP	５		IP	２		IP	５	6	IP	４		IP	５		IP	６		IP	６		IP	４		IP	６		IP
+鈴木　　　猛	3.30	0.19	4.0	３		IP	４		IP	２	5	IP	５	5	IP	４		IP	６		IP	６		IP	４		IP	５		IP	６		IP

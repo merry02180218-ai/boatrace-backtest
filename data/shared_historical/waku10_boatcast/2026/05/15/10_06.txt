@@ -1,0 +1,8 @@
+data=
+1	0
+水摩　　　敦	7.40	0.22	4.7	３		IP	２		IP	３		IP	１		IP	３		IP	２		IP	３		IP	２		IP	１		G3	３		G3
+石井　　裕美	5.00	0.19	3.0	３		G3	３		G3	５		IP	１		IP	３		IP	５		G3	５		IP	３		G3	３		G3	４		G3
+谷川　　将太	4.40	0.15	2.6	２		IP	４		IP	４		IP	３		IP	５		IP	２		IP	５		IP	４		IP	５		IP	４		IP
+鶴本　　崇文	4.50	0.20	4.7	６		IP	４		IP	３		IP	２		IP	３		IP	３		IP	５		IP	５		IP	３		IP	４		IP
+中西　　月輝	1.30	0.21	4.3	６	6	IP	６	6	IP	４	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	Ｆ	6	IP	６	6	IP
+浅見　　昌克	4.90	0.13	3.3	３	4	IP	３		IP	４		G1	６		G1	５		IP	３		IP	４	3	IP	１	4	IP	４		IP	４		IP

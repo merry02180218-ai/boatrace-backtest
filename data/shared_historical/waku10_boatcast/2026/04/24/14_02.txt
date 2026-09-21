@@ -1,0 +1,8 @@
+data=
+1	0
+廣瀬　　　凜	9.40	0.13	2.9	１		IP	３		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+廣瀬　　将亨	6.00	0.14	2.1	３		IP	４		IP	２		IP	２		IP	２		IP	３		IP	５		IP	３		IP	４		IP	２		IP
+上瀧　　絢也	4.20	0.19	4.3	２		IP	５		IP	５		IP	５		IP	５		IP	３	4	IP	４		IP	５		IP	４		IP	１		IP
+中井　　俊祐	3.70	0.16	2.8	５		IP	６		IP	２		IP	１		IP	１		IP	６		IP	６		IP	６		IP	５		IP	６		IP
+土屋　　智則	6.30	0.12	2.7	３	4	G1	４		G1	５		G1	３		G1	２		G3	２	2	G3	２		IP	２	3	IP	２		IP	６		IP
+小林　　甘寧	2.70	0.13	2.0	２		IP	４		IP	５		IP	５	5	IP	５		IP	５		IP	６		IP	５		IP	５		IP	５		IP

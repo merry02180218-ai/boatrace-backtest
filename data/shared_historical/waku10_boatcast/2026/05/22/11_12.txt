@@ -1,0 +1,8 @@
+data=
+1	0
+坪井　　康晴	9.90	0.11	2.1	１		IP	２		IP	１		IP	１		IP	１		G1	２		G1	１		IP	１		IP	１		IP	１		IP
+宗行　　治哉	7.40	0.20	3.8	２		IP	１		IP	４		IP	１		IP	３		IP	２		IP	１		IP	３		IP	４		IP	２		IP
+平高　　奈菜	5.20	0.18	4.2	２		G2	４		G2	３		SG	２		G3	６		G1	５		G1	３		IP	３		G1	６		G1	５		IP
+寺田　　　祥	6.80	0.15	2.7	６		IP	３		IP	２		IP	２		IP	２		IP	６		G1	３		G1	４		G1	１		G1	１		IP
+馬場　　　剛	4.80	0.12	2.2	２		G2	４		IP	６		IP	３		IP	３		G3	６		G3	６		IP	３		IP	１		IP	４		IP
+上田　　龍星	4.10	0.19	3.7	２	5	IP	６		IP	６		IP	２		IP	２		IP	５		G1	５		G1	６		G1	６		SG	４	4	IP

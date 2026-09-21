@@ -1,0 +1,8 @@
+data=
+1	0
+折下　　寛法	7.20	0.13	1.9	１		IP	１		IP	４		IP	４		IP	５		G3	２		IP	１		IP	１		IP	２		G3	３		IP
+大澤　　風葵	7.80	0.14	2.7	１		IP	２		IP	１		IP	２		IP	２		IP	４		IP	２		IP	１	3	IP	３		IP	３	1	IP
+小松　　卓司	4.10	0.17	2.4	３		IP	６		IP	４		IP	２		IP	５	4	IP	４		IP	４		IP	４		IP	３		IP	５		IP
+森　　　智也	4.70	0.17	3.9	４		G3	３		IP	６	5	IP	４		IP	３		IP	５		IP	５		IP	２		IP	４		IP	２		IP
+鈴谷　　一平	4.20	0.17	3.5	６		IP	４		IP	４		IP	１		IP	５		IP	３		IP	１		IP	６		IP	６		G1	６		G1
+鈴木　　柊介	2.30	0.12	3.3	５		IP	３		IP	５		IP	６		IP	６		IP	６		IP	６		IP	４		IP	６	5	IP	４		IP

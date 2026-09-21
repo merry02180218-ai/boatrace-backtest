@@ -1,0 +1,8 @@
+data=
+1	0
+藤井　　　徹	6.40	0.17	3.7	１		IP	５		IP	２		IP	４		IP	２		IP	４		IP	３		IP	４		IP	１		IP	２		IP
+深井　　利寿	7.30	0.18	2.7	２		G2	３		IP	１		IP	２		IP	５		IP	３		IP	２		IP	３		IP	２		IP	２		IP
+山口　　広樹	4.30	0.18	3.3	１	4	IP	２		IP	５		IP	５		IP	５		IP	４		IP	６		IP	２		IP	５		IP	４		G3
+吉永　　則雄	6.10	0.13	2.7	３		IP	２		IP	２		IP	２		IP	４		IP	２		IP	６		IP	３		IP	３		IP	３		IP
+川口　　貴久	4.40	0.15	3.3	３		IP	５	6	IP	４		IP	６		IP	４		IP	３		IP	４		IP	２		IP	６		IP	２	4	IP
+楠原　　正剛	4.60	0.16	4.5	４		G3	１	4	IP	４	5	IP	３		IP	５		IP	４		IP	５		IP	４		IP	３	5	IP	４		IP

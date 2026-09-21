@@ -1,0 +1,8 @@
+data=
+1	0
+長畑　　友輔	6.60	0.12	2.0	１		IP	１		IP	４		IP	６		IP	１		IP	５		IP	１		IP	１		IP	６		IP	２		IP
+中山　　翔太	7.70	0.17	3.9	３		IP	２		IP	２	3	IP	２		IP	２		IP	３		G1	１		IP	１	3	IP	１		IP	５		IP
+丸尾　　義孝	7.60	0.14	2.0	１		IP	２		IP	３		IP	２		IP	２		IP	２	4	IP	４		IP	２		IP	２		IP	２		IP
+島川　　光男	6.40	0.12	2.2	１		IP	１	5	IP	３		IP	２		IP	４		IP	３		IP	３		IP	３		IP	４	3	IP	４		IP
+小野寺　智洋	3.20	0.12	2.8	落		IP	４		IP	３		IP	５		IP	４		IP	５		IP	５		IP	４		G3	５		G3	３		IP
+松本　　庸平	1.80	0.28	5.0	６		IP	４		IP	６		IP	５		IP	５	5	IP	６		IP	６		IP	４		IP	６		IP	６	5	IP

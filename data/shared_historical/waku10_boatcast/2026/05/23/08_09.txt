@@ -1,0 +1,8 @@
+data=
+1	0
+植田　　太一	7.00	0.16	3.1	１		IP	１		IP	２		IP	６		IP	１		IP	５		IP	１		IP	６		IP	１		G3	２		G3
+富永　　正人	4.10	0.20	4.4	５		IP	４		IP	２		IP	２		IP	６		IP	３		IP	６		IP	Ｆ		IP	６		IP	１		IP
+井手　　良太	6.20	0.15	3.0	５		IP	３		IP	３		IP	５		IP	１		IP	３		IP	３		IP	１		IP	２		IP	３		IP
+金田　　大輔	4.70	0.16	2.7	４		IP	５		IP	３		IP	１		IP	５		IP	３		IP	４		IP	４		IP	６		IP	２		IP
+常盤　　海心	3.60	0.17	4.5	６		IP	６		IP	３		IP	６		IP	５		IP	６		IP	２		IP	５		IP	２		IP	３		IP
+田中　　　結	1.67	0.27	5.3	４		IP	６		IP	転		IP	６		IP	４		IP	６		IP	６		IP	５		IP	６		IP			IP

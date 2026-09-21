@@ -1,0 +1,8 @@
+data=
+1	0
+吉川　　元浩	8.10	0.15	3.6	５		G1	３		G1	１		G1	１		G1	１		G1	１		IP	４		IP	１		IP	３		IP	２		IP
+安達　　裕樹	4.40	0.16	2.3	３		IP	３		IP	５		IP	５		IP	１		IP	４		IP	５		IP	６		G2	４	1	IP	４		IP
+安河内　　将	7.00	0.14	3.0	４		G1	３		IP	２	4	IP	２		IP	６		IP	１		IP	２		IP	３		G1	１		IP	４		G1
+益田　　啓司	4.50	0.12	2.6	３		IP	５		IP	１		IP	２		IP	妨		G1	５		G1	５		IP	６		IP	６		IP	１		IP
+森定　　晃史	4.80	0.21	4.1	２		IP	６		IP	５	6	IP	５		IP	２		IP	４		IP	２	4	IP	３		IP	６		IP	２		IP
+阿波　　勝哉	4.20	0.16	3.9	４		IP	６		IP	６		IP	５		IP	２		IP	５		IP	５		IP	４		IP	１		IP	２		G3

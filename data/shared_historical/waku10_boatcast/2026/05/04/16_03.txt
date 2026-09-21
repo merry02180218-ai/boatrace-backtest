@@ -1,0 +1,8 @@
+data=
+1	0
+梅原　　祥平	6.30	0.16	2.5	２		IP	１		IP	４		IP	４		IP	１		IP	２		IP	６		IP	３		IP	４		IP	２		IP
+長尾　　萌加	4.70	0.15	3.5	５		IP	３		IP	２		IP	４		IP	６	3	IP	３		IP	３		IP	５		IP	４		IP	２		IP
+山本　　寛久	5.70	0.14	3.1	１		IP	５		IP	３		IP	３		IP	１		G3	２		G3	６		IP	５		IP	２		IP	４		IP
+金田　　大輔	4.40	0.17	2.7	５		IP	３		IP	４		IP	４		IP	６		IP	２		IP	４	6	IP	１	5	IP	６		IP	４		IP
+金田　　幸子	5.40	0.18	3.5	４		IP	３		IP	１		G3	５		G3	５		IP	２		IP	２		IP	２		IP	４		IP	５		IP
+林　　　祐介	3.70	0.18	3.5	４	5	IP	３		IP	６		IP	２		IP	４		IP	６		IP	４	5	IP	３	5	IP	６		IP	５		IP

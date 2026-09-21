@@ -1,0 +1,8 @@
+data=
+1	0
+尾上　　雅也	9.20	0.18	3.2	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1	４		IP	３		IP	１		IP	１		IP
+真庭　　明志	6.70	0.14	3.2	２		IP	２		IP	２		IP	２		IP	１		IP	６		IP	４		IP	５		IP	１		IP	２		IP
+新田　　泰章	7.30	0.14	2.4	５		IP	５		IP	１		IP	２		IP	２		IP	３		IP	１		G1	２		IP	１		IP	２		IP
+広次　　　修	5.10	0.14	2.2	３		IP	２		IP	６		IP	３		IP	２	3	IP	３		IP	２	5	IP	４		IP	５		IP	５		IP
+鳥居塚　孝博	5.90	0.13	2.5	１		IP	６		IP	４		IP	３		IP	１	4	IP	４		IP	３		IP	２	4	IP	２		IP	５		IP
+嶋　　　義信	4.30	0.18	3.4	４		IP	５		IP	３		IP	４		IP	３		IP	４	5	IP	４		IP	４	5	IP	３		IP	６		IP

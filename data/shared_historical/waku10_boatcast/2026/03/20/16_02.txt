@@ -1,0 +1,8 @@
+data=
+1	0
+森下　　　勇	6.30	0.17	2.6	５		IP	４		IP	２		IP	２		IP	２		IP	２		IP	６	3	IP	１		IP	４		IP	１		IP
+森　　　雄利	2.60	0.15	3.7	５		IP	６		IP	３		IP	５		IP	６		IP	６		IP	６		IP	５		IP	５		IP	２		IP
+中野　　夢斗	4.20	0.18	3.6	４		IP	３		IP	３		G3	６	2	IP	３		IP	３		IP	５		IP	５		IP	２		IP	６		IP
+中岡　　　駿	2.80	0.25	5.2	４		IP	３		IP	６	6	IP	６	6	IP	５	6	IP															IP
+滝沢　　　崚	4.20	0.18	3.1	６		IP	４		IP	４		IP	６		IP	３		IP	３		IP	５		IP	３		IP	１		IP	５		IP
+松本　　博昭	4.10	0.17	3.4	４		IP	４	5	IP	３	5	IP	５		IP	５		IP	３		IP	４	5	IP	６		IP	２		IP	４		IP

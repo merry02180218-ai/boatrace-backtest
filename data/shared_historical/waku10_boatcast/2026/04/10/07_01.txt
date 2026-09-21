@@ -1,0 +1,8 @@
+data=
+1	0
+安藤　　裕貴	6.20	0.16	3.0	４		IP	１		IP	５		IP	１		IP	２		IP	２		IP	２		IP	１		IP	６		IP	６		IP
+川原　　正明	6.80	0.14	2.6	３		IP	１	3	IP	２		IP	５		IP	２		IP	１		IP	１		IP	４		IP	Ｆ		IP	１	1	IP
+刑部　亜里紗	6.30	0.15	3.3	２	4	IP	３		IP	１		IP	３		G1	２		IP	６		IP	５		IP	１		IP	６		IP	１		IP
+高山　　弘斗	3.90	0.14	2.9	５		IP	２		IP	４		IP	６		IP	６		IP	５		IP	１		IP	２		IP	６		IP	５		IP
+尾道　　佳諭	3.20	0.16	2.8	５	4	IP	２		IP	３		IP	６		IP	３		IP	５		IP	５		IP	６		IP	５		IP	５		IP
+信濃　　由行	2.40	0.23	4.4	６		IP	３		IP	６		IP	６		IP	６		IP	５		IP	６		IP	３	5	IP	４		IP	６		IP

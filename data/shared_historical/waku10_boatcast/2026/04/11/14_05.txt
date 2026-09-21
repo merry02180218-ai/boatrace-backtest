@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　　翔	6.90	0.20	3.8	６		IP	１		IP	４		IP	２		IP	２		IP	２		IP	３		IP	２		IP	３		IP	１		IP
+林　　　美憲	5.11	0.13	2.7	６		IP	５		IP	２		IP	６		G1	２		IP	３		IP	６		IP	１	1	IP	２		IP	落		IP
+奈須　　啓太	6.90	0.13	2.2	１		IP	６		IP	２		IP	３		IP	２		IP	１		IP	４		IP	３		IP	２		IP	２		IP
+峰重　　侑治	6.30	0.15	3.8	２		IP	３		IP	３		IP	４		IP	２		G3	１		G3	１		G3	３		IP	４		IP	６	3	IP
+吉田　慎二郎	4.30	0.16	2.7	１		IP	５		IP	４		IP	４		IP	５		IP	６		IP	２	4	IP	４		IP	４		IP	４		IP
+谷　　海夏人	3.00	0.21	4.6	６		IP	４		IP	６		IP	３		IP	４		IP	３		IP	６		IP	６		IP	５		IP	４		IP

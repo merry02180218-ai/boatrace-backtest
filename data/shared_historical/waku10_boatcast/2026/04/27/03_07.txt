@@ -1,0 +1,8 @@
+data=
+1	0
+高山　　弘斗	5.89	0.21	3.9	１		IP	２		IP	１		IP	３		IP	５		IP	４		IP	２		IP	６		IP	エ		IP	４		IP
+渡邉　　雄朗	8.67	0.18	3.4	１		IP	１		IP	５		G1	２		G1	不		IP	２		IP	１		IP	１		IP	１		IP	２		IP
+渡辺　　　豊	5.30	0.20	4.3	４		IP	６		IP	５		IP	３		IP	３		IP	３	4	IP	２		IP	３		IP	２		IP	３		IP
+加藤　　政彦	5.50	0.16	4.2	２		IP	３		IP	２		IP	５		G1	６		G1	４		G1	４		G1	６		G1	１		IP	３		IP
+多田　　有佑	2.20	0.22	4.9	５		IP	５		IP	６		IP	４		IP	４		IP	６		IP	６		IP	４		IP	６		IP	５		IP
+早川　　颯太	1.60	0.18	4.3	６		IP	４	5	IP	５		IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+村上　　　遼	8.30	0.13	2.1	１		IP	１		G1	１		G1	１	2	IP	３		IP	６		IP	１		IP	４		IP	１		IP	１		IP
+松田　　竜馬	5.60	0.14	2.0	４		IP	５	3	IP	２		IP	２		IP	３		IP	３		IP	１		IP	４		IP	５		IP	３		IP
+永田　　義紘	5.00	0.17	2.8	２		IP	２	4	IP	３		IP	１		IP	エ		IP	５		IP	２		IP	６		IP	転		IP	５		IP
+浜本　　裕己	5.20	0.14	3.3	４		IP	４		IP	５		IP	４		IP	３		IP	３	5	IP	１		IP	４		IP	４	5	IP	２		IP
+西丸　侑太朗	6.20	0.15	2.4	２		IP	３		G1	３		IP	４		IP	３		IP	２		IP	３		G1	２		IP	３		IP	５		IP
+日高　龍之介	2.20	0.19	4.4	５		IP	６		IP	３		IP	６		IP	４		IP	４		IP	６		IP	６		IP	６		IP	６		IP

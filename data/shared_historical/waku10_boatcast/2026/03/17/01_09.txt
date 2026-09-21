@@ -1,0 +1,8 @@
+data=
+1	0
+豊田　　祥生	6.50	0.15	3.0	１		IP	１		IP	５		IP	４		IP	１		IP	４		IP	２		IP	６		IP	３		IP	１		IP
+竹間　　隆晟	6.60	0.17	3.8	１		IP	２		IP	４		G1	２		IP	２	3	IP	２		IP	４		IP	２		IP	３	3	IP	６		IP
+川辺　　郭人	2.80	0.16	2.9	６		IP	４		IP	４	4	IP	３		IP	４		IP	６	6	IP	５		IP	４		IP	６		IP	６		IP
+坂本　　雄紀	7.50	0.15	1.8	１		IP	６		IP	１		IP	２		IP	１		IP	２		IP	２		IP	２		IP	３	5	IP	３		IP
+常盤　　海心	4.30	0.23	4.3	２		IP	６	6	IP	５	6	IP	４		IP	３		IP	５		IP	２		IP	２		IP	５		IP	５		IP
+荒木　　颯斗	3.20	0.15	3.5	３		IP	６		IP	６		IP	３		IP	５		IP	５		IP	１		IP	５		IP	６		IP	６		IP

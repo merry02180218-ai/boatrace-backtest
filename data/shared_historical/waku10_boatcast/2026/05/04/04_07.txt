@@ -1,0 +1,8 @@
+data=
+1	0
+中澤　　宏奈	6.40	0.21	2.9	３		IP	５		IP	１		IP	５		IP	３		IP	１		IP	４		G3	１		IP	４	2	IP	１		G3
+作間　　　章	6.50	0.18	3.6	１		IP	３		IP	５		IP	２		IP	２		IP	３		IP	１		IP	２		IP	４		G1	６		G1
+櫻井　　　優	5.50	0.19	2.6	５		IP	４		IP	３		IP	１		IP	６		IP	５	4	IP	３		IP	１		IP	１		IP	４		IP
+村田　　修次	5.56	0.15	3.9	２		IP	５		IP	２	5	IP	３		IP	４		IP	４		IP	２		IP	４		IP	エ	3	IP	３		IP
+藤井　　太雅	2.50	0.17	3.4	３		IP	６		IP	５		IP	Ｆ		IP	６	6	IP	４		IP	４		IP	６		IP	５		IP	４		IP
+尾上　　雅也	4.40	0.14	3.4	３		IP	４		G3	６		IP	３		IP	４		IP	３		IP	５		IP	２		G1	６		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　　航	7.00	0.15	3.7	３		IP	１		G3	２		IP	２		IP	１		G3	１		IP	５		IP	４		IP	５		IP	１		IP
+小川　　知行	3.90	0.13	2.7	５		IP	４		IP	４	3	IP	４		IP	５		IP	５		IP	１		IP	６		IP	４		IP	３		IP
+泉　　　啓文	4.00	0.18	3.8	２		G3	２		IP	落		IP	５		IP	５	4	IP	５		IP	５		IP	５		IP	４		IP	３		IP
+佐藤　謙史朗	3.40	0.17	3.7	３		IP	６		IP	６		IP	４		IP	５		IP	６		IP	５		IP	１		IP	３		IP	６		IP
+大西　　　賢	2.30	0.22	4.2	６		IP	５		IP	４		IP	６	6	IP	４		IP	６		IP	５		IP	Ｆ		IP	５		IP	３		IP
+小宮　　涼雅	1.90	0.20	5.0	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	４		IP	６		IP	３		IP

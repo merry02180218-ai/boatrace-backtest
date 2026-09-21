@@ -1,0 +1,8 @@
+data=
+1	0
+岩川　　仁士	8.80	0.14	2.2	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	１		IP	１		IP	４		IP
+本岡　　勝利	4.40	0.19	4.6	２		IP	５		IP	２		IP	５		IP	４		IP	６		IP	４		IP	６		IP	２		IP	３		IP
+金子　　賢志	5.90	0.12	1.7	４		IP	３		IP	４		IP	５		IP	５		IP	３		G1	２		IP	１		IP	２		IP	２		IP
+坂東　　　満	4.10	0.17	3.2	６	5	IP	３		IP	６		IP	３		IP	５		IP	３		IP	６		IP	１		IP	３		IP	５		IP
+谷本　　幸司	3.70	0.16	3.7	３		IP	６		IP	６		IP	４		IP	４		IP	３		IP	６		IP	４		IP	４		IP	３		IP
+仲本　　　舜	2.80	0.18	4.7	６		IP	３		IP	６		IP	３		IP	３		IP	６		IP	５		IP	５		IP	５		IP	６		IP

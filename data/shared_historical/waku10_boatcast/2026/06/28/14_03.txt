@@ -1,0 +1,8 @@
+data=
+1	0
+山口　　　剛	10.30	0.12	2.8	２		SG	１		G1	１		G1	５		G1	１		G1	１		SG	１		SG	１		G1	１		G1	１		IP
+長田　　頼宗	7.00	0.16	4.5	６		SG	３		IP	１		G2	３		G2	４		IP	２		G1	２		G1	６		IP	２		IP	２		G1
+上野　真之介	7.90	0.12	2.9	２		G1	５		G1	４	4	SG	３		IP	５		IP	２		IP	１		IP	１		G1	１		G2	２		G1
+中田　　竜太	6.70	0.15	3.1	５		SG	１		IP	２		G2	３		G2	３		IP	２		IP	３		IP	１		IP	４		G1	６		G1
+池田　　浩二	6.90	0.14	3.3	４		SG	３		G1	５		G1	５		SG	３		SG	４		G1	３		G1	１		IP	２		IP	１		G1
+石野　　貴之	5.40	0.16	4.2	６		SG	４		G1	６		G1	２	2	SG	４		G1	３		G1	５		G1	３		G1	３		IP	３		IP

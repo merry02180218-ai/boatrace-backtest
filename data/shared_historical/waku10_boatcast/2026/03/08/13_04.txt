@@ -1,0 +1,8 @@
+data=
+1	0
+石岡　　将太	7.80	0.16	2.4	１		IP	１		IP	２		IP	５		IP	５		IP	１		IP	１		IP	２		IP	１		IP	２		IP
+石原　　　翼	6.60	0.15	2.6	２		IP	５		IP	５		IP	１		IP	１		IP	３		IP	２		IP	１		IP	５		IP	２		IP
+川上　　清人	3.60	0.20	4.1	１		IP	５		IP	６		IP	６		IP	４		IP	５	4	IP	２		IP	４		IP	５		IP	５		IP
+田頭　　　実	5.80	0.10	1.9	３	2	IP	３	2	IP	４	2	IP	１	2	IP	３	2	IP	２	2	G3	５	2	IP	５	3	IP	１	2	IP	４	3	IP
+菅野　はやか	1.90	0.23	4.3	５		IP	６		IP	５		G3	６		IP	３		IP	６		IP	５		G3	６	6	IP	５		IP	６		IP
+和田　　操拓	2.70	0.15	3.4	５		IP	６		IP	６		IP	５		IP	４		G2	６		G2	３		IP	３		IP	６		IP	６		IP

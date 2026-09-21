@@ -1,0 +1,8 @@
+data=
+1	0
+武田　　信一	6.80	0.15	2.6	５		IP	２		IP	１		IP	１		IP	１		IP	１		IP	５		IP	４		IP	２		IP	４		IP
+大峯　　　豊	6.67	0.15	3.3	欠		G1	１		IP	３		G1	６		G1	２		G1	２		IP	２		IP	４		G1	５		G2	２		IP
+川崎　　誠志	5.00	0.18	3.8	５		IP	４	4	IP	４	4	IP	２		IP	５		IP	３		IP	２		IP	２		IP	３		IP	５		IP
+笹木　　香吾	5.22	0.13	3.2	４	5	IP	３		G2	沈		IP	６		IP	６		IP	４		IP	２		IP	３		IP	２		IP	２		IP
+三宅　　　潤	5.20	0.20	4.7	４		IP	３		IP	３		IP	１		IP	２		IP	４		IP	３		IP	５		IP	５		IP	４		IP
+佐野　　優都	3.00	0.14	2.7	５		IP	６		IP	６		IP	４		IP	５		IP	５		IP	６		IP	６		IP	２		IP	２		IP

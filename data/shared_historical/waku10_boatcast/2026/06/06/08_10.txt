@@ -1,0 +1,8 @@
+data=
+1	0
+平川　　香織	9.10	0.14	1.7	１		IP	１		IP	１		IP	１		IP	２		IP	４		IP	１		IP	１		IP	１		IP	２		IP
+前原　　　哉	4.40	0.20	3.6	２		G3	３		IP	２		IP	３		IP	４		IP	５		IP	６		IP	４		IP	６		IP	４		IP
+滝沢　　織寧	3.50	0.19	2.9	２		IP	６		IP	３		IP	６		IP	５		IP	５		IP	６	4	IP	３		IP	５		IP	３		IP
+関野　　　文	3.10	0.18	3.1	３		IP	６		IP	３		G3	５		G3	３		IP	６		IP	６		IP	６		IP	６		G3	３		G3
+若狭　奈美子	4.60	0.22	4.8	２		IP	３		IP	３		G3	３		IP	４		IP	３		IP	５		IP	６		IP	３		IP	６		G3
+加藤　　　綾	3.40	0.19	3.9	４		IP	６		IP	６		IP	５		IP	４		IP	５	5	IP	４		IP	４		IP	３		IP	３		IP

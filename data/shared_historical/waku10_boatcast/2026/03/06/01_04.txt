@@ -1,0 +1,8 @@
+data=
+1	0
+三品　　隆浩	7.00	0.19	3.7	２		IP	１		IP	１		IP	２		IP	５		IP	１		IP	５		IP	３		IP	３		IP	２		IP
+表　　　憲一	5.60	0.19	4.5	３		IP	４		IP	２		IP	１		IP	３		IP	４		IP	２		IP	６		IP	２		G3	６		G3
+山崎　　裕司	5.20	0.16	3.3	２		IP	３		IP	６		IP	４		IP	２		IP	２	4	IP	６		IP	４		IP	５		IP	１		IP
+柳橋　　宏紀	5.20	0.14	2.5	１		IP	３		IP	６	6	IP	４		IP	１		IP	３		IP	３		IP	５		IP	６		IP	３		IP
+表　　　健太	3.63	0.21	3.8	６		IP	５		IP	２		IP	４		IP	転		IP	６		IP	欠		IP	６		IP	４		IP	２	6	IP
+金子　　賢志	4.60	0.15	3.4	５		IP	６		IP	３		G1	５		IP	１		IP	４		IP	４		IP	４		IP	３	5	IP	６		G1

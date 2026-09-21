@@ -1,0 +1,8 @@
+data=
+1	0
+春園　　功太	8.40	0.14	2.9	１		IP	２		IP	５		IP	１		IP	１		IP	３		G3	１		G3	１		IP	２		IP	１		IP
+佐々木　和伸	7.00	0.15	3.3	２		IP	６		IP	３		IP	６		IP	１		IP	２		IP	２		IP	２		IP	１		IP	１		IP
+近藤　雄一郎	5.40	0.15	2.6	３		IP	１		IP	４		IP	４		IP	１		IP	４		IP	５		IP	３		IP	５		IP	３		IP
+半田　　尚也	3.80	0.19	4.1	６		IP	３		IP	５		IP	２		IP	４	5	IP	３		IP	４		IP	６	5	IP	４	5	IP	５		IP
+高山　　智至	4.40	0.18	3.7	４		IP	３		IP	４		IP	５		IP	６		IP	１		IP	５		IP	４		IP	６		IP	１		IP
+原田　　雄次	4.50	0.22	4.4	３		IP	４		IP	１	5	IP	６		IP	６		IP	６		IP	３		IP	４		IP	４		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+滝川　真由子	6.60	0.20	3.9	１		IP	１		IP	６		IP	３		IP	２		IP	１		IP	４		G3	２		G3	６		IP	２		IP
+白石　　有美	3.60	0.18	4.0	５		G3	６		IP	６		IP	２		IP	３		IP	３		IP	６		IP	６		IP	３		IP	４		IP
+魚谷　　香織	6.40	0.15	3.9	１		IP	２		G2	５		G2	３		G3	３	2	G3	２		G3	３		IP	４		IP	３		IP	４		IP
+小野　　　桜	4.90	0.19	3.8	３		IP	３		IP	５		IP	６		IP	３		G3	４	5	G3	４		IP	３		IP	２		IP	３		IP
+藤堂　　里香	5.00	0.16	2.5	２		G3	６		G3	２		IP	２		G3	３		G3	３	4	IP	６		IP	４	4	G1	４		G1	５		IP
+池田　　美優	1.00	0.21	4.3	　		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

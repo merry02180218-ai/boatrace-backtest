@@ -1,0 +1,8 @@
+data=
+1	0
+宮之原　輝紀	10.60	0.11	1.6	１		IP	１		G1	１		IP	１		IP	２		IP	１		IP	１		G1	１		G1	１		SG	１		SG
+木下　　翔太	8.40	0.14	2.2	２		G2	２		IP	１		IP	２		IP	４		IP	１		IP	１		IP	２		G1	３		G1	２		G1
+椎名　　　豊	7.20	0.10	2.0	４	2	G3	２		IP	１		IP	１		IP	２		IP	３		IP	２		IP	３		IP	１		IP	５		IP
+大澤　　普司	5.00	0.16	4.3	２		G3	５		G3	１		IP	３		IP	４		IP	６		IP	５	5	G1	５		IP	２		IP	４		IP
+高田　ひかる	5.10	0.19	4.1	６		IP	２		IP	４		G1	４		IP	５		IP	１		IP	１		IP	５		G1	５	4	IP	３		IP
+中山　　翔太	3.40	0.15	3.5	６		IP	５		IP	３		IP	５		IP	５		G1	不		IP	６		IP	３		G1	４		IP	２		IP

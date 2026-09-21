@@ -1,0 +1,8 @@
+data=
+1	0
+関口　　智久	6.10	0.18	4.0	２		IP	４		IP	１		IP	１		IP	５		IP	６		IP	４		IP	５		IP	１		IP	１		IP
+向後　　龍一	8.00	0.17	3.3	１		IP	１	3	IP	３		IP	４	1	IP	１		IP	２		IP	２		IP	２		IP	２		IP	２		G3
+根岸　　真優	2.10	0.22	4.3	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	４		IP	６		G3	５		IP	３		G3
+石田　　貴洋	5.20	0.15	3.2	３		IP	４		IP	３		IP	１		IP	３		IP	４		IP	５		IP	５		IP	５		IP	１		IP
+田中　　勇輔	1.80	0.13	1.9	５		IP	６	6	IP	６		IP	５		IP	５		IP	５		IP	６		IP	５		IP	４		IP	６		G3
+河上　　年昭	2.70	0.18	2.4	５		IP	６		IP	３		IP	５		IP	６	5	IP	５		IP	４		IP	６		IP	４		IP	４		IP

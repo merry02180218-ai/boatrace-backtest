@@ -1,0 +1,8 @@
+data=
+1	0
+小芦　るり華	8.30	0.16	3.0	２		G3	３		G3	２		IP	３		IP	１		IP	１		IP	５		G2	１		IP	１		G1	１		G1
+犬童　　千秋	4.11	0.18	4.0	４		G3	３		IP	３		IP	５		IP	４		IP	６		IP	５		G3	４		G3	２		G3	欠		IP
+中里　　優子	5.90	0.19	4.1	４		G3	６		IP	１		IP	３		IP	２	4	IP	３		IP	４		IP	２		G3	２		G3	４		IP
+渡邉　　優美	5.20	0.16	3.3	６		G1	３		IP	転		IP	６		SG	３		IP	３		IP	２		G1	２	3	IP	３		IP	４		G1
+喜井　つかさ	4.80	0.14	3.3	４		G3	４		G3	３		G3	３		G3	４		IP	２		IP	３		IP	５		IP	４		IP	４		G3
+湯淺　　紀香	3.80	0.24	5.0	４		G3	６		IP	４		IP	４	5	IP	４		IP	４		IP	４		IP	３		IP	６		IP	３		G3

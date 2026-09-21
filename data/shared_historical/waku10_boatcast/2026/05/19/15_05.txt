@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　弓雄	6.20	0.20	3.8	３		IP	４		IP	１		IP	６		IP	６		IP	３		IP	３		IP	２		IP	１		IP	１		IP
+萬　　　正嗣	4.40	0.15	2.6	３		IP	２		IP	３		IP	４		IP	６		IP	４		IP	６		IP	３		IP	３		IP	５		IP
+都築　　正治	6.30	0.15	2.0	５		IP	２		IP	１		IP	１		IP	５		IP	１		IP	６		IP	２		IP	４		IP	２		IP
+安武　　一也	1.67	0.15	3.1	４	6	IP	６		IP	６		IP	５		IP	５		IP	６		IP	５		IP	Ｌ	5	IP	６		IP	６		IP
+古結　　　宏	4.60	0.14	2.3	１		IP	４		G1	６		G1	３	2	G1	４		IP	３		G1	６		IP	妨		IP	２		IP	６		G1
+村松　　栄太	3.60	0.19	4.1	２		IP	５		IP	６		IP	３		IP	６		IP	３		IP	５		IP	４		IP	５		IP	４		IP

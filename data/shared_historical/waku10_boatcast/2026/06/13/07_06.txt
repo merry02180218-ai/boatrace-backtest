@@ -1,0 +1,8 @@
+data=
+1	0
+木山　　和幸	8.80	0.17	4.4	３		IP	３		G3	１		G3	１		IP	２		IP	１		IP	１		IP	２		IP	１		G3	１		IP
+小林　　愛実	4.40	0.18	3.7	３		IP	１		IP	４		IP	４		IP	２		IP	４		IP	Ｆ		IP	３		IP	６		IP	６		IP
+大庭　　元明	5.90	0.15	3.5	４		IP	５	4	IP	１		IP	２		IP	５	2	IP	６	4	IP	２		IP	４		IP	１		IP	１		IP
+牧村　　俊輝	3.00	0.19	3.9	５		IP	４		IP	６		IP	５		IP	４		IP	４		IP	４		IP	３		IP	６		IP	５		IP
+倉持　　莉々	5.30	0.12	2.4	５		IP	３		G3	６		IP	３		G2	３		G2	２	4	IP	４		IP	２		IP	２		IP	５		IP
+林　　　恵祐	1.10	0.20	4.8	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

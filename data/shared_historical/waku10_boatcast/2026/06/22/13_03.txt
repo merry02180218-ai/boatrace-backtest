@@ -1,0 +1,8 @@
+data=
+1	0
+宮脇　　遼太	9.00	0.13	2.2	２		IP	１		IP	２		IP	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		IP
+竹田　　辰也	6.50	0.13	2.8	６		IP	２	3	IP	１		IP	２		IP	１		G3	６		IP	２		IP	２		IP	２		IP	５		IP
+野中　　義生	4.30	0.16	3.0	５		IP	Ｆ		G3	５		IP	１	4	IP	１	4	IP	６		G3	４		IP	２		IP	４		IP	５		IP
+中岡　　健人	4.30	0.16	3.2	５	3	IP	２		IP	５		IP	４		IP	６		IP	４		IP	５		IP	３	5	IP	３		IP	２		IP
+多羅尾　達之	3.50	0.13	2.8	６	6	IP	４		IP	３		IP	６	6	IP	４		IP	３		IP	５	4	IP	３		IP	４		IP	６		IP
+吉田　　彩乃	3.60	0.18	3.3	３		IP	３		IP	５		G3	６		IP	５		IP	６		IP	３		IP	５		IP	３		IP	４		IP

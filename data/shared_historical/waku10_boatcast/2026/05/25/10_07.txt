@@ -1,0 +1,8 @@
+data=
+1	0
+明石　　正之	7.80	0.12	2.2	５		IP	１		IP	１		IP	６		G3	２		IP	１		IP	１		IP	２		IP	２		IP	１		IP
+武田　　光史	7.40	0.17	2.0	２		IP	４		IP	２		IP	２		IP	２		IP	１		IP	３		IP	２		IP	３		IP	２		IP
+服部　　達哉	7.00	0.16	2.9	４		IP	２		IP	１		IP	３		IP	４		IP	１		IP	２		G3	２		G3	５		G3	１		IP
+柘植　　政浩	4.40	0.18	4.3	４		IP	５		IP	３		IP	５		IP	４		IP	４	5	IP	２		IP	４		IP	５		IP	２		IP
+小林　　文彦	5.30	0.21	4.4	３		IP	３		IP	５		IP	３		IP	２		IP	２		IP	４		IP	４		IP	２		IP	６		IP
+宮崎　　奏磨	1.20	0.23	3.7	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP

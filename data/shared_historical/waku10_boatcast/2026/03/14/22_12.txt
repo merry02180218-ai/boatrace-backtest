@@ -1,0 +1,8 @@
+data=
+1	0
+宮脇　　遼太	9.10	0.13	2.7	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	４		IP
+常住　　　蓮	8.50	0.18	3.8	１		IP	４		G1	３		G1	２		G1	３		IP	２		IP	１	1	IP	２		IP	１		IP	２		G1
+平田　　忠則	7.30	0.15	2.4	１		IP	４		G1	１		IP	３		IP	２		IP	５		IP	３		IP	２		SG	１		IP	３	4	IP
+野間　　大樹	4.30	0.19	3.7	１		IP	２		IP	３		IP	６		IP	６		IP	４		IP	３		G3	４		G3	６		IP	５		IP
+神里　　琴音	3.90	0.17	3.4	２		IP	５		IP	５		IP	６		IP	２		IP	６	6	IP	１		IP	６	6	IP	５		IP	５		IP
+蜂須　　瑞生	3.50	0.19	4.0	５		IP	４		IP	５		IP	５		IP	６		IP	６		IP	３	5	IP	６		IP	２		IP	３		IP

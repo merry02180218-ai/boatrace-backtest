@@ -1,0 +1,8 @@
+data=
+1	0
+小玉　　啓太	6.40	0.14	2.8	６		IP	１		IP	２		IP	６		IP	１		IP	４		IP	２		IP	４		IP	２		IP	１		IP
+富永　夏哉人	5.00	0.16	3.5	２		IP	５		IP	６		IP	２		IP	３		IP	５		IP	３		IP	２	1	G3	２		G3	６		IP
+小柳　　勝希	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+中島　　友和	3.90	0.14	2.8	６		IP	３		IP	１		IP	６		IP	５		IP	３		IP	４		IP	６		IP	５		IP	３		IP
+竹田　　広樹	2.10	0.23	4.2	５		IP	１	4	IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP
+山浦　　　槙	2.00	0.31	4.8	４		IP	６		IP	５		IP	６		IP																		IP

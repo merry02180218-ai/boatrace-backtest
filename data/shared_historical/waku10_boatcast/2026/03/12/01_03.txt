@@ -1,0 +1,8 @@
+data=
+1	0
+黒田　　誠司	4.80	0.15	3.1	３		IP	４		IP	６		IP	３		IP	４		IP	５		IP	２		IP	１		IP	６		IP	３		IP
+川上　　聡介	4.60	0.18	3.6	６		IP	３		IP	２	3	IP	５		IP	６	3	IP	３	4	IP	２		IP	４		G3	４		G3	３		IP
+久保原　秀人	4.22	0.20	3.7	３		IP	３		IP	３		IP	４		IP	１		IP	５		IP	６		IP	５		IP	６		IP	転		IP
+井芹　　大志	4.00	0.15	3.3	４		IP	３		IP	３		IP	４		IP	６	5	IP	５		IP	６	3	IP	２		IP	３		IP	５		IP
+太田　　　潮	2.90	0.22	4.6	２		IP	６		IP	６		IP	６		IP	５		IP	６		IP	４		IP	４		IP	３		IP	６		IP
+角谷　　健吾	3.80	0.21	3.3	３		IP	５		IP	５		IP	６		IP	６		G1	４		IP	６		IP	３	5	IP	２		IP	３		IP

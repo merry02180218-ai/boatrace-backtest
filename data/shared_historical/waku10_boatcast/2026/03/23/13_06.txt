@@ -1,0 +1,8 @@
+data=
+1	0
+村越　　　篤	9.30	0.16	3.6	１		G3	２		G3	１		IP	２		IP	２		IP	１		G1	１		IP	１		IP	２		IP	１		IP
+米田　　隆弘	5.50	0.20	4.6	２		IP	５		IP	３		IP	４		IP	２		IP	１		IP	６		IP	５		IP	２		IP	３		IP
+大賀　龍之介	5.00	0.17	3.2	５		IP	２		IP	２		IP	２		IP	４		IP	４		IP	２		IP	５		IP	４		IP	５		IP
+吉永　　則雄	5.90	0.15	2.8	２		IP	６		IP	３		IP	３		IP	３		IP	５		IP	１		IP	２		IP	４		IP	２		IP
+宮内　由紀英	2.56	0.24	5.2	転		IP	４		IP	５		IP	６		IP	６		IP	欠		IP	４	2	IP	６		IP	３		IP	４		IP
+長野　　道臣	3.70	0.18	3.9	５		IP	６		IP	５		IP	５		IP	３		IP	６		IP	４		IP	２		IP	２		IP	６		IP

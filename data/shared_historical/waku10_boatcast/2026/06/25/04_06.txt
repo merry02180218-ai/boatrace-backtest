@@ -1,0 +1,8 @@
+data=
+1	0
+片岡　　大地	7.80	0.13	2.3	３		IP	２		IP	１		IP	３		IP	２		IP	４		IP	２		IP	１		IP	１		IP	２		IP
+細川　　明人	2.70	0.20	4.2	５		IP	４		IP	６	3	IP	３		IP	３		IP	６		IP	６		IP	６		IP	４		IP	６		IP
+松尾　　　充	4.10	0.15	3.5	５		G1	６		G1	４		G1	３	5	IP	５		IP	６	4	IP	４	4	IP	３		G3	４		G3	２		IP
+深見　亜由美	2.90	0.18	4.2	５		IP	５		IP	４		G3	４		G3	５		IP	４		IP	４		IP	５		IP	６		IP	４		IP
+山田　　雄太	4.60	0.13	3.3	４		IP	３		IP	３		IP	３		IP	５		IP	２		IP	３		IP	４	6	IP	６	6	IP	６		IP
+鶴田　　勇雄	4.20	0.18	4.4	４		IP	４		IP	１		IP	３		IP	４		IP	５		IP	４		IP	６		G3	６		G3	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+永井　　　源	7.20	0.19	4.2	２		IP	２		IP	１		IP	１		IP	６		IP	６		G3	３		G3	１		IP	２		IP	１		IP
+岡部　　大輝	6.10	0.16	3.6	２		IP	５		IP	１		IP	３		IP	２		IP	３		IP	６		IP	１		IP	５		IP	２		IP
+大久保　佑香	5.10	0.18	3.7	３		G3	４		G3	２		IP	５		IP	２		G3	４		G3	２		IP	６		IP	４		IP	３		IP
+坂本　　雄紀	5.20	0.13	2.6	２	5	IP	４		IP	６		IP	４		IP	１		IP	３		IP	４		IP	４		IP	１		IP	６		IP
+貫地谷　直人	2.60	0.22	4.8	６		IP	３		IP	４		IP	５		IP	３	6	IP	６		IP	５		IP	６		IP	５		IP	６		IP
+小林　　文彦	3.60	0.24	4.7	５		IP	５		IP	５	5	IP	５		IP	３	5	IP	３		IP	３		IP	５		IP	４		IP	４		IP

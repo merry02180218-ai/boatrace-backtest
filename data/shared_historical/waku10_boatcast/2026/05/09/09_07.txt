@@ -1,0 +1,8 @@
+data=
+1	0
+川島　　拓郎	8.70	0.13	2.4	１		IP	１		IP	６		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP
+中村　　晃朋	5.60	0.16	3.7	４		IP	５		IP	６		G1	６		IP	１		IP	１		IP	６		IP	２		IP	２		G1	３		IP
+坂口　　　周	6.60	0.18	3.5	４		IP	３		IP	３		IP	３		IP	１		IP	１		IP	３		IP	２		IP	５		IP	２		IP
+島田　　一生	5.30	0.17	3.8	３		IP	６		IP	３		IP	２		IP	６		IP	２		IP	３		IP	３		IP	６		IP	１		IP
+濱崎　　　誠	5.00	0.23	3.7	６		IP	３		IP	３		IP	６		IP	５		IP	３		IP	３		IP	１		IP	４	3	IP	２		IP
+川原　　正明	2.70	0.17	3.7	５		IP	６		IP	５		IP	４	4	IP	４	5	IP	６		IP	３		IP	６		IP	５		IP	５		IP

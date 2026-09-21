@@ -1,0 +1,8 @@
+data=
+1	0
+土屋　　　南	8.00	0.15	2.3	２		IP	１		G3	１		IP	３		G1	６		IP	１		IP	１		IP	１		IP	３		IP	２	3	IP
+戸敷　　晃美	7.50	0.18	1.9	１		IP	３		IP	２		G1	６		G1	２	1	IP	２		IP	４		IP	１		G3	１		G3	２		IP
+大豆生田　蒼	5.60	0.24	4.2	５		IP	３	2	IP	４		G1	２		G3	３		G3	１		G3	５		G3	３		IP	１		IP	６		IP
+樫葉　　新心	2.10	0.19	4.3	５		IP	６		G3	５		G3	６		IP	５		IP	６		IP	５		G3	４		G3	５		IP	４		IP
+大瀧　明日香	4.80	0.18	2.9	１		IP	３		G3	３		G3	５		IP	６		IP	５		G1	５		G1	２		IP	２		IP	６		G3
+市川　　瑚幸	1.00	0.18	3.5	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

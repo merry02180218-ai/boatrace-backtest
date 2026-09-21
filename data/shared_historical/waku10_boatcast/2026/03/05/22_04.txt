@@ -1,0 +1,8 @@
+data=
+1	0
+眞鳥　　章太	8.60	0.12	2.5	４		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP
+山田　　真聖	5.70	0.13	2.2	４		IP	２	3	IP	６		IP	１		IP	２	3	IP	６	3	IP	６		IP	３	3	IP	２	3	IP	１	3	IP
+向井田　佑紀	4.00	0.16	3.8	４		IP	２		IP	２		IP	４		IP	６		IP	５		G3	４		IP	４	4	IP	６		IP	４		IP
+伊藤　　尚汰	4.70	0.22	3.9	４		IP	２		IP	１		IP	５		IP	４		IP	１		IP	５		IP	４		IP	５		IP	６		IP
+烏野　　賢太	5.70	0.18	3.7	３		IP	２		IP	４		G1	３		G1	５		G1	４		IP	３		IP	４		IP	４		IP	１		IP
+下河　　雅史	2.60	0.19	4.2	５		IP	３		IP	６		IP	５		IP	６		IP	５		IP	５		IP	４	5	IP	４		IP	５		IP

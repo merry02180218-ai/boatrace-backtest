@@ -1,0 +1,8 @@
+data=
+1	0
+津久井　拓也	6.40	0.13	3.3	２		IP	１		IP	４		IP	１		IP	５		IP	１		G3	５		G3	５		IP	２		IP	２		IP
+中島　　　航	5.40	0.20	3.7	３		IP	４		IP	５	3	IP	３		IP	５		IP	２		IP	３		IP	Ｆ		IP	１		IP	１		IP
+登玉　　隼百	5.10	0.15	3.3	６		IP	６		IP	１		IP	５		IP	１		IP	４		IP	３		IP	３	4	IP	２		IP	６		IP
+桑原　　　啓	4.70	0.15	2.6	６		IP	３		IP	２		IP	３		IP	２		IP	４		IP	５		IP	６		IP	６		IP	１		IP
+野田　　昇吾	3.60	0.19	3.9	５	4	IP	５		IP	６		IP	６	6	IP	６		IP	４		IP	１		IP	３		IP	２	6	IP	６		IP
+古賀　　智之	3.50	0.22	3.7	３		IP	６		IP	５		IP	５		IP	５		G3	落		G3	５		IP	２		IP	２		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+村上　　奈穂	7.80	0.16	3.1	５		IP	４		IP	１		IP	２		IP	２		IP	１		IP	２		IP	１		IP	２		IP	１		IP
+枝尾　　　賢	6.40	0.13	3.1	１		IP	３		IP	３		IP	５		G2	３		G2	５		IP	１		IP	１		IP	２		G3	５		G3
+福山　恵里奈	4.20	0.12	2.7	５		IP	２		G3	４		IP	５	4	IP	４		IP	２		IP	１		G3	６		IP	５	4	IP	６		IP
+金田　　　諭	6.20	0.16	3.2	３		IP	４		IP	２	3	IP	４		IP	３		IP	３		IP	２		IP	１		IP	４	5	IP	３		IP
+田中　　大輝	1.00	0.27	6.0	６	6	IP																											IP
+寺田　　　祥	4.60	0.13	3.6	６		G2	４		IP	４		G1	４	5	IP	６		IP	１	5	IP	４		IP	３	4	G1	４	5	IP	４		G1

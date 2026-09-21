@@ -1,0 +1,8 @@
+data=
+1	0
+渥美　　卓郎	7.20	0.17	2.8	１		IP	１		IP	２		IP	５		IP	４		IP	３		IP	３		IP	１		IP	２		IP	２		IP
+飛田　　江己	6.30	0.14	2.5	６		IP	４		IP	３		G1	２		G1	１		G1	５		G1	１		G1	３		G1	３		IP	４		IP
+小野　　　桜	4.50	0.17	3.9	３		IP	６		IP	４		IP	４		IP	５		IP	３		IP	４		G3	２		IP	３		IP	４		G3
+田川　　大貴	5.60	0.14	2.1	１		IP	４		IP	４		IP	２		IP	４		IP	４		IP	２		IP	５	6	IP	４	5	IP	２		IP
+服部　　達哉	5.60	0.19	3.9	４		IP	２	4	G3	３		G3	３		IP	５		IP	４	6	IP	１		IP	３		G3	３		IP	４	6	IP
+西野　　翔太	6.50	0.16	2.5	１	2	IP	１	2	IP	３	5	IP	６	3	IP	２	2	IP	３	2	IP	３	2	IP	２	2	IP	３	3	IP	４	5	IP

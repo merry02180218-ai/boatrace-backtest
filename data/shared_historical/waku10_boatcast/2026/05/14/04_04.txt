@@ -1,0 +1,8 @@
+data=
+1	0
+近藤　雄一郎	8.00	0.16	2.8	１		IP	４		G3	１		IP	２		IP	３		IP	１		IP	２		IP	３		IP	２		IP	１		IP
+杉田　　篤光	5.50	0.18	4.2	６		IP	２		IP	２		IP	３		IP	５		IP	３		G3	４		IP	４		IP	１		IP	３		IP
+吉川　　昭男	4.00	0.14	3.3	３		IP	６		IP	Ｆ		IP	２		IP	１		IP	６		IP	６		IP	６		IP	２		IP	４		IP
+三苫　　晃幸	6.30	0.15	3.2	１		IP	１		IP	６		IP	３		IP	４	2	IP	３		IP	１		IP	２		G3	４		G3	４		IP
+一色　　凌雅	4.50	0.20	4.0	５		IP	３		IP	２		IP	４		IP	２		IP	６	4	G3	４		IP	５	6	IP	５		IP	２	6	IP
+今井　　貴士	5.10	0.18	3.9	５		IP	２		IP	３		IP	５		IP	３		IP	６		IP	４		G1	２		G1	２		G1	５		G1

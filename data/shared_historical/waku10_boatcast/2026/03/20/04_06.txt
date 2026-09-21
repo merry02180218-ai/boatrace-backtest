@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　　勝	6.80	0.16	3.5	３		IP	１		IP	３		IP	６		IP	２		IP	１		IP	１		IP	３		IP	６		IP	１		IP
+角谷　　健吾	7.50	0.15	2.2	１		IP	２		IP	４		IP	２		G1	２		G1	２		IP	６		IP	２		IP	２		IP	１		IP
+佐藤　　大佑	7.80	0.15	3.0	４		IP	２		IP	２		IP	１		IP	３		IP	１		IP	３		IP	１		IP	２		IP	２		IP
+一色　　颯輝	5.60	0.21	3.6	２		IP	４		IP	２		IP	４		IP	２		IP	落		IP	２		IP	１		IP	４	5	IP	５		IP
+藤田　　竜弘	4.11	0.19	4.1	５		IP	６		IP	３		IP	４		IP	３	6	IP	欠		IP	３		IP	５		IP	４		IP	３		IP
+香月　　大介	2.90	0.20	4.2	６		IP	４		IP	２		IP	６		IP	５		IP	６		IP	６		IP	６		IP	４		G3	３		IP

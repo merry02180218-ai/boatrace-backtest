@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　紘章	6.40	0.20	3.5	１		IP	５		IP	１		IP	５		IP	１		IP	５		IP	５		IP	２		IP	１		IP	２		IP
+石川　　哲秀	4.10	0.15	2.5	６		IP	４		IP	６		IP	３		IP	２		IP	６		IP	２		IP	５		IP	５		IP	２		IP
+平尾　　崇典	7.00	0.13	3.3	転		IP	１		G2	２		IP	１		IP	４		G1	１		IP	５		G1	欠		IP	２	2	G1	３		G2
+山田　　晃大	5.60	0.13	1.8	１		IP	４		IP	１		IP	５		IP	４		IP	４		IP	１		IP	４		IP	３		IP	５		IP
+松尾　　宣邦	4.60	0.15	3.0	５		IP	４		G3	４		G3	４		IP	３	4	IP	３	4	IP	３		IP	２		IP	４		IP	５		IP
+早川　　理稀	1.30	0.20	4.0	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP

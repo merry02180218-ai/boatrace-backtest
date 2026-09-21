@@ -1,0 +1,8 @@
+data=
+1	0
+新田　　雄史	9.10	0.10	2.4	５		G1	１		G1	１		G1	３		SG	２		G1	１		G1	５		G1	１		G1	１		G1	１		G1
+高倉　　和士	6.70	0.12	2.4	２		IP	２		IP	１		IP	３		IP	４		G1	２		IP	２		IP	３		IP	５		IP	３		IP
+片岡　　雅裕	5.70	0.12	3.1	５		G1	２		G1	４		G1	５		G1	１		G1	３		G1	６		G1	１		IP	６		IP	４		SG
+羽野　　直也	6.40	0.15	3.6	３		G2	２		G2	４		G1	５	6	G1	３	5	IP	３		G1	３		G1	３		IP	３		IP	３		SG
+新田　　泰章	4.20	0.14	3.9	５		IP	５		IP	４	4	IP	４		IP	３		IP	３		IP	６		G1	３		IP	４		IP	４		IP
+上野　真之介	6.40	0.12	3.0	１	5	IP	４		G2	５		G1	５		G1	５		G1	６		G1	２		G1	３		G1	２	5	IP	１	5	IP

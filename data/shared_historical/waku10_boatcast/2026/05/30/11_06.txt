@@ -1,0 +1,8 @@
+data=
+1	0
+高山　　智至	6.80	0.13	2.7	２		IP	４		IP	２		IP	１		IP	４		IP	１		IP	４		IP	２		IP	１		IP	５		IP
+三木　　晴斗	7.20	0.14	2.6	５		IP	１		IP	３		IP	３		IP	４		IP	１		IP	１	1	IP	３		IP	２		IP	１	3	IP
+鶴本　　崇文	5.50	0.18	3.8	５		IP	６		IP	１		IP	３		IP	５		IP	３		IP	１		IP	５		IP	３		IP	１		IP
+今井　　貴士	6.30	0.14	2.7	４		IP	２		IP	２		IP	３		IP	１	6	IP	３		IP	４		IP	３		G1	２		G3	６		G3
+竹田　　広樹	2.10	0.22	4.2	６		IP	５		IP	１	4	IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP
+金子　　　萌	3.50	0.10	2.0	４		IP	３		IP	落		IP	５		IP	６		IP	６	5	IP	３		IP	４		IP	１		IP	６		IP

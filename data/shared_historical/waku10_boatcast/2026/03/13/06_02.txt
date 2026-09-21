@@ -1,0 +1,8 @@
+data=
+1	0
+内田　　　圭	6.60	0.19	3.9	１		IP	２		IP	１		IP	１		IP	３		IP	４		IP	６		IP	１		IP	３		IP	６		IP
+木下　　大將	7.80	0.16	3.1	２		IP	２		IP	４		IP	２		IP	１		IP	１		IP	４	3	IP	２		IP	２		IP	１		IP
+松下　　一也	7.70	0.13	2.7	１		IP	２		IP	２		IP	４		IP	２		IP	２		IP	５		IP	２		IP	１		IP	１		IP
+松山　　将吾	4.30	0.13	2.9	５		G1	６		G1	６		IP	２		IP	４		IP	１		IP	３		IP	６		IP	３		IP	５		IP
+本部　めぐみ	2.80	0.16	3.0	４		IP	５		IP	５		G3	６		IP	６		G3	４		G3	６		IP	１		IP	６		G3	５		G3
+松浦　　　勝	2.60	0.22	4.1	６		IP	６		IP	５		IP	６		IP	２	5	IP	６		IP	５		IP	３		IP	５		IP	５	5	IP

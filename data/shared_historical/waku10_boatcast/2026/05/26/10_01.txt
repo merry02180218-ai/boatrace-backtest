@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　秀治	7.10	0.16	3.0	１		IP	１		IP	５		IP	２		IP	３		IP	１		IP	５		IP	１		IP	３		G2	３		IP
+大場　　広孝	6.00	0.15	2.5	４		IP	１		IP	３		IP	２		IP	３		IP	５		IP	４	3	IP	４		IP	１		IP	３		IP
+小川　　知行	3.90	0.14	3.4	５		IP	６		IP	５	2	IP	３		IP	５		IP	６		IP	１		IP	４		IP	６		IP	１	4	IP
+大澤　　誠也	3.80	0.19	4.1	５	5	IP	６		IP	４		IP	２		IP	４		IP	３		IP	４		IP	５		IP	６		IP	３		IP
+土井　　歩夢	5.60	0.17	2.3	５		IP	２		IP	４		IP	３		IP	３		IP	３	4	G3	３		IP	４		IP	１		IP	４		IP
+高村　　　諒	1.60	0.15	4.0	５		IP	４		IP	６		IP	６		IP	６		IP	４		IP	６		IP	転		IP	６		IP	６		IP

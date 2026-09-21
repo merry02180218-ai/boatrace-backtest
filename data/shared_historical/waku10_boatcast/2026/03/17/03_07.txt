@@ -1,0 +1,8 @@
+data=
+1	0
+小野　　京平	4.40	0.20	4.4	１		IP	５		IP	５		IP	４		IP	２		IP	５		IP	４		IP	４		IP	２		IP	落		IP
+中野　　次郎	5.90	0.11	2.1	２		IP	２		IP	６		G1	３	3	IP	４		G3	２		G3	２		G3	５		IP	５		SG	２		G1
+大森　　　翼	4.56	0.21	4.5	４		IP	落		IP	５		IP	６		IP	４		IP	５		IP	２		IP	２		IP	３		IP	３		IP
+三角　　哲男	6.40	0.15	3.4	２		IP	６		IP	１		IP	４		G1	６		G1	１		IP	２		IP	１		IP	３		IP	４		IP
+渡邊　　雄斗	3.70	0.19	3.8	６		IP	４		IP	３	6	IP	２		IP	５	6	IP	６	6	IP	２		IP	５	4	IP	６	4	IP	４		IP
+榮田　　将彦	2.70	0.15	3.4	４		IP	６		IP	５		IP	３		IP	６		G3	６		G3	５		G3	５		G3	４		IP	４		G3

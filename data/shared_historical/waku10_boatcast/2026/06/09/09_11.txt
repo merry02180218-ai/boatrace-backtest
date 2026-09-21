@@ -1,0 +1,8 @@
+data=
+1	0
+山口　　裕二	8.70	0.18	3.3	３		IP	３	2	IP	１		IP	２		G1	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP
+権藤　　俊光	6.90	0.13	3.0	１		G2	６		G2	５		IP	１		IP	４		IP	１		IP	２		IP	６		G1	２		SG	２		SG
+澤　　　大介	3.30	0.18	4.1	６		IP	１		G3	４		G3	２	4	IP	５		IP	６		IP	転		IP	４		IP	６		IP	５		IP
+向後　　龍一	5.50	0.16	3.5	４		G2	２		G2	６		IP	３		IP	３		IP	２		IP	３		G3	５	5	IP	４		IP	２		IP
+小林　　甘寧	4.89	0.12	2.3	２		IP	３		IP	１		IP	３		IP	６		IP	転		IP	３		IP	６		IP	４		IP	５		IP
+安東　　幸治	2.50	0.15	4.1	３		IP	５		IP	５		IP	５		IP	６		IP	５		IP	６		IP	４		IP	５		IP	６		IP

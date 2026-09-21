@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　政彦	5.30	0.14	3.4	５		G1	１		IP	４		IP	２		IP	５		IP	４		IP	Ｆ		IP	４		IP	１		IP	２		G3
+幸野　　史明	5.80	0.20	3.3	１		IP	３		IP	３		IP	１		IP	５		IP	４		IP	２	3	IP	６	6	IP	１		IP	６		IP
+真庭　　明志	4.40	0.13	3.4	４	4	IP	３		IP	６		IP	２		IP	２		IP	６		IP	５		IP	３		IP	４		IP	４	2	IP
+小柳　　勝希	4.30	0.17	2.9	１		IP	転		IP	３		IP	４		IP	３		IP	６		IP	５	3	IP	５	5	IP	１		IP	５		IP
+横田　　　茂	3.20	0.18	4.1	６	6	IP	６		IP	２		IP	３		IP	５		IP	６		IP	４		IP	３		IP	５		IP	６	6	IP
+多羅尾　達之	3.00	0.16	3.4	４		IP	２		IP	６		IP	４		IP	６		IP	５		IP	５		IP	４	5	IP	５		IP	５		IP

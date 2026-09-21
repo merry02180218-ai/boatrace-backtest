@@ -1,0 +1,8 @@
+data=
+1	0
+松村　　　敏	8.00	0.13	2.1	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	６	2	IP
+小坂　　宗司	8.20	0.15	3.6	１		IP	３		IP	２		IP	２		IP	１		IP	１		IP	５		IP	２		IP	１		IP	１		IP
+上野　　拓馬	4.10	0.16	3.2	４		IP	４		IP	５		IP	６		IP	４		IP	３		IP	５		IP	４		IP	２		IP	３		IP
+野長瀬　正孝	5.11	0.20	4.3	欠		IP	４		IP	４		IP	２	3	IP	５		IP	３		IP	４		IP	３		IP	４		IP	２	3	IP
+柴田　　直哉	3.00	0.18	3.5	６	6	IP	４		IP	４		IP	５		IP	６		IP	５		IP	３		IP	５		IP	３		IP	５		IP
+上村　　宏太	2.90	0.17	3.0	５		IP	２		IP	５		IP	５		IP	６		IP	３		IP	５		IP	６		IP	６		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+池上　　隆行	5.70	0.14	2.7	１		IP	４		IP	５		IP	１		IP	１		IP	３		IP	５		IP	２		IP	４		IP	６		IP
+佐々木　和伸	4.10	0.15	3.0	２		IP	２	1	IP	４		IP	４		IP	６		G1	３		IP	４		IP	５		IP	５		IP	６	3	IP
+松尾　　　祭	7.30	0.18	3.0	３		IP	２		IP	４		IP	３		IP	２		IP	１		IP	５		IP	１		G1	１		IP	２		IP
+杉山　　正樹	6.60	0.16	3.4	５		IP	２	3	G1	３		G1	２		G3	４		G3	１		IP	１		IP	３		IP	４		G1	４		G1
+松田　　憲幸	3.40	0.19	4.6	６		G3	６		G3	６		IP	３		IP	６		IP	５		IP	１		IP	５		IP	３		IP	４	4	IP
+高橋　　嗣穏	1.10	0.19	3.5	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	転		IP	６		IP	６		IP

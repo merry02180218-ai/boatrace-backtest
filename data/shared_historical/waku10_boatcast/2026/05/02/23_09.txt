@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　宏典	6.60	0.18	3.9	１		IP	１		IP	５		IP	５		IP	５		IP	１		IP	１		IP	５		IP	１		IP	２		IP
+中野　　和裕	3.80	0.16	2.2	４		IP	５	3	IP	６		IP	６		IP	３		IP	３		IP	４		IP	４		IP	５		IP	２		IP
+冨成　　謙児	5.00	0.16	3.1	５		IP	２		IP	５		IP	２		IP	３		IP	２		IP	５		IP	４		IP	５		IP	２	4	IP
+久保田　凪紗	2.00	0.20	3.3	３		G3	４		G3	６		G3	６		IP	６		IP	６		G3	５		G3	６	6	IP	６		G3	５		G3
+峰　　　竜太	6.50	0.13	3.3	３	4	G1	２		G1	２		G1	１	4	G1	５		G1	５		G1	３	4	IP	４		SG	４		SG	４		G1
+山浦　　　槙	1.00	0.21	6.0	６		IP																											IP

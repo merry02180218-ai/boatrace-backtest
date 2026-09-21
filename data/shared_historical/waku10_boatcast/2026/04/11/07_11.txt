@@ -1,0 +1,8 @@
+data=
+1	0
+松山　　将吾	9.00	0.13	1.8	３		IP	１		G3	１		G3	１		G3	１		IP	１		IP	１		IP	４		G1	２		G1	２		G1
+齊藤　　　仁	8.30	0.13	3.1	２		IP	１		G3	２		G1	６		G1	２		G1	２		G1	２		IP	２		IP	１		G3	１		IP
+伊久間　陽優	6.40	0.12	2.2	４		IP	２		IP	２		IP	４	5	IP	２	4	IP	転		IP	３		IP	２	2	IP	２		IP	１		G3
+安藤　　裕貴	4.00	0.15	2.6	２		IP	４		IP	６		IP	５	5	IP	３		IP	４		IP	６		IP	４		IP	５		IP	２		IP
+川原　　正明	4.40	0.16	2.8	４		IP	５		IP	２		IP	５		IP	３		IP	４		IP	４		IP	４		IP	３		IP	４		IP
+刑部　亜里紗	3.80	0.15	4.4	６		IP	４		IP	５		IP	２		IP	４	4	IP	４		G1	４		IP	４		IP	５		IP	４		IP

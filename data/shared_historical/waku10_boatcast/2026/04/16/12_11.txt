@@ -1,0 +1,8 @@
+data=
+1	0
+安井　　瑞紀	7.30	0.18	3.7	６		IP	１		IP	４		G3	２		IP	２		IP	１		G1	１		IP	６		IP	１		IP	１		IP
+芝田　　浩治	6.30	0.17	3.2	１		IP	１		IP	５		IP	６		IP	６		IP	５		IP	２		IP	１		IP	１		IP	２	1	IP
+松江　　秀徳	6.00	0.19	3.4	２		IP	４		IP	３		IP	２		IP	４		IP	３		IP	２	4	IP	３		IP	３		IP	４		IP
+多羅尾　達之	2.90	0.19	3.4	６		IP	６		IP	妨		IP	転		IP	５	5	IP	４		IP	６		IP	３		IP	２		IP	３		IP
+中里　　英夫	4.40	0.23	3.6	５		IP	３		IP	４		IP	２		IP	５		IP	２		IP	４		IP	５		IP	５	4	G3	３		G3
+山崎　　裕司	2.30	0.17	4.3	６		IP	５		IP	５	5	IP	５	5	IP	６		IP	４		IP	５		IP	５		IP	６		IP	５		IP

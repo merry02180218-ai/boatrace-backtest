@@ -1,0 +1,8 @@
+data=
+1	0
+土井　　祥伍	7.00	0.20	3.6	１		IP	５		IP	１		IP	３		IP	２		IP	２		IP	１		IP	１		G3	５		IP	４		IP
+中島　　真二	5.90	0.20	3.4	３		G3	２		IP	５		IP	２		IP	２		IP	３		IP	６		IP	４		IP	２		IP	２		IP
+岡部　　大輝	5.00	0.14	2.4	２		IP	５		IP	４		IP	４	2	IP	３		IP	１		IP	２		IP	６		G3	６		IP	４		IP
+中辻　　博訓	5.70	0.15	2.7	２		IP	６		G3	４		IP	４		IP	３		IP	３		IP	２		IP	３		IP	２		IP	３		IP
+本岡　　勝利	3.60	0.22	4.0	３		IP	５		IP	５		IP	４		IP	４		IP	４		IP	４		IP	４		IP	５		IP	４		IP
+原田　　朱理	2.00	0.20	5.1	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP	転		IP	６		IP	２		IP	６		IP

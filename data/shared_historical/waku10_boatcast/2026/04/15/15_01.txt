@@ -1,0 +1,8 @@
+data=
+1	0
+中澤　　宏奈	5.80	0.19	3.2	１		IP	５		IP	３		IP	１		IP	４		G3	１		IP	４	2	IP	１		G3	６		G3	６		IP
+谷口　　　丞	5.00	0.15	2.8	４		IP	２		IP	６		IP	４	3	IP	５	3	IP	２		IP	１	4	IP	２		IP	４		IP	６		IP
+本吉　　正樹	3.50	0.19	4.0	４		IP	４		IP	１		IP	５		IP	５		IP	５		IP	６		IP	５		IP	３		IP	５		IP
+上瀧　　絢也	4.20	0.14	3.1	６		IP	３		IP	４	5	IP	１		IP	５	5	IP	５		IP	６		IP	３		IP	３		IP	４		IP
+坂口　　貴彦	3.50	0.14	2.8	５		IP	４		IP	４		IP	４		IP	５		IP	３		IP	５		IP	３		IP	４		IP	６	6	G3
+須藤　　隆雄	2.30	0.21	4.1	５		IP	転		IP	５		IP	４		IP	５	4	IP	５	5	IP	６	5	IP	５		IP	５		IP	３		IP

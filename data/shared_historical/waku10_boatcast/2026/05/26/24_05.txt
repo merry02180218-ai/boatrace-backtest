@@ -1,0 +1,8 @@
+data=
+1	0
+樋口　由加里	7.60	0.17	2.4	１		IP	１		G3	１		G3	５		G3	１		G3	４		IP	１		IP	２		IP	１		IP	５		IP
+滝川　真由子	5.40	0.19	4.6	４		IP	５		IP	３		IP	２		IP	４		IP	２		IP	３	3	IP	１		G3	５		IP	４	3	IP
+福岡　　泉水	5.30	0.17	3.0	１		IP	５		IP	３		IP	５	4	IP	２	5	IP	２		IP	６		IP	３		IP	５		IP	２		G3
+孫崎　　百世	3.70	0.26	4.7	６		IP	６		IP	１		IP	５		IP	３		IP	５		IP	６		IP	３	3	IP	５		IP	３		IP
+小芦　るり華	4.60	0.16	3.1	５		G2	４		G2	５		G3	４	4	IP	４		G2	５		G2	５	6	IP	２		IP	２		G1	５		G1
+井上　　未都	3.50	0.18	3.8	５		IP	４		IP	５		IP	６		IP	５		IP	３	5	IP	３		IP	４		IP	６		G1	４	5	G3

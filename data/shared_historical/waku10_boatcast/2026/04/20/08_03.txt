@@ -1,0 +1,8 @@
+data=
+1	0
+磯村　　　匠	9.00	0.13	2.2	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+大月　　遊雅	6.40	0.15	3.0	３		IP	３		IP	２		IP	５		IP	３		IP	４		IP	１		IP	２		IP	３		IP	２		IP
+出畑　　孝典	6.50	0.20	3.4	２		IP	３		IP	３		IP	３		IP	６		IP	２		IP	１		IP	１		IP	２		IP	５		IP
+山本　　修一	5.70	0.14	3.7	４	5	IP	３		IP	３		IP	３		IP	４		IP	２		IP	６		IP	２	3	IP	２	3	IP	３		IP
+古場　　輝義	3.40	0.17	4.3	２	4	IP	５		G3	３	3	G3	５		IP	３		IP	６		IP	５		IP	５		IP	４		IP	６	4	IP
+小川　　時光	1.90	0.19	4.6	４		IP	４	5	IP	６		IP	６		IP	５	5	IP	６		IP	５	5	IP	５		IP	６		IP	６		IP

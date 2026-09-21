@@ -1,0 +1,8 @@
+data=
+1	0
+津留　浩一郎	6.20	0.13	2.5	３		IP	２		IP	１		IP	３		IP	６		IP	２		IP	１		IP	５		G3	６		IP	１		G3
+福島　　勇樹	6.90	0.16	3.5	４		IP	４		G1	１		IP	１		IP	３		IP	１		IP	１		IP	２		IP	４		IP	５		IP
+森野　　正弘	6.70	0.14	2.8	４	4	IP	２		IP	３		G1	２		G1	３		G2	２	2	IP	２		IP	１		IP	６		IP	４		G1
+丹下　　　将	5.20	0.16	2.0	６		IP	１		IP	２		IP	４		IP	３		IP	３		IP	５		IP	６		IP	４		IP	１		IP
+山本　　凱立	1.20	0.21	3.7	５	6	IP	落	6	IP	６	6	IP	６	6	IP	６	6	IP	５		IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP
+小野　　信樹	2.50	0.18	3.8	５		IP	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP	２		IP	６		IP	４		IP

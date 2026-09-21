@@ -1,0 +1,8 @@
+data=
+1	0
+板橋　　侑我	8.80	0.12	3.2	１		IP	４		G1	４		G3	１		G1	２		G1	１		G1	１		G1	１		IP	１		IP	３		G1
+豊田　　祥生	5.20	0.16	3.6	５		IP	６		IP	６		IP	２		IP	２		IP	４		IP	１		IP	３		IP	２		IP	４		IP
+坪井　　康晴	6.90	0.12	3.4	５		IP	３		IP	１		G1	１		IP	２		G1	４		G1	２		G1	４		G1	４		G1	３		G1
+石原　　　光	4.10	0.16	3.4	５	5	IP	２		IP	１		IP	６		G3	２		IP	６		IP	５	5	IP	５		IP	６	6	IP	３		IP
+渡邉　　英児	6.00	0.12	2.6	４		IP	５		IP	２		IP	２		IP	２		IP	５	6	IP	２	4	IP	２		IP	２	4	IP	４	3	IP
+野末　　智一	5.00	0.20	4.5	３		IP	３	4	IP	２		IP	４	4	IP	５		IP	５		IP	３		IP	２	4	IP	３		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　京平	7.00	0.18	4.2	１		IP	４		IP	２		IP	４		IP	２		IP	３		IP	１		IP	３		IP	４		IP	１		IP
+鈴木　　茂高	4.70	0.18	4.5	２		IP	５		IP	３		IP	６	4	IP	５		IP	２		IP	５		IP	５		IP	２		IP	２		IP
+岸本　　雄貴	3.30	0.19	4.0	４	4	IP	６		IP	４		IP	５		IP	４		IP	３		IP	５		IP	４		IP	５		IP	４		IP
+岡部　　　哲	4.00	0.16	3.8	５		IP	２		IP	６		IP	２		IP	２		IP	５		IP	４		IP	６		IP	５		IP	４		IP
+大西　　隆洋	4.70	0.13	3.7	２		IP	５	6	IP	４		IP	５		IP	１		IP	３		IP	３		IP	４		IP	６	4	IP	４		IP
+岡本　　亜子	1.10	0.21	5.1	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+服部　　達哉	8.30	0.13	2.3	２		G3	３		IP	１		IP	６		IP	２		IP	１		IP	１		IP	１		G3	１		IP	１		IP
+坂口　　　周	7.33	0.19	3.4	２		IP	２		IP	１		IP	エ		IP	２		IP	２		G2	４		G2	４		IP	２		IP	３		IP
+河野　　主樹	5.40	0.16	3.6	２		G3	５		IP	３		IP	２		IP	４	5	IP	５		IP	１		IP	４		IP	５		IP	２		IP
+渡邉　　　健	3.20	0.11	2.2	５		IP	４		IP	１		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	１		IP
+平瀬　　城啓	2.78	0.25	4.1	６		IP	６		IP	欠		IP	６		IP	４		IP	３		IP	６		IP	６		IP	５		IP	２		IP
+亀山　　雅幸	4.00	0.18	4.1	３		IP	４		IP	３		IP	５		IP	４		IP	５		IP	５		IP	３		IP	５		IP	３		IP

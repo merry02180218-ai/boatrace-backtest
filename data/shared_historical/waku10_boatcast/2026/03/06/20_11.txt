@@ -1,0 +1,8 @@
+data=
+1	0
+藤岡　　俊介	9.90	0.13	2.2	１		IP	１		IP	１		IP	１		IP	２		G1	１		IP	１		IP	１		IP	１		IP	１		IP
+深川　　真二	6.10	0.13	2.6	１		IP	２		IP	３		IP	５		G1	２		IP	５		IP	１		IP	６		IP	３		IP	３		IP
+宗行　　治哉	7.67	0.18	3.0	３		IP	２	4	IP	１		IP	４		G2	１		IP	３		IP	２	4	IP	３		IP	１	4	IP	欠		G2
+平見　　真彦	5.00	0.18	3.9	５		IP	２	5	IP	３	5	IP	３		IP	５	6	IP	３		IP	４		IP	３		IP	５		IP	２		G3
+倉田　　茂将	4.40	0.13	2.4	６	6	G3	６	6	G3	３		IP	２		IP	Ｆ		IP	５		IP	２		IP	４		IP	２		IP	４		IP
+大江　　　純	3.80	0.15	3.1	３		IP	４		IP	４		IP	２		IP	４		IP	６		IP	４		IP	５		IP	６		IP	４	3	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+菅沼　　佳昭	4.30	0.19	3.6	２		IP	６		IP	５		IP	４		IP	６		IP	１		IP	６		IP	５		IP	３		IP	２		IP
+長尾　京志郎	4.70	0.16	3.7	５		IP	２		IP	４		IP	３		IP	４		IP	５		IP	５		IP	２		IP	６		IP	１		IP
+盛本　　真輔	6.60	0.19	3.6	１		IP	３		IP	４		IP	１		IP	４		IP	３		IP	４		IP	４		IP	１		IP	２		IP
+井川　　大作	4.60	0.11	2.0	２		IP	４		IP	２	5	IP	４		IP	２		IP	４		IP	４		IP	５	5	G3	５		IP	５		IP
+阪本　　勇介	5.70	0.17	4.1	４		IP	２		IP	５		IP	２		IP	５		IP	３		IP	２		IP	３		IP	１		IP	６		IP
+志道　　吉和	2.30	0.27	5.3	４		IP	５		IP	４		IP	５		IP	５		IP	５		IP	５		IP	６		IP	５		IP	５		IP

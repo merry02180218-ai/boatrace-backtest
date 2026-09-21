@@ -1,0 +1,8 @@
+data=
+1	0
+外崎　　　悟	9.20	0.13	1.6	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		IP
+坂井　　滉哉	3.90	0.18	4.5	２		IP	３		IP	４	4	IP	５		IP	２		IP	４	3	IP	６		IP	６		IP	６		IP	４		IP
+山崎　　聖司	3.30	0.16	2.9	３		IP	３		IP	６		IP	５		IP	５		IP	６		IP	６		G3	５		IP	４	4	IP	２		IP
+本橋　　克洋	4.30	0.19	3.6	３		IP	３		IP	３		IP	４		IP	４		IP	４		IP	４		IP	５		IP	３		IP	６		IP
+村本　　大成	3.33	0.19	3.9	５		IP	６		IP	欠		IP	５		IP	２		IP	３	4	IP	３		IP	６	6	IP	５		IP	５		IP
+菊池　　宏志	2.70	0.14	3.4	５		G3	４		G3	５		IP	３		IP	５		IP	５		G3	６		G3	３		G3	６		IP	６		G3

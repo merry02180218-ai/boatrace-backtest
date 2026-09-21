@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　愛実	5.30	0.13	2.2	１		IP	５	3	IP	５		IP	４		IP	４		IP	１		IP	２		IP	２		IP	４		IP	６		IP
+末永　　由楽	7.70	0.15	2.8	１		IP	１		IP	６		IP	２		IP	３	3	IP	１		IP	３		IP	３	3	IP	１		IP	１		IP
+杉田　　篤光	5.20	0.21	3.8	６		G3	３		G3	５		IP	３	5	IP	３		IP	６		IP	２		IP	５		IP	１		IP	１		IP
+佃　　　來紀	5.00	0.12	2.3	１		IP	３		IP	５		IP	２		IP	３		IP	４	5	G3	３		G3	５		IP	４		G3	５		G3
+高橋　　直哉	2.78	0.16	4.0	５		IP	６		IP	５		IP	６		G3	４		G3	４		IP	６		IP	４		IP	転		IP	３		IP
+大池　　佑来	3.50	0.13	3.4	５		IP	６		IP	４		IP	４		G1	５		G1	６		G1	６		IP	６		SG	４		G1	２		G1

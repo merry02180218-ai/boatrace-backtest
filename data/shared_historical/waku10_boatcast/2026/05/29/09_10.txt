@@ -1,0 +1,8 @@
+data=
+1	0
+大場　　　敏	9.40	0.12	2.1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	２		IP	１		IP	１		IP
+小黒　　竜吾	4.30	0.16	3.3	５		IP	１	3	IP	３		IP	６		IP	４		IP	２		IP	５		IP	４		IP	５		IP	４		IP
+北村　　征嗣	6.60	0.18	3.4	妨		IP	４		IP	３		G1	４	4	G1	１		IP	１	4	IP	１		IP	３		G3	４		G3	１		IP
+森　　　竜也	4.20	0.16	3.6	２		IP	５		IP	６		IP	２		IP	３		G3	６		IP	５		IP	４		IP	３		IP	４		IP
+作間　　　章	5.10	0.17	3.6	５		IP	３		IP	４		IP	３		IP	４	4	IP	３		IP	２		IP	３		IP	６		G1	３		G1
+木山　　和幸	3.20	0.19	4.8	４		IP	３	5	IP	３		IP	６		IP	４		IP	６		G3	６		IP	５		IP	３		IP	６		IP

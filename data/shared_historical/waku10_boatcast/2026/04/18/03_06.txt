@@ -1,0 +1,8 @@
+data=
+1	0
+山口　　　亮	7.40	0.16	2.6	５		IP	２		G3	４		IP	１		IP	１		IP	２		IP	５		IP	１		IP	１		G3	１		IP
+田川　　大貴	5.40	0.17	2.4	３		IP	２		IP	２		IP	Ｆ		IP	２		IP	６		IP	６		IP	２		IP	３		IP	２		IP
+坪井　　爽佑	5.30	0.18	3.2	６		IP	３		IP	２		IP	３		IP	１		IP	６	4	IP	３	5	IP	６		IP	４		IP	１		IP
+上原　健次郎	4.60	0.17	3.5	４		IP	４		IP	１		IP	６		IP	４		IP	１		IP	６		IP	５		IP	５		IP	２		IP
+澤　　　大介	4.40	0.20	4.0	１		IP	４		IP	６	6	IP	６		IP	５		IP	５		IP	４		IP	２	4	IP	１		IP	５		IP
+熊倉　　幹太	1.00	0.24	5.1	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

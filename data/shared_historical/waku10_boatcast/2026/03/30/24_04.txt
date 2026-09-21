@@ -1,0 +1,8 @@
+data=
+1	0
+門間　　雄大	7.90	0.13	2.6	１		IP	１		IP	２		IP	１		IP	２		IP	５		G3	６		G3	１		IP	１		IP	１		IP
+篠原　　晟弥	4.80	0.12	2.9	５		G2	５		IP	５		IP	２	5	IP	３		IP	６		IP	３		IP	１		IP	２		IP	５		IP
+岩永　　節也	5.40	0.18	3.9	３		IP	５		IP	１		IP	６		IP	６		IP	３		IP	２		IP	３		IP	２		IP	３		IP
+北山　　康介	5.60	0.14	2.9	２		IP	６		IP	６		IP	６		IP	３		IP	２		IP	１		IP	２		SG	２		IP	６		IP
+星田　　夢結	1.50	0.14	2.7	５	6	IP	５		IP	４	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP
+片岡　　恵里	3.00	0.20	4.2	５		G3	２		G3	４		G3	６		G1	４		IP	５		G3	４		G3	６		IP	６		G3	５		G3

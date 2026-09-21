@@ -1,0 +1,8 @@
+data=
+1	0
+岩下　　巧斗	7.50	0.14	3.7	５		IP	１		IP	１		IP	１		IP	２		IP	６		IP	１		IP	１		IP	１		IP	４		IP
+梅原　　祥平	2.20	0.17	3.9	６		IP	５		IP	５		IP	５		IP	２		IP	６		IP	６		IP	６		IP	５		IP	５		IP
+倉田　　茂将	5.50	0.16	3.3	３	2	IP	５		IP	５		G3	６		G3	２		IP	３		IP	３		IP	３		IP	１		IP	２		IP
+成貞　　琳平	3.30	0.17	4.3	２		IP	４		IP	５		IP	６		IP	４		IP	４		IP	５		IP	３		IP	６		IP	６		IP
+金子　　怜央	2.80	0.14	2.1	６		IP	１		IP	５		IP	５		IP	３		IP	５	4	IP	６		IP	５		IP	６		IP	６		IP
+高橋　　龍治	3.67	0.14	4.3	４		IP	欠		IP	２		IP	６		IP	６		IP	４		IP	３		IP	３		IP	５		IP	６		IP

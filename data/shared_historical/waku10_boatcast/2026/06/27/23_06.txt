@@ -1,0 +1,8 @@
+data=
+1	0
+山川　　雄大	5.80	0.22	4.0	１		IP	５		IP	３		IP	１		IP	５		IP	２		IP	５		IP	１		IP	２		IP	Ｆ		IP
+中島　　昂章	7.10	0.19	3.6	１	1	IP	６		IP	３		IP	１		IP	３		IP	３		IP	１		IP	１		IP	３		IP	３		IP
+川田　　正人	4.30	0.15	4.1	５	4	IP	４		IP	５		IP	５		IP	１	4	IP	４	4	IP	３		IP	３		IP	６		IP	３		IP
+岩津　　徹郎	5.20	0.16	2.8	４		IP	３		IP	３		IP	２		IP	４		IP	エ	6	IP	１		IP	４		IP	３		IP	４		IP
+松浦　　　勝	2.40	0.17	3.3	５		IP	４		IP	６	6	IP	５	6	IP	３		IP	６		IP	５		IP	６		IP	６		IP	４		IP
+田中　　大輝	1.20	0.24	3.7	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP

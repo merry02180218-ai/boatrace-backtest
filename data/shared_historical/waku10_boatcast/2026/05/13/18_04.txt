@@ -1,0 +1,8 @@
+data=
+1	0
+平田　　忠則	8.40	0.14	3.2	３		IP	１		IP	３		G1	１		G1	１		IP	１		IP	２		G3	１		G3	１		IP	５		IP
+西舘　　　健	7.10	0.10	2.5	２		IP	２		IP	２		IP	２		IP	６		IP	２		IP	２		IP	４		IP	１		IP	２		IP
+宮地　　博士	4.20	0.19	3.2	４		IP	転	4	IP	２		IP	６		IP	４		IP	６		IP	２		IP	５		IP	１		IP	４		IP
+吉田　　一心	4.10	0.20	4.7	５		IP	４		IP	４		IP	６		IP	５	5	IP	５		IP	４		IP	２		IP	３		IP	２		IP
+川合　　理司	3.40	0.21	4.0	６		IP	４		IP	４		IP	４		IP	５		IP	５	6	IP	４		IP	６		IP	３		IP	３		IP
+宮武　　英司	3.00	0.16	3.5	４		IP	５	5	IP	４	5	IP	３		IP	５		IP	５		IP	４		IP	５		IP	５		IP	５		IP

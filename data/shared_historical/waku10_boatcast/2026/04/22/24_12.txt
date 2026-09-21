@@ -1,0 +1,8 @@
+data=
+1	0
+岡崎　　凪汰	5.10	0.13	3.3	３		IP	転		IP	６		IP	５		IP	５		IP	２		IP	２		IP	３		IP	２		IP	１		IP
+大森　　　翼	5.50	0.16	4.6	４		IP	３		IP	５		IP	５		IP	２		IP	２		IP	１		IP	２		IP	３		IP	６		IP
+牧村　　俊輝	2.30	0.14	3.0	４		IP	５	4	IP	５		IP	６		IP	４		IP	５		IP	５		IP	４		IP	６		IP	６		IP
+木山　　大聖	3.10	0.21	3.8	６		IP	６		IP	５		IP	４	5	IP	５		IP	３		IP	５		IP	６		IP	２		IP	４		IP
+高井　　駿弥	3.30	0.16	3.1	３		IP	４		IP	６		IP	５		IP	５		IP	５		IP	４		IP	４		IP	５		IP	３	4	IP
+石本　　裕武	4.80	0.14	3.1	１		IP	６		G1	４		IP	１	5	IP	５		G1	６		IP	５		IP	３		IP	５		G1	３	5	G1

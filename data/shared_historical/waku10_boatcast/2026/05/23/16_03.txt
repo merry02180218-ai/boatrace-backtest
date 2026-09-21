@@ -1,0 +1,8 @@
+data=
+1	0
+藤田　　靖弘	8.30	0.14	2.1	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	６		IP	４		IP	１		IP	１		IP
+坪内　　　実	3.50	0.20	4.5	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	４		IP	２		IP	１		IP	３		IP
+土屋　　　蘭	5.80	0.12	2.3	１		IP	６		G2	Ｆ		IP	４		IP	４		IP	３		IP	２		IP	２		IP	１		IP	３		IP
+野見山　拓己	4.60	0.18	2.7	５		IP	２		IP	５		IP	３		IP	６		G3	６		IP	４		IP	３		IP	１		IP	３		IP
+戸敷　　晃美	5.70	0.17	3.3	１		IP	１		IP	６		IP	３		G1	４		G1	４		IP	４		IP	３		G3	４		IP	３		IP
+森　　　智哉	5.20	0.20	3.8	３		IP	３		IP	５		IP	４		IP	３		IP	４		IP	３		IP	３		IP	４		IP	２		IP

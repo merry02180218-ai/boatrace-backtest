@@ -1,0 +1,8 @@
+data=
+1	0
+宮崎　心之介	7.89	0.15	2.9	１		IP	１		IP	３		IP	１		IP	４		IP	１		IP	１		IP	６		IP	１		IP			IP
+大島　隆乃介	4.00	0.14	2.7	４		IP	５		IP	５		IP	５		IP	４		IP	５		IP	３		IP	５		IP	３		IP	１		IP
+大月　　遊雅	4.22	0.16	2.7	落		IP	３		IP	３		IP	２		IP	５		IP	５		IP	５		IP	４		IP	５		IP	３		IP
+藤森　　拓海	2.40	0.16	4.5	５		IP	６		IP	６	5	IP	３		IP	４		IP	５		IP	６		IP	４		IP	５		IP	６		IP
+廣瀬　　　凜	7.50	0.13	2.7	３		IP	２		IP	２		IP	２		IP	５		IP	２		IP	２		G2	３		IP	１		IP	１		IP
+水谷　　理人	5.90	0.16	2.9	６		IP	２		IP	４		IP	１	4	IP	３	5	IP	４		G3	４		IP	３		IP	３		IP	１	5	IP

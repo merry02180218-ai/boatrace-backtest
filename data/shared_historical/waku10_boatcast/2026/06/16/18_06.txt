@@ -1,0 +1,8 @@
+data=
+1	0
+佐竹　　太一	8.00	0.13	2.3	４		IP	１		IP	１		IP	５		IP	１		IP	２		IP	１		IP	２		IP	２		IP	１		IP
+船岡　洋一郎	6.90	0.13	3.1	１	1	G1	５		G2	２		G2	４		IP	２	3	IP	１		IP	２		IP	４		G1	３		IP	４		G1
+倉田　　茂将	4.20	0.16	3.1	５		IP	Ｆ		IP	３	4	IP	４		IP	１		IP	５		IP	６		IP	２		IP	６		IP	２		IP
+澤崎　　雄哉	5.40	0.15	3.4	５	5	IP	３		IP	１		IP	１		IP	５		IP	３		IP	２	3	IP	５		IP	５		IP	３		G3
+森永　　　隆	6.30	0.16	3.6	２		IP	１		IP	４	6	IP	２		IP	６		IP	３		IP	３		IP	２		IP	２		IP	４		IP
+岩崎　　正哉	3.10	0.22	5.2	４		IP	４		IP	５		IP	４	4	IP	４		G3	５		G3	３		IP	６		IP	５	4	IP	５		IP

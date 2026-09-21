@@ -1,0 +1,8 @@
+data=
+1	0
+古澤　　光紀	9.70	0.13	1.6	２		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+久田　　　武	5.90	0.13	3.5	３		IP	３		IP	１		IP	５		IP	５		IP	１		IP	６		IP	５		IP	１		IP	１		IP
+松本　　博昭	5.50	0.14	3.0	２		IP	３		IP	３		IP	転	4	IP	１		IP	４		IP	４		IP	６		IP	２		IP	２		IP
+平高　　奈菜	6.11	0.17	3.7	２		IP	２		G2	６		G2	３		SG	１		G3	２		G3	欠		G1	４		G1	５		IP	５	5	G1
+淺田　千亜希	4.10	0.16	2.9	６		IP	２		G3	６		IP	３		G3	５		G3	６	6	IP	３		IP	４		IP	４		IP	２	4	IP
+西村　美智子	3.20	0.19	4.7	５		IP	６		IP	３		IP	４		IP	６		IP	５		IP	４		IP	３		IP	４		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　喜智	8.10	0.14	4.0	６		IP	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	２		IP	２		IP	１		IP
+福嶋　　智之	5.10	0.14	3.0	２		IP	４		IP	２	4	IP	４		IP	３		IP	６		IP	２	3	IP	２		IP	５		IP	５		IP
+松田　　隆司	4.60	0.17	2.9	６		IP	２		IP	４	4	IP	２		IP	２	4	IP	５		IP	６		IP	５		IP	１		IP	５		IP
+森　　　智也	5.40	0.19	4.5	５		IP	５		IP	２		IP	４		IP	２		IP	３		IP	４		IP	４		IP	４		IP	２		IP
+小森　　信雄	3.50	0.25	4.8	６		IP	５		IP	４		IP	５		IP	３		IP	４	4	IP	４	6	IP	２		IP	５		IP	５		IP
+赤松　　咲香	1.60	0.23	4.6	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	４		IP	６		IP	５		G3	６		G3

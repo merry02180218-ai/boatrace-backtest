@@ -1,0 +1,8 @@
+data=
+1	0
+上之　　晃弘	6.60	0.15	2.6	１		IP	４		IP	３		IP	３		IP	２		IP	３		IP	１		IP	１		IP	５		IP	４		G3
+眞鳥　　章太	7.80	0.16	2.7	１		IP	２		IP	２		IP	２		IP	２		IP	１		IP	２		IP	５		IP	２		IP	２		IP
+原村　　拓也	6.20	0.18	4.2	３		IP	２		IP	４		IP	２		IP	３		IP	３		IP	５		IP	２		IP	３		IP	２		IP
+抹香　　雄三	4.10	0.16	2.7	４		IP	３		IP	５		IP	３		IP	Ｆ		IP	４		IP	６		IP	１		IP	３		IP	５		IP
+富永　　大一	4.50	0.20	4.5	２		IP	６		IP	５		IP	３		IP	３		IP	５		IP	３		IP	３		IP	４		IP	４		IP
+上田　　洋平	4.30	0.18	3.3	５		IP	３		IP	６		IP	４		IP	４		IP	４	4	IP	４		IP	２		IP	３	5	IP	４		G3

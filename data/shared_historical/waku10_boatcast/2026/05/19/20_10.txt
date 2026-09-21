@@ -1,0 +1,8 @@
+data=
+1	0
+宮脇　　遼太	9.78	0.14	2.9	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	落		IP	１		IP	１		IP	１		IP
+小山　　　勉	7.40	0.17	3.2	２		IP	２		IP	３		IP	１		IP	２	3	IP	２		IP	１		IP	４		IP	３		IP	３		IP
+小池　　公生	5.30	0.17	3.9	１		IP	２		IP	１		IP	１		IP	６		IP	５		IP	５		IP	５		IP	５		IP	３		IP
+高田　ひかる	5.70	0.17	3.8	１		IP	６		IP	４		G1	３		IP	２		IP	６		IP	４		IP	１		IP	１		IP	６		G1
+松江　　秀徳	5.40	0.13	2.3	５		IP	５		IP	３		IP	１		IP	１		IP	３		IP	２		IP	４	4	IP	４	4	IP	６		IP
+宮村　　勇哉	1.60	0.18	3.9	６		IP	６		IP	５		IP	６	5	IP	６		IP	６		IP	６		IP	５		IP	４		IP	５		IP

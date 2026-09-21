@@ -1,0 +1,8 @@
+data=
+1	0
+古賀　　智之	8.00	0.16	2.9	２		IP	１		IP	１		IP	１		IP	４		IP	２		IP	６		G2	２		IP	１		IP	１		IP
+井上　　　茂	5.90	0.13	2.6	３		IP	６		IP	５		IP	２		IP	２		IP	２		IP	２		IP	３		IP	５		IP	１		IP
+渡辺　　千草	4.70	0.13	2.8	４	4	IP	４		IP	６		IP	２		IP	３		IP	４		G3	２		G3	３		IP	５		IP	４		G3
+海野　康志郎	5.70	0.14	3.0	１	3	IP	６		G1	２		G1	５		G1	３		G1	４		G1	６		G1	４	2	IP	２		IP	３		G1
+廣瀬　　篤哉	2.70	0.18	4.0	４		IP	６		IP	４		IP	転		IP	６		IP	３		IP	６	6	IP	４	6	IP	４		IP	５	6	IP
+福西　広太郎	3.70	0.18	3.5	４		IP	３		IP	４		IP	５		IP	６		IP	３		IP	４		IP	５		IP	３		IP	５		IP

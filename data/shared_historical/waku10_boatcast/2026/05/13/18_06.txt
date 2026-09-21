@@ -1,0 +1,8 @@
+data=
+1	0
+中野　　仁照	7.20	0.14	2.9	１		IP	１		IP	３		IP	６		G1	２		IP	４		IP	１		IP	２		IP	１		IP	４		IP
+廣瀬　　　凜	8.60	0.16	3.1	１		IP	１		IP	３		IP	２		IP	２		IP	２		IP	１		IP	１		IP	２		IP	２		IP
+川上　　清人	4.40	0.16	3.8	５		IP	３		IP	２		IP	４		IP	３	4	IP	１		IP	５		IP	６		IP	６		IP	４		IP
+藤井　　公人	4.50	0.17	3.1	５	5	IP	２		IP	４		IP	２		IP	２		IP	５		G3	５	6	G3	４		IP	３		IP	６		IP
+上田　　龍星	5.20	0.15	3.5	３		IP	２		IP	転	2	IP	３		G1	４		G1	１	4	SG	５		IP	２		G1	妨		G2	５		G2
+西村　　仁吾	1.30	0.23	4.9	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP	５		IP	６		IP

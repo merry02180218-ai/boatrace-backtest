@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　唯央	6.10	0.11	2.7	２		IP	３		IP	４		IP	２		IP	１		IP	５		IP	６		IP	１		IP	１		IP	５	2	IP
+石原　　　光	6.00	0.16	3.4	４		IP	５		IP	１		IP	２		IP	３		G3	１		IP	４		IP	２		IP	５		IP	３		IP
+和田　　拓也	6.90	0.14	2.1	１		IP	３		IP	４		IP	１		IP	２		IP	２	4	IP	４		G1	６		G1	１		IP	３		IP
+木下　　翔太	5.60	0.15	3.5	２		IP	３		G1	５		G1	６		G1	４		IP	２		G1	５		G1	６		G1	１		IP	２		IP
+石井　　孝之	3.20	0.13	3.0	５		IP	Ｆ		IP	６		IP	２		IP	３		IP	６		IP	２		IP	６	6	IP	４		IP	６		IP
+小川　　広大	1.80	0.23	5.8	６		IP	６		IP	５		IP	５		IP	６		IP	５	5	IP	５		IP	４		IP	５		IP	６		IP

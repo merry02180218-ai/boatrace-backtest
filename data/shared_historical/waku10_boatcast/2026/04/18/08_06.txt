@@ -1,0 +1,8 @@
+data=
+1	0
+平田　さやか	8.10	0.14	2.1	３		IP	５		IP	２		IP	１		IP	１		G3	１		G3	２		G3	３		G1	１		G3	１		IP
+千葉　　真弥	6.20	0.15	2.5	４		IP	４		IP	２		IP	３		IP	２		IP	３		IP	４		IP	３		IP	３		IP	１		IP
+橋本　　久和	6.22	0.17	3.4	Ｆ		IP	４	1	IP	転	4	IP	１		IP	１		G3	３		IP	３		IP	４		IP	１		IP	３		IP
+磯村　　　匠	4.80	0.22	3.4	５		IP	３		IP	４		IP	３	5	IP	４		IP	５		IP	２		IP	４		IP	３		IP	３		IP
+和田　　操拓	5.00	0.13	2.3	６	4	IP	１		IP	１		IP	５		IP	３		IP	３		IP	４		IP	３		IP	５		G2	５		IP
+山下　　奈緒	3.70	0.23	5.1	５		IP	４		IP	１		IP	４		IP	６		G3	４		G3	５		IP	５		IP	４		G3	４		G3

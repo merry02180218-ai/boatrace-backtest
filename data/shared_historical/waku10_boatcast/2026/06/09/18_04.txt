@@ -1,0 +1,8 @@
+data=
+1	0
+馬野　　　耀	6.90	0.16	3.2	１		IP	６		G2	２		IP	６		IP	１		IP	１		IP	４		IP	４		IP	１		IP	１		IP
+松村　　　敏	6.70	0.12	2.6	１		IP	６		IP	３		IP	２		IP	２		G1	５		G1	２		IP	１		IP	５		IP	１		IP
+福嶋　　智之	5.20	0.15	2.9	５		IP	１		IP	２		IP	４		IP	５		IP	４	4	IP	２		IP	２		IP	５		IP	４		IP
+岡部　　　哲	3.90	0.16	3.6	２		IP	６		IP	２		IP	２		IP	５		IP	４		IP	６		IP	５		IP	４		IP	６		IP
+仲本　　　舜	3.30	0.15	3.4	６		IP	６		IP	２		IP	５		IP	６		IP	４		IP	６		IP	６		IP	１		IP	４		IP
+河野　　主樹	4.30	0.16	3.5	１		IP	４		IP	５		IP	３		IP	４		IP	３		IP	３		IP	５		IP	６		IP	５		G3

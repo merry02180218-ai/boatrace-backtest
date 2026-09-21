@@ -1,0 +1,8 @@
+data=
+1	0
+上田　　紗奈	8.10	0.14	2.8	１		IP	２	2	IP	５		G1	１		IP	２		IP	１		IP	５		IP	１		IP	１		IP	１		IP
+山一　　鉄也	7.00	0.17	3.1	１		IP	１		G3	４		IP	４		IP	１		IP	１		IP	４		IP	２		IP	４	3	IP	３		IP
+前田　　篤哉	7.20	0.19	3.2	３		G3	１		G3	３		IP	４		G1	２		G2	２		IP	３		IP	２		IP	３		IP	２		IP
+山田　　竜一	5.40	0.17	3.2	２		IP	３		IP	３		IP	４	3	IP	２		IP	４		IP	３		IP	５		IP	３		IP	４		IP
+下出　　卓矢	5.80	0.16	3.0	４		IP	４	3	IP	５		G2	１		IP	１		IP	６		IP	１		IP	３		IP	３	6	G1	５	6	G1
+山田　　佑樹	3.20	0.20	4.8	５		IP	６		IP	３		IP	６		IP	３		IP	３		IP	３		IP	６		IP	５		IP	６	5	IP

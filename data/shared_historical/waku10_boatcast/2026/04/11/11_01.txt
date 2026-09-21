@@ -1,0 +1,8 @@
+data=
+1	0
+中曽　　瑠華	5.50	0.13	2.9	２		IP	６		IP	１		IP	６		G3	２		IP	１		IP	４		IP	５		IP						IP
+佃　　　來紀	6.22	0.16	3.6	２		IP	２		IP	４		G3	２		G3	転		IP	２		G3	２		IP	５		IP	５		IP	２		IP
+小林　　愛実	3.20	0.17	2.5	６		IP	エ		IP	６		IP	６		IP	６		IP	４		IP	１		IP	３		IP	５		IP	３		IP
+宇土　　泰就	3.10	0.15	2.9	４		IP	２		IP	５		IP	６		IP	５		IP	６		IP	５		IP	６		IP	５	6	IP	２		IP
+藤山　　湧太	2.20	0.21	4.5	６		IP	５	6	IP	６		IP	６		IP	６	6	IP	３		IP	４		IP	５		IP	転	6	IP	４		IP
+吉田　　和仁	2.80	0.23	4.5	３		IP	６		IP	５		IP	４		IP	６		IP	６	4	IP	転		IP	４		IP	２	4	IP	６		IP

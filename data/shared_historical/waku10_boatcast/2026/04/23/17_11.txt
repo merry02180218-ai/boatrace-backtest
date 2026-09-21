@@ -1,0 +1,8 @@
+data=
+1	0
+太田　　和美	9.30	0.18	3.8	２		G1	２		G1	２		G1	２		G1	１		IP	１		IP	２		IP	１		IP	２	2	IP	１		IP
+服部　　幸男	3.90	0.14	2.9	２		IP	５		IP	５		IP	６		IP	５		IP	６		G1	２		G1	２		IP	６		IP	４		IP
+守田　　俊介	6.50	0.11	2.6	２		IP	１		IP	５	4	SG	３		IP	２		G1	３		G1	５		G1	２		IP	５		IP	２		IP
+浅見　　昌克	6.10	0.13	2.3	３		IP	１		IP	２		IP	４		IP	６		IP	３		IP	５		IP	２	5	IP	２		IP	２		IP
+石倉　　洋行	5.00	0.10	2.4	５		IP	２		IP	５		G1	５		G1	１		IP	３		IP	５		IP	５		IP	２		IP	３	6	IP
+仲口　　博崇	2.90	0.22	4.3	３	3	IP	５	5	G3	４	5	G3	５	4	IP	妨	4	IP	４	5	IP	６	3	IP	６		G1	５	4	IP	３	3	G3

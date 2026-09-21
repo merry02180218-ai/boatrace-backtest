@@ -1,0 +1,8 @@
+data=
+1	0
+一柳　　和孝	7.80	0.21	2.6	１		IP	２		IP	１		IP	３		IP	２		IP	５		IP	３		IP	１		IP	２		G3	１		G3
+妹尾　　忠幸	7.10	0.14	2.8	３		IP	３		IP	２		IP	３		IP	２	1	IP	４		G1	２		G2	２		G2	４		IP	１		IP
+竹田　　辰也	7.60	0.16	2.6	５		IP	２		IP	３		IP	２		IP	３		IP	２		IP	１		IP	２		IP	１		IP	１		IP
+伊久間　陽優	6.30	0.14	2.3	３		IP	３		IP	４		IP	３		IP	４		IP	１		IP	１	5	G3	２		G3	６		IP	２		IP
+金児　　隆太	3.40	0.18	4.3	６	4	IP	６		IP	４		IP	５		IP	６		IP	１	4	IP	３		IP	６		IP	３		IP	５	3	IP
+吉村　　正明	4.70	0.16	2.6	３		IP	３		IP	２		IP	４	5	IP	６		IP	６		IP	２	5	IP	３		IP	６		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+片岡　　雅裕	9.50	0.11	2.2	２		G1	３		G1	１		G1	３		G1	１		IP	１		IP	１		IP	２		IP	１		G1	１		IP
+深谷　　知博	5.70	0.14	3.8	２		G1	６		G1	２		G1	６		G1	３		G1	２		G1	６		G1	４		G1	２		IP	４		IP
+和田　　拓也	4.50	0.18	4.2	６		G1	１		IP	３		IP	５		IP	２		IP	５		G1	２		IP	５		IP	６	4	IP	６		IP
+稲田　　浩二	7.30	0.11	2.7	３		G1	２		G1	２		G1	２		G1	３		G1	４		G1	２		IP	２		IP	３		IP	４		G1
+中澤　　和志	4.80	0.14	2.9	４		G1	５	4	IP	４		IP	３	4	IP	５		G1	３		G1	３		G1	転		G1	３		IP	２	4	IP
+大峯　　　豊	7.00	0.13	2.4	６		G1	３		G1	１	4	IP	１		IP	３		G2	２	4	IP	１		IP	２		SG	５	5	G1	５		G1

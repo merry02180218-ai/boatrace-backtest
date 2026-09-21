@@ -1,0 +1,8 @@
+data=
+1	0
+内山　　文典	8.20	0.15	2.7	３		IP	１		IP	５		IP	１		IP	２		IP	２		IP	１		IP	１		IP	２		IP	１		IP
+中嶋　　世奈	2.70	0.26	4.3	３		IP	４		IP	４		IP	５		IP	３		IP	６		IP	６		IP	６		IP	６	6	IP	６	3	IP
+堀本　　翔太	2.50	0.23	4.7	６		IP	５		IP	５		IP	転		IP	３		IP	４		IP	４		IP	５		IP	５		IP	５		IP
+大西　　　賢	5.40	0.18	2.9	３		IP	３		IP	４		IP	５		IP	２		IP	１		IP	５		IP	５		IP	４		IP	１		IP
+高橋　　淳美	1.40	0.21	4.4	６	4	IP	６		IP	６		G3	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	４		IP
+今出　　晋二	2.80	0.22	4.6	６		IP	６		IP	３		IP	５		IP	５	5	IP	２	5	IP	４	5	IP	５		IP	６		IP	６		IP

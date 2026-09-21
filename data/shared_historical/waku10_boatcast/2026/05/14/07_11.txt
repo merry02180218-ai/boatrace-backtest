@@ -1,0 +1,8 @@
+data=
+1	0
+大瀧　明日香	9.40	0.13	2.2	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	２		IP	１		G3	１		G3
+出口　舞有子	4.50	0.18	2.5	２		IP	３		IP	３		G3	５		G3	５		IP	２		IP	２		IP	５		IP	６		IP	５		IP
+豊田　　　結	6.10	0.14	2.3	１		G3	６		G3	３		IP	３		G3	３		IP	３		IP	２		IP	５		IP	３		IP	１		IP
+伊藤　　玲奈	3.30	0.23	5.0	６	5	IP	５		IP	６		IP	４		IP	３		G3	３		IP	４		IP	５		IP	３		IP	６		IP
+原田　　佑実	4.20	0.14	2.7	５		G3	４		G3	２		G3	５		G3	４		IP	５		IP	３	6	G3	６	6	G3	４		IP	２		IP
+西岡　　育未	2.90	0.17	3.7	４		G3	５	5	G3	２		G3	６		IP	６		IP	４		G3	５		G3	６		IP	５		IP	４		IP

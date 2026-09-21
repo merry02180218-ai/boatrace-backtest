@@ -1,0 +1,8 @@
+data=
+1	0
+角浜　　　修	6.60	0.17	2.9	４		IP	４		IP	５		IP	２		IP	１		IP	１		IP	４		IP	１		IP	４		IP	１		IP
+津田　　陸翔	7.50	0.18	3.9	１		IP	４		IP	５		IP	２		IP	２		IP	１		IP	３		G2	２		IP	２		IP	１		IP
+山口　　　剛	7.60	0.12	2.3	５		SG	４		SG	６		G1	２		G1	２		G1	２		G1	２		G1	３		G1	１		G1	２		IP
+岩井　　　繁	3.50	0.18	4.5	４		IP	６		IP	３		IP	５		IP	３		IP	３		IP	６		IP	３		IP	６		IP	５		IP
+森　　　智哉	5.00	0.17	2.8	４		IP	２		IP	４		IP	２		IP	４		IP	５		IP	３		IP	３		IP	３		IP	５		IP
+谷　　海夏人	1.40	0.25	5.1	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	４		IP	６		IP

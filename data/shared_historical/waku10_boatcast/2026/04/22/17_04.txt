@@ -1,0 +1,8 @@
+data=
+1	0
+上平　　真二	9.50	0.15	3.5	３		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+守田　　俊介	5.60	0.13	2.8	２	3	IP	５		IP	４		IP	２		IP	３		SG	２		IP	６		G1	５		G1	１		IP	６		IP
+古結　　　宏	5.30	0.12	3.3	５	1	G1	２		IP	２		IP	６		G1	４		G1	５		IP	４	4	IP	５		IP	１		IP	２		G1
+湯川　　浩司	6.40	0.13	2.5	２		G1	１	5	G1	６		G1	５		G1	１		G2	１		IP	３		IP	３		G1	６		G1	５		G1
+徳増　　秀樹	5.50	0.12	2.5	２	4	IP	３		IP	３		G1	５		G1	４	4	IP	１		IP	６	6	G1	６		IP	４		IP	２	3	IP
+石渡　　鉄兵	5.90	0.12	3.2	６		G1	２		IP	５		SG	４		G1	３		G1	１		G1	４		G1	２		G1	４		G1	５		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+渡辺　　浩司	9.50	0.15	3.2	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		G1
+山田　　哲也	6.40	0.13	2.7	３		IP	２		IP	２		IP	１		IP	４		G1	４		G1	４		IP	２		IP	３		IP	４		IP
+平野　　和明	7.00	0.15	3.2	１		IP	２		IP	２		IP	１		IP	３		IP	２		IP	４		IP	３		IP	４		IP	３		IP
+末永　　祐輝	6.00	0.19	2.8	４		IP	転		IP	３		IP	転		IP	２		IP	３		IP	１		IP	４		IP	１		IP	３		IP
+金子　　順一	2.90	0.22	4.9	１	4	IP	５		IP	４		IP	５		IP	６		IP	６	4	IP	５		IP	５		IP	６		IP	４	4	IP
+田邉　　亮蔵	3.80	0.21	4.4	５		IP	２		IP	５		IP	６		IP	４		IP	６		IP	４		IP	４		IP	３		IP	４		IP

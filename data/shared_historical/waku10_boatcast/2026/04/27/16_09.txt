@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　一毅	7.20	0.18	2.8	４		IP	３		IP	４		IP	２		IP	２		IP	１		IP	３	2	IP	２		IP	１		IP	２		IP
+吉永　　泰弘	6.10	0.15	2.9	１	3	IP	３		IP	３	3	IP	２		IP	２	1	IP	４		IP	４		IP	４		IP	６		IP	１		IP
+山下　　流心	3.60	0.17	3.5	転		IP	２		IP	３		IP	４		G3	６	4	G3	６		IP	６		IP	３		IP	６		IP	２		IP
+井川　　大作	4.60	0.13	2.4	４		IP	４		IP	５	5	G3	５		IP	５		IP	４		IP	４	5	IP	１		IP	２		IP	３		IP
+渥美　　卓郎	3.20	0.19	4.0	４		IP	５		IP	１		IP	５	6	IP	５		IP	５		IP	６		IP	３		IP	６		IP	５	4	IP
+松尾　　光広	3.70	0.28	5.4	６		IP	５		IP	１		IP	３	5	IP	５		IP	５		IP	５		IP	３		IP	５		IP	５		IP

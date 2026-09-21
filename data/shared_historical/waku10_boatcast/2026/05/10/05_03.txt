@@ -1,0 +1,8 @@
+data=
+1	0
+菊池　　峰晴	6.10	0.23	4.3	１		IP	３		IP	２	4	IP	６		IP	３	2	IP	２		IP	４		IP	２		IP	２		IP	５		IP
+三品　　隆浩	4.20	0.20	4.5	４		IP	３		IP	３		IP	４		IP	５		IP	６		IP	６		IP	４		IP	３		IP	２		IP
+近藤　　友宝	5.70	0.17	3.7	２		IP	３		IP	４		IP	６		IP	４		IP	２		IP	１		IP	２		IP	３		IP	５		IP
+堀本　　裕也	2.80	0.13	2.9	６		IP	４		IP	４		IP	１		IP	４	5	IP	６		IP	６		IP	６		IP	６		IP	６		IP
+桐本　　康臣	4.30	0.17	4.2	２		IP	６		IP	４		IP	５		IP	４		IP	５		IP	２	4	IP	５		IP	１		IP	Ｆ		IP
+藤田　　靖弘	2.40	0.16	3.6	４		IP	５		IP	４		IP	５		IP	５		IP	６		IP	５		IP	５		IP	４		G3	６		G3

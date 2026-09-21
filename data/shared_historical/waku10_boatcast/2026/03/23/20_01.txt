@@ -1,0 +1,8 @@
+data=
+1	0
+村上　　彰一	6.00	0.17	4.1	５		IP	４	2	IP	２		IP	２		IP	２		IP	３		IP	５		IP	３		IP	２		IP	２		G3
+萬　　　正嗣	3.40	0.17	2.8	６		IP	４		IP	６		IP	３		IP	３		IP	５		IP	３		IP	３		IP	６		IP	６		IP
+石川　　　諒	4.70	0.15	2.0	３		IP	４		IP	５		IP	３		IP	１		IP	５		IP	３		IP	５		IP	６		IP	２		IP
+小野　　信樹	3.40	0.18	2.2	６		IP	４		IP	１		IP	６		IP	５		IP	３	5	IP	６		IP	６		IP	３		IP	５		IP
+佐藤　ほのか	2.78	0.15	2.4	２		IP	６		IP	３		G3	５		G3	６		IP	５		G3	６		G3	５		IP	転		IP	５		IP
+上岡　　巧汰	1.67	0.21	4.6	６		IP	５		IP	６		IP	５		IP	６		IP	４		IP	５		IP	欠		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+坪井　　爽佑	4.90	0.21	4.1	３		IP	５		IP	６		IP	２		IP	５	2	IP	２		IP	３		IP	５		IP	１		IP	４		IP
+寳田　　亮治	5.56	0.20	4.5	エ		IP	６		IP	３		IP	３		IP	６		IP	２		IP	３		IP	３		IP	３		IP	１	3	IP
+村岡　　　賢	4.40	0.16	3.5	５		IP	３		IP	４		IP	５		IP	４		IP	５		IP	５		IP	２		IP	４		IP	２		IP
+藤山　　翔大	7.00	0.11	2.7	１		IP	３		IP	５	6	IP	４		IP	２		IP	１		IP	３		IP	１		IP	３		IP	２	2	IP
+堀井　　涼平	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+重野　　哲之	4.33	0.14	3.3	６		IP	３	5	IP	２		IP	不		IP	３		IP	５		IP	６		IP	６		IP	１		IP	５		IP

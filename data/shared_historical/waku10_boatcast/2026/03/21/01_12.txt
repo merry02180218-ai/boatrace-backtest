@@ -1,0 +1,8 @@
+data=
+1	0
+長谷川　晴哉	8.80	0.16	2.5	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	３		IP	４		IP	１		IP	１		IP
+鰐部　太空海	6.00	0.14	2.3	４		IP	３		IP	３		IP	３		IP	１		IP	１		G1	欠		IP	３		IP	５		IP	２		IP
+中本　　大樹	4.30	0.15	2.9	２		IP	３	4	IP	６		IP	２		IP	４	4	IP	６		IP	４		IP	５		IP	２		IP	６	2	IP
+若林　　義人	7.30	0.09	1.9	１		IP	４		IP	１		IP	６		IP	３		IP	１		IP	１		IP	６		G1	１		IP	２		IP
+倉田　　茂将	3.90	0.14	2.0	２	3	IP	６		IP	６	6	G3	６	6	G3	３		IP	２		IP	Ｆ		IP	５		IP	２		IP	４		IP
+中野　　希一	4.33	0.17	4.1	６		IP	５		G1	３		G1	２		IP	３		IP	２		IP	５		IP	６		IP	欠		IP	５		G1

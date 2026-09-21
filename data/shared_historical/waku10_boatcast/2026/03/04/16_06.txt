@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　忠政	9.30	0.13	3.1	不		G1	１		G1	１		IP	１		IP	１		IP	１		G1	１		G1	１		IP	１		IP	１		IP
+豊田　健士郎	6.90	0.14	3.8	２		IP	４		IP	５		G1	２		IP	２		IP	２		G2	２		G2	１		IP	１		IP	エ		SG
+茅原　　悠紀	8.50	0.12	3.1	１		G1	３		G1	５	2	G1	２		G1	２		IP	３		SG	２		G1	３		G1	１		SG	２		G1
+西岡　　顕心	6.30	0.15	3.2	２		G1	２	5	IP	３		IP	４		G1	２		IP	２		IP	６		IP	３		IP	１		IP	５		IP
+木村　　仁紀	5.30	0.13	2.4	４		IP	４		IP	２		IP	４		G1	３		G2	６		G2	６		IP	３		IP	２		IP	３	4	IP
+吉田　　裕平	4.80	0.13	2.7	５		G1	５		G1	２		G1	５		G1	２		IP	５		SG	４		SG	５		G1	４		SG	６		SG

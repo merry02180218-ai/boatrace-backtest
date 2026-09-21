@@ -1,0 +1,8 @@
+data=
+1	0
+今井　　貴士	9.40	0.14	2.5	２	2	IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+森　　晋太郎	6.90	0.18	3.5	３		IP	３		IP	６		IP	１	3	IP	１		IP	４		IP	２		IP	３		IP	２		IP	１		IP
+雑賀　　勇貴	4.78	0.17	3.9	４		IP	３		IP	４		IP	５	4	IP	転		IP	２		IP	４		IP	２		IP	３		IP	６		IP
+佐藤　　　悠	7.22	0.14	2.2	１		IP	２		IP	３		G2	１		G2	５		IP	転		IP	４		G2	５		IP	１		IP	１	5	IP
+下河　　誉史	3.20	0.21	4.2	３		IP	５		IP	４		IP	６		IP	５		IP	４		IP	３	4	IP	５		IP	６	6	IP	４		IP
+宮内　　直哉	3.30	0.24	4.6	３		IP	４		IP	３		IP	５		IP	３		IP	５		IP	６		IP	４		IP	６		IP	６		IP

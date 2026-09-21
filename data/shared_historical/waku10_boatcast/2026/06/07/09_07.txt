@@ -1,0 +1,8 @@
+data=
+1	0
+平岡　　重典	5.40	0.15	3.3	５		IP	５		IP	３		IP	４		IP	２		IP	１		IP	４		IP	４	2	IP	１		IP	４		IP
+北中　　元樹	5.20	0.19	4.4	４		IP	３		IP	４		IP	２		IP	４		IP	６		IP	６		IP	２		IP	２		IP	２		IP
+伏見　　俊介	6.60	0.11	1.9	Ｆ	4	IP	２		IP	６		IP	２		IP	１		IP	１		IP	２		IP	６		IP	１		IP	１		IP
+小林　　甘寧	6.30	0.13	2.0	３		IP	２		IP	２		IP	４		IP	３	5	IP	１		IP	４		IP	６		IP	１	5	IP	３	5	IP
+吉川　　貴仁	7.50	0.17	3.6	６		IP	３		IP	３		IP	３		IP	２		IP	２		IP	１		IP	１		IP	２		IP	１		G3
+榎　　　幸司	3.60	0.24	5.2	３		IP	５		IP	４	4	IP	５		IP	５		IP	４		IP	４		IP	５		IP	４		IP	３		IP

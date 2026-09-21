@@ -1,0 +1,8 @@
+data=
+1	0
+坂野　さくら	5.50	0.22	3.4	１		G3	６		G3	３	2	IP	３		G3	１		G3	５		IP	１		G3	５		IP	３		IP	５		IP
+高橋　　竜矢	6.30	0.13	2.9	４		IP	１		IP	１		IP	５		G1	１		IP	３		G1	４		G1	６		IP	１		IP	６		IP
+渡辺　　真至	6.20	0.12	2.8	１		IP	５		IP	２		IP	３		IP	２		IP	４	4	IP	２		IP	４		IP	３		IP	３		IP
+奥田　　　誠	4.40	0.14	3.0	６	5	IP	２		IP	妨		IP	４		IP	４		IP	３		IP	６	5	IP	１		IP	５		IP	２		IP
+渡邉　　睦広	6.30	0.15	1.8	２		IP	４		IP	３		IP	３		IP	３		IP	３		IP	６	6	IP	１		IP	２		G3	２	4	IP
+都築　　正治	4.20	0.15	2.2	６		IP	５		IP	５		IP	４		IP	４		IP	４		IP	４		IP	１	4	IP	６		IP	１		IP

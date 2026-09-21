@@ -1,0 +1,8 @@
+data=
+1	0
+河上　　年昭	6.20	0.15	3.7	６		IP	１		IP	４		IP	３		IP	４		IP	１		IP	１		IP	６		IP	１		IP	３		G3
+小川　竜太朗	6.20	0.19	4.4	５		IP	４		IP	３		IP	４		IP	１		IP	１		IP	３		IP	２		IP	１		IP	５		IP
+佐藤　　　航	7.30	0.15	3.0	１		IP	５		IP	３	4	IP	２		IP	２		G2	１		IP	５		IP	１		IP	４		IP	１		IP
+田中　瀬里奈	1.50	0.17	3.0	５	6	IP	６		IP	６		IP	５		IP	６	6	IP	６	5	IP	４	3	IP	６	6	IP	６		IP	６		IP
+中澤　　和志	4.44	0.14	2.7	５		G1	４		IP	３		IP	４		IP	３		IP	転		G1	４		G1	５	4	IP	４		IP	３	4	IP
+赤羽　　克也	4.00	0.15	3.9	３		IP	５		IP	５		IP	５		IP	４	5	IP	４	5	IP	４		IP	３	5	IP	４		IP	３		IP

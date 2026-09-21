@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　　萌	7.30	0.15	2.5	３		IP	転		IP	１		IP	１		IP	３		IP	１		IP	４		IP	３		G2	１		IP	１		IP
+中北　　　涼	5.78	0.16	2.5	２		IP	５		IP	２		IP	２		IP	１		G3	４		G3	３		IP	４		IP	落		IP	５		IP
+深山　　祐二	4.80	0.19	3.7	６		IP	３		IP	５		IP	３		IP	６		IP	２		IP	４		IP	２		IP	３		IP	３		IP
+桑島　　和宏	4.90	0.15	3.0	３		IP	２		IP	３		G1	６		G1	４		G1	５		G1	４		IP	３		IP	６		IP	３		IP
+深見　亜由美	3.80	0.19	3.1	１		IP	５		IP	３		IP	５		IP	５		IP	３		IP	５		IP	６		IP	３		G3	６		IP
+松田　　憲幸	1.70	0.25	5.3	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	４		IP	５		IP	５		IP	６		IP

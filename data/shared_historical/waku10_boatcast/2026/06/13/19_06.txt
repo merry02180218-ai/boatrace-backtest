@@ -1,0 +1,8 @@
+data=
+1	0
+吉永　　泰弘	8.20	0.16	2.5	１		G3	１		G3	１		IP	１		IP	４		IP	１		IP	１		IP	２		IP	５		IP	２		IP
+黒柳　　浩孝	5.80	0.18	4.1	４		IP	４	1	IP	５		G2	３		G2	３		IP	２		IP	２		IP	３		IP	２	4	IP	４	4	IP
+西村　　拓也	6.70	0.12	3.2	１		IP	３		IP	３		IP	２		IP	２		G1	６		G1	３		IP	１		IP	２		IP	６		G1
+佐藤　　　旭	4.10	0.20	5.0	２		IP	６		G3	４		IP	４		IP	３		G3	４	5	IP	６		IP	３		IP	３		IP	６		IP
+三川　　昂暁	5.00	0.17	3.4	５		IP	５		IP	２		IP	３		IP	２		IP	３		IP	２		IP	２		IP	５	6	IP	転		IP
+木場　雄二郎	2.80	0.16	3.0	４		IP	５		IP	６		IP	６		IP	６		IP	４		IP	５		IP	６		IP	１	5	IP	５		IP

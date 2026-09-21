@@ -1,0 +1,8 @@
+data=
+1	0
+渡　　　修平	5.30	0.17	3.4	５		IP	４		IP	５		IP	１		IP	１		IP	４		IP	２		IP	６		IP	４		IP	２		IP
+岡村　　将也	6.30	0.13	3.0	２		IP	６		IP	３		IP	２		IP	１		IP	５		IP	２		IP	２		IP	４		IP	２		G3
+平田　健之佑	5.90	0.10	1.8	１		IP	Ｆ		IP	３		G1	４		IP	５		IP	３		IP	２		IP	２		IP	３		IP	２		IP
+石原　　　光	4.90	0.13	2.4	６	6	IP	３		IP	５		IP	３		IP	２		IP	３		IP	２	5	IP	６		IP	１		IP	６		IP
+石村　日奈那	3.20	0.17	2.9	５	6	IP	６	6	IP	６		G3	３		G3	４		IP	６		IP	５		IP	２		IP	６		IP	３		IP
+関口　　智久	4.40	0.13	2.2	６		IP	３		IP	４		IP	６		IP	４		IP	１	5	IP	５		IP	３		IP	３		IP	４		IP

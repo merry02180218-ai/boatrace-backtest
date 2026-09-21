@@ -1,0 +1,8 @@
+data=
+1	0
+池田　　雄一	8.44	0.16	3.2	１		IP	１		IP	転		IP	１		IP	３		IP	１		IP	４		IP	１		IP	３		IP	１		IP
+伊藤　　紘章	3.70	0.20	4.3	３		IP	２		IP	５		IP	４		IP	２		IP	６		IP	６		IP	６		IP	４		IP	５		IP
+山道　　諄也	2.00	0.14	2.0	６	6	IP	６		IP	４		IP																					IP
+小川　　時光	2.90	0.16	3.1	４		IP	４		IP	５		IP	４		IP	３		IP	５	5	IP	５		IP	５		IP	５		IP	６		IP
+安藤　　瑠希	3.00	0.15	2.6	６		IP	３		IP	６		IP	３		IP	３		IP	６	6	IP	５		IP	５		IP	６	6	IP	４		IP
+宮下　　元胤	5.30	0.21	3.7	３	5	IP	４		IP	３	5	IP	６		IP	５		IP	４	5	IP	２		IP	２		IP	２	5	IP	３	4	IP

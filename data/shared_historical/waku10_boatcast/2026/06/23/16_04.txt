@@ -1,0 +1,8 @@
+data=
+1	0
+津田　　裕絵	8.40	0.18	4.0	３		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		G3	３		G3	３		IP	１		IP
+淺香　　文武	4.90	0.13	2.6	３		G3	５		IP	６		IP	３		IP	４		IP	２		IP	３		IP	４		IP	１		IP	５		IP
+木村　　仁紀	5.40	0.12	2.6	３		IP	５		IP	１		G2	２		G2	５		IP	５		IP	４		G1	２		G1	５		G1	４		G1
+高橋　　正男	6.20	0.16	3.1	２		G1	３		IP	２		IP	４		IP	２		IP	６		IP	２		IP	３		IP	５		IP	２		IP
+大崎　　　翔	3.30	0.13	3.0	３		IP	６		IP	４		IP	５		IP	４		IP	４	6	IP	６		IP	２		IP	６		IP	５		IP
+鈴木　　秀茉	5.00	0.19	4.0	２		IP	４		IP	１	5	IP	６		IP	６		IP	３		IP	２		G3	６		IP	６		IP	２		IP

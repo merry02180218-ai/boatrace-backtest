@@ -1,0 +1,8 @@
+data=
+1	0
+永嶋　　裕一	8.80	0.14	1.8	１		IP	１		IP	４		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	２		IP
+若林　　義人	6.10	0.11	2.3	１		IP	６		IP	５		IP	４		IP	２		G1	６		IP	２		IP	１		IP	１		IP	４		IP
+吉田　　宗弘	5.60	0.13	3.2	５		IP	１		IP	３		IP	５		IP	５		IP	３		IP	３		IP	４	4	IP	１		IP	２		IP
+石倉　　洋行	7.10	0.11	2.6	２		IP	２		IP	３		IP	６		G1	１		IP	２	5	IP	１		IP	４		G1	５		G1	１		IP
+宮内　　直哉	1.80	0.21	4.2	５		IP	６	6	IP	４		IP	６		IP	５		IP	５		IP	５		IP	６		IP	５		IP	６		IP
+畑　　　竜生	3.00	0.16	3.8	５	5	IP	５	5	IP	２		IP	３		IP	６	5	IP	６		IP	４		IP	６	5	IP	６		IP	４		IP

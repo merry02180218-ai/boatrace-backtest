@@ -1,0 +1,8 @@
+data=
+1	0
+小澤　　和也	7.50	0.18	2.6	２		IP	５		IP	１		IP	１		IP	３		IP	１		IP	６		IP	１		IP	１		IP	２		IP
+植田　　太一	7.70	0.13	2.4	２		G3	２		IP	２		IP	１		IP	２		IP	３		G1	６		G1	３		IP	１		IP	１		IP
+前田　　聖文	6.60	0.12	2.5	３		IP	５		G1	３		G1	２		IP	２		IP	１		IP	２		IP	３		IP	４		IP	３		IP
+中野　　仁照	5.70	0.16	2.7	６	6	G1	６	6	G1	５		G1	３		G1	３		IP	１		IP	１		IP	４		IP	３		IP	３		IP
+前原　　　哉	2.60	0.28	5.7	３		IP	５		IP	６		IP	３		IP	４		IP	５		IP	６		IP	６		IP	６		IP	５		IP
+安田　　吉宏	2.10	0.16	3.9	５		IP	６		IP	４		IP	５		IP	４		IP	６		IP	６		IP	５		IP	５		IP	５		IP

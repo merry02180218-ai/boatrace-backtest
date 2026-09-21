@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　真吾	7.00	0.18	3.2	３		IP	１		IP	３		IP	１		IP	３		IP	１		IP	３		IP	５		IP	３		IP	２		IP
+石田　　章央	7.80	0.17	3.5	１		IP	２		IP	４	3	IP	２		IP	２		IP	２		IP	１		IP	１		IP	２		IP	４	3	IP
+古澤　　光紀	5.50	0.14	2.8	５		IP	２		IP	２		IP	３		IP	１		IP	６		IP	５		IP	２		IP	２		IP	６		G1
+花田　　凱成	4.40	0.17	3.1	３		IP	３		IP	５		IP	３		IP	４		IP	１		IP	４		IP	６		IP	６		IP	４		IP
+淺田　千亜希	4.40	0.15	3.1	２		G3	６		IP	３		G3	５		G3	６	6	IP	３		IP	４		IP	４		IP	２	4	IP	４		IP
+眞田　　英二	2.60	0.21	4.3	３	5	IP	５		IP	４		IP	６		IP	６		IP	３		IP	５		IP	６		IP	５		IP	６		IP

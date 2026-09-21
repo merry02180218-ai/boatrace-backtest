@@ -1,0 +1,8 @@
+data=
+1	0
+福岡　　泉水	6.60	0.18	3.2	３		IP	２		G3	１		IP	３		IP	３		IP	１		IP	２		IP	５	2	IP	転		G3	１		G3
+金田　　大輔	5.40	0.15	3.4	３		IP	６		IP	２		IP	５		IP	Ｆ	4	IP	１	6	IP	３		IP	１		IP	６	3	IP	１		IP
+山下　　昂大	6.70	0.16	2.0	３		IP	１		IP	３		IP	４		G3	２		IP	１		IP	３		IP	６		IP	２		IP	２		IP
+屋良　　龍紀	3.70	0.14	2.9	３		IP	６		IP	６		IP	５		IP	４		IP	３		IP	６		IP	２		IP	５		IP	３		IP
+宇佐見　　淳	4.10	0.16	2.6	６		IP	３		IP	４		IP	５		IP	５	4	IP	３		G3	６		G3	２		IP	５		G1	２		IP
+龍田　　真白	2.50	0.13	2.8	３		IP	５		IP	５		IP	６		IP	６		IP	４		IP	６		IP	５		IP	５		IP	４		IP

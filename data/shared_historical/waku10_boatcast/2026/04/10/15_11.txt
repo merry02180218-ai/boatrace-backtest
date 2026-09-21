@@ -1,0 +1,8 @@
+data=
+1	0
+森永　　　淳	9.60	0.11	2.3	２		IP	１		IP	１		IP	１		G2	１		G2	４		IP	１		IP	１		IP	１		IP	１		IP
+武重　　雄介	6.33	0.19	2.8	５		IP	１		IP	２		IP	２		IP	６		IP	５		IP	１		IP	２		IP	２		IP	欠		G3
+今井　　裕梨	6.80	0.13	2.2	２		G1	２		G1	１		IP	３		G3	２		G3	２		IP	４		IP	３		IP	６		G3	３		G3
+加藤　　政彦	4.90	0.17	4.4	３		IP	２		IP	５		G1	６		G1	４		G1	４		G1	６		G1	１		IP	３		IP	５		IP
+杉山　　喜一	3.78	0.15	2.7	５		G3	落		IP	４		G3	６		G3	６		G3	３		IP	３		IP	４		IP	３		IP	４		IP
+岩永　　雅人	3.60	0.23	4.9	５		IP	３	5	IP	３		IP	５		IP	４		IP	６		IP	４		IP	５		IP	６		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+野相　　弘司	7.50	0.12	2.9	６	2	IP	１		IP	１		IP	４		IP	２		IP	１		IP	１		IP	４		IP	２		G3	１		IP
+榮田　　将彦	5.20	0.16	3.0	５		IP	２		IP	４		IP	５		IP	５		IP	３		IP	３		IP	１	3	IP	４		IP	２		IP
+奈須　　啓太	6.50	0.14	2.2	４		IP	１		IP	４		IP	１		IP	６		IP	２		IP	３		IP	２		IP	１		IP	４		IP
+須藤　　隆雄	3.70	0.18	3.1	６		IP	５		IP	３		IP	５	5	IP	４	6	IP	５		IP	５		IP	４	5	IP	２		IP	３		IP
+福来　　　剛	4.40	0.14	2.3	５		G1	３		G1	転		IP	１		IP	６		IP	５		IP	６		IP	４		G1	３		G1	３	4	IP
+吉川　　颯汰	1.10	0.22	3.9	６		IP	６		IP	５		IP	６		IP	Ｆ		IP	５		IP	６		IP	６		IP	６		IP	６		IP

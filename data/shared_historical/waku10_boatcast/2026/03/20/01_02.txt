@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　慧人	4.57	0.19	4.0	２		IP	１		IP	５		IP	６		IP	６		IP	３		IP	４		IP									IP
+丸山　　祐也	4.90	0.22	4.5	３		IP	４		IP	２		IP	６		IP	２		IP	５		IP	４		IP	４		IP	５		IP	１		IP
+田中　　駿兵	8.20	0.11	1.7	２		IP	１		IP	２		IP	３		IP	４		G1	３		G1	２		IP	１		IP	１		IP	１		IP
+金子　　怜央	3.10	0.16	2.6	５		IP	４		IP	４		IP	４		IP	６		IP	４		IP	３		IP	５		IP	５		IP	５		IP
+藤原　　碧生	5.40	0.15	2.1	２		IP	３		G1	６		G1	５		G1	３		IP	５		G1	２		G1	５		G3	３		G1	３		G1
+秋末　　秦悟	3.10	0.20	4.5	３	5	IP	３		IP	６		IP	５		IP	４	3	IP	４		IP	４		IP	６		IP	５		IP	６		IP

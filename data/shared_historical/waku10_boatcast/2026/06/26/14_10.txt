@@ -1,0 +1,8 @@
+data=
+1	0
+新開　　　航	9.20	0.18	2.6	１		G1	２		G1	４		IP	２	2	IP	３		G1	１		IP	１		IP	１		IP	１		IP	１		IP
+宮地　　元輝	8.90	0.12	2.7	３		G1	１		SG	４		SG	１	1	SG	２	3	G1	３		IP	２		IP	２		G1	２		G1	１		G1
+渡邉　　和将	8.70	0.11	2.2	３		SG	２		IP	１		IP	１		IP	１		IP	２		IP	１		IP	３		IP	２		IP	２		G1
+山崎　　　郡	6.60	0.13	3.3	１		G1	１		G1	１		G1	６		SG	５		G1	４		IP	３		IP	４		G1	４		G1	３		G1
+井口　　佳典	6.20	0.16	4.7	４		G1	１		G3	５		G1	２		G1	２	3	G2	６		G2	５		G1	１		G1	５		G1	４		G1
+河合　　佑樹	6.10	0.18	3.8	３		G1	３		G1	２	5	SG	６		G1	４		G1	５		IP	２		IP	２		IP	３	4	IP	３	5	IP

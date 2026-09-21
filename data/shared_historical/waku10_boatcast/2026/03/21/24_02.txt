@@ -1,0 +1,8 @@
+data=
+1	0
+大崎　　　翔	8.60	0.15	2.5	３		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP	１		IP	４		IP
+松田　　隆司	5.10	0.15	2.6	６		IP	６		IP	３		IP	３		IP	２		IP	２		IP	３		IP	３		IP	６		IP	２		IP
+真庭　　明志	4.80	0.15	3.5	３		IP	６		IP	２		IP	２		IP	６		IP	５		IP	３		IP	４		IP	４	2	IP	２		IP
+大神　　康司	5.40	0.15	1.9	２	2	IP	５	2	IP	３	3	IP	３	2	IP	１	2	IP	４	2	IP	４	2	IP	４	1	IP	３	3	IP	４		IP
+福嶋　　智之	4.80	0.16	3.1	２		IP	５		IP	６		IP	５		IP	６	6	IP	２		IP	５		IP	２		IP	２	4	IP	２		IP
+小林　　一樹	2.56	0.14	2.9	３	5	IP	６		IP	不	5	IP	５		IP	５		IP	５	4	IP	６		IP	４	5	IP	４		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+小池　　公生	8.40	0.20	3.8	１		IP	３		IP	１		IP	１		IP	２		IP	３		IP	１		IP	４		IP	１		IP	１		IP
+渡邊　　哲也	5.10	0.18	3.3	３		IP	５		IP	５		IP	４		IP	３		IP	２		IP	１		IP	４		IP	６		IP	２		IP
+一色　　凌雅	4.30	0.17	3.6	２		IP	６		IP	２	5	IP	３	2	IP	５		IP	４		IP	２		IP	４		IP	６		IP	６		IP
+岡　　　暢祐	3.30	0.18	3.6	５		IP	６	6	IP	１		IP	５		IP	６		IP	３		IP	６		IP	Ｆ		IP	４		IP	３		IP
+関　　　裕也	4.50	0.22	4.5	３		IP	２		IP	３		IP	４	4	IP	５		IP	２	4	IP	５		IP	６	4	IP	３	4	IP	５	4	IP
+白井　　友晴	2.30	0.22	4.9	５		IP	５		IP	３		IP	６		IP	６		IP	５		IP	６		IP	５		IP	５		IP	５		IP

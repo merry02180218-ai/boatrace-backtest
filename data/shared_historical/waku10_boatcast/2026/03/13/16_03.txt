@@ -1,0 +1,8 @@
+data=
+1	0
+渡邊　伸太郎	9.40	0.14	2.1	１		IP	２		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+吉田　　一郎	7.60	0.16	2.1	２		IP	２		IP	３		IP	３		IP	３		IP	１		IP	２		IP	３		IP	２		IP	１		IP
+石川　　吉鎬	4.89	0.25	4.2	２		IP	不		IP	４		IP	５		IP	２		IP	５		IP	２		IP	５	2	IP	４		IP	３		IP
+泉　　　具巳	4.70	0.16	3.2	４		IP	２		IP	６	5	IP	２		IP	４	6	IP	４		IP	２		IP	２		IP	転		IP	５		IP
+出畑　　孝成	4.90	0.20	4.8	５		IP	３		IP	４		IP	６		IP	３		IP	２	6	IP	２		IP	２		IP	５		IP	４		IP
+古場　　輝義	4.90	0.20	4.3	２	5	IP	２	4	IP	転	2	IP	６	3	IP	５	3	IP	３	5	IP	５	5	IP	２	5	IP	２	2	IP	３	3	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中川　　りな	8.40	0.19	3.0	３		G3	１		G3	１		IP	３		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+西舘　　果里	6.00	0.14	2.3	妨		G3	２		G3	３	3	IP	２		IP	１		IP	５		IP	４		IP	２		IP	２		IP	３		IP
+田中　瀬里奈	1.20	0.17	3.3	５		G3	６		IP	６		IP	６	4	IP	６		IP	６	6	IP	５	5	IP	転		IP	５		IP	６		IP
+坂野　さくら	3.70	0.20	3.2	５		G3	３		IP	６		IP	４	6	IP	６		IP	１		G3	６		IP	４		G3	５		IP	３		IP
+寺田　　夢生	1.40	0.24	4.9	６		G3	６		G3	６		G3	６		IP	４	6	IP	６	6	IP	６	6	IP	６	6	G3	５		IP	６		IP
+堀之内紀代子	5.00	0.17	3.3	３		G3	５		G2	４		IP	５		IP	１		IP	３		IP	３		G3	２		G3	５		G1	６		G1

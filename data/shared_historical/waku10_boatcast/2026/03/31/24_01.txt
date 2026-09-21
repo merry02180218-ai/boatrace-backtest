@@ -1,0 +1,8 @@
+data=
+1	0
+本村　　　大	8.70	0.17	3.6	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	６		IP	２		IP	１		IP	１		IP
+吉田　　一心	4.90	0.15	3.6	４		IP	５		IP	５		IP	６		IP	２		IP	５		IP	２		IP	２		IP	４		IP	１		IP
+天野　　晶夫	5.70	0.16	3.1	３		IP	２		G3	４		IP	２		IP	５	4	IP	３		IP	２		IP	６		IP	４		IP	１		IP
+岩永　　節也	3.40	0.22	4.5	３		IP	６		IP	６	6	IP	４		IP	２		IP	５		IP	３		IP	６		IP	６		IP	４	3	IP
+宮本　　琉正	1.70	0.21	2.5	５	6	IP	５		IP	６		IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	５	6	IP	６	6	IP	４	6	IP
+浜崎　　準也	1.80	0.28	5.6	４	5	IP	５		IP	５		IP	６		IP	５		IP	５		IP	５		IP	６		IP	６		IP	６		IP

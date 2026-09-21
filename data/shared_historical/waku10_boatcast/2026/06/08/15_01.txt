@@ -1,0 +1,8 @@
+data=
+1	0
+三嶌　こころ	5.50	0.19	4.3	５		IP	２		IP	１		IP	５		IP	６		IP	２		IP	３		IP	４		G3	４		IP	１		IP
+赤井　星璃菜	5.60	0.14	2.2	２		G3	３		G3	４		IP	２		IP	５		IP	２		IP	５	3	IP	２		IP	３		IP	４		IP
+福岡　　泉水	5.10	0.17	2.7	５		IP	３		IP	１		IP	５		IP	３		IP	５	4	IP	２	5	IP	２		IP	６		IP	３		IP
+長尾　　萌加	4.30	0.15	3.3	５		IP	３	5	IP	４		IP	５		IP	３		IP	２		IP	６		IP	３		IP	４		IP	４		IP
+山崎　小葉音	4.10	0.17	2.9	６		IP	３		IP	３		G3	３		G3	３		G3	３		IP	５		IP	６		IP	６		IP	３		IP
+中澤　　里桜	2.10	0.21	4.7	２		IP	６		IP	４		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

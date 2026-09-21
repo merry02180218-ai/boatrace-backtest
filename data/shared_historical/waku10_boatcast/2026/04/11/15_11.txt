@@ -1,0 +1,8 @@
+data=
+1	0
+北山　　康介	8.80	0.15	3.2	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP
+堀本　　和也	6.40	0.13	3.1	５		SG	２		G1	３		G1	４		G1	３		G1	４		G3	２		G3	３		IP	３		IP	２		IP
+川井　　　萌	6.60	0.18	3.6	４		IP	１		IP	３		G1	４		IP	２		IP	１		IP	４		IP	６		G3	１		IP	４		SG
+河野　　真也	5.60	0.20	3.5	５		IP	３	5	IP	５		IP	３		IP	１		IP	３		IP	３		IP	３		IP	３		IP	３		IP
+亀山　　雅幸	3.60	0.18	3.4	４		IP	５		IP	４		IP	５		IP	３		IP	５		IP	５		IP	３		IP	３		IP	５		IP
+村田　　修次	4.30	0.20	3.8	５		IP	６		IP	３		IP	２	5	IP	６		IP	５		IP	２	5	IP	２		IP	４		IP	６		IP

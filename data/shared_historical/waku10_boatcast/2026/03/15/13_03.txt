@@ -1,0 +1,8 @@
+data=
+1	0
+平尾　　崇典	9.20	0.12	2.5	１		IP	１		G1	１		G1	４		G2	３		G2	１		IP	１		IP	２		IP	１		IP	１		IP
+中村　　晃朋	6.60	0.16	3.3	６		IP	１		IP	１		IP	６		IP	２		IP	２		G1	３		IP	２		IP	２		IP	５		IP
+徳増　　秀樹	6.20	0.13	2.4	１		IP	５		IP	２		IP	５		G1	３		G1	１		IP	５		IP	５		IP	１		IP	２		IP
+和田　　兼輔	5.70	0.16	3.7	２		IP	６		IP	６		G1	３		IP	２		IP	６		G2	２		IP	５		IP	１		IP	１		IP
+岩瀬　　裕亮	6.10	0.16	3.5	４		G1	５		G1	４		G1	５		G1	２		IP	１		G2	２		G2	３	4	IP	３		IP	４		IP
+石本　　裕武	2.90	0.14	3.4	６		IP	５		IP	３		IP	５		G1	３	5	G1	５		G1	６		IP	６		G2	４		IP	エ	5	IP

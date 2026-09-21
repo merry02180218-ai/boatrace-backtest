@@ -1,0 +1,8 @@
+data=
+1	0
+遠藤　　圭吾	5.50	0.22	4.2	４		IP	６		IP	２		IP	４		IP	１		IP	Ｆ		IP	４		IP	１		IP	１		IP	４		IP
+井本　　昌也	6.60	0.15	2.7	５		IP	１		IP	２		IP	３		IP	４		IP	１	1	IP	３		G1	４		G2	２		G1	４		G1
+金子　　龍斗	7.11	0.13	2.1	４		IP	４		IP	２		IP	３		IP	１		IP	１		IP	４		IP	欠		IP	２		IP	１		IP
+上野　　拓馬	3.60	0.19	3.6	４		IP	４	6	IP	４		IP	４		IP	５		IP	５		IP	３		IP	４		IP	５		IP	４		IP
+青木　　　蓮	7.20	0.10	2.2	４		IP	２		IP	３		IP	２		IP	５		IP	１		IP	１		IP	２		IP	１		IP	３		IP
+垂水　　　悠	4.20	0.13	2.5	５		IP	６		IP	４		IP	５		IP	２		IP	３		IP	５		IP	１		G3	６		G3	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+大町　　利克	6.40	0.11	2.5	５		IP	３		IP	２		IP	１		IP	５		IP	５		IP	１		IP	３		IP	１		IP	２		IP
+古澤　　光紀	5.80	0.16	2.8	６		IP	２		IP	１		IP	３		IP	４		G1	３		IP	２		IP	４		IP	３		IP	４		IP
+岩崎　　正哉	5.90	0.17	3.0	４		IP	３		IP	１		IP	２	4	IP	２		IP	２		IP	３		IP	４		IP	４		IP	６		IP
+芦澤　　　望	5.90	0.16	3.2	４		IP	４		IP	３		IP	６		IP	２		IP	１		IP	３		IP	２		IP	３		IP	４		IP
+鈴木　結平太	1.30	0.23	4.1	６		G3	６		IP	６		IP	６		IP	５		IP	落		IP	４		IP	６	6	IP	６	6	IP	６	6	IP
+菊地　　敬介	3.40	0.14	3.4	５		IP	４		IP	５		IP	４		IP	６		IP	４		IP	５		IP	２		IP	６		IP	３		IP

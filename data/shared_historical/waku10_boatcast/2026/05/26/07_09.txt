@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　　悠	8.70	0.15	2.3	２		G2	１		IP	１		IP	２		G2	３		G2	１		IP	３		IP	１		IP	１		IP	３		IP
+北川　　敏弘	4.50	0.20	4.0	４		IP	４		IP	３		IP	２		IP	４		IP	１		IP	４		IP	４		IP	６		IP	Ｆ		IP
+中村　　守成	4.70	0.20	4.4	１		IP	４		IP	４		IP	６		IP	５		IP	１		IP	３		IP	４		IP	５		IP	４	4	IP
+柳沢　　　一	5.80	0.15	2.6	１		IP	３		IP	４		IP	４		IP	４		IP	４		IP	２		IP	４		IP	２		IP	３	3	IP
+村田　　修次	7.30	0.12	2.8	２		IP	２		IP	１		IP	１		IP	３		IP	２		IP	６		IP	２		IP	３		IP	２		IP
+港　　　理樹	2.90	0.26	4.8	５		IP	６		IP	転		IP	４		IP	３		IP	４		IP	２		IP	５		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+河内　悠利杏	2.50	0.24	5.1	５	2	IP	３		IP	４		IP	５		IP	６		IP	５		IP	５		IP	６		G3	４		IP	６		IP
+菅野　はやか	3.50	0.19	5.0	６		IP	６		IP	３		G3	３		IP	５		IP	４		IP	４		IP	４		IP	３		G3	６		IP
+平山　　智加	7.70	0.13	2.7	２		IP	４		G1	２		G1	３		IP	１		IP	２		IP	１		G3	２		G3	１		G3	５		G1
+藤原　　菜希	7.00	0.13	2.2	１		G1	６		G1	２		G3	２		G3	１		IP	１		G3	３		IP	３		G3	３		G3	５		G3
+水野　　望美	3.70	0.16	2.5	５		IP	３		IP	４		IP	５		IP	６		IP	４		IP	４		IP	２		IP	５		IP	４		IP
+西舘　　果里	4.10	0.18	3.8	５		IP	３		IP	３	5	IP	５		IP	２		IP	５		IP	５	5	IP	２		IP	６		G3	４		G3

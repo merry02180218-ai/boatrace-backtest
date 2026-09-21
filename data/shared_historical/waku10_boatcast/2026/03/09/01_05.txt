@@ -1,0 +1,8 @@
+data=
+1	0
+岡部　　大輝	7.60	0.17	3.1	１		IP	４	2	IP	１		IP	１		G3	２		IP	５		IP	１		IP	１		IP	１		IP	５		IP
+川上　　聡介	5.30	0.18	3.5	３		IP	２	3	IP	５		IP	６	3	IP	３	4	IP	２		IP	４		G3	４		G3	３		IP	２		IP
+武田　　光史	6.40	0.15	3.4	１		IP	４		IP	２		IP	３		IP	２		IP	６		IP	４		IP	３		G1	１		G1	４		G1
+角谷　　健吾	6.90	0.15	3.2	３		IP	４		G1	１		IP	４		IP	４	3	IP	２		IP	２		IP	２		IP	２		IP	２		IP
+永嶋　　裕一	4.80	0.18	4.0	６		IP	４		IP	３		IP	５		IP	２		IP	１		IP	６		IP	３	4	IP	３		IP	５	6	G3
+品川　　賢次	3.00	0.17	4.6	５		IP	４		IP	３		IP	４		IP	４		IP	５		IP	６		IP	５		G3	４		G3	６		G3

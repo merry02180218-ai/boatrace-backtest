@@ -1,0 +1,8 @@
+data=
+1	0
+片岡　　恵里	8.00	0.15	2.9	５		IP	４		IP	２		G3	１		G3	１		G3	２		IP	１		IP	２		G3	１		G3	１		IP
+若林　　　麗	4.10	0.15	3.5	４		IP	５		IP	２		IP	６		IP	４		IP	５		IP	２		IP	４		IP	４		IP	４		IP
+倉富　　大誠	5.20	0.16	3.2	２		IP	１		IP	５		IP	３		IP	５	4	IP	４		IP	４		IP	５		IP	２		IP	３		IP
+長田　　頼宗	6.50	0.17	4.5	１	3	IP	３		G2	５		G2	３		G2	２		G2	５		G2	２		IP	５		G1	３		G1	２		IP
+田中　　宏樹	3.56	0.14	2.8	欠		IP	４		IP	５		IP	５	6	IP	５		IP	２		G3	５		G3	５		G3	４		IP	３		IP
+星田　　夢結	1.20	0.17	3.6	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+小池　　公生	6.90	0.22	4.5	２		IP	３		IP	１		IP	４		IP	１		IP	１		IP	２		IP	２		IP	４		IP	６		IP
+高田　ひかる	7.90	0.18	3.1	５		G1	４		G1	１		IP	１		IP	２		IP	１		IP	４		IP	２		IP	１		IP	１		G1
+笠　　　雅雄	4.60	0.16	3.8	４		IP	３		IP	５		IP	４		IP	５		IP	３		IP	２		IP	２		IP	５		IP	４	2	IP
+坪口　　竜也	5.00	0.17	2.9	６		IP	３		IP	６		IP	３		IP	３		IP	１		IP	３		IP	５		G3	４		G3	２		G3
+坂口　　貴彦	4.40	0.15	3.0	３		IP	３	6	IP	２		IP	５		IP	４		IP	４		IP	４		IP	５		IP	３		IP	５		IP
+澤崎　　雄哉	4.30	0.19	4.0	５		IP	３		IP	２		IP	２		IP	３		IP	５		G3	５		G3	６		IP	３		IP	５		IP

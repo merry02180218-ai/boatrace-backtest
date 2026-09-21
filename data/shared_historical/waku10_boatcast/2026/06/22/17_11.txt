@@ -1,0 +1,8 @@
+data=
+1	0
+平田　　忠則	9.20	0.13	2.2	１		G3	２		G3	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	３		G1
+森永　　　淳	6.90	0.13	2.3	４		G3	３		G3	１		G1	４		G1	１		IP	２		IP	２		IP	２		G1	３		G1	６		IP
+石川　　真二	4.80	0.13	2.8	４	2	G3	１	2	G3	４	2	G3	６	2	IP	１	2	G3	転	1	G3	６	2	G3	３	2	IP	１	1	IP	５	2	IP
+富山　　弘幸	5.10	0.20	3.6	３		G3	６		IP	２		IP	５		IP	２		IP	３		IP	２		IP	３		IP	５		IP	４		IP
+繁野谷　圭介	4.40	0.17	3.7	５		G3	３		IP	４	4	IP	１		IP	３		IP	２		IP	５		IP	６		IP	４		IP	６		IP
+堤　　　　昇	3.00	0.18	4.2	３	5	G3	４	4	IP	５		IP	３	4	IP	５		IP	４	4	IP	６		G3	６		G3	６		IP	６	5	IP

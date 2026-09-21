@@ -1,0 +1,8 @@
+data=
+1	0
+谷川　　祐一	9.70	0.13	2.1	１		IP	１		IP	２		IP	１		G3	１		G3	１		IP	１		IP	２		IP	１		IP	１		IP
+松竹　　大輔	8.30	0.17	2.9	５		IP	３		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		G3	２		G3	１		IP
+堤　　　　昇	4.50	0.12	3.3	３	2	IP	６		IP	３		IP	４		IP	４		IP	２		G3	５		IP	３		IP	３		IP	５	2	IP
+麻生　　慎介	6.50	0.12	2.5	３		IP	３		IP	転	5	IP	２		IP	３		IP	５		G1	１		IP	１		IP	２		G1	３		IP
+小畑　　実成	2.10	0.18	2.9	６		IP	５		IP	５		IP	５		IP	６		IP	４		IP	４		IP	５		IP	６		IP	５		IP
+高井　　雄基	3.40	0.23	5.3	６		IP	３		IP	５		IP	４		IP	４		IP	Ｆ		IP	４		IP	６		IP	４		G3	２		IP

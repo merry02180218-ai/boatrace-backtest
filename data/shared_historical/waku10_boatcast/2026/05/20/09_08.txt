@@ -1,0 +1,8 @@
+data=
+1	0
+数原　　　魁	7.70	0.16	3.1	１		IP	３		IP	６		IP	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP	２		IP
+幸田　　智裕	4.44	0.13	2.2	５		IP	６		IP	２		IP	２		IP	２		IP	エ		IP	３		IP	５		IP	６		IP	４		IP
+福島　　勇樹	8.00	0.13	2.4	１		IP	６		G1	３		G1	１		IP	１	2	IP	１		IP	３		IP	２		IP	３		IP	１		IP
+樋江井　　舞	4.78	0.17	3.7	６		IP	２		IP	５		IP	４		IP	３		IP	欠		IP	３		IP	３		IP	３		IP	４	5	IP
+松本　　庸平	2.60	0.26	4.8	６		IP	６		IP	４	4	IP	５		IP	６		IP	６	6	IP	４		IP	２		IP	５		IP	５		IP
+中村　　辰也	5.10	0.16	3.1	３	5	IP	２	5	IP	６		IP	４		IP	３		IP	１		IP	６		IP	６	5	IP	２	5	IP	４	5	IP

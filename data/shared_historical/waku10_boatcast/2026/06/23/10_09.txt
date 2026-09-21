@@ -1,0 +1,8 @@
+data=
+1	0
+福田　　翔吾	6.70	0.18	3.8	１		IP	エ		IP	２		IP	２		IP	３		IP	１		IP	１		IP	６		IP	４		IP	１		IP
+桑原　　　啓	3.70	0.18	3.7	６		IP	６		IP	６		G3	１		IP	１		IP	２	3	IP	５	3	IP	６		IP	６		IP	５	5	IP
+中辻　　博訓	6.40	0.13	2.6	３		IP	２		IP	２		IP	転		IP	４		IP	１		IP	３		IP	３		IP	２		IP	２		IP
+南　　　佑典	5.90	0.16	3.0	２		IP	３		IP	２		IP	２		IP	２		IP	４		G2	４		G2	６		IP	５		IP	２		IP
+松田　　真実	4.30	0.23	4.4	３		IP	５		IP	６		IP	３	4	IP	２		IP	５		G3	３		G3	４		IP	４		IP	４		IP
+伊達　　正利	2.30	0.20	4.3	４		IP	４		IP	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	３		IP

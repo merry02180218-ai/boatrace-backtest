@@ -1,0 +1,8 @@
+data=
+1	0
+毒島　　　誠	10.30	0.11	2.0	１		IP	１		IP	１		SG	１		SG	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+吉田　　裕平	5.50	0.11	2.9	６		G1	２		G1	６		G1	３		G1	３		G1	５		G1	６		G1	２		G1	１		G1	５		G1
+古賀　　繁輝	5.30	0.14	2.8	Ｆ	4	G1	１		IP	２		IP	１		IP	１		G2	４		G2	６		G1	６		G1	５		IP	５		IP
+尾上　　雅也	6.40	0.16	2.7	６		G3	２	5	G3	１		IP	２		IP	３		IP	２	3	IP	２		IP	３		G1	２		IP	転		IP
+岡村　　慶太	7.40	0.15	3.1	１		IP	３		IP	１		IP	１		IP	３		G3	２		IP	２		IP	１		IP	５		G1	５	6	G1
+金子　　賢志	4.40	0.14	2.2	６		G1	５		G1	４		IP	３		IP	５		IP	３		IP	２	5	IP	３		IP	５		IP	６		IP

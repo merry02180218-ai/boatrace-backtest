@@ -1,0 +1,8 @@
+data=
+1	0
+常盤　　海心	4.70	0.21	4.4	６		IP	４		IP	１		IP	２		IP	４		IP	５		IP	６		IP	６		IP	２		IP	２		IP
+岡村　　将也	6.20	0.17	3.4	４		IP	６		IP	４		IP	１		IP	２		IP	２		IP	１		IP	６		IP	２		IP	２		IP
+前原　　大道	6.90	0.18	3.2	１		IP	１		IP	２		G1	２		G1	５		G1	４		IP	５		IP	３		IP	３		IP	１		IP
+伊達　　正利	4.10	0.15	3.7	６	6	IP	５		IP	３		IP	４		IP	１		IP	６		IP	６		IP	３		IP	５		IP	２		IP
+植田　　太一	5.40	0.14	3.3	３		IP	２		IP	５		IP	３		IP	６		IP	２		G3	２		IP	１	4	IP	４		IP	６		IP
+福田　　　理	1.80	0.17	4.8	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP	４		IP	４		IP	６		IP

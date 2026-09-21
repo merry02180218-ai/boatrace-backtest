@@ -1,0 +1,8 @@
+data=
+1	0
+関　　　浩哉	9.90	0.14	3.2	１		G1	２		G1	１		G1	４		SG	１		G1	１		G1	１		G1	２		G1	１		IP	１		IP
+久田　　敏之	8.10	0.12	2.9	２	3	IP	１		IP	２		G1	２		SG	１		IP	３		G1	２		IP	２		IP	３		G1	５		G1
+江口　　晃生	5.50	0.16	3.2	４	2	G1	５	2	G1	５	2	G1	１	2	IP	１	2	IP	Ｆ	2	IP	２	2	IP	４	2	IP	３	2	IP	３	2	IP
+椎名　　　豊	6.00	0.14	3.2	２		IP	４		IP	４		IP	２		IP	２		IP	２		IP	２		IP	６		G1	３		G1	６		G1
+土屋　　智則	6.80	0.12	2.7	３		IP	３	4	G1	４		G1	５		G1	３		G1	２		G3	２	2	G3	２		IP	２	3	IP	２		IP
+毒島　　　誠	6.70	0.14	2.2	２	4	IP	３	4	IP	３	5	IP	５		SG	３	5	IP	２	2	IP	１	3	IP	３	5	IP	３		G1	３	4	IP

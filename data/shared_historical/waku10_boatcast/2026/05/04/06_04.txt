@@ -1,0 +1,8 @@
+data=
+1	0
+若林　　義人	9.30	0.12	2.1	１		IP	１		IP	１		IP	１		G1	２		IP	１		IP	１		IP	２		IP	１		IP	３		IP
+芹澤　　克彦	6.10	0.14	2.9	４		IP	２		IP	３		IP	３		IP	３		IP	２		IP	１		IP	５		IP	６		IP	１		IP
+幸田　　智裕	5.30	0.17	2.6	５		IP	４		IP	３		IP	６		IP	３		IP	３		IP	２		IP	２		IP	３		IP	３		IP
+齋藤　　達希	3.60	0.21	3.7	３		IP	３		IP	４		G3	６	5	G3	５		IP	２		IP	５		IP	６	5	IP	４		IP	５		IP
+深尾　　巴恵	4.00	0.16	2.7	２		IP	４		IP	５		IP	５		IP	４		IP	５		IP	３		IP	４		IP	３		IP	５		IP
+長野　　道臣	2.30	0.19	4.0	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP	５		IP	３		IP	６		IP	４		IP

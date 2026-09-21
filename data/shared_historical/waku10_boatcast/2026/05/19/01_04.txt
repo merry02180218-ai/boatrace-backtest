@@ -1,0 +1,8 @@
+data=
+1	0
+福田　　翔吾	7.00	0.16	3.5	２		IP	３		IP	１		IP	１		IP	６		IP	４		IP	１		IP	６		IP	１		IP	１		IP
+相馬　　　翔	6.10	0.14	2.9	６		IP	１		IP	３		IP	２		IP	５		IP	４		IP	２		IP	２		IP	２		IP	３		IP
+海老澤　泰行	6.00	0.16	3.2	２		IP	２		IP	３		IP	３		IP	４		IP	３		IP	４		IP	２		IP	５		IP	２		IP
+藤田　　浩人	4.80	0.15	2.7	３		IP	５		IP	５		IP	６		IP	３		G2	４		IP	４	5	IP	１	5	IP	２		IP	４		IP
+安部　　慎一	3.10	0.16	4.0	５		IP	５		G3	４		IP	５		IP	５		IP	３		IP	５		IP	６		IP	３		IP	４		IP
+加藤　　翔馬	3.80	0.18	4.7	５		IP	５		IP	５		IP	４	5	IP	２		IP	４		IP	６		IP	２		G3	３	5	IP	６		IP

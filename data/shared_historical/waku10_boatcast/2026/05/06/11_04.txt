@@ -1,0 +1,8 @@
+data=
+1	0
+守田　　俊介	9.70	0.12	2.7	２		IP	１		IP	２		G1	１		IP	１		IP	１		IP	１		IP	１		IP	３		SG	１		SG
+濱崎　　　誠	5.40	0.18	4.0	６		IP	２		IP	６		IP	５		IP	４		IP	２		IP	５		IP	１		IP	２		IP	１		IP
+高山　　智至	4.70	0.17	3.5	２		IP	５		IP	６		IP	５		IP	１		IP	５		IP	３		IP	４		IP	３		IP	３		IP
+深井　　利寿	6.80	0.13	2.9	３		IP	４		IP	２		IP	１		IP	転		IP	３		IP	３		IP	１		IP	１		IP	２		IP
+八木　　治樹	2.22	0.11	2.5	６	6	IP	６		IP	４		IP	６		IP	転		IP	３		IP	４		IP	６		IP	６	6	IP	６		G3
+西川　　真人	2.60	0.19	4.7	６	5	IP	６		IP	４		IP	３		IP	４		IP	５		IP	５		IP	６		IP	６		IP	４		IP

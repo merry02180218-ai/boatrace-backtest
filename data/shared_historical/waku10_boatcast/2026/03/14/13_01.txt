@@ -1,0 +1,8 @@
+data=
+1	0
+和田　　拓也	9.70	0.10	2.3	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		G1	１		IP	１		IP
+岩瀬　　裕亮	7.80	0.14	2.8	５		G1	６		G1	２		G1	２		G1	１		IP	２		G2	１		IP	２		IP	１	1	IP	３		SG
+中島　　孝平	7.80	0.11	2.5	２		IP	２		G1	３		G1	３		IP	１		G2	２		IP	３		SG	５		SG	４		G1	１		SG
+村岡　　賢人	5.90	0.10	2.8	２		G1	４		IP	５	3	IP	３		IP	１		G1	４		G1	２		IP	転		IP	３		IP	２		IP
+宮之原　輝紀	3.67	0.14	2.1	６		G1	５		G1	６	6	G1	５		G1	１		IP	欠		G2	５		G2	６		IP	２		IP	６		IP
+井上　　忠政	5.60	0.17	5.0	６		G1	４		G1	２		G1	６		G1	４		G1	２		IP	４		G1	３		G1	４		IP	３		G1

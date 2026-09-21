@@ -1,0 +1,8 @@
+data=
+1	0
+新田　　智彰	5.90	0.17	3.1	２		IP	３		IP	３		IP	６		IP	２		IP	５		IP	１		IP	３		IP	１		IP	５		IP
+谷　　　勝幸	4.50	0.18	3.4	４		IP	２		IP	５		IP	３		IP	４		IP	５		IP	６		IP	２		IP	３		IP	４		IP
+草川　　壮良	2.50	0.17	2.3	５		IP	３		IP	４		IP	６		IP	６		IP	６	4	IP												IP
+遠藤　　圭吾	2.40	0.19	3.9	４		IP	６	6	IP	６		IP	４		IP	５		IP	Ｌ		IP	３		IP	６	5	IP	４		IP	６		IP
+山ノ内　雅人	4.90	0.15	3.2	２		IP	３	4	IP	６		IP	４		IP	４		IP	４		IP	３		IP	４		IP	２		IP	４		IP
+松崎　祐太郎	5.20	0.15	3.9	６		IP	４		IP	５		IP	６	5	IP	２	4	IP	２	4	IP	３	5	IP	１		IP	３	4	IP	３		IP

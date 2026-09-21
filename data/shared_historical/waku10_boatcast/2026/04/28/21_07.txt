@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　遼太	7.50	0.13	2.8	２		IP	１		G3	１		G3	１		IP	１		IP	２		IP	３		IP	５		IP	１		IP	６		IP
+田中　　孝明	4.90	0.17	3.9	３		IP	５		IP	３		IP	２		IP	２		IP	６		IP	５		IP	５		IP	３		IP	２		IP
+森口　　和紀	4.90	0.20	4.8	６		IP	６		IP	３		IP	５		IP	３		IP	６		IP	２		IP	３		IP	１		IP	２		IP
+田中　　宏樹	4.60	0.19	3.4	６	5	IP	２		IP	４		G3	２		IP	５		IP	５		IP	６		IP	３		IP	３		IP	２		IP
+下河　　誉史	4.50	0.22	3.7	５		IP	４		IP	３	4	IP	５		IP	６	6	IP	４		IP	２		IP	２	2	IP	３		IP	４	2	IP
+上野　　秀和	4.00	0.17	3.3	５		IP	３		IP	６		IP	６		G3	１	5	IP	３		IP	５	5	IP	３		IP	４		IP	５		IP

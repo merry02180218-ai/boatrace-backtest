@@ -1,0 +1,8 @@
+data=
+1	0
+村田　　　敦	4.10	0.17	3.2	３		IP	４		IP	３		IP	２		IP	６		IP	５	2	IP	３		IP	３		IP	６		IP	６		IP
+深水　慎一郎	4.40	0.18	3.6	５		IP	３		IP	６		IP	６		IP	１	3	IP	４		IP	２		IP	４		IP	３		IP	５		IP
+小川　　知行	4.50	0.13	3.3	６		IP	５	2	IP	３		IP	５		IP	６		IP	１		IP	４		IP	６		IP	１	4	IP	２		IP
+高橋　　英之	4.90	0.16	2.4	３		IP	６		IP	５		IP	１		IP	５		IP	２		IP	４		IP	３		IP	３		IP	４		IP
+村田　　修次	6.20	0.12	3.2	１		IP	１		IP	３		IP	２		IP	６		IP	２		IP	３		IP	２		IP	６		IP	４		IP
+石村　日奈那	1.89	0.17	4.0	６	5	IP	６		IP	６		IP	転	5	IP	６		IP	５		IP	６		IP	３		IP	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+前田　　　滉	8.40	0.17	2.8	１		IP	１		IP	３		IP	１		G1	Ｆ		G1	１		G1	１		G1	３		IP	２		IP	１		IP
+黒澤　めぐみ	5.60	0.20	3.5	４		IP	４	3	IP	５		IP	３		IP	１		IP	２		G3	５		G3	２		IP	４		IP	２		IP
+白水　　勝也	6.60	0.19	4.0	２		IP	１		IP	２		IP	４		IP	３		IP	４		IP	３		IP	３		IP	３		IP	２	2	IP
+谷　　　勝幸	3.80	0.16	2.4	４		IP	４		IP	４		IP	２		IP	２		IP	４		IP	６		IP	５		IP	５		IP	６		IP
+小澤　　　学	3.10	0.28	5.5	６	6	IP	５		IP	６		IP	５	6	IP	４		IP	３		IP	３		IP	６		IP	３		IP	５		IP
+西村　　仁吾	1.00	0.29	5.6	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	Ｆ		IP	６		IP	６		IP

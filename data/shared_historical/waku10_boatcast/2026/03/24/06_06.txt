@@ -1,0 +1,8 @@
+data=
+1	0
+大野　　芳顕	8.20	0.15	2.2	１		G3	１		IP	５		IP	３		IP	１		IP	４		IP	１		IP	１		IP	１		IP	１		IP
+中島　　　航	4.10	0.20	3.8	６		G3	３		IP	３		IP	４		IP	５	3	IP	３		IP	５		IP	２		IP	３		IP	Ｆ		IP
+北川　　潤二	5.20	0.19	2.3	３		G3	２		IP	６		IP	６		IP	４		IP	５		IP	２		IP	２		IP	３	2	IP	３		IP
+垂水　　　悠	3.80	0.13	2.0	５		IP	６	5	IP	５		G1	３		G1	４		IP	４		IP	３		IP	４		IP	６		IP	３		IP
+佐藤　　　旭	3.90	0.21	4.1	４		G3	３		IP	６		IP	４		IP	４		IP	３		IP	４		IP	４		IP	４		IP	５	6	IP
+中　　　亮太	3.60	0.17	2.9	６		G3	２	5	IP	５	5	IP	５		G2	４		IP	４		IP	６		IP	１	5	IP	６		IP	５		IP

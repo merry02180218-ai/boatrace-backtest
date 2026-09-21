@@ -1,0 +1,8 @@
+data=
+1	0
+盛本　　真輔	7.60	0.15	2.9	２		IP	１		IP	４		IP	１		IP	１		IP	３		IP	１		IP	１		IP	５		IP	３		IP
+木田　峰由季	6.90	0.18	3.8	１		IP	２		IP	１		IP	３		IP	２		IP	３		IP	５		G3	６		G3	１		IP	２		IP
+松田　　祐季	5.80	0.12	2.9	４		IP	４		IP	４		G1	１		G1	４		G1	３		G1	５		G1	２		G1	３		IP	４		IP
+高倉　　孝太	7.10	0.17	2.7	１		IP	４		IP	２		IP	２		IP	１		IP	４		IP	５		IP	４		IP	１	3	IP	１		IP
+室田　　泰史	4.30	0.13	3.0	２		IP	２		IP	５		IP	５		IP	２		IP	５		IP	５		IP	６		IP	２		IP	５		IP
+直江　　健成	1.00	0.26	5.0	６		IP	６		IP																								IP

@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　兼士	6.30	0.16	3.1	４		IP	３		IP	３		IP	３		IP	３		IP	１		IP	２		IP	１		IP	３		IP	６	3	IP
+高倉　　和士	7.60	0.15	2.9	１		IP	６		G1	１		G1	２		IP	２		IP	１		IP	３		IP	４		G1	２		IP	２		IP
+藤井　　　徹	4.80	0.18	3.6	５		IP	２		IP	２		IP	５		IP	６	4	IP	４		IP	２		IP	２		IP	６		IP	３		IP
+海老澤　泰行	5.10	0.19	3.7	４		IP	３		IP	３		IP	３		IP	３		IP	６		IP	５	5	IP	３		IP	２		IP	３		IP
+伯母　　芳恒	5.60	0.20	4.5	３		IP	５		G3	２		G3	４		G3	３		IP	３		IP	１		IP	４		IP	３	6	IP	４		IP
+羽野　　直也	5.90	0.15	3.3	２	4	IP	４		G1	３		G2	４		G1	４		IP	５		G1	１	5	IP	３		SG	４		SG	５		G1

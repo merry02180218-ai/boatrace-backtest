@@ -1,0 +1,8 @@
+data=
+1	0
+岡村　　　仁	10.00	0.15	2.5	２		IP	１		IP	１		IP	１		IP	１		G2	１		G2	１		IP	１		IP	１		IP	１		IP
+村上　　功祐	5.30	0.14	3.3	２		IP	６		IP	５		IP	２		IP	４		IP	２		IP	２		IP	２		IP	４		IP	５	3	G3
+杉山　　喜一	5.50	0.16	3.2	６		IP	２		IP	３		IP	５	6	IP	１		IP	４		G3	３		G3	４		G3	４		G3	１		IP
+村田　　修次	5.40	0.16	4.0	３		IP	２		IP	４		IP	３		IP	３		IP	４		IP	２		IP	５		IP	２		IP	５		IP
+大庭　　元明	3.30	0.17	3.3	２		IP	４		IP	５		IP	５	4	IP	６		IP	５		IP	６		IP	３	6	IP	３		IP	６	6	IP
+稗田　　聖也	4.20	0.15	3.0	３	5	IP	４		IP	４		IP	４		IP	５		IP	３		IP	６		IP	６		IP	２		IP	３		IP

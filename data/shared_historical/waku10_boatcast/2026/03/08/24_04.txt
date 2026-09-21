@@ -1,0 +1,8 @@
+data=
+1	0
+前田　　将太	8.20	0.15	2.8	１		IP	１		IP	４		G1	１		IP	１		IP	１		IP	６		SG	１		IP	４		IP	１		G3
+今垣　光太郎	7.90	0.18	3.5	１		IP	２		IP	１		IP	３		G1	１		IP	３		IP	１		IP	４		G1	２		G1	６		SG
+浜先　　真範	5.80	0.12	2.9	４		IP	３		IP	４		IP	１		G1	４		G1	５		IP	２		IP	３		IP	２		IP	５		IP
+今泉　　友吾	6.70	0.16	3.7	３		G1	２		IP	１		IP	４		G1	２		IP	３		G1	６		G1	４		G1	３		G1	２		IP
+木下　　翔太	5.10	0.17	3.3	３		IP	３		G1	４		G1	４		G1	３		IP	１		IP	４		IP	４		G1	６		IP	５		IP
+下條　雄太郎	3.60	0.18	3.8	５		IP	４		IP	４		G1	５		G1	５		IP	３		IP	４		IP	５	5	IP	５		IP	３		IP

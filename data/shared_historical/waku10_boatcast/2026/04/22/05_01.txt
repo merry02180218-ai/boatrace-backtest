@@ -1,0 +1,8 @@
+data=
+1	0
+森　　　弘行	4.30	0.23	4.6	４		IP	４		IP	５		IP	４		IP	３		IP	５		IP	１		IP	２		IP	６		IP	５		IP
+横井　　健太	5.30	0.16	3.2	４		IP	５		IP	４	3	IP	１	3	IP	２		IP	６		IP	４		IP	４		IP	２		IP	２		IP
+小川　　知行	4.60	0.12	3.1	４		IP	６		IP	１	4	IP	２		IP	６		IP	３		IP	５		IP	４		IP	４		IP	３		IP
+酒井　　俊弘	4.90	0.11	2.4	２	6	IP	６	6	IP	６		IP	４		IP	４	3	IP	２		IP	１		IP	６	6	IP	４		IP	２		IP
+鈴木　　　猛	5.90	0.18	3.4	５		IP	４		IP	４		IP	３		IP	１		IP	４		IP	２		IP	１		IP	１		IP	６		IP
+飯島　　　誠	2.90	0.22	4.5	６		IP	６		IP	６		IP	１		IP	２		IP	６		IP	５		IP	６		IP	５		IP	５		IP

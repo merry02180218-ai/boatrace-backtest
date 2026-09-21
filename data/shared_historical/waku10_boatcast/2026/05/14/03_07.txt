@@ -1,0 +1,8 @@
+data=
+1	0
+栗城　　　匠	8.80	0.13	3.4	１		IP	２		IP	１		G1	１		IP	１		IP	２		IP	２		IP	３		IP	２		G1	２		IP
+飛田　　江己	6.90	0.12	2.0	１		IP	２		IP	３		IP	２		IP	２		IP	２		IP	６		IP	４		IP	３		G1	２		G1
+黒柳　　浩孝	5.40	0.12	2.4	４		IP	４		IP	３		IP	５		IP	４		IP	２		IP	２		IP	３		IP	４		IP	２		IP
+小原　　聡将	6.10	0.15	2.9	２		IP	３		IP	４		IP	１		IP	２		IP	４	5	IP	３	3	IP	１		IP	４		IP	６		IP
+山田　　亮太	6.00	0.15	2.9	１		IP	３		G3	４		IP	４		IP	３		IP	２		IP	３		IP	４		IP	３		IP	５		IP
+山田　　康二	5.70	0.15	3.6	４		IP	５		G1	４		G1	５		G1	４		G1	３		SG	１		SG	２		IP	４		G1	５		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　大騎	5.50	0.20	4.1	４	2	IP	１		IP	１		IP	４		IP	６		IP	２		IP	５		IP	５		IP	１		G3	４		IP
+中村　　辰也	5.25	0.16	3.0	３	3	IP	３		IP	３		IP	５		IP	５		IP	２		IP	欠		IP	１		IP	５		IP	落		IP
+磯村　　　匠	5.30	0.19	3.2	２		IP	１		IP	４		IP	２		IP	５		IP	５		IP	２		IP	６		IP	５		IP	２		IP
+竹田　　広樹	3.90	0.20	3.3	５	5	IP	３		IP	６	5	IP	３		IP	５		IP	６		IP	４		IP	３		IP	６		IP	１		IP
+高田　　　明	4.00	0.19	3.5	４		IP	６		G3	４		G3	４	4	IP	５		G1	６		G1	５		IP	３		IP	２	4	IP	３		G3
+吉永　　浩則	2.20	0.23	5.2	６		IP	６		IP	５		IP	４		IP	５		IP	４		IP	４		IP	５		IP	６		IP	６		G3

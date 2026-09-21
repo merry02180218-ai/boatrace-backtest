@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　　真	7.20	0.16	2.1	５		IP	４		G3	Ｆ		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP
+牧　　　宏次	5.80	0.14	2.9	６		IP	４		G3	３		G3	３		IP	３		IP	３		IP	６		IP	１		IP	２		IP	１		IP
+柘植　　政浩	5.70	0.18	4.4	３		IP	５		IP	２		IP	３		IP	４		IP	１		G2	６		G2	４		IP	２		IP	３	5	IP
+大瀧　明日香	5.20	0.14	2.7	５		IP	４		G1	３		IP	６		G1	３		IP	４		IP	１		G3	４		IP	３		IP	３		G2
+松浦　　　勝	2.60	0.19	3.1	４		IP	４		IP	５	4	IP	６		IP	６		IP	４		IP	５		IP	６		IP	６		IP	３		IP
+喜井　つかさ	4.30	0.18	3.6	５		IP	５		IP	５	5	IP	２		IP	３	5	IP	３	5	IP	４		IP	３		G3	３	5	IP	６		G3

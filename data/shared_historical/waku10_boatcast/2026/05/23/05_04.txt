@@ -1,0 +1,8 @@
+data=
+1	0
+森　　　竜也	7.50	0.16	3.5	１		IP	１		IP	５		G3	３		IP	６		IP	１		IP	１		IP	１		IP	２		IP	２		IP
+石川　　吉鎬	5.90	0.20	4.6	２		IP	１		IP	４		IP	３		IP	５		IP	３		IP	４		IP	１	3	IP	６		IP	２		IP
+古川　　誠之	6.20	0.13	2.1	３		IP	５		IP	３		IP	１		IP	３		IP	１		IP	１		IP	３		IP	４		IP	５		IP
+齋藤　　智裕	2.60	0.16	3.3	６		IP	５		IP	６	6	IP	４		IP	５		IP	４		IP	４		IP	３		IP	６		IP	６		IP
+鈴木　　　猛	4.80	0.19	4.1	４		IP	３		IP	５		IP	３	4	IP	５		IP	４		IP	４		IP	３		IP	１		IP	４		IP
+櫻井　　　隼	2.20	0.23	5.7	６		IP	５		IP	５		IP	６		IP	６		IP	５		IP	６		IP	４		IP	５		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+板倉　　敦史	6.60	0.15	3.0	５		IP	１		IP	２		IP	１		IP	５		G3	２		IP	１		IP	４		IP	３		IP	３		IP
+中島　　昂章	6.70	0.19	3.6	６		IP	３		IP	１		IP	３		IP	３		IP	１		IP	１		IP	３		IP	３		IP	３		IP
+岩津　　徹郎	4.30	0.16	3.5	４		IP	２		IP	転		IP	２		IP	５		IP	４		IP	２		IP	６		IP	３		IP	５		IP
+春園　　功太	6.20	0.11	1.7	５		IP	１		IP	４		IP	３		IP	３		G3	１		IP	３		IP	５		IP	２		IP	２		IP
+上條　　嘉嗣	3.40	0.20	4.2	６	3	IP	１	2	IP	５		IP	６		IP	４		IP	６		G3	６	6	G3	３	4	G3	５	4	IP	５		IP
+松井　　貫太	2.90	0.22	5.2	３		IP	５		IP	６		IP	４		IP	４		IP	４		IP	４		IP	６		IP	５		IP	６		IP

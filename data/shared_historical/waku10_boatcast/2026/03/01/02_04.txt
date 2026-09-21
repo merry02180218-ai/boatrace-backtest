@@ -1,0 +1,8 @@
+data=
+1	0
+滝沢　　　崚	4.00	0.29	4.4	６		IP	６	2	IP	２		IP	５		IP	６	3	IP	３		IP	２		IP	２		IP	４		IP	６		IP
+立間　　充宏	6.40	0.19	4.0	４		IP	２		IP	２		IP	２		IP	３		IP	３		IP	５		IP	２		IP	３		IP	２		IP
+横田　　　茂	5.60	0.18	3.0	１	4	IP	４		IP	５		IP	３		IP	４	4	IP	４		IP	３		IP	２		IP	２		IP	４		IP
+夏山　　亮平	5.30	0.14	2.6	２		IP	３		IP	３		IP	１		IP	２		IP	６		IP	５		IP	５		IP	５		IP	２		IP
+室田　　泰史	3.30	0.14	3.5	５		IP	５		IP	６		IP	６		IP	５		IP	４		IP	４		IP	１		IP	３		G3	６		G3
+村田　　　敦	2.30	0.16	4.1	６		IP	６		IP	６		IP	５		IP	３		IP	４		IP	６		IP	５		IP	６		IP	４		IP

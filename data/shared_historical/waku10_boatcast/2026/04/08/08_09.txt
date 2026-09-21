@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　　丈	9.20	0.16	2.7	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	３		IP	２		IP	１		IP
+天野　　　誠	4.30	0.20	4.5	５		IP	３		IP	５		IP	４		IP	３		IP	６		IP	４		IP	３		IP	３		IP	３		IP
+佐藤　　永梧	4.30	0.13	2.8	１		IP	２		IP	５		IP	６	4	IP	６	4	IP	３		IP	２		IP	６		IP	５		IP	４		IP
+高橋　　竜矢	7.30	0.13	3.3	１		IP	２		IP	４		IP	２		G1	１		IP	２		IP	３		G1	２		IP	６		IP	２		IP
+森定　　晃史	4.60	0.21	4.0	３		IP	２		IP	６		IP	５	6	IP	５		IP	２		IP	４		IP	２	4	IP	３		IP	６		IP
+中野　　孝二	1.89	0.20	4.6	６		IP	５		IP	６		IP	５		IP	５		IP	６		IP	５	5	IP	４		IP	不		IP	５		IP

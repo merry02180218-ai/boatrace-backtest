@@ -1,0 +1,8 @@
+data=
+1	0
+服部　　幸男	7.60	0.15	3.0	４		IP	１		IP	１		IP	５		G1	２		G1	４		IP	２		IP	１		IP	２		IP	１		IP
+畑　　　竜生	7.50	0.17	3.2	４		IP	３		IP	２		IP	２		IP	２		IP	２		IP	３		IP	２		G3	２		IP	１		IP
+山本　　浩次	6.00	0.15	2.4	２		IP	４		IP	３		IP	４		IP	５		IP	３		IP	３		IP	３		IP	１		IP	２		IP
+笠　　　雅雄	4.10	0.17	3.0	３		IP	６	2	IP	６		IP	２	3	IP	６		IP	５		IP	３		IP	１		IP	４		IP	５		IP
+安田　　吉宏	3.80	0.19	3.6	４		IP	３		IP	６		IP	４		IP	３		IP	４	4	IP	６		IP	５		IP	３	6	IP	４		IP
+甲斐　　貴大	1.10	0.19	2.9	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP

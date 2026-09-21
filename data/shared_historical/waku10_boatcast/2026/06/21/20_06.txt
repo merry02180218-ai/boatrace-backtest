@@ -1,0 +1,8 @@
+data=
+1	0
+砂長　　知輝	10.20	0.13	2.5	１		IP	１		IP	１		IP	２		IP	１		G1	１		G1	１		SG	１		IP	１		IP	１		IP
+草場　　康幸	5.80	0.17	3.2	３	3	IP	５		IP	２		IP	１		IP	３		IP	３		IP	５		IP	３		IP	１		IP	５		IP
+榮田　　将彦	3.80	0.15	3.0	６		IP	６		IP	１	1	IP	４	2	IP	２		IP	５		IP	３		IP	４	4	IP	６		IP	６		IP
+志道　　吉和	2.70	0.18	4.0	３		IP	６		IP	３		IP	６		IP	５		IP	Ｆ		IP	４		IP	６		IP	４	5	IP	５	5	IP
+後藤　　翔之	6.00	0.14	2.8	２		IP	５		IP	３		IP	３		IP	５		IP	３		IP	４		G2	２	6	IP	１	4	IP	欠		G2
+萬　　　正嗣	2.20	0.18	4.1	６		IP	６		IP	５	5	IP	４		IP	６		IP	３		IP	６		IP	５		IP	５		IP	５		IP

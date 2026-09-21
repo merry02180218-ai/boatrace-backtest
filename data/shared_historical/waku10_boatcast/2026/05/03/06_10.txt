@@ -1,0 +1,8 @@
+data=
+1	0
+佐々木　康幸	9.90	0.11	2.2	１		G1	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+杉田　　篤光	6.20	0.18	4.4	２		IP	２		IP	３		IP	５		IP	３		G3	４		IP	４		IP	１		IP	３		IP	２		IP
+松下　　一也	7.10	0.15	2.7	２		IP	４		IP	１		IP	１		IP	２		IP	２		IP	４		IP	２		IP	２		IP	５		IP
+藤田　　康生	1.50	0.09	2.7	６	6	IP	Ｆ	6	IP	６	6	IP	４	6	IP																		IP
+倉田　　郁美	3.30	0.19	4.0	５		IP	６		IP	４		IP	３		IP	３		IP	４		IP	５		IP	３		IP	６		IP	６		IP
+坪井　　康晴	5.30	0.15	3.8	４		G1	３		G1	２	5	IP	４		G1	５		G1	５		G1	２		G1	３		G2	４		IP	５		IP

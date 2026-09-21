@@ -1,0 +1,8 @@
+data=
+1	0
+今泉　　　徹	5.40	0.17	3.1	３		IP	３	2	IP	２		IP	２		IP	５		IP	１		IP	５		IP	３		IP	４		IP	５		IP
+宇恵　　有香	6.11	0.17	3.3	２		IP	３		IP	３		IP	３		IP	４		IP	１		G3	６		G3	２		IP	転		IP	３		IP
+妹尾　　忠幸	6.30	0.17	3.0	１	4	IP	４		IP	３		IP	５		IP	１		IP	６		IP	２		IP	１		IP	４		IP	２		IP
+橋本　　英一	3.70	0.24	4.4	５		IP	６		IP	５		IP	４	5	IP	２		IP	６		IP	３		IP	４		IP	６		IP	２		IP
+佐藤　　大佑	5.90	0.16	2.9	２		IP	２		IP	５		G3	１		G3	２		G2	４	6	IP	５		IP	４		IP	２		IP	４	6	IP
+三浦　洋次朗	3.30	0.17	3.5	６		IP	２		IP	４		G2	５		IP	６		IP	４		IP	６		IP	４		IP	６		IP	４		IP

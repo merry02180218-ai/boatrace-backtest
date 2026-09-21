@@ -1,0 +1,8 @@
+data=
+1	0
+櫻本　あゆみ	8.20	0.18	2.8	１		IP	２		IP	２		IP	１		IP	１		IP	５		IP	１		IP	３		IP	１		IP	２		IP
+松本　　　怜	5.50	0.19	3.6	２		IP	１		IP	３		IP	５		IP	４		IP	３		IP	２		IP	２		IP	５		IP	６		IP
+佐藤　ほのか	4.40	0.18	3.0	１		IP	４		G3	１		IP	４		G3	５		IP	３		IP	５		IP	５		IP	５		G3	５		IP
+野田部　宏子	4.20	0.12	2.2	１		IP	６		IP	２		IP	Ｆ		IP	４		IP	５	5	IP	６		IP	５		IP	４		IP	１		IP
+中川　　りな	4.30	0.19	3.8	６		IP	３		IP	５		IP	２		IP	３		IP	６		IP	３		G3	４		IP	４		IP	４		G3
+深尾　　巴恵	4.40	0.16	3.4	２		IP	３		IP	４		IP	５		IP	５		IP	１		IP	６		IP	６		IP	５		G3	２		G3

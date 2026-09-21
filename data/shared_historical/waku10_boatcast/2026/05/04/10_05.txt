@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　孝平	10.30	0.14	2.7	１		IP	１		G1	１		G1	３		G1	１		G1	１		G1	１		IP	１		IP	１		IP	１		G1
+萩原　丈太朗	2.70	0.17	3.1	４		IP	エ		IP	６		IP	２		IP	５		IP	６		IP	３		IP	６		IP	５		IP	５		IP
+角山　　雄哉	3.44	0.16	3.0	４	4	IP	１		IP	６		IP	転		IP	３		IP	落		IP	２		IP	６		G3	６		G3	転		IP
+丹下　　　健	4.30	0.20	3.3	４		IP	６		IP	６		IP	５		IP	６		IP	１		IP	４		IP	３		IP	３		IP	２		IP
+下出　　卓矢	6.20	0.20	3.2	２		IP	４		IP	１	6	IP	２		IP	２		IP	５		IP	４		IP	４	3	IP	５		G2	１		IP
+竹腰　　正樹	3.10	0.26	5.4	６		IP	３		IP	３		IP	５		IP	４		IP	４	5	IP	６		IP	６		IP	６		IP	４		IP

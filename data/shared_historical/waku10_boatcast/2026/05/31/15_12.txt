@@ -1,0 +1,8 @@
+data=
+1	0
+北野　　輝季	8.89	0.16	3.1	１		G3	１		G3	落		G2	３		IP	１		IP	１		G1	１		G1	２		IP	４		IP	１		IP
+椎名　　　豊	8.20	0.14	2.4	１	3	G3	１		G3	２		IP	４		IP	２		IP	１	4	IP	３		IP	２		IP	１		IP	３	3	IP
+安河内　　将	7.40	0.14	2.7	１	4	G3	２		G3	３	4	G3	１		IP	１		IP	３		G1	４		IP	４		G1	３		IP	２	4	IP
+松山　　将吾	6.50	0.15	2.7	６		G3	２		G3	１		IP	２		IP	３		IP	１		IP	２		IP	５		IP	４		G3	２		G3
+塚越　　海斗	5.11	0.15	2.9	３		G3	３	4	IP	２		IP	５		IP	３		IP	２		IP	６		IP	不		IP	６		IP	３		IP
+中岡　　正彦	5.30	0.14	3.8	２	2	G3	３	4	G3	４	5	IP	２	4	IP	４	2	IP	６	2	SG	５	5	SG	２	2	IP	４		IP	５	2	IP

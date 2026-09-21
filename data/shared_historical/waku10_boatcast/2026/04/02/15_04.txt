@@ -1,0 +1,8 @@
+data=
+1	0
+貫地谷　直人	4.70	0.17	3.6	３		IP	６		IP	２		IP	５	2	IP	５		IP	１		IP	２		IP	４		IP	４		IP	５		IP
+樋口　　　亮	5.60	0.19	3.5	３	3	IP	５		IP	４		IP	５		IP	３		IP	４		IP	２		IP	２		IP	３		IP	１	1	IP
+宮崎　　　奨	6.10	0.15	3.6	３		IP	２		IP	３		G3	４	4	G3	５		IP	３		G1	２	4	IP	２		IP	２		IP	４		IP
+富永　　修一	4.90	0.12	1.9	４		IP	４		IP	３		IP	３		IP	２		IP	４		IP	４		G1	４		G3	４		IP	４		IP
+平岡　　重典	3.00	0.17	3.5	４		IP	６		IP	５		IP	５		IP	４		IP	４		IP	３	6	IP	５		IP	６		IP	４		IP
+小畑　　楓夏	1.20	0.16	3.0	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+数原　　　魁	8.67	0.16	3.0	５		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP	転		IP	１		IP
+中島　　秀治	5.90	0.19	3.6	６		IP	１		IP	２		IP	２		IP	３		IP	転		G3	５		IP	２		IP	２		IP	３		IP
+宇田川　信一	6.00	0.17	3.3	５		IP	５		IP	２		IP	４		IP	１		IP	１		IP	転		IP	４		IP	２		IP	３	4	IP
+金子　　良昭	3.70	0.19	3.9	５		IP	４	2	IP	６		IP	３		IP	４	5	IP	５		IP	２		IP	５		IP	４		IP	４		IP
+佐藤　　博亮	7.30	0.15	2.5	２		IP	５		IP	１		G1	２		IP	２		IP	２		IP	１		IP	４		IP	５		IP	１		IP
+土井　　歩夢	4.90	0.20	4.2	４		IP	３		IP	５		IP	５	5	IP	３		IP	３		IP	２	3	IP	４		IP	３	5	IP	４		IP

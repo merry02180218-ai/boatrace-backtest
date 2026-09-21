@@ -1,0 +1,8 @@
+data=
+1	0
+北川　　太一	7.60	0.21	2.9	１		IP	３		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	５		G3	５		G3
+泉　　　具巳	5.10	0.13	2.8	４		IP	１		IP	５		IP	６		IP	３		IP	２		IP	３		IP	４		IP	４	3	IP	３		IP
+田口　　節子	6.90	0.15	2.7	４		IP	１		IP	３		G1	６		IP	３		G1	２		IP	３	4	G3	２		IP	１		IP	２		IP
+今井　　貴士	4.00	0.18	2.7	３		IP	４		IP	３		G1	２		G3	６		G3	５		IP	４		IP	４	5	IP	６		IP	５		G1
+佐藤　　博亮	7.50	0.15	2.5	２		IP	３		IP	２		IP	５		IP	１		G1	２		IP	２		IP	２		IP	１		IP	４		IP
+西島　　義則	6.80	0.20	4.1	２	2	IP	転	2	IP	２	1	IP	２	1	IP	５	1	IP	１	2	IP	３	2	IP	１	1	IP	２	2	IP	２	2	IP

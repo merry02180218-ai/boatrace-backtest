@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　裕隆	8.00	0.14	2.0	１		IP	２		IP	２		IP	２		IP	１		IP	５		IP	１		IP	３		IP	１		IP	２		IP
+渡邊　　裕貴	5.70	0.19	3.8	１		IP	２		IP	４		IP	３		IP	１		IP	６		IP	６		IP	３		IP	１		IP	６		IP
+武田　　光史	7.90	0.13	2.7	４		IP	１		IP	３		IP	１		IP	２		IP	５		IP	１	2	IP	２		IP	２		IP	１		IP
+谷川　　将太	3.90	0.17	3.0	３		IP	４		IP	６	5	IP	３		IP	Ｆ		IP	３		IP	２		IP	４		IP	５		IP	５		IP
+田中　　孝明	3.20	0.22	4.8	５	4	IP	６		IP	４		IP	４	4	IP	３		IP	５		IP	４		IP	６		IP	４		IP	４		IP
+田中　　駿兵	6.60	0.16	2.9	３		IP	２		IP	２		IP	５		IP	２		IP	５		IP	４	5	IP	１		IP	１		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+木村　　仁紀	8.00	0.17	3.0	転		G2	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	６		G1	２		G1
+山口　　晃朋	6.00	0.17	3.9	４		IP	１		IP	４	4	IP	４	3	IP	２		IP	２		IP	２		IP	４		IP	２	4	IP	５		IP
+室田　　泰史	5.00	0.12	2.5	４		IP	３		IP	２		IP	３		IP	２		IP	４		IP	５		IP	５		IP	５		IP	２		IP
+妹尾　　忠幸	6.00	0.17	3.2	２		IP	２		IP	２		IP	４		IP	５		IP	４	5	IP	１		IP	２		IP	３	5	IP	５		IP
+吉村　　　誠	5.11	0.12	3.1	４		IP	３		IP	６		IP	５		IP	２		IP	４	4	IP	２		G3	４		G3	転		G3	４	6	G1
+山田　　晃大	3.30	0.11	2.0	５		IP	４		IP	５		IP	４		IP	６		IP	５		IP	４		IP	３		IP	４		IP	４		IP

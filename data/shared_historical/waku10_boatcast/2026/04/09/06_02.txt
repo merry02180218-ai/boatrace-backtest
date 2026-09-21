@@ -1,0 +1,8 @@
+data=
+1	0
+石田　　勇斗	7.70	0.16	2.8	１		IP	１		IP	６		IP	１		IP	５		IP	１		IP	３		IP	２		IP	１		IP	１		IP
+瀬川　　大地	2.90	0.18	3.8	３		IP	３		IP	５		IP	３		IP	６		IP	６		IP	５		IP	５		IP	６		IP	５		IP
+大場　　恒季	7.40	0.15	2.6	２		IP	３		IP	２		IP	４		G2	５	2	G2	３		G2	２		IP	１		IP	１		IP	２		IP
+佐野　　優都	3.60	0.16	3.0	Ｆ	5	IP	２		IP	３	6	IP	５		IP	４		IP	５		IP	６		IP	６		IP	２		IP	４	6	IP
+宮脇　　遼太	4.40	0.18	3.9	５		IP	４		IP	２		IP	３		IP	４		IP	４		IP	５		IP	４		IP	２		IP	５	6	IP
+安藤　　瑠希	2.90	0.14	3.5	５		IP	３		IP	１		IP	５		IP	５		IP	５		IP	６		IP	６		IP	６		IP	５		IP

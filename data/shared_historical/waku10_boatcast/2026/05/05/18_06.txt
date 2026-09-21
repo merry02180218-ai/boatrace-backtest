@@ -1,0 +1,8 @@
+data=
+1	0
+泉　　　啓文	6.70	0.16	3.3	４	2	IP	２		IP	３		IP	１		IP	５		IP	１		IP	６		IP	２		IP	１		IP	２		IP
+中田　　元泰	5.50	0.18	4.3	５		IP	２		IP	１		IP	２		IP	６		IP	６		IP	２		IP	２		IP	２		IP	６		IP
+岡部　　大輝	5.60	0.14	2.6	３	4	IP	５		IP	３		IP	２		IP	５		IP	４		IP	４	2	IP	３		IP	１		IP	２		IP
+松本　　　怜	6.80	0.20	4.1	３		IP	２		IP	３		IP	３		IP	１		IP	５		IP	２		IP	４		IP	２		IP	２		IP
+藤井　　　徹	2.90	0.23	4.5	６		IP	５		IP	３		IP	５		IP	６		IP	５		IP	４		IP	６		IP	３		IP	４		IP
+松田　大志郎	6.20	0.14	3.6	３		IP	４		G1	４		G1	２	4	IP	３		IP	２		IP	２	5	IP	１	5	IP	４	5	IP	５		IP

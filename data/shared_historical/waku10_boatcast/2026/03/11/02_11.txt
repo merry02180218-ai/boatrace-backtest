@@ -1,0 +1,8 @@
+data=
+1	0
+青木　　　蓮	9.00	0.10	1.5	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	１		G1	３		G2
+楠　　将太郎	4.50	0.19	3.9	１		IP	５		IP	２		IP	落		IP	６		IP	１		IP	６		IP	６		IP	４	3	IP	２		IP
+中　　　亮太	4.80	0.15	2.5	４		IP	５		IP	４		IP	３	2	IP	２		G2	４		IP	６		IP	４		IP	３		IP	２		IP
+竹間　　隆晟	5.90	0.13	2.0	６		IP	４		IP	１		IP	４		G1	４		G1	３		IP	３		IP	１		IP	４		IP	３		IP
+藤井　　公人	4.90	0.16	3.5	４		IP	４		G3	６		IP	１		IP	３		IP	３		IP	５		IP	４		IP	２		IP	５		IP
+澁川　　　夏	3.90	0.19	4.0	３		IP	６		IP	５		IP	４		IP	３		IP	２	5	IP	４		IP	４		IP	５		IP	５		IP

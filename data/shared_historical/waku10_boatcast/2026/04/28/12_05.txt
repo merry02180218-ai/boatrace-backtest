@@ -1,0 +1,8 @@
+data=
+1	0
+村松　　修二	8.20	0.14	3.2	２		IP	１		IP	３		IP	４		IP	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP
+井手　　良太	5.60	0.16	2.4	２		IP	３		IP	２		IP	６		IP	４		IP	２		IP	６		IP	２		IP	２		IP	４		IP
+福岡　　泉水	6.40	0.18	3.2	２	5	IP	２		IP	６		IP	３		IP	５		IP	２		G3	１		G3	６		IP	２		IP	１		IP
+庄司　　孝輔	5.70	0.14	3.2	５		IP	５		G3	３		IP	１		IP	４		IP	１	5	IP	１		IP	４		G3	３	5	G3	５	5	IP
+岡田　　憲行	6.44	0.15	3.1	２		IP	１	1	IP	４		IP	２		IP	転		IP	４		IP	２		IP	５		IP	２		IP	３		IP
+興津　　　藍	2.90	0.18	3.7	４		IP	５		IP	４		IP	５		IP	４	2	IP	６		IP	４	4	IP	６		IP	４		G1	６		G1

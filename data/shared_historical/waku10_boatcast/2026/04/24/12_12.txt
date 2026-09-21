@@ -1,0 +1,8 @@
+data=
+1	0
+河村　　　了	8.80	0.14	2.1	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	５		IP	１		IP	１		IP	１		IP
+庄司　樹良々	6.20	0.10	1.9	３		IP	５		IP	２		IP	２		IP	１		IP	２		IP	３		IP	５		IP	１		IP	５		IP
+西舘　　　健	5.30	0.13	1.8	２		IP	４	4	IP	１		IP	５		IP	４		IP	１		IP	６		IP	３		IP	３		IP	５		IP
+三好　　勇人	3.67	0.16	3.0	５		IP	４		IP	４		IP	３		IP	６		IP	５		IP	３		IP	４		IP	落		IP	４		IP
+村松　　修二	3.70	0.20	3.9	５		IP	２		IP	５		IP	５		IP	４		IP	３		IP	６		IP	２		IP	５		IP	５		IP
+高橋　　正男	6.20	0.19	3.5	２		IP	１		IP	１		IP	３		IP	４		IP	６		IP	５		IP	４		IP	２		IP	２		IP

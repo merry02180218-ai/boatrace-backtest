@@ -1,0 +1,8 @@
+data=
+1	0
+石川　　哲秀	3.20	0.18	3.3	６		IP	５		IP	１		IP	６		IP	３		IP	６		IP	３		IP	６		IP	５		IP	５		IP
+上村　　宏太	3.60	0.13	3.0	６		IP	１	3	IP	５		IP	３		IP	６		IP	４		IP	６		IP	６		IP	５		IP	２		IP
+眞鳥　　康太	3.10	0.22	4.7	１	5	IP	５	6	IP	６	6	IP	４	6	IP	５		G3	５	4	IP	６	4	IP	６	6	IP	５	5	IP	３	5	IP
+鈴木　　柊介	2.60	0.13	2.7	５		IP	６	6	IP	６		IP	４		IP	６		IP	５	5	IP	５	6	IP	２		IP	４		IP	６		IP
+新田　　洋一	3.80	0.14	2.6	Ｆ		IP	４		IP	５	6	IP	４		IP	３		IP	３		IP	３		IP	５	4	IP	４	6	IP	４		IP
+塚越　　陸斗	0.90	0.29	4.4	６		IP	Ｆ		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

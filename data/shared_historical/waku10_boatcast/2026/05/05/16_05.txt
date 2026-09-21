@@ -1,0 +1,8 @@
+data=
+1	0
+山口　　達也	10.00	0.14	3.9	１		IP	４		SG	１		G1	１		G1	１		G1	１		G1	１		IP	１		IP	２		G1	１		G1
+重成　　一人	7.30	0.14	2.7	２		IP	１		G1	３		G1	１		IP	２		IP	４		G1	５		G1	３		G1	１		IP	４		IP
+大原　　祥昌	5.50	0.16	3.4	４		IP	４		IP	６	2	G3	５	2	IP	１		IP	１		IP	４		IP	３		IP	３		IP	３		IP
+渡辺　　　崇	6.00	0.19	3.9	３		IP	４		IP	１		IP	４		G3	１		IP	２		IP	５		IP	３		IP	２		IP	５	3	IP
+岡瀬　　正人	4.40	0.18	4.4	４		IP	３		IP	４		IP	６		IP	４		IP	３		IP	３		IP	３	4	IP	３		IP	６		IP
+金田　　幸子	2.30	0.17	4.1	５		IP	６		G3	６		G3	３		IP	５		IP	６		IP	６		IP	６		IP	４		IP	４		IP

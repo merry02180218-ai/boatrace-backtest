@@ -1,0 +1,8 @@
+data=
+1	0
+橋本　　　明	8.00	0.14	2.6	２		IP	１		IP	１		IP	３		IP	４		IP	５		IP	１		IP	１		IP	１		IP	１		IP
+前田　　光昭	3.30	0.18	3.4	６		IP	５		IP	２		IP	６		IP	３		IP	３		IP	４		IP	６		G3	５		G3	５		IP
+浜野　　孝志	5.40	0.18	3.9	２		IP	４		IP	５		IP	３		IP	３		IP	２		IP	３		IP	４		IP	５		IP	２	2	IP
+米田　　隆弘	5.40	0.17	4.0	４		IP	３		IP	４		IP	４		IP	１		IP	３		IP	４		IP	３		IP	４		IP	３		IP
+宮地　　博士	4.60	0.24	4.6	５		IP	３	6	IP	３		IP	４		IP	５		IP	３		IP	４		IP	３		IP	４		IP	３	4	IP
+江夏　　　満	5.40	0.22	4.7	２		IP	４		IP	５		IP	３		IP	５		IP	６		G1	２		G1	３		G1	４		IP	２	5	IP

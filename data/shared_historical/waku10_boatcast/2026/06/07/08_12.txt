@@ -1,0 +1,8 @@
+data=
+1	0
+石渡　　鉄兵	8.70	0.15	2.7	１		IP	１		IP	１		G1	１		G1	２		G1	１		IP	１		IP	１		IP	５		SG	６		G1
+川原　　正明	7.80	0.11	1.5	１		IP	２		IP	２		G3	５		G3	２		IP	１		IP	２		IP	３		IP	１	3	IP	２		IP
+志道　　吉和	3.20	0.20	4.3	２		IP	６		IP	５		IP	２		IP	５		IP	４		IP	５		IP	５	4	IP	６		IP	５		IP
+丹下　　　健	4.10	0.19	3.5	２		IP	２		IP	６		IP	２		IP	５	6	IP	３		IP	４		IP	６		IP	６		IP	５		IP
+川口　　貴久	4.20	0.16	3.4	３	6	IP	３		IP	５	6	IP	４		IP	６		IP	４		IP	３		IP	４		IP	２		IP	６		IP
+深井　　利寿	4.10	0.18	4.4	４		IP	４		G2	５		G2	６	5	IP	４		IP	５		IP	３		IP	３	5	IP	５		IP	２	5	IP

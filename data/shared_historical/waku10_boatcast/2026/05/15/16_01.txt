@@ -1,0 +1,8 @@
+data=
+1	0
+出畑　　孝典	8.10	0.16	3.6	２		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	６		IP
+間野　　兼礼	7.40	0.16	2.9	５		IP	２		IP	３		IP	１		IP	３	4	IP	１		IP	２	3	IP	２		IP	３		IP	１		IP
+渡　　　修平	3.80	0.18	4.3	２		IP	５		IP	２		IP	３		IP	５		IP	５		IP	２		IP	転		IP	６		IP	６		IP
+坂本　　奈央	2.10	0.24	5.0	６		IP	５	5	G3	４		G3	５		IP	５		IP	４		G3	６		IP	６		IP	５		G3	５		G3
+佐藤　　右京	2.00	0.21	4.1	５		IP	４		IP	６		IP	６		IP	６		IP	５		IP	５		IP	５		IP	６		IP	４		IP
+寺田　　夢生	1.10	0.15	3.6	６		IP	６		IP	６		IP	５		IP	Ｆ		IP	６		IP	６		IP	６	5	IP	５		IP	６		IP

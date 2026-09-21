@@ -1,0 +1,8 @@
+data=
+1	0
+池田　奈津美	6.90	0.16	2.3	２		IP	３		IP	３		IP	２		IP	１		IP	２		IP	１		IP	３		IP	６		G3	３		G3
+湯淺　　紀香	6.30	0.18	5.2	２		IP	１	3	IP	５		IP	２		IP	２		IP	３		IP	２		IP	６		G3	５		G3	１		G3
+小野　　　桜	4.00	0.15	3.8	４		IP	６		IP	３		IP	６		IP	４		IP	４		IP	５		IP	３		IP	４		G3	２		IP
+松瀬　　弘美	1.90	0.19	4.2	６		G3	６		IP	５		G3	６		G3	５		IP	６		IP	６		IP	４		IP	５		IP	４	5	IP
+前田　　紗希	5.44	0.11	2.7	２		G3	５		IP	２		G1	４		G3	２		G3	４		G3	欠		G3	３		IP	３	4	IP	５		IP
+山下　　友貴	3.70	0.22	4.4	４		IP	５		IP	５		IP	３	5	IP	４		IP	５		G3	５		G3	３		IP	６		IP	３		IP

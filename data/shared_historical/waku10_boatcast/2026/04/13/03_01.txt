@@ -1,0 +1,8 @@
+data=
+1	0
+堀越　　雄貴	6.40	0.20	5.2	１		IP	３		IP	２		IP	２		IP	６		IP	１		IP	３		IP	６		IP	１		IP	４		IP
+岩橋　　裕馬	4.60	0.16	3.0	４		IP	４		IP	５		G3	６		IP	１		IP	５		IP	２		IP	２		IP	３		IP	６		IP
+秋田　健太郎	4.20	0.19	3.5	５		IP	２		IP	３		IP	５		IP	５		IP	４		IP	４		IP	５		IP	４		IP	２		IP
+山口　　　亮	4.22	0.18	3.7	５		G3	２		G3	３	5	IP	５		IP	３		IP	３		IP	６		IP	欠		IP	３		IP	６		G3
+金子　　怜央	3.10	0.12	1.5	６		IP	６	6	IP	４		IP	６		IP	３		IP	６		IP	４		IP	６		IP	１		IP	５		IP
+川合　　理司	3.00	0.18	4.8	３		IP	５	5	IP	６		IP	２		IP	３		IP	６		IP	６		IP	５		IP	６		IP	５		G3

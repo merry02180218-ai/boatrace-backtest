@@ -1,0 +1,8 @@
+data=
+1	0
+石井　　裕美	5.20	0.17	3.5	３		IP	４		G3	４		IP	５		G3	５		G3	４		G3	２		G3	２		IP	２		IP	３		IP
+飯塚　　　響	3.22	0.22	4.7	５	3	IP	欠		IP	４		IP	５		G3	５		G3	５		IP	４		IP	６		IP	１		IP	５		IP
+松浦　　　勝	3.70	0.16	3.2	６	4	IP	５		IP	１		IP	６		IP	４		IP	２		IP	４		IP	６		IP	５		IP	４		IP
+水谷　　理人	6.30	0.15	2.9	２		IP	３		IP	４		IP	転		IP	４		IP	１		IP	１		G1	３		IP	３		IP	２		IP
+高濱　　芳久	4.50	0.16	2.9	５		IP	４		IP	４		IP	３	4	IP	２		IP	３		IP	５	6	IP	４		IP	６	6	IP	３		IP
+水摩　　　敦	5.20	0.17	3.7	３		IP	３		IP	５	5	IP	３	5	IP	５		G3	１		G3	３		IP	４	2	IP	３		IP	４		IP

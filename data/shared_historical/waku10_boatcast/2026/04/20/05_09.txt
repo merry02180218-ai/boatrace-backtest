@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　　博	9.30	0.15	3.4	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	２		IP
+阿波　　勝哉	3.30	0.20	4.4	５		IP	５		IP	６		IP	５		IP	４	3	IP	４		IP	５		IP	４		IP	３	6	IP	３		IP
+末永　　由楽	6.80	0.15	1.8	２		IP	１		IP	４		IP	４		IP	３		IP	４		IP	３		IP	２		IP	２		IP	１		IP
+寺本　　昇平	4.20	0.22	3.7	５		IP	４		IP	２		IP	４		IP	６		IP	２		IP	３		IP	５		IP	３		IP	６		IP
+服部　　　剛	4.60	0.21	4.5	２		IP	２		IP	４		IP	５	4	IP	４		IP	２		IP	６		IP	５		IP	６		IP	２		IP
+小池　　修平	4.80	0.16	4.1	６		G1	３		SG	４		G1	１	5	IP	５		G1	６		G1	６	5	G1	４	2	IP	５		IP	１		IP

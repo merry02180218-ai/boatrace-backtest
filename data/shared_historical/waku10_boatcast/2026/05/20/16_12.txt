@@ -1,0 +1,8 @@
+data=
+1	0
+長尾　　章平	6.40	0.16	3.1	Ｆ		IP	２		IP	６		IP	１		IP	１		IP	３		IP	１		IP	１		IP	６		IP	３		IP
+塩崎　　桐加	4.40	0.19	2.9	２		IP	４		IP	５		IP	３		IP	４		IP	２		IP	２		IP	４		G3	Ｆ		G1	沈		IP
+茅原　　悠紀	6.90	0.14	3.4	３		G1	５		G1	３		SG	６		SG	１		G1	３		G1	４		G1	４		G1	１		G1	３		G1
+野見山　拓己	4.80	0.18	2.7	２		IP	５		IP	３		IP	６		G3	６		IP	４		IP	３		IP	１		IP	３		IP	４		IP
+森永　　　隆	5.50	0.17	4.0	４	6	IP	２		IP	６		IP	３		IP	３		IP	２		IP	２		IP	４		IP	３		IP	４		IP
+安田　　吉宏	2.70	0.19	4.4	４		IP	５	5	IP	３		IP	５		IP	６		IP	４		IP	５		IP	４		IP	６		IP	６		IP

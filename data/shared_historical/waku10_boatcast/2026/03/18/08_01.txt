@@ -1,0 +1,8 @@
+data=
+1	0
+木村　　仁紀	10.00	0.12	2.0	１		IP	１		IP	１		G1	１		IP	１		G1	２		G1	１		IP	１		G2	２		IP	１		IP
+渡邊　　裕貴	5.90	0.19	4.6	４		IP	３		IP	１		IP	１		IP	３	3	IP	４		IP	３		IP	２		IP	６		IP	４		IP
+石原　　凪紗	4.70	0.19	3.7	６	6	IP	５		IP	２		IP	４		IP	２		IP	１		G3	４	4	G3	６		IP	６		IP	２		IP
+河上　　年昭	2.00	0.16	2.9	６		IP	６		IP	５		IP	６		IP	５		IP	４		IP	６		IP	５		IP	４		G3	５		G3
+鈴木　　茂高	4.20	0.19	3.9	１		IP	４		IP	４		IP	２		G3	５		IP	４		IP	４	6	IP	５		IP	５		IP	５		IP
+佐藤　　右京	2.50	0.26	5.1	３		IP	４		IP	６		IP	５		IP	４		IP	６		IP	５		IP	５		IP	５		IP	６		IP

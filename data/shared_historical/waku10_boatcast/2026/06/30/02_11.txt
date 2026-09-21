@@ -1,0 +1,8 @@
+data=
+1	0
+櫻井　　　優	7.60	0.16	3.5	１		IP	１		IP	５		IP	３		IP	２		IP	２		IP	３		IP	１		IP	３		IP	１		IP
+畑田　　汰一	6.20	0.12	2.4	１		IP	５		G2	５		IP	１		IP	４		IP	１		IP	４		IP	２		IP	３	3	IP	４		G1
+笹木　　香吾	7.70	0.18	3.4	１	4	G3	４		IP	１		IP	１		IP	２		IP	１		IP	５		G2	２		IP	３		IP	２		IP
+野長瀬　正孝	5.70	0.13	3.2	２	3	IP	３	5	IP	４		IP	４		IP	５		IP	６		IP	２		IP	３		IP	２		IP	１		IP
+井上　　恵一	1.70	0.23	4.7	６		IP	６		G3	５		G3	４		IP	６	2	IP	６	4	IP	５		IP	５		IP	５		IP	６		IP
+山谷　　　央	3.30	0.17	3.7	３		IP	４		IP	４		IP	５		IP	５		IP	６		IP	４		IP	４		IP	４		IP	５		IP

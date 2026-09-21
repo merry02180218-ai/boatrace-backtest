@@ -1,0 +1,8 @@
+data=
+1	0
+山下　　夏鈴	7.70	0.18	2.9	１		IP	１		IP	２		IP	６		IP	１		IP	１		IP	２		IP	２		IP	１		IP	５		IP
+瀬川　　大地	4.90	0.17	3.9	２		IP	３		IP	４		IP	５		IP	２		IP	６		IP	４		IP	４		IP	３		IP	３		IP
+北川　　潤二	6.60	0.16	2.9	２	2	IP	３		IP	３		IP	３		G3	３	4	G3	４		IP	２		IP	２		G3	３		G3	２		IP
+山口　　裕二	5.30	0.20	3.6	４		IP	５		IP	２		IP	Ｆ	5	G1	３		G1	４		IP	１		IP	３		IP	２		IP	４		IP
+関　　　裕也	4.00	0.23	4.6	２		IP	３		IP	４	4	IP	５		IP	２	4	IP	５		IP	６	4	IP	３	4	IP	５	4	IP	６	4	IP
+中尾　　優香	2.70	0.20	4.1	３		IP	６		IP	４		IP	５		IP	６		G3	３		IP	４		IP	６		IP	６		IP	６		IP

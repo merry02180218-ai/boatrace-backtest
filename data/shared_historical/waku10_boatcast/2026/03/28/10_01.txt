@@ -1,0 +1,8 @@
+data=
+1	0
+大瀧　明日香	8.70	0.10	2.8	１		G3	１		IP	１		IP	１		G1	１		G1	１		IP	５		IP	５		G1	１		IP	１		IP
+西田　　和加	2.00	0.25	4.3	６		IP	４		IP	６		IP	５		IP	４		IP	６		IP	６		IP	４		IP	６		IP	６		IP
+大久保　佑香	4.60	0.19	4.0	４		G3	２		IP	６		IP	４		IP	３		IP	２		G3	３		G3	５		IP	６		IP	３		IP
+赤井　　　睦	5.80	0.14	3.2	２		G3	５		G1	５		IP	２		IP	４		G1	２		G1	５		G1	１		G3	５		G3	２		IP
+伊藤　　玲奈	4.44	0.26	4.8	６		G3	６		IP	２		IP	４		IP	３		IP	不		G3	４		IP	４		IP	３		IP	３		IP
+松瀬　　弘美	2.40	0.24	4.8	４		G3	６		G3	３		IP	６		IP	３		IP	６		IP	６		IP	６		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+神里　　琴音	8.00	0.14	3.2	２		IP	３		IP	２		IP	１		IP	２		IP	１		IP	４		IP	１		IP	２		IP	２		IP
+池田　奈津美	4.90	0.13	2.5	６		IP	６		IP	１		IP	１		IP	３		G3	５		G3	１		G3	４		IP	４		IP	６		IP
+高橋　　淳美	3.60	0.16	3.5	４		IP	３		IP	６		IP	２		IP	５		IP	６		IP	４		G3	５		G3	５		IP	３		IP
+川野　　芽唯	6.30	0.17	3.7	６		IP	３	5	IP	１		G1	４		IP	２		G1	５		G1	２		IP	４		IP	２		IP	３		G2
+井上　　未都	4.00	0.17	2.5	２		IP	６		G1	３		G3	６		IP	６		IP	５		IP	４		IP	４		IP	２		IP	転		G3
+西澤　日花里	2.80	0.24	4.1	５		G3	４		IP	６		IP	５		IP	５		IP	５		IP	３		IP	３		IP	５		IP	６		IP

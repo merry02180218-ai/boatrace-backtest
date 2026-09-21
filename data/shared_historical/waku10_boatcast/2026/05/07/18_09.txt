@@ -1,0 +1,8 @@
+data=
+1	0
+岡部　　貴司	6.20	0.15	3.2	１		IP	２		IP	２		IP	３		IP	５		IP	５		IP	２		IP	２		IP	５		IP	２		IP
+近江　　翔吾	6.90	0.10	2.1	４		IP	１		IP	２		G1	２		IP	３		IP	４		IP	１		IP	６		G1	２		IP	２		IP
+山口　　修路	5.00	0.19	4.0	３		IP	４		G3	２		IP	５		IP	３		IP	３		IP	４		IP	４		IP	４		IP	３		IP
+中田　　元泰	7.10	0.16	3.0	２		IP	１		IP	５		IP	４		IP	１		IP	１		IP	２		G1	２		IP	４		IP	３		IP
+河野　　真也	4.40	0.23	4.1	１		IP	１		IP	６	4	IP	４		IP	４		IP	４		IP	３		IP	５		IP	５	4	IP	６		IP
+高濱　　芳久	5.20	0.16	3.0	２	2	IP	３	2	IP	５	3	IP	３		IP	３	4	IP	３	2	IP	２		IP	２		IP	６	5	IP	６	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+網代　　良芽	5.70	0.15	2.6	１		IP	１		IP	２		IP	６		IP	２		IP	５		IP	４		IP	４		IP	５		IP	２		IP
+城間　　盛渚	6.20	0.17	2.8	５		IP	２		IP	３		IP	３		IP	１		IP	４		IP	５	3	IP	２		IP	３		IP	１		IP
+西丸　侑太朗	5.90	0.13	2.3	３		IP	４		IP	４		IP	２		IP	１		G3	５		G3	４		IP	５		G1	１		IP	３		IP
+出畑　　孝成	5.10	0.15	3.3	１		IP	６		IP	６		IP	２		IP	５		IP	２		IP	６		IP	２		IP	３		IP	３		IP
+澁川　　　夏	4.50	0.15	3.7	５		IP	２		IP	４		IP	５		IP	６	6	IP	２		IP	４		IP	３		IP	５		IP	２		IP
+中野　　仁照	4.30	0.21	4.4	６		IP	６		IP	６		IP	３		IP	２		IP	３		IP	４		IP	５		IP	３		IP	２		IP

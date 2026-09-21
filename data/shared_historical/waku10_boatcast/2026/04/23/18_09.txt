@@ -1,0 +1,8 @@
+data=
+1	0
+小川　日紀太	5.60	0.16	3.0	１		IP	３		IP	１		IP	５		IP	６		G3	４		IP	４		IP	６		IP	２		IP	１		IP
+金田　　大輔	4.60	0.15	3.9	６		IP	４		IP	２		IP	３		IP	６		IP	２		IP	５		IP	Ｆ	4	IP	１	6	IP	３		IP
+是澤　　孝宏	7.00	0.13	2.0	１		IP	４		IP	５		G3	１		G3	４		IP	１		IP	１		IP	２		IP	４		IP	２	4	IP
+庄島　　潤成	3.30	0.15	3.8	６		IP	４		IP	６	6	IP	落	5	IP	２	6	IP	４		IP	６		IP	５		IP	３		IP	３		IP
+坂口　　貴彦	4.20	0.14	2.8	２		IP	５		IP	４		IP	４		IP	４		IP	５		IP	３		IP	５		IP	３		IP	４		IP
+富永　　大一	3.80	0.18	3.4	６		IP	４		IP	２		IP	５		IP	３		IP	５		IP	６		IP	２		IP	４		IP	５		IP

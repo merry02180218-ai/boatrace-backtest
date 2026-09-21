@@ -1,0 +1,8 @@
+data=
+1	0
+秋末　　秦悟	7.20	0.15	3.4	２		IP	Ｆ		IP	１		IP	２		IP	４		IP	１		IP	１		IP	１		IP	５		IP	１		IP
+岡崎　　凪汰	5.70	0.17	4.2	６		IP	５		IP	５		IP	１		IP	４		IP	２		IP	１		IP	２		IP	４		IP	２		IP
+村本　　大成	3.30	0.18	3.0	５		IP	５		IP	５		IP	３		IP	５		IP	４		IP	４		IP	６		IP	４		IP	３		IP
+山下　　心一	3.20	0.16	3.2	６		IP	６		IP	５		IP	２		IP	５		IP	４		IP	５		IP	３	5	IP	４	6	IP	５		IP
+篠原　　飛翔	5.20	0.20	3.5	３		IP	２		IP	２	6	IP	５		IP	３		IP	４		IP	３		IP	３		IP	４	4	IP	５		IP
+大原　　祥昌	4.40	0.17	4.6	エ		IP	５	5	IP	３		G3	２		G3	４		IP	４		IP	４		IP	４		IP	３		IP	３	5	IP

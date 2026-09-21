@@ -1,0 +1,8 @@
+data=
+1	0
+村田　　修次	9.20	0.17	3.0	１		IP	２		IP	３		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+片岡　　大地	5.60	0.11	2.8	３		IP	５		IP	５		IP	３		IP	２		IP	２		IP	３		IP	４		IP	２		IP	４		IP
+奈須　　啓太	6.10	0.13	2.2	６		IP	２		IP	３		IP	２		IP	１		IP	４		IP	３		IP	２		IP	２		IP	５		IP
+加藤　　政彦	4.50	0.15	4.0	２		IP	５		G1	６		G1	４		G1	４		G1	６		G1	１		IP	３		IP	５		IP	５		IP
+伊藤　　啓三	2.60	0.15	3.8	６		IP	２		IP	５	6	IP	５		IP	６		IP	６		IP	６	6	IP	４		IP	５		IP	４		IP
+吉永　　浩則	2.30	0.23	5.2	６		IP	５		IP	４		IP	５		IP	４		IP	４		IP	５		IP	６		IP	６		G3	５		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+岩永　　雅人	9.10	0.16	3.5	１		IP	６		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+仲　　　航太	5.80	0.14	2.2	５		IP	４	3	IP	３		IP	２		IP	３		IP	１		IP	１		IP	６		IP	２		IP	６		IP
+北川　　敏弘	3.40	0.19	3.9	４		IP	５		IP	５		IP	４		IP	２		IP	４		IP	６		IP	４		IP	４		IP	６		IP
+川田　　正人	4.00	0.18	4.8	３		IP	４		IP	６		IP	３		IP	４		IP	４		IP	４	5	IP	２		IP	５		IP	６		IP
+松浦　　　勝	2.30	0.15	3.1	３		IP	６		IP	５		IP	６		IP	６		IP	４		IP	４		IP	５	4	IP	６		IP	６		IP
+高野　　哲史	2.90	0.15	3.5	６		IP	５		IP	６		IP	４	5	IP	６		IP	３		IP	４		IP	４		G1	５		G1	６		G1

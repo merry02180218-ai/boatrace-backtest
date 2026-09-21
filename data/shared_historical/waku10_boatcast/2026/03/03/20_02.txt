@@ -1,0 +1,8 @@
+data=
+1	0
+大江　　　純	5.20	0.16	3.0	４		IP	１		IP	６		IP	５	2	IP	３		IP	３		IP	３		IP	１		IP	６		IP	３		IP
+和田　　兼輔	7.00	0.12	2.2	３		IP	２		IP	２		G1	１	3	G1	５		IP	４		IP	２		G2	１		G2	５		IP	２		IP
+川辺　　郭人	3.44	0.16	2.8	４	4	IP	３		IP	４		IP	６	6	IP	５		IP	４		IP	６		IP	６		IP	エ		IP	２		IP
+松本　　真広	5.40	0.17	2.9	６		IP	５		IP	２	5	IP	５		IP	１	5	IP	３		IP	３	3	IP	６		IP	２		IP	１		IP
+山田　　晃大	3.40	0.13	2.9	４		IP	４		IP	６		IP	１		IP	６		IP	５		IP	４		IP	５		IP	４		IP	５		IP
+西岡　　蒼志	2.50	0.25	4.3	３		IP	５		IP	３		IP	６		IP	６		IP	５	5	IP	５		IP	６		IP	５		IP	５		IP

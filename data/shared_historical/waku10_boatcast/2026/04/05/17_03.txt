@@ -1,0 +1,8 @@
+data=
+1	0
+福嶋　　智之	3.50	0.18	3.4	５		IP	６		IP	５		IP	１		IP	４	5	IP	６		IP	１		IP	５		IP	６		IP	５		IP
+坂元　　浩仁	5.80	0.16	2.9	２		IP	６		IP	３		IP	３		IP	２		G2	５		IP	２		IP	５		IP	３		IP	２		IP
+竹下　　大樹	6.30	0.16	2.6	３		IP	３		IP	１		IP	２		IP	３		G3	６		G3	３		G3	２		G1	６		G1	２	5	G1
+岩津　　徹郎	5.00	0.16	3.3	３		IP	４		IP	３		IP	２		IP	３		IP	５		IP	４		IP	４	5	IP	６	6	IP	２		IP
+塩田　　雄一	3.80	0.12	3.5	６		IP	５		IP	４		IP	４		IP	５		IP	３		IP	６		IP	２		IP	３		IP	４		IP
+山崎　　裕司	2.60	0.16	4.5	５	5	IP	５	5	IP	６		IP	４		IP	５		IP	５		IP	６		IP	５		IP	４		IP	４		IP

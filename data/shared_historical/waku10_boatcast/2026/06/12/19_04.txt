@@ -1,0 +1,8 @@
+data=
+1	0
+松田　　隆司	8.10	0.18	2.9	１		IP	６	2	IP	１		IP	２		IP	１		IP	１		IP	３		IP	３		IP	１		IP	１		IP
+一瀬　　　明	6.90	0.16	3.7	２		IP	１		IP	２		IP	２		IP	２		IP	２		IP	３		IP	６		IP	４		IP	２		IP
+末永　　祐輝	5.80	0.12	2.1	３		IP	３		IP	５		IP	４		IP	１		IP	３	4	IP	２		IP	１		IP	４		IP	５		IP
+松尾　　光広	4.40	0.23	4.5	３		IP	６		IP	６		IP	５	6	IP	３		IP	３		IP	１		IP	５		IP	４		IP	３		IP
+北村　　征嗣	4.30	0.15	3.3	４		G3	５		G3	３		G3	４		IP	６		G1	３		G1	３		IP	４		IP	４		G3	５		G3
+中岡　　　駿	1.10	0.19	4.5	６		G3	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

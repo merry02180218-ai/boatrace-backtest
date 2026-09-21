@@ -1,0 +1,8 @@
+data=
+1	0
+北野　　輝季	9.30	0.16	3.5	１		G1	２		IP	４		IP	１		IP	１		IP	１		IP	１		G1	１		G1	１		IP	２		IP
+今垣　光太郎	8.20	0.18	2.8	２		IP	５		G2	２		G1	１		IP	２		IP	１		IP	３		G1	１		IP	３		IP	１		IP
+尾嶋　　一広	5.90	0.16	3.5	２		G1	２		G1	４		G1	２		G3	４		IP	５		IP	５		IP	２		IP	２		G1	５		G1
+井口　　佳典	6.90	0.15	3.8	６		G1	２		G2	３		G2	６		G1	２		G1	４		G1	３	5	G1	３		G1	２		SG	１		G1
+海野　康志郎	5.70	0.16	3.7	２		G1	６		G1	６		G1	６		G1	１		IP	２		IP	３		G1	５	3	G1	２	3	IP	３		IP
+仲谷　　颯仁	4.78	0.16	3.3	３		IP	４		SG	５		G1	６		G1	４		G1	５		G1	転		IP	４	5	IP	３		SG	３	5	IP

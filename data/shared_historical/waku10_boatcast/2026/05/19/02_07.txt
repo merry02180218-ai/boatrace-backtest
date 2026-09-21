@@ -1,0 +1,8 @@
+data=
+1	0
+服部　　幸男	8.10	0.15	3.5	４		IP	１		IP	１		IP	４		IP	１		G1	１		IP	２		IP	１		IP	１		IP	４		IP
+飯田　　庄吾	4.00	0.18	3.4	６		IP	４		IP	５		IP	３		IP	２		IP	３		IP	６		IP	エ		IP	４		IP	４	3	IP
+杉江　　浩明	4.40	0.22	5.0	３		IP	６		IP	６		IP	６		IP	６		IP	２		IP	２		IP	１	4	IP	３		IP	５		IP
+早川　　颯太	1.60	0.20	4.3	５		IP	６		IP	転		IP	５		IP	５		IP	６		IP	５		IP	６		IP	４		IP	６		IP
+安藤　　裕貴	5.20	0.16	2.9	１	3	IP	３		IP	６		IP	２		IP	３		IP	５		IP	３	4	IP	３		IP	３		IP	６		IP
+吉永　　浩則	2.20	0.21	4.4	４		IP	６		IP	４		IP	６		IP	５		IP	６		IP	６		IP	５		IP	４		IP	５		IP

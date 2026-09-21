@@ -1,0 +1,8 @@
+data=
+1	0
+和田　　兼輔	10.11	0.11	1.9	１		IP	１		IP	１		IP	Ｌ		G1	２		G1	１		G1	１		IP	１		IP	１		IP	１		G1
+柳内　　敬太	6.30	0.15	2.9	１		IP	３		IP	５		IP	３		IP	４		IP	２		IP	３		IP	１		IP	１		IP	６		IP
+藤田　　靖弘	5.80	0.13	2.8	１		IP	５		IP	４		IP	２		IP	４		IP	２		IP	３		IP	４		IP	３		G3	３		IP
+藤山　　雅弘	4.10	0.19	3.8	６		IP	６		G3	３		G3	３		IP	３		IP	６		IP	３		IP	４		IP	６		IP	２		IP
+堀之内紀代子	4.00	0.14	3.7	３		IP	５		IP	３		IP	４		IP	６		IP	６		IP	４		G3	６	6	G1	３		IP	３		G3
+吉田　慎二郎	4.00	0.15	3.3	４		IP	３		IP	３		IP	３	5	IP	４		IP	５		IP	６		IP	４		IP	６		IP	３		IP

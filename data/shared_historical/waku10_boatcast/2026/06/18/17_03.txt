@@ -1,0 +1,8 @@
+data=
+1	0
+前田　　光昭	4.60	0.20	4.1	４		G3	５		IP	５		IP	１		IP	６		IP	５		IP	２		IP	３		IP	６	2	IP	１		G3
+芹澤　　克彦	6.80	0.14	2.4	１		IP	１		IP	１		IP	３		IP	５		IP	４		IP	２		IP	３		IP	３		IP	３		IP
+繁野谷　圭介	5.10	0.23	4.5	６		IP	３		IP	３		IP	５		IP	２		IP	３	2	IP	３		IP	３		IP	４		IP	３		IP
+岩井　　　繁	2.70	0.20	4.8	６		IP	５	6	IP	６		IP	５		IP	５		IP	４		IP	６		IP	３		IP	５		IP	３		IP
+齊藤　　　仁	4.30	0.18	3.9	４		G1	６		G1	３		G3	１		IP	５		IP	５		IP	３	6	G1	５		IP	５		G3	４		G1
+松尾　　宣邦	2.00	0.18	4.3	５		IP	６		G3	５		IP	５		IP	欠		IP	５		IP	５		IP	５		IP	３		IP	６	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　駿兵	10.00	0.15	3.0	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		G1
+塚越　　海斗	8.60	0.15	3.8	１		IP	１	1	IP	２		IP	３		IP	１		IP	３		IP	１		IP	３		IP	１	1	IP	１	1	IP
+中野　　希一	7.00	0.11	2.5	１	1	IP	４		IP	２		G1	６		G1	３		IP	１		IP	１		IP	１		IP	６		IP	３		IP
+安河内鈴之介	6.40	0.14	3.1	３		IP	２		IP	２		IP	５		G1	２		IP	１		IP	６		IP	２		IP	３		IP	３		IP
+荒木　　颯斗	4.70	0.14	3.1	５		IP	６		IP	２		IP	２		IP	４		IP	５		IP	３	4	IP	欠		IP	２		IP	２		IP
+村松　　遥輝	2.50	0.17	2.9	３		IP	５		IP	３		IP	６		IP	６		IP	落		IP	６		IP	５		IP	５	5	IP	４		IP

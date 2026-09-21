@@ -1,0 +1,8 @@
+data=
+1	0
+藤森　　拓海	3.90	0.20	3.8	２		IP	２		IP	６		IP	５		IP	４		IP	４		IP	５		IP	５		IP	５		IP	３		IP
+牧山　　敦也	4.70	0.15	3.5	５		IP	５		IP	２		IP	２		IP	３		IP	３		G3	６		G3	妨		G3	２		G3	３	4	IP
+金田　　智博	5.60	0.15	2.6	６		IP	４		IP	２		IP	４		IP	２		IP	１		IP	４		IP	３		IP	２		IP	５		IP
+庄島　　潤成	3.90	0.18	3.3	５		IP	３		IP	３		IP	２	6	IP	５		IP	４	5	IP	５		IP	６		IP	５	5	IP	３		IP
+馬場　　　剛	4.50	0.13	2.0	４		IP	１		IP	３		IP	３		IP	３		IP	６		IP	４		IP	３	4	IP	６		IP	６		IP
+羽田　　妃希	1.70	0.22	5.2	６		IP	５		IP	５		IP	６		IP	６		IP	５		IP	５		IP	４		IP	６	5	IP	６		IP

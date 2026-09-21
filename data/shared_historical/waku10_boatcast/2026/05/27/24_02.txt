@@ -1,0 +1,8 @@
+data=
+1	0
+矢野　真梨菜	7.20	0.16	2.7	３		IP	１		IP	２		IP	１		G3	１		G3	３		G3	１		G3	５		G3	５		G3	２		IP
+森田　　梨湖	4.50	0.21	4.3	３	1	IP	２		IP	３		IP	５		IP	２		IP	３		IP	４		IP	５		IP	６	3	IP	５		G3
+嶋田　　有里	5.00	0.17	3.8	５		IP	４		IP	４		IP	３		IP	２		IP	５		IP	３		IP	１		IP	３		IP	５		IP
+樋口　由加里	3.50	0.18	3.7	３		IP	３		IP	５		G3	３		G3	５		G3	６		IP	５		IP	５		IP	３		IP	５		IP
+植竹　　玲奈	2.00	0.22	4.0	４		IP	６		IP	４		IP	６		IP	欠		IP	６		IP	５		IP	５		IP	６	6	IP	５		IP
+平川　　香織	4.30	0.16	3.1	４		IP	４		IP	３		IP	３		IP	３		IP	３	5	IP	５		G3	５		IP	６	5	IP	３		G3

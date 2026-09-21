@@ -1,0 +1,8 @@
+data=
+1	0
+新井　　英孝	7.70	0.09	1.7	１		IP	１		IP	４		IP	１		IP	６		IP	４		IP	１		IP	１		IP	２		IP	１		IP
+谷口　　知優	6.20	0.15	2.7	２		IP	３		IP	５		IP	３		IP	１		IP	４		IP	３		IP	３		G3	２		G3	３		IP
+樫葉　　新心	2.50	0.17	3.8	２		IP	４		G3	６		G3	５		IP	５		IP	４	4	IP	６	4	IP	６		IP	６		IP	６		IP
+渡邉　　優美	6.20	0.11	3.0	２		G1	２	3	IP	３		IP	４		G1	３		G1	６		G1	４		IP	６		IP	１	3	IP	２		G2
+池田　　雄祐	4.40	0.15	3.0	４		IP	Ｆ	4	IP	１	4	IP	２		IP	５		IP	４		IP	４		IP	５		IP	３		IP	４		IP
+堤　　　啓輔	2.90	0.18	4.0	４		IP	６		IP	６	5	IP	１		IP	６		IP	６		IP	６		IP	４	2	IP	４		IP	５	5	IP

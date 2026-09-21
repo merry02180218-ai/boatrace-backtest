@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　　歩	7.10	0.16	2.4	４	2	IP	１		IP	１		IP	１		IP	６		IP	２		G3	１		G3	Ｆ		IP	１		G3	２		G3
+吉武　　真也	3.20	0.20	4.3	５		IP	５		IP	４		IP	５		IP	２		IP	５		IP	５		IP	２		IP	５		IP	Ｆ		IP
+岡本　　　大	3.60	0.16	3.0	３		IP	６		IP	６		IP	４		IP	６		IP	１		IP	４		IP	３		IP	６		IP	５	4	IP
+小森　　信雄	3.11	0.17	3.5	転		IP	６		IP	６	5	IP	４		IP	４	5	IP	２		IP	５	5	IP	５		IP	５		IP	４		G3
+磯村　　　匠	4.00	0.17	3.8	転		IP	２		IP	４		IP	３		IP	４		IP	落		IP	５		IP	４		IP	５		IP	３		G3
+小澤　　　学	3.00	0.30	5.7	３		IP	５	5	IP	６		IP	４		IP	３		IP	６		IP	５		IP	４		IP	５		IP	５		IP

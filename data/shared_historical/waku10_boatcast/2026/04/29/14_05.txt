@@ -1,0 +1,8 @@
+data=
+1	0
+樫葉　　新心	4.40	0.16	2.7	４		IP	６		IP	６		G3	１		IP	４		IP	３		G3	５		IP	１		IP	５		IP	４	2	IP
+樋口　由加里	5.30	0.16	2.8	６		G3	６		IP	５		IP	２		IP	３		IP	２		IP	３		IP	３		G1	２		IP	３		G3
+笠野　友紀恵	1.90	0.22	3.8	５		IP	４		IP	５		IP	６		IP	６		G3	４		G3	６		IP	６		IP	５		IP	６		IP
+後藤　　美翼	6.30	0.21	4.6	６		IP	４		IP	４		IP	２		IP	２		G3	３		G3	２		G3	２		G3	２		IP	２		IP
+日隈　　　茜	1.10	0.23	4.2	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６	6	IP	６	6	IP	６		IP	６		IP
+吉田　　彩乃	2.90	0.19	4.0	６		IP	５		IP	６		IP	３		IP	５		IP	３		IP	４		IP	６		IP	５		G3	４		IP

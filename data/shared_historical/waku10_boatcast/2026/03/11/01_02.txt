@@ -1,0 +1,8 @@
+data=
+1	0
+伯母　　芳恒	8.10	0.21	4.3	１		IP	６		IP	１		IP	３		IP	２		IP	１		IP	２		IP	１		IP	２		IP	１		IP
+田中　　　豪	5.00	0.17	3.4	４		IP	２		IP	３		IP	転		IP	３		IP	２		IP	４		IP	２		IP	欠		IP	６		IP
+伊藤　　雄二	3.20	0.16	3.0	６		IP	５		IP	４		IP	２		IP	４		IP	３		IP	６		IP	５		IP	５		IP	５		IP
+松田　　淳平	7.60	0.15	2.5	２		IP	１		IP	４		IP	２		IP	２		IP	１		IP	３		IP	１		IP	１		IP	５		IP
+笠原　　　亮	5.30	0.15	2.8	３		IP	４		IP	６		IP	５		G1	２		G1	６		G2	４		IP	１	4	IP	４		G3	２		G3
+黒田　　誠司	3.20	0.15	2.1	４		IP	４		IP	６		IP	６		IP	４		IP	５		IP	４		IP	３		IP	４		IP	５		IP

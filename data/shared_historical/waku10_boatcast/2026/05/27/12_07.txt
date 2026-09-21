@@ -1,0 +1,8 @@
+data=
+1	0
+津久井　拓也	6.60	0.15	3.5	２		IP	４		G2	２		IP	１		IP	３		IP	４	2	IP	１		IP	２		IP	３		IP	６		IP
+金子　　良昭	4.50	0.20	4.0	５		IP	４		IP	３		IP	２		IP	６		IP	４		IP	５		IP	３		IP	４		IP	２	3	IP
+大西　　隆洋	3.30	0.21	4.7	４		IP	５		IP	４		IP	２		IP	４		IP	５		IP	６		IP	４		IP	５		IP	５		IP
+中越　　博紀	4.80	0.19	3.7	３	5	IP	２	3	IP	３		IP	４		IP	５		IP	３		IP	６		IP	３		G3	２	3	G3	６		IP
+桑島　　和宏	5.40	0.17	3.5	３		IP	３		G2	２		G2	３		IP	５		IP	４		IP	４		IP	２		IP	４		IP	５		IP
+林　　　恵祐	1.10	0.19	4.5	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP

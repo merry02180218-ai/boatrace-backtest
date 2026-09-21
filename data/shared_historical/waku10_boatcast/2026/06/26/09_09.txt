@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　文彦	8.40	0.14	2.7	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	４		IP	３		IP	１		IP
+古場　　輝義	5.20	0.23	4.0	６		IP	３	3	G3	２	3	G3	２		IP	２		IP	２		G3	４		IP	３		IP	５		IP	６		IP
+小山　　　勉	6.20	0.18	3.4	４		IP	４		IP	２		IP	３		IP	１		IP	３		IP	２		IP	１		IP	５		IP	４		IP
+高橋　　龍治	2.78	0.19	3.5	３		IP	５	6	IP	５		IP	４		IP	６		IP	３		IP	６		IP	６		IP	転	5	IP	５		IP
+松尾　　　拓	5.70	0.21	3.8	３		IP	４		IP	３		IP	４		IP	３	4	IP	１		IP	２		IP	２		IP	６		G1	５		G1
+坂井　　康嗣	1.80	0.15	2.9	５		IP	５		IP	６		IP	６		IP	５	5	IP	５		IP	５	5	IP	４		IP	６		IP	６	5	IP

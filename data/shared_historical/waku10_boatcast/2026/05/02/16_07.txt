@@ -1,0 +1,8 @@
+data=
+1	0
+山地　　正樹	7.40	0.19	4.4	５		IP	３		IP	１		IP	３		IP	１		IP	１		IP	２		IP	４		IP	１		IP	２		IP
+藤原　啓史朗	6.10	0.11	2.1	２		IP	６		G1	４		G1	６		SG	６		SG	３	3	IP	１		IP	６		G1	１		IP	１		IP
+今出　　晋二	4.60	0.20	3.5	６		IP	４		IP	６		IP	５		IP	２		IP	２		IP	３		IP	３		IP	３		IP	４		IP
+峰重　　力也	5.70	0.12	2.2	３		IP	１		IP	１		IP	３		IP	６		IP	５		IP	３		IP	１		IP	４		IP	５		IP
+福田　　　理	1.60	0.18	4.0	５	6	IP	５		IP	６		IP	６		IP	６		IP	６		IP	４		IP	６		IP	６		IP	５		IP
+木山　　和幸	2.90	0.18	4.9	４		IP	６		G3	６		IP	５		IP	３		IP	６		IP	５		IP	３		IP	４		IP	５		IP

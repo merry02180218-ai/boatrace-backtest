@@ -1,0 +1,8 @@
+data=
+1	0
+盛本　　真輔	7.80	0.14	2.7	１		IP	２		IP	１		IP	５		IP	２		IP	１		IP	４		IP	１		IP	１		IP	３		IP
+河野　　真也	6.30	0.16	3.1	２	3	IP	１	3	IP	５		IP	３		IP	１		IP	２		IP	５		IP	３		IP	１		IP	６		IP
+高村　　　諒	2.33	0.13	3.3	４		IP	５	4	IP	６		IP																					IP
+飯山　　晃三	3.00	0.23	4.8	６		IP	６		IP	５		IP	３		IP	２		IP	４		IP	６	5	IP	５	5	IP	６		IP	４		IP
+栗城　　　匠	6.00	0.18	3.0	３		IP	５		G2	１		IP	１	4	IP	４	4	IP	３		G1	３		IP	１	4	IP	５	6	G1	６		IP
+瀬川　　大地	2.30	0.20	3.8	５		IP	５		IP	６		IP	４		IP	４		IP	５		IP	４		IP	６		IP	６		IP	５		IP

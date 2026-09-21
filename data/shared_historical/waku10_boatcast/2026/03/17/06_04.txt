@@ -1,0 +1,8 @@
+data=
+1	0
+藤本　　佳史	8.50	0.15	2.9	１		IP	３		IP	１		IP	１		IP	１		IP	６		IP	２		IP	１		IP	１		IP	１		IP
+柴田　　友和	3.70	0.19	3.3	６		IP	２		IP	３		IP	５		IP	２		IP	５		IP	５		IP	４		IP	５	4	IP	５		IP
+中北　　将史	3.80	0.17	2.2	６	4	IP	５		IP	２		IP	６		IP	３	4	IP	３		IP	３		IP	４		IP	５		IP	５		IP
+小畑　　実成	4.10	0.16	3.8	６		IP	４		IP	１		IP	１		IP	６		IP	５		IP	４		IP	６		IP	３		IP	５		IP
+富永　　正人	3.60	0.20	3.9	２		IP	６	6	IP	４		IP	６		IP	３	6	IP	４	6	IP	５		IP	５		IP	５		IP	３		IP
+野中　　義生	4.00	0.16	3.1	４	5	IP	３		IP	５		IP	２		IP	１	5	IP	６		G3	５		G3	６		G3	Ｆ		G3	３		IP

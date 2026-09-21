@@ -1,0 +1,8 @@
+data=
+1	0
+東口　　　晃	5.60	0.21	4.3	３		IP	６		IP	３		IP	２		IP	１		IP	４		IP	３		IP	４		IP	６	2	IP	１		IP
+丸山　　祐也	5.30	0.22	5.0	３		IP	３		IP	２		IP	３		IP	４		IP	２		IP	６		IP	２		IP	５		IP	４		IP
+浜本　　裕己	4.20	0.15	3.7	４		IP	３		IP	３		IP	４		IP	６		IP	２		IP	５		IP	６		IP	３		IP	４		IP
+柴田　　大輔	5.50	0.18	2.8	１	6	IP	１		IP	４		IP	６		IP	１		IP	１		G3	４		IP	６		IP	６		IP	４	5	IP
+湯淺　　紀香	3.80	0.23	4.9	２		IP	５		G2	２		G2	６		G3	４		IP	５		IP	４	6	IP	４		IP	５		IP	６		IP
+山口　　裕二	4.40	0.22	3.6	２		IP	３	4	IP	５		G1	４	5	IP	４		IP	４	5	IP	６		IP	４		IP	２		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+馬場　　貴也	9.90	0.10	2.2	１		SG	１		SG	３		G1	１		G1	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP
+浜先　　真範	6.60	0.14	2.7	４		IP	２		IP	２		IP	４		IP	３		IP	３		G1	３		IP	２		IP	１		IP	４		G1
+桐生　　順平	6.90	0.15	3.5	２		SG	６		SG	５		G1	１		G1	１		IP	２		IP	６		G1	４		G1	４		SG	１		G1
+井上　　忠政	7.60	0.12	2.5	１	1	IP	２		IP	１		IP	３		IP	５		G1	１		G1	２		G1	５	6	G1	３		G1	２		G1
+桑原　　　悠	6.50	0.14	3.0	１		G1	４		IP	２		IP	１		IP	２		IP	４		IP	４		IP	４		G1	３		G1	４		G3
+藤原　　碧生	5.70	0.17	4.2	４		SG	４		SG	４		SG	４		G1	６		G1	４		IP	４		G1	１		G1	４		G1	３		G1

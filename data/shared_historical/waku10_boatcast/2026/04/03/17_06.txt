@@ -1,0 +1,8 @@
+data=
+1	0
+松田　　隆司	8.20	0.17	2.6	１		IP	１		IP	３		IP	３		IP	１		IP	１		IP	１		IP	１		IP	４		IP	３		IP
+山本　稔太朗	5.10	0.17	3.4	３		IP	２		IP	２		IP	３	1	IP	６		IP	２		IP	６		IP	３		IP	６		IP	３		IP
+秦　　　英悟	6.20	0.12	3.4	３		SG	６		SG	２		G1	５		G1	３		G1	２		G1	３		IP	４		IP	４		G1	３		G1
+森　　　智也	5.60	0.19	4.5	５		IP	２		IP	４		IP	２		IP	３		IP	４		IP	４		IP	４		IP	２		IP	４		IP
+山崎　　裕司	4.80	0.16	4.1	５	4	IP	２		IP	２		IP	４	4	IP	５		IP	５		IP	２		IP	４		IP	３		IP	４		IP
+福嶋　　智之	2.90	0.15	2.9	６		IP	６		IP	４	5	IP	５		IP	５		IP	２		IP	６		IP	４		IP	４		IP	５		IP

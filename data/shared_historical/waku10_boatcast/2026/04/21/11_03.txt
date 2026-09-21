@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　秀治	6.00	0.20	3.5	３		IP	１		IP	５		IP	１		IP	３		G2	３		IP	４		IP	２		IP	３		IP	６		IP
+山本　　幸也	5.10	0.16	2.9	４		IP	２	3	IP	４	3	IP	５		IP	５	6	IP	２		IP	２		IP	３		IP	６		IP	２		IP
+為本　　智也	5.90	0.19	3.8	３		IP	５		IP	６		IP	２		IP	３		IP	１		IP	６		IP	３		G3	２		G3	１		G3
+竹内　　　来	2.90	0.19	2.1	６		IP	６		IP	６		IP	５	6	IP	３		IP	５		IP	６	6	IP	１		IP	６		IP	４		IP
+上野　　拓馬	4.30	0.19	4.2	５		IP	４		IP	３		IP	３		IP	６		IP	５	6	IP	４	6	IP	３		IP	４	6	IP	２		IP
+菊池　　宏志	3.30	0.14	3.2	５		IP	５		IP	１		IP	５		G3	４		G3	５		IP	３		IP	５		IP	５		G3	６		G3

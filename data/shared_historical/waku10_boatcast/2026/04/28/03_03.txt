@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　右京	6.00	0.18	3.5	６	2	IP	４		IP	４		IP	２		IP	１		IP	３		IP	６		IP	３		IP	１		IP	１		IP
+山田　　亮太	6.80	0.16	4.0	１	3	G3	２		IP	１	3	IP	２		IP	６		IP	６		IP	２		IP	３		IP	２		IP	２		IP
+品田　　直樹	6.33	0.19	3.5	２		IP	４	4	IP	１		IP	３		IP	１		IP	３	2	IP	エ		IP	１		IP	５		IP	６		IP
+近藤　雄一郎	3.60	0.17	2.7	４	6	G3	６		IP	５		IP	２		IP	６		IP	５		IP	４		IP	４		IP	４		IP	３		IP
+早川　　颯太	1.70	0.19	4.1	６		IP	５		IP	４		IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP	５		IP
+内山　　文典	3.40	0.22	3.9	３	5	IP	３		IP	６		IP	６		IP	４		IP	５		IP	５		IP	４		IP	５		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+西丸　侑太朗	9.90	0.12	2.2	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		G1
+藤原　　碧生	7.50	0.13	2.2	３		G1	１		IP	４		IP	２		IP	３		G1	２		G1	３		G1	３		IP	１		IP	３		G1
+木村　　仁紀	7.00	0.14	3.5	５		G1	４		G1	３		IP	２		IP	１		IP	６		G1	１		IP	２		G1	１		IP	３		G2
+石丸　　海渡	7.00	0.07	1.6	３	5	G1	Ｆ		G1	２		IP	３		IP	３	6	IP	２		IP	２		IP	２	5	IP	１		IP	２		G1
+石渡　　鉄兵	5.10	0.12	3.3	２		IP	４		SG	６		SG	２		G1	３		G1	５		G1	６		G1	６		G1	５		IP	２		G2
+上村　　純一	5.00	0.16	3.3	５		G1	４		IP	２		IP	１		IP	４		G1	５		G1	４		G1	５		G1	４		G1	４		IP

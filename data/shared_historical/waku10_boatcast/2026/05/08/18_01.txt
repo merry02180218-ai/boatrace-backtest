@@ -1,0 +1,8 @@
+data=
+1	0
+藤本　　佳史	7.90	0.16	3.0	１		IP	１		IP	５		IP	１		IP	６		G3	１		IP	１		IP	３		IP	１		IP	１		IP
+山口　　修路	5.00	0.19	4.5	３		IP	４		IP	３		IP	２		G3	５		IP	４		IP	３		IP	４		IP	３		IP	４		IP
+伯母　　芳恒	3.40	0.16	3.2	３		IP	４		IP	６		G3	６		IP	５		IP	４		IP	４		IP	３		IP	５		IP	４		IP
+木村　　光宏	5.40	0.17	2.6	３		IP	６		IP	４		IP	６		IP	２		IP	１		G3	１	1	G3	２		IP	５		IP	４		IP
+羽田　　妃希	3.70	0.19	4.4	６		IP	４		IP	６		IP	４		IP	４		IP	５	4	IP	４		IP	２		IP	２		IP	６		IP
+齊藤　　大将	2.90	0.24	5.0	６		IP	２	5	IP	５		IP	６		IP	６		IP	５		IP	２	5	IP	５		IP	４		IP	妨		IP

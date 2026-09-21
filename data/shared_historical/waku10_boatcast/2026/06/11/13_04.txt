@@ -1,0 +1,8 @@
+data=
+1	0
+若林　　　将	9.40	0.12	2.6	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		G3	１		IP	１		IP	２		IP
+宮地　　元輝	9.20	0.11	2.4	１		SG	４		SG	１	1	SG	２	3	G1	３		IP	２		IP	２		G1	２		G1	１		G1	２		SG
+松田　　祐季	6.78	0.11	2.7	２		IP	３		IP	落		IP	１		IP	４		IP	４		IP	４		G1	１		G1	４		G1	３		G1
+井上　　一輝	6.20	0.12	2.7	３		IP	３	5	IP	３		IP	４		IP	１		IP	２		G1	Ｆ		IP	５		IP	２		IP	１		G1
+前原　　大道	5.40	0.19	3.3	２		IP	３		IP	１		IP	３		IP	３		IP	４		IP	６	6	G1	４		IP	５	6	IP	３		IP
+稲田　　浩二	4.80	0.12	2.9	１		IP	３		G1	４		IP	６		IP	３		G3	５		G3	６		G1	２		IP	４		G1	５		G1

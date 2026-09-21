@@ -1,0 +1,8 @@
+data=
+1	0
+井川　　大作	7.20	0.20	3.5	２		IP	２		IP	１		IP	５		IP	３		IP	２		IP	１		IP	３		IP	３		IP	２		IP
+宮脇　　遼太	7.50	0.16	2.2	１		IP	２		IP	６		IP	１		IP	１		IP	１		IP	３		IP	２		IP	３		IP	３		IP
+山崎　　裕司	6.80	0.15	3.3	２		IP	４		IP	３		IP	３		IP	１		IP	２		IP	３		IP	３		IP	３		IP	２		IP
+宮下　　元胤	4.00	0.16	4.1	３		IP	４		IP	５	3	IP	２		IP	６		IP	５		IP	３		IP	３		IP	６		IP	４		IP
+中里　　昌志	3.60	0.17	3.8	４	4	IP	４		IP	２	4	IP	３		IP	５		IP	６	4	IP	６		IP	６	4	IP	６		IP	２		IP
+木村　　浩士	4.30	0.16	3.3	２		IP	５		IP	４		IP	５		IP	２		IP	５		IP	６		IP	４		G3	３		IP	３		IP

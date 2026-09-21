@@ -1,0 +1,8 @@
+data=
+1	0
+野口　　勝弘	9.20	0.12	1.5	１		IP	１		IP	２		IP	１		IP	２		IP	４		IP	１		IP	１		IP	１		IP	１		IP
+前田　　将太	5.60	0.20	4.7	３		G1	２		IP	６		IP	４		IP	２		IP	４		G2	２		G1	４		G1	６		IP	３		IP
+田邉　　亮蔵	4.60	0.18	3.7	４	4	IP	５		IP	５		IP	４		IP	４		IP	４		IP	４		IP	２		IP	２		IP	３		IP
+小山　　　勉	7.30	0.16	4.4	１	5	IP	１		IP	３	6	IP	２		IP	２		IP	２		IP	３		IP	３	5	IP	５		IP	３		IP
+上田　　健太	3.60	0.19	3.3	６		IP	６		IP	６		IP	１		IP	５		IP	３		G3	４		IP	２		IP	６		IP	５		IP
+小松　　卓司	3.30	0.23	3.9	４		IP	５		IP	５		IP	５		IP	３		IP	５		IP	４		IP	４		IP	６		IP	３		IP

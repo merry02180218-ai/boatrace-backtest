@@ -1,0 +1,8 @@
+data=
+1	0
+宮野　　　仁	7.40	0.14	3.6	３		IP	２		IP	５		IP	５		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２	2	IP
+乙津　　康志	4.70	0.19	4.7	５		IP	３		IP	６		IP	３		IP	４		IP	３		IP	３		IP	３		IP	３		IP	４		IP
+須藤　　博倫	7.00	0.13	2.7	４		IP	２		IP	４		IP	１		IP	５		IP	１		G2	４		G2	１		IP	３		IP	１		IP
+板橋　　侑我	5.80	0.14	2.7	１		IP	６		IP	３		IP	３		G1	Ｆ		G3	３		G1	２		G1	６		G1	２		IP	２		IP
+伊藤　　紘章	4.80	0.20	3.7	５		IP	６	6	IP	３		IP	６		IP	３		IP	１		IP	３		IP	３		IP	３		IP	４		IP
+樋口　　範政	3.60	0.24	4.4	４		IP	２	5	IP	５		IP	５	5	IP	３		IP	６		IP	４		IP	３	4	IP	５		IP	６		IP

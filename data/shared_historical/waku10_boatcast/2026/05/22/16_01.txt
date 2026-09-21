@@ -1,0 +1,8 @@
+data=
+1	0
+長尾　　章平	6.40	0.17	3.2	３		IP	Ｆ		IP	２		IP	６		IP	１		IP	１		IP	３		IP	１		IP	１		IP	６		IP
+森　　　智哉	6.44	0.16	3.1	１		IP	転		IP	２		IP	２		IP	２		IP	５	3	IP	３		IP	４		IP	４		IP	２		IP
+加藤　　雅之	2.80	0.23	3.9	５		IP	５		IP	４		IP	５		IP	５		IP	３		IP	６		IP	６		IP	３		IP	５		IP
+藤原　　　駿	0.83	0.23	4.8	６		IP	６	6	IP	転	5	IP	６		IP	６	6	IP	６	6	IP												IP
+池田　　雷太	4.20	0.19	4.5	６		IP	６		IP	１		IP	３		IP	２		IP	５		IP	４	6	IP	３		IP	５		IP	５		IP
+長尾　　萌加	3.00	0.19	4.3	５		IP	６		IP	６		IP	５		IP	３		IP	４		IP	４		IP	６		IP	６		IP	２		IP

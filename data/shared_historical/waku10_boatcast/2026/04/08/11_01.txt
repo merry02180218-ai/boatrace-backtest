@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　直哉	6.00	0.18	3.6	３		IP	１		IP	４	2	IP	４		IP	５		G3	１		IP	５		IP	３		IP	２		IP	２		IP
+樫葉　　新心	4.22	0.17	3.3	３		G3	転		IP	３		IP	６		IP	３		G3	５		G3	４		IP	６		IP	２		IP	４	3	IP
+梅原　　祥平	3.40	0.15	3.2	６		IP	２		IP	６		IP	４		IP	３		IP	６		IP	６		IP	５		IP	５		IP	２		IP
+吉田　　和仁	6.20	0.15	2.6	１		IP	３		IP	４		IP	４		IP	３	5	IP	４		IP	１		IP	２		IP	４		IP	３		IP
+内田　　　圭	2.70	0.20	3.7	６		IP	６		IP	２		IP	６		IP	５		IP	６		IP	６		IP	４		IP	３		IP	５		IP
+片岡　　大地	5.80	0.13	2.1	３		IP	３		IP	１	5	IP	５	5	IP	３		IP	２		IP	３		IP	５	5	IP	３		IP	３		IP

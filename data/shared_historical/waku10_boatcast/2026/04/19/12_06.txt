@@ -1,0 +1,8 @@
+data=
+1	0
+栗山　　繁洋	5.50	0.20	4.0	４		IP	３		IP	２		IP	４		IP	４		IP	１		IP	５		IP	２		IP	２		IP	６		IP
+多羅尾　達之	5.90	0.16	3.2	２		IP	１		IP	６		IP	２		IP	３		IP	２		IP	３		IP	４		IP	４		IP	４		IP
+和田　　拓也	6.50	0.16	2.8	４		IP	１		IP	２		IP	２	4	IP	４		G1	６		G1	１		IP	３		IP	５		IP	２		IP
+坂野　さくら	4.40	0.20	3.7	６		IP	１		G3	６		IP	４		G3	５		IP	３		IP	５		G3	３		IP	４		IP	２		IP
+佐口　　達也	4.50	0.21	4.5	６		IP	３	4	IP	３		IP	２		IP	３		IP	５		IP	３		IP	５		IP	３		IP	５		IP
+清埜　　翔子	2.80	0.14	3.7	４		IP	６		IP	４		IP	６		IP	４		G3	４	5	G1	５		IP	６	5	G1	５		G1	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+西川　新太郎	7.50	0.16	3.3	２		IP	２		IP	１		IP	６		IP	２		IP	１		IP	３		IP	１		IP	３		IP	２		IP
+長畑　　友輔	5.80	0.18	2.7	５		IP	２	3	IP	３		IP	３		IP	６	3	IP	３		IP	１		IP	６		IP	１		IP	２		IP
+田川　　大貴	5.50	0.13	2.2	５		IP	１		IP	６		IP	５		IP	３		IP	４		IP	２		IP	１		IP	５		IP	２		IP
+梅木　　敬太	4.90	0.19	3.1	１		IP	５		IP	６		IP	４	5	IP	２		IP	４		IP	５		IP	５		IP	１		IP	３		IP
+寺田　　　祥	7.50	0.17	3.8	１		IP	５		G1	２	3	IP	４		G1	１		IP	２		G1	２		IP	４		G1	３		IP	１		IP
+沖島　　広和	2.20	0.18	3.8	４		G3	５		G3	３		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP

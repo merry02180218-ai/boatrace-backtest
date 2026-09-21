@@ -1,0 +1,8 @@
+data=
+1	0
+近藤　　友宝	7.40	0.17	3.3	１		IP	２		IP	４		IP	２		IP	１		IP	４		IP	１		IP	５		IP	２		IP	１		IP
+今泉　　　徹	5.30	0.18	3.6	４		IP	４		IP	２		IP	２		IP	４		IP	２		IP	４		IP	２		IP	４	3	IP	６		IP
+鋤柄　　貴俊	4.50	0.16	2.7	６		IP	４		IP	２		IP	２		IP	５		IP	３		IP	３		IP	３		IP	５		IP	５		IP
+有山　　　望	3.30	0.17	3.3	５		IP	６		IP	４		IP	６		IP	４		IP	５		IP	６	5	IP	２		IP	３		IP	４		IP
+田村　　美和	3.40	0.16	3.2	２		IP	６	6	IP	６		IP	４		G3	４		G3	４		G3	４		G3	４		IP	５		G3	５		G3
+長畑　　友輔	2.50	0.17	3.6	６		IP	５		IP	５		IP	２		IP	５		IP	４		IP	６		IP	５		IP	５		IP	６		IP

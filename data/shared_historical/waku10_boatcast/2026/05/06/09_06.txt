@@ -1,0 +1,8 @@
+data=
+1	0
+中山　　翔太	9.10	0.12	3.4	６		IP	１		IP	１		IP	１		IP	１		G1	１		IP	１		IP	２		IP	１		IP	１		G1
+花田　　和明	5.90	0.15	2.5	２		IP	６		IP	４		IP	２		IP	３		IP	４		IP	１		IP	３		IP	３		IP	３		IP
+後藤　　孝義	3.44	0.20	3.2	４		IP	欠		IP	２		IP	４	5	IP	５		IP	５		IP	４		IP	５		IP	６		IP	４		IP
+澤　　　大介	3.50	0.18	3.5	３		IP	６		IP	５		IP	４		IP	５		IP	４		IP	５		IP	５	5	IP	２		IP	４	5	IP
+伊藤　　紘章	5.00	0.23	4.0	６		IP	３		IP	１		IP	３		IP	３		IP	３		IP	４		IP	５		IP	２		IP	６		IP
+茶谷　　信次	4.20	0.27	5.4	４		IP	５		IP	３		IP	３		IP	５		IP	３		IP	３		IP	４	5	IP	３		IP	欠		IP

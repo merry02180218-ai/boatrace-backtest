@@ -1,0 +1,8 @@
+data=
+1	0
+渡　　　修平	7.60	0.14	3.7	２		IP	１		IP	１		IP	１		IP	１		IP	５		IP	４		IP	５		IP	１		IP	１		IP
+村上　　彰一	5.20	0.18	3.7	５		IP	２		IP	３		IP	２		IP	２		IP	６		IP	６		IP	３		IP	３		IP	３		IP
+眞鳥　　康太	2.40	0.22	4.6	６	6	IP	４	6	IP	５		G3	５	4	IP	６	4	IP	６	6	IP	５	5	IP	３	5	IP	４	6	IP	６		IP
+楠原　　正剛	5.50	0.17	3.7	５		IP	３		IP	４		IP	５		IP	４		IP	１		IP	３		IP	１		IP	２		G1	６		G1
+若林　　　将	5.90	0.12	2.2	３		IP	５		IP	４		G3	３		G3	１		IP	３		IP	３		IP	５		G1	１		IP	３		IP
+深川　　和仁	2.40	0.16	3.1	６		IP	６		IP	５		IP	５		G3	５		IP	４	5	IP	５		IP	５		IP	４		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+下條　雄太郎	7.40	0.17	3.4	２		G1	１		G1	１		IP	５		IP	１		IP	２		G1	５	3	G1	Ｆ		IP	１		IP	１		IP
+渡邉　　優美	7.90	0.11	2.6	２		IP	３		IP	１		G2	１		G2	１		G3	１		G1	４		G1	３		G1	４		IP	４		SG
+山口　　裕二	5.20	0.15	3.1	５		IP	２		IP	３		IP	２	4	IP	１		IP	Ｆ		IP	４		IP	３	4	G1	５		G1	４		IP
+安達　　裕樹	5.30	0.19	3.0	５	5	IP	４		G2	４		G2	４		G2	１		IP	３		IP	４		IP	３		IP	３		IP	４		IP
+上村　　純一	5.00	0.11	2.4	４		IP	２		IP	５		IP	４		G2	２		G2	３		IP	２	6	IP	６		IP	６		IP	４		G1
+石原　　　翼	3.60	0.17	3.7	５		IP	４		G2	４		IP	４		IP	６		IP	３		IP	３		IP	６		IP	５		G2	６		G2

@@ -1,0 +1,8 @@
+data=
+1	0
+三原　　　司	7.20	0.15	3.5	１		G3	１		IP	２		IP	４		IP	１		IP	１		IP	２		IP	５		IP	２		IP	５		IP
+土屋　実沙希	4.40	0.18	3.1	欠		IP	２		IP	５		IP	１	3	IP	Ｆ		IP	２		IP	１	1	IP	５		IP	６		IP	６		IP
+中北　　将史	5.00	0.15	2.0	４		G3	２	2	G3	２		IP	６	4	IP	５		IP	２		IP	６		IP	３	4	IP	３		IP	３		IP
+赤坂　　俊輔	6.00	0.16	3.1	４		IP	３		IP	４		G1	５		G1	１		IP	転		G1	２		G1	２		G1	２		IP	３		IP
+岩川　　仁士	4.50	0.17	4.8	３		IP	６		IP	４		IP	６		IP	３		IP	２		IP	４		IP	２		IP	３		IP	６		IP
+金田　　智博	3.70	0.18	3.2	５		IP	６		IP	６		IP	４		IP	２		IP	６		IP	４		IP	５		IP	３		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+今村　　暢孝	9.20	0.14	2.0	２		G3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	３		IP
+新出　　浩司	5.30	0.15	3.0	４	3	G3	２		IP	２		IP	６		IP	４		IP	３		IP	４		IP	２		IP	４		IP	３		IP
+吉田　慎二郎	7.60	0.19	3.0	１	4	G3	４		IP	２		IP	１		IP	１		IP	４		IP	５		IP	１		IP	１		IP	２		IP
+吉永　　泰弘	4.50	0.19	3.8	３		G3	６		IP	５		IP	６		IP	２		IP	６		IP	１		IP	４		IP	２		IP	４	5	IP
+中島　　　航	4.00	0.24	4.6	３		G3	５	2	G3	５	6	IP	６		IP	６		IP	３		IP	５		G3	２		IP	２	6	IP	４	6	IP
+石川　　真二	5.80	0.12	3.0	５	2	G3	２	2	G3	５	2	G3	２	2	IP	５	2	IP	４	2	IP	２	2	IP	２	2	IP	３	2	IP	１	2	IP

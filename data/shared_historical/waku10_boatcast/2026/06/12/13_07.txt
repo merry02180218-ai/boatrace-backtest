@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　　翼	9.00	0.12	3.2	１		G1	１		SG	１		G1	２		G1	Ｆ		IP	５		IP	１		G1	１		G1	１		G1	１		SG
+河合　　佑樹	7.00	0.13	3.3	２		G1	４		SG	６		SG	４		G1	２		IP	１		IP	２		G1	５		G1	３		G1	１		IP
+野中　　一平	5.00	0.14	2.4	３		IP	２		IP	４		IP	６		IP	３		IP	３		IP	２		IP	２		IP	６		IP	６		G1
+森永　　　淳	5.40	0.12	2.7	４		IP	２		IP	１		IP	６		IP	４		G1	２		IP	３		IP	５		IP	３		G2	６		G2
+上田　　龍星	6.30	0.15	3.4	３		G1	４		G2	５		G2	１	3	IP	３		IP	２		IP	転	2	IP	３		G1	４		G1	１	4	SG
+田村　　隆信	4.90	0.21	4.2	３		IP	３		IP	４	3	IP	２	4	IP	６		IP	３		G1	４		IP	２	2	G1	６		G2	６	4	G2

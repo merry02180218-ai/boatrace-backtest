@@ -1,0 +1,8 @@
+data=
+1	0
+樋口　　　亮	8.20	0.18	3.6	１		IP	２		IP	２		IP	２		IP	４		IP	１		IP	２		IP	１		IP	３		IP	１		IP
+松尾　　基成	4.40	0.18	3.8	２		IP	４		IP	４		IP	５		IP	２		IP	５		IP	６		IP	３		IP	２	3	IP	６		IP
+一色　　颯輝	6.10	0.15	3.2	２		IP	２		IP	２		IP	６		IP	２		IP	５		IP	４		IP	３		IP	２		IP	２		IP
+松尾　　光広	4.60	0.24	4.6	３		IP	３		IP	１		IP	５		IP	４		IP	３		IP	６		IP	５		IP	６	5	IP	２		IP
+向井田　佑紀	4.50	0.15	3.1	５		IP	３		IP	２		IP	４	4	IP	６		IP	５		IP	３		IP	４		IP	３		G3	３		IP
+井上　　大輔	4.70	0.17	2.8	３		IP	６		IP	３		G3	５		IP	４		IP	５		IP	２		IP	３		IP	２	2	IP	５		IP

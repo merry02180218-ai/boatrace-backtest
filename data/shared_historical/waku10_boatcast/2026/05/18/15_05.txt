@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　　健	5.70	0.16	3.6	５		IP	１		IP	１		G3	１		IP	６		IP	１		IP	１		IP	６		IP	５		IP	６	2	IP
+仲口　　博崇	7.60	0.19	3.0	３		IP	３	3	G1	２		G1	１		IP	１		G3	２		IP	２		IP	６		IP	１	1	G1	３		IP
+山下　　流心	4.30	0.17	3.2	２		G3	３		IP	２		IP	６		IP	６		IP	転		IP	２		IP	３		IP	４		G3	６	4	G3
+松尾　　基成	2.40	0.17	3.6	４		IP	６		IP	２		IP	５		IP	６		IP	６		IP	５		IP	５		IP	６	5	IP	５		IP
+木村　　光宏	3.50	0.15	3.0	６		IP	２		IP	３		IP	５		IP	４		G3	５		IP	５		IP	５		IP	３	4	IP	５		IP
+渡邉　　　翼	2.90	0.18	3.1	５		IP	６		IP	６		IP	２		IP	５		IP	５		IP	４		IP	５	5	IP	３	5	IP	６		IP

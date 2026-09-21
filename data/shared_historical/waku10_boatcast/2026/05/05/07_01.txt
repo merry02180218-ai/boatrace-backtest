@@ -1,0 +1,8 @@
+data=
+1	0
+谷本　　幸司	7.10	0.15	2.5	１		IP	６		IP	５		IP	１		IP	５		IP	１		IP	１		IP	２		IP	２		IP	１		IP
+中村　　駿平	3.80	0.19	3.3	３		IP	４	3	IP	５		IP	５		IP	３		IP	２		IP	４		IP	６		IP	４		IP	６		IP
+野長瀬　正孝	3.50	0.16	2.5	５	2	IP	３		IP	４		IP	５		IP	５		IP	５		IP	４		IP	４		IP	３		IP	６		IP
+倉田　　茂将	4.80	0.17	3.6	２	5	IP	４		IP	５		IP	３	5	IP	５	3	IP	２		IP	３		IP	３		IP	５		IP	４		IP
+北野　　輝季	5.30	0.14	3.0	６		G1	５		G1	６		IP	５		IP	１	4	IP	３	4	IP	２		G1	２		G1	３		G1	６		G1
+近藤　　颯斗	2.50	0.20	4.1	５		IP	Ｆ		IP	５		IP	３		IP	５		IP	４		IP	５		IP	４		IP	５		IP	６		IP

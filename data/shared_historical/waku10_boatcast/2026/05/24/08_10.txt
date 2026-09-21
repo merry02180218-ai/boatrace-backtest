@@ -1,0 +1,8 @@
+data=
+1	0
+横田　　貴満	8.40	0.16	3.3	３		IP	１		IP	４		IP	１		IP	１		IP	３		G2	２		G2	２		IP	１		IP	１		IP
+佐々木　和伸	7.70	0.15	2.8	３		IP	６		IP	１		IP	２		IP	２		IP	２		IP	１		IP	１		IP	２		IP	２	1	IP
+鋤柄　　貴俊	5.40	0.15	2.8	４		IP	２		IP	４		IP	２		IP	２		IP	６		IP	６		IP	４		IP	２		IP	２		IP
+前原　　大道	5.50	0.16	2.9	５		IP	３		IP	１		IP	３	5	IP	３		IP	２		G1	５		G1	３		IP	５		IP	４	5	G1
+松本　　博昭	4.80	0.17	4.2	５		IP	５		IP	４		IP	３		IP	３		IP	３		IP	３		IP	２	4	IP	４		IP	４		IP
+金子　　和之	3.90	0.15	3.2	６		IP	４		IP	３		IP	５		IP	４		G3	５		G3	５		IP	２		IP	２		IP	５		IP

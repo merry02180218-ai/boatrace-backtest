@@ -1,0 +1,8 @@
+data=
+1	0
+深谷　　知博	9.10	0.11	2.3	Ｆ		IP	１		IP	３		IP	１		G1	１		G1	１		G1	１		IP	１		IP	１		IP	１		G1
+金子　　賢志	6.00	0.14	3.3	３		IP	２		IP	４		G1	６		G1	５	3	IP	１		IP	１		IP	２		IP	６		G1	４		G1
+桐生　　順平	6.80	0.13	3.5	１		IP	２		IP	６		G1	４		G1	４		SG	１		G1	４		G1	５		G1	３		G1	１		G1
+松田　大志郎	8.50	0.09	1.5	５		IP	２		IP	３		G1	３		G1	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP
+河合　　佑樹	6.00	0.16	3.2	５		IP	４	4	IP	１		IP	３		IP	４		G1	３		G1	２		G1	４		G1	２		IP	５		G1
+磯部　　　誠	5.80	0.15	3.0	２		IP	３		G1	１		G1	３		SG	６		G1	５		G1	２		G1	５		G1	５		G1	６		G1

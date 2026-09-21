@@ -1,0 +1,8 @@
+data=
+1	0
+香月　　大輝	6.40	0.19	3.0	２		IP	５		IP	５		IP	１		IP	１		IP															IP
+佐藤　隆太郎	7.50	0.15	4.1	１		IP	２		IP	３		IP	１		IP	１		G1	４		G1	３		IP	１		IP	３		IP	６		SG
+山本　稔太朗	5.60	0.19	3.7	２		IP	３		IP	５		IP	２		IP	５	2	IP	２	4	IP	５		IP	３		IP	３		IP	２		G3
+山ノ内　雅人	5.80	0.12	2.1	２		IP	３		IP	５		IP	３		IP	３		IP	１		IP	４		IP	５		IP	１		IP	４		IP
+川原　　正明	4.20	0.16	2.5	５		IP	４		IP	５		IP	２		IP	５		IP	３		IP	４		IP	４		IP	４		IP	３		IP
+野村　　　誠	4.00	0.19	3.8	４	5	IP	３		IP	６		G3	６		G3	３		IP	４		IP	４	5	IP	５		IP	３	5	IP	３		IP

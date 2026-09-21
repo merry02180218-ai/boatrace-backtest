@@ -1,0 +1,8 @@
+data=
+1	0
+加木　　　郁	6.80	0.17	4.3	２		IP	４		IP	２		IP	１		IP	３		IP	５		IP	３		IP	３		IP	１		IP	２		IP
+平田　健之佑	7.20	0.14	2.7	３		IP	３		IP	３		IP	３		IP	１		IP	１		IP	転		IP	２		IP	２		IP	１		G1
+桂林　　　寛	5.40	0.12	3.2	２	2	IP	５		IP	２		IP	２		IP	５	4	IP	１		IP	３		IP	３		IP	５		IP	５	2	IP
+外崎　　　悟	5.10	0.19	3.1	４		IP	４		IP	３		G3	４		G3	４		IP	６		IP	２		IP	５		IP	１		IP	２		IP
+一色　　凌雅	3.90	0.21	4.4	５		IP	５		IP	３		IP	２		IP	４		IP	２		IP	６	4	G3	４		IP	５	6	IP	５		IP
+川上　　聡介	4.90	0.15	3.3	５		IP	２		IP	４		IP	４		IP	３	5	IP	２		IP	４		IP	１	5	IP	６		IP	５		IP

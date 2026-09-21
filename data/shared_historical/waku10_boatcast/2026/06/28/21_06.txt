@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　昂介	7.40	0.17	3.2	２		IP	４		IP	１		IP	３		IP	４		IP	１		IP	５		IP	１		IP	１		IP	１		IP
+谷川　　将太	6.60	0.18	3.1	２		IP	３		IP	２		IP	５		IP	１		IP	２		IP	２		IP	３		IP	２		IP	５		IP
+松下　　一也	7.30	0.13	2.7	２		IP	２		IP	３		IP	３		IP	４	4	IP	２		IP	２		IP	４		IP	１		IP	１		IP
+白井　　友晴	4.60	0.14	3.8	５		IP	４		IP	２		IP	５	5	IP	４		IP	２		IP	３		IP	４		IP	４		IP	４		IP
+石井　　孝之	4.00	0.12	2.9	３		IP	４		IP	４		IP	５		IP	Ｆ		IP	６		IP	２		IP	３		IP	６		IP	２		IP
+船岡　洋一郎	3.90	0.19	4.4	２		IP	４		G3	４		G3	４		G3	６		G1	４		G2	５		IP	５		IP	４		G1	６		IP

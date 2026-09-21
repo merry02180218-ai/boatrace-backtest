@@ -1,0 +1,8 @@
+data=
+1	0
+松下　　誉士	5.20	0.17	4.5	５		IP	２		IP	１		IP	４		IP	４		IP	３		IP	妨		IP	２		IP	５		IP	２		IP
+三宅　　　潤	6.40	0.18	3.5	２		IP	２		IP	３		IP	３		IP	３		IP	３		IP	４	3	IP	３		IP	３		IP	２		IP
+大串　　重幸	6.89	0.16	2.3	１		IP	４		IP	３		IP	３		IP	３		IP	３		IP	エ		IP	２		IP	２		IP	２		IP
+前出　　達吉	5.70	0.12	2.2	５		IP	５		IP	４		IP	２		IP	４		IP	６	5	G3	１	3	IP	１		IP	２		IP	２		IP
+重成　　一人	4.80	0.14	3.3	５	6	IP	２		IP	４	6	IP	６		IP	５		IP	６		G1	１		IP	４		IP	２		IP	３		G1
+田頭　　　実	5.10	0.16	3.3	６	2	IP	５	2	IP	１	2	IP	４	2	IP	６	2	IP	３	2	IP	２	2	IP	６	2	IP	２	2	IP	１	2	IP

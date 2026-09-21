@@ -1,0 +1,8 @@
+data=
+1	0
+水谷　　理人	8.80	0.16	4.2	１		IP	１		IP	１		IP	１		IP	１		IP	５		G3	２		G3	１		IP	２		IP	１		IP
+廣瀬　　　凜	7.70	0.14	3.6	１		IP	２		IP	１		IP	４		IP	１		IP	４		IP	３		G2	４		IP	１		IP	１		IP
+村上　宗太郎	3.70	0.22	4.1	６		IP	５		IP	６		IP	４		IP	４		IP	１		IP	６		IP	４		IP	３		IP	４		IP
+大原　　祥昌	3.80	0.12	2.8	６	6	IP	６		IP	２		IP	４	5	IP	２	5	IP	４		IP	５		IP	６		G3	６		G3	２		G3
+田中　　勇輔	2.30	0.12	2.2	５		IP	２		IP	５		IP	６	6	IP	６		IP	５		IP	５		IP	５		IP	６		IP	５		IP
+杉山　　太陽	2.50	0.18	3.4	５		IP	６		IP	５		IP	６		IP	６		IP	１	4	IP	６		IP	４		IP	５		IP	６		IP

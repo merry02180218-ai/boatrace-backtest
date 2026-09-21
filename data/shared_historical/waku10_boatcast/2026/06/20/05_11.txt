@@ -1,0 +1,8 @@
+data=
+1	0
+板橋　　侑我	9.10	0.12	3.1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	４		G1	４		G3	１		G1
+池田　　雄一	6.60	0.16	3.0	１		IP	１		IP	２		IP	５	3	IP	４		IP	１		IP	５		IP	２		IP	２		IP	４		IP
+大澤　　誠也	4.00	0.21	3.6	４		IP	４		IP	４		IP	３		IP	５		IP	３		IP	５		IP	４		IP	３		IP	５		IP
+伯母　　芳恒	3.20	0.16	3.2	４		IP	５		IP	４	6	IP	４		IP	５		G3	３		IP	３		IP	６		IP	６		IP	５		IP
+鈴谷　　一平	4.90	0.16	3.1	４		G1	３	3	IP	６		IP	４		IP	４		IP	１		IP	５		IP	３		IP	１		IP	６		IP
+森　　　悠稀	2.70	0.15	3.0	６		IP	６		G2	５		IP	５		IP	３		IP	５		IP	５	5	IP	４		IP	５		IP	４		IP

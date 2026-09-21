@@ -1,0 +1,8 @@
+data=
+1	0
+興津　　　藍	7.80	0.12	2.3	１		IP	２		IP	１		IP	１		IP	２		IP	６		IP	５		IP	１		IP	２		IP	１		G1
+泉　　　具巳	5.00	0.16	3.7	６		IP	５		IP	２		IP	２		IP	２	4	IP	４		IP	１		IP	５		IP	６		IP	３		IP
+岡部　　大輝	5.20	0.14	2.2	３		IP	２		IP	５		IP	４		IP	４	2	IP	３		IP	１		IP	２		IP	６		G3	６		IP
+谷　　　勝幸	5.50	0.15	2.7	３		IP	２		IP	２		IP	４		IP	４		IP	４		IP	２		IP	２		IP	４		IP	６		IP
+小池　　礼乃	4.00	0.18	2.8	２		IP	５		IP	４		IP	３	4	IP	６	3	IP	３		IP	４		IP	６		IP	５		G3	３		IP
+小坂　　宗司	4.70	0.18	4.0	２		G3	３	5	IP	３	5	IP	３		IP	５		IP	６		IP	４		IP	５		IP	３	5	IP	３	5	IP

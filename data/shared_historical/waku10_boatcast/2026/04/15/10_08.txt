@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　兼士	7.30	0.17	3.3	３		IP	３		IP	３		IP	１		IP	２		IP	１		IP	３		IP	６	3	IP	１	4	IP	１		IP
+中北　　将史	4.90	0.12	2.0	２		G3	４		G3	５		IP	６	3	IP	５		IP	２		IP	４		IP	３		IP	４		IP	１		IP
+津久井　拓也	6.90	0.14	2.3	３		IP	２		IP	２		IP	５		IP	５		IP	３		IP	１		IP	２		IP	１		IP	２		IP
+海野　ゆかり	5.10	0.19	3.1	３		IP	２		IP	４		IP	６		G1	２		G3	５		G1	６	6	G1	２		IP	４		IP	３		G3
+樋口　　　亮	6.40	0.19	3.6	４		IP	５	6	IP	３		IP	３		IP	１		IP	４		IP	１		IP	２		IP	１		IP	４		IP
+東口　　　晃	3.20	0.16	3.9	５		IP	３		IP	５		IP	６		IP	４		IP	５		IP	６		IP	４		IP	３		IP	４		IP

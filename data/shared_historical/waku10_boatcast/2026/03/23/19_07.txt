@@ -1,0 +1,8 @@
+data=
+1	0
+酒見　　峻介	7.20	0.17	3.8	５		IP	４		IP	１		IP	３		IP	１		IP	１		IP	２		IP	４		IP	２		IP	１		IP
+白井　　友晴	6.60	0.17	3.8	３		IP	２		IP	５		IP	２	3	IP	２		IP	４		IP	２		IP	１		IP	３		IP	３		IP
+小森　　信雄	4.40	0.19	4.1	転		IP	３		IP	４		IP	２		IP	５		IP	５		IP	２		IP	２		IP	５		IP	４		IP
+井内　将太郎	7.40	0.11	1.8	２		IP	２		IP	３		IP	２	5	IP	１		IP	３		IP	３		IP	３		IP	１	6	IP	３		IP
+秋元　　　哲	6.10	0.15	3.5	１		IP	５	4	G1	６		G1	３		G1	１	2	IP	１		IP	３		IP	２		IP	４		IP	６		IP
+寺田　　夢生	1.70	0.18	3.3	６		IP	５		G3	６		G3	５		G3	３		G3	６		G3	６		G3	６		IP	６		IP	６		IP

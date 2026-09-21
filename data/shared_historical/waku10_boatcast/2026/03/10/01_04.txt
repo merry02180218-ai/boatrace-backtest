@@ -1,0 +1,8 @@
+data=
+1	0
+表　　　憲一	7.20	0.15	2.9	２		IP	４		IP	３		IP	１		IP	１		IP	Ｆ		IP	１		IP	１		IP	４		IP	１		IP
+中村　　有裕	5.90	0.14	3.1	１		IP	１		IP	６	3	IP	１		IP	６		IP	１		IP	６		IP	３		IP	３		IP	５		IP
+水原　　　慎	4.80	0.15	3.2	６	4	IP	４		IP	１		IP	５		IP	３		G3	６		IP	１		IP	５		G3	２		G3	４		IP
+黒田　　誠司	3.90	0.14	2.9	５		IP	３		IP	４		IP	４		IP	４		IP	６		IP	３		IP	１		IP	６		IP	６		IP
+武田　　光史	5.70	0.18	3.7	２	4	IP	２	4	IP	２		IP	４		IP	６		IP	４		IP	４		G1	５		G1	２		IP	２		IP
+西野　　翔太	6.10	0.15	2.6	３	5	IP	６	3	IP	２	2	IP	３	2	IP	３	2	IP	２	2	IP	３	3	IP	４	5	IP	２	2	IP	２	4	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+石川　　哲秀	3.20	0.18	3.4	５		IP	１		IP	６		IP	３		IP	６		IP	３		IP	６		IP	５		IP	５		IP	６		IP
+山本　　光雄	6.00	0.19	3.5	４		IP	４		IP	４		IP	２	3	IP	４		IP	４		IP	４		IP	１		IP	１		IP	２		IP
+真庭　　明志	7.30	0.17	2.3	２		IP	１		IP	６		IP	１		IP	２		IP	３		IP	３	2	IP	２		IP	１		IP	３		IP
+岡瀬　　正人	5.40	0.18	4.1	２		IP	３		IP	４		IP	３		IP	２	3	IP	５		IP	４		IP	３		IP	２		IP	５		IP
+黒野　　元基	5.90	0.11	2.8	１	4	IP	２	4	IP	２		IP	３		IP	４		G1	６		G1	６		G1	５		G1	４		G1	１		IP
+山田　　晃大	3.50	0.11	1.9	４		IP	５		IP	４		IP	６		IP	５		IP	４		IP	３		IP	４		IP	４		IP	４		IP

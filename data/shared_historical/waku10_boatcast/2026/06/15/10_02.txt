@@ -1,0 +1,8 @@
+data=
+1	0
+村上　　功祐	7.20	0.14	2.7	２		IP	１		IP	６		IP	２		IP	２		IP	１		IP	３		IP	１		IP	１		IP	６		IP
+中里　　英夫	5.30	0.18	3.4	２		IP	２		IP	４		IP	４		IP	２		IP	１		IP	６		IP	５		IP	３		IP	５	3	IP
+白井　　友晴	5.60	0.16	3.0	３		IP	１		IP	３		IP	５		IP	４		IP	５		IP	４		IP	１		IP	５	4	IP	１		IP
+幸野　　史明	2.90	0.16	3.0	４		IP	６		IP	５		IP	３		IP	５		IP	５		IP	３		IP	６		IP	６		IP	４		IP
+山田　　和佐	4.40	0.21	4.1	１		IP	４		IP	４		IP	６	4	IP	４		IP	６		IP	３		IP	４		IP	４		IP	３		IP
+関　　　裕也	2.70	0.21	4.3	６	4	IP	５	5	IP	３		IP	４	5	IP	５		IP	３	2	IP	５	5	IP	６	5	IP	６		IP	５	5	IP

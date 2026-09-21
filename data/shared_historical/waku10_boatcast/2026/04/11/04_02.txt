@@ -1,0 +1,8 @@
+data=
+1	0
+齋藤　　智裕	6.80	0.21	4.3	２		IP	２		IP	４		IP	２		IP	３	2	IP	２		IP	２		IP	５		IP	２		IP	２		IP
+三角　　哲男	5.40	0.14	2.5	５		IP	１		IP	５		IP	３		IP	６		IP	２		IP	５		G1	２		IP	１		IP	５		IP
+岡本　翔太郎	3.60	0.09	2.4	４		IP	４		IP	４		G3	５		IP	５		IP	５		IP	４		IP	５		IP	１		IP	５		IP
+原　　　豊土	6.80	0.18	2.5	３		IP	４		IP	１		IP	２		IP	３		IP	２		IP	１		IP	５		IP	２		IP	３		IP
+植田　　太一	4.60	0.16	2.9	２		G3	２		IP	１	4	IP	４		IP	６		IP	５		IP	６		IP	４		G1	３		IP	６		IP
+水野　　望美	3.70	0.23	4.5	６		IP	５	5	IP	３		IP	４		IP	５		IP	１	5	IP	３		IP	６		IP	６		IP	４		G3

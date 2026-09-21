@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　庸平	5.90	0.19	3.9	２		IP	４		IP	１		IP	２		IP	６		IP	２		IP	２		IP	５		IP	Ｆ		IP	１		IP
+三好　　勇人	6.10	0.16	3.1	２	3	G3	２		G3	１		IP	３	3	IP	２		IP	３		IP	４		IP	２		IP	５		IP	６		IP
+河上　　年昭	4.00	0.12	2.4	４		IP	５		IP	４		IP	５		IP	３		IP	４		IP	４		IP	４		IP	２		IP	５		IP
+渡邉　　和将	6.50	0.10	1.7	２		IP	１		IP	２	3	IP	３		IP	１		IP	３		IP	３		G1	６		G1	４		G1	５		G1
+池田　　雷太	4.40	0.20	4.5	４		IP	６		IP	６		IP	１		IP	３		IP	２		IP	５		IP	４	6	IP	３		IP	５		IP
+中渡　　修作	3.40	0.15	4.2	５		IP	５		IP	６		IP	５		IP	５		IP	３	5	IP	４		IP	２		IP	３		IP	６		IP

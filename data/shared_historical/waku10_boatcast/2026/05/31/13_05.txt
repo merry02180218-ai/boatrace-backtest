@@ -1,0 +1,8 @@
+data=
+1	0
+泉　　　具巳	6.60	0.20	4.3	２		IP	１		IP	Ｆ		IP	２		IP	６		IP	１		IP	１		IP	２		IP	１		IP	６		IP
+中村　　魁生	5.10	0.21	4.1	２		IP	５		IP	４		IP	３		IP	４		IP	３		IP	２	1	IP	４		G1	Ｆ		IP	２		IP
+植木　　美帆	2.00	0.17	3.2	６		G3	５		IP	４	6	IP	６	4	G3	６		G3	６		IP	６		IP	５		IP	６		IP	３		IP
+樋口　　　亮	4.60	0.17	3.9	５		IP	５		IP	５	5	IP	２		IP	４		IP	３		IP	５		IP	５		IP	１	3	IP	２		IP
+三村　　岳人	4.50	0.14	2.5	５		IP	５		IP	５		IP	３		IP	５		IP	３		IP	２		IP	５		IP	１	3	IP	４		IP
+川野　　芽唯	5.60	0.13	2.6	３		G3	４		G3	１		G2	５		G3	４		IP	２		IP	３		IP	３		IP	４		IP	５		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+照屋　　厚仁	7.90	0.17	3.5	２		IP	２		IP	１		IP	２		IP	６		IP	１		IP	２		IP	１		IP	３		IP	１		IP
+小野寺　智洋	6.40	0.14	3.8	１		IP	２		IP	４		IP	５		G3	３		G3	３		IP	４		IP	２		IP	３		IP	１		IP
+井手　　良太	6.40	0.15	3.0	３		IP	５		IP	１		IP	３		IP	３		IP	１		IP	２		IP	３		IP	３		IP	４		IP
+宇土　　泰就	3.10	0.16	3.4	５		IP	２		IP	４		IP	２		IP	５		IP	６		IP	５		IP	６		IP	５		IP	６		IP
+坂東　　　満	2.50	0.17	3.6	６		IP	６		IP	５		IP	５	4	IP	５		IP	６		IP	３		IP	６	6	IP	２		IP	６		IP
+泉　　　具巳	4.10	0.16	3.3	６		IP	２		IP	１		IP	２		IP	６		IP	５	5	IP	５		IP	６		IP	３		IP	５		IP

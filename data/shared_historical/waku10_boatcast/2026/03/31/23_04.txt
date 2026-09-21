@@ -1,0 +1,8 @@
+data=
+1	0
+渡　　　修平	7.00	0.15	3.3	１		IP	１		IP	１		IP	５		IP	４		IP	５		IP	１		IP	１		IP	４		IP	２		IP
+佐藤　　大騎	4.20	0.14	2.9	６		IP	４		IP	３		IP	２		IP	５		IP	２		IP	３		IP	５		IP	６		IP	４		G3
+奈須　　啓太	6.90	0.13	2.1	２		IP	３		IP	２		IP	１		IP	４		IP	３		IP	２		IP	２		IP	５		IP	２		G2
+興津　　　藍	5.30	0.17	3.5	６	5	IP	４		IP	３		IP	６		IP	３		IP	３		IP	１		G1	４		IP	３		IP	３		IP
+加藤　　政彦	2.90	0.15	3.9	５		G1	５		G1	６		G1	５		G1	５		IP	５		IP	４		IP	落		IP	５		IP	２		IP
+広次　　　修	3.80	0.18	4.3	４		IP	２		IP	４		IP	５		IP	６		IP	３		IP	５		IP	３		IP	６		IP	４		IP

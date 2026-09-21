@@ -1,0 +1,8 @@
+data=
+1	0
+小野　　信樹	8.80	0.19	3.5	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	５		IP	１		IP
+永井　　　源	6.30	0.14	3.1	６	3	IP	２		IP	１		IP	６		IP	４		IP	２		G1	２		IP	２		IP	２		IP	３	3	IP
+萩原　　知哉	5.60	0.17	2.8	１		IP	１		IP	４		IP	４	2	IP	４		IP	３		IP	４		IP	４		IP	４		IP	３		IP
+井澤　　聖奈	2.20	0.27	4.8	４		IP	５		IP	５	3	IP	４		IP	６		IP	５		IP	６	6	IP	４		IP	６		IP	６		IP
+市川　　哲也	4.78	0.15	2.9	３		G2	５		G2	５		IP	６	4	IP	２		IP	５		IP	３		IP	３		IP	２		IP	転		IP
+蜂須　　瑞生	2.70	0.19	4.0	６		G3	４	5	G3	５		IP	５		IP	４		IP	５		IP	５		IP	６		IP	６		IP	３	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+菊池　　宏志	7.60	0.16	2.8	１		G3	２		IP	３		IP	１		IP	１		G3	１		G3	１		IP	５		G3	３		IP	４		IP
+生方　　靖亜	6.10	0.12	2.1	２		G3	３		IP	１		IP	４		IP	２		IP	４		IP	１		IP	４		IP	６		IP	３		IP
+妻鳥　　晋也	5.20	0.22	4.7	３		G3	５		IP	６		IP	２		IP	３		IP	１		IP	５		IP	３		G3	６		IP	１	2	IP
+村越　　　篤	5.20	0.16	3.8	６		G3	６		IP	５		G1	２		IP	６		IP	４		IP	１		IP	３		IP	２		IP	２		IP
+後藤　　盛也	4.60	0.13	1.7	１		G3	２		IP	５		IP	６		IP	５		IP	３		IP	１		IP	５		IP	６		IP	４		IP
+一色　　凌雅	5.30	0.20	4.6	５		G3	６		IP	１		IP	３		IP	４		IP	４		IP	３		IP	４		IP	２		IP	２		IP

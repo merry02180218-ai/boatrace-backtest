@@ -1,0 +1,8 @@
+data=
+1	0
+安河内　　健	9.40	0.14	2.7	１		G2	１		IP	５		G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+古賀　　智之	7.10	0.14	2.6	３		G2	１		IP	４	3	IP	３		IP	１		IP	６		G3	３		IP	２		IP	１		IP	２		IP
+上野　　俊樹	4.88	0.15	3.3	３		IP	４		IP	４		G3	４		G3	転		IP	６		IP	１		IP	落		IP	３		IP	４		IP
+豊田　健士郎	5.70	0.14	3.5	６		G2	２		G1	３		G1	３		G1	４		G1	５		IP	５		G2	１		IP	２	3	IP	４		IP
+小芦　るり華	4.90	0.14	3.3	５		G2	５	6	IP	２		IP	２		G1	５		G1	３		IP	４		IP	４		G1	５		G1	４		G3
+笹木　　香吾	4.00	0.19	4.2	６		G2	４		IP	６		IP	２		IP	６		IP	４	5	IP	３	4	IP	５		IP	１	5	IP	５		IP

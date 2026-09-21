@@ -1,0 +1,8 @@
+data=
+1	0
+寺島　　吉彦	7.50	0.18	2.9	１		IP	１		IP	２	6	IP	６		IP	２		IP	５		IP	１		IP	２		IP	１		IP	２		IP
+水摩　　　敦	5.80	0.19	3.8	２		IP	２		IP	４		IP	３		IP	５		IP	３		IP	３		IP	３		G3	３		IP	３		IP
+赤岩　　善生	7.00	0.14	2.3	４		IP	３		G1	４	2	IP	２	2	IP	４		IP	４	2	IP	１		G1	２		IP	２	2	IP	１		IP
+倉持　　莉々	7.00	0.15	3.0	３		IP	４	3	G2	１		IP	３		IP	２		IP	２		IP	２		IP	１		IP	４		IP	４		G1
+大森　　　翼	4.20	0.15	3.7	２		IP	５	4	IP	３		IP	１		IP	６		IP	６		IP	６		IP	４		IP	２		IP	６		IP
+津田　　裕絵	4.60	0.21	4.3	２		G3	３		IP	３		IP	６		IP	５		IP	３		IP	４		IP	４		IP	３		G1	５		IP

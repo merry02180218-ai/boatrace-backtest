@@ -1,0 +1,8 @@
+data=
+1	0
+黒澤　めぐみ	6.80	0.18	3.2	１		IP	３		G3	２		G3	５		G3	１		IP	３		IP	４	2	IP	１		IP	５		IP	２		IP
+山田　　哲也	6.80	0.11	1.7	２		IP	４		G1	５		G1	３		G1	２		IP	３		IP	２		IP	２		IP	１		IP	４		G1
+若林　　　将	7.30	0.16	2.3	３		IP	６	4	G3	２		G3	２		IP	４		IP	１		IP	２		IP	２		IP	３		IP	１		G1
+堀越　　雄貴	4.30	0.26	4.5	１		IP	５	3	IP	２		IP	４		IP	４		IP	５		IP	２		IP	５		IP	６	6	IP	５		IP
+鈴木　　雅希	5.30	0.20	3.9	２		IP	３		IP	２		IP	３		IP	３		IP	６		IP	４		IP	４		IP	５		IP	２	6	IP
+西田　　　靖	4.00	0.18	2.8	５	2	G3	３	2	IP	３	3	IP	５	2	IP	妨	2	IP	６	2	IP	６	3	IP	２	2	IP	３	2	IP	２	2	IP

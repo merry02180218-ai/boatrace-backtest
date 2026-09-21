@@ -1,0 +1,8 @@
+data=
+1	0
+三苫　　晃幸	7.60	0.17	3.4	２		G3	１		IP	２		IP	１		IP	２		G3	３		IP	２		IP	１		IP	５		IP	３		IP
+桑原　　　啓	6.20	0.18	3.4	３		IP	５		IP	１		IP	１		IP	２		IP	３		IP	３		IP	５		IP	３		IP	３		IP
+服部　　達哉	5.90	0.20	3.0	２		G3	５		G3	１		IP	５		IP	６		IP	２		IP	２		G3	４		G3	２	4	G3	２		IP
+澤崎　　雄哉	5.60	0.18	3.2	６	5	G3	３		IP	３		IP	１		IP	２		IP	３		IP	４		IP	１		IP	６		IP	４		G3
+杉山　　喜一	4.40	0.14	2.9	６		G3	６		G3	３		IP	３		IP	４		IP	３		IP	４		IP	２		IP	３	6	IP	５	6	IP
+内田　　　壮	2.80	0.16	4.2	５		IP	３		IP	６		IP	５		IP	３		IP	６		IP	６		IP	３		IP	５		IP	６		IP

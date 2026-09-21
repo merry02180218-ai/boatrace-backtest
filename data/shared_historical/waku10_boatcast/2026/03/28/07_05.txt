@@ -1,0 +1,8 @@
+data=
+1	0
+宮地　　元輝	10.90	0.13	2.7	１		SG	２		G1	１		G1	１		G1	１		G1	１		G1	１		G1	１		G1	１		G1	１		G1
+権藤　　俊光	6.70	0.11	2.5	２		SG	１		G1	４		G1	２		G1	４		G1	５		IP	１		IP	６		IP	１		IP	５		IP
+平本　　真之	6.70	0.16	2.9	６		SG	２		IP	２		G1	５		G1	５		G1	１		G1	４		G1	３		G1	３		G1	２		G1
+渡邉　　和将	5.00	0.15	3.2	２		IP	４		IP	４		G1	６		G1	３		IP	１		IP	６		IP	６		IP	６		SG	１		IP
+渡邉　　優美	4.50	0.14	3.7	５		SG	５		IP	６		IP	５		G1	４		G1	１		IP	４	6	G1	６		G1	４		G1	３		IP
+菅　　　章哉	6.00	0.16	3.6	５		SG	４		IP	６		G1	３		G1	３		G1	１	5	IP	２		G1	５	5	G1	１	5	IP	５		SG

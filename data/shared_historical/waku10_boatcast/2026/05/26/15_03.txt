@@ -1,0 +1,8 @@
+data=
+1	0
+伊倉　　　光	8.20	0.16	2.9	４		IP	１		IP	１		IP	４		IP	２		IP	４		IP	１		IP	１		IP	１		IP	１		IP
+大江　　　純	7.00	0.15	2.9	３		IP	２		IP	２		IP	３		IP	４		IP	２		IP	３		IP	１		G3	２		IP	３		IP
+山口　　修路	5.00	0.21	4.3	３	4	IP	３		IP	４		G3	２		IP	５		IP	３		IP	３		IP	４		IP	４		IP	４		IP
+夏山　　亮平	4.44	0.17	3.8	５		IP	４		IP	２		IP	４		IP	３		IP	５		IP	欠		IP	５		G3	４		IP	２		IP
+中岡　　正彦	5.90	0.16	2.6	２	3	IP	５	6	SG	３	3	IP	２	2	IP	１	2	IP	２	1	IP	２	2	IP	５		G1	６	2	G1	５	4	IP
+奈須　　啓太	3.50	0.09	2.2	２	5	IP	４	5	IP	５		IP	３		IP	４		IP	４	5	IP	６	5	IP	６		IP	４	5	IP	６		IP

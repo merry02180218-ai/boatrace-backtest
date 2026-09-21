@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　魁生	9.80	0.15	3.5	１		G1	１		G1	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	２		IP
+烏野　　賢太	6.90	0.16	3.5	３		IP	２		IP	５		IP	３	3	IP	６		G1	３		G1	１		IP	２		IP	１		IP	２		IP
+横田　　　茂	6.20	0.17	3.2	１		IP	１	4	IP	４		IP	５		IP	３		IP	４	4	IP	４		IP	３		IP	２		IP	２		IP
+平見　　真彦	4.80	0.19	3.8	３		IP	５		IP	２	5	IP	３	5	IP	３		IP	５	6	IP	３		IP	４		IP	３		IP	５		IP
+三好　　勇人	2.80	0.17	3.8	４		IP	６		IP	４		IP	４		IP	５		IP	５		IP	５		IP	５		IP	６		IP	３		IP
+林　　　祐介	3.00	0.18	4.1	４	5	IP	３	5	IP	６		IP	５		IP	３		IP	５		IP	６		IP	６	5	G3	６		G3	３		IP

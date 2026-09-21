@@ -1,0 +1,8 @@
+data=
+1	0
+長谷川　雅和	7.40	0.15	2.4	Ｆ		G3	２		IP	３		IP	２		IP	１		IP	１		IP	１		IP	４		IP	２		IP	１		G3
+萩原　　知哉	5.60	0.13	2.3	２		IP	２		IP	４		IP	３		IP	１		IP	５		IP	３		IP	４		IP	３		IP	５		IP
+田中　　京介	5.50	0.14	2.4	４		IP	２		IP	３		IP	５		IP	４		IP	３		IP	６		IP	１		IP	３		IP	２		IP
+中嶋　　世奈	2.50	0.22	4.1	６	6	IP	６	6	IP	５		IP	５		IP	３	3	IP	４		IP	５		IP	５		IP	４		IP	６		IP
+石川　　哲秀	3.10	0.18	3.9	６		IP	５		IP	５		IP	４		IP	６		IP	２		IP	６		IP	５	6	IP	４		IP	３		IP
+間嶋　　仁志	4.40	0.19	4.0	６	3	IP	５	2	IP	３	4	IP	４	2	IP	３	1	IP	４	2	IP	６	3	IP	２	2	IP	５	2	IP	２	2	IP

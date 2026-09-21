@@ -1,0 +1,8 @@
+data=
+1	0
+松下　　知幸	5.20	0.19	2.9	１		IP	４		IP	５		IP	６		IP	１		IP	４		IP	６		IP	４		IP	３		IP	１		IP
+板倉　　敦史	5.70	0.14	2.9	３		IP	２		IP	３		IP	１		IP	３		IP	５		IP	２		IP	３		G3	６		G3	４		IP
+小柳　　勝希	6.00	0.12	2.7	３		IP	５	4	IP	１		IP																					IP
+原村　　拓也	4.30	0.16	2.9	３		IP	４		IP	５		IP	５		IP	６		IP	４		IP	３		IP	５		IP	１		IP	３		IP
+橋本　　　明	3.20	0.16	3.5	３		IP	３		IP	４	6	G3	４	6	G3	４		IP	６	6	IP	５		IP	５		IP	５		IP	６	6	IP
+水摩　　　敦	6.20	0.14	2.2	１		IP	４		IP	６		IP	６		IP	２	2	IP	１	4	IP	２		IP	２		IP	３		IP	３		IP

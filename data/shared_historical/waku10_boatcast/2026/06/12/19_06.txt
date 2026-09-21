@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　大輔	7.20	0.15	2.9	３		IP	１		IP	３		IP	１		IP	２		IP	１		IP	４		G3	５		IP	１		IP	３		IP
+秋末　　秦悟	3.70	0.16	3.6	４		IP	２		IP	６		IP	３		IP	４		IP	６		IP	４		IP	５		IP	３		IP	６		IP
+池永　　　太	5.20	0.13	3.4	６		IP	５		G2	５		IP	４		G1	６		G1	２		G1	２		IP	３		IP	４		G1	１		G1
+桑原　　将光	6.00	0.12	3.1	２	5	G3	３		IP	３		IP	３		IP	３		IP	２		IP	５		IP	３		IP	３		IP	３		IP
+渡邉　　俊介	4.90	0.15	3.5	４		IP	６		IP	４		IP	４		IP	４		IP	４		IP	５		IP	２		IP	２		IP	３		IP
+興津　　　藍	2.60	0.18	3.5	４		G3	５		IP	５		IP	６		IP	４		IP	５		IP	４		IP	５		IP	４	2	IP	６		IP

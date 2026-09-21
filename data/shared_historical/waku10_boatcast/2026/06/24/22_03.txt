@@ -1,0 +1,8 @@
+data=
+1	0
+広瀬　　聖仁	5.60	0.13	2.9	５		IP	５		IP	１		IP	２		IP	３		IP	４		IP	３		IP	４		IP	１		IP	４		IP
+西村　　秀樹	2.10	0.16	3.6	６		IP	５		IP	４		IP	５		IP	６		IP	６		IP	６		IP	４		IP	４		IP	６		IP
+古結　　　宏	6.90	0.12	2.9	２		IP	１		IP	１		IP	３		IP	３		IP	３		G1	５	1	G1	２		IP	２		IP	６		G1
+小林　　甘寧	5.70	0.13	2.4	３		IP	４		IP	３		IP	２		IP	２		IP	４		IP	３	5	IP	１		IP	４		IP	６		IP
+本村　　　大	2.20	0.20	4.0	４		IP	５		IP	６		IP	４		IP	５		IP	５		IP	４		IP	欠		IP	５	6	IP	６		IP
+西川　新太郎	5.33	0.15	3.0	２	5	IP	５		IP	落		IP	１		IP	５		IP	５		IP	３		IP	２		IP	２		IP	５		IP

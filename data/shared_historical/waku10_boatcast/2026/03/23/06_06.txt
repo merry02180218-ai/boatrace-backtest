@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　浩哉	8.00	0.11	1.7	２		IP	１		IP	３		IP	１		IP	１		IP	２		IP	５		IP	１		IP	３	2	IP	１		IP
+國分　将太郎	5.60	0.13	2.1	３		IP	２		IP	２	3	IP	５		IP	１		IP	３		IP	５		IP	４		IP	５		G3	２		IP
+春園　　功太	6.60	0.19	3.1	２		G3	４		IP	２		IP	１	4	IP	６		IP	１		IP	１		IP	４		IP	６		IP	２		IP
+渋谷　　明憲	6.60	0.14	2.9	３		G3	１		IP	２		IP	５		IP	２		IP	２		IP	４		IP	３		IP	４		IP	１		IP
+福田　　宗平	3.70	0.16	3.7	４		G3	５		IP	５		IP	３		IP	６		IP	５		IP	４		IP	４		IP	５		IP	２		IP
+板橋　　侑我	4.50	0.16	3.8	６		G3	４		G1	３		G1	３		G1	５		G1	２		IP	６		G1	６		G1	３		IP	４		IP

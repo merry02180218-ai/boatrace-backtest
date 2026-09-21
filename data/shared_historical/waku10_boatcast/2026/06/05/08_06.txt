@@ -1,0 +1,8 @@
+data=
+1	0
+山下　　大輝	8.20	0.16	4.0	１		IP	１		IP	４		IP	１		IP	３		IP	１		IP	１		IP	６		G1	１		IP	１		IP
+金子　　貴志	7.00	0.22	4.3	３		IP	４		IP	３		IP	２		IP	１	3	IP	４		IP	２		IP	２		IP	３		IP	１		IP
+関野　　　文	6.20	0.12	2.7	２		IP	２		IP	３		IP	２		IP	３		IP	５		IP	３		G3	２		G3	５		IP	２		IP
+石原　　　翼	3.80	0.15	2.8	３		G2	４		IP	５	6	IP	４		IP	４		IP	３		IP	５		IP	６		IP	５		G2	４		G2
+志道　　吉和	2.00	0.22	4.3	６		IP	６		IP	６		IP	４		IP	６	6	IP	５	6	IP	５		IP	５	6	IP	５		IP	４		IP
+乃村　　康友	3.40	0.18	5.0	６		IP	５		IP	６		G3	５		IP	３		IP	３		IP	５		IP	４		IP	４		IP	３		IP

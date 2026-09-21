@@ -1,0 +1,8 @@
+data=
+1	0
+津久井　拓也	6.80	0.14	3.0	１		IP	１		IP	２		IP	１		IP	４		IP	１		IP	５		IP	１		G3	５		G3	５		IP
+渡邊　雄一郎	7.30	0.18	3.6	４		IP	２		IP	２		IP	２		IP	１	3	IP	１		IP	２		IP	２		IP	２		IP	６		IP
+森永　　　隆	5.40	0.22	3.8	６		IP	２		IP	４		IP	１		IP	６	4	IP	１		IP	６		IP	３		IP	４		IP	２		IP
+松尾　　　充	5.00	0.14	3.9	３		IP	４	5	IP	４		IP	２		IP	４		G1	６		G1	２		IP	５	3	IP	６		IP	１		IP
+石川　　真二	6.60	0.16	3.1	２	2	IP	１	2	IP	６	2	G1	３	2	G1	２	2	IP	３	2	IP	３	1	IP	３	3	IP	１	2	IP	６	3	IP
+渡邉　　俊介	5.00	0.16	3.2	２		IP	５		IP	５		IP	２		IP	４		IP	５		IP	４		IP	２		IP	２		IP	４	5	IP

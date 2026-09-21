@@ -1,0 +1,8 @@
+data=
+1	0
+松村　　　敏	9.70	0.11	1.7	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP
+田村　　隆信	7.70	0.15	2.7	２		IP	２		IP	１		IP	３		G1	１		G1	３		IP	６		IP	２		G1	２		G2	２		IP
+西野　　雄貴	6.60	0.17	3.6	１		IP	３		IP	１		IP	４		IP	３		G1	１		IP	４		IP	４	2	IP	５		IP	２		IP
+川野　　芽唯	6.80	0.17	3.7	３	5	IP	１		G1	４		IP	２		G1	５		G1	２		IP	４		IP	２		IP	３		G2	２		G3
+佐々木　完太	6.40	0.18	3.6	３	6	IP	２		G1	１		G1	６		G1	２		G1	３		G1	５		G1	４		IP	１		IP	５	3	IP
+香川　　颯太	3.10	0.18	3.9	６		IP	５		IP	４		IP	２		IP	２		IP	６		IP	５		IP	６		IP	Ｆ		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　奈月	6.40	0.21	4.0	４		G3	２		G3	４		G3	４		IP	２		IP	２		IP	１		IP	４		IP	２		IP	３		IP
+木村　紗友希	5.33	0.21	4.0	２		IP	１		G3	２		G3	６		IP	６	3	IP	転		IP	２		IP	２		IP	５		IP	５		IP
+川野　　芽唯	6.30	0.14	3.1	２		IP	４		IP	１		IP	６		IP	３		IP	２		G1	２		IP	４		G1	３		IP	３		IP
+中里　　優子	4.60	0.19	3.5	４		IP	２		IP	６	5	IP	６		IP	３		IP	４	3	G3	５		G3	２	5	IP	２		IP	４		IP
+山本　　梨菜	4.10	0.15	3.4	２		G3	転		IP	２		IP	６		G3	４		IP	３	4	IP	３		IP	６		G1	６		G1	４		G3
+今井　　裕梨	3.00	0.18	3.9	４		IP	６	5	IP	６		G1	６		G1	６		IP	２		G3	５		G3	３		IP	６		G3	６		G3

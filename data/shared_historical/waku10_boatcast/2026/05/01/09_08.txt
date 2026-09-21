@@ -1,0 +1,8 @@
+data=
+1	0
+藤田　　竜弘	6.80	0.16	3.7	１		IP	４		IP	２		IP	３		IP	３		IP	４		IP	１		IP	１		IP	５		IP	２		IP
+小森　　信雄	4.56	0.23	5.3	６		IP	１		IP	落		IP	５		IP	３		IP	３	3	IP	４		IP	５		IP	３		IP	４		IP
+松田　　淳平	5.70	0.09	2.0	５		IP	３		IP	３		IP	２		IP	２		IP	１		IP	３		IP	３	4	IP	４		IP	６		IP
+安達　　裕樹	6.50	0.19	3.0	３		IP	４		IP	３		IP	３		IP	４		IP	２		IP	１		IP	４		IP	１		IP	３		G2
+石田　　勇斗	3.60	0.14	2.8	１		IP	６		IP	３		IP	５		IP	５		IP	４		IP	６		IP	４	6	IP	５		IP	４		IP
+松井　　洪弥	3.50	0.14	3.6	３	5	IP	６		G1	６		G1	６		G1	４		G1	４		G3	６		G1	３		G1	５		G1	６		G1

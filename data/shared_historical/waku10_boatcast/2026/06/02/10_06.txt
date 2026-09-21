@@ -1,0 +1,8 @@
+data=
+1	0
+西川　　拓利	9.70	0.11	1.6	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		G3	１		IP	１		IP	１		IP
+坂本　　雄紀	6.80	0.14	3.0	４		IP	１		IP	５	3	IP	１		IP	２		IP	１		IP	３		IP	１		IP	４		IP	４		IP
+森　　　雄利	4.00	0.13	2.7	４		IP	４		IP	６		IP	５		IP	４		IP	６		IP	１		IP	５		IP	４		IP	２		IP
+高井　　駿弥	4.70	0.15	3.0	５	5	IP	６		IP	３		IP	４		IP	３	3	IP	１		IP	２		IP	２		IP	６		IP	６		IP
+佐藤　　　航	5.80	0.12	3.0	６		G2	１		G2	５	6	IP	エ		IP	２		IP	１		IP	５		IP	２		G2	１		IP	４		IP
+井本　　昌也	3.80	0.16	3.8	３		IP	２	4	IP	４		IP	５		IP	５		G1	５		G2	４		G2	６		G1	６		G1	６		IP

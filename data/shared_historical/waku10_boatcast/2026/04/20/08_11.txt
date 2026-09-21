@@ -1,0 +1,8 @@
+data=
+1	0
+松竹　　大輔	9.00	0.17	2.4	１		IP	１		G3	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+井本　　昌也	7.50	0.14	2.7	１	1	IP	３		G1	４		G2	２		G1	４		G1	１		IP	１		IP	４		G1	１	1	IP	４		IP
+品田　　直樹	6.11	0.19	3.2	４	4	IP	１		IP	３		IP	１		IP	３	2	IP	エ		IP	１		IP	５		IP	６		IP	３		IP
+須藤　　博倫	4.40	0.13	3.2	２		IP	５		IP	５		IP	３		IP	３		IP	５		IP	３		IP	４	5	IP	３		IP	５		IP
+和田　　操拓	4.90	0.13	2.3	６		IP	６	4	IP	１		IP	１		IP	５		IP	３		IP	３		IP	４		IP	３		IP	５		G2
+磯村　　　匠	4.78	0.22	4.5	４		IP	３		IP	３		IP	６		IP	５		IP	４		IP	転		IP	２	4	IP	３		IP	３		IP

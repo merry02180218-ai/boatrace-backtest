@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　竜矢	9.60	0.15	1.7	１		IP	２		IP	２	2	IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+丸尾　　義孝	6.00	0.13	3.1	１		IP	４		IP	１		IP	２		IP	２		IP	２		IP	４		G1	６		IP	４		IP	５		IP
+田村　　隆信	5.30	0.13	2.5	３		IP	６	4	IP	４		IP	４		IP	３		IP	４		IP	３		G1	２		G1	５		IP	１		IP
+遠藤　　エミ	8.30	0.14	2.7	３		IP	２		G2	３		G1	１		G1	２		IP	４		G1	２		G1	１		G3	１		G3	４		G1
+渡邊　伸太郎	4.60	0.22	4.2	４		IP	５		IP	４		IP	２		IP	５		IP	４		IP	３		IP	４		IP	４		IP	２		IP
+上條　　嘉嗣	4.70	0.20	4.5	２		IP	４	5	G3	５	5	IP	６		IP	３	4	IP	３		IP	３	4	IP	３		IP	５		IP	４		IP

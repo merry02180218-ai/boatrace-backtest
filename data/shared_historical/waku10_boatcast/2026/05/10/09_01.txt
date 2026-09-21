@@ -1,0 +1,8 @@
+data=
+1	0
+坂口　　　周	8.60	0.17	3.1	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	３		IP	５		IP	１		IP	１		IP
+松尾　　宣邦	4.60	0.20	3.5	５		IP	３		IP	２	3	IP	３		IP	５		IP	５		IP	５		IP	２		IP	４		IP	３		IP
+山下　　流心	3.60	0.17	3.3	３		IP	２		IP	６		IP	６		IP	転		IP	２		IP	３		IP	４		G3	６	4	G3	６		IP
+岩橋　　裕馬	4.10	0.16	3.3	４		IP	６		IP	２		IP	５		IP	４		IP	５		IP	３		G3	４		G3	３		IP	４	5	IP
+佐藤　　　旭	4.70	0.21	4.5	４	6	IP	２		IP	４		IP	３		G3	４		G3	３		IP	６		IP	４		IP	４		IP	３		IP
+一柳　　和孝	3.67	0.20	4.4	転		IP	４		IP	４		IP	５		IP	５		IP	４		IP	２	5	IP	６		IP	５		IP	３		IP

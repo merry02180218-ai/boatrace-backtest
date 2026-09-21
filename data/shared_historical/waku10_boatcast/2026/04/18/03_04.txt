@@ -1,0 +1,8 @@
+data=
+1	0
+上之　　晃弘	8.00	0.10	1.9	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	４		IP	３		IP	３		IP	２		IP
+秋田　健太郎	5.40	0.16	2.8	４		IP	２		IP	２		IP	４		IP	３		IP	３		IP	４		IP	１		IP	５		IP	５		IP
+片岡　　秀樹	3.30	0.14	3.3	６		IP	６		IP	４	4	IP	５		IP	４		IP	４		IP	２		IP	４		IP	６		IP	４		G3
+鈴木　　章司	2.80	0.20	3.9	５		IP	６		IP	５	5	IP	４		IP	６		IP	１		IP	４		IP	６	5	IP	６		IP	５		IP
+西尾　　亮輔	3.90	0.19	4.5	４		IP	４		IP	５		IP	５		IP	３		IP	３		IP	４	4	IP	５		IP	６		IP	２		IP
+佐藤　　大佑	3.80	0.19	3.8	５		IP	５	5	IP	５		IP	６		IP	６		IP	４		IP	３		IP	１		IP	２		IP	５		IP

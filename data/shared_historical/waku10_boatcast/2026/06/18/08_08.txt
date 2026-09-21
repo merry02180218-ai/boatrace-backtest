@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　　郡	8.50	0.14	3.3	１		G1	１		G1	５		SG	３		G1	１		IP	１		IP	１		IP	１		IP	１		IP	６		G1
+中嶋　健一郎	5.50	0.16	2.7	５		G1	３	3	G1	４		G1	５		G1	４		G1	３		IP	１		IP	６		G1	３		IP	２		IP
+杉山　　正樹	7.70	0.13	3.4	２		G1	３		IP	１		IP	２		IP	４		G2	３		IP	２		IP	４		G1	１	1	IP	２		G1
+大上　　卓人	7.70	0.12	2.8	４		G1	１		G1	５		G1	２		IP	２		IP	１	5	IP	２		IP	６		SG	２		SG	２		G1
+馬場　　貴也	5.20	0.14	3.3	５		G1	４		G1	５		SG	３		SG	３		G1	１		IP	５		G1	３		G1	５		G1	６		G1
+海野　康志郎	6.20	0.15	3.4	６		G1	３		G1	１	5	IP	２	5	IP	３	3	IP	４	2	IP	１	2	IP	１	2	IP	６		G1	５		G1

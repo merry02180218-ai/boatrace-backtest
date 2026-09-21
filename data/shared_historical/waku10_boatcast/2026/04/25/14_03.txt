@@ -1,0 +1,8 @@
+data=
+1	0
+大井　　清貴	7.90	0.19	3.6	６		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	３		IP	１		IP
+垂水　　　悠	5.40	0.11	2.2	４		IP	４		IP	３		IP	１		IP	５		IP	３		G3	２		IP	３		IP	６		IP	３		G1
+寳田　　亮治	4.50	0.21	4.3	５		IP	５		IP	４		IP	６		IP	３		IP	５		IP	２		IP	２		IP	３		IP	３		IP
+中村　　裕将	4.60	0.14	2.5	１		IP	５		IP	３		IP	６		IP	５		IP	２		IP	６		IP	５	5	IP	３		IP	２		IP
+黒柳　　浩孝	4.00	0.12	2.3	５	6	IP	３		IP	２		IP	６		IP	６		IP	５		IP	５		IP	１		IP	４		IP	４		IP
+松井　　貫太	2.80	0.20	5.0	４		IP	４		IP	６		IP	５		IP	６		IP	６		G1	４		IP	３		IP	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+倉富　　大誠	5.20	0.22	5.2	５		IP	５		IP	５		IP	３		IP	１		IP	５		IP	２		IP	Ｆ		IP	１		IP	１		IP
+佐竹　　恒彦	6.80	0.16	3.3	２		G3	４		IP	２		IP	１		IP	１		IP	５		IP	１		IP	４		IP	３		IP	３		IP
+宮之原　輝紀	6.90	0.14	2.8	６		G1	１		IP	２		G1	４		G1	３		G1	２		G1	３		G1	１		G1	６		IP	３		IP
+幸野　　史明	3.50	0.15	3.1	３		IP	５		IP	５		IP	３		IP	６		IP	６		IP	４		IP	４		IP	６		IP	２		IP
+森　　　弘行	4.10	0.15	2.7	３		IP	３		IP	５		IP	３		IP	６		IP	５		IP	３		IP	２		IP	５		IP	５		IP
+佐藤　　　旭	2.60	0.17	4.4	６		G3	６		G3	５		IP	６		IP	２	5	G3	４		G3	６		IP	６		IP	３		IP	６		IP

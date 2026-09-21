@@ -1,0 +1,8 @@
+data=
+1	0
+黒田　　　剛	6.50	0.15	2.8	１		IP	１		IP	２		IP	６		IP	５		IP	１		IP	３		IP	３		IP	３		IP	３		IP
+屋良　　龍紀	5.10	0.14	2.9	３		IP	１		IP	４		IP	２		IP	５		IP	３		IP	３		IP	３		IP	５		IP	６		IP
+小林　　孝彰	5.00	0.18	2.6	２		IP	５		IP	６		IP	２		IP	３		IP	３	2	IP	３		IP	２		IP	４		IP	６		IP
+常盤　　海心	5.40	0.17	3.4	４		IP	３		IP	５	6	IP	３	5	IP	４	6	IP	３		IP	１	6	IP	３		IP	３		IP	４		IP
+出畑　　孝成	4.50	0.20	4.0	３	4	IP	５		IP	３		IP	１		IP	５	6	IP	５		IP	３		IP	４		IP	６		IP	３		IP
+竹間　　隆晟	4.00	0.17	4.2	２	5	IP	４		IP	転		IP	６		G1	４		IP	４		IP	４		IP	５		IP	５		IP	１		IP

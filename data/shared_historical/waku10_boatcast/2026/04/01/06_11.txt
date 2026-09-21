@@ -1,0 +1,8 @@
+data=
+1	0
+村田　　浩司	8.60	0.17	2.8	１		IP	１		G3	２		G3	４		IP	１		IP	１		IP	１		IP	１		IP	４		IP	１		IP
+井上　　　茂	6.40	0.15	3.2	２		IP	２		IP	２		IP	２		IP	３		IP	５		IP	１		IP	４		IP	４		IP	３		IP
+齊藤　　大将	4.20	0.17	3.6	６		IP	６	6	IP	６		IP	４		IP	３		IP	２		IP	６		IP	２		IP	５		IP	２	4	IP
+山川　　雄大	4.50	0.22	3.6	３		IP	５		IP	４	5	IP	３		IP	２		IP	３		IP	５		IP	６		G3	４		G3	３		IP
+古結　　　宏	3.70	0.15	2.5	３		G1	６		IP	妨		IP	２		IP	６		G1	６		IP	３		IP	６		IP	６		IP	１	4	IP
+上野　　秀和	3.80	0.18	3.6	６		IP	６		G3	１	5	IP	３		IP	５	5	IP	３		IP	４		IP	５		IP	５		IP	４		G3

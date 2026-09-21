@@ -1,0 +1,8 @@
+data=
+1	0
+奥平　　拓也	5.30	0.23	4.2	３		IP	４		IP	６		G3	５		IP	４		IP	３		IP	３		IP	３		IP	２		IP	１		G3
+木下　　大將	7.40	0.13	2.5	１		IP	４		IP	３		IP	３		IP	２		IP	２		IP	４		IP	２		IP	１		IP	１		IP
+飯島　　昌弘	6.90	0.13	2.7	２		IP	４		IP	２		IP	５		IP	３		IP	２		IP	１		IP	３		IP	２		IP	２		G1
+北中　　元樹	6.40	0.16	3.7	５		IP	２		IP	４		IP	１		IP	４		IP	５		IP	３		IP	１		IP	２		IP	１		IP
+小畑　　実成	2.20	0.18	3.6	６		IP	４		IP	４		IP	５		IP	６		IP	５		IP	６	6	IP	４		IP	６		IP	５	6	IP
+長野　　未来	1.30	0.24	4.6	６		IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP

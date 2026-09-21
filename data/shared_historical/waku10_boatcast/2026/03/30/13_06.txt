@@ -1,0 +1,8 @@
+data=
+1	0
+岡村　　将也	7.30	0.14	2.1	１		IP	２		IP	４		IP	１		IP	１		IP	１		IP	２		IP	４		IP	２		IP	６		IP
+石川　　　諒	4.30	0.20	3.8	４		IP	６		IP	５		IP	２		IP	１		IP	６		IP	６		IP	５		IP	３		IP	２		IP
+山田　　和佐	6.00	0.17	3.1	４		IP	４		IP	５		IP	３		IP	２		IP	３		IP	２		IP	２		IP	２		IP	３		IP
+長尾　　章平	7.50	0.14	2.5	１		IP	２		IP	２		IP	４		IP	３		IP	３		IP	１		IP	３		G1	１		IP	３		IP
+西原　　明生	4.10	0.21	4.7	４		IP	４		IP	４		IP	６		IP	５		IP	４		IP	４		IP	３		IP	２		IP	４		IP
+林　　　風音	2.00	0.18	3.4	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	２		IP

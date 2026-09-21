@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　　尊	7.10	0.12	1.8	２		IP	１		IP	１		IP	１		IP	６		IP	Ｆ		IP	５		IP	１		IP	１		IP	１		IP
+鈴木　　　博	6.20	0.18	3.8	３		G3	４		G3	１		G3	２		G3	２		IP	４		IP	２		IP	４		IP	４		IP	３		IP
+西川　新太郎	5.40	0.18	2.8	４		IP	３	4	IP	６		IP	５		IP	２		IP	２		IP	２		IP	３		IP	５		IP	２		IP
+深川　　真二	7.00	0.19	3.7	１	2	IP	４	2	IP	３	2	IP	２	2	IP	２	2	IP	２	2	IP	３	2	IP	１	2	IP	３	1	IP	６	2	G2
+齋藤　　達希	3.90	0.19	4.0	４		IP	２	4	IP	４		IP	６	6	IP	４	4	IP	６		IP	４		IP	５	4	IP	１		IP	６		G3
+野口　　勝弘	3.60	0.17	4.6	５		IP	２		IP	６		IP	６		IP	４		IP	５	5	IP	４		IP	３		IP	３	5	IP	５		G3

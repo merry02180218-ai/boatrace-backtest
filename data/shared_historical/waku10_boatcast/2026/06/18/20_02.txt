@@ -1,0 +1,8 @@
+data=
+1	0
+盛本　　真輔	7.80	0.14	3.1	２		IP	１		IP	５		IP	２		IP	１		IP	４		IP	１		IP	１		IP	３		IP	１		IP
+福岡　　泉水	4.10	0.21	5.2	２		IP	５		IP	６		IP	３		IP	２		IP	４		IP	２		IP	６		IP	５	3	IP	６		IP
+田中　　辰彦	5.78	0.13	2.4	１		IP	２		IP	５		IP	１		IP	４		IP	６		IP	２		IP	６	4	IP	転		IP	２		IP
+阪本　　勇介	5.20	0.21	4.3	４		IP	２		IP	２		IP	４		IP	５		IP	５		IP	４		IP	３		IP	２		IP	３		IP
+小澤　　和也	3.60	0.18	3.3	６		IP	３	3	IP	２	3	IP	３		IP	５		IP	３		IP	６		IP	６		IP	６		IP	４		IP
+後藤　　翔之	4.20	0.19	4.1	５		IP	５		IP	４		IP	３		IP	５		IP	３		IP	４		IP	４	5	IP	３		IP	３		IP

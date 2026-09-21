@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　駿介	6.40	0.15	3.2	１		IP	４		IP	３		IP	１		IP	４		IP	１		IP	１		IP	５		IP	５		IP	３		IP
+妻鳥　　晋也	4.30	0.21	5.1	５		IP	２		IP	４		IP	３		IP	エ		IP	１		IP	１		IP	妨		IP	６		IP	５		G3
+崎　　　利仁	5.30	0.19	4.7	４		IP	６		IP	３	6	IP	１		IP	２		IP	６	4	G1	５		IP	２		IP	２		IP	４		IP
+本橋　　克洋	4.90	0.20	3.8	６		IP	５		IP	４		IP	３	3	IP	５		IP	４		IP	２	2	IP	２		IP	２		IP	３		IP
+菊池　　宏志	4.20	0.17	2.9	５		IP	６		IP	４		IP	６		IP	２		IP	４		IP	３		IP	３		IP	３		IP	４	4	IP
+松尾　　　拓	3.50	0.17	4.6	６		IP	４		IP	５		IP	３	5	IP	５		IP	３		IP	５		IP	４		IP	６		G1	３		IP

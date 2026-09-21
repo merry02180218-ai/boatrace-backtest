@@ -1,0 +1,8 @@
+data=
+1	0
+大久保　佑香	5.70	0.15	3.9	１		IP	１		IP	３		IP	５		G3	６		IP	６		IP	１		IP	１		IP	６		IP	３		IP
+高山　　智至	6.00	0.20	3.4	２		IP	１		IP	２		IP	５		IP	５		IP	２		IP	３		IP	Ｆ		IP	２		IP	２		IP
+柏野　　幸二	4.60	0.17	2.7	３		IP	３		IP	４		IP	３		IP	４		IP	５		IP	３		IP	５	2	IP	３		IP	４		IP
+江夏　　　満	5.50	0.18	4.1	６		IP	３		IP	２		IP	５		IP	４	6	IP	２		IP	３		G1	２		IP	３	6	IP	５		IP
+金子　　　萌	5.20	0.14	3.1	２		IP	４	6	IP	３		IP	３		IP	１		IP	１	4	IP	５		G2	６		G2	５		IP	６		IP
+坂本　　奈央	1.70	0.27	4.4	６		G3	６		G3	５		IP	４		G3	６		G3	６		G3	６		IP	６		IP	４		G3	６		G3

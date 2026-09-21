@@ -1,0 +1,8 @@
+data=
+1	0
+岡　　　暢祐	7.40	0.17	4.2	４		IP	１		IP	４		IP	４		IP	２		IP	２		IP	２		IP	１		IP	２		IP	１		IP
+毒島　　　誠	7.70	0.20	3.2	２		IP	２		IP	１		IP	１		IP	５		IP	２		SG	４	3	IP	４		IP	１	1	IP	２		G1
+中里　　英夫	4.50	0.17	3.5	３		IP	６		IP	３		IP	４		IP	２		IP	３		IP	４		IP	５		IP	３		IP	５		IP
+真庭　　明志	6.40	0.14	3.1	２		IP	２	5	IP	２		IP	３		IP	３		IP	２		IP	４		IP	３	3	IP	４		IP	３		IP
+藤田　　浩人	5.00	0.17	3.5	３		IP	６		IP	１		IP	５	6	IP	２		IP	３		IP	６		IP	３		IP	４	6	IP	４		IP
+寺嶋　　　雄	3.40	0.17	3.2	４		IP	５		IP	５		IP	６		IP	３		IP	１		IP	５		IP	５	5	IP	６		IP	４	5	IP

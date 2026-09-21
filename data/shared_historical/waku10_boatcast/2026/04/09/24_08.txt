@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　智啓	6.70	0.16	4.0	４		IP	１		IP	６		IP	１		IP	２		IP	１		IP	２		IP	５		IP	１		IP	４		IP
+三浦　　敬太	7.40	0.14	2.4	１		IP	４		IP	２		IP	２		IP	４		IP	１		IP	２		IP	４		IP	１		IP	２		IP
+高橋　　真吾	4.50	0.15	3.2	６		IP	３	5	IP	２	4	IP	２		IP	６		G3	２	4	G3	４	4	G3	６	4	IP	４	4	IP	４		IP
+長谷川　親王	3.60	0.20	3.7	６		IP	４		IP	３		IP	４		IP	３		IP	５		IP	６	5	IP	３		IP	５		IP	４		IP
+東　　　健介	3.30	0.18	3.4	３		IP	５		IP	４		IP	４		IP	４		IP	４		IP	５		IP	４		IP	５		IP	６		IP
+前沢　　丈史	3.70	0.17	2.5	６	5	G3	４		G3	転		IP	２	5	IP	２		IP	５		IP	４		IP	６		G1	５		IP	３		IP

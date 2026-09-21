@@ -1,0 +1,8 @@
+data=
+1	0
+吉武　　真也	8.10	0.13	2.5	１		IP	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP	６		IP
+向井田　佑紀	5.20	0.16	4.2	６		IP	３		IP	３		IP	３		IP	２		IP	１		IP	５		IP	２		IP	６		IP	５		IP
+高橋　　龍治	6.33	0.15	2.0	５		IP	２		IP	３		IP	１		IP	６		IP	２		IP	２		IP	転		IP	２		IP	３		IP
+福来　　　剛	6.00	0.14	2.6	３		IP	転		IP	２		IP	４		G2	３		IP	１		IP	２		IP	２		G1	３		IP	５		IP
+下田　　哲也	2.40	0.16	3.7	６	6	IP	５		IP	４	6	IP	５		IP	３		IP	６		IP	６		IP	４	6	IP	６		IP	５		IP
+武井　莉里佳	3.50	0.17	4.1	５		G3	６		G3	６		G3	５		G3	５		G2	２	5	IP	２		IP	６		IP	３	5	IP	６		IP

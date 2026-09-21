@@ -1,0 +1,8 @@
+data=
+1	0
+小黒　　竜吾	6.30	0.14	2.3	３		IP	１		IP	６		IP	３		IP	１		IP	４	2	IP	１		IP	２		IP	３		IP	５		IP
+井上　　大輔	5.00	0.18	3.7	４		IP	６		G3	５		G3	２		G3	６		IP	２		IP	３		IP	３		IP	３		IP	２		IP
+三原　　　司	6.40	0.15	3.4	２		G3	３		G3	６		IP	２		IP	２		IP	６		IP	２		IP	１		IP	１	2	IP	４		IP
+富山　　弘幸	4.60	0.16	3.2	３		IP	２		IP	３		IP	５		IP	４		IP	２		IP	４	3	IP	５		IP	４		IP	５		IP
+村上　　奈穂	3.70	0.20	3.8	５		IP	６	4	IP	４		IP	２	3	IP	３		IP	６		IP	３		IP	５		IP	６		IP	４		IP
+海野　ゆかり	4.90	0.24	4.4	５		IP	２		IP	１	5	IP	６		IP	６		G1	５		G1	３		G3	２		G3	３		G3	５		G1

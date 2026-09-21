@@ -1,0 +1,8 @@
+data=
+1	0
+畑　　　和宏	8.00	0.13	2.2	１		IP	１		IP	１		IP	２		IP	４		IP	１		IP	３		IP	１		IP	３		IP	３		IP
+宮田　　龍馬	7.56	0.14	2.7	６		G3	２		G3	３		G3	１		G1	１		IP	沈		IP	１		IP	３		G1	３		G1	２		IP
+石原　　凪紗	5.80	0.18	3.6	２	4	IP	６		IP	２		IP	２		IP	６	6	IP	５		IP	２		IP	４		IP	２		IP	１		G3
+石川　　吉鎬	5.00	0.18	4.0	３		IP	３		IP	３		IP	５		IP	２		IP	欠		IP	３		IP	４		IP	３		IP	６		IP
+尾道　　佳諭	3.20	0.16	2.8	２		IP	３		IP	６		IP	３		IP	５		IP	５		IP	６		IP	５		IP	５		IP	５		IP
+加藤　　高史	2.80	0.18	3.8	４	5	IP	５		IP	３		IP	５		IP	５		IP	３	5	IP	６	5	IP	６		IP	５		IP	５		IP

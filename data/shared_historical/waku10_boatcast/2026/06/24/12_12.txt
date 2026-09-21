@@ -1,0 +1,8 @@
+data=
+1	0
+鎌倉　　　涼	10.00	0.11	2.0	１		G1	１		G1	１		SG	１		IP	１		IP	１		IP	１		G2	１		G2	６		G1	１		SG
+小芦　るり華	6.20	0.14	2.7	３		IP	１		IP	４		IP	４		IP	２		IP	２		IP	４		G2	４		G2	４		G3	２		G3
+今井　　美亜	7.30	0.14	2.1	４		G3	１		G3	１		G3	２		G3	２		G3	２		G2	３		G2	１		G2	６		G2	４		IP
+海野　ゆかり	4.90	0.14	3.3	３		G3	４		G3	エ		IP	４		IP	３		IP	１		G3	３		G3	５		G3	５		G2	２		IP
+山本　　梨菜	5.40	0.17	3.3	２		IP	３		IP	４		IP	４		IP	３		IP	５		G3	３		G3	２		G3	転		IP	２		IP
+魚谷　　香織	2.80	0.19	3.4	６		G3	５	5	IP	２		IP	５		IP	５		G2	６		G3	５		G3	４		G3	５		IP	６		IP

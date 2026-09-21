@@ -1,0 +1,8 @@
+data=
+1	0
+田川　　大貴	8.70	0.19	3.4	２		G2	１		IP	１		IP	１		IP	４		IP	１		IP	４		IP	１		IP	１		IP	１		IP
+後藤　　正宗	5.80	0.17	3.5	４		IP	３		IP	３		IP	４		IP	５		IP	２		IP	２		IP	５		IP	１		G3	２		G3
+高山　　弘斗	2.60	0.16	3.2	Ｆ		IP	６		IP	３		IP	６		IP	５		IP	２		IP	６		IP	６		IP	５		IP	４		IP
+畑田　　汰一	6.10	0.13	1.9	４		G2	５		IP	５		IP	２		IP	２		IP	２		IP	６	2	IP	４		IP	１		IP	１		G1
+山道　　諄也	3.00	0.15	3.3	６		IP	４		IP	４		IP	２		IP	６	6	IP	２		IP	５		IP	転		IP	６		IP	６		IP
+信濃　　由行	2.30	0.18	4.0	５	5	IP	６		IP	３		IP	６	4	IP	６		IP	５		IP	５		IP	６		IP	３		IP	６		IP

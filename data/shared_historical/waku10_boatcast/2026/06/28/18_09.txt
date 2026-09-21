@@ -1,0 +1,8 @@
+data=
+1	0
+上原　健次郎	8.00	0.17	3.8	３	2	IP	１		IP	４		IP	２		IP	２		IP	１		IP	１		IP	４		IP	１		IP	１		IP
+上田　　隆章	5.56	0.17	4.2	１		IP	５		IP	３		IP	３		IP	３		IP	３		IP	４	3	IP	５		IP	２		IP	欠		IP
+中嶋　誠一郎	6.40	0.16	3.4	２		IP	２		IP	５		IP	３		G3	２		IP	３		IP	２		IP	４		IP	２		IP	３		IP
+藤堂　　里香	5.60	0.19	3.0	５		IP	２		G3	１		G3	５		G3	２		G3	３		IP	５	5	IP	１		G3	３		G3	５		IP
+原田　　朱理	1.00	0.21	4.4	６	6	IP	６		IP	５		IP	６		IP	６		IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	転	6	IP
+横田　　　茂	2.00	0.16	3.9	欠		IP	６		G1	６		IP	４	5	IP	６		IP	６		IP	４		IP	６		IP	５		IP	転	5	IP

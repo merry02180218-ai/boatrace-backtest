@@ -1,0 +1,8 @@
+data=
+1	0
+安河内　　健	8.80	0.09	2.4	１		IP	４		IP	３		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		G2	１		G2
+田中　　和也	7.00	0.15	2.6	３		IP	２		IP	１		IP	５		IP	５		IP	１		IP	２		IP	３		IP	１		IP	２		IP
+福島　　勇樹	8.00	0.14	2.2	１		IP	１		IP	６		G1	３		G1	１		IP	１	2	IP	１		IP	３		IP	２		IP	３		IP
+亀本　　勇樹	4.50	0.16	3.6	４		IP	３		IP	１		IP	４	2	IP	５		IP	３		IP	６		IP	２		IP	５	5	IP	５	5	IP
+枝尾　　　賢	4.60	0.12	3.2	４		IP	５		G2	６		G2	４	4	IP	４		IP	３		G3	４		G3	２		IP	２	4	IP	６		IP
+木下　　雄介	2.70	0.21	4.3	６	5	IP	５		IP	５		IP	５		IP	３		IP	転	5	IP	５		IP	５		IP	５		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+丸野　　一樹	9.70	0.15	3.1	１		IP	１		IP	５		G1	１		SG	１		G1	１		G1	１		IP	２		IP	１		G1	１		G1
+一色　　凌雅	5.50	0.18	3.4	３		IP	５		IP	２		IP	３		IP	６		IP	２		IP	３		G3	３	3	G3	３		IP	３		IP
+木場　　悠介	6.90	0.17	2.6	２		IP	２		IP	３		IP	２	2	IP	２		IP	６		G3	３		G3	３		IP	１		IP	２		IP
+品川　　賢次	4.89	0.15	3.6	３		IP	３		IP	３		IP	５		IP	２		IP	５		IP	３		IP	５		IP	落		IP	３		IP
+山田　　晃大	3.30	0.12	2.8	３		IP	６		IP	５		IP	５		IP	４		IP	４		IP	６		IP	１		IP	６		IP	５		IP
+向後　　龍一	3.10	0.18	3.4	３	5	IP	４		IP	４		IP	６		G3	４		G3	６	5	IP	４		IP	５		IP	４		IP	６		IP

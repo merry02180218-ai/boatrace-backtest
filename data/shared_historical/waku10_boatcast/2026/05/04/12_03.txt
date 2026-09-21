@@ -1,0 +1,8 @@
+data=
+1	0
+佐々木　大河	8.90	0.11	2.2	１		IP	３		IP	４		G2	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+渡部　　　悟	5.10	0.18	3.8	４		IP	４		IP	２		IP	３		IP	５		IP	１		IP	３		IP	５		IP	６		IP	２		IP
+権藤　　俊光	5.40	0.13	3.0	１	4	IP	６		IP	６		IP	１		G1	３		G1	５	5	SG	４		G1	４		G1	５		G1	３		G1
+竹間　　隆晟	5.00	0.16	3.4	２		IP	４		IP	４		G1	４		G1	１		IP	６		IP	５		IP	３		IP	２		IP	６		IP
+秋末　　秦悟	2.50	0.15	3.0	５		IP	５		IP	６		IP	６		IP	４		IP	４		IP	４		IP	５		IP	６		IP	４		IP
+澁川　　　夏	4.10	0.20	4.3	４		IP	５		IP	３		IP	６		IP	５		IP	４		IP	３		IP	２	5	IP	４		IP	４		IP

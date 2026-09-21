@@ -1,0 +1,8 @@
+data=
+1	0
+平尾　　崇典	8.40	0.17	4.3	４		IP	３		IP	３		G1	２	2	IP	１		IP	１		IP	３		G1	１		IP	１		G1	１		G1
+守屋　　大地	3.90	0.21	4.5	６		IP	５		IP	５		IP	２		IP	５		IP	４	1	G3	５		G3	４		G3	３		IP	２		IP
+木山　　和幸	5.50	0.20	3.1	２		IP	３		IP	５		G3	１		G3	２		IP	４		IP	５		IP	６		IP	１		IP	４		IP
+金田　　大輔	5.50	0.17	2.8	３		IP	１		IP	５		IP	３		IP	４		IP	４		IP	６		IP	２		IP	４	6	IP	１	5	IP
+小川　日紀太	4.70	0.19	2.9	２		IP	１		IP	６		IP	３		IP	５		IP	６		G3	３		IP	１		IP	６		IP	５		IP
+村岡　　賢人	6.00	0.12	2.4	３		IP	３		IP	３		IP	２	5	IP	３		IP	４		G1	６		G1	２		G1	４		IP	２		IP

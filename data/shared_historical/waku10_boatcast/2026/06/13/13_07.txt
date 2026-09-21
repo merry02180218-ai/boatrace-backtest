@@ -1,0 +1,8 @@
+data=
+1	0
+菅　　　章哉	8.30	0.13	3.4	１		G1	６		SG	１		IP	１		IP	１		IP	Ｆ		IP	１		IP	１		IP	１		G1	３		SG
+守田　　俊介	6.30	0.13	3.2	２		G1	２		SG	６		G1	５		G1	３		IP	２		G1	２	3	IP	５		IP	４		IP	２		IP
+鈴谷　　一平	5.60	0.13	2.7	６		G1	４		IP	３	1	IP	３		IP	４		IP	１		IP	５		IP	１		IP	５	4	IP	２		IP
+松田　　祐季	6.00	0.16	3.9	５		G1	４		IP	２		IP	２		IP	３		IP	３		G3	２		IP	４		IP	１		IP	５		G1
+原田　才一郎	6.00	0.20	4.5	４		G1	２		IP	３		IP	４		IP	２		IP	５		IP	２		IP	３		IP	４		IP	３		IP
+石野　　貴之	5.00	0.18	3.9	６		G1	２	2	SG	４		G1	３		G1	５		G1	３		G1	３		IP	３		IP	６		G1	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+柏野　　幸二	9.60	0.09	1.3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	２		IP
+佐藤　　駿介	5.10	0.13	2.8	３		IP	５		IP	２		IP	２		IP	６	3	IP	２	3	IP	４		IP	３		IP	４		IP	４		IP
+常住　　　蓮	8.00	0.16	3.5	２		G1	２		IP	３		IP	３		SG	２		IP	１		G1	３		G1	３		G1	２		IP	２		IP
+田中　瀬里奈	1.30	0.17	3.2	６		IP	６		IP	５		IP	６	6	IP	６	5	IP	４	3	IP	６	6	IP	６		IP	６		IP	転		IP
+品川　　賢次	4.10	0.24	4.2	６		IP	６		IP	３		IP	４		IP	３		IP	４		IP	６		IP	３		IP	４		IP	２		IP
+福島　　陽子	2.20	0.22	5.4	６		IP	５		G3	６		G3	５		IP	４		IP	６		IP	４	5	IP	５		G3	６		IP	４		IP

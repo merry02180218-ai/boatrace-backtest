@@ -1,0 +1,8 @@
+data=
+1	0
+立間　　充宏	8.00	0.16	3.1	１		IP	１		IP	１		IP	１		IP	４		IP	３		IP	１		IP	１		IP	４		IP	３		IP
+菅沼　　佳昭	2.50	0.21	4.0	４		IP	３		IP	５		IP	５		IP	６		IP	５		IP	５		IP	４		IP	６		IP	６		IP
+山川　　波乙	4.50	0.15	3.4	５		IP	２		IP	２		IP	５		IP	３		IP	３		IP	６		IP	５		IP	５		IP	２		IP
+砂長　　知輝	5.40	0.13	3.5	４		IP	１	3	IP	５		IP	４		IP	１		IP	６		G1	４	6	SG	３		IP	３		IP	５		IP
+中尾　　優香	4.30	0.19	4.1	４		IP	３		IP	３		IP	６		IP	２		IP	１		IP	５		IP	６		IP	４		IP	６	4	G3
+西野　　翔太	5.20	0.11	2.3	５	2	IP	１	3	IP	３	2	G3	６	4	G3	５		IP	４	4	IP	１	2	IP	１	2	IP	３	5	IP	６	3	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+関　　　浩哉	9.80	0.14	3.2	２		G1	１		G1	４		SG	１		G1	１		G1	１		G1	２		G1	１		IP	１		IP	１		IP
+定松　　勇樹	8.40	0.14	3.8	２		G1	４		G1	１		SG	４		G2	１		G2	１		G1	３		G1	２		G3	２		G1	４		G1
+中野　　次郎	6.80	0.13	2.1	６		G1	１		G1	４		IP	２		IP	４		G1	１		G1	３		IP	２		G1	４		IP	２		IP
+金子　　拓矢	6.20	0.18	2.6	５		G1	５		G1	１		IP	３		IP	１	3	IP	１		IP	３		IP	４		IP	３		IP	５	5	IP
+石丸　　海渡	4.80	0.11	2.1	４		G1	３		IP	２		IP	３		IP	４		G1	６		IP	６		IP	２		IP	５		IP	３		IP
+今泉　　友吾	4.50	0.17	4.5	６		G1	５		G1	４		G1	４		G1	２	5	G1	６		G1	４		IP	４		IP	３		IP	５		G1

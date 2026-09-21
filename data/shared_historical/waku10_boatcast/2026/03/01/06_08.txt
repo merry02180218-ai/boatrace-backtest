@@ -1,0 +1,8 @@
+data=
+1	0
+佐々木　康幸	9.10	0.07	1.9	１		IP	４		G1	１		IP	４		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+乙津　　康志	5.90	0.18	3.8	１		IP	３		IP	３		IP	２		IP	２		IP	２		IP	４		IP	６		IP	５		IP	３		IP
+前田　　光昭	4.30	0.19	3.0	５		IP	３		IP	３	2	IP	３		IP	４		IP	２	4	G3	４		G3	６		IP	４		IP	５		G3
+佐竹　　恒彦	4.78	0.16	3.9	４		IP	４		IP	２		IP	４		IP	５		IP	２		IP	３		IP	３	5	IP	欠		IP	６		IP
+大平　誉史明	4.90	0.14	3.0	６		IP	４		IP	５		IP	３		IP	２		IP	４		IP	１		IP	３		IP	４		G3	４		G3
+加木　　　郁	3.00	0.20	4.2	４		IP	４		IP	５		IP	６		IP	５		IP	４		IP	４		IP	５		IP	３	5	IP	６		IP

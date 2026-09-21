@@ -1,0 +1,8 @@
+data=
+1	0
+堀本　　裕也	5.70	0.19	4.1	６		IP	３		IP	１		IP	２		IP	５		IP	３		IP	５		IP	２		IP	２		IP	３		IP
+小池　　公生	5.10	0.17	4.7	１		IP	２		IP	Ｆ		IP	１		IP	４		IP	６		IP	３		IP	４		IP	４		IP	４		IP
+平高　　奈菜	6.20	0.16	3.2	６		IP	１	4	IP	２		IP	３		IP	４		IP	２		G2	６		G2	２		G2	４		G2	３		SG
+淺香　　文武	5.40	0.17	3.3	５		G3	６		G3	１		IP	２	5	IP	４		IP	４		IP	６		IP	２		IP	１		IP	３		IP
+寺島　　美里	4.60	0.15	3.3	３		IP	４		IP	６		IP	３		IP	４		IP	４		IP	４		IP	３		IP	３		IP	４		G1
+香月　　大輝	2.00	0.18	4.7	４		IP	４		IP	６		IP	４		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP

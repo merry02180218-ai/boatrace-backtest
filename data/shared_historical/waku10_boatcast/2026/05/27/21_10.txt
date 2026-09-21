@@ -1,0 +1,8 @@
+data=
+1	0
+深澤　　達徳	7.60	0.19	3.5	１		IP	２		IP	１		G3	１		IP	３		IP	１		IP	５		IP	４		IP	１		IP	３		IP
+上田　　紗奈	6.70	0.13	1.8	２		IP	１		IP	１		IP	４		IP	５		IP	４		IP	３	3	IP	１		IP	３		G1	４		G1
+佐藤　　博亮	6.20	0.12	2.5	２	4	IP	３		IP	２		IP	５		IP	２		IP	４		IP	３		IP	５		IP	２		IP	１		IP
+村田　　　敦	1.90	0.14	3.7	５		IP	６		IP	６	6	IP	６	5	IP	６		IP	５	6	IP	５		IP	５	6	IP	３		IP	６		IP
+毒島　　　誠	8.50	0.13	2.4	１	1	IP	１		IP	１		IP	６		SG	１	2	IP	１	3	IP	３		G1	２		G1	１	1	IP	３	4	IP
+深川　麻奈美	4.00	0.19	5.0	２		IP	４		G2	５		IP	６		IP	５		IP	４		IP	３	5	IP	５		IP	２		IP	５		IP

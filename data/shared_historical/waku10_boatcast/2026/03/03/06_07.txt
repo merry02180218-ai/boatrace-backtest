@@ -1,0 +1,8 @@
+data=
+1	0
+杉江　　浩明	5.33	0.18	3.5	３		IP	転		IP	６		IP	２		IP	１		IP	４		IP	３		G3	２		IP	４		IP	６		IP
+後藤　　正宗	6.20	0.18	3.4	３	3	IP	３	3	IP	２		IP	５		IP	３		IP	２		IP	５		IP	２		IP	２		G3	２		IP
+都築　　正治	3.90	0.17	3.9	６		IP	１		IP	５	4	IP	２		IP	５		IP	１		IP	６		G3	６		G3	５		IP	５		IP
+泉　　　啓文	4.30	0.16	3.5	３		IP	５		IP	５	5	IP	３		IP	４		IP	６		IP	５		IP	１	3	IP	３		IP	４		IP
+胡本　　悟志	3.80	0.17	2.5	５		IP	２		IP	３		IP	５		IP	４	6	IP	４		IP	２		IP	５		IP	転		IP	５		IP
+徳増　　秀樹	4.90	0.14	2.1	２	3	IP	４	5	IP	４	4	G1	６	4	IP	６	4	IP	２	3	IP	１		G3	２		G3	６		G1	６		G1

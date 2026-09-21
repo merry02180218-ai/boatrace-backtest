@@ -1,0 +1,8 @@
+data=
+1	0
+松竹　　大輔	9.60	0.16	2.4	１		G3	１		G3	１		IP	２		IP	２		IP	１		IP	１		IP	１		G3	１		IP	１		IP
+上野　　拓馬	5.10	0.15	3.4	５		IP	２		IP	３		IP	１		IP	６		IP	３		IP	３		IP	５	4	IP	４		IP	３		IP
+丹下　　　将	5.20	0.19	3.7	３		IP	３		IP	１		IP	６		IP	６		IP	２		IP	６	4	IP	２		IP	６		IP	２		IP
+青木　　　蓮	7.00	0.13	2.7	３		IP	１		IP	１		IP	３		IP	３		IP	４		IP	２		IP	２		IP	３		IP	３		IP
+田路　　朋史	4.20	0.12	3.0	５		IP	５		IP	１		IP	４		IP	４		IP	２		IP	４	4	IP	４		IP	６		IP	６		IP
+堂原　　洋史	2.60	0.18	3.9	４		IP	５		IP	４		IP	５		IP	４		IP	６		IP	４		IP	６		IP	５		IP	５		IP

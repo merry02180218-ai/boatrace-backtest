@@ -1,0 +1,8 @@
+data=
+1	0
+松山　　裕基	6.00	0.16	3.8	５		IP	１		IP	２		IP	４		IP	４		IP	３		IP	５		IP	１		IP	１		IP	４		IP
+伊藤　　　栞	1.56	0.15	2.9	落		IP	５		IP	６		IP	４		G3	５		G3	６		IP	６		IP	６		IP	６		IP	６		IP
+池田　　剛規	4.80	0.12	2.1	５		IP	３		IP	４		IP	１		IP	６		IP	６		IP	２		IP	４		IP	３		IP	３		IP
+富澤　　祐作	4.40	0.09	1.9	６		IP	３		IP	３	3	IP	２		IP	４	5	IP	６		IP	１		IP	６		IP	６	6	IP	３		IP
+今出　　晋二	2.30	0.17	3.7	４		IP	５		IP	５		IP	４		IP	６	6	IP	６		IP	５		IP	４		IP	６		IP	５		IP
+権藤　　俊光	3.80	0.16	3.6	４		G2	６		G2	６		G2	４		IP	４		IP	３	5	IP	３		G1	５		SG	５		SG	落		G1

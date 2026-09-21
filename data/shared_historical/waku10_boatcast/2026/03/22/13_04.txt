@@ -1,0 +1,8 @@
+data=
+1	0
+米田　　隆弘	8.89	0.20	3.3	１		IP	４		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	転		IP
+佐々木　康幸	8.30	0.13	2.7	２		IP	３		IP	２		IP	２		G1	２		G1	３		IP	２		IP	２		IP	１		IP	１		IP
+澤　　　大介	3.70	0.17	3.3	６		IP	５		IP	４		IP	２		IP	６	4	IP	４		IP	１		G3	６	4	G3	Ｆ		G3	３		IP
+吉川　　勇作	3.90	0.18	4.0	５		IP	５		IP	２		IP	４		IP	５		IP	６		IP	２		IP	６		IP	１		IP	６		IP
+前田　　光昭	2.70	0.16	2.8	６		IP	４	4	IP	４	4	IP	５		IP	４	4	IP	６		IP	５		G3	６	6	G3	４		IP	４		G3
+松尾　　昂明	4.80	0.16	2.7	４		IP	３		IP	３		IP	６		IP	６		IP	２	5	IP	３		IP	３		IP	５		IP	２		IP

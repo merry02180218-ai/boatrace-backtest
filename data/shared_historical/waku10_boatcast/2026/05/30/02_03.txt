@@ -1,0 +1,8 @@
+data=
+1	0
+萩原　　知哉	6.70	0.13	2.6	１		IP	２		IP	１		IP	５		IP	４		IP	２		IP	４		IP	１		IP	６		IP	１		IP
+倉富　　大誠	6.11	0.22	4.8	２		IP	２		IP	６		IP	１		IP	３		IP	１		IP	５		IP	５		IP	落		IP	２		IP
+幸野　　史明	4.30	0.15	2.6	６		IP	４		IP	３		IP	１		IP	５		IP	６		IP	５		IP	６		IP	３		IP	１		IP
+石渡　　鉄兵	7.10	0.13	3.3	２		G1	３		G1	３	5	G1	５		G1	１		IP	４		SG	５		SG	２		G1	１		G1	４		G1
+広次　　　修	5.20	0.17	2.7	５		IP	６		IP	１		IP	６		IP	１	4	IP	３		IP	４	6	IP	３		IP	２		IP	４		IP
+佐竹　　恒彦	4.70	0.17	4.1	４		G3	５		IP	２	5	IP	２		IP	４		IP	５		IP	４		IP	６		IP	３		IP	３		IP

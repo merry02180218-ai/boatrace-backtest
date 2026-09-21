@@ -1,0 +1,8 @@
+data=
+1	0
+生方　　靖亜	8.80	0.13	2.3	３		G3	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	１		IP	３		IP	１		IP
+荒井　　翔伍	6.44	0.14	3.4	妨		IP	２		IP	５		IP	１	3	IP	２		IP	５	3	IP	２		IP	１	3	IP	転		IP	１		IP
+西川　新太郎	4.70	0.12	2.0	４		IP	４		IP	４		IP	３		IP	３		IP	６		IP	３		IP	３	4	IP	３		IP	４	4	G3
+寺島　　美里	4.80	0.13	2.1	５		G1	４		G1	４		IP	３		G3	６		G3	４		IP	２		IP	１	5	IP	６		IP	３		IP
+石川　　真二	5.30	0.16	3.2	６	2	G1	３	2	G1	２	2	IP	３	2	IP	３	1	IP	３	3	IP	１	2	IP	６	3	IP	６	2	IP	４	2	G3
+田中　太一郎	1.50	0.18	4.1	５		IP	６		IP	６		IP	５		IP	５		IP	６		IP	５		IP	６		IP	５	5	IP	６		G3

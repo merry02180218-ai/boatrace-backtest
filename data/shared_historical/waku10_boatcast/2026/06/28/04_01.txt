@@ -1,0 +1,8 @@
+data=
+1	0
+土井　　祥伍	7.10	0.23	4.4	２		IP	６		IP	２		IP	１		IP	１		IP	５		IP	１		IP	３		IP	２		IP	２		IP
+夏山　　亮平	5.10	0.14	3.5	２	3	IP	６	3	G3	３		G3	３		IP	６		IP	３		IP	１	3	IP	６		IP	４		G3	２		G3
+向井　　美鈴	5.90	0.16	3.1	５		IP	３		IP	４		IP	２		IP	１	2	IP	２		IP	４		IP	２		IP	４		IP	４		IP
+植竹　　玲奈	3.00	0.22	3.9	６		IP	４		IP	４		IP	５		IP	６	6	IP	４		IP	４		IP	転		IP	６		IP	３		IP
+清水　　紀克	2.80	0.17	4.0	５	2	IP	５	2	IP	４	3	IP	６	2	IP	６	3	IP	３	2	IP	２	2	IP	６	2	IP	６	2	IP	５	2	IP
+伏見　　俊介	1.50	0.16	3.3	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	４		IP	６		IP	６		IP	５		IP

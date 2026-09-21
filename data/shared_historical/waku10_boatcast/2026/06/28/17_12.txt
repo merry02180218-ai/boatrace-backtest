@@ -1,0 +1,8 @@
+data=
+1	0
+島村　　隆幸	7.90	0.13	2.2	３		IP	１		G2	１		G2	１		IP	３		IP	１		G2	５		G2	Ｆ		IP	１		IP	１		IP
+浜本　　裕己	5.10	0.14	2.5	６		IP	２		IP	２		IP	２		IP	３		IP	５		IP	５		IP	４		IP	３		IP	３		IP
+坂東　　　満	4.90	0.13	2.5	４		IP	５		IP	４		IP	２		IP	３		IP	６		IP	２		IP	４		IP	２		IP	４		IP
+下寺　　秀和	6.60	0.16	3.0	３		IP	４		IP	５		IP	４		IP	１	3	IP	１		IP	３		IP	３		IP	１		IP	２		IP
+中　　　亮太	7.10	0.14	2.3	４		G2	２		IP	４		G2	２		G2	２	6	G3	１		IP	２		IP	２		IP	４		IP	３		G3
+鈴木　　成美	1.80	0.20	4.4	３		IP	６		G3	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	５		IP

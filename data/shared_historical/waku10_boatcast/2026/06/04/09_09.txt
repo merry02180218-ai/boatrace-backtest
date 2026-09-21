@@ -1,0 +1,8 @@
+data=
+1	0
+平野　　和明	8.60	0.15	2.4	３		G3	１		IP	１		IP	３		IP	２		IP	１		IP	１		IP	１		IP	３		IP	１		IP
+高橋　　　勲	7.30	0.16	3.3	２		G3	４		IP	２		IP	２		IP	２		IP	２		IP	３		IP	２		IP	３		IP	２		IP
+小黒　　竜吾	6.00	0.18	3.1	５		G3	１		IP	４		IP	２		IP	３		IP	４		IP	２		IP	４		IP	３		IP	２		IP
+淺香　　文武	5.60	0.18	3.4	６		G3	１		IP	２	5	IP	４		IP	４		IP	６		IP	２		IP	１		IP	３		IP	４		IP
+木山　　和幸	4.50	0.17	3.5	５		G3	２		IP	４		IP	６		G3	５		IP	４		IP	５	4	IP	３		IP	３		IP	１		IP
+齊藤　　　仁	5.10	0.24	4.8	４		G3	３		G3	３		G3	４		G3	６		IP	３		IP	３		IP	４		G1	５		G1	１	5	IP

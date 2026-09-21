@@ -1,0 +1,8 @@
+data=
+1	0
+浅見　　宗孝	5.40	0.14	3.1	２		IP	４		IP	４		IP	４		IP	２		IP	１		IP	５		IP	２		IP	４		IP	５	3	IP
+北川　　敏弘	4.70	0.17	3.3	３		IP	２		IP	４		IP	１		IP	４		IP	４		IP	６		IP	Ｆ		IP	３	3	IP	４	3	IP
+田中　　　堅	4.50	0.19	3.2	４		IP	４		IP	５		IP	２		IP	２		IP	３		IP	４		IP	３		IP	５		IP	６		IP
+加木　　　郁	4.10	0.18	4.1	４		IP	４		IP	２		IP	５		IP	５	5	IP	３		IP	５		IP	１		IP	６		IP	５		IP
+香月　　大介	3.90	0.16	2.7	４		IP	６		IP	Ｆ		IP	１	4	IP	５		IP	４		IP	３		IP	４		IP	４		IP	４		IP
+榮田　　将彦	2.40	0.17	3.2	５		IP	６		IP	５		IP	４		IP	４		IP	６		IP	５		IP	３		IP	６		G3	６		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+西橋　　奈未	8.70	0.12	2.2	２		IP	５		G1	１		IP	１		IP	２		G3	２		G3	１		G1	１		G2	２		IP	１		IP
+川口　　貴久	4.90	0.18	2.5	５		IP	１		IP	３		IP	４		IP	４		IP	６		IP	３		IP	３		IP	３		IP	４		IP
+生方　　靖亜	5.30	0.13	1.6	３		IP	６		G3	３		IP	５		IP	１		IP	１		IP	妨		IP	１		IP	４		IP	４		IP
+酒見　　峻介	4.80	0.17	3.0	５		IP	３		IP	４		IP	５		IP	２		IP	Ｆ		IP	５		IP	２		IP	２	3	IP	３	2	IP
+市川　　瑚幸	1.00	0.26	5.5	６	6	IP	６	6	IP	６	6	G3	６	6	G3	６	6	G3	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP
+篠田　　優也	4.40	0.19	3.9	１	5	IP	５		IP	４		IP	４		IP	３		IP	５		IP	５		IP	３		IP	４		IP	４		G3

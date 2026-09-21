@@ -1,0 +1,8 @@
+data=
+1	0
+今出　　晋二	4.60	0.19	4.8	４		IP	４		IP	４		IP	２		IP	１		IP	Ｆ		IP	５		IP	２		IP	５		IP	４		IP
+小川　日紀太	4.90	0.19	3.7	４		IP	５		IP	５		IP	６		IP	４		IP	２	1	IP	４		IP	２	3	IP	２		IP	２		IP
+小林　　愛実	2.30	0.17	2.3	５		IP	２		IP	４		IP	６		IP	６		IP	エ		IP	６		IP	６		IP	６		IP	４		IP
+東　　　潤樹	4.00	0.17	3.2	５		IP	６		IP	３		IP	２		IP	３		IP	２		IP	６		IP	４		IP	５	5	IP	５		IP
+木山　　大聖	2.60	0.11	2.2	６		IP	５		IP	５		IP	４		IP	５		IP	６	6	IP	３	6	IP	４		IP	５		IP	５		IP
+福嶋　　智之	2.40	0.17	3.0	５		IP	３		IP	４		IP	６		IP	６		IP	６		IP	６		IP	４	5	IP	５		IP	５		IP

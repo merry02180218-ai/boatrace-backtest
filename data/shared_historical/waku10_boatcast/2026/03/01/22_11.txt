@@ -1,0 +1,8 @@
+data=
+1	0
+今井　　貴士	7.80	0.15	2.1	３		G1	Ｆ		G1	１		G3	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	５		G1
+前田　　　滉	6.30	0.11	2.1	４		G1	４		G1	１		G1	４	3	IP	４		G1	２		IP	１		SG	６		SG	４		G1	４		G1
+上原　健次郎	3.80	0.19	4.6	５		IP	４		IP	３		IP	２		IP	４		IP	４		IP	５		IP	６		G3	６		G3	３		IP
+岡部　　　浩	3.40	0.23	5.2	２	5	IP	６	6	IP	４		IP	５		IP	６		IP	５		IP	４		IP	４		IP	４		IP	４		IP
+渡邉　　　翼	4.50	0.15	3.4	３		IP	１		IP	５		IP	６		IP	６		G3	２		G3	４		IP	６		IP	３		IP	３		IP
+稲生　　夏季	3.60	0.22	4.6	６		G3	４		G3	４		G3	２		G3	４		G3	転		IP	５		IP	６		G3	３	5	IP	３		IP

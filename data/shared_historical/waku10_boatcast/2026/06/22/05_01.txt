@@ -1,0 +1,8 @@
+data=
+1	0
+山谷　　　央	5.30	0.15	3.8	５		IP	１		IP	１		IP	１		IP	４		IP	５		IP	１		IP	５		IP	６		IP	５		IP
+田代　　達也	3.40	0.13	2.8	５		IP	４		IP	１		IP	転		IP	５		IP	５		IP	５		IP	２		IP	５		IP	５	3	IP
+井田　　涼介	3.90	0.24	4.2	５		IP	６		IP	６	5	IP	２		IP	３		IP	１		IP	４		IP	５	5	IP	６		IP	４		IP
+鹿島　　敏弘	4.10	0.16	3.6	６		IP	３		IP	４		IP	３	5	IP	３		IP	４		IP	５		IP	４		IP	３		IP	５		IP
+鈴木　　智啓	4.90	0.17	3.3	３		IP	２		IP	２		IP	２	4	IP	４		IP	６		IP	４		IP	５	6	IP	５		IP	３		IP
+大町　　利克	1.70	0.24	5.5	６		IP	６		IP	６		IP	４		IP	６		IP	６		IP	５		IP	５		IP	５		IP	５		IP

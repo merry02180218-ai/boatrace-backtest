@@ -1,0 +1,8 @@
+data=
+1	0
+竹井　　貴史	9.30	0.12	3.1	３		IP	１		IP	１		G2	１		IP	２		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+笹木　　香吾	4.78	0.17	4.7	４		IP	１		IP	４		IP	転		IP	５		IP	５		G2	２		IP	５		IP	５		IP	２		IP
+宮下　　元胤	5.60	0.16	3.5	４		IP	５		IP	５		IP	５		IP	１	4	IP	２		IP	１		IP	２		IP	５		IP	２		IP
+桑島　　和宏	6.70	0.17	3.5	２		IP	３		IP	５		G2	１		IP	２		IP	３		IP	４	3	IP	２		IP	３		IP	３		IP
+内堀　　　学	5.50	0.19	3.4	３	3	IP	２		IP	５		IP	１	4	IP	５		IP	１		IP	４		IP	１		IP	５		IP	６		IP
+小林　　　泰	3.00	0.14	2.6	６		IP	２	5	IP	６		G2	４		IP	６		IP	５		IP	６		IP	３		IP	６		IP	４		IP

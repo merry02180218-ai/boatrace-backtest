@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　章司	4.40	0.19	4.2	６		IP	２		IP	３		IP	４		IP	３		IP	２		IP	４		IP	５		IP	６		IP	４		IP
+廣瀬　　　凜	7.10	0.14	4.0	４		IP	１		IP	２		IP	１		IP	４		IP	１		IP	４		IP	３		G2	４		IP	１		IP
+高山　　敬悟	7.40	0.13	2.3	１		IP	１		IP	４		IP	１		IP	１		IP	２		IP	５		IP	２		IP	３		IP	３		G3
+西丸　　敦基	4.70	0.14	3.0	４		IP	４		IP	３		IP	６		IP	２		IP	１		IP	６		G3	４		IP	６		IP	２		IP
+佐藤　　世那	3.90	0.15	3.7	３		IP	６		IP	５	6	IP	５	6	IP	３		IP	３		IP	２		IP	３		IP	６		IP	６		IP
+常盤　　海心	2.70	0.20	4.7	６		IP	３		IP	６		IP	６		IP	３		IP	６		IP	２	5	IP	６		IP	５		IP	落		IP

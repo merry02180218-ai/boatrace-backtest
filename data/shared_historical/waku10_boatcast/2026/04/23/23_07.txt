@@ -1,0 +1,8 @@
+data=
+1	0
+佐竹　　友樹	4.60	0.19	3.9	５		IP	５		IP	６		IP	４		IP	３		IP	１		IP	６		IP	１		IP	１		IP	Ｆ		IP
+山崎　　義明	5.40	0.17	3.3	２		IP	２		IP	６		G3	３		IP	３		IP	３		IP	４		IP	２		IP	６		IP	３		IP
+森清　　友翔	5.00	0.15	3.4	４		IP	４		IP	３		IP	１		IP	４		IP	５		G2	４		IP	６		G3	２	2	G3	３		IP
+富田　　恕生	3.70	0.18	4.0	５		IP	３		IP	６		IP	６		IP	４		G3	６		IP	５		IP	１		IP	３		IP	４		IP
+白神　　　優	6.60	0.12	1.8	２	4	G1	５	6	G1	１		IP	２		IP	１		IP	４		G1	５		G1	３	4	IP	５		IP	１		IP
+峰重　　侑治	4.40	0.23	5.0	３		IP	２		IP	３	5	IP	３		IP	６		IP	４		IP	５		IP	５		IP	２		IP	６		IP

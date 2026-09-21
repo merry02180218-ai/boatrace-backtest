@@ -1,0 +1,8 @@
+data=
+1	0
+戸塚　　邦好	8.80	0.15	2.8	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	２		G1	Ｆ		IP
+大塚　　雅治	5.60	0.26	5.0	３		IP	２		IP	１		IP	５		IP	４		IP	５		IP	２		IP	５		IP	３		IP	２		IP
+高山　　弘斗	1.80	0.19	4.1	６		IP	６		IP	５		IP	４		IP	転		IP	５		IP	６		IP	４		IP	６		IP	５		IP
+早川　　颯太	2.40	0.23	4.3	６		IP	５		IP	６		IP	４		IP	６		IP	１		IP	５		IP	６		IP	６		IP	６	6	IP
+上村　　宏太	3.40	0.15	3.1	３		IP	４		IP	５		IP	６		IP	６		IP	６		IP	４		IP	６		IP	３		IP	２		IP
+佐藤　　右京	2.90	0.23	4.4	４		IP	６		IP	４		IP	３		IP	４		IP	６		IP	５		IP	４		IP	６		IP	５		IP

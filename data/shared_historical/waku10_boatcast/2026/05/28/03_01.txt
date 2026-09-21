@@ -1,0 +1,8 @@
+data=
+1	0
+菊地　　敬介	5.70	0.19	3.1	６		IP	２		IP	５		IP	エ		IP	１		IP	２		IP	１		IP	１		IP	３		IP	５		IP
+後藤　　陽介	5.10	0.16	3.1	２		IP	３	3	IP	２		IP	３		IP	３		IP	４		IP	４		IP	５		IP	３		IP	６		IP
+石田　　勇斗	5.80	0.12	2.8	２		IP	３		IP	４		IP	３		IP	５		IP	２		IP	１		IP	４		IP	３		IP	４		IP
+宮内　　直哉	4.30	0.18	3.4	４		IP	３		IP	２	2	IP	２		IP	６		IP	１		IP	６		IP	６	5	IP	５		IP	５		IP
+木場　　悠介	4.30	0.15	2.9	３		IP	４		IP	１		IP	５		IP	６		IP	６		IP	６		G3	４		G3	３		IP	２		IP
+西山　　　育	1.40	0.24	4.4	５		IP	５		IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

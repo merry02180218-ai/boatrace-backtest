@@ -1,0 +1,8 @@
+data=
+1	0
+柴田　　大輔	7.80	0.20	3.3	４		IP	２		G3	１		G3	３		IP	２		IP	３		IP	２		IP	１		IP	２		IP	１		IP
+岡　　　祐臣	5.80	0.20	3.4	２		IP	４	1	IP	４		IP	３		IP	３		IP	３		IP	４		IP	５	3	IP	２		IP	２		IP
+萩原　　知哉	5.20	0.18	3.3	１		IP	４		IP	４	2	IP	４		IP	３		IP	４		IP	４		IP	４		IP	３		IP	３		IP
+仲本　　　舜	3.20	0.15	2.6	４		IP	４	6	IP	４	5	IP	４		IP	６		IP	３		IP	４		IP	６		IP	４		IP	妨		IP
+佐藤　　大介	6.30	0.17	3.3	２		IP	３		IP	１		IP	３		G1	３		IP	５		IP	２		IP	４		IP	３		IP	３		IP
+三角　　哲男	4.20	0.17	2.9	５		IP	４		IP	５		IP	５	5	IP	４		G1	５		G1	３		IP	３		IP	５		IP	２	5	IP

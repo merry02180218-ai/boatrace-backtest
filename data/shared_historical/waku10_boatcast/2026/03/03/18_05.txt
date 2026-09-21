@@ -1,0 +1,8 @@
+data=
+1	0
+服部　　幸男	7.60	0.15	3.1	１		IP	４		IP	１		IP	１		IP	５		G1	２		G1	４		IP	２		IP	１		IP	２		IP
+谷　　　勝幸	4.70	0.17	3.4	５		IP	３		IP	３		IP	４		IP	６		IP	３		IP	４		IP	２		G3	２		IP	５		G3
+江藤　　敦宏	3.56	0.17	3.6	４		IP	転		IP	４		IP	５	4	IP	５		IP	４		IP	２	4	IP	５		IP	３		IP	落		IP
+山本　　浩次	4.00	0.14	2.1	４		IP	１		IP	６		IP	４		IP	４		IP	５		IP	６	6	IP	４		IP	３		IP	４		IP
+笠　　　雅雄	3.90	0.15	2.7	１		IP	６		IP	４		IP	４		IP	３	6	IP	４		IP	４		IP	５		IP	５		IP	５		IP
+河野　　　大	6.30	0.14	3.0	２		IP	４		IP	２		G1	２		G2	３		IP	６		IP	５		IP	１		IP	２		IP	４		IP

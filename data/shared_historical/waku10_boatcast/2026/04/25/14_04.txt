@@ -1,0 +1,8 @@
+data=
+1	0
+土屋　　智則	8.50	0.15	3.0	１		IP	１		G1	２		G1	４		G1	１		G3	１		G3	５		IP	１		IP	１		IP	２		IP
+富澤　　祐作	4.50	0.15	3.6	１		IP	６		IP	２		IP	６		IP	６		IP	２		IP	５		IP	５		IP	２		IP	４		IP
+星野　　政彦	3.80	0.20	3.4	６		IP	４		IP	４		IP	６		IP	１		IP	４		IP	５		IP	４		IP	４		IP	４		IP
+岡瀬　　正人	5.60	0.17	4.0	２	3	IP	５		IP	４		IP	３		IP	２		IP	５		IP	２		IP	２	5	IP	２		IP	５		IP
+安藤　　裕貴	3.90	0.17	3.1	２		IP	３		IP	５		IP	３	4	IP	３		IP	３		IP	６		IP	６		IP	６		IP	５		IP
+池上　　隆行	2.80	0.21	4.0	５	5	IP	５		IP	３		IP	５	5	IP	５	5	IP	４		IP	５		IP	５	5	IP	４		IP	５		IP

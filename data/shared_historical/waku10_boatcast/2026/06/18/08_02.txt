@@ -1,0 +1,8 @@
+data=
+1	0
+久田　　敏之	9.30	0.11	1.3	１		G1	１		G2	２		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		G1
+井上　　忠政	8.40	0.15	3.7	４		G1	３		G1	１		IP	２		IP	２		IP	１		IP	２		G1	２		G1	１		G1	３		G1
+馬場　　貴也	8.20	0.13	2.8	２		G1	６		G1	３		SG	３		G1	１		IP	１		IP	１		G1	３		G1	２		SG	３		SG
+横澤　　剛治	6.70	0.13	1.8	４		G1	４	5	G1	１		IP	１		IP	２		IP	１		IP	４		IP	６		IP	３		IP	２		IP
+鋤柄　　貴俊	4.20	0.17	3.7	６		G1	４		IP	３		IP	３		IP	３		IP	４		IP	４		IP	４	4	IP	４		IP	５		IP
+小池　　修平	5.70	0.14	3.0	３		G1	２		G1	６	5	G1	２	5	IP	６		IP	１		G2	３	5	IP	２		IP	６		IP	４		IP

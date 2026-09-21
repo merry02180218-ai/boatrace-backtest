@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　鉄平	6.90	0.15	2.3	２		IP	Ｆ		IP	６		IP	１		IP	１		IP	１		IP	１		IP	２		IP	５		IP	１		IP
+渡邉　　俊介	7.60	0.13	2.0	１		IP	３		IP	２		IP	３		IP	３		IP	２		IP	２	3	IP	１		IP	２		IP	３		G3
+中村　　守成	3.90	0.17	3.8	４		IP	５		IP	４	4	IP	４		IP	３		IP	６		IP	３		IP	３		IP	５		IP	４		IP
+田中　　勇輔	4.60	0.13	2.5	１		IP	５		IP	６		IP	３		IP	５		IP	５		IP	６		IP	１		IP	２		IP	４		IP
+市川　　哲也	5.56	0.13	2.1	２		IP	５		IP	３		IP	３		IP	２		IP	転		IP	１	3	IP	３		G3	５		IP	５		IP
+前原　　大道	6.30	0.24	5.0	４		G1	１	5	IP	２		IP	３		IP	３	5	IP	２		IP	３		IP	３		IP	３		IP	５		IP

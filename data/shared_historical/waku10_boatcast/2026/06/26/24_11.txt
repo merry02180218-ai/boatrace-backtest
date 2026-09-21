@@ -1,0 +1,8 @@
+data=
+1	0
+吉永　　則雄	8.50	0.18	4.3	１		IP	３		IP	１		IP	１		IP	６		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+折下　　寛法	7.10	0.18	2.9	２		IP	５		IP	２		IP	６		IP	１		IP	３		IP	２		G3	１		G3	２		IP	１		IP
+山ノ内　雅人	5.30	0.18	3.8	４		IP	２		IP	３		IP	５		IP	３		IP	１		IP	６		IP	４		IP	２		IP	４		IP
+木場　　悠介	4.50	0.12	1.7	４		IP	１		IP	６		IP	１	5	IP	４		IP	６	6	IP	３	5	IP	４		IP	４		IP	６		IP
+百武　　　翔	5.70	0.19	4.6	３	4	IP	１		IP	４		IP	３	3	IP	２		IP	５		IP	４		IP	１		G3	６		IP	３		IP
+三好　　勇人	4.00	0.22	4.5	６		IP	４	4	IP	５	5	IP	４		G3	３	5	IP	１	4	IP	３	5	IP	５		IP	６	5	IP	４		IP

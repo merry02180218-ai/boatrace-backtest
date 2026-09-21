@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　　祭	9.00	0.16	3.4	１		IP	１		IP	２		IP	２		IP	２		IP	４		G1	１		IP	１		IP	１		IP	１		IP
+森作　　雄大	5.30	0.11	2.3	３		IP	１		IP	３		IP	５		IP	２		IP	２		IP	５		IP	５		IP	６		IP	２		IP
+黒柳　　浩孝	6.00	0.17	2.7	３		IP	１	4	IP	４		IP	２		IP	１		IP	４		IP	４		IP	５		IP	３		IP	３		IP
+中島　　　航	4.30	0.19	3.6	４		IP	６		IP	６	6	IP	５		IP	３		IP	６		IP	２		IP	４	3	IP	３		IP	１		IP
+坪内　　　実	2.70	0.17	3.5	３		IP	４		IP	４		IP	５		IP	６		IP	６		IP	６		IP	４		IP	５		IP	５		IP
+鹿島　　敏弘	3.10	0.22	4.0	６		IP	４		IP	２		IP	６		IP	６		IP	４		IP	４		IP	５		IP	５		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+石井　　伸長	4.44	0.20	4.9	６		IP	転		IP	１		IP	３		IP	４		IP	３		IP	４		IP	４		IP	６		IP	４		IP
+安河内鈴之介	5.56	0.15	3.3	１		IP	３		IP	落		IP	２		IP	３		IP	４		IP	４		IP	２		IP	転		IP	４		IP
+坂本　　雄紀	6.20	0.14	2.6	６		IP	２		IP	１		IP	２	4	IP	４		IP	１		IP	２		IP	６		IP	５		IP	２		IP
+常盤　　海心	3.80	0.17	4.5	５		IP	４		IP	４		IP	３	5	IP	３		IP	６	5	IP	６		IP	５		IP	５		IP	１		IP
+河内　　一馬	3.70	0.14	2.7	２		IP	５		IP	４	6	IP	４	6	IP	３		IP	５		IP	４		IP	４		IP	５		IP	６		IP
+佐藤　　世那	3.20	0.19	4.1	５		IP	６		IP	転		IP	３		IP	６		IP	４		IP	５		IP	５		IP	２		IP	３		IP

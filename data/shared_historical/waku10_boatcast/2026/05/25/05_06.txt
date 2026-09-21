@@ -1,0 +1,8 @@
+data=
+1	0
+富澤　　祐作	7.80	0.11	2.1	２		IP	５		IP	１		IP	４		IP	１		IP	２		IP	１		IP	２		IP	２		IP	１		IP
+福田　　宗平	5.80	0.17	3.8	２		IP	３		IP	３		IP	５		IP	１		IP	３		IP	２		IP	２		IP	５		G3	５		IP
+河上　　年昭	4.00	0.12	2.0	５		IP	４		IP	５		IP	３		IP	４		IP	４		IP	４		IP	２		IP	５		IP	４		IP
+畔柳　　俊吾	3.70	0.18	4.3	３		IP	６		IP	４		IP	５		IP	３		IP	６		IP	６		IP	３	3	IP	５	5	IP	２		IP
+関口　　智久	2.50	0.12	3.3	６		IP	４		IP	Ｆ	6	IP	４		IP	３		IP	５		IP	４		IP	６		IP	６		IP	５		IP
+堀井　　涼平	1.00	0.18	4.0	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP									IP

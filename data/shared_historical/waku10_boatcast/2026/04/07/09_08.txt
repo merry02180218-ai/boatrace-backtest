@@ -1,0 +1,8 @@
+data=
+1	0
+篠崎　　仁志	10.70	0.14	2.7	１		G1	１		G1	１		IP	１		IP	１		IP	１		IP	１		G1	１		G1	１		G1	１		G1
+井口　　佳典	7.30	0.15	4.2	２		G1	４		G2	６		G1	１		G1	２		G1	３		G1	４		G1	２		SG	３		G1	３		SG
+黒井　　達矢	5.30	0.13	2.5	３		G1	３		IP	３		IP	３		G1	５		IP	６		IP	５		IP	２		IP	３		IP	２		IP
+有賀　　達也	4.70	0.18	4.3	６		G1	５	3	IP	５		IP	２		G1	１		G1	４		IP	４		IP	４	3	IP	２		IP	６		IP
+尾嶋　　一広	5.30	0.17	4.2	２		G1	６		IP	４		IP	５		IP	５	4	G1	６		G1	４		IP	１		IP	３		IP	１		IP
+上田　　龍星	4.00	0.18	4.3	６		G1	６		SG	４	4	IP	２		G1	５		G1	５	5	G2	４		G2	４		IP	６	5	IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+今泉　　友吾	10.10	0.16	2.9	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+中越　　博紀	4.50	0.22	5.0	６		IP	５		IP	１		IP	３		IP	４		IP	５		IP	４		IP	５		IP	３		IP	２		G3
+谷口　　知優	4.80	0.13	2.4	３		IP	５		IP	４		IP	３		IP	６		IP	１		IP	４		IP	１		IP	６		IP	４		IP
+藤山　　雅弘	4.70	0.18	4.1	３		IP	２		IP	６		IP	６		G3	３		G3	３		IP	３		IP	６		IP	３		IP	４		IP
+山田　　　丈	3.50	0.17	3.8	２		IP	６		IP	３		IP	５		IP	６		IP	５		IP	６		IP	５		IP	３		IP	３		IP
+三宅　　健太	3.10	0.18	4.6	５		IP	６		IP	６		IP	６		IP	４		IP	４		IP	５		IP	１	5	IP	４		G3	５		IP

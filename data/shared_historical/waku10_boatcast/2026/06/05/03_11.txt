@@ -1,0 +1,8 @@
+data=
+1	0
+川崎　　智幸	7.60	0.16	2.7	１		IP	１		IP	１		IP	１		IP	２		IP	６		IP	１		IP	６		IP	１		IP	３		IP
+大澤　　誠也	4.60	0.20	4.0	２		IP	２		IP	転		IP	５		IP	４		IP	６		IP	６	3	IP	４		IP	１		IP	２		IP
+植田　　太一	7.00	0.22	3.8	４		IP	１		IP	２		IP	３		IP	３		IP	２		IP	３		IP	２		IP	４	4	G3	１		G3
+中北　　将史	4.60	0.17	2.8	４		IP	４		IP	１		IP	２		IP	５		G3	３		G3	４		IP	５		IP	５		IP	４		IP
+大崎　　　翔	3.10	0.14	2.9	６		IP	４		IP	５		IP	４		IP	４	6	IP	６		IP	２		IP	６		IP	５		IP	４		IP
+金子　　猛志	3.60	0.15	2.3	６		IP	６		IP	４		IP	４		IP	６		IP	３		IP	６		IP	２		IP	２		IP	５		IP

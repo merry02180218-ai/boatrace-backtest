@@ -1,0 +1,8 @@
+data=
+1	0
+橋本　　英一	6.40	0.16	2.9	４	2	IP	３		IP	３		IP	１		IP	１		IP	４		IP	５		IP	２		IP	４		IP	１		IP
+山田　　竜一	6.60	0.13	2.9	２		IP	３		IP	３		IP	２		IP	２		IP	３		IP	４		IP	２		IP	２		IP	４		IP
+赤澤　　文香	5.60	0.17	3.7	２		IP	２		IP	２		IP	５		IP	３		IP	２		IP	２		G3	４		G3	５		G3	５		IP
+間野　　兼礼	4.80	0.16	2.7	４		IP	５		IP	５	3	IP	２		IP	５		IP	５		IP	３		IP	２	3	IP	３		IP	２		IP
+向井　　美鈴	4.20	0.20	4.8	５		IP	４		IP	５	4	IP	６		IP	３		IP	５		IP	３		G1	３		IP	４		IP	２		IP
+小畑　　楓夏	1.40	0.11	2.9	５		IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP

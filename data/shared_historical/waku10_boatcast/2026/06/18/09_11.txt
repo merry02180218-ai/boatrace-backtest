@@ -1,0 +1,8 @@
+data=
+1	0
+山下　　大輝	7.30	0.17	4.3	６		IP	１		IP	１		IP	４		IP	１		IP	３		IP	１		IP	１		IP	６		G1	１		IP
+橋本　　年光	4.50	0.15	3.3	５		IP	５		IP	４		IP	４		IP	２		IP	４		IP	２		IP	６		IP	２		IP	４		IP
+高倉　　和士	6.90	0.11	2.7	１		IP	５		G1	４		IP	２		IP	２		IP	５		G1	２		G1	１	2	IP	３		IP	２		IP
+丹下　　　将	6.00	0.18	3.5	５		IP	３		IP	５		IP	４		IP	３	5	IP	１		IP	２		IP	２		IP	３		IP	２		IP
+大塚　　康雅	4.20	0.17	3.5	４		IP	２		IP	５		IP	２		IP	４		IP	２		IP	６	4	IP	５	4	IP	６		IP	４		IP
+柴田　　直哉	3.30	0.19	4.4	５		IP	５	5	IP	３		IP	６		IP	１	5	IP	４		IP	４		IP	６		IP	５		IP	６		IP

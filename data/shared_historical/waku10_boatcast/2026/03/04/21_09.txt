@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　昂章	6.60	0.12	2.6	１		IP	２		IP	２		IP	１		IP	１		IP	２		IP	３		G3	４		IP	６		IP	６		IP
+高田　ひかる	6.30	0.25	3.6	１		IP	１		G1	５		G1	２		IP	３		IP	４		IP	４	5	IP	６		IP	３		IP	２		IP
+川島　　拓郎	5.70	0.17	3.6	１		IP	３		IP	４		IP	２		IP	３	6	IP	４	5	IP	５		IP	６		IP	３		IP	１		IP
+坂口　　貴彦	4.00	0.15	3.7	３		IP	５		IP	４		IP	４		IP	３		IP	３		IP	６		IP	５		IP	２		IP	６		G3
+森口　　和紀	3.90	0.18	3.6	４		IP	４		IP	６		IP	５		IP	５		IP	４		IP	３		IP	２		IP	４		IP	４		IP
+村上　　功祐	3.50	0.16	2.3	３		IP	４		IP	６		IP	４	5	IP	４		IP	５		IP	４		IP	５		IP	３		IP	５		IP

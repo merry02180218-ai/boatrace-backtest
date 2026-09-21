@@ -1,0 +1,8 @@
+data=
+1	0
+向後　　龍一	8.60	0.12	2.6	５		G2	２		G2	２		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP
+中島　　真二	6.00	0.20	3.5	１	4	IP	１		IP	３	3	IP	落		IP	５		IP	３		G3	２		IP	５		IP	２		IP	２		IP
+本田　　　愛	6.40	0.21	3.8	３		IP	２		IP	２		IP	１		IP	３		IP	３	5	IP	４		IP	２		IP	５		IP	３		IP
+内山　　文典	4.70	0.15	3.1	３		IP	２		IP	６		IP	２		IP	３		IP	６	6	IP	５		IP	４		IP	３		IP	４		IP
+小川　　知行	3.20	0.14	2.6	４		IP	６		IP	５		IP	３		IP	６		IP	５		IP	４		IP	３		IP	５		IP	４		IP
+志賀　　美優	1.80	0.16	3.7	３		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+若林　　　将	9.70	0.13	2.0	２		IP	１		IP	１		IP	１		IP	１		IP	１		G1	１		G1	４		IP	１		IP	１		IP
+遠藤　　圭吾	4.90	0.17	3.6	２		IP	５		IP	４		IP	３		IP	４		IP	２		IP	エ	3	IP	２	3	IP	６		IP	２		IP
+畑　　　竜生	4.60	0.19	3.7	２		IP	４	4	IP	５		IP	４		IP	３		IP	５		IP	Ｆ		G3	３		IP	２		IP	３		IP
+濱崎　　　誠	4.90	0.21	3.6	１		IP	６		IP	６		IP	６		IP	２		IP	３		IP	２	3	IP	４		IP	４		IP	４		IP
+加藤　　翔馬	5.60	0.18	4.4	２		G3	１		IP	４		IP	４		G1	６		G1	４		IP	３		IP	３		IP	６	6	IP	１		IP
+安田　　吉宏	2.10	0.17	4.1	６		IP	４		IP	５		IP	４		IP	６		IP	６		IP	５		IP	５		IP	５		IP	５		IP

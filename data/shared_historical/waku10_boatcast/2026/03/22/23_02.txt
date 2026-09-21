@@ -1,0 +1,8 @@
+data=
+1	0
+笹木　　香吾	7.10	0.16	3.9	５		G2	５		IP	３		IP	１		IP	２		IP	１		IP	２		IP	２		IP	１		IP	３		IP
+佐藤　　　航	8.30	0.13	2.9	２		G2	２		IP	１		IP	２		IP	１		IP	１		IP	３		IP	１		G2	５		IP	２		IP
+藤田　　浩人	6.70	0.19	3.7	２		G2	３		IP	３		IP	３		IP	３		IP	３		IP	３		IP	３		IP	１		IP	３		IP
+井口　　佳典	7.00	0.16	4.0	３		G2	６		G1	２		G1	４		G1	３	5	G1	３		G1	２		SG	１		G1	２		SG	６		G1
+森清　　友翔	4.20	0.16	3.4	４		IP	６		IP	２		G3	５		G3	２		IP	２		IP	４		IP	５		IP	６		IP	４		IP
+中田　　竜太	5.60	0.18	4.0	３		G2	４		G1	３	5	IP	３		G1	３		G1	６		G1	４		G1	５		IP	３		G1	２		IP

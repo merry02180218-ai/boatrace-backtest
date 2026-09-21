@@ -1,0 +1,8 @@
+data=
+1	0
+笠置　　博之	7.90	0.14	2.6	６		IP	１		IP	２		IP	６		IP	２		IP	１	3	IP	１		IP	１		IP	１		IP	１		IP
+川崎　　智幸	6.80	0.16	3.0	３		IP	１		IP	２		IP	３		IP	５		IP	３		IP	２		IP	３		IP	３		IP	１	3	IP
+松尾　　基成	3.20	0.16	2.6	６		IP	４	4	IP	４		IP	６	4	IP	４		IP	４		IP	４		IP	５		IP	５		IP	３		IP
+萬　　　正嗣	3.30	0.12	3.1	５		IP	６	5	IP	５		IP	４		IP	５	5	IP	６		IP	１	5	IP	６	5	IP	２		IP	５		IP
+海野　康志郎	5.70	0.14	3.1	１	3	IP	４		IP	１		IP	４		G1	５		G1	２		G1	６		G1	６		G1	６		G1	１		IP
+飯山　　晃三	3.20	0.26	5.3	２		IP	４		IP	６		IP	５	5	IP	６		IP	２		IP	６		IP	４		IP	６		IP	５		IP

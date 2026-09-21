@@ -1,0 +1,8 @@
+data=
+1	0
+安東　　幸治	8.00	0.15	3.2	２		IP	１		IP	３		IP	１		IP	１		IP	４		IP	１		IP	１		IP	５		IP	１		IP
+黒田　　　剛	3.70	0.15	2.2	５		IP	３		IP	３		IP	５		IP	５		IP	２	3	IP	３		IP	６		IP	５		IP	５		IP
+新開　　　航	8.20	0.15	3.9	１		IP	３		G1	４		G1	２		G2	１		IP	１		G1	５		G1	１		IP	３		G1	１		IP
+山本　　幸也	4.40	0.17	3.4	４		IP	４		IP	１		IP	５		IP	５	6	IP	１	5	IP	６		IP	２		IP	５		IP	６		IP
+中尾　　優香	4.10	0.16	3.0	４		IP	６	4	G3	１		G3	２	3	IP	５		IP	３		IP	４		IP	６		IP	４		IP	６		IP
+井上　　未都	3.10	0.15	3.3	６		IP	５		IP	３	5	IP	３		IP	４		IP	６		G1	４	5	G3	６		G3	６		IP	５		IP

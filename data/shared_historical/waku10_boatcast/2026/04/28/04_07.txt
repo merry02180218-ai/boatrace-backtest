@@ -1,0 +1,8 @@
+data=
+1	0
+嶋田　　有里	5.60	0.14	2.3	３		IP	３		IP	２		IP	１		IP	１		IP	５		IP	５		IP	１		IP	５	2	IP	転		IP
+松井　　賢治	6.60	0.15	3.0	３		IP	２		IP	３		IP	２		IP	５		IP	２		IP	２		IP	２		IP	２		IP	４		IP
+高橋　　真吾	5.10	0.11	2.8	４		IP	２		IP	３		IP	６	6	IP	６		IP	３	5	IP	２	4	IP	２		IP	６		G3	２	4	G3
+井上　　遥妃	3.70	0.18	3.8	６		IP	４		IP	６	5	IP	６		IP	６		G1	５		G1	４		G1	３		IP	２		G1	４		G1
+山崎　　　郡	6.50	0.14	3.5	１		IP	２		G1	３		G1	３		G1	２		IP	５		G1	５		G1	３		IP	３		G1	４		G1
+伊久間　陽優	3.00	0.10	1.6	６		IP	４		IP	４		IP	Ｆ		IP	４		IP	５		IP	２		IP	５		IP	６		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+杉田　　篤光	7.70	0.20	4.1	２		IP	４		IP	１		IP	６		IP	２		IP	１		G3	２		G3	１		IP	２		IP	１		IP
+丸岡　　正典	6.50	0.17	3.9	３		IP	４		IP	５		IP	２		G2	２		IP	１		IP	２		IP	２		IP	４		IP	３		IP
+近藤　雄一郎	5.20	0.15	2.7	１		IP	４		IP	４		IP	１		IP	４		IP	５		IP	３		IP	５		IP	３		IP	４		IP
+山崎　小葉音	3.20	0.18	3.2	３		G3	６		IP	５		IP	５		IP	５		IP	５		IP	６		IP	２		IP	３	5	IP	５		IP
+竹井　　貴史	7.00	0.14	2.0	１		IP	５		IP	１	4	IP	２		IP	３	4	IP	４		IP	１		IP	５		IP	３		IP	１		IP
+宮下　　元胤	5.40	0.22	3.6	５		IP	４	5	IP	２		IP	２		IP	２	5	IP	３	4	IP	３		IP	５		IP	３		IP	４		IP

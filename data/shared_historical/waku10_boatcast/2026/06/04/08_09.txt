@@ -1,0 +1,8 @@
+data=
+1	0
+丹下　　　健	6.10	0.15	3.2	２		IP	２		IP	１		IP	４		IP	２		IP	６		IP	１		IP	５		IP	２		IP	５		IP
+谷口　　健一	3.90	0.15	3.8	６		IP	６		IP	２		IP	５		IP	２		IP	６		IP	６		IP	１		IP	６		IP	３		IP
+志道　　吉和	2.50	0.21	4.2	６		IP	５		IP	２		IP	５		IP	４		IP	５		IP	５	4	IP	６		IP	５		IP	６		IP
+國崎　　良春	4.22	0.18	2.7	４		IP	転		IP	１		IP	５		IP	３	6	G3	６		G3	５		IP	２	3	IP	６		IP	４		IP
+金子　　貴志	4.10	0.20	4.3	４		IP	６		IP	３		IP	５		IP	２		IP	１		IP	６		IP	６		IP	５		IP	３		IP
+真田　　聖也	1.00	0.13	3.6	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	転		IP	Ｆ		IP

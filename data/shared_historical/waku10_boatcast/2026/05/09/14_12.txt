@@ -1,0 +1,8 @@
+data=
+1	0
+菅　　　章哉	8.60	0.13	2.7	Ｆ		IP	１		IP	１		IP	１		G1	３		SG	１		IP	４		G1	１		G1	１		G1	１		IP
+烏野　　賢太	6.40	0.20	4.3	３		IP	３		IP	２		IP	３		IP	３		G3	２		IP	３		IP	３		IP	２		IP	５		IP
+片岡　　秀樹	3.60	0.14	3.2	５		IP	３		IP	６		IP	６		IP	４	4	IP	５		IP	４		IP	４		IP	２		IP	４		IP
+市橋　　卓士	7.20	0.14	2.2	３		IP	２		IP	２		IP	１		IP	４		IP	３		IP	２		IP	３	2	IP	２		IP	２		IP
+堀本　　和也	4.70	0.12	2.6	５		IP	４		IP	３		IP	５		IP	２		IP	４	4	SG	３		SG	６		G1	２		G1	転	6	G1
+四宮　　与寛	4.60	0.13	3.4	４		IP	３		IP	３		IP	６		IP	２		IP	３		IP	４		IP	４		IP	６		IP	３		IP

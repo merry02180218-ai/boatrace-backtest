@@ -1,0 +1,8 @@
+data=
+1	0
+栗原　　直也	8.60	0.14	2.7	１		IP	１		IP	３		IP	１		IP	１		IP	２		IP	３		IP	３		IP	１		IP	１		IP
+冨田　　秀幸	4.60	0.18	3.2	２		IP	４		IP	５	3	IP	３	3	IP	５	3	IP	４		IP	１		IP	５		IP	５		IP	３		IP
+上田　　龍星	6.00	0.16	3.8	５		G1	４		G1	４		G2	３		IP	５		IP	５		IP	１		IP	１		IP	２	6	IP	３		G1
+坪内　　　実	3.40	0.17	4.0	６		IP	３		IP	６		IP	６		IP	５		IP	４		IP	２		IP	６	5	IP	４		IP	３	5	IP
+加木　　　郁	3.80	0.18	3.6	３		IP	５		IP	４		IP	５	4	IP	２		IP	３		IP	６		IP	４		IP	６		IP	４		IP
+藤山　　湧太	3.60	0.24	5.3	４		IP	６		IP	３		IP	４		IP	３		IP	５		IP	４		IP	６		IP	４		IP	４		IP

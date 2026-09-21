@@ -1,0 +1,8 @@
+data=
+1	0
+柏野　　幸二	9.00	0.10	1.2	１		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	４		IP	１		IP	１		IP
+平石　　和男	6.60	0.17	4.1	４		IP	１		IP	２		IP	３		IP	２		IP	１		IP	３		IP	５		IP	２		IP	４		IP
+加木　　　郁	3.40	0.24	3.8	５		IP	４		IP	４		IP	６		IP	６		IP	５		IP	４		IP	４		IP	１	4	IP	５		IP
+大塚　　浩二	3.10	0.18	3.5	１		IP	５		IP	５	6	IP	５		IP	６	5	IP	３		IP	５		IP	６		IP	４		IP	６		IP
+深山　　祐二	2.78	0.12	2.9	５		IP	６	6	IP	３		IP	６		IP	３		IP	欠		IP	４		IP	６	6	IP	５		IP	５		IP
+伊藤　　将吉	4.50	0.17	2.8	２		IP	４		G1	６		G1	３		IP	３		IP	５		IP	３		IP	５		IP	４		IP	４	5	IP

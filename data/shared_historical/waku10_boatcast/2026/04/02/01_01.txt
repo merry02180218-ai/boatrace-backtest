@@ -1,0 +1,8 @@
+data=
+1	0
+井田　　涼介	1.43	0.17	3.1	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	５		IP									IP
+吉川　　昭男	7.20	0.16	3.8	２		IP	２		IP	１		IP	３		IP	３		IP	２		IP	２		IP	３		IP	５		IP	１		IP
+高橋　　英之	4.60	0.13	2.7	４		IP	４		IP	２		IP	１		IP	Ｆ		IP	５		IP	３		IP	５		G3	２		G3	５		IP
+黒柳　　浩孝	5.00	0.18	4.4	２	5	IP	３		IP	５		IP	５		IP	４		IP	４		IP	６		IP	２		IP	２	5	IP	３		IP
+黒崎　　竜也	3.40	0.14	2.5	６		IP	３		IP	６		IP	６		IP	５		IP	３		IP	６		IP	４		IP	３		G3	３		IP
+藤田　　康生	4.40	0.11	1.9	４		IP	１		IP	４		IP	４		IP	４		IP	２		IP	６		IP	３		IP	５		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　遥妃	9.50	0.10	2.5	１		IP	６		SG	１		G2	１		G2	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+吉村　　正明	7.40	0.13	3.0	２	1	IP	１		IP	１		G3	４		IP	３		IP	２		IP	２		IP	２		IP	４		IP	２		IP
+鈴木　　勝博	6.20	0.12	2.6	６		IP	２	4	IP	６		IP	２		IP	３	4	IP	３		IP	１		IP	４		IP	１		IP	２		IP
+高橋　　竜矢	5.90	0.16	3.7	６		IP	３		IP	１		IP	３		IP	５		IP	２		IP	２		IP	５		IP	３		IP	２		IP
+村松　　修二	3.60	0.16	3.3	５		IP	３	4	IP	６		G2	５		IP	６		IP	６		IP	１		IP	５		IP	２		IP	５		IP
+田中　　宏樹	3.80	0.18	4.8	６		IP	３		IP	４		IP	４		G3	４		IP	６		IP	４		IP	３		IP	５		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+花田　　凱成	7.33	0.15	3.0	２		IP	６		IP	６		IP	１		IP	１		IP	欠		IP	１		IP	１		IP	３		IP	１		IP
+梅原　　祥平	3.00	0.17	3.8	１		IP	６		IP	５		IP	５		IP	５		IP	２		IP	６		IP	６		IP	６		IP	５		IP
+小林　　京平	5.10	0.17	4.5	２		IP	３		IP	４		IP	３		IP	２		IP	５		IP	６		IP	５		IP	３		IP	２		IP
+荒木　　颯斗	5.89	0.16	3.0	２		IP	１	6	IP	３		IP	２		IP	４		IP	３		IP	５		IP	転		IP	６		IP	２		IP
+瀬川　　大地	2.60	0.12	3.8	５	6	IP	６		IP	６		IP	６		IP	４		IP	２		IP	３		IP	６		IP	６		IP	６		IP
+秋末　　秦悟	3.20	0.21	4.8	５		IP	３	5	IP	３		IP	６		IP	５		IP	４	3	IP	４		IP	４		IP	６		IP	５		IP

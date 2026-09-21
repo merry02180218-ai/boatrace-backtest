@@ -1,0 +1,8 @@
+data=
+1	0
+花本　　夏樹	7.00	0.18	3.6	１		IP	１		IP	４		IP	３		IP	３		IP	２		IP	２		IP	１		IP	４		IP	４		IP
+山田　　佑樹	7.40	0.16	3.0	３		IP	２		IP	２		IP	２		IP	２		IP	１		IP	１		IP	５		IP	２	3	IP	３		IP
+村田　　　敦	4.44	0.14	2.3	６		IP	１		IP	５		IP	１	2	IP	転		IP	５		IP	６		IP	３		IP	３		IP	５		IP
+山田　　雄太	5.70	0.13	2.9	３		IP	４		IP	３		IP	６		IP	２		IP	５		IP	１		IP	３		IP	３	5	IP	２		IP
+土井　　祥伍	3.50	0.22	4.4	６	4	IP	５	6	IP	３	4	IP	４		IP	４		IP	３		IP	４		IP	５		IP	４		IP	５		IP
+澤田　　尚也	3.70	0.14	4.1	６		G1	４		G1	５		G2	５		IP	３		IP	６		IP	４		IP	２		IP	４		IP	５		IP

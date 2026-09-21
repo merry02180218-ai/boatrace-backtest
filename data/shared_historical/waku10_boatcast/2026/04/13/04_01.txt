@@ -1,0 +1,8 @@
+data=
+1	0
+水野　　望美	8.60	0.17	2.4	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP	４		IP	１		IP	１		IP	２		IP
+小澤　　和也	3.67	0.19	4.0	４		IP	２		IP	５		IP	転		IP	５		IP	３		IP	５		IP	３		IP	５		IP	６		IP
+大庭　　元明	5.70	0.13	2.8	５	2	IP	６	4	IP	２		IP	４		IP	１		IP	１		IP	３		IP	５		IP	２		IP	３		IP
+来田　　衣織	5.80	0.15	2.9	２		IP	２		IP	３		IP	６		IP	１		IP	２		IP	５		IP	２		G3	３		IP	６		IP
+米丸　　乃絵	5.30	0.13	3.3	４		IP	４		IP	５		IP	３		G1	４		G1	３		IP	４		IP	６		G1	３		G3	１		IP
+鳥居塚　孝博	4.30	0.19	4.3	５		IP	４		IP	２	5	IP	２		IP	２		IP	６		IP	６		IP	５		IP	３		IP	５		IP

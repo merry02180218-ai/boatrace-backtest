@@ -1,0 +1,8 @@
+data=
+1	0
+村上　　功祐	7.40	0.15	3.1	１		IP	６		IP	２		IP	２		IP	１		IP	３		IP	１		IP	１		IP	６		IP	１		IP
+磯村　　　匠	4.80	0.15	2.6	３		IP	４	4	IP	２		IP	２		IP	４		IP	６		IP	１		IP	５		IP	５		IP	６		IP
+長尾　　章平	5.50	0.17	3.7	３		IP	６		IP	４		IP	１		IP	２		IP	６		IP	２		IP	２		IP	２		IP	６		IP
+新田　　智彰	5.10	0.14	2.5	５		IP	５		IP	２		IP	６		IP	１		IP	３		IP	５	3	IP	３		IP	４		IP	１		IP
+牧山　　敦也	5.00	0.22	4.4	５	6	G3	３	6	G3	４		IP	５		IP	３		IP	３		IP	２		IP	４		IP	２		IP	４		IP
+早川　　理稀	1.30	0.20	3.8	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP

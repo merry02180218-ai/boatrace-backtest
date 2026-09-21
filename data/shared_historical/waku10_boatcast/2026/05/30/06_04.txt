@@ -1,0 +1,8 @@
+data=
+1	0
+鰐部　太空海	8.90	0.13	2.7	６		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+服部　　幸男	7.50	0.14	2.6	５		SG	１		IP	２		IP	３		IP	１		IP	１		IP	３		G1	２		G1	２		IP	５		IP
+森高　　一真	8.60	0.12	3.5	４		SG	３		G1	２		G1	１	5	G1	２		G1	２		G1	３		SG	３		G1	２		G1	１		G1
+原田　　幸哉	6.60	0.12	2.7	４		SG	３		G1	１		G1	２		IP	３		G1	２		G1	５		G1	４		G1	３		SG	６		G1
+今垣　光太郎	5.80	0.14	3.0	１		G1	Ｆ	4	IP	２	4	IP	Ｆ	6	G1	５	6	G1	１		G1	４	4	IP	１		G1	５		G1	３		G1
+上條　　暢嵩	5.00	0.14	3.6	６		SG	２		G1	４	5	IP	３	3	IP	２	5	IP	６		G1	５		G1	５	5	SG	４		G1	３		G3

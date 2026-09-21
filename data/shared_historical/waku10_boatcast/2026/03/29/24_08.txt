@@ -1,0 +1,8 @@
+data=
+1	0
+深水　慎一郎	6.90	0.18	3.5	６		IP	１		IP	１		IP	４		IP	４		IP	２		IP	２		IP	３		IP	１		IP	２		IP
+蒲原　　健太	4.70	0.18	4.3	５		G2	５		G2	５		IP	１		IP	１		IP	３		IP	４		IP	６		IP	４		IP	５		IP
+松本　　浩貴	4.20	0.20	4.0	４		IP	３		IP	５	6	IP	４		IP	６		IP	１	4	IP	３		IP	６		IP	４		IP	４		IP
+溝口　海義也	5.40	0.13	2.9	５		G2	２		IP	４	5	IP	６	5	IP	４	5	IP	３		IP	６		G2	２		IP	１		IP	２		IP
+福山　恵里奈	2.60	0.15	3.2	６	6	IP	５		G3	６		G3	３		IP	２		IP	６		G3	６		G3	５		IP	５	6	IP	５		IP
+北山　　康介	3.20	0.15	2.4	５		IP	６		IP	５	5	IP	５		IP	５		IP	４		IP	６		IP	２		IP	２		SG	Ｆ		SG

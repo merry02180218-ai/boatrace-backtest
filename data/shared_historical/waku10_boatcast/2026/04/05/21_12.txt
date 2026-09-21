@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　優美	8.20	0.13	3.1	１		IP	５		SG	１		IP	３		IP	１		IP	１		G1	２		IP	２		IP	１		IP	４		G1
+鈴木　　裕隆	5.90	0.15	3.5	５		IP	５	1	IP	１		IP	２		IP	６		IP	３		IP	２		IP	１		IP	１		IP	５		IP
+君島　　秀三	6.00	0.14	2.5	１		IP	５		IP	２		IP	５		IP	３		IP	６		IP	２		IP	１		IP	２		IP	４		G1
+向井　　美鈴	4.80	0.24	3.5	４		IP	４		IP	６		G1	４		G1	６		IP	４		IP	３		IP	３		IP	２		IP	２		IP
+数原　　　魁	4.50	0.15	2.8	３		IP	６		IP	４		IP	２		IP	６		IP	３		IP	６		IP	２	4	IP	５		IP	２		IP
+石原　　　翼	2.30	0.16	3.6	５		G2	６		G2	６		IP	４		IP	５		IP	３		IP	６	5	IP	６		IP	６		IP	５		IP

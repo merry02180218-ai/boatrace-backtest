@@ -1,0 +1,8 @@
+data=
+1	0
+折下　　寛法	7.00	0.13	1.7	４		IP	５		G3	２		IP	１		IP	１		IP	２		G3	３		IP	１		IP	３		IP	３		IP
+多羅尾　達之	6.50	0.15	3.2	４		IP	１		IP	２		IP	１		IP	６		IP	２		IP	３		IP	２		IP	３		IP	４		IP
+西田　　　靖	2.80	0.20	4.4	４	2	IP	５	2	IP	６	2	G3	６	2	IP	４	2	IP	３	2	IP	４	2	IP	５	2	IP	５	2	IP	５	2	IP
+深澤　　達徳	4.60	0.18	4.4	２		IP	４	5	G3	６		G3	４	5	IP	２		IP	３		IP	６		IP	５		IP	３		IP	３		IP
+寺本　　重宣	4.50	0.15	3.7	４		IP	６		G3	５		IP	４		IP	４		IP	３		IP	２		G3	５		G3	４		IP	２		IP
+内堀　　　学	6.10	0.13	2.5	３		IP	５	2	IP	６		IP	４		IP	２	5	IP	１		IP	１	1	IP	５		IP	２		IP	１		IP

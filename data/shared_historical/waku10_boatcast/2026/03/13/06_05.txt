@@ -1,0 +1,8 @@
+data=
+1	0
+古川　　　健	6.00	0.19	3.2	６		IP	６		IP	１		IP	２		IP	４		IP	１		IP	１		IP	４		IP	４		IP	２		IP
+中北　　将史	6.00	0.14	2.9	５		IP	２		IP	４		IP	３		IP	４		IP	１		IP	５		IP	２		IP	１		IP	３		IP
+清水　　攻二	5.20	0.18	3.9	２		IP	３		IP	４		IP	２		IP	妨		IP	２		IP	５		IP	５		G3	３		G3	２		IP
+赤岩　　善生	6.89	0.17	3.4	２	3	IP	１	1	IP	３	2	G1	４	2	IP	２		G1	転		G1	２	2	IP	２	2	IP	５	2	IP	４		SG
+藤本　　佳史	4.80	0.18	3.5	４		IP	３		IP	４		IP	３		IP	５		IP	４		IP	３		IP	３		IP	５		IP	２		IP
+塩崎　　優司	2.60	0.23	4.6	６		IP	５	4	IP	３		IP	６		IP	４	5	IP	５		IP	６		IP	５	5	G3	３		G3	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　　翼	10.10	0.15	3.1	１		G1	１		G1	１		G1	３		G1	１		G1	１		G1	１		IP	１		IP	２		IP	１		IP
+松尾　　　拓	5.00	0.15	4.2	５		IP	４		IP	４		G1	５		G1	５		IP	１		IP	２		IP	２		IP	５		G3	３		G3
+入海　　　馨	7.30	0.16	3.4	５		G1	２		G1	２		G1	３		G1	４		G1	４	2	G1	２		SG	１		SG	４		G1	２		IP
+木村　　仁紀	7.10	0.15	3.2	２		IP	２		G1	４		G1	２		IP	１		G2	５		IP	２	5	IP	４		IP	２		IP	３		IP
+坪井　　康晴	6.67	0.18	4.4	３		G1	４		G1	４	6	G1	４		G2	１	4	IP	３		IP	２		IP	４		IP	転		IP	２		IP
+船岡　洋一郎	3.70	0.17	4.0	５		IP	５		IP	５		G1	４	5	G1	６		G2	４		IP	２		IP	６		IP	５		IP	２		IP

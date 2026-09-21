@@ -1,0 +1,8 @@
+data=
+1	0
+岡本　　　大	7.00	0.13	2.7	２		IP	６		IP	３		IP	３		IP	２		IP	１		IP	１		IP	６		IP	１		IP	１		IP
+石井　　孝之	3.30	0.14	3.1	５		IP	６	3	IP	１		IP	５	5	IP	４		IP	５		IP	２		IP	６		IP	５		IP	６		IP
+山田　　哲也	5.90	0.12	2.7	６		G1	３		G1	３		G1	５	4	IP	１	4	IP	３		IP	５		IP	２		IP	３		IP	２		IP
+吉武　　真也	4.00	0.20	4.5	４		IP	５		IP	４	5	IP	３		IP	５		IP	４		IP	４		IP	４		IP	５		IP	２		IP
+鐘ヶ江　真司	3.00	0.21	3.6	５		IP	３		IP	４		IP	４		IP	６		IP	５		IP	５		IP	４	6	IP	落		IP	５	6	IP
+安達　　裕樹	4.60	0.18	3.5	４		IP	４		IP	２		IP	４		G2	４		G2	５		IP	４		IP	３	5	IP	４	5	IP	５		IP

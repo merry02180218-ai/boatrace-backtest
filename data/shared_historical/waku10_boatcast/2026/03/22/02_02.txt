@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　良昭	5.90	0.21	2.8	１		IP	３		IP	２		IP	２		IP	４		IP	２		IP	５		IP	６		IP	５		IP	１		IP
+川崎　　智幸	6.20	0.12	2.8	３		IP	１		IP	４		IP	４		IP	３		IP	５		IP	２		G1	５		G1	２		IP	１		IP
+清水　　紀克	3.70	0.19	3.2	６	2	IP	６	2	IP	２	2	IP	５	2	IP	４	2	IP	２	2	IP	３	2	IP	５		IP	４		IP	６	2	IP
+本吉　　正樹	4.80	0.16	3.5	１		IP	２		IP	４		IP	１		IP	４	5	IP	５		IP	５		IP	６		IP	６		IP	３		IP
+宮城　　那菜	1.70	0.19	3.3	６		IP	２		IP	６		IP	６		IP	６	6	IP	６		IP	６		IP	６		IP	６		IP	６		IP
+杉山　　貴博	4.50	0.20	4.7	２		IP	３		IP	４		IP	３		IP	２		IP	５		IP	３		IP	５		IP	６		IP	５		IP

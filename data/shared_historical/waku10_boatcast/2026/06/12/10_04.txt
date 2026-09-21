@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　　祭	8.10	0.16	2.8	１		IP	１		IP	６		G2	２		G2	１		IP	２		IP	２		IP	２		IP	３		IP	１		IP
+市川　　健太	4.30	0.17	3.7	３		IP	２		IP	６		IP	５		IP	２		IP	５		IP	５		IP	４		IP	４		IP	３		IP
+山田　　和佐	3.80	0.14	3.2	２		IP	５		IP	５		IP	５	4	IP	４		IP	３		IP	４		IP	４		IP	４		IP	５		IP
+枝尾　　　賢	5.40	0.11	2.7	６		IP	５		IP	３		IP	５		G2	エ		IP	２		IP	２		IP	１		IP	２		IP	３		IP
+太田　　和美	4.80	0.14	2.6	６		G1	６		G1	３		IP	３		IP	２		IP	３		IP	３		G1	４		G1	５		G1	５		G1
+中村　　栄治	3.20	0.26	5.5	６		IP	４		G3	６		G3	５		IP	５		IP	３		IP	５	5	IP	４		IP	３		IP	４	4	IP

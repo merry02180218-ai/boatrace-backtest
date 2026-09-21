@@ -1,0 +1,8 @@
+data=
+1	0
+関野　　　文	9.00	0.16	2.3	１		IP	２		IP	４		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		G3	１		G3
+中尾　　彩香	5.50	0.15	2.2	３		IP	２		IP	４		IP	５		IP	１		IP	３		IP	６		IP	２		IP	５		G3	２		G3
+山崎　小葉音	6.70	0.17	2.6	１		IP	３		IP	１		G3	３		IP	６		IP	４		IP	３		IP	３		IP	２		IP	１		IP
+坂　　咲友理	4.60	0.21	4.9	５		G3	６		G3	２		G3	６		IP	４		G3	５		G3	２		IP	５		IP	１		IP	２		IP
+志賀　　美優	1.10	0.19	4.4	６	6	IP	６	6	IP	６	6	IP	５		IP	６	6	IP	６		IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP
+小芦　るり華	3.40	0.16	3.7	６		IP	３		IP	５		IP	６		G2	６		G3	５		G3	３	5	G3	１	3	IP	５		IP	６	5	G2

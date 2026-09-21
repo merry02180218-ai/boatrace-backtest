@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　寛久	8.90	0.21	3.4	１		IP	２		IP	１		G1	２		IP	１		IP	１		IP	２		IP	３		IP	２		IP	１		IP
+赤井　星璃菜	5.20	0.13	2.3	２		IP	５	3	IP	２		IP	３		IP	４		IP	５		IP	４		IP	３		IP	２		G3	４		IP
+渡　　　修平	3.10	0.20	3.9	転		IP	６		IP	６		IP	４		IP	３		IP	１	4	IP	４		IP	５	4	IP	５		IP	６	5	IP
+石村　日奈那	2.30	0.22	4.2	６	6	IP	６	6	IP	４		G3	５		G3	５		G3	５		IP	５		IP	４		IP	６		IP	４		IP
+芦澤　　　望	6.90	0.15	2.3	４		IP	２		IP	４		IP	２		IP	３	6	IP	２		IP	４		IP	１		IP	２		IP	３		IP
+関口　　智久	4.60	0.14	2.3	３		IP	６		IP	３		IP	４		IP	６		IP	４		IP	１	5	IP	５		IP	３		IP	３		IP

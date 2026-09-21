@@ -1,0 +1,8 @@
+data=
+1	0
+亀本　　勇樹	8.00	0.19	2.4	４		IP	１		IP	３		IP	１		IP	１		IP	２		IP	１		IP	２		IP	４		IP	１		IP
+小林　　孝弘	5.50	0.20	3.3	２		IP	５		G3	１		IP	６		IP	３		IP	３		IP	５		IP	３		IP	３		IP	２		IP
+山室　　展弘	4.10	0.14	2.4	４	2	IP	３		IP	４		IP	５		IP	２		IP	６		IP	５		IP	２		IP	４		IP	５		IP
+河野　　真也	5.50	0.19	3.2	３	5	IP	５		IP	３		IP	１		IP	３		IP	３		IP	３		IP	３		IP	３		IP	６		IP
+来田　　衣織	4.10	0.19	2.8	６	6	IP	１		IP	１		IP	２		IP	転		IP	６	4	IP	５		G3	６		IP	４	4	IP	４		IP
+向井田　真紀	2.30	0.26	5.1	５		IP	６		IP	６		G3	６		G3	３	5	IP	６		IP	５		IP	６		IP	３		IP	５		IP

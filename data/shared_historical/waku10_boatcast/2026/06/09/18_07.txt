@@ -1,0 +1,8 @@
+data=
+1	0
+大原　　祥昌	8.60	0.12	2.2	１		IP	２		IP	３		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		G3	３		G3
+金子　　順一	5.80	0.18	4.0	５		IP	１		IP	２		IP	３		IP	５		IP	２		IP	２		IP	４		IP	２		IP	５		IP
+堤　　　啓輔	5.50	0.13	2.8	４	4	IP	４		IP	３		IP	３		IP	Ｆ	2	IP	１		IP	６		IP	１		IP	４		IP	１		IP
+山崎　　鉄平	3.30	0.19	3.9	６		IP	５	6	IP	５		IP	４		IP	５		IP	５		IP	５		IP	１		IP	３		IP	５		IP
+今泉　　　徹	2.70	0.19	3.5	６		IP	４		IP	５		IP	５		IP	６		IP	３		IP	３		IP	５		IP	６		IP	５		IP
+岡本　　亜子	1.11	0.21	5.6	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP			IP

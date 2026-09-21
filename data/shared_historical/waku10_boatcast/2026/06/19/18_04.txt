@@ -1,0 +1,8 @@
+data=
+1	0
+船岡　洋一郎	9.00	0.16	2.2	１		G3	５		G1	１		G1	２		G2	１		IP	１		IP	１		IP	２		IP	１		IP	欠		G1
+笹木　　香吾	5.67	0.18	4.5	１		G3	２		IP	４		IP	１		IP	４		IP	転		IP	５		IP	５		G2	２		IP	５		IP
+中村　　将隆	5.40	0.17	3.4	３		IP	５		IP	２		IP	６	2	IP	６		IP	３		IP	３		G3	２		G3	２	4	IP	２		IP
+岸本　　　隆	3.60	0.14	3.5	４		G3	５		IP	４		IP	５		IP	４		IP	３		G3	４	5	G3	５		IP	転	3	IP	２		IP
+門間　　雄大	3.56	0.17	2.8	４		IP	６		IP	６		IP	５		IP	４		IP	３		IP	３		IP	５		IP	３		IP	欠		IP
+妻鳥　　晋也	3.40	0.20	3.9	５		IP	４		IP	４		IP	５		IP	６		IP	３	5	IP	４		IP	２		IP	５		G3	６		IP

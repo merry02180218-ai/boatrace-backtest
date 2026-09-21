@@ -1,0 +1,8 @@
+data=
+1	0
+森　　　竜也	7.10	0.16	2.9	２		G3	４		G3	１		IP	１		IP	１		IP	１		IP	５		G3	３		IP	６		IP	１		IP
+鳥居塚　孝博	7.20	0.16	2.6	１		G2	３		G2	３		IP	１		IP	１	3	IP	３		IP	２		IP	３		IP	３		IP	５		IP
+水口　　由紀	4.20	0.15	3.4	６		IP	４		IP	３		IP	４		IP	５		IP	２		IP	３		IP	３		IP	４		IP	６		G3
+野中　　義生	3.90	0.17	2.7	２		IP	３		IP	３	5	IP	４		IP	３		G3	４		G3	６		IP	５		IP	６	5	IP	６		IP
+宮脇　　遼太	5.80	0.18	4.1	１		IP	２		IP	４		IP	６		IP	３		IP	２		IP	６		IP	２		IP	２		IP	５		IP
+多羅尾　達之	3.80	0.13	2.9	５		IP	６		IP	４		IP	４	5	IP	３		IP	６		IP	４		IP	４		IP	４		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+竹田　　辰也	9.00	0.15	3.1	２		IP	１		IP	３		G3	１		G3	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP
+松田　　真実	5.90	0.21	3.9	３		IP	３		IP	２		G3	５		G3	２		IP	２		IP	６		IP	３		IP	２		IP	３		IP
+佐々木　英樹	4.50	0.19	3.7	４		IP	３		G3	６		IP	６	5	IP	２		IP	５		IP	６		IP	２		IP	４		IP	１		IP
+川上　　　剛	5.50	0.16	3.4	３		IP	４		IP	５		IP	２		IP	４		IP	３		IP	１		IP	４		G3	６		G3	１		IP
+堀越　　雄貴	6.60	0.19	4.1	４		IP	４		IP	４		IP	１		IP	１	4	IP	１		IP	１		IP	３		IP	５		IP	３		IP
+星田　　夢結	1.10	0.17	3.6	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

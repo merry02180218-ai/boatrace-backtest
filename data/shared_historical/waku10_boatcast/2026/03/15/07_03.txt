@@ -1,0 +1,8 @@
+data=
+1	0
+大廣　　咲季	5.00	0.18	3.6	４		IP	５	2	IP	１		G3	１		G3	５		IP	２		IP	１		IP	５		IP	６		IP	６		IP
+大澤　　普司	5.00	0.18	3.2	１		IP	６		IP	３		IP	６		G1	３		G1	４		IP	２		IP	５		IP	５		IP	２		IP
+山田　　雄太	5.50	0.13	3.5	５		IP	２	4	IP	１		IP	３		IP	２		IP	４		IP	２		IP	６		IP	６		IP	３	4	IP
+宇野　　弥生	4.60	0.12	1.9	１		IP	６		IP	４		IP	１		IP	６	6	G1	６	6	G1	６		IP	５		IP	３	5	IP	２		IP
+宮村　　勇哉	2.70	0.20	3.5	５		IP	３	6	IP	６		IP	６		IP	３		IP	４		IP	５		IP	５		IP	５		IP	６		IP
+小川　　晃司	5.10	0.16	3.1	５		IP	３		IP	５		IP	２		IP	２		IP	６		IP	３		IP	３		IP	３		IP	３		IP

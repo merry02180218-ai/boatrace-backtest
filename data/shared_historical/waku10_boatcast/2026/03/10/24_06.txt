@@ -1,0 +1,8 @@
+data=
+1	0
+石野　　貴之	10.10	0.14	2.6	２		IP	１		IP	１		IP	１		IP	１		G1	１		G1	１		IP	１		G3	１		G3	１		G3
+原田　才一郎	6.60	0.17	3.7	２		IP	２		IP	３		IP	５		G1	３		IP	６		IP	２		IP	４		G1	１		G1	２		IP
+古賀　　繁輝	5.10	0.16	2.8	５		IP	５		IP	１		IP	３	4	IP	４	4	G1	３		IP	５		IP	２		IP	４		IP	３		IP
+丸野　　一樹	7.10	0.12	2.3	２		IP	４		G1	６		G1	１		G1	２		IP	６		SG	２		G1	３		G1	２		SG	３		G1
+下條　雄太郎	6.00	0.15	3.2	２		IP	６		G1	４		G1	１		G1	２		IP	４		IP	３		G3	５		G1	３		G1	３		G3
+久田　　敏之	6.78	0.13	2.6	４		IP	３		G1	６		G1	３		IP	２	5	IP	１		IP	１		IP	２	5	IP	欠		G1	４		SG

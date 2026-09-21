@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　翔馬	9.10	0.18	2.4	１		G3	１		G3	２		IP	５		IP	１		IP	１		G1	１		IP	１		IP	１		IP	１		IP
+木下　　雄介	5.11	0.15	2.8	欠		IP	５		IP	５		IP	３		IP	２		IP	１		IP	Ｆ		IP	５		IP	１		IP	３		IP
+伊藤　　将吉	6.10	0.15	3.0	１		IP	２		IP	２		IP	４		G1	２		IP	５		IP	２		IP	３		IP	妨		IP	３		IP
+安田　　吉宏	3.90	0.16	2.9	６		IP	５	5	IP	２	5	IP	５		IP	１		IP	５		IP	５		IP	３		IP	５		IP	４		IP
+山谷　　　央	3.80	0.14	3.1	４		IP	４		IP	３		IP	５		IP	５		IP	４		IP	３		IP	５		IP	３		IP	５		IP
+小池　　哲也	5.80	0.19	3.3	５		IP	３	5	IP	３		IP	３	5	IP	３		IP	２		IP	３		IP	４	4	IP	２	5	G3	３	5	IP

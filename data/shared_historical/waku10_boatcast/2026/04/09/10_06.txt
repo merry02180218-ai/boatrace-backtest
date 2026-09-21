@@ -1,0 +1,8 @@
+data=
+1	0
+向井田　佑紀	7.50	0.14	2.4	１		IP	６		IP	１		IP	１		IP	５		IP	１		IP	１		G3	４		IP	１		IP	２		IP
+泥谷　　一毅	6.60	0.19	4.0	２	3	IP	２		IP	３		IP	３		IP	３		IP	２		IP	２		IP	４		IP	３		IP	３		IP
+川田　　正人	4.00	0.17	3.8	６		IP	３		IP	５		IP	３		IP	４		IP	６		IP	２		IP	Ｆ		IP	２		IP	４		IP
+鈴木　　茂高	3.40	0.20	3.9	５		IP	５		IP	４		IP	４		IP	３		IP	４		IP	５		G3	６		IP	２		IP	６		IP
+馬場　　　剛	5.60	0.13	2.1	３		IP	３		G3	６		G3	６		IP	３		IP	１		IP	４		IP	１		IP	３		IP	３		IP
+渡邊　雄一郎	6.80	0.19	3.6	２	5	IP	２		IP	３		IP	４		IP	３		IP	３	5	IP	１		IP	４		IP	１		IP	３		IP

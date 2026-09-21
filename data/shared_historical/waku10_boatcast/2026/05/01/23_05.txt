@@ -1,0 +1,8 @@
+data=
+1	0
+町田　　洸希	7.10	0.15	2.0	４		IP	３		IP	６		IP	１		G3	１		IP	１		IP	３		IP	１		IP	４		IP	１		IP
+藤田　　浩人	6.60	0.15	3.6	５		IP	３		IP	１		IP	２		IP	３		IP	１		IP	２		IP	２		G2	４		G2	５		IP
+深川　　真二	7.70	0.10	1.9	１		IP	４		IP	２		IP	１		G2	５		IP	１	2	IP	４		G1	２		G1	１		IP	２		IP
+小玉　　啓太	4.10	0.16	2.9	５		IP	５		IP	転		IP	１		IP	３		IP	３		IP	５		IP	１		IP	５		IP	６	5	IP
+久保田　凪紗	1.60	0.15	3.4	６		G3	６		G3	５		G3	５		G3	６	4	IP	５		IP	６	6	G3	５		G3	５	6	IP	５		IP
+高橋　　龍治	3.56	0.17	4.4	５		IP	３		IP	４		IP	５		IP	４		IP	６		IP	４		IP	欠		IP	２		IP	６		IP

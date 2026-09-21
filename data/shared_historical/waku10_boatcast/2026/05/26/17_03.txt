@@ -1,0 +1,8 @@
+data=
+1	0
+佐々木　英樹	7.20	0.16	2.5	３		G3	２		IP	１		IP	２		IP	１		IP	４		IP	２		IP	１		IP	３		IP	５		IP
+磯村　　　匠	5.00	0.16	2.7	４	4	IP	２		IP	２		IP	４		IP	６		IP	１		IP	５		IP	５		IP	６		IP	２		IP
+小宮　　涼雅	5.00	0.14	3.1	３		IP	３		IP	２		IP	４	4	IP	６		IP	５		IP	２		IP	２		IP	３		IP	６	4	IP
+坂本　　奈央	2.50	0.25	5.1	３		IP	６		IP	５	5	G3	４		G3	５		IP	５		IP	４		G3	６		IP	６		IP	５		G3
+神田　　達也	5.50	0.19	3.8	２		IP	３	6	IP	４		IP	６		IP	５		IP	２		IP	２		IP	５	4	IP	３		IP	１		IP
+西岡　　蒼志	4.30	0.15	2.8	３		IP	２		IP	５		IP	１	5	IP	５		IP	５		IP	４		IP	６		IP	３		IP	５		IP

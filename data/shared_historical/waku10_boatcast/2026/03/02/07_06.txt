@@ -1,0 +1,8 @@
+data=
+1	0
+中北　　将史	7.30	0.14	2.7	１		IP	６		IP	２		IP	１		IP	２		IP	１		IP	３		IP	２		IP	５		IP	１		IP
+井上　　　茂	4.20	0.18	4.2	５		IP	１		IP	４		IP	４		IP	３		IP	３		IP	３		IP	６		IP	６		IP	５		IP
+佐々木　翔斗	6.00	0.15	3.2	妨		IP	３		IP	２		IP	３	2	IP	１		IP	３		IP	３		IP	２		IP	３		IP	４		IP
+森作　　広大	3.00	0.22	4.5	５	6	IP	６	5	IP	２		IP	３		IP	６		IP	５	3	IP	４	5	IP	４		IP	６		IP	６		IP
+石村　日奈那	3.10	0.18	2.7	６	6	IP	６		G3	３		G3	４		IP	６		IP	５		IP	２		IP	６		IP	３		IP	６		IP
+北野　　輝季	5.50	0.15	3.0	４		G1	６	5	G1	１		IP	３	5	IP	１	5	IP	５		IP	４		IP	５		G1	５		G1	１	5	IP

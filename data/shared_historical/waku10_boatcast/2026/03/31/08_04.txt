@@ -1,0 +1,8 @@
+data=
+1	0
+神田　　達也	5.30	0.19	2.9	５		IP	４		IP	２		IP	６		IP	１		IP	３	2	IP	３		IP	４		IP	５		IP	１		G3
+松江　　秀徳	4.90	0.20	4.2	４		IP	３		IP	４		IP	２		IP	２		IP	６		IP	３		IP	５		IP	４		IP	３		IP
+古澤　　光紀	4.80	0.12	2.8	３		IP	１		IP	６		IP	５		IP	２		IP	２		IP	６		G1	６		IP	２		IP	５		IP
+山本　　幸也	3.20	0.21	3.9	５	6	IP	１	5	IP	６		IP	２		IP	５		IP	６		IP	落		IP	５		IP	４		IP	５		IP
+金子　　猛志	5.10	0.13	3.0	２		IP	３		IP	４		IP	５	6	IP	１		IP	３		IP	６		IP	２		IP	４		IP	５		IP
+山道　　諄也	2.20	0.17	4.1	２		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	５		IP	５		IP	５		IP

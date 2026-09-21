@@ -1,0 +1,8 @@
+data=
+1	0
+天野　　晶夫	8.67	0.14	2.6	２		IP	２		G3	２		IP	１		IP	転		IP	２		IP	１		IP	１		IP	２		IP	２		IP
+今坂　　晃広	3.40	0.20	3.8	６		IP	５		IP	６		IP	６		IP	５		IP	２		IP	４		IP	６		IP	４		IP	１		IP
+中野　　仁照	6.30	0.19	3.9	１		IP	１		IP	３		IP	４		IP	Ｆ		G1	６		G1	１		IP	３		IP	１		IP	４		IP
+吉島　　祥之	3.20	0.18	3.9	５		IP	３		IP	４		IP	３		IP	４		IP	４		G3	６		G3	５		IP	６		IP	５	5	IP
+赤岩　　善生	6.40	0.17	4.0	６		G1	３	4	G1	２	2	IP	３	2	IP	３	3	G1	４	4	G1	２	2	IP	４	4	G1	１	4	IP	３	2	IP
+松本　　庸平	2.30	0.27	5.1	４		IP	６		IP	５		IP	５	5	IP	６		IP	６		IP	４		IP	６		IP	６	5	IP	４	5	IP

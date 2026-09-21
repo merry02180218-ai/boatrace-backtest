@@ -1,0 +1,8 @@
+data=
+1	0
+後藤　　翔之	7.00	0.13	1.8	３		IP	３		IP	５		IP	２		IP	２		IP	１		IP	２		IP	２		IP	４		IP	１		IP
+田中　　辰彦	5.10	0.20	3.6	１		IP	１		IP	５		IP	２		IP	２	3	IP	６		IP	５		IP	４		IP	５		IP	４		IP
+上村　慎太郎	4.50	0.17	5.1	３		IP	４		IP	３		IP	６		IP	４		IP	４		IP	３		IP	４	4	IP	４		IP	３		IP
+萬　　　正嗣	4.00	0.13	3.3	１		IP	５		IP	３	5	IP	５		IP	６	5	IP	５		IP	４		IP	５	5	IP	６		IP	１	5	IP
+山川　　波乙	2.10	0.20	4.2	６		IP	４		IP	３		IP	６		IP	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP
+深山　　祐二	3.30	0.20	4.5	４	3	IP	１		IP	５	5	IP	４		IP	４		IP	６		IP	４		IP	６		IP	６		IP	５		IP

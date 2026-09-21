@@ -1,0 +1,8 @@
+data=
+1	0
+坂本　　奈央	5.30	0.19	3.9	１		G3	６		IP	２		IP	３		G3	６		G3	５		IP	１		G3	６		G3	３		G3	２		IP
+深川　　和仁	5.60	0.19	3.6	５		IP	２		IP	２		IP	１		IP	５		G3	５		G3	２		IP	３		IP	４		IP	３		IP
+三川　　昂暁	7.60	0.19	3.8	２		IP	４		IP	２	4	IP	３		IP	１		IP	２		IP	２		IP	１		IP	２		IP	３		IP
+三嶌　さらら	4.60	0.19	3.3	５		IP	５		IP	４		IP	１		IP	４		IP	３		IP	３		IP	４		IP	５		IP	３		IP
+佐藤　　右京	2.60	0.23	4.6	４		IP	６		IP	６		IP	６		IP	５		IP	５		IP	５		IP	６		IP	４		IP	２		IP
+吉岡　　　誠	2.40	0.21	4.7	４	5	IP	６		IP	６		IP	６		IP	５	5	IP	４		IP	６		IP	５		IP	４		IP	４		IP

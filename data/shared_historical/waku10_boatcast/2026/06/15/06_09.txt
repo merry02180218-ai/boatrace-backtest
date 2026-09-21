@@ -1,0 +1,8 @@
+data=
+1	0
+関口　　智久	6.30	0.19	4.4	１		IP	１		IP	４		IP	２		IP	４		IP	１		IP	１		IP	５		IP	６		IP	４		IP
+土屋　　千明	6.90	0.17	2.6	４		IP	３		IP	１		G3	１		IP	２		IP	５		IP	１	1	IP	３		IP	２		IP	４		G3
+山本　景士郎	5.80	0.19	4.0	５		IP	６	4	IP	６		IP	３		IP	２		IP	１		IP	２		IP	２		IP	２		IP	３		IP
+川合　　理司	3.00	0.15	3.5	６	5	IP	６	6	IP	５		IP	６		IP	４		IP	３		IP	２		IP	４		IP	５		IP	６		IP
+重野　　哲之	4.10	0.11	2.3	４		IP	３	4	IP	３		IP	５		IP	５		IP	３		IP	６		IP	２		G1	５		G1	５		IP
+森安　　弘雅	2.90	0.24	5.8	６		IP	５		IP	２		IP	６	5	IP	６		IP	３		IP	４		IP	５	5	IP	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+武田　　信一	7.40	0.15	2.6	４		IP	１		IP	２		IP	５		IP	２		IP	１		IP	１		IP	１		IP	１		IP	５		IP
+土井　　祥伍	4.50	0.22	4.7	２		IP	２	3	IP	２		IP	６		IP	５		IP	１		IP	Ｆ	1	IP	５		IP	５		IP	４		IP
+松浦　　　勝	4.60	0.17	2.8	２		IP	４	4	IP	４		IP	４	5	IP	６	4	IP	５		IP	１		IP	６		IP	４		IP	２		IP
+重成　　一人	5.60	0.13	2.8	２		IP	５		IP	４		IP	６		G1	３		IP	２		IP	２		IP	４		IP	１		IP	５		G1
+金田　　智博	5.00	0.15	3.7	５		IP	６		G2	４	6	IP	４		IP	３	4	IP	３		IP	４		IP	２		IP	４	4	IP	１		IP
+伊藤　　啓三	3.67	0.16	3.5	５		IP	６		IP	４		IP	５		IP	不		IP	６		IP	５		IP	３		IP	２		IP	３		IP

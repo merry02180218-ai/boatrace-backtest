@@ -1,0 +1,8 @@
+data=
+1	0
+一色　　凌雅	7.20	0.18	3.6	２		IP	３	3	G3	３		IP	１		IP	１		IP	３		IP	１		IP	転		IP	１		IP	３		IP
+村松　　修二	5.40	0.11	2.7	５		IP	１		IP	３		IP	２		IP	Ｆ		IP	２		IP	２		IP	５		IP	２		IP	５		IP
+島川　　海輝	5.70	0.15	3.2	４		G2	４		G2	２		IP	５		IP	６		IP	４		IP	３		IP	２		IP	２		IP	１		IP
+戸田　海咲音	1.80	0.25	4.3	Ｆ	6	G3	転		G3	４		IP	４		IP	５		IP	６		IP	４		IP	６		IP	６		IP	６	5	IP
+西川　新太郎	4.60	0.17	2.6	５		IP	４		IP	４		IP	３		IP	２		IP	４		IP	５		IP	５		IP	５		IP	１		IP
+丸岡　　正典	4.80	0.19	4.3	６		G2	４		G2	３		IP	３		IP	２		IP	６		IP	２		IP	５		IP	５		IP	３		IP

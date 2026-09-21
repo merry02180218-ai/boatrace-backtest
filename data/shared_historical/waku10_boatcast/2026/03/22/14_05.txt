@@ -1,0 +1,8 @@
+data=
+1	0
+中田　　友也	9.20	0.15	3.4	１		IP	１		IP	１		IP	２		IP	３		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+佐藤　謙史朗	4.89	0.21	3.9	３		IP	３		IP	５		IP	５		IP	欠		IP	４		IP	５		IP	２		IP	２		IP	３		IP
+黒崎　　竜也	6.80	0.14	2.8	３		IP	１		IP	２	4	IP	３	6	IP	１		IP	３		IP	２		IP	５		IP	４		IP	２		IP
+小山　　　勉	6.30	0.15	3.4	２		IP	４		IP	４		G1	１		IP	２		IP	１		IP	３		IP	５		IP	５		G3	２		G3
+佐々木　和伸	5.10	0.15	3.4	６	4	IP	４		G1	４		G1	３		IP	２		IP	５	6	IP	４		IP	２		IP	２		IP	４		IP
+大庭　　元明	3.90	0.16	3.6	４		IP	Ｆ		IP	５		IP	２		IP	５		IP	４	5	IP	４		IP	２		IP	３		IP	６		IP

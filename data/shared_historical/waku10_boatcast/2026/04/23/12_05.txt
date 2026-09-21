@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　正男	8.70	0.17	3.7	２		IP	１		IP	２		IP	１		IP	６		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+田添　　康介	3.20	0.16	4.9	６		IP	３		IP	６		IP	５		IP	１		IP	４		IP	４		IP	６		IP	５		IP	６		IP
+来田　　衣織	3.50	0.16	3.5	６		IP	５		IP	６		IP	３		IP	６		IP	４		IP	１		IP	５		IP	５		IP	３		IP
+久永　　祥平	5.00	0.18	3.1	３		IP	２		IP	５		IP	４		IP	３		IP	Ｆ		IP	２		IP	１		IP	４		IP	５		IP
+立間　　充宏	5.20	0.18	3.8	４		IP	４		IP	３		IP	５		IP	４		IP	１		IP	３		IP	１		IP	５		IP	４		IP
+三好　　勇人	3.90	0.24	5.0	３	5	IP	５		IP	６	5	IP	４		IP	６		IP	２		IP	４		IP	３		IP	３		IP	６		IP

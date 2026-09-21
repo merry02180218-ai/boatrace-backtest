@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　　勲	7.80	0.17	2.4	３		IP	１		IP	１		IP	３		IP	１		IP	４		IP	１		IP	２		IP	３		IP	２		IP
+網代　　良芽	4.40	0.14	2.3	４		IP	６		IP	１	3	IP	２		IP	６		IP	４		IP	３		IP	４		IP	３		IP	転		IP
+吉川　　貴仁	7.70	0.15	2.8	３		IP	２		IP	３	2	IP	２		IP	１		IP	２		IP	２		IP	１		IP	２		IP	４		IP
+田中　　和也	6.80	0.14	2.7	３		IP	１		IP	５		IP	４	3	IP	２		IP	２		IP	３		IP	４		IP	１		IP	２		IP
+天野　　　誠	3.60	0.20	4.7	２		IP	６		IP	４		IP	４		IP	３		IP	５		IP	５		IP	４		IP	６		IP	４		IP
+牟田　　奨太	1.80	0.22	4.1	６		IP	６		IP	６		IP	５		IP	Ｆ	4	IP	２	5	IP	６		IP	６		IP	６		IP	５		IP

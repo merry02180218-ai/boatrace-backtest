@@ -1,0 +1,8 @@
+data=
+1	0
+市川　　哲也	10.00	0.15	2.8	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+橋本　　年光	6.10	0.19	3.2	４		IP	６		IP	３		IP	２		IP	４		IP	３		IP	２		IP	２		IP	１		IP	３		IP
+守屋　　大地	6.90	0.23	4.4	１		IP	４		IP	３	5	IP	１		IP	２		IP	２		IP	６	5	IP	２		IP	１	4	IP	４		IP
+田中　　勇輔	4.40	0.11	2.0	５	6	IP	１		IP	５		IP	６		IP	３		IP	５		IP	５		IP	６		IP	１		IP	２		IP
+片岡　　大地	4.60	0.14	2.9	３		IP	５		IP	３		IP	４		IP	２		IP	４	4	IP	４		IP	４		IP	４		IP	４		IP
+國弘　　翔平	2.80	0.18	4.5	６		IP	５		IP	５		IP	２		IP	５		IP	４	5	IP	５		IP	６		IP	５		IP	４		IP

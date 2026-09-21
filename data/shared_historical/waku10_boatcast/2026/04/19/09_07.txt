@@ -1,0 +1,8 @@
+data=
+1	0
+笠野　友紀恵	4.90	0.17	3.1	２		IP	５		IP	３		IP	５		G3	６		IP	４		IP	４		G3	１		G3	１		G3	５		IP
+大瀧　明日香	4.67	0.18	3.5	２		IP	６		IP	転		G3	２		G3	５		G3	５		IP	５		G1	２		IP	３		G1	５		G1
+山崎　小葉音	5.40	0.17	2.4	４		IP	３		IP	３		IP	２		IP	１		IP	２		IP	４		IP	３		IP	６		IP	６		IP
+松尾　　夏海	4.80	0.17	2.3	１		IP	２		IP	２		IP	３		IP	転		IP	６	5	IP	２		IP	６		G1	５		G1	５		G3
+高憧　　四季	5.10	0.16	2.5	３		IP	５		IP	１		IP	３		IP	１		IP	４		G3	５		G3	４		G1	５	6	IP	６		IP
+龍田　　真白	3.10	0.11	2.3	６		IP	５		IP	２		IP	４		IP	３		IP	５		IP	５		IP	６		IP	６		IP	４		IP

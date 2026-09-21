@@ -1,0 +1,8 @@
+data=
+1	0
+阿波　　勝哉	5.10	0.21	4.2	５	2	IP	１		IP	３		IP	２		IP	５		IP	Ｆ		IP	６		IP	２		IP	１	5	IP	４		IP
+岡部　　大輔	4.70	0.18	2.6	３		IP	３		IP	３		IP	６	3	IP	４		IP	４		IP	３		IP	３		IP	３		IP	５		IP
+前田　　　翔	7.30	0.19	3.1	４		IP	２		IP	２		IP	３		IP	２		IP	３		IP	３		IP	１		IP	３		G1	２		G1
+山ノ内　雅人	5.00	0.13	2.8	２		IP	５		IP	２	5	IP	５		IP	６		IP	３		IP	６		IP	２		IP	２		IP	３		IP
+宮地　　博士	3.90	0.25	4.6	３		IP	５		IP	４		IP	５		IP	５		IP	６		IP	２		IP	５		IP	３	6	IP	３		IP
+藤田　　竜弘	4.70	0.16	2.6	３		IP	４	5	IP	４		IP	４		IP	６		IP	３		IP	３		IP	３	5	IP	４		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+大野　　芳顕	8.00	0.16	2.9	１		IP	２		IP	１		G3	１		G3	１		IP	５		IP	３		IP	１		IP	４		IP	１		IP
+篠原　　晟弥	5.00	0.16	3.5	３		IP	５		IP	１		IP	１		IP	５		G2	５		IP	５		IP	２	5	IP	３		IP	６		IP
+渡辺　　浩司	6.00	0.11	2.6	６		G1	２	4	G1	２		IP	２		IP	４		IP	４		IP	２		IP	３		IP	５		G1	３		IP
+西川　　拓利	5.40	0.13	2.2	２	3	IP	６		G3	３		G3	６		IP	３		IP	３		IP	４		IP	１		IP	５		IP	１		IP
+野相　　弘司	3.60	0.20	4.3	５		IP	３		IP	５		IP	５		IP	４		IP	６	6	IP	６		IP	２		IP	３		IP	４		IP
+宮本　　琉正	2.10	0.13	2.4	６		IP	５	5	IP	４		IP	３		IP	Ｆ		IP	５		IP	５		IP	６		IP	６		IP	５		IP

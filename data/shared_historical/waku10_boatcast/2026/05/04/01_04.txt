@@ -1,0 +1,8 @@
+data=
+1	0
+須藤　　隆雄	5.50	0.15	2.7	Ｆ		IP	２		IP	２		IP	２		IP	２		IP	４		IP	６		IP	１		IP	５		IP	３		IP
+関　　　浩哉	5.60	0.17	4.3	１		IP	４		G1	２		G1	６		SG	６		SG	３		G1	２		G1	５		G1	５		G1	５		IP
+外崎　　　悟	5.40	0.18	3.9	５	6	IP	５		G3	２		G3	２		IP	４		IP	４		IP	２		IP	５		IP	３		IP	１		IP
+中里　　英夫	3.90	0.23	4.7	５		IP	３		IP	３		IP	５		IP	２		IP	５		IP	６		IP	４		IP	４		IP	４		IP
+塚越　　海斗	6.11	0.17	2.8	２		IP	６		IP	不		IP	６		IP	３		IP	１		IP	２		IP	６	3	IP	１		IP	１	4	IP
+河内　悠利杏	2.10	0.21	3.5	４	5	IP	６		G3	４	5	G3	６		G3	６		IP	６		IP	６		IP	３	3	IP	６		IP	６		IP

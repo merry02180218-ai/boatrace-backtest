@@ -1,0 +1,8 @@
+data=
+1	0
+喜井　つかさ	9.00	0.15	2.3	５		G3	１		G3	１		G3	１		G3	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+植木　　美帆	2.40	0.22	4.4	５		G3	４		IP	６		IP	５		IP	６		IP	６		IP	２	3	IP	Ｆ		IP	４		IP	６	3	IP
+魚谷　　香織	6.80	0.17	3.5	３	2	G3	２		G3	３		IP	４		IP	３		IP	４		IP	１		IP	１		IP	４		IP	２		G3
+三浦　　永理	7.60	0.11	2.3	２		IP	３		G3	１		IP	３		IP	１		G1	５		G1	４		IP	３		IP	１		G1	１		G1
+藤田　　美代	3.30	0.16	2.6	１		G3	３		G3	５		IP	５		IP	３		IP	６		IP	５		IP	５		IP	６		IP	６		IP
+赤井　星璃菜	2.50	0.25	5.0	６		IP	５		IP	３		IP	４		IP	４		IP	５		IP	５		IP	５		IP	６		IP	６		G3

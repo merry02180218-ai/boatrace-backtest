@@ -1,0 +1,8 @@
+data=
+1	0
+南　　　佑典	9.70	0.16	2.6	２		IP	１		G2	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+三嶌　こころ	5.00	0.17	3.6	１		IP	６		IP	６		IP	３		IP	３		IP	４		IP	３		IP	３		IP	３		IP	４		IP
+成貞　　琳平	3.70	0.24	4.0	６		IP	３		IP	３		IP	４	4	IP	６		IP	２	4	IP	２		IP	６		IP	６		IP	６	2	IP
+重冨　　勇哉	3.00	0.20	4.1	６		IP	６		IP	４		IP	４		IP	６		IP	４		IP	６	6	IP	５		IP	２		IP	４		IP
+東口　　　晃	3.40	0.23	4.3	３		IP	４		IP	４		IP	４		IP	４		IP	４		IP	６		IP	６		IP	５		IP	４		IP
+稲田　　浩二	4.50	0.12	3.1	３		G1	４		IP	６		IP	３		G3	５		G3	６		G1	２		IP	４		G1	５		G1	３		G1

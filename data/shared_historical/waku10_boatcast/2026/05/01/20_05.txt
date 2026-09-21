@@ -1,0 +1,8 @@
+data=
+1	0
+塩田　　北斗	8.70	0.15	2.5	１		IP	１		IP	１		G1	１		G1	５		G1	５		G1	３		G1	１		G1	１		G1	１		IP
+鶴田　　勇雄	6.10	0.17	3.6	１		IP	６		G3	４		G3	４		IP	３		IP	４		IP	２		IP	２		IP	２		IP	２		IP
+前田　健太郎	2.80	0.21	3.9	５		IP	４		IP	５		IP	４		IP	４	5	IP	６		IP	６	4	IP	６		IP	６		IP	２		IP
+石倉　　洋行	5.80	0.13	3.2	６		G1	１		IP	２	5	IP	１		IP	４		G1	５		G1	１		IP	４		IP	転		IP	３		IP
+原田　　雄次	4.20	0.23	5.1	６		IP	５		IP	２		IP	６		IP	３		IP	４		IP	２		IP	４	4	IP	３		IP	５	6	IP
+甲斐　　貴大	2.00	0.16	4.2	６		IP	５		IP	５		IP	６		IP	５		IP	５		IP	４		IP	６		IP	４		IP	６		IP

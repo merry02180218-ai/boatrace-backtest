@@ -1,0 +1,8 @@
+data=
+1	0
+池田　　剛規	8.80	0.11	2.1	１		IP	１		IP	２		IP	３		IP	２		IP	２		IP	１		IP	１		IP	１		IP	２	2	IP
+石丸　　海渡	6.10	0.11	3.2	５		IP	２		IP	５		G1	２		G1	１		IP	２		IP	５		IP	２		IP	５		IP	２		IP
+北川　　敏弘	3.40	0.21	4.2	５		IP	５		IP	４		IP	２		IP	４		IP	６		IP	４		IP	４		IP	６		IP	４		IP
+大野　　芳顕	4.00	0.16	3.4	４		IP	５		IP	３		IP	５		IP	５		IP	４		IP	２		IP	５		G3	３		IP	４		IP
+谷口　　知優	4.20	0.16	3.1	４		IP	３		IP	２	4	IP	５		IP	６		IP	６		IP	２		IP	５		IP	３	6	IP	４		IP
+磯村　　　匠	3.89	0.27	4.9	５		IP	５		IP	４		IP	３		IP	３		IP	６		IP	５		IP	４		IP	転		IP	２	4	IP

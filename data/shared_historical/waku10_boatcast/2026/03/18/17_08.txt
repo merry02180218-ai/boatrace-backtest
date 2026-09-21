@@ -1,0 +1,8 @@
+data=
+1	0
+菅野　はやか	5.40	0.21	3.6	４		IP	６		IP	３		G3	２		IP	２		IP	４		IP	１		IP	６		G3	５		G3	１		IP
+冨名腰　桃奈	3.10	0.19	3.6	６	3	IP	２		IP	５		IP	６		IP	５		IP	３		IP	４		IP	５		IP	６		IP	４		IP
+村上　　奈穂	6.00	0.12	2.6	３		IP	３		IP	２		IP	２		IP	４		IP	３		IP	４		IP	３		IP	４		IP	２	2	IP
+森田　　梨湖	1.90	0.23	4.7	５		IP	５		IP	５		IP	６		IP	５	5	G3	６		IP	４		IP	５		IP	６		IP	５		IP
+南　　　彩寧	2.10	0.24	4.2	３		IP	５		IP	６	6	IP	６		IP	５		G3	５		IP	６		IP	６		IP	４		IP	６		IP
+野田　　亜湖	1.10	0.31	6.0	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

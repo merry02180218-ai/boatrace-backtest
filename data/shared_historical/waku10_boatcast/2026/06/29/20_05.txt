@@ -1,0 +1,8 @@
+data=
+1	0
+中田　　元泰	8.90	0.12	2.3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	６		IP	２		IP
+刑部　亜里紗	6.80	0.17	3.7	２		IP	１		G3	２		G3	３		G2	２		G2	３		IP	４		IP	４		IP	１		IP	５		IP
+近藤　　友宝	6.30	0.18	3.7	１		IP	２		IP	４		IP	２		IP	３		IP	４		IP	６		IP	４		IP	２		IP	１		IP
+鈴木　　裕隆	5.50	0.17	3.1	２		IP	２		IP	３		IP	１	2	IP	４		IP	５	6	IP	４		IP	４		IP	２		IP	６		IP
+川崎　　智稔	4.60	0.12	2.4	５	4	IP	６		IP	３		IP	２		IP	６		G3	３		IP	３		IP	４		IP	４		IP	２		IP
+福田　　柊人	1.10	0.20	4.1	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP

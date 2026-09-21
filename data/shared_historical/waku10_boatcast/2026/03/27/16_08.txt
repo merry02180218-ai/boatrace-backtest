@@ -1,0 +1,8 @@
+data=
+1	0
+丹下　　　将	8.40	0.16	3.3	１		IP	２		IP	３		IP	１		IP	２		IP	２		IP	２	2	IP	１		IP	１		IP	３		IP
+長尾　　萌加	5.56	0.15	3.1	３		IP	３		IP	５		IP	４		IP	２		IP	２		IP	５		IP	４		IP	欠		IP	１		IP
+和田　　拓也	4.90	0.18	3.7	４		G1	６		G1	１		IP	３		IP	５		IP	２		IP	５		G1	２		IP	５		IP	６	4	IP
+佐野　　優都	3.50	0.15	3.0	５		IP	４		IP	５		IP	６		IP	６		IP	２		IP	４	6	IP	６		IP	２		IP	４		IP
+川尻　　泰輔	4.60	0.16	3.2	３		IP	２		IP	５		IP	５		IP	３		IP	３		G3	５		G3	２		IP	４		IP	５		IP
+正木　　聖賢	4.40	0.19	3.6	３	3	IP	２	2	IP	３	2	IP	４	3	IP	４	3	IP	３	3	IP	５	4	IP	Ｆ	2	IP	３	4	IP	５	2	IP

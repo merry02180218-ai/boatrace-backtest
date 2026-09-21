@@ -1,0 +1,8 @@
+data=
+1	0
+嶋田　　貴支	8.00	0.15	2.9	３		IP	５		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	３		IP
+島川　　光男	4.90	0.17	3.8	３		IP	４		IP	１		IP	６		IP	２		IP	４		IP	３		IP	３	3	IP	４		IP	Ｆ		IP
+登玉　　隼百	6.50	0.13	3.3	３		IP	２	6	IP	２		IP	３		IP	３		IP	５		IP	３		IP	１		IP	４		IP	２		IP
+板倉　　敦史	5.10	0.17	3.9	６		IP	１		IP	４		IP	３		IP	５		IP	３		IP	４		IP	４		IP	２		IP	３		IP
+北川　　潤二	6.10	0.20	4.0	６	3	IP	３	2	IP	４	2	IP	５		IP	１	2	IP	４	4	IP	２	3	IP	２	2	IP	４	2	G3	１	4	G3
+川田　　正人	2.60	0.25	5.5	５		IP	３		IP	６		IP	６		IP	６		IP	４		IP	４	5	IP	５		IP	４		IP	６		IP

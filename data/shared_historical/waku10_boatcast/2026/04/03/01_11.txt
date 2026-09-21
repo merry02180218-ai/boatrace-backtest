@@ -1,0 +1,8 @@
+data=
+1	0
+金田　　　諭	9.90	0.14	2.7	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		G1
+平田　　忠則	7.20	0.18	3.1	２	3	G3	１		G3	２		IP	１		IP	３		IP	３		IP	６		IP	２		IP	２		IP	３		IP
+中　　　亮太	5.00	0.16	2.6	１		G3	３		IP	４		IP	５		IP	４		IP	３	2	IP	２		G2	４		IP	６		IP	４		IP
+間嶋　　仁志	5.00	0.20	4.0	６		IP	６	2	IP	２		IP	２		IP	５		IP	１		IP	２		IP	５		IP	３	2	IP	４		IP
+笠置　　博之	7.60	0.12	2.3	１	4	IP	１		IP	１	6	IP	１		IP	１		IP	１		IP	５		IP	５		IP	１		IP	５	6	IP
+黒崎　　竜也	5.30	0.15	3.2	３		IP	３		IP	６		IP	３		IP	４		IP	４		IP	４		IP	４		IP	２		IP	１		IP

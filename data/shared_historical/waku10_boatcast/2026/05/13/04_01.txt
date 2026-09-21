@@ -1,0 +1,8 @@
+data=
+1	0
+山谷　　　央	5.70	0.15	3.8	１		IP	４		IP	５		IP	１		IP	５		IP	６		IP	５		IP	１		IP	３		IP	１		IP
+峰重　　力也	5.20	0.11	1.7	２		IP	４		IP	２		IP	４		IP	３		IP	５		IP	４		IP	２		IP	４		IP	４		IP
+一色　　凌雅	3.90	0.20	4.2	３	2	IP	５		IP	４		IP	２		IP	４		IP	６		IP	６		IP	６		G3	１		IP	５	2	IP
+宮下　　元胤	4.40	0.18	3.9	２		IP	６		IP	５		IP	３		IP	３		IP	６		IP	４		IP	４		IP	２		IP	４		IP
+岸本　　　隆	2.60	0.18	3.7	５	6	IP	５		IP	４		G3	５		IP	６		IP	３		IP	４		IP	５		IP	５		IP	６		IP
+寺本　　昇平	4.10	0.15	3.3	４		IP	３		IP	６		IP	３		IP	２		IP	５		IP	２	5	IP	５		IP	５		IP	５		IP

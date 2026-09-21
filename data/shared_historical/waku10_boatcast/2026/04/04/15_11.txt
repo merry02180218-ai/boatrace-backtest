@@ -1,0 +1,8 @@
+data=
+1	0
+関野　　　文	8.80	0.17	2.6	４		IP	１		IP	１		IP	１		G3	１		G3	２		IP	１		IP	３		IP	１		G3	１		G3
+富永　　修一	6.90	0.18	3.2	２		IP	５		IP	２		IP	１		IP	２		IP	４		IP	３		IP	１		IP	５		IP	１	3	G1
+林　　　祐介	4.60	0.16	3.4	４		IP	２		IP	４		IP	３		IP	４		IP	５		IP	６		IP	３		IP	１		IP	６		G3
+山戸　　信二	4.10	0.14	2.7	３		IP	５		IP	４	5	IP	６		IP	４		IP	３		IP	５		IP	２		IP	４		IP	４		IP
+新田　　芳美	4.10	0.20	3.6	５	6	IP	４		IP	２		IP	５		IP	３		IP	６		IP	３	6	G1	２		IP	５		IP	６		IP
+小野　　達哉	4.00	0.13	2.7	６		IP	６		IP	４		IP	６		IP	６		IP	３	5	IP	３	5	IP	２	5	IP	２		IP	４		IP

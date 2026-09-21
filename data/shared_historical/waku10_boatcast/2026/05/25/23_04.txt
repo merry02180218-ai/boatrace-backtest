@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　太亮	8.70	0.14	3.1	１		IP	１		IP	２		IP	１		IP	６		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+鳥飼　　　眞	5.60	0.16	3.4	２		IP	転		IP	１		IP	１		IP	５		IP	５		IP	１		IP	２		IP	４		IP	５		IP
+妻鳥　　晋也	6.20	0.18	4.1	５		IP	２		IP	２		IP	４		IP	２		IP	２		IP	１		G3	３		G3	３		G3	５		IP
+樋口　　　亮	5.60	0.14	3.4	５	5	IP	２		IP	４		IP	３		IP	５		IP	５		IP	１	3	IP	２		IP	４	5	IP	１		IP
+大西　　　賢	3.11	0.21	4.1	６	6	IP	４		IP	６		IP	５		IP	Ｆ		IP	５		IP	３		IP	３		IP	３		IP	エ		IP
+渡辺　　浩司	5.80	0.14	3.6	３		IP	４		IP	３		IP	４		IP	３		IP	３		G1	４		G1	４		IP	２		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+岩井　　　繁	5.20	0.17	3.0	２		IP	２		IP	２		IP	４		IP	２		IP	２		IP	４		IP	６		IP	６		IP	５		IP
+小野　　　桜	5.40	0.16	3.9	２		IP	２		IP	３		IP	４		IP	２		IP	４		IP	２		G3	３		G3	転		IP	５		IP
+西野　　翔太	6.70	0.15	3.2	３	4	IP	３		IP	２	2	IP	３		IP	４		IP	１		IP	４		IP	４		IP	２		IP	２		IP
+山川　　波乙	3.80	0.21	4.3	５		IP	５		IP	４		IP	６		IP	２		IP	１		IP	６		G3	５		IP	４		IP	４		IP
+赤坂　　俊輔	4.60	0.14	3.5	４		IP	４		IP	５		G1	２		IP	３		IP	６		G1	３		G1	６	6	G1	４		IP	３		IP
+乙藤　　智史	4.78	0.16	3.5	５		IP	３		IP	１		IP	３		IP	６	5	IP	５		IP	５		IP	２		IP	３		IP	転	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+秋元　　　哲	10.10	0.11	2.4	１		IP	１		G1	２	2	IP	１		IP	１		IP	１		IP	１		G1	１		G1	２		IP	１		IP
+中辻　　博訓	7.20	0.16	2.6	３		IP	５		G3	５		G3	１		IP	２		IP	２		IP	２		IP	２		IP	１		IP	１		IP
+山崎　　昂介	6.70	0.15	2.9	２		IP	１		IP	１		IP	４		IP	２		IP	２		IP	６		IP	２		IP	２		IP	５		IP
+寳田　　亮治	4.30	0.27	3.7	６		IP	５		IP	５		IP	１		IP	４		IP	２		IP	４		IP	４		IP	３		G3	５		G3
+田川　　大貴	3.70	0.14	2.7	５		IP	２		IP	６		IP	４		IP	１		IP	５		IP	５		IP	５		IP	５	4	IP	４		IP
+高木　　茉白	3.20	0.13	2.5	４		IP	３		IP	４		IP	５		G3	５		IP	４		IP	３		G3	６		G3	６		IP	５		IP

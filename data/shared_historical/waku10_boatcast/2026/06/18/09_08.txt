@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　聖司	5.10	0.17	3.0	５		IP	６		IP	３		IP	４		IP	１		IP	１		IP	３		IP	Ｆ		IP	５		IP	１		IP
+中村　　泰平	7.30	0.14	2.8	２		IP	３		IP	２		IP	４		IP	３		IP	１	3	IP	２		IP	２		IP	２		G3	３		G1
+小澤　　　学	5.40	0.22	5.3	４		IP	５		IP	１		IP	１		IP	３		IP	２		IP	５		IP	５		IP	３		IP	４		IP
+石川　　哲秀	4.40	0.14	2.6	２		IP	６	6	IP	４		IP	２		IP	６		IP	３		IP	４		IP	６		IP	６		IP	１		IP
+横川　　聖志	3.90	0.14	2.8	Ｆ		IP	６		IP	２	4	IP	５		IP	３		IP	６		IP	２	4	IP	３		IP	４	4	IP	６	6	IP
+古田　　祐貴	2.50	0.21	5.0	５		IP	６		G3	３		G3	４		IP	５		IP	５		IP	６		G3	５		G3	６		IP	４		IP

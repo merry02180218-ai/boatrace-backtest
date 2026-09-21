@@ -1,0 +1,8 @@
+data=
+1	0
+村本　　大成	6.20	0.19	4.0	３		IP	１		IP	６		IP	２		IP	１		IP	５		IP	４		IP	１		IP	６		IP	１		IP
+佐藤　　太亮	4.60	0.15	3.6	３		IP	６		IP	４		IP	２		IP	４		IP	５	3	IP	２		IP	２		IP	４		IP	６		IP
+中本　　大樹	5.30	0.14	2.4	１	4	IP	２	6	IP	２		IP	３	4	IP	６		IP	２		IP	４	4	IP	６		IP	４		IP	５		IP
+小林　　礼央	2.40	0.16	3.5	６	5	IP	４		IP	６		IP	５		IP	６		IP	５		IP	６		IP	５		IP	５		IP	２		IP
+甲斐　　貴大	1.00	0.21	4.3	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP
+青木　　　蓮	6.00	0.13	2.6	３	4	IP	４	5	IP	３	4	IP	４		IP	３		IP	１	5	IP	３		IP	１		IP	３		IP	５		IP

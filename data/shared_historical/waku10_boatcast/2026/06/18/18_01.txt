@@ -1,0 +1,8 @@
+data=
+1	0
+松崎　祐太郎	8.60	0.16	2.6	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	３		IP	５		IP	１		IP
+澤崎　　雄哉	6.00	0.16	3.8	１	3	IP	５		IP	５		IP	５		IP	４		IP	２		IP	１		IP	１		IP	３	3	IP	３		IP
+岩崎　　正哉	5.70	0.19	4.2	３		IP	１		IP	４		IP	６		IP	４		IP	２		IP	１		G3	４		IP	３		IP	４		IP
+中村　　将隆	3.70	0.16	3.8	１		IP	６	6	IP	３	5	IP	４		IP	４		IP	３		IP	６		G3	５	5	G3	５		IP	６		IP
+岸本　　　隆	3.50	0.18	3.4	５		IP	３		IP	３	4	IP	５	6	IP	５		IP	４		G3	５		IP	６		IP	３		IP	４		IP
+荻野　　裕介	3.70	0.21	5.0	３		IP	４		IP	６		IP	６		IP	６		IP	３		G3	３		G3	４		G3	５		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+渡辺　　浩司	9.40	0.11	3.0	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	４		G1
+柴田　　　光	5.56	0.16	4.2	４		IP	６		IP	５		G1	５		G1	４		G1	欠		IP	２		IP	２		IP	１		G3	２		G3
+伊藤　　玲奈	5.40	0.23	4.0	２		IP	１		IP	５		IP	３		IP	４		IP	４		G3	４		IP	２		IP	３		IP	５		IP
+向井　　美鈴	4.60	0.22	3.7	１		IP	２		IP	５		IP	３		IP	４		IP	４		IP	６		G1	４		G1	６		IP	４		IP
+樋口　　　亮	5.10	0.21	4.1	Ｆ		IP	４		IP	２		IP	１		IP	６		IP	４		IP	５	6	IP	３		IP	３		IP	１		IP
+三嶌　さらら	3.90	0.18	3.9	３		IP	３		IP	４		IP	４		IP	３		IP	６		IP	５		IP	６		IP	２		IP	６		IP

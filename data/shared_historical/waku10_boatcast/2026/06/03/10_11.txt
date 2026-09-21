@@ -1,0 +1,8 @@
+data=
+1	0
+屋良　　龍紀	6.10	0.10	1.5	６		IP	４		IP	１		IP	２		IP	３		IP	５		IP	２		IP	１		IP	５		IP	１		IP
+水谷　　理人	6.30	0.15	3.6	３		G3	１		IP	４		IP	２		IP	５		IP	２		IP	４		G1	２		IP	３		IP	３	3	IP
+畑田　　汰一	5.50	0.12	3.2	６	2	IP	３		IP	１	4	IP	１		IP	４		G1	５		G1	落		G1	６		IP	２	2	IP	転		IP
+遠藤　　圭吾	2.70	0.19	4.1	５		IP	３		IP	４		IP	６	6	IP	６		IP	４		IP	５		IP	Ｌ		IP	３		IP	６	5	IP
+中野　　仁照	5.00	0.18	3.9	３		IP	２		IP	Ｆ		IP	１		IP	２		IP	４		IP	６	6	G1	４		G1	６	6	IP	３		IP
+西川　　拓利	3.30	0.15	3.5	５		IP	５		IP	４		IP	４		IP	４		G3	４		G3	６		IP	４		IP	３		IP	５		IP

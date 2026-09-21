@@ -1,0 +1,8 @@
+data=
+1	0
+藤原　　早菜	6.90	0.20	4.3	６		IP	２		IP	３		IP	１		IP	１		IP	２		IP	４		IP	５		IP	１		G3	１		G3
+山本　　梨菜	6.40	0.18	4.4	２		IP	５		IP	４		IP	１		IP	エ		IP	１		IP	２		IP	２		IP	１		G3	４		G3
+伊藤　　玲奈	5.60	0.20	3.5	４		IP	３		IP	２		IP	１		IP	５		IP	３		IP	４		IP	４		G3	４		IP	２		IP
+三嶌　さらら	5.10	0.15	2.9	６	6	IP	２		IP	２		IP	４		IP	３		IP	３		IP	５		IP	５		IP	４		IP	１		IP
+中西　　月輝	1.40	0.22	4.6	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	４	6	IP	５	6	IP	６	6	IP	６	6	IP
+西岡　　育未	2.20	0.16	4.1	６		IP	５		IP	６		IP	６		IP	６		IP	４		G3	５	5	G3	２		G3	６		IP	６		IP

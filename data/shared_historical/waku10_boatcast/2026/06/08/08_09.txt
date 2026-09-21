@@ -1,0 +1,8 @@
+data=
+1	0
+仲　　　航太	7.00	0.14	2.1	４		IP	２		IP	１		IP	１		IP	Ｆ		IP	３		IP	２		IP	１		IP	１		IP	４		IP
+上野　　拓馬	4.90	0.14	3.1	３		IP	１		IP	６		IP	３		IP	３		IP	５	4	IP	４		IP	３		IP	４		IP	４		IP
+國崎　　良春	5.90	0.15	3.0	４		IP	２		IP	３		IP	４		IP	６		G3	１		IP	５		IP	２		IP	２		IP	２		IP
+谷口　　健一	3.60	0.17	3.6	４		IP	４	5	IP	５		IP	４		IP	３		IP	４		IP	５		IP	４	5	IP	４		IP	５		IP
+古田　　祐貴	4.20	0.14	3.2	４		G3	５		IP	５		IP	３		IP	２		G3	３		IP	４		IP	３	4	IP	５		IP	６		G1
+長野　　未来	1.20	0.23	4.2	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP

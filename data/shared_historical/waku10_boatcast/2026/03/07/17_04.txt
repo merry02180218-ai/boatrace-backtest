@@ -1,0 +1,8 @@
+data=
+1	0
+大賀　龍之介	7.60	0.19	2.6	６		IP	２		IP	１		IP	６		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP
+白井　　友晴	6.20	0.17	3.8	２	3	IP	２		IP	４		IP	２		IP	１		IP	３		IP	３		IP	５		IP	２		IP	５		IP
+上條　　嘉嗣	7.20	0.18	3.8	３		IP	１		IP	２		IP	２		IP	２		IP	２		IP	１		IP	５		IP	３		IP	４		IP
+鈴木　　裕隆	5.10	0.16	4.0	３		IP	６	5	IP	１		IP	４		IP	４		IP	４		IP	４		IP	４		IP	１		IP	４		IP
+吉田　　和仁	4.90	0.22	3.6	６		IP	３		IP	３	6	IP	６		IP	２		IP	２		IP	５		IP	１		IP	６		IP	３		IP
+若狭　奈美子	4.70	0.19	4.4	４		IP	３		G3	５		G3	６		G1	４		G1	２		IP	３		IP	５		IP	３		IP	３		IP

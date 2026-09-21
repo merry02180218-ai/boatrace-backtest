@@ -1,0 +1,8 @@
+data=
+1	0
+羽野　　直也	10.40	0.13	3.8	１		G1	１		G2	１		G2	１		G1	１		IP	２		IP	１		G1	１		G1	１		IP	１		IP
+西岡　　顕心	7.90	0.12	2.5	２		G1	２		G2	２		G2	２		G1	６		G1	４		G1	１		G1	１		G1	４		IP	２		IP
+柳生　　泰二	7.70	0.16	2.3	３		G1	２		SG	３	4	IP	２		IP	２		IP	１	4	G1	３	4	IP	２		IP	１		IP	６		G1
+仲谷　　颯仁	6.50	0.17	4.4	２		IP	５		SG	３		SG	３		G1	２		G1	１		G1	６		G1	４		G1	５	5	G1	２		IP
+栗城　　　匠	5.10	0.18	3.3	３		IP	１	4	IP	５	6	G1	６		IP	妨		G1	３		IP	１		IP	５		IP	２	4	IP	４		G1
+常住　　　蓮	5.40	0.18	3.8	４	5	IP	２	5	SG	３		SG	５		IP	４		G1	４		G1	３	3	IP	４		IP	３		G1	５		G1

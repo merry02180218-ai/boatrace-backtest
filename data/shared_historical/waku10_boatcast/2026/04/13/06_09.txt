@@ -1,0 +1,8 @@
+data=
+1	0
+長谷川　晴哉	9.30	0.14	2.3	２		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+坂本　　雄紀	6.80	0.18	3.4	３		IP	１		IP	４		IP	４		IP	１		IP	５		IP	２		IP	１		IP	２		IP	３		IP
+田中　　宏典	4.30	0.19	3.2	４		IP	３		IP	６		IP	３		IP	４		IP	３		IP	５		IP	４		IP	４		IP	３		IP
+遠藤　　圭吾	2.40	0.18	3.3	４		IP	５		IP	Ｌ		IP	３		IP	６	5	IP	４		IP	６		IP	５		IP	５		IP	５		IP
+瀬川　　大地	3.20	0.11	3.7	４		IP	４	6	IP	５	6	IP	６		IP	６		IP	６		IP	４		IP	２		IP	３		IP	６		IP
+浦野　　　海	3.10	0.23	4.3	６		IP	６		IP	２		IP	６		IP	６		IP	２		IP	２	5	IP	６		IP	６		IP	６		IP

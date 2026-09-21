@@ -1,0 +1,8 @@
+data=
+1	0
+岩川　　仁士	8.10	0.12	2.6	１		IP	４		IP	１		IP	２		IP	１		IP	２		IP	１		IP	６		IP	１		IP	１		IP
+井上　　恵一	4.80	0.18	3.2	５		IP	５		IP	４		IP	１		IP	４		IP	３		IP	５		IP	３		IP	３		IP	３		IP
+石田　　貴洋	7.40	0.12	2.6	１	5	IP	２		IP	２		IP	１		IP	５		IP	１		IP	１		IP	５		IP	１		IP	４	4	IP
+戸塚　　邦好	6.10	0.13	2.9	１		IP	６		IP	４		IP	２		IP	２		IP	４		IP	３		IP	４		IP	３	5	IP	２		IP
+小野　　勇作	3.70	0.16	4.4	５		IP	６		IP	４		IP	４		IP	３		IP	４		IP	２		IP	５		IP	４		IP	５		IP
+倉田　　茂将	3.50	0.14	2.9	５		IP	６		IP	４	5	IP	５		IP	４		IP	６	4	IP	４		IP	２		IP	６		IP	２		IP

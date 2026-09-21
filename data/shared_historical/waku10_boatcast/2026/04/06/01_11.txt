@@ -1,0 +1,8 @@
+data=
+1	0
+浜先　　真範	9.50	0.13	2.3	１		IP	１		IP	１		IP	１		IP	１		IP	２		G1	１		IP	２		IP	２		IP	１		IP
+高橋　　英之	4.80	0.13	3.4	２		IP	２		IP	６		IP	２		IP	３		IP	６		IP	３	3	IP	５		IP	５		IP	３		IP
+金田　　　諭	6.20	0.20	3.6	２		IP	２		IP	６		IP	５		IP	６		IP	３		IP	２		IP	１		G1	３		G1	２	4	IP
+吉川　　昭男	6.40	0.17	3.3	１		IP	４	3	IP	１	2	IP	３	3	IP	３	2	IP	２	3	IP	３	2	IP	６		IP	６		IP	１	2	IP
+花田　　和明	5.10	0.17	3.2	５	2	IP	１	4	IP	４		IP	５	2	IP	２	3	IP	６	2	IP	３	3	G3	５	4	G3	１	2	IP	３	3	IP
+寺本　　重宣	3.70	0.17	3.6	６		IP	４		IP	５		IP	４		IP	３		G3	４	5	G3	５		IP	４		IP	３		IP	４		IP

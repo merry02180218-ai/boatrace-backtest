@@ -1,0 +1,8 @@
+data=
+1	0
+木幡　　純也	6.20	0.17	3.3	４		IP	２		IP	４		IP	１		IP	２		IP	５		IP	４		IP	４		IP	１		IP	２		IP
+柴田　　朋哉	6.10	0.21	4.1	６		IP	２		IP	４		IP	２		IP	２		IP	４		IP	３		IP	３		IP	２		IP	２		IP
+濱本　　優一	6.70	0.13	2.8	６	4	G3	２		IP	２		IP	２		IP	２		IP	３		IP	２		G3	６		G3	２		G3	１	4	IP
+一柳　　和孝	4.60	0.11	2.5	３		IP	５		IP	６	5	IP	５		IP	１		IP	４		IP	３		IP	３		IP	６		IP	２		IP
+香川　　素子	4.40	0.18	3.3	５		G3	３		G3	３	4	G3	Ｆ		IP	５		IP	３		G1	５		G1	３		IP	５		IP	２		IP
+高橋　　　勲	4.44	0.16	3.1	４		IP	３	5	IP	５		IP	１	4	IP	５		IP	３	4	IP	５	4	IP	２	5	IP	転		IP	Ｆ	4	IP

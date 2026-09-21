@@ -1,0 +1,8 @@
+data=
+1	0
+梶野　　学志	9.80	0.10	1.5	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+藤田　　竜弘	4.50	0.18	4.6	２		IP	５		IP	６		IP	５		IP	４		IP	２		IP	６		IP	６		IP	２		IP	２		IP
+寺島　　吉彦	5.20	0.18	3.4	２		IP	６		IP	４		IP	３		IP	２		IP	６	4	IP	２		IP	４	6	IP	２		IP	４		G3
+黒田　　誠司	3.80	0.16	2.9	６		IP	４		IP	１		IP	５	6	IP	５		IP	３		IP	４		IP	４		IP	４		IP	６		IP
+坂　　咲友理	3.80	0.20	3.7	４		G3	５		IP	４		IP	３		IP	４		IP	３		IP	４		G3	３		G3	６		IP	６		IP
+山口　　隆史	2.60	0.22	4.8	５		IP	４		IP	５		IP	６		IP	４		IP	５		IP	４		IP	４		IP	５		IP	６		IP

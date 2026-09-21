@@ -1,0 +1,8 @@
+data=
+1	0
+岩崎　　麗子	3.00	0.23	3.8	３		IP	６		IP	６		IP	６		IP	４		IP	６		IP	６		IP	１		IP	６		IP	４		G3
+西橋　　奈未	5.70	0.15	3.4	３		G2	５		IP	４		IP	１		IP	３		G1	２		G1	３		G1	６		IP	４		G3	３		G3
+福島　　陽子	4.10	0.20	3.5	２		IP	４	4	IP	５		IP	５		IP	４		IP	６		G3	２		G3	３	4	IP	４		IP	５		IP
+木村　紗友希	3.70	0.19	3.8	３		IP	５		IP	５		IP	４		IP	６		IP	６		IP	４		IP	６		IP	２		IP	２		IP
+豊田　　　結	3.80	0.16	2.3	５		IP	１		IP	４		IP	４		IP	５		IP	６		IP	６		IP	３		IP	４		G3	４		IP
+濱崎　寿里矢	2.20	0.26	4.2	５	5	IP	４		IP	６		IP	６		IP	５	5	IP	６		IP	４		IP	６		G3	４		IP	５		IP

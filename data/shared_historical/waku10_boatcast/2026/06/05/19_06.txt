@@ -1,0 +1,8 @@
+data=
+1	0
+中越　　博紀	6.90	0.14	3.1	１		IP	６		IP	１		IP	４	2	IP	２		IP	３		IP	１		IP	４		IP	２		IP	２		G3
+中尾　　彩香	5.50	0.16	2.1	２		IP	４		IP	５		IP	１		IP	３		IP	６		IP	２		IP	５		G3	２		G3	３		IP
+広瀬　　聖仁	4.40	0.13	2.9	４		IP	４		IP	１		IP	２		IP	５		IP	５		IP	５		IP	２		IP	５	4	IP	５		IP
+山田　　　丈	5.00	0.18	3.8	２		IP	４		IP	４		IP	４		IP	４		IP	５		IP	５		IP	３		IP	２		IP	２		IP
+木村　　光宏	3.40	0.14	3.1	６		IP	６		IP	２		IP	３		IP	５		IP	４		G3	５		IP	５		IP	５		IP	３	4	IP
+山浦　　　槙	1.70	0.28	4.9	６		IP	６		IP	６		IP	５		IP	５		IP	５		IP	４		IP	６		IP	５		IP	６		IP

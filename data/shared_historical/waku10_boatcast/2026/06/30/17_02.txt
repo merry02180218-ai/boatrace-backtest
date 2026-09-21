@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　雅之	5.50	0.17	3.2	１		IP	５		IP	３		IP	１		IP	５	2	IP	２		IP	６		IP	５		IP	４		IP	１		IP
+中島　　昂章	7.30	0.20	3.9	２		IP	１	1	IP	６		IP	３		IP	１		IP	３		IP	３		IP	１		IP	１		IP	３		IP
+深川　麻奈美	5.00	0.19	3.8	６		IP	４		IP	１		IP	４	2	IP	５		G2	３		IP	３		IP	５		IP	３		IP	２		IP
+大塚　　浩二	4.90	0.19	3.6	２		IP	５		IP	４		IP	３		IP	４		IP	３		IP	６		IP	３		IP	３		IP	３		IP
+久保田　凪紗	1.40	0.12	4.0	５		IP	５		IP	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	６	6	IP
+丸山　　祐也	2.60	0.25	5.7	５		IP	６		IP	４		IP	５		IP	５		IP	６		IP	５		IP	５		IP	４	5	IP	３	4	IP

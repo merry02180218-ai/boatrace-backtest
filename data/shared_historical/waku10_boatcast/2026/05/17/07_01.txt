@@ -1,0 +1,8 @@
+data=
+1	0
+水野　　望美	8.80	0.16	2.7	１		IP	１		G3	１		IP	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP	４		IP
+武藤　　綾子	4.80	0.18	4.0	４		IP	２		G3	５		IP	４		IP	３		G3	４		G3	４		IP	３		IP	２		IP	５		IP
+島倉　　　都	3.70	0.15	2.6	６		IP	５		IP	４	4	IP	１		IP	４		IP	３		IP	４		IP	６		G3	６		G3	４		G3
+藤本　紗弥香	3.50	0.19	3.7	５		IP	６		IP	３		IP	１		IP	３		IP	５		IP	５		IP	６		IP	６		IP	４		G3
+井澤　　聖奈	2.20	0.24	4.7	６		IP	６		IP	６		IP	５		IP	５		IP	３		IP	６		IP	３		IP	６	6	IP	６		IP
+村上　　奈穂	3.30	0.25	4.9	６		IP	６		IP	４		IP	３	5	IP	６		IP	４		IP	５		IP	５		IP	１	5	IP	５		IP

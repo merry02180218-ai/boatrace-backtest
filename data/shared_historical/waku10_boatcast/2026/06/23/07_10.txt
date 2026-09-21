@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　孝明	8.90	0.15	3.2	６		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+伊藤　　喜智	6.00	0.19	4.4	１		IP	５		IP	５		IP	３		IP	３		IP	２		IP	３		IP	３		IP	２		IP	３		IP
+佐藤　　右京	4.40	0.25	4.1	２		IP	４		IP	３		IP	３		IP	６		IP	６		IP	３		IP	１		IP	５	4	IP	落		IP
+野口　　勝弘	6.20	0.15	2.7	３		IP	２		IP	２		IP	４		IP	５		IP	３		IP	１		IP	３		IP	６		IP	１		IP
+木村　　亮太	3.90	0.14	2.4	３		IP	５		IP	３		IP	３		IP	５		IP	６		IP	６		IP	１		IP	４		IP	６		IP
+楠原　　正剛	3.90	0.16	3.9	６		IP	５	5	IP	４		G3	１	4	IP	４	5	IP	３		IP	５		IP	４		IP	５		IP	４		IP

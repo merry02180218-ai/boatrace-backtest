@@ -1,0 +1,8 @@
+data=
+1	0
+西舘　　果里	7.60	0.13	2.4	４		IP	１		IP	３		IP	２		IP	４		IP	１		IP	３		IP	２		IP	１		IP	１		IP
+汐崎　　正則	4.60	0.19	4.2	３		IP	４		IP	３		IP	４		IP	２		IP	１		IP	６		IP	６		IP	４		IP	５		IP
+古川　　誠之	5.60	0.15	2.7	３		IP	４		IP	５		IP	１		IP	１		IP	５		IP	３		IP	４		IP	２		IP	４		IP
+菅野　はやか	3.50	0.16	3.3	４		IP	４		G3	４		G3	２		IP	６		IP	４		IP	６		IP	６		G3	２		IP	欠		IP
+井川　　大作	5.50	0.15	3.0	２		IP	４		IP	２		IP	３		IP	６		IP	５		IP	４		IP	１		IP	１		G3	５		IP
+川上　　清人	3.80	0.18	3.9	６		IP	３		IP	２		IP	５	5	IP	６		IP	６		IP	６		IP	１	5	IP	５		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+篠原　　晟弥	9.30	0.11	2.4	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	５		G2	１		IP	１		IP
+仲谷　　颯仁	7.11	0.15	3.4	１		IP	２		G1	２		G1	５		IP	２		IP	６		SG	６		G1	２		G1	１		G1	落		G1
+新開　　　航	8.00	0.14	3.5	２		IP	１		IP	３		G1	４		G1	２		G2	１		IP	１		G1	５		G1	１		IP	３		G1
+竹下　　大樹	5.80	0.15	3.4	２		IP	３		G1	１		IP	４		IP	５		IP	４		IP	６		IP	３		IP	３		G3	３		G3
+宮脇　　遼太	4.80	0.18	3.9	２		IP	２		IP	５		IP	５		IP	４		IP	２		IP	３		IP	４		IP	４		IP	５		IP
+渡辺　　浩司	6.00	0.12	3.2	３		IP	４		IP	３		IP	３		G1	４		G1	４		IP	２		IP	３		IP	３		IP	２		IP

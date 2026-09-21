@@ -1,0 +1,8 @@
+data=
+1	0
+室田　　泰史	7.80	0.08	1.4	１		IP	Ｆ		IP	２		IP	１		IP	１		IP	２		IP	５		IP	１		IP	１		IP	１		IP
+向井　　美鈴	7.30	0.20	3.5	２		IP	３		IP	４		IP	４		IP	２		IP	２		G1	１		IP	２		IP	３		IP	１		IP
+松本　　博昭	6.50	0.15	4.1	４		IP	６		IP	２		IP	２		IP	２		IP	２		IP	３		IP	１		IP	５		IP	１		IP
+久保原　秀人	4.70	0.18	3.9	５		IP	２		IP	５		IP	５		IP	２	3	IP	４		IP	６		IP	２		IP	２		IP	４		IP
+城間　　盛渚	4.10	0.21	3.6	３		IP	４		IP	４		IP	５		IP	４		IP	３		IP	６		IP	２		IP	４		IP	５		IP
+土屋　　　蘭	2.50	0.19	4.7	５		IP	６		IP	６		IP	３		IP	５		IP	５		IP	６		IP	２		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+内堀　　　学	7.70	0.17	4.2	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	３		IP	６		IP	４		IP
+前沢　　丈史	6.80	0.10	2.5	３		IP	２		G2	３		G2	４		IP	２		IP	３		IP	２		IP	２		IP	４		G3	２		G3
+上之　　晃弘	6.60	0.15	3.0	１		IP	１		G3	２		IP	２		IP	３		IP	４		IP	３		IP	５		IP	４		IP	２		IP
+牧原　　　崇	5.20	0.14	2.8	２		IP	５		IP	４		IP	４		IP	２		IP	３		IP	４		IP	５		IP	２	5	IP	３		IP
+松崎　祐太郎	5.40	0.18	2.8	２	4	IP	５		IP	５		IP	１		IP	２		IP	４		IP	４	4	IP	４		IP	４		IP	２		IP
+西岡　　蒼志	4.30	0.15	2.8	５		IP	３		IP	２		IP	５		IP	１	5	IP	５		IP	５		IP	４		IP	６		IP	３		IP

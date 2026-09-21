@@ -1,0 +1,8 @@
+data=
+1	0
+辻　　　栄蔵	9.30	0.17	3.2	１		G2	１		G1	３		G1	１		IP	１		IP	１		IP	３		G1	１		G1	３		IP	２		G1
+村岡　　賢人	7.20	0.14	2.5	４		G1	５		G1	２		G1	１		IP	１		G1	３		IP	３		IP	２		IP	２		IP	３		IP
+吉田　　俊彦	4.10	0.16	3.7	５		G1	４		G1	１		G1	３		IP	５		IP	５		G1	５		G1	３		IP	６		IP	６		IP
+西野　　雄貴	5.90	0.13	2.5	４		IP	４		IP	３		IP	３		IP	３		IP	２		G1	４		G1	６	5	IP	１		IP	２		IP
+中村　　魁生	5.90	0.14	2.9	３	6	IP	２		G1	５		IP	４		IP	２		IP	３		IP	４		IP	１	4	IP	３		IP	５		IP
+大田　　直弥	3.80	0.22	4.0	４	5	IP	５		IP	５		IP	５		IP	３		IP	２		IP	５		IP	５		IP	３		IP	４		IP

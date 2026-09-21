@@ -1,0 +1,8 @@
+data=
+1	0
+浅見　　宗孝	5.80	0.16	3.3	４		IP	４		IP	２		IP	１		IP	５		IP	２		IP	４		IP	５	3	IP	３		IP	１		G3
+登玉　　隼百	4.20	0.18	2.9	４	3	IP	６		IP	５		IP	１	4	IP	６		IP	１		IP	４		IP	５		IP	５		IP	４		IP
+守田　　俊介	6.00	0.12	2.9	５	4	SG	３		IP	２		G1	３		G1	５		G1	２		IP	５		IP	２		IP	６	4	G1	１		G1
+宗行　　治哉	6.10	0.18	3.6	２		IP	３		IP	４		IP	３		IP	２		IP	２		IP	５		G2	４		G2	５		IP	１	3	IP
+西丸　侑太朗	6.20	0.16	2.7	５		IP	２		IP	３		G1	３		IP	４		IP	３		IP	２		IP	３		G1	２		IP	３		IP
+中尾　　彩香	4.00	0.15	3.4	５		G3	４		G3	６		IP	４		IP	３		IP	５		IP	３	5	IP	２	5	IP	３		G3	６		G3

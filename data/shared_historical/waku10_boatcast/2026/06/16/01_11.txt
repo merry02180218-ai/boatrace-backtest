@@ -1,0 +1,8 @@
+data=
+1	0
+清水　　愛海	9.40	0.16	3.8	１		IP	３		SG	１		SG	３		IP	１		IP	１		G2	１		IP	１		IP	３		IP	１		G1
+小林　　文彦	5.90	0.19	3.7	２	3	IP	４		IP	５		IP	６		IP	１		IP	２		IP	１		IP	４		IP	３		IP	３		IP
+吉田　　一郎	6.70	0.17	2.9	２		IP	２	4	IP	４		IP	２		IP	３		IP	３		IP	１		IP	２		IP	２		IP	６		IP
+山田　　亮太	5.80	0.15	2.6	３		IP	３		IP	１		IP	５		IP	３		G2	４		G2	３		IP	４		IP	３	5	G3	３	5	G3
+岡本　翔太郎	5.56	0.13	3.0	３	4	IP	５		IP	５		IP	２		IP	落		IP	３		IP	３		IP	１		IP	２		IP	５		G3
+尾上　　雅也	4.30	0.13	3.5	６		IP	６		G1	４		IP	２	5	IP	４		IP	３		IP	４		G3	６		IP	３		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+藤岡　　俊介	8.90	0.10	1.8	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	６		IP	１		IP	１		IP	１		IP
+中澤　　和志	6.00	0.17	3.7	６		IP	６		IP	１		IP	２		IP	３		IP	２		IP	２		IP	５		G1	１		G1	５		IP
+樋江井　　舞	5.60	0.17	3.0	６		G3	１		G3	５		IP	３		IP	１		IP	３		IP	１		IP	６		IP	４		IP	３		IP
+明石　　正之	4.80	0.18	3.2	４		IP	３		IP	３		IP	３		IP	３		IP	３	5	IP	妨		IP	３		IP	４		IP	４		G3
+鈴木　　章司	3.90	0.19	4.1	４		IP	４	4	IP	５		IP	４		IP	５		IP	３		IP	６		IP	２		IP	４		IP	４		IP
+角　　ひとみ	2.50	0.21	4.7	５		IP	６		IP	４		G3	３	5	G3	６		G3	４		G3	６		IP	６		IP	４		IP	６		G3

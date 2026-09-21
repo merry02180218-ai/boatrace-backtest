@@ -1,0 +1,8 @@
+data=
+1	0
+君島　　秀三	8.60	0.14	3.1	１		IP	３		IP	５	2	IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+石川　　真二	6.90	0.16	3.3	１	1	IP	５		IP	３		G3	１	1	G3	６	1	G3	２		IP	３		IP	２	1	IP	１	1	IP	２		IP
+川原　　正明	6.00	0.12	2.1	２		G3	６		IP	３		IP	３		IP	３		G3	１		G3	６		IP	３		IP	４		IP	１		IP
+武田　　光史	5.50	0.16	3.2	２		IP	３		IP	４		IP	４	3	IP	６		IP	１		IP	１		IP	６		IP	５		IP	３		IP
+古川　　誠之	4.70	0.13	2.5	５		IP	５		IP	２		IP	３		IP	６		IP	３		IP	３		IP	５		IP	３		IP	２		IP
+堤　　　　昇	2.80	0.19	4.0	４	4	IP	５		IP	３	4	IP	５		IP	４	4	IP	６		G3	６		G3	６		IP	６	5	IP	４	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　純平	10.20	0.12	1.8	１		G1	１		G1	２		G1	１		G1	１		G1	２		IP	１		IP	１		IP	１		IP	１		IP
+寺田　　空詩	6.40	0.16	3.0	１		IP	５		IP	１		IP	２		G3	２		G3	２		G3	３		IP	４		IP	落	3	IP	２	3	IP
+萬　　　正嗣	3.50	0.19	3.8	４		IP	１	4	IP	６		IP	５	4	IP	６		IP	４		IP	２		IP	５		IP	６	5	IP	５		IP
+抹香　　雄三	4.40	0.15	3.7	２		IP	５		IP	３		IP	４		IP	６		IP	４	5	IP	２		IP	３		IP	４		IP	６		IP
+三宅　　　潤	5.60	0.19	4.0	３		IP	５		IP	３		IP	５		IP	３		IP	４		IP	３		IP	３		IP	１		IP	２		IP
+田中　　きら	1.00	0.25	4.8	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

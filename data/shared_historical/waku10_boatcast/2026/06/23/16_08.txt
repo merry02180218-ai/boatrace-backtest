@@ -1,0 +1,8 @@
+data=
+1	0
+大場　　　敏	8.90	0.14	1.6	１		IP	６		IP	２		G3	１		G3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+下田　　哲也	1.90	0.18	4.2	６		IP	６		IP	６		IP	６		IP	５		IP	４		IP	４		IP	５		IP	５		IP	６		IP
+鈴木　　秀茉	5.70	0.12	2.7	５		IP	２	4	IP	５		IP	６	4	IP	２		IP	２		IP	４		IP	２		G3	２		IP	２		IP
+小池　　公生	4.40	0.23	4.5	４		IP	２		IP	２		IP	４		IP	４		IP	３		IP	５		IP	４		IP	５	5	IP	５		IP
+柳橋　　宏紀	5.40	0.14	2.6	転		IP	４		IP	３		G3	４		IP	１		IP	３	6	IP	３		IP	６		IP	２		G3	２	4	G3
+山下　　流心	2.70	0.20	4.4	５		IP	５		IP	４	5	IP	４	4	IP	６		G3	６		G3	４		IP	３		IP	６		IP	５		G3

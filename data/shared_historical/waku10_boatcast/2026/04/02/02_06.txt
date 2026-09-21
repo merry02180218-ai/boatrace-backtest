@@ -1,0 +1,8 @@
+data=
+1	0
+下河　　雅史	7.80	0.14	3.5	５		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	３		IP	３		IP
+吉田　慎二郎	5.50	0.19	3.7	２		IP	１		IP	４		IP	３		IP	５		IP	３		IP	３		IP	６		IP	４	3	IP	２		IP
+鈴木　　勝博	6.80	0.17	2.3	１		IP	２		IP	４		IP	６		IP	１	4	IP	６		IP	１		IP	５		IP	１		IP	１		IP
+浦野　　　海	3.10	0.19	3.8	３		IP	２		IP	６		IP	６		IP	５		IP	５	3	IP	５		IP	６		IP	３		IP	５	5	IP
+中村　　有裕	4.00	0.17	3.8	４		IP	３		IP	５		IP	５	6	IP	４		IP	３		IP	２		IP	５	4	IP	４		IP	５		IP
+市川　　瑚幸	1.00	0.20	3.7	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

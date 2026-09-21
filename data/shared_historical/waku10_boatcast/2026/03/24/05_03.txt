@@ -1,0 +1,8 @@
+data=
+1	0
+栗城　　　匠	9.00	0.13	3.7	２		IP	３		IP	２		G1	２		IP	１		G1	１		IP	２		IP	１		IP	１		IP	１		IP
+伊藤　　将吉	5.60	0.13	3.2	６		IP	３		IP	２		IP	３		IP	２		IP	１		IP	５		IP	１		IP	６		G1	５		G1
+澤田　　尚也	5.70	0.14	2.7	５		IP	５		G1	６		G1	２		G1	６		G1	３		G1	１		G2	３		G2	４		IP	１		IP
+廣瀬　　篤哉	5.20	0.11	1.9	１		IP	６		IP	４		IP	１		IP	１		IP	４	5	IP	５	5	IP	６		IP	２		IP	５		IP
+樅山　　拓馬	5.60	0.16	2.3	４		IP	２		IP	５		IP	６		G3	２		G3	３		IP	１		IP	１		IP	６	2	IP	３		IP
+石井　　孝之	2.50	0.10	1.8	６		IP	５		IP	５		IP	３		IP	５		IP	５		IP	６		IP	３		IP	５		IP	６		IP

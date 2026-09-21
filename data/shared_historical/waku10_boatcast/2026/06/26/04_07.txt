@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　光広	5.40	0.19	3.8	５		IP	２		IP	５		IP	１		IP	５		IP	３		IP	２		IP	４		IP	１		IP	５		IP
+広次　　　修	6.40	0.16	3.1	１		IP	１		IP	４		IP	６		IP	２		IP	３		IP	１		IP	２	3	IP	６		IP	３		IP
+片岡　　大地	5.80	0.16	2.7	２		IP	転		IP	３		IP	２		IP	３		IP	２		IP	２		IP	４		IP	３		IP	４		IP
+向井　　美鈴	4.50	0.19	3.5	６		IP	２		IP	６		IP	６		IP	１		IP	２		IP	５		IP	３		IP	４		IP	４		IP
+澤田　　尚也	6.10	0.12	2.7	４		G1	６		G1	４		G2	６		G2	１		IP	１		IP	２		IP	３		IP	２		IP	４		IP
+夏山　　亮平	3.60	0.17	4.3	５		G3	１	5	IP	５		IP	６		IP	５		G3	２		G3	３	5	G3	６		IP	６		IP	６		IP

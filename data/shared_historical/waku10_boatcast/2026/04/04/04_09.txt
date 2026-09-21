@@ -1,0 +1,8 @@
+data=
+1	0
+市川　　哲也	10.10	0.15	2.9	１		G2	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+森下　　　勇	3.00	0.20	3.5	２		IP	６		IP	４		IP	６		IP	３		IP	６		IP	５		IP	６		IP	５		IP	４		IP
+藤山　　雅弘	6.10	0.17	4.0	２		IP	２		IP	２		IP	６		IP	６		IP	１		IP	２		IP	１		IP	４		IP	６		IP
+吉武　　真也	3.20	0.21	4.8	５		IP	５	5	IP	５		IP	４		IP	４		IP	５		IP	４	5	IP	３		IP	５		IP	４		IP
+守田　　俊介	4.20	0.12	2.1	４		SG	６		IP	２	2	IP	妨		G1	６		G1	４		G1	６		G1	５		IP	２	4	IP	２		IP
+相原　　利章	3.10	0.11	1.6	６		IP	３		IP	３		IP	６		IP	５		IP	５		IP	５		IP	６		IP	３		IP	４	5	IP

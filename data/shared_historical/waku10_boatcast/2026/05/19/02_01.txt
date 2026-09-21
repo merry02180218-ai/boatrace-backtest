@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　善庸	4.30	0.23	5.2	６		IP	３		IP	１		IP	４		IP	５		IP	３		IP	５		IP	３		IP	４		IP	５		IP
+杉江　　浩明	3.80	0.22	4.0	２		IP	２		IP	５		IP	６		IP	４	3	IP	６		IP	６		IP	１		IP	５		IP	６		IP
+柴田　　直哉	6.90	0.17	3.0	３		IP	２		IP	３		IP	１		IP	１		IP	６		IP	２		IP	５		IP	１		IP	２		IP
+長尾　京志郎	4.10	0.18	3.9	３		IP	５		IP	３		IP	３		IP	エ	6	IP	３		IP	５		IP	６	6	IP	４		IP	２		IP
+大崎　　　翔	3.40	0.14	3.2	４		IP	５		IP	４		IP	４	6	IP	６		IP	２		IP	６		IP	５		IP	４		IP	４		IP
+横井　　健太	3.10	0.20	4.7	４		IP	４		IP	５		IP	４		IP	４		IP	６		IP	４		IP	５		IP	４		IP	５		IP

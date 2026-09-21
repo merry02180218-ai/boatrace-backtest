@@ -1,0 +1,8 @@
+data=
+1	0
+上條　　暢嵩	10.40	0.13	2.7	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1
+濱野谷　憲吾	7.70	0.13	2.8	２		G1	１		IP	２		G1	２		G1	５		G2	３		IP	２		G1	４		G1	３		G1	１		IP
+稲田　　浩二	6.80	0.13	2.2	１		G1	３		IP	４		IP	１		G3	４		G1	３		G1	３		IP	２		G1	４		G1	４		G1
+大上　　卓人	7.40	0.13	2.8	２		IP	２		IP	１	5	IP	２		IP	６		SG	２		SG	２		G1	４		G1	６		G1	２		G1
+池田　　浩二	7.40	0.12	2.9	３		G1	１		IP	２		IP	１		G1	４		G1	１		G1	３		SG	６		G1	３		G1	４		G1
+石丸　　海渡	4.00	0.14	3.8	６		G1	５		IP	４		IP	６		G1	５		G1	６		G1	６		G1	２		G1	３		IP	２		IP

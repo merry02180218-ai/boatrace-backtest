@@ -1,0 +1,8 @@
+data=
+1	0
+桑原　　　悠	9.20	0.15	2.1	６		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+登　　みひ果	6.70	0.16	3.0	２		IP	１		G3	３		IP	２		G3	１		G3	４		G1	３		IP	３		IP	５		G3	３		G3
+岡本　　　大	5.00	0.14	2.4	４		IP	２		IP	４		IP	２		IP	３		IP	２		IP	３		IP	６		IP	６		IP	４		IP
+永井　　亮次	3.30	0.19	4.2	４		IP	２		IP	３	5	IP	６	5	IP	５		IP	２	5	IP	６		IP	６		IP	６		IP	６		IP
+中島　　昂章	3.90	0.20	3.9	３		IP	４		IP	５	6	IP	３		IP	転		IP	６		IP	４		IP	３		IP	３		IP	４		IP
+高橋　　竜矢	4.60	0.18	4.5	２		IP	４		IP	６		IP	５		IP	４		IP	４		IP	５		G1	４		G1	２		G1	３		IP

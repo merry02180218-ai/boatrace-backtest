@@ -1,0 +1,8 @@
+data=
+1	0
+山本　景士郎	6.80	0.19	3.5	１		IP	２		IP	３		IP	１		IP	１		IP	６		IP	３		IP	２		IP	２		IP	６		IP
+廣中　　良一	5.60	0.20	3.4	６		G3	２		IP	５		IP	５		IP	２		IP	２		IP	６		IP	１		IP	２		IP	２	3	IP
+松本　　博昭	6.50	0.16	4.0	６		IP	２		IP	２		IP	２		IP	２		IP	３		IP	１		IP	５		IP	１		IP	４		IP
+橋本　　英一	5.00	0.18	3.5	４	5	IP	２		IP	６		IP	３		IP	４		IP	６		IP	２		IP	３		IP	３		IP	３		IP
+葛原　　大陽	4.20	0.13	2.3	６		G1	４		IP	６		G1	１		IP	６		IP	３		G1	４		IP	３		IP	４		IP	５		IP
+森作　　雄大	3.22	0.13	2.7	エ		IP	１	5	IP	５		IP	５		IP	５		IP	６		IP	５		IP	４		IP	５		IP	４		IP

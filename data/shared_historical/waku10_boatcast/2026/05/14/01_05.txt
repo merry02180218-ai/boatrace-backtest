@@ -1,0 +1,8 @@
+data=
+1	0
+岡瀬　　正人	8.40	0.15	3.3	１		IP	４		IP	４		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	２		IP
+畔柳　　俊吾	6.70	0.19	3.5	１		IP	３	1	IP	４		IP	２		IP	１		IP	６		IP	４	3	IP	２		IP	１		IP	３		IP
+作間　　　章	5.10	0.15	3.3	１		IP	４		IP	３		IP	５		IP	３		IP	４		IP	５		IP	４		IP	４		IP	２		G1
+渡辺　　真至	5.80	0.13	3.0	２		IP	Ｆ		IP	２		IP	４		IP	３		IP	２		IP	４		IP	１		IP	３		IP	４		IP
+上田　　洋平	4.90	0.16	3.5	５		IP	３		IP	５		IP	５		IP	５		IP	２		IP	６	6	IP	１		IP	３		IP	２	4	IP
+市川　　哲也	4.10	0.12	2.7	６		IP	５		IP	４	4	G2	４	3	IP	６		IP	３	5	IP	４		IP	３		IP	５		IP	１	5	IP

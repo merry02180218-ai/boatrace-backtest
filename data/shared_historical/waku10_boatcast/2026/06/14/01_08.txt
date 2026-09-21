@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　亮太	8.40	0.14	2.5	１		IP	２		IP	２		G2	１		G2	１		IP	２		IP	３		G3	１		IP	１		IP	５	2	IP
+出口　舞有子	5.70	0.18	2.5	１		IP	６		IP	３		IP	２		IP	２		IP	３		IP	３		G3	５		G3	５		IP	２		IP
+吉田　　一心	5.40	0.12	2.9	２		IP	２		IP	３		IP	４		IP	３		IP	２		IP	６		IP	２		IP	６		IP	４		IP
+土屋　　太朗	4.60	0.17	3.3	３		IP	１		IP	４		IP	３		IP	４		IP	４		G3	６	6	G3	６		IP	３		IP	４		IP
+尾上　　雅也	5.50	0.15	3.5	４	6	IP	２		G1	２		IP	６		G3	２		G3	５		IP	６		IP	２		IP	４		IP	１		IP
+今坂　　晃広	1.40	0.19	5.7	６		G3	６		IP	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP	６		IP	６		IP

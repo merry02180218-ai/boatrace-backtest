@@ -1,0 +1,8 @@
+data=
+1	0
+鳥飼　　　眞	7.90	0.19	2.8	６		IP	１		IP	２		IP	１		IP	１		IP	１		IP	５		IP	２		IP	１		IP	１		IP
+眞鳥　　章太	7.60	0.16	3.0	３		IP	１		IP	２		IP	２		IP	２		IP	２		IP	１		IP	２		IP	５		IP	２		IP
+樅山　　拓馬	5.00	0.17	3.4	２		IP	６		IP	４		IP	２		IP	３		IP	６		IP	４		G3	３		IP	４		IP	２		IP
+小宮　　涼雅	3.20	0.17	3.3	６		IP	５		IP	６		IP	３		IP	４		IP	６	5	IP	３		IP	５		IP	２		IP	６		IP
+内山　　峻輔	3.00	0.19	3.5	４		IP	６		IP	６		IP	４		IP	４	6	IP	４		IP	３		IP	５		IP	５		IP	５		IP
+生方　　靖亜	2.70	0.17	4.3	５		IP	６		IP	４		IP	４		G3	５		G3	５		IP	６		IP	２	5	IP	５		IP	６		IP

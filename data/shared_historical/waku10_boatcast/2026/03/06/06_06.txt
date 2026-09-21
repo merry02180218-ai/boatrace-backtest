@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　真吾	7.60	0.15	2.7	５		IP	３		IP	２		IP	１		G3	２		G3	１		G3	２		G3	１		IP	１		IP	４		IP
+尾形　　栄治	4.50	0.19	3.5	３		IP	４		IP	４		IP	３		IP	３		IP	６		IP	４	5	IP	１		IP	５		IP	５		G3
+大塚　　浩二	3.60	0.22	3.9	６		IP	３		IP	５		IP	４	5	IP	６		IP	４		IP	２		IP	４		IP	４		IP	５		IP
+大谷　　直弘	4.20	0.17	3.2	２	5	IP	２		IP	４		IP	５		IP	６		IP	５		IP	５		IP	１		IP	６		IP	４		IP
+大澤　　普司	5.00	0.20	3.5	４	6	IP	３		IP	３		G1	６		G1	１		IP	２		IP	６		IP	６	6	IP	６		IP	１		IP
+杉田　　篤光	3.50	0.29	5.5	３		IP	６		IP	６		IP	５		IP	５		IP	４	5	IP	４		IP	２	5	IP	６		IP	３		IP

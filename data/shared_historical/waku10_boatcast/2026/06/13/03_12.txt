@@ -1,0 +1,8 @@
+data=
+1	0
+飛田　　江己	9.20	0.12	2.0	３		IP	１		IP	１		IP	１		IP	１		IP	１		G2	１		IP	４		IP	１		IP	１		IP
+藤原　　仙二	7.11	0.21	4.4	４		IP	２		IP	３		IP	Ｆ		G2	欠		IP	１		IP	２		IP	１		IP	１	3	IP	２		IP
+花田　　凱成	4.30	0.17	3.8	４		IP	４		IP	３		IP	６		IP	５		IP	２		IP	５		IP	２	4	IP	３		IP	５		IP
+西川　　拓利	4.40	0.12	1.8	３		IP	５		IP	５		IP	２		IP	４		IP	２	3	IP	６		G3	３		G3	６		IP	３		IP
+米玉利　大悟	2.50	0.18	3.6	５		IP	６		IP	２		IP	転		IP	４	6	IP	６		IP	５		IP	４		IP	６		IP	５	6	IP
+中野　　仁照	4.30	0.21	4.4	６		IP	６		IP	６		IP	３		IP	２		IP	３		IP	４		IP	５		IP	３		IP	２		IP

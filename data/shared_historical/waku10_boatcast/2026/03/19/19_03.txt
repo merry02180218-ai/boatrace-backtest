@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　昂介	8.00	0.19	3.5	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	１		IP	４		IP	５		G3
+寳田　　亮治	4.50	0.19	3.9	３		IP	１	3	IP	欠		IP	５		IP	４		IP	４		IP	２		IP	２		G3	５		G3	６		IP
+稲生　　夏季	6.30	0.24	3.6	１		IP	４		IP	１		G3	１		G3	４		G3	３		IP	２		IP	４		IP	３		IP	６		G3
+井内　将太郎	7.40	0.11	1.9	３		IP	２	5	IP	１		IP	３		IP	３		IP	３		IP	１	6	IP	３		IP	２	3	IP	２		IP
+秋元　　　哲	5.70	0.16	3.6	５	4	G1	６		G1	３		G1	１	2	IP	１		IP	３		IP	２		IP	４		IP	６		IP	３		IP
+渡　　　修平	1.40	0.26	5.2	５		IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP	６	5	IP	６		IP

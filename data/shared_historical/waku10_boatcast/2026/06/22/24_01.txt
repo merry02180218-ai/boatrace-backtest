@@ -1,0 +1,8 @@
+data=
+1	0
+大串　　重幸	7.40	0.17	3.4	１		G2	６		IP	１		IP	２		IP	５		IP	４		IP	１		IP	１		IP	２		IP	１		IP
+津久井　拓也	5.20	0.15	2.9	４		G2	６	4	IP	３		IP	３		G2	４		G2	３		IP	４	3	IP	５		IP	２		IP	２		IP
+樋口　　　亮	4.60	0.17	3.5	５		G2	２		IP	２		IP	２		IP	６		IP	４		IP	２		IP	６		IP	６		IP	４		IP
+安達　　裕樹	5.60	0.18	2.7	３		G2	５	5	IP	４		G2	４		G2	４		G2	１		IP	３		IP	４		IP	３		IP	３		IP
+中島　　秀治	6.90	0.17	3.8	４		G2	３		IP	１		IP	３		IP	３		IP	１		IP	３		IP	５		IP	１		IP	２		IP
+山口　　達也	4.30	0.13	3.9	６		G2	１	2	IP	４	5	IP	６		G2	６		IP	６		IP	４		SG	４		SG	２	3	G1	６		G1

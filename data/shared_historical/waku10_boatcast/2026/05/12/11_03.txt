@@ -1,0 +1,8 @@
+data=
+1	0
+芝田　　京介	4.90	0.17	3.6	Ｆ		IP	５		IP	３		IP	６		IP	４		IP	５		IP	１		IP	４		IP	１		IP	１		IP
+草川　　壮良	4.00	0.11	3.7	５		IP	３		IP	４		IP																					IP
+別府　　昌樹	4.80	0.16	3.4	Ｆ		IP	２		IP	２		IP	５		IP	４		IP	２		IP	３		IP	５		IP	２		IP	５		IP
+川北　　浩貴	4.00	0.14	2.7	３		IP	５		IP	２		IP	６		IP	４		IP	６		IP	５		IP	４		IP	４		IP	２		IP
+福島　　勇樹	5.50	0.16	3.3	６		IP	６		G1	５		IP	２		IP	１	2	IP	４	4	IP	１		IP	２	4	IP	６		IP	２		G1
+中澤　　里桜	1.00	0.19	3.8	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	エ		IP	６		IP	６		IP	６		IP

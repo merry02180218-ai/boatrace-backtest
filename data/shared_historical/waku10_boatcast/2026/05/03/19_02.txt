@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　祐貴	5.20	0.18	3.7	３		IP	５		IP	５		IP	１		IP	４		IP	１		IP	４		IP	Ｆ		IP	３		IP	２		IP
+山田　　真聖	5.80	0.15	2.4	６	4	IP	４	3	IP	２		IP	２		IP	２		IP	３		IP	４		IP	２	3	IP	６		IP	１		IP
+松田　　憲幸	4.00	0.21	4.3	２		IP	５	4	IP	２		IP	４		IP	３		IP	６		G3	５	5	G3	３		IP	６		IP	５		IP
+瀬川　　大地	2.33	0.18	3.0	４		IP	６		IP	４		IP	５		IP	６	6	IP	転		IP	４		IP	５	5	IP	５		IP	６		IP
+赤峰　　和也	4.40	0.13	2.9	２		IP	６		IP	３		IP	４		IP	２		IP	６		IP	４		IP	５		IP	４		IP	３		IP
+小畑　　楓夏	1.90	0.13	3.1	６		IP	４		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６	5	IP	４		IP	５		IP

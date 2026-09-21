@@ -1,0 +1,8 @@
+data=
+1	0
+中北　　将史	7.70	0.14	2.1	１		IP	１		IP	１		IP	１		IP	５		IP	２		IP	１		G3	３		IP	６		IP	１		IP
+宮崎　心之介	5.88	0.16	4.0	３		IP	１		IP	２		IP	３		IP	６		IP	５		IP	２		IP	３		IP						IP
+石渡　　鉄兵	6.80	0.12	2.9	６		G1	６		G1	３		IP	２		SG	３		G1	３		G1	３		G1	３		G2	１		IP	２		SG
+鈴木　結平太	2.10	0.19	3.9	４		IP	Ｆ		IP	６		IP	落		IP	３	5	IP	６		IP	６		IP	３		IP	６		G3	６	6	IP
+松田　　隆司	5.50	0.15	3.3	２		IP	２		IP	５		IP	５		IP	５		IP	３		IP	２		IP	２		IP	１		IP	６		IP
+樅山　　拓馬	3.90	0.18	4.4	３	5	IP	６		IP	５	5	IP	５		IP	４		IP	４		IP	３		IP	５		G3	２	5	G3	４	5	IP

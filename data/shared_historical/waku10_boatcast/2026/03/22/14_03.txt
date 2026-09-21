@@ -1,0 +1,8 @@
+data=
+1	0
+吉川　　晴人	7.20	0.17	4.4	２		IP	１		IP	１		IP	１		IP	１		G2	３		IP	６		IP	５		IP	１		IP	４		IP
+小倉　　康典	4.50	0.15	2.8	１		IP	６		IP	２		IP	３		IP	５		IP	６		IP	６		IP	２		IP	５		IP	３		IP
+広瀬　　聖仁	5.60	0.15	2.8	５		IP	５		IP	２		IP	２		IP	５		IP	３		IP	２		IP	３		IP	３		IP	２		IP
+奥田　　　誠	4.40	0.16	3.3	２		IP	妨		IP	４		IP	４		IP	３		IP	６	5	IP	１		IP	５		IP	２		IP	６		IP
+吉武　　真也	2.30	0.21	4.5	４		IP	５	6	IP	５		IP	５		IP	５		IP	５		IP	６		IP	５		IP	５		IP	４		IP
+石川　　真二	6.10	0.17	2.7	３	2	IP	１	2	IP	６	3	G1	４	2	IP	６	2	IP	１	2	IP	４	2	IP	２	2	IP	３	2	IP	１	2	IP

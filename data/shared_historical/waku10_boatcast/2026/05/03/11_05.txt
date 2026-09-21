@@ -1,0 +1,8 @@
+data=
+1	0
+沢田　　昭宏	9.00	0.18	3.8	１		IP	１		IP	１		IP	４		IP	１		G3	２		G3	１		IP	２		IP	１		IP	１		IP
+廣瀬　　　凜	8.20	0.13	2.6	３		IP	２		IP	２		IP	２		IP	１		IP	１		IP	２		IP	２		IP	１		IP	３		IP
+守田　　俊介	6.40	0.12	2.4	３		IP	６		G1	４		G1	３		G1	２		IP	１		IP	５	4	SG	３		IP	２		G1	３		G1
+南野　　利騰	4.70	0.17	2.9	５		IP	５		IP	５	3	IP	６		IP	４		IP	１		IP	４		IP	１		IP	３		IP	３	5	IP
+西川　　真人	2.20	0.18	4.1	６		IP	３	4	IP	５		IP	６		IP	６		IP	５		IP	６		IP	３		IP	６	6	IP	６		IP
+木村　　亮太	3.90	0.17	4.2	６		IP	６		IP	６		IP	４		IP	５		IP	５		IP	１		IP	４		IP	３		IP	２		IP

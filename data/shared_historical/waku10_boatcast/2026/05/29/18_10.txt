@@ -1,0 +1,8 @@
+data=
+1	0
+鋤柄　　貴俊	6.60	0.18	3.8	３		IP	１		IP	２		IP	４		IP	１		IP	１		IP	５		IP	４		IP	４		IP	２		IP
+白神　　　優	6.00	0.14	3.3	１		IP	転		IP	２		IP	２		IP	３		G1	５		G1	６		IP	２		IP	４		G1	４		IP
+柳瀬　　幹太	5.00	0.19	3.1	６	4	IP	１		IP	３		IP	２		G3	４		G3	５	4	IP	１		IP	６		IP	３		IP	５		IP
+末永　　祐輝	5.11	0.15	2.8	４	6	IP	３		IP	２		IP	５		IP	１		IP	３		IP	４		IP	転		IP	３		IP	転		IP
+大串　　重幸	5.30	0.21	4.6	３		IP	３		IP	３	6	IP	３		IP	６	6	IP	３		IP	３		G3	４		G3	５		IP	１		IP
+直江　　健成	1.13	0.22	4.4	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP						IP

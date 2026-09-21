@@ -1,0 +1,8 @@
+data=
+1	0
+小松　　卓司	7.20	0.16	2.7	３		IP	１		IP	２		IP	１		IP	２		IP	５		IP	５		IP	１		G3	２		IP	２		IP
+山崎　　義明	5.20	0.16	3.0	６		G3	３		IP	３		IP	３		IP	４		IP	２		IP	６		IP	３		IP	４		IP	１		IP
+坂元　　浩仁	6.90	0.15	2.4	３	2	IP	２		IP	４		G2	５		IP	３		IP	１		IP	２		IP	２		IP	１		IP	３		IP
+石塚　　久也	5.70	0.16	3.3	３		IP	６		IP	３		IP	１		IP	４		IP	２		IP	６		IP	３		IP	２		IP	３		IP
+品川　　賢次	4.60	0.17	3.6	３		IP	４		IP	３		IP	４		IP	６		IP	３		IP	４		IP	２		IP	６	6	IP	３	6	IP
+原田　才一郎	3.50	0.23	5.5	６		G1	５		G1	５		IP	６		G1	５		G1	４		IP	３		IP	５		G1	３		IP	５		IP

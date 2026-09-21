@@ -1,0 +1,8 @@
+data=
+1	0
+富山　　弘幸	5.90	0.19	3.9	５		IP	３		IP	４		IP	６		IP	４		IP	３		IP	３		IP	１		IP	１		IP	１		IP
+堤　　　　昇	5.60	0.16	3.1	１		IP	４		IP	４		IP	３		IP	３		IP	３		IP	２		IP	５		G3	３		IP	４		IP
+森永　　　淳	7.80	0.12	2.6	６		G1	１	4	IP	２		IP	３		G1	１		IP	１		IP	１		IP	２		G2	６		G2	１	4	IP
+前田　　光昭	2.80	0.16	3.3	５		G3	４		G3	４		IP	５		IP	６		IP	５		IP	５		IP	５		IP	６		IP	２	3	IP
+木山　　和幸	3.50	0.17	4.0	５		IP	４		G3	５		G3	２		IP	４		IP	６		G3	５		IP	４		IP	５	4	IP	３		IP
+芹澤　　克彦	2.60	0.16	3.0	３	5	IP	５		IP	６		IP	６		IP	４		IP	５		IP	６		IP	４	4	IP	６		IP	４		IP

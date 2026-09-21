@@ -1,0 +1,8 @@
+data=
+1	0
+高岡　　竜也	10.00	0.13	2.5	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+長野　壮志郎	7.80	0.17	3.5	２		IP	１		IP	３		IP	１		IP	１		IP	５		IP	４		IP	１		IP	２		IP	１		IP
+蒲原　　健太	7.10	0.20	4.0	１		IP	５		IP	３		IP	３		IP	３		IP	１	4	IP	１		G2	２		G2	１		IP	６		IP
+西原　　明生	4.10	0.23	4.6	１		IP	４		IP	５	5	IP	６		IP	６		IP	５		IP	６		IP	４		IP	２		IP	２		IP
+出畑　　孝成	5.60	0.17	2.7	２		IP	４		IP	３		IP	４		IP	１		IP	５	6	IP	２		IP	３	4	IP	５		IP	３		IP
+坂本　　一真	2.60	0.18	4.7	５		IP	４	5	IP	５	5	IP	６		IP	４		IP	４		IP	５		IP	５		IP	４		IP	６		IP

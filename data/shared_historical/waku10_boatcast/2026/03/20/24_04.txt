@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　啓太	5.40	0.18	3.9	５		IP	２		IP	５		IP	３		IP	４		IP	２		IP	５		IP	３		IP	２		IP	２	3	IP
+松尾　　基成	3.60	0.18	3.6	５		IP	２		IP	５		IP	６		IP	３		IP	２	3	IP	６		IP	５		IP	５		IP	４		IP
+武重　　雄介	6.80	0.14	3.0	３		IP	２		IP	３		IP	２		IP	１		IP	１		IP	３		IP	３		IP	転		IP	２		IP
+浅見　　宗孝	4.70	0.19	3.3	６		IP	４		IP	４		IP	２		IP	４		IP	５		IP	５		IP	１		IP	５		IP	２		G3
+石橋　　道友	4.40	0.14	3.7	５		IP	５		IP	６		G1	５		G1	２		IP	２		IP	６		IP	Ｆ		IP	２		IP	１		IP
+松尾　　　祭	4.80	0.22	5.3	２		IP	３		IP	６		IP	５		IP	５		G1	４		IP	２		IP	５		IP	４		IP	１		IP

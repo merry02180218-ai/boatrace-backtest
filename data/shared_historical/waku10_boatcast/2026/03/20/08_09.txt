@@ -1,0 +1,8 @@
+data=
+1	0
+畑田　　希咲	4.30	0.21	3.9	６		IP	１		IP	５		IP	１		IP	４		IP	６		IP	４		IP	５		IP	６		IP	２		IP
+小澤　　和也	3.44	0.19	4.0	５		IP	転		IP	５		IP	３		IP	５		IP	３		IP	５		IP	６		IP	３		IP	４		IP
+柳沢　　　一	6.60	0.12	2.3	５		G1	４		G1	２		IP	２		G1	１		G1	２		IP	２		IP	４		IP	２		IP	６		G1
+信濃　　由行	5.70	0.18	3.9	５		IP	３		IP	３		IP	１		IP	１		IP	４		IP	４		IP	６		IP	２		IP	３	3	IP
+高井　　雄基	6.80	0.15	3.1	３		IP	１		IP	１		IP	２		IP	６		IP	５		IP	３		IP	２		IP	２		IP	２		IP
+富澤　　祐作	4.10	0.15	4.2	３		IP	６		IP	４		IP	４		IP	６		IP	２		IP	２		IP	５		IP	３		IP	６		IP

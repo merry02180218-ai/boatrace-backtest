@@ -1,0 +1,8 @@
+data=
+1	0
+池上　　隆行	5.90	0.14	3.0	６		IP	３		IP	１		IP	４		IP	５		IP	１		IP	１		IP	３		IP	５		IP	２		IP
+村松　　栄太	6.40	0.16	4.1	３		IP	５		IP	５	6	IP	１		IP	２		IP	２		IP	２		IP	３		IP	４		IP	１	3	IP
+井上　　大輔	5.00	0.16	4.0	５		IP	３		IP	４	4	IP	２		G3	３		IP	５		IP	２	4	IP	４		IP	２		IP	５		IP
+山口　　　剛	6.90	0.12	2.0	４		SG	１		G1	４		G1	４		G1	２		G1	４		G1	３		G1	１		IP	３		SG	５	6	G1
+津田　　陸翔	5.40	0.19	4.2	１		IP	１		IP	６		IP	落		IP	６		IP	２	6	IP	１	4	IP	３		IP	４	6	IP	４	4	IP
+山本　　凱立	1.40	0.25	4.7	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	４		IP	６		IP

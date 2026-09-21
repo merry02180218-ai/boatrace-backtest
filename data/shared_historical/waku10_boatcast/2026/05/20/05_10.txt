@@ -1,0 +1,8 @@
+data=
+1	0
+南　　　佑典	9.90	0.16	3.0	１		G2	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+河上　　年昭	3.40	0.23	4.6	Ｆ		IP	３		IP	５		IP	１		IP	６		IP	４		IP	５		IP	４		IP	４		IP	６		IP
+石川　　吉鎬	6.89	0.19	4.0	５		IP	１		IP	２	4	IP	３		IP	２		IP	４		IP	１		IP	３		IP	２		IP	不		IP
+鈴木　　　猛	3.40	0.17	3.6	５	6	IP	４		IP	５		IP	１		IP	５		IP	４		IP	５		IP	５		IP	５		IP	４		IP
+川原　　正明	3.70	0.16	2.7	６		G3	６		G3	１	4	IP	６		IP	５		IP	４		IP	５		IP	２		IP	５		IP	３		IP
+天野　　晶夫	4.60	0.18	4.5	４		IP	３		IP	５	5	IP	５		G3	４		IP	４		IP	２		IP	３		IP	３	5	IP	５		IP

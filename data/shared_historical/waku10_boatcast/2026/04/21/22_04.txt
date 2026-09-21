@@ -1,0 +1,8 @@
+data=
+1	0
+池本　　輝明	6.40	0.17	2.8	２		IP	１		IP	１		IP	５		IP	１		IP	２		IP	１		IP	６		IP	６		IP	４		IP
+梅原　　祥平	4.40	0.15	3.0	４		IP	３		IP	２		IP	１		IP	６		IP	５		IP	５		IP	５		IP	２		IP	６		IP
+小林　　愛実	2.70	0.17	2.5	６		IP	６		IP	エ		IP	６		IP	６		IP	６		IP	４		IP	１		IP	３		IP	５		IP
+荒川　　健太	5.80	0.17	3.2	３		IP	３		IP	４		IP	３		G3	３		IP	３		IP	３		IP	２		IP	３		IP	４		IP
+原村　　百那	2.56	0.16	2.7	４		IP	６	6	IP	３		IP	６		IP	３		IP	落		IP	６		IP	６		IP	６		IP	５		IP
+小池　　公生	2.50	0.27	5.5	４		IP	６		IP	４		IP	５	5	IP	４		IP	４		IP	５		IP	６		IP	５		IP	６		IP

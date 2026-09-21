@@ -1,0 +1,8 @@
+data=
+1	0
+飛田　　江己	9.20	0.13	2.3	１		IP	１		IP	１		IP	１		IP	１		G1	不		G1	１		G1	１		IP	１		IP	１		IP
+村松　　将平	4.90	0.14	2.8	３		IP	２		IP	５		IP	３		IP	３		IP	２		IP	５	4	IP	５	3	IP	４		IP	４		IP
+若林　　　麗	3.00	0.18	3.0	５		IP	５		IP	６		IP	６		IP	６		IP	３	4	IP	６		IP	３		IP	２		IP	５		IP
+佐野　　優都	3.30	0.18	3.4	６		IP	Ｆ	5	IP	２		IP	３	6	IP	５		IP	４		IP	５		IP	６		IP	６		IP	２		IP
+鈴木　　唯央	3.22	0.16	2.7	６		IP	５		IP	３		IP	エ		IP	４		IP	４		IP	３		IP	４		IP	６		IP	６		IP
+竹内　　　来	1.40	0.18	3.4	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	５	5	IP	５		IP	６		IP	６		IP

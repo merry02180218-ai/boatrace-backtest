@@ -1,0 +1,8 @@
+data=
+1	0
+田村　　　慶	6.50	0.22	4.4	１		IP	４		IP	２		IP	１		IP	１		IP	６		IP	４		IP	３		IP	５		IP	１		IP
+藤原　　孝斗	5.00	0.16	2.7	４		IP	５		IP	１		IP	４		IP	３		IP	６		IP	６		IP	２		IP	２		IP	３		IP
+荒牧　　凪沙	5.40	0.20	4.5	６		IP	４		IP	３		IP	６		IP	２		IP	１		IP	３	5	IP	５		IP	３		IP	１		IP
+鈴木　　賢一	3.30	0.22	4.2	６		IP	４		IP	５	5	IP	５		IP	６		IP	６		G3	２		G3	１		IP	５		IP	５	5	IP
+三浦　　敬太	5.60	0.17	2.8	３		IP	６		IP	４		IP	１		IP	３		IP	５		IP	２		IP	６		IP	２		IP	１		IP
+吉田　凌太朗	4.10	0.15	3.2	４		IP	２		IP	６		IP	６		IP	３		IP	５		IP	６		G1	３		G1	５		IP	２		IP

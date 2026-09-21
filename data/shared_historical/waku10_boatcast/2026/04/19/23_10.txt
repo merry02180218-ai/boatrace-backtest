@@ -1,0 +1,8 @@
+data=
+1	0
+永田　　啓二	9.30	0.12	1.9	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	５		IP	１		IP
+土山　　卓也	6.80	0.16	3.1	１		IP	６		IP	５		IP	１		IP	１		IP	２		IP	１		IP	２		IP	２		IP	６	1	IP
+秋山　　広一	6.20	0.15	3.6	５		IP	４		IP	２		IP	１		IP	３		IP	２		IP	５		G1	２		IP	４		IP	２		IP
+森野　　正弘	5.40	0.14	2.4	２		IP	６		IP	３		IP	２		IP	２		IP	３		IP	４		IP	４		G1	６		G2	３		IP
+加藤　　高史	5.00	0.17	2.4	２		IP	３		IP	３		IP	４		IP	４	6	IP	５		IP	５		IP	２		IP	４		IP	３		IP
+下出　　卓矢	4.70	0.15	3.8	６		IP	２		IP	５		IP	６		IP	１		IP	６		G2	６		G2	６		IP	１		IP	１		IP

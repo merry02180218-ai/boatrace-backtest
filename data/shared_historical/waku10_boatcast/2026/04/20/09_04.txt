@@ -1,0 +1,8 @@
+data=
+1	0
+豊田　　　結	7.80	0.16	2.3	３		IP	１		IP	１		G3	１		G3	４		IP	２		IP	２		IP	２		IP	３		IP	２		IP
+笠野　友紀恵	3.80	0.25	5.3	３		IP	２		G3	５		G3	４		IP	６		IP	３		IP	６		G3	５		IP	４		IP	４		IP
+島田　なぎさ	3.70	0.13	2.8	４		IP	３		IP	５		G3	２		IP	５		IP	５		IP	４		G3	５		G3	６		IP	３		IP
+土屋　　　南	4.50	0.13	2.5	３		IP	４		IP	６		IP	３		G3	５		IP	４		G1	６		IP	１		IP	２		IP	５		IP
+若狭　奈美子	3.20	0.21	4.4	４		IP	３		IP	５		IP	６		IP	３		IP	６		G3	４	6	G1	４		IP	５		IP	６		G3
+龍田　　真白	2.90	0.11	2.3	５		IP	６		IP	５		IP	２		IP	４		IP	３		IP	５		IP	５		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+井手　　良太	6.70	0.14	3.4	２		IP	１		IP	１		IP	６		IP	５		IP	１		IP	１		IP	３		IP	４		IP	４		IP
+黒崎　　竜也	6.00	0.17	3.6	１		G3	２	3	G3	２		G3	４		IP	４		IP	３		IP	４	3	IP	４		IP	１		IP	５		IP
+田路　　朋史	5.70	0.23	3.8	３		IP	４		IP	６		IP	２		IP	１		IP	３		IP	３		IP	５		IP	２		IP	３		IP
+前田　　聖文	5.80	0.14	3.2	５		IP	３		IP	５		IP	２	5	IP	３		IP	２		IP	５		IP	３		IP	２		G1	２		IP
+港　　　理樹	2.20	0.22	4.2	４		IP	５		IP	５	6	IP	５		IP	４		IP	４	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP
+黄金井　力良	2.50	0.19	4.6	６		IP	４		IP	４		IP	５		IP	６		IP	５	5	IP	５		IP	４		G3	６		IP	５		IP

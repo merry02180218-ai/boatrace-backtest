@@ -1,0 +1,8 @@
+data=
+1	0
+野中　　義生	6.10	0.18	2.5	妨		IP	４		IP	３		IP	１		IP	６		IP	２		IP	２		IP	３		IP	１		IP	２		IP
+南野　　利騰	3.70	0.19	3.6	４		IP	４		IP	５		IP	３		IP	６		IP	４		IP	５		IP	４		IP	４		IP	３		IP
+松浦　　　勝	2.80	0.16	3.7	６		IP	４		IP	２		IP	４		IP	６		IP	５		IP	４		IP	６		IP	６		IP	５	4	IP
+本部　めぐみ	3.80	0.21	3.1	３		IP	６		IP	４		G3	５	5	G3	３		IP	２		G3	４		IP	６		G3	５		G3	４		IP
+山本　　幸也	1.90	0.29	5.1	２		IP	５		IP	６		IP	６		IP	６	6	IP	６		IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP
+牧　　　宏次	2.70	0.21	4.6	５		G3	６		G3	６		G3	３		IP	６		IP	５		IP	５		IP	４		IP	４		IP	４	5	IP

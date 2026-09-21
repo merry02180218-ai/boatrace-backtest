@@ -1,0 +1,8 @@
+data=
+1	0
+木村　　光宏	6.00	0.14	3.1	１		IP	妨		IP	１		IP	６		IP	１		G3	６		IP	２		IP	４		IP	３		IP	１		IP
+栗山　　繁洋	3.50	0.17	3.7	１	3	IP	５		IP	５		IP	５		IP	６		IP	５		IP	６		IP	３		IP	２		IP	６		IP
+松本　　弓雄	4.80	0.20	4.0	５	5	IP	転		IP	２		IP	４		IP	４		IP	５		IP	４		IP	４		IP	１		IP	１		IP
+山本　　幸也	4.70	0.17	3.4	４		IP	４		IP	４		IP	１		IP	５		IP	５	6	IP	１	5	IP	６		IP	２		IP	５		IP
+渡邉　　　健	3.50	0.19	3.3	５		IP	６		IP	６		G3	６	6	G3	２		IP	３		IP	４		IP	４	6	IP	５		IP	３		IP
+浅見　　宗孝	3.40	0.22	5.2	６		IP	４		IP	５		IP	２	5	IP	６		IP	４		IP	３	5	IP	５		IP	５		IP	４		IP

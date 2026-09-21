@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　晃大	10.00	0.12	1.7	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+酒井　　俊弘	4.50	0.18	2.9	３		IP	３		IP	６		IP	３		IP	５		IP	４		IP	４		IP	３		IP	４	3	IP	３		IP
+木下　　大將	6.20	0.14	3.0	２		IP	４		IP	３		IP	２		IP	４		IP	４	2	IP	２	4	IP	４	4	IP	３		IP	１		IP
+長野　　未来	2.11	0.24	4.2	６		IP	６		IP	転		IP	３		IP	６	6	IP	６	6	IP	３	6	IP	６	6	IP	６	6	IP	６	6	IP
+大澤　　普司	5.60	0.20	3.0	４		IP	３		IP	６		G1	１		IP	４		IP	２		IP	５		IP	１		IP	４	6	IP	３		IP
+大平　誉史明	3.70	0.17	4.3	５		IP	６		IP	４		IP	２		IP	５		IP	４		IP	５		IP	４		IP	５		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+幸野　　史明	5.80	0.19	4.0	２		IP	１		IP	１		IP	１		IP	３		IP	６		IP	６		IP	６		IP	６	3	IP	１		IP
+吉川　　晴人	7.10	0.17	3.9	２		IP	２		IP	１		IP	２		G2	６		G2	３		IP	５		IP	１		IP	２		IP	２		IP
+山本　　浩輔	3.90	0.20	3.4	３		IP	５		IP	５		IP	４		IP	４		IP	６		IP	４		IP	２	2	IP	３		IP	５		IP
+吉武　　真也	3.40	0.21	4.7	５	5	IP	５		IP	４		IP	４		IP	５		IP	４	5	IP	３		IP	５		IP	４		IP	４		IP
+津久井　拓也	5.20	0.15	3.5	３		IP	３		IP	３		IP	４		IP	３		IP	１	4	IP	４		IP	４		IP	４		IP	５		G3
+渡邊　雄一郎	5.60	0.19	3.9	３		IP	４		IP	３		IP	３	5	IP	１		IP	４		IP	１		IP	３		IP	５		IP	５		IP

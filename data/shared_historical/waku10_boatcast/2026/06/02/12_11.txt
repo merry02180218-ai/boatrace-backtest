@@ -1,0 +1,8 @@
+data=
+1	0
+大峯　　　豊	8.33	0.11	3.3	１		IP	１		G2	１		G2	１		G3	６		G3	２		G3	１		IP	３		IP	２		IP	転	2	G1
+眞鳥　　章太	8.20	0.17	2.8	１		IP	４		IP	１		IP	２		IP	１		IP	３		IP	１		IP	２		IP	２		IP	２		IP
+加藤　　翔馬	7.00	0.13	2.3	３		IP	４	4	IP	４		IP	２		IP	転		IP	１		IP	２		IP	２		IP	２		G3	３		IP
+荻野　　裕介	3.70	0.22	4.7	６		IP	６		IP	６		IP	２		IP	２		IP	５		IP	４		G3	４		G3	４		IP	４	6	IP
+佐々木　翔斗	4.50	0.20	4.2	３		IP	３		IP	３		IP	３		IP	４		IP	２		G2	転		IP	４		IP	５		IP	５		IP
+田中　　　豪	4.50	0.18	4.1	６		IP	４		IP	５		IP	５		IP	２		IP	４		IP	５		IP	４	5	IP	１		IP	３		IP

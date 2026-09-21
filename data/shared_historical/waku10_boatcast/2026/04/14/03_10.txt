@@ -1,0 +1,8 @@
+data=
+1	0
+小坂　　尚哉	9.90	0.13	2.2	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G3	２		G3	１		IP	１		IP
+上原　健次郎	7.00	0.19	3.6	１		IP	４		IP	３		IP	２		IP	１		IP	３		IP	３		IP	２		IP	２		IP	４		IP
+小川　竜太朗	4.78	0.16	3.8	４		IP	３		IP	６		IP	４		IP	２		IP	４		IP	３		IP	４	4	IP	欠		IP	３		IP
+西原　　明生	3.30	0.23	4.7	５	5	IP	６		IP	６		IP	５		IP	６		IP	４		IP	２		IP	２		IP	４		IP	５		IP
+栗原　　直也	5.20	0.17	3.0	４		IP	２		IP	４	6	IP	３		IP	２		IP	５		IP	２		IP	５	4	IP	２		IP	５		IP
+藤原　　仙二	4.00	0.18	3.7	５		IP	５		G2	３		IP	６		IP	５		IP	４		IP	２		IP	４		IP	５		IP	３	3	IP

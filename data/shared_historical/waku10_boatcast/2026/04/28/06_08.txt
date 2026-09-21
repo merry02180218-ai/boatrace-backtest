@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　慎二郎	7.80	0.20	4.0	１		IP	１		IP	５		IP	１		IP	３		IP	１		IP	２		IP	３		IP	２		IP	２		IP
+齋藤　　智裕	4.00	0.19	3.6	５		IP	４		IP	４		IP	２		IP	５		IP	５		IP	４		IP	２		IP	４		IP	５		IP
+村上　　奈穂	5.50	0.16	2.5	６	2	IP	５		IP	２		IP	４	4	IP	２		IP	３		IP	３		IP	２		IP	２		IP	４		IP
+藤田　　靖弘	5.50	0.19	3.0	１		IP	４		IP	５		IP	６		IP	１		IP	２		IP	３		IP	２		G3	４		IP	５		IP
+加藤　　啓太	3.00	0.16	3.8	６		IP	５		IP	６		IP	３		IP	４		IP	５		IP	３		IP	４		IP	４		IP	転	4	IP
+樋江井　　舞	2.70	0.15	2.1	６		IP	２		IP	２		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	５		IP

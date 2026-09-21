@@ -1,0 +1,8 @@
+data=
+1	0
+實森　　美祐	9.50	0.11	2.0	１		IP	２		IP	１		G1	２		SG	１		SG	１		G2	６		G2	１		IP	１		IP	１		G1
+中村　かなえ	3.80	0.18	2.7	４		IP	５		IP	５		IP	５		IP	３		IP	３		IP	６		IP	２		IP	６		IP	３		IP
+寺田　　空詩	6.10	0.17	3.0	６		IP	４		IP	２		G3	３		IP	３		IP	４		IP	３		IP	１		IP	３		IP	１		IP
+野田　　彩加	2.70	0.18	3.0	５		IP	４		IP	３		G3	５		G2	転		G2	６		IP	５		G3	３		G3	５		G3	６		G3
+畑田　　希咲	1.90	0.25	4.7	５		IP	６		G3	４		IP	５		IP	５		IP	６	6	IP	６		IP	６	6	IP	６		IP	４		IP
+登　　みひ果	3.20	0.15	2.3	５		IP	Ｆ		IP	６		IP	４		IP	２	5	G3	１		G2	５		IP	６		IP	６		G3	５		IP

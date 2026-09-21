@@ -1,0 +1,8 @@
+data=
+1	0
+西尾　　亮輔	7.10	0.17	3.1	２		IP	４		IP	２		IP	２		IP	２		IP	２		IP	１		IP	６		IP	３		IP	１		IP
+澤　　　大介	3.30	0.22	4.5	４		IP	６		IP	５		IP	４		IP	５		IP	４		IP	３		IP	４		IP	４		IP	５		IP
+妹尾　　忠幸	5.90	0.17	3.4	１		IP	４		IP	２		IP	２		IP	４		IP	４		IP	３	4	IP	６	6	IP	１		IP	４	4	IP
+田川　　大貴	5.40	0.14	2.4	２		IP	５	5	IP	１		IP	４		IP	４		IP	２		IP	４		IP	４		IP	２		IP	５	6	IP
+川合　　理司	3.30	0.21	4.5	５	6	IP	４		IP	６		IP	３		IP	３		IP	３		IP	５	4	IP	６		IP	４		IP	６		G3
+西原　　明生	2.00	0.23	5.3	５		IP	６		IP	５		IP	５	5	IP	６		IP	４		IP	６		IP	５		IP	４	4	IP	６		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+森口　　和紀	7.60	0.21	4.0	１		IP	１		IP	１		IP	４		IP	３		IP	１		IP	３		IP	２		IP	３		IP	３		IP
+藤原　　孝斗	5.22	0.17	3.3	６		IP	２		IP	２		IP	３		IP	４		IP	３		IP	５		IP	エ		IP	１		IP	５		IP
+澤崎　　雄哉	5.70	0.15	3.5	３		IP	５	2	G3	６		IP	３		IP	１		IP	５		IP	２		IP	４		IP	２		IP	１		IP
+西岡　　育未	4.00	0.15	2.3	４		IP	６		IP	１		G3	４		G3	６		IP	６		IP	６		IP	３		IP	４		IP	２		G3
+土屋　　智則	6.30	0.16	3.8	２	3	IP	２		IP	６		IP	４		IP	１		G1	５		G1	３		IP	４		SG	３	2	G1	２		G1
+中野　　孝二	2.33	0.19	3.6	５		IP	６		IP	５	5	IP	４		IP	不		IP	５		IP	３		IP	６		IP	５		IP	６		IP

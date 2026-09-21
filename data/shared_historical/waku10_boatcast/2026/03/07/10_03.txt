@@ -1,0 +1,8 @@
+data=
+1	0
+田路　　朋史	8.10	0.20	3.7	１		IP	２		IP	６		IP	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		IP
+加藤　　優弥	4.80	0.14	3.0	６		IP	５		IP	２		IP	５		IP	１	3	IP	１		IP	４		IP	２		IP	５		IP	６		IP
+前原　　大道	8.10	0.13	2.6	１		G1	２		G1	４		G1	５		IP	２		IP	１		IP	２		IP	１		IP	１		IP	３		IP
+芹澤　　克彦	4.90	0.14	3.0	６		IP	２		IP	５		IP	５		IP	１		IP	４		IP	４		IP	２		IP	２		IP	５		IP
+向井田　直弥	3.10	0.15	3.2	６	6	IP	５		IP	６	4	IP	６	6	IP	１		IP	５	3	IP	６		IP	６	6	IP	４	6	IP	２		IP
+松竹　　大輔	2.70	0.17	4.0	４		IP	５		IP	６		IP	４		IP	５		IP	５	5	IP	４	5	IP	３		IP	６		IP	６		IP

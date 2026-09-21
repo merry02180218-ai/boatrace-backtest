@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　茂高	6.40	0.16	2.6	１		IP	１		IP	５		IP	１		G3	２		G3	６		IP	４		IP	２		IP	６		IP	１		IP
+柴田　　直哉	5.60	0.20	3.5	３	3	IP	２		IP	６		IP	２		IP	２		IP	２		IP	６		IP	４		IP	４		IP	２		IP
+櫻本　あゆみ	4.80	0.17	3.8	６		IP	３		IP	２		IP	５		IP	５		IP	６		IP	３		IP	３		IP	１		IP	３		G3
+山下　　和彦	4.50	0.12	2.8	６	6	IP	４		IP	３		IP	５		IP	５		IP	４		IP	２		IP	２		G1	６		IP	２		IP
+浦田　　信義	4.00	0.19	3.7	３		IP	５		IP	６		IP	４	6	IP	５		IP	６		IP	２		IP	３		IP	３		IP	欠		IP
+黒井　　達矢	5.50	0.23	4.3	２	3	IP	２		G1	５		IP	５		IP	２		IP	５	5	IP	４		IP	３		IP	３		IP	３		IP

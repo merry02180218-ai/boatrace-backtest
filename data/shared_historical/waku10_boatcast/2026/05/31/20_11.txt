@@ -1,0 +1,8 @@
+data=
+1	0
+重木　　輝彦	10.20	0.11	2.4	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		G1	１		G1	１		G1
+田路　　朋史	5.40	0.15	2.9	２		IP	１		IP	６		IP	４		IP	６		IP	４		IP	５		IP	１		IP	２		IP	３		IP
+田村　　　慶	3.89	0.22	3.9	６		IP	５		IP	４		IP	３		IP	６		IP	１		IP	３		IP	６		IP	４		IP	落		IP
+石井　　伸長	5.40	0.17	2.6	４		IP	４		IP	２		IP	６		IP	３		IP	１		IP	６		IP	４	5	IP	１		IP	３		IP
+品川　二千翔	5.80	0.16	4.2	２		IP	３		IP	５		IP	２		IP	３		IP	５		IP	２		IP	１		IP	４		IP	４		IP
+鈴木　　勝博	3.80	0.15	2.7	５		IP	３		IP	３		IP	６		IP	５		IP	３		IP	５		IP	４	5	IP	２		IP	６		IP

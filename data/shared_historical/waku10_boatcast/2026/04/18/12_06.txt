@@ -1,0 +1,8 @@
+data=
+1	0
+多羅尾　達之	7.40	0.14	2.6	１		IP	３		IP	２		IP	１		IP	２		IP	２		IP	５		IP	４		IP	１		IP	２		IP
+安井　　瑞紀	5.50	0.15	2.5	３		IP	２		IP	２		G3	１		G3	５		G3	５		IP	２		G1	３		G1	６		G1	６		IP
+古川　　　健	2.20	0.17	2.8	４		IP	５		IP	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP	４		IP	５		IP
+冨田　　秀幸	3.70	0.16	3.8	４		IP	３		IP	６		IP	５		IP	４	5	IP	３		IP	３		IP	４		IP	５	5	IP	５		IP
+西丸　　敦基	4.70	0.13	3.2	５		G3	２		G3	５		G3	３		IP	４		IP	２		IP	２		IP	６		IP	３		IP	５		IP
+黒井　　達矢	5.00	0.24	3.9	３		IP	５		G1	４	5	IP	２	3	IP	２		G1	５		IP	５		IP	２		IP	５	5	IP	４		IP

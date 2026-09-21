@@ -1,0 +1,8 @@
+data=
+1	0
+広次　　　修	8.00	0.14	3.2	１		IP	５		IP	２		IP	３		IP	３		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+永井　　聖美	7.30	0.19	2.8	２		IP	６		IP	４		G3	１		IP	１		IP	２		IP	２		IP	２		IP	２		IP	２		IP
+花本　　夏樹	3.50	0.21	4.3	６		IP	５		IP	４		IP	６		IP	６		IP	２		IP	３		IP	５		IP	３		IP	４		IP
+仲道　　大輔	6.33	0.15	3.0	３	5	IP	４		IP	転		IP	４		IP	２		IP	３		IP	３	5	IP	２		IP	２		IP	３		IP
+木下　　陽介	3.20	0.16	3.2	５		IP	４		IP	６		IP	５	6	IP	５	4	IP	６		IP	３		IP	３		IP	５		IP	３		IP
+高濱　　芳久	5.70	0.16	2.6	３	2	IP	６	2	IP	２	2	IP	３	2	IP	５	3	IP	３		IP	３	4	IP	３	2	IP	２		IP	２		IP

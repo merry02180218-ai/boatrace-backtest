@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　　歩	7.90	0.19	2.9	３		G3	１		G3	１		IP	２		IP	１		IP	４	2	IP	１		IP	１		IP	１		IP	６		IP
+坂野　さくら	4.60	0.15	2.9	５		G3	１		G3	２		IP	４		IP	４		IP	６		G3	３		G3	６		IP	４		IP	３		G3
+松瀬　　弘美	5.10	0.16	2.9	２		G3	３		G3	４		G3	５		G3	３		IP	４		IP	１		IP	４		IP	６		IP	３		IP
+水口　　由紀	3.30	0.19	3.4	５		G3	５		IP	３		IP	６		IP	３		IP	２		IP	４		G3	６		G3	６		IP	５		IP
+武藤　　綾子	3.30	0.20	3.8	５	6	G3	６		G3	２		IP	４		IP	４		IP	３		IP	５		IP	５		IP	５		G3	５		G3
+山下　　友貴	4.10	0.23	4.7	５		IP	５		IP	３	5	IP	４		IP	５		G3	５		G3	３		IP	６		IP	３		IP	２		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+東口　　　晃	5.40	0.18	4.2	６		IP	２		IP	３		IP	６		IP	３		IP	２		IP	１		IP	４		IP	３		IP	４		IP
+川北　　浩貴	7.33	0.16	3.2	３		IP	１	3	IP	２		IP	６		IP	２		IP	２		IP	３		IP	２		IP	欠		IP	１		IP
+太田　　和美	5.50	0.10	1.7	２		G1	４		IP	３		IP	４		IP	５		IP	４		IP	２		IP	４	4	G1	６		G1	１		G1
+枝尾　　　賢	5.60	0.12	2.9	２		IP	６		IP	５		IP	３		IP	５		G2	エ		IP	２		IP	２		IP	１		IP	２		IP
+新田　　智彰	4.20	0.15	2.9	３		IP	５	4	G3	３		IP	１		IP	５		IP	５		IP	６		IP	６		IP	３		IP	３		IP
+松尾　　　祭	3.20	0.15	3.4	２		IP	４		IP	５		G2	５		G2	４		IP	６		IP	４		IP	６		IP	５		IP	５		IP

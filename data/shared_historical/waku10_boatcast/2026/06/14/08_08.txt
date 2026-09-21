@@ -1,0 +1,8 @@
+data=
+1	0
+西山　　貴浩	10.00	0.11	2.4	１		G1	３		SG	１		G1	１		G1	２		IP	１		IP	１		IP	２		G1	１		G1	１		G1
+赤岩　　善生	7.00	0.15	2.6	３		G1	落		G3	５		G3	５		IP	２		IP	２		IP	３		G1	１		IP	１		IP	２		IP
+竹田　　和哉	7.10	0.18	3.4	３		IP	３		G3	３	4	G3	３		IP	３		IP	４		IP	２		IP	１		G1	２		IP	１		IP
+石本　　裕武	6.70	0.14	2.8	５		SG	１		G1	３		IP	２		IP	２		G1	１		G1	１		IP	４		IP	６		G1	６		G1
+白神　　　優	6.70	0.11	1.7	２		G1	５		G1	１		IP	６		IP	４		IP	２	4	G1	５	6	G1	１		IP	２		IP	１		IP
+吉田　　裕平	8.50	0.16	3.5	２		SG	６		SG	２		G1	１		G1	４		G1	１	4	IP	１	5	IP	２		G1	２		G1	２		G1

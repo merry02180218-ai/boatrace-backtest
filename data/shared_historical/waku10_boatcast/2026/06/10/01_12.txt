@@ -1,0 +1,8 @@
+data=
+1	0
+塚越　　海斗	9.70	0.14	3.1	１		IP	１	2	IP	２		G3	１	2	G3	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+野村　　　誠	6.60	0.17	3.0	４		IP	２		IP	１		IP	１		IP	２		IP	２		IP	６		IP	５		IP	３		IP	２		IP
+伏田　　裕隆	3.60	0.22	4.3	２		IP	５	6	IP	５	6	IP	４		IP	４		IP	５		IP	５		IP	５		IP	５		IP	２		IP
+三好　　勇人	6.20	0.14	2.8	２		IP	１		G3	４		IP	１		IP	２		IP	３		IP	５		IP	４		IP	４		IP	３		IP
+柘植　　政浩	4.90	0.12	3.2	２		IP	３		IP	５		IP	２		IP	６		IP	４		IP	５		IP	３		IP	５		IP	２		IP
+山ノ内　雅人	4.80	0.14	3.0	３		IP	４		IP	２		IP	３		IP	５		IP	３		IP	２		IP	５		IP	５		IP	４		IP

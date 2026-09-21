@@ -1,0 +1,8 @@
+data=
+1	0
+角谷　　健吾	8.20	0.14	2.5	１		IP	１		IP	２		IP	３		IP	２		IP	１		IP	２		IP	２		G1	１		IP	５		IP
+松下　　一也	7.11	0.14	2.1	欠		IP	２		IP	４		IP	１	3	IP	１		IP	２		IP	４		IP	１		IP	５		IP	２		IP
+守屋　　美穂	6.10	0.15	3.9	２		G3	１		G1	４		IP	４		IP	１		IP	２		IP	３		G1	５		G1	４		IP	６		G1
+山本　　浩次	3.40	0.15	2.4	５		G3	５		IP	４		IP	１		IP	６		IP	４		IP	４		IP	５		IP	６	6	IP	４		IP
+廣瀬　　将亨	4.80	0.12	2.8	５	6	IP	２		IP	３	4	IP	３		IP	４		IP	６	4	IP	３		G2	４		IP	３	6	G3	４		IP
+新井　　英孝	3.60	0.14	2.8	４		IP	４		IP	６		IP	１		IP	３	5	IP	６		IP	４		IP	６		IP	４		IP	６	5	IP

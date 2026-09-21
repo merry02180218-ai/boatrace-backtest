@@ -1,0 +1,8 @@
+data=
+1	0
+田村　　美和	4.20	0.21	4.0	５		G3	４		G3	４		G3	５		IP	３		IP	５		G3	４		IP	１		IP	３		IP	５		IP
+松本　　庸平	4.30	0.22	5.0	２		IP	４		IP	６		IP	５		IP	２		IP	２		IP	６		IP	６		IP	３		IP	４		IP
+小林　　京平	5.20	0.17	4.7	４		IP	５		IP	２		IP	５	2	IP	１		IP	５		IP	２		IP	３		IP	４		IP	３		IP
+林　　　祐介	4.40	0.13	2.4	６		IP	３		IP	４		IP	２		IP	５		IP	６		IP	４		IP	２		IP	２		IP	５		IP
+服部　　幸男	6.50	0.13	2.3	４	4	IP	４		IP	２		SG	６		IP	６		IP	１	4	IP	２		G1	１		IP	１		IP	３		IP
+野村　　羽玖	2.50	0.23	4.9	３		IP	６		IP	３		IP	５		IP	６		IP	４		IP	５		IP	６		IP	６		IP	６		IP

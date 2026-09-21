@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　　勝	7.70	0.18	3.4	１		IP	１		IP	３		IP	１		IP	３		IP	６		IP	２		IP	１		IP	１		IP	３		IP
+森作　　広大	4.00	0.15	3.8	４		IP	４		IP	３		IP	２		IP	６		IP	３		IP	６		IP	４		IP	５		IP	４	3	IP
+田中　　京介	5.70	0.15	2.3	２		IP	３		IP	５		IP	４		IP	３		IP	６		IP	１		IP	３		IP	２		IP	３		IP
+山ノ内　雅人	5.60	0.12	2.1	３		IP	５		IP	３		IP	３		IP	１		IP	４		IP	５		IP	１		IP	４		IP	３		IP
+谷川　　将太	3.60	0.18	3.5	６		IP	６		IP	２		IP	３		IP	５		IP	６		IP	４		IP	６		IP	１		IP	５		IP
+大峯　　　豊	7.30	0.11	1.9	５		G3	３		G1	６		G1	３		G1	１	4	IP	１		IP	３		G2	２	4	IP	１		IP	２		SG

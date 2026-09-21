@@ -1,0 +1,8 @@
+data=
+1	0
+廣中　　良一	7.30	0.16	2.1	３		G3	１		IP	１		IP	５		IP	１		G3	１		IP	１		IP	１		IP	６		IP	４		IP
+石塚　　裕介	6.60	0.13	1.8	５		G3	１		IP	１		IP	１		IP	２		IP	３		IP	２		IP	４		IP	３	3	IP	５		IP
+久保原　秀人	3.50	0.15	3.7	５		IP	３		IP	２		IP	６	4	IP	４		IP	６		IP	４		IP	６		IP	３		IP	５		IP
+松尾　　基成	2.50	0.17	3.7	５		IP	５		IP	４		IP	６		IP	２		IP	５		IP	６		IP	６		IP	５		IP	５		IP
+加藤　　啓太	3.20	0.18	3.2	２		IP	６		IP	３		IP	５		IP	６		IP	６		IP	５		IP	６		IP	３		IP	４		IP
+高橋　　真吾	2.60	0.13	3.6	４		IP	５		IP	４		IP	４		IP	６		IP	６		IP	６		IP	３		IP	６		IP	５		IP

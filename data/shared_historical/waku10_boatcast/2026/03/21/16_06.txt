@@ -1,0 +1,8 @@
+data=
+1	0
+久富　　政弘	8.50	0.19	3.6	１		IP	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	６		IP	１		G3
+森下　　　勇	2.80	0.21	3.4	４		IP	６		IP	３		IP	６		IP	５		IP	６		IP	５		IP	４		IP	３		IP	６		IP
+松本　　博昭	7.00	0.18	3.6	２		IP	３		IP	１		IP	５		IP	１		IP	４		IP	２		IP	３		IP	３		IP	１		IP
+西村　　秀樹	2.60	0.18	3.7	５		IP	６		IP	６	5	IP	５		IP	６	6	IP	３		IP	３		IP	６		IP	５		IP	４		IP
+本岡　　勝利	3.20	0.21	4.1	５		IP	５		IP	４		IP	４		IP	４		IP	４		IP	４		IP	５		IP	４		IP	５		IP
+松尾　　宣邦	3.00	0.23	5.2	５		IP	５		IP	３		IP	６	5	IP	４	5	IP	５		IP	６		IP	４		IP	４		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　啓太	4.90	0.16	2.8	６		IP	５		IP	２		IP	２		IP	５		IP	２		IP	５		IP	３		IP	４		IP	２		IP
+佐々木　大河	6.10	0.14	3.5	５		IP	１		IP	４		IP	２		IP	２		IP	６	3	IP	３		IP	３		G2	３		G2	２		IP
+宮崎　　　奨	6.80	0.15	3.6	１		IP	４	4	IP	３		IP	２		IP	２		IP	２		IP	５		G3	２		IP	３		IP	２		IP
+樋江井　　舞	4.44	0.13	2.7	６		G3	４		IP	２		IP	６		IP	２		IP	５		IP	４		IP	３		IP	欠		IP	３		IP
+東本　　勝利	4.20	0.17	3.7	２	6	G3	５		IP	２		IP	４		IP	５	4	IP	５		IP	５		IP	５		G3	４		IP	３		IP
+赤松　　咲香	1.40	0.17	3.3	６		IP	６		IP	６		IP	妨		IP	４		G3	６		IP	６		IP	５		IP	５		IP	６		IP

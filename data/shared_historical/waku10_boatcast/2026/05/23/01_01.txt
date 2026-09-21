@@ -1,0 +1,8 @@
+data=
+1	0
+木村　　浩士	7.50	0.17	2.9	６		IP	１		IP	１		IP	４		IP	２		IP	２		IP	１		IP	４		IP	１		IP	１		IP
+蒲原　　健太	4.10	0.18	3.8	３		IP	２		IP	４		IP	６		IP	５		IP	５		IP	１		IP	５		IP	５		G2	５		G2
+鈴木　　茂高	5.50	0.18	3.2	３		IP	６		IP	４		IP	４		IP	２		IP	２		IP	２		IP	転	4	IP	２	5	IP	２		IP
+丹下　　　将	7.10	0.16	2.8	４		IP	３	5	IP	１		IP	２		IP	２		IP	３		IP	２		IP	２		IP	４		IP	２		IP
+松下　　誉士	3.30	0.17	4.3	６		IP	１		IP	２		IP	６		IP	６	6	IP	６		IP	４	6	IP	４		IP	５		IP	６		IP
+宮本　　夏樹	4.67	0.19	3.9	３		IP	転		IP	４		IP	２		G3	４		G3	５		IP	３		IP	４		IP	４		IP	４		IP

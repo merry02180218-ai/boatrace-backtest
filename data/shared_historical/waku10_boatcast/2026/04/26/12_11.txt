@@ -1,0 +1,8 @@
+data=
+1	0
+藤岡　　俊介	10.00	0.12	2.0	１		IP	１		IP	１		IP	２		IP	１		IP	１		G1	１		IP	１		IP	１		IP	１		IP
+岡田　　憲行	4.90	0.21	3.9	２	1	IP	１		IP	６		IP	３		IP	５		IP	３		IP	４		IP	４		IP	５		IP	３		IP
+篠田　　優也	7.40	0.18	2.6	１		IP	２	4	IP	２		IP	５		IP	１		IP	１		IP	２		IP	２		IP	４		IP	３		IP
+宇土　　泰就	3.10	0.16	3.2	２		IP	４		IP	２		IP	５		IP	６		IP	５		IP	６		IP	５		IP	６		IP	５	6	IP
+越智　　照浩	3.00	0.15	3.6	６		IP	６		IP	４		IP	５		IP	エ		IP	４		IP	６		IP	４		IP	４	4	IP	３		IP
+庄司　樹良々	4.60	0.20	3.4	３		IP	３		IP	４		IP	５		IP	２		IP	４		IP	５		G3	３		G3	４		IP	４		IP

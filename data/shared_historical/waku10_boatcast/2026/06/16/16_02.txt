@@ -1,0 +1,8 @@
+data=
+1	0
+岡村　　将也	7.00	0.13	3.0	５		IP	Ｆ		IP	１		IP	２		IP	１		IP	１		IP	３		IP	３		IP	１		IP	２		IP
+岩田　　　凌	2.20	0.21	4.2	２		IP	４		IP	６		IP	Ｆ		IP	５		IP	５		IP	６		IP	６		IP	５		IP	６		IP
+島田　　一生	2.70	0.16	4.1	４		IP	５		IP	５		G3	４		G3	６		IP	２		IP	５		IP	６		IP	５		IP	６		IP
+木下　　陽介	2.70	0.14	3.3	６	6	IP	６		IP	２		IP	６		IP	３		IP	４		IP	６		IP	６		IP	５	5	IP	５		IP
+石田　　勇斗	4.00	0.11	2.6	３		IP	６		IP	４		IP	６		IP	３		IP	４		IP	６		IP	１		IP	６		IP	３		IP
+出口　　飛龍	1.10	0.21	4.9	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+眞田　　英二	8.40	0.18	3.1	２		IP	２		IP	１		IP	２		IP	１		IP	２		IP	１		IP	３		IP	３		G3	１		IP
+村上　　功祐	6.40	0.13	2.6	２		IP	４		IP	２		IP	２		IP	２		IP	４		IP	５	3	G3	３		IP	２		IP	２		IP
+平高　　奈菜	5.90	0.16	3.6	２		G2	６		G2	２		G2	４		G2	３		SG	２		G3	６		G1	５		G1	３		IP	３		G1
+堀本　　和也	5.40	0.12	3.2	１		IP	６		IP	４		IP	３		IP	４		IP	５		SG	３		G1	６		G1	４		G1	１		G1
+藤田　　浩人	4.50	0.16	3.4	５	6	IP	２		IP	３		IP	６		IP	３		IP	４	6	IP	４		IP	４		IP	５		G2	３		G2
+秋田　健太郎	2.50	0.19	4.8	５		IP	５		IP	５		IP	５		IP	２		IP	５	5	IP	５	5	IP	５		IP	６		IP	５		IP

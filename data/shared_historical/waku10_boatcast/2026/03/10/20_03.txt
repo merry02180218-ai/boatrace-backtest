@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　孝弘	7.00	0.15	3.2	Ｆ		IP	１		IP	２		IP	１		IP	１		IP	２		IP	３		IP	３		IP	１		IP	５		IP
+夏山　　亮平	6.30	0.16	2.7	１		IP	３		IP	１		IP	２		IP	６		IP	５		IP	２		IP	３		IP	２		IP	４		IP
+木山　　和幸	4.30	0.17	3.0	２		IP	４		IP	５		IP	６		IP	１		IP	４		IP	４		IP	６		IP	６		IP	２		IP
+向後　　龍一	3.80	0.19	3.9	５	5	IP	４		IP	２		IP	３		IP	６		IP	３		IP	４		IP	５		IP	４		IP	６		IP
+深川　　和仁	3.40	0.18	4.1	４		IP	２		IP	６		IP	３		IP	５		IP	５		IP	２		IP	６		IP	６		IP	６	4	IP
+小坂　　尚哉	4.40	0.16	2.3	２	5	IP	５		IP	３		IP	４		G1	５		G1	３		IP	３		IP	４	5	IP	６		G1	６		G1

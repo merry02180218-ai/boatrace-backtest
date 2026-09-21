@@ -1,0 +1,8 @@
+data=
+1	0
+下出　　卓矢	8.00	0.12	2.2	１		IP	５		IP	１		IP	１		IP	１		IP	１		G2	１		IP	Ｆ		IP	２		IP	２		IP
+芹澤　　克彦	4.60	0.13	3.0	１		IP	５		IP	６		IP	１		IP	３		IP	４		IP	３		IP	４		IP	５		IP	６		IP
+岸本　　　隆	6.00	0.17	3.4	２		IP	４		IP	３		IP	５		IP	３	4	IP	２		IP	２		IP	３		IP	３		IP	３		IP
+中嶋　　世奈	2.20	0.24	4.4	５		IP	５		IP	４		IP	６		IP	６	3	IP	６		IP	５	5	G3	３		G3	５		IP	６		IP
+新出　　浩司	4.40	0.21	3.2	５		IP	３		IP	６	6	IP	４		IP	３		IP	６		IP	４		IP	３		IP	２		IP	３	6	G3
+上村　　宏太	2.80	0.17	3.1	４		IP	転	5	IP	５		IP	２		IP	５		IP	５		IP	６		IP	３		IP	５		IP	６		IP

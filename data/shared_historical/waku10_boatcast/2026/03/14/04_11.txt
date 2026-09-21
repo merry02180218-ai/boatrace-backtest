@@ -1,0 +1,8 @@
+data=
+1	0
+白神　　　優	9.80	0.11	1.9	３		IP	１		IP	１		G1	１		G1	１		IP	１		IP	１		IP	１		IP	２		G1	１		IP
+渡辺　　浩司	7.80	0.12	2.6	３		IP	３		IP	２		IP	２		IP	１		IP	５	3	IP	１	3	G1	２		G1	２		IP	１		IP
+梶野　　学志	5.56	0.14	2.9	２		IP	４		IP	２		IP	２		IP	２		IP	２		IP	６		IP	落		IP	４		G3	６		G3
+杉村　　賢也	6.10	0.16	2.9	５		IP	６		G3	１		IP	４		IP	２		IP	１		IP	３		IP	１		IP	２		IP	５		IP
+村松　　将平	5.10	0.15	3.1	６		IP	３		IP	２		IP	４	6	IP	５		IP	５		IP	２		IP	１		IP	２		IP	５	4	IP
+金子　　龍斗	3.60	0.17	3.0	６	5	IP	転		IP	３		IP	６		IP	２		IP	６		IP	２	5	IP	３		IP	４		IP	６		IP

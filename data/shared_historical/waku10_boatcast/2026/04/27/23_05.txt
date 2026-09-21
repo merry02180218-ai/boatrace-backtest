@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　義明	7.80	0.13	3.2	１		IP	４		IP	１		IP	２		IP	１		IP	１		G3	４		G3	２		IP	１		IP	４		IP
+蒲原　　健太	5.20	0.16	4.1	５		IP	５		IP	１		IP	５		IP	５		G2	５		G2	５		IP	１		IP	１		IP	３		IP
+富田　　恕生	4.00	0.18	4.5	４		IP	１		IP	６		IP	４		IP	４		G3	６		G3	３		IP	落		IP	４		IP	３		IP
+高木　　圭大	3.90	0.12	2.2	５		IP	３		IP	５		IP	３		IP	４		IP	６		IP	４		IP	４		IP	２		IP	５		IP
+丹下　　　将	5.90	0.11	1.9	３		IP	４		IP	１		IP	３		IP	３		IP	２		IP	６		IP	１		IP	４		IP	４		IP
+井上　　忠政	5.90	0.16	4.5	３		G1	５		G1	２		G1	３		G1	６		G1	４		G1	２		G1	６		G1	４		G1	２		IP

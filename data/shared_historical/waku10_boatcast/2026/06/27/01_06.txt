@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　祐也	9.30	0.14	3.3	２		IP	１		G1	１		G1	２		G2	１		IP	１		IP	１		IP	１		G1	１		G1	６		G1
+長谷川　　充	6.60	0.18	4.1	４		IP	２		IP	２		IP	３		IP	３		IP	４		IP	２		IP	２		IP	２		IP	３		IP
+下河　　誉史	4.00	0.16	3.5	４		IP	４		IP	２		IP	３		IP	４		IP	６		IP	６		IP	３		IP	５		IP	４		IP
+山口　　晃朋	5.00	0.13	2.9	１		IP	４		IP	１		IP	３		IP	６		IP	５		IP	２		IP	６		IP	４		IP	４	5	IP
+中島　　浩哉	3.70	0.19	3.9	５		IP	４		IP	３		IP	３		IP	５		IP	４		IP	４		IP	６	6	G3	５		G3	３		IP
+深澤　　達徳	3.89	0.21	4.5	３		IP	４		IP	５		IP	３		G3	６		IP	４		IP	エ		IP	５		IP	３		IP	４		IP

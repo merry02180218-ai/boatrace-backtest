@@ -1,0 +1,8 @@
+data=
+1	0
+妻鳥　　晋也	7.00	0.19	4.0	４		IP	２		IP	１		G3	１		IP	５		IP	３		IP	４		IP	１		IP	２		G3	２		IP
+森定　　晃史	6.00	0.18	3.2	４		IP	３		IP	２		IP	２		IP	３		IP	５		IP	５		IP	１		IP	１	1	IP	４		IP
+大塚　　浩二	3.20	0.20	3.4	６		IP	６		IP	６		IP	３		IP	５		IP	４	5	IP	６		IP	４		IP	２		IP	４		IP
+岡　　　祐臣	5.40	0.17	3.3	１		IP	４		IP	４		IP	２		IP	６		IP	６		IP	１	5	IP	３		IP	４		IP	４	2	IP
+坪井　　康晴	6.10	0.16	3.9	１		IP	６		G1	４		G1	３		G1	４		G1	３		G1	４		G1	４	6	G1	４		G2	１	4	IP
+渡邊　　雄斗	2.70	0.17	3.7	６		IP	５		IP	５		IP	３		IP	６		IP	６		IP	２	5	IP	５		IP	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+岡部　　　哲	6.90	0.18	3.2	３		IP	４		IP	１		IP	１		IP	２		IP	２		IP	２		IP	２		IP	３		IP	６		IP
+佐竹　　太一	5.80	0.17	3.3	２		IP	３		IP	６		IP	４		IP	２		IP	３		IP	２		IP	６		IP	２		IP	２		IP
+山本　　英志	6.60	0.13	2.3	１		IP	４		IP	１		IP	３		IP	５		IP	３		IP	３		IP	２		IP	３		IP	２		IP
+藤生　　雄人	5.10	0.20	3.4	６		IP	２		IP	３	5	IP	３		IP	５		IP	３		IP	１		IP	５		IP	３		IP	５		IP
+網代　　良芽	4.40	0.14	2.7	４		IP	３		IP	２		IP	６		IP	４		IP	３		IP	３		IP	６		IP	３		IP	５		IP
+木下　虎之輔	1.40	0.17	3.1	６		IP	６		IP	６		IP	６		IP	６		IP	Ｆ		IP	４		IP	５		IP	５		IP	６		IP

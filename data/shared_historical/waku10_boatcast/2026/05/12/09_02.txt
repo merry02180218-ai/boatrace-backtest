@@ -1,0 +1,8 @@
+data=
+1	0
+山下　　流心	7.30	0.13	2.4	１		IP	３		IP	３		IP	６		G3	４		IP	１		IP	１		IP	２		IP	２		IP	１		IP
+石川　　真二	6.40	0.15	2.4	２		IP	３		IP	２	1	IP	１	1	IP	２		IP	６		IP	３		IP	１	1	IP	６		IP	３		IP
+澤　　　大介	3.10	0.16	3.5	２	4	IP	５		IP	６		IP	転		IP	４		IP	６		IP	５		IP	４		IP	２		IP	６	4	IP
+永井　　亮次	3.30	0.19	4.1	６		IP	４		IP	２		IP	３	5	IP	６	5	IP	５		IP	２	5	IP	６		IP	６		IP	６		IP
+中　　　亮太	7.10	0.15	2.1	１		IP	２		IP	２		IP	４		IP	３		G3	１	4	IP	４		IP	１		IP	２		G2	５		IP
+大峯　　　豊	4.90	0.14	2.6	６		G3	６	5	IP	６		IP	３		IP	５		G3	３		G1	６		G1	３		G1	１	4	IP	１		IP

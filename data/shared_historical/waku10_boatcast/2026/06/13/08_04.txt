@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　正樹	9.40	0.14	3.5	１		IP	１		G2	１		G2	４		IP	２		IP	１		G1	１		IP	１		IP	１		IP	２		G1
+馬場　　貴也	8.80	0.13	3.2	２		G1	１		G1	４		SG	５		G1	２		G1	２		IP	１		IP	１		G1	１		G1	２		SG
+桑原　　　悠	7.40	0.14	2.1	５		G1	３		G1	４		G1	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	６		IP
+土屋　　智則	7.00	0.14	3.0	４		G1	２	5	G1	４		IP	２		IP	３		IP	２		G1	４		G1	２		G1	１		G3	４		G3
+上野　真之介	7.90	0.13	3.8	１		G1	１		SG	５		SG	３	3	IP	３		IP	３		IP	２	4	IP	２		IP	２		G1	２		IP
+今泉　　友吾	5.60	0.16	3.8	２		IP	２		IP	３		IP	３		IP	６		G1	６		G1	５		G1	４		G1	４		G1	２	5	G1

@@ -1,0 +1,8 @@
+data=
+1	0
+大谷　　健太	8.00	0.19	3.5	３		IP	５		IP	２		IP	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP
+梅木　　敬太	5.30	0.19	3.5	２		IP	４		IP	２		IP	２		IP	３		IP	２		IP	４		IP	５		IP	４		IP	６		IP
+尾嶋　　一広	5.90	0.17	3.0	２		IP	４		G1	３		G1	２		G1	２		G1	４		G1	２		G3	４		IP	５		IP	５		IP
+森作　　雄大	5.60	0.15	1.7	１		G2	５		IP	２		IP	５		IP	１		IP	５		IP	６		IP	３		IP	４		IP	１		IP
+崎　　　利仁	2.80	0.23	3.8	５		IP	６		IP	６		G1	６		IP	５		IP	３		IP	４		IP	４		IP	４		IP	５		IP
+石川　　吉鎬	3.40	0.27	4.4	４	5	IP	２	5	IP	６		IP	４	5	IP	６		IP	６		IP	４		IP	４		IP	６		IP	３	5	IP

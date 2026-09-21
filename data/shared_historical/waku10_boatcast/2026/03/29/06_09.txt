@@ -1,0 +1,8 @@
+data=
+1	0
+高濱　　芳久	7.70	0.17	4.1	１		IP	６		IP	２		IP	１		IP	１		IP	１		IP	２		IP	３		IP	２		IP	３		IP
+山川　　雄大	4.67	0.17	4.2	６		IP	エ		IP	２		IP	４		IP	４		IP	４		IP	３		G3	２		G3	３		IP	６		IP
+中辻　　博訓	5.20	0.13	2.2	１		IP	４		IP	３		G3	３		G3	３		IP	４		IP	３		IP	６		IP	６		IP	２		IP
+品田　　直樹	4.60	0.18	3.5	３		IP	５	3	IP	４		IP	２		IP	２		IP	２	3	IP	３		IP	６		IP	６		IP	５		IP
+上野　　秀和	5.20	0.17	3.2	４	6	IP	４		IP	５		G3	１		IP	３		IP	３		IP	３		IP	５		G3	１		G3	５		IP
+岡田　　憲行	4.50	0.20	3.8	１	5	IP	５		IP	６		IP	６		IP	６		IP	３		IP	１	2	IP	４		IP	４		IP	３		IP

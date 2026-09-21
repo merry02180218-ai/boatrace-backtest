@@ -1,0 +1,8 @@
+data=
+1	0
+川原　　正明	9.80	0.17	2.4	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+後藤　　孝義	3.00	0.20	4.3	６		IP	４		IP	６		IP	５		IP	６		IP	４		IP	３		IP	６		IP	５		IP	２		IP
+三品　　隆浩	4.10	0.18	3.7	１		IP	６		IP	５		IP	４		IP	２		IP	４		IP	５		IP	４		IP	４		IP	５		IP
+大田　　直弥	4.67	0.23	4.9	５		IP	３		IP	転		IP	３		IP	５		IP	４		IP	５		IP	２		IP	２		IP	４		IP
+内山　　文典	5.00	0.20	3.1	３	6	IP	１		IP	３		IP	５		IP	３		IP	４		IP	３		IP	５		IP	５		IP	３		IP
+川島　　拓郎	2.90	0.21	4.7	４		IP	３		IP	６		IP	６		IP	４		IP	６		IP	３		IP	５		IP	５		IP	５		IP

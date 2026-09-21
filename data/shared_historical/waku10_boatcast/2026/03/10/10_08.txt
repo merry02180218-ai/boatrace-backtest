@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　守成	7.20	0.20	3.7	５		IP	４		IP	１		IP	１		IP	５		IP	２		IP	１		IP	３		IP	１		IP	１		IP
+守屋　　大地	6.00	0.17	3.9	２		IP	４	3	IP	１		IP	４		IP	３		IP	３		IP	３		IP	４		IP	４		IP	２		IP
+橋本　　年光	4.90	0.19	4.2	６		IP	４		IP	４		IP	３		IP	３		IP	４		IP	３		IP	４		IP	３		IP	２		IP
+近藤　　友宝	2.67	0.18	3.2	６		IP	４		IP	落		IP	５	5	IP	４		IP	４		IP	４		IP	６		IP	転		IP	４		IP
+堂原　　洋史	3.40	0.17	3.3	６	6	IP	２		IP	６		IP	５		IP	５		IP	４		IP	４		IP	４		IP	５		IP	３		G3
+鈴木　結平太	1.10	0.15	3.4	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

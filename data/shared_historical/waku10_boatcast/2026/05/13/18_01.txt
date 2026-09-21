@@ -1,0 +1,8 @@
+data=
+1	0
+小池　　哲也	6.40	0.15	3.5	４		IP	１		IP	２		IP	１		IP	１		IP	３		IP	妨		IP	５		IP	１		IP	４		IP
+内山　　峻輔	5.80	0.16	2.5	１	4	IP	２		IP	６		IP	３		IP	６		IP	４		G3	３	3	IP	１		IP	４		IP	２		IP
+梶山　　涼斗	4.90	0.13	2.7	３		IP	５		IP	３		IP	４		G3	６		G3	２	4	IP	４		IP	５		IP	２		IP	２		IP
+井上　　大輔	4.10	0.13	2.7	４		IP	５		IP	４		IP	３		IP	５		IP	５		G3	６		G3	３		IP	２		IP	３	5	IP
+樋口　　範政	3.30	0.18	4.2	５		IP	４		IP	１		IP	５		IP	４	6	IP	６		IP	４		IP	５	6	IP	５		IP	５		IP
+八戸　　琉楓	2.10	0.21	4.8	６		IP	６		IP	５	5	IP	６		IP	１		IP	６		IP	６		IP	５		IP	６		IP	６		IP

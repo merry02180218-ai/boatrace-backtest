@@ -1,0 +1,8 @@
+data=
+1	0
+花田　　和明	9.80	0.13	2.4	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+佐藤　　右京	2.80	0.24	4.6	４		IP	６		IP	６		IP	３		IP	５		IP	４		IP	５	3	IP	４		IP	５		IP	５		IP
+河野　　　大	4.90	0.14	2.8	３		IP	４		IP	１		IP	４		IP	１		IP	５		IP	５		IP	４		IP	３		IP	６		IP
+春園　　功太	7.00	0.11	1.4	１		IP	４		IP	３		IP	３		G3	１		IP	３		IP	５		IP	２		IP	２		IP	１		IP
+長岡　　良也	3.20	0.19	3.9	６		IP	６		IP	５		IP	４		G1	４		IP	２		IP	６		IP	５		IP	２		IP	Ｆ	4	IP
+田代　　達也	4.10	0.19	4.0	３		IP	２		IP	６		IP	２		IP	５		IP	２		IP	５		IP	Ｆ		IP	５	5	IP	４		IP

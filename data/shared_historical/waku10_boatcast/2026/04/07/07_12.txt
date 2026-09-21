@@ -1,0 +1,8 @@
+data=
+1	0
+齊藤　　　仁	8.56	0.14	2.4	１		G3	１		G3	６		G3	２		G1	４		G1	１		G1	１		G1	欠		IP	１		IP	１		IP
+松山　　将吾	7.20	0.16	2.6	２		G3	３	3	G3	２	6	IP	１	3	IP	２		G1	６		G1	２		IP	２		IP	４		IP	２		IP
+畑　　　和宏	5.70	0.15	2.9	４		IP	６		IP	２		IP	３		IP	２		IP	５		IP	２	4	IP	３	4	IP	３		IP	２		IP
+馬野　　　耀	3.90	0.14	2.5	転		IP	４		IP	１		IP	３		IP	５		IP	２		IP	４		G3	６		IP	６		G2	６		G2
+刑部　亜里紗	4.40	0.21	4.6	５		IP	５		IP	３		IP	３		G1	３		IP	４		IP	３		IP	２		IP	５	6	IP	６		IP
+桑島　　和宏	5.50	0.16	4.0	５		IP	４		IP	３		G1	３		G1	２		G1	４		IP	３	3	IP	２		IP	４		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+下條　雄太郎	7.40	0.16	3.7	２		G2	１		G2	２		G1	１		G1	１		IP	５		IP	１		IP	２		G1	５	3	G1	Ｆ		IP
+丸尾　　義孝	7.40	0.13	3.2	２		IP	３		IP	１		IP	４		IP	１		IP	１		IP	２		IP	３		IP	５		IP	１		IP
+長谷川　雅和	6.20	0.15	3.4	２		IP	４		IP	２		IP	１		IP	２		IP	３		G3	４		IP	３		IP	４		IP	４		IP
+竹下　　大樹	6.40	0.14	3.5	１		IP	５		IP	３		IP	２		IP	２		IP	３		G1	１		IP	４		IP	５		IP	４		IP
+小川　日紀太	4.60	0.15	2.6	３		IP	４		IP	５		IP	４		IP	４		IP	６		IP	２		IP	１		IP	６		IP	３		IP
+村上　　功祐	3.80	0.14	4.2	５		IP	３		IP	６		IP	２		IP	５		IP	４		IP	２		IP	４		IP	６		IP	５	5	IP

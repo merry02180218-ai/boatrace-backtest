@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　　郡	10.30	0.18	3.6	１		IP	１		IP	１		IP	１		G1	１		G1	２		G1	１		G1	１		G1	１		IP	１		IP
+畑　　　竜生	7.10	0.17	3.0	３		IP	４		IP	３		IP	２		IP	２		IP	２		IP	２		IP	３		IP	２		G3	２		IP
+花田　　凱成	5.67	0.16	3.7	３		IP	２		IP	３		IP	３		IP	転		IP	２		IP	５		IP	２		IP	６		IP	３		IP
+廣中　　良一	4.30	0.16	2.7	６		IP	１		IP	３	5	IP	４		IP	６		IP	５		IP	６		IP	５		IP	２		IP	２		IP
+長谷川　雅和	4.44	0.19	3.7	３		IP	５		IP	６		IP	３		IP	転		IP	３		IP	２		G3	４		G3	５		IP	５		IP
+甲斐　　貴大	1.10	0.17	2.3	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP

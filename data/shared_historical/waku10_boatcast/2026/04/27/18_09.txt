@@ -1,0 +1,8 @@
+data=
+1	0
+石川　　吉鎬	5.90	0.18	4.0	６		IP	４		IP	３		IP	４		IP	２		IP	１		IP	５	2	IP	１		IP	４		IP	１		IP
+山口　　隆史	4.10	0.21	4.2	２		IP	５		IP	３		IP	５		IP	６		IP	１	3	IP	６		IP	６		IP	２		IP	５		IP
+広次　　　修	4.60	0.14	2.6	５		IP	３		IP	３		IP	２		IP	５		IP	５		IP	１		IP	５		IP	４		IP	４		IP
+海野　康志郎	5.20	0.13	3.3	６		G1	２		G1	５		G1	３		G1	４		G1	６		G1	４	2	IP	２		IP	３		G1	４	2	G1
+清水　　攻二	4.00	0.23	4.7	２	4	IP	２		IP	５		IP	５		IP	６		IP	５		IP	１		IP	４		IP	６		IP	５		G3
+加木　　　郁	2.60	0.18	3.9	５		IP	６		IP	５		IP	４		IP	４	5	IP	５	5	IP	４		IP	４		IP	５		IP	６		IP

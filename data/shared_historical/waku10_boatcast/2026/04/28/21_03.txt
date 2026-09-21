@@ -1,0 +1,8 @@
+data=
+1	0
+松崎　祐太郎	8.10	0.14	2.7	５		IP	１		IP	１		IP	１		IP	６		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+林　　　恵祐	2.60	0.20	4.5	２		IP	６		IP	３		IP	５		IP	６		IP	６		IP	６		IP	６		IP	４		IP	６	3	IP
+河野　　真也	4.33	0.22	4.3	３		IP	４		IP	１		IP	６		IP	６		IP	４		IP	４		IP	２		IP	不		IP	６	4	IP
+森口　　和紀	4.10	0.19	3.6	２		IP	２		IP	６		IP	４		IP	４		IP	３		IP	転	3	IP	５		IP	５		IP	３		IP
+西山　　貴浩	6.40	0.15	3.4	２		G1	３		G1	２		G1	４		SG	６		G1	３		G1	３		G1	２	4	G1	４		SG	６		G1
+松尾　　宣邦	2.20	0.21	5.1	５		IP	欠		IP	５		IP	５		IP	５		IP	３		IP	６	5	IP	４	5	IP	５		IP	６		IP

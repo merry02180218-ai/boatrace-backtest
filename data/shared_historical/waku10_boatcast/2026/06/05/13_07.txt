@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　　祭	8.10	0.16	2.8	１		IP	６		G2	２		G2	１		IP	２		IP	２		IP	２		IP	３		IP	１		IP	１		IP
+三角　　哲男	6.80	0.14	2.8	４		IP	１		IP	４	3	IP	１		IP	２	3	IP	２		IP	１		IP	５		IP	１		IP	５		IP
+西丸　　敦基	5.20	0.14	2.5	１		IP	１		IP	４		IP	４		IP	２		IP	４		IP	２		G3	５		IP	６		IP	６		IP
+丹下　　　将	6.70	0.18	3.1	３		IP	５		IP	４		IP	３	5	IP	１		IP	２		IP	２		IP	３		IP	２		IP	２		IP
+古賀　　智之	6.78	0.17	4.1	３		IP	不		IP	３		IP	１		IP	３		IP	１		IP	６		IP	２		G2	４	6	G2	２		IP
+泉　　　具巳	4.30	0.17	2.8	２		IP	６		IP	５		IP	６		IP	２		IP	１		IP	２		IP	６		IP	５	5	IP	５		IP

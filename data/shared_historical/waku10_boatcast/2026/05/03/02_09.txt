@@ -1,0 +1,8 @@
+data=
+1	0
+須藤　　博倫	9.00	0.15	2.6	２		IP	３		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP
+関口　　智久	6.20	0.13	2.4	１		IP	４		IP	３		IP	２		IP	２		IP	５		IP	１		IP	３		IP	４		IP	４		IP
+佐藤　　　翼	6.60	0.14	3.0	１		G1	５		G1	６		SG	４		G1	３		G1	４		G1	３		G1	２		G1	１		G1	４		G1
+谷津　　幸宏	4.80	0.12	2.8	２		IP	３		IP	３		G3	４		G3	４		G3	５		IP	６		IP	３		IP	２		IP	５		G1
+野田　　昇吾	1.60	0.19	4.0	５		IP	６		IP	５		IP	転		IP	５	4	IP	５		IP	６		IP	６	6	IP	６		IP	４		IP
+浅見　　宗孝	4.00	0.18	5.2	６		IP	４		IP	３	5	IP	５		IP	５		IP	４		IP	２		IP	３		IP	６		IP	３	4	IP

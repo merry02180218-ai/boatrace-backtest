@@ -1,0 +1,8 @@
+data=
+1	0
+渡邊　　裕貴	6.67	0.22	3.0	欠		IP	１		IP	１		IP	６		IP	６	6	IP	５		IP	１		IP	２		IP	１		IP	２		IP
+松崎　祐太郎	6.20	0.15	2.2	３		IP	３		IP	４		IP	不		IP	１		IP	２		IP	３		IP	３		IP	１		G3	３		IP
+福田　　雅一	5.00	0.17	2.7	３		IP	２		IP	４		IP	５	4	IP	３		IP	６		IP	１		IP	６		IP	２		IP	４		IP
+楠原　　翔太	6.00	0.15	3.6	３		IP	２		IP	３	5	IP	３		IP	４		IP	２		IP	３	6	IP	３		IP	４		IP	３		IP
+畑　　　竜生	5.80	0.18	3.8	３		IP	３		IP	４		IP	４		IP	３		IP	２		IP	２		IP	４		IP	３		IP	３		IP
+佐藤　謙史朗	3.40	0.23	5.0	５		IP	５		IP	６		IP	６	5	IP	４	5	IP	４	5	IP	４		IP	４		IP	４		IP	２		IP

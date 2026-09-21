@@ -1,0 +1,8 @@
+data=
+1	0
+松山　　裕基	6.40	0.15	4.1	２		IP	５		IP	１		IP	２		IP	４		IP	４		IP	３		IP	５		IP	１		IP	１		IP
+伊藤　　　栞	1.44	0.14	2.8	転		IP	落		IP	５		IP	６		IP	４		G3	５		G3	６		IP	６		IP	６		IP	６		IP
+村本　　大成	3.80	0.18	2.7	４		IP	５		IP	２		IP	３		IP	５		IP	５		IP	５		IP	３		IP	５		IP	４		IP
+小川　　知行	3.80	0.17	2.6	５		IP	５		IP	６	5	IP	５		IP	１		IP	２		IP	４	5	IP	３	6	IP	５		IP	６		IP
+齋藤　　智裕	3.11	0.19	4.3	５	6	IP	５		IP	４		IP	５		IP	５		IP	転		IP	４		IP	５		IP	４		IP	３		IP
+志賀　　美優	1.70	0.17	3.9	６		IP	６		IP	３		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP

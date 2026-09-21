@@ -1,0 +1,8 @@
+data=
+1	0
+岡谷　　健吾	7.30	0.15	4.2	２		IP	４		IP	１		IP	４		IP	１		IP	１		IP	１		IP	２		IP	６		IP	２		IP
+畔柳　　俊吾	6.33	0.21	4.5	落	3	IP	３		IP	３		IP	３		IP	１		IP	３	1	IP	４		IP	２		IP	１		IP	６		IP
+荒牧　　凪沙	5.00	0.21	4.6	１		IP	５		IP	６		IP	４		IP	３		IP	６		IP	２		IP	１		IP	３	5	IP	５		IP
+石倉　　洋行	7.40	0.10	2.3	３		IP	１		IP	３		IP	２		IP	２		IP	２		IP	３		IP	６		G1	１		IP	２	5	IP
+小野　　信樹	3.50	0.14	2.3	６	6	IP	２		IP	１		IP	５		IP	４		IP	５		IP	６		IP	４		IP	５		IP	６		IP
+向井田　佑紀	3.56	0.18	4.4	５		IP	５		IP	４		IP	４		IP	５		IP	４		IP	３		IP	４		IP	転		IP	４		IP

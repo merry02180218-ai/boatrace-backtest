@@ -1,0 +1,8 @@
+data=
+1	0
+酒井　　陽祐	6.00	0.16	3.8	４		G3	１		G3	６	2	IP	１		IP	６	2	IP	４		IP	２		IP	１		IP	３		IP	３		IP
+中村　　栄治	5.80	0.25	4.4	２	3	IP	２		IP	２		IP	３		IP	３		IP	４		IP	３		IP	Ｆ		IP	３		IP	３		IP
+吉武　　真也	4.89	0.18	3.0	４		IP	１		IP	４		IP	３		IP	転	4	IP	３		IP	５		IP	５		IP	４		IP	３		IP
+井上　　忠政	6.70	0.13	3.0	５		G1	１		G1	２		G1	５	6	G1	３		G1	２		G1	３		IP	４		G1	１	5	IP	４		IP
+水原　　　慎	4.00	0.19	3.2	６		IP	４		IP	３		IP	３		IP	３		IP	４	6	IP	３		IP	５	4	G3	６		IP	４		G3
+大庭　　元明	3.30	0.22	4.2	５		IP	４		IP	３		IP	６		IP	４		IP	Ｆ		IP	５		IP	２		IP	５		IP	４	5	IP

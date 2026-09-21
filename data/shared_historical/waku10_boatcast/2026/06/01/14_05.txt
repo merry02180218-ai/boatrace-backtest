@@ -1,0 +1,8 @@
+data=
+1	0
+金田　　幸子	7.30	0.16	3.7	１		IP	１		G3	２		IP	５		IP	６		IP	１		G3	２		G3	２		G3	１		IP	３		IP
+三嶌　さらら	5.60	0.16	3.1	５		IP	３		IP	２		IP	２		IP	１	1	IP	２		IP	６		IP	４		IP	２		IP	６		IP
+渡辺　　　崇	6.20	0.11	1.9	５		IP	２		IP	１		IP	１		IP	５		IP	１		IP	２		G3	５		G3	２		IP	５		IP
+三浦　洋次朗	6.20	0.18	4.0	４		G2	５		IP	２		IP	２		IP	６		IP	２		IP	３		IP	１		IP	２		IP	４		IP
+黒井　　達矢	5.30	0.18	3.2	３		IP	４		IP	４	4	IP	１		IP	Ｆ		IP	２		G1	６		G1	５		IP	３		IP	１	4	IP
+野村　　羽玖	1.60	0.18	4.1	６		IP	４		IP	５		IP	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP

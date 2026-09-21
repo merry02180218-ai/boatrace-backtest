@@ -1,0 +1,8 @@
+data=
+1	0
+野村　　　誠	8.10	0.15	3.5	１		IP	１		IP	１		IP	１		IP	２	2	IP	１		IP	６		IP	２		IP	２		IP	３		G3
+伏田　　裕隆	4.60	0.17	2.8	５		IP	１		IP	５		IP	４		IP	２		IP	２		IP	５		IP	５		IP	４		IP	４		IP
+是澤　　孝宏	6.30	0.13	2.5	１		IP	３		IP	２	4	IP	５		G2	２		G2	３	4	IP	３		IP	６		IP	１		IP	４		IP
+奥平　　拓也	2.70	0.22	4.3	５		IP	４		IP	６		IP	５		IP	５		IP	４		IP	３		IP	５		IP	５		G3	５		IP
+小野寺　智洋	3.50	0.14	3.3	６		IP	５		IP	３		IP	２	6	IP	落		IP	４		IP	３		IP	５		IP	４		IP	５		IP
+金子　　怜央	2.10	0.11	3.0	５		IP	転		IP	２		IP	５		IP	５		IP	５		IP	６		IP	６		IP	５		IP	６		IP

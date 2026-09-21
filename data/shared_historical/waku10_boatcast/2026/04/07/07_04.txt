@@ -1,0 +1,8 @@
+data=
+1	0
+大久保　佑香	6.20	0.15	3.3	１		G3	５		IP	１		IP	１		IP	３		IP	５		G3	６		IP	６		IP	１		IP	１		IP
+大澤　　誠也	4.30	0.20	4.4	４		IP	６		IP	６	3	IP	４		IP	１		IP	２		IP	２		IP	６		IP	５		IP	４		IP
+石川　　吉鎬	5.78	0.23	4.6	４		IP	１		IP	３		IP	２		IP	不		IP	４		IP	５		IP	２		IP	５		IP	２		IP
+信濃　　由行	5.50	0.17	3.8	４		IP	５		IP	３		IP	３		IP	１		IP	１		IP	４		IP	４		IP	６		IP	２		IP
+川原　　正明	4.10	0.14	2.6	５		IP	２		IP	５		IP	３		IP	４		IP	４		IP	４		IP	３		IP	４		IP	６		IP
+松山　　将吾	4.00	0.18	4.9	３		G3	５		G3	３		IP	３		G1	４		G1	６		G1	３		IP	６		IP	４		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　　悠	8.20	0.15	2.2	１		IP	２		G2	３		G2	１		IP	３		IP	１		IP	１		IP	３		IP	４		IP	１		IP
+菅沼　　佳昭	3.10	0.18	3.7	５		IP	５		IP	４		IP	６		IP	６		IP	２		IP	２		IP	６		IP	５		IP	５		IP
+小坂　　風太	3.20	0.19	3.7	６		IP	５		IP	５		IP	４		IP	２		IP	５		IP	６		IP	４		IP	５		IP	３		IP
+丹下　　　健	3.70	0.21	3.7	５	6	IP	３		IP	４		IP	６		IP	６		IP	５		IP	６		IP	１		IP	４		IP	３		IP
+室田　　泰史	4.50	0.14	3.3	４		IP	２		IP	２		IP	５		IP	５		IP	２		IP	５		IP	５		IP	６		IP	２		IP
+今垣　光太郎	5.00	0.17	4.2	３	4	IP	５		G1	５		G1	２		G1	欠		G2	５		G1	３		G1	６		G1	３		IP	３	5	IP

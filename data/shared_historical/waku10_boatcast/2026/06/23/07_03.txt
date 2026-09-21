@@ -1,0 +1,8 @@
+data=
+1	0
+池田　　紫乃	6.40	0.18	3.4	５		IP	２		IP	４		IP	２		G3	３		G3	１		IP	５		IP	１		G3	１		IP	４	2	IP
+楠原　　正剛	6.40	0.17	3.7	１		IP	４		IP	３		G3	５		G3	２		IP	２		IP	３		IP	１		IP	４		IP	３		IP
+松山　　裕基	3.40	0.20	4.9	６		IP	５		IP	２		IP	２		IP	４		IP	５		IP	Ｆ		IP	３		IP	５	2	IP	６		IP
+森清　　友翔	4.33	0.17	4.4	転		IP	１		IP	３		IP	エ		IP	５		IP	４		IP	６		IP	４		IP	２		IP	４		IP
+東口　　　晃	3.50	0.21	3.8	６		IP	３		IP	３		IP	４		IP	４		IP	４		IP	４		IP	４		IP	６		IP	６		IP
+中村　　晃朋	4.60	0.14	3.9	３		G1	６		G1	３		IP	５		G3	３		G3	落	5	IP	３		IP	１		IP	４		G1	６	5	G1

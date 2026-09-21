@@ -1,0 +1,8 @@
+data=
+1	0
+實森　　美祐	9.20	0.14	2.5	１		IP	１		IP	１		IP	６		IP	１		IP	１		IP	１		G1	１		IP	１		IP	１		IP
+池田　　浩美	5.10	0.16	2.6	１		IP	４		IP	２		IP	５		IP	２		IP	２		IP	６		G3	５		IP	５		IP	３		IP
+新田　　芳美	5.30	0.16	3.6	１		IP	５		IP	６		IP	１		G1	２		G1	４		IP	４		IP	４		IP	３		IP	５		IP
+平山　　智加	6.50	0.17	2.3	３		IP	４		IP	５	5	IP	３		IP	３		G1	３		IP	２		IP	１		IP	１	5	G3	３		G3
+大石　　真央	3.70	0.18	3.4	３		IP	５		IP	４		IP	２		IP	６		IP	５		IP	２		IP	４		IP	６		IP	６		IP
+来田　　衣織	3.10	0.15	2.5	４	4	IP	５		IP	１	5	IP	５		IP	４	5	G3	５		G3	６	5	IP	４		IP	６		IP	６		IP

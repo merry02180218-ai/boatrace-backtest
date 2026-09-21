@@ -1,0 +1,8 @@
+data=
+1	0
+入澤　　友治	6.20	0.19	3.4	２		IP	１		IP	６		IP	５		IP	１		IP	１		IP	１		IP	５		IP	２		IP	６		IP
+近藤　　稔也	3.90	0.21	4.7	４		IP	５		IP	４		IP	６		IP	３		IP	１		IP	６		IP	３		IP	６		IP	４		IP
+西島　　義則	7.00	0.17	3.4	１	1	IP	１		IP	２	2	IP	５	1	IP	１	1	IP	５	2	IP	３	2	IP	６	2	IP	２	1	IP	２	2	G3
+北川　　太一	6.56	0.13	2.4	２		IP	２		IP	２		IP	４		IP	４	1	IP	２	3	IP	欠		G3	３		IP	４		IP	２		IP
+高倉　　孝太	5.40	0.12	2.1	２	1	IP	２		IP	４		IP	５		IP	１		IP	６		IP	３	4	IP	６	6	IP	３		IP	４		G3
+石丸　　海渡	4.00	0.13	3.0	２		IP	６		IP	３	4	IP	４		IP	５		IP	２	5	G1	６		G1	６		IP	６		IP	５		IP

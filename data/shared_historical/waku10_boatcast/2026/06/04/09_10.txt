@@ -1,0 +1,8 @@
+data=
+1	0
+大平　誉史明	6.90	0.13	2.3	１		G3	４		IP	５		IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP	６		IP
+鈴木　　　博	6.40	0.18	3.4	４		G3	１		G3	２		G3	２		IP	４		IP	２		IP	４		IP	４		IP	３		IP	２		IP
+大場　　　敏	5.00	0.11	2.2	４		G3	４		G3	４		IP	４		IP	５		IP	３		IP	３		IP	３		IP	４		IP	１		IP
+中島　　孝平	6.10	0.15	3.2	２		G3	２		G1	２		IP	４		G1	２		G1	２		G1	６		G1	６		G1	６		G1	３		G1
+原　　　豊土	4.60	0.17	3.7	５		G3	６	6	G3	５		IP	４		IP	６	6	IP	２		IP	４		IP	３		IP	１		IP	２		IP
+谷　　　勝幸	3.40	0.19	4.5	６		G3	６		G3	３	5	IP	５		IP	４		IP	３	5	IP	４		IP	４		IP	４		IP	５	5	IP

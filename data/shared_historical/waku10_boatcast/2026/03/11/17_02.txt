@@ -1,0 +1,8 @@
+data=
+1	0
+奥田　　　誠	8.00	0.16	2.7	１		IP	３		IP	４		IP	２		IP	１		IP	１		IP	３		IP	１		IP	３		IP	１		IP
+石原　　凪紗	3.80	0.21	4.1	４		IP	３		IP	１		IP	２		IP	５		G3	４		G3	６		IP	６		IP	Ｆ	3	IP	５		IP
+田代　　達也	4.20	0.16	2.7	４	4	IP	３		IP	５		IP	１		IP	３		IP	６		IP	５		IP	１		IP	エ		IP	６		IP
+金子　　順一	4.10	0.19	4.1	５		IP	４		IP	３		IP	４		IP	４		IP	３	3	IP	３		IP	４		IP	４		IP	６		IP
+吉田　　和仁	4.40	0.21	3.5	６		IP	６		IP	３		IP	３	6	IP	６		IP	２		IP	２		IP	５		IP	１		IP	６		IP
+高木　　茉白	2.90	0.13	2.5	３		IP	４		IP	５		G3	５		IP	４		IP	３		G3	６		G3	６		IP	５		IP	６		IP

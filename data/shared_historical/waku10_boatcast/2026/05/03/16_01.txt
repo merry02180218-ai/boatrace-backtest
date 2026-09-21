@@ -1,0 +1,8 @@
+data=
+1	0
+今出　　晋二	4.40	0.19	5.1	４		IP	４		IP	２		IP	１		IP	Ｆ		IP	５		IP	２		IP	５		IP	４		IP	５		IP
+福島　　陽子	4.40	0.17	3.3	４		IP	６		IP	４		G3	３		IP	２		IP	３		IP	３		IP	６		IP	５		IP	３		G3
+梅原　　祥平	4.80	0.13	3.0	３		IP	４	4	IP	２		IP	５	4	IP	２		IP	６		IP	２		IP	６		IP	４		IP	３		IP
+木山　　大聖	2.80	0.22	4.2	６		IP	６		IP	６		IP	５		IP	４	5	IP	５		IP	３		IP	５		IP	６		IP	２		IP
+福嶋　　智之	4.40	0.15	3.6	２		IP	４	6	IP	２		IP	２		IP	５		IP	６		IP	５		IP	６	6	IP	２		IP	５		IP
+貫地谷　直人	3.10	0.22	5.4	４		IP	６		IP	６		IP	４		IP	４		IP	３		IP	４		IP	５	5	IP	６	5	IP	４		IP

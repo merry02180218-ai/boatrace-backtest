@@ -1,0 +1,8 @@
+data=
+1	0
+乙藤　　智史	9.60	0.14	2.4	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+岸蔭　　　亮	5.40	0.19	4.0	５		IP	３		IP	３		IP	３		IP	４		IP	５		IP	３		IP	３		IP	２		IP	２		IP
+平尾　　崇典	6.89	0.13	3.4	３		IP	転		IP	１		G2	２		IP	１		IP	４		G1	１		IP	５		G1	欠		IP	２	2	G1
+松村　　康太	4.40	0.17	3.6	３		IP	６		IP	６		IP	４		IP	４		IP	２		IP	３		IP	３		IP	５		IP	３		IP
+磯村　　　匠	4.00	0.16	3.5	転		IP	６		IP	２		IP	４		IP	４		IP	３	4	IP	２		IP	４		IP	６		IP	転		IP
+上田　　隆章	2.30	0.21	5.5	６		IP	５		IP	５		IP	６		IP	４		IP	５		IP	６		IP	３		IP	５		IP	５		IP

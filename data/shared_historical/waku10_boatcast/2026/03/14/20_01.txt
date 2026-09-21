@@ -1,0 +1,8 @@
+data=
+1	0
+渡辺　　　崇	8.60	0.16	2.7	３		G3	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	２		IP	１		IP	１		IP
+山本　　浩次	5.70	0.17	3.0	５		G3	３		IP	３		IP	２		IP	１		IP	４		IP	２		IP	３		IP	３		IP	６		IP
+滝沢　　芳行	4.30	0.18	3.8	５	4	G3	１		IP	２		IP	６		IP	４		IP	３		IP	５		IP	４		IP	５		IP	４		IP
+岩橋　　裕馬	4.80	0.17	3.2	４		G3	３		IP	４	5	IP	３		IP	４		IP	２		IP	５		IP	４		IP	４		IP	３	3	IP
+小林　　孝弘	4.00	0.10	1.5	５		G3	４		IP	４		IP	３		IP	２		IP	５		IP	５		IP	４		IP	３		IP	５	6	IP
+沖島　　広和	1.90	0.18	4.1	５		G3	３		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

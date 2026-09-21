@@ -1,0 +1,8 @@
+data=
+1	0
+堀本　　和也	9.20	0.10	2.6	５		G1	２		G1	１		G1	２		G3	１		G3	１		IP	１		IP	１		IP	１		IP	１		IP
+久田　　敏之	7.20	0.14	3.2	２		IP	２		IP	３		G1	５		G1	５		IP	２		IP	２	3	IP	１		IP	１		IP	３	3	SG
+永井　　彪也	6.30	0.13	2.9	１		G1	４		G1	４		G1	１	2	IP	１		G2	６		IP	４		G1	６		G1	４		IP	２		G2
+柳沢　　　一	5.70	0.13	2.8	２		IP	６		G1	６		IP	３		IP	３		IP	３		IP	３		G1	３		IP	３		IP	２		G1
+瓜生　　正義	6.00	0.14	3.1	２		IP	４	6	G1	３		G1	３		G1	５		G1	２		IP	６		SG	２	6	G1	５		SG	４		SG
+今垣　光太郎	6.50	0.22	4.9	３		G1	６		G1	３		IP	３	5	IP	３		IP	２	5	G1	２	5	IP	２	4	IP	４	5	IP	２		G1

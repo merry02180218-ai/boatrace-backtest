@@ -1,0 +1,8 @@
+data=
+1	0
+藤井　　公人	7.50	0.12	2.7	１		IP	１		IP	２		IP	１		IP	４		IP	６		IP	２		IP	２		G3	２		IP	２		IP
+宮地　　博士	5.30	0.18	4.4	６		IP	３		IP	３		IP	５	3	IP	３		IP	４		IP	１		IP	５		IP	２		IP	２		IP
+柳橋　　宏紀	5.60	0.12	2.1	３	4	IP	４		G3	５	6	G3	４		IP	３		IP	１		IP	１		IP	４		IP	３		G3	４		IP
+長谷川　　充	5.40	0.17	3.1	４		IP	５		IP	２		IP	５		IP	４		IP	３		IP	２		IP	２		IP	２		IP	４	3	IP
+広次　　　修	5.40	0.17	2.7	３	4	IP	５		IP	６		IP	１		IP	６		IP	１	4	IP	３		IP	４	6	IP	３		IP	２		IP
+桑原　　将光	3.67	0.18	4.4	３		G3	４		G3	４		IP	６		IP	６		IP	３		IP	６		IP	５		IP	エ		IP	２		IP

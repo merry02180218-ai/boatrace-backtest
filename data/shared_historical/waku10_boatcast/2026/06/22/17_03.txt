@@ -1,0 +1,8 @@
+data=
+1	0
+富山　　弘幸	5.70	0.19	3.8	２		G3	５		IP	３		IP	４		IP	６		IP	４		IP	３		IP	３		IP	１		IP	１		IP
+福田　　　理	3.50	0.14	3.1	６		G3	５		IP	２		IP	４		IP	６		IP	４		IP	４		IP	３		IP	６		IP	４		IP
+吉原　　聖人	3.90	0.17	3.9	６		G3	６		IP	３		IP	２	4	IP	４		IP	４		IP	６	5	IP	５		IP	１		IP	５		IP
+鈴木　　　猛	4.40	0.20	4.0	３		G3	２		IP	４		IP	５	5	IP	５	6	IP	４		IP	５		IP	１		IP	５		IP	４		IP
+伊藤　　雄二	1.30	0.18	3.9	６		G3	６		G3	６		IP	５		IP	５		IP	５	6	IP	６		IP	６	6	IP	６	6	IP	６		IP
+齋藤　　和政	2.60	0.20	4.8	６		G3	６		IP	５		IP	５		IP	６		IP	３		IP	６		IP	４		IP	３		IP	５		IP

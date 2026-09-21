@@ -1,0 +1,8 @@
+data=
+1	0
+大峯　　　豊	9.70	0.12	2.2	１		IP	２		G3	１		G1	１		G1	２		IP	１		IP	２		IP	１		IP	１		IP	１		G2
+稗田　　聖也	8.00	0.14	2.6	１		IP	２		IP	２		IP	１		IP	３		IP	２		IP	１		IP	２		IP	４		IP	２		IP
+西村　　　勝	4.20	0.14	1.7	６		IP	２		IP	２		IP	６		IP	４		IP	５		IP	３		IP	５		IP	４		IP	３		IP
+山一　　鉄也	4.90	0.17	2.7	３		IP	３		G3	２		IP	５		IP	４		IP	１		IP	２		IP	６		IP	５		IP	５		IP
+吉原　　快誓	1.10	0.19	4.9	６	6	IP	６	6	IP	６	6	IP	落	6	IP	Ｆ	6	IP	６	6	IP	６	6	IP	４	6	IP	６	6	IP	６	6	IP
+村上　　功祐	3.20	0.16	2.7	６		G3	５		IP	４		IP	３		IP	４		IP	６		IP	４	5	IP	４		IP	５		IP	４		IP

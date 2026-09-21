@@ -1,0 +1,8 @@
+data=
+1	0
+浦田　　信義	6.30	0.18	3.7	４		IP	２		IP	１		IP	４		IP	６		IP	１		IP	２		IP	Ｆ		IP	２		IP	１		IP
+山崎　　昂介	5.10	0.20	4.5	３		IP	６		IP	２		IP	４		IP	２		IP	２		IP	６		IP	１		IP	６		IP	４		IP
+野相　　弘司	6.00	0.12	2.2	２		IP	４		IP	２		IP	２		IP	１		IP	４		IP	５		IP	４		IP	４		IP	２		IP
+泥谷　　一毅	6.40	0.12	3.6	２		IP	４		IP	３		IP	２		IP	２		IP	２		IP	３		IP	２	3	IP	４		IP	４		IP
+塚田　　修二	4.40	0.17	3.8	５		IP	３		IP	４		IP	３		IP	３		IP	３		IP	４		IP	６	6	IP	２		IP	６		IP
+三好　　勇人	4.00	0.22	4.4	４	4	IP	５	5	IP	４		G3	３	5	IP	１	4	IP	３	5	IP	５		IP	６	5	IP	４		IP	６		IP

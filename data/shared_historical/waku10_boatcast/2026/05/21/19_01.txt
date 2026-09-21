@@ -1,0 +1,8 @@
+data=
+1	0
+榮田　　将彦	7.40	0.16	3.3	１		IP	１		IP	４		IP	２		IP	２		IP	１		IP	３		IP	３		IP	３		IP	３		IP
+黒崎　　竜也	6.20	0.18	3.2	３		IP	４	3	IP	４		IP	１		IP	５		IP	２		IP	１		IP	２		IP	４		IP	３		IP
+丹下　　　健	5.50	0.21	4.1	１		IP	４		IP	３		IP	２		IP	６		IP	６		IP	１		IP	１	4	IP	６		IP	４	4	IP
+松井　　貫太	3.00	0.21	4.2	４		IP	５		IP	６		IP	５		IP	５		IP	４		IP	３		IP	５	3	IP	３		IP	６		IP
+池本　　輝明	2.80	0.27	5.0	６		IP	４		IP	５		IP	６	6	IP	４		IP	５		IP	４		IP	４	6	IP	５		IP	４	4	IP
+加藤　　高史	3.10	0.18	3.9	３		IP	５		IP	５		IP	Ｆ		IP	５		IP	３		IP	６	5	IP	４	5	IP	５		IP	３		IP

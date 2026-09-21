@@ -1,0 +1,8 @@
+data=
+1	0
+庄司　　孝輔	8.00	0.17	3.2	１		IP	１		IP	４		G3	１		IP	３		IP	１		IP	３		IP	１		IP	２		IP	３		IP
+永田　　義紘	4.50	0.15	3.0	４		IP	４		IP	５		IP	４		IP	３	3	IP	２		IP	２		IP	５		IP	３		IP	６		IP
+川田　　正人	5.10	0.18	3.1	３		IP	４		IP	６		IP	２		IP	Ｆ		IP	２		IP	４		IP	３	4	IP	４		IP	１	4	IP
+佐竹　　太一	4.40	0.21	4.4	５		IP	１		IP	４		IP	２		IP	４	5	IP	６		IP	６		IP	１		IP	５		G3	５		G3
+加倉　　侑征	4.00	0.13	2.9	２		IP	５		IP	３		IP	５		IP	４		IP	５	4	IP	４		IP	５		IP	５	6	IP	２		IP
+有賀　　達也	4.90	0.16	3.5	妨		IP	２		IP	４	5	IP	４		IP	４		IP	４		IP	４		G1	２		IP	２		IP	４		IP

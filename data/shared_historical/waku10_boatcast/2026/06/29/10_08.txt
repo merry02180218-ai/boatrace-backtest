@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　豪洋	6.80	0.21	3.6	４		IP	１		IP	１		IP	３		IP	５		IP	１		G3	５		IP	３		IP	１		IP	２		IP
+中嶋　　達也	3.60	0.23	4.8	４		IP	４		IP	５	3	IP	２		IP	６		IP	４		IP	５		IP	２		IP	５		IP	６		IP
+寺田　　空詩	5.50	0.16	2.9	４		IP	６		IP	４		IP	２		G3	３		IP	３		IP	４		IP	３		IP	１		IP	３		IP
+垂水　　　悠	3.50	0.08	1.9	落		IP	４		IP	６	5	IP	３		IP	５		IP	２	5	IP	１	5	IP	６		G3	６		G3	５		IP
+青木　　玄太	5.30	0.16	4.4	４		IP	５		G1	５		G1	４		IP	２		IP	２		IP	４		IP	１		IP	５		G1	３		G3
+岡本　　亜子	1.10	0.20	5.1	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP

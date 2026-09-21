@@ -1,0 +1,8 @@
+data=
+1	0
+上平　　真二	9.30	0.11	2.8	３		IP	１		G1	１		G1	３		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+三馬　　崇史	6.00	0.19	3.2	５		G2	３		G2	５	3	IP	３		IP	４		IP	２		IP	１		IP	３		IP	４		IP	１		IP
+麻生　　慎介	6.90	0.15	2.6	１	5	IP	４		IP	６		IP	３		G1	１		IP	２		IP	３	4	IP	１		IP	３		IP	３		IP
+辻　　　栄蔵	7.30	0.15	3.6	２		IP	２		G1	１		IP	３		G2	３		G1	２	5	IP	４		G1	４		IP	１		IP	５		G1
+岸本　　　隆	2.80	0.19	3.6	４		G3	５		IP	６		IP	３		IP	４		IP	５		IP	５		IP	６		IP	４		IP	５		IP
+津田　　陸翔	3.56	0.19	4.4	３		IP	４		IP	３		IP	５		IP	落	5	G2	５		IP	エ		IP	５	5	IP	４	4	IP	３	4	IP

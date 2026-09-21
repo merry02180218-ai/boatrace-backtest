@@ -1,0 +1,8 @@
+data=
+1	0
+栗原　　謙治	4.40	0.16	3.0	６		IP	６		IP	４		IP	２		IP	５		IP	２		IP	１		IP	４		IP	５		IP	４		IP
+中北　　将史	5.80	0.15	2.2	４		IP	２		IP	３		IP	４		IP	４		IP	２		IP	１		IP	２		G3	４		G3	５		IP
+森　　　弘行	3.00	0.20	4.0	３		IP	５		IP	６		IP	６		IP	６	4	IP	５		IP	６		IP	３		IP	４		IP	３		IP
+板倉　　敦史	4.40	0.18	3.9	４		IP	３		IP	５		IP	３		IP	４		IP	４		IP	２		IP	３		IP	５		IP	５	5	IP
+八木　　治樹	2.44	0.12	2.7	５		IP	５		IP	６	6	IP	６		IP	４		IP	６		IP	転		IP	３		IP	４		IP	６		IP
+有賀　　達也	4.30	0.17	3.3	４		G1	４		G1	４		IP	妨		IP	２		IP	４	5	IP	４		IP	４		IP	４		IP	４		G1

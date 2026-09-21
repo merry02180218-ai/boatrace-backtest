@@ -1,0 +1,8 @@
+data=
+1	0
+金児　　隆太	7.50	0.23	4.0	３		IP	１		IP	４		G3	１		IP	１		IP	６		IP	４		IP	１		IP	１		IP	１		IP
+鳥飼　　　眞	5.30	0.14	2.8	５		IP	６		IP	２		IP	転		IP	１		IP	１		IP	５		IP	５		IP	１		IP	２		IP
+藤本　紗弥香	2.00	0.21	4.4	３		IP	６		IP	６		IP	５		IP	６		IP	５		IP	５		G3	５		IP	６		G3	５		IP
+河内　　一馬	2.80	0.14	2.9	４		IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP	２	3	IP	３		IP
+中村　　日向	6.20	0.13	2.1	３		G2	２		IP	１		IP	１		IP	４		G1	６		G1	４		SG	５		SG	４		G1	４		G1
+村越　　　篤	3.70	0.14	3.9	６		IP	２		IP	５		IP	５		IP	４		IP	３	5	IP	４		IP	３		IP	６		G3	６		G3

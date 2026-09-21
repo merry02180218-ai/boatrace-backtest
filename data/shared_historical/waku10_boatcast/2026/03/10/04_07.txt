@@ -1,0 +1,8 @@
+data=
+1	0
+大野　　芳顕	8.80	0.17	2.4	３		IP	１		IP	４		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+杉山　　喜一	4.90	0.19	3.7	５		G3	４		G3	５		IP	２		IP	６	3	IP	１		IP	４		IP	３	5	IP	３		IP	３		IP
+渡辺　　浩司	7.00	0.09	2.2	４		IP	２		IP	３		IP	５		G1	３		IP	１		IP	２		IP	２		IP	３		IP	２		IP
+宇留田　翔平	3.90	0.16	3.5	２		IP	５		IP	５		IP	３	2	IP	４		IP	６		IP	３		IP	６		IP	６		IP	２		IP
+渡邉　真奈美	4.70	0.13	3.0	５		IP	４		IP	６		IP	５		IP	２		G3	３		G3	１		IP	５		IP	４		G3	２		G3
+東本　　勝利	4.20	0.18	4.3	５		IP	３		IP	４	5	IP	３		IP	４		IP	６		IP	６		IP	４		IP	３		IP	３		IP

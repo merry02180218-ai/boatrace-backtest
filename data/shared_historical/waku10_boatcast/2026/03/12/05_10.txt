@@ -1,0 +1,8 @@
+data=
+1	0
+安達　　裕樹	8.70	0.16	2.2	１		IP	１		IP	１		IP	１		IP	２		IP	５		G2	１		IP	１		IP	１		IP	３		IP
+河合　　三弘	5.80	0.19	5.0	４		IP	５		IP	４		IP	５	3	IP	３		IP	２		IP	３		IP	１		IP	２		IP	２		IP
+坂東　　　満	4.30	0.16	2.9	２		IP	４		IP	２		IP	４		IP	６		IP	３		IP	４		IP	欠		IP	３		IP	５		IP
+杉田　　篤光	4.89	0.27	4.7	３		IP	５		IP	４		IP	４		IP	１		IP	４		IP	落		IP	３		IP	３		IP	５		IP
+数原　　　魁	4.00	0.15	3.1	６		IP	４		IP	２		IP	６		IP	３		IP	６		IP	２	4	IP	５		IP	２		IP	６		IP
+岩川　　仁士	3.10	0.20	4.5	５		IP	６		IP	４	5	IP	４		IP	３	5	IP	４		IP	５		IP	５		IP	５	4	IP	５		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+森作　　広大	5.30	0.15	2.9	Ｆ		IP	４		IP	３	3	IP	１		IP	５		IP	２		IP	３		IP	３		IP	１		IP	６		IP
+吉村　　　誠	7.70	0.15	3.2	２		G3	２		G3	２		G1	１		IP	２		IP	４		IP	２		IP	２		IP	２		G1	４		G1
+東本　　勝利	6.00	0.17	3.2	３		G3	４		IP	２		IP	４		IP	１		IP	２		IP	５		IP	３		IP	２		IP	４		IP
+田中　　京介	5.20	0.17	3.4	６		G3	１		IP	６		IP	３		IP	５		IP	４		IP	２		IP	２		IP	４		IP	２		IP
+仲口　　博崇	6.30	0.18	3.9	１	4	IP	３		G3	３	3	G3	１	4	IP	４	4	IP	４	3	IP	３		G1	３		G1	６		IP	２		G3
+渡辺　　空依	2.90	0.22	5.6	６		IP	５		IP	４		IP	５		IP	３		IP	５		IP	６		IP	６		IP	４		IP	３		IP

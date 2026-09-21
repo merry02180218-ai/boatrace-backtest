@@ -1,0 +1,8 @@
+data=
+1	0
+安田　　政彦	6.10	0.16	3.0	１		IP	１		IP	５		IP	４		IP	２		IP	６		IP	５		IP	１		IP	２		IP	３		IP
+岩崎　　正哉	6.80	0.18	3.7	２		IP	３		IP	２		IP	２		IP	２		IP	２		IP	３		IP	妨		IP	２		IP	２		IP
+井上　　尚悟	5.40	0.16	3.2	５		IP	３		IP	３		IP	４		IP	４		IP	１		IP	２		IP	４		IP	２		IP	５	4	IP
+尾上　　雅也	7.10	0.16	2.6	１		IP	２		IP	３		IP	２	3	IP	２		IP	３		G1	２		IP	転		IP	２		IP	２		IP
+西田　　　靖	3.40	0.14	2.3	４	2	IP	５	2	IP	４	2	IP	４	2	IP	３	2	IP	３	2	IP	Ｆ	3	IP	妨	2	IP	３	2	IP	５	2	IP
+金児　　隆太	3.90	0.19	5.0	５		IP	５		IP	４		IP	２		IP	４		IP	４		IP	３		IP	５		IP	３		IP	６	4	IP

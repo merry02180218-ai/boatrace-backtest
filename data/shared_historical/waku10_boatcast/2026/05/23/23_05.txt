@@ -1,0 +1,8 @@
+data=
+1	0
+柴田　　　光	8.33	0.14	2.7	３		IP	１		IP	６		G1	１		G1	３		G1	欠		IP	２		IP	１		IP	１		IP	１		IP
+大谷　　直弘	6.40	0.19	4.0	３		IP	４		IP	２		IP	２		IP	４		IP	３		IP	２		IP	２		IP	２		IP	４		IP
+永松　　良教	3.40	0.12	2.1	Ｆ		IP	３		IP	Ｆ		IP	２		IP	６		IP	２		IP	５		IP	４		IP	４		IP	６		IP
+村越　　　篤	4.20	0.15	3.5	２		IP	４		IP	４		IP	３		IP	５		IP	３		IP	６		IP	５	3	IP	２		G3	６		G3
+吉田　　祐貴	4.00	0.19	4.3	４		IP	６		IP	６		IP	４		IP	５		IP	２		IP	５		IP	１		IP	３		IP	５		IP
+妻鳥　　晋也	3.10	0.22	4.3	４		IP	５		IP	６		IP	３	5	IP	４		IP	２		IP	５		G3	６		IP	６		IP	５		IP

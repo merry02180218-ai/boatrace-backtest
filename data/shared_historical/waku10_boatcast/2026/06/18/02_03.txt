@@ -1,0 +1,8 @@
+data=
+1	0
+野田　　彩加	7.10	0.13	2.7	３		IP	１		G3	３		G2	１		IP	４		G3	１		G3	１		IP	５		IP	１		IP	５		IP
+谷川　　里江	5.10	0.17	4.0	５		IP	３		IP	３		IP	２		G3	５		G3	２		G3	２		G3	５		IP	２		G3	６		G3
+浜田　亜理沙	6.10	0.16	2.2	２		G3	３		G3	２		G3	６		G2	落	2	IP	５		IP	１		IP	３		G1	２		G1	２		G1
+山下　　夏鈴	4.90	0.18	3.2	４		IP	５		IP	１		IP	３		IP	５		IP	１		IP	５		IP	６		IP	３		IP	３		IP
+樋口　由加里	4.80	0.12	2.3	２		IP	６		IP	１		IP	３		IP	１		G3	２		G3	６		G3	６		IP	５		IP	６		IP
+柴田　　愛梨	2.30	0.27	4.8	６		G3	６		IP	５		IP	５		IP	４	5	IP	２		IP	５	5	IP	６		IP	６		IP	６		IP

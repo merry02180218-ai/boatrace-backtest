@@ -1,0 +1,8 @@
+data=
+1	0
+刑部　亜里紗	7.60	0.15	2.9	２		IP	１		G3	２		G3	１		IP	１		IP	５		G2	１		IP	６		IP	３		IP	１		IP
+胡本　　悟志	3.40	0.16	2.9	５		G3	６		G3	３		IP	４		IP	３		IP	２		IP	５		IP	５		IP	５		IP	６		IP
+山田　　哲也	4.90	0.11	2.0	６		G3	１		G3	１		G3	１		IP	５		IP	５		G1	５		G1	Ｆ		G1	４		IP	４		IP
+松瀬　　弘美	3.00	0.18	4.2	４		IP	６		G3	２		IP	４		IP	３		G3	６		G3	６		IP	５		G3	６		G3	５		IP
+内堀　　　学	5.60	0.19	3.2	５		IP	３	3	IP	２		IP	５		IP	１	4	IP	５		IP	１		IP	４		IP	１		IP	５		IP
+西山　　　育	1.70	0.16	3.6	４		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP	５		IP	５		IP	６		IP

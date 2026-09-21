@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　謙史朗	5.30	0.23	4.8	１		IP	４		IP	２		IP	１		IP	５		IP	５		IP	５		IP	４		IP	１		IP	６		IP
+奥平　　拓也	4.50	0.21	4.7	１		IP	４		IP	６		IP	６		IP	４		IP	２		IP	４		IP	６		G3	３		IP	３		IP
+伏田　　裕隆	3.70	0.20	4.2	２		IP	２		IP	５	6	IP	５	6	IP	４		IP	４		IP	５		IP	５		IP	５		IP	５		IP
+杢野　　誓良	3.00	0.20	3.1	６		IP	４		IP	６		IP	３		IP	５		IP	６		IP	２		IP	４		IP	５		IP	６		IP
+片橋　　幸貴	6.10	0.15	3.7	３		IP	３		IP	１		IP	６		IP	４		IP	２		IP	３		IP	４		IP	２		IP	２		IP
+秋田　健太郎	2.50	0.17	4.0	５		IP	６		IP	５		IP	５		IP	５		IP	５		IP	２		IP	５	5	IP	５	5	IP	５		IP

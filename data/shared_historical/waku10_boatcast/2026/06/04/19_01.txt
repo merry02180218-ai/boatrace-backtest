@@ -1,0 +1,8 @@
+data=
+1	0
+森作　　広大	4.70	0.15	3.1	４		IP	６		IP	３		IP	Ｆ		IP	４		IP	３	3	IP	１		IP	５		IP	２		IP	３		IP
+広瀬　　聖仁	5.20	0.15	3.3	４		IP	５	3	IP	４		IP	２		IP	４		IP	１		IP	５		IP	５		IP	２		IP	２		IP
+木村　　光宏	3.90	0.14	3.0	６		IP	６		IP	１		IP	４		IP	６		IP	３	2	IP	３		IP	３		IP	５		IP	５		IP
+松江　　秀徳	6.22	0.14	2.1	５		IP	１		IP	１		IP	１		IP	５		IP	５		IP	１		IP	４		IP	落		IP	３		IP
+貫地谷　直人	3.50	0.20	4.3	４	4	IP	２	3	IP	６		IP	３		IP	４		IP	５		IP	３	6	IP	６		IP	５		IP	６		IP
+岡部　　　浩	2.10	0.21	4.4	６		IP	５		IP	５		IP	５		IP	６		IP	欠		IP	４		IP	５		IP	６		IP	３		IP

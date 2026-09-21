@@ -1,0 +1,8 @@
+data=
+1	0
+丹下　　　将	7.60	0.16	3.1	１		IP	１		IP	５		IP	４		IP	１		IP	１		IP	１		IP	３		IP	１		IP	４		IP
+中北　　将史	6.40	0.14	2.3	２		IP	４		IP	２		IP	３		IP	４		IP	４		IP	２		IP	１		IP	２		G3	４		G3
+松本　　真広	6.30	0.16	2.8	４		IP	３		IP	６		IP	３		IP	２		IP	２		IP	１		IP	２		IP	５		IP	１		IP
+村上　　彰一	4.00	0.18	4.2	５		IP	３		IP	１		IP	６		IP	６	3	IP	４		IP	５		IP	４		IP	３		IP	４		IP
+小澤　　　学	3.30	0.21	5.1	６		IP	３		IP	３		IP	４		IP	４		IP	４		IP	４		IP	６		IP	６	6	IP	５		IP
+金子　　怜央	1.50	0.17	3.3	５		IP	６		IP	６		IP	５		IP	６		IP	５		IP	５		IP	６		IP	５		IP	６		IP

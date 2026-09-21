@@ -1,0 +1,8 @@
+data=
+1	0
+石倉　　洋行	8.50	0.13	2.7	１		IP	１		IP	１		IP	２		IP	５		G1	１		IP	４		IP	１		IP	１		IP	１		IP
+廣瀬　　将亨	6.40	0.15	2.3	４		IP	２		IP	２		IP	２		IP	３		IP	５		IP	３		IP	４		IP	２		IP	１		IP
+椎名　　　豊	6.90	0.15	2.5	３		IP	２		IP	３		IP	１		IP	５		IP	１		IP	１		IP	２		G1	４		IP	４		IP
+尾崎　　雄二	6.60	0.15	3.1	２		IP	１		IP	３		IP	２		IP	１	6	IP	４		IP	４		IP	４	5	IP	３		IP	３		IP
+柘植　　政浩	4.00	0.16	3.4	５		IP	３		IP	５		IP	２		IP	５		IP	５		IP	４		IP	６		IP	６		IP	２		IP
+中澤　　和志	4.10	0.15	3.0	６		IP	４		IP	２	5	G1	４	4	IP	５		G1	６		G1	３		IP	３		IP	４		IP	５		IP

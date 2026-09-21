@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　祐也	9.70	0.12	2.9	１		IP	１		IP	１		IP	１		G1	１		G1	６		G1	１		SG	１		G2	２		G2	１		G1
+森　　　悠稀	5.60	0.16	3.3	５		IP	４		IP	２		IP	３		IP	２		IP	３		IP	３		IP	３		IP	２		IP	５		IP
+松尾　　　祭	4.70	0.18	3.3	６		G2	６		G2	６		IP	３		IP	４		IP	３		IP	２		IP	４		IP	３		IP	２		IP
+小池　　哲也	4.20	0.19	3.0	５		IP	６		IP	４		IP	６		IP	６		IP	４		IP	３		IP	１	3	IP	２		IP	４		IP
+竹井　　貴史	6.20	0.16	2.4	５		IP	１		IP	５		IP	１	4	IP	２		IP	３	4	IP	４		IP	１		IP	５		IP	３		IP
+坪井　　康晴	4.80	0.14	3.8	５	5	IP	転		IP	３	4	IP	４		G1	３		G1	２	5	IP	４		G1	５		G1	５		G1	２		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+成貞　　琳平	6.60	0.15	2.9	２		IP	４		IP	３		IP	１		IP	５		IP	２		IP	１		IP	１		IP	３		IP	５		IP
+堀越　　雄貴	4.20	0.25	5.1	３		IP	４		IP	３		IP	４		IP	４		IP	３		IP	６		IP	２		IP	５		IP	６		IP
+佐藤　　　航	6.40	0.15	3.1	５		IP	１		IP	４		IP	１		IP	２		IP	３		IP	２		IP	２	4	IP	３		IP	６		IP
+河内　　一馬	2.80	0.17	3.1	６		IP	３		IP	６		IP	６	6	IP	６		IP	１		IP	５		IP	６		IP	６	6	IP	４		IP
+若林　　義人	5.90	0.18	3.2	５		IP	３	4	IP	５		IP	４	3	G1	２		IP	３	4	IP	２		IP	４	4	IP	１		IP	２		IP
+山道　　諄也	1.56	0.16	4.1	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	５		IP	５		IP	５		IP	欠		IP

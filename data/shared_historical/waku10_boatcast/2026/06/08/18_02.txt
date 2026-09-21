@@ -1,0 +1,8 @@
+data=
+1	0
+前沢　　丈史	8.90	0.13	1.9	２		IP	２		IP	１		IP	２		IP	１		G2	１		IP	１		IP	２		IP	１		IP	３		IP
+上野　　秀和	5.70	0.15	3.1	１		IP	６		IP	６	4	IP	４	3	IP	２		IP	１		IP	２		IP	６		IP	２		IP	３		IP
+井内　将太郎	7.30	0.15	2.6	１		IP	６		IP	１		IP	２		IP	２		IP	３		IP	５		IP	１		IP	１		IP	３		IP
+草場　　康幸	5.00	0.17	3.1	３		IP	４		IP	３		IP	６	5	IP	４		IP	２		IP	３		IP	２		IP	６		IP	３		IP
+松村　　　敏	6.90	0.10	2.0	１		IP	１		IP	４		IP	２		IP	２		IP	４		IP	２	4	G1	６		G1	２		IP	３	4	IP
+鈴木　　茂高	2.70	0.26	5.7	５		IP	６		IP	５		IP	６		IP	３		IP	５		IP	６	5	IP	３		IP	５		G3	４		G3

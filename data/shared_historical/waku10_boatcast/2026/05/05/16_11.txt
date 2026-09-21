@@ -1,0 +1,8 @@
+data=
+1	0
+平尾　　崇典	8.50	0.15	3.9	３		IP	３		G1	２	2	IP	１		IP	１		IP	３		G1	１		IP	１		G1	１		G1	４		G2
+木山　　和幸	6.00	0.19	3.9	１		IP	２		IP	２		G3	５		G3	４		IP	３		IP	４		IP	Ｆ		IP	１		IP	２		IP
+渡邉　　和将	7.10	0.11	2.6	１		IP	３		IP	２		IP	２		G1	４	2	SG	３		SG	１		IP	４		IP	６		G1	２	4	IP
+山口　　達也	5.80	0.14	3.9	６		SG	６		G1	６		G1	６		G1	２		G1	１		IP	４		G1	４		G1	１		IP	１	3	IP
+木山　　大聖	2.70	0.12	2.4	５		IP	５		IP	４		IP	５		IP	６	6	IP	３	6	IP	４		IP	５		IP	５		IP	５	6	IP
+福島　　陽子	1.90	0.23	5.4	６	5	IP	６		IP	５		G3	６		G3	５		IP	４		IP	６		IP	４	5	IP	５		G3	６		IP

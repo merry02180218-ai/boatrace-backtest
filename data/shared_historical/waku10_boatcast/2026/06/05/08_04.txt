@@ -1,0 +1,8 @@
+data=
+1	0
+山口　　広樹	6.40	0.16	2.6	１		IP	Ｆ		IP	３		IP	３		IP	５		IP	２		IP	１		G3	２		IP	１		IP	４		IP
+藤井　　　徹	5.90	0.16	3.8	３		IP	２		IP	６		IP	２		IP	２		IP	５		IP	４		IP	２		IP	３		IP	２		IP
+仲　　　航太	4.20	0.22	3.1	落		IP	４	4	IP	４		IP	６		IP	５		IP	６		IP	１		IP	３		IP	４		IP	１		IP
+板頭　　里緒	1.00	0.42	5.0	６	6	IP																											IP
+川原　　正明	3.20	0.17	2.7	６	6	IP	６		G3	６		G3	１	4	IP	６		IP	５		IP	４		IP	５		IP	２		IP	５		IP
+渡邉　　雄朗	4.70	0.19	3.4	３		IP	６		G2	５	5	IP	３		IP	６		IP	４	5	G1	４		G1	６		G1	１		IP	２		IP

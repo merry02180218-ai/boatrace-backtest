@@ -1,0 +1,8 @@
+data=
+1	0
+米玉利　大悟	2.57	0.20	5.0	２		IP	５		IP	６		IP	５		IP	６		IP	Ｆ		IP	４		IP									IP
+菊池　　峰晴	6.40	0.22	3.5	２		IP	５		IP	５		IP	１		IP	３		IP	２		IP	１		IP	４		IP	２		IP	３	1	IP
+廣瀬　　真也	5.30	0.11	2.5	２		IP	３		IP	３		IP	５		IP	４		IP	６		IP	２		IP	１		IP	５		IP	３		IP
+増田　　　進	2.40	0.18	3.7	４		IP	４		IP	４		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	４		IP
+藤生　　雄人	3.60	0.20	4.1	３	4	IP	５		IP	６		IP	５		IP	５		IP	２		IP	４		IP	６		IP	４		IP	３		IP
+濱崎　　直矢	4.80	0.18	3.8	２		IP	３	5	IP	６		IP	５		SG	５		SG	１	4	IP	５		IP	５		IP	３		IP	５		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+若林　　義人	8.40	0.13	2.6	２		IP	１		IP	１		IP	２		IP	１		IP	３		IP	１		IP	１		IP	１		IP	５		IP
+西村　　拓也	6.80	0.14	3.1	３		IP	５		IP	４		IP	１		G1	２		G1	３		G1	１		IP	５		G2	１		IP	４		SG
+松田　大志郎	6.20	0.16	3.6	５		IP	３		IP	１		IP	５		IP	１		IP	２		G1	１	4	G1	５		IP	２		IP	５		IP
+實森　　美祐	6.30	0.15	2.7	２	5	IP	１		IP	２		IP	４		IP	４		IP	転		IP	２		IP	２		G1	６		IP	１		IP
+羽野　　直也	5.30	0.17	3.8	４		G2	２		G1	４		IP	５		IP	４		IP	５		G1	４	4	G1	３		IP	４		SG	２	4	IP
+新田　　雄史	6.30	0.21	5.1	６		SG	２	5	G1	５		G1	２		G1	４		G1	３		IP	１		SG	６		SG	３		G1	４		SG

@@ -1,0 +1,8 @@
+data=
+1	0
+森野　　正弘	10.00	0.14	2.1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		G1	１		G1	２		G2	１		G2
+秋元　　　哲	7.80	0.12	2.9	３		G1	４		G1	１		IP	２		G1	１		IP	２		IP	２		IP	５	1	IP	１		IP	２		IP
+白井　　友晴	5.40	0.18	3.8	４		IP	１		IP	５	4	IP	１		IP	３		IP	５		IP	５		IP	３		IP	４		IP	２		IP
+羽田　　妃希	4.70	0.20	3.4	５		IP	４		IP	４	5	IP	４		IP	１		IP	３	5	IP	２		IP	４	5	IP	６		IP	４		IP
+高山　　秀雄	3.50	0.22	4.7	６	4	IP	５		IP	５		IP	５		IP	４		IP	２		IP	６		IP	４		G3	１		IP	６		IP
+花本　　夏樹	2.90	0.26	5.4	６		IP	２		IP	６		IP	５	5	IP	６	5	IP	３		IP	３		IP	５	5	IP	６		IP	６		IP

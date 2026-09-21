@@ -1,0 +1,8 @@
+data=
+1	0
+大崎　　　翔	9.00	0.11	1.2	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP
+宮田　　龍馬	7.89	0.15	3.3	２		IP	１		IP	６		G3	２		G3	３		G3	１		G1	１		IP	沈		IP	１		IP	３		G1
+森　　　悠稀	5.50	0.17	3.4	１		IP	２		IP	５		IP	６		IP	３		IP	２		IP	３		IP	４		IP	２		IP	６		G2
+近藤　　来希	1.80	0.19	4.4	２		IP	５		IP	６		IP	Ｆ		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP
+重木　　輝彦	6.30	0.18	3.9	５		IP	４		IP	２		G1	２	4	IP	５		G1	５		IP	２		IP	１		G1	２		G1	３		G1
+小野　　　桜	3.40	0.17	3.5	５		G3	６	4	IP	３		IP	５		IP	５		IP	５		IP	６		IP	４		IP	２	5	IP	３		G3

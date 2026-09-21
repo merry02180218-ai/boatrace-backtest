@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　　祥	8.00	0.18	4.5	２		IP	２		IP	２		IP	１		IP	４		IP	３		IP	１		IP	２		IP	２		IP	１		IP
+小野寺　智洋	5.30	0.14	3.6	２		IP	１		IP	５		IP	４		IP	４		IP	６		IP	１		IP	２		IP	４		IP	５		G3
+桑原　　将光	6.00	0.16	3.2	２		G3	２		IP	６		IP	６		IP	３		IP	２		IP	５		IP	１		IP	２		IP	２		IP
+熊本　　英一	2.40	0.25	5.1	６	6	IP	６		IP	６		IP	６		IP	６		IP	２		IP	４		IP	５	5	IP	４		IP	６		IP
+田中　太一郎	1.60	0.17	3.5	５		IP	５		IP	６	6	IP	５		IP	５		IP	６	4	IP	６		IP	６		IP	５		IP	５		IP
+新出　　浩司	2.70	0.18	3.5	６		G3	５		G3	５		IP	５		IP	６		IP	４		IP	６		IP	３		IP	４	5	IP	５		IP

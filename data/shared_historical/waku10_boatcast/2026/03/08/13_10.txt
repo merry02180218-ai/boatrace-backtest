@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　夏海	9.30	0.14	2.8	１		IP	１		IP	１		IP	１		IP	６		G1	１		G3	１		G3	１		IP	１		IP	１		G3
+木場　雄二郎	6.30	0.18	3.5	２		IP	３		IP	４		IP	２		IP	３		IP	２	3	IP	２		IP	２		IP	６	3	IP	３		IP
+坂本　　雄紀	5.30	0.14	2.1	５		IP	２		IP	１		IP	６		IP	３		IP	３		IP	４		IP	４		IP	３		IP	４		IP
+水野　　望美	4.00	0.19	2.7	３		IP	３		IP	４		IP	５	5	IP	６		G3	３		IP	５		IP	２		IP	４		IP	６		IP
+石原　　　翼	5.30	0.14	1.8	５		IP	３		IP	６		IP	３		IP	４	3	IP	３		IP	４		IP	２		IP	１		IP	３		IP
+佐々木　和伸	4.50	0.16	4.1	４		IP	５		G1	３		IP	３		IP	４		IP	５		IP	３		IP	５		IP	２		IP	４		IP

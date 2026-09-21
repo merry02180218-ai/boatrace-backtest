@@ -1,0 +1,8 @@
+data=
+1	0
+清埜　　翔子	9.20	0.13	2.1	１		G3	１		G3	１		G1	１		G1	１		IP	５		IP	１		G1	３		G1	１		IP	１		IP
+三品　　隆浩	4.00	0.19	4.5	５		IP	６		IP	６		IP	４		IP	３		IP	２		IP	３		IP	４		IP	５		IP	３		IP
+高橋　　　勲	3.80	0.12	2.1	６		IP	５		IP	３		IP	５		IP	１		IP	６		IP	５		IP	３		IP	５		G3	３		IP
+渡邊　　雄斗	4.40	0.22	3.5	３		IP	６		IP	５		IP	１	5	IP	６		IP	２	6	IP	４		IP	５		IP	５	5	IP	２		IP
+室田　　泰史	2.70	0.14	3.1	５		IP	６		IP	２		IP	５		IP	５		IP	６		IP	６		IP	５		IP	４		IP	４		IP
+赤峰　　和也	3.30	0.20	5.1	５	5	IP	３		IP	４	4	IP	４		IP	６		IP	４		IP	６		IP	４	5	IP	３		IP	６		IP

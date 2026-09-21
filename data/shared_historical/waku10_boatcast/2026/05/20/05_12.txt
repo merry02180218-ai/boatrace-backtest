@@ -1,0 +1,8 @@
+data=
+1	0
+飯山　　　泰	8.60	0.14	2.2	１		G2	２		G2	１		IP	２		IP	３		IP	４		IP	２		IP	１		IP	１		IP	１		IP
+前田　　　滉	6.20	0.16	3.2	２		IP	６	6	SG	４	3	SG	５		IP	２		IP	１		IP	４		G1	４		G1	１		G1	４	3	IP
+松尾　　　拓	5.80	0.15	3.0	１		IP	６		IP	２		IP	４		IP	２		IP	５		G1	３		IP	６		G1	３		IP	１		IP
+吉永　　則雄	5.70	0.13	2.6	２		IP	２		IP	２		IP	４		IP	２		IP	６		IP	３		IP	３		IP	３		IP	５		IP
+尾嶋　　一広	4.00	0.16	3.2	３		IP	４		G1	６		G1	２		G1	６		IP	４		IP	５		IP	５	4	G1	６		G1	４		IP
+岡　　　祐臣	5.10	0.19	3.6	３	5	IP	４		IP	６		G1	５		G1	４		IP	４		IP	３		IP	２		IP	２		IP	４		IP

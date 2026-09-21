@@ -1,0 +1,8 @@
+data=
+1	0
+野中　　義生	4.50	0.21	3.6	５		IP	４		IP	５		IP	妨		IP	４		IP	３		IP	１		IP	６		IP	２		IP	２		IP
+井上　　尚悟	6.00	0.19	3.6	２		IP	５		IP	２		IP	２		IP	４		IP	２		IP	５	3	IP	３		IP	３	3	IP	２		IP
+酒井　　陽祐	5.20	0.16	2.3	１	4	IP	５		IP	４		IP	６		IP	２		IP	２		IP	２		IP	４		IP	６		IP	３		IP
+野見山　拓己	4.50	0.17	2.9	６		IP	４		IP	３		IP	１		IP	３		IP	４		IP	５		IP	４		IP	４		IP	４		IP
+前出　　達吉	4.70	0.17	3.8	３		IP	４		IP	５		IP	３		IP	３		IP	３	4	IP	５		IP	６		IP	２		IP	４		G3
+庄司　　孝輔	5.00	0.17	4.1	３		IP	５		IP	５		G3	３		IP	２		IP	３		IP	２		IP	５		IP	６		IP	３		IP

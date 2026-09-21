@@ -1,0 +1,8 @@
+data=
+1	0
+大森　　　翼	5.30	0.23	3.6	１		IP	５		IP	５		IP	１		IP	４		IP	３		IP	４		IP	６		IP	４		IP	１		IP
+齊藤　　大将	5.40	0.18	3.6	６		IP	６		IP	２		IP	３		IP	４		IP	２		IP	２		IP	４		IP	２		IP	３		IP
+酒井　　陽祐	5.60	0.15	2.6	６		IP	２		IP	２		IP	２		IP	４		IP	６		IP	３		IP	４		IP	２		IP	２		IP
+小林　　礼央	3.20	0.16	2.6	６		IP	５		IP	６		IP	５		IP	５		IP	２		IP	５		IP	２		IP	５		IP	４		IP
+岩川　　仁士	4.40	0.16	4.4	４		IP	６		IP	３		IP	２		IP	４		IP	２		IP	３		IP	６		IP	５		IP	４		IP
+長野　壮志郎	5.00	0.15	3.9	５		IP	６		IP	２	5	IP	２		IP	５		IP	２		G1	６		G1	５		IP	３		IP	１		IP

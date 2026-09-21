@@ -1,0 +1,8 @@
+data=
+1	0
+西岡　　蒼志	8.00	0.15	3.3	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	４		IP	４		IP	３		IP	１		IP
+柴田　　大輔	7.80	0.16	4.3	１		IP	３		G3	４		IP	１		IP	２		IP	１		IP	２		IP	２		IP	３		IP	２		IP
+今坂　　晃広	2.80	0.17	4.2	６		IP	６		IP	４		IP	４	5	IP	４		IP	３	5	IP	４		IP	６		IP	５		IP	６		IP
+高田　　　綾	3.30	0.23	3.8	４		IP	６		IP	６		G3	６		IP	１		IP	６		IP	６		IP	３		IP	５		IP	３		IP
+堀内　　亜海	1.40	0.23	4.7	６		IP	４	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６		IP	６		IP	６		IP	６		IP
+垂水　　　悠	4.10	0.14	2.4	１		G3	６		G3	３		IP	２		IP	４		IP	６		G1	６		IP	６		IP	４		IP	４		IP

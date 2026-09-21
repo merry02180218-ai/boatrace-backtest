@@ -1,0 +1,8 @@
+data=
+1	0
+安田　　吉宏	5.10	0.20	3.8	５		IP	３		IP	３		IP	５		IP	２		IP	５		IP	１		IP	１		IP	６		IP	４		IP
+畑　　　竜生	6.00	0.19	2.9	４		IP	５		IP	３		IP	３		IP	４		IP	３		IP	２		IP	２		IP	２		IP	２		IP
+内堀　　　学	8.60	0.16	2.1	１		IP	１	1	IP	２	2	IP	１		IP	２		IP	１	1	IP	５		IP	１		IP	２		IP	１	1	IP
+渡邉　　英児	4.75	0.17	3.3	転		IP	欠		IP	３		IP	４		IP	５	5	IP	３		IP	５		IP	５		IP	３		IP	２		IP
+宇佐見　　淳	5.00	0.16	2.5	５		IP	５	4	IP	３		G3	６		G3	２		IP	５		G1	２		IP	２		IP	１		IP	５	4	IP
+熊倉　　幹太	1.10	0.24	4.5	５	5	IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

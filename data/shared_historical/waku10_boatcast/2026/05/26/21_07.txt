@@ -1,0 +1,8 @@
+data=
+1	0
+新井　　英孝	7.70	0.10	2.0	１		IP	１		IP	２		IP	１		IP	１		IP	４		IP	１		IP	６		IP	４		IP	１		IP
+羽野　　　諒	6.22	0.16	3.3	３		IP	３		IP	３		IP	１		IP	２		IP	４		IP	５		IP	転		IP	２		IP	３		IP
+三品　　隆浩	4.40	0.17	3.1	６		IP	４		IP	４		IP	２		IP	５		IP	１		IP	６		IP	５		IP	４		IP	２		IP
+上野　　秀和	5.70	0.18	3.1	３		IP	６		IP	２		IP	４		IP	３		IP	４		IP	５		G3	３		IP	１		IP	１		IP
+雑賀　　勇貴	3.50	0.19	3.6	６		IP	５		IP	４		IP	３		IP	４		IP	５		IP	５		IP	２	4	IP	４		IP	５		IP
+川井　　　萌	3.60	0.17	3.9	４		IP	２		IP	５		G1	５		G1	４		IP	５		IP	３		IP	５		IP	５		G3	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+眞鳥　　章太	9.20	0.13	2.6	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP
+前田　　　滉	6.80	0.12	2.2	１		IP	４		G1	４		G1	１		G1	４	3	IP	４		G1	２		IP	１		SG	６		SG	４		G1
+酒井　　俊弘	4.50	0.11	1.7	２		IP	５		IP	６	5	IP	５		IP	３	6	IP	２	5	IP	３		IP	６	4	IP	６	5	IP	１	5	IP
+稲生　　夏季	3.70	0.17	3.1	２		IP	５		G3	２		G3	６		IP	５		IP	転		IP	３		IP	５		IP	３		G3	５	5	IP
+渡邉　　　翼	4.30	0.16	3.2	４		IP	３		IP	１		IP	５		IP	６		IP	６		G3	２		G3	４		IP	６		IP	３		IP
+石川　　　諒	4.20	0.12	2.0	５		IP	６		IP	３		IP	２	5	IP	６		IP	３		IP	５		IP	３		IP	４		IP	３		G3

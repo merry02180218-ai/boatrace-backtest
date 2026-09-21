@@ -1,0 +1,8 @@
+data=
+1	0
+中田　　夕貴	6.80	0.18	2.9	４		IP	１		IP	６		G1	３		IP	１		IP	３		IP	転		G3	１		G3	１		IP	１		IP
+松田　　真実	5.20	0.16	3.0	３		IP	２		IP	３		IP	２		IP	２		IP	３		G3	４		G3	５		IP	５		IP	５		IP
+加藤　　　綾	4.50	0.16	3.7	６		IP	３		IP	４		IP	３		IP	３		IP	３		IP	５		IP	３		G3	３		IP	５		IP
+日隈　　　茜	1.00	0.16	3.3	６		IP	６		IP	６	5	IP	６	5	IP	６		IP	６		IP	６		IP	６	6	IP	６		IP	６		IP
+笠野　友紀恵	2.40	0.17	3.6	６		IP	４		G3	４		G3	６		IP	６		IP	６		IP	３		IP	６	4	IP	４		G3	６		G3
+本部　めぐみ	2.30	0.21	4.4	４	5	IP	２		IP	５		G3	Ｆ	5	IP	５		IP	６		G3	６	5	IP	５		G3	５		G3	６		G3

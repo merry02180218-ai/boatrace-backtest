@@ -1,0 +1,8 @@
+data=
+1	0
+花本　　夏樹	7.00	0.19	3.7	３		IP	３		IP	２		IP	２		IP	１		IP	４		IP	４		IP	２		IP	１		IP	３		IP
+長尾　京志郎	4.50	0.16	3.8	４		IP	５		IP	５		IP	２		IP	６		IP	１		IP	５		IP	２		IP	５		IP	３		IP
+芦澤　　　望	4.90	0.14	2.6	Ｆ		IP	１		IP	６		IP	１		IP	２		IP	６		IP	５		IP	１		IP	６	4	IP	３		IP
+荒井　　輝年	4.40	0.13	2.8	４		IP	１		IP	４	3	IP	３	5	IP	２	5	IP	５		IP	転		IP	６		IP	６		IP	２		IP
+山田　　理央	5.56	0.10	2.2	４		G2	１		IP	３		G3	２	4	G3	４	4	IP	５		IP	落		IP	５		IP	４		IP	３		IP
+服部　　幸男	3.90	0.18	4.2	６	5	IP	１		IP	１	5	IP	５		IP	６		IP	６		IP	４	4	IP	６	4	IP	４	5	IP	６		IP

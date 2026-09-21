@@ -1,0 +1,8 @@
+data=
+1	0
+大西　　　賢	7.20	0.17	3.2	４		IP	３		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	５		IP	４		IP
+松下　　誉士	5.50	0.20	4.0	４		IP	２	3	IP	２		IP	６		IP	３		IP	４		IP	４		IP	２		IP	４		IP	２		IP
+小林　　　泰	5.90	0.16	3.1	３		IP	１		IP	３		IP	２	4	IP	６		IP	３		IP	１		IP	３		IP	４		IP	５		IP
+村松　　将平	6.56	0.13	2.5	２		IP	３		IP	６		IP	３	3	IP	３		IP	２		IP	１		IP	２		IP	３		IP	落		IP
+岩永　　雅人	3.50	0.18	4.1	４		IP	６		IP	６		IP	２		IP	３		IP	４		IP	３		IP	５		IP	５		IP	６		IP
+大澤　　風葵	4.80	0.16	3.1	４		IP	３		IP	３		IP	３		IP	３	5	IP	５	5	IP	６		IP	６	4	IP	２	5	IP	２		IP

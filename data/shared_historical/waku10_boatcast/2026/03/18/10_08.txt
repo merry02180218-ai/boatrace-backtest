@@ -1,0 +1,8 @@
+data=
+1	0
+坪内　　　実	6.60	0.17	3.4	１		IP	１		IP	３		IP	５		IP	３		IP	１		IP	３		IP	５		IP	４		IP	１		IP
+加藤　　優弥	5.10	0.15	3.2	４		IP	６		IP	５		IP	２		IP	５		IP	１	3	IP	１		IP	４		IP	２		IP	５		IP
+黒田　　　剛	3.20	0.15	2.3	３		IP	２		IP	４	4	IP	４		IP	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP
+相馬　　　翔	3.50	0.19	4.1	５		IP	６		IP	５		IP	６		IP	６		IP	１		IP	５		IP	１		IP	５		IP	４		IP
+小川　日紀太	3.20	0.16	2.6	５		IP	６		G3	３		IP	１		IP	６		IP	５		IP	６		IP	６		IP	５		IP	３		IP
+鳥本　　智史	1.50	0.21	3.7	転		IP	５		IP	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　　怜	7.80	0.14	2.9	１		IP	３		IP	１		IP	１		IP	１		IP	２		IP	２	3	IP	転	2	IP	１		IP	３		IP
+金子　　順一	3.30	0.17	3.9	１		IP	５		IP	６		IP	５	1	IP	３	1	IP	５		IP	５		IP	６		IP	６		IP	３		IP
+倉田　　茂将	4.80	0.18	4.1	２		IP	６		IP	２		IP	３	2	IP	５		IP	５		G3	６		G3	２		IP	３		IP	３		IP
+平尾　　崇典	5.90	0.15	2.9	４		IP	５		IP	６	5	G1	６		G1	５		G1	３		G1	２		G2	１		IP	１		IP	２		IP
+松尾　　　祭	2.50	0.19	3.9	４		IP	６		IP	３		IP	５		IP	５		IP	転		IP	５		IP	４		G1	６		G1	６		IP
+真庭　　明志	4.40	0.19	3.3	３		IP	５		IP	５		IP	３	5	IP	５		IP	２	5	IP	５	5	IP	５		IP	２		IP	３	4	IP

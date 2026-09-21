@@ -1,0 +1,8 @@
+data=
+1	0
+守屋　　美穂	9.10	0.13	2.0	６		IP	２		IP	１		IP	１		G3	１		G3	１		G3	１		G1	１		IP	１		IP	１		IP
+仲口　　博崇	6.50	0.18	3.8	１		G3	２		IP	２		IP	６		IP	１	1	G1	３		IP	６		G3	１	1	G3	５		G3	２		IP
+辻　　　栄蔵	7.80	0.16	2.5	１		IP	２		IP	２		G2	３		G1	３		IP	４		G1	２		IP	２		IP	２		G1	２		IP
+伊藤　　将吉	4.80	0.13	3.0	Ｆ		IP	１		IP	４		IP	３		IP	３		IP	６		G1	６	5	IP	２	6	IP	６		IP	１		IP
+濱崎　　直矢	5.20	0.16	2.8	Ｆ		SG	５		SG	５		IP	４		IP	２		IP	２		IP	２		IP	５		G1	４		G1	１		IP
+吉村　　　誠	3.70	0.14	2.3	６		G3	５		G3	４		G3	４		G1	４	5	IP	５		IP	４		IP	３	5	IP	３		IP	５		G1

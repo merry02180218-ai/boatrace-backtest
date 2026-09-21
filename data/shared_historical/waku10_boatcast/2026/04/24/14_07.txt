@@ -1,0 +1,8 @@
+data=
+1	0
+上瀧　　絢也	7.20	0.21	3.4	１		IP	４		IP	２		IP	１		IP	４		IP	５		IP	３		IP	１		IP	２		IP	１		IP
+一柳　　和孝	4.90	0.16	2.6	Ｆ		IP	２		IP	２		IP	３		IP	６		IP	４	3	IP	４		IP	４		IP	４		IP	１		IP
+岡谷　　健吾	4.20	0.18	3.6	１		IP	２		IP	５		IP	３		IP	６		IP	５		IP	５	2	IP	５		IP	６		IP	２		IP
+近藤　　稔也	3.80	0.24	2.9	５		IP	２		IP	４		IP	６		IP	４		IP	５		IP	６		IP	３		IP	４		IP	３		IP
+中村　　裕将	4.80	0.12	2.7	１		IP	１		IP	６		IP	３		IP	６		IP	２		IP	５		IP	４		IP	５		IP	４		IP
+木村　　仁紀	4.50	0.15	3.6	１	5	IP	５		G1	６		G1	６		IP	３		IP	３		IP	３		IP	３		G1	５		IP	６		G1

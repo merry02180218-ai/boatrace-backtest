@@ -1,0 +1,8 @@
+data=
+1	0
+津留　浩一郎	6.70	0.13	2.4	３		IP	２		IP	６		IP	２		IP	４		IP	１		IP	３	2	IP	３		IP	２		IP	１		IP
+浦田　　晃嗣	3.20	0.16	3.6	３		IP	６		IP	５		IP	３		IP	５		IP	４		IP	５		IP	４		IP	６		IP	４		IP
+田中　　博子	3.90	0.19	3.9	５		IP	４		IP	２		G3	５		IP	４		IP	５		IP	４		IP	５	6	IP	１		IP	６		IP
+立間　　充宏	4.50	0.18	2.6	３		IP	３		IP	５		IP	３		IP	４		IP	５	6	IP	６		IP	３		IP	３		IP	４		IP
+上村　慎太郎	2.67	0.26	5.7	欠		IP	４		IP	５		IP	５		IP	６		IP	５		IP	４		IP	３		IP	６		IP	５		IP
+井川　　大作	2.50	0.16	3.8	４		IP	６		IP	６		IP	５		IP	５		IP	３		IP	４		IP	６		G3	５		IP	５		IP

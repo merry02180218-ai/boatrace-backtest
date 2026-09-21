@@ -1,0 +1,8 @@
+data=
+1	0
+角山　　雄哉	7.90	0.16	2.9	６		IP	１		IP	４		IP	２		IP	１		G3	２		IP	１		IP	２		IP	１		IP	１		IP
+相原　　利章	4.90	0.17	3.2	２		IP	６		IP	２		IP	６	4	IP	３		IP	６		IP	３		IP	２		IP	５		IP	２		IP
+宗行　　治哉	6.90	0.18	3.7	４		IP	２		IP	４		IP	３		IP	２	4	IP	１		IP	４		G2	１		IP	３		IP	２	4	IP
+金子　　良昭	3.10	0.18	4.1	５		IP	６		IP	６		IP	５		IP	４	2	IP	６		IP	３		IP	４	5	IP	５		IP	２		IP
+井上　　恵一	3.20	0.20	3.4	５		IP	５		IP	６		IP	４		IP	４		IP	４		IP	５	3	IP	４		IP	４		IP	６		IP
+大瀧　明日香	4.70	0.16	3.1	３		G3	３	5	IP	５		G1	４		G1	３		IP	２		IP	６		IP	６		G1	５		G1	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+向後　　龍一	8.40	0.12	2.9	１		IP	２		IP	５		G2	２		G2	２		IP	１		IP	１		IP	２		IP	１		IP	２		IP
+高橋　　直哉	4.80	0.22	4.5	５		IP	１		IP	６	3	G3	１		IP	４		IP	５		IP	６		IP	２		IP	４		IP	３		IP
+荒井　　輝年	5.60	0.11	2.4	Ｆ		IP	１		IP	１		IP	４		IP	５		IP	２		IP	３	2	IP	４		IP	２		IP	４		IP
+井上　　尚悟	5.10	0.17	3.2	５		IP	４		IP	５	3	IP	３		IP	６		IP	４		IP	１		IP	４	6	IP	２		G3	２		IP
+山田　　亮太	5.60	0.12	3.1	５		IP	４	6	IP	４		IP	５		IP	３		IP	４		G2	２		G2	１		IP	３		G3	４		IP
+吉武　　真也	1.89	0.25	5.7	４		IP	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP	５		IP	欠		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中野　　次郎	8.50	0.14	2.7	２		G1	１		IP	２		IP	２		G1	６		IP	１		IP	１		G3	３	2	G3	１		IP	１		SG
+井上　　忠政	6.10	0.20	4.6	３		G1	４		G1	２		G1	３		IP	１		IP	３		G1	５		IP	５		IP	４		IP	２		IP
+稲田　　浩二	6.22	0.19	3.1	２		G1	２		G1	５		G1	１		IP	転		IP	４		IP	２		IP	２		IP	６		G1	６		G1
+岩瀬　　裕亮	6.00	0.14	3.8	６	6	G1	３		G1	２		G1	５	5	G1	３		G1	３		G2	５	3	IP	３		IP	３		IP	１		IP
+高野　　哲史	3.30	0.15	3.1	６		G1	４		IP	２		IP	４		G1	６		G1	転		IP	６		IP	５		IP	６		IP	３		IP
+桐生　　順平	4.30	0.14	4.3	６		G1	５		G1	３		G1	３		G1	５		G1	６		G1	３	4	IP	３		G1	５		SG	６	5	G1

@@ -1,0 +1,8 @@
+data=
+1	0
+永井　　聖美	7.80	0.14	2.4	１		IP	１		IP	１		IP	４		IP	３		IP	３		IP	３		IP	１		G3	３		IP	１		IP
+本部　めぐみ	2.20	0.22	4.7	４		IP	５		IP	６		IP	３		IP	妨		IP	４		G3	６		G3	５		IP	６		IP	６		G3
+清水　　愛海	6.20	0.12	3.0	５		IP	１		G1	１		G1	４		IP	３		G1	１		G3	５		IP	３		IP	６	5	IP	２		IP
+龍田　　真白	3.50	0.13	2.6	５		IP	５		IP	６		IP	２		IP	３		IP	５		IP	１		IP	５		IP	６		IP	６	6	IP
+戸敷　　晃美	5.10	0.16	3.6	６		IP	３		G1	４		G1	４		IP	４		IP	３		G3	４		IP	３		IP	４		IP	１	6	IP
+島田　なぎさ	2.80	0.16	2.7	４		G3	３		IP	５		IP	４	5	G3	４		IP	６		G3	４		IP	６		IP	６		G3	６		G3

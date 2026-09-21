@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　　勲	8.00	0.17	3.0	４		G3	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	３		IP	１		IP	４		IP
+重木　　輝彦	6.70	0.16	2.9	１		IP	１		IP	３		IP	４		IP	２		IP	２		IP	４		IP	５		G1	２		IP	３		IP
+松田　　隆司	3.30	0.17	3.4	５		IP	６		IP	４		IP	６		IP	５		IP	３		IP	５		IP	６		IP	２		IP	４	4	IP
+宮地　　博士	3.90	0.19	4.6	５		IP	４		IP	３		IP	４		IP	４		IP	３		IP	４	5	IP	６		IP	４		IP	４		IP
+高村　　　諒	1.60	0.19	3.5	５		IP	５		IP	５		IP	６	6	IP	６		IP	６	6	IP	６		IP	６		IP	４		IP	６	6	IP
+林　　　美憲	3.50	0.16	3.5	６	2	IP	５	5	IP	４	4	IP	５		G1	４		G1	３	2	IP	６	3	IP	４	2	IP	３	4	IP	５	4	G1

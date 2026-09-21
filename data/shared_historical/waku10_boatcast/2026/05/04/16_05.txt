@@ -1,0 +1,8 @@
+data=
+1	0
+大原　　祥昌	9.20	0.11	2.2	１		IP	１		IP	１		IP	１		IP	１		G3	３		G3	１		IP	３		IP	１		IP	１		IP
+今出　　晋二	4.20	0.16	3.7	２		IP	２		IP	４		IP	２		IP	６		IP	５		IP	５		IP	６		IP	５		IP	３		IP
+藤原　啓史朗	8.30	0.13	2.1	１		IP	２		G1	２		G1	２		SG	２		G1	３		G1	３		IP	１		IP	３		IP	３		G1
+森定　　晃史	6.80	0.18	3.6	３		IP	３		IP	２		IP	１		IP	４		IP	２		IP	４		IP	２		IP	２		IP	３		IP
+峰重　　力也	4.20	0.09	1.9	４		IP	５		IP	２		IP	６		IP	３		IP	２		IP	５		IP	５		IP	６		IP	２		IP
+前原　　　哉	2.00	0.26	4.6	５		IP	５		IP	４		IP	５		IP	５		IP	５		IP	６		IP	６		IP	５		IP	５		IP

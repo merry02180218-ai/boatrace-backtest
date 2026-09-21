@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　　健	7.40	0.12	2.7	１		IP	１		IP	５		IP	１		IP	１		G3	１		IP	６		IP	１		IP	１		IP	６		IP
+榮田　　将彦	3.60	0.14	3.3	６		IP	３		IP	４		IP	４	3	IP	６		IP	５		IP	４		IP	５		IP	２		IP	４		IP
+桑原　　　啓	5.50	0.16	3.0	４		IP	５		G3	１		IP	３		IP	１		IP	２		IP	４		IP	２		IP	５		IP	６		IP
+島崎　丈一朗	4.20	0.15	3.0	３		IP	４		IP	３		IP	５		IP	６		IP	２		IP	３		IP	５		IP	６		IP	３		IP
+中渡　　修作	2.60	0.16	3.5	５		IP	６		IP	６		IP	４		IP	４		IP	４	4	IP	５		IP	３		IP	６		IP	６		IP
+港　　　理樹	2.50	0.18	4.4	５		IP	５		IP	３		IP	５		IP	５		IP	落		IP	３		IP	５		IP	５		IP	６		IP

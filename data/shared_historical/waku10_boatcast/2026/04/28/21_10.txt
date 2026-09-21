@@ -1,0 +1,8 @@
+data=
+1	0
+川上　　　剛	8.60	0.18	3.3	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP	３		IP	１		G3	３		G3	１		IP
+高倉　　和士	7.20	0.14	2.9	６		G1	１		G1	２		IP	２		IP	１		IP	３		IP	４		G1	２		IP	２		IP	３		IP
+井上　　慧人	4.70	0.20	3.7	３	6	IP	５	4	IP	２		IP	６		IP	３		IP	５		IP	４		IP	３		IP	１		IP	５		IP
+中　　　亮太	7.80	0.11	1.5	５		IP	２		IP	１		IP	１		G3	２		G3	１		IP	５		IP	１		IP	２		IP	２		G2
+川添　　英正	4.10	0.19	4.1	５		IP	２		IP	６		G3	３		G3	６		IP	４		IP	５		IP	６	4	IP	２		IP	２		IP
+浦野　　　海	3.80	0.28	4.8	５		IP	５		IP	３		IP	６		IP	６		IP	２		IP	６		IP	６		IP	２		IP	２	5	IP

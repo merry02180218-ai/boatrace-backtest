@@ -1,0 +1,8 @@
+data=
+1	0
+大神　　康司	8.40	0.17	2.3	１		IP	４		IP	１		IP	２		IP	３		IP	１		IP	１		IP	３		IP	１		IP	１		IP
+久富　　政弘	7.60	0.18	2.9	２		IP	２		IP	１		IP	１		IP	３		IP	３		IP	２		IP	４		IP	２	3	IP	２		IP
+浜崎　　準也	4.80	0.17	3.2	３		IP	３		IP	６		IP	３		IP	３	4	IP	５		IP	２		IP	４		IP	２		IP	６		IP
+山田　　　丈	5.40	0.18	3.6	５		IP	３		IP	２		IP	２		IP	４		IP	５		IP	３		IP	２		IP	５		IP	２		IP
+花本　　夏樹	1.60	0.25	5.6	６		IP	６		IP	６		IP	３		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP
+原田　才一郎	3.80	0.26	5.6	３		IP	３	5	IP	５		IP	６		G1	５		G1	５		IP	６		G1	５		G1	４		IP	３		IP

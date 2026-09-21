@@ -1,0 +1,8 @@
+data=
+1	0
+池永　　　太	9.20	0.11	1.8	４		G1	２		G1	１		IP	１		IP	１		G1	１		G1	２		IP	１		IP	１		IP	３		G1
+木下　　大將	7.20	0.15	2.9	３		IP	３		IP	２		IP	２		IP	４		IP	２		IP	１		IP	１		IP	４	3	IP	２		IP
+羽野　　　諒	4.40	0.12	2.4	２		IP	３		IP	４		G3	２		IP	５		IP	５		IP	２		IP	６		IP	６		IP	４		IP
+水摩　　　敦	3.40	0.21	3.5	６		IP	３		IP	５		IP	６		IP	５		G3	５		IP	５		IP	２		IP	４		IP	３	5	IP
+山口　　広樹	3.90	0.15	3.2	３		IP	４		IP	５		IP	６		IP	Ｆ	6	IP	２		G3	６		IP	６		IP	２		IP	２		IP
+鶴田　　勇雄	4.40	0.20	4.2	４		IP	６		G3	６		G3	４		IP	３		IP	４		IP	３		IP	３	5	IP	３	5	IP	３		IP

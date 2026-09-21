@@ -1,0 +1,8 @@
+data=
+1	0
+加倉　　侑征	7.80	0.14	2.9	１		IP	１		IP	３		IP	２		IP	２		IP	１		IP	２		IP	１		IP	３		IP	５		IP
+庄司　　孝輔	6.20	0.25	4.1	２		IP	５		G3	２		IP	２		IP	５		IP	３		IP	３		IP	１		IP	２		IP	４		IP
+君島　　秀三	6.00	0.14	2.4	２		IP	５		IP	３		IP	６		IP	２		IP	１		IP	２		IP	４		G1	１		G1	６		IP
+中井　　俊祐	4.40	0.16	2.6	２		IP	１		IP	１		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP	２		IP
+山ノ内　雅人	4.50	0.15	3.0	４		IP	２		IP	４		IP	６		IP	３		IP	３		IP	５		IP	５		IP	３		IP	３		IP
+大谷　　健太	3.50	0.13	2.4	６	5	IP	６		IP	３		IP	４		IP	３		IP	４		IP	４		IP	５		IP	６		IP	３		IP

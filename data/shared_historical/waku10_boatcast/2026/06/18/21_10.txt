@@ -1,0 +1,8 @@
+data=
+1	0
+石川　　吉鎬	6.30	0.19	3.9	４		IP	１		IP	４		IP	１		IP	１		IP	４		IP	２		IP	２		IP	６		IP	４		IP
+大神　　康司	4.80	0.14	2.8	２		IP	５		IP	２		IP	３		IP	２		IP	３		IP	６		IP	３		IP	６		IP	５		IP
+久田　　　武	4.80	0.16	3.6	３	4	IP	３		IP	４		IP	４		IP	３		IP	１		IP	４		IP	３		IP	６		IP	６		IP
+木山　　誠一	5.20	0.12	2.5	２		IP	６		IP	１		IP	３		IP	２		IP	５	5	IP	５		IP	６		IP	３		IP	２		IP
+市橋　　卓士	5.40	0.14	3.2	２		IP	５		IP	２		IP	５		IP	３		IP	４		IP	２	3	IP	３	4	IP	４		IP	３		IP
+小林　　一樹	4.56	0.15	3.4	２	5	IP	５	5	IP	３		IP	５		IP	２	5	IP	３		IP	３	5	IP	６		IP	不	5	IP	５		IP

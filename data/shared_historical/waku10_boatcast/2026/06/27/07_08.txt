@@ -1,0 +1,8 @@
+data=
+1	0
+倉富　　大誠	5.60	0.20	4.6	１		IP	２		IP	３		IP	５		IP	５		IP	５		IP	３		IP	１		IP	５		IP	２		IP
+沖島　　広和	6.60	0.17	3.4	２		IP	１		G3	３		IP	１		IP	２		IP	３	3	IP	４		IP	４		IP	５		IP	２		IP
+楠原　　正剛	3.90	0.17	3.1	２		IP	４		IP	５		IP	４		IP	５		IP	２		IP	５		G3	５		IP	６	4	IP	３	4	IP
+本部　めぐみ	2.60	0.24	4.4	６		IP	４		G3	５		G3	５		G3	３		G3	５		IP	６		G3	６		G3	３		IP	６		IP
+伊藤　　喜智	5.90	0.15	3.1	３		IP	２		IP	３		IP	３		IP	５	6	IP	２		IP	５		IP	３	4	IP	３		IP	２		IP
+池田　　紫乃	2.10	0.19	4.1	５		IP	４		IP	６		IP	６		IP	５		IP	６		G3	６		G3	３		IP	５	5	G3	６		G3

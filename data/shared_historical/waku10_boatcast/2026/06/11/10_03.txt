@@ -1,0 +1,8 @@
+data=
+1	0
+大田　　直弥	9.11	0.14	3.0	欠		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	２		IP	２		IP	１		IP
+一色　　凌雅	4.67	0.15	3.4	欠		IP	３		IP	６		IP	４		IP	２		IP	６		IP	３		IP	５		IP	２		IP	３		IP
+古結　　　宏	6.60	0.11	3.1	１		IP	１		IP	３		IP	３		IP	３		G1	５	1	G1	２		IP	２		IP	６		G1	４		G1
+東口　　　晃	3.20	0.18	3.3	４		IP	４		IP	４		IP	３		IP	４		IP	５		IP	５		IP	６		IP	４		IP	６		IP
+新田　　智彰	4.20	0.16	3.1	５	4	G3	３		IP	１		IP	５		IP	５		IP	６		IP	６		IP	３		IP	３		IP	３		IP
+早川　　理稀	1.30	0.19	3.5	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP

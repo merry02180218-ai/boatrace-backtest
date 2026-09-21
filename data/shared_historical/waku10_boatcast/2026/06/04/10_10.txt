@@ -1,0 +1,8 @@
+data=
+1	0
+牧村　　俊輝	6.14	0.17	2.9	２		IP	３		IP	１		IP	６		IP	１		IP	３		IP	５		IP									IP
+島川　　海輝	7.30	0.15	3.3	２		IP	３		IP	１		IP	２		IP	１	3	IP	２		IP	２		IP	１	1	IP	４		IP	６		IP
+藤原　　仙二	6.40	0.15	3.6	１		G2	４	4	IP	３		IP	２		IP	２		IP	２		IP	２		IP	５		G2	６	4	IP	３		IP
+山本　　幸也	4.70	0.14	2.9	５		IP	４		IP	４		IP	４		IP	１		IP	５		IP	５	6	IP	１	5	IP	６		IP	２		IP
+前田　　　翔	5.90	0.18	4.4	２		IP	３		IP	２		IP	落		IP	２		IP	４		IP	２		IP	６		G1	２	4	IP	３		IP
+黒田　　　剛	2.70	0.17	4.4	４	5	IP	５		IP	６		IP	６		IP	６		IP	５		IP	５		IP	５		IP	４		IP	２	5	IP

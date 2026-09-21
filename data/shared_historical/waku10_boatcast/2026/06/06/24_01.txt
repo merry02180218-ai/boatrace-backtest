@@ -1,0 +1,8 @@
+data=
+1	0
+渡辺　　　豊	7.00	0.20	3.7	３		IP	４		IP	３		IP	１		IP	２		IP	１		IP	１		IP	３		IP	２		IP	５		IP
+梅木　　敬太	5.30	0.20	3.3	４		IP	６		IP	２		IP	４		IP	２		IP	２		IP	３		IP	２		IP	４		IP	５		IP
+桑島　　和宏	6.40	0.13	2.6	３		IP	１		G2	３		IP	４		IP	６		IP	１		IP	３		IP	２		IP	４		IP	２		IP
+木村　　浩士	4.30	0.15	3.5	３		IP	５		IP	６		IP	３		IP	５		IP	５		IP	３		IP	４		IP	４		IP	１	5	IP
+笹木　　香吾	3.20	0.15	3.0	５		IP	５		IP	６		IP	５	6	G2	転		G2	１		IP	３		IP	５		IP	５		IP	４		IP
+中西　　月輝	1.10	0.20	4.3	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５	5	IP

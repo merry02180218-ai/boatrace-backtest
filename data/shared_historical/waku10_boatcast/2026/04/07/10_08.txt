@@ -1,0 +1,8 @@
+data=
+1	0
+丸山　　祐也	7.20	0.23	4.1	２		IP	２		IP	転		IP	１		IP	２		IP	２	2	IP	２		IP	２		IP	２		IP	３		IP
+渡邊　雄一郎	7.80	0.17	3.4	３	3	IP	４		IP	２		IP	２		IP	２		IP	１	3	IP	１		IP	２		IP	２		IP	２		IP
+森　　　雄利	4.20	0.15	2.3	１		IP	５		IP	４		IP	２		IP	６		IP	５		IP	２		IP	４		IP	５		IP	６		IP
+柳内　　敬太	5.90	0.13	1.9	５		IP	３		IP	３		IP	２	3	IP	１		IP	４		IP	２		IP	３		IP	２		IP	６		IP
+吉田　　　光	3.00	0.15	3.4	４		IP	３	6	IP	Ｌ	6	IP	４	4	IP	５		G3	５	4	IP	５		IP	５		G3	３		G3	５		G3
+秋山　　広一	4.80	0.21	4.6	４		IP	４		IP	２		IP	６		G1	４		G1	６		IP	５		IP	２		IP	４		IP	２	5	IP

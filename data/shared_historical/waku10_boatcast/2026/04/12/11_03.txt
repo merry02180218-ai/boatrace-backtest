@@ -1,0 +1,8 @@
+data=
+1	0
+天野　　友和	8.20	0.16	3.7	１		IP	４		IP	２		IP	１		IP	２		IP	１		IP	４		IP	１		IP	１		IP	２		IP
+片岡　　大地	5.20	0.11	2.6	３		IP	４		IP	３		IP	５		IP	５		IP	３		IP	２		IP	２		IP	３		IP	４		IP
+安井　　瑞紀	4.90	0.18	4.3	５		IP	２		G3	３		IP	２		IP	５		IP	６		IP	５		IP	３		IP	３		IP	２		IP
+木場　　悠介	3.90	0.16	2.6	４		IP	４		IP	６		IP	４		G3	２		G3	３		IP	６		IP	４		IP	３		IP	６		IP
+柴田　　直哉	2.80	0.21	4.1	５		IP	５		IP	４	6	IP	６	6	IP	４		IP	４		IP	５		IP	６		IP	５		IP	３		IP
+藤井　　　徹	3.10	0.23	5.3	５	5	IP	４		IP	６		IP	５		IP	５		IP	４	5	IP	４	5	IP	５	3	IP	４	3	IP	３		IP

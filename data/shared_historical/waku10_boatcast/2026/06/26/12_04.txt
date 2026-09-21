@@ -1,0 +1,8 @@
+data=
+1	0
+嶋田　　有里	7.80	0.11	1.7	１		G3	５		IP	１		IP	３		IP	１		IP	３		IP	３		IP	２		IP	１		IP	１		IP
+田口　　節子	6.90	0.16	3.8	２		IP	３		G3	２		G3	２		IP	４		IP	３		G2	３		G1	５	4	G1	２		G3	１		G3
+谷口　　佳蓮	5.00	0.14	2.2	２		IP	２		IP	６		IP	３		IP	６		G2	６		G2	６		IP	２		IP	３		IP	２		IP
+池田　奈津美	5.90	0.16	3.3	３	2	IP	５	2	IP	１	2	IP	３	2	IP	６	2	G3	２	2	IP	３	2	IP	１	2	IP	５	2	IP	２	3	IP
+土屋　　　南	6.10	0.15	2.9	５		IP	３		IP	３	4	IP	２		IP	３		IP	３		IP	３		IP	２		IP	５		IP	１		IP
+中西　　月輝	1.50	0.18	4.9	５		IP	６		IP	５		IP	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

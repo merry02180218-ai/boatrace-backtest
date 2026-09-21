@@ -1,0 +1,8 @@
+data=
+1	0
+関　　　浩哉	10.10	0.13	3.4	１		G1	１		IP	１		IP	１		IP	１		G1	２		G1	１		G1	４		SG	１		G1	１		G1
+米丸　　乃絵	8.10	0.14	3.2	２		IP	２		IP	３		G2	２		G2	１		G3	２		G3	４		IP	１		IP	１		IP	３		G1
+宮地　　元輝	5.80	0.11	2.7	４		G1	６		G1	２		IP	２		IP	転		IP	Ｆ	4	G1	２		G1	２		SG	３		G1	２		G1
+遠藤　　エミ	7.90	0.14	3.0	１		IP	１		IP	３		G2	６		G2	２		IP	３		IP	２		G2	３		G1	１		G1	２		IP
+深谷　　知博	4.70	0.13	2.6	５		G1	６		G1	２		IP	３		G1	５		G1	６		G1	１		IP	６		G1	３		G1	５		G1
+服部　　幸男	4.60	0.17	3.7	３	5	IP	２	4	IP	６	5	IP	１		IP	１	5	IP	５		IP	６		IP	６		IP	４	4	IP	６	4	IP

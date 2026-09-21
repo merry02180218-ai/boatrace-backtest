@@ -1,0 +1,8 @@
+data=
+1	0
+高井　　雄基	8.67	0.16	2.9	１		IP	３		IP	２		IP	１		IP	１		IP	１		IP	転		IP	４		IP	１		IP	１		IP
+近藤　　友宝	3.70	0.17	2.5	４		IP	５		IP	２		IP	３		IP	４		IP	３		IP	６		IP	６		IP	６		IP	４		IP
+佐藤　　右京	5.70	0.19	3.9	２		IP	３		IP	２		IP	６		IP	２		IP	３		IP	２		IP	４		IP	３		IP	５		IP
+鈴木　　茂高	3.60	0.24	4.3	４		IP	４		IP	３		IP	４		IP	５		G3	６		IP	２		IP	６		IP	５		IP	４		IP
+谷口　　佳蓮	4.30	0.13	2.3	６	6	IP	２		IP	２		IP	１		IP	１		G3	落		G3	５		IP	６		IP	６		IP	５		IP
+木村　　仁紀	5.20	0.18	3.8	３		IP	３		IP	３		IP	３		G1	５		IP	６		G1	３		G1	２		IP	６		G2	３		IP

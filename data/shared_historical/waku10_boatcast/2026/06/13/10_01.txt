@@ -1,0 +1,8 @@
+data=
+1	0
+古結　　　宏	9.60	0.13	2.9	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		G1
+山田　　和佐	4.80	0.21	4.3	５		G1	３		IP	２		IP	２		IP	３		IP	５	3	IP	６		IP	５		IP	４		IP	２		IP
+白井　　友晴	5.60	0.17	3.4	１		IP	３		IP	５		IP	４		IP	５		IP	４		IP	１		IP	５	4	IP	１		IP	３		IP
+上田　　隆章	3.40	0.23	5.1	５		IP	６		IP	２		IP	５		IP	６		IP	３		IP	２		IP	６		IP	６		IP	４	5	IP
+東口　　　晃	3.60	0.22	4.0	３		IP	３		IP	４		IP	４		IP	４		IP	４		IP	４		IP	６		IP	６		IP	５		IP
+市川　　健太	2.40	0.19	4.3	５		IP	５		IP	５		IP	６		IP	４	5	IP	６		IP	４	5	IP	４		IP	５		G3	５		G3

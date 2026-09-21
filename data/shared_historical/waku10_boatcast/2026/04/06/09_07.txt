@@ -1,0 +1,8 @@
+data=
+1	0
+船岡　洋一郎	10.44	0.14	2.4	１		G1	１		IP	１		IP	１		IP	１		IP	Ｌ		IP	１		IP	１		G1	１		G1	１		G2
+竹田　　和哉	7.10	0.13	2.8	５		G1	３		IP	３		IP	２		IP	３		IP	１		IP	２		G1	２		G1	３		IP	２		IP
+濱野谷　憲吾	5.30	0.16	2.9	３		G1	６		G2	６		IP	２		IP	２		G1	４		G1	３		G1	６		G1	２		IP	４		IP
+杉山　　正樹	6.30	0.15	3.2	３		G1	２		G3	４		G3	１		IP	１		IP	３		IP	４		G1	４		G1	４		IP	４		IP
+中嶋　健一郎	5.30	0.14	3.1	４		IP	５	4	IP	３		G1	２		G1	６		IP	１		IP	２		IP	６		IP	４		IP	３		G1
+山田　　祐也	5.20	0.16	3.8	６		G1	５		SG	４	5	SG	６		G2	４		G1	３		IP	１		G1	３	5	IP	５		IP	２		IP

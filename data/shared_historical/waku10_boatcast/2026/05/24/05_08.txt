@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　　猛	7.20	0.16	3.1	３		IP	１		IP	２		IP	３		IP	２		IP	１		IP	５		IP	２		IP	４		IP	１		IP
+山本　　兼士	3.20	0.18	3.7	４		IP	４		IP	５		IP	５		IP	４		IP	５		IP	４		IP	５		IP	５		IP	３	4	IP
+今出　　晋二	4.20	0.20	3.5	５		IP	４		IP	６		IP	４		IP	６		IP	５		IP	２		IP	２		IP	３		IP	３		IP
+梅木　　敬太	5.50	0.17	3.4	４		IP	３		IP	４		IP	４		IP	３		IP	３		IP	２		IP	３		IP	６		IP	１		IP
+金子　　怜央	2.50	0.15	2.5	６	6	IP	５	6	IP	６		IP	５		IP	６		IP	５		IP	１		IP	６		IP	６	6	IP	４		IP
+村岡　　賢人	5.20	0.13	2.9	３		IP	６		IP	３		IP	３		IP	３		IP	３		IP	２	5	IP	３		IP	４		G1	６		G1

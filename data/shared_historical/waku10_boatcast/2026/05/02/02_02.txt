@@ -1,0 +1,8 @@
+data=
+1	0
+高木　　茉白	6.57	0.10	2.1	３		IP	５		IP	４		IP	１		G3	１		IP	４		IP	１		G3									IP
+中澤　　和志	6.50	0.15	3.2	５		G1	１		G1	５		IP	２		IP	１		IP	４		G1	５		G1	５		IP	１		IP	１		G1
+浅見　　宗孝	4.20	0.19	3.9	４		IP	５		IP	３		IP	５		IP	６		IP	１		IP	３		IP	３		IP	４		IP	６		IP
+青木　　　蓮	6.80	0.12	2.7	４		IP	２		IP	２		IP	３		IP	３		IP	１		IP	１		IP	６		IP	１		IP	４		G1
+鈴木　　　博	5.30	0.17	3.2	２		IP	４		IP	３		IP	５		IP	３		IP	６		IP	２	4	IP	３		IP	４		IP	２		IP
+伊藤　　雄二	2.10	0.23	4.2	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP	５	5	IP	４		IP	３		IP

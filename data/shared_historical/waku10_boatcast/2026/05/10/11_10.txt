@@ -1,0 +1,8 @@
+data=
+1	0
+笹木　　香吾	7.20	0.15	3.3	１		IP	２		IP	３		G2	５		G2	５		IP	３		IP	１		IP	２		IP	１		IP	２		IP
+竹田　　和哉	7.20	0.15	2.9	２		IP	４		IP	１		IP	３		IP	１		IP	１	1	G1	５		G1	３		IP	３		IP	２		IP
+赤峰　　和也	1.80	0.19	3.2	４		IP	５		IP	６		IP	５		IP	５		IP	６		IP	５		IP	６	6	IP	６		IP	５		IP
+三嶌　こころ	2.40	0.24	4.9	４		IP	５	5	IP	６		IP	６	6	IP	６		IP	４		IP	６		G3	６		G3	２		IP	６		IP
+吉田　　和仁	3.30	0.17	4.0	４		IP	５		IP	４		IP	５		IP	３		IP	６		IP	６		IP	３		IP	３	6	IP	６		IP
+松本　　博昭	3.80	0.17	4.7	４		IP	５		IP	３		IP	４		IP	５		IP	５	5	IP	５		IP	４		IP	４	5	IP	３	5	IP

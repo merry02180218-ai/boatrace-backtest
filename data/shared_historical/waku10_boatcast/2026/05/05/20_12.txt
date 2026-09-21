@@ -1,0 +1,8 @@
+data=
+1	0
+柴田　　朋哉	6.70	0.16	2.7	１		IP	１		IP	５		IP	６		IP	１		IP	３		IP	５		IP	１		IP	３		IP	１		IP
+高山　　敬悟	5.11	0.18	3.5	３		IP	３		IP	２		IP	６		G3	５		G3	３		G3	６		IP	２		IP	２		IP	転		IP
+土井　　歩夢	4.70	0.20	4.6	５		IP	４	4	IP	３		IP	４	4	G3	５		G3	６		IP	２		IP	２		IP	３		IP	３		IP
+大場　　広孝	4.70	0.18	3.7	４		IP	６	6	IP	４		IP	４	5	IP	１		IP	５	5	IP	１		IP	５		IP	２		IP	５	5	IP
+前田　　将太	5.30	0.12	4.0	４		IP	２		IP	３		G2	３		G1	３		G1	４		IP	５		IP	６		SG	２	6	SG	６		IP
+羽野　　　諒	3.10	0.12	2.4	２		IP	５		IP	６		IP	４	5	IP	４		IP	５		IP	６		IP	６		IP	４		IP	４		IP

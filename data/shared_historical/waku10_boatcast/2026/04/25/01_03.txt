@@ -1,0 +1,8 @@
+data=
+1	0
+小森　　信雄	6.60	0.17	4.0	１		IP	４		IP	４		IP	１		IP	３		IP	２		IP	１		IP	３		IP	３		IP	５		IP
+梶山　　涼斗	5.50	0.15	2.9	２		IP	３		IP	２		G3	３		G3	５	3	IP	１		IP	６		IP	５		IP	３		IP	３		IP
+上村　慎太郎	4.80	0.20	5.0	４		IP	３		IP	４	4	IP	４		IP	３		IP	２		IP	５		IP	３		IP	５		IP	３		IP
+福島　　陽子	2.80	0.16	3.6	３		IP	６		IP	６		G3	４		IP	４		IP	５		IP	５		G3	６		G3	３		IP	６		IP
+畑田　　汰一	4.50	0.10	3.1	２		IP	５		IP	３		G1	５		G1	４		G1	３		G1	４		G1	６		G1	６		G1	５		IP
+高木　　茉白	2.30	0.16	3.8	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	４		IP	３		IP	４		IP	５		G3

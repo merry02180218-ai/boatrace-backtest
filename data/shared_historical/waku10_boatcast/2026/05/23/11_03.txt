@@ -1,0 +1,8 @@
+data=
+1	0
+安達　　裕樹	9.20	0.13	1.8	１		G2	１		IP	６		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+島村　　隆幸	7.90	0.14	1.8	２		IP	１		IP	６		IP	３		IP	１		G3	２		IP	２		IP	２		IP	１		IP	１		IP
+廣瀬　　　凜	6.10	0.13	2.4	２		IP	４	4	IP	２		IP	５	4	IP	１		IP	６		IP	４		IP	１		IP	３		IP	４		IP
+向後　　龍一	5.60	0.16	3.5	２		G2	６		IP	３		IP	３		IP	２		IP	３		G3	５	5	IP	４		IP	２		IP	３		IP
+寺田　　　祥	6.70	0.15	3.2	２		IP	３		G1	５		G1	４		G1	２		IP	１		IP	５		G1	２	3	IP	４		G1	１		IP
+権藤　　俊光	4.70	0.16	4.3	６		G2	４		IP	４		IP	３	5	IP	３		G1	５		SG	５		SG	落		G1	２		G1	３		G1

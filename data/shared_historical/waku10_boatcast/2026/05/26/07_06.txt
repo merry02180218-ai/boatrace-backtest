@@ -1,0 +1,8 @@
+data=
+1	0
+金田　　智博	8.80	0.17	2.5	１		G2	３		G2	１		IP	２		IP	１		IP	１		IP	２		IP	４		IP	１		IP	１		IP
+川北　　浩貴	7.22	0.14	2.1	６		IP	２		IP	２		IP	３		IP	２		IP	欠		IP	１		IP	２		IP	２		IP	２		IP
+岩永　　雅人	6.10	0.20	3.6	２	4	IP	３	4	IP	３		IP	３		IP	２		IP	３		IP	４		IP	３		IP	５	5	IP	２		IP
+松尾　　　充	5.70	0.15	2.7	３		G3	３		G3	３		G3	５		IP	１		IP	２		IP	２		G1	５		G1	４		G1	５		IP
+八戸　　琉楓	1.80	0.20	4.7	６		IP	６		IP	５		IP	６	6	IP	６		IP	５		IP	６		IP	５		IP	６		IP	３	6	IP
+後藤　　孝義	2.89	0.22	4.3	５		IP	欠		IP	３	5	IP	６		IP	６		IP	６		IP	３	3	IP	５		IP	６		IP	３		IP

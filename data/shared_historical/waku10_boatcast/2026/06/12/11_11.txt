@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　辰彦	8.00	0.15	3.4	１		IP	２		IP	１		IP	５		IP	１		IP	１		IP	１		IP	６		IP	２		IP	１		IP
+三浦　　永理	7.40	0.15	3.1	２		IP	１		G3	２		G3	３		G3	２		G3	２		G2	２		G3	３		G3	６		IP	２		IP
+伊藤　　将吉	7.90	0.15	3.5	３		IP	２		IP	２		IP	２	4	G1	１	4	IP	４		IP	２		IP	１		IP	２		IP	２		IP
+東本　　勝利	5.80	0.18	4.1	４		G3	４		G3	３		IP	４	5	IP	１		IP	３		IP	２	5	IP	３		IP	４		G3	３		G3
+田頭　　虎親	4.50	0.22	4.0	１		IP	３		IP	５		IP	３		IP	５		IP	５		IP	６		IP	４	6	IP	４		IP	２		IP
+大平　誉史明	4.30	0.18	4.3	２		G3	３		IP	５		IP	６		IP	４		IP	２		IP	５		IP	４		IP	５		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　浩貴	4.40	0.23	4.7	５		IP	５		IP	２		IP	１		IP	５	2	IP	６		IP	２		IP	６		IP	２		IP	５		IP
+小川　　知行	4.70	0.16	3.2	１		IP	６		IP	４		IP	３		IP	６		IP	３		IP	２		IP	２		IP	６		IP	５		IP
+芦澤　　　望	5.50	0.14	2.5	６		IP	１		IP	２		IP	６		IP	５		IP	１		IP	６	4	IP	３		IP	１		IP	３		IP
+田村　　美和	3.80	0.14	2.0	５		G3	２		G3	３		IP	３	5	IP	５		IP	６		IP	４	6	G3	６		G3	３		G3	５		G3
+作間　　　章	5.70	0.17	3.4	４		IP	３		IP	４	4	IP	３		IP	２		IP	３		IP	６		G1	３		G1	４		IP	１		IP
+栗原　　直也	3.40	0.22	4.2	３		IP	４		IP	４		IP	４		IP	６		IP	５		IP	４		IP	５		IP	６		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+亀本　　勇樹	8.40	0.18	1.9	１		IP	３		IP	１		IP	１		IP	２		IP	１		IP	２		IP	４		IP	１		IP	２		IP
+水野　　望美	6.30	0.15	3.1	１		IP	１		IP	５		IP	２		IP	３		IP	６		IP	１		IP	３		IP	２		IP	５		IP
+佐々木　和伸	5.78	0.16	2.7	４		IP	２		G1	６	2	G1	転		IP	２		IP	６		IP	３		IP	３		IP	１		IP	３		IP
+和田　　操拓	5.60	0.11	1.8	４		IP	１		IP	３	5	IP	５		IP	６		G2	４		IP	１		IP	５		IP	１		IP	３		IP
+宮内　　直哉	2.80	0.21	4.7	５		IP	６		IP	２		IP	５		IP	６		IP	６		G3	５		G3	２		IP	５		IP	６		IP
+古澤　　光紀	3.40	0.17	4.2	４		IP	５		IP	３	5	IP	３		G1	６		IP	４		IP	５		IP	６		IP	４		IP	６		IP

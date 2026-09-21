@@ -1,0 +1,8 @@
+data=
+1	0
+澁川　　　夏	8.40	0.18	3.6	１		IP	１		IP	１		IP	３		IP	１		IP	２		IP	２		IP	１		IP	５		IP	１		IP
+浜先　　真範	7.40	0.14	2.4	２		IP	４		IP	３		IP	３		G1	３		IP	２		IP	１		IP	４		G1	１		IP	１		IP
+古賀　　智之	4.50	0.13	2.7	４		IP	５		IP	４		IP	６		IP	３		IP	２		IP	４		IP	５		G2	２		G2	４		IP
+若林　　樹蘭	5.60	0.15	3.0	１		IP	２		IP	５		IP	４	5	IP	４		IP	１		IP	３		IP	Ｆ		IP	３		IP	３		IP
+金子　　猛志	5.10	0.14	2.9	５		IP	３		IP	２		IP	１		IP	５		IP	６		IP	５		IP	３		IP	２		IP	３		IP
+渡邊　伸太郎	4.40	0.22	4.2	３		IP	６		IP	３		IP	６	5	IP	２	5	IP	１		IP	５	4	IP	４	5	IP	５		IP	４	5	IP

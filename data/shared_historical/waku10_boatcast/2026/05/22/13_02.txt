@@ -1,0 +1,8 @@
+data=
+1	0
+野田　　昇吾	4.90	0.12	2.2	５	2	IP	６		IP	４		IP	４		IP	１		IP	４		IP	４		IP	Ｆ		IP	１		IP	１		IP
+岡崎　　凪汰	4.20	0.20	4.1	５		IP	６		IP	２		IP	４		IP	６		IP	５		IP	５		IP	１		IP	４		IP	２		IP
+藤森　　拓海	4.80	0.14	3.5	１		IP	４		IP	３		IP	５		IP	４		IP	４		IP	３	4	IP	５		IP	５		IP	２		IP
+近藤　　来希	2.20	0.21	4.2	３		IP	６		IP	２		IP	５		IP	６		IP	Ｆ		IP	６		IP	６		IP	６		IP	６		IP
+牧村　　俊輝	2.80	0.20	4.1	６	6	IP	４		IP	５	6	IP	１	6	IP	６		IP	４		IP	５	6	IP	５		IP	６		IP	６		IP
+上岡　　巧汰	1.80	0.16	3.6	６		IP	６		IP	６		IP	６		IP	Ｆ		IP	５		IP	３	5	IP	６		IP	４		IP	６		IP

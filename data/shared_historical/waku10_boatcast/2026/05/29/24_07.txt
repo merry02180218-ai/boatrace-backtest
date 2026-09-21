@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　梨菜	7.40	0.15	2.6	５		IP	１		IP	４		IP	３		IP	２		IP	１		IP	１		IP	４		G3	１		G3	１		G3
+矢野　真梨菜	3.90	0.18	4.1	２		IP	６		IP	４		IP	４		IP	６		IP	４		IP	２		G3	５		G3	３		G3	６		G3
+植竹　　玲奈	2.43	0.16	3.6	６		IP	６		IP	６		IP	６		IP	１		IP	６		IP	５		IP									IP
+嶋田　　有里	4.50	0.18	3.6	２		IP	２		IP	４		IP	６		IP	３		IP	４		IP	５		IP	５		IP	３		IP	４		IP
+安井　　瑞紀	5.80	0.15	3.0	Ｆ		IP	４	6	IP	４		G3	２		G3	５		IP	３		IP	２		IP	１		G3	１	4	G3	３		IP
+大瀧　明日香	4.70	0.16	3.3	３		IP	２	4	IP	３	5	IP	６		IP	４		IP	３		IP	６		IP	３		G3	３	5	IP	５		G1

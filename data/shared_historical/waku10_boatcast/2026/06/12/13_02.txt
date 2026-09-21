@@ -1,0 +1,8 @@
+data=
+1	0
+田村　　隆信	10.00	0.11	2.6	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+若林　　　将	6.90	0.13	2.1	４		G1	６		IP	１		IP	１		IP	１		G3	２	3	G3	３		IP	４		IP	３		IP	３		IP
+前原　　大道	6.80	0.15	3.0	３		G1	３	2	IP	２		IP	１		IP	１		IP	２		G1	２		G1	５		G1	４		IP	５		IP
+鈴谷　　一平	5.90	0.13	2.7	４	5	G1	４	5	IP	１		IP	３		IP	２		IP	４		IP	１		IP	２	5	IP	５		IP	６		G1
+徳増　　秀樹	4.10	0.09	2.1	６		G1	３		IP	４		IP	５		IP	６		IP	６		G1	２	4	IP	３		IP	３		G1	５		G1
+野中　　一平	3.50	0.10	2.0	６		G1	２	5	IP	５		IP	６	5	IP	３	3	IP	５	4	IP	４	2	IP	６		G1	４		G2	５	5	G1

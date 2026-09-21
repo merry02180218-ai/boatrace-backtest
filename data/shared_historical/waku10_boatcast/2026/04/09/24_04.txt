@@ -1,0 +1,8 @@
+data=
+1	0
+牧山　　敦也	6.10	0.20	4.0	１		IP	６		IP	１		IP	Ｆ		IP	３		IP	１		IP	５		IP	５		IP	１		G3	１		IP
+滝沢　　　崚	4.90	0.15	3.4	３		IP	４		IP	２		IP	５		IP	１		IP	４		IP	４		IP	３		IP	４		IP	６		IP
+椎名　　　豊	6.70	0.15	2.9	３		IP	１		IP	５		IP	１		IP	１		IP	２		G1	４		IP	４		IP	５		G1	２		G1
+正木　　聖賢	4.10	0.17	3.1	３		IP	５		IP	３		IP	３		IP	４		IP	４		IP	５	2	IP	６	5	IP	３		IP	４		IP
+廣瀬　　将亨	5.00	0.12	2.5	４	6	IP	３		IP	５	6	IP	２		IP	３	4	IP	３		IP	４		IP	６	4	IP	３		G2	４		IP
+山本　　浩輔	3.20	0.19	4.0	転		IP	５		IP	３	5	IP	４		IP	２	4	IP	５		IP	３		IP	５		IP	６		G3	６		IP

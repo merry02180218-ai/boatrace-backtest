@@ -1,0 +1,8 @@
+data=
+1	0
+岡崎　　凪汰	4.40	0.14	3.4	６		IP	１		IP	３		IP	転		IP	６		IP	５		IP	５		IP	２		IP	２		IP	３		IP
+石渡　翔一郎	5.00	0.18	3.7	１		IP	１		IP	５		IP	５		IP	３		IP	５	3	IP	５		IP	４		IP	１		IP	５		IP
+登玉　　隼百	6.22	0.13	2.7	３		IP	５		IP	３		IP	１		IP	４		IP	２		IP	１		IP	２	4	IP	６		IP	エ		IP
+出畑　　孝成	4.80	0.16	3.5	６		IP	２		IP	５		IP	２		IP	６		IP	２		IP	３		IP	３		IP	５		IP	３		IP
+松田　　淳平	5.20	0.13	2.2	２		IP	４		IP	３		IP	２		IP	５		IP	２		IP	欠		IP	５		IP	２		IP	３		IP
+上岡　　巧汰	2.30	0.16	3.7	３		IP	６		IP	６		IP	６		IP	６		IP	Ｆ		IP	５		IP	３	5	IP	６		IP	４		IP

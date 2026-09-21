@@ -1,0 +1,8 @@
+data=
+1	0
+原　　　豊土	9.80	0.18	2.5	１		G3	１		G3	１		G3	１		G3	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+田中　　和也	6.00	0.15	3.1	２	1	IP	４		IP	５		IP	２		IP	３		IP	２		IP	１		IP	５		IP	５		IP	１		IP
+深澤　　達徳	5.90	0.18	3.6	３		IP	３		IP	１		IP	１		IP	３		IP	５		IP	３		G3	２	4	G3	４		IP	６		IP
+河村　　　了	7.00	0.17	2.9	２		IP	２		IP	２		IP	１		IP	４		IP	４		IP	３		IP	３		IP	２		IP	２		IP
+中村　　　真	3.60	0.21	4.2	３		IP	５		IP	６		IP	５		IP	３		IP	３		IP	５		IP	３		IP	６	4	G3	４		IP
+烏野　　賢太	2.60	0.18	4.4	６		IP	３		IP	５		IP	６		IP	５	5	IP	５		IP	６		IP	４	5	IP	６		IP	３		IP

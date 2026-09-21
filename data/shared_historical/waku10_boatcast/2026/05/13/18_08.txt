@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　　猛	7.20	0.16	3.5	３		IP	２		IP	１		IP	５		IP	２		IP	４		IP	１		IP	１		IP	３		IP	２		IP
+向井田　佑紀	6.30	0.18	3.2	２		IP	１		IP	５		IP	２		IP	６		IP	５		IP	１		IP	２		IP	２		IP	３		IP
+中田　　竜太	4.90	0.16	3.3	２		IP	５		IP	４		G1	６		G1	２		G2	３		G1	６		IP	４		G1	６		G1	２		IP
+川合　　理司	4.60	0.19	3.3	４		IP	３		IP	２		IP	４		IP	５		IP	６		IP	６	5	IP	２		IP	４	6	IP	２		IP
+井上　　大輔	4.22	0.17	3.8	４		IP	５		IP	５		IP	２		IP	４		IP	欠		G3	４		G3	４		IP	５		IP	２		IP
+岩瀬　　裕亮	5.20	0.13	3.9	１		IP	６		G1	６		G1	４	5	G1	３		G1	３		IP	３		G1	５		G1	４		G1	４		G1

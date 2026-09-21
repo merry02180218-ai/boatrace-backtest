@@ -1,0 +1,8 @@
+data=
+1	0
+永井　　　源	7.60	0.21	4.5	１		IP	１		IP	６		IP	６		G3	３		G3	１		IP	２		IP	１		IP	１		IP	１		IP
+杉江　　浩明	3.00	0.24	4.0	６		IP	４	3	IP	６		IP	６		IP	１		IP	５		IP	６		IP	４		IP	５		IP	４		IP
+池田　　浩二	8.70	0.10	1.8	１		G1	６		G1	２		G1	３		SG	３		SG	１		G1	２		G1	２		G1	２		G1	２		G1
+都築　　正治	3.60	0.16	2.9	３		IP	５		IP	６		IP	２		IP	６		IP	５		IP	１		IP	６		IP	６		IP	５		IP
+佐藤　　博亮	5.40	0.14	2.3	５		IP	２		IP	２		IP	３		IP	５	6	IP	４	3	IP	２		IP	３		IP	２		IP	５		IP
+鈴木　　雄登	3.90	0.11	2.3	Ｆ		IP	５		IP	３		IP	５		IP	３		IP	６		IP	３		IP	３		IP	５		IP	２		IP

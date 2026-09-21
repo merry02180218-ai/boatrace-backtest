@@ -1,0 +1,8 @@
+data=
+1	0
+村田　　修次	9.00	0.16	3.0	２		IP	１		IP	２		IP	３		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+森林　　　太	4.90	0.23	4.8	４		IP	４		IP	６		IP	４		IP	２		IP	５		IP	２		IP	２		IP	２		IP	５		IP
+松下　　誉士	4.00	0.23	4.4	３		IP	３		IP	２		IP	４		IP	４		IP	６		IP	６		IP	５		IP	５		IP	３		IP
+亀山　　雅幸	3.90	0.18	3.3	５		IP	４		IP	２		IP	４		IP	３		IP	４		IP	６		IP	３		IP	５		IP	５		IP
+深見　亜由美	3.60	0.20	3.9	５		IP	５		IP	５		IP	１		IP	５		IP	３		IP	５		IP	５		IP	３		IP	５		IP
+徳増　　秀樹	5.80	0.15	2.0	５	4	G1	１	4	IP	２	3	IP	４	5	IP	４	4	G1	６	4	IP	６	4	IP	２	3	IP	１		G3	２		G3

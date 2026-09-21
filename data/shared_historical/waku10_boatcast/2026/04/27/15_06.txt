@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　　祭	8.60	0.17	2.8	２		IP	２		IP	３		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	２		IP
+谷口　　佳蓮	5.50	0.17	3.2	１		IP	１		IP	２		IP	５		IP	１		IP	転		IP	６		IP	４		IP	４	3	IP	３		IP
+石丸　　海渡	5.90	0.11	2.4	５		G1	１		G1	４		IP	３		IP	４		IP	２		IP	２		IP	６		IP	５		G1	１	4	G1
+松下　　知幸	3.60	0.18	4.2	５	5	IP	５		IP	６	5	IP	１		IP	２	5	IP	４		IP	４		IP	６		IP	５		IP	５		IP
+中岡　　　駿	2.10	0.19	3.5	５		IP	６		IP	４		IP	６		IP	５		IP	６		IP	５		IP	５		IP	５	6	IP	４	4	IP
+中田　　元泰	4.50	0.21	3.8	３		IP	３		IP	４		IP	３		IP	転		G1	４		G1	３	5	IP	３		IP	５		IP	４		IP

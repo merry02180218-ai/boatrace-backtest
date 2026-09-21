@@ -1,0 +1,8 @@
+data=
+1	0
+上野　　秀和	8.00	0.18	3.7	４		IP	１		IP	１		G3	１		IP	１		IP	２		IP	３		IP	４		IP	１		IP	２		IP
+宮武　　英司	5.20	0.14	2.0	５		IP	２		IP	３		IP	４		IP	Ｆ		IP	２		IP	３		IP	３		IP	２	3	IP	４		IP
+井上　　　茂	5.50	0.15	3.5	１		IP	６		IP	５		IP	５	5	IP	１		IP	２		IP	３		IP	２		IP	５		IP	３		IP
+坂東　　　満	4.70	0.16	3.1	２		IP	６	5	IP	３		IP	６		IP	３		IP	５		IP	３		IP	６		IP	１		IP	３		IP
+木村　　浩士	2.90	0.20	3.9	５		IP	３		IP	６		IP	３		IP	５		IP	４		IP	５		IP	６		G3	６	6	G3	４		IP
+抹香　　雄三	3.20	0.19	3.4	５		IP	３	5	IP	５		IP	４	5	IP	５		IP	５		IP	５		IP	４	5	IP	３		IP	５		IP

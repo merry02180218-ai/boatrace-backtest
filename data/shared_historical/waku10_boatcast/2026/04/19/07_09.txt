@@ -1,0 +1,8 @@
+data=
+1	0
+浜野　　孝志	8.40	0.14	3.8	３		IP	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	３		IP	１		IP	２		IP
+中尾　　彩香	5.30	0.19	3.0	２		IP	５		G3	２		G3	３		IP	２		IP	２		IP	５		IP	３		IP	６		IP	４		IP
+大串　　重幸	7.56	0.15	3.0	エ		IP	２		IP	２		IP	２		IP	１		G3	２		IP	３		IP	４	4	IP	３		IP	１		IP
+村上　宗太郎	5.00	0.19	3.9	５		IP	２		IP	２		IP	４		IP	６		G2	３		IP	４	5	IP	２		IP	３	5	IP	５		IP
+馬場　　　剛	5.10	0.12	1.8	６		IP	３		IP	３		G3	６		G3	６		IP	３		IP	１		IP	４		IP	１		IP	３		IP
+上野　　秀和	4.00	0.17	3.2	３		IP	６		IP	６		G3	１	5	IP	３		IP	５	5	IP	３		IP	４		IP	５		IP	５		IP

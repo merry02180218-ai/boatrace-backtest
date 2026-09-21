@@ -1,0 +1,8 @@
+data=
+1	0
+大島　隆乃介	5.89	0.18	3.4	６		IP	４		IP	１		IP	１		IP	２		IP	転		IP	４		IP	５		IP	４		IP	１		IP
+西岡　　顕心	7.80	0.10	2.9	４		G1	４		SG	３		G2	１		G2	５		IP	１		G1	２		G1	２		G2	２		G2	２		G1
+牧村　　俊輝	2.80	0.18	4.0	５		IP	５		IP	６		IP	５		IP	１		IP	５		IP	４		IP	５	4	IP	５		IP	６		IP
+藤原　　仙二	6.90	0.18	3.2	１		IP	３		IP	２		IP	１		IP	５		G2	５		IP	１		IP	４		IP	２		IP	２		IP
+小林　　礼央	3.20	0.15	3.3	４		IP	２		IP	エ		IP	３		IP	５		IP	６		IP	４		IP	６		IP	４		IP	５		IP
+仲本　　　舜	3.70	0.19	5.0	５		IP	２		IP	６		IP	５		IP	４		IP	６		IP	３		IP	６		IP	３		IP	３		IP

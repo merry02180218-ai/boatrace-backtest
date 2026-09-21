@@ -1,0 +1,8 @@
+data=
+1	0
+井本　　昌也	9.10	0.12	2.7	１		IP	３		IP	１		G1	１		G2	１		G2	１		G1	４		IP	１		IP	３		IP	１		IP
+佐藤　　大騎	4.70	0.17	3.5	３		IP	５		IP	４		IP	６		IP	４		IP	３		IP	２		IP	５		IP	２		IP	３		IP
+小川　　時光	4.78	0.13	2.5	５		IP	２		IP	転		IP	３		IP	６		IP	６		IP	６		IP	１	4	IP	２		IP	３		IP
+志賀　　美優	1.00	0.33	5.5	６	6	IP	６	6	IP																								IP
+高橋　　淳美	1.80	0.16	3.4	５		IP	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP	４		IP	６		G3	６		G3
+吉川　　昭男	4.80	0.15	2.6	４	4	IP	５	3	IP	４	2	IP	２	3	IP	５	4	IP	４	3	IP	２	3	IP	３	3	IP	５	2	IP	４	3	IP

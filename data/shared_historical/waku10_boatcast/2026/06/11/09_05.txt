@@ -1,0 +1,8 @@
+data=
+1	0
+郷原　　章平	8.80	0.08	1.5	１		IP	１		IP	３		IP	１		IP	１		IP	２		IP	１		IP	２		IP	２		IP	２		IP
+中井　　俊祐	4.80	0.20	4.4	２		IP	６		IP	３		IP	２		IP	６		IP	５		IP	３		IP	４		IP	３		IP	４		IP
+市川　　哲也	4.80	0.12	2.2	３		IP	５		IP	６		IP	４		IP	２		IP	５		IP	１		IP	１		IP	５	4	IP	５		G2
+本田　　　愛	4.40	0.20	3.7	４		IP	１		IP	２		IP	２	5	IP	５		IP	６		IP	６		IP	５	6	IP	３	6	IP	５	5	IP
+小林　　甘寧	5.78	0.12	1.9	１		IP	２		IP	３		IP	１		IP	３		IP	６		IP	転		IP	３		IP	６		IP	４		IP
+内山　　文典	4.10	0.19	3.6	３		IP	３		IP	３		IP	６		IP	４		IP	４		IP	３	5	IP	３		IP	６		IP	６		IP

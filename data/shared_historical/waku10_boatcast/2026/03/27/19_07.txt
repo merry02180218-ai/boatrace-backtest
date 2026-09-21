@@ -1,0 +1,8 @@
+data=
+1	0
+笠　　　雅雄	7.00	0.15	2.8	１		IP	１		IP	２		IP	６		IP	１		IP	２		IP	３		IP	１		IP	６		IP	３		IP
+柘植　　政浩	6.50	0.15	3.1	１	3	IP	１		IP	２		IP	２		IP	３		IP	２	3	IP	５		IP	５		G2	５		IP	２		IP
+小坂　　宗司	6.90	0.18	3.1	２		IP	３		IP	１		IP	１		IP	１		IP	５		IP	３		IP	３		IP	３		IP	４	4	IP
+後藤　　正宗	6.00	0.15	2.2	６		G3	５		G3	５	5	G3	２		G3	３		IP	１	5	IP	３		IP	１		IP	１	3	IP	４		IP
+宮野　　　仁	4.50	0.17	4.1	６		IP	６		IP	２		IP	２		IP	６		IP	５		IP	２	6	IP	１		IP	４	4	IP	５	4	IP
+西野　　雄貴	4.90	0.15	3.2	３	5	IP	２		IP	３		IP	５		G1	３		IP	３		IP	３		IP	３		IP	６		IP	６		IP

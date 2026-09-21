@@ -1,0 +1,8 @@
+data=
+1	0
+堀之内紀代子	8.30	0.16	3.9	１		G3	３		G3	２		G3	１		G3	１		G3	１		G3	１		G2	１		IP	２		IP	妨		IP
+山田　　雄太	5.30	0.14	2.9	６	3	IP	２		IP	６		IP	２		IP	２		IP	１		IP	３		IP	１		IP	エ		IP	６	3	IP
+植竹　　玲奈	2.33	0.18	3.6	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	１		IP	６		IP	５		IP			IP
+楠　　将太郎	4.50	0.14	3.1	３		IP	２		IP	３		IP	４		IP	４		IP	６		IP	２		IP	６		IP	６	6	IP	３		IP
+高濱　　芳久	3.70	0.20	4.4	３		IP	５	2	IP	４	3	IP	５		IP	４	4	IP	６		IP	３	2	IP	５		IP	４		IP	４		IP
+松尾　　光広	3.10	0.24	5.3	６		IP	４		IP	６		IP	５		IP	４		IP	３		IP	３		IP	４		IP	６		IP	５		IP

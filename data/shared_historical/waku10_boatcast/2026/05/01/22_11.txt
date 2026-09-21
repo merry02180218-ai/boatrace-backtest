@@ -1,0 +1,8 @@
+data=
+1	0
+仲谷　　颯仁	10.50	0.13	3.5	１		IP	１		G1	１		G1	２		IP	１		IP	１		SG	１		G1	２		G1	１		G1	１		G1
+宮脇　　遼太	8.40	0.17	2.2	１		IP	１		IP	１		IP	３		IP	２		IP	３		IP	３		IP	２		IP	１		IP	１		IP
+植田　　太一	5.70	0.19	3.9	３		IP	２		IP	３		IP	２		IP	４	4	G3	１		G3	６		IP	５		IP	５		IP	２	2	IP
+中川　　りな	4.80	0.18	3.0	１		IP	３		IP	６		IP	３		IP	５	3	IP	３		IP	５		IP	２		IP	３		IP	６		IP
+松尾　　昂明	4.60	0.13	3.0	３		IP	２		IP	３	4	IP	４		IP	３		IP	６		IP	２	4	IP	５		IP	４		IP	６	6	IP
+城間　　盛渚	3.10	0.18	3.9	６		IP	落		IP	５		IP	３		IP	５		IP	５		IP	４		IP	１	5	IP	６		IP	６		IP

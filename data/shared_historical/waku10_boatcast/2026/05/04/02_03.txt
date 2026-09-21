@@ -1,0 +1,8 @@
+data=
+1	0
+小川　竜太朗	8.00	0.14	3.4	１		IP	１		IP	２		IP	２		IP	２		IP	２		IP	５		IP	２		IP	１		IP	２		IP
+高木　　茉白	3.00	0.22	3.6	転		IP	６		IP	３		IP	４		IP	４		IP	３		G3	６		G3	落		IP	４		IP	４		IP
+金子　　和之	5.80	0.13	2.4	４		IP	４		IP	２	4	G3	１		G3	５		G3	４		IP	６		G2	３		IP	１		IP	２		IP
+石塚　　久也	6.50	0.19	2.9	１		IP	３	5	IP	２		IP	３		IP	３		IP	６		IP	３		IP	１		IP	４		IP	２		IP
+滝沢　　織寧	3.20	0.16	2.8	３		IP	６		IP	５		IP	４		IP	６		IP	４		IP	５		G3	２		G3	５		IP	５		IP
+飛田　　江己	5.33	0.12	2.0	４		IP	３		IP	２		IP	３		IP	２		G1	５		G1	欠		G1	５		G1	６		IP	３		IP

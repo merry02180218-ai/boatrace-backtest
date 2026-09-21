@@ -1,0 +1,8 @@
+data=
+1	0
+松下　　直也	5.50	0.21	4.3	６		IP	１		IP	２		IP	４		IP	６		IP	６		IP	４		IP	２		IP	１		IP	２		IP
+横田　　海人	3.40	0.21	4.2	６		IP	２		IP	４		IP	６		IP	４	3	IP	４		IP	２		IP	６		IP	６		IP	５		IP
+上之　　晃弘	4.50	0.17	3.2	３		IP	４		IP	３		IP	５		IP	４		IP	２		IP	２		IP	６		IP	５		IP	４		IP
+中野　　仁照	4.60	0.15	2.9	５	5	IP	落		IP	６	6	G1	６	6	G1	５		G1	３		G1	３		IP	１		IP	１		IP	４		IP
+福岡　　泉水	5.10	0.18	3.0	５		IP	６		IP	３		IP	２		G3	５		G3	４		IP	２		IP	３		IP	２		IP	３		IP
+宇土　　泰就	2.70	0.16	3.8	６		IP	５		IP	５		IP	４		IP	４		IP	３		IP	６		IP	６		IP	５		IP	４		IP

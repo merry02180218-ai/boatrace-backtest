@@ -1,0 +1,8 @@
+data=
+1	0
+大上　　卓人	9.50	0.15	2.8	１		SG	３		G1	１		G1	５		G1	１		IP	１		IP	１		IP	１		G1	１		IP	１		IP
+鳥居塚　孝博	4.30	0.15	2.8	３		IP	３		IP	５		IP	３		IP	６		IP	６		IP	２		IP	２		IP	４		IP	６		IP
+佐藤　　　旭	4.60	0.21	4.2	５		G3	３		IP	３		IP	１		IP	４		IP	６		IP	３		IP	２		IP	５		IP	６		IP
+中野　　仁照	5.10	0.16	2.9	落		IP	６	6	G1	６	6	G1	５		G1	３		G1	３		IP	１		IP	１		IP	４		IP	３		IP
+笠置　　博之	8.20	0.12	2.0	２		IP	１	4	IP	１		IP	１	6	IP	１		IP	１		IP	１		IP	５		IP	５		IP	１		IP
+草川　　壮良	2.20	0.15	2.4	６		IP	５		IP	６		IP	６		IP	４		IP	５		IP	２		IP	６		IP	落		IP	５		IP

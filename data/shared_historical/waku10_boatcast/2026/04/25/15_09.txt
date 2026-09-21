@@ -1,0 +1,8 @@
+data=
+1	0
+三嶌　　誠司	8.40	0.17	3.0	Ｆ		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+川原　　祐明	9.20	0.12	2.5	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	３		G1	２		G1
+川上　　清人	4.40	0.15	3.7	３		IP	２		IP	４		IP	３	4	IP	１		IP	５		IP	６		IP	６		IP	４		IP	５	4	IP
+西丸　　敦基	6.50	0.17	3.1	１		IP	６		G3	４		IP	６		IP	２		IP	２		IP	３		IP	１		IP	３		IP	１		IP
+濱野　　斗馬	6.70	0.15	2.5	２		IP	２		IP	３	6	IP	３		G2	６		G2	３		IP	１	4	IP	６		G1	２		IP	１		IP
+西村　美智子	3.22	0.17	3.8	５		IP	４		IP	３		IP	４		IP	５		IP	５		IP	６		IP	４		IP	４		G3	エ		G3

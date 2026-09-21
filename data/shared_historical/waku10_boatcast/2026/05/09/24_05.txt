@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　翔悟	5.30	0.17	2.9	４		IP	５		G3	２		IP	転		IP	３		IP	６		IP	１		IP	２		IP	３		IP	２		IP
+原田　　幸哉	5.67	0.12	2.3	３		G1	３		G1	２		G1	６		G1	５		SG	５		SG	転		G1	１		G1	４	1	G3	５		G1
+野田部　宏子	5.80	0.11	2.6	４		IP	５	4	IP	３		IP	３		IP	２		IP	４		IP	２		IP	５		IP	２		IP	１		IP
+岡　　　暢祐	3.60	0.20	3.3	５		IP	６		IP	３		IP	６		IP	Ｆ		IP	４		IP	３		IP	４	6	IP	４		IP	２	3	IP
+吉原　　快誓	1.80	0.13	3.1	６		IP	３		IP	６		IP	６		IP	４		IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP
+仁科　さやか	1.40	0.23	5.0	６	5	IP	６		IP	６		IP	５	4	IP	６	4	IP	６		IP	６		IP	６		G3	６		G3	４		G3

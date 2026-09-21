@@ -1,0 +1,8 @@
+data=
+1	0
+広瀬　　聖仁	6.20	0.12	2.9	５		IP	１		IP	２		IP	３		IP	４		IP	３		IP	４		IP	１		IP	４		IP	２		IP
+高濱　　芳久	3.80	0.22	4.4	４		IP	６		IP	３		IP	３		IP	３		IP	４		IP	６		IP	４		IP	３		IP	転		IP
+石原　　　光	5.10	0.14	2.8	６		IP	３		IP	４		IP	５		IP	４		IP	１		IP	４		IP	４		IP	３		IP	１		IP
+長尾　　章平	5.70	0.17	4.3	６		IP	３		IP	４		IP	２		IP	２		IP	１		IP	２		IP	５		IP	３		IP	４		IP
+東　　　健介	3.30	0.15	2.8	６		IP	６	6	IP	６		IP	４	3	IP	３	2	IP	３		IP	５		IP	４		IP	４		IP	４		IP
+山浦　　　槙	2.00	0.26	4.7	５		IP	５		IP	５		IP	４		IP	６		IP	５		IP	６		IP									IP

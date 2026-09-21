@@ -1,0 +1,8 @@
+data=
+1	0
+岡村　　　仁	10.20	0.14	2.3	１		IP	１		IP	１		IP	１		G2	１		G2	１		IP	１		IP	１		IP	１		IP	１		IP
+渡辺　　空依	6.20	0.16	3.3	５		IP	３		IP	４		IP	２		IP	３		IP	２		IP	３		IP	２		IP	４		IP	１		IP
+菊池　　宏志	3.70	0.19	3.0	３		IP	２		IP	２		IP	５		IP	５		IP	４		IP	６		IP	６		IP	４		IP	６		IP
+恵良　　琴美	2.40	0.19	5.1	５	6	IP	６		IP	６		IP	３		IP	６		IP	４	5	IP	５		IP	５		IP	４		IP	６	6	IP
+天野　　　誠	3.44	0.20	4.5	転		IP	５		IP	５		IP	２		IP	６		IP	４		IP	４		IP	３		IP	５		IP	５		IP
+金田　　智博	4.50	0.16	3.7	２	4	IP	５	5	IP	４		IP	５		G2	６		G2	１		IP	４		IP	５		IP	４	5	IP	３	5	IP

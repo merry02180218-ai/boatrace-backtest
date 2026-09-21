@@ -1,0 +1,8 @@
+data=
+1	0
+武田　　正紀	6.20	0.14	3.1	２		IP	３		IP	１		IP	３		IP	４		IP	１		IP	５		IP	１		IP	５		IP	４		IP
+廣瀬　　篤哉	6.20	0.16	2.6	２		IP	６		IP	１		IP	２		IP	３		IP	２		IP	３		IP	３		IP	２		IP	６		IP
+安田　　吉宏	5.00	0.16	2.7	５		IP	３		IP	５		IP	３	4	IP	４		IP	３		IP	３		IP	３		IP	５		IP	１		IP
+福西　広太郎	2.30	0.18	3.8	６	6	IP	６		IP	４		IP	６	6	IP	転		IP	２	5	IP	６		IP	４		IP	５		IP	６		IP
+若林　　　将	6.30	0.11	3.2	３		IP	５		G1	１		IP	３		IP	３		IP	５		IP	３		G1	２		G1	４		G1	２	4	IP
+熊倉　　幹太	1.10	0.23	4.6	６		IP	５	5	IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+服部　　　剛	7.80	0.20	3.5	３		IP	１		IP	１		IP	１		IP	１		IP	４		IP	１		IP	２		IP	４		IP	３		IP
+平野　　和明	6.80	0.17	3.3	１		IP	４		IP	１		IP	４		IP	４		IP	３		IP	１		IP	３		IP	３		IP	２		IP
+小川　　知行	5.00	0.12	2.9	１		IP	４		IP	６		IP	１	4	IP	２		IP	６		IP	３		IP	５		IP	４		IP	４		IP
+村上　　功祐	4.80	0.15	2.1	４		IP	３		IP	５		IP	２		IP	１		IP	６		G3	２		IP	４		IP	６		IP	５		IP
+川尻　　泰輔	5.00	0.14	2.6	６		IP	２		IP	６		IP	１		IP	３		IP	２		IP	５		IP	５		IP	３		IP	３		G3
+酒井　　俊弘	4.50	0.12	1.7	５		IP	１	5	IP	５		IP	６		IP	１		IP	２		IP	２		IP	５	5	IP	６		IP	６	5	IP

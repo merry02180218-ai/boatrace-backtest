@@ -1,0 +1,8 @@
+data=
+1	0
+待鳥　　雄紀	6.30	0.17	3.1	３		IP	３		G3	１		IP	１		IP	４		G3	５		IP	１		IP	１		IP	６		IP	４		IP
+水摩　　　敦	6.00	0.18	4.4	５		IP	転		IP	３		IP	２		IP	１		IP	５	3	IP	２		IP	２		IP	４		IP	３		IP
+藤森　　陸斗	7.60	0.15	3.3	２		IP	２		IP	３		IP	３		IP	１		IP	３		IP	１		IP	３		IP	１	4	IP	３		IP
+池上　　隆行	3.60	0.13	2.8	４		IP	５		IP	４		IP	５		IP	２		IP	５		IP	４		IP	４		IP	４		IP	５		IP
+田中　太一郎	1.60	0.16	3.3	５		IP	５		IP	５		IP	６	6	IP	５		IP	５		IP	６	4	IP	６		IP	６		IP	５		IP
+松下　　知幸	3.70	0.19	4.3	６		IP	６		IP	４		IP	５		IP	６		IP	４		IP	２		IP	４		IP	３		IP	３		IP

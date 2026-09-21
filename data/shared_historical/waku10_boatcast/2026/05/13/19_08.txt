@@ -1,0 +1,8 @@
+data=
+1	0
+島川　　海輝	8.80	0.13	2.6	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP	６		IP	１		IP	１		IP	１		G2
+杉山　　太陽	3.78	0.15	2.6	３		IP	転		IP	６		IP	３		IP	２		IP	６		IP	５		IP	５		IP	３		IP	５		IP
+石倉　　拓美	3.00	0.17	3.3	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	４		IP	４		IP	４		IP	１		IP
+齊藤　　　廉	3.80	0.11	2.5	６		IP	１		IP	２		IP	５		IP	６		IP	５		IP	５		IP	５		IP	３	5	IP	４		IP
+小玉　　啓太	3.80	0.16	3.3	５		IP	４		IP	６		IP	４		IP	４		IP	３		IP	２		IP	５		IP	６	6	IP	３		IP
+村上　宗太郎	2.50	0.29	5.7	４	5	IP	３		IP	５		IP	６		IP	４		IP	６		IP	６		IP	５		IP	６		IP	６		IP

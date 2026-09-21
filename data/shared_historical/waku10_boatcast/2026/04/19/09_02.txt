@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　祐美子	5.50	0.16	3.0	３		IP	３		G3	４		G3	２		G3	６		IP	１		G3	４		IP	４		G3	３		IP	３		IP
+山崎　小葉音	5.60	0.13	2.7	２		IP	４		IP	４		IP	５		IP	２		IP	５		IP	１		IP	２		IP	３		IP	４		IP
+土屋　　　南	5.70	0.11	2.9	１		IP	３		IP	４		G3	１		G3	４		IP	６		G1	６		IP	２		IP	１		IP	５		IP
+濱崎　寿里矢	3.90	0.12	2.3	４		IP	５	5	G3	５		G3	５		IP	４		IP	５		IP	６		IP	１		IP	５		IP	１		IP
+龍田　　真白	2.00	0.13	2.3	５		IP	６		IP	５		IP	５		IP	３		IP	６	6	IP	６	6	IP	６	6	IP	５		IP	５		IP
+松田　　真実	2.70	0.17	3.1	４		IP	４		IP	４		G3	６		IP	６		IP	６		G3	４		G3	６		IP	４	5	IP	６		IP

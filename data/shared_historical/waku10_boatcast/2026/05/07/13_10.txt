@@ -1,0 +1,8 @@
+data=
+1	0
+鈴谷　　一平	8.20	0.12	2.2	２		IP	１		IP	１		IP	転		IP	１		IP	１		IP	２		IP	１		IP	２		IP	２		IP
+西村　　　歩	4.20	0.20	4.1	６		G3	２		G3	５		G3	１		G3	４		IP	３		IP	４		IP	５		IP	６		IP	４		G3
+大森　　　翼	4.11	0.20	4.2	５		IP	３		IP	４		IP	５		IP	３		IP	１		IP	４		IP	落		IP	５		IP	６		IP
+南　　　彩寧	2.90	0.22	4.0	５		IP	４		IP	４		IP	４	5	IP	５		IP	２		IP	５		IP	６		IP	６		IP	６	5	IP
+小坂　　尚哉	5.00	0.15	3.1	２		IP	６		IP	２	4	IP	４		IP	４		G3	転		IP	４		IP	２	4	IP	５	6	G1	４		G1
+古結　　　宏	5.60	0.15	3.0	６		G1	６	3	G1	４		IP	３		IP	１	5	IP	２		G1	５		G1	１	4	IP	３		IP	６	5	G1

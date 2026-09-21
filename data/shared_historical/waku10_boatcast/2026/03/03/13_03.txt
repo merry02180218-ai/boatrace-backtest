@@ -1,0 +1,8 @@
+data=
+1	0
+柴田　　直哉	7.40	0.17	3.6	１		IP	３		IP	１		IP	１		IP	４		IP	４		IP	５		IP	２		G3	１		G3	１		IP
+岡瀬　　正人	5.30	0.19	3.3	１		IP	２		IP	３		IP	４		IP	４		IP	６		IP	３		IP	４	4	IP	３		IP	４		IP
+須藤　　隆雄	3.50	0.18	2.4	３		IP	５		IP	３		IP	６		IP	４		IP	６		IP	２		IP	３		IP	妨		IP	６		IP
+西山　　　育	1.00	0.30	6.0	６	6	IP																											IP
+松村　　　敏	5.40	0.13	2.1	４		IP	３		IP	３		IP	５	4	IP	５		IP	３		IP	３		IP	３		IP	１	4	IP	３		IP
+照屋　　厚仁	5.00	0.19	4.0	３		IP	２		IP	４	5	IP	３	5	IP	６		IP	３		IP	６		IP	５		IP	２	5	IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+間野　　兼礼	6.50	0.20	3.0	１		IP	６		IP	３		IP	５		IP	２		IP	１		IP	１		IP	１		IP	２		IP	Ｆ		IP
+須藤　　博倫	8.30	0.13	2.3	１		IP	３		IP	３		G2	１		IP	３		IP	２		IP	３		IP	１		IP	１		IP	１		IP
+金子　　賢志	6.60	0.13	2.3	３		IP	２		IP	６		G1	２	5	IP	５		IP	３		IP	１		IP	２		G1	１		IP	４		IP
+山谷　　　央	4.00	0.15	2.9	Ｆ		IP	５		IP	５		IP	２		IP	３		IP	４		IP	４		IP	３		IP	４		IP	４		IP
+庄司　　孝輔	3.90	0.15	3.1	３		IP	４		IP	３		IP	５		IP	５		IP	４	4	IP	４	4	IP	６		G3	３	6	G3	４		IP
+櫻井　　　優	4.00	0.17	3.8	４		IP	５		IP	６		IP	１		IP	３		IP	５		IP	４		IP	５		IP	２	5	IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中野　　夢斗	7.70	0.13	2.3	４		IP	１		IP	１		IP	２		IP	２		IP	１		IP	６		IP	１		IP	１		G3	３		G3
+泉　　　啓文	3.90	0.18	3.6	４		IP	落		IP	３		IP	６		IP	Ｆ		IP	４		IP	２		IP	５		IP	２		IP	３		IP
+大石　　真央	4.40	0.19	3.5	６		IP	３		IP	４		IP	３		IP	３		IP	３	4	IP	６		IP	５		IP	５		IP	１		IP
+樅山　　拓馬	2.90	0.15	3.1	５	5	IP	４		IP	４		IP	６		IP	６		IP	２		IP	４		IP	５		IP	６		G3	５		IP
+今村　　暢孝	5.10	0.15	3.9	４	2	IP	３	2	IP	１	2	IP	２	2	IP	６	2	IP	１	2	IP	２	1	G1	Ｆ	2	IP	５	2	IP	６	2	IP
+日高　龍之介	1.60	0.21	3.5	６		IP	６		IP	６		IP	６		IP	５		IP	４		IP	５		IP	６		IP	５		IP	６		IP

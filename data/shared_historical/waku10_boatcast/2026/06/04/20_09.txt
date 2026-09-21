@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　裕也	7.80	0.17	3.3	１		IP	２		IP	１		IP	５		IP	２		IP	１		IP	２		IP	１		IP	１		IP	６		G1
+金児　　隆太	7.10	0.19	4.5	１		IP	１		IP	１	3	IP	５		G3	１		G3	６		IP	２		IP	２		IP	４		IP	２	1	IP
+重木　　輝彦	6.30	0.16	3.4	３		IP	２		IP	１		IP	Ｆ		IP	２		IP	２		IP	４		G1	１		G1	６		G1	４		G1
+海野　ゆかり	5.70	0.16	3.5	４		IP	３		IP	１		G3	３		G3	５		G3	５		G2	２		IP	３		IP	２		IP	４		IP
+市橋　　卓士	4.80	0.14	3.0	５		IP	２		IP	５		IP	３		IP	４		IP	２	3	IP	３	4	IP	４		IP	３		IP	５		IP
+金田　　　諭	5.80	0.15	3.0	３		IP	２		IP	４		IP	２		IP	５		IP	４		IP	３		IP	３	5	IP	３		IP	２	5	IP

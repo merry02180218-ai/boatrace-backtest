@@ -1,0 +1,8 @@
+data=
+1	0
+清水　　愛海	9.80	0.17	2.8	１		IP	１		G2	１		IP	１		IP	３		IP	１		G1	１		G1	１		G1	１		G3	２		G3
+山口　真喜子	6.20	0.17	2.8	２		IP	３		G2	５		G2	６		IP	１		IP	４		IP	２		IP	３		IP	１		G1	５	3	IP
+後藤　　美翼	4.00	0.21	3.2	４		G3	４		G3	５		IP	４		IP	２		IP	５		IP	転		IP	２		IP	４		G3	４		G3
+高田　ひかる	5.10	0.18	3.9	６		IP	４		G1	３		IP	２		IP	６		IP	４		IP	１		IP	１		IP	６		G1	５		IP
+増本　　杏珠	3.50	0.19	4.0	Ｆ		IP	３		IP	５		IP	３		IP	５		IP	３		IP	６		IP	５	6	IP	４		IP	３		IP
+関野　　　文	4.20	0.17	2.7	４		IP	５		IP	５	5	IP	４		G3	２		G3	２	5	IP	４		IP	５		IP	５	5	G3	３	5	G3

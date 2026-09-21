@@ -1,0 +1,8 @@
+data=
+1	0
+前野　　竜一	9.40	0.19	3.2	１		IP	１		IP	１		IP	１		IP	３		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+米田　　隆弘	5.30	0.20	4.7	３		IP	４		IP	２		IP	１		IP	６		IP	５		IP	２		IP	３		IP	３		IP	５		IP
+白井　　友晴	4.60	0.18	4.4	５	4	IP	１		IP	３		IP	５		IP	５		IP	３		IP	４		IP	２		IP	４		IP	５		IP
+福島　　陽子	2.60	0.18	3.7	５		IP	５		G3	６		G3	３		IP	６		IP	５		IP	３		IP	５		IP	５		IP	５		IP
+中澤　　里桜	1.60	0.23	3.9	６	6	IP	６	6	IP	Ｆ	6	IP	６	6	IP	２	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP
+新田　　泰章	4.00	0.24	4.2	４		IP	２		IP	６		IP	３		G1	５		IP	３		IP	６		IP	５		IP	２		IP	６		G3

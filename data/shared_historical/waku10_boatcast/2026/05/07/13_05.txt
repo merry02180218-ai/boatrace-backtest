@@ -1,0 +1,8 @@
+data=
+1	0
+大森　　　翼	5.70	0.22	4.2	１		IP	２		IP	１		IP	５		IP	５		IP	１		IP	４		IP	３		IP	４		IP	６		IP
+福岡　　泉水	4.80	0.24	5.0	２		IP	４		IP	２		IP	６		IP	５	3	IP	６		IP	３		G3	２		G3	３		IP	４		IP
+田路　　朋史	6.30	0.20	3.7	６		IP	２		IP	１		IP	３		IP	３		IP	５		IP	２		IP	３		IP	１	4	IP	３		IP
+薗頭　　　心	3.00	0.14	3.0	６	6	IP	５	6	IP	２	6	IP	６	6	IP																		IP
+登玉　　隼百	5.00	0.13	3.3	１		IP	５	6	IP	２		IP	４	6	IP	６		IP	４		IP	５	4	IP	６		IP	１		IP	２		IP
+吉川　　元浩	5.70	0.15	2.3	６		G1	４	5	IP	４		G1	４		G1	５		G1	３		IP	１	5	IP	２	4	IP	１	5	IP	５	5	SG

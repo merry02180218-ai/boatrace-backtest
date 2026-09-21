@@ -1,0 +1,8 @@
+data=
+1	0
+宮之原　輝紀	9.10	0.14	2.3	１		G1	１		G1	１		G1	１		IP	１		G2	１		IP	５		IP	４		IP	１		IP	１		IP
+桐生　　順平	5.56	0.15	3.3	６		G1	転		G1	エ		G1	３		G1	３		G1	２		IP	２		SG	２		SG	５		G1	６		SG
+藤原　啓史朗	7.00	0.15	2.4	３		IP	１		IP	３		IP	３		G1	３		G2	４		G2	１		IP	３		IP	２		IP	４		G1
+吉田　　裕平	6.50	0.13	2.2	２		G1	４		G1	３		G1	５		G1	６		G1	５		G1	１		IP	２		IP	４		SG	１		G1
+海野　康志郎	6.70	0.17	3.3	１		IP	２		IP	３		G1	５	3	G1	２	3	IP	３		IP	３	2	IP	５		SG	２		SG	４		G1
+坪井　　康晴	5.20	0.18	3.8	５		G1	２		G1	３		G2	４		IP	５		IP	２	5	IP	４		IP	４		G1	４		G1	４		G1

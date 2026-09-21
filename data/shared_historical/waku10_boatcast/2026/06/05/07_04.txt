@@ -1,0 +1,8 @@
+data=
+1	0
+森　　　悠稀	8.10	0.15	3.0	２		G2	３		IP	３		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	３		IP
+櫻井　　　優	6.40	0.16	2.9	２		IP	２		IP	４		IP	２		IP	２		IP	２		IP	５		IP	４		IP	４	3	IP	１		IP
+松本　　浩貴	4.50	0.17	3.5	４		IP	６		IP	４		IP	４		IP	２		IP	２		IP	４		IP	３		IP	５	6	IP	４		IP
+長田　　頼宗	5.70	0.16	4.2	３		G2	５		G2	３		G2	２		G2	５		G2	２		IP	５		G1	３		G1	２		IP	６		G1
+井手　　良太	4.70	0.11	2.3	４		IP	３		IP	３		IP	５		IP	３		IP	１		IP	２		IP	６		IP	５		IP	５		IP
+堤　　　　昇	2.80	0.18	3.8	５		IP	３	4	IP	５		IP	４	4	IP	６		G3	６		G3	６		IP	６	5	IP	４	5	IP	４	5	IP

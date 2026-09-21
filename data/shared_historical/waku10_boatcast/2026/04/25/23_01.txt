@@ -1,0 +1,8 @@
+data=
+1	0
+丹下　　　将	8.00	0.17	3.0	１		IP	３		IP	１		IP	４		IP	１		IP	２		IP	３		IP	１		IP	２		IP	２		IP
+佐竹　　友樹	5.20	0.21	3.8	４		IP	４		IP	５		IP	３		IP	３		IP	４		IP	１		IP	５		IP	３		IP	２		IP
+酒井　　陽祐	5.50	0.14	2.1	５		G3	２		G3	１	4	IP	５		IP	４		IP	６		IP	２		IP	２		IP	２		IP	４		IP
+牧山　　敦也	5.30	0.20	4.6	４		IP	３		IP	４		IP	３		IP	４		IP	２	5	IP	３		IP	６		IP	２		IP	３		IP
+高木　　圭大	2.00	0.16	3.0	６		IP	５		IP	５		IP	３		IP	５	6	IP	６		IP	６		IP	５		IP	６		IP	５		IP
+大澤　　大夢	2.80	0.18	4.3	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP	４		IP	３		IP	３		IP	４	5	IP

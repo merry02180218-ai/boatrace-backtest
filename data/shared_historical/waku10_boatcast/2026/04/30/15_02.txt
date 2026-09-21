@@ -1,0 +1,8 @@
+data=
+1	0
+門田　　　栞	6.00	0.20	4.3	６		IP	４		G3	４		G3	１		IP	１		IP	１		IP	３		IP	３		IP	６		IP	２		IP
+片岡　　雅裕	6.00	0.12	3.3	６		IP	１		IP	２		G1	５		G1	５		G1	６		G1	１		G1	６		G1	１		IP	２		G1
+村越　　　篤	5.00	0.15	3.2	６		IP	３	4	IP	２		IP	４		IP	３		IP	５		IP	６	2	G3	２		G3	２	4	IP	３		IP
+下田　　哲也	4.40	0.20	4.1	５	6	IP	４		IP	４	3	IP	２		IP	３		IP	２		IP	５		IP	６		IP	２		IP	６		IP
+嶋田　　貴支	4.50	0.16	3.7	４		IP	６		IP	５		IP	２		IP	３		IP	４		IP	２		IP	４		IP	４		IP	４		IP
+三嶌　さらら	3.40	0.22	4.5	３		IP	６		IP	５		IP	６		IP	２		IP	６		IP	５		IP	５		IP	６		IP	１		G3

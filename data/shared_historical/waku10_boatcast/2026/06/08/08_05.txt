@@ -1,0 +1,8 @@
+data=
+1	0
+古田　　祐貴	6.10	0.17	3.1	１		IP	５		G3	２		G3	１		IP	３		IP	１		IP	６		G3	４	2	G3	５		IP	２		IP
+谷口　　健一	3.70	0.15	3.7	４		IP	６		IP	６		IP	２		IP	５		IP	２		IP	６		IP	６		IP	１		IP	６		IP
+渡邉　　雄朗	7.40	0.14	2.7	２		IP	１		IP	２		IP	２		IP	２		IP	２		IP	５		G1	２		G1	３		IP	３	6	IP
+加藤　　　綾	5.40	0.18	2.9	６		IP	３		IP	２		IP	２		IP	２		IP	２		IP	３		IP	３		IP	６		IP	５	5	IP
+金子　　貴志	4.30	0.20	4.1	４		IP	３		IP	４		IP	６		IP	３		IP	５		IP	２		IP	１		IP	６		IP	６		IP
+柳内　　敬太	3.00	0.15	4.0	５		IP	Ｆ		IP	６		IP	５		IP	６		IP	４		IP	３		IP	４	5	IP	４		IP	３		IP

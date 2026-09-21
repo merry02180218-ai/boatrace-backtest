@@ -1,0 +1,8 @@
+data=
+1	0
+三浦　　永理	9.60	0.14	2.2	１		G3	１		G3	１		G2	１		G2	１		G3	２		G3	１		G3	３		IP	１		IP	１		IP
+堀之内紀代子	6.50	0.17	3.7	１		G3	６		G2	２		IP	１		IP	２		IP	２		IP	６		IP	３		IP	１		G3	６		G1
+大橋　栄里佳	6.00	0.16	3.5	１		G3	２		G3	２		G3	６		IP	６		IP	３		IP	３	4	IP	２		G3	４		G3	２	2	IP
+中川　　りな	5.90	0.15	2.9	４		G3	１		G3	３		IP	２		IP	１		IP	３		IP	６		IP	３		IP	５	3	IP	３		IP
+佐々木　裕美	2.70	0.13	2.6	５		G3	６		G3	２		G3	５		G3	６		IP	５	6	IP	４		G3	５		IP	６		IP	４		IP
+福山　恵里奈	1.20	0.19	4.0	６		G3	６		IP	５		IP	６		G3	６		G3	６		G3	６		IP	６		IP	６		IP	５		G3

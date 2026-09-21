@@ -1,0 +1,8 @@
+data=
+1	0
+山室　　展弘	8.40	0.12	1.6	２		IP	１		IP	２		IP	１		IP	２		IP	２		IP	１		IP	１		IP	４		IP	２		IP
+平見　　真彦	6.80	0.16	2.6	１		IP	２		IP	３		IP	２		IP	１		IP	３		IP	４		IP	５		IP	４		G3	１	3	G3
+日笠　　勝弘	2.20	0.18	4.4	６		IP	４		IP	３		IP	５		IP	エ		IP	５		IP	６		IP	４	6	IP	６		IP	６		IP
+岡部　　貴司	4.90	0.19	3.7	６		IP	２		IP	５		IP	３		IP	３		IP	５		IP	３		IP	４		IP	３		IP	２		IP
+大澤　　普司	5.10	0.19	3.0	５		IP	１		IP	４	6	IP	３		IP	３		G1	６		G1	１		IP	２		IP	６		IP	６	6	IP
+三好　　勇人	4.00	0.22	4.8	６		IP	２		IP	４		IP	３		IP	３		IP	６		IP	４		IP	５		IP	５		IP	３	4	IP

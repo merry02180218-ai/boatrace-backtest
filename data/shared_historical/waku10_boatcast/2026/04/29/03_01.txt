@@ -1,0 +1,8 @@
+data=
+1	0
+奥平　　拓也	5.10	0.24	4.2	４		IP	６		G3	５		IP	４		IP	３		IP	３		IP	３		IP	２		IP	１		G3	４		G3
+尾道　　佳諭	4.60	0.15	2.6	２		IP	６	6	IP	４		IP	２	4	IP	４		IP	５		IP	６		IP	４		IP	４		IP	１		IP
+山田　　亮太	5.22	0.20	3.9	落		IP	６		G3	５	4	G3	２	4	G3	５		IP	３		IP	４		IP	３		IP	２		IP	１		IP
+早川　　颯太	2.40	0.22	4.0	５		IP	６		IP	４		IP	６		IP	１		IP	５		IP	６		IP	６		IP	６	6	IP	６	5	IP
+高山　　弘斗	2.90	0.19	3.6	６	6	IP	４		IP	５		IP	５		IP	５	6	IP	４		IP	６		IP	３		IP	６		IP	３		IP
+池田　　雷太	2.89	0.17	3.4	５	3	IP	６		IP	３		IP	５		IP	５		IP	４		IP	５		IP	転		IP	６		IP	３		IP

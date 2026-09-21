@@ -1,0 +1,8 @@
+data=
+1	0
+宗行　　治哉	9.70	0.11	2.2	１		IP	１		G2	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP
+篠崎　　仁志	7.70	0.13	2.5	２		G1	５		G1	３		G1	２		IP	１		IP	３		IP	３		G1	２		G1	２		G1	２		G1
+稲田　　浩二	7.10	0.11	1.8	４		G1	２		IP	２		G1	１		G1	３		IP	４		IP	１		G3	４		G1	３		G1	３		IP
+武富　　智亮	4.70	0.18	3.3	２		IP	５		IP	２		IP	６		IP	３	5	IP	３		IP	３		IP	４		IP	４		G2	６		IP
+石原　　　翼	5.20	0.15	3.2	５		G2	６		G2	４	6	IP	４		IP	２		IP	２		IP	２	4	IP	２	6	G2	４		IP	５		IP
+宮之原　輝紀	5.10	0.13	3.9	２		IP	３	5	IP	５		G1	４		IP	２		IP	４		G1	６		G1	５		G1	４		SG	４		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+倉持　　莉々	7.40	0.17	2.5	１		IP	２		IP	１		IP	６		IP	１		IP	１		IP	１		IP	５		G1	４		G1	３		G1
+豊田　　　結	5.80	0.16	3.0	２		IP	１		G3	２		G3	３	4	IP	５		IP	５		IP	３		IP	４		IP	４		IP	２		IP
+若狭　奈美子	5.90	0.16	3.9	３		IP	３		IP	１		IP	５		IP	４		IP	４		IP	２		IP	３		G3	３		G3	４	4	G1
+向井田　真紀	3.80	0.18	3.8	１		IP	６		IP	５		IP	４		G3	６		IP	６		IP	６		IP	１		G3	３	5	IP	５		IP
+高憧　　四季	5.00	0.14	2.3	５		IP	１		IP	３		IP	１		IP	４		G3	５		G3	４		G1	５	6	IP	６		IP	４		G1
+大豆生田　蒼	2.40	0.23	4.6	４		G1	５		G3	６		G3	４		G3	５		IP	５		IP	５		IP	６		IP	６		IP	４		IP

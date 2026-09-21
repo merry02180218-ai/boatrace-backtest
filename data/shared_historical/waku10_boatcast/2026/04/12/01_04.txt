@@ -1,0 +1,8 @@
+data=
+1	0
+今泉　　友吾	8.50	0.18	3.7	１		G1	３		IP	３		G1	１		G1	１		IP	２		IP	１		IP	２		IP	５		G1	１		IP
+秦　　　英悟	6.10	0.15	3.7	４		IP	５		SG	２		G1	３		G1	４		G1	１		IP	６		G1	４		G1	３		G2	２		IP
+土屋　　智則	4.90	0.17	2.8	５		G1	３	2	G3	１		G3	２		IP	３		IP	３		IP	５		IP	６		IP	４		IP	５		G1
+佐々木　完太	6.10	0.20	3.9	２		IP	３		IP	１	5	IP	２		G1	５		G1	３		G1	２		G1	５	5	IP	５		G1	４	3	IP
+古賀　　繁輝	5.70	0.11	2.2	４		G2	６		G1	４	6	IP	５		G1	１		IP	２		IP	１		IP	３		IP	５		IP	３		IP
+西丸　侑太朗	3.20	0.13	2.9	６	5	IP	６	3	IP	３		IP	４		IP	５		IP	４		G1	６		G1	５		IP	２	5	IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+山下　　昂大	8.20	0.16	1.9	３		IP	２		IP	１		IP	４	3	G3	１		IP	１		IP	３		IP	２		IP	１		IP	１		IP
+森作　　広大	3.70	0.16	4.0	６		IP	４		IP	４		IP	３		IP	２		IP	６		IP	３		IP	６		IP	４		IP	５		IP
+加藤　　　綾	4.60	0.16	3.3	３		IP	４		IP	３		IP	３		IP	３		IP	５		IP	３		G3	３		IP	５		IP	５		IP
+屋良　　龍紀	3.20	0.15	2.9	６	5	IP	３		IP	６		IP	６		IP	５		IP	４		IP	３		IP	６		IP	２		IP	５		IP
+香月　　大介	3.60	0.18	3.0	６		IP	Ｆ		IP	１	4	IP	５		IP	４		IP	３		IP	４		IP	４		IP	４		IP	６		IP
+吉原　　快誓	1.80	0.22	4.8	６		IP	６		IP	６		IP	６		IP	６		IP	４		IP	６		IP	３		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+木村　　亮太	7.70	0.17	2.9	１		IP	１		IP	２		IP	２		IP	３		IP	１		IP	１		IP	２		IP	６		IP	３		IP
+田頭　　虎親	7.80	0.14	2.7	１		IP	２		IP	５		IP	１		IP	２		IP	４		IP	１		IP	１		IP	３		IP	１		IP
+西村　　拓也	5.90	0.11	2.7	５		IP	２		IP	５	2	IP	１		IP	３		IP	３		IP	２		IP	２		G1	６		G1	３		IP
+坂井　　滉哉	3.80	0.14	2.8	４		IP	４		IP	６		IP	３		IP	４		IP	４		IP	４		IP	６		IP	４		IP	３		IP
+菊池　　峰晴	3.30	0.24	4.6	５		IP	２		IP	５		IP	５		IP	５		IP	６		IP	３	6	IP	３		IP	５	4	IP	５		IP
+板頭　　里緒	1.10	0.19	4.2	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　拡郎	10.40	0.13	2.4	１		G2	１		G2	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+松田　　祐季	7.20	0.14	3.6	１		IP	４		IP	３		IP	１		IP	２		IP	２		IP	２		IP	２		G1	４		G1	５		G1
+上條　　暢嵩	7.70	0.13	3.6	３		SG	２		SG	５		G1	２		G1	２		IP	１	2	IP	２	4	G1	３		G1	４		G1	４		SG
+新開　　　航	5.30	0.14	2.7	２		IP	３		G1	４		IP	１		IP	６		G1	２		G1	６		G1	６		G2	３		G2	転		IP
+山田　　祐也	6.50	0.14	3.0	５		G2	２		IP	２		G1	３		SG	３		G2	５		G1	２		IP	２		G1	３	4	G1	５		G1
+西岡　　顕心	5.70	0.16	3.8	１		G2	６		G2	３		IP	４	5	IP	４		IP	５		G1	５		G1	３		G1	２		G1	３		G2

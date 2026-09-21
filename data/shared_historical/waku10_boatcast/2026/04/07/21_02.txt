@@ -1,0 +1,8 @@
+data=
+1	0
+中里　　英夫	7.80	0.19	3.8	２		IP	１		IP	１		IP	２		IP	３		IP	１		IP	２		IP	２		IP	１		IP	Ｆ		IP
+宮村　　勇哉	4.50	0.21	4.1	４		IP	３		IP	１	3	IP	５		IP	３		IP	６		IP	１		IP	５		IP	５		IP	５		IP
+山田　　真聖	4.40	0.18	3.6	４	6	IP	１		IP	６		IP	４		IP	６		IP	３		IP	６		IP	６		IP	３		IP	１		IP
+北村　　征嗣	5.40	0.16	4.5	３		IP	５		IP	５		G3	５		G3	２		IP	４		IP	１		IP	３		G1	２		G1	４		IP
+山崎　　昂介	3.20	0.19	3.7	５		IP	４		IP	３		IP	６		IP	４		IP	５		IP	４		IP	４		IP	６		IP	４		IP
+出穂　　和鼓	1.40	0.27	5.1	６		IP	５		IP	５		IP	４		IP	５		IP	妨		IP	６		IP	６		IP	落		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　秀茉	6.30	0.13	2.5	３		IP	３		IP	６		IP	３		IP	２		IP	１		IP	３		IP	３		G3	２		IP	３		IP
+福岡　　泉水	4.60	0.22	4.9	３		IP	２		IP	５		IP	６		IP	３		IP	２		IP	４		IP	２		IP	６		IP	５	3	IP
+宗行　　治哉	6.60	0.11	3.0	３		G2	２		G2	２		IP	３		IP	４		G2	１		G2	５		IP	３		IP	２		IP	４		IP
+高山　　敬悟	4.90	0.16	2.9	５		IP	１		IP	５	5	IP	３	5	IP	５	5	IP	１		IP	３		IP	６		IP	２		G3	５		G3
+大場　　恒季	6.50	0.15	2.7	３		IP	３		IP	５		IP	２		IP	２		IP	２	2	IP	２		IP	１		IP	４		IP	４		G2
+得山　　大輝	1.00	0.17	2.3	Ｆ		IP	６		IP	５		IP	６	5	IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

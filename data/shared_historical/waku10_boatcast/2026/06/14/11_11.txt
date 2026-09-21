@@ -1,0 +1,8 @@
+data=
+1	0
+藤岡　　俊介	8.90	0.11	2.0	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	６		IP	１		IP	１		IP
+宮崎　　　奨	5.50	0.16	3.3	３		IP	２		IP	１		IP	２		IP	２		IP	５		IP	５		IP	２		IP	５		G3	６		IP
+木下　　雄介	6.90	0.19	3.2	３		IP	１		IP	６		IP	２		IP	４		IP	２		IP	２		IP	２		IP	３		IP	１		IP
+大平　誉史明	5.30	0.15	3.7	２		IP	４	5	IP	４		G3	３	3	G3	６		G3	４		IP	４	5	IP	４		IP	１		IP	２		IP
+伊藤　　将吉	4.50	0.17	4.7	２		IP	６	4	IP	５		IP	５		IP	５		IP	２		IP	２		IP	３		IP	３		IP	５		IP
+栗城　　　匠	4.90	0.14	3.5	３		IP	４		IP	２		IP	４		IP	５		G2	３		G1	４		IP	３	4	IP	５		G1	６		G1

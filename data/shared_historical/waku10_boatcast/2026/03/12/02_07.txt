@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　　航	9.20	0.16	3.2	２		IP	１		IP	１		IP	１		IP	１		IP	３		G2	１		G2	３		G2	１		IP	２		IP
+藤井　　公人	5.60	0.18	3.3	２		IP	２		IP	２		G3	１		G3	５		IP	５		IP	４		IP	４		IP	４	3	IP	３		IP
+瀬川　　大地	3.20	0.11	2.8	６		IP	４		IP	６		IP	５		IP	６		IP	５		IP	６		IP	２		IP	３	4	IP	３		IP
+小川　竜太朗	5.40	0.15	2.7	５		IP	２		IP	１		IP	３		IP	２		IP	３		IP	６		IP	６		IP	１		IP	５		IP
+堀越　　雄貴	4.90	0.21	4.8	５		IP	３		IP	４		IP	３		IP	３		IP	２		IP	４		IP	６		IP	２	6	IP	４		IP
+大島　隆乃介	4.20	0.19	4.7	６		IP	５		IP	３		IP	１	5	IP	４	5	IP	２		IP	６		IP	５	4	IP	３		G3	５		G3

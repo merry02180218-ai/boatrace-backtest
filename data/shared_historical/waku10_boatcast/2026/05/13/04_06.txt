@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　小葉音	7.40	0.18	2.9	２		G3	１		G3	２		IP	１		IP	５		IP	２		IP	４		IP	３		IP	１		IP	２		IP
+松本　　純平	5.00	0.15	4.1	３		IP	５		IP	３	3	IP	６		G1	４		G1	３		G1	６		G1	４		IP	２		IP	５		IP
+寺本　　昇平	3.90	0.25	4.0	６		IP	５		IP	４		IP	４		IP	３		IP	３	4	IP	４		IP	４		IP	４	1	IP	４		IP
+吉田　慎二郎	5.60	0.11	2.2	６	5	IP	３		IP	１		IP	２		IP	２		IP	１		IP	６		IP	５	5	IP	３		IP	５		IP
+吉川　　昭男	4.40	0.18	4.0	４	2	IP	１	3	IP	５	4	IP	４	4	IP	２	2	IP	５	3	IP	６	3	IP	２	2	IP	６	2	IP	４	3	IP
+渡辺　　　崇	3.60	0.23	4.8	３		IP	３		IP	転		IP	５		IP	５		G3	５	5	G3	４		IP	５		IP	２	5	IP	４		IP

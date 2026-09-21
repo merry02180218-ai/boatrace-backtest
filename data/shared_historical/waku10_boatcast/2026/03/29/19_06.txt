@@ -1,0 +1,8 @@
+data=
+1	0
+山室　　展弘	8.60	0.13	1.6	１		IP	２		IP	１		IP	２		IP	１		IP	２		IP	２		IP	１		IP	１		IP	４		IP
+関　　　裕也	3.50	0.20	4.4	２		IP	６		IP	４		IP	３		IP	５		IP	４		IP	６		IP	６		IP	５		IP	３		IP
+大澤　　普司	5.50	0.22	3.8	１		IP	４		IP	３		IP	１		G1	５		IP	５		IP	３		IP	２	2	IP	落		IP	３		IP
+中村　　魁生	5.30	0.14	2.4	５	6	IP	１		IP	６		G1	２		IP	１		IP	４	2	IP	４		IP	４		IP	２	3	IP	６		IP
+星野　　太郎	3.70	0.15	2.1	６		IP	４		IP	６		IP	５		IP	３		IP	５		IP	２		IP	４		IP	２		IP	６		G3
+平田　健之佑	4.11	0.21	5.3	欠		IP	５		IP	３		IP	４		IP	３		IP	３		IP	３		IP	５		IP	５		G1	５		IP

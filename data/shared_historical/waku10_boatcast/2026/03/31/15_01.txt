@@ -1,0 +1,8 @@
+data=
+1	0
+原村　　拓也	7.80	0.19	3.6	１		IP	４		IP	３		IP	２		IP	２		IP	１		IP	４		IP	１		IP	２		IP	１		IP
+平岡　　重典	4.00	0.18	4.0	２		IP	５		IP	４		IP	５		IP	３		IP	４		IP	５	4	IP	４		IP	５		IP	３		IP
+中野　　和裕	3.60	0.18	3.0	３		IP	４		IP	３		IP	４		IP	５		IP	Ｆ		IP	２		IP	５		IP	５		IP	５		IP
+山戸　　信二	3.70	0.17	3.0	５		IP	４	5	IP	６		IP	４		IP	３		IP	５		IP	２		IP	４		IP	４		IP	５	6	IP
+堀内　　亜海	1.40	0.24	4.5	４	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６		IP	６		IP	６		IP	６		IP	６		IP
+松本　　　怜	3.60	0.21	4.2	６		IP	４		IP	２		IP	５		IP	４		IP	５		IP	３		IP	６		IP	４		IP	４		IP

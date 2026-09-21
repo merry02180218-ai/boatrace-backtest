@@ -1,0 +1,8 @@
+data=
+1	0
+中嶋　誠一郎	6.60	0.20	3.3	４		IP	１		IP	１		G3	２		IP	２		IP	４		IP	１		IP	５		IP	２		IP	５		IP
+里岡　　右貴	5.80	0.17	3.3	３		IP	２		IP	１		IP	４		IP	３		IP	４		IP	４		IP	３		IP	４		IP	３		IP
+増本　　杏珠	3.00	0.17	3.8	５		IP	５		IP	Ｆ		IP	５	6	IP	６		IP	５		IP	３	4	IP	２		IP	３		IP	６		IP
+田村　　　慶	4.50	0.23	4.3	２		IP	２	3	IP	３		IP	５	5	IP	５	5	IP	５		IP	６		IP	３	6	IP	３		IP	４		IP
+若林　　　麗	3.20	0.21	4.0	６		IP	５		IP	４		IP	６	4	IP	４		IP	５		IP	４		IP	５		IP	５		IP	１		IP
+村松　　修二	3.60	0.19	3.0	６		IP	６		G2	６		G2	３		IP	３	5	IP	３		IP	６		IP	４		IP	３		IP	５		IP

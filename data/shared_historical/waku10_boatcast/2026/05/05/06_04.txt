@@ -1,0 +1,8 @@
+data=
+1	0
+坪井　　康晴	9.20	0.11	2.1	１		G1	２		G1	１		IP	１		IP	１		IP	１		IP	１		G1	６		G1	２		G1	２		G1
+豊田　　祥生	5.40	0.17	3.5	６		IP	６		IP	２		IP	２		IP	４		IP	１		IP	３		IP	２		IP	４		IP	４		IP
+後藤　　正宗	5.90	0.18	3.2	３		IP	３		IP	１		G3	６		G3	２		IP	１		IP	４		IP	２		IP	５		IP	４		IP
+金子　　良昭	3.70	0.18	4.4	１	3	IP	３		IP	５		IP	６		IP	６		IP	５		IP	４	2	IP	６		IP	３		IP	４	5	IP
+鈴木　　秀茉	4.40	0.16	3.1	４		IP	４		IP	１	4	IP	５		G3	６		G3	２		IP	６		IP	４		IP	４		IP	３		IP
+木村　紗友希	2.00	0.20	3.4	６		G3	４		IP	転		G3	６		G3	５		G3	５		IP	５	5	IP	６		IP	６	5	IP	４		IP

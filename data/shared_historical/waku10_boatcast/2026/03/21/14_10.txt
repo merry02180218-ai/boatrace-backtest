@@ -1,0 +1,8 @@
+data=
+1	0
+三浦　　裕貴	8.00	0.18	3.8	４		IP	１		IP	１		IP	１		IP	３		IP	３		IP	１		IP	１		IP	２		IP	３	2	IP
+藤井　　　徹	6.00	0.23	4.4	２		IP	３		IP	２		IP	２	3	IP	４		IP	３		IP	１		IP	５		IP	３		IP	５		IP
+佐々木　和伸	5.33	0.15	2.6	３		IP	３		IP	４		IP	２		G1	６	2	G1	転		IP	２		IP	６		IP	３		IP	３		IP
+吉川　　晴人	4.60	0.19	3.9	６		IP	４		IP	４		IP	２		IP	５		G2	４		IP	４		IP	４		IP	４		IP	２		IP
+田中　太一郎	3.20	0.16	3.9	５		IP	５		IP	１	4	IP	５		IP	６		IP	３		IP	６		IP	５		IP	５		IP	４		IP
+四宮　　与寛	2.56	0.14	4.4	４		IP	４		IP	６		IP	３		IP	６	5	IP	６		IP	５	5	IP	転		G1	５		IP	５		IP

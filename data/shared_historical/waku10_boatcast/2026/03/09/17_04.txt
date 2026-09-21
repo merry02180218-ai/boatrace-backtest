@@ -1,0 +1,8 @@
+data=
+1	0
+今村　　暢孝	6.10	0.14	2.9	３		IP	１		IP	１		IP	１		IP	５		IP	６		IP	５		G1	３		G1	５		IP	１		IP
+吉田　　和仁	4.56	0.18	3.3	転		IP	３		IP	５		IP	１		IP	２		IP	２		IP	６		IP	４		IP	６		IP	６		IP
+仲道　　大輔	5.80	0.14	2.9	２		IP	３		IP	４		IP	１		IP	Ｆ		IP	５		IP	３		IP	１		IP	５		IP	１		IP
+米田　　隆弘	5.40	0.16	4.1	３		IP	４		IP	４		IP	１		IP	３		IP	４		IP	３		IP	４		IP	３		IP	４		IP
+高木　　茉白	2.40	0.19	3.6	５		IP	５		IP	４		IP	３		IP	６		G3	５		IP	５		IP	５		IP	６		IP	５		G3
+吉川　　喜継	5.90	0.15	3.0	Ｆ	4	IP	３	4	IP	４	4	IP	２	2	IP	２	5	G1	２	5	IP	３	4	IP	５	4	IP	３	3	IP	２	2	IP

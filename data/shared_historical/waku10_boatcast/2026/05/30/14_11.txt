@@ -1,0 +1,8 @@
+data=
+1	0
+片岡　　雅裕	7.90	0.14	4.0	Ｆ		G2	１		G2	１		IP	１		IP	５		G1	１		G1	２		G1	３		G1	１		G1	３		G1
+都築　　正治	6.60	0.12	2.6	５		IP	２		IP	３		IP	１		IP	５		IP	２		IP	２		IP	２		IP	１		IP	４		IP
+寺田　　空詩	6.40	0.16	2.7	２		G3	３		IP	３		IP	４		IP	３		IP	１		IP	３		IP	１		IP	２		IP	Ｆ		IP
+竹田　　吉行	5.30	0.12	2.8	Ｆ	5	IP	１		IP	５		IP	５		IP	４		IP	６		IP	３		IP	２		IP	１		IP	１		IP
+黒井　　達矢	5.00	0.18	3.2	４		IP	４	4	IP	１		IP	Ｆ		IP	２		G1	６		G1	５		IP	３		IP	１	4	IP	５		G1
+神里　　琴音	3.50	0.15	3.3	６		IP	５		IP	６		G2	２		G2	３		G3	３		IP	４		IP	６		IP	５		IP	５		IP

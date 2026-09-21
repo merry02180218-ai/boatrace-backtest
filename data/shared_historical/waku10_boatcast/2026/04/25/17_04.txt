@@ -1,0 +1,8 @@
+data=
+1	0
+萩原　　秀人	9.80	0.12	2.9	２		G1	１		IP	１		IP	１		IP	１		IP	１		G1	１		IP	２		G1	２		IP	１		IP
+仲口　　博崇	6.70	0.19	3.8	１		IP	１		G3	２		IP	２		IP	６		IP	１	1	G1	３		IP	６		G3	１	1	G3	５		G3
+柴田　　　光	5.00	0.14	3.6	３		G1	６		G1	５		G1	２		IP	５	2	IP	３		IP	３		G3	４		IP	３		IP	３		IP
+松井　　　繁	6.50	0.11	3.5	１		G1	４		G1	５	5	G1	３		G1	４		G1	６		G1	１		G1	２		G1	３	3	IP	３		IP
+寺田　　　祥	6.90	0.15	3.2	５		G1	４		G1	２		IP	１		IP	５		G1	２	3	IP	４		G1	１		IP	２		G1	２		IP
+中島　　孝平	3.80	0.18	3.7	Ｆ		G1	５		G1	５		G1	４		G1	２		G1	６		G1	４		G1	４	4	IP	４		G2	５		IP

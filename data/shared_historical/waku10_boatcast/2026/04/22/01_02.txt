@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　昂介	8.60	0.17	3.3	１		IP	５		IP	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	１		IP
+都築　　正治	5.90	0.15	3.1	２		IP	２		IP	１		IP	４		IP	３		IP	１		IP	４		IP	５		IP	６		IP	３		IP
+菊池　　峰晴	5.40	0.21	4.0	２		IP	２		IP	４		IP	５		IP	３		IP	５		IP	３		IP	２		IP	３		IP	４		IP
+梶山　　涼斗	5.10	0.12	3.3	５		IP	１	5	G3	２		IP	３		IP	６		IP	５		IP	４		IP	１		IP	３		IP	５		IP
+柏野　　幸二	5.40	0.12	2.3	３		IP	２		IP	３		IP	３		IP	３	4	IP	４		IP	４		IP	４		IP	３		IP	４		IP
+鶴本　　崇文	2.80	0.22	4.9	６		IP	４		IP	６		IP	５		IP	２	5	IP	６		IP	５		G1	５		G1	４		IP	６		IP

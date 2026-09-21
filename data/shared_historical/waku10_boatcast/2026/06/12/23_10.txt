@@ -1,0 +1,8 @@
+data=
+1	0
+服部　　幸男	8.70	0.13	3.0	１		IP	２		SG	１		IP	４		IP	１		IP	１		IP	４		IP	１		G1	１		IP	２		IP
+伊藤　　誠二	6.20	0.18	3.8	４		IP	２		G3	２		IP	５		IP	１		IP	５		IP	２		IP	４	3	IP	２		IP	２		IP
+大場　　広孝	4.70	0.14	2.8	２		IP	６		IP	４		IP	５		IP	５		IP	４		IP	３		IP	２		IP	４		IP	２		IP
+妹尾　　忠幸	6.20	0.18	3.7	４		IP	２		IP	２		IP	２		IP	４		IP	５		IP	４	5	IP	１		IP	２		IP	３	5	IP
+山田　　晃大	3.90	0.12	2.4	５		IP	４		IP	３		IP	６		IP	５		IP	３		IP	２		IP	３		IP	６		IP	５		IP
+木場　　悠介	2.80	0.15	3.3	５		IP	３		IP	４		IP	５		IP	６		IP	５		IP	３		G3	５		IP	６		IP	５		IP

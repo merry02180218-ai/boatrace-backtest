@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　辰也	9.80	0.17	3.5	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+辻　　　栄蔵	6.44	0.14	3.8	４		IP	２		G2	２		G2	３		G1	１		IP	６		G1	２		IP	欠		G1	５		G1	３		IP
+天野　　友和	6.90	0.17	3.4	１		IP	２		IP	２		IP	６	4	IP	２		IP	３		IP	３		IP	３		IP	１		IP	３		IP
+亀本　　勇樹	4.00	0.20	3.9	２		IP	５	5	IP	５	5	IP	６		IP	３		IP	６		IP	３		IP	４		IP	４		IP	３		IP
+小林　　孝弘	4.30	0.11	1.9	６		IP	１		G3	５		G3	４		IP	４		IP	３		IP	２		IP	５		IP	５		IP	４		IP
+中村　　魁生	7.00	0.15	3.1	２		IP	４	5	IP	１	5	IP	４		G1	４		G1	２		IP	２	4	IP	３		IP	１	5	IP	３	4	IP

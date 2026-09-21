@@ -1,0 +1,8 @@
+data=
+1	0
+里岡　　右貴	8.60	0.14	2.0	１		IP	１		IP	１		IP	２		IP	１		IP	３		IP	１		IP	１		IP	１		IP	５		IP
+松本　　博昭	7.60	0.16	4.3	１		IP	２		IP	３		IP	２		IP	２		IP	２		IP	５	3	IP	１		IP	２		IP	２		IP
+新田　　智彰	4.40	0.19	3.9	５		IP	４		IP	１		IP	６		IP	６		IP	３		IP	４		IP	３		IP	３		IP	４		IP
+吉田　　和仁	4.30	0.19	3.3	６		IP	６		IP	６		IP	３		IP	４		IP	１		IP	３		IP	４		IP	４		IP	３	5	IP
+芝田　　京介	3.10	0.22	3.5	６	6	IP	６	6	IP	３		IP	４		IP	５		IP	５	6	IP	３	6	IP	５		IP	６	6	IP	３		IP
+谷　　　勝幸	3.70	0.17	4.2	４		IP	３	5	IP	４		IP	４		IP	４		IP	５	5	IP	６		IP	５	5	IP	５		G3	２	5	IP

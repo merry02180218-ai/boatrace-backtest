@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　京平	8.60	0.16	3.9	１		IP	３		IP	４		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP
+小玉　　啓太	5.70	0.17	3.9	３		IP	６		IP	３		IP	２		IP	５		IP	２		IP	３		IP	３		IP	３		IP	２		IP
+西川　　拓利	5.22	0.15	2.4	５		IP	２		IP	３		IP	６		IP	転		IP	４		IP	２		IP	３	4	IP	６		IP	１		IP
+高橋　　龍治	4.00	0.16	3.1	６		IP	転	5	IP	５		IP	２	5	IP	３		IP	４		IP	５		IP	６		IP	２		IP	４		IP
+岡崎　　凪汰	2.10	0.18	3.3	３		IP	５		IP	４		IP	６	6	IP	６		IP	６		IP	５		IP	６		IP	５		IP	６	6	IP
+上岡　　巧汰	1.89	0.15	3.4	６		IP	４		IP	５		IP	欠		IP	６		IP	６		IP	５		IP	６		IP	４		IP	６		IP

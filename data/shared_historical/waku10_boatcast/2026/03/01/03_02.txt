@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　峻佑	7.33	0.13	2.0	欠		IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	５		IP	１		IP
+中嶋　誠一郎	5.30	0.14	2.6	４		IP	３		IP	２		IP	４		IP	６		IP	５		IP	２		IP	１		IP	３		G3	４		IP
+北川　　太一	5.10	0.14	2.4	５		IP	１		IP	４		IP	６		G3	５		IP	１		IP	５		IP	５	4	IP	２		IP	１		IP
+一色　　颯輝	5.20	0.22	3.6	２		IP	４		IP	２		IP	落		IP	２		IP	１		IP	４	5	IP	５		IP	２		IP	妨	5	IP
+楠原　　正剛	4.60	0.20	3.8	２		IP	２		IP	５		G1	６	6	IP	４		IP	４		IP	４		IP	５		G3	５		G3	１		IP
+高橋　　直哉	4.20	0.21	3.7	５		IP	３		IP	２		IP	５		G3	１		IP	５	5	IP	５		IP	３		IP	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+荒牧　　凪沙	6.90	0.17	3.7	２	3	IP	２		IP	１		IP	５		IP	６		IP	４		IP	２		IP	１		IP	２		IP	１		IP
+興津　　　藍	6.30	0.14	2.3	２		IP	１		G3	３		G3	２		IP	６		IP	４		IP	２		IP	２		IP	３		IP	４		IP
+鈴木　　茂高	5.50	0.19	3.6	３		IP	５	4	IP	２		IP	３		IP	６		IP	４		IP	４		IP	２		IP	２		IP	２		IP
+竹内　　　来	1.70	0.21	3.5	６		IP	６		IP	６		IP	５	5	IP	６		IP	６		IP	６		IP	６		IP	５	6	IP	３		IP
+品川　　賢次	3.60	0.22	3.9	５		IP	６		IP	１	4	IP	６		IP	６		IP	３		IP	４		IP	３		IP	４		IP	６		IP
+石倉　　洋行	4.30	0.12	2.7	２	4	IP	５		IP	２		IP	３		IP	５	5	IP	５		G1	３		IP	５		IP	４		IP	６		G1

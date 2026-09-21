@@ -1,0 +1,8 @@
+data=
+1	0
+齊藤　　　廉	7.22	0.15	3.8	１		IP	２		IP	４		IP	６		IP	５		IP	１		IP	１		IP	１		IP	１		IP			IP
+岡部　　貴司	4.20	0.18	2.7	４		IP	３		IP	５		IP	Ｆ	3	IP	４		IP	３		IP	４		IP	３		IP	４		IP	３		IP
+石塚　　裕介	5.80	0.13	2.3	１		IP	転		IP	４		IP	２		IP	２		IP	５		IP	２		IP	３		IP	３		IP	３	4	IP
+大串　　重幸	4.50	0.19	4.4	３		IP	３		IP	２		IP	４	3	IP	６	5	IP	１		IP	４		IP	６		IP	６		IP	４		IP
+本岡　　勝利	3.60	0.23	3.9	４		IP	４		IP	４		IP	４		IP	５		IP	４		IP	５		IP	５		IP	３		IP	４		IP
+吉田　　祐貴	3.70	0.22	3.8	５		IP	６		IP	４		IP	６		IP	４		IP	２		IP	３		IP	３		IP	６		IP	４	5	IP

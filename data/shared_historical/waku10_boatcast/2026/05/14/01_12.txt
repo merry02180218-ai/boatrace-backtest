@@ -1,0 +1,8 @@
+data=
+1	0
+中澤　　和志	9.10	0.15	2.9	２		IP	１		IP	３		IP	２		G1	１		G1	１		IP	１		IP	３		IP	１		IP	１		IP
+市川　　哲也	6.78	0.15	2.9	３		IP	欠		IP	１	1	IP	２		IP	６	1	G2	２		G2	２		IP	３		IP	２		IP	４		IP
+下河　　雅史	6.80	0.17	4.1	２		IP	３		IP	４		IP	３	4	IP	３		IP	３		IP	３		IP	２	4	IP	１		IP	２		IP
+村岡　　賢人	5.80	0.12	3.6	４		IP	４		IP	２		IP	４		G1	２		G1	４		IP	５	3	IP	３		IP	１		G1	４		G1
+佐藤　　　航	6.80	0.10	2.2	エ		IP	２		IP	１		IP	５		IP	２		G2	１		IP	４		IP	１		G2	２		IP	３		IP
+重冨　　勇哉	3.70	0.23	4.3	６		IP	３	5	IP	３		IP	２	4	IP	５		IP	２	3	IP	６		IP	５		IP	５	3	IP	６		IP

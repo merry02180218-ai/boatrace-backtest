@@ -1,0 +1,8 @@
+data=
+1	0
+中野　　希一	7.70	0.15	2.7	６		G3	２		G3	５		IP	１		IP	２		IP	１		IP	１		IP	１		IP	３		IP	１		IP
+杉田　　篤光	5.10	0.18	4.0	３		G3	４		IP	５		IP	２		IP	３		IP	６		IP	２		IP	２		IP	３		IP	５		IP
+澤崎　　雄哉	5.70	0.15	2.5	３		G3	３		IP	６		IP	２		IP	２		IP	１		IP	５		IP	４		IP	３		IP	３		IP
+妻鳥　　晋也	5.10	0.20	4.1	６		G3	３		IP	２		IP	２		IP	５		IP	４		IP	４		IP	２		IP	３		IP	４		G3
+東　　　潤樹	4.70	0.18	3.4	５		G3	２		IP	４		IP	３		G3	３		G3	６		IP	２		IP	３		IP	４		IP	５		IP
+山本　　光雄	2.80	0.18	4.0	６		G3	２		IP	６		IP	４		IP	５		IP	４		IP	５		IP	Ｆ		IP	４		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+石井　　伸長	4.50	0.21	5.1	１		IP	３		IP	４		IP	３		IP	４		IP	４		IP	６		IP	４		IP	４		IP	５		IP
+樫葉　　新心	3.78	0.19	4.0	６	3	IP	４		IP	２		G3	４		IP	５		IP	５		IP	３		G3	転		IP	３		IP	６		IP
+杉山　　裕也	5.70	0.14	2.3	２		IP	４		IP	２		IP	３		IP	１		IP	６		G1	３		IP	４		IP	５		G1	３		IP
+松田　大志郎	7.60	0.10	1.9	１		IP	１		G1	Ｆ		G1	５		IP	２		IP	３		G1	３		G1	１		G1	１		IP	１		IP
+荒井　　翔伍	3.40	0.18	3.1	４		IP	５		IP	５	6	IP	６		G2	１		IP	４		IP	５		IP	６		IP	６		IP	３		IP
+内山　　七海	4.20	0.13	2.9	５		IP	３		G3	６		G2	５		G2	４		IP	６		IP	３		IP	２		IP	３		IP	４		IP

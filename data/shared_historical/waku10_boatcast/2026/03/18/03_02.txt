@@ -1,0 +1,8 @@
+data=
+1	0
+齋藤　　　勇	5.30	0.19	3.1	５		IP	３		IP	１		IP	６		IP	５		IP	４		IP	２		IP	３		IP	４		IP	１		IP
+花本　　　剛	3.30	0.18	3.1	欠		IP	６		IP	６		IP	３		IP	２		IP	４	3	IP	３		IP	６		IP	５		IP	４		IP
+鋤柄　　貴俊	5.00	0.15	2.3	２		IP	５		IP	３		IP	３		IP	３		IP	５		IP	５		IP	４		IP	１		IP	４	4	IP
+森定　　晃史	6.00	0.17	3.0	２		IP	４		IP	２		IP	２		IP	３		IP	３		IP	３		IP	２		IP	４		IP	５		IP
+伊藤　　雄二	2.90	0.19	3.9	５		IP	４		IP	５		IP	４		IP	４		IP	５		IP	５	4	IP	４		IP	４		IP	６	6	IP
+渡邊　　雄斗	2.10	0.19	4.2	６		IP	６		IP	２	5	IP	５		IP	５		IP	５		IP	５		IP	転		IP	５		IP	６		IP

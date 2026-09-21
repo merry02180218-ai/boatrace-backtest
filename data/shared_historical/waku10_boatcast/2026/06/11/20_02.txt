@@ -1,0 +1,8 @@
+data=
+1	0
+神田　　達也	6.40	0.18	3.1	１		IP	６		IP	１		IP	２		IP	１		IP	１		IP	５		IP	４		IP	２		IP	６		IP
+石倉　　拓美	3.10	0.20	5.0	５		IP	６		IP	５		IP	６		IP	６		IP	３		IP	３		IP	２		IP	５	6	IP	５		IP
+中島　　昂章	4.70	0.16	3.6	４		IP	３		IP	５		IP	２		IP	５		IP	６		IP	４		IP	４		IP	２		IP	３		IP
+内山　　峻輔	4.50	0.16	2.9	５		IP	２		IP	４		IP	３		IP	１	5	IP	２		IP	６		IP	妨	6	IP	５	6	IP	４		IP
+黄金井　力良	5.30	0.17	3.0	１		IP	３		IP	３		IP	３		IP	３		IP	６		IP	５		G3	３		G3	５		G3	２		IP
+堀本　　和也	4.60	0.10	1.9	４	5	IP	１	1	IP	３	5	IP	４		IP	４		IP	４		IP	５	5	IP	３		IP	５	5	SG	６		G1

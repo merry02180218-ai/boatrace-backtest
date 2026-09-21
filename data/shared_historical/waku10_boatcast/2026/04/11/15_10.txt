@@ -1,0 +1,8 @@
+data=
+1	0
+入澤　　友治	6.60	0.20	3.2	３		IP	２		IP	６		IP	２		IP	１		IP	６		IP	５		IP	１		IP	１		IP	１		IP
+森永　　　淳	7.70	0.12	2.1	１		IP	４		G2	１		IP	１	3	IP	４		IP	５		IP	１		IP	１		IP	２		IP	２		IP
+徳増　　秀樹	6.80	0.12	1.7	３		IP	３		IP	３		G1	２		G1	１		IP	５		IP	２		IP	５		G1	３		G1	１		IP
+森林　　　太	4.90	0.20	4.1	４		IP	４		IP	１		IP	３		IP	５		IP	１		IP	５		IP	５		IP	２		IP	６		IP
+谷口　　　丞	3.20	0.13	2.7	３		IP	４		IP	４		IP	６		IP	３		IP	５		IP	６		IP	４		G3	５		IP	６		IP
+三好　　勇人	3.70	0.23	4.8	５		IP	６	5	IP	４		IP	６		IP	２		IP	４		IP	３		IP	３		IP	６		IP	４		IP

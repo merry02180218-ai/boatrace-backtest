@@ -1,0 +1,8 @@
+data=
+1	0
+南　　　佑典	8.90	0.16	3.0	２		IP	４		IP	２		IP	１		G2	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+高倉　　孝太	4.90	0.13	2.6	４		IP	４		IP	１		IP	４		IP	２		IP	６		IP	５		IP	３		IP	５		IP	２		IP
+島田　　賢人	6.50	0.16	3.3	落		IP	３		IP	４	4	IP	１		IP	転		IP	３		IP	２	5	IP	５		IP	３	4	IP	１		IP
+黄金井　力良	6.20	0.16	2.6	４		IP	３		IP	４		IP	１		IP	４		IP	２		IP	２		G3	３		IP	３		IP	３		IP
+多田　　有佑	3.60	0.23	4.5	１		IP	４		IP	４		IP	６		IP	４		IP	５		IP	５		IP	６		IP	４		IP	４		IP
+佐藤　　　悠	3.67	0.16	3.4	４		IP	３		G2	２		IP	６		IP	４		G2	６		G2	６		IP	６		IP	沈		IP	４		IP

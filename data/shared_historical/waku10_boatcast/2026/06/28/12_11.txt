@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　梨菜	7.60	0.19	3.1	１		IP	１		IP	３		IP	１		IP	５		IP	１		IP	４		IP	３		IP	２		IP	１		IP
+高憧　　四季	8.20	0.17	3.2	２		IP	３		G3	１		G1	１		SG	６		SG	１		IP	４		G2	３		G2	１		IP	１		IP
+海野　ゆかり	7.40	0.16	2.5	２	2	IP	２		G3	５		G3	１		G3	１		IP	１		IP	２		G3	４		G2	５		G2	１		IP
+細川　　裕子	6.20	0.20	3.7	３		IP	２		G3	１		G3	２		IP	５		IP	２		G2	３		IP	３		IP	３		IP	６		IP
+前原　　　哉	4.30	0.23	5.1	１		IP	４		IP	４		G3	４		IP	５		IP	３		IP	５		IP	６		IP	３		IP	４		IP
+中川　　りな	4.30	0.18	3.1	６		IP	５		G3	１	5	IP	３	5	IP	６		G3	４		IP	６		IP	４		IP	２		IP	３		IP

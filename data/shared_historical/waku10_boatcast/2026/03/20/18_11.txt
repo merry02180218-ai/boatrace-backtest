@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　竜一	7.30	0.13	2.2	１		IP	４		IP	６	2	IP	１		IP	１		IP	１		IP	４		IP	４		IP	１		IP	１		IP
+米丸　　乃絵	7.10	0.12	2.6	３		G1	２		IP	２		IP	２		G1	１		G3	６		IP	４		IP	１		IP	３		G3	２		G3
+芹澤　　克彦	3.50	0.12	3.0	６		IP	３		IP	４		IP	２		IP	６		IP	５		IP	３		IP	６	5	IP	４		IP	５		IP
+山崎　　　祥	5.60	0.16	3.3	３		IP	２		IP	１		IP	５		IP	６		IP	３		IP	２		IP	２		IP	５		IP	４		IP
+津留　浩一郎	3.80	0.18	3.5	４		IP	４		IP	６		IP	５		IP	６		IP	３		IP	３		IP	４		IP	４		IP	３	4	IP
+加藤　　高史	2.80	0.18	4.1	３		IP	５		IP	５		IP	３	5	IP	６	5	IP	６		IP	５		IP	５		IP	４		IP	５	5	IP

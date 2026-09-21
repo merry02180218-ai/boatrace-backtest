@@ -1,0 +1,8 @@
+data=
+1	0
+鳥飼　　　眞	8.60	0.18	3.3	１		IP	１		IP	１		IP	５		IP	２		IP	１		IP	１		IP	１		IP	１		IP	３		IP
+梶野　　学志	5.50	0.17	3.7	３		IP	２		IP	３		IP	６		IP	２		IP	５		IP	２		IP	１		IP	５		IP	４	1	IP
+栗山　　繁洋	3.70	0.24	4.1	６	4	IP	１		IP	４	4	IP	５		IP	５		IP	６		IP	２	4	IP	５		IP	６		IP	３		IP
+大場　　恒季	4.78	0.14	2.3	５		G2	５		IP	１		IP	５		IP	５		IP	４		IP	１		IP	４		IP	転		IP	３	3	IP
+吉田　　宗弘	2.90	0.26	4.8	１	4	IP	５		IP	３		IP	６		IP	５		IP	６		IP	６		IP	５		IP	５		IP	５		IP
+伊藤　　尚汰	1.80	0.19	4.2	５		IP	６		IP	４		IP	４		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP

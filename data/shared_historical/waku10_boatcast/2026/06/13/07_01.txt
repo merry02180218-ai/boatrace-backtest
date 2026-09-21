@@ -1,0 +1,8 @@
+data=
+1	0
+村田　　浩司	7.80	0.15	3.1	３		IP	１		IP	２		IP	２		IP	５		IP	３		IP	１		IP	１		IP	１		G3	２		G3
+赤澤　　文香	5.10	0.23	4.6	６		IP	３		IP	４		IP	１		G3	５		G3	５		IP	４		IP	４		IP	２		IP	１		G3
+中村　　　真	5.90	0.16	2.7	２		IP	３	2	IP	２		IP	２		IP	３		IP	５		IP	４		IP	６		G3	２		IP	２		IP
+林　　　恵祐	2.00	0.19	4.4	５		IP	６		IP	６		IP	５		IP	６		IP	３		IP	６		IP	５		IP	５		IP	５		IP
+西尾　　亮輔	4.60	0.14	3.5	４		IP	２		IP	４		IP	２		IP	２		IP	５		IP	４		IP	４		IP	５		IP	５		IP
+泉　　　啓文	2.80	0.19	4.3	６		IP	６		IP	５		IP	２	5	IP	５		IP	４		IP	６		IP	６		IP	３		IP	５		IP

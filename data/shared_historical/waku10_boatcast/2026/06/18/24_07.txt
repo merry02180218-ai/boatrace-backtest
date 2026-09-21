@@ -1,0 +1,8 @@
+data=
+1	0
+松山　　将吾	8.10	0.14	2.3	２		G3	１		G3	３		IP	１		IP	４		IP	３		IP	１		IP	１		IP	１		IP	３		IP
+宮之原　輝紀	6.10	0.15	3.7	２		IP	２		IP	１		IP	２		G1	５		G1	２		IP	３		G1	６		SG	６	1	SG	６		G1
+末永　　由楽	6.00	0.12	1.8	１		IP	６		G2	４		G2	１		G2	６		G2	５		IP	３		IP	２		IP	１		IP	４		IP
+大串　　重幸	5.30	0.19	3.5	６		IP	３		IP	４		IP	４		IP	３		IP	４		IP	２		IP	３	3	IP	３		IP	２	5	IP
+中山　　翔太	5.44	0.11	3.2	３		IP	４		IP	３		IP	２		IP	２		IP	２		IP	６		G1	転		IP	５	3	IP	４		G1
+安河内　　将	5.30	0.15	3.7	２	3	IP	６		G3	３	5	IP	１	5	IP	１	4	IP	５		G1	６		G1	４		G1	２	5	IP	欠		G1

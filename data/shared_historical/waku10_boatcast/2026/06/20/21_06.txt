@@ -1,0 +1,8 @@
+data=
+1	0
+三嶌　さらら	6.40	0.21	4.6	４		IP	３		IP	２		IP	１		IP	４		IP	４		IP	１		IP	１		IP	４		IP	４		IP
+是澤　　孝宏	6.20	0.15	3.5	３		IP	４		IP	２		G2	１		G2	６		IP	６	3	IP	４		IP	２		IP	２		IP	１		IP
+岡部　　大輝	6.40	0.16	3.2	２		IP	２	4	G3	２		G3	２		IP	２	4	IP	３	4	IP	５		IP	３		IP	２		IP	５		IP
+久田　　　武	5.50	0.17	3.5	５		IP	６		IP	２		IP	２		IP	３		IP	３		IP	２		IP	２		IP	４		IP	４		IP
+片岡　　恵里	3.10	0.18	4.3	３		IP	５		IP	６		IP	６		IP	６		G3	６		G3	６		IP	５		IP	２		G3	２		G3
+山下　　心一	2.78	0.17	3.8	６		IP	３		IP	５		IP	２		IP	６		IP	４		IP	落		IP	５		IP	６		IP	転		IP

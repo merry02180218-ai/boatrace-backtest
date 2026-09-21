@@ -1,0 +1,8 @@
+data=
+1	0
+平本　　真之	9.90	0.15	2.9	２		SG	２		IP	２		IP	１		G1	１		G1	１		G1	１		G1	１		G1	２		IP	１		IP
+井上　　一輝	7.40	0.13	3.1	３		IP	３		G1	３		G1	４		G1	２		G1	２		IP	３		IP	２		IP	２		IP	１		IP
+白井　　英治	6.90	0.15	3.3	２		SG	３		G1	２	4	G3	５		G1	３		G1	２		G1	４		G1	２		IP	４		IP	２		IP
+谷野　　錬志	7.40	0.15	2.5	２		IP	１		IP	２		IP	６		G1	２		IP	１		IP	６	5	G1	１		IP	２		IP	２		IP
+吉田　　拡郎	5.50	0.13	3.2	６		G1	１		G1	４		IP	６		IP	６		IP	２	4	IP	３		G1	５		G1	３		G1	１	6	G1
+板橋　　侑我	4.40	0.19	4.5	４		G3	６		G3	３		G3	６		G3	４		G1	３		G1	３		G1	５		G1	２		IP	６		G1

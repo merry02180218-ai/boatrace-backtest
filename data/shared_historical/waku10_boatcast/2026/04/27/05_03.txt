@@ -1,0 +1,8 @@
+data=
+1	0
+折下　　寛法	7.40	0.12	1.2	５		G3	２		IP	１		IP	１		IP	２		G3	３		IP	１		IP	３		IP	３		IP	２		IP
+三浦　　裕貴	4.60	0.16	2.7	２		IP	５		IP	１		IP	４	3	IP	３		IP	３	3	IP	５		IP	転		IP	３		IP	５	1	IP
+三角　　哲男	6.80	0.14	2.6	３		IP	３		IP	４		IP	５		IP	２		IP	３		IP	１	2	IP	１		IP	３		G1	２		IP
+佐藤　隆太郎	5.90	0.15	2.8	２		IP	３		IP	２	3	IP	２		IP	３		IP	５		G1	１		IP	転		IP	３		IP	５		SG
+大月　　遊雅	2.70	0.17	3.6	４		IP	４		IP	６	6	IP	６		IP	６	6	IP	６		IP	６		IP	５		IP	５		IP	１		IP
+伏見　　俊介	3.67	0.14	2.5	６		IP	２		IP	転		IP	６		IP	１		IP	６		IP	５		IP	２		IP	６		IP	６		IP

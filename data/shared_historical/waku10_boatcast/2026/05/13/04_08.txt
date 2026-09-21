@@ -1,0 +1,8 @@
+data=
+1	0
+荒木　　颯斗	8.00	0.16	3.5	１		IP	５		IP	１		IP	１		IP	２		IP	２		IP	１		IP	４		IP	２		IP	１		IP
+近藤　雄一郎	5.40	0.19	2.8	５		IP	５		G3	４		IP	２		IP	３		IP	１		IP	５		IP	２		IP	２		IP	４		IP
+高橋　　淳美	3.10	0.16	3.0	６		G3	６		G3	３		IP	６		IP	６		IP	４		IP	３		IP	６		IP	２		IP	５		IP
+吉田　　拡郎	6.80	0.12	2.8	２		IP	２		IP	１		IP	５		G1	３		G1	６		G1	３		G1	３		G1	２		G1	４		G1
+表　　　健太	3.00	0.18	3.6	６		IP	５		IP	４		IP	４		IP	６		IP	６		IP	５		IP	２		IP	４		IP	転		IP
+市川　　瑚幸	1.50	0.20	4.8	６		IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	４		IP

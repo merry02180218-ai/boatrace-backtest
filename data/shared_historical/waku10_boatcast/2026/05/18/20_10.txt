@@ -1,0 +1,8 @@
+data=
+1	0
+小池　　公生	7.80	0.23	4.3	１		IP	２		IP	３		IP	１		IP	４		IP	１		IP	１		IP	２		IP	２		IP	４		IP
+中里　　英夫	4.40	0.19	3.9	４		IP	２		IP	１		IP	６		IP	５		IP	３		IP	５	3	IP	５	3	IP	６		IP	２		IP
+木場　雄二郎	4.80	0.18	3.4	３		IP	３		IP	６		IP	５		IP	２		IP	３		IP	４		IP	６		IP	２		IP	３	4	IP
+小林　　一樹	7.00	0.11	2.2	４		IP	３		IP	２		IP	１		IP	４		IP	１		IP	３		IP	１		IP	２		IP	４		IP
+宮脇　　遼太	5.30	0.20	4.2	２		IP	６		IP	２		IP	２		IP	５		IP	５		IP	４		IP	２		IP	３		IP	４		IP
+松竹　　大輔	2.70	0.15	3.2	２		IP	５		IP	６		IP	５		G3	６	5	IP	４		IP	５		IP	６		IP	４		IP	５		IP

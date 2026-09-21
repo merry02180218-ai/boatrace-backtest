@@ -1,0 +1,8 @@
+data=
+1	0
+前沢　　丈史	9.10	0.12	1.9	１		IP	２		IP	１		G2	１		IP	１		IP	２		IP	１		IP	３		IP	２		IP	１		IP
+小宮　　涼雅	3.90	0.19	3.8	２		IP	３		IP	２		IP	６		IP	６		IP	６		IP	５		IP	５		IP	３		IP	４		IP
+山川　　雄大	4.10	0.16	4.0	３		IP	６		IP	５		IP	６		IP	３	4	IP	３		IP	３		IP	２		IP	４		IP	６		IP
+石塚　　久也	6.00	0.18	3.1	２		IP	６		IP	２		IP	１		IP	３	5	IP	２		IP	３		IP	３		IP	６		IP	３		IP
+藤原　　早菜	3.70	0.18	4.2	３		IP	３		IP	３		IP	転		IP	６		IP	４		IP	５		G3	５		G3	４		G3	３		G3
+山口　　　亮	2.50	0.20	4.3	６		IP	３		IP	４		IP	４		IP	５		IP	５		IP	５		G3	６		IP	６		IP	５		IP

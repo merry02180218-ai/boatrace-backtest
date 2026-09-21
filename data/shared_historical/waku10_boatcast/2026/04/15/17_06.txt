@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　和佐	7.90	0.15	3.1	１		IP	２		IP	３		IP	１		IP	１		IP	１		IP	１		IP	４		IP	６		IP	１		IP
+泉　　　具巳	6.10	0.15	3.4	２		IP	２		IP	２	4	IP	４		IP	１		IP	５		IP	６		IP	３		IP	２		IP	３		IP
+川崎　　智稔	5.30	0.13	2.3	４		IP	３		IP	１		IP	３		IP	６		IP	３		IP	４		IP	２		IP	３		IP	５		IP
+中北　　　涼	3.30	0.16	3.6	４		IP	４		IP	５		G3	３		G3	３		IP	５	5	IP	５		IP	４		IP	５		IP	６		G3
+熊本　　英一	2.00	0.23	5.0	６		IP	５		IP	５	6	IP	６		IP	６		IP	６	6	IP	６	6	IP	２		IP	６		IP	５		IP
+向井田　直弥	3.78	0.12	3.0	６		IP	６		IP	４		IP	転		IP	５		IP	４		IP	５		IP	１		IP	１		IP	転		IP

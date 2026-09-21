@@ -1,0 +1,8 @@
+data=
+1	0
+新出　　浩司	6.00	0.17	3.1	１		IP	３		IP	５		IP	２		IP	２		IP	５		IP	５		IP	３		IP	１		IP	３		IP
+岡部　　大輝	5.90	0.17	3.4	３	1	IP	２		IP	５		IP	１		IP	３		IP	２		IP	３		IP	６		IP	１		IP	５		IP
+大塚　　雅治	3.40	0.20	4.0	４	4	IP	４		IP	５		IP	４		IP	３		IP	６		IP	５		IP	１		IP	６		IP	Ｆ		IP
+古田　　祐貴	4.20	0.16	3.4	５		G3	６	5	IP	３		IP	１		IP	３		IP	１		IP	５		IP	６		G3	５		IP	６		G1
+牧山　　敦也	4.80	0.21	4.5	４		IP	５		IP	３		IP	３		IP	２		IP	４		IP	２		IP	４		IP	４		IP	５		IP
+伊藤　　誠二	3.10	0.16	3.5	５		IP	５		IP	５		IP	５		IP	４		IP	４		IP	４		IP	４		IP	３		IP	６		IP

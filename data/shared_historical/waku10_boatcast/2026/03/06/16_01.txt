@@ -1,0 +1,8 @@
+data=
+1	0
+藤原　啓史朗	8.30	0.15	2.4	２		G1	１		IP	１		IP	１		IP	１		IP	２		IP	５		G1	６		G2	１		G2	１		IP
+秦　　　英悟	6.40	0.14	3.1	４		G1	１		IP	６		G1	４		G1	３		G2	２		IP	２		IP	４		IP	３		G1	２		IP
+木村　　仁紀	7.10	0.13	2.9	１		IP	２		G1	１		IP	３		G2	４		G2	２		IP	２	2	IP	４		IP	５		IP	２	2	IP
+葛原　　大陽	3.30	0.16	4.6	５		G1	６		IP	３		IP	６		IP	４	3	G1	６		IP	３		IP	３		IP	６		IP	６		IP
+井上　　一輝	7.60	0.13	2.9	３		G1	４		G1	２		G1	３		G1	２		IP	３		IP	３		IP	１		IP	３		SG	１		IP
+吉田　　裕平	4.80	0.12	2.4	５		G1	５		G1	５		G1	２		G1	５		G1	２		IP	５		SG	４		SG	５		G1	４		SG

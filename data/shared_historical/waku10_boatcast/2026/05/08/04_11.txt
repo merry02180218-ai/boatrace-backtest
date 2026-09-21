@@ -1,0 +1,8 @@
+data=
+1	0
+齊藤　　　仁	7.90	0.14	2.3	１		IP	３		IP	３		G1	１		G1	１		IP	３		IP	２		IP	１		G3	１		G3	６		G3
+島崎　丈一朗	4.90	0.16	3.2	１		IP	４		IP	４		IP	４		IP	１		IP	６		IP	５		IP	４		IP	４		IP	３		IP
+渡邉　　睦広	5.50	0.13	2.7	５		IP	２		IP	４		IP	２		IP	１		IP	４		IP	２		IP	２		IP	６		IP	５		IP
+永井　　聖美	5.20	0.18	3.5	３		IP	１		IP	５		IP	２		IP	４		IP	５	5	IP	４		IP	２		IP	５		IP	３		IP
+山崎　　善庸	1.60	0.22	4.8	５		IP	６		IP	６		IP	５		IP	５		IP	５		IP	６		IP	５		IP	６		IP	５		IP
+渡邉　真奈美	2.90	0.16	2.7	５		IP	４		G3	６		G3	４		G3	６		G3	４		G3	４		IP	３		IP	５		IP	６		IP

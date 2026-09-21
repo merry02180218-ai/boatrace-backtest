@@ -1,0 +1,8 @@
+data=
+1	0
+藤堂　　里香	8.10	0.20	3.1	１		IP	１		IP	２		G3	２		G3	１		IP	１		IP	２		IP	３		IP	３		G1	４		IP
+田村　　美和	2.90	0.19	4.2	５		G3	４		G3	５		IP	５		IP	２	3	G3	５		G3	６		IP	５		IP	５		IP	４		IP
+堀之内紀代子	5.10	0.18	3.0	４		G3	４		G2	４		G2	１		IP	５		IP	６		IP	５		IP	３		IP	２		IP	２		G3
+飯塚　　　響	3.40	0.22	4.3	４	3	IP	５		IP	２		IP	６		IP	６		IP	４		G3	４		G3	６		IP	６		IP	２	6	IP
+倉田　　郁美	3.30	0.19	3.9	５		G3	５		IP	４		IP	５		IP	６		IP	４		IP	３		IP	３		IP	４		IP	５		IP
+永井　　聖美	3.20	0.14	3.1	４	5	G3	３		IP	６		IP	３		IP	５		IP	４		IP	４		IP	５		IP	５		IP	６		IP

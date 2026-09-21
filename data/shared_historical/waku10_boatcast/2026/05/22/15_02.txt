@@ -1,0 +1,8 @@
+data=
+1	0
+浅見　　宗孝	5.40	0.15	3.3	４		IP	Ｆ		IP	１		IP	２		IP	４		IP	４		IP	４		IP	２		IP	１		IP	５		IP
+上村　慎太郎	5.10	0.25	5.3	４		IP	４		IP	４		IP	４		IP	２		IP	４		IP	４		IP	２		IP	１		IP	６		IP
+渡邉　　　健	5.20	0.10	2.5	３		IP	４		IP	５	4	IP	４		G3	５		G3	３		IP	２		IP	３		IP	３		IP	２		IP
+烏野　　賢太	5.10	0.15	2.3	２		IP	３		IP	３	5	IP	４		IP	４		IP	６		G3	２		G3	４		IP	３		IP	４	5	IP
+久保　　翔耶	1.50	0.21	5.0	６	6	IP	５	6	IP																								IP
+馬袋　　義則	6.80	0.18	3.3	３		IP	５	4	IP	４	5	IP	１	4	IP	２	2	IP	２	3	IP	４		IP	１	3	IP	２	5	IP	２	2	IP

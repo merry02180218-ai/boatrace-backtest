@@ -1,0 +1,8 @@
+data=
+1	0
+倉田　　茂将	6.90	0.16	3.7	６		IP	１		IP	５		IP	２		IP	２		IP	１		IP	５		IP	２		IP	１		IP	１		IP
+伊達　　正利	5.10	0.18	3.0	６		IP	５		IP	１		IP	４		IP	６		IP	１		IP	１		IP	２		IP	４		IP	６		IP
+岩瀬　　裕亮	7.20	0.12	2.9	２		IP	２		G1	４		G1	２		G1	３		IP	２		IP	３		G1	１		G1	６		G1	３		G1
+杉山　　正樹	7.40	0.17	3.1	２		G1	３		G1	２		IP	５		IP	２	3	G1	３		G1	２		G3	４		G3	１		IP	１		IP
+川原　　　涼	5.30	0.16	2.9	２		IP	３		IP	３		IP	４	6	IP	６	4	IP	２		IP	１		IP	５		IP	５		IP	３		IP
+近藤　　颯斗	2.60	0.17	3.9	Ｆ		IP	５		IP	３		IP	５		IP	４		IP	５		IP	４		IP	５		IP	６		IP	６		IP

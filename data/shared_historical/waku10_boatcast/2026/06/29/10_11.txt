@@ -1,0 +1,8 @@
+data=
+1	0
+喜井　つかさ	8.20	0.16	2.4	１		G3	１		G3	１		G3	１		IP	１		IP	５		G3	２		G3	５		G3	１		G3	１		G3
+渡辺　　真至	6.00	0.15	2.9	１		IP	１		IP	妨		IP	１		IP	２		IP	６		IP	６		IP	２		IP	３		IP	３		IP
+金子　　貴志	4.50	0.21	3.9	５		IP	２		IP	３		IP	４	4	IP	２		IP	２		IP	妨		IP	４		IP	４		IP	６		IP
+中村　　日向	6.60	0.13	2.7	３		G2	５		IP	転		IP	３		G2	３		IP	２		IP	３		IP	２		G1	２		G1	１		SG
+抹香　　雄三	4.10	0.16	3.3	４		IP	６		IP	４		IP	４		IP	５		IP	３		IP	３		IP	４		IP	４		IP	３		IP
+森野　　正弘	6.20	0.10	2.5	１		IP	４		IP	３		IP	４		IP	２		G3	１	4	IP	１		IP	４		IP	４		IP	５		IP

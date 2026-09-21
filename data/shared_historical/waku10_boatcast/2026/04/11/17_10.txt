@@ -1,0 +1,8 @@
+data=
+1	0
+上田　　紗奈	8.10	0.14	2.8	１		IP	１		IP	２	2	IP	５		G1	１		IP	２		IP	１		IP	５		IP	１		IP	１		IP
+川上　　聡介	4.40	0.14	2.8	５		IP	２	3	IP	５		IP	２		IP	６		IP	３		IP	２	3	IP	５		IP	６	3	IP	３	4	IP
+中島　　昂章	5.00	0.18	3.8	４		IP	４		IP	２		IP	３		IP	５		IP	３		IP	２		IP	５	4	IP	３		IP	４		IP
+鈴木　　孝明	7.00	0.19	2.9	２		IP	４		IP	１		IP	４		IP	４		IP	３		IP	１		IP	１		IP	３		IP	２		IP
+丹下　　　将	4.90	0.14	2.4	３		IP	３		IP	２		IP	６		IP	１		IP	４		IP	４		IP	４		IP	５		IP	４		IP
+荒井　　輝年	3.30	0.18	2.9	６		IP	５		IP	４		IP	３		IP	５		IP	３		IP	５		IP	４		IP	４		IP	５		IP

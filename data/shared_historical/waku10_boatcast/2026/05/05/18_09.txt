@@ -1,0 +1,8 @@
+data=
+1	0
+藤本　　佳史	7.90	0.15	3.0	１		IP	５		IP	１		IP	６		G3	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP
+齊藤　　大将	4.70	0.19	3.2	６		IP	３		IP	６		IP	６		IP	２		IP	３		IP	４		IP	２		IP	２		IP	４		IP
+羽野　　直也	8.30	0.13	2.7	１		IP	２		IP	３		G1	３		G2	２		G2	１		G1	４		G1	３		IP	１		G1	２		IP
+伊藤　　啓三	5.56	0.17	3.6	５		IP	４		IP	１	5	IP	２		IP	３		IP	３		IP	２	5	IP	転		IP	４		IP	５		IP
+羽田　　妃希	4.20	0.19	4.0	４		IP	６		IP	４		IP	４		IP	５	4	IP	４		IP	２		IP	２		IP	６		IP	３		IP
+河野　　真也	2.70	0.22	5.5	５		IP	６		IP	５		IP	６		IP	４		IP	１		IP	６		IP	６		IP	４		IP	６		IP

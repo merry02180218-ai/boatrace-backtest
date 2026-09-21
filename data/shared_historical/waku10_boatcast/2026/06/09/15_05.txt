@@ -1,0 +1,8 @@
+data=
+1	0
+赤井　星璃菜	6.80	0.11	2.1	１		G3	３		IP	４		IP	１		IP	２		IP	３		IP	５		IP	２		IP	２		IP	３		IP
+樋口　由加里	5.40	0.16	3.3	２		IP	３		IP	２		IP	４		IP	５		G3	１		G3	１		G3	６		G3	６		IP	５		IP
+寺田　　千恵	6.40	0.14	2.3	１		IP	３		IP	１		IP	３		IP	４		G2	４	4	G1	４		G3	２		G3	４		G3	４		G3
+田上　　　凜	4.80	0.14	2.4	１	6	G2	１		IP	５		IP	１		IP	６		IP	６		IP	１		IP	転		IP	５		IP	６	6	IP
+筒井　　美琴	2.60	0.21	4.1	４		IP	５	6	IP	６		IP	５		G3	４	4	IP	５		IP	６		IP	５	6	IP	４		IP	４		G3
+三嶌　こころ	2.40	0.24	5.2	５		IP	４		IP	６		IP	６		IP	５		IP	４		IP	４		IP	６		IP	６		IP	４		G3

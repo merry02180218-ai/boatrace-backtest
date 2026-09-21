@@ -1,0 +1,8 @@
+data=
+1	0
+上平　　真二	9.50	0.10	2.3	１		IP	２		G1	１		IP	１		IP	１		IP	１		IP	２		IP	３		IP	１		G1	１		G1
+北川　　敏弘	5.10	0.21	3.9	６		IP	４		IP	３		IP	４		IP	４		IP	３		IP	２		IP	４		IP	１		IP	４		IP
+富澤　　祐作	6.20	0.12	1.4	４		IP	１		IP	２		IP	１		IP	４		IP	３		IP	４		IP	４		IP	２		IP	４		IP
+上之　　晃弘	4.70	0.15	3.4	３		IP	４		IP	１		IP	４		IP	５		IP	６		G3	５		G3	４		IP	１		IP	４		IP
+片岡　　秀樹	3.70	0.14	3.0	５		IP	４		IP	４		IP	４		IP	２		IP	３		IP	Ｆ		IP	５	6	IP	６		IP	３		IP
+宇土　　泰就	3.20	0.13	3.6	４		IP	５		IP	６		IP	３		IP	６		IP	５		IP	５		IP	４		IP	４		IP	３		IP

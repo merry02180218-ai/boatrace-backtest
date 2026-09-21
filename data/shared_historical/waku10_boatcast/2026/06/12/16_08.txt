@@ -1,0 +1,8 @@
+data=
+1	0
+中越　　博紀	7.10	0.13	2.7	１		IP	１		IP	６		IP	１		IP	４	2	IP	２		IP	３		IP	１		IP	４		IP	２		IP
+萩原　　知哉	5.30	0.13	2.2	６		IP	２		IP	４		IP	５	3	IP	２		IP	２		IP	４		IP	３		IP	１		IP	５		IP
+角谷　　健吾	6.50	0.11	2.1	４		IP	２		IP	２		IP	２		IP	３		IP	４		IP	６		IP	２		IP	１		IP	２		IP
+山田　　佑樹	6.70	0.13	3.1	２		IP	２		IP	２		IP	４		IP	２		IP	２		IP	６		IP	５	5	IP	１		IP	１		IP
+福田　　柊人	2.00	0.23	6.0	５	6	IP																											IP
+前田　　将太	4.10	0.14	3.4	３		IP	２		IP	６		G1	５		G1	５		IP	５		IP	５		G1	４		IP	４		IP	４		G2

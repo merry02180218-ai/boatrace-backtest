@@ -1,0 +1,8 @@
+data=
+1	0
+塚田　　修二	3.20	0.25	4.7	６		IP	２		IP	６		IP	３		IP	５		IP	４		IP	６		IP	６	2	IP	３		IP	５		IP
+村松　　将平	4.60	0.12	2.7	５		IP	３		IP	３		IP	２		IP	５	4	IP	５	3	IP	４		IP	４		IP	４		IP	２		IP
+坪口　　竜也	6.10	0.18	3.8	５		IP	３		G3	２		G3	２		IP	２		IP	４		IP	３		IP	３		IP	３		IP	３		IP
+福来　　　剛	7.10	0.17	2.3	５		IP	２		IP	２		IP	１		G1	１		G1	６		G1	４		G1	３		IP	２		IP	１		IP
+荒牧　　凪沙	3.60	0.19	3.7	３		IP	５		IP	５		IP	４		IP	５		IP	４		IP	６		IP	３		IP	２		IP	６		G3
+丹下　　　健	2.50	0.16	3.5	３		IP	５		IP	６		IP	６		IP	６		IP	５	5	IP	４		IP	５		IP	５		IP	４		IP

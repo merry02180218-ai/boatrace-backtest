@@ -1,0 +1,8 @@
+data=
+1	0
+中嶋　　達也	5.50	0.16	3.1	１		IP	３		IP	６		IP	１		IP	１		IP	５		IP	２		IP	６		IP	６		IP	３		IP
+石川　　吉鎬	5.70	0.20	4.9	３		IP	２		IP	１		IP	４		IP	３		IP	５		IP	３		IP	４		IP	１	3	IP	６		IP
+前出　　達吉	7.00	0.14	1.5	３		IP	２		IP	３		IP	１		G3	１		G3	３		IP	３		IP	２		IP	３		IP	４		IP
+福嶋　　智之	4.10	0.15	3.1	６		IP	３		IP	３		IP	１		IP	４		IP	５		IP	３		IP	５		IP	５		IP	５	6	IP
+中里　　昌志	3.40	0.18	3.8	４		IP	２	4	IP	３		IP	５		IP	６	4	IP	６		IP	６	4	IP	６		IP	２		IP	５		IP
+森作　　雄大	2.67	0.14	2.8	６		G2	５		IP	６		IP	エ		IP	１	5	IP	５		IP	５		IP	５		IP	６		IP	５		IP

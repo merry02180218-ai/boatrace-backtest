@@ -1,0 +1,8 @@
+data=
+1	0
+中辻　　崇人	8.56	0.17	4.7	１		IP	１		IP	転		IP	１		IP	２		IP	１		IP	５		SG	１		G1	１		G1	５		G1
+實森　　美祐	7.50	0.15	3.2	２		IP	２		IP	１		IP	２		IP	２		IP	２		G1	１		IP	４		G1	３		G1	５		IP
+安河内　　健	6.20	0.15	3.0	２		IP	６		G2	１		IP	４		G1	２		G1	４	4	IP	２		IP	５		IP	２		IP	３		IP
+中辻　　博訓	5.10	0.17	2.9	３		IP	３		IP	５		IP	２		IP	２		IP	６		G3	４		IP	４		IP	３		IP	３		IP
+垂水　　　悠	4.60	0.09	1.9	３		IP	５	6	IP	６		IP	３		G3	１		IP	６		IP	４		IP	５		G1	５		G1	１		IP
+松本　　　怜	3.10	0.20	4.4	６		IP	５		IP	６		IP	４		IP	２		IP	５		IP	４		IP	５		IP	３		IP	６		IP

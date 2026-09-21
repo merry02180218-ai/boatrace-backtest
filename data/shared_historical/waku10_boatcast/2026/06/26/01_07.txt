@@ -1,0 +1,8 @@
+data=
+1	0
+四宮　　与寛	8.40	0.10	1.9	１		IP	２		IP	４		IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+渡辺　　　崇	4.50	0.19	5.0	２		IP	５		IP	３		IP	２		IP	２		IP	５		IP	４		IP	４		IP	５		IP	６		IP
+北村　　征嗣	6.60	0.17	3.4	１		IP	３		IP	２		G3	３		G3	妨		IP	４		IP	３		G1	４	4	G1	１		IP	１	4	IP
+長谷川　　充	4.50	0.17	3.2	６		IP	５	5	IP	４		IP	５		IP	２		IP	５		IP	４		IP	３		IP	２		IP	２		IP
+西川　　拓利	5.40	0.11	2.3	６		IP	１		IP	５		IP	４		IP	２		IP	３		IP	３		IP	１		IP	４		G3	６		G3
+石原　　　光	2.40	0.21	4.4	４		IP	５		IP	５		IP	５		IP	５		IP	６		IP	２		IP	６		IP	６		IP	６		IP

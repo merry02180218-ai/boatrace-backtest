@@ -1,0 +1,8 @@
+data=
+1	0
+向井　　美鈴	7.90	0.16	3.0	１		IP	１		IP	３		IP	２		IP	１		IP	１		IP	２		IP	２		IP	３		IP	５		G1
+佐々木　完太	6.67	0.13	3.4	２		IP	１		G1	６	3	G1	落		IP	４		IP	１		SG	２		IP	４	3	IP	２		G1	６		G1
+片岡　　恵里	6.00	0.18	3.6	２		G3	３		G3	５		IP	３		IP	２		IP	５		G3	２		G3	２		G3	２		G3	４		G3
+庄島　　潤成	2.90	0.15	3.6	３	5	IP	６	5	IP	５		IP	５	5	IP	６		IP	４		IP	６	6	IP	落	5	IP	２	6	IP	４		IP
+小林　　基樹	3.70	0.19	4.2	３		IP	４		IP	４		IP	４		IP	４		IP	６		IP	４		IP	５	4	IP	４		IP	４		IP
+寺田　　夢生	1.20	0.11	2.3	６		IP	６		IP	６		G3	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP

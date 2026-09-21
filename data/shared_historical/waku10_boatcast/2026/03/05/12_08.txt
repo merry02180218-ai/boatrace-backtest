@@ -1,0 +1,8 @@
+data=
+1	0
+丸岡　　正典	7.70	0.17	3.1	１		IP	６		IP	２		IP	１		IP	１		IP	６		G2	２		IP	１		IP	２		IP	１		IP
+金児　　隆太	6.20	0.20	4.4	２		IP	４		IP	２	1	IP	５		IP	４		IP	３		IP	２		IP	２		IP	４		IP	１	4	IP
+新田　　智彰	5.30	0.18	3.6	６		IP	３		IP	４		IP	３		IP	３		IP	４		IP	２		IP	２		IP	４		IP	３		IP
+大池　　佑来	5.10	0.17	3.4	６		G1	３		IP	４		IP	３		IP	６		IP	２	3	IP	５		SG	５		SG	３		G1	３		G1
+吉村　　正明	5.20	0.14	3.0	１		IP	３		IP	３		IP	６		IP	４		IP	４		IP	３		IP	２		IP	６		IP	３		IP
+小林　　遼太	3.10	0.24	5.8	３		IP	４		IP	５		IP	４		IP	５		IP	５		IP	３		IP	５		IP	５		IP	６		IP

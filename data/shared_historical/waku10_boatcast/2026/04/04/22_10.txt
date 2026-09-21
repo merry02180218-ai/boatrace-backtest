@@ -1,0 +1,8 @@
+data=
+1	0
+廣中　智紗衣	7.80	0.19	3.2	１		IP	１		IP	４		IP	１		G3	１		G3	２		G3	５		G1	２		G1	４		G3	１		G3
+平川　　香織	6.10	0.20	3.6	１	3	IP	１		IP	２		IP	２		G3	１		IP	４		G3	４		IP	６		IP	５		IP	４		IP
+山崎　小葉音	4.60	0.16	2.5	３		IP	２		IP	１		IP	２		IP	４		IP	３		IP	６		IP	６		IP	６		IP	６		IP
+真子　奈津実	3.60	0.14	2.9	２		IP	４		IP	４		IP	５		IP	６		IP	３		IP	３		IP	６		IP	５		IP	５		IP
+山川　美由紀	4.70	0.16	3.2	２		IP	２		G3	６		G1	４		G3	３		G3	６		G3	３		G3	４		IP	３		G3	５		G3
+嶋田　　有里	1.90	0.24	4.8	６		IP	４		IP	６		IP	４		IP	４		IP	６		IP	６	5	IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　秀茉	6.70	0.14	2.7	６		IP	３		IP	２		IP	１		IP	３		IP	３		G3	２		IP	３		IP	２		IP	２		IP
+椎名　　　豊	8.00	0.14	2.6	５	3	G3	１	3	G3	１		G3	２		IP	４		IP	２		IP	１	4	IP	３		IP	２		IP	１		IP
+豊田　　　結	5.60	0.16	3.1	６		IP	３		IP	２		IP	３		IP	１		G3	６		G3	３		IP	３		G3	３		IP	３		IP
+石村　日奈那	3.10	0.16	3.6	６		G3	３		IP	６		IP	６		IP	４		IP	４		IP	６		IP	４		IP	２		IP	６	5	IP
+小川　竜太朗	4.00	0.15	3.4	４	4	IP	５		IP	４		IP	５		IP	４		IP	３		IP	５		IP	１		IP	５		IP	４		IP
+米本　　圭佑	1.89	0.24	4.9	３		IP	転		IP	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+船岡　洋一郎	9.11	0.16	2.2	５		G1	１		G1	２		G2	１		IP	１		IP	１		IP	２		IP	１		IP	欠		G1	１		G1
+石田　　貴洋	6.30	0.16	2.8	２		IP	３		IP	４	6	IP	３		IP	３		IP	４		IP	２		IP	６	3	IP	１		IP	２	3	IP
+森永　　　隆	6.70	0.13	1.6	６		IP	５		IP	１		IP	３		IP	２		IP	２		IP	２		IP	３		IP	１		IP	２		IP
+藤原　　碧生	6.60	0.13	2.7	５		G1	５	5	SG	６		G1	４		IP	１		G1	１	5	G1	２		IP	１		IP	６		G1	１	5	G1
+照屋　　厚仁	4.50	0.16	3.1	４		IP	４		IP	４		IP	４	6	IP	４		IP	３		IP	３		IP	４		IP	２		IP	６		IP
+小野　　勇作	3.60	0.20	4.4	３	5	IP	６		IP	３		IP	２	5	IP	６		IP	５		IP	５		IP	５		IP	４		IP	４	5	IP

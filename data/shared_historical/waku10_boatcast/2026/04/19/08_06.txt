@@ -1,0 +1,8 @@
+data=
+1	0
+和田　　操拓	6.90	0.13	2.9	１		IP	６		IP	１		IP	１		IP	２		IP	４		IP	１		IP	５		IP	４	2	IP	１		IP
+齋藤　　真之	4.30	0.16	2.5	６		IP	３		IP	５		IP	３		IP	６		IP	１	1	IP	３		IP	４		IP	３		IP	６		IP
+小川　　時光	4.67	0.14	2.7	２		IP	転		IP	３		IP	６		IP	６		IP	６		IP	１	4	IP	２		IP	３		IP	６		IP
+山田　　雄太	7.80	0.14	2.9	３	5	IP	２		IP	１		IP	１		IP	２	5	IP	１		IP	２		IP	１		IP	３		IP	５		IP
+須藤　　博倫	7.90	0.13	2.5	４		IP	１	4	IP	３	4	IP	２		IP	１		IP	１	4	IP	２		IP	１		IP	５		G2	１		IP
+坂口　　　周	4.40	0.21	3.5	３		IP	３	5	IP	３	5	IP	３		IP	４		IP	６		IP	４	5	IP	５		G2	４		IP	４		IP

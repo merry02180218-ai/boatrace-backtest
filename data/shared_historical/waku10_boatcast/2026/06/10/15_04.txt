@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　理央	8.20	0.15	2.7	３		IP	Ｆ		IP	１		IP	３		IP	２		IP	１		G2	１		G2	１		IP	１		IP	１		G3
+福岡　　泉水	3.90	0.24	5.1	５		IP	６		IP	３		IP	２		IP	４		IP	２		IP	６		IP	５	3	IP	６		IP	３		G3
+門田　　　栞	6.40	0.19	4.2	２		IP	３		IP	１		IP	２		G2	４	2	G2	２		IP	２		IP	５		G3	４		G3	４		G3
+小芦　るり華	8.70	0.17	3.4	１		IP	２	3	IP	３		G2	２		G2	１		G3	３	3	G3	１		G3	１	3	IP	１		IP	４		G2
+中澤　　里桜	1.00	0.21	4.7	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	Ｆ	6	IP	６	6	IP
+寺田　　千恵	4.60	0.15	2.8	３		IP	４		IP	３		IP	３		G2	６		G1	５		G1	５		G3	４		G3	２	5	G3	４		G3

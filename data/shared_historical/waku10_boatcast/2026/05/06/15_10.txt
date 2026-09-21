@@ -1,0 +1,8 @@
+data=
+1	0
+小野　　生奈	9.80	0.13	1.9	２		G3	１		G3	１		G3	１		G3	１		G3	２		G3	１		G3	１		G1	１		G1	１		IP
+堀之内紀代子	6.40	0.17	3.8	２		IP	１		IP	２		IP	２		IP	６		IP	３		IP	１		G3	６		G1	３		G1	４		IP
+岩崎　　芳美	6.30	0.15	2.3	Ｆ		IP	２		IP	３		IP	１	4	IP	２	4	IP	２		IP	２		G3	２		G1	５		G1	５		G1
+小芦　るり華	8.10	0.16	3.0	１		G3	３	3	G3	１		G3	１	3	IP	１		IP	４		G2	２		IP	２		G1	６		G1	１		IP
+高憧　　四季	5.40	0.17	2.9	４		IP	４		IP	３		IP	５		IP	１		IP	３		IP	１		IP	４		G3	５		G3	４		G1
+門田　　　栞	4.50	0.20	3.5	４		IP	２	5	IP	４		G3	６		G3	５		G3	２		IP	５		IP	３	5	IP	５		IP	２		IP

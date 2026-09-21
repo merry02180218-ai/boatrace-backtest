@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　淳美	3.90	0.16	3.5	４		G3	６		IP	６		IP	２		IP	５		IP	４		IP	４		IP	６		IP	４		G3	１		G3
+菅野　はやか	4.30	0.19	4.4	２		G3	５		G3	４		G3	２		IP	３		IP	６		IP	６		IP	６		IP	３		G3	３		IP
+坂　　咲友理	5.30	0.22	3.8	５		G3	５		IP	３		G3	２	2	IP	４		IP	２		IP	２		IP	１		IP	６		IP	４		G3
+吉田　　彩乃	4.00	0.18	3.3	５		G3	２		IP	３		IP	４		IP	３		IP	３		IP	６		IP	５		IP	４		IP	６		G3
+赤松　　咲香	2.30	0.17	4.3	１		G3	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		G3	６		G3	４		IP
+安井　　瑞紀	4.10	0.19	3.8	５		IP	５		IP	３		G3	５		IP	３		IP	６		G1	５		G1	３	5	IP	５		IP	１	5	IP

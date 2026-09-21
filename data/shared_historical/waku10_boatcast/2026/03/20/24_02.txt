@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　勝匡	8.30	0.16	3.0	１		IP	３		IP	６		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+福嶋　　智之	4.30	0.16	3.4	４		IP	３		IP	６		IP	２	3	IP	２		IP	５		IP	５		IP	５		IP	５		IP	２		IP
+林　　　美憲	7.33	0.13	2.2	２		IP	５		G1	３		IP	５		IP	２		IP	１		IP	１	2	IP	１		IP	欠		IP	２		IP
+庄島　　潤成	4.30	0.15	3.0	２	6	IP	４		IP	６		IP	５		IP	３		IP	３		IP	２	6	IP	５		IP	４	5	IP	５		IP
+大神　　康司	6.70	0.19	3.0	２	2	IP	１	2	IP	５	3	IP	２	2	IP	２	2	IP	３	2	IP	３	2	IP	２	3	IP	６	2	IP	１	3	IP
+今坂　　晃広	2.80	0.19	5.0	５		IP	６		IP	６		IP	４		IP	５		IP	３		IP	４		IP	６		IP	３		IP	６		IP

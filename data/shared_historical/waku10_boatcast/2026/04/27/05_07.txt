@@ -1,0 +1,8 @@
+data=
+1	0
+後藤　　翔之	7.30	0.12	2.1	１		IP	２		IP	２		IP	４		IP	１		IP	Ｆ		IP	１		IP	３		G2	１		IP	３		IP
+村上　宗太郎	6.22	0.16	2.9	３		IP	落		IP	２		IP	２		IP	５		G2	２		IP	２		IP	６		IP	２		IP	３		IP
+永井　　彪也	7.10	0.13	3.0	２		IP	２		IP	１		IP	６		G1	１		G1	４		G1	４		G1	１	2	IP	１		G2	６		IP
+中野　　次郎	7.00	0.12	2.3	４		G1	１		IP	１		IP	５		G1	４		G1	４		G1	２		G1	２		G1	１		G1	５		IP
+折下　　寛法	4.90	0.12	2.4	４		G3	６		G3	１		IP	２		IP	１		IP	４		IP	５		G3	５		G3	３		IP	５		IP
+米本　　圭佑	1.20	0.27	5.3	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP	Ｆ		IP	６		IP	６		IP	５		IP

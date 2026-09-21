@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　啓三	7.56	0.13	1.5	１		IP	２		IP	２		IP	３		IP	２		IP	転		IP	２		IP	２		IP	２		IP	４		IP
+松本　　　怜	6.40	0.17	4.1	１		IP	３		IP	３		IP	４		IP	２		IP	２		IP	１		IP	３		IP	５		IP	４		IP
+木村　　光宏	3.80	0.15	3.2	３		IP	３		IP	５		IP	５		IP	４		IP	３		IP	６		G3	４		G3	３		IP	６	2	IP
+羽田　　妃希	4.00	0.21	4.1	６		IP	５	6	IP	６	5	IP	３		IP	５		IP	４		IP	４	5	IP	４		IP	１		IP	３	5	IP
+篠崎　　仁志	4.90	0.14	2.7	４		IP	５		IP	４		G1	４		G1	４	6	G1	１	4	IP	６		G1	４	6	G1	４		G1	３		IP
+興津　　　藍	2.80	0.18	3.9	６		IP	４		IP	５		IP	４		IP	５		IP	４	2	IP	６		IP	４	4	IP	６		IP	４		G1

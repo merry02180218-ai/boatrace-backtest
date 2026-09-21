@@ -1,0 +1,8 @@
+data=
+1	0
+野末　　智一	8.20	0.17	3.4	１		IP	３		IP	３		IP	１		IP	２		IP	１		IP	４		IP	１		IP	２		IP	１		IP
+谷野　　錬志	5.70	0.17	3.7	３		IP	２		IP	３		IP	５		G1	２		G1	４		G1	１		IP	４		IP	４		IP	６		G1
+徳増　　秀樹	7.20	0.12	1.9	１		IP	２		G1	５	4	G1	１		IP	３		IP	３		IP	３		G1	２		G1	１		IP	５		IP
+村松　　将平	4.80	0.13	2.4	３		IP	５		IP	５		IP	６		IP	２		IP	２		IP	２		IP	３		IP	６		IP	３	3	IP
+木村　紗友希	2.50	0.20	4.4	５		G3	６	6	G3	４		IP	６		IP	５		G3	５		IP	５		IP	５		IP	６		IP	２		IP
+大場　　　敏	3.20	0.18	4.7	６		IP	５		IP	５		IP	４		IP	５		IP	５		IP	３		IP	３		IP	３		IP	６		IP

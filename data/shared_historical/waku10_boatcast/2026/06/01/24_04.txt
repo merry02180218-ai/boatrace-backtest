@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　雄二	5.50	0.16	3.1	６		IP	３		IP	４		IP	２		IP	３		IP	１		IP	５	2	IP	３		IP	４		IP	２		IP
+藤山　　翔大	6.10	0.21	3.8	５		IP	２		IP	２		IP	２	3	IP	２		IP	５		IP	５		IP	５		IP	１	3	IP	１		IP
+角山　　雄哉	4.00	0.14	2.5	６		IP	３		IP	４		IP	２		IP	４	4	IP	１		IP	６		IP	転		IP	３		IP	落		IP
+井上　　恵一	5.90	0.15	2.5	２		IP	３		IP	５		IP	２		IP	１		IP	６		IP	５		IP	４		IP	２	3	IP	１	5	IP
+安田　　吉宏	3.90	0.14	3.0	３		IP	６		IP	５		IP	５		IP	４		IP	３		IP	３		IP	２	4	IP	５	6	IP	５		IP
+徳増　　秀樹	4.90	0.15	3.3	５		IP	６	4	IP	４	4	IP	６		G1	４		G1	３	5	IP	３	3	IP	１	5	IP	５	4	G1	１	4	IP

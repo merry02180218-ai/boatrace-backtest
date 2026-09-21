@@ -1,0 +1,8 @@
+data=
+1	0
+伏田　　裕隆	7.00	0.17	3.8	１		IP	６		IP	１		IP	３		IP	１		IP	３		IP	１	4	G3	３	6	G3	６		IP	１		IP
+寺島　　吉彦	5.30	0.19	4.2	４	6	IP	６		IP	１		IP	４	6	IP	１		IP	３		IP	４		IP	２		IP	５	6	IP	４		IP
+荒井　　翔伍	7.78	0.14	3.1	４		IP	２		IP	２		IP	１		IP	２		IP	２		IP	エ		IP	２		IP	２	4	IP	２	4	IP
+磯村　　　匠	5.20	0.21	3.4	１		IP	３		IP	５		IP	３		IP	４		IP	３	5	IP	４		IP	５		IP	２		IP	４		IP
+飯山　　　泰	5.90	0.14	2.5	５		IP	１		IP	４	3	IP	５		IP	５		IP	２	4	IP	３		G1	４		G1	２		G1	１		IP
+齋藤　　　勇	2.20	0.19	4.6	６		IP	４		IP	６		IP	４	5	IP	５		IP	５	4	IP	５		IP	６		IP	４		IP	６		IP

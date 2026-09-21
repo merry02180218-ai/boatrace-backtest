@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　将吉	8.90	0.13	1.6	２		IP	５		IP	１		IP	１		IP	１		IP	１		G1	１		IP	１		IP	２		IP	１		IP
+飯山　　晃三	3.70	0.19	4.1	４	3	IP	４		IP	６	3	IP	４		IP	２		IP	１		IP	５		IP	５		IP	６		IP	６		IP
+河村　　　了	5.80	0.16	2.8	４		IP	２		IP	３		IP	１		IP	４		IP	３		IP	３		G3	４		G3	５		IP	２	2	IP
+平野　　和明	5.00	0.16	3.4	４		IP	３		IP	３		IP	３		IP	２		IP	３		IP	５		IP	４		IP	４		IP	４		IP
+中島　　昂章	5.80	0.19	4.2	４		IP	３		IP	３		IP	４		IP	２	4	IP	３		IP	３		IP	３		IP	５		IP	１		IP
+白水　　勝也	5.20	0.20	4.6	２		IP	５		IP	４		IP	４	5	IP	２	5	IP	５		IP	３		IP	４	5	IP	３		IP	２		IP

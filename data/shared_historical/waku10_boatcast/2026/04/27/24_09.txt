@@ -1,0 +1,8 @@
+data=
+1	0
+柳橋　　宏紀	8.90	0.14	3.2	１		IP	１		G3	６		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+泉　　　啓文	3.90	0.18	3.6	落		IP	３		IP	６		IP	Ｆ		IP	４		IP	２		IP	５		IP	２		IP	３		IP	４		IP
+眞鳥　　章太	5.30	0.14	2.7	５		IP	１		IP	４		IP	３		IP	２		IP	６		IP	３		IP	４		IP	１		IP	５		IP
+宮内　　直哉	4.70	0.16	2.2	６		IP	１		IP	６		IP	６	5	IP	５		IP	５		IP	２		IP	１		IP	２		IP	４		IP
+小宮　　涼雅	3.00	0.18	3.7	４		IP	５		IP	３		IP	４		IP	４	6	IP	５		IP	５		IP	５		IP	５		IP	５		IP
+加藤　　翔馬	4.20	0.16	4.2	４	5	IP	２		IP	４		IP	６		IP	２		G3	３	5	IP	６		IP	３		IP	５		IP	６		G1

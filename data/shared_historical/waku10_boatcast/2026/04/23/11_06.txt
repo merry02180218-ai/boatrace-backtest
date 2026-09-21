@@ -1,0 +1,8 @@
+data=
+1	0
+藤本　　元輝	6.90	0.10	2.6	１		IP	Ｆ		IP	６		IP	１		IP	２		IP	５		IP	１		IP	２		IP	１		IP	１		IP
+村田　　浩司	5.30	0.15	3.2	５		IP	２		IP	２		IP	２		IP	３		IP	５		G3	１	1	G3	６		IP	４		IP	４		IP
+楠原　　翔太	6.10	0.20	4.3	１		IP	１		IP	６		G3	３		G3	４		IP	４		IP	４	4	IP	４	5	IP	１		IP	２		IP
+伊達　　正利	4.50	0.16	3.5	３		IP	４		IP	１		IP	６		IP	６		IP	３		IP	５		IP	２		IP	６	5	IP	３		IP
+篠原　　晟弥	4.90	0.15	3.6	２		IP	３	4	IP	４	4	IP	５		G2	４		IP	２		IP	４		IP	２		IP	５		IP	５		IP
+高村　　　諒	1.80	0.16	3.7	転		IP	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP	３		IP	５		IP	６		IP

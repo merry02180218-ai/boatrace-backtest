@@ -1,0 +1,8 @@
+data=
+1	0
+中北　　将史	6.40	0.14	2.4	６		IP	１		IP	６		IP	２		IP	１		IP	２		IP	１		IP	３		IP	２		IP	５		IP
+金子　　拓矢	7.50	0.11	2.2	２		IP	１		IP	３		IP	４		IP	２		IP	１		IP	２		IP	６		IP	２		IP	２		IP
+渥美　　卓郎	4.60	0.20	3.6	４		IP	２		IP	３		IP	６		IP	４		IP	６		IP	５		IP	３		IP	４	4	IP	１		IP
+木下　　大將	5.30	0.16	2.7	２		IP	２		IP	６		IP	２		IP	４		IP	５		IP	６		IP	２		IP	１		IP	５		IP
+竹腰　　正樹	2.50	0.20	2.9	５		IP	６		IP	４		IP	２		IP	Ｆ		IP	４		IP	５	4	IP	６		IP	６		IP	５		IP
+小池　　礼乃	2.30	0.21	4.5	３		IP	６		IP	６		IP	５		IP	５		G3	６		G3	４		IP	６		IP	６		IP	５		IP

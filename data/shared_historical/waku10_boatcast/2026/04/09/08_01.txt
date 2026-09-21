@@ -1,0 +1,8 @@
+data=
+1	0
+角谷　　健吾	8.50	0.17	3.5	４		IP	１		IP	１		IP	１		IP	１		IP	２		IP	３		IP	２		IP	１		IP	２		IP
+寺嶋　　　雄	4.60	0.20	3.9	４		IP	３		IP	４		IP	３		IP	１		IP	６		IP	５		IP	４		IP	６		IP	２		IP
+坂野　さくら	5.20	0.17	3.3	４		G3	３		IP	６		IP	２		G3	３		IP	６		G3	４		G3	２		IP	１		IP	４		IP
+上野　　拓馬	4.80	0.21	4.1	５		IP	３		IP	４		IP	５		IP	４		IP	１		IP	３		IP	３		IP	５		IP	３		IP
+中村　　守成	3.10	0.19	3.3	５		IP	６		IP	５		IP	５		IP	５	4	IP	４		IP	５		IP	４		IP	２		IP	４		IP
+櫻井　　　隼	1.70	0.31	5.8	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP	６		IP

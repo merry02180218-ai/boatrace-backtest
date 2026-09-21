@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　　歩	8.40	0.15	2.6	３		IP	４		G3	１		G3	１		IP	１		IP	３		G3	１		G3	１		IP	２		IP	１		IP
+太田　　　潮	6.00	0.17	3.9	５		IP	３		IP	３		IP	３		IP	１		IP	３	3	IP	２		IP	２		IP	５		IP	３		IP
+渡邉　　和将	7.10	0.11	2.6	２		IP	１		IP	３		IP	２		IP	２		G1	４	2	SG	３		SG	１		IP	４		IP	６		G1
+市川　　美宏	3.20	0.17	3.7	２		IP	５		IP	３		IP	６		IP	４		IP	６		IP	４		IP	４		IP	６	5	IP	６	5	IP
+前田　　聖文	4.89	0.17	3.8	４		IP	欠		IP	２		IP	４		IP	５		IP	３		G1	２		IP	６		IP	４		IP	３		IP
+村田　　修次	4.40	0.18	4.2	４		IP	２	5	IP	５		IP	５		IP	６		IP	３		IP	２	5	IP	６		IP	５		IP	２	5	IP

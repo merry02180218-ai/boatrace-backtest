@@ -1,0 +1,8 @@
+data=
+1	0
+宮内　由紀英	4.90	0.18	3.7	５		IP	４		IP	２		IP	３		IP	２		IP	５		IP	６		IP	４		IP	１		IP	４		IP
+鳥居塚　孝博	5.60	0.17	2.9	１		IP	１	3	IP	３		IP	２		IP	３		IP	３		IP	５		IP	３		IP	６		IP	６		IP
+野村　　　誠	4.90	0.18	2.9	４		G1	１		IP	２		IP	６		IP	３		G3	６		G3	４		IP	４		IP	５		IP	２		IP
+上村　　純一	4.80	0.12	2.3	１		IP	６		G1	５		G1	２		IP	１		IP	６		G1	５		G1	５		G1	６		G1	４		G1
+島倉　　　都	3.70	0.19	3.3	５		IP	４		IP	４		G3	５		G3	３	4	IP	４	4	IP	６		IP	５		IP	２	4	IP	４		IP
+富永　　正人	2.40	0.22	4.9	３		IP	５		IP	４		IP	３		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

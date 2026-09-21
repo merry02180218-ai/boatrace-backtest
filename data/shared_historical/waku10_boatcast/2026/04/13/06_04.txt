@@ -1,0 +1,8 @@
+data=
+1	0
+濱野　　斗馬	10.00	0.10	1.6	２		IP	１		IP	１		G2	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1	１		IP
+村松　　将平	5.30	0.13	2.6	２		IP	３		IP	２		IP	５		IP	３		IP	３		IP	２		IP	５	4	IP	５	3	IP	４		IP
+遠藤　　圭吾	3.40	0.18	3.4	６		IP	５		IP	５		IP	２		IP	５		IP	５		IP	６		IP	３		IP	２		IP	５		IP
+高橋　　龍治	3.44	0.18	3.7	６		IP	３		IP	６		IP	６		IP	転	5	IP	５		IP	２	5	IP	３		IP	４		IP	５		IP
+西川　　拓利	6.10	0.11	2.0	１		IP	４		G3	６		G3	２		IP	３		IP	１		IP	１		IP	２		IP	５		IP	５		IP
+佐野　　優都	3.70	0.14	2.3	４		IP	５		IP	５		IP	６		IP	６		IP	２		IP	２		IP	３		IP	６		IP	４		IP

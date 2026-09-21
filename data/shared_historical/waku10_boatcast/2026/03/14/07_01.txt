@@ -1,0 +1,8 @@
+data=
+1	0
+藤田　　美代	6.90	0.20	3.6	１		IP	６		IP	１		IP	１		IP	５		IP	３		IP	３		IP	３		IP	２		IP	１		IP
+横田　　　茂	5.20	0.19	4.0	２		IP	３		IP	３		IP	４		IP	５	3	IP	５		IP	２		IP	４		IP	１		IP	５		IP
+宮村　　勇哉	2.90	0.13	2.1	４		IP	３		IP	４		IP	６		IP	５		IP	６		IP	Ｆ		IP	６		IP	２		IP	５		IP
+宇野　　弥生	4.40	0.13	2.2	６		IP	４		IP	１		IP	６	6	G1	６	6	G1	６		IP	５		IP	３	5	IP	２		IP	２		IP
+平見　　真彦	4.40	0.19	3.2	４		IP	４		IP	５		IP	４		IP	５		IP	４		IP	３		IP	４		IP	２		G3	４		G3
+寺本　　昇平	4.00	0.17	3.5	２		IP	５		IP	２	5	IP	５		IP	５		IP	５		IP	２		IP	５		IP	４		IP	５		IP

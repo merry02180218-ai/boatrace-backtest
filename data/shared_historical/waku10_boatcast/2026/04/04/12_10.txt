@@ -1,0 +1,8 @@
+data=
+1	0
+原田　　幸哉	9.70	0.15	4.0	１		SG	１		G1	１		G1	１		G3	１		G1	４		G1	１		G1	４		G1	１		G1	１		IP
+中野　　次郎	5.60	0.12	2.4	３		IP	２		IP	２		IP	６		G1	３	3	IP	４		G3	２		G3	２		G3	５		IP	５		SG
+木村　　仁紀	7.50	0.12	3.2	３		IP	２		IP	１		IP	６		G1	１		IP	２		G1	１		IP	３		G2	４		G2	２		IP
+中田　　竜太	7.20	0.14	3.0	５		G2	３		G2	３		G1	２		IP	２		G1	４		G1	２		G1	２	5	IP	３		G1	２		G1
+峰　　　竜太	6.00	0.13	3.3	２		G1	１	4	G1	５		G1	５		G1	３	4	IP	４		SG	４		SG	４		G1	５		G1	３		SG
+権藤　　俊光	4.60	0.17	4.6	５		SG	５		SG	落		G1	２		G1	３		G1	５		IP	２		IP	４		IP	３		IP	５		IP

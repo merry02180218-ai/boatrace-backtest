@@ -1,0 +1,8 @@
+data=
+1	0
+平本　　真之	9.80	0.14	3.1	１		IP	１		IP	１		IP	１		IP	１		G1	２		G1	１		G1	２		SG	２		IP	２		IP
+仲口　　博崇	7.10	0.19	3.4	３	3	G1	２		G1	１		IP	１		G3	２		IP	２		IP	６		IP	１	1	G1	３		IP	６		G3
+赤岩　　善生	7.40	0.14	2.3	３		G1	４	2	IP	２	2	IP	４		IP	４	2	IP	１		G1	２		IP	２	2	IP	１		IP	２		IP
+磯部　　　誠	5.40	0.13	3.3	５		G1	転		G1	３		G1	６		G1	５	5	SG	２		SG	４		G1	３		G1	３		G1	２		G1
+吉田　凌太朗	6.20	0.16	2.4	３		IP	３		IP	３	6	IP	２		IP	１		IP	２		G1	６		IP	１		IP	５		IP	４		IP
+鰐部　太空海	5.30	0.14	2.3	５		IP	３	5	IP	４	5	IP	３		IP	５		IP	３		G1	５		IP	２		IP	２		IP	２		IP

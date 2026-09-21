@@ -1,0 +1,8 @@
+data=
+1	0
+大上　　卓人	9.40	0.13	2.9	１		IP	１		IP	１		IP	１		IP	１		SG	３		G1	１		G1	５		G1	１		IP	１		IP
+三宅　　健太	6.40	0.14	3.7	２		IP	３		IP	３		IP	２		G3	１		G3	４		IP	３		IP	５		IP	４		G3	１		IP
+柏野　　幸二	5.20	0.17	2.5	４	4	IP	４		IP	１		IP	３		IP	３		IP	４		IP	３		IP	４		IP	５		IP	３		IP
+市川　　哲也	4.80	0.13	3.1	３		IP	３		IP	４		IP	４	3	IP	４		G2	３		G2	４		IP	４		IP	２		IP	落		IP
+小林　　礼央	4.30	0.12	2.9	４		IP	６		IP	４		IP	５		IP	５	4	IP	４	6	IP	４		IP	３		IP	１		IP	３		IP
+向井田　佑紀	3.78	0.17	3.9	４		IP	５		IP	４		IP	３		IP	４		IP	転		IP	４		IP	４		IP	４		IP	５		G3

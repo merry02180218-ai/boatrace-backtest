@@ -1,0 +1,8 @@
+data=
+1	0
+大峯　　　豊	7.22	0.13	3.2	１		G2	１		G3	６		G3	２		G3	１		IP	３		IP	２		IP	転	2	G1	６		IP	１		IP
+船岡　洋一郎	6.10	0.15	3.3	２		G2	４		IP	２	3	IP	１		IP	２		IP	４		G1	３		IP	４		G1	４		IP	５		IP
+石原　　　翼	7.10	0.12	2.6	５		G2	２		IP	３		IP	１	4	IP	１		IP	２		IP	３		IP	１		IP	３		IP	４		IP
+山田　　祐也	5.80	0.14	3.2	６		G2	４		IP	１		G1	５		G1	３		G1	６		SG	６		SG	２		G2	１		G2	４		G1
+馬野　　　耀	6.30	0.18	3.7	２		G2	３		IP	４		IP	２		IP	３		IP	２	3	IP	３		IP	４		IP	２		IP	４		IP
+馬場　　　剛	5.10	0.11	2.0	４		G2	６		G2	５		IP	２	5	IP	４		IP	２	5	G3	３		G3	２		IP	５		IP	３		IP

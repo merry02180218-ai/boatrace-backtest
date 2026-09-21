@@ -1,0 +1,8 @@
+data=
+1	0
+樋口　由加里	8.10	0.17	2.3	１		IP	２		IP	１		IP	５		IP	１		IP	２		IP	１		IP	１		IP	５		G1	１		IP
+山田　　和佐	5.00	0.19	3.9	４		IP	２		IP	３		IP	５		IP	５		IP	４		IP	３		IP	３		IP	４		IP	２		IP
+角谷　　健吾	5.90	0.14	2.3	１		IP	２		IP	２		IP	６		IP	５		IP	４		G1	３		G1	２		IP	３		IP	４		IP
+金児　　隆太	4.10	0.18	4.4	２		IP	４		IP	６		IP	５		IP	４		IP	５		IP	２		IP	４	5	IP	５		IP	３		IP
+鈴木　　雄登	3.90	0.17	3.4	４	6	IP	４	6	IP	６	6	IP	４	6	IP	６	6	IP	６	6	IP	２	6	IP	４	6	IP	４	6	IP	２	6	IP
+井上　　一輝	4.60	0.15	3.5	２	5	IP	３		IP	２		IP	５		IP	５		G1	５		G1	５		G1	３		G1	６		G1	４		IP

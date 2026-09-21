@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　忠政	8.50	0.15	3.8	１		IP	１		G1	１		G1	１		G1	転		G1	１		G1	不		G1	１		G1	１		IP	１		IP
+葛原　　大陽	6.80	0.14	3.4	３		IP	２		IP	３		IP	４		G1	１		IP	５		G1	２		IP	２		IP	２		IP	３		IP
+村岡　　　賢	6.20	0.19	3.4	５		IP	２		IP	４		IP	２		IP	３		IP	１		IP	４		IP	４		IP	３	4	IP	２		IP
+富田　　恕生	4.10	0.18	3.8	２		IP	５		IP	３		IP	６		IP	６		IP	４		G3	６		IP	５		IP	１		IP	３		IP
+片岡　　秀樹	4.00	0.16	3.2	２		IP	３		IP	Ｆ		IP	５	6	IP	６		IP	３		IP	６		IP	５		IP	２		IP	３		G3
+酒井　　陽祐	2.50	0.18	4.2	６		G3	６		G3	６		IP	５		IP	５		IP	５	4	IP	３	5	IP	５		IP	３		IP	５		IP

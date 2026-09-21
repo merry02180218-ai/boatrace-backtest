@@ -1,0 +1,8 @@
+data=
+1	0
+宮下　　元胤	8.80	0.15	2.8	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	５		IP	１		IP	１		IP
+宮内　　直哉	4.10	0.16	3.8	４		IP	４		IP	５		IP	４		IP	６		IP	１		IP	５		IP	５		G3	５		G3	１		IP
+岡谷　　健吾	3.80	0.19	3.6	５		IP	３		IP	６		IP	５		IP	５	2	IP	５		IP	６		IP	２		IP	３		IP	２		IP
+前野　　竜一	5.40	0.24	3.3	４	5	IP	３	5	IP	４		IP	２		IP	２		IP	５		IP	５		IP	２		IP	３		IP	３		IP
+内山　　七海	4.70	0.18	3.4	２		IP	６		IP	４		IP	５		IP	３		G3	２		G3	５	6	IP	３		IP	２		IP	５		IP
+小野　　信樹	1.80	0.18	3.8	６		IP	６		IP	４	5	IP	５		IP	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP

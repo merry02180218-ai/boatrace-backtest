@@ -1,0 +1,8 @@
+data=
+1	0
+三嶌　さらら	6.33	0.22	4.0	１		IP	４		IP	４		IP	１		IP	６		IP	１		IP	４		IP	転		G3	４		G3	１		IP
+西丸　侑太朗	5.40	0.17	3.7	４		IP	２		G1	５		IP	２		IP	６		G1	６		G1	１		IP	５		IP	３		IP	２		IP
+下田　　哲也	4.70	0.14	3.2	４		IP	１		IP	５		IP	５		IP	６		IP	５		IP	４		IP	２		IP	２		IP	３		IP
+宮武　　英司	5.40	0.15	2.9	５		IP	３		IP	５		IP	１		IP	５		IP	２		IP	４		IP	３		IP	３		IP	２		IP
+川原　　祐明	5.50	0.13	2.5	３	4	IP	３	6	IP	４	4	IP	４		IP	５		IP	５		IP	３		IP	１		IP	１		G1	４		IP
+石井　　伸長	4.67	0.19	4.3	６		IP	３	5	IP	２		IP	３		IP	５		IP	３		IP	転		IP	１		IP	５		IP	６		IP

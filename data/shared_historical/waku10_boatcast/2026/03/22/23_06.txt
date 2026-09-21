@@ -1,0 +1,8 @@
+data=
+1	0
+上野　真之介	10.33	0.11	1.7	１		G2	２		G1	１		G1	１		G1	１		G1	１		IP	１		IP	転		IP	１		IP	１		IP
+三馬　　崇史	5.90	0.19	3.1	３		G2	５	3	IP	３		IP	４		IP	２		IP	１		IP	３		IP	４		IP	１		IP	５	5	IP
+遠藤　　エミ	6.10	0.10	1.9	６		G2	２		G1	３		IP	Ｆ		G1	４		G1	２		G3	３		G1	４		SG	２		G1	２		G2
+後藤　　翔之	5.40	0.13	3.3	２	5	G2	２		IP	３		IP	３		IP	２		IP	５		IP	６		IP	３		IP	４		IP	４		IP
+溝口　海義也	4.60	0.11	2.5	５		G2	２		IP	４		IP	１		IP	３		G2	５		IP	５		IP	５		IP	３		IP	５		IP
+篠原　　晟弥	4.30	0.15	2.2	６	5	G2	４		G2	３		IP	５		IP	４		IP	２		IP	６		IP	３	5	IP	６		IP	２	5	IP

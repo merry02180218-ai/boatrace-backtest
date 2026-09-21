@@ -1,0 +1,8 @@
+data=
+1	0
+豊田　　祥生	5.60	0.16	3.0	６		IP	１		IP	１		IP	５		IP	４		IP	１		IP	４		IP	２		IP	６		IP	３		IP
+牧村　　俊輝	3.00	0.18	4.2	４		IP	５		IP	４		IP	５		IP																		IP
+香川　　陽太	4.00	0.18	4.0	２	4	IP	４		IP	４		IP	６		IP	３	6	IP	３		IP	３		IP	５		IP	５	5	IP	６	6	IP
+木山　　大聖	3.80	0.17	2.8	６		IP	２		IP	４		IP	３		IP	４		IP	３		IP	５		IP	４		IP	５		IP	６		IP
+佐藤　　右京	2.90	0.18	4.3	６		IP	６		IP	５		IP	５		IP	５		IP	６		IP	４		IP	２		IP	３		IP	５		IP
+安藤　　瑠希	3.70	0.14	3.1	１		IP	５		IP	３		IP	１		IP	５		IP	５		IP	５		IP	６		IP	６		IP	６		IP

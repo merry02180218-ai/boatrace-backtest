@@ -1,0 +1,8 @@
+data=
+1	0
+清水　　愛海	9.10	0.14	2.9	１		IP	３		IP	１		G1	１		G1	１		G1	１		G3	２		G3	１		IP	１		IP	４		IP
+加藤　　　綾	6.40	0.15	3.2	２		IP	２		IP	５		IP	４		IP	１		IP	３		IP	３		IP	５		IP	１		IP	２		G3
+向井田　真紀	4.70	0.25	4.2	３		IP	３		IP	４		IP	６		G3	５	4	G3	１		IP	２		IP	４		IP	５		G3	４		G3
+堀之内紀代子	4.90	0.16	2.3	１		IP	５		IP	５		G3	４		G1	６		G1	３		G3	１		IP	３		G3	５		G3	４		IP
+長野　　未来	1.60	0.27	5.1	６		IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	６	6	IP	６	6	IP	３	6	IP	６	6	IP
+笠野　友紀恵	3.50	0.23	4.3	３	5	IP	４		IP	６		G3	６		IP	５		IP	３		G3	３		G3	３		IP	６	5	IP	５	5	G3

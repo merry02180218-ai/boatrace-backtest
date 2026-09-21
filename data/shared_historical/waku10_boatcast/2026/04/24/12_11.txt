@@ -1,0 +1,8 @@
+data=
+1	0
+深川　麻奈美	7.70	0.20	4.1	３		IP	１		IP	３		IP	５		IP	１		IP	１		IP	２	3	IP	１		IP	３	2	G1	２		IP
+福岡　　泉水	4.30	0.23	4.5	６		IP	５	3	IP	６		IP	３		G3	２		G3	３		IP	４		IP	１		IP	６		IP	４		IP
+小池　　礼乃	6.70	0.16	3.2	６		IP	３		IP	２		IP	１	2	IP	１	2	IP	３		IP	１		IP	５		IP	３		IP	２		G3
+山口　真喜子	6.10	0.19	3.5	３		IP	１		IP	２		IP	３		G1	５		IP	３		G3	３		IP	３		IP	２		G3	５		G3
+大橋　　由珠	3.60	0.13	2.3	５		IP	４		IP	５		IP	５		IP	３		G3	３		G3	４		IP	４		G3	４		G3	５		G3
+来田　　衣織	3.20	0.16	2.5	５	4	IP	６		IP	４	4	IP	５		IP	１	5	IP	５		IP	４	5	G3	５		G3	６	5	IP	４		IP

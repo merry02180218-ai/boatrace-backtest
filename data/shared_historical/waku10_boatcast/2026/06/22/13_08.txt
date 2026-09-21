@@ -1,0 +1,8 @@
+data=
+1	0
+渡　　　修平	7.40	0.13	4.3	３		IP	１		G3	４		IP	２		IP	１		IP	１		IP	１		IP	１		IP	５		IP	４		IP
+吉島　　祥之	4.00	0.22	4.8	３		IP	６		IP	４		IP	３		IP	４		IP	２		IP	Ｆ	1	IP	６		IP	２		IP	５		G3
+多羅尾　達之	4.00	0.14	2.3	２		IP	３		IP	４	2	IP	転		IP	６		IP	５		IP	３		IP	４		IP	６		IP	２		IP
+越智　　照浩	3.30	0.14	4.0	４		IP	３		G3	５	6	G3	６		IP	５		IP	３		IP	５		IP	５		IP	４		IP	４		IP
+小黒　　竜吾	3.30	0.15	3.8	４		IP	５		IP	６		G3	５		G3	４		IP	１		IP	６		IP	４		IP	６		IP	４		IP
+鳥居塚　孝博	5.40	0.15	3.8	２		IP	２		IP	５	5	IP	４	5	IP	４		IP	３		IP	５		IP	４		IP	２	5	IP	２		IP

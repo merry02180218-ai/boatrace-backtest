@@ -1,0 +1,8 @@
+data=
+1	0
+市橋　　卓士	9.20	0.11	1.5	１		IP	２		IP	４		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+田中　　宏樹	4.33	0.17	4.4	４		IP	４		IP	落		IP	５		IP	４		IP	４		IP	２		IP	６		IP	５		IP	１		G3
+大神　　康司	5.20	0.14	2.6	４		IP	３		IP	２		IP	４		IP	６		IP	３		IP	２		IP	３		IP	２		IP	６		IP
+三村　　岳人	6.90	0.11	1.9	２		IP	４		IP	６		IP	３		IP	２		IP	１		IP	３		IP	１		IP	１		IP	３		IP
+中島　　友和	3.56	0.17	3.6	５		IP	３		IP	欠		IP	６		IP	６		IP	５		IP	４	6	IP	３	6	IP	５		IP	２		IP
+木山　　誠一	2.10	0.15	3.7	５	5	IP	６		IP	６		IP	２		IP	６		IP	５		IP	６		IP	６		IP	５	5	IP	５		IP

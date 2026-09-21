@@ -1,0 +1,8 @@
+data=
+1	0
+三馬　　崇史	6.10	0.19	3.4	１		IP	４		IP	６		G2	１		IP	６		IP	２		IP	４		IP	５		IP	１		IP	１		IP
+三品　　隆浩	4.00	0.20	4.3	３		IP	４		IP	３		IP	３		IP	４		IP	５		IP	６		IP	６		IP	４		IP	３		IP
+雑賀　　勇貴	4.00	0.16	4.1	５	4	IP	転		IP	２		IP	４		IP	２		IP	３		IP	６		IP	５		IP	６		IP	４		IP
+毒島　　　誠	7.30	0.16	3.1	３	3	IP	５		IP	６		IP	２		IP	２		SG	２	3	SG	２	3	IP	２		IP	２	2	IP	１		IP
+畑　　　和宏	4.90	0.17	3.2	５		IP	２		IP	６		IP	５		IP	１		IP	５		IP	４		IP	３		IP	２		IP	３		IP
+星　　　栄爾	3.20	0.16	3.6	３		IP	５		IP	４		IP	４		IP	３		G3	５		G3	６		IP	４		IP	５		IP	６		IP

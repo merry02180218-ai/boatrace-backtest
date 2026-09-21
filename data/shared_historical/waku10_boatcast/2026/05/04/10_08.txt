@@ -1,0 +1,8 @@
+data=
+1	0
+谷口　　健一	4.20	0.18	3.2	５		IP	４		IP	１		IP	３		IP	１		IP	５		IP	６		IP	６		IP	４		IP	５		IP
+金田　　智博	7.30	0.17	2.9	２		IP	６		IP	２		IP	１		IP	１		IP	１		IP	５		IP	２		IP	１		IP	３		IP
+大平　誉史明	6.50	0.16	2.8	２		IP	２		IP	３		IP	３		IP	６		IP	２		IP	３		IP	４		IP	２		IP	１		IP
+金子　　貴志	3.80	0.16	4.5	５		IP	４	3	IP	４		IP	３		IP	２		IP	５		IP	５		IP	５	5	IP	４		IP	４		IP
+梅木　　敬太	3.10	0.13	3.2	３		IP	４		IP	６		IP	５		IP	６		IP	６		IP	５	6	IP	５		IP	４	6	IP	２		IP
+今垣　光太郎	5.00	0.18	4.3	５		G1	５		G1	２		G1	欠		G2	５		G1	３		G1	６		G1	３		IP	３	5	IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+池　　　千夏	7.00	0.15	2.5	２		IP	２		G3	６		G3	１		IP	６		IP	２		IP	１		IP	３		IP	１		G3	２		G3
+水野　　望美	6.00	0.17	2.8	４		IP	２		IP	５		IP	１		G3	２		G3	２		G3	３		IP	４		IP	３		IP	４		IP
+西村　美智子	6.50	0.13	2.1	４		IP	３		IP	２		IP	１		IP	６		IP	４		IP	１		IP	２		IP	４	2	IP	１		IP
+森　　　陽多	1.50	0.16	4.6	６		IP	４		IP	６		IP	６		IP	Ｆ	5	IP	６		IP	６		IP	６		IP	６		IP	４		IP
+筒井　　美琴	2.40	0.20	3.9	５		IP	４		IP	５	6	IP	６		IP	５		G3	４	4	IP	５		IP	６		IP	５	6	IP	４		IP
+小畑　　楓夏	1.20	0.18	3.8	６		IP	６		IP	６		IP	６		IP	６		G3	６		G3	６		G3	５		G3	６		G3	５		IP

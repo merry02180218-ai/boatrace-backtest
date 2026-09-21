@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　　拓	8.60	0.14	3.1	１		IP	１		IP	１		IP	１		IP	１		G1	４		IP	１		G1	１		IP	１		IP	Ｆ		IP
+柘植　　政浩	8.40	0.16	3.5	２		IP	４		IP	１		IP	２		IP	２		IP	１		IP	１	3	IP	１		IP	２		IP	２		IP
+中島　　　航	2.10	0.21	4.7	６		IP	６		IP	５		G3	６		G3	５		IP	２		IP	５		IP	転	4	IP	５		IP	５		IP
+江夏　　　満	5.70	0.18	4.8	４		IP	４		IP	３		G1	４	5	G1	１		IP	２		IP	２		IP	４		IP	６		IP	３		IP
+山下　　智己	5.20	0.17	3.2	３		IP	２		IP	６	6	IP	５		IP	５	4	IP	１		IP	４		IP	６		IP	２		IP	１		IP
+松井　　洪弥	3.40	0.13	3.4	６		IP	３	5	IP	６		G1	６		G1	６		G1	４		G1	４		G3	６		G1	３		G1	５		G1

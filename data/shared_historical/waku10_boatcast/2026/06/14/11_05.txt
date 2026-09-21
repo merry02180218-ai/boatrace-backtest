@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　啓太	5.10	0.15	2.7	１		IP	６		IP	５		IP	２		IP	２		IP	５		IP	２		IP	５		IP	３		IP	４		IP
+角　　ひとみ	4.70	0.19	4.2	４		IP	４		IP	３		G3	６		G3	２		G3	２	1	IP	３		G3	６		IP	６		IP	２		IP
+永井　　　源	8.00	0.14	3.0	１		IP	１		IP	４		IP	１		IP	１		IP	６		IP	３		IP	２		G3	１		G3	１		IP
+藤岡　　俊介	7.40	0.12	2.9	３		IP	２		IP	４		IP	２		IP	２		IP	２	5	IP	２		IP	３		IP	２		IP	１		IP
+恵良　　琴美	1.80	0.20	4.2	５	6	IP	６		IP	６		IP	６		IP	３		IP	６	4	IP	６		IP	５		IP	６		IP	５		IP
+三品　　隆浩	3.10	0.25	4.9	６		IP	５		IP	５		IP	６		IP	１		IP	５	5	IP	５		IP	５		IP	２		IP	６		IP

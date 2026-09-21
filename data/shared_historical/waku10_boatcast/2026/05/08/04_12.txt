@@ -1,0 +1,8 @@
+data=
+1	0
+宮之原　輝紀	10.70	0.11	2.0	１		IP	２		IP	１		IP	１		G1	１		G1	１		SG	１		SG	１		G1	１		G1	１		G1
+作間　　　章	7.30	0.17	3.6	１		IP	１		IP	３		IP	５		IP	２		IP	２		IP	３		IP	１		IP	２		IP	４		G1
+濱野谷　憲吾	6.30	0.16	3.1	３		IP	１		G1	３	2	G1	３		G1	６		G2	６		IP	２		IP	２		G1	４		G1	３		G1
+島田　　賢人	6.20	0.17	2.6	３		IP	４		IP	１		IP	１		IP	５		IP	１		IP	５		IP	１		IP	３		IP	５		IP
+國分　将太郎	4.30	0.18	3.6	５		IP	２		IP	３		IP	２		IP	６	4	G3	６	6	G3	３		IP	３		IP	４		IP	６		IP
+尾上　　雅也	5.10	0.14	2.9	２	5	IP	４		IP	３		IP	４		G3	６		IP	３		IP	４		IP	３		IP	５		IP	２		G1

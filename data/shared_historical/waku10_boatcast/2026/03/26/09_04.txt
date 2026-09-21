@@ -1,0 +1,8 @@
+data=
+1	0
+滝川　真由子	7.90	0.21	4.2	２		IP	１		IP	４		G3	２		G3	６		IP	２		IP	１		IP	１		IP	１		G3	１		IP
+都築　　正治	5.30	0.16	3.6	３		IP	１		IP	４		IP	５		IP	６		IP	３		IP	４		IP	１		IP	３		IP	４		IP
+室田　　泰史	5.40	0.13	2.1	５		IP	２		IP	６		IP	６		IP	３		IP	１		IP	２		IP	２		IP	４		IP	３		IP
+金子　　怜央	3.00	0.15	2.7	６		IP	５		IP	４		IP	４		IP	４		IP	６		IP	４		IP	３		IP	５		IP	５		IP
+高橋　　　勲	3.30	0.20	3.4	５		IP	４		IP	２		IP	５		IP	６		IP	６	4	IP	欠		G3	３		G3	６		IP	２		IP
+安河内　　将	4.10	0.16	4.1	欠		G1	５		G1	２	5	IP	６		IP	２	5	IP	３	5	IP	５		G1	６		G1	４		IP	３		IP

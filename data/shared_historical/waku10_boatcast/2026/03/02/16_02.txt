@@ -1,0 +1,8 @@
+data=
+1	0
+秦　　　英悟	10.00	0.14	2.5	１		IP	２		IP	１		G1	２		G2	１		G2	１		IP	１		IP	１		IP	１		IP	１		G1
+坪井　　康晴	8.40	0.12	3.4	３		G1	２		G1	２		G2	４		IP	２		IP	２		IP	２		IP	１		IP	１	3	G1	２		G1
+葛原　　大陽	6.10	0.19	2.7	１		IP	６		IP	欠		G1	６		G1	３		IP	１		IP	２		IP	２		IP	２		IP	２		IP
+村岡　　賢人	5.60	0.10	2.8	４		IP	５	3	IP	３		IP	１		G1	４		G1	２		IP	転		IP	３		IP	２		IP	３		IP
+長田　　頼宗	5.80	0.15	3.9	５		G1	２		G1	３	4	G1	２	4	IP	４	4	IP	６		SG	３		IP	３		IP	４		G1	３		G1
+西山　　貴浩	4.70	0.17	4.5	２	4	G1	６		G1	４		G1	６		G1	３		G1	４		SG	５		SG	４		G1	４		G1	６		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　拡郎	10.30	0.13	2.4	１		G2	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+森　　　悠稀	6.10	0.16	3.2	３		G2	５		IP	４		IP	２		IP	３		IP	２		IP	３		IP	３		IP	３		IP	２		IP
+上田　　龍星	5.20	0.13	3.1	３		G2	３		IP	３		IP	３		IP	４	2	IP	６		G1	６		G1	５		G1	３		G1	３		SG
+今井　　美亜	4.89	0.18	3.1	４		G2	２		G2	４		IP	６		IP	５		IP	３		G3	５		G3	３		G3	２		G1	欠		IP
+木村　　仁紀	4.60	0.12	3.0	４		G2	３		IP	１		IP	４		IP	５		IP	５		G1	３		G1	３		G1	６	4	IP	６		IP
+豊田　健士郎	4.00	0.12	3.0	４		G2	５		G3	５		G3	３		IP	４	5	IP	２		G3	６		G1	６		G2	３		G2	６		G1

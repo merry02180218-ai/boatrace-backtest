@@ -1,0 +1,8 @@
+data=
+1	0
+西田　　和加	1.40	0.18	4.0	５		IP	６		IP	６		IP	６		IP	５		IP															IP
+倉田　　郁美	4.20	0.16	2.8	４		IP	５		IP	４		IP	３		IP	１		IP	６		IP	６		IP	５		IP	４		IP	２		IP
+川井　　　萌	6.50	0.17	3.6	３		G1	４		IP	２		IP	１		IP	４		IP	６		G3	１		IP	４		SG	２		SG	５		G2
+永田　　　楽	2.60	0.16	3.5	６		IP	５		IP	４		IP	１		IP	５		G3	６		IP	６		IP	落	6	IP	６		IP	４		IP
+海野　ゆかり	4.90	0.16	3.6	３		G1	３		G3	４		G1	６		G1	２		IP	６		IP	２		G3	２		IP	５	6	G2	６		G3
+野田　　亜湖	1.10	0.31	6.0	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

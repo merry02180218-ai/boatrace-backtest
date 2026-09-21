@@ -1,0 +1,8 @@
+data=
+1	0
+本部　めぐみ	7.80	0.19	3.2	５		IP	２		G3	１		IP	１		IP	１		IP	３		G3	２		IP	２		G3	３		IP	１		G3
+田中　瀬里奈	1.40	0.23	3.5	６		G3	５		G3	６		IP	６		IP	４	5	IP	６		IP	６	3	IP	６		IP	６	6	IP	６		IP
+中田　　夕貴	5.90	0.15	3.4	６		G2	１	2	IP	３		IP	３		IP	３		IP	２		IP	２		IP	５		G1	５		IP	２		IP
+山下　　友貴	4.90	0.20	4.4	３		IP	４		IP	３		IP	２		G3	４		G3	６		IP	５		IP	３		IP	３		IP	３		IP
+平田　さやか	5.50	0.17	3.4	３	3	IP	４		IP	２		IP	４	4	IP	５		IP	２		IP	４		IP	１		IP	４		G3	４		G1
+高石　　梨菜	3.90	0.18	3.6	５		IP	４		IP	３	5	G3	３		G3	４		IP	２		IP	６		IP	６		IP	５		IP	４		IP

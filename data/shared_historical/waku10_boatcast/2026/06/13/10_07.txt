@@ -1,0 +1,8 @@
+data=
+1	0
+岸蔭　　　亮	6.70	0.18	4.5	３		IP	２		IP	１		IP	６		IP	１	3	IP	４		IP	３		IP	５		IP	１		IP	１		IP
+藤田　　浩人	7.00	0.13	3.7	２		IP	１		IP	１		IP	５	3	IP	２		IP	３		IP	５		IP	３		IP	１		IP	２		IP
+磯村　　　匠	4.80	0.22	3.6	Ｆ		IP	３		IP	４		IP	４		IP	２		IP	１		IP	４		IP	２		IP	５		IP	５		IP
+岡　　　暢祐	3.10	0.17	3.7	４		IP	５		IP	６	6	IP	１		IP	５		IP	６		IP	３		IP	６		IP	Ｆ		IP	４		IP
+古結　　　宏	5.20	0.13	2.5	３		IP	１	4	IP	１		IP	４		G1	６		G1	３	2	G1	４		IP	３		G1	６		IP	妨		IP
+太田　　和美	3.30	0.17	3.7	５		G1	２	5	IP	３		IP	５		IP	６		IP	６		G1	５		G1	５		G1	６		G1	５		G1

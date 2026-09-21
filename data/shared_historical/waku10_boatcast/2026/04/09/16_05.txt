@@ -1,0 +1,8 @@
+data=
+1	0
+山一　　鉄也	8.80	0.13	2.0	３		IP	１		IP	１		IP	１		IP	１		G3	１		G3	１		G3	１		G3	１		IP	６		IP
+谷川　　将太	6.80	0.15	2.4	１		IP	２		IP	２		IP	３		IP	２		IP	５		IP	３		IP	５	3	IP	１		IP	２	3	IP
+福岡　　泉水	5.80	0.20	3.5	６		IP	３		IP	５		IP	２		G3	１		G3	６		IP	２		IP	１		IP	５		IP	２		IP
+小原　　聡将	5.70	0.15	2.7	１		IP	２		IP	４	5	IP	３	3	IP	１		IP	４		IP	６		IP	３		IP	５		IP	３		IP
+吉原　　快誓	1.10	0.19	4.8	６	6	IP	６	6	IP	６	6	IP	６	6	IP	落	6	IP	Ｆ	6	IP	６	6	IP	６	6	IP	４	6	IP	６	6	IP
+宇佐見　　淳	4.40	0.17	3.6	４		IP	５		IP	１		IP	３		G3	４		G3	６		IP	６		IP	６		G1	３		IP	３		IP

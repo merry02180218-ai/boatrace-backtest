@@ -1,0 +1,8 @@
+data=
+1	0
+村田　　浩司	8.00	0.15	3.3	１		IP	３		IP	１		IP	２		IP	２		IP	５		IP	３		IP	１		IP	１		IP	１		G3
+三松　　直美	3.20	0.17	3.2	６		IP	２		G3	３	3	G3	６	6	IP	６		IP	６		G3	２		G3	６		G3	６		G3	４	3	G3
+楠原　　翔太	4.90	0.18	3.9	３		IP	６		IP	３		IP	６		IP	４		IP	３		IP	４		IP	１		IP	１		IP	６		G3
+山下　　心一	2.30	0.18	3.9	５		IP	落		IP	４		IP	５		IP	６		IP	６		IP	６		IP	５		IP	２		IP	５		IP
+竹田　　辰也	5.30	0.14	3.3	３		IP	６		IP	２		IP	４		IP	２		IP	５		IP	５		G3	２		IP	４		IP	２		IP
+永田　　秀二	5.20	0.16	4.1	４		IP	３		IP	２		IP	６		IP	２		G2	４	5	IP	３		IP	３		IP	５		IP	３		IP

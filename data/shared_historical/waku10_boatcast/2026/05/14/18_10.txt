@@ -1,0 +1,8 @@
+data=
+1	0
+鶴田　　勇雄	8.20	0.17	3.5	１		IP	１		IP	２		IP	１		IP	２		G3	１		G3	１		IP	２	2	IP	５		IP	３		IP
+平田　　忠則	6.90	0.15	3.4	２		IP	５		IP	３		IP	１		G1	４		IP	５		IP	２	3	G3	１		G3	２		IP	１		IP
+小野　　達哉	5.80	0.14	2.6	３		IP	３		IP	４		IP	１		IP	３		IP	４		IP	２		IP	３		IP	３		IP	５		IP
+樋口　　範政	2.70	0.17	4.8	６		IP	４		IP	５	5	IP	５		IP	４		IP	６		IP	５		IP	６		IP	４		IP	３		IP
+岩瀬　　裕亮	5.70	0.16	4.6	４		IP	３		G1	４		G1	３		IP	１		G1	４		G1	５		G1	４		G1	５		G1	２		IP
+山崎　　　祥	3.70	0.22	4.4	６		IP	５		IP	２	5	IP	４		IP	５		IP	４		IP	４		IP	５		IP	３		IP	４		IP

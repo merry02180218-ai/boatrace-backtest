@@ -1,0 +1,8 @@
+data=
+1	0
+椎名　　　豊	9.40	0.14	2.1	１		IP	２		IP	１		IP	２		IP	１		IP	２		G3	１		G3	１		IP	１		IP	１		IP
+山下　　流心	5.70	0.19	4.2	２		IP	３		IP	３		IP	４		IP	４		IP	３		IP	４		G3	６		G3	２		IP	１		IP
+芹澤　　克彦	3.90	0.14	2.2	４	4	G3	５		IP	４		IP	２		IP	６		IP	３		IP	６		IP	３		IP	６	4	IP	３		IP
+松田　　隆司	4.60	0.17	3.9	６		IP	３		IP	６	5	IP	６	6	IP	６		IP	３		IP	３		IP	１		IP	２		IP	３		IP
+一色　　凌雅	5.20	0.18	3.9	４		IP	５	6	IP	２	6	IP	３		IP	５		IP	５		IP	３		IP	２		IP	４		IP	２		IP
+井川　　大作	2.50	0.17	3.9	５		IP	４		IP	６		IP	６		IP	５		IP	５		IP	３		IP	４		IP	６		G3	５		IP

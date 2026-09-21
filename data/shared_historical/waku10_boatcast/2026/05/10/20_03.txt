@@ -1,0 +1,8 @@
+data=
+1	0
+大島　隆乃介	5.56	0.17	2.9	１		IP	２		IP	転		IP	４		IP	５		IP	４		IP	１		IP	４		IP	４		IP	４		IP
+土井　　祥伍	4.30	0.22	4.7	２		IP	６		IP	５		IP	１		IP	Ｆ	1	IP	５		IP	５		IP	４		IP	３		IP	２		IP
+田中　　　豪	7.40	0.13	2.2	２		IP	２		IP	３		IP	２		IP	２		IP	３		IP	１		IP	３		IP	２		IP	３		IP
+北川　　敏弘	3.40	0.17	3.1	５		IP	５		IP	２		IP	６		IP	４		IP	２		IP	５		IP	４		IP	５		IP	６		IP
+竹井　　奈美	5.70	0.17	4.0	３		IP	３		IP	３		IP	３		G3	５		G1	３		IP	３		G1	６		IP	３		IP	１	4	IP
+藤丸　　光一	4.40	0.21	4.5	３	3	IP	５	5	IP	３	2	IP	４	4	IP	２	2	IP	５	3	IP	５		G3	５	2	IP	２	4	IP	４	4	IP

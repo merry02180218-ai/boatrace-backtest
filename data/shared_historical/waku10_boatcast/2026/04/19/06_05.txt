@@ -1,0 +1,8 @@
+data=
+1	0
+桑原　　将光	7.40	0.17	3.3	２		IP	１		IP	３		IP	６		IP	１		IP	１		IP	２		IP	１		IP	１		IP	６		IP
+野中　　一平	5.50	0.10	1.7	５		G1	５		G2	４		G1	２		G1	３		IP	４		IP	５		G1	４		G1	３		IP	１		IP
+森永　　　隆	6.20	0.20	3.7	１		IP	２		IP	２	4	IP	６		IP	２		IP	４		IP	１		IP	６	4	IP	１		IP	６		IP
+三品　　隆浩	4.10	0.20	3.4	４		IP	３		IP	５		IP	６		IP	４		IP	４		IP	２		IP	５		IP	２		IP	５		IP
+荒牧　　凪沙	3.60	0.20	3.7	６		IP	３		IP	５		IP	５		IP	４		IP	５		IP	４		IP	６		IP	３		IP	２		IP
+石川　　吉鎬	2.90	0.23	4.6	６		IP	６		IP	４		IP	４		IP	６		IP	３	5	IP	６		IP	５		IP	３		IP	５		IP

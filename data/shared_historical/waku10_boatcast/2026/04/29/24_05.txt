@@ -1,0 +1,8 @@
+data=
+1	0
+八戸　　琉楓	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+寺嶋　　　雄	4.60	0.20	3.7	２		IP	４		IP	３		IP	４		IP	３		IP	１		IP	６		IP	５		IP	４		IP	６		IP
+古川　　　健	2.80	0.16	2.3	３		IP	３		IP	４		IP	５		IP	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP
+吉田　　俊彦	5.30	0.11	2.9	３		IP	４		IP	２		IP	４		IP	６		G1	３		G1	２		IP	３		IP	４		G1	５		IP
+北川　　太一	5.60	0.12	2.9	２		IP	３		IP	６		G3	２		IP	６		IP	３		IP	５		IP	２		IP	２		IP	２		G3
+大石　　真央	1.50	0.20	4.3	６		IP	６		IP	６		IP	６		IP	３		IP	６		IP	６		IP	６		IP	６		IP	６		IP

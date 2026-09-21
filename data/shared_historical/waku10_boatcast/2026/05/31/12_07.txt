@@ -1,0 +1,8 @@
+data=
+1	0
+岡村　　将也	8.20	0.13	2.5	１		IP	２		IP	１		IP	１		IP	３		IP	３		IP	１		IP	２		IP	４		IP	１		IP
+小池　　公生	5.50	0.19	4.5	１		IP	４		IP	６		IP	３		IP	４		IP	４		IP	４		IP	１		IP	４		IP	２		IP
+篠木　亜衣花	3.90	0.26	4.7	５		IP	４		IP	５		G3	６		IP	１		G3	５		G3	５		IP	５		IP	１		IP	４		IP
+山谷　　　央	4.40	0.16	3.2	５		IP	５		IP	２		IP	３		IP	４		IP	４		IP	３		IP	４		IP	４		IP	４		IP
+星野　　政彦	3.10	0.13	2.5	５		IP	２	4	IP	３		IP	Ｆ		IP	５		IP	５		IP	４		IP	３		IP	６		IP	Ｆ		IP
+安田　　政彦	2.50	0.18	5.1	４	5	IP	５	5	IP	６		G3	６		G3	５		IP	３	5	IP	５		IP	５		IP	４		IP	６		IP

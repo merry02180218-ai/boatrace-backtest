@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　高史	8.30	0.14	3.5	３		IP	６		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+松井　　貫太	4.50	0.18	4.6	４		IP	４		IP	６		IP	５		IP	３		IP	２		IP	４		IP	５		IP	１		IP	４		IP
+山崎　　　祥	5.60	0.20	3.3	４		IP	１		IP	３		IP	４		IP	３		IP	３		IP	１		IP	５		IP	３		IP	５		IP
+谷野　　錬志	7.20	0.14	2.0	２		IP	６		G1	２		IP	１		IP	６	5	G1	１		IP	２		IP	２		IP	１		IP	３		IP
+谷川　　将太	4.00	0.17	3.1	３		IP	５		IP	６		IP	４		IP	６		IP	１		IP	５		IP	３	6	IP	４		IP	４		IP
+中川　　りな	3.80	0.19	4.3	６		IP	６		IP	１		IP	６		IP	４		IP	３		G3	６		IP	５		G3	３	5	IP	３		IP

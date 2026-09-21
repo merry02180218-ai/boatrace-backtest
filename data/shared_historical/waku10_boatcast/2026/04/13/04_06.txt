@@ -1,0 +1,8 @@
+data=
+1	0
+伊倉　　　光	8.20	0.17	2.9	４		IP	２		IP	４		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	２		IP
+渡邉　　　健	5.40	0.12	2.5	６		G3	２		IP	４		IP	６		IP	１		IP	４		IP	２		IP	５		IP	１	4	IP	３		IP
+大上　　卓人	7.70	0.16	3.3	４	4	SG	２		G1	４		G1	５		G1	２		IP	１		IP	３		G1	２		IP	１	4	IP	１		IP
+植田　　太一	4.60	0.18	3.8	６		G3	３		G3	２		IP	２		IP	６		IP	３		IP	３	5	G1	４		G1	６		IP	６		IP
+津田　　裕絵	4.60	0.21	4.5	４		IP	１		IP	４		IP	３		IP	５		IP	６		IP	５		IP	６		G1	３		G1	２		IP
+梶原　　　正	3.20	0.19	3.4	３		IP	６		IP	４		IP	５		IP	４		IP	５		IP	６		IP	４		IP	４	5	IP	４		G3

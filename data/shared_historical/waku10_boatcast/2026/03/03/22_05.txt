@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　奈月	6.60	0.17	3.0	２		IP	２		IP	１		IP	４		IP	２		IP	３		IP	５		G3	１		IP	２		IP	５		IP
+向井田　佑紀	4.00	0.17	3.3	３		IP	６		IP	４		IP	２		G3	６		G3	５		IP	５		IP	５		IP	２		IP	３		IP
+上村　慎太郎	4.90	0.22	5.1	２		IP	５		IP	３		IP	５		IP	３		IP	５		IP	６		IP	３		IP	２		IP	２		IP
+前田　　　滉	6.60	0.17	3.4	６		G1	１		G1	１		G1	５		G1	３		IP	３		SG	３		G1	４		G1	４		G1	２		IP
+金田　　智博	5.44	0.15	3.1	３		IP	３	6	IP	４		IP	２		IP	４		IP	５		IP	エ		IP	５		IP	２		IP	２		IP
+庄島　　潤成	2.20	0.15	4.0	６		IP	２		IP	４		IP	５		IP	５		IP	６		IP	６		IP	転		IP	５		IP	６		IP

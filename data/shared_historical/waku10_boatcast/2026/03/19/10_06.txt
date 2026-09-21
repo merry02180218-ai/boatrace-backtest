@@ -1,0 +1,8 @@
+data=
+1	0
+高山　　敬悟	7.80	0.21	3.4	１		IP	１		IP	３		IP	１		IP	１		IP	２		IP	３		IP	エ		IP	１		IP	２		IP
+花田　　和明	7.00	0.15	2.7	１		IP	３		IP	３		IP	３		IP	２		IP	３		IP	４		IP	２		IP	２		G3	２		G3
+小川　日紀太	5.30	0.19	3.9	６		IP	４		G3	４		IP	３	4	IP	Ｆ		IP	２		IP	２		IP	２		IP	３		IP	２		IP
+茶谷　　信次	4.60	0.17	3.0	３		IP	５		IP	４		IP	３		IP	２	5	IP	３		IP	５		IP	５		IP	３		IP	４		IP
+上田　　龍星	4.60	0.17	4.6	２		G1	妨		G2	５		G2	４		IP	４		IP	３		IP	１	4	IP	４		IP	４		IP	６		G1
+櫻井　　　隼	1.90	0.32	5.5	４		IP	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP	６		IP	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+高木　　圭大	6.30	0.15	2.9	２		IP	１		IP	２		IP	１		IP	６		IP	３		IP	４		IP	４		IP	３		IP	３		IP
+梅原　　祥平	3.60	0.16	3.4	２		IP	１		IP	６		IP	５		IP	５		IP	５		IP	２		IP	６		IP	６		IP	６		IP
+柳沢　　　一	6.50	0.09	2.3	６		IP	６		IP	２		IP	２		IP	１		IP	５		G1	４		G1	２		IP	２		G1	１		G1
+武井　莉里佳	5.40	0.14	3.1	２		IP	１		IP	３		IP	６		G1	６		G1	１		G3	４		IP	５		G3	５		IP	２		IP
+大場　　　敏	5.40	0.16	3.6	４	4	IP	１	4	IP	４		IP	５		IP	５		IP	４		IP	３		IP	３	6	IP	３		IP	１		IP
+廣瀬　　篤哉	3.30	0.18	4.2	３		IP	３		IP	６		IP	４		IP	５		IP	５		IP	６		IP	４	5	IP	４		IP	５		IP

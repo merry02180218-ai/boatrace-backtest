@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　章司	5.50	0.20	4.1	４		IP	５		IP	６		IP	４		IP	２		IP	２		IP	２		IP	１		IP	２		IP	５		IP
+川原　　　涼	5.10	0.17	3.7	１	4	IP	６		IP	３		IP	５		IP	３		IP	３		IP	３		IP	５		IP	２	3	IP	４		IP
+石本　　裕武	5.90	0.14	3.0	６		G1	１		G1	１		IP	３		IP	２		G1	６		G1	５		IP	３		G2	３	6	IP	４		IP
+八戸　　琉楓	2.00	0.24	4.9	４		IP	５	5	IP	４		IP	５		IP	５	5	IP	６		IP	６		IP	６		IP	６	3	IP	５	6	IP
+堀越　　雄貴	5.10	0.19	5.0	３		IP	５		IP	３		IP	４		IP	３		IP	３		IP	２		IP	４		IP	６		IP	２	6	IP
+萩原　丈太朗	1.60	0.22	4.0	５		IP	Ｆ		IP	６		IP	５		IP	４		IP	５		IP	６		IP	５		IP	６		IP	６		IP

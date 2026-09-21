@@ -1,0 +1,8 @@
+data=
+1	0
+米丸　　乃絵	9.70	0.14	3.1	１		G2	１		G3	２		G3	１		G3	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+湯淺　　紀香	6.60	0.17	4.9	３		G2	２		G3	２		IP	１	3	IP	５		IP	２		IP	２		IP	３		IP	２		IP	６		G3
+松尾　　夏海	7.80	0.14	2.4	４		G2	２		IP	２		IP	１		IP	３		IP	１		IP	１		IP	１		IP	６		IP	１		IP
+長嶋　　万記	7.20	0.14	2.8	５		G2	２		IP	５		IP	２		IP	１		IP	１		IP	３		G1	１		G1	１		G3	５		G3
+門田　　　栞	3.70	0.18	3.2	５		G2	４		IP	６		G3	３		G3	３		G3	５		IP	４	6	IP	３		IP	６	6	IP	４	6	IP
+宇野　　弥生	2.60	0.14	2.5	６		G2	６		G2	５		IP	４		G3	５		G3	３		G3	６		IP	６		IP	４	5	IP	６		G1

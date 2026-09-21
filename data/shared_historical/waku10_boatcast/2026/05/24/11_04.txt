@@ -1,0 +1,8 @@
+data=
+1	0
+浜野　　孝志	8.00	0.15	3.8	１		IP	５		IP	１		IP	２		IP	３		IP	２		IP	１		IP	１		IP	３		IP	１		IP
+木村　　仁紀	7.10	0.14	3.4	４		G2	３		IP	２		IP	２		IP	１		IP	５		G1	２		G1	１		G1	４		G1	３		IP
+馬野　　　耀	6.60	0.20	3.3	３		IP	１		IP	４		IP	３		IP	３		IP	２		IP	２		IP	３		IP	４		IP	２		IP
+坪井　　康晴	6.00	0.15	3.0	３		G2	６		IP	２		IP	４		G1	３		IP	１		G1	３		G1	３		G1	５		G1	４		G1
+三浦　洋次朗	4.30	0.13	3.2	６		G2	２		IP	６		IP	４	4	IP	４		IP	６		IP	３		IP	１	4	IP	６		IP	４		IP
+山田　　祐也	4.60	0.12	3.6	４		G2	３		IP	４		IP	３		G1	４	5	G1	６		G1	５		SG	４	5	SG	６		G2	４		G1

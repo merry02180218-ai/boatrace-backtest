@@ -1,0 +1,8 @@
+data=
+1	0
+田村　　隆信	9.40	0.13	2.6	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	４		IP
+平瀬　　城啓	3.90	0.21	4.2	６		IP	２		IP	５		IP	４		IP	転		IP	２		IP	４		IP	４		IP	４		IP	４		IP
+永井　　亮次	4.60	0.17	3.3	５		IP	４		IP	２		IP	４		IP	２		IP	６		IP	６		IP	２		IP	４		IP	３		IP
+中村　　守成	3.40	0.20	4.8	４		IP	５	5	IP	６		IP	６		IP	５		IP	５		IP	４		IP	４		IP	２		IP	３		IP
+中島　　浩哉	3.80	0.19	3.7	５		IP	４		IP	４		IP	６	6	G3	５		G3	３		IP	２		IP	６		IP	４		IP	３		IP
+佐藤　　大佑	3.60	0.18	4.3	４		IP	４		IP	５		IP	５	5	IP	５		IP	６		IP	６		IP	４		IP	３		IP	１		IP

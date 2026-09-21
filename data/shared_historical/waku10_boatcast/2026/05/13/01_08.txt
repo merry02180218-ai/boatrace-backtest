@@ -1,0 +1,8 @@
+data=
+1	0
+吉島　　祥之	6.00	0.19	3.9	５		IP	５		IP	１		IP	４		IP	２		IP	４		IP	３		IP	１		IP	４		IP	１		G3
+長谷川　　充	5.10	0.21	3.8	４		IP	２		IP	２		IP	２		IP	３		IP	２		IP	６		IP	５		IP	５		IP	４		IP
+伊倉　　　光	4.90	0.19	3.1	４		IP	３		IP	３		IP	４		IP	６		IP	３		IP	４		IP	２		IP	３		IP	４	4	IP
+乙津　　康志	5.40	0.19	4.0	５		IP	６		IP	３		IP	１		IP	６	5	IP	４		IP	３		IP	３		IP	２		IP	１		IP
+野中　　一平	5.40	0.08	2.1	３		IP	６		IP	５		IP	１		IP	３		IP	５		G1	４		G1	３		G2	１		G2	５		G1
+木山　　誠一	2.50	0.16	3.9	６		IP	２		IP	６		IP	５		IP	６		IP	６		IP	５	5	IP	５		IP	３		IP	６		IP

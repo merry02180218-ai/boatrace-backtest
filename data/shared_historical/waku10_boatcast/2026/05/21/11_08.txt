@@ -1,0 +1,8 @@
+data=
+1	0
+上原　　　崚	8.70	0.17	2.5	１		G2	１		IP	２		IP	１		IP	１		IP	３		IP	３		IP	１		IP	３		IP	１		IP
+平高　　奈菜	8.00	0.16	2.8	１		G2	５		SG	２		SG	落		G3	２		G3	１		G1	２		G1	１		IP	２		IP	２		G1
+向後　　龍一	7.11	0.14	3.6	４		G2	１		G2	２		IP	転		IP	２		IP	２		IP	４		IP	２		IP	５		IP	２	2	G3
+深井　　利寿	5.20	0.13	3.2	４		IP	５		IP	３		IP	３		IP	４		IP	２		IP	１		IP	転		IP	３		IP	３		IP
+田村　　隆信	4.90	0.16	4.5	６		IP	１		IP	５		IP	３		IP	５		IP	１		IP	４	6	IP	２		IP	６		IP	４		G1
+湯川　　浩司	6.00	0.13	3.0	３		G2	５		IP	４		G1	６		G1	３	3	G1	４		G1	２		G2	３		IP	１	5	IP	３		G1

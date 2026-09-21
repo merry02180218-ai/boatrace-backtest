@@ -1,0 +1,8 @@
+data=
+1	0
+福来　　　剛	8.70	0.15	2.7	５		IP	１		IP	２		IP	２		IP	１		IP	１		G1	１		G1	１		G1	４		G1	１		IP
+大西　　　賢	6.40	0.19	3.6	１		IP	２		IP	５		IP	１		IP	２		IP	５		IP	３		IP	５		IP	２		IP	２		IP
+岩永　　雅人	4.60	0.22	3.9	３		IP	５	5	IP	２		IP	６		IP	４		IP	６		IP	３		IP	１		IP	５		IP	３		IP
+松本　　一毅	3.60	0.18	2.9	４		IP	６		IP	５		IP	６		IP	３		IP	３		IP	４		IP	４		IP	５		IP	４		G3
+金子　　龍斗	3.33	0.17	3.2	６		IP	３		IP	５		IP	１		IP	６		IP	転		IP	６		IP	６		IP	４		IP	５		IP
+松村　　康太	5.80	0.17	3.3	３		IP	２		IP	３	4	IP	５		IP	１	4	IP	３		IP	４	5	IP	１	5	IP	４		IP	５		IP

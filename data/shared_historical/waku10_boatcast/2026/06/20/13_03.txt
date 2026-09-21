@@ -1,0 +1,8 @@
+data=
+1	0
+胡本　　悟志	6.20	0.17	3.3	４		G3	５		IP	１		IP	１		IP	４		IP	４		IP	４		IP	１		IP	３		IP	２		IP
+香川　　素子	6.50	0.19	4.6	４		IP	２		G3	３		IP	５		IP	２		G3	２		G3	２		G3	２		IP	３		IP	３		G1
+森　　　竜也	4.30	0.15	3.4	３		IP	６		G3	１		G3	２		IP	４		IP	５		IP	５		G3	３		G3	５		IP	５		IP
+藤田　　康生	1.33	0.13	3.5	６		IP	６	6	IP	６		IP	６	5	IP	５	6	IP	６	6	IP	Ｆ	6	IP	６	6	IP	４	6	IP			IP
+大森　　　翼	4.40	0.16	3.5	４		IP	３		IP	５		IP	４		IP	２		IP	５	4	IP	３		IP	１		IP	６		IP	６		IP
+鶴田　　勇雄	4.40	0.20	4.2	４		IP	１		IP	３		IP	４		IP	５		IP	４		IP	６		G3	６		G3	４		IP	３		IP

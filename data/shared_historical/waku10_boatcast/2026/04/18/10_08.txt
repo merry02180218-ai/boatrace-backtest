@@ -1,0 +1,8 @@
+data=
+1	0
+島倉　　　都	9.00	0.15	2.6	１		IP	１		G3	４		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP
+石塚　　久也	6.80	0.18	4.0	２		IP	２		IP	３		IP	１		IP	３		IP	４		IP	２		IP	４		IP	２		IP	３		IP
+深川　麻奈美	5.20	0.16	3.7	３		IP	２		IP	６		IP	４		IP	１	4	IP	３	4	G1	Ｆ		IP	４		IP	２		G3	４		G3
+島川　　光男	5.60	0.14	2.4	２		IP	４		IP	３		IP	３		IP	３		IP	４	3	IP	４		IP	２		IP	２		IP	５		IP
+富田　　恕生	3.10	0.17	3.6	４		IP	６		IP	５		G3	６		G3	３		IP	４		IP	３		IP	５	6	IP	６		IP	４		IP
+鈴木　　雄登	3.90	0.18	3.3	３		IP	５		IP	２		IP	５		IP	６		IP	４		IP	５		IP	４		IP	３		IP	４		IP

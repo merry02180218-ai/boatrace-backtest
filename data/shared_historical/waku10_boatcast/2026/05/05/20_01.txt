@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　尚汰	5.50	0.17	2.6	４		IP	４		IP	２		IP	１		IP	５		IP	５		IP	６		IP	４		IP	１		IP	１		IP
+大賀　龍之介	6.40	0.15	2.8	５		IP	２		IP	２		IP	３		IP	１		IP	４	3	IP	２		IP	４		IP	１		IP	４		IP
+宮地　　秀祈	5.30	0.18	3.7	３		IP	４		IP	２		IP	２		IP	４		IP	６		IP	２		IP	２		IP	５		IP	４		IP
+大庭　　元明	4.30	0.14	3.1	３		IP	６		IP	５		IP	妨	6	IP	４		IP	２	5	IP	２	5	IP	５		IP	１		IP	５		IP
+長尾　京志郎	3.60	0.24	4.6	６		IP	３		IP	３		IP	３		IP	４		IP	６		IP	５		IP	３		IP	５		IP	５		IP
+山口　　広樹	2.90	0.22	5.1	５		IP	６		IP	６		IP	２		IP	５		IP	４		IP	４		IP	４		IP	６		IP	５		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+土屋　　太朗	6.40	0.20	3.7	１		G3	４		IP	２		IP	５		IP	５		IP	２		IP	１		IP	２		IP	５		IP	１		IP
+杉田　　篤光	6.00	0.17	4.1	３		IP	５		IP	３		G3	４		IP	４		IP	１		IP	３		IP	２		IP	３		IP	２		IP
+吉川　　勇作	4.40	0.14	2.4	６		IP	６		IP	２		IP	３		IP	２		IP	２		IP	３		IP	６		IP	６		IP	４		IP
+金山　　立樹	5.80	0.19	3.4	４		IP	３		IP	２		IP	２		IP	５		IP	４		IP	５		IP	２		IP	３		IP	１		IP
+長畑　　友輔	4.00	0.14	3.6	３		IP	４		IP	４		IP	５		IP	４		IP	５		IP	２		IP	５	6	IP	３		IP	５		IP
+権藤　　俊光	5.10	0.18	4.8	３	5	IP	３		G1	５		SG	５		SG	落		G1	２		G1	３		G1	５		IP	２		IP	４		IP

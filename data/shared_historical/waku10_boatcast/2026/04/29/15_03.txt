@@ -1,0 +1,8 @@
+data=
+1	0
+谷口　　知優	8.00	0.15	2.9	４		IP	１		IP	２		IP	１		IP	３		IP	２		IP	２		IP	３		IP	１		IP	１		IP
+宮崎　　　奨	7.10	0.17	3.2	２		IP	５		G3	６		IP	２		IP	２		G3	３		G3	２		G1	２		G1	１		IP	１		IP
+石丸　　海渡	5.50	0.11	2.3	３		IP	４		IP	５		G1	１		G1	４		IP	３		IP	４		IP	２		IP	２		IP	６		IP
+塩田　　雄一	3.40	0.24	3.5	５		IP	５		IP	６		IP	３		IP	４		IP	５		IP	１		IP	４		IP	５		IP	６		IP
+片岡　　雅裕	4.40	0.12	2.4	４		IP	５		G1	６		G1	３		G1	４		G1	４		G1	５		G1	３		IP	４	4	G1	６		G1
+門田　　　栞	4.50	0.21	3.7	２	5	IP	４		G3	６		G3	５		G3	２		IP	５		IP	３	5	IP	５		IP	２		IP	４		IP

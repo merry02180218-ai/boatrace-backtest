@@ -1,0 +1,8 @@
+data=
+1	0
+廣中　　良一	6.00	0.19	3.3	１		IP	６		IP	４		IP	２		IP	４		IP	１		IP	５		IP	１		IP	６		IP	１		IP
+安田　　吉宏	5.50	0.20	4.1	３		IP	６		IP	３		IP	２		IP	２		IP	２		IP	３		IP	４		IP	３		IP	５		IP
+松尾　　基成	4.00	0.18	3.7	５		IP	５		IP	３		IP	４		IP	６	4	IP	５	4	IP	２		IP	２		IP	３		IP	６		IP
+福田　　雅一	6.30	0.15	2.1	４		IP	２		IP	１		IP	３		IP	５		IP	２		IP	１		IP	３	5	IP	６		IP	２		IP
+甲斐　　貴大	1.00	0.22	4.8	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP
+山本　　浩次	2.50	0.16	2.6	６		IP	４		IP	６	4	IP	５		IP	５		IP	４		IP	４	4	IP	４	5	IP	６		IP	５		IP

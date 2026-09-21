@@ -1,0 +1,8 @@
+data=
+1	0
+中野　　孝二	6.20	0.13	2.4	６		IP	２		IP	２		IP	１		IP	１		IP	５		IP	６		IP	５		IP	１		IP	１		IP
+河野　　主樹	6.00	0.14	3.1	６		IP	２		IP	２		G3	４		G3	２		IP	２		IP	３		IP	６		IP	２		IP	２		IP
+間庭　　菜摘	3.70	0.16	2.7	落		IP	４		IP	６		G1	６		G3	５		G3	３	4	IP	４		IP	２		IP	３		IP	４	4	IP
+渡邊　　雄斗	3.90	0.22	3.4	６		IP	５		IP	１	5	IP	６		IP	２	6	IP	４		IP	５		IP	５	5	IP	２		IP	６	5	IP
+滝川　真由子	3.60	0.19	3.7	６		IP	６		G3	５		G3	４		IP	４		IP	５		IP	３		IP	３		IP	２		IP	５		IP
+鈴木　　峻佑	3.00	0.18	4.2	５		IP	５		IP	５		IP	４		IP	５		IP	６		IP	２		IP	５		IP	３		IP	６		IP

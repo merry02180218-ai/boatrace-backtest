@@ -1,0 +1,8 @@
+data=
+1	0
+崎　　　利仁	5.90	0.18	2.6	２		IP	１		IP	４		IP	３		IP	３		IP	５	2	IP	６		IP	４		IP	１		IP	２		IP
+泉　　　啓文	4.20	0.20	4.1	２		G3	４	3	G3	４		IP	２		IP	３	3	IP	５		IP	５		IP	４	3	IP	４		IP	落		IP
+品田　　直樹	7.60	0.16	3.0	１		IP	２		IP	４		IP	１		IP	３		IP	２		IP	４	4	IP	１		IP	３		IP	１		IP
+木山　　大聖	2.40	0.16	2.8	６		IP	６	5	IP	４	6	IP	５	6	IP	４		IP	６	5	IP	２		IP	６		IP	６		IP	６		IP
+小宮　　涼雅	4.50	0.15	3.1	４		IP	３		IP	２		IP	６	6	IP	３		IP	４		IP	５		IP	３		IP	４		IP	４	6	IP
+渡邉　　雄朗	3.90	0.20	3.8	２		IP	５	5	IP	３		IP	６		G2	５	5	IP	３		IP	６		IP	４	5	G1	４		G1	６		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+前川　　守嗣	6.60	0.16	3.4	４		IP	１		IP	５		IP	４		IP	４		IP	１		IP	１		IP	３		IP	３		IP	１		IP
+松井　　賢治	7.00	0.15	3.1	３		IP	２		IP	５		IP	２		IP	２		IP	２		IP	２		IP	４		IP	１		IP	２		IP
+山崎　　　郡	7.90	0.14	3.4	３		G1	２		G1	１		G1	２		IP	１		IP	３		G1	３		IP	３		IP	３		IP	２		G1
+豊田　　訓靖	3.10	0.16	2.8	５		IP	５	3	IP	６		IP	５	5	IP	４		IP	２		IP	６		IP	６		IP	２		IP	５		IP
+櫻井　　　隼	1.60	0.26	4.9	６	6	IP	５	6	IP	６	6	IP	５	6	IP	転	6	IP	４	6	IP	Ｆ	6	IP	４	6	IP	６	6	IP	６	6	IP
+仁科　さやか	1.50	0.22	5.1	６		IP	６		IP	５	4	IP	６	4	IP	６		IP	６		IP	６		G3	６		G3	４		G3	５		G3

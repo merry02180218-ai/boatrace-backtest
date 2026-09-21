@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　二朗	3.80	0.19	3.7	３		IP	５		IP	６		IP	６		IP	４		IP	５		IP	３		IP	２		IP	４		IP	４		G3
+今泉　　友吾	7.10	0.17	3.6	２		G1	３		G1	６		G1	１		IP	１		G1	４		G1	２		G1	４		IP	４		G1	２		G1
+藤原　　菜希	5.00	0.19	2.6	１		IP	５		IP	１		G1	６		G3	４		G3	Ｆ		IP	５		IP	１		G3	２		G3	５		G3
+西田　　　靖	4.20	0.20	4.2	５	2	G3	６	2	G3	４	2	IP	４	2	IP	５	2	IP	１	2	IP	１	2	IP	３	2	IP	６	2	IP	５	2	IP
+上原　　　崚	5.70	0.15	3.4	２		IP	２	6	IP	２		IP	３		IP	２		IP	５	6	IP	４	6	IP	６		G2	５		G2	２		IP
+大月　　遊雅	2.30	0.16	3.7	５	5	IP	６		IP	５		IP	５		IP	５		IP	６		IP	４		IP	３	5	IP	６		IP	５		IP

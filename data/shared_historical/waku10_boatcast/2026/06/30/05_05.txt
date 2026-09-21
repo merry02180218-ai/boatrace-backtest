@@ -1,0 +1,8 @@
+data=
+1	0
+宮村　　勇哉	7.30	0.17	2.7	３		IP	５		IP	１		IP	１		IP	１		IP	１		IP	６	4	IP	１		IP	４		IP	１		IP
+福田　　翔吾	5.20	0.15	3.0	３		IP	２		IP	４		IP	２		IP	４		IP	２		IP	転		IP	４		IP	２		IP	５		IP
+青木　　　蓮	4.30	0.13	3.1	４		IP	３		IP	２		IP	６		IP	２		IP	５		IP	６		IP	１		IP	６		IP	５		IP
+富山　　弘幸	5.10	0.19	3.5	４		G3	３		G3	６		IP	２		IP	５		IP	２		IP	３		IP	２		IP	３		IP	５		IP
+内堀　　　学	5.60	0.18	3.2	５		IP	２		IP	５		IP	３	3	IP	２		IP	５		IP	１	4	IP	５		IP	１		IP	４		IP
+木幡　　純也	3.33	0.22	4.8	６		IP	４		IP	３		IP	６		IP	５	5	IP	３		IP	５		IP	転		IP	３		IP	５		IP

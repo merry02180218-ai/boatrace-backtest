@@ -1,0 +1,8 @@
+data=
+1	0
+東　　　潤樹	8.20	0.16	3.2	５		IP	１		IP	１		IP	１		IP	５		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+高橋　　淳美	4.10	0.13	2.8	３		IP	３		IP	５		IP	５		IP	３		IP	４		IP	４		G3	３		G3	４		IP	６		IP
+村岡　　　賢	6.20	0.17	2.9	４		IP	２		IP	３		IP	１		IP	４		IP	４		IP	３	4	IP	２		IP	４		IP	３		IP
+山本　稔太朗	3.70	0.18	4.1	５		IP	６		IP	４		IP	５		IP	４		IP	５		IP	２		IP	４		IP	２	3	IP	５	5	IP
+赤松　　咲香	1.70	0.16	3.7	６		IP	６		IP	６		IP	６		IP	５		G3	６		G3	４		IP	６		IP	６		IP	４		IP
+塩田　　雄一	2.60	0.18	4.6	５	5	IP	６		IP	５		IP	６		IP	６		IP	６		IP	３		IP	５		IP	２	5	IP	５		IP

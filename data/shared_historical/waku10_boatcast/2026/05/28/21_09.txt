@@ -1,0 +1,8 @@
+data=
+1	0
+千葉　　真弥	9.20	0.12	2.2	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	３		IP
+赤井　　　睦	5.20	0.16	2.8	３		IP	５		IP	２		G3	３		G1	６		IP	３		G1	１		G3	６		G3	４		IP	３		IP
+土屋　実沙希	5.30	0.15	2.5	４		IP	６	2	IP	５		IP	３		IP	４		IP	１		IP	２		IP	４		IP	２		IP	３		IP
+川井　　　萌	3.20	0.22	4.6	６		IP	４		IP	３	5	IP	６		IP	６	5	IP	５		IP	３		IP	４		G1	３		IP	落		IP
+向井田　真紀	3.30	0.21	3.7	５		IP	４		IP	４		IP	５	4	IP	５		IP	２	6	IP	２		G3	Ｆ		IP	６		IP	５		IP
+深川　麻奈美	3.80	0.19	4.7	転	5	IP	２		IP	４		G2	５		IP	６		IP	５		IP	４		IP	３	5	IP	５		IP	２		IP

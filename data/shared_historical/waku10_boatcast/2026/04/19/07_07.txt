@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　一郎	8.80	0.18	2.7	２		IP	１		IP	２		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	２		IP
+栗原　　謙治	4.00	0.21	4.0	１		IP	５		IP	４		IP	３		IP	６		IP	３		IP	６		IP	５		IP	４		IP	４		IP
+松崎　祐太郎	5.80	0.18	2.5	５		IP	５		IP	３		IP	２		IP	２		IP	２		IP	３		IP	２		IP	４		IP	３		IP
+中川　　りな	5.20	0.18	2.7	６		IP	３		IP	５	3	IP	３		IP	５		IP	２		IP	３		IP	６		IP	１	6	IP	１		IP
+藤原　　孝斗	4.10	0.16	3.2	２		IP	５		IP	２		IP	５		IP	４		IP	６		IP	４		IP	４		IP	５	6	IP	３		IP
+鈴木　　柊介	1.90	0.13	2.7	６		IP	４		IP	６	5	IP	４		IP	６		IP	６		IP	５		IP	５		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+岡　　　暢祐	7.20	0.14	3.6	４		IP	４		IP	２		IP	２		IP	２		IP	１		IP	２		IP	１		IP	５		IP	１		IP
+香川　　陽太	3.50	0.15	3.3	５		IP	５		IP	３		IP	２	3	IP	５		IP	５		IP	２		IP	５	3	IP	６		IP	５		IP
+石倉　　洋行	6.30	0.14	2.2	２	4	IP	６		IP	３		IP	５		G1	３		IP	４		IP	１		IP	１		IP	４		G1	１		IP
+中野　　夢斗	5.11	0.13	2.4	欠		IP	４		IP	３		IP	１		IP	４		IP	３		IP	６		IP	６		IP	４		IP	１		G3
+村岡　　　賢	4.00	0.17	4.0	６	6	IP	２		IP	５		IP	４	6	IP	４		IP	５		IP	４		IP	６		IP	２		IP	３		IP
+米本　　圭佑	1.10	0.30	5.6	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP

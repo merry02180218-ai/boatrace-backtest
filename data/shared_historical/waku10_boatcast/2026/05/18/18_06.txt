@@ -1,0 +1,8 @@
+data=
+1	0
+犬童　　千秋	6.00	0.21	3.7	１		IP	３		G3	１		G3	３		IP	５		IP	２		IP	３		G3	２		IP	５		G3	５	2	IP
+喜多須　杏奈	4.70	0.14	3.2	５		G2	３		IP	２		G3	２		G3	６		IP	５		IP	３		IP	６		IP	４		G1	３		G1
+武井　莉里佳	5.60	0.18	3.7	４		G2	１		IP	６		IP	３		IP	３		IP	３		IP	１		IP	６		IP	５		IP	２		IP
+加藤　　奈月	3.50	0.14	3.1	２		IP	４	6	IP	４		G3	４		G3	６		G3	６		G3	４		IP	３		IP	５		IP	６		IP
+植木　　美帆	3.30	0.17	3.4	１		IP	６	6	IP	６		G3	６		G3	６	6	G3	６		IP	５		IP	４		IP	１		IP	５		IP
+堀之内紀代子	4.80	0.17	3.2	５		G2	４		IP	５		IP	１		IP	３		IP	３		G3	２		G3	５		G1	６		G1	４		G3

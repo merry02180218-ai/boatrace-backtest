@@ -1,0 +1,8 @@
+data=
+1	0
+濱崎　　直矢	9.10	0.16	2.6	１		IP	１		IP	１		IP	１		IP	５		IP	１	2	SG	１		IP	１		IP	１		IP	３		IP
+内山　　文典	5.50	0.19	4.0	５		IP	３		IP	５		IP	２		IP	１		IP	１		IP	６		IP	３		IP	３		IP	４		IP
+桐本　　康臣	7.20	0.17	3.3	１		IP	５		IP	１		IP	２		IP	３		IP	２		IP	２		IP	１		IP	３		IP	４	4	IP
+米玉利　大悟	2.40	0.18	4.1	３	6	IP	５		IP	５		IP	６		IP	６		IP	２		IP	６		IP	６		IP	６	5	IP	６	6	IP
+田中　　和也	7.10	0.20	3.9	３		IP	１	1	IP	３		IP	３	4	IP	２		IP	２		IP	２	2	IP	２		IP	３		IP	５		IP
+渡辺　　　豊	2.30	0.22	4.9	５		IP	４		IP	５		IP	６		IP	４		IP	５	2	IP	６		IP	５		IP	４		IP	６		IP

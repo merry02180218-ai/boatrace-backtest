@@ -1,0 +1,8 @@
+data=
+1	0
+広次　　　修	9.00	0.14	2.7	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP
+森口　　和紀	4.40	0.20	4.6	５		IP	６	4	IP	６		IP	１		IP	５		IP	１	3	IP	２		IP	２		IP	６		IP	６		IP
+宇田川　信一	4.40	0.19	4.0	４		IP	４		IP	５		IP	３		IP	４		IP	２		IP	５		IP	５		IP	２		IP	４		IP
+秋元　　　哲	7.00	0.13	3.3	２		IP	５	2	IP	２	2	IP	３		G3	３		G1	１		G1	５		IP	４		G1	２		G1	１		IP
+金子　　貴志	4.60	0.19	3.9	３		IP	５		IP	２		IP	１		IP	６		IP	６		IP	５		IP	３		IP	３	4	IP	４		IP
+興津　　　藍	2.50	0.18	3.7	５		IP	６		IP	４		IP	５		IP	４		IP	５		IP	４	2	IP	６		IP	４	4	IP	６		IP

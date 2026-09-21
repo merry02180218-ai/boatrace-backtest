@@ -1,0 +1,8 @@
+data=
+1	0
+酒井　　陽祐	6.70	0.16	2.9	１		IP	６	2	IP	４		IP	２		IP	１		IP	３		IP	３		IP	４		IP	１		IP	２		IP
+岩川　　仁士	6.20	0.15	3.4	３		IP	２		IP	３		IP	２		IP	４		IP	１		IP	３		IP	５		IP	１		IP	５		IP
+小林　　文彦	5.30	0.18	3.7	２		IP	４		IP	３		IP	４		IP	３		IP	２		IP	３		IP	６		IP	５		IP	３		IP
+岡田　　憲行	5.40	0.21	4.4	２		IP	１		IP	５		IP	２		IP	４		IP	５		IP	３		IP	４		IP	５		IP	２		IP
+中辻　　博訓	5.20	0.14	2.8	５		IP	５		G3	４		G3	３		IP	３		IP	３		IP	２		IP	５		IP	２		IP	２		IP
+品田　　直樹	3.90	0.17	4.6	３		IP	４		IP	５		IP	３		IP	４		IP	３		IP	４		IP	４		IP	６		IP	５		IP

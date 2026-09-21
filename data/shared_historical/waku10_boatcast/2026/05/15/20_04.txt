@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　　堅	5.80	0.20	4.5	３		IP	４		IP	３		IP	１		IP	５		IP	１		IP	４		IP	１		IP	５		IP	４		IP
+宮村　　勇哉	5.10	0.18	3.6	５		IP	２		IP	５		IP	４		IP	３		IP	１	3	IP	５		IP	３		IP	６		IP	１		IP
+坪口　　竜也	4.80	0.20	3.2	４		IP	３		IP	３		IP	４		IP	３		IP	５		IP	４		IP	３		IP	５		IP	３		G3
+木場　雄二郎	4.20	0.16	3.0	５		IP	６		IP	１	5	IP	５		IP	４		IP	５		IP	３		IP	６		IP	３		IP	２		IP
+山下　　奈緒	3.11	0.30	4.9	５		G3	５		G3	転	6	IP	４	6	IP	４		IP	３		IP	５	4	IP	４		IP	５		IP	５		IP
+常住　　　蓮	5.00	0.17	3.9	６		IP	４		G1	４	5	IP	２	5	SG	３		SG	５		IP	４		G1	４		G1	３	3	IP	４		IP

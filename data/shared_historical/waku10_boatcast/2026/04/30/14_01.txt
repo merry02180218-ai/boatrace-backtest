@@ -1,0 +1,8 @@
+data=
+1	0
+樋口　由加里	7.40	0.17	2.4	５		G3	１		G3	４		IP	１		IP	２		IP	１		IP	５		IP	１		IP	２		IP	１		IP
+笠野　友紀恵	4.40	0.24	5.1	１		IP	３		IP	２		G3	５		G3	４		IP	６		IP	３		IP	６		G3	５		IP	４		IP
+松田　　真実	2.80	0.26	4.3	５		IP	２		IP	６		IP	６		IP	６		IP	６		G3	５		IP	不		IP	５		IP	１		G3
+山下　　奈緒	2.50	0.24	5.3	４	5	IP	５		IP	６		IP	４		IP	５		IP	５		IP	５		IP	５		IP	４		IP	５		G3
+野田　　亜湖	1.10	0.28	5.7	６		IP	６	6	IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP
+菅野　はやか	1.90	0.22	4.9	６		G3	５		IP	６		IP	６		IP	６		G3	５	5	IP	６		IP	６		IP	２	5	IP	６		IP

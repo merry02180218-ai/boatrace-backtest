@@ -1,0 +1,8 @@
+data=
+1	0
+佐竹　　太一	8.00	0.15	2.8	１		IP	２		IP	１		IP	２		IP	２		IP	１		IP	５		IP	１		IP	４		G3	１		IP
+安井　　瑞紀	5.30	0.15	3.1	２		G3	１		G3	５		G3	５		IP	２		G1	３		G1	６		G1	６		IP	３		IP	４		IP
+大田　　直弥	3.50	0.16	2.5	２		IP	３		IP	６		IP	４		IP	５		IP	５		IP	４		IP	５		IP	５		IP	４		IP
+関根　　彰人	3.40	0.16	3.6	２		IP	５	5	IP	６		IP	５	5	IP	５		IP	５		IP	６	6	IP	２		IP	３		IP	５		IP
+武井　莉里佳	5.80	0.18	3.4	３		IP	２		IP	５		G1	３		G1	４		G3	５		G3	２		G3	６		IP	１		IP	４		G3
+一色　　颯輝	5.30	0.24	4.9	４	5	IP	２		IP	３		IP	２		IP	３		IP	５		IP	４	5	IP	３		IP	６		IP	２		IP

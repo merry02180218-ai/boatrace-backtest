@@ -1,0 +1,8 @@
+data=
+1	0
+大井　　清貴	6.60	0.20	3.8	６		IP	３		IP	５		IP	６		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+渡邊　　哲也	4.90	0.18	3.4	５		IP	４		IP	３		IP	２		IP	１		IP	４		IP	６		IP	２		IP	５		IP	４		IP
+宮脇　　遼太	8.20	0.14	3.5	２		IP	２		IP	３		IP	２		IP	１		IP	２		IP	２		IP	１		IP	１		IP	３		IP
+山崎　　裕司	6.30	0.15	3.0	３		IP	４		IP	１		IP	２		IP	１	3	IP	１		IP	６		IP	５		IP	４		IP	２		IP
+寺嶋　　　雄	3.80	0.16	3.2	２		IP	５	6	IP	４	4	IP	５	6	IP	６		IP	３		IP	６		IP	５		IP	４		IP	２		IP
+井上　　一輝	6.20	0.16	4.2	２		G2	６		IP	２	5	IP	３		G1	５		G1	１	5	IP	２	5	IP	３		IP	２		IP	５		IP

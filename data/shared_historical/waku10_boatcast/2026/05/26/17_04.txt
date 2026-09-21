@@ -1,0 +1,8 @@
+data=
+1	0
+花本　　夏樹	6.80	0.20	3.7	４		IP	３		IP	３		IP	２		IP	２		IP	１		IP	４		IP	４		IP	２		IP	１		IP
+森定　　晃史	5.60	0.17	3.2	３		IP	２		IP	５		IP	２		IP	３		IP	２		IP	３		IP	５		IP	４		IP	３		IP
+葛原　　大陽	5.20	0.16	2.9	３		IP	２		IP	２		IP	６		G1	５		G1	３		IP	４		IP	５	4	G1	６		G1	１		IP
+上之　　晃弘	4.50	0.14	3.2	６		G3	５		G3	４		IP	１		IP	４		IP	１		IP	４		IP	２		IP	６	5	IP	６		IP
+秋山　　広一	4.70	0.22	4.2	６		G3	６		G3	４		IP	５		IP	１		IP	４		IP	３	4	IP	５		G1	３		IP	１		IP
+星田　　夢結	1.20	0.19	4.7	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

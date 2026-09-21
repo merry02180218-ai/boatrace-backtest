@@ -1,0 +1,8 @@
+data=
+1	0
+乃村　　康友	7.20	0.14	2.9	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	６		IP	１		IP	６		IP	４		IP
+岩永　　節也	4.10	0.21	4.1	３		IP	３		IP	５		IP	４		IP	４		IP	４		IP	３		IP	３		IP	５		IP	６	3	IP
+三好　　勇人	7.00	0.14	2.6	２		IP	１	2	IP	３		IP	１		IP	３		IP	４	4	IP	２		IP	３		IP	４		IP	２		IP
+松下　　知幸	3.80	0.20	4.1	４		IP	４		IP	６		IP	５		IP	５		IP	４		IP	１		IP	６		IP	４		IP	３		IP
+野長瀬　正孝	6.89	0.19	3.1	２	4	IP	２	4	IP	２	4	IP	４		IP	２	3	IP	２	4	IP	５		IP	２	2	IP	欠		IP	２	4	IP
+松下　　哲也	2.20	0.19	3.9	５		IP	６		IP	５		IP	４		IP	６		IP	３	5	IP	６		IP	６		IP	５		IP	５		IP

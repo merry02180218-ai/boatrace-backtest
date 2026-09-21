@@ -1,0 +1,8 @@
+data=
+1	0
+鈴谷　　一平	8.80	0.16	2.9	３		G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	６		IP	１		IP
+大月　　遊雅	6.40	0.16	3.1	４		IP	１		IP	２		IP	３		IP	２		IP	３		IP	２		IP	５		IP	３		IP	３		IP
+谷　　　勝幸	4.70	0.14	2.7	１		IP	２		IP	６		IP	４		IP	３		IP	３		IP	６		IP	４		IP	３		IP	６		IP
+西村　　豪洋	3.30	0.22	3.8	４		IP	５		IP	５		IP	３		IP	６		IP	６		IP	４	3	IP	６		IP	３		IP	３		IP
+土井　　祥伍	3.00	0.23	4.7	４		IP	５		IP	３		IP	４		IP	転	6	IP	６	4	IP	４	6	IP	６		IP	４		IP	６		IP
+港　　　理樹	2.60	0.23	3.9	６		IP	５		IP	６		IP	５		IP	５		IP	３		IP	６		IP	６		IP	４		IP	３		IP

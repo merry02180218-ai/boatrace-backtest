@@ -1,0 +1,8 @@
+data=
+1	0
+宮崎　　　奨	7.00	0.17	3.2	２		IP	１		IP	１		IP	４		IP	２		G3	１		G3	６		IP	４		G1	２		IP	３		IP
+新田　　芳美	6.00	0.15	3.2	３		IP	５		IP	２		IP	１		IP	２		IP	４		IP	欠		IP	６		G1	３		IP	２		IP
+平岡　　重典	4.40	0.16	3.3	４		IP	３		IP	４		IP	２		IP	４		IP	５		IP	２		IP	５		IP	転		IP	３		IP
+中野　　和裕	3.40	0.20	3.7	３		IP	６		IP	６		IP	転		IP	欠		IP	４		IP	１		IP	４	6	IP	３		IP	５		IP
+高田　　　綾	3.67	0.18	2.8	６		IP	３		IP	落		G3	５		G3	２		IP	６		IP	６		IP	３		IP	４	4	IP	４		IP
+高井　　雄基	3.44	0.25	5.3	６		IP	３		IP	３		IP	５		IP	５		IP	３		IP	６		IP	３		IP	６		IP	転		IP

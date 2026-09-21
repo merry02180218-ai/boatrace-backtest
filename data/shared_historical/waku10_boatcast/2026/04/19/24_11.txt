@@ -1,0 +1,8 @@
+data=
+1	0
+飛田　　江己	9.20	0.12	1.9	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1	不		G1	１		G1	１		IP
+大原　　祥昌	7.40	0.14	2.8	１		IP	６		G3	１		G3	２		IP	２		IP	２		IP	６		IP	２	4	IP	１		IP	１		IP
+近藤　　颯斗	3.20	0.16	2.8	４		IP	２		IP	４		IP	６		IP	５		IP	５		IP	５	5	IP	６		IP	５		IP	３		IP
+屋良　　龍紀	3.80	0.14	3.1	２		IP	６	5	IP	３		IP	６		IP	６		IP	５		IP	４		IP	３		IP	６		IP	２		IP
+小玉　　啓太	4.10	0.14	2.8	４		IP	４		IP	３		IP	２		IP	５		IP	６	6	IP	３		IP	６		IP	２		IP	６		IP
+島川　　海輝	3.00	0.17	4.1	４		IP	３	2	IP	５		IP	４	5	IP	６	3	G2	５		IP	５		IP	５		IP	５		IP	４		IP

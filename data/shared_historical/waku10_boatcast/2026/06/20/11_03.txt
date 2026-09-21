@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　義明	8.20	0.17	3.8	３		IP	１		IP	３		G3	２		IP	１		IP	４		IP	１		IP	２		IP	１		IP	１		G3
+前原　　大道	6.40	0.18	3.8	４		G1	１		IP	５		IP	２		IP	４		IP	２		IP	４		IP	２		G1	２		IP	３		IP
+抹香　　雄三	6.40	0.15	3.3	４		IP	１		IP	１		IP	３		IP	３		IP	４	2	IP	２		IP	２		IP	４		IP	５		IP
+吉川　　晴人	5.40	0.12	3.0	５		IP	４		IP	５		IP	３		IP	５		IP	１		IP	４		IP	２		IP	３		IP	１		IP
+野田　　亜湖	1.00	0.31	5.8	６		IP	６		IP	６	6	IP	６		IP	６	6	IP	６		G3	６		G3	６		IP	６	6	IP	６		IP
+谷口　　健一	2.20	0.19	3.2	５		IP	６		IP	６		IP	５		IP	４		IP	５		IP	６	5	IP	６		IP	３		IP	５		IP

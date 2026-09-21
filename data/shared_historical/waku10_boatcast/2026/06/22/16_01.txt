@@ -1,0 +1,8 @@
+data=
+1	0
+林　　　祐介	9.60	0.11	2.6	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP
+香月　　大輝	5.90	0.10	2.5	２		IP	３		IP	６		IP	２		IP	２		IP	２		IP	２		IP	３		IP	４		IP	５		IP
+野田　　昇吾	3.50	0.15	2.1	６		IP	４		IP	５		IP	２		IP	５	4	IP	５		IP	５		IP	５		IP	５		IP	１		IP
+大崎　　　翔	4.20	0.14	3.5	２		IP	３		IP	５		IP	２		IP	２		IP	６	6	IP	５		IP	６		IP	５		IP	４		IP
+藤本　　遼磨	1.50	0.22	3.0	６	6	IP	５	6	IP																								IP
+川崎　　公靖	3.00	0.18	4.2	５		IP	５		IP	６		IP	２	5	IP	５		IP	５		IP	６		IP	５		IP	３		IP	４		IP

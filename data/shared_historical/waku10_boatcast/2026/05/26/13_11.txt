@@ -1,0 +1,8 @@
+data=
+1	0
+中野　　仁照	7.40	0.16	3.5	１		IP	３		IP	１		IP	１		IP	３		IP	６		G1	２		IP	４		IP	１		IP	２		IP
+田中　　駿兵	6.90	0.12	2.3	１		IP	２		IP	２		IP	１		IP	６		IP	１		IP	３		IP	２		IP	４		IP	４		IP
+長谷川　晴哉	5.56	0.16	3.0	３		IP	４		IP	４		IP	２		IP	３		IP	４		IP	３		IP	４		IP	転		IP	２		IP
+藤森　　拓海	3.20	0.19	4.6	３		IP	４		IP	５		IP	６		IP	４		IP	５		IP	６		IP	４		IP	３		IP	５	5	IP
+津田　　陸翔	4.30	0.17	3.7	６		IP	４		IP	４		IP	４		IP	１		IP	１		IP	６		IP	落		IP	６		IP	２	6	IP
+山口　　晃朋	4.20	0.14	3.0	３		IP	６		IP	４		IP	３		IP	４		IP	１	5	IP	５		IP	４		IP	４		IP	６		IP

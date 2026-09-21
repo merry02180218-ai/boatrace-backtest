@@ -1,0 +1,8 @@
+data=
+1	0
+香川　　陽太	6.40	0.20	4.0	３		IP	２		IP	１		IP	６		IP	１		IP	２		IP	２		IP	１		IP	５	3	IP	６		IP
+山口　　広樹	4.70	0.18	4.8	６		IP	３		IP	２		IP	４		IP	６		IP	４		G3	３		G3	２		IP	６		IP	２		IP
+楠原　　正剛	4.90	0.16	2.1	２		IP	５		G3	５		IP	６	4	IP	３	4	IP	４		IP	３		IP	３		IP	３		IP	２		IP
+松下　　直也	5.50	0.15	3.1	２		IP	５		IP	２		IP	２		IP	３		IP	４		IP	２		IP	３		IP	４		IP	６		IP
+石渡　　鉄兵	5.60	0.10	2.1	２		IP	５		IP	３		G1	５		G1	２		IP	４		SG	６		SG	２		G1	３		G1	５		G1
+長野　　未来	1.20	0.25	4.6	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	６		IP

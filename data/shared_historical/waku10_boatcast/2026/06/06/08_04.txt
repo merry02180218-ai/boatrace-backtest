@@ -1,0 +1,8 @@
+data=
+1	0
+志道　　吉和	6.10	0.15	2.4	３		IP	Ｆ		IP	１		IP	１		IP	２		IP	１		IP	６		IP	５		IP	１		IP	４		IP
+柳内　　敬太	6.50	0.13	2.8	３	3	IP	１		IP	３		IP	１		IP	３		IP	５		IP	３		IP	４		IP	２		IP	３		IP
+渡辺　　空依	4.80	0.15	2.1	５		IP	５		IP	２		IP	３		IP	４		IP	３		IP	５		IP	４		IP	３		IP	２		IP
+香川　　陽太	3.60	0.18	3.5	６		IP	５		IP	５	6	IP	５		IP	４		IP	６		IP	１		IP	５	6	IP	３		IP	３		IP
+宮地　　秀祈	3.40	0.18	3.7	５		IP	５		IP	３		IP	４		IP	６	3	IP	５		IP	６		IP	４		IP	３		IP	３		IP
+鈴木　　智啓	3.00	0.20	3.8	３		IP	６		IP	４		IP	４		IP	６		IP	６		IP	５		IP	４		IP	３		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+小坂　　宗司	6.50	0.14	3.1	１		IP	２		IP	２		IP	１		IP	４		IP	１		IP	６		G3	Ｆ		IP	２		IP	３		IP
+尾形　　栄治	4.30	0.22	4.2	６		IP	６		IP	３		IP	３		IP	４		IP	２		IP	２		IP	６		IP	３		IP	５		IP
+鈴木　　孝明	7.00	0.13	3.3	４		IP	１		IP	２		IP	２		IP	２		IP	２		IP	５	4	IP	１		IP	３		IP	３		IP
+川上　　清人	3.60	0.16	3.7	５	6	IP	６		IP	６		IP	６	5	IP	２	6	IP	２		IP	４	5	IP	３	5	IP	４		IP	６		IP
+高石　　梨菜	4.11	0.18	3.0	３		IP	４		G3	６		G3	４		G3	３		IP	転		IP	２		G3	５		G3	５		IP	４		IP
+汐崎　　正則	3.50	0.15	2.8	６		IP	３		G3	４		IP	３		IP	５		IP	６		IP	３	5	IP	４		IP	５		IP	６		IP

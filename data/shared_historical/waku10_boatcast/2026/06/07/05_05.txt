@@ -1,0 +1,8 @@
+data=
+1	0
+樋口　　喜彦	5.00	0.18	3.5	２		IP	６		IP	２		IP	５		IP	４		IP	４		IP	３		IP	１		IP	６		IP	３		IP
+中山　　翔太	7.60	0.17	3.7	６		IP	３		IP	２		IP	２	3	IP	２		IP	２		IP	３		G1	１		IP	１	3	IP	１		IP
+栗原　　一馬	6.60	0.15	3.2	２		IP	３	4	IP	１		IP	５		IP	３		IP	２		IP	３		IP	３		IP	１		IP	４		IP
+佐竹　　友樹	4.00	0.16	3.4	４		IP	６		IP	４		IP	６	5	IP	５		IP	１		IP	３		IP	３		IP	５		IP	４		IP
+大場　　恒季	6.80	0.17	3.2	５		IP	２		IP	２		IP	２	2	IP	２		IP	１		IP	４		IP	４		G2	３		G2	２		IP
+鈴木　　秀茉	4.60	0.19	4.3	４		IP	１	5	IP	６		IP	６		IP	３		IP	２		G3	６		IP	６		IP	２		IP	４		IP

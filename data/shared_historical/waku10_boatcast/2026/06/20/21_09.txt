@@ -1,0 +1,8 @@
+data=
+1	0
+三村　　岳人	8.33	0.20	4.0	２		IP	２		IP	不		IP	１		IP	１		IP	１		IP	６		IP	２		IP	１		IP	１		IP
+土井　　祥伍	5.00	0.23	4.4	２		IP	４		IP	６	3	IP	２		IP	２	3	IP	２		IP	６		IP	５		IP	１		IP	Ｆ	1	IP
+山口　真喜子	5.89	0.14	2.6	２		IP	３		IP	５		IP	３		IP	２		IP	３		G2	３		IP	転		IP	２		IP	５		IP
+倉富　　大誠	5.60	0.17	3.3	３		IP	２		IP	５		IP	４		IP	１		IP	２		IP	５		IP	４		IP	１		IP	５		IP
+吉村　　正明	5.30	0.13	2.2	６		IP	４		IP	３		IP	５		G3	４		IP	４		IP	１		IP	１		IP	３		IP	３		IP
+石川　　吉鎬	2.40	0.28	4.3	６		IP	落		IP	５		IP	５		IP	４	5	IP	２	5	IP	６		IP	４	5	IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+長嶋　　万記	9.60	0.13	2.4	１		G3	１		G3	１		G3	４		G2	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+南　　　佑典	6.70	0.16	3.9	２		IP	２		IP	２		IP	２		IP	３		IP	２		G2	１		IP	５		IP	５		IP	３		IP
+藤井　　　徹	4.60	0.18	3.3	４		IP	２		IP	６		IP	５		IP	２		IP	２		IP	５		IP	６	4	IP	４		IP	２		IP
+中村　　駿平	2.20	0.16	2.8	６		IP	５		IP	４		IP	２		IP	６		IP	５		IP	６	5	IP	６	6	IP	６		IP	６		IP
+宇恵　　有香	1.80	0.15	2.8	６		IP	６		IP	４		IP	５		IP	６		G3	４		IP	５		IP	６		IP	６		IP	６		IP
+長谷川　　暖	3.20	0.23	5.8	６		IP	２		IP	６		IP	５		IP	４		IP	欠		IP	３		IP	４		IP	４		IP	５		IP

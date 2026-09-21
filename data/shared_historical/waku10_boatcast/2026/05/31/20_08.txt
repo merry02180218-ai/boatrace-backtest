@@ -1,0 +1,8 @@
+data=
+1	0
+森永　　　淳	10.10	0.13	2.7	１		IP	１		IP	１		G1	１		G1	１		IP	１		IP	２		IP	１		IP	１		IP	１		G2
+村越　　　篤	4.60	0.17	3.4	１		IP	５		IP	２		IP	６		IP	４		IP	５		IP	３		IP	２		IP	６		IP	４		G3
+浜本　　裕己	4.40	0.15	3.6	３		IP	４		IP	３		IP	３		IP	４		IP	６		IP	２		IP	５		IP	６		IP	３		IP
+藤本　紗弥香	3.20	0.18	3.4	６		IP	５		IP	６		IP	３		IP	１		IP	３		IP	５		IP	５		IP	６		IP	６		IP
+岩川　　仁士	3.11	0.15	3.7	３		IP	５		IP	４		IP	６		IP	６		IP	３		IP	６		IP	転	6	IP	６	6	IP	３		IP
+今泉　　博人	1.60	0.28	5.6	６		IP	５		IP	６		IP	５		IP	５		IP															IP

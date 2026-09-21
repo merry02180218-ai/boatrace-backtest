@@ -1,0 +1,8 @@
+data=
+1	0
+牧山　　敦也	5.89	0.22	4.4	１		IP	転		IP	４		IP	１		IP	６		IP	１		IP	Ｆ		IP	３		IP	１		IP	５		IP
+芝田　　京介	4.40	0.17	3.0	５		IP	４		IP	２		IP	３		IP	６		IP	２		IP	４	6	IP	６		IP	２		IP	５		IP
+草川　　壮良	3.57	0.16	2.3	１		IP	５		IP	３		IP	４		IP	６		IP	６		IP	６	4	IP									IP
+塩崎　　桐加	3.90	0.16	2.6	３		IP	５		IP	４		IP	３		IP	５		G3	６		G3	６		G1	２		IP	４		IP	４		IP
+福島　　勇樹	6.10	0.15	3.1	２		IP	２		IP	６		IP	６		G1	５		IP	２		IP	１	2	IP	４	4	IP	１		IP	２	4	IP
+早川　　理稀	1.17	0.25	4.8	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP												IP

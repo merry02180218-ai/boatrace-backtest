@@ -1,0 +1,8 @@
+data=
+1	0
+近藤　　友宝	6.60	0.17	3.4	４		IP	２		IP	１		IP	４		IP	１		IP	５		IP	２		IP	１		IP	２		IP	５		IP
+浦田　　信義	5.90	0.16	3.8	４		IP	２		IP	２		IP	３		IP	６		IP	２		IP	３		IP	４		IP	３		IP	２		IP
+杉村　　賢也	7.00	0.12	1.9	２		IP	１		IP	１		IP	２		G3	４		IP	１		IP	４	1	IP	１		IP	４	4	IP	５		IP
+小澤　　和也	4.40	0.15	3.0	６		IP	５		IP	５		IP	２		IP	３		IP	１		IP	５		IP	６		IP	１		IP	５		IP
+大場　　　敏	5.40	0.17	3.8	４		IP	５		IP	５		IP	４		IP	３		IP	３	6	IP	３		IP	１		IP	１	4	IP	４		IP
+石原　　凪紗	2.60	0.24	4.9	６		IP	４		IP	４		IP	４		IP	４	5	G3	６		IP	５		IP	４		IP	６		IP	６		IP

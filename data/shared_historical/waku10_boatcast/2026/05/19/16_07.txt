@@ -1,0 +1,8 @@
+data=
+1	0
+森　　　貴洋	8.20	0.16	3.3	２		IP	３		IP	１		IP	２		IP	１		IP	１		IP	２		IP	５		IP	１		IP	１		IP
+乙藤　　智史	5.20	0.15	3.0	４		IP	２	3	IP	３		IP	３		IP	５		IP	２		IP	３		IP	５	3	IP	５	4	IP	２		IP
+宮野　　　仁	4.40	0.19	3.8	３		IP	４		IP	４		IP	５		IP	５		IP	３		IP	２		IP	５		IP	２		IP	５		IP
+安田　　吉宏	5.10	0.16	3.1	４		IP	３		IP	３		IP	５	6	IP	１		IP	６		IP	５	5	IP	２	5	IP	５		IP	１		IP
+永井　　彪也	5.00	0.12	3.3	６		G3	１		IP	５		IP	３		IP	５		G1	２		G1	２		G1	６		G1	４		G1	５	6	G1
+松本　　浩貴	3.60	0.17	3.5	６	5	IP	４		IP	２	4	IP	６		IP	４	5	IP	５		IP	３		IP	４	5	IP	４		IP	５		IP

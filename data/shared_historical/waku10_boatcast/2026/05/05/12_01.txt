@@ -1,0 +1,8 @@
+data=
+1	0
+濱本　　優一	7.30	0.13	2.0	６		IP	６		G3	１		G3	１		IP	１		IP	１		IP	１		IP	１		IP	６		IP	１		IP
+藤山　　雅弘	7.50	0.19	3.6	２		IP	２		IP	１		IP	１	3	G3	１		G3	２		IP	１		IP	２		IP	５		IP	６		IP
+野間　　大樹	6.50	0.17	2.9	２		IP	６		IP	３		IP	１		IP	２		IP	５		G3	２	4	IP	３		IP	２		IP	２		IP
+原田　　秀弥	5.60	0.15	2.7	３		IP	６		IP	２		IP	６		IP	３	5	IP	３		IP	１		G3	４		G3	２		G3	３		IP
+藤原　　　駿	1.60	0.24	4.9	５		IP	６		IP	６		IP	５		IP	６	6	IP	５		IP	６	6	IP	６	6	IP	６	6	IP	４	6	IP
+野村　　羽玖	1.33	0.16	4.0	６		IP	６		IP	５		IP																					IP

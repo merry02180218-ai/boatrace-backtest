@@ -1,0 +1,8 @@
+data=
+1	0
+尾嶋　　一広	9.50	0.14	2.5	２		IP	１		G1	１		IP	１		IP	１		IP	１		IP	１		G1	３		G1	１		G3	２		G3
+渡部　　　悟	5.00	0.15	3.7	５		IP	５	3	IP	１		IP	５		IP	３		IP	３		IP	４		IP	４		IP	２		IP	３		IP
+上野　　拓馬	4.00	0.17	3.6	３		IP	４		IP	５		IP	３		IP	６		IP	５		IP	２		IP	５		IP	６		IP	２		IP
+佐々木　大河	6.33	0.12	1.5	１		IP	５		IP	３		IP	２		IP	２		IP	３		IP	２		IP	５		IP	３		G2	転		IP
+榮田　　将彦	4.30	0.11	2.1	６	6	IP	４		IP	３	3	IP	６		IP	４	6	IP	３		IP	６		IP	３	6	IP	２		IP	３		IP
+福岡　　泉水	3.10	0.16	3.7	３	5	IP	５		IP	５		IP	５		IP	４		IP	６		G3	４		IP	４		IP	４		IP	５		IP

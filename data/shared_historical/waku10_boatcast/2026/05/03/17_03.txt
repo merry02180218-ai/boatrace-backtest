@@ -1,0 +1,8 @@
+data=
+1	0
+坂口　　貴彦	7.80	0.13	2.9	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	４		IP	５		IP	１		IP	３		IP
+西野　　翔太	4.70	0.16	2.7	４		IP	４		G3	４		IP	２	3	IP	２	3	IP	３		IP	４		IP	４		IP	６		IP	４		IP
+岸本　　　隆	5.00	0.15	2.7	６		G3	６		IP	３		IP	２		IP	４		IP	３		IP	５		IP	３	4	IP	２		IP	２		IP
+小林　　礼央	2.60	0.17	4.1	６		IP	４		IP	４		IP	４		IP	４		IP	６	5	IP	４		IP	６		IP	５		IP	６		IP
+正木　　聖賢	3.70	0.19	3.2	４	2	IP	４	2	IP	５	2	IP	２	2	IP	５	2	IP	４	2	IP	５	2	IP	６	2	IP	３	2	IP	４	2	IP
+上岡　　巧汰	1.90	0.17	3.7	６		IP	Ｆ		IP	５		IP	３	5	IP	６		IP	４		IP	６		IP	６		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+高田　ひかる	8.80	0.15	2.9	１		IP	１		IP	２		IP	６		G1	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+来田　　衣織	4.80	0.15	3.6	２		IP	５		IP	３		IP	３		IP	４		IP	５		IP	１		IP	６		IP	２		IP	６		IP
+野田　なづき	6.50	0.18	3.9	２		G2	４		G2	１		G2	５		IP	３		G3	４		G3	３		G3	２		G3	１		IP	４		IP
+黒澤　めぐみ	5.10	0.15	3.2	２		IP	３		IP	１		IP	３		IP	５		IP	５		IP	５		G3	２		G3	６	5	G3	３		G3
+伊藤　　　栞	2.70	0.13	2.6	４		IP	４		IP	６		G3	６	4	IP	４	6	IP	６		IP	５		IP	６		IP	６		IP	２		IP
+山田　　理央	3.70	0.20	3.8	転		IP	４		G2	６		IP	４		G3	２	5	IP	３	4	IP	６		IP	５		IP	４		IP	３		IP

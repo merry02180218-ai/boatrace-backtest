@@ -1,0 +1,8 @@
+data=
+1	0
+宮地　　博士	7.20	0.18	3.7	２		IP	３		IP	１		IP	４		IP	１		IP	２		IP	３		IP	２		IP	１		IP	５		IP
+橋本　　　明	5.40	0.14	2.6	４		IP	２		IP	妨		IP	３		IP	３		IP	３		IP	３		IP	１		IP	５		IP	３	3	IP
+鈴木　　賢一	5.00	0.12	2.7	６		IP	３		IP	２		IP	３		G3	６		G3	３		IP	４	5	IP	３		IP	３	5	IP	３		IP
+櫻井　　　優	5.60	0.12	2.4	５		IP	２		IP	３		IP	３		IP	４		IP	２		IP	２		IP	５		IP	２		IP	４		IP
+藤森　　拓海	2.90	0.21	3.8	２	6	IP	５		IP	６		IP	４		IP	６		IP	４		IP	３		IP	６		IP	転		IP	５		IP
+伊藤　　紘章	3.50	0.23	5.0	５		IP	５		IP	６		IP	３		IP	６		IP	３		IP	２		IP	６		IP	５		IP	３		IP

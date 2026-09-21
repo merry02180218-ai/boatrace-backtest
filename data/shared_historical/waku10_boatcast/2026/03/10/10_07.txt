@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　勇輔	6.50	0.12	1.6	３		IP	１		IP	１		IP	２		IP	６		IP	２		IP	２		IP	１		IP	５		G3	５		IP
+本吉　　正樹	4.80	0.19	3.8	６		IP	４		IP	２		IP	５		IP	２		IP	１		IP	５		IP	１		IP	６		IP	５		IP
+相原　　利章	5.50	0.12	2.2	４		IP	３		IP	４		IP	４		IP	２	5	IP	２		IP	６		IP	２		IP	４		IP	２		IP
+井上　　尚悟	5.00	0.15	2.4	４		IP	５		IP	６		IP	３		IP	２		IP	１		IP	４		IP	６		IP	３		IP	２		IP
+尾上　　雅也	5.90	0.17	3.5	５		IP	２		IP	４		G1	２		G1	２		IP	２		IP	２		IP	４		IP	６		G2	５	6	G2
+石田　　章央	4.10	0.13	3.4	２		IP	１		IP	５		IP	６		IP	４		IP	５		IP	４		IP	５		IP	４		IP	５		IP

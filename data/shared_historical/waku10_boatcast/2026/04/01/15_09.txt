@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　博昭	9.40	0.15	1.9	１		IP	２		IP	１		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP
+宮下　　元胤	6.40	0.17	3.5	２		IP	１		IP	４		IP	２	4	IP	２	3	IP	２		IP	５		IP	５		IP	２		IP	３		IP
+樋口　　　亮	8.00	0.16	2.7	２		IP	２		IP	２		IP	１		IP	２		IP	３		IP	２		IP	２		IP	４		IP	１		IP
+酒井　　俊弘	6.70	0.12	2.1	４		IP	４	3	IP	２		IP	１		IP	６	6	IP	４		IP	２		IP	１	5	IP	１		IP	２	5	IP
+島村　　隆幸	6.70	0.12	2.7	２		G3	１	6	G3	２		IP	４		IP	３		IP	２		G3	３		IP	４		IP	３	6	IP	３		G3
+杉山　　勝匡	4.50	0.11	2.0	５		IP	２		IP	６		IP	６	5	IP	１	5	IP	４		IP	５		IP	３		IP	１		IP	６		IP

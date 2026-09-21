@@ -1,0 +1,8 @@
+data=
+1	0
+畑　　　和宏	7.20	0.13	2.1	Ｆ		IP	２		IP	３		IP	３		IP	１		IP	１		IP	１		IP	２		IP	４		IP	１		IP
+濱野　　斗馬	6.80	0.14	3.1	３		G2	６		G2	３		IP	６		IP	１		IP	２		IP	５		IP	１		IP	１		IP	１		IP
+佐藤　　博亮	6.40	0.12	2.8	３		IP	２		IP	５		IP	２		IP	４		IP	３		IP	５		IP	２		IP	１		IP	１		IP
+深澤　　達徳	5.00	0.18	4.4	１		IP	２		IP	４	5	G3	６		G3	４	5	IP	２		IP	３		IP	６		IP	５		IP	３		IP
+山田　　竜一	2.80	0.16	3.3	６		IP	５		IP	５		IP	５		IP	４		IP	３	4	IP	５		IP	５		IP	３		IP	６	4	IP
+大神　　康司	4.70	0.21	3.6	６	3	IP	５	2	IP	５	3	IP	２	2	IP	１	2	IP	６	2	IP	２	2	IP	６	2	IP	１	2	IP	５	3	IP

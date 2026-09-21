@@ -1,0 +1,8 @@
+data=
+1	0
+妹尾　　忠幸	8.90	0.14	3.3	１		IP	２		IP	４		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		G1
+松本　　博昭	7.00	0.15	4.0	２		IP	２		IP	５	3	IP	１		IP	２		IP	２		IP	４		IP	４		IP	１		IP	２		IP
+富澤　　祐作	5.70	0.13	2.0	４		IP	４		IP	２		IP	４		IP	２	1	IP	３		IP	２		IP	２		IP	３		IP	６		IP
+草川　　壮良	2.50	0.15	3.0	６		IP	５		IP	５		IP	６		IP	５		IP	５		IP	４		IP	４		IP	６	6	IP	３	6	IP
+中渡　　修作	2.40	0.18	3.3	５		IP	３		IP	６		IP	６		IP	３		IP	６		IP	６		IP	５		IP	５		IP	５		IP
+笠置　　博之	5.80	0.15	2.6	５		IP	６	5	IP	２		IP	５		IP	３	5	IP	１	4	IP	３	4	IP	１	5	IP	１	5	IP	６		IP

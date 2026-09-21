@@ -1,0 +1,8 @@
+data=
+1	0
+村田　　　敦	3.90	0.16	2.8	４		IP	３		IP	２		IP	６		IP	５	2	IP	３		IP	３		IP	６		IP	６		IP	４		IP
+山崎　　善庸	3.50	0.18	4.6	５		IP	５		IP	６		IP	２		IP	５		IP	２		IP	２		IP	５		IP	６		IP	６		IP
+松本　　浩貴	5.30	0.18	3.5	４		IP	２		IP	２		IP	４		IP	３		IP	５	6	IP	４		IP	６		IP	１	4	IP	３		IP
+一瀬　　　明	4.33	0.20	4.4	１	5	IP	３		IP	欠		IP	６		IP	４		IP	５		IP	３		IP	５		IP	４		IP	４		IP
+角谷　　健吾	3.70	0.18	4.0	４		IP	６		IP	３	4	IP	５		IP	２		IP	４		IP	３		IP	５		G1	６		G1	６		IP
+大澤　　真菜	1.80	0.21	4.4	４		IP	６		IP	６		G3	６		G3	６		IP	５		IP	６		G3	４		G3	５		G3	６		G3

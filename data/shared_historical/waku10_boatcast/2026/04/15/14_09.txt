@@ -1,0 +1,8 @@
+data=
+1	0
+興津　　　藍	7.50	0.11	2.3	２		IP	１		IP	１		IP	２		IP	６		IP	５		IP	１		IP	２		IP	１		G1	３		G1
+中渡　　修作	5.30	0.21	3.1	３		IP	２		IP	５		IP	６		IP	１		IP	３		IP	２		IP	３		IP	４		IP	５		IP
+峰重　　侑治	5.78	0.22	3.8	３		IP	２		IP	４		IP	落		IP	３		IP	３		IP	１		IP	３	4	IP	４		IP	５		G3
+蒲原　　健太	3.90	0.20	3.5	２		IP	２	3	IP	６	5	G2	４		IP	転	3	IP	２		IP	６		IP	６		IP	６		IP	３		IP
+山谷　　　央	3.50	0.15	3.2	６		IP	４		IP	４		IP	４		IP	３		IP	５		IP	５		IP	４		IP	３		IP	５		IP
+百武　　　翔	4.10	0.23	5.0	６		IP	２		IP	４		IP	３		G3	５		G3	５		IP	４		IP	３		IP	５		IP	３	4	IP

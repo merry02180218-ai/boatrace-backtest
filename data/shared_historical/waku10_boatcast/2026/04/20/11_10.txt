@@ -1,0 +1,8 @@
+data=
+1	0
+川上　　　剛	8.60	0.17	3.1	４		IP	１		IP	１		IP	３		IP	１		G3	３		G3	１		IP	１		IP	１		IP	１		IP
+村松　　栄太	6.20	0.16	4.3	５		IP	５	6	IP	１		IP	２		IP	２		IP	２		IP	３		IP	４		IP	１	3	IP	４		IP
+篠原　　晟弥	6.10	0.15	3.1	５		IP	１		IP	１	4	IP	４		G2	２		IP	３		IP	４		IP	６		IP	１		IP	４		IP
+石田　　勇斗	3.70	0.16	2.3	４		IP	５		IP	４		IP	５		IP	４		IP	５		IP	３		IP	６	6	IP	４	5	IP	２		IP
+坂井　　康嗣	3.20	0.21	4.2	６		IP	３		IP	１		IP	６		IP	６		IP	３		IP	欠		IP	５		IP	６		IP	４		IP
+江本　　真治	4.90	0.16	3.2	６		IP	６		IP	４		G3	２		G3	１		IP	３		IP	２		IP	６		IP	４		IP	３		IP

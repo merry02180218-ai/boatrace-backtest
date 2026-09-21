@@ -1,0 +1,8 @@
+data=
+1	0
+倉田　　郁美	5.70	0.24	3.5	４		IP	２		IP	２		IP	２		IP	１		IP	２		IP	２		IP	６		IP	６	2	IP	６		IP
+蜂須　　瑞生	5.50	0.17	3.0	３		G3	４		G3	２		IP	５		IP	４		IP	２		IP	２		IP	３		IP	２		IP	６		IP
+畔柳　　俊吾	4.60	0.24	4.2	５		IP	５		IP	４		IP	２		IP	３		IP	Ｆ		IP	３		IP	４		IP	３		IP	３		IP
+森下　　　勇	3.90	0.16	3.3	４		IP	４		IP	３		IP	５		IP	６		IP	１		IP	５		IP	５		IP	４	6	IP	４		IP
+原田　才一郎	4.90	0.16	4.5	３		IP	６		IP	５		G1	２		IP	６		IP	３		IP	３		IP	４		G1	４		G1	３		IP
+妹尾　　忠幸	4.00	0.17	4.5	４		IP	５		IP	５		IP	２		IP	２		IP	５		IP	４		IP	４		IP	５		G1	５		G1

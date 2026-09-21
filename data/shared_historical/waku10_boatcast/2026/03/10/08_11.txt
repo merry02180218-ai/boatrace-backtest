@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　高史	7.90	0.15	3.4	６		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	５		IP
+西川　新太郎	4.80	0.16	3.3	２		IP	欠		IP	４		IP	５		IP	１		IP	４		IP	２		IP	５		IP	２		G3	５		G3
+山本　　浩輔	4.50	0.19	3.2	５		IP	４		IP	４		IP	６		IP	４		IP	２	2	IP	３		IP	５		IP	１		IP	４		IP
+石橋　　道友	5.60	0.15	4.0	３		G1	３		G1	２		IP	２		IP	２		IP	６		IP	３		IP	２		IP	６		IP	６		IP
+安井　　瑞紀	3.00	0.19	3.5	６		G1	４		G1	５		IP	５	4	IP	６		IP	５		IP	３		IP	２		IP	６	4	IP	６	6	IP
+浜本　　裕己	4.40	0.15	2.6	６		IP	３		IP	１	4	IP	２	4	IP	５		IP	６		IP	３		IP	５		IP	５		IP	３		IP

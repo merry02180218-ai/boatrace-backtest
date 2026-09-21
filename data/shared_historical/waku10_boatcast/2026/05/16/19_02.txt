@@ -1,0 +1,8 @@
+data=
+1	0
+小坂　　風太	4.40	0.18	4.0	５		IP	６		IP	３		IP	６		IP	５		IP	２		IP	３		IP	２		IP	１		IP	転		IP
+成貞　　琳平	4.50	0.17	2.9	５		IP	３		IP	３	3	IP	３		IP	５		IP	５		IP	３		IP	６		IP	３		IP	２		IP
+宮田　　龍馬	7.90	0.13	2.1	１		IP	３		IP	３		IP	５		G1	２		IP	１		IP	１		G1	３		IP	２		IP	１		IP
+川原　　　涼	4.50	0.20	3.5	４		IP	３		IP	６		IP	２		IP	２		IP	６		IP	６		IP	２		IP	３		IP	５	5	IP
+上野　　拓馬	4.30	0.22	4.1	１		IP	３		IP	５		IP	５		IP	４		IP	３		IP	３		IP	６		IP	５	6	IP	４	6	IP
+加藤　　優弥	2.40	0.12	2.5	６		IP	５		IP	３		IP	６		IP	３		IP	５		IP	５		IP	６		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+黒柳　　浩孝	8.30	0.16	3.1	２		G2	１		IP	１		IP	２		IP	２		IP	１		IP	３		IP	４		IP	１		IP	２		IP
+桑島　　和宏	6.90	0.12	2.3	４		G2	３		G2	２		IP	１		IP	２		IP	２		IP	２		IP	３		IP	２		IP	６		IP
+伊藤　　喜智	7.80	0.14	2.5	２		IP	３		IP	２		IP	３		IP	５		IP	１	2	IP	１		IP	１		IP	２		IP	１		IP
+黒田　　誠司	4.00	0.14	2.5	６		IP	３	3	IP	６		IP	４		IP	１		IP	５	6	IP	５		IP	３		IP	４		IP	４		IP
+上田　　隆章	4.33	0.23	4.4	３		IP	５		IP	４		IP	６		IP	３	6	IP	４		IP	２		IP	４		IP	落		IP	４		IP
+大西　　隆洋	2.90	0.13	3.8	５		IP	６		IP	３		IP	６		IP	４		IP	６		IP	２		IP	５		IP	Ｆ		IP	４		IP

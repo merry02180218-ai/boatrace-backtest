@@ -1,0 +1,8 @@
+data=
+1	0
+加倉　　侑征	7.70	0.15	3.4	６		IP	２		IP	２		IP	２		IP	１		IP	１		IP	１		IP	３		IP	２		IP	２		IP
+齊藤　　　廉	5.00	0.17	2.8	４		IP	転		IP	６		IP	３		IP	５		IP	１		IP	５		IP	２		IP	２		IP	４		IP
+鈴木　　唯央	4.70	0.14	2.5	２		IP	４		IP	４		IP	４		IP	６		IP	４		IP	３		IP	５		IP	４		IP	１		IP
+中野　　希一	8.40	0.11	1.8	２		IP	４		IP	２		IP	２		IP	１		IP	１		IP	２	2	IP	１		IP	１		IP	２		IP
+杉山　　太陽	3.50	0.21	4.3	２		IP	５		IP	５		IP	３	6	IP	２		IP	５		IP	６		IP	６		IP	４		IP	６		IP
+鳥居塚　嶺王	2.00	0.19	4.2	６		IP	６		IP	６		IP	６		IP	６		IP	３		IP	６		IP	３	5	IP	６		IP	６		IP

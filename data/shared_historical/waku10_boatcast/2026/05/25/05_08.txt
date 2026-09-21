@@ -1,0 +1,8 @@
+data=
+1	0
+石川　　吉鎬	6.30	0.17	3.6	１		IP	１		IP	４		IP	２		IP	２		IP	６		IP	４		IP	３		IP	４		IP	２		IP
+中嶋　　達也	3.20	0.20	4.0	２		IP	６		IP	４		IP	５		IP	２		IP	５		IP	６		IP	４		IP	６		IP	６		IP
+梅木　　敬太	5.70	0.15	3.3	２		IP	４		IP	６		IP	１		IP	４		IP	３		IP	１		IP	５		IP	４		IP	２		IP
+滝沢　　芳行	5.00	0.13	2.8	４		IP	４		IP	１		IP	５		IP	５		IP	３		IP	５		G3	５		G3	１		IP	２		IP
+櫻井　　　隼	1.90	0.30	5.2	４		IP	５		IP	６	6	IP	不	6	IP	３	6	IP	６	6	IP	５	6	IP	６	6	IP	５	6	IP	転	6	IP
+天野　　晶夫	5.20	0.18	4.0	４		IP	１	3	IP	４		IP	３		IP	５	5	IP	５		G3	４		IP	４		IP	２		IP	３		IP

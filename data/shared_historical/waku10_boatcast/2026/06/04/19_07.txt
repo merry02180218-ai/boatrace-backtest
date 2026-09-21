@@ -1,0 +1,8 @@
+data=
+1	0
+横田　　貴満	7.60	0.15	3.7	４		IP	２		IP	３		IP	１		IP	４		IP	１		IP	１		IP	３		G2	２		G2	２		IP
+中川　　りな	6.60	0.12	2.6	５		G3	３		G3	３		IP	２		IP	２	3	IP	３		IP	３	3	IP	２		IP	２		IP	２	3	IP
+川崎　　誠志	4.80	0.19	4.0	５		IP	４		IP	５		IP	４	4	IP	４	4	IP	２		IP	５		IP	３		IP	２		IP	２		IP
+野見山　拓己	4.80	0.17	2.7	１	6	IP	２		IP	５		IP	２		IP	５		IP	３		IP	６		G3	６		IP	４		IP	３		IP
+広瀬　　聖仁	4.30	0.14	2.8	４	6	IP	２		IP	４		IP	４	6	IP	４		IP	４		IP	２		IP	４	4	IP	６		IP	５		IP
+田中　　辰彦	3.22	0.18	3.1	５		IP	５		IP	５	5	IP	２		IP	５		IP	３		IP	５		IP	欠		IP	５		IP	５		G1

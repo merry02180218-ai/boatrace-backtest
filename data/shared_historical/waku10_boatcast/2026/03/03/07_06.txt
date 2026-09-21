@@ -1,0 +1,8 @@
+data=
+1	0
+坂野　さくら	5.90	0.19	3.0	３		G3	１		G3	５		IP	１		G3	５		IP	３		IP	５		IP	１		IP	６		IP	１		IP
+宮崎　　安奈	4.60	0.18	3.8	２		IP	４		IP	６		IP	６		IP	６		IP	６	3	IP	３		IP	２		IP	２		IP	２		IP
+藤丸　　光一	4.50	0.18	4.0	６	2	IP	４		IP	３		IP	４		IP	２		G3	Ｆ		IP	４		IP	３		IP	２		IP	４		IP
+塩嶋　　泰空	1.00	0.17	3.2	６		IP	５		IP	６		IP	６		IP	６	6	IP	Ｆ	6	IP	６		IP	６		IP	６		IP	６	6	IP
+湯川　　浩司	4.50	0.11	2.5	３		G1	５		G1	４		G1	３		G1	６		IP	５	4	IP	５	4	IP	１		IP	５		SG	４		IP
+原　　　豊土	4.50	0.18	4.8	３		IP	４		IP	５		IP	３		G3	５		G3	２		IP	５		IP	６		IP	２		IP	４		IP

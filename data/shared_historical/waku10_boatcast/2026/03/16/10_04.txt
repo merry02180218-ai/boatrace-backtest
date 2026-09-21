@@ -1,0 +1,8 @@
+data=
+1	0
+一宮　　稔弘	8.20	0.12	2.3	１		IP	４		IP	２		IP	３		IP	１		IP	１		G1	２		G1	３		IP	２		IP	１		IP
+鈴木　　孝明	6.70	0.16	3.1	１		IP	２	3	IP	４		IP	６	4	IP	２		IP	１		IP	１		IP	３		IP	６		IP	２		IP
+吉田　　和仁	5.00	0.21	3.0	２		IP	４	5	IP	４	4	IP	４	6	IP	１		IP	５		IP	６		IP	６		IP	２		IP	２		IP
+高山　　敬悟	4.50	0.15	3.1	４		IP	２		IP	５		IP	４	6	IP	３	5	IP	４		IP	２		IP	６		IP	３		IP	５		IP
+中岡　　正彦	5.20	0.15	2.7	２	2	IP	１	2	IP	２	1	IP	２	2	IP	５		G1	６	2	G1	５	4	IP	３	3	IP	４	2	IP	６		G3
+鳥本　　智史	1.50	0.22	3.7	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP

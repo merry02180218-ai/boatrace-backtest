@@ -1,0 +1,8 @@
+data=
+1	0
+上村　慎太郎	5.40	0.20	3.5	５		IP	４		IP	４		IP	３		IP	２		IP	２		IP	１		IP	１		IP	６		IP	６		IP
+石川　　　諒	5.60	0.15	2.9	６		IP	６		IP	５		IP	３		IP	２		IP	３		IP	３		IP	２		IP	２		IP	１		IP
+下寺　　秀和	7.70	0.14	1.9	３		IP	２		IP	２		IP	３		IP	６		IP	２		IP	１		IP	２		IP	１	2	IP	１		IP
+三木　　晴斗	4.10	0.18	3.2	３		IP	６		IP	２		IP	３		IP	５	3	IP	５		IP	２		IP	５		IP	エ		IP	３		IP
+本村　　　大	3.50	0.22	3.7	欠		IP	５	6	IP	６		IP	１	4	IP	５		IP	６		IP	３		IP	６		IP	４		IP	２		IP
+池田　　浩美	3.00	0.19	3.8	５		IP	６		IP	４		IP	３		IP	２		G3	６		IP	５		IP	６		IP	４		IP	６		IP

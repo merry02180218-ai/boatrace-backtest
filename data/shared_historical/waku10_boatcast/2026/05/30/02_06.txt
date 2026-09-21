@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　秀樹	4.40	0.15	3.0	２		IP	５		IP	５		IP	２		IP	４		IP	６		IP	２		IP	６	3	IP	５		IP	２		IP
+坪井　　爽佑	5.80	0.18	4.0	３		IP	２	4	IP	６	3	IP	１		IP	３		IP	５		IP	３	3	IP	２		IP	１		IP	６		IP
+栗原　　謙治	2.10	0.22	4.1	６	4	IP	５		IP	５		IP	転		IP	６		IP	６		IP	４		IP	５		IP	５	5	IP	３		IP
+宮崎　心之介	5.80	0.11	2.2	１		IP	１	5	IP	４	5	IP	３		IP	２		IP	３		IP	Ｆ		IP	５		IP	１		IP	５		IP
+宮之原　輝紀	5.20	0.12	2.1	３		G1	２	4	IP	２		G1	４		SG	２		SG	６		G1	６		G1	５		G1	６	6	G1	５		G1
+関根　　彰人	3.80	0.19	3.7	５		IP	２		IP	３		IP	６		IP	６		IP	４		IP	４		IP	３		IP	５		IP	４		IP

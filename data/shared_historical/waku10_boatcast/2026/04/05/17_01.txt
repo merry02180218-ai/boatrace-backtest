@@ -1,0 +1,8 @@
+data=
+1	0
+廣瀬　　真也	8.40	0.13	1.3	１		IP	１		IP	１		IP	５		IP	１		IP	４		IP	１		IP	１		IP	２		IP	１		IP
+大場　　広孝	4.30	0.14	2.5	３		IP	５		IP	４	3	IP	４		IP	１		IP	３		IP	６		IP	２		IP	６		IP	６		IP
+占部　　一真	4.60	0.14	2.9	３	4	IP	６		IP	３		IP	４		IP	５		IP	２		IP	６		IP	４		IP	４		IP	１	2	IP
+赤松　　咲香	2.80	0.22	4.1	２		IP	４		IP	６	6	IP	３		IP	６	5	IP	６	6	IP	５		G3	５		G3	５		G3	６		IP
+菅沼　　佳昭	2.90	0.18	3.0	５		IP	４		IP	５	6	IP	３	4	IP	３		IP	６		IP	５		IP	５		IP	５	4	IP	５		IP
+小森　　信雄	2.80	0.24	4.3	６		IP	５		IP	４		IP	６		IP	３		IP	５		IP	５		IP	４		IP	４		IP	５		IP

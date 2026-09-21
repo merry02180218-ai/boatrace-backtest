@@ -1,0 +1,8 @@
+data=
+1	0
+石井　　孝之	6.00	0.19	3.5	２		IP	４	2	IP	４		IP	６		IP	１		IP	１		IP	１		IP	３		IP	３		IP	６		IP
+原田　　雄次	3.70	0.23	5.0	５		IP	２		IP	６		IP	３	3	IP	５		IP	５	6	IP	３		IP	Ｆ		IP	２		IP	５		IP
+寺田　　　祥	5.70	0.15	3.5	２		IP	４		IP	２		G1	２		IP	５		G1	４		G1	１		IP	４		G1	５		G1	６		G2
+森口　　和紀	2.80	0.21	3.8	４		IP	３		IP	転	3	IP	５		IP	５		IP	３		IP	５	6	IP	Ｆ		IP	４	5	IP	５		IP
+小畑　　楓夏	1.40	0.14	2.3	６		IP	６	6	IP	６	6	IP	６		IP	６		IP	６		IP	５	6	IP	４	6	IP	６	6	IP	６		IP
+真庭　　明志	4.40	0.19	3.0	５		IP	２	5	IP	５	5	IP	５		IP	２		IP	３	4	IP	３		IP	５		IP	４		IP	４		IP

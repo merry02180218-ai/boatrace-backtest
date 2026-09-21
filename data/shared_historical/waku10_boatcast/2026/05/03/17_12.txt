@@ -1,0 +1,8 @@
+data=
+1	0
+新田　　泰章	10.10	0.15	3.1	１		IP	１		IP	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+正木　　聖賢	4.90	0.13	3.5	１		IP	４		IP	１		IP	４		IP	５		IP	３		IP	２		IP	５		IP	６		IP	５		IP
+井内　将太郎	7.10	0.12	2.4	１		IP	１		IP	３		IP	２		IP	３		IP	４		IP	１		IP	３		IP	６		G3	１		IP
+山口　　　剛	7.60	0.13	2.2	１		IP	４		SG	１		G1	４		G1	４		G1	２		G1	４		G1	３		G1	１		IP	３		SG
+永田　　義紘	2.40	0.15	4.2	転		IP	５		IP	５		IP	６		IP	４		IP	４		IP	６		IP	４		IP	５		IP	４		IP
+下寺　　秀和	4.90	0.17	3.4	３		IP	２		IP	５		IP	４	5	IP	２		IP	２		IP	６		IP	４		IP	４	5	IP	４		IP

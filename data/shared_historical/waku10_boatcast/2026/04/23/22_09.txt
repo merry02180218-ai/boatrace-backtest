@@ -1,0 +1,8 @@
+data=
+1	0
+百武　　　翔	7.40	0.14	2.2	１		G3	１		G3	２		G3	１		IP	５		IP	５		IP	４		IP	１		IP	２		IP	１		IP
+杉山　　裕也	7.30	0.16	3.0	２		G1	３		G1	１		IP	２		IP	２		IP	２		IP	２		G1	５		IP	３		IP	３		IP
+川合　　理司	4.10	0.17	3.1	５		IP	２		IP	３		IP	４	4	IP	５		IP	４		IP	３		IP	４	4	IP	６		IP	４		IP
+藤堂　　里香	4.90	0.16	3.8	６		IP	５		IP	３		G1	２		G1	３	5	IP	５		IP	２		G3	２		IP	４		IP	５		IP
+新田　　洋一	4.10	0.15	2.7	３		IP	５	4	IP	４	6	IP	４		IP	４		IP	５		IP	５		IP	２		IP	６		IP	２	4	IP
+川崎　　公靖	3.60	0.18	4.5	５		IP	６		IP	５		IP	３		IP	４		IP	５	5	IP	６		IP	２	5	IP	５		IP	２	5	IP

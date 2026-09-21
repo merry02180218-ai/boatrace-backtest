@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　一毅	8.80	0.16	2.6	２		IP	２		IP	１		IP	３	2	IP	２		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+山田　　佑樹	3.10	0.18	2.9	３		IP	６		IP	３		IP	６		IP	６		IP	２		IP	６		IP	５		IP	６		IP	４		IP
+西島　　義則	7.20	0.18	4.0	１	2	IP	２	2	IP	１	1	IP	１		IP	２	2	IP	５	1	IP	１	1	IP	５	2	IP	３	2	IP	６	2	IP
+奈須　　啓太	4.80	0.11	2.7	４	3	IP	４		IP	１		IP	５		IP	６		IP	１		IP	６		IP	３		G2	２		IP	６		IP
+荒井　　翔伍	5.33	0.18	3.6	６		IP	３		IP	２		IP	５		IP	２		IP	３		IP	５	3	IP	２		IP	３		IP	欠		IP
+中渡　　修作	4.80	0.19	4.3	３	5	IP	４		IP	２		IP	３		IP	６		IP	４		IP	６		IP	２		IP	３		IP	４		IP

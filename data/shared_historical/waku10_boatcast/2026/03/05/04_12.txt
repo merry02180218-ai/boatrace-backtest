@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　和之	9.80	0.18	2.7	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+竹田　　和哉	8.60	0.12	2.5	１		IP	２		G1	２		G1	３		IP	２		IP	２		IP	１		IP	１		IP	２		IP	２		IP
+荒川　　健太	5.20	0.23	3.4	２		IP	３		IP	１		IP	４		IP	４	4	IP	３	4	IP	５	2	IP	４		IP	５		IP	４		IP
+桑島　　和宏	3.60	0.14	3.2	３		G1	６		G1	４		G1	５		G1	４		IP	３		IP	６		IP	３		IP	６		IP	６		IP
+河村　　　了	6.30	0.19	3.9	３		IP	２		IP	４		IP	１		IP	２		IP	３		IP	２		G3	２		IP	沈		IP	４		IP
+是澤　　孝宏	3.90	0.18	5.3	３		IP	３	5	IP	６		IP	５		IP	４		IP	５		IP	６		G2	２		IP	３		IP	５		IP

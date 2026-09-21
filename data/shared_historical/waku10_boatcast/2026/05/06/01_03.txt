@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　猛志	7.60	0.13	3.3	２		IP	４		IP	２		IP	２		IP	１		IP	１		IP	３		IP	２		IP	４		IP	１		IP
+蜂須　　瑞生	5.80	0.15	2.8	１		IP	５		IP	４		IP	１		IP	３		G3	４		G3	２		IP	５		IP	４		IP	２		IP
+柴田　　　光	4.40	0.15	3.6	４		IP	６		G1	３		G1	６		G1	５		G1	２		IP	５	2	IP	３		IP	３		G3	４		IP
+土屋　　太朗	3.80	0.17	3.9	３		IP	４		IP	４		G3	６	6	G3	６		IP	３		IP	４		IP	３		IP	４		IP	５		IP
+鳥居塚　嶺王	4.40	0.15	3.3	５		IP	５		IP	３		IP	５		IP	２		IP	５		IP	４		IP	１	4	IP	５		IP	３		IP
+島倉　　　都	1.90	0.22	4.6	４		IP	６		IP	６		IP	６		IP	６		G3	３		IP	６		IP	５		IP	６		IP	６		IP

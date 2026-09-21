@@ -1,0 +1,8 @@
+data=
+1	0
+塚越　　海斗	9.00	0.14	2.7	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	３		IP	２		IP	１		IP
+金子　　賢志	6.50	0.13	3.0	２		IP	４		G1	６		G1	５	3	IP	１		IP	１		IP	２		IP	６		G1	４		G1	１		G1
+土屋　　太朗	3.50	0.18	3.7	４		IP	３		IP	４	4	G3	５		G3	５		IP	４		IP	５		IP	４		IP	６		IP	３	4	IP
+田中　　　堅	5.80	0.16	3.8	２		IP	５		IP	３	3	IP	２		IP	４		IP	２		IP	４		IP	２	5	IP	４		IP	３		IP
+中里　　英夫	3.80	0.24	3.9	６		IP	６		IP	５		IP	３		IP	４		IP	２		IP	５		IP	２		IP	４		IP	５		IP
+上村　　純一	5.20	0.14	2.9	３		IP	４		G1	５		G1	４		IP	２		IP	１		IP	４		G1	５		G1	４		G1	５		G1

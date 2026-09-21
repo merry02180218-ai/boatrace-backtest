@@ -1,0 +1,8 @@
+data=
+1	0
+草場　　康幸	7.20	0.18	4.0	１		IP	妨		IP	３		IP	１		IP	１		IP	２		IP	１		IP	１		IP	５		IP	３		IP
+中村　　魁生	5.50	0.19	3.6	２	1	IP	４		G1	Ｆ		IP	２		IP	２		IP	１		IP	５	3	IP	３		IP	３		IP	５		IP
+河野　　真也	5.00	0.21	4.5	１		IP	６		IP	６		IP	４		IP	４		IP	２		IP	不		IP	６	4	IP	１		IP	３		IP
+加藤　　　綾	4.20	0.18	3.2	３		IP	４		IP	４		IP	４	5	IP	２		G3	４		G3	転		IP	５		IP	４		IP	３		IP
+来田　　衣織	4.40	0.16	2.4	１		IP	１		IP	２		IP	転		IP	６	4	IP	５		G3	６		IP	４	4	IP	４		IP	４		IP
+野長瀬　正孝	6.00	0.13	2.2	１	3	IP	４	3	IP	５	4	IP	４	2	IP	４	5	IP	３	5	IP	２	2	IP	２	3	IP	２	3	IP	３	2	IP

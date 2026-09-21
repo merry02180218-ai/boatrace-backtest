@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　正樹	9.40	0.15	3.9	２		G1	１		IP	１		G2	１		G2	４		IP	２		IP	１		G1	１		IP	１		IP	１		IP
+渡邉　　雄朗	6.90	0.21	4.1	３		IP	４		IP	４		IP	４		G2	２		IP	１		IP	１		IP	１		IP	５		G1	２		G1
+向後　　龍一	7.67	0.14	3.0	４		IP	２		IP	１		G2	４		G2	１		G2	２		IP	転		IP	２		IP	２		IP	４		IP
+是澤　　孝宏	5.60	0.16	3.4	３		IP	３		IP	２		G2	５		G2	５		G2	４		IP	１		IP	２		IP	４		IP	６		IP
+加藤　　政彦	4.30	0.13	3.5	１		IP	６		IP	６		IP	１		IP	２	4	IP	５		G1	５		G1	６		G1	５		G1	５		IP
+黒柳　　浩孝	3.60	0.15	3.2	５		IP	５		IP	４		IP	６		G2	５		G2	３		IP	２		IP	５		IP	３		IP	６		IP

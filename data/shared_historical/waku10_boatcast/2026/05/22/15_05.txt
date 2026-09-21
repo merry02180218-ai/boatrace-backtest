@@ -1,0 +1,8 @@
+data=
+1	0
+赤坂　　俊輔	8.22	0.14	2.7	３		IP	５		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	失		IP
+松尾　　光広	5.00	0.16	4.0	１		IP	６		IP	５		IP	２		IP	４		IP	２		IP	５		IP	１		IP	６		IP	４		IP
+萬　　　正嗣	3.70	0.19	3.8	５	4	IP	６		IP	４		IP	２		IP	５		IP	６	5	IP	５		IP	１	4	IP	６		IP	３	5	IP
+國弘　　翔平	3.70	0.17	3.9	２		IP	５		IP	５	5	IP	４		IP	４	5	IP	６		IP	４		IP	４		IP	３	5	IP	５		IP
+海野　康志郎	5.70	0.13	3.1	１	2	IP	１	3	IP	４		IP	１		IP	４		G1	５		G1	２		G1	６		G1	６		G1	６		G1
+大澤　　風葵	3.80	0.17	3.0	５	5	IP	６		IP	４		IP	６		IP	４		IP	３		IP	３		IP	３		IP	３	5	IP	５	5	IP

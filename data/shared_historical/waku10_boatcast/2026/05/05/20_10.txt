@@ -1,0 +1,8 @@
+data=
+1	0
+今井　　貴士	8.30	0.19	2.8	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	３		G1	Ｆ		G1	１		G3
+石倉　　洋行	7.40	0.13	1.9	１		IP	１		G1	２		IP	２		IP	２		IP	４		IP	３		G1	６		G1	１		IP	３		IP
+塩田　　北斗	7.40	0.15	3.2	２		IP	４		IP	２		IP	３		G1	３		G1	３		G1	２		G1	６		G1	１		G1	２		G1
+水摩　　　敦	3.40	0.21	3.4	４		IP	３		IP	６		IP	３		IP	５		IP	６		IP	５		G3	５		IP	５		IP	２		IP
+江夏　　　満	4.50	0.18	4.2	１		G1	４		G1	欠		IP	３		IP	４		IP	５		IP	５		IP	３		IP	４		IP	４		G1
+木下　　大將	4.33	0.17	3.3	３		IP	５		IP	欠		IP	２		IP	３		IP	３		IP	５		IP	６		IP	５		IP	４		IP

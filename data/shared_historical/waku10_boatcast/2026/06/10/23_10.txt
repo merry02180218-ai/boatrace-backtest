@@ -1,0 +1,8 @@
+data=
+1	0
+赤羽　　克也	7.40	0.15	3.0	１		IP	１		IP	３		IP	１		IP	２		IP	２		IP	１		IP	１		IP	６	2	IP	６		IP
+長野　壮志郎	6.90	0.18	3.4	６		IP	２		IP	２		IP	１		IP	３		IP	１		IP	１		IP	５		IP	４		IP	１		IP
+花本　　夏樹	4.40	0.21	4.5	４		IP	６		IP	６		IP	２		IP	３		IP	５		IP	３		IP	４		IP	５	5	IP	１		IP
+河村　　　了	6.60	0.16	3.1	２		IP	２		IP	１		IP	４		IP	４		IP	３		IP	３		IP	２		IP	２		IP	４		IP
+西村　　仁吾	2.10	0.20	4.6	６	6	IP	６	6	IP	６	6	IP	６	6	IP	２	6	IP	６	6	IP	６	6	IP	４	6	IP	５	6	IP	６	6	IP
+妹尾　　忠幸	4.50	0.18	4.4	４		IP	３		IP	６		IP	３		IP	４		IP	５		IP	５		IP	２		IP	２		IP	５		IP

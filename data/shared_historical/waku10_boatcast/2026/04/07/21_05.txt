@@ -1,0 +1,8 @@
+data=
+1	0
+石原　　　翼	9.10	0.16	2.7	１		IP	１		G2	１		G2	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	６		IP
+加藤　　優弥	4.70	0.14	2.5	２		IP	６		IP	６		IP	１		IP	４		IP	６		IP	５		IP	２		IP	５		IP	１	3	IP
+藤丸　　光一	5.10	0.21	3.5	２		IP	３		IP	５		IP	２		IP	４		IP	６	2	IP	４		IP	３		IP	４		IP	２		G3
+丸尾　　義孝	4.20	0.15	3.9	５		IP	６		IP	５		IP	２		IP	４		IP	３		IP	１		IP	５		IP	５		IP	４		G1
+向井　　美鈴	4.60	0.21	4.8	４		IP	５	4	IP	６		IP	３		IP	５		IP	３		G1	３		IP	４		IP	２		IP	３		IP
+君島　　秀三	3.70	0.13	2.5	６		IP	４		IP	４		IP	４		IP	３		G1	６		G1	６		IP	４		G3	２		IP	５		IP

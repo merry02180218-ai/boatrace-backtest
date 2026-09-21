@@ -1,0 +1,8 @@
+data=
+1	0
+山下　　夏鈴	7.70	0.17	3.0	６		IP	１		IP	１		IP	２		IP	２		IP	１		IP	５		IP	１		IP	１		IP	２		IP
+上條　　嘉嗣	6.50	0.17	4.0	５		G3	６		G3	２		IP	１	1	IP	３	3	IP	１		IP	２		IP	２		IP	５		IP	１		IP
+明石　　正之	3.90	0.17	3.5	６		IP	４	4	G3	２		IP	５		IP	３		IP	５		IP	４		IP	４		IP	４	5	IP	４	4	IP
+中島　　昂章	5.00	0.18	4.8	６		IP	６		IP	５	5	IP	２	3	IP	３		IP	２		IP	２	3	IP	３	3	IP	５		IP	２		IP
+井上　　恵一	3.10	0.19	3.6	５		IP	５		IP	５		IP	６		IP	４		IP	４		IP	４		IP	５	3	IP	４		IP	４		IP
+鈴木　結平太	1.90	0.19	3.0	３		IP	６		IP	５		IP	５		IP	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP

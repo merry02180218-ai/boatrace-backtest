@@ -1,0 +1,8 @@
+data=
+1	0
+林　　　祐介	9.20	0.14	2.4	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	２		IP
+金田　　大輔	4.80	0.16	4.2	２		IP	６		IP	４		IP	２		IP	３		IP	６		IP	２		IP	５		IP	Ｆ	4	IP	１	6	IP
+藤原　　碧生	6.00	0.15	2.7	２		IP	６		G1	１		G1	５		G1	５		G1	５		G1	２		IP	２		G1	５		G1	２		IP
+松下　　誉士	3.40	0.18	4.6	２		IP	６		IP	５		IP	２		IP	４	6	IP	６		IP	５		IP	６		IP	３		IP	６		IP
+三村　　岳人	4.70	0.15	2.8	５		IP	５		IP	３		IP	５		IP	３		IP	２		IP	５		IP	１	3	IP	４		IP	４		IP
+山口　　達也	5.20	0.13	3.4	４		SG	４		SG	２	3	G1	６		G1	６		G1	２		G1	Ｆ		IP	３	5	IP	３	4	IP	３	3	IP

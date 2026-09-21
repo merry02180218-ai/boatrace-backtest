@@ -1,0 +1,8 @@
+data=
+1	0
+横井　　健太	3.20	0.20	4.4	４		IP	４		IP	４		IP	５		IP	４		IP	４		IP	５		IP	３		IP	６		IP	６	2	IP
+富永　　大一	5.70	0.19	3.7	２		IP	６		IP	４		IP	１		IP	４		IP	２		IP	４		IP	３		IP	３		IP	３		IP
+西舘　　　健	4.90	0.12	2.3	５		IP	４		IP	１		IP	６		IP	３		IP	３		IP	５		IP	２		IP	２		IP	５		IP
+半田　　尚也	3.30	0.16	3.6	４		IP	６	5	IP	４	5	IP	５		IP	４	5	IP	１		IP	６		IP	６		IP	５		IP	４		IP
+浜崎　　準也	3.20	0.21	4.5	６		IP	５		IP	５		IP	２		IP	５		IP	５	4	IP	６		IP	２		IP	５		IP	４		IP
+原村　　百那	1.50	0.15	3.1	６		IP	落		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	欠		IP	４		IP

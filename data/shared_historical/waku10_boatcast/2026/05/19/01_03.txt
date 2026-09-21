@@ -1,0 +1,8 @@
+data=
+1	0
+清水　　紀克	5.10	0.19	2.3	２		IP	４		IP	２		IP	６		IP	５		IP	１		IP	３		IP	３		IP	４		IP	５		IP
+芹澤　　克彦	5.80	0.15	2.8	３		IP	５		IP	４		IP	２		IP	３		IP	３		IP	３		IP	２		IP	１		IP	５		IP
+松本　　一毅	4.70	0.14	2.7	４		IP	５		IP	１		IP	３		IP	２	2	IP	５		IP	３		IP	６		IP	３		IP	５		IP
+伊藤　　尚汰	4.40	0.17	3.5	４		IP	５		IP	２		IP	６		IP	６		IP	４		IP	４		IP	２		IP	１		IP	５		IP
+嶋　　　義信	4.40	0.13	2.9	３		IP	６		IP	４		IP	５	6	IP	４		IP	２		IP	５		IP	４		IP	４		IP	２		IP
+河野　　　大	4.80	0.14	2.5	４		IP	６		IP	５		IP	４		IP	４	5	IP	３		IP	５		G2	２		IP	２		IP	２		IP

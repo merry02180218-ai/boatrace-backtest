@@ -1,0 +1,8 @@
+data=
+1	0
+喜井　つかさ	8.20	0.17	2.8	１		G3	１		IP	１		IP	５		G3	２		G3	５		G3	１		G3	１		G3	１		G3	１		IP
+今井　　美亜	6.70	0.12	2.7	１		G3	６		G3	３		G2	４		G2	４		G2	２		IP	１		IP	２		IP	３		G3	３		G3
+堀之内紀代子	5.10	0.19	2.6	３		G3	２		G3	２		G3	４		G3	４		G2	４		G2	１		IP	５		IP	６		IP	５		IP
+小野　　生奈	6.20	0.15	3.8	５		IP	５		IP	２		G3	３		G2	２		G2	３		G3	５		G3	２		G3	１		G3	２		G3
+神里　　琴音	3.70	0.15	2.3	３		IP	６		G2	３		G3	５		G3	６		IP	５		IP	３		IP	２		IP	５		IP	５		IP
+塩崎　　桐加	4.40	0.16	2.8	３		G3	３	5	IP	２		IP	４		IP	５		IP	３	5	IP	５		IP	４		IP	５		IP	５		G3

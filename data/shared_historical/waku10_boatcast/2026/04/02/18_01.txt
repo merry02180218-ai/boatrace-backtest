@@ -1,0 +1,8 @@
+data=
+1	0
+藤山　　翔大	8.70	0.16	3.8	１		IP	２		IP	１		IP	１	3	IP	２		IP	１		IP	１		IP	５		IP	１		IP	２		IP
+香川　　颯太	5.70	0.15	3.5	２	3	IP	２		IP	３		IP	３		IP	５		IP	３		IP	１		IP	３		IP	６		IP	４		IP
+越智　　照浩	4.22	0.18	4.1	欠		IP	４		IP	３	4	IP	３		IP	４		IP	５		IP	５		IP	２	4	IP	４	5	IP	５		IP
+櫻井　　　優	5.20	0.12	2.3	３		IP	３		IP	４		IP	２		IP	２		IP	５		IP	２		IP	４		IP	５		IP	４		IP
+坂本　　奈央	2.80	0.20	3.3	６		IP	６		G3	６		IP	２		G3	４	4	G3	６		G3	２		G3	６		G3	５		G3	６		IP
+大井　　清貴	3.30	0.20	4.3	４	4	IP	６		IP	４		IP	６		IP	４		IP	５		IP	３		IP	３		IP	６		IP	４		IP

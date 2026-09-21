@@ -1,0 +1,8 @@
+data=
+1	0
+前田　健太郎	6.00	0.16	2.8	１		IP	５		IP	１		IP	３		IP	４		IP	４		IP	５		IP	３		IP	３		IP	１		IP
+藤田　　靖弘	5.20	0.14	2.6	３		G3	５		IP	４		IP	４		IP	２		IP	２		IP	５		IP	２		IP	２		IP	５		IP
+加倉　　侑征	6.40	0.12	2.6	５		IP	２		IP	３		IP	２		IP	２		IP	４		IP	３		IP	１		IP	３		IP	３		IP
+中岡　　健人	6.00	0.20	2.8	５		IP	３	5	IP	３		IP	２		IP	３		IP	２		IP	１		IP	５		IP	２		IP	４		IP
+吉田　　祐貴	4.30	0.18	3.8	６		IP	４		IP	５		IP	２		IP	５		IP	１		IP	３		IP	５		IP	４		IP	４		IP
+船岡　洋一郎	3.10	0.17	4.1	６		G1	５		IP	５		IP	５		G1	４	5	G1	６		G2	４		IP	２		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+茅原　　悠紀	11.10	0.10	2.5	１		SG	１		IP	１		IP	１		G1	１		G1	１		G1	１		G1	１		SG	１		SG	１		G1
+吉田　　裕平	6.30	0.13	2.5	５		SG	３		IP	１		IP	２		IP	３		IP	６		G1	２		G1	６		G1	３		G1	３		G1
+守屋　　美穂	5.20	0.18	3.9	６		SG	４		IP	４		IP	４		IP	３		IP	４		IP	２		G3	１		G1	４		IP	４		IP
+桐生　　順平	6.80	0.11	3.0	４		SG	５		G1	４	5	G1	４		IP	１		G1	２		SG	５		SG	２		G1	２		G1	３		G1
+松井　　　繁	3.80	0.17	4.3	６		SG	５	4	IP	５		G1	５	4	G1	５	4	G1	２	2	G1	４		SG	６	6	SG	６		SG	５		G1
+高憧　　四季	6.50	0.15	3.4	６		SG	３		G2	４		IP	１		IP	３		IP	１		IP	６		G3	２		G1	４		G1	１		IP

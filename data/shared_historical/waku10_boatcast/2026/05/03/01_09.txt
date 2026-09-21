@@ -1,0 +1,8 @@
+data=
+1	0
+富澤　　祐作	8.20	0.11	2.1	１		IP	４		IP	１		IP	２		IP	１		IP	２		IP	２		IP	１		IP	４		IP	１		IP
+柴田　　　光	6.78	0.16	3.7	５		G1	５		G1	４		G1	欠		IP	２		IP	２		IP	１		G3	２		G3	２		IP	２		IP
+鳥居塚　孝博	5.30	0.16	3.5	３		IP	３		IP	１		IP	５		IP	３		IP	２		IP	６		IP	３		IP	５		IP	３		IP
+関　　　浩哉	6.70	0.10	2.5	４	6	G1	５		G1	５		SG	２		SG	３		G1	２		G1	５		G1	２		IP	２		IP	２		SG
+金児　　隆太	2.80	0.17	3.7	４	4	G3	３		G3	６		IP	４		IP	４		IP	６	4	IP	６		IP	４		IP	５		IP	６		IP
+坂本　　雄紀	6.50	0.15	2.3	３		IP	６		IP	３		IP	１		IP	４		IP	２		IP	２		IP	１	5	IP	３	5	IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+秦　　　英悟	9.40	0.13	1.8	１		IP	１		IP	２		IP	１		IP	１		IP	５		G1	１		IP	１		IP	１		IP	１		SG
+松本　　博昭	7.00	0.17	4.2	４		IP	２		IP	２		IP	１		IP	２		IP	３		IP	２		IP	２		IP	２		IP	５	3	IP
+畑田　　汰一	6.13	0.11	2.8	３		IP	１	4	IP	１		IP	４		G1	５		G1	落		G1	６		IP	２	2	IP	転		IP	３		IP
+鋤柄　　貴俊	3.60	0.12	2.4	４		IP	６		IP	５		IP	３		IP	５		IP	３		IP	３		IP	４		IP	４		IP	６		IP
+戸塚　　邦好	5.00	0.20	3.5	５		IP	４	6	IP	４		IP	３		IP	６		IP	１		IP	２		IP	４		IP	２		G1	６		G1
+植田　　太一	2.00	0.17	4.2	６		IP	４		IP	５		IP	６		IP	５		G3	６		IP	５		IP	６		IP	５		IP	５	5	IP

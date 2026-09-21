@@ -1,0 +1,8 @@
+data=
+1	0
+間庭　　菜摘	6.60	0.18	2.8	１		IP	６		G1	１		G3	２		G3	６		IP	１		IP	１		IP	４		IP	６		G3	１		G3
+北村　　寧々	7.80	0.15	2.4	２		IP	２		IP	２		IP	３		IP	２		G3	２		G3	１		IP	１		IP	３		IP	３		IP
+安達　　裕樹	6.40	0.13	2.8	１		IP	５		IP	３		IP	２	2	IP	２		IP	１		IP	３		IP	４		IP	５		G2	３		G2
+岩瀬　　裕亮	5.10	0.14	3.7	４		G1	６		G1	６	6	G1	３		G1	２		G1	５	5	G1	３		G1	３		G2	５	3	IP	３		IP
+金子　　怜央	3.20	0.12	1.6	６	6	IP	４		IP	６		IP	３		IP	６		IP	４		IP	６		IP	１		IP	５		IP	５		IP
+土屋　　太朗	3.00	0.17	4.2	５		IP	５	5	IP	６	4	IP	４		IP	５	5	IP	３	4	IP	６		IP	４	5	IP	３	4	IP	５		G3

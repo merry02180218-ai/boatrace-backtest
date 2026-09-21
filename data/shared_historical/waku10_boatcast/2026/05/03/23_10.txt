@@ -1,0 +1,8 @@
+data=
+1	0
+竹田　　広樹	5.70	0.16	3.1	６		IP	５		IP	１		IP	１		IP	１		IP	６		IP	２		IP	４		IP	１		IP	６		IP
+小玉　　啓太	5.70	0.14	2.9	３		IP	転		IP	３		IP	３		IP	２		IP	１		IP	３		IP	６		IP	３		IP	２		IP
+末永　　和也	7.40	0.11	2.4	１		G1	２		G1	３		G1	２		SG	５		SG	２		SG	５		G1	５		G1	２		G1	３		G1
+小柳　　勝希	4.40	0.21	4.1	３		IP	６		IP	４		IP	６		IP	３		IP	３		IP	１		IP	転		IP	３		IP	４		IP
+田中　太一郎	2.50	0.16	3.8	５		IP	５		IP	６	4	IP	６		IP	６		IP	５		IP	５		IP	５		IP	１	4	IP	５		IP
+定松　　勇樹	4.56	0.12	3.5	５		G1	４		G1	４		SG	６		G2	２		G1	２		G3	６		G3	６		G1	転		G1	４		G1

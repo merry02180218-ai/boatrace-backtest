@@ -1,0 +1,8 @@
+data=
+1	0
+中村　紋夕梨	2.50	0.15	4.0	６		IP	４		IP																								IP
+菊池　　峰晴	3.60	0.23	3.9	５	4	IP	３		IP	６		IP	４		IP	２		IP	６		IP	５		IP	２		IP	５		IP	５		IP
+東口　　　晃	6.80	0.13	2.4	６		IP	２		IP	１		IP	１		IP	１		IP	６	4	IP	２		IP	２		IP	３		IP	３	4	IP
+竹之内　　極	3.70	0.17	3.1	３		IP	３		IP	３		IP	４		IP	４		IP	５		IP	４		IP	６		IP	５		IP	５		IP
+野口　　勝弘	6.20	0.14	2.2	４		IP	３		IP	４		IP	３		IP	３		IP	２		IP	１	4	IP	２		IP	４		IP	３		G3
+長野　　未来	1.30	0.24	4.7	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP

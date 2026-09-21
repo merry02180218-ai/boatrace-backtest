@@ -1,0 +1,8 @@
+data=
+1	0
+田村　　美和	5.70	0.20	3.4	１		IP	３		IP	５		IP	２		IP	４		G3	６		G3	４		G3	１		G3	１		IP	５		IP
+岩崎　　麗子	2.00	0.20	3.5	６		IP	４		IP	４		IP	５		IP	５		IP	６		IP	６		IP	６		IP	５		IP	５		IP
+木村　紗友希	4.60	0.19	3.2	２		IP	３		IP	１		G3	５		IP	３		IP	６		IP	３		IP	４	2	IP	５		IP	６		IP
+香川　　素子	5.20	0.17	2.8	２		IP	３		IP	５		G3	２		IP	３		G1	３		G3	５		IP	２		IP	４		IP	６		IP
+土屋　　千明	4.10	0.15	2.3	４		IP	４		IP	４		IP	３		IP	１		IP	５		G3	６		G3	転		IP	５		IP	３		IP
+平田　さやか	4.20	0.19	3.5	３	5	IP	４		IP	５		IP	５		IP	３	5	G3	６		G1	３	5	IP	２	5	IP	４		IP	５		G3

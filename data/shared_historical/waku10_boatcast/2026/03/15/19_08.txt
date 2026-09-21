@@ -1,0 +1,8 @@
+data=
+1	0
+江夏　　　満	9.20	0.12	2.5	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	３		G1	１		IP	１		IP
+奥平　　拓也	4.00	0.17	3.0	３		IP	２		IP	６		IP	６		IP	５	4	IP	４		IP	３		IP	１		G3	Ｆ		IP	５		IP
+岡部　　　浩	4.80	0.16	3.2	２	4	IP	３		IP	１		IP	５		IP	５		IP	３		IP	４		IP	４		IP	５		IP	４		IP
+深見　亜由美	3.00	0.23	4.9	４		IP	４		IP	４		IP	６		IP	６	6	IP	４		IP	４		IP	６		G3	３		G3	６		IP
+植木　　美帆	3.70	0.20	3.2	４		IP	１		IP	５		IP	６		IP	４		IP	３		G3	３		G3	６		IP	６		IP	５	6	IP
+大井　　清貴	3.30	0.19	4.6	６		IP	４		IP	５		IP	３		IP	３		IP	６		IP	４		IP	５		G3	６		G3	３		IP

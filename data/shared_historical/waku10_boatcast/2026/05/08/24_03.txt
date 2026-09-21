@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　文彦	8.40	0.12	3.3	１		IP	２		IP	４		IP	３		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP
+嶋田　　有里	4.30	0.18	3.6	２		IP	３		IP	３		IP	４		IP	５		IP	２		IP	５		IP	５		IP	６		IP	４		IP
+榎　　　幸司	5.90	0.20	3.8	１		IP	６		IP	５		IP	２		IP	３		IP	３		IP	４		IP	４		IP	１		IP	２		IP
+森永　　　淳	5.40	0.12	2.9	１		IP	６		IP	４		G1	２		IP	３		IP	５		IP	３		G2	６		G2	２		IP	４		IP
+山戸　　信二	1.90	0.21	3.6	４		IP	６	6	IP	５		IP	４	6	IP	５		IP	５		IP	６		IP	６		IP	６	6	IP	６		IP
+坂井　　康嗣	2.00	0.16	3.1	６		IP	６		IP	５	5	IP	５		IP	５	5	IP	４		IP	６		IP	６	5	IP	４		IP	５	5	IP

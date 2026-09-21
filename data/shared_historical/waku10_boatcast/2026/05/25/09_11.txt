@@ -1,0 +1,8 @@
+data=
+1	0
+福島　　勇樹	9.70	0.09	1.7	１		IP	４		IP	１		IP	１		IP	１		IP	１		G1	１		G1	１		IP	１		IP	１		IP
+谷口　　　丞	5.60	0.13	2.3	１		IP	６		IP	４		IP	２		IP	６		IP	４	3	IP	５	3	IP	２		IP	１	4	IP	２		IP
+神里　　琴音	6.90	0.15	2.7	１		IP	３		IP	３		G2	３		G2	２		G3	３		IP	１		IP	４		IP	６		IP	１		IP
+枝尾　　　賢	5.40	0.12	2.8	３		IP	５		G2	エ		IP	２		IP	２		IP	１		IP	２		IP	３		IP	６		IP	４		IP
+小野寺　智洋	3.40	0.13	3.2	２	6	IP	落		IP	４		IP	３		IP	５		IP	４		IP	５		IP	５		IP	４		G3	５		G3
+丸尾　　義孝	4.70	0.14	2.3	５		IP	３		IP	４		IP	３	5	IP	４		IP	５		IP	６		IP	２		IP	２	5	IP	３		IP

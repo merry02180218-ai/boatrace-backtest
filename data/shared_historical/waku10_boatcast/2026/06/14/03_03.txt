@@ -1,0 +1,8 @@
+data=
+1	0
+品川　二千翔	10.00	0.16	2.4	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	欠		IP	１		IP	１		IP
+富永　夏哉人	4.20	0.18	3.2	４		IP	６		IP	４		IP	２		IP	５		IP	６		IP	２		IP	３		IP	５		IP	３		IP
+塩嶋　　泰空	1.00	0.32	5.0	６		IP	６		IP	６		IP																					IP
+田中　　宏典	4.20	0.15	3.6	４		IP	３		IP	５		IP	６	6	IP	４		IP	１		IP	５		IP	６		IP	５		IP	１		IP
+高山　　弘斗	2.80	0.19	3.6	３		IP	５		IP	６		IP	沈		IP	５		IP	２		IP	６	6	IP	４		IP	５		IP	５		IP
+熊倉　　幹太	1.40	0.20	4.5	５		IP	６		IP	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP

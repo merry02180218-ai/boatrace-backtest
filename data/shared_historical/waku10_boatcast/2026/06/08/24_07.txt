@@ -1,0 +1,8 @@
+data=
+1	0
+竹井　　貴史	9.70	0.13	2.9	１		G2	１		IP	２		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+藤丸　　光一	3.80	0.22	4.2	５		IP	６		IP	１		IP	４		IP	４		IP	５		IP	５		IP	６		IP	３		IP	３		IP
+堀本　　裕也	4.00	0.15	3.2	５		IP	５		IP	４		IP	３		IP	３		IP	６		IP	１		IP	３		IP	５		IP	６		IP
+桑島　　和宏	6.70	0.18	3.6	３		IP	５		G2	１		IP	２		IP	３		IP	４	3	IP	２		IP	３		IP	３		IP	２		IP
+向井田　真紀	3.20	0.21	3.7	６		IP	５		IP	４		IP	４		IP	５	4	IP	５		IP	２	6	IP	２		G3	Ｆ		IP	６		IP
+宮本　　琉正	1.90	0.13	3.2	６		IP	６		IP	６		IP	６		IP	６		IP	５	5	IP	４		IP	３		IP	Ｆ		IP	５		IP

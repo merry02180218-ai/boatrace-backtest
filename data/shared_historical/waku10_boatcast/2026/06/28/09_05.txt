@@ -1,0 +1,8 @@
+data=
+1	0
+梶野　　学志	8.80	0.12	2.6	３		IP	１		IP	１		IP	２		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP
+大場　　広孝	6.20	0.15	3.4	２		IP	５	4	IP	１		IP	３		IP	４		IP	１		IP	３		IP	２		IP	３		IP	５		IP
+岡田　　憲行	5.30	0.18	3.2	２		IP	６	2	IP	５		IP	５		IP	４		IP	３		IP	２		IP	１	1	IP	２		IP	４		IP
+永田　　義紘	4.90	0.15	3.2	５		IP	６		IP	６		IP	２		IP	４		IP	５		IP	１		IP	１		IP	１		IP	６		IP
+秋末　　秦悟	3.00	0.12	2.5	１		IP	５		IP	５		IP	５		IP	５		IP	５		IP	６		IP	６		IP	４		IP	４		IP
+佐竹　　友樹	2.40	0.14	4.3	６		IP	３		IP	６		IP	５		IP	４		IP	５	5	IP	６		IP	５		IP	６		IP	４	5	IP

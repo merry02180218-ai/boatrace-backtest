@@ -1,0 +1,8 @@
+data=
+1	0
+滝川　真由子	7.50	0.20	4.1	３		IP	２		IP	１		IP	４		G3	２		G3	６		IP	２		IP	１		IP	１		IP	１		G3
+渡邉　　雄朗	8.44	0.17	3.3	１		IP	５		G1	２		G1	不		IP	２		IP	１		IP	１		IP	１		IP	２		IP	２		IP
+馬野　　　耀	5.90	0.18	3.1	２		IP	３		IP	４		IP	２		IP	２		IP	２		IP	４		IP	６		G3	３		G2	４		G2
+井芹　　大志	3.90	0.15	3.6	６		IP	４		IP	３		IP	３		IP	４		IP	６	5	IP	５		IP	６	3	IP	２		IP	３		IP
+宮野　　　仁	4.80	0.17	4.4	６		IP	２		IP	６		IP	６		IP	２		IP	２		IP	６		IP	５		IP	２	6	IP	１		IP
+永嶋　　裕一	5.20	0.17	3.6	２	5	IP	１		IP	３	5	IP	４		IP	４		IP	５		IP	４	5	IP	５		IP	４		IP	２		IP

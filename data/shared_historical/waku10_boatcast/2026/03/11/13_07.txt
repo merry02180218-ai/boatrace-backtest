@@ -1,0 +1,8 @@
+data=
+1	0
+川上　　清人	7.30	0.18	2.8	４	2	IP	３		IP	１		IP	１		IP	１		IP	６		IP	２		IP	１		IP	１		IP	４		IP
+渡邉　　睦広	6.40	0.19	2.4	１		IP	２		IP	２		IP	５		IP	５		G3	２		IP	１		IP	３		IP	３		IP	４		IP
+田頭　　　実	4.80	0.13	2.5	６	2	IP	１	1	IP	４	2	IP	５	2	IP	２	2	IP	６	2	IP	２	2	IP	６	2	IP	６	2	IP	１		G3
+冨成　　謙児	3.50	0.15	3.3	６		IP	２		IP	５		IP	４		IP	５		IP	５		IP	４		IP	３		IP	４		IP	５		IP
+飯塚　　　響	3.40	0.20	3.7	５	6	IP	４		IP	３		G3	５		IP	４		IP	４		IP	３		IP	５		IP	５		IP	５		IP
+佐々木　和伸	4.70	0.15	4.0	３		IP	４		IP	５		G1	３		IP	３		IP	４		IP	５		IP	３		IP	５		IP	２		IP

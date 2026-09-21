@@ -1,0 +1,8 @@
+data=
+1	0
+重成　　一人	7.90	0.14	2.9	１		IP	２		IP	１		IP	３		G1	転		G1	１		G1	１		IP	１		IP	１		IP	５		IP
+石倉　　洋行	6.70	0.13	2.3	２		IP	２		IP	４		IP	３		G1	６		G1	１		IP	３		IP	４		IP	１		IP	２		IP
+江本　　真治	6.10	0.16	3.3	２		IP	４		G3	６		G3	１		IP	３		IP	３		IP	３		IP	２		IP	３		G1	４		G1
+岡瀬　　正人	4.90	0.18	3.7	４		IP	３		IP	２		IP	５		IP	２		IP	２	5	IP	２		IP	５		IP	５		IP	６		IP
+中澤　　和志	4.78	0.13	2.7	３		IP	４		IP	３		IP	転		G1	４		G1	５	4	IP	４		IP	３	4	IP	５		G1	３		G1
+森永　　　隆	5.20	0.15	3.5	２		IP	４		IP	５		IP	３	5	IP	３	5	IP	４		IP	４		IP	４		IP	４	4	G1	２	4	G1

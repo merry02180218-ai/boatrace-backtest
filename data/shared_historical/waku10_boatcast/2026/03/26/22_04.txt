@@ -1,0 +1,8 @@
+data=
+1	0
+田邉　　亮蔵	7.90	0.17	2.1	１		IP	１		IP	１		IP	６		IP	２		IP	１		IP	３		IP	４		IP	１		IP	１		IP
+沼田　　大都	4.60	0.21	3.8	２		IP	５		IP	５		IP	３		IP	１		IP	３		IP	４		IP	３		IP	５		IP	Ｆ		IP
+加木　　　郁	3.40	0.23	4.1	５		IP	４		IP	３		IP	２		IP	５		IP	４		IP	４		IP	６		IP	６		IP	５		IP
+角山　　雄哉	3.20	0.14	2.8	６	5	IP	６		IP	６		IP	４		IP	４		G3	６		IP	２		IP	５	5	IP	２		IP	５		IP
+大串　　重幸	3.50	0.21	4.6	３		IP	３		G3	４		G3	５		IP	１		IP	５		IP	転		IP	５		IP	５		IP	６		IP
+瓜生　　正義	4.90	0.14	3.5	２	4	IP	４		G1	５		G1	３		IP	３	5	IP	４		G1	３		G1	６		G1	６	5	G1	４		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+一柳　　和孝	7.60	0.20	2.4	２		IP	１		IP	２		IP	１		IP	３		IP	２		IP	５		IP	３		IP	１		IP	２		G3
+新田　　智彰	5.00	0.20	4.5	５		IP	３		IP	５		IP	３		IP	３		IP	５		IP	２		IP	４		IP	３		IP	２		IP
+和田　　操拓	4.70	0.13	2.2	２		IP	４		IP	３		IP	３		IP	５		IP	２		IP	５		IP	５		G2	６		G2	３		IP
+町田　　洸希	4.30	0.21	4.4	３		G3	６		G3	３		IP	５		IP	３		IP	５		IP	２		IP	５		IP	４	5	IP	３		IP
+太田　　和美	6.40	0.16	2.8	２		IP	１		IP	３		IP	２		IP	６		G1	４		G1	１		IP	５		G2	２		IP	４		IP
+高橋　　真吾	2.00	0.13	3.8	６		IP	５		IP	６		IP	６		IP	６		G3	４		G3	６		G3	５		G3	６		IP	３		IP

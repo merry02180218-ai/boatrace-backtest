@@ -1,0 +1,8 @@
+data=
+1	0
+岩永　　雅人	7.40	0.22	5.1	１		IP	１		IP	２		IP	１		IP	３		IP	２		IP	３		IP	Ｆ		IP	２		IP	２		IP
+寺嶋　　　雄	3.50	0.22	4.5	１		IP	６		IP	５		IP	４		IP	６		IP	２		IP	５		IP	５		IP	６		IP	４		IP
+樋口　　　亮	7.40	0.17	2.8	２		IP	２		IP	１		IP	２		IP	３		IP	２		IP	２		IP	４		IP	１		IP	５		IP
+荻野　　裕介	5.60	0.23	4.3	４	6	IP	３	5	IP	２		IP	４		IP	３		IP	３		IP	４		IP	４		IP	２		IP	３		IP
+木村　　浩士	3.00	0.19	4.2	３		IP	５		IP	４		IP	５		IP	６		G3	６	6	G3	４		IP	３		IP	５		IP	５		G3
+河合　　佑樹	5.70	0.18	3.8	３		G1	３	5	G1	４		G1	６		G1	４		IP	２	5	IP	６		G1	１	5	IP	４		SG	４	5	SG

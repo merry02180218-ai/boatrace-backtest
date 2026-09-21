@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　大佑	9.00	0.15	2.4	１		IP	１		IP	２		IP	１		IP	１		IP	４		IP	１		IP	２		IP	１		IP	１		IP
+山下　　流心	3.90	0.14	3.2	２		IP	６		IP	５		G3	６		G3	３		IP	３		IP	６	3	IP	２		IP	５		IP	４		IP
+小野　　達哉	5.40	0.14	2.5	２		IP	３		IP	３		IP	５		IP	３		IP	４		IP	２		IP	４		IP	４		IP	３		IP
+竹之内　　極	5.00	0.15	3.2	５		IP	５		IP	３		IP	５		IP	５		IP	１		IP	３		IP	２		IP	３		IP	３		IP
+田川　　大貴	4.30	0.14	2.7	５	6	IP	２		IP	４		IP	５		IP	２		IP	６		IP	４		IP	１		IP	５		IP	５		IP
+松田　　淳平	4.10	0.13	2.2	５		IP	４	4	IP	４		IP	６		IP	５		IP	３		IP	１	5	IP	４		IP	５		IP	３		IP

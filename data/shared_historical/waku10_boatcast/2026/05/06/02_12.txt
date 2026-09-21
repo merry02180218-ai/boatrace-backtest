@@ -1,0 +1,8 @@
+data=
+1	0
+須藤　　博倫	8.60	0.15	2.6	３		IP	２		IP	３		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP
+滝沢　　芳行	4.50	0.13	2.3	１		IP	４		IP	５		IP	５		IP	４		IP	５		IP	４		G3	２		IP	６		IP	２		IP
+中野　　希一	6.80	0.12	2.4	２		IP	４		IP	１		IP	２		IP	３		IP	３		IP	１		IP	２		IP	５		IP	３		IP
+畑田　　汰一	6.60	0.12	2.6	１		IP	１		G1	４		G1	３		G1	３		G1	６		G1	３		IP	３		IP	３		IP	３		IP
+桐生　　順平	6.40	0.14	2.9	４	4	IP	５		G1	４		SG	３	4	SG	２		G1	３		G1	２		G1	４		G1	３		IP	４		G1
+谷津　　幸宏	3.70	0.16	2.8	２		IP	５	5	IP	５		IP	４		IP	５		IP	４	5	IP	５		IP	６		G3	３		IP	３		IP

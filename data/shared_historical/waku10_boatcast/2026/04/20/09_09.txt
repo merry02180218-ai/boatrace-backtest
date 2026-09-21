@@ -1,0 +1,8 @@
+data=
+1	0
+中田　　夕貴	6.80	0.18	2.9	１		IP	４		IP	１		IP	６		G1	３		IP	１		IP	３		IP	転		G3	１		G3	１		IP
+松田　　真実	5.70	0.18	3.3	２		IP	６		IP	３		IP	２		IP	３		IP	２		IP	２		IP	３		G3	４		G3	５		IP
+宇恵　　有香	4.30	0.18	3.5	３		IP	５		IP	６		IP	４		IP	３		IP	５		IP	１		IP	２		IP	５		IP	５		IP
+永井　　聖美	6.20	0.18	3.2	２		IP	４		IP	５	5	IP	４		IP	２		IP	５		IP	３		IP	１		G3	１	3	G3	２		IP
+笠野　友紀恵	2.90	0.17	3.4	３		IP	６		IP	４		G3	４		G3	６		IP	６		IP	６		IP	３		IP	６	4	IP	４		G3
+長野　　未来	1.20	0.24	4.5	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	不		IP

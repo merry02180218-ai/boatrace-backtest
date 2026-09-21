@@ -1,0 +1,8 @@
+data=
+1	0
+西尾　　亮輔	7.30	0.17	2.9	２		IP	１		IP	２		IP	４		IP	２		IP	２		IP	２		IP	２		IP	１		IP	６		IP
+川上　　聡介	4.20	0.13	3.3	６		IP	４		IP	５		IP	５		IP	２	3	IP	５		IP	２		IP	６		IP	３		IP	２	3	IP
+平本　　真之	5.90	0.15	3.0	１		IP	５		G1	５		G1	３		G1	３		SG	６		SG	２		IP	２		G1	５		G1	５		G1
+籾山　　佳岳	5.30	0.14	2.5	６		IP	３		IP	５		IP	３		IP	２	5	IP	５		IP	３		IP	１		IP	３		IP	３		IP
+広瀬　　聖仁	3.70	0.18	3.7	４		IP	２		IP	４	4	IP	６		IP	５		IP	３	4	IP	４		IP	６	6	IP	６		IP	３		IP
+鈴木　　裕隆	4.50	0.20	3.0	３	5	IP	６		IP	４		IP	４		IP	４		IP	３		IP	３		IP	４	5	IP	５		IP	２		IP

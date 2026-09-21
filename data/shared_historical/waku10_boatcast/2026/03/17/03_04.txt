@@ -1,0 +1,8 @@
+data=
+1	0
+酒井　　俊弘	5.40	0.14	2.8	１		IP	５		IP	４		IP	５		IP	４		IP	２		IP	２		IP	１		IP	３		IP	転		IP
+末永　　由楽	7.80	0.13	2.9	２		IP	３	3	IP	１		IP	３		IP	３	3	IP	１		IP	１		IP	３		IP	１		IP	３		IP
+北山　　康介	7.00	0.15	3.1	２		IP	２		IP	１		IP	２		IP	２		IP	５		IP	４		IP	４		IP	２		SG	２		IP
+伊藤　　雄二	3.50	0.15	2.6	３		IP	３		IP	６		IP	２		IP	６		IP	６		IP	６		IP	６		IP	３		IP	４		IP
+金子　　猛志	4.50	0.12	3.0	４		IP	５	6	IP	１		IP	３		IP	６		IP	２		IP	４		IP	５		IP	３		IP	５		IP
+田中　　　堅	1.90	0.25	4.7	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	４		IP	４		IP	６		IP	５		IP

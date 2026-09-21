@@ -1,0 +1,8 @@
+data=
+1	0
+薮内　　瑞希	8.20	0.16	2.3	３		IP	２		IP	２		IP	１		IP	２		IP	１		IP	５		IP	１		IP	１		IP	１		IP
+菅野　はやか	3.70	0.19	4.4	５		G3	４		G3	２		IP	３		IP	６		IP	６		IP	６		IP	３		G3	３		IP	５		IP
+新田　　芳美	6.50	0.15	3.2	４		IP	１		IP	２		IP	４		IP	３		IP	１		IP	５		IP	６		IP	１		G1	２		G1
+古賀　　千晶	4.50	0.18	3.2	４		G3	４		IP	５		IP	２		G3	２		G3	３		IP	３		IP	５		IP	６		IP	４		IP
+堀内　　亜海	1.40	0.20	4.4	６	6	G3	６		G3	６	6	IP	６		IP	６		IP	６		IP	６		IP	４	6	IP	５	6	IP	６	6	IP
+樋口　由加里	3.10	0.17	3.8	５		G3	３		IP	６		IP	４		IP	６		IP	３		IP	５		IP	４		IP	５		G1	５		IP

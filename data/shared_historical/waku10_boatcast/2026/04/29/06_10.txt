@@ -1,0 +1,8 @@
+data=
+1	0
+藤田　　靖弘	7.50	0.14	2.3	１		IP	２		IP	６		IP	４		IP	１		IP	１		IP	１		G3	１		G3	１		G3	５		IP
+藤山　　雅弘	7.10	0.19	3.3	２		IP	１		IP	１	3	G3	１		G3	２		IP	１		IP	２		IP	５		IP	６		IP	４		IP
+佐藤　　大介	7.50	0.18	3.6	４		IP	１		IP	３		IP	１		IP	２		IP	２		IP	２		IP	２		IP	５		G1	１		IP
+亀山　　雅幸	5.10	0.15	2.6	３		IP	１	3	IP	３		IP	５		IP	４		IP	２		IP	４		IP	３		IP	４		IP	６		IP
+山口　　晃朋	4.30	0.15	3.6	３		IP	４		IP	４		IP	４		IP	４		IP	２		IP	５		IP	６		IP	５		IP	２		IP
+白井　　友晴	2.20	0.21	4.4	６		IP	５		IP	６		IP	５		IP	５		IP	５		IP	４		IP	５		IP	５		IP	４		IP

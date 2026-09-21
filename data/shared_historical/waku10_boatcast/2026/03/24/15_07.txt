@@ -1,0 +1,8 @@
+data=
+1	0
+山ノ内　雅人	9.20	0.16	1.4	２		IP	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP
+佐竹　　太一	5.60	0.17	3.3	６		IP	４		IP	２		IP	３		IP	２		IP	６		IP	２		IP	２		IP	１		G3	５		G3
+船岡　洋一郎	6.60	0.15	3.0	２		IP	２		IP	３		IP	４		IP	３		IP	１		IP	４		G1	６		G2	２		G2	２	2	IP
+齋藤　　智裕	3.50	0.19	3.4	４		IP	４		IP	３		IP	６		IP	６		IP	５	5	IP	１		IP	６		IP	５		IP	４		IP
+冨成　　謙児	3.90	0.20	4.1	４		IP	２		IP	３		IP	４		IP	５		IP	６	6	IP	４		IP	４		IP	５		IP	４		IP
+西丸　侑太朗	4.70	0.11	2.3	５		IP	４		G1	６		G1	５		IP	２	5	IP	６		IP	１	3	IP	５		G1	１	4	IP	４		IP

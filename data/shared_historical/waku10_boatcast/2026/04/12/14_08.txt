@@ -1,0 +1,8 @@
+data=
+1	0
+山谷　　　央	6.70	0.15	3.1	１		IP	５		IP	６		IP	５		IP	１		IP	３		IP	１		IP	２		IP	１		IP	２		IP
+大久保信一郎	5.90	0.18	2.6	６		IP	欠		IP	２		IP	２		IP	２		IP	１		IP	４	3	IP	２		IP	３		IP	３		IP
+藤田　　浩人	6.10	0.19	3.9	２	4	IP	６		G2	２		G2	３		IP	３		IP	３		IP	３		IP	３		IP	３		IP	３		IP
+原田　　秀弥	6.20	0.16	3.0	３		IP	１		G3	４		G3	２		G3	３		IP	２		IP	３		IP	４		IP	４		IP	３		IP
+奈須　　啓太	6.10	0.13	2.3	１	3	IP	４		IP	３		IP	２		IP	３		IP	４		IP	３		G2	６		G2	４	3	IP	１		IP
+林　　　美憲	6.00	0.14	2.6	４	2	IP	３	4	IP	５	4	G1	２	3	IP	２	4	IP	３	3	IP	１	2	IP	３	4	IP	２	2	IP	６		IP

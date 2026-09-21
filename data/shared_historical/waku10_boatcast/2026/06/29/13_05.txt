@@ -1,0 +1,8 @@
+data=
+1	0
+小坂　　宗司	6.90	0.15	3.6	２		IP	１		IP	１		IP	２		IP	２		IP	１		IP	４		IP	１		IP	６		G3	Ｆ		IP
+柘植　　政浩	7.40	0.18	3.9	２		IP	２	1	IP	２		IP	１		IP	２		IP	５	3	IP	２		IP	２		IP	４		IP	１		IP
+小澤　　　学	5.60	0.22	5.4	５		IP	４		IP	２		IP	４		IP	５		IP	１		IP	１		IP	３		IP	２		IP	５		IP
+和田　　操拓	5.80	0.12	2.0	１		IP	６	5	IP	２		IP	３	6	IP	４		IP	１		IP	５		G2	１		G2	６		IP	５		IP
+石橋　　道友	5.40	0.14	2.7	３	4	IP	５		G1	４		G1	５		G1	２		IP	２		IP	４		G3	４		IP	５		IP	１		IP
+柳瀬　　興志	3.80	0.18	4.4	転		IP	５		IP	５		IP	５	5	IP	４		IP	５		IP	３		IP	５		IP	２		IP	２		IP

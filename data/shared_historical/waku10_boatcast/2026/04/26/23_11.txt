@@ -1,0 +1,8 @@
+data=
+1	0
+相馬　　　翔	8.60	0.13	1.9	３		IP	１		IP	１		IP	２		IP	２		IP	３		IP	１		IP	２		IP	１		IP	１		IP
+竹腰　　正樹	5.60	0.20	3.5	４	3	IP	２		IP	３		IP	１		IP	４		IP	１		IP	２		IP	５		IP	５		IP	５		IP
+後藤　　陽介	5.20	0.19	3.6	４		IP	２		IP	６		IP	２	4	IP	４		IP	６		IP	１		IP	２		IP	５		IP	３	4	IP
+井上　　　茂	4.67	0.20	3.8	５		IP	２		IP	３		IP	５		IP	３		IP	１		IP	５		IP	落		IP	４		IP	５		IP
+田中　　宏典	2.90	0.17	4.2	２		IP	５	6	IP	６		IP	６	6	IP	６	6	IP	５		IP	３	4	IP	５		IP	５		IP	４		IP
+葛原　　大陽	4.30	0.18	2.9	３	5	IP	６		G1	３		IP	６		G1	５		IP	３		IP	３		IP	４		IP	４		G1	４		IP

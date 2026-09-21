@@ -1,0 +1,8 @@
+data=
+1	0
+刑部　亜里紗	8.20	0.17	3.3	１		IP	２		G1	１		IP	５		IP	１		IP	６	2	IP	１		IP	１		G3	１		IP	１		IP
+中北　　将史	5.50	0.14	2.6	６	3	IP	５		IP	２		IP	４		IP	３		IP	４		IP	１		IP	５		IP	２		IP	１		IP
+古川　　　健	2.90	0.17	3.1	６		IP	４		IP	６		IP	５		IP	６		IP	４		IP	５		IP	４		IP	３		IP	４		IP
+松山　　将吾	4.90	0.14	2.7	２		IP	５		G1	６		G1	６		IP	２		IP	４		IP	１		IP	３		IP	６		IP	３		IP
+塩崎　　優司	4.40	0.19	3.3	５		IP	３		IP	２		IP	６	6	IP	５		IP	２		IP	６		IP	３	4	IP	３	6	IP	４		IP
+櫻井　　　優	3.70	0.17	4.4	５		IP	２	5	IP	６		IP	２	4	IP	３		IP	６		IP	５		IP	６		IP	５		IP	３		G3

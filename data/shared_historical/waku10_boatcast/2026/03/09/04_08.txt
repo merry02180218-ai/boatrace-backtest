@@ -1,0 +1,8 @@
+data=
+1	0
+内堀　　　学	7.80	0.16	4.0	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	２		IP	５		IP	３		IP
+西川　　真人	3.90	0.20	3.8	４		IP	５		IP	２		IP	５		IP	５		IP	５		IP	３		IP	１		IP	６		IP	５		IP
+長谷川　　巌	4.30	0.18	3.4	６		IP	５		IP	５		IP	２		G3	３		G3	３		G3	４		IP	４		IP	４		IP	３		IP
+田中　　和也	7.20	0.18	3.1	２		IP	３		IP	４		IP	１		IP	２		IP	３		IP	４		IP	３	2	IP	１		IP	１	3	IP
+小川　　時光	2.90	0.18	4.2	６		IP	６		IP	６		IP	４		IP	２		IP	６		IP	６		IP	５		IP	４	6	IP	３		IP
+村松　　将平	3.40	0.17	3.1	６		IP	３		IP	６		IP	３		IP	５		IP	５		IP	４		IP	６		IP	６		IP	１		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+藤原　　碧生	7.50	0.14	3.9	Ｆ		SG	６		G1	１		IP	２		IP	３		G1	１		IP	３		IP	１		G1	１		G1	１		IP
+高橋　　竜矢	7.60	0.16	2.9	２		IP	２		IP	２		IP	１		IP	１		IP	３		IP	４		IP	３		IP	４		IP	１		IP
+高憧　　四季	6.40	0.13	2.7	４		SG	２		G2	３		G2	５		IP	１		IP	２		IP	２		IP	５		IP	５		IP	１		G3
+横澤　　剛治	6.80	0.14	1.8	１		IP	１		IP	２		IP	１		IP	４		IP	６		IP	３		IP	２		IP	２		IP	５		G1
+赤岩　　善生	6.40	0.19	4.0	２	6	G3	５	3	G3	１	2	IP	２	2	IP	３	2	IP	６		G1	３	4	G1	２	2	IP	３	2	IP	３	3	G1
+白井　　英治	7.10	0.13	3.6	４		SG	２		G1	４	2	G1	２		G1	２	5	G1	３		G1	３		SG	４		SG	６		G1	１	3	G3

@@ -1,0 +1,8 @@
+data=
+1	0
+宮崎　　安奈	7.70	0.14	1.8	１		IP	２		IP	６		IP	２		IP	２		IP	２		IP	１		IP	４		IP	１		IP	１		IP
+熊本　　英一	3.90	0.22	4.5	６		IP	４		IP	４		IP	３		IP	６		IP	１		IP	４		IP	６		IP	５		IP	３		IP
+湯川　　浩司	7.30	0.16	4.0	３		G1	１		G1	６		G1	３		G1	２	2	IP	５		IP	２		IP	３		SG	１		IP	１		IP
+西村　　　勝	4.40	0.14	2.2	４		IP	６		IP	１		IP	６		IP	５		IP	３		IP	４		IP	２	5	IP	３	5	IP	５		IP
+藤原　　早菜	3.70	0.17	3.9	５		IP	４		IP	２		IP	２		IP	６		G1	６		G1	４		IP	５		IP	６		IP	４		IP
+石原　　　光	2.50	0.21	4.4	６		IP	６		IP	６		IP	３		IP	３		IP	５		IP	４		IP	６		IP	６		IP	５		IP

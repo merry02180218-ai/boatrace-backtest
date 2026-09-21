@@ -1,0 +1,8 @@
+data=
+1	0
+小川　日紀太	5.20	0.18	3.2	５		IP	６		G3	４		IP	４		IP	６		IP	２		IP	１		IP	１		IP	５		IP	１		IP
+上田　　龍星	5.90	0.15	3.0	５		G1	１		G2	３		IP	６		IP	Ｆ		IP	１		IP	５		G1	３		G1	２		IP	１		IP
+加藤　　優弥	7.00	0.14	2.8	１		IP	１		IP	４		IP	４		IP	３		IP	１	5	IP	３		IP	２		IP	２		IP	４		IP
+花田　　和明	3.80	0.17	3.6	２	2	IP	３		IP	５		IP	４	3	IP	５		IP	５		G3	４		G3	４		IP	５		IP	５	3	IP
+相馬　　　翔	3.60	0.21	3.5	５		IP	５		IP	３		IP	３		IP	５		IP	３	6	IP	６		IP	４		IP	３		IP	６		IP
+茶谷　　信次	3.90	0.20	4.8	３		IP	欠		IP	４		IP	５		IP	３		IP	４		IP	５		IP	４		IP	３		IP	４		IP

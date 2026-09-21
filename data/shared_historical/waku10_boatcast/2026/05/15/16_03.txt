@@ -1,0 +1,8 @@
+data=
+1	0
+西丸　　敦基	9.00	0.20	3.4	４		IP	１		IP	２		IP	１		IP	１		G3	１		IP	１		IP	１		IP	２		IP	１		IP
+米田　　隆弘	5.40	0.18	4.3	４		IP	２		IP	５		IP	２		IP	４		IP	２		IP	２		IP	５		IP	３		IP	４		IP
+松尾　　昂明	6.60	0.15	2.5	４		IP	４		IP	１		IP	５		IP	３	2	IP	１		IP	４		IP	１		IP	３		IP	１		IP
+木場　　悠介	3.90	0.15	2.2	４		IP	６	6	IP	３	5	IP	４		IP	４		IP	６		IP	４		G3	２		G3	３		IP	６		IP
+杉村　　賢也	3.44	0.14	2.8	４	2	IP	３		IP	３		IP	５		IP	６		IP	５		G3	３	3	IP	不		IP	６		IP	６	4	IP
+三川　　昂暁	4.30	0.17	3.9	３		IP	３		IP	３		IP	５		IP	６		IP	５		IP	４		IP	３		IP	３		IP	４		IP

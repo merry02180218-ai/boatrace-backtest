@@ -1,0 +1,8 @@
+data=
+1	0
+内山　　七海	8.60	0.15	3.1	２		IP	２		IP	１		IP	３		IP	２		IP	１		IP	２		IP	１		G3	２		G3	１		IP
+田添　　康介	3.10	0.18	4.9	１		IP	４		IP	４		IP	６		IP	５		IP	６		IP	６		IP	６		IP	３		IP	６		IP
+熊本　　英一	2.70	0.21	4.5	５	6	IP	５		IP	３	4	IP	４		IP	６		IP	５		IP	４		IP	４		IP	６		IP	６		IP
+村上　　彰一	4.70	0.22	3.9	３		IP	４		IP	２		IP	２		IP	６		IP	５		IP	３		IP	落		IP	３	3	IP	３		IP
+日隈　　　茜	1.10	0.23	4.6	６		IP	６	6	IP	６	6	IP	６		IP	６		IP	６	6	IP	６	6	IP	６		IP	６	6	IP	５		IP
+山田　　真聖	4.30	0.20	4.0	５		IP	３		IP	５		IP	４		IP	４		IP	３		IP	６		IP	２	5	IP	５		IP	３		IP

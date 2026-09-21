@@ -1,0 +1,8 @@
+data=
+1	0
+島田　　一生	7.20	0.17	2.5	２		IP	１		IP	６		G3	１		IP	１		IP	２		IP	１		IP	２		IP	６		IP	３		IP
+井上　　尚悟	7.20	0.18	3.3	３		IP	２		IP	１		IP	２		IP	２		IP	２		G3	３		G3	２		IP	５		IP	２		IP
+馬袋　　義則	6.80	0.12	2.3	２		G3	２		IP	３		IP	２		IP	３		IP	３		IP	２		IP	４		IP	２		IP	３		IP
+嶋田　　貴支	6.00	0.19	4.3	４		IP	３		IP	４		IP	４		IP	２		IP	１		IP	２		IP	５		IP	３		IP	２		IP
+金子　　和之	5.20	0.13	2.5	３	4	IP	１		IP	３		IP	５		IP	１	4	IP	５		IP	４		G3	６		G2	３		IP	４		IP
+出口　　飛龍	1.13	0.24	5.0	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP						IP

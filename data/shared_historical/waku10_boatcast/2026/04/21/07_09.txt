@@ -1,0 +1,8 @@
+data=
+1	0
+中川　　りな	8.70	0.16	2.8	１		IP	１		IP	２		IP	１		IP	１		IP	６		IP	２		IP	１		IP	１		IP	１		IP
+萬　　　正嗣	3.70	0.16	2.9	４		IP	６		IP	４		IP	６		IP	３		IP	３		IP	５		IP	３		IP	３		IP	６		IP
+深川　　和仁	4.70	0.19	4.0	３		IP	２		IP	６		G3	１		IP	５		IP	４		IP	４		IP	４		IP	５		IP	３		IP
+藤原　　孝斗	3.20	0.18	3.4	２	5	IP	４		IP	６		IP	６		IP	５	6	IP	５		IP	４		IP	５		IP	３		IP	５		IP
+中越　　博紀	4.00	0.19	4.7	２		IP	４		IP	６		IP	３		IP	３		IP	３		IP	６		IP	５		G3	５		G3	４	6	IP
+中尾　　彩香	3.90	0.12	2.9	４		IP	５		IP	５		G3	４		G3	６		IP	４		IP	３		IP	５		IP	３	5	IP	２	5	IP

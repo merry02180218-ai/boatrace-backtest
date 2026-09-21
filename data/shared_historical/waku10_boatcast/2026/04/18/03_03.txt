@@ -1,0 +1,8 @@
+data=
+1	0
+松田　　淳平	9.00	0.14	2.5	３		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	２		IP
+小川　竜太朗	6.40	0.19	4.1	４		IP	３		IP	４		IP	１		IP	１		IP	３		IP	２		IP	１		IP	５		IP	４		IP
+米田　　隆弘	5.40	0.17	3.0	４		IP	４		IP	４	4	IP	５		IP	２		IP	２		IP	３		IP	３		IP	４		IP	２		IP
+吉川　　勇作	3.00	0.18	4.0	６		IP	６		IP	５		IP	５		IP	２		IP	４		IP	５		IP	６		IP	２		IP	６		IP
+妹尾　　忠幸	5.00	0.21	3.7	２		IP	４		IP	３		IP	３		IP	Ｆ		IP	４		IP	４		IP	３		IP	３		IP	３		IP
+増田　　　進	3.50	0.23	5.1	４		IP	４		IP	４		IP	５		IP	３		IP	２	5	IP	５		IP	６		IP	５		IP	５		IP

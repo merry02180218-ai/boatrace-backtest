@@ -1,0 +1,8 @@
+data=
+1	0
+畑田　　汰一	9.20	0.11	2.1	１		IP	１		IP	５		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		G1	１		G1
+細川　　裕子	6.70	0.20	4.1	３		IP	２		G2	３		IP	２		IP	２		IP	２		IP	４		IP	５		IP	２		IP	２		IP
+清水　　敦揮	7.90	0.18	3.4	３	4	IP	１		IP	２		IP	３		IP	２		IP	１		IP	３		G1	４		G1	１	4	IP	２		IP
+鋤柄　　貴俊	3.70	0.13	2.4	５		IP	４		IP	６		IP	５		IP	３		IP	５		IP	３		IP	３		IP	４		IP	４		IP
+伊達　　正利	2.70	0.19	3.9	６	6	IP	４	6	IP	５	6	IP	５		IP	４		IP	６		IP	５		IP	３		IP	６		IP	４		IP
+金子　　和之	3.90	0.13	2.8	４		IP	３		IP	５		IP	４		G3	５		G3	５		IP	２		IP	２		IP	５		IP	６		IP

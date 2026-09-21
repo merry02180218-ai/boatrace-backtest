@@ -1,0 +1,8 @@
+data=
+1	0
+安田　　吉宏	4.20	0.15	2.6	５		IP	１		IP	２		IP	３		IP	６		IP	６		IP	５		IP	５		IP	２		IP	５		IP
+幸野　　史明	5.30	0.15	3.1	５		IP	３		IP	５		IP	５		IP	１		IP	１		IP	５		IP	２		IP	６	3	IP	１		IP
+大谷　　直弘	5.10	0.18	3.6	６		IP	３		IP	５		IP	２		IP	１		IP	５		IP	４		IP	３		IP	５		IP	１		IP
+若林　　樹蘭	5.70	0.16	3.2	２	5	IP	６		IP	４		IP	１		IP	２		IP	５		IP	４	5	IP	４		IP	１		IP	３		IP
+坂本　　一真	3.50	0.15	3.4	４		IP	４		IP	６		IP	５		IP	２		IP	５		IP	６	4	IP	４		IP	２		IP	６		IP
+小山　　　勉	3.70	0.17	4.3	１		IP	５		IP	６		IP	５		IP	３		IP	２	5	IP	５		IP	６		IP	４		IP	６		IP

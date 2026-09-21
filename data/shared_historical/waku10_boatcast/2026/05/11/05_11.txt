@@ -1,0 +1,8 @@
+data=
+1	0
+桐本　　康臣	8.40	0.16	3.1	１		IP	１		IP	３		IP	２		IP	２		IP	１		IP	２		IP	１		IP	３		IP	２		IP
+佐竹　　太一	6.00	0.17	3.7	２		IP	１		IP	２		IP	３		IP	６		IP	４		IP	２		IP	３		IP	２		IP	６		IP
+高橋　　　勲	6.90	0.13	2.5	１		IP	２		IP	２		IP	６		IP	４		IP	１		IP	４		IP	２		IP	１		IP	３		IP
+鈴木　　勝博	6.00	0.11	2.3	１		IP	１		IP	２		IP	１		IP	５	5	IP	４	5	IP	５		IP	２		IP	４		IP	５		IP
+藤山　　翔大	5.60	0.23	4.3	３		IP	２	3	IP	４		IP	４		IP	２	2	IP	１		IP	１		IP	６	2	IP	６	2	IP	４		IP
+内山　　文典	3.10	0.21	4.4	６		IP	４		IP	４		IP	３	5	IP	３		IP	６		IP	６		IP	４		IP	５		IP	５		IP

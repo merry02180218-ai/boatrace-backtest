@@ -1,0 +1,8 @@
+data=
+1	0
+重木　　輝彦	9.20	0.16	3.3	１		IP	６		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+高橋　　　勲	7.40	0.15	3.0	２		IP	２		G3	２		G3	４		IP	２		IP	２		IP	２		IP	２		IP	３		IP	２		IP
+一瀬　　　明	5.80	0.17	3.2	１		IP	４		IP	２		IP	４		IP	２		IP	４		IP	３		IP	３		IP	４		IP	４	4	IP
+池永　　　太	6.90	0.15	2.3	１		IP	６		G2	３		G2	３		IP	１		G1	１		G1	５		G1	５		G1	３		IP	１		IP
+宮地　　博士	3.70	0.25	4.8	５		IP	４		IP	５		IP	５		IP	６		IP	２		IP	５		IP	３	6	IP	３		IP	４		IP
+中岡　　　駿	1.50	0.17	4.2	４		IP	６		IP	５		IP	６		G3	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

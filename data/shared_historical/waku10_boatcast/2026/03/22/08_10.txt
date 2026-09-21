@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　桃佳	8.70	0.15	2.0	１		IP	１		IP	１		IP	１		G1	３		G1	１		G1	３		IP	４		IP	１		IP	２		IP
+馬袋　　義則	6.40	0.15	3.1	３		IP	２		IP	４	1	IP	２		IP	３		IP	１		IP	３		IP	３		IP	２		IP	５		IP
+近藤　　友宝	6.60	0.17	2.8	２		IP	１		IP	２		IP	３		IP	５		IP	３		IP	２		IP	３		IP	２		IP	４		IP
+池本　　輝明	3.30	0.17	4.1	４		IP	５		IP	４		IP	４		IP	５		IP	３		IP	４		IP	６		IP	５		IP	４	3	IP
+松本　　真広	4.30	0.19	3.3	２		IP	４		IP	２		IP	５		IP	３		IP	１		IP	６	6	IP	６		IP	６		IP	５		IP
+後藤　　隼之	4.00	0.21	4.6	５	5	IP	３	4	IP	４		IP	４		IP	３		IP	２	5	IP	４	5	IP	６		IP	６		IP	４		IP

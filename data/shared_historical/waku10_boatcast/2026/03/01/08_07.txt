@@ -1,0 +1,8 @@
+data=
+1	0
+服部　　　剛	6.30	0.20	4.1	４		IP	１		IP	２		IP	４		IP	３		IP	１		IP	３		IP	２		IP	６		IP	３		IP
+伏島　　祐介	4.00	0.20	4.8	２		IP	１		IP	６		IP	５		IP	４		IP	４		IP	４		IP	５		IP	６		IP	４		IP
+南　　　彩寧	3.10	0.19	3.5	６		IP	３		IP	５	5	IP	５		G3	６		G3	４		IP	４		IP	３		IP	４		IP	６	4	IP
+前出　　達吉	6.60	0.16	2.6	３		IP	１		IP	２		IP	２		IP	４		IP	３		IP	３		G3	２		G3	２		IP	５	5	IP
+鳥本　　智史	1.11	0.17	2.9	５	6	IP	落	6	IP	６	6	IP	転	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	６	6	IP	６	6	IP
+丸野　　一樹	4.20	0.16	4.6	２	5	IP	４	5	G1	６		G1	６		G1	６		G1	３		G1	３		IP	４		IP	６		SG	６		SG

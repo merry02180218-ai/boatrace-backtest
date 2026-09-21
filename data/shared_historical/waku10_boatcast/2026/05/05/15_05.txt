@@ -1,0 +1,8 @@
+data=
+1	0
+魚谷　　香織	8.40	0.16	3.8	４		G3	１		G3	１		G3	３		G3	２		IP	１		IP	１		IP	２		IP	２		IP	１		IP
+門田　　　栞	5.70	0.16	4.0	３		IP	２		G3	３		G3	５		G3	３		G3	３	3	IP	６		IP	３		IP	２		IP	２		IP
+鎌倉　　　涼	7.60	0.15	3.0	３		G1	４		SG	１		G3	２		G1	２		IP	５		IP	１		IP	１		IP	４		G1	２		G1
+渡邉　　優美	5.50	0.16	3.3	２		G3	６		G1	３		IP	転		IP	６		SG	３		IP	３		IP	２		G1	２	3	IP	３		IP
+刑部　亜里紗	4.90	0.21	4.5	３		IP	５		IP	５		IP	３		IP	３		G1	３		IP	４		IP	３		IP	２		IP	５	6	IP
+大久保　佑香	1.80	0.19	3.8	４		G3	６		G3	６		IP	６		IP	６		G3	６		IP	６	5	IP	６		IP	６		IP	３	5	IP

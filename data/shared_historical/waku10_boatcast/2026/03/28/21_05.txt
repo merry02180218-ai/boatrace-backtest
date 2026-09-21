@@ -1,0 +1,8 @@
+data=
+1	0
+齊藤　　　仁	8.56	0.16	2.7	６		G3	２		G1	４		G1	１		G1	１		G1	欠		IP	１		IP	１		IP	１		IP	１		IP
+前沢　　丈史	8.10	0.14	2.5	３		IP	１	3	IP	３		IP	２		IP	１		G1	２		IP	２		IP	１		IP	３		IP	３		IP
+奥平　　拓也	5.00	0.21	3.6	４	5	IP	５		IP	２		IP	３		IP	４		IP	５		IP	２		IP	２		IP	３	5	G3	５		G3
+三原　　　司	3.00	0.20	3.9	５		IP	６		IP	４		IP	４	5	IP	５		IP	６		IP	５		IP	５		IP	２		IP	４	5	IP
+枝尾　　　賢	6.00	0.13	3.5	２		IP	２	4	IP	６		IP	１		IP	３		IP	３		IP	４		IP	５		IP	２		IP	４		IP
+烏野　　賢太	4.10	0.17	4.2	５		IP	４		IP	３	5	IP	２		IP	３	5	IP	５		G1	転		IP	５		IP	４		IP	３		IP

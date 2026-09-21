@@ -1,0 +1,8 @@
+data=
+1	0
+横澤　　剛治	9.30	0.18	4.1	１		IP	１		IP	３		IP	１		G1	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP
+北中　　元樹	7.10	0.18	3.6	２		IP	２		IP	２		IP	５		IP	３		IP	３		IP	２		IP	３		IP	２		IP	１		IP
+柳沢　　　一	7.90	0.09	2.5	２		IP	２		IP	１		IP	５		G1	４		G1	２		IP	２		G1	１		G1	２		IP	２		IP
+大橋　純一郎	5.60	0.15	3.1	４		IP	３		IP	１		IP	２		IP	１		IP	５	5	IP	４		IP	２		IP	５		IP	５		IP
+前原　　大道	6.00	0.16	3.7	５	6	IP	３		IP	４		IP	２		G1	５		G1	１		IP	４		IP	４		IP	１		IP	２		IP
+桑原　　将光	3.33	0.15	4.0	６		IP	５		IP	エ		IP	２		IP	３		IP	５		IP	５		IP	４		IP	６		G3	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+一柳　　和孝	7.80	0.12	1.5	２		IP	４		G3	２		IP	３		IP	１		IP	２		IP	１		IP	２		IP	１		IP	３		IP
+草場　　康幸	6.40	0.17	3.4	２		IP	３	3	IP	５		IP	２		IP	１		IP	３		IP	３		IP	５		IP	３		IP	１		IP
+香川　　陽太	5.40	0.14	3.1	６		IP	５		IP	２		IP	３		IP	６		IP	３		IP	３		IP	２	4	IP	２		IP	２		IP
+吉永　　則雄	6.30	0.14	2.5	２		IP	３		IP	２		IP	２		IP	２		IP	４		IP	２		IP	６		IP	３		IP	３		IP
+岩永　　節也	3.70	0.20	4.5	４		IP	４		IP	３		IP	６		IP	４	4	IP	５		IP	４		IP	５		IP	２		IP	５		IP
+大江　　　純	3.50	0.17	3.2	６		IP	６		G3	６		IP	３		IP	５		IP	１	4	IP	５		G3	５		IP	３		IP	４		IP

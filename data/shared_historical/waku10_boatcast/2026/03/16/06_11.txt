@@ -1,0 +1,8 @@
+data=
+1	0
+須藤　　博倫	9.10	0.16	2.5	１		IP	３		IP	１		IP	１		IP	１		IP	２		IP	２		IP	２		G2	１		IP	１		IP
+青木　　玄太	6.90	0.16	3.9	１		IP	２		G1	４		G1	６		G1	５	3	IP	１		IP	２		G2	４		G2	１		G2	３		IP
+松下　　一也	7.70	0.15	2.8	１		IP	１		IP	２		IP	２		IP	４		IP	２		IP	２		IP	５		IP	２		IP	１		IP
+荒川　　健太	6.00	0.20	3.8	３		IP	３		IP	２		IP	３		IP	４		IP	２		IP	３		IP	５		IP	４		IP	１		IP
+大瀧　明日香	4.20	0.20	3.4	６		IP	５		G1	５		G1	２		IP	２		IP	６		G3	５		G3	３		IP	６		G2	２		IP
+山本　　寛久	3.33	0.22	4.2	４		IP	４		IP	５	5	IP	５		G1	２		IP	５		IP	欠		IP	６		IP	４		IP	５		IP

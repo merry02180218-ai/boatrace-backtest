@@ -1,0 +1,8 @@
+data=
+1	0
+河野　　主樹	9.00	0.13	2.4	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	２		IP
+竹田　　辰也	7.50	0.11	2.4	１		IP	２		IP	１		G3	６		IP	２		IP	２		IP	２		IP	５		IP	２		IP	１		G1
+茅原　　悠紀	6.80	0.16	3.0	４		IP	２		SG	４		SG	２		IP	３		G1	５		G1	３		SG	６		SG	１		G1	３		G1
+石川　　真二	5.80	0.13	2.5	２	2	IP	５	1	G3	５	2	G3	４	2	IP	２	2	IP	２	2	IP	３	2	IP	１	1	IP	２	2	IP	５	1	IP
+上野　　秀和	4.10	0.13	2.7	５		IP	３		IP	４		IP	５		IP	６		IP	５	4	IP	５		IP	３		IP	２		IP	２		IP
+大原　　祥昌	4.50	0.18	3.5	２		IP	１	5	IP	４		IP	６		IP	５		IP	エ		IP	５	5	IP	３		G3	２		G3	４		IP

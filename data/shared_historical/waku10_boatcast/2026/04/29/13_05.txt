@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　恵一	7.70	0.12	2.1	１		IP	２		IP	６		IP	１		IP	２		IP	４		IP	２		IP	１		IP	１		IP	２		IP
+金子　　順一	4.30	0.16	3.4	４		IP	２		IP	５		IP	３		IP	１		IP	５		IP	６		IP	５	1	IP	３	1	IP	５		IP
+遠藤　　エミ	5.80	0.13	2.3	３		IP	２		G2	６		G2	２		G1	３		IP	Ｆ		G1	４		G1	２		G3	３		G1	４		SG
+山田　　雄太	8.60	0.13	2.5	１		IP	３		IP	３	5	IP	２		IP	１		IP	１		IP	２	5	IP	１		IP	２		IP	１		IP
+中村　　守成	2.50	0.15	3.1	５		IP	４		IP	５		IP	６		IP	５		IP	５		IP	５	4	IP	４		IP	５		IP	４		IP
+酒井　　俊弘	4.60	0.10	1.3	５		IP	５		IP	１	5	IP	５		IP	６		IP	１		IP	２		IP	２		IP	５	5	IP	６		IP

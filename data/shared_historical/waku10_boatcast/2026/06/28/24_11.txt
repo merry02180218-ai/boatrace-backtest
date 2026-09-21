@@ -1,0 +1,8 @@
+data=
+1	0
+前田　　　翔	9.40	0.15	2.9	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	３		IP
+廣中　　良一	4.70	0.12	2.7	４		IP	３		G3	６		G3	２		IP	４		IP	５		IP	４	3	IP	３		IP	３		IP	３		IP
+石川　　吉鎬	4.80	0.20	4.0	５		IP	Ｆ		IP	５		IP	３	4	IP	５		IP	１		IP	２	4	IP	３		IP	２		IP	４		IP
+荒井　　翔伍	4.50	0.17	4.3	２		IP	４		IP	３		IP	４		G2	３		IP	３		IP	６		IP	６		IP	５		IP	３		IP
+三好　　勇人	6.60	0.15	2.4	４		IP	２		IP	４		G3	２		G3	３		IP	１		IP	１		IP	３		IP	３		IP	４		IP
+草場　　康幸	2.50	0.16	3.9	４		IP	６		IP	６		IP	５		IP	５		IP	４		IP	６		IP	４	5	IP	５		IP	４		IP

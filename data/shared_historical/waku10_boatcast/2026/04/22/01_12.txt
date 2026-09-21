@@ -1,0 +1,8 @@
+data=
+1	0
+常住　　　蓮	8.40	0.14	2.4	１		G1	１		IP	１		IP	転		SG	１		IP	１		IP	１		G1	１		G1	５		G1	２		IP
+北中　　元樹	6.20	0.17	4.0	６		IP	２		IP	２		IP	２		IP	２		IP	５		IP	３		IP	３		IP	２		IP	３		IP
+一色　　凌雅	3.40	0.20	4.1	４		IP	６		IP	６		IP	６		G3	１		IP	５	2	IP	２		IP	６		IP	３		IP	転		IP
+井上　　尚悟	5.00	0.17	3.1	２		G3	２		IP	５		IP	６		IP	４		IP	５		IP	６		IP	３		IP	２		IP	１		IP
+東本　　勝利	4.20	0.16	3.3	５		IP	５		IP	５		G3	４		IP	３		IP	３		IP	２		IP	４		IP	３		IP	５		IP
+向後　　龍一	2.70	0.19	3.8	４		IP	４		IP	６		G3	４		G3	６	5	IP	４		IP	５		IP	４		IP	６		IP	５		IP

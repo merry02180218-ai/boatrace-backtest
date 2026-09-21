@@ -1,0 +1,8 @@
+data=
+1	0
+塩崎　　優司	8.20	0.14	1.8	４	2	IP	５		IP	２		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+宮之原　輝紀	5.20	0.16	4.0	１		IP	２		G1	５		G1	２		IP	３		G1	６		SG	６	1	SG	６		G1	４		G1	６		G1
+佐藤　　博亮	6.30	0.12	2.4	２	4	IP	１		IP	２	4	IP	３		IP	２		IP	５		IP	２		IP	４		IP	３		IP	５		IP
+佐口　　達也	3.90	0.19	4.4	６		IP	５	3	IP	５		IP	３		IP	２		IP	５		IP	３		IP	４		IP	３		IP	５		IP
+鈴木　　秀茉	5.30	0.16	2.9	３		IP	３		IP	４		IP	２		IP	４		IP	４		IP	１	4	IP	５		G3	６		G3	２		IP
+市川　　瑚幸	1.40	0.18	4.0	６		IP	５	5	IP	６		IP	６		IP	５		IP	６		IP	５		IP	５		IP	６		IP	６		IP

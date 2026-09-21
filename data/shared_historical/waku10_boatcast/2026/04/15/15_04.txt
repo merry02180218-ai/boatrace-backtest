@@ -1,0 +1,8 @@
+data=
+1	0
+小野寺　智洋	8.67	0.15	2.4	１		IP	２		G3	１		IP	４		IP	１		IP	１		IP	２		IP	１		IP	２		IP	落		G3
+深見　亜由美	3.70	0.27	4.4	６	3	IP	４	3	IP	６		IP	６	3	IP	５		IP	２		IP	３		IP	５		IP	４		IP	２		IP
+坪口　　竜也	5.60	0.18	3.1	３		IP	５		IP	４		IP	３		IP	５		IP	３		G3	２		G3	２		IP	２		IP	４		IP
+松下　　誉士	3.40	0.16	4.0	２		IP	４	6	IP	６		IP	５		IP	６		IP	３		IP	６		IP	４	6	IP	３		IP	６	5	IP
+奥村　明日香	3.40	0.16	3.4	３		IP	３		IP	６		IP	４		G3	沈		G3	４		G3	６		IP	３	6	IP	４		IP	５		G3
+亀山　　雅幸	3.70	0.17	4.3	５		IP	５		IP	６		IP	２	5	IP	５		IP	３		IP	４		IP	３		IP	５		IP	４		IP

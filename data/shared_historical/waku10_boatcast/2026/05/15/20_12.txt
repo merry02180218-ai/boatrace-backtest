@@ -1,0 +1,8 @@
+data=
+1	0
+上野　真之介	9.80	0.11	2.3	１		IP	１		IP	１		IP	１		IP	４		IP	１		G1	１		G1	１		G1	１		IP	１		IP
+齊藤　　　仁	7.10	0.11	3.8	６		IP	２		G1	３		IP	２		IP	１		G3	２		G1	６		G1	２		G1	２		G1	２		IP
+常住　　　蓮	7.50	0.17	3.1	３		IP	２		IP	４		IP	２		G1	２		IP	３		IP	３		SG	２		IP	１		G1	３		G1
+高田　ひかる	5.80	0.18	3.4	４		G1	３		IP	２		IP	６		IP	４		IP	１		IP	１		IP	６		G1	５		IP	２	5	IP
+黒井　　達矢	5.30	0.18	3.1	４	4	IP	１		IP	Ｆ		IP	２		G1	６		G1	５		IP	３		IP	１	4	IP	５		G1	３		G1
+宮脇　　遼太	4.30	0.17	4.0	６		IP	２		IP	３		IP	５		IP	２		IP	４		IP	２		IP	６		IP	４		IP	６		IP

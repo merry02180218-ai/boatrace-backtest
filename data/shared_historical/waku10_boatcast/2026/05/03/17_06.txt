@@ -1,0 +1,8 @@
+data=
+1	0
+村松　　栄太	7.30	0.15	2.4	５		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	６		IP	２		IP	３		IP
+豊田　　泰洋	4.10	0.17	3.2	５		IP	４		IP	３		IP	４		IP	４		IP	３		IP	６	3	IP	５		IP	２		IP	４		IP
+津田　　陸翔	7.20	0.18	2.8	３		IP	２		IP	４		IP	１		IP	５		G2	１		IP	３		IP	１		IP	３		IP	２		IP
+森　　　智哉	5.22	0.11	3.0	Ｆ		IP	３		IP	３		IP	２		IP	５		IP	３		IP	６		IP	落		IP	２		IP	１		IP
+井内　将太郎	5.40	0.15	3.2	２	4	IP	３		IP	５		IP	３		IP	４		IP	５		IP	２		IP	５		IP	３	4	IP	２		IP
+谷　　海夏人	1.10	0.26	5.0	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP

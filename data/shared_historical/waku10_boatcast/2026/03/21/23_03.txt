@@ -1,0 +1,8 @@
+data=
+1	0
+横田　　貴満	9.00	0.19	2.7	２		G2	２		IP	１		IP	１		IP	１		IP	２		IP	１		IP	４		G1	１		IP	１		IP
+藤原　　仙二	7.10	0.24	3.5	４		G2	１		IP	１		IP	４		IP	４		IP	１	1	IP	３		IP	２		IP	４		IP	１		IP
+大場　　恒季	7.30	0.14	2.9	３		G2	２		IP	１		IP	１		IP	２		IP	２		IP	５		IP	５		IP	１		IP	２		IP
+三馬　　崇史	4.70	0.19	3.3	５	5	G2	５		IP	３		IP	３		IP	４		IP	１		IP	４		IP	Ｆ		IP	１		IP	５		IP
+井口　　佳典	5.00	0.14	3.7	６		G2	５		G1	１		G1	５		G1	４		G1	６		G1	４		G1	５		G1	２		SG	５		SG
+篠原　　晟弥	4.30	0.15	2.0	４		G2	３		IP	５		IP	４		IP	２		IP	６		IP	３	5	IP	６		IP	２	5	IP	５		IP

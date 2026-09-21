@@ -1,0 +1,8 @@
+data=
+1	0
+横澤　　剛治	9.20	0.19	3.7	１		G1	１		G1	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP	４		IP	１		IP
+白神　　　優	7.11	0.13	3.1	１		G1	２		IP	２		IP	１		IP	転		IP	２		IP	２		IP	３		G1	５		G1	６		IP
+山崎　　　郡	8.10	0.14	3.6	２		G1	３		G1	３		SG	５		G1	２		IP	２		IP	１		IP	３		G1	２		G1	１		G1
+井上　　忠政	7.40	0.13	2.5	３		G1	１	1	IP	２		IP	１		IP	３		IP	５		G1	１		G1	２		G1	５	6	G1	３		G1
+定松　　勇樹	6.70	0.16	3.7	５	4	G1	２		SG	１		G1	５		G1	２	3	G1	５		G1	３		G1	４	4	SG	４		SG	２		G2
+石橋　　道友	4.70	0.14	2.4	６		G1	４		IP	２	5	IP	１		IP	４		G3	５		G3	６		IP	３		IP	４	5	IP	３		IP

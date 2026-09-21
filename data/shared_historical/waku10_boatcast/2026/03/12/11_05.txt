@@ -1,0 +1,8 @@
+data=
+1	0
+池田　　雄一	7.40	0.20	3.0	１		IP	１		IP	６		IP	５		G1	２		IP	２		IP	２		IP	３		IP	１		IP	１		IP
+富永　　大一	5.00	0.20	4.0	６		IP	４		IP	１		IP	４		IP	２		IP	４		IP	３		IP	３		IP	３		IP	６		IP
+原村　　拓也	6.00	0.19	4.5	２		IP	４		IP	２		IP	３		IP	３		IP	５		IP	２		IP	３		IP	２		IP	４		IP
+廣部　　大明	2.90	0.17	3.4	３	6	IP	６	5	IP	２		IP	６	5	IP	６	6	IP	６	6	IP	３		IP	５		IP	５	6	IP	６	6	IP
+島崎　丈一朗	3.00	0.23	4.3	４		IP	５		IP	６		IP	６		IP	４		IP	６		IP	６		IP	４		IP	２		IP	４		IP
+吉永　　則雄	4.60	0.18	3.7	４		IP	６		IP	３	5	IP	４		IP	６		IP	３		IP	３		IP	４		IP	３	4	IP	３		IP

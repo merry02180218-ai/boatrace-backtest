@@ -1,0 +1,8 @@
+data=
+1	0
+福島　　陽子	6.60	0.18	3.4	１		IP	２		IP	２		IP	２		IP	２		IP	５		G3	１		IP	１		IP	６		IP	６		IP
+大橋　栄里佳	5.80	0.23	4.2	５		IP	２		IP	１		IP	１		IP	２		IP	６		IP	２		IP	５		IP	６		IP	２		IP
+樫葉　　新心	2.80	0.16	3.8	６		IP	４		IP	２		IP	４		G3	６		G3	５		IP	５		IP	４	4	IP	６	4	IP	６		IP
+香川　　素子	6.20	0.18	3.2	２		IP	３		G1	３		G3	５		IP	２		IP	４		IP	６		IP	２	6	IP	１		IP	２		IP
+加藤　　奈月	3.20	0.19	3.5	６		IP	６		IP	５		IP	３		IP	３	4	IP	５	6	IP	５		IP	５		G3	３		G3	４		IP
+大瀧　明日香	4.30	0.17	3.6	３	5	IP	５		G1	４		G1	３		IP	２		IP	６		IP	６		G1	５		G1	３		IP	５		IP

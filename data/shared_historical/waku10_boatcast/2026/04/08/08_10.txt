@@ -1,0 +1,8 @@
+data=
+1	0
+角谷　　健吾	9.00	0.16	3.3	１		IP	１		IP	１		IP	１		IP	２		IP	３		IP	２		IP	１		IP	２		IP	２		G1
+都築　　正治	5.70	0.15	3.1	１		IP	４		IP	３		IP	１		IP	４		IP	５		IP	６		IP	３		IP	４		IP	１		IP
+國分　将太郎	4.40	0.21	3.9	５		G3	５	4	G3	６	5	G3	３		IP	１		IP	３		IP	４		IP	３		IP	６		IP	３		IP
+大谷　　直弘	4.20	0.17	3.1	４		IP	２	5	IP	２		IP	４		IP	５		IP	６		IP	５		IP	５		IP	１		IP	６		IP
+岡村　　　仁	5.20	0.13	2.9	４		G3	４		IP	５		G1	６		G1	２		G1	１		IP	５		IP	２	6	IP	２		IP	６		IP
+茶谷　　信次	4.30	0.28	5.6	３		IP	５		IP	３		IP	３		IP	４	5	IP	３		IP	欠		IP	４		IP	５		IP	３		IP

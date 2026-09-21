@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　　航	9.30	0.15	3.0	２		G2	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	３		G2	１		G2	３		G2
+山本　　梨菜	6.20	0.13	3.4	２		G3	３		IP	４		IP	１		IP	５	3	IP	６	3	G1	１		G3	４		G3	２		G3	２		IP
+山地　　正樹	4.20	0.24	3.8	６		IP	２		IP	６		IP	４		IP	３		IP	３		IP	３		IP	４		IP	４		IP	５		IP
+三嶌　こころ	3.00	0.26	4.8	６		IP	４		IP	６		G3	６		G3	２		IP	６		IP	２		IP	６		IP	４		IP	６		G3
+篠原　　晟弥	4.00	0.13	3.4	５		G2	４		IP	２		IP	４		IP	２		IP	５		IP	５		IP	６		IP	５	4	IP	３		IP
+天野　　晶夫	4.60	0.19	4.4	５		G3	４		IP	４		IP	２		IP	３		IP	３	5	IP	５		IP	２	5	IP	落	5	IP	４		IP

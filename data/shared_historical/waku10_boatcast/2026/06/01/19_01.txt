@@ -1,0 +1,8 @@
+data=
+1	0
+川崎　　誠志	8.00	0.22	3.9	２		IP	１		IP	１		IP	２		IP	２		IP	３		IP	１		IP	５	2	IP	１		IP	２		IP
+福田　　　理	4.80	0.13	2.8	２		IP	４		IP	６		IP	４		IP	４		IP	３		IP	６		IP	４		IP	２		IP	２		IP
+野見山　拓己	5.30	0.11	2.3	３		IP	３		IP	３		IP	３		G3	６		G3	３		IP	５		IP	１		IP	４		IP	３		IP
+貫地谷　直人	3.30	0.23	4.4	６		IP	５		IP	５		IP	６		IP	６		IP	４	5	IP	４		IP	２		IP	４		IP	３	3	IP
+谷口　　知優	3.90	0.14	3.1	４		IP	４	4	IP	６		IP	４		IP	３		IP	２	4	IP	５		IP	６		IP	６		IP	２		IP
+古園井　綾南	1.10	0.17	4.0	６		IP	６		IP	６		IP	５	5	IP	６		IP	６		IP	６		IP	転		IP	５		G3	６		G3

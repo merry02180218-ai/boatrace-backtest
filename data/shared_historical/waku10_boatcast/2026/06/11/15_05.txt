@@ -1,0 +1,8 @@
+data=
+1	0
+平高　　奈菜	6.70	0.17	3.8	１		IP	４		IP	４		IP	１		IP	６		G2	４		G2	１		G2	６		SG	１		G3	２		G3
+大廣　　咲季	4.30	0.13	3.8	５		IP	５		IP	６		IP	３		IP	３		IP	４		IP	３		G3	２	4	G3	３		G3	５		G3
+森下　　愛梨	5.10	0.24	4.3	４		IP	５		IP	５		IP	１		IP	２		IP	２		IP	４		IP	４	6	IP	３		IP	６	6	IP
+筒井　　美琴	2.00	0.22	4.6	４	5	IP	５		IP	５		IP	５		IP	５		G3	６	6	G3	６		IP	６		IP	６		IP	４		IP
+福岡　　泉水	3.00	0.15	3.0	５		IP	４		IP	５		IP	４		IP	４		IP	６		IP	４		IP	５		IP	６		IP	３		IP
+中尾　　優香	2.60	0.21	4.5	６		IP	転		IP	３		IP	６		IP	４		IP	５		IP	６		G3	３		IP	４		IP	６		IP

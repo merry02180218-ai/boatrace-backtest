@@ -1,0 +1,8 @@
+data=
+1	0
+平本　　真之	10.20	0.12	2.6	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1	２		G1	１		G1
+濱野谷　憲吾	7.50	0.14	3.2	１		IP	２		G1	２		G1	５		G2	３		IP	２		G1	４		G1	３		G1	１		IP	３		G1
+桑原　　　悠	6.90	0.14	2.1	４		G1	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	６		IP	６		G1	５		G1
+上條　　暢嵩	6.70	0.15	3.2	３		IP	２		IP	２		IP	３		G1	３		G1	６		G1	６		SG	３		G1	１		G3	２		G1
+原田　　幸哉	4.80	0.12	2.6	３		IP	４		G1	４		G1	６		G1	４		SG	５		SG	２		G1	４		G3	６		G1	４	4	G1
+新開　　　航	5.90	0.18	4.8	４		IP	５		IP	２		IP	３		IP	４		G1	４		G1	２		G2	１		IP	３		G1	５		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+川田　　正人	7.60	0.18	2.9	３		IP	１		IP	１		IP	１		IP	３		IP	２		IP	１		IP	４		IP	５		IP	１		IP
+渡邊　　裕貴	5.50	0.22	4.3	６		IP	６		IP	３		IP	１		IP	６		IP	４		IP	３		IP	１		IP	１		IP	３	3	IP
+川原　　正明	4.20	0.18	2.6	３		IP	４		IP	５		IP	４		IP	３		IP	６		IP	１		IP	３		IP	６		IP	５		IP
+永田　　秀二	5.60	0.16	2.9	２		IP	３		IP	５		IP	６		IP	３		IP	４		IP	３		IP	２		IP	１		IP	４		IP
+横川　　聖志	4.00	0.12	2.9	６		IP	２	4	IP	３		IP	４	4	IP	６	6	IP	５		IP	６		IP	５		G1	２		IP	３		IP
+中村　かなえ	2.00	0.14	2.8	４		IP	４	5	G3	５		G3	５		IP	６	5	IP	６		IP	６		IP	５		IP	６		IP	５		IP

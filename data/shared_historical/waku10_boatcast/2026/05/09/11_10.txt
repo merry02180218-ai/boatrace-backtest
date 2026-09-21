@@ -1,0 +1,8 @@
+data=
+1	0
+内堀　　　学	7.60	0.17	3.9	１		IP	３		IP	１		IP	１		IP	３		IP	６		IP	４		IP	１		IP	１		IP	２		IP
+芝田　　京介	4.40	0.17	2.8	４		IP	２		IP	３		IP	６		IP	２		IP	４	6	IP	６		IP	２		IP	５		IP	５		IP
+小松　　卓司	3.60	0.18	2.6	６		IP	４		IP	２		IP	５	4	IP	４		IP	４		IP	４		IP	３		IP	５		IP	６		IP
+草川　　壮良	2.00	0.16	3.2	６	6	IP	６		IP	５		IP	５		IP	６		IP	５		IP	５		IP	４		IP	４		IP	６	6	IP
+山ノ内　雅人	4.20	0.15	3.4	３	4	IP	６		IP	４		IP	４		IP	４		IP	３		IP	４		IP	２		IP	４		IP	６		IP
+別府　　昌樹	3.20	0.31	5.3	６		IP	２		IP	４		IP	３		IP	４		IP	６		IP	６		IP	６		IP	５		IP	４		IP

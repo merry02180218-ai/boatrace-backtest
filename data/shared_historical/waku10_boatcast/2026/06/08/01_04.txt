@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　　健	6.60	0.13	3.1	１		IP	５		IP	１		IP	１		G3	１		IP	６		IP	１		IP	１		IP	６		IP	５		IP
+今垣　光太郎	5.80	0.17	3.5	３		IP	４		SG	４		SG	５		G1	２		IP	２		IP	４	3	G1	４		G1	６		G1	２		G1
+篠原　　晟弥	6.40	0.16	3.4	２		IP	１		IP	転		IP	５		IP	１		IP	１	4	IP	４		G2	２		IP	３		IP	４		IP
+牧　　　宏次	6.20	0.18	3.9	３		IP	２		IP	２		IP	２		IP	４		IP	３		IP	４		IP	４		IP	３		G3	２		IP
+一ノ木　　匠	1.60	0.15	4.0	６	6	IP	６	6	IP	６	6	IP	４	6	IP	６	6	IP															IP
+三好　　勇人	4.60	0.24	4.7	４		G3	３	5	IP	１	4	IP	３	5	IP	５		IP	６	5	IP	４		IP	６		IP	２		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+佃　　　來紀	8.30	0.14	3.0	２		IP	１		IP	１		IP	６		IP	３		IP	１		G3	１		IP	２		G3	１		G3	１		IP
+上田　　龍星	5.60	0.11	3.0	３		IP	２		G1	３		G1	６		G1	６		SG	２		IP	５		G1	１		G2	３		IP	６		IP
+井上　　忠政	8.60	0.13	3.0	１		IP	１		G1	２		G1	２		G1	１		G1	３		G1	３		G1	３		G1	２		G1	４		G1
+福田　　翔吾	4.00	0.14	2.2	１	3	IP	４		IP	３	6	IP	５		IP	６		IP	５		IP	３		IP	５		IP	３		IP	６		IP
+竹間　　隆晟	7.10	0.14	3.7	１		IP	２		IP	３	6	G1	５		G1	３		IP	３	6	IP	４		IP	１		IP	２		IP	２		IP
+藤本　　遼磨	1.67	0.26	5.3	６		IP	５		IP	５		IP																					IP

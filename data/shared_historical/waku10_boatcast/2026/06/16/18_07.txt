@@ -1,0 +1,8 @@
+data=
+1	0
+松竹　　大輔	8.80	0.17	2.3	１		IP	２		IP	２		IP	１		IP	１		IP	１		G3	１		IP	１		IP	５		IP	１		IP
+富永　　修一	6.90	0.17	3.0	４		IP	１		IP	２		IP	６		IP	２		IP	２		IP	５		IP	２		IP	１		IP	２		IP
+上原　　　崚	5.20	0.14	2.5	５	5	IP	１		G2	３		G2	３		G2	２		G2	４	5	IP	５		IP	４	4	IP	４		IP	５		IP
+東　　　潤樹	4.10	0.16	3.6	５		IP	４		IP	２	6	IP	４		G3	５		G3	３		IP	３		IP	５		IP	６		IP	３		IP
+安河内　　健	5.70	0.14	3.1	５		IP	５		IP	５		IP	２		IP	４		IP	１		IP	５		IP	１		IP	２		IP	３		G2
+中村　　将隆	2.80	0.19	4.4	４		IP	５		IP	Ｆ		IP	６		IP	５		IP	４		G3	３		IP	４		IP	６		IP	４		IP

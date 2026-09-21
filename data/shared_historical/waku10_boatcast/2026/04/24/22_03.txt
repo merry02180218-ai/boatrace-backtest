@@ -1,0 +1,8 @@
+data=
+1	0
+池本　　輝明	7.00	0.16	2.4	１		IP	２		IP	１		IP	１		IP	５		IP	１		IP	２		IP	１		IP	６		IP	６		IP
+板倉　　敦史	4.60	0.15	3.3	２		IP	３		G3	６		G3	４		IP	２		IP	４		IP	４		IP	５		IP	２		IP	６		IP
+篠崎　　元志	9.30	0.12	2.6	１		IP	２		G1	２	2	G3	２		G1	２		G1	３	4	G1	１	2	IP	１		G1	１	2	IP	２		SG
+中野　　和裕	3.00	0.20	3.6	５		IP	５		IP	３		IP	６		IP	６		IP	転		IP	欠		IP	４		IP	１		IP	４	6	IP
+川合　　理司	3.40	0.23	4.3	４		IP	５		IP	５	6	IP	４		IP	６		IP	３		IP	３		IP	３		IP	５	4	IP	６		IP
+中島　　友和	2.20	0.19	3.9	５		IP	３		IP	４		IP	６		IP	５		IP	６		IP	４		IP	６		IP	６		IP	欠		G3

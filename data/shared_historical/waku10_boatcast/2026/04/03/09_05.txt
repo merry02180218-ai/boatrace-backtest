@@ -1,0 +1,8 @@
+data=
+1	0
+柳生　　泰二	8.90	0.15	2.7	１		SG	４		SG	１		IP	２		IP	１		IP	６		IP	１		G1	１		G1	１		G1	２		IP
+西岡　　顕心	8.00	0.13	2.8	２		G2	２		G2	２		G1	６		G1	４		G1	１		G1	１		G1	４		IP	２		IP	１	3	IP
+船岡　洋一郎	6.60	0.15	3.2	２		IP	２		IP	２		IP	３		IP	４		IP	３		IP	１		IP	４		G1	６		G2	２		G2
+宮地　　元輝	5.80	0.13	3.2	２		SG	３		SG	６		G1	４		G1	１	5	G1	６		G1	６		G1	２		IP	３		IP	４		IP
+稲田　　浩二	7.00	0.11	2.4	５		IP	５		IP	６	6	G1	３		G1	２		G1	１	6	G1	３		G1	１		IP	１		IP	２		IP
+松本　　純平	5.80	0.15	3.0	１	5	IP	３		IP	５		IP	６		IP	３		G1	４		IP	３		IP	３		IP	３		IP	１		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+大塚　　浩二	6.10	0.16	2.9	４		IP	１		IP	６		IP	４		IP	１		IP	４	4	IP	３		IP	４		IP	１		IP	２		IP
+坪井　　爽佑	6.00	0.18	3.8	２	4	IP	６	3	IP	１		IP	３		IP	５		IP	３	3	IP	２		IP	１		IP	６		IP	２		IP
+松井　　洪弥	4.70	0.10	1.9	２		IP	６		IP	２		IP	４		G1	６		G1	２		G3	３		G3	４		G1	６		G1	６		G1
+豊田　　泰洋	3.33	0.21	4.6	６		IP	５		IP	３		IP	４		IP	４		IP	５		IP	６		IP	４		IP	転		IP	３		IP
+江夏　　　満	4.10	0.19	4.3	６		IP	１		G1	４		G1	欠		IP	３		IP	４		IP	５		IP	５		IP	３		IP	４		IP
+中野　　夢斗	3.40	0.17	3.2	６	5	IP	３		IP	２	5	IP	４		IP	６		IP	６		IP	５		IP	５	3	G3	４		IP	４		IP

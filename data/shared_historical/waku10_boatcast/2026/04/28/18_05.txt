@@ -1,0 +1,8 @@
+data=
+1	0
+加木　　　郁	7.60	0.16	3.5	２		IP	１		IP	３		IP	５		IP	３		IP	３		IP	１		IP	２		IP	１		IP	１		IP
+楠原　　正剛	5.00	0.19	4.0	１		IP	４		IP	３		IP	１		IP	５		IP	４		IP	４	3	IP	３		G1	６		IP	５	3	IP
+木山　　誠一	6.00	0.13	2.5	４		IP	４		IP	３		IP	２		IP	４		IP	２		IP	２		IP	３	4	IP	１	4	IP	５		IP
+田村　　　慶	4.60	0.23	4.5	６		IP	３	6	IP	３		IP	４		IP	２		IP	５		IP	２		IP	５		IP	２		IP	６		IP
+海野　康志郎	5.10	0.15	3.5	４		G1	５		G1	２		G1	６		G1	６		G1	６		G1	１		IP	２		IP	３		G1	５	3	G1
+村田　　浩司	1.80	0.16	2.6	６		IP	３		IP	６		IP	６		G3	６		G3	５		IP	６		IP	５		IP	６	2	IP	５		IP

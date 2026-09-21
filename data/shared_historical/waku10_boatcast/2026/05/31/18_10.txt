@@ -1,0 +1,8 @@
+data=
+1	0
+木場　雄二郎	8.50	0.18	2.1	１		IP	１		IP	１		IP	３		IP	６		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+松下　　一也	7.33	0.12	1.8	１		IP	２		IP	３		IP	５		IP	２		IP	欠		IP	２		IP	４		IP	１	3	IP	１		IP
+平山　　智加	6.20	0.14	2.3	３		IP	２		IP	４		IP	５		G2	４		G2	４		G3	２		G3	２		IP	３		IP	１		IP
+岡村　　慶太	6.40	0.12	2.2	２		IP	２		IP	２		IP	４		IP	３		G3	４	5	IP	３		IP	３		IP	５		IP	２		IP
+青木　幸太郎	4.10	0.17	3.4	４		IP	３		IP	５		IP	２		IP	２		IP	５		IP	４		IP	５		IP	４		IP	６		IP
+中村　　栄治	3.20	0.28	5.5	４		G3	６		G3	５		IP	５		IP	３		IP	５	5	IP	４		IP	３		IP	４	4	IP	６		IP

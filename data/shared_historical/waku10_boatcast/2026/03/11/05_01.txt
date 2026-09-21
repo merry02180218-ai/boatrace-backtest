@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　二朗	3.90	0.18	3.8	６		IP	４		IP	５		IP	３		IP	２		IP	４		IP	４		G3	欠		IP	５		IP	２		IP
+向所　　浩二	4.67	0.17	4.0	１		IP	６		IP	５		IP	４		IP	転		IP	１		IP	４		IP	４		IP	６	4	IP	３		IP
+泥谷　　一毅	6.40	0.19	3.8	３		IP	３		IP	２		IP	２		IP	２	4	IP	５		IP	３		IP	１		IP	３		IP	４		IP
+河合　　三弘	3.40	0.17	2.9	３		IP	４		IP	５		IP	３		IP	５		IP	４		IP	５		IP	４	5	IP	５		IP	５		G3
+堤　　　　昇	4.50	0.18	3.7	４	4	IP	４		IP	４	4	IP	５		IP	５	4	IP	２	3	IP	６		IP	２		IP	１		IP	５		G3
+為本　　智也	4.40	0.20	3.4	４	5	IP	５		G3	５		G3	４	5	IP	５		IP	１		IP	３		IP	３	5	IP	３		IP	５		IP

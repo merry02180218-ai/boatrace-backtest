@@ -1,0 +1,8 @@
+data=
+1	0
+飯山　　　泰	8.40	0.14	2.4	２		IP	３		IP	４		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+桑島　　和宏	5.90	0.11	2.1	１		IP	２		IP	２		IP	２		IP	３		IP	２		IP	６		IP	４		IP	５		G1	５		G1
+伏田　　裕隆	3.50	0.21	3.5	４		IP	５		IP	５		IP	５		IP	５		IP	２		IP	４	5	G3	６		G3	５		IP	２		IP
+寺島　　吉彦	4.80	0.17	2.8	１		IP	６	5	IP	２		IP	６	6	G3	２	6	G3	６	6	G3	６	6	IP	２		IP	４	5	IP	４		IP
+永田　　秀二	3.10	0.22	3.9	５		IP	５		IP	６		IP	４		IP	５		IP	４		IP	４		IP	５		IP	４		IP	３		IP
+渡辺　　　豊	3.10	0.20	4.5	４		IP	５		IP	６		IP	４		IP	５	2	IP	６		IP	５		IP	４		IP	６		IP	１		IP

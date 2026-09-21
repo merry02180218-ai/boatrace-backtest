@@ -1,0 +1,8 @@
+data=
+1	0
+黒澤　めぐみ	6.30	0.23	4.5	３		IP	２		IP	１		IP	４		IP	１		IP	４		IP	２		IP	１		IP	５		IP	６		IP
+鐘ヶ江　真司	5.20	0.16	3.6	２		IP	３		IP	５		IP	２		IP	１		IP	４		IP	５		IP	４		IP	２		IP	妨		IP
+山本　　修一	6.80	0.15	3.0	２		IP	４		IP	２	2	IP	２		G3	４		IP	４		IP	４		IP	２		IP	１		IP	１		IP
+松田　　淳平	6.80	0.07	1.5	５		IP	４		IP	３		IP	１		IP	２		IP	２		IP	２		IP	２		IP	４		IP	１		IP
+犬童　　千秋	3.50	0.16	3.1	２		G3	４		G3	４		G3	５		G3	５		IP	６		IP	５		G3	３		G3	４	4	IP	５		IP
+本岡　　勝利	3.50	0.22	5.0	６		IP	４		IP	５		IP	４		IP	４		IP	４		IP	４		IP	５		IP	２		IP	５		IP

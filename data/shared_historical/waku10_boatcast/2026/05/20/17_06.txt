@@ -1,0 +1,8 @@
+data=
+1	0
+河野　　真也	8.30	0.19	4.4	１		IP	２		IP	２		IP	１		IP	２		IP	１		IP	妨		IP	１		IP	２		IP	１		IP
+籾山　　佳岳	5.00	0.13	2.9	５		IP	２		IP	３	5	IP	４		IP	１		IP	妨		IP	４		IP	２		IP	３		IP	５		IP
+鎌倉　　　涼	7.90	0.14	3.4	３		IP	１		G2	３		G1	４		SG	１		G3	２		G1	２		IP	５		IP	１		IP	１		IP
+大原　　祥昌	5.40	0.12	2.9	２		IP	４	5	IP	２	5	IP	４		IP	５		IP	６		G3	６		G3	２		G3	２	6	IP	１		IP
+嶋田　　有里	3.70	0.15	3.4	６		IP	４		IP	５		IP	４		IP	４		IP	５		IP	４		IP	５		IP	２		IP	３		IP
+重木　　輝彦	5.80	0.19	4.2	２		IP	２		IP	４		IP	３		G1	４		G1	３		G1	３	5	IP	５		IP	３		IP	４		IP

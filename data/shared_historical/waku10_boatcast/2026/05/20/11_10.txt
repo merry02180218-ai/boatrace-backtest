@@ -1,0 +1,8 @@
+data=
+1	0
+笠原　　　亮	10.00	0.15	3.0	１		G3	１		G3	１		G1	１		G1	１		G1	１		G1	１		SG	４		IP	１		IP	１		IP
+金子　　拓矢	8.30	0.13	2.7	２		IP	３		IP	１		G1	１		IP	１		IP	２		IP	１		IP	３		IP	４		IP	２		IP
+上田　　龍星	5.30	0.14	3.2	３		IP	３		IP	３		IP	４	2	IP	６		G1	６		G1	５		G1	３		G1	３		SG	２		IP
+松尾　　　祭	3.60	0.18	4.7	５		G2	３		G2	５		IP	６		IP	６		IP	３		IP	２		IP	４		IP	５		IP	５		IP
+島村　　隆幸	6.00	0.12	3.0	５		IP	５		IP	１		IP	５		IP	２		G3	１	6	G3	２		IP	４		IP	３		IP	２		G3
+馬場　　　剛	4.80	0.13	2.5	６		G2	５		IP	２	5	IP	４		IP	２	5	G3	３		G3	２		IP	５		IP	３		IP	５		IP

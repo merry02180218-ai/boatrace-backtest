@@ -1,0 +1,8 @@
+data=
+1	0
+三嶌　さらら	6.33	0.22	3.8	１		IP	１		IP	４		IP	４		IP	１		IP	６		IP	１		IP	４		IP	転		G3	４		G3
+間野　　兼礼	7.80	0.15	2.8	２		IP	３		IP	１		IP	３	4	IP	１		IP	２	3	IP	２		IP	３		IP	１		IP	３		IP
+坂本　　奈央	3.80	0.26	4.3	５		G3	３		IP	４		IP	５		IP	６		G3	５		G3	６		IP	４		G3	２		G3	２		G3
+井本　　昌也	4.60	0.14	3.5	６		IP	４	3	IP	２		IP	６		G1	３		G1	４		G2	３		G1	４		IP	４		G1	５		G1
+後藤　　翔之	5.33	0.16	3.1	５		IP	３		IP	３		IP	５		IP	３		IP	４		G2	２	6	IP	１	4	IP	欠		G2	６		G2
+眞鳥　　康太	2.90	0.27	5.0	５		IP	４		IP	５		G3	６		G3	５		G3	Ｆ	5	G3	３		IP	４		IP	４		IP	４	5	IP

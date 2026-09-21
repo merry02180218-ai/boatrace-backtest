@@ -1,0 +1,8 @@
+data=
+1	0
+野村　　　誠	7.30	0.16	3.3	２	2	IP	１		IP	６		IP	２		IP	２		IP	３		G3	５		IP	１		IP	１		IP	１		IP
+飯島　　昌弘	6.80	0.18	3.9	４		IP	２		IP	１		IP	４		IP	３		IP	３		G1	２		G1	２		IP	３		IP	３		IP
+崎　　　利仁	6.00	0.19	4.0	１		IP	２		IP	６	4	G1	５		IP	２		IP	２		IP	４		IP	３		IP	２		IP	４		IP
+佐口　　達也	4.80	0.20	4.4	５		IP	３		IP	２		IP	５		IP	３		IP	４		IP	３		IP	５		IP	３		IP	３		IP
+河内　悠利杏	1.90	0.12	2.3	６		IP	５		IP	３		G3	６		G3	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP
+本橋　　克洋	3.50	0.16	2.8	３	5	IP	４		IP	５		IP	５	5	IP	４	4	IP	４		IP	６		IP	５		IP	４	4	IP	３		IP

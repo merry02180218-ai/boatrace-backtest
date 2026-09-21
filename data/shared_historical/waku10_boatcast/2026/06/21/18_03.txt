@@ -1,0 +1,8 @@
+data=
+1	0
+上原　　　崚	8.10	0.15	2.3	６		G3	１		IP	１		IP	４		G2	１		G2	１		IP	２		IP	１		IP	１		IP	３		IP
+後藤　　隼之	5.00	0.15	3.1	３		G3	５		IP	３		IP	１	1	IP	４		IP	５		IP	５		IP	３		IP	１	1	IP	５		IP
+有賀　　達也	4.20	0.15	2.3	６		G3	３	4	IP	３		IP	５		IP	１		IP	４		IP	５		G1	６		G1	４		G1	５		G1
+佐竹　　太一	5.70	0.15	3.2	４		G3	２		G3	４		IP	３		IP	１		IP	２		IP	６		IP	５		IP	１		IP	４		IP
+井上　　恵一	2.30	0.22	4.4	５		G3	４		IP	６	2	IP	６	4	IP	５		IP	５		IP	５		IP	６		IP	４		IP	４		IP
+前野　　竜一	5.30	0.15	2.7	４		G3	４		IP	２		IP	４		IP	６		IP	４		IP	４		IP	３		IP	１		IP	３		IP

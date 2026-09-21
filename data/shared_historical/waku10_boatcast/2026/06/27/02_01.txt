@@ -1,0 +1,8 @@
+data=
+1	0
+櫻井　　　優	7.60	0.16	4.0	１		IP	５		IP	３		IP	２		IP	２		IP	３		IP	１		IP	３		IP	１		IP	１		IP
+森　　　竜也	4.40	0.14	3.4	５		IP	２		G3	２		IP	３		IP	６		IP	４		G3	６		G3	４		IP	２		IP	５		IP
+信濃　　由行	2.60	0.18	3.6	５		IP	４		IP	３		IP	６		IP	Ｆ		IP	６	4	IP	６		IP	６		IP	３		IP	４	1	IP
+胡本　　悟志	4.90	0.15	3.0	６		IP	１		G3	４		IP	６		IP	４		IP	１		IP	５		IP	３		IP	６		IP	１		IP
+齊藤　　　廉	4.40	0.20	3.6	２		IP	２		IP	３		IP	４		IP	５		IP	５		IP	５		IP	３		IP	５	6	IP	４		IP
+熊倉　　幹太	1.70	0.20	4.2	６		IP	４		IP	５		IP	６		IP	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+青木　　　蓮	7.80	0.15	3.1	１		IP	１		IP	Ｆ		IP	１		IP	４		IP	１		IP	３		IP	１		IP	２		IP	１		IP
+小玉　　啓太	5.30	0.15	3.0	転		IP	３		IP	３		IP	２		IP	１		IP	３		IP	６		IP	３		IP	２		IP	５		IP
+村本　　大成	3.30	0.18	2.8	３		IP	５		IP	５		IP	５		IP	３		IP	５		IP	４		IP	４		IP	６		IP	４		IP
+小林　　礼央	2.40	0.16	4.2	４		IP	４		IP	４		IP	６	5	IP	４		IP	６		IP	５		IP	６		IP	５		IP	６		IP
+沼田　　大都	4.80	0.21	4.1	２		IP	５		IP	３		IP	６		IP	３		IP	３		IP	４		IP	２		IP	６	6	IP	３		IP
+加倉　　侑征	4.30	0.17	3.4	５		IP	３		IP	３		IP	２		IP	５	5	IP	１		IP	５		IP	４		IP	５		IP	６		IP

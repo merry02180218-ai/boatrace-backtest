@@ -1,0 +1,8 @@
+data=
+1	0
+樋口　　範政	6.00	0.18	4.0	２		IP	４		IP	５		IP	１		IP	２		IP	５		IP	３		IP	１		IP	４		IP	３	2	G3
+本田　　　愛	6.80	0.20	3.8	５		IP	２		IP	２		IP	２		IP	３		IP	３		IP	３		IP	２		IP	３		IP	１		G3
+宇佐見　　淳	5.44	0.13	2.7	３		IP	６		G3	４		G3	１	2	IP	２		G1	４		G1	５		IP	２		IP	転		IP	４		IP
+東本　　勝利	4.00	0.20	4.1	３		IP	４		IP	５		IP	６		IP	５		IP	３		IP	６		IP	３		IP	３		IP	３	5	IP
+木下　虎之輔	2.30	0.16	2.6	５	6	IP	４	6	IP	５	6	IP	６	6	IP	６	6	IP	４	6	IP	６	6	IP	４	6	IP	５		IP	５	6	IP
+内堀　　　学	6.30	0.13	2.2	１		IP	１	1	IP	５		IP	２		IP	１		IP	６	2	IP	４		IP	５	2	IP	２		IP	２	3	IP

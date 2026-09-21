@@ -1,0 +1,8 @@
+data=
+1	0
+古川　　　健	5.30	0.15	2.5	１		IP	６		IP	５		IP	２		IP	５		IP	１		IP	６		IP	６		IP	１		IP	２		IP
+井芹　　大志	3.70	0.22	5.3	４		IP	１		IP	３		IP	２		IP	６		IP	６		IP	６		IP	６		IP	６		IP	４		IP
+本橋　　克洋	4.30	0.15	3.4	２		IP	６		IP	４		IP	４		IP	２		IP	５		IP	５		IP	４		IP	４		IP	３		IP
+藤原　　孝斗	2.90	0.18	3.4	６	5	IP	５		IP	３		IP	５		IP	２	5	IP	４		IP	６		IP	６		IP	５	6	IP	５		IP
+山本　　寛久	4.80	0.17	3.9	４		IP	４		IP	４		IP	３	4	IP	５		IP	３		G3	５		IP	３		IP	４		IP	１		IP
+村田　　　敦	2.60	0.16	4.3	５		IP	６		IP	５		IP	３		IP	６		IP	６		IP	６		IP	５		IP	３		IP	４		IP

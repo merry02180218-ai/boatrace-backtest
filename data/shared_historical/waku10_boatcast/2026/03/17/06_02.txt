@@ -1,0 +1,8 @@
+data=
+1	0
+南野　　利騰	6.20	0.14	2.6	１		IP	３		IP	１		IP	６		IP	２		IP	１		IP	３		IP	３		IP	６		IP	４		IP
+鈴木　　勝博	6.10	0.17	3.3	４		IP	３		IP	１	3	IP	４		IP	２		IP	３		IP	４		IP	３		IP	２		IP	４		IP
+中村　　　真	5.10	0.14	2.3	４		IP	６		G3	２		IP	２		IP	５		IP	４		IP	４		IP	３		IP	１		IP	５		IP
+杢野　　誓良	3.80	0.15	3.3	６		IP	４		IP	５		IP	４	5	IP	３		IP	６		IP	４		IP	４		IP	３		IP	３		IP
+櫻井　　　優	6.00	0.15	2.8	６		IP	３		IP	２		IP	２		IP	３		IP	１		IP	１		IP	５		IP	２		IP	６		IP
+柘植　　政浩	2.40	0.20	4.6	６		IP	５		IP	５		IP	５		IP	４		IP	５		IP	５		G2	５		IP	５		IP	４		IP

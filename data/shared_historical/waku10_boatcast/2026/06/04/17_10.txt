@@ -1,0 +1,8 @@
+data=
+1	0
+赤岩　　善生	9.70	0.12	1.4	１		G3	２		G3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		G1	２		G1
+久田　　敏之	8.20	0.14	2.8	２		G2	２		G2	３		IP	２		IP	５	5	IP	２	3	IP	１		IP	２		G1	２		SG	１		IP
+辻　　　栄蔵	7.70	0.12	2.4	１		IP	２		G1	２		IP	２		G1	３		G1	欠		IP	１		IP	２		IP	２		G2	３		G1
+石橋　　道友	5.40	0.17	3.6	２		IP	４		IP	欠		IP	２		G3	２		IP	６	5	IP	１		IP	６		IP	３		G1	３		G1
+菊地　　孝平	5.80	0.09	1.8	５		SG	３		G1	４	4	IP	３		G1	４		G1	３		G1	５		G1	１		G1	４		G2	４		G1
+秋元　　　哲	7.50	0.16	4.1	２		IP	１		IP	１	3	IP	１	3	IP	１	4	IP	２	4	IP	３	2	IP	５	3	G3	４		G1	３		IP

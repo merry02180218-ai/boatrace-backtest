@@ -1,0 +1,8 @@
+data=
+1	0
+上原　健次郎	7.70	0.21	3.9	１		IP	１		IP	１		IP	４		IP	１		IP	６		IP	２		IP	１		IP	２		IP	３		IP
+栗城　　　匠	6.30	0.14	3.8	５		IP	２		IP	２		IP	３		G1	２		G1	４		IP	６		G1	１	3	IP	１		IP	６		IP
+坂元　　浩仁	6.70	0.15	2.2	１	1	IP	４		IP	３	2	IP	２		IP	４		G2	５		IP	３		IP	１		IP	２		IP	２		IP
+坂井　　康嗣	2.60	0.19	3.6	６		IP	６		IP	６		IP	３		IP	２		IP	６		IP	４	5	IP	５		IP	６		IP	６		IP
+岩津　　徹郎	4.00	0.18	3.7	５		IP	５		IP	５		IP	４		IP	２	6	IP	４		IP	３		IP	４		IP	４	6	IP	４	6	IP
+芝田　　浩治	2.80	0.17	4.1	４		IP	５		IP	５	5	IP	５		IP	４		IP	４	5	IP	６		IP	５		IP	６		IP	３	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+黒井　　達矢	9.90	0.16	3.2	１		IP	１		IP	１		IP	１		IP	１		G1	１		IP	３		IP	１		IP	１		G1	１		IP
+滝沢　　芳行	4.10	0.12	2.6	５		IP	５		IP	４		IP	５		IP	４		G3	２		IP	６		IP	２		IP	２		IP	５		IP
+伊藤　　雄二	2.70	0.15	2.4	５		IP	５		IP	６		IP	６		IP	５	4	IP	６		IP	５		IP	４		IP	２		IP	４		IP
+畑田　　汰一	5.60	0.12	2.8	１		G1	４		G1	３		G1	３		G1	６		G1	３		IP	３		IP	３		IP	３		IP	Ｆ		IP
+佐藤　　　航	7.20	0.10	2.5	１		IP	５		IP	２		G2	１		IP	４		IP	１		G2	２		IP	３		IP	１	4	IP	５		IP
+石塚　　久也	3.90	0.20	3.9	４	5	IP	３		IP	６		IP	５		IP	３		IP	３		IP	５		IP	４		IP	４		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　貴博	8.20	0.13	2.1	４		IP	２		IP	１		IP	１		IP	５		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+小原　　聡将	7.30	0.14	2.4	２		IP	３		IP	１		IP	２		IP	４		IP	１		IP	２		IP	１	1	IP	３		IP	６	3	IP
+吉川　　喜継	7.00	0.15	2.5	２		IP	１		IP	５		G1	４		G1	２		IP	４		IP	１		IP	２		IP	２		IP	３		IP
+金子　　良昭	3.40	0.19	4.1	６		IP	５		IP	４	2	IP	６		IP	３		IP	４	5	IP	５		IP	２		IP	５		IP	４		IP
+岩崎　　芳美	4.20	0.13	2.6	４		G3	２		G1	３		G1	６		G1	３		G3	２	6	G3	６		G3	５		IP	６		IP	６		G2
+越智　　照浩	3.00	0.23	5.2	５		IP	４		IP	５	5	IP	５		IP	３		IP	３	5	IP	５	5	IP	５		IP	５		G3	５		IP

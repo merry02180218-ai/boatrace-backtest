@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　凌太朗	8.40	0.09	1.0	１		IP	１		IP	４		G1	１		G1	２		IP	１		IP	１		IP	１		IP	１		IP	Ｆ		IP
+鈴木　　　猛	4.30	0.17	3.2	２		IP	２		IP	６		IP	１		IP	５		IP	５		IP	３		IP	４		IP	５		IP	転		IP
+木山　　誠一	6.10	0.10	2.1	３		IP	２		IP	４		IP	２		IP	２		IP	３	4	IP	１	4	IP	５		IP	６		IP	２		IP
+淺香　　文武	6.10	0.18	2.6	２		IP	１		IP	３		IP	４		IP	４		IP	１		IP	２	5	IP	５		IP	２		IP	６		IP
+倉田　　茂将	4.10	0.16	2.6	４	4	IP	２	3	IP	６		IP	６	6	G3	６	6	G3	３		IP	２		IP	Ｆ		IP	５		IP	２		IP
+鈴木　　孝明	4.60	0.18	2.9	６		IP	３		IP	５		IP	４		IP	３		IP	３		IP	４	5	IP	６		IP	２		IP	２		IP

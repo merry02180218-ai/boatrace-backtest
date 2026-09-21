@@ -1,0 +1,8 @@
+data=
+1	0
+江口　　晃生	7.30	0.17	3.2	６		IP	１		IP	２		IP	１		IP	３		IP	６		IP	１		IP	２		IP	１		IP	２		IP
+野村　　　誠	6.20	0.17	3.5	３		IP	２		IP	１		IP	２		IP	４		G3	４		G3	２		IP	２		IP	３		IP	落		IP
+河野　　主樹	5.60	0.15	3.3	１		IP	４		IP	４		IP	２		IP	２		G3	５		IP	３		IP	２		IP	４	5	IP	５		IP
+黒崎　　竜也	4.33	0.15	3.0	３		IP	６		IP	５		IP	４		IP	２		IP	１		IP	欠		IP	４		IP	５		IP	５		IP
+谷津　　幸宏	5.00	0.12	1.6	３		IP	５		G3	６		IP	６		IP	１	4	G1	４		IP	３		IP	２		IP	１		IP	６		IP
+寺本　　重宣	4.20	0.17	3.8	４		IP	５		IP	４		IP	３		G3	４	5	G3	５		IP	４		IP	３		IP	４		IP	３	4	G3

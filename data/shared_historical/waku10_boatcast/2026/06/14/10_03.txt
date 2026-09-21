@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　一毅	7.40	0.18	4.2	１		IP	２		IP	１		IP	４		IP	２		IP	１		IP	４		IP	１		IP	４		IP	３		IP
+白井　　友晴	5.40	0.17	3.9	１		IP	３		IP	３	3	IP	４		IP	４		IP	４		IP	４		IP	３		IP	２		IP	５		IP
+小池　　公生	5.70	0.17	3.9	３		IP	３		IP	１		IP	２		IP	１		IP	１		IP	６		IP	５		IP	５		IP	５		IP
+大久保信一郎	5.20	0.20	3.7	１		IP	１		IP	４		G3	４		G3	２		IP	６		IP	３		IP	５		IP	３		IP	６		IP
+一色　　凌雅	4.30	0.21	4.5	３		IP	５		IP	５		IP	３		IP	２		IP	４		IP	２		IP	６	4	G3	４		IP	５	6	IP
+山田　　和佐	4.33	0.15	3.2	６		G1	２		IP	３		IP	２		IP	５		IP	２		IP	６		IP	５		IP	５		IP	転		IP

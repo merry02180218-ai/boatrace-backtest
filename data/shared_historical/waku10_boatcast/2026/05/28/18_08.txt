@@ -1,0 +1,8 @@
+data=
+1	0
+渡邊　　哲也	6.30	0.15	3.0	５		IP	１		IP	１		IP	６		IP	４	2	IP	４		IP	１		IP	２		IP	２		IP	３		IP
+末永　　祐輝	6.11	0.17	3.2	３		IP	３		IP	２		IP	６		IP	４		IP	３		IP	３		IP	２		IP	１	3	IP	転		IP
+塩嶋　　泰空	1.00	0.09	3.0	６		IP																											IP
+新田　　洋一	3.50	0.13	3.0	５		IP	４		IP	６		IP	５		IP	４	3	IP	３	3	IP	６		IP	２		IP	３		IP	６		IP
+泥谷　　一毅	4.30	0.18	4.9	２	2	IP	６		IP	３	4	IP	４		IP	４	4	IP	４		IP	４		IP	４		IP	４		IP	４		IP
+平山　　智加	4.50	0.15	3.7	４		G2	２		G3	４		G3	３		IP	５		G1	４		G1	５		IP	４		IP	５		G3	３		G3

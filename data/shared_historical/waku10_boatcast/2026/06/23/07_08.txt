@@ -1,0 +1,8 @@
+data=
+1	0
+東口　　　晃	5.40	0.17	3.7	４		IP	６		IP	２		IP	３		IP	６		IP	３		IP	２		IP	１		IP	４		IP	３		IP
+西村　　拓也	7.40	0.13	2.6	２		IP	２		IP	２		IP	１		IP	４		IP	２		IP	２		IP	２		IP	６		G1	３		G1
+坂井　　滉哉	4.90	0.17	3.4	５		IP	２		IP	５		IP	４		IP	２		IP	４		IP	３		IP	３		IP	２		IP	６		IP
+加藤　　啓太	3.90	0.18	3.3	１		IP	３	5	IP	４	5	IP	４		IP	４		IP	５	5	IP	３	5	IP	５		IP	転		IP	６		IP
+安田　　政彦	4.40	0.19	4.2	３		IP	３		IP	２		IP	５		IP	３		IP	５		IP	４		IP	４		G3	４		IP	５		IP
+富田　　恕生	3.20	0.17	3.8	２	5	IP	４		IP	６		IP	５		IP	５		IP	１	5	IP	６		IP	５		IP	６		G3	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+篠木　亜衣花	4.70	0.24	4.6	５		IP	３		G3	６		IP	１		G3	５		IP	２		IP	１		IP	６		IP	６		G3	３		IP
+森下　　愛梨	5.50	0.22	4.3	５		IP	６		IP	４		IP	２		IP	２	3	IP	３		IP	２		IP	５	3	IP	２		G3	２		IP
+諏訪　　玲奈	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+佐々木　裕美	3.70	0.13	1.7	６		IP	５		IP	３		G3	４		G3	５		G3	２		G3	４	5	IP	５		G3	４		IP	４		IP
+中田　　夕貴	2.40	0.18	4.1	６		G3	５		G2	４	6	IP	５		IP	６		IP	６		G1	５		G1	６		IP	３		IP	６		IP
+山下　　夏鈴	3.00	0.15	2.7	３	5	IP	６		IP	６	5	IP	５		IP	６		IP	６		IP	４		IP	４		IP	４		IP	４		IP

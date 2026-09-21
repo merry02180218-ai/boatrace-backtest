@@ -1,0 +1,8 @@
+data=
+1	0
+栗原　　直也	8.00	0.12	2.4	３		IP	１		IP	１		IP	２		IP	３		IP	３		IP	１		IP	１		IP	４	2	IP	１		IP
+渡邊　伸太郎	5.10	0.21	4.2	４		IP	２		IP	２		IP	２		IP	３		IP	５		IP	２		IP	５		IP	４		IP	６		IP
+安田　　吉宏	5.40	0.17	3.2	５		IP	３	4	IP	４		IP	３		IP	３		IP	３		IP	５		IP	１		IP	５		IP	１		IP
+福田　　雅一	6.90	0.16	2.3	２		IP	１		IP	３		IP	５		IP	２		IP	１		IP	３	5	IP	６		IP	２		IP	１		IP
+藤原　　　駿	1.70	0.21	5.0	４	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	４	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP
+黒野　　元基	6.30	0.15	2.1	２		IP	３		IP	１	5	IP	５		G1	３		G1	４		IP	２		IP	６		IP	２		IP	２		IP

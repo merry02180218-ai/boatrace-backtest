@@ -1,0 +1,8 @@
+data=
+1	0
+佐口　　達也	6.50	0.16	3.0	２		IP	２		IP	１		IP	５		IP	１		IP	１		IP	４		IP	３		IP	６		IP	３		IP
+永田　　　楽	2.30	0.21	3.5	落	5	IP	３	5	IP	６		IP	６		IP	５		IP	１		IP	転	3	IP	転		IP	６		IP	５	3	IP
+森永　　　淳	7.50	0.13	2.2	２		G2	６		G2	１	4	IP	２		IP	２		IP	１		IP	５		IP	３		IP	１		IP	１		IP
+小林　　愛実	4.70	0.16	3.9	５		IP	６		IP	４		IP	４		IP	３		IP	４		IP	３		IP	５		IP	２		IP	１		IP
+鳥飼　　　眞	4.67	0.17	3.8	４		IP	５		IP	２	4	IP	５		IP	転	2	IP	５		IP	４		IP	５	4	IP	２		IP	１		IP
+河野　　　大	6.00	0.15	3.1	５		G2	２		IP	２		IP	２		IP	４		IP	２		G1	２		G2	３		IP	６		IP	５		IP

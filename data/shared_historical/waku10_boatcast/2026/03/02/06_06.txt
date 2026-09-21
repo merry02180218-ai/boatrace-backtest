@@ -1,0 +1,8 @@
+data=
+1	0
+香月　　大介	6.20	0.18	2.6	１		IP	２		IP	１		IP	４		IP	４		IP	１		IP	１		IP	４		IP	６	2	G3	６		IP
+都築　　正治	5.30	0.18	4.2	４		IP	５		IP	６		IP	３		IP	４		IP	１		IP	３		IP	４		IP	２		IP	２		G3
+高橋　　真吾	4.80	0.15	3.1	２	4	IP	２		IP	６		G3	２	4	G3	４	4	G3	６	4	IP	４	4	IP	４		IP	３		IP	４		IP
+深山　　祐二	2.90	0.15	3.3	４		IP	４		IP	６		IP	４		IP	２		IP	６		IP	６		IP	６		IP	６		IP	４		IP
+前田　　光昭	3.40	0.18	2.9	４	4	IP	５		IP	４	4	IP	６		IP	５		G3	６	6	G3	４		IP	４		G3	４		IP	２	6	IP
+徳増　　秀樹	4.90	0.13	2.2	４	5	IP	４	4	G1	６	4	IP	６	4	IP	２	3	IP	１		G3	２		G3	６		G1	６		G1	２	4	IP

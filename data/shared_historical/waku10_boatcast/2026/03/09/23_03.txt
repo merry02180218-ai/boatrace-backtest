@@ -1,0 +1,8 @@
+data=
+1	0
+四宮　　与寛	6.60	0.15	2.7	２		IP	６		IP	２	2	IP	６		IP	１		IP	２		IP	６		IP	１		IP	２		G1	１		IP
+中本　　大樹	4.80	0.18	4.3	４		IP	１		IP	３		IP	３		IP	４	3	IP	５		IP	５		IP	４		IP	４		IP	３		IP
+小野寺　智洋	7.40	0.14	2.8	２		IP	２		IP	５		IP	２		IP	３		IP	２		IP	２		IP	１		IP	２		IP	３		IP
+實森　　美祐	6.10	0.14	2.5	４		IP	転		IP	２		IP	２		G1	６		IP	１		IP	３		IP	３		IP	２		IP	２		G2
+仁科　さやか	2.70	0.22	4.2	３		IP	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	３		IP	３		G3	６	4	IP
+中西　　月輝	1.40	0.27	5.4	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	４		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+吉川　　元浩	8.80	0.17	3.2	１		G1	１		IP	５		G1	３		G1	１		G1	１		G1	１		G1	１		IP	４		IP	１		IP
+藤岡　　俊介	7.20	0.12	2.1	３		IP	２		IP	３		IP	３		IP	２	3	IP	１		IP	３		IP	６		G1	１		IP	１		IP
+高野　　哲史	6.90	0.17	4.2	１		IP	３		IP	１		IP	３		G1	３		G1	５		G1	３		G1	２		IP	３		IP	４		G1
+稲田　　浩二	6.00	0.09	2.2	１		IP	３		IP	６	6	IP	２		G3	３		G1	４		G1	４		IP	５		G1	３		G1	２		G1
+宮田　　龍馬	5.30	0.14	2.7	６		G3	４		G1	３		IP	４		IP	４		G1	５		G1	１		IP	２		IP	４		IP	３		IP
+小坂　　尚哉	5.50	0.16	2.5	４		IP	３	5	IP	３		IP	１	5	IP	４		G3	４		G3	２	5	IP	５		IP	３		IP	４		G1

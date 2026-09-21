@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　　充	7.80	0.18	2.7	１		IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP	６		G1	１		IP	４		IP
+笠原　　　亮	7.50	0.16	3.3	６		G1	２		SG	２		IP	２		IP	３		IP	２		IP	２		IP	２		IP	３		G1	２		G2
+今泉　　友吾	7.90	0.16	3.4	３		G1	１		IP	１		G1	３		G1	２		IP	２		IP	３		IP	２		IP	２		G1	４		G1
+湯川　　浩司	6.30	0.12	2.5	５		G1	１		G2	１		IP	３		IP	３		G1	６		G1	５		G1	２		G1	２	3	G1	５		G1
+権藤　　俊光	6.20	0.13	3.9	４	6	SG	３		G1	５		G1	３		G1	１		G1	１		IP	３		IP	４		IP	５		IP	３		IP
+桐生　　順平	4.70	0.13	4.0	４		G1	Ｆ		G1	３		SG	４		G1	３		G1	６		G1	５		G1	３		G1	３		G1	５		G1

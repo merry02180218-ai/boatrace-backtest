@@ -1,0 +1,8 @@
+data=
+1	0
+大野　　芳顕	8.20	0.14	2.6	１		IP	２		IP	２		IP	２		IP	５		IP	１		IP	２		IP	１		IP	２		IP	１		G3
+古場　　輝義	6.10	0.22	3.5	３	3	G3	２	3	G3	２		IP	２		IP	２		G3	４		IP	３		IP	５		IP	６		IP	１		IP
+仲口　　博崇	5.20	0.16	3.7	６		G3	２		G3	６		IP	１		IP	６		IP	２		IP	５		G1	２		IP	３		G3	３		IP
+川上　　清人	4.20	0.17	4.0	６		IP	６		IP	６	5	IP	２	6	IP	２		IP	４	5	IP	３	5	IP	４		IP	６		IP	２		IP
+岡本　翔太郎	5.00	0.13	3.0	５		IP	５		IP	２		IP	落		IP	３		IP	３		IP	１		IP	２		IP	５		G3	６	4	G3
+米田　　隆弘	2.70	0.18	4.6	６		IP	４		IP	６		IP	３		IP	４		IP	６		IP	５		IP	５		IP	５		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+小野寺　智洋	8.80	0.14	2.1	１		IP	１		IP	２		G3	１		IP	４		IP	１		IP	１		IP	２		IP	１		IP	２		IP
+出口　舞有子	4.20	0.20	3.2	３		G3	５		G3	５		IP	２		IP	２		IP	５		IP	６		IP	５		IP	６		IP	１		G3
+高橋　　正男	6.40	0.13	3.1	４		IP	２		IP	２		IP	２		IP	３		IP	５		IP	１		IP	Ｆ		IP	２		IP	２		IP
+泉　　　具巳	4.20	0.19	3.5	５		IP	６		IP	３		IP	４	5	IP	４		IP	２		IP	６	5	IP	２		IP	４	6	IP	４		IP
+守屋　　大地	3.40	0.17	3.3	４		IP	４		IP	５		G3	４		IP	３		IP	６		IP	５		IP	３		IP	６		IP	４		IP
+西村　　豪洋	2.20	0.19	4.2	５		IP	３		IP	６		IP	５		IP	４		IP	５	5	IP	５		IP	６		IP	６		IP	６		IP

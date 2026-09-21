@@ -1,0 +1,8 @@
+data=
+1	0
+大澤　　風葵	8.40	0.18	3.5	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	３		IP	４		IP	２		IP	２		IP
+藤田　　俊祐	6.50	0.16	3.4	１		IP	転		IP	３		IP	３		IP	２		IP	２		IP	６		IP	２		IP	１		IP	３		IP
+芝田　　浩治	5.40	0.17	3.4	３		IP	１		IP	３		IP	３		IP	５		IP	５		IP	６		IP	６		IP	１		IP	１		IP
+田代　　達也	4.60	0.16	3.1	４		IP	１		IP	４		IP	６		IP	１		IP	４		IP	６	6	IP	３	5	IP	４		IP	５		IP
+高山　　弘斗	3.40	0.20	3.6	２		IP	５		IP	３		IP	５		IP	６		IP	沈		IP	５		IP	２		IP	６	6	IP	４		IP
+坪口　　竜也	3.90	0.17	4.4	５		G2	４		IP	５		IP	４		IP	５		IP	３		IP	３		IP	４		IP	４		G3	４		G3

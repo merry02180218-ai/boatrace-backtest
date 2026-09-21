@@ -1,0 +1,8 @@
+data=
+1	0
+鋤柄　　貴俊	7.30	0.18	3.0	３		IP	２		IP	１		IP	３		IP	６		IP	１		IP	１		IP	１		IP	３		IP	３		IP
+三角　　哲男	6.40	0.12	2.2	６		IP	２		IP	５		G1	２		IP	１		IP	５		IP	３		IP	２		IP	２		IP	２		IP
+酒井　　俊弘	5.30	0.10	1.9	２		IP	１		IP	２		IP	５		IP	６	5	IP	５		IP	３	6	IP	２	5	IP	３		IP	６	4	IP
+末永　　由楽	6.70	0.15	3.3	３		IP	３		IP	２		IP	３		IP	３		IP	３		IP	２		IP	３		IP	３		IP	２	5	IP
+植田　　太一	3.60	0.17	2.4	１	4	IP	４		IP	６		IP	５		IP	６		IP	４		G1	３		IP	６		IP	５	4	IP	４		IP
+早川　　颯太	1.10	0.24	4.9	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP

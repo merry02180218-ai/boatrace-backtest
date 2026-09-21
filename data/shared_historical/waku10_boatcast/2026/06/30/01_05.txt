@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　和也	8.60	0.13	3.4	２		G3	２		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	４		IP	１		IP
+真庭　　明志	5.70	0.17	3.5	３		G3	３		IP	４		IP	１		IP	３		IP	３		IP	６		IP	４		IP	１		IP	４		IP
+川島　　拓郎	5.20	0.15	3.4	５		G3	２		IP	４		IP	４		IP	４		G3	２		G3	２		IP	４		IP	２		IP	５		IP
+佃　　　來紀	5.60	0.17	3.4	１		G3	３		IP	４		IP	１	6	G3	６		IP	５		IP	３		IP	６		IP	３		IP	１		IP
+下河　　誉史	3.00	0.19	4.3	５		G3	６	4	IP	３		IP	５		IP	４		IP	６		IP	５		IP	４		IP	３	4	IP	５		IP
+鈴木　　勝博	4.60	0.16	3.0	２		G3	６		IP	３	5	IP	２		IP	３		IP	５		IP	３		IP	３		IP	６		IP	５		IP

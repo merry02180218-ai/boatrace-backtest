@@ -1,0 +1,8 @@
+data=
+1	0
+乙津　　康志	6.50	0.18	4.3	２		IP	１		IP	４		IP	４		IP	１		IP	３		IP	２		IP	２		IP	６		IP	３		IP
+堤　　　　昇	5.30	0.14	3.3	１		IP	３		IP	３		IP	２		IP	５		IP	６		IP	２		IP	２		IP	５		IP	５		IP
+森　　　貴洋	4.50	0.16	3.9	５		IP	４		IP	３		IP	４		IP	２	2	IP	６		IP	３		IP	４		IP	２		IP	５		IP
+中村　　裕将	4.00	0.14	2.1	５		IP	２		IP	６		IP	５	5	IP	３		IP	２		IP	６		IP	２		IP	５		G3	５		G3
+高橋　　　勲	3.30	0.20	3.2	５		IP	６		IP	６	4	IP	欠		G3	３		G3	６		IP	２		IP	５		IP	１	4	IP	５		IP
+崎　　　利仁	2.60	0.20	4.3	６		IP	６		IP	４		IP	６		IP	５		IP	５		IP	６		IP	４		IP	３		IP	４		IP

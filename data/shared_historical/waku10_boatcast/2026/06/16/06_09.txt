@@ -1,0 +1,8 @@
+data=
+1	0
+島川　　光男	9.00	0.13	3.2	２		IP	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP
+関根　　彰人	5.30	0.17	3.3	４		IP	１		IP	１		IP	５		IP	３		IP	１		IP	５		IP	６		IP	３		IP	５		IP
+相原　　利章	6.80	0.12	2.1	２		IP	４	4	IP	５		IP	１		IP	３		IP	２	5	IP	３		IP	１		IP	３		IP	２		IP
+武藤　　綾子	2.60	0.17	3.5	６		IP	６		IP	５		G3	５		IP	５		IP	５		IP	３		IP	５		G3	３		IP	５		IP
+寳田　　亮治	5.10	0.20	3.6	３		IP	３		IP	３		IP	５		IP	２		IP	４		IP	３		IP	３		IP	４		IP	６		IP
+堀井　　涼平	2.70	0.16	3.6	１		IP	５		IP	２		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

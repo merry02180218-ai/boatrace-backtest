@@ -1,0 +1,8 @@
+data=
+1	0
+八木　　治樹	6.80	0.17	2.8	１		IP	２		IP	１		IP	６		IP	１		G3	４		IP	１		IP	６		G3	４		IP	１		IP
+金田　　　諭	5.40	0.16	2.8	２		IP	１		IP	１		IP	５		IP	４		G1	２		IP	４		G3	５		IP	４		IP	６		IP
+山田　　竜一	6.44	0.18	3.8	３		IP	３		IP	３		IP	欠		IP	２		IP	４		IP	３		IP	１		IP	４		IP	２		IP
+山崎　　聖司	5.50	0.18	4.1	３		IP	２		IP	３		IP	２		IP	３		IP	３	5	IP	４		IP	６		IP	４		IP	３		IP
+中川　　りな	3.70	0.16	3.6	５		IP	６		IP	５		IP	３		IP	５		IP	６		IP	３		IP	５		IP	２		IP	３		IP
+山崎　　　祥	3.70	0.23	5.0	４		IP	５		IP	４		IP	４		IP	５		IP	３		IP	４		IP	４		IP	６		IP	３		IP

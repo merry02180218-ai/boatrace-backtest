@@ -1,0 +1,8 @@
+data=
+1	0
+三苫　　晃幸	8.80	0.13	2.9	１		IP	１		IP	１		G3	２		G3	１		IP	２		IP	１		IP	２		G3	３		IP	２		IP
+常住　　　蓮	8.60	0.17	3.4	１		IP	１		IP	４		G1	３		G1	２		G1	３		IP	２		IP	１	1	IP	２		IP	１		IP
+峰重　　力也	8.00	0.11	1.4	４		IP	１		IP	２		IP	１		IP	１	4	IP	２		IP	５		IP	２		IP	１		IP	１		IP
+竹下　　大樹	4.90	0.13	3.0	３		IP	３		G3	３		G3	３		G1	３		G1	３		IP	５		IP	６		IP	４		IP	４		IP
+野間　　大樹	5.60	0.15	4.0	３	4	IP	３		IP	２		IP	４		G3	５		IP	２	4	IP	４		IP	１		IP	５		IP	３		IP
+嶋　　　義信	4.10	0.18	3.3	５		IP	３		IP	４		IP	３		IP	４	5	IP	４		IP	４	5	IP	３		IP	６		IP	４		IP

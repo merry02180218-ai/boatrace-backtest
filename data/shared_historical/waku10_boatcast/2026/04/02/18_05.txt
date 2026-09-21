@@ -1,0 +1,8 @@
+data=
+1	0
+盛本　　真輔	7.80	0.15	3.1	４		IP	１		IP	１		IP	３		IP	１		IP	１		IP	５		IP	３		IP	１		IP	１		IP
+大月　　遊雅	6.40	0.16	3.1	３		IP	４		IP	１		IP	２		IP	３		IP	２		IP	３		IP	２		IP	５		IP	３		IP
+前田　　将太	7.30	0.17	4.0	６		G2	２		G1	１		IP	２		IP	４		G1	１		IP	５		SG	２		IP	２		G3	２		G1
+島川　　光男	6.00	0.14	1.8	３		IP	３		IP	４	3	IP	４		IP	２		IP	２		IP	５		IP	５		IP	１		IP	１		IP
+西野　　翔太	5.30	0.17	2.8	５		IP	４		IP	６		IP	５	4	IP	５		IP	２	3	IP	２		IP	３		IP	１		IP	２		IP
+坂本　　奈央	1.40	0.26	4.8	６		IP	６		IP	６		G3	６		G3	５		IP	４		G3	６		G3	６		G3	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+木場　　悠介	8.80	0.13	1.8	１		IP	１		G3	４		IP	２		IP	２		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+藤森　　拓海	6.20	0.18	4.7	６		IP	２		IP	２		IP	１		IP	２		IP	４		IP	３		IP	６		IP	２		IP	２		IP
+末永　　由楽	6.60	0.15	1.9	１		IP	４		IP	４		IP	３		IP	４		IP	３		IP	２		IP	２		IP	１		IP	３		IP
+杉田　　篤光	4.30	0.25	4.5	６	6	G3	４		G3	３	5	IP	５		IP	３		IP	５		IP	４		IP	４		IP	１		IP	４		IP
+廣瀬　　篤哉	2.89	0.17	3.3	６		IP	３		IP	６	6	IP	４	6	IP	４		IP	５	6	IP	６	6	IP	３		IP	転	6	IP	６		IP
+荒川　　健太	3.80	0.16	3.8	４		G3	６		G3	４	5	IP	２	2	IP	４		IP	４	2	IP	３	2	IP	５	5	IP	４	4	IP	６	3	IP

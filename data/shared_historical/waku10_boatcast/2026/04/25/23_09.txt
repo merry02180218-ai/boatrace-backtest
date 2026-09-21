@@ -1,0 +1,8 @@
+data=
+1	0
+前田　健太郎	6.00	0.17	2.9	４		IP	１		IP	２		IP	１		IP	５		IP	１		IP	３		IP	４		IP	４		IP	５		IP
+吉武　　真也	5.40	0.18	3.6	２		IP	３		IP	２		IP	２		IP	３		IP	５		IP	５		IP	４		IP	５		IP	２		IP
+丹下　　　将	6.00	0.17	3.0	１		IP	３		IP	４		IP	５		IP	４		IP	２		IP	１		IP	５		IP	２		IP	３		IP
+木下　　大將	4.80	0.15	3.1	３		IP	６		IP	２		IP	２		IP	６		IP	２		IP	４		IP	５		IP	６		IP	２		IP
+相馬　　　翔	3.70	0.18	3.2	５		IP	３		IP	４		IP	６	6	IP	５		IP	５		IP	３		IP	３		IP	５		IP	３	6	IP
+渡邉　　和将	4.90	0.17	3.4	５		G1	６		G1	４		G1	６		SG	２	5	IP	３		IP	１	5	IP	５		G1	５		G1	４		IP

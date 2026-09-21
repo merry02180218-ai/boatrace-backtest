@@ -1,0 +1,8 @@
+data=
+1	0
+瓜生　　正義	9.50	0.14	3.1	１		G1	１		G1	１		G1	１		G1	１		IP	２		IP	１		IP	１		G1	５		G1	２		IP
+赤岩　　善生	6.50	0.16	4.0	１		IP	１		IP	２		IP	３		G1	４		G1	１		IP	６		G1	６		IP	３		IP	３		IP
+田中　信一郎	7.80	0.14	2.7	６		G1	１		IP	２		IP	２		IP	２		IP	４		G1	１		IP	１		IP	３		IP	１		G3
+平尾　　崇典	5.90	0.14	3.0	２		IP	４		IP	５		IP	６	5	G1	６		G1	５		G1	３		G1	２		G2	１		IP	１		IP
+笠原　　　亮	4.60	0.20	4.0	６		G1	５		G1	４	6	SG	４		SG	３	6	IP	２		IP	３		IP	４		IP	６		IP	５		G1
+古結　　　宏	6.00	0.15	2.9	６	3	G1	４		IP	３		IP	１	5	IP	２		G1	５		G1	１	4	IP	３		IP	６	5	G1	転	5	IP

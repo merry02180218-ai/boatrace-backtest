@@ -1,0 +1,8 @@
+data=
+1	0
+星　　　栄爾	8.20	0.13	1.9	２		IP	５		IP	２		IP	１		IP	１		G3	２		G3	２		IP	１		IP	２		IP	１		IP
+河村　　　了	5.90	0.17	4.3	２		IP	６	3	IP	４		IP	５		IP	３		IP	４		IP	２		IP	１		IP	３		IP	１		IP
+新井　　英孝	4.90	0.17	3.6	２		IP	６		IP	５		IP	２		IP	４		IP	５		IP	３		IP	５		IP	３		IP	１		IP
+伏田　　裕隆	4.80	0.14	2.6	３		IP	６		IP	１		IP	３		IP	２		IP	４		IP	６		IP	６		IP	１	6	G3	６	6	IP
+本橋　　克洋	3.89	0.17	3.8	転		IP	３	4	IP	３		IP	４		IP	４		IP	６		IP	４		IP	４		IP	４		IP	５		IP
+上田　　紗奈	3.60	0.16	3.3	５		IP	２		IP	４		IP	４	5	IP	６		IP	５		IP	５		IP	４		IP	５		G1	３	5	IP

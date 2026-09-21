@@ -1,0 +1,8 @@
+data=
+1	0
+近江　　翔吾	8.60	0.13	1.9	１		IP	１		G1	１		G1	１		IP	１		IP	Ｆ		IP	２		IP	１		IP	１		IP	３		IP
+徳増　　秀樹	5.80	0.15	3.0	５		IP	６		G1	２		G1	１		IP	６		G1	２		IP	３		IP	２		IP	１		IP	６		IP
+橋口　　真樹	4.40	0.18	3.4	１		IP	４		IP	３		IP	５		IP	２		IP	５		IP	５		IP	４		IP	４		IP	５		IP
+山田　　晃大	4.20	0.15	2.3	１		IP	４		IP	３		IP	５		IP	２		IP	６		IP	６		IP	６		IP	６		IP	２		IP
+大平　誉史明	5.90	0.14	2.9	３		IP	１		IP	２	4	IP	６		IP	４		IP	５		IP	３		IP	２		IP	４		IP	１		IP
+眞田　　英二	1.30	0.22	5.1	５		IP	６		IP	６		G3	６		IP	４	5	IP	６		IP	６		IP	５	5	IP	転		IP	転		IP

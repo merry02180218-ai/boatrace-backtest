@@ -1,0 +1,8 @@
+data=
+1	0
+大峯　　　豊	9.60	0.12	2.2	１		IP	１		IP	２		G3	１		G1	１		G1	２		IP	１		IP	２		IP	１		IP	１		IP
+岡谷　　健吾	5.60	0.15	3.6	２		IP	２		IP	５		IP	４		IP	１		IP	３		IP	１		IP	６		IP	６		IP	３		IP
+東本　　勝利	6.00	0.16	3.0	４		IP	３		G3	４		IP	２		IP	４		IP	１		IP	２		IP	５		IP	３		IP	２		IP
+古田　　祐貴	3.20	0.15	2.7	３		IP	１		IP	５		IP	６		G3	５		IP	６		G1	５		IP	６		IP	５		IP	４		IP
+濱崎　　直矢	4.50	0.18	2.9	４		IP	４	4	IP	Ｆ		SG	５		SG	５		IP	４		IP	２		IP	２		IP	２		IP	５		G1
+西村　　　勝	3.60	0.16	2.7	１	5	IP	５		IP	６		IP	５		IP	５		IP	６		IP	４		IP	５		IP	５		IP	１		IP

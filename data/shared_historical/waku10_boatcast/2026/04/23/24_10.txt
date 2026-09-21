@@ -1,0 +1,8 @@
+data=
+1	0
+中本　　大樹	7.30	0.18	3.2	１		IP	５		IP	２		IP	１		IP	１		IP	６		IP	１		IP	１		IP	１		IP	５		IP
+楠　　将太郎	5.20	0.15	3.0	１		IP	４		IP	６		IP	２		IP	２		IP	６		IP	１		IP	５		IP	２		IP	落		IP
+登玉　　隼百	5.11	0.14	3.2	４		IP	２		IP	１		IP	２	4	IP	６		IP	エ		IP	６		IP	６		IP	１		IP	５		IP
+荒木　　颯斗	6.40	0.15	3.0	４		IP	１		IP	５		IP	３	5	IP	２		IP	１	6	IP	３		IP	２		IP	４		IP	３		IP
+齊藤　　　廉	4.90	0.16	3.1	３		IP	５	6	IP	４		IP	４		IP	４		IP	２		IP	４		IP	１		IP	６	6	IP	３		IP
+屋良　　龍紀	4.40	0.15	2.9	６		IP	２		IP	５		IP	４		IP	１		IP	６		IP	５		IP	５		IP	３		IP	２	5	IP

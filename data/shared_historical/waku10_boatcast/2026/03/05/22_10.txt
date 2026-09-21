@@ -1,0 +1,8 @@
+data=
+1	0
+烏野　　賢太	9.10	0.16	4.2	２		IP	１		IP	１		IP	１		IP	３		IP	１		G1	３		IP	１		IP	１		IP	１		IP
+渡邉　　　翼	6.20	0.14	3.1	１		IP	３		IP	６	3	IP	６		IP	４		IP	２		IP	３		IP	１		IP	２		IP	２		IP
+後藤　　美翼	6.20	0.19	3.9	２		IP	４		G3	４		G3	３		G3	１		G3	２		IP	２		IP	５		IP	２		IP	４		IP
+上村　慎太郎	4.20	0.25	5.2	５		IP	３		IP	４		IP	３		IP	６		IP	４		IP	２		IP	６		IP	４		IP	３		IP
+稲生　　夏季	5.20	0.21	4.3	１		IP	Ｆ		G3	３		G3	３		G3	４		IP	４		IP	３		IP	３		IP	４		G3	３		G3
+上原　健次郎	4.10	0.16	4.6	６		IP	３		IP	３	5	IP	４		IP	５		IP	３		IP	３		IP	４		IP	５		IP	４		IP

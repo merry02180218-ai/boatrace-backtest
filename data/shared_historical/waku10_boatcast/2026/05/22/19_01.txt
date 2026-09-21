@@ -1,0 +1,8 @@
+data=
+1	0
+池本　　輝明	8.40	0.16	2.3	２		IP	２		IP	１		IP	２		IP	１		IP	１		IP	５		IP	１		IP	２		IP	１		IP
+西川　　真人	4.20	0.17	4.2	５		IP	２		IP	６		IP	６		IP	６		IP	３		IP	２		IP	３		IP	２		IP	６		IP
+伯母　　芳恒	4.20	0.15	3.0	２		IP	３		IP	３		IP	４		IP	６		G3	６		IP	５		IP	４		IP	４		IP	３		IP
+野田　　亜湖	1.70	0.25	5.0	６		G3	６		G3	６		G3	６		G3	６	5	IP	４		IP	６		IP	５		IP	６		IP	４		IP
+中村　　駿平	3.40	0.18	3.2	２		IP	６		IP	６		IP	３		IP	５		IP	５		IP	５		IP	４		IP	３		IP	５		IP
+鈴木　　智啓	2.80	0.20	3.6	６		IP	４		IP	４		IP	６		IP	６		IP	５		IP	４		IP	３		IP	６		IP	４		IP

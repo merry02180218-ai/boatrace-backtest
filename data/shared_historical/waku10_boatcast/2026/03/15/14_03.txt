@@ -1,0 +1,8 @@
+data=
+1	0
+池田　奈津美	6.70	0.17	2.9	１		IP	２		IP	１		IP	３		IP	６		G3	３		G3	１		G3	５		IP	１		IP	４		IP
+平野　　和明	5.40	0.19	4.3	３		IP	２		IP	３		IP	３		IP	２	1	IP	４		IP	２	3	IP	不		IP	３		IP	５		IP
+西村　美智子	6.20	0.12	2.0	３		IP	４		IP	５		IP	６		IP	６		IP	１		IP	２		IP	１	4	IP	１		G3	１		IP
+高野　　心吾	4.40	0.15	3.4	５		IP	３		IP	１		IP	３	3	IP	３		IP	６		IP	３		IP	６		IP	５		IP	４	5	IP
+西村　　仁吾	1.70	0.24	4.7	４	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	４	6	IP
+赤峰　　和也	3.30	0.21	5.1	３		IP	４	4	IP	４		IP	６		IP	４		IP	６		IP	４	5	IP	３		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+向後　　龍一	9.30	0.10	2.1	２		G2	２		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	１		G3
+是澤　　孝宏	5.70	0.15	3.8	１		G2	６		IP	６	3	IP	４		IP	２		IP	２		IP	１		IP	４		G3	３		IP	４		IP
+権藤　　俊光	4.70	0.13	2.8	５		IP	６		IP	１	4	IP	６		IP	６		IP	１		G1	３		G1	５	5	SG	４		G1	４		G1
+吉田　　拡郎	7.10	0.12	2.6	１		IP	２		IP	２		IP	１		IP	５		G1	３		G1	６		G1	３		G1	３		G1	２		G1
+三浦　洋次朗	4.50	0.13	3.1	２		IP	６		IP	４	4	IP	４		IP	６		IP	３		IP	１	4	IP	６		IP	４		IP	４		IP
+渡邉　　優美	4.90	0.16	3.4	４		G2	５		G2	２		G3	４		G3	４		G1	５		IP	６		SG	２		IP	４		G1	３		IP

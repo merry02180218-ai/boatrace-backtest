@@ -1,0 +1,8 @@
+data=
+1	0
+乃村　　康友	7.60	0.16	3.4	２		IP	３		G3	４		IP	５		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP
+荒川　　健太	5.80	0.16	3.1	１		IP	３		IP	４		IP	２		IP	３		G3	５		IP	２		IP	２		IP	４		IP	６		IP
+大江　　　純	5.70	0.16	2.2	２		IP	１		IP	６		IP	３		IP	４		G3	２		G3	３	4	IP	４		IP	４	2	IP	３		IP
+上野　　拓馬	4.40	0.19	3.2	４		IP	４		IP	５		IP	５		IP	３		IP	４		IP	５		IP	４		IP	１		IP	３		IP
+南　　　佑典	5.10	0.19	4.4	３		IP	５		IP	２		IP	３		IP	２		IP	４	4	IP	４		IP	６		IP	３		IP	３		IP
+花本　　夏樹	3.20	0.26	5.3	５	3	IP	４	4	IP	６		IP	６		IP	２		IP	６		IP	５	5	IP	６	5	IP	３		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+小倉　　康典	5.20	0.14	2.4	１		IP	５		IP	Ｆ		IP	１		IP	１		IP	３		IP	４		IP	４		IP	４		IP	５		IP
+森　　　悠稀	5.60	0.16	3.1	５		G2	３		G2	５		IP	４		IP	２		IP	３		IP	２		IP	３		IP	３		IP	３		IP
+杉田　　篤光	4.80	0.20	4.4	２		IP	５		IP	４	4	IP	３		IP	１		IP	６		IP	３		IP	２		IP	５		IP	６		IP
+寺本　　重宣	6.40	0.12	3.2	３		IP	１		IP	４		IP	１		IP	４		IP	２		G3	５	5	G3	２	5	IP	２		IP	５		G3
+藤田　　康生	3.50	0.15	3.3	５		IP	３	6	IP	５	6	IP	３	6	IP	６	6	IP	５	6	IP	５	6	IP	４	6	IP	２	6	IP	５	6	IP
+橋本　　英一	2.20	0.19	4.1	６		IP	６		IP	４		IP	４		IP	５		IP	６		IP	６		IP	５		IP	４		IP	５		IP

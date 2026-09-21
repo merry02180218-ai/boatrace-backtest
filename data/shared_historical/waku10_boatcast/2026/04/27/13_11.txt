@@ -1,0 +1,8 @@
+data=
+1	0
+丸尾　　義孝	8.44	0.13	2.2	１		IP	４		IP	４		IP	１		IP	１		IP	２		IP	１		IP	転		IP	１		IP	１		IP
+明石　　正之	7.20	0.14	3.4	２		IP	１		IP	４		G3	２		IP	３		IP	１		IP	２		IP	２		IP	２		IP	５		IP
+江藤　　敦宏	5.11	0.18	4.4	４		IP	３		IP	４		IP	２		IP	４		IP	５	4	IP	２		IP	３		IP	４		IP	転		IP
+上條　　嘉嗣	6.80	0.20	4.5	３		G3	３		G3	４		IP	２		IP	２		IP	３		IP	１		IP	３		IP	４		IP	１		IP
+中島　　昂章	4.10	0.20	4.1	４		IP	５	6	IP	３		IP	転		IP	６		IP	４		IP	３		IP	３		IP	４		IP	２	4	IP
+細川　　裕子	4.90	0.23	3.8	２		IP	６		IP	２	5	IP	３		IP	４		G3	５		G1	５		G1	５		IP	４		IP	１		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+佐々木　完太	10.10	0.17	2.6	２		IP	１		IP	１		IP	１		G1	１		G1	１		G1	２		G1	１		IP	１		IP	１		G1
+守田　　俊介	6.50	0.14	2.6	２		IP	６		G1	５		G1	１		IP	６		IP	１		IP	４		G1	２		G1	３		SG	２		G1
+平本　　真之	7.30	0.15	2.9	２		IP	２		G1	５		G1	５		G1	１		G1	４		G1	３		G1	３		G1	２		G1	２		G1
+鎌倉　　　涼	5.67	0.18	4.0	４		G3	２		G1	３		IP	１		IP	転		IP	４		G1	５		IP	１		IP	５		G2	６		G2
+柳生　　泰二	5.30	0.15	3.3	５		IP	５		IP	３		IP	４		G1	３		IP	２		IP	６		G1	５		G1	１		G2	２		IP
+中岡　　正彦	8.10	0.15	3.3	２	2	IP	４		IP	５	2	IP	１	2	IP	１	2	IP	１	3	IP	１	3	IP	１	2	G1	３	4	IP	１	2	IP

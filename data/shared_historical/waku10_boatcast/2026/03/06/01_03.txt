@@ -1,0 +1,8 @@
+data=
+1	0
+太田　　　潮	7.10	0.12	2.2	２		IP	１		IP	３		IP	１		IP	４		IP	１		IP	１		IP	５		IP	１		IP	６		IP
+三浦　　敬太	6.30	0.15	3.0	２		IP	４		IP	１		IP	２		IP	５		IP	６		IP	２		IP	２		IP	４		IP	１		IP
+市川　　美宏	3.60	0.17	3.9	６		IP	６		IP	６		IP	３		IP	６		IP	５		IP	５		IP	３		IP	２		IP	２		IP
+花本　　夏樹	2.90	0.24	5.4	６	5	IP	５		IP	３		IP	５	5	IP	５		IP	４		IP	２		IP	５		IP	６		IP	６		IP
+井上　　恵一	4.00	0.19	3.3	６		IP	４		IP	４		IP	４		IP	５	3	IP	４		IP	４		IP	６		IP	５	4	IP	１	4	IP
+小林　　基樹	2.60	0.22	5.1	４	5	IP	６		IP	５		IP	５		IP	６		IP	６		IP	４	3	IP	４		IP	３		IP	６		IP

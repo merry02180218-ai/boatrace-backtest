@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　拓也	9.70	0.15	2.2	１		G1	３		G1	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		G1	１		G1
+塩田　　北斗	6.50	0.11	3.2	４		G1	１		G1	転		G1	３		G1	４		G1	５		G1	３	3	G1	２		G1	１		IP	３		SG
+前原　　大道	6.00	0.18	3.1	５		G1	４		IP	５		IP	３		IP	３		IP	１		IP	１		G1	２		G1	４		G1	５		IP
+松田　大志郎	8.80	0.10	1.6	３		G1	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP	１	3	G1	５		G1	３		IP
+鎌倉　　　涼	4.60	0.17	4.3	４		G1	６		SG	２		G3	４		G3	５		G1	６		IP	３		IP	４		G1	３		IP	４		G2
+茅原　　悠紀	6.30	0.14	4.4	５		G1	５		G1	４		SG	３		G1	４		G1	２		G1	４		G1	３		G1	２		IP	１	4	IP

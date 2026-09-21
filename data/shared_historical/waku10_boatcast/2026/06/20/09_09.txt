@@ -1,0 +1,8 @@
+data=
+1	0
+福田　　宗平	8.20	0.15	3.7	１		IP	１		IP	２		IP	１		IP	１		IP	４		IP	５		IP	１		IP	２		IP	１		IP
+村上　　彰一	5.70	0.16	3.5	４		IP	３		IP	２		IP	３		IP	５		IP	２		IP	３		IP	２		IP	２		IP	６		IP
+横川　　聖志	5.50	0.12	2.3	２		IP	５		IP	４		IP	２	4	IP	１		IP	３		IP	５		IP	５		IP	２		IP	４		IP
+中北　　将史	5.00	0.16	3.0	５		IP	２		IP	４		IP	４		IP	１		IP	２		IP	５		G3	３		G3	４		IP	５		IP
+金子　　怜央	3.10	0.14	2.8	３		IP	４		IP	５		IP	６	6	IP	５	6	IP	６		IP	５		IP	６		IP	５		IP	１		IP
+篠田　　優也	4.40	0.18	4.1	４		IP	３		IP	５		IP	５		IP	３		IP	５		IP	５		IP	４		IP	４	5	IP	１	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+高井　　駿弥	7.00	0.20	3.7	６		IP	６		IP	２		IP	１		IP	２		IP	１		IP	３		IP	２		IP	２		IP	１		IP
+川原　　　涼	5.10	0.16	3.1	２		IP	４		IP	１	4	IP	６		IP	３		IP	５		IP	３		IP	３		IP	３		IP	５		IP
+谷口　　　丞	4.30	0.16	3.6	３		IP	５		IP	１		IP	Ｆ		IP	３		IP	６		IP	２		IP	６	5	IP	２		IP	６		G3
+山下　　大輝	6.40	0.16	3.7	３		IP	１		G1	３	5	IP	５		IP	２		IP	１		IP	５		G1	６		G1	２		IP	２		IP
+廣瀬　　　凜	7.60	0.18	3.3	１		IP	２		IP	１		IP	２		IP	２		IP	３		G2	５		G2	３		IP	２		G3	２		G3
+萩原　丈太朗	2.20	0.23	4.2	３		IP	５		IP	５		IP	Ｆ		IP	６		IP	５		IP	４		IP	５		IP	６		IP	５		IP

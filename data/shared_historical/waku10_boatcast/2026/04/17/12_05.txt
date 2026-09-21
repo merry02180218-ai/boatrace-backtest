@@ -1,0 +1,8 @@
+data=
+1	0
+三川　　昂暁	8.20	0.19	3.9	３		IP	２		IP	２		IP	２		IP	１		IP	１		IP	３		IP	２		IP	１		IP	２		IP
+表　　　健太	5.30	0.17	2.8	１		IP	３		IP	３		IP	３		IP	３		IP	６		IP	６		IP	２		IP	２		IP	６	3	IP
+栗山　　繁洋	3.60	0.27	4.6	４		IP	５		IP	６	4	IP	１		IP	４	4	IP	５		IP	５		IP	６		IP	２	4	IP	５		IP
+樫葉　　次郎	1.80	0.14	3.4	６	5	IP	６		IP	５		IP	５		IP	５		IP	５		IP	４	3	IP	６		IP	５		IP	６		IP
+北村　　寧々	3.90	0.14	3.4	５		IP	５		IP	６		IP	２		IP	４		G3	５		IP	３		IP	２		IP	５	4	IP	４		IP
+黒井　　達矢	5.00	0.23	4.3	５		G1	４	5	IP	２	3	IP	２		G1	５		IP	５		IP	２		IP	５	5	IP	４		IP	３		IP

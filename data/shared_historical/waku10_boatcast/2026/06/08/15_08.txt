@@ -1,0 +1,8 @@
+data=
+1	0
+安井　　瑞紀	5.30	0.21	4.7	６		IP	６		IP	１		IP	３		IP	５		G3	３		G3	３		IP	１		IP	６		IP	１		IP
+原田　　佑実	7.20	0.15	2.1	３		IP	５		IP	１		IP	２		IP	２		G3	３		G3	４		IP	１		G3	１		IP	２		IP
+西村　美智子	6.70	0.12	2.1	３		IP	２		IP	１		IP	６		IP	４		IP	１		IP	２		IP	４	2	IP	１		IP	３		IP
+山田　　理央	7.30	0.13	2.7	１		IP	３		IP	３		IP	１		G2	２		IP	１		IP	１		IP	３		G3	３		G3	転		IP
+福岡　　泉水	3.60	0.15	2.8	４		IP	５		IP	４		IP	４		IP	６		IP	４		IP	５		IP	６		IP	３		IP	２		G3
+森　　　陽多	2.10	0.23	4.3	６		IP	４		IP	５		IP	６		IP	４		IP	５		IP	６		IP	５		IP	５		IP	５		IP

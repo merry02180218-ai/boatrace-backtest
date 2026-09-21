@@ -1,0 +1,8 @@
+data=
+1	0
+川野　　芽唯	8.60	0.17	3.1	１		IP	６		IP	１		IP	１		IP	１		IP	１		IP	１		G1	１		G1	５		IP	１		G1
+常盤　　海心	3.70	0.17	3.6	２		IP	６		IP	５		IP	６		IP	６		IP	２		IP	６		IP	３	3	IP	６	3	IP	２		IP
+西村　美智子	5.40	0.12	1.9	２		IP	４	2	IP	１		IP	３		IP	４		IP	５		IP	６		IP	６		IP	１		IP	２		IP
+鈴木　　勝博	5.30	0.14	3.1	１		IP	５	5	IP	４	5	IP	５		IP	２		IP	４		IP	５		IP	１		IP	６		IP	１		IP
+北村　　征嗣	5.30	0.17	3.4	４		IP	４		G3	５		G3	３		IP	３		IP	４		IP	１		IP	３		IP	２		IP	６		G1
+吉原　　聖人	1.80	0.23	5.2	６		IP	５	5	IP	５	5	IP	５		IP	６		IP	６		IP	５		IP	４		IP	５	5	IP	６		IP

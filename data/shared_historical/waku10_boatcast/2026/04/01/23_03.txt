@@ -1,0 +1,8 @@
+data=
+1	0
+奈須　　啓太	8.20	0.17	2.4	１		IP	１		IP	２		IP	２		IP	２		IP	１		IP	５		IP	３		IP	１		IP	１		IP
+服部　　　剛	5.60	0.21	4.3	２		IP	３		IP	２		IP	２		IP	６		IP	５		IP	４		IP	２		IP	１		IP	６		IP
+片岡　　大地	5.20	0.16	2.8	４		IP	３		IP	４		IP	５		IP	３		IP	２		IP	１	2	IP	２	1	IP	５	4	IP	５		IP
+林　　　美憲	6.80	0.16	3.4	３		IP	２		IP	２		IP	５		G1	６		IP	３		IP	２	3	IP	１		IP	２		IP	１	3	IP
+渡　　　修平	4.10	0.16	3.9	３		IP	６		IP	５	6	IP	２		IP	２		IP	５		IP	４		IP	６		IP	６		IP	２		IP
+小柳　　勝希	3.50	0.27	5.0	４		IP	４		IP	４		IP	５		IP	５		IP	６		IP	４		IP	３		IP	４		IP	４		IP

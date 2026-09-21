@@ -1,0 +1,8 @@
+data=
+1	0
+三松　　直美	5.10	0.12	2.3	１		G3	５		G3	６		G3	３		G3	６		G3	１		IP	１		IP	６		IP	５		IP	２		IP
+山崎　小葉音	5.20	0.16	3.0	５		IP	２		IP	５		IP	１		IP	２		IP	３		IP	４		IP	２		IP	４		IP	Ｆ		IP
+倉持　　莉々	6.00	0.11	2.7	１		IP	５		IP	３		G1	３		G1	２		G1	４		G1	６		G3	４		G3	３	4	IP	２		IP
+間庭　　菜摘	4.20	0.17	3.5	３		IP	５		IP	６		IP	５		G1	４		G3	４		G3	３	6	IP	３		IP	３		IP	４		IP
+大橋　　由珠	3.80	0.13	2.1	４		IP	５		IP	５		IP	３		G3	３		G3	４		IP	４		G3	４		G3	５		G3	４		IP
+高橋　　涼夏	1.80	0.17	3.7	４	5	IP	６		IP	６		IP	４		IP	５		IP	Ｆ		IP	５		IP	５		IP	６		IP	６		IP

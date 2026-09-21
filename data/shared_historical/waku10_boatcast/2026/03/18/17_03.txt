@@ -1,0 +1,8 @@
+data=
+1	0
+倉田　　郁美	6.10	0.23	3.8	２		IP	２		IP	１		IP	２		IP	２		IP	６		IP	６	2	IP	６		IP	２		G3	２		IP
+南　　　彩寧	2.80	0.21	3.2	５		IP	６		IP	５		IP	６		IP	４		G3	２		IP	６		IP	６		IP	３		IP	５		IP
+新田　　芳美	4.70	0.17	3.8	５		IP	６		IP	１		G1	２		G1	４		IP	４		IP	４		IP	３		IP	５		IP	４		G3
+川井　　　萌	4.30	0.16	3.9	４		G1	３		IP	落		IP	３	3	IP	４		G3	Ｆ		IP	６		SG	２		G2	３		IP	４	5	IP
+大山　　千広	4.50	0.16	2.3	３		IP	２		IP	２		IP	３		IP	５		IP	５		IP	６		IP	３		IP	４		IP	５		IP
+松本　　　怜	3.80	0.21	4.3	２		IP	５		IP	４		IP	５		IP	３		IP	６		IP	４		IP	４		IP	３		IP	６		IP

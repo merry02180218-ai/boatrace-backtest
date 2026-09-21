@@ -1,0 +1,8 @@
+data=
+1	0
+松瀬　　弘美	6.40	0.21	5.0	１		IP	６		IP	３		G3	２		IP	１		G3	２		G3	１		G3	６		IP	２		IP	５		IP
+倉持　　莉々	7.70	0.15	3.2	３	3	IP	１		IP	１		G2	５		G2	５		IP	１	3	IP	２		IP	１		IP	３		IP	１		IP
+廣中　智紗衣	6.50	0.22	4.2	２		G3	６		IP	２		IP	２		IP	５		IP	２		IP	２		IP	５		IP	１		IP	２		IP
+坂　　咲友理	4.60	0.21	4.7	６		G3	２		G3	６		IP	４		G3	５		G3	２		IP	５		IP	１		IP	２		IP	５		IP
+中里　　優子	4.80	0.20	3.6	３		IP	３		IP	５		G3	４		G3	４		IP	３		IP	２	4	IP	３		IP	５		IP	４		IP
+林　　　風音	1.50	0.19	3.5	６		G3	６		G3	６		IP	６		IP	６		IP	６		IP	６		IP	３		IP	６		IP	６		IP

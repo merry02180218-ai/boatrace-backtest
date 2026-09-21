@@ -1,0 +1,8 @@
+data=
+1	0
+妻鳥　　晋也	7.60	0.18	4.1	２		IP	１		IP	１		IP	２		IP	４		IP	２		IP	１		G3	１		IP	５		IP	３		IP
+笠　　　雅雄	6.10	0.14	2.8	３		IP	４		IP	３		IP	１		IP	５		IP	２		IP	３		IP	１		IP	２		IP	６		IP
+大澤　　誠也	4.40	0.20	3.5	４		IP	４		IP	３		IP	５		IP	３		IP	５		IP	４		IP	３		IP	５		IP	２		G3
+櫻井　　　隼	1.90	0.22	5.1	６		IP	４		IP	６		IP	５	6	IP	５	6	IP	５	6	IP	６	6	IP	４	6	IP	６	6	IP	６	6	IP
+福来　　　剛	6.00	0.11	1.6	１		IP	４		G2	４		G2	２		IP	４		IP	２		IP	５		G1	３		G1	転		IP	１		IP
+本橋　　克洋	3.20	0.19	3.9	６		IP	６		IP	５		IP	３	5	IP	４	4	IP	３	5	IP	４		IP	５		IP	５	5	IP	４	4	IP

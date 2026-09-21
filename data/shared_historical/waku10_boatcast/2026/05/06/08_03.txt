@@ -1,0 +1,8 @@
+data=
+1	0
+岸本　　雄貴	7.90	0.12	2.2	１		IP	１		IP	Ｆ		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	６		IP
+西尾　　亮輔	3.20	0.16	2.7	１		IP	５		IP	６		IP	３		IP	２		IP	６		IP	６		IP	６		IP	５		IP	Ｆ		IP
+北川　　潤二	5.60	0.17	2.8	３		IP	３		G3	３	4	G3	４		IP	２		IP	２		G3	３		G3	２		IP	６		IP	６		IP
+荒木　　颯斗	6.80	0.15	2.5	１		IP	４		IP	４		IP	１		IP	５		IP	３	5	IP	２		IP	１	6	IP	３		IP	２		IP
+宮崎　　奏磨	1.10	0.18	4.1	６		IP	５	6	IP	６		IP	６		IP	６		IP	６	6	IP	６		IP	６	6	IP	６	6	IP	６		IP
+鰐部　太空海	4.40	0.21	3.3	１		IP	４		IP	６		IP	５		IP	３	5	IP	４	5	IP	３		IP	５		IP	３		G1	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+坂本　　一真	4.50	0.15	3.0	４		IP	６		IP	５		IP	２		IP	４		IP	５		IP	５		IP	１		IP	５		IP	１		IP
+山下　　智己	4.00	0.19	2.9	５		IP	４		IP	４		IP	６		IP	２		IP	４		IP	４		IP	５		IP	６		IP	１		IP
+沼田　　大都	5.00	0.22	4.9	３		IP	２		IP	６		IP	４		IP	３		IP	４		IP	２		IP	４		IP	２		IP	６		IP
+出畑　　孝成	5.00	0.15	3.3	落		IP	１		IP	６		IP	６		IP	２		IP	５		IP	２		IP	６		IP	２		IP	３		IP
+佃　　　來紀	5.50	0.14	3.5	５		G3	２		IP	２		IP	４		IP	２		IP	３		IP	６		IP	１		IP	５		IP	３		G3
+網代　　良芽	4.20	0.13	2.3	４		IP	４		IP	３		IP	６		IP	４		IP	４		IP	５		IP	３		IP	１		IP	６		IP

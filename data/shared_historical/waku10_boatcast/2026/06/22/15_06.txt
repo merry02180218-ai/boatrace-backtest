@@ -1,0 +1,8 @@
+data=
+1	0
+河内　　一馬	5.70	0.14	2.9	１		IP	４		IP	２		IP	５		IP	１		IP	１		IP	６		IP	５	2	IP	２		IP	５		IP
+石井　　伸長	6.90	0.21	4.2	１		IP	１		IP	６		IP	２		IP	２		IP	３		IP	１		IP	２		IP	５		IP	３		IP
+飛田　　江己	7.60	0.08	1.6	２		IP	３		IP	１		IP	４		IP	４		G2	１		G2	１		IP	５		IP	１		IP	１		IP
+藤森　　拓海	2.60	0.18	4.7	６		IP	６	5	IP	３		IP	４		IP	５		IP	６		IP	４		IP	５		IP	６		IP	４		IP
+廣瀬　　　凜	7.50	0.14	2.6	２		IP	２		IP	２		IP	５		IP	２		IP	２		G2	３		IP	１		IP	１		IP	３		IP
+牧村　　俊輝	2.30	0.21	4.9	４		IP	６		IP	５		IP	６		IP	６		IP	３	5	IP	６		IP	５		IP	４		IP	６		IP

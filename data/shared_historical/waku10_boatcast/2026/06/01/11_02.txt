@@ -1,0 +1,8 @@
+data=
+1	0
+表　　　健太	3.00	0.21	3.7	転		IP	５	2	IP	５		IP	４		IP	５		IP	３		IP	６		IP	２		IP	欠		IP	５		IP
+鶴本　　崇文	4.90	0.17	3.9	４	3	IP	４		IP	２		IP	２		IP	３		IP	２		IP	５		IP	６		IP	３		IP	５		IP
+上田　　洋平	5.10	0.16	2.8	３		IP	３		IP	３		IP	３		IP	３		IP	６		IP	３		IP	４		IP	３		IP	４		IP
+栗原　　直也	5.00	0.16	2.8	３		IP	４		IP	２		IP	２		IP	１		IP	４		IP	５		IP	５		IP	５		IP	４		IP
+渡邊　　雄斗	3.80	0.17	3.3	５		IP	３	6	IP	１		IP	５		IP	４		IP	５		IP	６		IP	６		IP	４		IP	３	6	IP
+佐々木　和伸	4.10	0.18	4.5	６		IP	４		IP	５		IP	４		IP	３		IP	３		IP	３		IP	５		IP	３		IP	４		IP

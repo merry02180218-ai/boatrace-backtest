@@ -1,0 +1,8 @@
+data=
+1	0
+喜多　那由夏	7.00	0.18	3.8	２		IP	２		IP	５		IP	１		IP	２		IP	３		IP	２		IP	１		IP	４		G3	３		IP
+宮内　由紀英	4.40	0.19	3.9	６		IP	２		IP	４		IP	４		IP	６		IP	３		IP	５		IP	３		IP	２	3	IP	４		IP
+若林　　樹蘭	5.90	0.16	3.4	２		IP	３		IP	３		IP	２		IP	６		IP	１	4	IP	４		IP	５	4	IP	５		IP	１		IP
+津久井　拓也	7.40	0.14	2.8	４		IP	２		IP	２	5	IP	２		IP	３	5	IP	１		IP	５		IP	１		IP	２		G3	１		G3
+樅山　　拓馬	5.40	0.16	2.4	４		IP	４		IP	２		IP	５		IP	６		G3	２		G3	３		IP	１		IP	１		IP	６	2	IP
+柳瀬　　興志	4.60	0.19	4.5	５		IP	２		IP	２		IP	３		IP	６		IP	２		IP	５		IP	５	5	IP	６		IP	４		IP

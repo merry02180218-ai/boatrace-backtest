@@ -1,0 +1,8 @@
+data=
+1	0
+松下　　誉士	4.90	0.18	4.3	３		IP	妨		IP	２		IP	５		IP	２		IP	６		IP	２		IP	５		IP	３		IP	２		IP
+嘉手苅　徹哉	2.70	0.16	3.3	４		IP	４		IP	４		IP	４		IP	６		IP	４		IP	６		IP	５		IP	５		IP	６		IP
+藤原　　孝斗	4.11	0.17	3.8	５		IP	５	4	IP	２		IP	１		IP	６		IP	５		IP	２		IP	５		IP	５		IP	転	2	IP
+桑島　　和宏	4.90	0.15	3.3	３		IP	３		IP	２		IP	３		G1	６		G1	４		G1	５		G1	４		IP	３		IP	６		IP
+鶴本　　崇文	6.50	0.14	2.7	２		IP	１	4	IP	３		IP	５		IP	６		IP	４		IP	３		IP	２		IP	１	3	IP	２		IP
+滝沢　　芳行	4.20	0.17	3.4	４		G3	３		IP	２	4	IP	４	4	IP	４		IP	２		IP	６		IP	５	5	IP	５		IP	５		IP

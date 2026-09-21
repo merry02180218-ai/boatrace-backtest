@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　雄二	5.80	0.17	3.2	３		IP	４		IP	２		IP	３		IP	１		IP	５	2	IP	３		IP	４		IP	２		IP	４		IP
+稗田　　聖也	8.00	0.14	2.6	２		IP	４		IP	１		IP	２		IP	２		IP	１		IP	３		IP	２		IP	１		IP	２		IP
+広次　　　修	4.60	0.17	3.1	２		IP	６		IP	６	2	IP	５		IP	３		IP	３		IP	２		IP	５		IP	５		IP	１		IP
+荒牧　　凪沙	5.80	0.15	2.8	６		IP	１		IP	１		IP	４		IP	４		IP	５		IP	６		IP	２		IP	１		IP	２		IP
+大場　　　敏	3.50	0.16	3.8	４		IP	４		IP	６		IP	５		IP	５		IP	４	4	IP	１	4	IP	４		IP	５		IP	５		IP
+田路　　朋史	2.70	0.18	3.4	４		IP	４	4	IP	５		IP	６		IP	４		IP	６		IP	６		IP	５		IP	４		IP	４		IP

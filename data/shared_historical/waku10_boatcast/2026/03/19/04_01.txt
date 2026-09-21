@@ -1,0 +1,8 @@
+data=
+1	0
+東　　　健介	7.11	0.16	2.6	４		IP	３		IP	１		IP	１		IP	４		IP	１		IP	転		IP	２		IP	２		IP	４		IP
+土井　　祥伍	3.60	0.20	4.8	５		IP	１		IP	Ｆ	1	IP	５		IP	５		IP	４		IP	３		IP	２		IP	６		IP	６		G3
+飯田　　庄吾	3.30	0.20	3.9	２		IP	６		IP	６		IP	５		IP	４		IP	３	5	IP	転		IP	３		IP	６		IP	４		IP
+藤丸　　光一	2.80	0.21	5.0	５		IP	３		IP	５		IP	５		IP	５		IP	５		IP	５		IP	５		IP	４		G3	４		G3
+安藤　　瑠希	1.90	0.20	3.6	６	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	４	6	IP	６	6	IP	３	6	IP	６	6	IP	６	6	IP
+鈴谷　　一平	5.00	0.13	2.1	６		G1	２		IP	５		IP	５		IP	４		IP	５		IP	３		IP	１		IP	２		IP	３		IP

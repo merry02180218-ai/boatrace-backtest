@@ -1,0 +1,8 @@
+data=
+1	0
+村田　　修次	8.60	0.14	1.7	１		IP	３		IP	１		IP	１		IP	２		IP	２		IP	１		IP	２		IP	３		IP	１		IP
+小倉　　康典	4.80	0.16	3.4	４		IP	６		IP	４		IP	３		IP	３	3	IP	１		IP	６		IP	２		IP	３		IP	５		IP
+阿波　　勝哉	5.90	0.18	3.9	４		IP	１		IP	２		IP	４	5	IP	１		IP	６		IP	６	6	IP	６		IP	１	6	IP	１	5	IP
+齊藤　　　仁	4.00	0.14	3.2	５		G1	１		IP	３		IP	４		G3	６		G1	６		G1	６		G1	５		G1	転		G1	転		IP
+田村　　美和	3.40	0.16	2.6	５		G3	５		G3	４		IP	２		IP	６	6	IP	６		IP	４		G3	４		G3	４		G3	４		G3
+山崎　　善庸	3.00	0.29	5.4	６		IP	５		IP	６		IP	５		IP	２	5	IP	４		IP	４		IP	３		IP	６		IP	６		IP

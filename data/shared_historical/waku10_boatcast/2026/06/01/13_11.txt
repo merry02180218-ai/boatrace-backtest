@@ -1,0 +1,8 @@
+data=
+1	0
+三嶌　　誠司	7.60	0.17	3.7	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	４		IP	３		IP	Ｆ		IP	１		IP
+篠田　　優也	6.22	0.18	3.1	５		IP	２		IP	１		IP	２		IP	欠		IP	３		IP	３		IP	２		IP	４		IP	４		IP
+三浦　　裕貴	5.30	0.17	3.7	２		IP	５		IP	３		IP	４		IP	１		IP	２		IP	３	4	IP	５		IP	６		IP	３		IP
+清水　　敦揮	6.00	0.15	3.1	３		IP	４		IP	３		IP	３		IP	１		IP	４		IP	３		IP	３		IP	１		IP	５		IP
+古賀　　智之	6.30	0.17	3.7	３		IP	１		IP	３		IP	１		IP	６		IP	２		G2	４	6	G2	２		IP	４		IP	４		IP
+岩井　　　繁	4.10	0.19	4.4	６		IP	３	5	IP	４		IP	６		IP	３		IP	５		IP	３		IP	６		IP	３		IP	２	5	IP

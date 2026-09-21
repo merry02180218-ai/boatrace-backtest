@@ -1,0 +1,8 @@
+data=
+1	0
+定松　　勇樹	10.50	0.13	3.5	２		G1	１		G1	１		SG	１		G2	１		G2	１		G1	１		G3	２		G3	１		G1	１		G1
+小野　　勇作	5.50	0.21	4.0	１		IP	４		IP	１	3	IP	１	3	IP	６		IP	５		IP	２		IP	２		IP	６		IP	６		IP
+常住　　　蓮	7.60	0.17	3.4	４		IP	２		G1	２		IP	３		IP	３		SG	２		IP	１		G1	３		G1	３		G1	２		IP
+竹田　　広樹	3.70	0.20	3.4	２		IP	５	5	IP	３		IP	６	5	IP	３		IP	５		IP	６		IP	４		IP	３		IP	６		IP
+知念　　伶奈	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+酒見　　峻介	2.50	0.23	4.5	４		IP	６		IP	４		IP	６	4	IP	５		IP	６		IP	５		IP	５	3	IP	５		IP	３		IP

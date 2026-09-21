@@ -1,0 +1,8 @@
+data=
+1	0
+村松　　修二	9.20	0.15	2.4	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+中村　　有裕	5.60	0.15	3.4	４		IP	５		IP	５		IP	４	4	IP	１		IP	１		IP	６	3	IP	１		IP	６		IP	１		IP
+一色　　凌雅	4.30	0.19	3.6	６		IP	６		G3	１		IP	５	2	IP	２		IP	６		IP	３		IP	転		IP	１	4	IP	４		IP
+石原　　　光	3.70	0.17	3.5	６		G3	２		IP	６		IP	５	5	IP	５		IP	６	6	IP	３		IP	５		IP	３		IP	２		IP
+前田　　紗希	5.22	0.12	2.8	２		G1	４		G3	２		G3	４		G3	欠		G3	３		IP	３	4	IP	５		IP	４		G3	４		G3
+古賀　　智之	2.90	0.21	3.9	６		G2	５		IP	２		IP	３		IP	６		IP	５		IP	５		IP	５		G3	落		G3	５		IP

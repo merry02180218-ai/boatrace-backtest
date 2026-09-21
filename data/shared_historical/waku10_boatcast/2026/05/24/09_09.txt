@@ -1,0 +1,8 @@
+data=
+1	0
+照屋　　厚仁	8.30	0.16	4.1	１		IP	１		IP	２		IP	１		IP	２		IP	２		IP	１		IP	２		IP	６		IP	１		IP
+森林　　　太	3.80	0.20	4.9	４		IP	２		IP	３		IP	５		IP	６		IP	４		IP	４		IP	４		IP	４		IP	６		IP
+中野　　孝二	4.20	0.15	2.9	１	4	IP	４		IP	６		IP	５		IP	６		IP	２		IP	５		IP	４		IP	４		IP	３		IP
+林　　　美憲	4.20	0.16	3.1	５	3	IP	６		IP	３		IP	６		G1	４		IP	６		IP	４		IP	３		IP	２		IP	２		IP
+丸尾　　義孝	4.50	0.18	3.1	４		IP	５		IP	３		IP	４		IP	４		IP	５		IP	５	4	IP	１		IP	２		IP	５		G1
+島川　　光男	3.80	0.19	4.4	５		IP	１		IP	３		IP	５		IP	４		IP	５		IP	５		IP	２		IP	６		IP	６		IP

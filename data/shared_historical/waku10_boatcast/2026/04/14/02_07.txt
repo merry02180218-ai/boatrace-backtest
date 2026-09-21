@@ -1,0 +1,8 @@
+data=
+1	0
+松田　　祐季	9.10	0.13	3.0	６		IP	１		IP	１		IP	１		IP	１		IP	２		G1	１		G1	１		G1	１		G1	２		IP
+山本　　浩次	5.30	0.20	3.4	３		IP	５		IP	６		G3	５		G3	３		IP	３		IP	２		IP	１		IP	４		IP	２		IP
+眞鳥　　康太	3.90	0.22	4.2	５	4	IP	６	4	IP	６	6	IP	５	5	IP	３	5	IP	４	6	IP	６		IP	３	6	IP	３		IP	１		IP
+折下　　寛法	4.20	0.11	1.9	５		IP	５		IP	３		IP	３	3	G3	５		G3	３		IP	５		IP	４		IP	４		IP	２		IP
+柳瀬　　幹太	5.50	0.14	2.5	５	6	IP	１		IP	６		IP	２		IP	３		IP	５		IP	３		IP	２		IP	４		G3	２		IP
+吉田　　翔悟	2.50	0.19	4.9	６		IP	５		IP	５		IP	６		IP	６		IP	５		IP	３		IP	５		IP	４		IP	４		IP

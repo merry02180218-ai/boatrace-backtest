@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　裕也	8.10	0.15	3.0	２		IP	１		IP	２		IP	１		IP	１		IP	６		G1	１		IP	１		IP	５		IP	１		G1
+河野　　　大	6.10	0.12	2.4	２		IP	２		IP	３		IP	６		IP	２		IP	２	3	IP	２		IP	１		IP	６		G2	６		G2
+森　　晋太郎	4.80	0.12	2.2	３		IP	４		IP	５		IP	１		IP	Ｆ		IP	２		IP	４	4	IP	２		IP	５		IP	４		IP
+加藤　　翔馬	7.20	0.18	3.3	３		IP	１		IP	２		IP	５		IP	２		IP	３	5	IP	２		G3	２		G3	１		G3	３		IP
+南野　　利騰	3.40	0.15	3.3	５		IP	３	6	IP	３		IP	４		IP	５		IP	３		IP	４		IP	６		IP	６		IP	５		IP
+福田　　翔吾	6.50	0.17	3.8	４		IP	６		IP	１		IP	３		IP	３		IP	２	5	IP	１		IP	１		IP	５		IP	２		IP

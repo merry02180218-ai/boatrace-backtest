@@ -1,0 +1,8 @@
+data=
+1	0
+山口　　裕二	8.70	0.17	3.4	１		IP	２		IP	３		IP	３	2	IP	１		IP	２		G1	１		IP	２		IP	１		IP	１		IP
+安達　　裕樹	6.50	0.19	3.0	３		IP	２		IP	６		G2	３		G2	２		G2	４		G2	５		IP	２		IP	１		IP	２		IP
+上田　　龍星	4.90	0.14	3.2	５		G1	２		G2	３		G2	３		IP	３		IP	３		IP	４	2	IP	６		G1	６		G1	５		G1
+河野　　　大	5.60	0.13	2.6	４		IP	５		IP	２		IP	５		IP	４		IP	２	3	IP	１		IP	４		IP	２		IP	３	5	IP
+畑田　　汰一	6.90	0.11	2.3	４		IP	１	4	IP	２		IP	２		IP	３		IP	３		IP	１		IP	２		IP	５		IP	３		G1
+今垣　光太郎	4.11	0.17	3.8	３	4	IP	５		IP	６		SG	５		G1	５		IP	３	4	IP	５		G1	５		G1	２		G1	欠		G2

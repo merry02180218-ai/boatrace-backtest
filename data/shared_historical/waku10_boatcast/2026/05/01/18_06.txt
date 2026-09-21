@@ -1,0 +1,8 @@
+data=
+1	0
+中渡　　修作	7.60	0.14	3.1	１		IP	１		IP	２		IP	３		IP	２		IP	１		IP	４		IP	２		IP	２		IP	４		IP
+幸野　　史明	5.90	0.15	3.4	１		IP	５		IP	２		IP	６	3	IP	１		IP	３		IP	３		IP	１		IP	５		IP	４		IP
+井本　　昌也	7.90	0.11	2.5	２		IP	３		IP	１		IP	２		G1	５		G1	２		G2	１		G1	３		G1	２		IP	２		IP
+清水　　攻二	6.20	0.16	4.1	２		IP	４		IP	５		IP	２		IP	２		IP	１	2	IP	５		IP	５	2	IP	２		IP	１		IP
+加木　　　郁	3.90	0.20	4.3	５		IP	６		IP	４		IP	２		IP	４		IP	３		IP	３		IP	５		IP	４		IP	５	4	IP
+三宅　　　潤	3.10	0.20	5.2	６		IP	４		IP	４		IP	４		IP	６		IP	６		IP	４	5	IP	４		IP	４		IP	４		IP

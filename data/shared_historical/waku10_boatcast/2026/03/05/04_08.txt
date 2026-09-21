@@ -1,0 +1,8 @@
+data=
+1	0
+大石　　真央	7.10	0.15	3.4	３		IP	５		IP	１		IP	１		IP	１		IP	５		IP	１		IP	６		IP	１		G3	１		G3
+増田　　　進	5.20	0.16	2.7	３		IP	３		IP	４		IP	４		IP	４		IP	２		IP	６		IP	１		IP	２		IP	６		IP
+岡　　　祐臣	6.10	0.15	3.3	２		IP	６		IP	３		IP	３		IP	２		IP	２		IP	１		IP	４		IP	２		IP	５		IP
+吉永　　泰弘	4.10	0.21	4.5	４	5	IP	１		IP	５		IP	３		IP	６		G3	５		G3	４		G3	３		G3	５		IP	４		IP
+塚越　　陸斗	1.40	0.23	3.8	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	５	6	IP	６	6	IP	５	6	IP	５	6	IP
+浮田　　圭浩	4.20	0.21	5.2	２		IP	１	5	IP	３		IP	６		IP	５		IP	５		IP	４		IP	４		IP	６		IP	４		G3

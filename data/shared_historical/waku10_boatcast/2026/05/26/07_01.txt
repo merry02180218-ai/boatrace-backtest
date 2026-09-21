@@ -1,0 +1,8 @@
+data=
+1	0
+北川　　敏弘	5.60	0.20	4.0	３		IP	５		IP	６		IP	１		IP	３		IP	２		IP	１		IP	２		IP	４		IP	６		IP
+吉川　　勇作	2.50	0.15	2.7	５		IP	６		IP	６		IP	６		IP	６		IP	６	3	IP	６		IP	６		IP	２		IP	２		IP
+後藤　　孝義	3.11	0.19	3.3	６		IP	４		IP	欠		IP	２		IP	４	5	IP	５		IP	５		IP	４		IP	５		IP	６		IP
+上村　　宏太	4.30	0.16	2.5	３		IP	６	5	IP	３		IP	転		IP	５	5	IP	４		IP	４		IP	４		IP	３		IP	１		IP
+安東　　幸治	3.80	0.18	4.7	３		IP	６		IP	５		IP	３		IP	４		IP	５		IP	６		IP	３	4	IP	４		IP	３		IP
+松浦　　　勝	2.10	0.20	4.5	５		IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	２	5	IP

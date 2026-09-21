@@ -1,0 +1,8 @@
+data=
+1	0
+乙津　　康志	5.80	0.20	4.8	３		IP	５		IP	１		IP	１		IP	５		IP	５		IP	２		IP	１		IP	４		IP	４		IP
+花本　　　剛	2.60	0.18	3.4	５		IP	４		IP	５		IP	５		IP	５		IP	５		IP	１		IP	欠		IP	６		IP	６		IP
+塚越　　海斗	6.10	0.14	2.4	２		IP	２	1	IP	２		IP	４		IP	６		IP	３		IP	３		IP	３		IP	３		IP	２		IP
+山本　景士郎	5.40	0.18	3.5	３		IP	３		IP	３		IP	３	5	IP	３		IP	２		IP	３		IP	６		IP	４		IP	４		IP
+渋谷　　明憲	5.30	0.14	3.6	６		IP	２		IP	３		IP	４		IP	３		IP	２		G3	６		G3	２		IP	２		IP	５		IP
+作間　　　章	5.60	0.20	3.6	３		IP	２		IP	３		IP	４		IP	４		IP	６		IP	３		IP	６		IP	２		IP	１		IP

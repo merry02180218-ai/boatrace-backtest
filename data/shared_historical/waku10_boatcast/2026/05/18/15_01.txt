@@ -1,0 +1,8 @@
+data=
+1	0
+栗山　　繁洋	5.10	0.21	4.0	４		IP	６		IP	４		IP	３		IP	２		IP	４		IP	４		IP	１		IP	５		IP	２		IP
+國弘　　翔平	4.00	0.15	2.5	５		IP	４		IP	妨		IP	３		IP	３		IP	５		IP	２		IP	４		IP	５		IP	３		IP
+松尾　　光広	4.00	0.19	4.0	３		IP	６		IP	６		IP	４		IP	６		IP	６		IP	３		IP	３		IP	２		IP	３		IP
+松本　　弓雄	4.30	0.20	3.8	４		IP	５		IP	５		IP	５		IP	６		IP	１	5	IP	４		IP	３		IP	３		IP	３	5	IP
+飯山　　晃三	5.40	0.22	4.8	６		IP	２		IP	５		IP	６	6	IP	２		IP	２		IP	３		IP	３		IP	３		IP	２	4	IP
+久保　　翔耶	1.00	0.23	6.0	６		IP																											IP

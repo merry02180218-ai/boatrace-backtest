@@ -1,0 +1,8 @@
+data=
+1	0
+藤森　　陸斗	7.80	0.15	2.5	１		IP	３		IP	２		IP	１		IP	４		IP	４		IP	２		IP	１		IP	１		IP	２		IP
+細川　　明人	2.90	0.22	3.7	６		IP	６		IP	６		IP	４		IP	６		IP	２		IP	５		IP	４		IP	６		IP	３		IP
+加木　　　郁	4.60	0.21	3.7	３		IP	５		IP	２		IP	５		IP	４		IP	３		IP	２		IP	５		IP	４		IP	４		IP
+奈須　　啓太	5.50	0.11	2.4	１		IP	３		IP	４	3	IP	４		IP	１		IP	５		IP	６		IP	１		IP	６		IP	３		G2
+金子　　貴志	4.10	0.21	4.1	１		IP	６		IP	６		IP	５		IP	３		IP	３	4	IP	４		IP	６		IP	５		IP	２		IP
+小柳　　勝希	2.70	0.27	5.1	４		IP	６		IP	４		IP	６		IP	４		IP	４		IP	４		IP	５		IP	５		IP	６		IP

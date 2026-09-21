@@ -1,0 +1,8 @@
+data=
+1	0
+山ノ内　雅人	9.20	0.15	1.6	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+原田　　篤志	7.00	0.13	3.0	２		IP	２		IP	２		G1	４		IP	Ｆ		IP	１	1	IP	１		IP	２		G1	４		G1	３		IP
+和合　　俊介	3.30	0.17	3.1	６		IP	６		IP	５		IP	６		IP	４		IP	３		IP	５		IP	２		IP	４	5	IP	４		IP
+藤田　　靖弘	5.20	0.17	3.5	２		G3	４		IP	５		IP	５	6	IP	６		IP	６		IP	１		IP	２	3	IP	３		IP	１		IP
+天野　　　誠	2.70	0.18	4.5	３		IP	５		IP	５		IP	４		IP	６		IP	４		IP	６		IP	５		G3	６	6	G3	４		G3
+日高　龍之介	1.90	0.17	4.3	４		IP	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP	４		IP	６		IP	６		IP

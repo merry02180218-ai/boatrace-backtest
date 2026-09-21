@@ -1,0 +1,8 @@
+data=
+1	0
+坂本　　雄紀	8.60	0.15	3.3	１		IP	１		IP	２		IP	落		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+小林　　京平	6.67	0.15	2.7	５		IP	１		IP	２		IP	１	3	IP	３		IP	３		IP	３	3	IP	転		IP	５		IP	１		IP
+齊藤　　　廉	4.00	0.17	3.0	５		IP	２		IP	５		IP	３		IP	５		IP	６		IP	６	4	IP	１		IP	４		IP	Ｌ		IP
+鰐部　太空海	6.40	0.14	2.8	１		IP	４		IP	２		IP	２		IP	２		IP	３		IP	５		G1	３		IP	５		IP	２		IP
+成貞　　琳平	4.00	0.23	4.7	２	4	IP	３		IP	５		IP	４	4	IP	５		IP	６		IP	５		IP	６		IP	２		IP	３		IP
+長谷川　晴哉	3.60	0.21	4.3	２		IP	６		IP	４		IP	３		IP	４		IP	５		IP	５		IP	５		IP	６		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+村岡　　賢人	9.10	0.11	3.4	１		IP	１		IP	３		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		G1	４		G1
+飯山　　　泰	6.00	0.12	3.0	２		IP	５		G2	４		G2	４		IP	１		IP	３		IP	４		IP	１		IP	４		IP	３		IP
+福田　　宗平	6.10	0.15	3.1	２		IP	６		IP	４		IP	２		IP	３		IP	５		IP	３		IP	３		IP	１	2	G3	１		G3
+森作　　雄大	5.60	0.15	1.7	１		IP	１		G2	５		IP	２		IP	５		IP	１		IP	５		IP	６		IP	３		IP	４		IP
+渡邉　　睦広	5.80	0.14	2.7	５		IP	１		IP	５		IP	４		IP	１		IP	２		IP	４		IP	３		IP	３		IP	３		IP
+杉山　　喜一	4.10	0.18	4.0	４		IP	３		IP	５		IP	５		IP	５		G3	５	5	G3	３		IP	３		G3	１		IP	６		IP

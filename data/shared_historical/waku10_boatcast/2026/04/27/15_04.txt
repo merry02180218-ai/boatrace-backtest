@@ -1,0 +1,8 @@
+data=
+1	0
+下田　　哲也	5.10	0.16	3.3	２		IP	５		IP	６		IP	４		IP	５		IP	４		IP	２		IP	３		G3	２		G3	２		IP
+川上　　清人	5.33	0.16	3.4	５		IP	１		IP	エ	3	IP	４		IP	４		IP	２		IP	３		IP	３		IP	２		IP	転		IP
+三嶌　こころ	5.20	0.21	4.2	６		IP	２		IP	２		IP	４		IP	３		G3	２		G3	６		IP	３		IP	２		IP	５		G3
+西岡　　顕心	7.00	0.13	3.4	２		G1	２		G1	６		G1	１		G2	６	5	G1	２		G1	２		G1	２	5	IP	３		IP	４		G1
+山田　　理央	4.67	0.13	2.7	３		G3	２	4	G3	４	4	IP	５		IP	落		IP	５		IP	４		IP	３		IP	４		IP	５		G1
+村越　　　篤	3.20	0.16	3.8	４		IP	３	5	IP	４		IP	３		IP	６		G3	６		G3	５		IP	６		IP	４		IP	５		G1

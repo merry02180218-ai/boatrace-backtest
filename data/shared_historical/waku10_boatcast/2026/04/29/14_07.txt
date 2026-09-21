@@ -1,0 +1,8 @@
+data=
+1	0
+石井　　裕美	4.80	0.17	3.2	５		IP	３		IP	４		G3	４		IP	５		G3	５		G3	４		G3	２		G3	２		IP	２		IP
+松田　　真実	6.30	0.18	3.2	２		IP	２		IP	６		IP	３		IP	２		IP	３		IP	２		IP	２		IP	３		G3	４		G3
+香川　　素子	6.00	0.14	3.6	３		IP	２		IP	３		IP	５		IP	２		IP	４		IP	２		G3	３		IP	１		G1	６		G3
+宇恵　　有香	4.20	0.16	3.4	２		IP	６		IP	４	6	IP	５		IP	１		IP	６		IP	４		IP	３	5	IP	４		IP	５	5	IP
+高橋　　淳美	1.80	0.18	3.7	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP	４		IP	６		G3
+淺田　千亜希	3.00	0.14	2.8	６		IP	３		G3	５		IP	６		IP	５		IP	５		IP	５		IP	Ｆ		IP	２		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+上瀧　　絢也	6.60	0.18	3.2	２		IP	１		IP	４		IP	５		IP	３		IP	１		IP	２		IP	１		IP	５		IP	３		IP
+杉山　　正樹	5.90	0.16	4.0	２		IP	４		G1	４		G1	５		G1	２		IP	２		IP	２		IP	６		IP	４		IP	２		IP
+待鳥　　雄紀	5.30	0.19	2.9	５		IP	１		IP	１	4	IP	２		IP	５		IP	４		IP	３		IP	６		IP	２		IP	５		G3
+佐々木　翔斗	5.80	0.21	2.8	１		IP	３		IP	３		IP	２		IP	６		IP	２		IP	２		IP	２		IP	６		IP	５		IP
+中里　　優子	3.00	0.19	3.7	５		IP	４		IP	４		G3	４		IP	６		IP	４		IP	６		IP	３		G3	５		G3	５		G3
+西村　　　勝	2.90	0.17	3.1	５		IP	５		IP	６		IP	４		IP	５		IP	５		IP	１		IP	６		IP	６		IP	４	5	IP

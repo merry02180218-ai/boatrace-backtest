@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　孝明	7.60	0.20	4.1	１		IP	１		IP	２		IP	１		IP	４		IP	２		IP	５		IP	３		IP	２		IP	１		IP
+高野　　哲史	7.30	0.18	3.6	６		IP	１		IP	２		IP	２		IP	１		IP	５		G1	２		G1	３		G1	２		IP	２		IP
+高橋　　竜矢	7.60	0.13	2.0	２		IP	３		IP	２		IP	２		IP	２		IP	５		IP	２		IP	２		IP	２		G1	１		G1
+桑原　　　悠	5.20	0.15	2.8	４		IP	６		IP	１		IP	４		IP	４		IP	３		G3	１		IP	６		G1	３		G3	４		G1
+山田　　雄太	5.00	0.15	3.2	２		IP	３		IP	４	6	IP	６	6	IP	６		IP	３	6	IP	４		IP	４		IP	３		IP	１		IP
+遠藤　　エミ	5.30	0.15	4.2	３		IP	４		G2	６		G2	３		G1	１	5	IP	４		G1	６		G1	３		G1	５		G1	３		G3

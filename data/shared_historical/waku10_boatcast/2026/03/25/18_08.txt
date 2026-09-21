@@ -1,0 +1,8 @@
+data=
+1	0
+森下　　愛梨	7.11	0.19	3.6	１		IP	転	2	IP	１		IP	Ｆ		G3	１		IP	４		IP	４		IP	１		IP	２		IP	２		IP
+榮田　　将彦	5.60	0.15	2.2	５		IP	５		IP	３		IP	３		IP	１	3	IP	４		IP	２		IP	５		IP	１		IP	３		IP
+上田　　紗奈	4.50	0.19	3.1	２		IP	１		IP	６		G1	３		IP	２		IP	３		IP	６		IP	５		IP	６		IP	６		IP
+川崎　　公靖	2.60	0.16	3.0	５		IP	５		IP	４		IP	６		IP	５	5	IP	５		IP	５	5	IP	６		IP	５		IP	２		IP
+青木　幸太郎	3.50	0.14	3.3	２		IP	５		IP	４		IP	５		IP	４		IP	６		IP	４		IP	５		IP	４		IP	４		IP
+中嶋　　世奈	1.89	0.23	5.3	６		IP	６		IP	Ｌ		IP	６		IP	６		IP	５		IP	４		IP	４		IP	６		IP	５		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+谷本　　幸司	6.50	0.16	2.9	６		IP	５		IP	１		IP	５		IP	１		IP	１		IP	２		IP	２		IP	１		IP	４		IP
+前田　　　滉	5.90	0.14	3.0	６	6	SG	４	3	SG	５		IP	２		IP	１		IP	４		G1	４		G1	１		G1	４	3	IP	４		G1
+一色　　凌雅	4.00	0.21	4.5	４		IP	２		IP	４		IP	６		IP	６		IP	６		G3	１		IP	５	2	IP	２		IP	６		IP
+橋口　　真樹	4.90	0.22	3.9	２		IP	６		IP	３		IP	５		IP	６		IP	２		IP	２		IP	２		IP	６		IP	３		IP
+畔柳　　俊吾	4.60	0.20	4.4	３		IP	５	4	IP	６		IP	４		IP	１		IP	２		IP	５	4	IP	３		IP	６		IP	３		IP
+横井　　健太	2.60	0.22	5.0	５		IP	４		IP	４		IP	６		IP	４		IP	５		IP	４		IP	５		IP	５		IP	６		IP

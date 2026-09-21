@@ -1,0 +1,8 @@
+data=
+1	0
+石川　　真二	6.20	0.15	2.8	２		IP	４		IP	４		IP	１		IP	３		IP	２		IP	６		IP	５		G1	２		IP	１		IP
+村松　　修二	5.80	0.11	2.7	３		IP	５		IP	１		IP	３		IP	２		IP	Ｆ		IP	２		IP	２		IP	５		IP	２		IP
+湯淺　　紀香	3.80	0.20	4.1	３		IP	６		IP	４		IP	４		IP	４		IP	６		IP	５	2	IP	１		G3	妨		G3	３		G3
+山田　　晃大	3.80	0.15	2.5	４		IP	１		IP	４		IP	３		IP	５		IP	２		IP	６		IP	６		IP	６		IP	６		IP
+小山　　　勉	7.40	0.15	3.2	１		IP	２		IP	２		IP	３		IP	６		G1	２		G1	３		G1	１		IP	４		IP	２		IP
+佐々木　翔斗	3.70	0.17	3.7	４		IP	６		G2	５		G2	５		IP	２		IP	６		IP	４		IP	５		IP	６		IP	２		IP

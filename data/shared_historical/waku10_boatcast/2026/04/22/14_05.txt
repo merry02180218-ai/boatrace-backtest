@@ -1,0 +1,8 @@
+data=
+1	0
+垂水　　　悠	7.60	0.12	3.0	２		IP	１		IP	２		G3	６		IP	１		IP	１		G1	１		IP	６		IP	３		IP	１		IP
+中渡　　修作	5.90	0.20	2.9	２		IP	３		IP	２		IP	５		IP	６		IP	１		IP	３		IP	２		IP	３		IP	４		IP
+妹尾　　忠幸	6.30	0.19	3.3	２		IP	１		IP	４		IP	２		IP	２		IP	４		IP	４		IP	３	4	IP	６	6	IP	１		IP
+廣瀬　　　凜	7.40	0.19	3.6	１		IP	３		IP	３		IP	３		IP	２		IP	１	5	IP	３		IP	４		G2	２		IP	２		G3
+貫地谷　直人	2.60	0.26	5.2	５		IP	３	6	IP	６		IP	５		IP	６		IP	５		IP	６		IP	４		IP	３		IP	６	6	IP
+中村　　裕将	2.40	0.15	3.0	３		IP	２		IP	６		IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		G3

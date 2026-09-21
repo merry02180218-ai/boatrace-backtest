@@ -1,0 +1,8 @@
+data=
+1	0
+宮崎　　奏磨	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+高橋　　二朗	4.10	0.21	4.3	５		IP	４		IP	４		IP	６		IP	５		IP	３		IP	４		IP	５		IP	３		IP	１		IP
+木下　　陽介	3.90	0.18	2.4	６		IP	５		IP	６		IP	４	4	IP	５		IP	１		IP	２		IP	５		IP	２		IP	６		IP
+原田　才一郎	6.89	0.19	4.1	４		IP	２		IP	２		IP	４		IP	欠		IP	１	3	IP	２		IP	２		G1	４		IP	３		G1
+江本　　真治	5.30	0.13	3.5	５		G3	５		G3	３		IP	２		IP	４		G3	２		G3	３		G3	６		IP	３		IP	１		IP
+河合　　三弘	3.30	0.19	3.7	６		IP	３		IP	５	5	IP	２		IP	５		G3	５		IP	３		IP	６		IP	５		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　二朗	3.60	0.19	4.0	１		IP	５		IP	５		IP	３		IP	５		IP	６		IP	６		IP	４		IP	５		IP	３		IP
+服部　　達哉	5.70	0.18	4.0	３		IP	４		IP	２		IP	３		IP	４		IP	３		IP	１		G3	４		IP	２		IP	６		IP
+別府　　昌樹	4.60	0.15	3.6	５		IP	３		IP	Ｆ		IP	２		IP	２		IP	５		IP	４		IP	２		IP	３		IP	５		IP
+原田　才一郎	7.00	0.17	4.3	２		IP	２		IP	４		IP	欠		IP	１	3	IP	２		IP	２		G1	４		IP	３		G1	４		G1
+大澤　　誠也	5.20	0.20	3.9	２		IP	３		IP	５		IP	４		IP	３		IP	５		IP	２		IP	３		IP	５		IP	２		IP
+中島　　秀治	4.20	0.17	3.8	３		IP	３		IP	４		IP	３		IP	６		IP	５		G2	４		IP	５		IP	３		IP	４		IP

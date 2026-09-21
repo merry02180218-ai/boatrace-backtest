@@ -1,0 +1,8 @@
+data=
+1	0
+松村　　康太	9.20	0.11	2.1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	４		IP	２		IP	１		IP	１		IP
+金子　　賢志	6.70	0.14	3.1	４		G1	６		G1	５	3	IP	１		IP	１		IP	２		IP	６		G1	４		G1	１		G1	１		IP
+河内　悠利杏	3.40	0.16	2.6	３		IP	５		G3	５		G3	１		G3	５		G3	６		IP	５		IP	５		IP	６		IP	３		IP
+宮内　由紀英	4.00	0.18	3.6	６		IP	２		IP	２		IP	４	5	IP	４		IP	３		IP	３		IP	６		IP	６		IP	６		IP
+中北　　将史	2.90	0.14	2.7	５		IP	３		G3	５		G3	５		IP	４		IP	６		IP	５		IP	３		IP	５		IP	５		IP
+加藤　　高史	3.10	0.17	3.2	Ｆ		IP	５		IP	３		IP	６	5	IP	４	5	IP	５		IP	３		IP	５		IP	５		IP	３	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　永梧	6.50	0.19	2.5	１		IP	３		IP	１		IP	１		IP	２		IP	２		IP	落	2	IP	５		IP	６		IP	１		IP
+中嶋　　達也	2.80	0.19	3.8	６		IP	４		IP	５		IP	２		IP	５		IP	６		IP	４		IP	６		IP	６		IP	４		IP
+中里　　昌志	4.80	0.16	3.4	４	1	IP	３		IP	３		IP	２		IP	６	4	IP	６		IP	３		IP	４		IP	３		IP	３		IP
+川原　　正明	5.00	0.13	3.0	６		G3	１		IP	３		IP	１		IP	４		IP	５		IP	３		IP	６		IP	２		IP	５		IP
+鈴木　　裕隆	4.50	0.19	4.0	２		IP	５	4	IP	５		IP	６		IP	４		IP	４	6	IP	３		IP	５		IP	２		IP	２		IP
+松山　　裕基	3.60	0.16	3.6	３		IP	３		IP	５		IP	５		IP	４		IP	５		IP	５		IP	５		IP	２		IP	５		IP

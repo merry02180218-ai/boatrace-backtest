@@ -1,0 +1,8 @@
+data=
+1	0
+太田　　和美	9.60	0.15	3.8	１		IP	１		G1	２		G1	２		G1	２		G1	２		G1	１		IP	１		IP	２		IP	１		IP
+浜本　　裕己	6.20	0.15	3.1	４		IP	３		IP	３		IP	１		IP	２		IP	４		IP	５		IP	１		IP	５		IP	１		IP
+松井　　　繁	6.70	0.15	3.9	３		IP	４		G1	３		G1	２		G1	４		SG	２		G1	４		G1	３		G1	３		G1	４		IP
+森　　　貴洋	3.90	0.20	3.4	４		IP	５		IP	５		IP	６		IP	５		IP	４		IP	３		IP	２		IP	２	5	IP	５		IP
+野間　　大樹	4.20	0.17	4.6	３		IP	６		IP	６		IP	４		IP	５		IP	３	4	IP	３		IP	２		IP	４		G3	５		IP
+山崎　　　郡	5.20	0.13	3.4	２	5	IP	４		G1	４	5	G1	３		G1	２		IP	３		IP	６		G1	５		G1	５		G1	４		G1

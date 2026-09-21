@@ -1,0 +1,8 @@
+data=
+1	0
+須藤　　隆雄	5.90	0.18	3.3	２		IP	４		IP	６		IP	１		IP	５		IP	３		IP	４		IP	１		IP	４		IP	１		IP
+小池　　修平	6.80	0.15	4.2	２		G1	２		G1	６		G1	１		IP	２		IP	６		IP	６		IP	１	3	IP	２		G1	２		G1
+末永　　由楽	7.40	0.16	3.1	３		IP	２		IP	２		IP	１		IP	３		IP	４		IP	３		IP	３		IP	１		IP	１		IP
+宇田川　信一	2.20	0.20	4.8	５	3	IP	６		IP	５		IP	５	5	IP	５		IP	４		IP	４		IP	６		IP	５		IP	５		IP
+坂井　　康嗣	2.30	0.23	4.9	６		IP	３		IP	欠		IP	５		IP	６		IP	４		IP	３		IP	６	6	IP	６		IP	６		IP
+水摩　　　敦	3.00	0.20	4.1	４	2	IP	３		IP	４		IP	６		IP	４		IP	５	5	IP	６		IP	５		IP	５		IP	４		IP

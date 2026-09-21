@@ -1,0 +1,8 @@
+data=
+1	0
+山本　景士郎	6.40	0.19	3.9	２		IP	３		IP	１		IP	１		IP	６		IP	３		IP	２		IP	２		IP	６		IP	３		IP
+飯山　　晃三	4.40	0.18	3.8	２		IP	４	3	IP	４		IP	６	3	IP	４		IP	２		IP	１		IP	５		IP	５		IP	６		IP
+豊田　　泰洋	3.20	0.20	4.1	５	4	IP	６		IP	Ｆ		IP	３		IP	６		IP	５		IP	２		IP	６		IP	１		IP	６		IP
+渡邊　　哲也	3.00	0.20	3.1	４		IP	４		IP	４		IP	６		IP	４		IP	５		IP	５		IP	５		IP	３		IP	６		IP
+内田　　　圭	3.30	0.17	3.7	６		IP	５		IP	６		IP	６		IP	４		IP	３		IP	５		IP	４		IP	４		IP	２		IP
+大西　　　賢	2.56	0.28	4.8	転		IP	６		IP	４		IP	６		IP	３		IP	３		IP	６		IP	６		IP	５		IP	６		IP

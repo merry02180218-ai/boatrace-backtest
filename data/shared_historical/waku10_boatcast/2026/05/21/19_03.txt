@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　修一	8.20	0.14	3.1	１		G3	１		G3	１		G3	１		IP	１		IP	４		IP	３		IP	１		IP	１		IP	５		IP
+高田　　　綾	5.60	0.23	4.3	２		IP	４		IP	５		IP	３		IP	２		IP	４		IP	３		IP	１		G3	５		IP	３		IP
+小野　　信樹	4.50	0.17	3.5	３		IP	２		IP	６		IP	４		IP	３		IP	４	2	IP	５		IP	５		IP	３		IP	３		IP
+井上　　　茂	4.89	0.18	3.3	３		IP	５	5	IP	５		IP	２		IP	３		IP	５		IP	３		IP	１		IP	５		IP	落		IP
+西川　　真人	2.60	0.16	4.3	３		IP	５		IP	４		IP	６		IP	３	4	IP	５		IP	６		IP	６		IP	５		IP	６		IP
+大橋　純一郎	3.60	0.22	4.8	５	5	IP	２		IP	２		IP	５		IP	６		IP	３		IP	５	5	IP	４		IP	５		IP	６		IP

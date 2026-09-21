@@ -1,0 +1,8 @@
+data=
+1	0
+松下　　直也	6.00	0.22	4.5	２		IP	４		IP	６		IP	６		IP	４		IP	２		IP	１		IP	２		IP	１		IP	転		IP
+四宮　　与寛	6.40	0.12	2.1	３		IP	２		IP	１		IP	４		IP	２		IP	４		IP	２		IP	６		IP	４		G1	１		IP
+岡瀬　　正人	5.20	0.16	3.6	４		IP	２		IP	３		IP	２	4	IP	４	4	IP	３	4	IP	３		IP	４		IP	５		IP	４		IP
+作間　　　章	6.50	0.16	3.7	５		IP	１		IP	２		IP	４	5	G1	３		IP	３		IP	４		IP	１		IP	３		IP	２		IP
+安武　　一也	1.30	0.18	3.2	６		IP	５	6	IP	５	6	IP	５	6	IP	６	6	IP	６	6	IP	６		IP	６		IP	６		IP	６		IP
+川尻　　泰輔	3.90	0.16	3.9	４		IP	４		IP	３	5	IP	２		G3	３		IP	６		IP	５		IP	３		IP	６		IP	６		IP

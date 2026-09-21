@@ -1,0 +1,8 @@
+data=
+1	0
+新田　　芳美	5.20	0.19	3.8	５		IP	１		G3	１		G3	４		IP	１		IP	１		IP	６		IP	６		IP	６		IP	５		G1
+本部　めぐみ	2.30	0.27	4.4	６		G3	３		G3	６		IP	６		IP	４		G3	５		G3	６		IP	４		IP	５		IP	６		IP
+小野　　生奈	7.40	0.15	3.4	４		IP	２	2	G3	２		G2	２		G3	２		G3	１		G3	２		G3	４		G3	２		G3	４		G1
+沼田　　七華	1.80	0.16	3.5	落		IP	６		IP	５		IP	６		IP	５		IP	５		IP	５		IP	４		G3	５		IP	５		IP
+薮内　　瑞希	3.80	0.14	2.1	４		G3	１		G3	６	4	IP	５		IP	５		IP	３		IP	５		IP	６		IP	２		IP	５		IP
+五反田　　忍	4.10	0.19	3.3	４		IP	３		IP	６		G3	欠		IP	１		IP	５		IP	６		IP	６		IP	２		IP	２		IP

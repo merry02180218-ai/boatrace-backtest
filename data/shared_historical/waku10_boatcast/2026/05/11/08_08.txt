@@ -1,0 +1,8 @@
+data=
+1	0
+大江　　　純	6.90	0.12	2.3	３		IP	３		IP	１		IP	１		G3	２		G3	４		IP	１		IP	４		IP	１		IP	６		IP
+松尾　　　拓	4.80	0.17	3.7	３		IP	２		IP	４		IP	３		G1	３		G1	５		IP	４		IP	４		G1	５		G1	５		IP
+繁野谷　圭介	4.50	0.23	4.2	３		IP	３		IP	４		IP	３		IP	５		IP	３		IP	５		IP	３		IP	６		IP	３		IP
+淺香　　文武	5.90	0.17	2.8	４		IP	４		IP	６		IP	２		IP	１		IP	３		IP	４		IP	４		IP	１		IP	２	5	IP
+河内　　一馬	2.60	0.18	3.5	４	6	IP	３		IP	５		IP	４		IP	４		IP	５		IP	６		IP	６	6	IP	６		IP	６		IP
+正木　　聖賢	5.30	0.20	4.3	３	3	IP	６	2	IP	１	2	IP	２	3	IP	５	2	IP	５	2	IP	３	3	IP	２	2	IP	３	2	IP	４	3	IP

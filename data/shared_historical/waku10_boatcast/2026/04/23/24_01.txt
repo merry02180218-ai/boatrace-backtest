@@ -1,0 +1,8 @@
+data=
+1	0
+齊藤　　　廉	6.70	0.15	3.5	１		IP	２		IP	４		IP	１		IP	１		IP	２		IP	４		IP	６		IP	５		IP	１		IP
+河内　　一馬	3.30	0.25	4.2	５		IP	２		IP	３		IP	５		IP	６		IP	５		IP	５		IP	５	3	IP	４		IP	４		IP
+坂井　　滉哉	5.10	0.14	2.3	２		IP	６		IP	６		IP	１		IP	５		IP	６		IP	３		IP	３	4	IP	２		IP	２		IP
+小玉　　啓太	4.50	0.16	2.6	５		IP	転		IP	１		IP	３		IP	３		IP	５		IP	１		IP	５		IP	６	5	IP	３		IP
+仲本　　　舜	3.90	0.17	3.5	５		IP	６		IP	４		IP	６		IP	６		IP	１		IP	４		IP	４		IP	３		IP	３		IP
+小林　　礼央	3.80	0.11	2.1	５		IP	２		IP	６		IP	４	5	IP	４		IP	４		IP	５		IP	４		IP	６		IP	２		IP

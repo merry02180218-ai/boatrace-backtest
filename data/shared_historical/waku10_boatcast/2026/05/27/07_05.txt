@@ -1,0 +1,8 @@
+data=
+1	0
+土井　　祥伍	8.20	0.21	3.9	２		IP	１		IP	１		IP	５		IP	１		IP	３		IP	２		IP	２		IP	１		IP	１		G3
+山下　　大輝	7.10	0.16	3.6	２	3	IP	１		IP	１		IP	４		IP	５		G1	３		G1	３	3	IP	３		IP	１		IP	３		G1
+金山　　立樹	6.00	0.18	2.4	４		IP	３		IP	６		IP	２		IP	１		IP	３		IP	１		IP	２		IP	６		IP	３		IP
+鈴木　　峻佑	5.20	0.17	3.4	５		IP	５		IP	４		IP	１		IP	１		IP	４	5	IP	４		IP	２	3	IP	４		IP	４		IP
+田頭　　　実	7.40	0.14	2.2	３	2	IP	１	2	IP	６	2	IP	２	2	IP	２	2	IP	１	2	IP	１	2	IP	１	2	IP	１	2	IP	６	2	IP
+野末　　智一	4.40	0.19	4.3	５		IP	４		IP	４		IP	３		IP	３	4	IP	２		IP	４	4	IP	５		IP	５		IP	３		IP

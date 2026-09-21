@@ -1,0 +1,8 @@
+data=
+1	0
+中野　　孝二	8.10	0.13	2.5	１		IP	３		IP	１		IP	１		IP	２		IP	６		IP	２		IP	２		IP	１		IP	１		IP
+宇田川　信一	5.40	0.19	4.1	２		IP	４		IP	２		IP	６		IP	３		IP	１		IP	５		IP	１		IP	４		IP	６		IP
+三好　　勇人	5.20	0.13	3.3	１	4	G3	５	4	G3	２		G3	４		IP	４		IP	３		IP	３		IP	５		IP	２		IP	５		IP
+西田　　　靖	4.60	0.19	3.9	６	3	IP	３	2	IP	５	2	G3	６	2	G3	４	2	IP	４	2	IP	５	2	IP	１	2	IP	１	2	IP	３	2	IP
+下出　　卓矢	5.70	0.21	3.8	４		IP	３		IP	５		IP	２		IP	４		IP	１	6	IP	２		IP	２		IP	５		IP	４		IP
+一ノ木　　匠	1.80	0.13	2.6	５		IP	６		IP	５		IP	４		IP	５		IP	６		IP	６		IP	６		IP	５		IP	５		IP

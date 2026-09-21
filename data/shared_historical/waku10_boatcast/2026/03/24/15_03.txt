@@ -1,0 +1,8 @@
+data=
+1	0
+谷口　　知優	7.70	0.19	3.5	１		IP	３		IP	２		IP	２		IP	３		IP	１		IP	１		IP	２		IP	１		IP	６		G3
+川田　　正人	6.20	0.20	3.4	２		IP	３		IP	２		IP	２		IP	２		IP	５		IP	３		IP	１		IP	５		IP	４		IP
+村上　　　遼	6.80	0.11	2.6	２		IP	３		G1	６		IP	３		IP	１		IP	２		IP	４		IP	３		IP	１		IP	２		IP
+川島　　圭司	5.20	0.12	1.7	３		IP	Ｆ	5	IP	１		IP	１		IP	４		IP	５		IP	６		G2	４		IP	１		IP	４		IP
+松田　　竜馬	2.90	0.17	4.1	４		IP	転		IP	４		IP	４		IP	５		IP	５		IP	３		IP	６		IP	４		IP	５	6	IP
+牟田　　奨太	1.60	0.14	2.6	６		IP	５		IP	４		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

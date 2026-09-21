@@ -1,0 +1,8 @@
+data=
+1	0
+松下　　知幸	6.20	0.18	2.7	６		IP	４		IP	３		IP	１		IP	１		IP	３		IP	１		IP	２		IP	３		IP	６		IP
+毒島　　　誠	8.00	0.16	3.4	２		SG	４	3	IP	４		IP	１	1	IP	２		G1	６		G1	１		IP	１	3	IP	１		SG	３		G1
+奈須　　啓太	6.50	0.14	2.2	４		IP	１		IP	６		IP	２		IP	３		IP	２		IP	１		IP	４		IP	３		IP	２		IP
+小林　　遼太	3.90	0.20	4.1	２	5	IP	６		G3	５		G3	４		G3	５		IP	３		IP	５	6	IP	５		IP	３		IP	３		IP
+河野　　　大	5.40	0.16	3.1	３		IP	３		IP	３	6	G2	２		G2	４		IP	３		IP	３		G1	６		G1	４		G2	６		G2
+谷　　海夏人	2.70	0.21	4.5	６		IP	６		IP	５		IP	６		IP	４		IP	６		IP	３		IP	４		IP	３		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+藤井　　公人	7.50	0.11	2.7	１		IP	２		IP	１		IP	４		IP	６		IP	２		IP	２		G3	２		IP	２		IP	１		IP
+金山　　立樹	5.70	0.19	4.5	４		IP	３		IP	１		IP	５		IP	４		IP	６		IP	２		IP	３		IP	３		IP	１		IP
+岩永　　雅人	6.10	0.19	3.7	４		IP	３		IP	２	4	IP	３	4	IP	３		IP	３		IP	２		IP	３		IP	４		IP	３		IP
+八戸　　琉楓	1.90	0.22	4.9	６		IP	６	5	IP	６		IP	６	6	IP	３	5	IP	６		IP	６		IP	６		IP	５		IP	４		IP
+上村　　宏太	3.10	0.15	3.6	４		IP	４		IP	４		IP	４		IP	３		IP	４		IP	５		IP	６		IP	６		IP	６		IP
+岡本　　慎治	3.33	0.17	4.3	５		IP	４		IP	６		IP	４		IP	転		IP	５		IP	６		IP	４		IP	３	5	IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+安藤　　裕貴	5.56	0.19	3.2	１		IP	６		IP	落		IP	５		IP	６		IP	１		IP	４		IP	１		IP	５		IP	１		IP
+鈴谷　　一平	7.50	0.10	1.8	１		IP	３		G1	３		IP	２		IP	４		IP	２		IP	１		IP	１		IP	２		IP	４		IP
+間野　　兼礼	5.70	0.20	3.3	４		IP	２		IP	６		IP	３		IP	１		IP	５		IP	３		IP	２		IP	４		IP	２	4	IP
+一柳　　和孝	3.80	0.14	3.2	５		G3	４		IP	６		IP	３	3	IP	３		IP	５		IP	６	5	IP	５		IP	１		IP	４		IP
+青木　　玄太	5.10	0.18	4.4	５		G1	５		G1	４		IP	２		IP	２		IP	４		IP	１		IP	５		G1	３		G3	５		IP
+小川　　時光	2.00	0.20	4.1	５		IP	６		IP	４		IP	４	5	IP	６		IP	６		IP	５	5	IP	６		IP	５	5	IP	５		IP

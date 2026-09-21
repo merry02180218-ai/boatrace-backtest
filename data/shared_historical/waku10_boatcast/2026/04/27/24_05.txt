@@ -1,0 +1,8 @@
+data=
+1	0
+坪井　　爽佑	5.30	0.21	3.5	６		IP	２		IP	５	2	IP	２		IP	３		IP	５		IP	１		IP	４		IP	５		IP	１		IP
+渡邊　　哲也	5.50	0.16	2.9	３		IP	２		IP	１		IP	４		IP	６		IP	２		IP	５		IP	４		IP	４		IP	２		IP
+川原　　正明	4.80	0.18	2.5	２		IP	３		IP	４		IP	５		IP	４		IP	３		IP	６		IP	１		IP	３		IP	６		IP
+笠　　　雅雄	6.80	0.17	2.7	４		IP	１		IP	１		IP	１	3	IP	１		IP	２		IP	３		IP	６	2	IP	６		IP	２	3	IP
+赤坂　　俊輔	4.56	0.16	3.4	欠		IP	４		IP	４		IP	３		IP	４		IP	４		IP	５		G1	２		IP	３		IP	６		G1
+日高　龍之介	2.40	0.20	3.6	６		IP	５		IP	４		IP	５		IP	６		IP	５		IP	６		IP	３		IP	６		IP	４		IP

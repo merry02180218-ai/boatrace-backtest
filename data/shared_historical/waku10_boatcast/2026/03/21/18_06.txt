@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　佑樹	7.80	0.17	3.2	１		IP	１		IP	１		IP	６		IP	６		IP	１		IP	２		IP	１		IP	２		IP	１		IP
+寺本　　重宣	6.70	0.15	2.3	１		G3	３		G3	３		IP	２		IP	６		IP	２		G3	４		G3	１		IP	３		IP	２		IP
+松井　　貫太	4.30	0.22	4.6	５		IP	５		IP	５		IP	５		G1	５		IP	２		IP	４		IP	４		IP	３	4	IP	１		IP
+加藤　　　翔	3.70	0.21	4.1	４		IP	３		IP	６	5	IP	３		IP	３		IP	５		IP	６		IP	４		IP	３	5	IP	６		IP
+白水　　勝也	6.00	0.18	3.4	４		IP	３	4	IP	３		IP	２		IP	４		IP	３		IP	２		IP	３		IP	５	4	IP	２		IP
+中嶋　　世奈	1.70	0.21	4.4	６		IP	５		IP	４		IP	４		IP	６		IP	５		G3	Ｆ		IP	６		IP	６		IP	６		IP

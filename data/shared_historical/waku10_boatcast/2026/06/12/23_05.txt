@@ -1,0 +1,8 @@
+data=
+1	0
+松下　　哲也	6.30	0.18	3.0	１		IP	１		IP	１		IP	４		IP	５	2	IP	３		IP	５		IP	２		IP	１		IP	６		IP
+河村　　　了	6.10	0.17	3.9	１		IP	２		IP	２		IP	６	3	IP	４		IP	５		IP	３		IP	４		IP	２		IP	１		IP
+鈴木　　　博	6.20	0.15	3.9	５		IP	２		G3	５	5	IP	２		IP	１		IP	２		IP	３		IP	３		IP	３		IP	３		IP
+田中　　　豪	6.80	0.16	2.5	５		IP	１		IP	３		IP	３		IP	２		IP	３		IP	３	5	IP	２		IP	１	3	IP	３		IP
+服部　　幸男	5.90	0.13	2.5	２		SG	６		IP	６		IP	１	4	IP	２		G1	１		IP	１		IP	３		IP	６		IP	６		IP
+山田　　陽翔	1.10	0.19	4.3	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP

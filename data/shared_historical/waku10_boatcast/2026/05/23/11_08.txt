@@ -1,0 +1,8 @@
+data=
+1	0
+澤田　　尚也	8.90	0.10	2.5	１		IP	１		IP	５		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP
+寺田　　　祥	5.60	0.15	2.6	１		IP	６		G1	６		G1	２		IP	６		G1	３		IP	２		IP	２		G1	３		G1	５		IP
+山田　　祐也	6.80	0.12	2.5	３	2	IP	１		IP	６		G1	１		G1	４		G1	５	1	SG	３		G2	１		G2	３		G1	６		G1
+中　　　亮太	6.90	0.11	1.4	３		G3	３		G3	４		IP	４		IP	５		IP	２		IP	１		IP	１		G3	２		G3	１		IP
+藤原　　仙二	6.67	0.16	3.3	転		IP	３		IP	３		IP	２		IP	１		IP	２		IP	４		G2	４		G2	２		IP	４		IP
+村松　　修二	4.40	0.19	2.8	３		IP	３	5	IP	３		IP	６		IP	４		IP	３		IP	５		IP	３		IP	３		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+下出　　卓矢	8.20	0.13	2.7	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		G2	１		IP	Ｆ		IP	２		IP
+菅沼　　佳昭	3.90	0.19	4.0	２		IP	６		IP	５		IP	５		IP	４		IP	３		IP	５		IP	５		IP	２		IP	４		IP
+竹下　　大樹	6.30	0.17	2.6	３		IP	１		IP	２		IP	３		G3	６		G3	３		G3	２		G1	６		G1	２	5	G1	３		IP
+大場　　広孝	5.20	0.17	3.5	４	5	IP	１		IP	５	5	IP	１		IP	５		IP	２		IP	５	5	IP	３		IP	５		IP	３		G3
+坂井　　康嗣	3.70	0.21	4.2	３		IP	１		IP	６		IP	６		IP	３		IP	欠		IP	５		IP	６		IP	４		IP	３		IP
+荒木　　颯斗	3.30	0.15	3.8	６		IP	５		IP	３		IP	６		IP	６		IP	３		IP	５		IP	５		IP	１		IP	５		IP

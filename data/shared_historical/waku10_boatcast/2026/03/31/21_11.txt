@@ -1,0 +1,8 @@
+data=
+1	0
+仲口　　博崇	8.50	0.17	3.4	２		G3	５		G3	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP	２		G1
+江本　　真治	5.10	0.17	3.7	３		G3	３		IP	５		IP	４		IP	２		IP	２		G1	３		IP	６		IP	６		IP	２		IP
+西川　　拓利	5.56	0.13	2.2	２		G3	５		IP	１	4	IP	２		IP	５		IP	２		IP	３		IP	６		IP	転		IP	４		IP
+山口　　　亮	4.44	0.19	3.8	２		G3	３	5	IP	５		IP	３		IP	３		IP	６		IP	欠		IP	３		IP	６		G3	４		G3
+烏野　　賢太	5.10	0.17	3.1	５		G3	３	4	IP	５	4	IP	２		IP	３		IP	２		IP	４		G1	３		G1	５		G1	４		IP
+尾嶋　　一広	3.90	0.21	3.1	６		G3	４		G3	４	5	G3	３		IP	３	5	IP	４		G1	６		G1	５		G1	３		IP	５		IP

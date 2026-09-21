@@ -1,0 +1,8 @@
+data=
+1	0
+黒澤　めぐみ	6.50	0.21	4.1	１		IP	４		IP	１		IP	４		IP	２		IP	１		IP	５		IP	６		IP	１		IP	３		G3
+冨名腰　桃奈	3.90	0.22	3.2	３	3	IP	４		IP	５		IP	５		G3	５		G3	３		G3	３		G3	５		IP	６	3	IP	２		IP
+畑田　　希咲	2.30	0.24	4.3	５		G3	３		IP	４		IP	６		IP	６		IP	６	4	IP	５		IP	５		IP	５	5	IP	５	5	IP
+平山　　智加	6.00	0.15	3.5	３		IP	４		IP	３		IP	２		IP	３		IP	１		G2	６		G3	２		G3	４		G3	３		IP
+吉田　　杏美	1.67	0.22	4.3	６		IP	転	4	IP	５		IP	６		IP	５		IP	６		IP	６		IP	４		G3	６		IP	５		IP
+篠木　亜衣花	2.10	0.26	5.1	６		IP	６		IP	５		IP	４		IP	４		G3	６		IP	６		IP	４		G3	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+上村　　純一	9.10	0.14	2.7	１		IP	１		IP	１		IP	１		IP	２		G2	１		IP	１		IP	１		IP	４		G1	３		G1
+上田　　紗奈	6.70	0.13	2.2	３		IP	３		IP	２		IP	１		IP	１		IP	４		IP	５		IP	４		IP	３	3	IP	１		IP
+藤本　　佳史	2.40	0.13	2.8	５		IP	６		IP	３		IP	５		IP	４		IP	５		IP	４		G3	６		IP	転		IP	５		IP
+川井　　　萌	4.20	0.20	4.6	１		IP	３		IP	６		IP	４		IP	３	5	IP	６		IP	６	5	IP	５		IP	３		IP	４		G1
+大串　　重幸	4.70	0.20	4.2	４		IP	５		IP	４		IP	３		IP	３		IP	３	6	IP	３		IP	６	6	IP	３		IP	３		G3
+青木　幸太郎	1.90	0.19	4.6	６		IP	５		IP	６		IP	５		IP	６		IP	４		IP	６		IP	４		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+三宅　　健太	7.00	0.17	2.5	１		IP	４		IP	２		IP	１		G3	２		IP	３		IP	１		IP	５		IP	４		IP	２		G3
+豊田　　泰洋	4.70	0.17	3.2	１		IP	５		IP	４		IP	３		IP	４		IP	４		IP	３		IP	６	3	IP	５		IP	２		IP
+井内　将太郎	6.30	0.13	2.7	５		IP	１		IP	１		IP	３		IP	２		IP	３		IP	４		IP	１		IP	３		IP	６		G3
+北川　　幸典	4.90	0.21	3.6	４		IP	３		IP	３	6	IP	２		IP	４		IP	６	5	IP	３		G3	２		IP	３		IP	Ｆ		IP
+船岡　洋一郎	6.67	0.14	3.1	３		IP	２		IP	転		G1	１		IP	６		G1	４	4	IP	１		IP	２		IP	２		IP	５		G1
+山本　　凱立	1.10	0.28	5.3	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　猛志	7.00	0.13	2.8	１		IP	１		IP	１		IP	６		IP	６		IP	２		IP	４		IP	１		IP	２		IP	２		IP
+山田　　哲也	5.50	0.15	3.0	４		G1	４		G1	４		IP	２		IP	３		IP	４		IP	１	3	IP	３		IP	３		IP	６		IP
+吉永　　浩則	4.40	0.19	3.0	６		IP	４		IP	６		IP	６		IP	３		IP	２		IP	４		IP	６		IP	１		G3	２		G3
+篠原　　晟弥	6.89	0.12	2.3	１		IP	４		IP	１		IP	３		IP	２		IP	転		IP	３		IP	３		IP	４		IP	２		IP
+磯村　　　匠	4.20	0.18	4.3	２		IP	４		IP	３		IP	４		IP	落		IP	５		IP	４		IP	５		IP	３		G3	３		G3
+西村　　　歩	3.50	0.26	5.4	３		IP	６		IP	５		IP	５		IP	６		G3	５		G3	４		IP	２		IP	２		IP	６		IP

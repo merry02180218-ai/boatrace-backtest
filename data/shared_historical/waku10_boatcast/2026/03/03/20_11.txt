@@ -1,0 +1,8 @@
+data=
+1	0
+土山　　卓也	8.80	0.17	1.8	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP
+前田　健太郎	5.30	0.15	3.5	１		IP	６	3	IP	４		IP	３		IP	２		IP	２		IP	６		IP	６		IP	３		IP	２		IP
+大江　　　純	5.90	0.12	2.7	３		IP	１		IP	１	4	IP	６		IP	２		IP	３	5	IP	１		IP	６	4	IP	６		IP	３		IP
+毒島　　　誠	8.20	0.14	3.2	２		IP	２	2	IP	１		IP	１		G1	１		SG	５		SG	４		SG	３		SG	４		G1	１	3	IP
+小松　　卓司	3.70	0.14	2.8	３		IP	３		IP	３		IP	５		IP	４		IP	５		IP	６		IP	２		IP	６		G3	６		G3
+平野　　和明	2.33	0.17	4.3	５		IP	６		IP	欠		IP	６		IP	４		IP	４		IP	５	4	IP	４	5	IP	５		IP	６		IP

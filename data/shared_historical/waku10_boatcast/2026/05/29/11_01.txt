@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　昂章	7.80	0.15	3.5	１		IP	２		IP	１		IP	５		IP	１		IP	１		IP	２		IP	５		IP	１		IP	２		IP
+高山　　智至	6.89	0.14	2.7	転		IP	３		IP	４		IP	３		IP	２		IP	１		IP	４		IP	３		IP	２		IP	１		IP
+山崎　　聖司	3.70	0.16	3.2	６	4	IP	４		IP	３		IP	２		IP	６		IP	３		IP	３		IP	６		IP	５		IP	５		IP
+永田　　義紘	4.40	0.11	1.8	１		IP	１		IP	６		IP	４		IP	３		IP	５		IP	５		IP	６	5	IP	５		IP	３	5	IP
+表　　　健太	3.30	0.19	3.4	３		IP	６		IP	５		IP	４		IP	４		IP	６		IP	６		IP	５		IP	２		IP	４		IP
+鳥本　　智史	1.00	0.11	2.3	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

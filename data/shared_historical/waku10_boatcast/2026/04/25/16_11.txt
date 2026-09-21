@@ -1,0 +1,8 @@
+data=
+1	0
+河野　　　大	9.50	0.16	2.7	４		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G2	１		IP	１		IP	１		IP
+藤井　　公人	6.20	0.19	3.6	２	3	IP	２		IP	２		IP	２		IP	２		G3	１		G3	５		IP	５		IP	４		IP	４		IP
+神田　　達也	6.00	0.15	3.1	４		IP	４		IP	３		IP	３		IP	３		IP	３		IP	２		IP	２		IP	４		IP	２		IP
+松尾　　基成	2.30	0.17	3.3	２		IP	５		IP	６		IP	６		IP	５		IP	５		IP	６	5	IP	５		IP	５		IP	５		IP
+秦　　　英悟	4.90	0.11	2.7	６		IP	６		SG	３		SG	５	6	G1	５		G1	２		G1	５		G1	１		IP	６		G1	３		G2
+金田　　智博	3.50	0.18	3.6	４	5	IP	３	5	IP	５		IP	６		IP	６		IP	４		IP	２		IP	６		IP	４		IP	５		IP

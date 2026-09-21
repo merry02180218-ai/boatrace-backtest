@@ -1,0 +1,8 @@
+data=
+1	0
+長岡　　良也	7.70	0.22	4.6	３		IP	１		IP	２		IP	１		IP	５		IP	１		IP	２		IP	１		IP	２		IP	４		G1
+高山　　智至	6.22	0.13	2.6	４		IP	転		IP	３		IP	４		IP	３		IP	２		IP	１		IP	４		IP	３		IP	２		IP
+田中　瀬里奈	1.40	0.18	3.6	６		G3	４		G3	５		G3	６		IP	６		IP	６	4	IP	６		IP	６	6	IP	５	5	IP	転		IP
+三浦　　永理	8.00	0.13	2.9	３		IP	３		G3	２		G3	２		G2	１		G3	２		IP	３		G3	１		IP	３		IP	１		G1
+加藤　　　翔	2.90	0.18	3.7	６		IP	５		IP	５	6	IP	５		IP	３		IP	３		IP	５		IP	３		IP	６		IP	６		IP
+本吉　　正樹	3.10	0.16	4.0	２		IP	３		IP	６		IP	５		IP	４	5	IP	５		IP	６		IP	６		IP	４		IP	５		IP

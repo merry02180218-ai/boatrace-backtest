@@ -1,0 +1,8 @@
+data=
+1	0
+坂元　　浩仁	9.30	0.19	4.3	１		IP	１		IP	１		IP	１		IP	４		G2	１		G2	１		IP	１		IP	１		IP	３		IP
+表　　　健太	4.20	0.20	3.4	３		IP	３		IP	３		IP	６		IP	６		IP	２		IP	２		IP	６	3	IP	６		IP	４		IP
+野見山　拓己	6.60	0.11	2.0	５		IP	１		IP	４		IP	３		IP	１		IP	３		IP	３		IP	２		IP	２	2	IP	３		IP
+太田　　　潮	4.50	0.17	2.6	６		IP	６		IP	３		IP	３		IP	４		IP	６		IP	１		IP	４	5	IP	４		IP	２		IP
+金子　　賢志	5.20	0.16	2.8	３		IP	５		G1	４		G1	２		IP	６		IP	４		IP	３		IP	３		IP	４		IP	２		IP
+花本　　夏樹	2.90	0.26	5.6	２		IP	６		IP	５	5	IP	６	5	IP	３		IP	３		IP	５	5	IP	６		IP	６		IP	６		IP

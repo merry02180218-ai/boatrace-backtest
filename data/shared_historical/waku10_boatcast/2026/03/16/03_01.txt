@@ -1,0 +1,8 @@
+data=
+1	0
+宇田川　信一	5.40	0.17	3.6	２		IP	６		IP	５		IP	５		IP	２		IP	４		IP	１		IP	２		IP	１		IP	６		IP
+小野　　京平	2.70	0.21	4.7	４		IP	５		IP	３		IP	５		IP	６		IP	４		IP	６		IP	４		IP	５		IP	６		IP
+福田　　翔吾	5.10	0.19	3.8	５		IP	５		IP	４		IP	４		IP	１		IP	２	2	IP	２		IP	５		IP	２		IP	６		IP
+早川　　颯太	1.10	0.24	4.5	５		IP	６		IP	６		IP	６	6	IP	６	5	IP	６		IP	６		IP	６		IP	６		IP	６		IP
+上田　　隆章	2.67	0.25	5.1	落		IP	４		IP	５		IP	６		IP	６	6	IP	６		IP	６		IP	４		IP	４		IP	３		IP
+花本　　　剛	2.60	0.22	3.9	５		IP	４	5	IP	４		IP	６		IP	６	5	IP	６		IP	６		IP	３		IP	５		IP	４		IP

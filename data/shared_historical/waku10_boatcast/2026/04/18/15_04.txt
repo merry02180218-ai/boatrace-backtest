@@ -1,0 +1,8 @@
+data=
+1	0
+小澤　　　学	4.30	0.26	5.8	２		IP	５		IP	２		IP	５		IP	６		IP	５		IP	５		IP	３		IP	５		IP	１		IP
+倉田　　郁美	4.70	0.17	3.0	２		IP	３		IP	転		IP	３		IP	４		IP	５		IP	４		IP	３		IP	１		IP	６		IP
+田村　　　慶	4.89	0.21	4.5	１		IP	３		IP	６		IP	４		IP	落		IP	５		IP	４		IP	３	5	IP	６	4	IP	１		IP
+佐藤　　博亮	5.80	0.15	3.5	２		IP	３		IP	５		IP	２		IP	３	5	IP	２		IP	５		G1	４		G1	４		IP	２		IP
+森定　　晃史	5.10	0.21	3.7	３		IP	３		IP	２		IP	６		IP	５	6	IP	５		IP	２		IP	４		IP	２	4	IP	３		IP
+大野　　芳顕	3.90	0.16	3.6	５		IP	５		G3	３		G3	６		IP	５		IP	４		IP	３		IP	３		IP	４		IP	３		IP

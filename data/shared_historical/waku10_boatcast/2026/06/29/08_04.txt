@@ -1,0 +1,8 @@
+data=
+1	0
+間野　　兼礼	7.30	0.19	3.3	１		IP	３		IP	１		IP	６		IP	３		IP	５		IP	２		IP	１		IP	１		IP	１		IP
+田村　　　慶	3.60	0.20	4.7	５		IP	５		IP	１		IP	５		IP	６		IP	５		IP	２		IP	６		IP	４		IP	４		IP
+眞鳥　　章太	4.00	0.16	3.2	５		G2	４		G2	６		IP	３		IP	３		IP	３		IP	３	4	IP	５		IP	６		IP	５		IP
+大西　　隆洋	4.10	0.20	3.5	５		IP	２		IP	１		IP	５		IP	５		IP	６		IP	３		IP	４		IP	５		IP	４		IP
+益田　　啓司	5.40	0.15	2.3	６		IP	３		IP	５		IP	２		IP	６		IP	２		IP	２		IP	３		IP	２	6	G1	４		IP
+梅木　　敬太	2.10	0.17	3.9	６		IP	６		IP	６		IP	５		IP	３		IP	６		IP	６		IP	５		IP	４		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+若狭　奈美子	8.40	0.17	2.0	１		IP	３		IP	１		IP	２		IP	１		IP	４		IP	２		IP	１		IP	１		IP	２		IP
+宇恵　　有香	4.44	0.19	3.3	２		IP	転		IP	３		IP	５		IP	５		IP	４		IP	３		IP	６		IP	１		IP	６		IP
+橋谷田　佳織	2.56	0.28	5.4	３		G3	６		G3	６		G3	６		G3	４		G3	落		IP	６		IP	６		G3	４		G3	４		G3
+坂　　咲友理	4.00	0.21	4.7	６		IP	４		G3	５		G3	２		IP	５		IP	１		IP	２		IP	５		IP	６		G3	５		IP
+永田　　　楽	1.80	0.22	3.8	５		IP	５		IP	６		IP	５		IP	６	6	IP	６		IP	５	6	IP	４		IP	６	6	IP	５	6	IP
+佐々木　裕美	2.10	0.18	2.9	５		G3	６		IP	６		G3	５	4	IP	５		IP	６		G3	２		IP	６		IP	６		IP	５		G3

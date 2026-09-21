@@ -1,0 +1,8 @@
+data=
+1	0
+坂井　　滉哉	6.80	0.17	3.8	２		IP	６		IP	１		IP	１		IP	６		IP	１		IP	２		IP	３		IP	１		IP	４		IP
+奥村　明日香	6.60	0.19	4.0	５		G3	５		IP	１		IP	４		IP	１		IP	２		IP	３		G3	３		G3	１		IP	２		IP
+柴田　　友和	4.70	0.16	3.0	５		IP	５		IP	３		IP	３	2	IP	２		IP	６		IP	２		IP	３		IP	３		IP	５		IP
+楠原　　翔太	5.00	0.17	3.1	５		IP	５		IP	３		G3	２		G3	５		IP	４		IP	３		IP	２		IP	３	5	IP	３		IP
+竹下　　大樹	5.20	0.12	3.0	３		G1	５		IP	２		IP	４		IP	４		G3	５		G3	１		G1	５		G1	３		G1	４		IP
+仲本　　　舜	3.10	0.18	4.4	５		IP	４		IP	６		IP	３		IP	６		IP	３		IP	３		IP	６		IP	５		IP	５		IP

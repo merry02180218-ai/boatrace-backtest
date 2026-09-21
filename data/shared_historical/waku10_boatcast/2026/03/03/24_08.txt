@@ -1,0 +1,8 @@
+data=
+1	0
+岡崎　　凪汰	7.00	0.11	3.0	５		IP	２		IP	２		IP	３		IP	２		IP	１		IP												IP
+萩原　丈太朗	3.14	0.16	3.1	２		IP	５		IP	６		IP	３		IP	６		IP	５		IP	５		IP									IP
+長谷川　　暖	3.50	0.15	3.0	５		IP	４		IP	Ｆ		IP	４		IP	５		IP	３		IP	１		IP	３		IP	６		IP	沈		IP
+日高　龍之介	2.90	0.15	4.0	３		IP	５		IP	５		IP	６	6	IP	５		IP	６	6	IP	１		IP	５		IP	５		IP	６		IP
+網代　　良芽	3.60	0.17	3.3	６		IP	３		IP	５		IP	６		IP	４		IP	５	6	IP	５	6	IP	２		IP	４		IP	３		IP
+大澤　　風葵	4.50	0.16	3.2	３		IP	３		IP	３		IP	３	5	IP	５	5	IP	６		IP	６	4	IP	２	5	IP	２		IP	６	5	IP

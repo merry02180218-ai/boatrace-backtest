@@ -1,0 +1,8 @@
+data=
+1	0
+熊本　　英一	6.40	0.18	3.8	３		IP	１		IP	２		IP	６		IP	４		IP	１		IP	４		IP	１		IP	１		IP	６		IP
+井上　　大輔	4.10	0.18	3.5	３		IP	６		IP	３		IP	２		IP	５		IP	６		IP	５		IP	１	1	IP	４		IP	６		G3
+藤森　　陸斗	7.40	0.16	3.4	２		IP	３		IP	３		IP	１		IP	３		IP	１		IP	３		IP	１	4	IP	３		IP	３		IP
+柴田　　　光	5.22	0.15	4.4	２	3	IP	３		IP	５		IP	４		IP	２		G1	４	3	G1	転		IP	３	2	IP	６	2	IP	３		G3
+末永　　祐輝	3.20	0.13	2.7	６		IP	５		IP	６		IP	５	4	IP	５		IP	３		IP	３		IP	５		IP	２		IP	５		IP
+小野寺　智洋	3.00	0.14	2.7	５	5	IP	５		IP	５		IP	３		IP	６		IP	６		IP	３		G3	３		IP	５	5	IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+上田　　隆章	6.50	0.19	3.8	４		IP	３		IP	３		IP	１		IP	２		IP	１		IP	１		IP	５		IP	２		IP	６		IP
+酒井　　俊弘	5.80	0.14	2.5	３		IP	４	3	IP	３		IP	２		IP	２		IP	４		IP	５	5	IP	４		IP	１	4	IP	３	1	IP
+岡　　　祐臣	6.50	0.15	3.4	３		IP	２		IP	６		IP	３		IP	３		IP	２		IP	２		IP	１		IP	４		IP	２		IP
+是澤　　孝宏	6.00	0.17	3.6	４		IP	４		IP	２		IP	３		G2	３		IP	６		IP	３		IP	３	5	IP	１		IP	２	5	IP
+仲本　　　舜	5.50	0.15	3.3	１		IP	４		IP	４		IP	３		IP	３		IP	２		IP	３		IP	４		IP	３		IP	６		IP
+福島　　勇樹	6.50	0.15	3.0	２	4	IP	２	3	IP	３		IP	５		G1	３		G1	３	5	IP	４		IP	２		IP	２		IP	３		IP

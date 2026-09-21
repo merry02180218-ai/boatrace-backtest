@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　尚悟	7.80	0.15	2.5	１		IP	１		IP	５		IP	１		IP	５		G3	１		IP	３		IP	１		IP	１		IP	２		IP
+嶋田　　貴支	5.20	0.16	3.4	１		IP	３		IP	５		IP	５		IP	４		IP	５		IP	１		IP	４		IP	３		IP	３		IP
+平石　　和男	4.90	0.18	4.1	２		IP	６		IP	４		IP	４		IP	４		IP	３		IP	５		IP	３		IP	３	2	IP	２		IP
+水摩　　　敦	3.00	0.19	3.9	４		IP	５		IP	５		IP	４		IP	３		IP	６		IP	３		IP	５		IP	６		IP	５		G3
+萩原　　知哉	4.10	0.23	4.6	５	4	IP	５		IP	２		IP	６		IP	３		IP	５		IP	５		IP	４		IP	３		IP	３		IP
+黒野　　元基	6.90	0.14	2.4	４		IP	１	5	IP	５	5	IP	３		IP	５		G1	１		IP	１		IP	２		IP	２	5	IP	２		IP

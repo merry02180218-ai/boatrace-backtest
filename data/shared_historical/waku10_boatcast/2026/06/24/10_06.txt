@@ -1,0 +1,8 @@
+data=
+1	0
+安部　　慎一	4.90	0.14	2.4	４		IP	５		IP	４		IP	４		G3	Ｆ		IP	６		IP	１		IP	２		IP	２		IP	２		IP
+佐口　　達也	5.60	0.13	2.9	４		IP	４		IP	４		IP	３		IP	３		IP	４		IP	１		IP	２		IP	５	3	IP	２		IP
+守屋　　美穂	3.90	0.21	4.5	３		IP	５		IP	４		G1	６	4	G1	６		SG	６		SG	４		IP	４		IP	４		IP	３		IP
+桑原　　　啓	3.10	0.18	3.4	６		IP	４		IP	６		G3	６		IP	３		IP	３		IP	６		IP	５		IP	６		IP	２		IP
+井澤　　聖奈	2.60	0.24	5.0	４		IP	５		IP	６		IP	６		IP	６		IP	５		IP	５		IP	３		IP	６		IP	３		IP
+南　　　佑典	3.40	0.18	4.5	５		IP	５		IP	２		IP	４		IP	３		IP	５		G2	６		IP	４		IP	６		IP	６		IP

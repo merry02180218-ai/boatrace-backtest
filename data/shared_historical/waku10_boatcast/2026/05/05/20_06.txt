@@ -1,0 +1,8 @@
+data=
+1	0
+木下　　大將	9.78	0.13	2.1	１		IP	２		IP	１		IP	転		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+佐藤　謙史朗	3.67	0.19	3.1	６		IP	５		IP	３		IP	３		IP	５		IP	５		IP	欠		IP	４		IP	５		IP	２		IP
+伊藤　　尚汰	4.50	0.18	3.6	３		IP	４		IP	５		IP	４		IP	３		IP	４		IP	３		IP	２		IP	６		IP	４		IP
+宮地　　秀祈	2.70	0.15	3.3	５		IP	５		IP	４		IP	４		IP	５		IP	５		IP	５		IP	６		IP	３		IP	５		IP
+柴田　　朋哉	3.30	0.15	2.7	５		IP	５		IP	５		IP	３		IP	６	4	IP	５	6	IP	５	6	IP	２		IP	５	4	IP	３		IP
+岡村　　慶太	5.50	0.14	2.5	３		IP	１		IP	４		IP	３		IP	６		IP	１		IP	４		IP	４		G3	３		G3	４		IP

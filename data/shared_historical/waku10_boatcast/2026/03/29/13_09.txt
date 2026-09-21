@@ -1,0 +1,8 @@
+data=
+1	0
+角　　ひとみ	8.40	0.21	3.9	２		IP	１		IP	３		IP	１		G3	１		G3	１		IP	５		IP	１		IP	２		IP	１		IP
+中村　かなえ	4.30	0.16	2.9	６		IP	２		IP	６		IP	３		IP	６		IP	５		IP	４		IP	１		IP	５		IP	２		IP
+樋口　由加里	6.80	0.16	3.3	２		IP	４		IP	１		IP	２		IP	２		IP	５		G1	４		G1	１		IP	４		IP	２		G3
+林　　　風音	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+守屋　　美穂	4.90	0.18	3.5	３		G3	４		G3	５		G1	３		IP	５		IP	６	4	IP	１		IP	３		IP	２		IP	５		G1
+山田　　理央	4.00	0.17	3.4	３	4	IP	６		IP	５		IP	４		IP	３		IP	５		G1	６		G1	２		G3	５		G3	３		IP

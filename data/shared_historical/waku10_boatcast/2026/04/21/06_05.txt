@@ -1,0 +1,8 @@
+data=
+1	0
+寺島　　吉彦	5.40	0.19	3.5	６		IP	２		IP	５		IP	１		IP	２		IP	１		IP	２		IP	４		IP	５		G3	６		IP
+大橋　純一郎	7.20	0.15	2.6	４		IP	３		IP	５		IP	２		IP	１		IP	２		IP	２	3	IP	２		IP	２		IP	１	3	IP
+松尾　　昂明	7.40	0.13	2.0	１		IP	４		IP	１		IP	３		IP	１		IP	２		IP	２		IP	２		IP	４		IP	３		IP
+中北　　　涼	3.60	0.17	3.3	４		IP	４		IP	４		IP	５		G3	３		G3	３		IP	５	5	IP	５		IP	４		IP	５		IP
+坂本　　一真	2.60	0.17	3.5	４		IP	２		IP	６		IP	２		IP	６		IP	６		IP	６		IP	６		IP	エ		IP	６		IP
+永田　　秀二	4.50	0.19	3.7	３		IP	３		IP	５		IP	３		IP	４		IP	２	5	IP	４	5	IP	６		IP	４		IP	５		IP

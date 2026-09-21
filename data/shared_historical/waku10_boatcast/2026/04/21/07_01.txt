@@ -1,0 +1,8 @@
+data=
+1	0
+多田　　有佑	6.10	0.21	4.8	１		IP	２		IP	３		IP	２		IP	６		IP	６		IP	６		IP	１		IP	１		IP	３		IP
+上野　　秀和	6.10	0.16	3.8	２		IP	６		IP	２		IP	３		IP	４		G3	３		IP	２	3	IP	３	3	IP	４		IP	１		IP
+中尾　　彩香	6.60	0.19	2.6	６	4	IP	２		IP	２	5	IP	４		G3	２		IP	３		IP	６		IP	１		IP	１		IP	１		IP
+池田　　浩美	5.70	0.18	3.6	３		G3	１		IP	５	3	IP	３		IP	６		IP	２		G3	４		IP	６		IP	２		IP	１		IP
+鈴木　　柊介	3.40	0.14	2.3	６		IP	６		IP	５	6	IP	３	6	IP	６		IP	４		IP	３		IP	６		IP	４		IP	２		IP
+堀内　　亜海	1.00	0.23	4.9	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

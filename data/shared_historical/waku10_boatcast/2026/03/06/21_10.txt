@@ -1,0 +1,8 @@
+data=
+1	0
+滝川　真由子	8.10	0.21	4.2	１		IP	４		G3	２		G3	６		IP	２		IP	１		IP	１		IP	１		G3	１		IP	１		G3
+高田　ひかる	6.10	0.24	4.0	４		IP	２		IP	１		IP	１		G1	５		G1	２		IP	３		IP	４		IP	４	5	IP	６		IP
+岡谷　　健吾	3.80	0.20	3.4	３		IP	６		IP	５		IP	５	2	IP	５		IP	６		IP	２		IP	３		IP	２		IP	５		IP
+村上　　功祐	4.50	0.14	2.0	６		IP	５		IP	１		IP	３		IP	４		IP	５		IP	４		IP	１	5	IP	５		IP	４		G3
+森口　　和紀	4.50	0.18	3.3	１		IP	４		IP	４		IP	６		IP	５		IP	５		IP	４		IP	３		IP	２		IP	４		IP
+篠原　　晟弥	3.80	0.15	2.2	５		IP	４		IP	２		IP	６		IP	３	5	IP	６		IP	２	5	IP	５		IP	３		IP	転		IP

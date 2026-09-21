@@ -1,0 +1,8 @@
+data=
+1	0
+丸野　　一樹	10.00	0.14	2.4	１		SG	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP	５		G1	１		SG	１		G1
+宮地　　元輝	7.90	0.10	2.0	１	1	SG	２	3	G1	３		IP	２		IP	２		G1	２		G1	１		G1	２		SG	５		G1	６		G1
+平本　　真之	5.90	0.14	2.5	３		SG	６		G1	３		IP	２		IP	１		IP	５		G1	５		G1	３		G1	３		SG	６		SG
+佐藤　　　翼	7.20	0.10	2.9	３		G1	２		G1	２		IP	２	3	IP	５	5	G1	１		G1	３		SG	３		G1	２		G1	６		G1
+馬場　　貴也	5.80	0.14	4.1	３		SG	３		G1	１		IP	５		G1	３		G1	５		G1	６		G1	１	4	SG	５		G1	５		G1
+清水　　愛海	3.10	0.19	4.2	５		SG	５		IP	４		IP	６		G2	４		IP	６		IP	４		G1	５		IP	３		G1	転		G1

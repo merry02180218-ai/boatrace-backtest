@@ -1,0 +1,8 @@
+data=
+1	0
+井川　　大作	7.40	0.19	3.6	５		IP	３		IP	２		IP	１		IP	３		IP	３		IP	２		IP	１		IP	２		IP	１		IP
+小坂　　宗司	6.40	0.13	2.2	４		IP	２		IP	３		IP	３		G3	２		G3	２		G3	３		IP	３		IP	４		IP	２		IP
+赤池　　修平	5.80	0.15	2.8	６		IP	６		IP	４		IP	１	4	IP	１		IP	２		IP	２		IP	３		IP	５		IP	２		IP
+川崎　　公靖	4.10	0.19	3.3	５		IP	１		IP	１		IP	５		IP	５	5	IP	６		IP	３		IP	５		IP	５		IP	４		IP
+小野　　信樹	1.90	0.14	2.6	４		IP	５		IP	６		IP	４		IP	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP
+田村　　隆信	5.10	0.19	4.1	３		IP	４	3	IP	２	4	IP	６		IP	３		G1	４		IP	２	2	G1	６		G2	６	4	G2	２		IP

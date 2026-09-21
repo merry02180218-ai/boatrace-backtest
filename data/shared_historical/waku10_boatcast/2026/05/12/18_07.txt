@@ -1,0 +1,8 @@
+data=
+1	0
+宮武　　英司	7.80	0.17	3.8	２		IP	１		IP	２		IP	１		IP	４		IP	３		IP	１		IP	１		IP	３		IP	３		IP
+川合　　理司	2.90	0.17	3.3	６		IP	５		IP	５		IP	２		IP	５		IP	５		IP	４		IP	５		IP	５		IP	４		IP
+廣瀬　　　凜	5.50	0.12	1.9	４	4	IP	２		IP	５	4	IP	１		IP	６		IP	４		IP	１		IP	３		IP	４		IP	５	4	IP
+石塚　　久也	6.50	0.18	3.1	２		IP	１		IP	３	5	IP	２		IP	３		IP	３		IP	６		IP	３		IP	１		IP	４		IP
+松田　　憲幸	2.20	0.20	4.2	５		IP	５		IP	４	4	IP	５		IP	６		G3	６		G3	６		IP	３		IP	６		IP	５		IP
+柳沢　　　一	6.60	0.14	3.0	４		IP	２		IP	２	5	IP	４		IP	３		IP	１		IP	３		IP	４		G1	１	4	IP	４		G1

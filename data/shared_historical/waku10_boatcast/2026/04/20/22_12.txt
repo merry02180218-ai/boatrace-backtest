@@ -1,0 +1,8 @@
+data=
+1	0
+篠崎　　元志	10.50	0.13	1.9	１		G1	１		G1	１		G3	１		G3	１		G3	１		G1	１		G1	１		G1	１		IP	１		IP
+原田　　篤志	7.10	0.15	2.9	５		IP	１		IP	２		IP	２		IP	２		G1	４		IP	Ｆ		IP	１	1	IP	１		IP	２		G1
+大上　　卓人	7.30	0.16	2.9	３		IP	４	4	SG	２		G1	４		G1	５		G1	２		IP	１		IP	３		G1	２		IP	１	4	IP
+北山　　康介	3.90	0.15	3.7	６	6	IP	３		IP	３		IP	６		IP	３		IP	２		IP	６		IP	６		IP	６		IP	３		IP
+堀本　　和也	5.00	0.13	2.8	４		IP	３		IP	５		IP	２		IP	４	4	SG	３		SG	６		G1	２		G1	転	6	G1	４		G1
+杉山　　裕也	4.40	0.15	3.3	６		G1	３	5	G1	５		IP	６		IP	３		G1	４		G1	３		IP	１	5	IP	５		IP	５		IP

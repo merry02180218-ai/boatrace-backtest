@@ -1,0 +1,8 @@
+data=
+1	0
+堤　　　　昇	7.00	0.18	3.2	１		IP	２		IP	２		IP	１		IP	３		IP	２		IP	４		IP	３		IP	５		IP	２		IP
+井上　　大輔	6.10	0.17	3.3	２		IP	３		IP	３		IP	３		IP	２		IP	２		IP	６		IP	３		IP	４		IP	２		IP
+伏田　　裕隆	5.40	0.16	2.9	２		IP	４	5	G3	６		G3	５		IP	２		IP	１		IP	３	5	IP	６	6	IP	１	5	IP	４	6	IP
+三浦　洋次朗	3.90	0.21	3.1	４		IP	４		IP	４		IP	３		IP	６		IP	６		IP	３		IP	４		IP	６	5	IP	２		IP
+長谷川　　充	2.50	0.25	4.5	５		IP	６		IP	５		IP	５		IP	４		IP	４		IP	５		IP	６		IP	６		IP	３		G3
+井手　　良太	5.10	0.13	3.9	２		IP	３	5	IP	２		IP	５		IP	３		IP	５		IP	６		IP	２		IP	３		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+石丸　　海渡	10.00	0.10	2.1	２		IP	１		G1	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+長谷川　親王	2.90	0.22	4.0	２		IP	５		IP	４		IP	６		IP	５		IP	６		IP	５		IP	６	3	IP	３		IP	５		IP
+門田　　　栞	5.40	0.19	3.3	２		IP	５		G3	４		G3	４		G3	６		IP	１		IP	２		IP	３		IP	６		IP	１		IP
+深川　　和仁	3.70	0.19	3.9	５		IP	４	3	IP	４	3	IP	６		IP	４		IP	３		IP	６		G3	４		G3	１	5	IP	６		IP
+濱野　　斗馬	6.10	0.15	2.5	４		IP	２		IP	２		IP	３	6	IP	３		G2	６		G2	３		IP	１	4	IP	６		G1	２		IP
+中田　　元泰	4.30	0.20	4.1	５		IP	３		IP	３		IP	４		IP	３		IP	転		G1	４		G1	３	5	IP	３		IP	５		IP

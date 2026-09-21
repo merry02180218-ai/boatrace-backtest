@@ -1,0 +1,8 @@
+data=
+1	0
+塩崎　　桐加	9.50	0.14	2.6	１		IP	１		IP	１		IP	１		IP	２		G3	２		G3	１		G1	１		IP	１		IP	２		IP
+山下　　友貴	6.20	0.19	4.2	３		IP	３		G3	２		IP	１		IP	４		IP	４		IP	１		IP	５		G3	２		G3	４		G3
+三嶌　こころ	4.00	0.18	4.7	５		IP	６		IP	６		IP	６		IP	２		IP	２		IP	４		IP	３		G3	２		G3	６		IP
+加藤　　　綾	5.30	0.17	2.8	２		IP	２		IP	２		IP	３		IP	３		IP	６		IP	５	5	IP	３		IP	４		IP	４		IP
+矢野　真梨菜	2.40	0.20	3.1	５		IP	６		IP	５		IP	６		IP	４		G3	６		G3	３		G3	６		G3	４		G3	５		IP
+中澤　　里桜	1.10	0.18	3.7	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	エ		IP

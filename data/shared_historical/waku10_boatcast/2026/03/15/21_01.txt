@@ -1,0 +1,8 @@
+data=
+1	0
+宮崎　　　奨	7.00	0.17	3.2	４		IP	２		G3	１		G3	６		IP	４		G1	２		IP	３		IP	２		IP	１		IP	１		IP
+松井　　貫太	4.90	0.19	4.7	６		IP	５		IP	３		IP	２		IP	４		IP	５		IP	１		IP	４		IP	２		IP	４		IP
+山地　　正樹	4.00	0.22	4.0	６		IP	４		IP	３		IP	３		IP	３		IP	４		IP	４		IP	５		IP	６		IP	３		IP
+小柳　　勝希	3.30	0.19	3.7	４		IP	３		IP	６		IP	５	3	IP	５	5	IP	１		IP	５		IP	５	6	IP	５	5	IP	５	6	IP
+中嶋　誠一郎	3.70	0.14	3.0	落		IP	３		IP	４		IP	１		IP	６		IP	５	4	IP	５		IP	５		IP	５		IP	２		G3
+甲斐　　貴大	1.10	0.18	2.5	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP

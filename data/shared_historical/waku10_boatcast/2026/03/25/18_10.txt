@@ -1,0 +1,8 @@
+data=
+1	0
+前出　　達吉	8.70	0.15	2.1	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		G3	２		IP	６		IP	１		IP
+川上　　　剛	5.70	0.16	4.2	２		IP	６		IP	３		G3	５		G3	３		IP	４		IP	１		IP	３		IP	１		IP	６		IP
+西村　美智子	5.60	0.11	1.8	４	2	IP	１		IP	３		IP	４		IP	５		IP	６		IP	６		IP	１		IP	２		IP	１	4	IP
+山崎　　　祥	5.80	0.15	3.2	３		IP	３		IP	２		IP	１		IP	５		IP	６		IP	３		IP	２		IP	２		IP	５		IP
+藤山　　雅弘	2.80	0.25	4.5	２		IP	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP	５	4	IP	４		IP	５		IP
+山一　　鉄也	3.70	0.18	3.6	５		IP	２		G3	３		G3	６		IP	３		IP	５		IP	５	5	IP	３		IP	５		IP	５		IP

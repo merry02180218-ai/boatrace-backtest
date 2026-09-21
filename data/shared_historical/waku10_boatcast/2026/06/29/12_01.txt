@@ -1,0 +1,8 @@
+data=
+1	0
+坂　　咲友理	6.20	0.22	4.5	３		IP	１		G3	４		G3	４		G3	４		G3	３		IP	２		IP	５		IP	１		IP	２		G3
+三嶌　さらら	7.00	0.12	2.4	２		IP	３		IP	２		IP	１		IP	４		IP	５		IP	３		IP	２		IP	２		IP	１	1	IP
+松瀬　　弘美	5.00	0.16	3.5	２		IP	４		IP	４		IP	３		IP	３		G3	４		G3	５	4	IP	２		IP	４		IP	４		IP
+石村　日奈那	2.80	0.18	4.0	４		IP	５		IP	６		G3	３		IP	６		IP	６		IP	４		IP	４		IP	６		IP	４		IP
+樫葉　　新心	2.80	0.19	4.4	５		IP	５		G3	Ｆ		G3	３		IP	６		IP	３		G3	５		G3	３		IP	５		IP	６		IP
+中澤　　里桜	1.80	0.20	4.4	６		IP	６		IP	６		IP	６		IP	Ｆ		IP	６		IP	５		IP	５		IP	２		IP	６		IP

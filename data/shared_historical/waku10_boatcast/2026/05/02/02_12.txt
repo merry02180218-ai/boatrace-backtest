@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　　翼	10.70	0.11	2.4	１		G1	１		G1	１		G1	１		SG	３		G1	１		G1	１		G1	１		G1	１		G1	１		G1
+金子　　和之	6.40	0.17	3.8	３		IP	３		IP	４		G3	３		IP	２		G2	１		IP	２		IP	６		IP	２		IP	３		IP
+秋元　　　哲	7.60	0.11	2.1	１	1	IP	１		G3	２		G1	３		G1	４		IP	２		G1	１		IP	５		G1	３		IP	２	2	IP
+後藤　　　浩	4.90	0.15	2.7	２		IP	５		IP	５		IP	３		IP	６		IP	３		IP	５	3	IP	３		IP	３		IP	１		IP
+関口　　智久	2.33	0.10	2.7	３		IP	５		IP	４		IP	６		IP	６		IP	５		IP	５	6	IP	６	6	IP	５		IP	転		IP
+浅見　　昌克	4.50	0.13	3.0	４		G1	６		G1	５		IP	３		IP	４	3	IP	１	4	IP	４		IP	４		IP	５	4	IP	３	4	IP

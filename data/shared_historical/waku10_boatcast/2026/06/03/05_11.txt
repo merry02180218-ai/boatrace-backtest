@@ -1,0 +1,8 @@
+data=
+1	0
+浜田　亜理沙	8.90	0.18	3.0	２		G3	１		G3	１		G3	２		G3	１		G3	１		G2	１		G2	２		IP	５		IP	１		G1
+田口　　節子	7.40	0.15	3.5	２		G3	２		IP	４		IP	３		G2	３		G1	５	4	G1	２		G3	１		G3	１		IP	２		G1
+廣中　智紗衣	6.30	0.21	4.1	３		G3	２		G3	６		IP	２		IP	２		IP	５		IP	２		IP	２		IP	５		IP	１		IP
+堀之内紀代子	5.60	0.19	3.2	３		G3	２		G3	３		G3	４		G2	４		G2	２		IP	４		IP	１		IP	５		IP	５		G3
+中澤　　宏奈	3.90	0.20	3.9	５		G3	４		IP	６		IP	２		IP	３		IP	６		IP	５		G3	６		G3	２		IP	３	6	IP
+平田　さやか	4.30	0.20	3.0	４		G3	３	4	IP	２		IP	４	5	IP	６		IP	３		IP	５		IP	３	5	IP	４		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+青木　　玄太	10.00	0.15	3.4	１		IP	１		G1	１		G1	１		G2	１		G2	１	4	IP	１		IP	２		IP	１		G3	２		G3
+内田　　　圭	2.90	0.16	3.0	５		IP	５		IP	６		IP	６		IP	６		IP	５		IP	２		IP	６		IP	６		IP	１		IP
+中北　　将史	4.30	0.16	2.1	５		IP	２		IP	６		IP	３	4	IP	３		IP	３		IP	４		IP	５		IP	５		IP	３		IP
+赤岩　　善生	7.11	0.18	3.7	２	2	IP	２	3	IP	１	1	IP	３	2	G1	４	2	IP	２		G1	転		G1	２	2	IP	２	2	IP	５	2	IP
+喜井　つかさ	5.10	0.16	3.7	２		IP	３		IP	５		IP	４		IP	４		G3	２		G3	３		IP	３		IP	６		G3	３		IP
+鈴木　　勝博	3.00	0.14	3.1	６		IP	１		IP	５		IP	４		IP	６		IP	４		IP	妨		IP	５	5	IP	４		IP	５		IP

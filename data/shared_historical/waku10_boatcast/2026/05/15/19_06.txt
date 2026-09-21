@@ -1,0 +1,8 @@
+data=
+1	0
+村松　　遥輝	8.60	0.15	2.5	２		IP	１		IP	２		IP	２		IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+竹下　　大樹	6.80	0.12	2.3	２		IP	５		IP	５		G1	３		IP	２		IP	３		IP	２		IP	１		IP	３		G3	１		G1
+沼田　　大都	6.70	0.21	4.9	４		IP	２		IP	４		IP	２		IP	６		IP	１		IP	２		IP	１		IP	３		IP	２		IP
+内田　　　壮	0.50	0.25	5.5	６		IP	転	6	IP																								IP
+澁川　　　夏	4.90	0.14	3.7	４		IP	５		IP	６	6	IP	２		IP	４		IP	３		IP	５		IP	２		IP	３		IP	２		IP
+高井　　雄基	4.00	0.24	4.8	４		IP	６		IP	４		G3	２		IP	６		IP	３		IP	３		IP	５		IP	５		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　孝平	10.40	0.14	2.4	１		G1	１		G1	３		G1	１		G1	１		G1	１		IP	１		IP	１		IP	１		G1	１		G1
+武田　　光史	6.50	0.18	2.4	２		IP	２		IP	１		IP	３		IP	２		IP	３		IP	２		IP	２		IP	６		IP	５		IP
+今垣　光太郎	3.70	0.14	4.0	５		G1	６		G1	落		IP	４		IP	２		G1	６		G1	６		G1	２		IP	５		IP	４		IP
+萩原　　秀人	7.20	0.11	3.3	４		G1	２		G1	３		IP	２		G1	４		IP	３		G1	３	5	G1	２		IP	３		IP	１		G3
+中辻　　博訓	3.90	0.11	1.8	６		IP	５		IP	４		IP	３	3	IP	５		IP	５		G3	４		G3	３		IP	３		IP	３		IP
+松田　　祐季	3.90	0.18	3.3	４		IP	４		IP	５		G1	５		G1	６		G1	６		G1	２		IP	２	4	IP	６		IP	４		IP

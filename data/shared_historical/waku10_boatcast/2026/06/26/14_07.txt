@@ -1,0 +1,8 @@
+data=
+1	0
+篠崎　　元志	9.70	0.10	2.3	１		IP	１		IP	３		IP	１		SG	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+深谷　　知博	8.20	0.18	4.2	４		G1	３		SG	１		G1	１		IP	２		G1	１		G1	２		IP	２		G1	２		G1	６		G1
+渡辺　　浩司	6.90	0.11	3.0	３		G1	３		IP	２		IP	１		IP	３		IP	３		IP	２		IP	３		IP	６		G1	２	4	G1
+片岡　　雅裕	6.00	0.10	2.4	６		G1	６		G1	２		IP	１	3	IP	５		G2	３		IP	２		G1	２		G1	６		G1	２		G1
+遠藤　　エミ	6.10	0.12	2.5	２		G1	５		SG	３		SG	３		IP	３		G2	５		G2	５		IP	４		G2	３		G1	１		IP
+池田　　浩二	5.50	0.12	3.1	３		G1	３		G1	４		SG	６		G1	２	4	IP	４		G1	６		G1	６		SG	２	5	SG	４		G1

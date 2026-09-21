@@ -1,0 +1,8 @@
+data=
+1	0
+鎌倉　　　涼	9.10	0.11	2.5	１		G2	６		G1	１		SG	１		G3	３		G3	２		G3	１		G1	１		G1	１		IP	１		IP
+川野　　芽唯	7.40	0.18	3.9	４		G2	３		G2	２		G3	４		G3	２		G3	２		IP	２		IP	２		IP	２		IP	１		IP
+三浦　　永理	6.11	0.14	2.7	４		G2	３		G3	５		IP	１		G3	２		G3	２		IP	１		IP	４		G1	６		IP	転		IP
+松尾　　夏海	7.50	0.14	2.1	５		G2	２		G2	３		IP	２		IP	３		IP	１		IP	１		IP	２		IP	２		IP	３		IP
+登　　みひ果	4.10	0.14	2.2	５	4	G2	４		IP	５		IP	３		G3	３		G3	３	6	IP	６	6	IP	４	6	G3	２		G3	６		G3
+岩崎　　芳美	4.00	0.16	3.8	６		G2	４	5	G2	４		IP	５		IP	５	5	IP	３		IP	２		IP	３		G3	６		G3	４		G3

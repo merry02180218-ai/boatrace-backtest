@@ -1,0 +1,8 @@
+data=
+1	0
+河野　　　大	10.10	0.14	2.2	１		IP	１		IP	１		IP	１		IP	１		IP	１		G2	１		IP	１		IP	１		IP	１		IP
+清水　　紀克	3.10	0.22	4.1	６		IP	６		IP	４		IP	５		IP	４		IP	３		IP	６		IP	６		IP	６		IP	１		IP
+松尾　　光広	4.00	0.19	3.9	４		IP	６		IP	６		IP	３		IP	３		IP	２		IP	３		IP	６		IP	６		IP	３		IP
+三宅　　健太	4.00	0.20	3.7	３		IP	６		IP	４		G3	１	5	G3	３		IP	４		IP	５		IP	６		IP	４	5	IP	５		IP
+松尾　　基成	3.30	0.17	3.9	２		IP	３		IP	５		IP	５		IP	６	6	IP	４		IP	６		IP	４		IP	４		IP	６		IP
+網代　　良芽	4.20	0.12	1.9	６		IP	４		IP	４		IP	５		IP	３		IP	１		IP	６		IP	３		IP	５		IP	３		IP

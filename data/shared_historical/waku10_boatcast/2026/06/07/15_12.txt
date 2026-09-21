@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　桃佳	9.20	0.14	2.7	１		IP	２		IP	１		IP	６		G2	１		G2	１		IP	１		IP	１		IP	１		IP	１		IP
+寺田　　千恵	5.50	0.17	3.8	２		IP	６		IP	３		G2	３		G1	５	3	G1	４		G3	３		G3	１		G3	４		G3	４		G1
+松尾　　夏海	8.00	0.13	2.3	４		IP	２		G2	４		G2	２		IP	２		IP	１		IP	３		IP	１		IP	１		IP	１		IP
+山本　　梨菜	5.70	0.20	3.7	５		IP	２		IP	３		IP	３	3	G3	６		IP	１		IP	３		G3	５		G3	３	6	IP	１		IP
+山田　　理央	5.11	0.11	2.4	３		IP	４		IP	６	6	IP	４		G2	１		IP	３		G3	２	4	G3	４	4	IP	５		IP	落		IP
+原田　　佑実	3.50	0.15	2.9	３		IP	４		IP	５		IP	６		IP	５		G3	６		IP	２		G3	６		G3	３		IP	４		IP

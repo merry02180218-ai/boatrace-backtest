@@ -1,0 +1,8 @@
+data=
+1	0
+伏田　　裕隆	5.60	0.18	4.1	３	6	G3	６		IP	１		IP	１		IP	３		IP	４		IP	６	6	IP	１		IP	５		G3	３		G3
+富永　夏哉人	4.60	0.21	3.3	２		G3	６		IP	５		IP	６		IP	６	3	IP	２		IP	２		IP	１		IP	３		IP	６		IP
+村越　　　篤	6.10	0.16	2.8	２		G3	２	4	IP	３		IP	２		IP	３		G1	４		G1	６		IP	４		IP	２		IP	３		IP
+折下　　寛法	4.89	0.16	2.8	５		G3	３		IP	５		IP	４		IP	４		IP	２		IP	エ		IP	３		IP	３		IP	３		IP
+上野　　俊樹	4.00	0.17	3.2	６		G3	４		IP	３		IP	２		IP	４		IP	６		IP	６		IP	１		IP	４		IP	６		IP
+生方　　靖亜	2.10	0.18	4.4	５		G3	５		IP	６		IP	２	5	IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP

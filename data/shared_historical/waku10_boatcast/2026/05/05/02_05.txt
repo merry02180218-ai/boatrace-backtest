@@ -1,0 +1,8 @@
+data=
+1	0
+飛田　　江己	9.50	0.12	1.9	４		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+野田　　昇吾	4.00	0.19	3.9	３		IP	４		IP	５		IP	５		IP	６		IP	６		IP	５		IP	４		IP	１		IP	２		IP
+滝沢　　織寧	3.00	0.19	2.8	６		IP	５		IP	５		IP	６	4	IP	３		IP	５		IP	３		IP	５		IP	４		G3	４		IP
+清埜　　翔子	3.50	0.12	2.5	４	5	IP	１		IP	４	5	IP	６		IP	５		IP	６		G3	３		G3	６		G3	６		G1	４		IP
+堂原　　洋史	3.60	0.20	3.2	５		IP	５		IP	４		IP	２		IP	５		IP	４		IP	４		IP	６	6	IP	２		IP	６		IP
+成田　　華音	1.25	0.15	4.5	６		IP	６		IP	５		IP	６		IP																		IP

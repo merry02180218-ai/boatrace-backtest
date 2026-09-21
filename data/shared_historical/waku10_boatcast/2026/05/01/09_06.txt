@@ -1,0 +1,8 @@
+data=
+1	0
+花本　　夏樹	7.40	0.18	3.6	３		IP	２		IP	２		IP	１		IP	４		IP	４		IP	２		IP	１		IP	３		IP	１		IP
+茶谷　　信次	6.60	0.18	3.6	２		IP	３		IP	Ｆ		IP	２		IP	１		IP	５		IP	１		IP	３		IP	４		IP	１		IP
+星野　　太郎	4.67	0.18	3.6	４		IP	６		IP	６		IP	３		IP	４		IP	３		IP	不		IP	２		IP	２		IP	４		IP
+松尾　　　充	5.50	0.15	3.5	２		G1	５		G1	４		G1	５		IP	４		IP	１	5	IP	３		IP	４	5	IP	４		IP	２		IP
+岡　　　祐臣	4.40	0.19	4.2	５		G1	５		G1	５		G1	３		G1	３		IP	３		IP	４		IP	２		IP	５		IP	５		IP
+後藤　　孝義	2.78	0.24	4.7	欠		IP	３	5	IP	６		IP	６		IP	６		IP	３	3	IP	５		IP	６		IP	３		IP	６		IP

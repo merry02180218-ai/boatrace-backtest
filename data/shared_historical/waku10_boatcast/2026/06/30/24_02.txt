@@ -1,0 +1,8 @@
+data=
+1	0
+森安　　弘雅	7.30	0.18	4.6	３		IP	１		IP	４		IP	２		IP	１		IP	１		IP	６		IP	１		IP	４		IP	１		IP
+大江　　　純	5.70	0.11	2.9	３		IP	３		IP	６	3	G3	４	3	G3	３		IP	２		IP	２		IP	３		IP	４		IP	２		IP
+海老澤　泰行	5.80	0.14	3.1	３		IP	５		IP	１		IP	５		G3	４		G3	３		IP	２		IP	２		IP	３		IP	３		IP
+廣中　　良一	3.80	0.16	3.1	３		IP	妨		IP	６		G3	５		IP	２		IP	５		IP	２		IP	４		IP	３		IP	６		G3
+藤田　　竜弘	5.00	0.16	2.5	３		IP	５		IP	４		IP	６		IP	６		IP	１		IP	３		IP	４		IP	４		IP	１		IP
+山田　　陽翔	1.10	0.18	4.1	６		IP	欠		IP	６		IP	５	5	IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

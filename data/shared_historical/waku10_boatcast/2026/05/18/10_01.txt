@@ -1,0 +1,8 @@
+data=
+1	0
+水摩　　　敦	7.60	0.22	4.3	２		IP	３		IP	２		IP	３		IP	１		IP	３		IP	２		IP	３		IP	２		IP	１		G3
+櫻井　　　優	6.40	0.16	3.1	２		IP	４		IP	２		IP	２		IP	２		IP	５		IP	４		IP	４	3	IP	１		IP	２		IP
+久田　　　武	4.80	0.15	3.4	４		IP	３		IP	１		IP	４		IP	３		IP	６		IP	６		IP	３		IP	２		IP	５		IP
+永田　　義紘	3.80	0.11	1.7	１		IP	６		IP	４		IP	３		IP	５		IP	５		IP	６	5	IP	５		IP	３	5	IP	４	3	IP
+柳瀬　　幹太	4.70	0.14	2.7	４		IP	５		IP	３		G3	５	6	IP	１		IP	６		IP	２		IP	３		IP	５		IP	３		IP
+表　　　憲一	3.40	0.20	4.3	４		IP	６		IP	４		IP	５		IP	６		IP	６		IP	２		IP	３		IP	３		IP	６		IP

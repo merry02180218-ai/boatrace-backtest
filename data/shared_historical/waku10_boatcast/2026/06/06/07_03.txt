@@ -1,0 +1,8 @@
+data=
+1	0
+井手　　良太	6.90	0.15	3.8	１		IP	６		IP	５		IP	１		IP	１		IP	３		IP	４		IP	４		IP	１		IP	１		IP
+鈴木　　賢一	6.20	0.12	3.8	２		IP	２		IP	２		IP	２		IP	３		IP	転		IP	２		IP	２		G3	３		G3	５		IP
+高井　　雄基	3.80	0.24	4.8	５		IP	３		IP	３		IP	１		IP	５	4	IP	４	5	IP	４		G3	６		IP	５		IP	６		IP
+平田　　忠則	6.60	0.18	4.0	４		IP	２		IP	３		IP	４		IP	３		G1	２	5	IP	２		IP	３		G3	１		IP	４		IP
+小林　　一樹	4.30	0.13	2.5	４		IP	４		IP	６		IP	３		IP	１		IP	２		IP	６		IP	６	4	IP	５		IP	３		IP
+今村　天次朗	2.00	0.20	3.9	６		IP	６		IP	６		IP	４		IP	５		IP	５		IP	４		IP	６		IP	欠		IP	４		IP

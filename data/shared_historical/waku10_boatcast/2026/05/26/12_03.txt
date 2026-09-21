@@ -1,0 +1,8 @@
+data=
+1	0
+北川　　幸典	5.10	0.21	4.5	５		IP	１		IP	転		IP	４		IP	６		G3	１		G3	４		IP	１		IP	２		IP	５		IP
+浜先　　真範	7.20	0.14	2.3	２		IP	２		IP	４		IP	３		IP	３		G1	３		IP	２		IP	１		IP	４		G1	１		IP
+澁川　　　夏	5.10	0.13	3.4	３		IP	６		IP	４		IP	３		IP	３		IP	３		IP	３		IP	３		IP	転		IP	１		IP
+桑島　　和宏	6.80	0.18	3.8	５		G2	１		IP	２		IP	３		IP	４	3	IP	２		IP	３		IP	３		IP	２		IP	３		G1
+中井　　俊祐	6.00	0.14	2.1	１		IP	５	6	IP	３		IP	５		IP	３		IP	４		IP	２		IP	４		IP	１		IP	２		IP
+上田　　隆章	2.60	0.22	5.4	５		IP	５		IP	６		IP	４		IP	５		IP	６		IP	３		IP	５		IP	５		IP	４		IP

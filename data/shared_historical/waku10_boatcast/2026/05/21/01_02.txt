@@ -1,0 +1,8 @@
+data=
+1	0
+伏見　　俊介	6.40	0.14	1.8	１		IP	５		IP	Ｆ		IP	１		IP	５		IP	１		IP	１		IP	３		IP	３		IP	２		IP
+今泉　　　徹	4.90	0.17	3.1	５		IP	４		IP	４		IP	２		IP	６		IP	３		IP	４		IP	４		IP	２		IP	２		IP
+丹下　　　将	6.30	0.17	2.4	２		IP	６		IP	２		IP	１		IP	３		IP	４		IP	５		IP	４		IP	２		IP	１		IP
+嶋　　　義信	6.60	0.14	2.8	３		IP	５	5	IP	１		IP	２		IP	３		IP	３		IP	４		IP	１	5	IP	２		IP	３		IP
+鈴木　　茂高	5.00	0.17	3.7	３		IP	５		IP	５		IP	４	4	IP	４		IP	３		IP	１		IP	４		IP	４		IP	２		G3
+市橋　　卓士	3.90	0.17	3.2	５		IP	４		IP	６		IP	５	5	IP	２	5	IP	６		IP	５		IP	４		IP	２		IP	３		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+品田　　直樹	8.00	0.17	2.9	１		IP	１		IP	２		IP	１		IP	５	2	IP	３		IP	１		IP	３		IP	２		IP	１		IP
+前田　　　翔	6.70	0.16	3.8	２	3	IP	２		IP	３		IP	２		IP	３		G1	５		IP	１		IP	４		IP	５		IP	１		IP
+上田　　隆章	5.20	0.23	4.7	４		IP	３		IP	４		IP	２		IP	６		IP	２		IP	２		IP	５		IP	１		IP	６		IP
+上野　　秀和	6.20	0.16	2.8	４		IP	３		IP	４		IP	５		G3	３		IP	１		IP	１		IP	１		IP	３		IP	４		IP
+岡部　　大輝	6.00	0.16	3.2	１		IP	４		IP	２		IP	１		G3	３		IP	５		IP	２		IP	５		IP	３		IP	４		IP
+原田　　朱理	1.40	0.20	5.3	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP	転		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中尾　　彩香	8.40	0.17	2.9	１		IP	３		IP	２		G3	１		G3	３		IP	１		IP	２		IP	２		IP	１		IP	２		IP
+石田　　政吾	6.10	0.15	2.2	５		IP	１		IP	２		IP	５		IP	２		IP	４		IP	２		IP	２		IP	１		IP	６		IP
+高橋　　竜矢	7.80	0.14	2.3	２		IP	２		IP	２		IP	５		IP	２		IP	２		IP	２		G1	１		G1	３		G1	２		G1
+出畑　　孝成	3.70	0.18	3.5	３		IP	３		IP	５		IP	３		IP	６		IP	４		IP	５		IP	４		IP	５		IP	４		IP
+浜野　　孝志	5.90	0.17	3.1	３		IP	４		IP	２		IP	２		IP	３	6	IP	４		IP	２		IP	２		IP	５		IP	４		IP
+多田　　有佑	2.30	0.30	5.7	３		IP	４		IP	６		IP	Ｆ	5	IP	５		IP	６		IP	６		IP	５		IP	４		IP	５		IP

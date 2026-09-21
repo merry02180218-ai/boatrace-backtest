@@ -1,0 +1,8 @@
+data=
+1	0
+中嶋　　達也	5.50	0.16	3.4	３		IP	６		IP	１		IP	１		IP	５		IP	２		IP	６		IP	６		IP	３		IP	１		IP
+滝沢　　芳行	4.10	0.13	2.5	５		IP	１		IP	４		IP	５		IP	５		IP	４		IP	５		IP	４		G3	２		IP	６		IP
+飯山　　　泰	7.00	0.17	3.0	１		G2	１		IP	１		IP	３		IP	２		IP	６		IP	２		IP	２		IP	５		G1	４		G1
+平岡　　重典	3.10	0.19	3.6	５		IP	５		IP	４		IP	６		IP	６		IP	５		IP	３		IP	１		IP	５		IP	６		IP
+村岡　　賢人	4.20	0.14	3.0	４		IP	５	6	IP	３		IP	６		G1	２		G1	４		G1	３		G1	３		IP	Ｆ		IP	６	6	IP
+杉山　　喜一	4.30	0.18	3.5	３		IP	５		IP	５		IP	５		G3	５	5	G3	３		IP	３		G3	１		IP	６		IP	３		IP

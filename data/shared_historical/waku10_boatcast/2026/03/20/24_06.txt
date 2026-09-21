@@ -1,0 +1,8 @@
+data=
+1	0
+品川　二千翔	8.90	0.17	3.6	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		G2	３		IP	３		IP	１		IP
+尾上　　雅也	6.20	0.18	4.1	６		IP	１		IP	１	3	IP	３		IP	５		G1	５		G1	１		IP	５		IP	２		IP	２		IP
+上瀧　　絢也	4.50	0.18	3.6	５		IP	３	4	IP	４		IP	５		IP	４		IP	１		IP	３		IP	４		IP	６		IP	３		IP
+真庭　　明志	3.40	0.16	3.2	６		IP	４		IP	５		IP	３		IP	４		IP	５		IP	６		IP	３		IP	４		IP	４		IP
+水原　　　慎	4.40	0.16	2.4	３		IP	３		IP	３		IP	４	6	IP	３		IP	５	4	G3	６		IP	４		G3	２		IP	６		IP
+福嶋　　智之	2.90	0.15	2.8	６		IP	４	5	IP	５		IP	５		IP	２		IP	６		IP	４		IP	４		IP	５		IP	６		IP

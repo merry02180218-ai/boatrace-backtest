@@ -1,0 +1,8 @@
+data=
+1	0
+吉川　　晴人	8.60	0.17	4.3	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		G2	３		IP	６		IP
+小林　　愛実	4.20	0.16	3.4	Ｆ		IP	３		IP	６		IP	６		IP	６		IP	１		IP	１		IP	６		IP	２		IP	４		IP
+片岡　　大地	6.40	0.18	2.8	２		IP	２		IP	４		IP	３		IP	４		IP	５		IP	３		IP	２		IP	１	2	IP	２	1	IP
+大場　　　敏	4.40	0.16	3.4	４		IP	２		IP	６		IP	５		IP	６		IP	４		IP	２		IP	３		IP	５		IP	３		IP
+高木　　圭大	2.30	0.15	2.9	５		IP	５		IP	３		IP	５	6	IP	６		IP	６		IP	５		IP	６		IP	５		IP	４		IP
+大田　　直弥	3.60	0.23	4.4	５		IP	４	5	IP	５		IP	５		IP	５		IP	３		IP	２		IP	５		IP	５		IP	３		IP

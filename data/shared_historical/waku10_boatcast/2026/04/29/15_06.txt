@@ -1,0 +1,8 @@
+data=
+1	0
+谷口　　佳蓮	8.60	0.10	2.0	４		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	４		IP	１		IP	１		IP
+中越　　博紀	4.50	0.20	4.6	１		IP	３		IP	４		IP	５		IP	４		IP	５		IP	３		IP	２		G3	５		G3	６		IP
+三嶌　こころ	5.10	0.20	4.2	６		IP	６		IP	２		IP	２		IP	４		IP	３		G3	２		G3	６		IP	３		IP	２		IP
+中村　　桃佳	5.70	0.10	2.2	１		IP	３		IP	１		IP	５	3	IP	１		G1	２		G1	６		G1	４		G1	６		IP	６		IP
+大西　　隆洋	3.70	0.14	3.0	５		IP	１		IP	３		IP	３		IP	４		IP	６	4	IP	４		IP	５		IP	６		IP	６		IP
+中村　　日向	5.10	0.12	3.3	２	5	IP	２		IP	４		IP	５		G1	４		SG	３		G1	６		G1	５		G1	４		G1	４		G1

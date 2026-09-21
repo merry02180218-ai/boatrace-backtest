@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　ほのか	4.33	0.18	2.8	２		IP	３		IP	転		G3	５		G3	１		IP	６		G3	５		IP	５		IP	４		IP	４		G3
+田添　　康介	3.20	0.19	5.0	５		IP	１		IP	４		IP	４		IP	６		IP	５		IP	６		IP	６		IP	６		IP	３		IP
+樫葉　　次郎	3.11	0.16	3.1	５		IP	５		IP	３		IP	５		IP	４		IP	２		IP	５		IP	６		IP	転		IP	６		IP
+石村　日奈那	2.00	0.19	4.2	６	5	IP	６		IP	６	6	IP	６	6	IP	４		G3	５		G3	５		G3	５		IP	５		IP	４		IP
+小野　　信樹	2.70	0.17	3.0	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	２		IP	６		IP	２		IP
+松尾　　光広	3.10	0.29	5.7	３	5	IP	５		IP	５		IP	５		IP	３		IP	５		IP	５		IP	６		IP	４		IP	５		IP

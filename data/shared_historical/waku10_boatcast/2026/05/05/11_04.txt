@@ -1,0 +1,8 @@
+data=
+1	0
+繁野谷　圭介	9.00	0.21	3.1	２		IP	３		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+夏山　　亮平	6.00	0.17	3.2	１	3	IP	６		IP	４		G3	２		G3	１		IP	３		IP	１		IP	２		IP	６		IP	５		IP
+南野　　利騰	3.60	0.13	2.6	２		IP	４		IP	６		IP	５		IP	２		IP	５		IP	５		IP	６		IP	４		IP	４		IP
+青木　　玄太	7.70	0.14	2.6	１		IP	３		IP	２		G1	１		G3	２		G3	１		G3	５		IP	２	5	IP	５		G1	２		G1
+丸野　　一樹	6.50	0.11	2.4	２		IP	１		IP	３		G1	３		G1	５		SG	４		SG	２	4	IP	５		G1	５		G1	２		G1
+濱崎　　　誠	3.67	0.21	5.1	２		IP	６		IP	４		IP	４		IP	４		IP	６		IP	６		IP	２		IP	転		IP	５		IP

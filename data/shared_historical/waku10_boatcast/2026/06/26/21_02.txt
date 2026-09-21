@@ -1,0 +1,8 @@
+data=
+1	0
+木山　　和幸	8.40	0.16	4.0	１		G3	４		G3	１		IP	３		IP	３		G3	１		G3	１		IP	２		IP	１		IP	１		IP
+石井　　孝之	2.80	0.18	3.8	６		IP	４		IP	５		IP	５		IP	５		IP	３		IP	５		IP	３		IP	５		IP	６	3	IP
+中野　　和裕	3.60	0.17	3.5	６		G3	６		G3	６		G3	５		IP	４		IP	４		IP	２		IP	１		IP	４		IP	６		IP
+船岡　洋一郎	6.80	0.14	3.2	３		G3	２	6	G1	３		G2	５		IP	２		IP	１		IP	５	6	IP	１		IP	２		IP	４		IP
+谷川　　将太	4.10	0.18	2.7	１		IP	３	6	IP	５		IP	６		IP	６		IP	２		IP	３		IP	５		IP	６		IP	４		IP
+上瀧　　絢也	1.80	0.20	4.1	５	5	IP	５	5	IP	４		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	５		IP

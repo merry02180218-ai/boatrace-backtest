@@ -1,0 +1,8 @@
+data=
+1	0
+後藤　　孝義	6.11	0.17	3.6	６		IP	１		IP	４		IP	３		IP	１		IP	５		IP	１		IP	４		IP	エ		IP	２		IP
+石田　　勇斗	5.70	0.16	3.4	３		IP	２		IP	３		IP	５		IP	３		IP	６		IP	４		IP	２		IP	２		IP	２		IP
+松尾　　　拓	5.50	0.15	3.6	４		IP	２		IP	５		G1	３		IP	６		G1	３		IP	１		IP	２		G3	５	4	IP	４		IP
+星野　　太郎	4.70	0.18	3.4	３		IP	４	3	IP	４		IP	２		IP	６		IP	５		IP	１		IP	３		IP	４		IP	５	5	G3
+松井　　洪弥	3.60	0.10	2.7	３		IP	６		G1	６		G1	２		G3	５		G3	３		G1	６		G1	６		G1	５		G1	５		IP
+浜野　　孝志	3.70	0.20	4.0	３		IP	４	5	IP	６		IP	５		IP	３		IP	４		IP	５		IP	５		IP	３		IP	４		IP

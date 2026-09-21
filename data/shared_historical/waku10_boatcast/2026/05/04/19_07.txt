@@ -1,0 +1,8 @@
+data=
+1	0
+石川　　真二	8.20	0.14	1.7	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	２		IP	４		IP	４		IP	１		IP
+福山　恵里奈	5.10	0.15	3.3	４		IP	２		IP	２		G3	３	3	IP	２		IP	６		IP	５		G3	２		G3	４		IP	５		IP
+山田　　佑樹	5.60	0.14	3.0	６		IP	４	4	IP	１		IP	５		IP	４		IP	４		IP	２		IP	６	5	IP	１		IP	１		IP
+武重　　雄介	3.40	0.21	3.8	３		IP	４		IP	２		IP	６		IP	３		IP	５		IP	６		IP	６		IP	４		IP	６	5	IP
+小畑　　楓夏	1.50	0.16	2.7	６	6	IP	５	4	IP	６	6	IP	６	6	IP	４	6	IP	６		IP	５		IP	６	6	IP	６	6	IP	６	6	IP
+赤峰　　和也	3.30	0.20	5.1	６		IP	５	5	IP	３		IP	４	4	IP	４		IP	６		IP	４		IP	６		IP	４	5	IP	３		IP

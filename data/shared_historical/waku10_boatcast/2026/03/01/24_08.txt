@@ -1,0 +1,8 @@
+data=
+1	0
+大澤　　風葵	9.40	0.14	2.1	４		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+坂井　　滉哉	2.80	0.18	4.2	４	4	IP	５		IP	２		IP	４	3	IP	６		IP	６		IP	６		IP	４		IP	６		IP	５		IP
+青木　　　蓮	5.80	0.13	3.5	４		IP	６		G1	４		G2	５		G2	１		IP	４		IP	２		IP	２		IP	３		IP	２		IP
+梅原　　祥平	4.67	0.13	2.4	２		IP	転		IP	６		IP	６		IP	２		IP	６		IP	１		IP	６		IP	５		IP	１		IP
+高橋　　龍治	4.40	0.19	2.8	１		IP	３		IP	３	6	IP	５		IP	４		IP	６		IP	５		IP	２		IP	６		IP	４		IP
+高山　　敬悟	3.00	0.13	2.0	４		IP	４		IP	５		IP	５	5	IP	３		IP	５		IP	５		IP	５		IP	４		IP	５		IP

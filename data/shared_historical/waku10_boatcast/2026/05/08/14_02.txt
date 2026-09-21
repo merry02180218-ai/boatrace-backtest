@@ -1,0 +1,8 @@
+data=
+1	0
+片岡　　秀樹	4.10	0.16	3.6	５		IP	１		IP	５		IP	４		IP	３		IP	５		IP	３	2	IP	５		IP	６		IP	３		G3
+岩津　　徹郎	4.40	0.15	3.8	４		IP	４		IP	６		IP	２		IP	５		IP	２		IP	２		IP	２		IP	６		IP	転		IP
+烏野　　賢太	8.20	0.18	3.4	１		IP	３		IP	４		IP	１		G3	１		G3	２		G3	３		IP	１		IP	１		IP	２		IP
+原村　　拓也	4.80	0.18	3.6	３		IP	５		IP	１		IP	３		IP	６		IP	６		IP	１		IP	４		IP	５		IP	３		IP
+島村　　隆幸	6.50	0.10	2.7	５		IP	１		IP	５		IP	２		G3	１	6	G3	２		IP	４		IP	３		IP	２		G3	３		IP
+畑　　　和宏	3.80	0.18	3.5	４		IP	４		IP	５		IP	４		IP	２	5	IP	４		IP	４		IP	４	5	IP	５	5	IP	５		IP

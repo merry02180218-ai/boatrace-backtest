@@ -1,0 +1,8 @@
+data=
+1	0
+金山　　立樹	6.80	0.20	3.9	５		IP	３		IP	３		IP	３		IP	２		IP	３		IP	１		IP	３		IP	１		IP	２		IP
+大久保信一郎	5.00	0.15	2.8	５		G3	２		IP	１		IP	６		IP	４		IP	６		IP	欠		IP	２		IP	２		IP	２		IP
+松尾　　　充	6.10	0.12	2.9	３		G3	４		G3	２		IP	５		G1	４		G1	６		G1	２		G1	１	4	IP	２		IP	３		IP
+八戸　　琉楓	2.20	0.20	4.6	６		IP	６	6	IP	３	5	IP	６		IP	６		IP	６		IP	５		IP	４		IP	６		IP	４		IP
+原村　　拓也	4.00	0.17	3.9	５		IP	３		IP	６		IP	３		IP	４		IP	３		IP	３		IP	３		IP	６		IP	５		IP
+田頭　　　実	5.30	0.15	2.9	４	2	IP	６	2	IP	３	2	IP	２	2	IP	６	2	IP	２	2	IP	１	2	IP	３	4	IP	２	2	IP	６	2	IP

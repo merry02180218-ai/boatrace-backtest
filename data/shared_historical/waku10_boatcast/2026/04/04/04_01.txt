@@ -1,0 +1,8 @@
+data=
+1	0
+倉富　　大誠	7.00	0.24	4.8	１		IP	５		IP	２		IP	Ｆ		IP	１		IP	１		IP	２		IP	３		IP	２		IP	２		IP
+藤山　　雅弘	3.89	0.17	3.3	２		IP	５		IP	６		IP	４		IP	２		IP	３		IP	５		IP	５		IP	５		IP	欠		IP
+角山　　雄哉	3.33	0.14	2.9	転		IP	３		IP	落		IP	２		IP	６		G3	６		G3	転		IP	３	4	IP	４		IP	４		IP
+古川　　誠之	4.60	0.15	2.8	２		IP	２		IP	５		IP	５		IP	４		IP	５		IP	１		IP	６	5	IP	６		IP	２		IP
+浅見　　宗孝	4.40	0.20	3.8	３		IP	５		IP	３		IP	６		IP	１		IP	５		IP	６		IP	１		IP	４		IP	５		IP
+山崎　　義明	3.60	0.19	4.9	３		IP	５		G3	６		G3	６		IP	６		IP	４		IP	５	5	IP	５		IP	３		IP	１		IP

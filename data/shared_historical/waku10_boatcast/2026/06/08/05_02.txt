@@ -1,0 +1,8 @@
+data=
+1	0
+守屋　　大地	4.80	0.18	3.7	１		IP	３		IP	６		IP	２		G3	５		IP	５		IP	２		IP	４		IP	３		IP	６		IP
+高田　ひかる	7.20	0.20	3.4	３		IP	２		IP	５		G1	４		G1	１		IP	１		IP	２		IP	１		IP	４		IP	２		IP
+金子　　良昭	5.60	0.17	2.9	３	2	IP	２		IP	２		IP	２		IP	４		IP	２		IP	６		IP	４		IP	３		IP	５		IP
+樋口　　喜彦	2.40	0.20	3.9	６		IP	６		IP	６	5	IP	６		IP	２		IP	５		IP	６		IP	３		IP	５		IP	６		IP
+寺島　　吉彦	3.00	0.19	3.3	６	6	IP	４		IP	５		IP	６		IP	３		IP	５		IP	６	6	G3	１	6	G3	５		G3	６	6	G3
+宇留田　翔平	1.67	0.12	1.7	５		IP	６		IP	６		IP	５		IP	転		IP	６		G3	６		G3	６		IP	５		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中野　　仁照	7.60	0.16	3.8	１		IP	１		IP	３		IP	１		IP	１		IP	３		IP	６		G1	２		IP	４		IP	１		IP
+高山　　敬悟	3.70	0.17	3.4	５		IP	４		IP	６		IP	３		IP	３		IP	２		IP	６		G3	５		G3	３		G3	６		IP
+谷口　　　丞	4.50	0.17	3.9	４		IP	３		IP	２		IP	４		IP	６	6	IP	５		IP	５		IP	３		IP	５		IP	１		IP
+水谷　　理人	6.89	0.16	3.0	１		IP	転	3	IP	４		G3	５		G3	２		IP	１		IP	１		IP	２		IP	３		IP	４		IP
+藤森　　拓海	4.60	0.23	4.1	４		IP	２		IP	２		IP	３		IP	２	6	IP	５		IP	６		IP	４		IP	６		IP	４		IP
+飛田　　江己	5.60	0.10	2.0	３		IP	３		IP	５		G2	４		IP	４		IP	４		IP	３		IP	２		IP	３		IP	２		G1

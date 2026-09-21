@@ -1,0 +1,8 @@
+data=
+1	0
+中田　　竜太	8.50	0.14	3.3	３		G2	３		G1	２		G1	１		IP	１		IP	２		G1	２		G1	２		G1	４		G1	１		IP
+中島　　秀治	5.60	0.18	3.3	３		G2	４		IP	６		IP	１		IP	２		IP	２		IP	３		IP	転		G3	５		IP	２		IP
+森清　　友翔	4.00	0.15	3.8	４		IP	６		G3	２	2	G3	３		IP	４		IP	２		IP	４		IP	５	2	IP	５		IP	６		IP
+丸岡　　正典	5.50	0.17	3.9	６		G2	５		IP	２		IP	３		IP	４		IP	３		IP	４		G2	１		IP	４		IP	２		IP
+蒲原　　健太	3.40	0.19	4.1	５		G2	２		IP	３	4	IP	５		IP	４		IP	５		IP	５		IP	５		IP	６		IP	４		IP
+鐘ヶ江　真司	2.70	0.18	3.9	１		IP	６		IP	４		IP	５		IP	５		IP	６		IP	５		IP	５		IP	６		IP	５		IP

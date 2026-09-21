@@ -1,0 +1,8 @@
+data=
+1	0
+武田　　正紀	6.60	0.14	3.4	２		IP	２		IP	３		IP	１		IP	３		IP	４		IP	１		IP	５		IP	１		IP	５		IP
+内堀　　　学	5.90	0.17	3.1	４		IP	２		IP	６		IP	３		IP	３	1	IP	１		IP	３	3	IP	１		IP	４		IP	４		IP
+笠置　　博之	5.80	0.14	3.6	５	4	IP	１		IP	１	5	IP	６	6	IP	３		IP	６	5	IP	２	4	IP	３	4	IP	３	4	IP	２		IP
+諏訪　　玲奈	2.30	0.17	4.4	５		IP	４		IP	６		IP	６	5	IP	６		IP	５		IP	５		IP	５		IP	４		IP	４		IP
+長野　　未来	2.10	0.24	4.4	５	6	IP	６	6	IP	６	6	IP	３	6	IP	６	6	IP	６		IP	５	6	IP	４	6	IP	５	6	IP	６	6	IP
+山谷　　　央	4.00	0.14	3.2	３		IP	４		IP	４	5	IP	５	5	IP	３		IP	転		IP	４		IP	５		IP	３		IP	５		IP

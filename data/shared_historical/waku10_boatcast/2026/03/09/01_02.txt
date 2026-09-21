@@ -1,0 +1,8 @@
+data=
+1	0
+黒田　　誠司	4.60	0.16	3.4	４		IP	６		IP	３		IP	４		IP	５		IP	２		IP	１		IP	６		IP	３		IP	４		IP
+八木　　治樹	6.20	0.15	3.4	４		IP	１		IP	１		IP	５		G3	３		IP	２		IP	４		IP	２		IP	２		IP	５		G3
+伯母　　芳恒	3.90	0.17	4.4	５		IP	４		IP	４		IP	３		IP	５		IP	４		IP	５		IP	６		IP	３		IP	２		IP
+金子　　賢志	6.60	0.10	2.1	２		IP	２		IP	２		G1	５		IP	３		IP	４		IP	１		IP	４		G1	１		IP	４		IP
+山崎　　裕司	4.80	0.17	4.7	４	4	IP	５		IP	５		IP	２		IP	４		IP	３		IP	４		IP	５		IP	１		IP	３		G3
+内山　　峻輔	4.11	0.19	3.6	４		IP	５		IP	転		IP	４		IP	６		IP	２		IP	３		IP	５		IP	２		IP	５		IP

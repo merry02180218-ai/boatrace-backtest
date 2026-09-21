@@ -1,0 +1,8 @@
+data=
+1	0
+長野　　道臣	7.40	0.16	2.8	２		IP	５		IP	１		IP	２		IP	２		IP	５	2	IP	１		IP	２		IP	１		IP	２		IP
+吉永　　則雄	5.70	0.18	3.8	２		IP	４		IP	５		IP	３		IP	２		IP	３		IP	６		IP	４		IP	１		IP	２		IP
+上野　　拓馬	3.80	0.17	3.8	５		IP	３		IP	６		IP	５		IP	２		IP	５		IP	６		IP	２		IP	５		IP	３		IP
+荒木　　颯斗	6.00	0.13	2.6	３		G3	２		IP	５		IP	１		IP	４		IP	４		IP	１		IP	５		IP	３	5	IP	２		IP
+仲　　　航太	3.11	0.28	4.6	５		IP	１		IP	６	6	IP	６	6	IP	４		IP	６	6	IP	エ		IP	４		IP	６		IP	４		IP
+坂口　　諒宗	1.22	0.26	4.5	転		IP	Ｆ		IP	６		IP	４		IP	６		IP	５		IP	６		IP	６		IP	６		IP			IP

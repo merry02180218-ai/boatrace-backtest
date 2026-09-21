@@ -1,0 +1,8 @@
+data=
+1	0
+塩崎　　桐加	9.70	0.14	2.6	１		IP	１		IP	１		IP	１		IP	１		IP	２		G3	２		G3	１		G1	１		IP	１		IP
+塚田　　修二	5.90	0.20	4.5	２		IP	１		IP	３	3	IP	６		IP	３		IP	２		IP	３		IP	１		IP	５		IP	５		IP
+有賀　　達也	4.80	0.13	2.4	５		G1	６		G1	４		G1	５		G1	２		IP	６		IP	３		G1	５		G1	２		IP	２		IP
+坪内　　　実	2.60	0.18	3.9	６		IP	Ｆ	5	IP	２		IP	５		IP	４		IP	６		IP	３		IP	６		IP	６		IP	５		IP
+盛本　　真輔	4.40	0.19	3.4	２		IP	４		IP	４		IP	６		IP	６		IP	５		IP	４	6	IP	１	4	IP	５		IP	２	4	IP
+堤　　　　昇	2.20	0.18	3.6	５		IP	４	4	IP	６		G3	６		G3	６		IP	６	5	IP	４	5	IP	４	5	IP	５		IP	５	2	IP

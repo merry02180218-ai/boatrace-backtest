@@ -1,0 +1,8 @@
+data=
+1	0
+若林　　　将	8.70	0.11	2.6	１		IP	３		IP	１		IP	１		G3	１		IP	１		IP	２		IP	４		IP	２		IP	１		IP
+谷村　　一哉	6.80	0.14	3.1	２		IP	３		IP	２		IP	１		IP	２		IP	５		IP	３		IP	１		IP	５		IP	２		IP
+松尾　　昂明	7.40	0.14	2.1	１		IP	５		IP	３	2	IP	１		IP	４		IP	１		IP	３		IP	１		IP	２		IP	２		IP
+眞鳥　　康太	3.90	0.19	3.8	５	6	IP	６	6	IP	６	6	IP	３	6	IP	３	6	IP	２	6	IP	４	5	IP	４	6	IP	６	6	IP	３	5	IP
+前原　　大道	5.00	0.17	3.4	３		IP	４		IP	６	6	G1	４		IP	５	6	IP	３		IP	４		IP	２		G1	５		G1	１		IP
+村上　　彰一	4.10	0.18	3.4	５		IP	４		IP	２		IP	３		IP	６		IP	４		IP	４		IP	３		IP	４		IP	５		IP

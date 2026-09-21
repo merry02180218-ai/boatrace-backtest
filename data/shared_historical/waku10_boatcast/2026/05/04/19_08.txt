@@ -1,0 +1,8 @@
+data=
+1	0
+寺田　　空詩	6.20	0.18	4.0	３		IP	妨		IP	２		IP	６		IP	６		IP	１		IP	１		IP	２		IP	１		IP	２		IP
+松田　　竜馬	6.20	0.14	2.0	３		IP	２		IP	４		IP	５	3	IP	２		IP	２		IP	３		IP	３		IP	１		IP	４		IP
+吉田　　祐貴	3.20	0.20	4.2	６		IP	５		IP	３		IP	４		IP	４		IP	３		IP	５	4	IP	６		IP	４		IP	５		IP
+小池　　公生	3.50	0.25	5.0	４		IP	３		IP	５		IP	４		IP	５	5	IP	５		IP	６		IP	４		IP	２		IP	５		IP
+瀬川　　大地	2.40	0.14	4.0	６		IP	４		IP	５		IP	４		IP	４	6	IP	５	6	IP	６		IP	６		IP	６		IP	４		IP
+重冨　　勇哉	4.20	0.19	4.1	３	5	IP	３		IP	２	4	IP	５		IP	２	3	IP	６		IP	５		IP	５	3	IP	６		IP	３	4	IP

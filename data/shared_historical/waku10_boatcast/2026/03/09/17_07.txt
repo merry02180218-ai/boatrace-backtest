@@ -1,0 +1,8 @@
+data=
+1	0
+石原　　凪紗	6.40	0.18	3.2	５		IP	３		IP	１		IP	１		G3	６		IP	６		IP	２		IP	３		IP	１		IP	１		IP
+笠置　　博之	6.20	0.17	3.5	２		IP	４	1	IP	４		IP	６	6	IP	１	4	IP	４		IP	６		IP	１		IP	１		IP	２		IP
+植田　　太一	6.70	0.14	2.6	４		IP	３	4	G1	１		IP	５		IP	３		IP	３	4	IP	１		IP	２		IP	１		IP	４		IP
+竹本　　太樹	2.50	0.21	4.3	６	6	IP	５		IP	５		IP	５		IP	６		IP	６		IP	３		IP	４	5	IP	４		IP	５		IP
+杉山　　太陽	2.40	0.21	4.3	６		IP	６		IP	４		IP	６		IP	１		IP	５		IP	６		IP	６		IP	５		IP	６		IP
+石井　　伸長	3.11	0.19	4.4	５		IP	３		IP	転		IP	１		IP	５		IP	６		IP	６		IP	６		IP	６		IP	４		IP

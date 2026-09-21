@@ -1,0 +1,8 @@
+data=
+1	0
+藤原　　碧生	10.00	0.16	4.0	３		IP	１		G1	１		G1	１		IP	１		IP	１		IP	１		G1	１		IP	１		IP	１		G1
+藤森　　陸斗	4.60	0.15	3.5	３		IP	４		IP	２		G1	３	4	IP	４		IP	１		IP	５	3	IP	５		IP	５		IP	６		IP
+小林　　京平	5.30	0.18	4.6	３		IP	４		IP	３		IP	２		IP	５		IP	６		IP	５		IP	３		IP	２		IP	１		IP
+竹間　　隆晟	6.10	0.13	1.8	２		IP	６		IP	４		IP	１		IP	４		G1	４		G1	３		IP	３		IP	１		IP	４		IP
+荒木　　颯斗	4.10	0.14	3.2	５		IP	５		IP	６		IP	２		IP	２		IP	４		IP	５		IP	３	4	IP	欠		IP	２		IP
+小玉　　啓太	3.30	0.17	2.7	４		IP	３		IP	６		IP	６		IP	３		IP	４		IP	６		IP	５		IP	４		IP	５		IP

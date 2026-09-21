@@ -1,0 +1,8 @@
+data=
+1	0
+増田　　　進	5.90	0.15	2.9	６		IP	１		IP	２		IP	２		IP	２		IP	２		IP	５		IP	４		IP	２		IP	５		IP
+小川　竜太朗	6.80	0.18	4.2	３		IP	４		IP	１		IP	１		IP	３		IP	２		IP	１		IP	５		IP	４		IP	２		IP
+西尾　　亮輔	4.70	0.22	4.3	４		IP	４	4	IP	６		IP	１	4	IP	５		IP	５	4	IP	２		IP	２		IP	４		IP	４		IP
+片岡　　秀樹	3.40	0.17	3.0	５		IP	３		IP	５		IP	３		IP	２		IP	６	6	IP	６		IP	６		IP	３		G3	６		G3
+坪井　　爽佑	4.00	0.15	3.9	６		IP	２		IP	３		IP	落		IP	５		IP	４		IP	３		IP	６		IP	３		IP	３		IP
+熊倉　　幹太	1.10	0.24	5.1	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５	5	IP	６		IP

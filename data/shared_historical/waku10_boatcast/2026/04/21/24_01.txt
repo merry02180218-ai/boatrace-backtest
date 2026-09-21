@@ -1,0 +1,8 @@
+data=
+1	0
+仲本　　　舜	8.80	0.17	2.8	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP
+楠　　将太郎	4.30	0.15	3.2	４		IP	６		IP	２		IP	２		IP	６		IP	１		IP	５		IP	２		IP	落		IP	６		IP
+小玉　　啓太	5.30	0.13	2.7	４		IP	２		IP	５		IP	４		IP	２		IP	１		IP	５		IP	６		IP	３		IP	２		IP
+登玉　　隼百	6.00	0.13	2.1	１		IP	２		IP	６	5	IP	２		IP	６		IP	４		IP	１		IP	１		IP	５		IP	３		IP
+屋良　　龍紀	2.70	0.18	3.7	６		IP	５		IP	４		IP	６		IP	４		IP	６		IP	５		IP	６		IP	３		IP	４		IP
+牧村　　俊輝	3.10	0.24	4.5	３	5	IP	６		IP	５		IP	４		IP	６		IP	５	5	IP	４		IP	６		IP	３		IP	４		IP

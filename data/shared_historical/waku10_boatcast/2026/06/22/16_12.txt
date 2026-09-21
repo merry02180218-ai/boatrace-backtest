@@ -1,0 +1,8 @@
+data=
+1	0
+川原　　祐明	8.80	0.13	2.3	３		IP	１		IP	２		IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+岡瀬　　正人	6.20	0.16	3.1	１		IP	５		IP	２		IP	３		IP	２		IP	３		IP	２		IP	３		IP	５		IP	３		IP
+服部　　幸男	4.70	0.17	3.8	２		IP	３		IP	６	4	SG	５		IP	４		IP	５		G1	４		G1	６		G1	３		IP	２		IP
+平高　　奈菜	6.56	0.16	2.9	３		IP	５		IP	３		IP	２		IP	２		G2	６		G2	３		SG	１		G3	２		G3	欠		G1
+小池　　公生	3.80	0.19	4.1	４		IP	２		IP	４		IP	５	4	IP	５		IP	３		IP	４		IP	３		IP	６		IP	６		IP
+小林　　京平	2.90	0.22	3.2	５	5	IP	４		IP	４		IP	４		IP	４		IP	６		IP	５		IP	Ｆ		IP	４	5	IP	４		IP

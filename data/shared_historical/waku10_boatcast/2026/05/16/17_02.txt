@@ -1,0 +1,8 @@
+data=
+1	0
+新田　　洋一	6.70	0.16	3.7	５		IP	５		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	６		IP	３		IP
+胡本　　悟志	4.20	0.15	2.7	３		IP	２		IP	５		IP	５		IP	５		IP	６		IP	６		IP	３		IP	２		IP	３		IP
+抹香　　雄三	5.80	0.18	3.6	１		IP	３		IP	３		IP	４	2	IP	２		IP	２		IP	４		IP	５		IP	４	2	IP	３		IP
+武田　　正紀	4.10	0.12	2.0	６		IP	５		IP	４		IP	３		IP	４		IP	４	3	IP	４		IP	２		IP	３		IP	５		IP
+中島　　友和	3.78	0.16	3.0	欠		IP	６		IP	６		IP	５		IP	４	6	IP	３	6	IP	５		IP	２		IP	２		IP	５		IP
+宮城　　那菜	1.40	0.13	2.3	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	５		IP	６		IP	５	5	IP

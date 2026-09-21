@@ -1,0 +1,8 @@
+data=
+1	0
+大上　　卓人	10.00	0.13	2.5	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		SG	３		G1
+平本　　真之	8.50	0.11	2.4	４		SG	１		G1	１		IP	１		IP	３		G1	３		G1	４		G1	２		G1	３		SG	１	1	SG
+久田　　敏之	7.40	0.13	2.5	２		G2	１		IP	２		IP	３		IP	５	4	G1	３		G1	２		G1	２		G1	２		IP	５		G1
+新田　　泰章	5.90	0.16	3.4	６		IP	２		IP	３		IP	３		IP	４		IP	２		IP	２		IP	１		G1	４		G1	５	5	IP
+羽野　　直也	5.50	0.15	3.8	２		G1	２		G1	３		IP	４		IP	４		G1	６		G1	６		G1	４		G2	２		G1	４		IP
+中嶋　健一郎	4.60	0.18	4.4	５		G1	４		IP	３	5	IP	３	5	IP	６		G1	４		IP	５		IP	５		IP	３		G1	１	5	IP

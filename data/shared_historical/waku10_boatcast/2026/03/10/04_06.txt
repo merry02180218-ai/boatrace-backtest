@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　龍斗	6.60	0.17	2.9	２		IP	２		IP	２		IP	１		IP	５		IP	１		IP	１		IP	２		IP	転		IP	５		IP
+芝田　　浩治	7.00	0.19	3.4	６		IP	５		IP	２		IP	１		IP	１		IP	２	1	IP	３		IP	３		IP	２		IP	１		IP
+谷津　　幸宏	6.00	0.11	2.9	４		IP	３		IP	３		IP	２	4	G1	２		G1	４		IP	１		IP	４		IP	３		IP	５		IP
+山田　　竜一	5.00	0.17	2.9	４	3	IP	２		IP	４		IP	３		IP	５		IP	３		IP	４		IP	３		IP	３		IP	４		IP
+田中　　和也	7.60	0.21	4.1	２	2	IP	２		IP	３		IP	５		IP	３	4	IP	１		IP	２		IP	１	3	IP	１		IP	３		IP
+向井　　美鈴	2.90	0.23	4.6	５		G1	６		IP	５		IP	４		IP	６		IP	６		IP	３		IP	６		IP	３		G3	５		IP

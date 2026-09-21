@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　勝博	7.40	0.24	4.9	１		IP	５		IP	１		IP	１		IP	４		IP	２		IP	３		IP	４		IP	１		IP	１		IP
+内山　　文典	4.60	0.22	3.7	１		IP	６		IP	３		IP	３		IP	４		IP	５		IP	６		IP	５		IP	２		IP	３		IP
+三角　　哲男	7.50	0.10	1.8	５		IP	２		IP	３		IP	１	2	IP	１		IP	３		G1	２		IP	２		IP	１		IP	３		IP
+上田　　洋平	3.50	0.14	3.6	６		IP	６		IP	５		IP	４		IP	４		IP	３		IP	３		IP	５		IP	２		IP	６		IP
+島川　　海輝	4.10	0.18	4.0	４		G2	５		G2	４		IP	４		IP	２	4	IP	４		IP	３		IP	４		IP	５		IP	６		IP
+中村　　有裕	3.40	0.17	3.7	６		IP	３		IP	６		IP	４	4	IP	４		IP	６	4	IP	２	5	IP	６		IP	５		IP	４		IP

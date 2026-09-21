@@ -1,0 +1,8 @@
+data=
+1	0
+蒲原　　健太	6.40	0.17	3.6	４		IP	１		IP	３		G2	１		IP	１		IP	６		IP	２		IP	２		IP	５		IP	４		IP
+芦澤　　　望	6.60	0.15	2.5	２		IP	３		IP	１		IP	１		IP	５		IP	３	4	IP	２		IP	２		IP	３	3	IP	５		IP
+網代　　良芽	5.00	0.16	2.7	３		IP	１	4	IP	３		IP	３		IP	４		IP	２		IP	３		IP	６		IP	５		IP	６		IP
+井上　　慧人	4.40	0.16	3.9	４		IP	４		IP	３		IP	４		IP	５		IP	６		IP	３		IP	１		IP	３		IP	６		IP
+加藤　　　翔	1.60	0.24	4.3	６		IP	６	4	IP	５		IP	４		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP
+村越　　　篤	3.10	0.16	3.9	３	5	IP	４		IP	３		IP	６		G3	６		G3	５		IP	６		IP	４		IP	５		G1	５		G1

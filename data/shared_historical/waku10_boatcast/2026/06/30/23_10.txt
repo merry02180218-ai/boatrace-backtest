@@ -1,0 +1,8 @@
+data=
+1	0
+梶山　　涼斗	8.00	0.13	2.4	１		IP	３		IP	４		IP	１		IP	２		IP	２		IP	４		G3	１		IP	１		IP	１		IP
+田中　　辰彦	5.30	0.19	3.6	３		IP	１		IP	１		IP	５		IP	２		IP	２	3	IP	６		IP	５		IP	４		IP	５		IP
+大須賀　　友	6.70	0.19	3.6	１		IP	１		IP	１		IP	２	2	IP	３		IP	６		IP	５		IP	２		IP	２		IP	４		IP
+大賀　龍之介	5.50	0.16	3.1	２		IP	３		IP	５		IP	２		IP	５		IP	１	3	IP	１		IP	３		IP	５		IP	６		IP
+南　　　佑典	4.11	0.14	4.0	５		IP	４		IP	エ	4	IP	３		IP	５		IP	５		IP	４		IP	４		G2	３	4	IP	３		IP
+渡辺　　　豊	2.20	0.20	4.9	５	4	IP	５		IP	６		IP	５	5	IP	５		IP	４		IP	５		IP	６		IP	４		IP	５	2	IP

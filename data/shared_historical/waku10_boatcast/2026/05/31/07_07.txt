@@ -1,0 +1,8 @@
+data=
+1	0
+繁野谷　圭介	8.40	0.19	3.6	１		IP	４		IP	１		IP	２		IP	２		IP	３		IP	１		IP	１		IP	２		IP	１		IP
+熊本　　英一	4.20	0.17	4.2	３		IP	２		IP	４		IP	４		IP	５		IP	５		IP	２		IP	６		IP	６		IP	３		IP
+重成　　一人	5.80	0.15	2.9	６		IP	６		IP	３	5	IP	２		G1	５		G1	１		IP	６		IP	３		G1	２		G1	１		G1
+池田　　剛規	4.70	0.20	3.2	５		IP	３		IP	５		IP	４		IP	４		IP	２		IP	３		IP	１		IP	４		IP	６		IP
+金山　　立樹	4.40	0.22	4.4	４		IP	１		IP	６		IP	５		IP	４		IP	４		IP	２		IP	３		IP	４		IP	６		IP
+港　　　理樹	3.30	0.23	4.0	落		IP	３		IP	５		IP	５		IP	６		IP	転		IP	４		IP	３		IP	４		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+坂本　　奈央	5.20	0.20	4.4	２		IP	３		G3	６		G3	５		IP	１		G3	６		G3	３		G3	２		IP	４		IP	３		IP
+盛本　　真輔	5.70	0.16	4.0	３		IP	２		IP	２		IP	４		IP	２		IP	２		IP	５		IP	３		IP	３		IP	６		IP
+吉川　　晴人	4.70	0.23	5.1	６		IP	５		IP	４		IP	６		G2	３		IP	３		IP	２		IP	４		IP	４		IP	１		IP
+一瀬　　　明	4.33	0.22	4.6	欠		IP	６		IP	４		IP	５		IP	３		IP	５		IP	４		IP	４		IP	２		IP	２		IP
+大井　　清貴	2.60	0.21	4.8	６		IP	３		IP	４		IP	６		IP	５		IP	５	6	IP	６		IP	６		IP	４		IP	４		G3
+三嶌　　誠司	4.56	0.16	3.9	３		IP	４		IP	４		IP	３		IP	５		IP	４		G1	５		IP	転		IP	３		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+宇野　　弥生	7.60	0.10	1.7	１		G2	１		IP	２		IP	１		G3	４		G3	６		G3	１		IP	１		IP	１		IP	５		IP
+大池　　佑来	5.90	0.16	3.2	２		IP	２		G2	６		IP	３		IP	２		IP	１		IP	３		IP	５		IP	３		IP	６		G1
+内山　　文典	4.90	0.17	2.9	４		IP	６		IP	１		IP	Ｆ		IP	５		IP	２		IP	１		IP	５		IP	３		IP	３		IP
+安東　　幸治	6.00	0.19	3.0	４	5	IP	３		IP	１		IP	４		IP	２		IP	４		IP	３		IP	２		IP	３		IP	４		IP
+土性　　雅也	3.60	0.16	3.6	５		IP	不		IP	４		IP	５		IP	４	4	IP	３		IP	４		IP	５	4	IP	３		IP	３		IP
+池上　　隆行	2.90	0.19	4.4	６		IP	３	5	IP	５		IP	５	5	IP	５		IP	３		IP	５	5	IP	５	5	IP	４		IP	５		IP

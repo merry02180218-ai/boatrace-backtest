@@ -1,0 +1,8 @@
+data=
+1	0
+豊田　　訓靖	5.00	0.15	2.5	６		G3	５		IP	３		IP	６		IP	３		IP	２		IP	４		IP	１		IP	４		IP	２		IP
+古川　　誠之	4.80	0.15	3.0	１		G3	６		IP	５		IP	３		IP	１	3	IP	３		IP	５		IP	４		IP	３		IP	６		IP
+木山　　和幸	6.80	0.16	3.0	２		IP	１		IP	４		G3	１		G3	１		IP	３		IP	４		IP	２		IP	３		IP	５		G3
+滝沢　　芳行	4.00	0.14	2.6	６		IP	６		IP	２	5	IP	４		IP	４		IP	１		IP	５		IP	５		IP	３		IP	５		G3
+武田　　光史	6.50	0.18	3.0	２		G3	５		IP	３		IP	１		IP	６		IP	１		IP	３		IP	２		IP	２		IP	３		IP
+宮嵜　隆太郎	2.20	0.12	1.7	４		IP	６		IP	６		IP	６		IP	５		IP	４	5	IP	３		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+塩田　　雄一	5.80	0.16	4.6	２		IP	４		IP	３		IP	３		IP	１		IP	２		IP	６		IP	３		IP	２		IP	６		IP
+井内　将太郎	6.40	0.11	2.4	２		IP	３		IP	２		IP	３		IP	２		IP	６		IP	６		IP	１		IP	２		IP	２		IP
+荒木　　颯斗	6.90	0.15	3.1	２		IP	２		IP	６		IP	３		IP	２		IP	３		IP	２	2	IP	３		IP	１		IP	２		IP
+高橋　　淳美	4.20	0.17	3.0	５		IP	２		IP	１		IP	２		IP	４	3	IP	５		G3	６		G3	４		G3	６		IP	５		IP
+中島　　浩哉	4.20	0.20	3.4	６	6	G3	５		G3	３		IP	２		IP	６		IP	４		IP	３		IP	４	4	IP	３		IP	４		IP
+廣瀬　　真也	3.80	0.15	3.6	４		IP	３		IP	５		IP	６		IP	１		IP	３		IP	６		IP	３		IP	６		IP	６		IP

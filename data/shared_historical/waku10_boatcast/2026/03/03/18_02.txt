@@ -1,0 +1,8 @@
+data=
+1	0
+楠原　　翔太	8.90	0.13	2.8	１		IP	１		IP	２		IP	６		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+長谷川　雅和	7.50	0.16	2.2	１		IP	２		IP	２		IP	３		IP	２		IP	２		IP	２		IP	６		G3	１		IP	２		IP
+冨田　　秀幸	4.20	0.15	3.4	５		IP	３		IP	４		IP	４		IP	５		IP	４		IP	５		IP	５		IP	３		IP	１		IP
+浜崎　　準也	4.20	0.16	3.7	転		IP	４		IP	２		IP	４		IP	６		IP	２		IP	２		IP	４		IP	６		IP	４		IP
+松崎　祐太郎	4.40	0.19	3.4	２		IP	４		IP	５		IP	４		IP	５		IP	２		IP	５		IP	４		G3	５		IP	３		IP
+藤原　　　駿	1.40	0.20	4.0	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP	５		IP	６		IP	５		IP	６		IP

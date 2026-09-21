@@ -1,0 +1,8 @@
+data=
+1	0
+岩橋　　裕馬	4.40	0.19	4.2	４		IP	１		IP	４		IP	４		IP	５		G3	３		IP	４		IP	５		IP	３		IP	５		IP
+平尾　　崇典	5.67	0.12	3.6	１		G2	５		IP	５		G1	４		G1	２		IP	２	3	IP	２		IP	５		G1	５		G1	落		IP
+伊藤　　紘章	5.67	0.17	3.4	３		IP	６		IP	５		IP	３		IP	４		IP	２		IP	１		IP	４		IP	転		IP	１		IP
+早川　　理稀	1.00	0.33	6.0	６	6	IP																											IP
+高橋　　正男	5.00	0.20	3.3	４		IP	５		IP	４		IP	３		IP	２		IP	５		IP	１		IP	３		IP	３	6	IP	５		IP
+中嶋　誠一郎	4.00	0.19	3.8	２		G3	６		IP	６		IP	５		IP	４		IP	２		IP	３		IP	４		IP	４	5	IP	５		IP

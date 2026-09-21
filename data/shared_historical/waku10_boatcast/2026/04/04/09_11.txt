@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　孝平	10.50	0.15	2.5	１		G1	１		G1	１		IP	１		IP	１		IP	１		G1	１		G1	２		G1	１		G1	１		IP
+葛原　　大陽	7.80	0.15	3.6	１		IP	５		G1	２		IP	２		IP	２		IP	３		IP	２		G1	２		IP	１		IP	２		IP
+新田　　雄史	7.30	0.13	3.4	４		SG	３		SG	３		SG	１		G1	６		G1	３		G1	１		G1	２		G1	２		G1	６		G1
+新開　　　航	6.40	0.15	2.6	６		G2	３		G2	転		IP	２		G1	３	5	G1	３		G1	３		IP	４		G1	２		IP	２	5	SG
+入海　　　馨	6.20	0.14	3.2	２		G1	３		G1	３		G1	４	6	G1	３		G1	３		G1	４		G1	５		SG	３		SG	５		G1
+北野　　輝季	5.40	0.15	2.9	６		IP	４		IP	１	4	IP	４		G1	６	5	G1	１		IP	３	5	IP	１	5	IP	５		IP	４		IP

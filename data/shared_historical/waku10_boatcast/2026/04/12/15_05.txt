@@ -1,0 +1,8 @@
+data=
+1	0
+古賀　　智之	7.40	0.17	3.0	４		IP	２		IP	６		G2	２		IP	１		IP	１		IP	３		IP	１		IP	３		IP	１		G3
+深川　　真二	7.70	0.12	2.4	１		IP	１		G2	２		IP	１		IP	２		IP	３		IP	５		G1	２		IP	５		IP	１		IP
+立間　　充宏	5.90	0.18	3.3	２		IP	４		IP	５		IP	２		IP	３		IP	６		IP	４		IP	２		IP	１		IP	２		IP
+榮田　　将彦	2.80	0.15	2.7	６		IP	６		IP	１		IP	３		IP	６		IP	５		IP	５		IP	Ｆ		G3	４	5	IP	６		IP
+村田　　修次	5.20	0.14	3.9	６		IP	２		IP	３		IP	２		IP	６		IP	４		IP	１		IP	４		IP	４		IP	４		IP
+川井　　　萌	3.40	0.17	3.8	２		IP	５		G1	５		G1	４		IP	５		IP	３		IP	５		IP	５		G3	５		IP	５		IP

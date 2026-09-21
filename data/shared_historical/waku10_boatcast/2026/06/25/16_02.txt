@@ -1,0 +1,8 @@
+data=
+1	0
+梅原　　祥平	6.60	0.14	2.4	５		IP	３		IP	１		IP	４		IP	２		IP	１		IP	４		IP	４		IP	１		IP	２		IP
+井上　　　茂	4.70	0.14	3.6	４		IP	４		IP	４		IP	４		IP	３		IP	４	3	IP	２		IP	３		IP	３		IP	６		IP
+山下　　流心	4.60	0.18	3.0	４		IP	４		IP	３		IP	２		G3	３		IP	２		IP	６		IP	６		IP	転		IP	２		IP
+下田　　哲也	3.60	0.19	3.6	６	5	IP	６		IP	６		IP	６		IP	５	6	IP	４		IP	４	3	IP	２		IP	３		IP	２		IP
+野田　　昇吾	2.20	0.18	3.6	６		IP	５		IP	３		IP	４	6	IP	５		IP	６		IP	５		IP	転		IP	５	4	IP	５		IP
+野村　　羽玖	3.10	0.20	4.2	３		IP	５		IP	３		IP	６		IP	３		IP	５		IP	６		IP	４		IP	５		IP	６		IP

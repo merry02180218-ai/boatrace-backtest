@@ -1,0 +1,8 @@
+data=
+1	0
+宇野　　博之	5.20	0.15	3.7	１		IP	１		IP	５		IP	４		IP	３		IP	２		IP	３		IP	４		IP	６		IP	６		IP
+伊久間　陽優	5.50	0.14	3.6	２		IP	３		IP	２		IP	６		IP	１	4	IP	２		IP	５	4	IP	２		IP	５		IP	５		IP
+佐竹　　恒彦	4.90	0.20	4.7	２		IP	２		IP	４		IP	２		IP	６		IP	３		IP	４		IP	５		IP	３		IP	５	4	IP
+佐々木　康幸	6.80	0.11	2.4	４		IP	２		IP	４		IP	２		IP	２		IP	３		IP	２		IP	３		IP	３		G1	２		IP
+大久保　佑香	3.00	0.18	4.0	５		IP	６	4	G3	４		G3	２		IP	５		IP	４		IP	６		G3	３		G3	６		IP	６		IP
+末永　　祐輝	3.90	0.18	4.4	５		IP	５		IP	４	5	IP	６		IP	３		IP	３	2	IP	４	4	IP	５		IP	４		IP	２		IP

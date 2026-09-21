@@ -1,0 +1,8 @@
+data=
+1	0
+川井　　　萌	7.10	0.14	3.2	２		IP	６		G1	１		IP	１		IP	欠		IP	１		IP	１		IP	１		IP	６		G3	１		IP
+後藤　　美翼	6.00	0.22	4.5	５		IP	１		IP	３		IP	４		G3	２		G3	４		G3	３		IP	２		IP	３		IP	３		IP
+山下　　奈緒	4.00	0.24	4.4	５		IP	５		IP	３		IP	３		IP	３		IP	５		IP	２		G3	５		G3	４		G3	５		G3
+黒明　　花夢	2.56	0.20	3.8	４	5	IP	欠		IP	６		IP	６		IP	４		IP	５		IP	６		IP	３		IP	５		IP	５		IP
+村上　　奈穂	3.70	0.20	4.2	２	3	IP	３		IP	６		IP	３		IP	５		IP	６		IP	４		IP	５		IP	６		IP	３		IP
+阿部　　未侑	1.10	0.23	4.2	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	転		IP	６		IP	６		IP	５		IP

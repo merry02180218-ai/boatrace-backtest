@@ -1,0 +1,8 @@
+data=
+1	0
+清水　　紀克	4.40	0.20	2.7	４		IP	２		IP	６		IP	５		IP	１		IP	３		IP	３		IP	４		IP	５		IP	６		IP
+今坂　　晃広	2.60	0.20	3.8	５	3	IP	６		IP	５		IP	６		IP	６		IP	５		IP	２		IP	４		IP	６		IP	４		IP
+河村　　　了	6.30	0.14	2.9	１		IP	２		IP	３		IP	３		IP	５		IP	２	4	IP	３		IP	２		IP	４		IP	４		IP
+宮崎　　奏磨	1.89	0.20	3.3	４	5	IP	６		IP	６		IP	５	5	IP	転		IP	４		IP	６		IP	５	6	IP	６		IP	６		IP
+西尾　　亮輔	4.60	0.18	4.1	２		IP	２		IP	５		IP	４		IP	４		IP	５		IP	５		IP	３		IP	３		IP	４	4	IP
+渡邉　　俊介	5.40	0.18	3.9	３		IP	３	5	IP	３		IP	２		IP	４		IP	２		IP	５		IP	５		IP	２		IP	４		IP

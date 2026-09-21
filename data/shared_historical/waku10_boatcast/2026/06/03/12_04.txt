@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　　豪	8.80	0.18	3.7	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	３		IP
+坪口　　竜也	4.90	0.18	3.2	４		IP	４	3	IP	６		IP	２		IP	５		IP	１		IP	２		IP	５		IP	５		IP	２		G3
+東口　　　晃	4.50	0.18	3.1	１		IP	６	4	IP	２		IP	２		IP	３		IP	３	4	IP	５	6	IP	５		IP	６		IP	６		IP
+村上　　彰一	4.60	0.20	4.3	３		IP	１		IP	６		IP	６	3	IP	４		IP	５		IP	４		IP	３		IP	４		IP	２		IP
+南　　　佑典	4.90	0.17	4.1	５		IP	５		IP	４		IP	４		G2	３	4	IP	３		IP	５		IP	２		IP	３		IP	２		IP
+篠木　亜衣花	2.10	0.24	5.0	６		IP	５		IP	４		IP	４		G3	６		IP	６		IP	４		G3	６		IP	５		IP	６		IP

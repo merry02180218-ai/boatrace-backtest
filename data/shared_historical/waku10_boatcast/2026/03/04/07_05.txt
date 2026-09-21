@@ -1,0 +1,8 @@
+data=
+1	0
+宮崎　　安奈	7.10	0.13	2.1	４		IP	１		IP	２		IP	６		IP	２		IP	２		IP	２		IP	１		IP	４		IP	１		IP
+上瀧　　絢也	3.50	0.20	3.0	３		IP	５		IP	５		IP	４		IP	５	4	IP	４		IP	６		IP	４		IP	４		IP	３		IP
+木幡　　純也	5.80	0.18	3.7	４		IP	１		IP	５		IP	５		IP	３		IP	２		IP	１		IP	５		IP	２		IP	３		IP
+廣瀬　　将亨	7.80	0.17	3.2	１		IP	３		IP	１	5	IP	６		IP	１		IP	１		IP	３		IP	１		IP	２		G2	４		IP
+森　　　竜也	3.30	0.20	4.1	４	3	IP	４		IP	５		IP	５	3	IP	４		IP	６	3	IP	５		IP	３	3	IP	４	4	IP	４		IP
+北野　　輝季	5.50	0.14	2.7	１	4	IP	４		G1	６	5	G1	１		IP	３	5	IP	１	5	IP	５		IP	４		IP	５		G1	５		G1

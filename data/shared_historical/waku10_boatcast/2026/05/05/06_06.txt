@@ -1,0 +1,8 @@
+data=
+1	0
+倉田　　郁美	6.00	0.22	3.2	４		IP	６		IP	４		IP	２		IP	２		IP	２		IP	１		IP	２		IP	２		IP	６		IP
+野末　　智一	5.50	0.17	3.4	３		IP	２		IP	３		IP	３		IP	２		IP	２		IP	６		IP	５		IP	５		IP	２		IP
+佐々木　康幸	3.80	0.14	2.9	５		G1	６	4	G1	４		G1	５		IP	５		IP	５		IP	１		IP	４		IP	５		IP	４		IP
+服部　　　剛	3.50	0.23	4.4	５		IP	１		IP	２		IP	５		IP	６		IP	４		IP	５		IP	４		IP	６		IP	６		IP
+渡邉　　英児	6.00	0.12	2.6	５		IP	２		IP	２		IP	２		IP	５	6	IP	２	4	IP	２		IP	２	4	IP	４	3	IP	４		IP
+深谷　　知博	4.90	0.11	2.8	５		G1	３		G1	３		G1	４		G1	４		IP	４		G1	５		G1	３		G1	４		G1	５		G1

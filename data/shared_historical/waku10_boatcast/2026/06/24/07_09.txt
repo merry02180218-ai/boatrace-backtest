@@ -1,0 +1,8 @@
+data=
+1	0
+中里　　英夫	8.20	0.14	3.5	１		IP	５		IP	１		IP	１		IP	１		IP	３		IP	２		IP	１		IP	２		IP	２		IP
+中村　　晃朋	5.10	0.16	3.0	６		G1	６		G1	１		IP	３		G3	４		IP	５		IP	６		G1	６		IP	１		IP	１		IP
+寺嶋　　　雄	4.30	0.21	3.9	４		IP	４		IP	３		IP	４		IP	５		IP	３	4	IP	３		IP	５		IP	６		IP	２		IP
+森　　　陽多	1.30	0.17	4.7	５		IP	６		IP	４		IP	６		IP	６		IP	Ｆ	5	IP	６		IP	６		IP	６		IP	６		IP
+渡邉　　俊介	5.10	0.14	3.5	２		IP	２		IP	４		IP	６		IP	４		IP	４		IP	４		IP	４		IP	５		IP	２		IP
+坂井　　滉哉	3.80	0.19	3.4	６		IP	４		IP	５		IP	４		IP	３		IP	５		IP	４	5	IP	３		IP	６		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中野　　希一	7.00	0.17	3.3	３		IP	１		IP	２		IP	６		G1	５		G1	１		IP	２		IP	３		IP	３		IP	１		IP
+塚越　　海斗	8.00	0.14	3.5	４		IP	１		IP	１	1	IP	２		IP	３		IP	１		IP	３		IP	１		IP	３		IP	１	1	IP
+藤井　　公人	6.30	0.12	2.2	２		IP	３		G3	３		IP	１		IP	３		IP	３		IP	４		IP	６		IP	１		IP	３		IP
+若林　　樹蘭	4.80	0.19	3.1	４		IP	１		IP	３		IP	Ｆ		IP	３		IP	３		IP	５		IP	４		IP	３		IP	４	5	IP
+澁川　　　夏	5.10	0.14	3.7	２		IP	４		IP	３		IP	５		IP	２		IP	３		IP	２		IP	６		IP	４		IP	４		IP
+佐藤　　　航	6.70	0.15	3.5	５		IP	２		IP	１	5	IP	１		IP	２		G2	５		IP	２		IP	３		IP	４		IP	３		IP

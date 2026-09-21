@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　凌太朗	8.20	0.12	2.5	２		IP	１		IP	２		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	６		IP
+高橋　　正男	6.00	0.18	4.2	５		IP	２		IP	１		IP	転		IP	１		IP	３		IP	２		IP	５		IP	２		IP	３		IP
+田中　　駿兵	8.20	0.11	2.4	１		IP	４		IP	１		IP	３		IP	３		IP	１		IP	１		IP	２		IP	１		IP	２		IP
+深谷　　知博	6.10	0.13	2.6	５	5	SG	５		SG	４		G1	１		IP	Ｆ		G1	２		G1	３		G1	１		IP	４		G1	３		G1
+尾嶋　　一広	4.00	0.16	3.0	５		IP	４		IP	３		IP	４		G1	６		G1	２		G1	６		IP	４		IP	５		IP	５	4	G1
+宮地　　元輝	4.80	0.16	4.1	１		SG	４		G1	６	5	IP	４		G1	５		G1	３		G1	５		G1	６		SG	５		SG	４		G1

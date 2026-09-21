@@ -1,0 +1,8 @@
+data=
+1	0
+相馬　　　翔	7.60	0.16	2.4	Ｆ		IP	２		IP	１		IP	３		IP	１		IP	１		IP	２		IP	２		IP	３		IP	１		IP
+岡谷　　健吾	5.60	0.20	4.0	５		IP	２		IP	４		IP	３		IP	３		IP	３		IP	４		IP	２		IP	４		IP	２		IP
+守屋　　大地	4.00	0.19	4.1	３		IP	３		IP	５		IP	６		IP	１		IP	４	4	IP	４		IP	５		IP	６		G3	４		G3
+村松　　栄太	4.20	0.13	2.9	４		IP	３		IP	３		IP	５		IP	４	5	IP	３		IP	３	5	IP	５		IP	４		IP	５		IP
+木村　　浩士	4.30	0.16	3.3	４		IP	４		IP	６		IP	１		IP	１		IP	５		IP	５		IP	５	6	IP	５		IP	３		IP
+石倉　　洋行	4.30	0.11	2.2	Ｆ		IP	３	5	IP	２	4	IP	５		IP	２		IP	３		IP	５	5	IP	５		G1	３		IP	５		IP

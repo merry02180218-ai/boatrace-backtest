@@ -1,0 +1,8 @@
+data=
+1	0
+池本　　輝明	7.80	0.15	2.3	４		IP	２		IP	２		IP	１		IP	２		IP	１		IP	１		IP	５		IP	１		IP	２		IP
+長尾　京志郎	4.70	0.15	3.6	４		IP	３		IP	４		IP	５		IP	５		IP	２		IP	６		IP	１		IP	５		IP	２		IP
+高岡　　竜也	6.70	0.15	3.2	２		IP	１		IP	５		IP	２		IP	２		IP	２		IP	４		IP	３		IP	６		IP	１		IP
+宇恵　　有香	4.00	0.17	4.5	４		IP	３		IP	６		IP	４		IP	５		IP	３		G3	４		G3	２		IP	６		IP	４	6	IP
+安部　　慎一	2.40	0.21	4.2	５		IP	６		IP	５		IP	５		G3	４		IP	５		IP	５		IP	３		IP	５		IP	６		IP
+金子　　賢志	4.80	0.13	2.4	４		IP	２		IP	６		G1	５		G1	４		IP	１		IP	４		IP	６		G1	５		G1	４		IP

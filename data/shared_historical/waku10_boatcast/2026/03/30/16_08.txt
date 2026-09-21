@@ -1,0 +1,8 @@
+data=
+1	0
+大平　誉史明	8.50	0.16	3.8	１		IP	１		IP	６		IP	１		IP	１		IP	２		IP	１		IP	２		IP	２		IP	１		IP
+正木　　聖賢	3.60	0.15	3.8	５		IP	３		IP	２		IP	５		IP	６		IP	５		IP	２		IP	６	3	IP	３		IP	転		IP
+鈴木　　賢一	5.30	0.13	3.0	２		IP	３		G3	６		G3	３		IP	４	5	IP	３		IP	３	5	IP	３		IP	２		IP	５		IP
+山本　　英志	2.70	0.17	3.4	５		IP	５		IP	６		IP	４		IP	４		IP	２		IP	６		IP	５		IP	６		IP	５		IP
+木村　　光宏	3.30	0.18	3.5	４		G3	５		IP	５		IP	５		IP	３	4	IP	５		IP	５		IP	２	4	IP	６		IP	４		IP
+齋藤　　真之	1.50	0.19	4.5	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	５		IP	５		IP	５	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+本吉　　正樹	7.60	0.16	3.2	１		IP	１		IP	１		IP	１		IP	１		IP	エ		IP	５		IP	３		IP	１		IP	２		IP
+市川　　哲也	7.00	0.17	3.5	３		IP	２		IP	４		IP	３		IP	３		IP	１		IP	２		IP	１		IP	２		IP	６		IP
+守屋　　大地	6.00	0.23	4.5	４		IP	３	5	IP	１		IP	２		IP	２		IP	６	5	IP	２		IP	１	4	IP	４		IP	６		IP
+田路　　朋史	5.60	0.17	2.8	３		IP	３	5	IP	Ｆ		IP	１		IP	６		IP	２		IP	３		IP	２		IP	１		IP	６		IP
+田中　　勇輔	2.20	0.15	2.1	５		IP	５		IP	６		IP	５		IP	４		IP	６		G3	５		G3	４		IP	５		IP	５		IP
+富永　　修一	3.50	0.16	3.6	５		IP	５		IP	４		IP	３		IP	５		G1	６		G1	１	5	G3	５		G3	５		IP	５		IP

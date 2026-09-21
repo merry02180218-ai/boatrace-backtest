@@ -1,0 +1,8 @@
+data=
+1	0
+和田　　兼輔	9.44	0.12	2.3	２		IP	３		IP	１		IP	１		IP	１		IP	１		IP	Ｌ		G1	２		G1	１		G1	１		IP
+内堀　　　学	6.90	0.12	2.4	２		IP	２		IP	３		IP	４		IP	３		IP	３		IP	２		IP	３		IP	１		IP	３	3	IP
+鶴田　　勇雄	4.30	0.14	2.1	３		IP	５		IP	３		IP	３		IP	４	5	G3	４	4	IP	５		IP	６		IP	３		IP	３		IP
+谷津　　幸宏	5.60	0.12	2.4	３		IP	３		IP	４		IP	５		IP	１		IP	２		IP	３		IP	３		G3	４		G3	４		G3
+後藤　　美翼	5.40	0.23	4.1	３		IP	２		G3	５		IP	３		IP	３		G3	２		IP	５	3	IP	４		IP	２		IP	４		IP
+古澤　　光紀	3.50	0.16	3.8	６		IP	転		IP	欠		IP	４		IP	６		IP	３		IP	４		IP	４		IP	３		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+長谷川　晴哉	8.80	0.17	3.1	１		IP	１		IP	３		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+小林　　基樹	5.60	0.22	4.8	４		IP	２		IP	５		IP	５		IP	１		IP	３		IP	３		IP	２		IP	５		IP	２		IP
+花本　　夏樹	4.30	0.19	4.2	４		IP	５	5	IP	１		IP	６		IP	４		IP	４		IP	４		IP	３		IP	５	5	IP	３		IP
+和合　　俊介	3.10	0.21	4.3	４		IP	Ｆ		IP	３		IP	５		IP	５		IP	３		IP	４		IP	６		IP	５		IP	４		IP
+金子　　怜央	2.80	0.14	2.3	１		IP	５		IP	５		IP	３		IP	５	4	IP	６		IP	５		IP	６		IP	６		IP	６		IP
+伯母　　芳恒	3.20	0.26	4.9	４		IP	４		IP	５		IP	４		IP	４		IP	４		IP	５		IP	６		IP	３		IP	６		IP

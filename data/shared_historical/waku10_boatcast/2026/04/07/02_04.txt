@@ -1,0 +1,8 @@
+data=
+1	0
+鋤柄　　貴俊	6.70	0.19	3.2	４		IP	４		IP	２		IP	１		IP	３		IP	２		IP	１		IP	３		IP	６		IP	１		IP
+須藤　　博倫	6.78	0.14	3.0	１		IP	２		IP	落	3	IP	１		IP	３		IP	３		IP	３		IP	４		IP	４		IP	３		G2
+和田　　拓也	6.40	0.15	2.7	１		IP	２		IP	２	4	IP	４		G1	６		G1	１		IP	３		IP	５		IP	２		IP	５		G1
+梅木　　敬太	4.00	0.21	3.4	３		IP	６		IP	１		IP	５		IP	６		IP	４	5	IP	２		IP	４		IP	５		IP	５		IP
+一柳　　和孝	4.00	0.14	3.0	３		IP	４	4	IP	５		IP	４		IP	３		IP	６		IP	４	4	IP	３		IP	３		IP	６		G3
+吉田　凌太朗	4.50	0.17	3.3	３		IP	５		IP	６		G1	３		G1	５		IP	２		IP	３		IP	２	5	IP	５		IP	６		G1

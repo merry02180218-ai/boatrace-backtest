@@ -1,0 +1,8 @@
+data=
+1	0
+福田　　雅一	7.70	0.17	4.2	２		IP	６		IP	１		IP	１		IP	１		IP	２		IP	１		IP	２		IP	４		IP	２		IP
+吉田　凌太朗	8.20	0.21	3.1	２		G1	１		IP	１		IP	２		IP	４		IP	３		IP	２		G1	２		IP	２		IP	１		IP
+竹田　　吉行	5.90	0.18	3.5	３		IP	３		IP	３	2	G1	１	4	IP	６		IP	２		IP	１		IP	３		G3	４		G3	６		IP
+増田　　　進	3.10	0.16	3.4	５		IP	６		IP	６		IP	４		IP	３		IP	３		IP	６	5	IP	４	5	IP	５		IP	４		IP
+大庭　　元明	5.00	0.13	2.7	３	6	IP	３		IP	６	6	IP	５		IP	５		IP	１		IP	６		IP	１		IP	３		IP	３	6	IP
+奥田　　　誠	4.10	0.21	5.2	３	5	IP	４	5	IP	５		IP	６		IP	６		IP	２		IP	４		IP	３		IP	６		IP	３	5	IP

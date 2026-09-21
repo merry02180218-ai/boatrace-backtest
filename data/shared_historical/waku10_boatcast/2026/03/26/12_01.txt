@@ -1,0 +1,8 @@
+data=
+1	0
+吉原　　聖人	6.20	0.15	2.4	２		IP	１		IP	３		IP	４		IP	４		IP	３		IP	２		IP	５		IP	３		G3	２		IP
+川崎　　智稔	5.60	0.19	3.3	４		IP	３		IP	４		IP	５		IP	３		IP	３		IP	２		IP	２		IP	１		IP	５		IP
+榎　　　幸司	6.60	0.21	3.9	３		IP	４		IP	４		IP	１		IP	２		IP	４		IP	２		IP	１		IP	３		IP	３		IP
+間野　　兼礼	4.30	0.14	2.7	５	3	IP	２		IP	５		IP	５		IP	３		IP	２	3	IP	３		IP	２		IP	６		IP	転	5	IP
+小林　　甘寧	4.50	0.18	3.7	４		IP	５		IP	２		IP	６		IP	５	6	IP	３		IP	３		IP	４		IP	２		IP	４		IP
+中嶋　健一郎	5.60	0.20	4.1	５		IP	５		IP	３		G1	１	5	IP	２		IP	１	4	IP	３	5	IP	３	5	G1	５		IP	５		IP

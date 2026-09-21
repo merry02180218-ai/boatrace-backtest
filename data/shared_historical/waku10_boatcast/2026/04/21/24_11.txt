@@ -1,0 +1,8 @@
+data=
+1	0
+鰐部　太空海	9.80	0.12	2.5	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+高井　　駿弥	4.00	0.15	2.3	３		IP	２		IP	４		IP	６		IP	４		IP	４		IP	６		IP	５		IP	３		IP	４		IP
+大森　　　翼	3.89	0.20	4.3	４		IP	５		IP	３		IP	１		IP	４		IP	落		IP	５		IP	６		IP	４		IP	５		IP
+青木　　　蓮	6.70	0.09	2.0	２		IP	３		IP	３		IP	１		IP	１		IP	６		IP	１		IP	４		G1	６		G2	２		G2
+仲本　　　舜	4.50	0.16	3.2	６		IP	４		IP	６		IP	６		IP	１		IP	４		IP	４		IP	３		IP	３		IP	２		IP
+大島　隆乃介	4.20	0.19	4.4	４	5	IP	５		IP	４		IP	６		IP	５		IP	３		IP	１	5	IP	４	5	IP	２		IP	６		IP

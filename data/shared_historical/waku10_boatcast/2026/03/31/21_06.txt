@@ -1,0 +1,8 @@
+data=
+1	0
+小野寺　智洋	8.44	0.16	2.4	１		IP	４		IP	１		IP	１		IP	２		IP	１		IP	２		IP	落		G3	３		IP	１		IP
+鈴木　　秀茉	5.60	0.12	3.3	５		G3	１		IP	６		IP	２		IP	３		IP	１		IP	６	3	IP	５		IP	２		IP	２		G3
+烏野　　賢太	6.90	0.17	3.5	１		G3	２		G3	３		IP	１		IP	１		IP	２		IP	２		IP	６		IP	５		IP	３		IP
+是澤　　孝宏	5.40	0.17	3.9	１		G3	５		IP	４		IP	４		IP	２		IP	３		G2	３		IP	６		IP	３		IP	３	5	IP
+井上　　大輔	4.30	0.17	3.4	４		G3	４		IP	５		IP	２		IP	３		IP	３		IP	４		IP	６		IP	４		IP	４		IP
+山本　　寛久	3.22	0.20	3.9	４		G3	６		IP	４		IP	４		IP	５	5	IP	５		G1	２		IP	５		IP	欠		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+上田　　紗奈	8.40	0.15	3.9	１		IP	１		IP	１		IP	５		IP	３		IP	１		IP	２		IP	１		IP	１		IP	２	2	IP
+武田　　信一	3.40	0.16	4.1	３		IP	６		IP	６		IP	３		IP	５		IP	５		IP	５		IP	５		IP	４		IP	２		IP
+松崎　祐太郎	5.50	0.20	3.2	６		IP	４		IP	１		IP	２		IP	４		IP	２	4	IP	２		IP	５		IP	５		IP	３		IP
+岡瀬　　正人	5.60	0.18	4.0	４	5	IP	２		IP	３		IP	４		IP	３		IP	２	3	IP	５		IP	４		IP	３		IP	２		IP
+田頭　　　実	7.70	0.14	2.4	１	2	IP	４	2	IP	３	2	IP	１	2	IP	６	2	IP	２	2	IP	２	2	IP	１	2	IP	１	2	IP	１	2	IP
+立間　　充宏	3.30	0.19	5.1	６		IP	６		IP	５		IP	４		IP	２		IP	６		IP	５		IP	３		IP	４		IP	４		IP

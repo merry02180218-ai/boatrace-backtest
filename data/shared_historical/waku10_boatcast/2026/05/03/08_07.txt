@@ -1,0 +1,8 @@
+data=
+1	0
+渥美　　卓郎	6.00	0.16	3.2	５		IP	５		IP	１		IP	１		IP	１		IP	２		IP	５		IP	４		IP	３		IP	３		IP
+中野　　仁照	5.10	0.19	4.3	６		IP	２		IP	４		G1	６		G1	３	3	IP	２		IP	１		IP	６		IP	５		IP	３		IP
+荒木　　颯斗	6.20	0.14	3.2	３		IP	１	4	IP	６		IP	２		IP	２		IP	６		IP	３		IP	２		IP	３		IP	２	2	IP
+塩崎　　優司	3.50	0.18	2.8	３		IP	５	3	IP	６		IP	５		IP	４		IP	５		IP	５		IP	２	3	IP	５		IP	３		IP
+神田　　達也	4.50	0.18	3.8	４		IP	６		IP	５		IP	２		IP	２		IP	５	4	IP	３		IP	１		IP	５	6	IP	５		IP
+仲口　　博崇	2.50	0.23	4.5	６		G1	６	5	G1	３	3	IP	５	5	G3	４	5	G3	５	4	IP	妨	4	IP	４	5	IP	６	3	IP	６		G1

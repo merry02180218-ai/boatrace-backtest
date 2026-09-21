@@ -1,0 +1,8 @@
+data=
+1	0
+新開　　　航	9.60	0.16	2.6	２	2	IP	３		G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1	２		G2
+宮崎　心之介	6.11	0.16	3.8	２		IP	３		IP	１		IP	２		IP	３		IP	６		IP	５		IP	２		IP	３		IP			IP
+佐々木　完太	5.78	0.14	2.5	２		IP	転		G1	２		G1	６		IP	３		IP	５		G1	２		G1	１		IP	エ		SG	４		SG
+宮之原　輝紀	5.70	0.15	2.1	２	3	IP	１		G1	３		G1	２		IP	６		G1	２	3	SG	６		G1	４		G1	６		G1	６		G1
+藤田　　竜弘	4.80	0.18	3.2	１		IP	３		IP	４		IP	４		IP	１		IP	６		IP	５		IP	６		IP	３		IP	４		IP
+白井　　友晴	2.30	0.21	4.7	５		IP	３		IP	６		IP	６		IP	５		IP	６		IP	５		IP	５		IP	５		IP	４		IP

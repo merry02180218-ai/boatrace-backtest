@@ -1,0 +1,8 @@
+data=
+1	0
+小川　　時光	4.50	0.17	3.3	６		IP	６		IP	１		IP	３		IP	６		IP	４		IP	１		IP	６		IP	６		IP	１		IP
+中里　　昌志	4.40	0.19	4.5	６		IP	４		IP	３		IP	４		IP	３		IP	４		IP	５		IP	２		IP	６	4	IP	２		IP
+野田　　昇吾	3.30	0.17	2.4	５		IP	５		IP	５		IP	５		IP	１		IP	６		IP	５		IP	５		IP	３		IP	４		IP
+中澤　　和志	8.10	0.14	2.4	４		IP	１		G1	２		G1	３		IP	３		IP	３		G1	３		G1	１	5	IP	１		IP	１		G1
+関口　　智久	2.50	0.11	2.6	４		IP	３		IP	５		IP	４		IP	６		IP	６		IP	５		IP	５	6	IP	６	6	IP	５		IP
+秋元　　　哲	5.80	0.17	4.0	１	4	IP	２	4	IP	３	2	IP	５	3	G3	４		G1	３		IP	４		G1	１		IP	６		G1	４		IP

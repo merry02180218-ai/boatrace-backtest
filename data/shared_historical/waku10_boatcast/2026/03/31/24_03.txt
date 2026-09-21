@@ -1,0 +1,8 @@
+data=
+1	0
+福山　恵里奈	7.90	0.20	2.7	６		IP	４		IP	１		G3	１		G3	１		IP	４		IP	１		IP	１		IP	１		G3	１		IP
+北山　　康介	7.50	0.14	3.5	４		IP	２		IP	２		IP	３		IP	１		IP	４		SG	３		IP	２		IP	２		IP	１		IP
+松本　　浩貴	4.60	0.21	4.2	２		IP	４		IP	３		IP	５	6	IP	４		IP	６		IP	１	4	IP	３		IP	６		IP	４		IP
+篠原　　晟弥	5.56	0.13	2.3	Ｆ		G2	５		G2	６		IP	２		IP	１		IP	４		IP	１		IP	３		IP	２		IP	転		IP
+古園井　綾南	1.00	0.21	4.3	６	6	IP	６	6	IP	６	6	IP	６	6	G3	６	6	G3	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP
+後藤　　隼之	3.80	0.21	4.7	５		IP	５	5	IP	３	4	IP	４		IP	４		IP	３		IP	２	5	IP	４	5	IP	６		IP	６		IP

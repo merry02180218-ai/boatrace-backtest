@@ -1,0 +1,8 @@
+data=
+1	0
+筒井　　美琴	3.22	0.25	4.9	４		IP	３		G3	６		IP	４		IP	６		IP	欠		IP	５		G3	５		IP	２		G3	６		IP
+石岡　　将太	6.40	0.18	2.8	３		IP	４		IP	４		IP	１		IP	２		IP	２		IP	５		IP	４		IP	１		IP	２		IP
+和田　　拓也	6.30	0.15	2.3	３		IP	４		IP	１		IP	２		IP	２	4	IP	４		G1	６		G1	１		IP	３		IP	５		IP
+鈴木　　唯央	4.20	0.16	3.4	１		IP	４		IP	５		IP	４		IP	４		IP	４		IP	５		IP	５		IP	５		IP	２	5	IP
+豊田　　訓靖	4.00	0.21	3.4	２		IP	２		IP	６		IP	３		IP	４		IP	５		IP	４	6	IP	６		IP	５		IP	４		IP
+宮城　　那菜	1.80	0.09	2.2	５	5	IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	４		IP	４		IP	６		IP

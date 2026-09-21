@@ -1,0 +1,8 @@
+data=
+1	0
+高山　　秀雄	7.70	0.19	3.7	１		IP	３		IP	１		IP	１		IP	６		IP	１		IP	２		IP	３		IP	３		IP	１		IP
+花田　　和明	6.40	0.16	2.5	４		IP	２		IP	３		IP	４		IP	１		IP	３		IP	３		IP	３		IP	２		IP	３		IP
+鈴木　　　博	5.90	0.17	4.2	３		IP	３		IP	３		IP	２		IP	２		IP	３		IP	６		IP	３		IP	１		IP	５	4	IP
+阿波　　勝哉	4.20	0.22	4.5	５	6	IP	２		IP	４		IP	１	6	IP	４		IP	５	6	IP	５	3	IP	５	6	IP	４	6	IP	４	5	IP
+寺本　　昇平	3.20	0.20	3.2	５		IP	４		IP	３		IP	５		IP	６		IP	５		IP	３		IP	６		IP	３		IP	５		IP
+松山　　将吾	4.50	0.19	4.8	４		IP	３		IP	３		G3	５		G3	３		IP	３		G1	４		G1	６		G1	３		IP	６		IP

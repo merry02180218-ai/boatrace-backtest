@@ -1,0 +1,8 @@
+data=
+1	0
+菅野　はやか	5.30	0.24	4.3	４		G3	５		G3	３		IP	４		IP	１		IP	４		IP	６		IP	３		G3	２		IP	２		IP
+後藤　　美翼	6.80	0.20	4.2	２		G3	４		IP	３		IP	１		IP	１		IP	５		IP	１		IP	３		IP	４		G3	２		G3
+高橋　　淳美	3.10	0.16	3.1	６		G3	３		IP	６		IP	６		IP	４		IP	３		IP	６		IP	２		IP	５		IP	６		IP
+新田　　芳美	5.50	0.14	2.3	３		G3	１		IP	１		IP	４	3	IP	４		IP	３		IP	４		IP	６		G1	５		G1	３		IP
+安達　　美帆	1.60	0.20	3.9	６		G3	５		G3	５		G3	転	6	G3	６		G3	６		G3	６		G3	３		G3	６		IP	６		IP
+喜多　那由夏	2.20	0.16	3.6	５		G3	６		IP	５		IP	３		IP	６		IP	４		IP	５		IP	６	5	IP	５		G3	６		IP

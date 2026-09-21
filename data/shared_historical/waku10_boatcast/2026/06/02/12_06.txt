@@ -1,0 +1,8 @@
+data=
+1	0
+菅野　はやか	4.70	0.23	3.9	５	4	IP	２		G3	４		G3	５		G3	３		IP	４		IP	１		IP	４		IP	６		IP	３		G3
+佐々木　翔斗	5.40	0.14	3.4	３		IP	４		IP	１		IP	５		IP	４		IP	１		IP	４		IP	６		G2	６		G2	１	3	IP
+桐本　　康臣	7.60	0.16	3.2	１		IP	４		IP	１		IP	５		IP	１		IP	２		IP	３		IP	２		IP	２		IP	１		IP
+加藤　　翔馬	7.40	0.18	3.3	２		IP	１		IP	３		IP	１		IP	２		IP	５		IP	２		IP	３	5	IP	２		G3	２		G3
+得山　　大輝	2.00	0.14	3.7	４	6	IP	５	6	IP	５	6	IP	５	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	４	6	IP	６	6	IP
+村上　　彰一	3.40	0.21	4.4	５		IP	６		IP	５		IP	５		IP	４		IP	２		IP	３		IP	６		IP	４		IP	４		IP

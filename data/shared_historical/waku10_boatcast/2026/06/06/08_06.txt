@@ -1,0 +1,8 @@
+data=
+1	0
+古田　　祐貴	6.10	0.16	3.1	５		G3	２		G3	１		IP	３		IP	１		IP	６		G3	４	2	G3	５		IP	２		IP	１		IP
+長野　　道臣	5.20	0.19	3.4	２		IP	２	4	IP	４		IP	５		IP	４		IP	３		IP	５		IP	４		IP	４		IP	１		IP
+加藤　　　綾	6.10	0.15	3.2	３		IP	２		IP	２		IP	４		IP	１		IP	３		IP	２		IP	６		IP	３		IP	４		IP
+長野　　未来	2.11	0.27	4.5	６		IP	６		IP	６		IP	６		IP	転		IP	３		IP	６	6	IP	６	6	IP	３	6	IP	６	6	IP
+渡邉　　雄朗	4.70	0.14	3.6	３		IP	３		G2	３		G2	５		IP	６		IP	２		IP	６		G1	６		G1	６		G1	１		IP
+深井　　利寿	4.30	0.18	4.3	４		G2	５		G2	６	5	IP	４		IP	５		IP	３		IP	３	5	IP	５		IP	２	5	IP	３		IP

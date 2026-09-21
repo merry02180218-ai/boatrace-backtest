@@ -1,0 +1,8 @@
+data=
+1	0
+小澤　　和也	6.90	0.17	2.7	５		IP	１		IP	１		IP	３		IP	１		IP	６		IP	１		IP	１		IP	２		IP	５		IP
+井上　　尚悟	6.00	0.17	3.6	２		IP	２		IP	４		IP	２		IP	５	3	IP	３		IP	３	3	IP	２		IP	３		IP	４		IP
+登玉　　隼百	5.56	0.13	2.9	エ		IP	６		IP	６		IP	１		IP	５		IP	１		IP	４		IP	３		IP	３	4	IP	２		IP
+浦田　　信義	4.80	0.20	4.1	６		IP	６		IP	５		IP	２		IP	３		IP	５		IP	２		IP	１		IP	５		IP	２	2	IP
+富澤　　祐作	3.20	0.14	2.8	６		IP	４	6	IP	１	4	IP	３	6	IP	６		IP	６		IP	６		IP	４	6	IP	５		IP	５		IP
+谷川　　祐一	4.40	0.20	4.6	６		IP	３	5	IP	６		IP	３	5	IP	５	5	IP	５		IP	４	5	IP	３	5	IP	１	5	IP	３		IP

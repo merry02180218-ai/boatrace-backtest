@@ -1,0 +1,8 @@
+data=
+1	0
+坂井　　滉哉	7.00	0.17	3.6	６		IP	１		IP	１		IP	６		IP	１		IP	２		IP	３		IP	１		IP	４		IP	１		IP
+中本　　大樹	5.60	0.21	4.2	２		IP	４	3	IP	４		IP	２		IP	４		IP	１		IP	３		IP	３		IP	４	3	IP	５		IP
+長谷川　晴哉	5.78	0.19	4.1	３		IP	４		IP	転		IP	２		IP	１		IP	５		IP	１		IP	１		IP	６		IP	６		IP
+飛田　　江己	4.90	0.12	3.2	３		IP	５		IP	４		IP	２		IP	２		IP	３		IP	６		G1	６		G1	６	6	G1	３		G1
+小林　　礼央	5.00	0.10	2.5	４		IP	５		IP	５	4	IP	４	6	IP	４		IP	３		IP	１		IP	３		IP	５		IP	２		IP
+吉原　　快誓	1.90	0.18	4.1	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	４		IP	６		IP	３		IP

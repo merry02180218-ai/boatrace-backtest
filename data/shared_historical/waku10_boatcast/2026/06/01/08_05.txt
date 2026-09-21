@@ -1,0 +1,8 @@
+data=
+1	0
+藤森　　陸斗	8.20	0.14	2.6	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	２		IP	１		IP	４		IP	４		IP
+齋藤　　　勇	4.40	0.18	3.6	４		IP	２		IP	６		IP	５		IP	５		IP	４		IP	６		IP	３		IP	３		IP	１		IP
+大久保　佑香	5.00	0.17	3.7	４		IP	Ｌ	5	IP	３		G3	４		G3	２		IP	５		IP	２		G3	４		G3	２		IP	６		IP
+高山　　弘斗	3.20	0.16	3.3	６		IP	５		IP	６		IP	５		IP	２		IP	４		IP	６		IP	６		IP	５		IP	１		IP
+野中　　一平	5.30	0.10	2.3	４		IP	３		IP	１		IP	３		IP	６		IP	５		IP	１		IP	３		IP	５		G1	４		G1
+加倉　　侑征	3.70	0.18	4.7	５		IP	４		IP	４		IP	６		IP	５		IP	５		IP	３		IP	３		IP	２		IP	５	5	IP

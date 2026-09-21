@@ -1,0 +1,8 @@
+data=
+1	0
+村上　　奈穂	8.20	0.19	3.2	１		IP	２		IP	２		IP	１		IP	２		IP	１		IP	２		IP	１		IP	２		IP	５		IP
+栗原　　直也	4.20	0.17	3.9	５		IP	５		IP	５		IP	４	3	IP	３		IP	２		IP	５		IP	１		IP	４		IP	５		IP
+齋藤　　智裕	3.20	0.22	4.2	６		IP	３		IP	３		IP	５	4	IP	３		IP	６		IP	３		IP	６		IP	６	4	IP	５		IP
+芝田　　浩治	6.90	0.15	2.3	２		IP	３		IP	２		IP	１		IP	１	3	IP	５		IP	６		IP	３		IP	１		IP	２	3	IP
+佐藤　　大介	6.10	0.15	3.1	３		IP	４		IP	２		IP	３		IP	１		IP	３		G1	３		IP	５		IP	２		IP	４		IP
+鈴木　　峻佑	3.50	0.17	4.3	１		IP	５		IP	５		IP	５		IP	５		IP	４		IP	５		IP	６		IP	２		IP	５		IP

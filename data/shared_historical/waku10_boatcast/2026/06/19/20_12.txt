@@ -1,0 +1,8 @@
+data=
+1	0
+福岡　　泉水	6.80	0.20	3.1	１		IP	４		IP	４		IP	３		IP	２		IP	３		IP	３		IP	２		G3	１		IP	３		IP
+山川　　波乙	5.70	0.19	4.0	３		IP	６		IP	３		IP	３		IP	２		IP	２		IP	２		IP	４		IP	５		IP	２		IP
+武井　莉里佳	5.00	0.21	3.7	２		IP	５		IP	４		IP	３		G3	５		G3	４		G2	１		IP	６		IP	３		IP	３		IP
+向井田　真紀	3.30	0.23	4.7	６		IP	６		IP	２		IP	４		IP	１		IP	６		IP	５		IP	４		G3	６		IP	６		IP
+川原　　愛未	2.10	0.16	2.8	４	6	IP	６		IP	５		IP	５		IP	６		IP	欠		IP	３	4	IP	５		IP	５		IP	６	6	IP
+田中　　博子	1.50	0.17	3.3	５		IP	５		G3	５		G3	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP

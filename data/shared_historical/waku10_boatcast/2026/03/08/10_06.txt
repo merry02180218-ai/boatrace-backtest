@@ -1,0 +1,8 @@
+data=
+1	0
+守屋　　大地	5.30	0.17	3.6	５		IP	２		IP	４		IP	３		IP	６		IP	３		IP	５		IP	２		IP	２		IP	２		IP
+相原　　利章	5.80	0.16	3.1	２		IP	６	4	IP	３		IP	６		IP	３		IP	２		IP	５		IP	２		IP	１		IP	２		IP
+竹之内　　極	4.70	0.18	3.1	４	5	IP	３		IP	３		IP	４		IP	６		IP	３		IP	４	4	IP	４		IP	２		IP	４		IP
+金子　　貴志	4.44	0.18	4.1	５		IP	５		IP	５	5	IP	４		IP	４		IP	４		IP	２		IP	３		IP	２	3	IP	欠		G3
+井内　将太郎	6.00	0.15	3.4	５		IP	２		IP	５		IP	３	4	IP	２		IP	２		IP	２		IP	２	4	IP	５		IP	４		G3
+尾上　　雅也	5.90	0.13	3.7	５		IP	２		G1	６		IP	４		IP	２	5	IP	５	5	IP	１		IP	１		IP	３		IP	３		IP

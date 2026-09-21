@@ -1,0 +1,8 @@
+data=
+1	0
+大町　　利克	6.20	0.14	2.7	２		IP	４		IP	１		IP	５		IP	３		IP	２		IP	１		IP	５		IP	５		IP	１		IP
+田中　　辰彦	3.90	0.20	3.7	５		IP	２		IP	２	3	IP	６		IP	５		IP	４		IP	５		IP	４		IP	４		IP	４		IP
+深山　　祐二	5.30	0.17	3.4	５		IP	３		IP	３		IP	４		IP	２		IP	２		IP	２		IP	５		IP	２		IP	６		IP
+土屋　実沙希	4.50	0.19	4.5	４		IP	３		IP	６		IP	４		IP	６		IP	４		IP	１		IP	６		IP	３		IP	３		IP
+渥美　　卓郎	3.10	0.20	4.0	４	4	IP	５		IP	６		IP	５		IP	４		IP	５		IP	１		IP	５	6	IP	５		IP	５		IP
+丸尾　　義孝	4.20	0.14	2.6	６		IP	５		IP	３		IP	４		IP	３	5	IP	４		IP	５		IP	６		IP	２		IP	２	5	IP

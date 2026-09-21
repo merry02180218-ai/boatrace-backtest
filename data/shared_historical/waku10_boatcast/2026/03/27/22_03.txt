@@ -1,0 +1,8 @@
+data=
+1	0
+西田　　　靖	7.40	0.16	3.1	３		IP	１		IP	１		IP	２		IP	５		IP	２		IP	２		IP	４		IP	１		IP	２		IP
+後藤　　盛也	5.50	0.13	2.4	２		IP	２		IP	２		G3	１		G3	６		IP	３		IP	２		IP	６		IP	６		IP	４		IP
+三川　　昂暁	5.60	0.18	3.4	２		IP	１		IP	２		IP	３		IP	Ｆ		IP	５		IP	４		IP	５		IP	１		IP	３		IP
+吉田　　翔悟	4.90	0.18	4.1	３		IP	３		IP	４		IP	６		IP	３		IP	２		IP	３	5	IP	３		IP	３		IP	Ｆ		IP
+福岡　　泉水	5.40	0.18	2.7	３		IP	２		G3	５		G3	４		IP	２		IP	３		IP	２		IP	３		IP	５		IP	４		IP
+沼田　　大都	2.30	0.30	5.6	３		IP	６		IP	５	5	IP	５		IP	６		IP	６		IP	６		IP	３		IP	６		IP	５		IP

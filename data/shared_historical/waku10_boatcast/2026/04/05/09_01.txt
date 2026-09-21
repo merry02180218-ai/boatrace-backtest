@@ -1,0 +1,8 @@
+data=
+1	0
+中山　　翔太	10.10	0.13	4.1	１		IP	１		IP	２		IP	１		IP	１		G1	１		G1	１		IP	１		IP	１		IP	１		IP
+篠崎　　仁志	7.60	0.15	3.7	２		G1	３		IP	２		G1	２		G1	５		G1	５		IP	１		IP	２		IP	２		G1	２		IP
+黒井　　達矢	5.00	0.14	2.8	３		IP	３		IP	３		G1	５		IP	６		IP	５		IP	２		IP	３		IP	２		IP	４		IP
+高田　ひかる	6.30	0.17	3.3	３		IP	２		IP	６		IP	４		IP	１		IP	１		IP	６		G1	５		IP	２	5	IP	１		IP
+北野　　輝季	5.90	0.13	2.4	６		IP	５		IP	１	4	IP	３	4	IP	２		G1	２		G1	３		G1	６		G1	６		IP	１		IP
+西村　　拓也	5.90	0.13	2.6	１	4	IP	２	5	IP	５	5	IP	３	4	IP	５		G1	２		G1	２	5	IP	２		G2	５		IP	５	4	IP

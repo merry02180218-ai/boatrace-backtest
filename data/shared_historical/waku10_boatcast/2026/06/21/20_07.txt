@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　貴博	5.70	0.16	3.5	２		IP	５		IP	２		IP	３		IP	５		G3	３		IP	１		IP	３		IP	２		IP	６		IP
+津留　浩一郎	4.90	0.20	4.0	４		IP	６		IP	４		IP	６		IP	６		IP	２	3	IP	２		IP	２		IP	３		IP	２		IP
+深山　　祐二	5.60	0.16	3.4	４		IP	５		IP	３		IP	３		IP	４		IP	２		IP	２		IP	２		IP	５		IP	２		IP
+井川　　大作	5.20	0.12	1.9	２		IP	２		IP	４		IP	２	5	IP	４		IP	２		IP	４		IP	４		IP	５	5	G3	５		IP
+西野　　翔太	5.70	0.13	2.3	１		IP	３		IP	６		IP	５		IP	２		IP	１		G3	５		G3	２		IP	５		IP	４		IP
+小澤　　和也	2.80	0.21	4.5	６		IP	６		IP	５		IP	６		IP	３	4	IP	６		IP	６		IP	３		IP	６		IP	２		IP

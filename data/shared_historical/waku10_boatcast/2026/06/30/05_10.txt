@@ -1,0 +1,8 @@
+data=
+1	0
+田路　　朋史	7.60	0.16	3.3	２		IP	３		IP	１		IP	２		IP	１		IP	１		IP	１		IP	４		IP	４		IP	３		IP
+青木　　　蓮	5.67	0.15	2.6	３		IP	３		IP	落		IP	２		IP	１	3	IP	６		IP	２		IP	６	3	IP	２		IP	６	1	IP
+荒木　　颯斗	6.90	0.14	3.0	３		IP	１		IP	４		IP	２		IP	２		IP	３		IP	１	4	IP	６		IP	２		IP	２		IP
+堤　　　　昇	5.90	0.20	3.6	３		G3	２		G3	１	2	IP	４	1	IP	４		IP	６		IP	２		G3	２		IP	４	2	IP	３		IP
+野中　　義生	4.10	0.13	3.0	６		IP	４		IP	３		IP	４		IP	５		G3	４		IP	３		IP	５		IP	４		IP	２		IP
+牧　　　宏次	3.50	0.19	4.0	３		IP	４	5	IP	４		IP	４		IP	６		IP	４		IP	６		IP	６	5	IP	２		IP	５		G3

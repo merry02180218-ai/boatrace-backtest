@@ -1,0 +1,8 @@
+data=
+1	0
+北川　　太一	7.00	0.21	3.0	３		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	５		G3	５		G3	４		IP
+香川　　素子	6.30	0.19	3.7	３		G1	３		IP	２		IP	５		IP	１		IP	５		IP	１		IP	２		IP	４		IP	３		G3
+山本　　光雄	4.50	0.21	3.9	２		IP	５		IP	３		IP	６		IP	３		IP	３		IP	５		IP	５		IP	２		G3	４		G3
+吉田　　一郎	5.00	0.16	3.0	１		IP	１		IP	３		IP	転		IP	６		IP	５		IP	５		IP	５		IP	４		IP	２		IP
+柳瀬　　興志	5.67	0.17	2.7	１		IP	４		IP	エ		IP	１	4	IP	４		IP	２	4	IP	３		IP	３	6	IP	５		IP	６	6	IP
+折下　　寛法	3.30	0.19	3.8	５		G3	５		IP	６		IP	４		IP	６		IP	３		IP	５		IP	６		IP	３		G3	２		IP

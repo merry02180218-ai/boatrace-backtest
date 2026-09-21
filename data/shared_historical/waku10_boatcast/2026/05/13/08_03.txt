@@ -1,0 +1,8 @@
+data=
+1	0
+山下　　智己	8.10	0.15	2.8	１		IP	１		IP	２		IP	４	2	IP	１		IP	２		IP	１		IP	６		IP	１		IP	１		IP
+幸野　　史明	6.50	0.15	3.3	１		IP	１		IP	５		IP	２		IP	６	3	IP	１		IP	３		IP	３		IP	１		IP	５		IP
+松山　　将吾	6.40	0.11	1.7	４		IP	２		IP	３		IP	３		IP	１		IP	３		IP	１		IP	４		G1	４		G1	４		IP
+倉田　　茂将	4.60	0.16	3.1	５		IP	２	5	IP	４		IP	５		IP	３	5	IP	５	3	IP	２		IP	３		IP	３		IP	５		IP
+坪井　　爽佑	4.10	0.19	4.3	４	6	IP	５		IP	３		IP	２		IP	６		IP	２		IP	３		IP	落		IP	５		IP	４		IP
+黒崎　　竜也	4.70	0.15	3.3	４		IP	３		IP	３		IP	６		IP	３		IP	４		IP	４		IP	４		IP	４		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+小川　　知行	8.70	0.15	1.9	１		IP	６		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+眞鳥　　康太	4.70	0.17	3.3	５		IP	４		IP	２	6	IP	２	5	IP	４	5	IP	転		IP	２	6	IP	６		IP	２		IP	４	5	G3
+山室　　展弘	3.90	0.14	2.8	３		IP	４		IP	５		IP	２		IP	６		IP	５		IP	２		IP	４		IP	５		IP	５		IP
+笠　　　雅雄	5.30	0.16	2.7	１		IP	２		IP	３		IP	６	2	IP	６		IP	２	3	IP	６		IP	５		IP	３		IP	１		IP
+向井田　真紀	3.10	0.19	3.7	５		IP	２	6	IP	２		G3	Ｆ		IP	６		IP	５		IP	６		IP	４		G3	４		IP	６		IP
+庄司　樹良々	4.40	0.19	3.8	４		IP	５		IP	２		IP	４		IP	５		G3	３		G3	４		IP	４		IP	４		IP	３		IP

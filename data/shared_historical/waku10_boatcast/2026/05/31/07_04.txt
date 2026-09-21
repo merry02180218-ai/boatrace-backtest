@@ -1,0 +1,8 @@
+data=
+1	0
+原村　　拓也	7.40	0.18	3.5	１		IP	４		IP	１		IP	１		IP	４		IP	１		IP	４		IP	３		IP	２		IP	２		IP
+前川　　守嗣	4.90	0.16	2.4	３		IP	６		IP	６		IP	１		IP	５		IP	６		IP	５		IP	１		IP	２		IP	２		IP
+竹下　　大樹	6.40	0.16	2.4	２		IP	５		IP	２		IP	５		IP	３		IP	３		IP	３		IP	３		IP	１		IP	２		IP
+川田　　正人	4.90	0.19	4.3	３		IP	３	5	IP	３		IP	４		IP	６		IP	３		IP	４		IP	４		IP	４	5	IP	２		IP
+仲　　　航太	3.33	0.28	4.7	１		IP	６	6	IP	６	6	IP	４		IP	６	6	IP	エ		IP	４		IP	６		IP	４		IP	４		IP
+鈴木　　峻佑	3.00	0.19	4.5	４		IP	６		IP	６		IP	５		IP	１		IP	５		IP	５		IP	５		IP	５		IP	４		IP

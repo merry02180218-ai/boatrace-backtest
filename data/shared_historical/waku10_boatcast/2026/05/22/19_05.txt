@@ -1,0 +1,8 @@
+data=
+1	0
+谷津　　幸宏	7.40	0.11	2.2	１		IP	５		IP	１		IP	２		IP	２		IP	１		IP	１		IP	４		G3	１		G3	５		IP
+古澤　　光紀	6.40	0.15	2.3	２		IP	３		IP	６	3	IP	２		IP	２	3	IP	２		IP	６		IP	２		IP	１		IP	３		IP
+松井　　貫太	3.70	0.21	4.6	６		IP	４		IP	６		IP	４		IP	３		IP	２		IP	６		IP	２		IP	５		IP	５		IP
+塩崎　　優司	3.70	0.18	3.1	２		IP	５	5	IP	３		IP	５	3	IP	６		IP	５		IP	４		IP	５		IP	５		IP	２	3	IP
+小野　　信樹	1.90	0.14	2.5	５		IP	４		IP	５		IP	６		IP	４		IP	５		IP	６		IP	６		IP	６		IP	６		IP
+坂口　　　周	5.30	0.19	4.0	５		G3	４		G3	６	5	IP	２	4	IP	２	5	IP	４		IP	３		IP	３	5	IP	３	5	IP	３		IP

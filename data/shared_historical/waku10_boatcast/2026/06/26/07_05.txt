@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　幸也	4.90	0.18	4.0	１		IP	６		IP	４		IP	２		IP	５		IP	５		IP	１		IP	３		IP	４		IP	５		IP
+鈴木　　孝明	8.30	0.18	4.3	１		IP	２		IP	２		IP	５		IP	１		IP	２		IP	２		IP	１		IP	１		IP	２	3	IP
+中村　紋夕梨	3.50	0.22	4.8	４		IP	５		IP	５		IP	３		IP																		IP
+尾上　　雅也	5.89	0.15	2.5	３		IP	４		IP	４		IP	転		G1	１		IP	２		IP	５		IP	６		G3	２	5	G3	１		IP
+森清　　友翔	2.90	0.16	3.3	３		IP	４	6	IP	６		IP	６		IP	５		IP	６		IP	３		IP	５		G2	４		IP	６		IP
+吉永　　泰弘	4.20	0.20	4.4	５		IP	４		G3	２		G3	４		IP	２		IP	３	4	IP	５		IP	５		IP	５		IP	４	5	IP

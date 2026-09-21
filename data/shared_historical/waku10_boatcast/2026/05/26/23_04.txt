@@ -1,0 +1,8 @@
+data=
+1	0
+堤　　　啓輔	7.70	0.16	2.6	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	３		IP	４		IP	１		IP	６		IP
+山田　　亮太	6.90	0.15	3.9	２		IP	４		G2	１		IP	１	3	G3	２		IP	１	3	IP	２		IP	６		IP	６		IP	２		IP
+佐藤　　太亮	4.60	0.15	3.2	３		IP	５		IP	３		IP	１		IP	４		IP	２		IP	６		IP	５		IP	６		IP	３		IP
+向井　　美鈴	4.30	0.21	3.8	６		IP	１		IP	２		IP	５		IP	３		IP	４		IP	４		IP	６		G1	４		G1	６		IP
+小野　　京平	2.90	0.17	4.5	５		IP	３		IP	５		IP	５		IP	５		IP	４		IP	４		IP	６		IP	４		IP	５		IP
+山口　　達也	3.80	0.13	3.9	６		G2	６		IP	６		IP	４		SG	４		SG	２	3	G1	６		G1	６		G1	２		G1	Ｆ		IP

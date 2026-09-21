@@ -1,0 +1,8 @@
+data=
+1	0
+土屋　実沙希	8.20	0.15	2.6	１		IP	４		IP	１		IP	２		IP	３		IP	３		IP	２		IP	１		IP	１		IP	１		IP
+三品　　隆浩	4.20	0.19	4.3	２		IP	３		IP	４		IP	３		IP	３		IP	４		IP	５		IP	６		IP	６		IP	４		IP
+上田　　紗奈	7.50	0.14	2.6	１		IP	２		IP	２		IP	６		IP	２		IP	５		IP	１		IP	１		IP	２		IP	１		IP
+深川　　真二	6.70	0.18	3.7	２	2	IP	２	2	IP	２	2	IP	３	2	IP	１	2	IP	３	1	IP	６	2	G2	３	2	IP	３	2	IP	３	2	IP
+齊藤　　　廉	3.60	0.19	3.8	３		IP	４		IP	５		IP	５		IP	５		IP	３		IP	５	6	IP	４		IP	４		IP	４		IP
+向井田　真紀	2.10	0.26	5.2	５		IP	４		IP	５		IP	６		IP	６		G3	６		G3	３	5	IP	６		IP	５		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+高村　　　諒	1.00	0.16	3.0	６		IP																											IP
+飯山　　晃三	3.30	0.18	3.6	Ｆ		IP	４		IP	４		IP	１		IP	３	3	IP	４		IP	６		IP	６		IP	５		IP	６		IP
+栗城　　　匠	5.90	0.14	2.4	３		IP	２		IP	４		IP	６		G2	４		IP	５		IP	１		IP	３		G1	４		IP	１		IP
+石川　　哲秀	3.60	0.14	2.7	５		IP	２		IP	６	6	IP	４		IP	２		IP	６		IP	３		IP	４		IP	６		IP	６		IP
+谷口　　知優	4.30	0.14	3.8	５		G3	３		G3	３		IP	４		IP	４	4	IP	６		IP	４		IP	３		IP	２	4	IP	５		IP
+盛本　　真輔	3.70	0.20	3.2	４		IP	６		IP	６		IP	３		IP	５		IP	４		IP	２	5	IP	４		IP	６		IP	３		IP

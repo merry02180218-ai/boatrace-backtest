@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　雄二	6.60	0.14	3.2	４		IP	２		IP	４		IP	２		IP	１		IP	５		IP	２		IP	２		IP	４		IP	１		IP
+井芹　　大志	3.00	0.19	4.4	６		IP	６		IP	４		IP	３		IP	６		IP	６		IP	３		IP	６		IP	２		IP	６		IP
+長谷川　晴哉	6.20	0.13	2.2	６		IP	６		IP	１		IP	１		IP	３		IP	１		IP	５		IP	１		IP	４		IP	２		IP
+川上　　聡介	3.20	0.16	2.9	２		IP	２		IP	６		IP	５		IP	４	3	IP	５		IP	４		IP	６	5	G3	６		IP	６		IP
+岩井　　　繁	3.20	0.25	5.3	６		IP	２		IP	６		IP	４		IP	４		IP	５		IP	４		IP	６		IP	３		IP	６		IP
+鈴木　　柊介	1.10	0.18	3.1	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	転		IP	６		IP

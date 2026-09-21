@@ -1,0 +1,8 @@
+data=
+1	0
+豊田　　　結	8.40	0.17	2.3	３		IP	１		IP	１		IP	１		G3	２		G3	４		IP	３		IP	１		IP	１		G3	１		G3
+石村　日奈那	2.00	0.27	6.0	５		G3																											IP
+岩崎　　麗子	4.10	0.16	3.3	６		IP	２		G3	５		G3	４		IP	６		IP	６		G3	２		IP	１		IP	４		IP	５		IP
+高田　ひかる	5.10	0.19	4.1	１		IP	４		IP	５		IP	１		IP	６		IP	４		G1	３		IP	２		IP	６		IP	４		IP
+高橋　　涼夏	2.80	0.14	3.5	６		IP	３		IP	２		IP	５		IP	６		IP	５		IP	６		IP	４		IP	６		IP	５	6	IP
+市川　　瑚幸	1.40	0.20	4.4	５	5	IP	６		IP	６		IP	５		IP	６		IP	５		IP	５		IP	６		IP	６		IP	６		IP

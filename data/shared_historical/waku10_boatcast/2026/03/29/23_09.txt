@@ -1,0 +1,8 @@
+data=
+1	0
+服部　　　剛	6.70	0.20	3.7	１		IP	４		IP	１		IP	２		IP	４		IP	３		IP	１		IP	３		IP	２		IP	６		IP
+小玉　　啓太	6.10	0.16	3.4	３		IP	２		IP	１		IP	３		IP	６		IP	３		IP	２		IP	５		IP	２		IP	３		IP
+佐々木　和伸	5.78	0.13	2.4	２		IP	２		IP	３		IP	３		IP	４		IP	２		G1	６	2	G1	転		IP	２		IP	６		IP
+椎名　　　豊	6.00	0.15	3.3	２		IP	２		IP	６		G1	３		G1	６		G1	１		IP	１		IP	５		IP	４		G1	４	5	G2
+塚越　　海斗	6.40	0.17	2.6	３		IP	１		IP	２		IP	６	3	IP	１		IP	１	4	IP	６		IP	２		IP	２		IP	６		IP
+吉島　　祥之	3.90	0.18	3.3	３	5	IP	３		G3	６		G3	３		IP	６		IP	３		IP	６		IP	５		IP	３		IP	４		IP

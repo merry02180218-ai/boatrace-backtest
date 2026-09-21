@@ -1,0 +1,8 @@
+data=
+1	0
+三馬　　崇史	5.20	0.17	3.2	４		IP	６		G2	１		IP	６		IP	２		IP	４		IP	５		IP	１		IP	１		IP	６		IP
+三苫　　晃幸	6.80	0.14	3.2	３		IP	３		IP	２		IP	２		IP	５		G3	１		G3	４		IP	２		IP	３	3	IP	１		G3
+寺嶋　　　雄	3.30	0.22	4.8	３	4	IP	３		IP	５		IP	６		IP	２		IP	５		IP	６		IP	６		IP	４		IP	５		IP
+松田　　祐季	5.50	0.14	4.0	３		IP	３		G3	２		IP	４		IP	１		IP	５		G1	６		G1	４		G1	６		G1	２		G1
+小澤　　　学	2.90	0.26	5.3	４		IP	４		IP	４		IP	６		IP	６	6	IP	５		IP	６		IP	５	6	IP	４		IP	３		IP
+市川　　瑚幸	1.30	0.23	5.1	５		IP	６		IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

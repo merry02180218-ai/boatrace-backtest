@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　日向	10.40	0.13	3.0	１		IP	１		IP	１		IP	１		IP	１		G1	１		SG	１		SG	２		G1	２		G1	１		G1
+竹田　　和哉	7.60	0.16	2.7	１		IP	３		IP	１		IP	１	1	G1	５		G1	３		IP	３		IP	２		IP	３		IP	１		IP
+山田　　理央	6.40	0.15	3.1	２		IP	３		G3	２		IP	３		IP	４		IP	２		IP	３		IP	４		IP	２		IP	４		IP
+石丸　　海渡	6.10	0.08	1.6	２		IP	６		G1	３	5	G1	Ｆ		G1	２		IP	３		IP	３	6	IP	２		IP	２		IP	２	5	IP
+西丸　侑太朗	6.50	0.14	3.3	１		IP	２	6	G1	３	6	G1	３		IP	５		IP	２		IP	３		G1	３		IP	４		IP	３		IP
+中岡　　健人	4.00	0.18	4.6	３		IP	１		IP	５		IP	６		IP	６		IP	４		IP	４		IP	４		IP	３		IP	５	5	IP

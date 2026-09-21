@@ -1,0 +1,8 @@
+data=
+1	0
+南野　　利騰	6.50	0.15	2.3	４		IP	３		IP	１		IP	５		IP	２		IP	１		IP	３		IP	１		IP	６		IP	２		IP
+木村　　浩士	4.70	0.20	4.0	６		IP	６		IP	１		IP	２		IP	１		IP	４		IP	４		IP	６		IP	４		IP	４		IP
+三角　　哲男	5.90	0.15	3.1	２	4	IP	２		IP	５		IP	２		IP	３		IP	３		IP	４		IP	５		IP	２		IP	３		IP
+富山　　弘幸	5.60	0.18	3.5	２		IP	５		IP	２		IP	３		IP	２		IP	３		IP	５		IP	４		IP	２		IP	４	3	IP
+丹下　　　将	6.10	0.11	2.0	４		IP	３		IP	１		IP	３		IP	４		IP	１		IP	３		IP	３		IP	２		IP	６		IP
+岡谷　　健吾	4.11	0.13	3.0	６		IP	転		IP	３		IP	３	5	IP	４		IP	３		IP	６		IP	４	4	IP	２		IP	６		IP

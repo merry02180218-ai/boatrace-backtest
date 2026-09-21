@@ -1,0 +1,8 @@
+data=
+1	0
+堀之内紀代子	7.50	0.16	3.8	３		G3	２		G3	１		G3	１		G3	１		G3	１		G2	１		IP	２		IP	妨		IP	５		IP
+落合　　直子	7.20	0.16	3.1	１		G3	１		G3	５		IP	４		IP	２		IP	１		G3	２		G3	４		IP	３		IP	１		IP
+山下　　友貴	5.80	0.17	3.6	２		G3	１		G3	３	4	IP	３		IP	２		IP	４		G3	５		G3	３	4	G3	５		IP	３		IP
+古賀　　千晶	3.80	0.15	2.1	５		G3	６		IP	６		IP	４		G3	４		G3	４		G3	４		IP	５		IP	２		G3	２		G3
+細川　　裕子	5.10	0.19	3.8	２		G3	４		G3	２		G3	３		IP	４	6	IP	５	4	G2	３		G2	５	6	IP	３		IP	６		IP
+福島　　陽子	2.50	0.21	5.1	５		G3	５		G3	４		IP	３		IP	６	5	IP	６		IP	５		G3	６		G3	５		IP	４		IP

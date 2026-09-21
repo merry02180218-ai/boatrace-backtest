@@ -1,0 +1,8 @@
+data=
+1	0
+桂林　　　寛	6.10	0.18	4.0	２		IP	３		IP	５		IP	２		IP	４		IP	２		IP	３		IP	２		IP	１		IP	６		IP
+大場　　恒季	6.60	0.13	2.2	４		IP	４		IP	２		IP	３		IP	１		IP	１		IP	２		IP	４	3	G2	６		IP	２		IP
+齋藤　　真之	4.30	0.14	2.3	４		IP	１		IP	５		IP	６		IP	６		IP	２		IP	４		IP	６		IP	５		IP	１		IP
+松田　大志郎	7.40	0.10	2.3	２		IP	１		IP	１		G1	Ｆ		G1	５		IP	２		IP	３		G1	３		G1	１		G1	１		IP
+山本　　浩輔	4.30	0.18	3.5	６	4	IP	４		IP	３		IP	４		IP	６		IP	６		IP	４		IP	２		IP	１		IP	４		IP
+野田　　亜湖	1.20	0.22	5.0	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		G3	６		G3	６		IP

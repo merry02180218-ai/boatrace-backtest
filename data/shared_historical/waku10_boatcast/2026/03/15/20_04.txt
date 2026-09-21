@@ -1,0 +1,8 @@
+data=
+1	0
+古田　　祐貴	6.00	0.20	2.9	４	2	G3	５		IP	２		IP	１		IP	２		IP	４		IP	６		G1	１		IP	４		IP	２		IP
+木場　　悠介	6.20	0.15	3.2	２		G3	２		IP	４		IP	２		IP	１		IP	３		IP	５		IP	２		IP	３		IP	５		IP
+山下　　流心	4.20	0.19	3.5	６	4	G3	６		IP	６		IP	３		IP	６		IP	２		IP	２		IP	１		IP	４		IP	５	2	IP
+原田　　秀弥	5.10	0.17	3.1	４		G3	２		G3	３		IP	２		IP	３		IP	４		IP	４		IP	３		IP	４		G3	６		G3
+向後　　龍一	5.00	0.18	3.0	５		G3	４		IP	６		IP	４		IP	１		IP	２		IP	３		IP	３		IP	６		IP	２		IP
+郷原　　章平	4.10	0.13	3.8	５		G3	４		IP	３		IP	転	5	IP	１		G1	４		IP	４	5	IP	５	5	IP	３		IP	５		IP

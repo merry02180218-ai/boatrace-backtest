@@ -1,0 +1,8 @@
+data=
+1	0
+中川　　りな	7.70	0.18	3.0	１		IP	３		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP	６		IP	２		IP
+池　　　千夏	2.80	0.14	3.1	３		IP	５		IP	５		G3	４		IP	４		IP	６		IP	６		IP	３		IP	６		IP	６		IP
+福山　恵里奈	4.30	0.14	2.5	４		IP	５	4	IP	４		IP	２		IP	１		G3	６		IP	５	4	IP	６		IP	１		G3	６		IP
+登　　みひ果	3.90	0.17	3.0	５		G2	４		IP	５		G3	６		IP	４	6	IP	４		G3	６		G1	３		G1	３		IP	３		IP
+前原　　　哉	2.90	0.26	5.5	４		IP	５		IP	３		IP	５		IP	６		IP	３		IP	４		IP	５		IP	６		IP	６		IP
+小畑　　楓夏	1.90	0.13	3.4	６		G3	５		IP	４		IP	６		IP	４		IP	６		IP	５		IP	６		IP	６		IP	５		IP

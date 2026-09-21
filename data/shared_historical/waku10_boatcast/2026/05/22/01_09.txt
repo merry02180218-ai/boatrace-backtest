@@ -1,0 +1,8 @@
+data=
+1	0
+滝沢　　　崚	3.90	0.23	4.5	５		IP	２		IP	２		IP	５		IP	６		IP	６	2	IP	２		IP	５		IP	６	3	IP	３		IP
+市橋　　卓士	4.50	0.14	2.8	４		IP	３		IP	４		IP	５	3	IP	６		IP	３		IP	２		IP	５		IP	２		IP	５		IP
+宮本　　夏樹	7.40	0.18	3.2	１		IP	２		IP	５		IP	１		IP	４		G3	３		G3	２		IP	４		IP	１		IP	１		IP
+小澤　　和也	3.30	0.14	2.9	４		IP	５		IP	４		IP	５		IP	５	5	IP	６		IP	５		IP	５		IP	２		IP	３		IP
+松本　　一毅	3.10	0.18	3.3	４		IP	４		IP	６		IP	６		IP	５		IP	３	4	IP	４		IP	６	6	IP	４		IP	４		G3
+丹下　　　将	3.00	0.15	3.4	５		IP	３		IP	４		IP	６		IP	５		IP	５		IP	５		IP	３		IP	６		IP	４		IP

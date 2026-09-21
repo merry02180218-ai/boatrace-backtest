@@ -1,0 +1,8 @@
+data=
+1	0
+柳生　　泰二	9.00	0.15	3.3	１		IP	１		G1	１		G1	１		G1	１		SG	４		SG	１		IP	２		IP	１		IP	６		IP
+大神　　康司	4.80	0.14	2.6	２		IP	３		IP	６		IP	３		IP	６		IP	５		IP	２		IP	２		IP	３		IP	５		IP
+佐々木　完太	7.44	0.10	2.0	３		IP	５		G1	２		G1	１		IP	エ		SG	４		SG	２		IP	２		G1	３		G1	２		G1
+小池　　公生	3.30	0.26	4.9	３		IP	５		IP	４		IP	５	5	IP	５		IP	６		IP	４		IP	２		IP	５		IP	５	3	IP
+森永　　　隆	5.10	0.18	4.7	６		IP	３		IP	３		IP	２		IP	２		IP	４		IP	３		IP	４		IP	４		IP	４		IP
+安河内　　健	3.00	0.21	4.4	４	5	IP	６		IP	５		G2	５		G2	３		IP	６		G1	４		IP	４		IP	５		IP	６		IP

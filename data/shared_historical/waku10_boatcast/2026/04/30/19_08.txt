@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　博昭	8.40	0.15	3.5	２		IP	１		IP	５		IP	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+赤峰　　和也	4.20	0.20	3.7	２		IP	５		IP	６		IP	５		IP	２		IP	２		IP	６		IP	３		IP	５		IP	４		IP
+胡本　　悟志	3.90	0.18	2.9	２		IP	５		IP	６		IP	４		IP	６		IP	２		IP	４		IP	５		IP	２		IP	６	4	IP
+谷村　　一哉	6.80	0.16	3.4	３		IP	２	5	IP	３		IP	４		IP	２		IP	２		IP	４		IP	２		IP	３		IP	１		IP
+上瀧　　絢也	4.10	0.16	2.5	５		IP	４		IP	３		IP	４		IP	５		IP	６		IP	３		IP	３	6	IP	３		IP	４		IP
+小畑　　楓夏	1.80	0.11	2.8	５		IP	６		IP	６		IP	５		IP	６	5	IP	４		IP	５		IP	５		IP	５		IP	６		IP

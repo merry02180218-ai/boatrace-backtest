@@ -1,0 +1,8 @@
+data=
+1	0
+服部　　幸男	8.70	0.15	3.4	１		IP	４		IP	１		IP	１		IP	４		IP	１		G1	１		IP	２		IP	１		IP	１		IP
+鎌倉　　　涼	7.40	0.13	3.0	４		IP	３		G2	１		G2	３		G1	４		G1	６		SG	３		SG	３		G3	１		G1	１		G1
+濱野谷　憲吾	6.70	0.15	2.8	３		G1	２		IP	３		IP	１		G1	３	2	G1	３		G1	６		G2	６		IP	２		IP	２		G1
+常住　　　蓮	7.10	0.16	3.2	５	2	IP	３		IP	１	3	IP	３		IP	２		IP	２		IP	３		IP	２		G1	２		G1	４		IP
+茅原　　悠紀	7.40	0.12	3.4	２		IP	４	4	G1	４		G1	４		G1	２		G1	３		SG	１		G1	５		G1	２		G1	１		G1
+山口　　　剛	5.70	0.18	4.6	６		G1	６		G1	２		IP	３		SG	２		G1	６		G1	３		G1	４		G1	５		G1	１		G1

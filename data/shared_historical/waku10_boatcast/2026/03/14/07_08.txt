@@ -1,0 +1,8 @@
+data=
+1	0
+清水　　沙樹	8.10	0.15	2.4	２		G1	１		G3	１		G3	４		G3	妨		IP	１		G3	１		IP	２		IP	１		IP	１		IP
+杉江　　浩明	3.70	0.22	4.6	５		IP	６		IP	４		IP	５		IP	４		IP	６		IP	６		IP	３		IP	２		IP	２		IP
+岡村　　　仁	6.60	0.14	3.0	５		G1	転		G1	２		G1	３		G1	３	4	IP	１		IP	４		IP	２		IP	３		IP	１		IP
+横田　　　茂	4.70	0.15	3.4	１		IP	５		IP	５		IP	４		IP	５		IP	１		IP	６		IP	５		IP	２		IP	３		IP
+伊藤　　誠二	5.00	0.12	2.9	３		IP	３		IP	２		IP	５	6	IP	４		IP	３		IP	４		IP	５		IP	２	4	IP	４		IP
+松下　　知幸	3.60	0.20	4.8	４		IP	２		IP	４		IP	３		IP	３		IP	６		IP	６		IP	６		IP	６		IP	４		IP

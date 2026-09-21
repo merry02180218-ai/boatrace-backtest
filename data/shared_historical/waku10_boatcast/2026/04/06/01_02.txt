@@ -1,0 +1,8 @@
+data=
+1	0
+井田　　涼介	1.50	0.17	3.4	５		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	５		IP						IP
+寺本　　重宣	6.10	0.15	2.6	４		IP	４		IP	１		G3	３		G3	３		IP	２		IP	６		IP	２		G3	４		G3	１		IP
+橋本　　久和	6.78	0.17	3.3	転	4	IP	１		IP	１		G3	３		IP	３		IP	４		IP	１		IP	３		IP	６		IP	２		IP
+山下　　和彦	5.00	0.13	3.2	３	5	IP	２		IP	６	6	IP	４		IP	３		IP	５		IP	５		IP	４		IP	２		IP	２		G1
+中田　　友也	2.80	0.20	4.8	３		IP	５		IP	５		IP	６		IP	４		IP	６		IP	６		IP	４		IP	６		IP	３		IP
+浜先　　真範	3.89	0.16	3.8	２		IP	転		IP	５		IP	６		G1	４		IP	３		IP	４		IP	６		G1	５		G1	４		IP

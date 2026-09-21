@@ -1,0 +1,8 @@
+data=
+1	0
+根岸　　真優	3.60	0.17	4.1	３		IP	２		IP	５		IP	６		IP	６		IP	１		IP	６		G3	５		IP	４		G3	６		IP
+山田　　晃大	6.50	0.13	2.4	５		IP	１		IP	４		IP	６	3	IP	１	3	IP	１		IP	３		IP	３		IP	４		IP	１		IP
+松田　　憲幸	6.80	0.16	4.0	２		IP	２		IP	２		IP	２		IP	２		IP	２		IP	５	4	IP	２		IP	４		IP	３		IP
+野中　　一平	4.70	0.11	2.0	４		IP	６		IP	４	3	IP	６		IP	５		IP	１		IP	４		IP	２	3	IP	６		G1	２		G1
+岡瀬　　正人	3.90	0.18	4.1	４		IP	４		IP	エ	4	IP	３		IP	４		IP	３		IP	４		IP	６		IP	４		IP	３		IP
+伊藤　　紘章	3.10	0.22	5.2	５		IP	６		IP	５		IP	５		IP	５		IP	６		IP	３		IP	６		IP	３		IP	２		IP

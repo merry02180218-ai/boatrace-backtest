@@ -1,0 +1,8 @@
+data=
+1	0
+樫葉　　新心	5.00	0.17	2.8	４		IP	３		G3	５		IP	１		IP	５		IP	４	2	IP	２		IP	４		IP	２		IP	５		IP
+小池　　哲也	7.00	0.18	4.5	４		IP	２		IP	３		IP	２		IP	１		IP	２		IP	２		IP	２		IP	３		IP	４		G3
+酒井　　陽祐	6.30	0.16	2.6	２		IP	２		IP	２		IP	４		IP	６		IP	３		IP	４		IP	２		IP	２		IP	２	6	IP
+三苫　　晃幸	6.10	0.14	3.3	１		IP	２		G3	４		G3	４		IP	３		IP	３	3	G3	４		G3	６		IP	１		IP	２		IP
+畑　　　竜生	5.60	0.16	3.9	４		IP	３		IP	３		IP	３		IP	４		IP	４		IP	３		IP	２		IP	２		IP	４		IP
+佐藤　　駿介	1.40	0.20	4.4	６	5	IP	５		IP	６		IP	６		IP	５	5	IP	５		IP	６	5	IP	５		IP	６		IP	６		IP

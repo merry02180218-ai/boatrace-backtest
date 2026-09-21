@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　龍治	8.20	0.17	2.5	１		IP	２		IP	１		IP	１		IP	４		IP	１		IP	２		IP	４		IP	２		IP	１		IP
+鰐部　太空海	6.30	0.16	2.8	１		IP	５		IP	４		IP	３		IP	３		IP	３		IP	１		IP	１		G1	欠		IP	３		IP
+濱野　　斗馬	7.20	0.11	2.0	１		IP	１		G2	３		G2	３		IP	２		IP	４		IP	４		G1	２		G1	４	4	IP	２		IP
+宮崎　　奏磨	1.60	0.25	4.3	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６	5	IP	４	5	IP
+廣瀬　　　凜	7.60	0.19	3.4	２		IP	１		IP	２		IP	１		IP	２		IP	２		IP	３		G2	５		G2	３		IP	２		G3
+木山　　大聖	2.00	0.20	3.3	６		IP	５		IP	６		IP	４		IP	Ｆ		IP	５		IP	５		IP	５		IP	４		IP	５		IP

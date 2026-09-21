@@ -1,0 +1,8 @@
+data=
+1	0
+平石　　和男	8.10	0.19	4.0	２		IP	１		IP	１		IP	６		IP	２		IP	２		IP	１		IP	１		IP	３		IP	１		IP
+中田　　元泰	4.80	0.17	4.0	６		IP	６	3	IP	５		IP	２		IP	１		IP	２		IP	６		IP	６		IP	２		IP	２		IP
+栗山　　繁洋	4.00	0.22	3.8	２	2	IP	４		IP	４		IP	６		IP	４		IP	５		IP	６	4	IP	１		IP	４	4	IP	５		IP
+都築　　正治	4.10	0.12	2.4	６	5	IP	４		IP	４		IP	３		IP	５		IP	６		IP	２		IP	６		IP	５		IP	１		IP
+渡邉　　　健	3.00	0.17	3.0	６		IP	５		IP	６		IP	６		G3	６	6	G3	２		IP	３		IP	４		IP	４	6	IP	５		IP
+吉田　　　光	3.30	0.23	4.4	３		IP	４		IP	６		IP	４		IP	６		IP	５	5	IP	３		IP	６		IP	５	5	IP	３		IP

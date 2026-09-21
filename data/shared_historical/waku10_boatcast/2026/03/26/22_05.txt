@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　順一	7.40	0.14	2.2	１		IP	２		IP	４		IP	３		IP	２		IP	４		IP	２		IP	１		IP	１		IP	３		IP
+福岡　　泉水	4.80	0.19	4.4	６		IP	３		G3	２		G3	３		IP	４		IP	１		IP	６		IP	４		IP	４		IP	４		IP
+西田　　　靖	3.20	0.15	3.7	４	2	IP	３	2	IP	４	2	IP	５	2	IP	５	2	IP	５	2	IP	６	2	IP	２	2	IP	６		IP	５	2	IP
+長岡　　良也	3.40	0.17	3.3	６		IP	６		IP	５		G1	４		IP	３		IP	５	3	IP	６		IP	５		IP	１		IP	４		IP
+山下　　友貴	4.00	0.20	3.5	３		IP	２		IP	３		IP	５		IP	６		IP	４		G3	４		G3	４		G3	６		IP	４		IP
+里岡　　右貴	4.80	0.11	3.2	３	4	IP	３		G3	４		G3	４		G3	１		IP	６		IP	６		G1	３		IP	４		G1	５		G1

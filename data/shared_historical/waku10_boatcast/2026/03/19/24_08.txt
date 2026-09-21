@@ -1,0 +1,8 @@
+data=
+1	0
+福嶋　　智之	4.30	0.19	3.3	６		IP	５		IP	１		IP	４	5	IP	６		IP	１		IP	５		IP	６		IP	５		IP	１		IP
+金山　　立樹	5.20	0.25	4.5	６		IP	５		IP	２		IP	１		IP	３		IP	２		IP	４		IP	５		IP	６		IP	１		IP
+田頭　　虎親	5.40	0.18	3.4	２		IP	１		IP	５		IP	４		IP	６		IP	３		IP	４		IP	５		IP	３		IP	１		IP
+畑　　　和宏	4.00	0.18	3.9	３		IP	１		IP	６		IP	５		IP	２		IP	５		IP	４		IP	５		IP	６	3	IP	４		IP
+菊池　　宏志	2.70	0.19	3.4	４	4	IP	６		G3	６		G3	６		IP	４		IP	５		IP	３		G3	３		IP	６		G3	６	6	G3
+岡本　　　大	3.60	0.18	4.2	５	5	IP	４		IP	４	5	IP	３		IP	５		IP	２		IP	６		IP	５		IP	６		IP	３		IP

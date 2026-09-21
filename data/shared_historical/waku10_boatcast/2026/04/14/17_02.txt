@@ -1,0 +1,8 @@
+data=
+1	0
+小山　　　勉	8.70	0.15	3.1	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP	２		IP	１		G1	２		IP	３		IP
+佐々木　翔斗	6.60	0.17	3.6	４		IP	１		IP	４		IP	６		G2	６		G2	１	3	IP	２	3	IP	１		IP	２		IP	２		IP
+西舘　　　健	5.30	0.12	1.9	４	4	IP	１		IP	５		IP	４		IP	１		IP	６		IP	３		IP	３		IP	５		IP	２		IP
+中島　　昂章	5.50	0.18	4.8	６		IP	５	5	IP	２	3	IP	３		IP	２		IP	２	3	IP	３	3	IP	５		IP	２		IP	３	3	IP
+仁科　さやか	3.00	0.22	4.1	２		IP	５		IP	３		IP	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	３		IP
+河村　　　了	6.40	0.18	3.1	３		IP	２		IP	４		IP	３		IP	３	5	IP	１	4	IP	３		IP	２		IP	３		IP	４		IP

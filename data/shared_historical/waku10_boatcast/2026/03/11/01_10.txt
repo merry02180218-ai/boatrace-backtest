@@ -1,0 +1,8 @@
+data=
+1	0
+三浦　　敬太	8.20	0.17	3.3	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP	エ		IP	１		IP	４	2	IP
+笠原　　　亮	7.30	0.15	2.5	２		IP	３		IP	２		IP	２		IP	２		IP	３		G1	２		G2	２		IP	４		IP	３		G3
+金子　　賢志	6.50	0.13	1.7	４		IP	５		IP	５		IP	３		G1	２		IP	１		IP	２		IP	２		IP	２		IP	２		IP
+武田　　光史	4.70	0.19	3.7	５		IP	４		IP	１		IP	６		IP	４		IP	４		IP	３		IP	５		G1	６		G1	１		IP
+小林　　基樹	4.10	0.20	3.8	４		IP	５	4	IP	４		IP	４		IP	６	4	IP	２	4	IP	３		IP	５	2	IP	４		IP	３		IP
+川上　　聡介	3.40	0.14	2.8	４		IP	６		IP	２		IP	５		IP	３		IP	５		G3	６		G3	５		IP	５		IP	３		IP

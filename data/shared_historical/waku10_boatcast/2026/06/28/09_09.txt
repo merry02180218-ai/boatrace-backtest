@@ -1,0 +1,8 @@
+data=
+1	0
+土屋　　太朗	6.20	0.20	4.1	２		IP	６		IP	２		IP	２		IP	６		IP	５		IP	１		IP	１		IP	１		G3	４		IP
+永田　　義紘	7.40	0.15	2.4	１		IP	１		IP	２		IP	１		IP	５		IP	３	3	IP	４		IP	２		IP	３		IP	１		IP
+坂井　　康嗣	3.60	0.18	3.4	５		IP	４		IP	６		IP	３		IP	４		IP	３		IP	４		IP	３		IP	６		IP	５		IP
+山口　　修路	2.80	0.25	5.1	４		IP	４		IP	６	5	G3	６	6	G3	３		IP	５		IP	５		IP	欠		G3	４		IP	４		IP
+大澤　　大夢	3.70	0.21	3.8	５	4	IP	２		IP	６		IP	６		IP	３		IP	６		IP	３		IP	５		IP	５		IP	２		IP
+里岡　　右貴	3.90	0.12	1.9	４		IP	３	5	IP	３		IP	４		IP	３		IP	６		IP	３		IP	５		IP	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+小芦　るり華	10.20	0.17	2.5	１		IP	１		G1	１		G1	１		IP	１		IP	１		IP	１		IP	１		G1	２		G3	１		G3
+森永　　　淳	7.60	0.12	2.5	１		IP	１	3	IP	４		IP	５		IP	１		IP	１		IP	２		IP	２		IP	３		IP	２		IP
+安河内鈴之介	5.00	0.12	2.1	６		IP	５		IP	１		IP	５		G1	妨	2	IP	１		IP	４		IP	１		IP	４		IP	４		IP
+笹木　　香吾	4.89	0.12	3.0	沈		IP	６		IP	６		IP	４		IP	２		IP	３		IP	２		IP	２		IP	５		G3	３		G3
+野中　　一平	4.70	0.11	2.0	５		G1	３		G1	４		IP	４		IP	５		G1	３	4	G1	１		IP	５		IP	３		IP	６		IP
+湯川　　浩司	5.70	0.14	3.5	３		IP	１	5	IP	３		G1	５	5	G1	３		G1	４		G1	４		G1	５		IP	３		IP	３	5	IP

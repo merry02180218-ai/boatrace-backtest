@@ -1,0 +1,8 @@
+data=
+1	0
+小池　　礼乃	7.80	0.12	2.3	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP	２		IP	２		IP	４		IP	４		IP
+村松　　修二	6.40	0.14	2.9	３	3	IP	１		IP	２	4	IP	２		IP	３		IP	５		IP	１		IP	３		IP	２		IP	Ｆ		IP
+屋良　　龍紀	5.60	0.15	2.6	１		IP	５		IP	６		IP	４		IP	４		IP	２		IP	６		IP	２		IP	２		IP	１		IP
+宮本　　夏樹	6.60	0.14	3.5	１		IP	２		IP	２		G3	２		G3	５	5	IP	２		IP	５		IP	３		IP	３		IP	２	5	IP
+森永　　　淳	4.60	0.13	2.8	５		IP	４		G1	２		IP	５	4	IP	５		IP	５		IP	２		IP	５	6	G2	２		IP	３		IP
+野田部　宏子	3.90	0.11	2.2	４		IP	５		IP	３		IP	１		IP	４		IP	４		IP	５		IP	５		IP	６		IP	４		IP

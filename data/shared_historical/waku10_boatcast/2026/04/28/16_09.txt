@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　大輔	7.20	0.18	3.6	２		IP	１		IP	４		G3	５		IP	１		IP	３		IP	１		IP	３		IP	３		IP	１		IP
+星　　　栄爾	4.50	0.15	2.6	２		IP	２		IP	３		G3	６		IP	５		IP	３		IP	４		IP	６		IP	２		IP	６		IP
+佐藤　　太亮	4.40	0.16	3.2	１		IP	４		IP	２		IP	６		IP	５		IP	６		IP	３		IP	５	2	IP	２		IP	５		IP
+小松　　卓司	5.50	0.21	3.7	６		IP	５		IP	３		IP	３		IP	３		IP	３		IP	３		IP	３	5	IP	１		IP	３		IP
+成貞　　琳平	3.50	0.20	4.3	３		IP	６		IP	５		IP	５		IP	５	6	IP	２	4	IP	３		IP	５		IP	４	4	IP	５		IP
+小林　　文彦	4.40	0.23	4.7	５	5	IP	５		IP	３	5	IP	３		IP	３		IP	５		IP	４		IP	４		IP	３		IP	３		IP

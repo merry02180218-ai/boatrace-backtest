@@ -1,0 +1,8 @@
+data=
+1	0
+松瀬　　弘美	6.70	0.18	3.8	６		IP	２		IP	５		IP	２		IP	１		IP	２		IP	１		IP	５		IP	１		IP	２		IP
+山本　　梨菜	6.00	0.13	3.6	３		IP	４		IP	１		IP	５	3	IP	６	3	G1	１		G3	４		G3	２		G3	２		IP	３		G3
+中谷　　朋子	5.40	0.18	3.9	６		IP	３		IP	１		IP	５		G3	１		G3	２		IP	３		IP	４		IP	６		IP	３		IP
+片岡　　恵里	4.50	0.16	4.8	５		G3	５		G3	１		G3	４		G1	６		G1	５		IP	５		IP	４		G3	３		IP	１		G3
+三嶌　こころ	2.30	0.26	5.0	６		IP	６		IP	５	6	IP	５	6	IP	３		G3	５	6	IP	６		IP	５		G3	４		G3	５	4	IP
+中澤　　宏奈	2.00	0.22	4.6	５		IP	４		IP	６		G3	６		IP	５		IP	４		IP	５		IP	６		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+安井　　瑞紀	5.60	0.20	4.5	６		IP	１		IP	３		IP	５		G3	３		G3	３		IP	１		IP	６		IP	１		IP	４		G3
+中北　　　涼	4.50	0.16	3.7	５		IP	３		IP	２		IP	３		G3	２		G3	５	3	IP	６		IP	４		IP	４		G3	４		IP
+渡邉　真奈美	6.10	0.12	2.4	４		IP	２		IP	６		IP	５		G3	１		G3	４		G3	１		IP	１		IP	２		IP	４		IP
+矢野　真梨菜	3.40	0.18	3.0	５		IP	６		IP	５		IP	５		IP	６		IP	５		IP	４		G3	３		G3	１		G3	４		G3
+加藤　　　綾	3.10	0.20	4.1	３		IP	４		IP	５		IP	４		IP	落		IP	５		IP	５		IP	４		IP	６		IP	３		IP
+西村　　　歩	3.40	0.20	4.5	２		IP	３		IP	６		G3	５		IP	５		G3	４		IP	６		IP	５		IP	５		IP	３		IP

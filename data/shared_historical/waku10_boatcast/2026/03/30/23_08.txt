@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　友和	7.90	0.14	1.8	１		IP	２		IP	４		IP	１		IP	２		IP	１		IP	６		IP	２		IP	１		IP	１		IP
+片岡　　大地	5.20	0.13	2.8	５		IP	５		IP	３		IP	２		IP	２		IP	３		IP	４		IP	２		IP	４		IP	５		IP
+多羅尾　達之	5.30	0.15	2.3	６		IP	２		IP	５		IP	２		IP	１		IP	６		IP	２	2	IP	６		IP	２	2	IP	３		IP
+森口　　和紀	2.70	0.22	3.8	６		IP	４		IP	４		IP	３		IP	転	3	IP	５		IP	５		IP	３		IP	５	6	IP	Ｆ		IP
+新田　　泰章	4.30	0.14	3.4	４	4	IP	４		IP	３		IP	３		IP	６		G1	３		IP	４		IP	４		IP	４		IP	６		G3
+堤　　　　昇	2.60	0.16	2.9	６	5	IP	４	5	IP	４	5	IP	５		IP	５	2	IP	４	5	IP	５		IP	６		IP	４	5	IP	５	4	IP

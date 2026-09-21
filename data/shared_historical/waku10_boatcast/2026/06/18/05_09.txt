@@ -1,0 +1,8 @@
+data=
+1	0
+小原　　聡将	8.30	0.16	3.4	３		G2	４		IP	１		IP	１		IP	１		IP	１		IP	４		IP	２		IP	２		IP	１		IP
+大澤　　風葵	7.30	0.15	3.2	６		IP	１		IP	２		IP	１		IP	２		IP	２		IP	４		IP	２		IP	１	3	IP	３		IP
+川崎　　智稔	6.00	0.13	3.4	２		IP	３		IP	４		IP	２		IP	５		G3	４		IP	１		IP	２		IP	４		IP	３		IP
+安藤　　瑠希	2.83	0.16	3.5	５		IP	３		IP	５	6	IP	４	5	IP	５	6	IP	６	6	IP												IP
+渥美　　卓郎	3.10	0.18	3.7	５		IP	４	4	IP	５		IP	６		IP	５		IP	４		IP	５		IP	１		IP	５	6	IP	５		IP
+藤原　啓史朗	5.90	0.11	2.4	３		G1	５		G2	３		IP	６		IP	３		IP	３		IP	３		IP	１		IP	６		G1	１		SG

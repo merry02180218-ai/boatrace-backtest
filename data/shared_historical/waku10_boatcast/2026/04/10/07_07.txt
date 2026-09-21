@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　高史	7.10	0.14	3.5	２		IP	４		IP	４		IP	３		IP	６		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+鈴木　　雅希	4.50	0.18	3.9	４		IP	２		IP	１		IP	５		IP	２		IP	５	3	IP	６		IP	５		IP	３		IP	５		IP
+益田　　啓司	6.60	0.10	2.5	２		IP	２		IP	６		IP	３		IP	２		IP	４		IP	２		IP	１		IP	４		IP	３		IP
+藤田　　靖弘	4.30	0.16	3.4	６		IP	１		IP	２		IP	３		IP	２		G3	４		IP	５		IP	５	6	IP	６		IP	６		IP
+村松　　栄太	3.40	0.22	4.6	４		IP	５		IP	５		IP	２		IP	５		IP	４		IP	５		IP	５		IP	５		IP	３		IP
+諏訪　　玲奈	1.20	0.20	4.6	６		IP	６		IP	６	5	IP	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP

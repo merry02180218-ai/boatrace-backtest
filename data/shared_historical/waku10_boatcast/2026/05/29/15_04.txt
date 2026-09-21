@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　　航	6.40	0.17	3.5	２		IP	２		IP	１		G3	１		IP	５		IP	４		IP	５		IP	１		IP	４		IP	３		IP
+田中　　京介	6.80	0.13	2.8	３		IP	１		IP	２		IP	２		IP	２		IP	２		IP	４		IP	４		IP	２		IP	４		IP
+夏山　　亮平	6.40	0.13	2.2	３		IP	３		IP	２		IP	５		IP	２		G3	２		IP	２		IP	３		IP	１		IP	５	4	IP
+吉田　慎二郎	7.00	0.12	2.2	３		G3	２		IP	１	3	IP	６	5	IP	３		IP	１		IP	２		IP	２		IP	１		IP	６		IP
+大江　　　純	3.70	0.14	3.6	２		IP	３		IP	５		IP	４		IP	４		IP	５		IP	５		IP	６	6	G3	４		G3	４	4	G3
+石川　　真二	5.80	0.13	3.5	２	2	G3	５	2	G3	２	2	IP	５	2	IP	４	2	IP	２	2	IP	２	2	IP	３	2	IP	１	2	IP	６	3	G1

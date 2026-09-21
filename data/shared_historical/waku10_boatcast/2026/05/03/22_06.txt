@@ -1,0 +1,8 @@
+data=
+1	0
+植田　　太一	7.90	0.14	3.4	１		IP	５		IP	１		IP	６		IP	１		G3	２		G3	１		G3	１		IP	１		IP	２		IP
+井上　　未都	7.50	0.12	2.8	５		IP	３		IP	２		IP	２		IP	２		IP	２		IP	１		IP	３		G1	１		G3	２		IP
+山本　　幸也	3.11	0.15	2.2	２		IP	転		IP	３		IP	６		IP	６		IP	５	4	IP	５		IP	６		IP	６		IP	３		IP
+宮脇　　遼太	7.30	0.16	2.8	１		IP	５		IP	４	5	IP	２		IP	１		IP	４		IP	１		IP	５		IP	１		IP	１		IP
+星田　　夢結	2.50	0.22	5.1	４	6	IP	６	6	IP	５	6	IP	４	6	IP	６	6	IP	６	6	IP	４		IP	６	6	IP	３	6	IP	６	6	IP
+仲谷　　颯仁	4.89	0.16	2.9	１	5	IP	４		G1	３		IP	４		SG	５		G1	６		G1	４		G1	５		G1	転		IP	４	5	IP

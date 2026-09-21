@@ -1,0 +1,8 @@
+data=
+1	0
+荒井　　輝年	6.80	0.13	3.0	３		IP	転		IP	１		IP	１		IP	１		IP	４		IP	３		IP	２		IP	４		IP	１		IP
+北中　　元樹	5.20	0.19	4.4	４		IP	２		IP	４		IP	６		IP	６		IP	２		IP	２		IP	２		IP	２		IP	５		IP
+蜂須　　瑞生	6.40	0.15	2.6	３		IP	４		IP	１		IP	２		G3	４		IP	３		IP	３		IP	２		IP	３		IP	３		IP
+芦澤　　　望	4.20	0.21	3.4	３		IP	６	6	IP	６		IP	６		IP	４		IP	４		IP	３		IP	６		IP	２		IP	１		IP
+中村　　　尊	5.10	0.15	3.3	６		G1	４		G1	５		G1	４		IP	２		IP	２		IP	６		IP	４		IP	２		IP	２	6	IP
+山崎　　善庸	3.30	0.27	5.4	６		IP	４		IP	６		IP	５		IP	６		IP	５		IP	２	5	IP	４		IP	４		IP	３		IP

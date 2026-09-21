@@ -1,0 +1,8 @@
+data=
+1	0
+瓜生　　正義	7.70	0.15	3.3	２		G1	１		G1	１		SG	２		SG	６		G1	５		G1	１		IP	５		IP	４		G1	１		G1
+佐々木　完太	6.22	0.16	4.3	３		G1	１		IP	２		G1	４		IP	６		IP	４		IP	２		IP	１		G1	６	3	G1	落		IP
+今泉　　友吾	6.90	0.11	2.3	１		IP	５		IP	５		IP	４		IP	２		IP	２		IP	２		G1	２		G1	３		G1	１		IP
+吉田　　裕平	6.10	0.10	2.3	４		SG	３		G1	６		G1	１		IP	４		IP	２		IP	１		G1	５		G1	４		G1	４		G1
+守屋　　美穂	6.00	0.18	3.9	６		SG	１		IP	２		IP	２		IP	１	4	IP	３		G3	４		G3	５		G1	３		IP	５		IP
+西山　　貴浩	6.20	0.14	3.8	６		SG	４		G1	４		G1	２		IP	３	4	G1	５		G1	２		SG	３		G1	４		G1	２	4	G1

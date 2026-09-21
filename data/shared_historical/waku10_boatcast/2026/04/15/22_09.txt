@@ -1,0 +1,8 @@
+data=
+1	0
+茅原　　悠紀	10.10	0.08	2.3	１		G1	１		G1	１		G1	１		SG	１		SG	１		G1	１		G1	１		G1	１		G1	Ｆ		G1
+新田　　泰章	7.90	0.16	3.4	１		G1	３		IP	２		IP	２		IP	１		IP	２		IP	１		IP	４		IP	４		G1	２		G1
+北野　　輝季	7.22	0.12	2.5	転		G1	５		G1	１		IP	２		IP	５		G1	２		G1	５		G1	２		G1	１		IP	１		IP
+新開　　　航	5.60	0.15	2.8	２		G1	６		G1	６		G2	３		G2	転		IP	２		G1	３	5	G1	３		G1	３		IP	４		G1
+丸野　　一樹	5.90	0.14	2.9	３		G1	５		SG	４		SG	２	4	IP	５		G1	５		G1	２		G1	６		G1	３		G1	１		IP
+有賀　　達也	4.60	0.16	3.3	４		G1	４		IP	妨		IP	２		IP	４	5	IP	４		IP	４		IP	４		IP	４		G1	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　大騎	6.10	0.17	3.6	１		IP	１		IP	４		IP	６		IP	２		IP	５		IP	５		IP	１		G3	４		IP	１		IP
+佐々木　和伸	4.10	0.16	3.8	４		IP	４		IP	６		G1	３		IP	４		IP	５		IP	５		IP	６	3	IP	２		IP	２		IP
+西村　　豪洋	3.90	0.16	4.0	５		IP	６		IP	５		IP	２		IP	３		IP	５		IP	５		IP	５		IP	２		IP	３		IP
+新田　　泰章	6.30	0.17	3.5	６		IP	４		IP	４		IP	３		IP	２		IP	１		IP	２		IP	４		IP	２		IP	３		G1
+奈須　　啓太	5.70	0.13	2.6	４		IP	３		IP	２		IP	３		IP	４		IP	３		G2	６		G2	４	3	IP	１		IP	３		G3
+幸野　　史明	2.60	0.14	3.1	５		IP	３		IP	５		IP	４		IP	６		IP	６		IP	３		IP	６		IP	５		IP	６		IP

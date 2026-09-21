@@ -1,0 +1,8 @@
+data=
+1	0
+池田　　雄一	7.40	0.22	3.5	３		IP	１		IP	１		IP	１		IP	１		IP	６		IP	５		G1	２		IP	２		IP	２		IP
+下出　　卓矢	5.00	0.13	2.0	５		IP	１		IP	欠		IP	４		IP	２		IP	５		IP	２		IP	６		G2	３		IP	６		IP
+森野　　正弘	6.20	0.14	2.5	４		IP	１		IP	６		IP	１	2	IP	５		IP	４	4	IP	２		IP	３		G1	２		G1	３		G2
+西岡　　蒼志	4.20	0.13	2.2	１		IP	６		IP	５		IP	５	6	IP	２		IP	３		IP	４		IP	５		IP	３		IP	６	6	IP
+佐藤　　世那	2.20	0.17	4.0	６		IP	５		IP	５	6	IP	４		IP	５		IP	３		IP	６		IP	５		IP	６		IP	６		IP
+秋山　　広一	4.40	0.21	4.5	４	5	IP	４		IP	４		IP	２		IP	６		G1	４		G1	６		IP	５		IP	２		IP	４		IP

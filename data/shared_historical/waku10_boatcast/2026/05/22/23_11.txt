@@ -1,0 +1,8 @@
+data=
+1	0
+永田　　秀二	7.20	0.15	2.5	４		G2	１		IP	１		IP	１		IP	１		IP	３		IP	６		IP	２		IP	３		IP	３		IP
+樋口　　　亮	5.20	0.19	3.6	５		IP	３		IP	４		IP	１		IP	１		IP	３	3	IP	５		IP	４		IP	５		IP	３		IP
+櫻本　あゆみ	5.30	0.14	2.9	１		IP	２		G3	３		IP	４		IP	３		IP	６		IP	３		IP	２		IP	５		IP	５		IP
+山田　　亮太	5.00	0.12	2.2	３		G2	４		G2	３		IP	４		IP	３	5	G3	３	5	G3	４		G3	３		IP	４		IP	５		IP
+富永　　大一	5.50	0.18	4.6	５		IP	２		IP	３		IP	３		IP	２		IP	２		IP	２		IP	６		IP	５		IP	３		IP
+向井　　美鈴	2.50	0.20	4.7	３		IP	５		IP	４		IP	６		IP	６		IP	６		IP	４		IP	５		G1	６		IP	５		IP

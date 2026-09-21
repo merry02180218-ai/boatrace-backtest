@@ -1,0 +1,8 @@
+data=
+1	0
+石渡　翔一郎	8.40	0.13	2.2	２		IP	１		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	５		IP	２		IP
+森清　　友翔	4.80	0.15	3.6	２		IP	４		IP	４		IP	２		IP	６		IP	１		IP	４		IP	４		IP	４		IP	６		IP
+大森　　　翼	5.20	0.19	3.9	３	2	IP	２		IP	４		IP	５		IP	３		IP	４		IP	５		IP	３		IP	１		IP	４		IP
+上岡　　巧汰	1.50	0.20	4.9	６	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６		IP	５	5	IP	４	6	IP	６	6	IP	６	6	IP
+飛田　　江己	5.60	0.14	3.0	６		G2	２		G2	２		IP	１		IP	１		IP	３		IP	３	4	IP	５		IP	６		IP	６	4	IP
+堀本　　翔太	2.60	0.15	2.7	４		IP	５		IP	６		IP	４		IP	５		IP	４		IP	５		IP	５		IP	４		IP	６		IP

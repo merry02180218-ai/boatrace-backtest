@@ -1,0 +1,8 @@
+data=
+1	0
+竹下　　大樹	10.30	0.13	1.5	１		IP	１		IP	１		IP	１		G3	１		G3	１		G1	１		G1	１		G1	１		IP	１		IP
+岸本　　　隆	6.60	0.17	3.1	４		IP	３		IP	２		IP	２		IP	１		IP	２		IP	３		IP	３		IP	５		IP	２		IP
+山崎　　聖司	2.60	0.17	3.1	６		IP	３		IP	３		IP	６		IP	５		IP	５		IP	６		IP	６		G3	５		IP	４	4	IP
+加藤　　高史	3.90	0.19	4.1	３		IP	４		IP	５		IP	３		IP	４		IP	４		IP	４		IP	４		IP	４		IP	６		IP
+寺本　　重宣	6.60	0.15	3.5	３		IP	２		G3	５		G3	４		IP	２		IP	３		G3	２		G3	４		IP	１		IP	２		IP
+田上　　　凜	4.60	0.18	2.6	３		IP	６		IP	２		G3	２		G3	５		IP	２		IP	５		IP	４		IP	６		IP	３		IP

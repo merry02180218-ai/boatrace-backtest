@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　拓矢	8.50	0.19	4.1	１		G2	１		IP	１		IP	１		IP	３		IP	１		G1	２		G1	２		IP	Ｆ		IP	１		IP
+竹井　　貴史	8.50	0.19	4.0	４		G2	１		IP	４		IP	２		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP
+渡邉　　優美	5.00	0.17	3.5	１		G2	５		G2	４		G3	３		G3	４		G1	４		IP	２		IP	６		SG	６		SG	６		IP
+長田　　頼宗	5.40	0.16	3.9	３		G2	２		G2	５		G2	２		IP	５		G1	３		G1	２		IP	６		G1	４		G1	６		G1
+上田　　龍星	6.20	0.14	3.1	５		G2	１	3	IP	３		IP	２		IP	転	2	IP	３		G1	４		G1	１	4	SG	５		IP	２		G1
+大峯　　　豊	3.80	0.15	2.7	６		G2	４		G3	１	4	G3	６		G3	６	5	IP	６		IP	３		IP	５		G3	３		G1	６		G1

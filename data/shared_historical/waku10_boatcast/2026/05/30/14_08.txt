@@ -1,0 +1,8 @@
+data=
+1	0
+渡辺　　　崇	8.00	0.15	2.9	１		IP	１		IP	２		IP	１		IP	４		IP	４		IP	２		G3	３		G3	１		IP	１		IP
+宮本　　夏樹	5.10	0.16	3.7	５		IP	４		IP	５		IP	２		IP	３		IP	３		G3	６		G3	１		IP	１		IP	５		IP
+高田　　　明	5.80	0.18	4.0	３		G2	３		IP	２		IP	３		G3	４		G3	４		IP	５		IP	５		G1	２		IP	１		IP
+牟田　　奨太	3.10	0.16	2.7	６	5	IP	３		IP	５		IP	６		IP	２		IP	３		IP	６		IP	５		IP	５		IP	５		IP
+中田　　元泰	4.30	0.17	4.0	１		IP	５		IP	６		IP	６		IP	２		IP	６		IP	５	6	IP	５		IP	２		IP	２		IP
+野村　　羽玖	1.44	0.18	4.2	５		IP	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	５		IP			IP

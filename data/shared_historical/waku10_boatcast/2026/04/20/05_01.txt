@@ -1,0 +1,8 @@
+data=
+1	0
+前田　　光昭	5.20	0.24	4.9	６		IP	５		IP	２		IP	３		IP	６	2	IP	１		G3	５	2	IP	２		G3	３		IP	２		IP
+吉田　　和仁	5.00	0.17	3.4	６		IP	４		IP	４		IP	５		IP	転		IP	３		IP	５		IP	１		IP	２		IP	２		IP
+平野　　和明	7.20	0.16	3.2	２		IP	４		IP	１		IP	２		IP	２		IP	１		IP	３		IP	２		IP	４		IP	３		IP
+鈴木　　　猛	4.80	0.18	3.2	１		IP	５		IP	４		IP	５		IP	５		IP	５		IP	４		IP	２		IP	１		IP	４		IP
+坪内　　　実	3.30	0.18	4.0	２		IP	５		IP	３		IP	４		IP	４		IP	５		IP	６		IP	６		IP	６		IP	４		IP
+寺本　　昇平	4.10	0.16	3.2	６		IP	３		IP	２		IP	５		IP	２	5	IP	５		IP	５		IP	５		IP	２		IP	５		IP

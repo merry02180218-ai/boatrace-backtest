@@ -1,0 +1,8 @@
+data=
+1	0
+花田　　和明	9.80	0.13	2.3	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+本吉　　正樹	3.40	0.20	3.9	５		IP	６		IP	５		IP	３		IP	３		IP	５		IP	６		IP	４		IP	２		IP	５		IP
+吉武　　真也	4.67	0.16	2.7	５		IP	４		IP	４		IP	４		IP	１		IP	４		IP	３		IP	転	4	IP	３		IP	５		IP
+坪井　　爽佑	4.80	0.19	4.1	４		IP	６		IP	６		IP	３		IP	２		IP	５		IP	３		IP	１		IP	３		IP	４		IP
+中島　　　航	4.00	0.25	5.1	６		IP	３		IP	５		G3	２		IP	２	6	IP	４	6	IP	６		IP	４		IP	５		IP	４		IP
+宮崎　心之介	3.90	0.20	3.7	２		IP	６		IP	５		IP	３		IP	２	5	IP	２		IP	６		IP	５		IP	６		IP	５		IP

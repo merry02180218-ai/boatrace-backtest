@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　　航	9.70	0.11	2.0	１		IP	１		IP	１		IP	２		G2	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+香川　　陽太	3.10	0.18	4.4	５		IP	２		IP	５	3	IP	６		IP	５		IP	４		IP	６		IP	１		IP	６		IP	Ｆ	3	IP
+中野　　希一	6.30	0.13	2.9	３		IP	３		IP	１		IP	２		IP	５		IP	３		IP	１	1	IP	４		IP	２		G1	６		G1
+石井　　伸長	5.90	0.14	2.0	１		IP	６		IP	４	5	IP	１		IP	３		IP	２		IP	５		IP	５		IP	２	5	IP	２	5	IP
+小林　　孝彰	4.30	0.18	4.3	５		IP	１		IP	６	6	IP	５		IP	３	6	IP	３		IP	６		IP	２		IP	６		IP	４		IP
+鈴木　　唯央	4.20	0.15	3.5	４	5	IP	６		IP	２		IP	３		IP	６		IP	３		IP	６	5	IP	３		IP	２		IP	６		IP

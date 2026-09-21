@@ -1,0 +1,8 @@
+data=
+1	0
+深川　麻奈美	6.50	0.18	4.0	４		IP	３		IP	１		IP	１		IP	２		IP	３		IP	５		G2	１		IP	５		IP	３		IP
+吉田　　和仁	4.20	0.15	3.4	２		IP	３		IP	４		IP	５		IP	１		IP	５		IP	６		IP	６		IP	４		IP	４		IP
+河野　　　大	6.20	0.13	2.7	１		IP	１		IP	３		IP	４		IP	１		IP	４		IP	１		IP	５		IP	５		IP	４		IP
+鈴木　　峻佑	5.80	0.14	2.5	５		IP	１		IP	１	5	IP	５		IP	５		IP	４		IP	１		IP	１		IP	４	5	IP	４		IP
+濱崎　　　誠	4.30	0.23	3.5	６		IP	２		IP	５		IP	１		G3	６		IP	３		IP	３		IP	６		IP	５		IP	３		IP
+四宮　　与寛	4.60	0.12	3.1	４		IP	２		IP	６		IP	５		IP	４		IP	３		IP	３		IP	６		IP	２		IP	３		IP

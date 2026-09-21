@@ -1,0 +1,8 @@
+data=
+1	0
+北川　　太一	7.20	0.18	2.0	１		IP	Ｆ		G3	４		G3	３		IP	１		IP	３		IP	１		IP	１		IP	２		IP	２		IP
+佐藤　　世那	5.40	0.16	3.3	１		IP	５		IP	４		IP	６		IP	６		IP	３		IP	３		IP	１		IP	３		IP	２		IP
+牧　　　宏次	6.40	0.15	2.2	３		IP	３		IP	２		G3	２		IP	４		IP	４		IP	４		IP	２		IP	２		IP	２		IP
+秋山　　広一	5.70	0.20	3.8	２		IP	６		IP	５		IP	３		IP	１		IP	２		G1	１		G1	４		IP	３		IP	Ｆ		IP
+浅井　　　翼	2.60	0.20	4.9	６	6	IP	６	6	IP	４		IP	５		IP	６	6	IP	６		IP	５		IP	４		IP	４		IP	３		IP
+宮本　　琉正	2.20	0.14	3.1	４		IP	３		IP	Ｆ		IP	５		IP	５		IP	６		IP	６		IP	５		IP	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+峰　　　竜太	10.40	0.09	2.8	４		IP	１		IP	１		IP	１		IP	２	2	G1	１		G1	１		G1	１		SG	１		SG	１		SG
+桑原　　　悠	7.30	0.12	2.6	１		IP	２		IP	２		IP	２		IP	１		IP	６		IP	１		IP	４		IP	１		IP	６		IP
+前田　　将太	5.80	0.16	4.1	４		IP	３		IP	３	5	IP	５		IP	４		IP	６		G2	２		G1	１		IP	２		IP	４		G1
+深谷　　知博	6.50	0.12	1.8	１		IP	Ｆ		G1	２		G1	３		G1	１		IP	４		G1	３		G1	４		G1	３		G1	４		G1
+関　　　浩哉	6.80	0.18	3.5	２		IP	３		G1	４	6	G1	５		G1	４		SG	１		G1	６		G1	１		IP	２	4	IP	２		IP
+稲田　　浩二	4.50	0.12	3.5	４		IP	６		IP	３		G3	５		G3	６		G1	２		IP	４		G1	５		G1	３		G1	３		G1

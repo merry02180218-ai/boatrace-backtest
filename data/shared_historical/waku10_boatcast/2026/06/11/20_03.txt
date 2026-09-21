@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　浩哉	7.30	0.11	2.0	２		IP	３		IP	３		IP	６		G3	２		IP	１		IP	３		IP	１		IP	１		IP	２		IP
+今井　　貴士	6.60	0.15	3.4	４		IP	１		IP	１		IP	６		IP	２		IP	２		IP	２		IP	４		IP	３		G1	４		G3
+多田　　有佑	3.70	0.24	3.9	５		IP	２		IP	５		IP	４	2	IP	４		IP	５		IP	５	4	IP	２		IP	４		IP	６		IP
+赤池　　修平	3.30	0.14	2.8	６		IP	５		IP	１		IP	６	5	IP	６		IP	２		IP	５	5	IP	４		IP	５	6	IP	５		IP
+三浦　洋次朗	5.50	0.14	3.3	１		IP	３		G2	６		G2	２		IP	６		IP	４	4	IP	４		IP	６		IP	３		IP	１	4	IP
+松田　　憲幸	1.40	0.25	5.0	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP

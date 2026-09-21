@@ -1,0 +1,8 @@
+data=
+1	0
+浮田　　圭浩	8.00	0.16	2.6	Ｆ		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP	４		IP	１		IP	１		G3
+永井　　彪也	5.80	0.14	3.0	２		G1	６		G1	２		G1	２		G1	６		G1	１		G2	６		G2	３		IP	６		IP	３		IP
+坂井　　康嗣	1.90	0.16	4.2	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	５		IP	３		IP
+黒崎　　竜也	4.44	0.15	2.8	４		IP	２		IP	１		IP	欠		IP	４		IP	５		IP	５		IP	３		IP	４		IP	転		G3
+安東　　幸治	4.11	0.18	3.7	５		IP	６		IP	３	4	IP	４		IP	３		IP	４		IP	４		IP	エ		IP	２		IP	５		IP
+池田　　剛規	3.30	0.15	3.5	５		IP	転		IP	５	5	IP	３		IP	４		IP	５		IP	６		IP	２		IP	３		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+嶋田　　有里	4.00	0.17	3.1	１		IP	５		IP	５		IP	１		IP	５	2	IP	転		IP	５		IP	転		G3	４		IP	２		IP
+樋口　由加里	6.60	0.13	2.4	２		IP	３		IP	３		G1	２		IP	３		G3	３		G3	２		G3	６		G3	２		IP	２		IP
+池田　　紫乃	4.60	0.21	3.7	６		G3	３		G3	５		IP	２		IP	５		IP	３		G3	１		G3	４		IP	３		IP	６		IP
+真子　奈津実	3.10	0.14	2.7	５		IP	６		IP	３		IP	３		IP	６		IP	５		IP	５		IP	３		IP	６	3	IP	４		IP
+原村　　百那	1.90	0.20	3.5	６		IP	５		IP	６		IP	６	6	IP	６	6	IP	６		IP	５		IP	５		IP	３		G3	５		G3
+吉田　　彩乃	2.60	0.20	4.5	３		IP	４		IP	６		IP	５		G3	４		IP	４		IP	６		IP	６		IP	５		IP	６		G3

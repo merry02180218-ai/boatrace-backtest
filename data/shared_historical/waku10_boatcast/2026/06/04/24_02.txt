@@ -1,0 +1,8 @@
+data=
+1	0
+渡邊　　裕貴	7.44	0.15	2.6	１		IP	１		IP	５		IP	４		IP	１		IP	１		IP	欠		IP	１		IP	１		IP	６		IP
+向所　　浩二	5.10	0.16	2.6	５	3	IP	３		IP	１		IP	４		IP	３		IP	４		IP	３		IP	１		IP	６		IP	５		IP
+伊藤　　雄二	1.90	0.16	2.3	４		IP	６		IP	４		IP	６		IP	５		IP	５		IP	６		IP	６		IP	５	4	IP	６		IP
+森口　　和紀	4.30	0.16	3.2	４		IP	６		IP	３		IP	６		IP	２		IP	２		IP	６		IP	４		IP	４		IP	３		IP
+山本　　兼士	2.70	0.24	4.4	５		IP	３		IP	６		IP	６		IP	６		IP	３		IP	４		IP	６		IP	６	6	IP	４		IP
+日高　龍之介	1.80	0.22	4.0	６		IP	６		IP	６		IP	２		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP

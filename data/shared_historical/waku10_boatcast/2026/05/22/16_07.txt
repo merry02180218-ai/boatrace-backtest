@@ -1,0 +1,8 @@
+data=
+1	0
+井内　将太郎	8.60	0.09	1.4	１		IP	１		IP	１		IP	Ｆ		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP
+松井　　賢治	5.80	0.14	2.9	３		IP	４		IP	５		IP	３		IP	２		IP	３		IP	２		IP	５		IP	２		IP	２		IP
+森　　　貴洋	5.80	0.16	4.1	５		IP	２		IP	２		IP	３		IP	１		IP	５		IP	４		IP	３		IP	４		IP	２	2	IP
+池田　　雷太	4.22	0.21	3.1	４		IP	６		IP	５		IP	３		IP	６		IP	５		IP	エ		IP	２		IP	３		IP	２		IP
+岡本　　亜子	1.00	0.28	6.0	６	6	IP																											IP
+茅原　　悠紀	5.60	0.14	4.6	５		G1	５		G1	５		G1	４		SG	３		G1	４		G1	２		G1	４		G1	３		G1	２		IP

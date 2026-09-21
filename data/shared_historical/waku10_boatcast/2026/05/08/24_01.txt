@@ -1,0 +1,8 @@
+data=
+1	0
+西澤　日花里	5.90	0.21	3.6	４		G3	１		IP	６		IP	１		G3	３		IP	１		IP	３		IP	４		IP	５		IP	３		IP
+坪口　　竜也	6.40	0.15	2.9	２		IP	５		IP	１		IP	２		IP	５		IP	５		IP	２		G3	１		IP	１		IP	４		IP
+樋口　　　亮	5.80	0.14	3.0	６		IP	６		IP	４		IP	４		IP	２		IP	２		IP	２		IP	１		IP	２		IP	３		IP
+屋良　　龍紀	3.20	0.16	3.5	５		IP	２		IP	６	5	IP	３		IP	６		IP	６		IP	５		IP	４		IP	３		IP	６		IP
+宮本　　夏樹	3.60	0.18	3.3	４		IP	５		G3	６		IP	３		IP	４		IP	５		IP	３		IP	３		IP	５		IP	６		IP
+山崎　　昂介	3.10	0.18	4.2	５		IP	４		IP	２		IP	４		IP	６		IP	５		IP	５		IP	５		IP	５		IP	４		IP

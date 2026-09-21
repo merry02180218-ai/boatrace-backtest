@@ -1,0 +1,8 @@
+data=
+1	0
+村松　　栄太	7.40	0.14	2.7	４		IP	２		IP	４		IP	５		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP
+溝口　海義也	7.10	0.15	2.7	２		IP	２		IP	４		IP	２		IP	６		G2	３		G2	２		G3	２		G3	１		IP	２		IP
+大谷　　健太	5.30	0.18	3.4	２		IP	３		IP	４		IP	６		IP	４		IP	３		IP	５		IP	１		IP	２		IP	４		IP
+吉川　　貴仁	7.33	0.14	2.8	１	2	IP	３		IP	１		IP	３		IP	３		IP	不		IP	３		IP	４		IP	２		IP	１		IP
+大賀　龍之介	4.50	0.17	4.7	３		IP	３		IP	４		IP	２		IP	６		IP	４		IP	５		IP	４		IP	２		IP	５		IP
+小池　　哲也	3.70	0.17	3.6	２		IP	４		G2	４		IP	６		IP	５		IP	５		IP	６		IP	５		IP	３	5	IP	３		IP

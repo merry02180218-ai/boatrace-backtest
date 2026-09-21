@@ -1,0 +1,8 @@
+data=
+1	0
+岸本　　雄貴	7.50	0.11	1.7	Ｆ		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	６		IP	３		IP	１		IP
+北山　　康介	7.90	0.15	3.1	２		IP	２		IP	３		IP	１		IP	４		SG	３		IP	２		IP	２		IP	１		IP	２		IP
+江夏　　　満	6.20	0.16	2.7	１		IP	４		IP	３		G1	２		IP	２	2	IP	５		IP	２		IP	６		IP	１		IP	４		IP
+武富　　智亮	4.60	0.16	3.0	６		IP	５		IP	３		IP	４		G1	４	5	G1	２		IP	４		IP	６		IP	４		IP	１	3	IP
+安藤　　裕貴	3.10	0.16	2.8	３	4	IP	３		IP	３		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	３		IP
+桑原　　将光	3.89	0.16	3.8	５		IP	エ		IP	２		IP	３		IP	５		IP	５		IP	４		IP	６		G3	４		IP	３		IP

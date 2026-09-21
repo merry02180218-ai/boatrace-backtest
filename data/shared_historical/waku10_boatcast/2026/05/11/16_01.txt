@@ -1,0 +1,8 @@
+data=
+1	0
+三川　　昂暁	8.20	0.20	3.5	３		IP	１		IP	２		IP	２		IP	３		IP	２		IP	２		IP	２		IP	１		IP	１		IP
+佐藤　　右京	3.10	0.24	4.2	６		IP	３		IP	５		IP	４		IP	５	3	IP	４		IP	５		IP	５		IP	３		IP	５		IP
+木場　　悠介	6.70	0.16	2.9	３		IP	２		IP	２		IP	３		IP	２	2	IP	２		IP	６		G3	３		G3	３		IP	１		IP
+高田　　　綾	3.50	0.25	4.5	５		IP	６		IP	２		IP	３		IP	４		IP	６		IP	６		G3	６		IP	１		IP	６		IP
+加木　　　郁	4.50	0.20	4.7	２		IP	５		IP	６		IP	４		IP	２		IP	４		IP	３		IP	３		IP	５		IP	４		IP
+間野　　兼礼	3.90	0.15	2.9	３		IP	６		IP	４		IP	４	5	IP	６		IP	６		IP	２		IP	５	5	IP	５	5	IP	２		IP

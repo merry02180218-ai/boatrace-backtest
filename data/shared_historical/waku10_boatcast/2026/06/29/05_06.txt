@@ -1,0 +1,8 @@
+data=
+1	0
+富永　　正人	6.00	0.15	3.9	２		IP	２		IP	３		IP	４		IP	５		IP	４		IP	４		IP	２		IP	２		IP	２		IP
+杉山　　貴博	5.40	0.14	3.5	６	3	IP	２		IP	４		IP	２		G3	２		G3	４		IP	３		IP	６		IP	１		IP	４		IP
+繁野谷　圭介	5.20	0.23	4.1	６	4	G3	１		G3	６		IP	３		IP	３		IP	５		IP	２		IP	３	2	IP	３		IP	３		IP
+井手　　良太	5.40	0.11	1.8	４		IP	２		IP	１		IP	５		IP	３		IP	５		IP	５		IP	１		IP	４		IP	３	5	IP
+濱野谷　憲吾	5.40	0.14	2.8	６		G2	４		G1	４		G1	２		SG	１		IP	５	4	G1	６		G1	２		G1	５		G1	４		G2
+宮村　　勇哉	2.30	0.17	3.7	３		IP	５		IP	３		IP	５		IP	６		IP	６		IP	６		IP	５		IP	６	5	IP	６		IP

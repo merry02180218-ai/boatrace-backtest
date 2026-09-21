@@ -1,0 +1,8 @@
+data=
+1	0
+西村　美智子	9.20	0.14	2.8	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	３		IP	１		G3	１		G3	２		IP
+胡本　　悟志	4.60	0.16	2.5	６		IP	６		IP	３		IP	２		IP	３		IP	２		IP	４		IP	５		IP	５		IP	２		IP
+白水　　勝也	6.40	0.18	3.7	３		IP	２		IP	１		IP	２		IP	４		IP	３		IP	４		IP	３		IP	３		IP	３		IP
+芹澤　　克彦	4.50	0.14	3.0	４		IP	５		IP	６		IP	２		IP	５		IP	５		IP	１		IP	４		IP	４		IP	２		IP
+寺本　　重宣	6.20	0.14	3.2	２		G3	５		G3	４		IP	２		IP	３		G3	２		G3	４		IP	１		IP	２		IP	５		IP
+山田　　竜一	3.00	0.16	3.6	４		IP	３		IP	５		IP	５		IP	６		IP	５		IP	５		IP	５		IP	６		IP	２		IP

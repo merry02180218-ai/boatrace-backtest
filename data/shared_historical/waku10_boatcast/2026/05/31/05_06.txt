@@ -1,0 +1,8 @@
+data=
+1	0
+柴田　　愛梨	5.60	0.24	4.6	１		IP	５		IP	３		IP	３		IP	１		IP	６		IP	６		IP	４		IP	３		G3	１		G3
+浜田　亜理沙	5.60	0.13	3.2	２		G3	２		G2	６		IP	２		G1	４		G1	５		G1	４		G1	６		G1	４		IP	１		IP
+平田　さやか	6.40	0.13	2.6	３	2	IP	２		IP	３		IP	２		IP	２		IP	２		IP	４		IP	４		IP	３		IP	４		IP
+中澤　　宏奈	3.90	0.16	2.8	５		IP	５		IP	４		IP	５		IP	５		IP	３		IP	２	5	IP	５		G3	６		IP	１		IP
+林　　　風音	1.40	0.17	4.0	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	４	6	IP	５	6	IP	６	6	IP	５	6	IP	欠		IP
+刑部　亜里紗	3.50	0.15	4.9	５		IP	３		G2	３		G2	５		IP	５		IP	５		IP	４		IP	６		IP	４		IP	５		IP

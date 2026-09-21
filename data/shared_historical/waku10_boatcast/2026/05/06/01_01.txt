@@ -1,0 +1,8 @@
+data=
+1	0
+萬　　　正嗣	8.40	0.15	2.5	２		IP	１		IP	６		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	２		IP
+田中　　　堅	3.70	0.20	3.9	４		IP	５		IP	２		IP	６		IP	４		IP	５		IP	４		IP	４		IP	５		IP	３		IP
+宮内　由紀英	3.33	0.21	4.2	５		IP	４		IP	６		IP	４		IP	欠		IP	４		IP	６		IP	４		IP	４		IP	３		IP
+富永　　正人	4.80	0.18	3.3	４		IP	４		IP	４		IP	２		IP	４		IP	６		IP	５	3	IP	６		IP	１		IP	１		IP
+川口　　貴久	4.00	0.16	3.5	５	6	IP	４		IP	６		IP	４		IP	３		IP	４		IP	２		IP	６		IP	２	4	IP	５		IP
+澁澤　　周羽	1.25	0.15	3.5	６		IP	６		IP	５		IP	６		IP																		IP

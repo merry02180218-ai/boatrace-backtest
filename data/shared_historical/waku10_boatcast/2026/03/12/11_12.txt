@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　康二	9.90	0.11	1.8	１		G1	１		G1	１		G1	１		G1	１		IP	４		IP	１		IP	１		G1	１		IP	１		IP
+服部　　幸男	5.00	0.12	3.1	６		IP	５		IP	６		G1	２		G1	２		IP	６		IP	４		IP	４		IP	２		IP	１		G1
+吉永　　則雄	6.50	0.18	3.1	６		IP	３		IP	３		IP	２		IP	１		IP	２		IP	４		IP	３		IP	２		IP	２		IP
+竹田　　和哉	6.40	0.19	2.7	２		IP	５		G1	６		G1	２		G1	３		IP	４		IP	２		IP	２		IP	４	5	IP	２	3	IP
+福来　　　剛	5.80	0.13	2.7	６		IP	５		IP	６		IP	４		G1	３		G1	３	4	IP	１		IP	２		IP	２		IP	２		IP
+木村　　仁紀	5.40	0.20	4.2	３		G1	５		IP	６		G1	３		G1	２		IP	６		G2	３		IP	３		IP	２		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中嶋　誠一郎	6.00	0.22	3.6	１		IP	５		IP	２		IP	５		IP	２		IP	３		IP	２		IP	５		IP	１		IP	４		IP
+島川　　光男	5.20	0.14	2.7	２		IP	４		IP	３		IP	３	3	IP	４		IP	Ｆ		IP	３		IP	２		IP	５		IP	２		IP
+赤坂　　俊輔	6.00	0.12	2.6	２		IP	１		IP	５		G1	６		G1	３		IP	１		IP	３		G1	３		G1	４		G1	５		IP
+原　　加央理	7.60	0.14	2.3	３	3	IP	２		IP	３		IP	１		IP	２		IP	１		IP	３		IP	２		G3	２		G3	３		IP
+吉川　　晴人	4.50	0.15	2.5	４		IP	５		IP	６		IP	５		IP	１		IP	３		IP	５		G2	２		G2	５		IP	３		IP
+桐本　　康臣	3.60	0.19	3.9	２		IP	３	5	IP	４		IP	６		IP	４		IP	４		IP	３		IP	６	4	IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中嶋　誠一郎	5.80	0.23	3.8	５		IP	２		IP	５		IP	２		IP	３		IP	２		IP	５		IP	１		IP	４		IP	２		IP
+下河　　誉史	7.00	0.20	3.8	３		IP	５		IP	１		IP	２		IP	３		IP	１		IP	１		IP	２		IP	３		IP	４		IP
+池田　　剛規	4.70	0.13	2.5	４		IP	３		IP	３		IP	２		IP	４	2	IP	６		IP	３		IP	４		IP	５		IP	３		IP
+渥美　　卓郎	3.00	0.19	3.9	６		IP	４		IP	５	3	IP	５		IP	６		IP	２	5	IP	６	3	IP	６		IP	４		IP	３	5	IP
+中山　　　将	5.70	0.16	3.1	４		IP	３		IP	２		IP	２		IP	２		IP	４	6	IP	２		IP	３		G2	５		G2	６		IP
+品川　二千翔	4.10	0.16	3.4	５		IP	３		IP	１		IP	５		IP	５		IP	５	5	IP	５		IP	３		G2	４		IP	４		IP

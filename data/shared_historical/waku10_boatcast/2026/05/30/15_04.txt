@@ -1,0 +1,8 @@
+data=
+1	0
+古田　　祐貴	6.70	0.17	2.7	２		G3	１		IP	３		IP	１		IP	６		G3	４	2	G3	５		IP	２		IP	１		IP	２		IP
+中島　　　航	3.70	0.18	4.0	５		G3	５		IP	２		IP	４		IP	５		G3	６		G3	３		IP	３		IP	４		IP	５	3	IP
+大塚　　雅治	3.50	0.22	4.2	６	5	G3	４	4	IP	４		IP	５		IP	４		IP	３		IP	６		IP	５		IP	１		IP	６		IP
+平見　　真彦	6.60	0.17	3.0	２	5	G3	１		IP	１		IP	２		IP	４	6	IP	３		IP	４		IP	３		IP	５		IP	２	5	IP
+中岡　　正彦	6.30	0.16	2.7	３	2	G3	２	3	IP	５	6	SG	３	3	IP	２	2	IP	１	2	IP	２	1	IP	２	2	IP	５		G1	６	2	G1
+椎名　　　豊	5.70	0.14	2.6	２		G3	２		IP	３	5	IP	４		IP	４		IP	６		IP	２	5	IP	１		IP	５		G1	４		G1

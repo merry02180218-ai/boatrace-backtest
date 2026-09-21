@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　　翼	10.20	0.14	3.0	１		G1	１		G1	１		G1	１		G1	３		G1	１		G1	１		G1	１		IP	１		IP	２		IP
+西岡　　顕心	7.30	0.14	2.4	６		G1	４		G1	１		G1	１		G1	４		IP	２		IP	１	3	IP	６		G1	２		IP	１		IP
+井上　　忠政	7.10	0.17	3.8	３		G1	３		G1	２		G1	４		G1	１		IP	２		G1	４		G1	２		IP	５		IP	２		G1
+齊藤　　　仁	6.13	0.20	3.6	５		G1	転		G1	転		IP	１		IP	６	5	IP	４		IP	２		G3	２		G3	１		IP	４		G1
+白神　　　優	5.40	0.13	1.8	５		G1	３	4	IP	５		IP	１		IP	３		IP	６		IP	４		G1	３		G1	３		IP	２		IP
+塩田　　北斗	3.90	0.15	4.4	４		G1	６		G1	４	5	G1	５		G1	４	5	IP	４	5	IP	５		SG	６	5	G1	６		G1	３		SG

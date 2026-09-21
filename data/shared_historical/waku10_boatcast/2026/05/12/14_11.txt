@@ -1,0 +1,8 @@
+data=
+1	0
+菅　　　章哉	8.50	0.13	2.9	１		IP	１		IP	Ｆ		IP	１		IP	１		IP	１		G1	３		SG	１		IP	４		G1	１		G1
+田村　　隆信	7.50	0.13	2.8	５		IP	１		IP	１		IP	２		IP	１		IP	５		IP	３		IP	２		IP	２		IP	１		IP
+三好　　勇人	6.80	0.14	2.5	３		IP	３		IP	５		IP	２		IP	５		IP	１	4	IP	２		IP	１	2	IP	３		IP	１		IP
+丸尾　　義孝	5.30	0.16	3.2	３		IP	２		IP	１		IP	３		IP	５		IP	６		IP	５		IP	２		IP	４		IP	３		IP
+長谷川　雅和	4.40	0.17	2.4	２		IP	５		IP	３	3	IP	２		IP	５		G3	６		IP	２		IP	３		IP	５		IP	６		IP
+井川　　大作	2.80	0.17	4.3	５		IP	５		IP	３		IP	４		IP	６		G3	５		IP	５		IP	６		IP	５		IP	３		IP

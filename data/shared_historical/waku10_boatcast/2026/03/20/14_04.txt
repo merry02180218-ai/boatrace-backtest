@@ -1,0 +1,8 @@
+data=
+1	0
+森永　　　隆	8.40	0.16	2.6	３		IP	２		IP	３		IP	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP
+三浦　　裕貴	4.00	0.18	3.5	３		IP	３	3	IP	５		IP	転		IP	３		IP	５	1	IP	３		IP	５		IP	５		IP	２	3	IP
+小倉　　康典	3.67	0.14	2.1	５		IP	４		IP	２		IP	６		IP	３		IP	６		IP	３		IP	エ		IP	６		IP	４		IP
+吉武　　真也	3.60	0.20	4.7	５		IP	４		IP	４		IP	５		IP	４	5	IP	３		IP	５		IP	４		IP	４		IP	４		IP
+石川　　真二	5.90	0.16	3.2	１	2	IP	６	2	G1	３	2	G1	２	2	IP	３	2	IP	３	1	IP	３	3	IP	１	2	IP	６	3	IP	６	2	IP
+向井田　佑紀	3.67	0.18	3.4	４		IP	転		IP	４		IP	４		IP	４		IP	５		G3	３		G3	６	5	IP	４	5	IP	４	5	IP

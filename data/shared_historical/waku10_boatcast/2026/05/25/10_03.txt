@@ -1,0 +1,8 @@
+data=
+1	0
+松田　　祐季	8.10	0.14	3.2	３		IP	１		IP	４		IP	１		IP	１		IP	１		G3	６		IP	１		IP	１		IP	１		IP
+黄金井　力良	4.90	0.15	2.6	６		IP	５		IP	１	1	IP	２		G3	３		G3	３		IP	４		IP	３		IP	４		IP	５	1	IP
+柘植　　政浩	5.80	0.13	3.4	３		IP	５		IP	２		IP	３		IP	１		IP	４		IP	３		IP	５		IP	２		IP	３		IP
+河合　　三弘	4.00	0.16	3.1	３		IP	５	6	IP	２		IP	５		G3	５		IP	５		IP	３		IP	４		IP	５		IP	３		IP
+野村　　　誠	5.40	0.16	3.7	５		IP	２		IP	６		G1	１		IP	２		IP	４		IP	５		IP	３		G3	４	4	IP	２		IP
+大澤　　誠也	2.40	0.21	3.9	６		IP	５		IP	４		IP	６		IP	４		IP	６		IP	４		IP	４		IP	５		IP	６		IP

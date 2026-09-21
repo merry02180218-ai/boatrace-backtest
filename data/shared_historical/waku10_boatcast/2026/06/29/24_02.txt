@@ -1,0 +1,8 @@
+data=
+1	0
+大江　　　純	7.10	0.09	2.0	３		IP	１		G3	６		IP	３		IP	３		IP	１		IP	１		G3	２		G3	４		IP	１		IP
+杉山　　裕也	6.20	0.20	4.2	４		IP	２		G3	１		G3	２		G3	５		IP	１		IP	６		IP	６		IP	１		IP	２		IP
+一柳　　和孝	5.50	0.12	2.9	２		IP	４		IP	６		G3	３		IP	４		IP	３		IP	３		IP	１		IP	３		IP	４		IP
+出畑　　孝典	4.20	0.20	4.7	３		IP	３	2	IP	６		IP	５	5	IP	４		IP	５		IP	３		IP	４		IP	４		IP	３		IP
+山本　　浩次	4.00	0.19	2.9	１		IP	６		IP	６		IP	３		IP	６		IP	４		G3	４	4	IP	６	1	G3	４		IP	２		IP
+滝沢　　芳行	4.20	0.14	2.5	５		G3	４		IP	５		IP	３	5	IP	２		IP	６		IP	６		IP	４		G3	３		IP	２	4	IP

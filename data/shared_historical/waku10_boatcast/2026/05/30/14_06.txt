@@ -1,0 +1,8 @@
+data=
+1	0
+乙津　　康志	5.50	0.19	4.7	６		IP	３		IP	５		IP	１		IP	１		IP	５		IP	５		IP	２		IP	１		IP	４		IP
+加藤　　政彦	4.90	0.12	2.5	４		IP	転		IP	２		IP	５		IP	２		IP	３		IP	２		IP	３		G1	６		G1	５		IP
+川上　　清人	4.10	0.16	3.7	６	4	IP	５		IP	３		IP	２		IP	４		IP	３	4	IP	１		IP	５		IP	６		IP	６		IP
+岩崎　　芳美	5.00	0.14	2.4	４		G3	６		G2	５		IP	２	5	IP	４		IP	３		IP	５		IP	３		G3	１		G1	４		G1
+笠原　　　亮	5.80	0.21	4.0	１		G2	３		G3	５		G1	６		G1	５		G1	４	6	SG	４		SG	３	6	IP	２		IP	３		IP
+藤本　　遼磨	1.33	0.22	5.2	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP			IP

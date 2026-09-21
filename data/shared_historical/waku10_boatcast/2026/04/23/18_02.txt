@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　辰彦	9.70	0.14	2.2	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		G1	１		IP	１		IP	２		IP
+岡部　　大輔	5.50	0.16	2.7	４		IP	３		IP	３		IP	３		IP	５		IP	２		IP	３		IP	６		IP	２		IP	２		IP
+野相　　弘司	5.60	0.15	2.6	４		IP	５		IP	４		IP	４		IP	２		IP	３		IP	１		IP	２		IP	４		IP	３		IP
+河上　　年昭	1.90	0.18	3.9	６		IP	４		IP	５		IP	６		IP	６		IP	５		IP	６		IP	５		IP	４		IP	６		IP
+榮田　　将彦	3.90	0.13	2.8	３	6	IP	２		IP	３		IP	５		IP	５		IP	６	6	IP	６		IP	６		IP	３		IP	３		IP
+青木　　玄太	4.60	0.15	4.2	４		IP	３		G1	６		G1	６		G1	４		G3	３		IP	４		G1	５		G1	２		IP	４		G2

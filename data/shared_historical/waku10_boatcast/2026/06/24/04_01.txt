@@ -1,0 +1,8 @@
+data=
+1	0
+細川　　明人	8.40	0.17	3.3	２		IP	１		IP	２		IP	２		IP	１		IP	１		IP	５		IP	１		IP	１		IP	２		IP
+佐竹　　恒彦	7.00	0.15	3.0	４	4	IP	２		IP	３		IP	１		IP	２		G3	４		IP	２		IP	１		IP	１		IP	５		IP
+高濱　　芳久	5.70	0.17	4.1	４		IP	３		IP	２		IP	５	4	IP	２		IP	６		IP	３		IP	２		IP	３		IP	２		IP
+今坂　　晃広	4.40	0.23	4.3	４	5	IP	３		G3	１		G3	５	5	IP	４		IP	３		IP	４		IP	６	6	IP	６		IP	３		IP
+大野　　芳顕	3.30	0.15	3.4	６		IP	４	4	IP	６	6	IP	５		IP	２		IP	６		IP	２		IP	４		IP	６		IP	６		G3
+市川　　瑚幸	1.60	0.19	4.3	４		IP	５		IP	６		IP	５		IP	６		IP	６		IP	６		IP	５	5	IP	６		IP	６		IP

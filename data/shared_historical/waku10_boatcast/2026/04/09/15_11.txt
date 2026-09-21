@@ -1,0 +1,8 @@
+data=
+1	0
+堀本　　和也	9.40	0.09	2.2	１		SG	１		G1	５		G1	２		G1	１		G1	２		G3	１		G3	１		IP	１		IP	１		IP
+是澤　　孝宏	6.60	0.15	3.9	４		G3	３		IP	４		IP	２		IP	３		IP	１		IP	２		IP	２		IP	２		IP	４		IP
+村田　　修次	7.56	0.15	2.2	１		IP	３		IP	２		IP	２		IP	３	2	IP	３		IP	不		IP	３		IP	１		IP	２		IP
+三好　　勇人	3.89	0.16	2.9	４		IP	４		IP	３		IP	６		IP	５		IP	３		IP	４		IP	落		IP	４		IP	４		IP
+野末　　智一	4.67	0.20	4.2	４		IP	３		IP	５		IP	３		IP	５		IP	３		IP	３		IP	落		IP	２	4	IP	５		IP
+河野　　真也	3.20	0.24	5.7	５		IP	６		IP	４		IP	１		IP	６		IP	６		IP	４		IP	６		IP	５		IP	３		IP

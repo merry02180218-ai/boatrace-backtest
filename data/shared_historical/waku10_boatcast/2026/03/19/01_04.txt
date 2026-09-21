@@ -1,0 +1,8 @@
+data=
+1	0
+瀬川　　大地	3.60	0.19	4.0	５	2	IP	２		IP	６	3	IP	１		IP	６		IP	５		IP	５		IP	３		IP	５		IP	５		IP
+塚越　　海斗	8.00	0.12	3.0	１		IP	３		IP	４		IP	１		IP	１	1	IP	２		IP	３		IP	１		IP	３		IP	１		IP
+中野　　希一	6.90	0.11	2.3	５		IP	３		IP	１	1	IP	４		IP	２		G1	６		G1	３		IP	１		IP	１		IP	１		IP
+丸山　　祐也	2.50	0.24	5.6	４		IP	４		IP	５		IP	６		IP	４		IP	６		IP	５		IP	４		IP	５		IP	６		IP
+竹内　　　来	1.90	0.17	2.8	５		IP	６		IP	５	6	IP	４		IP	６		IP	５		IP	４		IP	６		IP	６		IP	６		IP
+高橋　　龍治	3.89	0.12	3.9	４		IP	６		IP	４		IP	欠		IP	２		IP	６		IP	６		IP	４		IP	３		IP	３		IP

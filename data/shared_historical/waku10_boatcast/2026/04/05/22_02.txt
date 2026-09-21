@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　未都	8.90	0.16	2.4	１		IP	１		IP	１		IP	３		IP	３		G1	１		G3	１		IP	１		IP	２		IP	２		IP
+奥村　明日香	6.60	0.22	3.8	２		IP	３		G3	３		G3	１		IP	２		IP	３		IP	５	3	G3	２		IP	４		IP	２		IP
+永井　　聖美	4.50	0.17	3.1	２		IP	４		IP	４		IP	２		IP	転		G3	３		G3	５		IP	４		IP	２		IP	６		IP
+塩崎　　桐加	3.60	0.15	2.2	４		IP	３		IP	５		G3	６		G3	６		G1	２		IP	４		IP	４		IP	４		IP	６		IP
+山崎　小葉音	3.78	0.20	2.6	６		IP	３		IP	６		IP	６		IP	転		IP	３		IP	６		IP	２		IP	３		IP	４		IP
+篠木　亜衣花	2.00	0.24	4.9	４		G3	６		IP	６		IP	４		G3	６		IP	５		IP	６		IP	６		G3	６		G3	４	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+樋口　由加里	7.60	0.16	2.4	１		G3	１		G3	５		G3	１		G3	４		IP	１		IP	２		IP	１		IP	５		IP	１		IP
+山川　　波乙	6.10	0.17	3.7	２		IP	２		IP	２		IP	４		IP	５		IP	２		IP	６		IP	２		IP	３		IP	２		IP
+平川　　香織	6.00	0.19	3.1	３		IP	４		IP	２		IP	４		IP	転		IP	２		IP	１		G3	３		G3	５		G3	落		IP
+守屋　　美穂	6.70	0.18	4.0	３		IP	２		IP	２		IP	４		G3	１		G1	１		IP	２		IP	５		G1	６		G1	３		G1
+中谷　　朋子	4.80	0.17	4.3	４		G3	２		G3	４		G3	５		G3	３	4	G3	５		IP	４		IP	２		IP	４		IP	３		G3
+長尾　　萌加	3.40	0.17	4.3	６		IP	６		IP	５		IP	３		IP	４		IP	４		IP	６		IP	６		IP	２		IP	３		IP

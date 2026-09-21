@@ -1,0 +1,8 @@
+data=
+1	0
+赤岩　　善生	8.70	0.16	2.9	１		IP	２		IP	１		IP	５		IP	１		IP	３		G1	２		G1	１		IP	１		G1	１		IP
+上平　　真二	7.50	0.19	3.4	１		IP	２		IP	２		IP	１		IP	２		IP	３		IP	２		IP	４		IP	２		IP	４		G1
+佐々木　康幸	5.00	0.13	1.8	５		IP	５		IP	５		IP	１		IP	４		IP	５		IP	４		IP	１		IP	３		IP	３		IP
+杉山　　正樹	6.90	0.17	3.3	２		IP	５		IP	２	3	G1	３		G1	２		G3	４		G3	１		IP	１		IP	３		IP	４		G1
+萩原　　秀人	5.60	0.13	2.3	１		IP	４		IP	４		G1	２		IP	６		G1	６		G1	２		G3	３		G1	３		G1	５		G1
+江夏　　　満	4.60	0.21	4.2	６		IP	４		IP	４		IP	２		IP	４		IP	５		IP	３		IP	５		IP	６		G1	２		G1

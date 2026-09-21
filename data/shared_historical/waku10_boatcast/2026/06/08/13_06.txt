@@ -1,0 +1,8 @@
+data=
+1	0
+宮地　　元輝	9.40	0.13	3.4	１		SG	６		G1	４		IP	１		IP	１		G1	１		G1	１		SG	１		SG	２		G1	１		G1
+前原　　大道	6.90	0.18	3.7	１		IP	５		IP	２		IP	４		IP	２		IP	４		IP	２		G1	２		IP	３		IP	１		IP
+田村　　隆信	4.60	0.12	2.5	６		G2	２		IP	４		IP	３		IP	６	4	IP	４		IP	４		IP	３		IP	４		IP	３		G1
+丸野　　一樹	7.00	0.13	2.7	２	5	SG	５		G1	２	5	IP	１		IP	２		IP	２		G1	６	5	SG	４		G1	４		G1	２		IP
+吉田　凌太朗	7.00	0.20	3.5	１		IP	２		IP	３		IP	２		IP	５		IP	３		IP	３		IP	３	6	IP	２		IP	１		IP
+小坂　　尚哉	4.78	0.16	2.9	５		IP	３		IP	エ		IP	６		IP	４		IP	３	5	IP	３		IP	１	5	IP	４		G3	４		G3

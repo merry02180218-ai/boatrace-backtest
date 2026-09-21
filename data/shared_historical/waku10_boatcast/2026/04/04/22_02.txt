@@ -1,0 +1,8 @@
+data=
+1	0
+黒明　　花夢	5.20	0.21	3.5	２		IP	１		IP	１		IP	転		IP	２		IP	６		IP	３		IP	６		IP	５		IP	３		IP
+篠木　亜衣花	3.30	0.26	3.9	６		G3	４		G3	４		G3	６		IP	６		G3	３		G3	５		IP	３		IP	４		IP	４		IP
+嶋田　　有里	3.70	0.20	4.5	３		IP	５		IP	４		IP	４		IP	４		IP	５		IP	６		IP	３		IP	５		IP	３		IP
+大山　　千広	6.80	0.14	2.3	４		IP	３		IP	３		IP	２		IP	１		IP	３	3	IP	２		IP	１		IP	２		IP	５		IP
+佐藤　ほのか	2.78	0.15	2.8	５		IP	２		IP	６		IP	３		G3	５		G3	６		IP	５		G3	６		G3	５		IP	転		IP
+宮城　　那菜	1.60	0.12	2.1	６		IP	６		IP	６		IP	６		IP	４		IP	４		IP	６		IP	６		IP	６		IP	６		IP

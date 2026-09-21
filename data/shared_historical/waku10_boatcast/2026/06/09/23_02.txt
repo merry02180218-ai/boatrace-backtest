@@ -1,0 +1,8 @@
+data=
+1	0
+室田　　泰史	7.60	0.13	2.4	５		IP	２		IP	１		IP	１		IP	２		IP	１		IP	Ｆ		IP	２		IP	１		IP	１		IP
+高野　　哲史	7.90	0.19	4.0	１		IP	２	3	IP	２	4	IP	３		IP	２		IP	６		IP	１		IP	２		IP	２		IP	１		IP
+佐々木　英樹	3.60	0.18	3.4	６		IP	４		IP	３		G3	６		IP	６	5	IP	２		IP	５		IP	６		IP	２		IP	４		IP
+本岡　　勝利	3.00	0.16	3.6	４		IP	６		IP	５		IP	３		IP	３		IP	６		IP	６		IP	５		IP	３		IP	６		IP
+新井　　英孝	3.20	0.16	3.0	３	4	IP	５		IP	４		IP	６	4	IP	６		IP	Ｆ		IP	２		IP	５		IP	５	6	IP	３		IP
+小川　　晃司	3.90	0.19	3.5	４		G3	４		G3	２		G3	４		G3	６		G3	５		G3	５		IP	５		IP	４		IP	２		IP

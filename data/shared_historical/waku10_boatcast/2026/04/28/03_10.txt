@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　雄朗	8.40	0.15	3.2	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	６		G1	３		G1	１		G1	４		G1
+小澤　　　学	3.00	0.24	5.9	６		IP	６		IP	５	3	IP	２		IP	２		IP	６		IP	６		IP	５		IP	４		IP	５		IP
+伏田　　裕隆	3.50	0.21	3.5	４		IP	５		IP	５		IP	５		IP	５		IP	２		IP	４	5	G3	６		G3	５		IP	２		IP
+関根　　彰人	2.90	0.16	3.9	５		IP	６		IP	２		IP	５	5	IP	６		IP	５	5	IP	５		IP	５		IP	６	6	IP	２		IP
+加藤　　政彦	3.70	0.13	3.8	１		IP	２	4	IP	５		G1	５		G1	６		G1	５		G1	５		IP	５		IP	４		IP	落		IP
+奥平　　拓也	3.00	0.17	4.8	４		IP	５		G3	６		G3	５		G3	６		IP	３		IP	６		IP	２	5	IP	６		IP	４		G3

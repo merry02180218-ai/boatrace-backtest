@@ -1,0 +1,8 @@
+data=
+1	0
+下河　　雅史	8.60	0.13	3.3	１		IP	１		IP	５		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP
+田中　太一郎	5.00	0.18	3.9	２		IP	５		IP	２		IP	１		IP	６		IP	４		IP	６		IP	４		IP	２		IP	４		IP
+岩永　　節也	3.90	0.20	4.0	５		IP	６		IP	５		IP	３		IP	５		IP	１		IP	６		IP	６		IP	３		IP	２		IP
+古賀　　繁輝	6.00	0.09	2.7	５		IP	１		IP	３		IP	１		G2	６	6	G1	６		G1	３		IP	３		IP	３		IP	２		G1
+古園井　綾南	1.00	0.18	4.0	６	6	IP	６	6	IP	６	6	IP	６	6	G3	６	6	G3	６		IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP
+恵良　　琴美	2.60	0.17	2.8	５		IP	６		IP	６		IP	６		IP	６		IP	４		IP	４		IP	４		IP	５		IP	３		IP

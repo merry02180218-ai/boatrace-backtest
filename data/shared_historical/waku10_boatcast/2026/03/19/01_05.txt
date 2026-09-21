@@ -1,0 +1,8 @@
+data=
+1	0
+梅原　　祥平	5.20	0.13	2.0	２		IP	６		IP	３		IP	４		IP	２		IP	３		IP	６		IP	３		IP	１		IP	５		IP
+田中　　駿兵	5.20	0.18	3.7	３	3	IP	２		IP	５		IP	３		IP	４		IP	５		G1	２		G1	５		IP	５		IP	２		IP
+牧村　　俊輝	2.00	0.18	3.8	５		IP	４		IP	６		IP	６		IP	５		IP	４		IP	６	5	IP	５		IP	６		IP			IP
+藤原　　碧生	7.30	0.15	2.4	１		IP	６		G1	１	5	G1	１		IP	６		G1	２		G1	５		G1	１		IP	２		IP	３		G1
+横田　　海人	2.10	0.20	4.6	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	４		IP	２		IP	６	6	IP
+若林　　　麗	3.50	0.20	4.0	６		IP	６		IP	５		IP	５		IP	４		IP	４		IP	３		IP	２		IP	６		IP	３		IP

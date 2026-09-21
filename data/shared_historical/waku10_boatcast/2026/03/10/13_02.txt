@@ -1,0 +1,8 @@
+data=
+1	0
+東　　　潤樹	9.00	0.16	3.1	１		IP	１		IP	５		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+森　　　悠稀	5.50	0.16	3.4	３		IP	２		IP	５		IP	２		G2	２		IP	４		IP	５		IP	５		IP	２		IP	３		IP
+石岡　　将太	5.00	0.16	3.4	４		IP	４		IP	４		IP	１		IP	５		IP	２		IP	４		IP	４		IP	５		IP	３		IP
+亀本　　勇樹	3.60	0.19	3.7	５	5	IP	５	5	IP	６		IP	３		IP	６		IP	３		IP	４		IP	４		IP	３		IP	４		IP
+田川　　大貴	3.70	0.14	2.8	２		IP	６		IP	４		IP	１		IP	５		IP	５		IP	５		IP	５	4	IP	４		IP	５		IP
+片岡　　秀樹	3.60	0.17	3.9	３		IP	５		IP	５		IP	５		IP	６		IP	２		G3	５		G3	４		IP	２		G3	６		IP

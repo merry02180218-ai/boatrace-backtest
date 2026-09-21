@@ -1,0 +1,8 @@
+data=
+1	0
+赤坂　　俊輔	8.40	0.13	2.7	１		IP	１		IP	３		IP	５		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+藤丸　　光一	3.80	0.22	4.5	３		IP	５		IP	６		IP	１		IP	４		IP	４		IP	５		IP	５		IP	６		IP	３		IP
+池本　　輝明	4.80	0.17	3.6	４		IP	３		IP	４		IP	２		IP	３		IP	５		IP	５		IP	５		IP	１	4	IP	４		IP
+竹井　　貴史	6.70	0.13	2.4	３		G2	４		IP	２		IP	３		IP	５		IP	３		IP	２		IP	２		IP	２		IP	１		IP
+有賀　　達也	4.70	0.17	2.9	４		IP	５		IP	転		G1	５		G1	２		G1	２		IP	２		IP	３		IP	Ｆ		IP	３		G1
+梅木　　敬太	2.20	0.17	3.6	６		IP	５		IP	３		IP	６		IP	６		IP	５		IP	４		IP	５		IP	５		IP	６		IP

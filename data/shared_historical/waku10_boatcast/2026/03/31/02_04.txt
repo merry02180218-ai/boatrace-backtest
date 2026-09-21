@@ -1,0 +1,8 @@
+data=
+1	0
+深山　　祐二	6.80	0.14	2.1	１		IP	２		IP	２		IP	３		IP	１		IP	５		IP	３		IP	２		IP	２		IP	５		IP
+浦野　　　海	5.78	0.16	3.0	２		IP	５		IP	２		IP	５		IP	５		IP	２		IP	２		IP	１		IP	欠		IP	４		IP
+佐藤　隆太郎	6.60	0.16	2.8	１		IP	２	2	G1	４		G1	３		IP	２		IP	３		IP	４		IP	１		G1	６		G1	４		G1
+久保田　凪紗	1.13	0.19	3.6	６		IP	６		G3	５		G3	６	6	IP	６		G3	５		G3	Ｆ	6	IP	６	5	IP						IP
+小川　　時光	2.70	0.18	4.4	４		IP	６		IP	６		IP	６		IP	４		IP	２		IP	６		IP	６		IP	５		IP	４	6	IP
+後藤　　美翼	4.30	0.24	5.2	４		IP	５		IP	４		G3	５		G3	３		IP	３	5	IP	６		IP	３		IP	２		IP	４		IP

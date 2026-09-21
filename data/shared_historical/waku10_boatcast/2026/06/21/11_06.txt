@@ -1,0 +1,8 @@
+data=
+1	0
+大西　　隆洋	5.30	0.14	3.5	１		IP	５		IP	３		IP	４		IP	２		IP	６	2	IP	２		IP	５		IP	４		IP	２		IP
+岡部　　貴司	6.40	0.18	2.4	１		IP	３		IP	４		IP	１		IP	２		IP	３		IP	４		IP	３		IP	４		IP	３		IP
+三原　　　司	4.30	0.17	4.0	４		IP	３	2	IP	５		IP	５		IP	５	2	IP	４		IP	２		G3	３		G3	６		IP	２		IP
+近江　　翔吾	6.00	0.15	3.8	２		IP	２		IP	５		IP	２		IP	３		IP	２		IP	６		G1	２		G1	６		IP	３		IP
+森　　晋太郎	3.20	0.12	1.9	３		IP	６	6	IP	６		IP	４	6	IP	４		IP	４		IP	４		IP	４		IP	５		IP	５		IP
+田中　　　結	1.40	0.18	4.0	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	５		IP

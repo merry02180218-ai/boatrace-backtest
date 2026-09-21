@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　宗弘	5.10	0.16	3.2	１		IP	２		IP	５		IP	５		IP	１		IP	４		IP	６		IP	４		IP	４		IP	３		IP
+本岡　　勝利	3.50	0.19	4.5	５		IP	５		IP	４		IP	５		IP	２		IP	５		IP	２		IP	５		IP	４		IP	６		IP
+森永　　　隆	7.00	0.17	3.0	２		IP	２		IP	２		IP	３		IP	１		IP	２		IP	２	4	IP	６		IP	２		IP	４		IP
+大西　　隆洋	3.10	0.18	3.6	３		IP	４		IP	５		IP	４		IP	２	5	IP	５		IP	６	5	IP	６		IP	５		IP	６		IP
+出畑　　孝成	5.60	0.18	2.8	３		IP	２		IP	４		IP	３		IP	４		IP	１		IP	５	6	IP	２		IP	３	4	IP	５		IP
+中村　　日向	5.70	0.10	2.8	１		IP	３		IP	２	5	IP	２		IP	４		IP	５		G1	４		SG	３		G1	６		G1	５		G1

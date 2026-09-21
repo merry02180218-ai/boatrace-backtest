@@ -1,0 +1,8 @@
+data=
+1	0
+畔柳　　俊吾	6.60	0.25	4.6	４		IP	５		IP	１		IP	２		IP	２		IP	１		IP	３		IP	２		IP	３		IP	４		IP
+池田　　浩二	7.00	0.11	3.0	２		G1	６		G1	４		SG	２		G1	３		G1	２		G1	３		G1	２		G1	３		G1	４		G1
+中村　　駿平	2.90	0.18	2.9	５		IP	６		IP	４		IP	２		IP	６		IP	２		IP	６		IP	５		IP	６		IP	６	6	IP
+鈴木　　茂高	3.70	0.20	4.4	４		IP	２		IP	５		IP	５		IP	４		IP	４		IP	３		IP	４		IP	５		G3	６		IP
+古川　　誠之	4.00	0.15	3.8	３		IP	５		IP	３		IP	２		IP	６		IP	３		IP	６		IP	３		IP	５		IP	５	6	IP
+高野　　心吾	1.40	0.22	5.0	６		IP	４	5	IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

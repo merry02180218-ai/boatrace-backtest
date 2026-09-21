@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　昂明	10.00	0.14	2.8	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+黒田　　誠司	2.70	0.24	4.5	６		IP	５		IP	６		IP	２		IP	６		IP	４		IP	３		IP	５		IP	６		IP	６		IP
+香月　　大輝	7.43	0.15	2.3	２		IP	１		IP	３		IP	１		IP	１		IP	３		IP	５		IP									IP
+梶野　　学志	6.10	0.18	3.7	３		IP	２		IP	３		IP	２		IP	１		IP	６		IP	２		IP	４		IP	４		IP	３		G3
+田中　　和也	7.10	0.21	4.2	３		IP	３	4	IP	２		IP	２		IP	２	2	IP	２		IP	３		IP	５		IP	３	4	IP	１		IP
+石川　　　諒	3.50	0.14	2.4	６		IP	３		IP	５		IP	５		IP	６		IP	３		IP	２	5	IP	６		IP	３		IP	５		IP

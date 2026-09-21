@@ -1,0 +1,8 @@
+data=
+1	0
+大場　　　敏	8.90	0.15	1.6	１		IP	１		IP	６		IP	２		G3	１		G3	１		IP	１		IP	１		IP	１		IP	１		IP
+権藤　　俊光	5.60	0.14	3.2	６		IP	３		IP	１		G2	６		G2	５		IP	１		IP	４		IP	１		IP	２		IP	６		G1
+川原　　祐明	6.20	0.14	2.8	３		IP	１		IP	５		IP	５	4	IP	１		IP	３		IP	１		IP	４		IP	４		IP	２		IP
+平野　　和明	5.60	0.18	4.0	３		IP	４		IP	２		IP	３		G3	４		G3	２		IP	３		IP	４		IP	５		IP	２		IP
+林　　　祐介	3.60	0.12	2.9	４		IP	６		IP	５		IP	５		IP	３		IP	６		IP	４		IP	２	4	IP	５		IP	４		IP
+上野　　秀和	3.40	0.16	3.9	６		IP	３		IP	６		IP	４	5	IP	５		IP	５		IP	３		IP	６		IP	６		G3	１	5	IP

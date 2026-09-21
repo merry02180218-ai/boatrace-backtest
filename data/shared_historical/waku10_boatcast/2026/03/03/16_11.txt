@@ -1,0 +1,8 @@
+data=
+1	0
+松井　　　繁	9.20	0.16	3.9	１		G1	２		G1	２		IP	１		G1	１		G1	５		IP	２		SG	２		G1	１		G1	１		IP
+大峯　　　豊	7.90	0.16	3.8	２		IP	２		IP	４		G1	５		G2	２		IP	３		IP	１		SG	１		SG	２		G1	３		SG
+藤原　　碧生	5.50	0.13	2.7	５		G1	５		G1	２		IP	２		G1	５		G1	２		IP	６		G1	２		G1	２		G3	６	4	G1
+山口　　　剛	6.60	0.13	2.8	４		G1	２		G1	４		G1	３		G1	１		IP	３		SG	５	6	G1	２		SG	３		G1	６	3	G1
+豊田　健士郎	5.50	0.13	3.7	２		IP	３		IP	３		G1	５		IP	３		G2	３		IP	５		SG	５		G1	２		IP	４		IP
+河合　　佑樹	5.50	0.18	3.8	３	5	G1	４		G1	６		G1	４		IP	２	5	IP	６		G1	１	5	IP	４		SG	４	5	SG	４		G1

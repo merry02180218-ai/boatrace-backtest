@@ -1,0 +1,8 @@
+data=
+1	0
+黒澤　めぐみ	6.30	0.16	3.3	４	2	IP	１		IP	５		IP	２		IP	６		G3	１		IP	１		IP	Ｆ		IP	２		G3	２		G3
+渡　　　修平	4.70	0.22	4.0	４		IP	３		IP	２		IP	３	3	IP	６		IP	５		IP	１	5	IP	５		IP	５		IP	３		IP
+森作　　広大	5.30	0.18	2.7	２		IP	４		IP	２		IP	６		IP	５		IP	３		IP	３		IP	１		IP	３		IP	５	5	IP
+湯川　　浩司	5.90	0.12	3.1	３		IP	３		G1	６		G1	５		G1	２		G1	２	3	G1	５		G1	３		G1	４		IP	２		IP
+中北　　将史	2.60	0.16	3.2	６		IP	５		IP	３		IP	５		IP	５		IP	６		IP	５		IP	４		IP	５		IP	４		IP
+石原　　　光	3.10	0.21	4.4	２		IP	６		IP	６		IP	６		IP	３		IP	３		IP	５		IP	４		IP	６		IP	６		IP

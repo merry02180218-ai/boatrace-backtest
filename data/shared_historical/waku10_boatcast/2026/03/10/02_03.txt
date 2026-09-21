@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　龍治	7.60	0.18	2.8	１		IP	１		IP	４		IP	１		IP	２		IP	４		IP	２		IP	１		IP	１		IP	５		IP
+安河内鈴之介	7.11	0.12	2.5	１		IP	１		IP	３		IP	１	3	IP	３		IP	６		IP	３		IP	２		IP	３		IP	転		IP
+小川　竜太朗	5.78	0.15	2.9	４		IP	２		IP	４		IP	３		IP	４	4	IP	欠		IP	３		IP	３		IP	２		IP	３		IP
+若林　　義人	6.90	0.10	1.9	６		IP	３		IP	１		IP	１		IP	６		G1	１		IP	２		IP	１		IP	３		IP	３		IP
+成貞　　琳平	3.20	0.23	4.7	５		IP	４	4	IP	５		IP	６		IP	５		IP	６		IP	２		IP	３		IP	５	6	IP	４		IP
+富永　夏哉人	3.70	0.19	4.2	５		G3	５		IP	３		IP	５		IP	４		IP	５		IP	６	5	IP	５		IP	２	5	IP	２		IP

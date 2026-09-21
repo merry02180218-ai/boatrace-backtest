@@ -1,0 +1,8 @@
+data=
+1	0
+竹間　　隆晟	7.10	0.14	2.3	１		IP	１		IP	２		IP	１		G1	１		IP	４		IP	５		IP	５		IP	１		IP	４		IP
+高山　　弘斗	4.10	0.14	3.6	５		IP	６		IP	２		IP	３		IP	１		IP	６		IP	５		IP	２		IP	５		IP	６		IP
+川原　　　涼	6.80	0.16	3.3	５		IP	３		IP	２		IP	５		IP	１		IP	２		IP	１		IP	３	4	IP	２		IP	２		IP
+富永　夏哉人	3.20	0.17	4.2	３		G3	５		G3	５		G3	５		IP	５		IP	３		IP	６		IP	３	5	IP	４		IP	６		IP
+福西　広太郎	4.20	0.12	2.8	２		IP	４		IP	３		IP	４	6	IP	５		IP	６	4	IP	６	6	IP	５	6	IP	２		IP	３		IP
+高橋　　龍治	3.20	0.17	4.5	６		IP	６		IP	４		IP	３		IP	３		IP	５		IP	６		IP	５		IP	６		IP	２		IP

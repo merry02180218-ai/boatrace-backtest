@@ -1,0 +1,8 @@
+data=
+1	0
+和田　　操拓	6.90	0.11	2.6	１		IP	１		IP	６		IP	１		IP	１		IP	２		IP	４		IP	１		IP	５		IP	４	2	IP
+鈴木　　峻佑	3.20	0.15	3.8	５		IP	５		IP	３		IP	４		IP	４		IP	６		IP	５		IP	６		IP	２		IP	５		IP
+三浦　　裕貴	5.20	0.18	3.8	１		IP	２		IP	３	4	IP	５		IP	６		IP	３		IP	６		IP	２		IP	２		IP	５		IP
+品田　　直樹	5.30	0.18	3.6	２		IP	５		IP	３		IP	５	3	IP	４		IP	２		IP	２		IP	２	3	IP	３		IP	６		IP
+飯山　　晃三	5.30	0.24	4.8	６	6	IP	２		IP	２		IP	３		IP	３		IP	３		IP	２	4	IP	６		IP	６		IP	２		IP
+中村　　辰也	5.20	0.17	3.1	４		IP	３		IP	１		IP	６		IP	６	5	IP	２	5	IP	４	5	IP	３		IP	３		IP	４		IP

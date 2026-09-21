@@ -1,0 +1,8 @@
+data=
+1	0
+北野　　輝季	9.40	0.17	3.2	４		IP	１		IP	１		IP	１		IP	１		G1	１		G1	１		IP	２		IP	１		IP	１		IP
+鈴木　　雅希	4.70	0.19	4.3	５		IP	２		IP	５	3	IP	６		IP	５		IP	３		IP	５		IP	３		IP	１		IP	２		G3
+金子　　賢志	6.30	0.13	1.8	３		IP	４		IP	５		IP	５		IP	３		G1	２		IP	１		IP	２		IP	２		IP	２		IP
+渡邉　　睦広	3.90	0.16	3.0	６		IP	４		IP	２		IP	６		G3	６		G3	６		IP	１		IP	４		IP	６	5	IP	２		IP
+一色　　颯輝	5.50	0.18	2.9	３		IP	２		IP	６	6	IP	２		IP	１		IP	２		IP	５		IP	４		IP	２		IP	エ		IP
+山崎　　裕司	2.50	0.18	4.7	５	5	IP	６		IP	４		IP	５		IP	５		IP	６		IP	５		IP	４		IP	４		IP	６		G3

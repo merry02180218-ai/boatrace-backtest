@@ -1,0 +1,8 @@
+data=
+1	0
+前原　　　哉	5.60	0.13	3.2	３		IP	４		IP	６		IP	１		IP	２		IP	Ｆ		IP	６		IP	１		IP	１		IP	３		IP
+金田　　幸子	5.60	0.17	3.4	２		IP	４		IP	１		G3	２		G3	３		IP	１		IP	４		IP	６		IP	４		IP	６		IP
+福嶋　　智之	6.60	0.16	2.0	２		IP	２		IP	５		IP	４		IP	４		IP	３		IP	２		IP	１		IP	１		IP	３		IP
+木山　　大聖	2.80	0.22	4.2	２		IP	６		IP	６		IP	６		IP	５		IP	４	5	IP	５		IP	３		IP	５		IP	６		IP
+山地　　正樹	6.50	0.16	3.4	２	2	IP	２	3	IP	１	2	IP	５	2	IP	５	2	IP	１	2	IP	２	2	IP	６		IP	１	2	IP	３	4	IP
+今出　　晋二	2.70	0.21	4.2	５	5	IP	２	5	IP	４	5	IP	５		IP	６		IP	６		IP	６		IP	５		IP	５	5	IP	４	5	IP

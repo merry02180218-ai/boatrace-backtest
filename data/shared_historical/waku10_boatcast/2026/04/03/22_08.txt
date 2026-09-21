@@ -1,0 +1,8 @@
+data=
+1	0
+南　　　彩寧	4.90	0.26	3.9	５		IP	２		IP	５		IP	２		G3	４		G3	１		IP	６		IP	１		IP	５		IP	５		IP
+大石　　真央	6.20	0.21	2.8	３		IP	２		IP	１		IP	６		IP	３		IP	１		IP	３		IP	４		IP	６		IP	１		IP
+山川　美由紀	5.10	0.15	2.0	１		IP	２		G3	５		G3	５		G1	１		G3	６		G3	３		G3	４		IP	６		G3	３	4	G3
+真子　奈津実	3.40	0.14	2.8	４		IP	４		IP	５		IP	６		IP	３		IP	３		IP	６		IP	５		IP	５		IP	３		IP
+高憧　　四季	4.60	0.15	2.8	３		IP	１		IP	４		G3	５		G3	４		G1	５	6	IP	６		IP	４		G1	６	4	G1	３		G3
+内山　　七海	5.00	0.16	3.1	３		IP	２		IP	３		IP	４		IP	３	5	IP	２		IP	３		IP	５		IP	５		IP	５		G3

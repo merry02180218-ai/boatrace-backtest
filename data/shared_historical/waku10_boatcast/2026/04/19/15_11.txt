@@ -1,0 +1,8 @@
+data=
+1	0
+長尾　　章平	8.00	0.15	2.2	６		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP
+柳沢　　　一	7.50	0.16	3.4	２		IP	２		IP	３		IP	４		IP	５		G1	１		G1	３	3	IP	１		IP	２		G1	２		G1
+森定　　晃史	6.30	0.16	3.1	２		IP	４		IP	１		IP	２		IP	４		IP	３		IP	４		IP	３		IP	２		IP	５		IP
+門間　　雄大	5.20	0.14	3.0	３		IP	４		IP	１		IP	４		IP	６		IP	１	5	IP	３		IP	６		IP	２		IP	５		G3
+水摩　　　敦	4.60	0.19	3.1	５		IP	４		IP	４		IP	５		IP	６		G3	１	4	G3	２	2	IP	６	6	IP	３		IP	３	4	IP
+宮地　　秀祈	2.70	0.23	4.1	４		IP	５		IP	６		IP	５		IP	６		IP	３		IP	５		IP	２		IP	６		IP	失		IP

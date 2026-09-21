@@ -1,0 +1,8 @@
+data=
+1	0
+櫻井　　　優	8.80	0.16	3.2	２		IP	２		IP	３		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+中曽　　瑠華	3.80	0.22	3.8	６		IP	２		IP	４		IP	４		IP	３		IP	３		IP	５		IP	６		IP	４		G3	５		G3
+柳瀬　　幹太	5.70	0.19	3.2	１		IP	３		IP	２		G3	４		G3	５	4	IP	１		IP	６		IP	３		IP	５		IP	２		IP
+赤岩　　善生	7.50	0.18	3.3	１	3	IP	１	3	IP	１		IP	６		G1	３	2	IP	２	2	IP	２	3	IP	１	1	IP	３	2	G1	４	2	IP
+原　　　豊土	5.90	0.16	2.9	４		IP	６	6	IP	２		IP	４		IP	３		IP	１		IP	２		IP	４		IP	３		IP	２		IP
+川崎　　誠志	3.30	0.24	4.6	４	5	IP	５		IP	４		IP	４		IP	６		IP	６		IP	４		IP	６		IP	３		IP	３		IP

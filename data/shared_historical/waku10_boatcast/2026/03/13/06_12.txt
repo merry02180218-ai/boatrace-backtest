@@ -1,0 +1,8 @@
+data=
+1	0
+赤岩　　善生	8.90	0.16	2.8	１		IP	５		IP	１		IP	３		G1	２		G1	１		IP	１		G1	１		IP	１		IP	１		IP
+松浦　　　勝	4.20	0.19	3.6	６		IP	２		IP	５		IP	５		IP	５		IP	３		IP	２		IP	４		IP	２		IP	６		IP
+金子　　拓矢	7.10	0.13	2.9	１		IP	２		IP	１		IP	６	2	IP	４		IP	１		IP	１		IP	３		IP	４		IP	２		IP
+柘植　　政浩	5.90	0.16	3.8	２		IP	４		IP	５		IP	５		G2	３		G2	３		IP	５		IP	２		IP	１		IP	２		IP
+小池　　礼乃	3.70	0.18	3.2	３	4	IP	６	3	IP	３		IP	４		IP	６		IP	５		G3	３		IP	４		IP	３		IP	６		IP
+須藤　　博倫	3.40	0.19	3.4	４		IP	４	5	IP	６		IP	４		IP	６		IP	５		G2	４		IP	６		IP	６		G1	２		G3

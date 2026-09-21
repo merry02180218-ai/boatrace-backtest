@@ -1,0 +1,8 @@
+data=
+1	0
+葛原　　大陽	7.50	0.14	2.7	１		IP	２		IP	２		IP	２		IP	２		IP	３		IP	３		IP	１		IP	１		IP	６		IP
+山口　　晃朋	5.90	0.16	4.1	６		IP	４		IP	１		IP	４	4	IP	４	3	IP	２		IP	２		IP	２		IP	４		IP	２	4	IP
+堀越　　雄貴	7.20	0.19	3.9	４		IP	１		IP	２		IP	５		IP	３		IP	４		IP	２		IP	１		IP	１		IP	１		IP
+中島　　浩哉	3.22	0.14	3.0	５	6	IP	６		IP	５		IP	３		IP	６		IP	５		IP	６		G3	３		IP	転	5	IP	２		IP
+田中　　和也	7.20	0.16	3.0	３	2	IP	３		IP	２		IP	３		IP	２		IP	２	4	IP	３	4	IP	３		IP	１	1	IP	３		IP
+川島　　拓郎	3.10	0.18	3.7	６		IP	３		IP	５		G3	５		IP	４		IP	４		IP	３		IP	６		IP	６		IP	４		IP

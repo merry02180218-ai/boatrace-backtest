@@ -1,0 +1,8 @@
+data=
+1	0
+清水　　攻二	8.40	0.14	2.3	１		IP	２		IP	２		IP	１		IP	１		IP	３		IP	３		IP	２		IP	２		IP	１		IP
+橋本　　年光	4.40	0.15	3.2	５		IP	４		IP	４		IP	２		IP	４		IP	２		IP	６		IP	２		IP	４		IP	６		IP
+郷原　　章平	7.80	0.14	1.3	４		IP	１		IP	１		IP	２		IP	２		IP	３		IP	１		IP	１		IP	４		G3	２		G3
+武藤　　綾子	3.10	0.17	3.5	６		IP	５		G3	５		IP	５		IP	５		IP	３		IP	５		G3	３		IP	５		IP	３		IP
+水口　　由紀	2.20	0.25	4.6	４		IP	６		IP	４		IP	６		G3	５		G3	６		IP	５		IP	６		IP	４		IP	５		G3
+高橋　　真吾	1.90	0.14	3.5	６		IP	６		IP	６		IP	３		IP	６		IP	５		IP	６		IP	６		IP	６		G3	４		G3

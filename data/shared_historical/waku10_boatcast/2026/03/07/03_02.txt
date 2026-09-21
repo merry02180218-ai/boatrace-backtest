@@ -1,0 +1,8 @@
+data=
+1	0
+桑原　　　啓	6.90	0.17	4.4	１		IP	４		IP	２		IP	２		IP	４		IP	２		IP	６		IP	１		IP	３		IP	１	2	IP
+菊池　　宏志	3.00	0.17	3.2	４		G3	５		IP	５		IP	６		IP	３		G3	５		G3	６		IP	６		G3	１		G3	６		IP
+森　　　智哉	5.10	0.15	2.9	３		IP	４		IP	２		IP	４		IP	３		IP	１		IP	６		IP	３		IP	５	4	IP	４		IP
+上原　　　崚	3.50	0.13	3.0	６		IP	４		G2	２		IP	４	5	IP	６		IP	４		IP	３		IP	５		IP	６		G2	６		G2
+井田　　涼介	1.40	0.25	4.5	６		IP	４		IP	６		IP	６		IP	６	6	IP	５		IP	５	4	IP	６	6	IP	落		IP	６	4	IP
+大久保信一郎	2.80	0.18	3.8	５		IP	５		IP	４		IP	４		IP	５		IP	５		IP	６		IP	６	5	IP	３		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+数原　　　魁	7.10	0.16	3.1	５		IP	１		IP	３		IP	６		IP	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP
+横井　　健太	5.40	0.17	3.8	２		IP	５		IP	５		IP	３		IP	２		IP	４		IP	５		IP	４	3	IP	１	3	IP	２		IP
+吉川　　晴人	4.00	0.17	3.1	５		IP	６		IP	５		IP	５		IP	３		IP	４		IP	５		IP	１		IP	１		IP	６		IP
+岩崎　　麗子	2.40	0.16	3.9	５		IP	６		IP	６		IP	５		G3	４	3	G3	６		IP	Ｆ	5	G3	６		G3	４		G3	２		IP
+守屋　　大地	3.00	0.14	3.2	５		G3	３		IP	６	6	IP	６		IP	４		IP	５		IP	５		IP	４		IP	４		IP	４		IP
+市川　　瑚幸	1.40	0.20	4.0	６		IP	６		IP	５	5	IP	６		IP	６		IP	５		IP	６		IP	５		IP	５		IP	６		IP

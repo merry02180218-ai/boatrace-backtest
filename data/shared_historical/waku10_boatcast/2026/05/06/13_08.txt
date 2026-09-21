@@ -1,0 +1,8 @@
+data=
+1	0
+山下　　大輝	8.30	0.17	3.9	１		IP	１		IP	６		G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	Ｆ		IP
+南　　　彩寧	3.50	0.18	3.3	３		IP	６		IP	５		IP	５		IP	３		IP	２		IP	３		IP	６		IP	５		IP	６		IP
+中嶋　　達也	3.33	0.16	3.8	５		IP	転	4	IP	４	4	IP	５		IP	５		IP	６		IP	５		IP	２		IP	６		IP	２		IP
+古結　　　宏	6.80	0.13	3.2	４		G1	１		G1	５	3	G1	３		IP	２		G1	４		IP	１		IP	５		G1	３		G1	１	3	IP
+安田　　政彦	3.70	0.21	4.7	４		G3	４		IP	５		IP	５	6	IP	４		IP	２	4	IP	５		IP	３		IP	４		IP	６		IP
+宮田　　龍馬	4.80	0.17	4.2	３		IP	３		IP	４		IP	３		IP	４		IP	３		IP	５		IP	３		G3	３		G3	６		G1

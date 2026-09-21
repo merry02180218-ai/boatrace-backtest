@@ -1,0 +1,8 @@
+data=
+1	0
+荻野　　裕介	6.00	0.21	3.7	３		IP	１		IP	６	2	IP	１		IP	１		IP	２		IP	５		IP	６		IP	３		IP	３		IP
+植木　　美帆	2.40	0.21	3.9	５		IP	６		IP	６		IP	２	3	IP	Ｆ		IP	４		IP	６	3	IP	４		G3	６		IP	５		IP
+深山　　祐二	5.00	0.19	3.8	２		IP	６		IP	３		IP	５		IP	３		IP	６		IP	２		IP	４		IP	２		IP	３		IP
+鳥飼　　　眞	6.22	0.19	3.1	１		IP	１		IP	４		IP	４		IP	３		IP	転		IP	２	2	IP	４		IP	３		IP	４	3	IP
+伊藤　　紘章	4.50	0.26	4.5	３		IP	３		IP	３		IP	４		IP	５		IP	２		IP	６		IP	３		IP	５	6	IP	４	6	IP
+榎　　　幸司	4.40	0.26	5.1	２		IP	４		IP	５		IP	２		IP	３		IP	５		IP	３		IP	４		IP	５		IP	５		IP

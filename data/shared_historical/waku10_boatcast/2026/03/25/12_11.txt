@@ -1,0 +1,8 @@
+data=
+1	0
+稲田　　浩二	9.90	0.13	2.4	１		G1	１		G1	１		G1	３		G1	３		G1	１		G1	１		IP	１		IP	１		IP	１		IP
+竹田　　和哉	8.40	0.13	2.6	２		IP	３		IP	１		IP	２		G1	２		G1	３		IP	２		IP	２		IP	１		IP	１		IP
+赤羽　　克也	6.30	0.16	3.1	２		IP	２		IP	５		IP	３		IP	６		IP	１		IP	３		IP	１		IP	１		IP	５		IP
+長田　　頼宗	4.30	0.16	4.0	６		G1	４		G1	６		G1	４		G1	５		G1	４		G1	５		G1	５		IP	３		IP	３		SG
+秋山　　広一	5.00	0.20	4.6	３	4	IP	５		G1	３		IP	１		IP	２		IP	５		IP	５	6	IP	３		IP	３		IP	６		IP
+丸尾　　義孝	4.90	0.14	2.7	６		IP	２		IP	２	5	IP	３		IP	４		IP	３		G1	３		G1	４		IP	５	5	IP	５		IP

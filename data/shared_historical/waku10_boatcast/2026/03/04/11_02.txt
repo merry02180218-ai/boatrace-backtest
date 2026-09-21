@@ -1,0 +1,8 @@
+data=
+1	0
+深尾　　巴恵	7.20	0.22	3.7	６		IP	４		IP	３		IP	１		IP	１		G3	１		G3	１		G3	１		G3	１		G3	６		G3
+佐藤　ほのか	6.00	0.21	3.5	５		G3	４		IP	２		G3	３		G3	４		IP	３		IP	１		IP	４		IP	２		G3	２		G3
+嶋田　　有里	3.30	0.19	4.3	４		IP	４		IP	５		IP	６		IP	３		IP	５		IP	３		IP	５		IP	５	4	IP	４		IP
+中川　　りな	5.80	0.19	3.1	２		IP	３		IP	６		IP	１	6	IP	１		IP	４		G3	３		IP	３		G3	３		G3	６		G3
+野田部　宏子	5.00	0.09	2.0	４		IP	５		IP	１		IP	２		IP	５	6	IP	４	6	IP	３		IP	４	4	IP	５		IP	２		IP
+志賀　　美優	2.00	0.18	3.9	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	４		IP	６		IP	３		IP

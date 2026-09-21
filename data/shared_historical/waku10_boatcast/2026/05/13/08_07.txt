@@ -1,0 +1,8 @@
+data=
+1	0
+倉田　　茂将	6.10	0.14	3.6	４		IP	２		IP	６		IP	１		IP	５		IP	２		IP	２		IP	１		IP	５		IP	２		IP
+吉武　　真也	4.80	0.17	3.1	５		IP	２		IP	３		IP	２		IP	２		IP	３		IP	５		IP	５		IP	４		IP	５		IP
+鈴木　　智啓	4.80	0.20	4.0	５		IP	３		IP	４		IP	５		IP	エ		IP	３		IP	３		IP	３		IP	２	2	IP	２		IP
+松尾　　　拓	4.60	0.16	3.8	６	5	IP	２		IP	２		IP	４		IP	５		IP	４		G1	３		IP	４		G1	３		IP	６		IP
+鈴木　　柊介	2.60	0.13	2.6	５		IP	５		IP	６		IP	６		IP	５	6	IP	３	6	IP	６		IP	４		IP	３		IP	６		IP
+佐竹　　友樹	2.90	0.18	4.4	５	5	IP	６		IP	５		IP	６		IP	４	5	IP	２		IP	６		IP	４		IP	４		IP	５		IP

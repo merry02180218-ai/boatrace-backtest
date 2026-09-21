@@ -1,0 +1,8 @@
+data=
+1	0
+川口　　貴久	6.80	0.16	2.6	１		IP	１		IP	３		IP	１		IP	１		IP	２		IP	４		IP	６		IP	６		IP	２		IP
+安田　　政彦	5.10	0.20	4.5	６		IP	４		IP	３		IP	４		IP	４		IP	２		IP	３		IP	２		IP	４		IP	３		IP
+安井　　瑞紀	5.90	0.16	3.8	５		IP	６		IP	５		IP	３		IP	３		IP	２		IP	１		IP	３		IP	１		G3	２		IP
+國崎　　良春	3.40	0.21	3.9	２	3	IP	６		IP	４		IP	２		IP	６		IP	５		IP	５		IP	６		IP	３		G3	６		G3
+篠田　　優也	5.80	0.16	4.2	２		IP	３		IP	２		IP	２		IP	５		IP	３		G3	５		IP	３		IP	２		IP	４	4	IP
+市川　　瑚幸	1.10	0.25	5.5	６		IP	６		G3	６		G3	６		G3	６		G3	６		G3	６		G3	６		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+原　　　豊土	9.40	0.18	2.8	３		G3	１		G3	１		G3	１		G3	１		G3	１		IP	１		IP	１		IP	２		IP	１		IP
+堀越　　雄貴	3.70	0.19	4.6	６		G3	６		IP	３		IP	３		IP	３		IP	４		IP	６		IP	５		IP	３		IP	５		IP
+真庭　　明志	5.40	0.16	3.0	５	2	G3	５		IP	３		IP	６		IP	３		IP	２		IP	１		IP	６		IP	１		IP	２		IP
+末永　　祐輝	5.10	0.12	2.3	３		G3	２		G3	５		IP	６		IP	２		IP	３		IP	４	6	IP	３		IP	２		IP	５		IP
+尾崎　　雄二	4.10	0.15	3.4	６		G3	４		IP	６		IP	６		IP	４		IP	１		IP	４		IP	４		IP	２		IP	４		IP
+高橋　　　勲	4.20	0.16	3.1	６	4	G3	５	5	IP	４	4	IP	５	4	G3	６	5	IP	２		IP	２		IP	３		IP	３	5	IP	５	4	IP

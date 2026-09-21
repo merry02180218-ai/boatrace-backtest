@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　一輝	8.80	0.13	3.3	２		IP	３		IP	３		IP	１		IP	４		IP	１		IP	１		IP	１		G1	１		G1	１		IP
+西岡　　顕心	8.00	0.12	3.0	１		G2	５		IP	１		G1	２		G1	２		G2	２		G2	２		G1	６		G1	４		G1	１		G1
+湯川　　浩司	5.60	0.18	4.6	１		G2	２		IP	４		IP	６		G1	３		G1	６		G1	４		G1	４	1	G1	４		G1	３		G1
+須藤　　博倫	5.50	0.15	3.3	３		G2	１		IP	３		IP	２		IP	５		IP	５		IP	３		IP	３		IP	５		IP	３		IP
+鳥居塚　孝博	5.90	0.13	2.7	５		G2	３		IP	３		IP	２		IP	４		IP	１		IP	６		IP	１		IP	６		IP	１		IP
+杉山　　正樹	4.60	0.15	4.0	４		G2	６		IP	２		G1	５		IP	４		IP	４		G1	４		G3	２		G3	３		IP	５		IP

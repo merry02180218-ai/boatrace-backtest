@@ -1,0 +1,8 @@
+data=
+1	0
+市川　　美宏	4.50	0.18	3.2	６		IP	４		IP	２		IP	５		IP	２		IP	３		IP	６		IP	６		IP	４		IP	１		IP
+内堀　　　学	6.70	0.12	2.6	２		IP	３		IP	２		IP	２		IP	３		IP	４		IP	３		IP	３		IP	２		IP	３		IP
+滝沢　　　崚	4.50	0.16	3.3	３		IP	６	5	IP	６		IP	６		IP	５	5	IP	４		IP	３		IP	２		IP	３		IP	１	4	IP
+戸塚　　邦好	6.10	0.13	2.7	２	5	G3	３		G3	１		IP	６		IP	４		IP	２		IP	２		IP	４		IP	３		IP	４		IP
+伊藤　　雄二	1.80	0.18	3.9	３		G3	６		G3	６		G3	６		IP	５		IP	５		IP	５	6	IP	６		IP	６	6	IP	６	6	IP
+富山　　弘幸	3.90	0.18	2.7	２	5	G3	１		IP	５		IP	３		IP	４		IP	４		IP	６		IP	５		IP	６	4	IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+森　　　貴洋	7.60	0.18	3.2	２		IP	５		IP	１		IP	１		IP	１		IP	１		IP	２		IP	３		IP	１		IP	５		IP
+大谷　　直弘	6.70	0.19	3.7	３		IP	２		IP	２		IP	２		IP	４		IP	１		IP	４		IP	６		IP	２		IP	１		IP
+飯山　　　泰	5.70	0.14	2.8	５		G1	４		G1	６		G1	６		IP	４		IP	３		IP	１		IP	２		IP	２		IP	１		IP
+宮迫　　暢彦	3.70	0.18	3.9	３		IP	６		IP	３		IP	４		IP	５		IP	５		IP	６		G3	２	5	G3	６		IP	３		IP
+中村　　裕将	3.60	0.11	2.7	６		IP	２		IP	５		IP	４		IP	５		IP	４		IP	５		IP	６		G3	３	4	IP	３		IP
+平石　　和男	4.10	0.23	5.2	３		IP	６		IP	６		IP	４		IP	４		IP	２	5	IP	６		IP	３		IP	３		IP	５		IP

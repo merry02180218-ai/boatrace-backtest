@@ -1,0 +1,8 @@
+data=
+1	0
+中尾　　優香	7.40	0.19	4.2	１		G3	１		G3	１		IP	５	2	IP	１		IP	３		IP	５		IP	１		IP	４		IP	１		IP
+岡部　　　浩	5.90	0.19	2.6	３		IP	３		IP	６		IP	２		IP	２		IP	４	3	IP	５		IP	１		IP	２		IP	３		IP
+佐藤　謙史朗	5.10	0.18	4.0	２		IP	６		IP	３		IP	３		IP	４		IP	４		IP	３		IP	４		IP	２		IP	４		IP
+長尾　　章平	7.00	0.14	3.1	３		IP	４		IP	２		IP	１		IP	２		IP	２		IP	４		IP	３		IP	３		IP	１		IP
+春園　　功太	5.40	0.15	2.4	５		IP	３		G3	６		G3	３		IP	２		IP	２		IP	６		IP	２		IP	２		IP	３		IP
+川口　　貴久	4.50	0.12	2.2	４		IP	４		IP	１		IP	４		IP	５		IP	５		IP	３		IP	３		IP	６		IP	４		IP

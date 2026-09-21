@@ -1,0 +1,8 @@
+data=
+1	0
+浦田　　晃嗣	8.00	0.12	2.3	１		IP	１		IP	２		IP	５		IP	１		IP	５		IP	１		IP	１		IP	２		IP	１		IP
+小坂　　宗司	7.80	0.15	3.7	３		IP	２		IP	２		IP	１		IP	１		IP	５		IP	２		IP	１		IP	１		IP	３		IP
+上野　　拓馬	3.80	0.17	2.9	４		IP	５		IP	６		IP	４		IP	３		IP	５		IP	４		IP	２		IP	３		IP	６		IP
+清水　　攻二	6.60	0.15	3.3	２		IP	１	2	IP	５		IP	５	2	IP	２		IP	１		IP	落		IP	２		IP	１		G3	２		G3
+宮崎　　奏磨	2.50	0.15	3.4	６		IP	６		IP	５	6	IP	６		IP	６		IP	６		IP	１		IP	６	6	IP	３		IP	６		IP
+松村　　　敏	4.50	0.09	1.7	５		IP	４		IP	２	5	IP	４		IP	３	5	IP	５		IP	３	5	IP	３		IP	３		IP	６		IP

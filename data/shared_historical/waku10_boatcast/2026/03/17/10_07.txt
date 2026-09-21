@@ -1,0 +1,8 @@
+data=
+1	0
+佃　　　來紀	8.30	0.15	3.1	１		G3	１		IP	２		G3	１		G3	１		IP	３		IP	１		IP	１	2	IP	６	2	IP	２		IP
+上野　　拓馬	5.20	0.20	4.2	４		IP	２		IP	２		IP	４		IP	２		IP	２		IP	５		IP	２		IP	６		IP	６		IP
+茶谷　　信次	5.90	0.17	2.6	２		IP	４		IP	３		IP	２		IP	３	4	IP	４		IP	６		IP	３		IP	１		IP	３	4	IP
+平本　　真之	6.80	0.14	2.8	３		G1	３		G1	３		G1	３	2	IP	４		G1	６		G1	４	5	IP	２	5	IP	２		SG	１		SG
+森作　　雄大	3.30	0.12	2.4	５		IP	６		IP	３		IP	６		IP	４		IP	６	6	IP	３		IP	３		IP	４		IP	５		IP
+櫻井　　　隼	1.90	0.31	5.1	６		IP	６		IP	６		IP	４		IP	５		IP	６		IP	５		IP	５		IP	６		IP	４		IP

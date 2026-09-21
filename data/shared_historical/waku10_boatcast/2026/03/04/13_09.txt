@@ -1,0 +1,8 @@
+data=
+1	0
+小坂　　宗司	9.50	0.14	2.8	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP
+土屋　　智則	6.40	0.18	3.3	４		IP	１	1	IP	２		G1	４		G1	４		IP	２		SG	Ｆ	1	G1	１		G1	４		G1	４		SG
+金子　　良昭	5.30	0.20	4.2	５		IP	４		IP	４		IP	２		IP	６		IP	４		IP	２		IP	２		IP	２	2	IP	３		IP
+宮村　　勇哉	6.20	0.18	3.4	５		IP	３		IP	２		IP	１		IP	１		IP	５		IP	１		IP	３		IP	４		IP	４		IP
+野長瀬　正孝	6.44	0.19	2.9	２	4	IP	２	4	IP	４		IP	２	3	IP	２	4	IP	５		IP	２	2	IP	欠		IP	２	4	IP	４	3	IP
+向後　　龍一	3.50	0.19	4.1	４		IP	５		IP	４		IP	６		IP	５		IP	４		IP	５		IP	２		IP	５		IP	３	5	IP

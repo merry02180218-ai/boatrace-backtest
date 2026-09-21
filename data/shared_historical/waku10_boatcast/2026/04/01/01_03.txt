@@ -1,0 +1,8 @@
+data=
+1	0
+牟田　　奨太	8.30	0.13	2.5	１		IP	１		IP	１		IP	１		IP	１		IP	６		IP	３		IP	３		IP	１		IP	１		IP
+大庭　　元明	4.30	0.17	3.4	４		IP	６		IP	３		IP	３		IP	２		IP	５		IP	４		IP	５		IP	５		IP	２		IP
+中里　　昌志	4.20	0.18	4.0	６		IP	３		IP	４		IP	３		IP	３		IP	３		IP	４		IP	４	2	IP	４		IP	６		IP
+山下　　和彦	4.50	0.11	2.9	２		IP	６	6	IP	４		IP	３		IP	５		IP	５		IP	４		IP	２		IP	２		G1	６		IP
+佐藤　　大佑	5.40	0.14	2.3	５		IP	３		IP	１		IP	５		IP	４		IP	５		IP	３		IP	１		IP	４		IP	２		IP
+吉川　　昭男	4.20	0.16	2.9	５	4	IP	４	3	IP	２	3	IP	３	3	IP	５	2	IP	４	3	IP	５	4	IP	４	2	IP	４	1	IP	５	3	IP

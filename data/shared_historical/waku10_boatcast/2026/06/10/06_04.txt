@@ -1,0 +1,8 @@
+data=
+1	0
+松崎　祐太郎	8.60	0.16	2.6	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	３		IP	５		IP	１		IP	１		IP
+塚田　　修二	5.70	0.18	4.1	４		IP	３		IP	５		IP	２		IP	１		IP	３	3	IP	６		IP	３		IP	２		IP	３		IP
+川井　　　萌	5.60	0.21	4.2	３		IP	６		IP	３		IP	４	4	IP	４		IP	４		IP	１		IP	３		G1	４		IP	２		IP
+長畑　　友輔	3.90	0.12	2.7	６		IP	３		IP	６		IP	５		IP	１		IP	３	5	IP	４		IP	５		IP	３		IP	６		IP
+南野　　利騰	4.40	0.13	2.7	４		IP	３		IP	４		IP	５		IP	３	6	IP	３		IP	４		IP	５		IP	３		IP	４		IP
+中川　　海虹	0.89	0.26	5.4	Ｆ	5	IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP			IP

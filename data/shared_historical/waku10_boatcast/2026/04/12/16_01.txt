@@ -1,0 +1,8 @@
+data=
+1	0
+小畑　　実成	6.40	0.19	3.8	３		IP	３		IP	６		IP	２		IP	１		IP	１		IP	４		IP	６		IP	１		IP	２		IP
+佐竹　　友樹	4.90	0.18	3.1	５		IP	３		IP	３		IP	４		IP	１		IP	５		IP	３		IP	２		IP	６		IP	４		IP
+松田　　憲幸	3.60	0.20	4.4	６		G3	５	5	G3	３		IP	６		IP	５		IP	３		IP	５		IP	４		IP	３		IP	３		IP
+酒見　　峻介	4.00	0.17	3.0	１	5	IP	５		IP	５		IP	５		IP	３		IP	４		IP	５		IP	２		IP	Ｆ		IP	５		IP
+高橋　　嗣穏	1.00	0.19	4.0	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	Ｆ	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP
+池上　　隆行	2.80	0.21	3.8	５		IP	３		IP	５	5	IP	５	5	IP	４		IP	５		IP	５	5	IP	４		IP	５		IP	５	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+櫻井　　　優	7.70	0.18	3.9	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	５		IP	６		IP
+坂本　　奈央	5.22	0.24	4.1	１		IP	３		G3	３		IP	４		G3	エ		G3	３		G3	６		G3	４		G3	３		G3	４		IP
+赤坂　　俊輔	5.30	0.12	2.9	１		IP	５		G1	６		G1	３		IP	１		IP	３		G1	３		G1	４		G1	５		IP	６		IP
+西野　　翔太	6.50	0.13	2.2	４		IP	２		IP	１	3	IP	２		IP	６	2	IP	２		IP	３		IP	１	2	IP	２	2	IP	５		IP
+池田　　剛規	3.60	0.12	2.9	４		IP	４		IP	６	6	IP	４		IP	２	3	IP	４		IP	６		IP	４		IP	４		IP	５		IP
+大月　　遊雅	3.00	0.18	4.1	５		IP	５		IP	６		IP	４		IP	３	5	IP	６		IP	５		IP	６		IP	１		IP	６		IP

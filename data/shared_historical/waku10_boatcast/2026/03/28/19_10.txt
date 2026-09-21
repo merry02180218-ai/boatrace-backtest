@@ -1,0 +1,8 @@
+data=
+1	0
+河野　　真也	8.90	0.19	4.4	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		IP	３		IP
+柳瀬　　興志	5.00	0.22	4.3	３		IP	４		IP	１		IP	４		IP	４		IP	３		IP	５		IP	３		IP	４		IP	４		IP
+笠　　　雅雄	5.10	0.20	4.1	３		IP	２		IP	２		IP	５		IP	４	2	IP	５	6	IP	６	4	IP	４		IP	３		IP	１		IP
+入澤　　友治	4.90	0.14	2.4	６		IP	４		IP	４		IP	４		IP	２		IP	１		IP	６		IP	２		IP	２		IP	６		IP
+眞鳥　　康太	2.90	0.23	4.5	６		IP	４	6	IP	５	6	IP	４		IP	２	6	IP	６	6	IP	６	6	IP	４		IP	４		G3	落	6	G3
+石川　　哲秀	3.70	0.14	2.5	５		IP	４		IP	６		IP	５	5	IP	２		IP	５	5	IP	４		IP	５		IP	４		IP	２		IP

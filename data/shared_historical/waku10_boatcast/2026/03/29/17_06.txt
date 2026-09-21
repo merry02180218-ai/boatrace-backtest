@@ -1,0 +1,8 @@
+data=
+1	0
+岩橋　　裕馬	4.90	0.18	4.4	５		G3	３		IP	４		IP	５		IP	３		IP	５		IP	２		IP	６		IP	１		IP	２		IP
+亀山　　雅幸	6.00	0.15	3.6	２		IP	６		IP	４		IP	２		IP	３		IP	２		IP	２		IP	３		IP	６		IP	１		IP
+田村　　　慶	3.89	0.21	4.5	３		IP	６		IP	４		IP	落		IP	５		IP	４		IP	３	5	IP	６	4	IP	１		IP	６		IP
+桂林　　　寛	5.20	0.17	4.2	２		IP	２		IP	２	1	IP	３		IP	５		IP	４		IP	２		IP	４		G3	５		G3	５		G3
+田中　　辰彦	4.80	0.16	3.5	４		IP	４		IP	５		G1	６	6	G1	３		IP	２		IP	１		IP	５		IP	３		IP	６		IP
+内田　　　圭	1.50	0.19	4.2	６		IP	６		IP	５		IP	５		IP	５		IP	６		IP	６		IP	６		IP	５		IP	５		IP

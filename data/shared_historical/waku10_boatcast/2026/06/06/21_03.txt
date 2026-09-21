@@ -1,0 +1,8 @@
+data=
+1	0
+馬場　　　剛	9.67	0.11	1.6	１		IP	１		G2	１		G2	４		G2	欠		IP	１		IP	１		IP	１		IP	１		IP	１		G3
+浦田　　晃嗣	3.20	0.16	3.4	６		IP	５		IP	３		IP	５		IP	４		IP	５		IP	４		IP	６		IP	４		IP	３		IP
+安河内　　健	6.70	0.12	2.5	２		IP	２		IP	１		IP	５		IP	３		IP	２		IP	２		IP	６		G2	１		IP	４		G1
+荒井　　輝年	4.60	0.13	2.8	１	5	IP	４		IP	１		IP	４	3	IP	３	5	IP	２	5	IP	５		IP	転		IP	６		IP	６		IP
+大瀧　明日香	5.10	0.15	2.2	２		IP	５		IP	６		IP	５		IP	２		IP	４		IP	１		IP	３		G3	３		G3	５		IP
+多羅尾　達之	3.70	0.13	2.8	６		IP	４		IP	４	5	IP	３		IP	６		IP	４		IP	４		IP	４		IP	２		IP	６		IP

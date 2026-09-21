@@ -1,0 +1,8 @@
+data=
+1	0
+坪井　　康晴	9.10	0.12	3.1	１		IP	１		G1	６		G1	２		G1	２		G1	１		G1	２		G1	２		G2	１		G2	１		IP
+高橋　　　勲	5.10	0.20	2.8	６		IP	２		IP	１		IP	３		IP	５		IP	４		IP	３		IP	２		IP	３		IP	Ｆ		G3
+石岡　　将太	5.60	0.19	3.9	２		IP	２		IP	５		IP	４		IP	４		IP	４		IP	４		IP	１		IP	５		IP	２		IP
+木田　峰由季	5.56	0.13	2.7	１		IP	４		G3	２		IP	５		IP	１		IP	エ		IP	１		IP	６		IP	６		IP	５		IP
+岩瀬　　裕亮	6.80	0.16	3.9	１		G1	４		G1	５		G1	４		G1	５		G1	２		IP	１		G2	２		G2	３	4	IP	３		IP
+河野　　主樹	2.90	0.16	3.6	５		IP	６		IP	５		G3	４	5	G3	５	5	IP	４		IP	５		IP	５		IP	２		IP	５		IP

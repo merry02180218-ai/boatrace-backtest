@@ -1,0 +1,8 @@
+data=
+1	0
+盛本　　真輔	7.80	0.15	3.0	１		IP	４		IP	１		IP	１		IP	３		IP	１		IP	１		IP	５		IP	３		IP	１		IP
+渡邉　　英児	5.33	0.16	3.6	５		IP	２	1	IP	３		IP	２	3	IP	欠		IP	４		IP	２		IP	３		IP	５		IP	４	1	IP
+品川　二千翔	6.60	0.16	3.3	１		IP	３		IP	１		IP	２	4	IP	６		IP	４		IP	２		IP	３	4	IP	５		IP	１		G2
+西野　　翔太	7.30	0.13	2.4	１		IP	４		IP	２		IP	１	3	IP	２		IP	６	2	IP	２		IP	３		IP	１	2	IP	２	2	IP
+田川　　大貴	4.30	0.13	3.0	２		IP	４		IP	５		IP	２		IP	６		IP	４		IP	１		IP	５		IP	５		IP	５		IP
+藤山　　翔大	4.50	0.20	3.9	５	3	IP	４	2	IP	２	3	IP	４		IP	６	2	IP	４	2	IP	２	2	IP	２	2	IP	４	3	IP	５	3	IP

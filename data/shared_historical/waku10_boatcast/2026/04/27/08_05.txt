@@ -1,0 +1,8 @@
+data=
+1	0
+金山　　立樹	7.40	0.20	3.7	３		IP	２		IP	３		IP	１		IP	３		IP	１		IP	２		IP	１		IP	２		IP	５		IP
+佐口　　達也	6.20	0.18	3.5	２		IP	３		IP	３		IP	１		IP	２		IP	２		IP	２		IP	４		IP	５		IP	５		IP
+中田　　夕貴	5.30	0.14	3.3	３		IP	３		IP	３		IP	２		IP	２		IP	５		G1	５		IP	２		IP	４		IP	５		G3
+福田　　翔吾	4.40	0.13	2.2	３	6	IP	５		IP	６		IP	５		IP	３		IP	５		IP	３		IP	６		IP	２	5	IP	１		IP
+上田　　龍星	4.60	0.15	3.8	転	2	IP	３		G1	４		G1	１	4	SG	５		IP	２		G1	妨		G2	５		G2	４		IP	４		IP
+土屋　　太朗	3.30	0.17	3.8	４	5	G3	３		G3	５		IP	４		IP	５		IP	５	5	IP	６	4	IP	４		IP	５	5	IP	３	4	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+桂林　　　寛	5.10	0.18	4.6	２		IP	１		IP	６		IP	４		IP	５		IP	２		IP	３		G3	２		IP	５		IP	５		IP
+鈴木　　智啓	6.00	0.18	4.1	２		IP	２		IP	１		IP	２		IP	３		IP	４		IP	４		IP	２		IP	５		IP	５		IP
+大西　　　賢	4.10	0.20	3.8	３		IP	６		IP	６		IP	６		IP	４		IP	３		IP	２		IP	４		IP	４		IP	３		IP
+岩永　　雅人	5.00	0.21	4.0	４		IP	４		IP	４		IP	２		IP	５		IP	３		IP	２	3	IP	３		IP	５		IP	３		IP
+坪口　　竜也	4.40	0.19	3.8	６		IP	１	6	IP	６	4	G3	６		IP	３		IP	２		IP	４		IP	６		IP	２		IP	６		IP
+荒牧　　凪沙	3.00	0.22	4.6	６		IP	４		IP	６		IP	４		IP	５		IP	６		IP	６		IP	２		IP	４		IP	４		IP

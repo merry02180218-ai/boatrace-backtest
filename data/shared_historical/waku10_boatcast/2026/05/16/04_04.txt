@@ -1,0 +1,8 @@
+data=
+1	0
+小野　　勇作	7.70	0.14	3.5	１		IP	１		IP	３		IP	３		IP	３		IP	１		IP	６		IP	１		IP	１		IP	２		IP
+荒木　　颯斗	6.10	0.11	2.2	２		IP	３	4	IP	６		IP	４		IP	３		IP	１	3	IP	３		IP	３		IP	３		IP	２	3	IP
+高石　　梨菜	6.22	0.14	3.2	１		IP	６		IP	欠		IP	３		IP	１		G3	３		IP	２		IP	６		IP	３		IP	２		IP
+古賀　　繁輝	5.90	0.09	2.9	４		IP	１	1	IP	３		IP	５		IP	１		IP	３		IP	１		G2	６	6	G1	６		G1	３		IP
+下河　　誉史	4.00	0.20	3.6	４		IP	６		IP	５		IP	４		IP	３	4	IP	５		IP	６	6	IP	４		IP	２		IP	２	2	IP
+近藤　雄一郎	3.00	0.23	4.5	４		IP	６		IP	５		G3	５		IP	６		IP	３		IP	３		IP	６		IP	６		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　雄二	6.00	0.16	3.6	３		IP	１		IP	５	2	IP	３		IP	４		IP	２		IP	４		IP	２		IP	１		IP	５		IP
+武富　　智亮	6.60	0.18	3.9	３	3	IP	２		IP	２		IP	３		IP	２		G2	２		IP	６		IP	４		IP	１	3	G1	４		G1
+谷津　　幸宏	5.10	0.10	2.0	４		IP	２		IP	６		IP	１		IP	５		IP	２	2	G3	５		IP	４		IP	３		IP	３		IP
+遠藤　　圭吾	2.30	0.18	3.6	６		IP	４		IP	５		IP	Ｌ		IP	３		IP	６	5	IP	４		IP	６		IP	５		IP	５		IP
+松本　　庸平	3.20	0.23	4.8	５		IP	６		IP	６	6	IP	４		IP	２		IP	５		IP	５		IP	４		IP	５	4	IP	３		IP
+吉田　　裕平	6.00	0.12	2.4	２		G1	２		G1	２		G1	５		G1	５		G1	５		G1	２		G1	５		G1	２		IP	５		SG

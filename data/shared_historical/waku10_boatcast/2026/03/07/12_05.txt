@@ -1,0 +1,8 @@
+data=
+1	0
+茶谷　　信次	8.00	0.12	2.0	１		IP	４		IP	１		IP	５		IP	１		IP	２		IP	２		IP	１		IP	２		IP	１		IP
+幸野　　史明	4.80	0.20	2.3	１		IP	５		IP	４		IP	２	3	IP	６	6	IP	１		IP	６		IP	６		IP	６		IP	１	5	IP
+伊久間　陽優	5.50	0.14	2.2	４	5	IP	２	4	IP	転		IP	３		IP	２	2	IP	２		IP	１		G3	２		G3	５		IP	６		IP
+大澤　　誠也	3.20	0.20	3.5	３		IP	４		IP	５		IP	６		IP	３		IP	５		IP	５		IP	３		IP	５		IP	６		IP
+村田　　　敦	3.50	0.14	2.8	２		IP	４		IP	６		IP	５		IP	５		IP	４	6	IP	６		IP	３		IP	６		IP	３		IP
+北山　　康介	5.00	0.15	2.4	５		IP	４		IP	６		IP	２		IP	２		SG	Ｆ		SG	１		SG	３		IP	３		IP	６		IP

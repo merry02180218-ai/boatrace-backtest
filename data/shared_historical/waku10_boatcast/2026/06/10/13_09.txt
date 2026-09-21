@@ -1,0 +1,8 @@
+data=
+1	0
+小坂　　尚哉	8.90	0.14	2.6	１		IP	２		IP	１		IP	１		IP	１		IP	３		IP	２		IP	３		IP	１		IP	１		IP
+篠崎　　仁志	7.40	0.14	2.6	５		G1	３		G1	２		IP	１		IP	３		IP	３		G1	２		G1	２		G1	２		G1	３		IP
+守田　　俊介	4.40	0.14	3.6	４	4	SG	４		G1	５		G1	６		IP	６		IP	３		IP	６		G1	４		G1	３		G1	２		IP
+石丸　　海渡	5.60	0.08	1.9	２		IP	１		IP	４		G1	３		G1	６		IP	２		IP	６		G1	３	5	G1	Ｆ		G1	２		IP
+吉田　　拡郎	4.90	0.12	2.9	６		G2	１		IP	５		IP	５		IP	４		G1	６		G1	２		G1	６		G1	１		G1	４		IP
+佐藤　　　翼	4.70	0.16	4.8	５		SG	４		SG	４		G1	５	5	IP	４		IP	６		G1	２		G1	６		G1	３		G1	６		G1

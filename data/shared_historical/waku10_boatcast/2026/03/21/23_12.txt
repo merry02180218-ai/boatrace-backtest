@@ -1,0 +1,8 @@
+data=
+1	0
+深川　　真二	9.80	0.12	2.7	１		G2	１		G2	３		IP	１		IP	１		IP	１		IP	１		G1	１		G1	１		IP	２		IP
+辻　　　栄蔵	6.44	0.12	3.7	２		G2	３		G1	１		IP	６		G1	２		IP	欠		G1	５		G1	３		IP	２		IP	４		G1
+山田　　祐也	6.60	0.14	2.6	１		G2	３		G1	６		G1	２		G1	５		IP	１		G1	２		IP	５		IP	４		G1	２		G1
+佐藤　　　航	6.60	0.17	3.1	３		G2	６		IP	２		IP	１		IP	１		IP	２		IP	５		IP	３		G2	４		IP	２		IP
+西岡　　顕心	5.70	0.15	3.2	３		G2	３		G1	６		G1	３		IP	３		G1	５		IP	２		IP	４		IP	２		IP	３		IP
+井本　　昌也	3.80	0.15	4.1	４		G2	６		G1	６		G1	６		IP	４		IP	３		IP	５		G1	４		G1	５		IP	４	5	IP

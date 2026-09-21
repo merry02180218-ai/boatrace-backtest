@@ -1,0 +1,8 @@
+data=
+1	0
+遠藤　　エミ	8.60	0.15	3.0	２		G1	１		G1	１		IP	２		IP	４		IP	６		G1	１		G1	１		G3	１		G3	１		G3
+佐々木　大河	7.40	0.14	2.4	２		IP	４		IP	３	3	IP	２		IP	１		IP	２		IP	２		IP	４		IP	２		IP	１	3	IP
+小芦　るり華	8.10	0.11	2.9	１		IP	１		G1	２		IP	４		G1	１		G3	２		G3	１		G3	６		G3	１		G3	２		G3
+安河内鈴之介	6.60	0.13	2.9	２		IP	３		IP	２		IP	２		IP	５		G1	２		IP	１		IP	６		IP	２		IP	３		IP
+藤原　　仙二	6.80	0.16	3.8	２		IP	４		IP	３		IP	３		IP	２		IP	３	6	IP	２		IP	３		IP	２	6	IP	２		IP
+菊地　　孝平	5.10	0.13	2.9	４		G1	４		G1	４	4	IP	２	5	IP	６		G1	３	5	G1	４		G1	４		G1	３	5	IP	４	5	IP

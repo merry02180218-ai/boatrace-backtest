@@ -1,0 +1,8 @@
+data=
+1	0
+板倉　　敦史	7.40	0.16	3.5	１		IP	５		G3	２		IP	１		IP	４		IP	３		IP	３		IP	１		IP	１		IP	２		IP
+百武　　　翔	5.20	0.17	3.5	４		IP	６		IP	２		G3	３		IP	３		IP	３		IP	６		IP	３		IP	１		IP	４		IP
+阪本　　勇介	5.40	0.21	4.1	４		IP	１	4	IP	４		IP	４		IP	４		IP	３		IP	３		IP	３	4	IP	４		IP	３		IP
+今出　　晋二	3.90	0.13	3.1	４		IP	４		IP	４		IP	６		IP	４	5	IP	５		IP	４		IP	３		IP	２	5	IP	５		IP
+荒川　　健太	4.70	0.22	4.0	６		IP	３	4	G3	１		G3	２		IP	４		IP	３		IP	６		IP	６	6	IP	４		IP	４		IP
+原村　　百那	1.11	0.18	3.8	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	落		IP	６		IP	６		IP

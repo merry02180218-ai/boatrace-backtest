@@ -1,0 +1,8 @@
+data=
+1	0
+武重　　雄介	7.60	0.13	2.7	４		IP	４		IP	１		IP	１		IP	２		IP	４		IP	２		IP	１		IP	２		IP	１		IP
+丸尾　　義孝	7.60	0.13	3.4	１		IP	１		IP	２		IP	３		IP	５		IP	１		IP	４		IP	１		IP	２		IP	２		IP
+木村　　光宏	4.20	0.14	3.0	６		IP	１		IP	４		IP	６		IP	３	2	IP	３		IP	３		IP	５		IP	５		IP	４		IP
+山田　　　丈	4.60	0.19	4.1	４		IP	４		IP	４		IP	４		IP	５		IP	５		IP	３		IP	２		IP	２		IP	４		IP
+上原　　　崚	6.00	0.15	2.9	３		G2	６		G2	５		G2	２	6	IP	２		IP	２	6	IP	２		IP	３		IP	２		IP	５	6	IP
+福田　　　理	1.90	0.19	4.9	５		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP	４		IP	４		IP

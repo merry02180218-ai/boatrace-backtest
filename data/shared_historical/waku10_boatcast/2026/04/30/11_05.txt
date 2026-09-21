@@ -1,0 +1,8 @@
+data=
+1	0
+守田　　俊介	9.30	0.12	2.8	２		G1	１		IP	１		IP	１		IP	１		IP	１		IP	３		SG	１		SG	４		IP	１		IP
+大町　　利克	5.40	0.23	4.4	３		IP	３		IP	３		IP	４	3	IP	２		IP	２		IP	３		IP	３		IP	５		IP	５		IP
+片橋　　幸貴	6.10	0.11	3.0	３		IP	１		IP	５		IP	２		IP	３		IP	３		IP	２		IP	６		IP	２		IP	３		IP
+北中　　元樹	6.80	0.17	3.6	２		IP	４		IP	１		IP	４		IP	５		IP	３		IP	１		IP	２		IP	１		IP	３		IP
+青木　　玄太	5.60	0.20	4.2	１		IP	５		G1	３		G3	５		IP	３		IP	４		IP	３		G1	５		G1	２		IP	３		G2
+香川　　颯太	3.50	0.19	4.2	５		IP	６		IP	５		IP	４		IP	６		IP	５		IP	４		IP	２		IP	２		IP	６		IP

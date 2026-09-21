@@ -1,0 +1,8 @@
+data=
+1	0
+新出　　浩司	6.00	0.16	3.0	２		IP	１		IP	４		G3	１		IP	３		IP	５		IP	２		IP	２		IP	５		IP	５		IP
+松本　　純平	5.50	0.13	3.4	２		G1	３		G1	４		IP	４	4	IP	２		IP	３		IP	５		IP	３	3	IP	６		G1	４		G1
+中嶋　　達也	2.67	0.17	4.8	５		IP	５	4	IP	３		IP	５		IP	５		IP	５		IP	５		IP	転	4	IP	４	4	IP	５		IP
+土山　　卓也	4.10	0.12	3.0	４		IP	４		IP	５		IP	４		IP	６		IP	４		IP	３		IP	４		IP	４		IP	２		IP
+野相　　弘司	2.90	0.17	4.3	５		IP	４		IP	４	6	IP	５		IP	５		IP	３		IP	５		IP	５		IP	４		IP	６	6	IP
+岡本　　亜子	1.10	0.21	5.0	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP

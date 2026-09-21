@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　魁生	9.00	0.15	3.8	３		IP	１		IP	５		IP	１		IP	１		IP	１		G1	１		G1	１		IP	１		IP	１		IP
+鈴木　　唯央	5.60	0.17	3.6	５		IP	４		IP	３		IP	３		IP	２		IP	５		IP	２		IP	３		IP	４		IP	１		IP
+浦野　　　海	5.00	0.13	3.4	２		IP	４		IP	５		IP	２		IP	５		IP	４		IP	５		IP	２		IP	２		IP	４		IP
+河内　　一馬	3.50	0.15	2.5	３		IP	３		IP	６		IP	３		IP	６		IP	６	6	IP	６		IP	１		IP	５		IP	６		IP
+篠原　　晟弥	3.80	0.14	3.7	４	4	IP	５		G2	４		IP	２		IP	４		IP	２		IP	５		IP	５		IP	６		IP	５	4	IP
+廣瀬　　　凜	4.60	0.21	5.0	３		IP	５		IP	３		IP	３		IP	５		IP	２		IP	３	5	IP	４		G2	４		IP	６		IP

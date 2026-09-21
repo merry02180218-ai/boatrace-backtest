@@ -1,0 +1,8 @@
+data=
+1	0
+笠原　　　亮	8.40	0.17	2.9	４		IP	１		IP	１		IP	５		IP	１		G1	２		G1	３		G2	１		G2	１		IP	１		IP
+小池　　修平	6.00	0.15	3.8	６		SG	３		G1	１		IP	２		G1	２		G1	６		G1	１		IP	２		IP	６		IP	６		IP
+新田　　雄史	7.50	0.14	3.4	３		SG	１		G1	６		G1	３		G1	１		G1	２		G1	２		G1	６		G1	２		IP	２		IP
+石渡　　鉄兵	6.90	0.17	3.2	５		SG	２		G1	１		G1	４		G1	４		G1	４		G1	１		IP	５		G2	３		G2	１		IP
+仲谷　　颯仁	6.00	0.16	4.6	３	3	SG	４		G1	３		G1	５		G1	４	6	G1	４		G1	１		IP	２	4	SG	４		SG	６		IP
+佐藤　　　翼	5.60	0.14	3.7	６		SG	５		G1	４		G1	３		G1	２		G1	３		G1	４		G1	４		G1	２		IP	４		IP

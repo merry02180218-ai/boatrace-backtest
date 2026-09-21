@@ -1,0 +1,8 @@
+data=
+1	0
+宇野　　弥生	9.30	0.13	1.8	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP	１		G1	１		IP	１		IP	１		IP
+古賀　　千晶	3.22	0.19	4.6	５		IP	４		G3	５		IP	５		IP	欠		IP	４		IP	６		IP	４		IP	２		IP	５		IP
+河内　悠利杏	2.70	0.19	3.7	６		IP	５		IP	５		IP	６		IP	３		IP	６		IP	４		IP	５		IP	３		IP	５		IP
+坂野　さくら	3.60	0.20	3.9	６		IP	４		G3	５		IP	３		IP	５		G3	３		IP	４		IP	２		IP	６		IP	５		IP
+大久保　佑香	3.60	0.20	4.1	２		IP	５		IP	４		IP	６		G3	３		G3	６		IP	６		IP	４		IP	６	6	IP	２		IP
+西岡　　育未	2.50	0.18	4.1	６		IP	６		IP	４		G3	５		G3	６		IP	５		IP	４		IP	３		G3	５	5	IP	５	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　愛実	5.30	0.17	2.5	６		IP	４		IP	１		IP	５	3	IP	５		IP	４		IP	４		IP	１		IP	２		IP	２		IP
+村岡　　賢人	7.40	0.15	2.7	２		IP	４		G1	５		G1	２		G1	１		IP	１		G1	３		IP	３		IP	２		IP	２		IP
+福田　　　理	2.50	0.18	4.6	６		IP	６		IP	４		IP	６		IP	６		IP	５		IP	３		IP	３		IP	６		IP	５		IP
+山本　　寛久	6.20	0.15	3.0	２		IP	３		IP	３		IP	２		IP	２		IP	３		G3	３		G3	６		IP	６		G1	１		G1
+木山　　大聖	2.60	0.13	2.4	５		IP	４		IP	５		IP	６	6	IP	３	6	IP	４		IP	５		IP	５		IP	５	6	IP	６		IP
+渡辺　　　崇	3.10	0.24	4.6	３		IP	転		IP	５		IP	５		G3	５	5	G3	４		IP	５		IP	２	5	IP	４		IP	６		IP

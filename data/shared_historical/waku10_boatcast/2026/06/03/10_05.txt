@@ -1,0 +1,8 @@
+data=
+1	0
+森　　　雄利	6.89	0.14	3.1	１		IP	５		IP	１		IP	１		IP	２		IP	２		IP	５		IP	１		IP	５		IP			IP
+西丸　侑太朗	5.90	0.15	3.6	２		IP	２		G3	２		IP	２		IP	４		IP	２		G1	５		IP	２		IP	６		G1	６		G1
+遠藤　　圭吾	3.10	0.20	4.1	２		IP	４		IP	６		IP	６		IP	５		IP	６		IP	５		IP	５		IP	２		IP	５		IP
+島川　　海輝	5.50	0.16	3.3	２		IP	１		IP	３		IP	６	5	IP	２		IP	４		IP	６		IP	４		IP	１		G2	５	5	IP
+飛田　　江己	6.30	0.14	2.9	２	4	IP	６		G2	２		G2	２		IP	１		IP	１		IP	３		IP	３	4	IP	５		IP	６		IP
+大島　隆乃介	2.50	0.15	3.6	５		IP	５		IP	６		IP	６		IP	４	5	IP	５		IP	４		IP	６		IP	５		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+石田　　政吾	8.70	0.18	2.8	１		IP	１		IP	６		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		G3
+川口　　貴久	4.80	0.14	2.0	１		IP	３		IP	４		IP	４		IP	６		IP	３		IP	３		IP	３		IP	４		IP	６		IP
+酒見　　峻介	4.70	0.16	3.0	５	4	IP	４		IP	３		IP	３		IP	３		IP	２		IP	６		IP	２		IP	５		IP	４		IP
+梶原　　　正	4.10	0.17	4.1	５		IP	４		IP	５		IP	４		IP	２		IP	６	6	IP	１		IP	４		IP	５		IP	４		IP
+佐藤　　大佑	5.60	0.16	2.7	５		IP	４		IP	５		IP	３		IP	１		IP	４		IP	２		IP	４		IP	３		IP	１		IP
+石橋　　道友	5.67	0.18	3.8	５		G1	３		IP	２		IP	４		IP	３		IP	３		IP	３		IP	不		IP	３		IP	３		IP

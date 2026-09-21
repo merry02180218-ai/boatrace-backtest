@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　　丈	8.20	0.12	1.9	５		IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+横川　　聖志	6.40	0.10	2.4	２		IP	１		IP	４		IP	５		IP	３		IP	４		IP	１	1	IP	２		IP	６		G1	１	3	IP
+眞鳥　　章太	4.40	0.16	3.2	５		IP	６		IP	５		IP	１		IP	４		IP	３		IP	２		IP	６		IP	３		IP	４		IP
+堤　　　啓輔	5.40	0.18	3.5	５	3	IP	６	2	IP	１		IP	５		IP	１	1	IP	６		IP	３		IP	３	2	IP	２	3	IP	２		IP
+乃村　　康友	4.70	0.15	3.4	５		IP	１		IP	３		G3	５	6	G3	２		IP	５		IP	５		IP	２		IP	３		IP	６		IP
+松尾　　基成	1.50	0.21	4.8	６		IP	６		IP	６	5	IP	６		IP	５	4	IP	転	5	IP	４		IP	５		IP	６		IP	５		IP

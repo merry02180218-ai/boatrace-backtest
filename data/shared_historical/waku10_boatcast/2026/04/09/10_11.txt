@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　和也	10.00	0.15	3.5	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+馬場　　　剛	6.00	0.12	2.0	１		IP	６		IP	３		G3	１	4	G3	３		IP	３		IP	３	3	IP	４		IP	１		IP	６		IP
+秋山　　広一	7.00	0.14	3.2	４		IP	２		IP	１		IP	３		IP	２		IP	５		G1	２		IP	４		IP	２		IP	１		IP
+加倉　　侑征	6.40	0.15	1.8	１	3	IP	２		IP	５		IP	４		IP	２		IP	１		IP	２		IP	３		IP	４		IP	４		IP
+四宮　　与寛	4.90	0.18	3.5	２		IP	３		IP	２		IP	３		IP	５		IP	３		IP	６		IP	５		IP	６		G1	２	4	IP
+西川　新太郎	4.20	0.18	3.0	５		IP	５		IP	３		IP	２		IP	２		IP	５		IP	５		IP	４		IP	４		IP	４	5	IP

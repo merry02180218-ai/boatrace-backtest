@@ -1,0 +1,8 @@
+data=
+1	0
+吉永　　則雄	8.30	0.18	4.4	１		IP	６		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	３		IP
+高石　　梨菜	7.80	0.15	2.9	２		G3	４		IP	１		IP	１		G3	３		G3	２		IP	２		IP	２		IP	３		IP	１		IP
+山田　　真聖	4.70	0.16	3.0	６		IP	２		IP	５		IP	１		IP	４	6	IP	１		IP	６		IP	４		IP	６		IP	３		IP
+今坂　　晃広	4.20	0.24	4.3	３		G3	１		G3	５	5	IP	４		IP	３		IP	４		IP	６	6	IP	６		IP	３		IP	５	6	IP
+古場　　輝義	3.80	0.18	4.0	６	2	G3	３	4	G3	４		IP	２	4	IP	５		G3	３	3	G3	５		IP	３		IP	６		IP	５		IP
+尾形　　栄治	3.00	0.22	4.5	６		IP	４	5	IP	６		IP	６		IP	３		IP	６		IP	５		IP	４		IP	５		IP	２		IP

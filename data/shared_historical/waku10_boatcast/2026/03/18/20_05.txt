@@ -1,0 +1,8 @@
+data=
+1	0
+重野　　哲之	9.10	0.13	2.1	１		IP	４		IP	１		IP	１		IP	１		G1	１		IP	１		IP	３		IP	１		IP	１		IP
+西野　　翔太	6.20	0.14	2.8	４		IP	４		IP	６		IP	４		IP	１		IP	２		IP	１		IP	２		IP	６		IP	１		IP
+田添　　康介	3.22	0.12	2.8	欠		IP	５		IP	５		IP	３		IP	５		IP	４		IP	６		IP	３		IP	５	6	IP	４		IP
+渡邉　　　翼	5.00	0.18	3.4	５		IP	５		IP	２		IP	３		IP	３		G3	２		IP	２		IP	６		IP	３		G3	６		IP
+村松　　栄太	3.70	0.22	4.7	５		IP	２		IP	５		IP	４		IP	５		IP	５		IP	５		IP	３		IP	２	6	IP	６	6	IP
+石村　日奈那	2.10	0.19	4.0	６		IP	６		IP	６		IP	５		IP	６		G3	４		G3	３		G3	５		G3	６		IP	５		IP

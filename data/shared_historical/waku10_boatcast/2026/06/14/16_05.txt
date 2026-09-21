@@ -1,0 +1,8 @@
+data=
+1	0
+黒野　　元基	9.10	0.14	2.2	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	２		IP
+浮田　　圭浩	3.10	0.16	3.6	２		IP	５	3	IP	５		IP	６		IP	３		IP	３		IP	６		IP	５		IP	５		IP	６		IP
+村松　　将平	6.40	0.14	3.0	３	4	IP	３		IP	４		IP	２		IP	２		IP	３		IP	１		IP	４		IP	２		IP	４		IP
+中越　　博紀	5.80	0.19	3.8	３		IP	５		IP	２		IP	１		IP	３	5	IP	２	3	IP	３		IP	４		IP	５		IP	３		IP
+福田　　柊人	1.50	0.20	6.0	６	6	IP	５	6	IP																								IP
+角谷　　健吾	3.70	0.15	3.9	３		IP	５		IP	４		IP	２	5	IP	４		IP	５		IP	６		IP	５		IP	５		IP	３		IP

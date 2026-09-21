@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　喜一	6.70	0.15	2.7	５		IP	３		IP	２		IP	１		IP	６		IP	２		IP	１		G3	１		G3	５		IP	１		G3
+上村　　純一	6.30	0.12	2.4	２		IP	１		IP	６		G2	３		IP	２		IP	３		G1	６		G1	５		IP	１		IP	３		IP
+前野　　竜一	5.10	0.17	3.9	５		IP	３		IP	４		IP	４		IP	２		IP	２		IP	２		IP	６		IP	２		IP	５		IP
+深見　亜由美	3.10	0.19	4.2	５		IP	４		G3	４		G3	５		IP	４		IP	４		IP	５		IP	６		IP	４		IP	４		IP
+藤本　　佳史	4.10	0.18	3.9	４		IP	５		IP	５		IP	４		IP	６	6	G3	２		IP	３		IP	４		IP	３		IP	４		IP
+星野　　太郎	3.50	0.23	4.3	６		IP	４		IP	１		IP	３		IP	６		IP	４		IP	６		IP	５		IP	４		IP	５		IP

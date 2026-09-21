@@ -1,0 +1,8 @@
+data=
+1	0
+多羅尾　達之	6.10	0.13	2.2	５		IP	６		IP	３		IP	３		IP	５		IP	１		IP	１		IP	３		IP	２		IP	１		IP
+小黒　　竜吾	4.70	0.15	2.9	３		G3	４		G3	５		IP	１	3	IP	３		IP	６		IP	４		IP	２		IP	５		IP	４		IP
+後藤　　孝義	4.11	0.19	3.2	２		IP	４		IP	６		IP	４		IP	欠		IP	２		IP	４	5	IP	５		IP	５		IP	４		IP
+渡　　　修平	2.80	0.24	4.4	６		G3	２		IP	６		IP	２		IP	４		IP	５		IP	６	6	IP	６		IP	６	5	IP	６		IP
+山田　　哲也	5.60	0.08	1.5	３	4	G3	６		IP	３	4	IP	１		G1	６		G1	５		G1	２		IP	１	4	IP	５		IP	４		IP
+松瀬　　弘美	2.70	0.20	4.6	５		G3	６		G3	５		IP	６		IP	３		IP	４		G3	５		IP	４		G3	４		G3	６		G3

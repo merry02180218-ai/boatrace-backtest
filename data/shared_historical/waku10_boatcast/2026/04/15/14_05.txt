@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　　翔	6.70	0.21	4.1	２		IP	６		IP	１		IP	４		IP	２		IP	２		IP	２		IP	３		IP	２		IP	３		IP
+蒲原　　健太	5.30	0.16	4.0	１		IP	５		IP	５		G2	５		G2	５		IP	１		IP	１		IP	３		IP	４		IP	６		IP
+加藤　　啓太	5.00	0.17	4.1	４		IP	３		IP	３		IP	３		IP	５		IP	３		IP	３		IP	３	2	IP	４		IP	４		IP
+奈須　　啓太	5.30	0.12	2.8	３		IP	４	3	IP	４		IP	１		IP	５		IP	６		IP	１		IP	６		IP	３		G2	２		IP
+豊田　　訓靖	3.40	0.21	3.6	２		IP	６		IP	３		IP	４		IP	５		IP	４	6	IP	６		IP	５		IP	４		IP	５		IP
+君島　　秀三	3.90	0.12	2.3	４	5	IP	２		IP	６		IP	４		IP	４		IP	４		IP	３		G1	６		G1	６		IP	４		G3

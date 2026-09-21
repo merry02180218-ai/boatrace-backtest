@@ -1,0 +1,8 @@
+data=
+1	0
+三浦　　永理	8.90	0.16	2.9	１		G3	１		G3	１		IP	１		IP	３		G1	１		G1	４		IP	１		IP	２		G1	２		G3
+今井　　美亜	7.20	0.14	2.6	３		G3	２		G3	５		G3	２		G3	２		G1	１		G1	２		IP	３		IP	１		IP	４		IP
+田口　　節子	6.00	0.13	2.7	２		G3	６	5	IP	４		IP	１		IP	３		G1	６		IP	３		G1	２		IP	３	4	G3	２		IP
+安井　　瑞紀	4.70	0.20	3.5	１		G3	３		IP	５		G1	３		IP	１		IP	４		IP	落		IP	３		IP	６		IP	６	3	IP
+香川　　素子	4.10	0.19	3.0	３		G3	３	4	G3	Ｆ		IP	５		IP	３		G1	５		G1	３		IP	５		IP	２		IP	６		IP
+土屋　　　南	3.50	0.14	3.4	６		G3	４		IP	６		G1	６	4	IP	６		IP	２	5	IP	６		IP	６		IP	３		IP	３		IP

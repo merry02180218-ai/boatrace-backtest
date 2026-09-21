@@ -1,0 +1,8 @@
+data=
+1	0
+宇土　　泰就	5.80	0.21	4.0	６		IP	１		IP	３		IP	３		IP	１		IP	５		IP	１		IP	１		IP	５	2	IP	６		IP
+松井　　賢治	5.60	0.16	3.6	４		IP	２		IP	４		IP	３		IP	４		IP	５		IP	３		IP	２		IP	３		IP	２		IP
+山下　　昂大	5.20	0.13	2.2	６		IP	３		IP	４		IP	３	4	IP	５	4	IP	６		IP	１		IP	３		IP	１		IP	３		IP
+河野　　　大	6.30	0.13	2.8	２		IP	５		IP	４		IP	２	3	IP	１		IP	４		IP	２		IP	３	5	IP	４	6	G2	２		IP
+小林　　孝弘	3.90	0.15	3.1	５		IP	３		IP	５		IP	４		IP	４		IP	６		IP	１		G3	５		G3	４		IP	４		IP
+高橋　　二朗	3.30	0.18	4.4	５		IP	４		IP	３	4	IP	６		IP	４		IP	５		IP	５	5	IP	４		IP	５		IP	３		IP

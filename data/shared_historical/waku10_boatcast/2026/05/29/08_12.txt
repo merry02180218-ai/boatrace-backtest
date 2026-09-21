@@ -1,0 +1,8 @@
+data=
+1	0
+石丸　　海渡	9.60	0.11	2.5	１		IP	３		G1	１		G1	２		IP	１		IP	１		IP	２		IP	１		G1	１		G1	１		IP
+山田　　晃大	6.90	0.12	2.3	１		IP	４		IP	６	3	IP	１	3	IP	１		IP	３		IP	３		IP	４		IP	１		IP	３		IP
+永井　　亮次	4.00	0.17	3.7	３		G3	４		G3	５		IP	５		IP	４		IP	２		IP	４		IP	２		IP	６		IP	６		IP
+黒野　　元基	8.40	0.14	2.2	１		IP	１		IP	２		IP	１		G1	６		G1	２		IP	１		IP	２		IP	２		G1	２		IP
+中嶋　誠一郎	3.70	0.17	2.4	４		G3	５		G3	６		IP	２		IP	４		IP	３		IP	５		IP	落		IP	３		IP	４		IP
+藤森　　陸斗	3.20	0.19	3.6	６		IP	６		IP	５		IP	４		IP	４		IP	４		IP	４		IP	２		IP	５		IP	５		IP

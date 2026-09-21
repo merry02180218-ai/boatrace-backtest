@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　京平	7.40	0.16	3.8	４		IP	２		IP	３		IP	１		IP	３		IP	４		IP	１		IP	１		IP	２		IP	２		IP
+林　　　祐介	5.90	0.18	3.3	３		IP	３		IP	２		IP	３		IP	１		IP	４		IP	６	3	IP	５		IP	２		IP	２		G3
+平岡　　重典	4.40	0.18	3.6	３		IP	４		IP	２		IP	４		IP	５		IP	２		IP	５		IP	転		IP	３		IP	４		IP
+宮下　　元胤	5.33	0.19	3.6	６		IP	４		IP	４		IP	２		IP	４		IP	６		IP	１		IP	３		IP	不		IP	２		IP
+藤原　　仙二	6.40	0.16	3.9	２		IP	４		G2	４		G2	２		IP	４		IP	３		IP	３		IP	２		IP	３	6	IP	２		IP
+堀内　　亜海	1.00	0.32	5.0	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

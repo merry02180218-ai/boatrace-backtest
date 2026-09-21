@@ -1,0 +1,8 @@
+data=
+1	0
+深谷　　知博	8.40	0.13	2.2	１		G1	１		SG	４		G1	３		G1	Ｆ		IP	１		IP	３		IP	１		G1	１		G1	１		G1
+井上　　一輝	7.30	0.11	3.2	３		G1	３		IP	４		IP	２		G2	３		G2	２		IP	１		IP	２		IP	４		IP	２		G1
+若林　　　将	7.00	0.12	1.7	３		G1	２		IP	３		IP	１	4	IP	３		IP	６	4	G3	２		G3	２		IP	４		IP	１		IP
+片岡　　雅裕	6.10	0.11	2.7	６		G1	２		IP	１	3	IP	５		G2	３		IP	２		G1	２		G1	６		G1	２		G1	５		G1
+尾嶋　　一広	3.90	0.15	2.8	６		G1	５		IP	４		IP	３		IP	４		G1	６		G1	２		G1	６		IP	４		IP	５		IP
+宮地　　元輝	4.60	0.16	4.0	５		G1	１		SG	４		G1	６	5	IP	４		G1	５		G1	３		G1	５		G1	６		SG	５		SG

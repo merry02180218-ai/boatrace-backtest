@@ -1,0 +1,8 @@
+data=
+1	0
+浅見　　宗孝	5.60	0.17	3.5	４		IP	２		IP	１		IP	５		IP	２		IP	４		IP	５	3	IP	３		IP	１		G3	５		G3
+田頭　　虎親	6.30	0.18	4.2	１		IP	２		IP	３		IP	４		IP	１		IP	５		IP	３		IP	２		IP	２		IP	６		IP
+水原　　　慎	5.00	0.15	2.9	３		IP	６	4	IP	４		IP	１		IP	５		IP	３		G3	６		IP	１		IP	５		G3	２		G3
+石橋　　道友	5.60	0.13	3.7	６		IP	３		G1	３		G1	２		IP	２		IP	２		IP	６		IP	３		IP	２		IP	６		IP
+田路　　朋史	4.40	0.17	3.2	６		IP	６		IP	４		IP	２		IP	４		IP	４		IP	５		IP	４		IP	３		IP	２		IP
+宗行　　治哉	4.40	0.19	5.1	２	5	IP	４	5	IP	３		IP	５		IP	６		IP	３		IP	３		IP	３		IP	６		G2	５		G2

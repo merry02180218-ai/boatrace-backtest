@@ -1,0 +1,8 @@
+data=
+1	0
+深見　亜由美	5.20	0.21	4.0	１		IP	４		IP	４		IP	３		IP	１		IP	４		IP	５		IP	４		IP	４		G3	４		G3
+畔柳　　俊吾	4.30	0.18	3.2	６		IP	４	3	IP	２		IP	１		IP	３		IP	５		IP	６		IP	６		IP	４		IP	３		IP
+市川　　美宏	3.20	0.18	3.9	３		IP	３		IP	６		IP	６		IP	６		IP	３		IP	６		IP	５		IP	５		IP	３		IP
+富永　　正人	4.60	0.20	3.5	４		IP	４		IP	２		IP	４		IP	６		IP	５	3	IP	６		IP	１		IP	１		IP	５		IP
+伏田　　裕隆	3.80	0.22	4.4	５		IP	２		IP	６	6	G3	６	6	G3	４	6	IP	５		IP	２		IP	５		IP	４		IP	４		IP
+得山　　大輝	1.10	0.14	2.2	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

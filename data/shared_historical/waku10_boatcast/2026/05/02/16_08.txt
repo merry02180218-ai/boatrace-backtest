@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　寛久	9.00	0.13	2.7	１		IP	２		IP	１		IP	１		G3	１		G3	４		G3	１		IP	２		IP	１		IP	１		IP
+白神　　　優	6.00	0.16	3.4	２		IP	３		G1	５		G1	６		IP	２		IP	４		G1	４		IP	２		IP	１		IP	３		IP
+長谷川　　暖	3.90	0.19	4.0	４		IP	４		IP	６		IP	２		IP	１		IP	５		IP	４		IP	Ｆ		IP	４		IP	５		IP
+岡瀬　　正人	6.00	0.17	4.0	３		IP	２	3	IP	５		IP	４		IP	３		IP	２		IP	５		IP	２		IP	２	5	IP	２		IP
+東　　　潤樹	4.70	0.23	4.9	２		IP	３		IP	４		IP	５		IP	３		IP	４	6	IP	３		IP	２		IP	５		IP	６		IP
+福嶋　　智之	3.00	0.16	3.0	３		IP	４		IP	６		IP	６		IP	６		IP	６		IP	４	5	IP	５		IP	５		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　駿兵	9.00	0.15	3.2	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	４		IP
+菅　　　章哉	7.60	0.13	2.6	１		IP	４		G1	６	5	SG	２		IP	１		IP	３		IP	２		G1	５	5	G1	２		G1	１		IP
+山田　　祐也	7.00	0.14	2.2	１		IP	６		G1	１		G1	４		G1	５	1	SG	３		G2	１		G2	３		G1	６		G1	２		G1
+田村　　隆信	5.20	0.14	3.1	２		IP	６	3	IP	５		IP	４		IP	１		IP	１		IP	５		G1	４		IP	２		IP	６		G1
+堀本　　和也	5.20	0.12	3.0	２		IP	３		IP	５		IP	４		IP	３		IP	５		IP	２		IP	４	4	SG	３		SG	６		G1
+中岡　　正彦	6.30	0.15	3.5	２	4	IP	４	2	IP	６	2	SG	５	5	SG	２	2	IP	４		IP	５	2	IP	１	2	IP	１	2	IP	１	3	IP

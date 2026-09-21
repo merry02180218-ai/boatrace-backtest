@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　寛久	9.00	0.13	2.9	１		IP	１		IP	２		IP	１		IP	１		G3	１		G3	４		G3	１		IP	２		IP	１		IP
+重成　　一人	7.30	0.14	2.6	４		IP	２		IP	１		G1	３		G1	１		IP	２		IP	４		G1	５		G1	３		G1	１		IP
+松下　　誉士	4.60	0.21	4.2	５		IP	６		IP	２		IP	３		IP	４		IP	６		IP	３		IP	３		IP	２		IP	４		IP
+梅原　　祥平	4.44	0.15	3.3	２		IP	３		IP	３		IP	２		IP	６		IP	６		IP	６		IP	２		IP	転		IP	６		IP
+小林　　愛実	2.10	0.17	3.9	５		IP	４		IP	６		IP	６		IP	５		IP	５	6	IP	５		IP	３		IP	６		IP	転		IP
+末永　　由楽	3.90	0.14	3.0	５		IP	４		IP	６		IP	３	5	IP	５		IP	４		IP	４		IP	３		IP	２		IP	５		IP

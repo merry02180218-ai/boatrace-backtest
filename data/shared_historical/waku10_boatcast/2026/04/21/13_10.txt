@@ -1,0 +1,8 @@
+data=
+1	0
+小原　　聡将	9.00	0.14	2.9	１		IP	４		IP	２		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+中山　　翔太	7.70	0.17	2.9	２		IP	３		G1	１		IP	１	3	IP	１		IP	５		IP	２		IP	２		IP	３		IP	２		IP
+市川　　哲也	5.80	0.14	2.6	１		IP	１		IP	５	4	IP	５		G2	６		IP	１		IP	２		IP	５		IP	５		IP	１		IP
+三宅　　　潤	4.40	0.15	3.8	２		IP	６		IP	３		IP	６		IP	５		IP	３		IP	６		IP	１		IP	２		IP	６	6	IP
+小池　　哲也	4.20	0.16	3.0	３		IP	６		IP	３		IP	５		IP	３		IP	６		IP	落	4	IP	２		IP	３		IP	３	4	IP
+木村　　亮太	4.20	0.16	3.9	６		IP	４		IP	５		IP	５		IP	１		IP	４		IP	３		IP	２		IP	６		IP	４		IP

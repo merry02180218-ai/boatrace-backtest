@@ -1,0 +1,8 @@
+data=
+1	0
+福来　　　剛	8.80	0.15	2.9	１		IP	１		IP	１		G1	１		G1	２		IP	１		IP	５		IP	１		IP	２		IP	２		IP
+渡邉　　　健	5.60	0.13	2.5	２		IP	６		G3	２		IP	４		IP	６		IP	１		IP	４		IP	２		IP	５		IP	１	4	IP
+村上　宗太郎	4.00	0.18	3.5	１		IP	６		IP	４		IP	３		IP	４		IP	４		IP	５		IP	４		IP	６		IP	４		IP
+廣中　智紗衣	6.00	0.22	4.1	３		IP	３		IP	２		IP	２		G3	４		G1	３		G1	２		G3	３		IP	４		IP	５		IP
+高橋　　二朗	3.10	0.21	5.0	６		IP	４		IP	４		IP	４	4	IP	５	6	IP	４		IP	５		IP	４		IP	５		IP	４		IP
+寺島　　美里	3.40	0.23	4.7	３		IP	４		IP	４		IP	２		IP	５	5	IP	６		IP	４		G1	６		IP	５		IP	６		G3

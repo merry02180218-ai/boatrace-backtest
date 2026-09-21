@@ -1,0 +1,8 @@
+data=
+1	0
+秋山　　広一	8.80	0.19	3.5	１		G3	１		G3	１		G3	１		IP	３		IP	１		IP	１		IP	５		IP	１		IP	１		IP
+佐藤　謙史朗	3.22	0.19	3.0	５		IP	４		IP	６		IP	５		IP	３		IP	３		IP	５		IP	５		IP	欠		IP	４		IP
+牧原　　　崇	4.70	0.17	3.0	４		IP	４	4	IP	５		IP	４		IP	１		IP	６		IP	３		IP	２		IP	４		IP	４		IP
+榎　　　幸司	5.40	0.19	4.0	５		IP	３		IP	２		IP	１		IP	６		IP	３		IP	１		IP	３		IP	６	5	IP	４		IP
+村田　　浩司	4.10	0.16	2.7	４		IP	３		IP	４		IP	４		IP	６		IP	６		IP	３		IP	１		IP	４		IP	６		G3
+内堀　　　学	5.90	0.12	2.7	５	5	IP	１		IP	３		IP	３		IP	５	2	IP	６		IP	４		IP	２	5	IP	１		IP	１	1	IP

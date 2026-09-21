@@ -1,0 +1,8 @@
+data=
+1	0
+石原　　　翼	7.30	0.15	1.9	１		IP	１		IP	１		IP	２		IP	６		IP	５		IP	１		IP	１		IP	５		IP	１		IP
+齋藤　　　勇	5.80	0.19	3.4	３		IP	３		IP	１		IP	３		IP	３		IP	４		IP	３		IP	転		IP	３		IP	２		IP
+明石　　正之	4.80	0.16	3.5	５		IP	３		IP	５		IP	４		IP	４		IP	４	5	IP	４	4	IP	３		IP	２		IP	２		IP
+森　　　悠稀	4.50	0.14	3.4	５		IP	４		IP	４		G2	５		IP	４		IP	４		IP	１		IP	５		IP	５		IP	１		IP
+古澤　　光紀	3.90	0.12	3.6	２		IP	５		IP	５		IP	４		IP	５		G1	４		G1	３		IP	６		IP	４		IP	５		IP
+水野　　望美	4.00	0.23	4.3	３		IP	４		IP	５		IP	１	5	IP	３		IP	６		IP	６		IP	４		G3	５		IP	５		IP

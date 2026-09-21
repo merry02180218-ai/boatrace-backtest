@@ -1,0 +1,8 @@
+data=
+1	0
+橋本　　英一	5.56	0.17	3.0	５		IP	３		IP	転		IP	４	2	IP	３		IP	３		IP	１		IP	１		IP	４		IP	５		IP
+伊達　　正利	4.90	0.18	2.9	５		IP	２	3	IP	６		IP	６		IP	５		IP	１		IP	４		IP	６		IP	１		IP	１		IP
+井澤　　聖奈	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+守屋　　美穂	6.20	0.19	4.3	５		G1	６		SG	２		IP	６		IP	３		IP	２		IP	２		IP	４		G3	１		G1	１		IP
+森作　　広大	2.40	0.20	4.8	５		IP	６		IP	５		IP	５		IP	５		IP	５		IP	３	6	IP	６		IP	５		IP	４	6	IP
+南　　　佑典	3.30	0.19	5.0	５		IP	２		IP	４		IP	３		IP	５		G2	６		IP	４		IP	６		IP	６		IP	６		IP

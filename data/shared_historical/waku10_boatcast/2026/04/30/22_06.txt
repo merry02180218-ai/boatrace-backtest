@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　京介	6.50	0.12	2.5	５		IP	２		IP	１		IP	５	2	G3	６		IP	２		IP	１		IP	２		IP	２		IP	２		IP
+竹之内　　極	5.70	0.18	4.4	２		IP	１		IP	２		IP	３		IP	２		IP	５		IP	４		IP	４		IP	６		IP	３		IP
+宮脇　　遼太	7.90	0.15	3.4	１		IP	２		IP	２		IP	１		IP	１		IP	３		IP	２		IP	１		IP	４		IP	４		IP
+坂井　　滉哉	3.70	0.17	3.3	４		IP	４		IP	６		IP	４		IP	３		IP	６		IP	２		IP	６		IP	３	3	IP	５		IP
+星田　　夢結	2.40	0.19	4.5	５	6	IP	４	6	IP	６	6	IP	６	6	IP	４		IP	６	6	IP	３	6	IP	６	6	IP	５	6	IP	５		IP
+仲谷　　颯仁	4.67	0.16	3.2	４		G1	３		IP	４		SG	５		G1	６		G1	４		G1	５		G1	転		IP	４	5	IP	３		SG

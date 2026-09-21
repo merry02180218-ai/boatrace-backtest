@@ -1,0 +1,8 @@
+data=
+1	0
+長谷川　　暖	7.00	0.18	4.1	１		IP	１		IP	１		IP	２		IP	３		IP	６		IP	２		IP	１		IP	３		IP	６		IP
+飯島　　　誠	7.20	0.17	3.5	２		IP	１	3	IP	１		IP	２		IP	２		IP	３		IP	５		IP	４		IP	２		IP	２		IP
+一色　　颯輝	6.60	0.17	2.8	１		IP	２		IP	３	4	IP	Ｆ		IP	１		IP	４		IP	２		IP	４		IP	２		IP	２		IP
+梅木　　敬太	5.00	0.14	3.3	４		IP	５		IP	３		IP	４		IP	３		IP	４		IP	４		IP	３		IP	３		IP	２		IP
+長嶋　　万記	4.30	0.13	3.1	５		IP	５		G3	６		G2	５		G2	２		IP	２		IP	２		IP	３		IP	５	4	IP	５		IP
+妹尾　　忠幸	4.90	0.19	4.3	３	5	IP	４		IP	３		IP	６		IP	３		IP	４		IP	５		IP	５		IP	２		IP	２		IP

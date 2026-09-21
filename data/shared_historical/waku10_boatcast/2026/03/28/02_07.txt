@@ -1,0 +1,8 @@
+data=
+1	0
+青木　　　蓮	9.40	0.12	2.0	３		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+小川　　時光	3.70	0.20	4.0	２		IP	５	3	IP	５		IP	４		IP	５		IP	２		IP	４	3	IP	４		IP	５		IP	６		IP
+角浜　　　修	3.00	0.20	3.8	６	4	IP	３		IP	６		IP	４		IP	４		IP	４		IP	４		IP	４		IP	６		IP	６		IP
+下河　　雅史	4.20	0.20	3.4	１		IP	６		IP	６		IP	５		IP	２		IP	妨		IP	５	5	IP	１		IP	５		IP	３		IP
+渡辺　　　崇	4.10	0.22	3.6	４		G3	３		IP	４		IP	４		IP	５		IP	３		IP	３		IP	６		IP	３		IP	５		IP
+寺田　　夢生	1.70	0.16	3.2	６		IP	６		IP	５		G3	６		G3	５		G3	３		G3	６		G3	６		G3	６		IP	６		IP

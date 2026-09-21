@@ -1,0 +1,8 @@
+data=
+1	0
+上田　　隆章	6.80	0.20	3.9	５	2	IP	１		IP	４		IP	３		IP	３		IP	１		IP	２		IP	１		IP	１		IP	５		IP
+三嶌　こころ	5.50	0.18	4.3	４		IP	３		IP	３		IP	３		IP	４		IP	２		G3	３		G3	６		IP	２		IP	３		IP
+松下　　知幸	4.50	0.18	3.7	５		IP	１		IP	３		IP	３		IP	５		IP	５		IP	１		IP	４		IP	６		IP	５		IP
+川上　　清人	4.60	0.16	3.4	４	5	IP	３	5	IP	４		IP	６		IP	２		IP	２		IP	３		IP	５		IP	３	5	IP	６		IP
+塩田　　雄一	3.10	0.17	3.8	５		IP	６		IP	６		IP	５		IP	４		IP	４		IP	５		IP	３		IP	６		IP	２		IP
+大西　　隆洋	3.40	0.13	3.4	３		IP	６		IP	４		IP	６		IP	２		IP	５		IP	Ｆ		IP	４		IP	４		IP	４	5	IP

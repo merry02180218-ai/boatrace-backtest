@@ -1,0 +1,8 @@
+data=
+1	0
+平田　健之佑	8.60	0.15	2.8	１		IP	２		IP	１		IP	４		IP	１		IP	３		IP	１		IP	１		IP	２		IP	１		IP
+久富　　政弘	8.00	0.17	2.8	３		IP	２		IP	１		IP	２		IP	２		IP	１		IP	１		IP	３		IP	３		IP	２		IP
+浜崎　　準也	4.50	0.14	2.4	６		IP	６		IP	２	4	IP	４		IP	１		IP	５		IP	３		IP	３		IP	３		IP	６		IP
+松下　　哲也	4.90	0.18	3.2	３		IP	４		IP	５		IP	５		IP	１		IP	１		IP	３	6	IP	３	6	IP	６		IP	５	5	IP
+山下　　心一	1.90	0.18	4.4	４		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	６		IP	４		IP	５	6	IP
+吉原　　快誓	1.30	0.17	3.7	５		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP

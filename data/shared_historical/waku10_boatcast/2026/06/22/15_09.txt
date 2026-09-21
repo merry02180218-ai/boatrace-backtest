@@ -1,0 +1,8 @@
+data=
+1	0
+坂本　　雄紀	8.00	0.14	2.2	２		IP	３		IP	欠		IP	１		IP	３	2	IP	１		IP	１		IP	１		IP	４		IP	２		IP
+田中　　勇輔	3.80	0.17	3.7	４		IP	３		IP	５		IP	６		IP	４		IP	２		IP	４		IP	３		IP	６		IP	５		IP
+小林　　礼央	7.33	0.12	2.3	２		IP	２		IP	３		IP																					IP
+仲本　　　舜	3.50	0.19	3.2	３	5	IP	５	5	IP	６	5	IP	５		IP	５		IP	４		IP	３		IP	４		IP	４	6	IP	４	5	IP
+西丸　侑太朗	5.20	0.14	3.3	４	4	IP	４		IP	６		IP	４		IP	４		IP	４		IP	４		G3	２		IP	１		IP	２	6	G1
+田中　　駿兵	4.90	0.16	3.1	Ｆ		IP	５		G1	６		G1	１		IP	３		IP	２		IP	２		IP	５		IP	２		IP	５		IP

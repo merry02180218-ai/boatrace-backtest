@@ -1,0 +1,8 @@
+data=
+1	0
+石川　　真二	8.40	0.14	1.1	２		G3	３		G3	４		G3	１		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP
+大江　　　純	6.80	0.13	2.8	４	3	G3	３		IP	２		IP	２		IP	３		IP	４		IP	２		IP	３		IP	１		G3	２		IP
+東本　　勝利	5.40	0.17	3.3	４		G3	３		G3	２		IP	４		IP	３		IP	４		IP	３		G3	４		IP	２		IP	４		IP
+岡部　　大輝	5.50	0.18	3.1	５	5	G3	４		IP	４		IP	１		IP	１		IP	１		IP	４		IP	６		IP	３	5	IP	４		IP
+橋本　　　明	3.20	0.16	3.5	４	6	G3	４		IP	６	6	IP	５		IP	５		IP	５		IP	６	6	IP	４		IP	３		IP	３		IP
+今村　　暢孝	5.50	0.14	2.6	６	2	G3	３	1	IP	１	1	IP	４	1	IP	３	2	IP	１	2	IP	６	2	IP	４	2	IP	４	2	IP	２	2	G1

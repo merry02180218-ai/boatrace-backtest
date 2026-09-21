@@ -1,0 +1,8 @@
+data=
+1	0
+丸野　　一樹	9.80	0.14	2.6	１		IP	１		IP	１		IP	１		IP	１		IP	５		G1	１		SG	１		G1	１		G1	１		IP
+池田　　浩二	7.50	0.11	3.3	１		IP	２		G1	６		G1	４		SG	２		G1	３		G1	２		G1	３		G1	２		G1	３		G1
+入海　　　馨	5.60	0.14	3.3	３		IP	４	4	IP	３	4	IP	１	4	IP	３		G1	２		G1	Ｆ		IP	６		G1	２		G1	５		G1
+河合　　佑樹	5.70	0.17	3.9	２		IP	４		IP	５		IP	６	2	IP	１	3	IP	１		IP	２		IP	６		G1	６		G1	３		G1
+藤原　　碧生	6.30	0.11	1.8	１		IP	３		IP	３		G1	２		IP	３		IP	２		IP	３		G1	６		G1	５		G1	３		IP
+山口　　　剛	6.40	0.20	4.4	２		IP	３		SG	２		G1	６		G1	３		G1	４		G1	５		G1	１		G1	２	5	G1	６		G1

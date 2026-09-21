@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　将隆	8.60	0.09	1.7	２		IP	２		IP	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP	２		IP	１		IP
+柴田　　朋哉	6.40	0.17	3.5	２		IP	４		IP	３		IP	３		IP	２		IP	２		IP	３		IP	３		IP	１		IP	５		IP
+石原　　凪紗	6.00	0.19	3.2	２		IP	４		IP	２		IP	１		G3	４	4	G3	６		IP	６		IP	２		IP	１		IP	３		IP
+山本　　英志	4.60	0.15	3.0	４		IP	４		IP	２		IP	６		IP	５		IP	６		IP	５		IP	３		IP	１		IP	２		IP
+木下　　陽介	3.20	0.10	1.7	５		IP	３		IP	４		IP	６		IP	２		IP	５		IP	４		IP	転		IP	６		G3	４		IP
+君島　　秀三	5.40	0.10	1.8	４		IP	３		G1	６		G1	６		IP	４		G3	２		IP	５		IP	１		IP	２		IP	２	5	IP

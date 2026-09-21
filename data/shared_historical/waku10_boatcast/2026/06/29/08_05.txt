@@ -1,0 +1,8 @@
+data=
+1	0
+浜田　亜理沙	9.20	0.18	3.4	４		IP	１		IP	１		G3	２		G3	１		G3	１		G3	２		G3	１		G3	１		G2	１		G2
+豊田　　祥生	4.30	0.17	3.2	４		IP	１		IP	４		IP	６		IP	５		IP	６		IP	６		IP	２		IP	２		IP	４		IP
+井芹　　大志	5.10	0.17	3.5	５	2	IP	３		IP	２		IP	３		IP	２		IP	６		IP	５		IP	３		IP	３		IP	３		IP
+安河内　　健	4.78	0.16	2.2	６		G3	２		IP	５		IP	３		IP	２		IP	転		IP	転		IP	２		IP	３		IP	４		IP
+鳥居塚　嶺王	3.80	0.14	3.9	４		IP	３		IP	５		IP	５		IP	５		IP	３		IP	５		IP	２		IP	５		IP	４		IP
+吉島　　祥之	2.50	0.21	5.0	５		IP	６		IP	２	5	IP	５		IP	６		IP	６		IP	５		IP	４	5	IP	５		IP	５	5	IP

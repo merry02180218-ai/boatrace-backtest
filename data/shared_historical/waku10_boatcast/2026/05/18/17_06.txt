@@ -1,0 +1,8 @@
+data=
+1	0
+井芹　　大志	7.10	0.14	3.4	１		IP	６		IP	５		IP	２	2	IP	２		IP	１		IP	１		IP	４		IP	１		IP	２		IP
+宇佐見　　淳	5.10	0.14	2.8	２		IP	６		IP	２		G3	６		IP	３		IP	４		IP	３		IP	２		G3	５		IP	３		G1
+吉村　　　誠	5.60	0.14	3.2	２		IP	３		IP	５		IP	４		IP	１		IP	５		G3	２		G3	４		G3	２		G3	６		G1
+河野　　真也	5.30	0.20	3.6	５		IP	２		IP	２		IP	２		IP	６		IP	５		IP	３	5	IP	５		IP	３		IP	１		IP
+廣中　　良一	2.70	0.15	3.7	５		IP	６		IP	６		IP	４		G3	３		IP	４		IP	５	6	IP	５		IP	６	4	IP	４		IP
+上馬場　風依	1.00	0.08	3.0	６		IP	６		IP																								IP

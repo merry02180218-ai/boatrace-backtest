@@ -1,0 +1,8 @@
+data=
+1	0
+山口　　修路	6.00	0.17	3.1	４		IP	欠		IP	２		IP	１		IP	４		IP	Ｆ		IP	２		IP	３		IP	３		IP	２		IP
+北川　　潤二	6.40	0.14	2.7	２		IP	４		IP	３		G3	２		G3	２		IP	４		IP	２		IP	３		IP	４		IP	２		IP
+山田　　亮太	6.00	0.17	2.8	５		IP	３		IP	４		IP	３		IP	２		IP	１		IP	２		IP	２		IP	６		IP	３		IP
+柳瀬　　幹太	3.50	0.17	4.4	５		IP	６		IP	３		IP	５		IP	６		IP	２	3	IP	６		IP	３		IP	４		G3	４		IP
+秋元　　　哲	7.50	0.14	3.2	１		G1	２		IP	１		IP	５	4	G1	６		G1	３		G1	１	2	IP	１		IP	３		IP	２		IP
+永井　　　源	4.10	0.19	3.3	４		IP	４	5	IP	５	5	IP	６		IP	４		IP	２		G1	６		IP	２		IP	５		IP	３		IP

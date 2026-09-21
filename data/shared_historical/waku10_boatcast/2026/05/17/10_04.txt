@@ -1,0 +1,8 @@
+data=
+1	0
+松下　　一也	6.20	0.15	2.6	１		IP	４		IP	２		IP	６		IP	２		IP	１		IP	６		IP	１		IP	１		IP	Ｆ		IP
+川崎　　誠志	5.40	0.23	5.2	１		IP	２	1	IP	５		IP	３		IP	３		IP	６		IP	１		IP	４		IP	６		IP	３		IP
+松田　　竜馬	4.90	0.12	2.2	３		IP	６		IP	２		IP	３		IP	３		IP	５		IP	４		IP	４		IP	４		IP	２		IP
+浅見　　昌克	5.40	0.17	3.5	３		IP	２		IP	６	6	G1	５	6	G1	３		IP	１		IP	２		IP	４		IP	６		IP	３		IP
+今村　天次朗	1.00	0.17	5.0	６	6	IP																											IP
+倉持　　莉々	4.00	0.13	2.5	５		G2	５		IP	４		IP	２		IP	３	5	IP	５	5	G1	３		G1	６		G1	６		G3	４		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+濱野　　斗馬	9.50	0.10	2.0	１		IP	１		IP	２		IP	１		IP	２		G2	１		IP	１		IP	１		IP	２		IP	１		IP
+高橋　　直哉	5.00	0.20	3.9	６	3	G3	１		IP	４		IP	５		IP	６		IP	２		IP	４		IP	３		IP	４		IP	１		IP
+麻生　　慎介	6.20	0.16	2.9	３		IP	２		IP	３		IP	４		IP	３		IP	１	5	IP	４		IP	６		IP	３		G1	１		IP
+堀越　　雄貴	5.40	0.23	4.2	２		IP	４		IP	３	5	IP	３	5	IP	１		IP	５	3	IP	２		IP	４		IP	４		IP	５		IP
+近藤　　友宝	4.60	0.15	3.3	３	6	IP	５	6	IP	２		IP	５		IP	３		IP	４		IP	４	6	IP	３		IP	３		IP	５	4	IP
+三馬　　崇史	3.90	0.20	5.2	３		IP	１	5	IP	４		IP	４		IP	６		IP	６		G2	４		G2	５		IP	４		IP	６		IP

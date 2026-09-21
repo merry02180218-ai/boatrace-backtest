@@ -1,0 +1,8 @@
+data=
+1	0
+宮野　　　仁	7.80	0.15	3.6	５		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２	2	IP	１		IP	１		IP	Ｆ		IP
+新田　　洋一	5.50	0.15	3.3	２		IP	５		IP	４		IP	３		IP	１		IP	２		IP	５		IP	２		IP	３		IP	６		IP
+竹田　　吉行	5.40	0.16	3.9	５		IP	５		IP	２		IP	２		IP	３	4	IP	６		IP	２		IP	３		IP	３		IP	３	2	G1
+烏野　　賢太	5.00	0.17	2.9	４		IP	４		IP	６		G3	２		G3	４		IP	３		IP	４	5	IP	４		IP	１		G1	４		IP
+林　　　美憲	3.40	0.18	3.9	３	4	IP	５		G1	６	2	IP	６	4	IP	６	4	IP	５		G1	６	3	G1	６		IP	１	3	IP	３	4	IP
+藤山　　湧太	1.30	0.21	4.2	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	５		IP

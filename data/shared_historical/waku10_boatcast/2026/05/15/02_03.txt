@@ -1,0 +1,8 @@
+data=
+1	0
+飯田　　庄吾	4.90	0.17	2.8	１		IP	５	3	IP	Ｆ		IP	２	3	IP	２		IP	６		IP	５		IP	４		IP	１		IP	４		IP
+萩原　　秀人	7.20	0.12	3.2	１		IP	２		G1	３		IP	４		G1	６		G1	２		IP	２		IP	２		G1	３		G1	２		IP
+本部　めぐみ	3.50	0.25	4.2	４		G3	５		G3	５		IP	４		IP	６		IP	３		G3	３		G3	４		IP	５		G3	４		G3
+林　　　祐介	5.30	0.14	2.7	２		IP	５		IP	６		IP	４		IP	２		IP	２		IP	５		IP	３	5	IP	４	3	IP	１		IP
+石田　　章央	5.60	0.16	3.3	３	4	IP	４		IP	６		IP	１		IP	３		IP	６	6	IP	２		IP	２		IP	２		IP	５		IP
+長尾　京志郎	2.90	0.22	5.2	５		IP	６		IP	２	5	IP	５		IP	３		IP	４		IP	５		IP	６		IP	６		IP	５		IP

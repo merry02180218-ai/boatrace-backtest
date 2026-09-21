@@ -1,0 +1,8 @@
+data=
+1	0
+飛田　　江己	8.80	0.12	2.1	１		IP	１		G1	不		G1	１		G1	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP
+小松　　卓司	5.50	0.16	3.3	１		IP	２		IP	４		IP	６		IP	３		IP	３	4	IP	２		IP	５		IP	４		IP	３		IP
+伊倉　　　光	5.30	0.17	3.1	３		IP	４		IP	２		IP	３		IP	４	4	IP	４		IP	４		IP	２		IP	６		IP	２		G3
+岩崎　　芳美	5.30	0.14	2.2	３		G3	１		G1	４		G1	３		G1	１		G3	４		G3	５		IP	４		IP	５		IP	６		G2
+永嶋　　裕一	4.80	0.16	3.5	３		IP	４		IP	６		IP	４		IP	３		IP	５		IP	２		IP	１		IP	６		IP	３	4	IP
+川崎　　智幸	4.40	0.20	4.0	３		IP	６		IP	５		IP	３		IP	５	5	G1	４		IP	３		IP	３		IP	２		IP	５		IP

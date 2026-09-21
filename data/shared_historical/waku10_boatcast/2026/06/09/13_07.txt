@@ -1,0 +1,8 @@
+data=
+1	0
+渡辺　　浩司	9.70	0.11	2.7	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+柳沢　　　一	6.50	0.15	3.2	２		IP	１		IP	６		IP	３		IP	２		IP	２		IP	３		IP	４		IP	５		G1	１		G1
+井上　　一輝	7.20	0.17	4.0	５		IP	１		G2	２		IP	１		IP	２		IP	３		IP	１		IP	３		G1	２		IP	５		IP
+尾嶋　　一広	6.10	0.14	3.2	２		IP	３		IP	５		IP	２		IP	３		IP	３		G1	４		G1	４		G1	３		G3	２		G3
+深谷　　知博	4.90	0.15	2.7	３		SG	５		SG	５		G1	６		G1	２		IP	３		G1	５		G1	６		G1	１		IP	６		G1
+藤原　啓史朗	5.60	0.11	2.6	５		G2	３		IP	６		IP	３		IP	３		IP	３		IP	１		IP	６		G1	１		SG	５		SG

@@ -1,0 +1,8 @@
+data=
+1	0
+関　　　浩哉	9.60	0.14	3.2	１		G1	４		SG	１		G1	１		IP	１		IP	１		IP	１		G1	２		G1	１		G1	４		SG
+上野　真之介	7.70	0.13	2.9	５		G1	４		SG	２		IP	２		IP	１		IP	２		IP	１		IP	２		G1	２	1	IP	３		IP
+桐生　　順平	6.30	0.16	3.9	４		G1	２		SG	６		SG	５		G1	１		G1	１		IP	２		IP	６		G1	４		G1	４		SG
+山口　　　剛	6.80	0.13	2.2	３		G1	６	5	SG	６		G1	１		IP	１		IP	４		SG	１		G1	４		G1	４		G1	２		G1
+白神　　　優	6.30	0.11	1.7	５		G1	１		IP	６		IP	４		IP	２	4	G1	５	6	G1	１		IP	２		IP	１		IP	４		G1
+松本　　純平	3.20	0.18	3.8	４	5	G1	３		IP	４		IP	６		IP	６		IP	６		IP	５		IP	５		IP	２		IP	６		G1

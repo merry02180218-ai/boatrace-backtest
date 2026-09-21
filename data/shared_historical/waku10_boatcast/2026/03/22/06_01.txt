@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　喜一	5.90	0.14	2.8	５		IP	１		G3	１		IP	２		IP	３		IP	２		IP	４		IP	２		IP	５		IP	６		IP
+守屋　　大地	5.80	0.17	3.9	３		IP	２		IP	４	3	IP	１		IP	４		IP	３		IP	３		IP	３		IP	４		IP	４		IP
+伯母　　芳恒	3.20	0.16	4.0	６		IP	５		IP	４		IP	４		IP	３		IP	５		IP	４		IP	５		IP	６		IP	３		IP
+上田　　健太	5.20	0.17	3.8	４		IP	６	5	IP	３		IP	４		IP	２		IP	４		IP	３		IP	１		IP	５		IP	３		IP
+板橋　　侑我	7.30	0.17	3.3	３		G1	１		G1	３		G1	１		G1	３		G1	２		IP	５		G1	２		IP	６		IP	２		G1
+中島　　浩哉	3.11	0.17	3.3	５		IP	６		IP	６		IP	３		IP	５		IP	欠		IP	６		IP	６		IP	４		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+関野　　　文	8.50	0.16	2.5	１		IP	１		G3	１		G3	２		IP	１		IP	３		IP	１		G3	１		G3	１		IP	６		IP
+大橋　　由珠	4.20	0.19	4.3	４		IP	６		IP	６		IP	５		IP	２		G3	４		G3	３		IP	３		G3	３		G3	４		G3
+水野　　望美	5.80	0.15	2.5	４		IP	２		IP	１		IP	４		IP	５	4	IP	２		IP	２		IP	２		G3	５		G3	４		IP
+渡辺　　千草	4.70	0.15	2.4	５		IP	３		G3	１		G3	３		G3	５		IP	４		IP	４		G3	６		IP	２		IP	４		IP
+中村　紋夕梨	2.90	0.22	3.7	５		IP	４		IP	５		IP	４		IP	４		IP	５		IP	６		IP	５		G3	３		G3	５		G3
+永井　　聖美	3.67	0.13	2.8	４		IP	４		IP	５		IP	５		IP	６		IP	３		IP	３	5	G3	４		G3	４	5	IP	転		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+松村　　康太	7.60	0.15	3.7	２		IP	１		IP	１		IP	２		IP	２		IP	２		IP	１		IP	２		IP	４		IP	５		IP
+松尾　　光広	4.20	0.20	4.5	６		IP	４		IP	３		IP	３		IP	６	6	IP	５		IP	４		IP	１	1	IP	３		IP	５		IP
+中島　　孝平	7.70	0.11	2.6	２		G1	３		G1	３		IP	１		G2	２		IP	３		SG	５		SG	４		G1	１		SG	３		G1
+宮野　　　仁	3.70	0.21	5.3	５		IP	４		IP	５	5	IP	３		IP	２		IP	４		IP	５		IP	６		IP	５		IP	３	5	IP
+榮田　　将彦	3.70	0.13	2.1	３		IP	３		IP	６		IP	３		G3	５		IP	６		G3	５		G3	６		IP	３		IP	３		IP
+野末　　智一	4.20	0.19	4.8	３		IP	２	4	IP	３		IP	５		IP	４	4	IP	５		IP	４		IP	５		IP	５		IP	３	5	IP

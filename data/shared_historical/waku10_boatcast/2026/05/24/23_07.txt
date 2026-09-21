@@ -1,0 +1,8 @@
+data=
+1	0
+冨田　　秀幸	6.40	0.13	3.1	Ｆ		IP	３		IP	４		IP	２		IP	４		IP	２		IP	２		IP	１		IP	３		IP	１		IP
+山口　　達也	6.50	0.15	3.2	２		G2	３		IP	２		IP	２	3	SG	６		G1	６		G1	６		G1	１		IP	３		G1	２		IP
+村越　　　篤	4.60	0.13	3.1	３		IP	５		IP	１		IP	６		IP	３	4	IP	２		IP	４		IP	３		IP	５		IP	６	2	G3
+妻鳥　　晋也	5.30	0.20	4.4	５		IP	４		IP	４		IP	２		IP	３		IP	４		G3	１	3	G3	２		IP	６		IP	３		IP
+谷川　　祐一	4.40	0.19	3.9	３		G3	３		IP	落	4	IP	３		IP	１		IP	６		IP	３		IP	５		IP	３	6	IP	６		IP
+田添　　康介	2.10	0.14	2.2	６		IP	６		IP	６		IP	５		IP	５		IP	５		IP	６		IP	４		IP	６	5	IP	３		IP

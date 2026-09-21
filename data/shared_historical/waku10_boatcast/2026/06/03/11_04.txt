@@ -1,0 +1,8 @@
+data=
+1	0
+佐々木　和伸	8.60	0.11	1.6	２		IP	２		IP	２		IP	２		IP	１		IP	１		IP	１		IP	２		IP	１		IP	３		IP
+原田　　雄次	3.90	0.20	4.6	１		IP	４		IP	３		IP	６		IP	６		IP	２		IP	６		IP	４		IP	５		IP	５		IP
+樋口　　範政	6.10	0.17	3.3	３		IP	３		IP	１		IP	３		IP	１		IP	２		IP	３		IP	６		IP	４		IP	４		IP
+高村　　　諒	1.50	0.20	3.0	６		IP	６		IP	６	6	IP	６		IP	５		IP	５	5	IP	４		IP	６		IP	６		IP	６		IP
+佐藤　　右京	2.90	0.18	3.4	３		IP	２		IP	５		IP	４		IP	６		IP	６		IP	６		IP	５		IP	５		IP	５		IP
+花田　　和明	3.60	0.18	2.7	４	4	IP	５	4	IP	４		IP	２	4	IP	６	4	IP	３	2	IP	３	4	IP	５	2	IP	６	3	IP	５	2	IP

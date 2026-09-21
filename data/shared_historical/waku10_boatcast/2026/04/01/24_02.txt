@@ -1,0 +1,8 @@
+data=
+1	0
+深水　慎一郎	7.10	0.17	3.4	１		IP	６		IP	１		IP	１		IP	４		IP	４		IP	２		IP	２		IP	３		IP	１		IP
+佐藤　　　航	9.20	0.12	2.4	２		IP	１		G2	２		G2	２		IP	１		IP	２		IP	１		IP	１		IP	３		IP	１		G2
+北山　　康介	7.20	0.15	3.1	１		IP	２		IP	２		IP	１		IP	２		IP	２		IP	５		IP	４		IP	４		IP	２		SG
+篠原　　晟弥	6.00	0.12	2.2	１		IP	Ｆ		G2	５		G2	６		IP	２		IP	１		IP	４		IP	１		IP	３		IP	２		IP
+天野　　晶夫	4.20	0.17	3.3	５		G3	５		IP	２		IP	３		IP	３		IP	６		IP	３		IP	６		IP	２	4	IP	５		IP
+小川　　晃司	4.40	0.17	3.3	３		IP	３		IP	３		IP	４		IP	４		IP	５		IP	３		IP	５		IP	３		IP	５		IP

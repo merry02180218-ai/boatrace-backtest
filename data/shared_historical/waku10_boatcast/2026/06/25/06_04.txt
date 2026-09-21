@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　有裕	9.20	0.16	1.9	１	2	IP	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+加藤　　優弥	6.10	0.10	2.0	３		IP	１		IP	６		IP	２		IP	３		IP	１		IP	２		IP	６		IP	６		IP	１		IP
+加藤　　　翔	3.50	0.19	3.0	４		IP	４		IP	４		IP	６	5	IP	５		IP	５		IP	６		IP	６		IP	２		IP	２		IP
+宮崎　　安奈	4.90	0.12	2.0	４	6	IP	３		G2	３		IP	５		IP	１		IP	４	2	IP	４		IP	３		IP	５		IP	４		IP
+宮内　由紀英	2.67	0.22	5.1	６	6	IP	５		IP	５		IP	３		IP	４		IP	６		IP	５		IP	転		IP	４		IP	５		IP
+渡邉　　英児	4.60	0.18	3.6	５	4	IP	２	4	IP	３	5	IP	５	5	IP	３		IP	３	4	IP	４		IP	５	5	IP	４		IP	３		IP

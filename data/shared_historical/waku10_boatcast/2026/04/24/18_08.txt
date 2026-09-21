@@ -1,0 +1,8 @@
+data=
+1	0
+島崎　丈一朗	7.00	0.21	4.6	１		IP	３		IP	１		IP	４		IP	１		IP	１		IP	５		IP	１		IP	４		IP	４		IP
+香月　　大介	2.40	0.19	4.1	３		IP	５		IP	５		IP	５		IP	６		IP	６		IP	５		IP	４		IP	５		IP	５		IP
+細川　　明人	2.60	0.19	4.3	６		IP	５		IP	５		IP	２		IP	６	4	IP	５		IP	６		IP	４		IP	４		IP	６		IP
+岡部　　大輔	4.00	0.14	2.8	３		IP	６		IP	４		IP	６		IP	４		IP	１		IP	４		IP	５		IP	５		IP	３		IP
+是澤　　孝宏	4.30	0.19	3.8	４	6	IP	２	6	IP	３	4	IP	４		G3	５		G3	４		G3	２		IP	４		IP	６		IP	５		IP
+加木　　　郁	2.60	0.18	4.0	６		IP	５		IP	４		IP	４	5	IP	５	5	IP	４		IP	４		IP	５		IP	６		IP	５		IP

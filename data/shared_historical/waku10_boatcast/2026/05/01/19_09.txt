@@ -1,0 +1,8 @@
+data=
+1	0
+大田　　直弥	8.20	0.17	3.8	１		IP	１		IP	２		IP	２		IP	１		IP	３		IP	１		IP	３		IP	２		IP	３		IP
+栗山　　繁洋	3.30	0.19	3.9	５		IP	５		IP	６		IP	５		IP	６		IP	３		IP	２		IP	６		IP	４		IP	３		IP
+上瀧　　絢也	4.20	0.17	4.0	１		IP	４		IP	２		IP	５		IP	５		IP	５		IP	５		IP	３	4	IP	４		IP	５		IP
+島川　　海輝	4.80	0.16	3.3	２		IP	４		IP	６		IP	４		IP	１		G2	５	5	IP	５		IP	５		IP	２		IP	３		IP
+佐藤　　駿介	5.00	0.19	3.6	２		IP	３	4	IP	４		IP	２		IP	３		IP	５		IP	６		IP	３	4	IP	６		IP	２		IP
+片岡　　恵里	3.90	0.17	4.1	１	5	G3	６		G3	５		IP	４	5	IP	５		G3	２		G3	４		G3	６		G1	４		IP	５		G3

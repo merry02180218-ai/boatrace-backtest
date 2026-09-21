@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　ほのか	4.22	0.16	3.0	３		IP	６		IP	５		IP	６		G3	１		IP	５		IP	２		IP	３		IP	転		G3	５		G3
+永井　　聖美	7.80	0.19	3.2	１		IP	１		IP	２		IP	２		IP	２		IP	２		IP	２		IP	５		IP	２		IP	２		G3
+山下　　友貴	5.60	0.17	3.8	３	4	IP	３		IP	２		IP	４		G3	５		G3	３	4	G3	５		IP	３		IP	１		IP	３		IP
+今井　　美亜	4.60	0.18	3.3	６		G2	４		G2	２		G2	４		IP	６		IP	５		IP	３		G3	５		G3	３		G3	２		G1
+本部　めぐみ	3.00	0.21	4.9	５		IP	４		G3	５		IP	４		IP	３		IP	５		IP	５		IP	４		IP	５		IP	５		G3
+河内　悠利杏	1.80	0.19	3.4	５		IP	５		IP	６		IP	４	5	IP	６		G3	４	5	G3	６		G3	６		IP	６		IP	６		IP

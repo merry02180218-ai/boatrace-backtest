@@ -1,0 +1,8 @@
+data=
+1	0
+三原　　　司	5.80	0.17	3.5	２		IP	４		IP	１		IP	１		IP	２		IP	５		IP	２		IP	５		IP	５		IP	４		G3
+小澤　　　学	4.20	0.24	5.3	２		IP	６		IP	６		IP	５		IP	４		IP	５		IP	３		IP	３		IP	２		IP	４		IP
+平石　　和男	6.00	0.21	3.9	４		IP	４		IP	１		IP	２		IP	２		IP	２		IP	６	4	IP	２		IP	２		IP	６		IP
+藤原　　早菜	4.90	0.18	4.2	３		IP	３		IP	１	5	IP	４		IP	４		IP	５		IP	２		IP	６		G1	６		IP	４		IP
+中川　　りな	4.10	0.19	4.0	５		IP	３		IP	５		IP	６		IP	３		IP	５		IP	２		IP	３		IP	６		IP	３		G3
+吉原　　快誓	1.80	0.23	4.6	６		IP	３		IP	６		IP	６		IP	６		IP	６		IP	６		IP	４		IP	６		IP	６		IP

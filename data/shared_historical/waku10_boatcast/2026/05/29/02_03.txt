@@ -1,0 +1,8 @@
+data=
+1	0
+宇野　　博之	5.80	0.18	3.8	３		IP	６		IP	６		IP	１		IP	１		IP	１		IP	５		IP	４		IP	３		IP	２		IP
+森　　　弘行	4.10	0.28	5.3	６		IP	２		IP	５		IP	６		IP	５		IP	３		IP	１		IP	４		IP	３		IP	６		IP
+尾形　　栄治	4.80	0.20	2.8	１		IP	５		IP	６		IP	５		IP	２		IP	２		IP	４		IP	３		IP	６	5	IP	３		IP
+新開　　　航	5.40	0.14	2.9	３		G1	４		IP	１		IP	６		G1	２		G1	６		G1	６		G2	３		G2	転		IP	２		G1
+鈴木　結平太	2.30	0.21	4.0	５	6	IP	６		IP	６	6	IP	５		IP	５		IP	６		IP	２		IP	６	6	IP	４		IP	６		G3
+島田　　一生	2.00	0.17	4.4	６		G3	４		IP	６		IP	５		IP	６		IP	４		IP	５		IP	５		IP	６		IP	５		IP

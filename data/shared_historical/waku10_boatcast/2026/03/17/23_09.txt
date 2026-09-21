@@ -1,0 +1,8 @@
+data=
+1	0
+湯川　　浩司	9.60	0.14	3.8	１		IP	１		IP	１		IP	１		IP	１		IP	２		G1	１		G1	１		G1	１		G1	６		G1
+辻　　　栄蔵	6.44	0.12	3.8	３		G1	１		IP	６		G1	２		IP	欠		G1	５		G1	３		IP	２		IP	４		G1	２		IP
+後藤　　翔之	6.70	0.15	3.0	６		IP	４		IP	３		IP	３		IP	２		G2	２		IP	３		IP	２		IP	１		IP	２		IP
+河野　　　大	6.70	0.14	2.4	２		IP	１		IP	２		IP	５		IP	２		IP	２		IP	３		G1	３		G1	４		G2	４		IP
+豊田　健士郎	5.30	0.12	3.6	６		G1	２		IP	３		IP	３		G1	５		IP	３		G2	３		IP	５		SG	５		G1	２		IP
+小芦　るり華	5.40	0.18	3.9	４		IP	３		G1	２		IP	３		IP	４		G1	５		G3	３		G3	３		G3	３		G3	５		G3

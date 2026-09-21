@@ -1,0 +1,8 @@
+data=
+1	0
+折下　　寛法	8.40	0.13	1.2	１		IP	１		IP	２		G3	３		IP	１		IP	３		IP	３		IP	２		IP	１		IP	１		IP
+秋山　　広一	7.10	0.18	2.8	５		IP	３	3	IP	１		G1	２	3	IP	１		IP	３		IP	２		IP	３		IP	２		IP	３		IP
+中嶋　健一郎	6.20	0.19	3.1	２		IP	６		IP	２		IP	１		IP	２		IP	４		G1	３		IP	３		IP	３		IP	４		IP
+松下　　知幸	4.60	0.18	3.8	１		IP	２	5	IP	４		IP	４		IP	６		IP	５		IP	５		IP	４		IP	１		IP	６		IP
+榎　　　幸司	2.80	0.22	4.1	４		IP	５		IP	３		IP	５		IP	５		IP	３		IP	５		IP	５	4	IP	６		IP	６		IP
+池田　奈津美	3.70	0.18	3.2	５	3	IP	４	5	IP	６	2	IP	５	2	IP	３	2	G3	６	4	G3	３	2	IP	６	1	IP	１	2	IP	４	4	IP

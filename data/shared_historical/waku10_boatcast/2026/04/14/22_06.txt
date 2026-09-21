@@ -1,0 +1,8 @@
+data=
+1	0
+新田　　泰章	10.10	0.15	3.0	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+片岡　　雅裕	6.30	0.11	2.9	５		G1	６		G1	１		G1	６		G1	１		IP	２		G1	１	4	G1	２	3	IP	３		IP	６		IP
+磯部　　　誠	6.60	0.12	2.0	３		G1	３		SG	２		SG	４		G1	２		G1	１		G1	５		G1	６		G1	６		IP	２		SG
+竹下　　大樹	5.70	0.15	3.3	１		IP	４		IP	５		IP	４		IP	６		IP	３		IP	３		G3	３		G3	３		G1	３		G1
+茅原　　悠紀	8.00	0.14	3.3	４		G1	２		G1	３		SG	１		G1	５		G1	２		G1	１		G1	３		G1	３		SG	３		G1
+鎌倉　　　涼	3.40	0.17	2.8	６		SG	６		SG	５		G3	４	5	G3	６		G1	３		IP	６	4	IP	３		IP	５		IP	５		G1

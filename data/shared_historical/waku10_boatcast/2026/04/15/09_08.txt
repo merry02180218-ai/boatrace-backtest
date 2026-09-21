@@ -1,0 +1,8 @@
+data=
+1	0
+宮崎　　安奈	7.50	0.12	1.6	２		IP	１		IP	１		IP	４		IP	１		IP	２		IP	６		IP	２		IP	２		IP	２		IP
+植竹　　玲奈	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+高憧　　四季	6.90	0.18	4.1	５		IP	５		IP	１		G3	２		G1	２		G1	１		IP	３		G1	２		G1	１		G3	６		IP
+香川　　素子	5.90	0.19	3.2	２		IP	２		IP	３		IP	５		G3	２		IP	３		G1	３		G3	５		IP	２		IP	４		IP
+本部　めぐみ	2.90	0.17	3.3	５		IP	５		IP	４		IP	５		IP	５		G3	６		IP	６		G3	４		G3	６		IP	１		IP
+向井田　真紀	2.50	0.26	5.0	４		IP	５		IP	６		IP	６		G3	６		G3	３	5	IP	６		IP	５		IP	６		IP	３		IP

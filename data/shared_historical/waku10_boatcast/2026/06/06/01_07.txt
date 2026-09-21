@@ -1,0 +1,8 @@
+data=
+1	0
+沢田　　昭宏	7.20	0.21	4.3	５		IP	４		IP	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	４		IP	１		G3
+島崎　丈一朗	5.30	0.16	3.3	１		IP	１		IP	４		IP	４		IP	４		IP	１		IP	６		IP	５		IP	４		IP	４		IP
+渡邉　　和将	8.50	0.12	2.6	１		IP	１		IP	２		IP	１		IP	３		IP	２		IP	２		G1	４	2	SG	３		SG	１		IP
+河上　　年昭	2.40	0.15	3.1	３		IP	６		IP	４		IP	５		IP	６		IP	４		IP	５		IP	６		IP	６		IP	５		IP
+一ノ木　　匠	1.75	0.13	3.5	６	6	IP	６	6	IP	４	6	IP	６	6	IP																		IP
+稗田　　聖也	4.40	0.14	2.7	４		IP	４		IP	４		IP	５		IP	３		IP	６		IP	６		IP	２		IP	３		IP	２		IP

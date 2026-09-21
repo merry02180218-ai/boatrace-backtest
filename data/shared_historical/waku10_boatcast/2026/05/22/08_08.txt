@@ -1,0 +1,8 @@
+data=
+1	0
+樫葉　　新心	4.60	0.16	2.6	５		G3	３		G3	４		IP	６		IP	６		G3	１		IP	４		IP	３		G3	５		IP	１		IP
+細川　　裕子	6.50	0.21	4.6	２		G2	３		IP	２		IP	２		IP	２		IP	４		IP	５		IP	２		IP	２		IP	４		G3
+石原　　凪紗	5.80	0.16	3.5	１		IP	５		IP	１		G3	２		IP	２	4	IP	６		IP	２		IP	２		IP	６	6	IP	５		IP
+落合　　直子	4.70	0.12	2.4	６		IP	３		IP	６		IP	３		G3	４		G3	２	5	IP	６		IP	４	5	IP	３		IP	１		IP
+堀内　　亜海	1.00	0.22	4.2	６	6	IP	Ｆ	6	IP	５	6	G3	６	6	G3	６	6	G3	６		G3	６	6	IP	６		IP	６		IP	６		IP
+田中　　　結	1.38	0.28	5.4	６		IP	転		IP	６		IP	４		IP	６		IP	６		IP	５		IP	６		IP						IP

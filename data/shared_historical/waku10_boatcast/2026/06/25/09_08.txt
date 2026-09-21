@@ -1,0 +1,8 @@
+data=
+1	0
+多田　　有佑	6.30	0.17	4.1	４		IP	２		IP	１		IP	３		IP	６		IP	５		IP	２		IP	１		IP	２		IP	３		IP
+市橋　　卓士	5.00	0.14	2.7	１	1	IP	６		IP	２	3	IP	４		IP	３		IP	４		IP	５	3	IP	６		IP	３		IP	２		IP
+古場　　輝義	4.80	0.23	3.8	２		IP	６		G3	６		IP	２		IP	４	2	IP	４		G3	２		G3	４		G3	４	4	IP	３		IP
+安田　　吉宏	5.50	0.16	3.4	２	5	IP	３		IP	１		IP	４		IP	３		IP	３		IP	５	6	IP	１		IP	６		IP	５	5	IP
+川添　　英正	3.70	0.21	4.3	４		IP	４	3	IP	６		IP	５		IP	６		IP	２		IP	５		IP	２		IP	６		G3	３		G3
+櫻井　　　隼	1.40	0.27	5.5	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	５		IP

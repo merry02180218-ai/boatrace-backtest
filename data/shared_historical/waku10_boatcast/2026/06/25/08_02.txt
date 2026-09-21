@@ -1,0 +1,8 @@
+data=
+1	0
+赤池　　修平	5.10	0.20	4.8	３		IP	１		IP	２		IP	４		IP	５		IP	３		IP	５		IP	５		IP	１		IP	６		IP
+村松　　栄太	5.10	0.21	4.3	２		IP	３	3	IP	２	3	IP	６		IP	５		IP	３		IP	３		IP	５		IP	５	6	IP	１		IP
+品川　　賢次	4.33	0.22	3.2	３		IP	欠		IP	Ｆ		IP	４		IP	６		IP	３		IP	２		IP	４		IP	２		IP	５		IP
+藤丸　　光一	3.90	0.23	3.6	２		IP	３	3	IP	４		IP	５		IP	６		IP	５		IP	４		IP	３	2	IP	４		IP	５		IP
+竹内　　　来	2.90	0.20	3.1	６		IP	６		IP	３	6	IP	５		IP	６		IP	４		IP	３		IP	６		IP	３		IP	６		IP
+畔柳　　俊吾	2.90	0.21	5.0	５		IP	４		IP	５		IP	４	5	IP	５		IP	５		IP	５		IP	３	4	IP	６		IP	４		IP

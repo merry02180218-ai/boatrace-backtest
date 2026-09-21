@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　喜一	6.80	0.13	2.5	１		G3	５		IP	１		G3	１		IP	２		IP	３		IP	２		IP	４		IP	２		IP	５		IP
+渋谷　　明憲	6.20	0.16	2.7	１		G3	１		IP	６		IP	２		IP	１		IP	４		IP	４		IP	１	4	IP	４		IP	６		IP
+中島　　　航	2.90	0.23	4.6	６		G3	５		IP	２		IP	５		IP	転	4	IP	５		IP	５		IP	５		IP	４		IP	３		IP
+土井　　歩夢	7.40	0.17	2.7	３		G3	１		IP	１		IP	４		IP	２		IP	２		IP	２		IP	２		IP	３		IP	３		IP
+土屋　　智則	6.30	0.16	3.5	２	2	G3	２		IP	２	3	IP	２		IP	６		IP	４		IP	１		G1	５		G1	３		IP	４		SG
+杉山　　正樹	5.70	0.18	3.6	２		G3	３		IP	５		IP	１		IP	１		IP	５		G1	４		G1	５		G1	４		IP	３		IP

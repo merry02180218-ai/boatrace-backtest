@@ -1,0 +1,8 @@
+data=
+1	0
+荒木　　颯斗	7.30	0.14	2.7	１		IP	２		IP	１		IP	６		G3	４		IP	１		IP	５		IP	１		IP	１		IP	２		IP
+吉川　　喜継	6.90	0.14	2.8	４		IP	３		IP	２		IP	２		IP	１		IP	３		IP	４		IP	３		IP	２		IP	２		IP
+川原　　　涼	4.90	0.12	2.5	転	4	IP	５		IP	３		IP	２		IP	４		IP	６		IP	４		IP	２		IP	１		IP	３		IP
+港　　　理樹	3.14	0.23	4.4	５	6	IP	４		IP	３	5	IP	４		IP	４		IP	６	6	IP	６	6	IP									IP
+長野　　道臣	3.30	0.14	3.2	４		G3	３		IP	６		IP	６		IP	５		IP	６		IP	４		IP	５		IP	４		IP	２		IP
+佐藤　　　航	4.30	0.14	3.1	４	5	G2	１	4	IP	４		IP	５		G2	５		IP	６		IP	１	5	IP	５	5	IP	４	5	IP	６		G2

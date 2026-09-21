@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　将吉	9.70	0.14	1.7	１		IP	１		IP	１		IP	１		G1	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP
+杉田　　篤光	7.00	0.17	4.2	１		IP	３		IP	２		IP	３		IP	２		IP	２		IP	４		IP	１		IP	４		IP	３		IP
+都築　　正治	4.70	0.17	3.4	４		IP	２		IP	６		IP	１		IP	５	4	IP	２		IP	５		IP	１		IP	６		G3	６		G3
+深井　　利寿	7.00	0.18	3.5	３		IP	３		IP	１		IP	１		IP	２		IP	４		IP	３	5	IP	２		IP	３		G3	３		G3
+大平　誉史明	5.30	0.14	2.8	２	4	IP	６		IP	４		IP	５		IP	３		IP	２		IP	４		IP	１		IP	３		IP	４		G3
+乙津　　康志	3.20	0.22	5.7	６		IP	４		IP	４		IP	５		IP	３	5	IP	５		IP	４		IP	６	4	IP	５		G3	３	5	IP

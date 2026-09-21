@@ -1,0 +1,8 @@
+data=
+1	0
+小川　竜太朗	7.80	0.15	3.6	３		IP	１		IP	１		IP	２		IP	２		IP	２		IP	２		IP	５		IP	２		IP	１		IP
+根岸　　真優	3.50	0.20	3.8	６		IP	４		IP	６		IP	１		IP	３		IP	４		IP	６		IP	３		IP	６		G3	６		G3
+浅見　　昌克	5.90	0.13	2.1	１		IP	２	4	G1	Ｆ	4	IP	３		IP	５		IP	１		IP	１		IP	５		IP	４		IP	３		IP
+武田　　正紀	4.20	0.14	2.3	５		IP	４		IP	３		IP	４		IP	４	3	IP	４		IP	２		IP	３		IP	５		IP	５	5	IP
+伊藤　　雄二	1.90	0.17	3.7	５	6	IP	６		IP	６	6	IP	６	6	IP	６		IP	６		IP	５		IP	４		IP	５		IP	４		IP
+佐藤　　　翼	4.50	0.12	4.1	６		G1	２		G1	６		G1	３		G1	６		G1	３		G1	６		SG	６		SG	５		G1	４		G1

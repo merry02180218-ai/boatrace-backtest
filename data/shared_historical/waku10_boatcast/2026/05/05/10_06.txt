@@ -1,0 +1,8 @@
+data=
+1	0
+菅沼　　佳昭	5.40	0.20	3.9	４		IP	６		IP	１		IP	６		IP	５		IP	３		IP	２		IP	２		IP	３		IP	２		IP
+高倉　　孝太	5.10	0.11	2.4	１		IP	４		IP	２		IP	６		IP	５		IP	３		IP	５		IP	２		IP	４		IP	３		IP
+樋口　　喜彦	3.90	0.12	2.8	１		IP	５		IP	６		IP	３	4	IP	６		IP	６		IP	２		IP	５		IP	４		IP	４		IP
+下出　　卓矢	5.80	0.14	2.6	２		IP	３		IP	５		IP	４		IP	４	5	IP	２		IP	５		IP	２		IP	４		G2	１		IP
+萩原　　秀人	5.40	0.14	2.5	４		G1	５		G1	１		IP	４		IP	４		G1	２		IP	６		G1	６		G1	２		G3	３		G1
+黒柳　　浩孝	4.00	0.16	3.5	２		IP	５		IP	３		IP	６		IP	６		IP	３		IP	３		IP	５		IP	３	5	IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+明石　　正之	8.40	0.12	1.9	６		G3	２		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP	２		IP
+小坂　　宗司	7.20	0.14	3.3	３		IP	４		IP	２		IP	１		IP	３		IP	２		IP	２		IP	１		IP	１		IP	５		IP
+川北　　浩貴	7.11	0.16	2.4	落		IP	２		IP	２		IP	２		IP	２		IP	１		IP	３		IP	４		IP	２		IP	４	2	IP
+鈴木　　　博	5.30	0.15	2.8	４	5	IP	２		IP	５		IP	１		IP	４		IP	４		IP	２		IP	１		IP	５	5	IP	６		IP
+大江　　　純	3.30	0.15	3.8	６	6	G3	４		G3	４	4	G3	５		IP	２	4	IP	２	6	IP	５		IP	６		IP	５		IP	６	6	IP
+角谷　　健吾	2.80	0.20	3.2	５		IP	５		IP	３		IP	５		IP	５		IP	６		IP	６		G1	４		IP	６		IP	３	5	IP

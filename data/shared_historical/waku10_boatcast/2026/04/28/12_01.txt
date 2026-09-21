@@ -1,0 +1,8 @@
+data=
+1	0
+久永　　祥平	9.20	0.10	1.8	１		IP	１		IP	３		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP
+小坂　　宗司	6.80	0.14	2.8	３		IP	３		G3	２		G3	２		G3	３		IP	３		IP	４		IP	２		IP	１		IP	３		IP
+泉　　　具巳	4.60	0.17	3.1	４		IP	１		IP	３		IP	６		IP	６		IP	１		IP	６		IP	６		IP	５		IP	２		IP
+西村　　豪洋	3.30	0.17	3.4	４		IP	６		IP	６		IP	５		IP	１		IP	４		IP	５		IP	５		IP	３		IP	６		IP
+立間　　充宏	5.40	0.19	3.8	３	6	IP	４		IP	４		IP	３		IP	５		IP	４		IP	１		IP	３		IP	１		IP	５		IP
+松下　　直也	3.20	0.21	4.7	６		IP	６		IP	５		IP	５		IP	４		IP	３	5	IP	５		IP	３	5	IP	３		IP	５		IP

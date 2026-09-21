@@ -1,0 +1,8 @@
+data=
+1	0
+若林　　樹蘭	8.80	0.15	2.4	１		IP	４		IP	１		IP	４		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+武重　　雄介	5.80	0.19	3.8	３		IP	１		IP	２		IP	５		IP	５		IP	５		IP	５		IP	１		IP	２		IP	２		IP
+山本　　浩次	4.90	0.16	3.6	１		IP	５		IP	２		IP	２		IP	２		G3	４		IP	５		IP	５		G3	６		IP	４		IP
+浜先　　真範	4.30	0.15	2.5	４		IP	２		IP	２		IP	６		G1	５		G1	６		IP	３		IP	２		IP	６		G1	６	5	IP
+岡部　　　浩	2.00	0.16	3.8	６		IP	５		IP	６	6	IP	５		IP	５	6	IP	５		IP	６		IP	４		IP	４		IP	６		IP
+中村　　　真	4.00	0.19	4.4	６		IP	５		IP	３		IP	６		IP	３		IP	６		G3	２		IP	２		IP	３		IP	６		IP

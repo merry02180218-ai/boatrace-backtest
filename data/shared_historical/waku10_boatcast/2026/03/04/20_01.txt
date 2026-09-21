@@ -1,0 +1,8 @@
+data=
+1	0
+富田　　恕生	7.40	0.17	3.9	４		IP	２		IP	１		IP	１		IP	１		IP	３		IP	２		IP	１		IP	３		IP	５		IP
+今出　　晋二	3.60	0.17	3.5	２		IP	６		IP	５		IP	５		IP	６		IP	５		IP	３		IP	４		G3	３		G3	４		IP
+重冨　　勇哉	4.00	0.23	3.5	６		IP	５		IP	４		IP	２		IP	５		IP	２		IP	６		IP	４		IP	４		IP	３		IP
+山崎　　　祥	5.80	0.16	3.4	２		IP	１		IP	５		IP	６		IP	３		IP	２		IP	２		IP	５		IP	４		IP	２		IP
+松本　　弓雄	5.10	0.15	3.0	６		IP	１		IP	４		IP	１		IP	３		IP	５		IP	２		IP	５		IP	４		IP	４		IP
+得山　　大輝	1.10	0.13	2.5	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

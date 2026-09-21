@@ -1,0 +1,8 @@
+data=
+1	0
+坪内　　　実	6.30	0.17	3.8	６		IP	２		IP	４		IP	１		IP	１		IP	３		IP	５		IP	３		IP	１		IP	３		IP
+浦田　　信義	5.00	0.17	3.9	３		IP	４		IP	６		IP	４		IP	４		IP	２		IP	２		IP	３		IP	６		IP	２		IP
+高山　　敬悟	5.90	0.13	3.1	１		IP	２		IP	５		IP	２		IP	３		IP	３		G3	６		G3	４		IP	４		IP	１		IP
+長尾　　章平	6.80	0.17	3.9	４		IP	２		IP	２		IP	１		IP	２		IP	５		IP	３		IP	４		IP	２		IP	１		IP
+島田　　賢人	6.90	0.13	2.7	１		IP	１		IP	６		IP	３		IP	３		IP	１	4	IP	１		IP	１		IP	５		IP	４		IP
+岡本　　亜子	1.00	0.20	5.5	６		IP	６		IP																								IP

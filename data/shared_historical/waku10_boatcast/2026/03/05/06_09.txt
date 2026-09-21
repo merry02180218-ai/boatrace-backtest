@@ -1,0 +1,8 @@
+data=
+1	0
+杉江　　浩明	5.33	0.20	3.6	６		IP	３		IP	転		IP	６		IP	２		IP	１		IP	４		IP	３		G3	２		IP	４		IP
+大塚　　浩二	4.40	0.21	4.4	５		IP	２		IP	４		IP	２		IP	５		IP	４		IP	２		IP	４		IP	５		IP	５		IP
+深山　　祐二	4.80	0.17	3.6	３		IP	５		IP	３		IP	６		IP	２		IP	４		IP	２		IP	３		IP	３		IP	６		IP
+大谷　　直弘	3.60	0.18	3.6	２		IP	４		IP	５		IP	６		IP	５		IP	５		IP	１		IP	６		IP	４		IP	５		IP
+中島　　友和	5.10	0.16	2.2	５		IP	２		IP	２		IP	５		IP	１	4	IP	５	6	IP	２		IP	６		IP	５		IP	２	4	IP
+高橋　　　勲	3.44	0.17	4.1	５		IP	３	4	IP	５	4	IP	２	5	IP	転		IP	Ｆ	4	IP	４		G3	６		G3	４		G3	４	3	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+宮地　　秀祈	7.10	0.15	3.3	３		IP	４		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP	６		IP	２		IP
+渋谷　　明憲	6.40	0.14	2.8	２		IP	２		IP	６		G3	１		G3	１		IP	６		IP	２		IP	１		IP	４		IP	４		IP
+羽野　　　諒	4.00	0.13	2.6	４		G3	２		IP	５		IP	５		IP	２		IP	６		IP	６		IP	４		IP	２		IP	５		IP
+永井　　亮次	2.70	0.20	4.4	３	5	IP	６	5	IP	５		IP	２	5	IP	６		IP	６		IP	６		IP	６		IP	５		IP	４	3	IP
+佐藤　　博亮	6.30	0.14	2.4	２		IP	２		IP	３		IP	５	6	IP	４	3	IP	２		IP	３		IP	２		IP	５		IP	１		G1
+伏田　　裕隆	2.80	0.14	3.1	５		IP	５		IP	６		IP	４		G3	６		G3	６		IP	４		IP	５		IP	６		IP	１		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中野　　孝二	7.30	0.14	2.4	３		IP	１		IP	１		IP	２		IP	６		IP	２		IP	２		IP	１		IP	１		IP	５		IP
+数原　　　魁	6.40	0.18	3.2	１		IP	３		IP	２		IP	４		IP	２		IP	１		IP	６		IP	１		IP	４		IP	６		IP
+梅原　　祥平	5.50	0.12	3.0	３		IP	５		IP	１		IP	３		IP	４	4	IP	２		IP	５	4	IP	２		IP	６		IP	２		IP
+齋藤　　和政	4.00	0.19	4.5	３		IP	２		IP	６		IP	６		IP	２		IP	６		IP	３		IP	３		IP	６		IP	５		IP
+松瀬　　弘美	3.70	0.21	4.5	６		IP	５	6	IP	３		G3	２		G3	６		IP	３		IP	２		G3	６		G3	５		G3	５	6	IP
+渡辺　　千草	2.60	0.18	4.1	６		IP	３		IP	５		IP	５		G3	５	5	G3	５	5	IP	４		G3	５		G3	６		IP	４		IP

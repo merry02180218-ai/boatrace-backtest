@@ -1,0 +1,8 @@
+data=
+1	0
+丸岡　　正典	7.80	0.16	4.0	６		IP	１		G2	１		G2	１		IP	３		IP	１		IP	６		IP	２		IP	１		IP	１		IP
+西川　新太郎	5.60	0.17	4.1	２		IP	３		IP	３		IP	２		IP	２		IP	欠		IP	４		IP	５		IP	１		IP	４		IP
+深山　　祐二	4.60	0.17	3.3	２		IP	５		IP	２		IP	６		IP	３		IP	５		IP	３		IP	６		IP	２		IP	４		IP
+古賀　　智之	5.20	0.16	2.8	３		IP	１		G2	６		IP	５		IP	２		IP	４		IP	５		IP	４		IP	３		IP	２		G3
+村松　　修二	3.70	0.20	4.0	５		IP	４		IP	３		IP	６		IP	２		IP	５		IP	５		IP	４		IP	６		IP	３		G2
+宮地　　秀祈	2.90	0.22	4.1	５		IP	６		IP	５		IP	６		IP	３		IP	５		IP	２		IP	６		IP	失		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+浅見　　昌克	9.80	0.13	2.6	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+武田　　正紀	3.50	0.17	4.3	３		IP	６		IP	３		IP	５		IP	５		IP	４		IP	３		IP	５		IP	５		IP	４		IP
+野田　　昇吾	3.50	0.16	2.4	５		IP	５		IP	５		IP	１		IP	６		IP	５		IP	５		IP	３		IP	４		IP	４		IP
+砂長　　知輝	6.30	0.12	3.4	１		IP	６		G1	４	6	SG	３		IP	３		IP	５		IP	３		G1	３		IP	２		IP	１		IP
+滝沢　　芳行	4.70	0.12	2.4	５		IP	４		IP	６		IP	１		IP	４		G3	３		G3	５		IP	４		IP	３		IP	２	4	IP
+谷島　　咲希	1.33	0.21	4.7	５		IP	６		IP	６		IP																					IP

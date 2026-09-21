@@ -1,0 +1,8 @@
+data=
+1	0
+小野　　達哉	10.00	0.15	1.7	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+藤原　啓史朗	6.00	0.11	2.2	１		IP	１		IP	２		IP	６		G1	４		G1	６		SG	６		SG	３	3	IP	１		IP	６		G1
+野長瀬　正孝	4.20	0.14	3.0	２		IP	３		IP	５	2	IP	３		IP	４		IP	５		IP	５		IP	５		IP	４		IP	４		IP
+町田　　洸希	3.60	0.21	4.9	６		IP	４		IP	３		IP	５		IP	３		G3	６		G3	３		IP	５		IP	３		IP	５		IP
+山崎　　　祥	5.00	0.22	3.8	２		IP	４		IP	３		IP	３	6	IP	４		IP	４		IP	４		IP	２		IP	５		IP	４		IP
+西舘　　　健	2.00	0.18	4.5	６		IP	５		IP	４		IP	６		IP	３		IP	６		IP	６		IP	５		IP	６		IP	６		IP

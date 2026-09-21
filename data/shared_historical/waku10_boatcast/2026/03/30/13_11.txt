@@ -1,0 +1,8 @@
+data=
+1	0
+松下　　一也	7.50	0.15	2.9	２		IP	１		IP	６		IP	１		IP	１		IP	Ｆ		IP	１		IP	３		IP	１		IP	１		IP
+重木　　輝彦	7.20	0.13	3.2	３		IP	１		IP	４		G1	２		IP	３		IP	５		G1	２		G1	２		G1	３		IP	１		IP
+上村　　純一	6.20	0.13	2.5	３		IP	２		IP	２		IP	６		IP	４		G1	２		G1	３		G1	５		G1	４		IP	１		IP
+松尾　　　充	5.30	0.14	3.9	４		IP	１	5	IP	３		IP	４	5	IP	４		IP	２		IP	４		G1	６		G1	２		IP	５	3	IP
+金子　　　萌	6.10	0.13	3.1	４		IP	２		IP	２		IP	４	6	IP	３		IP	３		IP	１		IP	１	4	IP	５		G2	６		G2
+岡村　　将也	3.20	0.16	3.7	４		IP	６		IP	５		IP	４		IP	５	5	IP	６		IP	３		IP	４		IP	５		IP	３		IP

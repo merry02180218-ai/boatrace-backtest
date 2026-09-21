@@ -1,0 +1,8 @@
+data=
+1	0
+中曽　　瑠華	5.80	0.14	2.8	１		IP	４		IP	２		IP	６		IP	１		IP	６		G3	２		IP	１		IP	４		IP	５		IP
+寺島　　美里	6.00	0.15	2.1	４		IP	２		IP	３		IP	４		IP	６		IP	１		G1	２		G1	６		IP	１		IP	３		G3
+廣中　智紗衣	5.50	0.19	4.4	５		IP	２		IP	２		IP	５		IP	１		IP	２		IP	６		G3	３		G1	３		G3	６		G3
+黒澤　めぐみ	4.50	0.18	3.1	５		IP	５		IP	５		G3	２		G3	６	5	G3	３		G3	２		IP	３		IP	５		IP	２		IP
+阿部　　未侑	1.30	0.22	4.6	Ｆ	6	IP	５		IP	６	6	IP	Ｆ	6	IP	６	6	IP	４		IP	６		IP	６	6	IP	５	6	IP	６		IP
+市川　　瑚幸	1.50	0.19	4.8	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	４		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+栗城　　　匠	9.10	0.11	3.7	１		G1	１		IP	１		IP	２		IP	２		IP	３		IP	２		G1	２		IP	１		G1	１		IP
+西田　　　靖	4.60	0.20	3.7	３		G3	３		G3	５		IP	６		IP	３		IP	２		IP	１		IP	４		IP	６		IP	５	1	IP
+浦田　　信義	4.70	0.18	4.1	５		IP	４		IP	６	4	IP	４		IP	３		IP	５		IP	２		IP	４		IP	２		IP	２		IP
+杉村　　賢也	5.00	0.15	2.7	３		IP	不		IP	５		IP	５		IP	５		IP	６		G3	１		IP	４		IP	２		IP	１		IP
+内堀　　　学	5.20	0.14	2.8	５		IP	１		IP	４		IP	１		IP	５		IP	６		IP	１	1	IP	４		IP	２		IP	６		IP
+三浦　　裕貴	3.70	0.16	4.4	４	5	IP	６		IP	３		IP	５		IP	４		IP	３		IP	６		IP	６		IP	３		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　翔悟	7.70	0.17	2.1	３		IP	６		IP	１		IP	２		IP	３		IP	２		IP	１		IP	１		IP	２		IP	１		IP
+加藤　　翔馬	7.50	0.16	4.4	３		IP	３		IP	３		G1	２		G1	３		IP	１		IP	２		IP	２		G1	３		IP	２		IP
+高岡　　竜也	6.10	0.18	2.6	３		IP	２		IP	２		IP	２		IP	１		IP	４		IP	４		IP	１		IP	６		IP	５		IP
+加藤　　　翔	3.10	0.19	4.4	６	5	IP	３		IP	３		IP	５		IP	６		IP	４		IP	３	5	IP	６		IP	５		IP	５		IP
+山口　　裕二	5.30	0.15	3.4	５		IP	４		IP	１	4	IP	４		IP	１		IP	３		IP	４		IP	６		IP	４		IP	３		IP
+植木　　美帆	1.50	0.21	3.9	５		IP	５		IP	４	5	IP	６		IP	６		IP	６		IP	転		G3	６		G3	５		IP	６		IP

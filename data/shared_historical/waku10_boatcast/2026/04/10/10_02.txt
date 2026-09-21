@@ -1,0 +1,8 @@
+data=
+1	0
+泥谷　　一毅	7.20	0.21	3.9	１		IP	２		IP	２		IP	２		IP	２		IP	３		IP	１		IP	１		IP	４		IP	転		IP
+土山　　卓也	6.40	0.15	3.3	６		IP	５		IP	１		IP	１		IP	２		IP	１		IP	２		IP	２		IP	６	1	IP	３		IP
+丸山　　祐也	5.10	0.19	3.9	４		IP	４		IP	２		IP	６		IP	３		IP	４		IP	３		IP	３		IP	４		IP	２		IP
+松尾　　宣邦	2.90	0.18	3.9	６		IP	４	5	IP	５		IP	５		IP	５		IP	５	3	IP	３		IP	５		IP	５		IP	３		IP
+上岡　　巧汰	2.20	0.14	3.1	６	6	IP	６	6	IP	４	6	IP	５	6	IP	５	6	IP	４		IP	５		IP	６		IP	４		IP	６	6	IP
+庄島　　潤成	2.50	0.20	4.4	６		IP	６		IP	落		IP	６		IP	３		IP	５		IP	６		IP	６		IP	２		IP	４		IP

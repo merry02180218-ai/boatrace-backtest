@@ -1,0 +1,8 @@
+data=
+1	0
+小森　　信雄	6.00	0.19	4.2	３		IP	４		IP	５		IP	３		IP	１		IP	４		IP	４		IP	１		IP	３		IP	２		IP
+本部　めぐみ	2.50	0.27	4.8	６		IP	４		G3	５		G3	６		IP	４		IP	５		IP	６		IP	３		IP	妨		IP	４		G3
+安藤　　裕貴	2.20	0.13	2.7	５		IP	５		IP	４		IP	６		IP	６		IP	５		IP	５		IP	５		IP	転		IP	３		IP
+大塚　　康雅	5.00	0.16	3.4	４		IP	３		IP	１		IP	３	5	IP	３		IP	４		IP	２		IP	４		IP	６		IP	６		IP
+竹内　　　来	2.60	0.19	3.2	５		IP	６		IP	４		IP	３		IP	６		IP	３		IP	６		IP	５		IP	６		IP	５	6	IP
+柴田　　直哉	4.11	0.20	4.3	３		IP	６		IP	１	5	IP	４		IP	４		IP	６		IP	５		IP	６		IP	欠		IP	２		IP

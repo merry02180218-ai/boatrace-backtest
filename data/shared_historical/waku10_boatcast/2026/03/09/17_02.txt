@@ -1,0 +1,8 @@
+data=
+1	0
+竹本　　太樹	5.50	0.18	2.8	６		IP	３		IP	１		IP	２		IP	２		IP	３		IP	５		IP	５		IP	５		IP	１		IP
+小林　　一樹	4.90	0.14	2.4	４		IP	５		IP	２		IP	６		IP	４		IP	３		IP	３		IP	５		IP	２		IP	２	3	IP
+新田　　泰章	8.90	0.15	2.2	１		IP	２		IP	２		IP	３		IP	１		G1	２		IP	１		IP	２		IP	１		IP	１		G3
+白井　　友晴	5.20	0.18	3.7	４		IP	３	5	IP	３		IP	３		IP	４		IP	２		IP	３		IP	４		IP	５		IP	３		IP
+鈴木　　裕隆	3.70	0.15	3.1	２		IP	５		IP	３		IP	４		IP	３		IP	５	3	IP	６		G3	５		G3	５		IP	４		IP
+中澤　　里桜	1.30	0.26	4.1	６		IP	６		IP	６		IP	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP

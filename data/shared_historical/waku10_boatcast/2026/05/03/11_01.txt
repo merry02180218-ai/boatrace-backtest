@@ -1,0 +1,8 @@
+data=
+1	0
+吉永　　浩則	9.00	0.14	2.7	２		IP	２		IP	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP
+澤田　　尚也	6.60	0.12	2.8	２		IP	２		IP	２		IP	１		IP	４		G1	６		G1	３		G1	４		G1	２		G1	４		IP
+高山　　智至	4.50	0.18	3.6	５		IP	６		IP	５		IP	１		IP	５		IP	３		IP	４		IP	３		IP	３		IP	３		IP
+西川　　真人	3.40	0.16	3.6	５		IP	５		IP	２		IP	４		IP	５		IP	５		IP	５		IP	４		IP	５		IP	３		IP
+大町　　利克	3.20	0.20	4.1	４		IP	６		IP	２	4	IP	５		IP	６		IP	５		IP	５		IP	５		IP	３		IP	４		IP
+吉川　　晴人	4.10	0.16	3.4	６		IP	２		IP	２		IP	６		IP	３		IP	５		IP	３		IP	５		IP	４		IP	５		G2

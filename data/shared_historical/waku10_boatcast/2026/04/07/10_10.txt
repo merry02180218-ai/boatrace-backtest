@@ -1,0 +1,8 @@
+data=
+1	0
+向井田　佑紀	7.30	0.15	2.0	６		IP	１		IP	１		IP	５		IP	１		IP	１		G3	４		IP	１		IP	２		IP	２		IP
+山本　　寛久	4.00	0.18	3.3	５		G3	１		IP	１	1	IP	６		IP	６		G1	２		IP	５		IP	転		IP	６		IP	４		IP
+大串　　重幸	7.60	0.17	3.2	２		IP	２		IP	２		IP	１		G3	２		IP	３		IP	４	4	IP	３		IP	１		IP	２		IP
+鈴木　　茂高	3.40	0.21	4.0	５		IP	４		IP	４		IP	３		IP	４		IP	５		G3	６		IP	２		IP	６		IP	５		IP
+加倉　　侑征	4.00	0.14	3.1	２		IP	２		IP	５		IP	３		IP	５		IP	４		IP	５	4	IP	４		IP	５		IP	５	6	IP
+馬場　　　剛	5.60	0.11	2.3	２	5	G3	３		G3	２		IP	５		IP	３		IP	５		IP	５		IP	３		IP	４		IP	１		IP

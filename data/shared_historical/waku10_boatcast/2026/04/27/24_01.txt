@@ -1,0 +1,8 @@
+data=
+1	0
+飯山　　晃三	7.10	0.18	3.6	５	2	IP	１		IP	１		IP	２		IP	６		IP	３		IP	１		IP	３		IP	２		IP	１		IP
+北川　　太一	7.60	0.13	2.6	６		IP	１		G3	３		IP	３		IP	１		IP	２		IP	２		IP	１		IP	３		IP	１		IP
+寺嶋　　　雄	3.90	0.22	4.2	５		IP	６		IP	２		IP	５		IP	６		IP	６		IP	４		IP	５		IP	２		IP	１		IP
+眞鳥　　章太	5.20	0.16	3.6	３		IP	１		IP	Ｆ	5	IP	２		IP	４		IP	１		IP	５		IP	５		IP	５		IP	２		IP
+野中　　義生	4.70	0.16	3.3	５		G3	４		IP	３		IP	５		IP	４		IP	２		IP	２		IP	４		IP	６		IP	２		IP
+長谷川　　充	2.90	0.23	5.2	６	5	IP	５		IP	６		IP	２		IP	４		IP	５		IP	４		IP	５		IP	４		IP	６		IP

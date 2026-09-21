@@ -1,0 +1,8 @@
+data=
+1	0
+武重　　雄介	7.60	0.13	2.8	１		IP	４		IP	４		IP	１		IP	１		IP	２		IP	４		IP	２		IP	１		IP	２		IP
+丸尾　　義孝	7.20	0.13	3.3	４		IP	１		IP	１		IP	２		IP	３		IP	５		IP	１		IP	４		IP	１		IP	２		IP
+貫地谷　直人	3.30	0.22	3.6	５		IP	５		IP	２		IP	４		IP	５		IP	６		IP	２	5	IP	４		IP	６		IP	６		IP
+森作　　広大	3.70	0.19	4.0	５		IP	３		IP	６		IP	３		IP	４	5	IP	５	6	IP	６	5	IP	２		IP	３		IP	６		IP
+大町　　利克	3.00	0.22	4.0	３		IP	５		IP	４		IP	６		IP	２	4	IP	５		IP	６		IP	５		IP	５		IP	５		IP
+宮田　　　栞	1.33	0.24	4.7	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP			IP

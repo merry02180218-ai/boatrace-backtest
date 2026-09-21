@@ -1,0 +1,8 @@
+data=
+1	0
+中渡　　修作	8.40	0.14	3.7	２		IP	１		IP	１		IP	４		IP	１		IP	１		IP	２		IP	３		IP	２		IP	１		IP
+井川　　大作	5.40	0.14	3.0	２		IP	１		IP	３		IP	３		IP	２		IP	５		IP	６		IP	１		IP	６		G3	５		IP
+筒井　　美琴	2.10	0.21	4.3	４		IP	５		IP	５		IP	６		IP	６		IP	５		G3	５		G3	５		G3	６		IP	４	6	IP
+萬　　　正嗣	3.80	0.15	3.2	２		IP	１		IP	５		IP	３	5	IP	５		IP	６	5	IP	５		IP	４		IP	５	5	IP	６		IP
+上野　　拓馬	4.50	0.22	3.6	６		IP	３		IP	５		IP	３		IP	３		IP	１		IP	３		IP	５		IP	５		IP	４		IP
+後藤　　翔之	4.00	0.20	4.4	４		IP	５		IP	５		IP	４		IP	３		IP	５		IP	３		IP	４		IP	４	5	IP	３		IP

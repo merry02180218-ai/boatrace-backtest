@@ -1,0 +1,8 @@
+data=
+1	0
+平本　　真之	10.70	0.11	2.6	１		SG	１		SG	１		G1	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+秋元　　　哲	7.10	0.16	2.3	１		IP	Ｆ		IP	２		IP	２	1	IP	２	3	G3	１		G3	３		G1	２		IP	４		IP	２		IP
+山口　　　剛	7.50	0.13	2.4	３		SG	３		G1	１		IP	５		SG	４		SG	６		G1	２		G1	２		G1	２		G1	２		G1
+瓜生　　正義	6.30	0.18	3.2	５		G1	４		G1	３		G1	２		G1	３		IP	４		G1	２	3	IP	６		G1	３		G1	１	3	G1
+佐藤　隆太郎	7.40	0.15	3.1	２		SG	２		G2	４		G2	５		IP	２		IP	３		IP	１	4	IP	３		IP	１		G1	４	4	G1
+太田　　和美	3.30	0.16	3.6	２	5	IP	３		IP	５		IP	６		IP	６		G1	５		G1	５		G1	６		G1	５		G1	５		G1

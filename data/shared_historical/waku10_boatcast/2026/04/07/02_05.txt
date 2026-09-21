@@ -1,0 +1,8 @@
+data=
+1	0
+内堀　　　学	8.50	0.15	3.8	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP
+栗原　　一馬	3.20	0.15	3.3	２	3	IP	５	3	IP	転		IP	６		IP	１		IP	６		IP	５	3	IP	４		IP	５		IP	５		IP
+花田　　凱成	5.78	0.18	3.6	５		IP	２	4	IP	３		IP	５		IP	３		IP	２		IP	３		IP	３		IP	転		IP	２		IP
+作間　　　章	6.10	0.16	3.2	３		IP	４		IP	５		IP	１		IP	２		IP	４	5	G1	３		IP	３		IP	４		IP	１		IP
+岩崎　　麗子	2.60	0.16	3.4	６		G3	５		IP	４		IP	５	4	IP	５		IP	５		IP	３		IP	６	6	IP	５		IP	４		IP
+孫崎　　百世	3.60	0.13	3.2	３		IP	３		IP	６		IP	５		IP	５	5	IP	３		IP	４		IP	６		IP	３		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+宮内　　直哉	4.20	0.20	4.2	４		IP	４		IP	５		IP	５		IP	１		IP	５		IP	５		IP	４		IP	３		IP	３		IP
+横田　　海人	2.40	0.19	3.2	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	２		IP	４		IP	６		IP	４	3	IP
+香川　　陽太	5.70	0.15	3.1	６		IP	３		IP	３		IP	２	4	IP	２		IP	２		IP	４		IP	２	4	IP	４		IP	４		IP
+田中　　勇輔	3.60	0.13	1.9	６		IP	３	5	IP	３		IP	６		IP	６	6	IP	５	6	IP	１		IP	５		IP	６		IP	３		IP
+宇土　　泰就	3.50	0.11	2.4	５		IP	４		IP	６		IP	３		IP	４		IP	４		IP	３		IP	５		IP	４		IP	５		IP
+岩津　　徹郎	4.70	0.16	4.4	３		IP	３		IP	４		IP	４		IP	６		IP	４		IP	３		IP	３		IP	４		IP	３		IP

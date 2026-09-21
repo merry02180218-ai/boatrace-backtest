@@ -1,0 +1,8 @@
+data=
+1	0
+篠田　　優也	9.20	0.18	3.5	２		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP
+寺島　　美里	6.40	0.16	2.3	６		IP	１		G1	２		G1	６		IP	１		IP	３		G3	３		G3	１		IP	３		G3	４		G3
+坂本　　一真	3.90	0.20	3.0	２		IP	３		IP	５		IP	５		IP	６		IP	６		IP	４		IP	６		IP	３		IP	２		IP
+浜田　亜理沙	4.30	0.17	3.9	５		IP	５		IP	４		G1	６		G1	２		G1	６		G1	２		IP	２		IP	５		G1	５		IP
+國崎　　良春	3.40	0.15	2.9	３		IP	６		IP	６		IP	６		IP	３		IP	６		IP	５		IP	３		IP	４		G3	３		IP
+浜本　　裕己	4.00	0.14	2.3	５		IP	６		IP	３		IP	１	4	IP	２	4	IP	５		IP	６		IP	３		IP	５		IP	５		IP

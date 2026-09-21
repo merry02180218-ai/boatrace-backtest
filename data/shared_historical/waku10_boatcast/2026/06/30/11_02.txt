@@ -1,0 +1,8 @@
+data=
+1	0
+品川　　賢次	6.60	0.24	3.3	４		IP	１		IP	２		IP	１		IP	６		IP	１		IP	３		IP	６		IP	２	2	IP	２		IP
+江藤　　敦宏	6.40	0.18	4.7	５		IP	１		IP	２		IP	３		IP	４		IP	３		IP	４		IP	４		IP	１		IP	１		IP
+久保原　秀人	3.40	0.17	4.2	６		IP	５		IP	３		IP	２		IP	６	4	IP	４		IP	６		IP	４		IP	６		IP	３		IP
+丸尾　　義孝	4.20	0.15	3.4	４		IP	５		IP	２		IP	４		IP	６		IP	６		IP	３		IP	５		IP	３		IP	２		IP
+藤井　　　徹	3.30	0.24	4.5	３	4	IP	６		IP	３		IP	３	4	IP	５	2	IP	６		IP	５		IP	３		IP	５		IP	６		IP
+山下　　大輝	4.33	0.14	3.4	転		IP	４	5	IP	３		IP	３		IP	３		IP	５		IP	６		IP	２		IP	４		IP	６		G1

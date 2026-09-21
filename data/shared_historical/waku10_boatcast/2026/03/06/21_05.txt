@@ -1,0 +1,8 @@
+data=
+1	0
+高田　ひかる	8.70	0.22	4.1	１		IP	３		IP	１		IP	Ｆ		IP	１		IP	１		IP	１		G1	１		IP	１		IP	１		IP
+城間　　盛渚	6.40	0.17	3.1	２		IP	３		IP	１		IP	１		IP	６		IP	２		IP	４		IP	１		IP	６		IP	３		IP
+永田　　義紘	4.78	0.17	2.7	３		IP	１		IP	エ		IP	５		IP	２		IP	６		IP	転		IP	５		IP	２		IP	３		IP
+磯村　　　匠	5.20	0.22	3.6	４		IP	５		IP	２		IP	４		IP	３		IP	３		IP	３		IP	４		IP	３		IP	３		IP
+間嶋　　仁志	4.60	0.24	4.9	４	2	IP	１	2	IP	４	2	IP	６	4	IP	３	1	IP	６	2	IP	２	2	IP	４	3	IP	３	2	IP	５	3	IP
+森　　　陽多	2.10	0.19	3.8	６		IP	６		IP	６		IP	５		IP	５		IP	５		IP	６		IP	５		IP	６		IP	２		IP

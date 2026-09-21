@@ -1,0 +1,8 @@
+data=
+1	0
+稗田　　聖也	8.30	0.15	2.4	２		IP	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	６		IP	１		IP
+木村　　亮太	5.10	0.18	3.7	４		IP	２		IP	５		IP	２		IP	１		IP	１		IP	４		IP	６		IP	５		IP	５		IP
+横澤　　剛治	6.20	0.15	3.4	３		IP	４		IP	２		IP	６		IP	１		IP	２		IP	５		IP	３		IP	２		IP	３		G1
+吉田　凌太朗	4.20	0.16	3.0	５		IP	４		IP	３		IP	５		IP	１		IP	４		IP	６		IP	１		IP	６		IP	５		IP
+田路　　朋史	4.50	0.14	3.4	１		IP	４		IP	４		IP	２		IP	４	4	IP	４		IP	６		IP	６		IP	６		IP	４		IP
+下出　　卓矢	4.40	0.14	3.6	６		IP	６		IP	４		IP	２		IP	２		IP	６		IP	２		IP	５		IP	６		IP	１		IP

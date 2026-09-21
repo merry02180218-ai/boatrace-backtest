@@ -1,0 +1,8 @@
+data=
+1	0
+出畑　　孝典	7.10	0.20	3.2	１		IP	１		IP	２		IP	２		IP	６		IP	３		IP	３		IP	５		IP	１		IP	１		IP
+高橋　　淳美	4.30	0.16	2.8	６		IP	５		IP	１		IP	３		IP	３		IP	５		IP	５		IP	３		IP	４		IP	４		G3
+太田　　　潮	3.30	0.18	2.8	５		IP	５		IP	３	4	IP	６		IP	２		IP	４		IP	６		IP	６		IP	５		IP	３		IP
+鈴木　　峻佑	4.80	0.16	4.6	４		IP	２	3	IP	４		IP	４		IP	６		IP	２		IP	６		IP	４		IP	３		IP	２		IP
+里岡　　右貴	6.67	0.11	2.0	４		IP	２		IP	６		IP	２		IP	３		G3	１		IP	２		IP	１		G1	４		IP	欠		IP
+吉川　　昭男	4.80	0.18	3.0	４	2	IP	２	3	IP	５	4	IP	４	3	IP	２	3	IP	３	3	IP	５	2	IP	４	3	IP	５	4	IP	４	2	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+今泉　　友吾	8.90	0.16	3.2	１		IP	１		IP	１		IP	３		G1	３	2	G1	１		G1	３		IP	３		G1	１		G1	１		IP
+永井　　彪也	6.70	0.14	2.6	３		IP	６		G3	２		IP	１		IP	２		G1	６		G1	２		G1	２		G1	６		G1	１		G2
+長田　　頼宗	8.00	0.13	2.7	１		IP	２		IP	１	2	IP	５		G1	２		G1	１		IP	３		G1	２		G1	３		G1	３		G1
+中野　　次郎	7.40	0.11	2.4	３		IP	４		G1	１		IP	１		IP	５		G1	４		G1	４		G1	２		G1	２		G1	１		G1
+佐藤　隆太郎	6.60	0.15	3.4	２		IP	３		IP	１	4	IP	３		IP	１		G1	４	4	G1	１		IP	４		IP	４	4	IP	５		IP
+福来　　　剛	5.70	0.14	2.7	２		IP	２		IP	５		G1	５		G1	２		IP	３		IP	５		IP	３		G1	２		G1	５		G1

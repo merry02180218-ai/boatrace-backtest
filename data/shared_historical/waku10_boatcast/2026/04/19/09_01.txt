@@ -1,0 +1,8 @@
+data=
+1	0
+大豆生田　蒼	7.10	0.17	3.8	２		IP	２		IP	１		IP	５		G1	１		G3	１		G3	１		G3	５		G3	Ｆ		IP	１		IP
+長尾　　萌加	4.50	0.16	3.5	４		IP	６	3	IP	３		IP	３		IP	５		IP	４		IP	２		IP	２		IP	５		IP	４		IP
+宇恵　　有香	4.30	0.17	3.5	５		IP	６		IP	４		IP	３		IP	５		IP	１		IP	２		IP	５		IP	５		IP	３	4	IP
+島田　なぎさ	4.60	0.13	2.2	４		IP	１		G3	５		IP	２		IP	６		IP	５		IP	６	5	IP	１		G3	３		G3	５		IP
+向井田　真紀	3.20	0.19	3.1	４		IP	５	4	IP	５		IP	２	6	IP	２		G3	Ｆ		IP	６		IP	５		IP	６		IP	４		G3
+本部　めぐみ	2.60	0.21	4.6	４		IP	４	5	IP	２		IP	５		G3	Ｆ	5	IP	５		IP	６		G3	６	5	IP	５		G3	５		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+平石　　和男	7.60	0.21	4.4	２		IP	１		IP	２		IP	４		IP	２		IP	４		IP	１		IP	３		IP	１		IP	２		IP
+鋤柄　　貴俊	5.10	0.17	3.1	６		IP	４		IP	３		IP	５		IP	４		IP	１		IP	４		IP	２		IP	３		IP	３		IP
+大澤　　普司	5.90	0.23	4.3	３		IP	１		G1	５		IP	５		IP	３		IP	２	2	IP	落		IP	３		IP	１		IP	２		G3
+荒井　　輝年	6.30	0.14	2.4	６		IP	２		IP	２		IP	２		IP	１		IP	２		IP	５		IP	４	5	IP	３		IP	２		IP
+乙津　　康志	4.50	0.19	4.3	４		IP	５		IP	４	3	IP	３		IP	３	4	IP	６		IP	２		IP	４		IP	４		IP	３		IP
+高橋　　　勲	3.89	0.15	3.9	３	4	IP	５	4	IP	２	5	IP	転		IP	Ｆ	4	IP	４		G3	６		G3	４		G3	４	3	IP	３	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+相馬　　　翔	8.60	0.12	1.7	１		IP	１		IP	２		IP	２		IP	３		IP	１		IP	２		IP	１		IP	１		IP	３		IP
+松下　　直也	5.40	0.18	3.5	２		IP	３		IP	２	3	IP	２		IP	２		IP	５		IP	６		IP	４		IP	６		IP	２		IP
+長谷川　親王	2.90	0.19	3.6	３		IP	５		IP	４		IP	５		IP	６		IP	５		IP	４		IP	５		IP	５		IP	４		IP
+石倉　　洋行	5.20	0.13	3.1	１		IP	４		G1	５		G1	１		IP	４		IP	転		IP	３		IP	４		IP	５		IP	２		G3
+伏島　　祐介	3.70	0.17	3.7	Ｆ		IP	４	4	IP	６		IP	４		IP	６		IP	３		IP	６		IP	４		IP	３		IP	１		IP
+正木　　聖賢	4.40	0.19	3.6	５	2	IP	３	3	IP	２	2	IP	３	2	IP	４	3	IP	４	3	IP	３	3	IP	５	4	IP	Ｆ	2	IP	３	4	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　淳美	3.70	0.17	3.4	５		IP	１		IP	６		G3	４		G3	６		IP	６		IP	２		IP	５		IP	４		IP	４		IP
+前原　　　哉	4.70	0.20	3.7	５		IP	３		IP	２		G3	３		IP	２		IP	３		IP	４		IP	５		IP	６		IP	４		IP
+片岡　　恵里	4.90	0.16	3.5	３		IP	６		G3	４		IP	３		IP	２		G3	３		G3	５		IP	３		IP	２		IP	５		G3
+林　　　風音	1.75	0.23	4.2	４	6	IP	６	6	IP	６	6	IP	６	6	IP																		IP
+坂　　咲友理	4.30	0.16	3.6	３		G3	３		G3	４		G3	６	4	IP	４		G3	５		IP	４		IP	３		IP	４		IP	３		IP
+中西　　月輝	1.40	0.19	5.0	６		IP	５		IP	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

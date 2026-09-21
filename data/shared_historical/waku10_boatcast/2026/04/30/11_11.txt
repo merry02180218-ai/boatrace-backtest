@@ -1,0 +1,8 @@
+data=
+1	0
+松山　　将吾	9.40	0.14	2.1	３		IP	１		IP	１		IP	１		IP	３		IP	１		G3	１		G3	１		G3	１		IP	１		IP
+是澤　　孝宏	5.90	0.13	3.8	６	3	IP	４		IP	２		IP	２		IP	１		IP	４		G3	３		IP	４		IP	２		IP	３		IP
+井上　　尚悟	6.60	0.18	2.7	２	2	IP	２		G3	１	4	G3	５		IP	３		IP	３		IP	４		IP	４		IP	１		IP	２		IP
+深井　　利寿	6.60	0.16	3.2	４		IP	２		IP	１		IP	転		IP	３		IP	３		IP	１		IP	１		IP	２		IP	４		IP
+片橋　　幸貴	5.80	0.17	3.8	３		IP	４		IP	２		IP	２		IP	５		IP	３		IP	３		IP	１		IP	３		IP	５		IP
+木下　　雄介	4.00	0.20	3.9	３		IP	転	5	IP	５		IP	５		IP	５		IP	２		IP	３		IP	３		IP	４		IP	４		IP

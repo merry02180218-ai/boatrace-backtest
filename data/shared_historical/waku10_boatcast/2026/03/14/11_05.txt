@@ -1,0 +1,8 @@
+data=
+1	0
+富永　　大一	8.00	0.14	2.4	３		IP	４	2	IP	３		IP	２		IP	２		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+原村　　拓也	6.60	0.22	4.0	２		IP	２		IP	１		IP	２		IP	３		IP	３		IP	３		IP	３		IP	３		IP	５		IP
+西原　　明生	3.50	0.20	4.2	５		IP	４		IP	６		IP	４		IP	２		IP	６		IP	６		IP	４		IP	３	2	G3	４		G3
+高村　　　諒	1.60	0.20	4.3	６		IP	６		IP	５		IP	４		IP	６	6	IP	５		IP	６		IP	５		IP	６		IP	６	6	IP
+山川　　雄大	6.40	0.17	3.5	５		IP	６	4	IP	２		IP	１		IP	１		IP	３		G3	１		IP	６		IP	１		IP	３		IP
+山本　　兼士	4.60	0.16	4.2	６		IP	６		IP	５		IP	４	4	IP	２		IP	２		IP	１		IP	５		IP	２		IP	５		G3

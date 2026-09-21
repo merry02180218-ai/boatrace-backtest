@@ -1,0 +1,8 @@
+data=
+1	0
+安河内　　将	9.60	0.13	2.8	１		IP	１		IP	１		IP	１		IP	３		IP	２		IP	１		IP	１		G1	２		G1	１		IP
+森永　　　隆	5.50	0.18	3.5	３		IP	１		IP	４		IP	４	3	IP	５		IP	３		IP	１		IP	１		IP	５		IP	６		IP
+武富　　智亮	6.10	0.15	2.8	４		IP	５		IP	３		IP	５		G1	２		G1	２		G1	２		IP	２		IP	２		IP	４		IP
+伊久間　陽優	5.70	0.14	2.2	５		IP	３		IP	３		IP	４		IP	３		IP	４		IP	１		IP	１	5	G3	２		G3	６		IP
+飯島　　　誠	3.40	0.20	3.8	６		IP	５		IP	６		IP	４		IP	５		IP	３		IP	５		IP	３		IP	５		IP	２		IP
+金子　　　萌	4.60	0.14	2.5	１		IP	６		IP	２		IP	２		IP	６		G2	６		IP	５	5	IP	５		IP	５		IP	２		IP

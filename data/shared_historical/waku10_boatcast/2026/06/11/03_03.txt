@@ -1,0 +1,8 @@
+data=
+1	0
+花田　　凱成	6.00	0.15	3.0	２		IP	４		IP	３		IP	５		IP	１		IP	２		IP	６		IP	６		IP	１		IP	１		IP
+有山　　　望	3.80	0.14	4.2	４		IP	４		IP	５		IP	６		IP	２		IP															IP
+藤原　　仙二	7.30	0.17	3.8	３		IP	１	4	IP	１		G2	４	4	IP	３		IP	２		IP	２		IP	２		IP	２		IP	５		G2
+山下　　智己	3.10	0.20	2.9	５		IP	５		IP	６	6	IP	Ｆ		IP	４		IP	５		IP	５		IP	１		IP	３		IP	５		IP
+熊倉　　幹太	1.00	0.27	4.8	エ	4	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	Ｆ	6	IP	６	6	IP
+中野　　仁照	4.90	0.17	4.0	３		IP	２		IP	３		IP	４		IP	５		IP	３		IP	２		IP	５		IP	６		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+古賀　　千晶	7.00	0.16	2.6	２		G3	１		IP	４		G3	４		G3	２		IP	５		IP	１		IP	２		G3	１		G3	３		IP
+大橋　栄里佳	5.70	0.24	4.6	５		IP	４		IP	４		G3	５		IP	２		IP	１		IP	１		IP	２		IP	６		IP	２		IP
+山崎　小葉音	5.90	0.17	2.6	３		IP	６		IP	４		IP	３		IP	３		IP	２		IP	１		IP	２		IP	４		IP	３		IP
+安井　　瑞紀	6.70	0.18	3.2	２		IP	６		IP	２		IP	１		G3	１		G3	３		IP	５		G1	３		IP	１		IP	４		IP
+堀内　　亜海	1.40	0.19	4.2	６		G3	６	6	IP	６		IP	６		IP	６		IP	６		IP	４	6	IP	５	6	IP	６	6	IP	６	6	IP
+橋谷田　佳織	2.30	0.31	5.4	５		G3	４	5	G3	６		G3	６		G3	６		IP	５		G3	４		G3	５		G3	５		IP	４	5	IP

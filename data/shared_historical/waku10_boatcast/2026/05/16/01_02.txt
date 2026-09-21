@@ -1,0 +1,8 @@
+data=
+1	0
+長谷川　　充	7.20	0.17	2.8	１		IP	３		IP	２		IP	３		IP	５		IP	２		IP	１		IP	２		IP	１		IP	４		IP
+木下　　雄介	4.56	0.19	3.6	３		IP	４		IP	１	3	IP	６		IP	５		IP	欠		IP	５		IP	５		IP	３		IP	２		IP
+石田　　貴洋	6.60	0.12	2.7	２		IP	１		IP	５		IP	１		IP	１		IP	５		IP	１		IP	４	4	IP	５		IP	２		IP
+横田　　　茂	3.30	0.16	3.4	５		IP	５		IP	６		IP	４	5	IP	４		IP	４		IP	５		IP	１		IP	５		IP	５		IP
+前田　　光昭	2.70	0.18	2.6	３		IP	６		IP	５		IP	６		IP	４	4	IP	４	4	IP	５		IP	４	4	IP	６		IP	５		G3
+村岡　　賢人	5.50	0.12	2.8	６		IP	３		IP	３		IP	３		IP	３		IP	２	5	IP	３		IP	４		G1	６		G1	２		G1

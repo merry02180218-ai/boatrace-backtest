@@ -1,0 +1,8 @@
+data=
+1	0
+飯島　　昌弘	8.90	0.15	3.4	１		IP	２		IP	３		IP	１		IP	１		IP	１		IP	１		IP	４		IP	１		IP	１		G1
+須藤　　隆雄	4.20	0.19	3.2	５	3	IP	２		IP	４		IP	６		IP	５		IP	３		IP	４		IP	６	3	IP	３		IP	２		IP
+長谷川　晴哉	6.67	0.19	3.6	３		IP	４		IP	３		IP	４		IP	転		IP	２		IP	１		IP	５		IP	１		IP	１		IP
+植竹　　玲奈	2.67	0.19	3.6	６	6	IP	４		IP	４		IP	転		IP	６		IP	３		IP	６	6	IP	４		IP	６		IP	５		IP
+富永　　正人	3.50	0.20	4.1	６		IP	４		IP	４		IP	２		IP	６	6	IP	４		IP	６		IP	３	6	IP	４	6	IP	５		IP
+澁澤　　周羽	1.33	0.16	4.0	６		IP	５		IP	６		IP																					IP

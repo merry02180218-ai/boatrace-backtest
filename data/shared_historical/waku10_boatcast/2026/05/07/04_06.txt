@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　善庸	5.60	0.25	5.2	１		IP	４		IP	５		IP	３		IP	５		IP	３		IP	４		IP	５		IP	１		IP	１		IP
+鈴木　　　猛	5.60	0.21	3.6	４		IP	６		IP	５		IP	３		IP	２		IP	２		IP	２		IP	２		IP	６		IP	１		IP
+芦澤　　　望	5.90	0.14	2.5	１		IP	６		IP	１		IP	２		IP	６		IP	５		IP	１		IP	６	4	IP	３		IP	１		IP
+長畑　　友輔	5.00	0.15	3.0	１		IP	３	5	IP	４		IP	５		IP	３		IP	６		IP	４		IP	６		IP	１	5	IP	３		IP
+島田　　賢人	6.30	0.15	2.9	１		IP	６		IP	３		IP	３		IP	１	4	IP	１		IP	１		IP	５		IP	４		IP	４		IP
+宮之原　輝紀	5.10	0.13	4.0	２		IP	４		G1	６		G1	５		G1	４		SG	４		G1	５		G1	４		G1	３		G1	３		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+泥谷　　一毅	7.80	0.18	3.0	１		IP	３		IP	１		IP	１		IP	転		IP	３		IP	１		IP	２		IP	１		IP	２		IP
+三好　　勇人	6.90	0.15	2.6	２		IP	６	3	IP	１		IP	２	3	G3	２		G3	１		IP	３	3	IP	２		IP	３		IP	４		IP
+森　　　智也	5.40	0.15	3.3	５		IP	３		IP	４		G3	５		G3	２	2	IP	３		IP	２		IP	５		IP	２		IP	２		IP
+浦田　　信義	4.40	0.24	4.6	３		IP	５		IP	３		IP	１		IP	６		IP	６		IP	５		IP	２		IP	３		IP	５		IP
+山崎　　昂介	3.40	0.18	3.5	３		IP	６		IP	６		IP	４		IP	４		IP	５		IP	４		IP	５		IP	４		IP	３		IP
+國崎　　良春	5.40	0.18	3.2	４		IP	２		IP	３		IP	５		IP	５		G3	６		G3	３		G3	２		IP	２		IP	２	5	IP

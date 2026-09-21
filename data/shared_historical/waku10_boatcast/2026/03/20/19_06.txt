@@ -1,0 +1,8 @@
+data=
+1	0
+沖島　　広和	7.80	0.16	2.5	２		G3	１		G3	２		IP	２		IP	１		IP	１		IP	３		IP	転		IP	１		IP	２		IP
+岡村　　慶太	6.00	0.11	3.1	６		G3	２		IP	２		IP	１		IP	６		G1	３		G1	３		IP	４	3	IP	２		IP	３		IP
+向井　　美鈴	5.80	0.18	3.7	３		IP	２		IP	５		G1	４		G1	３		IP	４		IP	２		IP	３		IP	２		IP	４		IP
+平石　　和男	7.60	0.18	3.1	２		IP	２		IP	１	3	IP	１		IP	１		IP	４		IP	１		IP	２		IP	３	3	IP	５		IP
+渡　　　修平	3.60	0.19	4.4	５	6	IP	２		IP	２		IP	５		IP	４		IP	６		IP	６		IP	２		IP	６		IP	６		IP
+中里　　昌志	3.70	0.16	3.8	３		IP	６	5	IP	４	5	IP	３		IP	３		IP	４		IP	３		IP	６	5	IP	６		IP	５		IP

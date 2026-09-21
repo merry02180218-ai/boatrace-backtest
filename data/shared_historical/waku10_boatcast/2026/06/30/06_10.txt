@@ -1,0 +1,8 @@
+data=
+1	0
+安部　　慎一	5.10	0.13	2.0	１		IP	４		IP	５		IP	４		IP	４		G3	Ｆ		IP	６		IP	１		IP	２		IP	２		IP
+金子　　順一	5.80	0.20	3.9	４		IP	３		IP	５		IP	１		IP	２		IP	３		IP	５		IP	２		IP	２		IP	４		IP
+橋本　　英一	4.40	0.19	3.1	６		IP	３	4	IP	転		IP	３		IP	３		IP	６		IP	２	4	IP	４		IP	３		IP	３		IP
+米田　　隆弘	4.70	0.19	3.2	４		IP	３		IP	１	3	IP	３	5	IP	６		IP	５	3	IP	３		IP	５		IP	４		IP	３		IP
+萩原　　知哉	4.10	0.21	4.1	４		IP	２	6	IP	５	4	IP	５		IP	２		IP	６		IP	３		IP	５		IP	５		IP	４		IP
+木村　　仁紀	5.10	0.12	3.0	５		IP	３		IP	３		G2	６		IP	４	5	IP	４		IP	６		IP	３		IP	２		IP	１	5	IP

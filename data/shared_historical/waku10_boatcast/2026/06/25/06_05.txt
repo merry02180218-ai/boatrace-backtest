@@ -1,0 +1,8 @@
+data=
+1	0
+古賀　　智之	9.00	0.19	4.2	１		IP	１		IP	２		IP	１		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+田中　瀬里奈	1.44	0.19	3.1	６		IP	６		G3	Ｌ	5	G3	６		G3	５		G3	６		IP	６		IP	４	5	IP	６		IP	６	3	IP
+表　　　憲一	6.30	0.20	3.4	２		IP	１		IP	４		IP	１		IP	４		IP	３		IP	２		IP	２		IP	６		IP	４		IP
+鈴木　　峻佑	5.30	0.13	1.9	６		IP	５		IP	５		IP	１		IP	１	5	IP	５		IP	５		IP	４		IP	１		IP	１		IP
+後藤　　正宗	5.90	0.14	2.3	３		IP	３		IP	６		IP	３		IP	２		IP	２		IP	２		IP	５		IP	１		G3	４		IP
+益田　　啓司	3.80	0.16	2.4	３		IP	４		IP	６		IP	６		IP	６		IP	６		G1	５		G1	２		IP	５		IP	２		IP

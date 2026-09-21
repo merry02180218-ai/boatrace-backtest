@@ -1,0 +1,8 @@
+data=
+1	0
+石川　　真二	6.40	0.15	2.8	６		IP	５		G1	２		IP	１		IP	４		IP	３		IP	１		IP	５		IP	１		IP	１		IP
+黄金井　力良	5.00	0.17	3.0	４		IP	３		IP	４		IP	５	1	IP	４		IP	２		IP	３		IP	４		IP	３		IP	３		IP
+國崎　　良春	6.60	0.15	3.0	５		IP	２		IP	２		IP	２		IP	２		IP	２		IP	３		G3	２		G3	４		IP	３		IP
+中里　　昌志	3.90	0.19	4.0	４		IP	３		IP	６		IP	３		IP	４		IP	３		IP	４		IP	３		IP	６		IP	６		IP
+田中　太一郎	3.50	0.13	3.1	１	4	IP	５		IP	６		IP	３		IP	６		IP	５		IP	５		IP	４		IP	３		IP	６		IP
+市川　　瑚幸	1.00	0.24	5.4	６		IP	６		IP	６		IP	６		G3	６		G3	６		G3	６		G3	６		G3	６		G3	６		IP

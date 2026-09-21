@@ -1,0 +1,8 @@
+data=
+1	0
+根岸　　真優	2.80	0.18	3.6	５		IP	６		IP	６		IP	１		IP	６		G3	５		IP	４		G3	６		IP	４		G3	５	2	G3
+西尾　　亮輔	2.80	0.16	2.6	５		IP	６		IP	３		IP	２		IP	６		IP	６		IP	６		IP	５		IP	Ｆ		IP	３		IP
+清埜　　翔子	6.40	0.14	3.2	３		IP	１		IP	２		IP	５		IP	６		IP	２		G3	１		G1	２		IP	２		IP	６		G1
+津久井　拓也	6.60	0.15	2.8	２		IP	５		IP	１		IP	４		IP	２		IP	２	5	IP	２		IP	３	5	IP	１		IP	５		IP
+西川　新太郎	4.80	0.18	3.2	３		IP	２		IP	４		IP	５		IP	４		IP	４		IP	３		IP	２		IP	４		IP	５		IP
+塚越　　陸斗	1.30	0.17	3.4	６		IP	６		IP	６		IP	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP

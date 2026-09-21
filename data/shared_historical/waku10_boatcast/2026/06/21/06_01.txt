@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　　翔	5.90	0.20	5.0	５		IP	１		IP	５		IP	２		IP	３		IP	２		IP	６		IP	１		IP	４		IP	２		IP
+栗山　　繁洋	4.00	0.15	3.9	２		IP	４		IP	２		IP	１	3	IP	５		IP	５		IP	５		IP	６		IP	５		IP	６		IP
+宮崎　　安奈	3.80	0.16	3.3	５		G2	５		G2	３		IP	６		IP	６		IP	Ｆ	4	IP	１		IP	４		IP	５	1	IP	２		IP
+宮内　由紀英	4.10	0.19	3.6	４		IP	６		IP	３		IP	６		IP	４		IP	６		IP	２		IP	２		IP	４	5	IP	４		IP
+柴田　　友和	2.40	0.20	3.9	５		IP	５		IP	６	6	IP	５	6	IP	６		IP	２		IP	５		IP	４		IP	６		IP	６	6	IP
+谷島　　咲希	1.60	0.21	4.4	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	５		IP

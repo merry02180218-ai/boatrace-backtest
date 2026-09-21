@@ -1,0 +1,8 @@
+data=
+1	0
+三浦　　永理	8.70	0.17	3.0	１		IP	３		G1	１		G1	４		IP	１		IP	２		G1	２		G3	１		G3	２		G3	１		G3
+山田　　竜一	6.80	0.13	2.7	２		IP	２		IP	３		IP	４		IP	２		IP	２		IP	４		IP	３		IP	１		IP	３		IP
+梶野　　学志	5.78	0.14	2.8	４		IP	２		IP	２		IP	２		IP	２		IP	６		IP	落		IP	４		G3	６		G3	１		IP
+石川　　哲秀	5.60	0.14	2.1	１		IP	３		IP	３		IP	３		IP	３		IP	５	2	IP	５		IP	３		IP	１		IP	５		IP
+青木　幸太郎	3.50	0.12	2.5	５		IP	４		IP	６		IP	４		IP	５		IP	４		IP	４		IP	転		IP	４		IP	１		IP
+大野　　芳顕	4.20	0.17	3.2	４		IP	３		IP	３		IP	４		IP	３		IP	６		IP	３		IP	３		IP	５		IP	６		IP

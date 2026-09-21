@@ -1,0 +1,8 @@
+data=
+1	0
+高岡　　竜也	9.20	0.14	3.0	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	３		IP
+渡辺　　空依	6.44	0.16	3.1	３		IP	２		IP	４		IP	１		IP	２		IP	２		IP	転		IP	４		IP	３		IP	４		IP
+宇佐見　　淳	4.60	0.13	2.4	５		IP	３		IP	６		IP	５		IP	３		IP	６		G3	４		G3	１	2	IP	２		G1	４		G1
+福岡　　泉水	5.50	0.20	3.2	２		IP	６		IP	４		IP	３		G3	４		G3	１		IP	３		IP	５		IP	２		IP	３		IP
+福田　　　理	1.80	0.18	4.1	６		IP	６		IP	６		IP	６		IP	４		IP	６		IP	６		IP	５		IP	４		IP	５		IP
+伊藤　　将吉	5.00	0.15	3.3	２		IP	２		IP	６		IP	４		IP	２		IP	４		G1	６		G1	３		IP	３		IP	５		IP

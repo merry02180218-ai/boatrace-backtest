@@ -1,0 +1,8 @@
+data=
+1	0
+寺島　　吉彦	5.30	0.21	3.8	５		IP	１		IP	２		IP	１		IP	２		IP	４		IP	５		G3	６		IP	５		IP	３		IP
+三角　　哲男	5.60	0.13	2.5	５		IP	３		IP	６		IP	２		IP	５		G1	２		IP	１		IP	５		IP	３		IP	２		IP
+西川　新太郎	4.90	0.13	1.9	２		IP	３		IP	４	4	IP	４		IP	４		IP	４		IP	３		IP	３		IP	６		IP	３		IP
+宮地　　秀祈	3.50	0.17	3.6	４		IP	５		IP	５		IP	５		IP	６		IP	３		IP	５		IP	５		IP	１		IP	４		IP
+中澤　　和志	4.44	0.14	2.8	転		G1	４		G1	５	4	IP	４		IP	３	4	IP	５		G1	３		G1	３		G1	転		G1	３		IP
+久保田　凪紗	1.70	0.18	3.8	６		G3	６		G3	６		G3	６		G3	５		IP	６		IP	３		IP	５		IP	６		IP	６		IP

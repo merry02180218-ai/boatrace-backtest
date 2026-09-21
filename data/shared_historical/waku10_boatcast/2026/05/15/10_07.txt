@@ -1,0 +1,8 @@
+data=
+1	0
+大森　　　翼	6.40	0.23	4.5	２		IP	１		IP	２		IP	１		IP	５		IP	５		IP	１		IP	４		IP	３		IP	４		IP
+原　　　豊土	7.78	0.13	2.0	３		IP	２		IP	転	3	IP	３		IP	１		IP	２		IP	３		IP	１		IP	２		IP	２	3	IP
+北川　　潤二	5.90	0.16	2.8	３		IP	３		IP	３		G3	３	4	G3	４		IP	２		IP	２		G3	３		G3	２		IP	６		IP
+赤岩　　善生	7.40	0.18	3.1	１	3	IP	１		IP	６		G1	３	2	IP	２	2	IP	２	3	IP	１	1	IP	３	2	G1	４	2	IP	２		G1
+永田　　義紘	2.30	0.14	3.9	４		IP	６	6	IP	転		IP	５		IP	５		IP	６		IP	４		IP	４		IP	６		IP	４		IP
+今村　天次朗	2.00	0.18	3.4	６		IP	欠		IP	４		IP	６		IP	４		IP	６		IP	転		IP	４		IP	６		IP			IP

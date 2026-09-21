@@ -1,0 +1,8 @@
+data=
+1	0
+江藤　　敦宏	4.80	0.20	4.0	１		IP	２		IP	５		IP	４		IP	１		IP	５		IP	６		IP	６		IP	５		IP	２		IP
+上野　　拓馬	4.90	0.14	3.2	６		IP	３		IP	３		IP	５	4	IP	４		IP	３		IP	４		IP	４		IP	２		IP	２		IP
+石倉　　拓美	2.10	0.18	3.7	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	４		IP	４		IP	４		IP
+加倉　　侑征	5.30	0.15	2.0	４		IP	３	6	IP	Ｆ		IP	６		IP	１	3	IP	２		IP	５		IP	４		IP	２		IP	１		IP
+山下　　拓巳	2.80	0.19	3.9	４		IP	５		IP	５		IP	５		IP	６		IP	６		IP	３		IP	５		IP	４		IP	４	6	IP
+高井　　雄基	3.60	0.24	4.9	４		IP	Ｆ		IP	４		IP	６		IP	４		G3	２		IP	６		IP	３		IP	３		IP	５		IP

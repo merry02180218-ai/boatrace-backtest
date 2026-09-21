@@ -1,0 +1,8 @@
+data=
+1	0
+下出　　卓矢	9.40	0.12	2.3	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		G2
+下河　　誉史	7.20	0.20	3.5	３		IP	３		IP	５		IP	１		IP	２		IP	３		IP	１		IP	１		IP	２		IP	３		IP
+永田　　義紘	5.67	0.18	3.3	４		IP	４		IP	２		IP	２	4	IP	３		IP	１		IP	エ		IP	５		IP	２		IP	６		IP
+藤田　　靖弘	4.40	0.18	3.4	５		IP	６		IP	１		IP	２		IP	３		IP	２		G3	４		IP	５		IP	５	6	IP	６		IP
+土山　　卓也	5.10	0.22	3.3	５		IP	６		IP	１		IP	４		IP	１		IP	３		IP	３		IP	５		IP	４		IP	３		IP
+田邉　　亮蔵	3.30	0.21	4.3	４		IP	６		IP	５		IP	２		IP	５		IP	６		IP	４		IP	６		IP	４		IP	４		IP

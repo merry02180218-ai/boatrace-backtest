@@ -1,0 +1,8 @@
+data=
+1	0
+萩原　　知哉	6.20	0.17	3.2	２		IP	４		IP	１		IP	６		IP	１		IP	６	6	IP	５		IP	２		IP	１		IP	２		IP
+石田　　政吾	6.40	0.13	2.1	４		IP	５		IP	１		IP	２		IP	５		IP	２		IP	４		IP	２		IP	２		IP	１		IP
+樋口　　範政	2.60	0.19	4.3	４		IP	４		IP	５		IP	５		IP	４		IP	５		IP	６		IP	４		IP	６		IP	５		IP
+中川　　りな	4.80	0.18	3.0	３		IP	６		IP	３		IP	５	3	IP	３		IP	５		IP	２		IP	３		IP	６		IP	１	6	IP
+上原　　　崚	5.00	0.16	3.7	２	6	IP	２		IP	３		IP	２		IP	５	6	IP	４	6	IP	６		G2	５		G2	２		IP	６		IP
+栗原　　謙治	1.60	0.26	5.3	６		IP	４		IP	５	5	IP	６		IP	６		IP	６		IP	４		IP	６		IP	落		IP	６		IP

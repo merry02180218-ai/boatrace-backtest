@@ -1,0 +1,8 @@
+data=
+1	0
+村岡　　賢人	8.70	0.11	1.8	５		IP	１		G1	１		G1	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	２		IP
+木村　　仁紀	7.40	0.16	2.6	３		IP	３		IP	３		G1	３		IP	１		IP	３		G2	４		G2	１		IP	３		IP	１		IP
+大峯　　　豊	7.60	0.17	3.3	２		IP	２		IP	４		G2	２		G2	１		IP	２		IP	１		IP	４		SG	５		G1	３		G1
+坪井　　康晴	7.70	0.13	2.7	４		G1	３		G1	４		G1	２		G2	１		G2	２		IP	１		IP	４		IP	２		G1	３		G1
+山口　　　剛	6.60	0.16	3.8	２		G1	５		G1	３		G1	３		G1	５		SG	３		SG	４		G1	２		SG	１		G1	６		G1
+山田　　康二	4.60	0.18	3.1	５		G1	５		IP	５		G1	５		IP	２		IP	３		IP	２	5	IP	５	5	SG	５		G1	３		G1

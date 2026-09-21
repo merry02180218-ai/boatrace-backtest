@@ -1,0 +1,8 @@
+data=
+1	0
+井本　　昌也	9.20	0.11	2.2	１		IP	２		IP	１		IP	３		IP	１		G1	１		G2	１		G2	１		G1	４		IP	１		IP
+前野　　竜一	6.33	0.15	2.7	３	3	IP	４		IP	転		IP	３		IP	５	3	IP	１		IP	２		IP	２		IP	４		IP	２		IP
+岡本　翔太郎	4.00	0.10	2.3	３		IP	４		IP	４		IP	４		G3	５		IP	５		IP	５		IP	４		IP	５		IP	１		IP
+笹木　　香吾	5.00	0.13	3.1	３		G2	沈		IP	６		IP	６		IP	４		IP	２		IP	３		IP	２		IP	２		IP	５		G3
+荒牧　　凪沙	2.80	0.22	3.9	４		IP	５	4	IP	６		IP	３		IP	５		IP	５		IP	４		IP	５		IP	４		IP	６		IP
+田中　　和也	4.90	0.21	4.0	４		IP	３		IP	１	5	IP	６		IP	２	5	IP	エ		IP	２		IP	５	5	IP	４		IP	４		IP

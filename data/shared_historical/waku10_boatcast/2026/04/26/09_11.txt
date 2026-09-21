@@ -1,0 +1,8 @@
+data=
+1	0
+濱崎　　直矢	8.50	0.17	2.9	１		IP	１		IP	５		IP	１	2	SG	１		IP	１		IP	１		IP	３		IP	１		IP	４		IP
+松村　　康太	4.90	0.18	4.4	４		IP	６		IP	５	3	IP	４		IP	３		IP	３		IP	２		IP	２		IP	５		IP	２		IP
+吉田　　裕平	7.60	0.10	2.0	４		G1	４		G1	２		G1	２		G1	１		G1	５		G1	２		G1	２		G1	３		G1	２		G1
+加藤　　　綾	4.90	0.17	2.9	２		IP	３		IP	３		IP	６		IP	５	5	IP	３		IP	４		IP	４		IP	４	5	IP	２		G3
+塚越　　海斗	6.11	0.17	2.3	不		IP	６		IP	３		IP	１		IP	２		IP	６	3	IP	１		IP	１	4	IP	６		IP	２		IP
+鈴木　　雄登	4.00	0.13	2.2	３		IP	５		IP	３		IP	６		IP	３		IP	３		IP	５		IP	２		IP	５		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+梅原　　祥平	5.20	0.14	2.4	４		IP	４		IP	１		IP	２		IP	６		IP	３		IP	４		IP	２		IP	３		IP	６		IP
+向所　　浩二	5.00	0.17	3.8	４		IP	３		IP	１		IP	６		IP	５		IP	４		IP	転		IP	１		IP	４		IP	４		IP
+川崎　　公靖	5.20	0.14	1.9	４		IP	１		IP	３		IP	２		IP	２		IP	６		IP	５		IP	４		IP	２	4	IP	６		IP
+藤本　　佳史	4.10	0.16	3.4	５		IP	４		G3	２		IP	５		IP	４		IP	６		IP	３		IP	５		IP	２		IP	４		IP
+中島　　友和	5.20	0.14	2.4	５		IP	４	6	IP	３	6	IP	５		IP	２		IP	２		IP	５		IP	１	4	IP	５	6	IP	２		IP
+原田　　篤志	3.60	0.23	4.6	６		IP	２		IP	３		IP	３		IP	４		IP	６		G1	４		G1	５		IP	５		IP	妨	5	IP

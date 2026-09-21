@@ -1,0 +1,8 @@
+data=
+1	0
+大田　　直弥	7.80	0.20	3.8	２		IP	１		IP	３		IP	１		IP	３		IP	２		IP	３		IP	１		IP	３		IP	２		IP
+渡邉　　俊介	7.80	0.13	2.6	１		IP	２		IP	２		IP	１		IP	３		IP	２		IP	３		IP	３		IP	２		IP	２	3	IP
+大池　　佑来	6.60	0.14	3.1	２		IP	４		IP	３		G1	２		G1	２		G1	５		G1	３		IP	１		IP	３		IP	４		IP
+伊藤　　玲奈	4.70	0.23	4.8	３		G3	３		IP	４		IP	５		IP	３		IP	６		IP	３		IP	２		G3	３	6	IP	５		IP
+木場　　悠介	3.10	0.18	3.6	６		IP	６		IP	６		G3	４		G3	３		IP	２		IP	４		IP	５		IP	５		IP	５		IP
+宇土　　泰就	3.00	0.15	3.6	５		IP	５		IP	４		IP	４		IP	３		IP	６		IP	６		IP	５		IP	４		IP	４		IP

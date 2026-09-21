@@ -1,0 +1,8 @@
+data=
+1	0
+庄司　樹良々	7.80	0.12	2.1	２		IP	２		IP	３		IP	１		IP	１		IP	２		IP	４		IP	４		G3	１		G3	１		IP
+興津　　　藍	6.90	0.15	3.0	２		IP	３		IP	４		IP	２		IP	３		IP	３		IP	２		IP	３		IP	２		G1	２		IP
+立間　　充宏	5.20	0.19	3.6	６		IP	２		IP	４		IP	５		IP	２		IP	３		IP	６		IP	４		IP	２		IP	１		IP
+岡田　　憲行	5.70	0.21	4.6	６	1	IP	１	1	IP	２		IP	１		IP	５		IP	２		IP	４		IP	５		IP	３		IP	４		IP
+深川　麻奈美	3.89	0.15	3.8	１		IP	５		IP	４		IP	５		IP	６		IP	転		G1	６		G1	２		IP	５		IP	４		G3
+西舘　　　健	4.40	0.16	4.2	６		IP	２		IP	５		IP	２		IP	５		IP	４		IP	２		IP	４		IP	６		IP	４		IP

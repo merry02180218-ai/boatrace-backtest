@@ -1,0 +1,8 @@
+data=
+1	0
+岩瀬　　裕亮	9.80	0.13	2.2	１		IP	１		G1	１		G1	１		G1	１		G1	１		G1	１		G1	１		G1	６		IP	１		IP
+池永　　　太	5.40	0.13	2.7	転		G1	５		G1	３		G1	４		G1	１		IP	５		G1	３		IP	１	1	IP	２		IP	５		IP
+都築　　正治	5.40	0.18	3.0	１		IP	６		IP	２		IP	４		IP	２		IP	６		IP	１		IP	５	4	IP	２		IP	５		IP
+三宅　　　潤	4.80	0.15	3.2	５		IP	３		IP	６		IP	１		IP	２		IP	６	6	IP	３		IP	１		IP	５		IP	５		IP
+本橋　　克洋	3.60	0.16	3.3	４		IP	４		IP	５		IP	６		IP	６		IP	４		IP	３		IP	４		IP	３	4	IP	４		IP
+孫崎　　百世	3.60	0.15	3.7	６		IP	５		IP	５	5	IP	３		IP	４		IP	６		IP	３		IP	５		IP	４		IP	２		IP

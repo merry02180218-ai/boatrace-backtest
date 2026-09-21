@@ -1,0 +1,8 @@
+data=
+1	0
+上條　　暢嵩	10.30	0.12	2.6	３		SG	１		G1	１		G1	２		G1	１		G3	１		G3	１		G3	１		G3	１		G1	１		G1
+土屋　　智則	7.80	0.15	3.4	１		G3	３	1	G3	１		IP	１		IP	４		IP	１	1	IP	２		G1	４		G1	４		IP	２		SG
+今泉　　友吾	8.00	0.17	3.8	１		IP	１		G1	３		G1	２		IP	２		IP	３		IP	２		IP	２		G1	４		G1	２		IP
+白神　　　優	5.20	0.13	2.7	２		IP	２		IP	６		IP	２		G1	２		IP	５		IP	３		IP	４	5	IP	転	3	G1	３		IP
+笠原　　　亮	5.20	0.18	3.5	４	6	SG	４		SG	３	6	IP	２		IP	３		IP	４		IP	６		IP	５		G1	２		G1	６		G2
+馬場　　貴也	4.40	0.14	3.8	４	4	SG	６		SG	５		G1	４		G3	６		G1	３		G1	６		G1	４		G1	５		G1	２		G1

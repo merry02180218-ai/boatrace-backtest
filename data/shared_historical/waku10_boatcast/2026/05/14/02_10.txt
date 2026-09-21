@@ -1,0 +1,8 @@
+data=
+1	0
+北中　　元樹	9.00	0.16	3.6	１		IP	１		IP	３		IP	２		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP
+中村　　　尊	6.00	0.16	4.0	４		IP	３		IP	５		IP	３		IP	２		IP	２		IP	１		IP	２		IP	転		IP	２		IP
+小森　　信雄	5.40	0.18	4.3	３		IP	１		IP	転		IP	３		IP	４		IP	２		IP	５		IP	５		IP	２		IP	２		IP
+桑原　　　啓	4.30	0.15	4.1	３		IP	３		IP	６		IP	５		IP	６		IP	２		IP	２		IP	４		IP	６		IP	３		IP
+芦澤　　　望	5.80	0.15	2.6	６		IP	４	4	IP	３		IP	３		IP	４		IP	２		IP	４		IP	２		IP	３	6	IP	２		IP
+林　　　祐介	4.30	0.17	3.2	２		IP	４	5	IP	３		IP	６		IP	２		IP	４		IP	６		IP	４	5	IP	３	5	IP	６		IP

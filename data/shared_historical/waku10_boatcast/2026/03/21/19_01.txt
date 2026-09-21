@@ -1,0 +1,8 @@
+data=
+1	0
+中里　　昌志	5.90	0.20	3.9	５		IP	３		IP	１		IP	２		IP	１		IP	６		IP	３		IP	４		IP	４		G3	２		G3
+高山　　秀雄	4.40	0.18	4.7	５		IP	４		IP	５		IP	５		IP	１		IP	２		IP	３		IP	５		IP	３		IP	５		G3
+小森　　信雄	4.80	0.18	3.8	３		IP	４		IP	２		IP	５		IP	５		IP	２		IP	２		IP	５		IP	４		IP	４		IP
+西川　新太郎	5.80	0.17	2.7	１		IP	２		IP	６		IP	６		IP	４		IP	２		IP	４		IP	３		IP	３		IP	１		G3
+森野　　正弘	4.20	0.13	2.9	４		IP	１		IP	５		IP	５		IP	２	4	IP	５		IP	６		IP	４		G1	６		G2	４		IP
+山崎　　昂介	2.10	0.18	4.7	４		IP	６		IP	５		IP	５		IP	５		IP	５		IP	４		IP	６		IP	６		IP	５		G3

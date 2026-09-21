@@ -1,0 +1,8 @@
+data=
+1	0
+沼田　　七華	3.50	0.18	3.2	５		IP	４		IP	４		IP	５		G3	５		IP	３		IP	４		IP	３		G3	６		G3	４		IP
+酒井　　俊弘	4.90	0.15	2.7	６		IP	３		IP	５		IP	４		IP	４		IP	３		IP	４	3	IP	３		IP	２		IP	２		IP
+土山　　卓也	6.20	0.13	2.7	６		IP	１		IP	１		IP	３		IP	４		IP	６	4	IP	２		IP	２		IP	２		IP	３		IP
+塩嶋　　泰空	1.20	0.22	4.0	６	5	IP	６		IP	６		IP	６	6	IP	５		IP	６		IP	６	6	IP	６		IP	５		IP	６		IP
+中島　　孝平	4.50	0.17	3.8	５	6	G1	５		G1	３		G1	３		G1	５		G1	４		G1	６		G1	２		IP	６		G1	４		G1
+大平　誉史明	4.20	0.19	4.0	２		IP	５		IP	４		IP	５		IP	４		IP	５		IP	３		IP	５	5	IP	３		IP	４		IP

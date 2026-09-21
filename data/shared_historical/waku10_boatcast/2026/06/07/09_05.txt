@@ -1,0 +1,8 @@
+data=
+1	0
+渡邊　雄一郎	8.60	0.16	3.4	１		IP	１		IP	１		IP	２		IP	３		IP	１		IP	１		IP	１		IP	２		IP	４	2	IP
+村本　　大成	3.70	0.21	4.3	４		IP	５		IP	２		IP	３		IP	６		IP	５		IP	４		IP	４		IP	５		IP	４		IP
+高木　　茉白	3.70	0.14	2.9	Ｆ		IP	Ｆ		IP	妨		IP	２		IP	３		IP	３		IP	２		IP	６		IP	５		IP	３		IP
+大西　　　賢	5.60	0.18	2.9	３		IP	４		IP	５		IP	２		IP	１		IP	５		IP	５		IP	４		IP	１		IP	２		IP
+富澤　　祐作	4.10	0.13	3.5	４		IP	２		IP	３		IP	６		IP	４		IP	６		IP	２		IP	４	6	IP	６		IP	４	6	IP
+土性　　雅也	3.60	0.20	5.1	５		IP	４		IP	５		IP	２		IP	６		IP	６		IP	５		IP	２		IP	３		IP	５		IP

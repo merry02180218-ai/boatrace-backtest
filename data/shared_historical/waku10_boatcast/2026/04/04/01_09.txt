@@ -1,0 +1,8 @@
+data=
+1	0
+寺本　　重宣	8.40	0.13	2.7	１		IP	１		IP	４		IP	２		G3	１		G3	１		IP	２		IP	１		IP	１		IP	４		G3
+谷津　　幸宏	5.50	0.14	2.4	３	3	IP	３		G3	６		G3	５		IP	４		IP	３		IP	４		G1	１		G1	３		IP	２		IP
+大澤　　大夢	5.30	0.16	3.1	５		IP	２		IP	２		IP	３		IP	１		IP	４		IP	３		IP	６		IP	４	4	IP	４		IP
+浜先　　真範	5.60	0.12	2.4	２		IP	６		G1	６	5	IP	１		IP	５		IP	２		IP	４		G1	３		IP	３		IP	２		IP
+平見　　真彦	3.90	0.18	3.1	６		IP	３	4	IP	４		IP	４		IP	４		IP	５		IP	４		IP	５		IP	４		IP	３		IP
+藤田　　康生	4.40	0.12	2.0	５		IP	６		IP	４		IP	１		IP	４		IP	４		IP	４		IP	２		IP	６		IP	３		IP

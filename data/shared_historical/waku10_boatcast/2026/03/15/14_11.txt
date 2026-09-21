@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　弓雄	6.10	0.19	3.4	３		IP	２		IP	１		IP	１		IP	４		IP	１		IP	４		IP	４		IP	４		IP	６		IP
+加藤　　　綾	5.20	0.17	2.8	３		IP	３		IP	５		IP	１		IP	２		G3	２		G3	４		IP	３		IP	６		IP	６		IP
+前田　　　滉	7.50	0.12	2.1	１		IP	２		IP	４		G1	５		G1	２		G1	２		IP	３		G1	３		G1	２		IP	１		IP
+末永　　祐輝	7.33	0.18	2.4	３		IP	転		IP	２		IP	３		IP	１		IP	４		IP	１		IP	３		IP	２		IP	２	3	IP
+田中　　京介	4.00	0.17	4.1	２		IP	４		IP	６		IP	３		IP	５		IP	１		IP	６		IP	５		IP	５		IP	４		IP
+黒澤　めぐみ	3.00	0.24	5.4	４		IP	５		IP	６		IP	４		G3	４		IP	５		IP	６		IP	３		IP	４		IP	５		IP

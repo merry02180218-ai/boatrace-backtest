@@ -1,0 +1,8 @@
+data=
+1	0
+籾山　　佳岳	8.00	0.12	2.5	１		IP	３		IP	１		IP	２		IP	２		IP	４		IP	１		IP	２		IP	３		IP	１		IP
+久保原　秀人	3.60	0.18	3.8	３		IP	５	3	IP	４		IP	２		IP	２		IP	６		IP	６		IP	５		IP	５		IP	５		IP
+上田　　龍星	4.90	0.15	3.6	６		G1	６		G1	５		G1	３		G1	３		SG	２		IP	５		G1	４		G1	４		G2	３		IP
+杉田　　篤光	4.50	0.22	4.3	３		IP	６	6	G3	４		G3	３	5	IP	５		IP	３		IP	５		IP	４		IP	４		IP	１		IP
+西村　　　勝	1.90	0.17	3.5	５		IP	５		IP	５		IP	６	6	IP	６		IP	６		IP	６		IP	３		IP	６		IP	５		IP
+牟田　　奨太	2.10	0.16	3.3	Ｆ	4	IP	２	5	IP	６		IP	６		IP	６		IP	５		IP	４		IP	５		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　守成	7.20	0.21	4.3	１		IP	１		IP	５		IP	４		IP	１		IP	１		IP	５		IP	２		IP	１		IP	３		IP
+塩田　　雄一	2.80	0.18	3.9	６		IP	６		IP	２		IP	５		IP	４		IP	２		IP	６		IP	５		IP	Ｆ		IP	６		IP
+山下　　拓巳	2.90	0.15	2.7	３		IP	６		IP	６		IP	５		IP	１		IP	６		IP	６		IP	３		IP	転		IP	６		IP
+森下　　　勇	3.70	0.15	3.4	４		IP	３		IP	５		IP	６		IP	１		IP	５		IP	５		IP	４	6	IP	４		IP	５		IP
+中岡　　　駿	3.10	0.21	3.9	５		IP	６		IP	５		IP	５		IP	５	6	IP	４	4	IP	５		IP	３		IP	４		IP	３	6	IP
+白神　　　優	6.00	0.14	3.9	２	5	IP	３		IP	２		IP	２	5	IP	３		G1	４		G1	４	5	IP	４		IP	５	5	IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+滝沢　　芳行	8.00	0.15	2.7	１		IP	４		IP	１		IP	３		IP	４		IP	２		IP	１		IP	２		IP	１		IP	１		IP
+渡辺　　　崇	5.70	0.20	4.5	３		IP	２		IP	３		IP	４		IP	４		IP	３		IP	２		IP	６		IP	２		IP	３		IP
+齋藤　　達希	4.30	0.15	3.8	５	4	IP	５		IP	６		IP	２		IP	３		IP	５		IP	５		IP	２		IP	２		IP	４		IP
+重富　　伸也	3.50	0.16	2.7	５		IP	６	6	IP	６	5	IP	１	6	IP	５	6	IP	６		IP	６		IP	３	6	IP	１	6	IP	６		IP
+岡本　翔太郎	4.10	0.15	2.0	４		IP	５		IP	１		IP	３		IP	４		IP	５		G3	３		IP	５	6	IP	６		IP	４		IP
+鈴木　　賢一	3.60	0.23	4.4	２		IP	５		IP	５		IP	６		IP	６		IP	６		IP	２		IP	６		IP	１		IP	５		IP

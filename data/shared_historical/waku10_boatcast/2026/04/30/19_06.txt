@@ -1,0 +1,8 @@
+data=
+1	0
+栗山　　繁洋	5.50	0.21	4.0	６		IP	４		IP	３		IP	２		IP	４		IP	４		IP	１		IP	５		IP	２		IP	２		IP
+寺田　　空詩	5.00	0.18	3.0	４		IP	２	3	IP	３		IP	６		IP	３		IP	２		IP	２		IP	４		IP	４		IP	６		IP
+福山　恵里奈	4.70	0.14	2.8	４		IP	２		IP	１		G3	６		IP	５	4	IP	６		IP	１		G3	６		IP	３		IP	４		IP
+大神　　康司	5.40	0.13	2.2	４	2	IP	１	2	IP	５	2	IP	５	3	IP	２	2	IP	５	2	IP	３	3	IP	３	2	IP	１	2	IP	４	2	IP
+戸田　海咲音	1.40	0.18	3.9	５		IP	６		IP	６		IP	６		G3	４	6	G3	６		IP	６		IP	６		IP	不		IP	５		IP
+大田　　直弥	3.10	0.25	4.9	６		IP	５		IP	５		IP	５		IP	４	5	IP	５		IP	５		IP	５		IP	３		IP	２		IP

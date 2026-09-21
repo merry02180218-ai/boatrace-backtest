@@ -1,0 +1,8 @@
+data=
+1	0
+重成　　一人	8.20	0.12	2.5	４		G1	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	３		G1	転		G1	１		G1
+佐藤　　太亮	5.10	0.16	3.5	２		IP	５		IP	２		IP	３		IP	６		IP	４		IP	２		IP	４		IP	５	3	IP	２		IP
+木山　　和幸	5.10	0.20	3.3	３		IP	５		G3	１		G3	２		IP	４		IP	５		IP	６		IP	１		IP	４		IP	４		IP
+福嶋　　智之	4.80	0.13	2.9	３		IP	３		IP	１		IP	４		IP	５		IP	３		IP	５		IP	５		IP	５	6	IP	２		IP
+守屋　　大地	3.50	0.16	3.1	５		IP	４		IP	４		IP	４		IP	５		G3	４		IP	３		IP	６		IP	５		IP	３		IP
+渡邉　　和将	4.70	0.16	3.4	４		IP	５		G1	６		G1	４		G1	６		SG	２	5	IP	３		IP	１	5	IP	５		G1	５		G1

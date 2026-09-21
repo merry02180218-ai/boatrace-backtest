@@ -1,0 +1,8 @@
+data=
+1	0
+萩原　丈太朗	2.43	0.17	2.6	６	2	IP	６		IP	５		IP	５		IP	６		IP	２		IP	５	2	IP									IP
+宇留田　翔平	6.80	0.17	2.7	１	3	IP	１		IP	５		IP	１		IP	２		IP	２		IP	３		IP	３	3	IP	５		IP	３		IP
+片岡　　秀樹	3.80	0.13	3.4	３	4	IP	４		IP	２		IP	５		IP	３		IP	６		IP	６		IP	４	4	IP	５		IP	４		IP
+甲斐　　貴大	1.29	0.23	4.4	６		IP	５	5	IP	６		IP	６		IP	５	6	IP	６	6	IP	６	6	IP									IP
+山口　　隼人	2.33	0.21	5.7	６	6	IP	５	6	IP	４	6	IP																					IP
+横澤　　剛治	4.20	0.16	3.7	４		G1	６		G1	３		G1	６		G1	１		IP	６		IP	１		IP	５		IP	６	5	IP	５		IP

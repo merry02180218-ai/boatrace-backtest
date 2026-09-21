@@ -1,0 +1,8 @@
+data=
+1	0
+黒田　　　剛	6.00	0.15	3.0	６		IP	１		IP	１		IP	２		IP	６		IP	５		IP	１		IP	３		IP	３		IP	３		IP
+鰐部　太空海	7.10	0.15	3.1	２		IP	３		IP	１		IP	５		IP	４		IP	３		IP	３		IP	３		IP	１		IP	１		G1
+瀬川　　大地	3.90	0.13	3.2	４		IP	３		IP	１		IP	３		IP	４		IP	６		IP	６		IP	４		IP	６		IP	５		IP
+小林　　礼央	2.20	0.17	4.1	４		IP	４		IP	６	5	IP	４		IP	６		IP	５		IP	６		IP	５		IP	６		IP	５		IP
+木山　　大聖	2.80	0.13	2.5	４		IP	５		IP	６	6	IP	３	6	IP	４		IP	５		IP	５		IP	５	6	IP	６		IP	４		IP
+荒木　　颯斗	3.30	0.15	3.7	５		IP	６		IP	５		IP	３		IP	６		IP	６		IP	３		IP	５		IP	５		IP	１		IP

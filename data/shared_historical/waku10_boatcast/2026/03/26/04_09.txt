@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　唯央	6.20	0.12	2.4	２		IP	１		IP	５		IP	６		IP	１		IP	１		IP	５	2	IP	２		IP	１		IP	６		IP
+藤森　　陸斗	4.60	0.16	3.9	５		IP	６		IP	３		IP	４		IP	２		G1	３	4	IP	４		IP	１		IP	５	3	IP	５		IP
+佐藤　　永梧	2.90	0.14	2.7	６	4	IP	６	4	IP	３		IP	２		IP	６		IP	５		IP	４		IP	６		IP	６		IP	４		IP
+森清　　友翔	5.40	0.16	4.1	４		IP	５		IP	２		G3	１		G3	５		IP	２		IP	４		IP	３		IP	２		IP	５		IP
+横田　　海人	2.60	0.20	4.7	３		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	４		IP	２		IP
+中野　　希一	4.78	0.19	4.4	３	5	IP	６		IP	５		G1	３		G1	２		IP	３		IP	２		IP	５		IP	６		IP	欠		IP

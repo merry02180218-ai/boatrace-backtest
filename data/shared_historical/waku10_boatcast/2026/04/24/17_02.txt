@@ -1,0 +1,8 @@
+data=
+1	0
+笠原　　　亮	8.70	0.16	3.7	１		G1	１		SG	４		IP	１		IP	１		IP	５		IP	１		G1	２		G1	３		G2	１		G2
+原田　　幸哉	4.89	0.12	2.3	２		G1	６		G1	５		SG	５		SG	転		G1	１		G1	４	1	G3	５		G1	４		G1	６		G1
+太田　　和美	7.50	0.14	2.6	１		G1	３		G1	１		IP	２		IP	３		IP	２		IP	３		IP	３		IP	３		G1	４		G1
+辻　　　栄蔵	6.70	0.15	3.6	１		IP	３		G2	３		G1	２	5	IP	４		G1	４		IP	１		IP	５		G1	５		G1	２		IP
+森永　　　淳	5.50	0.13	2.7	２		IP	５	4	IP	５		IP	５		IP	２		IP	５	6	G2	２		IP	３		IP	２		IP	２		IP
+濱野谷　憲吾	4.00	0.18	4.0	６		G1	５		G1	６		G1	３		IP	４		IP	４		G1	５		G1	４		G1	３		G1	５		G1

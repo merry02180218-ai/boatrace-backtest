@@ -1,0 +1,8 @@
+data=
+1	0
+垂水　　　悠	7.60	0.11	2.5	１		IP	２		G3	６		IP	１		IP	１		G1	１		IP	６		IP	３		IP	１		IP	２		IP
+松本　　　怜	6.00	0.17	3.8	３		IP	３		IP	４		IP	２		IP	２		IP	１		IP	３		IP	５		IP	４		IP	３		IP
+金子　　猛志	5.60	0.15	3.0	５		IP	２		IP	３		IP	４		IP	３	4	IP	２		IP	２		IP	２		IP	４		IP	５		IP
+川野　　芽唯	6.40	0.20	3.7	２		IP	３		IP	４		IP	２		IP	６		IP	３	5	IP	１		G1	４		IP	２		G1	５		G1
+池上　　隆行	3.10	0.20	3.4	５		IP	転		IP	６		IP	５	4	IP	５		IP	５		IP	４		IP	３		IP	３		IP	３		IP
+高橋　　嗣穏	1.10	0.25	4.0	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	転		IP	６		IP	６		IP	６		IP

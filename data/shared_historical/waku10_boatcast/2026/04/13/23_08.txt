@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　奈月	6.20	0.19	3.9	２		G3	４		G3	４		IP	２		IP	２		IP	１		IP	４		IP	２		IP	３		IP	５		G3
+池田　　浩美	5.90	0.16	2.9	４		G3	５		IP	１		IP	１		IP	４		IP	２		IP	５		IP	２		IP	２		IP	６		G3
+藤田　　美代	2.10	0.25	4.6	４		G3	４		IP	５	2	IP	６		IP	６		IP	４		IP	６		IP	５	4	IP	６		IP	６		IP
+原田　　佑実	5.80	0.17	3.3	３		G3	３		IP	３		IP	１		G3	１		IP	５		IP	３		IP	５		G3	３		G3	４		G3
+佐藤　ほのか	2.70	0.18	3.2	５		G3	５		IP	６		IP	５		IP	２		IP	６		IP	３		G3	５		G3	６		IP	５		G3
+田中　　博子	1.40	0.19	3.4	５		G3	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+上原　健次郎	8.60	0.18	3.7	１		IP	４		IP	１		IP	１		IP	２		IP	４		IP	１		IP	１		IP	１		IP	１		IP
+湯淺　　紀香	7.00	0.17	5.0	４		G2	３		G2	２		G3	２		IP	１	3	IP	５		IP	２		IP	２		IP	３		IP	２		IP
+寺田　　千恵	6.20	0.16	3.0	４		G2	４	4	G1	４		G3	２		G3	４		G3	４		G3	２		G1	２		G1	５		G3	２		G3
+渥美　　卓郎	3.00	0.20	4.3	５	5	IP	２		IP	６		IP	６		IP	６		IP	４		IP	５	3	IP	５		IP	６		IP	２	5	IP
+浜本　　裕己	6.10	0.14	3.1	４		IP	１		IP	２		IP	３		IP	６		IP	２		IP	３		IP	２	3	IP	３		IP	４		IP
+伊藤　　啓三	4.33	0.17	3.5	６		IP	４		IP	５		IP	不		IP	６		IP	５		IP	３		IP	２		IP	３		IP	２		IP

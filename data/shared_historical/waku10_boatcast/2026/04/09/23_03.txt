@@ -1,0 +1,8 @@
+data=
+1	0
+片岡　　恵里	8.80	0.15	2.9	１		IP	１		IP	１		G3	２		G3	２		G3	１		G3	６		G1	１		IP	１		IP	１		G3
+安達　　美帆	3.00	0.21	4.1	５		G3	５		G3	５		G3	４		G3	５		G3	２		G3	３		IP	６		IP	５		IP	６		G3
+坂　　咲友理	4.60	0.23	4.2	２	2	IP	４		IP	２		IP	２		IP	１		IP	６		IP	４		G3	６		IP	６		IP	６		IP
+菅野　はやか	3.60	0.15	3.4	６		IP	４		IP	４		G3	４		G3	２		IP	６		IP	４		IP	６		IP	６		G3	２		IP
+藤原　　早菜	4.20	0.17	4.1	３		G3	５		IP	３		IP	５		IP	５		IP	４		IP	２		IP	２		IP	６		G1	６		G1
+池田　　紫乃	3.00	0.17	3.6	３		IP	５	5	G3	６		G3	６		IP	５		IP	３		G3	６		IP	３	5	IP	４		G3	６	5	G3

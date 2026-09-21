@@ -1,0 +1,8 @@
+data=
+1	0
+石原　　凪紗	5.50	0.19	3.7	６		IP	５		IP	３		IP	１		IP	１		G3	６		IP	６		IP	２		IP	３		IP	１		IP
+小野　　達哉	6.80	0.15	2.2	３		IP	４		IP	２	3	IP	２		IP	２		IP	１		IP	３		IP	３		IP	５		IP	１		IP
+渡邊　　裕貴	4.50	0.17	3.6	４		IP	３		IP	４		IP	５		IP	２		IP	２		IP	５		IP	５		IP	６		IP	２	6	IP
+富澤　　祐作	5.00	0.12	2.7	６	6	IP	３		IP	４		IP	６		IP	４		IP	６		IP	２	5	IP	１		IP	１		IP	４		IP
+谷川　　祐一	4.00	0.20	3.8	３	6	IP	６		IP	３		IP	２		IP	４	6	IP	４		IP	５		IP	６		IP	４		IP	４		IP
+河上　　年昭	2.70	0.20	3.5	５		IP	６	5	IP	５		IP	４		IP	６		IP	４		IP	４		IP	６		G3	５		IP	３		IP

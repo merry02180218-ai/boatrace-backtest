@@ -1,0 +1,8 @@
+data=
+1	0
+山下　　和彦	7.44	0.16	3.7	転		IP	６		IP	転		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		G1	２		G1
+中井　　俊祐	4.50	0.19	3.3	５		IP	５		IP	３		IP	３		IP	５		IP	５		IP	３		IP	１		IP	６		IP	２		IP
+黒柳　　浩孝	6.40	0.17	2.7	３		IP	４		IP	２		IP	３		IP	１	4	IP	４		IP	２		IP	１		IP	４		IP	４		IP
+間嶋　　仁志	4.70	0.19	3.8	６		IP	６		IP	６	2	IP	２		IP	２		IP	５		IP	１		IP	２		IP	５		IP	３	2	IP
+橋本　　英一	3.20	0.16	3.4	６		IP	Ｆ		IP	転		IP	５	4	IP	６		IP	３		IP	５	6	IP	１		IP	３		IP	４		IP
+中村　　　楓	1.56	0.15	2.5	６		IP	６		IP	４		IP	６		IP	５		IP	転		IP	６		IP	６		IP	６		IP	５		IP

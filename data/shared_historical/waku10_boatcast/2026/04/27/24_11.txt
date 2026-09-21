@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　俊彦	9.10	0.13	2.9	１		IP	１		IP	１		IP	１		IP	１		IP	４		G1	２		IP	２		IP	１		IP	１		IP
+長谷川　　充	4.90	0.19	3.2	２		IP	２		IP	３		IP	２		IP	６		IP	５		IP	５		IP	４		IP	２		IP	５		IP
+谷川　　祐一	5.00	0.16	2.9	２		IP	２		IP	５		IP	５		IP	３		IP	４		IP	３		IP	３		IP	３		IP	５		IP
+石塚　　裕介	5.60	0.17	3.2	３		IP	５		IP	２	3	IP	１		IP	１		IP	３		IP	５		IP	５	5	IP	３		IP	４		IP
+山下　　和彦	5.30	0.15	3.3	２		G3	１	4	IP	２		IP	３		IP	６		IP	３		IP	５		G1	６		G1	２		IP	６		IP
+笠　　　雅雄	3.30	0.21	3.7	３		IP	６	5	IP	５		IP	６		IP	４		IP	４		IP	２		IP	６		IP	５		IP	４		IP

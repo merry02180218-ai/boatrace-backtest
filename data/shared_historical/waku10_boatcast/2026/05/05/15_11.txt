@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　優美	8.70	0.13	2.6	１		G3	１		G3	１		G3	２		G1	２		IP	１		IP	５		SG	１		IP	３		IP	１		IP
+田口　　節子	8.10	0.14	3.3	３		G1	５	4	G1	２		G3	１		G3	１		IP	２		G1	１		G1	２		IP	３		IP	２		G1
+倉持　　莉々	6.60	0.11	3.2	５		IP	３		IP	４		IP	２		IP	１		IP	１		IP	５		IP	３		G1	３		G1	２		G1
+野田　なづき	5.60	0.17	4.0	５		IP	５		G3	３		IP	２		G3	３		IP	４		IP	３	5	IP	２		IP	４		IP	１		G3
+山田　　理央	5.44	0.12	2.7	１		IP	３		G3	２	4	G3	４	4	IP	５		IP	落		IP	５		IP	４		IP	３		IP	４		IP
+長嶋　　万記	4.70	0.14	2.9	５	5	IP	５		IP	２	5	IP	５		IP	４		IP	３		G3	４		G3	３		IP	５	5	IP	１	5	IP

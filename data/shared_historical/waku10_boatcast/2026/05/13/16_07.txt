@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　右京	4.40	0.23	3.6	５		IP	５		IP	６	2	IP	４		IP	４		IP	２		IP	１		IP	３		IP	６		IP	３		IP
+杉村　　賢也	5.60	0.13	2.9	１		IP	４		IP	２		IP	５		IP	４		IP	２		IP	５		G3	３		IP	４		IP	２		IP
+吉岡　　　誠	3.70	0.17	3.9	４		IP	６	4	IP	４		IP	５		IP	２		IP	６	6	IP	６		IP	２		IP	３		IP	５		IP
+渡　　　修平	2.60	0.26	5.0	６		IP	２		IP	４		IP	５		IP	６	6	IP	６		IP	６	5	IP	６		IP	３		IP	６	5	IP
+前原　　大道	4.60	0.16	3.3	３		IP	３		IP	４		IP	６	6	G1	４		IP	５	6	IP	３		IP	４		IP	２		G1	５		G1
+冨名腰　桃奈	2.70	0.20	4.9	５		G3	６		G3	４		G3	６		IP	５	5	IP	６		IP	４		IP	６		IP	６		IP	１	5	IP

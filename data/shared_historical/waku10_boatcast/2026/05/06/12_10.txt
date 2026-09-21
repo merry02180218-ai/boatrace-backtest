@@ -1,0 +1,8 @@
+data=
+1	0
+松井　　　繁	10.40	0.13	3.7	１		IP	４		G1	１		G1	１		G1	１		G1	１		G1	１		G1	２		SG	１		SG	１		G1
+秦　　　英悟	5.50	0.15	3.9	３		IP	４		IP	５	3	G1	４		IP	５		SG	２		G1	３		G1	４		G1	１		IP	６		G1
+岡村　　　仁	5.90	0.16	2.7	２		IP	２		IP	４		IP	３		G3	３		G3	３		IP	５		G1	転		G1	２		G1	３		G1
+田中　信一郎	6.50	0.16	3.1	６		G1	１	5	G1	６		G1	４		G1	２		IP	３		IP	１		IP	１		IP	５		IP	２		G1
+西村　　拓也	7.10	0.14	3.4	２		IP	１		IP	２		IP	３		G1	６		G1	１	4	IP	３	3	IP	２	4	IP	３		G1	５		G1
+秋末　　秦悟	2.80	0.20	4.5	６		IP	６		IP	６	4	IP	５		IP	３	5	IP	３		IP	６		IP	５		IP	４	3	IP	４		IP

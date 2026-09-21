@@ -1,0 +1,8 @@
+data=
+1	0
+宗行　　治哉	9.40	0.11	2.2	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+山崎　　　祥	4.90	0.19	4.0	２		IP	４		IP	３		IP	５		IP	４		IP	３		IP	６		IP	３	3	IP	２		IP	４		IP
+小池　　哲也	4.80	0.14	3.1	５		IP	４		IP	３		IP	２		IP	３		IP	５		IP	１	2	IP	３	4	IP	４		IP	転	2	IP
+原田　　雄次	2.80	0.25	4.8	５		IP	２		IP	３		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	４		IP
+吉田　　一心	4.56	0.15	2.8	１		IP	４		IP	６		IP	３		IP	４	6	IP	Ｌ		IP	４		IP	４		IP	３		IP	５		IP
+山本　　寛久	5.10	0.17	3.8	４	5	IP	２		IP	３		IP	４		IP	２	5	IP	３	5	G3	４		G3	６		IP	４		IP	４		IP

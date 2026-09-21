@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　唯央	4.80	0.12	2.6	５		IP	６		IP	１		IP	１		IP	５	2	IP	２		IP	１		IP	６		IP	５		IP	５		IP
+荒木　　颯斗	6.40	0.11	2.2	３		IP	３		IP	２	3	IP	３		IP	３		IP	３		IP	３		IP	３		IP	２		IP	３		IP
+丸山　　祐也	5.10	0.18	3.9	６		IP	３		IP	４		IP	３		IP	３		IP	４		IP	２		IP	３		IP	２		IP	５		IP
+井上　　慧人	4.20	0.17	4.0	４		IP	３		IP	４		IP	５		IP	６		IP	３		IP	１		IP	３		IP	６		IP	５		IP
+竹内　　　来	1.90	0.18	3.0	６		IP	５	6	IP	４		IP	６		IP	５		IP	４		IP	６		IP	６		IP	６		IP	５	6	IP
+若林　　　麗	3.60	0.21	4.2	６		IP	５		IP	５		IP	４		IP	４		IP	３		IP	２		IP	６		IP	３		IP	５		IP

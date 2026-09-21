@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　啓太	5.40	0.16	3.5	２		IP	５		IP	２		IP	５		IP	３		IP	４		IP	２		IP	５		IP	３		IP	２		IP
+谷村　　一哉	5.80	0.15	3.3	２		IP	５		IP	３		IP	１		IP	５		IP	２		IP	１		IP	３		IP	５		IP	４		IP
+興津　　　藍	6.80	0.13	3.2	５		IP	２		IP	２		IP	１		IP	３		IP	２		IP	３		G1	４		G1	１		IP	４		IP
+松下　　知幸	4.60	0.18	3.8	６	5	IP	１		IP	２	5	IP	４		IP	４		IP	６		IP	５		IP	５		IP	４		IP	１		IP
+大塚　　雅治	3.33	0.19	3.2	３		IP	６		IP	４		IP	６	6	IP	３		IP	４		IP	５		IP	５		IP	欠		IP	４		IP
+荒井　　翔伍	3.44	0.16	3.2	転		IP	５		IP	５		IP	６		IP	４	5	IP	５		IP	４		IP	３		IP	４		IP	３		IP

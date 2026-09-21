@@ -1,0 +1,8 @@
+data=
+1	0
+清水　　紀克	5.00	0.20	3.2	２		IP	６		IP	５		IP	１		IP	３		IP	３		IP	４		IP	５		IP	６		IP	１		IP
+渥美　　卓郎	4.60	0.20	4.0	４		IP	１		IP	３		IP	５		IP	５		IP	５		IP	３		IP	４		IP	４		IP	３		IP
+前田　　聖文	7.00	0.11	2.5	１		IP	３		IP	５		G1	３		G1	２		IP	２		IP	１		IP	２		IP	３		IP	４		IP
+広瀬　　聖仁	4.60	0.15	3.3	２		IP	１		IP	６		IP	４		IP	６		IP	２		IP	５		IP	５		IP	３		IP	４		IP
+仲口　　博崇	6.50	0.17	3.5	１	4	IP	１	4	IP	３		G3	３	3	G3	１	4	IP	４	4	IP	４	3	IP	３		G1	３		G1	６		IP
+鰐部　太空海	4.20	0.19	3.2	４		IP	６		IP	５		IP	３	5	IP	４	5	IP	３		IP	５		IP	３		G1	５		IP	２		IP

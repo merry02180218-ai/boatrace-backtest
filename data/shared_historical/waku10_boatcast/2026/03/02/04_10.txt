@@ -1,0 +1,8 @@
+data=
+1	0
+枝尾　　　賢	8.60	0.12	2.3	２		IP	１		IP	１		IP	４		IP	１		IP	２		IP	１		IP	１		IP	２		IP	２		IP
+増田　　　進	5.20	0.16	2.9	３		IP	４		IP	４		IP	４		IP	２		IP	６		IP	１		IP	２		IP	６		IP	３		IP
+荒川　　健太	5.40	0.23	3.4	３		IP	１		IP	４		IP	４	4	IP	３	4	IP	５	2	IP	４		IP	５		IP	４		IP	１	2	IP
+信濃　　由行	5.60	0.18	3.9	３		IP	３		IP	１		IP	１		IP	４		IP	４		IP	６		IP	２		IP	３	3	IP	６		IP
+大場　　　敏	5.40	0.17	3.9	５		IP	５		IP	４		IP	３		IP	３	6	IP	３		IP	１		IP	１	4	IP	４		IP	４		IP
+加藤　　翔馬	4.40	0.20	4.8	３		IP	５		IP	６		G1	３		IP	４		IP	３		IP	２	5	IP	４		IP	６		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+細川　　明人	7.30	0.17	3.1	１		IP	１		IP	５		IP	１		IP	１		IP	２		IP	２		IP	６		IP	４		IP	１		IP
+大廣　　咲季	4.20	0.12	2.8	３		IP	３		IP	４		IP	３		G3	２	4	G3	３		G3	５		G3	６		IP	６		IP	５		IP
+中村　かなえ	2.80	0.15	3.1	４		IP	５		IP	５		IP	６		IP	５		IP	４	5	IP	３		G3	４		IP	５		IP	６		IP
+森　　　弘行	3.50	0.18	4.6	２		IP	５		IP	５		IP	３		IP	５		IP	６		IP	２		IP	５		IP	５		IP	５		IP
+尾道　　佳諭	4.20	0.15	2.3	３		IP	６		IP	３		IP	４		IP	５	4	IP	２		IP	３		IP	６		IP	３		IP	５		IP
+早川　　尚人	3.30	0.18	3.4	６	5	IP	２	5	IP	５		IP	５		IP	６		IP	３		IP	６		IP	３		IP	４	5	IP	５		IP

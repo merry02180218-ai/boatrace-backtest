@@ -1,0 +1,8 @@
+data=
+1	0
+木谷　　賢太	9.50	0.11	1.8	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+荒川　　健太	6.00	0.16	3.2	５		G3	３		IP	２		IP	２		IP	１		IP	３		IP	４		IP	２		IP	３		G3	５		IP
+小林　　文彦	5.40	0.18	4.5	３	4	IP	５		IP	３		IP	４		IP	１		IP	５	5	IP	２		IP	４		IP	３		IP	４		IP
+鈴木　　孝明	7.60	0.17	3.5	１		IP	２		IP	２		IP	２	5	IP	１		IP	２		IP	３		IP	３		IP	２		IP	４		IP
+山田　　真聖	5.30	0.14	3.3	３		IP	４		IP	２		IP	３		IP	３		IP	３		IP	２		IP	３		IP	５		IP	６	4	IP
+廣瀬　　真也	4.20	0.18	3.8	４		IP	３		IP	５		IP	２		IP	５		IP	３		IP	６		IP	６		IP	２		IP	５		IP

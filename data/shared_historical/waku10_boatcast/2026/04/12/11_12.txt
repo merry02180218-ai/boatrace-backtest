@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　俊介	9.00	0.12	2.8	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	４		IP	２		IP	１		IP	１		IP
+吉川　　晴人	6.40	0.19	4.5	２		IP	３		IP	６		IP	３		IP	２		IP	２		IP	１		IP	２		G2	６		G2	３		IP
+大池　　佑来	7.20	0.13	2.8	１		IP	２		IP	４		IP	３		G1	２		G1	２		G1	５		G1	３		IP	１		IP	３		IP
+大場　　　敏	4.60	0.16	3.5	２		IP	４		IP	２		IP	６		IP	５		IP	６		IP	４		IP	２		IP	３		IP	５		IP
+高野　　哲史	4.10	0.14	3.3	３		IP	４		IP	４		G1	５		G1	６		G1	４		IP	２		IP	４		G1	６		G1	転		IP
+安河内鈴之介	3.80	0.17	3.7	５		IP	５		G2	４		G2	３		IP	４		IP	５		IP	４		G1	５	5	IP	３		IP	５		IP

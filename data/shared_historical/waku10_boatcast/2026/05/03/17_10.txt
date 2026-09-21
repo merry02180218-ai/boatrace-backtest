@@ -1,0 +1,8 @@
+data=
+1	0
+橋本　　　明	8.00	0.18	2.9	１		IP	１		IP	２		IP	１		IP	１		IP	３		IP	４		IP	５		IP	１		IP	１		IP
+浜先　　真範	7.20	0.14	2.3	３		IP	３		G1	３		IP	２		IP	１		IP	４		G1	１		IP	１		IP	転		IP	１		IP
+入海　　　馨	6.50	0.14	3.6	１	4	IP	３		G1	２		G1	Ｆ		IP	６		G1	２		G1	５		G1	２		G1	２		G1	３		G1
+宗行　　治哉	5.40	0.18	4.3	４		IP	６		IP	２		IP	３		IP	４		IP	３		IP	２		IP	２		IP	５		G2	４		G2
+角浜　　　修	3.60	0.17	3.4	６		IP	４		IP	５		IP	６		IP	５		IP	２		IP	５		IP	２	4	IP	３	4	IP	５	4	IP
+小林　　礼央	3.10	0.10	1.6	６		IP	６		IP	５		IP	２		IP	６		IP	４	5	IP	４		IP	４		IP	５		IP	４		IP

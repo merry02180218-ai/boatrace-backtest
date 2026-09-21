@@ -1,0 +1,8 @@
+data=
+1	0
+藤原　　仙二	9.40	0.18	4.0	２		IP	１		IP	２		IP	１		G2	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+花田　　凱成	4.40	0.17	3.1	４		IP	６		IP	６		IP	３		IP	５		IP	５		IP	５		IP	２		IP	２		IP	１		IP
+齊藤　　　廉	4.50	0.13	2.5	５		IP	１		IP	４		IP	２		IP	３	4	IP	６		IP	２		IP	４		IP	６	2	IP	６		IP
+佃　　　來紀	5.60	0.14	2.9	４		IP	１	6	G3	６		IP	５		IP	３		IP	６		IP	３		IP	１		IP	１		IP	３		IP
+黒田　　　剛	2.70	0.19	3.5	５		IP	５		IP	４		IP	４		IP	５		IP	６	6	IP	４		IP	転	6	IP	４		IP	４		IP
+坂本　　一真	2.10	0.17	3.8	転		IP	５		IP	転		IP	５		IP	４	5	IP	５	5	IP	６		IP	４		IP	４		IP	５		IP

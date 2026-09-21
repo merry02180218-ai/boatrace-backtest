@@ -1,0 +1,8 @@
+data=
+1	0
+安河内鈴之介	8.60	0.16	3.2	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	６		G3	４		G2	１		IP	１		IP
+金子　　龍斗	4.50	0.17	2.7	４		IP	２		IP	６		IP	２		IP	２		IP	５		IP	５		IP	５		IP	３		IP	４		IP
+垂水　　　悠	6.80	0.08	1.4	１		IP	６		IP	２		IP	１		IP	５		IP	２		G3	３		G3	４		IP	１		IP	２		G1
+牧村　　俊輝	3.30	0.18	3.7	５		IP	４		IP	４		IP	４		IP	３		IP	６		IP	５		IP	４		IP	５	6	IP	４	5	IP
+石渡　翔一郎	3.50	0.19	2.8	３		IP	３		IP	３		IP	５		IP	５		IP	３		IP	６	6	IP	５	6	IP	６		IP	６		IP
+飛田　　江己	5.22	0.11	1.7	５		G2	４		IP	４		IP	４		IP	３		IP	２		IP	３		IP	２		G1	５		G1	欠		G1

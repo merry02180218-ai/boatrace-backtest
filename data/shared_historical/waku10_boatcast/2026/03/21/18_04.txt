@@ -1,0 +1,8 @@
+data=
+1	0
+米丸　　乃絵	9.80	0.15	1.7	１		IP	１		G1	１		G1	１		IP	１		IP	１	2	G1	１	2	G1	２		G3	３		IP	１		IP
+高岡　　竜也	8.20	0.16	3.2	１		IP	４		IP	２		IP	３		IP	２		IP	１	3	IP	１		IP	２		IP	１		IP	２		IP
+川崎　　公靖	5.40	0.15	2.5	２		IP	２		IP	６		IP	５		IP	４		IP	２	4	IP	６		IP	３		IP	１		IP	３		IP
+上村　　宏太	6.20	0.17	3.0	４		IP	３		IP	１		IP	５		IP	３		IP	４	5	IP	１		IP	２		IP	２		IP	４		IP
+岸本　　　隆	3.50	0.20	3.6	３		IP	４		IP	５		IP	５		IP	６		IP	４		IP	５		IP	５		IP	４		IP	２		IP
+池上　　隆行	2.70	0.19	3.6	３		IP	５	5	IP	５	5	IP	４		IP	５		IP	５	5	IP	４		IP	５		IP	５	5	IP	６		IP

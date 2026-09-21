@@ -1,0 +1,8 @@
+data=
+1	0
+池田　　雷太	6.60	0.18	2.9	１		IP	４		IP	４		IP	２		IP	１		IP	１		IP	４		IP	５		IP	４		IP	１		IP
+大平　誉史明	6.00	0.14	3.0	４		IP	３		IP	３		IP	６		IP	１		IP	３		IP	１		IP	３	3	IP	１		IP	６		G3
+伊藤　　将吉	5.50	0.17	2.6	２		IP	４		G1	２		IP	５		IP	２		IP	３		IP	妨		IP	３		IP	２		IP	４		IP
+寳田　　亮治	4.30	0.26	3.8	５		IP	５		IP	１		IP	４		IP	２		IP	４		IP	４		IP	３		G3	５		G3	６		IP
+東　　　健介	3.20	0.19	3.6	４		IP	４		IP	４		IP	５		IP	４		IP	５		IP	６		IP	６		IP	４		IP	３		IP
+高橋　　真吾	2.20	0.15	4.0	６		IP	６		IP	６		G3	４		G3	６		G3	５		G3	６		IP	３		IP	６	5	IP	４		IP

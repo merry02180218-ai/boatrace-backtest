@@ -1,0 +1,8 @@
+data=
+1	0
+赤羽　　克也	7.20	0.16	3.7	３		IP	１		IP	２		IP	２		IP	１		IP	１		IP	６	2	IP	６		IP	２		IP	１		IP
+大橋　　由珠	4.80	0.20	4.4	２		IP	２		IP	４		IP	６		IP	６		IP	５		IP	２		G3	４		G3	３		IP	３		G3
+峰重　　力也	7.70	0.13	2.0	３		IP	３		IP	２		IP	３		IP	４		IP	１		IP	２		IP	１		IP	１	4	IP	２		IP
+久田　　敏之	8.00	0.09	1.9	５		IP	１		IP	２		IP	３		G1	１		SG	１		SG	２	5	IP	３		G1	１		G1	５		G1
+三苫　　晃幸	5.90	0.14	3.0	２		IP	４		IP	３		IP	２		IP	４		G3	２		G3	６		IP	３		IP	２		IP	３		IP
+野中　　義生	4.30	0.17	3.7	６		IP	２		G3	６		G3	６		IP	５		IP	４	5	IP	３		IP	５		IP	２		IP	１	5	IP

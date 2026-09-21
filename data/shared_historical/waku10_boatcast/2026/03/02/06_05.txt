@@ -1,0 +1,8 @@
+data=
+1	0
+東　　　健介	7.78	0.16	3.0	１		IP	１		IP	４		IP	１		IP	転		IP	２		IP	２		IP	４		IP	３		IP	１		IP
+白水　　勝也	6.90	0.15	3.4	４		IP	２		IP	２		IP	３		IP	３		IP	２		IP	４		IP	３		IP	２		IP	１		IP
+後藤　　正宗	5.40	0.17	4.3	４		IP	２		IP	５		IP	４		IP	３		IP	２		IP	４		IP	２		IP	３		IP	４		IP
+鋤柄　　貴俊	4.10	0.17	3.3	６		IP	５		IP	２		IP	４		IP	５		IP	４		IP	５		IP	２		IP	２		IP	５		IP
+三角　　哲男	5.50	0.17	3.1	５		IP	４		IP	４		G1	２		IP	３		IP	３		IP	３		IP	５		IP	３		IP	２		IP
+中島　　友和	1.40	0.18	3.8	５		IP	６		IP	４		IP	６		IP	６		IP	欠		G3	５		IP	６		IP	６		IP	６		IP

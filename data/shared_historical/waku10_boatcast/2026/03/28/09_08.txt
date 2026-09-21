@@ -1,0 +1,8 @@
+data=
+1	0
+魚谷　　香織	8.40	0.18	4.1	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	２		IP	４		IP	１		G3	３		G3
+滝川　真由子	7.50	0.18	3.0	２		IP	３	3	IP	１		G3	５		IP	４	3	IP	２		IP	１		IP	１		IP	２		IP	２		IP
+清埜　　翔子	6.00	0.13	2.8	６		IP	２		G3	１		G1	２		IP	２		IP	６		G1	４		IP	５		IP	２		IP	２		IP
+小池　　礼乃	3.70	0.18	3.6	５		IP	２		IP	１		IP	５		IP	４		IP	６		IP	６		G3	３		IP	６		IP	５		IP
+孫崎　　百世	3.10	0.25	5.2	２		IP	２	4	IP	４		IP	４	6	IP	５		IP	６		IP	６	6	IP	５		IP	妨		IP	６		IP
+間庭　　菜摘	2.80	0.18	4.0	６		IP	５		IP	５		G1	４		G3	４		G3	５		IP	５		IP	５		IP	４	5	G3	４		G3

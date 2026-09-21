@@ -1,0 +1,8 @@
+data=
+1	0
+森　　　智也	7.90	0.13	3.0	１		IP	２		IP	１		IP	１		IP	６		IP	３		IP	１		IP	１		IP	４		IP	１		IP
+飯山　　晃三	4.00	0.20	3.5	６		IP	３		IP	５		IP	５		IP	２		IP	４	3	IP	４		IP	６	3	IP	４		IP	２		IP
+木幡　　純也	6.00	0.17	3.6	２		IP	４		IP	３		IP	２		IP	４		IP	１		IP	５		IP	５		IP	３		IP	２		IP
+菅　　　章哉	8.00	0.14	3.6	１	6	SG	６		SG	１	5	G1	５		G1	１		G1	１	3	IP	１		IP	２		IP	６	6	G1	１		IP
+大石　　真央	4.30	0.16	2.9	４		IP	４		IP	３		IP	５		IP	４		IP	２		IP	６		IP	５		IP	２		IP	４		IP
+樫葉　　次郎	2.80	0.18	3.7	３		IP	６		IP	５		IP	６	5	IP	６		IP	４	5	IP	５	5	IP	５		IP	６		IP	２		IP

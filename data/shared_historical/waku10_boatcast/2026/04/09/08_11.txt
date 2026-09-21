@@ -1,0 +1,8 @@
+data=
+1	0
+國分　将太郎	5.90	0.16	3.1	３		IP	１		G3	１		IP	１		IP	２		IP	５		IP	２		IP	６		IP	５		IP	５		IP
+飯山　　　泰	4.90	0.16	3.1	４		IP	１		IP	４		IP	３		IP	３		IP	５		IP	３		IP	５		IP	６		G1	３		G1
+吉田　　俊彦	5.10	0.17	3.8	３		IP	３		IP	５		G1	４		G1	１		G1	３		IP	５		IP	５		G1	５		G1	３		IP
+木田　峰由季	5.78	0.14	3.0	３		IP	６		IP	１		IP	４		G3	２		IP	５		IP	１		IP	エ		IP	１		IP	６		IP
+山田　　　丈	4.20	0.15	3.7	５		IP	３		IP	３		IP	５		IP	４		IP	５	4	IP	４		IP	５		IP	３		IP	３		IP
+角谷　　健吾	2.30	0.18	3.2	６		IP	５		IP	５		IP	３		IP	５		IP	５		IP	６		IP	６		G1	４		IP	６		IP

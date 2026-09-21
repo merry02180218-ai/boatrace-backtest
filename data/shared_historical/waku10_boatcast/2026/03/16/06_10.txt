@@ -1,0 +1,8 @@
+data=
+1	0
+江口　　晃生	8.00	0.13	2.7	１		IP	３		IP	６		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	３		IP
+赤岩　　善生	6.10	0.16	4.1	１		IP	２		IP	３		G1	４		G1	１		IP	６		G1	６		IP	３		IP	３		IP	３		IP
+竹腰　　正樹	6.30	0.15	3.6	２		IP	２		IP	３		IP	３		IP	４		IP	２		IP	２		IP	６		IP	３		IP	２		IP
+原　　　豊土	6.60	0.18	3.1	１		IP	２		IP	３		IP	２		IP	１		IP	５		IP	２		IP	３		IP	５		IP	３		G3
+南野　　利騰	3.50	0.15	3.2	３		IP	４		IP	６		IP	６		IP	５		IP	６		IP	４		IP	２		IP	３		IP	５		IP
+中村　　　真	4.80	0.15	3.2	３		IP	６		G3	２		IP	２		IP	３		IP	６		IP	６		IP	４		IP	１		IP	５		IP

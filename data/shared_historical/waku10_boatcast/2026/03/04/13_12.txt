@@ -1,0 +1,8 @@
+data=
+1	0
+小池　　修平	9.30	0.16	2.3	２		G1	１		G1	１		G1	１		IP	２		IP	１		IP	３		IP	１		IP	１		IP	２		IP
+尾崎　　雄二	5.40	0.15	4.1	３		IP	６		IP	２		IP	２		IP	３		IP	６		IP	２		IP	４		IP	５		IP	１		G3
+山一　　鉄也	5.40	0.18	3.0	４		IP	３		IP	１		IP	２		IP	４	4	IP	３		IP	６		IP	４		IP	２		IP	６		IP
+永井　　　源	5.20	0.16	3.1	１		IP	３		IP	４		G1	６		G1	６		IP	１	5	IP	５		IP	２		IP	４		IP	５		IP
+照屋　　厚仁	4.50	0.18	3.6	３		IP	６		IP	３		IP	１		IP	３		IP	６		IP	３		IP	６		IP	５		IP	３		IP
+須藤　　隆雄	3.30	0.17	3.6	４		IP	５	4	IP	５	5	IP	６	5	IP	５		IP	５		IP	３		IP	３		IP	４		IP	４		IP

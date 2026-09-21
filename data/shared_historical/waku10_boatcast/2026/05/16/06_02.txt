@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　啓三	7.56	0.14	1.3	４		IP	１		IP	２		IP	２		IP	３		IP	２		IP	転		IP	２		IP	２		IP	２		IP
+西村　　　歩	4.60	0.23	4.3	２		IP	６		IP	６		G3	２		G3	５		G3	１		G3	４		IP	３		IP	４		IP	５		IP
+岩崎　　正哉	6.10	0.16	4.0	６		IP	４		IP	２		IP	１		G3	４		IP	３		IP	４		IP	３		IP	１		IP	２	4	IP
+齋藤　　達希	4.00	0.21	3.7	３		IP	３		IP	３		IP	４		G3	６	5	G3	５		IP	２		IP	５		IP	６	5	IP	４		IP
+榎　　　幸司	4.20	0.19	4.3	３		IP	３		IP	２		IP	５		IP	４	6	IP	４		IP	５		IP	３		IP	５		IP	５		IP
+東口　　　晃	3.70	0.18	3.7	２	5	IP	３		IP	４		IP	５		IP	５		IP	３		IP	５		IP	６		IP	４		IP	５		IP

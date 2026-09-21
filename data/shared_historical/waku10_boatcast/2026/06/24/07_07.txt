@@ -1,0 +1,8 @@
+data=
+1	0
+安田　　政彦	7.00	0.17	3.1	２		IP	４		IP	４		IP	１		IP	２		IP	１		IP	１		IP	４		G3	５	2	G3	１		IP
+松下　　哲也	4.40	0.18	4.0	４		IP	５		IP	５		IP	５		IP	３		IP	４		IP	２		IP	２		IP	４		IP	４		IP
+角谷　　健吾	5.70	0.09	2.3	４		IP	３		IP	４		IP	２		IP	２		IP	２		IP	３		IP	４		IP	６		IP	２		IP
+木村　　亮太	3.50	0.12	2.6	１		IP	２		IP	６		IP	５		IP	４		IP	５		IP	４		IP	５		IP	６		IP	６	5	IP
+松山　　裕基	3.40	0.18	2.6	５		IP	４		IP	４		IP	６		IP	４		IP	５	4	IP	６		IP	５		IP	４		IP	１		IP
+中川　　海虹	0.90	0.24	5.0	６		IP	６		IP	Ｆ	5	IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

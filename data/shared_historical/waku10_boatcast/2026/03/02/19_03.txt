@@ -1,0 +1,8 @@
+data=
+1	0
+河野　　主樹	8.00	0.17	2.7	１		G3	１		IP	１		IP	３		IP	４		IP	２		IP	３		IP	１		IP	３		IP	１		IP
+一色　　凌雅	4.70	0.16	2.7	３	3	G3	３		IP	３		IP	６		IP	３		IP	２		IP	２		IP	５		IP	５		IP	５		IP
+柴田　　大輔	4.40	0.19	3.6	５		G3	５		IP	２		IP	６		IP	２		IP	３		IP	４		IP	３		IP	３		IP	６		IP
+藤井　　公人	4.20	0.15	2.7	５	6	G3	４		IP	３		IP	６		IP	４		IP	６	6	IP	４	5	IP	３		IP	２		IP	３		IP
+伏田　　裕隆	4.00	0.21	4.5	６	6	G3	４	6	IP	５		IP	２		IP	５		IP	４		IP	４		IP	６		IP	２	6	IP	４	6	IP
+木田　峰由季	3.60	0.22	4.7	５		G3	４		IP	２		IP	６		IP	６		IP	４		IP	４		IP	５	5	IP	４		IP	３		IP

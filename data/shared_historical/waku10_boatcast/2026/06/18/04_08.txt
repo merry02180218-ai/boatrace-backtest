@@ -1,0 +1,8 @@
+data=
+1	0
+三宅　　　潤	8.40	0.15	3.0	１		IP	１		IP	１		IP	２		IP	４		IP	１		IP	１		IP	１		IP	１		IP	５		IP
+伊藤　　尚汰	4.90	0.14	4.0	２		IP	２	4	IP	５		IP	５		IP	２		IP	５		IP	４		IP	２		IP	３		IP	６		IP
+三浦　　裕貴	4.70	0.18	3.5	転		IP	２		IP	５		IP	３		IP	４		IP	１		IP	２		IP	３	4	IP	５		IP	６		IP
+若林　　　将	6.10	0.13	2.1	６		G1	５		G1	４		IP	６	6	IP	１	5	G3	２		IP	２		IP	１		IP	２		IP	３		G1
+加藤　　雅之	1.60	0.20	4.5	６		IP	５		IP	５		IP	６		IP	５	6	IP	４		IP	６		IP	転		IP	６		IP	５		IP
+西村　　豪洋	2.20	0.21	4.4	６		IP	６		IP	６		G3	５		IP	５		IP	３		IP	６		IP	５		IP	４		IP	５	5	IP

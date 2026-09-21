@@ -1,0 +1,8 @@
+data=
+1	0
+柳沢　　　一	8.80	0.12	2.3	１		IP	２		IP	１		IP	６		IP	１		IP	１		IP	１		IP	２		G1	１		IP	１		IP
+竹井　　貴史	9.10	0.17	3.3	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	３		IP
+上田　　洋平	4.80	0.16	3.0	３		IP	３		IP	６		IP	３		IP	４		IP	３		IP	４		IP	６	2	IP	２		IP	３		IP
+荒井　　翔伍	4.00	0.20	3.4	６		IP	５		IP	３		IP	４		IP	３		IP	６		IP	４		IP	３		IP	３		IP	４		IP
+今井　　貴士	4.30	0.18	3.8	３		IP	６		IP	４		G1	５		G1	３		G1	６		G3	２		IP	５		IP	４		IP	４		IP
+森定　　晃史	4.80	0.20	4.7	３		IP	２	5	IP	５		IP	４		IP	４		IP	３		IP	３		IP	３	4	IP	４		IP	５		IP

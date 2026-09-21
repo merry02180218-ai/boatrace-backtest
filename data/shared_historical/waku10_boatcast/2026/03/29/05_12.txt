@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　　郡	9.80	0.17	3.2	３		G1	２		G1	１		IP	１		IP	１		IP	１		IP	１		G1	１		G1	２		G1	１		G1
+中島　　秀治	5.70	0.17	3.2	２		G2	３		G2	４		IP	６		IP	１		IP	２		IP	２		IP	３		IP	転		G3	５		IP
+桑原　　将光	5.70	0.15	3.3	３		IP	２		IP	５		IP	１		IP	２		IP	２		IP	６		IP	５	6	IP	２		IP	４		IP
+南野　　利騰	4.50	0.16	3.3	５	3	IP	６		IP	４		IP	１		IP	４		IP	１		IP	３		IP	３	5	IP	６		IP	６		IP
+佐藤　　大介	6.10	0.16	3.4	４		IP	２		IP	３		IP	１		IP	３		G1	３		IP	５		IP	２		IP	４		IP	３		IP
+大場　　　敏	3.60	0.21	5.3	５		IP	５		IP	３		IP	３		IP	３		IP	６		IP	４		IP	６		IP	４		IP	４		IP

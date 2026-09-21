@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　拡郎	9.90	0.13	2.2	２		G1	１		G1	１		IP	１	2	IP	１		IP	２		IP	１		IP	１		G1	１		G1	２		G1
+吉川　　元浩	5.80	0.13	3.4	２		G1	４		G1	２		IP	エ		IP	５		IP	２		IP	５		SG	６		G1	１		G1	２		G1
+石本　　裕武	6.00	0.13	2.5	１		IP	３		IP	２		G1	６		G1	５		IP	３		G2	３	6	IP	４		IP	転		IP	２		IP
+中島　　孝平	7.20	0.10	1.9	４		IP	４		G1	４		G1	１		G1	２		IP	５		G2	２		IP	３		SG	３		SG	２		SG
+和田　　兼輔	6.20	0.13	2.3	４		IP	２		IP	２		IP	４		G1	５	6	G1	２		IP	３	6	IP	２		G2	５		G2	２		IP
+森高　　一真	3.50	0.15	4.0	４		G1	５		G1	４		G1	６		G1	５		G1	６		G1	４		IP	６		SG	４		G1	５		G1

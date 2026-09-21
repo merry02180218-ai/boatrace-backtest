@@ -1,0 +1,8 @@
+data=
+1	0
+川原　　　涼	7.80	0.20	2.7	２		IP	５		IP	２		IP	５		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+佃　　　來紀	5.44	0.17	3.8	２		IP	４		G3	２		G3	転		IP	２		G3	２		IP	５		IP	５		IP	２		IP	６		IP
+中野　　希一	6.70	0.11	2.6	１		IP	２		IP	５		IP	３		IP	１	1	IP	４		IP	２		G1	６		G1	３		IP	１		IP
+早川　　颯太	2.30	0.24	4.2	４		IP	６		IP	１		IP	５		IP	６		IP	６		IP	６	6	IP	６	5	IP	６		IP	６		IP
+宮脇　　遼太	4.80	0.17	3.6	４		IP	２		IP	３		IP	４		IP	４		IP	５		IP	４		IP	２		IP	５	6	IP	３	6	IP
+上野　　俊樹	3.90	0.18	4.0	６		G2	６		IP	４		IP	３		G3	４		G3	４		IP	４		IP	５		IP	２		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+齋藤　　真之	8.40	0.10	1.9	１		IP	１		IP	１		IP	１		IP	１		IP	４		IP	１		IP	３		IP	４		IP	１		IP
+藤田　　浩人	6.40	0.17	2.9	２		IP	３		IP	２		IP	２		IP	５		IP	３		IP	２		IP	２		IP	３		IP	４		IP
+齋藤　　智裕	3.80	0.20	3.9	３		IP	６		IP	３		IP	６		IP	６	4	IP	５		IP	２		IP	４		IP	６		IP	２		IP
+長谷川　雅和	4.50	0.18	3.1	５		IP	４		IP	３		IP	３		IP	３		IP	４		IP	３		IP	５		IP	６		IP	２		G3
+谷　　　勝幸	2.90	0.16	3.7	６		IP	５		IP	４		IP	５		IP	５		IP	１		G3	５		IP	５		IP	５		G3	５		G3
+末永　　祐輝	3.80	0.18	4.2	４	4	IP	５		IP	４		IP	２		IP	３		IP	５		IP	５		IP	５		IP	４		IP	４	2	IP

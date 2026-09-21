@@ -1,0 +1,8 @@
+data=
+1	0
+豊田　　　結	8.00	0.18	2.6	３		IP	３		IP	１		IP	１		IP	１		G3	２		G3	４		IP	３		IP	１		IP	１		G3
+守屋　　大地	4.90	0.19	4.1	１		IP	転		G3	５		IP	２	3	IP	２		IP	２		IP	６		IP	５		IP	５		IP	２		IP
+樋口　　喜彦	3.40	0.12	2.9	５		IP	６		IP	１		IP	５		IP	６		IP	３	4	IP	６		IP	６		IP	２		IP	５		IP
+小川　竜太朗	4.60	0.13	2.3	２		IP	４		IP	６		IP	５		IP	６		IP	２		IP	５		IP	５		IP	２		IP	１		IP
+石塚　　久也	5.30	0.17	3.7	４		IP	３		IP	２		IP	３		IP	２		IP	２		IP	６		IP	４		IP	５		IP	４		IP
+市川　　瑚幸	1.30	0.21	4.3	６		IP	５		IP	６		IP	６		IP	６		IP	５	5	IP	６		IP	６		IP	５		IP	６		IP

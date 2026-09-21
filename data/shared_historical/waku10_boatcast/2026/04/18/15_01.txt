@@ -1,0 +1,8 @@
+data=
+1	0
+妻鳥　　晋也	7.00	0.19	4.3	２		IP	４		IP	２		IP	１		G3	１		IP	５		IP	３		IP	４		IP	１		IP	２		G3
+星野　　太郎	5.50	0.19	4.1	５		IP	１		IP	３		IP	６		IP	２		IP	１		IP	３		IP	３		IP	５		IP	４		G3
+齊藤　　大将	3.60	0.18	3.6	５		IP	４		IP	２		IP	６		IP	６	6	IP	６		IP	４		IP	３		IP	２		IP	６		IP
+桑原　　　啓	5.20	0.14	3.2	５		IP	６		IP	２		IP	２		IP	４		IP	６		IP	３		IP	２		IP	３		IP	２		IP
+上田　　洋平	4.90	0.18	4.1	５		IP	５		IP	５		IP	２		IP	６	6	IP	１		IP	３		IP	２	4	IP	４	6	IP	４		G3
+岡部　　　浩	2.40	0.24	5.0	５		IP	６		IP	欠		IP	４		IP	５		IP	６		IP	３		IP	５		IP	５		IP	４		IP

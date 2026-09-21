@@ -1,0 +1,8 @@
+data=
+1	0
+畑田　　希咲	3.60	0.20	3.8	６		IP	６		IP	１		IP	５		IP	１		IP	４		IP	６		IP	４		IP	５		IP	６		IP
+松尾　　夏海	6.80	0.14	3.1	１		IP	２		IP	５		IP	４		IP	１		IP	３		G1	２		G1	１		G3	２		IP	落		G3
+土屋　　　南	5.50	0.11	3.1	３		IP	４		G3	１		G3	４		IP	６		G1	６		IP	２		IP	１		IP	５		IP	２		IP
+内山　　七海	5.20	0.13	2.7	２		IP	２		IP	２		IP	６		IP	５		IP	４		IP	４		IP	３		IP	６		G3	１	6	IP
+細川　　裕子	6.30	0.19	3.6	３		IP	３		IP	３		G3	３		G1	１		IP	５		IP	３		G3	１		IP	２		IP	５	6	IP
+山川　　波乙	3.00	0.22	3.7	５		IP	３		IP	６		IP	４		IP	５		IP	２		G3	４		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+村田　　　敦	4.30	0.15	2.5	３		IP	２		IP	６		IP	５	2	IP	３		IP	３		IP	６		IP	６		IP	４		IP	２		IP
+星　　　栄爾	3.90	0.17	2.7	３		G3	６		IP	５		IP	３		IP	４		IP	６		IP	２		IP	６		IP	４		IP	３		IP
+照屋　　厚仁	5.70	0.17	3.7	６		IP	２		IP	５		IP	１		IP	３		IP	５	4	IP	２		IP	６		IP	１		IP	２		IP
+岡本　翔太郎	4.00	0.13	2.0	５		IP	６		IP	５		G3	２	5	IP	４		IP	４		IP	６		IP	３		IP	２		IP	４		IP
+佐藤　隆太郎	5.80	0.16	4.3	１		G1	４	4	G1	１		IP	４		IP	４	4	IP	５		IP	３		IP	５		G1	６		G1	１		G1
+中山　　　将	4.40	0.13	2.6	２		IP	６		IP	６		IP	４		IP	３		IP	４		IP	３	5	IP	３		IP	５		IP	４		IP

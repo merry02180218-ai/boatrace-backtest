@@ -1,0 +1,8 @@
+data=
+1	0
+牧　　　宏次	8.00	0.16	3.0	３		IP	４		IP	３		IP	１		IP	１		IP	３		IP	２		IP	１		IP	１		IP	１		IP
+下出　　卓矢	5.56	0.11	1.9	２		IP	４		IP	３		IP	５		IP	１		IP	３		IP	５		IP	５		IP	１		IP	欠		IP
+池田　　雷太	3.90	0.22	2.8	５		IP	６		IP	５		IP	５	4	IP	３		IP	５		IP	１		IP	４		IP	３		IP	４		IP
+別府　　昌樹	2.50	0.20	4.5	４		IP	６		IP	６		IP	６		IP	６	6	IP	４	6	IP	３	6	IP	５	6	IP	６	6	IP	４	6	IP
+一ノ木　　匠	1.50	0.16	4.3	６	6	IP	６	6	IP	６	6	IP	６	6	IP	４	6	IP	６	6	IP												IP
+中野　　孝二	2.20	0.21	5.5	６		IP	２		IP	５	5	IP	５		IP	６		IP	５		IP	６		IP	５		IP	５		IP	６		IP

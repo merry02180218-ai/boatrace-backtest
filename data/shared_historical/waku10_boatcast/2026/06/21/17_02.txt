@@ -1,0 +1,8 @@
+data=
+1	0
+岩井　　　繁	5.80	0.21	3.9	３		G3	５		IP	５		IP	２		IP	５		IP	１		IP	２		IP	２		IP	２		IP	４		IP
+滝沢　　芳行	3.50	0.14	2.4	６		G3	４		IP	５		IP	５		IP	１		IP	４		IP	５		IP	５		IP	４		IP	５		IP
+中野　　和裕	5.00	0.16	3.2	６		G3	５		IP	４		IP	４		IP	２		IP	１		IP	４		IP	６		IP	１		IP	３		IP
+前田　　光昭	2.10	0.15	3.1	６		G3	５		G3	４		G3	４		IP	５		IP	６		IP	５		IP	５		IP	５		IP	６		IP
+浜野　　孝志	3.60	0.17	3.0	１	4	G3	３	4	IP	６		IP	６		G2	５		IP	４		IP	５		IP	５		IP	６		IP	３		IP
+古川　　誠之	4.80	0.14	3.0	４		G3	２	4	IP	５	5	IP	４		IP	３		IP	５		IP	３		IP	４	5	IP	４		IP	３	5	IP

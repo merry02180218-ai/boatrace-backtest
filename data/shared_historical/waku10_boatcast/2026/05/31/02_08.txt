@@ -1,0 +1,8 @@
+data=
+1	0
+森下　　　勇	7.00	0.15	2.2	１		IP	４		IP	２		IP	１		IP	５		IP	４		IP	２		IP	２		IP	２		IP	２		IP
+下河　　誉史	4.80	0.17	3.4	５		IP	３		IP	４		IP	３		IP	３		IP	４		IP	３		IP	３		IP	３		IP	５		IP
+宇野　　博之	4.20	0.15	2.9	妨		IP	６		IP	４		IP	６		IP	３		IP	３		IP	４		IP	４		IP	１		IP	３	4	IP
+澤　　　大介	3.50	0.19	3.7	２		G3	４		IP	３		IP	６		IP	５		IP	４		IP	５		IP	４		IP	５		IP	５	5	IP
+萩原　　知哉	4.70	0.23	5.0	５		IP	２		IP	６		IP	３		IP	５		IP	５		IP	４		IP	３		IP	３		IP	２		IP
+尾道　　佳諭	1.40	0.22	4.1	５		IP	５		IP	６		IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+酒井　　俊弘	6.40	0.14	3.1	２		IP	２		IP	１		IP	５		IP	４		IP	５		IP	４		IP	２		IP	２		IP	１		IP
+小池　　修平	7.10	0.14	3.6	５		G1	２		SG	６		SG	３		G1	１		IP	２		G1	２		G1	６		G1	１		IP	２		IP
+後藤　　正宗	5.90	0.18	3.5	３		IP	１		G3	６		G3	２		IP	１		IP	４		IP	２		IP	５		IP	４		IP	３		IP
+宇野　　博之	3.40	0.17	3.0	４		IP	３		IP	４		IP	５		IP	４		IP	３		IP	６	5	IP	４		IP	５		IP	６		IP
+松本　　浩貴	3.63	0.23	4.0	６		IP	３	4	IP	４	3	IP	３		IP	４		IP	３		IP	６		IP	欠		IP	６		IP	欠		IP
+村上　　功祐	3.00	0.16	2.7	５	5	IP	６		G3	５		IP	４		IP	３		IP	４		IP	６		IP	４	5	IP	４		IP	５		IP

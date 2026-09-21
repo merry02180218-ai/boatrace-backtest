@@ -1,0 +1,8 @@
+data=
+1	0
+妻鳥　　晋也	7.20	0.19	4.5	１		IP	１		IP	２		IP	４		IP	２		IP	１		G3	１		IP	５		IP	３		IP	４		IP
+山本　　寛久	6.10	0.16	3.6	３		IP	５		IP	２		IP	２		IP	１		IP	６		IP	２		IP	３		IP	５		G3	１		IP
+鳥飼　　　眞	6.40	0.18	4.3	２		IP	３		IP	３		IP	２		IP	２		IP	２		IP	４		IP	３		IP	３		IP	４		IP
+永松　　良教	3.40	0.20	3.9	６		IP	６		IP	３		IP	２	5	IP	落	6	IP	５	6	IP	３	6	IP	６		IP	６		IP	２		IP
+寳田　　亮治	4.90	0.18	3.8	３		IP	５		IP	２		IP	４		IP	３		IP	３		IP	４		IP	６		IP	２		IP	５		IP
+花本　　　剛	2.60	0.22	4.0	妨	5	IP	６		IP	３		IP	６		IP	３		IP	５		IP	４	5	IP	４		IP	６		IP	６	5	IP

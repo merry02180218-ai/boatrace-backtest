@@ -1,0 +1,8 @@
+data=
+1	0
+寺嶋　　　雄	5.60	0.23	4.5	２		IP	２		IP	１		IP	１		IP	３		IP	５		IP	５	2	IP	５		IP	４		IP	４		IP
+内田　　　圭	2.10	0.15	3.1	６		IP	５	3	IP	５		IP	５		IP	６		IP	６		IP	６		IP	５		IP	２		IP	６		IP
+藤原　　孝斗	4.70	0.16	3.9	１		IP	５		IP	５	4	IP	２		IP	１		IP	６		IP	５		IP	２		IP	５		IP	５		IP
+渡邉　　睦広	3.80	0.14	2.4	５		IP	３		IP	６		IP	４		IP	２		IP	６		G3	６		G3	６		IP	１		IP	４		IP
+塚田　　修二	3.78	0.17	3.1	２		IP	６		IP	５		IP	転		IP	５		IP	２		IP	６		IP	６		IP	１		IP	６		IP
+下寺　　秀和	4.60	0.17	2.8	２		IP	２		IP	６		IP	４		IP	４	5	IP	４		IP	５		IP	６		IP	１	5	IP	４		IP

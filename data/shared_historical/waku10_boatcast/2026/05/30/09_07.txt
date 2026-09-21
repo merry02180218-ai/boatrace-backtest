@@ -1,0 +1,8 @@
+data=
+1	0
+豊田　　訓靖	5.70	0.14	2.2	５		IP	３		IP	６		IP	３		IP	２		IP	４		IP	１		IP	４		IP	２		IP	２		IP
+吉田　　俊彦	8.20	0.13	2.5	２		IP	１		IP	２		IP	５		IP	１		IP	２		IP	２		IP	１		IP	２		IP	１		IP
+越智　　照浩	4.78	0.12	3.1	６		IP	２		IP	３		IP	３		IP	５		IP	欠		IP	４		IP	３	4	IP	３		IP	４		IP
+仲口　　博崇	5.40	0.17	3.7	２		IP	３	3	IP	４		IP	２	3	IP	６		G1	４	3	G1	５		IP	６		G3	１		G3	２	2	IP
+谷　　　勝幸	2.70	0.16	2.8	４		IP	５		IP	５		IP	４		IP	５		IP	６		IP	５		IP	４		IP	５	4	IP	４		IP
+大場　　　敏	3.50	0.16	3.8	３	4	IP	５		IP	２	4	IP	６		IP	５		IP	５		IP	４		IP	５		IP	５		IP	３		IP

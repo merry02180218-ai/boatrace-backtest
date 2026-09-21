@@ -1,0 +1,8 @@
+data=
+1	0
+坪口　　竜也	9.40	0.13	2.6	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		G3	３		G3	１		IP	１		IP
+坂井　　康嗣	4.00	0.20	4.6	５		IP	２		IP	４	3	IP	３		IP	３		IP	落		IP	６		IP	６		IP	２	1	IP	落		IP
+滝川　真由子	4.80	0.17	3.6	３		IP	６		IP	６		IP	３		IP	２		IP	３		IP	２		IP	５		G3	３		G3	４		IP
+山戸　　信二	4.70	0.15	3.0	１		IP	１		IP	５		IP	５		IP	３		IP	５		IP	４	5	IP	６		IP	４		IP	３		IP
+重富　　伸也	2.90	0.13	2.9	６		IP	６		IP	４		IP	５		IP	６	6	IP	１	6	IP	５		G3	６	6	G3	６	6	IP	３		IP
+吉田　　翔悟	2.40	0.20	4.6	３		IP	５		IP	６		G3	６		IP	５		IP	５		IP	６		IP	６		IP	５		IP	３		IP

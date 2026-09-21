@@ -1,0 +1,8 @@
+data=
+1	0
+横田　　海人	3.00	0.22	3.1	５		IP	６		IP	５		IP	５		IP	５		IP	２		IP	６		IP	６		IP	１		IP	６		IP
+木場　　悠介	6.60	0.17	2.3	５		IP	３		IP	１		IP	２		IP	２		IP	４		IP	２		G3	２		G3	２		IP	４		IP
+益田　　啓司	6.40	0.14	3.2	２		IP	６		G1	２		IP	２		IP	２		IP	６		IP	３		IP	２		IP	４		IP	２		IP
+菊地　　敬介	4.30	0.14	2.4	５		IP	３		IP	５		IP	Ｆ		IP	３		IP	６		IP	３		IP	２		IP	２		IP	４	5	IP
+市川　　哲也	2.90	0.15	3.5	６		IP	５	1	IP	６		IP	５		IP	３		G2	５		G2	５		IP	６	4	IP	２		IP	５		IP
+川島　　拓郎	3.10	0.18	3.7	５		G3	５		IP	４		IP	４		IP	３		IP	６		IP	６		IP	４		IP	６		IP	３		IP

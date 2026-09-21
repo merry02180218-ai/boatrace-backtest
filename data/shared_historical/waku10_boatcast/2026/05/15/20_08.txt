@@ -1,0 +1,8 @@
+data=
+1	0
+亀山　　雅幸	8.30	0.18	3.6	１		IP	６		IP	１		IP	１		IP	３		IP	２		IP	１		IP	１		IP	２		IP	１		IP
+小池　　公生	5.10	0.19	4.3	４		IP	６		IP	３		IP	４		IP	４		IP	４		IP	１		IP	４		IP	２		IP	３		IP
+渡邉　　俊介	6.70	0.13	2.8	２		IP	２		IP	１		IP	３		IP	６		IP	３	4	IP	３		IP	３		IP	４		IP	１	2	IP
+内田　　　圭	3.60	0.14	3.1	６		IP	３		IP	３		IP	６		IP	５		IP	５		IP	５		IP	５		IP	１		IP	４		IP
+笠　　　雅雄	7.40	0.14	2.1	２		IP	３		IP	１	4	IP	３		IP	２		IP	１		IP	４	6	IP	１		IP	６		IP	１		IP
+増本　　杏珠	1.90	0.26	5.3	６		IP	６		IP	４		IP	６		IP	４		IP	４		IP	６		IP	６		IP	６		IP	６		IP

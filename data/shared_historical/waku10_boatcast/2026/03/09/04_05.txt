@@ -1,0 +1,8 @@
+data=
+1	0
+白神　　　優	10.20	0.11	1.9	１		G1	１		G1	１		IP	１		IP	１		IP	１		IP	２		G1	１		IP	１		IP	１		IP
+小川　　知行	4.80	0.15	2.1	２		IP	６		IP	５		IP	５		IP	３		IP	６		IP	２		IP	５		IP	１		IP	２		IP
+山田　　竜一	6.11	0.18	3.9	欠		IP	２		IP	４		IP	３		IP	１		IP	４		IP	２		IP	２		IP	３		IP	６		IP
+樋口　　範政	3.70	0.20	4.5	３		IP	４		IP	６		IP	２		IP	４		IP	６		IP	６		IP	３		IP	４		IP	５		IP
+大崎　　　翔	5.40	0.16	3.5	５		IP	４		IP	４		IP	２		IP	４		IP	５	6	IP	２		IP	５		IP	２		IP	１	4	IP
+伊藤　　尚汰	1.70	0.19	3.9	６		IP	４		IP	４		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+齊藤　　　仁	8.50	0.14	3.5	１		G3	１		G1	４		IP	１		IP	１		IP	３		IP	１		IP	３		IP	３		G1	１		G1
+長野　　道臣	4.40	0.20	3.4	４		G3	５		IP	２		IP	２	4	IP	４		IP	５		IP	４		IP	３		IP	５		IP	４		IP
+川原　　正明	6.00	0.12	2.0	１		G3	２		G3	６		IP	３		IP	３		IP	３		G3	１		G3	６		IP	３		IP	４		IP
+石川　　真二	5.10	0.13	2.6	１	1	G3	６	1	IP	５	1	IP	２	2	IP	５	1	G3	５	2	G3	４	2	IP	２	2	IP	２	2	IP	３	2	IP
+齋藤　　和政	2.70	0.21	4.1	６		G3	３		IP	４		IP	５		IP	６		IP	６	6	IP	５		IP	４		IP	４		IP	５		IP
+宮嵜　隆太郎	2.20	0.12	1.7	６		G3	４		IP	６		IP	６		IP	６		IP	５		IP	４	5	IP	３		IP	６		IP	６		IP

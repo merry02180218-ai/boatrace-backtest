@@ -1,0 +1,8 @@
+data=
+1	0
+向井　　美鈴	8.10	0.19	4.0	２		IP	２		IP	３		IP	５		G1	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP
+竹井　　奈美	6.70	0.20	3.7	５		G3	２		G1	３		IP	４		G1	３		IP	１		IP	２		IP	２		IP	５		IP	１		IP
+高木　　茉白	4.60	0.21	3.2	３		IP	３		IP	２		IP	６		IP	５		IP	３		IP	５		G3	２		G3	６		IP	３		IP
+稲生　　夏季	3.60	0.17	3.4	６		IP	２		IP	５		G3	２		G3	６		IP	５		IP	転		IP	３		IP	５		IP	３		G3
+原村　　百那	1.67	0.18	3.4	３		IP	落		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６	6	IP	６	6	IP	６		IP
+藤本　紗弥香	2.56	0.22	4.2	６		IP	２		IP	６		IP	５	5	IP	５	5	IP	６		G3	６		G3	不		IP	６		IP	３	5	IP

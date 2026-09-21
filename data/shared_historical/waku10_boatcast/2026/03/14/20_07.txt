@@ -1,0 +1,8 @@
+data=
+1	0
+向後　　龍一	9.60	0.14	2.2	１		G3	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+山下　　流心	4.44	0.14	3.1	６		G3	３		IP	３		IP	６	3	IP	２		IP	５		IP	４		IP	２		IP	沈		IP	４		IP
+沖島　　広和	4.90	0.18	3.9	３		G3	２		IP	５		IP	３		IP	５		IP	６		IP	３		IP	１		IP	４		IP	４		IP
+川上　　　剛	5.50	0.15	2.8	６		G3	１		IP	５		IP	３		IP	２		IP	２		IP	２		IP	４		IP	５		G3	３		G3
+高田　　　明	4.40	0.21	3.5	４		G3	４	4	IP	５		G1	６		G1	５		IP	３		IP	２	4	IP	３		G3	３		G3	６		IP
+山一　　鉄也	2.90	0.19	3.5	３		G3	６		IP	３		IP	５		IP	５	5	IP	３		IP	５		IP	５		IP	６		IP	６		IP

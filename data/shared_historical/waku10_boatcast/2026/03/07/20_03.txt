@@ -1,0 +1,8 @@
+data=
+1	0
+小松　　卓司	7.60	0.15	2.5	１		IP	２		IP	１		IP	２		IP	５		IP	５		IP	１		G3	２		IP	２		IP	１		IP
+松田　　憲幸	4.00	0.22	4.7	１		IP	転		IP	６		IP	６		IP	１		IP	６		IP	５		IP	３		IP	４		IP	６		IP
+松本　　真広	4.50	0.17	2.5	２		IP	５		IP	１		IP	５		IP	５		IP	２		IP	６		IP	転		IP	２		IP	４		IP
+松下　　誉士	3.00	0.18	3.8	３		IP	６		IP	４	6	IP	３		IP	６	5	IP	４		IP	６		IP	４		IP	６		IP	５		IP
+新田　　洋一	4.50	0.12	2.6	４		IP	４		IP	５		IP	５		IP	２		IP	６		IP	２	4	IP	３	6	IP	３		G3	４		IP
+宗行　　治哉	4.00	0.18	5.3	４	5	IP	３		IP	５		IP	６		IP	３		IP	３		IP	３		IP	６		G2	５		G2	４	4	IP

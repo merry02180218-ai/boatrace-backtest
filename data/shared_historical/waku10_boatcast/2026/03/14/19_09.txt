@@ -1,0 +1,8 @@
+data=
+1	0
+榎　　　幸司	9.60	0.17	3.4	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP
+前田　　聖文	6.40	0.17	3.4	２		G1	４	4	G1	２	5	G1	２		IP	４		IP	２		IP	２		IP	４		IP	６		IP	２		IP
+松田　　憲幸	4.80	0.17	4.0	６		IP	５		IP	３		IP	５		IP	４		IP	３		IP	３		IP	６		IP	１		IP	１		IP
+奥村　明日香	4.70	0.20	4.1	４		IP	６		IP	４		G3	５		IP	３		IP	１		IP	４		IP	５		IP	２		G3	４		G3
+荻野　　裕介	4.80	0.19	3.9	２	6	IP	５	6	IP	３		IP	５		IP	５	6	IP	３		IP	５		IP	３		IP	１		IP	４		IP
+上原　健次郎	3.90	0.17	4.6	５		IP	６		IP	３		IP	３	5	IP	４		IP	５		IP	３		IP	３		IP	４		IP	５		IP

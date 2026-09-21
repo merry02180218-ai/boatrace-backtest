@@ -1,0 +1,8 @@
+data=
+1	0
+中尾　　優香	6.50	0.19	4.5	１		IP	５	2	IP	１		IP	３		IP	５		IP	１		IP	４		IP	１		IP	１		IP	６		IP
+池田　　浩美	5.70	0.15	3.0	５		IP	１		IP	１		IP	４		IP	２		IP	５		IP	２		IP	２		IP	６		G3	５		IP
+安達　　美帆	4.20	0.20	3.8	３		G3	４		G3	２		G3	２		IP	５		IP	５		IP	６		G3	５		G3	２		G3	６		IP
+原田　　佑実	5.80	0.17	3.3	３		IP	３		IP	１		G3	１		IP	５		IP	３		IP	５		G3	３		G3	４		G3	３		G3
+西岡　　育未	3.90	0.19	3.5	５		G3	５		IP	４		IP	５		IP	２		G3	３		IP	６		IP	５		IP	４		IP	２		G3
+佐々木　裕美	2.00	0.18	3.2	６		IP	６		G3	５	4	IP	５		IP	６		G3	２		IP	６		IP	６		IP	５		G3	６	4	IP

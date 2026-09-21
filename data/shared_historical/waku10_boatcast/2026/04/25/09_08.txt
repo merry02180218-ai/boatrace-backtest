@@ -1,0 +1,8 @@
+data=
+1	0
+宮内　由紀英	5.50	0.16	3.8	４		IP	２		IP	３		IP	２		IP	５		IP	６		IP	４		IP	１		IP	４		IP	２		IP
+谷津　　幸宏	4.40	0.14	2.4	４		IP	５		IP	２		IP	３	3	IP	３		G3	６		G3	５		IP	４		IP	３		IP	４		G1
+関口　　智久	4.10	0.14	3.3	６		IP	５		IP	３		IP	５		IP	４	4	IP	４		IP	４		IP	４		IP	１		IP	４		IP
+吉田　　裕平	5.40	0.14	2.3	１		G1	５		G1	４		G1	４		G1	２		G1	４		G1	３		G1	５		G1	６		G1	５		G1
+芹澤　　克彦	2.80	0.15	3.4	５		IP	３		IP	４		IP	６		IP	６		IP	４		IP	５		IP	５		IP	５		IP	４		IP
+土屋　実沙希	4.56	0.19	4.2	１	5	IP	転		IP	転		IP	３		IP	４		IP	２		IP	４	5	IP	５		IP	３		IP	６	4	IP

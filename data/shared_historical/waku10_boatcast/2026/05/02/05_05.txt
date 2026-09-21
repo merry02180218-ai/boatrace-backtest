@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　二朗	3.60	0.18	4.0	５		IP	３		IP	５		IP	６		IP	６		IP	４		IP	５		IP	３		IP	２		IP	４		IP
+杉山　　貴博	5.40	0.16	3.9	３		IP	６		IP	１		IP	４		IP	６		IP	２		IP	３		IP	２		IP	４		IP	３		IP
+後藤　　翔之	4.80	0.12	2.3	３		IP	１		IP	５		IP	５		IP	１		IP	４		IP	５		G2	６		IP	４		IP	３		IP
+平田　さやか	3.80	0.16	2.4	６		IP	３		IP	４	5	IP	３	5	IP	４		G3	２		G3	６		G1	６		G1	４		G3	６		G3
+若林　　樹蘭	5.50	0.16	3.1	３		IP	２		IP	５		IP	５	6	IP	５		IP	３		IP	６	4	IP	１		IP	２		IP	１		IP
+渡邉　　　健	2.60	0.17	2.8	６		IP	Ｆ		IP	５		IP	６		G3	６		IP	５		IP	２		IP	５	5	IP	３		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　日向	9.80	0.13	2.4	２		IP	１		IP	１		G2	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+宗行　　治哉	7.80	0.19	3.7	１		IP	４		G2	３		G2	２		IP	１		IP	４		IP	１		IP	３		IP	２		IP	１		IP
+坪口　　竜也	5.00	0.17	3.1	６		G2	５		IP	１		IP	３		IP	４		IP	３		IP	３		IP	４		IP	３		IP	５		IP
+坂元　　浩仁	6.00	0.13	2.6	４		IP	２		IP	３		IP	４		IP	２		IP	１		IP	６		IP	６		IP	１	3	IP	２		IP
+今垣　光太郎	6.70	0.14	2.9	１	4	IP	１		SG	３	6	SG	１		G1	Ｆ	4	IP	２	4	IP	Ｆ	6	G1	５	6	G1	１		G1	４	4	IP
+稲田　　浩二	4.50	0.11	2.8	６		G1	５		G1	１		IP	３		G1	４		IP	６		IP	３		G3	５		G3	６		G1	２		IP

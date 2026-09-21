@@ -1,0 +1,8 @@
+data=
+1	0
+木下　　雄介	8.60	0.20	4.1	２		IP	４		IP	１		IP	１		IP	１		IP	３		IP	１	2	IP	２		IP	１		IP	１		IP
+表　　　憲一	7.00	0.21	4.0	２		IP	２		IP	２		IP	５		IP	１		IP	３		IP	４		IP	２		IP	１		IP	３		IP
+大町　　利克	4.80	0.14	3.6	６	4	IP	６		IP	３		IP	２		IP	３		IP	５		IP	３		IP	４		IP	４		IP	１		IP
+村上　　功祐	5.50	0.15	2.9	３		IP	４		IP	４		IP	３		IP	５		IP	２		IP	１		IP	６		G3	２		IP	４		IP
+藤原　　孝斗	3.90	0.16	3.5	５		IP	４		IP	２		IP	５		IP	２		IP	５		IP	４		IP	６		IP	４		IP	４		IP
+吉永　　浩則	2.30	0.23	5.0	６		IP	５		IP	６		IP	６		IP	５		IP	４		IP	５		IP	４		IP	４		IP	５		IP

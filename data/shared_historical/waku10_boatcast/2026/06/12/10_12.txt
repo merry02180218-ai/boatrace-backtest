@@ -1,0 +1,8 @@
+data=
+1	0
+太田　　和美	8.70	0.13	3.1	２		G1	２		IP	２		IP	１		IP	１		IP	５		IP	１		IP	１		IP	１		G1	２		G1
+大久保信一郎	5.00	0.16	2.8	２		IP	２	3	IP	５		G3	２		IP	１		IP	６		IP	４		IP	６		IP	欠		IP	２		IP
+作間　　　章	5.20	0.15	3.4	４		G3	１		IP	１		IP	４		IP	３		IP	５		IP	３		IP	４		IP	５		IP	４		IP
+中里　　英夫	4.70	0.20	4.2	４		IP	２		IP	２		IP	５		IP	３		IP	３		IP	５		IP	２		IP	５		IP	６		IP
+上田　　隆章	4.00	0.20	4.4	６		IP	３		IP	５		IP	４		IP	６		IP	３	6	IP	４		IP	２		IP	４		IP	落		IP
+乙藤　　智史	3.80	0.16	3.4	４		IP	４		IP	６		IP	５		IP	５		IP	３		IP	１		IP	３		IP	６	5	IP	５		IP

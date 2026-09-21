@@ -1,0 +1,8 @@
+data=
+1	0
+林　　　美憲	7.60	0.14	3.1	１		IP	４		G1	２		G1	４		IP	２		IP	１		IP	４		IP	４		IP	１		IP	１		IP
+坂口　　貴彦	6.60	0.18	3.7	２		IP	２		IP	１		IP	４		IP	５		IP	５		IP	２		IP	１		G3	３		G3	２		IP
+畑　　　和宏	5.50	0.17	3.3	６		IP	２		IP	３		IP	２		IP	５		IP	２	4	IP	３	4	IP	３		IP	２		IP	５		IP
+宗行　　治哉	5.90	0.17	3.6	３		IP	４		IP	３		IP	２		IP	２		IP	５		G2	４		G2	５		IP	１	3	IP	３		IP
+高木　　圭大	2.70	0.16	3.0	５		IP	３		IP	５	6	IP	６		IP	６		IP	５		IP	６		IP	５		IP	４		IP	３	6	IP
+庄島　　潤成	2.80	0.17	4.3	３		IP	５		IP	６		IP	６		IP	２		IP	４		IP	５		IP	５		IP	６		IP	６		IP

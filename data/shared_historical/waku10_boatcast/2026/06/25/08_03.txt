@@ -1,0 +1,8 @@
+data=
+1	0
+荒牧　　凪沙	6.70	0.16	3.5	２		IP	２	3	IP	２		IP	１		IP	５		IP	６		IP	４		IP	２		IP	１		IP	２		IP
+籾山　　佳岳	5.60	0.13	2.8	３		IP	３		IP	２		IP	３		IP	５		IP	２		IP	３	5	IP	４		IP	１		IP	妨		IP
+山下　　昂大	5.60	0.13	2.5	１		IP	１		IP	６		IP	３		IP	４		IP	３	4	IP	５	4	IP	６		IP	１		IP	３		IP
+守屋　　大地	3.10	0.20	4.6	２		IP	５		IP	６		IP	４	3	IP	６		IP	３		IP	５		IP	４		G3	６		IP	５	6	IP
+貫地谷　直人	4.20	0.19	4.1	５		IP	２		IP	４	4	IP	２	3	IP	６		IP	３		IP	４		IP	５		IP	３	6	IP	６		IP
+山崎　　善庸	2.60	0.26	5.4	５		IP	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP	５		IP	２	5	IP	４		IP

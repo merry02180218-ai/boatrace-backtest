@@ -1,0 +1,8 @@
+data=
+1	0
+原田　　幸哉	9.60	0.13	3.2	４		G1	１		G1	１		G1	１		G1	５		G1	１		SG	１		G1	１		G1	１		G3	１		G1
+山口　　裕二	6.20	0.15	3.7	３		G1	３		IP	２		IP	４		IP	６		IP	２		IP	５		IP	２	3	IP	１		IP	２		IP
+石橋　　道友	6.10	0.17	3.8	４		IP	１		G3	２		G3	５		G3	２		IP	３		IP	３	4	IP	３		IP	４		IP	３		G1
+坪口　　竜也	5.50	0.18	3.1	３		IP	６		IP	３		IP	３		IP	１		IP	３		IP	５		G3	４		G3	２		G3	３		IP
+山崎　　昂介	3.30	0.20	3.7	５		IP	４		IP	５		IP	４		IP	３		IP	６		IP	４		IP	５		IP	４		IP	４		IP
+榎　　　幸司	4.40	0.23	4.6	５		IP	４		IP	４		IP	５		IP	４		IP	３		IP	２		IP	４		IP	５		IP	２		IP

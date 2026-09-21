@@ -1,0 +1,8 @@
+data=
+1	0
+小池　　修平	9.30	0.13	1.8	１		G1	６		SG	２		G1	１		IP	１		IP	２		G1	１		G1	１		G1	１		IP	２		IP
+池永　　　太	6.10	0.11	2.0	２		G1	２		IP	転		G1	５		G1	３		G1	４		G1	１		IP	５		G1	３		IP	１	1	IP
+松尾　　　充	7.30	0.11	2.4	２		G1	１	4	IP	２		IP	３		IP	１		IP	２		IP	５		IP	１		IP	４		G1	４		G1
+竹間　　隆晟	5.40	0.14	2.8	４		G1	１		IP	６		IP	５		IP	３		IP	２		IP	６		IP	４		IP	１		IP	４		G1
+今泉　　友吾	5.11	0.16	3.4	５		G1	欠		IP	３		G1	４		G1	４		G1	２		IP	２	4	IP	６		IP	３		IP	６		G1
+桐生　　順平	4.70	0.13	4.0	４		G1	Ｆ		G1	３		SG	４		G1	３		G1	６		G1	５		G1	３		G1	３		G1	５		G1

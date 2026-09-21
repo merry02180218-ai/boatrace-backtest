@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　　歩	7.60	0.14	2.0	Ｆ		IP	２		IP	１		IP	１		IP	２		IP	３		IP	４		G3	１		G3	１		IP	１		IP
+高橋　　淳美	3.70	0.17	2.9	６		IP	４		IP	４		G3	６		IP	６		IP	５		IP	１		IP	３		IP	３		IP	５		IP
+三嶌　さらら	6.50	0.15	2.9	４		IP	５		IP	６		IP	２		IP	４		IP	１		IP	２		IP	２		IP	１		IP	１		IP
+石村　日奈那	3.20	0.17	3.7	５		IP	６		G3	３		IP	６		IP	６		IP	４		IP	４		IP	６		IP	４		IP	２		IP
+林　　　風音	1.40	0.17	3.5	６	6	G3	６	6	G3	６	6	G3	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	４	6	IP	５	6	IP
+清水　　愛海	2.90	0.21	4.7	５		IP	４		IP	６		SG	６		SG	５		SG	５		IP	４		IP	６		G2	４		IP	６		IP

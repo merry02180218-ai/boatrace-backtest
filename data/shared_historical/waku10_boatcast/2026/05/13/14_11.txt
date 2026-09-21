@@ -1,0 +1,8 @@
+data=
+1	0
+齊藤　　　優	7.00	0.17	3.8	２		IP	１		IP	４		IP	１		IP	２		IP	１		IP	４		IP	５		IP	４		IP	１		G3
+河野　　　大	6.20	0.12	2.3	２		IP	３		IP	６		IP	２		IP	２	3	IP	２		IP	１		IP	６		G2	６		G2	２		IP
+三好　　勇人	6.20	0.12	2.5	４		IP	３		IP	３		IP	５		IP	２		IP	５		IP	１	4	IP	２		IP	１	2	IP	３		IP
+丸尾　　義孝	4.90	0.16	3.1	５		IP	３		IP	２		IP	１		IP	３		IP	５		IP	６		IP	５		IP	２		IP	４		IP
+佐々木　和伸	4.20	0.18	3.9	２		IP	３	6	IP	５		IP	５		IP	妨	6	IP	３		IP	４		IP	４		IP	６	4	IP	４		G1
+四宮　　与寛	4.20	0.12	3.1	５		IP	４		IP	３		IP	３		IP	６		IP	２		IP	３		IP	４		IP	４		IP	６		IP

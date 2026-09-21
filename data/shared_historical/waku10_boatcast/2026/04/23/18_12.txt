@@ -1,0 +1,8 @@
+data=
+1	0
+新開　　　航	10.30	0.12	2.5	１		IP	１		G1	２		G2	１		G2	１		IP	２		IP	１		G1	１		G1	１		G1	１		G1
+椎名　　　豊	7.40	0.13	2.6	１		IP	３	3	IP	６		IP	１		IP	１		IP	４		G1	２		IP	１		IP	３		G1	３		G1
+坂本　　雄紀	5.80	0.15	2.1	１		IP	２		IP	６		IP	５		IP	２		IP	１		IP	６		IP	３		IP	３		IP	４		IP
+佃　　　來紀	6.00	0.13	2.8	３		IP	１		IP	１		IP	３		IP	５		IP	２		IP	３		IP	４	5	G3	３		G3	５		IP
+田中　　辰彦	4.50	0.16	3.1	３		IP	４		IP	２	4	IP	エ		IP	４		IP	４		IP	５		G1	６	6	G1	３		IP	２		IP
+奈須　　啓太	3.00	0.11	1.8	３		IP	４		IP	４	5	IP	６	5	IP	６		IP	４	5	IP	６		IP	３		IP	５		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中辻　　博訓	7.70	0.12	1.9	１		G3	５		IP	６		IP	１		IP	３		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+郷原　　章平	7.40	0.18	3.4	１		IP	１		IP	１		G1	４		G1	２		IP	１		IP	４		IP	２		IP	３		IP	５		IP
+町田　　洸希	6.00	0.18	4.0	転		IP	４		IP	２		IP	３		IP	３		IP	２		IP	３		IP	４		IP	３		IP	３		IP
+古田　　祐貴	3.90	0.13	2.6	５		IP	６		G1	５		IP	６		IP	５		IP	４		IP	４		IP	１		IP	２		IP	４		IP
+渡辺　　　崇	4.50	0.23	3.9	３		IP	４		IP	４		IP	５		IP	３		IP	３		IP	６		IP	３		IP	５		IP	２		IP
+岩橋　　裕馬	2.90	0.16	3.1	６		IP	１	3	IP	５		IP	４		IP	５		IP	５		IP	５		IP	６		IP	４	5	IP	６		IP

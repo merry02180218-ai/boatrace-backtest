@@ -1,0 +1,8 @@
+data=
+1	0
+池田　　浩二	10.00	0.12	2.2	１		G1	１		G1	１		G1	４		SG	１		SG	２		G1	１		G1	２		IP	１		IP	１		IP
+峰　　　竜太	7.90	0.12	3.4	４		G1	３		SG	３		SG	４		G1	３		G1	１		IP	４		G1	３		G1	２		G1	１		SG
+茅原　　悠紀	6.30	0.15	2.8	２		IP	３	4	IP	４		IP	２		SG	４		SG	２		IP	３		G1	５		G1	３		SG	６		SG
+西山　　貴浩	5.40	0.13	3.0	６	5	G1	４		G1	５		SG	５	5	SG	４		G1	１		IP	１		IP	３		G1	４		G1	６		G1
+桐生　　順平	6.20	0.13	3.8	６		G1	３		G1	４		SG	３		SG	４		G1	１		IP	４	4	IP	５		G1	４		SG	３	4	SG
+宮地　　元輝	4.90	0.16	3.9	３		G1	５		G1	１		SG	４		G1	６	5	IP	４		G1	５		G1	３		G1	５		G1	６		SG

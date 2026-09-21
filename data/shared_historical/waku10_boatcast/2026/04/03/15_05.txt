@@ -1,0 +1,8 @@
+data=
+1	0
+小野　　達哉	9.50	0.15	2.3	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+山戸　　信二	4.40	0.15	3.4	１		IP	６		IP	５		IP	２		IP	５	3	IP	６		IP	３		IP	４		IP	５	3	IP	２		IP
+中野　　和裕	4.40	0.17	3.0	１		IP	３		IP	４		IP	３		IP	４		IP	５		IP	Ｆ		IP	２		IP	５		IP	５		IP
+宮崎　　　奨	4.20	0.17	3.8	３		IP	２		IP	５		IP	５		G3	４		G3	４		G1	３		IP	６		IP	３		IP	５	3	IP
+今坂　　晃広	3.44	0.21	3.8	５		IP	４		IP	４		IP	６		IP	３		IP	５		IP	１		IP	６		IP	欠		IP	６		IP
+深井　　利寿	5.30	0.23	5.1	５		IP	２	5	IP	３		IP	３		IP	３		IP	６		IP	２		IP	３		IP	３	5	G3	５		IP

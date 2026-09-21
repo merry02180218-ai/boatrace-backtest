@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　晃朋	9.30	0.15	3.9	１		G1	１		G1	１		IP	２		IP	１		IP	２		IP	１		IP	２		G1	１		IP	３		IP
+西丸　侑太朗	5.30	0.19	3.7	２		G1	５		IP	２		IP	６		G1	６		G1	１		IP	５		IP	３		IP	２		IP	５	3	G1
+秋山　　広一	6.00	0.15	3.6	３		IP	５		IP	４		IP	２		IP	１		IP	３		IP	２		IP	５		G1	２		IP	４		IP
+木谷　　賢太	5.90	0.14	3.1	３	6	IP	３		IP	３		G3	５	5	IP	２		IP	２		IP	４		G1	３		IP	３		IP	３		IP
+石井　　伸長	4.90	0.20	3.4	４		IP	２		IP	５		IP	６		IP	５		IP	１		IP	転		IP	２		IP	３		IP	２		IP
+山田　　理央	4.40	0.19	3.7	４		G3	２	5	IP	３	4	IP	６		IP	５		IP	４		IP	３		IP	５		G1	６		G1	２		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+西丸　　敦基	9.40	0.18	3.1	１		IP	２		IP	１		IP	１		G3	１		IP	１		IP	１		IP	２		IP	１		IP	２		IP
+出畑　　孝典	5.60	0.17	3.7	４		IP	４		IP	３		IP	１		IP	３		IP	４		IP	２		IP	５	3	IP	３	3	IP	３		IP
+上田　　紗奈	6.50	0.15	2.7	６		IP	２		IP	５		IP	１		IP	１		IP	２		IP	１		IP	６		G1	３		IP	２		IP
+村上　　彰一	3.90	0.22	4.6	６		IP	６	3	IP	４		IP	５		IP	４		IP	３		IP	４		IP	２		IP	２		IP	６		IP
+新田　　泰章	4.50	0.11	3.5	２		IP	４	4	IP	３		IP	３		IP	３		G1	６		G1	５		IP	５		IP	４	4	IP	４		IP
+加木　　　郁	2.90	0.19	3.8	４	5	IP	５		IP	６		IP	５		IP	４		IP	４	5	IP	５	5	IP	４		IP	４		IP	５		IP

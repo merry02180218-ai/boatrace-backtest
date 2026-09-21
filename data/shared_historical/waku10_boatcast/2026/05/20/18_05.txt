@@ -1,0 +1,8 @@
+data=
+1	0
+池　　　千夏	6.60	0.16	2.6	６		G3	１		IP	６		IP	２		IP	１		IP	３		IP	１		G3	２		G3	４		G3	２		IP
+堀之内紀代子	6.20	0.17	3.7	６		G2	２		IP	１		IP	２		IP	２		IP	６		IP	３		IP	１		G3	６		G1	３		G1
+倉田　　郁美	5.40	0.20	3.1	１		IP	４		IP	６		IP	２	4	IP	４		IP	３		IP	３		IP	６		IP	４		IP	１		IP
+清埜　　翔子	3.90	0.13	2.6	２		IP	４	5	IP	１		IP	４	5	IP	６		IP	５		IP	６		G3	３		G3	６		G3	６		G1
+小畑　　楓夏	1.50	0.15	2.9	６	6	G3	６	6	IP	６	6	IP	５	4	IP	６	6	IP	６	6	IP	４	6	IP	６		IP	５		IP	６	6	IP
+西舘　　果里	4.10	0.17	3.5	４		IP	５		IP	３		IP	３	5	IP	５		IP	２		IP	５		IP	５	5	IP	２		IP	６		G3

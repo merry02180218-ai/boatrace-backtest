@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　大介	8.20	0.13	3.2	１		IP	１		IP	２		IP	３		IP	１		IP	３		G1	４		G1	１		IP	３		IP	１		IP
+中島　　昂章	6.30	0.17	4.0	２		IP	２		IP	４		IP	２		IP	２		IP	１		IP	妨		IP	６		G3	２		G3	２		IP
+瀧川　　千依	3.70	0.21	4.3	６		IP	４		IP	５		IP	５	6	IP	３		IP	２		IP	６		IP	４		IP	６		IP	２		IP
+福田　　翔吾	5.40	0.15	2.7	５		IP	３		IP	６		IP	２	5	IP	１		IP	６		IP	５		IP	１		IP	１		IP	４		G3
+今坂　　晃広	3.22	0.21	4.1	６		IP	３		IP	５		IP	１		IP	６		IP	欠		IP	６		IP	４		IP	５		IP	５		IP
+小森　　信雄	2.70	0.25	4.6	４		IP	６		IP	３		IP	５		IP	５		IP	４		IP	４		IP	５		IP	６		IP	６	5	IP

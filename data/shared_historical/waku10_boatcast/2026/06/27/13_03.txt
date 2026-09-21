@@ -1,0 +1,8 @@
+data=
+1	0
+木場　雄二郎	8.50	0.17	2.5	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	６		IP	２		IP	１		IP
+中越　　博紀	4.60	0.21	4.8	２		IP	６		IP	２		IP	６		IP	５		IP	１		IP	３		IP	４		IP	５		IP	４		IP
+渡邉　　　翼	6.30	0.14	2.4	５		IP	１		IP	４		IP	４		IP	１		IP	１		IP	２		IP	２		IP	６		IP	３	2	IP
+伊倉　　　光	5.70	0.15	2.7	３		IP	３		G3	２		G3	６	5	G3	２		IP	３		IP	２		IP	５		IP	４		IP	２		IP
+寳田　　亮治	5.20	0.19	3.5	４		IP	３		IP	３		IP	３		IP	５		IP	２		IP	４		IP	３		IP	３		IP	４		IP
+藤原　　　駿	1.30	0.19	3.9	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	６		IP

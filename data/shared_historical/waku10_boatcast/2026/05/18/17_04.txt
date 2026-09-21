@@ -1,0 +1,8 @@
+data=
+1	0
+籾山　　佳岳	8.40	0.12	2.1	１		IP	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP	２		IP	２		IP	４		IP
+庄司　樹良々	6.10	0.14	2.9	１		IP	５		IP	３		IP	６		IP	３		IP	５		IP	２		IP	２		IP	１		IP	２		IP
+胡本　　悟志	3.50	0.18	3.0	６		IP	４		IP	２		IP	５		IP	６		IP	４		IP	６		IP	２		IP	４		IP	５		IP
+抹香　　雄三	4.50	0.14	3.5	４	5	IP	２		IP	３		IP	４		IP	６		IP	４		IP	４		IP	３		IP	５		IP	３		IP
+西村　　拓也	7.20	0.13	2.9	３		IP	２		IP	１		IP	２		IP	３		G1	６		G1	１	4	IP	３	3	IP	２	4	IP	３		G1
+武田　　正紀	3.60	0.15	3.1	２		IP	４		IP	５		IP	５		IP	３	5	IP	６		IP	２		IP	６		IP	５		IP	５		IP

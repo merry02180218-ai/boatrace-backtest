@@ -1,0 +1,8 @@
+data=
+1	0
+北山　　康介	9.30	0.15	3.4	１		IP	２		G3	１		G3	１		IP	２		IP	１		IP	１		IP	１		IP	３		IP	１		IP
+盛本　　真輔	6.80	0.17	3.1	２		IP	２		IP	１		IP	５		IP	３		IP	２		IP	３		IP	２		IP	２		IP	４		IP
+一瀬　　　明	6.40	0.18	3.4	１		IP	４		IP	１		IP	４		IP	２		IP	４		IP	２		IP	４		IP	３		IP	３		IP
+柘植　　政浩	4.50	0.19	3.9	２	3	IP	３		IP	２		IP	５	3	IP	６		IP	３		IP	４		IP	５		IP	３		IP	５		IP
+瀬川　　大地	2.30	0.18	3.9	５		IP	６		IP	６		IP	５		IP	６		IP	４		IP	５		IP	４		IP	４	6	IP	５	6	IP
+富永　　大一	4.00	0.20	3.8	４		IP	３	5	IP	３		IP	６		IP	４		IP	４	4	IP	６		IP	４		IP	２		IP	５		IP

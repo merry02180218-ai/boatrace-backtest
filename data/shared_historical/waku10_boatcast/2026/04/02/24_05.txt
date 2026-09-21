@@ -1,0 +1,8 @@
+data=
+1	0
+川上　　聡介	6.70	0.13	2.4	２		IP	２		IP	転		IP	１		IP	６		IP	２		IP	２		IP	１		IP	３		IP	２		G3
+桑原　　　啓	4.80	0.16	3.3	５	5	IP	５		IP	６		IP	３		IP	６		G3	３		IP	５		IP	１		IP	１		IP	２		IP
+吉田　　一心	4.80	0.19	3.6	６		IP	４		IP	６		IP	５		IP	３		IP	３		IP	２		IP	２	2	IP	１		IP	５	4	IP
+松本　　浩貴	3.40	0.22	4.1	６		IP	５	3	IP	２		IP	４		IP	落		IP	４		IP	４	5	IP	６		IP	２		IP	５		IP
+三嶌　こころ	2.60	0.29	5.3	６		IP	４		IP	３		IP	６		G3	６		IP	６		IP	５	6	IP	５	6	IP	３		G3	５	6	IP
+藤田　　浩人	5.00	0.18	4.2	３		IP	４		G2	５		IP	４		IP	３		IP	３		IP	２		IP	５		IP	６		IP	１	4	IP

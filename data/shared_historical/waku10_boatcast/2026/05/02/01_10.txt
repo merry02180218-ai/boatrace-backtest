@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　猛志	7.80	0.14	3.4	４		IP	２		IP	２		IP	１		IP	１		IP	３		IP	２		IP	４		IP	１		IP	１		IP
+関　　　浩哉	5.60	0.18	4.4	４		G1	２		G1	６		SG	６		SG	３		G1	２		G1	５		G1	５		G1	５		IP	１		IP
+鹿島　　敏弘	4.80	0.19	3.2	３		IP	５		IP	３		IP	２		IP	４		IP	３		IP	４		IP	４		IP	３		IP	５		IP
+大澤　　普司	5.10	0.16	3.8	６		IP	５	5	G1	５		IP	２		IP	４		IP	５	6	IP	３		IP	２		IP	１		IP	４		G1
+長谷川　晴哉	4.80	0.17	3.4	４		IP	５		IP	２		IP	３		IP	３		IP	６		IP	６		IP	４		IP	２		IP	２		IP
+田中　　　堅	1.70	0.24	4.8	６		IP	４		IP	５		IP	５		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP

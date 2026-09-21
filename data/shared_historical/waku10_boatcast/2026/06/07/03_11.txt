@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　猛志	6.40	0.14	3.0	１		IP	４		IP	６		IP	６		IP	１		IP	２		IP	４		IP	２		IP	２		IP	１		IP
+大崎　　　翔	4.80	0.15	3.6	１		IP	５		IP	５		IP	３		IP	６		IP	６		IP	１		IP	４		IP	４		IP	２		IP
+國分　将太郎	5.70	0.17	2.4	４		IP	３		IP	２		IP	１		IP	２		IP	１		IP	５		G3	５	4	G3	６	5	G3	３		IP
+中島　　秀治	4.80	0.14	2.9	２		IP	２	5	IP	５		IP	５		IP	５		IP	３		IP	１		IP	４		IP	４		IP	５		IP
+妻鳥　　晋也	3.10	0.19	4.3	４	6	IP	５		IP	４		IP	６		IP	５		IP	５		IP	３		IP	５		IP	５		IP	３		IP
+小林　　礼央	2.60	0.12	1.9	５		IP	６		IP	５		IP	６		IP	６		IP	５		IP	２		IP	６		IP	４	5	IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+出口　舞有子	7.00	0.18	2.6	１		IP	２		G3	１		IP	１		IP	３		IP	１		IP	６		IP	６		IP	１		IP	４		IP
+森下　　愛梨	6.67	0.23	3.8	２	3	IP	３		IP	２		IP	５	3	IP	２		G3	２		IP	４		IP	２		IP	２		IP	転		IP
+飯塚　　　響	3.30	0.20	4.2	６		IP	６		IP	６		IP	２		IP	５		G3	３	4	G3	６		IP	１		IP	６		IP	５		IP
+武藤　　綾子	3.60	0.17	3.3	５		G3	５		IP	５		IP	５		IP	３		IP	５		G3	３		IP	５		IP	３		IP	３		IP
+樋江井　　舞	4.22	0.15	3.7	６	6	IP	３		IP	３		IP	３		IP	転		IP	３		IP	６		IP	５		IP	４		IP	３		IP
+山本　　梨菜	4.50	0.19	3.8	２		IP	２		IP	４		G3	４		G3	５		G3	５	5	G3	３		G3	５		G3	６		IP	３		IP

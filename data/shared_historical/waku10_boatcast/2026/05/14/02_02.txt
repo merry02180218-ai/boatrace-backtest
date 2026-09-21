@@ -1,0 +1,8 @@
+data=
+1	0
+薮内　　瑞希	8.00	0.16	2.3	２		G3	１		G3	３		IP	２		IP	２		IP	１		IP	２		IP	１		IP	５		IP	１		IP
+鈴谷　　一平	7.60	0.12	2.3	２		IP	１		IP	１		IP	２		IP	４		IP	２		G1	２		IP	３		IP	４		IP	２		IP
+鈴木　　孝明	6.60	0.14	3.1	２		IP	２		IP	２		IP	２		IP	５	4	IP	１		IP	３		IP	３		IP	４		IP	３		IP
+長尾　京志郎	4.30	0.19	3.8	５		IP	３		IP	３		IP	エ	6	IP	３		IP	５		IP	６	6	IP	４		IP	２		IP	２		IP
+入澤　　友治	4.50	0.14	3.0	Ｆ		IP	３		IP	６		IP	２		IP	３		IP	４		IP	４		IP	１		IP	４		IP	５		IP
+竹内　　　来	1.50	0.25	4.7	５		IP	６		IP	５		IP	６		IP	４	5	IP	５		IP	Ｆ		IP	６		IP	６		IP	６		IP

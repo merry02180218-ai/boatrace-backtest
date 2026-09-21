@@ -1,0 +1,8 @@
+data=
+1	0
+中嶋　健一郎	8.50	0.15	2.3	２		IP	１		IP	２		IP	１		IP	１		G1	５		IP	１		IP	１		IP	３		IP	１		IP
+赤羽　　克也	6.10	0.17	3.5	１		IP	５		IP	１		IP	６	3	IP	３		IP	４		IP	３		IP	４		IP	２		IP	１		IP
+坂口　　　周	6.20	0.21	3.7	５		IP	２		IP	４		IP	６		IP	１		IP	４		G2	２	2	IP	１		IP	２		IP	３		IP
+武田　　信一	3.70	0.15	3.5	４		IP	４		IP	３		IP	４		IP	３	5	IP	５		IP	３		IP	５		IP	５		IP	６		IP
+伏田　　裕隆	3.70	0.23	4.6	２		IP	６	6	G3	６	6	G3	４	6	IP	５		IP	２		IP	５		IP	４		IP	４		IP	６		IP
+秋山　　広一	4.80	0.21	4.2	４		IP	２		IP	６		G1	４		G1	６		IP	５		IP	２		IP	４		IP	２	5	IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　浩次	7.60	0.17	2.9	３		G3	２		IP	１		G3	５		IP	１		IP	１		IP	３		IP	４		IP	１		IP	１		IP
+金児　　隆太	5.90	0.20	4.5	１		G3	６		IP	２		IP	２		IP	４		IP	２	1	IP	５		IP	４		IP	３		IP	２		IP
+柳瀬　　幹太	4.80	0.20	3.8	４		G3	５	4	IP	１		IP	６		IP	３		IP	５		IP	２		IP	６		IP	３		IP	２	2	IP
+待鳥　　雄紀	4.90	0.19	3.5	４		IP	３		IP	２	5	IP	５		IP	６		IP	４		IP	４		IP	４		IP	２		IP	２		G3
+吉田　　翔悟	4.40	0.17	3.7	２		G3	３	6	IP	３		IP	６		IP	６		IP	３		IP	５		IP	４		IP	２	6	IP	５		IP
+土屋　　太朗	3.00	0.17	4.0	３		G3	５		IP	４		IP	５		IP	５	5	IP	６	4	IP	４		IP	５	5	IP	３	4	IP	６		IP

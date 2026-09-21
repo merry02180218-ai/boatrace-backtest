@@ -1,0 +1,8 @@
+data=
+1	0
+末永　　祐輝	8.80	0.14	3.0	３		IP	１		IP	１		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+大澤　　誠也	4.10	0.21	4.2	５		IP	４		IP	６		IP	６	3	IP	４		IP	１		IP	２		IP	２		IP	６		IP	５		IP
+大豆生田　蒼	5.60	0.23	4.0	３	2	IP	４		G1	２		G3	３		G3	１		G3	５		G3	３		IP	１		IP	６		IP	５		IP
+尾道　　佳諭	3.40	0.15	2.8	５		IP	６	3	IP	４		IP	６		IP	６		IP	５		IP	３		IP	２		IP	２		IP	６	5	IP
+松山　　将吾	5.20	0.17	3.7	５		IP	１		G3	３		IP	３		G1	１		IP	６		IP	４		IP	４		IP	５		IP	３		IP
+西村　　秀樹	2.00	0.23	4.6	２	5	IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP

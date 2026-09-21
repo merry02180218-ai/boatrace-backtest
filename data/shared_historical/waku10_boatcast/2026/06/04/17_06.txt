@@ -1,0 +1,8 @@
+data=
+1	0
+浜先　　真範	9.10	0.13	1.4	３		IP	１		IP	１		IP	１		IP	１		IP	４		IP	１		G1	１		IP	１		IP	１		IP
+磯部　　　誠	5.30	0.11	2.1	５		SG	３		G1	４		G1	４		IP	３		G1	６		G1	３		G1	４		SG	２		G1	６		G1
+桑原　　　悠	7.30	0.14	2.0	３		G1	４		G1	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	６		IP	６		G1
+常住　　　蓮	7.30	0.14	2.7	３		SG	５	2	IP	３		IP	１	3	IP	３		IP	２		IP	２		IP	３		IP	２		G1	２		G1
+藤原　　碧生	6.90	0.11	2.3	２		SG	４		G1	１		IP	３		IP	３		G1	２		IP	３		IP	２		IP	３		G1	６		G1
+山崎　　　郡	5.60	0.16	4.0	３		SG	５	5	SG	５		G1	６		G1	３		IP	２	5	IP	４		G1	４	5	G1	３		G1	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+清水　　紀克	5.00	0.19	2.7	６		IP	２		IP	４		IP	２		IP	６		IP	５		IP	１		IP	３		IP	３		IP	４		IP
+岡谷　　健吾	5.60	0.19	3.6	３		IP	３		IP	３		IP	４		IP	２		IP	４		IP	２		IP	２		IP	５		IP	４		IP
+渡邉　　　翼	6.90	0.13	2.0	１		IP	４		IP	４		IP	１		IP	１		IP	２		IP	２		IP	６		IP	３	2	IP	２		IP
+馬野　　　耀	4.90	0.15	2.9	３		IP	４	3	G2	４		IP	３		IP	３		IP	６		IP	４		IP	２		IP	２		IP	６		IP
+岡本　　亜子	1.00	0.22	6.0	６	6	IP	６	6	IP																								IP
+田中　　京介	4.00	0.17	4.1	５		G3	４	5	IP	３		IP	４		IP	１		IP	６		IP	３	5	IP	４		IP	６		IP	５		IP

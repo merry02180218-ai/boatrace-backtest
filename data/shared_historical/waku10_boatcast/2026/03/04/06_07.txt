@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　真吾	8.20	0.13	2.4	３		IP	２		IP	１		G3	２		G3	１		G3	２		G3	１		IP	１		IP	４		IP	２		IP
+伊藤　　将吉	6.20	0.15	3.1	１		IP	５		IP	１		IP	６		G1	５		G1	３		IP	３		IP	２		IP	３		IP	２		IP
+杉江　　浩明	6.30	0.20	3.9	２		IP	２		IP	２		IP	４		IP	６		IP	２		IP	５		IP	２		IP	１		IP	３		IP
+大平　誉史明	8.00	0.19	3.3	２		IP	３		IP	１		IP	２		IP	１		IP	３		IP	２		IP	４		G3	１		G3	１		IP
+加木　　　郁	3.40	0.18	3.5	５		IP	４		IP	５	4	IP	２		IP	３		IP	６		IP	４		IP	６		IP	４		IP	５		IP
+東　　　健介	2.60	0.18	3.6	６		IP	５		IP	４		IP	６		IP	４		IP	６		IP	６		IP	４		IP	４		IP	５		IP

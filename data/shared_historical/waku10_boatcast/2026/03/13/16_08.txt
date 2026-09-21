@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　　栞	4.10	0.18	4.0	５		IP	２		IP	６		IP	１		G3	６		IP	２		IP	４		IP	６		IP	５		IP	４		IP
+田口　　節子	7.40	0.11	2.3	２		G1	１		G1	２		IP	３		IP	２		G1	２		IP	２		IP	３		G3	２		G3	６		IP
+吉川　　勇作	3.90	0.14	2.4	３		IP	２		IP	２		IP	３		IP	６		IP	６		IP	４		IP	５		IP	５		IP	６		IP
+丸尾　　義孝	4.30	0.14	3.7	１		IP	５		IP	５		IP	４		G1	５		IP	２		IP	６		IP	４		IP	３		IP	５		IP
+吉田　　一郎	3.70	0.16	3.3	５		IP	４		IP	５		IP	３		IP	５		IP	４		IP	４		IP	３		IP	３	4	IP	６	6	IP
+山本　　光雄	2.70	0.18	3.8	５		IP	３		IP	４		IP	６		IP	５		IP	６		IP	４	5	IP	５	5	IP	４		G3	６		IP

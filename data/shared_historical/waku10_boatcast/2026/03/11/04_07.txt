@@ -1,0 +1,8 @@
+data=
+1	0
+本田　　　愛	4.70	0.29	5.6	４		IP	３		IP	３		IP	６		IP	４		IP	１		G3	３	2	G3	２		IP	６		IP	６		IP
+立間　　充宏	5.70	0.18	4.0	６		IP	４		IP	２		IP	２		IP	２		IP	３		IP	３		IP	５		IP	２		IP	３		IP
+杉村　　賢也	6.80	0.12	2.1	１		IP	２		G3	４		IP	１		IP	４	1	IP	１		IP	４	4	IP	５		IP	３		IP	１		IP
+北村　　征嗣	7.20	0.16	3.5	４		IP	１		IP	３		G1	２		G1	４		IP	３		IP	１	3	IP	１		IP	４		IP	２	3	IP
+杉山　　喜一	4.60	0.13	2.5	４		G3	６		G3	６		G3	３		IP	３		IP	４		IP	３		IP	４		IP	２		IP	３	6	IP
+田中　　和也	6.20	0.23	4.1	２		IP	５	5	IP	４		IP	４		IP	２		IP	３	4	IP	１	3	IP	３		IP	４		IP	１	4	IP

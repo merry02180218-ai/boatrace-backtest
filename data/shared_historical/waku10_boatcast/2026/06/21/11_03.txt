@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　奈月	6.80	0.20	3.7	２		G3	４		IP	１		G3	４		G3	２		G3	４		G3	４		IP	２		IP	２		IP	１		IP
+土屋　実沙希	5.40	0.15	3.1	２		IP	４		IP	１		IP	３		IP	４		IP	欠		IP	２		IP	５		IP	１	3	IP	Ｆ		IP
+坂野　さくら	3.50	0.18	3.2	３		IP	５		G3	５		G3	５		IP	６		IP	１		IP	６		IP	４		G3	３		IP	６		IP
+野田　　亜湖	1.00	0.26	5.6	６		IP	６		IP	６		IP	６		IP	６		IP	６		G3	６		G3	６		G3	６		G3	６	5	IP
+深尾　　巴恵	4.20	0.15	2.0	５		G3	５		IP	１		IP	２		IP	４		IP	５		IP	５		IP	４		IP	５		IP	３		IP
+中村　　桃佳	6.90	0.11	2.7	４		IP	２		IP	１		IP	４		IP	２		G2	３		IP	１		IP	４		IP	３		IP	３		G1

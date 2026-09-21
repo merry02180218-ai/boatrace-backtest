@@ -1,0 +1,8 @@
+data=
+1	0
+原田　　雄次	6.40	0.15	2.3	妨		IP	１		IP	４		IP	２	2	IP	５		IP	５		IP	２		IP	１		IP	１		IP	１		IP
+吉原　　聖人	4.56	0.16	4.2	２		IP	５		IP	５		IP	４		IP	３		IP	３		IP	２		IP	欠		IP	４	3	IP	６		IP
+實森　　美祐	6.30	0.14	2.6	６		G1	３		G1	１	2	IP	５	4	IP	５		IP	２	2	IP	１		IP	４		G1	３		G1	１		IP
+今村　　暢孝	6.56	0.17	3.3	１	2	IP	２	2	IP	不	2	IP	５	2	IP	２	2	G1	４	2	IP	３	1	IP	２	2	IP	３	1	IP	３	2	IP
+佐々木　和伸	4.70	0.16	3.7	３		IP	４		IP	４		IP	６	4	IP	４		G1	４		G1	３		IP	２		IP	５	6	IP	４		IP
+浅見　　昌克	5.20	0.13	2.7	１	4	IP	４		IP	４		IP	５	4	IP	３	4	IP	３		IP	３		IP	３		IP	３	5	IP	５	5	IP

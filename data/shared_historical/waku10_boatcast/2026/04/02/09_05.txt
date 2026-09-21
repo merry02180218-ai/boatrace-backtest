@@ -1,0 +1,8 @@
+data=
+1	0
+篠崎　　仁志	10.60	0.14	2.8	１		G1	１		IP	１		IP	１		IP	１		IP	１		G1	１		G1	１		G1	１		G1	１		IP
+重木　　輝彦	7.00	0.13	3.2	２		IP	３		IP	１		IP	４		G1	２		IP	３		IP	５		G1	２		G1	２		G1	３		IP
+長田　　頼宗	8.33	0.13	3.0	１		IP	３		G1	２		G1	３		G1	３		G1	欠		G1	２		G1	１		IP	５		SG	１		SG
+山田　　康二	7.80	0.12	3.1	３		SG	２		IP	３		G1	１		G1	１		G1	５		G1	４		IP	３		IP	１		IP	２		SG
+西岡　　顕心	5.60	0.16	3.1	４		G2	３		G2	３		G1	６		G1	３		IP	３		G1	５		IP	２		IP	４		IP	２		IP
+中嶋　健一郎	5.80	0.20	4.2	４		IP	５		IP	５		IP	３		G1	１	5	IP	２		IP	１	4	IP	３	5	IP	３	5	G1	５		IP

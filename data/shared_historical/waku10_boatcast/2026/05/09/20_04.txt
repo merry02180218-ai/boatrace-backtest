@@ -1,0 +1,8 @@
+data=
+1	0
+横川　　聖志	8.50	0.15	2.5	１		IP	２		IP	１		IP	１		IP	３		IP	２		IP	２		IP	１		IP	１		IP	４		G1
+鈴木　　成美	4.10	0.18	2.1	６		IP	５		IP	５		IP	２		IP	５		IP	４		IP	３		IP	４		IP	１		IP	５		IP
+石丸　　海渡	6.20	0.11	2.7	２		IP	３		IP	４		IP	５		G1	１		G1	４		IP	３		IP	４		IP	２		IP	２		IP
+磯村　　　匠	5.00	0.18	3.3	５		IP	１		IP	３		IP	５		IP	３		IP	４		IP	３	5	IP	４		IP	５		IP	２		IP
+土井　　祥伍	3.67	0.22	4.9	３		IP	４		IP	５		IP	４		IP	５		IP	３		IP	４		IP	転	6	IP	６	4	IP	４	6	IP
+三角　　哲男	3.60	0.19	3.3	３		IP	５	5	IP	５		IP	５		IP	４		IP	５		IP	５	5	IP	４		G1	５		G1	３		IP

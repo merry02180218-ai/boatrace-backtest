@@ -1,0 +1,8 @@
+data=
+1	0
+菊池　　峰晴	5.30	0.23	4.2	５		IP	転		IP	１		IP	３		IP	２	4	IP	６		IP	３	2	IP	２		IP	４		IP	２		IP
+三品　　隆浩	4.20	0.22	4.2	６		IP	４	3	IP	２		IP	３		IP	４		IP	３		IP	３		IP	４		IP	５		IP	６		IP
+木下　　雄介	7.33	0.17	3.4	２		IP	４		IP	２		IP	２		IP	２		IP	３		IP	１		IP	２	2	IP	３		IP	欠		IP
+石倉　　洋行	7.30	0.10	2.3	３		IP	２		IP	２		IP	２		IP	３		IP	６		G1	１		IP	２	5	IP	１		IP	４		G1
+藤岡　　俊介	3.60	0.12	2.8	３		IP	４		IP	４		IP	２		IP	５		IP	４		IP	５		IP	５		G1	６		G1	６		IP
+中村　　守成	2.20	0.19	4.9	６		IP	５		IP	５		IP	５		IP	４		IP	４		IP	５		IP	５		IP	５		IP	６		IP

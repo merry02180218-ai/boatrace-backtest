@@ -1,0 +1,8 @@
+data=
+1	0
+永井　　聖美	6.10	0.16	3.6	１		G3	３		IP	１		IP	５		IP	３		IP	３		IP	１		G3	２		G3	５		IP	６		G3
+山崎　小葉音	5.20	0.15	2.8	１		IP	２		IP	３		IP	４		IP	２		IP	４		IP	Ｆ		IP	６		IP	１	1	G3	６		IP
+大橋　栄里佳	5.20	0.16	3.5	４		IP	４		IP	２		IP	２		IP	２		IP	２		IP	５		IP	５		IP	４		IP	４		IP
+松本　　　怜	5.20	0.21	3.7	４		IP	２		IP	２		IP	４		IP	３		IP	４		IP	３		IP	６	5	IP	６		IP	１		IP
+嶋田　　有里	3.90	0.16	4.1	５		IP	２		IP	３		IP	４		IP	６		IP	６		IP	６	6	IP	２		IP	５		IP	３		IP
+志賀　　美優	1.60	0.18	3.5	５		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	４		IP

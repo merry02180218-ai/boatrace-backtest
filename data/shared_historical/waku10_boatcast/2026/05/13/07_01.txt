@@ -1,0 +1,8 @@
+data=
+1	0
+松田　　真実	7.60	0.21	3.1	１		G3	１		G3	１		IP	１		IP	４		IP	１		G3	６		IP	１		IP	６		G3	１		G3
+寺島　　美里	5.80	0.15	2.2	４		IP	４		IP	２		IP	３		IP	４		IP	６		IP	１		G1	２		G1	６		IP	１		IP
+伊藤　　玲奈	4.40	0.23	4.0	５		IP	３		IP	４		IP	４		G3	４		IP	２		IP	３		IP	５		IP	４		IP	４		IP
+中村　紋夕梨	3.40	0.23	5.0	３		IP	３		IP	６	5	IP	３		IP	６		IP	５		IP	３	3	IP	４		IP	６		IP	６	5	IP
+大石　　真央	4.10	0.17	3.1	４	6	IP	３		IP	４		IP	４		IP	３		IP	５		IP	４		IP	２		IP	６		IP	５		IP
+池田　　美優	1.10	0.21	5.1	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP

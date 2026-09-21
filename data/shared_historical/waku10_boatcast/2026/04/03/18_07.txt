@@ -1,0 +1,8 @@
+data=
+1	0
+上村　慎太郎	5.20	0.20	3.9	５		IP	５		IP	２		IP	２		IP	５		IP	４		IP	４		IP	３		IP	２		IP	２		IP
+香川　　颯太	5.70	0.16	3.8	４		IP	２	3	IP	２		IP	３		IP	３		IP	５		IP	３		IP	１		IP	３		IP	６		IP
+坂本　　奈央	3.80	0.26	4.4	５		IP	６		G3	５		G3	６		IP	４		G3	２		G3	２		G3	３		G3	５		IP	４		IP
+岩井　　　繁	3.78	0.21	4.6	５		IP	３		IP	３		IP	６		IP	３		IP	６		IP	５		IP	４		IP	エ		IP	３		IP
+増田　　　進	3.60	0.18	3.8	３		IP	３		IP	４		IP	４		IP	６		IP	５		IP	５		IP	２		IP	６		IP	５		IP
+大月　　遊雅	3.10	0.19	4.4	５		IP	５		IP	５		IP	６		IP	４		IP	３	5	IP	６		IP	５		IP	６		IP	１		IP

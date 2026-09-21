@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　慎二郎	7.60	0.22	4.1	３		IP	１		IP	２		IP	３		IP	２		IP	２		IP	１		IP	３		IP	４		IP	１		IP
+香月　　大介	2.00	0.19	4.1	６		IP	６		IP	５		IP	４		IP	５		IP	５		IP	５		IP	６		IP	６		IP	４	3	IP
+土井　　祥伍	5.00	0.19	4.1	６		IP	４		IP	１		IP	４		IP	５		IP	３		IP	１		IP	６		IP	４		IP	２		IP
+今泉　　友吾	5.80	0.17	3.9	５		G1	５		G1	３		G1	２		IP	１		IP	４		G1	２		IP	３		G1	６		G1	４		G1
+崎　　　利仁	3.70	0.25	4.6	４		IP	４		IP	４		IP	５		IP	５		IP	６		IP	１	6	IP	５		IP	５		IP	３		IP
+米本　　圭佑	1.90	0.27	5.2	６		IP	５		IP	Ｆ		IP	６		IP	６		IP	５		IP	６		IP	６		IP	２		IP	５		IP

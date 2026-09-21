@@ -1,0 +1,8 @@
+data=
+1	0
+宮内　由紀英	4.00	0.19	4.5	４		IP	６		IP	４		IP	５		IP	４		IP	２		IP	３		IP	２		IP	５		IP	６		IP
+柳生　　泰二	7.70	0.10	2.7	１		IP	１		G1	１		G2	６		G2	１		IP	１		IP	６		G1	４		G1	４		G1	１		G1
+中村　　有裕	5.44	0.14	3.2	１		IP	４		IP	１		IP	６		IP	４		IP	エ		IP	２		IP	Ｆ		IP	２	4	IP	４		IP
+下河　　雅史	4.10	0.18	3.1	６		IP	５		IP	２		IP	２	3	IP	４		IP	４		IP	１		IP	６		IP	６		IP	５		IP
+加藤　　優弥	5.70	0.17	3.3	３		IP	５		IP	２		IP	４		IP	４		IP	２		IP	３		IP	５		IP	１		IP	３		IP
+室田　　泰史	3.40	0.15	2.4	５		IP	４		IP	４		IP	５		IP	５		IP	５		IP	４	5	IP	５		IP	４	5	IP	２	5	IP

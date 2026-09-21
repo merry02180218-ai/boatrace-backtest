@@ -1,0 +1,8 @@
+data=
+1	0
+大平　誉史明	8.10	0.13	3.0	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP	６		IP	１		IP	１		IP	２		IP
+桑原　　　啓	3.00	0.15	3.6	２	3	IP	５	3	IP	６		IP	６		IP	５	5	IP	５		IP	６		IP	３		IP	６		G3	３		IP
+杉江　　浩明	3.90	0.22	4.9	６		IP	６		IP	６		IP	６		IP	２		IP	２		IP	１	4	IP	３		IP	５		IP	６		IP
+萩原　　秀人	6.80	0.12	3.8	３		IP	４		G1	２		G1	３		IP	２		G1	４		IP	３		G1	３	5	G1	２		IP	３		IP
+大崎　　　翔	3.80	0.14	2.8	５		IP	４		IP	４	6	IP	６		IP	２		IP	６		IP	５		IP	４		IP	４		IP	２		IP
+早川　　颯太	1.60	0.18	3.9	６		IP	６		IP	４	5	IP	５		IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP

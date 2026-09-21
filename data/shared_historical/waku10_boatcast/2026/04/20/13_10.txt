@@ -1,0 +1,8 @@
+data=
+1	0
+谷川　　祐一	6.70	0.12	2.9	１		IP	５		IP	２		IP	２		IP	６		IP	１		IP	１		IP	Ｆ		IP	２		IP	１		IP
+荻野　　裕介	6.40	0.21	4.4	６		G3	２		IP	２		IP	６		IP	１		IP	１		IP	３		IP	３		IP	４		IP	１	3	IP
+杉村　　賢也	7.60	0.10	1.6	３	4	IP	３		IP	２		IP	１		IP	１		IP	２		G3	４		IP	１		IP	４	1	IP	１		IP
+町田　　洸希	3.90	0.20	4.2	５		IP	３		G3	６		G3	３		IP	５		IP	３		IP	５		IP	２		IP	５		IP	４	5	IP
+中山　　翔太	5.56	0.16	3.2	６		G1	転		IP	５	3	IP	４		G1	５		G1	３		IP	１	4	IP	３		IP	２		IP	２		IP
+渡邊　　雄斗	2.50	0.14	3.2	５		IP	６		IP	６		IP	６		IP	５		IP	５		IP	３		IP	６		IP	６		IP	２	5	IP

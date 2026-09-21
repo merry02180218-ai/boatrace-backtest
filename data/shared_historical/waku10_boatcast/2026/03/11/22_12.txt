@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　優美	8.50	0.14	2.9	１		G1	２		IP	２		IP	１		IP	４		G1	１		IP	１		IP	４		IP	１		IP	２		G2
+蜂須　　瑞生	6.70	0.17	3.3	４		IP	２		IP	２		IP	３		IP	２		IP	６		IP	２		IP	３		IP	１	1	IP	２		IP
+米丸　　乃絵	7.44	0.13	2.6	１		G1	１		IP	落	4	G1	４		G1	３		G3	２		G3	４		G3	２		IP	２		IP	３		G3
+西岡　　育未	3.70	0.14	2.1	６		IP	１		G3	４		G3	６		IP	６		IP	６		IP	３		IP	４		IP	２		G3	６		IP
+間庭　　菜摘	4.70	0.17	2.7	５		G1	６		G1	２		G3	２		IP	３		IP	３		IP	３		IP	６		IP	６		IP	３		G3
+神里　　琴音	1.80	0.18	4.0	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６	5	IP	６		IP	３		IP	５		IP

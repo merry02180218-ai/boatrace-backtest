@@ -1,0 +1,8 @@
+data=
+1	0
+興津　　　藍	7.90	0.10	1.8	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	６		IP	５		IP	１		IP
+高濱　　芳久	3.80	0.22	4.5	３		IP	４		IP	６		IP	４		IP	３		IP	転		IP	３		IP	６		IP	２		IP	５		IP
+藤田　　美代	2.90	0.26	4.7	５		G3	５		G3	２		G3	４		G3	４		IP	５	2	IP	６		IP	６		IP	４		IP	６		IP
+藤本　　佳史	3.80	0.18	3.9	６		IP	２		IP	５		IP	４		G3	２		IP	５		IP	４		IP	６		IP	３		IP	５		IP
+海老澤　泰行	5.44	0.19	3.8	欠		IP	３		IP	５		IP	４		IP	６		IP	３		IP	５		IP	１		IP	２		IP	１	3	IP
+篠崎　　仁志	5.30	0.17	3.8	３	5	IP	４		G1	３		G1	５		G1	６		G1	１	4	IP	２	5	IP	３		G1	６		G1	５		G1

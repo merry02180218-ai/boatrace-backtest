@@ -1,0 +1,8 @@
+data=
+1	0
+竹腰　　正樹	7.20	0.16	3.2	１		IP	５		IP	３		IP	３		IP	３		IP	１		IP	３		IP	３		IP	１		IP	１		IP
+村上　　彰一	5.20	0.18	4.0	２		IP	３		IP	２		IP	２		IP	６		IP	６		IP	３		IP	３		IP	３		IP	５		IP
+三浦　洋次朗	7.00	0.15	2.2	１		IP	１		IP	３		IP	２		IP	４		IP	２		IP	１		IP	５		IP	２		IP	４		IP
+吉武　　真也	2.90	0.20	4.5	６		IP	５		IP	５	5	IP	５		IP	４		IP	４		IP	５		IP	４	5	IP	３		IP	５		IP
+眞鳥　　康太	3.00	0.22	4.5	６		G3	５	6	IP	３	6	IP	６		IP	４	6	IP	５	6	IP	４		IP	２	6	IP	６	6	IP	６	6	IP
+森清　　友翔	3.10	0.16	4.0	４		IP	６		IP	５		G2	３		IP	３	5	G3	５		IP	４		IP	６		IP	６		IP	６		IP

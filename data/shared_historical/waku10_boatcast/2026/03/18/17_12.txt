@@ -1,0 +1,8 @@
+data=
+1	0
+角　　ひとみ	7.50	0.23	4.0	１		G3	１		G3	１		IP	５		IP	１		IP	２		IP	１		IP	４		IP	１		IP	６		IP
+平山　　智加	5.80	0.15	2.8	５	3	IP	６		G1	１		IP	１		IP	３		IP	３		IP	２		G3	２		G3	４		G3	６		IP
+千葉　　真弥	5.80	0.13	2.6	５		IP	２		IP	３		IP	３		IP	５		IP	３		IP	３		IP	２		IP	４		IP	２		IP
+藤原　　菜希	7.60	0.14	2.6	２		IP	１		G1	６		G1	２		G3	２		G3	１		IP	１		G3	３		IP	３		G3	３		G3
+山口　真喜子	3.40	0.17	3.1	５		IP	４		G1	５		IP	５		IP	４		G3	２		G3	６		IP	５		G3	５		IP	３		IP
+川井　　　萌	3.40	0.19	3.9	５		G1	５		G1	４		IP	５		IP	３		IP	５		IP	５		G3	５		IP	５		IP	２	5	IP

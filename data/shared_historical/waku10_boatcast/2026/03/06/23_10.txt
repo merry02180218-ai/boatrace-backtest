@@ -1,0 +1,8 @@
+data=
+1	0
+垂水　　　悠	7.70	0.12	3.3	１		IP	１		G1	１		IP	６		IP	３		IP	１		IP	２		IP	４		IP	１		IP	３		IP
+馬袋　　義則	5.50	0.14	2.7	３		IP	１		IP	３		IP	３		IP	２		IP	５		IP	４		IP	３		IP	６		IP	３		G3
+松本　　一毅	5.00	0.18	3.5	１		IP	６		IP	４		IP	２		IP	５		IP	２		IP	３		G3	５		G3	６		IP	２		IP
+一宮　　稔弘	5.50	0.12	2.4	２		IP	１	5	IP	６	2	IP	６	5	G1	４		IP	２	5	IP	５		IP	２		IP	２		IP	５		IP
+佐藤　　　旭	3.60	0.21	4.2	６		IP	４		IP	４		IP	３		IP	４		IP	４		IP	４		IP	５	6	IP	６		IP	３		IP
+武重　　雄介	3.30	0.21	4.6	４		IP	６		IP	５		IP	６		IP	６		IP	４		IP	４		IP	４		IP	２		IP	４		IP

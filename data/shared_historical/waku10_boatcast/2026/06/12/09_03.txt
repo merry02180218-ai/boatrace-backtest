@@ -1,0 +1,8 @@
+data=
+1	0
+富澤　　祐作	8.00	0.11	2.2	１		IP	１		IP	２		IP	５		IP	１		IP	４		IP	１		IP	２		IP	１		IP	２		IP
+宇野　　弥生	5.90	0.16	3.0	２	4	IP	２		G3	３		G2	６		IP	１		IP	２		G3	１		G3	６		G3	５		IP	４		IP
+池上　　隆行	3.20	0.16	3.7	３		IP	５		IP	４		IP	３		IP	５	4	IP	５		IP	５	4	IP	３		IP	６		IP	６		IP
+西舘　　　健	6.20	0.14	2.2	１		IP	３		IP	３		IP	Ｆ		IP	１		IP	２		IP	４		IP	３		IP	２	6	IP	４		IP
+村本　　大成	1.78	0.19	3.8	５		IP	６		IP	６		IP	４		IP	６	6	IP	５		IP	５		IP	６		IP	欠		IP	５		IP
+小林　　甘寧	5.80	0.15	2.9	２	4	IP	３		IP	２		IP	４		IP	２		IP	４		IP	２	5	IP	５		IP	５		IP	２		IP

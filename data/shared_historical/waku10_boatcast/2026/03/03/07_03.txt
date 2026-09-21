@@ -1,0 +1,8 @@
+data=
+1	0
+村上　　彰一	7.20	0.16	3.9	２		IP	２		IP	３		IP	５		IP	３		IP	２		IP	２		G3	１		IP	３		IP	１		IP
+井上　　大輔	5.90	0.16	3.7	３		IP	３		IP	２		IP	２		IP	６		IP	３		IP	４		IP	２		IP	３		IP	３		IP
+池田　　雄一	5.80	0.16	3.4	５		IP	１		G1	５		IP	４	2	IP	４		IP	３		IP	２		IP	１		IP	１		IP	６		IP
+品田　　直樹	4.80	0.19	3.9	２		IP	２		IP	２	3	IP	３		IP	６		IP	６		IP	５		IP	１		IP	５	5	G3	５	5	G3
+中北　　将史	2.70	0.15	2.8	５		IP	３		IP	５		IP	５		IP	６		IP	５		IP	４		IP	５		IP	４		IP	５		IP
+長畑　　友輔	3.40	0.14	3.0	２		IP	５		IP	４		IP	６		IP	５		IP	５		IP	６		IP	３		IP	５		IP	３	5	IP

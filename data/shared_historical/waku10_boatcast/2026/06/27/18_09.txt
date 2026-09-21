@@ -1,0 +1,8 @@
+data=
+1	0
+新田　　芳美	5.60	0.21	4.3	４		G3	４		G3	５		IP	１		G3	１		G3	４		IP	１		IP	１		IP	６		IP	６		IP
+島田　　賢人	7.60	0.16	3.6	１		IP	２		IP	２		IP	２		IP	２		IP	３		IP	３		IP	２		IP	１		IP	４		IP
+久田　　　武	5.10	0.15	3.4	４		IP	３	4	IP	３		IP	４		IP	４		IP	３		IP	１		IP	４		IP	３		IP	６		IP
+高橋　　英之	3.80	0.16	3.0	５		IP	５		IP	４		IP	６		IP	３		IP	６		IP	５		IP	１		IP	５		IP	２		IP
+今村　天次朗	1.67	0.13	4.3	５		IP	５	6	IP	６	6	IP																					IP
+竹腰　　正樹	2.90	0.17	3.9	５		IP	６		IP	３	5	IP	６		IP	５		IP	６		IP	６		IP	３		IP	３		IP	５		IP

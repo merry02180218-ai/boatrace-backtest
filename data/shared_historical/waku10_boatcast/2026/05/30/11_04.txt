@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　有裕	9.40	0.16	1.9	１		IP	３		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+吉田　凌太朗	8.00	0.15	3.4	４		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	１		IP	３		IP	３		IP
+水摩　　　敦	5.10	0.19	3.3	４		IP	２		IP	３		IP	３		IP	５		IP	３		IP	４		IP	２		G3	３		G3	６		IP
+近藤　雄一郎	3.40	0.17	2.7	Ｆ		IP	２		IP	４	6	G3	６		IP	５		IP	２		IP	６		IP	５		IP	４		IP	４		IP
+渡邊　　雄斗	4.40	0.17	3.5	３	6	IP	１		IP	５		IP	４		IP	５		IP	６		IP	６		IP	４		IP	３	6	IP	２		IP
+高橋　　嗣穏	1.30	0.20	4.4	６		IP	５		IP	６		IP	５		IP	６		IP	Ｆ		IP	６		IP	５	5	IP	６		IP	５		IP

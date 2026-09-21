@@ -1,0 +1,8 @@
+data=
+1	0
+馬袋　　義則	8.40	0.15	3.7	１		IP	１		IP	２		IP	２		G3	２		G3	１		IP	１		IP	５		IP	１		IP	２		IP
+佐々木　康幸	7.40	0.11	1.9	１		IP	２		G3	２		IP	３		IP	３		IP	５		G1	１		IP	２		IP	３		IP	２		IP
+前田　　将太	6.00	0.16	4.4	２		IP	２		IP	２		G1	４		IP	３		IP	３	5	IP	５		IP	４		IP	６		G2	２		G1
+中村　　魁生	5.80	0.16	2.9	３		IP	１		IP	４		IP	５		IP	３		IP	３		IP	２		IP	４		IP	５	6	IP	１		IP
+鶴本　　崇文	5.70	0.17	3.9	６		IP	３		IP	４		IP	４		IP	３		IP	３		IP	３		IP	３		IP	２		IP	１	4	IP
+原田　　秀弥	3.60	0.17	4.5	３		IP	５		G3	６		IP	３		IP	４	5	IP	４		IP	３		G3	５		IP	４		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+間嶋　　仁志	7.20	0.18	3.0	１		IP	１		IP	３		IP	１		IP	２		IP	欠		IP	１		IP	３		IP	５		IP	１		IP
+田頭　　　実	6.30	0.12	2.1	１		IP	４		IP	２		IP	４		IP	６		IP	２		IP	３		IP	５		IP	２		IP	１		IP
+黒柳　　浩孝	6.00	0.17	2.6	４		IP	２		IP	３		IP	１	4	IP	４		IP	２		IP	１		IP	４		IP	４		IP	５		IP
+中井　　俊祐	3.70	0.15	2.9	６		IP	２		IP	１		IP	１		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP
+和田　　操拓	5.00	0.13	2.5	１		IP	５		IP	３		IP	３		IP	４		IP	３		IP	５		G2	５		IP	３		IP	転		IP
+平石　　和男	4.00	0.21	4.8	２		IP	６	5	IP	４		IP	６		IP	３		IP	６		IP	６		IP	４		IP	４		IP	２	5	IP

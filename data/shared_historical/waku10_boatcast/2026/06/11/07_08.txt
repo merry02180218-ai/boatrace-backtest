@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　　真	5.10	0.18	3.1	６		IP	２		IP	４		IP	５		IP	１		IP	５		IP	４		G3	Ｆ		IP	１		IP	１		IP
+寺田　　　祥	5.90	0.14	2.6	２		IP	１		IP	５		G2	３		G2	１		IP	６		G1	６		G1	２		IP	６		G1	３		IP
+土屋　実沙希	4.90	0.15	2.8	５	2	IP	４		IP	６	2	IP	５		IP	３		IP	４		IP	１		IP	２		IP	４		IP	２		IP
+小宮　　涼雅	3.80	0.18	2.7	２		IP	４	5	IP	１		IP	６		IP	６		IP	５		IP	６		IP	３		IP	４		IP	６	5	IP
+山田　　竜一	2.90	0.15	3.4	３		IP	５	6	IP	６		IP	５		IP	５		IP	５		IP	４		IP	３	4	IP	５		IP	５		IP
+入澤　　友治	3.00	0.16	4.0	６		IP	３		IP	５		IP	６		IP	４		IP	２		IP	６		IP	６		IP	５		IP	４		IP

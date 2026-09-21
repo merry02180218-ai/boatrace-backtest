@@ -1,0 +1,8 @@
+data=
+1	0
+眞崎　　武蔵	4.30	0.21	4.5	６		IP	３		IP	６	2	IP	４		IP	３		IP	３		IP	６		IP	５		IP	１		IP	３		IP
+大谷　　直弘	6.80	0.19	4.1	４		IP	２		IP	２		IP	４		IP	３		IP	２		IP	２		IP	２		IP	４		IP	１		IP
+田路　　朋史	7.00	0.18	3.5	１		IP	３		IP	３		IP	５		IP	２		IP	３		IP	１	4	IP	３		IP	３		IP	１		IP
+清埜　　翔子	2.90	0.13	2.4	４	5	IP	６		IP	５		IP	６		G3	３		G3	６		G3	６		G1	４		IP	６		G1	３		IP
+福田　　　理	1.80	0.18	4.2	５		IP	６		IP	６		IP	６		IP	６		IP	４		IP	６		IP	６		IP	５		IP	４		IP
+根岸　　真優	2.20	0.23	3.9	６		IP	４		IP	６		IP	５		IP	２		IP	６		G3	６		IP	５		G3	６		G3	６		IP

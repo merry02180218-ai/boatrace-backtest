@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　　泰	9.10	0.10	1.6	５		G2	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+齊藤　　　廉	4.67	0.15	3.2	６		IP	２		IP	４		IP	転		IP	６		IP	３		IP	５		IP	１		IP	５		IP	２		IP
+西川　新太郎	5.40	0.16	2.6	６		IP	５		IP	２		IP	２		IP	２		IP	３		IP	５		IP	２		IP	３		IP	４	4	IP
+大神　　康司	5.80	0.13	2.2	２	2	IP	１	2	IP	４	2	IP	１	2	IP	５	2	IP	５	3	IP	２	2	IP	５	2	IP	３	3	IP	３	2	IP
+富田　　恕生	3.20	0.18	3.6	５		IP	４		IP	３		IP	５	4	IP	４		IP	４		IP	６		IP	５		G3	６		G3	３		IP
+毒島　　　誠	6.90	0.13	2.1	２	3	IP	２	4	IP	３	4	IP	３	5	IP	５		SG	３	5	IP	２	2	IP	１	3	IP	３	5	IP	３		G1

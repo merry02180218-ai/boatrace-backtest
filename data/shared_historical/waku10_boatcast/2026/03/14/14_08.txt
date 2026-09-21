@@ -1,0 +1,8 @@
+data=
+1	0
+高野　　心吾	5.60	0.14	2.5	１		IP	４	2	IP	６		IP	１		IP	１		IP	６		IP	６		IP	６		IP	２		IP	１		IP
+村上　　功祐	4.90	0.13	2.9	２		IP	２		IP	３		IP	３		IP	５		IP	３		IP	２		IP	６		IP	５	3	IP	５		IP
+高田　ひかる	6.90	0.13	3.0	１		IP	１		IP	３		G1	２		IP	４	4	IP	２		IP	１		IP	２	2	IP	５		IP	５		IP
+黒澤　めぐみ	4.10	0.23	3.1	３		IP	５		IP	２		IP	２	3	IP	５		G3	３		IP	５		G3	６		G3	５		G3	４		IP
+角浜　　　修	3.30	0.17	3.4	５		IP	２		IP	５		IP	２	4	IP	３	4	IP	５	4	IP	６		IP	６		IP	６		IP	５		IP
+岡崎　　凪汰	2.56	0.15	3.0	３		IP	６		IP	５		IP	６		IP	４		IP	６		IP	４		IP	エ		IP	５		IP	５		IP

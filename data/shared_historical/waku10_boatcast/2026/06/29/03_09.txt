@@ -1,0 +1,8 @@
+data=
+1	0
+崎　　　利仁	5.90	0.17	2.6	２		IP	２		IP	１		IP	４		IP	３		IP	３		IP	５	2	IP	６		IP	４		IP	１		IP
+佐々木　英樹	6.80	0.17	3.8	５		IP	２		IP	２		IP	４		IP	３		G3	２		G3	１		IP	２		IP	３		IP	２		IP
+岩橋　　裕馬	4.90	0.17	3.3	６		IP	２		IP	５		IP	４		IP	４		IP	３		IP	２		IP	４		IP	２		IP	４		G3
+石岡　　将太	4.80	0.14	3.4	３		IP	６		IP	４		IP	４		IP	１		IP	２		IP	５		IP	３		IP	６		IP	３		IP
+吉田　　宗弘	3.50	0.13	2.3	３		IP	６		IP	４		IP	２		IP	５		IP	５		IP	５		IP	５		IP	４		IP	４		IP
+伏田　　裕隆	2.40	0.14	3.3	５		IP	５		IP	４		IP	３	5	IP	妨		IP	６		IP	５		IP	５		IP	６		IP	４		G3

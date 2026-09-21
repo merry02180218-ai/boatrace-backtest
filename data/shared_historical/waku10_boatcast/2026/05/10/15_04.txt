@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　優美	8.80	0.13	2.8	１		G2	１		G3	１		G3	１		G3	２		G1	２		IP	１		IP	５		SG	１		IP	３		IP
+中村　　桃佳	7.30	0.15	2.5	３		G2	５		IP	１		IP	２		IP	３		G1	２		G1	２		IP	３		IP	２		IP	２		IP
+宮崎　　安奈	3.70	0.16	3.3	５		G2	３		IP	６		IP	６		IP	Ｆ	4	IP	１		IP	４		IP	５	1	IP	２		IP	５		IP
+小芦　るり華	8.00	0.17	3.2	２		G2	１		G3	３	3	G3	１		G3	１	3	IP	１		IP	４		G2	２		IP	２		G1	６		G1
+武井　莉里佳	4.70	0.14	3.4	３		G2	４		IP	５		IP	６		IP	４		IP	４		IP	３		IP	２		IP	５		G1	３		G1
+柴田　　百恵	3.40	0.19	3.1	２		G3	２		IP	５		IP	６		IP	４		G3	６		IP	４		IP	６		IP	４	5	IP	６		IP

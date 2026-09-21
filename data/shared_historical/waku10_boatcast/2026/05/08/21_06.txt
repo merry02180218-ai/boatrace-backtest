@@ -1,0 +1,8 @@
+data=
+1	0
+渡辺　　千草	5.70	0.19	3.8	２		IP	２		IP	５		G3	６		G3	３		IP	３		G3	１		G3	２		IP	４		IP	４		IP
+三嶌　　誠司	6.50	0.16	3.1	３		IP	５		IP	１		IP	２		IP	２	3	IP	２		IP	５		IP	２		IP	４		IP	２		G1
+山崎　　鉄平	4.80	0.17	3.2	４		IP	６		IP	５	4	IP	２		IP	１	4	IP	３		IP	５	4	IP	４		IP	１		IP	６		IP
+上村　　宏太	4.40	0.16	2.5	３		IP	転		IP	５	5	IP	４		IP	４		IP	４		IP	３		IP	１		IP	５		IP	３		IP
+亀山　　雅幸	4.10	0.17	3.1	５		IP	１		IP	４	6	IP	６		IP	３		IP	４		IP	５		IP	４		IP	５		IP	３		IP
+今村　　暢孝	5.60	0.15	3.0	１	1	IP	４	1	IP	３	2	IP	１	2	IP	６	2	IP	４	2	IP	４	2	IP	２	2	G1	６	2	G1	３	2	IP

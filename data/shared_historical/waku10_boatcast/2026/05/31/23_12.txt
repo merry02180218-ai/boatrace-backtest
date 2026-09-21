@@ -1,0 +1,8 @@
+data=
+1	0
+藤岡　　俊介	8.70	0.10	1.9	１		IP	２		IP	１		IP	１		IP	６		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+平高　　奈菜	8.30	0.15	2.3	１		G2	２		G2	１		G2	５		SG	２		SG	落		G3	２		G3	１		G1	２		G1	１		IP
+和田　　操拓	5.50	0.14	2.2	４		G2	６		G2	２		IP	５		IP	２		IP	２		IP	４		IP	３		IP	４		IP	２		IP
+古澤　　光紀	5.20	0.14	3.9	６		IP	４		IP	３		IP	１		IP	４		IP	３		IP	６		IP	２		IP	４		IP	２		IP
+中里　　英夫	3.30	0.18	4.2	４		IP	４		IP	６		IP	５		IP	２		IP	６		IP	６		IP	５		IP	３		IP	４		IP
+平石　　和男	3.70	0.23	5.2	３		IP	５	5	IP	４		IP	６	5	IP	４		IP	２		IP	６	5	IP	４		IP	６		IP	３		IP

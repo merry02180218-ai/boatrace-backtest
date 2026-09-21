@@ -1,0 +1,8 @@
+data=
+1	0
+峰重　　侑治	7.10	0.17	2.8	４		IP	１		IP	１		IP	５		IP	４		IP	１		IP	１		G3	６		IP	１		IP	１		IP
+山本　　浩次	5.10	0.18	3.2	２		IP	４		IP	２		IP	２		G3	３		IP	５		IP	６		G3	５		G3	３		IP	３		IP
+木山　　和幸	7.00	0.16	2.8	１		IP	４		G3	１		G3	１		IP	３		IP	４		IP	２		IP	３		IP	５		G3	１		G3
+山田　　　丈	5.00	0.17	3.6	２		IP	２		IP	４		IP	４		IP	４		IP	４		IP	５		IP	５		IP	３		IP	２		IP
+寺田　　　祥	6.00	0.15	2.7	３		IP	３		G2	５		G2	２		IP	３		G1	５		G1	４		G1	２		IP	１		IP	５		G1
+小宮　　涼雅	1.90	0.19	4.9	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	４		IP	６		IP	３		IP	６		IP

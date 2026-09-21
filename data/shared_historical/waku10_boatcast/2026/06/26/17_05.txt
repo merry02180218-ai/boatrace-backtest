@@ -1,0 +1,8 @@
+data=
+1	0
+篠原　　飛翔	9.33	0.18	2.8	転		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP
+深山　　祐二	4.40	0.15	3.0	６		IP	２		IP	２		IP	５		IP	５		IP	４		IP	２		IP	５		IP	６		IP	２		IP
+渥美　　卓郎	5.00	0.20	4.1	１		IP	１		IP	６		IP	１		IP	６		IP	６		IP	６		IP	４		IP	１		IP	５		IP
+稲田　　浩二	6.00	0.09	1.9	６		G1	４		IP	３		G1	２		IP	３		IP	１		IP	３		IP	６	6	IP	２		G3	３		G1
+妻鳥　　晋也	3.10	0.18	4.4	４		G3	４	6	G3	５		IP	４	6	IP	５		IP	４		IP	６		IP	５		IP	５		IP	３		IP
+中村　　守成	2.30	0.20	5.2	５		IP	６		IP	５		IP	５		IP	５		IP	４		IP	４		IP	５		IP	５		IP	５		IP

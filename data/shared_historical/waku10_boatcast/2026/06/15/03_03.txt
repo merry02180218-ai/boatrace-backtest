@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　孝彰	10.00	0.12	2.4	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+佃　　　來紀	6.40	0.16	3.7	４		IP	６	4	G3	３		IP	３		IP	２		IP	２		IP	１		IP	２		IP	２		IP	４		G3
+塩嶋　　泰空	1.00	0.31	4.8	６		IP	６		IP	６		IP	６		IP																		IP
+八戸　　琉楓	1.60	0.25	5.1	６		IP	６		IP	５		IP	６		IP	６	5	IP	６		IP	６	6	IP	３	5	IP	６		IP	６		IP
+福西　広太郎	2.20	0.15	3.3	６		IP	５		IP	４		IP	４		IP	６		IP	６		IP	３	6	IP	６		IP	６	6	IP	６		IP
+竹間　　隆晟	4.80	0.17	4.4	４		IP	２		IP	３		IP	４		IP	６		IP	４		IP	６		G1	３		IP	４		IP	２	5	IP

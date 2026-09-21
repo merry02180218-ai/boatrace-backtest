@@ -1,0 +1,8 @@
+data=
+1	0
+太田　　和美	9.30	0.19	3.6	１		IP	１		IP	２		IP	１		IP	２	2	IP	１		IP	１		IP	１		IP	２		IP	２		IP
+板橋　　侑我	6.56	0.12	2.8	６		G3	５		G1	１		G1	２		G1	４		G1	転		IP	２		IP	３		G1	２		G1	３		IP
+石丸　　海渡	5.50	0.11	1.8	４		IP	３		IP	４		IP	２		IP	２		IP	６		IP	５		G1	１	4	G1	５		IP	２		IP
+安河内　　将	7.80	0.16	2.4	２		IP	３		G1	２		IP	１		IP	２		IP	６		IP	３		G1	１		IP	１	5	G1	２		IP
+関　　　浩哉	8.00	0.13	2.6	４		SG	１		G1	６		G1	１		IP	２	4	IP	２		IP	１		SG	３		SG	３		G1	３		SG
+吉川　　元浩	5.80	0.15	2.2	４	5	IP	４		G1	４		G1	５		G1	３		IP	１	5	IP	２	4	IP	１	5	IP	５	5	SG	５		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+竹田　　吉行	8.20	0.18	3.3	３		IP	２		IP	４		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP
+北川　　潤二	6.40	0.14	2.7	４		IP	３		G3	２		G3	２		IP	４		IP	２		IP	３		IP	４		IP	２		IP	２		IP
+松本　　博昭	7.20	0.16	4.3	２		IP	２		IP	２		IP	２		IP	３		IP	１		IP	５		IP	１		IP	４		IP	２		IP
+藤田　　竜弘	6.20	0.20	3.2	２		IP	１		IP	３		IP	５		IP	５		IP	３	3	IP	１	3	IP	３		IP	２		IP	４		IP
+井川　　大作	5.70	0.15	2.5	１		IP	４		IP	２		IP	４		IP	２		IP	３		IP	６		IP	５		IP	４		IP	１		IP
+宮崎　　　奨	4.20	0.16	4.1	４	5	IP	５		IP	３		IP	５		IP	３		IP	３		G3	５		G3	３	5	IP	５	5	G1	４		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+牧　　　宏次	7.50	0.17	3.2	４		IP	３		IP	１		IP	１		IP	３		IP	２		IP	１		IP	１		IP	１		IP	６		G3
+沢田　　昭宏	5.20	0.18	4.5	６		IP	３		IP	２		IP	２		IP	５		IP	３		IP	６		IP	３		IP	３		IP	２		IP
+山下　　流心	4.80	0.17	3.1	３		IP	２		G3	３		IP	２		IP	６		IP	６		IP	転		IP	２		IP	３		IP	４		G3
+野村　　　誠	5.80	0.15	3.1	２		IP	３		IP	３		IP	４		IP	１		IP	６		G1	５		IP	２		IP	２		IP	４		IP
+三好　　勇人	6.20	0.16	2.8	４		G3	２		G3	３		IP	１		IP	１		IP	３		IP	３		IP	４		IP	４		IP	４		IP
+篠原　　晟弥	4.90	0.15	3.3	３		IP	３		IP	６		IP	４		IP	３		IP	３		IP	４		G2	６	5	G2	４		G2	３		IP

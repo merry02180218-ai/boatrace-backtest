@@ -1,0 +1,8 @@
+data=
+1	0
+下寺　　秀和	9.40	0.13	2.5	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	３		IP	１		IP
+松下　　一也	6.60	0.14	2.6	１	3	IP	１		IP	２		IP	４		IP	１		IP	５		IP	２		IP	５	3	IP	３		IP	３		IP
+青木　　玄太	6.00	0.14	2.4	３		G1	５		G1	１		IP	２		G2	１		IP	３		G3	６		G1	６		IP	５		G1	２		G1
+小畑　　実成	4.20	0.17	3.8	４		IP	１		IP	１		IP	６		IP	５		IP	４		IP	６		IP	３		IP	５		IP	５		G3
+牧　　　宏次	2.40	0.17	3.5	５		G3	６		IP	６		IP	６		IP	２		IP	４		IP	６		IP	６	6	IP	４	4	IP	６		G3
+清水　　攻二	3.50	0.24	5.1	５		IP	５		IP	５		IP	６		IP	４		IP	５	4	IP	４		IP	２		IP	４	5	IP	４		IP

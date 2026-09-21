@@ -1,0 +1,8 @@
+data=
+1	0
+飯山　　　泰	9.80	0.14	3.2	１		IP	２		G1	１		G1	１		G1	１		G1	１		IP	１		IP	２		IP	１		IP	２		IP
+前田　　光昭	3.80	0.18	3.2	５		IP	２		IP	６		IP	３		IP	３		IP	４		IP	６		G3	５		G3	５		IP	３		G3
+香月　　大介	3.30	0.13	2.5	２		IP	４		IP	６		IP	２		IP	５		IP	６		IP	６		IP	３		IP	６		IP	６		IP
+都築　　正治	4.50	0.20	3.3	１		IP	６		IP	６		IP	５		IP	３	5	IP	２		IP	５		IP	１		IP	４		G3	６		G3
+松尾　　宣邦	4.00	0.21	4.4	４		IP	５		IP	５		IP	６	6	IP	２		IP	４		IP	５		IP	５		IP	３		IP	２		IP
+豊田　　訓靖	1.80	0.25	5.4	６		IP	６		IP	６		IP	４		IP	６		IP	６		G3	５		IP	５		G3	６		G3	４	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+笠野　友紀恵	5.30	0.16	2.8	１		IP	３		IP	５		G3	１		G3	３		IP	２		IP	５		IP	３		IP	５		G3	６		IP
+柴田　　愛梨	2.80	0.28	5.1	３		IP	５		IP	５		IP	４		IP	６		IP	６		IP	４		IP	４		IP	５		IP	５		IP
+前田　　紗希	7.78	0.13	2.3	１		IP	２		G2	４		G2	６	4	G3	１		G3	２		IP	４		IP	１		G3	１		G1	欠		IP
+細川　　裕子	5.50	0.20	3.8	２		IP	５		IP	２		G2	３		IP	３		IP	３		IP	６		IP	５		IP	３		IP	２		G3
+後藤　　美翼	4.60	0.22	4.6	５		IP	３		IP	３		G3	２		IP	５	3	IP	４		IP	２		IP	４		IP	５		IP	４		G3
+田中　瀬里奈	1.30	0.18	4.2	５		G3	６		G3	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP

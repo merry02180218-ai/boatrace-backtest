@@ -1,0 +1,8 @@
+data=
+1	0
+宮嵜　隆太郎	4.50	0.13	2.1	２		IP	２		IP	１		IP	欠		IP	６	2	IP	５		IP	６		IP	６		IP	１		IP	４		IP
+齋藤　　和政	3.30	0.23	4.7	５		IP	５		IP	３	6	IP	６		IP	６		IP	３		IP	２	3	IP	５		IP	６		IP	４		IP
+宮武　　英司	5.20	0.16	3.2	４		IP	４		IP	２		IP	３		IP	４		IP	４		IP	３		IP	４		IP	３		IP	３		IP
+金子　　猛志	4.20	0.17	4.0	６		G3	４		IP	５		IP	４		IP	１	5	IP	２		IP	６		IP	３		IP	４		IP	５		IP
+田頭　　　実	6.80	0.14	2.5	６	2	IP	１	2	IP	４	2	IP	３	2	IP	１	2	IP	６	2	IP	２	2	IP	２	2	IP	１	2	IP	１	2	IP
+角浜　　　修	2.20	0.16	4.3	６		G3	６		G3	４		IP	３	5	IP	５		IP	５	5	IP	５		IP	５		IP	６		IP	６		IP

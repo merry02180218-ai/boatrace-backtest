@@ -1,0 +1,8 @@
+data=
+1	0
+抹香　　雄三	6.89	0.14	1.8	５		IP	１		IP	１		IP	転		IP	５		IP	転		IP	１		IP	２		IP	１		IP	１		IP
+石原　　　光	5.80	0.16	3.1	２		IP	落		IP	２		IP	５		IP	４		IP	５		IP	１		IP	２		IP	３		G3	１		IP
+籾山　　佳岳	4.90	0.13	2.5	３		IP	３		IP	６		IP	５		IP	５		IP	１		IP	５		IP	４		IP	３		IP	１		IP
+小林　　甘寧	6.00	0.13	1.6	２		IP	４		IP	３	5	IP	１		IP	４		IP	６		IP	１	5	IP	３	5	IP	６		IP	１		IP
+中渡　　修作	3.00	0.17	3.3	４		IP	４		IP	４	4	IP	５		IP	３		IP	６		IP	６		IP	３		IP	６		IP	６		IP
+宮城　　那菜	1.20	0.13	1.9	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+米玉利　大悟	2.22	0.21	5.2	６		IP	６		IP	２		IP	５		IP	６		IP	５		IP	６		IP	Ｆ		IP	４		IP			IP
+鐘ヶ江　真司	3.78	0.18	3.3	４		IP	５		IP	４		IP	２		IP	妨		IP	５		IP	４		IP	転		IP	３		IP	４		IP
+遠藤　　圭吾	2.50	0.20	4.5	４		IP	６		IP	６		IP	５		IP	６		IP	５		IP	５		IP	２		IP	５		IP	５		IP
+小川　竜太朗	4.80	0.13	2.7	６		IP	５		IP	６		IP	２		IP	５		IP	５		IP	２		IP	１		IP	３		IP	２		IP
+有山　　　望	3.90	0.16	2.9	４		IP	５	6	IP	５		IP	５		IP	４	6	IP	２		IP	６		IP	４		IP	３		IP	３		IP
+中岡　　　駿	1.10	0.17	4.0	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	落		IP	６		IP	６		IP	５		IP

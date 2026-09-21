@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　紘章	6.20	0.20	3.3	１		IP	５		IP	１		IP	５		IP	５		IP	２		IP	１		IP	２		IP	転		IP	１		IP
+重成　　一人	7.10	0.14	2.6	２		IP	４		IP	２		IP	１		G1	３		G1	１		IP	２		IP	４		G1	５		G1	３		G1
+富永　　大一	4.40	0.18	3.3	４		IP	３		IP	６		IP	４		IP	４		IP	６		IP	３		IP	５		IP	２		IP	２		IP
+新出　　浩司	3.50	0.20	3.6	５		IP	４		IP	５		IP	３		IP	６		IP	５		IP	３		IP	３		IP	４		IP	５		IP
+平川　　香織	5.30	0.20	3.8	２		IP	６		IP	２	4	IP	３		IP	４	4	IP	３		G3	４		G3	３		IP	４	6	IP	３		G3
+佐藤　　永梧	2.50	0.20	4.7	２		IP	６		IP	６		IP	６		IP	６		IP	３		IP	６		IP	６		IP	４		IP	６		IP

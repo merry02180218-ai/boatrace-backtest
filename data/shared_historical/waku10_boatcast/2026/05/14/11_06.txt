@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　峻佑	8.22	0.15	2.4	１		IP	１		IP	１		IP	２		IP	２		IP	３		IP	欠		IP	５		IP	１		IP	１		IP
+新田　　智彰	5.30	0.20	4.1	３		IP	１		IP	４		IP	１		IP	３		IP	３		IP	６		IP	５		IP	３		IP	５		IP
+吉田　　和仁	5.90	0.16	3.3	２		IP	６		IP	２		IP	５		IP	２		IP	２		IP	２	4	IP	２		IP	４	5	IP	４	4	IP
+草川　　壮良	2.00	0.15	3.4	６		IP	６	6	IP	６		IP	５		IP	５		IP	６		IP	５		IP	５		IP	４		IP	４		IP
+嶋田　　貴支	4.70	0.15	3.7	４		IP	３		IP	４		IP	６		IP	５		IP	２		IP	３		IP	４		IP	２		IP	４		IP
+別府　　昌樹	3.20	0.30	4.8	４		IP	６		IP	２		IP	４		IP	３		IP	４		IP	６		IP	６		IP	６		IP	５		IP

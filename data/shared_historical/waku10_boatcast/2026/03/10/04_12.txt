@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　和也	8.70	0.15	3.6	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	６		IP	１		IP	１		IP
+青木　幸太郎	5.60	0.16	2.4	１		IP	５		IP	５		IP	２		IP	２		IP	２		IP	３		IP	妨	3	IP	１		IP	５		IP
+立間　　充宏	5.10	0.17	3.5	５		IP	２		IP	３		IP	６		IP	４		IP	２		IP	１		IP	２		IP	５		IP	５		IP
+一瀬　　　明	4.33	0.21	4.4	６		IP	４		IP	５		IP	３		IP	５		IP	４		IP	４		IP	２		IP	２		IP	転		IP
+宇佐見　　淳	4.90	0.14	2.7	３		G3	６		G3	２		IP	５		G1	２		IP	２		IP	１		IP	５	4	IP	６		IP	５		G3
+高倉　　和士	4.20	0.15	3.2	５		G1	３		G1	５		IP	４		IP	転	5	IP	５		IP	２		IP	６		IP	３		IP	２		IP

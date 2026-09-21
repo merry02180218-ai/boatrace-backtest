@@ -1,0 +1,8 @@
+data=
+1	0
+大井　　清貴	7.10	0.20	3.9	５		IP	６		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	３		IP
+長尾　　章平	7.10	0.14	3.0	２		IP	２		IP	３		IP	２		IP	２		IP	１		IP	３		IP	４		IP	５		IP	２		IP
+前原　　大道	6.90	0.18	3.1	２		G1	２		G1	５		G1	４		IP	５		IP	３		IP	３		IP	１		IP	１		G1	２		G1
+出穂　　和鼓	2.30	0.22	4.5	６	6	IP	５		IP	６		IP	５		IP	６		IP	５		IP	４	6	IP	５		IP	３		IP	５		IP
+小畑　　楓夏	1.40	0.16	3.0	６	6	IP	６	6	IP	４	6	IP	６		IP	５		IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６		IP
+武重　　雄介	1.80	0.21	5.3	６		IP	６		IP	６		IP	６		IP	５		IP	４		IP	４		IP	６		IP	５		IP	６		IP

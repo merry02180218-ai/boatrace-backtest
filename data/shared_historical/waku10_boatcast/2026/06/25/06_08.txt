@@ -1,0 +1,8 @@
+data=
+1	0
+室田　　泰史	6.80	0.15	2.8	４		IP	１		IP	３		IP	５		IP	２		IP	１		IP	１		IP	２		IP	１		IP	Ｆ		IP
+下河　　雅史	6.80	0.16	3.6	２		IP	４		IP	３		IP	２		IP	４	3	IP	２		IP	２		IP	４		IP	１		IP	２		IP
+宮崎　　安奈	3.20	0.17	3.3	５		IP	５		G2	５		G2	３		IP	６		IP	６		IP	Ｆ	4	IP	１		IP	４		IP	５	1	IP
+吉田　凌太朗	5.30	0.16	3.5	１		IP	４		IP	６		G1	２		G1	１		IP	４		IP	５		IP	４		IP	３		IP	５		IP
+本吉　　正樹	2.80	0.19	4.0	６		IP	２		IP	４		IP	６	6	IP	４		IP	６	6	IP	６		IP	６	6	IP	６		IP	３		IP
+谷島　　咲希	1.80	0.22	4.5	６		IP	４		IP	５		IP	６		IP	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP

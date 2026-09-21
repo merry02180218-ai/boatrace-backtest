@@ -1,0 +1,8 @@
+data=
+1	0
+近江　　翔吾	9.30	0.11	1.6	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1	１		G1	１		IP	１		IP	Ｆ		IP
+小池　　礼乃	5.20	0.16	3.2	２		IP	６		IP	３		IP	４		IP	６		IP	５		IP	２		IP	１		IP	５		IP	１		IP
+松村　　康太	3.00	0.21	4.2	６		IP	５		IP	４		IP	４	2	IP	６		IP	６		IP	２		IP	５	4	IP	６		IP	３		IP
+永井　　亮次	3.90	0.17	3.7	５	5	G3	３	5	G3	６		IP	４		IP	２		IP	３	5	IP	６	5	IP	５		IP	２	5	IP	６		IP
+松村　　　敏	5.50	0.11	2.1	２		IP	４		IP	２	4	G1	６		G1	２		IP	３	4	IP	４		IP	３		IP	３		IP	５	4	IP
+渋谷　　明憲	4.80	0.15	2.6	５		IP	５		IP	３	5	IP	１	5	IP	１		IP	６		G3	３		G3	６		IP	５		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+喜多　那由夏	7.00	0.18	4.2	２		IP	５		IP	１		IP	２		IP	３		IP	２		IP	１		IP	４		G3	３		IP	２		IP
+黒明　　花夢	3.67	0.21	3.9	３		IP	２		IP	５		IP	６		IP	欠		IP	２		IP	４		IP	６		IP	５		IP	６		IP
+南　　　彩寧	2.70	0.23	4.6	５	4	IP	４		IP	６		IP	６		IP	３		IP	５	5	IP	５		G3	６		G3	４		IP	４		IP
+島倉　　　都	3.50	0.20	3.3	５		IP	３		G3	５		IP	５		IP	５		IP	５		IP	２		IP	３		IP	４		IP	６		IP
+佐藤　ほのか	2.60	0.14	2.8	６		IP	５		IP	２		IP	６		IP	３		G3	５		G3	６		IP	５		G3	６		G3	５		IP
+今泉　　　澪	2.40	0.12	2.7	４		IP	５		IP	６		IP	６		IP	６		IP	６		IP	２		IP	６		IP	６		IP	４		IP

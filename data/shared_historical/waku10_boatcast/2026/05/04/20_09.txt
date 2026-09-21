@@ -1,0 +1,8 @@
+data=
+1	0
+藤森　　陸斗	8.00	0.16	2.6	１		IP	１		IP	３		IP	２		IP	１		IP	４		IP	４		IP	２		IP	１		IP	１		IP
+塩田　　北斗	6.20	0.11	3.0	１		IP	４		G1	４		G1	１		G1	転		G1	３		G1	４		G1	５		G1	３	3	G1	２		G1
+富田　　恕生	4.00	0.18	4.8	３		IP	４		IP	１		IP	６		IP	４		IP	４		G3	６		G3	３		IP	落		IP	４		IP
+益田　　啓司	6.40	0.12	2.3	１		G1	３		IP	１		IP	２		IP	３		IP	５		IP	１		IP	２		IP	妨		G1	５		G1
+國弘　　翔平	3.10	0.18	4.2	５		IP	５		IP	欠		IP	２		IP	４	4	IP	５	4	IP	５	4	IP	５		IP	２		IP	６		IP
+宮地　　秀祈	2.90	0.20	4.0	５		IP	４		IP	５		IP	６		IP	５		IP	６		IP	３		IP	５		IP	２		IP	６		IP

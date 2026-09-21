@@ -1,0 +1,8 @@
+data=
+1	0
+黒井　　達矢	9.50	0.16	3.3	３		IP	１		IP	１		IP	１		IP	１		IP	１		G1	１		IP	３		IP	１		IP	１		G1
+廣瀬　　真也	6.80	0.11	2.5	２	3	IP	３		IP	２		IP	５		IP	２		IP	４		IP	３		IP	１		IP	３		IP	１	3	IP
+佐藤　　大騎	4.10	0.15	3.1	６	4	IP	５		IP	４		IP	４		IP	３		IP	６		IP	２		IP	４		IP	１		IP	６		IP
+坂口　　貴彦	6.60	0.17	2.8	１		IP	２		IP	２		IP	５		IP	２		IP	３		IP	１		IP	３		IP	３		IP	５		IP
+関野　　　文	4.50	0.16	2.8	３		IP	５		G3	３		IP	３		IP	１		IP	４		G3	５		IP	５		IP	６		IP	３		G3
+後藤　　美翼	4.10	0.24	5.2	４		G3	３		G3	３	5	IP	４		IP	５		IP	４		G3	５		G3	３		IP	３	5	IP	６		IP

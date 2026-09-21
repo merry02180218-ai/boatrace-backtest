@@ -1,0 +1,8 @@
+data=
+1	0
+竹田　　辰也	8.50	0.12	2.8	１		IP	２		IP	１		IP	２		IP	２		IP	１		IP	１		IP	Ｆ		G1	１		G1	１		IP
+森作　　雄大	4.40	0.14	2.6	６		IP	落		IP	６		IP	３		IP	１		IP	３		IP	５		IP	２		IP	２		IP	５		IP
+山田　　竜一	6.89	0.15	3.0	３		IP	１		IP	３		IP	３		IP	３		IP	欠		IP	２		IP	４		IP	３		IP	１		IP
+塚越　　海斗	8.10	0.12	2.6	２		IP	２		IP	１		IP	１		IP	４		IP	２		IP	２		IP	２		IP	１		IP	３		IP
+野田　　昇吾	2.40	0.18	3.7	６		IP	５		IP	転		IP	５	4	IP	５		IP	６		IP	６	6	IP	６		IP	４		IP	１		IP
+星田　　夢結	1.10	0.23	5.0	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP

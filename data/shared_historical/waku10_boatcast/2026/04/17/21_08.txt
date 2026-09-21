@@ -1,0 +1,8 @@
+data=
+1	0
+津留　浩一郎	6.70	0.13	2.2	１		IP	３	2	IP	３		IP	２		IP	１		IP	３		IP	６		IP	２		IP	１		IP	５		G3
+柳内　　敬太	6.30	0.16	3.3	３		IP	４		IP	２		IP	３		IP	１		IP	１		IP	６		IP	２		IP	３		IP	４		IP
+下河　　雅史	5.70	0.22	4.1	３		IP	２	4	IP	１		IP	２		IP	２		IP	６		IP	４		IP	４	4	IP	５		IP	３		IP
+古川　　誠之	4.20	0.16	3.3	４		IP	２		IP	２		IP	５		IP	５		IP	４		IP	５		IP	１		IP	６	5	IP	６		IP
+夏山　　亮平	2.89	0.18	3.6	５		G3	５		IP	６		IP	４		IP	欠		IP	４		IP	３		IP	３	6	IP	欠		IP	６		IP
+藤原　啓史朗	4.20	0.12	3.4	６		G1	１		SG	５		SG	６		IP	４		G1	５		G1	２		IP	４		IP	６		IP	５		IP

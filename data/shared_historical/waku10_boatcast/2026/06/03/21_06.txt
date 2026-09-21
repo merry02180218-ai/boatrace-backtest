@@ -1,0 +1,8 @@
+data=
+1	0
+滝沢　　芳行	7.60	0.17	2.4	１		IP	５		IP	３		IP	２		IP	３		IP	１		IP	１		G3	１		IP	４		IP	１		IP
+嘉手苅　徹哉	4.70	0.13	2.6	１		IP	２		IP	４		IP	６		IP	３		IP	５		IP	４		IP	４		IP	４		IP	４		IP
+大瀧　明日香	6.30	0.15	2.4	３		IP	２		IP	３		IP	１		IP	３		IP	５		IP	２		IP	４		G3	４		G3	２		IP
+松尾　　昂明	2.60	0.17	3.5	３		IP	６		IP	６		IP	４		IP	４		IP	５		IP	６		IP	５		IP	４		IP	６		IP
+天野　　晶夫	4.90	0.17	2.5	２		IP	２		IP	５		IP	５		G3	５		IP	２		IP	３		IP	３		IP	６		IP	３		IP
+谷津　　幸宏	3.90	0.12	2.7	２	5	IP	エ		IP	３	4	IP	６		IP	２		IP	５	5	IP	５		IP	４		IP	５		IP	４	5	IP

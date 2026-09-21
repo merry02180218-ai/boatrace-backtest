@@ -1,0 +1,8 @@
+data=
+1	0
+福島　　勇樹	9.60	0.11	1.3	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1	１		G1	１		IP	１		IP	４		IP
+市橋　　卓士	6.20	0.10	1.7	５		IP	２		IP	５		IP	１		IP	２		IP	２		G1	２		IP	２		IP	６		IP	４		IP
+芦澤　　　望	6.30	0.15	2.6	１		IP	６	4	IP	３		IP	１		IP	３		IP	３		IP	２		IP	３		IP	４		IP	３		IP
+東　　　潤樹	4.50	0.18	4.1	２		IP	３		IP	２		IP	６		IP	４		IP	５	5	IP	５		IP	２		IP	４		IP	５		IP
+柴田　　大輔	4.20	0.19	4.0	５		G3	４	4	IP	４		IP	３		IP	２	4	IP	４		IP	６	6	IP	６		IP	４	4	IP	２		IP
+金田　　智博	4.20	0.18	3.4	６		IP	４		IP	２		IP	６		IP	４		IP	５		IP	３		IP	３		IP	３		IP	６		IP

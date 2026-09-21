@@ -1,0 +1,8 @@
+data=
+1	0
+島村　　隆幸	8.40	0.12	2.0	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP	欠		IP	１		G3	１		G3	１		G3
+表　　　憲一	6.50	0.19	4.2	１		IP	３		IP	４		IP	２		IP	１		IP	３		IP	４		IP	２		IP	６		IP	２		G3
+太田　　　潮	4.30	0.15	2.7	２		IP	４		IP	６		IP	６		IP	５		IP	３		IP	６		IP	２		IP	２		IP	４		IP
+金子　　賢志	6.40	0.10	2.1	５		IP	２		IP	２		IP	２		G1	５		IP	３		IP	４		IP	１		IP	４		G1	１		IP
+岩井　　　繁	3.50	0.26	5.1	４		IP	６		IP	２		IP	６		IP	４		IP	４		IP	５		IP	４		IP	６		IP	３		IP
+角谷　　健吾	3.30	0.22	3.5	５		IP	５		IP	６		IP	６		G1	４		IP	６		IP	３	5	IP	２		IP	３		IP	６		IP

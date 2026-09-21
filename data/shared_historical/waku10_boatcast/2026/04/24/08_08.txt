@@ -1,0 +1,8 @@
+data=
+1	0
+牟田　　奨太	8.30	0.14	2.5	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	６		IP	３		IP	３		IP
+山本　　兼士	4.10	0.20	4.1	５		IP	４		IP	５		IP	５		IP	３	4	IP	１		IP	３	3	IP	６		IP	５		IP	３		IP
+大瀧　明日香	6.60	0.17	3.0	１		IP	３		IP	５		IP	２		IP	４		G3	４		G3	２		IP	４		IP	１		G1	２		IP
+西村　　　勝	3.50	0.09	1.7	５		IP	４		IP	６		IP	４		IP	６		IP	１		IP	６		IP	５		IP	３		IP	４		IP
+中嶋　　世奈	1.56	0.19	3.2	６		IP	６		IP	転		IP	５		IP	６		IP	４		IP	６		IP	６		IP	６		IP	５		IP
+村田　　修次	4.40	0.19	3.6	５		IP	５		IP	６		IP	３		IP	２	5	IP	６		IP	５		IP	２	5	IP	２		IP	４		IP

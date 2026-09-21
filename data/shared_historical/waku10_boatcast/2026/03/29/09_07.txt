@@ -1,0 +1,8 @@
+data=
+1	0
+清埜　　翔子	9.00	0.14	2.1	２		IP	１		G3	１		G3	１		G1	１		G1	１		IP	５		IP	１		G1	３		G1	１		IP
+間庭　　菜摘	5.40	0.18	3.8	６		IP	２		IP	５		IP	５		IP	２		G1	６		G1	１		G3	２		IP	２		IP	４		IP
+多田　　有佑	4.30	0.22	3.9	５		IP	５	4	IP	２		IP	４		IP	６		IP	３		IP	４		IP	１		IP	５		IP	４		IP
+金子　　怜央	2.80	0.18	3.4	６		IP	６	6	IP	６		IP	５		IP	４		IP	４		IP	４		IP	６		IP	４		IP	３		IP
+橋本　　年光	2.90	0.19	5.0	４		IP	６	4	IP	５		IP	３		IP	４		IP	５		IP	５		IP	４		IP	５		IP	５		IP
+鳥本　　智史	1.40	0.19	3.7	６		IP	５		IP	４		IP	６		IP	６		IP	６		IP	６		IP	転		IP	５		IP	６		IP

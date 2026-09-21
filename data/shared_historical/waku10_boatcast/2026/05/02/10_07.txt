@@ -1,0 +1,8 @@
+data=
+1	0
+酒井　　俊弘	6.40	0.14	3.6	２		IP	２		IP	１		IP	２		IP	２		IP	１		IP	５		IP	４		IP	５		IP	４		IP
+今垣　光太郎	6.90	0.19	3.3	４	3	G1	４		G1	６		G1	２		G1	２		IP	５		G2	２		G1	１		IP	２		IP	１		IP
+佐藤　　　悠	5.60	0.18	2.8	６	4	G2	４		IP	２		IP	１		IP	２		IP	５		IP	２		IP	４		IP	３		IP	４		IP
+菅沼　　佳昭	4.89	0.17	3.9	６		IP	５		IP	５		IP	６		IP	２		IP	１		IP	２		IP	欠		IP	５	5	IP	１		IP
+小坂　　風太	2.40	0.21	3.4	５		IP	６		IP	５		IP	５		IP	３		IP	５		IP	５		IP	欠		IP	３		IP	６		IP
+谷口　　健一	2.40	0.18	3.1	５		IP	６	5	IP	６		IP	３		IP	５		IP	４		IP	４		IP	６		IP	６		G3	５	4	IP

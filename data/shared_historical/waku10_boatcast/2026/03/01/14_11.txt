@@ -1,0 +1,8 @@
+data=
+1	0
+清埜　　翔子	7.70	0.15	2.7	１		G1	１		IP	５		IP	１		G1	３		G1	１		IP	１		IP	５		IP	４		IP	１		IP
+浜田　亜理沙	4.90	0.17	3.7	４		G1	５		G1	４		G1	６		G1	４		IP	１		IP	５		IP	３		IP	１		G3	５		G3
+刑部　亜里紗	4.90	0.18	3.5	２		IP	６		IP	５		IP	１		IP	６		IP	１		IP	４		IP	２		IP	４		IP	６		IP
+武井　莉里佳	4.50	0.15	2.5	６		G1	１		G3	４		IP	５		G3	５		IP	２		IP	４		IP	２		IP	６		IP	４		IP
+大瀧　明日香	4.50	0.20	3.5	５		G1	２		IP	２		IP	６		G3	５		G3	３		IP	６		G2	２		IP	６		G3	４		IP
+山口　真喜子	3.40	0.17	4.2	６		G1	５		G1	４		IP	４		IP	４		IP	３		IP	３		IP	５		IP	５	5	IP	６		G3

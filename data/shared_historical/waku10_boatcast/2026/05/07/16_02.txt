@@ -1,0 +1,8 @@
+data=
+1	0
+前原　　　哉	5.60	0.13	3.6	３		IP	３		IP	４		IP	６		IP	１		IP	２		IP	Ｆ		IP	６		IP	１		IP	１		IP
+森定　　晃史	5.80	0.17	3.1	５		IP	２		IP	３		IP	２		IP	３		IP	５		IP	４		IP	３		IP	２		IP	２		IP
+小川　日紀太	4.20	0.19	3.8	６		IP	４		IP	５		IP	１		IP	４		IP	３		IP	６		IP	４		G3	４		IP	３	4	IP
+東　　　潤樹	4.40	0.16	3.0	３		IP	５		IP	６		IP	３		IP	２		IP	３		IP	２		IP	６		IP	４		IP	５	5	IP
+佐藤　　太亮	4.10	0.13	3.8	６		IP	３		IP	４		IP	２		IP	４		IP	６		IP	３		IP	６		IP	５	6	IP	２	6	IP
+諏訪　　玲奈	2.00	0.17	3.5	５		IP	６		IP	５		IP	６		IP	３		IP	６		IP	４		IP	６		IP	６		IP	６	5	IP

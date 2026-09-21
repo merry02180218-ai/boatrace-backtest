@@ -1,0 +1,8 @@
+data=
+1	0
+橋本　　久和	7.80	0.17	2.7	１		IP	５		IP	２		IP	２		IP	２		IP	２		IP	１		IP	４		IP	１		IP	１		IP
+小川　　広大	1.70	0.24	4.3	５		IP	６		IP	５		IP	６	6	IP	妨		IP	５		IP	６		IP	６		IP	６		IP	３		IP
+西島　　義則	5.60	0.16	3.3	５	1	IP	１	1	IP	５	2	IP	３	2	IP	６	2	IP	２	1	IP	２	2	G3	６	1	IP	１	1	G3	４	2	IP
+伊達　　正利	4.00	0.17	3.4	６		IP	３		IP	５		IP	２		IP	６	5	IP	３		IP	２		IP	４		IP	５		IP	５	5	G3
+中村　　辰也	3.44	0.15	3.0	５		IP	３		IP	５	6	IP	転		IP	３		IP	５		IP	５	6	IP	６		IP	３	4	IP	５		IP
+嶋田　　貴支	4.30	0.22	5.2	４		IP	６		IP	４		IP	５	5	IP	４		IP	３		IP	３		IP	６		IP	４		IP	２		IP

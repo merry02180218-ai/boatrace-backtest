@@ -1,0 +1,8 @@
+data=
+1	0
+白神　　　優	9.40	0.10	2.0	１		IP	１		IP	２		IP	１		IP	１		G1	２		G1	１		IP	１		IP	３		IP	１		IP
+小川　日紀太	4.90	0.17	3.3	５		IP	５		IP	６		IP	４		IP	２	1	IP	４		IP	２	3	IP	２		IP	２		IP	４		IP
+林　　　祐介	3.80	0.14	3.4	５		IP	６		IP	３		IP	４		IP	２		IP	４		IP	３		IP	４		IP	５		IP	６		IP
+渡邉　　和将	5.80	0.11	2.1	１		IP	３		IP	３		G1	６		G1	４		G1	５		G1	３		G1	４		SG	２		IP	４		IP
+今出　　晋二	2.50	0.18	4.0	５		IP	４		IP	６	6	IP	６		IP	５		IP	４		IP	６		IP	５		IP	５		IP	３		IP
+長尾　　萌加	3.70	0.19	4.5	６		IP	５		IP	３		IP	４		IP	４		IP	６		IP	６		IP	２		IP	３		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+堀本　　和也	9.20	0.10	2.0	１		IP	２		IP	１		SG	１		G1	５		G1	２		G1	１		G1	２		G3	１		G3	１		IP
+成貞　　琳平	5.10	0.16	3.3	５		IP	３		IP	６		IP	３		IP	２		IP	２		IP	５		IP	４		IP	３		IP	２		IP
+間庭　　菜摘	2.70	0.15	2.2	６		IP	２		IP	５		IP	４		IP	４		IP	６		IP	落		IP	４		IP	６		G1	６		G3
+松山　　裕基	2.70	0.16	2.9	５		IP	６		IP	４	5	IP	６		IP	４		IP	３		IP	５		IP	４		IP	６		IP	５		IP
+市橋　　卓士	5.20	0.13	2.4	３	4	IP	４		IP	３		IP	５		IP	３		IP	４	3	IP	４		IP	３		G1	４		G1	２		IP
+吉永　　泰弘	3.30	0.21	4.7	５		IP	５		IP	５		IP	４	5	IP	４		IP	４		IP	５		IP	６		IP	５		G3	２		G3

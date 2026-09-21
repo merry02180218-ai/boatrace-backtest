@@ -1,0 +1,8 @@
+data=
+1	0
+宇佐見　　淳	8.90	0.12	2.4	４		IP	２		IP	１		IP	１		IP	１		G3	２		G3	２		G3	１		IP	１		IP	１		G1
+森作　　広大	4.00	0.15	3.4	４		IP	３		IP	２		IP	６		IP	３		IP	６		IP	４		IP	５		IP	４	3	IP	４		IP
+谷口　　佳蓮	4.70	0.13	2.3	３		IP	５		IP	５		IP	１		IP	４		IP	１		IP	３		G3	６	6	IP	５		IP	４		IP
+西村　　　勝	4.10	0.11	1.8	４		IP	６		IP	４		IP	６		IP	１		IP	６		IP	５		IP	３		IP	４		IP	２	5	IP
+龍田　　真白	2.80	0.13	2.9	６	6	IP	６	6	IP	６	6	IP	５		IP	５		IP	２	6	IP	４		IP	６		IP	４		IP	４		IP
+福田　　　理	1.80	0.18	3.9	６		IP	５		IP	６		IP	６		IP	４		IP	４		IP	６		IP	６		IP	５	5	IP	６		IP

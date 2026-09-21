@@ -1,0 +1,8 @@
+data=
+1	0
+林　　　祐介	7.50	0.15	3.1	１		IP	２		IP	１		IP	１		IP	２		IP	６		IP	１		IP	４		IP	３		IP	２		G3
+竹之内　　極	4.80	0.17	3.9	２		IP	３		IP	２		IP	５		IP	４		IP	４		IP	６		IP	３		IP	６		IP	２		IP
+重富　　伸也	3.50	0.16	3.4	６		G3	４		IP	３	5	IP	４	4	IP	３		IP	６	4	IP	２		IP	転		IP	６		IP	４		IP
+尾道　　佳諭	4.30	0.14	2.4	４		IP	６		IP	６		IP	５		IP	３		IP	２		IP	２		IP	６	5	IP	３		IP	３		IP
+吉永　　則雄	4.20	0.16	2.6	４		IP	６		IP	３		IP	５		IP	２	4	IP	５		IP	４		IP	２		IP	６		IP	４		IP
+宮内　由紀英	3.60	0.23	3.9	６		IP	６		IP	３	5	IP	６		IP	６		IP	４		IP	３		IP	３		IP	２		IP	５		IP

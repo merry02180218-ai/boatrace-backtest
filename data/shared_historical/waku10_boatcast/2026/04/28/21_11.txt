@@ -1,0 +1,8 @@
+data=
+1	0
+原田　才一郎	9.80	0.15	2.0	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1	３		IP	１		IP
+長野　壮志郎	7.10	0.17	3.0	３		IP	１		IP	１		IP	５		IP	４		IP	１		IP	２		IP	１		IP	２	3	G1	５	3	IP
+岡村　　将也	4.70	0.15	3.4	４	4	IP	４		IP	２		IP	２		IP	４		IP	５		IP	４		IP	２		IP	６		IP	５		IP
+下河　　誉史	4.40	0.19	3.9	４		IP	４		IP	２		IP	５		IP	６		IP	５		IP	３		IP	２		IP	３		IP	５		IP
+安河内鈴之介	6.40	0.16	3.3	１		IP	２		IP	５		G2	２		IP	２		IP	５		IP	１		IP	４		IP	１	2	IP	６		IP
+郷原　　章平	3.30	0.15	4.0	６		IP	６		IP	５		IP	５		IP	５		G3	５		G3	４		IP	３		IP	転	5	IP	１		G1

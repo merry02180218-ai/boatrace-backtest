@@ -1,0 +1,8 @@
+data=
+1	0
+山川　美由紀	8.80	0.09	1.8	妨		G3	１		G3	２		G2	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+安井　　瑞紀	6.50	0.15	3.3	６		IP	４		IP	２		IP	２		G3	４		G3	２		IP	３		IP	２		IP	２		G3	１		G3
+門田　　　栞	5.70	0.17	3.8	３		IP	１		IP	２		G2	４	2	G2	２		IP	２		IP	５		G3	４		G3	４		G3	６		IP
+赤井　星璃菜	4.20	0.15	2.6	１		G3	５		G3	１		IP	４		IP	５		IP	４		IP	３		IP	６		IP	５		IP	６		IP
+津田　　裕絵	3.10	0.20	4.7	５		IP	６		IP	６		IP	４		IP	３		IP	２		G3	５		G3	５		IP	６		IP	４		IP
+伊藤　　玲奈	2.90	0.25	5.2	１		IP	４		IP	５		IP	５		IP	６		IP	６		G3	５		IP	５		IP	４		IP	６		IP

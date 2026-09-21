@@ -1,0 +1,8 @@
+data=
+1	0
+竹下　　大樹	10.30	0.13	2.9	１		IP	１		IP	１		IP	１		G1	１		G1	１		G1	１		IP	１		IP	１		IP	１		IP
+青木　　　蓮	6.30	0.13	2.3	１	3	IP	６		IP	２		IP	６	3	IP	２		IP	６	1	IP	１		IP	３		IP	２		IP	２		IP
+小林　　礼央	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+長谷川　晴哉	6.00	0.15	3.1	１	5	IP	３		IP	４		IP	３		IP	４		IP	３		IP	４		IP	３		IP	２		IP	３		IP
+堀越　　雄貴	7.00	0.18	4.2	１		IP	１	4	IP	１		IP	１		IP	３		IP	５		IP	３		IP	４		IP	３		IP	３		IP
+齊藤　　　廉	3.11	0.21	4.1	４		IP	６		IP	３		IP	５		IP	６		IP	５		IP	エ		IP	５		IP	２		IP	５	5	IP

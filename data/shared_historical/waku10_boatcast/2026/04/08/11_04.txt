@@ -1,0 +1,8 @@
+data=
+1	0
+柴田　　直哉	7.00	0.17	3.4	１		IP	１		IP	４		IP	１		IP	３		IP	１		IP	１		IP	４		IP	４		IP	５		IP
+高木　　圭大	3.50	0.14	3.8	５		IP	４		IP	６		IP	転		IP	５		IP	２		IP	２		IP	４		IP	５		IP	４		IP
+渡邉　　俊介	5.70	0.13	2.8	３		IP	６		IP	３	4	IP	３		IP	３		IP	４		IP	１	2	IP	１	4	IP	４		IP	５		IP
+河上　　年昭	2.00	0.17	3.6	４		IP	５		IP	６		IP	６		IP	５		IP	６		IP	５		IP	４		IP	６		IP	５		IP
+高野　　哲史	3.40	0.14	3.1	４		G1	５		G1	６		G1	４		IP	２		IP	４		G1	６		G1	転		IP	６		IP	５		IP
+安河内鈴之介	4.20	0.16	3.6	５		G2	４		G2	３		IP	４		IP	５		IP	４		G1	５	5	IP	３		IP	５		IP	３	5	IP

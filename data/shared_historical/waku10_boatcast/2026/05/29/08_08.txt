@@ -1,0 +1,8 @@
+data=
+1	0
+若林　　　麗	7.00	0.21	3.0	２		IP	５		IP	Ｆ		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	４		IP
+根岸　　真優	4.00	0.17	3.1	６	3	IP	３		IP	６		IP	４		IP	６		IP	１		IP	３		IP	４		IP	６		IP	３		IP
+近江　　翔吾	7.60	0.12	2.2	３		IP	２		IP	５		G1	１		IP	２		IP	４		IP	１		IP	１		IP	１	4	IP	３		IP
+草川　　壮良	1.80	0.15	3.3	５		IP	６		IP	６	6	IP	６		IP	５		IP	５		IP	６		IP	５		IP	５		IP	４		IP
+石丸　　海渡	5.50	0.13	2.5	５		IP	１		IP	３		G1	４		G1	４		G1	３		IP	２		IP	３		IP	４		G1	６		IP
+松村　　康太	4.10	0.18	4.2	エ	5	IP	３		IP	６		IP	６		IP	６		IP	３		IP	２		IP	３	4	IP	５		IP	１	4	IP

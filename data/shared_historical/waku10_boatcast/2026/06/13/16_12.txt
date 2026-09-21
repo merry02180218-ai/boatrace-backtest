@@ -1,0 +1,8 @@
+data=
+1	0
+黒野　　元基	9.20	0.15	2.2	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	２		IP	１		G1
+前田　　将太	5.80	0.19	4.5	２		IP	３		G1	２		IP	６		IP	４		IP	２		IP	４		G2	２		G1	４		G1	６		IP
+川崎　　智幸	6.30	0.11	3.0	１		IP	４		IP	１		IP	５		IP	２		IP	１		IP	２		IP	２		IP	５	4	IP	６		IP
+永田　　秀二	4.40	0.17	3.3	４		IP	３		IP	６		IP	３		G2	６		G2	５		IP	２		IP	４		IP	５		IP	２		IP
+蒲原　　健太	3.60	0.21	4.1	２	2	IP	６		IP	２	3	IP	５	4	IP	４		IP	６	4	IP	６		IP	４		IP	６		IP	３		IP
+平石　　和男	3.70	0.23	5.4	３		IP	３		IP	５	5	IP	４		IP	６	5	IP	４		IP	２		IP	６	5	IP	４		IP	６		IP

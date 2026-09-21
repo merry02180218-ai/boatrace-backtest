@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　光広	6.60	0.18	3.5	３		IP	２		IP	４		IP	１		IP	５		IP	１		IP	２		IP	３		IP	１		IP	５		IP
+成貞　　琳平	4.70	0.15	2.9	３	3	IP	３		IP	５		IP	５		IP	３		IP	６		IP	３		IP	２		IP	２		IP	５		IP
+渥美　　卓郎	4.10	0.21	4.0	６		IP	４		IP	１		IP	５		IP	４		IP	２		IP	３		IP	６		IP	４		IP	６		IP
+藤井　　公人	4.00	0.17	3.1	４		IP	２		IP	２		IP	５		G3	５	6	G3	４		IP	３		IP	６		IP	４		IP	６	6	IP
+一色　　颯輝	5.20	0.17	3.1	４		IP	５		IP	４		IP	６	6	IP	３		IP	２		IP	６	6	IP	２		IP	１		IP	２		IP
+三宅　　健太	4.20	0.20	4.0	４		IP	５		IP	１	5	IP	４		G3	５		IP	５		IP	３	5	IP	４		IP	４		IP	４		G3

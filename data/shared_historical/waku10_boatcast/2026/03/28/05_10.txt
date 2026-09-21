@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　大介	8.60	0.13	3.4	１		IP	１		IP	１		IP	１		IP	２		IP	３		IP	１		IP	３		G1	４		G1	１		IP
+伊藤　　喜智	5.40	0.20	3.4	４		IP	５		IP	１		IP	３		IP	３		IP	３		IP	２		IP	６		IP	３		IP	４		IP
+金子　　和之	6.80	0.14	2.6	６		G2	３		IP	１		IP	２		IP	２		IP	２		IP	４		IP	３	4	IP	２		IP	２		IP
+桑原　　将光	5.60	0.17	3.0	３		IP	３		IP	３		IP	２		IP	３		IP	６		IP	３		IP	６		IP	２		IP	２		IP
+坂本　　雄紀	5.40	0.13	1.9	１	4	IP	２		IP	３		IP	５		IP	１		IP	５		IP	３		IP	５		IP	５		IP	３		IP
+齋藤　　達希	3.10	0.19	4.4	５	5	G3	３		IP	６		IP	５		IP	４		IP	５		IP	４		IP	４		IP	５		IP	５	5	IP

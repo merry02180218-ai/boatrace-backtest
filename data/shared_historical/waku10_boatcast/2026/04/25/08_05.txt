@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　　泰	9.60	0.12	1.4	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+佐口　　達也	5.60	0.20	3.7	３		IP	３		IP	１		IP	２		IP	２		IP	２		IP	４		IP	５		IP	５		IP	５		IP
+福田　　翔吾	5.10	0.19	3.3	２		IP	４	4	IP	６		IP	５		IP	５		IP	４		IP	４		IP	１		IP	２	2	IP	２		IP
+上田　　龍星	7.00	0.13	2.6	３		G1	２		G1	５		G1	４		G1	３		SG	２		SG	３		IP	４		IP	２		G1	２		G1
+金子　　怜央	3.10	0.14	2.4	６		IP	５		IP	１		IP	６		IP	６	6	IP	４		IP	６		IP	３		IP	６		IP	４		IP
+中村　　将隆	3.80	0.17	4.1	５		IP	４		G3	３		IP	４		IP	６		IP	４		IP	１		IP	６		IP	４		IP	５		IP

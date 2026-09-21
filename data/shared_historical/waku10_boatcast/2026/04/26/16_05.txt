@@ -1,0 +1,8 @@
+data=
+1	0
+原村　　拓也	7.40	0.19	4.1	１		IP	４		IP	１		IP	４		IP	３		IP	２		IP	２		IP	１		IP	４		IP	１		IP
+井川　　大作	5.00	0.14	3.5	６		IP	１		IP	６		G3	５		IP	４		IP	５		IP	２		IP	２		IP	３		IP	２		IP
+西村　　拓也	6.40	0.14	3.1	２		G1	６		G1	３		IP	１		IP	２		IP	６		G1	５		G1	２		G1	２		IP	３		G2
+吉永　　泰弘	5.40	0.23	4.2	２		IP	６		IP	１		IP	４		IP	２		IP	４	5	IP	１		IP	５		IP	３		IP	６		G3
+成貞　　琳平	3.00	0.21	4.5	６		IP	５		IP	５		IP	５	6	IP	２	4	IP	３		IP	５		IP	４	4	IP	５		IP	６		IP
+佐々木　翔斗	3.00	0.18	4.0	３		IP	５		IP	６		IP	６		IP	４		IP	６		G2	５		G2	５		IP	２		IP	６		IP

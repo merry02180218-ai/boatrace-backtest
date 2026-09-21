@@ -1,0 +1,8 @@
+data=
+1	0
+谷村　　一哉	8.60	0.16	3.1	４		IP	１		IP	１		IP	３		IP	１		IP	２		IP	２		IP	１	2	IP	１		IP	１		IP
+富永　　正人	4.80	0.20	4.7	１		IP	２		IP	５		IP	４		IP	２		IP	２		IP	６		IP	３		IP	６		IP	Ｆ		IP
+草場　　康幸	5.10	0.19	3.7	２	2	IP	２		IP	３		IP	３		IP	５		IP	３		IP	３		IP	６		IP	３		IP	５		IP
+岸本　　雄貴	3.70	0.19	3.7	６		IP	５	5	IP	６		IP	５		IP	６		IP	３	3	IP	２		IP	４		IP	３		IP	３		IP
+田中　　　結	0.75	0.18	3.8	６	6	IP	６	6	IP	６	6	IP	落	6	IP																		IP
+津久井　拓也	2.80	0.20	4.7	６		IP	６		IP	５		G2	４		G2	５		IP	４		IP	５		IP	３		IP	５		IP	５		IP

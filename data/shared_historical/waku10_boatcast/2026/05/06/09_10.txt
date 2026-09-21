@@ -1,0 +1,8 @@
+data=
+1	0
+宇留田　翔平	9.60	0.11	2.2	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G3	１		G3	１		IP	１		IP
+上野　　拓馬	5.40	0.15	3.5	３		IP	５	4	IP	４		IP	３		IP	４		IP	４		IP	２		IP	２		IP	４		IP	２		IP
+花田　　和明	4.30	0.18	2.5	６		IP	１		IP	３		IP	４		IP	３		IP	５		IP	４		IP	４		IP	５		IP	４		IP
+松尾　　　充	6.10	0.15	3.1	１		IP	２		IP	２		G1	５		G1	４		G1	５		IP	４		IP	１	5	IP	３		IP	４	5	IP
+中山　　翔太	5.56	0.13	3.3	２		IP	２		IP	６		G1	転		IP	５	3	IP	４		G1	５		G1	３		IP	１	4	IP	３		IP
+乃村　　康友	3.40	0.19	5.0	５		IP	６		G3	５		IP	３		IP	３		IP	５		IP	４		IP	４		IP	３		IP	６	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+西村　美智子	9.40	0.14	2.3	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	３		IP	１		G3	１		G3
+實森　　美祐	6.80	0.15	2.8	２		IP	１		IP	２		IP	２		IP	２		G1	１		IP	４		G1	３		G1	５		IP	６		IP
+丸岡　　正典	6.80	0.12	3.1	３		IP	５		IP	３	4	IP	２		G2	３		IP	３		IP	３		IP	１	4	IP	１		IP	４		IP
+垂水　　　悠	4.10	0.11	1.8	２	5	IP	１	5	IP	６		G3	６		G3	５		IP	６	5	IP	５		G1	３		G1	４		IP	４		IP
+金子　　順一	2.80	0.21	4.7	５		IP	５		IP	１	4	IP	５		IP	４		IP	５		IP	６		IP	６	4	IP	５		IP	５		IP
+川上　　　剛	7.00	0.19	3.3	１	2	IP	４		G3	５		IP	２	3	IP	１	5	IP	３	2	IP	３		IP	１	4	IP	１	5	IP	４	3	IP

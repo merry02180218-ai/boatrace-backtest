@@ -1,0 +1,8 @@
+data=
+1	0
+中曽　　瑠華	6.60	0.15	2.5	１		IP	１		IP	４		IP	２		IP	６		IP	１		IP	６		G3	２		IP	１		IP	４		IP
+小林　　遼太	4.60	0.17	3.9	６		IP	６		IP	３		IP	５		IP	２		G3	６		IP	６		IP	１		IP	３		IP	１		IP
+原　　　豊土	5.22	0.13	2.4	５		IP	４		IP	２		IP	Ｌ		IP	６		IP	２		IP	３		IP	４		IP	４		IP	１	4	IP
+山崎　　裕司	5.80	0.16	3.1	４		IP	１		IP	２		IP	１	3	IP	１		IP	６		IP	５		IP	４		IP	２		IP	６		IP
+鶴本　　崇文	5.70	0.15	3.3	３		IP	３		IP	３		IP	３		IP	２		IP	１	4	IP	３		IP	５		IP	６		IP	４		IP
+今村　天次朗	2.33	0.17	3.2	５		IP	４		IP	６		IP	欠		IP	４		IP	６		IP	４		IP	６		IP	転		IP	４		IP

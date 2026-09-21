@@ -1,0 +1,8 @@
+data=
+1	0
+一色　　颯輝	5.90	0.19	4.2	５		IP	１		IP	１		IP	６		IP	４		IP	エ		IP	１		IP	５		IP	１		IP	１		IP
+川上　　聡介	4.00	0.14	3.2	３		IP	６		IP	４		IP	５		IP	５		IP	２	3	IP	５		IP	２		IP	６		IP	３		IP
+宇佐見　　淳	4.20	0.11	2.3	３		IP	５		IP	１		G3	３		IP	５		IP	３		IP	６		IP	５		IP	３		IP	６		G3
+渥美　　卓郎	2.90	0.22	4.7	２		IP	６		IP	６		IP	６		IP	４		IP	５	3	IP	５		IP	６		IP	２	5	IP	６	3	IP
+間嶋　　仁志	4.10	0.23	4.3	６	2	IP	５	3	IP	４	2	IP	４	2	IP	１	2	IP	４	2	IP	６	4	IP	３	1	IP	６	2	IP	２	2	IP
+平野　　和明	3.11	0.18	4.3	６		IP	５		IP	５		IP	５		IP	２		IP	４		IP	３	4	IP	５		IP	６		IP	欠		IP

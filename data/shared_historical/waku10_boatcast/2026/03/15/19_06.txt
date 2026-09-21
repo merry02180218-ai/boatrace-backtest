@@ -1,0 +1,8 @@
+data=
+1	0
+上原　健次郎	7.70	0.21	3.8	１		IP	４		IP	１		IP	６		IP	２		IP	１		IP	２		IP	３		IP	１		IP	１		IP
+浜崎　　準也	4.70	0.15	3.1	１		IP	５		IP	６		IP	１		IP	４		IP	５	3	IP	Ｆ	4	IP	１		IP	３		IP	５		IP
+守田　　俊介	6.80	0.13	3.4	２		G1	３		G1	５		G1	２		IP	５		IP	２		IP	６	4	G1	１		G1	３		SG	２		SG
+大町　　利克	2.80	0.20	3.6	６		IP	６		IP	５		IP	３		IP	５	5	IP	６		IP	２		IP	４		IP	６	6	IP	５		IP
+伊藤　　玲奈	5.78	0.22	4.5	２		IP	４		IP	３		IP	不		G3	４		IP	４		IP	３		IP	３		IP	１		IP	４		IP
+榎　　　幸司	4.20	0.25	5.1	４		IP	５		IP	２		IP	３		IP	５		IP	３		IP	４		IP	５		IP	５		IP	３		IP

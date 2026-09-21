@@ -1,0 +1,8 @@
+data=
+1	0
+木山　　誠一	7.10	0.13	1.8	３		IP	１		IP	２		IP	２		IP	６		IP	４		IP	１		IP	１		IP	４		IP	１		IP
+佐々木　康幸	7.90	0.12	2.4	３		IP	２		IP	３		IP	２		IP	２		G1	２		G1	３		IP	２		IP	２		IP	１		IP
+川原　　正明	4.00	0.19	2.5	４		IP	５		IP	４		IP	３		IP	６		IP	１		IP	３		IP	６		IP	５		IP	４		IP
+大澤　　誠也	3.90	0.19	3.8	４		IP	２		IP	４		IP	３		IP	４		IP	５		IP	６		IP	３		IP	５		IP	５		IP
+諏訪　　玲奈	2.90	0.22	4.9	３		IP	５		IP	６		IP	６	6	IP	３		IP	４		IP	６		IP	３		IP	６		IP	６	6	IP
+本橋　　克洋	3.20	0.16	3.3	４	4	IP	４		IP	６		IP	５		IP	４	4	IP	３		IP	６		IP	３		IP	５		IP	５		IP

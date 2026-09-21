@@ -1,0 +1,8 @@
+data=
+1	0
+杢野　　誓良	6.30	0.14	2.8	１		IP	１		IP	５		IP	５		IP	２		IP	５		IP	１		IP	６		IP	２		IP	１		IP
+新田　　泰章	6.50	0.17	3.2	１		IP	３		IP	２		IP	２		IP	６		IP	４		IP	５		G1	１		G1	３		IP	２		IP
+黄金井　力良	6.00	0.14	2.2	３		IP	４		IP	３		IP	１	5	IP	３		IP	２		G3	２		G3	４		IP	４		IP	４		IP
+明石　　正之	5.20	0.17	3.1	３		IP	３		IP	３		IP	３	5	IP	妨		IP	３		IP	４		IP	４		G3	２		IP	３		IP
+泉　　　啓文	3.30	0.15	4.3	４		IP	５		IP	６		IP	５		IP	６		IP	４		IP	５	6	IP	６	6	IP	２		IP	２		IP
+天野　　友和	5.10	0.19	3.3	３		IP	６		IP	３		IP	５		IP	２		IP	５		IP	４		IP	２		IP	４		IP	１		IP

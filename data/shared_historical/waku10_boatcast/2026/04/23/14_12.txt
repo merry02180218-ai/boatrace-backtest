@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　駿兵	8.40	0.14	2.9	１		IP	２		IP	１		IP	２		IP	１		IP	４		IP	１		IP	１		IP	５	2	IP	１		IP
+廣瀬　　　凜	8.40	0.14	2.5	２		IP	２		IP	１		IP	１		IP	２		IP	２		IP	１		IP	３		IP	３		IP	１		IP
+丸岡　　正典	6.30	0.12	3.2	６		IP	３		IP	５		IP	３	4	IP	２		G2	３		IP	３		IP	３		IP	１	4	IP	１		IP
+一柳　　和孝	4.40	0.12	2.3	３	3	IP	３		IP	５		IP	６	5	IP	５		IP	１		IP	４		IP	３		IP	３		IP	６		IP
+佐々木　完太	6.60	0.20	3.7	２		G1	４	6	G1	３		IP	５		SG	２	4	SG	５		IP	３	6	IP	２		G1	１		G1	６		G1
+松本　　博昭	3.60	0.17	4.1	３		IP	４		IP	５		IP	５	5	IP	５		IP	４		IP	４	5	IP	３	5	IP	５		IP	５		IP

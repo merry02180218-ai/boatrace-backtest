@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　恵一	7.50	0.14	2.8	６		IP	１		IP	２		IP	４		IP	２		IP	１		IP	１		IP	２		IP	２		IP	２		IP
+堂原　　洋史	4.60	0.16	2.8	５		IP	４		IP	４		IP	２		IP	２		IP	４		IP	５		IP	３		IP	４		IP	４		IP
+吉川　　喜継	5.20	0.15	3.3	６		IP	３		IP	６		IP	３		IP	２		IP	１		IP	５		G1	４		G1	２		IP	４		IP
+田中　　　堅	5.80	0.16	3.4	２		IP	４		IP	２		IP	４		IP	２	5	IP	４		IP	３		IP	３		IP	３		IP	４		IP
+金子　　良昭	3.00	0.16	2.9	５		IP	４	3	IP	３	4	IP	６	2	IP	５	2	IP	２	3	IP	６	3	IP	５	3	IP	５		IP	５	3	IP
+中嶋　　世奈	1.89	0.21	5.1	４		IP	４		IP	５		IP	６		IP	５	5	IP	６		IP	６		IP	６		IP	６		IP	Ｌ		IP

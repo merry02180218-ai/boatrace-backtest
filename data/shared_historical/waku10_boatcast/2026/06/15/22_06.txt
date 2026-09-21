@@ -1,0 +1,8 @@
+data=
+1	0
+中曽　　瑠華	5.30	0.17	3.0	６		IP	転		IP	１		IP	１		IP	４		IP	２		IP	６		IP	１		IP	６		G3	２		IP
+落合　　直子	7.00	0.15	2.8	１		G3	５		IP	４		IP	２		IP	１		G3	２		G3	４		IP	３		IP	１		IP	２		IP
+喜井　つかさ	6.80	0.15	2.2	４		G3	２		G3	１		G3	２		IP	２		G3	２		G3	５		G3	２		G3	３		IP	３		IP
+犬童　　千秋	4.10	0.17	2.9	３		G3	４		G3	４		IP	２		IP	４		G3	５		G3	５		IP	６	5	IP	３	6	IP	４	6	IP
+新田　　芳美	4.00	0.19	3.5	４		G3	５		IP	２		G3	４		IP	５	6	IP	４		IP	５	6	IP	４		IP	２		IP	５		IP
+若狭　奈美子	3.40	0.23	3.7	４		IP	４		IP	５		IP	４		IP	３	5	IP	４		IP	５		G3	４		G3	５		G3	５	5	IP

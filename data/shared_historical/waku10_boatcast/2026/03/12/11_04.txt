@@ -1,0 +1,8 @@
+data=
+1	0
+百武　　　翔	8.40	0.12	1.9	５		IP	４		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+竹田　　和哉	8.40	0.13	2.4	３		IP	１		IP	２		G1	２		G1	３		IP	２		IP	２		IP	１		IP	１		IP	２		IP
+星野　　政彦	3.40	0.20	3.5	４		IP	５		IP	４		IP	４		IP	４		IP	４		IP	５		IP	４		IP	５		IP	４		IP
+塚田　　修二	3.00	0.17	3.8	３		IP	６		IP	欠		IP	６		IP	４		IP	３		IP	６		IP	４		IP	５		IP	５		IP
+山本　　兼士	4.10	0.21	4.5	６		IP	６	6	IP	４		IP	６		IP	１		IP	１		IP	５		IP	４	6	G3	４		G3	４		IP
+金田　　　諭	5.60	0.15	3.8	２	5	IP	１		IP	３		IP	３		IP	６		G1	５		G1	２		IP	３		IP	３		IP	６		IP

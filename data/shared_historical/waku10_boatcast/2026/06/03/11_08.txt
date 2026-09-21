@@ -1,0 +1,8 @@
+data=
+1	0
+竹田　　広樹	6.00	0.17	3.9	１		IP	４		IP	６		IP	５		IP	１		IP	１		IP	１		IP	６		IP	２		IP	４		IP
+佐藤　　右京	3.20	0.24	4.6	３		IP	４		IP	６		IP	６		IP	３		IP	５		IP	４		IP	５	3	IP	４		IP	５		IP
+小玉　　啓太	4.80	0.14	2.9	４		IP	５		IP	４		IP	５		IP	４		IP	２		IP	５		IP	４		IP	２		IP	１		IP
+表　　　健太	3.80	0.18	4.2	５	5	IP	４	6	IP	５		IP	５	5	IP	３		IP	２		IP	５		IP	５		IP	４		IP	３		IP
+高村　　　諒	1.50	0.18	3.7	５		IP	５		IP	６	6	IP	６		IP	６	6	IP	６		IP	６		IP	４		IP	６	6	IP	６		IP
+山崎　　聖司	2.10	0.23	5.4	６		IP	５		IP	６		IP	４		IP	３		IP	５		IP	５		IP	６		IP	６		IP	６		IP

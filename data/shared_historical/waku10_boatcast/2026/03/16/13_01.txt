@@ -1,0 +1,8 @@
+data=
+1	0
+古結　　　宏	9.89	0.17	3.2	１		IP	１		IP	１		IP	１		IP	１		G1	エ		IP	２		IP	１		IP	１		IP	１		IP
+海野　康志郎	7.90	0.17	2.9	２		G1	５		G1	１	1	IP	１	1	IP	１		IP	５		IP	２		G1	１		IP	３		IP	１	1	IP
+中村　　晃朋	6.80	0.16	3.4	２		IP	３		IP	２		G1	５		G1	１		IP	２		IP	２		IP	Ｆ		IP	１		IP	３		IP
+山口　　　剛	6.90	0.12	2.4	４		G1	４		G1	２		G1	４		G1	３		G1	１		IP	３		SG	５	6	G1	２		SG	３		G1
+吉田　　拡郎	5.90	0.12	3.3	１		G1	４		IP	６		IP	６		IP	２	4	IP	３		G1	５		G1	３		G1	１	6	G1	３		IP
+岩瀬　　裕亮	4.80	0.16	3.9	４		G1	４		G1	４		G1	２	5	G1	５	5	IP	６		IP	５		G2	２	5	IP	４		IP	４		SG

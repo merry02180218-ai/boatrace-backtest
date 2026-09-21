@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　将吉	8.90	0.13	2.4	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP	５		IP	１		IP	１		IP	１		IP
+浜野　　孝志	6.70	0.18	3.9	２		IP	３	3	IP	２		IP	１	4	IP	３		IP	３		IP	２		IP	４		IP	６		IP	１		IP
+森　　　悠稀	4.89	0.18	3.6	５		IP	６		IP	３		IP	２		IP	３		IP	４		IP	２		IP	６		G2	３		G2	欠		IP
+谷川　　将太	4.10	0.15	2.9	６	5	IP	３		IP	Ｆ		IP	３		IP	２		IP	４		IP	５		IP	５		IP	３		IP	３		IP
+龍田　　真白	3.00	0.13	2.7	３		IP	６	6	IP	６	6	IP	６	6	IP	５		IP	５		IP	２	6	IP	４		IP	６		IP	４		IP
+田頭　　虎親	4.00	0.18	4.1	２		IP	Ｆ		IP	５		IP	３		IP	６		IP	１		IP	３		IP	６		IP	５		IP	５		IP

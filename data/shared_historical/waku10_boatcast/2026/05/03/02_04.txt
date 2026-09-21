@@ -1,0 +1,8 @@
+data=
+1	0
+楠　　将太郎	8.20	0.20	4.1	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	４		IP	２		IP	１		IP	４		IP
+谷津　　幸宏	4.50	0.14	2.4	３		IP	４		IP	５		IP	２		IP	３	3	IP	３		G3	６		G3	５		IP	４		IP	３		IP
+畑田　　汰一	5.75	0.11	2.8	１		IP	４		G1	５		G1	落		G1	６		IP	２	2	IP	転		IP	３		IP	５		G1	１		IP
+清埜　　翔子	3.30	0.13	2.3	１		IP	４	5	IP	６		IP	５		IP	６		G3	３		G3	６		G3	６		G1	４		IP	６		G1
+谷島　　咲希	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+中里　　昌志	4.10	0.18	4.3	５		IP	４		IP	５		IP	３		IP	６	5	IP	４	5	IP	３		IP	３		IP	４		IP	３		IP

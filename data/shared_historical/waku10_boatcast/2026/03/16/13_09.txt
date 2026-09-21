@@ -1,0 +1,8 @@
+data=
+1	0
+大上　　卓人	9.70	0.14	2.2	１		G1	５		G1	１		IP	１		IP	１		IP	１		G1	１		IP	１		IP	１		IP	１		G1
+篠崎　　元志	6.80	0.13	3.0	５		G3	２		G3	２		G1	２		G1	４		G1	４	3	IP	２		IP	Ｌ		G1	２		G1	１		IP
+近江　　翔吾	8.30	0.11	1.9	１		IP	２		IP	４		IP	１		IP	１		IP	１	4	IP	３		IP	３		IP	１		IP	２		IP
+井上　　忠政	6.50	0.16	3.8	５	6	G1	３		G1	２		G1	３		IP	４		G1	１	5	IP	４		IP	４		IP	３		IP	２		G1
+茅原　　悠紀	8.60	0.16	3.7	５		G1	２		G1	１		G1	３		G1	３		SG	３		G1	２		G1	３		SG	１		G1	１		G1
+藤岡　　俊介	5.10	0.15	3.4	４		IP	１	5	IP	５		IP	４		G1	４		IP	５		IP	２		IP	４		IP	５		IP	２	5	IP

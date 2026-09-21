@@ -1,0 +1,8 @@
+data=
+1	0
+黒崎　　竜也	7.70	0.13	3.1	１		G3	１		G3	１		G3	１		IP	２		IP	１		IP	６		IP	２		IP	Ｆ		IP	１		IP
+茶谷　　信次	5.70	0.17	4.1	３		IP	４		IP	６		IP	２		IP	３		IP	Ｆ		IP	２		IP	１		IP	５		IP	１		IP
+木幡　　純也	5.10	0.15	3.5	６		IP	１		IP	５		IP	５		IP	４	4	IP	４		IP	２		IP	４		IP	３		IP	２		IP
+上野　　拓馬	4.10	0.16	3.3	２		IP	１		IP	５	6	IP	５		IP	６		IP	４		IP	４	6	IP	４		IP	４		IP	５		IP
+吉川　　喜継	4.20	0.13	3.5	５		IP	２		IP	３		IP	５		IP	２	4	IP	６	3	IP	３		IP	３		IP	５	4	IP	６	4	IP
+山崎　　義明	3.40	0.18	4.5	５		IP	５		IP	６		IP	４		IP	５		G3	３		IP	２		IP	３		IP	５		G3	６		G3

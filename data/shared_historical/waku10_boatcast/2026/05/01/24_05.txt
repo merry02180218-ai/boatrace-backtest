@@ -1,0 +1,8 @@
+data=
+1	0
+笠　　　雅雄	7.70	0.17	3.3	２		IP	１		IP	１		IP	５		IP	１		IP	１		IP	２		IP	６		IP	１		IP	２		IP
+真庭　　明志	6.30	0.14	2.9	１		IP	４		IP	転		IP	３		IP	２		IP	２		IP	２		IP	２		IP	１		IP	６		IP
+古川　　　健	3.70	0.16	2.1	１	4	IP	３		IP	３		IP	４		IP	５		IP	６		IP	６		IP	４		IP	６		IP	５		IP
+鳥飼　　　眞	5.60	0.20	3.6	３	5	IP	４		IP	転		IP	２		IP	４		IP	１		IP	１		IP	４		IP	４		IP	３		IP
+山下　　和彦	5.30	0.14	2.9	６		IP	２		G3	１	4	IP	２		IP	３		IP	６		IP	３		IP	５		G1	６		G1	２		IP
+生方　　靖亜	3.60	0.18	4.2	３		IP	２		IP	３		IP	５		IP	６		IP	４		IP	４		G3	５		G3	５		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　大輔	7.20	0.20	3.4	５		IP	１		IP	３		IP	１		IP	３		IP	３		IP	１		IP	１		IP	４		IP	２		IP
+小野寺　智洋	6.10	0.14	3.6	３		G3	３		IP	４		IP	２		IP	３		IP	１		IP	３		IP	１		IP	６		IP	４		IP
+濱本　　優一	7.00	0.12	2.5	２		IP	２		IP	２		IP	２		IP	３		IP	２		G3	６		G3	２		G3	１	4	IP	４		IP
+三宅　　健太	4.50	0.19	4.0	３		IP	４		IP	５		IP	６		IP	４	5	IP	５		IP	２		G3	２		G3	４	6	IP	３		IP
+仲口　　博崇	6.30	0.19	4.1	１	4	IP	４	4	IP	４	3	IP	３		G1	３		G1	６		IP	２		G3	２	4	G3	３		IP	２	3	IP
+江本　　真治	4.90	0.16	3.1	１		IP	３		IP	２		IP	６		IP	４		IP	３		IP	６		IP	２	5	G1	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　晃大	10.00	0.11	1.7	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+本部　めぐみ	2.50	0.27	4.9	４		G3	５		G3	６		IP	４		IP	５		IP	６		IP	３		IP	妨		IP	４		G3	６		G3
+飯田　　庄吾	3.60	0.22	3.7	５		IP	３		IP	４		IP	４		IP	４		IP	２		IP	６		IP	６		IP	５		IP	４		IP
+椎名　　　豊	6.40	0.14	3.4	３	6	IP	２		IP	４		IP	４		IP	２		IP	２		IP	２		IP	２		IP	６		G1	３		G1
+酒井　　俊弘	3.89	0.11	2.2	５	6	IP	３	6	IP	４	6	IP	５		IP	４	6	IP	６		IP	５		IP	落		IP	１		IP	４	6	IP
+荒井　　輝年	4.30	0.15	3.0	３		IP	１		IP	４		IP	６		IP	５		IP	４		IP	３		IP	５		IP	３		IP	５		IP

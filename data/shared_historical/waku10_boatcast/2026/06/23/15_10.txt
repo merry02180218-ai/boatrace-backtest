@@ -1,0 +1,8 @@
+data=
+1	0
+前田　　　滉	10.30	0.14	3.5	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		SG	１		SG
+河内　　一馬	3.30	0.11	3.3	６		IP	６		IP	４		IP	６		IP	４		IP	４		IP	５		IP	２		IP	３		IP	５		IP
+廣瀬　　　凜	6.80	0.16	3.2	２		IP	２		IP	３		IP	２		G2	２		IP	４	4	IP	２		IP	５	4	IP	１		IP	６		IP
+江藤　　敦宏	3.30	0.18	3.9	３		IP	４		IP	４	5	IP	５		IP	５		IP	６		IP	５		IP	２		IP	５		IP	５	5	IP
+大原　　祥昌	4.10	0.16	3.3	６	6	IP	６	6	IP	６		IP	５	6	IP	４		IP	１		IP	５		IP	２		IP	１		IP	５	6	G3
+田中　　駿兵	5.70	0.15	3.3	１		IP	Ｆ		IP	５		G1	６		G1	１		IP	３		IP	２		IP	２		IP	５		IP	２		IP

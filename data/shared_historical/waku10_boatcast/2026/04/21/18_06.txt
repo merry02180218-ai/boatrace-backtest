@@ -1,0 +1,8 @@
+data=
+1	0
+加木　　　郁	7.20	0.16	3.6	１		IP	３		IP	５		IP	３		IP	３		IP	１		IP	２		IP	１		IP	１		IP	４		IP
+植田　　太一	7.10	0.14	2.8	４		IP	２		G3	２		IP	２		IP	１		IP	２		IP	３		G1	６		G1	３		IP	１		IP
+高野　　心吾	5.00	0.15	3.4	１		IP	２		IP	５	2	IP	６		IP	５		IP	６		IP	２		IP	２	4	IP	３		IP	４		IP
+正木　　聖賢	3.70	0.18	3.1	３		IP	転		IP	３		IP	５		IP	３		IP	３		IP	４		IP	４		IP	５	2	IP	６	5	IP
+浅見　　宗孝	4.40	0.19	3.5	４	6	IP	５		IP	３		IP	５		IP	３		IP	６		IP	１		IP	５		IP	６		IP	１		IP
+富永　　大一	4.50	0.18	3.3	４		IP	２		IP	５		IP	３		IP	５		IP	６		IP	２		IP	４		IP	５		IP	２		IP

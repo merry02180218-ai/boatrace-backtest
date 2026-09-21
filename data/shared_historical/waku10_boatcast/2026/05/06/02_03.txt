@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　純平	9.50	0.17	3.0	１		IP	１		IP	１		IP	３		G1	３		G1	１		IP	１		IP	１		IP	１		IP	１		G1
+赤羽　　克也	6.50	0.18	3.6	１		IP	１		IP	３		IP	１		IP	５		IP	１		IP	６	3	IP	３		IP	４		IP	３		IP
+中澤　　和志	7.60	0.16	3.1	３		IP	１		G1	４		IP	２		IP	２		IP	１		G1	６		G1	２		IP	２	4	IP	１		IP
+野田　　昇吾	3.67	0.16	2.8	４	5	IP	５		IP	転	5	IP	２	5	IP	２		IP	６		IP	４		IP	５	5	IP	５	6	IP	５		IP
+成田　　華音	1.50	0.34	5.5	５	6	IP	６	6	IP																								IP
+浅見　　昌克	4.50	0.13	3.3	３		IP	４		G1	６		G1	５		IP	３		IP	４	3	IP	１	4	IP	４		IP	４		IP	５	4	IP

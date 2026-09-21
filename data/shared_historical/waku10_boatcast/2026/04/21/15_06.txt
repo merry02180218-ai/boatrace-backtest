@@ -1,0 +1,8 @@
+data=
+1	0
+今井　　貴士	8.30	0.19	2.6	１		IP	１		IP	２		IP	２		IP	３		G1	Ｆ		G1	１		G3	１		IP	１		IP	１		IP
+石井　　裕美	5.00	0.15	2.5	１		IP	３		IP	５		G3	５		IP	３		G3	３		G3	４		G3	４		IP	５		IP	２		IP
+松浦　　　勝	3.70	0.16	3.0	４	5	IP	６	4	IP	５		IP	１		IP	６		IP	４		IP	２		IP	４		IP	６		IP	５		IP
+上田　　洋平	4.00	0.15	3.6	３	5	IP	６		IP	６		IP	５		IP	４		IP	４		IP	３		IP	３		IP	５		IP	２		IP
+大野　　芳顕	3.10	0.23	4.1	４		IP	６		IP	６		G3	４		G3	５		IP	４		IP	４		IP	５		IP	６		IP	２		IP
+水谷　　理人	5.50	0.18	5.0	１	5	IP	４		IP	３		IP	５		IP	２	4	IP	３		IP	４		G1	６		G1	４		G1	３		IP

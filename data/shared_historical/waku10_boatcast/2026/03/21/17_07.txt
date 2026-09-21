@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　夏海	9.30	0.16	3.1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	６		G1	１		G3
+嶋田　　有里	4.00	0.21	4.2	２		IP	５		IP	５		IP	６		IP	４		IP	２		IP	２		IP	６		IP	５		IP	４		IP
+平山　　智加	8.00	0.14	2.9	３		IP	１		IP	２		IP	４		G1	２		G1	３		IP	１		IP	２		IP	１		G3	２		G3
+孫崎　　百世	4.30	0.24	4.6	３	3	IP	５		IP	３		IP	４		IP	４		IP	５		IP	６		IP	４		IP	１		IP	４		IP
+山下　　奈緒	2.60	0.35	5.5	５	4	IP	４		IP	５		IP	５		IP	４		G3	５		G3	６		IP	６		IP	３		IP	５		IP
+森　　　陽多	1.50	0.26	5.3	５		IP	６		IP	５		IP	５		IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP

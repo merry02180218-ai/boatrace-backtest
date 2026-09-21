@@ -1,0 +1,8 @@
+data=
+1	0
+四宮　　与寛	6.90	0.14	2.6	１		IP	１		IP	６		IP	６		IP	１		IP	１		IP	１		IP	２		IP	６		IP	２	2	IP
+権藤　　俊光	6.70	0.11	2.6	６		G1	２		SG	２		SG	１		G1	４		G1	２		G1	４		G1	５		IP	１		IP	６		IP
+滝沢　　芳行	4.10	0.21	3.8	５	2	IP	５		G3	５	4	G3	１		IP	２		IP	６		IP	４		IP	３		IP	５		IP	４		IP
+荻野　　裕介	5.00	0.23	4.7	４		G3	４		G3	４		IP	４	6	IP	３	5	IP	２		IP	４		IP	３		IP	３		IP	４		IP
+小池　　哲也	4.20	0.16	3.0	６		IP	３		IP	５		IP	３		IP	６		IP	落	4	IP	２		IP	３		IP	３	4	IP	３		IP
+鳥本　　智史	1.50	0.17	3.0	６		IP	５		IP	６		IP	６		IP	５		IP	４		IP	６		IP	６		IP	６		IP	６		IP

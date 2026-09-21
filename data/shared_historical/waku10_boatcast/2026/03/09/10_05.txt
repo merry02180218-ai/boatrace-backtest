@@ -1,0 +1,8 @@
+data=
+1	0
+近藤　　友宝	6.40	0.16	3.2	２		IP	１		IP	４		IP	１		IP	５		IP	２		IP	１		IP	２		IP	５		IP	５		IP
+中山　　　将	7.30	0.10	1.3	２		IP	１		IP	３		IP	６		IP	２		IP	４		IP	２		IP	１		IP	２		IP	１		IP
+廣瀬　　真也	6.20	0.16	2.5	３		IP	３		IP	２		IP	１		IP	４		IP	３		IP	５		IP	４		IP	２		IP	２		IP
+本吉　　正樹	3.90	0.15	3.6	２		IP	４		IP	１		IP	４	5	IP	５		IP	５		IP	６		IP	６		IP	３		IP	６		IP
+鈴木　結平太	1.60	0.24	4.6	６		IP	６		IP	５		IP	落		IP	４		IP	６	6	IP	６	6	IP	６	6	IP	４		IP	６		IP
+上平　　真二	4.50	0.20	4.6	３		IP	３		IP	５		IP	５		IP	４		IP	４		G1	４		G1	５		G2	４		G2	４		IP

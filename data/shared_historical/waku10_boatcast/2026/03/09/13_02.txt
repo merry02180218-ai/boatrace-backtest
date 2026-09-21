@@ -1,0 +1,8 @@
+data=
+1	0
+菅野　はやか	5.80	0.21	3.1	６		IP	３		G3	２		IP	２		IP	４		IP	１		IP	６		G3	５		G3	１		IP	２		IP
+松井　　友汰	5.80	0.16	3.0	１		IP	５		IP	５		IP	５		IP	５		IP	２		IP	２		IP	３		IP	２	3	IP	１		IP
+天野　　　誠	4.30	0.20	4.3	４		IP	２		IP	４		IP	５		IP	３		IP	４		IP	６		IP	５	2	IP	２		G3	４		G3
+河内　悠利杏	2.80	0.22	4.1	３		IP	６	5	IP	６	5	IP	６		IP	５		IP	２	3	IP	５		IP	４		IP	６		IP	５		IP
+冨成　　謙児	3.10	0.22	4.5	４		IP	５		IP	６	6	IP	４		IP	４		IP	５		IP	４		IP	５		IP	３		IP	５		IP
+山下　　大輝	4.80	0.17	3.6	２		IP	３		IP	２	3	IP	６		G1	４		IP	５		IP	３		IP	３		IP	５		G3	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　龍斗	8.20	0.17	3.1	１		IP	１		IP	３		IP	１		IP	２		IP	２		IP	２		IP	１		IP	５		IP	１		IP
+堀本　　翔太	2.40	0.18	4.4	欠		IP	１		IP	６		IP	５		IP	６		IP	６		IP	６		IP	４		IP	５		IP	５		IP
+石渡　翔一郎	4.60	0.17	4.0	５		IP	４		IP	１		IP	３		IP	２		IP	２		IP	５		IP	６		IP	４	4	IP	６		IP
+一色　　颯輝	5.20	0.21	3.6	６	6	IP	４		IP	６		IP	１		IP	３	5	IP	３		IP	２		IP	４		IP	２		IP	４		IP
+豊田　　祥生	2.50	0.17	3.4	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	２		IP	３		IP	５		IP
+出畑　　孝成	5.11	0.22	4.8	４		IP	２		IP	５		IP	３		IP	５		IP	１		IP	３		IP	３		IP	５		IP	転		IP

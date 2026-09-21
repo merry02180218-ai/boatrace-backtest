@@ -1,0 +1,8 @@
+data=
+1	0
+大場　　　敏	8.40	0.13	2.1	１		IP	１		IP	１		IP	１		IP	４		IP	妨		IP	１		IP	１		IP	１		IP	１		IP
+井上　　尚悟	5.80	0.18	3.7	５		IP	２		IP	２		IP	４		IP	２		IP	５	3	IP	３		IP	３	3	IP	２		IP	３		IP
+河上　　年昭	3.90	0.17	3.1	４		IP	６		IP	５		IP	２		IP	３		IP	５		IP	５		IP	４		IP	２		IP	５		G3
+谷川　　祐一	4.90	0.18	3.8	６		IP	２		IP	３	3	IP	３		IP	４		IP	５		IP	２		IP	３		IP	５		IP	３		IP
+中村　　桃佳	4.40	0.14	3.3	３		IP	２		IP	５		G1	３		G1	６		IP	５		IP	５		IP	６		IP	４		IP	２		IP
+佐藤　　右京	2.80	0.26	4.9	４		IP	３		IP	４		IP	６		IP	５		IP	４		IP	６		IP	５		IP	５		IP	５		IP

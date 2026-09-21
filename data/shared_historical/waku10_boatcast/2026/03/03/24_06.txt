@@ -1,0 +1,8 @@
+data=
+1	0
+青木　　　蓮	7.90	0.12	1.6	１		IP	１		IP	１		IP	１		IP	５		IP	１		G1	３		G2	１		IP	２		IP	６		IP
+坂井　　滉哉	3.20	0.18	4.1	３		IP	４	4	IP	５		IP	２		IP	４	3	IP	６		IP	６		IP	６		IP	４		IP	６		IP
+梅原　　祥平	4.60	0.16	2.7	４		IP	３		IP	６		IP	６		IP	５		IP	５		IP	２		IP	１		IP	５		IP	１		IP
+坂本　　一真	2.20	0.19	4.0	６		IP	６		IP	６		IP	４		IP	６		IP	４		IP	６		IP	６		IP	５		IP	３		IP
+上岡　　巧汰	1.80	0.13	2.7	５		IP	６		IP	４		IP	６	6	IP	６	6	IP	５	6	IP	６	6	IP	６	6	IP	４	6	IP	６	6	IP
+岡　　　暢祐	2.89	0.20	3.7	１		IP	エ		IP	４		IP	６		IP	５		IP	６		IP	６		IP	６		IP	４	5	IP	５		IP

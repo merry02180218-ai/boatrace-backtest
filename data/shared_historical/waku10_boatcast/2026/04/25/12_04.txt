@@ -1,0 +1,8 @@
+data=
+1	0
+島田　　一生	8.10	0.17	2.9	２		IP	１		IP	２		IP	６		IP	３		IP	１		IP	２		IP	１		G3	１		G3	１		IP
+坂東　　　満	4.40	0.16	2.9	４		IP	５		IP	３		IP	１		IP	６		IP	６		IP	２		IP	５		IP	失		IP	１	3	IP
+庄司　　孝輔	4.90	0.16	3.6	６		G3	３		IP	３		IP	３		IP	２		IP	５		G3	３		G3	５		IP	１	2	IP	５		IP
+中山　　　将	8.10	0.11	2.1	１		IP	２		IP	１		IP	３		IP	３		IP	１		IP	２		IP	２		IP	１	3	IP	４		IP
+庄司　樹良々	4.40	0.13	2.5	５		IP	４	4	IP	６	6	IP	１		IP	２		IP	６		IP	４		IP	２		IP	４		IP	５	4	G3
+田添　　康介	2.10	0.11	1.5	６		IP	５		IP	５		IP	５		IP	６		IP	４		IP	６	5	IP	３		IP	６		IP	６		IP

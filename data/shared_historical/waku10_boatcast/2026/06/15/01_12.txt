@@ -1,0 +1,8 @@
+data=
+1	0
+清水　　愛海	9.50	0.17	3.5	３		SG	１		SG	３		IP	１		IP	１		G2	１		IP	１		IP	３		IP	１		G1	１		G1
+木谷　　賢太	5.70	0.16	3.2	２		IP	６		IP	２		IP	３		IP	２		IP	３		IP	４		IP	４		IP	５		IP	１		IP
+小坂　　宗司	5.80	0.16	3.9	３	4	IP	３		IP	３		IP	３		IP	１	4	G3	４		IP	４		IP	６		IP	２		IP	３		IP
+岡本　翔太郎	3.50	0.11	2.1	５	5	IP	１		IP	６		IP	６		IP	５		IP	６		IP	５		G3	２	5	IP	４		IP	４		IP
+栗原　　直也	4.90	0.22	4.7	３		IP	４		IP	５	6	IP	３		IP	２		IP	６		IP	４		IP	２		IP	４	6	IP	３		IP
+汐崎　　正則	3.60	0.16	3.1	３		G3	４		IP	３		IP	５		IP	６		IP	３	5	IP	４		IP	５		IP	６		IP	５		IP

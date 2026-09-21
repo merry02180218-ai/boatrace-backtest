@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　一樹	7.30	0.12	2.6	１		IP	２		IP	２		IP	５		IP	２		IP	３		IP	６		IP	１		IP	１		IP	１		IP
+川添　　英正	5.30	0.16	4.0	５		IP	３		IP	６		IP	４		IP	３		IP	２		IP	３		IP	２		IP	３		G3	３		G3
+藤本　紗弥香	2.50	0.22	4.2	５		IP	３		IP	３		IP	６		IP	６		IP	５		IP	６		IP	５		IP	５		G3	５		IP
+吉川　　勇作	2.70	0.16	2.8	４		IP	４		IP	２		IP	５	6	IP	５		IP	６		IP	６		IP	６		IP	５		IP	５		IP
+木山　　誠一	4.50	0.13	2.7	５	6	IP	３		IP	４		IP	５		IP	６		IP	３		IP	４		IP	３		IP	３		IP	２		IP
+土井　　祥伍	2.60	0.28	5.4	６		IP	５		IP	４		IP	５		IP	５		IP	４		IP	６		IP	５		IP	３	5	IP	５	5	IP

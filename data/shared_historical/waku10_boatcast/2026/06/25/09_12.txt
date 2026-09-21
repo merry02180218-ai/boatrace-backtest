@@ -1,0 +1,8 @@
+data=
+1	0
+太田　　和美	8.30	0.14	3.1	２		IP	２		IP	１		IP	２		G1	２		IP	２		IP	１		IP	１		IP	５		IP	１		IP
+小山　　　勉	8.10	0.15	2.6	２		IP	２		IP	２		IP	２		IP	２		IP	２		IP	３		IP	１		IP	２	3	IP	２		IP
+大澤　　大夢	3.80	0.16	2.8	３		IP	６		IP	３		IP	６		IP	４		IP	５		IP	２		IP	４		IP	４		IP	５		IP
+高木　　圭大	2.90	0.15	2.8	６		IP	６		IP	６		IP	４		IP	５		IP	５		IP	３		IP	５		IP	３		IP	４		IP
+峰重　　力也	4.60	0.09	1.6	４		IP	６		IP	１		IP	４		IP	５		IP	２		IP	６		IP	３		IP	２		IP	５		IP
+小林　　文彦	3.30	0.22	4.8	６		IP	４		IP	５		IP	３		IP	４	4	IP	５		IP	５		IP	５	5	IP	５		IP	３	5	IP

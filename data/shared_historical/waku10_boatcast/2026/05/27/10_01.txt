@@ -1,0 +1,8 @@
+data=
+1	0
+出畑　　孝典	9.20	0.16	3.6	１		IP	１		IP	２		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+野間　　大樹	6.20	0.17	4.0	３		IP	３	3	IP	２		IP	４		IP	２		IP	４		IP	３		IP	３		IP	２		IP	３		IP
+河合　　三弘	5.20	0.19	3.9	１		IP	６		IP	２		IP	４		IP	５		IP	３		IP	２		G3	４		G3	２		G3	６		IP
+杢野　　誓良	2.90	0.16	3.0	５		IP	６		IP	２		IP	４		IP	５		IP	６		IP	６		IP	４		IP	５		IP	４	5	IP
+深水　慎一郎	2.70	0.19	4.1	５		IP	６		IP	６	6	IP	６	6	IP	５		IP	５		IP	６		IP	６		IP	２		IP	２		IP
+小林　　文彦	3.80	0.24	4.6	３		IP	４	4	IP	５		IP	５		IP	５	5	IP	５		IP	３	5	IP	３		IP	３		IP	５		IP

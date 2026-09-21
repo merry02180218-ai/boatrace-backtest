@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　理央	9.10	0.12	2.6	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		G1	２		G3	３		G3	１		IP
+佐藤　ほのか	5.40	0.22	4.0	３		IP	４		IP	３		IP	２		IP	５		G3	４		IP	２		G3	３		G3	４		IP	３		IP
+三嶌　こころ	4.50	0.22	4.4	４		IP	３		G3	２		G3	６		IP	３		IP	２		IP	５		G3	５		G3	４		IP	４		G3
+山下　　夏鈴	5.90	0.16	2.7	３		IP	６		IP	４		IP	４		IP	２		IP	５		IP	１		IP	１		IP	２		IP	３		G3
+石村　日奈那	2.00	0.19	3.7	５		IP	６		IP	６		IP	６		IP	５	6	IP	６	6	IP	６		G3	３		G3	４		IP	６		IP
+池田　　美優	1.40	0.22	5.1	６		IP	６		IP	６		IP	６		IP	５		IP	４		IP	６		IP	６		IP	６		IP	６		IP

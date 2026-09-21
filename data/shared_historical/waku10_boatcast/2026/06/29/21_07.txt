@@ -1,0 +1,8 @@
+data=
+1	0
+志道　　吉和	6.40	0.17	3.0	１		IP	６		IP	２		IP	３		IP	Ｆ		IP	１		IP	１		IP	２		IP	１		IP	６		IP
+田中　　　堅	4.60	0.16	4.0	４		IP	２		IP	４		IP	６		IP	３		IP	２		IP	４		IP	５		IP	２		IP	６		IP
+石井　　孝之	3.70	0.14	2.4	６		IP	５		IP	２		IP	４		IP	６		IP	４		IP	５		IP	４		IP	１	4	IP	６		IP
+永井　　亮次	3.30	0.18	3.8	６		IP	５		IP	５	5	G3	３	5	G3	６		IP	４		IP	２		IP	３	5	IP	６	5	IP	５		IP
+上瀧　　絢也	4.80	0.13	3.0	３		IP	３		IP	４		IP	４		IP	５		IP	２		IP	３		IP	５		IP	４		IP	３		IP
+大森　　　翼	3.20	0.17	3.9	６		IP	３		IP	３		IP	５		IP	４		IP	５		IP	６		IP	４		IP	４		IP	５		IP

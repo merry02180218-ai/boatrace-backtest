@@ -1,0 +1,8 @@
+data=
+1	0
+馬袋　　義則	7.60	0.14	3.6	２		G3	２		G3	１		IP	１		IP	５		IP	１		IP	２		IP	２		IP	４		IP	２		IP
+吉田　　宗弘	4.80	0.16	3.7	１		IP	３		IP	５		IP	２		IP	５		IP	４		IP	３		IP	５		IP	５		IP	３		IP
+中村　　魁生	6.90	0.15	3.1	２		IP	２		IP	２		IP	２		IP	４		IP	３		IP	２		IP	５		IP	１		IP	３		G1
+平石　　和男	5.50	0.18	4.5	２		IP	４		IP	５		IP	３		IP	３		IP	１		IP	５		IP	１		IP	６	3	IP	３		IP
+木下　　大將	4.90	0.13	3.3	４		IP	３		IP	２		IP	３		IP	２		IP	５	4	IP	５		IP	２		IP	５		IP	６		IP
+鈴木　　裕隆	3.10	0.19	4.0	６		IP	３		IP	４		IP	６		IP	５		IP	５		IP	３	5	IP	６		IP	４		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+桐生　　順平	7.90	0.12	2.5	６		G1	２		G1	４		G1	１		G1	４		G1	１		IP	５		IP	１		IP	１		SG	１		SG
+坪井　　康晴	8.20	0.13	3.7	３		G1	３		G1	２		G1	２		G2	４		IP	２		IP	２		IP	２		IP	１		IP	１	3	G1
+海野　康志郎	7.40	0.12	2.6	１		G1	１	1	IP	３		IP	２		IP	２		G1	１	1	IP	５	2	IP	１	1	IP	６		IP	５		SG
+中野　　次郎	5.80	0.13	2.4	４		G1	４		G1	２		G1	２		G1	１		G1	５		IP	６		G3	６		G3	２		IP	３		IP
+松尾　　　拓	3.90	0.17	4.4	５		G1	６		G1	３		IP	５		IP	５	6	G1	２	6	IP	３		IP	６	4	IP	３		IP	５		G3
+末永　　和也	5.20	0.16	3.8	４		G1	４		G1	５		G1	３		G1	５		G1	２		IP	４		IP	２	4	IP	５		G1	４		SG

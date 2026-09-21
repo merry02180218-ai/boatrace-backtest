@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　優美	9.20	0.12	2.3	２		G2	１		G2	１		G2	１		G3	１		G3	１		G3	２		G1	２		IP	１		IP	５		SG
+小池　　哲也	6.10	0.13	3.3	２		G2	３		IP	２		IP	２		IP	２		IP	４		IP	４		IP	４		IP	５		IP	２		IP
+柳生　　泰二	7.50	0.14	1.9	３		G2	２		IP	５		G1	３		G1	２		SG	３	4	IP	２		IP	２		IP	１	4	G1	３	4	IP
+島村　　隆幸	8.40	0.18	3.6	３		G2	２		IP	２		IP	２		IP	１		IP	２		G3	２		IP	３	3	IP	１		IP	１		IP
+宗行　　治哉	5.40	0.17	4.7	５		G2	４		IP	３		IP	４		IP	３		IP	３		IP	４		IP	２		IP	２		IP	５		G2
+浜野　　孝志	3.70	0.21	4.9	３		IP	４		IP	３		IP	４	5	IP	６		IP	５		IP	３		IP	４		IP	５		IP	５		IP

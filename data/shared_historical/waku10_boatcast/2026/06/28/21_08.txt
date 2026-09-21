@@ -1,0 +1,8 @@
+data=
+1	0
+中野　　和裕	5.50	0.17	3.0	３		G3	４		IP	２		IP	２		IP	２		IP	６		IP	２		IP	４		IP	５		IP	３		IP
+永井　　亮次	6.30	0.16	3.1	２		IP	６		IP	２		IP	４		G3	４		IP	１		IP	１		IP	３		IP	３		IP	３		IP
+白水　　勝也	6.56	0.21	3.8	４		IP	２		IP	６		IP	４		IP	エ	2	IP	１	2	IP	２		IP	３		IP	２		IP	１		IP
+長畑　　友輔	4.20	0.15	3.2	５		IP	４		IP	３		IP	５	6	IP	２		IP	６		IP	３		IP	６		IP	５		IP	１		IP
+小玉　　啓太	4.44	0.16	3.3	１		IP	３		IP	転		IP	３		IP	６		IP	３		IP	５		IP	４		IP	６		IP	４		IP
+寺本　　重宣	2.70	0.18	3.5	６	5	IP	４		IP	５		IP	４		IP	６		IP	５		G3	３		G3	５		IP	６		IP	４		IP

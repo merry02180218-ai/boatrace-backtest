@@ -1,0 +1,8 @@
+data=
+1	0
+久田　　敏之	9.20	0.10	1.7	１		IP	１		IP	１		IP	１		G1	４		G1	１		SG	６		SG	１		IP	１		IP	１		IP
+飯島　　昌弘	6.40	0.18	3.9	２		IP	１		IP	４		IP	３		IP	３		G1	２		G1	２		IP	３		IP	３		IP	Ｆ		IP
+津久井　拓也	5.70	0.13	2.2	５		IP	４		IP	３		IP	２		IP	２		IP	５		IP	５		IP	３		IP	１		IP	２		IP
+佐口　　達也	5.00	0.20	4.3	３		IP	２		IP	５		IP	３		IP	４		IP	３		IP	５		IP	３		IP	３		IP	４		IP
+富永　　正人	3.60	0.20	4.1	４		IP	４		IP	２		IP	６	6	IP	４		IP	６		IP	３	6	IP	４	6	IP	５		IP	５		IP
+蜂須　　瑞生	2.40	0.26	4.6	４		IP	５		IP	５		IP	６		IP	５		IP	４		IP	６		G3	４	5	G3	５		IP	５		IP

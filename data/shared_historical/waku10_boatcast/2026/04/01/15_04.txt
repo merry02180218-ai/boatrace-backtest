@@ -1,0 +1,8 @@
+data=
+1	0
+山戸　　信二	6.30	0.14	3.6	６		IP	４		IP	１		IP	１		IP	５		IP	５		IP	２		IP	１		IP	１		IP	３		IP
+今坂　　晃広	4.30	0.19	3.4	２		IP	４		IP	６		IP	４		IP	１		IP	５	5	IP	５		IP	５		IP	３		IP	４		IP
+松本　　博昭	7.00	0.16	3.9	２		IP	２		IP	２		IP	３		IP	１		IP	５		IP	１		IP	４		IP	２		IP	３		IP
+西岡　　蒼志	3.50	0.12	2.1	５		IP	５	6	IP	２		IP	３		IP	４		IP	５		IP	３		IP	６	6	IP	５		IP	５		IP
+富永　　修一	5.20	0.13	2.5	１		IP	２		IP	６		IP	３		IP	５		G1	３		G3	４		G3	３		IP	４		IP	４		IP
+前野　　竜一	3.60	0.20	4.1	４		IP	４		IP	４		IP	５		IP	４		IP	５		IP	５		IP	３		IP	３	5	IP	５		IP

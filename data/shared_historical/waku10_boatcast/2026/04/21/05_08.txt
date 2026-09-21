@@ -1,0 +1,8 @@
+data=
+1	0
+沢田　　昭宏	8.80	0.19	4.0	１		IP	４		IP	１		G3	２		G3	１		IP	２		IP	１		IP	１		IP	１		IP	２		IP
+坪内　　　実	4.30	0.21	4.1	６		IP	５		IP	６		IP	４		IP	２		IP	１		IP	３		IP	６		IP	２		IP	５		IP
+伯母　　芳恒	2.70	0.16	3.9	６		G3	６		IP	５		IP	４		IP	４		IP	３		IP	５		IP	４		IP	５		IP	６		IP
+伊藤　　誠二	6.40	0.13	2.0	２		IP	２		IP	５		IP	２		IP	３		IP	４	3	IP	１		IP	１		IP	３		IP	５	5	IP
+三村　　岳人	5.10	0.14	2.3	５		IP	３		IP	２		IP	５		IP	１	3	IP	４		IP	４		IP	２		IP	５		IP	４		IP
+高山　　秀雄	4.10	0.15	3.1	４		IP	２		IP	４	5	IP	３		IP	５		IP	６		IP	５		IP	５		IP	３		G3	３		G3

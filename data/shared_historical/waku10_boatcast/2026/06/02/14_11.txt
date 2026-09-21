@@ -1,0 +1,8 @@
+data=
+1	0
+林　　　祐介	9.60	0.11	2.4	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP
+田中　信一郎	5.70	0.13	3.5	６		IP	１		IP	２		IP	５		IP	２	3	G1	２		G1	５		IP	３		IP	５		IP	３		IP
+加藤　　政彦	7.10	0.13	2.4	２	5	IP	２		IP	２		IP	３		IP	３		IP	１		IP	２		IP	１		IP	５		IP	４		IP
+武富　　智亮	4.50	0.18	3.3	５		IP	２		IP	６		IP	３	5	IP	３		IP	３		IP	４		IP	４		G2	６		IP	３		IP
+黒井　　達矢	5.30	0.18	3.1	１		IP	３		IP	４		IP	４	4	IP	１		IP	Ｆ		IP	２		G1	６		G1	５		IP	３		IP
+烏野　　賢太	2.60	0.18	4.5	３		IP	５		IP	６		IP	５	5	IP	５		IP	６		IP	４	5	IP	６		IP	３		IP	６		G3

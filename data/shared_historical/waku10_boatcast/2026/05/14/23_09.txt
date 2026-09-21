@@ -1,0 +1,8 @@
+data=
+1	0
+青木　幸太郎	8.50	0.18	3.1	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	６		IP	２		IP	１		IP	１		IP
+山口　　　亮	3.70	0.17	3.9	４		IP	６		IP	３		IP	６		G3	５	3	G3	６		IP	３		IP	２		IP	５		IP	３		IP
+村田　　浩司	5.00	0.16	3.6	３		IP	２		IP	５		IP	２		IP	６		IP	２		IP	３		IP	６		IP	２		IP	５		IP
+石川　　吉鎬	4.50	0.19	3.8	４		IP	６		IP	５		IP	３		IP	４		IP	３		IP	４	6	IP	３		IP	３		IP	３		IP
+岡本　翔太郎	5.22	0.10	2.5	２		IP	落		IP	３		IP	３		IP	１		IP	２		IP	５		G3	６	4	G3	４		IP	５		IP
+塩田　　雄一	2.40	0.17	4.2	５		IP	５		IP	３		IP	５	5	IP	６		IP	５		IP	６		IP	６		IP	６		IP	３		IP

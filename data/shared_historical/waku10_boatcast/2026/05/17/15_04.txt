@@ -1,0 +1,8 @@
+data=
+1	0
+上村　慎太郎	5.60	0.21	4.2	１		IP	３		IP	１		IP	５		IP	５		IP	２		IP	２		IP	５		IP	４		IP	４		IP
+折下　　寛法	6.80	0.18	2.9	３		IP	２		G3	１		G3	２		IP	１		IP	４		IP	２		G3	２		G3	５		IP	４		IP
+萬　　　正嗣	3.70	0.21	4.0	６		IP	４		IP	２		IP	５		IP	６	5	IP	５		IP	１	4	IP	６		IP	３	5	IP	５		IP
+仲口　　博崇	5.60	0.19	3.9	４		IP	２	3	IP	６		G1	４	3	G1	５		IP	６		G3	１		G3	２	2	IP	１		IP	３		IP
+烏野　　賢太	4.20	0.15	3.1	４		IP	５		IP	３		IP	５		IP	３		IP	４		G3	５		G3	３	4	IP	５	4	IP	２		IP
+山口　　隆史	2.90	0.20	4.6	５		IP	４	5	IP	５		IP	４		IP	５		IP	６		IP	４		IP	５		IP	４		IP	４		IP

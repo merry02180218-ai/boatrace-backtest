@@ -1,0 +1,8 @@
+data=
+1	0
+垂水　　　悠	7.60	0.12	2.6	１		IP	２		IP	１		IP	２		G3	６		IP	１		IP	１		G1	１		IP	６		IP	３		IP
+赤池　　修平	2.80	0.19	4.6	２		IP	６		IP	６		IP	５		IP	４	5	IP	３		IP	５		IP	５		IP	６		IP	６		IP
+中岡　　正彦	5.90	0.09	2.7	５		SG	４		SG	１		IP	４		IP	３		IP	１	1	IP	３		IP	５		G1	１	4	IP	Ｆ		IP
+藤山　　湧太	1.75	0.32	5.7	５		IP	Ｆ	6	IP	６	6	IP	４	6	IP																		IP
+井川　　大作	5.50	0.14	2.2	３		IP	３		IP	１		IP	４		IP	２		IP	４		IP	２		IP	３		IP	６		IP	５		IP
+烏野　　賢太	3.50	0.18	4.7	５		IP	６		IP	４	5	IP	６		IP	３		IP	６		G3	５		IP	４		IP	３	5	IP	２		IP

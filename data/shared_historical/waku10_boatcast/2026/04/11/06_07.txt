@@ -1,0 +1,8 @@
+data=
+1	0
+津田　　陸翔	7.90	0.14	3.5	２		IP	２		IP	６		IP	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP
+河内　　一馬	3.50	0.26	4.3	３		IP	５		IP	６		IP	５		IP	５		IP	５	3	IP	４		IP	４		IP	３		IP	３		IP
+長谷川　晴哉	6.22	0.19	4.0	４		IP	転		IP	２		IP	１		IP	５		IP	１		IP	１		IP	６		IP	６		IP	１		IP
+坂本　　雄紀	7.10	0.14	2.1	１		IP	３		IP	４		IP	４		IP	１		IP	６		IP	１		IP	２		IP	１		IP	２		IP
+川辺　　郭人	2.80	0.15	2.5	５		IP	１		IP	５		IP	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP	３	4	IP
+浦野　　　海	3.10	0.19	4.0	２		IP	６		IP	６		IP	２		IP	２	5	IP	６		IP	６		IP	６		IP	６		IP	６		IP

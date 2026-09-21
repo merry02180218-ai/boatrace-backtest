@@ -1,0 +1,8 @@
+data=
+1	0
+古結　　　宏	9.20	0.13	3.0	２		G1	１		IP	１		IP	４		G1	３		G1	１		IP	１		IP	１		IP	１		IP	１		G1
+瓜生　　正義	6.30	0.14	3.6	４		G1	３		G1	１		G1	２		IP	５		G1	１		IP	６		G1	５		G1	６		G1	１		IP
+西島　　義則	7.90	0.19	3.8	１	2	IP	１	2	IP	２	2	IP	１	1	IP	１		IP	２	2	IP	５	1	IP	１	1	IP	５	2	IP	３	2	IP
+萩原　　秀人	6.90	0.11	3.1	３		IP	２		G1	４		IP	３		G1	３	5	G1	２		IP	３		IP	１		G3	２		G1	６		G1
+平尾　　崇典	5.80	0.16	3.1	３		IP	２		IP	２		IP	３	6	G1	３		IP	４		G1	６		G2	２		IP	６		IP	３	4	IP
+田中　信一郎	3.90	0.16	3.4	２		IP	４		IP	４	5	IP	３		IP	４	5	IP	４		G1	５		G1	６		IP	５		IP	５		G3

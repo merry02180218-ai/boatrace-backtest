@@ -1,0 +1,8 @@
+data=
+1	0
+中田　　竜太	7.90	0.15	3.2	５	2	IP	３		G1	４		G1	１		G1	１		G2	３		G2	３		G1	２		G1	１		IP	１		IP
+石塚　　久也	7.20	0.17	4.1	３		IP	３		IP	１		IP	２		IP	２		IP	３		IP	１		IP	３		IP	４		IP	２		IP
+黒井　　達矢	5.40	0.16	3.4	２		IP	３		G1	３		G1	３		IP	３		IP	３		G1	５		IP	６		IP	５		IP	２		IP
+平川　　香織	5.60	0.17	3.0	５		IP	３		IP	４		IP	２		IP	５	6	IP	３		IP	２		IP	３		G3	１		G3	５		IP
+鈴木　　　博	5.50	0.17	3.0	１		IP	２		IP	４		IP	３		IP	５		IP	３		IP	６		IP	２	4	IP	３		IP	４		IP
+松本　　純平	4.20	0.17	4.0	６		IP	５		IP	５		IP	２		IP	６		G1	３		G1	６		G1	１	5	IP	３		IP	５		IP

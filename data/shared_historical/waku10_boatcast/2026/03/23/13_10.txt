@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　昂明	10.00	0.14	2.7	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+山本　　修一	6.00	0.16	2.7	２		IP	３		IP	２		IP	２		IP	３		IP	２		IP	４		IP	６		G1	６		G1	２		IP
+吉川　　勇作	4.60	0.14	2.4	２		IP	３		IP	２		IP	２		IP	３		IP	６		IP	６		IP	４		IP	５		IP	５		IP
+待鳥　　雄紀	4.90	0.19	3.7	３		IP	２	5	IP	５		IP	６		IP	４		IP	４		IP	４		IP	２		IP	２		G3	４		IP
+尾道　　佳諭	2.60	0.16	3.2	３		IP	６		IP	３		IP	５		IP	５		IP	６		IP	５		IP	５		IP	５		IP	５		IP
+吉永　　則雄	3.70	0.17	3.9	５		IP	６	4	IP	４		IP	６		IP	３	5	IP	４		IP	６		IP	３		IP	３		IP	４		IP

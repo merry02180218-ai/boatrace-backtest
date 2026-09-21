@@ -1,0 +1,8 @@
+data=
+1	0
+大池　　佑来	10.30	0.12	1.4	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1	１		G1	１		G1
+大野　　芳顕	7.20	0.16	2.6	２		IP	２		IP	１		IP	４		G3	３		G3	３		G3	２		IP	４		IP	１		IP	２		IP
+森定　　晃史	6.30	0.16	3.1	４		IP	２		IP	４		IP	１		IP	２		IP	４		IP	３		IP	４		IP	３		IP	２		IP
+羽野　　　諒	4.10	0.14	2.3	３		IP	５	3	G3	４		IP	６		IP	４		IP	５		IP	４		IP	３		IP	２		IP	４		IP
+永井　　亮次	3.80	0.17	3.1	４		IP	４		IP	６		IP	４	4	IP	６		IP	６		IP	６		IP	２	4	IP	１		IP	５		IP
+竹井　　貴史	6.20	0.16	2.1	５		IP	２		IP	２		IP	５		IP	３		IP	２		IP	１		IP	４		IP	３	5	IP	２		IP

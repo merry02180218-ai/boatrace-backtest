@@ -1,0 +1,8 @@
+data=
+1	0
+塚田　　修二	4.10	0.23	4.8	３		IP	２		IP	４		IP	６		IP	２		IP	６		IP	３		IP	５		IP	４		IP	６		IP
+荻野　　裕介	5.60	0.21	4.6	５		IP	６		G3	２		IP	２		IP	６		IP	１		IP	１		IP	３		IP	３		IP	４		IP
+廣中　智紗衣	5.90	0.20	4.3	２		IP	２		IP	５		IP	１		IP	２		IP	６		G3	３		G1	３		G3	６		G3	３		G3
+福来　　　剛	6.80	0.16	2.3	２		IP	２		G1	３		IP	５		IP	４		IP	１		IP	５		IP	２		IP	２		IP	１		G1
+後藤　　翔之	6.44	0.17	3.4	３		IP	５		IP	３		IP	４		G2	２	6	IP	１	4	IP	欠		G2	６		G2	２		IP	１		IP
+阿部　　未侑	1.20	0.34	5.3	５	5	IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP

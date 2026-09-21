@@ -1,0 +1,8 @@
+data=
+1	0
+栗原　　一馬	6.40	0.15	2.4	５		IP	１		IP	６		IP	３		IP	１		IP	６		IP	３		IP	１		IP	１		IP	２		IP
+繁野谷　圭介	6.20	0.18	3.1	４		IP	４		IP	４		IP	１		IP	４		IP	２		IP	１	3	IP	２		IP	４		IP	３	3	IP
+江藤　　敦宏	4.00	0.20	4.3	４		IP	５	4	IP	２		IP	３		IP	４		IP	転		IP	４		IP	５	4	IP	５		IP	４		IP
+宇留田　翔平	4.60	0.15	2.9	３	5	G3	１		IP	３		IP	６		IP	２		IP	５		IP	５		IP	３	2	IP	４		IP	６		IP
+池田　　雄一	3.50	0.14	3.1	３		IP	４		G1	３		G1	６		IP	５		IP	６		IP	５		IP	６		IP	４	6	IP	３		IP
+佐藤　　博亮	5.50	0.13	2.4	３		IP	５		IP	２		IP	５		IP	１		IP	５		IP	２		G1	５		IP	２		IP	３		IP

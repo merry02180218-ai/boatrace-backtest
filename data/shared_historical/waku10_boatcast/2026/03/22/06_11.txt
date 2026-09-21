@@ -1,0 +1,8 @@
+data=
+1	0
+谷津　　幸宏	9.10	0.10	2.2	５		IP	１		IP	１		IP	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+杉山　　正樹	6.30	0.16	3.8	３		IP	６	3	IP	１		IP	２		IP	４		G1	４		G1	５		G1	２		IP	２		IP	２		IP
+大野　　芳顕	6.44	0.14	2.2	４		IP	５		IP	１		IP	２		IP	４		IP	２		IP	欠		IP	２		IP	２		IP	３		IP
+中村　　将隆	4.90	0.17	2.8	５		IP	６		IP	２		IP	２		IP	４	6	IP	６		IP	２		IP	３		IP	４		IP	３		IP
+大江　　　純	3.70	0.17	3.6	５		IP	２	4	IP	２	6	IP	５		IP	６		IP	５		IP	６	6	IP	３		IP	６		IP	３		IP
+春園　　功太	4.10	0.13	2.3	５		IP	６		IP	５	5	IP	３		IP	４		IP	２		IP	４		IP	５		IP	１		IP	５		IP

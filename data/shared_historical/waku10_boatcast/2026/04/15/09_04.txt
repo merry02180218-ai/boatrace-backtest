@@ -1,0 +1,8 @@
+data=
+1	0
+谷口　　佳蓮	8.40	0.13	2.3	１		IP	１		IP	１		IP	２		IP	４		IP	１		IP	１		IP	２		IP	１		G3	４		IP
+中田　　夕貴	4.00	0.19	4.1	６		IP	４		G1	３		G1	３		IP	３		IP	２		IP	５		IP	６	3	IP	５		G3	５		IP
+豊田　　　結	6.00	0.15	2.3	３		G3	３		IP	３		IP	２		IP	５		IP	３		IP	１		IP	４		IP	２		G3	４		G3
+畑田　　希咲	2.40	0.21	3.7	６		IP	５		IP	５		IP	６		IP	６		IP	５		IP	４		IP	６		IP	５		IP	２		IP
+倉持　　莉々	5.56	0.16	2.9	４		IP	２		IP	２		IP	５		IP	３		IP	３		G1	転		G1	５		G1	５		G3	１		IP
+龍田　　真白	3.10	0.11	2.2	５		IP	２		IP	４		IP	３		IP	５		IP	５		IP	６		IP	６		IP	４		IP	６		IP

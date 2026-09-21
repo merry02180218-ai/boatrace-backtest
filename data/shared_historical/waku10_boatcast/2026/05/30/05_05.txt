@@ -1,0 +1,8 @@
+data=
+1	0
+中里　　優子	8.00	0.16	2.9	３		IP	２		G3	２		IP	１		IP	３		IP	２		IP	２		G3	１		G3	１		IP	３		IP
+佐藤　ほのか	3.70	0.16	3.3	２		IP	５		IP	４		IP	６		IP	５		G3	５		G3	４		IP	４		IP	４		IP	３		IP
+細川　　裕子	7.30	0.17	3.5	４		IP	２		G2	３		IP	１		IP	４		IP	１		IP	２		IP	３		IP	２		G3	２		G3
+河内　悠利杏	2.30	0.20	3.2	６		IP	６		IP	４		IP	６		IP	５		G3	５		G3	４		G3	６		IP	３		IP	６	5	IP
+浜田　亜理沙	5.70	0.18	3.8	３		G3	３		G2	４		IP	２		G1	２		G1	５		G1	６		G1	３		G1	４		IP	３		IP
+畑田　　希咲	1.50	0.21	4.6	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	５		IP	Ｆ	5	IP	４		IP	６		IP

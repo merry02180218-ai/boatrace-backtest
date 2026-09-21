@@ -1,0 +1,8 @@
+data=
+1	0
+大橋　　由珠	7.40	0.22	3.6	２		IP	転		IP	４		G3	１		G3	１		IP	２		IP	２		G3	１		IP	３		IP	１		IP
+渡辺　　千草	6.60	0.17	3.5	２		G3	３		G3	１		G3	３		G3	妨		G3	３		IP	２		IP	４		G3	１		IP	２	3	IP
+山崎　小葉音	3.80	0.14	2.1	２		IP	４		IP	３		IP	６		IP	６		IP	６		IP	６		IP	５		IP	２		IP	３		G3
+廣中　智紗衣	5.50	0.22	4.4	２		G3	４		G1	３		G1	２		G3	３		IP	４		IP	５		IP	３		IP	２		IP	６		IP
+吉田　　彩乃	3.60	0.20	3.7	５		IP	５		IP	４		IP	３		IP	４		IP	２		IP	５		G3	５	6	IP	４	6	IP	５		IP
+長野　　未来	2.40	0.24	4.3	６		IP	５		IP	６		IP	３		IP	６		IP	６		IP	４		IP	６		IP	３		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+大原　　祥昌	9.00	0.13	2.0	１		IP	１		IP	２		IP	３		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		G3
+安河内鈴之介	5.33	0.15	3.3	３		IP	落		IP	２		IP	３		IP	４		IP	４		IP	２		IP	転		IP	４		IP	２		IP
+鈴木　　章司	5.40	0.14	2.9	５	4	IP	２		IP	３		IP	４		IP	５		IP	３		IP	３		IP	３		IP	３		IP	２		IP
+西岡　　顕心	6.80	0.12	3.0	４		G1	３		SG	２		SG	３		IP	３		IP	２		G1	２		G1	６		G1	１		G2	６	5	G1
+藤山　　湧太	2.70	0.17	3.1	２		IP	４		IP	５		IP	３		IP	６		IP	５	6	IP	６		IP	６		IP	６	6	IP	６	6	IP
+井上　　慧人	3.10	0.19	4.1	４		IP	６		IP	６	5	IP	５		IP	４	5	IP	６		IP	３		IP	４		IP	３		IP	５		IP

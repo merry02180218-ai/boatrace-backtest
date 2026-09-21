@@ -1,0 +1,8 @@
+data=
+1	0
+栗城　　　匠	8.00	0.16	2.9	４		IP	１		IP	１		IP	６		G2	４		G2	１		IP	２		IP	１		G1	１		IP	１		IP
+廣瀬　　篤哉	4.80	0.14	2.8	４		IP	５	4	IP	３		IP	３		IP	４		IP	４		IP	４		IP	１		IP	４		IP	４		IP
+板倉　　敦史	3.30	0.17	3.6	６		IP	３		IP	５		IP	２		IP	６		G3	４		G3	５		G3	４		IP	６		IP	４		IP
+間嶋　　仁志	3.30	0.19	4.4	４		IP	４	2	G3	６	2	G3	６	3	IP	１	2	IP	５		IP	６		IP	６		IP	６	2	IP	２		IP
+菊池　　峰晴	2.90	0.23	4.7	５		IP	５		IP	５		IP	６		IP	３	6	IP	３		IP	５	4	IP	５		IP	５		IP	４		IP
+加藤　　啓太	3.60	0.18	4.1	５		IP	６		IP	５	5	IP	３		IP	４	5	IP	５		IP	２		IP	６		IP	４		IP	３		IP

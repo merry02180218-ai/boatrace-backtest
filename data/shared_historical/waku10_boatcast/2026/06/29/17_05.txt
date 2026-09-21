@@ -1,0 +1,8 @@
+data=
+1	0
+坂口　　　周	9.80	0.14	2.9	１		IP	１		G2	２		G2	２		G3	１		G3	１		IP	１		G3	１		G3	１		IP	１		IP
+伊久間　陽優	5.40	0.14	3.7	２		IP	５		IP	３		IP	６		IP	４		IP	２		IP	３		IP	２		IP	６		IP	１	4	IP
+大町　　利克	4.33	0.13	3.6	６		IP	２		IP	Ｌ	2	IP	３		IP	６	4	IP	６		IP	３		IP	２		IP	３		IP	５		IP
+柳内　　敬太	6.60	0.17	3.8	３		IP	２		IP	２		IP	２		IP	３		IP	４		IP	３		IP	４		IP	１		IP	３		IP
+庄司　　孝輔	3.90	0.16	3.4	４		IP	３		IP	４		IP	３		IP	５		IP	５		IP	４	4	IP	４	4	IP	６		G3	３	6	G3
+妻鳥　　晋也	4.10	0.19	3.8	２		G3	５		IP	４		IP	４		IP	５		IP	６		IP	３	5	IP	４		IP	２		IP	５		G3

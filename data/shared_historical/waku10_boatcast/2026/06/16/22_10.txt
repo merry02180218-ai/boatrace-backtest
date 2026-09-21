@@ -1,0 +1,8 @@
+data=
+1	0
+戸敷　　晃美	8.00	0.18	2.9	１		G3	１		IP	２		IP	２		IP	１		IP	１		IP	５		IP	２		IP	１		IP	４		IP
+川野　　芽唯	6.60	0.16	4.3	１		G3	６		IP	１		G3	４		G2	４		G2	３		G2	２		G3	４		G3	２		G3	２		IP
+中川　　りな	5.60	0.16	3.5	２		G3	２		G3	６		IP	３		G3	２		IP	３		IP	３		IP	１		IP	５		IP	６		IP
+落合　　直子	5.20	0.13	2.7	５		G3	１		G3	１		G3	４		G3	２		IP	６		IP	３		IP	６		IP	３		G3	４		G3
+平田　さやか	5.60	0.17	2.9	５		G3	２	3	G3	３	3	IP	４		IP	２		IP	４	4	IP	５		IP	２		IP	４		IP	１		IP
+薮内　　瑞希	3.60	0.17	4.7	５		G3	４		G3	６		G3	４		G3	３		IP	６		IP	５		IP	２		IP	５		IP	３	5	G3

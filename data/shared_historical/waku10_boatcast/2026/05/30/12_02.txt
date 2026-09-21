@@ -1,0 +1,8 @@
+data=
+1	0
+吉永　　浩則	7.20	0.14	3.0	５		IP	Ｆ		IP	２		IP	２		IP	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP
+篠木　亜衣花	3.70	0.26	4.3	２		IP	４		IP	６		G3	４		G3	４		G3	６		IP	６		G3	３		G3	５		IP	３		IP
+中村　　将隆	5.60	0.15	3.2	２		IP	６	2	IP	６		IP	３		IP	３		G3	２		G3	２	4	IP	２		IP	３		IP	４		IP
+酒井　　俊弘	3.10	0.10	1.8	６		IP	Ｆ		IP	２		IP	５		IP	５	6	IP	２	6	IP	６	6	IP	６		IP	４		IP	４	3	IP
+坪口　　竜也	6.50	0.15	3.3	２		IP	２		IP	４	4	IP	２		IP	４		IP	３		IP	２		IP	２		IP	６		IP	１	6	IP
+得山　　大輝	1.60	0.13	2.5	６		IP	６		IP	５		IP	６		IP	５		IP	４		IP	５		IP	６		IP	６		IP	６		IP

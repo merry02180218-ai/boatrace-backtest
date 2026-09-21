@@ -1,0 +1,8 @@
+data=
+1	0
+福来　　　剛	9.20	0.14	2.4	１		IP	１		IP	１		IP	１		IP	１		G1	１		G1	２		IP	１		IP	５		IP	１		IP
+津久井　拓也	5.70	0.16	3.1	３		IP	４	3	IP	５		IP	２		IP	２		IP	６		IP	３		IP	３		IP	１	3	IP	３		IP
+井上　　一輝	7.20	0.16	3.8	２		IP	１		IP	２		IP	３		IP	１		IP	３		G1	２		IP	５		IP	１		IP	５		G1
+永田　　秀二	4.30	0.18	3.3	５		IP	２		IP	４		IP	５		IP	２		IP	３		IP	５		IP	６		IP	３		IP	４		IP
+飛田　　江己	6.10	0.13	2.6	２		IP	１		IP	１		IP	３		IP	３	4	IP	５		IP	６		IP	６	4	IP	３		IP	１		IP
+安達　　裕樹	5.10	0.17	3.2	４		IP	６		IP	３		IP	４		IP	３		IP	３		IP	２	5	IP	４		IP	４		IP	２		IP

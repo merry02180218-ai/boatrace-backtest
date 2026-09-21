@@ -1,0 +1,8 @@
+data=
+1	0
+柴田　　愛梨	4.90	0.23	4.3	３		IP	１		IP	６		IP	６		IP	４		IP	３		G3	１		G3	６		IP	２		G3	５		G3
+来田　　衣織	4.20	0.16	4.2	５		IP	１	1	IP	５		G3	６		IP	３		IP	３		IP	２		IP	５		IP	４		IP	６		IP
+武藤　　綾子	2.70	0.20	3.6	５		IP	４		IP	４		IP	５		IP	６		IP	４	4	G3	５		IP	６		IP	３		G3	６		IP
+土屋　実沙希	5.67	0.21	3.7	６		IP	３		IP	３		IP	１		IP	２		IP	４		IP	４		IP	３		IP	４		IP	欠		IP
+薮内　　瑞希	4.30	0.11	2.1	６		IP	２		IP	５		IP	６		IP	３		IP	３		IP	４		IP	１	4	IP	６		IP	４		IP
+田上　　　凜	4.50	0.20	3.1	２		G3	２		G3	５		IP	２		IP	５		IP	４		IP	６		IP	３		IP	５		IP	４		IP

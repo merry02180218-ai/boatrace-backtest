@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　一心	6.90	0.17	2.9	１		IP	転		IP	２		IP	１		IP	１		IP	４	2	IP	２		IP	１		IP	６		IP	２		IP
+横井　　健太	6.30	0.18	3.8	１	3	IP	２		IP	６		IP	４		IP	４		IP	２		IP	２		IP	４		IP	１		IP	３		IP
+福山　恵里奈	5.30	0.16	2.2	６		IP	１		G3	６		IP	３		IP	４		IP	１		IP	３		IP	３		IP	６		G3	２		IP
+本村　　　大	2.00	0.21	3.5	３		IP	５		IP	６		IP	６		IP	５		IP	６	5	IP	５	5	IP	５		IP	５	5	IP	６	6	IP
+山地　　正樹	5.00	0.19	3.8	５	2	IP	５	2	IP	１	2	IP	２	2	IP	６		IP	１	2	IP	３	4	IP	４	2	G3	６	2	G3	３	4	IP
+小川　　晃司	4.20	0.17	3.9	４		IP	４		IP	５		IP	３		IP	５		IP	３		IP	５		IP	３		IP	５		IP	２		IP

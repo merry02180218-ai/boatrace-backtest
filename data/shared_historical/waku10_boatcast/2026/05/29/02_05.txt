@@ -1,0 +1,8 @@
+data=
+1	0
+細川　　明人	7.10	0.17	3.4	２		IP	１		IP	１		IP	５		IP	１		IP	１		IP	２		IP	２		IP	６		IP	４		IP
+八木　　治樹	4.70	0.18	3.6	２		IP	４		IP	３		IP	４		IP	５		IP	４		IP	６		IP	４		IP	４		IP	１		IP
+宮地　　博士	4.40	0.19	3.1	３		IP	４		IP	転	4	IP	２		IP	６		IP	４		IP	６		IP	２		IP	５		IP	１		IP
+栗原　　謙治	1.80	0.22	5.1	５	5	IP	５	5	IP	５	6	IP	５		IP	４		IP	６		IP	５	6	IP	６		IP	６		IP	６		IP
+佐々木　完太	6.00	0.18	3.3	６		G1	１	3	IP	４		IP	２		G1	４	6	G1	３		IP	５		SG	２	4	SG	５		IP	３	6	IP
+幸野　　史明	2.20	0.13	3.3	５	5	IP	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	３		IP	５		IP	４		IP

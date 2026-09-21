@@ -1,0 +1,8 @@
+data=
+1	0
+金田　　幸子	6.70	0.14	3.0	５		IP	６		IP	１		G3	２		G3	２		G3	１		IP	３		IP	１		IP	４		IP	２		IP
+荒井　　輝年	5.60	0.13	2.8	４		IP	３		IP	４		IP	２		IP	５		IP	３		IP	２	3	IP	４	4	IP	５		IP	１		IP
+渡辺　　　崇	5.80	0.14	2.4	１		IP	５		IP	１		IP	２		G3	５		G3	２		IP	５		IP	５		IP	２		IP	３		IP
+木山　　大聖	2.80	0.19	3.7	６	5	IP	２		IP	６		IP	６		IP	６		IP	５		IP	４	5	IP	５		IP	３		IP	５		IP
+大原　　祥昌	5.40	0.14	2.9	４		IP	１		IP	５		IP	２		IP	１		IP	５	6	G3	４	6	IP	５		IP	１		IP	５		IP
+渡邉　　和将	5.00	0.16	3.0	３		IP	４		IP	５		G1	６		G1	４		G1	６		SG	２	5	IP	３		IP	１	5	IP	５		G1

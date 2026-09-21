@@ -1,0 +1,8 @@
+data=
+1	0
+奥村　明日香	7.50	0.20	3.5	１		IP	１		G3	１		IP	２		G3	５		G3	１		IP	２		IP	２		G3	６		IP	２		IP
+田添　　康介	3.20	0.18	5.1	３		IP	６		IP	５		IP	１		IP	４		IP	４		IP	６		IP	５		IP	６		IP	６		IP
+森永　　　淳	7.50	0.13	2.1	１		IP	２		G2	６		G2	１	4	IP	２		IP	２		IP	１		IP	５		IP	３		IP	１		IP
+深見　亜由美	2.90	0.22	4.7	４		IP	５		IP	６		IP	４		IP	４		IP	４		IP	６		IP	６	6	IP	４		IP	４		IP
+入澤　　友治	6.20	0.16	3.2	３		IP	４		IP	４		IP	１		IP	４		IP	５		IP	１		IP	４		IP	２		IP	１		IP
+松山　　裕基	3.80	0.16	3.8	５		IP	５		IP	４		IP	５		IP	５		IP	５		IP	２		IP	５		IP	２	5	IP	３		IP

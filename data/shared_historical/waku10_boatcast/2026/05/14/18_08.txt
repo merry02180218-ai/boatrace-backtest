@@ -1,0 +1,8 @@
+data=
+1	0
+川合　　理司	5.30	0.13	2.6	１		IP	４		IP	３		IP	２		IP	５		IP	４		IP	４		IP	６		IP	２		IP	３		IP
+野長瀬　正孝	6.00	0.19	3.6	４		IP	４		IP	２		IP	３		IP	１	3	IP	２		IP	３		IP	４		IP	５		IP	２		IP
+内山　　峻輔	6.60	0.15	2.8	２		IP	５		IP	３		IP	２		IP	２		G3	４		G3	２	2	G3	１	4	G3	３		IP	３		IP
+深井　　利寿	5.80	0.13	3.0	５		IP	３		IP	３		IP	４		IP	２		IP	１		IP	転		IP	３		IP	３		IP	１		IP
+田代　　達也	4.11	0.18	3.0	６		IP	１	6	IP	４		IP	５		IP	３	6	IP	６	4	IP	２		IP	６		IP	４	6	IP	転		IP
+上田　　龍星	4.20	0.19	3.5	６		IP	６		IP	２		IP	２		IP	５		G1	５		G1	６		G1	６		SG	４	4	IP	２		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+乃村　　康友	6.60	0.14	3.1	Ｆ		IP	１		IP	２		IP	３		G3	４		IP	５		IP	１		IP	１		IP	１		IP	３		IP
+竹井　　貴史	8.20	0.17	3.7	２		IP	２		G2	４		G2	１		IP	４		IP	２		IP	１		IP	１		IP	２		IP	２		IP
+齊藤　　　優	5.70	0.12	2.1	２		IP	６		IP	１		IP	３		IP	２		IP	５		IP	１		IP	３		IP	４		G3	５		G3
+栗山　　繁洋	2.70	0.18	4.0	５		IP	５		IP	６		IP	６		IP	６		IP	３		IP	５		IP	５		IP	４		IP	３		IP
+松田　　祐季	5.56	0.14	3.4	５		G1	４	4	IP	２		IP	落	4	IP	３		IP	２		IP	５		G3	３		IP	１	4	IP	５		G1
+谷島　　咲希	1.60	0.20	4.3	６		IP	４		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP

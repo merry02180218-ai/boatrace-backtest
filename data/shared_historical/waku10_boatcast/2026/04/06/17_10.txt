@@ -1,0 +1,8 @@
+data=
+1	0
+井内　将太郎	9.00	0.11	1.5	１		IP	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	１		IP	３		IP
+下出　　卓矢	5.44	0.13	1.8	１		IP	欠		IP	４		IP	２		IP	５		IP	２		IP	６		G2	３		IP	６		IP	３		IP
+栗城　　　匠	7.90	0.15	3.3	１		IP	２		IP	４		IP	４		G1	１		IP	３		G1	３		IP	２		IP	１		IP	１		IP
+竹下　　大樹	5.10	0.14	3.6	５		IP	４		IP	６		IP	３		IP	３		G3	３		G3	３		G1	３		G1	３		IP	５		IP
+占部　　一真	2.10	0.13	2.6	６		IP	４	4	IP	６		IP	６		IP	５		IP	５		IP	６		G3	５		IP	６		IP	３		IP
+福嶋　　智之	2.80	0.16	2.9	６		IP	６		IP	６		IP	４	5	IP	５		IP	５		IP	２		IP	６		IP	４		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　裕司	7.30	0.14	3.4	３		IP	５		IP	３		IP	２		IP	６		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+後藤　　美翼	6.50	0.18	4.2	２		IP	３		G3	１		IP	３		IP	６		IP	３		G3	２		G3	４		IP	３		IP	１		IP
+水口　　由紀	4.30	0.15	3.4	５		IP	６		IP	４		IP	３		IP	４		IP	５		IP	２		IP	３		IP	３		IP	４		IP
+浜先　　真範	4.70	0.12	2.2	３		IP	５		G1	３		IP	４		IP	２		IP	２		IP	６		G1	５		G1	６		IP	３		IP
+吉島　　祥之	6.90	0.15	2.8	１		IP	２	4	IP	１		IP	１		IP	１		IP	５		IP	３		IP	３		IP	３		G3	６	4	IP
+中嶋　　達也	3.10	0.20	3.4	６	5	IP	６		IP	２		IP	１		IP	４	5	IP	６		IP	６		IP	５		IP	６		IP	５		IP

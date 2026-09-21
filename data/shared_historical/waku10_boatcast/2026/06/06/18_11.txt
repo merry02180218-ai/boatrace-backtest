@@ -1,0 +1,8 @@
+data=
+1	0
+山下　　奈緒	8.60	0.14	3.6	１		IP	２		G3	２		IP	３		IP	２		IP	２		IP	１		IP	１		G3	１		G3	２		IP
+津久井　拓也	5.30	0.16	3.3	３		IP	３		G2	４		G2	３		IP	４	3	IP	５		IP	２		IP	２		IP	６		IP	３		IP
+大原　　祥昌	5.50	0.16	3.5	２		IP	５	4	IP	２		IP	４		IP	４		IP	６	2	G3	５	2	IP	１		IP	１		IP	４		IP
+清水　　紀克	4.20	0.17	3.5	６	2	IP	５	2	IP	４	2	IP	６	3	IP	４	2	IP	３	2	IP	２	3	IP	１	2	IP	５	2	IP	４	2	IP
+里岡　　右貴	5.20	0.12	2.7	３		IP	４		IP	２		IP	６		IP	３		IP	３		IP	２	6	IP	４		IP	２		IP	６		IP
+大西　　隆洋	2.70	0.13	3.7	５		IP	５		IP	６		IP	３		IP	６		IP	４		IP	６		IP	２		IP	５		IP	Ｆ		IP

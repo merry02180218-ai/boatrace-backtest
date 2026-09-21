@@ -1,0 +1,8 @@
+data=
+1	0
+芹澤　　克彦	6.60	0.15	2.9	１		IP	４		IP	２		IP	１		IP	３		IP	１		IP	５		IP	４		IP	１		IP	５		IP
+河村　　　了	6.30	0.17	4.6	４		IP	２		IP	１		IP	３		IP	１		IP	４		IP	６		IP	４		IP	１		IP	３		G3
+富永　　大一	4.40	0.17	2.8	４		IP	４		IP	６		IP	３		IP	５		IP	２		IP	２		IP	６		IP	３		IP	４		IP
+荒井　　輝年	5.00	0.16	3.0	転		IP	６		IP	６		IP	２		IP	２		IP	２		IP	１		IP	２		IP	５		IP	４	5	IP
+鈴木　　孝明	5.90	0.16	3.4	６		IP	１		IP	２		IP	４		IP	４		IP	３		IP	３		IP	３		IP	２		IP	３		IP
+山田　　晃大	4.30	0.14	2.1	３		IP	４		IP	４		IP	４		IP	４		IP	２		IP	５		IP	４		IP	６		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+権藤　　俊光	7.40	0.16	4.0	５		G2	１		G2	６		G2	２		IP	５		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+吉川　　貴仁	6.90	0.21	4.0	３		IP	２		IP	１		IP	１		IP	３		IP	３		IP	６		IP	１		IP	４		IP	３		IP
+大池　　佑来	8.10	0.13	2.6	２		IP	２		G2	３		IP	１		IP	１		IP	２		IP	４		IP	３		G1	２		G1	２		G1
+渡邊　雄一郎	5.70	0.16	3.5	３		IP	２		IP	５	5	IP	６		IP	４		IP	１		IP	３		IP	３		IP	４		IP	２		IP
+郷原　　章平	2.40	0.17	3.1	４		IP	６		IP	４		IP	５		IP	５		IP	６		IP	５		IP	４	6	IP	５		IP	５		G3
+松井　　洪弥	4.20	0.13	3.0	４		IP	３		IP	２	4	IP	４		IP	６		IP	３	5	IP	６		G1	６		G1	６		G1	４		G1

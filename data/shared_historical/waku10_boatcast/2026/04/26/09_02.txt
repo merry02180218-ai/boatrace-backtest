@@ -1,0 +1,8 @@
+data=
+1	0
+中北　　将史	6.40	0.18	2.7	５		IP	２		IP	１		G3	３		IP	６		IP	１		IP	６		IP	２		IP	１		IP	２		IP
+野田　なづき	6.60	0.20	3.5	５		IP	２		G3	２		G3	２		G3	３		IP	２		IP	３		IP	２		G3	４		IP	２		IP
+佐藤　ほのか	5.60	0.16	2.4	３		G3	２		G3	６		IP	２		IP	４		IP	６		IP	１		IP	４		G3	１		IP	４		G3
+安田　　吉宏	4.50	0.15	2.8	３		IP	５	6	IP	１		IP	６		IP	５	5	IP	２	5	IP	５		IP	１		IP	５		IP	５		IP
+崎　　　利仁	2.80	0.25	4.0	６		G1	６		IP	５		IP	３		IP	４		IP	４		IP	４		IP	５		IP	５		IP	６		IP
+谷口　　健一	2.30	0.17	3.3	６	5	IP	６		IP	３		IP	５		IP	４		IP	４		IP	６		IP	６		G3	５	4	IP	６		IP

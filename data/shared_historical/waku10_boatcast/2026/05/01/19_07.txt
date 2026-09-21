@@ -1,0 +1,8 @@
+data=
+1	0
+前原　　大道	10.00	0.16	2.3	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP	２	2	G1	１		IP	１		IP	１		IP
+赤峰　　和也	4.00	0.21	3.9	５		IP	２		IP	５		IP	６		IP	５		IP	２		IP	２		IP	６		IP	３		IP	５		IP
+石川　　真二	5.40	0.16	3.5	５	2	IP	４	2	IP	２	2	IP	４	2	IP	２	2	IP	２	2	IP	５	2	IP	１	1	IP	４	1	G1	６	2	IP
+森永　　　隆	6.30	0.14	2.9	１		IP	２		IP	６		IP	２		IP	４		IP	５	5	IP	１		IP	２		IP	２		IP	４		IP
+福山　恵里奈	2.40	0.15	3.2	６		IP	５		IP	６		IP	６	6	IP	５		G3	６		G3	３		IP	２		IP	６		G3	６		G3
+小畑　　楓夏	1.80	0.12	3.3	６		IP	５		IP	６		IP	６		IP	５		IP	６	5	IP	４		IP	５		IP	５		IP	５		IP

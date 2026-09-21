@@ -1,0 +1,8 @@
+data=
+1	0
+高憧　　四季	9.50	0.13	2.3	１		G1	１		G1	２		SG	１		G2	２		G2	１		IP	３		IP	１		IP	３		IP	１		IP
+五反田　　忍	4.60	0.18	3.5	３		IP	５		IP	６		IP	３		IP	６		G3	１	3	G3	５		IP	３	3	IP	３		IP	３		IP
+坂本　　奈央	2.40	0.27	4.7	６		IP	６		IP	５		G3	３		IP	４		IP	５		IP	６		G3	５		G3	６		IP	４		G3
+本部　めぐみ	3.00	0.21	3.8	５		G3	３		G3	５		IP	６		G3	６		G3	３		IP	６		IP	３		IP	６		IP	４		G3
+西澤　日花里	2.10	0.16	3.3	６		IP	６		IP	６		G3	６		IP	２		IP	６		IP	６		G3	４		G3	６		IP	５		IP
+池田　　美優	1.00	0.20	4.0	６		G3	　		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　拡郎	9.90	0.13	2.2	１		G1	１		IP	１	2	IP	１		IP	２		IP	１		IP	１		G1	１		G1	２		G1	２		G1
+松井　　　繁	7.40	0.13	3.6	５		G1	５		G1	３		G1	１		G1	３		G1	１		IP	１		IP	４		G1	２		G1	３		SG
+大峯　　　豊	7.10	0.18	3.3	６		G1	２		IP	２		IP	４		G2	２		G2	１		IP	２		IP	１		IP	４		SG	５		G1
+中村　　魁生	5.50	0.13	2.0	２		IP	１		IP	４	2	IP	４		IP	４		IP	２	3	IP	６		IP	３		IP	４		IP	３		IP
+河合　　佑樹	6.00	0.15	3.0	３		G1	２		G1	４		G1	２		IP	５		G1	５		G1	１		IP	５		SG	４		G1	３		IP
+入海　　　馨	3.80	0.14	3.7	５		G1	４		G1	２		G1	転		G1	６		G1	６		G1	４	5	G1	６		G1	６		G1	２		IP

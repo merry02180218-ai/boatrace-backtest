@@ -1,0 +1,8 @@
+data=
+1	0
+三角　　哲男	8.40	0.13	2.1	１		IP	４	2	IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		G1	２		G1
+佐藤　　永梧	4.30	0.15	3.4	２		IP	６		IP	４		IP	５		IP	４		IP	５		IP	２		IP	５		IP	４		IP	２		IP
+永井　　彪也	8.00	0.13	2.6	１		IP	２		IP	２		IP	１		IP	６		G1	１		G1	４		G1	４		G1	１	2	IP	１		G2
+村上　宗太郎	5.30	0.17	3.8	６	5	IP	１		IP	５		IP	２		IP	２		IP	４		IP	６		G2	３		IP	４	5	IP	２		IP
+後藤　　翔之	6.00	0.16	3.2	３		IP	３		IP	５		IP	３		IP	４		G2	２	6	IP	１	4	IP	欠		G2	６		G2	２		IP
+市川　　瑚幸	1.40	0.19	4.5	６		IP	６		IP	６		IP	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP	６		IP

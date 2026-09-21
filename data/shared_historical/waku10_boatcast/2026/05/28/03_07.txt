@@ -1,0 +1,8 @@
+data=
+1	0
+北山　　康介	9.00	0.18	3.4	１		IP	３		IP	１		IP	１		IP	３		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+菊地　　敬介	6.50	0.12	2.8	２		IP	２		IP	３		IP	６		IP	２		IP	５		IP	１		IP	３		IP	２		IP	２		IP
+濱本　　優一	6.50	0.14	2.9	４		IP	２		IP	１		IP	３		IP	４	5	IP	６	4	G3	２		IP	２		IP	２		IP	２		IP
+村岡　　　賢	4.90	0.17	4.1	４		IP	３		IP	１		IP	６		IP	３		IP	３		IP	５	5	IP	２	3	IP	４		IP	５		IP
+川上　　聡介	3.70	0.14	4.3	５		IP	３		IP	２		IP	６		IP	３		IP	２		IP	６	6	IP	５		IP	５		IP	６		IP
+本岡　　勝利	3.70	0.22	4.7	４		IP	４		IP	４		IP	５		IP	２		IP	５		IP	４		IP	３		IP	５		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+向後　　龍一	9.40	0.14	1.8	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+原田　　秀弥	5.50	0.16	3.1	２		IP	３		IP	５		IP	６		IP	４	3	IP	２		IP	４		IP	３		IP	２		IP	２		IP
+山一　　鉄也	5.90	0.17	2.7	３		IP	４		IP	３		IP	１		IP	２		IP	４	4	IP	３		IP	６		IP	４		IP	２		IP
+木谷　　賢太	5.90	0.16	2.9	５	5	IP	２		IP	２		IP	４		G1	３		IP	３		IP	３		IP	３		IP	３		IP	３		IP
+沖島　　広和	5.30	0.18	3.5	２		IP	２		IP	４		IP	３		IP	６		IP	２		IP	４		IP	４		IP	３	4	IP	４		IP
+野口　　勝弘	3.40	0.17	4.3	３	4	IP	４		IP	４	5	IP	３	5	IP	転		IP	４	5	IP	６		IP	３		IP	６		IP	５		IP

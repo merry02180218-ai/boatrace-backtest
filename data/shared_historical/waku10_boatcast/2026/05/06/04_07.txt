@@ -1,0 +1,8 @@
+data=
+1	0
+入澤　　友治	5.50	0.18	3.6	６		IP	２		IP	３		IP	２		IP	６		IP	２		IP	１		IP	６		IP	５		IP	１		IP
+宮之原　輝紀	5.44	0.17	4.8	３		G1	６		SG	６	1	SG	６		G1	４		G1	６		G1	３		G1	２		G1	１		IP	欠		G2
+村田　　　敦	2.70	0.15	2.5	６		IP	３		IP	３		IP	５		IP	６		IP	５	6	IP	４		IP	５		IP	６	4	IP	５		IP
+尾上　　雅也	6.60	0.16	2.5	２		IP	５		IP	６		G3	２	5	G3	１		IP	２		IP	３		IP	２	3	IP	２		IP	３		G1
+西舘　　　健	5.20	0.16	2.5	４		IP	４		IP	１		IP	５		IP	３		IP	２		IP	３		IP	５		IP	３		IP	４		IP
+藤井　　太雅	2.30	0.29	5.5	３		IP	５		IP	５		IP	５		IP	５		IP	４		IP	６		IP	６		IP	５		IP	６		IP

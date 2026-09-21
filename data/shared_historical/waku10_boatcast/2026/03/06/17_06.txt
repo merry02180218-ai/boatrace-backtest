@@ -1,0 +1,8 @@
+data=
+1	0
+宮嵜　隆太郎	5.10	0.11	2.3	６		IP	６		IP	１		IP	４		IP	５		IP	１		IP	２		IP	６	2	IP	１		G3	４		G3
+上條　　嘉嗣	5.20	0.21	4.6	２		IP	５		IP	２	1	IP	５		IP	６		IP	５		IP	１		IP	１		IP	２		IP	６		IP
+石井　　伸長	6.29	0.15	3.0	３		IP	３		IP	３		IP	２		IP	３	4	IP	３		IP	４		IP									IP
+川島　　圭司	5.40	0.10	2.1	１		IP	４		IP	５		IP	６		G2	４		IP	１		IP	４		IP	５		IP	３		IP	１		IP
+中村　　将隆	3.60	0.20	4.3	６		IP	２		IP	５		IP	４		IP	４		IP	３		IP	４		IP	６		IP	５		IP	４		IP
+石塚　　久也	4.20	0.17	4.0	３		IP	５		IP	４		IP	４		IP	５		IP	２	5	IP	５		IP	３		IP	４		IP	４		IP

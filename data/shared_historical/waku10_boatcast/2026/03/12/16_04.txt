@@ -1,0 +1,8 @@
+data=
+1	0
+門間　　雄大	7.90	0.13	2.5	１		IP	２		IP	１		IP	２		IP	５		G3	６		G3	１		IP	１		IP	１		IP	１		IP
+嶋田　　貴支	5.20	0.14	3.0	３		IP	３		IP	６		IP	２		IP	３		IP	４		IP	６		IP	５		IP	２		IP	１		IP
+坪口　　竜也	6.70	0.17	3.9	３		G3	２		G3	２		IP	２		IP	４		IP	３		IP	３		IP	３		IP	３		IP	２		IP
+今井　　貴士	3.90	0.17	2.6	４		IP	３		G1	２		G3	６		G3	５		IP	４		IP	４	5	IP	６		IP	５		G1	４		G1
+井上　　未都	3.22	0.17	2.7	６		G1	３		G3	６		IP	６		IP	５		IP	４		IP	４		IP	２		IP	転		G3	６		IP
+丸尾　　義孝	5.60	0.13	2.7	２		IP	２	5	IP	３		IP	４		IP	３		G1	３		G1	４		IP	５	5	IP	５		IP	２		IP

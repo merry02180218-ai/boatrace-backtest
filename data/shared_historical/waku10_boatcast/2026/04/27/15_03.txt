@@ -1,0 +1,8 @@
+data=
+1	0
+中岡　　健人	6.70	0.14	2.7	６		IP	３		IP	１		IP	２		IP	２		IP	１		IP	２		IP	欠		IP	３		IP	１		IP
+長谷川　親王	2.30	0.21	4.3	５		IP	４		IP	６		IP	５		IP	６		IP	５		IP	６	3	IP	３		IP	５		IP	５		IP
+三嶌　さらら	6.00	0.19	3.2	２		IP	４		IP	２		IP	４		IP	２		IP	転		IP	５		IP	２		IP	２		IP	１		G3
+上田　　隆章	3.70	0.27	4.8	３		IP	２		IP	６		IP	６		IP	４	5	IP	５		IP	４	5	IP	４	5	IP	６		IP	３		IP
+竹田　　和哉	3.90	0.16	3.8	３		IP	４		IP	５		G1	３		IP	５		IP	１		IP	６		IP	６		IP	６		IP	５		G1
+宮崎　　　奨	4.40	0.17	4.0	３		G3	４		IP	４	5	IP	５		IP	３		IP	５		IP	３		IP	３		G3	５		G3	３	5	IP

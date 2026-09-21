@@ -1,0 +1,8 @@
+data=
+1	0
+松田　　竜馬	7.50	0.13	1.8	１		IP	５		IP	３		IP	１		IP	６		IP	１		IP	１		IP	２		IP	１		IP	２		IP
+権藤　　俊光	6.50	0.14	3.1	３		IP	１		G2	６		G2	５		IP	１		IP	４		IP	１		IP	２		IP	６		G1	２		SG
+松本　　庸平	4.30	0.18	3.9	４		IP	２		IP	１		IP	６		IP	２		IP	６		IP	２		IP	６		IP	６		IP	６		IP
+堀本　　裕也	3.60	0.12	2.8	５	5	IP	２		IP	６		IP	４		IP	４		IP	１		IP	４	5	IP	６		IP	６		IP	６		IP
+林　　　祐介	3.60	0.12	2.9	６		IP	５		IP	５		IP	３		IP	６		IP	４		IP	２	4	IP	５		IP	４		IP	４		IP
+藤本　　遼磨	1.70	0.21	5.1	５		IP	６		IP	５		IP	６		IP	４		IP	５		IP	６		IP	５		IP	６		IP	６		IP

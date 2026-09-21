@@ -1,0 +1,8 @@
+data=
+1	0
+川田　　正人	7.10	0.16	2.6	１		IP	１		IP	１		IP	３		IP	２		IP	１		IP	４		IP	５		IP	１		IP	６		IP
+平野　　和明	6.40	0.16	3.8	４		IP	４		IP	３		IP	１		IP	３		IP	３		IP	２		IP	３		IP	３		IP	２	1	IP
+森　　　雄利	4.20	0.14	2.2	６		IP	１		IP	５		IP	４		IP	２		IP	６		IP	５		IP	２		IP	４		IP	５		IP
+丸山　　祐也	2.60	0.23	5.7	転		IP	４		IP	４		IP	４		IP	５		IP	６		IP	４		IP	６		IP	５		IP	４		IP
+伊藤　　雄二	2.30	0.19	4.0	６	6	IP	６		IP	６		IP	５		IP	４		IP	５		IP	４		IP	４		IP	５		IP	５	4	IP
+中野　　夢斗	2.70	0.16	3.4	４		IP	６		IP	６		IP	５		IP	５	3	G3	４		IP	４		IP	５		IP	６		IP	３		IP

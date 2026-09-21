@@ -1,0 +1,8 @@
+data=
+1	0
+下出　　卓矢	9.80	0.10	1.4	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+山下　　流心	4.60	0.17	3.7	４		IP	３		IP	４		G3	６		G3	２		IP	１		IP	５		IP	２		IP	６		IP	５		G3
+仲谷　　颯仁	7.70	0.15	2.9	１		SG	４		G1	５		G1	１		IP	２		G1	２		IP	３		IP	２		SG	４		G1	２		G1
+池田　　雷太	3.56	0.19	2.9	５		IP	４		IP	６		IP	５		IP	３		IP	６		IP	５		IP	エ		IP	２		IP	３		IP
+野村　　　誠	5.00	0.16	3.5	４		IP	４		IP	５		IP	２		IP	６		G1	１		IP	２		IP	４		IP	５		IP	３		G3
+宇田川　信一	3.10	0.20	4.9	４		IP	６		IP	５		IP	４		IP	６		IP	５		IP	４		IP	４		IP	６		IP	２		IP

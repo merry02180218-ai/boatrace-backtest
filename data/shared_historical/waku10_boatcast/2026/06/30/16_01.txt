@@ -1,0 +1,8 @@
+data=
+1	0
+入海　　　馨	9.50	0.14	2.5	１		IP	４		IP	１		G1	２		IP	１		IP	１		IP	１		G1	２		G1	１		G1	１		G1
+谷津　　幸宏	5.40	0.10	2.0	２		IP	５		IP	３		IP	２		IP	３		IP	３		IP	３	3	IP	３		IP	４		IP	５		IP
+品川　二千翔	7.50	0.16	2.9	４		IP	２		IP	２		IP	２		IP	６		IP	２		IP	１		IP	１	5	IP	１		IP	３		IP
+金子　　賢志	6.50	0.13	2.4	１		IP	３		IP	５		IP	２		IP	６		IP	１		G1	１		G1	１		IP	４		IP	５		IP
+末永　　由楽	3.90	0.13	2.6	６		G2	６		G2	４		IP	３		G2	１	4	IP	３		IP	６		IP	４		IP	５		IP	６		IP
+常住　　　蓮	5.00	0.12	3.1	５		G2	３		G2	４		G1	５		G1	５		G1	２	5	SG	３		SG	２	5	IP	５	5	IP	６		IP

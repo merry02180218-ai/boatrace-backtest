@@ -1,0 +1,8 @@
+data=
+1	0
+津留　浩一郎	6.00	0.14	2.4	６		IP	２		IP	４		IP	１		IP	３	2	IP	３		IP	２		IP	１		IP	３		IP	６		IP
+岩川　　仁士	6.20	0.12	2.3	３		IP	６		IP	２		IP	１	3	IP	６		IP	２	4	IP	３		IP	２		IP	３		IP	２		IP
+桐本　　康臣	7.20	0.16	2.9	４		IP	１		IP	５		IP	１		IP	２		IP	３		IP	２		IP	２		IP	１		IP	３		IP
+五反田　　忍	4.60	0.16	3.2	２	5	IP	３		IP	１		G3	４	6	G3	６		IP	６	5	IP	３		IP	２		IP	６	5	IP	６		IP
+庄司　樹良々	5.00	0.11	2.0	２		IP	５		IP	３		IP	２		IP	５		IP	４	4	IP	６	6	IP	１		IP	２		IP	６		IP
+胡本　　悟志	3.80	0.19	3.5	４	5	IP	５		IP	４		IP	４		IP	３		IP	４		IP	５		IP	４		IP	４		IP	４	5	IP

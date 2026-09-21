@@ -1,0 +1,8 @@
+data=
+1	0
+飯田　　庄吾	5.00	0.15	2.0	６		IP	５		IP	４		IP	１		IP	４		IP	３		IP	４		IP	２		IP	１		IP	６		IP
+大須賀　　友	7.30	0.17	2.8	２		IP	５		IP	１		IP	２		IP	１		IP	２		IP	３		IP	１		IP	４		IP	３		IP
+岡部　　　浩	5.20	0.17	3.3	２		IP	２	4	IP	３		IP	１		IP	５		IP	５		IP	３		IP	４		IP	４		IP	５		IP
+小林　　　泰	6.40	0.16	2.6	６		IP	１		IP	３		IP	１		IP	２		IP	６		IP	２		IP	１		IP	５		IP	２		IP
+飯山　　晃三	3.50	0.21	5.0	３		IP	３		IP	２	4	IP	６		IP	６		IP	２		IP	６		IP	５		IP	６		IP	６		IP
+鶴本　　崇文	3.80	0.17	4.1	５		IP	２	5	IP	６		IP	５		G1	５		G1	４		IP	６		IP	４		IP	４	5	IP	２		IP

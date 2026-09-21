@@ -1,0 +1,8 @@
+data=
+1	0
+松下　　哲也	4.70	0.17	3.3	４		IP	５	2	IP	３		IP	５		IP	２		IP	１		IP	６		IP	４		IP	２		IP	５		IP
+松本　　一毅	5.56	0.16	3.3	２		IP	２		IP	３		IP	２		IP	１		IP	４		IP	６		IP	６		IP	欠		G3	４		IP
+清水　　紀克	3.70	0.17	3.4	４		IP	６	2	IP	６	2	IP	６	2	IP	２	2	IP	５	2	IP	４	2	IP	２	2	IP	３	2	IP	５		IP
+鈴谷　　一平	4.40	0.16	3.4	４		IP	１		IP	２	5	IP	５		IP	６		G1	３		G1	６		IP	４		IP	５		IP	５		IP
+金田　　智博	5.20	0.16	3.5	４		IP	２		IP	４	4	IP	１		IP	３		IP	５		IP	５		IP	３		IP	３	6	IP	４		IP
+星　　　栄爾	2.90	0.19	4.0	４		IP	４		IP	３		G3	５		G3	６		IP	４		IP	５		IP	６		IP	６		IP	４	5	IP

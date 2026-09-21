@@ -1,0 +1,8 @@
+data=
+1	0
+畑田　　希咲	4.70	0.18	3.3	４		G3	１		IP	４		IP	６		IP	６		IP	１		IP	５		IP	１		IP	４		IP	６		IP
+廣中　智紗衣	7.20	0.21	4.5	１		G3	２		IP	２		IP	３		IP	５		IP	３		IP	２		IP	２		IP	２		G3	２		G3
+河内　悠利杏	3.90	0.18	3.4	６		G3	４		IP	４	4	IP	５	4	IP	３		IP	３		IP	５		G3	５		G3	１		G3	５		G3
+落合　　直子	4.30	0.11	2.5	４		G3	２		IP	６		IP	３		IP	６		IP	３		G3	４		G3	２	5	IP	６		IP	４	5	IP
+田中　瀬里奈	1.40	0.16	2.6	５		G3	６	6	G3	６		IP	６		IP	６		IP	５		IP	６	6	IP	５	6	IP	６		IP	５		IP
+倉持　　莉々	4.90	0.11	1.9	５		G3	３	5	G3	２	5	IP	５		G2	５		IP	４		IP	２		IP	３	5	IP	５	5	G1	３		G1

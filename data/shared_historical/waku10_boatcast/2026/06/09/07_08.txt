@@ -1,0 +1,8 @@
+data=
+1	0
+土屋　実沙希	7.40	0.17	2.6	５		IP	１		IP	４		IP	１		IP	２		IP	３		IP	３		IP	２		IP	１		IP	１		IP
+萩原　丈太朗	2.80	0.17	3.3	６		IP	４		IP	４		IP	エ		IP	６		IP	２		IP	５		IP	６		IP	３		IP	６		IP
+寺田　　　祥	7.00	0.14	2.2	２		IP	３		IP	５		G2	４		G2	３		IP	２		G1	２		G1	４		G1	２		G1	１		IP
+河合　　三弘	4.20	0.16	3.0	５		IP	２		IP	３		IP	５	6	IP	２		IP	５		G3	５		IP	５		IP	３		IP	４		IP
+倉尾　　大介	4.50	0.17	3.6	５		IP	２		IP	２		IP	４		IP	５		IP	３		IP	６		IP	４		IP	４		IP	３		IP
+後藤　　　浩	1.50	0.19	4.2	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	４		IP	６		IP	６		IP

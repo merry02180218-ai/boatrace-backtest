@@ -1,0 +1,8 @@
+data=
+1	0
+小玉　　啓太	5.80	0.16	3.2	４		IP	２		IP	４		IP	２		IP	１		IP	３		IP	転		IP	２		IP	３		IP	４		IP
+大場　　恒季	8.40	0.14	1.5	４		IP	１	3	IP	１		IP	１		IP	２		IP	１		IP	３		IP	３		IP	１		IP	１		IP
+瀬川　　大地	3.20	0.08	2.7	６		IP	５		IP	６		IP	５		IP	６		IP	２		IP	３	4	IP	３		IP	４		IP	６		IP
+山下　　大輝	6.50	0.15	3.5	２		IP	１		IP	５		G1	６		G1	２		IP	２		IP	２	6	IP	２		IP	５		IP	２		G3
+出畑　　孝成	5.10	0.19	4.5	４		IP	６		IP	３		IP	２	6	IP	２		IP	２		IP	５		IP	４		IP	５		IP	２		IP
+豊田　　祥生	2.70	0.19	3.8	４		IP	４		IP	５		IP	４		IP	６		IP	５		IP	６	5	IP	６		IP	４		IP	４		IP

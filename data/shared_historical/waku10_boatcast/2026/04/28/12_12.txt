@@ -1,0 +1,8 @@
+data=
+1	0
+岡部　　大輝	7.80	0.16	3.7	１		IP	２		IP	１		IP	３		IP	１		IP	４	2	IP	１		IP	１		G3	２		IP	５		IP
+河村　　　了	5.50	0.18	4.7	５		IP	３		IP	４		IP	２		IP	１		IP	３		IP	１		IP	４		IP	６		IP	４		IP
+深川　麻奈美	4.80	0.19	3.9	３		IP	５		IP	３		IP	２		IP	６		IP	４		IP	１	4	IP	３	4	G1	Ｆ		IP	４		IP
+守屋　　大地	4.70	0.19	4.1	３		IP	５		IP	４		G3	６		IP	５	6	IP	４	5	IP	４		IP	４		IP	２		IP	１		IP
+上之　　晃弘	3.00	0.16	2.9	６		IP	４		IP	４		IP	６		IP	４		IP	６		IP	３		IP	３		IP	６		IP	５		IP
+越智　　照浩	2.90	0.22	5.1	６		IP	５		IP	５		IP	４		IP	５	5	IP	５		IP	３		IP	３	5	IP	５	5	IP	５		IP

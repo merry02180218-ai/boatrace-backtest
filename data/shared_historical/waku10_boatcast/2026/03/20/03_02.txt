@@ -1,0 +1,8 @@
+data=
+1	0
+宮崎　心之介	7.00	0.14	2.8	４		IP	１		IP	１		IP	６		IP	１		IP															IP
+大森　　　翼	5.90	0.18	4.8	２		IP	２		IP	１		IP	２		IP	３		IP	６		IP	４		IP	２		IP	５		IP	４		IP
+森定　　晃史	6.00	0.16	3.0	３		IP	４		IP	３		IP	２		IP	５		IP	３		IP	１		IP	２		IP	５		IP	３		IP
+宇田川　信一	2.20	0.22	4.5	５		IP	５		IP	５	3	IP	６		IP	５		IP	５	5	IP	５		IP	４		IP	４		IP	６		IP
+是澤　　孝宏	5.40	0.22	4.4	４		IP	６		IP	５		IP	２		IP	３		IP	３		G2	３		G2	４		IP	３		IP	２		IP
+照屋　　厚仁	4.70	0.20	4.0	６		IP	５		IP	１	5	IP	３		IP	２		IP	４	5	IP	３	5	IP	６		IP	３		IP	６		IP

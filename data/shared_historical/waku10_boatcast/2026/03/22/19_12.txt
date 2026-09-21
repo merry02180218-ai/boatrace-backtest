@@ -1,0 +1,8 @@
+data=
+1	0
+羽田　　妃希	7.00	0.24	4.6	２		IP	１		IP	４		IP	１		IP	４		IP	３		IP	３		IP	２		IP	１		IP	４		IP
+稲生　　夏季	5.40	0.23	3.7	４		IP	３		IP	３		IP	３		G3	６		IP	６		IP	３		IP	３		G3	２		G3	１		G3
+竹井　　奈美	6.50	0.16	2.2	５		G3	１		G1	３		IP	５		IP	２		IP	２	4	G1	４		G1	２		IP	２		IP	３		IP
+出穂　　和鼓	2.10	0.24	4.4	６		IP	５		IP	４	6	IP	５		IP	３		IP	５		IP	６	6	IP	６		IP	６	6	IP	６	5	IP
+原村　　百那	1.67	0.19	3.3	６		IP	３		IP	落		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６	6	IP	６	6	IP
+今泉　　　澪	2.30	0.14	3.0	２		IP	６		IP	６		IP	４		IP	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP

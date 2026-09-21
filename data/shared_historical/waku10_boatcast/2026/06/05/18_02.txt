@@ -1,0 +1,8 @@
+data=
+1	0
+秋山　　広一	8.20	0.19	3.2	４		IP	１		G3	１		G3	１		G3	１		IP	３		IP	１		IP	１		IP	５		IP	１		IP
+山崎　　鉄平	5.70	0.22	4.0	３		IP	２		IP	２		IP	６		IP	５		IP	１		IP	５		IP	３		IP	２		IP	３		IP
+西橋　　奈未	7.70	0.14	3.0	４		SG	２		SG	１		G2	２		G3	１		G1	４		G1	４		G1	１		G3	２		G3	５		G2
+上野　　秀和	4.70	0.18	3.1	４		IP	３		IP	３		IP	６		IP	２		IP	４		IP	３		IP	４		IP	５		G3	３		IP
+馬野　　　耀	6.60	0.17	3.3	３		G2	２		G2	３		IP	４		IP	２		IP	３		IP	２	3	IP	３		IP	４		IP	２		IP
+小林　　京平	2.60	0.22	3.2	４		IP	４		IP	４		IP	６		IP	５		IP	Ｆ		IP	４	5	IP	４		IP	５		IP	６		IP

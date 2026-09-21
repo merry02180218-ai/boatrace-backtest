@@ -1,0 +1,8 @@
+data=
+1	0
+赤岩　　善生	8.80	0.15	2.5	１		IP	１		IP	１		IP	１		IP	２		G1	２		G1	１		IP	２		IP	１		IP	５		IP
+山下　　大輝	7.20	0.16	3.6	１		IP	１		IP	４		IP	５		G1	３		G1	３	3	IP	３		IP	１		IP	３		G1	２		G1
+柏野　　幸二	6.00	0.16	2.8	２	2	IP	３		IP	３		IP	４	4	IP	４		IP	１		IP	３		IP	３		IP	４		IP	３		IP
+山地　　正樹	5.50	0.12	3.1	１	3	IP	４	2	IP	２	2	IP	１	2	IP	６		IP	３		IP	３	3	IP	４	3	IP	４	3	IP	５	2	IP
+梶野　　学志	3.40	0.17	4.5	２		IP	４		IP	６		IP	３		IP	３		IP	６		IP	６		IP	４		IP	５		IP	６		IP
+川崎　　誠志	3.50	0.24	5.0	２		IP	４	5	IP	５		IP	４		IP	４		IP	６		IP	６		IP	４		IP	６		IP	３		IP

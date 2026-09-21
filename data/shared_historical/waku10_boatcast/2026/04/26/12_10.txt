@@ -1,0 +1,8 @@
+data=
+1	0
+河村　　　了	8.20	0.15	2.4	４		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	５		IP	１		IP	１		IP
+三好　　勇人	5.50	0.17	2.8	２		IP	３		IP	４		IP	２		IP	５		IP	６		IP	２		IP	５		IP	２		IP	２		IP
+守屋　　大地	5.30	0.23	4.5	４		IP	５		IP	６		G3	４		G3	４		IP	１		IP	４		IP	３	5	IP	１		IP	２		IP
+福岡　　泉水	5.30	0.22	3.7	４		IP	２		IP	６		IP	４		IP	３		G3	４		G3	１		IP	３		IP	５		IP	２		IP
+北川　　潤二	5.60	0.18	2.7	４	2	G3	１	4	G3	４	3	IP	３	3	G3	５	4	IP	１	3	IP	４	4	IP	３	2	IP	３	3	IP	４	3	IP
+宮村　　勇哉	2.10	0.18	4.0	６	5	IP	６		IP	６		IP	６		IP	５		IP	４		IP	５		IP	４		IP	６		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+真庭　　明志	8.20	0.12	2.5	１		IP	３		IP	２		IP	２		IP	２		IP	２		IP	１		IP	１		IP	２		IP	３		IP
+森口　　和紀	6.10	0.20	4.7	１	3	IP	２		IP	２		IP	６		IP	６		IP	１		IP	２		IP	６		IP	１		IP	４		IP
+中島　　昂章	5.00	0.18	4.0	３		IP	５		IP	３		IP	２		IP	５	4	IP	３		IP	４		IP	４		IP	３		G3	３		G3
+今坂　　晃広	3.90	0.20	3.9	６		IP	５	5	IP	３		IP	６		IP	４		IP	４		IP	３		IP	３		IP	２		IP	６		IP
+森　　　陽多	1.70	0.17	2.5	６		IP	６		IP	６	6	IP	５		IP	転		IP	５		IP	５	6	IP	６		IP	３		IP	６		IP
+菅沼　　佳昭	2.00	0.21	4.0	５		IP	５	3	IP	５		IP	４		IP	５	5	IP	４		IP	６		G3	６	5	IP	６		IP	６		G3

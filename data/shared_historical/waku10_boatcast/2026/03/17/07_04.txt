@@ -1,0 +1,8 @@
+data=
+1	0
+大澤　　普司	9.50	0.17	3.2	１		IP	１		IP	１		IP	２		IP	２		G1	１		IP	１		IP	２		IP	１		IP	１		IP
+近藤　　颯斗	5.60	0.13	2.5	２		IP	１		IP	２		IP	落		IP	６		IP	３		IP	６		IP	１		IP	３		IP	３		IP
+宮村　　勇哉	3.50	0.14	2.1	２		IP	４		IP	３		IP	４		IP	６		IP	５		IP	６		IP	Ｆ		IP	６		IP	２		IP
+林　　　祐介	5.60	0.14	2.9	２		IP	５		IP	３	5	IP	４	3	IP	１		IP	４		IP	３		IP	２		IP	３		G3	５		IP
+乃村　　康友	4.30	0.13	2.8	２		IP	３		IP	６		IP	３		IP	４		IP	５		IP	５		IP	３		IP	４		IP	４		IP
+志賀　　美優	2.33	0.20	3.8	５		IP	転		IP	６		IP	５		IP	６		IP	６		IP	１		IP	６		IP	６		IP	５		IP

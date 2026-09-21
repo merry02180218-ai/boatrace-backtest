@@ -1,0 +1,8 @@
+data=
+1	0
+武井　莉里佳	9.70	0.16	2.5	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		G1	２		G3	１		IP	１		G3
+大橋　純一郎	7.80	0.15	2.9	３		IP	５		IP	２		IP	１		IP	２		IP	２	3	IP	２		IP	２		IP	１	3	IP	１		IP
+関根　　彰人	5.80	0.17	3.2	３		IP	２		IP	５		IP	２		IP	２		IP	２		IP	６		IP	２		IP	６		IP	２		IP
+小林　　愛実	3.60	0.17	4.5	３		IP	６		IP	５		IP	６		IP	４		IP	４		IP	３		IP	４		IP	３		IP	５		IP
+杉田　　篤光	4.10	0.27	4.8	５		IP	５	6	G3	４	6	IP	２		IP	３		IP	６		IP	５		IP	４		IP	２		IP	４		IP
+松本　　弓雄	3.10	0.19	4.6	６		IP	３		IP	５		IP	５		IP	６		IP	４		IP	６		IP	５		IP	２	5	IP	４		IP

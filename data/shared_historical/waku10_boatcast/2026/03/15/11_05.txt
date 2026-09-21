@@ -1,0 +1,8 @@
+data=
+1	0
+塚田　　修二	3.30	0.27	4.8	２		IP	６		IP	３		IP	５		IP	４		IP	６		IP	６	2	IP	３		IP	５		IP	５		IP
+向井田　佑紀	4.20	0.17	3.2	２		IP	２		IP	３		IP	６		IP	４		IP	２		G3	６		G3	５		IP	５		IP	５		IP
+齋藤　　和政	4.00	0.18	4.0	４		IP	２	4	IP	２		IP	５		IP	５		IP	４	4	IP	５		IP	６		IP	６		IP	２		IP
+福来　　　剛	7.30	0.15	2.1	２		IP	２		IP	１		G1	１		G1	６		G1	４		G1	３		IP	２		IP	１		IP	４		IP
+小林　　文彦	4.70	0.23	4.9	２		IP	４		IP	４		IP	２		IP	６		IP	２		IP	４		IP	５		IP	３		IP	５		IP
+木村　　仁紀	5.40	0.18	4.0	３		IP	３		G1	５		IP	６		G1	３		G1	２		IP	６		G2	３		IP	３		IP	２		IP

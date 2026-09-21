@@ -1,0 +1,8 @@
+data=
+1	0
+原田　　雄次	5.50	0.15	2.5	６		IP	１		IP	妨		IP	１		IP	４		IP	２	2	IP	５		IP	５		IP	２		IP	１		IP
+山崎　　聖司	5.60	0.18	3.1	３		IP	５		IP	２		IP	５		IP	３		IP	４		IP	３		IP	４		IP	２		IP	１		IP
+渡部　　　悟	5.20	0.14	2.4	１		IP	６		IP	４		IP	１		IP	１		IP	４		IP	２		IP	６	4	IP	５	4	IP	５		IP
+三木　　晴斗	4.20	0.18	3.4	５		IP	６		IP	５		IP	４	5	IP	１	3	IP	５		IP	３		IP	６		IP	２		IP	３		IP
+栗原　　直也	4.90	0.20	3.9	５	6	IP	３		IP	２		IP	６		IP	４		IP	２		IP	４	6	IP	３		IP	２		IP	５		IP
+前田　　篤哉	4.90	0.14	3.0	２	4	IP	２		IP	５		IP	３		IP	６		IP	３		IP	３		IP	５		G3	３		IP	４		IP

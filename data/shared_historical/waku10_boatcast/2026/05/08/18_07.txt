@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　雅之	4.00	0.19	3.6	５	2	IP	２		IP	６		IP	５		IP	４		IP	１		IP	２		IP	５		IP	５		IP	６	2	IP
+藤井　　　徹	5.70	0.19	4.2	６		IP	２		IP	２		IP	５		IP	４		IP	２		IP	３		IP	２		IP	２	3	IP	４		IP
+大谷　　直弘	5.20	0.20	3.6	４		IP	３		IP	５		IP	１		IP	１		IP	妨		IP	４		IP	３		IP	３		IP	４		IP
+藤田　　美代	2.20	0.19	3.5	４		G3	５		G3	６		IP	４		IP	６		IP	５	5	IP	４		IP	６		IP	６		IP	５		IP
+泉　　　啓文	3.40	0.18	4.3	５		IP	６		IP	４		IP	５	6	IP	６	6	IP	２		IP	２		IP	５		IP	４		IP	５		IP
+羽田　　妃希	2.10	0.23	5.3	６		IP	５		IP	４		IP	６		IP	６		IP	３		IP	６		IP	５		IP	５		IP	６		IP

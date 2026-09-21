@@ -1,0 +1,8 @@
+data=
+1	0
+柳瀬　　興志	6.80	0.18	3.5	６		IP	１		IP	６		IP	２		IP	１		IP	２		IP	４		IP	２		IP	１		IP	２		IP
+小川　　知行	4.40	0.16	2.5	３		IP	２		IP	２		IP	６		IP	５		IP	５		IP	３		IP	６		IP	２		IP	５		IP
+関　　　裕也	4.20	0.17	3.7	３		IP	６		IP	３		IP	３		IP	５		IP	５		IP	６		IP	２		IP	３		IP	４		IP
+石川　　哲秀	4.60	0.14	2.4	６		IP	６		IP	１		IP	３		IP	３		IP	３		IP	３		IP	５	2	IP	５		IP	３		IP
+向所　　浩二	2.80	0.16	3.1	４		IP	５		IP	３		IP	５		IP	５		IP	６		IP	４	6	IP	５		IP	６	6	IP	４		IP
+薗頭　　　心	1.10	0.17	3.6	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

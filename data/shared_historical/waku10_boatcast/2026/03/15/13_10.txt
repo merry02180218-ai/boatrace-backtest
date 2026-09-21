@@ -1,0 +1,8 @@
+data=
+1	0
+秦　　　英悟	10.00	0.13	2.5	１		G1	１		IP	２		IP	１		G1	２		G2	１		G2	１		IP	１		IP	１		IP	１		IP
+山口　　　剛	6.30	0.13	3.4	２		G1	１		G1	４		G1	３		G1	６	3	G1	３		G1	３		G1	３		G1	６		IP	４		G1
+藤岡　　俊介	7.30	0.12	2.1	１		IP	２		IP	２		IP	５		G1	１		IP	１		IP	２		IP	５		IP	２		IP	３		IP
+平尾　　崇典	6.00	0.15	2.7	５		G1	３		G1	２		G2	１		IP	１		IP	２		IP	３		IP	６		G1	６		G1	５		G1
+池永　　　太	4.40	0.13	2.1	６		G1	４		G1	６		G1	６		G1	１		IP	６		G1	５		G1	妨		IP	１		IP	２		IP
+桐生　　順平	4.80	0.13	4.0	３		G1	６		G1	５		G1	３		G1	３		G1	５		G1	６		G1	３	4	IP	３		G1	５		SG

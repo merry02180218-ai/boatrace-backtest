@@ -1,0 +1,8 @@
+data=
+1	0
+森野　　正弘	9.90	0.15	2.1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		G1	１		G1	２		G2
+中里　　昌志	5.70	0.17	4.2	３		IP	４		IP	５		IP	２		IP	６	4	IP	２		IP	３		IP	２		IP	２		IP	３		IP
+西川　新太郎	4.70	0.12	2.0	３		IP	４	4	IP	４		IP	４		IP	４		IP	３		IP	３		IP	６		IP	３		IP	３	4	IP
+梅木　　敬太	4.40	0.20	3.3	６		IP	１		IP	５		IP	６		IP	４	5	IP	２		IP	４		IP	５		IP	５		IP	１		IP
+稲生　　夏季	5.20	0.24	4.7	３		IP	４		IP	１		IP	Ｆ		G3	３		G3	３		G3	４		IP	４		IP	３		IP	３		IP
+田川　　大貴	3.60	0.14	2.9	４		IP	４		IP	５		IP	４		IP	６		IP	２		IP	３		IP	６		IP	４	5	IP	５		IP

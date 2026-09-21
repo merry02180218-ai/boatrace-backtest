@@ -1,0 +1,8 @@
+data=
+1	0
+上野　　拓馬	5.30	0.18	2.7	４		IP	４		IP	３		IP	１		IP	３		IP	４		IP	１		IP	５		IP	６		IP	３	2	IP
+河野　　主樹	6.20	0.14	2.6	２		IP	１		IP	６		IP	２		IP	２		G3	４		G3	２		IP	２		IP	３		IP	６		IP
+間庭　　菜摘	3.40	0.16	2.6	６		IP	落		IP	４		IP	６		G1	６		G3	５		G3	３	4	IP	４		IP	２		IP	３		IP
+大塚　　浩二	3.80	0.20	3.7	３		IP	３		IP	１		IP	５		IP	５	6	IP	５		IP	６	5	IP	３		IP	５		IP	６		IP
+滝川　真由子	3.80	0.19	3.8	４		IP	６		IP	６		G3	５		G3	４		IP	４		IP	５		IP	３		IP	３		IP	２		IP
+金子　　怜央	3.00	0.17	3.1	５		IP	４		IP	４		IP	４		IP	３	5	IP	６		IP	転		IP	４		IP	６		IP	６		IP

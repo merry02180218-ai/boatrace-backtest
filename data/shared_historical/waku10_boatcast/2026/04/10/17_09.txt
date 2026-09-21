@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　　萌	7.60	0.16	2.3	１		IP	１		IP	１		IP	３		IP	転		IP	１		IP	１		IP	３		IP	１		IP	４		IP
+荒井　　輝年	5.60	0.13	2.9	５		IP	３		IP	２	3	IP	４	4	IP	５		IP	１		IP	２		IP	５		IP	２		IP	３		IP
+野田部　宏子	6.60	0.15	1.6	２		IP	４		IP	２		IP	５		IP	２		IP	１		IP	１		IP	４		IP	５		IP	１		IP
+泉　　　具巳	5.50	0.20	3.3	３		IP	４	5	IP	４		IP	２		IP	６	5	IP	２		IP	４	6	IP	４		IP	２		IP	２		IP
+西舘　　　健	5.00	0.18	2.8	１		IP	５		IP	３		IP	２		IP	３		IP	５		IP	３		IP	４		IP	５		IP	４		IP
+大平　誉史明	3.90	0.19	4.2	４		IP	５		IP	４		IP	５		IP	３		IP	５	5	IP	３		IP	４		IP	３		IP	６		IP

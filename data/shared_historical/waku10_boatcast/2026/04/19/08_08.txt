@@ -1,0 +1,8 @@
+data=
+1	0
+大月　　遊雅	8.40	0.17	2.8	４		IP	２		IP	１		IP	３		IP	１		IP	１		IP	１		IP	２		IP	１		IP	２		IP
+畔柳　　俊吾	5.40	0.19	3.4	４		IP	２		IP	１		IP	６		IP	４	3	IP	２		IP	１		IP	３		IP	５		IP	６		IP
+中村　　辰也	6.22	0.12	3.0	２		IP	５		IP	３		IP	２		IP	４		IP	３		IP	３		IP	欠		IP	２		IP	２		IP
+志賀　　美優	1.00	0.33	6.0	６	6	IP																											IP
+中嶋　健一郎	5.30	0.14	3.2	２	4	IP	５	4	G1	４		IP	５	4	IP	３		G1	２		G1	６		IP	１		IP	２		IP	６		IP
+飯山　　晃三	2.90	0.23	5.5	６		IP	２		IP	６		IP	４		IP	６		IP	５		IP	５		IP	２		IP	６	5	IP	６		IP

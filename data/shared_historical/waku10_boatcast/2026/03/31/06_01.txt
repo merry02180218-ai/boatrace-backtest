@@ -1,0 +1,8 @@
+data=
+1	0
+坂東　　　満	7.20	0.15	2.4	２		IP	６		IP	１		IP	２		IP	１		IP	６		IP	１		IP	１		IP	３		IP	２		IP
+高倉　　孝太	5.80	0.13	2.5	５		IP	３		IP	５		IP	２		IP	４		IP	３		IP	１	4	IP	４		IP	２		IP	２		IP
+酒井　　陽祐	5.20	0.15	2.2	４		IP	６		IP	２		IP	２		IP	２		IP	４		IP	６		IP	３		IP	４		IP	２		IP
+鈴木　　柊介	3.90	0.13	2.6	６		IP	１	5	IP	３		IP	６		IP	３		IP	４		IP	２		IP	６		IP	６	6	IP	６	5	IP
+三浦　　敬太	5.30	0.16	2.1	６		IP	２		IP	１		IP	５		IP	妨		IP	妨		IP	１		IP	５		G3	１		IP	１		IP
+村田　　浩司	1.30	0.15	2.4	６		IP	６		G3	６		G3	５		IP	６		IP	５		IP	６	2	IP	５		IP	６		IP	６		IP

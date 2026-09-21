@@ -1,0 +1,8 @@
+data=
+1	0
+南野　　利騰	7.00	0.18	2.5	２		IP	３		IP	４		IP	３		IP	１		IP	５		IP	２		IP	１		IP	３		IP	１		IP
+入海　　　馨	4.80	0.15	3.5	５		G1	４		G1	２		IP	２		IP	６		G1	６		G1	２		G1	５		G1	４		G1	５		G1
+佐口　　達也	3.40	0.17	3.5	５		IP	４		IP	３		IP	６		IP	５		IP	４		IP	４		IP	２		IP	６		IP	５		IP
+龍田　　真白	4.30	0.13	2.8	４		IP	３		IP	５		IP	５		IP	６		IP	２		IP	３		IP	５		IP	１		IP	５		IP
+山田　　晃大	4.10	0.13	2.2	４		IP	５		IP	４		IP	３		IP	６		IP	５		IP	３		IP	２		IP	３		IP	６		IP
+小川　日紀太	1.50	0.18	4.2	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	４		IP	６		IP	６		G3	６		IP

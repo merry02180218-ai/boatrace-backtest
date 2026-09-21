@@ -1,0 +1,8 @@
+data=
+1	0
+星野　　太郎	5.70	0.17	4.2	２		IP	５		IP	４		IP	１		IP	Ｆ		IP	１		IP	１		IP	６		IP	５		IP	１		IP
+宇留田　翔平	5.80	0.14	2.3	３	3	IP	５		IP	３		IP	３		IP	２	3	IP	５		G3	２		IP	２		IP	５		IP	１		IP
+渡邊　　裕貴	5.80	0.17	3.2	２		IP	１		IP	４		IP	２		IP	４		IP	４		IP	３		IP	４		IP	５		IP	２		IP
+浜野　　孝志	3.40	0.18	3.2	１		IP	５		IP	６		IP	５		IP	５		IP	６		IP	Ｆ		IP	１		IP	５		IP	４		IP
+鳥本　　智史	2.00	0.17	3.6	６	6	IP	５	6	IP	６	6	IP	６	6	IP	２	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	５	6	IP
+樋口　　範政	2.60	0.25	4.8	５		IP	５	5	IP	３		IP	６		IP	４		IP	３	4	IP	５		IP	６		IP	６		IP	６		IP

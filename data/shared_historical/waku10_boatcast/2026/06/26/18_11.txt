@@ -1,0 +1,8 @@
+data=
+1	0
+横田　　　茂	8.10	0.15	2.5	２		IP	１		IP	６		IP	２		IP	１		IP	２		IP	１		IP	１		IP	２		IP	２		IP
+蒲原　　健太	5.50	0.15	2.8	３		IP	３		IP	１		IP	３		IP	２		IP	４		IP	６		IP	５		IP	５		IP	１		IP
+川崎　　智幸	6.10	0.09	2.6	６		IP	５		IP	３		IP	１		IP	４		IP	１		IP	５		IP	２		IP	１		IP	２		IP
+西岡　　蒼志	4.70	0.19	4.0	５		IP	４		IP	４	6	IP	６		IP	５		IP	２		IP	４		IP	２		IP	４		IP	１		IP
+高橋　　英之	4.80	0.15	3.2	３		IP	５		IP	６		IP	４		IP	１	4	IP	２		IP	３		IP	６		IP	２		IP	５		IP
+宮城　　那菜	1.80	0.17	3.2	６		IP	６		IP	６		IP	４		IP	６		IP	４		IP	６		IP	６		IP	５		IP	５		IP

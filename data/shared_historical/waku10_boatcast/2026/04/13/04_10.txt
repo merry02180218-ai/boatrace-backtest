@@ -1,0 +1,8 @@
+data=
+1	0
+三浦　洋次朗	7.20	0.18	3.4	１		IP	３		IP	３		IP	３		IP	１		IP	５		IP	１		IP	５		IP	１		IP	１		IP
+小林　　　泰	3.70	0.16	2.8	欠		IP	５		IP	５		IP	５		IP	４		IP	３		IP	６		IP	２		IP	５		IP	１		IP
+大橋　栄里佳	7.00	0.17	3.5	２		G3	４		G3	２	2	IP	１		IP	４		IP	４		IP	２		IP	２		IP	２		IP	２		IP
+江口　　晃生	6.44	0.17	2.9	２	2	IP	２	2	IP	欠		IP	４	2	IP	３	2	IP	１	2	IP	１	2	IP	５	2	IP	３	2	IP	４	2	IP
+水野　　望美	3.70	0.19	2.8	４		IP	５		IP	５		IP	３		IP	４		IP	５		IP	６		IP	４		IP	４		IP	２		IP
+福島　　陽子	2.20	0.21	5.3	５		G3	６		G3	５		IP	４		IP	６		IP	４	5	IP	５		G3	６		IP	４		IP	６		IP

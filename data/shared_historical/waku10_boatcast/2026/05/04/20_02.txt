@@ -1,0 +1,8 @@
+data=
+1	0
+長尾　京志郎	8.00	0.19	3.4	２		IP	１		IP	５		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	４		IP
+大賀　龍之介	6.30	0.14	3.1	２		IP	２		IP	３		IP	１		IP	４	3	IP	２		IP	４		IP	１		IP	４		IP	６		IP
+上原　健次郎	5.40	0.24	3.9	１		IP	５		IP	２		IP	４		IP	２		IP	３		IP	２	4	IP	５		IP	５		IP	４		IP
+高山　　敬悟	4.30	0.16	2.9	６		IP	２		G3	５		G3	４	5	IP	４		IP	２		IP	５		IP	４	6	IP	３	5	IP	４		IP
+竹井　　貴史	6.80	0.14	2.1	５		IP	１	4	IP	２		IP	３	4	IP	４		IP	１		IP	５		IP	３		IP	１		IP	２		IP
+今井　　貴士	5.30	0.18	4.3	３		IP	５		IP	３		IP	６		IP	４		G1	２		G1	２		G1	５		G1	４		G1	３		G1

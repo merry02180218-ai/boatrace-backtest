@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　　翔	6.70	0.21	4.7	２		IP	３		IP	２		IP	６		IP	１		IP	４		IP	２		IP	２		IP	２		IP	３		IP
+高井　　雄基	6.80	0.18	4.1	２		IP	２		G3	３		G3	５		IP	２		IP	３		IP	３		IP	３		IP	２		IP	１		IP
+松本　　庸平	5.10	0.19	4.1	２		IP	６		IP	６		IP	６		IP	２		IP	４		IP	２		IP	２		IP	２	2	IP	４	4	IP
+後藤　　陽介	3.90	0.16	2.9	５		IP	５		IP	４		IP	５		IP	４		IP	２		IP	３		IP	５		IP	６	5	IP	２		IP
+河村　　　了	5.50	0.19	4.2	３		IP	４		IP	３		IP	３		IP	５		IP	５		IP	３		IP	２		IP	４		IP	１		IP
+吉田　慎二郎	4.00	0.15	3.4	４		IP	４		IP	３		IP	３		IP	３	5	IP	４		IP	５		IP	６		IP	４		IP	６		IP

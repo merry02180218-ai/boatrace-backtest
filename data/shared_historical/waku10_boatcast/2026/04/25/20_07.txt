@@ -1,0 +1,8 @@
+data=
+1	0
+柴田　　百恵	7.80	0.17	4.0	１		IP	２		IP	２		IP	２		G3	１		G3	４		IP	１		IP	２		IP	１		IP	５		IP
+田村　　美和	2.90	0.17	3.8	６		IP	５		IP	５		IP	４		IP	２		G3	４		G3	５		G3	５		G3	５		G3	５		IP
+西村　　　歩	6.80	0.17	3.1	４		G3	１		IP	５		IP	２		IP	１		G3	１		G3	４		IP	５		IP	１		IP	２		IP
+落合　　直子	5.90	0.13	1.8	２	5	IP	６		IP	４	5	IP	３		IP	１		IP	５		G3	１		IP	２		G3	５		IP	２		IP
+池　　　千夏	2.80	0.13	2.6	６		IP	３		IP	６		IP	２		G3	６		G3	５		IP	４		IP	６		IP	５		IP	５		IP
+犬童　　千秋	4.00	0.14	3.0	４	5	IP	５	5	IP	４		IP	１		G3	３		IP	５	5	G3	２		IP	６		IP	６		IP	５		IP

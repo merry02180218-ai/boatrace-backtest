@@ -1,0 +1,8 @@
+data=
+1	0
+若狭　奈美子	7.80	0.17	2.2	１		IP	１		IP	Ｆ		G3	１		G3	１		IP	３		IP	１		IP	２		IP	１		IP	４		IP
+喜井　つかさ	6.40	0.12	2.5	４		IP	１		IP	１		G3	２		G3	６		G3	２		G3	３		G3	５		IP	３		IP	２		IP
+大石　　真央	4.10	0.19	3.4	６		IP	４		IP	３	5	IP	６		IP	３		IP	４		IP	３		IP	３		IP	３	4	IP	６		IP
+黒澤　めぐみ	5.10	0.15	3.0	３		IP	１		IP	３		IP	５		IP	５		IP	５		G3	２		G3	６	5	G3	３		G3	２		IP
+中尾　　優香	5.20	0.18	3.2	２		IP	１		IP	５		IP	６		IP	４		IP	６	4	G3	１		G3	２	3	IP	５		IP	３		IP
+寺島　　美里	4.10	0.25	5.0	２		IP	５		IP	３		IP	４		IP	４		IP	２		IP	５	5	IP	６		IP	４		G1	６		IP

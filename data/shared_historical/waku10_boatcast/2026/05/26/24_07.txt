@@ -1,0 +1,8 @@
+data=
+1	0
+黒澤　めぐみ	5.90	0.22	3.3	１		IP	５		IP	６		IP	１		IP	３		G3	２		G3	５		G3	１		IP	３		IP	４	2	IP
+山田　　理央	6.10	0.12	2.2	５		IP	２		G2	１		G2	３		IP	５		G3	２		G3	３	1	G3	５		IP	１		IP	４		IP
+山口　真喜子	5.11	0.18	3.2	２		IP	３		G2	３		IP	転		IP	２		IP	５		IP	４		IP	Ｆ		IP	１		IP	６		IP
+濱崎　寿里矢	2.90	0.13	2.3	Ｆ		IP	４		IP	５	5	G3	５		G3	５		IP	４		IP	５		IP	６		IP	１		IP	５		IP
+中村　かなえ	4.00	0.14	3.5	３		IP	４	4	IP	６		IP	５		IP	６		IP	６	6	IP	１		G3	２		G3	３		IP	６	6	IP
+門田　　　栞	4.00	0.21	3.8	５		G2	４		IP	２	5	IP	４		G3	６		G3	５		G3	２		IP	５		IP	３	5	IP	５		IP

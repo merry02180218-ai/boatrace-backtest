@@ -1,0 +1,8 @@
+data=
+1	0
+松下　　一也	7.60	0.14	2.3	１		IP	Ｆ		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	５		IP	２		IP
+野口　　勝弘	7.80	0.16	3.1	１		IP	１		IP	３		IP	１		IP	２		IP	２		IP	２		IP	１	3	IP	５		IP	３		IP
+盛本　　真輔	7.00	0.19	3.5	１		IP	２		IP	４		IP	３		IP	３		IP	１		IP	３		IP	２		IP	４		IP	２	4	IP
+原　　加央理	8.00	0.14	2.3	１		IP	２		IP	１		IP	３		IP	２		G3	２		G3	３		IP	２		IP	３		IP	１		IP
+山下　　昂大	5.30	0.11	2.2	３	6	IP	２		IP	３		IP	１		IP	５		IP	３		IP	４		IP	３		IP	４		IP	６	2	IP
+小野　　　桜	4.70	0.20	4.6	４		IP	２	5	IP	３		G3	４		IP	４		G3	４		IP	６		IP	２		IP	４		G3	４		IP

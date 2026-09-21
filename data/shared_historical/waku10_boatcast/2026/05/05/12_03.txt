@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　大騎	5.70	0.19	4.0	３		IP	４	2	IP	１		IP	１		IP	４		IP	６		IP	２		IP	５		IP	５		IP	１		G3
+井上　　一輝	6.50	0.13	3.9	２		IP	４		IP	２		G1	５		G1	３		G1	３		IP	３		G1	３		G1	４		G1	２		G1
+湯川　　浩司	5.70	0.19	4.8	６		G1	３		G1	６		G1	４		G1	４	1	G1	４		G1	３		G1	３	4	G2	１		IP	３		G1
+秋末　　秦悟	2.20	0.21	4.3	６		IP	６		IP	４		IP	６		IP	６	5	IP	６		IP	５		IP	６		IP	４		IP	３		IP
+丸岡　　正典	4.90	0.17	3.3	２		IP	５		IP	４		IP	６		G2	５	4	IP	２		IP	４		IP	２		IP	５		G2	２		IP
+田中　信一郎	4.10	0.15	3.1	５		G1	５		G1	２		IP	４		IP	４	5	IP	３		IP	４	5	IP	４		G1	５		G1	６		IP

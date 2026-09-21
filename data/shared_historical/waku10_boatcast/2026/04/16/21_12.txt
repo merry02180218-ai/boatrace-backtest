@@ -1,0 +1,8 @@
+data=
+1	0
+藤原　啓史朗	9.90	0.14	2.5	１		G1	３		SG	１		IP	１		IP	１		G1	２		G1	１		IP	１		IP	１		IP	１		IP
+馬袋　　義則	7.11	0.16	2.7	２		IP	転		IP	３		IP	２		IP	３		IP	２		IP	４	1	IP	２		IP	３		IP	１		IP
+金田　　　諭	6.20	0.20	3.9	２	5	IP	２		IP	２		IP	６		IP	５		IP	６		IP	３		IP	２		IP	１		G1	３		G1
+桑原　　　悠	5.20	0.17	3.1	１		IP	４		IP	４		IP	３		G3	１		IP	６		G1	３		G3	４		G1	６		G1	５		G1
+安河内　　将	5.00	0.14	3.1	２		G1	４		IP	４		IP	６		IP	４		G1	３		IP	２		IP	６		IP	５		G1	３		G1
+澤田　　尚也	3.60	0.14	4.0	２		IP	４		IP	５		IP	６		G1	５		G1	５		G1	４		G1	６		G2	３		IP	６		IP

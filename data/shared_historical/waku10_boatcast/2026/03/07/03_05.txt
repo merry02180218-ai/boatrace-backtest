@@ -1,0 +1,8 @@
+data=
+1	0
+金山　　立樹	8.20	0.17	3.3	１		IP	２		IP	１		IP	２		IP	５		IP	１		IP	１		IP	２		IP	３		IP	１		IP
+古賀　　智之	6.60	0.13	2.8	４	3	IP	３		IP	１		IP	６		G3	３		IP	２		IP	１		IP	２		IP	４		IP	２		IP
+小林　　甘寧	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+若林　　　麗	3.10	0.19	3.2	２		IP	６	5	IP	６		IP	４		IP	４		IP	５		IP	６		IP	２		IP	６		IP	６		IP
+大場　　恒季	3.89	0.18	3.8	Ｆ		IP	３		IP	４		IP	３	4	IP	４		IP	３		IP	４		IP	６		IP	４		IP	転		IP
+福田　　　理	2.10	0.15	3.7	６		IP	６		IP	４		IP	４		IP	６		IP	６		IP	５	5	IP	６		IP	４		IP	５		IP

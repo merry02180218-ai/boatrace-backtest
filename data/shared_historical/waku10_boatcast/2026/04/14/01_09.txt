@@ -1,0 +1,8 @@
+data=
+1	0
+太田　　和美	9.50	0.19	3.6	２		G1	２		G1	１		IP	１		IP	２		IP	１		IP	２	2	IP	１		IP	１		IP	１		IP
+関　　　浩哉	5.90	0.17	4.0	２		G1	６		SG	６		SG	３		G1	２		G1	５		G1	５		G1	５		IP	１		IP	２		IP
+石渡　　鉄兵	7.80	0.12	2.6	３		IP	２		SG	３		G1	３		G1	３		G1	３		G2	１		IP	２		SG	３		G1	３		G1
+山田　　哲也	5.30	0.08	1.4	６		G1	６		IP	２		IP	２		IP	２	5	IP	６		G1	４		G1	４		G1	３	3	G1	３		IP
+池田　　浩二	6.50	0.14	2.8	３		SG	６		G1	３		G1	４		G1	３		G1	３		G1	１		G1	５		G1	３		IP	２		G1
+石野　　貴之	4.20	0.19	3.5	５		G1	３		G1	３		IP	３		IP	６		G1	５		IP	６		G3	１	3	G3	６	4	IP	５		IP

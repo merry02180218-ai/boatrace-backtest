@@ -1,0 +1,8 @@
+data=
+1	0
+塩崎　　桐加	8.50	0.14	2.4	１		IP	１		IP	２		G3	２		G3	１		G1	１		IP	１		IP	２		IP	５		IP	２		IP
+嶋田　　有里	4.00	0.20	3.6	４		IP	５		IP	２		IP	５		IP	５		IP	６		IP	４		IP	２		IP	２		IP	６		IP
+間庭　　菜摘	2.80	0.15	2.2	４		IP	４		IP	６		IP	落		IP	４		IP	６		G1	６		G3	５		G3	３	4	IP	４		IP
+内山　　七海	4.50	0.15	2.9	２		IP	２		IP	６		IP	５		IP	４		IP	４		IP	３		IP	６		G3	１	6	IP	６		IP
+山下　　奈緒	3.00	0.36	5.5	３		IP	５	4	IP	４		IP	５		IP	５		IP	４		G3	５		G3	６		IP	６		IP	３		IP
+島倉　　　都	1.90	0.21	4.3	６		G3	３		IP	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP	５		IP	５		IP

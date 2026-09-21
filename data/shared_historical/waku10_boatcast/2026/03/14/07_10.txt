@@ -1,0 +1,8 @@
+data=
+1	0
+仲口　　博崇	9.00	0.20	3.5	２		IP	２		IP	１		IP	１		IP	１		IP	２		G1	１		G1	２		IP	３		IP	１		G3
+松井　　賢治	7.00	0.15	3.2	２		IP	４		IP	１		IP	２		IP	４		IP	３		IP	２		IP	２		IP	１		IP	４		IP
+日笠　　勝弘	2.70	0.16	4.0	４		IP	３		IP	５		IP	エ		IP	５		IP	６		IP	４	6	IP	６		IP	６		IP	３		IP
+藤田　　美代	2.50	0.21	4.1	６		IP	５	5	IP	４		IP	６		IP	６		IP	５		IP	５		IP	５	5	IP	４		IP	３		IP
+林　　　祐介	2.90	0.18	3.9	３	4	IP	５	3	IP	２		IP	６		IP	５		G3	４		G3	６		IP	５		IP	５		IP	６	4	IP
+山田　　雄太	3.00	0.17	3.3	５		IP	４		IP	６		IP	５		IP	３		IP	５		IP	５		IP	６		IP	３		IP	４		IP

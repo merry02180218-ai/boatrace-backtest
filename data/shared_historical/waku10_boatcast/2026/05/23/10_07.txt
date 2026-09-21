@@ -1,0 +1,8 @@
+data=
+1	0
+小川　　知行	8.00	0.14	1.7	１		IP	１		IP	１		IP	６		IP	１		IP	６		IP	１		IP	２		IP	１		IP	１		IP
+泉　　　啓文	3.10	0.19	4.2	５		IP	５		IP	４	3	IP	４		IP	落		IP	３		IP	６		IP	Ｆ		IP	４		IP	２		IP
+三川　　昂暁	7.10	0.20	4.2	６		IP	２		IP	２		IP	４		IP	２	4	IP	３		IP	１		IP	２		IP	２		IP	１		IP
+服部　　達哉	4.30	0.14	2.7	３		IP	３		IP	３		IP	６		IP	５		IP	４		IP	３		G3	５		G3	２		IP	５		IP
+宮田　　龍馬	5.30	0.14	3.0	３		IP	４		IP	２		IP	６		G3	４		G1	３		IP	４		IP	４		G1	５		G1	１		IP
+野間　　大樹	5.00	0.21	3.9	６		IP	２	5	IP	３	5	IP	３		IP	６		IP	５		IP	５		G3	３		G3	２		IP	１		IP

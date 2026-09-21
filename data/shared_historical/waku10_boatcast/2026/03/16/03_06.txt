@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　庸平	6.80	0.18	3.6	２		IP	５		IP	Ｆ		IP	１		IP	２		IP	１		IP	４		IP	１		IP	３		IP	１		IP
+福田　　翔吾	5.20	0.16	3.3	沈		IP	４		IP	２		IP	２		IP	６		IP	２		IP	２		IP	２		IP	６		IP	３		IP
+伊藤　　雄二	3.20	0.18	2.8	５	4	IP	６		IP	５		IP	４		IP	２		IP	４		IP	３		IP	６		IP	５		IP	５		IP
+中野　　次郎	5.50	0.13	2.8	５		G1	４		G1	４		G1	２		G1	２		G1	１		G1	５		IP	６		G3	６		G3	２		IP
+石岡　　将太	4.40	0.15	3.2	４		IP	４		IP	２	4	IP	２		IP	５		IP	５		IP	３		IP	５		IP	４		IP	４		IP
+北中　　元樹	3.50	0.19	5.1	２		IP	６		IP	３		IP	４		IP	３		IP	５		IP	５		IP	６		IP	４		IP	６		IP

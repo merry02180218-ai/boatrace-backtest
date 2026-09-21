@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　豪洋	6.40	0.15	2.7	３		IP	１		IP	２		IP	５		IP	３		IP	１		IP	４		IP	１		IP	３		IP	５		IP
+山口　真喜子	6.00	0.20	3.9	２		IP	３		IP	１		G1	５	3	IP	２		IP	６	3	IP	妨		G3	３		IP	１		G3	２		IP
+宇土　　泰就	3.33	0.12	3.0	４		IP	４		IP	転		IP	４		IP	５		IP	４		IP	４		IP	６		IP	３		IP	６		IP
+守屋　　大地	4.30	0.19	4.2	５		IP	４		G3	６		IP	５	6	IP	４	5	IP	４		IP	４		IP	２		IP	１		IP	５		IP
+中野　　仁照	4.60	0.15	3.4	４		IP	６	6	G1	４		G1	６	6	IP	３		IP	Ｆ		IP	４		IP	１		IP	３	4	IP	２		G3
+松下　　直也	4.00	0.17	4.2	５		IP	５		IP	４		IP	３	5	IP	５		IP	３	5	IP	３		IP	５		IP	４		IP	３		IP

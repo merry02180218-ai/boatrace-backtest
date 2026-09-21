@@ -1,0 +1,8 @@
+data=
+1	0
+奥田　　　誠	9.00	0.14	3.1	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	３		IP
+一色　　颯輝	2.60	0.23	3.9	４		IP	５		IP	６		IP	１		IP	６	3	IP	６		IP	６		IP	６		IP	４		IP	６		IP
+泉　　　啓文	3.33	0.16	3.7	落		IP	５		IP	５	4	IP	５		IP	５		IP	５		IP	４		IP	３		IP	５		IP	２	5	IP
+小山　　　勉	7.10	0.15	4.3	４		IP	１	5	IP	１		IP	３	6	IP	２		IP	２		IP	２		IP	３		IP	３	5	IP	５		IP
+植竹　　玲奈	1.89	0.23	4.7	６		IP	６		IP	４		IP	６		IP	４		IP	６		IP	欠		IP	６		IP	５		IP	５		IP
+渡辺　　千草	2.30	0.17	4.1	６		IP	６		IP	６		IP	３		IP	５		IP	５		G3	５	5	G3	５	5	IP	４		G3	５		G3

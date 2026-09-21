@@ -1,0 +1,8 @@
+data=
+1	0
+渡辺　　浩司	9.60	0.14	2.8	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+松尾　　　充	7.80	0.14	3.7	６	3	G1	２		G1	１		IP	１		IP	１		IP	２		IP	２		IP	２		IP	４		G1	２		IP
+池田　　浩二	9.40	0.08	1.8	３		SG	３		SG	１		G1	２		G1	２		G1	２		G1	２		G1	１		G1	３		G1	１		G1
+砂長　　知輝	5.40	0.13	3.6	４	6	SG	３		IP	３		IP	５		IP	３		G1	３		IP	２		IP	１		IP	６		IP	５		IP
+岡　　　祐臣	4.30	0.20	4.4	５		G1	３		G1	３		IP	３		IP	４		IP	２		IP	５		IP	５		IP	６		IP	４		IP
+久田　　敏之	6.20	0.10	2.3	５		SG	４		SG	２		IP	３	5	G1	４		IP	３		G1	６		G1	３		IP	２	5	IP	１		IP

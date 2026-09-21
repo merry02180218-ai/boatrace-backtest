@@ -1,0 +1,8 @@
+data=
+1	0
+村本　　大成	6.70	0.16	3.3	１		IP	３		IP	３		IP	１		IP	６		IP	２		IP	１		IP	５		IP	４		IP	１		IP
+向後　　龍一	7.40	0.14	3.3	４		G2	３		G2	２		G2	１		G2	５		IP	１		IP	１	3	IP	３		IP	４	1	IP	１		IP
+富澤　　祐作	6.20	0.13	1.5	２		IP	１		IP	４		IP	３		IP	４		IP	４		IP	２		IP	４		IP	２	1	IP	３		IP
+坂元　　浩仁	6.20	0.12	2.3	２		IP	３		IP	４		IP	２		IP	１		IP	６		IP	６		IP	１	3	IP	２		IP	３		IP
+榎　　　幸司	5.00	0.20	4.2	１	3	IP	５		IP	３		IP	３		IP	２		IP	５		IP	４	6	IP	４		IP	５		IP	３		IP
+伊藤　　　栞	1.80	0.21	3.9	５		IP	４		IP	６		G3	５	5	IP	６		IP	６		IP	５		IP	５		IP	５		IP	６		IP

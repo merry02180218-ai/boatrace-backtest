@@ -1,0 +1,8 @@
+data=
+1	0
+黒田　　　剛	6.40	0.14	3.0	１		IP	６		IP	１		IP	１		IP	２		IP	６		IP	５		IP	１		IP	３		IP	３		IP
+長谷川　晴哉	6.00	0.19	3.9	３		IP	３		IP	５		IP	５		IP	３		IP	１		IP	３		IP	３		IP	２		IP	２		IP
+秋末　　秦悟	3.70	0.15	3.5	２		IP	６		IP	２		IP	３		IP	５		IP	６		IP	６		IP	４		IP	５		IP	４		IP
+中本　　大樹	4.30	0.16	3.6	３		IP	１	5	IP	５		IP	３		IP	３		IP	５		IP	５	5	IP	５		IP	６		IP	３		IP
+小宮　　涼雅	2.70	0.18	4.0	５		IP	３		IP	４		IP	４	6	IP	５		IP	５		IP	５		IP	５		IP	５		IP	６		IP
+木山　　大聖	1.70	0.22	3.7	６		IP	５		IP	６		IP	５		IP	６		IP	４		IP	Ｆ		IP	５		IP	５		IP	５		IP

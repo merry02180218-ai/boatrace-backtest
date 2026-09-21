@@ -1,0 +1,8 @@
+data=
+1	0
+大賀　龍之介	7.20	0.19	3.1	２		IP	３		IP	１		IP	６		IP	２		IP	１		IP	６		IP	１		IP	１		IP	２		IP
+前沢　　丈史	8.00	0.12	2.6	４		G3	２		G3	３		IP	１	3	IP	３		IP	２		IP	１		G1	２		IP	２		IP	１		IP
+牧山　　敦也	5.60	0.17	3.2	３		IP	１		IP	４		IP	３		IP	５		IP	エ		IP	３		IP	２		IP	３		IP	２		G3
+宮迫　　暢彦	3.70	0.21	4.5	５		IP	４		IP	２		IP	５		IP	３		IP	６		IP	３		IP	４		IP	５		IP	５		IP
+向後　　龍一	5.30	0.17	2.9	３		IP	３		IP	３		G3	５		G3	４		IP	６		IP	４		IP	１		IP	２		IP	３		IP
+富澤　　祐作	4.20	0.15	4.2	５		IP	３		IP	６		IP	４		IP	４		IP	６		IP	２		IP	２		IP	５		IP	３		IP

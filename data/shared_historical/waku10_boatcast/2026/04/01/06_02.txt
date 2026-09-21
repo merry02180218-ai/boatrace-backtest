@@ -1,0 +1,8 @@
+data=
+1	0
+小澤　　　学	4.10	0.26	5.7	５		IP	２		IP	５		IP	６		IP	５		IP	５		IP	３		IP	５		IP	１		IP	３		IP
+澤崎　　雄哉	4.10	0.19	3.9	３		IP	６		G3	５		G3	２		IP	２		IP	５		IP	４		IP	５		IP	２		IP	Ｆ		IP
+抹香　　雄三	5.70	0.16	2.7	２		IP	２		IP	４		IP	５		IP	４	2	IP	３		IP	３		IP	２		IP	１		IP	６		IP
+鐘ヶ江　真司	2.60	0.21	3.5	６		IP	４		IP	３		IP	６	5	IP	６	6	IP	６		IP	４		IP	４		IP	５		IP	５		IP
+川合　　理司	3.20	0.21	4.4	４		IP	６		IP	３		IP	３		IP	３		IP	５	4	IP	６		IP	４		IP	６		G3	６		G3
+古結　　　宏	5.44	0.14	3.0	２		G1	５		G1	１	4	IP	３		IP	６	5	G1	転	5	IP	２	5	IP	４	4	IP	６		IP	３		IP

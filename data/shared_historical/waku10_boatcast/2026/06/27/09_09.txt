@@ -1,0 +1,8 @@
+data=
+1	0
+大場　　広孝	6.30	0.18	3.0	１		IP	２		IP	２		IP	１		IP	６	4	IP	２		IP	１		IP	４		IP	Ｆ		IP	４		IP
+坂本　　一真	3.30	0.16	2.9	３		IP	６		IP	５		IP	６		IP	４		IP	５		IP	５		IP	６		IP	１		IP	４		IP
+重富　　伸也	4.70	0.14	2.5	４		IP	２		IP	２		IP	５		IP	２		IP	５	5	IP	６		G3	４		IP	３	5	IP	４	4	IP
+岡田　　憲行	6.50	0.17	3.8	２	3	IP	２		IP	４		IP	１		IP	５		IP	６	1	IP	１	1	IP	２		IP	１		IP	５		IP
+小山　　　勉	5.90	0.17	3.4	１		IP	６		IP	５		IP	３		IP	５		IP	３		IP	１		IP	２		IP	２		IP	３		IP
+高木　　圭大	2.70	0.17	3.7	５		IP	５		IP	２		IP	６		IP	６		IP	４		IP	５		IP	６		IP	４		IP	５	5	IP

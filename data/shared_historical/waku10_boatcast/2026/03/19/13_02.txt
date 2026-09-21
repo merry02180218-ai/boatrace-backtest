@@ -1,0 +1,8 @@
+data=
+1	0
+宮田　　龍馬	9.60	0.12	2.2	１		G1	１		IP	４		IP	１		IP	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP
+吉田　　拡郎	5.40	0.15	3.0	６		G1	２		G1	２		IP	６		IP	６		G1	３		G1	４		G1	５		G1	３		G1	１		IP
+片岡　　雅裕	5.70	0.12	3.0	２		G1	４		G1	５		G1	１		G1	３		G1	６		G1	１		IP	６		IP	４		SG	６		SG
+徳増　　秀樹	4.40	0.16	3.6	６		G1	２		IP	６		IP	５		IP	４		IP	２		G1	６		G1	２		IP	３		IP	５		IP
+森高　　一真	5.30	0.15	2.9	３		G1	３	4	G1	３		G1	６		G1	３		G1	４		G1	４		G1	４		G1	６		G1	３		IP
+山下　　大輝	4.70	0.18	3.4	５		G1	５		IP	２		IP	３		IP	２	3	IP	６		G1	４		IP	５		IP	３		IP	３		IP

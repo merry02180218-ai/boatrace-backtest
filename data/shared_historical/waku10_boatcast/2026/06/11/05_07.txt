@@ -1,0 +1,8 @@
+data=
+1	0
+廣瀬　　将亨	7.80	0.18	3.2	１		IP	６		G2	２		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP
+大塚　　康雅	4.90	0.13	2.9	３		IP	２		IP	４		IP	２		IP	１		IP	４		IP	５	3	IP	６		IP	４	3	IP	５		IP
+西村　　豪洋	3.60	0.18	3.9	４		IP	５		G3	６		IP	４		IP	３	4	IP	５		IP	６		IP	５		IP	２		IP	３		IP
+鈴木　　秀茉	4.30	0.17	2.4	１	5	IP	６		IP	２		IP	４	5	IP	４		IP	５		IP	４		IP	６		G3	６		G3	２		IP
+澁澤　　周羽	1.14	0.28	4.0	転	6	IP	６	6	IP	６	6	IP	５	6	IP	６	6	IP	６	6	IP	５	6	IP									IP
+石村　日奈那	1.44	0.17	4.6	Ｆ		IP	５		G3	６		G3	４		IP	６	5	IP	６		IP	６		IP	転	5	IP	６		IP	５		IP

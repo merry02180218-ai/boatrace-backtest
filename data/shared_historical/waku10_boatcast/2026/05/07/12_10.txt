@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　拓也	10.00	0.13	2.1	１		IP	１		IP	１		IP	１		G1	１		G1	３		G1	１		IP	１		IP	１		IP	１		IP
+井上　　一輝	6.60	0.13	3.8	１		IP	２		IP	４		IP	２		G1	５		G1	３		G1	３		IP	３		G1	３		G1	４		G1
+石野　　貴之	8.20	0.12	2.2	１		IP	１		G1	６		G1	１		G2	１		G1	１		IP	２		G1	３		IP	２		G3	４		IP
+岡村　　　仁	6.20	0.12	1.9	２		IP	４		IP	２		IP	４		IP	２		G3	２		IP	２		IP	６		G1	５		G1	２		G1
+小野　　達哉	4.50	0.17	3.1	５		IP	５		IP	４		IP	５		IP	５		IP	５		IP	６		IP	１		IP	２		IP	１		IP
+佐々木　大河	4.90	0.12	2.4	３		IP	３		IP	３		G2	３		IP	４		IP	４		IP	５		IP	４		IP	４		IP	３	5	IP

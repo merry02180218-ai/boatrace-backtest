@@ -1,0 +1,8 @@
+data=
+1	0
+君島　　秀三	9.50	0.13	2.1	１		IP	１		IP	１		IP	１		IP	３		IP	２		G1	１		IP	１		IP	１		G3	１		G3
+中井　　俊祐	4.90	0.21	3.0	３		IP	５		IP	５		IP	３		IP	１		IP	６		IP	２		IP	４		IP	３		IP	４		IP
+相原　　利章	5.70	0.12	2.1	３		IP	２		IP	４		IP	３		IP	４		IP	４		IP	２	5	IP	２		IP	６		IP	２		IP
+加倉　　侑征	6.20	0.17	2.3	４		IP	２		IP	１		IP	２		IP	３		IP	４		IP	４		IP	４		IP	２		IP	３		IP
+天野　　　誠	2.70	0.18	4.4	４		IP	３		IP	５		IP	５		IP	４		IP	６		IP	４		IP	６		IP	５		G3	６	6	G3
+三木　　晴斗	3.60	0.21	3.3	６		IP	３		IP	転		IP	２		IP	３		IP	５		IP	５		IP	エ		IP	６		IP	１		IP

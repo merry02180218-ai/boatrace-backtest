@@ -1,0 +1,8 @@
+data=
+1	0
+浜崎　　準也	5.70	0.19	3.8	１		IP	５		IP	３		IP	４		IP	１		IP	４		IP	５		IP	１		IP	２		IP	６		IP
+山崎　　善庸	3.70	0.18	4.6	６		IP	２		IP	５		IP	２		IP	２		IP	５		IP	６		IP	６		IP	４		IP	５		IP
+吉田　　一心	4.80	0.19	3.6	４		IP	６		IP	５		IP	３		IP	３		IP	２		IP	２	2	IP	１		IP	５	4	IP	６		IP
+上野　真之介	7.30	0.14	2.4	２		G2	５		G2	４		G2	２		G1	２		G1	２		G1	３		G1	４		G1	２		IP	２		IP
+溝口　海義也	5.10	0.12	2.7	３		G2	５		G2	２		IP	４		IP	１		IP	３		G2	５		IP	５		IP	５		IP	３		IP
+横井　　健太	2.20	0.22	5.1	４		IP	６		IP	４		IP	５		IP	４		IP	５		IP	５		IP	６		IP	６		IP	６		IP

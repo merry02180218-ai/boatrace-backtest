@@ -1,0 +1,8 @@
+data=
+1	0
+小川　　知行	7.10	0.15	1.7	６		IP	１		IP	１		IP	１		IP	６		IP	１		IP	６		IP	１		IP	２		IP	１		IP
+松山　　裕基	5.40	0.18	3.9	２		IP	１		IP	２		IP	４		IP	４		IP	４		IP	５		IP	５		IP	３		IP	３		IP
+市川　　哲也	4.30	0.12	2.3	５		IP	６		IP	４		IP	２		IP	５		IP	１		IP	１		IP	５	4	IP	５		G2	６		IP
+志賀　　美優	1.60	0.36	5.8	６	5	IP	６		IP	４	6	IP	６	6	IP	６	6	IP															IP
+井上　　　茂	3.60	0.21	4.2	３		IP	６		IP	４		IP	５		IP	４		IP	６		IP	３		IP	４	4	IP	５		IP	３		IP
+大池　　佑来	5.00	0.16	3.2	２		IP	３		IP	４		G2	６		G2	６		G2	６		IP	１		IP	２		IP	５		IP	３		IP

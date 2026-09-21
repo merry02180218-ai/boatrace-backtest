@@ -1,0 +1,8 @@
+data=
+1	0
+上原　　　崚	8.10	0.17	3.0	１		IP	１		IP	３		IP	３		IP	１		IP	３		IP	１		IP	１		G2	１		IP	５		IP
+浦田　　信義	5.50	0.16	4.0	４		IP	４		IP	２		IP	２		IP	３		IP	６		IP	２		IP	３		IP	４		IP	３		IP
+若林　　樹蘭	5.30	0.17	3.5	４		IP	２		IP	３		IP	３		IP	２		IP	６		IP	１	4	IP	４		IP	５	4	IP	５		IP
+三角　　哲男	6.20	0.12	2.6	１		IP	２		IP	３	5	IP	４		IP	２		IP	２		IP	６		IP	１		IP	４		G1	６		G1
+黒澤　めぐみ	4.56	0.21	4.0	２		IP	４		G3	３	6	G3	５		IP	転		IP	５		IP	６		IP	３		G3	２		G3	４		IP
+山崎　　聖司	2.60	0.23	5.2	６		IP	４		IP	３		IP	５		IP	５		IP	６		IP	６		IP	６		IP	４		IP	４		IP

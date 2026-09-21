@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　遼太	6.50	0.16	2.9	２		IP	３		IP	５		IP	１		IP	６		IP	１		IP	１		IP	１		IP	５		IP	３		IP
+汐崎　　正則	4.50	0.19	4.0	３		IP	４		IP	２		IP	１		IP	６		IP	６		IP	４		IP	５		IP	６		G3	２		G3
+川崎　　公靖	5.60	0.16	2.4	６		IP	５		IP	４		IP	２	4	IP	６		IP	３		IP	１		IP	３		IP	１		IP	２		IP
+荒井　　翔伍	5.20	0.20	2.8	４		IP	３		IP	３		IP	４		IP	１		IP	５		IP	５		G2	３		G2	４		IP	４		IP
+栗山　　繁洋	4.20	0.21	3.8	６		IP	３		IP	２		IP	６	6	IP	４	2	IP	４		IP	３		IP	６		IP	６		IP	１		IP
+福西　広太郎	3.10	0.23	4.9	５		IP	３		IP	５	5	IP	６		IP	５		IP	５		IP	４		IP	４		IP	５		IP	３		IP

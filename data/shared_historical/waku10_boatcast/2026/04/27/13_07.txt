@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　守成	6.70	0.23	4.7	６		IP	１		IP	１		IP	１		IP	５		IP	４		IP	１		IP	１		IP	５		IP	２		IP
+花本　　　剛	3.40	0.16	2.8	５		IP	５		IP	５		IP	５		IP	１		IP	欠		IP	６		IP	６		IP	３		IP	２		IP
+中島　　浩哉	4.90	0.13	2.6	２		IP	５		G3	４		G3	４		IP	５	5	IP	３		IP	６		IP	２		IP	２		IP	４		IP
+武井　莉里佳	4.70	0.16	3.5	６		IP	２		IP	１		IP	３		IP	６		G1	６		G1	１		G3	４		IP	５		G3	５		IP
+田村　　隆信	5.20	0.17	4.6	３		IP	５		IP	１		IP	４	6	IP	２		IP	６		IP	４		G1	５		G1	５	2	IP	１		G1
+井澤　　聖奈	1.50	0.23	5.4	６		IP	５		IP	Ｆ		IP	６		IP	６		IP	４		IP	６		IP	４		IP	６		IP	転		IP

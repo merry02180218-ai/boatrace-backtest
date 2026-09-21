@@ -1,0 +1,8 @@
+data=
+1	0
+森作　　広大	4.70	0.15	3.4	３		IP	４		IP	６		IP	３		IP	Ｆ		IP	４		IP	３	3	IP	１		IP	５		IP	２		IP
+今泉　　　徹	4.10	0.15	2.8	４		IP	４		IP	４		IP	５		IP	４		IP	４		IP	２		IP	６		IP	３		IP	４		IP
+伊達　　正利	3.80	0.16	3.5	６		IP	４		IP	５		IP	１		IP	６		IP	５	5	IP	３		IP	４		IP	４	4	IP	４		IP
+入海　　　馨	5.80	0.14	2.8	３		IP	６		G1	４		IP	２		G1	６		G1	３		G1	３		G1	５	6	G1	２		G1	２		G1
+中村　　駿平	2.80	0.16	2.9	Ｆ		IP	４		IP	５		IP	２		IP	６		IP	６		IP	３		IP	５		IP	５		IP	５		IP
+金子　　和之	3.40	0.20	3.4	５		IP	３		IP	５		IP	６		IP	３		IP	６		IP	４		IP	３		IP	５		IP	４		G3

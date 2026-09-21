@@ -1,0 +1,8 @@
+data=
+1	0
+眞鳥　　康太	7.10	0.18	4.2	１		IP	３		IP	１		IP	３	2	IP	１		IP	１		IP	４		G3	６		IP	１		IP	４		IP
+登　　みひ果	6.30	0.16	2.8	２		G3	１		G3	４		G1	３		IP	３		IP	５		G3	３		G3	２		IP	３		IP	３		IP
+野長瀬　正孝	4.30	0.14	2.5	４		IP	３		IP	６		IP	４		IP	３		IP	２		IP	４		IP	５		IP	５		IP	４		IP
+中村　　辰也	6.00	0.14	2.8	４		IP	欠		IP	５		IP	３		IP	２		IP	４		IP	２		IP	１		IP	３		IP	４		IP
+西野　　雄貴	7.10	0.16	2.2	１	4	IP	４		IP	４		IP	４	4	G1	２		G1	２		IP	１		IP	５		IP	２		IP	１		IP
+田中　太一郎	1.40	0.20	4.5	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	５		IP	６		IP	５		IP	６		IP

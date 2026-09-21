@@ -1,0 +1,8 @@
+data=
+1	0
+中嶋　健一郎	8.90	0.15	2.1	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		G1	５		IP	１		IP	１		IP
+上田　　龍星	5.20	0.13	2.9	６		SG	２		IP	５		G1	１		G2	３		IP	６		IP	Ｆ		IP	１		IP	５		G1	３		G1
+磯部　　　誠	6.10	0.12	2.0	３		SG	２		SG	４		G1	２		G1	１		G1	５		G1	６		G1	６		IP	２		SG	６		G1
+竹田　　和哉	5.50	0.19	3.4	４		IP	６		IP	２		IP	５		G1	６		G1	２		G1	３		IP	４		IP	２		IP	２		IP
+有賀　　達也	6.00	0.17	2.7	２		IP	２		IP	３		IP	Ｆ		IP	３		G1	２		IP	２	4	IP	６		IP	２		IP	３		IP
+井本　　昌也	3.70	0.16	4.1	５		G2	４		G2	６		G1	６		G1	６		IP	４		IP	３		IP	５		G1	４		G1	５		IP

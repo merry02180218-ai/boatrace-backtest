@@ -1,0 +1,8 @@
+data=
+1	0
+宮地　　博士	6.80	0.17	3.4	１		IP	５		IP	３		IP	４	2	IP	２		IP	２		IP	３		IP	１		IP	４		IP	１		IP
+滝沢　　芳行	4.10	0.16	2.9	２		G3	６		G3	４		IP	５		IP	５		IP	１		IP	４		IP	５		IP	５		IP	４		IP
+岩永　　節也	3.20	0.15	2.9	５		IP	２		IP	６		IP	４		IP	５		IP	５		IP	２		IP	５		IP	６		IP	５		IP
+阿波　　勝哉	5.80	0.18	3.8	６		IP	１		IP	３		IP	３		IP	６	6	IP	１	6	IP	５	6	IP	２		IP	４		IP	１	6	IP
+川辺　　郭人	2.50	0.16	2.9	６		IP	５	6	IP	６		IP	５	6	IP	５		IP	５		IP	５		IP	１		IP	５		IP	６		IP
+松尾　　宣邦	2.10	0.17	4.1	５		G3	５		IP	６		G3	５		IP	５		IP	欠		IP	５		IP	５		IP	５		IP	３		IP

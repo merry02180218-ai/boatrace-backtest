@@ -1,0 +1,8 @@
+data=
+1	0
+藤生　　雄人	9.20	0.11	2.3	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+渡邉　　英児	5.78	0.17	4.0	２		IP	３		IP	３		IP	４	3	IP	５		IP	２	1	IP	３		IP	２	3	IP	欠		IP	４		IP
+深山　　祐二	5.30	0.19	3.5	３		IP	４		IP	２		IP	２		IP	２		IP	５		IP	２		IP	６		IP	３		IP	５		IP
+鋤柄　　貴俊	3.40	0.14	2.8	６		IP	５		IP	３		IP	５		IP	３		IP	３		IP	４		IP	４		IP	６		IP	５		IP
+高井　　駿弥	3.00	0.17	3.5	６	6	IP	４		IP	３		IP	４		IP	６		IP	５		IP	５		IP	５		IP	４		IP	４		IP
+田中　　　結	1.80	0.29	5.2	４		IP	６		IP	６		IP	５		IP	６		IP															IP

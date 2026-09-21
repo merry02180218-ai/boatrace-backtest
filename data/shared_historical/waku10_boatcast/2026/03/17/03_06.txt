@@ -1,0 +1,8 @@
+data=
+1	0
+北中　　元樹	9.00	0.14	2.2	１		IP	３		IP	１		IP	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+森定　　晃史	5.80	0.18	3.1	２		IP	３		IP	５		IP	５		IP	１		IP	１	1	IP	４		IP	４		IP	１		IP	５		IP
+尾形　　栄治	2.90	0.16	2.9	３		IP	６	5	IP	３		IP	４		IP	５		IP	４		IP	５		IP	６		G3	６		G3	５		IP
+佐藤　　大介	5.90	0.16	3.7	２		IP	３	5	IP	３		G1	２		IP	４		IP	４		IP	５		IP	２		G3	３		IP	３		IP
+齋藤　　　勇	3.10	0.19	3.8	６		IP	５		IP	５		IP	５		IP	３		IP	４		IP	４		IP	３		IP	５		IP	５		IP
+中村　　裕将	2.70	0.14	3.0	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		G3	２	5	IP	４		IP	３		IP

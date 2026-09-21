@@ -1,0 +1,8 @@
+data=
+1	0
+西川　　拓利	8.20	0.16	1.9	１		IP	１		IP	２		IP	３		IP	１		IP	１		IP	１		IP	４		IP	１		IP	４		IP
+成貞　　琳平	5.30	0.19	4.0	６		IP	３		IP	２		IP	２		IP	５		IP	４		IP	３		IP	２		IP	３	3	IP	４		IP
+小玉　　啓太	4.30	0.17	3.2	２		IP	１		IP	５		IP	６		IP	３		IP	２		IP	５		IP	４	4	IP	６		IP	６		IP
+豊田　　祥生	3.00	0.19	4.1	６		IP	５		IP	５		IP	６		IP	１		IP	５	5	IP	３		IP	６	5	IP	４		IP	６		IP
+藤原　　碧生	5.30	0.14	2.0	３		IP	２		IP	３		G1	６		G1	５		G1	３		IP	５		G1	２		G1	５		G3	３		G1
+塚越　　海斗	4.30	0.14	3.4	４		IP	３		IP	５		IP	３		IP	６		IP	４	5	IP	３	5	IP	３		IP	３	5	IP	５		IP

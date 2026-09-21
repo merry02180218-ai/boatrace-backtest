@@ -1,0 +1,8 @@
+data=
+1	0
+石原　　　翼	8.70	0.16	3.7	４		G2	１		IP	１		IP	３		IP	１		IP	４		IP	１		IP	１		G2	１		G2	１		IP
+中村　　駿平	3.80	0.17	3.1	４	3	IP	６		IP	６		IP	３		IP	４	3	IP	５		IP	５		IP	３		IP	２		IP	４		IP
+藤井　　　徹	4.30	0.18	3.4	６		IP	５		IP	２		IP	２		IP	５		IP	６	4	IP	４		IP	２		IP	２		IP	６		IP
+川口　　貴久	4.00	0.18	3.6	３		IP	４		IP	６		IP	６	5	IP	５	3	IP	１	5	IP	４		IP	４		IP	５		IP	３		IP
+坂口　　諒宗	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+渡辺　　空依	2.10	0.24	5.4	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	４		IP	５		IP	３		IP	５		IP

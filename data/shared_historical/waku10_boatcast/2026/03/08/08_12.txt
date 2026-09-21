@@ -1,0 +1,8 @@
+data=
+1	0
+太田　　和美	9.60	0.15	2.6	１		IP	１		IP	２		IP	２		IP	１		IP	１		G1	２		IP	１		IP	１		IP	１		IP
+作間　　　章	6.20	0.17	3.2	３		IP	１		IP	２		IP	４		G1	６		G1	３		IP	６		IP	２		IP	２		IP	２		IP
+石橋　　道友	6.70	0.17	3.1	３		G1	２		IP	４		IP	２		IP	１		IP	５		IP	２		IP	３		G3	３		IP	２		IP
+浜田　亜理沙	4.90	0.16	4.0	４		G1	６		G1	２		G1	６		G1	２		IP	２		IP	５		G1	５		IP	２		G3	５		G3
+長野　壮志郎	3.30	0.15	4.2	６		IP	６		IP	２		IP	５		G1	４		IP	５	6	IP	６		IP	２		IP	６	6	IP	４		IP
+西橋　　奈未	5.00	0.13	3.5	５		G1	２	5	IP	６		G1	６		G1	３		G2	４		IP	６		IP	２		G3	２		G3	３		G1

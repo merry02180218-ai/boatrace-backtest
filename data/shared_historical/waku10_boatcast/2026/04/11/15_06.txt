@@ -1,0 +1,8 @@
+data=
+1	0
+亀山　　雅幸	8.60	0.15	3.2	１		IP	２		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	３		IP	３		IP
+立間　　充宏	5.89	0.19	4.0	４		IP	２		IP	３		IP	転		IP	６		IP	４		IP	２		IP	２		IP	２		IP	３		IP
+入澤　　友治	6.10	0.11	2.2	３		IP	５	5	IP	６		IP	３		IP	２		IP	３		IP	１	4	IP	１		IP	３		IP	３		IP
+市橋　　卓士	6.90	0.13	2.4	２		IP	１		IP	４		IP	３		IP	２		IP	３	2	IP	２		IP	２		IP	３		IP	４		G1
+榮田　　将彦	2.80	0.14	3.0	５		IP	５		IP	６	6	IP	６		IP	６		IP	３		IP	３		IP	６		IP	３		G3	５		IP
+岡崎　　凪汰	2.50	0.16	3.1	Ｆ		IP	５		IP	４		IP	３		IP	６		IP	５		IP	６		IP	４		IP	６		IP	４		IP

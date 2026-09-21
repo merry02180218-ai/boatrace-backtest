@@ -1,0 +1,8 @@
+data=
+1	0
+金田　　　諭	8.80	0.13	2.3	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	４		IP	３		IP
+重木　　輝彦	6.70	0.17	3.0	１		IP	３		IP	４		IP	２		IP	２		IP	４		IP	５		G1	２		IP	３		IP	１		IP
+岸本　　　隆	4.60	0.15	2.3	３		IP	３		IP	５		IP	３		IP	６		G3	６		IP	３		IP	２		IP	４		IP	３		IP
+中村　　日向	6.90	0.15	2.6	転		IP	３		G2	３		IP	２		IP	３		IP	２		G1	２		G1	１		SG	５		G1	２		G1
+島倉　　　都	2.70	0.22	3.0	６		IP	６		IP	５		IP	５		IP	４		IP	４		G3	５		G3	３	4	IP	４	4	IP	６		IP
+藤本　紗弥香	2.30	0.24	3.9	４		IP	６		IP	５		IP	６		IP	２		IP	６		IP	５	5	IP	５	5	IP	６		G3	６		G3

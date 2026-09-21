@@ -1,0 +1,8 @@
+data=
+1	0
+平山　　智加	8.80	0.18	3.2	２		IP	１		IP	３		IP	１		G2	２		G2	３		G3	１		G3	２		G3	１		G3	１		IP
+喜多　那由夏	6.00	0.17	3.6	４		IP	３		G3	４		IP	２		IP	４		IP	２		IP	４		IP	１		IP	２		IP	４		IP
+近藤　　友宝	6.10	0.19	4.0	２		IP	４		IP	２		IP	３		IP	４		IP	６		IP	４		IP	２		IP	１		IP	２		IP
+石岡　　将太	6.10	0.16	3.7	４		IP	１		IP	２		IP	５		IP	３		IP	６		IP	３		IP	２		IP	１		IP	３		IP
+新田　　洋一	4.20	0.14	2.5	４		IP	５	6	IP	４		IP	３		IP	３		IP	３		IP	５	4	IP	４	6	IP	４		IP	４		IP
+直江　　健成	1.11	0.22	4.6	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP			IP

@@ -1,0 +1,8 @@
+data=
+1	0
+菅野　はやか	5.60	0.22	3.7	４		IP	１		IP	４		IP	６		IP	３		G3	２		IP	２		IP	４		IP	１		IP	６		G3
+孫崎　　百世	6.20	0.21	3.7	４		IP	１		IP	２		IP	５		IP	３		IP	５		IP	３		IP	１		IP	１		IP	４		IP
+赤井　星璃菜	4.70	0.15	2.8	２		IP	５		IP	６		IP	３		IP	３		IP	２		IP	１		IP	４		IP	６		IP	６		IP
+井澤　　聖奈	2.00	0.30	5.2	５	3	IP	４		IP	６		IP	５		IP	６	6	IP	４		IP	６		IP	６		IP	５		IP	５		IP
+森田　　梨湖	2.00	0.21	3.7	３		IP	６		IP	６		IP	５		IP	６		IP	５		G3	６		G3	６		G3	６		IP	４		IP
+森　　　陽多	1.80	0.26	5.1	４		IP	５		IP	６		IP	５		IP	５		IP	５		IP	５		IP	６		IP	６		IP	６		IP

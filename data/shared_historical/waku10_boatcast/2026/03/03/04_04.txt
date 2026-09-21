@@ -1,0 +1,8 @@
+data=
+1	0
+信濃　　由行	7.10	0.17	3.2	１		IP	２		IP	６		IP	３		IP	１		IP	３		IP	１		IP	１		IP	３		IP	４		IP
+鈴木　　智啓	4.40	0.19	4.2	３		IP	４		IP	４		IP	２		IP	５		IP	５		IP	２		IP	４		IP	５		IP	４		IP
+西村　美智子	6.10	0.13	2.3	５		IP	６		IP	６		IP	１		IP	２		IP	１	4	IP	１		G3	１		IP	２		IP	６		G3
+野田　　亜湖	1.40	0.26	5.8	６	6	IP	６		IP	６		IP	４	6	IP	６		IP	５		G3	６		G3	６		G3	６		G3	６	6	IP
+林　　　祐介	2.70	0.18	4.1	５	3	IP	２		IP	６		IP	５		G3	４		G3	６		IP	５		IP	５		IP	６	4	IP	４		IP
+小山　　　勉	4.10	0.20	4.8	３		IP	６		G1	４	5	IP	３	5	IP	６		IP	３	3	IP	２	5	IP	４		IP	６		IP	６		IP

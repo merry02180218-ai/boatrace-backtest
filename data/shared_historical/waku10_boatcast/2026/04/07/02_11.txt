@@ -1,0 +1,8 @@
+data=
+1	0
+白水　　勝也	8.40	0.14	2.2	Ｆ		IP	２		IP	１		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP
+岩崎　　麗子	2.70	0.19	3.0	４		IP	４		IP	５		IP	５		IP	６		IP	６		IP	６		IP	５		IP	５		IP	２		IP
+水摩　　　敦	5.10	0.21	3.5	４		IP	２		G3	３		G3	６		IP	４		IP	３		IP	５		IP	２		IP	１		IP	５		IP
+佐藤　　博亮	5.80	0.15	3.2	３		IP	５		IP	２		IP	３	5	IP	２		IP	５		G1	４		G1	４		IP	２		IP	２		IP
+春園　　功太	5.30	0.15	2.4	３		G3	６		G3	３		IP	２		IP	２		IP	６		IP	２		IP	２		IP	３		IP	６		IP
+梅木　　敬太	1.90	0.19	4.1	５		IP	５		IP	６		IP	５		IP	６		IP	５		IP	６		IP	転		IP	３		IP	５		IP

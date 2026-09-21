@@ -1,0 +1,8 @@
+data=
+1	0
+畔柳　　俊吾	7.20	0.25	4.4	５		IP	１		IP	２		IP	２		IP	１		IP	３		IP	２		IP	３		IP	４		IP	１		IP
+小川　　時光	4.20	0.19	3.9	３		IP	２		IP	５	3	IP	５		IP	４		IP	５		IP	２		IP	４	3	IP	４		IP	５		IP
+齋藤　　真之	4.10	0.16	2.7	５		IP	６		IP	６		IP	２		IP	４		IP	６		IP	５		IP	１		IP	５		IP	１		IP
+飯山　　晃三	3.40	0.25	4.7	６		IP	４		IP	６		IP	５		IP	６		IP	６	3	IP	２		IP	４		IP	４		IP	３		IP
+山下　　奈緒	3.10	0.35	5.5	４	6	IP	４		IP	３		IP	５	4	IP	４		IP	５		IP	５		IP	４		G3	５		G3	６		IP
+重冨　　勇哉	3.70	0.18	4.0	５		IP	２	3	IP	６		IP	５		IP	５	3	IP	６		IP	３	4	IP	３		IP	６		IP	２		IP

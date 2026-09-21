@@ -1,0 +1,8 @@
+data=
+1	0
+長畑　　友輔	5.80	0.12	2.3	１		IP	４		IP	６		IP	１		IP	５		IP	１		IP	１		IP	６		IP	２		IP	５		IP
+田村　　美和	3.50	0.19	4.0	２	3	G3	５		G3	６		IP	５		IP	５		IP	４		IP	２		G3	４		G3	５		G3	５		G3
+金田　　　諭	4.00	0.17	4.0	３		IP	６	2	IP	６		IP	５		IP	２	5	IP	２		IP	２		IP	６		IP	５		IP	６		IP
+永井　　聖美	5.60	0.17	3.3	１		IP	５		IP	２		IP	４		IP	５	5	IP	４		IP	２		IP	５		IP	３		IP	１		G3
+村田　　　敦	2.90	0.14	3.1	３	6	IP	６		IP	６		IP	６		IP	４		IP	６		IP	２		IP	４		IP	６		IP	５		IP
+石村　日奈那	1.89	0.17	3.7	６		IP	６		IP	転	5	IP	６		IP	５		IP	６		IP	３		IP	５		IP	５		IP	６		IP

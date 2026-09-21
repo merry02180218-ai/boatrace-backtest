@@ -1,0 +1,8 @@
+data=
+1	0
+室田　　泰史	8.20	0.11	2.1	２		IP	１		IP	１		IP	２		IP	１		IP	Ｆ		IP	２		IP	１		IP	１		IP	２		IP
+東口　　　晃	4.50	0.20	4.1	３		IP	４		IP	６		IP	２		IP	１		IP	６		IP	２		IP	５		IP	４		IP	６		IP
+中本　　大樹	7.20	0.12	3.0	２	6	IP	２		IP	１		IP	１	4	IP	２	6	IP	２		IP	３	4	IP	６		IP	２		IP	４	4	IP
+梅木　　敬太	4.80	0.16	3.0	４		IP	４		IP	３		IP	３		IP	２		IP	３		IP	６		IP	１		IP	５		IP	６		IP
+加藤　　優弥	5.10	0.16	2.8	４		IP	４		IP	２		IP	３		IP	５		IP	１		IP	３		IP	６		IP	３		IP	４		IP
+塩嶋　　泰空	1.10	0.15	2.7	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

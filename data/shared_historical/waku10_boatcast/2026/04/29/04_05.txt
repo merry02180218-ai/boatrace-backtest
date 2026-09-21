@@ -1,0 +1,8 @@
+data=
+1	0
+重野　　哲之	9.50	0.13	2.3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		G1
+高橋　　真吾	5.70	0.18	3.4	３		IP	６		IP	５		IP	２		IP	３		IP	２		IP	１		IP	１		IP	５		IP	４		IP
+伊久間　陽優	5.50	0.13	2.2	２		IP	６		IP	４		IP	２		IP	２		IP	４	5	IP	２	4	IP	転		IP	３		IP	２	2	IP
+金子　　　萌	5.50	0.17	3.1	３		IP	１		IP	３		IP	４		IP	２		IP	３	6	IP	３		IP	５		IP	３		IP	６		IP
+杉山　　太陽	3.70	0.22	4.0	５		IP	５		IP	３	6	IP	２		IP	５		IP	６		IP	６		IP	４		IP	６		IP	１		IP
+川北　　浩貴	3.00	0.21	4.9	４		IP	５		IP	６	5	IP	５		IP	６		IP	５	5	IP	３		IP	５		IP	３		IP	４		IP

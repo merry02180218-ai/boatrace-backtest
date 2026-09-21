@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　大佑	7.50	0.16	3.1	１	4	G3	４		G2	４		G2	６		IP	３		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+守屋　　大地	4.50	0.19	3.9	５		IP	２	3	IP	２		IP	２		IP	６		IP	５		IP	５		IP	２		IP	５		IP	４	1	G3
+古田　　祐貴	4.70	0.18	3.3	５		G3	４		G3	６		IP	３		IP	４		IP	２		IP	３		IP	４		G3	６		G3	１		IP
+山本　稔太朗	3.20	0.18	4.4	４		G3	６	3	IP	４		IP	５		IP	６		IP	４		IP	５		IP	４		IP	５		IP	２		IP
+原田　　秀弥	5.70	0.18	3.4	４		G3	６		IP	２		IP	１		IP	５		IP	１		IP	４		G3	５		G3	１		IP	３		IP
+竹田　　和哉	4.40	0.14	2.7	４		G3	３		IP	２		IP	３		IP	４		IP	４		G1	５		G1	５		IP	４		IP	６		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+寺嶋　　　雄	7.60	0.16	3.6	５		IP	１		IP	４		IP	２		IP	１		IP	２		IP	２		IP	２		IP	２		IP	１		IP
+野口　　勝弘	8.00	0.12	2.6	２		IP	１		IP	１		IP	４		IP	５		IP	１		IP	１		IP	２		IP	１		G3	２		IP
+吉永　　泰弘	4.20	0.15	3.4	４		IP	５		G3	２		IP	３		IP	３		IP	３		IP	５		IP	５		IP	４		IP	５		IP
+竹之内　　極	3.70	0.16	3.2	３		IP	３		IP	４		IP	４		IP	５		IP	４		IP	６		IP	５		IP	５		IP	３		IP
+角谷　　健吾	4.30	0.17	3.4	２	4	IP	６		IP	３		IP	６		IP	４		IP	６		IP	３	4	IP	５		IP	２		IP	４		IP
+池田　　紫乃	1.80	0.18	4.1	６		IP	６		IP	５		IP	６		G3	６		G3	３		IP	５	5	G3	６		G3	６		IP	５		IP

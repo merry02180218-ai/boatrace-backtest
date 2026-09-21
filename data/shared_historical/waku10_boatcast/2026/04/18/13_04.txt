@@ -1,0 +1,8 @@
+data=
+1	0
+奥平　　拓也	5.70	0.22	3.8	６		G3	５		IP	４		IP	３		IP	３		IP	３		IP	２		IP	１		G3	４		G3	１		IP
+品川　二千翔	6.10	0.18	4.2	４		IP	２		IP	５		IP	２		IP	３		IP	３		IP	４		IP	４		IP	２		IP	２		G2
+中山　　翔太	6.80	0.17	3.3	２		G1	３		G1	３		G1	２		G1	４	4	IP	２		IP	２		IP	２	2	IP	４		IP	４		IP
+廣部　　大明	3.60	0.16	3.6	３		IP	４	5	IP	３	6	IP	６	5	IP	２		IP	６	5	IP	６	6	IP	６	6	IP	３		IP	５		IP
+木村　　亮太	4.10	0.19	3.1	１		IP	４		IP	６		IP	６		IP	４		IP	３		IP	３		IP	６		IP	４		IP	４		IP
+生方　　靖亜	2.60	0.17	4.3	６		IP	４		IP	４		G3	５		G3	５		IP	６		IP	２	5	IP	５		IP	６		IP	６		IP

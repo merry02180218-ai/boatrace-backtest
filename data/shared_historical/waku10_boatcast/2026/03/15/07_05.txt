@@ -1,0 +1,8 @@
+data=
+1	0
+松下　　知幸	6.30	0.15	2.1	３		IP	１		IP	１		IP	３		IP	１		IP	２		IP	３		IP	６		IP	５		IP	４		IP
+寺本　　昇平	4.20	0.18	3.6	５		IP	６		IP	３		IP	６	3	IP	３		IP	４		IP	４		IP	３		IP	３		IP	３	3	IP
+松井　　賢治	4.80	0.15	2.9	２		IP	５		IP	１		IP	５		IP	３		IP	５		IP	２	4	IP	４		IP	４		IP	５		IP
+犬童　　千秋	5.40	0.14	2.9	４	6	IP	４		IP	１		G3	２		G3	５		G3	３		IP	５		IP	４		IP	４		G3	１		G3
+仲口　　博崇	5.70	0.19	4.2	４	4	IP	４	3	IP	３		G1	３		G1	６		IP	２		G3	２	4	G3	３		IP	２	3	IP	４	3	IP
+横田　　　茂	2.10	0.17	4.1	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP	２	5	IP	５	5	IP	５		IP	６		IP

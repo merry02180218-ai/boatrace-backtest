@@ -1,0 +1,8 @@
+data=
+1	0
+本岡　　勝利	5.60	0.18	2.3	４		IP	１		IP	４		IP	４		IP	２		IP	５		IP	３		IP	５		IP	３		IP	１		IP
+坂本　　一真	3.80	0.18	3.8	６		IP	４		IP	２		IP	４		IP	４		IP	６		IP	５		IP	４		IP	４		IP	３		IP
+西橋　　奈未	5.11	0.16	3.4	落		G1	２		G1	転		IP	６		G3	１		G3	５		G2	３		G2	３		IP	４		IP	５	6	IP
+森　　　智也	5.50	0.19	4.3	２		IP	３		IP	４		IP	４		IP	４		IP	２		IP	４		IP	６		IP	３		IP	２	3	IP
+川口　　貴久	6.30	0.13	3.2	６		IP	２	4	IP	５		IP	１		IP	３		IP	３		IP	１		IP	４	6	IP	３		IP	１		IP
+浜本　　裕己	4.40	0.15	2.6	６		IP	３		IP	１	4	IP	２	4	IP	５		IP	６		IP	３		IP	５		IP	５		IP	３		IP

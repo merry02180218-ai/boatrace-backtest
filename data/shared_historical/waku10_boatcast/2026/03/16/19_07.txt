@@ -1,0 +1,8 @@
+data=
+1	0
+重冨　　勇哉	6.00	0.20	3.0	１		IP	５		IP	５		IP	３		IP	１		IP	２		IP	４		IP	２		IP	３		IP	４		IP
+木村　　浩士	4.70	0.19	3.8	６		IP	４		IP	４		IP	３		IP	５		IP	６		G3	６		G3	１		IP	１		IP	２		IP
+長岡　　良也	7.20	0.17	3.0	３		IP	３	4	IP	４		IP	３		IP	２		IP	２		IP	１	2	IP	３		IP	２	5	IP	１		IP
+河合　　佑樹	4.80	0.16	4.4	２		IP	６		G1	６		G1	３		G1	５		G1	５		G1	４		G1	３		G1	５		G1	２		IP
+松田　　憲幸	3.60	0.19	4.6	６		IP	５		IP	１		IP	５		IP	３		IP	４	4	IP	４		IP	６		IP	５		IP	４		IP
+大町　　利克	3.10	0.25	4.3	５		IP	５		IP	５		IP	５	5	IP	４		IP	５		IP	４		IP	１	5	IP	６		IP	５		IP

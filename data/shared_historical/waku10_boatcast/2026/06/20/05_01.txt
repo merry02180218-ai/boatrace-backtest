@@ -1,0 +1,8 @@
+data=
+1	0
+井田　　涼介	1.50	0.20	4.0	５		IP	６	2	IP	５	2	IP	５		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP
+間野　　兼礼	7.00	0.17	3.2	２		IP	４		IP	５		IP	２		IP	３		IP	１		IP	３	4	IP	１		IP	２	3	IP	２		IP
+折下　　寛法	6.10	0.13	1.4	６		IP	２	4	IP	２		IP	４		IP	１	4	G3	３		G3	４		IP	３	4	IP	３		G3	２		G3
+真田　　聖也	3.67	0.18	4.3	２		IP	６		IP	５	6	IP																					IP
+宮野　　　仁	3.60	0.16	3.2	６		IP	３		IP	５	4	IP	６	4	IP	５		IP	４		IP	３		IP	２		IP	５		IP	４		IP
+鈴木　　智啓	3.10	0.19	3.6	５		IP	３		IP	６		IP	４		IP	４		IP	６		IP	６		IP	５		IP	４		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+峰重　　力也	8.00	0.16	3.0	１		IP	３		IP	５		IP	１		IP	１		IP	２		IP	１		IP	４		IP	１		IP	１		IP
+岡瀬　　正人	5.90	0.20	3.0	３		IP	３		IP	２		IP	１		IP	２		IP	３		IP	４		IP	４		IP	６		IP	３		IP
+山本　　英志	5.80	0.15	3.2	３		IP	２		IP	３		IP	２		IP	２		IP	１		IP	３		IP	６		IP	５		IP	６		IP
+野末　　智一	5.70	0.17	3.9	２		IP	３		IP	４		IP	６		IP	３		IP	４		IP	１	1	IP	３		IP	４		IP	２		IP
+安武　　一也	1.30	0.18	3.3	６		IP	６		IP	６		IP	５	6	IP	５	6	IP	５	6	IP	６	6	IP	６	6	IP	６		IP	６		IP
+岸蔭　　　亮	2.00	0.18	3.5	６		IP	５		IP	６		IP	５		IP	５		IP	５		IP	４		IP	６		IP	６		IP	４		IP

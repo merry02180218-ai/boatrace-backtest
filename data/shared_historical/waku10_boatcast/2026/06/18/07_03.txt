@@ -1,0 +1,8 @@
+data=
+1	0
+宮迫　　暢彦	6.80	0.15	1.7	Ｆ		G3	１		IP	４		IP	３		IP	１		IP	３		IP	２		IP	１		IP	１		IP	４		G3
+宇留田　翔平	6.20	0.15	2.6	５		IP	１		IP	２		IP	２		IP	３		IP	３	3	IP	５		IP	３		IP	３		IP	２	3	IP
+吉岡　　　誠	3.10	0.16	3.6	６		G3	６		IP	４		IP	６	4	IP	４		IP	５		IP	２		IP	６	6	IP	６		IP	２		IP
+近藤　雄一郎	3.40	0.18	3.1	４		IP	Ｆ		IP	２		IP	４	6	G3	６		IP	５		IP	２		IP	６		IP	５		IP	４		IP
+小芦　るり華	4.20	0.17	3.2	３		IP	５		IP	５		G2	４		G2	５		G3	４	4	IP	４		G2	５		G2	５	6	IP	２		IP
+向所　　浩二	3.00	0.15	3.4	５		IP	４		IP	４		IP	６		IP	５		IP	２		IP	４		IP	６		IP	５		IP	５		IP

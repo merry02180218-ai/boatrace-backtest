@@ -1,0 +1,8 @@
+data=
+1	0
+楠　　将太郎	6.60	0.21	3.2	１		IP	３		IP	４		IP	２		IP	１		IP	４		IP	４		IP	３		IP	４		IP	１		IP
+屋良　　龍紀	5.10	0.14	2.8	１		IP	４		IP	２		IP	５		IP	３		IP	３		IP	３		IP	５		IP	６		IP	３		IP
+塚越　　海斗	5.60	0.17	3.5	４		IP	４		IP	４		IP	２		IP	３		IP	１		IP	４		IP	４		IP	５		IP	１		IP
+香月　　大輝	3.50	0.14	2.6	６		IP	４		IP	１		IP	４		IP	６		IP	６		IP	４		IP	２		IP	６		IP	６		IP
+山道　　諄也	2.70	0.16	3.9	４		IP	５		IP	５		IP	５		IP	３		IP	６		IP	３		IP	６		IP	５		IP	６		IP
+富永　夏哉人	3.10	0.18	4.1	５		IP	５		G3	５		IP	３		IP	５		IP	４		IP	５		IP	６	5	IP	５		IP	２	5	IP

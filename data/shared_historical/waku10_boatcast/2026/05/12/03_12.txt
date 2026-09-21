@@ -1,0 +1,8 @@
+data=
+1	0
+湯川　　浩司	10.20	0.13	2.6	１		IP	２		IP	２		G1	１		G1	１		G1	１		G1	１		G2	１		IP	１		IP	１		IP
+平尾　　崇典	5.22	0.12	3.9	５		IP	５		G1	４		G1	２		IP	２	3	IP	２		IP	５		G1	５		G1	落		IP	３		G1
+長田　　頼宗	8.20	0.13	2.8	２		IP	１		IP	２		IP	１	2	IP	５		G1	２		G1	１		IP	３		G1	２		G1	３		G1
+前沢　　丈史	6.80	0.13	2.4	１		IP	３		IP	６		IP	３		IP	２		IP	３		G3	１		IP	２		IP	６		G1	３		G1
+池永　　　太	4.40	0.13	2.6	４		IP	２		IP	６		IP	５		G1	１	4	G1	４		G1	６	4	G1	６		IP	３		G1	６		G1
+西岡　　顕心	5.20	0.15	3.8	３		IP	４	5	IP	４		IP	５		G1	５		G1	３		G1	２		G1	３		G2	４		G1	５		G1

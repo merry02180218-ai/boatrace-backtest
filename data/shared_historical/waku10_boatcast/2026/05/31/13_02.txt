@@ -1,0 +1,8 @@
+data=
+1	0
+酒井　　陽祐	6.20	0.15	3.3	２		G3	２		IP	２		IP	４		G3	１		G3	６	2	IP	１		IP	６	2	IP	４		IP	２		IP
+木谷　　賢太	5.60	0.16	3.1	６		IP	２		IP	３		IP	２		IP	３		IP	４		IP	４		IP	５		IP	１		IP	３		G3
+古賀　　千晶	6.40	0.17	2.9	１		G3	４		G3	２		G3	１		G3	４		G3	５		G3	４	4	IP	１		G3	３		IP	３		IP
+岩崎　　正哉	4.80	0.21	4.2	６	5	IP	３		IP	４		G3	３		IP	３		IP	３		IP	２		IP	６		IP	２		IP	５		IP
+戸塚　　邦好	5.60	0.20	3.2	２		IP	５		IP	４	6	IP	４		IP	３		IP	６		IP	１		IP	２		IP	４		IP	２		G1
+佐藤　　大騎	3.60	0.16	3.4	４		IP	４		IP	５	5	IP	５		IP	３		IP	６		IP	４		IP	３	5	IP	３		IP	６		IP

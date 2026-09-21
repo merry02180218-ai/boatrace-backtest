@@ -1,0 +1,8 @@
+data=
+1	0
+内山　　峻輔	7.60	0.16	2.1	４		IP	２		IP	１		IP	２		IP	３		G3	２		G3	３		IP	３		IP	１		IP	１		IP
+寺嶋　　　雄	4.90	0.20	3.8	４		IP	２		IP	４		IP	３		IP	４		IP	３		IP	１		IP	６		IP	５		IP	４		IP
+伊藤　　玲奈	4.80	0.22	3.8	３		IP	４		IP	４		G3	４		IP	２		IP	３		IP	５		IP	４		IP	４		IP	３		IP
+笠　　　雅雄	6.60	0.17	2.7	３		IP	４		IP	１		IP	１		IP	１	3	IP	１		IP	２		IP	３		IP	６	2	IP	６		IP
+上田　　紗奈	4.00	0.17	3.8	５		IP	２		IP	５		IP	６		IP	５		G1	２		G1	５	4	IP	６		IP	１		IP	５		IP
+中嶋　誠一郎	4.00	0.17	3.9	６		IP	５		IP	４		IP	２		IP	３		IP	４		IP	４	5	IP	５		IP	２	5	IP	６	5	IP

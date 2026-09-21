@@ -1,0 +1,8 @@
+data=
+1	0
+原田　　幸哉	8.80	0.13	3.1	１		G1	１		G3	１		G1	４		G1	１		G1	４		G1	１		G1	１		IP	１		IP	５		SG
+柳沢　　　一	7.20	0.16	3.7	１		G1	３	3	IP	１		IP	２		G1	２		G1	２		IP	３		IP	４		IP	４		G1	５		G1
+上村　　純一	6.00	0.14	2.0	２		G1	３		G1	５		G1	４		IP	１		IP	６		IP	５		IP	１	4	IP	５		IP	１		IP
+石渡　　鉄兵	6.90	0.15	2.9	１		G1	４		G1	４		G1	４		G1	１		IP	５		G2	３		G2	１		IP	６		SG	２		SG
+中田　　竜太	6.40	0.18	3.3	２		G1	４		IP	２		IP	３		G1	５		G1	４		G1	４		IP	４		IP	３		IP	１		IP
+澤田　　尚也	3.70	0.13	2.9	５		G1	５		G1	４		G1	６		G2	３		IP	６		IP	３		IP	６		G1	４		IP	４		G1

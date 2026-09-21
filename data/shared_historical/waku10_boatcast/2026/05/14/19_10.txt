@@ -1,0 +1,8 @@
+data=
+1	0
+高井　　雄基	7.60	0.15	3.2	１		IP	１		IP	６		G3	６		G3	１		IP	１		IP	１		IP	１		IP	３		IP	２		IP
+井上　　慧人	4.90	0.20	4.5	６		IP	５		IP	５		IP	４		IP	５		IP	１		IP	２		IP	２		IP	４		IP	２		IP
+村上　宗太郎	4.00	0.20	3.6	６		IP	４		IP	４		IP	１		IP	６		IP	４		IP	３		IP	４		IP	４		IP	５		IP
+小林　　孝彰	4.30	0.15	3.5	４		IP	１		IP	４		IP	５		IP	２		IP	３		IP	６		IP	５		IP	５		IP	４		IP
+鳥居塚　嶺王	4.00	0.14	3.2	５		IP	５		IP	５		IP	３		IP	５		IP	２		IP	５		IP	４		IP	１	4	IP	５		IP
+村松　　遥輝	3.00	0.16	3.1	４		IP	６		IP	６		IP	４		IP	６		IP	４		IP	３	5	IP	６		IP	３		IP	５		IP

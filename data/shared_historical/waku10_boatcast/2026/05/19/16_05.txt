@@ -1,0 +1,8 @@
+data=
+1	0
+三嶌　こころ	5.70	0.19	4.0	１		IP	５		IP	６		IP	２		IP	３		IP	４		G3	４		IP	１		IP	２		G3	４		G3
+松井　　賢治	6.00	0.14	3.1	４		IP	５		IP	３		IP	２		IP	３		IP	２		IP	５		IP	２		IP	２		IP	２		IP
+高山　　敬悟	5.00	0.14	3.4	２		IP	５		IP	２		IP	３		IP	３		G3	６		G3	４		IP	４		IP	１		IP	６		IP
+長尾　　章平	7.20	0.16	3.7	２		IP	２		IP	１		IP	２		IP	５		IP	３		IP	４		IP	２		IP	１		IP	２		IP
+天野　　　誠	3.40	0.21	4.9	５		IP	２		IP	６		IP	４		IP	４		IP	３		IP	５		IP	５		IP	４		IP	６		IP
+加藤　　政彦	3.70	0.22	5.7	転		IP	４		IP	３		IP	３		IP	５		IP	５		IP	５		G1	３		G1	４		G1	６		G1

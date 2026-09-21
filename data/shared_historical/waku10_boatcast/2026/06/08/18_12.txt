@@ -1,0 +1,8 @@
+data=
+1	0
+茅原　　悠紀	10.40	0.11	2.3	４		IP	１		SG	１		SG	１		IP	１		IP	１		G1	１		G1	１		G1	１		G1	１		SG
+黒澤　めぐみ	6.80	0.21	4.2	４		IP	３		IP	１		IP	２		IP	５	3	IP	４		IP	１		IP	２		IP	１		G3	３		G3
+秋山　　広一	6.10	0.16	3.6	４		IP	１		IP	２		IP	５		IP	１	4	G3	３		IP	３		IP	５		IP	４		IP	２		IP
+河野　　主樹	5.50	0.16	3.0	２		IP	２		IP	４		IP	６	6	IP	２	5	IP	４		IP	４		IP	３		IP	４		IP	２	5	IP
+西橋　　奈未	5.00	0.16	3.8	４		IP	４	4	SG	３	4	G2	２	4	G3	５		G1	６		G1	３		G3	５		G2	４		IP	３		G1
+福田　　翔吾	6.30	0.14	2.9	５		IP	３		IP	４		IP	６		IP	１		IP	３		IP	３		IP	２	5	IP	１		IP	１		IP

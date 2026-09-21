@@ -1,0 +1,8 @@
+data=
+1	0
+今泉　　友吾	9.20	0.17	2.7	１		G1	１		IP	２		IP	１		IP	２		IP	５		G1	１		IP	１		IP	１		IP	１		G1
+井口　　佳典	7.70	0.16	4.3	１		G1	２		G1	３		G1	４		G1	２		SG	３		G1	３		SG	５		SG	２		G1	３		G1
+松田　　祐季	6.20	0.14	3.0	４		G1	３		G1	５		G1	２		G1	３		IP	４		IP	３		IP	２		IP	６		IP	１		G1
+麻生　　慎介	8.44	0.14	2.4	１		IP	１		IP	２		G1	３		IP	２		IP	転		IP	２		IP	１		IP	１		IP	４		IP
+中田　　竜太	6.40	0.19	3.3	４		IP	２		IP	３		G1	５		G1	４		G1	４		IP	４		IP	３		IP	１		IP	２		G1
+石渡　　鉄兵	6.30	0.12	3.2	３		G1	１		G1	４		G1	２		G1	４		G1	５		G1	５		IP	２		G2	２		IP	５		SG

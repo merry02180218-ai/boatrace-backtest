@@ -1,0 +1,8 @@
+data=
+1	0
+菊地　　敬介	5.30	0.19	3.2	４		IP	３		IP	４		IP	６		IP	２		IP	５		IP	エ		IP	１		IP	２		IP	１		IP
+夏山　　亮平	5.30	0.13	3.5	６	3	G3	３		G3	３		IP	６		IP	３		IP	１	3	IP	６		IP	４		G3	２		G3	１		IP
+鶴田　　勇雄	3.80	0.19	2.6	３		IP	６		IP	３		IP	５		IP	３		IP	３		IP	４	5	G3	４	4	IP	５		IP	６		IP
+清水　　紀克	4.10	0.16	3.0	６	2	IP	４	3	IP	６	2	IP	５	2	IP	４	2	IP	６	3	IP	４	2	IP	３	2	IP	２	3	IP	１	2	IP
+中村　　辰也	4.33	0.14	2.8	４		IP	欠		IP	５		IP	３		IP	５		IP	３		IP	３		IP	６	6	IP	２		IP	４		IP
+片岡　　大地	6.00	0.12	1.9	５		IP	２		IP	３		IP	３		IP	３		IP	１	5	IP	５	5	IP	３		IP	２		IP	３		IP

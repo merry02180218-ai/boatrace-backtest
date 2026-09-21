@@ -1,0 +1,8 @@
+data=
+1	0
+西野　　雄貴	9.20	0.13	1.6	１		IP	１		IP	１		IP	１		IP	１		IP	５		G1	２		G1	１		IP	１		IP	１		IP
+川野　　芽唯	6.20	0.16	3.6	１		IP	６		G1	１		G1	３	1	IP	１		IP	４		G1	２	3	IP	３		IP	妨		IP	４	3	IP
+広次　　　修	5.60	0.14	2.3	２		IP	５		IP	５		IP	１		IP	５		IP	４		IP	４		IP	３		IP	１		IP	２		IP
+川尻　　泰輔	5.80	0.14	2.9	２		IP	２		IP	３		IP	２		IP	６		G3	３		G3	３		G3	５		IP	３		IP	３		IP
+五反田　　忍	3.20	0.20	3.3	２		IP	３		IP	５		IP	６		IP	６		IP	２		IP	６		IP	６		IP	６		IP	５		IP
+平田　健之佑	4.10	0.21	5.2	５		IP	３		IP	４		IP	３		IP	３		IP	３		IP	５		IP	５		G1	５		IP	４		IP

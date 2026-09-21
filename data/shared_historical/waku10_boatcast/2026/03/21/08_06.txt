@@ -1,0 +1,8 @@
+data=
+1	0
+木村　　仁紀	10.00	0.13	1.7	１		IP	１		IP	１		IP	１		G1	１		IP	１		G1	２		G1	１		IP	１		G2	２		IP
+登玉　　隼百	4.60	0.17	2.7	６		IP	５		IP	１	4	IP	６		IP	１		IP	４		IP	５		IP	５		IP	４		IP	２		IP
+池本　　輝明	4.60	0.17	3.6	４		IP	４		IP	２		IP	３		IP	５		IP	４		IP	４		IP	４		IP	５		IP	２		IP
+佐藤　　右京	3.10	0.24	4.5	５		IP	６		IP	３		IP	４		IP	６		IP	４		IP	６		IP	３		IP	４		IP	５		IP
+田頭　　　実	7.50	0.14	2.1	２	2	IP	１	2	IP	１	2	IP	１	2	IP	１	2	IP	６	2	IP	４	2	IP	２	4	IP	４	2	IP	１	2	IP
+後藤　　陽介	1.80	0.18	3.2	６		IP	６		IP	４		IP	５		IP	６		IP	５		IP	５		IP	５		IP	５	5	IP	６		IP

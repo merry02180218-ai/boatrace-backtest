@@ -1,0 +1,8 @@
+data=
+1	0
+内山　　七海	7.60	0.19	3.8	５		IP	２		IP	２		IP	２		IP	２		IP	１		IP	３		IP	２		IP	１		IP	２		IP
+塩崎　　桐加	4.40	0.21	3.1	３		IP	４		IP	２		IP	２		IP	４		G3	Ｆ		G1	沈		IP	３		IP	３		IP	５		IP
+奥村　明日香	4.50	0.20	2.9	４		IP	２		G3	２		IP	３		IP	６		IP	６		G3	５	4	G3	２		IP	３		IP	６		IP
+神里　　琴音	3.90	0.13	2.4	５		IP	４		IP	３		IP	２		IP	６		IP	６		IP	６		IP	２		IP	３	5	IP	５		IP
+山下　　夏鈴	5.20	0.13	2.1	３		IP	４		IP	３		IP	２		IP	５		IP	２		IP	５		IP	２		G3	４		G3	４		IP
+間庭　　菜摘	3.00	0.17	3.7	３		IP	６		IP	５		IP	５		G1	４		G3	４		G3	５		IP	５		IP	５		IP	４	5	G3

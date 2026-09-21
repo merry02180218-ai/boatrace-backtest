@@ -1,0 +1,8 @@
+data=
+1	0
+安部　　慎一	5.30	0.16	2.7	５		IP	４		IP	４		G3	Ｆ		IP	６		IP	１		IP	２		IP	２		IP	２		IP	２		IP
+小林　　基樹	4.30	0.19	4.0	５		IP	４		IP	３		IP	６		IP	１		IP	５		IP	４		IP	４		IP	２		IP	５		IP
+三馬　　崇史	4.20	0.15	3.4	６		IP	６		IP	１		IP	５		IP	５	4	IP	４		G2	６		IP	２		IP	３		IP	３		IP
+森定　　晃史	7.20	0.16	2.6	１		IP	４		IP	２		IP	２		IP	３		IP	３		IP	２		IP	１		IP	４		IP	２		IP
+金子　　賢志	5.80	0.11	2.1	４		IP	６		G1	２		IP	２		IP	４		G1	４		IP	２		IP	１		IP	３		IP	５		G1
+高岡　　竜也	4.70	0.15	3.7	２		IP	６		IP	２		IP	４		IP	５		IP	４		IP	３		IP	４		IP	４		IP	４		IP

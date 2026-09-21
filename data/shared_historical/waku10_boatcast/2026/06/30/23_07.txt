@@ -1,0 +1,8 @@
+data=
+1	0
+柴田　　友和	5.90	0.18	3.6	５	2	IP	５		IP	１		IP	２		IP	５		IP	３		IP	６		IP	２		IP	１		IP	１		IP
+小原　　聡将	7.40	0.17	3.8	２		IP	４		G2	５		G2	２		IP	１		IP	１		IP	２		IP	２		IP	２		IP	３		IP
+高井　　駿弥	6.00	0.15	2.0	３		IP	４		IP	１		IP	３		IP	３		IP	３		IP	２		IP	３		IP	３		IP	５		IP
+川崎　　公靖	4.90	0.17	3.2	３		IP	５		IP	２	6	IP	３		IP	６		IP	５		IP	１		IP	１		IP	５		IP	５	5	IP
+古賀　　繁輝	4.30	0.14	2.7	３		IP	３		IP	６		IP	２		IP	３		IP	５		G1	６		G1	４		G2	６		G1	４	6	IP
+高山　　智至	3.20	0.20	4.6	４		IP	６		IP	５	5	IP	３	4	IP	４		IP	５		IP	４		IP	４		IP	６		IP	４	5	IP

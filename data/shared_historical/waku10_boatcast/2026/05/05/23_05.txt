@@ -1,0 +1,8 @@
+data=
+1	0
+高田　　　明	8.30	0.17	2.7	１		IP	２		IP	４		IP	１		G3	１		G3	１		IP	１		G1	１		IP	１		IP	Ｆ		IP
+下河　　雅史	6.40	0.16	3.3	２		IP	２		IP	４		IP	１		IP	２		IP	２		IP	２		IP	４		IP	５		IP	４		IP
+中島　　真二	4.30	0.19	3.9	１	2	IP	欠		IP	欠		IP	２		G3	６		G3	４		IP	２		IP	４		IP	３		IP	５		IP
+小玉　　啓太	4.20	0.16	2.9	５		IP	５		IP	５		IP	転		IP	１		IP	３		IP	３		IP	５		IP	１		IP	５		IP
+久保田　凪紗	2.10	0.18	3.7	２		IP	６		IP	６		G3	６		G3	５		G3	５		G3	６	4	IP	５		IP	６	6	G3	５		G3
+深川　　真二	6.60	0.15	2.6	１	2	IP	３	2	IP	１	2	IP	６	2	IP	４	2	IP	１	2	G2	４	2	IP	２	2	IP	２	2	G1	５	2	G1

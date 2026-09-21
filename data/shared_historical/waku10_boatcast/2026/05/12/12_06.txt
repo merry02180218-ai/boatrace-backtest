@@ -1,0 +1,8 @@
+data=
+1	0
+船岡　洋一郎	9.89	0.16	1.8	１		IP	１		IP	２		IP	１		IP	欠		G1	１		G1	１		IP	１		IP	１		IP	１		IP
+橋口　　真樹	4.70	0.21	4.6	２		IP	３		IP	２		IP	１		IP	４		IP	４		IP	５		IP	５		IP	６		IP	５		IP
+倉富　　大誠	5.78	0.14	2.7	４		IP	４		IP	５		IP	２		IP	３		IP	落	4	IP	１		IP	２		IP	４		IP	３		IP
+深川　　真二	6.40	0.17	3.9	２	2	IP	３	2	IP	１	2	IP	３	1	IP	６	2	G2	３	2	IP	３	2	IP	３	2	IP	２	1	IP	４	2	G1
+村上　　功祐	3.00	0.13	2.2	３		IP	５		IP	２		IP	６		IP	５		G3	５		IP	５		IP	４		IP	５	6	IP	６		IP
+田中　　　結	1.00	0.25	6.0	６		IP																											IP

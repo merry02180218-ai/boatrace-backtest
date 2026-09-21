@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　龍治	8.80	0.14	2.6	１		IP	２	2	IP	１		IP	１		IP	２		IP	１		IP	１		IP	４		IP	１		IP	２		IP
+橋本　　　明	4.60	0.14	2.2	４		IP	６	3	G3	２	3	G3	４		IP	６		IP	１		IP	４		IP	２		IP	妨		IP	３		IP
+佐々木　和伸	7.00	0.15	2.7	２		IP	３		IP	３		IP	１		IP	１		IP	３		IP	５		IP	２		IP	２		IP	３		IP
+小林　　孝弘	4.00	0.15	2.9	４	2	IP	３		IP	４		IP	４		IP	６	5	IP	６		IP	４		G3	４		G3	１	3	IP	５		IP
+深川　麻奈美	4.50	0.19	4.7	３		IP	３		IP	４		IP	４		IP	６		G2	５	6	G2	４		IP	４		IP	１		IP	５		IP
+寺田　　夢生	1.50	0.21	4.8	５		IP	６		IP	５		G3	６		G3	６		G3	６		G3	４		G3	６		G3	６		IP	６		IP

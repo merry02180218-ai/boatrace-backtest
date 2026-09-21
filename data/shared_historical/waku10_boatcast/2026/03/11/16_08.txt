@@ -1,0 +1,8 @@
+data=
+1	0
+古場　　輝義	7.00	0.17	3.1	３		IP	６		IP	６		IP	２		IP	１		IP	１		IP	２		IP	２		IP	１		IP	２		IP
+森下　　愛梨	6.89	0.20	3.4	２		G3	２		IP	４		IP	２		IP	２		IP	転		IP	４		IP	２	3	G3	３		G3	２		G3
+折下　　寛法	4.50	0.15	2.1	３		G3	２		G3	５		IP	６		IP	４		IP	６		IP	３		IP	６		IP	１		IP	３		IP
+柳瀬　　興志	5.50	0.18	3.5	６		IP	１		IP	３		IP	５		IP	３		IP	４		IP	３		IP	３		IP	４	2	IP	１		IP
+坪口　　竜也	4.50	0.18	4.1	６	4	G3	６		IP	３		IP	２		IP	４		IP	６		IP	２		IP	６		IP	３		IP	３		IP
+西島　　義則	7.00	0.19	3.7	２	1	IP	２	1	IP	５	1	IP	１	2	IP	３	2	IP	１	1	IP	２	2	IP	２	2	IP	５	1	G3	２	2	IP

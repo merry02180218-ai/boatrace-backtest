@@ -1,0 +1,8 @@
+data=
+1	0
+前出　　達吉	8.30	0.15	2.1	１		IP	１		IP	２		IP	１		IP	１		IP	１		G3	２		IP	６		IP	１		IP	３		IP
+八木　　治樹	5.70	0.17	3.8	６		IP	４		IP	４		IP	１		IP	１		IP	５		G3	３		IP	２		IP	４		IP	２		IP
+青木　幸太郎	6.00	0.17	3.1	１		IP	４		IP	３		IP	５		IP	１		IP	４		IP	４		IP	４		IP	３		IP	１		IP
+岸本　　　隆	4.90	0.18	2.5	転	3	IP	２		IP	１		IP	６		IP	４		IP	３		IP	１		IP	５		IP	３		IP	５		IP
+藤山　　雅弘	2.80	0.25	4.4	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP	５	4	IP	４		IP	５		IP	２		IP
+中嶋　　世奈	1.70	0.21	4.2	５		IP	４		IP	４		IP	６		IP	５		G3	Ｆ		IP	６		IP	６		IP	６		IP	６		G3

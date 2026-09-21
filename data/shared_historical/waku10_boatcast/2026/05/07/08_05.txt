@@ -1,0 +1,8 @@
+data=
+1	0
+北川　　潤二	8.80	0.12	2.8	１		IP	５		IP	１		IP	１		IP	１		G3	２		G3	１		IP	１		IP	１		G3	２		G3
+神田　　達也	5.10	0.17	3.0	３		IP	２		IP	３		IP	１		IP	４		IP	６		IP	３		IP	５		IP	５		IP	３	4	IP
+横田　　海人	3.00	0.19	4.2	６		IP	５		IP	６		IP	Ｆ	6	IP	４		IP	６		IP	５		IP	２		IP	６		IP	１		IP
+平本　　真之	8.00	0.12	2.6	４		IP	１		IP	２		G1	３	5	G1	３		G1	２		SG	２	5	IP	１		IP	３		G1	３		G1
+河合　　三弘	3.30	0.19	4.0	３		IP	４		IP	５		IP	４		IP	６		G3	４		G3	６		IP	４		IP	３		IP	６		IP
+鈴木　　裕隆	3.90	0.20	3.2	５		IP	３	5	IP	６		IP	４		IP	４		IP	４		IP	３		IP	３		IP	４	5	IP	５		IP

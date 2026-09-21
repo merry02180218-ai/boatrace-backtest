@@ -1,0 +1,8 @@
+data=
+1	0
+萩原　　知哉	5.80	0.13	2.8	６		IP	１		IP	２		IP	１		IP	５		IP	４		IP	２		IP	４		IP	１		IP	６		IP
+川崎　　智幸	6.60	0.13	3.0	１		IP	Ｆ		IP	５		IP	２		IP	２		IP	２	1	IP	３		IP	１		IP	２		IP	３		IP
+水摩　　　敦	6.20	0.19	3.1	１		IP	２		IP	４		IP	２		IP	３		IP	３		IP	５		IP	３		IP	４		IP	２		G3
+嶋田　　貴支	6.00	0.18	4.1	２		IP	４		IP	３		IP	４		IP	４		IP	２		IP	１		IP	２		IP	５		IP	３		IP
+黒野　　元基	5.70	0.11	2.9	２	4	IP	１	4	IP	２	4	IP	２		IP	３		IP	４		G1	６		G1	６		G1	５		G1	４		G1
+井上　　尚悟	2.70	0.18	4.3	６		IP	６		IP	６		G3	３		IP	５		IP	６		IP	５		IP	３		IP	６		IP	３	5	IP

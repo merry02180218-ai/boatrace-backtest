@@ -1,0 +1,8 @@
+data=
+1	0
+堀越　　雄貴	6.80	0.19	5.0	１		IP	２		IP	１		IP	３		IP	２		IP	２		IP	６		IP	１		IP	３		IP	６		IP
+山田　　哲也	6.50	0.12	1.9	４		G1	５		G1	３		G1	２		IP	３		IP	２		IP	２		IP	１		IP	４		G1	４		G1
+寺本　　重宣	7.50	0.15	3.1	３		G3	３		IP	４		IP	１		IP	２		G3	１		IP	２		IP	３		IP	２		IP	２		G3
+後藤　　隼之	5.40	0.17	5.1	４		IP	４	5	IP	２		IP	３		IP	４		IP	転		IP	３		IP	３		IP	３		IP	１	5	IP
+今泉　　友吾	6.00	0.13	2.8	３	6	G1	２		G1	５		G1	欠		IP	３		G1	４		G1	４		G1	２		IP	２	4	IP	６		IP
+米本　　圭佑	1.10	0.32	5.6	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP	Ｆ		IP

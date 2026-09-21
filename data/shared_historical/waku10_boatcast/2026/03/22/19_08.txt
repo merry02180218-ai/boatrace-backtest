@@ -1,0 +1,8 @@
+data=
+1	0
+竹井　　奈美	7.80	0.16	3.7	１		IP	１		G3	１		G3	１		G3	２		G3	Ｆ		G1	２		G1	エ		IP	１		IP	１		G1
+花本　　夏樹	6.20	0.20	4.8	５		IP	３		IP	１		IP	４		IP	３		IP	２		IP	３		IP	２		IP	２		IP	４		IP
+谷村　　一哉	6.20	0.18	3.7	４		IP	３		IP	１		IP	２	4	IP	３		IP	３		IP	１		IP	３		IP	４		IP	５		IP
+吉村　　正明	6.90	0.09	2.1	６		IP	１	3	IP	６		IP	２		IP	１		IP	２		IP	１		IP	２		IP	４		IP	２		IP
+酒見　　峻介	5.00	0.16	3.0	Ｌ		IP	６		IP	６	3	IP	３	4	IP	４		IP	３		IP	２		IP	４		G2	１		G2	２		G3
+寺田　　夢生	1.70	0.18	3.8	５		G3	６		G3	５		G3	３		G3	６		G3	６		G3	６		IP	６		IP	６		IP	６		IP

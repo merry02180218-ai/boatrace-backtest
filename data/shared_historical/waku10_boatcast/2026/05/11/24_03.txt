@@ -1,0 +1,8 @@
+data=
+1	0
+西澤　日花里	5.90	0.19	3.6	３		IP	４		G3	１		IP	６		IP	１		G3	３		IP	１		IP	３		IP	４		IP	５		IP
+重富　　伸也	4.10	0.16	3.3	６		IP	２		IP	４	6	IP	３		IP	２		IP	４	6	IP	６		G3	４		G3	６		IP	４		IP
+飯山　　晃三	4.50	0.25	4.3	６		IP	３		IP	３		IP	５	2	IP	６		IP	３		IP	２		IP	６		IP	３		IP	２		IP
+滝川　真由子	4.70	0.21	3.2	３		IP	５	5	IP	２		IP	４		IP	１		IP	１		G3	５		IP	６	5	IP	Ｆ		IP	４		IP
+中北　　　涼	4.70	0.16	3.0	３		IP	２		G3	１		G3	５	4	IP	６		IP	６		IP	２	6	G3	６		G3	４		IP	３		IP
+吉田　　翔悟	2.00	0.19	4.5	５		IP	３		IP	５		IP	６		G3	６		IP	５		IP	５		IP	６		IP	６		IP	５		IP

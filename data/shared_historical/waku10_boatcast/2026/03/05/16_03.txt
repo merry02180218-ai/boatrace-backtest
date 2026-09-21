@@ -1,0 +1,8 @@
+data=
+1	0
+海野　康志郎	9.90	0.12	1.4	１		IP	２		IP	２		IP	１		G1	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP
+高野　　哲史	7.20	0.15	3.4	２		IP	２		IP	６		G1	３		IP	４		IP	２		IP	２		IP	１		IP	２		IP	１		IP
+西山　　貴浩	6.40	0.14	3.6	４		G1	２		G1	２		G1	３		G1	５		SG	４		G1	６		SG	３		SG	２		G1	５		G1
+白神　　　優	5.60	0.13	2.7	２		IP	５		IP	３		IP	４	5	IP	転	3	G1	３		IP	２		IP	３		IP	３		G3	１		G3
+井上　　忠政	6.70	0.14	4.0	４		G1	３		G1	４		IP	１		IP	２		G1	４		IP	２		IP	６		IP	１		IP	２		G1
+入海　　　馨	4.30	0.13	3.4	４		G1	２		G1	転		G1	６		G1	６		G1	４	5	G1	６		G1	６		G1	２		IP	２		IP

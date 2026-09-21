@@ -1,0 +1,8 @@
+data=
+1	0
+横川　　聖志	7.20	0.19	4.3	５		IP	３		IP	４		IP	３		IP	３		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+稲田　　浩二	8.00	0.13	2.6	１		G2	５		G1	２		IP	３		G1	３		IP	２		IP	２		IP	１		G3	１		G3	２		G1
+岩崎　　正哉	6.20	0.19	3.9	３		G3	２		G3	３		IP	１		IP	４		IP	６		IP	４		IP	２		IP	１		G3	４		IP
+深山　　祐二	4.00	0.15	2.9	５		IP	５		IP	５		IP	６		IP	５		IP	３		IP	６		IP	２		IP	１		IP	３		IP
+島村　　隆幸	4.80	0.13	3.0	３		G2	６		IP	５	4	IP	６		G2	５		IP	５		IP	１		IP	５		IP	２		G3	１	6	G3
+武井　莉里佳	3.80	0.15	3.6	３	5	IP	４	5	IP	５		G3	６		G3	６		G3	５		G3	５		G2	２	5	IP	２		IP	６		IP

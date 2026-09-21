@@ -1,0 +1,8 @@
+data=
+1	0
+秋山　　広一	7.60	0.18	3.9	３		IP	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	３		IP	６		IP	１		G1
+三嶌　こころ	5.50	0.17	3.9	３		IP	４		IP	３		IP	３		IP	３		IP	４		IP	２		G3	３		G3	６		IP	２		IP
+上田　　隆章	4.40	0.23	5.0	６		IP	５		IP	４		IP	３		IP	４		IP	２		IP	６		IP	２		IP	２		IP	５		IP
+谷口　　佳蓮	4.90	0.16	2.5	２		IP	３		IP	２		IP	５		IP	６		IP	４		IP	３		IP	５		IP	４		G3	２		IP
+西原　　明生	2.80	0.21	4.9	５		IP	６		IP	４		IP	５		IP	４		IP	４		IP	４		IP	６		IP	５		IP	４		IP
+中村　　晃朋	6.70	0.18	4.0	３		IP	１		IP	４		G1	６	5	G1	２	5	IP	３		G1	２	5	IP	３	5	IP	３		IP	２		IP

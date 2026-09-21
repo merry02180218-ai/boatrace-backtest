@@ -1,0 +1,8 @@
+data=
+1	0
+永田　　義紘	6.50	0.16	2.8	５		IP	１		IP	２		IP	６	2	IP	１		IP	１		IP	３		IP	３		IP	４		IP	２		IP
+川上　　聡介	3.80	0.15	3.1	４		IP	２		IP	６	3	IP	３		IP	６		IP	４		IP	５		IP	５		IP	２	3	IP	５		IP
+遠藤　　エミ	6.00	0.14	2.9	２		G2	３		IP	３		IP	２		G2	６		G2	２		G1	３		IP	Ｆ		G1	４		G1	２		G3
+久田　　　武	6.20	0.19	3.6	３		IP	３		IP	２		IP	２		IP	４		IP	４		IP	１		IP	４		IP	２	3	IP	４		IP
+水摩　　　敦	5.10	0.15	2.7	４		IP	３		IP	２		IP	５		IP	４		IP	４		IP	５		IP	６		G3	１	4	G3	２	2	IP
+山下　　大輝	4.40	0.18	3.9	５		IP	６		IP	２		IP	４		IP	６		G1	５		G1	５		IP	２		IP	３		IP	２	3	IP

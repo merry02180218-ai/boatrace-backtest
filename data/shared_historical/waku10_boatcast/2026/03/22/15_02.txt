@@ -1,0 +1,8 @@
+data=
+1	0
+齋藤　　智裕	6.20	0.22	4.3	２		IP	４		IP	２		IP	３	2	IP	２		IP	２		IP	５		IP	２		IP	２		IP	５		IP
+和合　　俊介	3.70	0.16	2.7	４		IP	６		IP	３		IP	５	3	IP	４		IP	３		IP	６		IP	５		IP	１	3	IP	６		IP
+森　　　悠稀	5.44	0.18	3.2	２		IP	３		IP	４		IP	２		IP	６		G2	３		G2	欠		IP	４		IP	３		IP	４		IP
+相原　　利章	5.70	0.07	1.5	４		IP	６	6	IP	３	5	IP	４		IP	２		IP	１		IP	４		IP	４		IP	１		IP	３		IP
+庄司　　孝輔	6.00	0.18	4.2	２		IP	５		G3	６		G3	１	6	IP	１		IP	４		IP	６		IP	２	4	IP	２		IP	２		IP
+日高　龍之介	2.10	0.18	4.3	６		IP	３		IP	６		IP	４		IP	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP

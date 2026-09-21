@@ -1,0 +1,8 @@
+data=
+1	0
+井本　　昌也	9.20	0.11	2.3	１		IP	１		IP	２		IP	１		IP	３		IP	１		G1	１		G2	１		G2	１		G1	４		IP
+笹木　　香吾	4.00	0.17	4.4	５		IP	５		G2	２		IP	５		IP	５		IP	２		IP	４		IP	６		IP	Ｆ		IP	１		IP
+武田　　信一	4.70	0.15	3.3	２		IP	５		IP	３		IP	２	4	IP	５		IP	４		IP	２		IP	５		IP	３		IP	６		IP
+石川　　　諒	6.20	0.14	2.2	２		IP	４		IP	５		IP	２		IP	３		IP	２	5	IP	３		IP	１		IP	３		IP	４		IP
+岡本　翔太郎	5.50	0.13	2.3	３		IP	３		IP	１		IP	２		IP	５		G3	６	4	G3	４		IP	５		IP	１		IP	３		IP
+川崎　　智稔	4.40	0.14	2.5	３		IP	５		IP	５		IP	４		IP	６		IP	６		IP	２		IP	４		IP	３		IP	１	4	IP

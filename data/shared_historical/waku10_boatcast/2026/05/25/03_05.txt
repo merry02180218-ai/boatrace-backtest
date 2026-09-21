@@ -1,0 +1,8 @@
+data=
+1	0
+近藤　　颯斗	7.40	0.16	3.3	５		IP	２		IP	１		IP	１		IP	２		IP	３		IP	４		IP	１		IP	１		IP	３		IP
+本村　　　大	3.90	0.20	4.3	５		IP	３		IP	転		IP	２		IP	６		IP	４		IP	４		IP	４		IP	４		IP	３		IP
+濱本　　優一	6.70	0.15	2.8	２		IP	１		IP	３		IP	４	5	IP	６	4	G3	２		IP	２		IP	２		IP	２		IP	３		IP
+松井　　洪弥	4.40	0.12	2.5	４	5	IP	４		IP	３		IP	５		G1	４		G1	６		G3	５		G3	１		G3	４		G1	６		G1
+桂林　　　寛	4.80	0.15	2.5	４		IP	５		IP	１	4	IP	１		IP	１		IP	６	4	IP	３	4	IP	５		IP	５		IP	６		IP
+岩津　　徹郎	4.90	0.16	4.5	３		IP	４		IP	４		IP	６		IP	４		IP	３		IP	３		IP	４		IP	３		IP	２		IP

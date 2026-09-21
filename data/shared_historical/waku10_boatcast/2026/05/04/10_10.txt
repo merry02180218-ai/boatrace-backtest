@@ -1,0 +1,8 @@
+data=
+1	0
+信濃　　由行	8.10	0.14	2.6	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	６		IP	３		IP	１		IP
+中島　　孝平	6.50	0.15	3.0	３		G1	２		G1	３		G1	２		IP	６		G1	２		G1	２		IP	６		G2	２		G2	５		IP
+黒柳　　浩孝	6.00	0.15	2.4	５		IP	４		IP	２		IP	２		IP	３		IP	４		IP	２		IP	３		IP	１	4	IP	４		IP
+佐藤　　　悠	5.40	0.17	3.0	４		G2	５		IP	１		IP	１	5	IP	１		IP	４		IP	４		IP	Ｆ		IP	６		IP	２		IP
+加藤　　奈月	2.90	0.20	4.0	５		G3	５		G3	４	6	G3	４		G3	６		G3	６		IP	６		IP	５		IP	３		IP	３	4	IP
+松村　　康太	4.70	0.17	3.7	３		IP	６		IP	６		IP	６		IP	３		IP	２		IP	３	4	IP	５		IP	１	4	IP	３		IP

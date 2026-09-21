@@ -1,0 +1,8 @@
+data=
+1	0
+早川　　尚人	6.90	0.20	2.9	１		IP	６		IP	２		IP	３		IP	１		IP	１		IP	５		IP	２		IP	３		IP	２		IP
+大庭　　元明	4.70	0.19	3.8	３		IP	２		IP	４		IP	５		IP	４		IP	６		IP	３		IP	３		IP	２		IP	５		IP
+酒井　　陽祐	5.70	0.13	2.0	３		IP	５		G3	２		G3	１	4	IP	５		IP	４		IP	６		IP	２		IP	２		IP	２		IP
+岩川　　仁士	5.40	0.15	2.7	２		IP	４		IP	６	5	IP	３		IP	２		IP	５		IP	２		IP	１		IP	６		IP	３	3	IP
+塩崎　　優司	3.70	0.17	3.0	６		IP	転		IP	２		IP	５		IP	３		IP	２		IP	６	6	IP	５		IP	２		IP	６		IP
+前田　健太郎	4.80	0.18	3.5	４	5	IP	２		IP	４		IP	５		IP	４	5	IP	５		IP	３		IP	４		IP	１	5	IP	４		IP

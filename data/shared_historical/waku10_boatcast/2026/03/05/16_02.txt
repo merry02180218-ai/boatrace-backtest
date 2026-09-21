@@ -1,0 +1,8 @@
+data=
+1	0
+藤原　　碧生	10.20	0.15	3.2	１		G1	１		IP	１		IP	１		IP	１		G1	１		IP	１		IP	１		G1	２		G1	１		IP
+塩田　　北斗	6.50	0.14	3.2	４		G1	５		G1	３	3	G1	２		G1	１		IP	３		SG	５		G1	２		SG	５		G1	３	3	G1
+佐々木　完太	8.20	0.15	3.0	３		G1	２		G1	２		G1	４		IP	１		G1	３		IP	１		IP	２		IP	２		IP	２		G1
+末永　　和也	8.00	0.12	3.5	３		G1	２		G1	４		IP	３	3	IP	３		IP	１		G1	１		G1	３		SG	２		SG	３		G1
+宮之原　輝紀	3.67	0.14	2.3	５		G1	６	6	G1	５		G1	１		IP	欠		G2	５		G2	６		IP	２		IP	６		IP	５	2	IP
+井上　　一輝	4.10	0.13	2.9	５		G1	５		G1	３		G1	６		G1	４		IP	５		IP	２	5	IP	６		IP	２		IP	６		SG

@@ -1,0 +1,8 @@
+data=
+1	0
+北野　　輝季	9.00	0.15	3.1	１		G3	１		G3	１		G3	落		G2	３		IP	１		IP	１		G1	１		G1	２		IP	４		IP
+小池　　修平	8.00	0.12	2.6	１	3	IP	２		G2	１		IP	２		IP	５		G1	２		SG	６		SG	３		G1	１		IP	２		G1
+横澤　　剛治	6.10	0.15	3.7	３		IP	３		IP	４		IP	２		IP	６		IP	１		IP	２		IP	５		IP	３		IP	２		IP
+實森　　美祐	6.90	0.16	3.1	６		SG	５		SG	３		G2	２	5	G2	２		IP	６		G1	２		G1	２	5	IP	１		IP	２		IP
+白神　　　優	6.30	0.11	1.6	１		IP	６		IP	４		IP	２	4	G1	５	6	G1	１		IP	２		IP	１		IP	４		G1	５		G1
+原田　　幸哉	5.10	0.12	3.5	４	5	SG	５		G1	２		IP	３		IP	３		G1	６	3	G1	６		G1	６	4	SG	５		G1	１	5	G1

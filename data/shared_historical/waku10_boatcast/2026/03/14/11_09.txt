@@ -1,0 +1,8 @@
+data=
+1	0
+西原　　明生	7.00	0.16	3.3	１		IP	５		IP	２		IP	１		IP	１		IP	２		IP	４		G3	２		IP	４		G3	３		IP
+眞鳥　　章太	7.60	0.17	2.7	２		IP	２		IP	２		IP	２		IP	１		IP	２		IP	５		IP	２		IP	２		IP	２		IP
+渡邊　　哲也	1.40	0.22	4.7	６		IP	６		IP	５	6	IP	５		IP	５		IP	６	4	IP	５		IP	６		IP	６		IP	６		IP
+上田　　洋平	3.70	0.16	3.6	５		IP	４		IP	４		IP	３		IP	３		IP	５		IP	２		IP	６		IP	５		IP	５		G3
+鈴木　　智啓	3.40	0.19	4.6	４		IP	６		IP	３		IP	５		IP	４		IP	６	4	IP	４		IP	４		IP	４		IP	４		IP
+池田　　雄一	4.10	0.13	3.1	Ｆ		IP	３	5	IP	５		G1	３		IP	２	5	IP	６		IP	４	5	IP	３		IP	６		IP	３		IP

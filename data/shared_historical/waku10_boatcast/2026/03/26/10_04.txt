@@ -1,0 +1,8 @@
+data=
+1	0
+蜂須　　瑞生	8.60	0.17	2.3	３		IP	２		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	３		IP	１		IP
+福島　　陽子	5.30	0.19	3.8	３		IP	２		IP	３		IP	３		IP	６		IP	５		IP	３		G3	４		G3	２		IP	３		IP
+三浦　　永理	5.33	0.14	3.3	２		G3	２		IP	１		IP	４		G1	６		IP	転		IP	６		G1	３		G1	４		G3	６		G3
+松瀬　　弘美	2.10	0.18	4.2	６		G3	５		IP	６		IP	６		IP	４		IP	５		IP	４	5	IP	５		IP	５		IP	５		IP
+西田　　和加	1.22	0.19	3.6	６	6	IP	５		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６	6	IP	転		IP
+安井　　瑞紀	4.40	0.22	4.0	５		IP	３		IP	６		G1	５		G1	３	5	IP	５		IP	１	5	IP	５		IP	３	4	IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+青木　幸太郎	8.50	0.19	2.8	１		IP	１		IP	１		IP	３		IP	６		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+深澤　　達徳	4.80	0.22	5.4	５		IP	４		IP	３		IP	３		IP	２		IP	２		IP	３		IP	４		IP	５		IP	５		IP
+下出　　卓矢	6.70	0.17	2.7	３		IP	１		IP	５		IP	２		IP	２		IP	２		G2	６		G2	１		IP	２		IP	４		IP
+藤山　　雅弘	6.30	0.18	3.5	４		IP	６		IP	２		IP	２		IP	３		IP	２		IP	２		IP	２		IP	１	5	IP	５		G3
+上田　　紗奈	4.50	0.19	3.8	５		G1	２		G1	５	4	IP	６		IP	１		IP	５		IP	５		IP	４		IP	２		IP	４		IP
+松井　　貫太	3.60	0.19	5.0	６		IP	６		G1	４		IP	３		IP	５		IP	５		IP	６	5	IP	３		IP	３	5	IP	３		IP

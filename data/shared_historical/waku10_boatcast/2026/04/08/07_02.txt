@@ -1,0 +1,8 @@
+data=
+1	0
+西田　　和加	1.86	0.17	3.9	５		G3	４		IP	５		IP	６		IP	６		IP	６		IP	５		IP									IP
+野口　　勝弘	8.60	0.14	3.0	２		IP	１		G3	２		IP	１		IP	１		IP	３		IP	１		IP	２		IP	２		IP	２		IP
+益田　　啓司	6.00	0.10	2.9	２		IP	６		IP	３		IP	２		IP	４		IP	２		IP	１		IP	４		IP	３		IP	５		IP
+西村　　秀樹	2.60	0.19	3.8	４		IP	５		IP	６		IP	６	5	IP	５		IP	６	6	IP	３		IP	３		IP	６		IP	５		IP
+宇野　　博之	3.10	0.17	4.2	３		IP	５		IP	６		IP	４		IP	５		IP	５		IP	１		IP	６		IP	６		IP	５		IP
+信濃　　由行	1.90	0.22	4.4	６		IP	６		IP	６		IP	５		IP	６		IP	３	5	IP	４		IP	６		IP	６		IP	６		IP

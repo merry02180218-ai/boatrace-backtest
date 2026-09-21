@@ -1,0 +1,8 @@
+data=
+1	0
+入海　　　馨	8.30	0.12	2.6	１		G1	５		G1	２		G1	６		G1	１		G1	３		SG	１		G1	３		IP	１		G1	１		G1
+吉田　　俊彦	6.80	0.15	3.3	２		IP	２		IP	１		IP	４		IP	１		IP	２		G1	５		G1	３		IP	２		IP	５		IP
+山崎　　　郡	6.40	0.13	3.0	３		IP	３		IP	３		IP	２		G1	２		G1	２		G1	５		G1	４		G1	４		G1	４		IP
+佐藤　　　翼	6.20	0.12	2.9	６		G1	５		G1	４		G1	４		G1	２		G1	６		G1	２		G1	１		IP	１		IP	３		IP
+篠崎　　元志	5.20	0.15	3.6	３		G3	５		G1	６		G1	２		G1	２		IP	３		G1	５		G1	３		IP	６		SG	４		G1
+近江　　翔吾	5.44	0.20	2.9	４		IP	１	5	IP	３		IP	１		IP	５		IP	３		IP	転	5	IP	４	5	IP	４		IP	５		G1

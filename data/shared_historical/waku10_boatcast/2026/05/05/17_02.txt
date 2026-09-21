@@ -1,0 +1,8 @@
+data=
+1	0
+岸本　　　隆	8.60	0.14	3.2	２		IP	１		G3	１		G3	２		IP	１		IP	５		IP	２		IP	１		IP	１		IP	１		IP
+田中　　辰彦	4.40	0.19	3.4	２	3	IP	６		IP	５		IP	４		IP	５		IP	４		IP	４		IP	４		IP	２		IP	３		G1
+向井田　佑紀	2.00	0.16	2.9	５		IP	３		IP	６		IP	６		IP	６		IP	５		IP	６		IP	４		IP	６		IP	６		IP
+三馬　　崇史	4.80	0.20	4.0	２		IP	４	6	G2	５	5	G2	５		IP	３		IP	３		IP	４		IP	１		IP	４		IP	Ｆ		IP
+三宅　　健太	4.90	0.16	3.3	２		IP	５		IP	３	4	IP	４		G3	４		G3	５		IP	４		IP	３		IP	３		G3	４		G3
+半田　　尚也	3.80	0.19	4.3	６		IP	５		IP	５		IP	６		IP	２	5	IP	５		IP	３		IP	５	5	IP	３	5	IP	２	5	IP

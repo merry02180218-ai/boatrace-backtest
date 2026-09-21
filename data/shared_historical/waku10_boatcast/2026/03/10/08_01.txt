@@ -1,0 +1,8 @@
+data=
+1	0
+浜田　亜理沙	8.40	0.15	2.7	５		IP	１		G1	１		G1	２		IP	１		IP	１		G1	１		G1	落		G2	１		IP	１		IP
+山本　　浩輔	6.00	0.16	3.4	４		IP	１		IP	４		IP	４		IP	５		IP	４		IP	１		IP	２	1	IP	２		IP	３		IP
+長野　　道臣	4.50	0.19	3.6	２		IP	５		IP	３		IP	２		IP	２		IP	６		IP	４		G3	４		IP	４	4	IP	Ｆ	4	IP
+池上　　隆行	3.10	0.14	2.7	１		IP	５		IP	５		IP	５		IP	５		IP	４		IP	５		IP	４		IP	６		IP	５		IP
+東口　　　晃	4.00	0.25	4.7	４		IP	４		IP	５		IP	３		IP	５		IP	２	4	IP	５		IP	５		IP	４		IP	３		IP
+西村　　豪洋	1.80	0.23	5.0	５		IP	４		IP	５	5	IP	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP

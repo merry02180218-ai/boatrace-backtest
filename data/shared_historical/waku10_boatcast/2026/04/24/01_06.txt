@@ -1,0 +1,8 @@
+data=
+1	0
+向後　　龍一	9.40	0.12	2.5	２		IP	１		IP	２		IP	１		IP	１		IP	１		G3	１		G3	１		IP	２		IP	１		IP
+岡部　　貴司	4.20	0.19	2.4	３		IP	４		IP	３		IP	４		IP	３		IP	５		IP	Ｆ	3	IP	４		IP	３		IP	４		IP
+藤生　　雄人	6.60	0.16	3.0	２		IP	２	4	IP	１		IP	２		IP	３		IP	２	4	IP	５		IP	５		IP	２		IP	３		IP
+土井　　歩夢	7.00	0.17	3.0	５	5	IP	２		IP	３		G3	３		G3	１		IP	１		IP	４		IP	２		IP	２		IP	２		IP
+山崎　　昂介	3.20	0.20	3.8	４		IP	５		IP	４		IP	３		IP	６		IP	４		IP	５		IP	４		IP	４		IP	６		IP
+石村　日奈那	1.80	0.18	3.5	５		IP	６		IP	３		IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP

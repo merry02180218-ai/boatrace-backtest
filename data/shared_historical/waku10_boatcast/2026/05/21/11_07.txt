@@ -1,0 +1,8 @@
+data=
+1	0
+上田　　龍星	10.40	0.10	2.2	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		G1	１		G1	１		SG	１		SG
+澤田　　尚也	7.00	0.09	2.6	２		IP	４		IP	１		IP	２		IP	２		IP	２		IP	１		IP	４		G1	６		G1	３		G1
+末永　　由楽	5.70	0.14	1.8	１		G2	６		G2	５		IP	３		IP	２		IP	１		IP	４		IP	４		IP	３		IP	４		IP
+浜野　　孝志	3.30	0.18	3.7	６		IP	４		IP	１		IP	５		IP	６		IP	５		IP	５		IP	６		IP	Ｆ		IP	１		IP
+中　　　亮太	7.70	0.13	1.9	２	6	G3	１		IP	２		IP	２		IP	４		IP	３		G3	１	4	IP	４		IP	１		IP	２		G2
+佐藤　　　航	3.50	0.14	3.0	５		IP	６		IP	１	5	IP	５	5	IP	４	5	IP	６		G2	６		G2	５	4	IP	５		IP	２		IP

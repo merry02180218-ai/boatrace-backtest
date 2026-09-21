@@ -1,0 +1,8 @@
+data=
+1	0
+谷　　　勝幸	4.70	0.17	3.5	４		IP	４		IP	３		IP	２		IP	６		IP	３		IP	１		G3	５		IP	４		IP	５		G3
+冨田　　秀幸	4.20	0.18	3.0	５		IP	２		IP	４		IP	５	3	IP	３	3	IP	５	3	IP	４		IP	１		IP	５		IP	５		IP
+中田　　夕貴	5.90	0.13	2.7	５		G1	５		IP	２		IP	４		IP	５		G3	２		IP	２		G3	２		IP	２		G3	２		G3
+金田　　大輔	5.40	0.17	2.7	４		IP	４		IP	６		IP	２		IP	４	6	IP	１	5	IP	６		IP	４		IP	２		IP	１		IP
+香月　　大介	3.60	0.17	3.1	Ｆ		IP	１	4	IP	５		IP	４		IP	３		IP	４		IP	４		IP	４		IP	６		IP	６		IP
+山下　　昂大	4.20	0.16	4.0	３		IP	６	5	G3	５		IP	４		IP	２		IP	６		IP	５		IP	１		IP	３	5	IP	５		G3

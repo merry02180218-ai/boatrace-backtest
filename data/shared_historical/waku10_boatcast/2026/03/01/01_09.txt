@@ -1,0 +1,8 @@
+data=
+1	0
+近藤　雄一郎	8.80	0.16	2.6	１		IP	２		IP	３		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP
+岸蔭　　　亮	5.20	0.21	3.7	３		IP	３		IP	２		IP	２		IP	４		IP	６		IP	６		IP	３		IP	１		IP	５		IP
+木村　　浩士	5.00	0.17	4.1	４		IP	３		IP	３		IP	４		IP	５	4	G3	２		IP	４		IP	５		IP	４		G3	１		IP
+吉田　　和仁	5.10	0.18	3.1	３	5	IP	４		IP	１		IP	２		IP	４		IP	３		IP	４		IP	４		IP	４		IP	６		IP
+福西　広太郎	4.20	0.12	2.8	４		IP	３		IP	４	6	IP	５		IP	６	4	IP	６	6	IP	５	6	IP	２		IP	３		IP	２		IP
+真田　　聖也	1.60	0.12	2.1	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	４		IP	６		IP	５		IP

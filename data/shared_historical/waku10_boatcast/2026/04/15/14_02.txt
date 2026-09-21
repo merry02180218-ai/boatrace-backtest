@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　孝明	6.10	0.17	2.4	１		IP	５		IP	４	2	IP	３		IP	６		IP	１		IP	２		IP	３		IP	４		IP	１		IP
+藤田　　浩人	7.00	0.17	3.4	２		IP	３		IP	１		IP	２		IP	２		G2	４		G2	５		IP	２	3	IP	２		IP	３		IP
+原田　　秀弥	5.60	0.19	3.8	４		IP	３		IP	２		IP	５		G3	２		G3	３		G3	３		IP	４		IP	３		IP	３		IP
+中渡　　修作	4.40	0.13	2.7	４		IP	３		IP	６		IP	５		IP	６		IP	３	3	IP	２		IP	４		IP	２		IP	４		IP
+河野　　　大	5.80	0.17	3.1	３		IP	３		IP	３		IP	３	6	G2	２		G2	４		IP	３		IP	３		G1	６		G1	４		G2
+吉田　慎二郎	3.80	0.16	2.8	３		IP	３	5	IP	４		IP	５		IP	６		IP	４		IP	６		IP	３		IP	３		IP	５		IP

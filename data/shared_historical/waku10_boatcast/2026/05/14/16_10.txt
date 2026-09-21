@@ -1,0 +1,8 @@
+data=
+1	0
+井本　　昌也	9.70	0.12	2.6	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	３		IP	１		G1	１		G2	１		G2
+原田　　篤志	5.60	0.16	3.3	３		IP	５		IP	３		IP	５		IP	１		IP	２		IP	２		IP	２		G1	４		IP	Ｆ		IP
+後藤　　翔之	6.10	0.12	2.5	２		IP	１		IP	３		IP	３		IP	１		IP	５		IP	５		IP	１		IP	４		IP	５		G2
+中田　　友也	5.70	0.17	4.2	４		IP	３	5	IP	１		IP	５		IP	３		IP	３		IP	４		IP	２		IP	６	5	IP	１		IP
+細川　　明人	2.70	0.18	3.6	６		IP	４		IP	６		IP	５		IP	６	6	IP	４		IP	４		IP	４		IP	４		IP	５		IP
+木場　　悠介	2.70	0.15	2.8	４		IP	５		IP	６		IP	５		IP	３		G3	５		IP	６		IP	５		IP	６		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+上原　健次郎	7.30	0.20	3.4	１		IP	６		IP	２		IP	１		IP	２		IP	３		IP	１		IP	１		IP	３		IP	４		G3
+向井田　佑紀	4.20	0.17	3.1	２		IP	３		IP	６		IP	４		IP	２		G3	６		G3	５		IP	５		IP	５		IP	２		IP
+三木　　晴斗	5.50	0.16	2.9	２		IP	５		IP	２		IP	６	5	IP	４		IP	１		IP	３	4	IP	５		IP	２		IP	３		IP
+牧山　　敦也	5.70	0.17	4.3	４		IP	２	5	IP	３		IP	６		IP	２		IP	３		IP	３		IP	１		IP	４		IP	４		G3
+木山　　大聖	2.30	0.13	2.5	５		IP	５	6	IP	６		IP	４		IP	６		IP	５		IP	４		IP	６		IP	５		IP	４		IP
+宇野　　弥生	3.00	0.14	3.0	４	5	IP	６		G1	１		IP	２		IP	６		G3	６		G3	６		G3	６		G3	６		IP	６		G3

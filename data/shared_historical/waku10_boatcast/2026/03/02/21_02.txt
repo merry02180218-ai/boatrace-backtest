@@ -1,0 +1,8 @@
+data=
+1	0
+佐々木　大河	9.40	0.15	2.7	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP
+小森　　信雄	4.20	0.23	4.8	５		IP	３		IP	４		IP	２		IP	２		IP	２		IP	６		IP	６		IP	５		IP	５		G3
+吉武　　真也	5.33	0.17	3.4	転	4	IP	３		IP	５		IP	５		IP	４		IP	３		IP	３		IP	３		IP	３		IP	１		IP
+吉田　　俊彦	4.70	0.13	3.5	３		IP	４		G1	５		IP	２		IP	５		IP	４		IP	４		G3	４		G3	４		IP	２		IP
+小畑　　楓夏	1.50	0.16	3.0	６	6	IP	６		IP	６		IP	６		IP	５	6	IP	４	6	IP	６	6	IP	６		IP	６	6	IP	５	6	IP
+岡本　　　大	3.60	0.18	4.2	４		IP	４	5	IP	３		IP	５		IP	２		IP	６		IP	５		IP	６		IP	３		IP	５		IP

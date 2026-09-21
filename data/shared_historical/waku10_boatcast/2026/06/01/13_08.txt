@@ -1,0 +1,8 @@
+data=
+1	0
+山下　　昂大	7.40	0.15	2.8	Ｆ		IP	２		IP	２		IP	１		IP	１		IP	３		IP	２		IP	１		IP	４	3	G3	１		IP
+杉江　　浩明	4.70	0.23	4.1	１		IP	２		IP	２		IP	５		IP	６		IP	４	3	IP	６		IP	６		IP	１		IP	５		IP
+岩崎　　正哉	5.70	0.18	4.0	４		IP	６		IP	４		IP	２		IP	１		G3	４		IP	３		IP	４		IP	３		IP	１		IP
+出口　舞有子	4.60	0.20	3.1	３		IP	４		IP	６		IP	４		G3	４		IP	３		IP	１		IP	３		IP	６		IP	４		IP
+中村　　魁生	5.50	0.14	2.9	５		IP	５		IP	２	4	IP	３		IP	１		IP	４		IP	３	6	IP	２		G1	５		IP	４		IP
+三角　　哲男	3.60	0.21	4.0	４		IP	５		IP	３		IP	３		IP	５	5	IP	５		IP	５		IP	４		IP	５		IP	５	5	IP

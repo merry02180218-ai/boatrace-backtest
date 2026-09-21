@@ -1,0 +1,8 @@
+data=
+1	0
+福田　　　理	6.10	0.17	2.9	２		IP	１		IP	１		IP	２		IP	４		IP	４		IP	３		IP	３		IP	６		IP	４		IP
+藤田　　靖弘	6.10	0.14	3.1	２		IP	３		IP	２		IP	４		IP	４		IP	２		IP	２		IP	３		IP	３		G3	５		IP
+上條　　嘉嗣	7.20	0.15	2.7	２		IP	１	2	IP	１	2	IP	２		IP	４		IP	４		IP	１		G3	６		IP	２	2	IP	２		IP
+加藤　　雅之	2.90	0.22	4.0	４		IP	６		IP	５		IP	５		IP	６		IP	５		IP	３		IP	６		IP	３		IP	４		IP
+山浦　　　槙	1.33	0.19	5.0	５	6	IP	６	6	IP	６	6	IP																					IP
+富永　　大一	3.80	0.21	3.8	３		IP	６		IP	４		IP	４	4	IP	６		IP	４		IP	２		IP	５		IP	３		IP	５		IP

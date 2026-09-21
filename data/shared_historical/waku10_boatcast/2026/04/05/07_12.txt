@@ -1,0 +1,8 @@
+data=
+1	0
+服部　　幸男	8.00	0.17	3.0	１		IP	４		IP	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP	５		G1	２		G1
+佐藤　　大介	8.00	0.15	4.6	２		IP	２		IP	１		IP	１		IP	３		IP	２		IP	４		IP	１		IP	２		G1	４		IP
+佐々木　康幸	5.90	0.13	2.0	５		IP	１		IP	４		IP	５		IP	４		IP	１		IP	３		IP	３		IP	４		G1	１		IP
+齊藤　　　仁	3.50	0.17	3.7	４		G3	６		G1	６		G1	６		G1	５		G1	転		G1	転		IP	１		IP	６	5	IP	４		IP
+益田　　啓司	5.50	0.16	2.9	５		IP	１		IP	３		IP	６		IP	５		IP	４		IP	４		G1	２		IP	１		IP	３		IP
+江夏　　　満	5.20	0.22	4.7	４		IP	４		IP	２		IP	４		IP	５		IP	３		IP	５		IP	６		G1	２		G1	３		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　晃朋	8.10	0.14	3.6	妨		IP	１		IP	１		IP	２		IP	１		G3	１		G3	１		IP	１		IP	５		IP	１		G1
+横澤　　剛治	6.40	0.13	3.6	６		G1	４		IP	３		IP	４		IP	１		IP	１		IP	５		IP	２		IP	２		IP	１		IP
+石本　　裕武	7.40	0.14	3.1	１		SG	６		SG	２		G1	３		IP	１		IP	２		G1	３		G1	１		IP	３		IP	６		G1
+桑原　　　悠	6.60	0.13	2.5	２	3	G1	３		G1	１		G1	１		IP	４		IP	４		IP	６		IP	１		IP	４		IP	４		IP
+村岡　　賢人	5.40	0.14	3.3	４		G1	２		IP	３		IP	４		IP	５	6	IP	３		IP	６		G1	２		G1	４		G1	３		G1
+池田　　浩二	5.30	0.11	3.2	３		G1	４		SG	６		G1	２	4	IP	４		G1	６		G1	６		SG	２	5	SG	４		G1	４		G1

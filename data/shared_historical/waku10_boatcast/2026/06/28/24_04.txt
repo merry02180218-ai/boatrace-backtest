@@ -1,0 +1,8 @@
+data=
+1	0
+成貞　　琳平	6.10	0.18	3.7	１		IP	２		IP	１		IP	１		IP	６		IP	３		IP	転		IP	４		IP	２		IP	４		IP
+郷原　　章平	6.00	0.13	2.5	４		IP	５		IP	１		IP	４		IP	１		IP	１		IP	５		IP	５		IP	１		IP	４		IP
+草場　　康幸	5.10	0.17	3.5	５		IP	３		IP	２	2	IP	２		IP	３		IP	３		IP	５		IP	３		IP	３		IP	６		IP
+折下　　寛法	4.00	0.15	2.4	５		IP	５		IP	５		IP	３		IP	３		IP	５		IP	３		IP	２		IP	４		G3	５		IP
+吉永　　則雄	4.20	0.14	2.8	５		IP	４		IP	５	4	IP	２		IP	５	4	IP	４		IP	６		IP	４	4	IP	２		IP	４		IP
+西村　　仁吾	1.40	0.24	4.0	５		IP	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP

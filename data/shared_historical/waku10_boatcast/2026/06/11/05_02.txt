@@ -1,0 +1,8 @@
+data=
+1	0
+大塚　　康雅	6.70	0.17	2.9	２		IP	２		IP	４		IP	３		IP	２		IP	３		IP	１		IP	１		IP	３		IP	６		IP
+金子　　良昭	3.90	0.20	4.1	５		IP	５		IP	４		IP	３		IP	２		IP	６		IP	４		IP	５		IP	３		IP	４		IP
+塩崎　　優司	5.30	0.16	2.3	３		IP	６		IP	５		IP	２		IP	２		IP	５		IP	４		IP	４		IP	１	4	IP	２		IP
+樋口　　喜彦	2.70	0.20	4.1	４		IP	６		IP	６		IP	６	5	IP	６		IP	２		IP	５		IP	６		IP	３		IP	５		IP
+木下　　翔太	6.60	0.11	2.2	２		IP	２		IP	２		G2	１	2	IP	４		IP	４	4	IP	５		IP	４		G1	４		G1	１		G1
+市川　　瑚幸	1.30	0.21	4.3	６		IP	５		IP	６		IP	６		IP	６		IP	５	5	IP	６		IP	６		IP	５		IP	６		IP

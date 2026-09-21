@@ -1,0 +1,8 @@
+data=
+1	0
+三好　　勇人	8.80	0.11	2.1	１		IP	５		IP	４		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+古場　　輝義	6.10	0.22	3.9	２		IP	２		IP	２		G3	４		IP	３		IP	５		IP	６		IP	１		IP	３		IP	２		IP
+吉田　慎二郎	7.00	0.19	3.1	４		IP	２		IP	１		IP	１		IP	４		IP	５		IP	１		IP	１		IP	２		IP	４		IP
+今村　　暢孝	6.33	0.14	3.0	Ｆ	2	IP	２	1	IP	２	2	IP	３	2	IP	３	2	IP	１	2	IP	２	2	IP	不	2	IP	５	2	IP	２	2	G1
+山本　稔太朗	2.56	0.17	3.1	４		IP	５		IP	２		IP	５		IP	欠		IP	エ		IP	４		IP	６		IP	転		IP	５		G3
+大澤　　普司	5.70	0.18	3.4	１		IP	５		IP	３		IP	３		IP	４		G1	６		G1	５		IP	１	5	IP	１	5	IP	４		IP

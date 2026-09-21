@@ -1,0 +1,8 @@
+data=
+1	0
+大塚　　康雅	6.80	0.17	2.8	２		IP	３		IP	１		IP	１		IP	３		IP	６		IP	６		IP	２		IP	２		IP	１		IP
+平石　　和男	6.30	0.18	4.4	１		IP	２		IP	２		IP	６		IP	３		IP	５		IP	４		IP	１		IP	２		IP	３		IP
+島田　　賢人	6.20	0.17	3.4	５		IP	３	4	IP	１		IP	４		IP	３		IP	４		IP	３		IP	３		IP	１		IP	２		IP
+平見　　真彦	5.00	0.17	3.2	３		IP	４		IP	３		IP	５		IP	２	5	IP	３	5	IP	３		IP	５	6	IP	３		IP	４		IP
+高橋　　英之	4.70	0.13	2.2	２		IP	３		IP	６		IP	２		IP	５		IP	４		IP	２		IP	４		IP	５		G3	４		G3
+田頭　　　実	7.00	0.13	2.1	２	2	IP	１	2	IP	３	4	IP	２	2	IP	６	2	IP	１	2	IP	１	2	IP	３	3	IP	６	2	IP	２	4	IP

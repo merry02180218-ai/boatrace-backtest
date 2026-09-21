@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　裕将	5.80	0.11	3.1	４		IP	１		IP	３		IP	６		IP	３		IP	１		IP	５		IP	２		IP	１		IP	６		IP
+豊田　　訓靖	2.80	0.19	4.2	３		IP	４		IP	６		IP	４		IP	５		IP	６		IP	５		IP	６		IP	６		IP	３		IP
+佐竹　　太一	3.20	0.22	4.7	６		IP	６		IP	４		IP	５		IP	４		IP	５		IP	５	6	IP	４		IP	３		IP	４		IP
+戸塚　　邦好	5.90	0.16	2.6	３		IP	４		IP	３	5	IP	２		IP	３	6	IP	６		IP	３		G1	２		G1	２		IP	４		IP
+加藤　　政彦	3.70	0.13	3.8	１		IP	２	4	IP	５		G1	５		G1	６		G1	５		G1	５		IP	５		IP	４		IP	落		IP
+中山　　　将	4.90	0.14	2.9	３		IP	３		IP	２		IP	５		IP	２		IP	５		IP	２		IP	６		IP	６		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+若林　　　将	9.90	0.14	2.4	１		IP	１		IP	１		IP	１		IP	１		G1	１		G1	４		IP	１		IP	１		IP	１		IP
+澤田　　尚也	5.40	0.14	2.9	４		G1	６		G1	３		G1	４		G1	２		G1	４		IP	１		G2	６		G2	６		IP	２		IP
+栗城　　　匠	8.40	0.13	2.5	４		G1	１		IP	３		G1	３		IP	２		IP	１		IP	１		IP	１		G1	３		IP	１		IP
+宇佐見　　淳	4.70	0.18	2.7	４		IP	５		IP	３		G3	２		IP	３		G1	４		G1	６		IP	５		IP	４		IP	２		IP
+伊藤　　将吉	5.40	0.17	3.5	２		IP	２		IP	３		IP	３		IP	５		IP	６		G1	４	6	IP	２		IP	５	4	IP	２		IP
+加藤　　翔馬	5.00	0.19	4.2	２		G3	３	5	IP	６		IP	３		IP	５		IP	６		G1	３		IP	４		IP	３		IP	２	5	IP

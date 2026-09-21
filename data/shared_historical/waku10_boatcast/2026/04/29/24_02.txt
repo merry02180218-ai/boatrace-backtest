@@ -1,0 +1,8 @@
+data=
+1	0
+後藤　　盛也	7.60	0.13	1.8	１		IP	１		IP	２		IP	６		IP	２		G3	２		IP	１		IP	１		IP	１		IP	６		IP
+山下　　和彦	5.90	0.15	4.0	２		IP	１		G3	２		IP	５		IP	４		IP	３		IP	２		IP	４		IP	２		IP	６		IP
+鳥飼　　　眞	5.90	0.19	4.2	３		IP	２		IP	２		IP	２		IP	４		IP	３		IP	３		IP	４		IP	６		IP	２		IP
+野中　　義生	3.33	0.15	2.2	３		G3	４		G3	６		IP	５		IP	６	5	IP	６		IP	４		IP	６		IP	エ		IP	１		G3
+飯山　　晃三	4.70	0.24	4.7	５		IP	６	6	IP	２		IP	２		IP	３		IP	３		IP	３		IP	２	4	IP	６		IP	６		IP
+佐々木　英樹	3.70	0.17	3.2	４		IP	２		IP	５		IP	５		IP	４		IP	３		IP	６		IP	４	5	IP	５		G3	４		G3

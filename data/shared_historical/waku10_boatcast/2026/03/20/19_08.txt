@@ -1,0 +1,8 @@
+data=
+1	0
+野相　　弘司	8.20	0.12	2.4	１		IP	４		IP	２		IP	１		IP	１		IP	４		IP	２		G3	１		IP	１		IP	２		IP
+梶野　　学志	5.10	0.17	3.7	３		IP	６		IP	２		IP	５		IP	２		IP	１		IP	５		IP	４	1	IP	３		G3	４		IP
+高木　　茉白	4.80	0.21	3.3	２		IP	３		IP	３		IP	２		IP	６		IP	５		IP	３		IP	５		G3	２		G3	６		IP
+長畑　　友輔	4.00	0.18	3.4	６		IP	４		IP	６		IP	１	5	IP	３		IP	２		IP	３		IP	５	6	IP	６		IP	６		IP
+山崎　　昂介	3.00	0.20	4.1	３		IP	６		IP	４		IP	５		IP	４		IP	４		IP	６		IP	４		IP	５		IP	５		IP
+原村　　百那	1.56	0.19	3.1	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	欠		IP	４		IP	６		IP	５		IP

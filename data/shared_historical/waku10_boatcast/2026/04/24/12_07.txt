@@ -1,0 +1,8 @@
+data=
+1	0
+杢野　　誓良	5.40	0.17	3.3	５		IP	２		IP	５		IP	１		IP	６		IP	２		IP	１		IP	１		IP	６		IP	５		IP
+北川　　潤二	6.60	0.15	2.7	１		G3	２		IP	４		IP	３		G3	２		G3	２		IP	４		IP	２		IP	３		IP	４		IP
+村松　　修二	6.30	0.18	3.5	２		IP	６		IP	４	4	IP	３		IP	３		IP	２		IP	２		IP	５		IP	２		IP	１		IP
+田添　　康介	2.78	0.23	3.8	３		IP	４		IP	６		IP	エ	6	IP	６		IP	５		IP	５		IP	５		IP	６		IP	３		IP
+興津　　　藍	5.80	0.18	3.8	３		IP	４		IP	３	6	IP	２		IP	６		IP	４		IP	４		IP	２		IP	３		G1	１	4	IP
+上之　　晃弘	2.50	0.14	3.0	６		IP	４		IP	４		IP	６		IP	６		IP	５		IP	６		IP	４		IP	６		IP	３	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+森永　　　淳	10.00	0.13	2.2	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1	１		G1	１		IP	１		IP	２		IP
+寺田　　　祥	5.80	0.15	2.7	１		IP	５		G2	３		G2	１		IP	６		G1	６		G1	２		IP	６		G1	３		IP	２		IP
+金田　　　諭	4.40	0.15	3.2	５		IP	３		IP	５	2	IP	２		IP	３		IP	６	2	IP	６		IP	５		IP	２	5	IP	２		IP
+枝尾　　　賢	5.20	0.12	2.9	５		IP	３		IP	５		G2	エ		IP	２		IP	２		IP	１		IP	２		IP	３		IP	６		IP
+飯山　　　泰	4.70	0.18	3.0	５		IP	２		IP	４		IP	５		IP	２		G2	４		IP	５		IP	１		IP	４	3	IP	５		IP
+市橋　　卓士	4.20	0.17	3.3	１	4	IP	４		IP	３	3	IP	５		IP	４		IP	６		IP	５	5	IP	２	5	IP	６		IP	５		IP

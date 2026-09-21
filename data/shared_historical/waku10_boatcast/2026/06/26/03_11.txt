@@ -1,0 +1,8 @@
+data=
+1	0
+是澤　　孝宏	8.40	0.14	2.8	２		IP	１		IP	１		IP	１		IP	５		G2	５		G2	１		IP	１		IP	１		IP	１		IP
+河合　　三弘	6.30	0.19	3.9	３		IP	３		IP	６		IP	５		IP	１	3	IP	２		IP	２		IP	３		G3	３		G3	１		IP
+杢野　　誓良	4.20	0.18	3.5	３		IP	４		IP	４		IP	４		IP	６		IP	４		IP	６		IP	３		IP	３	4	IP	３		IP
+大塚　　康雅	6.00	0.18	3.1	２		IP	４		IP	４		IP	４		IP	３		IP	１		IP	３	5	IP	３		IP	４		IP	２		IP
+村越　　　篤	3.40	0.16	4.0	４		IP	６		IP	３	4	IP	５		IP	６		IP	４		IP	６		IP	３		IP	６		IP	２		IP
+大西　　　賢	3.67	0.28	5.0	３		IP	６		IP	４		IP	４		IP	転		IP	６		IP	４		IP	６		IP	３		IP	３		IP

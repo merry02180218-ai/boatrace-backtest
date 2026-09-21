@@ -1,0 +1,8 @@
+data=
+1	0
+後藤　　陽介	6.50	0.16	2.1	１		IP	１		IP	３		IP	３		IP	５		IP	３		IP	６		IP	１		IP	３		IP	２		IP
+齋藤　　　勇	4.90	0.18	3.0	４		IP	６		IP	３		IP	３		IP	１		IP	３		IP	３		IP	４		IP	３		IP	転		IP
+山本　　浩輔	4.70	0.20	3.4	１		IP	３		IP	５		IP	５		IP	４		IP	４		IP	６		IP	４		IP	２	2	IP	３		IP
+松下　　直也	4.70	0.22	3.7	４		IP	６		IP	５		IP	１		IP	２		IP	５		IP	２		IP	４		IP	３		IP	５		IP
+中岡　　　駿	2.60	0.20	3.8	６		IP	５		IP	６		IP	５		IP	５		IP	５	6	IP	４	4	IP	５		IP	３		IP	４		IP
+東　　　健介	2.30	0.17	3.5	６	5	IP	４		IP	４		IP	６		IP	５		IP	４		IP	６		IP	４		IP	６		IP	６		IP

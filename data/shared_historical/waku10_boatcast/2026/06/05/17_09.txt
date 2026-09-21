@@ -1,0 +1,8 @@
+data=
+1	0
+永井　　彪也	9.00	0.15	2.9	１		IP	３		IP	１		IP	１		G3	４		G3	１		G3	１		IP	１		IP	１		IP	１		IP
+北野　　輝季	8.30	0.17	3.3	１	3	G3	１		G3	２		IP	１		IP	３		IP	４		G1	４		G1	１		G1	１		IP	２	3	IP
+大上　　卓人	6.90	0.14	2.9	２		G1	３		IP	１		IP	３		IP	３		IP	４		IP	３		IP	４	4	SG	２		G1	４		G1
+海野　康志郎	6.60	0.14	2.8	２		IP	４		IP	３	3	IP	２		IP	２		IP	１	3	IP	６		G1	２		G1	５		G1	３		G1
+太田　　和美	6.00	0.13	2.2	３		IP	３		IP	２		IP	３		IP	３		G1	４		G1	５		G1	５		G1	２		IP	２		IP
+常住　　　蓮	5.80	0.15	3.8	２	5	SG	３		SG	２	5	IP	５	5	IP	６		IP	４		G1	４	5	IP	２	5	SG	３		SG	５		IP

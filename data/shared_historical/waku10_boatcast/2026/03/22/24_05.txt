@@ -1,0 +1,8 @@
+data=
+1	0
+菊池　　宏志	8.60	0.16	2.5	１		IP	１		G3	１		G3	２		IP	３		IP	１		IP	１		G3	１		G3	１		IP	５		G3
+福嶋　　智之	4.30	0.15	3.4	２	4	IP	４		IP	３		IP	６		IP	２	3	IP	２		IP	５		IP	５		IP	５		IP	５		IP
+今坂　　晃広	3.30	0.17	4.2	６		IP	４		IP	４	5	IP	４		IP	３	5	IP	４		IP	６		IP	５		IP	６		IP	３		IP
+林　　　美憲	7.20	0.17	3.5	２		IP	５		G1	６		IP	３		IP	２	3	IP	１		IP	２		IP	１	3	IP	１		IP	２		IP
+品川　二千翔	4.30	0.16	4.2	４		IP	４		IP	２		IP	５		IP	２		IP	６		IP	４	6	G2	５		IP	２		IP	６		IP
+金山　　立樹	2.90	0.24	5.0	５		IP	５		IP	５		IP	２		IP	５		IP	５		IP	６		IP	３		IP	５		IP	５		IP

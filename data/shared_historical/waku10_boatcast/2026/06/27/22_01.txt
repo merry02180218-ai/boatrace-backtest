@@ -1,0 +1,8 @@
+data=
+1	0
+作間　　　章	9.50	0.16	2.6	１		IP	３		IP	１		IP	１		IP	２		IP	１		IP	１		G3	１		G3	１		IP	１		IP
+松田　　隆司	4.90	0.15	3.4	３		IP	３		IP	２		IP	６		IP	２		IP	３		IP	２		IP	４		IP	６		IP	６		IP
+間嶋　　仁志	4.60	0.17	3.6	４		IP	４		IP	５		IP	４		IP	４		G3	３		G3	５		IP	２		IP	４		IP	２		IP
+米玉利　大悟	3.50	0.16	3.5	５		IP	１		IP	５		IP	６	6	IP	３	6	IP	５		IP	５		IP	６		IP	６		IP	２		IP
+本村　　　大	2.30	0.19	3.9	５		IP	４		IP	５		IP	６		IP	４		IP	５		IP	５		IP	４		IP	欠		IP	５	6	IP
+今泉　　博人	1.10	0.18	3.7	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+稲田　　浩二	9.10	0.13	2.1	１		IP	１		IP	１		G2	１		G2	５		G1	１		G1	２		IP	２		IP	２		G1	１		IP
+坂口　　　周	5.60	0.13	2.7	６		IP	１		G2	２		G3	４		G3	４		G3	３		IP	２		IP	３		IP	３		IP	５		IP
+庄司　　孝輔	6.50	0.16	4.0	４		IP	４		IP	５		IP	１		IP	１		IP	３		IP	２		IP	３	4	IP	３		IP	３		IP
+深川　麻奈美	4.78	0.16	3.1	４		IP	３		IP	５	6	IP	３	3	IP	６		G2	４		G2	２		IP	４		IP	３		IP	落	5	IP
+岩崎　　正哉	4.30	0.19	4.1	４		IP	２		G3	４		G3	１		IP	３		IP	４		IP	５		G3	５	4	G3	５		IP	６		IP
+中岡　　健人	3.80	0.18	4.2	４		IP	５		IP	５		IP	６		IP	５		IP	３		IP	３		IP	１		IP	５		IP	６		IP

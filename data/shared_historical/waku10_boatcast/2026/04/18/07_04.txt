@@ -1,0 +1,8 @@
+data=
+1	0
+上野　　秀和	8.20	0.17	3.7	１		IP	４		IP	１		IP	１		G3	１		IP	１		IP	２		IP	３		IP	４		IP	１		IP
+田上　　　凜	4.90	0.17	3.5	２	4	IP	５		IP	３		IP	２		IP	５		IP	４	6	IP	５	6	IP	１		G3	６	6	IP	３	6	IP
+多田　　有佑	4.30	0.19	3.6	４		IP	５		IP	５	4	IP	２		IP	４		IP	６		IP	３		IP	４		IP	１		IP	５		IP
+大串　　重幸	4.90	0.20	4.2	３		IP	２	5	IP	４		G3	３		G3	転		IP	３		IP	３		IP	２		IP	４	3	IP	６	5	IP
+出畑　　孝成	4.70	0.19	3.6	２		IP	３	4	IP	５		IP	３		IP	１		IP	５	6	IP	５		IP	３		IP	４		IP	６		IP
+吉永　　則雄	3.10	0.18	4.1	４	5	IP	４		IP	５		IP	５		IP	６	4	IP	４		IP	６		IP	３	5	IP	４		IP	６		IP

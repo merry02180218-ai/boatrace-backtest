@@ -1,0 +1,8 @@
+data=
+1	0
+麻生　　慎介	8.00	0.14	2.2	５		IP	１		IP	４		IP	２		G1	３		G1	１		IP	１		IP	２		IP	１		IP	１		IP
+瓜生　　正義	6.20	0.15	4.2	１		IP	６		G1	５		G1	６		G1	１		IP	４		SG	３		G1	４		SG	４		G1	２		G1
+定松　　勇樹	8.10	0.14	2.7	２		G3	３		G3	１		G3	６		G1	１		G1	１	2	IP	２		IP	１		IP	２		IP	３		G1
+井本　　昌也	4.20	0.14	2.8	４		IP	４		G1	５		G1	２		IP	５		IP	６		IP	２		IP	４		IP	４		G1	６		G1
+菊地　　孝平	6.90	0.12	2.9	３		G1	６		G1	１		IP	１		IP	２	4	G1	２		G3	２		G3	４		G1	５		G1	３		G1
+谷野　　錬志	2.90	0.16	3.3	３		IP	４	4	IP	６		G1	６		G1	３		IP	６		IP	４		IP	５		IP	６	5	IP	６		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+宮野　　　仁	8.00	0.15	3.7	５		IP	５		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２	2	IP	１		IP	１		IP
+嘉手苅　徹哉	3.80	0.14	2.9	２		IP	４		IP	６		IP	３		IP	５		IP	４		IP	４		IP	４		IP	４		IP	６		IP
+野見山　拓己	5.70	0.12	2.3	３		IP	３		IP	３		G3	６		G3	３		IP	５		IP	１		IP	４		IP	３		IP	１		IP
+土屋　　　蘭	4.70	0.16	3.1	２		IP	４		IP	３		IP	３	5	IP	４		IP	４		IP	６		IP	３	5	IP	４		IP	４		IP
+塩崎　　桐加	2.60	0.19	4.2	５		IP	５		IP	３		IP	４		G3	６		G1	４		IP	６		IP	５		IP	５		IP	６		IP
+加藤　　雅之	2.70	0.24	5.1	４		IP	６		IP	５		IP	６		IP	５		IP	５		IP	２		IP	４		IP	５		IP	６	5	IP

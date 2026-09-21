@@ -1,0 +1,8 @@
+data=
+1	0
+宮地　　秀祈	7.40	0.16	3.4	２		IP	２		IP	１		IP	１		IP	４		IP	３		IP	４		IP	４		IP	１		IP	１		IP
+南野　　利騰	3.70	0.12	2.5	６		IP	４		IP	５	3	IP	５		IP	２	3	IP	３		IP	５		IP	４		IP	５		IP	３		IP
+藤井　　　徹	4.20	0.18	3.6	４		IP	４		IP	２		IP	６		IP	５		IP	２		IP	２		IP	５		IP	６	4	IP	４		IP
+井澤　　聖奈	1.80	0.24	4.9	６		IP	６	5	IP	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP	５	3	IP	４		IP
+飯島　　　誠	2.40	0.18	3.6	５		IP	６	6	IP	６		IP	６	6	IP	６		IP	１		IP	４	6	IP	６		IP	６		IP	５		IP
+森作　　広大	2.30	0.28	5.5	６		IP	５		IP	５		IP	６		IP	５		IP	５		IP	６		IP	４		IP	３		IP	５		IP

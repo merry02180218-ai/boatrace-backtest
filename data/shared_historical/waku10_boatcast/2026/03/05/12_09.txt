@@ -1,0 +1,8 @@
+data=
+1	0
+星　　　栄爾	9.00	0.10	1.4	１		IP	２		IP	１		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+関根　　彰人	6.11	0.16	3.4	６		IP	３		IP	５		IP	２		IP	エ		IP	４		IP	１		IP	２		IP	１		IP	３		IP
+北山　　康介	6.80	0.16	3.0	２		IP	２		IP	５		IP	４		IP	４		IP	２		SG	２		IP	２		IP	２		IP	２		IP
+江夏　　　満	6.30	0.18	3.8	２		IP	５		IP	４	6	IP	２		IP	３		G1	２		IP	３	6	IP	５		IP	２		IP	３	3	IP
+妹尾　　忠幸	5.90	0.16	4.2	３		IP	３		IP	３		IP	３		G1	６		G2	３	4	IP	１	1	IP	２		IP	５		IP	３		IP
+野相　　弘司	2.50	0.30	5.4	６		IP	５		IP	６		IP	４		IP	６		IP	４		G3	５		IP	４		IP	５		IP	４		IP

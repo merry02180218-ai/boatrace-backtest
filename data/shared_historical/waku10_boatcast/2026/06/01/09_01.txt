@@ -1,0 +1,8 @@
+data=
+1	0
+木山　　和幸	9.20	0.21	4.4	１		IP	２		IP	１		IP	１		IP	２		IP	１		G3	１		IP	２		IP	１		IP	２		IP
+前田　　光昭	3.90	0.18	3.4	２		IP	５		IP	６		IP	６		IP	５		IP	２		IP	６		IP	３		IP	３		IP	４		IP
+梶原　　　正	4.20	0.15	2.7	４		IP	３		IP	５		IP	６		IP	２		IP	３	6	IP	５	4	IP	５		IP	１		IP	６		IP
+越智　　照浩	3.30	0.15	4.2	５	6	G3	６		IP	５		IP	３		IP	５		IP	５		IP	４		IP	４		IP	３		IP	４		IP
+渡　　　修平	3.30	0.18	4.1	４		G3	４		IP	６		IP	５		IP	６	6	IP	３		IP	３		IP	３		IP	６		IP	５	6	IP
+小川　　晃司	3.70	0.18	3.6	４		G3	６		G3	５		G3	５		IP	５		IP	４		IP	２		IP	４		IP	４		IP	３		IP

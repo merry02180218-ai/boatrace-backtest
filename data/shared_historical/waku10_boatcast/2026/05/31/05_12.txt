@@ -1,0 +1,8 @@
+data=
+1	0
+浜田　亜理沙	9.00	0.16	2.8	１		G3	２		G3	１		G3	１		G2	１		G2	２		IP	５		IP	１		G1	１		G1	２		IP
+三浦　　永理	7.10	0.15	3.3	３		G3	２		G3	２		G2	２		G3	３		G3	６		IP	２		IP	２		G3	２		IP	３		IP
+武井　莉里佳	5.00	0.18	3.9	５		G3	４		G2	１		IP	６		IP	３		IP	３		IP	３		IP	１		IP	６		IP	５		IP
+廣中　智紗衣	6.60	0.23	4.1	２		IP	５		IP	２		IP	２		IP	３		IP	３		IP	２		IP	２		G3	４		G1	３		G1
+中田　　夕貴	2.50	0.17	4.4	５		G2	４	6	IP	５		IP	６		IP	６		G1	５		G1	６		IP	３		IP	６		IP	５		G3
+田口　　節子	5.90	0.17	4.1	４		IP	３		G2	２		G2	６		G1	３		G3	３		G3	２		G3	３		G3	４		G3	３	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　駿平	5.20	0.19	3.4	４		IP	６		IP	５		IP	３		IP	１		IP	４		IP	６		IP	３		IP	１		IP	２		IP
+妹尾　　忠幸	6.20	0.17	3.4	２		IP	３		IP	１		IP	５		IP	５		IP	１		IP	３		IP	３		IP	３		IP	３		IP
+中村　　栄治	5.90	0.19	3.7	５		IP	６		IP	５		IP	１	4	IP	３		G3	４		G3	２		IP	１		IP	２		IP	２		IP
+入海　　　馨	5.50	0.14	2.9	６		G1	４		IP	２		G1	６		G1	３		G1	３		G1	５	6	G1	２		G1	２		G1	５	5	G1
+金子　　和之	5.40	0.12	2.4	３		IP	３	4	IP	１		IP	３		IP	５		IP	１	4	IP	５		IP	４		G3	６		G2	３		IP
+松田　　真実	4.10	0.18	3.0	３		IP	６	5	IP	４	5	IP	５		IP	４		IP	５		G3	２		G3	３		IP	４		IP	４		IP

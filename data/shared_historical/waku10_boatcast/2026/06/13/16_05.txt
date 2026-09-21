@@ -1,0 +1,8 @@
+data=
+1	0
+嶋田　　貴支	8.40	0.14	3.0	５		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP
+平石　　和男	6.50	0.18	4.6	４		IP	２		IP	１		IP	３		IP	２		IP	５	3	IP	１		IP	２		IP	２		IP	６		IP
+石田　　勇斗	5.60	0.13	2.9	５		IP	２		IP	３		IP	４		IP	３		IP	５		IP	２		IP	１		IP	４		IP	３		IP
+江本　　真治	6.80	0.15	2.3	１		IP	１		IP	１		G3	５		IP	４		IP	２		IP	３		IP	２		IP	３		IP	５		IP
+伊藤　　啓三	5.30	0.14	3.1	４		IP	３		IP	３		IP	３		IP	１		IP	５		IP	２		IP	５		IP	６		IP	２		IP
+馬袋　　義則	6.80	0.16	3.4	３		G3	１	5	IP	３		IP	５	4	IP	４	5	IP	１	4	IP	２	2	IP	２	3	IP	４		IP	１	3	IP

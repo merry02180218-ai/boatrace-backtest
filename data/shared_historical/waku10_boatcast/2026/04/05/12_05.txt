@@ -1,0 +1,8 @@
+data=
+1	0
+吉川　　元浩	8.30	0.15	3.3	１		IP	５		G1	３		G1	１		G1	１		G1	１		G1	１		IP	４		IP	１		IP	３		IP
+小池　　修平	6.90	0.15	3.8	２		SG	６		SG	３		G1	１		IP	２		G1	２		G1	６		G1	１		IP	２		IP	６		IP
+峰　　　竜太	8.10	0.14	2.6	３		SG	３		G1	２		G1	３		G1	２		G1	１		IP	２		IP	３		SG	３		G1	３		SG
+土屋　　智則	6.60	0.14	3.7	１		G3	４		G3	２		IP	２	3	IP	３		IP	３		IP	２		IP	６		G1	３		G1	３		G1
+板橋　　侑我	6.60	0.18	3.7	５		G3	３		G1	１		G1	３		G1	１		G1	３		G1	２		IP	５		G1	２		IP	６		IP
+中田　　竜太	5.30	0.19	4.3	４		G2	３		G2	４		G1	３	5	IP	３		G1	３		G1	６		G1	４		G1	５		IP	３		G1

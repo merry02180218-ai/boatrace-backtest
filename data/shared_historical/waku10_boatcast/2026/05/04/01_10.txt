@@ -1,0 +1,8 @@
+data=
+1	0
+江口　　晃生	8.60	0.18	3.2	３		IP	２		G1	１		IP	１		IP	１		IP	１		IP	６		IP	１		IP	２		IP	１		IP
+金子　　賢志	6.00	0.14	3.3	３		IP	２		IP	４		G1	６		G1	５	3	IP	１		IP	１		IP	２		IP	６		G1	４		G1
+大澤　　普司	7.20	0.19	2.9	４	4	IP	１		IP	３		G1	２		IP	４	2	IP	２		IP	１		IP	４		IP	３		IP	１		G1
+土屋　　太朗	3.80	0.17	3.9	３		IP	４		IP	４		G3	６	6	G3	６		IP	３		IP	４		IP	３		IP	４		IP	５		IP
+蜂須　　瑞生	4.20	0.19	3.7	３		IP	３	6	IP	４	6	IP	５		G3	４		IP	６		IP	３		IP	４		IP	６		IP	２		IP
+川口　　貴久	4.40	0.12	2.1	５		IP	４		IP	４		IP	４		IP	１		IP	４		IP	５		IP	５		IP	３		IP	３		IP

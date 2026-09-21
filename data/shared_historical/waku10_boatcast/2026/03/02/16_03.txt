@@ -1,0 +1,8 @@
+data=
+1	0
+西岡　　顕心	10.10	0.15	2.6	１		G1	１		IP	１		IP	１		G1	１		G1	２		IP	１		IP	１		IP	１		IP	１		IP
+岩瀬　　裕亮	8.90	0.12	2.7	２		G1	２		G1	１		IP	２		G2	１		IP	２		IP	１	1	IP	３		SG	３		IP	１		IP
+山田　　康二	7.90	0.12	2.9	１		G1	１		G1	５		G1	２		G1	２		G1	１		IP	３		IP	３		SG	４		G1	３		G1
+宮之原　輝紀	6.90	0.13	1.9	６		G1	６		G1	１		G1	３		IP	１		G2	３		G2	２		IP	４		IP	２		IP	１		IP
+吉田　　拡郎	5.10	0.12	3.3	４		IP	６		IP	６		IP	２	4	IP	３		G1	５		G1	３		G1	１	6	G1	３		IP	６		SG
+木村　　仁紀	4.80	0.20	4.4	５		IP	６		G1	３		G1	２		IP	６		G2	３		IP	３		IP	２		IP	３		IP	６		IP

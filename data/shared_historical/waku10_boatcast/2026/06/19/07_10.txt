@@ -1,0 +1,8 @@
+data=
+1	0
+郷原　　章平	9.20	0.08	1.8	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	２		IP	１		IP	２		IP
+清水　　紀克	4.90	0.16	2.3	５		IP	３		IP	２		IP	６	3	IP	４		IP	５		IP	４		IP	２		IP	３		IP	２		IP
+青木　幸太郎	6.10	0.17	3.5	６		IP	３		IP	３		IP	２		IP	３		IP	２		IP	３		IP	１		IP	４		IP	３		IP
+鳥居塚　嶺王	3.60	0.16	2.3	１		IP	６		IP	５		IP	５		IP	３		IP	６		IP	６		IP	６		IP	４		IP	２		IP
+齋藤　　　勇	2.90	0.21	4.2	５		IP	３	3	IP	５		IP	４		IP	５		IP	３	4	IP	５		IP	５		IP	６		IP	５		IP
+柘植　　政浩	4.10	0.19	2.8	３		IP	２		IP	２		IP	６		IP	５		IP	４		IP	６		IP	４		IP	３		IP	６		IP

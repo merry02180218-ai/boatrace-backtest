@@ -1,0 +1,8 @@
+data=
+1	0
+大池　　佑来	10.50	0.13	1.8	１		G1	１		G1	１		G1	１		IP	１		IP	１		SG	１		G1	１		G1	２		IP	１		IP
+西村　　拓也	8.00	0.14	3.2	１		G1	２		G1	３		G1	１		IP	５		G2	１		IP	４		SG	２		G1	３		G1	２		IP
+川崎　　智幸	4.50	0.15	2.1	４		IP	２		IP	３		IP	５		G1	４		IP	４		IP	５		IP	４		IP	２		IP	５		IP
+森永　　　隆	5.50	0.16	4.3	２		IP	４		IP	２		IP	２		IP	３		IP	２	3	IP	６		IP	５		G1	４		G1	４		IP
+重野　　哲之	5.70	0.12	2.2	６		IP	２		G1	５		G1	５		IP	３		IP	１		IP	４		IP	２		IP	２		IP	３		IP
+吉田　慎二郎	3.90	0.18	3.5	４		IP	６		IP	３		IP	３		IP	５		IP	３		IP	５		IP	４	5	IP	３		IP	５		IP

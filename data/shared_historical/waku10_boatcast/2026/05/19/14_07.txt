@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　貴志	6.70	0.17	3.6	３		IP	２		IP	２		IP	１		IP	６		IP	１		IP	３		IP	３		IP	４		IP	２		IP
+宮地　　秀祈	5.90	0.16	3.0	３		IP	３		IP	２		IP	１		IP	６		IP	４		IP	２		IP	４		IP	２		IP	４		IP
+興津　　　藍	6.50	0.13	3.3	１		IP	３		IP	４		IP	２		IP	２		IP	６		IP	５		IP	２		IP	２		IP	１		IP
+稗田　　聖也	6.60	0.12	2.0	３		IP	２		IP	１		IP	２		IP	１		IP	４		IP	３		IP	３		IP	６		IP	３		IP
+田路　　朋史	4.30	0.14	3.3	４		IP	４		IP	２		IP	４	4	IP	４		IP	６		IP	６		IP	６		IP	４		IP	２		IP
+藤原　　孝斗	3.50	0.19	3.6	５		IP	４	5	IP	６		IP	６		IP	６		IP	５		IP	３		IP	４		IP	５		IP	１		IP

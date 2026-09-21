@@ -1,0 +1,8 @@
+data=
+1	0
+小宮　　涼雅	6.50	0.14	2.3	６		IP	２		IP	１		IP	転		IP	３		IP	２		IP	２		IP	１		IP	２		IP	３		IP
+齋藤　　真之	4.30	0.16	2.7	３		IP	５		IP	３		IP	６		IP	１	1	IP	３		IP	４		IP	３		IP	６		IP	６		IP
+松崎　祐太郎	5.90	0.17	2.2	３		IP	２		IP	２		IP	２		IP	３		IP	２		IP	４		IP	３		IP	４		IP	６		IP
+重成　　一人	7.50	0.17	2.7	５		G1	３		G1	３		IP	１		IP	１		IP	２		IP	４		IP	１		G1	１		IP	３		IP
+大平　誉史明	5.90	0.14	2.8	１		IP	２	4	IP	６		IP	４		IP	５		IP	３		IP	２		IP	４		IP	１		IP	３		IP
+喜多須　杏奈	2.80	0.21	4.4	５		IP	３		G1	３		IP	５		IP	４		IP	６	5	IP	６		G3	６		IP	５		IP	５	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+三馬　　崇史	6.40	0.14	2.3	１		IP	６		IP	２		IP	４		IP	５		IP	１		IP	１		IP	６		IP	２		IP	１		IP
+武富　　智亮	6.10	0.18	2.9	２		IP	６		IP	４		IP	１	3	G1	４		G1	１		IP	２		IP	３		IP	４	3	IP	４		IP
+佐々木　翔斗	6.00	0.14	3.1	５		IP	２		IP	妨		IP	３		IP	２		IP	３	2	IP	１		IP	３		IP	３		IP	２		IP
+中島　　秀治	6.60	0.12	1.8	３		IP	５		IP	１		IP	５		IP	１		IP	１		IP	１		IP	４		G3	３		G3	３		IP
+湯川　　浩司	4.90	0.13	2.3	２	4	IP	３		G1	５		G1	４		G1	３		G1	６		IP	５	4	IP	５	4	IP	１		IP	５		SG
+豊田　健士郎	6.11	0.17	3.7	６		G1	５		G1	１		IP	５		IP	４		G1	２		IP	転		G2	３		G2	２	5	IP	１	5	IP

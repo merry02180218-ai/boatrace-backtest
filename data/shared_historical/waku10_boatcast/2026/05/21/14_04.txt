@@ -1,0 +1,8 @@
+data=
+1	0
+前野　　竜一	8.60	0.15	2.6	１		IP	１		IP	１		IP	３		IP	２		IP	４		IP	１		IP	１		IP	１		IP	２		IP
+大場　　　敏	7.20	0.16	2.4	２		IP	２		IP	１		IP	２		IP	２		IP	２		IP	４		IP	４		IP	２		IP	３		IP
+竹之内　　極	6.20	0.13	2.8	１		IP	５		IP	４		IP	２		IP	２		IP	２		IP	４		IP	４		IP	１		IP	４	5	IP
+小坂　　尚哉	6.30	0.10	2.7	１		IP	３		IP	５		IP	３		IP	１		IP	２		IP	４		IP	６		G3	２		G3	２		IP
+志道　　吉和	2.50	0.21	4.1	６		IP	６		IP	４		IP	６	6	IP	５	6	IP	５		IP	５	6	IP	５		IP	４		IP	３	4	IP
+栗原　　直也	2.90	0.26	4.8	６		IP	５		IP	４		IP	６		IP	３		IP	４		IP	４		IP	４		IP	６		IP	５		IP

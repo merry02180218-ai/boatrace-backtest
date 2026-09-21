@@ -1,0 +1,8 @@
+data=
+1	0
+佐々木　完太	9.30	0.14	2.1	１		IP	２		IP	１		G1	１		IP	５		IP	１		SG	１		SG	２		IP	１		IP	１		IP
+石川　　真二	7.00	0.15	2.2	２	1	IP	１	1	IP	２		IP	６		IP	３		IP	１	1	IP	６		IP	３		IP	１	1	IP	１	1	IP
+片岡　　恵里	6.20	0.18	3.5	３		IP	２		G3	３		G3	５		IP	３		IP	２		IP	５		G3	２		G3	２		G3	２		G3
+栗山　　繁洋	3.40	0.21	4.5	６		IP	３		IP	５		IP	５		IP	４		IP	３		IP	３		IP	４		IP	６		IP	５		IP
+出穂　　和鼓	1.20	0.25	4.1	６	6	IP	６		IP	５		IP	６		IP	６		IP	６		IP	６	6	IP	５		IP	６		IP	６		IP
+川崎　　公靖	3.00	0.16	4.3	５		IP	５		IP	６		IP	５		IP	３		IP	４		IP	５	5	IP	６		IP	２	5	IP	５		IP

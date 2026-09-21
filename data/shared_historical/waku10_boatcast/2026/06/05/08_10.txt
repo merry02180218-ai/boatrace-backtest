@@ -1,0 +1,8 @@
+data=
+1	0
+楠原　　正剛	8.10	0.14	3.2	１		G3	１		IP	６		IP	２		IP	２		IP	２		IP	１		IP	１		IP	１		IP	３		IP
+平川　　香織	8.20	0.15	2.6	１		IP	１		IP	３		IP	１		IP	２		IP	３		IP	３		IP	２		IP	２		IP	１	3	IP
+渡邉　　雄朗	7.00	0.14	2.8	１		IP	２		IP	２		IP	２		IP	２		IP	５		G1	２		G1	３		IP	３	6	IP	５		IP
+中村　　駿平	2.20	0.16	2.8	５		IP	４		IP	２		IP	６		IP	５		IP	６	5	IP	６	6	IP	６		IP	６		IP	６	5	IP
+山下　　大輝	5.70	0.13	2.9	２	4	IP	４		IP	６		IP	４		IP	３		IP	３		G1	４		IP	１		IP	４		IP	３		G1
+國崎　　良春	5.60	0.17	3.1	２		IP	３		IP	５		IP	５		G3	６		G3	３		G3	２		IP	２		IP	２	5	IP	３		IP

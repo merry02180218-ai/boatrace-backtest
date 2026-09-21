@@ -1,0 +1,8 @@
+data=
+1	0
+後藤　　翔之	8.00	0.12	2.6	３		G2	１		IP	３		IP	３		IP	１		G2	１		IP	１		IP	１		IP	１		IP	転		IP
+福来　　　剛	7.10	0.13	2.7	１		IP	４		IP	２		IP	３		G1	１		G1	２		G1	３		IP	１		IP	転		IP	３		IP
+松本　　一毅	4.90	0.19	3.2	３		IP	５		IP	１		IP	６		IP	４		IP	２		IP	５		IP	２		IP	３		G3	５		G3
+鶴本　　崇文	4.70	0.18	4.2	３		IP	４		IP	６		G1	３		G1	３		IP	３		IP	３		IP	５		IP	５		IP	３		IP
+亀山　　雅幸	3.30	0.16	3.3	５		IP	４		IP	５		IP	３		IP	５		IP	５		IP	３		IP	３		IP	５		IP	６		IP
+倉尾　　大介	4.90	0.19	4.2	４		IP	３		IP	５		IP	２		IP	３		IP	５		IP	５		IP	６		IP	１		IP	２		IP

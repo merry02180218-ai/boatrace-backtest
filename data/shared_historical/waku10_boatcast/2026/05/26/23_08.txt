@@ -1,0 +1,8 @@
+data=
+1	0
+小野　　京平	4.80	0.20	4.5	１		IP	５		IP	１		IP	５		IP	５		IP	４		IP	２		IP	５		IP	４		IP	４		IP
+佐藤　　太亮	5.00	0.18	3.9	６		IP	２		IP	４		IP	２		IP	５		IP	２		IP	３		IP	６		IP	４		IP	２		IP
+鳥飼　　　眞	6.40	0.19	4.3	４		IP	２		IP	３		IP	３		IP	２		IP	２		IP	２		IP	４		IP	３		IP	３		IP
+吉田　　祐貴	2.90	0.17	3.8	５		IP	５		IP	５		IP	５		IP	３	5	IP	転	6	IP	４	6	IP	６		IP	４		IP	３	3	IP
+増田　　　進	4.80	0.18	3.7	５		IP	２		IP	５		IP	２		IP	３	4	IP	５		IP	３		IP	３		IP	４		IP	４		IP
+大石　　真央	2.60	0.21	4.2	２		IP	４		IP	５		IP	６		IP	６		IP	６		IP	６		IP	３		IP	６		IP	６		IP

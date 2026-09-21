@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　祐貴	4.70	0.18	4.1	５		IP	５		IP	１		IP	４		IP	１		IP	４		IP	Ｆ		IP	３		IP	２		IP	６		IP
+三木　　晴斗	7.60	0.16	3.5	１	1	IP	３		IP	２		IP	１	3	IP	２		IP	２		IP	３		IP	３		IP	２		IP	３		IP
+原田　　篤志	7.20	0.20	3.2	４		IP	２		IP	２		G1	３		IP	３		IP	２		IP	２		IP	３		G1	３		G1	２		G1
+浜本　　裕己	5.40	0.14	2.9	４		IP	５		IP	４		IP	３		IP	３	5	IP	１		IP	４		IP	４	5	IP	２		IP	３		IP
+桑原　　　啓	3.70	0.16	3.1	３		IP	６		G3	５		IP	６		IP	１		IP	５		IP	５		IP	２		IP	４		IP	６		IP
+小黒　　竜吾	2.60	0.20	4.4	６		IP	４		IP	２		IP	６		IP	６		IP	５		IP	５		IP	４		IP	６		IP	５		IP

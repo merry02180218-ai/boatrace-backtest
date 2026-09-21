@@ -1,0 +1,8 @@
+data=
+1	0
+上野　真之介	10.50	0.09	1.7	１		G1	１		G1	１		G1	１		SG	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+石橋　　道友	5.60	0.17	4.4	６		G1	４		G1	１		IP	１		IP	２		IP	１		IP	６		IP	５		G3	４		IP	４	3	IP
+小池　　修平	7.50	0.14	3.0	４		G1	４		G1	１		G1	１		IP	１		IP	１		G2	４		IP	３		IP	３		IP	３		G1
+村岡　　賢人	5.50	0.13	3.0	５		G1	３		G1	５		G1	３		IP	３		IP	４		IP	４		IP	２		IP	４		G1	２		G1
+赤岩　　善生	6.00	0.19	3.9	４	2	G1	２	2	G1	５	2	G1	２	6	G3	５	3	G3	１	2	IP	２	2	IP	３	2	IP	６		G1	３	4	G1
+平本　　真之	5.60	0.12	3.5	４		G1	４		G1	４		SG	３		G1	６		G1	３		IP	１		IP	２	5	G1	６		G1	５	5	SG

@@ -1,0 +1,8 @@
+data=
+1	0
+海野　康志郎	9.40	0.12	1.9	５		G1	１		G1	１		G1	１		IP	２		IP	２		IP	１		G1	１		G1	１		IP	１		IP
+新田　　雄史	7.70	0.12	2.3	３		SG	４		G1	３		G1	２		G1	１		G1	２		G1	３		G1	１		IP	５		G1	３		G1
+有賀　　達也	5.80	0.14	2.2	５		G1	２		IP	６		IP	３		G1	５		G1	２		IP	２		IP	２		IP	２		IP	４		IP
+篠崎　　仁志	7.40	0.15	3.5	３		G1	４		G1	２		G1	２		IP	２		G1	２		G1	６		G1	２		G1	３		IP	３		SG
+竹田　　和哉	4.20	0.13	3.1	３		IP	５		IP	１		IP	６		IP	６		IP	６		IP	５		G1	５		G1	４		G1	２	4	IP
+萩原　　秀人	5.60	0.14	3.8	３		IP	４		IP	２		G1	１	5	IP	２		IP	４		G3	６		G3	５		G1	４		G1	５		G1

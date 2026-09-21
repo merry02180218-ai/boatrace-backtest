@@ -1,0 +1,8 @@
+data=
+1	0
+権藤　　俊光	9.40	0.13	3.0	２		IP	１		IP	１		G1	１		G1	４	2	SG	２		G1	４		G1	１		G1	１		G1	１		G1
+淺香　　文武	4.70	0.16	2.3	２		IP	３		IP	４		IP	１		IP	５		IP	５		IP	６		IP	３		IP	４		IP	５		IP
+奥平　　拓也	4.50	0.20	4.1	６	4	IP	５		G3	４	5	IP	５		IP	２		IP	３		IP	４		IP	５		IP	２		IP	２		IP
+小野　　勇作	4.00	0.14	3.5	３		IP	３		IP	４		IP	５		IP	５		IP	２		IP	６		IP	４		IP	６		IP	３		IP
+町田　　洸希	2.89	0.18	3.8	２		IP	３		IP	６		IP	５		G3	６		G3	エ		IP	５		IP	５		IP	５		IP	５		IP
+塩嶋　　泰空	1.10	0.16	2.8	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP

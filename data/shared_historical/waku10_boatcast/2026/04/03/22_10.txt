@@ -1,0 +1,8 @@
+data=
+1	0
+永井　　聖美	6.60	0.16	3.1	１		IP	４		IP	３		IP	３		IP	３		IP	１		G3	３		IP	１		IP	５		IP	３		IP
+間庭　　菜摘	5.60	0.18	3.8	３		IP	６		IP	２		IP	５		IP	５		IP	２		G1	６		G1	１		G3	２		IP	２		IP
+平川　　香織	7.00	0.18	3.0	転		IP	２		IP	１		G3	３		G3	５		G3	落		IP	３		IP	３		G3	１		G3	２		IP
+中村　紋夕梨	2.10	0.22	4.6	３	3	IP	４		IP	６		IP	６	5	IP	５		IP	５		IP	６		IP	６		G3	５		G3	６		G3
+川野　　芽唯	6.70	0.23	3.8	４		IP	１		IP	３		G1	５		G1	２		IP	４		IP	１		G1	３	6	IP	２		IP	３		IP
+大山　　千広	4.30	0.16	3.1	６		IP	５		IP	２		IP	４		IP	６		IP	３		IP	６		IP	３		IP	５		IP	２	5	IP

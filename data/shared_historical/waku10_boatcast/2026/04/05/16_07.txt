@@ -1,0 +1,8 @@
+data=
+1	0
+谷口　　佳蓮	8.20	0.16	2.9	１		IP	２		IP	４		IP	１		IP	１		IP	２		IP	１		G3	４		IP	１		IP	２		G3
+小池　　哲也	7.40	0.18	4.4	２		IP	４		IP	２		IP	３		IP	２		IP	１		IP	２		IP	２		IP	２		IP	３		IP
+谷川　　将太	4.10	0.13	2.2	４		IP	３		IP	５		IP	２		IP	５		IP	４		IP	５		IP	４		IP	６		IP	２		IP
+東本　　勝利	4.20	0.21	4.0	４		G3	３		G3	１		IP	３		IP	４		IP	５		IP	６		IP	５		IP	３		IP	６		IP
+守屋　　美穂	5.60	0.18	3.3	１	4	IP	３		G3	４		G3	５		G1	３		IP	５		IP	６	4	IP	１		IP	３		IP	２		IP
+吉原　　快誓	2.10	0.20	4.7	６		IP	４		IP	６		IP	３		IP	６		IP	６		IP	６		IP	６		IP	６		IP	４		IP

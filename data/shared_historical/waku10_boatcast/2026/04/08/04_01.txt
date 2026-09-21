@@ -1,0 +1,8 @@
+data=
+1	0
+小野　　信樹	8.40	0.19	3.3	３		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	５		IP
+浅見　　宗孝	5.30	0.24	3.9	３		IP	２		IP	６		IP	４		IP	２		IP	４		IP	３		IP	４		IP	４		IP	２		IP
+角山　　雄哉	3.00	0.16	3.1	６		IP	転		IP	３		IP	落		IP	２		IP	６		G3	６		G3	転		IP	３	4	IP	４		IP
+森下　　　勇	3.70	0.15	3.3	５		IP	４		IP	４		IP	３		IP	５		IP	６		IP	１		IP	５		IP	５		IP	４	6	IP
+井澤　　聖奈	2.30	0.22	3.8	５		IP	５		IP	３		IP	６		IP	３		IP	６	6	IP	６		IP	６		IP	６		IP	５		IP
+大瀧　明日香	4.20	0.16	3.3	６		IP	３		G3	３	5	IP	５		G1	４		G1	３		IP	２		IP	６		IP	６		G1	５		G1

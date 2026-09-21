@@ -1,0 +1,8 @@
+data=
+1	0
+岡部　　　浩	6.60	0.15	1.8	５		IP	２		IP	欠		IP	３		IP	５		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+上田　　洋平	6.70	0.16	2.7	２		IP	５		IP	６		IP	２		IP	２		IP	１		IP	１		IP	５		IP	２		IP	１		IP
+大野　　芳顕	6.44	0.12	2.2	２		IP	２		IP	３		G3	４		IP	５		IP	１		IP	２		IP	４		IP	２		IP	欠		IP
+水摩　　　敦	3.90	0.21	3.4	３		IP	５		IP	６		IP	５		G3	５		IP	５		IP	２		IP	４		IP	３	5	IP	３	2	IP
+小澤　　　学	2.80	0.27	5.5	４		IP	６		IP	６	6	IP	５		IP	６		IP	５	6	IP	４		IP	３		IP	３		IP	６		IP
+田頭　　虎親	3.80	0.16	3.9	６		IP	６		IP	６		IP	２		IP	Ｆ		IP	５		IP	３		IP	６		IP	１		IP	３		IP

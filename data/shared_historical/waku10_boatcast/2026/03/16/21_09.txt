@@ -1,0 +1,8 @@
+data=
+1	0
+大平　誉史明	8.30	0.16	3.6	６		IP	１		IP	１		IP	２		IP	１		IP	２		IP	２		IP	１		IP	１		IP	２		IP
+丹下　　　将	5.50	0.20	3.8	３		IP	３		IP	３		IP	６		IP	３		IP	１		IP	３		IP	２		IP	５		IP	５		IP
+武田　　信一	3.60	0.17	3.5	５		IP	４		IP	２		IP	５		IP	３		IP	６		IP	６		IP	５		IP	４		IP	３		IP
+山地　　正樹	3.30	0.18	3.9	６	3	IP	５		IP	４	2	IP	４	2	IP	４	2	IP	１	2	IP	６		IP	５	2	IP	６		IP	４	3	G3
+安武　　一也	1.30	0.16	3.3	５	6	IP	５	6	IP	５	6	IP	６	6	IP	６	6	IP	６		IP	６		IP	６		IP	６		IP	６		IP
+大橋　栄里佳	4.20	0.21	4.9	４		IP	５		IP	３		IP	４		IP	６		IP	５		IP	４	5	IP	３		IP	２		IP	４		G3

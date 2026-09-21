@@ -1,0 +1,8 @@
+data=
+1	0
+竹田　　広樹	6.00	0.16	3.6	４		IP	６		IP	５		IP	１		IP	１		IP	１		IP	６		IP	２		IP	４		IP	１		IP
+渡部　　　悟	5.40	0.15	3.8	３		IP	３		IP	４		IP	４		IP	２		IP	３		IP	５		IP	１		IP	３		IP	５		IP
+今井　　貴士	5.60	0.16	3.2	４	2	IP	１		IP	３		IP	３		IP	２		IP	３		IP	５		IP	３		IP	５		G1	４		G1
+原田　　朱理	1.50	0.31	5.2	６		IP	５		IP	５	6	IP	６	6	IP																		IP
+佐藤　　右京	2.40	0.19	3.6	２		IP	５		IP	４		IP	６		IP	６		IP	６		IP	５		IP	５		IP	５		IP	６		IP
+河野　　　大	3.90	0.15	2.5	６		IP	３		IP	４		IP	６		IP	５		IP	４		IP	４	5	IP	３		IP	５		G2	２		IP

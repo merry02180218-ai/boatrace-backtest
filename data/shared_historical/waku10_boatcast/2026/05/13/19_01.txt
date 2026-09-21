@@ -1,0 +1,8 @@
+data=
+1	0
+瀬川　　大地	4.00	0.15	3.1	６		IP	２		IP	６		IP	３		IP	５	2	IP	２		IP	６	3	IP	１		IP	６		IP	５		IP
+小林　　礼央	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+成貞　　琳平	3.90	0.22	3.8	３		IP	４	4	IP	６		IP	２	4	IP	２		IP	６		IP	６		IP	６	2	IP	６		IP	２		IP
+黒田　　　剛	4.50	0.22	3.4	３		IP	４		IP	２		IP	６		IP	６		IP	６		IP	４		IP	３		IP	２		IP	３		IP
+高井　　雄基	6.70	0.20	4.4	４		IP	３		IP	２		G3	４		G3	２		G3	４		IP	３		IP	３		IP	１		IP	１		IP
+杉山　　太陽	2.40	0.23	3.9	６		IP	６		IP	１	4	IP	６		IP	４		IP	５		IP	６		IP	５		IP	５		IP	転		IP

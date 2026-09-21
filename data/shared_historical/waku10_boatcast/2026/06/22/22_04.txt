@@ -1,0 +1,8 @@
+data=
+1	0
+國弘　　翔平	5.50	0.17	3.2	１		IP	２		IP	３		IP	５		IP	２		IP	５		IP	６		IP	３		IP	１		IP	５		IP
+松井　　賢治	6.00	0.16	3.5	１		IP	２		IP	４		IP	２		IP	４		IP	３		IP	４		IP	５		IP	３		IP	２		IP
+萩原　丈太朗	2.00	0.19	3.4	５	6	IP	５	4	IP	４		IP	６		IP	５		IP	４		IP	落		IP	６		IP	６		IP	６		IP
+西川　新太郎	5.50	0.16	2.6	４		IP	２		IP	３		IP	６		IP	３		IP	１		IP	１		IP	４		IP	４		IP	５		IP
+竹田　　吉行	5.00	0.18	3.5	２		IP	５		IP	６		IP	６		IP	３		IP	４		IP	５		IP	２	4	IP	２		IP	１		IP
+福西　広太郎	3.60	0.21	5.3	６		IP	６		IP	６		IP	３		IP	５		IP	６		IP	１		IP	４		IP	３		IP	４		IP

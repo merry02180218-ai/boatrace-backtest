@@ -1,0 +1,8 @@
+data=
+1	0
+大西　　隆洋	4.80	0.14	3.7	４		IP	２		IP	６	2	IP	２		IP	５		IP	４		IP	２		IP	１		IP	５		IP	６		IP
+鳥飼　　　眞	3.80	0.18	4.0	５		IP	５		IP	１		IP	２		IP	４		IP	５		IP	６		IP	６		IP	４		IP	４		IP
+岡本　　　大	5.40	0.14	2.5	２		IP	４		IP	２		IP	４		IP	２		IP	３		IP	２		IP	３		IP	６		IP	６		IP
+高橋　　直哉	3.50	0.19	4.1	３		IP	５		IP	６		IP	５		IP	１		IP	６		IP	５		IP	６		G3	３		G3	４		IP
+原田　才一郎	4.90	0.19	4.5	５		IP	２		IP	３		IP	４		IP	３		IP	６		IP	５		G1	２		IP	６		IP	３		IP
+本岡　　勝利	3.60	0.22	4.8	５		IP	２		IP	５		IP	４		IP	３		IP	５		IP	６		IP	４		IP	６		IP	３		IP

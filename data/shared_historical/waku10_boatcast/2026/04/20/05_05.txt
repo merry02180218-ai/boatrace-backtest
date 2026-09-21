@@ -1,0 +1,8 @@
+data=
+1	0
+三村　　岳人	8.90	0.20	4.1	１		IP	１		IP	６		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+石原　　　翼	7.30	0.14	2.9	２		IP	２		IP	２		G2	１	3	IP	２		IP	５		IP	５		IP	１		IP	１		IP	３		IP
+高野　　哲史	7.20	0.17	4.3	１		IP	３		G1	３		G1	５		G1	３		G1	２		IP	３		IP	４		G1	１		G1	２		IP
+汐崎　　正則	2.90	0.16	3.1	４		IP	４		IP	３		IP	５	3	IP	６		IP	５		IP	５		IP	６		IP	３		IP	６	5	G3
+前田　　光昭	2.50	0.18	3.1	５		IP	６		IP	４	4	IP	４	4	IP	５		IP	４	4	IP	６		IP	５		G3	６	6	G3	４		IP
+服部　　　剛	3.50	0.22	4.6	６		IP	５		IP	４		IP	３		IP	３		IP	４		IP	６	5	IP	６		IP	３		IP	４		IP

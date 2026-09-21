@@ -1,0 +1,8 @@
+data=
+1	0
+平高　　奈菜	7.00	0.18	3.5	１		IP	６		G2	４		G2	１		G2	６		SG	１		G3	２		G3	５		G1	１		IP	２		IP
+冨成　　謙児	5.80	0.15	3.3	４		IP	５		IP	２		IP	２		IP	２		IP	２		IP	４		IP	３		IP	５		IP	２		IP
+中里　　英夫	4.50	0.17	3.5	６		IP	３		IP	４		IP	２		IP	３		IP	４		IP	５		IP	３		IP	５		IP	３		IP
+渡邉　　優美	5.50	0.17	3.2	１		IP	３		G2	３		G2	２		G3	６		G1	３		IP	転		IP	６		SG	３		IP	３		IP
+森　　晋太郎	3.10	0.16	2.5	６		IP	４	6	IP	４		IP	４		IP	４		IP	４		IP	５		IP	５		IP	５	6	IP	４		IP
+郷原　　章平	1.60	0.17	3.5	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	５		G3

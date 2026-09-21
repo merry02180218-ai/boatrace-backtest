@@ -1,0 +1,8 @@
+data=
+1	0
+前原　　大道	9.90	0.17	3.1	１		IP	１		IP	１		IP	１		IP	２	2	G1	１		IP	１		IP	１		IP	１		IP	１		IP
+大橋　純一郎	7.90	0.14	3.0	２		IP	１		IP	２		IP	２	3	IP	２		IP	２		IP	１	3	IP	１		IP	２		IP	６		IP
+照屋　　厚仁	5.70	0.17	3.1	５		IP	１		IP	３		IP	５	4	IP	２		IP	６		IP	１		IP	２		IP	２		IP	６		IP
+齋藤　　達希	3.40	0.23	3.9	４		G3	６	5	G3	５		IP	２		IP	５		IP	６	5	IP	４		IP	５		IP	５		IP	２		IP
+西尾　　亮輔	3.80	0.20	4.5	５		IP	５		IP	３		IP	３		IP	４	4	IP	５		IP	６		IP	２		IP	６	3	IP	３	6	IP
+北中　　元樹	4.00	0.19	4.8	３		IP	２		IP	６		IP	３		IP	４		IP	３		IP	５		IP	５		IP	６		IP	４		IP

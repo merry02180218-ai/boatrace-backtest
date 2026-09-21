@@ -1,0 +1,8 @@
+data=
+1	0
+島村　　隆幸	7.40	0.13	2.4	１		IP	３		IP	１		G2	５		G2	Ｆ		IP	１		IP	１		IP	１		IP	１		IP	６		IP
+上村　　純一	6.50	0.11	2.0	２		IP	２		IP	１		IP	６		G2	３		IP	２		IP	３		G1	６		G1	５		IP	１		IP
+今垣　光太郎	3.80	0.16	3.9	４		IP	３		SG	６		G1	６		G1	４		IP	５		G1	６		G1	落		IP	４		IP	２		G1
+丸岡　　正典	6.30	0.12	1.8	２	3	IP	６		G2	２		G2	４		IP	３		IP	１		IP	５		IP	１		IP	４		IP	２		IP
+眞鳥　　章太	5.10	0.14	3.0	１		IP	５		IP	３		IP	５		IP	２		IP	６		IP	３		IP	４		IP	５		IP	１		IP
+中山　　翔太	3.40	0.13	3.7	３	5	IP	３		IP	６		IP	５		IP	３		IP	５		IP	５		G1	不		IP	６		IP	３		G1

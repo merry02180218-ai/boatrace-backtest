@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　拡郎	10.40	0.15	3.2	２		SG	２		G1	１		G1	１		G2	１		G2	１		IP	１		IP	１		IP	１		IP	１		IP
+塩田　　北斗	7.00	0.13	2.5	１		IP	１	1	IP	４		IP	２		IP	１		IP	４		G1	４		G1	１		G1	転		G1	３		G1
+大上　　卓人	7.70	0.12	2.9	３		SG	５		G1	２		G1	１		G1	３		G1	２		G1	３		IP	１		IP	３		IP	３		IP
+石渡　　鉄兵	7.20	0.12	3.5	４		SG	２		IP	４		IP	２		IP	１	3	IP	２		G1	３		G1	３	5	G1	５		G1	１		IP
+関　　　浩哉	5.80	0.16	3.6	４		SG	５		G1	２		SG	３		G1	５		G1	２		IP	３		G1	４	6	G1	５		G1	４		SG
+守田　　俊介	3.50	0.13	3.3	６		SG	５		G1	４		SG	５		SG	４		G1	６		G1	４	3	IP	４	2	IP	５		G1	６	5	IP

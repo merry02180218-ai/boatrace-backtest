@@ -1,0 +1,8 @@
+data=
+1	0
+笠野　友紀恵	5.30	0.19	3.0	５		G3	６		IP	４		IP	４		G3	１		G3	１		G3	５		IP	５		IP	１		IP	２		G3
+川崎　　誠志	3.40	0.24	4.8	４		IP	６		IP	３		IP	４		IP	４		IP	５		IP	５		IP	４		IP	６		IP	３		IP
+梶野　　学志	6.70	0.13	2.5	２		IP	２		IP	３		IP	２		IP	４		IP	２		IP	２		IP	２		IP	２		IP	６		IP
+武重　　雄介	2.90	0.21	3.6	６		IP	４		IP	６	5	IP	５		IP	６		IP	３		IP	２	5	IP	４		G3	６		IP	６		IP
+大町　　利克	4.50	0.15	3.3	６		IP	５		IP	５		IP	５		IP	３		IP	４		IP	２		IP	２		IP	２		IP	４		IP
+金子　　猛志	3.00	0.16	2.8	２		IP	５		IP	５		IP	４		IP	３		IP	６		IP	４		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　和之	8.00	0.19	3.3	６		IP	６		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+柳瀬　　幹太	4.20	0.17	4.0	４		IP	２		IP	４		IP	５		IP	６		IP	６		IP	Ｆ		IP	３		IP	１		G3	３		G3
+岸本　　　隆	5.50	0.16	2.8	６		IP	３		IP	２		IP	４		IP	３		IP	５		IP	３	4	IP	２		IP	２		IP	３		IP
+松田　　祐季	5.60	0.14	3.8	２		IP	４		IP	１		IP	５		G1	６		G1	４		G1	６		G1	２		G1	２		IP	４		IP
+森　　　竜也	2.70	0.22	4.5	３		IP	６		IP	６		IP	４	3	IP	４		IP	５		IP	５	3	IP	４		IP	６	3	IP	５		IP
+野見山　拓己	3.90	0.11	2.2	５		IP	２	5	IP	６		IP	１		IP	６		IP	３		IP	４		IP	５		IP	４		IP	６		IP

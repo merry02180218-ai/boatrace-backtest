@@ -1,0 +1,8 @@
+data=
+1	0
+吉武　　真也	8.60	0.12	2.5	３		IP	１		IP	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP
+石渡　翔一郎	5.60	0.16	2.8	４		IP	３		IP	３		IP	２		IP	１		IP	１		IP	５		IP	５		IP	３		IP	５	3	IP
+河合　　三弘	5.30	0.19	4.1	５		IP	２		IP	１		IP	６		IP	２		IP	４		IP	５		IP	３		IP	２		G3	４		G3
+田邉　　亮蔵	3.50	0.20	3.5	６		IP	５		IP	４		IP	５		IP	５		IP	５		IP	４		IP	５		IP	２		IP	２		IP
+角山　　雄哉	4.60	0.16	3.2	５		IP	２		IP	３		IP	４		IP	４		IP	６		IP	６		IP	３		IP	４		IP	１		IP
+金子　　怜央	2.30	0.12	3.1	２		IP	５		IP	５		IP	５		IP	６		IP	６		IP	５		IP	６		IP	５		IP	５		IP

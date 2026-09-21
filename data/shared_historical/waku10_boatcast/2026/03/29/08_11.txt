@@ -1,0 +1,8 @@
+data=
+1	0
+市橋　　卓士	9.70	0.11	1.9	２		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		G1	１		G1	１		IP	１		IP
+鋤柄　　貴俊	4.90	0.19	3.5	２		IP	５		IP	２		IP	６		IP	４		IP	３		IP	５		IP	４		IP	１		IP	４		IP
+外崎　　　悟	5.90	0.18	3.5	４		IP	４		IP	２		IP	５		IP	３		IP	１		IP	４		IP	３		IP	３		IP	２		IP
+村越　　　篤	4.10	0.15	3.4	６		IP	５	3	IP	２		G3	６		G3	６		IP	５		G1	２		IP	６		IP	４		IP	１		IP
+羽田　　妃希	4.30	0.19	4.1	４		IP	４		IP	５	4	IP	４		IP	２		IP	２		IP	６		IP	３		IP	３		IP	転		IP
+古澤　　光紀	3.70	0.18	4.5	３		IP	５		IP	４		IP	５		IP	３	5	IP	３		G1	６		IP	４		IP	５		IP	６		IP

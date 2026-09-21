@@ -1,0 +1,8 @@
+data=
+1	0
+戸塚　　邦好	9.60	0.14	2.4	１		G3	２		G3	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+黄金井　力良	4.70	0.13	2.2	５		IP	３		IP	５		IP	６		IP	５		IP	１	1	IP	２		G3	３		G3	３		IP	４		IP
+茶谷　　信次	4.70	0.16	3.2	５		IP	６		IP	３		IP	５		IP	５		IP	２		IP	２		IP	４		IP	３		IP	２		IP
+島崎　丈一朗	4.20	0.16	3.4	３	5	IP	３		IP	４		IP	３		IP	５		IP	６		IP	２		IP	３		IP	５		IP	６		IP
+服部　　達哉	5.80	0.14	3.1	１		IP	４		IP	５		IP	３		IP	５		IP	１		IP	３		IP	３	6	IP	４		IP	２	4	G3
+繁野谷　圭介	3.20	0.17	3.3	５		G3	４		G3	４	5	IP	４		IP	２		IP	５		IP	６		IP	６		IP	４		IP	５		IP

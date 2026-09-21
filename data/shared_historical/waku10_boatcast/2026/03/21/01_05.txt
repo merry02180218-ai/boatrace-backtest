@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　慧人	4.50	0.18	3.6	４		IP	２		IP	１		IP	５		IP	６		IP	６		IP	３		IP	４		IP						IP
+田中　　駿兵	4.80	0.17	3.3	４		IP	３	3	IP	２		IP	５		IP	３		IP	４		IP	５		G1	２		G1	５		IP	５		IP
+常盤　　海心	5.00	0.18	4.4	５		IP	２		IP	３		IP	３	4	IP	転		IP	１	4	IP	３		IP	５		IP	６		IP	４		IP
+牧村　　俊輝	3.20	0.18	4.3	４	5	IP	５		IP	２	3	IP	６		IP	４		IP	５		IP	４		IP	５		IP	４		IP	６		IP
+坂本　　雄紀	4.80	0.13	1.9	２		IP	３		IP	５		IP	１		IP	５		IP	３		IP	５		IP	５		IP	３		IP	４		IP
+竹間　　隆晟	3.50	0.16	4.0	４		IP	転		IP	６		G1	４		IP	４		IP	４		IP	５		IP	５		IP	１		IP	６		IP

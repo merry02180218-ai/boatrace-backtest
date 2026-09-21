@@ -1,0 +1,8 @@
+data=
+1	0
+高田　　　綾	7.50	0.17	2.9	１		IP	２		IP	１		IP	１		IP	６		IP	４		G3	１		IP	３		IP	１		IP	３		IP
+笠原　　　亮	5.70	0.15	2.9	４		IP	２		IP	４		G2	２		G3	３		G3	５		G1	５		G1	６		G1	２		SG	２		IP
+佐々木　大河	7.40	0.14	2.7	１		IP	２		IP	３		IP	２		IP	２		IP	３		IP	３		G2	５		G2	１		IP	２		IP
+吉村　　正明	5.90	0.09	2.3	５		IP	２		IP	２		G3	４		G3	２		G3	２		IP	６		IP	１	3	IP	６		IP	２		IP
+竹田　　吉行	5.10	0.16	2.9	６		IP	３		IP	４		IP	５		IP	２	4	IP	２		IP	１		IP	４		IP	５	6	IP	３		IP
+金田　　幸子	3.40	0.18	3.5	６		IP	３	5	IP	２		G3	３		IP	６		IP	５		IP	６		G3	６		G3	３		IP	５		IP

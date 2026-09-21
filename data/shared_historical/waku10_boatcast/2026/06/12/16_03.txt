@@ -1,0 +1,8 @@
+data=
+1	0
+岩田　　　凌	4.10	0.17	3.1	３		IP	４		IP	６	2	IP	２		IP	４		IP	１		IP	５	2	IP	６		IP	６		IP	４		IP
+西村　　秀樹	2.10	0.16	3.1	４		IP	５		IP	６		IP	６		IP	６		IP	４		IP	４		IP	６		IP	５		IP	６		IP
+浮田　　圭浩	4.50	0.20	4.0	２		IP	６		IP	２		IP	６		IP	３		IP	５		IP	６		IP	３	4	IP	４		IP	２		IP
+木下　　陽介	3.20	0.15	3.4	６		IP	２		IP	６		IP	３		IP	４		IP	６		IP	６		IP	５	5	IP	５		IP	３		IP
+水摩　　　敦	4.20	0.15	3.2	３		IP	４		IP	５		IP	４		IP	３		IP	２		IP	５		IP	４		IP	４		IP	５		IP
+鶴本　　崇文	3.40	0.23	5.0	５		IP	５		IP	４		IP	４		IP	５		IP	３		IP	３		IP	６		IP	４		IP	６		IP

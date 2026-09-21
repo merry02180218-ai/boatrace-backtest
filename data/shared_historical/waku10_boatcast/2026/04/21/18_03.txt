@@ -1,0 +1,8 @@
+data=
+1	0
+藤森　　陸斗	7.80	0.15	2.2	３		IP	２		IP	１		IP	４		IP	４		IP	２		IP	１		IP	１		IP	２		IP	１		IP
+堂原　　洋史	4.67	0.16	2.9	欠		IP	５		IP	４		IP	４		IP	２		IP	２		IP	４		IP	５		IP	３		IP	４		IP
+半田　　尚也	3.80	0.21	3.5	４		IP	４		IP	３		IP	４		IP	５		IP	６	6	IP	３		IP	６	4	IP	３		IP	４		IP
+新田　　泰章	6.20	0.17	3.9	１		G1	４		G1	５	5	IP	６		IP	４		IP	４		IP	３		IP	２		IP	１		IP	２		IP
+金田　　大輔	3.90	0.16	3.0	５		IP	６	6	IP	１		IP	３		IP	５		IP	６		IP	６		IP	１		IP	５	6	IP	４		IP
+新開　　　航	5.40	0.18	4.5	４		G1	４		G1	２		G2	１		IP	３		G1	５		G1	３		G1	４		IP	６		G1	６		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+中田　　竜太	8.90	0.14	2.9	１		IP	１		IP	２		G1	２		G1	２		G1	４		G1	１		IP	２		IP	２		G1	１		IP
+板橋　　侑我	7.44	0.11	2.6	２		G1	４		G1	転		IP	２		IP	３		G1	２		G1	３		IP	２		IP	３		IP	２		G1
+桑原　　　悠	5.40	0.12	2.3	３		G3	２	2	G3	１		IP	４		IP	５		G1	５		G1	４		G3	４		G3	３		G1	４		G1
+西丸　侑太朗	6.20	0.13	2.7	４		IP	３		IP	４		IP	１		IP	４		IP	２		G1	１		G1	４		IP	４		IP	３		IP
+石野　　貴之	6.40	0.13	2.4	５		IP	５	4	G1	３	6	G1	１		IP	２		IP	２	3	G3	２		IP	３		IP	５	3	IP	２	4	G1
+井本　　昌也	4.40	0.16	3.9	６		IP	４		IP	３		IP	５		G1	４		G1	５		IP	４	5	IP	２	5	IP	４		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+柴田　　　光	8.33	0.15	2.8	６		G1	１		G1	３		G1	欠		IP	２		IP	１		IP	１		IP	１		IP	３		IP	１		IP
+金子　　拓矢	8.60	0.11	2.6	３		IP	１		G1	１		IP	１		IP	２		IP	１		IP	３		IP	４		IP	２		IP	１		IP
+金児　　隆太	4.10	0.21	3.4	６		G3	６		IP	６		IP	５		IP	３		IP	１		IP	４		IP	２		IP	３		IP	５		IP
+野村　　　誠	5.20	0.18	4.1	１		IP	６		G1	５		IP	２		IP	２		IP	４		IP	４		IP	４		G3	２		G3	５		IP
+津久井　拓也	5.80	0.13	2.4	２		IP	３	4	IP	３		IP	２		IP	３	4	IP	５		IP	４		IP	３		IP	３		IP	３		IP
+長谷川　晴哉	4.40	0.18	4.1	３		IP	６		IP	３		IP	３	5	IP	２		IP	６		IP	４		IP	３		IP	４		IP	５		IP

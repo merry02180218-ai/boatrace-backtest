@@ -1,0 +1,8 @@
+data=
+1	0
+野中　　一平	9.40	0.13	1.9	２		G2	１		G2	１		G1	１		IP	１		IP	２		IP	３		G1	１		IP	１		IP	２		IP
+馬場　　貴也	8.30	0.17	4.0	２		SG	２		G1	２		G3	２		G1	３		G1	４		G1	２		G1	３		G1	２		IP	１		IP
+石本　　裕武	6.50	0.14	2.5	１		IP	３		IP	６		G1	１		G1	１		IP	３		IP	２		G1	６		G1	５		IP	３		G2
+太田　　和美	6.80	0.17	3.4	１		IP	４		IP	３		IP	３		IP	２		IP	２		IP	５		G1	２		IP	３		G2	３		IP
+松尾　　　充	4.70	0.14	3.8	３	4	IP	４		IP	１		IP	４		IP	２		IP	６		IP	５		G1	５		IP	６		IP	３		IP
+金子　　拓矢	6.00	0.14	2.6	５		IP	３		IP	３		IP	３		IP	２		IP	１		IP	５		IP	３		IP	３		IP	２	5	IP

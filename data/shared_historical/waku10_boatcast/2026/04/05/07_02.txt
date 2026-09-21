@@ -1,0 +1,8 @@
+data=
+1	0
+石原　　凪紗	5.70	0.22	4.6	２		IP	１		IP	２		IP	６		IP	５		IP	３		IP	１		IP	１		G3	６		IP	６		IP
+桑島　　和宏	4.70	0.12	2.4	２		IP	３		IP	２		IP	６		IP	４		IP	５		G1	５		G1	５		IP	２		IP	４		IP
+上田　　健太	6.00	0.23	3.1	３		G3	６		G3	３		IP	２		IP	６		IP	１		IP	３		IP	２		IP	１		IP	４	4	IP
+菊池　　宏志	4.60	0.19	3.2	６		IP	６		IP	１		IP	６		G3	４		IP	６		IP	１		IP	３		G3	５		IP	１		IP
+信濃　　由行	2.10	0.20	4.2	５		IP	５		IP	６		IP	５		IP	６	4	IP	６		IP	５		IP	２	3	IP	６		IP	６	4	IP
+真田　　聖也	1.40	0.09	1.4	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP

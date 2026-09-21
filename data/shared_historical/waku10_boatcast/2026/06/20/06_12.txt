@@ -1,0 +1,8 @@
+data=
+1	0
+笠原　　　亮	9.20	0.10	2.2	４		G1	１		IP	３		IP	２		G2	２		G2	１		G3	１		G3	１		G1	１		G1	１		G1
+深川　　真二	5.90	0.14	2.8	２		IP	２		IP	６		IP	４		IP	３		IP	３		IP	３		IP	４		IP	３		IP	１		IP
+柳生　　泰二	6.40	0.15	1.8	５		G1	６		G1	２		G2	３		G2	２		IP	５		G1	３		G1	２		SG	３	4	IP	２		IP
+中澤　　和志	7.40	0.12	2.4	３		IP	１		IP	２	5	IP	４		IP	１		G1	２		G1	３		IP	３		IP	３		G1	３		G1
+三浦　　永理	5.70	0.15	2.8	３		IP	３		IP	３		G3	４		G3	２		G2	１		G3	５		IP	３	6	IP	３		IP	５		IP
+豊田　健士郎	5.30	0.14	3.3	６		G1	２		G1	２		IP	３		G2	４		G2	５		G3	５		G3	３		IP	４	5	IP	２		G3

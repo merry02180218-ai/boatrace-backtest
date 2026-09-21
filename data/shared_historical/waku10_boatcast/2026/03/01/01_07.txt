@@ -1,0 +1,8 @@
+data=
+1	0
+荒井　　翔伍	8.30	0.14	2.9	２		IP	６		IP	１		IP	１		IP	３		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+栗山　　繁洋	4.40	0.19	3.2	３		IP	２		IP	６		IP	４		IP	３		IP	３		IP	４		IP	３		IP	５		IP	６		IP
+古結　　　宏	5.50	0.13	2.8	４	4	IP	５		IP	１		IP	２		G1	３		G1	４		IP	６		IP	５		IP	３	2	IP	１		IP
+淺香　　文武	4.30	0.18	3.1	４		IP	４		IP	１		IP	２	5	IP	５		IP	２		IP	６		IP	６		G3	６		G3	４		IP
+金子　　怜央	2.60	0.13	2.3	５		IP	５		IP	３		IP	５	4	IP	６		IP	５		IP	６		IP	６		IP	６		IP	２	6	IP
+近藤　　稔也	3.30	0.20	3.6	５		IP	３	5	IP	２		IP	３	5	IP	４	5	IP	５		IP	６		IP	５		IP	６		IP	６	5	IP

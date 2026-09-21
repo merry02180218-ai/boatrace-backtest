@@ -1,0 +1,8 @@
+data=
+1	0
+江本　　真治	9.00	0.15	3.1	１		IP	１		IP	１		IP	１		IP	３		IP	３		IP	１		G1	１		G1	２		IP	２		IP
+林　　　祐介	6.10	0.17	3.5	４		IP	６	3	IP	５		IP	２		IP	２		G3	１		G3	１	1	IP	３	1	IP	２		IP	４		IP
+出口　舞有子	5.40	0.18	3.2	３		IP	６		IP	４		IP	４		IP	６		IP	１		IP	４	4	IP	３		IP	２		IP	１		IP
+高木　　圭大	3.10	0.13	2.9	６		IP	４		IP	４		IP	２		IP	５		IP	転		IP	５		IP	５		IP	４		IP	４		IP
+高岡　　竜也	5.40	0.20	3.5	１		IP	５		IP	６		IP	３		IP	６		IP	２		IP	３	6	IP	４		IP	３		IP	３		IP
+是澤　　孝宏	4.10	0.19	5.0	４		IP	３		IP	３	5	IP	６		IP	５		IP	４		IP	５		IP	６		G2	２		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+木幡　　純也	6.10	0.20	3.7	２		IP	６		IP	３		IP	２		IP	５		IP	１		IP	４		IP	２		IP	４		IP	１		IP
+小森　　信雄	5.67	0.17	4.8	３		IP	３		IP	２		IP	３		IP	６		IP	１		IP	落		IP	５		IP	３		IP	３	3	IP
+青木　　　蓮	4.10	0.12	2.9	３		IP	２		IP	６		IP	２		IP	５		IP	６		IP	１		IP	６		IP	５		IP	５		IP
+野中　　義生	4.70	0.17	3.2	４		IP	３		IP	２		IP	３		IP	３	5	IP	４		IP	３		G3	４		G3	６		IP	５		IP
+富山　　弘幸	4.80	0.21	3.9	５		G3	２	4	G3	３		IP	４		IP	３		IP	３		IP	６		IP	３		IP	２		IP	６		IP
+杉山　　貴博	3.80	0.19	4.2	４		IP	６		IP	４		IP	３	5	IP	４	5	IP	６		IP	３		G3	５		IP	４		IP	３	5	IP

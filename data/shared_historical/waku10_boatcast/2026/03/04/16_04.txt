@@ -1,0 +1,8 @@
+data=
+1	0
+大峯　　　豊	9.80	0.14	1.9	２		IP	１		IP	２		IP	１		IP	１		IP	１		G2	１		IP	１		IP	１		IP	１		IP
+宮之原　輝紀	7.56	0.16	3.4	６		G1	３		G1	２		G1	１		IP	欠		G2	２		G2	１	3	IP	２		IP	４		IP	２		IP
+秦　　　英悟	6.10	0.13	3.6	３		IP	４		IP	４		G1	３		G1	１		G2	５		IP	３		IP	３		IP	４		IP	２		G1
+吉村　　　誠	5.30	0.18	3.9	５		IP	３		IP	２		IP	４		IP	３		IP	１		IP	４		G1	３		IP	５		IP	５		IP
+船岡　洋一郎	7.30	0.14	2.4	４	4	IP	１		IP	２		IP	２		IP	５		G1	５		G1	２		G2	１		G2	２		IP	２		IP
+吉田　　拡郎	4.10	0.12	2.6	６		IP	５		IP	５		G1	５		G1	４		G1	３		G1	６	5	G1	２		IP	３		IP	５		SG

@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　義明	7.80	0.14	3.6	３		G3	２		IP	１		IP	４		IP	１		IP	２		IP	１		IP	１		G3	４		G3	２		IP
+坂元　　浩仁	7.10	0.14	2.3	２		G2	２		IP	４		IP	２		IP	２		IP	１		IP	２		IP	６		IP	３		IP	３		IP
+新田　　泰章	4.50	0.15	3.5	４		IP	６		IP	４		IP	２		IP	２		IP	６		G1	４		IP	５		IP	５		IP	１		IP
+明石　　正之	5.20	0.16	3.5	３		IP	３		IP	３	5	IP	妨		IP	３		IP	４		IP	４		G3	２		IP	３		IP	３		IP
+中村　　晃朋	4.80	0.15	3.6	６		G3	６		IP	２	4	IP	１		G1	４		IP	４	6	IP	４		IP	４		G1	３	4	IP	４	4	IP
+出畑　　孝典	3.80	0.17	4.7	６		IP	６		IP	４		IP	４		IP	５		IP	４	5	IP	４		IP	４		IP	３		IP	２		IP

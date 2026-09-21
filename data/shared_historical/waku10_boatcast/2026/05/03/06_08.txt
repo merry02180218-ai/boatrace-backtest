@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　将吉	9.00	0.12	2.7	１		G1	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP	５		IP	１		IP
+金子　　良昭	4.80	0.19	3.7	３		IP	２		IP	６		IP	４		IP	５		IP	３		IP	４		IP	２	3	IP	２		IP	６		IP
+中嶋　　世奈	1.60	0.23	4.6	５		IP	５		IP	５	6	IP	６		G3	６		IP															IP
+菊地　　孝平	6.30	0.11	2.4	５		G1	２		G1	１		G1	１		G1	５		G1	６		G1	６		G1	２		G2	５		G2	２	3	IP
+長野　　道臣	4.00	0.16	3.2	６		IP	４		IP	５		IP	４		IP	２		IP	５		IP	１	4	IP	６	6	IP	５		IP	３		IP
+星　　　栄爾	2.70	0.17	4.1	５		IP	４		IP	４		IP	３		G3	５		G3	６		IP	４		IP	５		IP	６		IP	６		IP

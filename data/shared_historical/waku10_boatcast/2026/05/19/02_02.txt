@@ -1,0 +1,8 @@
+data=
+1	0
+川尻　　泰輔	8.80	0.11	3.1	１		IP	３		IP	１		IP	１		IP	３		IP	１		IP	１		IP	２		IP	１		IP	２		IP
+鈴木　　孝明	8.30	0.17	3.6	５		IP	１		IP	２		IP	２		IP	１		IP	１		IP	２	3	IP	３		IP	１		IP	１		IP
+大澤　　普司	7.10	0.18	2.8	１		IP	４	4	IP	１		IP	３		G1	２		IP	４	2	IP	２		IP	１		IP	４		IP	３		IP
+山田　　理央	7.70	0.13	2.4	３		IP	１		G2	２		IP	１		IP	１		IP	３		G3	３		G3	転		IP	１		IP	１		IP
+花本　　夏樹	1.90	0.22	5.4	６		IP	４		IP	５		IP	６		IP	６		IP	６		IP	６		IP	３		IP	６		IP	６		IP
+奥平　　拓也	3.10	0.18	4.9	５		IP	４		IP	４		IP	５		G3	６		G3	５		G3	６		IP	３		IP	６		IP	２	5	IP

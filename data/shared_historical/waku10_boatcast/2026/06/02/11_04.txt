@@ -1,0 +1,8 @@
+data=
+1	0
+高山　　智至	7.40	0.13	2.6	２		IP	２		IP	４		IP	２		IP	１		IP	４		IP	１		IP	４		IP	２		IP	１		IP
+小玉　　啓太	5.60	0.11	2.5	５		IP	２		IP	２		IP	５		IP	３		IP	転		IP	３		IP	３		IP	２		IP	１		IP
+長岡　　良也	5.90	0.17	3.1	２		IP	５		IP	６		IP	３		IP	３	4	IP	４		IP	３		IP	２		IP	２		IP	１	2	IP
+吉川　　貴仁	7.78	0.15	2.4	１		IP	３		IP	３		IP	不		IP	３		IP	４		IP	２		IP	１		IP	１		IP	１		IP
+春園　　功太	6.50	0.12	2.1	１		IP	１		IP	３		IP	２		IP	５		IP	３		G3	６		G3	３		IP	２		IP	２		IP
+高橋　　嗣穏	1.30	0.24	4.5	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP

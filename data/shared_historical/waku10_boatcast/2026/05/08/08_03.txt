@@ -1,0 +1,8 @@
+data=
+1	0
+河合　　三弘	6.40	0.18	3.4	４		IP	２		IP	１		IP	５		G3	２		IP	２		IP	１		IP	１		IP	５		IP	５		IP
+籾山　　佳岳	5.20	0.12	2.6	３	5	IP	４		IP	１		IP	妨		IP	４		IP	２		IP	３		IP	５		IP	４		IP	２		IP
+杉山　　喜一	6.20	0.15	3.2	５	6	IP	１		IP	４		G3	３		G3	４		G3	４		G3	１		IP	３		IP	１		IP	３		IP
+杢野　　誓良	3.30	0.15	3.2	６		IP	２		IP	４		IP	５		IP	６		IP	６		IP	４		IP	５		IP	４	5	IP	３		IP
+高井　　雄基	7.10	0.19	4.1	３		IP	２		G3	４		G3	２		G3	４		IP	３		IP	３		IP	１		IP	１		IP	２		IP
+岩永　　雅人	4.50	0.19	4.1	２		IP	２		IP	６		IP	Ｆ		IP	４		IP	４		IP	３		IP	５		IP	３	5	IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+飯島　　　誠	7.80	0.16	3.2	５		IP	１		IP	２		IP	３		IP	２		IP	２		IP	１		IP	１		IP	２		IP	２		IP
+汐崎　　正則	5.00	0.16	4.2	４		IP	６		IP	３		IP	３		IP	４		IP	３		IP	４		IP	２		IP	１		IP	６		IP
+酒井　　俊弘	4.80	0.11	2.2	５		IP	３		IP	５		IP	２		IP	１		IP	２		IP	５		IP	６	5	IP	５		IP	３	6	IP
+今坂　　晃広	3.70	0.19	3.4	３		IP	５	6	IP	１		IP	６		IP	４	5	IP	６		IP	５	5	IP	３		IP	６		IP	４		IP
+平野　　和明	3.60	0.20	4.1	３	4	IP	４		IP	４	6	IP	６		IP	６		IP	５		IP	５		IP	３		IP	４		IP	３	4	IP
+小池　　修平	4.10	0.15	4.2	６		IP	４		IP	６		G1	３		SG	４		G1	１	5	IP	５		G1	６		G1	６	5	G1	４	2	IP

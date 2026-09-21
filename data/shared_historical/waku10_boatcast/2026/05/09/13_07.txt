@@ -1,0 +1,8 @@
+data=
+1	0
+鈴谷　　一平	8.40	0.12	2.1	１		IP	２		IP	１		IP	１		IP	転		IP	１		IP	１		IP	２		IP	１		IP	２		IP
+森　　　悠稀	6.30	0.16	3.1	４		IP	２		IP	３		IP	２		IP	３		IP	３		IP	３		IP	２		IP	５		IP	２		G2
+大森　　　翼	4.44	0.20	4.3	４		IP	５		IP	３		IP	４		IP	５		IP	３		IP	１		IP	４		IP	落		IP	５		IP
+向所　　浩二	4.89	0.10	2.0	５		IP	３		IP	３		IP	４	5	IP	１		IP	４		IP	６		IP	欠		IP	１		IP	６		IP
+田路　　朋史	4.30	0.16	3.7	２		IP	４	4	IP	４		IP	６		IP	６		IP	６		IP	４		IP	２		IP	４		IP	４		IP
+芝田　　浩治	3.00	0.17	4.1	６		IP	６		IP	４		IP	４		IP	３		IP	４		IP	５		IP	５	5	IP	５		IP	４		IP

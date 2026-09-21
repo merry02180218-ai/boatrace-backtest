@@ -1,0 +1,8 @@
+data=
+1	0
+宮地　　博士	7.80	0.17	3.2	２		IP	２		IP	３		IP	１		IP	４		IP	１		IP	２		IP	３		IP	２		IP	１		IP
+津留　浩一郎	5.10	0.18	3.1	２		IP	２		IP	３		IP	２		IP	３		IP	３		IP	５		IP	６		IP	５		IP	４		IP
+山田　　康二	6.90	0.13	3.4	２		G1	４		G1	５		G1	２	4	SG	３		IP	５		IP	２		G1	５		G1	１		G1	１		G1
+小柳　　勝希	4.80	0.19	3.7	２	5	IP	３		IP	６		IP	４		IP	６		IP	３		IP	３		IP	１		IP	転		IP	３		IP
+高田　　　明	3.90	0.19	3.7	６		IP	１		IP	４		IP	６		G3	４		G3	４	4	IP	５		G1	６		G1	５		IP	３		IP
+知念　　伶奈	0.67	0.31	4.0	６		IP	Ｆ		IP	６		IP																					IP

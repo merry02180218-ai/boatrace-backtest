@@ -1,0 +1,8 @@
+data=
+1	0
+石渡　　鉄兵	9.30	0.11	1.9	２		IP	１		IP	２		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		G1	１		G1
+茅原　　悠紀	7.60	0.14	3.0	２		IP	２		IP	５		SG	１		IP	２		IP	４		G1	６		G1	２		SG	２		G1	１		G1
+塩田　　北斗	6.60	0.16	3.0	４		IP	２		IP	２		IP	４		IP	２		IP	３		G1	３		G1	３		G1	２		G1	６		G1
+萩原　　秀人	6.00	0.14	3.6	妨		G3	４		IP	２		IP	３		IP	４		G1	２		G1	３		IP	２		G1	４		IP	３		G1
+大上　　卓人	5.40	0.12	3.8	３		G1	６		G1	４		G1	３		G1	４		G1	４		G1	２		IP	４		IP	６		IP	３		SG
+守田　　俊介	4.00	0.14	3.1	５		G1	４		SG	５		SG	４		G1	６		G1	４	3	IP	４	2	IP	５		G1	６	5	IP	２	5	IP

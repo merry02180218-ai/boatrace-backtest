@@ -1,0 +1,8 @@
+data=
+1	0
+鶴本　　崇文	9.20	0.17	2.0	１		IP	１		IP	１		IP	１		IP	１		G1	３		G1	１		IP	１		IP	２		IP	３		IP
+滝沢　　芳行	5.30	0.14	3.5	４		G3	２		IP	６		IP	２		IP	２		IP	５		IP	５		IP	３		IP	２		IP	３	3	IP
+重冨　　勇哉	5.70	0.21	2.9	１	2	IP	３		IP	２		IP	２		IP	６		IP	５		IP	４		IP	２		IP	５		IP	２		IP
+後藤　　翔之	5.20	0.14	3.5	６		G2	２	5	G2	２		IP	３		IP	３		IP	２		IP	５		IP	６		IP	３		IP	４		IP
+岩橋　　裕馬	3.70	0.15	3.2	６		G3	５		G3	４		IP	４		IP	２		IP	４	4	IP	３		IP	４		IP	５		IP	５		IP
+坪口　　竜也	3.80	0.17	4.2	４		IP	４		G3	４		G3	６		IP	６		IP	２		IP	３		IP	３		IP	５		IP	５		G3

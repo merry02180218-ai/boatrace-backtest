@@ -1,0 +1,8 @@
+data=
+1	0
+澤田　　尚也	9.90	0.13	2.6	１		G1	１		G1	１		IP	１		G2	２		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+井本　　昌也	8.10	0.18	2.9	４		G1	１		IP	１		IP	４		G1	１	1	IP	４		IP	１	3	IP	１		IP	１		IP	３		G1
+麻生　　慎介	6.90	0.14	2.3	１		IP	２		IP	３	4	IP	１		IP	３		IP	３		IP	１		IP	転		IP	２		IP	４		IP
+権藤　　俊光	7.60	0.14	2.2	５		G1	２		G1	１		G1	２		G1	１		IP	３		IP	３		IP	２		IP	１		IP	４		IP
+今泉　　友吾	5.10	0.18	4.2	４		G1	２		IP	２	4	IP	６		IP	３		IP	６		G1	３		G1	３		G1	４		IP	６		G1
+平本　　真之	6.80	0.13	3.4	４		G1	４		G1	４		G1	３	5	IP	４		G1	３		G1	１	5	G1	１	5	IP	５		SG	２		G1

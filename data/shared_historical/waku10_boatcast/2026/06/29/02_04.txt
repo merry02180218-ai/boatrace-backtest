@@ -1,0 +1,8 @@
+data=
+1	0
+田代　　達也	4.60	0.18	3.3	３		IP	１		IP	５		IP	３	2	IP	５		IP	６		IP	５		IP	２		IP	６		IP	２		IP
+藤生　　雄人	5.40	0.16	3.4	２		IP	４		IP	５		IP	２		IP	４		IP	Ｆ		IP	３		IP	３		IP	２		IP	２		IP
+野長瀬　正孝	4.60	0.15	3.1	２	2	IP	３		IP	２		IP	３		IP	５	2	IP	３		IP	４		IP	５		IP	５		IP	５		IP
+藤田　　俊祐	5.20	0.17	3.4	４		IP	１		IP	４		IP	２		IP	３	5	IP	４		IP	５		IP	１		IP	５		IP	６		G1
+森永　　　淳	4.90	0.14	2.9	４		G3	３		G1	５		G1	１		IP	５		IP	３		IP	５		IP	４		G1	２		IP	５	4	IP
+山道　　諄也	2.30	0.14	3.1	６		IP	５		IP	４		IP	３		IP	５		IP	６		IP	６		IP	４		IP	６		IP	６		IP

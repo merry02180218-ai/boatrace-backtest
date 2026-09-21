@@ -1,0 +1,8 @@
+data=
+1	0
+梅木　　敬太	7.20	0.17	3.5	１		IP	５		IP	１		IP	４		IP	５		IP	１		IP	１		IP	４		IP	１		IP	１		IP
+山本　景士郎	7.00	0.18	4.1	２		IP	２		IP	２		IP	５		IP	４		IP	２		IP	１		IP	２		IP	３		IP	２		IP
+秦　　　英悟	7.00	0.12	2.8	１		IP	１		IP	３		SG	６		SG	２		G1	５		G1	３		G1	２		G1	３		IP	４		IP
+清水　　紀克	4.40	0.20	3.9	４	2	IP	６	3	IP	４	2	IP	３	2	IP	２	3	IP	１	2	IP	５	2	IP	４	2	IP	６	2	IP	４	2	IP
+渡邉　　俊介	4.50	0.14	2.8	５		IP	２		IP	２		IP	３		IP	５		IP	５		IP	３		IP	６		IP	５		IP	３		IP
+渥美　　卓郎	3.00	0.21	5.0	４		IP	５		IP	６		IP	転		IP	５		IP	１	5	IP	６		IP	４	5	IP	４	4	IP	５		IP

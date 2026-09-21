@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　　栞	4.80	0.15	3.5	１		G3	６		IP	３		IP	６		IP	５		IP	２		IP	６		IP	１		G3	６		IP	２		IP
+滝沢　　織寧	3.00	0.15	2.5	４		IP	５		IP	４		IP	５		IP	６		IP	６		IP	４		G3	５		G3	５		IP	２		IP
+吉田　　杏美	1.60	0.22	4.3	６		IP	４		IP	６		IP	６		IP	５		IP	６		IP	６		IP	４		IP	６		IP	Ｆ		G3
+若狭　奈美子	5.70	0.20	3.2	３		IP	２		G3	３		IP	３		IP	４		IP	２		IP	６		IP	３		IP	４		IP	３		IP
+平田　さやか	4.80	0.16	3.5	４	4	IP	５		IP	２		IP	４		IP	１		IP	４		G3	４		G1	２		G3	６		G3	５		G3
+樋江井　　舞	3.10	0.17	2.6	３		IP	６		IP	２		IP	２		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP

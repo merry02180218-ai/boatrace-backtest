@@ -1,0 +1,8 @@
+data=
+1	0
+安井　　瑞紀	7.20	0.20	3.8	４		G3	２		IP	２		IP	１		G1	１		IP	６		IP	１		IP	１		IP	５		IP	２		IP
+杉田　　篤光	6.40	0.17	3.8	３		G3	４		IP	４		IP	１		IP	３		IP	２		IP	３		IP	２		IP	２		IP	４		IP
+佐竹　　太一	3.60	0.24	4.7	４		IP	５		IP	４		IP	５		IP	５	6	IP	４		IP	３		IP	４		IP	５		IP	４		IP
+山本　　英志	3.30	0.17	3.2	２		IP	５		IP	５		IP	６		IP	４		IP	４		IP	２		IP	６		IP	５		IP	６		IP
+宇土　　泰就	2.30	0.17	3.1	３		IP	５		IP	４		IP	５		IP	６	6	IP	５		IP	６		IP	６		IP	５		IP	５		IP
+渡邉　　俊介	5.00	0.17	3.7	４		IP	２		IP	５		IP	５		IP	２		IP	４		IP	５		IP	４		IP	２		IP	２		IP

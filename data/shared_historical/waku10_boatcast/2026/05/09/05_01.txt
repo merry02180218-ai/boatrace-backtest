@@ -1,0 +1,8 @@
+data=
+1	0
+牟田　　奨太	8.70	0.13	2.5	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	６		IP	３		IP
+米玉利　大悟	4.22	0.19	4.0	４		IP	２		IP	３		IP	６		IP	５		IP	６		IP	３		IP	４		IP	３		IP			IP
+高橋　　真吾	4.40	0.10	2.8	６		IP	６		IP	４		IP	２		IP	３		IP	６	6	IP	６		IP	３	5	IP	２	4	IP	２		IP
+岡部　　　哲	2.80	0.16	3.6	５		IP	４		IP	６		IP	５		IP	４		IP	６		IP	５		IP	２		IP	５		IP	５		IP
+中井　　俊祐	5.80	0.15	2.0	５	6	IP	３		IP	５		IP	３		IP	４		IP	２		IP	４		IP	１		IP	２		IP	２		IP
+堀本　　裕也	1.80	0.18	4.1	５		IP	６		IP	５		IP	６		IP	６		IP	４		IP	５		IP	５		IP	５		IP	６		IP

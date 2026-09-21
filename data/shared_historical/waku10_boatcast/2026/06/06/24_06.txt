@@ -1,0 +1,8 @@
+data=
+1	0
+三馬　　崇史	6.70	0.16	3.2	２		IP	１		IP	１		IP	１		IP	４		IP	６		G2	１		IP	６		IP	２		IP	４		IP
+中里　　昌志	4.50	0.18	4.8	３		IP	３		IP	５		IP	３	1	IP	６		IP	４		IP	３		IP	４		IP	３		IP	４		IP
+永田　　啓二	6.10	0.14	2.5	４		IP	２	4	IP	４		G3	２	2	IP	１	2	IP	３		IP	４		IP	３		IP	４		IP	３		IP
+高野　　心吾	4.60	0.17	3.3	２		IP	６		IP	４		IP	４		IP	６		IP	４		IP	５		IP	３		IP	１		IP	３	3	IP
+渡辺　　　豊	2.40	0.16	5.1	５		IP	５		IP	４		IP	５		IP	４	6	IP	６	6	IP	６		IP	５		IP	４		IP	５		IP
+田添　　康介	1.60	0.14	2.3	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	５		IP	６		IP	４		IP	６	5	IP

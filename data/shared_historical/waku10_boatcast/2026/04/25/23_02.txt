@@ -1,0 +1,8 @@
+data=
+1	0
+葛原　　大陽	7.20	0.14	3.6	１		IP	１		IP	５		G1	２		IP	６		G1	１		IP	２		IP	欠		G1	１		G1	１		IP
+渡邉　　和将	6.50	0.14	2.6	４		G1	５		G1	２		G1	５		SG	１		IP	２		IP	１		IP	６		IP	４		IP	１		IP
+眞鳥　　康太	3.10	0.22	4.2	５		G3	５	4	IP	６	4	IP	６	6	IP	５	5	IP	３	5	IP	４	6	IP	６		IP	３	6	IP	３		IP
+村上　　彰一	4.50	0.20	4.3	４		IP	５		IP	４		IP	３		IP	４		IP	２		IP	２		IP	６		IP	５		IP	３		IP
+早川　　尚人	3.40	0.22	4.5	５	6	IP	６		IP	５		IP	５		IP	３	6	IP	２		IP	５	6	IP	６		IP	５		IP	２	6	IP
+田中　　宏典	3.44	0.24	4.6	２	2	IP	４		IP	転		IP	２		IP	４		IP	６		IP	５		IP	６		IP	５		IP	６		IP

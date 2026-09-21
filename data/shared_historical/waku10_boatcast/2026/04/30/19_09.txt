@@ -1,0 +1,8 @@
+data=
+1	0
+森永　　　隆	7.80	0.12	2.4	２		IP	１		IP	５		IP	１		IP	１		IP	３		IP	２		IP	３		IP	２		IP	１		IP
+向井　　美鈴	7.30	0.20	3.3	１		IP	２		IP	３		IP	４		IP	４		IP	２		IP	２		G1	１		IP	２		IP	３		IP
+安河内　　健	6.40	0.14	2.6	２		IP	２		IP	６		G2	１		IP	４		G1	２		G1	４	4	IP	２		IP	５		IP	２		IP
+小林　　基樹	4.60	0.18	4.5	４		IP	３		IP	２		IP	１		IP	５		IP	６		IP	４		IP	６	3	IP	４		IP	３		IP
+菊池　　宏志	3.50	0.19	3.3	４		IP	３		IP	３		IP	３		IP	４	4	IP	６		G3	６		G3	６		IP	４		IP	５		IP
+出穂　　和鼓	1.40	0.25	5.1	６		IP	６		IP	５		IP	５		IP	４		IP	５		IP	妨		IP	６		IP	６		IP	落		IP

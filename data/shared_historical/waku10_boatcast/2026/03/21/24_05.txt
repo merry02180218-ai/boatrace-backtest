@@ -1,0 +1,8 @@
+data=
+1	0
+尾上　　雅也	9.20	0.17	3.2	１		IP	１		IP	１		IP	１		IP	１		G1	４		IP	３		IP	１		IP	１		IP	１		IP
+田中　　宏典	5.40	0.19	4.7	５		IP	４		IP	２		IP	４		IP	２		IP	２		IP	４		IP	２		IP	３		IP	５		IP
+外崎　　　悟	6.11	0.16	3.4	４		IP	２		IP	５		IP	３		IP	１		IP	４		IP	３		IP	３		IP	２		IP	落	5	IP
+品川　二千翔	6.10	0.18	3.4	２		IP	４		IP	１		IP	３	3	IP	４		IP	５		G2	６		G2	１		IP	２		IP	３		IP
+菅沼　　佳昭	3.10	0.18	3.0	４		IP	５	6	IP	３	4	IP	３		IP	６		IP	５		IP	５		IP	５	4	IP	５		IP	４		IP
+吉川　　颯汰	1.20	0.18	3.5	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５	5	IP	５		IP	６		IP	６		IP

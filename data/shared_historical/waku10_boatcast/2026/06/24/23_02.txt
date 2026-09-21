@@ -1,0 +1,8 @@
+data=
+1	0
+水摩　　　敦	7.50	0.20	3.7	１		IP	１		IP	３		IP	１		IP	６		IP	２		IP	３		IP	２		IP	３		IP	１		IP
+北野　　輝季	7.70	0.17	3.8	２		G1	２		G1	４		G1	１	3	G3	１		G3	２		IP	１		IP	３		IP	４		G1	４		G1
+早川　　尚人	3.44	0.19	3.2	転		IP	６	4	IP	３		IP	５		IP	４		IP	４		IP	２		IP	５		IP	５		IP	５		IP
+新田　　智彰	4.30	0.14	2.5	５		IP	５		IP	５		IP	２		IP	６		IP	１		IP	３		IP	５	3	IP	３		IP	４		IP
+今出　　晋二	2.70	0.17	3.8	３	6	IP	４		IP	５		IP	５		IP	４		IP	６	6	IP	６		IP	５		IP	４		IP	６		IP
+富永　夏哉人	4.10	0.17	4.2	４		IP	５		IP	５	5	IP	５		IP	１		IP	４		IP	１		IP	５		IP	５		IP	５		G3

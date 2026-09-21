@@ -1,0 +1,8 @@
+data=
+1	0
+今坂　　晃広	7.20	0.16	3.3	１		IP	５		IP	１		IP	４		IP	１		IP	１		IP	５		IP	１		IP	１		IP	４		IP
+田中　　宏典	5.80	0.20	5.0	４		IP	２		IP	４		IP	２		IP	２		IP	４		IP	２		IP	３		IP	５		IP	３	3	IP
+林　　　美憲	7.11	0.13	2.2	５		G1	３		IP	５		IP	２		IP	１		IP	１	2	IP	１		IP	欠		IP	２		IP	３		IP
+高木　　圭大	3.10	0.12	2.9	４		IP	６		IP	４		IP	４		IP	２		IP	５		IP	転		IP	５		IP	５		IP	４		IP
+松下　　誉士	3.30	0.17	3.5	５		IP	６		IP	４		IP	２		IP	６	6	IP	３		IP	６		IP	４		IP	４		IP	５		IP
+作間　　　章	6.10	0.18	3.6	２		IP	１		IP	３		IP	３		IP	６		G1	２	5	IP	３		IP	４		IP	４		IP	３	2	IP

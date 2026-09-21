@@ -1,0 +1,8 @@
+data=
+1	0
+砂長　　知輝	9.00	0.13	2.7	１		IP	１		IP	５		IP	１		G1	１		G1	１		G1	１		IP	１		IP	２		IP	３		IP
+津田　　陸翔	7.20	0.19	3.7	１		IP	３		IP	３		IP	２		IP	２		IP	３		IP	２		IP	６		IP	１	4	IP	２		IP
+楠　　将太郎	6.10	0.14	2.5	２		IP	１		IP	４		IP	５		IP	３		IP	２		IP	３		IP	６	6	IP	３		IP	１		IP
+河内　　一馬	2.80	0.16	2.6	３		IP	６		IP	６	6	IP	６		IP	１		IP	５		IP	６		IP	６	6	IP	４		IP	６		IP
+荒木　　颯斗	4.90	0.13	3.0	６		IP	２		IP	２		IP	４		IP	５		IP	３	4	IP	欠		IP	２		IP	２		IP	４		IP
+若林　　樹蘭	3.70	0.21	4.1	４		IP	６		IP	６		IP	３		IP	５		IP	４		IP	４		IP	２		IP	３		IP	６		IP

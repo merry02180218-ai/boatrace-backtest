@@ -1,0 +1,8 @@
+data=
+1	0
+大塚　　浩二	5.40	0.18	3.1	６		IP	１		IP	４		IP	４		IP	１		IP	６		IP	４		IP	１		IP	４	4	IP	３		IP
+金子　　拓矢	8.80	0.13	3.3	３		G2	１		G2	２		IP	３		IP	１		G1	１		IP	１		IP	２		IP	１		IP	３		IP
+妻鳥　　晋也	6.00	0.17	3.8	２		IP	５		G3	４		IP	３		IP	１		IP	５		IP	２		IP	２		IP	４		IP	２		IP
+岩崎　　正哉	5.50	0.19	3.9	２		G3	２		IP	５		IP	６	5	IP	３		IP	４		G3	３		IP	３		IP	３		IP	２		IP
+中岡　　健人	3.67	0.19	3.8	６		IP	５		IP	２	6	IP	５		IP	３		IP	４		IP	落		IP	３		IP	５		IP	５		IP
+浜本　　裕己	2.50	0.16	3.8	５		IP	５		IP	５	4	IP	５	5	IP	５		IP	５	4	IP	４		IP	６		IP	４		IP	４		IP

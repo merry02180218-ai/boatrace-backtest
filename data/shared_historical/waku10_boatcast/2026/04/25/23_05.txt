@@ -1,0 +1,8 @@
+data=
+1	0
+藤井　　　徹	7.20	0.19	3.5	２		IP	４		IP	２		IP	４		IP	３		IP	４		IP	１		IP	２		IP	１		IP	１		IP
+井上　　忠政	8.00	0.15	4.7	２		G1	２		G1	１		G1	３		G1	５		G1	１		G1	２		G1	３		G1	４		G1	２		G1
+山崎　　義明	5.50	0.19	3.4	３	4	IP	２		IP	２		IP	２		G3	４		G3	４		IP	３		IP	５		IP	６		IP	２		IP
+東　　　潤樹	4.90	0.17	3.8	３		IP	２		IP	３		IP	２		IP	６		IP	４		IP	５	5	IP	５		IP	２		IP	４		IP
+竹腰　　正樹	3.10	0.20	2.9	２		IP	５		IP	６		IP	４		IP	２		IP	Ｆ		IP	４		IP	５	4	IP	６		IP	６		IP
+三木　　晴斗	3.20	0.21	3.3	１		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP	３		IP	転		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+一色　　凌雅	7.20	0.18	3.3	３		IP	１		IP	２		IP	３	3	G3	３		IP	１		IP	１		IP	３		IP	１		IP	転		IP
+山田　　晃大	7.00	0.14	2.6	３		IP	４		IP	１		IP	３		IP	３	3	IP	３		IP	３	3	IP	２		IP	２		IP	１		IP
+増田　　　進	4.80	0.17	3.4	４		IP	４		IP	４		IP	３		IP	５		IP	３		IP	３		IP	５		IP	１		IP	４		IP
+藤生　　雄人	5.20	0.20	3.5	２		IP	３	5	IP	３		IP	５		IP	３		IP	１		IP	５		IP	３		IP	５		IP	５		IP
+常住　　　蓮	7.10	0.16	3.0	２		IP	５		G1	６		G1	１		SG	２	4	IP	２		IP	２		G1	４		G1	２		IP	３		IP
+塩田　　北斗	4.10	0.14	3.7	２	4	IP	６		G1	３		G1	６		G1	５		G1	４		G1	６		G1	４	5	G1	５		G1	４	5	IP

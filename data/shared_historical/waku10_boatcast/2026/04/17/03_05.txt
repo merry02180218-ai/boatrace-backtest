@@ -1,0 +1,8 @@
+data=
+1	0
+竹之内　　極	9.40	0.17	2.7	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+西尾　　亮輔	3.70	0.18	2.7	３		IP	２		IP	６		IP	６		IP	６		IP	５		IP	Ｆ		IP	３		IP	３		IP	３		IP
+秋田　健太郎	3.50	0.19	3.3	６		IP	５		IP	２		IP	３		IP	５		IP	５		IP	４		IP	４		IP	５		IP	４		IP
+郷原　　章平	4.00	0.13	3.4	３		IP	５		IP	３		IP	３		IP	３		G3	４		IP	４		IP	６		G1	６		G1	５		IP
+小坂　　尚哉	4.78	0.14	2.8	６		IP	２	4	IP	４		IP	４		G3	転		IP	４		IP	２	4	IP	５	6	G1	４		G1	３		IP
+吉川　　勇作	2.70	0.14	2.8	４		IP	５		IP	２		IP	６		IP	６		IP	５		IP	６		IP	５		IP	５		IP	４		IP

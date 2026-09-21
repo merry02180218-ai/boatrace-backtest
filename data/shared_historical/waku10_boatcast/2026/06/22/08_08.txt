@@ -1,0 +1,8 @@
+data=
+1	0
+大賀　龍之介	8.10	0.17	3.4	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	３		IP	１		IP	６		IP
+吉川　　貴仁	7.00	0.22	4.0	２		IP	３		IP	２		IP	１		IP	１		IP	３		IP	３		IP	６		IP	１		IP	４		IP
+赤池　　修平	5.00	0.18	3.3	６		IP	１		IP	４		IP	６	5	IP	２		IP	６		IP	６		IP	４		IP	１	4	IP	１		IP
+貫地谷　直人	3.10	0.23	4.2	４		IP	６		IP	５		IP	５		IP	６		IP	６		IP	４	5	IP	４		IP	２		IP	４		IP
+山崎　　善庸	2.10	0.22	4.6	５		IP	４	6	IP	５		IP	６	6	IP	４		IP	５		IP	６		IP	６		IP	５		IP	５		IP
+市川　　哲也	3.30	0.13	2.6	５		IP	４	3	IP	４	4	IP	６		IP	５		IP	４	4	G2	４	3	IP	６		IP	３	5	IP	４		IP

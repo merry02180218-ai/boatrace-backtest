@@ -1,0 +1,8 @@
+data=
+1	0
+豊田　　　結	8.20	0.14	2.1	１		G3	１		G3	４		IP	２		IP	２		IP	２		IP	３		IP	２		IP	１		IP	１		IP
+畑田　　希咲	2.30	0.19	4.2	５		IP	４		IP	５		IP	６		IP	５		IP	４		IP	５		IP	６		IP	６		IP	４		IP
+宇恵　　有香	4.20	0.16	3.2	６		IP	４		IP	３		IP	５		IP	１		IP	２		IP	５		IP	５		IP	３	4	IP	６		IP
+今井　　美亜	4.25	0.19	3.2	６		IP	５		IP	３		G3	５		G3	３		G3	２		G1	欠		IP	３		IP	５		IP	欠		IP
+日隈　　　茜	1.00	0.27	4.7	６		IP	６		IP	６		IP	６	6	IP	６	6	IP	６		IP	６		IP	６	6	IP	６	6	IP	６		IP
+松尾　　夏海	4.30	0.18	3.1	４		IP	６		IP	１		IP	３		G1	３		G3	５	5	G3	４		IP	５		IP	３		G3	６		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+後藤　　美翼	7.90	0.20	3.6	２		IP	２		IP	１		IP	１		G3	１		G3	１		G3	２		G3	６		IP	３		IP	２		IP
+上田　　洋平	6.50	0.16	3.1	６		IP	２		IP	２		IP	１		IP	１		IP	５		IP	２		IP	１		IP	３		IP	５		G3
+松下　　哲也	4.40	0.20	3.8	５		IP	２	4	IP	６		IP	５		IP	４		IP	３		IP	３		IP	４		IP	６	4	IP	１		IP
+三浦　洋次朗	4.80	0.21	2.9	１		IP	２		IP	４		IP	４		IP	４		IP	３		IP	６		IP	６		IP	３		IP	４		IP
+三角　　哲男	4.90	0.18	2.8	欠		IP	２		IP	５		IP	４		IP	４		G1	２		IP	３		IP	３		IP	３		IP	５		IP
+木場　雄二郎	3.90	0.14	2.9	５		IP	６		IP	１	5	IP	５		IP	６		IP	５		IP	２		IP	３		IP	３		IP	６		IP

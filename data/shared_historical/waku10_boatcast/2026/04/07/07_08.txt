@@ -1,0 +1,8 @@
+data=
+1	0
+野口　　勝弘	8.40	0.17	2.9	１		IP	４		IP	３		G3	３		G3	１		G3	１		IP	１		IP	１		IP	２		IP	１		IP
+齊藤　　　仁	7.50	0.14	3.0	１		G3	２		G1	６		G1	２		G1	２		G1	２		IP	２		IP	１		G3	１		IP	転		IP
+高山　　弘斗	2.20	0.20	4.3	５		IP	４		IP	転		IP	５		IP	６		IP	４		IP	６		IP	５		IP	４		IP	５		IP
+中嶋　　達也	3.30	0.14	3.1	６		IP	３		IP	５		IP	５		IP	５		IP	６		IP	２		IP	４		IP	６		IP	３		IP
+大久保　佑香	3.20	0.18	3.8	６	4	G3	４		G3	２		IP	５		IP	４		IP	６		G3	３		G3	６		IP	６		IP	４		IP
+宮田　　龍馬	4.00	0.17	4.5	５		IP	３		G3	３		G3	６		G1	６		G1	５		G1	５		IP	４		IP	３		G1	３		IP

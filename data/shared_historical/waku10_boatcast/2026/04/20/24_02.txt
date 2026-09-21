@@ -1,0 +1,8 @@
+data=
+1	0
+小玉　　啓太	5.90	0.15	2.8	２		IP	６		IP	１		IP	４		IP	２		IP	４		IP	２		IP	１		IP	３		IP	転		IP
+近藤　　颯斗	5.60	0.12	2.1	５		IP	１		IP	２		IP	１		IP	２		IP	落		IP	６		IP	３		IP	６		IP	１		IP
+岡崎　　凪汰	3.60	0.17	3.0	５		IP	６		IP	２		IP	２		IP	６		IP	５		IP	６		IP	１		IP	５		IP	６		IP
+瀬川　　大地	2.00	0.20	3.5	４		IP	５		IP	６	6	IP	転		IP	４		IP	５	5	IP	５		IP	６		IP	６		IP	６		IP
+村本　　大成	3.22	0.18	3.6	６	6	IP	５		IP	５		IP	６		IP	欠		IP	５		IP	２		IP	３	4	IP	３		IP	６	6	IP
+長谷川　晴哉	4.00	0.19	4.3	６		IP	３		IP	３	5	IP	２		IP	６		IP	４		IP	３		IP	４		IP	５		IP	５		IP

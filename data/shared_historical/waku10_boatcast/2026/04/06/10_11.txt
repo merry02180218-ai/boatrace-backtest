@@ -1,0 +1,8 @@
+data=
+1	0
+渡邊　雄一郎	7.20	0.16	3.4	１		IP	２		IP	４	2	IP	４		IP	４		IP	１		IP	１		IP	５		IP	１		IP	１		IP
+鈴木　　茂高	4.80	0.20	3.2	２		IP	２		IP	３		IP	２		IP	５		G3	５		IP	５		IP	５		IP	２		IP	５		IP
+畑　　　竜生	4.10	0.19	4.0	６		IP	２		IP	４	4	IP	５		IP	４		IP	３		IP	５		IP	Ｆ		G3	３		IP	２		IP
+伏田　　裕隆	4.70	0.12	2.9	４		IP	６		IP	６		IP	１	6	G3	６	6	IP	５	6	IP	２		IP	３		IP	２		IP	３	6	IP
+大串　　重幸	3.50	0.22	4.6	６	6	IP	３		IP	３		G3	４		G3	５		IP	１		IP	５		IP	転		IP	５		IP	５		IP
+山田　　雄太	2.60	0.16	3.3	４		IP	５		IP	５		IP	４		IP	６		IP	５		IP	３		IP	５		IP	５		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+作間　　　章	9.70	0.14	4.0	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+野長瀬　正孝	6.60	0.18	3.6	２		IP	３		IP	１	3	IP	２		IP	３		IP	４		IP	５		IP	２		IP	４		IP	１		IP
+橋口　　真樹	4.80	0.17	3.7	３		IP	１		IP	４		IP	３		IP	５		IP	２		IP	５		IP	５		IP	４		IP	４		IP
+沢田　　昭宏	6.20	0.16	3.4	２		IP	３		G3	２		IP	３		IP	３		IP	２		IP	４	5	IP	４		IP	４		IP	２		IP
+花田　　和明	4.60	0.17	3.5	６	4	IP	５	2	IP	１	4	IP	４		IP	５	2	IP	２	3	IP	６	2	IP	３	3	G3	５	4	G3	１	2	IP
+長野　　道臣	3.00	0.19	4.5	６		IP	６		IP	５		IP	６		IP	５		IP	５		IP	３		IP	６		IP	４		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　雄二	6.60	0.17	3.1	２		IP	３		IP	１		IP	５	2	IP	３		IP	４		IP	２		IP	４		IP	２		IP	１		IP
+松本　　純平	5.20	0.16	4.4	５		IP	３	3	IP	６		G1	４		G1	３		G1	６		G1	４		IP	２		IP	５		IP	２		IP
+砂長　　知輝	7.90	0.13	3.4	３		G1	５		G1	１	4	G1	２		SG	５		SG	２		IP	３		IP	２		IP	１		IP	１		IP
+武田　　正紀	4.20	0.17	2.7	４		IP	３		IP	４		IP	４	3	IP	４		IP	２		IP	３		IP	５		IP	５	5	IP	５	5	IP
+平川　　香織	4.90	0.20	3.3	６		IP	２	4	IP	３		IP	４	4	IP	３		G3	４		G3	３		IP	４	6	IP	３		G3	４		G3
+成田　　華音	1.50	0.15	4.0	５		IP	６		IP																								IP

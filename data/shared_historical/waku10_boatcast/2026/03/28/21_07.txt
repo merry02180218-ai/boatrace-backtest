@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　宏樹	8.50	0.14	2.8	３		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	５		IP
+河合　　三弘	5.60	0.19	4.9	１		IP	４		IP	４		IP	５		IP	４		IP	５	3	IP	３		IP	２		IP	３		IP	１		IP
+古場　　輝義	4.50	0.21	4.1	４	4	IP	３		IP	２		IP	６		IP	２		IP	２		IP	６		IP	６		IP	５		IP	３		IP
+廣中　　良一	3.90	0.14	2.2	５		G3	２		IP	６		IP	４		IP	６		IP	１		IP	３	5	IP	４		IP	６		IP	５		IP
+荻野　　裕介	4.40	0.21	4.2	３		IP	４		IP	２	6	IP	５	6	IP	３		IP	５		IP	５	6	IP	３		IP	５		IP	３		IP
+板倉　　敦史	3.20	0.25	4.7	６	5	IP	４		IP	６		IP	４		IP	４		IP	４		IP	３		IP	６		IP	３		IP	６		IP

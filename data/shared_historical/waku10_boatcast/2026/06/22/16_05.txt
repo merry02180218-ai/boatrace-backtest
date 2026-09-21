@@ -1,0 +1,8 @@
+data=
+1	0
+小池　　公生	8.00	0.19	4.0	２		IP	２		IP	１		IP	３		IP	１		IP	１		IP	２		IP	３		IP	１		IP	４		IP
+星野　　太郎	5.00	0.20	4.4	３		IP	４		IP	５		IP	１		IP	６		IP	２		IP	５		IP	１		IP	３		IP	６		IP
+山下　　流心	4.80	0.18	3.2	４		IP	３		IP	２		G3	３		IP	２		IP	６		IP	６		IP	転		IP	２		IP	３		IP
+佐藤　　駿介	4.00	0.17	3.1	１		IP	６		IP	３		IP	６	5	IP	６		IP	４		IP	１		IP	５		IP	６		IP	４		IP
+金田　　　諭	6.80	0.19	3.2	４		IP	１		IP	２		IP	３		IP	５	4	IP	３		IP	１	4	IP	３		IP	３		IP	１	4	IP
+長尾　　萌加	2.80	0.17	4.7	６		IP	３		IP	５		IP	６		IP	６		IP	５		IP	３		IP	４		IP	４		IP	６		IP

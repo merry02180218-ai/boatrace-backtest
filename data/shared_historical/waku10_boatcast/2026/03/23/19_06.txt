@@ -1,0 +1,8 @@
+data=
+1	0
+國弘　　翔平	5.70	0.14	3.5	５		IP	６		IP	３		IP	１		IP	５		IP	４		IP	１		IP	５		IP	１		IP	１		IP
+寳田　　亮治	5.00	0.19	4.1	３		IP	３		IP	１	3	IP	欠		IP	５		IP	４		IP	４		IP	２		IP	２		G3	５		G3
+中辻　　博訓	4.60	0.15	2.4	４		IP	３		G3	３		G3	３		IP	４		IP	３		IP	６		IP	６		IP	２		IP	４		IP
+渡　　　修平	2.30	0.23	4.6	６	6	IP	６		IP	６	5	IP	６		IP	３		IP	６	5	IP	５		IP	４		IP	４		IP	５	5	IP
+出穂　　和鼓	1.80	0.22	4.2	６		IP	６	6	IP	５		IP	６		IP	６		IP	６		IP	６		IP	４	6	IP	５	6	IP	４	6	IP
+鳥居塚　孝博	4.30	0.17	3.9	２	5	IP	２		IP	２		IP	６		IP	６		IP	５		IP	３		IP	５		IP	５	5	IP	４		IP

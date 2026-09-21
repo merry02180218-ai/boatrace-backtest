@@ -1,0 +1,8 @@
+data=
+1	0
+芝田　　京介	5.30	0.18	3.8	５		IP	３		IP	６		IP	４		IP	５		IP	１		IP	４		IP	１		IP	１		IP	４		IP
+香川　　陽太	3.60	0.21	4.6	６		IP	５		IP	４		IP	６		IP	１		IP	６		IP	Ｆ	3	IP	２		IP	２		IP	６		IP
+谷本　　幸司	6.40	0.17	3.4	３		IP	１		IP	２		IP	２		IP	３		IP	２		IP	４		IP	５		IP	２		IP	４		IP
+品川　　賢次	3.33	0.19	3.9	５		IP	３		IP	５		IP	落		IP	３		IP	４		IP	３		IP	６		IP	５		IP	６		G3
+田中　　孝明	3.70	0.22	4.8	５		IP	４		IP	６		IP	４		IP	４		IP	２		IP	４		IP	５		IP	４		IP	４	6	IP
+宮城　　那菜	1.50	0.16	3.1	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５	5	IP	６		IP

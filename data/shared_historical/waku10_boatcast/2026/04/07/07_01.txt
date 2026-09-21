@@ -1,0 +1,8 @@
+data=
+1	0
+宇野　　博之	4.60	0.16	3.7	１		IP	５		IP	４		IP	３		IP	２		IP	３		IP	４		IP	６		IP	６		IP	４		IP
+末永　　祐輝	7.11	0.18	3.8	３		IP	２		IP	１	3	IP	転		IP	３		IP	２		IP	３		IP	２		IP	４		IP	２		IP
+尾道　　佳諭	3.90	0.18	3.1	６		IP	４		IP	４		IP	１		IP	４		IP	５		IP	４		IP	６		IP	６		IP	２		IP
+石原　　凪紗	3.90	0.20	4.3	４		IP	２		IP	５		IP	５		IP	３		IP	５		IP	２		IP	６		IP	４		G3	５		G3
+鈴木　　雅希	4.70	0.19	3.7	３		IP	３		IP	６		IP	４		IP	４		IP	５		IP	２	6	IP	３		IP	Ｆ		IP	１		IP
+真田　　聖也	1.30	0.11	2.0	６		IP	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

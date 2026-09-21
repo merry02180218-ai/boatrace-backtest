@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　真二	8.20	0.15	2.6	１		IP	１		G3	１		G3	１		IP	４		IP	２		IP	１		IP	４		IP	２		IP	２		IP
+宮地　　博士	5.40	0.18	4.3	３		IP	４		IP	１		IP	５		IP	２		IP	２		IP	４		IP	５		IP	４		IP	３		IP
+吉田　　　光	4.00	0.12	2.8	２		IP	転		IP	４		IP	２		G3	６		IP	３		IP	５		IP	５		IP	４		G3	６		G3
+深川　　真二	6.00	0.16	3.6	３	2	IP	１	2	IP	３	1	IP	６	2	G2	３	2	IP	３	2	IP	３	2	IP	２	1	IP	４	2	G1	５	2	IP
+藤田　　浩人	4.00	0.15	3.5	３		IP	４	6	IP	４		IP	４		IP	５		G2	３		G2	５		IP	４		IP	５		IP	５		IP
+小柳　　勝希	2.70	0.25	4.9	６		IP	４		IP	６		IP	４		IP	６		IP	４		IP	４		IP	４		IP	５		IP	５		IP

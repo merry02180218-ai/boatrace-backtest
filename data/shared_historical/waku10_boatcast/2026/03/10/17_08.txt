@@ -1,0 +1,8 @@
+data=
+1	0
+大賀　龍之介	7.60	0.20	2.9	１		IP	６		IP	２		IP	１		IP	６		IP	１		IP	１		IP	２		IP	２		IP	１		IP
+金子　　順一	2.70	0.17	3.9	６		IP	５	1	IP	３	1	IP	５		IP	５		IP	６		IP	６		IP	３		IP	５		IP	４	3	IP
+石原　　凪紗	5.60	0.20	3.6	５		IP	２		IP	４		IP	２		IP	１		G3	４	4	G3	６		IP	６		IP	２		IP	１		IP
+越智　　照浩	4.22	0.16	3.5	４		IP	３		IP	４		IP	エ		IP	６		IP	６		IP	２		IP	３		IP	３		IP	５		IP
+竹本　　太樹	4.30	0.19	4.0	５		IP	６		IP	２		IP	２		IP	３		IP	３		IP	６		IP	６		IP	５		IP	２		IP
+吉川　　喜継	5.90	0.15	3.1	２	5	IP	Ｆ	4	IP	３	4	IP	４	4	IP	２	2	IP	２	5	G1	２	5	IP	３	4	IP	５	4	IP	３	3	IP

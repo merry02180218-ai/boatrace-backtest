@@ -1,0 +1,8 @@
+data=
+1	0
+茅原　　悠紀	9.60	0.14	3.8	１		G1	Ｆ		G1	１		G1	１		G1	１		G1	２		G1	１		G1	１		G1	１		IP	１		IP
+大上　　卓人	6.90	0.13	2.9	５		G1	４		G1	６		G1	１		IP	２		G1	１	1	G1	１		IP	１		IP	４		IP	４		G1
+秦　　　英悟	6.10	0.13	3.8	２		G1	３		IP	４		IP	４		G1	３		G1	１		G2	５		IP	３		IP	３		IP	４		IP
+吉村　　　誠	5.40	0.17	3.7	５		G1	５		IP	３		IP	２		IP	４		IP	３		IP	１		IP	４		G1	３		IP	５		IP
+木村　　仁紀	4.80	0.12	2.3	３		G1	６		G1	４		IP	４		IP	２		IP	４		G1	３		G2	６		G2	６		IP	３		IP
+豊田　健士郎	6.67	0.19	3.7	５		G1	１		IP	５		IP	４		G1	２		IP	転		G2	３		G2	２	5	IP	１	5	IP	３		IP

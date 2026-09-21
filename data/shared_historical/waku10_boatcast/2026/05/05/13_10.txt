@@ -1,0 +1,8 @@
+data=
+1	0
+馬袋　　義則	6.60	0.13	2.2	２		IP	４		IP	２		IP	１		IP	１		IP	６		IP	１		IP	１		IP	６		IP	４		IP
+大崎　　　翔	6.30	0.15	3.0	６		IP	１		IP	４		IP	４		IP	２		IP	２		IP	５		IP	１		IP	１		IP	３		IP
+吉川　　元浩	6.60	0.14	3.1	３		G1	４		G1	５		IP	５		G1	３		G1	２		G1	３		G1	１		IP	２		IP	２		IP
+廣瀬　　将亨	6.50	0.18	3.8	２		IP	１		IP	４		IP	１	3	IP	６	6	IP	４		IP	５		IP	１		IP	３		IP	１	5	IP
+中嶋　　達也	4.40	0.14	2.3	６		IP	３		IP	１		IP	３		IP	６		IP	３		IP	５		IP	４	4	IP	５		IP	３		IP
+尾嶋　　一広	3.70	0.15	2.9	４		G1	６		G3	６		G3	４		G3	４	5	G3	３		IP	３	5	IP	４		G1	６		G1	５		G1

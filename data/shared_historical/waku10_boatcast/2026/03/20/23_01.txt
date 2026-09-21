@@ -1,0 +1,8 @@
+data=
+1	0
+藤田　　浩人	9.60	0.15	2.9	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１	2	IP
+井口　　佳典	7.20	0.16	4.3	６		G1	１		G1	２		G1	３		G1	４		G1	２		SG	３		G1	３		SG	５		SG	２		G1
+山田　　祐也	6.50	0.14	2.7	３		G1	６		G1	２		G1	５		IP	１		G1	２		IP	５		IP	４		G1	２		G1	１		IP
+中田　　竜太	7.30	0.15	3.0	３		G1	２		IP	２		G1	４		G1	２		G1	２	5	IP	３		G1	２		G1	４		G1	３		IP
+佐々木　大河	5.40	0.16	2.8	４		IP	２		IP	５		IP	２		IP	２		IP	４		IP	２		IP	２		IP	落		IP	４		IP
+石原　　　翼	2.00	0.17	3.8	６		IP	４		IP	５		IP	３		IP	６	5	IP	６		IP	６		IP	５		IP	６		IP	６		IP

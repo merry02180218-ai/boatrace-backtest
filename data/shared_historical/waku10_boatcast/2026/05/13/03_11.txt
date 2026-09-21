@@ -1,0 +1,8 @@
+data=
+1	0
+池永　　　太	9.50	0.11	2.1	１		IP	１		IP	４		G1	２		G1	１		IP	１		IP	１		G1	１		G1	２		IP	１		IP
+小原　　聡将	8.20	0.15	2.9	２		IP	１		IP	１		IP	２		IP	２		IP	２		IP	３		IP	１		IP	２		IP	４		IP
+片岡　　雅裕	5.90	0.11	2.6	４		IP	４		G1	５		G1	２		G1	４		G1	５		G1	１		G1	３		G1	６		G1	１		IP
+渡邉　　雄朗	5.10	0.21	3.6	５		IP	６		IP	３		IP	２		IP	４		IP	１		IP	５		G1	４		G1	３		G1	４		G1
+上村　　純一	3.80	0.12	2.4	３		IP	２	6	IP	６		IP	６		IP	４		G1	５		G1	６		G1	４		G1	３	6	IP	６		IP
+坂元　　浩仁	3.40	0.17	4.3	６		IP	５		IP	３		IP	５		IP	４		IP	６		IP	５		IP	５		IP	２		IP	４		IP

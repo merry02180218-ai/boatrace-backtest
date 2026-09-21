@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　浩次	7.40	0.17	2.8	１		IP	３		IP	５		IP	１		G3	３		G3	２		IP	１		G3	５		IP	１		IP	１		IP
+林　　　恵祐	3.70	0.21	4.8	４		IP	４	3	IP	６		IP	３		IP	４		IP	２		IP	６		IP	３		IP	５		IP	６		IP
+小山　　　勉	6.80	0.17	2.9	４		IP	２		IP	３		IP	１		IP	３		IP	２		IP	１		IP	５		IP	４		IP	１		IP
+大庭　　元明	4.50	0.13	2.9	４		IP	３		IP	６		IP	５		IP	妨	6	IP	４		IP	２	5	IP	２	5	IP	５		IP	１		IP
+平野　　和明	3.50	0.19	3.8	５		G3	４		G3	４		IP	４		IP	５		IP	４		IP	３	4	IP	４		IP	４	6	IP	６		IP
+大場　　　敏	3.10	0.15	3.4	５		G3	３	4	IP	５		IP	２	4	IP	６		IP	５		IP	５		IP	４		IP	５		IP	５		IP

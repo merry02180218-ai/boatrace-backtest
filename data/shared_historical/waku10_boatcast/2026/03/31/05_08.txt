@@ -1,0 +1,8 @@
+data=
+1	0
+浅井　　　翼	4.20	0.15	2.5	６		IP	６		IP	６		IP	４		IP	２		IP	２		IP	６		IP	４		IP	１		IP	４		IP
+川口　　貴久	5.50	0.16	2.9	２		IP	３		IP	２		IP	５		IP	１		IP	３		IP	４		IP	４		IP	６		IP	３		IP
+倉田　　茂将	4.60	0.17	3.8	６		IP	２		IP	３	2	IP	５		IP	５		G3	６		G3	２		IP	３		IP	３		IP	３		IP
+金子　　和之	5.50	0.12	2.5	５		IP	６		IP	１		IP	３		IP	３		IP	３		IP	４		IP	２		IP	３		IP	３		IP
+中村　　駿平	2.30	0.24	3.8	５		IP	５		IP	５		IP	４		IP	３		IP	５		IP	６		IP	５		IP	６	6	IP	６		IP
+港　　　理樹	3.00	0.23	5.0	４		IP	５		IP	４		IP	４		IP	３		IP	４		IP	６		IP	５		IP	６		IP	５		IP

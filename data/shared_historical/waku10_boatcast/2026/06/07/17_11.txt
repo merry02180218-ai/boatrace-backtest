@@ -1,0 +1,8 @@
+data=
+1	0
+関　　　浩哉	9.60	0.15	3.3	４		SG	１		G1	１		IP	１		IP	１		IP	１		G1	２		G1	１		G1	４		SG	１		G1
+赤岩　　善生	7.00	0.14	2.7	落		G3	５		G3	５		IP	２		IP	２		IP	３		G1	１		IP	１		IP	２		IP	３		G1
+井上　　忠政	8.90	0.12	2.8	１	1	IP	１		IP	４		IP	１		IP	１		G1	２		G1	２		G1	１		G1	３		G1	３		G1
+上平　　真二	6.22	0.16	4.3	転		IP	４		IP	３		IP	３		IP	５		G1	３		G1	３		IP	３		IP	２		IP	１	3	IP
+原田　　幸哉	5.10	0.11	2.3	３	3	SG	５		G1	５		G1	３		IP	４		G1	４		G1	６		G1	４		SG	５		SG	２		G1
+松尾　　　充	4.00	0.15	2.5	２		IP	４		IP	５		G3	３		G3	２	5	IP	５		G1	６	5	G1	５	5	IP	４		IP	６		IP

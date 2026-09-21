@@ -1,0 +1,8 @@
+data=
+1	0
+片橋　　幸貴	9.20	0.14	2.0	３		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+藤井　　　徹	6.20	0.20	4.3	４		IP	２		IP	３		IP	２		IP	２	3	IP	４		IP	３		IP	１		IP	５		IP	３		IP
+吉武　　真也	4.67	0.18	3.4	４		IP	３		IP	転	4	IP	３		IP	５		IP	５		IP	４		IP	３		IP	３		IP	３		IP
+北川　　敏弘	4.00	0.15	2.9	４		IP	２		IP	５		IP	４		IP	５		IP	６		IP	４		IP	３		IP	２		IP	６		IP
+四宮　　与寛	3.50	0.19	3.6	５		IP	３		IP	６		IP	５		IP	６		G1	２	4	IP	５		IP	５		IP	６		G1	２		IP
+永井　　彪也	3.60	0.13	2.5	２		IP	６		G1	５		G1	５		G1	３		IP	６		G2	３		IP	６		IP	６		G1	５		G1

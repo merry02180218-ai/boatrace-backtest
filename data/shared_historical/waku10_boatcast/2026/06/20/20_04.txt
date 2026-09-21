@@ -1,0 +1,8 @@
+data=
+1	0
+浦田　　晃嗣	6.10	0.13	3.2	４		IP	６		IP	２		IP	３		IP	１		IP	１		IP	２		IP	５		IP	１		IP	５		IP
+立間　　充宏	7.11	0.19	3.7	１		IP	２		IP	１		IP	２		IP	３		IP	４		IP	４		IP	２		IP	３		IP	転		IP
+吉田　慎二郎	7.60	0.20	2.9	２	4	IP	１		IP	１	4	G3	１	4	G3	４		IP	２		IP	１		IP	１		IP	４		IP	５		IP
+小川　竜太朗	4.60	0.13	2.4	１		IP	２		IP	４		IP	６		IP	５		IP	６		IP	２		IP	５		IP	５		IP	２		IP
+武井　莉里佳	4.00	0.14	3.2	６		IP	２		G3	転		G3	４		G2	３		G2	４		IP	５		IP	６		IP	４		IP	４		IP
+永田　　啓二	6.40	0.12	1.4	３		IP	４		IP	１		IP	２		G3	４		IP	３		IP	２	5	IP	１		IP	４		IP	４		IP

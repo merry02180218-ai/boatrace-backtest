@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　　歩	8.40	0.14	2.1	１		IP	１		IP	２		IP	３		IP	４		G3	１		G3	１		IP	１		IP	３		G3	１		G3
+山崎　小葉音	5.00	0.16	2.6	欠		IP	６		IP	３		G3	３		G3	１		G3	４		IP	２		IP	４		IP	４		IP	５		IP
+中村　　桃佳	6.40	0.14	3.4	２		IP	４		IP	１		G2	６		IP	１		IP	２		IP	１		IP	５		IP	５		IP	３		IP
+門田　　　栞	4.50	0.14	3.3	２		IP	４		IP	６		G2	５		IP	４	6	G3	３		G3	５		IP	１	6	IP	６		IP	３	6	IP
+中尾　　優香	5.10	0.20	3.7	３		IP	６		IP	２		IP	１		IP	５		IP	６		IP	４		IP	６	4	G3	１		G3	２	3	IP
+長尾　　萌加	2.80	0.17	4.4	３		IP	５		IP	６		IP	６		IP	５		IP	３		IP	４		IP	４		IP	６		IP	６		IP

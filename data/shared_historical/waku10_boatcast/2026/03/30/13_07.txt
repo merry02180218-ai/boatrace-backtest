@@ -1,0 +1,8 @@
+data=
+1	0
+上村　　純一	9.20	0.15	3.2	１		IP	１		IP	２		IP	２		G1	１		G1	６		G1	１		G1	１		G1	１		IP	１		IP
+伏島　　祐介	4.20	0.21	4.9	３		IP	２		IP	１		IP	６		IP	５		IP	４		IP	４		IP	４		IP	５		IP	６		IP
+古川　　　健	2.60	0.18	2.9	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP	４		IP	５		IP	４		IP	３		IP
+樋口　由加里	3.60	0.15	4.0	５		IP	５		IP	３		IP	５		IP	４		G1	４	6	G1	３		IP	５		IP	５	3	G3	４		G3
+山本　　兼士	4.10	0.23	4.5	４		IP	６		IP	６	6	IP	４		IP	６		IP	１		IP	１		IP	５		IP	４	6	G3	４		G3
+寺島　　美里	2.40	0.21	4.4	２		IP	５	5	IP	６		IP	４		G1	６		IP	５		IP	６		G3	６		G3	６		IP	５		IP

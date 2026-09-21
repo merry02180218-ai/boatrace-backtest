@@ -1,0 +1,8 @@
+data=
+1	0
+谷本　　幸司	7.40	0.17	3.1	５		IP	１		IP	５		IP	１		IP	１		IP	２		IP	２		IP	１		IP	４		IP	１		IP
+畑田　　汰一	5.50	0.10	2.5	４		G1	５		G1	２		G1	３		G1	３		G1	６		G1	５		IP	２		IP	２		IP	４		IP
+井上　　尚悟	6.20	0.17	2.9	２		G3	１	4	G3	５		IP	３		IP	３		IP	４		IP	４		IP	１		IP	２		IP	４		IP
+東本　　勝利	5.30	0.18	3.4	３		IP	２	5	IP	３		IP	４		G3	３		G3	１		IP	３		IP	４		IP	５		IP	６		IP
+藤原　　早菜	3.80	0.17	4.0	５		G3	５		G3	４		G3	３		G3	５		IP	３		IP	５		IP	５		IP	４		IP	２		IP
+山崎　　昂介	3.00	0.19	4.4	４		IP	２		IP	４		IP	６		IP	５		IP	５		IP	５		IP	５		IP	４		IP	６		IP

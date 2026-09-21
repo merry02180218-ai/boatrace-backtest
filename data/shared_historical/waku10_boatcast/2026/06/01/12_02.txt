@@ -1,0 +1,8 @@
+data=
+1	0
+小野　　　桜	8.20	0.18	3.3	３		IP	２		IP	２		G3	４		IP	２		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+荻野　　裕介	5.00	0.23	4.9	４		IP	４		IP	４		IP	２		IP	５		IP	６		G3	２		IP	２		IP	６		IP	１		IP
+田中　　　豪	6.70	0.14	2.1	３		IP	６	4	IP	２		IP	２		IP	３		IP	２		IP	２		IP	３		IP	１		IP	３		IP
+中村　　将隆	3.60	0.15	3.6	６	6	IP	３	5	IP	４		IP	４		IP	３		IP	６		G3	５	5	G3	５		IP	６		IP	２		IP
+眞鳥　　章太	4.60	0.13	2.8	５		IP	２		IP	６		IP	３		IP	４		IP	５		IP	１		IP	１		IP	６		IP	５		IP
+星野　　政彦	1.70	0.17	4.2	６	3	IP	６		IP	５		IP	５		IP	６	4	IP	４	4	IP	６	4	IP	５		IP	５	5	IP	６		IP

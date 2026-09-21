@@ -1,0 +1,8 @@
+data=
+1	0
+益田　　啓司	10.00	0.13	2.1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+石渡　　鉄兵	6.50	0.14	4.5	４		G1	２		IP	３		SG	５		SG	２		G1	５		G1	３		G1	２		IP	５		G2	２		G2
+井口　　佳典	7.30	0.17	4.3	４		G1	２		G1	１		G1	２		G2	５		G1	３		G1	２		G1	５		G1	３		G1	２		SG
+笠原　　　亮	6.00	0.17	4.1	６	6	G1	４		G1	６		SG	６		SG	２		IP	１		IP	３		IP	２		IP	４		G1	２		G2
+西島　　義則	6.40	0.17	2.4	６	2	IP	１	2	IP	６	2	IP	５	1	IP	１	1	IP	２	1	IP	３	2	IP	２	1	IP	１	2	IP	２	2	G3
+田口　　節子	5.70	0.17	3.8	３		G3	３		G3	２		G3	３		G3	４		G3	３	5	IP	３		G1	６		G1	２		IP	４		IP

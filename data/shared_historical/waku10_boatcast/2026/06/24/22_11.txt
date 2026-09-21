@@ -1,0 +1,8 @@
+data=
+1	0
+横澤　　剛治	9.50	0.19	4.6	１		IP	３		G1	１		G1	１		G1	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP
+松本　　博昭	6.50	0.19	3.8	６		IP	２		IP	４		IP	１	4	IP	４	3	IP	４		IP	２		IP	２		IP	１		IP	２		IP
+大田　　直弥	6.60	0.17	3.7	２		IP	５		IP	３		IP	３		IP	１		IP	４		IP	４		IP	２		IP	１		IP	２		IP
+松田　　憲幸	4.30	0.18	3.8	６	5	IP	５		IP	３		IP	３		IP	３		IP	４		IP	５		IP	２	5	IP	３		IP	５		IP
+北川　　幸典	3.90	0.20	3.2	３		IP	６		IP	２		IP	３		IP	６		IP	６	4	IP	３		IP	５	6	IP	３		G3	５		G3
+後藤　　　浩	1.50	0.18	4.0	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	４		IP	６		IP

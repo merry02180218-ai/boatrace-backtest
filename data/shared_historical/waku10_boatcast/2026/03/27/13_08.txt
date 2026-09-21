@@ -1,0 +1,8 @@
+data=
+1	0
+廣瀬　　将亨	6.90	0.17	3.2	１		IP	５		IP	１		IP	１		IP	転		IP	２		IP	１		IP	１		IP	５		G2	３		IP
+武田　　光史	5.70	0.18	3.3	２		IP	３		IP	２		IP	２		IP	６		IP	５		IP	２		IP	１		IP	５		IP	４		IP
+南　　　佑典	6.30	0.21	3.7	１		IP	２		IP	６		IP	４		IP	２		IP	１		IP	４		IP	３		IP	２		IP	４		IP
+本田　　　愛	3.10	0.25	4.0	６	5	IP	５		IP	３	3	IP	３		IP	５	5	IP	５		IP	Ｆ	3	IP	５		IP	３	3	G3	４		IP
+伏島　　祐介	4.10	0.16	3.5	６		IP	４		IP	６		IP	３		IP	６		IP	４		IP	３		IP	１		IP	５	6	IP	３		IP
+鈴木　　雄登	4.40	0.21	4.4	４		IP	５		IP	４		IP	３		IP	４		IP	６		IP	２		IP	４		IP	１		IP	６		IP

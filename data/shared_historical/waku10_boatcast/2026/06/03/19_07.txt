@@ -1,0 +1,8 @@
+data=
+1	0
+中川　　りな	8.40	0.18	2.6	１		G3	３		G3	１		G3	１		IP	３		IP	４		IP	１		IP	１		IP	２		IP	１		IP
+川崎　　誠志	5.40	0.22	5.4	３		IP	６		IP	１		IP	２	1	IP	５		IP	３		IP	３		IP	６		IP	１		IP	４		IP
+今泉　　友吾	7.50	0.12	2.5	５		IP	４		IP	２		IP	２		IP	２		G1	２		G1	３		G1	１		IP	１		G1	３		G1
+高濱　　芳久	5.20	0.19	3.7	４		IP	３		IP	６		IP	５		IP	１		IP	１		IP	６	6	IP	５		IP	１		IP	３		IP
+松江　　秀徳	5.70	0.13	2.2	４		IP	５		IP	５		IP	３		IP	１		IP	１		IP	３		IP	２		IP	４	4	IP	４	4	IP
+藤田　　靖弘	2.90	0.15	3.2	２		IP	５		IP	５		IP	４		IP	５		IP	４		IP	５		IP	５		IP	６		IP	５		IP

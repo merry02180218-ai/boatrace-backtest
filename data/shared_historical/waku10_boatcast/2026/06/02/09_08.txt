@@ -1,0 +1,8 @@
+data=
+1	0
+森　　　竜也	7.30	0.16	3.0	４		G3	１		IP	１		IP	１		IP	１		IP	５		G3	３		IP	６		IP	１		IP	１		IP
+興津　　　藍	5.90	0.14	2.4	３		G3	２		IP	６		IP	４		IP	２		IP	２		IP	３		IP	４		IP	２		IP	３		IP
+大場　　　敏	5.20	0.11	2.2	４		G3	４		IP	４		IP	５		IP	３		IP	３		IP	３		IP	４		IP	１		IP	３		IP
+高橋　　　勲	5.60	0.13	2.6	３		G3	６		IP	１		IP	４		IP	６		IP	１		IP	５		IP	１		IP	５		IP	１		IP
+小黒　　竜吾	3.50	0.16	3.8	５		G3	４		IP	１		IP	６		IP	４		IP	６		IP	４		IP	３		IP	５		IP	６		IP
+野中　　義生	4.50	0.16	3.2	２		G3	４		G3	２		G3	５		G3	３		IP	３		IP	６		IP	２		G3	６		G3	６		IP

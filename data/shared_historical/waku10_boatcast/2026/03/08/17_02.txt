@@ -1,0 +1,8 @@
+data=
+1	0
+白井　　友晴	5.90	0.20	4.3	５		IP	２		IP	４		IP	３		IP	１		IP	１		IP	３		IP	４		IP	２		IP	６		IP
+山本　　英志	5.80	0.12	2.8	２		IP	４		IP	３		IP	３		IP	３		IP	４		IP	４		IP	２		IP	４		IP	２		IP
+君島　　秀三	5.20	0.14	2.2	６		IP	２		IP	１		IP	２		IP	４		G1	１		G1	６		IP	４		G3	５		G3	５		G3
+小林　　一樹	5.90	0.14	2.4	１		IP	３		IP	１		IP	２		IP	４		IP	３		IP	６		IP	４		IP	３		IP	４		IP
+石井　　伸長	4.90	0.20	3.9	５		IP	１		IP	転		IP	２		IP	３		IP	２		IP	３		IP	６		IP	４		IP	４		IP
+松山　　裕基	3.80	0.18	4.0	５		IP	２		IP	５		IP	２	5	IP	３		IP	５		IP	６		IP	４	5	IP	４		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+山口　　　剛	10.80	0.13	3.6	１		G1	１		SG	１		SG	１		G1	１		G1	１		IP	１		IP	１		IP	１		IP	２		SG
+原田　　幸哉	4.90	0.14	3.2	５		G1	５		SG	２		G1	Ｆ		IP	３		G1	３		G1	２		G1	６		G1	５		SG	５		SG
+関　　　浩哉	6.60	0.14	3.5	５		G1	１		SG	６		SG	４		G1	３		G1	１		G1	６	4	G1	２		G1	１		G1	６		SG
+山崎　　　郡	5.70	0.13	3.3	１		G1	６		SG	５		G1	４		IP	３		IP	４		G1	４		G1	３		G1	５		G1	１		IP
+大上　　卓人	5.40	0.12	3.0	３		G1	４		G1	４		G1	２		IP	４		IP	６		IP	３		SG	６		G1	３		G1	５		G1
+白神　　　優	3.40	0.17	3.7	５		G1	３		IP	５		IP	４		IP	５		IP	４	5	G1	６		G1	６		G1	Ｆ		G1	２		IP

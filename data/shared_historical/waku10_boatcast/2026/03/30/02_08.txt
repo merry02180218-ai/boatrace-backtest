@@ -1,0 +1,8 @@
+data=
+1	0
+石原　　凪紗	5.70	0.20	4.2	１		IP	２		IP	６		IP	５		IP	３		IP	１		IP	１		G3	６		IP	６		IP	２		IP
+丸岡　　正典	7.30	0.16	3.3	２		G2	２		IP	１		IP	２		IP	２		IP	４		IP	３		IP	２		G2	６		IP	１		IP
+古賀　　繁輝	5.20	0.13	3.1	１		G2	４		G2	６		G1	６		G1	５		IP	５		IP	１		IP	３	4	IP	４	4	G1	３		IP
+松下　　哲也	4.40	0.21	3.2	３	6	IP	６		IP	５	5	IP	４		IP	４		IP	１		IP	１		IP	４		IP	６		IP	５		IP
+久保田　凪紗	1.50	0.19	3.9	５		IP	６	6	G3	５		G3	５	6	IP	５		IP	６		IP	５		G3	６	6	G3	６		IP	６	4	IP
+島川　　海輝	2.80	0.17	4.7	６	3	G2	５		IP	５		IP	５		IP	５		IP	４		IP	４		IP	５		IP	３		IP	５		IP

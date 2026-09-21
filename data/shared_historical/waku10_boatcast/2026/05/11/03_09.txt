@@ -1,0 +1,8 @@
+data=
+1	0
+中野　　次郎	9.20	0.09	1.7	１		IP	１		IP	１		G1	１		G1	Ｆ		G1	１		IP	１		IP	１		IP	１		G1	２		G1
+湯川　　浩司	7.30	0.13	3.7	４		IP	３		IP	３		G1	４		G1	３		G1	４		G1	２		G2	２		G2	１		IP	１		G1
+酒見　　峻介	4.67	0.15	3.8	３	2	IP	３		IP	１		IP	６		IP	５	5	IP	６		IP	転		IP	１		IP	５	4	IP	４		IP
+金田　　智博	6.40	0.14	2.8	４		IP	１		IP	５		IP	３		IP	３		IP	３		IP	３		IP	２		IP	３		IP	１	5	IP
+津久井　拓也	5.80	0.14	2.6	３		IP	２		IP	３	4	IP	３		IP	２		IP	３	4	IP	５		IP	４		IP	３		IP	３		IP
+渡邉　　雄朗	5.70	0.21	3.5	５	5	IP	３		IP	６		IP	４	5	G1	４		G1	６		G1	１		IP	２		IP	１	5	IP	２		IP

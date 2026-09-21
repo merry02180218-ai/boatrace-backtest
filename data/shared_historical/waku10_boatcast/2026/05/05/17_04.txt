@@ -1,0 +1,8 @@
+data=
+1	0
+入海　　　馨	8.70	0.14	2.9	１		IP	１		IP	１		G1	２		G1	１		G1	１		G1	５		G1	２		G1	６		G1	１		G1
+永田　　義紘	6.00	0.14	2.7	２		IP	３		IP	１		IP	４		IP	４		IP	５		IP	４		IP	３	3	IP	２		IP	２		IP
+山下　　流心	3.10	0.16	3.1	２		IP	６		IP	６		IP	転		IP	２		IP	３		IP	４		G3	６	4	G3	６		IP	６		IP
+北川　　幸典	5.30	0.21	3.3	４		IP	４		IP	３		IP	３	6	IP	２		IP	４		IP	６	5	IP	３		G3	２		IP	３		IP
+谷　　海夏人	2.80	0.25	4.9	６	6	IP	６	6	IP	６	6	IP	Ｆ	6	IP	２	6	IP	転	6	IP	６	6	IP	３	6	IP	５	6	IP	２	6	IP
+山崎　　裕司	2.40	0.18	3.7	６		IP	６		IP	４		IP	６		IP	５		IP	５	5	IP	５	5	IP	６		IP	４		IP	５		IP

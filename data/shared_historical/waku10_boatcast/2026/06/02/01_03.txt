@@ -1,0 +1,8 @@
+data=
+1	0
+増本　　杏珠	6.22	0.16	3.0	３		IP	４		IP	２		IP	５	3	IP	１		IP	２		IP	２		IP	２		IP	５		IP			IP
+入澤　　友治	4.80	0.18	3.6	４		IP	４		IP	４		IP	２		IP	２		IP	６	3	IP	６		IP	３		IP	５		IP	１		IP
+原　　加央理	4.90	0.14	1.9	２		IP	４		IP	４		IP	５		G3	４		IP	４		IP	３	4	IP	２		IP	２		IP	６		IP
+鈴谷　　一平	6.00	0.15	2.8	１		IP	３		IP	２		IP	４		IP	１		IP	２	5	IP	５		IP	６		G1	３		G1	６		IP
+折下　　寛法	4.90	0.16	3.0	５		IP	５		IP	４	6	IP	４		IP	４		G3	６		G3	１		IP	２		IP	１		IP	４		IP
+上田　　健太	2.90	0.21	4.2	３		IP	６		IP	６		IP	６		IP	５		IP	４		G3	４		G3	５		IP	４		IP	５		IP

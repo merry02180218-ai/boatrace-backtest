@@ -1,0 +1,8 @@
+data=
+1	0
+津久井　拓也	7.50	0.15	3.5	１		IP	３		IP	２		IP	４		G2	２		IP	１		IP	３		IP	４	2	IP	１		IP	２		IP
+清水　　紀克	4.30	0.17	3.1	２		IP	６	3	IP	４		IP	５		IP	４		IP	２		IP	３		IP	２		IP	６		IP	６		IP
+岡谷　　健吾	6.30	0.17	4.0	６	4	IP	５		IP	２		IP	１		IP	３		IP	１		IP	１		IP	２		IP	５		IP	３		IP
+川上　　　剛	5.50	0.17	3.1	３		IP	６		IP	２		IP	３		IP	４		IP	５		IP	２		IP	４		IP	３		IP	１		IP
+堤　　　啓輔	5.10	0.14	3.2	２		IP	６	2	IP	３		IP	５		IP	３		IP	３	4	IP	５	6	IP	５	6	IP	１	2	IP	２		IP
+田中　　　結	1.50	0.19	4.6	５		IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP	４		IP	６		IP	転		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+片橋　　幸貴	6.80	0.13	2.5	１		IP	１		IP	２		IP	４		IP	４		IP	１		IP	転		IP	２		IP	３		IP	２		IP
+是澤　　孝宏	5.00	0.15	3.7	５		IP	２		IP	４		IP	３		IP	４		IP	２		G2	１		G2	６		IP	６	3	IP	４		IP
+黒柳　　浩孝	3.50	0.14	3.2	６		IP	５		IP	４		IP	４		G2	５		G2	４		IP	４		IP	３		IP	５		IP	４		IP
+荒井　　輝年	6.00	0.10	2.4	２		IP	２		IP	１	5	IP	４		IP	１		IP	４	3	IP	３	5	IP	２	5	IP	５		IP	転		IP
+村越　　　篤	2.80	0.17	4.1	５		IP	４		IP	６		IP	３	4	IP	５		IP	６		IP	４		IP	６		IP	３		IP	６		IP
+吉武　　真也	2.11	0.23	5.6	４		IP	４		IP	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP	５		IP	欠		IP

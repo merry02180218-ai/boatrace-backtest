@@ -1,0 +1,8 @@
+data=
+1	0
+尾道　　佳諭	4.70	0.18	3.0	４		IP	４		IP	１		IP	１		IP	５		IP	５		IP	Ｆ		IP	１		IP	６		IP	４		IP
+赤峰　　和也	3.90	0.19	3.3	４		IP	４		IP	３		IP	５	3	IP	５		IP	２		IP	５		IP	６		IP	５		IP	２		IP
+佐藤　　　旭	6.00	0.16	4.2	２		IP	３		G3	４	4	IP	２		IP	３		IP	５		G3	３		IP	３		IP	１		IP	４		IP
+石渡　　鉄兵	7.60	0.13	3.4	１	3	IP	２		G1	３		G1	３	5	G1	５		G1	１		IP	４		SG	５		SG	２		G1	１		G1
+鈴木　結平太	2.30	0.22	4.3	６		IP	５	6	IP	６		IP	６	6	IP	５		IP	５		IP	６		IP	２		IP	６	6	IP	４		IP
+下河　　誉史	4.50	0.21	4.5	２		IP	５	5	IP	４	4	IP	５	4	IP	５		IP	５		IP	６		IP	２	5	IP	２	4	IP	２	2	IP

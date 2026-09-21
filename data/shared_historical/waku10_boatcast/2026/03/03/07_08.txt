@@ -1,0 +1,8 @@
+data=
+1	0
+藤原　　早菜	8.70	0.17	3.9	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		G1	１		IP	３		IP	４		IP
+山本　　寛久	4.20	0.18	3.5	６		IP	６		G1	２		IP	５		IP	転		IP	６		IP	４		IP	２		IP	２		IP	２		IP
+村上　　彰一	4.40	0.19	4.0	６		IP	６		IP	２		IP	５		IP	１		IP	３		IP	５		IP	４		IP	３		IP	４		IP
+渡　　　修平	2.70	0.19	4.3	６		IP	３		IP	６	5	IP	５		IP	４		IP	４		IP	５	5	IP	５	5	IP	４	5	IP	６		IP
+森　　　竜也	3.30	0.18	4.1	４		IP	５		IP	５	3	IP	４		IP	６	3	IP	５		IP	３	3	IP	４	4	IP	４		IP	４	4	IP
+芦澤　　　望	3.60	0.14	2.9	６		IP	５		IP	２	5	IP	４		IP	５		IP	４		IP	３		IP	４	3	IP	６		IP	４		IP

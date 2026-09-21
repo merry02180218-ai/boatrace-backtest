@@ -1,0 +1,8 @@
+data=
+1	0
+豊田　　　結	8.20	0.13	1.8	１		G3	４		IP	２		IP	２		IP	２		IP	３		IP	２		IP	１		IP	１		IP	１		IP
+門田　　　栞	5.10	0.18	4.1	５		G3	３		G3	３	3	IP	６		IP	３		IP	２		IP	２		IP	４		IP	２		IP	５		IP
+寺田　　千恵	6.11	0.21	3.8	４		G3	２		G1	２		G1	５		G3	２		G3	６		IP	落		G3	２		IP	４		IP	３	4	IP
+岩崎　　麗子	3.00	0.17	2.6	６		G3	４		G3	２		IP	５		IP	４		IP	５		IP	５		IP	４		IP	５		IP	６		IP
+中北　　　涼	3.30	0.23	4.1	６		G3	４		IP	３		IP	５		IP	３		IP	６		G3	４		G3	６	4	IP	３		IP	５	6	IP
+中谷　　朋子	3.60	0.23	4.8	３		G3	５		G3	５		IP	４	2	IP	３		G3	３		IP	４	5	IP	６		IP	４	5	IP	６	4	IP

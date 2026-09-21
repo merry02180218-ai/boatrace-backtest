@@ -1,0 +1,8 @@
+data=
+1	0
+新開　　　航	10.50	0.13	2.8	１		G2	１		IP	２		IP	１		G1	１		G1	１		G1	１		G1	１		IP	１		G1	１		G1
+古賀　　繁輝	6.60	0.14	2.4	２		G2	３		G1	６		IP	２		G1	１		IP	２		IP	４		IP	５		IP	１		IP	３		IP
+武富　　智亮	7.00	0.14	2.5	１		G2	１		IP	４		IP	５		IP	３		IP	５		G1	２		G1	２		G1	２		IP	２		IP
+上野　真之介	8.10	0.14	2.4	４		G2	２		G1	２		G1	２		G1	３		G1	４		G1	２		IP	２		IP	１		IP	１		IP
+河野　　　大	5.60	0.16	3.3	２		G2	４		IP	３		IP	３		G1	６		G1	４		G2	６		G2	３		IP	３	4	IP	２		IP
+西橋　　奈未	4.40	0.14	3.3	５		G2	３		IP	５		G1	２	5	IP	６		G1	６		G1	３		G2	４		IP	６		IP	２		G3

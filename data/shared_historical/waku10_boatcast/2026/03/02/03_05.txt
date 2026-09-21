@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　啓太	6.00	0.17	3.8	２		IP	５		IP	３		IP	４		IP	２		IP	５		IP	３		IP	２		IP	２	3	IP	２		G3
+古田　　祐貴	5.00	0.14	2.4	Ｆ		IP	３		IP	２		IP	４		IP	６		G1	６		G1	３		IP	１		IP	３		IP	３		IP
+香月　　大輝	6.00	0.13	2.0	１		IP	３		IP	５		IP																					IP
+木山　　誠一	3.30	0.11	2.2	６	5	IP	４		IP	５		IP	５		IP	２		IP	４		IP	６		IP	４		IP	３		IP	６		IP
+宮田　　龍馬	6.00	0.14	2.9	４		IP	４		G1	５		G1	１		IP	２		IP	４		IP	３		IP	５		G1	３		IP	１	4	IP
+原村　　拓也	3.10	0.22	4.9	６		IP	６		IP	５		IP	３		IP	５		IP	５		IP	６		IP	４		G3	３		IP	３		G3

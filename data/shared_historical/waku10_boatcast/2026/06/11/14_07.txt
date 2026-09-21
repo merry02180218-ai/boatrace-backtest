@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　二朗	3.80	0.20	4.1	２		IP	１		IP	５		IP	５		IP	３		IP	５		IP	６		IP	６		IP	４		IP	５		IP
+池田　　雄一	6.50	0.15	2.9	２		IP	５	3	IP	４		IP	１		IP	５		IP	２		IP	２		IP	４		IP	２		IP	１		G1
+浜本　　裕己	4.40	0.14	3.1	３		IP	３		IP	４		IP	３		IP	３		IP	４		IP	６		IP	２		IP	５		IP	６		IP
+眞鳥　　章太	3.90	0.17	3.1	４		IP	５		IP	３		IP	５	5	IP	４		IP	４		IP	６		IP	３		IP	１		IP	Ｆ	5	IP
+高橋　　龍治	5.60	0.18	2.9	４		IP	５		IP	３		IP	２		IP	２		IP	１		IP	３		IP	３	6	IP	５		IP	４		IP
+薗頭　　　心	1.30	0.20	4.0	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	５		IP	６		IP	６		IP

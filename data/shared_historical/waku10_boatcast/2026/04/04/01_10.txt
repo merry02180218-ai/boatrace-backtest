@@ -1,0 +1,8 @@
+data=
+1	0
+江口　　晃生	8.20	0.15	3.0	１		IP	２		IP	１		IP	３		IP	６		IP	１		IP	２		IP	１		IP	２		IP	１		IP
+川崎　　智幸	6.70	0.13	3.2	３		IP	１	3	IP	１	3	IP	３		IP	１		IP	４		IP	４		IP	３		IP	５		IP	２		G1
+島田　　賢人	6.80	0.16	3.5	３	4	IP	１		IP	４		IP	３		IP	４		IP	３		IP	３		IP	１		IP	２		IP	２		IP
+眞崎　　武蔵	2.20	0.18	4.6	４		IP	４	6	IP	６		IP	６	5	IP	６		IP	Ｆ		IP	２		IP	６	6	IP	６	6	IP	６		IP
+山下　　和彦	3.90	0.18	3.6	２		IP	３		IP	６		IP	３		IP	５		G1	６		G1	２		IP	６		IP	５		IP	５		IP
+大塚　　康雅	3.50	0.20	4.4	４		IP	６		IP	４		IP	５		IP	５		IP	５		IP	２	5	IP	３	5	IP	４		IP	５		IP

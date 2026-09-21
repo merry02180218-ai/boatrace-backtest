@@ -1,0 +1,8 @@
+data=
+1	0
+岩川　　仁士	7.80	0.15	2.2	１		IP	１		IP	１		IP	１		IP	１		IP	４		IP	５		IP	１		IP	１		G3	５		IP
+坂東　　　満	5.20	0.16	2.4	１		IP	６		IP	６		IP	２		IP	５		IP	失		IP	１	3	IP	５		IP	１		IP	２		IP
+芝田　　浩治	6.20	0.16	2.1	２		IP	２		IP	３	2	IP	２		IP	３		IP	５		IP	５		IP	３		IP	２		IP	２		IP
+伊藤　　誠二	5.70	0.15	2.1	１		IP	３		IP	５	5	IP	４		IP	２		IP	１		IP	２		IP	３		IP	６		IP	５		IP
+真田　　聖也	1.60	0.13	2.9	６	6	IP	６	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	４	6	IP	６	6	IP	５	6	IP	５	6	IP
+渡邊　　雄斗	2.00	0.23	4.0	５		IP	５		IP	５		IP	５		IP	転		IP	５		IP	６		IP	４	5	IP	４	5	IP	６		IP

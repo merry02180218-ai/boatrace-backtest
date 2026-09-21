@@ -1,0 +1,8 @@
+data=
+1	0
+石渡　翔一郎	8.40	0.12	2.3	１		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	５		IP	２		IP	２		IP
+藤山　　翔大	6.10	0.20	3.6	２		IP	２		IP	２	3	IP	２		IP	５		IP	５		IP	５		IP	１	3	IP	１		IP	５		IP
+牟田　　奨太	5.90	0.12	2.7	４		IP	２		IP	１		IP	３		IP	４	4	IP	５		IP	１		IP	３		IP	６		IP	２		IP
+渡辺　　　豊	4.00	0.23	5.2	６		IP	４		IP	４		IP	３		IP	６	6	IP	５		IP	転		IP	２		IP	２		IP	３		IP
+菊池　　峰晴	3.10	0.20	4.5	３	6	IP	３		IP	５	4	IP	５		IP	５		IP	４		IP	５		IP	４		IP	５		IP	６	6	IP
+松井　　賢治	4.00	0.15	3.7	６		IP	３		IP	２		IP	４		IP	３		IP	５		IP	６	5	IP	４	5	IP	５		IP	４	4	IP

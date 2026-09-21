@@ -1,0 +1,8 @@
+data=
+1	0
+村上　　功祐	7.00	0.16	3.2	１		IP	３		IP	１		IP	１		IP	６		IP	１		IP	５		IP	１		IP	１		IP	６		IP
+汐崎　　正則	5.70	0.16	4.2	２		IP	１		IP	４		IP	６		IP	３		IP	３		IP	４		IP	３		IP	４		IP	２		IP
+北中　　元樹	6.20	0.17	3.0	５		IP	４		IP	転	4	IP	２		IP	２		IP	４		IP	２		IP	１		IP	１		IP	２		IP
+橋本　　年光	4.80	0.17	4.5	５		IP	２		IP	４		IP	５		IP	４		IP	３		IP	５		IP	３		IP	２		IP	３	5	IP
+八木　　治樹	2.22	0.11	2.5	６	6	IP	６		IP	４		IP	６		IP	転		IP	３		IP	４		IP	６		IP	６	6	IP	６		G3
+繁野谷　圭介	3.20	0.19	4.4	４		IP	５		IP	５		IP	４		IP	４	5	IP	５	5	IP	３		IP	４		IP	５		IP	５		IP

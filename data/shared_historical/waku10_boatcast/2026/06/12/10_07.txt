@@ -1,0 +1,8 @@
+data=
+1	0
+眞崎　　武蔵	3.00	0.23	4.8	５		IP	６		IP	６		IP	３		IP	６	2	IP	４		IP	３		IP	３		IP	６		IP	５		IP
+松本　　博昭	7.00	0.18	3.9	２		IP	４		IP	１	4	IP	４	3	IP	４		IP	２		IP	２		IP	１		IP	２		IP	３		IP
+小池　　公生	5.30	0.17	3.9	３		IP	１		IP	２		IP	１		IP	１		IP	６		IP	５		IP	５		IP	５		IP	５		IP
+村上　　功祐	5.70	0.14	2.8	６	5	IP	２		IP	３		IP	３		IP	４		IP	４		IP	３		IP	５		IP	２		IP	１		IP
+岩津　　徹郎	3.20	0.18	3.8	２		IP	３	4	IP	５		IP	転		IP	５	6	IP	４		IP	５		IP	５		IP	５		IP	４		IP
+大久保信一郎	3.60	0.20	4.6	４		IP	６		G3	３		IP	３		IP	５		IP	３	5	IP	５		IP	５		IP	５		IP	４		IP

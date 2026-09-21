@@ -1,0 +1,8 @@
+data=
+1	0
+岩永　　節也	5.60	0.15	3.3	６		IP	５		IP	１		IP	５		IP	２		IP	６		IP	１		IP	２		IP	４		IP	１		IP
+常住　　　蓮	8.80	0.13	1.9	２		IP	２		IP	２		G1	２		IP	３		IP	２		SG	２		SG	２		IP	１		IP	１		IP
+吉田　　　光	4.56	0.12	2.8	３	4	IP	２		IP	転		IP	４		IP	２		G3	６		IP	３		IP	５		IP	５		IP	４		G3
+久保田　凪紗	1.90	0.22	3.6	６	5	IP	３		G3	４		G3	６		G3	６		IP	６		IP	６		G3	５		G3	６	6	IP	６		G3
+富永　夏哉人	3.40	0.18	4.0	４		IP	６		IP	２		IP	５		IP	４		IP	３		IP	５		IP	６		G3	４	6	G3	５		IP
+知念　　伶奈	0.50	0.14	3.0	Ｆ		IP	６		IP																								IP

@@ -1,0 +1,8 @@
+data=
+1	0
+平尾　　崇典	8.90	0.12	2.3	３		G1	１		IP	１		G1	１		G1	４		G2	３		G2	１		IP	１		IP	２		IP	１		IP
+佐々木　大河	7.00	0.15	2.9	３		G2	３		G2	２		IP	４		IP	３	3	IP	２		IP	１		IP	２		IP	２		IP	４		IP
+片岡　　恵里	6.30	0.18	3.3	５		G3	２		G3	２		G3	２		G3	４		G3	４		G1	６		G1	２		IP	２		IP	１		G3
+浜崎　　準也	3.70	0.21	3.9	６		IP	６		IP	５		IP	転		IP	４		IP	２		IP	４		IP	６		IP	２		IP	２		IP
+門間　　雄大	3.89	0.18	2.9	３		IP	３		IP	５		IP	３		IP	欠		IP	６		IP	２		IP	６		IP	５		G3	６		G3
+星田　　夢結	1.11	0.22	5.4	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	不		IP	６		IP	６		IP	６		IP

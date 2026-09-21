@@ -1,0 +1,8 @@
+data=
+1	0
+森安　　弘雅	6.90	0.18	4.5	４		IP	２		IP	１		IP	１		IP	６		IP	１		IP	４		IP	１		IP	３		IP	３		IP
+三角　　哲男	7.20	0.12	2.7	３		IP	４		IP	１		IP	４	3	IP	１		IP	２	3	IP	２		IP	１		IP	５		IP	１		IP
+中山　　　将	6.40	0.12	2.1	２		IP	１		IP	１		IP	Ｆ		IP	４		IP	２		IP	１		IP	５		IP	３	5	IP	３		IP
+関口　　智久	4.60	0.13	3.2	５		IP	４	5	IP	４		IP	３		IP	３		IP	１		IP	４		IP	２		IP	６		IP	６		IP
+武藤　　綾子	3.10	0.19	3.9	６		IP	５		IP	３		IP	４		G3	５	6	IP	６		IP	５	6	G3	６		G3	２		IP	４		IP
+渡邉　　雄朗	4.10	0.20	3.4	５	5	IP	３		IP	６		G2	５	5	IP	３		IP	６		IP	４	5	G1	４		G1	６		G1	１		IP

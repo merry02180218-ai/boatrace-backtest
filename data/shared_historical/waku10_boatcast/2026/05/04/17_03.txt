@@ -1,0 +1,8 @@
+data=
+1	0
+永田　　義紘	7.30	0.15	2.6	１		IP	２		IP	６	2	IP	１		IP	１		IP	３		IP	３		IP	４		IP	２		IP	１		IP
+森　　　智哉	6.00	0.15	2.8	転		IP	２		IP	２		IP	２		IP	５	3	IP	３		IP	４		IP	４		IP	２		IP	３		IP
+山本　景士郎	6.60	0.18	3.9	３		IP	２		IP	１		IP	２		IP	２		IP	２		IP	３		IP	５		IP	２		IP	５		IP
+井上　　大輔	4.70	0.13	2.6	５		IP	４		IP	３		IP	５		IP	５		G3	６		G3	３		IP	２		IP	３	5	IP	１		IP
+麻生　　慎介	5.90	0.14	2.1	１		IP	１		IP	４		G1	４	6	G1	６	4	IP	４		G1	５		G1	２		IP	３		IP	３		IP
+大上　　卓人	6.20	0.16	4.0	３	5	IP	１		IP	２		IP	４		SG	４		G1	６		G1	３		G1	２		G1	６	5	IP	２	5	IP

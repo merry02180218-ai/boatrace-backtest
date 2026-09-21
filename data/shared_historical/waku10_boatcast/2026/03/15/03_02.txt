@@ -1,0 +1,8 @@
+data=
+1	0
+大森　　　翼	5.50	0.21	4.2	５		IP	１		IP	４		IP	３		IP	４		IP	６		IP	４		IP	１		IP	３		IP	２		IP
+鈴木　　　猛	4.10	0.16	3.1	６		IP	１		IP	５		IP	５		IP	３		IP	４		IP	５		IP	転		IP	３		IP	２		IP
+上田　　隆章	5.00	0.22	4.7	２		IP	６		IP	２		IP	２		IP	５		IP	１		IP	６		IP	４		IP	３		IP	５		IP
+尾形　　栄治	3.70	0.24	4.4	５		IP	５		IP	３		IP	５	6	IP	２		IP	５		IP	５		IP	６		IP	４		G3	２		IP
+金田　　智博	4.11	0.16	3.4	５		IP	５		IP	３		IP	３	6	IP	４		IP	２		IP	４		IP	５		IP	エ		IP	５		IP
+小野　　京平	2.90	0.24	5.0	５		IP	５		IP	３		IP	４		IP	６		IP	４		IP	５	5	IP	６		IP	３		IP	６		IP

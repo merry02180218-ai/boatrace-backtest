@@ -1,0 +1,8 @@
+data=
+1	0
+平田　健之佑	6.70	0.11	3.0	２		IP	１		IP	６		G1	１		G1	３		IP	６		IP	１		IP	１		IP	２		IP	６		IP
+品田　　直樹	6.50	0.18	3.4	４		IP	５	3	IP	１		IP	２		IP	３		IP	３		IP	４		IP	３		IP	２		IP	１		IP
+佐々木　翔斗	6.40	0.15	3.3	２		IP	妨		IP	３		IP	２		IP	３	2	IP	１		IP	３		IP	３		IP	２		IP	３		IP
+高山　　秀雄	2.10	0.21	3.9	４		IP	４		IP	５		IP	５		IP	６		IP	５		IP	５		IP	６		IP	５		G3	６		G3
+北野　　輝季	6.90	0.14	2.2	２		G1	２		G1	３		G1	６		G1	６		IP	１		IP	３		IP	３		IP	２		IP	１		G1
+竹腰　　正樹	3.20	0.20	4.6	６		IP	６		IP	６		IP	４		IP	３		IP	５		IP	４		IP	３		IP	３		IP	６		IP

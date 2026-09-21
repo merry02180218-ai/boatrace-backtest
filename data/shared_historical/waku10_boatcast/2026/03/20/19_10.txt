@@ -1,0 +1,8 @@
+data=
+1	0
+高倉　　和士	8.33	0.13	2.0	２		IP	２		IP	６		G1	１		G1	１		IP	１		IP	３		IP	欠		IP	１		IP	１		IP
+向井　　美鈴	6.80	0.23	3.8	２		IP	２		G1	１		IP	２		IP	３		IP	１		IP	４		IP	４		IP	２		G3	６		IP
+中山　　　将	5.90	0.13	2.5	５		IP	３	5	IP	３		IP	２		IP	６		IP	１		IP	５		IP	３		IP	１		IP	２		IP
+酒見　　峻介	4.40	0.18	3.1	５		IP	５		IP	３		IP	４		IP	５		IP	２		IP	Ｆ		IP	５		IP	２		IP	２	3	IP
+稲生　　夏季	5.00	0.23	4.7	４		IP	１		IP	Ｆ		G3	３		G3	３		G3	４		IP	４		IP	３		IP	３		IP	４		G3
+白井　　友晴	2.70	0.19	3.6	５		IP	５		IP	５		IP	４		IP	５		IP	５		IP	４		IP	６		IP	５		IP	３		IP

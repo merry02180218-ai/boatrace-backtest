@@ -1,0 +1,8 @@
+data=
+1	0
+古川　　誠之	9.00	0.17	3.2	１		G3	２		IP	３		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP
+浜野　　孝志	6.10	0.19	4.1	１		G3	２	3	IP	１		G2	４	3	IP	５		IP	５	3	IP	４		IP	２		IP	３		IP	３		IP
+石川　　真二	4.80	0.14	3.1	１	2	G3	４	2	G3	６	2	IP	１	2	G3	転	1	G3	６	2	G3	３	2	IP	１	1	IP	５	2	IP	４	2	IP
+武田　　光史	4.90	0.16	3.1	６		G3	２		IP	３		IP	４		IP	４	3	IP	６		IP	１		IP	１		IP	６		IP	５		IP
+齊藤　　　仁	4.40	0.18	3.5	３		G3	４		G1	６		G1	３		G3	１		IP	５		IP	５		IP	３	6	G1	５		IP	５		G3
+繁野谷　圭介	3.20	0.18	3.1	４		G3	４	5	IP	４		IP	２		IP	５		IP	６		IP	６		IP	４		IP	５		IP	５		IP

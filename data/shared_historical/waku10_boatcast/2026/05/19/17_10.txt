@@ -1,0 +1,8 @@
+data=
+1	0
+嶋田　　有里	7.00	0.14	2.1	３		IP	１		IP	３		IP	３		IP	２		IP	１		IP	１		IP	５		IP	５		IP	１		IP
+河野　　真也	6.70	0.16	4.0	１		IP	２		IP	５		IP	３		IP	１		IP	６		IP	５		IP	１	1	IP	１	3	IP	２		IP
+武田　　正紀	5.30	0.13	2.6	１		IP	３		IP	５		IP	３	2	IP	２		IP	５		IP	６		IP	１		IP	４		IP	４	4	IP
+井芹　　大志	3.60	0.18	4.7	５		IP	２		IP	５		IP	６		IP	５		IP	６		IP	４		IP	３		IP	３		IP	４		IP
+西村　　拓也	7.30	0.12	2.7	２		IP	３		IP	２		IP	１		IP	２		IP	３		G1	６		G1	１	4	IP	３	3	IP	２	4	IP
+中島　　友和	2.40	0.18	3.8	５		IP	６		IP	５		IP	３		IP	４		IP	６		IP	５		IP	６		IP	４		IP	６		IP

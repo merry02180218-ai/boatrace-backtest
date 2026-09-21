@@ -1,0 +1,8 @@
+data=
+1	0
+武田　　光史	8.10	0.17	3.2	１		IP	１		IP	６		IP	１		IP	１		IP	３		IP	２		IP	３		IP	１		IP	１		IP
+三浦　　敬太	6.30	0.16	3.0	１		IP	２		IP	４		IP	１		IP	２		IP	５		IP	６		IP	２		IP	２		IP	４		IP
+太田　　　潮	3.90	0.16	2.9	４		IP	６		IP	６		IP	５		IP	３		IP	６		IP	２		IP	２		IP	４		IP	４		IP
+久保原　秀人	4.20	0.18	3.7	５		IP	２	3	IP	４		IP	６		IP	２		IP	２		IP	４		IP	４		IP	５		IP	６		IP
+永嶋　　裕一	4.80	0.15	3.6	４		IP	６		IP	４		IP	３		IP	５		IP	２		IP	１		IP	６		IP	３	4	IP	３		IP
+長谷川　晴哉	3.10	0.22	4.3	４		IP	３		IP	４		IP	５		IP	５		IP	５		IP	６		IP	３		IP	５		IP	５		IP

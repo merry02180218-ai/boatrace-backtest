@@ -1,0 +1,8 @@
+data=
+1	0
+樋江井　　舞	4.20	0.23	4.4	５		IP	３		G3	６		IP	５		IP	１		IP															IP
+根岸　　真優	4.00	0.17	3.0	３		IP	６		IP	６	3	IP	３		IP	６		IP	４		IP	６		IP	１		IP	３		IP	４		IP
+浜田　亜理沙	6.20	0.16	2.2	１		IP	２		G3	３		G3	２		G3	６		G2	落	2	IP	５		IP	１		IP	３		G1	２		G1
+蜂須　　瑞生	4.40	0.15	2.7	４		IP	１	6	IP	５		IP	４		IP	３		IP	Ｆ		IP	２		IP	５		G3	５		G3	３		IP
+渡辺　　千草	2.60	0.14	3.2	４		IP	５		IP	５		IP	６		IP	５		IP	４		IP	６		IP	３		IP	５		IP	５		G3
+市川　　瑚幸	1.80	0.21	5.2	６		IP	４		IP	６		IP	６		IP	４		IP	５		IP	６		IP	５		IP	６		IP	６		IP

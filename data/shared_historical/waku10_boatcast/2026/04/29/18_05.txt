@@ -1,0 +1,8 @@
+data=
+1	0
+中井　　俊祐	7.80	0.17	3.0	１		IP	３		IP	１		IP	２		IP	２		IP	１		IP	４		IP	１		IP	５		IP	１		IP
+海野　康志郎	7.30	0.15	3.5	２		G1	５		G1	１		G1	１		G1	６		G1	４		G1	２		G1	５		G1	１	1	IP	１	1	IP
+阪本　　勇介	4.80	0.21	3.7	転		IP	４		IP	１	4	IP	４		IP	４		IP	４		IP	３		IP	３		IP	３	4	IP	４		IP
+吉村　　正明	6.70	0.09	2.2	２		G3	４		G3	２		G3	２		IP	６		IP	１	3	IP	６		IP	２		IP	１		IP	２		IP
+廣中　　良一	3.30	0.17	3.6	６		IP	６		IP	４		G3	３		IP	４		IP	５	6	IP	５		IP	６	4	IP	４		IP	２	4	IP
+笹木　　香吾	4.10	0.19	4.2	５		G2	６		G2	４		IP	６		IP	２		IP	６		IP	４	5	IP	３	4	IP	５		IP	１	5	IP

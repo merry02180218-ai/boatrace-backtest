@@ -1,0 +1,8 @@
+data=
+1	0
+土屋　　　蘭	5.90	0.20	3.9	６		IP	３	2	IP	１		IP	１		IP	３		IP	３		IP	３		IP	５		IP	４		IP	２		IP
+白井　　友晴	5.60	0.16	3.9	４		IP	４		IP	４		IP	３		IP	２		IP	５		IP	２	3	IP	２		IP	４		IP	２		IP
+亀山　　雅幸	6.80	0.15	2.9	６		IP	６	4	IP	２		IP	１		IP	１		IP	２		IP	２		IP	１		IP	２		IP	４	4	IP
+山谷　　　央	4.30	0.16	3.3	２		IP	３		IP	４		IP	４		IP	３		IP	４		IP	４		IP	４		IP	５		IP	６		IP
+芝田　　浩治	5.20	0.20	3.4	６		IP	３	4	IP	２		IP	１		IP	３		IP	６		IP	５		IP	３		IP	５		IP	２		IP
+渡辺　　空依	2.40	0.21	5.6	６		IP	６		IP	５		IP	４		IP	５		IP	３		IP	５		IP	６		IP	６		IP	４		IP

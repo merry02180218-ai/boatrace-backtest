@@ -1,0 +1,8 @@
+data=
+1	0
+村松　　修二	7.60	0.16	3.8	１		IP	５		IP	１		IP	２		IP	１		IP	３		IP	４		IP	１		IP	３		IP	１		IP
+馬野　　　耀	5.40	0.15	3.6	３		IP	４		IP	３		IP	５		IP	３		IP	３		IP	５		IP	２		IP	３		IP	２		IP
+渡邉　　優美	4.30	0.16	3.2	５		G2	４		G3	３		G3	４		G1	４		IP	２		IP	６		SG	６		SG	６		IP	４		IP
+片岡　　雅裕	6.90	0.10	2.2	３		IP	２		G1	２		G1	６		G1	２		G1	５		G1	１		IP	３		G1	３		IP	２		IP
+浜野　　孝志	4.40	0.18	3.4	５		IP	４		IP	５		IP	５		IP	６		IP	３		IP	４		IP	２		IP	２		IP	３	6	IP
+吉田　　拡郎	6.30	0.12	3.0	２	5	IP	１		IP	５		IP	１		IP	６	5	IP	３	5	IP	３		G1	３		G1	５		G1	３		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+小川　竜太朗	8.60	0.15	3.9	２		IP	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	２		IP	２		IP	２		IP
+西村　　豪洋	4.40	0.18	4.0	３		IP	２		IP	２		G3	４		G3	４		IP	３		IP	４		IP	６		IP	６		IP	５		IP
+大場　　恒季	5.20	0.15	2.9	５		IP	４		IP	６		IP	２		IP	４		IP	３		IP	３		IP	３		IP	２		IP	３		IP
+米本　　圭佑	2.00	0.18	4.0	５		IP																											IP
+小澤　　和也	4.50	0.17	3.0	３	3	IP	２	3	IP	３		IP	５		IP	３		IP	６		IP	６		IP	６		IP	４		IP	１		IP
+大澤　　普司	5.70	0.18	3.3	４		G3	１		IP	５		IP	３		IP	３		IP	４		G1	６		G1	５		IP	１	5	IP	１	5	IP

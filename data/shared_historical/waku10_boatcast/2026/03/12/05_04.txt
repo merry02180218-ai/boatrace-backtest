@@ -1,0 +1,8 @@
+data=
+1	0
+一色　　凌雅	7.20	0.18	3.8	３	3	G3	３		IP	１		IP	１		IP	３		IP	１		IP	転		IP	１		IP	３		IP	２		IP
+岩川　　仁士	6.60	0.16	3.3	２		IP	３		IP	２		IP	４		IP	１		IP	３		IP	５		IP	１		IP	５		IP	１		IP
+渡邉　　和将	5.70	0.15	2.9	４		IP	６		G1	２	4	IP	６		IP	１		IP	３		IP	２		IP	２		SG	５		IP	３		IP
+山崎　　善庸	3.60	0.25	5.3	６		IP	６		IP	５		IP	４		IP	４		IP	４		IP	２		IP	落		IP	２		IP	４		IP
+長谷川　　充	2.40	0.24	4.5	６		IP	５		IP	５		IP	４		IP	４		IP	５		IP	６		IP	６		IP	３		G3	６		IP
+三浦　洋次朗	3.60	0.14	3.4	３		IP	３		IP	５	5	IP	５		IP	１	5	IP	５		IP	５		IP	５		IP	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+杉江　　浩明	5.33	0.23	4.9	４		IP	６		IP	１		IP	５		IP	１		IP	１		IP	４		IP	６		IP	３		IP	転		IP
+谷本　　幸司	4.60	0.16	3.0	６		IP	６	3	IP	４		IP	５		IP	１		IP	５		IP	４		IP	２		IP	３		IP	２		IP
+北野　　輝季	7.00	0.13	2.8	２		G1	２		G1	転		G1	５		G1	１		IP	２		IP	５		G1	２		G1	５		G1	２		G1
+河内　　一馬	3.40	0.14	2.7	５		IP	６		IP	５		IP	２	3	IP	３		IP	３		IP	６		IP	３		IP	６		IP	６	6	IP
+中村　　駿平	2.70	0.18	3.1	６		IP	６		IP	３		IP	５		IP	５		IP	５		IP	４		IP	３		IP	５		IP	６		IP
+川原　　　涼	4.00	0.10	3.2	３		IP	５		IP	３		IP	３	5	IP	６		IP	６		IP	エ		IP	２		IP	５	5	IP	２		IP

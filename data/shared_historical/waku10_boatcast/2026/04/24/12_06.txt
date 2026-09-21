@@ -1,0 +1,8 @@
+data=
+1	0
+宮村　　勇哉	5.30	0.17	3.4	６	4	IP	１		IP	４		IP	１		IP	５		IP	５		IP	３		IP	３		IP	１		IP	５		IP
+島田　　一生	5.60	0.16	3.5	６		IP	６		IP	４		IP	３		IP	２		IP	２		IP	５		IP	１	3	IP	２		IP	２		IP
+三好　　勇人	7.00	0.15	2.7	５		IP	１	4	IP	２		IP	１	2	IP	３		IP	１		IP	３		IP	４	4	IP	２		IP	３		IP
+越智　　照浩	3.44	0.13	3.7	５		IP	３		IP	５		IP	５		IP	４		IP	４		IP	３		IP	４		IP	エ		IP	６		IP
+米田　　隆弘	4.30	0.15	3.4	６		IP	５		IP	２		IP	２	3	IP	５	6	IP	５		IP	１		IP	５		IP	３	6	IP	５		IP
+山口　真喜子	4.60	0.15	3.9	１	5	IP	４		G1	６		G1	５		G1	４		IP	４		IP	４		IP	３		IP	３		IP	５		IP

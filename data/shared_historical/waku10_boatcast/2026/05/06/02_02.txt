@@ -1,0 +1,8 @@
+data=
+1	0
+大谷　　健太	7.50	0.20	4.0	５		IP	２		IP	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	６		IP
+砂長　　知輝	7.20	0.16	4.5	３		IP	４		IP	２		G1	２		G1	６		G1	２		SG	２		SG	２		IP	１		IP	４		IP
+石塚　　久也	5.30	0.18	2.8	４		IP	４		IP	１		IP	６		IP	３		IP	４		IP	４		IP	２		IP	２		IP	４	2	IP
+中里　　昌志	3.90	0.18	3.7	１	3	IP	６		IP	６		IP	３		IP	５	5	IP	４		IP	４		IP	４		IP	３		IP	６		IP
+金子　　和之	4.80	0.14	2.4	１	4	IP	５		IP	４		G3	６		G2	３		IP	４		IP	４		IP	５		IP	２		IP	３		IP
+浅見　　宗孝	4.10	0.20	5.1	４		IP	５		IP	２	5	IP	６		IP	４		IP	３	5	IP	５		IP	５		IP	４		IP	２		IP

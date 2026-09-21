@@ -1,0 +1,8 @@
+data=
+1	0
+森　　　弘行	4.90	0.21	4.7	２		IP	６		IP	４		IP	４		IP	５		IP	４		IP	３		IP	５		IP	１		IP	２		IP
+大塚　　浩二	4.70	0.20	3.9	５		IP	４		IP	３		IP	１		IP	６		IP	５		IP	５		IP	２		IP	４		IP	２		IP
+井上　　大輔	5.00	0.16	4.1	１		IP	５		IP	５		IP	５		IP	３		IP	４	4	IP	２		G3	３		IP	５		IP	２	4	IP
+尾形　　栄治	5.20	0.17	3.8	１		IP	２		IP	４	5	IP	３		IP	２		IP	６		IP	５		IP	６		IP	３		IP	３		IP
+関根　　彰人	3.10	0.19	4.0	３		IP	６		IP	６		IP	４		IP	５		IP	６		IP	５		IP	５		IP	２		IP	４		IP
+中北　　将史	3.10	0.19	3.5	４	5	IP	３		IP	４		IP	６		IP	６		IP	５		IP	４		G3	３	5	IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+田村　　隆信	10.00	0.13	3.2	１		G2	２		G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+高田　ひかる	7.10	0.19	3.4	４		G2	４		IP	１		IP	３		IP	２		IP	５		G1	４		G1	１		IP	１		IP	２		IP
+丸岡　　正典	6.20	0.14	2.4	３		G2	２		IP	４		G2	１		IP	３		IP	３		IP	３		IP	３		IP	６		IP	３		IP
+上田　　健太	5.80	0.19	3.4	３		IP	３		IP	２		IP	３		G3	２		G3	４		IP	６	5	IP	３		IP	４		IP	２		IP
+下出　　卓矢	6.00	0.19	4.0	５		G2	４		IP	２	1	IP	１		IP	４		IP	３		IP	５		IP	２		IP	４		IP	１	6	IP
+末永　　由楽	3.70	0.13	3.9	３		G2	４		IP	３	5	IP	６		G2	６		G2	５		G2	３		IP	５		IP	４		IP	６		IP

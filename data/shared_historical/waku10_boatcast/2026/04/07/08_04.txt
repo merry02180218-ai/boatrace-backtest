@@ -1,0 +1,8 @@
+data=
+1	0
+渡辺　　真至	8.20	0.14	3.3	１		IP	２		IP	１		IP	１		IP	５		IP	１		IP	３		IP	１		IP	１		IP	３		IP
+茶谷　　信次	7.00	0.18	3.6	Ｆ		IP	２		IP	１		IP	５		IP	１		IP	３		IP	４		IP	１		IP	２		IP	１		IP
+奥田　　　誠	6.20	0.13	2.1	１		IP	３		IP	５		IP	１		IP	２		IP	２		IP	３		IP	３		IP	５		IP	４		IP
+角谷　　健吾	7.00	0.14	2.9	２		IP	６		IP	１		IP	２		IP	１		IP	２		IP	３		IP	４		G1	１		IP	４		IP
+明石　　正之	3.00	0.19	4.2	５		G3	５		IP	５		IP	５		IP	５		IP	３		IP	５		IP	５		IP	５		IP	２		IP
+松瀬　　弘美	2.60	0.25	4.9	４		G3	４		G3	６		G3	３		IP	６		IP	３		IP	６		IP	６		IP	６		IP	６		IP

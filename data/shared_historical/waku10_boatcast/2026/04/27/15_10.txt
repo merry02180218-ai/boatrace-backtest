@@ -1,0 +1,8 @@
+data=
+1	0
+西丸　侑太朗	10.30	0.12	2.7	１		G1	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+西村　美智子	6.20	0.18	3.6	２	3	IP	４		IP	４		IP	２		IP	５		IP	２		IP	１		IP	２		IP	５		IP	２		IP
+木谷　　賢太	7.30	0.14	3.4	２		IP	３		IP	２		IP	３		G3	５		IP	３		IP	１		IP	２		IP	２		G1	１		IP
+中村　　桃佳	5.70	0.09	2.2	３		IP	１		IP	５	3	IP	１		G1	２		G1	６		G1	４		G1	６		IP	６		IP	１		IP
+松尾　　　祭	2.80	0.19	3.9	４		IP	４		IP	６		IP	３		IP	５		IP	５		IP	転		IP	５		IP	４		G1	６		G1
+川上　　清人	3.40	0.20	4.6	５		IP	１		IP	５		IP	６		IP	３		IP	２		IP	５	5	IP	６		IP	６		IP	６		IP

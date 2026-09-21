@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　晃大	7.60	0.13	3.4	１		IP	１		IP	３		IP	１		IP	１		IP	４		IP	３		IP	３		IP	４		IP	１		IP
+根岸　　真優	2.10	0.23	4.8	４		IP	６		IP	３		IP	６		G3	６		G3	５		IP	５		IP	６		G3	６		IP	５		IP
+土屋　　太朗	4.80	0.16	2.7	４		IP	６		IP	３	4	IP	４		IP	２		IP	２		IP	６		IP	１		IP	５		IP	４		IP
+廣瀬　　将亨	7.60	0.17	3.5	５		IP	１		IP	３		IP	１	5	IP	６		IP	１		IP	１		IP	３		IP	１		IP	２		G2
+坂本　　奈央	2.90	0.20	3.3	６		G3	６		IP	２		G3	４	4	G3	６		G3	２		G3	６		G3	５		G3	６		IP	５		IP
+長尾　　章平	5.30	0.18	3.8	３		IP	４		IP	３	5	IP	４		G1	２		IP	４	4	IP	５	5	IP	３	5	G1	２	5	IP	５		G1

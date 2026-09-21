@@ -1,0 +1,8 @@
+data=
+1	0
+深山　　祐二	6.80	0.13	2.2	２		IP	２		IP	３		IP	１		IP	５		IP	３		IP	２		IP	２		IP	５		IP	１		IP
+樋口　　　亮	6.00	0.17	3.4	４		IP	５		IP	３		IP	４		IP	２		IP	２		IP	３		IP	１	1	IP	１		IP	５		IP
+葛原　　大陽	4.60	0.17	2.9	４		IP	５	4	G1	６		G1	１		IP	６		IP	欠		G1	６		G1	３		IP	１		IP	２		IP
+江夏　　　満	5.70	0.18	4.2	４		IP	６		IP	３		IP	２		IP	５		IP	４	6	IP	２		IP	３		G1	２		IP	３	6	IP
+桑島　　和宏	6.20	0.16	3.7	５		IP	１		IP	４		G1	２		G1	３	4	IP	１		IP	２		IP	５		IP	４		IP	３		IP
+大久保　佑香	1.90	0.17	3.2	６	5	IP	６		IP	６		IP	３	5	IP	６		IP	６		G3	５		IP	６		IP	６		IP	４		IP

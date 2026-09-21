@@ -1,0 +1,8 @@
+data=
+1	0
+寺本　　昇平	7.00	0.19	2.9	５		IP	１		IP	３		IP	１		IP	４		IP	５		IP	３		IP	１		IP	１		IP	１		IP
+坪井　　爽佑	6.33	0.17	3.8	転		IP	３		IP	２	4	IP	６	3	IP	１		IP	３		IP	５		IP	３	3	IP	２		IP	１		IP
+藤山　　翔大	5.30	0.17	3.4	４		IP	２		IP	６		IP	３		IP	１		IP	４		IP	３	2	IP	４		IP	４		IP	３	2	IP
+土屋　　千明	5.56	0.16	2.3	４		IP	４		G3	３		G3	エ		IP	４		IP	Ｆ	5	IP	２	3	IP	４	5	IP	１		G3	１		IP
+池田　　浩美	3.90	0.19	3.6	６		G3	６		G3	５		IP	２		G3	１		G3	１		IP	６	6	IP	６		IP	４		IP	６		IP
+福島　　勇樹	4.80	0.16	2.6	４		IP	３	5	IP	６	5	IP	３		IP	６		G1	６	5	IP	４	4	IP	２		IP	２	4	IP	２	3	IP

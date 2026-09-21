@@ -1,0 +1,8 @@
+data=
+1	0
+平田　さやか	8.30	0.15	2.1	５		IP	２		IP	１		IP	１		G3	１		G3	２		G3	３		G1	１		G3	１		IP	２		IP
+土屋　　千明	6.50	0.16	2.7	２		IP	５		IP	１	1	IP	３		IP	２		IP	４		G3	２		IP	２		IP	３	3	IP	４		IP
+中村　　裕将	4.00	0.14	2.9	２		IP	６		IP	３		IP	５		IP	１		IP	２		IP	６		IP	６		IP	５		IP	６		IP
+松尾　　昂明	3.80	0.16	3.0	６		IP	５		IP	４		IP	６		IP	３		IP	１		IP	４		IP	６		IP	６		IP	２		IP
+宇留田　翔平	3.70	0.15	3.8	６	6	IP	３		IP	２		G3	５	4	G3	６		IP	５	4	IP	６		IP	２		IP	４		IP	４		IP
+加藤　　翔馬	4.00	0.18	4.1	４		IP	６		IP	２		G3	３	5	IP	６		IP	３		IP	５		IP	６		G1	３		IP	４		IP

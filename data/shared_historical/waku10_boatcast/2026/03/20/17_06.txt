@@ -1,0 +1,8 @@
+data=
+1	0
+千葉　　真弥	8.80	0.17	3.5	１		IP	１		IP	３		IP	１		IP	１		IP	３		IP	２		IP	２		IP	１		IP	１		IP
+長尾　　萌加	5.00	0.17	3.3	３		IP	５		IP	４		IP	２		IP	２		IP	５		IP	４		IP	欠		IP	１		IP	６		IP
+孫崎　　百世	5.10	0.22	4.3	３		IP	３		IP	１		IP	６		IP	５		IP	３		IP	１		IP	５		IP	３		IP	５		IP
+海野　ゆかり	5.40	0.19	3.0	４		IP	６		G1	２		G3	５		G1	６	6	G1	２		IP	４		IP	３		G3	３		IP	１		G2
+黒明　　花夢	1.60	0.18	3.6	６		IP	６		IP	６	4	IP	３		IP	６		IP	６		IP	５		IP	６		IP	６	6	IP	６		IP
+中尾　　彩香	4.20	0.20	4.1	４		IP	３		IP	５		IP	３	5	IP	２	5	IP	３		G3	６		G3	６		IP	４		IP	４		IP

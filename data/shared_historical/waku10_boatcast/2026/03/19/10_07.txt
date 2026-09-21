@@ -1,0 +1,8 @@
+data=
+1	0
+黒田　　　剛	6.30	0.16	2.8	１		IP	２		IP	６		IP	５		IP	１		IP	３		IP	３		IP	３		IP	３		IP	２		IP
+佃　　　來紀	5.44	0.17	3.3	４		G3	２		G3	転		IP	２		G3	２		IP	５		IP	５		IP	２		IP	６		IP	２		IP
+本橋　　克洋	4.90	0.19	3.9	３	4	IP	４		IP	６		IP	３		IP	６		IP	６		IP	２		IP	２	2	IP	３		IP	２		IP
+田代　　達也	4.30	0.17	2.8	３	5	IP	４		IP	５		IP	４		IP	６		IP	４		IP	５		IP	３		IP	２		IP	３		IP
+横川　　聖志	4.50	0.12	2.5	６	6	IP	５		IP	６		IP	５		G1	２		IP	３		IP	２		IP	２	4	IP	３		IP	５	4	IP
+坪内　　　実	2.60	0.28	5.2	３		IP	６		IP	６		IP	６		IP	２		IP	６		IP	５		IP	６		IP	４		G3	６		G3

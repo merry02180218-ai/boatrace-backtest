@@ -1,0 +1,8 @@
+data=
+1	0
+飯塚　　　響	2.67	0.21	4.7	Ｆ		IP	５		G3	１		IP	６		IP	６		IP	５		IP	５		IP	５		G3	転		IP	４		IP
+眞鳥　　康太	4.60	0.17	3.4	４		IP	２	6	IP	２	5	IP	４	5	IP	転		IP	２	6	IP	６		IP	２		IP	４	5	G3	６		G3
+田頭　　虎親	5.60	0.16	3.5	１		IP	５		IP	４		IP	６		IP	３		IP	４		IP	５		IP	３		IP	１		IP	１	4	IP
+森　　　悠稀	4.10	0.14	3.5	３		IP	５		IP	４		IP	４		G2	５		IP	４		IP	４		IP	１		IP	５		IP	５		IP
+渡邉　　睦広	6.30	0.14	2.0	３		IP	３		IP	３		IP	６	6	IP	１		IP	２		G3	２	4	IP	２		IP	４		IP	３		IP
+石原　　　翼	2.00	0.17	3.7	４		IP	５		IP	３		IP	６	5	IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

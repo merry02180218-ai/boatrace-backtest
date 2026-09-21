@@ -1,0 +1,8 @@
+data=
+1	0
+椎名　　　豊	8.90	0.15	2.8	２		IP	２		IP	１		IP	１		G1	１		G1	１		IP	落		IP	１		G1	１		IP	１		IP
+新田　　泰章	7.80	0.15	3.3	２		IP	２		IP	１		IP	２		IP	１		IP	４		IP	４		G1	２		G1	１		IP	３		IP
+林　　　美憲	6.56	0.12	2.3	５	2	IP	２		IP	５		G1	３		IP	５		IP	２		IP	１		IP	１	2	IP	１		IP	欠		IP
+鈴谷　　一平	4.80	0.15	2.9	５		IP	６		G1	３		G1	６		IP	４		IP	５		IP	５		IP	１		IP	３		IP	１		IP
+福島　　勇樹	6.80	0.12	2.0	１		IP	２	4	IP	６		IP	２		G1	６		IP	３		IP	１		IP	２		IP	２		IP	３		IP
+尾上　　雅也	5.40	0.13	3.4	３		IP	４		IP	３		IP	５		IP	２		G1	６		IP	４		IP	２	5	IP	５	5	IP	１		IP

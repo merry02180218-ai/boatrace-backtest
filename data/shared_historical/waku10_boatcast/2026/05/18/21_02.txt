@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　賢志	9.30	0.10	2.1	１		IP	１		IP	１		G1	６	2	G1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+末永　　和也	7.10	0.14	3.0	２		IP	２		IP	欠		IP	２		IP	３		G1	３		G1	３		G1	４		SG	２		G1	１		G1
+関　　　浩哉	7.20	0.15	3.7	１		G1	６	4	G1	２		G1	１		G1	６		SG	３		G1	２		G1	２		G1	２		G1	６		G1
+今垣　光太郎	7.50	0.16	2.6	２		G1	２		IP	１		G1	１	5	G1	４		G1	２		IP	３		G1	６		G1	４		IP	１		IP
+守田　　俊介	5.10	0.12	2.8	２	3	IP	５		G1	３		G1	４		IP	３		IP	３		IP	５		IP	４		SG	６		IP	２	2	IP
+菊地　　孝平	5.10	0.14	3.5	５		IP	１	2	IP	５		G1	６		G1	５		G1	２		G2	４		G1	４		G1	４	4	IP	２	5	IP

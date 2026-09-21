@@ -1,0 +1,8 @@
+data=
+1	0
+富永　　大一	6.80	0.17	2.7	１		IP	６		IP	１		IP	１		IP	５		IP	４		IP	１		IP	６		IP	１		IP	１		IP
+中越　　博紀	4.50	0.23	5.0	２		IP	６		IP	５		IP	１		IP	３		IP	４		IP	５		IP	４		IP	５		IP	３		IP
+向井　　美鈴	6.70	0.17	3.3	２		IP	１	2	IP	２		IP	４		IP	２		IP	４		IP	４		IP	３		IP	３		IP	２		IP
+今泉　　友吾	7.00	0.17	3.6	２		IP	１		IP	２		IP	５		G1	３		G1	２		G1	３		G1	エ		IP	２		IP	５		G1
+藤田　　靖弘	3.80	0.17	2.9	６		IP	２	6	IP	１		IP	４		IP	５		IP	４		IP	５		IP	６		G3	４		G3	５		IP
+谷口　　知優	3.10	0.17	3.9	６		IP	２		IP	２	5	IP	６		IP	６		IP	６		IP	５		IP	３		IP	５		IP	６		IP

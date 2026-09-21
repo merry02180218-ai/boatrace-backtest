@@ -1,0 +1,8 @@
+data=
+1	0
+石井　　孝之	6.10	0.16	3.5	３		IP	３		IP	３		IP	２		IP	２		IP	２		IP	４	2	IP	４		IP	６		IP	１		IP
+石塚　　久也	7.20	0.16	3.8	２		IP	４		IP	３		IP	３		IP	１		IP	２		IP	２		IP	３		IP	１		IP	３		IP
+宮嵜　隆太郎	3.70	0.10	1.8	５		IP	５		IP	４		IP	４		IP	５		IP	６		IP	４		IP	５		IP	３		IP	１		IP
+吉原　　聖人	3.80	0.20	4.4	５		IP	１		IP	２	5	IP	６		IP	６		IP	４	3	IP	４		IP	３		IP	６		IP	６		IP
+廣瀬　　　凜	7.80	0.16	2.3	１		IP	１		IP	３		IP	３		IP	３		IP	４		IP	２		IP	１		IP	２		IP	１		IP
+宗行　　治哉	4.60	0.20	5.1	３		IP	４		IP	６		IP	２		IP	２	5	IP	４	5	IP	３		IP	５		IP	６		IP	３		IP

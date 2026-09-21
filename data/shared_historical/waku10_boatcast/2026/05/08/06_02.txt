@@ -1,0 +1,8 @@
+data=
+1	0
+杉田　　篤光	7.90	0.18	3.7	４		IP	１		IP	６		IP	２		IP	１		G3	２		G3	１		IP	２		IP	１		IP	１		IP
+倉田　　郁美	3.90	0.16	3.4	４		IP	６		IP	４		IP	２		IP	３		IP	転		IP	３		IP	４		IP	５		IP	４		IP
+齋藤　　達希	4.50	0.14	3.4	２		IP	４		IP	１		IP	５		G3	５	4	IP	５		IP	６		IP	２		IP	３		IP	５		IP
+池田　　雄一	6.70	0.17	3.3	３		IP	２		IP	１		IP	１		IP	６		IP	３		IP	６		IP	３		G1	１	5	IP	２	5	IP
+徳増　　秀樹	4.60	0.12	2.7	６		IP	６		G1	２	4	IP	３		IP	３		G1	５		G1	４	4	IP	１		IP	６	6	G1	６		IP
+村松　　将平	4.00	0.12	3.1	６		IP	４		IP	４		IP	３		IP	４	5	IP	３	5	IP	５		IP	３		IP	６		IP	３		IP

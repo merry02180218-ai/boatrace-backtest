@@ -1,0 +1,8 @@
+data=
+1	0
+松村　　　敏	9.80	0.11	1.7	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP
+定松　　勇樹	8.50	0.15	4.1	１		SG	４		G2	１		G2	１		G1	３		G1	２		G3	２		G1	４		G1	２		IP	３		G1
+中野　　次郎	6.90	0.12	2.0	４		IP	２		IP	４		G1	１		G1	３		IP	２		G1	４		IP	２		IP	２		G3	３		G3
+金子　　拓矢	7.40	0.19	2.4	１		IP	３		IP	１	3	IP	１		IP	３		IP	４		IP	３		IP	５	5	IP	１		IP	２		IP
+森高　　一真	5.40	0.13	2.5	５	4	SG	４		G1	３		G1	３	4	G1	３		G1	６		G1	３		G1	４		G1	４		G1	４		G1
+藤原　啓史朗	4.30	0.11	3.1	１		SG	５		SG	６		IP	４		G1	５		G1	２		IP	４		IP	６		IP	５		IP	５		G1

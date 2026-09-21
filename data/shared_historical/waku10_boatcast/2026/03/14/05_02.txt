@@ -1,0 +1,8 @@
+data=
+1	0
+佐竹　　友樹	4.50	0.23	4.0	４		IP	３		IP	１		IP	６		IP	１		IP	１		IP	Ｆ		IP	Ｆ		IP	５		IP	５		IP
+泥谷　　一毅	5.80	0.21	4.5	２		IP	４		IP	３		IP	３		IP	３		IP	３		IP	２		IP	５		IP	４		IP	２	3	IP
+小林　　　泰	6.10	0.16	2.9	３		IP	２	4	IP	６		IP	３		IP	１		IP	３		IP	４		IP	５		IP	２		IP	１		IP
+吉田　　宗弘	4.70	0.23	4.0	２		IP	６		IP	１		IP	２	2	IP	３		IP	４		IP	６		IP	５		IP	６		IP	３		IP
+後藤　　孝義	2.30	0.26	5.0	６		IP	５		IP	６	6	IP	５		IP	４		IP	６		IP	６		IP	６		IP	２		IP	５	4	IP
+大澤　　大夢	3.00	0.18	4.3	６		IP	６		IP	６		IP	５		IP	４		IP	３		IP	３		IP	４	5	IP	６		IP	４		IP

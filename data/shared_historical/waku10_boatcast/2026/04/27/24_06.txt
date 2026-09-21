@@ -1,0 +1,8 @@
+data=
+1	0
+野中　　義生	4.90	0.20	3.4	１		G3	１		G3	５		IP	４		IP	５		IP	妨		IP	４		IP	３		IP	１		IP	６		IP
+中野　　夢斗	3.70	0.15	4.2	５		IP	５		IP	６		IP	６		IP	４		IP	４		IP	６		G3	１		G3	３	3	IP	３		IP
+吉田　　俊彦	5.20	0.17	3.4	３		IP	４		IP	３		IP	３		IP	５		G1	４		G1	１		G1	３		IP	５		IP	５		G1
+中嶋　誠一郎	3.80	0.16	3.1	３		IP	５		IP	６		IP	５		IP	４		IP	３		IP	４	3	IP	６		IP	４		IP	２		IP
+後藤　　盛也	4.40	0.09	1.7	Ｆ		IP	２	4	IP	３		IP	４		IP	４		IP	６		G3	１		G3	２		IP	５		IP	６		IP
+伊藤　　玲奈	3.10	0.25	5.4	６		IP	６		G3	５		IP	５		IP	４		IP	６		IP	３		IP	２		IP	５		IP	４		IP

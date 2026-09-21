@@ -1,0 +1,8 @@
+data=
+1	0
+岡村　　将也	8.40	0.13	2.1	１		IP	１		IP	３		IP	３		IP	１		IP	２		IP	４		IP	１		IP	１		IP	１		IP
+本岡　　勝利	3.70	0.18	4.6	５		IP	４		IP	５		IP	２		IP	５		IP	２		IP	５		IP	４		IP	６		IP	４		IP
+渡邊　雄一郎	6.60	0.19	3.0	２		IP	５		IP	３		IP	４		IP	２		IP	１	5	IP	３		IP	２		IP	２		IP	３		IP
+吉田　　宗弘	4.80	0.19	3.0	４		IP	５		IP	６	3	IP	４		IP	４		IP	３		IP	２		IP	６		IP	１		IP	２	2	IP
+浦野　　　海	2.60	0.18	4.7	６		IP	６	6	IP	６	6	IP	６		IP	３		IP	２		IP	妨		IP	３		IP	５		IP	Ｆ		IP
+今泉　　友吾	4.40	0.18	4.0	３		IP	６		G1	６		G1	５		G1	４		G1	４		G1	２	5	G1	６		G1	４		IP	４		IP

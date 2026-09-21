@@ -1,0 +1,8 @@
+data=
+1	0
+植田　　太一	9.20	0.12	3.0	２		G3	１		G3	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	２		IP	１		IP
+三原　　　司	4.90	0.17	3.5	６		G3	１		IP	３	3	IP	２		IP	６		IP	６		IP	５		IP	３		IP	１		IP	４		IP
+尾嶋　　一広	5.10	0.15	4.5	４		IP	５		IP	５		IP	２		IP	２		G1	５		G1	３		G1	４		IP	３		IP	３		IP
+藤本　　佳史	4.70	0.16	3.2	２		IP	５		IP	４		IP	６		IP	３		IP	５		IP	２		IP	４		IP	３		IP	３		IP
+中北　　将史	2.40	0.15	3.0	５		G3	５		IP	４		IP	６		IP	５		IP	３		IP	５		IP	５		IP	６		IP	５		IP
+河合　　三弘	2.10	0.21	4.0	５		IP	３		IP	６		IP	５		IP	６		IP	６		IP	６		IP	４		IP	５		IP	６		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+北村　　征嗣	9.00	0.16	2.4	４		IP	１		IP	１		G3	１		G3	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP
+石原　　　翼	7.30	0.14	2.7	２		IP	２		G2	１	3	IP	２		IP	５		IP	５		IP	１		IP	１		IP	３		IP	２		IP
+新田　　洋一	5.80	0.17	2.6	３		IP	３		IP	２	1	IP	２		IP	１		IP	３		IP	５		IP	４		IP	転	2	IP	２		IP
+坂口　　　周	5.50	0.18	3.5	３		IP	４		IP	２		IP	５		IP	１		IP	２		IP	５		IP	４		IP	４		IP	４		G2
+数原　　　魁	3.90	0.17	3.3	５		IP	３		IP	６		IP	４		IP	２		IP	６		IP	３		IP	６		IP	２	4	IP	５		IP
+岡本　　慎治	3.56	0.19	4.1	４		IP	転		IP	５		IP	６		IP	４		IP	３	5	IP	３		IP	６		IP	５		IP	３		IP

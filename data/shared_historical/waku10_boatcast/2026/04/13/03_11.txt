@@ -1,0 +1,8 @@
+data=
+1	0
+郷原　　章平	7.20	0.14	3.2	１		IP	１		IP	１		G3	６		G3	１		IP	３		IP	４		IP	３		G1	１		IP	４		IP
+柳橋　　宏紀	5.00	0.21	4.7	４		G3	３		G3	５		IP	３		IP	５		IP	３		IP	５		IP	２		IP	３		IP	２		IP
+妹尾　　忠幸	5.30	0.17	3.5	４		IP	２		IP	２		IP	４		IP	４		IP	３	4	IP	６	6	IP	１		IP	４	4	IP	４	4	IP
+澤　　　大介	3.30	0.19	3.7	５		IP	４		IP	５		IP	４		IP	５		IP	５	5	IP	２		IP	４	5	IP	４		G3	６		G3
+山口　　　亮	3.20	0.17	3.7	６		G3	５		G3	２		G3	６	6	IP	６		IP	６		IP	５		IP	４		G3	２		G3	４		IP
+栗原　　直也	3.60	0.22	3.9	４		IP	６		IP	５		IP	４		IP	５		IP	６		IP	３		IP	４		IP	３	5	IP	３		IP

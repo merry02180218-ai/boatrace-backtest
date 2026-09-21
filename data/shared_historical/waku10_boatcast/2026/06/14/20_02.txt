@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　昂章	7.60	0.16	3.4	２		IP	２		IP	１		IP	２		IP	１		IP	５		IP	１		IP	１		IP	２		IP	５		IP
+岩橋　　裕馬	4.80	0.18	3.6	２		IP	２		IP	６		G3	３		IP	４		IP	４		IP	４		IP	５		G3	６		IP	１		IP
+松田　　憲幸	6.40	0.16	4.4	５		IP	２		IP	２		IP	２		IP	２		IP	２		IP	２		IP	５	4	IP	２		IP	４		IP
+島田　　賢人	5.90	0.16	2.6	６		IP	５		IP	３		IP	４		IP	１		IP	１		IP	５		IP	１		IP	５		IP	１		IP
+森　　晋太郎	2.80	0.16	2.4	６	6	IP	６		IP	４	6	IP	４		IP	４		IP	４		IP	４		IP	５		IP	５		IP	５	6	IP
+内山　　峻輔	2.63	0.18	3.8	５		IP	４		IP	６		IP	欠		IP	落		IP	５		IP	６		IP	６		IP	３		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+武田　　光史	7.70	0.17	3.1	５		IP	１		IP	１		IP	１		IP	１		IP	６		IP	１		IP	１		IP	３		IP	２		IP
+重木　　輝彦	7.00	0.13	3.0	１		IP	４		G1	２		IP	３		IP	５		G1	２		G1	２		G1	３		IP	１		IP	５		IP
+山口　　隆史	3.70	0.19	3.5	６		IP	４		IP	３		IP	２		IP	５		IP	５		IP	５		IP	４		IP	５		IP	３	5	IP
+為本　　智也	7.30	0.17	2.6	３		IP	４		IP	１	5	IP	１		IP	１	5	G3	３		G3	１		IP	３		IP	１		IP	６		IP
+松井　　賢治	4.90	0.16	3.7	６		IP	３		IP	２		IP	３		IP	１		IP	１		IP	６		IP	５		IP	５		IP	６		IP
+横川　　聖志	4.50	0.16	3.1	５		IP	３		IP	６		IP	５		G1	４		IP	３		IP	１	5	IP	３		IP	６		IP	３	4	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+三嶌　こころ	4.70	0.19	4.0	５		IP	６		IP	２		IP	３		IP	４		G3	４		IP	１		IP	２		G3	４		G3	転		G3
+塩崎　　桐加	4.20	0.20	2.9	４		IP	５		IP	３		IP	４		IP	２		IP	２		IP	４		G3	Ｆ		G1	沈		IP	３		IP
+山下　　友貴	5.10	0.19	4.4	２		IP	４		G3	５		G3	３	4	G3	５		IP	３		IP	１		IP	３		IP	６		IP	３		IP
+西川　　真人	3.60	0.16	3.8	３		IP	４		IP	５		IP	５		IP	２		IP	４		IP	５		IP	５		IP	５		IP	４		IP
+草川　　壮良	3.40	0.22	3.6	４		IP	５		IP	６		IP	５		IP	５		IP	５		IP	２		IP	５		IP	６		IP	１	6	IP
+早川　　理稀	1.25	0.27	5.2	５		IP	６		IP	６		IP	６		IP																		IP

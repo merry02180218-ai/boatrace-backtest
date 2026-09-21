@@ -1,0 +1,8 @@
+data=
+1	0
+平石　　和男	6.80	0.21	4.7	１		IP	２		IP	４		IP	２		IP	４		IP	１		IP	３		IP	１		IP	２		IP	妨		IP
+徳増　　秀樹	5.90	0.16	3.7	６		G1	２		IP	３		IP	２		IP	１		IP	６		IP	２		G3	３		G1	５		G1	３		IP
+中島　　友和	6.20	0.15	2.6	２		IP	６		IP	４		IP	２		IP	５		IP	４	4	IP	２		IP	１	4	IP	１		IP	３		IP
+中村　　裕将	4.00	0.16	2.3	２		IP	６		IP	５	5	IP	３		IP	２		IP	６		IP	２		IP	５		G3	５		G3	５		IP
+細川　　明人	3.60	0.21	3.9	５		IP	６		IP	３		IP	５		IP	５		IP	４	4	IP	２		IP	３		IP	４		IP	６		IP
+大平　誉史明	4.50	0.19	4.7	４		IP	３		IP	６		IP	４		IP	５		IP	４		IP	３		G3	５		IP	１	5	IP	３		IP

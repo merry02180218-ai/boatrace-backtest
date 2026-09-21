@@ -1,0 +1,8 @@
+data=
+1	0
+山川　　波乙	7.30	0.18	3.3	６		IP	１		IP	１		IP	１		IP	２		IP	２		G3	４	3	IP	１		IP	５		IP	１		IP
+長尾　　萌加	4.56	0.16	3.4	６	3	IP	３		IP	３		IP	５		IP	４		IP	２		IP	２		IP	５		IP	４		IP	欠		IP
+永井　　聖美	5.00	0.15	2.6	３		IP	２		IP	４		IP	４		IP	２		IP	転		G3	３		G3	５		IP	４		IP	２		IP
+倉持　　莉々	7.40	0.14	2.8	２		IP	２		IP	１		IP	４		IP	４		G1	１		G1	１		G3	１	5	IP	４		IP	４		IP
+谷口　　佳蓮	4.60	0.10	1.7	６		IP	５		IP	４		IP	６	6	IP	２		IP	２		IP	１		IP	１		G3	落		G3	５		IP
+蜂須　　瑞生	2.40	0.21	4.0	５		IP	４		IP	６		G3	４	5	G3	５		IP	５		IP	４		IP	５		IP	５		IP	６		IP

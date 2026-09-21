@@ -1,0 +1,8 @@
+data=
+1	0
+近藤　　稔也	6.80	0.17	3.7	２		IP	２		IP	４		IP	３		IP	１		IP	２		IP	４		IP	４		IP	３		IP	１		IP
+飯島　　　誠	5.40	0.16	3.5	２		IP	３		IP	５		IP	４		IP	２		IP	２		IP	５		IP	２		IP	３		IP	５		IP
+森口　　和紀	4.70	0.16	3.8	２		IP	２		IP	３		IP	６		IP	６		IP	３		IP	５		IP	３		IP	６		IP	２		IP
+広次　　　修	4.30	0.15	3.0	５		IP	４		IP	３		IP	３		IP	５		IP	６		IP	３	5	IP	５		IP	３		IP	２		IP
+佐口　　達也	5.20	0.20	4.3	４		IP	２	4	IP	６		IP	４	6	IP	２	4	IP	６		IP	３	4	IP	３		IP	２		IP	３		IP
+田村　　　慶	3.80	0.18	4.5	５		IP	４		IP	５		IP	４		IP	３		IP	４		IP	５		IP	５		IP	４		IP	２	5	IP

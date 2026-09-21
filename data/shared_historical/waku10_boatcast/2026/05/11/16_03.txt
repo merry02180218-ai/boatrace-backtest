@@ -1,0 +1,8 @@
+data=
+1	0
+冨名腰　桃奈	5.56	0.17	2.4	６		G3	２		G3	３		IP	　		IP	２		IP	１		IP	３		IP	５		IP	６		IP	２		IP
+天野　　友和	7.20	0.15	3.3	３		IP	２		IP	２		IP	２		IP	１		IP	５		IP	２	3	IP	２		IP	３		IP	２		IP
+早川　　尚人	3.90	0.20	3.5	３		IP	５		IP	４		IP	４		IP	２		IP	５		IP	５		IP	５		IP	２		IP	６		IP
+中田　　友也	5.90	0.17	3.9	１		IP	５		IP	３		IP	３		IP	４		IP	２		IP	６	5	IP	１		IP	２		IP	４		IP
+杉村　　賢也	3.22	0.15	3.2	３		IP	３		IP	５		IP	６		IP	５		G3	３	3	IP	不		IP	６		IP	６	4	IP	５		IP
+寺田　　夢生	1.10	0.14	3.1	Ｆ		IP	６		IP	６		IP	６	5	IP	５		IP	６		IP	６		IP	６		G3	６		IP	５		IP

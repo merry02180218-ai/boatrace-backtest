@@ -1,0 +1,8 @@
+data=
+1	0
+沼田　　大都	5.50	0.20	3.7	２		IP	６		IP	１		IP	１		IP	５		IP	１		IP	４		IP	５		IP	３		IP	５		IP
+松田　　淳平	7.60	0.14	2.4	５		IP	４		IP	１		IP	１		IP	１		IP	３		IP	２		IP	２		IP	１		IP	２		IP
+楠　　将太郎	7.00	0.14	2.9	２		IP	１		IP	４		IP	２		IP	４		IP	１		IP	４		IP	２		IP	１		IP	４		IP
+加倉　　侑征	5.70	0.13	1.6	３	6	IP	Ｆ		IP	６		IP	１	3	IP	２		IP	５		IP	４		IP	２		IP	１		IP	２		IP
+中本　　大樹	5.00	0.14	2.8	３		IP	６		IP	３		IP	５		IP	１		IP	３		IP	３		IP	３		IP	３		IP	６		IP
+小林　　礼央	2.80	0.10	1.6	６		IP	５		IP	６		IP	６		IP	５		IP	２		IP	６		IP	４	5	IP	４		IP	４		IP

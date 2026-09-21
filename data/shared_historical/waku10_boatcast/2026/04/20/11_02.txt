@@ -1,0 +1,8 @@
+data=
+1	0
+篠原　　晟弥	9.30	0.11	2.6	１		IP	１		IP	１		IP	１		IP	５		G2	１		IP	１		IP	１		IP	１		IP	１		IP
+栗原　　一馬	3.90	0.16	3.2	６		IP	１		IP	２	3	IP	５	3	IP	転		IP	６		IP	１		IP	６		IP	５	3	IP	４		IP
+宇留田　翔平	4.30	0.15	2.5	６		IP	５		G3	４		G3	２		IP	２	4	IP	３		IP	４		IP	５	2	IP	転		IP	２		IP
+石川　　真二	6.30	0.13	2.8	３	2	IP	１	1	IP	２	2	IP	５	1	IP	５	2	G1	６	2	G1	４	2	IP	１	1	IP	２	2	IP	１	2	IP
+伊達　　正利	3.30	0.18	3.6	４		IP	６		IP	５		IP	３		IP	６		IP	４		IP	４		IP	５		IP	６	6	IP	２		IP
+竹内　　　来	1.50	0.22	3.7	５		IP	６		IP	４	5	IP	５		IP	Ｆ		IP	６		IP	６		IP	６		IP	６		IP	５		IP

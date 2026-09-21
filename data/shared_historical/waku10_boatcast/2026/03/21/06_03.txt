@@ -1,0 +1,8 @@
+data=
+1	0
+富田　　恕生	8.20	0.17	3.7	１		IP	４		IP	２		IP	１		IP	１		IP	１		IP	３		IP	２		IP	１		IP	３		IP
+杉山　　喜一	4.90	0.20	3.9	３		IP	５		G3	４		G3	５		IP	２		IP	６	3	IP	１		IP	４		IP	３	5	IP	３		IP
+北村　　征嗣	5.90	0.15	2.6	１		IP	３		IP	５		IP	５		G1	５		IP	３		IP	２		IP	３		IP	１		IP	３		IP
+大野　　芳顕	5.56	0.18	2.9	３		IP	４		IP	１		IP	４		IP	欠		IP	３	5	IP	４		IP	３		IP	４		IP	３		IP
+渡邉　　　健	3.90	0.17	3.0	２		IP	３		IP	４		IP	４	6	IP	５		IP	３		IP	６		IP	５		IP	５		IP	４		IP
+島村　　隆幸	5.70	0.17	3.8	５		IP	１		IP	３		IP	４		IP	３	5	G3	１		G3	４		IP	３		IP	６		G3	２		G3

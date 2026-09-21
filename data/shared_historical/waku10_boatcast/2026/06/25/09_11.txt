@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　　拓	8.70	0.19	3.2	１		IP	６		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP
+高橋　　龍治	5.22	0.16	2.8	６		IP	２		IP	５	3	IP	落		IP	２		IP	Ｆ		IP	４		IP	１		IP	３		IP	２		IP
+大場　　広孝	4.50	0.14	2.9	３		IP	２		IP	６		IP	４		IP	５		IP	５		IP	４		IP	３		IP	２		IP	４		IP
+永田　　義紘	5.10	0.16	3.2	６		IP	６		IP	２		IP	４		IP	５		IP	１		IP	１		IP	１		IP	６		IP	４		IP
+木山　　誠一	3.70	0.13	2.8	Ｆ		IP	５	6	IP	３		IP	４		IP	５		IP	６		IP	３		IP	４		IP	３		IP	３		IP
+鈴木　　唯央	3.30	0.18	3.9	５		IP	３		IP	５		IP	５		IP	６		IP	４	5	IP	６		IP	２		IP	３		IP	６		IP
