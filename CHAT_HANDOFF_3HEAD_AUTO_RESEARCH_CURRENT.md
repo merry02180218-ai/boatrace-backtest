@@ -37,3 +37,10 @@
 - `research_v289_3head_addon.json`
 - `research_v289_3head_addon.md`
 
+
+
+## 2026-09-21 — Waku10 restored-source v288 audit (WORK START)
+- User reports historical Waku10 restoration is complete. Fresh main confirms shared Boatcast Waku10 Mar-Jun commit 6410b14d, July shared store edcb7be3, and nested-loader fix 44231256.
+- Existing v288 operational parity remains frozen reference: 94R total, Feb8/Mar12/Apr12/May16/Jun14/Jul13/Aug19. Do not alter thresholds/routes while measuring Waku10 source effect.
+- February fair overlap audit Run 35563969125 was SUCCESS: v288 8R/6 heads=75%, A+.60 32R/12 heads=37.5%, BOTH=0; Sep-2026 unused; no threshold tuning.
+- Next: build a source-only Waku10 audit for v288. Compare frozen v288 reference vs restored historical Waku10 with all v288 thresholds unchanged. Measure changed Waku34 values, candidate additions/removals, route changes, race count/head rate; only after membership freeze inspect outcomes. September 2026 outcomes remain UNREAD.
