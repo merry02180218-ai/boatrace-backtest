@@ -71,10 +71,13 @@ def main():
   audit[m]={"rows":len(g),"restored":int(g._new.notna().sum()),"old_present":int(g._old.notna().sum()),"both":int(both.sum()),
             "exact_1e9":int(((g._old-g._new).abs()<=1e-9)[both].sum())}
  oldsel=build_membership(q,"f__c_b3_minus_b4_waku_st"); newsel=build_membership(q,"_restored_waku34")
+ missing=q[(q.date.astype(str).str[:7]=="2026-06") & q["_restored_waku34"].isna()][["race_code","date","f__c_b3_minus_b4_waku_st"]].to_dict("records")
+ focus=q[q.race_code.eq("202605040103")][["race_code","date","f__c_b3_minus_b4_waku_st","_restored_waku34","f__c_b3_minus_b4_st","f__c_b3_meetst","f__c_wall12_weak","f__c_b3_minus_b2_motor","f__c_b3_inside_nst","bet"]].to_dict("records")
  o=set(oldsel.race_code);n=set(newsel.race_code)
  out={"policy":{"thresholds_changed":False,"outcomes_read":False,"sep2026_read":False,"waku_formula":"clamp((0.24-ST3)/0.14)-clamp((0.24-ST4)/0.14), exact v222 normalized-strength edge"},
       "coverage":audit,"old_selected":len(o),"restored_selected":len(n),"added":sorted(n-o),"removed":sorted(o-n),
       "old_monthly":oldsel.groupby("month").size().to_dict(),"restored_monthly":newsel.groupby("month").size().to_dict(),
-      "restored_routes":newsel.groupby(["month","route"]).size().unstack(fill_value=0).to_dict("index")}
+      "restored_routes":newsel.groupby(["month","route"]).size().unstack(fill_value=0).to_dict("index"),
+      "june_missing_restored":missing,"removed_focus_preonly":focus}
  OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2)+chr(10),encoding="utf-8");print(json.dumps(out,ensure_ascii=False,indent=2));print("V288_WAKU10_RESTORED_MEMBERSHIP_OK")
 if __name__=="__main__":main()
