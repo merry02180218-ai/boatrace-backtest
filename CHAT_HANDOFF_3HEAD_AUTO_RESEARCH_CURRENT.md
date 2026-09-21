@@ -198,3 +198,21 @@ Implementation rule before any trigger:
 5. Do not trigger until the full mandatory preflight passes. Record implementation commit and validation Run/Job/Artifact after completion.
 
 Current action: inspect production files and design the combined runner; no workflow trigger has been authorized/executed at this point.
+
+## 2026-09-21 — OVERLAP STRENGTH AUDIT (WORK START)
+Before finalizing CORE-overlap suppression, user requested measurement of how strong races selected by BOTH v288 and A+.60 are. This audit takes priority over combined production implementation.
+
+Frozen comparison intent:
+- Compare mutually exclusive buckets on the same causally valid historical window: V288_ONLY, A60_ONLY, BOTH.
+- Primary metric: boat3 head rate and sample size. Secondary: opponent/ticket capture and closing-odds ROI only where inputs are truly comparable.
+- Use the leakage-free v288 operational PRE semantics, not the older frozen 100R verifier, for production-like v288 classification.
+- A+.60 classification must preserve the frozen A head gate and post_motor_inner_rank_edge >= +0.60 purchase gate; no threshold tuning from overlap outcomes.
+- September 2026 outcomes remain UNREAD and are excluded.
+- Do not infer overlap strength from aggregate v288/A+.60 results; require race_code-level intersection.
+
+Fresh source audit completed before implementation:
+- v288 operational replay source: verify_v288_operational_pre_replay.py; prior-month-trained PRE scoring then canonical S>A>B routes.
+- A+.60 source: research/run_3head_a_purchase_gate_dev.py; frozen A PRE gate plus post_motor_inner_rank_edge >= +0.60.
+- February/March scripts confirm the exact +0.60 cohort construction and are not to be retuned.
+
+Next: build a dedicated overlap audit that emits race-level bucket membership and checks date/race-code alignment before reading outcomes; trigger only after full compile/import/data-scope preflight.
