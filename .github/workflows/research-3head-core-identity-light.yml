@@ -37,12 +37,21 @@ jobs:
           import verify_v288_operational_pre_replay as v
           q=pd.read_csv('analysis_v243_3head_expand_feature_audit.csv',dtype={'race_code':str})
           q.date=q.date.astype(str);q['month']=q.date.str[:7];q['_target']=v.target(q).astype(int)
-          def n(c): return pd.to_numeric(q[c],errors='coerce')
-          p=q._target.eq(1)
-          s=p&(n('f__c_b3_head_prob')>=v.S_HEAD)&(n('f__c_b3_minus_b2_motor')>=v.S_MOTOR)&(n('f__c_b3_inside_nst')<=v.S_NST)
-          a=p&(~s)&(n('f__c_b3_head_prob')>=v.A_HEAD)&(n('f__c_b3_minus_b2_motor')>=v.A_MOTOR)&(n('f__c_wall12_weak')<=v.A_WALL)
-          b=p&(~s)&(~a)&(n('f__c_b3_minus_b2_motor')>=v.B_MOTOR)&(n('f__c_b3_inside_nst')<=v.B_NST)
-          frozen=q[(s|a|b)&q.month.eq('2026-02')].copy()
+          ms=sorted(q.month.unique());pred=[];cs=v.precols(q)
+          for i,m in enumerate(ms):
+              if i<2: continue
+              tr=q[q.month.isin(ms[:i])].copy();te=q[q.month==m].copy();fs=v.learned_features(tr,cs)
+              tr_score=v.score_with(tr,tr,fs);te['_score']=v.score_with(tr,te,fs)
+              te['grade']=__import__('numpy').where(te._score>=float(tr_score.quantile(v.S_Q)),'S',__import__('numpy').where(te._score>=float(tr_score.quantile(v.A_Q)),'A','B'))
+              pred.append(te)
+          u=pd.concat(pred,ignore_index=True);u=u[u.grade.isin(['S','A'])].copy()
+          n=lambda d,c: pd.to_numeric(d[c],errors='coerce')
+          final=u._target.eq(1)
+          core=(n(u,'f__c_b3_minus_b4_waku_st')<=v.WAKU34)&(n(u,'f__c_b3_minus_b4_st')>=v.ST34)&(n(u,'f__c_b3_meetst')<=v.MEETST)
+          sr=final&core;purch=u.bet.eq(1)
+          ar=purch&(~sr)&(n(u,'f__c_b3_minus_b4_st')>=v.A_ST34)&(n(u,'f__c_wall12_weak')<=v.A_WALL)
+          br=purch&(~sr)&(~ar)&(n(u,'f__c_b3_minus_b2_motor')>=v.B_MOTOR)&(n(u,'f__c_b3_inside_nst')<=v.B_NST)
+          frozen=u[(sr|ar|br)&u.month.eq('2026-02')].copy()
           frozen_codes=frozen.race_code.astype(str).str.zfill(12).tolist()
           native=[]
           for f in Path('prior').glob('core_replay/**/day_summary.json'):
