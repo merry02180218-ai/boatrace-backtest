@@ -407,3 +407,32 @@ Before EVERY workflow dispatch/rerun:
 - Pre-fire actual-main inspection: literal \\n=false; target merge=true; Waku-only=true; result direct ref in research=false; workflow_dispatch=true; py_compile=true; September guard present.
 - Production unchanged. September outcomes remain UNREAD.
 - NEXT: rerun only after this full inspection; then compare BASE vs BASE_WAKU DEV/Jun VAL/Jul-Aug HOLD and do not tune on HOLD.
+
+
+## 2026-09-21 Waku10 head model v1 result -> v2 start
+Run 35577308325 / Job 106261952722 / Artifact 10627678898 SUCCESS.
+- BASE: DEV 195/77=39.487%, VAL 59/28=47.458%, HOLD 140/70=50.000% (cut .35)
+- BASE_WAKU: DEV 187/70=37.433%, VAL 57/28=49.123%, HOLD 137/64=46.715% (cut .36)
+- v1 Waku features were only opp_waku_b1/b2/b3/b5/b6_v93. June improved but untouched Jul-Aug HOLD worsened, so v1 is not adopted.
+- holdout_used_for_selection=False / September UNREAD / production unchanged.
+
+User requested continuation. v2 was created to test richer Waku10 without touching production:
+- research_4head_waku10_headmodel_v2.py commit b04ae55a7eac95029754483dbd5f6452695820a9
+- workflow commit 5c645a532ad162a489ebb678b29b59b3dd7c32f6
+v2 feature families:
+- OWN4: boat4 frame win rate / avg ST / avg start rank / past10 win rate
+- REL_INSIDE: boat4 relative differences versus boats 1/2/3 plus inside mean/min
+- OWN4_REL_INSIDE
+- ALL_WAKU
+- BASE explicitly excludes every Waku-derived feature.
+Selection remains June-only with >=50 selected races; Jul-Aug HOLD evaluation only.
+Waku source remains Boatcast shared historical Mar-Jul + BoatraceCSV existing Jul-Aug. No result-derived Waku backfill. September UNREAD.
+Pre-fire refetch checks:
+- actual committed v2 script/workflow re-fetched from main
+- literal escaped newline error: false
+- workflow_dispatch present
+- Python script has no direct data/results reference
+- September flag present
+- holdout_used_for_selection false present
+- workflow preflight includes py_compile and guards
+Next: fire research-4head-waku10-headmodel-v2, then inspect full logs/artifact. Do not adopt based only on June; compare untouched HOLD and volume.
