@@ -25,10 +25,13 @@ def combo(x):
 def main():
  # Build frozen A+.60 February cohort from pre-settlement inputs only.
  rr={}
+ # make_pre_scores has a fixed causal walk-forward contract: oct is history and nov-feb are scored.
+ # Build all five months, but do not inspect any outcome here; labels are only internal prior-day model training inputs.
  for k,(a,b) in pg.DEV.items():
-  if k!='feb': continue
   x,r,audit=w20.build_pre_enhanced(a,b,True); rr[k]=(x,r)
  fr={k:w20.prep_month(x,r) for k,(x,r) in rr.items()}
+ missing=[k for k in ['oct','nov','dec','jan','feb'] if k not in fr]
+ if missing: raise RuntimeError(f'make_pre_scores frame contract missing {missing}')
  scores,_=w20.make_pre_scores(fr)
  days,cache=w20.prefetch_sources(); post,_=w20.build_motor_exhibition(days,cache)
  q=scores['feb'].merge(post,on=['rc','date'],how='left',validate='one_to_one')
