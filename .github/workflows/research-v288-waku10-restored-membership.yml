@@ -33,9 +33,18 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh run download 35467021760 -n research-3head-a-opponent-reference-audit || true
-          find . -type f | head -100
-          test -f analysis_v243_3head_expand_feature_audit.csv || { echo "missing canonical source"; exit 1; }
+          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
+          test -s golden_v243/analysis_v243_3head_expand_feature_audit.csv
+          cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
+          python - <<'PY'
+          import pandas as pd
+          p='analysis_v243_3head_expand_feature_audit.csv'
+          q=pd.read_csv(p,nrows=5)
+          required={'race_code','date','f__c_b3_minus_b4_waku_st','f__c_b3_minus_b4_st','f__c_b3_meetst'}
+          miss=required-set(q.columns)
+          assert not miss, f'missing canonical columns: {sorted(miss)}'
+          print('CANONICAL_SOURCE_CONTRACT_OK')
+          PY
       - name: Run outcome-free restored Waku10 membership audit
         run: python research/audit_v288_waku10_restored_membership.py
       - uses: actions/upload-artifact@v4
