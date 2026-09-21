@@ -461,3 +461,16 @@ Pre-fire actual-main refetch:
 - September flag and holdout_used_for_selection false present
 - combinations(own,2) present
 Next: fire research-4head-waku10-headmodel-v3 and inspect all single/pair families. Do not choose final family from HOLD.
+
+
+## Waku10 v3 result / frozen WR+SR stability audit start
+Run 35581005957 / Job 106273624255 / Artifact 10630775410 SUCCESS.
+BASE VAL 28/59=47.458%, HOLD 70/140=50.000%.
+Best June-selected family was OWN4_WR_SR cut .37: VAL 27/51=52.941%, untouched HOLD 57/109=52.294%.
+Other notable: WR_ST HOLD 60/118=50.847%; WR_PASTWIN 66/131=50.382%. ST alone and ST combinations generally degraded HOLD.
+No production adoption yet.
+
+Next audit freezes OWN4_WR_SR and cut .37 exactly; no retuning. It reports Mar-Aug monthly stability, venue breakdown, standardized WR/SR coefficients, and exact race-set difference versus BASE cut .35.
+Files/commits: audit script 9a86c29e9c27f934ca7f160deabb290fa10ed6de; workflow 3280721317228c1f005d3331034835b63015fab3.
+Pre-fire actual-main refetch passed: literal escaped newline false; audit script direct data/results false; CUT=.37 present; September false; holdout selection false; workflow_dispatch present. Production unchanged.
+Next: fire audit-4head-waku10-wr-sr-stability and inspect full logs/artifact.
