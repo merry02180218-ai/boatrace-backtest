@@ -46,13 +46,52 @@ def main():
  if not rows: raise RuntimeError('no outcome-free March PRE predictions')
  mar_pre=pd.concat(rows,ignore_index=True).drop_duplicates('rc')
 
- # Motor state is frozen at Feb-28. March fetches cards/previews only, never results.
+ # Build motor state through Feb-28, then freeze it. March requests cards/previews only.
  import run_3head_wave19_motor_exhibition_gate as w19
+ from collections import defaultdict
  w19.END='2026-02-28'
- days,cache=w19.prefetch_sources(); hist_post,_=w19.build_motor_exhibition(days,cache)
- # March exhibition-only snapshot is merged below; motor gate uses last pre-March motor snapshot proxy and is fail-closed.
- # A production-equivalent March motor state needs a dedicated state exporter; do not fake it.
- raise RuntimeError('PREFLIGHT_STOP: March motor-state exporter required; no settlement accessed')
+ days,cache=w19.prefetch_sources()
+ state=defaultdict(w19.new_motor); global_venue=defaultdict(w19.new_motor)
+ for day in sorted(days):
+  cards=w19.bycode(cache.get((day.normalize(),'programs/race_cards'),[]))
+  results=w19.bycode(cache.get((day.normalize(),'results/realtime'),[]))
+  for code,rr0 in results.items():
+   rc=cards.get(code)
+   if rc is None: continue
+   venue=str(rc.get('レース場コード','')).zfill(2); rm0=w19.rank_map(rr0); stm=w19.actual_st_by_boat(rr0)
+   for b in range(1,7):
+    mid=w19.ival(rc.get(f'艇{b}_モーター番号'))
+    if mid is None: continue
+    w19.update_motor(state[(venue,mid)],rm0.get(b),stm.get(b,float('nan')),day)
+    w19.update_motor(global_venue[venue],rm0.get(b),stm.get(b,float('nan')),day)
+
+ march_days=list(pd.date_range('2026-03-01','2026-03-31')); mcache={}
+ from concurrent.futures import ThreadPoolExecutor,as_completed
+ kinds=['programs/race_cards','previews/tkz','previews/stt','previews/original_exhibition']
+ with ThreadPoolExecutor(max_workers=16) as ex:
+  fut={ex.submit(w19.fetch,k,d.date()):(d.normalize(),k) for d in march_days for k in kinds}
+  for ff in as_completed(fut):
+   dd,kk=fut[ff]
+   try: mcache[(dd,kk)]=ff.result()
+   except Exception: mcache[(dd,kk)]=[]
+ post_rows=[]
+ for day in march_days:
+  day=day.normalize(); cards=w19.bycode(mcache.get((day,'programs/race_cards'),[]))
+  tkz=w19.bycode(mcache.get((day,'previews/tkz'),[])); stt=w19.bycode(mcache.get((day,'previews/stt'),[])); org=w19.bycode(mcache.get((day,'previews/original_exhibition'),[]))
+  for code,rc in cards.items():
+   venue=str(rc.get('レース場コード','')).zfill(2); z={'rc':int(code),'date':day}; per={}
+   for b in range(1,7):
+    mid=w19.ival(rc.get(f'艇{b}_モーター番号')); s=state[(venue,mid)] if mid is not None else w19.new_motor()
+    sm=w19.motor_summary(s,global_venue[venue],day); per[b]=sm
+    for k,v in sm.items(): z[f'post_motor_b{b}_{k}']=v
+   for opp in [1,2,4]:
+    z[f'post_motor_gap{opp}_top2']=per[3]['top2']-per[opp]['top2']; z[f'post_motor_gap{opp}_top3']=per[3]['top3']-per[opp]['top3']
+    z[f'post_motor_rank_edge{opp}']=per[opp]['ewma_rank']-per[3]['ewma_rank']; z[f'post_motor_st_edge{opp}']=per[opp]['ewma_st']-per[3]['ewma_st']
+   z['post_motor_inner_rank_edge']=((per[1]['ewma_rank']+per[2]['ewma_rank'])/2)-per[3]['ewma_rank']
+   z['post_motor_inner_top2_gap']=per[3]['top2']-((per[1]['top2']+per[2]['top2'])/2)
+   z.update(w19.exhibition_features(tkz.get(code,{}),stt.get(code,{}),org.get(code,{}))); post_rows.append(z)
+ post=pd.DataFrame(post_rows).drop_duplicates('rc')
+ q=mar_pre.merge(post,on=['rc','date'],how='left',validate='one_to_one')
  rn=pd.to_numeric(q.race_no,errors='coerce'); pre=pd.to_numeric(q.pre_score,errors='coerce')
  m=(rn>=1)&(rn<=12)&(pre>=.925)&pg.mask(q,pg.A['conds'])&(pd.to_numeric(q.post_motor_inner_rank_edge,errors='coerce')>=.60)
  codes=set(str(int(x)).zfill(12) for x in q.loc[m,'rc'])
