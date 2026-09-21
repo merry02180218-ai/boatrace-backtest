@@ -26,6 +26,6 @@ reb.ex.rows=safe_rows
 reb.A=reb.date(2026,3,1)
 reb.main()
 z=pd.read_csv("/tmp/head4_v93_all_parent/v93_all_parent.csv",dtype={"race_code":str})
-meta={"parent_R":int(len(parent)),"v93_R":int(len(z)),"waku10_backfill_used":False,"missing_waku_policy":"empty-row/card fallback; v93 waku component neutral-low, no result reconstruction","SEPTEMBER_OUTCOMES_READ":False}
+meta={"parent_R":int(len(parent)),"v93_R":int(len(z)),"shared_historical_waku10_used":True,"waku10_backfill_used":False,"waku_source":"Boatcast shared historical Mar-Jun + BoatraceCSV existing Jul-Aug","SEPTEMBER_OUTCOMES_READ":False}
 Path("/tmp/head4_v93_all_parent/6m_meta.json").write_text(__import__("json").dumps(meta,ensure_ascii=False,indent=2)+"\n")
 print("SIX_MONTH_V93_READY",meta)
