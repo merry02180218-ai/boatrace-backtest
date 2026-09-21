@@ -16,7 +16,7 @@ jobs:
       - name: Preflight
         run: |
           python -m py_compile audit_4head_exhibition_isolation_v8.py build_4head_clean_long_dataset.py analyze_4head_exhibition_original_trainonly.py
-          ! grep -q 'data/results' analyze_4head_exhibition_original_trainonly.py
+          ! grep -n 'data/results' analyze_4head_exhibition_original_trainonly.py
       - uses: actions/checkout@v4
         with:
           repository: BoatraceCSV/boatracecsv.github.io
