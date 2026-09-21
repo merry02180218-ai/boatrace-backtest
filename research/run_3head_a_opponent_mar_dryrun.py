@@ -25,16 +25,34 @@ def combo(x):
 def main():
  # Build frozen A+.60 March cohort from pre-settlement inputs only.
  rr={}
- # make_pre_scores has a fixed causal walk-forward contract: oct is history and nov-mar are scored.
- # Build all five months, but do not inspect any outcome here; labels are only internal prior-day model training inputs.
+ # Historical labels end at Feb-28. March features are fetched outcome-free.
  for k,(a,b) in pg.DEV.items():
   x,r,audit=w20.build_pre_enhanced(a,b,True); rr[k]=(x,r)
  fr={k:w20.prep_month(x,r) for k,(x,r) in rr.items()}
- missing=[k for k in ['oct','nov','dec','jan','mar'] if k not in fr]
- if missing: raise RuntimeError(f'make_pre_scores frame contract missing {missing}')
- scores,_=w20.make_pre_scores(fr)
- days,cache=w20.prefetch_sources(); post,_=w20.build_motor_exhibition(days,cache)
- q=scores['mar'].merge(post,on=['rc','date'],how='left',validate='one_to_one')
+ all_hist=pd.concat([fr[k] for k in ['oct','nov','dec','jan','feb']],ignore_index=True,sort=False)
+ _,enh,_=w20.choose_features(all_hist)
+ mx,mr,ma=w20.build_pre_enhanced('2026-03-01','2026-03-31',False)
+ if len(mr): raise RuntimeError('March result rows unexpectedly loaded')
+ rows=[]
+ for dayv in sorted(mx.date.dt.normalize().unique()):
+  day=pd.Timestamp(dayv); today=mx[mx.date.dt.normalize()==day].copy()
+  tr=all_hist[(all_hist.date<day)&(all_hist.date>=day-pd.Timedelta(days=42))].copy()
+  if len(tr)<500 or tr.y.nunique()<2: continue
+  model=w20.make_pipeline(w20.SimpleImputer(strategy='median'),w20.StandardScaler(),
+      w20.LogisticRegression(C=.08,class_weight='balanced',solver='liblinear',max_iter=1800,random_state=161))
+  model.fit(tr[enh],tr.y)
+  ptr=model.predict_proba(tr[enh])[:,1]; pred=model.predict_proba(today[enh])[:,1]
+  z=today[['rc','date','venue','race_no']].copy(); z['pre_score']=w20.pct_ref(ptr,pred); rows.append(z)
+ if not rows: raise RuntimeError('no outcome-free March PRE predictions')
+ mar_pre=pd.concat(rows,ignore_index=True).drop_duplicates('rc')
+
+ # Motor state is frozen at Feb-28. March fetches cards/previews only, never results.
+ import run_3head_wave19_motor_exhibition_gate as w19
+ w19.END='2026-02-28'
+ days,cache=w19.prefetch_sources(); hist_post,_=w19.build_motor_exhibition(days,cache)
+ # March exhibition-only snapshot is merged below; motor gate uses last pre-March motor snapshot proxy and is fail-closed.
+ # A production-equivalent March motor state needs a dedicated state exporter; do not fake it.
+ raise RuntimeError('PREFLIGHT_STOP: March motor-state exporter required; no settlement accessed')
  rn=pd.to_numeric(q.race_no,errors='coerce'); pre=pd.to_numeric(q.pre_score,errors='coerce')
  m=(rn>=1)&(rn<=12)&(pre>=.925)&pg.mask(q,pg.A['conds'])&(pd.to_numeric(q.post_motor_inner_rank_edge,errors='coerce')>=.60)
  codes=set(str(int(x)).zfill(12) for x in q.loc[m,'rc'])
