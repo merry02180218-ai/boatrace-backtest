@@ -27,11 +27,12 @@ while day<=end:
    for k in range(10):
     base=4+k*3
     checks += [("text",cols[base].translate(str.maketrans("１２３４５６７８９ＦＬ","123456789FL")),row[f"艇{lane}_過去{k+1}走_着順"]),("text",cols[base+1],row[f"艇{lane}_過去{k+1}走_進入"]),("text",cols[base+2],row[f"艇{lane}_過去{k+1}走_グレード"])]
-   for a,z in checks:
+   for typ,a,z in checks:
     tot+=1
-    if norm(a)!=norm(z):
+    aa,zz=(norm_num(a),norm_num(z)) if typ=="num" else (norm_text(a),norm_text(z))
+    if aa!=zz:
      mis+=1
-     if len(examples)<30: examples.append((ds,jo,rr,lane,a,z))
+     if len(examples)<30: examples.append((ds,jo,rr,lane,typ,a,z,aa,zz))
  day+=datetime.timedelta(days=1)
 print("CSV_DAYS",files,"CELLS",tot,"MISMATCH",mis,"RATE",0 if not tot else mis/tot)
 print("EXAMPLES",examples)
