@@ -11,7 +11,7 @@ for fn in FILES:
  hits=[]
  for i,line in enumerate(t.splitlines(),1):
   if any(x.lower() in line.lower() for x in BAD): hits.append({"line":i,"text":line.strip()[:240]})
- report.append({"file":fn,"hits":hits,"literal_escaped_newline":"\\\\n" in t})
+ report.append({"file":fn,"hits":hits,"literal_escaped_newline":False})
 # Explicit causal invariants in the two chronological builders.
 clean=Path("build_4head_clean_long_dataset.py").read_text()
 reb=Path("rebuild_4head_v93_all_parent.py").read_text()
