@@ -198,3 +198,14 @@ Do not fire again until this dependency is located/restored and the whole workfl
 - Frozen CORE 8, native codes 7, exact matches 2, mismatches 6. Same-date replacement exists for every mismatch.
 - Exact matches: 202602191910, 202602171607. Replacements: 202602150404->150806; 02071007->071602; 02161108->160712; 02171911->171607; 02120606->120601; 02270507->270807 (full 12-digit codes in run output).
 - Next: lightweight feature/grade/route diff for each frozen-vs-native same-date pair. Reuse frozen v243 CSV and prior successful Artifact 10645188056; no seven-day cache rebuild. September remains UNREAD; no outcome tuning.
+
+
+## 2026-09-22 — CORE feature-diff result
+- Run 35622621705 / Job 106409150312 / head ea691e5 SUCCESS.
+- Exact matches only 2/8: 202602191910 and 202602171607.
+- The six mismatched frozen CORE rows are present in frozen v243 operational universe and route as CORE there: 150404 S, 071007 S, 161108 S, 171911 S, 120606 S, 270507 S. So the mismatch is not caused by those frozen rows failing canonical v288 route in v243.
+- Same-date native replacements 071602, 160712, 120601, 270807 are absent from the v243 operational universe entirely. This localizes drift upstream of v288 S/A/B route: historical PRE/input/cache universe reconstruction differs from frozen v243 source.
+- 150806 is present in v243 but _target=0 / NO_BET; nevertheless native replay selected it on 2/15. This is direct evidence of PRE/cache selection-semantic drift, not merely route threshold drift.
+- On 2/17 native 171607 is itself a valid frozen CORE row and replaces frozen 171911 on the same day, suggesting the native day replay path may collapse to one selected candidate/day while frozen membership can contain two on one date.
+- Conclusion: do not tune route thresholds. Audit prepare_v288_historical_pre_input.py plus operational cache/day selection semantics against frozen v243 membership, especially one-race-per-day behavior and historical PRE reconstruction creating races outside v243 universe.
+- September remains UNREAD. Next: lightweight code/semantic audit before any heavy rerun.
