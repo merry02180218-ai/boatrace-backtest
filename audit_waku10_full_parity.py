@@ -7,10 +7,12 @@ def get(u):
 def norm_text(x):
  return " ".join((x or "").replace("　"," ").split())
 def norm_num(x):
+ s=(x or "").strip()
+ if s in ("", "-"): return ""
  try:
-  return str(float(x))
+  return str(float(s))
  except:
-  return (x or "").strip()
+  return s
 tot=mis=files=0; examples=[]
 day=datetime.date(2026,7,19); end=datetime.date(2026,8,31)
 while day<=end:
