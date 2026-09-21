@@ -185,3 +185,9 @@ Do not fire again until this dependency is located/restored and the whole workfl
 - Goal: explain exact 8 frozen CORE codes vs native operational PRE/cache identity, not optimize on February outcomes.
 - Diagnostic will reuse the frozen v243 membership reconstruction and February month cutoff, export frozen CORE codes, then for each of seven dates build historical PRE inputs + operational month cache and classify each frozen code as native_pre_candidate / present_not_candidate / missing_input. It will also export same-date native candidates and PRE score/grade fields for source/threshold drift inspection.
 - No result/payout fields are used for classification. September 2026 outcomes remain UNREAD.
+
+
+## 2026-09-22 — switch CORE identity audit to lightweight path
+- User approved avoiding another ~1h full v288 rebuild.
+- Replace the heavy identity diagnostic with an artifact-only/lightweight audit using Run 35607152183 Artifact 10645188056 plus frozen v243 membership. Do not rebuild seven daily month caches.
+- Goal unchanged: explain the 6/8 identity mismatches causally; no February outcome tuning and September remains UNREAD.
