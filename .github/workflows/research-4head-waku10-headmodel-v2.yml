@@ -1,0 +1,36 @@
+name: research-4head-waku10-headmodel-v2
+on:
+  workflow_dispatch:
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn
+      - name: Preflight
+        run: |
+          python -m py_compile prepare_4head_6m_v93_neutral_waku.py research_4head_waku10_headmodel_v2.py
+          ! grep -q 'data/results' research_4head_waku10_headmodel_v2.py
+          grep -q 'SEPTEMBER_OUTCOMES_READ.*False' research_4head_waku10_headmodel_v2.py
+          grep -q 'holdout_used_for_selection.*False' research_4head_waku10_headmodel_v2.py
+      - name: Checkout BoatraceCSV
+        uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: boatracecsv
+      - name: Build complete Waku10 parent
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/boatracecsv
+        run: python prepare_4head_6m_v93_neutral_waku.py
+      - name: Research Waku10 head model v2
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/boatracecsv
+        run: python research_4head_waku10_headmodel_v2.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-waku10-headmodel-v2
+          path: /tmp/head4_waku10_headmodel_v2
