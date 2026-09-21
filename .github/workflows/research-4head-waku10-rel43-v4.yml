@@ -1,5 +1,5 @@
 name: research-4head-waku10-rel43-v4
-on:
+'on':
   workflow_dispatch:
 jobs:
   research:
