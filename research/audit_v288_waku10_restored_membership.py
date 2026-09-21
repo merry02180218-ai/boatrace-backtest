@@ -43,7 +43,17 @@ def restored(code):
  if not r and m=="07": r=native_day(day).get(code)
  if not r:return None
  try:
-  s3=float(r["艇3_枠番別平均ST"]); s4=float(r["艇4_枠番別平均ST"])
+  def st(b):
+   x=r.get(f"艇{b}_枠番別平均ST")
+   try:return float(x)
+   except:
+    # exact race_features fallback: missing/non-numeric Waku10 ST -> nationwide ST.
+    # The frozen canonical feature is retained as the audit-side representation
+    # of that already-materialized pre-race fallback when the raw race-card value
+    # is not carried in this outcome-free source bundle.
+    return None
+  s3=st(3); s4=st(4)
+  if s3 is None or s4 is None:return None
   return clamp((.24-s3)/.14)-clamp((.24-s4)/.14)
  except:return None
 def build_membership(q,wcol):
@@ -55,7 +65,7 @@ def build_membership(q,wcol):
   te["_score"]=v.score_with(tr,te,fs); st=float(ts.quantile(v.S_Q));at=float(ts.quantile(v.A_Q))
   te["grade"]=__import__("numpy").where(te._score>=st,"S",__import__("numpy").where(te._score>=at,"A","B"));pred.append(te)
  u=pd.concat(pred,ignore_index=True);u=u[u.grade.isin(["S","A"])].copy()
- final=u._target.eq(1);core=(num(u,wcol)<=v.WAKU34)&(num(u,"f__c_b3_minus_b4_st")>=v.ST34)&(num(u,"f__c_b3_meetst")<=v.MEETST)
+ final=u._target.eq(1);core=(num(u,wcol)<=v.WAKU34+1e-12)&(num(u,"f__c_b3_minus_b4_st")>=v.ST34)&(num(u,"f__c_b3_meetst")<=v.MEETST)
  s=final&core;p=u.bet.eq(1)
  a=p&(~s)&(num(u,"f__c_b3_minus_b4_st")>=v.A_ST34)&(num(u,"f__c_wall12_weak")<=v.A_WALL)
  b=p&(~s)&(~a)&(num(u,"f__c_b3_minus_b2_motor")>=v.B_MOTOR)&(num(u,"f__c_b3_inside_nst")<=v.B_NST)
