@@ -257,3 +257,10 @@ F. Preserve v288 native opponent/ticket/staking identity; do not retroactively l
 - Resume from the previously frozen two-tier direction: CORE=v288 native semantics; EXPANDED=A+.60 + V221 Top6 + protected SECOND4 .50 exact-six; overlap CORE only.
 - Next research goal: improve head selection / purchase gating without unnecessarily shrinking race count. First run a fresh causal, leakage-audited pre-trigger scan around the frozen PRE/head gates using restored historical Waku10 where available, preserving Sep-2026 outcome UNREAD and reporting monthly race count/head rate before any adoption.
 - Work-start rule: inspect current main and existing 3head research workflows/scripts before creating a new scan; reuse causal walk-forward infrastructure and do not use outcome-derived same-month features.
+
+
+## 2026-09-21 — correction: two head models first
+- User corrected priority: before any new head-gate search, test/use BOTH frozen head models together.
+- Immediate integration target: CORE=v288 operational head membership + EXPANDED=A+.60 independent head gate. Union counts once; overlap routes to CORE only.
+- Existing script/workflow confirmed: research/run_3head_v288_a60_overlap_strength.py and .github/workflows/research-3head-v288-a60-overlap-strength.yml. Current workflow is intentionally Feb-only frozen overlap strength audit and keeps Sep-2026 unused.
+- Next action: rerun/inspect this frozen February overlap audit as the clean starting point, then extend the already-frozen union forward without retuning gates. After head-union behavior is fixed, attach CORE native opponent/ticket/staking and EXPANDED V221 Top6 + protected SECOND4 .50 exact-six for integrated ROI.
