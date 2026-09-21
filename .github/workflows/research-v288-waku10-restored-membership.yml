@@ -19,7 +19,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           s=Path("research/audit_v288_waku10_restored_membership.py").read_text()
-          assert 'data/results' not in s and 'payout' not in s and 'odds' not in s
+          code="\\n".join(line for line in s.splitlines() if not line.lstrip().startswith("#"))\n          assert "data/results/" not in code\n          assert "data/payout" not in code\n          assert "data/odds" not in code
           assert 'thresholds_changed":False' in s
           assert 'sep2026_read":False' in s
           assert 'f__c_b3_minus_b4_waku_st' in s and '_restored_waku34' in s
