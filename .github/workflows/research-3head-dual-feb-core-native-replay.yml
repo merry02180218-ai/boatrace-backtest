@@ -1,0 +1,80 @@
+name: research-3head-dual-feb-core-native-replay
+on:
+  workflow_dispatch:
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn requests beautifulsoup4 joblib
+      - name: Preflight
+        run: |
+          python -m py_compile prepare_v288_historical_pre_input.py build_3head_v288_operational_month_day.py replay_v288_operational_day.py verify_v288_operational_pre_replay.py
+          ! grep -E '2026[-/, ]*09|202609' .github/workflows/research-3head-dual-feb-core-native-replay.yml
+      - name: Download frozen canonical v243 source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
+          cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
+      - name: Resolve frozen February CORE dates
+        run: |
+          python verify_v288_operational_pre_replay.py >/tmp/v288.txt
+          python - <<'PY'
+          import pandas as pd
+          q=pd.read_csv('analysis_v243_3head_expand_feature_audit.csv',dtype={'race_code':str})
+          # exact CORE membership is reconstructed by the verifier logic, not inferred from outcomes
+          import verify_v288_operational_pre_replay as v
+          q.date=q.date.astype(str);q['month']=q.date.str[:7];q['_target']=v.target(q).astype(int)
+          ms=sorted(q.month.unique());cs=v.precols(q);pred=[]
+          for i,m in enumerate(ms):
+              if i<2:continue
+              tr=q[q.month.isin(ms[:i])].copy();te=q[q.month==m].copy();fs=v.learned_features(tr,cs)
+              trs=v.score_with(tr,tr,fs);te['_score']=v.score_with(tr,te,fs)
+              te['grade']=__import__('numpy').where(te._score>=float(trs.quantile(v.S_Q)),'S',__import__('numpy').where(te._score>=float(trs.quantile(v.A_Q)),'A','B'));pred.append(te)
+          u=pd.concat(pred,ignore_index=True);u=u[u.grade.isin(['S','A'])].copy();n=lambda c:pd.to_numeric(u[c],errors='coerce')
+          final=u._target==1;core=(n('f__c_b3_minus_b4_waku_st')<=v.WAKU34)&(n('f__c_b3_minus_b4_st')>=v.ST34)&(n('f__c_b3_meetst')<=v.MEETST)
+          s=final&core;p=u.bet==1;a=p&(~s)&(n('f__c_b3_minus_b4_st')>=v.A_ST34)&(n('f__c_wall12_weak')<=v.A_WALL);b=p&(~s)&(~a)&(n('f__c_b3_minus_b2_motor')>=v.B_MOTOR)&(n('f__c_b3_inside_nst')<=v.B_NST)
+          z=u[(s|a|b)&u.month.eq('2026-02')].copy()
+          assert len(z)==8,len(z)
+          dates=sorted(set(z.race_code.astype(str).str[:8]))
+          open('/tmp/core_dates','w').write('\n'.join(dates)+'\n')
+          print('CORE_CODES',z.race_code.astype(str).tolist());print('CORE_DATES',dates)
+          PY
+      - name: Native v288 replay on CORE dates
+        run: |
+          mkdir -p core_replay
+          while read d8; do
+            d="${d8:0:4}-${d8:4:2}-${d8:6:2}"
+            python prepare_v288_historical_pre_input.py --date "$d"
+            python build_3head_v288_operational_month_day.py --date "$d" --month-first 2026-02-01 --month-next 2026-03-01 --history-cutoff 2026-01-31 --bias-start 2025-10-01 --force-full-cache
+            python replay_v288_operational_day.py --date "$d" --cache "live_outputs/v288_operational/$d8/live_cache.joblib" --outdir "core_replay/$d8" --history-cutoff 2026-01-31
+          done </tmp/core_dates
+      - name: Aggregate CORE native replay
+        run: |
+          python - <<'PY'
+          import json,pandas as pd
+          from pathlib import Path
+          fs=[]
+          for p in Path('core_replay').rglob('day_replay.csv'):
+              q=pd.read_csv(p,dtype={'race_code':str});fs.append(q)
+          z=pd.concat(fs,ignore_index=True)
+          bets=z[z.decision.eq('BET')].copy()
+          out={'policy':'CORE v288 native February replay','rows':len(z),'bets':len(bets),'hits':int(bets.hit.sum()),'stake':float(bets.total_stake.sum()),'payout':float(bets.return_yen.sum())}
+          out['roi_pct']=100*out['payout']/out['stake'] if out['stake'] else None
+          Path('core_native_feb_summary.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+chr(10))
+          z.to_csv('core_native_feb_replay.csv',index=False)
+          print(json.dumps(out,ensure_ascii=False,indent=2));print('CORE_NATIVE_FEB_REPLAY_OK')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-3head-dual-feb-core-native-replay
+          path: |
+            core_native_feb_summary.json
+            core_native_feb_replay.csv
+            core_replay/**/day_summary.json
