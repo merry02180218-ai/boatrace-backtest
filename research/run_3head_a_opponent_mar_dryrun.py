@@ -30,7 +30,7 @@ def main():
   x,r,audit=w20.build_pre_enhanced(a,b,True); rr[k]=(x,r)
  fr={k:w20.prep_month(x,r) for k,(x,r) in rr.items()}
  all_hist=pd.concat([fr[k] for k in ['oct','nov','dec','jan','feb']],ignore_index=True,sort=False)
- from run_3head_funsite_broad50_wave16 import choose_features
+ from run_3head_funsite_broad50_wave16 import choose_features, pct_ref
  _,enh,_=choose_features(all_hist)
  mx,mr,ma=w20.build_pre_enhanced('2026-03-01','2026-03-31',False)
  if len(mr): raise RuntimeError('March result rows unexpectedly loaded')
@@ -47,7 +47,7 @@ def main():
       LogisticRegression(C=.08,class_weight='balanced',solver='liblinear',max_iter=1800,random_state=161))
   model.fit(tr[enh],tr.y)
   ptr=model.predict_proba(tr[enh])[:,1]; pred=model.predict_proba(today[enh])[:,1]
-  z=today[['rc','date','venue','race_no']].copy(); z['pre_score']=w20.pct_ref(ptr,pred); rows.append(z)
+  z=today[['rc','date','venue','race_no']].copy(); z['pre_score']=pct_ref(ptr,pred); rows.append(z)
  if not rows: raise RuntimeError('no outcome-free March PRE predictions')
  mar_pre=pd.concat(rows,ignore_index=True).drop_duplicates('rc')
 
