@@ -86,3 +86,9 @@ Next research starts by locating the actual historical BoatraceCSV environment-d
 
 ## v18 ready to fire
 Started fixed-rule falsification after v17. v18 tests whether the observed water>=30C x 4-vs-3 SR/ST advantage is merely venue/month concentration. Fixed water cut=30C and signal cut=zero sign; no threshold search. Outputs: month/venue cells, leave-one-venue-out stability, and LT30 vs GE30 contrasts within ALL/SR_GT0/ST_GT0/BOTH_GT0. Script commit 6d13af54b4310336634e5dbb37d81c29bb3fbaf2; workflow commit ba108124b3357c2f0dd580956e5e873019f2d723. Refetched main and preflight guards verified: workflow_dispatch, timeout 60, py_compile, no literal escaped-newline, threshold_tuning=false, fixed 30C, September UNREAD, production unchanged. Need fresh workflow_dispatch of audit-4head-water30-falsify-v18 on main.
+
+
+## v18 SUCCESS
+Run 35621333244 / Job 106404840064 / Artifact 10648933304 completed SUCCESS on head 7a4cdf263e5a2b3dcfa58c7e9444965347d764d2. Artifact digest sha256:afad45ae7b49cac64fdeb059d46026059be0d34536b93a99d6b00148aac037ba. Fixed contrasts: ALL LT30 264/115=43.56%, GE30 37/21=56.76%; SR_GT0 LT30 176/80=45.45%, GE30 25/17=68.0%; ST_GT0 LT30 194/88=45.36%, GE30 25/17=68.0%; BOTH_GT0 LT30 154/71=46.10%, GE30 25/17=68.0%. Month: Jul high-water SR/ST positive 8/4=50%; Aug 17/13=76.47%, so effect is materially stronger in August and not cleanly replicated at same magnitude in July. Leave-one-venue-out SR/ST positive remains 64.71%-71.43% across every venue removal; removing venue23 gives 17/11=64.71%, so aggregate 68% is not solely venue23-driven. However high-water sample remains only 37R/25 signal-positive; production unchanged. September UNREAD; threshold_tuning=false.
+
+Next: quantify uncertainty/significance and distinguish August regime from temperature using fixed comparisons only (no threshold search), preferably Wilson/Fisher and month x water interaction. Do not adopt yet.
