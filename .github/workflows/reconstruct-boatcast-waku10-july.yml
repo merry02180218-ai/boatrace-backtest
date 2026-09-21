@@ -1,0 +1,29 @@
+name: reconstruct-boatcast-waku10-july
+on:
+  workflow_dispatch:
+jobs:
+  reconstruct:
+    strategy:
+      fail-fast: false
+      matrix:
+        month: ["07"]
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch month in parallel
+        id: fetch
+        continue-on-error: true
+        env:
+          MONTH: ${{ matrix.month }}
+        run: python reconstruct_boatcast_waku10_month.py
+      - name: Preserve whatever was fetched
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: boatcast-waku10-2026-${{ matrix.month }}
+          path: data/reconstructed_waku10_boatcast/2026/${{ matrix.month }}
+          if-no-files-found: warn
+      - name: Fail after preservation when fetch failed
+        if: steps.fetch.outcome != 'success'
+        run: exit 1
