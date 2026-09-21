@@ -16,7 +16,7 @@ def shared_rows(rel):
     z=orig(rel)
     if z or "data/programs/waku10/" not in rel:return z
     p=rel.split("/")
-    if len(p)>=6 and p[3]=="2026" and p[4] in {"03","04","05","06"}:
+    if len(p)>=6 and p[3]=="2026" and p[4] in {"03","04","05","06","07"}:
         month,day=p[4],Path(p[5]).stem
         root=Path("data/shared_historical/waku10_boatcast/2026")/month/day
         if not root.is_dir():
