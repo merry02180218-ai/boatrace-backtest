@@ -37,3 +37,114 @@
 - `research_v289_3head_addon.json`
 - `research_v289_3head_addon.md`
 
+
+
+## 2026-09-21 — dual head integration / CORE native replay failure handoff
+
+### User intent / current priority
+- Continue 3号艇 dual-head production integration before any new head-gate search.
+- Formal intended architecture remains:
+  - CORE = existing v288 head/route semantics, native v242 opponent selection, variable 5–10 tickets, 10,000-yen Dutch.
+  - EXPANDED = independent A+.60 head model, V221 Top6 + protected SECOND4 threshold .50, exact six tickets.
+  - overlap => CORE only; never double-buy.
+- Goal now is integrated February ROI: CORE native replay + EXPANDED settlement + UNION 40R.
+- User asked whether v288 had previously been found to leak. Current conclusion: no known audit established that v288 itself was invalidated by future-result leakage. Historical issues were Waku10 restoration/parity, NON-PRISTINE Jul/Aug, reproducibility, and workflow implementation failures. Do not overstate this as proof that leakage is impossible; continue strict causal audit.
+
+### Frozen dual-head results already verified
+- Run 35589996777, research-3head-v288-a60-overlap-strength, SUCCESS:
+  - Feb v288 CORE 8R / 6 boat3 wins = 75.0%.
+  - A+.60 ONLY 32R / 12 boat3 wins = 37.5%.
+  - BOTH 0.
+  - UNION 40R / 18 boat3 wins = 45.0%.
+- Run 35592696984 / Job 106310400578, research-3head-dual-head-feb-integration, SUCCESS:
+  - CORE 8, EXPANDED 32, overlap 0, union 40.
+  - CORE head wins 6, EXPANDED head wins 12, union head wins 18.
+  - EXPANDED protected-six opponent capture: 6/12 = 50%; swaps 13.
+  - Policy guards: threshold_tuning=false, sep2026_used=false, membership_frozen_before_settlement=true.
+- Do not confuse head wins with trifecta hits. Older summary Feb 8R/5 was native trifecta hits, while current exact CORE head audit is 8R/6 heads.
+
+### Native CORE February replay design
+- Inspected build_3head_v288_operational_month_day.py:
+  - freezes evaluation month at month-first;
+  - history cutoff must equal day before month-first;
+  - target-day result/payout unavailable during PRE/cache build;
+  - training rows filtered strictly before month-first;
+  - pair/head models built causally;
+  - target day can use PRE cards/Waku only;
+  - cache records target_result_or_payout_used=False.
+- For February use:
+  - month-first 2026-02-01
+  - month-next 2026-03-01
+  - history-cutoff 2026-01-31
+  - bias-start currently 2025-10-01.
+- Inspected replay_v288_operational_day.py:
+  - validates real history_cutoff and leakage guard;
+  - adapts only replay_v288_historical_day.py's September metadata guard through a temporary cache copy;
+  - underlying decision logic remains unchanged;
+  - output summary is relabeled 3HEAD_V288_OPERATIONAL_MONTH_REPLAY.
+- Inspected replay_v288_historical_day.py previously:
+  - native pair ordering v242.safe_order;
+  - v242.choose_n gives variable 5–10 tickets;
+  - native v288 S/A/B route;
+  - prod.dutch with 10,000-yen bank;
+  - decisions/tickets frozen before payout/results are read;
+  - closing od3 odds used for settlement.
+- Therefore this is the preferred CORE ROI path; do not approximate CORE with protected-six.
+
+### Workflow created
+- Created .github/workflows/research-3head-dual-feb-core-native-replay.yml.
+- Initial commit: 727eb3a3e562dd48d35a3cffdfab9124ea156967.
+- Immediate pre-dispatch audit found a faulty static September grep that self-matched its own pattern; removed before intended dispatch.
+- Fix commit: 6ae2e20d8b5bfbf7e64910c38187d00aee3442c2.
+- Handoff note commit before runs: d3e6fa78dd795702a7de269012ef941deb20acf9.
+- Workflow behavior:
+  1. compile preflight;
+  2. download frozen canonical v243 artifact from Run 34383567078 / artifact name v243-3head-expand-feature-audit;
+  3. reconstruct exact Feb CORE membership using verify_v288_operational_pre_replay logic;
+  4. assert exactly 8 CORE races;
+  5. resolve only their dates;
+  6. for each date run prepare_v288_historical_pre_input.py;
+  7. build_3head_v288_operational_month_day.py with Feb frozen cutoff and --force-full-cache;
+  8. replay_v288_operational_day.py using native v288 downstream;
+  9. aggregate native bets/hits/stake/payout/ROI.
+- --force-full-cache is intentional: fully model the target dates even if original daily PRE scan is empty; replay still applies native v288 decision logic.
+- Before workflow creation/update, checked no literal backslash-n corruption. The old recurring literal \n bug is not the cause of the current failure.
+
+### Current failure — MUST FIX FIRST IN NEXT CHAT
+Two manual dispatches failed:
+1. Run 35598923684 / Job 106330124958 / head SHA d3e6fa78dd795702a7de269012ef941deb20acf9 — FAILURE.
+2. Run 35598989431 / Job 106330335995 / head SHA 15960d3d980f8e6289ae235c5462957c2cb9bb6c — FAILURE.
+Both fail at the same point during Native v288 replay preparation/build:
+FileNotFoundError:
+  analysis_v234_waku10_reconstruction_coverage.csv
+No final replay artifacts were produced; upload-artifact warned no matching files.
+This is a dependency/materialization failure, NOT evidence of model leakage.
+Do not fire again until this dependency is located/restored and the whole workflow is preflight-audited.
+
+### Immediate next debugging steps
+1. Locate where analysis_v234_waku10_reconstruction_coverage.csv is normally produced/downloaded.
+   - Search repo/workflows/scripts for v234 reconstruction coverage.
+   - analyze_v234_3head_waku10_restored_replay.py is imported by build_3head_v288_operational_month_day.py and its COV constant is read with pd.read_csv(pre.COV).
+2. Determine canonical artifact/run containing this file; prefer an existing proven artifact rather than regenerating with potentially different semantics.
+3. Add an explicit workflow step to download/copy that exact frozen coverage CSV before Native v288 replay.
+4. Before dispatch:
+   - fetch final workflow text;
+   - py_compile every invoked Python file;
+   - inspect for literal backslash-n contamination;
+   - verify exact filenames/artifact names;
+   - verify Feb cutoff 2026-01-31;
+   - verify no target-day results/payout are loaded before decisions freeze;
+   - ensure September 2026 outcomes remain UNREAD;
+   - inspect shell heredocs/indentation and all dependency files.
+5. User explicitly wants errors investigated thoroughly before another fire. Do not merely patch one line and ask them to fire; inspect downstream dependencies too.
+6. After CORE native replay SUCCESS, inspect exact 8 race rows and compare against expected CORE membership. Then implement EXPANDED 32R settlement.
+7. EXPANDED staking must not be tuned on already-seen February outcomes. Preferred inherited rule is native prod.dutch over the frozen protected exact-six using official closing odds / 10,000 yen, only if confirmed consistent with prior frozen convention. Document this as inherited/frozen, not optimized on Feb.
+8. Final integrated output should separately report CORE, EXPANDED, UNION: races, head wins, trifecta hits, stake, payout, profit, ROI, monthly/route details, overlap, and leakage-policy markers.
+
+### Important user expectations
+- Japanese responses.
+- Work before/after must be recorded in handoff.
+- Never say a workflow fired/completed without Run/Job evidence.
+- User manually dispatches workflows.
+- Next error: inspect thoroughly, not repeated trial-and-error.
+- Keep September 2026 results UNREAD for this research.
