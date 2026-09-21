@@ -1,0 +1,23 @@
+name: audit-4head-base-leak-forensic-v7
+
+'on':
+  workflow_dispatch: {}
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile all feature builders
+        run: |
+          python -m py_compile build_4head_clean_long_dataset.py rebuild_4head_v93_all_parent.py analyze_4head_exhibition_original_trainonly.py backtest.py backtest_v51_lane_corrected_tickets.py audit_4head_waku10_rel43_regime_v6.py audit_4head_base_leak_forensic_v7.py
+      - name: Forensic source audit
+        run: python audit_4head_base_leak_forensic_v7.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-base-leak-forensic-v7
+          path: /tmp/head4_leak_forensic_v7
