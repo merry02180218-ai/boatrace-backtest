@@ -19,8 +19,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           s=Path("research/audit_v288_waku10_restored_membership.py").read_text()
-          code="\
-".join(line for line in s.splitlines() if not line.lstrip().startswith("#"))
+          code=" ".join(line for line in s.splitlines() if not line.lstrip().startswith("#"))
           assert "data/results/" not in code
           assert "data/payout" not in code
           assert "data/odds" not in code
