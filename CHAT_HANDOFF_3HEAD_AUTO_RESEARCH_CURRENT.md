@@ -210,3 +210,13 @@ F. Preserve v288 native opponent/ticket/staking identity; do not retroactively l
 - Exact error: research/audit_v288_waku10_restored_membership.py line 79 had an unterminated string literal in OUT.write_text(...+" newline "), left by earlier newline patching.
 - Repaired output newline without escape-sensitive text by using +chr(10). Fix commit: 4306cf8779ed3dab3108dc1bf69dafa59c09cfad.
 - Re-fetched committed source after repair; normalized Waku10 formula remains unchanged. Next action is manual fresh dispatch of research-v288-waku10-restored-membership from current main, then verify preflight/static safety/canonical v243 source/main audit/artifact before freezing membership. Run 35580738921 94->96 remains non-canonical. September 2026 outcomes remain UNREAD.
+
+
+## 2026-09-21 — exact normalized Waku10 membership audit SUCCESS
+- Fresh Run 35583037910 / Job 106279998203 / Artifact 10631555647 completed SUCCESS on head 329387671979b293f1fc255e20724f614ccfb689.
+- All steps passed: compile/static safety, canonical frozen v243 artifact download/contract, outcome-free membership audit, artifact upload.
+- Guardrails confirmed: thresholds_changed=false, outcomes_read=false, sep2026_read=false. Exact normalized formula used: clamp((0.24-ST3)/0.14)-clamp((0.24-ST4)/0.14).
+- Corrected membership: old 94R -> restored 93R. Added none. Removed exactly 202605040103. Monthly: Feb 8, Mar 12, Apr 12, May 15 (old16), Jun14, Jul13, Aug19.
+- Exact restored-vs-old Waku feature matches every comparable row in Dec-May, Jul, Aug; June 72/73 comparable rows all exact, with one restored-source missing row. Therefore prior 94->96 result from Run 35580738921 is definitively invalid and must not be used.
+- Restored routes: Feb S7/A1/B0; Mar S7/A3/B2; Apr S7/A4/B1; May S8/A3/B4; Jun S4/A6/B4; Jul S5/A4/B4; Aug S14/A2/B3. Some S/A route relabels occur while total membership stays same because corrected Waku edge affects S core but A can rescue.
+- Membership is now frozen outcome-free at 93R subject to investigating the single June missing source/fallback and explaining removed race 202605040103 pre-race values. Do not read outcomes yet for those investigations. September 2026 outcomes remain UNREAD.
