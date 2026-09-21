@@ -179,3 +179,20 @@ C. 4号艇1着専用2着モデルを6か月データで構築
 D. 3着conditional model再研究
 E. 最後にROI/点数/Dutchを再検証
 頭モデル p>=.36 + ORIG>=-.06 は当面固定し、相手研究中に触らない。
+
+
+## MANDATORY PRE-FIRE FULL INSPECTION RULE (2026-09-21 user instruction)
+
+Before every GitHub Actions workflow dispatch/rerun, do NOT fire immediately after editing.
+
+Mandatory sequence:
+1. Refetch the actual committed workflow and every edited/used script from GitHub main.
+2. Inspect the complete relevant files, not only changed lines.
+3. Check literal escaped newline mistakes (`\\n`), quoting/indentation, YAML structure, syntax, env/path/file names, dependencies, permissions, artifact/run IDs, timeout/loop risks.
+4. Perform every available static/syntax sanity check before dispatch. Python committed source must be syntactically valid; YAML actual committed structure must be inspected.
+5. Confirm inputs/data paths and leakage guards (September UNREAD; no result-derived Waku10 reconstruction).
+6. Only after ALL checks pass may the workflow be fired or the user be asked to fire it.
+7. On failure, inspect full logs + source + inputs and identify root cause before any rerun. Never blindly rerun.
+8. Record failure cause, fix, pre-fire checks, run/job/artifact IDs and result in this handoff.
+
+Permanent project rule: repeated literal `\\n` failures are zero-tolerance; always verify the actual GitHub file before firing.
