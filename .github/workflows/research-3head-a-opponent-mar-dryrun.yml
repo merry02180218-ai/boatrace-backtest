@@ -1,0 +1,33 @@
+name: research-3head-a-opponent-mar-dryrun
+on:
+  push:
+    paths:
+      - '.github/triggers/research-3head-a-opponent-mar-dryrun.txt'
+  workflow_dispatch:
+jobs:
+  dryrun:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests
+      - name: Strict preflight
+        run: |
+          python -m py_compile research/run_3head_a_opponent_mar_dryrun.py analyze_v221_3head_scenario_pair.py research/run_3head_wave19_motor_exhibition_gate.py
+          grep -q "build_pre_enhanced('2026-03-01','2026-03-31',False)" research/run_3head_a_opponent_mar_dryrun.py
+          grep -q "if dd>=date(2026,3,1): z\['res'\]=\[\]" research/run_3head_a_opponent_mar_dryrun.py
+          grep -q "while day<=date(2026,2,28)" research/run_3head_a_opponent_mar_dryrun.py
+          ! grep -q "results/realtime.*2026-03" research/run_3head_a_opponent_mar_dryrun.py
+      - name: March pre-settlement dry run
+        run: cd research && python run_3head_a_opponent_mar_dryrun.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-3head-a-opponent-mar-dryrun
+          path: |
+            research/research_3head_a_opponent_mar_dryrun.json
+            research/research_3head_a_opponent_mar_dryrun.csv
+          if-no-files-found: warn
