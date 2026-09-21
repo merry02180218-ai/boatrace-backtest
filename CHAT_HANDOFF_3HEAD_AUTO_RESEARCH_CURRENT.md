@@ -122,3 +122,12 @@ Do not tune threshold or rule using February. February is now READ and must neve
 March remains UNREAD and reserved as final one-shot only. September 2026 remains UNREAD.
 Before any March trigger, mandatory full preflight/audit rule above applies.
 
+## 2026-09-21 — Decision after February forward validation
+Do **not** tune the protected rule from February. The frozen candidate remains exactly turn4>=0.50 / protected SECOND=4 / fixed six if it is taken to March.
+Evidence available without opening March:
+- development Dec-Jan: baseline 25/41 (60.98%) -> protected 29/41 (70.73%), net +4.
+- February forward: baseline 6/12 (50.00%) -> protected 6/12 (50.00%), net 0; 13 swaps.
+- combined descriptive Dec-Feb (NOT a new tuning sample): baseline 31/53=58.49%, protected 35/53=66.04%, net +4.
+Interpretation: February did not reproduce the development lift, but it also produced no protected-rule damage. Evidence is therefore weaker than the Dec-Jan development result and not sufficient to justify changing the frozen rule.
+Next research action before any March reveal: build/inspect a March **pre-settlement-only dry run** that freezes the March cohort and all six-ticket decisions, validates invariants and writes a prediction artifact WITHOUT loading March settlement. Only after that dry run succeeds and is audited may the separate March settlement one-shot be triggered. March threshold/features must remain unchanged.
+
