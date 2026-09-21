@@ -1,0 +1,8 @@
+data=
+1	0
+福島　　勇樹	9.00	0.11	2.0	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	４		IP	１		IP
+井本　　昌也	6.70	0.16	2.5	２		IP	５		IP	１		IP	５		IP	１		IP	２		IP	３		IP	４		IP	１	1	IP	３		G1
+宮崎　心之介	4.90	0.15	3.2	４		IP	３		IP	２		IP	３		IP	２		IP	３		IP	３		IP	５		IP	５		IP	６		IP
+長岡　　良也	4.00	0.18	4.0	５		IP	３		IP	５		IP	５		IP	６		IP	４		IP	２		IP	４		IP	１		IP	６		IP
+山本　稔太朗	2.56	0.18	3.3	５		G3	４		IP	５		IP	２		IP	５		IP	欠		IP	エ		IP	４		IP	６		IP	転		IP
+長野　壮志郎	4.20	0.17	3.0	４		IP	６		IP	５		IP	２		IP	３		IP	４	5	IP	４		IP	１		IP	５		IP	６		IP

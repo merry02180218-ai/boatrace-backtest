@@ -1,0 +1,8 @@
+data=
+1	0
+石田　　貴洋	7.60	0.22	4.2	１		IP	３		IP	１		IP	２		G3	３		IP	１		IP	２		IP	３		IP	１		IP	５		IP
+関野　　　文	7.20	0.15	2.9	３		IP	３		IP	１		IP	２		IP	４	3	IP	１		IP	５		IP	３		IP	１		G3	１		IP
+仲口　　博崇	4.90	0.15	3.6	４		IP	６		G3	３		IP	１		IP	２		IP	５		IP	２		IP	６		G3	２		G3	６		IP
+橋本　　久和	5.00	0.14	3.0	４		IP	６	6	G3	２		IP	４		IP	６		IP	１		IP	４		IP	４		IP	１		IP	４	3	IP
+松本　　浩貴	2.20	0.20	4.0	５		IP	５		IP	５		IP	５	6	IP	５		IP	４		IP	４		IP	６		IP	５		IP	６		IP
+河野　　真也	3.10	0.19	4.7	５		IP	３		IP	５		IP	３		IP	６		IP	３		IP	６		IP	６		IP	５		IP	４	5	IP

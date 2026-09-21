@@ -1,0 +1,8 @@
+data=
+1	0
+平見　　真彦	7.70	0.18	2.6	２		IP	１		G3	１		IP	１		IP	４		IP	６		IP	３		IP	１		IP	１		IP	２		IP
+林　　　恵祐	4.30	0.18	4.0	３		IP	２		IP	６		IP	６		IP	４		IP	４	3	IP	６		IP	３		IP	４		IP	２		IP
+今出　　晋二	4.00	0.15	3.6	３		IP	３	4	IP	６		IP	３		IP	５		IP	２		IP	５		IP	４		IP	６		IP	４		IP
+羽野　　　諒	4.30	0.13	2.4	１		IP	５		IP	４		IP	４		IP	４		IP	６		IP	３		IP	３		IP	５	3	G3	４		IP
+桐本　　康臣	5.10	0.16	2.9	３		IP	５		IP	４		IP	５		IP	３		IP	３		IP	３	4	IP	１		IP	２		IP	６		IP
+新田　　智彰	3.40	0.19	4.1	６		IP	３		IP	５		IP	５		G3	５		IP	４		IP	６		IP	３	5	IP	５		IP	２		IP

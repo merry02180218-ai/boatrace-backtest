@@ -1,0 +1,8 @@
+data=
+1	0
+植木　　美帆	3.80	0.23	4.7	５		IP	１		IP	５		IP	５		G3	４	2	G3	６		IP	５		IP	４		IP	１		IP	６		G3
+上野　　俊樹	5.00	0.13	2.8	１		IP	６		IP	２		IP	５		IP	２	4	G3	３		IP	６		IP	３		IP	転		IP	２		IP
+津久井　拓也	5.80	0.14	3.5	４		IP	１	4	IP	１		IP	３		IP	５	2	G2	６		G2	２		G2	４		IP	５		IP	２		IP
+花田　　凱成	3.10	0.17	4.4	６		IP	６	5	IP	３		IP	５		IP	６		IP	４		IP	５		IP	３		IP	３		IP	５		IP
+池本　　輝明	3.50	0.21	4.4	３		IP	５		G3	５		IP	３		IP	５		IP	２		IP	５		IP	６		IP	４		IP	５		IP
+栗原　　一馬	3.80	0.16	3.4	３		IP	３		IP	６		IP	６		IP	５		IP	５		IP	４		IP	４		IP	５		IP	２	5	IP

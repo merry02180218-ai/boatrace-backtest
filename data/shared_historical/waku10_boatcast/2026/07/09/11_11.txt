@@ -1,0 +1,8 @@
+data=
+1	0
+高憧　　四季	9.10	0.12	1.6	１		IP	２		IP	１		IP	６		G3	１		G3	１		G1	１		G1	２		SG	１		G2	２		G2
+寺田　　空詩	7.40	0.16	3.3	１		IP	２		IP	１		IP	５		IP	１		IP	２		G3	２		G3	２		G3	３		IP	４		IP
+土屋　　　南	5.90	0.13	2.8	４		IP	４		IP	６		IP	２		IP	２		IP	２		IP	４		IP	４		IP	２		IP	１		IP
+倉持　　莉々	6.60	0.15	2.8	４		IP	６		IP	２		G3	１		IP	３		IP	４	3	G2	１		IP	３		IP	２		IP	２		IP
+山下　　夏鈴	4.30	0.16	2.9	４		IP	４	6	IP	６	6	IP	５		IP	２		IP	４		IP	４		IP	３		IP	３		IP	４		IP
+香川　　素子	5.40	0.24	4.8	５		IP	２		IP	１		IP	３		IP	５		G3	４		IP	３		IP	３		G3	２		IP	５		IP

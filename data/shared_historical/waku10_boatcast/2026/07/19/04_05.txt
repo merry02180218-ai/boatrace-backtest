@@ -1,0 +1,8 @@
+data=
+1	0
+松山　　裕基	4.90	0.15	4.2	６		IP	４		IP	２		IP	５		IP	１		IP	２		IP	４		IP	４		IP	３		IP	５		IP
+岩田　　　凌	3.60	0.20	4.0	３		IP	１		IP	５		IP	２		IP	４		IP	６		IP	Ｆ		IP	５		IP	５		IP	６		IP
+中越　　博紀	5.40	0.17	3.6	４		IP	５		IP	３		IP	３	2	IP	１		IP	６		IP	６		IP	２	5	IP	２		IP	２		IP
+幸野　　史明	3.50	0.20	3.5	４		IP	１		IP	５		IP	５		IP	５	6	IP	４		IP	６		IP	５		IP	３		IP	５		IP
+若林　　樹蘭	4.60	0.17	3.1	２		IP	５		IP	５		IP	４		IP	４		IP	２		IP	３		IP	２		IP	５		IP	５	6	IP
+石渡　　鉄兵	4.30	0.12	3.2	５		G2	５	5	SG	５	5	IP	４		IP	１		IP	６		IP	４		G1	６		G1	２		IP	５		SG

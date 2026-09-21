@@ -1,0 +1,8 @@
+data=
+1	0
+渡辺　　空依	8.60	0.17	3.1	４		IP	２		IP	１		IP	１		IP	２		IP	３		IP	１	2	IP	１		IP	１		IP	１		IP
+西川　　真人	4.20	0.18	3.8	４		IP	２		IP	３		IP	５		IP	５		IP	２		IP	５		IP	２		IP	６		IP	６		IP
+金田　　大輔	5.20	0.16	3.2	６	4	IP	１		IP	３	5	IP	２		IP	３		IP	３	4	IP	６		IP	４		IP	２		IP	５		IP
+岡崎　　凪汰	3.00	0.13	3.2	５		IP	妨		IP	４		IP	２		IP	５		IP	６	6	IP	４	3	IP	５		IP	３		IP	６		IP
+妹尾　　忠幸	5.10	0.20	3.0	３		IP	２		IP	６		IP	２		IP	２		IP	４		IP	３		IP	３		IP	Ｆ		IP	４		IP
+本吉　　正樹	3.00	0.17	4.0	６		IP	２		IP	３		IP	６		IP	５		IP	４	5	IP	５		IP	６		IP	６		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+廣中　智紗衣	7.20	0.23	3.7	２		IP	２		IP	３		IP	３		G3	１		IP	３		IP	４		IP	１		IP	４		IP	１		IP
+滝川　真由子	6.60	0.19	4.2	３		IP	２		IP	１		G3	２		G3	１		IP	４		IP	５		IP	３		IP	２		IP	４		IP
+三浦　　永理	5.50	0.14	3.0	５		IP	１		IP	６		IP	３		G3	１		G3	５		G2	４		G2	３		G3	５		IP	１		G3
+横田　　海人	1.40	0.17	3.5	５		IP	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP
+井上　　慧人	4.56	0.19	3.7	３		IP	４		IP	３		IP	３		IP	４		IP	欠		IP	５		IP	２		IP	４		IP	６		IP
+塚越　　陸斗	1.30	0.24	4.3	５		IP	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP	Ｆ		IP	６		IP	６		IP

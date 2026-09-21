@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　浩次	8.20	0.17	3.0	１		IP	１		IP	１		IP	１		IP	３		IP	５		IP	１		G3	３		G3	２		IP	１		G3
+宮地　　博士	4.70	0.20	4.6	妨		IP	４		IP	２		IP	６		IP	３		IP	３		IP	５	3	IP	３		IP	４		IP	１		IP
+多羅尾　達之	3.70	0.14	2.5	４	2	IP	５		IP	２		IP	３		IP	４	2	IP	転		IP	６		IP	５		IP	３		IP	４		IP
+出畑　　孝典	3.80	0.19	4.7	５		IP	３		IP	３	2	IP	６		IP	５	5	IP	４		IP	５		IP	３		IP	４		IP	４		IP
+成貞　　琳平	3.40	0.20	4.8	６		IP	４		IP	５		IP	４		IP	３		IP	５		IP	４	4	IP	４		IP	６		IP	３		IP
+一柳　　和孝	3.67	0.19	4.5	３	5	IP	６		IP	４		G3	３		G3	転		IP	４		IP	４		IP	５		IP	５		IP	４		IP

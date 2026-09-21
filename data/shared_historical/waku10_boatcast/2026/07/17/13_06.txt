@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　夏海	9.20	0.18	3.6	１		G3	１		IP	３		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+小野　　生奈	6.50	0.18	3.1	３		G3	２		G2	３		G3	４		IP	１		G3	２		G2	４		G2	３		G3	４		G3	４		G3
+嶋田　　有里	5.20	0.14	2.7	３		G3	４	4	IP	２		G3	３		G3	２		IP	４		IP	５		IP	４		IP	４		IP	３		IP
+畑田　　希咲	2.20	0.21	4.4	５		G3	６		IP	３		IP	４		G3	６		IP	６		IP	５	5	IP	６		IP	５		IP	５		IP
+三嶌　さらら	4.50	0.19	2.9	２		G3	５		IP	３		IP	６		IP	４		IP	３		IP	３	4	IP	５	6	IP	４		IP	３		IP
+池田　　美優	1.80	0.23	4.6	６		G3	６		G3	６		IP	６		IP	６		IP	５		IP	２		IP	６		IP	６		G3	６		G3

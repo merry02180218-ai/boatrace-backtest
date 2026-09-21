@@ -1,0 +1,8 @@
+data=
+1	0
+小坂　　尚哉	9.10	0.14	3.4	１		IP	１		IP	６		IP	１		IP	１		IP	１		G1	１		G1	１		IP	２		IP	１		IP
+小林　　遼太	4.90	0.17	3.2	２		IP	３	3	G3	２		IP	２		IP	６		IP	６		IP	３		IP	５		IP	２		G3	６		IP
+芹澤　　克彦	3.90	0.14	2.2	３		IP	４	4	G3	５		IP	４		IP	２		IP	６		IP	３		IP	６		IP	３		IP	６	4	IP
+木村　　仁紀	5.90	0.12	3.1	２	5	IP	１		IP	４		IP	２		IP	１		IP	４		G2	５		IP	４		G1	６		G1	４		G1
+上村　慎太郎	2.67	0.29	5.4	３		IP	５		IP	６		IP	欠		IP	４		IP	５		IP	５		IP	６		IP	５		IP	４		IP
+伊達　　正利	1.90	0.21	4.7	６	5	IP	５		IP	４		IP	４		IP	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+石川　　哲秀	5.10	0.16	3.1	２		IP	２		IP	２		IP	６		IP	５		IP	１		IP	６		IP	３		IP	６		IP	３		IP
+大江　　　純	5.70	0.11	2.6	２		IP	２		IP	５		IP	３		IP	３		IP	６	3	G3	４	3	G3	３		IP	２		IP	２		IP
+花本　　夏樹	2.60	0.21	4.5	４		IP	３		IP	４		IP	５		IP	６		IP	６	6	IP	６		IP	５		IP	４		IP	６		IP
+山下　　流心	4.60	0.16	3.6	５		IP	Ｆ	2	IP	５		IP	４		IP	２		IP	４		IP	３		IP	４		G3	３		IP	１		IP
+伯母　　芳恒	3.40	0.16	3.1	５	6	G3	３		IP	５		IP	５		IP	４		IP	５		IP	３		IP	５		IP	３		IP	５		G3
+早川　　理稀	2.30	0.16	3.0	６		IP	６		IP	５		IP	６		IP	６		IP	３		IP	５		IP	５		IP	６		IP	３		IP

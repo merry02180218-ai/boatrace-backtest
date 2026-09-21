@@ -1,0 +1,8 @@
+data=
+1	0
+石川　　　諒	6.89	0.12	2.6	１		IP	エ		IP	１		IP	１		IP	３		IP	転		IP	１		IP	４		IP	３	2	IP	３		IP
+松下　　誉士	3.90	0.22	5.0	６		IP	４		IP	３		IP	５		IP	６		IP	２		IP	６		IP	４		IP	４		IP	２		IP
+楠原　　正剛	4.40	0.15	2.5	４		IP	２		IP	２		IP	４		IP	５		IP	４		IP	５		IP	２		IP	５		G3	５		IP
+木村　　浩士	3.50	0.18	3.4	３		IP	５		IP	３	5	IP	５		IP	３		IP	５		IP	６		IP	３		IP	５		IP	５		IP
+坂口　　貴彦	6.20	0.16	2.8	４		IP	４		IP	４		IP	３		IP	４		IP	２		IP	１		IP	２		IP	３		IP	３		IP
+出口　　飛龍	1.10	0.20	5.4	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

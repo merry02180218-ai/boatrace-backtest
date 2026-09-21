@@ -1,0 +1,8 @@
+data=
+1	0
+宮内　　直哉	4.40	0.21	4.1	４		IP	１		IP	４		IP	４		IP	５		IP	５		IP	１		IP	５		IP	５		IP	４		IP
+前田　　光昭	2.10	0.21	3.6	６		IP	６	3	G3	６		G3	５		G3	５		G3	２		IP	５		IP	６		IP	６		IP	５		IP
+峰重　　力也	4.40	0.13	1.9	２		IP	５		IP	５		IP	５		IP	５		IP	６		IP	３		IP	３		IP	２		IP	３		IP
+毒島　　　誠	6.30	0.14	2.9	５	3	G2	４		G2	１		IP	３		IP	３	3	IP	５		IP	６		IP	２		IP	２		SG	２	3	SG
+渡邊　　哲也	2.00	0.22	4.2	４		IP	６	6	IP	６	6	IP	４		IP	４		IP	６		IP	６	6	IP	６		IP	５	4	IP	６	6	IP
+中野　　仁照	3.60	0.21	4.4	６		IP	３		IP	６		IP	６		IP	６		IP	３		IP	２		IP	３		IP	４		IP	５		IP

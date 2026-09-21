@@ -1,0 +1,8 @@
+data=
+1	0
+中本　　大樹	7.80	0.12	3.3	３		IP	１		IP	１		IP	１		IP	２		IP	２		IP	１		IP	妨		IP	１		IP	３		IP
+乙藤　　智史	7.00	0.17	2.8	４		IP	１		IP	２	3	IP	３		IP	２		IP	１		IP	４		IP	２		IP	４		IP	２		IP
+松田　　隆司	3.90	0.16	2.6	５		IP	６		IP	１		IP	３		IP	４		IP	３	4	IP	５		IP	６		IP	４		IP	６		IP
+馬袋　　義則	7.20	0.14	2.8	３		IP	４		IP	１		IP	１		G3	３		G3	３		IP	１		IP	１		IP	５		IP	２		IP
+秋山　　広一	5.00	0.19	4.1	３		IP	２		G2	３		G2	３		IP	４		IP	６		G3	６		G3	４		IP	５		IP	１		IP
+泉　　　啓文	2.40	0.19	4.8	６		IP	４		IP	５		G3	６		G3	５		IP	６		IP	６		IP	５		IP	２	5	IP	５		IP

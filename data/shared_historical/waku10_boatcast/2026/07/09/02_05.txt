@@ -1,0 +1,8 @@
+data=
+1	0
+今井　　美亜	9.20	0.17	2.9	１		IP	１		IP	１		G3	１		G3	１		G3	５		G2	１		G2	１		IP	１		IP	２		IP
+毒島　　　誠	6.60	0.19	3.3	４		IP	５		IP	２		IP	２		IP	１		IP	１		IP	５		IP	２		SG	４	3	IP	４		IP
+松田　　竜馬	4.90	0.15	3.0	４		IP	２		IP	３		IP	３		IP	５		IP	５		IP	３		IP	３		IP	６		IP	２		IP
+磯部　　　誠	7.10	0.14	2.7	２		SG	５		SG	２		G1	２		G1	２		G1	４	3	SG	４		G1	２		IP	２		IP	５		G1
+小林　　　泰	4.50	0.11	2.8	４		IP	３		IP	４		IP	６		IP	１		IP	５		IP	３		IP	５		G2	２		IP	６		IP
+河合　　佑樹	6.10	0.18	4.3	５		SG	３		SG	３		G1	３		G1	２	5	SG	６		G1	４		G1	５		IP	２		IP	２		IP

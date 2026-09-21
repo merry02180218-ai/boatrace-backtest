@@ -1,0 +1,8 @@
+data=
+1	0
+稲田　　浩二	9.00	0.13	1.9	３		G2	２		G2	１		IP	１		IP	１		IP	１		G2	１		G2	５		G1	１		G1	２		IP
+井口　　佳典	7.60	0.15	3.5	２		IP	３		G2	２		G2	１		SG	転		SG	２		G1	４		G3	３		G1	２		G1	１		G1
+井上　　忠政	6.90	0.14	2.5	２		IP	２		IP	５		G2	５		G2	４		G1	２		G1	２		G1	１	1	IP	１		IP	４		IP
+丸野　　一樹	6.10	0.13	2.3	５		G2	５		SG	６		G1	２	5	SG	５		G1	２	5	IP	１		IP	２		IP	２		G1	６	5	SG
+磯部　　　誠	5.30	0.10	2.6	２		IP	２	3	IP	５		G2	２		SG	５		SG	６		G1	５		G1	５		SG	５	6	SG	３		G1
+上野　真之介	6.50	0.12	2.9	１	5	IP	３		SG	４		SG	５		G1	３		G1	３		SG	３		IP	１	5	IP	４		IP	５		G1

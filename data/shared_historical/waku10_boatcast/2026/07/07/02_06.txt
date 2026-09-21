@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　日向	9.80	0.11	1.7	２		IP	１		IP	１		G2	１		G2	２		IP	１		IP	１		G2	２		IP	１		IP	１		IP
+井口　　佳典	6.80	0.14	3.8	１		SG	転		SG	２		G1	４		G3	３		G1	２		G1	１		G1	２		G1	４		G2	６		G1
+多田　　有佑	3.30	0.23	4.0	４		IP	５	5	IP	６		IP	４		IP	５		IP	２		IP	５		IP	４	2	IP	４		IP	５		IP
+今井　　美亜	4.60	0.19	3.5	１		IP	６		G3	４		G3	２		G3	６		G2	４		G2	２		G2	４		IP	６		IP	５		IP
+関　　　浩哉	5.60	0.17	3.6	５	6	SG	４		SG	５		G1	２		SG	３		G1	５		G1	２		IP	３		G1	４	6	G1	５		G1
+益田　　啓司	3.40	0.15	3.0	４		IP	２		IP	５		IP	３		IP	４		IP	６		IP	６		IP	６		IP	６		G1	５		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+森高　　一真	8.80	0.13	3.3	１		IP	１		IP	５		SG	１		G1	４		SG	１		G1	１		G1	４		G1	２		G1	１		G1
+金子　　賢志	6.60	0.11	2.8	４		G2	４		G2	５		IP	２		IP	１		IP	１		IP	２		IP	２		G1	５		G1	３		IP
+谷野　　錬志	7.80	0.16	2.9	３		SG	３		SG	１		IP	２		IP	１		G1	５	4	G1	４		G1	４		G1	１		IP	１		IP
+石野　　貴之	6.40	0.15	2.9	１	3	IP	６		SG	６		G1	６		SG	２	3	SG	３		G1	３		IP	２		G1	１		G1	５		G1
+須藤　　博倫	7.20	0.12	2.5	２		IP	３		IP	２		IP	３		IP	２		IP	２		IP	２		IP	４		IP	１	4	IP	３	4	IP
+山田　　祐也	4.50	0.12	2.7	２		IP	５		G3	６		IP	５		IP	６		G1	６		G1	１		G2	４		G2	３		IP	４		IP

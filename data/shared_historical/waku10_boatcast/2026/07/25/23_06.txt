@@ -1,0 +1,8 @@
+data=
+1	0
+山口　　隆史	7.10	0.17	3.1	２		IP	５		IP	６	2	IP	１		IP	４		IP	１		IP	２		IP	１		IP	２		IP	１		IP
+村岡　　　賢	6.40	0.18	4.0	４		IP	４		IP	３	3	IP	１		IP	３		IP	１		IP	２		IP	４		IP	３		IP	３		IP
+豊田　　泰洋	2.60	0.17	3.3	転		IP	３	2	IP	６		IP	４		IP	５		IP	５	5	IP	５		IP	６	4	IP	４		IP	４		IP
+奈須　　啓太	5.40	0.14	1.8	１		IP	６		IP	３		IP	４		IP	３		IP	２		G3	６	5	G3	３		IP	２		IP	４		IP
+小森　　信雄	2.40	0.23	4.7	３		IP	５		IP	５	6	IP	５		IP	５		IP	６	6	IP	５		IP	５		IP	６		IP	４		IP
+高岡　　竜也	4.30	0.18	4.1	５		IP	４		IP	５		IP	３		IP	２		IP	６		IP	２		IP	４		IP	５		IP	４		IP

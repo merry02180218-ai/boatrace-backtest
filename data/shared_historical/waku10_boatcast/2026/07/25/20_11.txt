@@ -1,0 +1,8 @@
+data=
+1	0
+野中　　一平	9.30	0.11	1.7	１		IP	１		IP	３		G2	１		G2	１		IP	１		IP	１		G1	１		IP	１		IP	４		IP
+市川　　健太	4.10	0.17	3.1	２		IP	４		IP	５		IP	２		IP	６		IP	６		IP	３		IP	２		IP	６		IP	５		IP
+佐々木　和伸	6.00	0.12	1.8	３		IP	２		IP	３		IP	４		IP	３		IP	４	2	IP	３		IP	２		IP	３		IP	３		IP
+小玉　　啓太	2.80	0.11	2.8	６		IP	６		IP	３		IP	３		IP	５		IP	４		IP	５	5	IP	５		IP	５		IP	５		IP
+蜂須　　瑞生	3.90	0.17	3.4	５		IP	５		IP	５		IP	２		IP	３		IP	６	6	IP	３		IP	３	6	IP	４	6	IP	５		G3
+川口　　貴久	4.22	0.17	3.0	４		IP	４		IP	５		IP	欠		IP	５		IP	５		IP	４		IP	４		IP	４		IP	１		IP

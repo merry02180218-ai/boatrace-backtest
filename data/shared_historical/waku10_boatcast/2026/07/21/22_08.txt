@@ -1,0 +1,8 @@
+data=
+1	0
+野田　なづき	7.40	0.19	3.8	１		IP	２		IP	１		IP	２		IP	１		G2	２		G2	５		IP	Ｆ		G3	３		G3	１		IP
+井上　　未都	5.80	0.15	2.9	２		IP	３	3	IP	３		IP	Ｆ		IP	３		IP	５		IP	３		IP	２		IP	２		IP	２		IP
+篠原　　晟弥	5.10	0.17	3.8	５		G2	４		IP	２		IP	６		IP	４		IP	２		IP	１		IP	転		IP	５		IP	１		IP
+登玉　　隼百	5.80	0.12	2.5	落		IP	１		IP	６	6	IP	２		IP	２		IP	２		IP	１		IP	３		IP	６		IP	４		IP
+山崎　　　祥	3.60	0.18	3.4	３		IP	５	4	IP	５		IP	６		IP	５		IP	３		IP	４		IP	４		IP	６		IP	２		IP
+中　　　亮太	4.40	0.16	3.2	６		IP	２		IP	６		IP	３		G2	６		IP	４		G2	２		G3	６		G3	４		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+新田　　雄史	10.30	0.11	1.5	１		IP	１		IP	１		G2	２		G2	１		SG	１		SG	２		G1	２		G1	１		G1	２	2	SG
+板橋　　侑我	5.90	0.14	3.5	２		IP	２		G2	２		IP	４		IP	１		IP	２		IP	５		G1	４		G1	６		G3	５		G1
+山地　　正樹	6.60	0.14	2.8	１		IP	４		IP	４		IP	３		IP	３		IP	２		IP	４		IP	１		IP	２		IP	４		IP
+廣瀬　　篤哉	5.30	0.15	2.1	２		IP	６		IP	４		IP	４		IP	５	6	IP	３		IP	５		IP	１		IP	３		IP	１		IP
+岡田　　憲行	5.90	0.23	3.8	３		IP	５	4	IP	１		IP	６	3	IP	１	4	IP	６	4	IP	３	2	IP	２		IP	４		IP	２		IP
+杉山　　正樹	3.10	0.13	3.8	４	5	IP	６		IP	４		IP	５		IP	５		IP	６		G1	３		G1	５		IP	６		G2	４		G2

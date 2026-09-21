@@ -1,0 +1,8 @@
+data=
+1	0
+宮迫　　暢彦	6.10	0.17	2.6	６		IP	３		IP	Ｆ		G3	１		IP	４		IP	３		IP	１		IP	３		IP	２		IP	１		IP
+鋤柄　　貴俊	5.20	0.15	3.2	２		IP	５		G1	６		IP	４		IP	３		IP	２		IP	３		IP	２		IP	５		IP	３		IP
+村上　　彰一	5.30	0.18	3.3	３		IP	３		IP	Ｆ		IP	４		IP	６		IP	１		IP	４		IP	４		IP	１		IP	２		IP
+岡田　　憲行	7.10	0.15	3.3	２		IP	１		IP	２	3	IP	２		IP	４		IP	１		IP	５		IP	６	1	IP	１	1	IP	２		IP
+麻生　　慎介	5.70	0.14	2.0	４	6	IP	４		IP	４	4	IP	３		IP	４		IP	４		IP	３		IP	１		IP	１		IP	４		G1
+川原　　祐明	5.20	0.14	3.6	３		IP	３		IP	６		IP	４		IP	１	5	IP	４		IP	３		IP	２		IP	６		IP	４		IP

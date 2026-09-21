@@ -1,0 +1,8 @@
+data=
+1	0
+金田　　智博	9.70	0.12	2.0	２		IP	３		G2	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G2
+深川　　和仁	4.70	0.16	3.2	５		IP	６		IP	２		IP	４		IP	５		IP	５		IP	１		IP	５		IP	２		IP	２		IP
+森　　　竜也	4.40	0.14	3.0	５		IP	２		IP	６		IP	３		IP	６		G3	１		G3	２		IP	４		IP	５		IP	５		G3
+櫻井　　　隼	2.00	0.25	4.3	６	5	IP	６	6	IP	５		IP	６		IP	４	6	IP	４		IP	６		IP	６		IP	４		IP	６		IP
+古田　　祐貴	5.20	0.14	4.2	２		IP	２		IP	４		IP	４		IP	３		IP	４		G3	５		IP	５		IP	３		IP	２		G3
+渡邉　　　翼	3.40	0.17	3.1	５		IP	転		IP	３		IP	４		IP	２		IP	５		IP	６		IP	６		IP	２		IP	５		IP

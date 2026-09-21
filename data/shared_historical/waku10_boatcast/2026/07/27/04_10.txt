@@ -1,0 +1,8 @@
+data=
+1	0
+廣中　智紗衣	7.00	0.22	4.3	５		G3	１		G3	１		IP	２		IP	２		IP	３		IP	３		G3	１		IP	３		IP	４		IP
+前原　　　哉	5.00	0.19	3.8	５		IP	３		IP	５		IP	３		IP	２		G3	３		IP	２		IP	３		IP	４		IP	５		IP
+寺田　　空詩	5.30	0.17	2.9	３		IP	２		IP	４		IP	６		IP	４		IP	２		G3	３		IP	３		IP	４		IP	３		IP
+豊田　　　結	4.50	0.16	3.0	３		IP	６		IP	６		IP	４		IP	２		IP	４		IP	４		IP	６		IP	２		IP	２		IP
+恵良　　琴美	2.30	0.18	3.6	５		IP	３		IP	４		IP	６		IP	６		IP	５		IP	５		IP	５	4	IP	５	6	IP	６		IP
+山下　　友貴	4.20	0.16	3.8	３		IP	３		IP	２		IP	５		IP	４		G3	５		G3	１	5	G3	５		G3	６		IP	６		IP

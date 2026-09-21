@@ -1,0 +1,8 @@
+data=
+1	0
+長谷川　親王	4.00	0.21	4.4	２		IP	５		IP	２		IP	２		IP	５		G3	６		IP	４		IP	４		IP	６		IP	５		IP
+有賀　　達也	8.00	0.12	2.7	３		IP	２		IP	１		IP	１		G3	４		G3	２		IP	２		IP	１		IP	２		IP	２		IP
+大塚　　雅治	3.60	0.18	3.7	５		IP	６	6	IP	４		IP	４	4	IP	１		IP	４	4	G3	６	5	G3	４	4	IP	４		IP	５		IP
+北野　　輝季	4.80	0.11	2.3	２		G3	４		IP	１		IP	３		G1	５		G1	５		G1	６		G1	３		IP	５		IP	５		G1
+樋口　　喜彦	3.20	0.18	4.2	５		IP	６		IP	６		IP	５		IP	５		IP	４		IP	４		IP	３		IP	２		IP	５		IP
+田村　　　慶	4.40	0.16	4.3	４		IP	４		IP	５		IP	５		IP	２		IP	１		IP	５		IP	４		IP	４		IP	５		IP

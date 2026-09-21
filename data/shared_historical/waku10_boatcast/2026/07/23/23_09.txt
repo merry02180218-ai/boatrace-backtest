@@ -1,0 +1,8 @@
+data=
+1	0
+坪内　　　実	5.40	0.17	4.4	６		IP	２		IP	４		IP	６		IP	２		IP	４		IP	１		IP	１		IP	３		IP	５		IP
+石本　　裕武	7.60	0.14	3.6	１		IP	１		G1	転		SG	２		G1	２		G1	１		IP	３		IP	Ｆ		IP	１		IP	１		G1
+木村　　亮太	4.20	0.17	2.9	１		IP	４		IP	転		IP	４		IP	２		IP	６		IP	４		IP	２	2	IP	６		IP	５		IP
+戸敷　　晃美	5.60	0.16	2.9	３		G3	２		G3	１		IP	３		IP	Ｆ		IP	５		IP	３		IP	４		IP	３		IP	２		IP
+土屋　　智則	4.90	0.15	2.8	６	4	G3	４		SG	４		G1	２		G1	５	4	G1	４	4	IP	３		IP	３	4	G1	４		G1	５		G1
+山口　　隆史	3.20	0.18	4.5	２		IP	４		IP	６		IP	５		IP	４	5	IP	５		IP	４		IP	５		IP	６		IP	４		IP

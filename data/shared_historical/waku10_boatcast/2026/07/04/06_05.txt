@@ -1,0 +1,8 @@
+data=
+1	0
+橋本　　英一	6.67	0.16	2.4	２		IP	２		IP	５		IP	３		IP	転		IP	４	2	IP	３		IP	３		IP	１		IP	１		IP
+渡邊　　裕貴	6.20	0.17	3.5	２		IP	２		IP	１		IP	２		IP	４		IP	３		IP	１		IP	６		IP	６		IP	３		IP
+宮野　　　仁	3.80	0.22	4.2	４	4	IP	６		IP	２		IP	３		IP	６		IP	３		IP	４		IP	４		IP	５		IP	５		IP
+上村　　宏太	3.90	0.15	3.2	３		IP	３		IP	５	5	IP	３		IP	３		IP	６	5	IP	３		IP	転		IP	５	5	IP	４		IP
+鈴木　　茂高	3.20	0.15	4.3	５		IP	Ｆ		IP	３		IP	５		IP	３		IP	５	6	IP	３		IP	５		IP	５		IP	４	4	IP
+若林　　義人	4.20	0.14	3.1	３		IP	６		IP	４		IP	２		IP	１		IP	６		IP	６		IP	６		IP	３		IP	４	5	IP

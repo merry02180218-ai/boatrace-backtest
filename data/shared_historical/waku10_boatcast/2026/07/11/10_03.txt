@@ -1,0 +1,8 @@
+data=
+1	0
+渡辺　　　豊	7.00	0.16	3.3	２		G3	２		IP	５		IP	２		IP	３		IP	４		IP	３		IP	１		IP	２		IP	１		IP
+富山　　弘幸	5.70	0.16	2.5	４		G3	３		IP	２		G3	３		G3	３		IP	３		IP	２		IP	５		IP	１		IP	６		IP
+室田　　泰史	6.00	0.12	2.6	５		G3	１		G3	４		IP	１		IP	４		IP	３		IP	４		IP	３		IP	２		IP	３		IP
+宮地　　博士	3.90	0.16	4.5	４	6	G3	３		IP	６		IP	５	5	IP	５		IP	４		IP	３		IP	４		IP	４		IP	３		IP
+仲口　　博崇	6.90	0.19	3.5	１	3	G3	２	3	G3	２		IP	２	2	IP	２	4	G3	５		IP	６	4	IP	３	2	IP	２	3	IP	１	4	IP
+谷　　　勝幸	2.90	0.19	4.6	５		G3	５		IP	６		G3	６		G3	６		G3	３	5	IP	５		IP	４		IP	３	5	IP	４		IP

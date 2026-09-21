@@ -1,0 +1,8 @@
+data=
+1	0
+石渡　　鉄兵	8.60	0.11	2.5	２		IP	４		G2	１		SG	２		IP	１		IP	２		IP	１		IP	５		IP	１		IP	１		IP
+坪井　　康晴	7.50	0.15	3.2	１		IP	３		IP	２		G2	３		G2	５		IP	２		IP	３		G2	１		IP	１		IP	４		IP
+吉田　　裕平	7.50	0.14	2.7	２		G3	１		SG	２	4	SG	５		G1	２		G1	２		SG	５		SG	３		G1	３		IP	３		IP
+関　　　浩哉	7.10	0.13	2.4	３		IP	１		G2	４		SG	３		SG	３		G1	２		G1	５		SG	５		G1	３		G1	１		IP
+渡邉　　優美	5.10	0.15	3.0	６		G3	４		IP	４		G2	３		IP	３		IP	４		G2	６		G2	２		G2	２		G3	４		G1
+木下　　翔太	4.90	0.16	3.8	２		G2	５		G2	２		G2	４		G2	４		IP	２	5	IP	５		G1	６		G1	５		G1	５		G1

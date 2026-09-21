@@ -1,0 +1,8 @@
+data=
+1	0
+細川　　明人	8.60	0.18	3.4	１		IP	２		IP	１		IP	２		IP	２		IP	１		IP	１		IP	５		IP	１		IP	１		IP
+齋藤　　　勇	4.10	0.17	4.0	４		IP	３		IP	４		IP	３		IP	４		IP	２		IP	６		IP	５		IP	５		IP	４		IP
+香川　　颯太	4.70	0.14	2.6	５		IP	３		IP	６	4	IP	４		IP	２		IP	４		IP	５	4	IP	２		IP	３	5	IP	３		IP
+豊田　　泰洋	3.20	0.22	3.9	３		IP	５		IP	３		IP	５		IP	５	5	IP	６		IP	６		IP	５		IP	３		IP	４		IP
+荒川　　健太	5.10	0.16	3.1	３		IP	２		G3	５		G3	３		IP	２		IP	３		IP	４		IP	４		IP	６		IP	３	4	G3
+大久保信一郎	3.40	0.19	3.9	５		IP	５		IP	４		IP	６		G3	３		IP	３		IP	５		IP	３	5	IP	５		IP	５		IP

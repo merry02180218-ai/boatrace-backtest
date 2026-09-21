@@ -1,0 +1,8 @@
+data=
+1	0
+安河内　　将	8.80	0.15	2.5	１		IP	３		IP	２		G3	２	2	G3	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP
+有賀　　達也	8.00	0.12	3.0	１		IP	１		G3	４		G3	２		IP	２		IP	１		IP	２		IP	２		IP	４		G1	２		G1
+後藤　　美翼	4.70	0.19	3.6	２		IP	３		IP	４		G3	３		G3	６		IP	４		G3	４		G3	５		IP	４		IP	２		IP
+廣瀬　　真也	4.80	0.13	2.9	３		IP	４		IP	２		IP	４		IP	３		IP	１		IP	６		IP	３		IP	５		IP	６		IP
+竹井　　奈美	4.80	0.18	3.6	３		G3	２		IP	３		IP	５		G3	落		IP	５	6	IP	３		IP	３		IP	３		IP	３		G3
+田中　　辰彦	3.50	0.19	4.6	６		IP	５		IP	３		IP	４	5	IP	５		IP	５		IP	５	5	IP	２		IP	５		IP	３		IP

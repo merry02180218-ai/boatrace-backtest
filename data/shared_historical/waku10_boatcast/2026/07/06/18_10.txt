@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　二朗	3.60	0.21	4.2	５	2	IP	５		IP	２		IP	１		IP	５		IP	５		IP	３		IP	５		IP	６		IP	６		IP
+原田　　幸哉	5.90	0.14	3.8	３		SG	５		G1	２		G1	５		G1	５		SG	２		G1	Ｆ		IP	３		G1	３		G1	２		G1
+森　　　照夫	5.40	0.14	2.6	２		G3	３	4	IP	１		IP	２		IP	５		IP	２		IP	５		IP	４		IP	５		G3	４		G3
+近藤　　稔也	3.50	0.20	4.1	５		IP	５		IP	５		IP	３		IP	３		IP	５		IP	５		IP	２		IP	４		IP	６		IP
+吉田　　　光	4.60	0.18	3.6	３		IP	４		IP	４		IP	３		IP	２		IP	３		IP	５	4	IP	２		IP	６	6	IP	６		IP
+真庭　　明志	3.00	0.17	4.2	５		G3	４		IP	５		IP	３		IP	５		IP	６		IP	４		IP	６		IP	５		IP	３		IP

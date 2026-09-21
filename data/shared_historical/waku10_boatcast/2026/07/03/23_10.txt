@@ -1,0 +1,8 @@
+data=
+1	0
+小池　　哲也	8.70	0.14	3.2	１		IP	１		IP	１		IP	４		G2	１		IP	４		IP	１		IP	２		IP	１		IP	１		IP
+原田　才一郎	7.90	0.15	2.9	３		IP	３		IP	２		G1	３		G1	２		IP	２		IP	１		IP	３		IP	１		IP	２		IP
+松尾　　昂明	5.10	0.17	3.1	６		IP	１		IP	４		IP	３		IP	２		IP	５		IP	４		IP	４		IP	１		IP	５		IP
+大賀　龍之介	5.50	0.18	2.9	６	6	IP	２		IP	３		IP	５		IP	２		IP	５		IP	１	3	IP	１		IP	３		IP	５		IP
+馬野　　　耀	5.60	0.13	2.9	３		IP	５		IP	３		IP	５		IP	３		IP	３		G2	２		G2	３		IP	４		IP	２		IP
+谷口　　　丞	4.30	0.13	3.7	４		IP	６		IP	５		IP	４		IP	５		IP	３		IP	４		IP	２		IP	５		IP	１		IP

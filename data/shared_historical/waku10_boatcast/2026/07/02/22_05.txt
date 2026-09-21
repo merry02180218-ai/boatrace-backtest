@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　　猛	7.40	0.19	2.9	４		G3	１		IP	５		IP	１		IP	３		IP	１		IP	２		IP	３		IP	２		IP	１		IP
+佐藤　　　悠	6.70	0.13	2.6	１		IP	２		IP	５		IP	１		IP	４		G2	４		G2	２		IP	４		G2	４		IP	１	4	IP
+西岡　　蒼志	3.80	0.17	3.5	４		IP	４		IP	６		IP	２		IP	５		IP	４		IP	５	2	IP	６		IP	５	2	IP	１		IP
+豊田　　訓靖	3.90	0.14	2.4	３	5	G3	６		G3	３	5	G3	５		IP	３		IP	４		IP	２		IP	５		IP	５		IP	５	3	IP
+藤田　　康生	2.40	0.13	2.6	６		IP	５	6	IP	６		IP	６		IP	５		IP	３	6	IP	５	6	IP	３	6	IP	６	6	IP	５	6	IP
+田中　信一郎	4.30	0.15	2.8	３	5	IP	３		IP	４		IP	４		IP	３	5	IP	６		IP	５		IP	５		G1	５		G1	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中野　　仁照	8.20	0.15	3.3	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	３		IP	６		G1	２		IP
+塚越　　海斗	7.00	0.15	2.9	５		G3	４		G3	２		IP	２		IP	１	1	IP	１	3	G3	２		IP	２		IP	２		IP	４		IP
+西岡　　蒼志	5.10	0.17	3.3	２		IP	２		IP	１		IP	４		IP	４		IP	６		IP	２		IP	５		IP	４		IP	５	2	IP
+牧村　　俊輝	2.70	0.21	3.9	６		IP	５		IP	３		IP	６		IP	５	6	IP	３		IP	５		IP	４		IP	６		IP	５		IP
+西丸　　敦基	4.50	0.12	2.0	４		G3	４		IP	１		IP	４		IP	５		IP	３		IP	６		IP	３	6	IP	４		IP	４		IP
+福西　広太郎	2.89	0.15	3.6	５		IP	２		IP	４	5	IP	エ		IP	５		IP	６		IP	４		IP	４		IP	６		IP	転		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+土性　　雅也	9.00	0.17	3.7	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP
+下河　　誉史	5.78	0.17	3.9	３		IP	２		IP	１		G3	欠		IP	５		IP	３		IP	４		IP	３		IP	３		IP	４		IP
+橋本　　久和	3.78	0.20	4.7	３		IP	５		G3	５		G3	１		IP	５		IP	３		IP	５	2	IP	Ｆ		IP	４	1	IP	転	4	IP
+鈴木　　智啓	3.70	0.19	4.5	５		IP	６		IP	５		IP	３		IP	６		IP	２		IP	２	5	IP	５		IP	３	3	IP	６		IP
+柴田　　友和	3.30	0.16	3.7	４		IP	４		IP	６		IP	１		IP	３		IP	５		IP	５		IP	６	6	IP	５	6	IP	６		IP
+寺島　　吉彦	3.30	0.14	2.6	４		IP	５		IP	６		IP	５		IP	４		IP	１		IP	６		G3	６		G3	４		IP	４		IP

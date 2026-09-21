@@ -1,0 +1,8 @@
+data=
+1	0
+楠原　　正剛	6.10	0.13	2.4	Ｆ		IP	５		IP	２		IP	１		IP	１		IP	５		IP	１		G3	１		IP	６		IP	２		IP
+丹下　　　健	4.60	0.16	3.6	４		IP	２		IP	４		IP	２		IP	３		IP	５		IP	３		IP	６		IP	３		IP	６	3	IP
+和田　　兼輔	7.20	0.14	2.9	４		G2	１		IP	２		IP	１		IP	３		G1	３		G1	１		IP	５		G1	５		G1	２	4	IP
+長畑　　友輔	4.80	0.17	3.3	１		IP	２		IP	５		IP	４		IP	３		IP	５	6	IP	２		IP	６		IP	３		IP	６		IP
+金子　　怜央	2.70	0.14	2.9	６		IP	４		IP	５		IP	５		IP	４		IP	６		IP	５		IP	６		IP	３		IP	４		IP
+石川　　　諒	3.90	0.12	2.4	５		IP	４		IP	５		IP	３		IP	３	5	IP	５		IP	２		IP	６		IP	３		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+堂原　　洋史	4.50	0.12	3.2	５		IP	２		IP	２		IP	５	3	IP	４		IP	４		IP	５		IP	６		IP	２		IP	３		IP
+竹腰　　正樹	4.00	0.15	3.1	２		IP	３		IP	２		IP	５		IP	６		IP	６		IP	６		IP	６		IP	４	3	IP	２		IP
+池本　　輝明	3.90	0.16	3.9	４		IP	５		IP	５		IP	６		IP	５		IP	４		IP	３		IP	４		IP	２		IP	３		IP
+渡辺　　　豊	3.70	0.21	4.9	４		IP	４		IP	４		IP	５		IP	２		IP	４		IP	５	5	IP	４		IP	６		IP	４		IP
+田頭　　　実	6.60	0.15	2.7	１	2	G3	３	2	IP	１	2	G3	６	2	IP	１	2	IP	４	2	IP	３	2	IP	１	2	IP	６	2	IP	２	2	IP
+浦田　　信義	3.00	0.24	4.6	５		IP	５		IP	６		IP	４	5	IP	２	5	IP	５		IP	６		IP	４		IP	４		IP	５		IP

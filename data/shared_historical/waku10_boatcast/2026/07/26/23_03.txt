@@ -1,0 +1,8 @@
+data=
+1	0
+河野　　主樹	8.60	0.14	2.7	２		IP	４		IP	３		IP	２		IP	１	2	IP	１		IP	１		IP	１		IP	１		IP	１		IP
+土井　　祥伍	5.80	0.21	4.3	３		IP	２		IP	１		IP	４	5	IP	６		IP	２		IP	４		IP	６	3	IP	２		IP	２	3	IP
+小森　　信雄	5.10	0.18	4.1	３		IP	４		IP	２		IP	５		IP	６		IP	２		IP	３		IP	１		IP	転		IP	３		IP
+角浜　　　修	3.20	0.18	4.3	６		IP	６		IP	２	5	IP	３		G3	３		G3	６		G3	６		IP	５		IP	４		IP	５		IP
+後藤　　翔之	4.80	0.17	3.5	４	4	IP	３		IP	１		IP	５		IP	５		IP	２		IP	５		IP	３		IP	３		IP	５		IP
+中西　　月輝	1.00	0.23	4.7	６		IP	６		IP	Ｆ		IP	落		IP	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP

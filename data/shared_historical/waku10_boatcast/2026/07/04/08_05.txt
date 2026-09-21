@@ -1,0 +1,8 @@
+data=
+1	0
+安東　　幸治	7.80	0.18	3.6	１		IP	４		IP	１		IP	２		IP	５		IP	２		IP	１		IP	２		IP	１		IP	２		IP
+梅木　　敬太	5.50	0.18	3.4	２		IP	４		IP	４		IP	４		IP	６		IP	２		IP	４		IP	２		IP	２		IP	３		IP
+酒井　　陽祐	4.90	0.15	3.5	４		IP	６		IP	３		IP	３		G3	４		IP	３		IP	５		G3	２		G3	１	4	IP	５		IP
+田村　　　慶	4.20	0.21	4.5	６		IP	３		IP	２		IP	２	3	IP	３		IP	５	5	IP	５	5	IP	５		IP	６		IP	３	6	IP
+益田　　啓司	5.50	0.15	2.3	１		IP	４		IP	６		IP	３		IP	５		IP	２		IP	６		IP	２		IP	２		IP	３		IP
+吉川　　晴人	3.10	0.13	3.8	４		IP	４		IP	５		IP	６		IP	６		IP	５		IP	５		IP	３		IP	６		IP	２		IP

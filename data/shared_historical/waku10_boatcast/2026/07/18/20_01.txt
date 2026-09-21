@@ -1,0 +1,8 @@
+data=
+1	0
+小池　　礼乃	9.00	0.14	2.5	２		IP	１		IP	１		IP	２		IP	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP
+上田　　隆章	4.70	0.20	4.6	５		IP	６		IP	４		IP	１		IP	５		IP	３		IP	３		IP	３		IP	３		IP	４	3	IP
+新田　　智彰	3.78	0.16	2.9	５		IP	欠		IP	３		IP	５		IP	３		IP	５		IP	４		IP	１		IP	６		IP	６		IP
+香川　　陽太	3.50	0.18	3.6	３	3	IP	４		IP	５		IP	４	5	IP	２		IP	４		IP	６		IP	５		IP	５	6	IP	５		IP
+廣瀬　　篤哉	2.60	0.17	3.4	５		IP	２		IP	６		IP	６		IP	４		IP	４		IP	６		IP	４		IP	転		IP	６		IP
+久保田　凪紗	1.40	0.14	3.0	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	５		IP

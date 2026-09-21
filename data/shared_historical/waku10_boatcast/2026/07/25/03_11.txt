@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　哲也	9.90	0.12	1.7	１		IP	２		IP	１		IP	１		IP	１		IP	１		G3	１		IP	１		G1	１		IP	１		IP
+上村　　純一	6.40	0.09	1.6	２		G2	６		IP	３		IP	４		IP	２		G2	３		G2	２		IP	２		IP	１		IP	６		G2
+國分　将太郎	4.70	0.15	2.6	２		IP	５		IP	５		IP	３		IP	４		IP	６		IP	３		IP	４		IP	３		IP	２		IP
+金田　　智博	5.50	0.14	2.7	５		IP	４		G2	２	2	IP	３		IP	３		IP	４		IP	１		IP	５		IP	３		IP	３		IP
+前出　　達吉	4.40	0.17	2.9	３		IP	５		IP	１	4	IP	３	6	IP	５		IP	５		IP	４		IP	５		G3	３		IP	４		IP
+黄金井　力良	2.40	0.16	4.4	６		IP	６		IP	６		IP	４		IP	４		IP	５		IP	６		IP	５	5	IP	５		IP	４		G3

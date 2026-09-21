@@ -1,0 +1,8 @@
+data=
+1	0
+松井　　　繁	9.10	0.13	3.1	１		SG	１		IP	１		IP	１		IP	１		IP	１		IP	６	2	SG	１		IP	１		IP	４		G1
+海野　康志郎	7.20	0.12	3.4	４		G1	３		G1	２		IP	１		IP	２		IP	１		IP	６		IP	１		IP	２		G1	５		G1
+今泉　　友吾	6.40	0.11	2.3	４		G1	１		IP	５		IP	５		IP	４		IP	２		IP	２		IP	２		G1	２		G1	３		G1
+平山　　智加	6.00	0.16	3.4	３		IP	３		IP	４		IP	３		IP	２		IP	３		IP	１		G2	６		G3	２		G3	４		G3
+渡邊　雄一郎	6.44	0.14	3.4	２		IP	３		IP	２	4	IP	４		IP	５		IP	３		IP	不		IP	１	4	IP	３		IP	３		IP
+岡村　　慶太	4.30	0.15	2.5	６		IP	６		IP	３	5	IP	５		IP	３		IP	３		IP	１		IP	４		IP	３		IP	６		IP

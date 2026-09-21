@@ -1,0 +1,8 @@
+data=
+1	0
+横田　　　茂	8.30	0.14	2.8	１		IP	２		IP	１		IP	６		IP	２		IP	１		IP	２		IP	１		IP	１		IP	２		IP
+齊藤　　　優	5.70	0.16	3.7	４		IP	４		IP	３		IP	３		IP	２		IP	２	3	IP	６		IP	２		IP	４		IP	２		G3
+三宅　　　潤	5.50	0.15	3.3	３		IP	３		IP	１		IP	３		IP	４		IP	６		IP	３		IP	４		IP	２		IP	４		IP
+丸尾　　義孝	3.80	0.13	3.2	エ		IP	１		IP	４		IP	５		IP	２		IP	４		IP	６		IP	６		IP	３		IP	５		IP
+石原　　　翼	4.60	0.14	4.0	５		G2	５		G2	５		G2	５		G2	６		G2	４	6	IP	４		IP	２		IP	２		IP	２	4	IP
+古園井　綾南	1.10	0.19	3.9	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５	5	IP

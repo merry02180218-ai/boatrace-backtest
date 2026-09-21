@@ -1,0 +1,8 @@
+data=
+1	0
+浜先　　真範	9.10	0.13	2.0	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	３		G1	３		IP	１		IP
+宇田川　信一	5.30	0.22	4.5	５		IP	４		IP	２	3	IP	２		IP	４		IP	２		IP	６		IP	３		IP	１		IP	５		IP
+星野　　太郎	4.80	0.20	3.9	２		IP	３	4	IP	２		IP	４		IP	５	4	IP	４		IP	１		IP	４		IP	６		IP	６		IP
+樋口　由加里	3.40	0.17	3.2	６		IP	６		IP	４		IP	４		IP	５		IP	３		IP	３		IP	５		G3	３		G3	５		G3
+古澤　　光紀	3.80	0.12	3.3	３		IP	２		IP	３		IP	６		IP	４		IP	６		IP	６		IP	４	6	IP	４		IP	６		IP
+若狭　奈美子	3.60	0.21	3.6	４		G3	５		G3	４		IP	４		IP	５		IP	４		IP	３	5	IP	４		IP	５		G3	４		G3

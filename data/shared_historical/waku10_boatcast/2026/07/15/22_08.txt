@@ -1,0 +1,8 @@
+data=
+1	0
+三川　　昂暁	7.00	0.16	2.4	１		IP	５		IP	２		IP	４		IP	２		IP	１		IP	４		IP	１		IP	２		IP	３		IP
+嘉手苅　徹哉	3.60	0.13	3.2	４		IP	６		IP	５		IP	６		IP	４		IP	６		IP	１		IP	２		IP	４		IP	６		IP
+楠原　　翔太	4.50	0.17	3.9	３		IP	６		IP	３		IP	６		IP	３		IP	６		IP	４		IP	３		IP	４		IP	１		IP
+山下　　心一	1.70	0.20	4.4	６	6	IP	６		IP	４		IP	５		IP	落		IP	４		IP	５		IP	６		IP	６		IP	６		IP
+表　　　健太	3.50	0.16	3.6	３	6	IP	４		IP	３		IP	３		IP	６		IP	５		IP	４		IP	４		IP	６		IP	６		IP
+永松　　良教	2.40	0.21	5.7	４		IP	６		IP	３		IP	４		IP	６		IP	６		IP	５		IP	５		IP	５		IP	６		IP

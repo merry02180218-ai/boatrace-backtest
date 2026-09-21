@@ -1,0 +1,8 @@
+data=
+1	0
+樅山　　拓馬	7.20	0.19	4.0	２		IP	１		IP	３		IP	１		IP	２		IP	４		IP	４		IP	３	2	IP	３		IP	１		IP
+加藤　　啓太	3.50	0.14	2.7	４		IP	５		IP	１	3	IP	５		IP	４		IP	５		IP	４	5	IP	４	3	IP	６		IP	５		IP
+大原　　祥昌	5.00	0.16	3.8	６		IP	１		IP	５		IP	１	1	IP	２		IP	５	4	IP	２		IP	４		IP	４		IP	６	2	G3
+稗田　　聖也	5.80	0.12	2.3	６		IP	６		IP	５	5	IP	２		IP	３		IP	２		IP	１		IP	２		IP	１		IP	４		IP
+岩井　　　繁	3.30	0.17	3.6	４	4	IP	５		IP	４	6	G3	２		IP	５		IP	５		IP	４		IP	４		IP	６		IP	５		IP
+白井　　友晴	2.70	0.21	5.1	３		IP	５		IP	５		IP	５		IP	３		IP	６		IP	６		IP	５		IP	６		IP	５		IP

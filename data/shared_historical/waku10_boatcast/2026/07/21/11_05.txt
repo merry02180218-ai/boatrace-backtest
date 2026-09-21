@@ -1,0 +1,8 @@
+data=
+1	0
+久富　　政弘	7.80	0.17	4.3	１		IP	４		IP	１		IP	１		IP	２		IP	４	2	IP	２		IP	４		IP	１		IP	１		IP
+大場　　広孝	6.40	0.15	4.4	２		IP	５		IP	２		IP	２		IP	５	4	IP	１		IP	３		IP	４		IP	１		IP	３		IP
+松村　　康太	4.70	0.15	3.4	２		IP	５		IP	４		IP	３		IP	３		IP	３		IP	３		IP	３		IP	６		IP	５		IP
+安藤　　裕貴	3.60	0.12	2.0	３		IP	６		IP	６		IP	５		IP	６		IP	３		IP	５		IP	６		IP	２		IP	２		IP
+泉　　　啓文	3.40	0.16	4.1	６		IP	４		IP	６	6	IP	１		IP	６		IP	３		G3	６	6	IP	４		IP	４		IP	５		IP
+松下　　一也	3.40	0.16	3.5	６		IP	５		IP	１		IP	６		IP	６		IP	２		IP	５		IP	３		IP	５		IP	６		IP

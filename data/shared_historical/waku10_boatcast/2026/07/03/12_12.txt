@@ -1,0 +1,8 @@
+data=
+1	0
+森高　　一真	9.00	0.14	3.6	５		SG	１		G1	４		SG	１		G1	１		G1	４		G1	２		G1	１		G1	１		G1	１		G1
+田村　　隆信	6.90	0.14	3.1	２		G2	５		G1	２		IP	５		IP	１		IP	１		IP	２		IP	１		IP	５		IP	３		IP
+市川　　哲也	5.30	0.12	2.5	２		IP	３		IP	３		IP	３		IP	５		IP	６		IP	４		IP	２		IP	５		IP	１		IP
+杉山　　正樹	6.20	0.17	3.8	３		IP	３		G1	２	5	IP	３		G2	４		IP	４		IP	２		G1	３		G1	２		IP	５		IP
+渡邉　　優美	5.40	0.15	2.9	４		G2	３		IP	３		IP	４		G2	６		G2	２		G2	２		G3	４		G1	３		G1	６	6	IP
+前田　　篤哉	4.90	0.16	3.1	５		IP	６		G1	６		G1	１		IP	２		IP	２	4	IP	２		IP	５		IP	３		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+泉　　　具巳	5.80	0.20	3.7	６		IP	５		IP	１		IP	２		IP	２		IP	１		IP	Ｆ		IP	２		IP	６		IP	１		IP
+是澤　　孝宏	4.70	0.15	3.6	６		IP	５		IP	２		IP	４		IP	３		IP	４		IP	２		G2	１		G2	６		IP	６	3	IP
+岩崎　　正哉	5.80	0.17	2.9	１		G3	４		IP	４		IP	３		G3	２		G3	３		IP	１		IP	４		IP	６		IP	４		IP
+白井　　英治	6.20	0.12	2.4	６		G2	６		G2	２		SG	２		G1	３		G1	５		SG	２		G1	１		G1	５		G1	４		G1
+内田　　　壮	1.70	0.16	3.9	６	6	IP	４		IP	５		IP	６		IP	６		IP	５		IP	５		IP	６	6	IP	６	6	IP	５	6	IP
+西川　新太郎	5.11	0.14	3.1	５		IP	３		IP	２	5	IP	５		IP	落		IP	１		IP	５		IP	５		IP	３		IP	２		IP

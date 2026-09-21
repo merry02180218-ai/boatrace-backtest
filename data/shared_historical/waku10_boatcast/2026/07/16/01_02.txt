@@ -1,0 +1,8 @@
+data=
+1	0
+尾道　　佳諭	5.00	0.14	2.8	４		IP	１		IP	４		IP	４		IP	４		IP	１		IP	１		IP	５		IP	５		IP	Ｆ		IP
+若林　　　麗	3.60	0.16	3.4	６		IP	５		IP	４		IP	５		IP	２		IP	６		IP	４		IP	５		IP	２		IP	４		IP
+石田　　章央	7.60	0.12	2.5	４		IP	２		IP	２		IP	２		IP	１		IP	１		IP	５		IP	１		IP	３		IP	１		IP
+安藤　　瑠希	2.30	0.16	3.7	６		IP	６		IP	６		IP	４		IP	６	6	IP	６		IP	５		IP	３		IP	５	6	IP	４	5	IP
+三浦　洋次朗	5.50	0.18	3.5	６		G2	２		G2	４		IP	２	4	IP	１		IP	３		G2	６		G2	２		IP	６		IP	４	4	IP
+池田　奈津美	4.70	0.16	2.2	２	2	IP	３	2	IP	２	2	IP	４	1	IP	４	2	G3	５	2	G3	３	5	IP	５	2	IP	５	3	IP	４	5	IP

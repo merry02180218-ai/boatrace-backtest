@@ -1,0 +1,8 @@
+data=
+1	0
+小野　　生奈	8.90	0.14	3.1	２		G3	１		G3	３		G2	１		G2	２		G3	１		G3	１		G3	１		G3	１		IP	４		IP
+齊藤　　　優	5.70	0.15	3.8	２		IP	４		IP	４		IP	３		IP	３		IP	２		IP	２	3	IP	６		IP	２		IP	４		IP
+木幡　　純也	4.70	0.15	3.6	５		IP	２		IP	３		IP	６		IP	１		IP	５		IP	５		IP	４	4	IP	４		IP	２		IP
+藤原　啓史朗	6.30	0.15	2.5	２		IP	１		G2	１		IP	６		G1	５		G1	４		G1	５		G2	２		G2	３		IP	５		IP
+鐘ヶ江　真司	4.90	0.18	3.3	５		IP	４		IP	４		IP	５	6	IP	２		IP	３		IP	２		IP	２		IP	３		IP	６		IP
+伊倉　　　光	4.30	0.16	3.6	４		IP	３		IP	６		IP	２		IP	５	5	G3	４		IP	３		IP	３		IP	５		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+木下　　大將	8.60	0.12	2.1	２		IP	１		IP	１		IP	２		G3	１		G3	１		IP	２		IP	１		IP	１		IP	５		IP
+中北　　将史	5.80	0.15	2.3	２		IP	２		IP	５		IP	５		IP	２		IP	２		IP	４		IP	２		IP	３		IP	４		IP
+関　　　裕也	4.50	0.19	4.3	３		IP	５		IP	４		IP	４		IP	５		IP	６		IP	２		IP	３		IP	４		IP	２		IP
+上野　　拓馬	4.10	0.15	3.6	４		IP	５	6	IP	４		IP	２		IP	１		IP	５	6	IP	５		IP	６		IP	４		IP	４	6	IP
+山本　　隆幸	5.10	0.17	4.5	１		IP	５		IP	５		IP	２		G1	４	4	IP	５	6	IP	２		IP	５		IP	５		IP	２		IP
+森　　　照夫	2.30	0.21	4.6	５		IP	３		IP	５		IP	６		IP	６		G3	５		IP	４		IP	４		IP	Ｆ		IP	６		IP

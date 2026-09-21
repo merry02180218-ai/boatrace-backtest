@@ -1,0 +1,8 @@
+data=
+1	0
+重成　　一人	8.10	0.15	3.1	６		IP	１		IP	１		G2	１		G2	５		IP	１		IP	１		IP	１		IP	３		IP	１		IP
+鳥居塚　嶺王	4.60	0.18	3.0	２		IP	６		IP	４		IP	３		IP	４		IP															IP
+西原　　明生	4.00	0.22	3.5	２		IP	４		IP	３		IP	６		IP	２		IP	３		IP	５	2	IP	６		IP	５		IP	５		IP
+宮本　　夏樹	5.50	0.13	3.4	２		IP	４		IP	３		IP	６		IP	５	5	IP	４	6	IP	４		IP	１		IP	２		IP	２		G3
+井芹　　大志	3.33	0.16	3.4	５		IP	３		IP	　		IP	６		IP	５		IP	４		IP	６	6	IP	５	6	IP	４	3	IP	２		IP
+長谷川　晴哉	3.70	0.18	4.0	５		IP	５		IP	５		IP	３		IP	２		IP	２		IP	６		IP	６		IP	３		IP	６		IP

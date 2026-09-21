@@ -1,0 +1,8 @@
+data=
+1	0
+前田　　将太	8.70	0.15	4.2	２		IP	４		IP	１		SG	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		IP
+宇土　　泰就	4.80	0.20	4.2	１		IP	３		IP	３		IP	４		IP	６		IP	３		IP	１		IP	６		IP	５		IP	５		IP
+花本　　夏樹	2.50	0.19	4.3	４		IP	５		IP	６		IP	６	6	IP	６		IP	５		IP	４		IP	６		IP	６		IP	２		IP
+石塚　　久也	6.80	0.14	2.8	２		IP	２		IP	３		IP	４		IP	２		IP	６		IP	２		IP	１		IP	３	5	IP	２		IP
+田中　太一郎	2.60	0.14	3.3	３		IP	４		IP	４		IP	５		IP	５		IP	５		IP	６	6	IP	５		IP	５		IP	６	4	IP
+鈴木　　柊介	2.40	0.15	4.1	４		IP	６		IP	５		IP	６		IP	５		IP	５		IP	５		IP	５		IP	３		IP	５		IP

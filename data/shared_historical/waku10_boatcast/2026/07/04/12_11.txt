@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　正樹	8.80	0.14	3.5	１		IP	４		IP	１		IP	２		G1	１		IP	１		G2	１		G2	４		IP	２		IP	１		G1
+小山　　　勉	7.50	0.14	2.6	２		IP	４		IP	２		IP	２		IP	２		IP	２		IP	２		IP	２		IP	２		IP	３		IP
+中辻　　博訓	6.00	0.13	2.8	４		IP	３		IP	２		IP	２		IP	転		IP	４		IP	１		IP	３		IP	３		IP	２		IP
+村松　　栄太	4.40	0.14	3.0	４		IP	４		IP	３		IP	３		IP	５		IP	４	5	IP	３		IP	３	5	IP	５		IP	４		IP
+深井　　利寿	5.90	0.17	3.5	５		G3	３		IP	３		G2	４		IP	２		IP	１		IP	２		IP	２		IP	４	4	IP	５		IP
+倉尾　　大介	3.60	0.17	4.2	５		IP	６		IP	４		IP	５		IP	６		IP	３		IP	４		IP	３		IP	５		IP	２		IP

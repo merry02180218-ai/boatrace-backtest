@@ -1,0 +1,8 @@
+data=
+1	0
+藤丸　　光一	7.00	0.18	3.7	２		IP	３		IP	４		IP	２		IP	４		IP	１		IP	３		IP	３		IP	１		IP	２		IP
+廣部　　大明	1.60	0.25	4.7	６		IP	４		IP	６		IP	５		IP	６		IP	５		IP	転		IP	５		IP	６		IP	５		IP
+井上　　　茂	4.20	0.14	3.0	２		IP	４		IP	１		IP	５		IP	４		IP	５		IP	転		IP	５		IP	３	5	IP	４		IP
+近藤　　来希	3.50	0.22	4.6	５	5	IP	６	6	IP	４		IP	２		IP	５		IP	３		IP	６		IP	２		IP	５		IP	６		IP
+大原　　祥昌	3.70	0.16	3.8	３	6	IP	３		IP	４		IP	６	6	IP	６	6	IP	６		IP	５	6	IP	４		IP	１		IP	５		IP
+吉原　　快誓	2.40	0.13	3.1	５		IP	６		IP	６		IP	６		IP	３		IP	４		IP	４		IP	５		IP	５		IP	６		IP

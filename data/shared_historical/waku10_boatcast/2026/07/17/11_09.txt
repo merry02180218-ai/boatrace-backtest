@@ -1,0 +1,8 @@
+data=
+1	0
+平石　　和男	7.60	0.15	3.4	２		G3	３		IP	１		IP	３		IP	１		IP	２		IP	２		IP	５		IP	１		IP	２		IP
+飯山　　　泰	6.20	0.12	3.4	２		G2	５		G2	２		IP	２		IP	２		IP	３		IP	２		IP	５		G2	４		G2	４		IP
+中本　　大樹	6.70	0.15	3.1	２		IP	２		IP	６		IP	１	2	IP	３		IP	１		IP	１		IP	５		IP	４		IP	２	6	IP
+坂東　　　満	3.20	0.17	3.8	６		IP	５		IP	５		IP	６		IP	４		IP	２		IP	６	5	IP	３		IP	６		IP	３		IP
+川崎　　公靖	4.20	0.16	2.8	２		IP	５		IP	３		IP	３		IP	６		IP	３		IP	２		IP	６		IP	５		IP	５	6	IP
+篠崎　　元志	5.80	0.17	3.8	４		G3	１	5	G3	６		SG	４		IP	６		SG	４		SG	２	4	IP	３		IP	４	4	IP	１	5	IP

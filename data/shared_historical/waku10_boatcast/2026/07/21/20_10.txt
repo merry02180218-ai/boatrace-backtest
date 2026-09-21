@@ -1,0 +1,8 @@
+data=
+1	0
+西橋　　奈未	8.80	0.11	2.7	１		IP	１		IP	１		G2	４		G2	Ｆ		G2	２		IP	１		IP	１		IP	１		SG	１		G2
+寺本　　重宣	5.00	0.15	2.9	３		IP	４		IP	３		IP	４		IP	５		IP	４		IP	４		IP	１		IP	２		IP	５		IP
+長尾　　章平	5.90	0.18	4.1	６	5	IP	１		IP	３		IP	６		IP	４		IP	１		IP	２		IP	６		IP	２		IP	２		IP
+板橋　　侑我	6.30	0.12	2.3	３		IP	３		G2	２		IP	１		IP	１		IP	６		IP	３		IP	３		G1	Ｆ		G3	３		G1
+富永　夏哉人	4.40	0.27	3.9	１	4	IP	６	6	IP	５	6	IP	６		IP	２		IP	３		IP	５		IP	３		IP	４		IP	４		IP
+大森　　　翼	3.40	0.14	3.5	４		IP	５		IP	３		IP	６		IP	３		IP	３		IP	５		IP	４		IP	５		IP	６		IP

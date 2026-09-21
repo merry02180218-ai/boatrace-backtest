@@ -1,0 +1,8 @@
+data=
+1	0
+表　　　憲一	6.90	0.15	2.7	３		IP	３		IP	１		IP	１		IP	２		IP	５		IP	２		IP	２		IP	１		IP	６		IP
+小林　　孝弘	6.00	0.17	2.5	２		IP	３		IP	２		IP	２		IP	６		IP	２		IP	２		IP	６		IP	４		IP	２		IP
+萩原　丈太朗	2.40	0.19	4.0	５		IP	６		IP	５	4	IP	４		IP	５	6	IP	５	4	IP	４		IP	６		IP	５		IP	４		IP
+吉田　　和仁	3.30	0.17	3.8	６		IP	４		IP	３		IP	４		IP	５		IP	４		IP	３		IP	４		IP	６		IP	６		IP
+向井田　直弥	2.20	0.16	3.2	３		IP	４		IP	６		IP	５		IP	５		IP	６		IP	５		IP	６		IP	５		IP	６		IP
+得山　　大輝	2.00	0.21	5.1	５		IP	６		IP	３		IP	６		IP	６		IP	４		IP	５		IP	６		IP	６		IP	６		IP

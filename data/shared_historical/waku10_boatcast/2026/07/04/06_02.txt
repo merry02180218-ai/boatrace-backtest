@@ -1,0 +1,8 @@
+data=
+1	0
+君島　　秀三	7.80	0.14	3.1	１		IP	５		G3	１		IP	３		IP	５	2	IP	１		IP	１		IP	２		IP	１		IP	１		IP
+木村　　浩士	5.00	0.19	4.0	３		IP	１		IP	２		IP	５		IP	５	3	IP	５		IP	６		IP	６		IP	１		IP	２		IP
+横井　　健太	2.80	0.17	3.8	４		IP	６		IP	６		IP	６		IP	３	4	IP	２		IP	６		IP	６		IP	４		IP	６		IP
+岡部　　貴司	3.70	0.18	4.3	３		IP	３		IP	２		IP	４		IP	６		IP	５		IP	３		IP	５		IP	６		IP	６		IP
+荒牧　　凪沙	3.80	0.18	3.5	１	3	IP	５		IP	３	6	IP	４		IP	４		IP	４		IP	６	6	IP	４		IP	５	4	IP	６		IP
+山下　　流心	2.70	0.22	4.4	５	5	IP	２	2	IP	５	4	IP	６	5	IP	５		IP	５		IP	４	5	IP	４	4	IP	６		G3	６		G3

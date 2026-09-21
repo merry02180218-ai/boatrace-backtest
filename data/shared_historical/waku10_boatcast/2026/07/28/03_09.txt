@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　真広	5.50	0.15	3.6	１		G3	４	3	G3	３		IP	４		IP	１		IP	Ｆ		IP	１		IP	６		IP	５		IP	２		IP
+赤岩　　善生	6.00	0.12	2.2	５		G3	１		G3	５		G2	２		G2	４		IP	３		SG	４		SG	６		G1	２		G1	３		G1
+永田　　秀二	6.30	0.12	2.6	４		G2	２		IP	３		IP	５		IP	４		IP	４		G2	２		G2	１		IP	４	6	IP	１		IP
+福田　　翔吾	5.44	0.13	3.0	６		G3	転	2	G3	１		IP	５		IP	４		IP	１		IP	２	5	IP	４		IP	４		IP	３		IP
+川崎　　誠志	3.50	0.23	4.7	３		G3	５		G3	２		IP	５		IP	６		IP	５	6	IP	５		IP	５		IP	４		IP	３		IP
+下河　　雅史	2.30	0.20	5.2	６		G3	５		IP	５		IP	６		IP	４		IP	５		IP	４		IP	４		IP	６		IP	５	5	IP

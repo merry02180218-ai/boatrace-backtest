@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　拓矢	9.10	0.15	2.7	５		IP	１		IP	１		IP	１		G2	１		G2	１		IP	１		IP	１		IP	３		IP	１		G1
+堀越　　雄貴	4.00	0.18	4.3	６		IP	１	4	G3	６		G3	６		IP	３		IP	３		IP	３		IP	４		IP	６		IP	５		IP
+岡崎　　凪汰	3.60	0.18	3.6	４		IP	６		IP	５		IP	４		IP	４		IP	５		IP	５		IP	６		IP	２		IP	２		IP
+金田　　大輔	4.90	0.17	2.7	６		IP	４	5	IP	２		IP	３		IP	３		IP	４		IP	５		IP	３		IP	１		IP	５		IP
+遠藤　　圭吾	3.40	0.15	3.9	４		IP	４	6	IP	６		IP	５		IP	６		IP	３		IP	６	6	IP	２		IP	３		IP	６		IP
+牧村　　俊輝	2.30	0.22	4.8	６		IP	６		IP	５		IP	４		IP	４		IP	６		IP	５		IP	６		IP	６		IP	３	5	IP

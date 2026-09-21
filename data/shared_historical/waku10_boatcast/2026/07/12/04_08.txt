@@ -1,0 +1,8 @@
+data=
+1	0
+富永　　修一	6.60	0.14	2.2	２		IP	３		IP	５		G3	１		IP	１		IP	２		IP	１		IP	５		IP	１		IP	Ｆ		IP
+豊田　　祥生	3.70	0.16	3.5	５		IP	４		IP	４		IP	１		IP	４		IP	６		IP	５		IP	６		IP	６		IP	２		IP
+本村　　　大	3.40	0.17	3.1	５		IP	５		IP	１		IP	２		IP	６		IP	３		IP	転		IP	６		IP	５	4	IP	５		IP
+井上　　忠政	8.20	0.14	2.9	２		G2	２		G2	２		G1	３		G1	１	1	IP	２		IP	１		IP	３		IP	５		G1	１		G1
+木場　　悠介	4.50	0.15	3.2	６		IP	５		IP	４		IP	５		IP	３		IP	２		IP	３		IP	４		IP	１		IP	５		IP
+浅見　　宗孝	4.00	0.23	5.2	５		IP	３	4	IP	３		IP	３		IP	６		IP	４		IP	５		IP	２	5	IP	６		IP	４		IP

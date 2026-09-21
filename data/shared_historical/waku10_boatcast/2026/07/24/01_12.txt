@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　拓也	9.00	0.15	2.6	１		IP	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	１		IP	３		IP
+近江　　翔吾	7.00	0.13	2.4	６		G2	３		G2	３		G2	２		IP	４		IP	１		IP	１	3	IP	２	3	IP	４		IP	１		IP
+山下　　大輝	6.90	0.14	2.8	１		IP	３		IP	３		IP	５		IP	５		IP	１		IP	２		IP	２		IP	２		IP	２		G1
+吉武　　真也	3.89	0.18	3.3	転		IP	６		IP	５		IP	２		IP	４		IP	３		IP	４		IP	２	3	IP	６		IP	６		IP
+古賀　　智之	4.67	0.20	4.1	６		IP	２		IP	４		IP	６	4	IP	５	6	IP	４		IP	３		IP	不		IP	３		IP	１		IP
+中嶋　　達也	3.80	0.22	3.2	２		IP	５		IP	６	5	IP	６		IP	２		IP	１		IP	４	5	IP	６		IP	６		IP	５		IP

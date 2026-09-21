@@ -1,0 +1,8 @@
+data=
+1	0
+久富　　政弘	7.80	0.17	4.2	１		IP	１		IP	４		IP	１		IP	１		IP	２		IP	４	2	IP	２		IP	４		IP	１		IP
+片橋　　幸貴	5.20	0.13	3.4	２		IP	３	4	IP	２		IP	５	3	IP	４		IP	４		IP	２		IP	転		IP	２		IP	４		IP
+池田　　雷太	3.00	0.25	4.5	４		IP	４		IP	２		IP	６		IP	４		IP	５		IP	５		IP	６		IP	５		IP	５	4	IP
+井上　　慧人	2.40	0.16	3.6	６	5	IP	４		IP	５		IP	５		IP	４		IP	３	5	IP	５		IP	６		IP	６		IP	６		IP
+今村　　暢孝	6.00	0.16	3.7	６	2	G3	４	2	G3	３	2	IP	１	2	IP	４	2	IP	３	2	IP	１	2	IP	２	2	IP	６	2	IP	１	2	IP
+林　　　風音	1.00	0.22	3.8	Ｆ		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

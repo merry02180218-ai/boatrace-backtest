@@ -1,0 +1,8 @@
+data=
+1	0
+佐々木　英樹	7.00	0.18	3.0	３		G3	４		IP	４		IP	１		IP	４		IP	１		IP	３		G3	２		IP	１		IP	２		IP
+津久井　拓也	5.90	0.11	2.3	２		IP	２		IP	２		IP	６		G2	２		G2	４		G2	６	4	IP	３		IP	３		G2	４		G2
+樋口　由加里	6.60	0.13	2.9	４		IP	３		IP	１		IP	１		IP	５		IP	４		IP	４	2	IP	２		IP	２		IP	２		IP
+花田　　凱成	3.90	0.18	4.3	３		IP	５		IP	６		IP	４		IP	５		IP	３		IP	３		IP	５		IP	３		IP	４		IP
+浜先　　真範	4.80	0.12	2.5	２		IP	４		IP	１	4	IP	４	4	G1	４		IP	６		IP	５		IP	６		IP	２		G1	５		IP
+吉川　　昭男	5.30	0.18	4.2	４	2	IP	１	2	IP	５	3	IP	５	2	IP	３	2	IP	２	2	IP	１	3	IP	４	4	IP	５	3	IP	４	2	IP

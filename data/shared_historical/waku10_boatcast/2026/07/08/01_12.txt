@@ -1,0 +1,8 @@
+data=
+1	0
+國崎　　良春	7.50	0.17	3.0	２		IP	１		IP	５		IP	１		IP	３		IP	２		IP	１		IP	１		G3	６	2	IP	１		IP
+宇留田　翔平	7.60	0.17	2.5	６		IP	１		IP	２		IP	２		IP	１	3	IP	１		IP	５		IP	１		IP	２		IP	２		IP
+鋤柄　　貴俊	5.80	0.15	3.3	２		IP	３		IP	２		IP	５		IP	３		IP	４		IP	４		IP	２		IP	４		IP	２		IP
+大谷　　直弘	3.60	0.20	3.9	３		IP	４	5	IP	３		IP	４		IP	５		IP	６		IP	６		IP	３		IP	５		IP	４		IP
+岡田　　憲行	6.30	0.22	3.7	５	4	IP	１		IP	６	3	IP	１	4	IP	６	4	IP	３	2	IP	２		IP	４		IP	２		IP	１	1	IP
+松尾　　基成	1.90	0.21	4.7	４	5	IP	６		IP	４		IP	６		IP	６		IP	６	5	IP	６		IP	５	4	IP	転	5	IP	４		IP

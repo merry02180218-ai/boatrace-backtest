@@ -1,0 +1,8 @@
+data=
+1	0
+池永　　　太	8.80	0.13	3.0	１		G2	１		IP	２		IP	１		IP	４		G2	１		IP	１		IP	４		G1	２		G1	１		IP
+中野　　夢斗	4.80	0.14	3.6	４		IP	４		IP	４		IP	２		IP	４		IP	３		IP	４		IP	５		IP	１		IP	５		IP
+土性　　雅也	3.10	0.21	4.8	６	4	IP	４		IP	５	5	IP	６		IP	５		IP	３		IP	６	4	IP	４	4	IP	２		IP	５	6	IP
+齋藤　　和政	4.80	0.21	4.7	４	5	IP	４	6	IP	５		G3	１		IP	４		IP	３		IP	２		IP	６		IP	６		IP	２		IP
+幸田　　智裕	4.80	0.16	2.7	４		IP	４		IP	４		IP	３		IP	４		IP	３		IP	２		IP	４		IP	５		IP	３		IP
+橋本　　久和	4.80	0.21	4.1	４		IP	４		G3	４	5	G3	２	5	IP	３		IP	５		IP	２	5	IP	４		IP	５		G3	３		IP

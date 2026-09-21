@@ -1,0 +1,8 @@
+data=
+1	0
+大月　　遊雅	7.00	0.15	2.6	２		IP	３		IP	３		IP	２		IP	４	2	IP	４		IP	２		IP	１		IP	３		IP	１		IP
+古澤　　光紀	6.70	0.15	2.7	３		IP	１		IP	２		IP	２		IP	２		IP	１		IP	５		IP	２		IP	３		IP	６	3	IP
+村上　　功祐	5.50	0.14	3.3	４		IP	２		IP	４		IP	２		IP	５		IP	２		IP	３		IP	２		IP	３		IP	６		IP
+渡辺　　空依	4.50	0.18	3.4	２		IP	５	5	IP	５	5	IP	２		IP	６		IP	５		IP	４		IP	３		IP	３		IP	３		IP
+山崎　　善庸	2.50	0.22	4.2	３	4	IP	５		IP	４	6	IP	５		IP	６	6	IP	４		IP	５		IP	６		IP	６		IP	５		IP
+武田　　光史	4.80	0.15	2.6	２		IP	６		G3	５	5	IP	６	5	IP	５		IP	３	5	IP	３	4	IP	１	4	IP	４	4	IP	２	4	IP

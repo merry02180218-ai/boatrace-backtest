@@ -1,0 +1,8 @@
+data=
+1	0
+長岡　　良也	8.40	0.20	4.5	１		IP	１		IP	３		IP	１		IP	２		IP	１		IP	５		IP	１		IP	２		IP	１		IP
+塚越　　海斗	7.80	0.18	2.8	２		IP	１	1	IP	１	3	G3	２		IP	２		IP	２		IP	４		IP	２		IP	４		IP	１		IP
+福島　　勇樹	5.80	0.14	2.9	４		IP	６		IP	２		IP	２		IP	５		IP	３		IP	１		IP	１		IP	６		G1	３		G1
+板倉　　敦史	4.50	0.16	4.0	４		IP	４	5	IP	６		IP	１		IP	４		IP	３		IP	５		IP	３		IP	４		IP	４		IP
+天野　　　誠	3.44	0.21	4.7	５		IP	転		IP	５		IP	５		IP	２		IP	６		IP	４		IP	４		IP	３		IP	５		IP
+桐本　　康臣	4.90	0.21	3.8	５		IP	５		IP	４		IP	６		IP	２		IP	２		IP	３	4	IP	４		IP	３		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+鳥飼　　　眞	7.60	0.19	3.8	１		IP	１		IP	１		IP	４		IP	２		IP	３		G3	２		G3	１		IP	４		IP	３		IP
+鐘ヶ江　真司	5.60	0.14	3.1	５		IP	１		IP	２		IP	３		IP	５		IP	２		IP	１		IP	４		IP	５		IP	４		IP
+石丸　　海渡	7.40	0.11	2.5	２		G1	１		IP	２		G1	３		IP	２		IP	２		IP	３		IP	４		IP	５		G1	１		G1
+竹内　　　来	2.30	0.18	3.8	３		IP	３		IP	５		IP	６	5	IP	５	6	IP	６		IP	６		IP	６		IP	５	5	IP	６		IP
+北川　　幸典	4.50	0.20	3.8	５		IP	２		IP	３		IP	３		IP	６		IP	２		IP	３		IP	６		IP	６	4	IP	３		IP
+前原　　　哉	2.50	0.21	4.8	６		IP	６	5	IP	４		G3	４		G3	６	5	IP	４		IP	５		IP	５		IP	４		IP	５		IP

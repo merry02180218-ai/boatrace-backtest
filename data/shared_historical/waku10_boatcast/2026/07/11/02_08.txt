@@ -1,0 +1,8 @@
+data=
+1	0
+佐竹　　友樹	6.70	0.19	3.6	１		IP	２		IP	３		IP	１		IP	１		IP	２		IP	１		IP	５		IP	６		IP	５		IP
+門間　　雄大	4.50	0.12	3.0	５		G2	５		G3	６		G3	３		IP	３	3	IP	１		IP	６		IP	５		IP	３		IP	２	3	IP
+山口　　　剛	6.44	0.10	2.5	エ		G2	６	4	SG	３		G1	２		G1	３		SG	３		G1	１		IP	５		SG	４		SG	６		G1
+櫻本　あゆみ	5.90	0.15	2.1	６		G2	５		IP	３		IP	１		IP	２		IP	２		G3	３	5	IP	４		IP	１		IP	５	5	IP
+上原　健次郎	4.00	0.19	4.9	４		G2	６		IP	４		IP	４		IP	４		IP	５		IP	４		IP	３	6	IP	４		IP	３		IP
+河合　　佑樹	5.60	0.17	4.4	５		G2	５		SG	３		SG	３		G1	３		G1	２	5	SG	６		G1	４		G1	５		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+岩瀬　　裕亮	10.70	0.10	1.4	１		G2	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1	１		G1	１		G1	１		G1
+岡崎　　恭裕	6.50	0.14	3.0	６		G2	６		IP	２		IP	２		G1	２		G1	１		IP	１	1	G1	３		IP	２		IP	６		IP
+齊藤　　　仁	7.30	0.14	2.4	４		IP	３		IP	３		IP	２		G3	１		G3	５		G1	１		IP	１		IP	３		IP	１		IP
+廣瀬　　将亨	6.10	0.14	3.3	２		IP	２		IP	５		G2	６		G2	３		IP	５		IP	２		IP	１		IP	４		IP	１	3	IP
+立間　　充宏	4.90	0.17	3.9	４		G2	２		IP	４		IP	３		IP	５		IP	４		IP	４		IP	３	6	IP	４		IP	４		IP
+山田　　祐也	4.40	0.13	2.2	５		G2	２		IP	５		G3	６		IP	５		IP	６		G1	６		G1	１		G2	４		G2	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+石川　　吉鎬	8.00	0.17	3.3	１		IP	１		IP	１		IP	４		IP	１		IP	４		IP	１		IP	１		IP	４		IP	２		IP
+一柳　　和孝	4.30	0.14	3.1	３		IP	５		IP	４		IP	５		G3	６	3	G3	３		IP	Ｆ		IP	２		IP	２		IP	３		IP
+吉田　　祐貴	3.70	0.20	3.8	５		IP	４		IP	５		IP	４		IP	２		IP	５	4	IP	３		IP	６		IP	５		IP	３		IP
+石田　　勇斗	3.60	0.15	3.2	４		IP	６		IP	５		IP	５		IP	６		IP	２		IP	５		IP	１		IP	５		IP	４		IP
+岩永　　節也	3.10	0.20	4.6	５		IP	５		IP	４		IP	４		IP	３		IP	６		IP	４	4	IP	５		IP	４		IP	５		IP
+西村　　仁吾	1.80	0.18	3.1	４		IP	６		IP	４		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP

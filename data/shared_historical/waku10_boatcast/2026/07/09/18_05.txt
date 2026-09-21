@@ -1,0 +1,8 @@
+data=
+1	0
+尾崎　　雄二	8.30	0.16	2.9	１		IP	３		IP	２		G3	２		IP	６		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+谷川　　将太	6.80	0.14	2.6	３		IP	３		IP	２		IP	３		IP	２		IP	５		IP	１		IP	２		IP	２		IP	３		IP
+小林　　孝彰	7.20	0.16	3.3	５		IP	１		IP	２		IP	２		IP	２		IP	３		IP	２		IP	２		IP	２		IP	３		IP
+宮内　由紀英	4.10	0.18	3.6	４		IP	４		IP	６		IP	３		IP	６		IP	４		IP	６		IP	２		IP	２		IP	４	5	IP
+梶原　　　正	2.70	0.14	3.7	５		G3	６		G3	４		G3	６		G3	６		IP	２		IP	３		IP	５		IP	６		IP	６		IP
+野末　　智一	3.40	0.20	4.4	５		IP	６		IP	５		IP	６		IP	４		IP	２	3	IP	５		IP	４		IP	４		IP	３		IP

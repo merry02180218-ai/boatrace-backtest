@@ -1,0 +1,8 @@
+data=
+1	0
+間野　　兼礼	7.30	0.19	3.5	１		IP	１		IP	３		IP	１		IP	６		IP	３		IP	５		IP	２		IP	１		IP	１		IP
+宮本　　夏樹	3.70	0.15	3.0	６		IP	５		IP	４		IP	５		IP	５		IP	４		IP	５		IP	２		IP	３		IP	３		G3
+蜂須　　瑞生	5.70	0.16	2.4	６		IP	４		IP	２		IP	３		IP	４		IP	１		IP	２		G3	４		IP	３		IP	３		IP
+原　　加央理	5.50	0.16	2.4	６		IP	４		IP	３		IP	３	5	IP	２		IP	５		IP	１		G3	５		G3	３		G3	１		IP
+大西　　隆洋	4.50	0.16	3.7	５		IP	６		IP	４		IP	３		IP	２		IP	５	6	IP	４		IP	５		IP	１		IP	３		IP
+鳥居塚　嶺王	2.80	0.16	3.4	４		IP	１		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	３		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　一郎	8.40	0.13	2.1	２		IP	１		IP	１		IP	５		IP	２		IP	１		IP	２		IP	１		IP	２		IP	１		IP
+富永　夏哉人	3.60	0.17	2.9	６		IP	６		IP	２		IP	３		IP	４		IP	６		IP	４		IP	２		IP	５		IP	６		IP
+表　　　憲一	6.30	0.18	2.9	４		IP	６		IP	２		IP	１		IP	４		IP	１		IP	４		IP	３		IP	２		IP	２		IP
+小林　　京平	3.80	0.18	3.3	転		IP	５		IP	５	6	IP	３		IP	３		IP	２		IP	５	6	IP	５		IP	２		IP	５		IP
+若林　　樹蘭	4.00	0.17	3.3	５		IP	５		IP	４		IP	４		IP	２		IP	３		IP	２		IP	５		IP	５	6	IP	５		IP
+山崎　　昂介	3.40	0.20	4.5	６		IP	４		IP	４		IP	６		IP	５		IP	４		IP	５		IP	４		IP	２		IP	４		IP

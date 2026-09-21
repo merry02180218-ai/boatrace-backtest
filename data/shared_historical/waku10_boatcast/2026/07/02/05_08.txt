@@ -1,0 +1,8 @@
+data=
+1	0
+黄金井　力良	5.80	0.19	3.9	１		IP	６		IP	５		IP	１		IP	３		IP	６		IP	２		IP	１		IP	２		IP	５		G3
+小森　　信雄	5.11	0.18	4.9	６		IP	３		IP	３		IP	２		IP	３		IP	６		IP	１		IP	落		IP	５		IP	３		IP
+須藤　　隆雄	4.10	0.15	2.7	５		IP	６		IP	６		IP	１		IP	３		IP	６		IP	１		IP	５		IP	３		IP	５		IP
+富永　　正人	3.50	0.21	4.5	５		IP	妨		IP	５		IP	６		IP	３		IP	４		IP	４		IP	４		IP	４		IP	２		IP
+長野　　道臣	2.70	0.14	3.3	５	6	IP	４		G3	３		IP	６		IP	６		IP	５		IP	６		IP	４		IP	５		IP	４		IP
+港　　　理樹	3.40	0.17	4.5	４		IP	３		IP	４		IP	５		IP	５		IP	３		IP	５		IP	５		IP	落		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中田　　夕貴	8.10	0.15	3.0	１		IP	２		IP	５		G3	１		G2	１		IP	１		IP	３		IP	１		IP	１		IP	４		IP
+中嶋　　達也	5.10	0.21	4.6	２	6	IP	３		IP	３		IP	５		IP	１		IP	４		IP	４		IP	５	3	IP	２		IP	６		IP
+北川　　太一	5.20	0.15	3.7	３		IP	１		IP	６		G3	６	4	G3	Ｆ	4	IP	２		IP	４		G3	２		G3	３		IP	２	4	IP
+谷村　　一哉	5.90	0.17	3.5	６		IP	２		IP	４		IP	２		IP	３		G2	５		G2	３		IP	５		IP	１	6	IP	１		IP
+中村　紋夕梨	2.89	0.22	3.3	４		IP	４		IP	６	6	IP	４		IP	３		IP	６		IP	４		IP	６		IP	６	6	IP	転		IP
+井川　　大作	1.70	0.22	4.9	６		G3	６		G3	５		G3	６		IP	５		IP	４		IP	６		IP	６		IP	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　正樹	8.50	0.15	3.6	２		IP	２		IP	１		IP	４		IP	１		IP	２		G1	１		IP	１		G2	１		G2	４		IP
+廣瀬　　篤哉	5.00	0.13	2.4	３	4	IP	４		IP	５	4	IP	３		IP	３		IP	４		IP	４		IP	４		IP	１		IP	４		IP
+川添　　英正	5.40	0.18	3.7	２		IP	１		IP	６		IP	３		IP	２		IP	１		IP	６		IP	６		IP	６		IP	２		IP
+奥田　　　誠	4.60	0.17	2.3	３		IP	６		IP	４		IP	２		IP	２		IP	６		IP	５		IP	３		IP	４		IP	３		IP
+中曽　　瑠華	2.40	0.19	4.1	６		IP	４		G3	３		IP	５		IP	５		IP	６	6	IP	５		IP	６		IP	６		IP	４	6	IP
+金子　　和之	3.20	0.20	3.9	６		G2	５		IP	５		IP	３		IP	５		IP	６		IP	３		IP	６		IP	４		IP	３		IP

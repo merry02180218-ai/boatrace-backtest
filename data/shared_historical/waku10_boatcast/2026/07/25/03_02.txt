@@ -1,0 +1,8 @@
+data=
+1	0
+川崎　　誠志	7.80	0.21	4.0	４		IP	４	2	IP	１		IP	２		IP	１		IP	１		IP	２		IP	２		IP	３		IP	１		IP
+船岡　洋一郎	7.40	0.12	2.9	２		IP	１		IP	２		IP	５		G3	１	1	G1	５		G2	２		G2	４		IP	２	3	IP	１		IP
+石倉　　洋行	6.40	0.13	2.2	１		IP	１		IP	１		IP	３		IP	２	4	IP	６		IP	３		IP	５		G1	３		IP	４		IP
+永田　　義紘	4.10	0.15	3.4	６		IP	３		IP	３		IP	５		IP	６		IP	６		IP	２		IP	４		IP	５		IP	１		IP
+上原　　　崚	5.20	0.16	3.0	３		IP	３		IP	４		G2	６	6	G3	３		IP	３		G2	６		G2	５		G2	２	6	IP	２		IP
+長野　　道臣	3.00	0.17	3.2	４		G3	６		G3	４		G3	５		IP	５		G3	５		G3	５		IP	２	5	IP	４		IP	６		IP

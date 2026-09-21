@@ -1,0 +1,8 @@
+data=
+1	0
+永田　　義紘	7.70	0.12	2.9	１		G3	１		IP	２		IP	２		IP	１		IP	１		IP	６		IP	５		IP	１		IP	２		IP
+川崎　　誠志	7.00	0.16	4.6	２		G3	２		G3	２		IP	１		IP	２		IP	３		IP	３		IP	３		IP	３		IP	４		IP
+國分　将太郎	4.90	0.17	2.8	１		G3	３		G3	２		IP	５		IP	５		IP	３		IP	４		IP	６		IP	３		IP	４		IP
+安達　　裕樹	5.20	0.13	2.9	４		G3	３		G2	６		G2	４		G2	３		G2	５	5	IP	４		G2	４		G2	４		G2	１		IP
+赤岩　　善生	5.90	0.17	3.8	４		G3	２	2	G2	１	3	IP	４	2	SG	５	4	G1	４	2	G1	２	2	G1	５	2	G1	２	6	G3	５	3	G3
+濱崎　　　誠	4.60	0.22	4.0	３		G3	１	5	G3	４		IP	５		IP	４		IP	３		IP	４		IP	５		IP	５		IP	３		IP

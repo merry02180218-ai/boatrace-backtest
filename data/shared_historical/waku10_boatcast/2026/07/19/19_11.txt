@@ -1,0 +1,8 @@
+data=
+1	0
+香川　　素子	8.80	0.15	2.8	２		IP	２		IP	１		IP	１		IP	６		IP	１		IP	１		G3	１		G3	１		G3	１		G3
+大山　　千広	7.10	0.19	3.0	３		IP	１		IP	２		IP	２		IP	４		IP	３		IP	３		IP	４		IP	１		IP	２		IP
+稲生　　夏季	4.80	0.21	4.1	３		IP	４		IP	３		IP	２		G3	５		G3	５		G3	５		IP	４		IP	４		IP	１		IP
+海野　ゆかり	5.00	0.13	3.0	２		IP	５		IP	４		IP	３		G3	４		G3	エ		IP	４		IP	３		IP	１		G3	３		G3
+福山　恵里奈	2.40	0.14	2.9	５		IP	３		IP	６		IP	５		IP	６		IP	３		G3	５		IP	６		IP	６		IP	５		IP
+村上　　奈穂	3.30	0.23	4.9	３		G2	６		IP	４		IP	４		IP	６		IP	６		IP	４		IP	３	5	IP	６		IP	４		IP

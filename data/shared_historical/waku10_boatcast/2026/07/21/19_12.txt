@@ -1,0 +1,8 @@
+data=
+1	0
+遠藤　　エミ	9.30	0.12	2.5	２		G3	２		G2	１		G2	１		SG	２		G1	１		G1	６		SG	１		SG	１		IP	２		IP
+喜井　つかさ	6.80	0.14	1.9	３		IP	５		IP	５		G3	１		G3	１		G3	３		IP	４		IP	１		IP	１		G3	２		G3
+香川　　素子	7.10	0.13	2.6	６		IP	４		IP	１		IP	２		IP	１		IP	１		G3	２		G3	３		IP	２		IP	３		IP
+中川　　りな	4.80	0.19	4.2	４		IP	５		IP	４		IP	５	5	IP	２		G3	４		G3	３		IP	４		G3	４		G3	１		G3
+山下　　奈緒	3.67	0.25	4.3	２		IP	６		IP	４	6	IP	５		G3	５		G3	転	6	IP	４	6	IP	４		IP	３		IP	５	4	IP
+真子　奈津実	3.00	0.14	3.6	２	4	IP	５		G3	４		IP	５		IP	５		IP	４		IP	４		IP	６		IP	６	5	IP	５		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+権藤　　俊光	7.40	0.14	3.4	１		IP	１		IP	２		IP	１		IP	１		IP	５		G2	１		G2	６		G2	２		IP	５		IP
+澤田　　尚也	6.30	0.11	2.4	１		IP	６		G1	６		G1	２		G2	６		G2	２		IP	４		IP	１		IP	２		IP	２		IP
+井上　　　茂	3.90	0.12	2.4	４		IP	５		IP	転		IP	５		IP	３	5	IP	４		IP	１		IP	４		IP	６		IP	３		IP
+佐藤　　　悠	6.56	0.12	1.9	５	5	IP	３		IP	２	5	IP	１		IP	２		IP	３		G2	１		G2	５		IP	転		IP	４		G2
+丹下　　　健	1.30	0.25	5.1	６		IP	６		IP	６	6	IP	５		IP	５		IP	６		IP	５		IP	６		IP	Ｆ		IP	５		IP
+渡邉　　英児	4.60	0.18	3.7	３	5	IP	５	4	IP	２	4	IP	３	5	IP	５	5	IP	３		IP	３	4	IP	４		IP	５	5	IP	４		IP

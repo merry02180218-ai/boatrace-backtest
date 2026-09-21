@@ -1,0 +1,8 @@
+data=
+1	0
+佐々木　裕美	6.90	0.14	2.6	１		G3	６		IP	１		IP	３		IP	４		IP	２		G3	１		G3	１		G3	５		G3	２		G3
+松田　　真実	6.80	0.17	2.8	１		G3	２		IP	３		IP	３		IP	３		IP	３		IP	２		G3	５		G3	２		IP	２		IP
+原村　　百那	2.50	0.20	4.3	６		G3	６		IP	１		IP	６		IP	６		IP	６	6	IP												IP
+水口　　由紀	3.80	0.17	3.0	４		G3	５		IP	３		IP	５		IP	２		IP	３		IP	４	5	IP	６	6	IP	４		IP	６		IP
+真子　奈津実	4.10	0.14	3.3	４		G3	３		IP	４		IP	４		G3	４		G3	５		IP	２		IP	６		IP	３		IP	５		IP
+福島　　陽子	2.20	0.21	4.6	５		IP	６		G3	５		G3	５		G3	４		IP	３		IP	６	5	IP	６		IP	５		G3	６		G3

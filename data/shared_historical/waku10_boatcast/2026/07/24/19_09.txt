@@ -1,0 +1,8 @@
+data=
+1	0
+松田　　真実	6.20	0.18	4.2	４		G3	１		IP	１		IP	６		IP	１		IP	５		IP	６		IP	１		IP	１		IP	４		IP
+山口　真喜子	4.70	0.17	3.4	２		G3	４		IP	４		IP	６		IP	２		IP	２		IP	４		IP	エ		IP	５		IP	２		IP
+石井　　裕美	4.10	0.16	3.2	３		G3	５		IP	３		G3	３		IP	３		G3	４		IP	５		IP	６		IP	３		IP	５		IP
+村上　　奈穂	2.70	0.18	4.4	５		G3	５		G2	５	5	G2	４		IP	４		IP	５		IP	６		IP	４		IP	５		IP	５	3	IP
+龍田　　真白	3.40	0.13	2.1	５		G3	４		G3	６		IP	１		IP	２		IP	５	6	IP	４		IP	５		IP	６		IP	Ｆ		IP
+清水　　愛海	4.80	0.20	4.0	３		G3	３	5	G3	２		IP	３		IP	３	5	IP	５		IP	４		IP	６		SG	６		SG	５		SG

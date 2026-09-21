@@ -1,0 +1,8 @@
+data=
+1	0
+大峯　　　豊	9.30	0.11	2.6	２		SG	１		G1	１		IP	１		IP	１		IP	１		G2	１		G2	１		G3	６		G3	２		G3
+櫻本　あゆみ	7.50	0.14	2.8	３		IP	１	4	IP	２		IP	３		IP	２		G3	５		IP	１		IP	２		IP	１		IP	３		IP
+石渡　　鉄兵	6.80	0.11	3.1	３		SG	３		SG	２		IP	２	2	IP	３		IP	１		IP	６		G1	６		G1	３		IP	２		SG
+田上　　　凜	4.80	0.18	3.0	６		G2	６		IP	１	6	G2	１		IP	５		IP	１		IP	６		IP	６		IP	１		IP	転		IP
+山田　　康二	7.50	0.14	4.1	３		SG	５		SG	４		G1	１	4	SG	１		G2	１	3	IP	３		G1	３		G1	３		G1	５		SG
+平本　　真之	5.60	0.14	3.8	５		SG	６		G1	４		G1	４		G1	４		SG	３		G1	６		G1	３		IP	１		IP	２	5	G1

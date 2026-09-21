@@ -1,0 +1,8 @@
+data=
+1	0
+間嶋　　仁志	8.00	0.16	3.1	３		IP	５		IP	１		IP	１		IP	３		G3	１		IP	２		IP	１		IP	２		IP	１		IP
+前田　　紗希	7.80	0.14	2.6	１		G3	１		G3	１		G3	１	1	IP	５		G2	１		G2	２		G3	４		G3	５		G3	１		IP
+井上　　尚悟	7.20	0.15	2.8	６		IP	１		IP	１		IP	６		IP	１	4	IP	２		IP	１	4	IP	４		IP	１		IP	２	2	IP
+笠野　友紀恵	3.50	0.15	3.3	６		IP	４	5	IP	３		G3	４		G3	５		G3	４		IP	４		G3	３		IP	５		IP	５		IP
+天野　　友和	5.80	0.14	2.2	５	4	IP	４		IP	３		IP	１		IP	５	6	IP	５	6	IP	２		IP	３		IP	１		IP	２		IP
+柳瀬　　興志	2.60	0.18	3.6	５		G3	５	5	G3	４		IP	転		IP	５		IP	５		IP	５	5	IP	４		IP	５		IP	３		IP

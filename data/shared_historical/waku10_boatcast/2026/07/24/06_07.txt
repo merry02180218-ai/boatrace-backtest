@@ -1,0 +1,8 @@
+data=
+1	0
+土屋　　太朗	6.00	0.22	4.5	４		IP	２		IP	１		IP	２		IP	６		IP	２		IP	２		IP	６		IP	５		IP	１		IP
+江藤　　敦宏	5.00	0.21	4.9	４		IP	５		IP	５		IP	１		IP	２		IP	３		IP	４		IP	３		IP	４		IP	４		IP
+松本　　博昭	5.70	0.15	3.1	１		IP	４		IP	６		IP	１		IP	２		IP	４		IP	２		IP	３		IP	３		IP	転	4	IP
+藤田　　康生	3.20	0.13	3.8	３		IP	４	5	IP	６		IP	１		IP	４		IP	５		IP	５		IP	６		IP	６	6	IP	６		IP
+池田　奈津美	4.60	0.17	3.0	４	1	IP	３	2	IP	２	2	IP	４	2	IP	４	4	IP	６	3	IP	４	2	IP	６	2	G3	２	2	IP	３	2	IP
+石丸　　海渡	3.90	0.13	3.9	４		G1	３		IP	２	5	IP	４		G1	６		G1	６		G1	５		IP	４		IP	６		G1	５		G1

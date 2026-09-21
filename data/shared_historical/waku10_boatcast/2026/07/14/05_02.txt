@@ -1,0 +1,8 @@
+data=
+1	0
+寺島　　美里	6.70	0.14	2.4	３		IP	１		IP	４		IP	４		IP	１		IP	Ｆ		IP	１		IP	５		G1	１		IP	１		IP
+君島　　秀三	6.90	0.14	2.7	５		IP	３		IP	２		IP	２	3	G3	３	3	IP	２		IP	３		IP	２		IP	３		IP	１		IP
+赤羽　　克也	7.30	0.13	2.7	４		IP	３		IP	１		IP	１		IP	３		IP	２		IP	１		IP	１		IP	２		IP	６		IP
+谷本　　幸司	4.80	0.13	2.4	５		IP	３		IP	４		IP	３		IP	３		IP	２		IP	５		IP	４		IP	２		IP	５		IP
+大豆生田　蒼	3.90	0.16	3.8	３		IP	６		IP	３		IP	５		IP	３		IP	６		IP	３		IP	４	3	IP	５		IP	４		G1
+西舘　　果里	3.30	0.19	3.4	Ｆ		IP	６		IP	５		G3	４		IP	５		IP	３		IP	３	5	IP	５		IP	２		IP	５		IP

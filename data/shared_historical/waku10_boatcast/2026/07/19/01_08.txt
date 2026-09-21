@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　竜一	7.40	0.14	1.8	５		IP	１		IP	３		IP	２		IP	４		IP	１		IP	４		IP	１		IP	１		IP	１		IP
+鳥居塚　嶺王	5.86	0.17	2.9	２		IP	１		IP	２		IP	６		IP	４		IP	３		IP	４		IP									IP
+尾道　　佳諭	3.40	0.13	2.5	３		IP	３		IP	２		IP	６		IP	５		IP	６		IP	６		IP	４		IP	６		IP	４		IP
+高井　　駿弥	2.40	0.15	2.7	４		IP	転		IP	妨		IP	３		IP	６		IP	５		IP	５		IP	５	5	IP	６		IP	３		IP
+三浦　洋次朗	5.90	0.19	3.8	２		IP	６		G2	２		G2	４		IP	２	4	IP	１		IP	３		G2	６		G2	２		IP	６		IP
+井澤　　聖奈	1.20	0.18	3.6	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	転	5	IP

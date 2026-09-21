@@ -1,0 +1,8 @@
+data=
+1	0
+森　　　雄利	6.50	0.14	3.6	３		IP	２		IP	６		IP	１		IP	５		IP	１		IP	１		IP	２		IP	２		IP	５		IP
+齋藤　　和政	3.70	0.21	3.9	６		IP	５		IP	２	3	G3	５		IP	５		IP	３	6	IP	６		IP	６		IP	３		IP	２	3	IP
+待鳥　　雄紀	5.70	0.14	2.3	２		IP	３		IP	１	2	IP	２		IP	５		IP	３		IP	６	4	G3	４	4	G3	３		IP	３		IP
+土性　　雅也	5.20	0.18	4.3	５		IP	２		IP	６		IP	２		IP	１		IP	４	5	IP	６		IP	４		IP	２		IP	３		IP
+中島　　真二	3.10	0.20	4.4	４		IP	３		IP	６		IP	６		IP	６		IP	５		IP	５		IP	５		G3	４		IP	２		IP
+小山　　　勉	4.30	0.16	3.6	５		IP	４		IP	３	4	IP	１		IP	５		IP	６		IP	５		IP	３		IP	２	5	IP	５		IP

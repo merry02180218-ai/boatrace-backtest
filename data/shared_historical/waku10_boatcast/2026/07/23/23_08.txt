@@ -1,0 +1,8 @@
+data=
+1	0
+久保原　秀人	4.60	0.23	4.0	１		IP	４		IP	６	2	IP	５		IP	３		IP	６		IP	５		IP	２		IP	５		IP	１		IP
+小森　　信雄	5.56	0.19	4.7	４		IP	２		IP	６		IP	３		IP	３		IP	２		IP	３		IP	６		IP	１		IP	落		IP
+吉田　　彩乃	4.11	0.21	4.3	６		IP	３		IP	４	4	IP	不		IP	６		G3	３		G3	２		IP	３		IP	４		IP	６		IP
+豊田　　泰洋	3.80	0.23	4.2	１		IP	３		IP	５		IP	３		IP	５		IP	５	5	IP	６		IP	６		IP	５		IP	３		IP
+桑原　　　悠	6.70	0.15	3.6	３	6	G2	５		IP	２		IP	５		G1	４		G1	２		G1	１		G1	４		IP	２		IP	１		IP
+山田　　和佐	4.70	0.17	3.9	４		G3	４		IP	４	5	IP	６		G1	２		IP	３		IP	２		IP	５		IP	２		IP	６		IP

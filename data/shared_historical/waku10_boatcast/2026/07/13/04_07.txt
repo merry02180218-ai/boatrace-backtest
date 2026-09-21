@@ -1,0 +1,8 @@
+data=
+1	0
+小野　　信樹	6.80	0.18	3.3	２		IP	４		IP	２		IP	１		IP	４		IP	４		IP	４		IP	３		IP	１		IP	１		IP
+小池　　哲也	6.50	0.16	4.0	３		IP	１		IP	３		IP	５	1	IP	６		G2	２		G2	３		IP	２		IP	２		IP	２		IP
+豊田　　祥生	4.70	0.15	2.4	５		IP	４		IP	３		IP	１		IP	３		IP	５		IP	６		IP	２		IP	３		IP	５		IP
+前原　　大道	5.30	0.12	2.3	６		G2	Ｆ		G2	４		IP	１		IP	４		G1	２		G1	３		IP	４		IP	１		IP	５		IP
+滝沢　　芳行	4.80	0.10	2.6	４		IP	２		IP	２		G3	５		G3	１		IP	６	4	IP	２		IP	５		IP	４		IP	６		IP
+村岡　　　賢	4.70	0.16	3.6	３		IP	１	5	IP	５	5	IP	４	5	IP	１		IP	４		IP	５		IP	５		IP	６		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+安河内鈴之介	9.70	0.14	2.4	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+佐藤　　永梧	5.30	0.13	3.4	４		IP	２		IP	１		IP	２		IP	４		IP	２		IP	６		IP	４		IP	５		IP	４		IP
+木幡　　純也	5.10	0.16	3.5	２		IP	３		IP	６		IP	１		IP	５		IP	５		IP	４	4	IP	４		IP	２		IP	４		IP
+中里　　昌志	5.10	0.18	3.4	４		IP	４		IP	６		IP	１		IP	３		IP	２		IP	１	3	IP	６		IP	６		IP	３		IP
+中野　　孝二	5.89	0.18	3.3	１		IP	２	6	IP	３	6	IP	３		IP	２	4	IP	４		IP	４		IP	６		IP	転		IP	３		IP
+松竹　　大輔	3.30	0.18	3.2	４		IP	６		IP	３		G3	３		G3	５		IP	２		IP	５		IP	６		IP	５		G3	６	5	IP

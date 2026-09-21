@@ -1,0 +1,8 @@
+data=
+1	0
+三嶌　さらら	6.80	0.20	4.4	４		IP	２		IP	４		IP	３		IP	２		IP	１		IP	４		IP	４		IP	１		IP	１		IP
+塩崎　　優司	5.20	0.18	3.5	４		IP	３		IP	３		IP	６		IP	３		IP	３		IP	６		IP	２		IP	２		IP	３	3	IP
+宮下　　元胤	5.60	0.16	3.9	３		IP	３		IP	３		IP	４		IP	５		IP	５		IP	５		IP	１	4	IP	２		IP	１		IP
+吉永　　泰弘	3.20	0.18	4.3	５		IP	４	3	IP	転	6	IP	３		IP	５	5	G3	３		G3	６		IP	５		IP	６		IP	２		IP
+白水　　勝也	5.90	0.18	2.8	６	4	IP	２		IP	３		IP	３	4	IP	２		IP	３		IP	３		IP	４		IP	３	4	IP	３		IP
+今村　天次朗	1.50	0.12	1.9	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP

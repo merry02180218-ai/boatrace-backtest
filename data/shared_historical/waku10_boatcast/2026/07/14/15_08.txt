@@ -1,0 +1,8 @@
+data=
+1	0
+奥田　　　誠	8.80	0.16	3.7	２		IP	３		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP
+香川　　颯太	7.50	0.13	3.1	１		IP	４		IP	１		IP	２		IP	１		IP	１		IP	６		IP	２		IP	３		IP	２		IP
+浦田　　晃嗣	4.40	0.15	3.1	２		IP	５		IP	３		IP	３		IP	１		IP	５		IP	５		IP	６		IP	３		IP	６	4	IP
+齋藤　　　勇	5.20	0.16	3.4	４		IP	３		IP	２		IP	４		IP	２		IP	４		IP	５		IP	５		IP	１		IP	４		IP
+豊田　　泰洋	2.80	0.21	4.3	５		IP	５		IP	４	6	IP	４		IP	６		IP	３		IP	５		IP	６		IP	４		IP	５		IP
+早川　　理稀	2.30	0.19	3.7	５		IP	６		IP	６		IP	３		IP	５		IP	５		IP	６		IP	３		IP	６		IP	６		IP

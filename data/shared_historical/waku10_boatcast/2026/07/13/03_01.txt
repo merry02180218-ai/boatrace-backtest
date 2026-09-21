@@ -1,0 +1,8 @@
+data=
+1	0
+堀越　　雄貴	7.90	0.15	3.8	６		G3	３		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	３		IP	２		IP
+遠藤　　圭吾	6.30	0.16	4.0	３		IP	６		IP	１		IP	２		IP	１		IP	３		IP	５		IP	１		IP	２		IP	５		IP
+岡崎　　凪汰	3.30	0.17	3.6	６		IP	５		IP	４		IP	４		IP	５		IP	５		IP	６		IP	２		IP	２		IP	６		IP
+福西　広太郎	1.89	0.17	3.5	５		IP	６		IP	５		IP	６		IP	３		IP	６		IP	６		IP	５		IP	エ		IP	６		IP
+宮崎　　奏磨	1.10	0.15	3.5	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５	6	IP	６		IP	６		IP	６		IP
+本吉　　正樹	3.00	0.19	4.2	４		IP	６		IP	２		IP	３		IP	６		IP	５		IP	４	5	IP	５		IP	６		IP	６		IP

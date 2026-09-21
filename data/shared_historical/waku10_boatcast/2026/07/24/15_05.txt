@@ -1,0 +1,8 @@
+data=
+1	0
+古川　　誠之	9.00	0.15	2.9	１		IP	２		IP	２		IP	１		IP	１		G3	１		G3	２		IP	３		IP	１		IP	１		IP
+深水　慎一郎	6.80	0.17	3.2	２		IP	１		IP	３		IP	２		G3	５		G3	４		IP	５		IP	１		IP	２		IP	１		IP
+中里　　昌志	5.00	0.12	2.8	２		IP	５		IP	２		IP	５		IP	４		IP	１		IP	２		IP	５		IP	５		IP	４	1	IP
+田頭　　虎親	5.60	0.17	3.1	３		IP	２		IP	３		IP	２		IP	５		IP	５		IP	２		IP	５		IP	３		IP	２		IP
+小川　　時光	1.80	0.16	3.7	６		IP	５		IP	５		IP	５		IP	４		IP	６		IP	６		IP	６		IP	５		IP	５		IP
+吉川　　元浩	5.90	0.18	3.8	３		IP	４		G2	６		G2	３	4	IP	３		G2	４		G2	３		G2	５	5	G1	２		G3	１	4	G3

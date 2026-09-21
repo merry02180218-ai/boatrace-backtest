@@ -1,0 +1,8 @@
+data=
+1	0
+北野　　輝季	10.20	0.13	2.0	１		G3	１		IP	２		IP	１		IP	１		G1	１		G1	１		G1	１		G3	１		G3	１		G3
+中村　　辰也	3.90	0.19	3.3	３		IP	５		IP	５		IP	５		IP	３		IP	５		IP	４		IP	２		IP	３		IP	６		IP
+上野　　秀和	6.10	0.13	2.5	３		IP	２		IP	２		IP	２		IP	２		IP	３		IP	１		IP	５		IP	４		IP	６		IP
+田中　　　豪	5.60	0.15	2.8	５		IP	５		IP	５		IP	１		IP	３		IP	３		IP	２		IP	３		IP	３	5	IP	２		IP
+村岡　　賢人	5.40	0.15	3.3	５		G1	２		G1	４		G1	２		IP	３		IP	４		IP	５	6	IP	３		IP	６		G1	２		G1
+深川　　和仁	2.60	0.18	3.5	６	5	IP	２	5	IP	５		IP	３		IP	６	5	IP	６		IP	６		IP	５		IP	５		G3	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　章司	5.10	0.15	3.8	１		IP	５		IP	６		IP	２		IP	３		IP	４		IP	３		IP	２		IP	４		IP	５		IP
+井上　　　茂	4.80	0.14	3.6	４		IP	４		IP	３		IP	４		IP	４		IP	４		IP	４		IP	３		IP	４	3	IP	２		IP
+中村　　晃朋	6.70	0.15	2.7	１		IP	１		IP	２		IP	４		IP	２		G1	６		G1	３		IP	６		IP	２		IP	２		G3
+嶋田　　貴支	5.80	0.18	3.4	５		IP	１		IP	５		IP	２		IP	４		IP	３		IP	４		IP	４		IP	２		IP	１		IP
+中村　　　楓	2.70	0.12	2.4	５		IP	３		IP	６		IP	５		IP	４		IP	６		IP	３		IP	５		IP	５		IP	６	6	IP
+久田　　　武	2.50	0.17	3.6	２		IP	４	5	IP	５		IP	５		IP	６		IP	５		IP	６		IP	５		IP	５		IP	６		IP

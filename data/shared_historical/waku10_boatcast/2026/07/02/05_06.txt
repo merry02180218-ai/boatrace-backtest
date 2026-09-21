@@ -1,0 +1,8 @@
+data=
+1	0
+黒崎　　竜也	7.70	0.15	3.7	１		IP	１		G3	１		G3	１		G3	１		IP	２		IP	１		IP	６		IP	２		IP	Ｆ		IP
+木幡　　純也	4.50	0.20	3.9	４		IP	４		IP	３		IP	１		IP	３		IP	６		IP	４	3	IP	５		IP	５		IP	３		IP
+山崎　　義明	4.40	0.18	2.9	２		IP	２		IP	５		IP	落		IP	５		IP	３		IP	５		G3	５		G3	２		IP	３	4	IP
+戸塚　　邦好	6.30	0.13	2.5	４	5	IP	２	6	IP	２	5	G3	３		G3	１		IP	６		IP	４		IP	２		IP	２		IP	４		IP
+沼田　　大都	4.30	0.20	4.1	５	6	IP	３		IP	４		IP	３	6	IP	２		IP	転		IP	６		IP	２		IP	５		IP	３		IP
+牧　　　宏次	3.50	0.18	3.7	５		IP	３		IP	４	5	IP	４		IP	４		IP	６		IP	４		IP	６		IP	６	5	IP	２		IP

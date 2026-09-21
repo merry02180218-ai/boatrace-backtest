@@ -1,0 +1,8 @@
+data=
+1	0
+犬童　　千秋	7.60	0.17	3.0	１		IP	２		G3	１		G3	１		IP	３		G3	１		G3	３		IP	５		IP	２		IP	３		G3
+松本　　博昭	5.70	0.18	3.4	２		IP	５	3	IP	２		IP	６		IP	２		IP	４		IP	１	4	IP	４	3	IP	４		IP	２		IP
+松本　　一毅	6.22	0.14	2.3	５		IP	５		IP	２		IP	転		IP	１		IP	１		IP	３		IP	３		IP	２		IP	４		IP
+榮田　　将彦	4.60	0.11	2.0	２		IP	３		IP	３		IP	２		IP	５		IP	６		IP	３		IP	３		IP	６		IP	５		IP
+明石　　正之	4.20	0.18	3.8	５		IP	３		IP	３		IP	４		IP	４		IP	２		IP	４		IP	４		IP	５		G3	５		IP
+田中　信一郎	4.10	0.15	2.9	３		IP	３	5	IP	３		IP	４		IP	４		IP	３	5	IP	６		IP	５		IP	５		G1	５		G1

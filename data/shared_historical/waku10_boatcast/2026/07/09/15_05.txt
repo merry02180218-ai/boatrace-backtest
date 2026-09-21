@@ -1,0 +1,8 @@
+data=
+1	0
+岡本　　　大	6.70	0.16	2.9	４		IP	２		IP	１		IP	４		IP	２		IP	１		IP	３		IP	２		IP	６		IP	２		IP
+細川　　明人	2.80	0.20	4.1	５		IP	５		IP	４		IP	６	3	IP	３		IP	３		IP	６		IP	６		IP	６		IP	４		IP
+砂長　　知輝	6.70	0.12	2.8	３		IP	２		IP	３		IP	５		IP	１		IP	３		G1	５		G1	１	4	G1	２		SG	５		SG
+日高　龍之介	2.70	0.18	3.4	５		IP	６		IP	４		IP	Ｆ	5	IP	６		IP	５		IP	６		IP	２		IP	３		IP	５		IP
+角谷　　健吾	3.90	0.16	3.0	３		IP	５		IP	２	4	IP	６		IP	３		IP	６		IP	４		IP	６		IP	３	4	IP	５		IP
+小倉　　康典	2.90	0.15	3.7	６		IP	６		IP	６		IP	５		IP	３		IP	２		IP	５		IP	４		IP	５		IP	５		IP

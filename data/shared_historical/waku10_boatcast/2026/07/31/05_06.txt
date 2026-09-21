@@ -1,0 +1,8 @@
+data=
+1	0
+樅山　　拓馬	7.40	0.18	3.8	２		G3	１		IP	２		IP	１		IP	３		IP	１		IP	２		IP	４		IP	４		IP	３	2	IP
+土性　　雅也	4.60	0.15	3.6	６		IP	欠		IP	４		IP	２		IP	６		IP	２		IP	４	4	IP	３	3	IP	２	5	IP	３		IP
+三角　　哲男	6.00	0.15	2.8	２		IP	５		IP	６		IP	２		IP	４		IP	１		IP	２	4	IP	２		IP	５		IP	２		IP
+大須賀　　友	7.00	0.16	3.0	１		IP	１	3	IP	１		IP	５		IP	５	2	IP	４		IP	３		IP	２		IP	１	3	IP	２		IP
+鶴本　　崇文	3.90	0.22	4.7	６		IP	５		IP	４		IP	６		IP	６		IP	３		IP	４		IP	４		IP	３		IP	３		IP
+藤田　　康生	3.70	0.18	3.7	５		IP	５		IP	３		IP	６	5	IP	３	5	IP	４		IP	４		IP	落		IP	３		IP	３		IP

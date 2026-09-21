@@ -1,0 +1,8 @@
+data=
+1	0
+増田　　　進	5.80	0.16	2.6	５		IP	３		IP	６		IP	１		IP	２		IP	５		IP	１		IP	６		IP	１		IP	２		IP
+河野　　真也	6.80	0.19	3.1	３		IP	２		IP	２		IP	２	3	IP	１	3	IP	５		IP	３		IP	１		IP	２		IP	５		IP
+川北　　浩貴	7.10	0.15	2.6	２		IP	４		IP	２		IP	６		IP	２		IP	２		IP	１		IP	１	4	IP	１		IP	４		IP
+三宅　　健太	5.60	0.20	3.6	１		IP	４		IP	１		IP	５		IP	６		IP	２		IP	１		IP	３		IP	６		IP	４		G3
+菅沼　　佳昭	4.90	0.18	3.9	２		IP	３		IP	５		IP	５		IP	３		IP	１		IP	４		IP	３		IP	４		IP	６		IP
+塚田　　修二	3.70	0.16	3.6	５	5	IP	６	5	IP	３		IP	５		IP	２		IP	５		IP	６		IP	６		IP	１		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+岩井　　　繁	5.70	0.21	4.1	６		IP	１		G3	３		G3	５		IP	５		IP	２		IP	５		IP	１		IP	２		IP	２		IP
+岡瀬　　正人	7.20	0.16	2.7	２		IP	２		IP	２		IP	１		IP	５		IP	２		IP	３		IP	２		IP	３		IP	２		IP
+佐藤　　大介	7.40	0.22	4.6	１		IP	２		IP	４		IP	３		IP	３		IP	４		IP	１		IP	３		IP	１		IP	２		IP
+宮地　　秀祈	4.30	0.17	3.6	６		IP	２		IP	３		IP	４		IP	４		IP	２		IP	５		IP	５		IP	４		IP	４		IP
+松尾　　　充	6.30	0.13	2.7	２		IP	３		IP	２		G1	６	6	G1	２		G1	４		G1	２		IP	３		G3	２		IP	６		G1
+三馬　　崇史	5.20	0.18	4.6	５	5	IP	２		IP	２	5	IP	３		IP	１	5	IP	４		IP	４		IP	６		IP	６		G2	４		G2

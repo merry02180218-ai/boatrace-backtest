@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　弓雄	5.60	0.18	4.3	４		IP	３	2	IP	１		IP	１		IP	６		IP	４		IP	３		IP	４		IP	１		IP	６		IP
+樋口　　範政	5.40	0.19	4.9	３		G3	４		G3	２	3	IP	４		IP	１		IP	４		IP	４		IP	５		IP	２		IP	４		IP
+末永　　由楽	5.40	0.09	2.2	５		IP	１		G2	５		G2	１		IP	６		G2	４		G2	１		G2	６		G2	５		IP	３		IP
+常盤　　海心	4.10	0.19	4.0	５		IP	６		IP	２		IP	４		IP	３		IP	４		IP	５		IP	４		IP	４		IP	３	5	IP
+松下　　直也	3.60	0.20	4.0	５	6	IP	３		IP	３		IP	５		IP	５		IP	４		IP	Ｆ		IP	３		IP	６		IP	３		IP
+竹田　　辰也	2.90	0.14	3.8	４		IP	５	5	IP	５		IP	５		IP	４	5	IP	５		G3	６		G3	４	5	IP	４	5	IP	４	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+谷川　　祐一	9.00	0.15	2.6	４		G3	１		IP	２		IP	１		IP	１		G3	１		G3	１		IP	１		IP	１		IP	２		IP
+井上　　尚悟	6.20	0.12	2.7	５		IP	２		IP	１		IP	転		IP	５		IP	３		IP	２		IP	１		IP	２		IP	２		IP
+植田　　太一	6.70	0.17	3.4	２		IP	１		IP	４		IP	１		IP	６		IP	２		IP	２		IP	４		IP	４		IP	１		IP
+杉山　　勝匡	4.70	0.15	3.1	３		IP	４	5	IP	５		IP	３		IP	５		IP	Ｆ		IP	１		IP	３		IP	１	5	IP	６	6	IP
+大西　　隆洋	3.60	0.15	3.1	６		IP	４		IP	４	4	IP	５		IP	６		IP	４		IP	３		IP	２		IP	５	6	IP	４		IP
+吉村　　正明	4.00	0.15	4.2	６		IP	５		IP	５		IP	３		IP	２		IP	５		IP	５		IP	２		IP	４		IP	４		G3

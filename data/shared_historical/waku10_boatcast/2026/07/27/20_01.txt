@@ -1,0 +1,8 @@
+data=
+1	0
+川口　　貴久	7.70	0.12	2.6	１		IP	２		IP	１		IP	３		IP	１		IP	１		IP	５		IP	６		IP	１		IP	１		IP
+小玉　　啓太	5.80	0.14	3.3	３		IP	４		IP	２		IP	３		IP	２		IP	５		IP	２		IP	２		IP	５		IP	３		IP
+鐘ヶ江　真司	5.30	0.18	2.9	２		IP	２		IP	４		IP	３		IP	転		IP	３		IP	３		IP	４		IP	６		IP	１		IP
+中島　　　航	2.40	0.22	3.7	６		IP	５	5	IP	３		IP	３		IP	６		IP	５		IP	５	1	G3	５		IP	６		IP	６		G3
+多羅尾　達之	3.20	0.12	2.7	３		IP	６		IP	５		IP	６		IP	６	6	IP	４		IP	３		IP	６	6	IP	４		IP	３		IP
+池田　　浩美	1.40	0.22	4.4	５		G3	５		G3	６		IP	６		IP	６		G3	６		G3	６		G3	５		IP	５		IP	６		IP

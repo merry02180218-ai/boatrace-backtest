@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　英之	8.00	0.14	2.5	２		IP	３		IP	４		IP	１		IP	１		IP	２		IP	１		IP	２		IP	２		IP	２		IP
+淺田　千亜希	5.50	0.10	2.1	１		IP	Ｆ		G3	２		IP	２		G3	４		G3	３		G3	２		IP	２		IP	５		IP	６		IP
+原田　　雄次	7.20	0.16	3.0	４		IP	３	4	IP	２		IP	２		IP	２		IP	３		IP	３		IP	３		IP	１		IP	１		IP
+田中　信一郎	6.70	0.15	2.3	１		IP	２		IP	３		IP	１		IP	１		IP	３		IP	５		IP	６		G1	１	5	G1	６		G1
+西原　　明生	2.20	0.24	5.2	５		IP	４		IP	６		IP	５		IP	５		IP	５	6	IP	５		IP	６		IP	４		IP	５		IP
+片岡　　大地	4.80	0.13	2.9	３		IP	Ｆ		IP	５		IP	５		IP	５		IP	２		IP	３		IP	３		IP	３		IP	１	5	IP

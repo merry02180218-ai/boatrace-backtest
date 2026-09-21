@@ -1,0 +1,8 @@
+data=
+1	0
+高田　　　綾	6.30	0.16	2.7	１		IP	４		IP	４		IP	４		IP	５		IP	１		IP	２		IP	１		IP	１		IP	６		IP
+宮崎　　安奈	5.10	0.19	3.1	２		IP	６		IP	５		G2	２		IP	６		IP	２		IP	２		IP	４		IP	５	1	IP	２		IP
+喜多須　杏奈	4.50	0.12	3.4	３		IP	２		IP	４		IP	５		IP	４		G3	２		G2	４		G2	６		IP	４		IP	５		G3
+水口　　由紀	3.70	0.16	3.0	３		IP	５		IP	２		IP	３		IP	４	5	IP	６	6	IP	４		IP	６		IP	４		IP	６		IP
+来田　　衣織	3.70	0.15	3.0	３		IP	１		IP	１		IP	５		IP	５		IP	６		IP	６		IP	６		IP	５		IP	５		IP
+高憧　　四季	5.80	0.17	3.4	２		IP	４		G3	６		G1	５	5	SG	６		SG	３		G2	４		IP	１		IP	３		IP	１		IP

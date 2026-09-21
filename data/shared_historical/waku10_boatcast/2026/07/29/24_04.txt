@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　昂介	6.80	0.17	3.9	５		IP	３		IP	２		IP	１		IP	２		IP	４		IP	１		IP	３		IP	４		IP	１		IP
+中井　　俊祐	4.80	0.21	4.2	６		IP	１		IP	５		IP	６		IP	２		IP	２		IP	６		IP	３		IP	２		IP	６		IP
+大森　　　翼	4.90	0.16	3.2	１	4	IP	２		IP	３		IP	６		IP	３		IP	４		IP	５		IP	５		IP	４		IP	３	2	IP
+海野　ゆかり	5.00	0.13	2.6	２		G3	２		G3	２		IP	５		IP	４		IP	３		G3	４		G3	エ		IP	４		IP	３		IP
+今坂　　晃広	3.50	0.20	4.4	２		IP	３		IP	６		IP	４		IP	３		IP	６	6	G3	５	6	G3	６		IP	５		IP	４		IP
+葛原　　大陽	4.10	0.16	3.5	４		IP	４		IP	３		IP	４		IP	５		G3	４		G3	６		IP	３	4	IP	３		IP	４		IP

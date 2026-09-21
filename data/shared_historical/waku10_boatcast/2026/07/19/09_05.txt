@@ -1,0 +1,8 @@
+data=
+1	0
+佃　　　來紀	8.00	0.11	2.0	１		IP	１		G3	３		IP	１		IP	４	2	G3	２		G3	１		G3	１		IP	１		IP	５		IP
+藤田　　俊祐	6.70	0.15	3.0	２	3	IP	３		IP	２		IP	３		IP	１		IP	転		IP	３		IP	３		IP	２		IP	２		IP
+湯淺　　紀香	5.60	0.20	3.7	３		IP	４		IP	２		IP	４		IP	２		IP	２		IP	６		IP	５		G2	４		G3	１		G3
+砂長　　知輝	6.00	0.16	3.6	３		IP	５		IP	３		IP	３		IP	２		IP	４		IP	１	3	IP	５		IP	４		IP	１		IP
+前田　　　滉	6.89	0.16	3.3	２		IP	３		IP	４		IP	転		IP	１		IP	２	4	IP	２		IP	３		IP	５		SG	２		IP
+飛田　　江己	5.10	0.10	2.2	４		IP	４		IP	３	5	IP	２		IP	３		IP	３		IP	３		IP	５		G2	４		IP	４		IP

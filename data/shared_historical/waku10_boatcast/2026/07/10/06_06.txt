@@ -1,0 +1,8 @@
+data=
+1	0
+牧山　　敦也	5.11	0.22	4.5	６		IP	５		IP	５		IP	３		G3	１		IP	１		IP	転		IP	４		IP	１		IP	６		IP
+菊地　　敬介	5.90	0.13	2.7	１		IP	４		IP	５		IP	２		IP	２		IP	３		IP	６		IP	２		IP	５		IP	１		IP
+金田　　　諭	4.70	0.16	3.5	２		IP	３		IP	３		IP	５		IP	３		IP	５	2	IP	２		IP	３		IP	６	2	IP	６		IP
+藤生　　雄人	4.60	0.18	3.1	３		IP	４		IP	６		IP	２		IP	４		IP	６		IP	２		IP	３	5	IP	３		IP	５		IP
+杉山　　貴博	4.30	0.22	4.4	２	6	IP	４		IP	３		IP	４	4	IP	３	6	IP	３		G3	５		G3	６		IP	６		IP	４		IP
+中北　　将史	3.10	0.19	3.7	４	5	IP	３	5	IP	５		IP	６		IP	４	5	IP	３		IP	４		IP	６		IP	６		IP	５		IP

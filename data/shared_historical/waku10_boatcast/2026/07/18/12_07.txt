@@ -1,0 +1,8 @@
+data=
+1	0
+藤丸　　光一	7.20	0.18	3.5	３		IP	４		IP	２		IP	４		IP	１		IP	３		IP	３		IP	１		IP	２		IP	１		IP
+北村　　征嗣	6.50	0.11	2.8	１		IP	２		IP	４		G3	３		IP	４		IP	２		G3	１		IP	４		IP	２		G1	６	3	G1
+都築　　正治	5.00	0.13	2.4	３		IP	６		IP	５		IP	１		IP	４	2	IP	３		IP	６		IP	５		IP	２		IP	１		IP
+吉原　　快誓	2.30	0.18	3.9	３		IP	５		IP	３		IP	５	6	IP	６		IP	５	5	IP	６		IP	６	6	IP	６		IP	６		IP
+別府　　昌樹	4.80	0.15	2.9	５		IP	３		IP	２		IP	４		IP	１		IP	３		IP	４	6	IP	４	6	IP	５		IP	５		IP
+長野　壮志郎	4.60	0.16	3.2	３		IP	６		IP	４		IP	６		IP	５		IP	２		IP	３		IP	４	5	IP	４		IP	１		IP

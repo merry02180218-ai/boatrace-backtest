@@ -1,0 +1,8 @@
+data=
+1	0
+木村　紗友希	6.60	0.15	2.3	１		IP	５		IP	１		IP	５		IP	４		IP	１		IP	３		IP	１		IP	５		G3	１		IP
+守田　　俊介	7.40	0.13	3.0	３		IP	２		G2	４		IP	２		SG	１		SG	２		G1	２		G1	２		SG	６		G1	５		G1
+藤井　　公人	6.30	0.15	2.8	５		IP	１		IP	１		IP	４		IP	１		IP	４		IP	３		IP	６		IP	１		IP	３		IP
+鶴田　　勇雄	6.60	0.22	3.9	３		IP	３		IP	５		IP	３		IP	３		IP	２		IP	２		IP	２		IP	２		IP	２		IP
+白井　　友晴	3.70	0.16	3.7	４		IP	６		IP	３		IP	６		IP	４		IP	６		IP	５	4	IP	３		IP	２		IP	４	4	IP
+福田　　　理	2.60	0.15	3.9	５	5	IP	１	5	IP	６	5	G3	４		G3	５		IP	５		IP	６		IP	５		IP	６		IP	６		IP

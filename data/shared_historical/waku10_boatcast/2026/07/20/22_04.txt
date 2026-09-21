@@ -1,0 +1,8 @@
+data=
+1	0
+藤森　　陸斗	9.40	0.11	2.3	１		IP	２		IP	１		IP	１		IP	１		IP	２		IP	１		IP	２	2	IP	１		IP	１		IP
+濱野　　斗馬	7.00	0.12	3.1	１		IP	２		IP	４		IP	２		IP	６		IP	４		IP	２		IP	１		IP	１	3	IP	３		G2
+笹木　　香吾	7.70	0.16	3.2	５		IP	１		IP	２		IP	１	4	G3	４		IP	１		IP	１		IP	２		IP	１		IP	５		G2
+井上　　未都	4.30	0.17	3.2	４		IP	５		IP	３		IP	３		IP	１		IP	５		IP	６		IP	３	3	IP	５		IP	４		IP
+武井　莉里佳	3.67	0.13	3.4	６		IP	６		IP	２		G3	転		G3	４		G2	３		G2	４		IP	５		IP	６		IP	４		IP
+常住　　　蓮	6.00	0.11	2.8	１		G2	５		G2	３		G2	４		G1	５		G1	５		G1	２	5	SG	３		SG	２	5	IP	５	5	IP

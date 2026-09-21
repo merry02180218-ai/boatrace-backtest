@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　栄治	6.30	0.20	4.5	１		IP	４		IP	６		IP	１		IP	４		IP	１		G3	２		G3	４		IP	２		IP	４		IP
+伊久間　陽優	5.20	0.14	3.7	２		IP	２		IP	５		IP	３		IP	６		IP	４		IP	２		IP	３		IP	２		IP	６		IP
+山本　　兼士	5.10	0.17	3.4	４		IP	１		IP	４		IP	３		IP	２		IP	５		IP	４		IP	２		IP	４		IP	６	5	IP
+中岡　　健人	3.70	0.16	3.3	５		IP	３		IP	５	3	IP	２		IP	５		IP	４		IP	６		IP	４		IP	５		IP	３	5	IP
+加藤　　雅之	1.90	0.18	4.0	４		IP	５		IP	６		IP	５		IP	５		IP	６		IP	５	6	IP	４		IP	６		IP	転		IP
+篠原　　飛翔	3.30	0.19	4.6	５		IP	３		IP	４		IP	４		IP	６		IP	５		IP	５		IP	５		IP	５	5	IP	２		IP

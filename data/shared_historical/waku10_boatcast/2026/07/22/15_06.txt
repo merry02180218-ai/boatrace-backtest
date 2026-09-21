@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　裕司	7.10	0.17	3.5	２		IP	１		IP	１		IP	１		IP	３		IP	５		IP	３		IP	２		IP	６		IP	１		IP
+佐藤　謙史朗	3.40	0.18	3.4	１		IP	５		IP	６		IP	４		IP	５		IP	５		IP	４		IP	６		IP	５		IP	３		IP
+多田　　有佑	3.60	0.22	3.7	４		G2	４		IP	５	5	IP	６		IP	４		IP	５		IP	２		IP	５		IP	４	2	IP	４		IP
+小林　　一樹	5.70	0.13	2.5	２		IP	４		IP	２	5	IP	３		IP	１		IP	６		IP	５		IP	２		IP	４		IP	３		IP
+平本　　真之	6.30	0.16	3.2	２	4	G2	２		G2	５		SG	２		G1	５		G1	６		G1	４		SG	２		SG	５	4	G1	２		IP
+中里　　昌志	2.70	0.15	3.8	５		IP	６		IP	５		IP	６		IP	６		IP	４		IP	２	2	IP	５		IP	４		IP	５		IP

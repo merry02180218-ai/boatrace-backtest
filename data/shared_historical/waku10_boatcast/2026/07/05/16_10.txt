@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　秀治	7.40	0.16	3.5	２		G2	５		G2	１		IP	３		IP	１		IP	１		IP	１		IP	５		IP	２		IP	３		IP
+金子　　　萌	6.90	0.10	2.7	４		G2	２		G2	１		IP	３		IP	２		IP	２		IP	５		IP	１		IP	６		IP	２		IP
+井上　　忠政	8.10	0.14	2.8	５		G2	４		G1	２		G1	２		G1	１	1	IP	１		IP	４		IP	１		IP	１		G1	２		G1
+松田　大志郎	7.40	0.12	2.1	１		G2	１		IP	２		IP	１		IP	１		G1	Ｆ		G1	５		IP	２		IP	３		G1	３		G1
+板橋　　侑我	4.78	0.15	3.1	５		G2	３		G2	２		IP	３		IP	５		IP	４		IP	３		IP	エ		G1	４		G1	６		G1
+木下　　翔太	4.50	0.17	4.1	５		G2	２		G2	４		G2	４		IP	２	5	IP	５		G1	６		G1	５		G1	５		G1	４		G1

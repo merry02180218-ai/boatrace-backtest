@@ -1,0 +1,8 @@
+data=
+1	0
+砂長　　知輝	9.00	0.15	2.3	１		IP	Ｆ		G3	１		G3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+久田　　　武	5.80	0.15	3.7	５		IP	４		IP	３		IP	４		IP	２		IP	５		IP	１		IP	３		IP	３		IP	１		IP
+久富　　政弘	6.20	0.12	2.7	５		IP	３		IP	１		IP	５	5	IP	３		IP	３		IP	１		IP	３		IP	２		IP	３		IP
+齋藤　　真之	2.40	0.17	3.8	５		IP	５		IP	６		IP	３		IP	６		IP	５		IP	５		IP	４		IP	５		IP	５		IP
+金子　　順一	3.90	0.15	3.5	３	4	IP	４		IP	５		IP	６		IP	４	2	IP	４		IP	３		IP	４	4	IP	５		IP	３		IP
+池田　　美優	1.80	0.25	4.6	５		IP	３		IP	５		IP	５		G3	６		G3	６		G3	６		G3	６		IP	６		IP	６		IP

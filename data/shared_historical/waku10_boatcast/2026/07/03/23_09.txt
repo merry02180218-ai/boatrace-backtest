@@ -1,0 +1,8 @@
+data=
+1	0
+大橋　　由珠	6.80	0.19	3.4	２		IP	２		IP	４		IP	２		IP	転		IP	４		G3	１		G3	１		IP	２		IP	２		G3
+小原　　聡将	7.80	0.16	3.8	１		IP	２		IP	４		G2	５		G2	２		IP	１		IP	１		IP	２		IP	２		IP	２		IP
+高山　　智至	4.80	0.14	2.7	３		IP	６		IP	４		IP	２		IP	２		IP	３		IP	４		IP	２		IP	５		IP	６		IP
+池田　　雄一	5.00	0.16	3.5	６		IP	６		IP	６		IP	３		IP	３		IP	２		IP	１		IP	１		IP	６		IP	３		IP
+得山　　大輝	2.10	0.14	3.4	６	6	IP	Ｆ		IP	６		IP	３		IP	６	6	IP	４	6	IP	５	6	IP	５	6	IP	５	6	IP	５	6	IP
+大須賀　　友	3.90	0.21	4.9	４		IP	２	5	IP	６		IP	４	5	IP	５		IP	５		IP	５		IP	４		IP	１	5	IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+馬場　　貴也	10.20	0.12	2.0	１		SG	１		SG	１		G1	５		G1	１		G1	１		G1	１		SG	１		SG	３		G1	１		G1
+仲谷　　颯仁	6.90	0.14	3.7	３	3	SG	４		IP	３	3	SG	５		G1	３		IP	１		IP	２		G1	２		G1	５		IP	２		IP
+白井　　英治	7.90	0.10	2.1	１	4	SG	２		G1	３		G1	５		SG	３		SG	４		G1	１		G1	１		G1	６		G1	２		G1
+吉田　　拡郎	7.30	0.13	2.3	１		SG	２		G1	５		G2	５		G2	３		G2	１		IP	２		IP	２		IP	１		IP	５		G1
+今井　　美亜	3.40	0.21	3.1	４		G3	３		G3	６		G3	５		G3	４		G3	３		G2	５		G2	６	4	G2	６		IP	４		IP
+飯山　　　泰	5.10	0.16	2.8	６		IP	１	4	IP	４		IP	６		IP	６		G2	３		G2	１		IP	２		IP	５		IP	３		IP

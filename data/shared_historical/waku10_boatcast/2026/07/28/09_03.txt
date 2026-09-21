@@ -1,0 +1,8 @@
+data=
+1	0
+大澤　　誠也	7.20	0.19	4.3	４		IP	１		IP	２		IP	１		IP	１		IP	４		IP	２		IP	１		IP	４		IP	４		IP
+武田　　光史	7.10	0.12	2.7	３		G3	３		G3	１		IP	２		G3	１		IP	６		IP	２		IP	２		IP	４		IP	２		IP
+金子　　　萌	7.70	0.13	2.3	２		IP	５		IP	４		IP	４		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP
+奥平　　拓也	3.50	0.19	3.7	２	5	IP	５		IP	４		IP	４		IP	３		IP	５		IP	４		IP	６		IP	５		IP	５		IP
+岩川　　仁士	5.10	0.15	3.6	２		IP	６		IP	４		IP	３		IP	２		G3	１		G3	５		IP	３		IP	５		IP	４		IP
+山田　　康二	3.78	0.13	2.9	５		G3	４		G2	６	5	SG	５		G1	４		SG	沈		G2	４		IP	５		G1	４		G1	５		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　英志	8.30	0.14	2.1	２		G2	２		IP	１		IP	２		IP	１		IP	２		IP	１		G3	４		IP	３		IP	１		IP
+山崎　　鉄平	4.90	0.20	4.2	５		IP	３		IP	３		IP	１		IP	６		IP	６		IP	３		IP	２		IP	２		IP	６		IP
+一色　　凌雅	4.80	0.18	3.8	６		IP	落		IP	２		IP	１		IP	２		IP	６		IP	２	5	IP	３	2	IP	５		IP	４		IP
+後藤　　翔之	4.90	0.17	2.8	５		IP	５		IP	２		IP	５		IP	２		IP	５		IP	４		IP	１		IP	６		G2	２	5	G2
+安東　　幸治	2.90	0.17	3.8	４		IP	３		IP	５		IP	６		IP	４		IP	５		IP	６		IP	３		IP	６		IP	５		IP
+福嶋　　智之	2.90	0.11	2.2	４		IP	６		IP	２		IP	５		IP	５		IP	６		IP	６		IP	５		IP	５		IP	３		IP

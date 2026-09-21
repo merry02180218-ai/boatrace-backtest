@@ -1,0 +1,8 @@
+data=
+1	0
+米玉利　大悟	5.20	0.18	3.6	４		IP	２		IP	３		IP	１		IP	１		IP	５		IP	６		IP	６		IP	２		IP	５		IP
+倉富　　大誠	5.70	0.20	3.1	１		IP	２		IP	６		IP	４		IP	４		IP	５		IP	１		IP	５		IP	２		IP	２		IP
+黒田　　誠司	3.60	0.16	2.9	５		IP	４		IP	４		IP	５		G3	３		IP	３		IP	４		IP	４		IP	５		IP	５		IP
+上田　　洋平	5.00	0.17	2.8	３		IP	５	5	IP	４		IP	１		IP	４		IP	２		IP	２		IP	６		IP	３	5	IP	６		IP
+尾嶋　　一広	4.00	0.14	2.8	４		IP	５		IP	２		IP	５		IP	４		G1	６		G1	５		IP	４		IP	３		IP	４		G1
+奥平　　拓也	3.10	0.16	4.2	６	5	IP	５		IP	５		IP	５		IP	２		IP	５		IP	５		IP	４		IP	４		IP	５		G3

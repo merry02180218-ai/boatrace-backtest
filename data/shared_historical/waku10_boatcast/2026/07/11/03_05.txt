@@ -1,0 +1,8 @@
+data=
+1	0
+佐口　　達也	6.50	0.16	2.9	２		IP	４		IP	１		IP	２		IP	２		IP	４		IP	１		IP	６		IP	４		IP	２		IP
+樋口　　喜彦	3.80	0.19	3.9	６		IP	４		IP	６		IP	３		IP	５		IP	３		IP	３		IP	５		IP	５		IP	２		IP
+妹尾　　忠幸	6.10	0.15	3.0	２		IP	４		IP	３		IP	１		IP	１	4	IP	４		IP	３		IP	５		IP	１		IP	６		IP
+松井　　貫太	4.70	0.20	4.6	３		IP	３		IP	５		IP	３		IP	３		IP	３		IP	２		IP	４		IP	５		IP	６		IP
+坪井　　康晴	7.20	0.15	3.7	３		IP	４	4	IP	３		G2	２		G2	１		IP	１		G2	１		IP	１		IP	５	4	IP	６		G1
+港　　　理樹	3.40	0.17	4.2	３		IP	４		IP	３		IP	４		IP	５		IP	５		IP	３		IP	５		IP	５		IP	落		IP

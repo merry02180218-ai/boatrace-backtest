@@ -1,0 +1,8 @@
+data=
+1	0
+桂林　　　寛	6.40	0.20	4.0	４		IP	２		IP	３		IP	５		IP	２		IP	４		IP	２		IP	３		IP	２		IP	１		IP
+福田　　宗平	5.80	0.16	3.7	５		IP	５		IP	４		IP	１		IP	２		IP	２		IP	３		IP	３		IP	５		IP	１		IP
+田路　　朋史	5.90	0.22	3.6	２		IP	３		IP	４		IP	６		IP	２		IP	１		IP	３		IP	３		IP	５		IP	２		IP
+船岡　洋一郎	6.50	0.14	3.6	６		IP	３		G3	２	6	G1	３		G2	５		IP	２		IP	１		IP	５	6	IP	１		IP	２		IP
+川辺　　郭人	2.40	0.15	3.1	６		IP	６		IP	６		IP	５	6	IP	６		IP	５	6	IP	５		IP	５		IP	５		IP	１		IP
+宮村　　勇哉	2.90	0.16	4.2	５		IP	３		IP	３		IP	５		IP	３		IP	５		IP	６		IP	６		IP	６		IP	５		IP

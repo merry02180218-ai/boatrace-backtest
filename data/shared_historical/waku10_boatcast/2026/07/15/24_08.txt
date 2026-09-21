@@ -1,0 +1,8 @@
+data=
+1	0
+横澤　　剛治	9.30	0.18	4.3	２		IP	１		IP	１		IP	３		G1	１		G1	１		G1	１		IP	２		IP	２		IP	１		IP
+山田　　亮太	8.10	0.16	3.8	２		IP	１		IP	１		IP	２		IP	２		IP	１		IP	２		IP	３		IP	２		IP	４		G2
+萩原　　知哉	7.50	0.14	2.3	６		IP	４		IP	２		IP	２		IP	２		IP	２		IP	２	5	IP	１		IP	１		IP	１		IP
+山本　　浩輔	4.10	0.17	3.9	４		IP	３		IP	５		IP	４		IP	６		IP	２		IP	５		IP	３		IP	３		IP	５		IP
+澁川　　　夏	4.90	0.14	3.6	１		IP	３		IP	４		IP	５		IP	２		IP	４		IP	５		IP	６	6	IP	２		IP	４		IP
+広次　　　修	4.60	0.20	4.5	２		IP	３		IP	４	5	IP	３		IP	４		IP	４		IP	５		IP	４	5	IP	３		IP	５		IP

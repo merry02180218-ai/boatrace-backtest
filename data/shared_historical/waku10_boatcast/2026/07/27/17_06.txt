@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　遼太	8.40	0.15	2.8	１		IP	２		IP	３		IP	１		IP	３		G3	１		G3	１		IP	２		IP	２		IP	２		IP
+東本　　勝利	5.00	0.15	3.7	６		IP	２		IP	５		IP	２		IP	２		IP	２		IP	６		G3	３		IP	５		IP	３		IP
+三浦　洋次朗	5.30	0.15	3.0	６		IP	６		IP	３		IP	２		IP	２		IP	２		IP	２		IP	６		G2	４		G2	３		IP
+黒柳　　浩孝	4.50	0.15	3.5	６		IP	６		IP	２		IP	５		IP	２	3	IP	５		IP	５		IP	２		G2	３		IP	３		IP
+山田　　陽翔	1.00	0.22	4.4	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP									IP
+橋本　　　明	4.00	0.19	4.6	５		IP	３		IP	６		IP	４		IP	６	5	G3	４	5	G3	３		IP	２		IP	５		IP	３		IP

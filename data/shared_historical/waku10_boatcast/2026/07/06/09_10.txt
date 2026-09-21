@@ -1,0 +1,8 @@
+data=
+1	0
+岡村　　将也	7.60	0.15	3.9	２		IP	１		IP	２		IP	１		IP	５		IP	Ｆ		IP	１		IP	２		IP	１		IP	１		IP
+片橋　　幸貴	4.70	0.15	3.1	５	3	IP	４		IP	４		IP	２		IP	転		IP	２		IP	４		IP	６		IP	２		IP	２	3	IP
+西村　　豪洋	4.50	0.17	2.9	１		IP	３		IP	３		IP	５		IP	４		IP	４		IP	５		G3	６		IP	４		IP	３	4	IP
+大原　　祥昌	4.10	0.13	2.5	３		IP	３		IP	６	6	IP	６		IP	２		IP	４	5	IP	２	5	IP	４		IP	５		IP	６		G3
+加藤　　啓太	3.20	0.19	3.2	６	6	IP	４		IP	４		IP	４		IP	２		IP	６		IP	３		IP	５		IP	６		IP	６		IP
+抹香　　雄三	3.40	0.15	3.4	６		IP	４		IP	１		IP	４	5	IP	５	5	IP	５		IP	３		IP	５		IP	５		IP	６	5	IP

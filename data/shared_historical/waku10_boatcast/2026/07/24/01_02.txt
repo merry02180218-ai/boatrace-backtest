@@ -1,0 +1,8 @@
+data=
+1	0
+坂井　　康嗣	5.80	0.18	4.4	１		IP	１		IP	４		IP	４		IP	４		IP	２		IP	６		IP	６		IP	２		IP	２		IP
+吉武　　真也	5.00	0.15	3.1	４		IP	５		IP	１		IP	３		IP	３		IP	５		IP	４		IP	２		IP	３		IP	５		IP
+山口　　広樹	4.20	0.22	3.7	４		IP	２		IP	６		IP	１	4	IP	２		IP	５		IP	５		IP	５		IP	４		IP	６		IP
+藤生　　雄人	5.00	0.18	3.3	３	5	IP	３		IP	３		IP	４		IP	６		IP	２		IP	４		IP	６		IP	２		IP	３	5	IP
+木下　虎之輔	2.10	0.12	2.9	６		IP	５		IP	６		IP	５	6	IP	６		IP	４		IP	６	6	IP	４		IP	６	6	IP	４	6	IP
+横田　　貴満	4.80	0.18	3.8	４		IP	１		IP	４		IP	４	4	IP	４		IP	４		IP	２	5	IP	４		IP	５		IP	５	5	IP

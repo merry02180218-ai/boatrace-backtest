@@ -1,0 +1,8 @@
+data=
+1	0
+石原　　凪紗	6.80	0.14	3.6	６		IP	４		IP	１		G3	２		IP	６		IP	１		IP	１		IP	４		G3	１		G3	１		IP
+香川　　素子	7.00	0.19	3.5	３		IP	１		IP	１		IP	４		IP	２		G3	３		IP	５		IP	２		G3	２		G3	２		G3
+大山　　千広	6.40	0.15	2.5	２		IP	４		IP	５		IP	１		IP	１		IP	４		IP	５		IP	２		IP	２		IP	２		IP
+小畑　　楓夏	0.00	0.20	1.0	転	5	IP																											IP
+石井　　裕美	2.60	0.19	4.0	６	6	IP	５		IP	６		G3	４		IP	４	6	IP	３		G3	６		IP	４		G3	５		G3	６		IP
+清水　　愛海	4.20	0.18	4.1	２		IP	３		IP	３	5	IP	５		IP	４		IP	６		SG	６		SG	５		SG	５		IP	４		IP

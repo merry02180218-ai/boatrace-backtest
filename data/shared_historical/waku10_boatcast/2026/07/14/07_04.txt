@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　俊彦	9.20	0.14	3.0	１		IP	１		IP	１		IP	１		IP	１		IP	１		G3	１		G3	５		G3	１		IP	１		IP
+服部　　幸男	6.40	0.16	3.3	２		IP	１		IP	６		IP	５		IP	５		SG	５		SG	１		IP	２		IP	３		IP	１		IP
+金子　　賢志	6.70	0.14	2.9	２		G2	４		G2	１		IP	１		IP	３		IP	２		IP	６		G1	２	5	IP	５		IP	３		IP
+谷津　　幸宏	6.70	0.10	1.6	２		G2	２	3	IP	２		IP	３		IP	３		IP	４		IP	５		IP	１		IP	２		IP	３		IP
+荒井　　輝年	6.00	0.17	2.8	３		IP	５		IP	２		IP	３		IP	２		IP	２		IP	１		IP	５		IP	４		IP	３		IP
+池田　　浩二	5.60	0.11	3.2	４		SG	３		G1	３		G1	４		SG	６		G1	２	4	IP	４		G1	６		G1	６		SG	２	5	SG

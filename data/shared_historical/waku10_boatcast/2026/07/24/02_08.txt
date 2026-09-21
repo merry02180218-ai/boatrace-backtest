@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　聖司	5.50	0.15	3.1	１		IP	５		IP	４		IP	５		IP	６		IP	３		IP	４		IP	１		IP	１		IP	３		IP
+佐藤　　太亮	5.70	0.17	3.5	１		IP	５		IP	２		IP	３		IP	４		IP	３		IP	６		IP	２		IP	４		IP	２		IP
+藤原　　孝斗	4.20	0.20	3.5	２		IP	４		IP	２		IP	４		IP	５		IP	２		IP	６		IP	６		IP	４		IP	５		IP
+倉尾　　大介	5.00	0.16	2.6	３		IP	５		IP	３		IP	２		IP	３		IP	５		IP	３		IP	４		IP	５		IP	２		IP
+黒田　　誠司	3.00	0.17	3.5	５		IP	５		IP	６		G3	２	6	G3	６		G3	５		IP	４		IP	４		IP	４		IP	５	4	IP
+河野　　　大	3.50	0.11	2.4	４		IP	３		G2	５		G2	５		G2	４		IP	６		IP	３		IP	４		IP	６		IP	５		IP

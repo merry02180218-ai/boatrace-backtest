@@ -1,0 +1,8 @@
+data=
+1	0
+新開　　　航	9.20	0.18	2.8	２		G2	１		SG	１		G1	２		G1	４		IP	２	2	IP	３		G1	１		IP	１		IP	１		IP
+金子　　和之	8.10	0.15	3.1	３		G2	２		IP	２		IP	２		IP	２		IP	２		IP	１		IP	２		IP	１		IP	３		IP
+門間　　雄大	5.80	0.12	2.4	３		G3	３	4	G3	３		IP	３		IP	５		IP	４		IP	２	4	IP	１		IP	３		IP	４		IP
+佐竹　　友樹	4.50	0.17	3.3	５		G2	２		IP	５		IP	１		IP	４		IP	６		IP	４		IP	６	5	IP	５		IP	１		IP
+高橋　　直哉	3.00	0.22	4.2	３		IP	５		IP	６		IP	５		IP	６		G3	４		IP	５		IP	２		IP	５		IP	５		IP
+西橋　　奈未	5.10	0.16	4.1	５		G2	３		G2	６		G2	５		G2	４	5	IP	４		SG	６		SG	３		G2	３		G3	１		G3

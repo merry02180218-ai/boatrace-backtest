@@ -1,0 +1,8 @@
+data=
+1	0
+三松　　直美	5.30	0.12	2.6	３		G3	６		IP	３		IP	１		G3	５		G3	６		G3	３		G3	６		G3	１		IP	１		IP
+長谷川　親王	3.60	0.19	4.4	５		IP	３		IP	３		G3	４		G3	５		IP	５		IP	５		IP	５		IP	２		IP	５		IP
+山本　景士郎	4.80	0.17	3.9	４		IP	４		IP	４		IP	５		IP	６	4	IP	６		IP	３		IP	２		IP	１		IP	２		IP
+深川　　和仁	3.80	0.13	2.4	４		IP	１		IP	５		IP	４		IP	４		IP	６		IP	６		IP	５		IP	４	3	IP	４	3	IP
+真子　奈津実	3.50	0.13	2.7	４		G3	４		G3	５		IP	２		IP	６		IP	３		IP	５		IP	５		IP	４		IP	５		IP
+松村　　　敏	5.10	0.10	2.2	２		IP	４		IP	２		IP	４		IP	３		IP	３	5	IP	４	5	IP	５		G1	３		IP	５		IP

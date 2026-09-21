@@ -1,0 +1,8 @@
+data=
+1	0
+本吉　　正樹	5.30	0.19	3.5	６		IP	２		IP	１		IP	６		IP	４		IP	３		IP	２		IP	６		IP	４		IP	１		IP
+一色　　凌雅	5.00	0.17	3.2	２		IP	５		IP	２		IP	４		IP	４		IP	欠		IP	３		IP	６		IP	４		IP	２		IP
+遠藤　　圭吾	4.60	0.17	3.0	４		IP	５		IP	２		IP	４		IP	３		IP	２		IP	２		IP	４		IP	６		IP	６		IP
+樋口　　喜彦	2.40	0.17	3.9	４	5	IP	６		IP	４		IP	６		IP	６		IP	６	5	IP	６		IP	２		IP	５		IP	６		IP
+原田　　篤志	5.50	0.17	3.5	４		IP	５		IP	２		G3	２		IP	６		IP	２		IP	２		IP	３		IP	５		IP	３		IP
+山下　　拓巳	2.40	0.19	4.3	６		IP	５	5	IP	５		IP	６		IP	６		IP	５		IP	６		IP	５		IP	１	5	IP	５		IP

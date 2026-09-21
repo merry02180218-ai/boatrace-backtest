@@ -1,0 +1,8 @@
+data=
+1	0
+牧原　　　崇	7.80	0.15	3.5	１		IP	１		IP	３		IP	３		IP	２		IP	２		IP	２		IP	３		IP	１		IP	３		IP
+三好　　勇人	7.70	0.14	2.6	２		IP	３		IP	２		IP	１		IP	２		IP	６	3	IP	１		IP	２	3	G3	２		G3	１		IP
+宇佐見　　淳	6.60	0.17	2.7	３		IP	２		IP	３	4	IP	５		IP	３		G3	２		G3	１		IP	２		IP	４	4	IP	２	4	IP
+松田　　憲幸	3.80	0.20	4.3	２		IP	３		IP	５		IP	４		IP	６		IP	５		IP	６	5	IP	５		IP	３		IP	３		IP
+中辻　　崇人	5.40	0.20	3.9	３	6	G1	５	6	G1	３		IP	１		IP	Ｆ	6	SG	３		G1	４		G1	５		G1	１		IP	５	4	G1
+金山　　立樹	3.50	0.20	4.3	２		G3	３		IP	落		IP	６		IP	４		IP	３	5	IP	６		IP	６		IP	３		IP	５		IP

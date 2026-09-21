@@ -1,0 +1,8 @@
+data=
+1	0
+坂東　　　満	7.30	0.16	2.9	２		IP	５		IP	３		IP	１		IP	１		IP	２		IP	６		IP	１		IP	２		IP	１		IP
+久富　　政弘	6.80	0.17	4.2	５		IP	４		IP	３		IP	２		IP	２		IP	３		IP	２		IP	１		IP	２		IP	２		IP
+麻生　　慎介	5.80	0.12	2.4	１		IP	５		IP	３		IP	２		IP	５		IP	３		IP	２		IP	３		IP	４		IP	３		IP
+高山　　智至	4.80	0.17	3.0	２		IP	２		IP	５		IP	５		IP	３		IP	５		IP	５		IP	２		IP	４		IP	３		IP
+河内　　一馬	4.20	0.15	2.8	５		IP	４		IP	３		IP	２		IP	５		IP	４	6	IP	４	6	IP	３		IP	５		IP	４		IP
+松下　　一也	4.70	0.11	2.6	１		IP	６		IP	６		IP	２		IP	５		IP	３		IP	５		IP	６		IP	１	5	IP	３		IP

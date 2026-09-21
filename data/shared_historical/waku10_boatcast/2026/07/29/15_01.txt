@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　龍斗	8.00	0.18	4.0	４		IP	２		IP	２		IP	１		IP	１		IP	３		IP	１		IP	２		IP	２		IP	２		IP
+谷口　　知優	6.80	0.16	3.0	５		G3	２		G3	３		IP	２		IP	２		G3	２		G3	３		IP	２		IP	４		IP	１		IP
+嶋田　　貴支	4.20	0.13	2.9	５		IP	３		IP	６		IP	６		IP	２		IP	３		IP	３		IP	２		IP	５		IP	５		IP
+都築　　正治	3.60	0.16	3.8	５		IP	５		IP	６	5	IP	１		IP	５		IP	６	5	IP	４		IP	４		IP	３		IP	５		IP
+作間　　　章	4.60	0.18	3.8	５		IP	５		IP	５		IP	１		IP	３		IP	４		G3	２		G3	５		IP	３		IP	４		IP
+今泉　　博人	1.70	0.24	4.1	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP	５		IP	４		IP	６		IP	６		IP

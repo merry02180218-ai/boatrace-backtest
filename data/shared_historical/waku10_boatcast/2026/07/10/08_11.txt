@@ -1,0 +1,8 @@
+data=
+1	0
+長田　　頼宗	10.00	0.14	3.8	１		IP	１		SG	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G2
+清水　　攻二	7.00	0.14	2.9	３		IP	１		IP	５		IP	５		IP	１		IP	１		IP	３		IP	２		IP	３		IP	１		IP
+小宮　　涼雅	6.60	0.13	2.8	１		IP	３		IP	１		IP	５		IP	３		IP	２		IP	４		IP	２		IP	３		IP	３		IP
+竹下　　大樹	6.30	0.18	3.9	４		IP	３		IP	６		IP	１		IP	５		IP	３		IP	２		IP	２		IP	３		G1	１		IP
+北川　　潤二	5.10	0.19	4.0	５	4	IP	５	3	IP	６	3	IP	３	2	IP	４	2	IP	５		IP	１	2	IP	４	4	IP	２	3	IP	２	2	IP
+川北　　浩貴	2.50	0.20	4.2	３		IP	５		IP	４	5	IP	６		IP	４		IP	５		IP	６	5	IP	５		IP	６		IP	５	5	IP

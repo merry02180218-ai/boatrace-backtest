@@ -1,0 +1,8 @@
+data=
+1	0
+冨田　　秀幸	5.60	0.13	3.0	５		IP	３		IP	Ｆ		IP	３		IP	４		IP	２		IP	４		IP	２		IP	２		IP	１		IP
+岩崎　　麗子	3.30	0.21	4.0	２		G3	４		IP	４		IP	４		IP	６		IP	５		G3	６		IP	６		IP	４		IP	４		IP
+齊藤　　　優	5.90	0.16	2.5	２		IP	４		IP	１		IP	５		IP	２		IP	６		IP	１		IP	３		IP	２		IP	５		IP
+吉川　　勇作	4.00	0.12	2.2	３		IP	１		IP	６		IP	５		IP	４		IP	４		IP	２		IP	５	6	IP	５		IP	６		IP
+市川　　健太	3.60	0.17	3.2	６		IP	１		IP	５		IP	３		IP	６		IP	３		IP	４		IP	４		IP	６		IP	６		IP
+日隈　　　茜	1.20	0.21	4.8	６		IP	６		G3	６		G3	６		G3	６		G3	６		G3	６		IP	５		IP	６		IP	５		IP

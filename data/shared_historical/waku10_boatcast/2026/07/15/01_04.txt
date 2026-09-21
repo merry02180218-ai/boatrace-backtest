@@ -1,0 +1,8 @@
+data=
+1	0
+横井　　健太	3.33	0.20	4.5	５		IP	転		IP	６		IP	４		IP	６		IP	５		IP	２		IP	４		IP	４		IP	４		IP
+籾山　　佳岳	5.20	0.15	2.8	Ｆ	3	IP	３		IP	３		IP	３		IP	２		IP	３		IP	５		IP	２		IP	３	5	IP	４		IP
+若林　　　麗	4.50	0.18	3.9	３		IP	４		IP	３		IP	１		IP	６		IP	４		IP	２		IP	６		IP	４		IP	６		IP
+渡邉　　英児	5.50	0.15	3.4	４		IP	３		IP	２		IP	１		IP	２		IP	５		IP	１	3	IP	落		IP	６		IP	３		IP
+堤　　　啓輔	5.30	0.15	3.4	３		IP	３		IP	４	3	IP	２		IP	２		IP	６	2	IP	３		IP	５		IP	３		IP	３	4	IP
+山崎　　　郡	5.30	0.15	3.8	２	5	IP	４		SG	５		SG	３		G1	４		G1	３		SG	５	5	SG	５		G1	６		G1	３		IP

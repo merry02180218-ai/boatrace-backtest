@@ -1,0 +1,8 @@
+data=
+1	0
+高山　　智至	7.60	0.11	3.2	３		IP	２		IP	１		IP	１		IP	２		IP	２		IP	４		IP	２		IP	１		IP	４		IP
+柴田　　直哉	7.10	0.18	3.6	６		IP	１		IP	１		IP	５	5	IP	２		IP	１		IP	２		IP	２		IP	２		IP	３		IP
+夏山　　亮平	6.30	0.11	2.0	１		IP	６	4	G3	３		IP	３		IP	２		IP	５		IP	２		G3	２		IP	２		IP	３		IP
+松村　　康太	4.80	0.18	3.8	５		IP	３		IP	３		IP	３		IP	２		IP	３		IP	３		IP	３		IP	６		IP	６		IP
+安藤　　裕貴	4.00	0.17	2.6	４		IP	５		IP	６		IP	４		IP	５		IP	５		IP	１	3	IP	３		IP	６		IP	２		IP
+浮田　　圭浩	2.60	0.24	5.2	６		IP	５		IP	４		IP	４		IP	３		IP	６		IP	４		IP	５		IP	６		IP	６	5	IP

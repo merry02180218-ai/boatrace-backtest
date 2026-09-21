@@ -1,0 +1,8 @@
+data=
+1	0
+桑島　　和宏	9.50	0.18	3.9	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		G2
+松尾　　宣邦	4.30	0.18	4.1	６	3	IP	２		IP	２		IP	３		G3	５		G3	５		IP	４		IP	３		G3	４		G3	５		IP
+深山　　祐二	4.70	0.15	3.6	３		IP	６		IP	４		IP	２		IP	３		IP	４		IP	５		IP	３		IP	３		IP	４		IP
+常盤　　海心	4.50	0.19	4.2	２		IP	４		IP	３		IP	４		IP	５		IP	４		IP	４		IP	３	5	IP	３		IP	６	5	IP
+田路　　朋史	4.60	0.12	2.7	４		IP	５		IP	５		IP	５		IP	１		IP	４		IP	４		IP	２		IP	４	4	IP	４		IP
+櫻井　　　隼	2.20	0.28	5.5	４		IP	６		IP	４		IP	４		IP	５		IP	５		IP	５		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+永田　　秀二	7.80	0.16	2.1	３		G3	６		G2	１		IP	１		IP	３		IP	１		IP	２		IP	１		IP	２		IP	２		IP
+浅見　　宗孝	4.40	0.21	4.4	６		IP	２		IP	２		IP	５		IP	４		IP	４		IP	５		IP	３		IP	２		IP	６		IP
+長野　　道臣	3.80	0.17	3.1	４		G3	６	4	IP	２		G3	３		IP	６		IP	５		IP	転		IP	２		IP	５		IP	３		IP
+石倉　　洋行	7.40	0.11	2.3	３		IP	４		IP	１		IP	３		IP	１		IP	３		IP	２		IP	２		IP	２		IP	３		IP
+宮地　　博士	3.20	0.23	4.3	３		G3	４	4	G3	４		IP	６		IP	３		IP	５		IP	４		IP	５		IP	５		IP	６		IP
+中嶋　誠一郎	3.80	0.19	3.3	５		G3	５		G3	３		IP	４		IP	３		IP	３	5	IP	２		G3	６		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+小坂　　宗司	9.20	0.13	2.9	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	２		IP	２		IP	１		IP
+川崎　　公靖	4.40	0.19	3.8	３		IP	３		IP	５		IP	４		IP	５		IP	４	3	IP	３		IP	２		IP	５		IP	４		IP
+早川　　尚人	4.11	0.15	3.2	４		IP	２		IP	５		IP	３		IP	５		IP	３		IP	転		IP	６	4	IP	３		IP	５		IP
+安藤　　裕貴	3.80	0.12	2.0	６		IP	６		IP	５		IP	６		IP	３		IP	５		IP	６		IP	２		IP	２		IP	２		IP
+秋山　　広一	4.40	0.17	4.1	４		IP	３		IP	２		G2	３		G2	３		IP	４		IP	６		G3	６		G3	４		IP	５		IP
+飯山　　　泰	5.00	0.15	3.4	４		IP	５		G2	６		IP	１	4	IP	４		IP	６		IP	６		G2	３		G2	１		IP	２		IP

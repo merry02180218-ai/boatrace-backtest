@@ -1,0 +1,8 @@
+data=
+1	0
+山下　　夏鈴	9.20	0.11	2.2	１		IP	１		IP	４		IP	２		IP	１		IP	１	2	IP	１		IP	１		IP	１		IP	１		IP
+若林　　義人	4.70	0.14	2.9	５		IP	２		IP	５		IP	３		IP	６		IP	１		IP	６		IP	５		IP	４		IP	２		G1
+前田　　　翔	6.50	0.17	3.2	２		G3	３		IP	２		IP	５		IP	４		IP	２		IP	２		IP	３		IP	２		IP	３		IP
+竹間　　隆晟	7.20	0.15	3.1	４		IP	２		IP	１		IP	２		IP	３		IP	２		IP	５		IP	２		IP	２		IP	２		IP
+吉川　　晴人	3.50	0.15	3.3	２		IP	５	6	IP	６		IP	２		IP	５		IP	６		IP	５		IP	４		IP	６	6	IP	３		IP
+倉田　　茂将	2.90	0.16	3.1	３	5	IP	６		G3	４		G3	５		IP	６		IP	４	5	IP	５		IP	４		IP	６	4	IP	４		IP

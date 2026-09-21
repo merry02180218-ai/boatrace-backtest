@@ -1,0 +1,8 @@
+data=
+1	0
+清水　　紀克	5.30	0.17	3.6	２		IP	３		IP	６	2	IP	１		IP	３		IP	６		IP	２		IP	４		IP	２		IP	６		IP
+高倉　　孝太	3.90	0.16	3.1	６	1	IP	６		IP	妨	5	IP	３		IP	４		IP	４		IP	１		IP	４		IP	２		IP	６		IP
+村田　　　敦	5.40	0.12	2.1	２		IP	５		IP	３		IP	３		IP	２		IP	６		IP	６		IP	１		IP	５		IP	１	2	IP
+東　　　健介	3.10	0.15	3.2	６		IP	５		IP	５		IP	４		G3	５		IP	５		IP	４		IP	５		IP	５	3	IP	１	2	IP
+峰重　　力也	4.60	0.10	1.8	４	6	IP	３		IP	４		IP	６		IP	１		IP	４		IP	５		IP	２		IP	６		IP	３		IP
+一ノ木　　匠	1.50	0.16	3.3	５		IP	４		IP	６		IP	６		IP	６		IP	妨		IP	６		IP	５		IP	６		IP	５		IP

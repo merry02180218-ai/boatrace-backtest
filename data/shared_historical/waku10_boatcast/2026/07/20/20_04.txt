@@ -1,0 +1,8 @@
+data=
+1	0
+長尾　　章平	8.20	0.17	3.9	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	３		IP	Ｆ		IP	２		IP
+中曽　　瑠華	3.90	0.19	4.3	３		IP	６		IP	１		IP	５		G3	６		G3	５		IP	４	3	IP	６		IP	２		IP	４		IP
+佐々木　康幸	5.33	0.13	1.9	２	4	IP	４		G3	５		G3	３		G3	４		IP	転		G3	３		IP	２		IP	３		IP	５		G1
+富永　夏哉人	4.10	0.21	3.5	２	5	IP	５		IP	５	5	IP	５		IP	２		IP	５		IP	５		IP	４		IP	１		IP	６	2	IP
+福西　広太郎	3.20	0.21	4.4	２		IP	５		IP	３		IP	５		IP	５		IP	５		IP	４		IP	５		IP	５		IP	５		IP
+新田　　雄史	5.30	0.14	4.4	６		G2	３		G2	６		SG	５		SG	３		G1	２	5	G1	４		SG	６		G1	３	5	IP	３		G1

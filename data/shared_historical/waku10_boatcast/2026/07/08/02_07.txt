@@ -1,0 +1,8 @@
+data=
+1	0
+市橋　　卓士	7.70	0.11	1.6	４		IP	１		IP	６		IP	１		IP	２		IP	４		IP	１		IP	１		IP	１		IP	１		IP
+新開　　　航	7.10	0.17	4.6	６		SG	３		SG	３		G1	３		G1	１		IP	３		G1	３		IP	１		IP	６		G1	１		G1
+濱野谷　憲吾	7.50	0.12	3.0	２		IP	３		IP	１		G2	６		G1	５		G1	１		SG	３		G1	２		IP	３		IP	１		G1
+大峯　　　豊	6.70	0.12	2.1	２		SG	３		G1	２		IP	２		G2	３		IP	３		G1	４		IP	４		G3	４		G1	３		G1
+中村　　日向	6.90	0.16	2.6	２		IP	６		G2	２		G2	３		IP	４		IP	３		G2	２		IP	１		IP	１		IP	４		G1
+新田　　雄史	5.40	0.13	4.2	６		SG	５		SG	３		G1	２	5	G1	４		SG	６		G1	３	5	IP	３		G1	３		G1	６		SG

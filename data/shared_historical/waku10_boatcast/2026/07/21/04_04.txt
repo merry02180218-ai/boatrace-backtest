@@ -1,0 +1,8 @@
+data=
+1	0
+高木　　圭大	8.30	0.13	2.0	１		IP	２		IP	６		IP	１		IP	２		IP	１		IP	２		IP	１		IP	２		IP	１		IP
+森作　　雄大	5.20	0.14	2.4	５		IP	５		IP	４		IP	１		IP	４		IP	６		IP	２		IP	１		IP	６		IP	１		IP
+幸野　　史明	4.20	0.15	2.0	４		IP	３		IP	３		IP	２		IP	６		IP	５		IP	３		IP	４	6	IP	６		IP	４		IP
+亀山　　雅幸	5.30	0.18	3.2	４		IP	１		IP	３		IP	６		IP	２		IP	２		IP	４		IP	２		IP	５		IP	５		IP
+谷川　　将太	4.70	0.16	2.4	３		IP	６		IP	３		IP	４		IP	１		IP	１		IP	３	6	IP	５		IP	６		IP	６		IP
+中澤　　和志	4.80	0.12	3.0	４		IP	４		IP	２		IP	２		IP	５	5	IP	５		IP	１		IP	５		IP	４		IP	４		IP

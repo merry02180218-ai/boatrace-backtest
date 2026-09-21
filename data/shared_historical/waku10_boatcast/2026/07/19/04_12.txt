@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　　翼	9.80	0.14	2.9	２		G2	１		G2	１		G2	１		SG	１		G1	１		G1	１		SG	１		G1	２		G1	Ｆ		IP
+佐々木　翔斗	5.40	0.15	3.1	２		IP	４	1	IP	５		IP	３		IP	４		IP	１		IP	５		IP	４		IP	１		IP	４		IP
+飯島　　昌弘	6.80	0.12	2.2	４		G3	２		G3	３		IP	２		IP	３		IP	２		IP	２		IP	２		IP	２		IP	４		IP
+若林　　樹蘭	4.70	0.14	2.8	５		IP	３		IP	５	5	IP	２	5	IP	６		IP	４		IP	１		IP	２		IP	５		IP	４	5	IP
+高木　　圭大	2.80	0.17	3.4	４		IP	５		IP	１		IP	６		IP	５		IP	５		IP	４		IP	６		IP	６		IP	６		IP
+梶原　　　正	2.70	0.22	4.5	５		IP	５		G3	６	5	G3	６		IP	４	5	IP	４		IP	３		IP	６		IP	４		IP	５		IP

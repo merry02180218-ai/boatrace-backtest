@@ -1,0 +1,8 @@
+data=
+1	0
+江本　　真治	8.00	0.17	3.9	２		IP	３		IP	１		IP	１		IP	２		IP	１		IP	２		G3	５		G3	１		IP	２		IP
+宮内　由紀英	4.30	0.18	3.9	２		IP	５		IP	３		IP	５		IP	３		IP	５		IP	５		IP	３		IP	２		IP	６		IP
+岡部　　　浩	4.22	0.15	2.8	欠		IP	３		IP	４		IP	５		IP	１		IP	４		IP	４		IP	５		IP	４		IP	５		IP
+山崎　　昂介	4.20	0.15	3.5	６		IP	４		IP	４		IP	６		IP	２		IP	５		IP	２		IP	１		IP	５		IP	５		IP
+森　　　照夫	2.70	0.18	3.3	５		G3	３	6	IP	３		IP	６		IP	転		IP	６		IP	４		IP	５		IP	６		G3	４		IP
+富永　夏哉人	3.90	0.17	4.4	６		IP	６		IP	４		IP	５		IP	５	5	IP	５		IP	１		IP	４		IP	１		IP	５		IP

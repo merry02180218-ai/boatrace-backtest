@@ -1,0 +1,8 @@
+data=
+1	0
+中北　　　涼	6.40	0.20	4.1	３		IP	３		IP	３		IP	２		IP	１		IP	３		IP	１		IP	３		G3	５		IP	４		IP
+藤原　　早菜	6.50	0.21	4.9	４		G3	４		IP	４		IP	３	3	IP	１		IP	４	3	IP	１		IP	３		IP	２		IP	２		IP
+加藤　　奈月	3.56	0.17	3.6	６		IP	３		IP	３		IP	４		IP	５		IP	転		G3	４		G3	４		IP	６	4	IP	４		G3
+森田　　梨湖	2.30	0.24	4.1	４		G3	６		IP	４		IP	５		IP	５		IP	５		IP	６		IP	５	5	G3	６		IP	４		IP
+香川　　素子	5.80	0.16	3.4	２		G3	２		G3	２		G3	４		IP	２		IP	Ｆ		IP	３		IP	６		IP	１		G3	４		IP
+川野　　芽唯	3.70	0.20	3.9	４		IP	４		IP	３		IP	５		IP	６		IP	５		IP	５		G3	３		IP	５		IP	３		G3

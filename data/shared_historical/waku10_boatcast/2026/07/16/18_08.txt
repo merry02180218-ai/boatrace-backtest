@@ -1,0 +1,8 @@
+data=
+1	0
+松下　　誉士	5.20	0.18	4.3	５		IP	２		IP	５		IP	２		IP	１		IP	４		IP	４		IP	３		IP	妨		IP	２		IP
+小畑　　実成	4.90	0.17	3.1	２		IP	３		IP	３		IP	５		IP	５		IP	６		IP	３		IP	２		IP	５		IP	２		IP
+伊藤　　啓三	6.40	0.12	2.3	３		IP	１		IP	３		IP	３		IP	３		IP	３		IP	３		IP	３		IP	２		IP	４		IP
+東本　　勝利	5.78	0.17	4.5	３		IP	落		IP	４		IP	３		IP	４		G3	４		G3	３		IP	４	5	IP	１		IP	３		IP
+藤原　　　駿	2.40	0.17	3.1	４		IP	５	6	IP	４		IP	６		IP	６	6	IP	５	6	IP	３		IP	５		IP	６		IP	６		IP
+作間　　　章	5.60	0.17	4.3	４		IP	４		IP	２		IP	３		IP	５		G3	３		IP	３		IP	２		IP	３		IP	４		IP

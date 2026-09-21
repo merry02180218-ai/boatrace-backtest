@@ -1,0 +1,8 @@
+data=
+1	0
+大塚　　浩二	5.20	0.18	3.4	４		IP	６		IP	１		IP	４		IP	４		IP	１		IP	６		IP	４		IP	１		IP	４	4	IP
+西岡　　成美	5.30	0.15	3.4	４		IP	５		G1	１		IP	５		IP	３		IP	５		IP	２		IP	３		IP	２		IP	４		G3
+倉富　　大誠	4.80	0.14	3.1	３		IP	５		IP	４		IP	４		IP	２		IP	１		IP	５		IP	３		IP	５	4	IP	４		IP
+森永　　　隆	7.00	0.14	2.9	１		IP	２		G3	１		G3	３		IP	４		IP	５		IP	４		IP	２		IP	１		IP	２		IP
+松本　　純平	7.30	0.14	2.2	５		IP	２		IP	３		IP	１		IP	２		IP	４		G1	２		G1	４		G1	１		IP	１		IP
+三宅　　　潤	3.00	0.21	5.0	３		IP	６		IP	５		IP	５		IP	４		IP	５		IP	６		IP	４		IP	４		IP	４		IP

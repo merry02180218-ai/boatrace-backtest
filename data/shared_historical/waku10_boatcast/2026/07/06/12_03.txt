@@ -1,0 +1,8 @@
+data=
+1	0
+中嶋　　世奈	4.33	0.21	3.5	５	2	IP	１		IP	２		IP	６		IP	４		IP	６		G3												IP
+村田　　　敦	3.80	0.14	2.6	６		IP	２		IP	３		IP	６		IP	３		IP	３		IP	６		IP	３		IP	６		IP	５		IP
+深井　　利寿	7.40	0.13	2.4	１	4	G3	３		IP	５		G2	３		IP	４		IP	３		IP	１		IP	２		IP	１		IP	１	4	IP
+市川　　哲也	4.70	0.14	3.4	３	6	IP	３		IP	４		IP	４		IP	５		IP	３		IP	３		IP	４		IP	４	3	IP	４		G2
+清水　　紀克	3.20	0.17	4.0	３	2	IP	５	2	IP	５	2	IP	４	3	IP	６	2	IP	６	3	IP	３	2	IP	２	2	IP	６	2	IP	６	2	IP
+小川　　晃司	3.30	0.18	4.5	６		IP	３		IP	４		IP	６	5	IP	４		IP	５		IP	６		IP	３		IP	５		IP	３		IP

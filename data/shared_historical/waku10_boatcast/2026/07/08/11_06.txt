@@ -1,0 +1,8 @@
+data=
+1	0
+中北　　　涼	5.90	0.18	3.6	３		IP	３		IP	２		IP	１		IP	３		IP	１		IP	３		G3	５		IP	４		IP	６		G3
+谷川　　里江	5.80	0.16	3.8	２		IP	５		IP	３		IP	３		IP	２		G3	５		G3	２		G3	２		G3	５		IP	２		G3
+山田　　理央	6.00	0.14	2.9	６		IP	３		IP	３		IP	２		IP	５		IP	１		IP	１		G2	３		IP	５		IP	２		IP
+赤井　星璃菜	5.00	0.14	1.8	５		IP	４		IP	３		IP	１		G3	５		G3	１		IP	４		IP	５		IP	４		IP	３		IP
+堀之内紀代子	5.20	0.14	2.8	１		IP	２		G3	４		G3	６		G3	２		G3	５		G2	５		IP	３		IP	５		IP	３		IP
+大石　　真央	3.20	0.19	3.7	５		IP	２	5	IP	４		IP	２		IP	４		IP	５		IP	６		IP	６		IP	６		IP	６		IP

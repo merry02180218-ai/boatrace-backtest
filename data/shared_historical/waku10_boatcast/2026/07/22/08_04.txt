@@ -1,0 +1,8 @@
+data=
+1	0
+汐崎　　正則	9.60	0.15	2.4	２		IP	２		IP	１		IP	１		IP	１		IP	１		G3	１		IP	１		IP	１		IP	１		IP
+田路　　朋史	5.10	0.18	3.3	２		IP	４		IP	２		IP	３		IP	６		IP	２		IP	１		IP	６		IP	４		IP	６		IP
+佐野　　優都	8.00	0.05	1.0	２		IP																											IP
+浜崎　　準也	3.90	0.18	2.9	４	5	IP	１		IP	４		IP	３		IP	６		IP	３		IP	４		IP	５		IP	６		IP	６		IP
+櫻井　　　隼	2.10	0.20	4.7	６		IP	５		IP	６		IP	６	6	IP	５	6	IP	６		IP	３		IP	６	6	IP	４		IP	５		IP
+守田　　俊介	4.80	0.14	3.1	５	3	G2	１	2	IP	３	5	SG	６		SG	５		G1	４		SG	５		SG	４		G1	６		G1	４	3	IP

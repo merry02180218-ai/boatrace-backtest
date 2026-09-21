@@ -1,0 +1,8 @@
+data=
+1	0
+前田　　将太	9.00	0.16	3.9	４		IP	１		SG	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		G1
+木下　　陽介	2.40	0.16	3.5	５		IP	５		IP	３		IP	５		IP	６		IP	６		IP	３		IP	６		IP	５		IP	６	3	IP
+佐藤　　右京	4.80	0.22	4.1	５		IP	４		IP	２		IP	４		IP	３		IP	３		IP	６		IP	６		IP	３		IP	１		IP
+榎　　　幸司	5.50	0.18	4.6	６		G2	６		IP	２		IP	１		IP	５		IP	３		IP	２		IP	１		IP	６		IP	３		IP
+石倉　　洋行	5.30	0.12	2.7	５	6	IP	３		IP	２		IP	３		IP	６		IP	２		IP	３	6	G1	４	4	G1	５		IP	２		IP
+鈴木　　柊介	2.10	0.14	3.8	５		IP	６		IP	５		IP	５		IP	５		IP	５		IP	３		IP	５		IP	６		IP	６		IP

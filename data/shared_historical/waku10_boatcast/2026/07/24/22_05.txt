@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　未都	8.00	0.15	3.0	１		IP	２		IP	１		IP	３		IP	４		IP	４		IP	２		IP	１		IP	１		IP	１		IP
+三馬　　崇史	5.70	0.14	2.2	６		G3	１		IP	２		IP	１		IP	３	3	IP	２		IP	５		IP	２		IP	６		IP	５		G2
+水谷　　理人	9.11	0.10	3.2	３		G3	１	4	IP	１		IP	１		IP	３		IP	転		IP	１		IP	１		IP	２	2	IP	１		IP
+田川　　大貴	2.70	0.19	4.3	６		G3	５	6	G3	妨	5	G3	４	5	IP	６		G2	６		G2	３		IP	５		IP	３		IP	６		IP
+原田　才一郎	4.90	0.15	4.0	６		G3	２		G3	３		IP	５		IP	３		IP	６		G1	４		G1	２		IP	３		IP	４		IP
+品川　二千翔	3.60	0.19	4.4	６		G3	３		IP	４		G2	５		G2	３		IP	３		IP	６		IP	５		IP	５		IP	５		IP

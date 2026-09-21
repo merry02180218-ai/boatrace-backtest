@@ -1,0 +1,8 @@
+data=
+1	0
+石塚　　裕介	6.40	0.17	2.8	１		IP	１		IP	３		IP	１		G3	４		IP	妨		IP	Ｆ		IP	３		IP	１		IP	２		IP
+井上　　大輔	2.90	0.20	4.0	６		IP	６		IP	６		IP	３		IP	６		IP	３		IP	２		IP	５		IP	６		IP	５		IP
+柳瀬　　幹太	5.30	0.16	2.6	４	4	IP	２		IP	２		IP	５		IP	５		IP	６	4	IP	１		IP	３		IP	２		G3	４		G3
+田川　　大貴	3.40	0.18	4.4	妨	5	G3	４	5	IP	６		G2	６		G2	３		IP	５		IP	３		IP	６		IP	２		IP	５	5	IP
+安田　　政彦	4.10	0.19	3.9	５		IP	４		IP	６		IP	３		IP	３		IP	２		IP	５		IP	３		IP	５		IP	４		IP
+花田　　和明	4.40	0.16	2.6	３	4	IP	６	4	G3	２	2	G3	４	4	IP	４	4	IP	５	4	IP	４		IP	２	4	IP	６	4	IP	３	2	IP

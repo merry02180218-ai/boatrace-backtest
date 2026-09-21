@@ -1,0 +1,8 @@
+data=
+1	0
+坪井　　康晴	8.10	0.12	2.6	１		IP	１		IP	３		G2	１		IP	２		IP	５		G2	４		G2	１		IP	２		IP	１		IP
+益田　　啓司	7.10	0.14	2.4	２		IP	４		IP	２		IP	３		IP	５		IP	１		IP	２		IP	１		IP	４		IP	１	3	G1
+土井　　歩夢	5.60	0.12	2.8	４	4	IP	２		IP	３		IP	３		IP	３		IP	３		IP	２		IP	２		IP	５		IP	５		IP
+酒井　　陽祐	5.30	0.12	2.9	２		IP	２		IP	３		IP	６		G3	５		G3	３		IP	３		IP	３	5	G3	３		IP	４		IP
+別府　　昌樹	4.80	0.17	2.9	３		IP	２		IP	４		IP	１		IP	３		IP	４	6	IP	４	6	IP	５		IP	５		IP	５	6	IP
+重成　　一人	4.60	0.14	3.5	４		IP	３		G2	５		IP	３	5	IP	４		IP	２		IP	５		IP	４		IP	６		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+柳橋　　宏紀	8.00	0.17	2.6	４		IP	２		IP	１		IP	３	3	G3	２		IP	２		IP	３		IP	１		IP	１		IP	１		G3
+菊地　　敬介	5.44	0.15	3.2	転	3	IP	１		IP	４		IP	５		IP	２		IP	２		IP	３		IP	６		IP	２		IP	５		IP
+金子　　貴志	5.60	0.20	4.2	２		IP	４		IP	２		IP	５		IP	２		IP	３		IP	４	4	IP	２		IP	２		IP	妨		IP
+藤田　　竜弘	5.00	0.15	2.5	５		IP	４		IP	４		IP	５		IP	４	5	IP	２		IP	５		IP	２		IP	１		IP	３		IP
+田中　　　堅	3.10	0.24	4.5	６		IP	６		IP	４		IP	６	6	IP	５		IP	４		IP	３		IP	５		IP	４		IP	３		IP
+鈴木　結平太	1.44	0.17	3.7	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	転		IP	５		IP	６		IP

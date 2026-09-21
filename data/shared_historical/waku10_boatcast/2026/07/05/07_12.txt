@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　夏海	9.30	0.19	3.8	３		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G2
+滝川　真由子	6.80	0.18	4.0	２		IP	１		G3	２		G3	１		IP	４		IP	５		IP	３		IP	２		IP	４		IP	２		IP
+松田　　真実	3.50	0.20	3.4	６		IP	６		IP	２	4	IP	４		IP	６		IP	２		G3	５		IP	２		IP	６		IP	６		IP
+野田　なづき	4.70	0.16	4.2	４		IP	３		IP	５		G2	５		IP	５		G3	３		IP	２		G3	３		IP	４		IP	３	5	IP
+西澤　日花里	2.30	0.16	3.0	４		IP	６		G3	６		IP	６		IP	６		G3	６		IP	２		IP	６		IP	６		G3	４		G3
+山川　　波乙	3.40	0.23	4.9	４		IP	２	5	IP	６		IP	４		IP	５		IP	４		IP	５		IP	５		IP	３		IP	６		IP

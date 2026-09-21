@@ -1,0 +1,8 @@
+data=
+1	0
+橋本　　年光	6.80	0.16	3.4	４		IP	２		IP	５		IP	３		IP	３		IP	１		IP	１		IP	３		IP	１		IP	３		IP
+吉田　　俊彦	7.90	0.17	3.3	３	3	G2	５		IP	３		IP	２		IP	１		IP	２		IP	２		IP	１		IP	１		G3	１		G3
+成貞　　琳平	3.70	0.19	3.0	６	4	IP	４		IP	４		IP	３		IP	６		IP	３		IP	５		IP	６		IP	３		IP	３		IP
+安藤　　瑠希	2.30	0.16	3.7	４	6	IP	６		IP	６		IP	６		IP	４		IP	６	6	IP	６		IP	５		IP	３		IP	５	6	IP
+福嶋　　智之	4.80	0.13	3.0	４		IP	３	6	IP	６		IP	６		IP	５		IP	３		IP	２		IP	４	6	IP	２		IP	２		IP
+福来　　　剛	5.00	0.15	2.6	３		G2	転		IP	２		IP	５		IP	６		IP	２		IP	２		IP	５		G1	５		G1	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+岡　　　祐臣	9.00	0.12	2.2	２		IP	３		IP	１		IP	２		IP	１		IP	１		IP	２		IP	２		G1	１		G1	１		IP
+牧村　　俊輝	4.00	0.14	3.3	４		IP	２		IP	６		IP	４		IP	２		IP	５		IP	５		IP	６		IP	３		IP	４		IP
+別府　　昌樹	4.20	0.18	2.6	５		IP	２		IP	４		IP	１		IP	６		IP	６		IP	５		IP	３		IP	Ｆ		IP	２		IP
+益田　　啓司	6.40	0.16	3.0	３	5	IP	１		IP	３		IP	２		IP	１		IP	５		IP	５		IP	２		IP	３		IP	３		IP
+田村　　　慶	4.90	0.18	4.3	２		IP	２		IP	３		IP	１		IP	６	6	IP	６		IP	４		IP	６		IP	４		IP	３		IP
+蜂須　　瑞生	3.30	0.26	4.3	４		IP	４		IP	４		IP	４		IP	３		IP	４		IP	５		IP	５		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+末永　　祐輝	8.20	0.12	2.4	２		IP	３		G3	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	２		IP	４		IP
+大久保信一郎	5.90	0.16	3.1	４		IP	４		IP	３		IP	２		IP	２		IP	２	3	IP	５		G3	２		IP	１		IP	６		IP
+岡本　　　大	5.80	0.13	2.6	１		IP	５		IP	１		IP	２		IP	沈		IP	３		IP	５		IP	２		IP	４		IP	２		IP
+大上　　卓人	7.10	0.13	3.2	４		SG	３	5	G1	４		G1	１		G1	５		G1	２		IP	２		IP	１	5	IP	２		IP	６		SG
+鈴木　　雄登	3.60	0.18	4.1	５		IP	５		IP	４		IP	６		IP	２		IP	５		IP	５		IP	６	6	IP	３	6	IP	２	6	IP
+柘植　　政浩	4.00	0.17	2.2	４		IP	５		IP	４	5	IP	３		IP	２		IP	２		IP	６		IP	５		IP	４		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+西丸　侑太朗	8.89	0.18	3.4	エ		IP	１		IP	１		IP	１		IP	１		IP	２		IP	４		IP	１		IP	２		IP	１		IP
+田中　　駿兵	7.80	0.14	2.5	３		IP	１		IP	３		G1	１	4	IP	２		IP	１		IP	２		IP	２		IP	１		IP	６		IP
+数原　　　魁	6.20	0.16	4.1	１		IP	４		IP	４		IP	２		IP	５		IP	１		IP	１		IP	４		IP	５		IP	２		IP
+米丸　　乃絵	4.60	0.17	3.9	４		G2	４		G2	６		SG	６		SG	５		IP	２		IP	２		G2	６		G3	３		G3	４		IP
+水谷　　理人	6.30	0.16	2.8	１		IP	１		IP	４		IP	２		IP	５		G3	３		G3	３		IP	３		IP	４		IP	３		IP
+垂水　　　悠	4.00	0.11	2.4	６		IP	４		IP	５		IP	６		IP	４		IP	５		IP	２		IP	３		IP	５		IP	１		G3

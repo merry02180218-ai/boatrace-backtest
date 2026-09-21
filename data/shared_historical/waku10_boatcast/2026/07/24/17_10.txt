@@ -1,0 +1,8 @@
+data=
+1	0
+中辻　　博訓	9.00	0.12	1.6	２		IP	２		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+北川　　敏弘	5.10	0.21	3.9	３		IP	５		IP	１		IP	２		IP	６		IP	４		IP	３		IP	４		IP	４		IP	３		IP
+黒柳　　浩孝	3.60	0.14	3.2	２		IP	６		IP	４		IP	６		IP	５		IP	４		IP	４		G2	５		G2	４		IP	４		IP
+東本　　勝利	5.89	0.17	3.9	２		IP	２	5	IP	３		IP	落		IP	４		IP	３		IP	４		G3	４		G3	３		IP	４	5	IP
+富永　　大一	5.10	0.19	3.9	３		IP	３		IP	６		IP	５	6	IP	２		IP	３		IP	５		IP	２		IP	３		IP	３		IP
+吉島　　祥之	2.60	0.21	5.3	４		IP	４		IP	６		IP	５		IP	６		IP	２	5	IP	５		IP	６		IP	６		IP	５		IP

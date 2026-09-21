@@ -1,0 +1,8 @@
+data=
+1	0
+藤原　　碧生	5.30	0.20	4.0	５		IP	５		IP	１		G3	１		G3	６		G1	Ｆ		SG	６		G1	１		IP	２		IP	３		G1
+井本　　昌也	7.40	0.14	2.4	２		IP	２		IP	２		IP	１		IP	２		IP	５		IP	１		IP	５		IP	１		IP	２		IP
+中　　　亮太	6.70	0.13	2.3	３		IP	４	4	IP	２		IP	４		G2	１		G2	２		G2	４		IP	１		IP	６		G2	２		G3
+内山　　七海	6.00	0.14	2.4	４		IP	６		IP	２		IP	１		IP	２		IP	３		IP	２		IP	６		IP	１		G3	４		G3
+篠原　　晟弥	6.40	0.12	2.9	３		G2	２		IP	２		IP	２		IP	２		IP	２		IP	３	4	IP	４	4	IP	５		G2	４		IP
+井上　　遥妃	3.10	0.13	3.3	５		IP	２		IP	６		IP	６		IP	６		G1	４		G1	６		G1	４		SG	６		G2	６		G2

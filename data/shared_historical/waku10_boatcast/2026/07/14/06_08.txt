@@ -1,0 +1,8 @@
+data=
+1	0
+内山　　七海	9.10	0.13	2.5	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		G3	１		G2	３		IP	３		IP
+木村　紗友希	4.00	0.17	3.1	４		IP	２		IP	２		IP	６		IP	４		IP	４		IP	６		IP	６		IP	６		G3	２		IP
+加藤　　　綾	7.20	0.14	2.6	２		IP	３		IP	２		IP	３		IP	２		IP	２		IP	４		IP	１		IP	３		IP	２		IP
+川野　　芽唯	6.90	0.17	3.8	５		IP	３		IP	３		IP	２		G3	２		IP	２		IP	３		IP	１		G3	３		G3	２		G2
+津田　　裕絵	3.40	0.17	3.7	５		IP	４		IP	４		IP	５		IP	５		IP	６		IP	６		IP	４		IP	３		IP	２		G3
+宇恵　　有香	3.00	0.17	3.5	３		IP	６		IP	３		IP	６		IP	５	5	IP	３		G3	４		IP	５		IP	６		IP	６		IP

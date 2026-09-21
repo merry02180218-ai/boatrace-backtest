@@ -1,0 +1,8 @@
+data=
+1	0
+飯田　　庄吾	4.60	0.18	3.6	１		IP	６		IP	１		IP	５	3	IP	Ｆ		IP	２	3	IP	２		IP	６		IP	５		IP	４		IP
+小川　竜太朗	5.80	0.18	3.4	２		IP	３		IP	２		IP	３		IP	２		IP	３		IP	５		IP	４		IP	３		IP	４		IP
+野間　　大樹	5.00	0.20	3.9	４		G3	４		G3	６		IP	４		IP	４		IP	２		IP	６		IP	３		IP	１		IP	２		IP
+吉岡　　　誠	3.67	0.17	3.2	２		IP	欠		IP	４		G3	６		IP	５		IP	５		IP	５	5	IP	１		IP	５		IP	５		IP
+谷島　　咲希	1.29	0.18	4.1	６	6	IP	５	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP									IP
+北川　　潤二	4.00	0.19	3.8	３	2	IP	３	2	IP	３	3	IP	５	2	IP	６	5	IP	４	4	IP	４	3	IP	４	4	IP	６	3	G3	３	2	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+坂本　　雄紀	7.78	0.17	3.8	１		IP	１		IP	３		IP	３		IP	２		IP	２		IP	３		IP	欠		IP	１		IP	３	2	IP
+杉江　　浩明	5.90	0.21	4.7	５		IP	３		IP	２		G3	６		G3	３		IP	２		IP	１		IP	２		IP	２		IP	５		IP
+喜多　那由夏	4.70	0.16	3.1	３		IP	５		IP	４		G3	６		G3	２		IP	３		IP	２		IP	３		G3	４		G3	５		IP
+金児　　隆太	4.20	0.16	3.6	４		IP	４		IP	４		IP	４		IP	２		IP	５	2	IP	２		IP	３		G3	６		G3	６		IP
+藤森　　拓海	5.30	0.17	3.7	５		IP	３	6	IP	４		IP	４		IP	１		IP	６		IP	４		IP	２		IP	２		IP	３		IP
+柴田　　友和	2.80	0.18	3.7	６		IP	６		IP	４		IP	５		IP	４		IP	４		IP	５		IP	５		IP	４		IP	４		IP

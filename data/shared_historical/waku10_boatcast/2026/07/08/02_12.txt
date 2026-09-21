@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　　翼	9.00	0.14	3.2	１		SG	１		G1	１		G1	１		SG	１		G1	２		G1	Ｆ		IP	５		IP	１		G1	１		G1
+石渡　　鉄兵	7.50	0.14	3.4	４		SG	２		IP	２		IP	２		IP	３		G1	１	3	G1	４		G1	２		IP	３		SG	５		SG
+中村　　日向	8.70	0.12	2.9	５		G2	１		IP	２		IP	１		G2	１		G2	２		IP	２		IP	１		IP	１		IP	３		G1
+河合　　佑樹	5.90	0.16	4.0	６		SG	３		G1	５		G1	２		IP	４		IP	５		IP	６	2	IP	１	3	IP	１		IP	２		IP
+米丸　　乃絵	5.20	0.18	3.8	４		SG	４		SG	６		IP	２		IP	５		G2	１		G3	３		G3	５		G3	４		IP	４		IP
+吉川　　元浩	6.50	0.15	3.7	３	4	IP	３		G2	４		G2	３		G2	５	5	G1	２		G3	１	4	G3	３		G1	１	5	IP	６		G1

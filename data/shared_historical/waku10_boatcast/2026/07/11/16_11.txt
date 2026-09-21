@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　　航	8.80	0.16	3.9	６		IP	１		IP	１		G2	３		IP	１		IP	１		G2	１		G2	２		IP	１		IP	１		IP
+伊久間　陽優	6.10	0.13	3.3	１		IP	２		IP	２		IP	５		IP	３		IP	６		IP	４		IP	２		IP	３		IP	２		IP
+竹田　　辰也	7.10	0.16	3.2	１	4	IP	２		IP	６		IP	２		IP	２		IP	３		IP	２		G3	３	2	IP	２		IP	２		IP
+川原　　　涼	5.60	0.18	3.2	６		IP	２		IP	３		IP	３		IP	２		IP	４		IP	３		IP	６		IP	２		IP	２		IP
+石川　　真二	5.90	0.17	3.6	１	2	IP	３	2	IP	３	2	G3	４	2	IP	１	1	G3	３	2	G3	５	2	G3	５	3	IP	５	2	IP	１	2	IP
+廣瀬　　篤哉	3.60	0.16	3.9	６		IP	６		IP	５		IP	５		IP	２	5	IP	４		IP	４		IP	３		IP	３		IP	６		IP

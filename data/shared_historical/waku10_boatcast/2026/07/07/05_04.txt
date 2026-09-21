@@ -1,0 +1,8 @@
+data=
+1	0
+中野　　夢斗	8.20	0.14	2.2	１		IP	１		IP	５		IP	１		IP	１		IP	２		IP	４		IP	１		IP	１		IP	２		IP
+一瀬　　　明	7.80	0.15	4.4	２		IP	２		IP	３		IP	２		IP	１		IP	２		IP	２		IP	２		IP	２		IP	３		IP
+秋田　健太郎	3.40	0.16	3.2	５		IP	３		IP	２		IP	６		IP	５		IP	５		IP	３		IP	５		IP	４		IP	６		IP
+鰐部　太空海	6.80	0.12	2.5	５		IP	２		G1	２		IP	５		SG	１		IP	１		IP	４		IP	６		IP	１		IP	１		IP
+木山　　誠一	3.90	0.12	3.0	２		IP	Ｆ		IP	５	6	IP	３		IP	４		IP	５		IP	６		IP	３		IP	４		IP	３		IP
+古場　　輝義	5.40	0.17	3.1	５	5	IP	４	2	IP	３	2	IP	３	1	G3	１	3	G3	２	4	IP	６	4	G3	６	4	IP	２	5	IP	２	4	IP

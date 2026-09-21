@@ -1,0 +1,8 @@
+data=
+1	0
+三川　　昂暁	7.40	0.15	2.0	１		IP	１		IP	５		IP	２		IP	４		IP	２		IP	１		IP	４		IP	１		IP	２		IP
+山下　　大輝	6.40	0.17	3.0	２		IP	４		IP	４		IP	３		IP	３		IP	１		IP	５		IP	３	4	IP	２	3	IP	１		IP
+桑原　　将光	4.20	0.15	3.8	６		IP	５		IP	３		IP	６		IP	２		G3	２		IP	６		IP	６		IP	３		IP	２		IP
+立間　　充宏	4.60	0.16	2.7	４	5	G2	２		IP	３		IP	３		IP	５		IP	３		IP	４		IP	５	6	IP	６		IP	３		IP
+滝沢　　芳行	5.22	0.10	2.4	欠		IP	４		IP	２		IP	２		G3	５		G3	１		IP	６	4	IP	２		IP	５		IP	４		IP
+和田　　操拓	2.20	0.12	4.0	６		IP	５		IP	５		IP	５		IP	３		IP	６		G2	６		IP	６		IP	４		IP	６		IP

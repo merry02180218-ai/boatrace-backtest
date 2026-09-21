@@ -1,0 +1,8 @@
+data=
+1	0
+森高　　一真	8.90	0.14	3.5	１		IP	５		SG	１		G1	４		SG	１		G1	１		G1	４		G1	２		G1	１		G1	１		G1
+富澤　　祐作	6.00	0.13	2.5	６		IP	２		IP	４		IP	１		IP	４		IP	３		IP	２		IP	１		IP	６		IP	２		IP
+中村　　有裕	5.44	0.15	3.2	４		IP	４		IP	４		IP	１		IP	４		IP	１		IP	６		IP	４		IP	エ		IP	２		IP
+深井　　利寿	5.20	0.14	2.8	３		G3	５		G3	３		G2	３		G2	４		IP	５		IP	３		IP	３		IP	４		IP	２		IP
+倉田　　茂将	2.70	0.15	3.7	６		G3	６		G3	４		IP	５		IP	５		IP	４	4	IP	４		IP	３		IP	６		IP	５		IP
+武田　　信一	3.30	0.16	3.9	４		IP	３		IP	２		IP	５		IP	５		IP	６		IP	４		IP	６		IP	６		IP	４		IP

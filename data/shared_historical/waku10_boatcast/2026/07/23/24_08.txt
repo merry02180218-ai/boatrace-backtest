@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　隆幸	8.00	0.22	3.8	２		IP	１		IP	２		IP	１		IP	４		G1	２		G1	欠		IP	１		IP	１		IP	１		IP
+飯田　　庄吾	5.30	0.19	3.5	３		IP	２		IP	４		IP	２		IP	６		IP	４		IP	５		IP	３		IP	２		IP	３		IP
+八戸　　琉楓	1.60	0.18	4.4	５	5	IP	６		IP	６		IP	６		IP	６		IP	エ	4	IP	５		IP	５		IP	５	6	IP	４		IP
+本吉　　正樹	3.20	0.17	3.7	３		IP	５		IP	４		IP	６		IP	６		IP	４		IP	４		IP	５		IP	４		IP	４	5	IP
+石倉　　拓美	1.50	0.19	3.5	５		IP	５		IP	５	6	IP	６		IP	６		IP	６		IP	６		IP	６		IP	５	6	IP	５		IP
+森　　　照夫	2.40	0.19	4.0	５		IP	６		IP	６		G3	５		IP	４		IP	４		IP	Ｆ		IP	６		IP	６		IP	２		IP

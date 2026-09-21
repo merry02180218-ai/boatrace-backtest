@@ -1,0 +1,8 @@
+data=
+1	0
+野田　なづき	7.40	0.18	3.7	２		IP	１		IP	２		IP	１		G2	２		G2	５		IP	Ｆ		G3	３		G3	１		IP	１		IP
+羽田　　妃希	3.80	0.24	5.5	４		IP	５		IP	３		IP	３		IP	６		IP	５		IP	６		IP	１		IP	３		IP	転		IP
+高田　ひかる	7.60	0.17	3.8	１		IP	４		G2	１		IP	３		IP	２		IP	１		IP	５		G1	２		IP	３		IP	１		IP
+横田　　海人	1.40	0.17	3.5	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP
+山下　　拓巳	2.70	0.19	4.1	１		IP	６	6	IP	６		IP	６	6	IP	５		IP	５		IP	４		IP	５		IP	５		IP	５		IP
+真田　　聖也	1.00	0.15	2.9	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	Ｆ		IP	６		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　　尊	9.80	0.11	1.3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+梶原　　　正	4.80	0.11	2.6	６		IP	６		IP	４		G3	２		G3	２		G3	４		G3	２		IP	５		IP	４		IP	２		IP
+関　　　浩哉	6.50	0.13	3.3	２		G2	４		SG	３		G1	５		G1	１		SG	６		SG	４		G1	３		G1	１		G1	６	4	G1
+村上　宗太郎	5.50	0.16	3.0	５		IP	６	6	IP	２		IP	３		IP	１		IP	５		IP	４		IP	２		IP	４		IP	１		IP
+岩田　　　凌	2.60	0.17	3.6	５		IP	４		IP	６		IP	６		IP	４		IP	３		IP	５		IP	５		IP	５		IP	５		IP
+坪口　　竜也	3.90	0.17	4.5	４		IP	５		G2	４		IP	５		IP	４		IP	５		IP	３		IP	３		IP	４		IP	４		G3

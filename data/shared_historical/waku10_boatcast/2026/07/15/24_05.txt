@@ -1,0 +1,8 @@
+data=
+1	0
+永井　　　源	8.22	0.18	3.9	１		IP	４		IP	１		IP	１		IP	３		IP	２		IP	Ｌ		IP	２		IP	２		IP	１		IP
+有山　　　望	3.70	0.15	3.1	５		IP	３		IP	３		IP	４		IP	５		IP	３		IP	４		IP	４		IP	５		IP	６		IP
+鈴木　　柊介	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+上野　　秀和	4.70	0.16	2.9	３		IP	４		IP	３	5	IP	５		IP	４		IP	３		IP	３		IP	６		IP	２		IP	４		IP
+深川　　真二	5.90	0.20	4.1	４	1	IP	５	2	IP	３	2	IP	２	2	IP	１	1	IP	５	2	IP	２	2	IP	１	1	IP	３	2	IP	５	2	G1
+鈴木　　茂高	2.40	0.26	5.7	４		IP	５		IP	５		IP	５		IP	５		IP	６		IP	５		IP	６		IP	３		IP	５		IP

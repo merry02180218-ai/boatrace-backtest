@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　秀茉	6.40	0.16	2.9	６		G3	２		IP	２		IP	１		IP	３		IP	３		IP	６		IP	３		IP	２		IP	１		IP
+竹之内　　極	4.90	0.14	3.4	６		G3	２		G3	１		IP	５		IP	３		IP	３		IP	５		IP	３		IP	３		IP	５		IP
+福田　　翔吾	7.00	0.11	2.3	２		G3	２	4	G3	２		IP	２		IP	３		IP	５	4	IP	１		IP	２		IP	３	5	IP	３		IP
+松本　　真広	3.20	0.23	5.4	４		G3	５		G3	６	6	G3	３		IP	３		IP	Ｆ		IP	５		IP	３		IP	４		IP	６		IP
+上原　　　崚	5.20	0.16	3.1	２		G3	３		IP	３		IP	４		G2	６	6	G3	３		IP	３		G2	６		G2	５		G2	２	6	IP
+上村　　純一	3.30	0.10	1.5	５		G3	５		G2	６		G2	３		IP	６		G2	２		IP	３		IP	６		G2	６		IP	６		IP

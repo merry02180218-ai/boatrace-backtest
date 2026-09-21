@@ -1,0 +1,8 @@
+data=
+1	0
+西原　　明生	7.90	0.16	3.0	１		IP	２		IP	２		IP	１		IP	２		IP	６		IP	１		IP	３		IP	２		IP	１		IP
+片岡　　大地	5.00	0.16	3.3	６		IP	２	4	IP	５		IP	４		IP	３		IP	６	4	IP	２		IP	３		IP	２	3	IP	３		IP
+谷口　　　丞	6.20	0.15	3.2	４		IP	１		IP	３		IP	２		IP	１		IP	５		IP	４		IP	３		IP	２		IP	４		IP
+樫葉　　新心	2.20	0.17	4.0	６	5	IP	５		IP	４		IP	５		IP	６	6	IP	６		IP	５		IP	５		IP	３		G3	６		IP
+木山　　和幸	3.00	0.17	4.5	６		IP	５		IP	４		G3	５		G3	５		IP	４		G3	５		G3	２		IP	４		IP	６		G3
+浜野　　孝志	4.40	0.16	3.5	１		IP	４		IP	５		G3	４		IP	５		G2	３		IP	４		IP	３		IP	４	5	IP	６		IP

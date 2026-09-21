@@ -1,0 +1,8 @@
+data=
+1	0
+松井　　洪弥	8.30	0.12	2.2	１		IP	６		IP	３		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP
+桐本　　康臣	5.80	0.15	2.4	２		IP	４		IP	３		IP	２		IP	３		IP	３		IP	３		IP	４		IP	５		IP	２		IP
+茅原　　悠紀	6.80	0.13	2.6	３		SG	２		IP	３	4	IP	４		IP	２		SG	４		SG	２		IP	３		G1	５		G1	３		SG
+岩津　　徹郎	5.80	0.16	2.8	１		IP	４		IP	３		IP	３		IP	２		IP	４		IP	エ	6	IP	１		IP	４		IP	３		IP
+中村　　魁生	5.00	0.14	2.7	４		IP	４		IP	４		IP	５		IP	５		IP	２	4	IP	３		IP	１		IP	４		IP	３	6	IP
+田中　　　堅	2.40	0.24	4.7	５		IP	４		IP	３		IP	６		IP	６		IP	４		IP	５		IP	５		IP	６		IP	６		IP

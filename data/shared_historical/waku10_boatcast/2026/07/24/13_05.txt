@@ -1,0 +1,8 @@
+data=
+1	0
+大田　　直弥	7.56	0.15	3.1	４		IP	４		IP	４		IP	１		IP	欠		IP	１		IP	２		IP	１		IP	２		IP	１		IP
+川原　　　涼	4.70	0.18	3.9	４		IP	５		IP	２		IP	２		IP	１		IP	３		IP	５		IP	５		IP	６		IP	４		IP
+立具　　敬司	3.80	0.17	3.2	４		IP	３	2	IP	２		IP	４		IP	４		IP	６		IP	６		IP	３		IP	５		IP	５		IP
+梶山　　涼斗	5.10	0.10	2.6	Ｆ		IP	２	5	IP	２		IP	３		IP	５		IP	５		IP	１	5	G3	２		IP	３		IP	６		IP
+石川　　真二	5.30	0.17	4.1	４	2	IP	１	2	IP	３	2	IP	３	2	G3	４	2	IP	１	1	G3	３	2	G3	５	2	G3	５	3	IP	５	2	IP
+長岡　　良也	3.00	0.17	3.8	３		IP	６		IP	５		IP	２	5	IP	６		IP	３		IP	５		IP	６		IP	６		IP	５		IP

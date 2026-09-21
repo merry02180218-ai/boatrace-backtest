@@ -1,0 +1,8 @@
+data=
+1	0
+安藤　　裕貴	5.33	0.18	3.4	２		IP	１		IP	６		IP	落		IP	５		IP	６		IP	１		IP	４		IP	１		IP	５		IP
+白水　　勝也	6.40	0.16	3.2	５		IP	３		IP	３		IP	２		IP	２		IP	３		IP	１		IP	１		IP	４		IP	４		IP
+松山　　裕基	3.70	0.16	4.4	５	2	IP	４		IP	６		IP	５		IP	２		IP	２		IP	４		IP	５		IP	Ｆ		IP	３		IP
+今泉　　友吾	7.40	0.17	4.3	２		G1	４		G1	３	5	IP	２		IP	２		IP	１		IP	２		IP	５		G1	３		G1	２		G1
+寺嶋　　　雄	4.70	0.18	3.3	１		IP	３		IP	５		IP	３		IP	２		IP	５	6	IP	４	4	IP	５	6	IP	６		IP	３		IP
+今村　天次朗	1.50	0.13	2.0	５		IP	６		IP	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP	６		IP	６		IP

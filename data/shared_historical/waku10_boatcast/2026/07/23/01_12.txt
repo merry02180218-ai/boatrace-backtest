@@ -1,0 +1,8 @@
+data=
+1	0
+重成　　一人	8.10	0.12	2.0	１		IP	１		IP	２		IP	２		IP	６		IP	１		IP	１		G2	１		G2	５		IP	１		IP
+上平　　真二	6.30	0.15	3.7	３		IP	落		IP	３		IP	２		G1	４		G1	２		IP	２		IP	１		IP	２		IP	５		G1
+西村　　拓也	6.30	0.13	3.1	３		IP	３	2	IP	２		IP	５		IP	２		IP	５	2	IP	１		IP	３		IP	３		IP	２		IP
+森野　　正弘	5.60	0.13	2.5	６		G3	５		G3	３		IP	２		IP	６		IP	１		IP	５		IP	１		IP	１		IP	３		G3
+市川　　哲也	3.20	0.14	3.4	５		G2	６	4	G2	３		IP	３		IP	５		IP	６		IP	５	1	IP	６		IP	５		IP	３		G2
+木村　　仁紀	4.56	0.13	3.1	２		IP	エ		IP	５		IP	３		IP	３		G2	６		IP	４	5	IP	４		IP	６		IP	３		IP

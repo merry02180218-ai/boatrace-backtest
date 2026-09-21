@@ -1,0 +1,8 @@
+data=
+1	0
+徳増　　秀樹	8.80	0.09	2.2	３		IP	１		IP	１		G3	１		G3	３		G3	１		G3	１		G1	１		IP	４		IP	１		IP
+竹之内　　極	4.60	0.15	3.4	５		IP	３		IP	３		IP	５		IP	３		IP	３		IP	５		IP	５		IP	３		IP	２		IP
+吉田　　　光	3.60	0.24	4.6	２		IP	５		IP	６		IP	３		IP	３		IP	５		IP	５		IP	５		IP	３		IP	６		IP
+真庭　　明志	5.70	0.13	2.4	５		IP	６		G3	３		G3	４		IP	２		IP	２	5	IP	２		IP	３		IP	３		IP	２		IP
+坂井　　滉哉	4.10	0.11	2.1	２		IP	５	6	IP	３		IP	２		IP	３		IP	６		IP	６	6	IP	４		IP	６		IP	４		IP
+尾崎　　雄二	3.20	0.11	2.5	４		IP	６		G3	６		IP	６		IP	３		IP	６		IP	１		IP	５		IP	５		IP	４		IP

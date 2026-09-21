@@ -1,0 +1,8 @@
+data=
+1	0
+浮田　　圭浩	5.50	0.15	3.4	３		IP	５		IP	５		IP	３		IP	２		IP	１		IP	１		IP	６		IP	Ｆ		IP	１		IP
+佐竹　　太一	7.00	0.19	3.5	３		IP	２		G3	４		G3	３		IP	３		G3	１		IP	４		IP	２		IP	１		IP	２		IP
+川崎　　公靖	3.40	0.15	2.9	１		IP	３		IP	５		IP	６		IP	６		IP	６	4	IP	６	2	IP	４		IP	３	4	IP	５		IP
+小坂　　風太	3.10	0.22	4.6	４	5	IP	６		IP	４		IP	３		IP	６		IP	４		IP	３		IP	５		IP	５		IP	６		IP
+河内　　一馬	5.20	0.12	2.5	２		IP	２		IP	５		IP	４		IP	３		IP	２		IP	５		IP	４	6	IP	４	6	IP	３		IP
+高村　　　諒	2.30	0.15	2.9	５		IP	６		IP	６		IP	３		IP	５		IP	５		IP	５		IP	６		IP	５		IP	４		IP

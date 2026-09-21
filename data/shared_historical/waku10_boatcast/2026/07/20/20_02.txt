@@ -1,0 +1,8 @@
+data=
+1	0
+加木　　　郁	8.40	0.20	3.5	３		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	４		IP
+山地　　正樹	6.00	0.18	3.7	６		IP	６		IP	１		IP	２		IP	３		IP	４		IP	１		IP	２		IP	４		IP	２		IP
+岡田　　憲行	4.70	0.19	3.5	５	1	IP	４		IP	２		IP	６	2	IP	５		IP	５		IP	４		IP	３		IP	２		IP	１	1	IP
+桑原　　　啓	3.60	0.17	3.6	５		G3	３		IP	２		IP	６		IP	４		IP	６		G3	６		IP	３		IP	３		IP	６		IP
+萩原　　秀人	6.40	0.13	2.6	２		G3	６		SG	２		IP	１		IP	２		IP	４		G1	５		G1	１		IP	４		IP	４		G1
+野田　　亜湖	1.50	0.28	5.3	６		IP	５	5	IP	４		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP

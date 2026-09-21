@@ -1,0 +1,8 @@
+data=
+1	0
+谷　　　勝幸	5.90	0.15	2.3	１		IP	５		G3	２		G3	２		IP	３		IP	２		G3	２		G3	３		IP	６		IP	５		IP
+佐藤　謙史朗	3.20	0.17	3.2	４		IP	１		IP	５		IP	６		IP	４		IP	５		IP	５		IP	４		IP	６		IP	５		IP
+永嶋　　裕一	5.10	0.17	2.8	１		IP	６		IP	６		IP	６		IP	２		IP	３		IP	４		IP	３		IP	２	2	IP	３		IP
+島崎　丈一朗	4.00	0.16	3.6	３		IP	３		IP	５		IP	６		IP	３	5	IP	３		IP	４		IP	３		IP	５		IP	６		IP
+三宅　　　潤	4.00	0.17	3.4	３		IP	５		IP	５		IP	４		IP	３		IP	５		IP	３		IP	５		IP	３		IP	４		IP
+西野　　翔太	5.10	0.12	2.1	４	2	IP	３	5	IP	１	3	IP	３	5	IP	５	2	IP	１	3	IP	３	2	G3	６	4	G3	５		IP	４	4	IP

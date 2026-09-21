@@ -1,0 +1,8 @@
+data=
+1	0
+木山　　誠一	6.90	0.16	2.3	６		G3	３		IP	２		IP	２		IP	３		IP	４		IP	２		IP	２		IP	１		IP	１		IP
+吉田　　一心	4.80	0.17	3.5	６		G3	６		IP	４		IP	３		IP	３		IP	３		IP	５		IP	３		IP	２		IP	２		IP
+三木　　晴斗	6.80	0.14	2.8	１		IP	３		IP	４		IP	３		IP	１		IP	３		IP	５	4	IP	３		IP	１		IP	２		IP
+羽野　　　諒	5.10	0.11	2.1	１		G3	４		IP	１		IP	５		IP	４		IP	４		IP	４		IP	６		IP	３		IP	３		IP
+鈴木　　裕隆	4.20	0.15	3.8	５		G3	４		IP	３		IP	３	4	IP	１		IP	６		IP	２		IP	５	4	IP	５		IP	６		IP
+山一　　鉄也	5.00	0.15	3.5	４		G3	６		G3	６		G3	４		G3	３		IP	１		IP	２		IP	２		IP	３		IP	５	5	IP

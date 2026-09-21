@@ -1,0 +1,8 @@
+data=
+1	0
+松尾　　宣邦	5.60	0.17	3.5	２		IP	２		IP	６		G3	３		IP	２		G3	１		IP	４		IP	転		IP	１		IP	６		IP
+岸本　　雄貴	5.60	0.15	3.2	３		IP	３		IP	１		IP	３		IP	２		IP	３		IP	６		IP	６		IP	１		IP	５		IP
+谷村　　一哉	6.70	0.17	3.4	４		IP	２	2	IP	４		G2	３		IP	２		IP	４		IP	２		IP	１		IP	３		IP	２		IP
+松下　　直也	6.00	0.13	2.9	３		IP	２		IP	５		IP	２		IP	２		IP	３		IP	４		IP	２		IP	３		IP	４		IP
+深川　　和仁	3.30	0.17	3.8	５		IP	２		IP	転		IP	４		IP	６		IP	４	4	IP	４		IP	５	4	IP	５		IP	３		IP
+森安　　弘雅	2.80	0.23	5.8	６		IP	５		IP	５	5	IP	６		IP	５		IP	２		IP	６	5	IP	６		IP	３		IP	４		IP

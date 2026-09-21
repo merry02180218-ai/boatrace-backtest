@@ -1,0 +1,8 @@
+data=
+1	0
+嶋田　　貴支	8.20	0.13	2.8	１		IP	１		IP	２		IP	３		IP	５		IP	１		IP	２		IP	１		IP	１		IP	２		IP
+鈴木　　章司	4.40	0.20	4.1	４		IP	３		IP	Ｆ		IP	２		IP	１		IP	４		IP	５		IP	５		IP	４		IP	４		IP
+北村　　征嗣	5.40	0.17	3.4	３		IP	４		IP	５		IP	３	2	G3	３		G3	１		IP	３		IP	２		G3	３		G3	妨		IP
+服部　　　剛	4.56	0.21	4.2	３		IP	転		IP	６		IP	３	5	IP	４		IP	５		IP	５		IP	１		IP	２		IP	５		IP
+廣部　　大明	2.90	0.14	2.3	落	6	IP	４		IP	３		IP	３		IP	６	6	IP	６	6	IP	４		IP	５		IP	６		IP	４		IP
+近藤　　来希	1.90	0.22	5.1	４		IP	５		IP	５		IP	５		IP	６		IP	５		IP	６		IP	５		IP	５		IP	６		IP

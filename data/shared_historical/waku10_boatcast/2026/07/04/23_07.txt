@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　庸平	6.10	0.22	4.3	５		IP	４		IP	２		IP	２		IP	２		IP	４		IP	１		IP	２		IP	６		IP	２		IP
+宗行　　治哉	7.50	0.19	3.8	３		IP	２		G2	１		IP	４		G2	３		G2	２		IP	１		IP	４		IP	１		IP	３		IP
+高井　　駿弥	5.90	0.13	1.8	６		IP	３		IP	４		IP	１		IP	３		IP	３		IP	３		IP	２		IP	３		IP	３		IP
+大橋　　由珠	3.80	0.19	2.8	４		IP	６		IP	６		IP	５		IP	４		IP	４		IP	２		IP	５		IP	４		IP	２		G3
+古賀　　千晶	3.30	0.18	2.9	５		IP	２		G3	６		G3	６		IP	５		IP	５		G3	４		G3	２		G3	４		G3	６		G3
+大須賀　　友	4.70	0.23	4.8	１	5	IP	４		IP	２	5	IP	６		IP	４	5	IP	５		IP	５		IP	５		IP	４		IP	１	5	IP

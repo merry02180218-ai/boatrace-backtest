@@ -1,0 +1,8 @@
+data=
+1	0
+北川　　敏弘	6.50	0.19	4.3	１		IP	１		IP	３		IP	３		IP	２		IP	３		IP	５		IP	６		IP	１		IP	３		IP
+真庭　　明志	5.20	0.17	3.3	２		IP	６		G3	３		G3	３		IP	４		IP	１		IP	３		IP	３		IP	６		IP	４		IP
+藤原　　孝斗	4.00	0.20	3.9	２		IP	４		IP	５		IP	２		IP	６		IP	６		IP	４		IP	５		IP	４		IP	３		IP
+広次　　　修	3.80	0.16	3.3	２		IP	５		IP	５		IP	４		IP	５		IP	５		IP	４		IP	３		IP	３		IP	５		IP
+萩原　　知哉	4.10	0.19	3.8	４		IP	４		IP	２	6	IP	５	4	IP	５		IP	２		IP	６		IP	３		IP	５		IP	５		IP
+甲斐　　貴大	2.80	0.13	2.8	２		IP	６		IP	６		IP	５		IP	６		IP	３		IP	６		IP	３		IP	６		IP	６		IP

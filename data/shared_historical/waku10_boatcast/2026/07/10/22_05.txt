@@ -1,0 +1,8 @@
+data=
+1	0
+長尾　京志郎	6.40	0.14	3.5	２		IP	２		IP	６		IP	３		IP	６		IP	２		IP	１		IP	５		IP	１		IP	１		IP
+松崎　祐太郎	6.44	0.14	2.8	３		IP	５		IP	３		G3	２		G3	２		IP	欠		IP	３		IP	１		IP	３		IP	３		IP
+笠　　　雅雄	4.80	0.19	3.7	３		IP	２		IP	２		IP	４		IP	５		IP	３		IP	５		IP	４		IP	３		IP	５		IP
+里岡　　右貴	7.20	0.11	1.6	Ｆ		IP	２		IP	１		IP	２		IP	４	3	IP	１		IP	３		IP	２		IP	２	3	IP	１		IP
+三川　　昂暁	5.60	0.17	3.4	５		IP	４		IP	１		IP	５		IP	５		IP	２		IP	３		IP	２		IP	３		IP	２		IP
+安武　　一也	1.30	0.17	3.8	６		IP	６		IP	６		IP	エ		IP	５		IP	６		IP	６		IP	６		IP	６		IP	４		IP

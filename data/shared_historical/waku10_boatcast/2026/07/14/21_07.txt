@@ -1,0 +1,8 @@
+data=
+1	0
+富永　　大一	7.30	0.18	3.3	３		IP	１		IP	１		IP	１		IP	１		IP	６		IP	１		IP	１		IP	５		IP	４		IP
+芹澤　　克彦	6.80	0.14	2.8	５		IP	２		IP	２		G3	２		G3	１		IP	１		IP	１		IP	３		IP	５		IP	４		IP
+藤田　　美代	3.90	0.21	4.4	４		IP	４		IP	３		IP	４		IP	６		IP	５		G3	５		G3	２		G3	４		G3	４		IP
+眞田　　英二	4.70	0.21	4.5	３	5	IP	６		IP	１		IP	６		IP	６		IP	３		IP	４		IP	３		IP	３		G3	３		G3
+橋本　　　明	4.10	0.16	3.4	３		IP	４		IP	４		IP	３		IP	３		IP	４	6	G3	４	6	G3	４		IP	６	6	IP	５		IP
+宮田　　　栞	1.20	0.20	3.8	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	６		IP

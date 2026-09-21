@@ -1,0 +1,8 @@
+data=
+1	0
+西川　　真人	7.10	0.16	3.1	２		IP	１		IP	３		IP	１		IP	１		IP	６		IP	１		IP	３		IP	３		IP	４		IP
+守屋　　大地	5.10	0.17	3.7	４		IP	２		IP	５		IP	１		IP	転		G3	５		IP	２	3	IP	２		IP	２		IP	６		IP
+金田　　大輔	5.10	0.17	3.3	６		IP	６	4	IP	１		IP	３	5	IP	２		IP	３		IP	３	4	IP	６		IP	４		IP	２		IP
+室田　　泰史	5.30	0.10	2.3	３		IP	３		IP	３		IP	５		IP	３		IP	６		IP	３		IP	２		IP	２		IP	４		IP
+乃村　　康友	4.80	0.17	3.6	５		IP	３		IP	２		IP	５		IP	１		IP	３		G3	５	6	G3	２		IP	５		IP	５		IP
+直江　　健成	0.90	0.27	5.7	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	Ｆ		IP	６		IP	６		IP	６		IP

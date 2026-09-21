@@ -1,0 +1,8 @@
+data=
+1	0
+益田　　啓司	9.10	0.11	2.2	１		IP	２	2	G2	１		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+角浜　　　修	3.60	0.17	3.7	６		IP	４		IP	６		IP	５		G3	５		G3	５		G3	３		IP	２		IP	３		IP	４		IP
+豊田　　泰洋	2.80	0.17	3.4	３	2	IP	６		IP	４		IP	５		IP	５	5	IP	５		IP	６	4	IP	４		IP	４		IP	５		IP
+土屋　　智則	6.00	0.15	3.3	１		IP	４		G3	４		SG	４		SG	６		G1	４		G1	２	5	G1	４		IP	２		IP	３		IP
+坪内　　　実	4.40	0.21	4.2	２		IP	５		IP	３		IP	５	4	IP	５		IP	４		IP	２		IP	５		IP	３		IP	４		IP
+荻野　　裕介	3.20	0.21	4.9	４		IP	３		IP	６		IP	５		G3	３		IP	４		IP	６		IP	６		IP	６		IP	３		G3

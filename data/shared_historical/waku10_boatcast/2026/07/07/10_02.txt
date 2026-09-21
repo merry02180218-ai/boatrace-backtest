@@ -1,0 +1,8 @@
+data=
+1	0
+村越　　　篤	8.20	0.15	2.7	１		IP	１		IP	１		IP	１		IP	１		IP	６		IP	１		IP	１		IP	１		IP	６		IP
+仲口　　博崇	6.20	0.19	3.9	３		IP	４		IP	４		G3	１	1	IP	３		IP	３		IP	４		IP	３		IP	３	3	G1	２		G1
+中嶋　誠一郎	6.60	0.16	3.0	２		IP	２		IP	２		IP	２		IP	５		IP	３		G3	２		IP	３		IP	２		IP	４		IP
+西田　　　靖	2.50	0.18	3.7	６	2	IP	５	2	IP	４	2	IP	５	2	IP	５	2	IP	６	3	IP	３	2	IP	５	2	G3	６	2	G3	４	2	IP
+佐々木　英樹	3.20	0.20	4.4	５		IP	５		IP	６		IP	６		G3	４		G3	６		IP	２	4	IP	６		IP	２		IP	４		IP
+濱崎　　　誠	4.00	0.23	4.2	４		IP	５		IP	４		IP	３		IP	４		IP	５		IP	５		IP	３		IP	２		IP	５		G3

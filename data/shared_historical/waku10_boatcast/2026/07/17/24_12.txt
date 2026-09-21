@@ -1,0 +1,8 @@
+data=
+1	0
+真庭　　明志	8.20	0.12	2.1	３		IP	１		IP	１		IP	２		IP	１		G3	４		IP	１		IP	１		IP	４		IP	１		IP
+岡村　　慶太	7.80	0.14	3.2	４		IP	５		IP	１		IP	１		IP	２		IP	２		IP	２		IP	２		IP	２		IP	１		IP
+永井　　　源	8.10	0.14	3.0	２		IP	４		IP	２		IP	２	2	IP	２	2	IP	１		IP	１		IP	４		IP	１		IP	１		IP
+渡辺　　真至	4.30	0.15	3.0	３		IP	３		IP	４		IP	５		IP	４		IP	６	5	IP	２		IP	Ｆ		IP	２		IP	４		IP
+山本　　浩輔	3.90	0.21	3.7	５		IP	２		IP	６	4	IP	４		IP	３		IP	４		IP	６		IP	６		IP	４		IP	２		IP
+大澤　　普司	4.80	0.14	2.9	５		IP	２		IP	４		IP	３	5	IP	５		G3	４		IP	４		G3	１		IP	５		IP	３		IP

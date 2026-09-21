@@ -1,0 +1,8 @@
+data=
+1	0
+是澤　　孝宏	8.00	0.13	2.4	２		IP	２		IP	２		IP	１		IP	１		IP	１		IP	５		G2	５		G2	１		IP	１		IP
+島田　　一生	5.60	0.13	2.3	５		IP	３		IP	２	3	IP	１		IP	３		IP	２	3	G3	２		IP	３		IP	６		IP	６		IP
+秋田　健太郎	3.90	0.16	3.5	３		IP	４	4	IP	５		IP	３		IP	２		IP	６		IP	５		IP	５		IP	３		IP	５		IP
+井口　　佳典	5.40	0.16	3.9	６		G2	６		SG	２		SG	３		G1	２		G1	２		G3	１		G3	転		G1	６		G1	６		G1
+森　　　悠稀	4.90	0.16	2.7	３		G2	４		IP	２		IP	４		G2	６		G2	３		IP	４		IP	４		IP	２		IP	６		IP
+内田　　　壮	2.60	0.16	3.7	１		IP	６		IP	３		IP	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP

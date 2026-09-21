@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　浩輔	7.50	0.11	2.1	１		IP	１		IP	２		IP	１		IP	６		IP	２		IP	２		IP	１		IP	５		IP	２		IP
+藤原　　孝斗	5.30	0.17	3.2	２		IP	５		IP	２		IP	２		IP	４		IP	５		IP	１		IP	４		IP	３		IP	６		IP
+上村　　宏太	3.22	0.20	3.4	６	5	IP	４		IP	４		IP	転		IP	２		IP	４		IP	６		IP	５		IP	４		IP	６		IP
+土屋　　太朗	5.80	0.17	3.9	４		IP	３		IP	２		IP	５		IP	２		IP	３		IP	１		IP	４		IP	３		IP	４		IP
+深井　　利寿	6.30	0.15	3.2	３	4	IP	５		G3	３		IP	３		G2	４		IP	２		IP	１		IP	２		IP	２		IP	４	4	IP
+吉島　　祥之	2.60	0.22	5.5	４		IP	６		IP	５		IP	６		IP	２	5	IP	５		IP	６		IP	６		IP	５		IP	４	5	IP

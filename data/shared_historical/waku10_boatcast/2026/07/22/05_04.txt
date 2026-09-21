@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　裕将	6.40	0.13	1.8	３		IP	４		IP	１		IP	４		IP	２		IP	１		IP	５		IP	４		IP	１		IP	３		IP
+東　　　健介	4.60	0.15	2.9	５		IP	６		IP	４		G3	４	3	IP	１		IP	１		IP	６	3	IP	３		IP	３		IP	５		IP
+高橋　　　勲	3.50	0.18	3.7	６		IP	４		G3	５		G3	５		G3	４		IP	５		G3	５		G3	４		IP	１		IP	４		IP
+高井　　雄基	3.90	0.19	4.0	３		IP	５		IP	６	5	IP	４		IP	３		IP	４		IP	５	6	G3	４		IP	４		IP	３		IP
+毒島　　　誠	8.60	0.14	2.8	１	4	IP	２	2	G2	３		IP	２	4	IP	１	1	IP	１		IP	１		IP	６		SG	１	2	IP	１	3	IP
+藤田　　竜弘	4.90	0.16	2.7	２	5	IP	４		IP	３		IP	３		IP	４	5	IP	４		IP	４		IP	６		IP	３		IP	３		IP

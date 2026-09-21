@@ -1,0 +1,8 @@
+data=
+1	0
+安藤　　裕貴	6.22	0.17	3.0	１		IP	１		IP	２		IP	１		IP	６		IP	落		IP	５		IP	６		IP	１		IP	４		IP
+赤坂　　俊輔	8.00	0.13	2.6	１		IP	１		IP	２		G3	３		G3	２		IP	２		IP	２		IP	３		IP	１		IP	４		IP
+真子　奈津実	3.20	0.14	2.7	６		G3	３		G3	６		G3	４		IP	６		G3	５		IP	５		IP	６		IP	３	4	IP	２		IP
+吉田　　宗弘	3.80	0.18	3.7	３		IP	６		IP	２		IP	３		IP	４		IP	５		IP	４		IP	４		IP	５		IP	６	3	IP
+松本　　　怜	3.22	0.15	3.5	５		G3	４		G3	４		IP	６		IP	６	6	IP	転		IP	３		IP	５		IP	２		IP	６		IP
+中村　　魁生	6.00	0.14	2.8	３	5	G3	３		G3	１		IP	４		IP	３	5	IP	３		IP	３		IP	５		IP	３		IP	２		IP

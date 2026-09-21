@@ -1,0 +1,8 @@
+data=
+1	0
+高濱　　芳久	5.10	0.20	3.4	５		IP	５		IP	１		IP	６	2	IP	２		IP	２		IP	２		IP	６		IP	１		IP	６		IP
+常住　　　蓮	6.80	0.13	2.4	５		G3	２		G2	３		G2	１		G1	５		SG	６		SG	３		IP	１		IP	２		IP	２		IP
+金子　　龍斗	5.70	0.15	3.3	１		IP	６		IP	５		IP	５		IP	４		IP	４		IP	２		IP	３		IP	１		IP	１		IP
+原　　　豊土	5.60	0.16	3.1	３		G3	１	5	G3	５		G3	５		G3	５		G3	３		G3	１		IP	３		IP	４	5	IP	２		IP
+川原　　祐明	6.10	0.12	2.4	２		IP	５		IP	３		IP	３		IP	３		IP	３		IP	２		IP	２		IP	１		IP	６		IP
+吉川　　颯汰	0.90	0.22	5.3	５		IP	６		IP	転		IP	転		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+西岡　　成美	8.10	0.11	2.2	Ｆ		IP	４		G1	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP
+向後　　龍一	8.20	0.10	2.6	１		IP	１		IP	２		IP	４		G2	３		G2	２		G2	１		G2	５		IP	１		IP	１	3	IP
+松本　　純平	7.20	0.14	3.0	２		IP	２		IP	３		G1	２		G1	２		IP	５		IP	２		IP	１		IP	５		G1	２		G1
+深見　亜由美	2.60	0.18	4.2	６		IP	５		IP	５		IP	４		G3	４		G3	５		IP	４		IP	４		IP	５		IP	６		IP
+村松　　遥輝	2.70	0.13	2.0	５		IP	５		IP	５		IP	２		IP	４	6	IP	６		IP	５		IP	４	6	IP	Ｆ		IP	５		IP
+汐崎　　正則	4.00	0.14	2.6	３		IP	６		IP	３		G3	４		IP	３		IP	５		IP	６		IP	３	5	IP	４		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　正男	8.00	0.15	2.7	１		IP	６		IP	１		IP	１		IP	２		IP	４		IP	２		G1	１		IP	１		IP	２		IP
+内山　　峻輔	3.40	0.18	4.0	５		IP	２		IP	５		IP	Ｆ		IP	６		IP	５		IP	３		IP	６		IP	２		IP	４		IP
+山本　　浩輔	5.00	0.17	3.0	５		IP	３		IP	２		IP	５	2	IP	４		IP	Ｆ		IP	１		IP	１		IP	３		IP	５		IP
+市橋　　卓士	4.00	0.10	3.0	５		IP	２		IP	４		IP	６		IP	１		IP	４		IP	３	5	IP	５		IP	５	5	IP	６		IP
+竹田　　広樹	4.40	0.19	3.6	１		IP	５		IP	３		IP	６		IP	１		IP	６		IP	５		IP	１	4	IP	６		IP	６		IP
+小林　　一樹	4.40	0.13	3.4	２	5	IP	５		IP	６		IP	６		IP	２	5	IP	５	5	IP	３		IP	５		IP	２	5	IP	３		IP

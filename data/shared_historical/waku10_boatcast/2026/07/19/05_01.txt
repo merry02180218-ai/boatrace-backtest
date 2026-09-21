@@ -1,0 +1,8 @@
+data=
+1	0
+西田　　　靖	7.10	0.17	2.8	１		G3	２		IP	１		IP	１		IP	６		IP	２		IP	３		IP	１		IP	４		IP	４		IP
+渡邊　　哲也	4.40	0.18	3.5	６		IP	６		IP	３		IP	５		IP	５		IP	４		IP	３		IP	２		IP	１		IP	４		IP
+荒川　　健太	6.40	0.17	3.7	１		IP	３		IP	５		IP	２		IP	４		IP	２		G3	５		G3	３		IP	１		IP	２		IP
+東　　　健介	3.60	0.15	3.3	５		IP	５		IP	４		G3	５		IP	５		IP	４		IP	５		IP	５	3	IP	１	2	IP	３		IP
+石岡　　将太	3.90	0.16	3.2	２	4	IP	４		IP	５		IP	４		IP	５		IP	６		IP	３		IP	５		IP	４		IP	３		IP
+大谷　　直弘	4.50	0.21	4.0	５		IP	４		IP	６		IP	２		IP	５		IP	３	5	IP	３	5	IP	２		IP	４		IP	４		IP

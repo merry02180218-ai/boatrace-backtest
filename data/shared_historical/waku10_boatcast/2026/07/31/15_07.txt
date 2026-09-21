@@ -1,0 +1,8 @@
+data=
+1	0
+川原　　祐明	9.30	0.19	3.8	１		IP	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+高濱　　芳久	4.60	0.17	3.9	３		IP	３		IP	６		IP	５		IP	２		IP	４		IP	６		IP	３		IP	３		IP	３		IP
+下寺　　秀和	8.00	0.12	2.2	１		IP	１		IP	２		IP	２		IP	２		IP	２		IP	３		IP	２		IP	３		IP	３		IP
+牧　　　宏次	5.80	0.17	3.4	５		IP	４		IP	４		IP	２		IP	３		IP	２		IP	２		IP	２		IP	４		IP	３		IP
+都築　　正治	7.60	0.16	2.5	２		IP	３	6	IP	１		IP	１	3	IP	２		IP	２		IP	１		IP	１	4	IP	４		IP	５		IP
+今泉　　博人	1.70	0.23	4.0	６		IP	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP	５		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+後藤　　美翼	6.50	0.18	4.1	４		IP	４		IP	１		G3	２		G3	１		IP	６		G3	４		G3	２		IP	２		IP	２		IP
+池田　　雄一	6.40	0.16	3.5	５		IP	１		IP	１		IP	２		IP	５	3	IP	４		IP	１		IP	５		IP	２		IP	２		IP
+杉山　　太陽	5.60	0.16	3.2	１		IP	６		IP	６		IP	２		IP	３		IP	４		IP	３		IP	３		IP	２		IP	３		IP
+小池　　哲也	3.70	0.18	3.2	５		IP	４		G2	５		IP	６		IP	４		IP	６		IP	６		IP	４		IP	３		IP	１	3	IP
+柴田　　友和	3.80	0.17	3.7	１		IP	３		IP	５		IP	５		IP	６	6	IP	５	6	IP	６		IP	２		IP	５		IP	４		IP
+廣瀬　　真也	4.10	0.19	3.9	６		IP	４		IP	３		IP	５		IP	２		IP	５		IP	３		IP	６		IP	６		IP	２		IP

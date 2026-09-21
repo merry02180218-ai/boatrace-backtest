@@ -1,0 +1,8 @@
+data=
+1	0
+菅沼　　佳昭	5.40	0.20	4.3	１		IP	１		IP	３		IP	５		IP	２		IP	６		IP	５		IP	４		IP	６		IP	１		IP
+西川　新太郎	5.90	0.13	3.1	３		IP	４		IP	５		IP	１		IP	１		IP	４		IP	２		IP	３	1	IP	２		IP	６		IP
+向井田　直弥	6.00	0.14	1.8	１		IP	５		IP	３		IP	５		IP	２	4	IP	４		IP	２		IP	５		IP	１		IP	２		IP
+泉　　　具巳	4.00	0.20	3.0	５	5	IP	１		IP	３		IP	４		IP	４		IP	６		IP	５		IP	６		IP	３		IP	４	5	IP
+片岡　　雅裕	4.80	0.13	3.2	４		IP	４		SG	４		SG	５		G1	２		IP	５		G2	５		G2	３		IP	４		IP	５		G1
+仲谷　　颯仁	5.90	0.18	3.9	３	5	G2	３		SG	６		SG	５		IP	４		SG	４		G1	５		G1	１	5	IP	１	5	IP	４		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+三苫　　晃幸	7.90	0.14	3.3	１		IP	２		IP	３		IP	１		IP	１		IP	２		IP	６		IP	２		IP	２		IP	１		IP
+齋藤　　和政	3.80	0.24	4.2	５		IP	２	3	G3	５		IP	５		IP	３	6	IP	６		IP	６		IP	３		IP	２	3	IP	５		IP
+黒田　　誠司	4.20	0.15	2.9	４		IP	４		IP	５		G3	３		IP	３		IP	４		IP	４		IP	５		IP	５		IP	２		IP
+木下　　陽介	4.10	0.12	2.7	１	5	IP	５		IP	４		IP	４		IP	６	6	IP	６		IP	２		IP	６		IP	３		IP	４		IP
+土性　　雅也	3.00	0.19	4.4	６		IP	６	6	IP	３		IP	４		IP	５		IP	不		IP	４		IP	５		IP	４	4	IP	３		IP
+上田　　洋平	2.80	0.17	3.7	５		IP	４		IP	３		IP	５	5	IP	６		IP	５	5	IP	５		IP	５		IP	３		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+大山　　千広	7.78	0.13	2.1	１		IP	Ｌ		IP	２		IP	Ｆ		IP	２		IP	１		IP	１		IP	４		IP	１		IP	１		IP
+孫崎　　百世	4.60	0.21	4.6	２		IP	欠		IP	１		IP	２		IP	２		IP	４		IP	５		IP	５		IP	４		IP	妨		IP
+松尾　　夏海	5.70	0.14	3.1	５		IP	６		IP	５		IP	４		IP	２		G2	４		G2	２		IP	２		IP	１		IP	３		IP
+井上　　慧人	2.90	0.15	3.4	５		IP	５		IP	４		IP	３	5	IP	５		IP	６		IP	６		IP	６		IP	３		IP	４		IP
+屋良　　龍紀	4.20	0.14	2.6	３		IP	５		IP	２		IP	６		IP	２		IP	５		IP	３		IP	３		IP	６		IP	５		IP
+塚越　　陸斗	1.20	0.25	4.3	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP	Ｆ		IP	６		IP	６		IP	６		IP

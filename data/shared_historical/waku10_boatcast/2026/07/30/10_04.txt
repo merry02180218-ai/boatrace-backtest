@@ -1,0 +1,8 @@
+data=
+1	0
+荒井　　翔伍	8.60	0.12	2.4	４		G3	２		G3	１		IP	２		IP	１		IP	１		IP	１		IP	２		IP	２		IP	１		IP
+西尾　　亮輔	4.10	0.13	3.7	３		IP	３		IP	２		IP	５		IP	妨		IP	６		IP	５		IP	４		IP	１		IP	５		IP
+村松　　栄太	4.10	0.14	3.0	４		IP	４		IP	３		IP	５	6	IP	６		IP	４		IP	５		IP	５		IP	３		IP	１		IP
+門間　　雄大	4.90	0.13	2.0	４		IP	３		G3	４		G3	３		G2	６		G3	６		IP	３		IP	５		IP	２		IP	１		IP
+加木　　　郁	4.80	0.17	4.3	３		IP	３		IP	６		IP	３		IP	５		IP	２		IP	３	4	IP	２		IP	６		IP	４		IP
+高田　ひかる	3.70	0.17	3.8	６		G3	６		G3	５		IP	４		IP	４		G2	５	5	IP	３		IP	４		IP	４		IP	３		IP

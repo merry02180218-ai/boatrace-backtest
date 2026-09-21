@@ -1,0 +1,8 @@
+data=
+1	0
+須藤　　隆雄	6.10	0.14	2.1	１		IP	１		IP	４		IP	Ｆ		IP	２		IP	２		IP	２		IP	２		IP	４		IP	６		IP
+村田　　浩司	5.20	0.13	2.8	６		IP	４	1	IP	３		IP	３		IP	６		IP	３		IP	３		IP	２		IP	２		IP	３		IP
+西岡　　蒼志	3.80	0.17	3.6	１		IP	４		IP	４		IP	６		IP	２		IP	５		IP	４		IP	５	2	IP	６		IP	５	2	IP
+鈴木　　裕隆	5.20	0.15	3.1	５		IP	５		IP	３		IP	２		IP	２		IP	３		IP	１	2	IP	４		IP	５	6	IP	４		IP
+河村　　　了	5.20	0.17	3.6	４		IP	４		G3	２		IP	４		IP	４		IP	３	6	IP	３		IP	３		IP	４		IP	３		IP
+原田　　朱理	1.10	0.24	4.9	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP

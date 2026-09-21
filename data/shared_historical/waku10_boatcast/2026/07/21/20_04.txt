@@ -1,0 +1,8 @@
+data=
+1	0
+板橋　　侑我	10.30	0.10	2.6	１		IP	１		G2	１		G2	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+富永　夏哉人	4.20	0.16	2.8	２		IP	６		IP	６		IP	６		IP	２		IP	３		IP	４		IP	６		IP	４		IP	２		IP
+杉山　　正樹	6.90	0.12	3.8	５		IP	２		IP	３		IP	１		IP	３		IP	５	4	G1	２		G1	３		IP	１		IP	２		IP
+安武　　一也	2.20	0.18	3.5	３		IP	６		IP	６	5	IP	６		IP	６		IP	６		IP	４		IP	５	6	IP	４	6	IP	６		IP
+知念　　伶奈	1.33	0.49	5.7	５	6	IP	６	6	IP	６	6	IP																					IP
+向所　　浩二	3.20	0.17	3.5	６		IP	５	5	IP	４		IP	５		IP	４		IP	４		IP	６		IP	５		IP	２		IP	４		IP

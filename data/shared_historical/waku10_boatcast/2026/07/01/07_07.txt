@@ -1,0 +1,8 @@
+data=
+1	0
+登玉　　隼百	9.00	0.14	2.5	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	４		IP
+河内　　一馬	2.80	0.13	3.2	６		IP	５		IP	６		IP	６		IP	４		IP	６		IP	４		IP	４		IP	５		IP	２		IP
+岩田　　　凌	4.22	0.20	4.3	４		IP	４		IP	４		IP	５	4	IP	エ		IP	４		IP	５		IP	１		IP	４		IP	４	4	IP
+豊田　　　結	5.60	0.17	2.9	４		IP	４		IP	６		IP	２		IP	２		IP	１		G3	３		IP	６		G3	３		G3	２		G3
+恵良　　琴美	1.90	0.20	3.8	５		IP	５	4	IP	５	6	IP	６		IP	６		IP	６		IP	３		IP	６	4	IP	６		IP	５		IP
+西澤　日花里	2.30	0.20	4.1	６		G3	３		G3	６		G3	６		G3	６		G3	６		IP	６		IP	３		IP	６		G3	４		IP

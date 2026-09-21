@@ -1,0 +1,8 @@
+data=
+1	0
+高田　　　綾	5.70	0.18	2.9	４		IP	４		IP	４		IP	５		IP	１		IP	２		IP	１		IP	１		IP	６		IP	４		G3
+根岸　　真優	3.70	0.16	3.1	６		IP	３		IP	６		IP	６	3	IP	３		IP	６		IP	４		IP	６		IP	１		IP	３		IP
+清水　　愛海	5.80	0.18	3.8	１		IP	１		IP	４	4	SG	６		IP	６		IP	３		G2	５		IP	２		IP	５		IP	１		G1
+南　　　彩寧	3.50	0.22	3.9	５		IP	５		IP	６		G3	５		G3	１		G3	３		IP	５		IP	５		IP	４		IP	４		IP
+土屋　　　南	5.50	0.16	3.0	４		IP	５		IP	３		IP	３	4	IP	２		IP	３		IP	３		IP	３		IP	２		IP	５		IP
+森下　　愛梨	3.40	0.20	3.7	３		IP	６		IP	６		IP	６		IP	２		IP	４		IP	３		IP	４		IP	６		IP	５		IP

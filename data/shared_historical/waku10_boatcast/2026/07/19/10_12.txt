@@ -1,0 +1,8 @@
+data=
+1	0
+井口　　佳典	9.00	0.19	4.4	１		G2	２		G2	１		SG	１		G1	４		G1	２		G3	１		G3	１		G3	２		G1	４		G1
+片岡　　雅裕	6.50	0.14	3.4	５		SG	５		SG	４		G1	１		IP	１		G2	２		G2	５		IP	６		IP	１		IP	２		G1
+小林　　孝弘	3.70	0.17	2.4	３		IP	６		IP	３		IP	３	4	IP	５		IP	５		IP	１		IP	５		IP	６		IP	６		G3
+島田　　一生	4.10	0.18	3.9	４		IP	６		IP	３		IP	４		IP	６		G3	４		G3	３		IP	６		IP	３		IP	２		IP
+木田　峰由季	5.00	0.17	3.8	５		IP	２		IP	２		IP	２	4	IP	４		IP	２		IP	４		IP	５		IP	４		IP	５		IP
+芝田　　浩治	2.90	0.20	4.2	６	5	IP	６		IP	４		IP	３		IP	６		IP	６		IP	６		IP	４		IP	４		IP	３		IP

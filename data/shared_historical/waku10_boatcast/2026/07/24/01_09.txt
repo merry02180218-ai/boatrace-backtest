@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　大輔	7.20	0.13	2.3	３		G3	５		IP	１		IP	３		IP	１		IP	３		IP	１		IP	２		IP	１		IP	４		G3
+市川　　哲也	7.25	0.16	3.5	６		G2	２		IP	２		IP	１		IP	３		IP	欠		IP	２		IP	３		IP	欠		IP	１	1	IP
+三川　　昂暁	5.10	0.18	3.1	６		IP	３		IP	１		IP	３		IP	６		IP	２		IP	５	2	IP	６		IP	２		IP	２		IP
+木村　　仁紀	6.20	0.13	2.7	３		IP	４		IP	２	5	IP	１		IP	４		IP	２		IP	１		IP	４		G2	５		IP	４		G1
+横田　　貴満	5.10	0.16	3.2	５		IP	１	3	IP	４	4	IP	３		IP	５		IP	２		IP	３		IP	４		IP	３		G2	Ｆ	2	IP
+小倉　　康典	3.10	0.16	4.3	５		IP	４		IP	６		IP	６		IP	６		IP	５		IP	３		IP	２		IP	５		IP	４		IP

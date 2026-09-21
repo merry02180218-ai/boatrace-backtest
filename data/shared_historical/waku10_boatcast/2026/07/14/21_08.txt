@@ -1,0 +1,8 @@
+data=
+1	0
+永井　　聖美	6.20	0.18	3.8	５		IP	４		IP	１		G3	５		G3	４		G3	３		IP	１		IP	４		IP	１		IP	１		IP
+河野　　　大	6.30	0.17	3.1	５		G2	４		G2	１		G2	２		G2	１		IP	１		IP	３		IP	５		IP	３	3	IP	６		IP
+岡部　　貴司	3.90	0.13	2.5	２		IP	５		IP	６		IP	５		IP	４	2	IP	５		IP	２		IP	３		IP	５		IP	４		IP
+水摩　　　敦	4.20	0.16	4.3	５		IP	１		IP	４		IP	４	5	IP	３		IP	４		IP	４		IP	５		IP	５		IP	４		IP
+松本　　一毅	4.00	0.15	3.0	５		IP	１		IP	４		IP	６		IP	５		IP	３	4	IP	３		IP	４		IP	４		IP	６		IP
+土山　　卓也	3.70	0.19	4.6	５		IP	３		IP	５		IP	５		IP	６		IP	３		IP	３		IP	３		IP	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　勝博	8.40	0.17	3.2	２		IP	１		G3	１		IP	１		IP	５		IP	１		IP	２		IP	１		IP	１		IP	３		IP
+谷野　　錬志	5.30	0.13	3.9	５		G2	５		SG	２		IP	４		IP	５		IP	３		IP	２		IP	３		IP	５		G1	２		G1
+今泉　　友吾	5.60	0.11	2.4	６		G2	３		IP	４		G1	１		IP	５		IP	５		IP	４		IP	２		IP	２		IP	２		G1
+辻　　　栄蔵	5.70	0.15	2.7	４	5	G2	２		IP	４		IP	３		IP	４		G1	４		G1	６		G1	３	5	IP	１		G1	４		G1
+枝尾　　　賢	3.60	0.12	3.4	４		G2	６		G2	５		IP	４		IP	２		IP	５		IP	４		IP	５		G2	６		G2	４	4	IP
+谷津　　幸宏	4.30	0.13	3.2	５		G2	６		IP	３	5	IP	４		IP	２	5	IP	エ		IP	３	4	IP	６		IP	２		IP	５	5	IP

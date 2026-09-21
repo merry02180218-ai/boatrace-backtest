@@ -1,0 +1,8 @@
+data=
+1	0
+葛原　　大陽	8.20	0.12	2.3	Ｆ		IP	１		IP	１		IP	１		G3	１		G3	１		IP	２		IP	２		IP	２		IP	２		IP
+吉田　　宗弘	5.80	0.17	3.1	３		IP	４		IP	２		IP	２		IP	５		IP	４		IP	１		IP	３		IP	５		IP	２		IP
+富永　夏哉人	3.90	0.16	3.4	６		IP	６		IP	３		IP	２		IP	３		IP	４		IP	６		IP	５		IP	３		IP	４	4	IP
+平野　　和明	5.60	0.17	3.7	３		IP	４		IP	３		IP	４		IP	２		IP	３		G3	４		G3	２		IP	３		IP	４		IP
+大森　　　翼	4.10	0.15	3.0	６		IP	４	6	IP	妨		IP	３		IP	３		IP	４		IP	３		IP	５		IP	４		IP	２		IP
+竹下　　大樹	5.70	0.16	3.2	２		G3	３		G3	５		IP	３		IP	２	5	IP	２	5	IP	２		IP	４	5	IP	６	3	IP	３	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+泉　　　具巳	6.70	0.18	3.7	５		IP	１		IP	２		IP	２		IP	１		IP	Ｆ		IP	２		IP	６		IP	１		IP	１		IP
+森作　　広大	3.00	0.21	4.8	５		IP	６		IP	６		IP	６		IP	４		IP	３		IP	６		IP	４		IP	４		IP	３		IP
+葛原　　大陽	6.40	0.14	2.5	３		IP	４		G3	３		G3	３		IP	３		IP	３		IP	２		IP	３		IP	２		IP	２		IP
+小森　　信雄	3.60	0.20	4.1	５		IP	５	5	IP	３		IP	４		IP	４		IP	３		IP	５		IP	４		IP	５		IP	４		IP
+小川　竜太朗	3.60	0.15	3.5	３		IP	５		IP	４		IP	４	4	IP	５		IP	４		IP	５		IP	４		IP	３		IP	５		IP
+上田　　健太	3.10	0.19	4.4	３		IP	５		G2	６		IP	３	5	IP	５		IP	３		IP	６		IP	６		IP	６		IP	５		IP

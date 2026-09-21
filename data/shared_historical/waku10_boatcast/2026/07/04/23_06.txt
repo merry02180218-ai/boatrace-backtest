@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　秀茉	6.70	0.13	2.5	１		IP	３		IP	３		IP	６		IP	３		IP	２		IP	１		IP	３		IP	３		G3	２		IP
+佐藤　　博亮	6.90	0.14	2.7	１		IP	２		IP	１		G3	２		G3	６		IP	３		IP	３		IP	２		IP	１		IP	５	3	IP
+小林　　礼央	6.33	0.11	1.8	３		IP	２		IP	５		IP	２		IP	２		IP	３		IP												IP
+村上　宗太郎	5.90	0.17	3.7	１		IP	５		IP	４		IP	２		IP	４		IP	１		IP	６	5	IP	１		IP	５		IP	２		IP
+出穂　　和鼓	1.20	0.17	3.7	６	6	IP	６		IP	６		IP	６		IP	６		IP	５		G3	６		G3	５		G3	６		G3	６	6	IP
+安河内　　将	5.30	0.14	3.6	転		G2	２	3	IP	６		G3	３	5	IP	１	5	IP	１	4	IP	５		G1	６		G1	４		G1	２	5	IP

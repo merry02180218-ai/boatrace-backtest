@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　祐貴	4.70	0.18	3.8	４		IP	４		IP	１		IP	３		IP	６		IP	５		IP	３		IP	５		IP	５		IP	１		IP
+滝沢　　芳行	5.00	0.13	2.8	２		IP	落		IP	３		IP	５		IP	２		G3	６		G3	４		IP	５		IP	５		IP	１		IP
+抹香　　雄三	7.40	0.14	2.3	３		IP	２		IP	２		IP	３		IP	５		IP	１	2	IP	２		IP	４		IP	１		IP	１		IP
+横田　　貴満	4.10	0.16	3.4	２		IP	５		IP	３		IP	５	6	IP	２		IP	４		IP	３		IP	５		IP	６		IP	５		IP
+山下　　大輝	6.90	0.15	3.1	２	4	IP	３		IP	１		IP	２		IP	２		IP	１		IP	３		IP	２	4	IP	４		IP	６		IP
+山口　　広樹	2.33	0.24	5.4	６		IP	４	5	IP	６		IP	６		IP	不		IP	５		IP	６		IP	６		IP	２		IP	５		IP

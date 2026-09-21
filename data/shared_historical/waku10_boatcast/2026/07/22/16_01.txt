@@ -1,0 +1,8 @@
+data=
+1	0
+宮野　　　仁	5.50	0.13	3.1	１		G3	Ｆ		IP	２		IP	６		IP	２		IP	３		IP	２		IP	５		IP	５		IP	１		IP
+大庭　　元明	6.60	0.15	3.2	３		G3	１		IP	４		IP	５		IP	１		IP	３		IP	１		IP	３		IP	２		IP	４		IP
+金子　　猛志	6.70	0.12	3.5	６		G3	４		IP	１	4	IP	３		IP	２		G3	４		G3	２		IP	２		IP	１		IP	２		IP
+村松　　遥輝	4.00	0.20	3.3	５		IP	４		IP	４		IP	Ｆ		IP	４		IP	６		IP	６		IP	１		IP	２		IP	３	3	IP
+金山　　立樹	5.20	0.24	3.9	５		G3	２		IP	２		IP	２	2	IP	４		IP	３		IP	６		IP	４		IP	１		IP	６		IP
+木山　　誠一	1.90	0.19	4.7	５		G3	５		IP	６		IP	６		IP	６		IP	４		IP	４		IP	５	5	IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+沼田　　七華	3.20	0.15	2.6	３		G3	６		IP	６		IP	５		IP	４		IP	４		IP	５		G3	５		IP	３		IP	４		IP
+山下　　友貴	7.80	0.18	2.3	２		IP	２		IP	１		IP	２		IP	２		G3	２		G3	３		IP	１		IP	３		IP	３		IP
+植竹　　玲奈	2.20	0.18	3.6	６		IP	６		IP	５	5	IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	１		IP
+小林　　愛実	3.78	0.18	4.3	４		IP	４		IP	４		IP	転		IP	６		IP	３		IP	３		IP	３		IP	６		IP	５		IP
+藤原　　菜希	5.20	0.18	3.6	４		IP	２		IP	６		IP	３		IP	３	4	IP	４		IP	４		G1	２		G1	６		G3	２		IP
+中嶋　　世奈	1.80	0.20	4.5	５		IP	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP	４	4	IP	６		IP	５		IP

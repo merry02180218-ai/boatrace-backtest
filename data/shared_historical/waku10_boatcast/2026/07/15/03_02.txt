@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　太亮	8.50	0.13	2.4	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	２		IP	１		IP	６		IP
+遠藤　　圭吾	6.90	0.16	3.5	２		IP	３		IP	６		IP	１		IP	２		IP	１		IP	３		IP	５		IP	１		IP	２		IP
+松井　　友汰	5.40	0.19	2.9	３		IP	５		IP	１		IP	２		IP	１		IP	３		IP	５		IP	Ｆ		IP	５		IP	２		IP
+山崎　　鉄平	3.60	0.15	3.0	２		IP	５		IP	２	5	IP	６		IP	５		IP	２		IP	５		IP	６		IP	５	6	IP	５		IP
+齋藤　　達希	3.20	0.20	3.8	５		IP	５		IP	５		IP	３		G3	５		IP	６		IP	４		IP	２	4	IP	４		IP	６	6	IP
+港　　　理樹	3.60	0.19	4.8	５		IP	５		IP	３		IP	４		IP	３		IP	４		IP	５		IP	５		IP	３		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+松江　　秀徳	6.30	0.20	3.7	５		IP	４		IP	３		G2	１		IP	１		IP	Ｆ		G3	１		IP	２		IP	５		IP	１		IP
+瀧川　　千依	3.80	0.21	4.0	４	3	IP	６		IP	２		IP	Ｆ		IP	２		IP	６		IP	４		IP	４		IP	２		IP	Ｆ		IP
+宇田川　信一	3.90	0.15	3.5	１	4	IP	４		IP	５		IP	５		IP	３		IP	６		IP	４		IP	４		IP	４		IP	５		IP
+植木　　美帆	2.90	0.20	4.9	３		IP	４	5	IP	６		IP	５		IP	４		IP	６		IP	４		G3	４		G3	６		G3	５		G3
+小野　　信樹	3.78	0.14	2.9	５	6	IP	４		IP	欠		IP	６	6	IP	２		IP	１		IP	５		IP	４		IP	５		IP	６		IP
+本田　　　愛	5.00	0.18	3.4	５		IP	３		IP	３		IP	２		IP	５		IP	２	5	IP	６		IP	３	4	IP	１	5	IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+渡邊　伸太郎	8.50	0.16	2.5	１		IP	６		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP
+星　　　栄爾	5.60	0.12	2.8	３		IP	３		G3	４		G3	２		IP	６		IP	３		IP	６	6	IP	２		IP	２		IP	２		IP
+岡本　　　大	5.10	0.15	3.0	６		IP	１		IP	５		IP	１		IP	２		IP	沈		IP	３		IP	５		IP	２		IP	４		IP
+香川　　颯太	3.80	0.16	3.4	５		IP	１		IP	４		IP	２		IP	５		IP	５	5	IP	６		IP	６	6	IP	５		IP	３		IP
+大上　　卓人	5.10	0.12	3.8	６		IP	６		SG	３		SG	３		G1	６		G1	４		G1	３		G1	４		G1	４		G1	２		IP
+奥田　　　誠	3.10	0.20	4.4	６	5	IP	３		IP	５		IP	６		IP	５		IP	４		IP	３	5	IP	４	5	IP	５		IP	６		IP

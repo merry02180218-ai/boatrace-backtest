@@ -1,0 +1,8 @@
+data=
+1	0
+深山　　祐二	6.60	0.16	2.6	１		IP	２		IP	５		IP	１		IP	５		IP	４		IP	２		IP	４		IP	１		IP	２		IP
+宮崎　　　奨	7.80	0.13	2.9	３		IP	２		IP	１		IP	２		IP	２		IP	３		IP	３		IP	２		IP	１		IP	２		IP
+宮村　　勇哉	4.00	0.13	3.5	６	4	IP	４	4	IP	６		IP	４		IP	３		IP	５		IP	５		IP	２		IP	３		IP	３		IP
+中岡　　健人	3.90	0.14	3.3	４		IP	３		IP	５		IP	３		IP	５	3	IP	２		IP	５		IP	４		IP	６		IP	４		IP
+松尾　　　拓	6.00	0.22	3.8	５		IP	３		IP	３		IP	４		IP	３		IP	４		IP	３	4	IP	１		IP	２		IP	２		IP
+内堀　　　学	4.70	0.12	2.7	６		IP	２		IP	５	2	IP	５		IP	５		IP	２		IP	５	5	IP	１		IP	３		IP	３		IP

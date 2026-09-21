@@ -1,0 +1,8 @@
+data=
+1	0
+松田　　竜馬	7.70	0.12	1.9	１		IP	１		IP	１		IP	５		IP	３		IP	１		IP	６		IP	１		IP	１		IP	２		IP
+大崎　　　翔	5.40	0.13	3.5	２		IP	１		IP	１		IP	５		IP	５		IP	３		IP	６		IP	６		IP	１		IP	４		IP
+中山　　　将	7.20	0.15	2.6	１		IP	３		IP	３	5	IP	２		IP	１		IP	１		IP	Ｆ		IP	４		IP	２		IP	１		IP
+畔柳　　俊吾	3.70	0.20	5.0	５	5	IP	２		IP	３		IP	３		IP	６		IP	４		IP	５		IP	３		IP	６		IP	６		IP
+西野　　翔太	5.50	0.13	2.2	５		IP	１		IP	３		IP	６		IP	５		IP	２		IP	１		G3	５		G3	２		IP	５		IP
+加藤　　　翔	2.10	0.20	4.4	６		IP	６		IP	５		IP	３		IP	５		IP	６		IP	５		IP	５		IP	５	5	IP	５		IP

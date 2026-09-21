@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　一心	8.00	0.15	3.5	３		IP	２		IP	１		G3	４		IP	１		IP	４		IP	１		IP	１		IP	１		IP	２		IP
+香川　　颯太	7.30	0.14	3.3	２	3	IP	４		IP	１		IP	４		IP	１		IP	２		IP	１		IP	１		IP	６		IP	２		IP
+金子　　賢志	6.50	0.15	3.2	３		IP	６		G2	３		G2	２		G2	４		G2	１		IP	１		IP	３		IP	２		IP	６		G1
+川崎　　智稔	4.10	0.15	3.6	６		IP	５		IP	２		IP	３		IP	２		IP	６		IP	５		G3	６		IP	２		IP	４		IP
+大江　　　純	3.30	0.14	4.4	６		IP	６		IP	３		IP	６		IP	６		IP	４		IP	６		G3	４	6	G3	２		IP	３		IP
+前野　　竜一	4.30	0.15	3.0	３		IP	５		IP	６		IP	３		IP	５		IP	５		G3	４		G3	４		IP	２		IP	４		IP

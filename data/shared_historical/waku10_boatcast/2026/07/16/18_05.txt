@@ -1,0 +1,8 @@
+data=
+1	0
+石塚　　久也	9.60	0.16	2.6	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+長畑　　友輔	3.20	0.17	4.1	４		IP	３		IP	６		IP	６		IP	６		IP	６		IP	５		IP	２		IP	４		IP	４		IP
+久永　　祥平	7.00	0.13	2.1	１		IP	３		IP	３		IP	３		IP	欠		IP	１		IP	１		IP	２		G3	３		IP	２		IP
+林　　　恵祐	2.60	0.17	4.3	５		IP	４	5	IP	３		IP	５		IP	６		IP	６		IP	５		IP	６		IP	３		IP	６		IP
+今井　　貴士	4.60	0.16	3.0	６		IP	２		IP	３		IP	５		IP	２		IP	６		IP	３		IP	４		IP	４		IP	４		IP
+出口　　飛龍	1.00	0.21	5.2	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

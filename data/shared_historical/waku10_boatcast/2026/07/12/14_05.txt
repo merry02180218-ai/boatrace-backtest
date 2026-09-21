@@ -1,0 +1,8 @@
+data=
+1	0
+熊本　　英一	5.70	0.18	3.9	５		IP	５		IP	３		IP	１		IP	２		IP	６		IP	４		IP	１		IP	４		IP	１		IP
+折下　　寛法	5.50	0.14	2.5	５		IP	２		IP	５		IP	２		IP	５		IP	２		IP	６		IP	１		IP	３		IP	２		G3
+向後　　龍一	8.56	0.13	2.8	１		IP	１		IP	２		IP	４		IP	２		IP	１		G2	４		G2	１		G2	２		IP	転		IP
+荒木　　颯斗	7.30	0.14	2.4	１	6	IP	２		IP	１		IP	３		G3	２		IP	５		IP	１		IP	４		IP	４		IP	１		IP
+中島　　　航	3.20	0.24	4.9	３		IP	５		IP	４	6	G3	３		G3	５	2	G3	５	6	IP	６		IP	６		IP	３		IP	５		G3
+鈴木　　孝明	4.30	0.14	2.9	４	5	IP	３	5	IP	３		IP	５		IP	１		IP	６		IP	４		IP	５		IP	５		IP	３		IP

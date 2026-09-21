@@ -1,0 +1,8 @@
+data=
+1	0
+枝尾　　　賢	8.70	0.15	3.2	２		IP	２		IP	１		IP	１		IP	４		IP	１		IP	２		IP	２		G2	１		IP	１		IP
+石原　　　翼	6.40	0.13	3.4	３		G2	１		IP	１		IP	６		G2	５		IP	３		IP	５		IP	２		IP	２		IP	２		G2
+上田　　龍星	6.20	0.12	2.9	３		G2	１		G2	５		G1	２		G2	３		G2	３		IP	３		IP	３		IP	４	2	IP	６		G1
+篠崎　　仁志	6.80	0.10	2.9	２		G1	３		G1	３		IP	６		IP	１		IP	３		G1	３		G1	３		G1	４		G1	２		G1
+前原　　大道	6.00	0.14	2.9	４		IP	３		IP	４		G1	４		G1	２		IP	３		IP	１		IP	３		IP	３		IP	４		IP
+津久井　拓也	3.30	0.19	4.2	４		G2	４	5	IP	６		IP	６		IP	５		G2	４		G2	５		IP	４		IP	５		IP	３		IP

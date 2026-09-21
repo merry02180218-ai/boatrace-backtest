@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　和将	10.30	0.13	2.0	１		IP	１		SG	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+中島　　浩哉	5.00	0.16	3.2	２		G3	２		G3	４		IP	３		IP	４		IP	１		IP	４		IP	４		IP	６		G3	６		G3
+石原　　　光	5.00	0.13	2.4	６		G3	３		IP	３		IP	３		IP	２		IP	１		IP	６		IP	３		IP	４		IP	５		IP
+中野　　孝二	5.80	0.14	2.6	２		IP	４		IP	１		IP	５		IP	４		IP	４		IP	４		IP	５		IP	１		IP	１		IP
+乙津　　康志	3.60	0.18	3.6	５		IP	３		IP	５		IP	４		IP	３	4	IP	６		IP	４		IP	２		IP	５		IP	６		IP
+澁澤　　周羽	1.60	0.16	3.6	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	３		IP	６		IP	落		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+後藤　　孝義	5.90	0.15	3.7	５		IP	２		IP	１		IP	３		IP	６		IP	１		IP	４		IP	３		IP	１		IP	５		IP
+小畑　　実成	4.50	0.17	3.4	３		IP	３		IP	５		IP	５		IP	６		IP	３		IP	２		IP	５		IP	２		IP	４		IP
+森　　　貴洋	5.70	0.14	3.2	１		IP	６		IP	３		IP	５		IP	２		IP	２		IP	３		IP	１		IP	５		IP	４		IP
+木下　虎之輔	3.00	0.13	2.2	４		IP	６		IP	６		IP	３	5	IP																		IP
+仲本　　　舜	2.80	0.14	4.5	４		IP	３	6	IP	転		IP	６		IP	６		IP	２		IP	５		IP	６		IP	４		IP	６		IP
+中村　　魁生	5.60	0.12	3.0	４		IP	３	5	IP	３		IP	３		IP	５		IP	３		IP	２		IP	２	5	IP	５		IP	２		IP

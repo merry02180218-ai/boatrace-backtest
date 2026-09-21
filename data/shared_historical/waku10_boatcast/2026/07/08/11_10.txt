@@ -1,0 +1,8 @@
+data=
+1	0
+堀之内紀代子	9.30	0.16	3.6	１		IP	１		G3	３		G3	２		G3	１		G3	１		G3	１		G3	１		G2	１		IP	２		IP
+鈴木　祐美子	4.30	0.23	5.1	３		IP	６		IP	３		IP	４		IP	４		IP	６		IP	４		IP	１		IP	３		IP	６		G3
+南　　　彩寧	4.60	0.17	2.9	落		IP	４		IP	３		G3	２		IP	４		IP	６		IP	２		IP	６		IP	４		IP	１		IP
+山口　真喜子	6.10	0.11	2.0	２		IP	１		IP	６		IP	４		IP	６		IP	３		IP	１		IP	５		G2	２		IP	１		IP
+高田　　　綾	3.10	0.17	4.0	３		IP	３		IP	６		IP	６	4	IP	６		IP	５		IP	３	6	IP	６		IP	６		IP	３		IP
+高憧　　四季	5.10	0.18	3.7	４		G3	６		G1	５	5	SG	６		SG	３		G2	４		IP	１		IP	３		IP	１		IP	６		G3

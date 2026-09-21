@@ -1,0 +1,8 @@
+data=
+1	0
+福山　恵里奈	7.40	0.16	3.5	５		IP	１		IP	３		IP	３		IP	３		G3	２		G3	１		G3	３		IP	１		IP	１		G3
+島倉　　　都	3.40	0.16	4.2	６		IP	２		IP	３		IP	５		IP	４		IP	６		IP	４	3	IP	４		IP	５		IP	５		G3
+石井　　裕美	4.10	0.16	2.9	５		IP	３		G3	３		IP	３		G3	４		IP	５		IP	６		IP	３		IP	５		IP	３		G3
+森田　　梨湖	2.10	0.25	4.5	６		IP	４		IP	５		IP	５		IP	５		IP	６		IP	５	5	G3	６		IP	４		IP	５		IP
+深見　亜由美	2.60	0.23	4.4	４		IP	５		IP	６		IP	３	4	IP	４		IP	６		G3	６	6	G3	４		IP	６		IP	５	6	IP
+出穂　　和鼓	1.30	0.18	3.6	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		G3	５		G3	５		G3	６		IP

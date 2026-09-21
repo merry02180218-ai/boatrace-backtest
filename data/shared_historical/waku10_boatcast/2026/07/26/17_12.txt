@@ -1,0 +1,8 @@
+data=
+1	0
+村上　　　遼	9.10	0.14	2.7	１		IP	４		G2	１		G2	１		IP	５		G1	１		IP	１		IP	１		IP	１		G1	１		G1
+谷津　　幸宏	5.80	0.11	2.5	３		G2	５		G2	２		IP	５		IP	３		IP	２		IP	３		IP	３		IP	３	3	IP	３		IP
+大神　　康司	6.11	0.16	3.1	２		G3	不	1	IP	１		IP	４		IP	３		IP	２		IP	４		IP	６		IP	３		IP	２		IP
+井内　将太郎	4.40	0.12	2.3	６		G2	２		IP	２		IP	６		IP	６		IP	３		IP	転		IP	３		IP	２		IP	５		IP
+黒柳　　浩孝	4.90	0.13	3.1	２		IP	３		IP	３		IP	２		IP	４	4	IP	４		IP	６		IP	６		G2	５		IP	２		IP
+広次　　　修	4.20	0.19	4.5	６		IP	６		IP	３	5	IP	２		IP	３		IP	４	5	IP	３		IP	４		IP	４		IP	５		IP

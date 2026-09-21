@@ -1,0 +1,8 @@
+data=
+1	0
+村上　宗太郎	7.20	0.20	4.2	１		IP	５		IP	２		IP	２		IP	１		IP	５		IP	１		IP	５		IP	１		IP	１		IP
+大橋　　由珠	4.20	0.19	4.3	４	3	IP	５		IP	２		IP	２		IP	４		IP	６		IP	６		IP	５		IP	２		G3	４		G3
+柴田　　友和	4.80	0.16	3.4	４		IP	４	4	IP	５		IP	４		IP	２		IP	１		IP	５		IP	５		IP	３		IP	３	2	IP
+古賀　　繁輝	6.70	0.10	2.5	５		IP	１		IP	３		IP	４		IP	１	1	IP	３		IP	５		IP	１		IP	３		IP	１		G2
+若林　　　麗	2.30	0.20	4.3	５		IP	６		IP	６		IP	５		IP	４		IP	６	4	IP	４		IP	５		IP	４		IP	５		IP
+大賀　龍之介	2.80	0.22	4.9	４		IP	４		IP	３		IP	５		IP	４		IP	６		IP	６		IP	５		IP	６		IP	６		IP

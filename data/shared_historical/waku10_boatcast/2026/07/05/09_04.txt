@@ -1,0 +1,8 @@
+data=
+1	0
+明石　　正之	7.60	0.14	2.3	１		IP	４		IP	１		IP	５		IP	１		IP	１		IP	６		G3	２		IP	１		IP	１		IP
+吉田　慎二郎	5.50	0.14	2.6	３	3	IP	５		G3	６		G3	３		IP	２		IP	２		IP	４		IP	６		IP	２		IP	１	3	IP
+松本　　一毅	7.11	0.13	2.2	２		IP	転		IP	１		IP	１		IP	３		IP	３		IP	２		IP	４		IP	５		IP	１		IP
+石川　　　諒	6.80	0.10	1.6	２		IP	２	5	IP	２		IP	３		IP	２		IP	２		IP	２		IP	４		IP	５		IP	２		IP
+古結　　　宏	5.70	0.13	2.4	４		IP	３		IP	３	4	IP	６		IP	３		IP	１	4	IP	１		IP	４		G1	６		G1	３	2	G1
+都築　　正治	3.20	0.15	3.9	３		IP	４		IP	５		IP	３		IP	６		IP	５		IP	５		IP	４		IP	６		IP	４		IP

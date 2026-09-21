@@ -1,0 +1,8 @@
+data=
+1	0
+芝田　　浩治	7.00	0.16	3.6	１		IP	２		IP	１		IP	１		IP	４		IP	５		IP	１		IP	１		IP	Ｆ		IP	４		IP
+大久保信一郎	5.90	0.18	3.5	４		IP	３		IP	２		IP	２		IP	２	3	IP	５		G3	２		IP	１		IP	６		IP	４		IP
+櫻井　　　優	5.50	0.18	3.0	１		IP	２		IP	５		IP	３		IP	３		IP	５		IP	４		IP	３		IP	１		IP	６		IP
+瀬川　　大地	3.30	0.16	2.8	３		IP	５		IP	４		IP	２		IP	６		IP	６		IP	４		IP	６		IP	４		IP	５		IP
+川上　　聡介	4.60	0.14	3.6	３		IP	３		IP	５		IP	３		IP	２		IP	６		IP	３		IP	２		IP	６	6	IP	５		IP
+吉川　　勇作	2.50	0.15	3.1	６		IP	６		IP	５		IP	６		IP	５		IP	５		IP	５		IP	４		IP	５		IP	２		IP

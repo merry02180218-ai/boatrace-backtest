@@ -1,0 +1,8 @@
+data=
+1	0
+倉持　　莉々	9.80	0.15	2.8	１		IP	１		IP	１		IP	１		IP	１		IP	１		G3	１		G3	２		G3	１		IP	１		IP
+北村　　寧々	5.60	0.12	2.1	３		IP	５		IP	４		IP	３		IP	２		IP	１		IP	４		G2	５		G2	３		IP	３		IP
+佐々木　裕美	5.30	0.14	2.1	２		IP	４		IP	２		G3	１		G3	６		G3	１		G3	５		G3	５	5	IP	５		G3	３		G3
+鈴木　祐美子	4.30	0.19	3.7	５		IP	１		IP	５		IP	６		IP	１		IP	４		IP	４		G3	４		G3	４		IP	５		G3
+海野　ゆかり	5.00	0.21	3.8	４		IP	３		IP	３	4	IP	５		G3	４		G3	５		G2	３		G2	２		IP	６		IP	２		IP
+植木　　美帆	1.50	0.22	4.5	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		G3	６		IP	４		G3	５		IP

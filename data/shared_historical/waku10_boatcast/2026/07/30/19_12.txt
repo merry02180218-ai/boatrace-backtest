@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　　翼	8.20	0.12	2.5	２		IP	１		IP	５		IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+土山　　卓也	5.50	0.16	4.0	３		IP	２		IP	４		IP	２		IP	２		IP	３		IP	５		IP	１		IP	６		IP	５		IP
+平川　　香織	7.80	0.21	3.8	５	5	IP	１		G3	４		G3	１		IP	１		IP	１		IP	１		IP	２		IP	４		IP	２		IP
+平見　　真彦	6.40	0.15	3.2	３		IP	５		G3	３	5	G3	２	5	G3	１		IP	１		IP	２		IP	４	6	IP	３		IP	４		IP
+眞鳥　　章太	4.30	0.15	3.4	５	6	IP	６		G2	１		IP	５		IP	３		IP	５		IP	２		IP	６		IP	３		IP	４		IP
+西村　美智子	2.80	0.20	4.4	６		IP	３		IP	４		IP	６		IP	６		IP	５		IP	５		IP	６		IP	３		IP	４		IP

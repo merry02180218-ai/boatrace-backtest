@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　慧人	4.90	0.16	3.1	１		IP	５		IP	１		IP	６		IP	６		IP	４		IP	２		IP	１		IP	５		IP	６		IP
+竹間　　隆晟	8.20	0.14	2.7	４		IP	１		IP	１		IP	３		IP	１		IP	２		IP	３		IP	１		IP	１		IP	２		IP
+米玉利　大悟	3.00	0.17	2.8	５		IP	６		IP	１		IP	５		IP	５		IP	３		IP	５		IP	６		IP	４	4	IP	落		IP
+塚越　　陸斗	1.43	0.18	4.0	４		IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP									IP
+有山　　　望	3.40	0.18	2.7	５		IP	１		IP	６		IP	６		IP	３		IP	４		IP	５	6	IP	５		IP	５		IP	４	6	IP
+森口　　和紀	3.80	0.14	3.3	３		IP	４		IP	５		IP	５		IP	２		IP	５		IP	４		IP	６		IP	６		IP	２		IP

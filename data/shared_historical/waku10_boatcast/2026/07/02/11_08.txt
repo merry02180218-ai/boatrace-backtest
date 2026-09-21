@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　和仁	7.90	0.15	2.4	１		IP	２		IP	１		IP	２		IP	６		IP	２		IP	３		IP	１		IP	１		IP	２		IP
+常盤　　海心	3.90	0.20	4.4	３		IP	４		IP	４		IP	３		IP	４	3	IP	２		IP	６	3	IP	６		IP	６		IP	４		IP
+大月　　遊雅	3.56	0.16	2.5	５		IP	転		IP	落		IP	３		IP	３		IP	２		IP	５		IP	５		IP	５		IP	４		IP
+中山　　翔太	4.50	0.11	2.4	３	3	IP	５		G2	Ｆ		IP	転		IP	２		IP	１		IP	４	3	IP	４		IP	３	5	IP	６		G1
+室田　　泰史	4.90	0.14	2.9	６		IP	２		IP	４		IP	２		IP	４		IP	４		IP	２		IP	２		IP	５		IP	５		IP
+土性　　雅也	3.20	0.23	5.6	５		IP	２		IP	５		IP	５		IP	５		IP	４		IP	５		IP	２		IP	６		IP	６		IP

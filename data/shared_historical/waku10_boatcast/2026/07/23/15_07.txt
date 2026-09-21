@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　一樹	6.50	0.12	3.2	４		IP	２		IP	１		IP	１		IP	２		IP	２		IP	５		IP	２		IP	３		IP	６		IP
+田頭　　虎親	8.20	0.13	2.6	１		IP	１		IP	１		IP	２		IP	５		IP	１		IP	２		IP	４		IP	１		IP	１		IP
+西野　　翔太	5.80	0.14	2.5	５		IP	４		IP	２		IP	２		IP	２		IP	４		IP	３		IP	３		IP	２		G3	４		IP
+吉川　　元浩	7.00	0.12	2.4	３		G2	６		IP	２		IP	２		IP	１	5	G2	３		G1	１		G3	４		G1	３		IP	４		G1
+上馬場　風依	1.13	0.19	3.6	６	6	IP	Ｆ	6	IP	５	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP						IP
+田代　　達也	4.50	0.20	4.1	３		IP	６		IP	４		IP	６		IP	３		IP	２		IP	６		IP	２		IP	５		IP	２		IP

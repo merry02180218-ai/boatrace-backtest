@@ -1,0 +1,8 @@
+data=
+1	0
+榎　　　幸司	7.60	0.14	2.8	２		IP	２		IP	４		G2	３		IP	１		IP	２		IP	１		IP	１		IP	６		IP	１		IP
+品川　二千翔	5.70	0.17	3.6	４		G2	２		G2	２		IP	５		IP	６		IP	２		IP	２		IP	２		IP	５		IP	３		IP
+藤森　　陸斗	8.00	0.14	3.1	２		IP	２		IP	１		IP	２		IP	２		IP	３		IP	３		IP	１		IP	３		IP	１		IP
+浅見　　宗孝	4.10	0.16	3.8	２		IP	５		IP	６		IP	３	5	IP	６		IP	６		IP	４		IP	４		IP	２		IP	４		IP
+村岡　　　賢	3.00	0.19	3.9	６		IP	４	6	IP	５		IP	５		IP	５		IP	６	6	IP	２		IP	５		IP	４	6	IP	４		IP
+仲　　　航太	2.40	0.23	4.3	５		IP	６		IP	５		IP	３		IP	５	5	IP	５		IP	４		IP	５		IP	５		IP	６		IP

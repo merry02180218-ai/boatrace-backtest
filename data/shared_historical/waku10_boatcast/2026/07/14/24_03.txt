@@ -1,0 +1,8 @@
+data=
+1	0
+田中　太一郎	4.10	0.21	4.0	３		IP	６		IP	４		IP	３		IP	２		IP	５		IP	６		IP	６		IP	５	2	IP	１		IP
+戸塚　　邦好	6.60	0.17	3.7	３		IP	１		G3	５		G3	４		IP	４		IP	２		IP	３		IP	２		IP	１		IP	２		IP
+池田　　剛規	5.50	0.12	2.6	２		IP	２		IP	１		IP	５		IP	４		IP	５		IP	３		IP	４		IP	１		IP	６		IP
+渡辺　　真至	4.30	0.13	2.8	３		IP	４		IP	５		IP	４		IP	６	5	IP	２		IP	Ｆ		IP	２		IP	４		IP	３		IP
+有山　　　望	3.40	0.19	2.8	４		IP	５		IP	１		IP	６		IP	６		IP	３		IP	４		IP	５	6	IP	５		IP	５		IP
+中山　　　将	6.90	0.16	3.3	１		IP	２		IP	３		IP	３		IP	２		IP	３		IP	３		IP	２		IP	５		IP	２		IP

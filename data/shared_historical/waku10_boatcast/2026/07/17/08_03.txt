@@ -1,0 +1,8 @@
+data=
+1	0
+山川　　雄大	5.60	0.22	4.2	４		IP	２		IP	４		IP	１		IP	５		IP	３		IP	１		IP	５		IP	２		IP	５		IP
+尾嶋　　一広	6.80	0.15	3.0	２		IP	６	3	IP	１		G1	４		IP	２		IP	３		IP	２		IP	２		G1	１		G1	６		G1
+中島　　真二	5.30	0.14	3.3	６		IP	２		IP	３	4	IP	２		IP	６		IP	４		IP	２		IP	６		IP	３	4	IP	１	2	IP
+宮下　　元胤	5.00	0.16	3.5	３		IP	４		IP	５		IP	３		IP	２	3	IP	４	5	IP	２		IP	３		IP	４		IP	５	3	IP
+花本　　夏樹	1.70	0.21	5.2	５		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	４		IP	５		IP	６		IP
+木下　　陽介	2.67	0.15	1.9	５	5	IP	６		IP	６		IP	６		IP	欠		IP	５		IP	４		IP	１		IP	６		IP	５	5	IP

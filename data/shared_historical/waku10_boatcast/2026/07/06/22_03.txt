@@ -1,0 +1,8 @@
+data=
+1	0
+豊田　　訓靖	4.30	0.16	3.4	６		IP	４		G3	６		G3	５		IP	３		IP	６		IP	３		IP	２		IP	４		IP	１		IP
+森　　晋太郎	6.30	0.18	4.6	３		IP	２		IP	２		IP	２		IP	３		IP	４		IP	１		IP	３		IP	３		IP	６		IP
+平田　健之佑	6.00	0.13	2.0	４		IP	４		IP	欠		IP	２		IP	２		IP	４		IP	２		IP	３		IP	転		IP	３		IP
+藤原　　孝斗	3.50	0.20	3.5	３		IP	４		IP	６	5	IP	５		IP	３		IP	５		IP	２	5	IP	４		IP	６		IP	６		IP
+柴田　　朋哉	3.00	0.14	2.8	４		IP	４		IP	４		IP	２		IP	５		IP	転		IP	５		IP	５		IP	５		IP	５		IP
+安藤　　瑠希	2.20	0.17	2.9	４	5	IP	６		IP	５		IP	３		IP	６		IP	５		IP	５		IP	６		IP	６		IP	５		IP

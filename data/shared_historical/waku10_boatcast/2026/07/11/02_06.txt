@@ -1,0 +1,8 @@
+data=
+1	0
+吉川　　元浩	9.30	0.12	3.4	３		G2	１		IP	２		IP	１		G2	４		G1	１		G1	１		G3	１		G3	１		G3	１		G3
+鹿島　　敏弘	5.50	0.16	3.5	２		IP	６		IP	５		IP	４		IP	１		IP	４	3	IP	２		IP	３		IP	２		IP	４		IP
+飯山　　　泰	8.50	0.16	2.4	１		IP	１		IP	４		IP	２		IP	２		IP	２		IP	１		G2	１		IP	１		IP	３		IP
+村上　　奈穂	2.70	0.17	3.9	５	5	G2	４		IP	４		IP	５		IP	６		IP	４		IP	５		IP	５	3	IP	６		IP	４		IP
+田上　　　凜	4.10	0.12	1.9	６	6	G2	６	6	IP	Ｆ		IP	２	6	G2	１	4	IP	６	6	IP	１	4	IP	５		IP	５		IP	４		IP
+上條　　暢嵩	5.50	0.14	2.7	４		G2	４		SG	６		G1	６		G1	２	5	SG	６		SG	２		G1	４	5	IP	３	3	IP	２	5	IP

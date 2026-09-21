@@ -1,0 +1,8 @@
+data=
+1	0
+柳沢　　　一	7.70	0.15	2.6	１		IP	５		IP	１		IP	４		G1	転		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+齊藤　　　仁	5.80	0.15	3.9	４	3	G3	３	3	G3	２		G1	３		G1	Ｆ		G3	２		IP	２		IP	６		IP	２		G1	３		IP
+鈴谷　　一平	4.70	0.12	2.8	２		IP	５		IP	５		IP	５		G1	６		G1	４		IP	３	1	IP	３		IP	４		IP	１		IP
+上野　　秀和	4.70	0.16	2.9	４		IP	３	5	IP	５		IP	４		IP	３		IP	３		IP	６		IP	２		IP	４		IP	３		IP
+佐藤　　　悠	4.30	0.14	2.4	３		IP	４		IP	３		IP	６		IP	１		G2	３		IP	６		IP	６	6	G2	６		G2	４		IP
+森　　晋太郎	3.20	0.13	3.8	４		IP	５		IP	４	5	IP	５		IP	２		IP	５		IP	５		IP	４		IP	５		IP	５		IP

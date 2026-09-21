@@ -1,0 +1,8 @@
+data=
+1	0
+馬場　　貴也	10.60	0.11	1.7	１		G2	１		G2	１		SG	１		SG	１		G1	５		G1	１		G1	１		G1	１		SG	１		SG
+片岡　　雅裕	5.30	0.15	3.1	６		IP	３		IP	５		SG	５		SG	４		G1	１		IP	１		G2	２		G2	５		IP	６		IP
+石渡　　鉄兵	7.20	0.13	3.3	３		IP	１		IP	４		G2	３		SG	３		SG	２		IP	２	2	IP	３		IP	１		IP	６		G1
+山田　　祐也	5.60	0.11	3.0	２		G2	３		G2	１		IP	２	5	IP	３		IP	５		G1	６		G1	４		G2	６		G2	４		IP
+岩瀬　　裕亮	6.60	0.16	4.3	３		G2	４		G2	２	4	IP	１		IP	４		IP	５		G1	３		G1	２		G1	２		G2	４		IP
+茅原　　悠紀	5.70	0.13	3.5	４	5	G3	２		G3	４		IP	３		SG	５		SG	３		IP	５		IP	４	5	IP	２		SG	４		SG

@@ -1,0 +1,8 @@
+data=
+1	0
+盛本　　真輔	7.40	0.17	3.7	５		IP	１		IP	１		IP	１		IP	２		IP	１		IP	５		IP	２		IP	１		IP	４		IP
+池田　　雷太	3.90	0.21	4.2	２		IP	４	3	IP	５		IP	５		IP	５		IP	５		IP	６		IP	５		IP	２		IP	２		IP
+吉永　　浩則	2.60	0.18	4.0	５		IP	５		IP	６		IP	６		IP	６		IP	５		IP	３		IP	６		IP	４		IP	３		IP
+石田　　貴洋	6.10	0.15	2.1	３	5	IP	２		G3	２		G3	６		IP	４		IP	２		IP	３	6	IP	１		IP	３		IP	４		IP
+稲田　　浩二	7.20	0.14	2.9	３		IP	２		IP	３		G2	２		G1	２		IP	２		IP	５		G1	１		IP	３		IP	３		IP
+河合　　三弘	2.60	0.17	4.4	６		IP	５		IP	４		IP	６		IP	４		IP	６		IP	５		IP	６		IP	３		IP	５	5	IP

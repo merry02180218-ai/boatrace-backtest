@@ -1,0 +1,8 @@
+data=
+1	0
+星　　　栄爾	8.00	0.12	1.7	１		IP	２		IP	２		G3	１		IP	３		IP	２		IP	５		IP	２		IP	１		IP	１		G3
+廣中　　良一	5.30	0.16	2.9	３		IP	５	4	G3	３		IP	２		IP	２		IP	４		IP	３		G3	６		G3	２		IP	４		IP
+吉田　　彩乃	5.11	0.22	4.2	１		IP	６		IP	３		IP	４	4	IP	不		IP	６		G3	３		G3	２		IP	３		IP	４		IP
+小森　　信雄	4.00	0.20	3.8	４		IP	３		IP	５		IP	５	5	IP	３		IP	４		IP	４		IP	３		IP	５		IP	４		IP
+坪内　　　実	4.60	0.21	4.2	３		IP	２		IP	５		IP	３		IP	５	4	IP	５		IP	４		IP	２		IP	５		IP	３		IP
+寺田　　夢生	1.10	0.24	5.1	６		IP	転		IP	６		IP	６		IP	５		IP	６		IP	５		G3	６		G3	６		G3	６		G3

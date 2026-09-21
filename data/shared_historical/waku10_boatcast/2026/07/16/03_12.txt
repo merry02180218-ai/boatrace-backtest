@@ -1,0 +1,8 @@
+data=
+1	0
+下條　雄太郎	9.60	0.12	2.2	１		IP	１		IP	１		IP	１		IP	３		IP	２		G2	１		G2	２		G1	１		G1	１		IP
+馬場　　　剛	7.11	0.10	2.4	２		IP	４		IP	２		IP	１		IP	１		IP	５		G2	４		G2	欠		IP	３		IP	１		IP
+後藤　　翔之	6.60	0.14	2.5	２		IP	１		IP	４		IP	２		IP	１		IP	３		IP	３		IP	１		IP	５		IP	５		IP
+安河内　　健	5.44	0.15	2.2	３		IP	１		IP	６		G3	２		IP	５		IP	３		IP	２		IP	転		IP	転		IP	２		IP
+椎名　　　豊	6.80	0.13	2.5	２		IP	３		IP	２		IP	６		IP	１		IP	２		IP	５		G3	１		IP	３		IP	２		IP
+一色　　凌雅	3.78	0.17	4.2	３		IP	２		IP	４		IP	エ		IP	６		IP	６		IP	４		IP	５		IP	５		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+藤井　　公人	8.30	0.12	2.3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	４		IP	６		IP
+西丸　侑太朗	7.20	0.12	2.7	４		IP	２		IP	１		IP	２		IP	４		IP	２		IP	３		IP	２		IP	２		G3	２		IP
+原田　　秀弥	4.50	0.16	3.3	３		IP	４		IP	２		IP	５		IP	４		G3	４		G3	６		G3	３		IP	２		IP	５		IP
+小野　　勇作	5.60	0.16	3.4	２		IP	５		G3	３		G3	６		IP	２		IP	１		IP	６		IP	３		IP	２		IP	３		IP
+山崎　　　祥	3.80	0.21	3.6	５		IP	６		IP	５		IP	３		IP	４		IP	４		IP	６		IP	２		IP	４		IP	３		IP
+北川　　幸典	3.40	0.21	4.6	６		IP	３	5	IP	３		IP	４	5	IP	３	5	IP	６		IP	６		IP	６		IP	４		IP	４		G3

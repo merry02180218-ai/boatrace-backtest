@@ -1,0 +1,8 @@
+data=
+1	0
+中曽　　瑠華	5.30	0.16	2.9	２		G3	６		IP	転		IP	１		IP	１		IP	４		IP	２		IP	６		IP	１		IP	６		G3
+山田　　理央	7.10	0.11	2.2	５		IP	１		IP	１		IP	１		IP	５		IP	２		G2	１		G2	３		IP	５		G3	２		G3
+藤堂　　里香	5.30	0.17	3.4	３		IP	３		IP	５		IP	２		G3	１		G3	５		G3	３		IP	３		IP	３		G3	６	4	IP
+根岸　　真優	1.70	0.16	2.7	６	5	IP	５		IP	５		IP	６		IP	５		IP	６		IP	４		IP	５		IP	６		IP	６	5	IP
+中北　　　涼	5.80	0.17	2.4	４		IP	２		IP	４		IP	５		IP	５		IP	１		IP	４		IP	３		IP	２		G3	１		G3
+堀之内紀代子	5.90	0.16	3.5	４		IP	１		G3	２		G3	３		G3	３		G3	５		G2	４		IP	５		IP	１		IP	３		IP

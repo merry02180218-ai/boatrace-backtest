@@ -1,0 +1,8 @@
+data=
+1	0
+森田　　梨湖	5.10	0.20	4.2	４		G3	３		IP	１		IP	１		IP	２		IP	４		G3	６		G3	５		IP	５		IP	４		IP
+藤田　　美代	3.10	0.18	3.2	４		IP	６		IP	６		IP	５		IP	４		IP	４		IP	６		G3	５		G3	２		G3	４		G3
+中村　　桃佳	6.10	0.14	2.8	４		IP	６		IP	３		IP	３		IP	１		IP	１		IP	２		IP	４		IP	１		G2	６		IP
+山本　　梨菜	6.89	0.18	3.9	３		G3	転		G3	４		IP	１		IP	１		IP	２		IP	２		IP	４		IP	５		IP	２		IP
+原村　　百那	1.50	0.19	3.2	６		G3	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６	6	IP	４		IP	６	6	IP
+藤原　　早菜	3.60	0.20	4.2	５		G3	６		IP	３		IP	２		IP	５		IP	転		IP	３	5	IP	４		IP	４		IP	６		IP

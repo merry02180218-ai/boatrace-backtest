@@ -1,0 +1,8 @@
+data=
+1	0
+石川　　　諒	6.89	0.12	2.7	エ		IP	１		IP	１		IP	３		IP	転		IP	１		IP	４		IP	３	2	IP	３		IP	１		IP
+森　　　貴洋	5.89	0.18	4.5	５		IP	２		IP	３		IP	１		IP	１		IP	２		IP	３		IP	５		IP	転		IP	６		IP
+井上　　慧人	4.80	0.14	3.2	３		IP	６		IP	２		IP	３		IP	２		IP	５		IP	６		IP	３	6	IP	５	4	IP	２		IP
+崎　　　利仁	3.10	0.23	4.4	５		IP	４		IP	２		IP	６		IP	５		IP	４		IP	４		IP	５		IP	６		G1	５	5	IP
+作間　　　章	5.20	0.17	3.4	５		IP	１		IP	３		IP	４		G3	２		G3	５		IP	３		IP	４		IP	３		IP	４	4	IP
+伊藤　　啓三	3.00	0.15	2.7	４		IP	３		IP	６		IP	３		IP	５		IP	６		IP	４		IP	５		IP	不		IP	６		IP

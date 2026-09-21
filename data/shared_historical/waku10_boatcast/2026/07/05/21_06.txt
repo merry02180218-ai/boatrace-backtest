@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　翔悟	4.30	0.17	3.3	４		IP	Ｆ		IP	４		IP	５		G3	２		IP	転		IP	３		IP	６		IP	１		IP	２		IP
+前田　　将太	6.00	0.15	3.9	２		IP	６		SG	２		IP	２		IP	３		G1	２		IP	６		IP	４		IP	２		IP	４		G2
+山口　　隆史	4.00	0.16	2.8	１		IP	５		IP	４		IP	５		IP	６	4	IP	５		IP	６		IP	４		IP	３		IP	２		IP
+宇土　　泰就	4.00	0.17	3.8	５		IP	５		IP	３		IP	５		IP	４		IP	５		IP	４		IP	２		IP	５		IP	２		IP
+西丸　侑太朗	4.10	0.16	3.6	４		IP	４		IP	４	4	IP	４		IP	６		IP	４		IP	４		IP	４		IP	４		G3	２		IP
+吉原　　快誓	2.00	0.15	3.1	４		IP	５		IP	５		IP	６		IP	４	5	IP	６		IP	６		IP	５		IP	６		IP	５		IP

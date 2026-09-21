@@ -1,0 +1,8 @@
+data=
+1	0
+古川　　　健	6.40	0.13	2.4	１		IP	１		IP	１		IP	１		IP	６		IP	５		IP	２		IP	５		IP	１		IP	６		IP
+上村　慎太郎	4.33	0.23	5.3	４		IP	落		IP	６		IP	３		IP	４		IP	４		IP	４		IP	４		IP	２		IP	４		IP
+小坂　　尚哉	7.20	0.09	2.2	２		IP	４		G1	１		G1	１		IP	４		IP	４		IP	１		IP	２		IP	３		IP	３		IP
+佐口　　達也	3.90	0.18	4.2	５		IP	６		IP	５	3	IP	５		IP	３		IP	２		IP	５		IP	３		IP	４		IP	３		IP
+大庭　　元明	3.30	0.18	3.1	６		IP	２		IP	４		IP	５		IP	５	4	IP	６		IP	５		IP	６		IP	３	6	IP	３		IP
+伊藤　　紘章	2.40	0.21	5.1	６		IP	３		IP	５		IP	６		IP	５		IP	５		IP	５		IP	６		IP	３		IP	６		IP

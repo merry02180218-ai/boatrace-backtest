@@ -1,0 +1,8 @@
+data=
+1	0
+向後　　龍一	7.80	0.16	3.6	４		G3	２		G3	３		G3	１		IP	１		IP	１		IP	１		IP	２		IP	５		G2	２		G2
+向所　　浩二	4.30	0.18	2.8	５		IP	６	5	IP	５		IP	５	3	IP	３		IP	１		IP	４		IP	３		IP	４		IP	３		IP
+門間　　雄大	4.80	0.14	2.6	６		G3	５		G3	１	5	G3	４		G2	３		G3	３	4	G3	３		IP	３		IP	５		IP	４		IP
+眞鳥　　康太	2.70	0.15	2.9	２		IP	５		IP	３		IP	４		IP	６	5	IP	６	6	IP	６		IP	５	6	IP	６	6	IP	６	6	IP
+西村　　秀樹	3.11	0.18	3.7	４		IP	４		IP	６		IP	５		IP	３		IP	４		IP	転		IP	４		IP	６		IP	５		IP
+板頭　　里緒	1.00	0.16	3.4	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

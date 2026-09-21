@@ -1,0 +1,8 @@
+data=
+1	0
+河内　　一馬	6.30	0.16	3.2	Ｆ		IP	１		IP	２		IP	１		IP	４		IP	２		IP	５		IP	１		IP	１		IP	６		IP
+小坂　　風太	3.00	0.21	4.5	４	3	IP	３		IP	３		IP	３		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP
+内山　　文典	5.10	0.16	2.8	２		IP	４		IP	６		IP	１		IP	Ｆ		IP	５		IP	２		IP	１		IP	５		IP	３		IP
+飯山　　　泰	5.40	0.17	3.5	４		G2	３		IP	２		IP	３		IP	５		IP	４		IP	２		IP	２		IP	４		IP	６		G2
+川合　　理司	2.10	0.14	2.7	５		IP	６		IP	５		IP	６	6	IP	６		IP	６		IP	６		IP	４		IP	４		IP	４		IP
+中島　　秀治	4.80	0.20	3.2	６		IP	５		IP	１		G2	６		G2	２		IP	５		IP	５		IP	３		IP	３		IP	３		IP

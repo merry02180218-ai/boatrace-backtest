@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　一心	7.40	0.15	3.5	４		IP	１		IP	４		IP	１		IP	１		IP	１		IP	２		IP	１		IP	転		IP	２		IP
+尾上　　雅也	6.20	0.19	4.0	６		IP	１		IP	２		IP	３		IP	２		IP	６		IP	２		IP	４		IP	３		IP	２		IP
+羽野　　　諒	4.33	0.15	2.3	４		IP	４		IP	５		IP	６		IP	５		IP	落		IP	２		IP	２		IP	３		IP	４		G3
+照屋　　厚仁	4.90	0.13	3.4	３		IP	３		G3	３		IP	５		IP	６		IP	５		IP	２		IP	３		IP	転		IP	１		IP
+宮野　　　仁	3.10	0.18	3.8	６		IP	３		IP	５		IP	６		IP	３		IP	５	4	IP	６	4	IP	５		IP	４		IP	３		IP
+澤崎　　雄哉	4.00	0.19	3.4	４		IP	５	5	IP	５		G3	６		IP	６		IP	５		IP	３		IP	２		IP	２		IP	３		IP

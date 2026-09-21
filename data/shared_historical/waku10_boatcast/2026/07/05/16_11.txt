@@ -1,0 +1,8 @@
+data=
+1	0
+武富　　智亮	9.60	0.13	2.6	１		G2	３		G2	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+守屋　　美穂	7.10	0.17	3.7	２		G2	６		G1	２		G1	４		SG	４		IP	２		IP	１		IP	２		IP	２		IP	３		G3
+山本　　寛久	7.00	0.16	3.3	４		G2	１		G2	１		IP	３		IP	１		IP	４	4	IP	３		IP	３		IP	１		IP	５		IP
+森　　　悠稀	6.10	0.14	2.4	２		IP	１		IP	２		IP	６		G2	３		IP	３		IP	２		IP	３		IP	３		IP	６		IP
+山口　　達也	5.60	0.14	2.6	３		G2	１		G2	６		G2	４	1	IP	６		IP	６	3	IP	３		IP	１		G2	３		G2	３		IP
+豊田　健士郎	5.80	0.12	3.6	３		G2	２		IP	２		IP	６		G1	２		G1	２		IP	３		G2	４		G2	５		G3	５		G3

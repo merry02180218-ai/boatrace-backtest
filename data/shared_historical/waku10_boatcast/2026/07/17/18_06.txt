@@ -1,0 +1,8 @@
+data=
+1	0
+田村　　　慶	7.70	0.18	4.1	１		IP	１		IP	４		IP	１		IP	１		IP	４		IP	２		IP	１		IP	１		IP	６		IP
+木村　　浩士	5.00	0.19	4.1	２	4	IP	３		IP	１		IP	２		IP	５		IP	５	3	IP	５		IP	６		IP	６		IP	１		IP
+石川　　　諒	6.10	0.13	2.5	４		IP	４		IP	３		IP	１	5	IP	１		IP	６		IP	３	4	IP	３	4	IP	２		IP	３		IP
+川原　　祐明	8.00	0.15	2.5	１		IP	３		IP	１		IP	３		IP	２		IP	１		IP	１		IP	３		IP	２		IP	３		IP
+越智　　照浩	3.30	0.15	2.9	３		IP	３		IP	４		IP	４		IP	６	6	G3	４		IP	６		IP	６		IP	４		IP	５		IP
+藤田　　康生	4.40	0.20	3.9	６	5	IP	３	5	IP	４		IP	４		IP	落		IP	３		IP	３		IP	２		IP	２		IP	６		IP

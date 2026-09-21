@@ -1,0 +1,8 @@
+data=
+1	0
+吉川　　昭男	7.10	0.15	3.4	１		IP	１		IP	１		IP	３		IP	６		IP	２		IP	１		IP	１		IP	５		IP	４		IP
+田中　　和也	6.40	0.16	3.0	２		G3	２		G3	２	1	IP	４		IP	５		IP	２		IP	３		IP	２		IP	１		IP	５		IP
+中里　　優子	6.30	0.19	3.7	３	2	IP	２		G3	２		G3	３		G3	４		G3	６		IP	１		IP	３		IP	２	4	IP	３		IP
+小宮　　涼雅	3.60	0.17	2.6	６		IP	５		IP	２		IP	４	5	IP	１		IP	６		IP	６		IP	５		IP	６		IP	３		IP
+清水　　攻二	4.60	0.24	4.9	６		IP	５		IP	２	4	IP	２		IP	３	4	IP	２	4	IP	２		IP	５		IP	５		IP	６		IP
+谷島　　咲希	2.40	0.22	5.1	２		IP	６		IP	６		IP	４		IP	５		IP	６		IP	６		IP	６		IP	４		IP	６		IP

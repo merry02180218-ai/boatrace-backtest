@@ -1,0 +1,8 @@
+data=
+1	0
+浅見　　宗孝	6.40	0.16	2.7	４		G3	１		IP	１		IP	３		IP	２		IP	４		IP	Ｆ		IP	１		IP	２		IP	４		IP
+山田　　哲也	6.30	0.13	2.3	３		G3	３		IP	２		IP	１	4	IP	５		IP	３		G3	４		IP	２	3	IP	２		IP	４		G1
+小原　　聡将	5.50	0.17	3.2	３		G3	３		G3	５		IP	４		IP	３		IP	４		G2	３		IP	２		IP	５		IP	２		IP
+前出　　達吉	4.50	0.14	2.6	６		G3	１		G3	５		IP	３		IP	３		IP	４	5	IP	５		IP	５		IP	４		IP	２		IP
+下河　　雅史	4.10	0.15	3.3	４		G3	３		IP	６		IP	４		IP	５		IP	３		IP	５		IP	３		IP	４		IP	３		IP
+黄金井　力良	2.40	0.17	4.4	４		G3	６		IP	６		IP	６		IP	４		IP	４		IP	５		IP	６		IP	５	5	IP	５		IP

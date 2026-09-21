@@ -1,0 +1,8 @@
+data=
+1	0
+吉永　　浩則	7.60	0.15	3.0	１		IP	１		IP	５		IP	Ｆ		IP	２		IP	２		IP	１		IP	２		IP	１		IP	１		IP
+川崎　　智幸	6.20	0.14	3.8	４		IP	２		IP	２		IP	１		IP	Ｆ		IP	５		IP	２		IP	２		IP	２	1	IP	３		IP
+木山　　誠一	5.30	0.16	2.8	３		IP	１		IP	４	5	IP	６		IP	２		IP	５		IP	２		IP	４		IP	４		IP	３		IP
+野田　　昇吾	2.10	0.18	3.6	６		IP	６		IP	６		IP	３	5	IP	５		IP	６		IP	６		IP	５	5	IP	４	5	IP	５		IP
+森　　　弘行	4.30	0.14	2.8	５		IP	４		IP	３		IP	３		IP	５		IP	３		IP	６		IP	５		IP	３		IP	２		IP
+成田　　華音	1.80	0.20	3.8	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	２		IP	５		IP

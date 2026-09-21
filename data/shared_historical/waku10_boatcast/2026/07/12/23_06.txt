@@ -1,0 +1,8 @@
+data=
+1	0
+抹香　　雄三	8.00	0.13	2.2	１		IP	１		IP	５		IP	１		IP	２		IP	１		IP	５		IP	１		IP	１		IP	転		IP
+志道　　吉和	2.60	0.19	4.5	６	3	IP	５		IP	６		IP	５		IP	２		IP	５		IP	６		IP	５		IP	３		IP	６		IP
+高倉　　孝太	6.90	0.12	3.2	２		IP	３		IP	６		IP	４		IP	３		IP	１		IP	３		IP	１		IP	１		IP	２		IP
+渡邉　　　翼	5.90	0.14	2.7	２		IP	３		IP	４		IP	６		IP	３		IP	２		IP	４		IP	２		IP	３		IP	２		IP
+櫻井　　　隼	2.10	0.21	4.8	５		IP	６		IP	６	6	IP	５	6	IP	６		IP	３		IP	６	6	IP	４		IP	５		IP	６	6	IP
+川崎　　誠志	3.50	0.23	4.8	３		IP	６		IP	２		IP	４	5	IP	５		IP	４		IP	４		IP	６		IP	６		IP	４		IP

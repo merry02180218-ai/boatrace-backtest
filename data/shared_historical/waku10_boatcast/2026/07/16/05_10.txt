@@ -1,0 +1,8 @@
+data=
+1	0
+赤羽　　克也	9.40	0.17	3.5	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP
+上條　　嘉嗣	8.20	0.18	3.2	２		IP	２		IP	２		IP	１		IP	２	1	IP	１		IP	３		IP	２		IP	２		IP	２		IP
+藤本　　元輝	4.78	0.20	4.1	２		IP	５		IP	５	4	IP	３	5	IP	３		IP	５	4	IP	エ		IP	１	4	IP	３		IP	６	4	IP
+村上　　功祐	5.70	0.14	2.9	２		IP	２		IP	２		IP	４		IP	６	5	IP	２		IP	３		IP	３		IP	４		IP	４		IP
+馬野　　　耀	5.33	0.12	3.3	４		IP	欠		IP	３		IP	５		IP	３		IP	５		IP	３		IP	３		G2	２		G2	３		IP
+平尾　　崇典	5.40	0.13	3.1	６		IP	１	2	IP	４		G2	２	5	IP	４		IP	５		IP	１		IP	５		G2	５		G2	２		IP

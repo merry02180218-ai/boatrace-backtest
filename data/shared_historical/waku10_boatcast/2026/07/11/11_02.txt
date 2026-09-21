@@ -1,0 +1,8 @@
+data=
+1	0
+中川　　りな	9.00	0.16	3.5	１		IP	１		IP	２		IP	１		G3	１		G3	１		IP	３		IP	１		G3	３		G3	１		G3
+永田　　　楽	4.10	0.18	3.2	４		IP	２	3	IP	６		IP	４		IP	６		IP	１		G3	６		IP	５		IP	２		IP	５		IP
+堀之内紀代子	5.60	0.16	2.7	４		IP	１	6	IP	５		G3	４		G3	３		G3	２		G3	２		G3	４		G3	４		G2	４		G2
+谷川　　里江	5.80	0.16	3.2	１		IP	２		IP	４		IP	３	3	IP	３		G3	５		G3	４		G3	４		G3	４		G3	１		G3
+寺田　　空詩	5.80	0.17	3.8	１		IP	４		IP	４		IP	３		IP	３		IP	５	4	IP	２	4	IP	３		G3	４		IP	２		IP
+龍田　　真白	3.00	0.14	3.2	４	5	IP	６		IP	４		IP	３		IP	６		IP	２		IP	５		IP	５		IP	６		IP	６		IP

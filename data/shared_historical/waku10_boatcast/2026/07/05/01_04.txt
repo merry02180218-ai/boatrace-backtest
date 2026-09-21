@@ -1,0 +1,8 @@
+data=
+1	0
+山口　　修路	5.89	0.23	3.9	２		IP	１		IP	１		IP	６	3	G3	１		IP	６		IP	６		G3	４		IP	欠		IP	２		IP
+藤原　　仙二	6.00	0.21	4.6	３		IP	３		IP	３		IP	４		IP	２		IP	３		IP	Ｆ		G2	欠		IP	１		IP	２		IP
+淺香　　文武	4.10	0.16	3.3	３		IP	５		G3	４		IP	２		IP	２		IP	５		IP	３		IP	５		IP	５		IP	６		IP
+田中　　駿兵	5.40	0.14	3.2	３		IP	６		G1	６		G1	２		IP	２		IP	６		IP	１		IP	４		IP	２	5	IP	４		IP
+小柳　　勝希	3.90	0.19	3.9	３		IP	５		IP	５		IP	Ｆ	3	IP	２		IP	３		IP	４		IP	４		IP	３		IP	６		IP
+佐竹　　恒彦	4.80	0.16	3.7	４	5	IP	４		IP	２	5	IP	４		G3	５		IP	２	5	IP	２		IP	４		IP	５		IP	４		IP

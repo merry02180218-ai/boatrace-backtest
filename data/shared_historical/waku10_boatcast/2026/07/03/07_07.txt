@@ -1,0 +1,8 @@
+data=
+1	0
+米玉利　大悟	4.90	0.20	4.0	２		IP	３		IP	１		IP	１		IP	５		IP	６		IP	６		IP	２		IP	５		IP	６		IP
+藤森　　陸斗	6.60	0.17	3.9	２		IP	６		IP	２		IP	１	3	IP	４	3	IP	１		IP	１		IP	６		IP	３		IP	３		IP
+仲道　　大輔	5.10	0.20	3.2	３		IP	２		IP	５	2	IP	６	4	IP	５		IP	３	2	IP	３		IP	２		IP	２		IP	４	4	IP
+西澤　日花里	3.30	0.16	2.2	Ｆ		G3	３		IP	３		IP	５		IP	４		IP	５		G3	６		IP	４		IP	５	5	IP	３		G3
+羽田　　妃希	2.80	0.18	4.4	５		IP	５		IP	４		IP	４		IP	６		IP	４		IP	６		IP	４		IP	４		IP	５	4	IP
+長嶋　　万記	5.60	0.14	2.9	２	5	G3	１		G3	２		G2	５	5	IP	５		IP	２	5	IP	５		IP	４		IP	３		G3	４		G3

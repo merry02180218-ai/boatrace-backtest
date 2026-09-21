@@ -1,0 +1,8 @@
+data=
+1	0
+國弘　　翔平	5.70	0.17	3.0	４		IP	１		IP	１		IP	２		IP	３		IP	５		IP	２		IP	５		IP	６		IP	３		IP
+後藤　　孝義	4.10	0.16	4.4	４		IP	３		IP	４		IP	３		IP	６		IP	６		IP	３		IP	２		IP	６		IP	４		IP
+林　　　恵祐	4.40	0.13	3.6	４		IP	４		IP	３		IP	４		IP	６		IP	３		IP	３		IP	４	4	IP	６		IP	２		IP
+天野　　　誠	3.78	0.20	4.2	４		IP	転		IP	４		IP	落		IP	１		IP	２		IP	６		IP	５		IP	４		IP	６		IP
+板倉　　敦史	3.90	0.18	4.3	４		IP	４		IP	４		IP	２		IP	６		IP	５		IP	５		IP	４		IP	４		G3	３		G3
+佐藤　隆太郎	4.60	0.12	2.6	５		IP	６		IP	２		SG	６		SG	６		G1	３		G1	３		G2	４		IP	４		IP	３		IP

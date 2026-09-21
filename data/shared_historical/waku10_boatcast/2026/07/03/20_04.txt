@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　裕隆	7.90	0.13	2.0	１		IP	２		IP	１		IP	６		IP	３		IP	１		IP	２		IP	２		IP	２		IP	１		IP
+犬童　　千秋	3.90	0.16	3.2	６		IP	２		IP	Ｆ		G3	２		G3	３		G3	６		G3	６		IP	４		G3	４		G3	３		IP
+山崎　　鉄平	3.90	0.15	3.1	２		IP	４		IP	５		IP	５		IP	４		IP	２		IP	４		IP	５	4	IP	４		IP	６		IP
+北村　　寧々	6.00	0.13	3.1	５		IP	２		IP	３		IP	４		IP	６		G2	１		IP	１		IP	３		IP	４		IP	２		IP
+長谷川　親王	3.40	0.21	5.3	６	6	IP	４	6	IP	４		IP	５		G3	５		IP	６	6	IP	５		IP	３		IP	２		IP	４		IP
+楠原　　翔太	3.80	0.13	3.4	３		IP	５		IP	４		IP	６		IP	２		IP	５	5	IP	４		IP	２		IP	５		IP	６		IP

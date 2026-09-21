@@ -1,0 +1,8 @@
+data=
+1	0
+南　　　佑典	8.90	0.13	2.0	１		IP	１		IP	１		IP	２		IP	４		IP	２		IP	１		G2	１		IP	２		IP	１		IP
+小林　　礼央	5.20	0.17	4.4	５		IP	３		IP	４		IP	３		IP	２		IP															IP
+若林　　　麗	3.80	0.21	4.1	１		IP	６		IP	４		IP	２		IP	６		IP	４		IP	６		IP	６		IP	３		IP	５		IP
+大場　　恒季	7.10	0.14	2.6	４		IP	３		IP	１		IP	２		IP	２		IP	２		IP	２		IP	３		IP	１		IP	５		G2
+梶山　　涼斗	4.30	0.12	2.7	５		IP	３		IP	４		IP	４		IP	６	6	IP	４		IP	６		IP	６		IP	１		IP	１		IP
+出穂　　和鼓	1.30	0.16	3.4	６		IP	６		IP	６		G3	５		G3	５		G3	６		IP	５		IP	６		IP	６		IP	６		IP

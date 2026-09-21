@@ -1,0 +1,8 @@
+data=
+1	0
+小坂　　尚哉	9.10	0.14	3.5	６		IP	１		IP	１		IP	１		G1	１		G1	１		IP	２		IP	１		IP	１		IP	１		IP
+渡邊　　裕貴	6.40	0.18	3.8	２		IP	１		IP	２		IP	４		IP	３		IP	１		IP	６		IP	６		IP	３		IP	１		IP
+木村　　浩士	4.10	0.16	3.9	３		IP	５		IP	６	4	IP	３	4	IP	５		IP	５		IP	４		IP	４		IP	２		IP	３		IP
+籾山　　佳岳	5.10	0.15	2.6	１		IP	４		IP	５		IP	５		IP	１		IP	６		IP	３		IP	５		IP	３		IP	２	5	IP
+鈴木　　茂高	3.40	0.15	3.9	Ｆ		IP	３		IP	５		IP	３		IP	５	6	IP	３		IP	５		IP	５		IP	４	4	IP	４		IP
+橋本　　英一	2.20	0.19	4.1	４		IP	５		IP	６		IP	６		IP	４		IP	４		IP	５		IP	６		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+仲本　　　舜	6.90	0.15	3.7	１		IP	６		IP	４		IP	１		IP	５		IP	２		IP	２		IP	３		IP	１		IP	１		IP
+飯島　　　誠	8.40	0.17	3.2	２		IP	２		IP	２		IP	２		IP	２		IP	２		IP	１	3	IP	１		IP	２		IP	２		IP
+吉田　　一郎	6.30	0.15	2.5	３		IP	３	1	IP	３		IP	１		IP	２		IP	６		IP	３		IP	２		IP	２	4	IP	４		IP
+花本　　　剛	3.70	0.16	2.9	４	5	IP	３		IP	６		IP	６		IP	５		IP	４		IP	６		IP	４	3	IP	２		IP	３		IP
+井芹　　大志	2.33	0.17	3.7	５	4	IP	５		IP	６		IP	５		IP	３		IP	　		IP	６		IP	５		IP	４		IP	６	6	IP
+日笠　　勝弘	2.00	0.17	3.8	５		IP	６		IP	６		IP	５		IP	５		IP	６		IP	４		IP	５		IP	６	5	IP	４		IP

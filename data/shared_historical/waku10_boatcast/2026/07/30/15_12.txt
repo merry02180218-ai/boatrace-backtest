@@ -1,0 +1,8 @@
+data=
+1	0
+川野　　芽唯	8.00	0.20	4.1	１		IP	５		IP	１		IP	２		IP	１		IP	２		G3	１		G3	１		G3	１		IP	５		IP
+高憧　　四季	6.50	0.16	3.6	５		G3	６		G3	１		IP	２		IP	４		IP	２		IP	３		G3	１		G1	１		SG	６		SG
+米丸　　乃絵	7.40	0.15	3.0	２		G3	２		G2	５		SG	２		IP	３		G2	２		IP	１		IP	１		IP	３		IP	４		IP
+藤原　　早菜	5.90	0.18	4.0	３		G3	３		G3	２		IP	４		IP	６		IP	１		IP	３		IP	３		IP	２		IP	４		IP
+嶋田　　有里	4.50	0.15	2.9	２		G3	３		IP	２		IP	３		G3	４		IP	５		IP	６		IP	４		IP	５		IP	４		IP
+山本　　梨菜	5.50	0.18	3.9	５		G3	５		G3	１	5	IP	６		IP	２		IP	４		IP	４		IP	３		IP	２		IP	２		IP

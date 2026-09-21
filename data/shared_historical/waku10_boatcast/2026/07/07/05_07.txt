@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　　旭	7.50	0.17	4.5	１		IP	４		IP	４		IP	１		IP	６		G3	２		IP	１		IP	１		G3	１		G3	２		IP
+盛本　　真輔	7.00	0.16	2.7	３		IP	２		IP	２		IP	１		IP	５		IP	３		IP	２		IP	３		IP	２		IP	２		IP
+森　　　弘行	2.44	0.18	4.2	欠		IP	６		IP	３		IP	５		IP	３		IP	５		IP	６		IP	６		IP	６	4	IP	５		IP
+岩川　　仁士	4.50	0.13	2.6	４		IP	４		G3	３		G3	６		IP	４		IP	２		IP	３		IP	３		IP	４		IP	５		IP
+佐々木　翔斗	4.50	0.20	4.0	５		IP	３		IP	３		IP	３		IP	３		IP	４		IP	２		G2	転		IP	４		IP	５		IP
+長畑　　友輔	2.70	0.17	3.6	６		IP	５		IP	３		IP	６		IP	５		IP	６		IP	５		IP	５		IP	２		IP	５		IP

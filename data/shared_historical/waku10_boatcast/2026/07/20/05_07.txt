@@ -1,0 +1,8 @@
+data=
+1	0
+石岡　　将太	7.33	0.15	2.8	転		IP	３		IP	２		IP	１		IP	５		IP	３		IP	２		IP	３		IP	１		IP	１		IP
+村松　　将平	5.50	0.20	3.9	６		IP	３		IP	５		IP	２		IP	３		IP	６		IP	２		IP	２		IP	３		IP	２		IP
+毒島　　　誠	7.90	0.17	2.7	４		G2	２		IP	３		IP	１		IP	１		IP	２		IP	５	4	IP	２		IP	３		SG	１		SG
+松尾　　光広	4.10	0.21	4.3	４		IP	４		IP	６		IP	３		IP	６		IP	６		IP	５	6	IP	３		IP	３		IP	１		IP
+山本　　浩次	4.10	0.18	2.5	４		G3	４		G3	３		IP	１		IP	６		IP	６		IP	３		IP	６		IP	４		G3	４	4	IP
+荒川　　健太	5.10	0.22	4.9	１	4	IP	３	4	IP	６		IP	３	3	IP	４		IP	３		IP	４		G3	５	5	IP	３	3	IP	３	4	IP

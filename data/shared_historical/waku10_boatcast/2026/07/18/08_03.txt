@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　秀樹	4.50	0.15	3.4	４		IP	４		IP	４		IP	２		IP	５		IP	５		IP	２		IP	４		IP	６		IP	２		IP
+田中　　辰彦	6.50	0.20	4.0	４		IP	３		IP	１		IP	３		IP	１		IP	１		IP	５		IP	２		IP	２	3	IP	６		IP
+高濱　　芳久	5.00	0.17	3.5	２		IP	４		IP	６		IP	２		IP	４		IP	３		IP	２		IP	５	4	IP	２		IP	６		IP
+木下　　雄介	5.40	0.15	3.4	２		IP	５		IP	４		IP	４		IP	４		IP	１		IP	３		IP	４		IP	４		IP	２		IP
+今村　天次朗	1.67	0.11	3.7	４	6	IP	６	6	IP	落	6	IP	５		IP	５	6	IP	６	6	IP												IP
+奥平　　拓也	3.10	0.17	4.5	５		IP	５		IP	５		IP	２		IP	５		IP	５		IP	４		IP	４		IP	５		G3	６		G3

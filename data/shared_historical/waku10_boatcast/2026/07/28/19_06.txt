@@ -1,0 +1,8 @@
+data=
+1	0
+川添　　英正	7.40	0.20	4.2	３		IP	１		IP	３		IP	１		IP	５		IP	４		IP	１		IP	１		IP	１		IP	３		G3
+日笠　　勝弘	3.40	0.17	3.3	６		IP	４		IP	５		IP	２		IP	５		IP	６		IP	５		IP	５		IP	２		IP	４	3	IP
+西村　美智子	6.30	0.13	2.1	３		IP	３		IP	４		IP	３		IP	２		IP	１		IP	６		IP	４		IP	１		IP	２		IP
+毒島　　　誠	5.90	0.15	3.2	３	2	IP	５	3	G2	４		G2	１		IP	３		IP	３	3	IP	５		IP	６		IP	２		IP	２		SG
+川尻　　泰輔	4.80	0.13	3.2	５		IP	２		IP	５		IP	６		IP	４	4	IP	２	6	IP	２		IP	３		IP	６		IP	２		IP
+出穂　　和鼓	2.00	0.18	3.8	２		G3	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		G3	５		G3	５		G3

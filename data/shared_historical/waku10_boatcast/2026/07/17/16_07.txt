@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　裕隆	7.90	0.15	2.2	１		IP	１		IP	２		IP	１		IP	６		IP	３		IP	１		IP	２		IP	２		IP	２		IP
+向後　　龍一	8.00	0.10	2.4	２		IP	１		IP	１		IP	２		IP	４		G2	３		G2	２		G2	１		G2	５		IP	１		IP
+澤崎　　雄哉	6.30	0.14	2.9	２		IP	３		IP	２		G3	３		G3	３		IP	６		IP	２		IP	２		IP	１		IP	５		IP
+雑賀　　勇貴	3.90	0.16	2.1	６		IP	３		IP	２		IP	４		IP	３		IP	４		IP	６		IP	４		IP	６		IP	４		IP
+小宮　　涼雅	4.10	0.15	3.0	３		IP	５		IP	５		IP	４		IP	３		IP	２		IP	６	6	IP	３		IP	４		IP	５		IP
+茅原　　悠紀	5.60	0.13	3.8	４		IP	３		SG	５		SG	３		IP	５		IP	４	5	IP	２		SG	４		SG	２	5	IP	５		G1

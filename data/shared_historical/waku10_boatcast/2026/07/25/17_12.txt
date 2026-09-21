@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　博亮	9.00	0.11	2.1	２		IP	１		IP	２		IP	１		IP	２		IP	１		G3	２		G3	１		IP	２		IP	１		IP
+東本　　勝利	5.10	0.15	3.8	２		IP	５		IP	２		IP	２		IP	２		IP	６		G3	３		IP	５		IP	３		IP	５		IP
+森永　　　隆	6.00	0.17	2.2	２		IP	６		IP	２	2	G3	６		IP	５		IP	１		IP	３		IP	２		IP	２		IP	２		IP
+池田　　剛規	4.90	0.16	2.3	２		IP	３		IP	５	5	IP	１		IP	２		IP	６		IP	５		IP	４		IP	５		IP	３		IP
+谷津　　幸宏	3.10	0.11	3.1	６	6	G2	５		G2	Ｆ		G2	５		G2	６		G2	５		IP	３	4	IP	６		IP	３		IP	３		IP
+佐藤　　　悠	3.70	0.15	3.3	５		IP	４		IP	６		IP	３		IP	５		IP	６		IP	５		IP	４		IP	３		G2	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+川崎　　公靖	6.20	0.15	3.4	６		IP	１		IP	２		IP	３		IP	４		IP	３		IP	２		IP	６		IP	１		IP	２		IP
+幸野　　史明	5.00	0.16	3.0	３		IP	３		IP	４		IP	５		IP	３		IP	５		IP	５		IP	１		IP	１		IP	５		IP
+石岡　　将太	4.20	0.15	3.9	３		IP	１		IP	４		IP	２		IP	５		IP	転		IP	６		IP	３		IP	６		IP	４		IP
+渡邉　　睦広	4.10	0.16	3.2	６		IP	４		IP	５		IP	２	5	IP	４		G3	３		IP	２		IP	４		IP	５		IP	５		IP
+牟田　　奨太	2.10	0.12	2.9	４		IP	６		IP	５		IP	６		IP	妨	6	IP	４		IP	５		IP	４		IP	６	3	IP	５		IP
+茶谷　　信次	3.20	0.20	4.5	６		IP	４		IP	６		IP	４		IP	５	5	IP	５		IP	４		IP	５		IP	３		IP	３		IP

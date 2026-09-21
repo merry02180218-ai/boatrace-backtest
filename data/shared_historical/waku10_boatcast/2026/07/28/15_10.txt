@@ -1,0 +1,8 @@
+data=
+1	0
+平高　　奈菜	8.00	0.19	3.2	２		G3	１		G3	４		IP	１		IP	１		IP	１		IP	１		IP	１		IP	４		IP	４		IP
+山本　　梨菜	6.00	0.18	3.7	３		G3	３		IP	５		IP	１		IP	１		IP	２		IP	５		IP	４		IP	１		IP	エ		IP
+香川　　素子	6.90	0.13	2.4	３		G3	３		G3	６		IP	４		IP	１		IP	２		IP	１		IP	１		G3	２		G3	３		IP
+嶋田　　有里	4.40	0.18	2.8	４		G3	４		G3	６		IP	４		IP	５		G3	２		IP	２		IP	２		IP	４		IP	６		IP
+岩崎　　芳美	4.60	0.13	2.8	６		G3	５		IP	６		IP	２		IP	３		G3	２		IP	１		IP	５	6	IP	４		IP	４		IP
+原村　　百那	1.90	0.17	3.9	２		G3	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

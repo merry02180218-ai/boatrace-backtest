@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　亮太	8.80	0.13	2.5	２		IP	２		IP	１		IP	１		IP	２		IP	２		G2	１		G2	１		IP	２		IP	３		G3
+真庭　　明志	5.40	0.16	3.3	６		G3	３		G3	３		IP	４		IP	１		IP	３		IP	３		IP	６		IP	４		IP	１		IP
+近藤　　稔也	3.20	0.18	4.1	４		IP	６		IP	６		IP	２		IP	６		IP	３	4	IP	６		IP	３		IP	５		IP	５		IP
+松田　　憲幸	3.40	0.20	4.5	４		IP	６		IP	５		IP	６	5	IP	５		IP	３		IP	３		IP	３		IP	４		IP	５		IP
+竹之内　　極	3.30	0.18	4.3	６	6	IP	６	6	IP	４		IP	５		IP	４		IP	３		IP	５		IP	２		IP	６		IP	４		IP
+小林　　孝彰	3.70	0.18	4.4	６		IP	４		IP	３		IP	３		IP	３		IP	６		IP	６		IP	６		IP	３		IP	４		IP

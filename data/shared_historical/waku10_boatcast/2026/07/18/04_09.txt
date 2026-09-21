@@ -1,0 +1,8 @@
+data=
+1	0
+山下　　和彦	8.80	0.14	3.1	１		G3	１		G3	１		IP	４		IP	１		G3	１		G3	３		IP	２		IP	１		IP	１		IP
+品田　　直樹	6.90	0.19	3.5	２		IP	３		IP	４		IP	３		IP	１		IP	３		IP	３		IP	５		IP	１		IP	１		IP
+松山　　裕基	3.30	0.15	4.6	５		IP	５	2	IP	４		IP	６		IP	５		IP	２		IP	２		IP	４		IP	５		IP	Ｆ		IP
+谷川　　将太	3.70	0.16	2.9	６	5	IP	３		IP	３		IP	４		IP	５		IP	３		IP	６		IP	３		IP	４		IP	６	5	IP
+富澤　　祐作	4.00	0.13	3.0	５		IP	４		IP	５		IP	２		IP	４		IP	２		IP	３		IP	６		IP	４		IP	６		IP
+大久保信一郎	4.20	0.21	4.5	４		IP	２		IP	３		IP	５		IP	５		IP	４		IP	６		G3	３		IP	３		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+平田　　忠則	9.50	0.10	1.6	１		IP	１		IP	１		IP	１		IP	３		G3	１		G3	２		G3	１		IP	１		IP	１		IP
+河村　　　了	6.10	0.17	3.5	１		G3	２		IP	１		IP	２		IP	２		IP	６	3	IP	４		IP	５		IP	３		IP	４		IP
+高岡　　竜也	6.20	0.16	3.1	３		IP	５		IP	２		IP	１		IP	５		IP	２		IP	２		IP	２		IP	４		IP	３		IP
+尾上　　雅也	5.67	0.15	2.9	３		IP	１		IP	３		IP	４		IP	４		IP	転		G1	１		IP	２		IP	５		IP	６		G3
+大澤　　風葵	5.00	0.13	2.4	６	6	IP	３		IP	２		IP	６		IP	３		IP	５		IP	２		IP	５		IP	３		IP	１		IP
+篠田　　優也	4.00	0.19	4.4	４		IP	２	5	IP	５		IP	４		IP	３		IP	５		IP	５		IP	３		IP	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+北川　　潤二	9.40	0.12	2.0	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP
+小森　　信雄	5.33	0.19	5.0	２		IP	６		IP	３		IP	３		IP	２		IP	３		IP	６		IP	１		IP	落		IP	５		IP
+吉川　　昭男	3.30	0.17	3.3	５		IP	３		IP	６		IP	４		IP	６		IP	４		IP	２		IP	３		IP	６		IP	Ｆ		IP
+烏野　　賢太	4.70	0.15	2.7	６	3	G3	４		IP	１		IP	５		IP	５		IP	２		IP	３		IP	３	5	IP	４		IP	４		IP
+横川　　聖志	3.90	0.13	2.2	６		IP	Ｆ		IP	６		IP	２	4	IP	５		IP	３		IP	６		IP	２	4	IP	３		IP	４	4	IP
+濱崎　寿里矢	1.90	0.24	4.3	６		IP	５		IP	６		G3	５	5	IP	４		IP	６		IP	６		IP	５	5	IP	６		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+尾形　　栄治	7.40	0.15	2.9	２		IP	１		IP	４		IP	５		IP	２		IP	３		IP	１		IP	３		IP	１		IP	１		IP
+岸本　　　隆	5.60	0.15	3.0	５		IP	１		IP	４		IP	４		G3	４		IP	４		IP	５		IP	３		IP	１		IP	１	3	G3
+淺香　　文武	4.90	0.15	3.4	４		IP	６		IP	２		IP	３		IP	５		G3	４		IP	２		IP	２		IP	５		IP	３		IP
+長谷川　　充	3.80	0.17	3.9	４		IP	６		G3	２		G3	４		G3	４		G3	６		IP	５	5	IP	４		IP	５		IP	２		IP
+中野　　仁照	4.80	0.19	4.0	６		IP	４		IP	３		IP	２		IP	Ｆ		IP	１		IP	２		IP	４		IP	６	6	G1	４		G1
+東　　　健介	2.30	0.21	5.2	６		IP	４		IP	５		G3	４		IP	６		IP	６		IP	６		IP	６	5	IP	４		IP	４		IP

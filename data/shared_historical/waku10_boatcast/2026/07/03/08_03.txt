@@ -1,0 +1,8 @@
+data=
+1	0
+原　　加央理	8.80	0.20	4.3	１		IP	３		IP	４		IP	１		IP	１		G3	１		G3	１		IP	１		IP	２		IP	１		IP
+吉川　　晴人	3.90	0.17	4.2	３		IP	６		IP	２		IP	４		IP	３		IP	５		IP	４		IP	６		IP	６		IP	４		IP
+間野　　兼礼	5.50	0.15	2.6	３		IP	３		IP	３		IP	４		IP	２		IP	６		IP	３		IP	１		IP	５		IP	３		IP
+吉島　　祥之	4.40	0.20	4.1	５		IP	４	3	IP	５		IP	４		IP	１	5	IP	５		IP	３		IP	４		IP	３		IP	４		IP
+三原　　　司	4.60	0.15	3.2	４		IP	４		IP	５		IP	５		IP	３	4	IP	３		IP	４		IP	４	4	IP	１		G3	４		IP
+益田　　啓司	3.80	0.15	3.0	２		IP	５		IP	３		IP	４		IP	６		IP	６		IP	６		IP	６		G1	５		G1	２		IP

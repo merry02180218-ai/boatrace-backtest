@@ -1,0 +1,8 @@
+data=
+1	0
+池田　　剛規	8.70	0.12	2.5	１		IP	１		IP	６		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+中辻　　博訓	7.60	0.12	1.8	４		IP	１		IP	５		IP	３		IP	１		IP	２		IP	２		IP	１		IP	２		IP	１		IP
+広次　　　修	3.40	0.15	3.2	２		IP	５		IP	６		IP	５		IP	６		IP	２		IP	２		IP	６		IP	６	2	IP	５		IP
+中島　　浩哉	2.80	0.14	3.6	２		IP	４		IP	６	5	G3	５	6	IP	６		IP	５		IP	３		IP	６		IP	５		IP	６		G3
+横井　　健太	4.90	0.18	3.8	６	6	IP	３		IP	２		IP	２		IP	３		IP	５		IP	２		IP	３		IP	５		IP	５		IP
+富永　　大一	3.30	0.18	3.4	５		IP	４		IP	６		IP	６		IP	４		IP	３	5	IP	３		IP	６		IP	４		IP	４	4	IP

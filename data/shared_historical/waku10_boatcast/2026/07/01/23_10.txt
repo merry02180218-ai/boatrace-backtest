@@ -1,0 +1,8 @@
+data=
+1	0
+川崎　　公靖	6.50	0.15	3.0	３		IP	４		IP	３		IP	２		IP	６		IP	１		IP	２		IP	１		IP	４		IP	２		IP
+大場　　恒季	6.60	0.16	2.3	２		IP	５		IP	３		IP	４		IP	４		IP	２		IP	３		IP	１		IP	１		IP	２		IP
+小池　　哲也	5.20	0.15	3.5	１		IP	３		IP	５		IP	１		IP	６		G2	５		IP	５		IP	４		IP	３		IP	２		IP
+小原　　聡将	6.20	0.14	3.1	５		IP	３		G2	３		G2	２		IP	３		IP	４		IP	１		IP	２		IP	４	5	IP	３	3	IP
+高山　　敬悟	5.11	0.16	2.5	１		IP	２		IP	３		IP	落		IP	６		IP	２		IP	２		IP	５		IP	５		IP	６	6	G3
+原田　才一郎	4.90	0.18	4.0	２		IP	２	4	IP	６		G1	２		IP	５		IP	５		IP	２		IP	６		IP	４		IP	３		IP

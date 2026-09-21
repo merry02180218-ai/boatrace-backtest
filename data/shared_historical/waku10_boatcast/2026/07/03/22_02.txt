@@ -1,0 +1,8 @@
+data=
+1	0
+香月　　大輝	5.50	0.18	3.2	３		IP	４		IP	５		IP	２		IP	５		IP	５		IP	１		IP	１		IP						IP
+豊田　　訓靖	4.00	0.23	5.1	５		G3	３		G3	６		G3	４		IP	１		IP	３		IP	４		IP	６		IP	４		IP	５		IP
+上野　　秀和	4.70	0.13	2.6	２		IP	２		IP	３		IP	１		IP	５		IP	４		IP	６		IP	５		IP	５		IP	４		IP
+牧原　　　崇	5.20	0.13	2.9	３		IP	２		IP	５		IP	４		IP	４		IP	２		IP	３		IP	４		IP	５		IP	２	5	IP
+中岡　　　駿	2.80	0.12	2.6	１		IP	５		IP	６		IP	４		IP	５		IP	６	6	IP	６		G3	６		IP	５		IP	４		IP
+若林　　　将	5.22	0.14	2.3	６		IP	４		G1	４		IP	２		IP	２		IP	エ		G3	３		IP	３		IP	６		IP	２		IP

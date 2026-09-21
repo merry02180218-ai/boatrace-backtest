@@ -1,0 +1,8 @@
+data=
+1	0
+磯部　　　誠	10.40	0.10	1.3	１		IP	１		G2	２		G2	１		SG	１		G1	２		G1	３		SG	１		SG	１		G1	１		IP
+大上　　卓人	6.10	0.14	3.1	２		IP	２		IP	３		IP	３		SG	６		G1	５	3	G1	５		G1	３		G1	１		IP	３		IP
+富永　夏哉人	4.00	0.16	3.4	６		IP	３		IP	２		IP	３		IP	４		IP	６		IP	５		IP	３		IP	４	4	IP	５		IP
+佐々木　康幸	5.20	0.11	2.0	６	5	G3	１		IP	５		G3	２		IP	３		IP	６		IP	４		IP	２		IP	４		IP	２		IP
+寺本　　重宣	4.40	0.13	2.5	３		IP	４		IP	４		IP	５		IP	２		IP	３		IP	３		IP	５	4	IP	５		IP	４		IP
+清水　　敦揮	5.20	0.21	4.8	６		IP	４		IP	５		IP	２		IP	４		IP	３		IP	４		IP	２		IP	４		IP	２		IP

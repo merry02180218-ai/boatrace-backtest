@@ -1,0 +1,8 @@
+data=
+1	0
+本村　　　大	6.60	0.22	4.8	４		IP	６		IP	１		IP	５		IP	６		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+藤生　　雄人	5.60	0.17	3.6	３		IP	１		IP	２		IP	２		IP	４		IP	５		IP	２		IP	４		IP	Ｆ		IP	３		IP
+木場　　悠介	6.40	0.14	3.2	５		IP	２		IP	２		IP	２		IP	３		IP	４	2	IP	４		IP	１		IP	３		IP	２		IP
+小川　日紀太	4.10	0.16	4.0	５		IP	２		IP	４		IP	３		IP	５		IP	５		IP	５		IP	３		IP	２		IP	６		IP
+三川　　昂暁	4.80	0.18	3.6	３		IP	３		IP	５		IP	５		IP	４		IP	１		IP	５		IP	５		IP	２		IP	３		IP
+上平　　真二	5.30	0.23	5.1	２		IP	３		IP	４		G1	３	4	IP	２		IP	６		G1	４		IP	４	5	IP	５	5	IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+原田　才一郎	9.50	0.12	2.9	１		IP	１		IP	１		IP	１		G1	１		IP	１		IP	２		IP	３		IP	１		IP	１		IP
+大賀　龍之介	6.80	0.17	3.3	４		IP	２		IP	１		IP	５		IP	２		IP	２		IP	３		IP	１		IP	４	3	IP	２		IP
+宗行　　治哉	6.80	0.12	2.7	３		IP	３		G2	２		G2	２		IP	３		IP	４		G2	１		G2	５		IP	３		IP	２		IP
+西岡　　顕心	7.10	0.12	3.2	２		IP	２		IP	４		G1	３		SG	２		SG	３		IP	３		IP	２		G1	２		G1	６		G1
+菊池　　宏志	3.80	0.17	3.0	４		IP	５		IP	５		IP	６		IP	４		IP	６		IP	２		IP	４		IP	３		IP	３		IP
+南　　　佑典	3.70	0.18	4.4	４		IP	５		IP	５		IP	２		IP	４		IP	３		IP	５		G2	６		IP	４		IP	６		IP

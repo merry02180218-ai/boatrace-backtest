@@ -1,0 +1,8 @@
+data=
+1	0
+青木　幸太郎	10.00	0.14	2.6	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+齊藤　　　廉	5.11	0.19	3.3	２		IP	２	3	IP	３		IP	６		IP	２		IP	５		IP	６		IP	２		IP	４		IP	転		IP
+嘉手苅　徹哉	2.70	0.13	3.5	転		IP	５		IP	３		IP	４		IP	５		IP	３		IP	５		IP	５		IP	５		IP	６		IP
+村本　　大成	3.50	0.19	4.3	６		IP	４	5	IP	３		IP	６		IP	６	5	IP	３		IP	４		IP	５		IP	３		IP	４		IP
+吉武　　真也	3.44	0.20	4.3	４	4	IP	６		IP	不		IP	５		IP	４		IP	５		IP	３		IP	４		IP	４		IP	４	6	IP
+下河　　誉史	2.30	0.20	4.3	５	5	G3	不	2	IP	不	5	IP	２		IP	５	5	IP	４	4	IP	５	4	IP	５		IP	５		IP	６		IP

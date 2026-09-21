@@ -1,0 +1,8 @@
+data=
+1	0
+籾山　　佳岳	8.90	0.12	1.9	６		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+小林　　遼太	5.40	0.17	3.0	３		IP	２		IP	３	3	G3	２		IP	２		IP	６		IP	６		IP	３		IP	５		IP	２		G3
+土屋　　千明	4.90	0.15	2.2	６		IP	３	2	IP	５		IP	２		G3	５		G3	３	2	G3	２		G3	３		IP	３		IP	５		IP
+前出　　達吉	4.70	0.13	2.4	３		IP	３		IP	４	5	IP	５		IP	５		IP	４		IP	２		IP	４		IP	６	5	G3	１	3	IP
+尾道　　佳諭	4.00	0.12	2.3	４		IP	６	4	IP	５		IP	３		IP	６		IP	３		IP	４		IP	５	4	IP	２		IP	３		IP
+渡辺　　　豊	1.80	0.23	5.2	６		G3	６		G3	６		IP	５	5	IP	５	4	IP	５		IP	６		IP	５	5	IP	５		IP	４		IP

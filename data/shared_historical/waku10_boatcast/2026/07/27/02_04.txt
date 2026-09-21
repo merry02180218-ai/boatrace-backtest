@@ -1,0 +1,8 @@
+data=
+1	0
+関根　　彰人	6.80	0.13	2.0	１		IP	４	2	G3	１		G3	５		IP	２		IP	２		IP	１		IP	２		IP	５		IP	３		IP
+渡邉　　英児	6.80	0.21	3.8	３		IP	５		IP	１		IP	２		IP	１		IP	２		IP	３		IP	５		IP	２		IP	２		IP
+鈴木　　裕隆	5.10	0.15	3.8	６	5	IP	４		G3	１		G3	４	2	IP	３		IP	３		IP	３		IP	４		IP	４		IP	３		IP
+佐藤　　大騎	3.30	0.15	3.5	４		IP	５		IP	３		IP	５		IP	４		IP	５		IP	６		IP	５		IP	４		IP	３		IP
+桐本　　康臣	5.80	0.15	2.8	２		IP	２		IP	３		IP	５		IP	４		IP	５		IP	３		IP	３		IP	３	4	IP	１		IP
+黒田　　誠司	2.10	0.18	3.3	６		IP	４		G3	５		IP	６	5	IP	５		IP	６		IP	６		IP	４		IP	４		IP	６		IP

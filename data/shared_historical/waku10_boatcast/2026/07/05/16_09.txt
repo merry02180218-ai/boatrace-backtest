@@ -1,0 +1,8 @@
+data=
+1	0
+小野　　生奈	9.50	0.15	2.7	１		G2	２		G3	１		G3	１		G3	１		G3	１		IP	４		IP	１		G3	１		G3	１		G3
+金子　　賢志	6.90	0.11	2.3	４		G2	５		IP	２		IP	１		IP	１		IP	２		IP	２		G1	５		G1	３		IP	２		IP
+河野　　　大	7.30	0.14	2.5	３		G2	１		G2	６		IP	１		IP	１		IP	３		IP	４		IP	１		IP	４		IP	１		IP
+入海　　　馨	4.90	0.16	3.4	５		G2	３		IP	３		IP	６		G1	４		IP	２		G1	６		G1	３		G1	３		G1	５	6	G1
+石原　　　翼	5.20	0.14	3.7	５		G2	５		G2	５		G2	６		G2	４	6	IP	４		IP	２		IP	２		IP	２	4	IP	２	6	G2
+野中　　一平	4.40	0.10	2.1	６		G2	１	5	IP	３		G1	６		G1	２	5	IP	５		IP	６	5	IP	３	3	IP	５	4	IP	４	2	IP

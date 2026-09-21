@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　　歩	7.40	0.16	2.9	１		G3	１		IP	２		IP	Ｆ		IP	２		IP	１		IP	１		IP	２		IP	３		IP	４		G3
+大澤　　真菜	4.10	0.19	3.7	６		G3	５		IP	５		IP	２		IP	１		IP	６		IP	２		IP	３		IP	６		IP	５		IP
+岩崎　　芳美	5.90	0.14	2.7	４		G3	４		IP	２		IP	２		IP	３		G3	２		G3	３		G2	Ｆ		IP	２		IP	３		IP
+三浦　　永理	7.70	0.15	3.0	２		G3	１		IP	５	5	IP	２		IP	３		IP	３		G3	２		G3	２		G2	１		G3	２		IP
+古賀　　千晶	3.10	0.20	3.1	５		G3	６		IP	５		IP	２		G3	６		G3	６		IP	５		IP	５		G3	４		G3	２		G3
+大橋　栄里佳	4.40	0.21	4.4	４	5	G3	２		IP	５		IP	５		G3	６		IP	４		IP	２		IP	５		IP	２		G3	４		G3

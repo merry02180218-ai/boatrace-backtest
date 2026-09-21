@@ -1,0 +1,8 @@
+data=
+1	0
+今泉　　　徹	6.40	0.20	3.2	１		IP	４	2	IP	２		IP	３		IP	３	2	IP	２		IP	２		IP	５		IP	１		IP	５		IP
+出畑　　孝典	4.70	0.19	4.3	３		G3	６		G3	３		IP	２		IP	３		IP	６		IP	１		IP	６		IP	４		IP	４		IP
+寺島　　吉彦	3.60	0.20	4.5	６		IP	５	5	IP	４		IP	２		IP	４		IP	５		IP	５	6	IP	２		IP	６		IP	４		IP
+間嶋　　仁志	3.80	0.19	3.6	５		IP	５	2	IP	５	2	IP	１	2	IP	４		IP	４	2	G3	６	2	G3	６	3	IP	１	2	IP	５		IP
+田村　　隆信	4.00	0.16	4.5	５		IP	５		G2	６		G1	６		G2	６		IP	１		IP	５		IP	３		IP	５		IP	１		IP
+長野　　未来	1.50	0.20	4.2	６		IP	６		IP	４		IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP

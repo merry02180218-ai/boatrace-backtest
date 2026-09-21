@@ -1,0 +1,8 @@
+data=
+1	0
+平尾　　崇典	8.50	0.16	3.5	４		IP	１		G2	３		G2	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	４		G2
+酒井　　陽祐	4.10	0.15	4.0	２		IP	２		IP	６		IP	２		G3	６		G3	６		IP	５		G3	５		IP	２		IP	５		IP
+馬野　　　耀	6.60	0.15	2.9	６		IP	１		IP	１		IP	３		IP	４		IP	２		G2	３		IP	１		IP	４		IP	３		IP
+谷口　　健一	2.20	0.15	2.9	６		IP	妨		IP	６		IP	５		IP	５		IP	５		IP	４		IP	４	5	IP	５		IP	４		IP
+上原　　　崚	5.40	0.15	2.8	３		IP	４		G2	６	6	G3	３		IP	３		G2	６		G2	５		G2	２	6	IP	２		IP	２	6	IP
+加藤　　優弥	2.50	0.15	3.3	５		IP	５		IP	５		IP	６		IP	５		IP	６		IP	５		IP	３		IP	６		IP	３		IP

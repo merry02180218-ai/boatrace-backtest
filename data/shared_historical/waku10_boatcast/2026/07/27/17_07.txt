@@ -1,0 +1,8 @@
+data=
+1	0
+永井　　亮次	7.80	0.15	3.1	３		IP	１		IP	１		IP	２		IP	３		G3	２		IP	５		IP	１		IP	２		IP	１		IP
+池田　　剛規	3.40	0.15	3.1	３		IP	４		IP	３		IP	４		IP	５		IP	５		IP	６		IP	３		IP	６		IP	５		IP
+広次　　　修	3.80	0.15	3.2	３		IP	２		IP	５		IP	６		IP	５		IP	６		IP	２		IP	２		IP	６		IP	６	2	IP
+北川　　敏弘	2.60	0.13	2.4	５		IP	４		IP	５		IP	５		IP	４		IP	４		IP	６		IP	６	5	IP	５		IP	４	5	IP
+和田　　兼輔	5.10	0.13	3.0	３		IP	Ｆ		IP	４		G2	４	4	IP	４		IP	３	4	IP	２		IP	２	6	G1	３		G1	５		IP
+中島　　浩哉	2.10	0.17	3.6	６		IP	５		G3	５		IP	６		IP	６		IP	５		IP	３		G3	５		IP	６		IP	６		IP

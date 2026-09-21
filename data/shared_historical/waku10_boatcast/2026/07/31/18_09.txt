@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　一樹	7.20	0.12	2.9	２		IP	３		IP	４		IP	２		IP	１		IP	１		IP	２		IP	２		IP	５		IP	２		IP
+森林　　　太	4.60	0.18	4.7	４		IP	５		G3	４		IP	３		IP	２		IP	５		IP	４		IP	２		IP	３		IP	５		IP
+竹田　　吉行	4.90	0.16	3.4	２		IP	６		IP	５		IP	３		IP	３	4	IP	４		IP	１	4	IP	５		IP	５		IP	２		IP
+國弘　　翔平	3.50	0.15	3.6	２		IP	４		IP	５		IP	５		IP	５		IP	６	5	IP	４		IP	５	5	IP	２		IP	５		IP
+内山　　峻輔	4.11	0.12	2.0	６		IP	６		IP	２		IP	３		IP	３		IP	４		IP	転		IP	６		IP	４		IP	３		IP
+田村　　隆信	4.40	0.19	4.5	４		IP	６		IP	４	4	G2	６		G1	３		IP	３		IP	４	3	IP	２	4	IP	６		IP	３		G1

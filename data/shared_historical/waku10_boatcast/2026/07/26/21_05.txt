@@ -1,0 +1,8 @@
+data=
+1	0
+平田　　忠則	9.40	0.10	2.3	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		G3	１		G3
+瀧川　　千依	4.00	0.21	4.0	６		IP	２		IP	Ｆ		IP	２		IP	６		IP	４		IP	４		IP	２		IP	Ｆ		IP	３		IP
+本田　　　愛	7.30	0.15	3.0	６		IP	１		IP	１		IP	２		IP	３		IP	３		IP	３		IP	２		IP	２		IP	１		IP
+上村　　宏太	5.10	0.14	3.5	４		IP	２	3	IP	３		IP	３		IP	３		IP	５	5	IP	３		IP	３		IP	６	5	IP	３		IP
+小野　　信樹	4.00	0.12	2.4	４		IP	欠		IP	６	6	IP	２		IP	１		IP	５		IP	４		IP	５		IP	６		IP	４		IP
+吉川　　昭男	5.30	0.18	4.5	４	2	IP	４	2	IP	１	2	IP	５	3	IP	５	2	IP	３	2	IP	２	2	IP	１	3	IP	４	4	IP	５	3	IP

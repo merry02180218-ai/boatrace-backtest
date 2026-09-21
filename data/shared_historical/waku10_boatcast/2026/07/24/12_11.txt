@@ -1,0 +1,8 @@
+data=
+1	0
+吉村　　　誠	9.40	0.13	2.1	１		IP	１		IP	１		IP	２		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP
+伯母　　芳恒	5.30	0.15	3.9	１		G3	Ｆ		IP	４		IP	６		IP	２		IP	２		IP	２		IP	５		IP	４		IP	２		G3
+伊藤　　将吉	6.80	0.16	3.5	１		IP	５		IP	６		IP	１		IP	３		IP	２		IP	２		IP	２	4	G1	１	4	IP	４		IP
+山田　　竜一	4.60	0.15	3.2	４	3	IP	４		IP	２		IP	３		IP	１		IP	５		IP	５		IP	６		IP	６		IP	２		IP
+倉富　　大誠	6.33	0.17	3.1	２		IP	４		IP	２		IP	４		IP	４		IP	１		IP	１		IP	２		IP	転		IP	６	6	IP
+永田　　啓二	6.40	0.10	1.6	３		IP	１		IP	５		IP	３		IP	４		IP	１		IP	２		G3	４		IP	３		IP	２	5	IP

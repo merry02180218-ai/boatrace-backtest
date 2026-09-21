@@ -1,0 +1,8 @@
+data=
+1	0
+今井　　裕梨	7.70	0.15	2.2	１		IP	６		IP	２		IP	１		IP	２		G3	４		G3	１		IP	３		IP	１		IP	１		IP
+出口　舞有子	5.30	0.16	2.5	５		IP	４		IP	５		IP	３		IP	１		IP	６		IP	３		IP	２		IP	２		IP	３		IP
+庄司　樹良々	3.70	0.13	1.8	５		IP	Ｆ		IP	６		IP	４		IP	４		IP	１		IP	３		IP	５		IP	４		IP	４		IP
+金児　　隆太	5.80	0.14	2.9	２		IP	１		IP	４		IP	４		IP	４		IP	４		IP	２		IP	５	2	IP	２		IP	３		G3
+石田　　章央	5.40	0.11	1.9	５		IP	４		IP	３		IP	３		IP	４		IP	１		IP	１		IP	３	4	IP	４		IP	６		IP
+齋藤　　　勇	2.50	0.22	4.3	５		IP	６		IP	４	4	IP	２		IP	５		IP	６		IP	６		IP	６		IP	４		IP	６		IP

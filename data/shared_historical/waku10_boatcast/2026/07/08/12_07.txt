@@ -1,0 +1,8 @@
+data=
+1	0
+大瀧　明日香	9.60	0.15	3.8	１		IP	２		IP	１		IP	１		IP	１		G3	１		G3	１		IP	２		IP	１		IP	１		IP
+赤澤　　文香	3.60	0.21	4.7	３		IP	５		IP	５		IP	６		IP	６		IP	３		IP	４		IP	１		G3	５		G3	５		IP
+大澤　　普司	7.20	0.13	2.5	３	4	IP	２		G3	１		G3	２		G3	３		IP	３		IP	３		G3	２	5	G3	４		IP	１		IP
+倉田　　茂将	2.70	0.15	2.7	５		IP	５		G3	６	3	G3	５		IP	４		IP	４	5	IP	６		IP	６		IP	５		IP	２	5	IP
+土屋　　太朗	4.60	0.21	3.4	４		IP	４		IP	２		IP	４		IP	３	4	IP	５		IP	２		IP	５		IP	３		IP	５		IP
+市川　　哲也	3.10	0.12	2.1	６		IP	３		IP	４		IP	５	5	IP	５		IP	４	3	IP	４	4	IP	６		IP	５		IP	４	4	G2

@@ -1,0 +1,8 @@
+data=
+1	0
+木場　　悠介	8.60	0.13	2.4	２		IP	２		IP	１		IP	１		IP	２		IP	１		IP	２		IP	３		IP	２		IP	１		IP
+中嶋　　達也	4.70	0.21	4.8	３		IP	３		IP	５		IP	１		IP	４		IP	４		IP	５	3	IP	２		IP	６		IP	４		IP
+吉田　　祐貴	4.20	0.17	3.6	４		IP	５		IP	２		IP	５		IP	４		IP	５		IP	４		IP	２		IP	５	4	IP	３		IP
+桑原　　将光	5.00	0.14	3.2	４		IP	４	5	IP	３		IP	４		IP	５		IP	４		IP	２	5	G3	３		IP	３		IP	３		IP
+早川　　颯太	1.30	0.16	3.0	６		IP	６		IP	６		IP	６		IP	５	6	IP	６	6	IP	５		IP	５		IP	６		IP	６		IP
+藤生　　雄人	4.20	0.18	4.7	６		IP	４		IP	４		IP	６		IP	４		IP	４		IP	４		IP	３		IP	３	5	IP	３		IP

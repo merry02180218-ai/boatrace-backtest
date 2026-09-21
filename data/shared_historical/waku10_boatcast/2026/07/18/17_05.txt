@@ -1,0 +1,8 @@
+data=
+1	0
+野末　　智一	8.50	0.16	3.8	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	２		IP	１		IP	６		IP	１		IP
+塩崎　　優司	4.20	0.15	3.1	５		IP	４		IP	３		IP	４		IP	３		IP	３		IP	６		IP	３		IP	３		IP	６		IP
+小林　　甘寧	5.90	0.14	3.2	３		IP	１		IP	３		IP	４	4	IP	２		IP	２	4	IP	２		IP	転		IP	３		IP	５		IP
+高野　　心吾	4.30	0.21	4.0	５		IP	６	5	IP	１		IP	５		IP	１		IP	２		IP	６		IP	４		IP	４		IP	６		IP
+大西　　隆洋	3.70	0.16	3.6	４		IP	４	4	IP	５		IP	６		IP	４		IP	３		IP	２		IP	５	6	IP	４		IP	５		IP
+渡邊　雄一郎	5.40	0.12	2.6	３		IP	３		IP	５	5	IP	４		IP	４		IP	２	5	IP	５		IP	２	5	IP	２		IP	３		IP

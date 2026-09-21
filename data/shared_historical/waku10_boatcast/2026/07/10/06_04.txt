@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　　綾	5.90	0.16	3.0	６		IP	６		IP	２		IP	２		IP	２		IP	１		IP	４		IP	２		IP	１		IP	６		IP
+山下　　友貴	7.60	0.19	3.2	１		IP	２		IP	２		G3	２		G3	３		IP	１		IP	３		IP	３		IP	３		G3	２		IP
+加藤　　奈月	3.11	0.15	3.1	４		IP	５		IP	転		G3	４		G3	４		IP	６	4	IP	４		G3	６	4	G3	５		G3	３		G3
+津田　　裕絵	5.80	0.17	2.8	２		IP	４		IP	４		IP	５		IP	２		IP	３		IP	５		IP	１		IP	３		G3	２		IP
+滝沢　　織寧	3.50	0.16	2.9	４		IP	Ｆ		IP	３	4	IP	５		IP	２		IP	５		IP	３		IP	６		IP	５		IP	４		IP
+松瀬　　弘美	2.80	0.18	4.7	４		IP	５		IP	５		G3	６		G3	５		IP	６		IP	３		IP	４		G3	５		IP	４		G3

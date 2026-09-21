@@ -1,0 +1,8 @@
+data=
+1	0
+徳増　　秀樹	9.20	0.10	2.5	１		IP	２		IP	３		IP	１		IP	１		G3	１		G3	３		G3	１		G3	１		G1	１		IP
+石岡　　将太	7.00	0.17	4.1	２		IP	２	3	IP	２		IP	１		IP	３		IP	５		IP	２		IP	２		IP	４		IP	２		IP
+渡邊　　雄斗	4.14	0.18	3.4	６	6	IP	４	4	IP	６		IP	３		IP	２		IP	２		IP	６		IP									IP
+尾形　　栄治	6.60	0.16	3.2	４		IP	３		IP	５		IP	２		IP	１		IP	１		IP	２		IP	４	5	IP	３		IP	２		IP
+中村　　栄治	3.70	0.19	4.2	３		IP	５		IP	６		IP	３	6	IP	２		IP	６		IP	５		IP	２		G3	６		IP	５		IP
+岸本　　　隆	4.60	0.16	3.5	４	5	IP	３		IP	４		IP	４		G3	５		G3	３		IP	４		IP	３		IP	３		G3	４		G3

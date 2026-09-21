@@ -1,0 +1,8 @@
+data=
+1	0
+高倉　　孝太	9.20	0.12	2.2	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	３	2	IP
+宮村　　勇哉	6.50	0.13	2.3	２		IP	２		IP	１		IP	３		IP	６		IP	１		IP	１		IP	５		IP	２		IP	５		IP
+浜先　　真範	8.10	0.12	2.2	１		IP	２		IP	１		IP	３		G1	１		IP	４		IP	２		IP	１		IP	３		IP	２		IP
+森　　　竜也	3.70	0.21	4.3	３		IP	４		IP	２		IP	６		IP	６		IP	４		G3	５		G3	２		IP	５		IP	６		IP
+町田　　洸希	4.70	0.17	3.4	５		IP	５		IP	３		IP	３		IP	２		IP	６		IP	３		IP	５		IP	２		IP	３		IP
+川辺　　郭人	2.80	0.24	3.6	５	5	IP	５	5	IP	６		IP	３		IP	５		IP	５		IP	５		IP	２	5	IP	５	5	IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+富田　　恕生	6.60	0.18	3.5	３		IP	１		IP	４		IP	１		IP	１		IP	６		IP	６		IP	１		G3	１		IP	４		IP
+寺嶋　　　雄	3.90	0.24	3.9	６		IP	６		IP	４		IP	４		IP	４		IP	６		IP	２		IP	４		IP	２		IP	４		IP
+岡村　　慶太	6.60	0.14	2.4	３		IP	５	4	IP	５		IP	欠		IP	１		IP	１		IP	３		IP	１		IP	１	4	IP	２		G3
+今村　天次朗	2.00	0.19	4.0	５	6	IP																											IP
+上田　　隆章	3.80	0.21	4.2	５		IP	６		IP	３		IP	５		IP	４		IP	６		IP	３	6	IP	４		IP	２		IP	４		IP
+原村　　拓也	2.70	0.19	4.3	４		IP	５		IP	５	5	IP	４		IP	５		IP	６		IP	３		IP	４		IP	６		IP	６		IP

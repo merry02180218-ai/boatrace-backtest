@@ -1,0 +1,8 @@
+data=
+1	0
+富永　夏哉人	7.40	0.17	2.6	１		IP	１		IP	５		IP	３		IP	１		IP	２		IP	１		IP	２		IP	４		IP	３		IP
+橋本　　年光	4.40	0.14	3.1	１		IP	６		IP	５		IP	５		IP	４		IP	４		IP	２		IP	４		IP	２		IP	６		IP
+水摩　　　敦	6.80	0.18	3.7	３		IP	２		IP	１		IP	１		IP	２		IP	４		IP	２		IP	３		IP	３		IP	５		IP
+柳生　　泰二	7.10	0.13	2.4	２		IP	５		G1	６		G2	２		IP	４	5	IP	２		IP	３		G1	２		G1	３		SG	１	6	SG
+近藤　　稔也	3.20	0.16	2.1	４		IP	３		IP	４		IP	４		IP	Ｆ	4	IP	６		IP	４		IP	６		IP	３		IP	５		IP
+森　　　照夫	2.60	0.18	3.8	６		G3	５		IP	４		IP	４		IP	Ｆ		IP	６		IP	６		IP	２		IP	４		IP	６		IP

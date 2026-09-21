@@ -1,0 +1,8 @@
+data=
+1	0
+上村　慎太郎	7.40	0.19	3.7	１		IP	１		IP	２		IP	１		IP	３		IP	１		IP	５		IP	５		IP	２		IP	２		IP
+平田　健之佑	7.00	0.12	2.6	１		IP	２		IP	４		IP	２		IP	２		IP	３		IP	１		IP	４		IP	３		IP	３		IP
+花本　　　剛	4.10	0.19	4.1	６		IP	５		IP	１		IP	５		IP	５		IP	３		IP	３		IP	６		IP	１		IP	６		IP
+香月　　大輝	2.90	0.13	2.9	４		IP	６		IP	４	5	IP	５		IP	３		IP	６		IP	３		IP	Ｆ		IP	６		IP	４		IP
+藤丸　　光一	3.10	0.21	5.1	５		IP	４	2	IP	５	2	IP	４	1	IP	４	1	IP	６	4	IP	４		IP	５	1	IP	３	2	IP	５	4	IP
+近藤　　来希	1.60	0.23	5.1	５		IP	６		IP	５		IP	６		IP	５		IP	５		IP	６		IP	６		IP	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+新出　　浩司	7.20	0.14	2.7	１		IP	３		IP	２		IP	１		IP	４		G3	１		IP	３		IP	５		IP	２		IP	２		IP
+亀山　　雅幸	7.90	0.15	2.6	５		IP	５		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	２	3	IP
+高井　　雄基	4.30	0.22	4.6	４		IP	４		IP	５		IP	３		IP	３		IP	１		IP	５	4	IP	４	5	IP	４		G3	６		IP
+木幡　　純也	4.50	0.21	3.7	３		IP	６		IP	５		IP	５	5	IP	２		IP	２	2	IP	２		IP	４		IP	５		IP	４		IP
+岡部　　大輝	5.10	0.17	3.7	１		IP	３	4	IP	４		IP	５		IP	３		IP	１		G3	６		G3	５		IP	３		IP	４		IP
+乃村　　康友	3.10	0.20	4.8	３		IP	６		IP	５		IP	３		IP	６		IP	６		IP	１		IP	６		IP	５		IP	６		G3

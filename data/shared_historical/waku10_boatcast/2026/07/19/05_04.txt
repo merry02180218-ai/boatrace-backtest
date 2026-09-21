@@ -1,0 +1,8 @@
+data=
+1	0
+淺香　　文武	8.80	0.14	2.5	１		IP	１		IP	２		IP	１		G3	１		G3	１		IP	１		IP	１		IP	５		IP	２		IP
+浦田　　信義	4.30	0.18	3.1	３		G3	３		G3	５		IP	３		IP	３		IP	４		IP	５		IP	３		IP	４		IP	６		IP
+徳増　　秀樹	6.90	0.12	2.0	２		IP	２		G1	５		IP	３		IP	１		IP	２		G1	５	4	G1	１		IP	３		IP	３		IP
+清水　　紀克	3.00	0.17	3.7	３	2	IP	４	2	IP	３	2	IP	６	2	IP	６	2	IP	４	3	IP	６	2	IP	５	2	IP	４	2	IP	６	3	IP
+後藤　　隼之	4.10	0.19	3.5	２	6	G3	５	3	G3	３		IP	５	4	IP	５		G3	５		G3	３	4	IP	３		IP	６		IP	３		IP
+岡部　　　哲	3.40	0.19	4.6	５		G3	５		G3	４	5	IP	５		IP	４		IP	５		IP	２		IP	４		IP	５		IP	４		IP

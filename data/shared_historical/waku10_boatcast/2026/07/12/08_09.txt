@@ -1,0 +1,8 @@
+data=
+1	0
+吉岡　　　誠	5.10	0.14	3.6	２		IP	１		IP	６		IP	５		IP	６		IP	５		IP	１		IP	２		IP	２		IP	６		IP
+小川　竜太朗	6.00	0.19	3.4	３	3	IP	２		IP	３		IP	２		IP	３		IP	２		IP	３		IP	５		IP	４		IP	３		IP
+中越　　博紀	6.00	0.17	3.8	５		IP	３		IP	３	2	IP	１		IP	６		IP	６		IP	２	5	IP	２		IP	２		IP	１		IP
+荒井　　翔伍	5.70	0.14	3.2	４		IP	４		IP	４		IP	１		IP	２		IP	４		IP	３		IP	４		G2	３		IP	３		IP
+森作　　広大	2.40	0.20	5.1	５		IP	４		IP	５		IP	６		IP	５		IP	５		IP	５		IP	５		IP	３	6	IP	６		IP
+烏野　　賢太	2.30	0.18	3.9	５		IP	４		G3	５		G3	６		IP	３		IP	５		IP	６		IP	５	5	IP	５		IP	６		IP

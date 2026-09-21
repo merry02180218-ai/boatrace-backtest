@@ -1,0 +1,8 @@
+data=
+1	0
+芦澤　　　望	7.90	0.14	2.1	１		IP	２		IP	２		IP	６		IP	１		IP	２		IP	１		IP	１		IP	４		IP	１		IP
+鈴木　　唯央	5.10	0.12	3.1	６		IP	３		IP	１		IP	２		IP	５		IP	１		IP	３		IP	５		IP	５		IP	４		IP
+菊地　　敬介	6.00	0.14	2.6	２		IP	２		IP	２		IP	３		IP	２		IP	５		IP	５		IP	３		IP	２		IP	４		IP
+牧村　　俊輝	3.00	0.21	3.9	５		IP	３		IP	６		IP	５	6	IP	３		IP	５		IP	４		IP	６		IP	５		IP	４		IP
+植田　　太一	5.30	0.15	2.9	３		IP	１		IP	４		IP	３		IP	４		IP	３		IP	６		IP	３		IP	２		IP	５		IP
+森　　　照夫	2.20	0.20	4.0	３		IP	５		IP	６		IP	６		G3	５		IP	４		IP	４		IP	Ｆ		IP	６		IP	６		IP

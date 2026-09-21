@@ -1,0 +1,8 @@
+data=
+1	0
+北川　　敏弘	6.50	0.19	3.9	３		IP	１		IP	１		IP	３		IP	３		IP	２		IP	３		IP	５		IP	６		IP	１		IP
+赤羽　　克也	5.70	0.16	3.8	３		IP	２		IP	２		IP	３		IP	２		IP	２		IP	５		IP	５		IP	４		IP	４		IP
+村上　　　遼	6.60	0.15	3.2	３	2	G2	６		G2	４		IP	１		IP	２		G1	１		IP	２		IP	３		G1	６		IP	３		IP
+佐藤　　　悠	6.60	0.14	2.0	５	5	IP	３		IP	３		IP	５	5	IP	３		IP	２	5	IP	１		IP	２		IP	３		G2	１		G2
+中村　　将隆	4.70	0.19	4.0	６	6	G3	２	6	G3	３		IP	３		IP	４		IP	５		IP	５		IP	２		IP	２		G3	５		IP
+橋本　　英一	2.22	0.20	4.4	６		IP	落		IP	６		IP	４		IP	５		IP	６		IP	６		IP	４		IP	４		IP	５		IP

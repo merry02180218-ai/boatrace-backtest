@@ -1,0 +1,8 @@
+data=
+1	0
+遠藤　　圭吾	6.30	0.20	4.0	１		IP	１		IP	５		IP	１		IP	２		IP	３		IP	４		IP	６		IP	２		IP	４		IP
+赤池　　修平	4.10	0.24	4.7	５		IP	２		IP	６		IP	５		IP	４		IP	６	3	IP	２		IP	３		IP	２		IP	６		IP
+百武　　　翔	7.00	0.15	3.0	２	4	IP	５		IP	４		IP	４		IP	２		IP	２		IP	１		IP	２		IP	１		IP	２		IP
+野村　　羽玖	1.00	0.18	4.0	６	6	IP																											IP
+平瀬　　城啓	1.80	0.16	3.4	５	4	IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	３		IP
+立具　　敬司	4.10	0.18	3.3	６		IP	４		IP	５		IP	４		IP	３		IP	３		IP	５		IP	５		IP	２		IP	３		IP

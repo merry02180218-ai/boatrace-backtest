@@ -1,0 +1,8 @@
+data=
+1	0
+吉川　　貴仁	9.70	0.10	1.7	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP
+仲口　　博崇	6.80	0.19	4.2	１	1	G3	４		G3	１		G3	２		G3	３		IP	４		IP	４		G3	１	1	IP	３		IP	３		IP
+鈴木　　　博	6.20	0.16	3.4	２		IP	２		IP	４		IP	３		IP	３		IP	５		IP	２		G3	５	5	IP	２		IP	１		IP
+田村　　隆信	4.20	0.15	3.3	４		IP	１		IP	６		IP	６		G2	５		G2	５		G1	４		G1	６		G2	５	3	IP	２		IP
+前田　　紗希	6.00	0.11	2.9	３		G3	２		G3	３	4	IP	３		G2	２		G3	５		G3	２		G3	５		IP	２		G1	４		G3
+栗城　　　匠	4.67	0.13	3.0	４	5	IP	５		IP	５	5	IP	欠		IP	３		IP	４		IP	２		IP	４		IP	５		G2	３		G1

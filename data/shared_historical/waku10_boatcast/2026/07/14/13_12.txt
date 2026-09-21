@@ -1,0 +1,8 @@
+data=
+1	0
+小野　　生奈	9.20	0.14	2.7	３		G2	１		G2	２		G3	１		G3	１		G3	１		G3	１		IP	４		IP	１		G3	１		G3
+大廣　　咲季	4.30	0.16	4.4	２		IP	５		IP	３		IP	５		IP	５		IP	６		IP	３		IP	３		IP	４		IP	３		G3
+岩崎　　芳美	6.50	0.15	2.7	４		IP	２		IP	２		IP	３		G3	２		G3	３		G2	Ｆ		IP	２		IP	３		IP	１	4	IP
+三嶌　さらら	4.40	0.15	3.5	６		IP	３	3	IP	６	6	IP	２		IP	２		IP	４		IP	３		IP	３		IP	５		IP	５		IP
+福岡　　泉水	3.10	0.14	2.5	３		IP	エ		IP	４		IP	５		IP	４		IP	５		IP	４		IP	４		IP	６		IP	４		IP
+魚谷　　香織	2.90	0.17	3.2	５		IP	６		G3	５	5	IP	２		IP	５		IP	５		G2	６		G3	５		G3	４		G3	５		IP

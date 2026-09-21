@@ -1,0 +1,8 @@
+data=
+1	0
+大谷　　直弘	6.50	0.14	3.2	２		IP	２		IP	６		IP	２		IP	３		IP	２		IP	５		IP	２		IP	３		IP	１		IP
+田中　　駿兵	7.80	0.12	2.5	３		G1	１	4	IP	２		IP	１		IP	２		IP	２		IP	１		IP	６		IP	１		IP	３		IP
+國崎　　良春	5.30	0.15	3.4	３		IP	４		IP	４		IP	２		IP	３		IP	４		IP	６		G3	１		IP	５		IP	２		IP
+小林　　一樹	5.70	0.12	2.7	４		IP	２	5	IP	３		IP	１		IP	６		IP	５		IP	２		IP	４		IP	３		IP	２		IP
+大西　　　賢	2.90	0.20	3.9	２		IP	３		IP	６		IP	５		IP	４		IP	６	6	IP	４		IP	６		IP	５		IP	Ｆ		IP
+小柳　　勝希	3.60	0.18	3.9	３		IP	４		IP	４		IP	４		IP	４		IP	６		IP	６		IP	３		IP	５		IP	４		IP

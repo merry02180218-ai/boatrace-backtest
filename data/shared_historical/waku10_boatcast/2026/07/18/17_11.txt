@@ -1,0 +1,8 @@
+data=
+1	0
+今村　　暢孝	8.20	0.15	2.1	１		IP	５		IP	４		IP	２		G3	２		G3	１		IP	１		IP	１		IP	１		IP	１		IP
+石丸　　海渡	7.30	0.12	2.7	２		IP	２		G1	３		IP	２		IP	５		IP	２		IP	５		G1	２		G1	１		IP	２		IP
+北川　　幸典	7.00	0.16	3.2	２		IP	３		IP	２		IP	１		IP	３		IP	３		IP	３		IP	３		IP	１		IP	４		IP
+橋本　　年光	4.80	0.18	4.3	４		IP	４		IP	２		IP	３		IP	５		IP	２		IP	４		IP	５		IP	４		IP	３		IP
+向井田　佑紀	5.40	0.16	2.4	５		IP	３		IP	５		IP	５		IP	１		IP	１		IP	２	4	IP	３	4	IP	５		IP	３		IP
+野末　　智一	3.40	0.21	4.3	３	5	IP	４		IP	５		IP	６		IP	５		IP	６		IP	４		IP	２	3	IP	５		IP	４		IP

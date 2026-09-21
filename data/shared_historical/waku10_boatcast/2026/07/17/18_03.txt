@@ -1,0 +1,8 @@
+data=
+1	0
+大平　誉史明	7.60	0.15	3.0	３		IP	３		IP	１		IP	１		IP	１		IP	２		IP	１		G3	１		G3	４		IP	５		IP
+楠原　　正剛	6.60	0.15	3.6	２		IP	１		IP	４		IP	３		G3	５		G3	２		IP	２		IP	３		IP	１		IP	４		IP
+松尾　　　充	4.10	0.17	3.2	３		IP	３		IP	５		G1	６		G1	４		G1	３	5	IP	５		IP	６	4	IP	４	4	IP	３		G3
+金子　　怜央	3.00	0.19	3.1	６		IP	４		IP	３		IP	５		IP	６		IP	５		IP	４		IP	６		IP	６		IP	２		IP
+林　　　恵祐	2.70	0.17	3.5	４		IP	４		IP	５		IP	４		IP	６	6	IP	６		IP	５		IP	４		IP	４		IP	６		IP
+野村　　　誠	4.30	0.14	2.4	３		IP	３		IP	３		IP	４		IP	６	5	IP	４		IP	６		IP	６		IP	１		IP	４	5	IP

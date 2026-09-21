@@ -1,0 +1,8 @@
+data=
+1	0
+石渡　　鉄兵	9.40	0.11	2.2	１		SG	２		IP	１		IP	２		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		G1
+渡邉　　俊介	6.40	0.14	3.2	２		IP	２		IP	４		IP	１	3	IP	５		IP	２		IP	３		IP	５		IP	２		IP	２		IP
+関　　　浩哉	6.50	0.13	3.2	４		SG	３		G1	５		G1	１		SG	６		SG	４		G1	３		G1	１		G1	６	4	G1	２		G1
+松田　　竜馬	4.40	0.17	3.4	４		IP	５		IP	５		IP	３		IP	４	5	IP	３		IP	６		IP	６		IP	１		IP	２		IP
+丸野　　一樹	8.00	0.09	2.1	３		SG	６		G1	２		G1	１		SG	３		G1	３		G1	１		IP	２		IP	１		IP	３		G1
+白井　　英治	7.10	0.15	3.7	２		SG	６		G1	４		G1	３		G1	４		SG	２		G1	４	2	G1	２		G1	２	5	G1	３		G1

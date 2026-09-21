@@ -1,0 +1,8 @@
+data=
+1	0
+塩嶋　　泰空	1.00	0.05	1.0	６		IP	６		IP																								IP
+宮嵜　隆太郎	1.22	0.12	3.2	６		G3	５		G3	５		IP	６		IP	欠		IP	６		IP	６	3	IP	５		IP	６		IP	転		IP
+河野　　主樹	5.60	0.13	3.2	４		IP	１		IP	３		IP	４		IP	２		IP	５		IP	３		IP	５		IP	２		IP	３	2	IP
+森高　　一真	6.70	0.11	2.4	３		SG	４		G1	３		G1	５		SG	３		SG	２		G1	５		G1	２		G1	４	5	G1	２		G1
+土屋　　太朗	4.40	0.20	3.5	４		IP	２		IP	４		IP	３	4	IP	５		IP	２		IP	５		IP	３		IP	５		IP	５	6	IP
+中嶋　　世奈	1.80	0.19	4.5	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP	４	4	IP	６		IP	５		IP	５	5	IP

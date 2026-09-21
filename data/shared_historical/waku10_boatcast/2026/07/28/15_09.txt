@@ -1,0 +1,8 @@
+data=
+1	0
+谷口　　知優	7.80	0.16	2.8	５		G3	１		IP	５		IP	１		IP	３		IP	１		G3	１		IP	２		IP	１		IP	１		IP
+服部　　達哉	6.40	0.21	5.0	４		G3	２		G3	２		IP	３		IP	４		IP	１		IP	３		IP	４		IP	２		IP	３		IP
+牧　　　宏次	7.20	0.15	2.1	２		IP	３		IP	２		IP	１		IP	２		IP	１		IP	４		IP	３		IP	２		IP	４		IP
+栗山　　繁洋	2.00	0.16	3.3	４		IP	５		IP	６	5	IP	５		IP	４		IP	５		IP	５		IP	６		IP	６		IP	６		IP
+原田　　雄次	5.30	0.21	4.6	３		IP	２		IP	４		IP	２		IP	３		IP	３		IP	４		IP	２		IP	６		IP	５		IP
+原　　　豊土	3.70	0.17	4.2	６		G3	４		G3	６		G3	６		G3	５		G3	３		G3	３		IP	４		IP	４		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+豊田　　訓靖	3.40	0.15	3.7	４		IP	６		IP	６		IP	４		G3	６		G3	５		IP	３		IP	６		IP	３		IP	２		IP
+前野　　竜一	6.30	0.14	2.9	３		IP	２		IP	３		IP	２		G3	３		G3	３		IP	６		IP	２		IP	３		IP	２		IP
+小宮　　涼雅	6.10	0.14	3.0	３		G3	６	4	IP	１		IP	３		IP	１		IP	５		IP	３		IP	２		IP	４		IP	２		IP
+大町　　利克	2.50	0.18	3.0	３		IP	６		IP	６		IP	４		IP	６		IP	４		IP	６		IP	４		IP	５		IP	６		IP
+山川　　雄大	3.20	0.19	4.2	５		IP	５		IP	５		IP	５		IP	３		IP	６	6	IP	２		IP	６		IP	５		IP	３		IP
+早川　　理稀	1.80	0.16	2.7	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	３		IP	５		IP	５		IP	６		IP

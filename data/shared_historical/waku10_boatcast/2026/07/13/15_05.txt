@@ -1,0 +1,8 @@
+data=
+1	0
+寺本　　昇平	5.90	0.17	2.7	２		IP	１		G3	３		G3	６		IP	５		IP	１		IP	３		IP	１		IP	４		IP	５		IP
+豊田　　泰洋	4.50	0.19	4.4	６		IP	５		IP	１		IP	２		IP	６	3	IP	６		IP	２		IP	５		IP	１		IP	５		IP
+芝田　　浩治	5.00	0.15	3.3	２		IP	６		IP	２		IP	３		IP	１		IP	３		IP	３		IP	５		IP	５		IP	６		IP
+浦田　　晃嗣	4.30	0.13	3.5	５		IP	１		IP	１		IP	４		IP	３		IP	５		IP	４		IP	５		IP	６		IP	５		IP
+砂長　　知輝	4.80	0.18	3.8	３		IP	３		IP	５		IP	１	3	IP	３		IP	６		G1	３		G1	Ｆ		G1	６		SG	４	6	SG
+柘植　　政浩	4.30	0.16	1.8	４	5	IP	４		IP	５		IP	４	5	IP	３		IP	２		IP	２		IP	６		IP	５		IP	４		IP

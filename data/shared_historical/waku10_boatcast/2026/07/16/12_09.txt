@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　慎二郎	9.20	0.16	3.1	１		IP	２		IP	１		IP	１		IP	１		IP	１		G3	２		IP	３		IP	１		IP	１		IP
+木下　　翔太	8.10	0.14	2.2	２		G2	２		G2	３		IP	２		IP	２		G2	２		IP	１		IP	２		IP	４		IP	１		IP
+高橋　　二朗	3.60	0.23	4.6	４		IP	５		IP	６		IP	４		IP	４		IP	４		IP	５		IP	６		IP	２		IP	３		IP
+富田　　恕生	3.70	0.18	3.3	３		IP	５		IP	妨		IP	４		IP	６	3	IP	３		IP	転		IP	２		IP	２		IP	５		IP
+香月　　大輝	4.50	0.16	3.1	３		IP	６		IP	２	4	IP	４		IP	３		IP	６		IP	５		IP	２	6	IP	２		IP	６		IP
+鈴木　　雅希	3.50	0.22	5.0	３		IP	６		IP	６		G3	６		IP	２		IP	６		IP	４	5	IP	３		IP	６		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+池上　　隆行	4.90	0.14	3.6	Ｆ		IP	２		IP	４		IP	３		IP	２		IP	６		IP	３		IP	１		IP	４		IP	５		IP
+小川　　知行	4.40	0.12	2.4	３		IP	２		IP	５		IP	５		IP	４		IP	４	3	IP	４		IP	５		IP	５		IP	１		IP
+橋本　　久和	4.22	0.20	4.2	５		G3	５		G3	１		IP	５		IP	３		IP	５	2	IP	Ｆ		IP	４	1	IP	転	4	IP	１		IP
+伊達　　正利	3.90	0.16	4.4	４	3	IP	４		IP	５	5	IP	４		IP	３		IP	３		IP	４		IP	６	6	IP	５		IP	３		IP
+笠野　友紀恵	3.30	0.20	3.4	６		IP	６		G3	６		IP	１		G3	４		IP	３		IP	６		IP	４		G3	４		G3	６		IP
+板頭　　里緒	1.10	0.18	3.8	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP

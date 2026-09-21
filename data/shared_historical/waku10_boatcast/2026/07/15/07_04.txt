@@ -1,0 +1,8 @@
+data=
+1	0
+丸岡　　正典	10.20	0.13	3.4	１		G2	１		IP	１		IP	１		IP	１		G2	１		G2	１		IP	１		IP	２		IP	１		IP
+枝尾　　　賢	6.30	0.14	3.1	２		G2	５		IP	４		IP	２		IP	２		IP	１		IP	３		IP	３		IP	５		G2	３		G2
+今泉　　友吾	6.30	0.11	2.4	３		IP	４		G1	１		IP	５		IP	５		IP	４		IP	２		IP	２		IP	２		G1	２		G1
+瓜生　　正義	5.40	0.13	2.7	４		IP	３		IP	５		SG	４		SG	４		G1	４		G1	５		G1	４		G1	３		G1	２		G1
+服部　　幸男	6.30	0.14	2.6	４		IP	４	4	IP	４		IP	２		SG	６		IP	６		IP	１	4	IP	２		G1	１		IP	１		IP
+村上　　　遼	4.80	0.20	3.9	４		G2	４		IP	６		G1	２		IP	３		G1	３		IP	５		IP	２		IP	３		IP	Ｆ		IP

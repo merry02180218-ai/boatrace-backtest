@@ -1,0 +1,8 @@
+data=
+1	0
+内堀　　　学	9.40	0.14	2.6	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+古賀　　繁輝	5.80	0.18	3.9	２		IP	３		IP	３		IP	５		IP	６		IP	２	3	IP	６		IP	１		IP	２		IP	２		IP
+片橋　　幸貴	7.10	0.14	2.6	３		IP	２		IP	２		IP	１		IP	１		IP	２		IP	６		IP	２		IP	３		IP	３		IP
+清埜　　翔子	6.30	0.14	1.7	３		G3	３		IP	３		IP	４		IP	４		IP	３		G3	１		G3	３		G3	３		G3	２		G3
+上田　　隆章	3.70	0.19	4.4	２	4	IP	６	6	IP	３	4	IP	５		IP	６		IP	３		IP	５		IP	４		IP	６		IP	３	6	IP
+今村　　暢孝	5.60	0.16	2.3	２	2	IP	２	2	IP	１	2	IP	６	2	IP	５	2	G3	６	2	G3	３	1	IP	１	1	IP	４	1	IP	３	2	IP

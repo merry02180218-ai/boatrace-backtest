@@ -1,0 +1,8 @@
+data=
+1	0
+村本　　大成	6.70	0.15	3.4	２		IP	３		IP	１		IP	３		IP	３		IP	１		IP	６		IP	２		IP	１		IP	５		IP
+表　　　健太	4.80	0.17	2.3	３		IP	５		IP	６		IP	６		IP	４		IP	１		IP	３		IP	３		IP	３		IP	３		IP
+前田　　将太	6.10	0.14	3.9	５		IP	２		IP	４		SG	５		SG	４		IP	２		IP	２		IP	２		G1	４		IP	３		IP
+上野　　俊樹	4.60	0.12	2.3	６		G3	３		G3	３		IP	３		IP	１		IP	５		IP	４		G3	４	3	IP	４		IP	６		IP
+小野　　京平	3.30	0.14	3.7	５		IP	２	6	IP	５		IP	３		IP	５		IP	５		IP	５		IP	４		IP	４		IP	６		IP
+宮本　　琉正	1.60	0.17	3.1	５		IP	４		IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	６		IP

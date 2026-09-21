@@ -1,0 +1,8 @@
+data=
+1	0
+田路　　朋史	8.60	0.14	2.4	１		IP	３		IP	２		IP	１		IP	２		IP	３		IP	１		IP	２		IP	１		IP	１		IP
+西田　　和加	2.40	0.14	3.6	５		IP	４		IP	６		IP	５		IP	５		IP	６		G3	３		G3	６		IP	４		IP	６		IP
+浜崎　　準也	4.60	0.15	2.7	５		IP	３		IP	６		IP	６		IP	２	4	IP	４		IP	１		IP	５		IP	３		IP	３		IP
+福田　　　理	4.80	0.11	2.3	３		G3	５		G3	６		IP	３		IP	１		IP	２		IP	１		IP	５	5	IP	５		IP	６		IP
+椎名　　　豊	6.70	0.14	2.9	３		IP	２		IP	３		IP	２		IP	６		IP	１		IP	２		IP	５		G3	１		IP	３		IP
+土屋　実沙希	4.13	0.20	3.8	３	4	IP	４		IP	４		IP	欠		IP	６		IP	６		IP	３		IP	６		IP	１	5	IP	転		IP

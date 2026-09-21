@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　博亮	8.20	0.12	2.2	２		IP	１		IP	２		IP	１		G3	２		G3	１		IP	２		IP	１		IP	妨		IP	１		IP
+広次　　　修	6.70	0.15	3.5	５		IP	２	3	IP	１		IP	２		IP	１		IP	１		IP	４		IP	６		IP	２		IP	３		IP
+土屋　　太朗	4.30	0.16	3.6	３		IP	２		IP	４		IP	６		IP	５		IP	３	2	IP	４		IP	３		IP	５		IP	４		IP
+小林　　礼央	3.70	0.14	2.7	転		IP	５		IP	２		IP	３		IP	３		IP	４		IP	５		IP	４	5	IP	６		IP	４		IP
+眞鳥　　康太	3.20	0.20	4.1	５		IP	６	6	IP	１	4	IP	６	6	IP	４	6	IP	６		G3	５	6	IP	３	6	IP	６		IP	４	6	IP
+深川　　真二	8.10	0.16	3.5	２	2	IP	１	2	IP	６	2	IP	２	2	IP	２	2	IP	２	2	IP	１	2	IP	２	2	IP	２	2	IP	１	2	IP

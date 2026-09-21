@@ -1,0 +1,8 @@
+data=
+1	0
+冨成　　謙児	7.00	0.14	2.9	６		IP	１		IP	２		IP	２		IP	１		IP	１		IP	６		IP	２		IP	３		IP	２		IP
+土屋　　　蘭	4.70	0.18	3.4	３	3	IP	３		IP	３		IP	３		IP	３		IP	５		IP	５		IP	４		IP	２		IP	６		IP
+沢田　　昭宏	6.10	0.16	3.3	５		IP	２		IP	２		IP	４		IP	２		IP	３		IP	２		IP	１		IP	３		IP	６		IP
+桑原　　　悠	7.30	0.13	2.5	３		G2	６		IP	４		G1	１		G1	２	3	G1	３		G1	１		G1	１		IP	４		IP	４		IP
+高岡　　竜也	6.10	0.15	3.4	５		IP	６		IP	２		IP	４		IP	２		IP	１		IP	５	6	IP	２		IP	２		IP	２		IP
+大島　隆乃介	2.60	0.14	3.5	３		IP	５		IP	５		IP	５		IP	５		IP	６		IP	６		IP	４	5	IP	５		IP	４		IP

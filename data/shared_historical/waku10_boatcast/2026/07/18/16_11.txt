@@ -1,0 +1,8 @@
+data=
+1	0
+池田　　雄祐	9.20	0.14	2.8	３		G3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	１		IP
+木谷　　賢太	6.30	0.16	3.0	２		IP	２		IP	５		IP	２		IP	２		IP	６		IP	２		IP	３		IP	２		IP	３		IP
+角山　　雄哉	3.50	0.17	3.5	６		IP	６		IP	５		IP	４		IP	４		IP	６		IP	３		IP	４		IP	２		IP	４	4	IP
+山本　　修一	5.30	0.20	4.3	６		G3	３	6	G3	３		G3	３		IP	３		IP	４		IP	２		IP	３		IP	４	5	G3	４		G3
+門間　　雄大	3.50	0.11	2.0	３		G2	４	6	G2	４		G3	６		G3	４		IP	６		IP	６		IP	５		IP	４		IP	３		IP
+小宮　　涼雅	2.20	0.20	4.6	３		IP	４		IP	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP

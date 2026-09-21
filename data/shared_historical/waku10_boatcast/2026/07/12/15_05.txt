@@ -1,0 +1,8 @@
+data=
+1	0
+吉川　　勇作	6.40	0.13	2.4	５		IP	１		IP	１		IP	１		IP	３		IP	４		IP	３		IP	５		IP	１		IP	４		IP
+芝田　　浩治	6.70	0.18	3.2	１		IP	３		IP	６		IP	５		IP	１		IP	２		IP	２		IP	１		IP	１		IP	５		IP
+加藤　　雅之	3.30	0.24	4.3	１		IP	４		IP	６		IP	５		IP	４		IP	５		IP	５		IP	５		IP	４		IP	５		IP
+秋末　　秦悟	3.10	0.17	3.7	６	2	IP	３	5	IP	４	5	IP	４		IP	２		IP	６		IP	６		IP	４		IP	６		IP	６	5	IP
+砂長　　知輝	5.20	0.18	3.8	３		IP	５		IP	１	3	IP	３		IP	６		G1	３		G1	Ｆ		G1	６		SG	４	6	SG	１		IP
+早川　　理稀	2.70	0.17	3.3	６		IP	３		IP	５		IP	５		IP	６		IP	３		IP	６		IP	６		IP	６		IP	３		IP

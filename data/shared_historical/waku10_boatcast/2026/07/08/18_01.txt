@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　亮太	9.40	0.13	2.3	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	２		IP	２		G2	１		G2	１		IP
+高橋　　二朗	3.20	0.19	4.5	４		IP	６	3	IP	３		IP	５		IP	３		IP	５		IP	４		IP	４		IP	６		IP	５		IP
+梶原　　　正	3.70	0.13	2.6	６		IP	３		G3	６		G3	４		IP	３		IP	５		IP	６		IP	２		IP	３	6	IP	５	4	IP
+富永　夏哉人	3.80	0.18	3.4	５	5	IP	５		IP	２		IP	５		IP	５		IP	４		IP	１		IP	６	2	IP	６		IP	３		G3
+山口　　隼人	1.78	0.19	4.8	６	6	IP	４	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	４	6	IP			IP
+橋本　　年光	4.40	0.22	4.9	６		IP	４		IP	５		IP	５		IP	５		IP	２		IP	３		IP	４		IP	２		IP	３		IP

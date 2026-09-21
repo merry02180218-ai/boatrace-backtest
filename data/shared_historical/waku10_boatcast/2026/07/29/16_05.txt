@@ -1,0 +1,8 @@
+data=
+1	0
+酒井　　俊弘	8.00	0.15	3.8	２		IP	２		IP	４		IP	２		IP	１		IP	２		IP	２		IP	１		IP	２		IP	２		IP
+清埜　　翔子	5.50	0.18	3.8	２		G3	６		IP	２		IP	３		IP	４		IP	４		IP	１		IP	１		G3	５		G3	５		IP
+奥田　　　誠	5.70	0.14	2.0	３		IP	２		IP	１		IP	４		IP	５		IP	３		IP	５		IP	５		IP	２		IP	２		IP
+早川　　尚人	4.30	0.19	3.0	３		IP	２		IP	６		IP	４		IP	４		IP	２		IP	４		IP	６	6	IP	３		IP	６		IP
+古結　　　宏	5.10	0.12	2.1	６		IP	４		IP	３		IP	３	4	IP	６		IP	３		IP	１	4	IP	１		IP	４		G1	６		G1
+喜多　那由夏	2.50	0.15	3.8	５		IP	６		G3	５		IP	４		IP	４		G3	５		G3	６		IP	５		IP	３		IP	６		IP

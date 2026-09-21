@@ -1,0 +1,8 @@
+data=
+1	0
+白井　　友晴	8.00	0.18	4.4	４		IP	１		IP	５		IP	１		IP	１		IP	２		IP	２		IP	１		IP	２		IP	１	2	IP
+丹下　　　将	5.90	0.15	3.8	１		G3	５		IP	１		IP	５		IP	３		IP	６		IP	２		IP	３		IP	１		IP	４		IP
+春園　　功太	7.10	0.17	3.0	５		IP	２		IP	３		IP	３		IP	２		IP	１		IP	１		IP	５		IP	１		IP	２		IP
+深澤　　達徳	4.80	0.18	4.0	４		IP	５		IP	４		G3	３		IP	４		IP	５		IP	５		IP	３	5	IP	１		IP	２		IP
+西川　　真人	3.00	0.18	4.1	６		IP	６		IP	６		IP	５		IP	６		IP	２	4	IP	４		IP	３		IP	５		IP	４		IP
+伊藤　　誠二	3.00	0.16	3.9	２	5	IP	転		IP	６		G3	６		G3	２	3	G3	５		IP	５		IP	５		IP	５		IP	４		IP

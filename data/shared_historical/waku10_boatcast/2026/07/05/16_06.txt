@@ -1,0 +1,8 @@
+data=
+1	0
+山口　　達也	6.60	0.13	3.4	３		G2	２		G2	５		IP	６		IP	４		IP	１		IP	５		IP	１		G2	１		IP	１		IP
+谷津　　幸宏	5.50	0.11	2.4	５		G2	２		IP	５		IP	３		IP	２		IP	３		IP	３		IP	３	3	IP	３		IP	４		IP
+上原　　　崚	5.20	0.14	2.5	４		G3	５		G3	５	5	IP	１		G2	３		G2	３		G2	２		G2	４	5	IP	５		IP	４	4	IP
+金子　　　萌	6.90	0.14	2.7	１	3	G2	１		IP	４		IP	３		IP	１		IP	１		IP	３		IP	４		IP	５		IP	３		IP
+外崎　　　悟	5.00	0.14	1.8	４		G2	４		IP	３		IP	３		IP	４		G3	４		IP	１		IP	６		IP	４		IP	４		IP
+藤原　　碧生	5.20	0.19	4.6	２		G2	５		G2	２		G3	４		G3	４		G3	６		G1	５		G1	４		SG	４		SG	４		SG

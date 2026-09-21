@@ -1,0 +1,8 @@
+data=
+1	0
+妹尾　　忠幸	8.20	0.17	3.1	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP	２		IP	４		IP
+浅井　　　翼	2.10	0.20	4.8	６	3	IP	５	4	IP	６		IP	２		IP	６		IP	４		IP	６	3	IP	Ｆ		IP	５		IP	６		IP
+齋藤　　達希	5.60	0.17	3.6	３		IP	３		G3	５		IP	２	4	IP	６		IP	６		IP	１		IP	４		IP	１		IP	２		IP
+横田　　貴満	4.20	0.17	3.6	３		IP	５	6	IP	２		IP	４		IP	３		IP	５		IP	６		IP	５		IP	４	5	IP	３		G2
+遠藤　　圭吾	3.40	0.15	3.9	４	6	IP	６		IP	５		IP	６		IP	３		IP	６	6	IP	２		IP	３		IP	６		IP	４		IP
+渡辺　　空依	1.80	0.24	4.9	６		IP	４	5	IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	４		IP	５		IP

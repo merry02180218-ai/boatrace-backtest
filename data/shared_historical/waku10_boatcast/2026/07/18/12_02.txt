@@ -1,0 +1,8 @@
+data=
+1	0
+別府　　昌樹	6.90	0.14	3.3	３		IP	１		IP	３		IP	１	2	IP	１		IP	６		IP	４		IP	５		IP	１		IP	１		IP
+鈴木　　章司	5.00	0.20	4.0	３		IP	Ｆ		IP	２		IP	１		IP	４		IP	５		IP	５		IP	４		IP	４		IP	１		IP
+大原　　祥昌	5.00	0.15	3.9	６		IP	６		IP	１		IP	５		IP	１	1	IP	２		IP	５	4	IP	２		IP	４		IP	４		IP
+木下　　翔太	6.60	0.14	2.5	２		IP	５		G2	３		G2	３	5	IP	２		IP	４		G2	３		G2	４		IP	１		IP	３		IP
+富田　　恕生	4.00	0.16	2.5	４		IP	３		IP	４		IP	５		IP	５		IP	２		IP	５		IP	４		IP	３		IP	５	4	IP
+坂口　　諒宗	1.00	0.18	3.8	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	転		IP	Ｆ		IP	６		IP

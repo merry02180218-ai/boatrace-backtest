@@ -1,0 +1,8 @@
+data=
+1	0
+近藤　雄一郎	7.20	0.14	2.9	５		IP	１		IP	５		IP	１		IP	１		IP	４		G3	１		IP	２		IP	３		IP	１		IP
+丸山　　祐也	5.50	0.18	4.7	３		IP	４		IP	４		IP	２		IP	４		IP	６		IP	３		IP	１		IP	３		IP	３		IP
+原田　　秀弥	5.80	0.20	3.4	３		IP	１		IP	３		IP	２		IP	３		IP	４		IP	２		IP	５		IP	４		G3	４		G3
+福嶋　　智之	5.10	0.12	2.4	３		IP	６		IP	６		IP	１	5	IP	３	5	IP	６		IP	３		IP	３		IP	１		IP	４		IP
+菊池　　峰晴	3.70	0.24	4.8	３	4	IP	５		IP	５		IP	２		IP	５		IP	５		IP	５		IP	６		IP	３	6	IP	３		IP
+倉尾　　大介	3.30	0.17	4.3	３		IP	６	5	IP	５		IP	６		IP	４		IP	５		IP	６		IP	３		IP	４		IP	３		IP

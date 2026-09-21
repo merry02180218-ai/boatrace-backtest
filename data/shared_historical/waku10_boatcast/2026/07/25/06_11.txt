@@ -1,0 +1,8 @@
+data=
+1	0
+一瀬　　　明	8.60	0.14	3.9	１	2	IP	１		IP	２		IP	２		IP	３		IP	１		IP	１		IP	１		IP	１		IP	４		IP
+出口　舞有子	5.70	0.17	2.5	４		IP	５		IP	３		IP	１		IP	６		IP	３		IP	２		IP	２		IP	３		IP	３		G3
+石田　　章央	7.10	0.15	2.9	６		IP	１		IP	１	4	IP	４		IP	２		IP	２		IP	２		IP	１		IP	１		IP	５		IP
+胡本　　悟志	4.20	0.16	3.0	５		IP	５	5	IP	４		IP	４		IP	６		IP	１		G3	４		IP	６		IP	４		IP	１		IP
+庄司　樹良々	4.80	0.13	2.7	４		IP	４		IP	５		IP	４		IP	４		IP	３		IP	２		IP	５		IP	３		IP	２		IP
+松本　　博昭	4.40	0.19	4.4	４		IP	６		IP	３		IP	３		IP	１	5	IP	３		IP	５		IP	６		IP	５		IP	３		IP

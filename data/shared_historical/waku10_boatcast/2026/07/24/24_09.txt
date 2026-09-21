@@ -1,0 +1,8 @@
+data=
+1	0
+三角　　哲男	7.80	0.12	2.2	２		IP	１		G3	１		G3	１		G3	２		IP	２		IP	１		IP	欠		IP	４		IP	１		IP
+馬野　　　耀	6.89	0.20	4.0	２		IP	２		IP	不		IP	２		IP	５		IP	１		IP	５		IP	２		G2	２		G2	３		IP
+三村　　岳人	6.10	0.15	2.3	３		IP	１		IP	２		IP	３		IP	３	2	IP	２		IP	５		IP	２		IP	６		IP	３		IP
+古田　　祐貴	5.70	0.14	2.8	５	3	IP	５	5	IP	１		IP	２		IP	２		IP	２		IP	１	2	G3	５		G3	６	5	IP	３		IP
+中北　　将史	2.70	0.20	3.4	５		IP	４		IP	３		IP	３		IP	５		IP	６		IP	５		IP	６		IP	５		IP	６		IP
+木下　　大將	4.10	0.16	3.8	４		IP	４		IP	４		G3	４		IP	６		IP	３		IP	３		IP	４		IP	３		IP	５		IP

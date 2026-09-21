@@ -1,0 +1,8 @@
+data=
+1	0
+水谷　　理人	9.10	0.14	3.5	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	５		G3	２		G3
+鳥飼　　　眞	5.50	0.17	3.2	３		IP	２		G3	２		IP	５		IP	６		IP	２		IP	転		IP	１		IP	１		IP	５		IP
+井上　　尚悟	7.90	0.14	2.4	１		IP	１		IP	６		IP	１	4	IP	２		IP	１	4	IP	４		IP	１		IP	２	2	IP	２		G3
+杉山　　勝匡	4.50	0.14	2.7	５		IP	Ｆ		IP	１		IP	３		IP	１	5	IP	６	6	IP	５		IP	２		IP	４		IP	５		IP
+小野寺　智洋	3.50	0.14	3.7	４		IP	５		IP	６		IP	５		IP	３		IP	２	6	IP	落		IP	４		IP	３		IP	５		IP
+山田　　祐也	4.40	0.12	2.9	５		G3	６		IP	５		IP	６		G1	６		G1	１		G2	４		G2	３		IP	４		IP	３		G1

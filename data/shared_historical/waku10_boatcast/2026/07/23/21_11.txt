@@ -1,0 +1,8 @@
+data=
+1	0
+渋谷　　明憲	9.20	0.16	2.8	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP
+三宅　　健太	6.30	0.19	4.0	１		IP	５		IP	３	4	IP	６	4	IP	２		IP	２		IP	２		IP	３		IP	３		IP	２		G3
+古澤　　光紀	7.20	0.16	3.3	２		IP	２		IP	３		IP	２		IP	１	2	IP	１		IP	４		IP	２		IP	５		IP	２		IP
+岡瀬　　正人	5.60	0.17	4.8	４		IP	３		IP	２		IP	４		IP	３	5	IP	４	5	IP	２		IP	３		IP	４		IP	３		IP
+岡崎　　凪汰	2.80	0.15	2.6	６		IP	４		IP	６		IP	５		IP	３		IP	６		IP	６	6	IP	５		IP	４		IP	３		IP
+柘植　　政浩	4.50	0.16	2.1	３		IP	４	5	IP	４		IP	５		IP	４	5	IP	３		IP	２		IP	２		IP	６		IP	５		IP

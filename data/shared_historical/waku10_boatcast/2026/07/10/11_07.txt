@@ -1,0 +1,8 @@
+data=
+1	0
+山口　真喜子	8.10	0.14	2.9	２		IP	５		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	４		G2
+南　　　彩寧	4.10	0.18	3.2	５		IP	２		IP	３		IP	６		IP	３		G3	２		IP	６		IP	３		IP	６		IP	５		IP
+高憧　　四季	7.20	0.13	2.1	３		IP	１		IP	５		G3	１		G3	２		G3	５		G1	２	4	G1	４		SG	２		G2	３		G2
+寺田　　空詩	6.90	0.13	2.6	３		IP	６		IP	３		IP	５		IP	１		IP	４		G3	１		G3	２		IP	１		IP	１		IP
+永田　　　楽	2.90	0.18	3.7	４		IP	５		IP	６		IP	５		IP	２		IP	６		G3	４		G3	５		IP	５		IP	６		IP
+林　　　風音	1.00	0.23	4.0	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		G3	６		G3

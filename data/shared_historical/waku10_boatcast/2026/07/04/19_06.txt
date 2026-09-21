@@ -1,0 +1,8 @@
+data=
+1	0
+藤丸　　光一	7.20	0.19	3.5	４		IP	２		IP	４		IP	１		IP	３		IP	３		IP	１		IP	２		IP	１		IP	３		IP
+中井　　俊祐	4.50	0.21	4.0	５		IP	６		IP	２		IP	２		IP	６		IP	３		IP	２		IP	６		IP	５		IP	３		IP
+遠藤　　圭吾	4.40	0.16	3.5	５		IP	２		IP	４		IP	３		IP	２		IP	２		IP	４		IP	６		IP	６		IP	５		IP
+吉川　　貴仁	7.33	0.17	3.6	４		IP	１		IP	２		IP	１	2	IP	３		IP	１		IP	３		IP	３		IP	不		IP	３		IP
+松田　　竜馬	3.10	0.16	3.5	４		IP	６		IP	４		IP	４		IP	５		IP	４		IP	４		IP	転		IP	４		IP	４		IP
+清水　　敦揮	5.50	0.21	4.7	２		IP	４		IP	３		IP	４		IP	２		IP	４		IP	２		IP	欠		G1	４	5	IP	３		IP

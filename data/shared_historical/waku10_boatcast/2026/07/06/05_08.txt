@@ -1,0 +1,8 @@
+data=
+1	0
+寺本　　重宣	8.40	0.11	1.3	１		IP	５		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		G3
+山崎　　　郡	6.30	0.15	3.2	４		SG	２		SG	２		G1	４		G1	１	3	G1	３	1	G1	５		SG	５		SG	４		G1	６		G1
+川合　　理司	3.50	0.13	2.7	３		IP	４		IP	６		IP	４		IP	５		IP	６		IP	６		IP	５		IP	２		IP	３		IP
+大澤　　大夢	3.70	0.15	3.0	５		IP	５		IP	４		IP	２		IP	３		IP	４	5	IP	５		IP	３		IP	５		IP	６		IP
+佐藤　　　旭	4.60	0.18	4.7	４		IP	３		IP	６	6	IP	４		IP	２		IP	６		G3	４	6	IP	２		IP	４		IP	３		G3
+小坂　　宗司	4.90	0.17	4.1	４		IP	６		IP	４		IP	３		IP	３	5	IP	２		G3	３	5	IP	３	5	IP	３		IP	５		IP

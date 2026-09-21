@@ -1,0 +1,8 @@
+data=
+1	0
+杉江　　浩明	6.50	0.21	4.2	１		G3	３		IP	５		IP	１		IP	４		IP	６		IP	１		IP	５		IP	１		IP	１		IP
+椎名　　　豊	7.70	0.15	2.8	６		IP	１		IP	１		IP	５	3	G3	１	3	G3	１		G3	２		IP	４		IP	２		IP	１	4	IP
+小林　　遼太	5.60	0.21	3.6	４	4	G3	４		G3	３		IP	３		IP	３		IP	２		IP	２		IP	５		IP	２		G3	４		G3
+宮崎　　奏磨	2.00	0.15	2.7	６		IP	５		IP	５		IP	４	5	IP	６		IP	６		IP	５	5	IP	転		IP	４		IP	６		IP
+上村　慎太郎	2.67	0.29	5.6	５		IP	６		IP	欠		IP	４		IP	５		IP	５		IP	６		IP	５		IP	４		IP	３		IP
+萩原　　知哉	3.70	0.21	4.0	５		IP	４	5	IP	４		IP	３		IP	５		IP	３		IP	３		IP	５		IP	４		IP	６		IP

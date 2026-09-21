@@ -1,0 +1,8 @@
+data=
+1	0
+柳内　　敬太	9.20	0.17	2.9	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP
+石田　　政吾	3.70	0.18	3.1	３		IP	４		IP	５		IP	５		IP	６		IP	４		IP	３		IP	３		IP	４		IP	５		IP
+中島　　昂章	4.00	0.15	3.2	２	4	IP	６		IP	５		IP	４		IP	３		IP	５		IP	２		IP	５		IP	６		IP	４		IP
+坂東　　　満	3.30	0.18	3.7	５		IP	５		IP	６		IP	４		IP	２		IP	６	5	IP	３		IP	６		IP	３		IP	５		IP
+嶋　　　義信	4.50	0.16	3.3	４		IP	１		G3	４		IP	３		IP	４		IP	３		IP	６		IP	４		IP	５	6	IP	４		IP
+坂口　　　周	4.70	0.18	3.9	４		G2	６		G3	３		IP	５		G3	４		G3	６	5	IP	２	4	IP	２	5	IP	４		IP	３		IP

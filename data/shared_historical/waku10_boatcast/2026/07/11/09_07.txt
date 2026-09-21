@@ -1,0 +1,8 @@
+data=
+1	0
+滝沢　　　崚	4.60	0.22	4.4	４		IP	１		IP	５		IP	２		IP	２		IP	５		IP	６		IP	６	2	IP	２		IP	５		IP
+藤原　　碧生	6.20	0.12	3.4	Ｆ		G2	１		G3	３		G1	４		G1	２		G1	５		G1	３		IP	３		G1	３		G1	３		G1
+藤井　　太雅	3.10	0.22	4.4	６		IP	４		IP	４		IP	６		IP	６		IP	６		IP	４		IP	６		IP	１		IP	４		IP
+乃村　　康友	5.30	0.15	3.4	５		IP	６	5	IP	４		IP	１		IP	３		IP	４		IP	２		IP	３		G3	２		IP	４		IP
+古川　　誠之	4.10	0.13	3.1	４		IP	４	6	G3	５		IP	５		IP	２		IP	３		IP	６		IP	３		IP	３		IP	５		IP
+牧　　　宏次	3.10	0.17	3.6	４		IP	５		IP	３		IP	４	5	IP	４		IP	４		IP	６		IP	４		IP	６		IP	６	5	IP

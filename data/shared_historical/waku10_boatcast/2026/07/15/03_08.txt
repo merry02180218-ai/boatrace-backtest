@@ -1,0 +1,8 @@
+data=
+1	0
+川崎　　智稔	7.60	0.14	2.4	３		IP	２		IP	１		IP	３		IP	１		IP	４		IP	３		G3	１		IP	１		IP	３		IP
+伊藤　　雄二	4.80	0.18	3.0	２		IP	２		G3	３	5	G3	４		IP	６		IP	５	3	IP	６		IP	３		IP	３		IP	３		IP
+原田　　篤志	5.50	0.20	4.3	２		IP	２		IP	２		IP	２		IP	４		G3	５		IP	６		IP	２		IP	５	4	IP	３		IP
+港　　　理樹	3.60	0.22	5.1	５		IP	５		IP	４		IP	４		IP	４	5	IP	５	6	IP	４		IP	３	5	IP	４		IP	４		IP
+渥美　　卓郎	2.40	0.20	4.6	４		IP	６		IP	５		IP	５	6	IP	５		IP	４	4	IP	５		IP	６		IP	５		IP	４		IP
+浅井　　　翼	1.80	0.29	5.3	５		IP	２		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

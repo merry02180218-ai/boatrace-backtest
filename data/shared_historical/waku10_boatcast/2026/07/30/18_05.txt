@@ -1,0 +1,8 @@
+data=
+1	0
+枝尾　　　賢	7.80	0.15	2.7	６		G2	１		G2	３		G2	２		IP	２		IP	１		IP	１		IP	４		IP	１		IP	２		IP
+麻生　　慎介	7.20	0.14	2.4	３		IP	３		IP	３		IP	３		IP	１		IP	３		IP	１		IP	１		IP	１		IP	５		IP
+近藤　　来希	2.20	0.18	3.8	４	6	IP	４	6	IP	６		IP	６		IP	６		IP															IP
+西原　　明生	3.40	0.21	4.8	５		IP	４		IP	３		IP	２		IP	３		IP	６		IP	６		IP	５		IP	５		IP	５		IP
+松下　　哲也	4.30	0.15	3.2	１		IP	２		IP	５		IP	５	4	IP	５		IP	５	6	IP	５		IP	３	4	IP	６		IP	２		IP
+栗城　　　匠	4.33	0.12	2.7	４		IP	４	5	IP	５		IP	５	5	IP	欠		IP	３		IP	４		IP	２		IP	４		IP	５		G2

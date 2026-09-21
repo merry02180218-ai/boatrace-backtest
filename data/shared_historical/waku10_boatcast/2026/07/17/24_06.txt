@@ -1,0 +1,8 @@
+data=
+1	0
+上野　　秀和	8.60	0.17	3.3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	３		IP	４		IP	１		IP
+眞鳥　　康太	5.70	0.19	3.5	３		IP	１	5	IP	６	6	IP	３	5	IP	２	5	IP	５		IP	４		IP	２	6	IP	２	5	IP	４	5	IP
+畑　　　竜生	5.40	0.15	3.3	２		IP	６		G2	３		IP	３	5	IP	１		IP	３		IP	６		IP	２		IP	３		IP	６		IP
+北川　　敏弘	2.60	0.15	2.2	４		IP	５		IP	５		IP	４		IP	４		IP	６		IP	６	5	IP	５		IP	４	5	IP	５		IP
+田中　太一郎	2.70	0.14	3.4	５		IP	３		IP	４		IP	４		IP	５		IP	５		IP	５		IP	６	6	IP	５		IP	５		IP
+岡村　　慶太	4.40	0.15	2.6	５		IP	６		IP	６		IP	３	5	IP	５		IP	３		IP	３		IP	１		IP	４		IP	３		IP

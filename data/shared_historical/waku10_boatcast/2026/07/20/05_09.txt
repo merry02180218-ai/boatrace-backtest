@@ -1,0 +1,8 @@
+data=
+1	0
+峰重　　力也	8.80	0.12	2.5	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		IP	３		IP
+藤田　　竜弘	6.40	0.17	3.3	５		IP	２		IP	２		IP	１		IP	３		IP	３		IP	４		IP	２		IP	２		IP	４		IP
+中田　　竜太	6.30	0.15	3.8	６		G2	４		SG	５		SG	２	2	IP	１		G2	３		IP	１		IP	２		IP	５		IP	４		G1
+中村　　裕将	5.50	0.10	2.0	４		IP	１	3	IP	４		IP	６		IP	２		IP	４		IP	４		IP	２		IP	１		IP	５		IP
+清水　　紀克	3.20	0.18	4.0	６	4	IP	３	2	IP	５	2	IP	５	2	IP	４	3	IP	６	2	IP	６	3	IP	３	2	IP	２	2	IP	６	2	IP
+西田　　　靖	2.90	0.16	3.4	６	2	G3	６	2	IP	４	2	IP	５	2	IP	６	2	IP	４	2	IP	５	2	G3	３	2	IP	３	3	IP	５	2	IP

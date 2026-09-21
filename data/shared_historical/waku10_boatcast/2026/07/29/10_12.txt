@@ -1,0 +1,8 @@
+data=
+1	0
+河村　　　了	9.10	0.14	2.9	１		IP	４		G3	１		G3	１		IP	１		IP	３		G3	１		G3	１		G3	１		IP	１		IP
+上瀧　　絢也	5.40	0.17	3.5	２		IP	６		IP	３		IP	２		IP	６		IP	３		IP	２		IP	２		IP	３		IP	５		IP
+稗田　　聖也	7.60	0.09	2.2	１		IP	３		IP	２		IP	２		IP	１		IP	３		IP	２		IP	３		IP	２		IP	３		IP
+村松　　栄太	4.00	0.13	3.3	５	5	IP	４	3	IP	５	6	IP	４		IP	４		IP	３		IP	３		IP	５		IP	４	5	IP	３		IP
+安井　　瑞紀	4.20	0.16	2.8	４		IP	５	6	IP	４		IP	Ｆ		IP	４	6	IP	４		G3	２		G3	５		IP	３		IP	２		IP
+向後　　龍一	3.70	0.17	4.6	５		G3	６		G3	５		G3	６		IP	１		IP	６		G2	５		G2	３	5	IP	４		IP	３	5	IP

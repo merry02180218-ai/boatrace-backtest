@@ -1,0 +1,8 @@
+data=
+1	0
+黒野　　元基	9.30	0.13	2.5	１		IP	１		IP	１		G3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP
+久田　　　武	5.60	0.15	3.8	３		IP	４		IP	２		IP	５		IP	１		IP	３		IP	３		IP	１		IP	５		IP	５		IP
+松井　　賢治	6.80	0.17	3.7	３		IP	２		IP	２		IP	５		IP	１		IP	２		IP	４		IP	４		IP	１		IP	２		IP
+花本　　　剛	3.70	0.14	2.4	５		IP	４		IP	６		IP	４	3	IP	２		IP	３		IP	６		IP	３		IP	６		IP	４		IP
+古賀　　繁輝	4.50	0.13	2.8	３		IP	３		IP	３		IP	６		IP	２		IP	３		IP	５		G1	６		G1	４		G2	６		G1
+別府　　昌樹	3.90	0.20	4.0	４		IP	６		IP	３		IP	４		IP	６		IP	４		IP	６		IP	２		IP	４		IP	３		IP

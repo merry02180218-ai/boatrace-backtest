@@ -1,0 +1,8 @@
+data=
+1	0
+蜂須　　瑞生	7.00	0.18	3.1	２		IP	１		IP	Ｆ		IP	１		IP	３		IP	１		IP	１		IP	５		G3	２		G3	３		IP
+村上　　功祐	6.30	0.15	3.3	２		IP	２		IP	２		IP	６		IP	５		IP	２		IP	４		IP	２		IP	２		IP	２		IP
+赤羽　　克也	7.10	0.13	2.8	３		IP	１		IP	１		IP	３		IP	２		IP	１		IP	１		IP	２		IP	６		IP	５		IP
+山崎　　聖司	5.20	0.20	4.5	４		IP	４		IP	３		IP	６		IP	３		IP	１		IP	６		IP	３		IP	２		IP	３		IP
+岡瀬　　正人	4.60	0.16	3.7	３	6	IP	５		IP	４		IP	１		IP	４		IP	４		IP	エ	4	IP	３		IP	４		IP	３		IP
+金子　　　萌	3.00	0.11	2.3	２		G2	４		IP	６		IP	５		IP	６		IP	４		IP	３		IP	落		IP	５		IP	６		IP

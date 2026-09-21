@@ -1,0 +1,8 @@
+data=
+1	0
+森野　　正弘	6.40	0.13	3.0	５		G3	２		IP	２		IP	１		IP	１		IP	５		IP	５		IP	２		IP	４		IP	１		G3
+福田　　翔吾	5.20	0.15	2.5	４		G3	３		IP	３		IP	２		IP	４		IP	２		IP	４		IP	２		IP	転		IP	４		IP
+山田　　和佐	3.20	0.15	3.7	３		G3	６		IP	４		IP	６		IP	５		IP	２		IP	５		IP	５		IP	５	4	IP	４		IP
+佐竹　　太一	5.70	0.13	2.8	４	5	G3	２		IP	４		G3	４		G3	２		G3	４		IP	３		IP	１		IP	２		IP	６		IP
+出畑　　孝典	4.90	0.18	3.8	２	4	G3	４		IP	２		IP	４		IP	３	4	IP	３		IP	６		IP	５		IP	３	4	IP	４		IP
+大神　　康司	2.33	0.17	3.2	５	3	G3	欠		IP	４	2	IP	６	2	IP	４	3	IP	５	2	IP	６	2	IP	６	3	IP	５	2	IP	５	3	IP

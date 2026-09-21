@@ -1,0 +1,8 @@
+data=
+1	0
+岩永　　節也	4.70	0.17	4.0	３		IP	３		IP	５		IP	４		IP	４		IP	１		IP	６		IP	５		IP	１		IP	５		IP
+滝沢　　芳行	4.30	0.15	2.7	３		IP	５		IP	２		G3	６		G3	４		IP	５		IP	５		IP	１		IP	４		IP	５		IP
+武井　莉里佳	5.60	0.18	3.1	１		IP	２		IP	２		IP	５		IP	４		IP	３		G3	５		G3	４		G2	１		IP	６		IP
+山田　　哲也	6.70	0.09	1.6	４		IP	１		IP	３		IP	２		IP	１		G3	１		G3	２		G3	６		IP	４		IP	３	2	IP
+垂水　　　悠	3.40	0.10	1.8	５		IP	２		IP	５		IP	４		IP	４		IP	５		IP	４		IP	Ｆ		IP	３		IP	５	6	IP
+宮崎　心之介	4.50	0.18	3.8	３		IP	４		IP	３		IP	５		IP	５		IP	２		IP	６		IP	５		IP	３		IP	２	5	IP

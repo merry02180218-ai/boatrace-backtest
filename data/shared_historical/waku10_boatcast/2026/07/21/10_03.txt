@@ -1,0 +1,8 @@
+data=
+1	0
+是澤　　孝宏	7.10	0.14	2.2	６		IP	２		IP	２		IP	２		IP	１		IP	１		IP	１		IP	５		G2	５		G2	１		IP
+泉　　　具巳	5.00	0.17	4.0	３		IP	５		IP	６		IP	２		IP	３		IP	２		IP	６		IP	５		IP	２		IP	２		IP
+井口　　佳典	8.10	0.16	3.5	５		IP	３		G2	１		SG	２		G1	１		G3	３	4	G1	４		G1	２		G1	１		G1	２		G2
+河上　　年昭	3.30	0.14	2.8	２		IP	４		IP	３		IP	６		IP	４		IP	５		IP	６		IP	４		IP	５		IP	６		IP
+加藤　　政彦	5.80	0.11	3.2	６		IP	１	6	IP	１		IP	４		IP	１		IP	６		IP	６		IP	１		IP	２	4	IP	５		G1
+関口　　智久	5.00	0.12	2.5	４		IP	３		IP	５		IP	６		IP	５		IP	６		IP	２		IP	２		IP	１		IP	２		IP

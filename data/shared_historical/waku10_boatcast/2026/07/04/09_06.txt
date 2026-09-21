@@ -1,0 +1,8 @@
+data=
+1	0
+土井　　祥伍	6.70	0.23	4.3	４		IP	２		IP	６		IP	２		IP	１		IP	１		IP	５		IP	１		IP	３		IP	２		IP
+吉田　　一心	5.80	0.18	3.9	４		IP	３		IP	３		IP	３		IP	５		IP	３		IP	２		IP	２		IP	２		IP	４		IP
+石川　　　諒	6.30	0.13	2.6	４		IP	３		IP	１	5	IP	１		IP	６		IP	３	4	IP	３	4	IP	２		IP	３		IP	３		IP
+岩井　　　繁	2.90	0.20	4.8	３		IP	３		G3	４		G3	６		IP	５	6	IP	６		IP	５		IP	５		IP	４		IP	６		IP
+立間　　充宏	4.40	0.16	3.7	４		IP	３		IP	５		IP	４		IP	４		IP	３	6	IP	４		IP	４		IP	３		IP	５		IP
+古結　　　宏	5.60	0.16	3.3	２	5	IP	５		IP	３		IP	３		IP	３		IP	４	5	IP	２	5	IP	２	5	IP	３		IP	６		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+津田　　陸翔	7.40	0.18	4.4	Ｆ		G3	４	2	G3	１		IP	３		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP
+藤原　　早菜	6.70	0.22	4.8	４		IP	４		IP	３	3	IP	１		IP	４	3	IP	１		IP	３		IP	２		IP	２		IP	３		IP
+島川　　海輝	6.00	0.16	3.5	４		IP	２		G3	１		G3	４		IP	２		IP	落		IP	４		IP	２		IP	１		IP	４		IP
+北村　　寧々	5.60	0.11	2.6	４		IP	４		IP	５		IP	２		IP	３		IP	４		IP	６		G2	１		IP	１		IP	３		IP
+原田　才一郎	5.20	0.16	4.0	３		IP	５		IP	３		IP	６		G1	４		G1	２		IP	３		IP	４		IP	２		IP	５		IP
+登玉　　隼百	3.33	0.14	3.9	６		IP	転		IP	５		IP	３		IP	６		IP	４		IP	４		IP	６		IP	２		IP	５		IP

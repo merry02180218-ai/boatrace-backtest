@@ -1,0 +1,8 @@
+data=
+1	0
+堀本　　翔太	6.40	0.22	4.2	２		IP	６		IP	２		IP	２		IP	２		IP	２		IP	４		IP	６		IP	１		IP	２		IP
+金田　　大輔	4.70	0.15	3.1	４		IP	４		IP	６		IP	３		IP	５		IP	４		IP	２		IP	５		IP	２		IP	２		IP
+浅井　　　翼	2.50	0.17	3.3	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	２		IP	転		IP	４		IP	３		IP
+渡辺　　空依	3.60	0.18	3.4	６		IP	４		IP	４		IP	２		IP	５	5	IP	５	5	IP	２		IP	６		IP	５		IP	４		IP
+後藤　　翔之	4.90	0.15	3.2	１		IP	５		IP	５		IP	２		IP	５		IP	３		IP	３		IP	５		IP	３		IP	４		G2
+馬場　　　剛	4.70	0.12	3.2	３		IP	４		IP	３	5	IP	３		IP	３		IP	６		G2	４		G2	６		G2	５		IP	２	5	IP

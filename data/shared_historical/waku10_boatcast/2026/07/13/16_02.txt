@@ -1,0 +1,8 @@
+data=
+1	0
+若林　　義人	9.30	0.13	1.9	１		IP	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+角浜　　　修	3.70	0.17	3.8	４		IP	６		IP	５		G3	５		G3	５		G3	３		IP	２		IP	３		IP	４		IP	５		IP
+大町　　利克	3.00	0.12	3.9	５		IP	６		IP	６		IP	６		IP	２		IP	Ｌ	2	IP	３		IP	６	4	IP	６		IP	３		IP
+川原　　　涼	4.90	0.18	3.1	６	5	IP	６		IP	２		IP	３		IP	３		IP	２		IP	４		IP	３		IP	６		IP	２		IP
+新井　　英孝	4.20	0.15	3.7	４		IP	３		G3	３	6	G3	５		IP	１		IP	３	4	IP	５		IP	４		IP	６	4	IP	６		IP
+中村　　栄治	3.00	0.22	5.0	４	5	IP	４		IP	４		IP	６		IP	４		G3	６		G3	５		IP	５		IP	３		IP	５	5	IP

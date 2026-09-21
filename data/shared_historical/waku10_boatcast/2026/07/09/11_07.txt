@@ -1,0 +1,8 @@
+data=
+1	0
+南　　　彩寧	6.50	0.19	3.6	３		IP	２		IP	１		G3	１		G3	１		IP	２		IP	６		IP	５		IP	５		IP	２		IP
+香川　　素子	6.80	0.19	4.2	１		IP	４		IP	２		G3	３		IP	５		IP	２		G3	２		G3	２		G3	２		IP	３		IP
+北村　　寧々	5.50	0.14	2.7	１		IP	１		IP	４		IP	２		G2	４		G2	６		IP	６		IP	６		IP	２		IP	３		IP
+湯淺　　紀香	5.33	0.18	4.0	３		IP	３		IP	１		IP	６		IP	５		IP	３		IP	４		IP	３		G2	転		G3	３		G3
+宮崎　　安奈	5.70	0.17	2.4	１	4	IP	６	6	IP	４		G2	４		IP	６		IP	３		IP	１	1	IP	１	1	IP	３		IP	４		IP
+鈴木　祐美子	3.70	0.19	3.5	６		IP	５	5	IP	３		IP	３	5	IP	３	5	IP	３		G3	４		G3	４		G3	６		IP	６		G3

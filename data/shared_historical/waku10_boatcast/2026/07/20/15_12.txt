@@ -1,0 +1,8 @@
+data=
+1	0
+平本　　真之	11.00	0.12	2.5	１		G2	２		SG	１		G1	１		G1	１		G1	１		SG	１		SG	１		G1	１		G1	１		IP
+吉川　　元浩	7.40	0.14	3.3	３		G2	２		IP	２		IP	５		G1	３		G3	２		G1	２		G1	１		IP	２		IP	４		G1
+柳生　　泰二	6.10	0.14	2.2	２		IP	４		IP	５		G1	６		G1	２		G2	３		G2	２		IP	５		G1	３		G1	２		SG
+石橋　　道友	5.70	0.17	2.8	２		IP	５		IP	５		G1	４		G1	１		G1	２		IP	４		IP	欠		IP	２		G3	２		IP
+渡邉　　和将	6.40	0.13	3.1	３		IP	４	6	SG	１		SG	６		IP	３		IP	４		IP	１	4	IP	６		IP	１		G1	３		G1
+中野　　次郎	3.70	0.18	4.4	６		G1	４		G1	４		G3	６		G2	３	5	IP	６		G1	４		G1	６		G1	３		G1	６		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+香川　　素子	8.40	0.17	3.0	２		IP	１		IP	１		IP	６		IP	１		IP	１		G3	１		G3	１		G3	１		G3	４		IP
+小林　　愛実	4.50	0.18	3.3	５		IP	６		IP	３		IP	１		IP	４		IP	４		IP	２		IP	４		IP	Ｆ		IP	３		IP
+植木　　美帆	1.90	0.19	3.5	５		IP	５		IP	４		IP	６		G3	５		IP	４	6	IP	６	4	G3	６		G3	６		IP	６		IP
+湯淺　　紀香	5.25	0.17	4.0	転		IP	３		IP	３		IP	１		IP	６		IP	５		IP	３		IP	４		IP	３		G2	転		G3
+羽田　　妃希	2.60	0.19	4.7	５		IP	５		IP	５		IP	５		IP	４		IP	４		IP	６		IP	４		IP	６		IP	４		IP
+宮崎　　安奈	3.70	0.14	2.9	５		IP	６		IP	５		G2	５		G2	２	5	IP	６		IP	２	5	IP	４		IP	６		IP	３	2	IP

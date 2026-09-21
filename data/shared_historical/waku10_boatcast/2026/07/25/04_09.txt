@@ -1,0 +1,8 @@
+data=
+1	0
+前原　　　哉	6.40	0.19	4.3	５		IP	３		IP	１		IP	５		IP	２		G3	１		G3	１		IP	３		IP	３		IP	４		IP
+根岸　　真優	3.10	0.17	3.3	４		IP	３		IP	６		IP	３		IP	６		IP	６	3	IP	３		IP	６		IP	４		IP	６		IP
+三浦　　永理	4.80	0.14	2.8	６		G3	５		G3	２		IP	５		IP	１		IP	６		IP	３		G3	１		G3	５		G2	４		G2
+渡邉　真奈美	5.30	0.13	2.4	２		IP	４		IP	５		IP	３	5	IP	５		IP	３		IP	１		IP	６		IP	４		IP	１		IP
+寺田　　空詩	5.60	0.16	3.6	３		IP	１		IP	４		IP	４		IP	３		IP	３		IP	５	4	IP	２	4	IP	３		G3	４		IP
+大廣　　咲季	2.50	0.17	3.5	５		G3	４		G3	３	4	IP	５		IP	４		IP	６	4	IP	５		IP	６		G3	６		G3	５		G3

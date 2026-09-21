@@ -1,0 +1,8 @@
+data=
+1	0
+川田　　正人	7.10	0.20	3.9	１		IP	６		IP	１		IP	４		IP	４		IP	３		IP	１		IP	１		IP	１		IP	３		IP
+鈴谷　　一平	7.00	0.11	2.7	３		IP	６		IP	１		IP	１		IP	３		G1	３		IP	２		IP	４		IP	２		IP	１		IP
+山川　　雄大	4.90	0.17	3.8	６		IP	４		IP	２		IP	１		IP	１		IP	３		IP	６		IP	５		IP	６		IP	３	4	IP
+宮下　　元胤	5.20	0.16	3.6	４		IP	５		IP	３		IP	２	3	IP	４	5	IP	２		IP	３		IP	４		IP	５	3	IP	２		IP
+八木　　治樹	2.56	0.10	2.7	５		IP	４		IP	５		IP	５		IP	６	6	IP	６		IP	４		IP	６		IP	転		IP	３		IP
+花本　　夏樹	3.00	0.23	5.1	４	5	IP	５	5	IP	６		IP	３	4	IP	６	5	IP	５	3	IP	４	4	IP	６		IP	６		IP	２		IP

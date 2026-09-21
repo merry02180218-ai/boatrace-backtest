@@ -1,0 +1,8 @@
+data=
+1	0
+永松　　良教	7.80	0.10	1.6	３		IP	１		IP	１		IP	４	3	IP	１		IP	１		IP	３		IP	３		IP	２		IP	２		IP
+加藤　　　翔	5.20	0.20	4.3	５		IP	２		IP	３		IP	２		IP	４		IP	５		IP	４		IP	５		IP	２		IP	２	3	IP
+下河　　雅史	5.20	0.14	3.9	５	4	IP	５		IP	２		IP	４		IP	２		IP	３		IP	４		IP	３	4	IP	３		IP	３		IP
+谷口　　健一	2.70	0.14	2.8	妨		IP	６		IP	５		IP	５		IP	５		IP	４		IP	４	5	IP	５		IP	４		IP	３		IP
+中井　　俊祐	3.80	0.12	2.8	６		IP	４		IP	４		IP	６		IP	５		IP	１		IP	５	6	IP	３		IP	５		IP	３		IP
+畔柳　　俊吾	3.30	0.21	4.6	６		IP	２		IP	５		IP	４		IP	５		IP	４	5	IP	５		IP	５		IP	５		IP	３	4	IP

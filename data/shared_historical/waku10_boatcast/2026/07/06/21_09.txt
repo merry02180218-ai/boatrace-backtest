@@ -1,0 +1,8 @@
+data=
+1	0
+東本　　勝利	8.40	0.16	3.1	５		IP	２		IP	２		IP	１	2	G3	１		G3	１		IP	１		IP	３		IP	１		IP	１		IP
+田中　太一郎	4.10	0.17	3.6	６		IP	４	3	IP	４		IP	４		IP	５		IP	５		IP	２		IP	４		IP	４		IP	２		IP
+北川　　敏弘	4.00	0.16	3.0	４		IP	４		IP	５		IP	４		IP	３	4	IP	２		IP	４		IP	４		IP	５		IP	５		IP
+飯島　　　誠	5.40	0.17	2.9	３	5	IP	３		IP	４		IP	３		IP	６	5	IP	２		IP	６		IP	１		IP	２		IP	４		IP
+渡邉　　睦広	4.00	0.16	4.0	６		IP	３		IP	４		IP	６	4	G3	３		IP	４		IP	５		IP	１		IP	５		IP	４		IP
+宇野　　博之	2.70	0.22	4.3	６		IP	４		IP	５		IP	１	5	IP	６		IP	Ｆ		IP	４	5	IP	５		IP	５		IP	６		IP

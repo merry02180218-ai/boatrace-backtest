@@ -1,0 +1,8 @@
+data=
+1	0
+辻　　　栄蔵	9.80	0.14	2.9	１		G2	１		IP	２		IP	１		G1	２		G1	１		IP	１		IP	２		G1	１		IP	１		IP
+齊藤　　　仁	6.10	0.16	3.9	３	5	G2	１		IP	５		IP	４	3	G3	３	3	G3	２		G1	３		G1	Ｆ		G3	２		IP	２		IP
+原田　　幸哉	5.30	0.08	2.2	６		G2	４		IP	６		SG	３		SG	５		G1	２		G1	３		SG	５		SG	６		G1	１		IP
+服部　　幸男	4.00	0.18	3.5	６	3	G2	５		IP	４		IP	４		IP	５		IP	４		SG	６		SG	２		IP	５		IP	３	5	G1
+島田　　賢人	4.80	0.12	3.3	６		G2	３		IP	３		IP	４		IP	５	6	IP	４		IP	５		IP	４		IP	２		IP	１		IP
+黒崎　　竜也	3.80	0.14	2.2	５		G2	５		IP	５		IP	２		G3	５		G3	５		G3	４		IP	６		IP	３	5	IP	４		IP

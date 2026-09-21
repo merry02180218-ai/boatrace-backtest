@@ -1,0 +1,8 @@
+data=
+1	0
+坪口　　竜也	7.80	0.14	3.2	４		IP	６		G2	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+荒川　　健太	6.40	0.13	2.7	２		IP	４		IP	５		G3	３		IP	２		IP	２		IP	１		IP	３		IP	４		IP	２		IP
+田代　　達也	4.20	0.18	4.3	３	5	IP	４		IP	４		IP	１		IP	６		IP	６		IP	５	4	IP	２		IP	５		IP	４	4	IP
+伯母　　芳恒	4.10	0.15	3.1	４		IP	２		IP	４		IP	５		IP	４	6	IP	４		IP	５		G3	３		IP	３		IP	６		IP
+田川　　大貴	4.60	0.14	3.3	４		IP	６		G2	２		IP	５		IP	３		IP	２		IP	５	6	IP	２		IP	４		IP	５		IP
+西村　　　勝	2.50	0.14	2.8	６		IP	５		IP	５		IP	６		IP	５		IP	１	5	IP	５		IP	６		IP	５		IP	５		IP

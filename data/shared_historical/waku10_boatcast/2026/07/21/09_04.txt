@@ -1,0 +1,8 @@
+data=
+1	0
+宮崎　　安奈	6.40	0.13	2.1	５		IP	６		IP	３		G2	４		IP	２		IP	１		IP	１		IP	４		IP	１		IP	２		IP
+山本　稔太朗	6.40	0.13	2.8	２		IP	２		IP	１		G3	５		IP	５		IP	３		IP	３		IP	２		IP	２		IP	３	1	IP
+大澤　　風葵	8.11	0.16	3.5	１		IP	１		IP	３		IP	２		IP	６	4	IP	１		IP	１		IP	２		IP	不		IP	２		IP
+中野　　希一	7.50	0.11	2.2	１		IP	３	5	G3	６		G3	１	3	IP	２		IP	２		IP	３		IP	２		IP	１		IP	２		IP
+石原　　　翼	4.00	0.15	4.1	２	4	G3	５		IP	５		G2	５		G2	５		G2	５		G2	６		G2	４	6	IP	４		IP	２		IP
+松田　　淳平	4.50	0.15	2.8	４		IP	３		IP	３		IP	６		IP	５		IP	２		IP	５		IP	４		IP	１		IP	５		IP

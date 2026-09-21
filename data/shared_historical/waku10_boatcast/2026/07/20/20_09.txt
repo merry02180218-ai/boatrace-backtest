@@ -1,0 +1,8 @@
+data=
+1	0
+萩原　　秀人	8.78	0.12	2.0	１		IP	３		G3	１		G3	１		G3	１		G3	１		SG	５		IP	２		IP	転		IP	１		IP
+上田　　龍星	8.30	0.12	2.6	１		IP	２		G2	２		G2	３		G1	３		G1	４		G2	３		G2	２		IP	１		IP	１		IP
+三好　　勇人	5.80	0.12	2.5	３		IP	３		IP	３		IP	３	4	IP	１	4	G3	５	4	G3	２		G3	４		IP	４		IP	３		IP
+西橋　　奈未	5.70	0.15	3.5	６		G2	５		G2	２		IP	２		IP	６		SG	６		SG	２		G2	２		G3	２		G1	５		G1
+大森　　　翼	4.20	0.16	3.2	４	6	IP	妨		IP	３		IP	３		IP	４		IP	３		IP	５		IP	４		IP	２		IP	５	4	IP
+長尾　　章平	6.10	0.17	4.5	４		IP	３		IP	３		IP	２		IP	５		IP	２		IP	６		IP	２	5	IP	１		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+深川　　真二	9.30	0.13	2.4	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		IP
+深井　　利寿	7.10	0.19	3.2	１		IP	１		G3	３		G3	４		IP	４		IP	２		G2	３		IP	１		IP	２		IP	５		IP
+上野　　秀和	5.70	0.14	2.5	２		IP	２		IP	２		IP	２		IP	３		IP	１		IP	５		IP	４		IP	６		IP	５		IP
+永井　　　源	4.90	0.16	3.0	４		IP	２		IP	４		IP	２		IP	６		IP	５		IP	６		IP	１		IP	１		IP	６		IP
+渡辺　　真至	4.20	0.13	3.1	３		IP	６		IP	３		IP	６	6	IP	５		IP	５		IP	１		IP	２		IP	５		IP	４		IP
+広次　　　修	5.00	0.19	4.5	３	5	IP	２		IP	３		IP	４	5	IP	３		IP	４		IP	４		IP	５		IP	４	5	IP	３		IP

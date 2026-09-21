@@ -1,0 +1,8 @@
+data=
+1	0
+丸尾　　義孝	9.00	0.14	2.7	２		IP	１		IP	１		IP	２		IP	１		IP	４		IP	１		IP	１		IP	１		IP	１		IP
+鳥居塚　孝博	7.80	0.17	2.9	２		IP	１		G2	３		G2	３		IP	１		IP	１	3	IP	３		IP	２		IP	３		IP	３		IP
+本吉　　正樹	5.50	0.18	3.3	６		IP	４		IP	１		IP	２		IP	５		IP	３		IP	３		IP	１		IP	４		IP	４		IP
+桑島　　和宏	6.40	0.17	3.3	３		IP	４		IP	２		IP	３		IP	５		G2	１		IP	２		IP	３		IP	４	3	IP	２		IP
+桑原　　　啓	3.90	0.17	3.8	４		IP	４		IP	１		IP	５		G3	６		G3	６		IP	２		IP	４		IP	６		IP	５		IP
+古川　　誠之	4.80	0.13	2.6	３		G3	４		G3	２	4	IP	５	5	IP	４		IP	３		IP	５		IP	３		IP	４	5	IP	４		IP

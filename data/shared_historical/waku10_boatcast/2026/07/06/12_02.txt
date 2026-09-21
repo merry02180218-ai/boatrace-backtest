@@ -1,0 +1,8 @@
+data=
+1	0
+赤澤　　文香	7.00	0.16	2.7	４		IP	２		IP	５		IP	１		IP	５		IP	４		G3	１		IP	１		IP	１		IP	１		IP
+大谷　　健太	5.80	0.14	3.3	３		IP	３		IP	１		IP	１		IP	１		IP	６		IP	５		IP	６		IP	５		IP	１		IP
+宮嵜　隆太郎	2.60	0.11	2.0	６		G3	４		IP	５		IP	５		IP	５		IP	４		IP	４		IP	５		IP	６		IP	４		IP
+田村　　隆信	3.10	0.15	3.2	６		IP	６		G2	５		G2	５		G1	４		G1	６		G2	５	3	IP	２		IP	６	3	IP	５		IP
+中村　　有裕	3.70	0.16	4.1	６	4	IP	３		IP	６		IP	６		IP	２		IP	３		IP	４		IP	３		IP	５		IP	５	6	IP
+藤本　　遼磨	1.90	0.20	5.7	４		IP	妨		IP	５		IP	６		IP	４		IP	５		IP	５		IP	６		IP	５		IP	６		IP

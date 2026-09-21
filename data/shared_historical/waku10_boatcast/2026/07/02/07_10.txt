@@ -1,0 +1,8 @@
+data=
+1	0
+三浦　　永理	9.90	0.18	2.4	１		IP	１		IP	１		IP	１		IP	１		G3	１		G3	２		G3	１		G3	１		G3	１		G3
+中村　　桃佳	7.89	0.13	2.9	１		IP	３		IP	３		IP	１		IP	２		IP	１		IP	５		IP	１		IP	転		IP	２		G2
+樋口　由加里	6.30	0.13	2.7	１		IP	１		IP	５		IP	４		IP	４	2	IP	２		IP	２		IP	２		IP	３		G3	６		G3
+近藤　　颯斗	5.90	0.11	2.3	６		IP	５		IP	４		IP	１		IP	１	6	IP	４		IP	２		IP	３		IP	３		IP	２		IP
+金子　　怜央	2.50	0.12	2.4	５		IP	４		IP	６		IP	５		IP	６		IP	３		IP	４		IP	５		IP	６	6	IP	５	6	IP
+登玉　　隼百	3.33	0.15	3.8	転		IP	５		IP	３		IP	６		IP	４		IP	４		IP	６		IP	２		IP	５		IP	６		IP

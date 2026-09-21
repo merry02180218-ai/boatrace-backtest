@@ -1,0 +1,8 @@
+data=
+1	0
+江藤　　敦宏	5.80	0.18	3.7	１		IP	５		IP	５		IP	２		IP	１		IP	２		IP	５		IP	４		IP	１		IP	５		IP
+川北　　浩貴	6.20	0.17	3.5	５		IP	４		IP	２	3	IP	４		IP	１		IP	３		IP	１	3	IP	２		IP	６		IP	２		IP
+安河内　　将	8.20	0.15	3.0	１		IP	２		IP	２	4	G3	１	4	G3	２		G3	３	4	G3	１		IP	１		IP	３		G1	４		IP
+出口　舞有子	3.90	0.17	3.2	３		IP	６		IP	６		IP	２		IP	３		IP	４		IP	５		IP	３		IP	４		IP	６		IP
+中島　　友和	2.78	0.16	3.3	６		G3	４		G3	３		IP	５		IP	５		IP	５		IP	３		IP	欠		IP	６		IP	６		IP
+濱崎　　直矢	6.10	0.16	3.3	１		IP	３		IP	２		IP	２		IP	３	5	IP	６		IP	５		SG	５		SG	１	4	IP	５		IP

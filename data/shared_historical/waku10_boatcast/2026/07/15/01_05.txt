@@ -1,0 +1,8 @@
+data=
+1	0
+池田　奈津美	7.30	0.15	2.6	３		IP	２		IP	１		IP	１		IP	１		IP	６		G3	２		IP	３		IP	３		IP	２		IP
+渡辺　　　豊	4.90	0.22	5.3	４		G3	６	3	IP	４		IP	３		IP	３		IP	３		IP	４		IP	３		IP	２		IP	４		IP
+高井　　駿弥	5.70	0.13	1.8	４		IP	６		IP	３		IP	４		IP	１		IP	３		IP	３		IP	３		IP	２		IP	３		IP
+伊藤　　喜智	5.60	0.18	3.5	１		IP	４		IP	４		IP	２		IP	５		IP	１		IP	４		IP	３		IP	５		IP	３		IP
+志賀　　美優	1.20	0.18	4.3	５		IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	５		IP	６	6	IP	６		IP	６	6	IP	６	6	IP
+石倉　　洋行	4.10	0.10	2.2	４		IP	５		IP	Ｆ		IP	３	5	IP	２	4	IP	５		IP	２		IP	３		IP	５	5	IP	５		G1

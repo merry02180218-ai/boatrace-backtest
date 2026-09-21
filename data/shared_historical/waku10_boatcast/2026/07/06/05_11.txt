@@ -1,0 +1,8 @@
+data=
+1	0
+一瀬　　　明	9.00	0.15	3.5	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP
+石田　　貴洋	5.80	0.17	3.5	２		IP	５		G3	３	3	G3	２		IP	３		IP	４	6	IP	３		IP	３		IP	４		IP	２		IP
+河合　　三弘	5.50	0.19	3.9	４		IP	１		IP	５		IP	２		IP	１		IP	６		IP	２		IP	４		IP	５		IP	３		IP
+品田　　直樹	4.30	0.16	3.6	５		IP	６		IP	３		IP	３		IP	３		IP	２		IP	５		IP	３		IP	５	3	IP	４		IP
+夏山　　亮平	1.78	0.15	3.7	６		IP	５		IP	５		G3	６		G3	６		IP	４		IP	５		IP	６		IP	転		IP	５		G3
+佐々木　翔斗	3.60	0.19	4.7	５	5	IP	４		IP	５		IP	１		IP	４		IP	４		IP	３		IP	５		IP	６		IP	６		IP

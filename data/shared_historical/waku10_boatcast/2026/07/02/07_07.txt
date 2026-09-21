@@ -1,0 +1,8 @@
+data=
+1	0
+仲道　　大輔	8.10	0.12	2.6	４		IP	３		IP	１		IP	１		IP	１		IP	６		IP	１		IP	１		IP	１		IP	１		IP
+山下　　拓巳	2.90	0.19	4.1	３		IP	６		IP	５		IP	５		IP	５		IP	５		IP	２		IP	６		IP	６		IP	４		IP
+井上　　慧人	4.30	0.16	3.2	６		IP	２		IP	３		IP	２		IP	５		IP	６		IP	３	6	IP	５	4	IP	２		IP	６		IP
+井澤　　聖奈	1.40	0.20	4.8	６	5	IP	６		IP	６		IP	６	5	IP	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP
+山下　　友貴	3.80	0.22	4.0	５		G3	５		G3	３		IP	６		IP	５		IP	６		IP	３		G3	４		G3	２		IP	３		IP
+豊田　　　結	2.70	0.17	3.6	５		IP	６		IP	６		IP	１		IP	５		G3	６		IP	６		IP	３		IP	６		G3	５		IP

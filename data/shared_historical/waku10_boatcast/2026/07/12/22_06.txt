@@ -1,0 +1,8 @@
+data=
+1	0
+花田　　凱成	5.90	0.17	3.0	４		IP	２		IP	２		IP	２		IP	４		IP	３		IP	５		IP	１		IP	２		IP	６		IP
+吉武　　真也	5.80	0.15	2.9	１		IP	３		IP	３		IP	５		IP	４		IP	２		IP	３		IP	５		IP	２		IP	３		IP
+小川　日紀太	4.90	0.16	3.5	３		IP	３		IP	４		IP	２		IP	４		IP	６		IP	４		IP	５		IP	１		IP	４		IP
+青木　幸太郎	4.90	0.18	3.4	５		IP	２		IP	１	5	IP	４		IP	２	5	IP	５		IP	５		IP	３		IP	６		IP	３		IP
+永田　　啓二	7.80	0.10	2.2	１		IP	１		IP	２		IP	１		IP	４		G3	３		G3	４		G3	１		IP	２	4	IP	３		IP
+安武　　一也	1.00	0.17	4.1	６		IP	６		IP	６		IP	６		IP	エ		IP	５		IP	６		IP	６		IP	６		IP	６		IP

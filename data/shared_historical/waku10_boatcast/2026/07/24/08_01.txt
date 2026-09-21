@@ -1,0 +1,8 @@
+data=
+1	0
+原田　　篤志	9.20	0.13	1.6	３		IP	１		IP	１		IP	２		IP	１		IP	１		G3	１		G3	１		G3	１		IP	２		IP
+前田　健太郎	4.50	0.18	3.6	２	3	G3	６		IP	６		IP	６		IP	１		IP	６		IP	１		IP	４		IP	６		IP	２		IP
+滝沢　　　崚	2.20	0.20	3.8	６		IP	４		IP	６		IP	６		IP	３		IP	６	5	IP	６		IP	６		IP	５	5	IP	４		IP
+佐口　　達也	3.70	0.19	4.3	５		IP	４		IP	２		IP	５		IP	５		IP	６		IP	５	3	IP	５		IP	３		IP	２		IP
+高橋　　真吾	2.10	0.13	3.3	６		IP	６	6	IP	６		G3	６		G3	５		IP	６		IP	４		IP	２		IP	６		IP	６	6	IP
+山田　　佑樹	3.80	0.15	3.6	３		IP	３		IP	５		IP	３		IP	５		IP	３		IP	６		IP	６		IP	４		IP	４		IP

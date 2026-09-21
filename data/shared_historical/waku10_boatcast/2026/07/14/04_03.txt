@@ -1,0 +1,8 @@
+data=
+1	0
+豊田　　祥生	6.70	0.17	3.1	１		IP	４		IP	２		IP	２		IP	１		IP	６		IP	１		IP	１		IP	５		IP	４		IP
+武富　　智亮	5.80	0.16	4.1	１		IP	３		G2	４		G2	３		G2	４		IP	６		IP	３		IP	５		IP	２		IP	２		IP
+黄金井　力良	6.20	0.14	2.0	５		IP	３		IP	２		IP	３		IP	２		IP	３		IP	４		IP	３		IP	１	5	IP	３		IP
+濱野　　斗馬	5.80	0.11	2.5	３		IP	６		IP	４		IP	２		IP	２		IP	４	3	IP	１		IP	６		G2	４		G2	１		IP
+坂本　　一真	2.80	0.17	3.8	６	6	IP	６	6	IP	４		IP	４		IP	６		IP	５		IP	２		IP	５		IP	６	4	IP	４		IP
+本村　　　大	3.50	0.20	4.7	６		IP	４		IP	６		IP	２		IP	３		IP	６		IP	５		IP	５		IP	５		IP	２		IP

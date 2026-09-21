@@ -1,0 +1,8 @@
+data=
+1	0
+網代　　良芽	5.90	0.16	2.3	１		IP	５		IP	１		IP	１		IP	２		IP	６		IP	２		IP	５		IP	４		IP	４		IP
+本岡　　勝利	4.40	0.17	4.0	３		IP	５		IP	３		IP	１		IP	５		IP	５		IP	４		IP	５		IP	２		IP	５		IP
+池本　　輝明	3.70	0.16	3.6	５		IP	５		IP	６		IP	５		IP	４		IP	３		IP	４		IP	２		IP	３		IP	５		IP
+鐘ヶ江　真司	3.40	0.12	1.7	５		IP	１		IP	６		IP	４		IP	３		IP	４		IP	６		IP	４	5	IP	６		IP	６		IP
+中島　　友和	2.89	0.15	3.4	５		IP	５		IP	５		IP	３		IP	欠		IP	６		IP	６		IP	５		IP	４	6	IP	３	6	IP
+田中　　京介	4.30	0.16	3.6	６	5	IP	６		IP	３	5	IP	２	5	IP	５		G3	４	5	IP	３		IP	４		IP	１		IP	６		IP

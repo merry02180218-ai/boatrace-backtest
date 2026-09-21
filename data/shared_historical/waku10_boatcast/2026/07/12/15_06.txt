@@ -1,0 +1,8 @@
+data=
+1	0
+清水　　敦揮	8.90	0.16	3.0	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	６		IP	１		IP	１		IP	１		IP
+瀬川　　大地	4.90	0.16	3.6	３		IP	３		IP	４		IP	２		IP	３		IP	４		IP	５		IP	２		IP	６		IP	４		IP
+岸蔭　　　亮	4.20	0.20	4.2	Ｆ	4	IP	４		IP	４	4	IP	２		IP	６		IP	１		IP	５		IP	６		IP	３	4	IP	３		IP
+柘植　　政浩	5.90	0.19	3.4	２		IP	２		IP	２		IP	２	3	IP	３		IP	２		IP	５	3	IP	６		IP	３		IP	４		IP
+山田　　佑樹	3.20	0.12	2.6	２		IP	２		IP	５		IP	６		IP	５		IP	６		IP	５		IP	５		IP	５		IP	４		IP
+中野　　希一	3.80	0.14	3.8	Ｆ		IP	６		G3	６		G3	５		G3	５		IP	２		IP	４		IP	２		IP	４		IP	２		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+稗田　　聖也	8.90	0.15	3.5	１		IP	１		IP	６		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+下河　　雅史	6.80	0.20	3.5	１		IP	３		IP	２		IP	３		IP	２		IP	４		IP	３		IP	２		IP	４	3	IP	２		IP
+永松　　良教	4.40	0.15	2.6	４		IP	２		IP	２		IP	５		IP	５		IP	２		IP	３		IP	Ｆ		IP	３		IP	Ｆ		IP
+小野　　京平	4.00	0.16	4.2	５		IP	４	6	IP	４	5	IP	４		IP	３	3	IP	６		IP	６		IP	３		IP	３	5	IP	３		IP
+出畑　　孝成	4.00	0.24	4.2	５		IP	４		IP	２		IP	５		IP	４		IP	４		IP	２		IP	５		IP	４		IP	５		IP
+宮本　　琉正	2.00	0.17	3.2	６		IP	５		IP	４		IP	５		IP	５		IP	４		IP	６		IP	６		IP	５		IP	６		IP

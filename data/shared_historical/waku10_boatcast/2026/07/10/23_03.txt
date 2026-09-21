@@ -1,0 +1,8 @@
+data=
+1	0
+永嶋　　裕一	9.40	0.12	1.8	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+松尾　　宣邦	4.80	0.18	3.7	２		IP	２		IP	３		G3	５		G3	５		IP	４		IP	３		G3	４		G3	５		IP	３		IP
+西村　　拓也	6.10	0.11	2.8	２		IP	５		IP	２		IP	５	2	IP	１		IP	３		IP	３		IP	２		IP	２		G1	６		G1
+深川　　和仁	4.10	0.14	2.7	６		IP	１		IP	４		IP	１		IP	５		IP	４		IP	４		IP	６		IP	６		IP	５		IP
+古田　　祐貴	5.00	0.14	4.3	２		IP	４		IP	４		IP	３		IP	４		G3	５		IP	５		IP	３		IP	２		G3	３		IP
+今泉　　博人	1.40	0.18	3.6	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP

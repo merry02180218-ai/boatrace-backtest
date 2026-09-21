@@ -1,0 +1,8 @@
+data=
+1	0
+澤田　　尚也	8.30	0.13	2.7	１		IP	５		G1	１		G1	１		G2	１		IP	１		IP	５		IP	１		IP	１		IP	３		IP
+日笠　　勝弘	4.70	0.14	3.0	５		IP	６		IP	５		IP	５		IP	２		IP	４	3	IP	１		IP	２		IP	５		IP	２		IP
+豊田　　訓靖	4.20	0.20	4.3	６		G3	４		G3	６		G3	５		G3	１		G3	５		IP	３		IP	３		IP	４		IP	３		IP
+廣部　　大明	3.90	0.19	3.8	５		IP	５		IP	４		IP	３		IP	５	6	IP	３		IP	３		IP	４	5	IP	３	6	IP	６	5	IP
+藤原　　孝斗	3.60	0.15	3.2	５		IP	５		IP	５		IP	５		IP	４		IP	２		IP	５		IP	２		IP	５		IP	４		IP
+久保　　翔耶	1.70	0.22	4.8	５		IP	６		IP	３		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP

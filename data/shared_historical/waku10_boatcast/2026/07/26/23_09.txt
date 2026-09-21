@@ -1,0 +1,8 @@
+data=
+1	0
+川島　　圭司	6.90	0.12	2.2	４		IP	２		IP	２		IP	２		IP	１		IP	１		IP	Ｆ		IP	１		IP	１		IP	６		IP
+大島　隆乃介	4.40	0.13	2.9	２		IP	３		IP	２		IP	４		IP	５		IP	５		IP	５		IP	４		IP	５		IP	３		IP
+角浜　　　修	5.60	0.16	3.6	４		IP	４		IP	４		IP	２		IP	６		IP	６	4	G3	２		G3	２		G3	２		G3	１		IP
+盛本　　真輔	5.60	0.19	3.1	４		IP	３		IP	２		IP	２		IP	５		IP	３	6	IP	３		IP	４		IP	４		IP	２		IP
+森　　　智也	4.10	0.16	4.2	５		IP	６		IP	４	4	IP	２		IP	３		IP	３	4	IP	５		IP	３		G3	５		G3	４		IP
+奈須　　啓太	2.80	0.12	3.2	６	5	IP	４		IP	６		IP	５	5	IP	５		IP	５	4	IP	５		G3	２	5	IP	４	5	IP	５		IP

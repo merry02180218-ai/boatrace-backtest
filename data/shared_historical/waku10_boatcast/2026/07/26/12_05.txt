@@ -1,0 +1,8 @@
+data=
+1	0
+浜本　　裕己	9.00	0.12	2.4	１		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+倉富　　大誠	5.00	0.19	2.7	６		IP	２		IP	１		IP	２		IP	６		IP	４		IP	４		IP	５		IP	１		IP	５		IP
+渡邉　　　健	3.20	0.12	3.0	４		IP	５		IP	６	5	IP	６		IP	３		IP	４		IP	５	4	IP	４		G3	５		G3	３		IP
+大月　　遊雅	2.30	0.18	4.1	６	5	IP	６		IP	６		IP	３		IP	６		IP	５		IP	５		IP	３		IP	６		IP	５	5	IP
+堀本　　翔太	3.80	0.21	3.5	５	4	IP	４		IP	４		IP	４		IP	６		IP	６		IP	３		IP	３	6	IP	４	4	IP	３		IP
+渡邊　雄一郎	5.40	0.12	2.6	３		IP	３		IP	３		IP	５	5	IP	４		IP	４		IP	２	5	IP	５		IP	２	5	IP	２		IP

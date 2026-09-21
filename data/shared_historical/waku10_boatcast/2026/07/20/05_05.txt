@@ -1,0 +1,8 @@
+data=
+1	0
+小黒　　竜吾	4.60	0.19	3.1	５		IP	４		IP	３		G3	６	2	IP	４		IP	３	2	IP	３		IP	１		IP	６		IP	３		IP
+金田　　　諭	6.80	0.18	4.0	２		IP	３		IP	５		IP	１		IP	３		IP	３		IP	２		IP	１		IP	３	3	IP	３		IP
+清水　　紀克	5.40	0.12	2.6	６	2	IP	４	2	IP	５	2	IP	１	1	IP	３	2	IP	２		IP	６	2	IP	４		IP	１	2	IP	２	2	IP
+渡邊　　哲也	2.50	0.18	3.7	６		IP	４		IP	６		IP	５	6	IP	５	3	IP	５		IP	６		IP	４		IP	４		IP	４		IP
+岸本　　　隆	3.20	0.16	3.3	６		G3	５		IP	３		IP	３	4	IP	５	6	IP	５		IP	４		G3	５		IP	６		IP	３		IP
+濱本　　優一	3.70	0.14	3.5	３	5	IP	３		IP	４		IP	３		IP	３		IP	５		IP	５		IP	５		IP	５		G3	６		G3

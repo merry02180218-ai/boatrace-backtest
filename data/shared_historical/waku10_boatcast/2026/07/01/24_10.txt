@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　裕也	8.20	0.16	2.9	１		IP	１		IP	１		G3	４		IP	１		IP	２		IP	１		IP	５		IP	２		IP	１		IP
+藤田　　竜弘	7.00	0.15	2.7	２		IP	１		IP	３		IP	３		IP	４		IP	２		IP	２		IP	４		IP	２		IP	２		IP
+砂長　　知輝	7.00	0.12	3.3	２		IP	３		IP	５		IP	１		IP	３		G1	５		G1	１	4	G1	２		SG	５		SG	２		IP
+大橋　純一郎	7.00	0.16	3.1	３		IP	２		IP	４		IP	１		IP	２		IP	２		IP	２		IP	４		IP	１		IP	４		IP
+山ノ内　雅人	6.00	0.15	3.1	４		IP	４		IP	２		IP	３		IP	１		IP	３		IP	４		IP	５		IP	２		IP	３	4	IP
+沢田　　昭宏	3.30	0.17	3.5	４		IP	６		IP	４		IP	５		IP	５		IP	６		IP	４		IP	６		IP	２		IP	４		IP

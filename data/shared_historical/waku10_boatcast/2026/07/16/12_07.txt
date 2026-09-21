@@ -1,0 +1,8 @@
+data=
+1	0
+長野　壮志郎	7.40	0.13	3.1	１		IP	４		IP	１		IP	１		IP	５		IP	１		IP	２		IP	３		IP	１		IP	４		IP
+山田　　真聖	5.40	0.16	3.2	５		IP	６	6	IP	３		IP	３		IP	１		IP	６	4	IP	４	3	IP	２		IP	２		IP	２		IP
+北村　　征嗣	5.20	0.17	3.2	４		IP	５		IP	３	2	G3	３		G3	１		IP	３		IP	２		G3	３		G3	妨		IP	４		IP
+伊藤　　尚汰	4.00	0.16	3.1	６		IP	４		IP	５		IP	１		IP	３		IP	５		IP	４		IP	５		IP	２		IP	６		IP
+廣部　　大明	3.00	0.14	2.6	３		IP	３		IP	６	6	IP	６	6	IP	４		IP	５		IP	６		IP	４		IP	４	6	IP	６		IP
+松井　　賢治	4.10	0.18	4.3	５	5	IP	５		IP	５		IP	４		IP	３		IP	６		IP	３		IP	２		IP	４		IP	３		IP

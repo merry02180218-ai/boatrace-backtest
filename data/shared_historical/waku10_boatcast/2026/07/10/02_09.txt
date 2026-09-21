@@ -1,0 +1,8 @@
+data=
+1	0
+平本　　真之	10.90	0.12	2.5	２		SG	１		G1	１		G1	１		G1	１		SG	１		SG	１		G1	１		G1	１		IP	１		IP
+島村　　隆幸	7.80	0.16	2.4	２		IP	３		G2	２		G2	２		IP	１		G2	２		IP	１		IP	６		IP	３		IP	１		G3
+仲谷　　颯仁	7.00	0.15	2.7	４		SG	６		IP	１		SG	４		G1	５		G1	１		IP	２		G1	２		IP	３		IP	２		SG
+多田　　有佑	4.60	0.23	4.5	２		G2	１		IP	６	6	IP	６		IP	４		IP	４		IP	６		IP	４		IP	３		IP	３		IP
+毒島　　　誠	8.30	0.15	2.7	３		IP	２	4	IP	１	1	IP	１		IP	１		IP	６		SG	１	2	IP	１	3	IP	３		G1	２		G1
+金子　　和之	3.20	0.21	3.9	５		IP	５		IP	３		IP	５		IP	６		IP	３		IP	６		IP	４		IP	３		IP	５		IP

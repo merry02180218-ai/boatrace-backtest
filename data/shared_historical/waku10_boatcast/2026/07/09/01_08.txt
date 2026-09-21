@@ -1,0 +1,8 @@
+data=
+1	0
+永井　　　源	8.22	0.18	3.9	４		IP	１		IP	１		IP	３		IP	２		IP	Ｌ		IP	２		IP	２		IP	１		IP	１		IP
+大谷　　直弘	6.60	0.18	3.9	４		IP	１		IP	１		IP	３		IP	５		IP	２		IP	２		IP	３		IP	４		IP	２		IP
+中野　　和裕	3.60	0.14	2.9	６		IP	４		IP	６		G3	６		G3	６		G3	５		IP	４		IP	４		IP	２		IP	１		IP
+山口　　修路	2.80	0.22	5.1	３		IP	５		IP	４		IP	４		IP	６	5	G3	６	6	G3	３		IP	５		IP	５		IP	欠		G3
+國崎　　良春	4.20	0.15	2.9	６		IP	５		IP	２		IP	２		IP	５		IP	５		IP	３	4	IP	３		G3	６		IP	３		IP
+立具　　敬司	4.20	0.18	3.5	４		IP	５		IP	４		IP	３		IP	３		IP	５		IP	５		IP	２		IP	３		IP	５		IP

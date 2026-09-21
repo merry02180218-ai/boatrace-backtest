@@ -1,0 +1,8 @@
+data=
+1	0
+表　　　健太	3.22	0.20	3.6	４		IP	転		IP	５	2	IP	５		IP	４		IP	５		IP	３		IP	６		IP	２		IP	欠		IP
+溝口　海義也	6.50	0.15	3.2	２		IP	２		IP	１		IP	５		IP	３		IP	２		IP	２		IP	４		IP	２		IP	６		G2
+奈須　　啓太	6.80	0.13	2.1	２		IP	２		IP	５	5	G3	２		IP	２		IP	３		IP	４		IP	１		IP	４		IP	１		IP
+柴田　　大輔	6.30	0.17	3.0	３		IP	４		IP	４		IP	４		IP	１	6	IP	１		IP	４		IP	６		IP	１		IP	１		G3
+小川　日紀太	4.30	0.13	2.3	５		IP	５		IP	３		IP	４		IP	５		IP	４		IP	４		IP	６		IP	２		IP	１		IP
+宮本　　琉正	2.00	0.16	2.8	４		IP	５		IP	５		IP	４		IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP

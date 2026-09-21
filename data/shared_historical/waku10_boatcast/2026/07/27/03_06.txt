@@ -1,0 +1,8 @@
+data=
+1	0
+中嶋　誠一郎	8.60	0.15	3.2	１		G3	２		G3	１		G3	１		IP	２		IP	４		IP	１		IP	１		G3	２		IP	２		IP
+下河　　雅史	7.20	0.18	2.7	３		G3	１		IP	１		IP	３		IP	２		IP	３		IP	２		IP	４		IP	３		IP	２		IP
+安達　　裕樹	7.33	0.13	2.7	１		G3	３		G2	２		G2	４		G2	転		IP	１		G2	２		G2	４		G2	４		IP	３	2	IP
+柳瀬　　幹太	4.40	0.15	3.4	４		G3	６		G3	２		IP	３		IP	４		IP	１		IP	５	5	G3	５		IP	６		IP	３		IP
+赤岩　　善生	6.50	0.18	4.0	２	2	G2	１	3	IP	４	2	SG	５	4	G1	４	2	G1	２	2	G1	５	2	G1	２	6	G3	５	3	G3	１	2	IP
+鈴木　　秀茉	4.20	0.16	3.0	５		G3	６		IP	６		IP	６		IP	２	5	IP	３		IP	２		IP	４		IP	１	5	IP	６		IP

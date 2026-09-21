@@ -1,0 +1,8 @@
+data=
+1	0
+椎名　　　豊	9.50	0.12	1.9	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	２		G3
+横田　　貴満	6.60	0.16	2.8	１		IP	２		IP	１		IP	２		IP	６		IP	４		G2	３		IP	２		IP	４		IP	３		IP
+村田　　　敦	5.11	0.11	2.2	５		IP	３		IP	３		IP	２		IP	６		IP	６		IP	１		IP	５		IP	１	2	IP	転		IP
+齋藤　　達希	3.50	0.16	3.8	６		IP	６		IP	５		G3	６		G3	５		IP	３		IP	３		IP	３		IP	３		IP	４		G3
+山本　　英志	4.70	0.12	2.3	６		G2	２		G2	４		IP	５		IP	４		G3	２		IP	５		IP	２		IP	４		IP	４		IP
+宮崎　　奏磨	0.90	0.21	3.5	６		IP	転		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

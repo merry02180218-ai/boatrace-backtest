@@ -1,0 +1,8 @@
+data=
+1	0
+高石　　梨菜	7.30	0.14	3.2	３		IP	１		IP	１		G3	１		IP	１		IP	２		G3	６		G3	４		IP	４		IP	１		IP
+今井　　裕梨	7.60	0.14	1.9	１		IP	２		IP	３		G3	１		IP	３		IP	２		IP	３		G3	３		G3	２		IP	２		IP
+一瀬　　　明	7.80	0.16	2.9	２		IP	１		IP	１		IP	１		IP	１		IP	４		IP	１		IP	４		IP	２		IP	４		IP
+藤田　　康生	4.20	0.10	3.3	２	5	IP	４	5	IP	３		IP	４	5	IP	６		IP	１		IP	４		IP	５		IP	５		IP	６		IP
+金児　　隆太	4.80	0.17	3.3	２	4	IP	５		IP	４		IP	３		IP	２		IP	６		IP	２		IP	４	4	G3	３		G3	６		IP
+渡邊　伸太郎	4.10	0.22	4.3	５		IP	６		IP	３		IP	６		IP	３		IP	６	5	IP	２	5	IP	１		IP	５	4	IP	４	5	IP

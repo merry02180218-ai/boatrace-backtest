@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　　郡	9.40	0.13	3.4	２		SG	１		G1	１		G1	１		G1	５		SG	３		G1	１		IP	１		IP	１		IP	１		IP
+岩瀬　　裕亮	7.00	0.11	2.6	１		IP	２		G1	６		G1	３		G1	２		G2	５		IP	１	1	IP	３		G1	１		G1	５		G1
+稲田　　浩二	7.50	0.10	2.2	２		IP	５		G2	２		G2	４		G1	２		IP	２		G1	１		G1	３		IP	４		IP	１		G3
+鰐部　太空海	7.00	0.12	2.7	２		G1	２		IP	５		SG	１		IP	１		IP	４		IP	６		IP	１		IP	１		IP	４		IP
+一瀬　　　明	4.30	0.22	3.8	４	4	IP	６		IP	５		IP	３		IP	６		IP	３		IP	３		IP	１		IP	６		IP	３		IP
+松下　　一也	5.60	0.11	2.5	６		IP	２		IP	５		IP	３		IP	５		IP	６		IP	１	5	IP	３		IP	１		IP	１		IP

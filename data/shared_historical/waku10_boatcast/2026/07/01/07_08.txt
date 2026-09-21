@@ -1,0 +1,8 @@
+data=
+1	0
+長嶋　　万記	9.60	0.13	2.5	１		IP	１		G3	１		G3	１		G3	４		G2	１		IP	１		IP	１		IP	１		IP	１		IP
+廣中　智紗衣	7.20	0.19	4.3	２		IP	２		IP	２		G3	１		G3	２		IP	２		IP	３		IP	５		IP	３		IP	２		IP
+石原　　凪紗	5.70	0.18	3.3	６		IP	５		G3	２		G3	３		G3	５		IP	１		IP	５		IP	１		G3	２		IP	２	4	IP
+藤森　　陸斗	5.00	0.15	3.2	４		IP	３		IP	３		IP	５		IP	４		IP	４		IP	４		IP	２		IP	２		IP	４		IP
+井上　　慧人	4.56	0.20	4.0	４		IP	３		IP	３		IP	４		IP	欠		IP	５		IP	２		IP	４		IP	６		IP	３	4	IP
+塚越　　陸斗	1.20	0.25	4.2	４		IP	６		IP	６		IP	６		IP	６		IP	Ｆ		IP	６		IP	６		IP	６		IP	６		IP

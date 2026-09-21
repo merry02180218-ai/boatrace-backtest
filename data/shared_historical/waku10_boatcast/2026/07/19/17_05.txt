@@ -1,0 +1,8 @@
+data=
+1	0
+小野　　勇作	6.70	0.16	2.9	３		IP	２		IP	４		G3	３		IP	１		IP	６		IP	１		IP	１		IP	３		IP	３		IP
+北川　　幸典	7.20	0.16	2.8	１		IP	３		IP	４		IP	３		IP	２		IP	３		IP	１		IP	２		IP	４		IP	１		IP
+鈴木　　智啓	3.90	0.15	3.4	５		IP	３		IP	２		IP	２		IP	６	4	IP	３		IP	６		IP	４	4	IP	６		IP	５		IP
+横田　　海人	1.40	0.16	2.9	６		IP	６		IP	６		IP	５		IP	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP
+増本　　杏珠	2.80	0.16	3.0	５		IP	４		IP	５		IP	６		IP	６		IP	４		IP	Ｆ		IP	３		IP	５		IP	３		IP
+平山　　智加	5.00	0.16	3.8	４	5	IP	５		IP	２		IP	３		IP	４		IP	４		G2	２		G3	４		G3	３		IP	５		G1

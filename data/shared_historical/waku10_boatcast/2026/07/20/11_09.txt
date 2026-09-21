@@ -1,0 +1,8 @@
+data=
+1	0
+松村　　康太	8.00	0.13	2.7	１		IP	５		IP	１		IP	１		IP	１		IP	３		IP	１		IP	５		IP	１		IP	１		IP
+泉　　　啓文	5.30	0.20	4.0	４		IP	６		IP	１		IP	３		IP	２		G3	４	3	G3	４		IP	２		IP	３	3	IP	５		IP
+森清　　友翔	4.80	0.17	2.9	５		IP	２		IP	３		IP	５		IP	３		IP	３		IP	５		IP	３		IP	３		IP	４		IP
+柴田　　直哉	4.10	0.16	3.5	６		IP	５		IP	６		IP	３		IP	２		IP	２	5	IP	３	6	IP	６		IP	３		IP	５		IP
+川崎　　公靖	4.10	0.16	2.8	６		IP	２		IP	５		IP	３		IP	３		IP	６		IP	３		IP	２		IP	６		IP	５		IP
+中島　　秀治	4.40	0.19	3.3	４		IP	４		IP	６		IP	５		IP	１		G2	６		G2	２		IP	５		IP	５		IP	３		IP

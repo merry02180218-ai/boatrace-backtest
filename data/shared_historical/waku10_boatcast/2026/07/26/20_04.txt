@@ -1,0 +1,8 @@
+data=
+1	0
+齊藤　　　優	6.70	0.16	3.9	５		IP	６		IP	１		IP	２		IP	４		IP	１		IP	２		IP	１		IP	４		IP	１		IP
+板倉　　敦史	6.20	0.12	2.5	４		IP	５		IP	３		IP	４		IP	２		IP	２		IP	３		IP	２		IP	３		IP	１		IP
+多羅尾　達之	4.30	0.14	2.0	６		IP	２		IP	２		IP	５		IP	４	2	IP	５		IP	２		IP	３		IP	４	2	IP	転		IP
+石野　　貴之	7.00	0.17	3.3	２	3	G2	１	3	IP	６		SG	６		G1	６		SG	２	3	SG	３		G1	３		IP	２		G1	１		G1
+小玉　　啓太	5.00	0.15	3.1	４		IP	３		IP	１		IP	３		IP	転		IP	３		IP	６		IP	３		IP	５		IP	４		IP
+大場　　　敏	4.10	0.12	2.9	３	4	IP	５		IP	４		IP	２		IP	２	4	IP	６		IP	５		IP	５		G3	３	4	IP	５		IP

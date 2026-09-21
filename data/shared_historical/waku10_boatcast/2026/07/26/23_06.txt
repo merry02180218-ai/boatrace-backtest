@@ -1,0 +1,8 @@
+data=
+1	0
+岡部　　大輔	7.20	0.11	1.6	１		IP	４		IP	１		IP	１		IP	４		IP	１		IP	４		IP	１		IP	Ｆ		IP	１		IP
+荻野　　裕介	7.00	0.23	4.7	２		IP	３		G3	２		G3	１		G3	１		IP	２		IP	４		IP	４		IP	４		IP	２		IP
+山口　　隆史	3.60	0.16	2.6	５		IP	１		IP	５		IP	１		IP	５		IP	４		IP	５		IP	６	4	IP	５		IP	６		IP
+横田　　　茂	4.00	0.13	2.8	３		IP	２		IP	５		IP	６		IP	欠		IP	４		IP	６		G1	２		IP	４		IP	６		IP
+久保原　秀人	1.70	0.17	3.4	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	６		IP	３		IP	６	6	IP
+土屋　　智則	4.60	0.12	4.1	５		G3	１	4	G3	５	4	G3	５		SG	５		SG	５		G1	３		G1	３		IP	５		G1	４		G1

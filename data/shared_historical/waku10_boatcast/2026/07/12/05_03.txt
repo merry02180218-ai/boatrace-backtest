@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　　健	8.30	0.13	2.3	１		IP	１		IP	１		IP	５		IP	１		IP	１		G3	１		IP	６		IP	１		IP	１		IP
+馬野　　　耀	6.22	0.19	4.1	不		IP	２		IP	５		IP	１		IP	５		IP	２		G2	２		G2	３		IP	４		IP	３		IP
+酒井　　陽祐	5.70	0.13	3.2	１		IP	４		IP	６		IP	３		IP	３		G3	４		IP	３		IP	５		G3	２		G3	１	4	IP
+鈴木　　峻佑	4.30	0.12	2.5	４	5	IP	３		IP	６		IP	５		IP	５		IP	１		IP	１	5	IP	５		IP	５		IP	４		IP
+南野　　利騰	4.60	0.12	2.4	５		IP	３		IP	３		IP	４		IP	３		IP	４		IP	５		IP	３	6	IP	３		IP	４		IP
+赤羽　　克也	4.60	0.19	5.1	２	5	IP	２		IP	６		IP	３	5	IP	６		IP	３		IP	５		IP	４		IP	３		IP	５		IP

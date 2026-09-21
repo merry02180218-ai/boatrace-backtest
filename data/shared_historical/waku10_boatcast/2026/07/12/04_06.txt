@@ -1,0 +1,8 @@
+data=
+1	0
+滝沢　　芳行	5.40	0.19	3.0	５		IP	４		IP	４		G3	５		IP	１		IP	５		IP	３		IP	２		IP	３		IP	１		IP
+前原　　大道	6.20	0.16	3.5	４	5	G2	３		IP	１		IP	４		G1	１		IP	５		IP	２		IP	４		IP	２		IP	４		IP
+堀本　　和也	6.00	0.09	2.2	４		IP	５		IP	３		IP	２		IP	２		IP	２		IP	３		IP	３		IP	５		IP	２		SG
+庄島　　潤成	2.30	0.17	4.1	４	5	IP	５		IP	６	6	IP	５		IP	４		IP	６		IP	４		IP	転		IP	６		IP	４	6	IP
+坂本　　一真	3.50	0.16	3.4	６	6	IP	４		IP	４		IP	６		IP	５		IP	２		IP	５		IP	６	4	IP	４		IP	２		IP
+武井　莉里佳	3.89	0.15	3.4	欠		IP	３	5	IP	４	5	IP	５		G3	６		G3	６		G3	５		G3	５		G2	２	5	IP	２		IP

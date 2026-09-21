@@ -1,0 +1,8 @@
+data=
+1	0
+牧原　　　崇	7.80	0.15	3.1	１		IP	３		IP	３		IP	２		IP	２		IP	２		IP	３		IP	１		IP	３		IP	１		IP
+久永　　祥平	6.40	0.12	3.1	３		IP	１		IP	２		IP	４		IP	３		IP	４		IP	３		IP	１		IP	２		G3	６		G3
+藤本　　佳史	4.30	0.12	2.7	２		IP	２		IP	３		IP	５		IP	６		IP	３		IP	５		IP	４		IP	５		IP	４		G3
+金子　　怜央	2.40	0.19	3.4	５		IP	６		IP	４		IP	３		IP	５		IP	６		IP	５		IP	４		IP	６		IP	６		IP
+宮地　　秀祈	3.40	0.17	4.0	６		IP	５		IP	４		IP	１		IP	５		IP	５		IP	３		IP	４		IP	６	3	IP	５		IP
+川原　　祐明	5.90	0.13	3.1	３		IP	２		IP	３		IP	３		IP	６		IP	４		IP	１	5	IP	４		IP	３		IP	２		IP

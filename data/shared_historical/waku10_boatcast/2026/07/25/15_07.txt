@@ -1,0 +1,8 @@
+data=
+1	0
+青木　幸太郎	9.40	0.14	2.4	１		IP	４		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+小川　　時光	6.30	0.14	3.7	３		IP	２		IP	２	1	IP	６		IP	２		IP	４		IP	２		IP	３		IP	３		IP	２		IP
+山崎　　裕司	6.40	0.15	2.6	３		IP	２		IP	２		IP	２		IP	３		IP	４		IP	２		IP	４		IP	３		IP	３		IP
+上岡　　巧汰	2.00	0.18	4.4	５		IP	５	6	IP	２		IP	６	6	IP	６	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６		IP
+島崎　丈一朗	4.60	0.17	3.9	３		IP	６		IP	２		IP	３		IP	４	6	IP	２		IP	６		IP	５		IP	２		IP	５	6	IP
+平本　　真之	4.30	0.14	3.9	妨		IP	５	5	G2	３		G2	５		SG	６		G1	４		G1	４		G1	４		SG	３		G1	６		G1

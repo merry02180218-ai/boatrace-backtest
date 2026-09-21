@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　正樹	8.90	0.14	3.5	２		IP	２		IP	２		IP	１		IP	４		IP	１		IP	２		G1	１		IP	１		G2	１		G2
+安田　　吉宏	5.30	0.19	4.1	５	3	IP	５		IP	１		IP	４		IP	２	3	IP	２		IP	２		IP	３		IP	４		IP	６		IP
+清水　　敦揮	7.50	0.17	2.7	１		IP	１		IP	３		IP	４		IP	２		IP	４		IP	２		IP	３	4	IP	１		IP	２		IP
+熊本　　英一	3.90	0.21	4.6	２		IP	１		IP	４		IP	４		IP	６	6	IP	６		IP	６		IP	６		IP	６		IP	２		IP
+磯部　　　誠	5.50	0.09	2.2	２	3	IP	５		G2	２		SG	５		SG	６		G1	５		G1	５		SG	５	6	SG	３		G1	１		IP
+久保田　凪紗	1.60	0.14	3.1	６		IP	４		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP

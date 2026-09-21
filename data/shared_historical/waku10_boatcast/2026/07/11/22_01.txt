@@ -1,0 +1,8 @@
+data=
+1	0
+溝口　海義也	7.00	0.15	3.9	１		IP	１		IP	４		IP	３		IP	５		IP	１		IP	３		IP	１		IP	６		G2	１		G3
+関　　　裕也	4.80	0.16	3.6	４		IP	５		IP	４		IP	２		IP	３		IP	４		IP	４		IP	３		IP	５		IP	２	1	IP
+永松　　良教	4.80	0.14	2.6	２		IP	２		IP	５		IP	５		IP	２		IP	３		IP	Ｆ		IP	３		IP	Ｆ		IP	２		IP
+出畑　　孝成	5.11	0.16	3.1	４	5	IP	３		IP	５		IP	２		IP	３		IP	２		IP	落		IP	１		IP	６		IP	６		IP
+村本　　大成	1.70	0.17	3.7	５		IP	６		IP	５		IP	６		IP	６		IP	４		IP	６	6	IP	５		IP	５		IP	６		IP
+小松　　卓司	2.80	0.22	4.6	４	5	IP	５		IP	５	5	IP	５		IP	４		IP	５		IP	５		IP	５		IP	３		IP	５		IP

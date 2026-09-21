@@ -1,0 +1,8 @@
+data=
+1	0
+宮下　　元胤	8.20	0.18	2.8	３		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	２		IP	１		IP	５		IP
+宇土　　泰就	4.90	0.17	3.7	４		IP	６		IP	１		IP	３		IP	３		IP	４		IP	６		IP	３		IP	１		IP	６		IP
+川田　　正人	3.90	0.17	3.3	５		IP	６		IP	３		IP	３		IP	５	4	IP	４		IP	５		IP	５		IP	１	4	IP	４	4	IP
+鈴谷　　一平	4.70	0.16	3.1	６	5	IP	３		IP	６		IP	２		IP	４		IP	６		G1	４	5	G1	４	5	IP	１		IP	３		IP
+八木　　治樹	2.11	0.11	2.7	５		IP	５		IP	４		IP	５		IP	５		IP	６	6	IP	６		IP	４		IP	６		IP	転		IP
+島川　　光男	5.20	0.17	3.3	２		IP	２	5	IP	５		IP	３		IP	４		IP	５		IP	１		IP	３		IP	５		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+村岡　　　賢	5.90	0.20	4.1	４		IP	６		IP	２		IP	１		IP	２		IP	３		IP	３		IP	５		IP	１		IP	４		IP
+宮崎　心之介	7.00	0.17	3.6	３		IP	１		IP	３		IP	２		IP	２		IP	３		IP	１		IP	２		IP	３		IP	６		IP
+前原　　大道	8.30	0.13	2.7	１		IP	１		G1	３		G1	３	2	IP	２		IP	１		IP	１		IP	２		G1	２		G1	５		G1
+垂水　　　悠	4.20	0.08	1.8	４		IP	３		IP	落		IP	４		IP	６	5	IP	３		IP	５		IP	２	5	IP	１	5	IP	６		G3
+富永　　修一	5.20	0.13	2.7	５		IP	２		IP	４		IP	４		IP	１		IP	２		IP	６		IP	３		IP	５		G1	３		G3
+岩永　　節也	1.80	0.22	4.4	４	5	IP	６		IP	６		IP	６		IP	４		IP	５	5	IP	６		IP	６		IP	６		IP	５		IP

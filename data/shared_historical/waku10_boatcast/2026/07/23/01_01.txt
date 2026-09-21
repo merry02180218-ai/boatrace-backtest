@@ -1,0 +1,8 @@
+data=
+1	0
+小倉　　康典	6.40	0.14	2.8	２		IP	１		IP	４		IP	１		IP	５		IP	Ｆ		IP	１		IP	１		IP	３		IP	４		IP
+鈴木　　賢一	6.60	0.15	4.1	２		IP	２		G3	６	3	G3	１		IP	６		IP	２		IP	２		IP	２		IP	２		IP	３		IP
+抹香　　雄三	7.40	0.14	2.6	２		IP	２		IP	３		IP	５		IP	１	2	IP	２		IP	４		IP	１		IP	１		IP	３		IP
+大串　　重幸	5.70	0.15	3.3	３		IP	２		G2	２		G2	６		IP	３		IP	４		IP	４		IP	３		IP	４		IP	２		IP
+長尾　京志郎	4.20	0.19	4.1	４		IP	５		IP	６		IP	２		IP	５		IP	２		IP	４	6	IP	３		IP	６		IP	３		IP
+山下　　大輝	5.00	0.16	3.7	３		IP	３		IP	２		IP	転		IP	４	5	IP	３		IP	３		IP	３		IP	５		IP	６		IP

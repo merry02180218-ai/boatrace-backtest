@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　兼士	5.70	0.17	3.8	２		IP	４		IP	６		IP	３		IP	１		IP	４		IP	３		IP	３		IP	３		IP	３		IP
+廣中　　良一	5.10	0.14	2.6	３		IP	２		IP	２		IP	４		IP	３		G3	６		G3	２		IP	４		IP	５		IP	４	3	IP
+西田　　　靖	3.70	0.16	3.5	４	2	IP	５	2	IP	６	2	IP	２	1	IP	４	2	IP	５	2	IP	５	2	IP	２	2	IP	４	2	IP	５	2	IP
+宮地　　博士	3.90	0.17	4.5	３		IP	６		IP	５	5	IP	５		IP	４		IP	３		IP	４		IP	４		IP	３		IP	４	5	IP
+仲口　　博崇	6.70	0.18	3.5	２		IP	２	2	IP	２	4	G3	５		IP	６	4	IP	３	2	IP	２	3	IP	１	4	IP	１	4	IP	３		G3
+森林　　　太	2.30	0.24	5.4	６		IP	５		IP	４		IP	４	5	IP	５		IP	６		IP	４		IP	６		IP	５		IP	５		IP

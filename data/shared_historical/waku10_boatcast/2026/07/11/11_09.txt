@@ -1,0 +1,8 @@
+data=
+1	0
+堀之内紀代子	8.70	0.15	3.7	５		IP	１		IP	１		G3	３		G3	２		G3	１		G3	１		G3	１		G3	１		G2	１		IP
+大石　　真央	5.70	0.15	3.0	２		IP	５		IP	６		IP	５		IP	４		IP	３		IP	２		IP	２	5	IP	１		IP	２		IP
+宮崎　　安奈	3.20	0.15	2.4	５		IP	４		IP	５		IP	５		G2	５		G2	３		IP	６		IP	６		IP	Ｆ	4	IP	１		IP
+鈴木　祐美子	4.30	0.21	3.7	５		IP	５		IP	１		IP	５		IP	６		IP	１		IP	４		IP	４		G3	４		G3	４		IP
+南　　　彩寧	2.70	0.18	3.9	６		IP	６		IP	４		IP	６		IP	６		G3	６		IP	４		IP	２		IP	４		IP	５		IP
+海野　ゆかり	3.70	0.24	4.8	４		IP	５		G3	５		IP	４		G3	６		G2	５		IP	５		IP	２		IP	１	5	IP	６		IP

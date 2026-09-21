@@ -1,0 +1,8 @@
+data=
+1	0
+岩瀬　　裕亮	10.70	0.09	1.5	１		IP	１		IP	１		IP	１		IP	１		G1	１		G1	１		G1	１		G1	２		G2	１		G2
+久田　　　武	5.70	0.14	3.3	２		IP	５		IP	１		IP	３		IP	３		IP	１		IP	５		IP	５		IP	１		IP	６		IP
+小坂　　宗司	5.60	0.20	4.5	３		IP	３	4	IP	５		IP	３	4	IP	３		IP	３		IP	３		IP	１	4	G3	４		IP	４		IP
+木山　　誠一	4.10	0.11	2.2	６		IP	５		IP	２		IP	６		IP	１		IP	３		IP	２		IP	５	5	IP	５		IP	６		IP
+古場　　輝義	4.10	0.18	3.6	３	4	IP	４	4	IP	５	3	IP	６	2	G3	３	4	G3	４		IP	２	4	IP	５		G3	３	3	G3	５		IP
+盛本　　真輔	3.50	0.20	3.4	４		IP	４		IP	６		IP	６		IP	３		IP	５		IP	４		IP	２	5	IP	４		IP	６		IP

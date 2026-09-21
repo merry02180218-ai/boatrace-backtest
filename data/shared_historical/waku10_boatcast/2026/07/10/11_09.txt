@@ -1,0 +1,8 @@
+data=
+1	0
+田口　　節子	9.90	0.15	2.9	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		G3	１		G3	１		G3
+宮崎　　安奈	4.70	0.17	2.9	６		IP	５		G2	２		IP	６		IP	２		IP	２		IP	４		IP	５	1	IP	２		IP	４		IP
+中川　　りな	6.70	0.14	3.0	１		IP	４		G3	２		G3	２		G3	６		IP	３		G3	２		IP	３		IP	３		IP	１		IP
+高田　　　綾	3.00	0.14	2.9	５		IP	６		IP	４	5	IP	５		IP	４		IP	４		IP	５		IP	５		IP	６		IP	２		IP
+中曽　　瑠華	2.70	0.20	3.8	４		G3	３		IP	５		IP	５		IP	６	6	IP	５		IP	６		IP	６		IP	４	6	IP	４	4	IP
+谷川　　里江	3.40	0.20	3.8	６		IP	２		IP	２		IP	４		IP	６		G3	６		G3	６		IP	４	5	IP	５		IP	４		G3

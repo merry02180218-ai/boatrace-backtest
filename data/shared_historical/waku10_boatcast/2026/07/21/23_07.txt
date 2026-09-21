@@ -1,0 +1,8 @@
+data=
+1	0
+小森　　信雄	6.50	0.21	3.9	１		IP	３		IP	１		IP	６		IP	１		IP	１		IP	３		IP	４		IP	５		IP	３		IP
+沢田　　昭宏	5.40	0.21	3.7	２		IP	２		IP	４		IP	４		IP	１	1	IP	２		IP	４		IP	６		IP	６		IP	３		IP
+荻野　　裕介	5.90	0.21	3.9	２		IP	３		G3	３		IP	１		IP	２		IP	５		IP	２		IP	６		IP	４		IP	３		IP
+木村　　亮太	5.30	0.11	2.1	２		IP	４		IP	３		IP	２		IP	１		IP	２		IP	６		IP	５		IP	４		IP	５		IP
+益田　　啓司	4.90	0.14	2.5	２		G2	４		G2	５		IP	１		IP	４		IP	６		IP	３		IP	５		IP	２		IP	６		IP
+土屋　　　蘭	2.20	0.22	4.9	３		IP	６		IP	４		IP	４		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP

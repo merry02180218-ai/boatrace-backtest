@@ -1,0 +1,8 @@
+data=
+1	0
+夏山　　亮平	8.40	0.13	2.1	１		IP	３		IP	１		G3	２		IP	３		IP	１		IP	１		G3	１		G3	４		IP	１		IP
+泉　　　啓文	5.40	0.20	3.8	１		IP	３		IP	２		G3	４	3	G3	４		IP	２		IP	３	3	IP	５		IP	５		IP	４	3	IP
+澤　　　大介	4.40	0.18	4.2	１	2	IP	３		IP	６		IP	６		IP	６		IP	１		G3	４		G3	２	4	IP	５		IP	６		IP
+久田　　　武	5.90	0.16	3.5	３		IP	３		IP	５		IP	６		IP	２		IP	２		IP	３		IP	３		IP	２		IP	２		IP
+古場　　輝義	4.50	0.18	3.3	３		IP	３	4	IP	４	4	IP	５	3	IP	６	2	G3	３	4	G3	４		IP	２	4	IP	５		G3	３	3	G3
+佐々木　翔斗	3.90	0.17	4.3	４		IP	５	5	IP	４		IP	５		IP	１		IP	４		IP	４		IP	３		IP	５		IP	６		IP

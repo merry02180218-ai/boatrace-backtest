@@ -1,0 +1,8 @@
+data=
+1	0
+松井　　　繁	9.60	0.13	3.5	１		IP	１		IP	１		SG	１		IP	１		IP	１		IP	１		IP	１		IP	６	2	SG	１		IP
+海野　康志郎	7.70	0.11	3.5	２		IP	４		G1	３		G1	２		IP	１		IP	２		IP	１		IP	６		IP	１		IP	２		G1
+吉田　　俊彦	6.60	0.16	2.9	２		IP	５		IP	２		IP	１		G3	２		IP	２		IP	３		IP	３		IP	４		IP	３		IP
+幸田　　智裕	5.00	0.14	3.3	３	5	IP	３		IP	１		IP	３		IP	４		IP	５		IP	３	5	IP	５		IP	３		IP	５	5	IP
+浜本　　裕己	4.30	0.15	3.7	６		IP	３		IP	４		IP	５		IP	６		IP	６		IP	４		IP	１		IP	２		IP	３		IP
+小池　　礼乃	2.60	0.20	3.8	６		IP	５		IP	４	5	IP	６		IP	５		IP	４		IP	４		IP	３		IP	６		IP	６		IP

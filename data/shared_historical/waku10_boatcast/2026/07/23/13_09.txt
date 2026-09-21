@@ -1,0 +1,8 @@
+data=
+1	0
+堀本　　和也	9.80	0.11	2.4	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+立具　　敬司	4.44	0.17	3.6	４		IP	５		IP	３		IP	３		IP	５		IP	３		IP	５		IP	４		IP	欠		IP	２		IP
+佐藤　隆太郎	9.00	0.14	1.7	２	2	G2	２		IP	２		IP	４		SG	１		G1	２		G1	３		SG	２		SG	１		G2	１		IP
+草場　　康幸	3.30	0.15	3.1	６		IP	５		IP	３		IP	６		IP	４		IP	５		IP	６		IP	３		IP	４		IP	３		IP
+大田　　直弥	2.80	0.21	5.0	４		IP	４		IP	４		IP	５		IP	６		IP	４		IP	５		IP	５		IP	４		IP	６		IP
+岡崎　　恭裕	5.80	0.17	3.6	５		G2	１		IP	４		IP	４		G1	３		IP	２	4	IP	５		G1	２		IP	４		IP	３		IP

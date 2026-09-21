@@ -1,0 +1,8 @@
+data=
+1	0
+嘉手苅　徹哉	5.20	0.19	3.8	欠		IP	４		IP	２		IP	５		IP	１		IP	４		IP	１		IP	１		IP	５	4	IP	５		IP
+下河　　誉史	5.56	0.15	3.3	１		G3	欠		IP	５		IP	３		IP	４		IP	３		IP	３		IP	４		IP	３		IP	３		IP
+藤井　　公人	6.10	0.13	2.3	４		IP	１		IP	４		IP	３		IP	６		IP	１		IP	３		IP	４		IP	２		IP	２		IP
+奈須　　啓太	5.90	0.14	1.8	３		IP	４		IP	３		IP	２		G3	６	5	G3	３		IP	２		IP	４		IP	１		IP	３		IP
+楠原　　翔太	4.11	0.15	3.0	５		IP	転		IP	３	6	IP	４		IP	３		IP	４		IP	３		IP	６		G3	５		IP	３		IP
+古澤　　光紀	3.00	0.16	4.0	５		IP	５		IP	６		IP	転		IP	欠		IP	４		IP	６		IP	３		IP	４		IP	４		IP

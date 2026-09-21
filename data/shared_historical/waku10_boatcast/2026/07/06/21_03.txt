@@ -1,0 +1,8 @@
+data=
+1	0
+尾嶋　　一広	9.10	0.15	2.9	１		IP	６		IP	１		IP	２		IP	１		G1	１		IP	１		IP	１		IP	１		IP	１		G1
+飯島　　　誠	7.20	0.17	3.3	２		IP	２		IP	２		IP	１	3	IP	１		IP	２		IP	２		IP	３		IP	５		IP	４		IP
+藤井　　公人	5.80	0.14	2.7	１		IP	４		IP	３		IP	６		IP	１		IP	３		IP	４		IP	２		IP	２		IP	６		IP
+吉原　　快誓	2.00	0.16	3.6	３		IP	５	6	IP	６		IP	５	5	IP	６		IP	６	6	IP	６		IP	６		IP	６		IP	４		IP
+東本　　勝利	5.00	0.16	3.5	３		IP	２		IP	３		IP	２	6	G3	５		IP	２		IP	４		IP	５	4	IP	５		IP	５		IP
+吉川　　勇作	2.50	0.15	3.4	６		IP	５		IP	６		IP	５		IP	５		IP	５		IP	４		IP	５		IP	２		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+渡辺　　空依	7.80	0.18	3.2	５		IP	４		IP	２		IP	１		IP	１		IP	２		IP	３		IP	１	2	IP	１		IP	１		IP
+津久井　拓也	5.30	0.12	2.3	２		IP	６		G2	２		G2	４		G2	６	4	IP	３		IP	３		G2	４		G2	３		IP	４	3	IP
+西尾　　亮輔	3.70	0.18	2.4	５		IP	３	4	IP	２		IP	６		IP	４		IP	５		IP	３		IP	４		IP	４		IP	転		IP
+木下　虎之輔	2.50	0.16	2.8	６		IP	５		IP	４		IP	６		IP	６		IP	３	5	IP												IP
+椎名　　　豊	6.20	0.13	2.2	２		IP	６		IP	１		IP	２		IP	５		G3	１		IP	３		IP	２		IP	５		IP	３		IP
+堀越　　雄貴	3.80	0.22	5.2	３	5	G3	４		G3	４		IP	Ｆ		IP	６		IP	２		IP	３		IP	３		IP	５		IP	６		IP

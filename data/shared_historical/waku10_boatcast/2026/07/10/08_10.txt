@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　未都	7.60	0.16	3.2	２		IP	１		IP	３		IP	４		IP	４		IP	２		IP	１		IP	１		IP	１		IP	３		IP
+中里　　優子	5.40	0.18	4.1	６		IP	１		IP	６		IP	２		IP	２		G3	１		IP	４		IP	４	3	G3	５		IP	３		IP
+濱崎　寿里矢	2.80	0.18	3.4	５		IP	６		IP	４		IP	４		G3	４		G3	６		IP	５		IP	４		IP	４		IP	５		IP
+清埜　　翔子	6.30	0.14	2.1	３		IP	４		IP	４		IP	３		G3	１		G3	３		G3	３		G3	２		G3	４		G3	２		IP
+高橋　　涼夏	3.20	0.14	3.7	５	6	IP	６	6	IP	６		IP	２		IP	６		IP	３		IP	２		IP	５		IP	６		IP	５		IP
+角　　ひとみ	2.60	0.21	4.4	４	5	IP	６		IP	５		IP	５		IP	６		IP	４		G3	３	5	G3	６		G3	４		G3	６		IP

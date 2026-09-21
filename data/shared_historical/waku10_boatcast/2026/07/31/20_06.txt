@@ -1,0 +1,8 @@
+data=
+1	0
+三宅　　　潤	8.40	0.17	3.7	１		IP	４		IP	２		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	２		IP
+渡邊　　裕貴	5.90	0.14	3.6	６		G3	２		G3	４		G3	４		IP	４		IP	２		IP	２		IP	１		IP	２		IP	４		IP
+石原　　　翼	7.60	0.10	2.0	Ｆ		G3	１		IP	２		IP	２		IP	２		G2	１		G2	３		G2	６		G2	１		IP	１		IP
+橋本　　　明	4.40	0.11	2.3	４		IP	３		IP	６		IP	６		IP	２		IP	４		IP	３		IP	４		IP	４		IP	３		G3
+伊藤　　紘章	4.80	0.19	4.3	１		IP	１		IP	５	6	IP	２		IP	５		IP	５		IP	６	6	IP	３		IP	６		IP	３		IP
+柳生　　泰二	6.00	0.14	3.1	２		IP	２	5	IP	４		IP	４		IP	２		IP	４		IP	５		G1	５		G2	１		IP	２	4	IP

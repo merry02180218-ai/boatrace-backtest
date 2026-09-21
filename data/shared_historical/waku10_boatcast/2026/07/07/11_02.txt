@@ -1,0 +1,8 @@
+data=
+1	0
+喜多須　杏奈	3.80	0.14	2.7	６		IP	妨		IP	５		G3	３		G2	１		IP	３		G3	６		IP	４		IP	３		G1	Ｆ		IP
+小林　　愛実	4.40	0.18	3.7	６		IP	３		IP	１		IP	４		IP	４		IP	２		IP	４		IP	Ｆ		IP	３		IP	６		IP
+中曽　　瑠華	3.20	0.16	2.9	３		G3	５		G3	２		IP	６		IP	６		IP	５		IP	４		IP	４		IP	５		IP	５		IP
+香川　　素子	6.50	0.21	3.6	６		IP	３	5	IP	３		G3	１		IP	１		IP	２		IP	２		IP	３		IP	５		G3	２		IP
+海野　ゆかり	5.20	0.21	3.6	３		IP	３	4	IP	５		G3	４		G3	５		G2	３		G2	２		IP	６		IP	２		IP	３		IP
+根岸　　真優	2.90	0.14	1.9	４		IP	６		IP	６		IP	１		IP	６		IP	５		IP	６		IP	４	5	IP	６		IP	４		IP

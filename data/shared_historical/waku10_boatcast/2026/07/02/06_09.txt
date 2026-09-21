@@ -1,0 +1,8 @@
+data=
+1	0
+萩原　　知哉	5.80	0.13	3.0	６		IP	６		IP	１		IP	２		IP	１		IP	５		IP	４		IP	２		IP	４		IP	１		IP
+米田　　隆弘	5.80	0.20	4.2	２		IP	３		IP	４		IP	３		IP	４		IP	２		IP	５		IP	２		IP	４		IP	２		IP
+君島　　秀三	7.10	0.10	1.7	３		G3	２		IP	２		IP	３		IP	３		IP	３		IP	３	4	IP	２		IP	３		G1	１		IP
+杉江　　浩明	2.40	0.24	4.3	６		G3	６		G3	６		IP	６		IP	５		IP	６		IP	３	5	IP	２		IP	６		IP	５		IP
+横井　　健太	4.00	0.17	3.8	２		IP	３		IP	５		IP	２		IP	３		IP	５		IP	５		IP	４		IP	６		IP	６		IP
+東　　　健介	2.10	0.20	4.9	５		G3	４		IP	６		IP	６		IP	６		IP	６	5	IP	４		IP	４		IP	６		IP	５		IP

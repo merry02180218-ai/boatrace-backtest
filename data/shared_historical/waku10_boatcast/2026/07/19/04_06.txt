@@ -1,0 +1,8 @@
+data=
+1	0
+酒井　　俊弘	8.20	0.14	3.5	２		IP	４		IP	２		IP	１		IP	２		IP	２		IP	１		IP	２		IP	２		IP	１		IP
+関　　　浩哉	7.80	0.13	2.7	３		G2	１		G2	３		SG	２		G1	２		SG	６		SG	４		G1	１		IP	１		IP	４		G1
+藤井　　　徹	4.70	0.16	3.3	５		IP	２		IP	４		IP	４		IP	２		IP	６		IP	５		IP	２		IP	２		IP	５		IP
+室田　　泰史	4.10	0.13	2.7	５		G3	４		G3	４		G3	４		IP	３		IP	３		IP	３		IP	５		IP	３		IP	６		IP
+佐竹　　友樹	4.20	0.14	2.6	３		G2	４		IP	４		IP	２		IP	４		IP	３		IP	３		IP	６		IP	６		IP	６		IP
+飯島　　昌弘	5.30	0.18	4.0	５		G3	３	4	IP	３	4	IP	４		IP	４		IP	３		IP	３	5	IP	４		IP	４		IP	２		IP

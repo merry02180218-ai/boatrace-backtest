@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　文彦	9.40	0.16	2.7	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP
+白水　　勝也	7.20	0.15	3.5	２		IP	２		IP	５		IP	３		IP	３		IP	２		IP	２		IP	３		IP	１		IP	１		IP
+吉田　　一郎	6.50	0.13	2.4	１		IP	２		IP	６		IP	３		IP	２		IP	２	4	IP	４		IP	２		IP	３		IP	３		IP
+山川　　雄大	3.40	0.22	4.5	４		IP	２		IP	５		IP	５		IP	３		IP	６		IP	５		IP	６		IP	３		IP	５		IP
+尾嶋　　一広	3.80	0.14	2.5	５		IP	２		IP	５		IP	４		G1	６		G1	５		IP	４		IP	３		IP	４		G1	６		G1
+待鳥　　雄紀	2.30	0.18	4.8	５	5	IP	６		IP	６	5	IP	４		IP	４		G3	６		IP	３	5	IP	６		G3	５		IP	６		IP

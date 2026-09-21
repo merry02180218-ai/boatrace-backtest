@@ -1,0 +1,8 @@
+data=
+1	0
+大塚　　雅治	7.90	0.16	2.9	１		IP	３	2	IP	３		G3	１		IP	３		IP	１		IP	１		IP	６		IP	１		IP	１		IP
+鹿島　　敏弘	5.80	0.15	3.2	３		G2	２		IP	６		IP	５		IP	４		IP	１		IP	４	3	IP	２		IP	３		IP	２		IP
+本橋　　克洋	4.50	0.17	3.7	３		IP	４		IP	３		IP	２		IP	６		IP	４		IP	４		IP	２		IP	５		IP	５		IP
+富永　　修一	5.40	0.11	2.5	３		IP	２		IP	４		IP	３	5	G3	１		IP	５		IP	４	5	IP	３		IP	４		IP	４		IP
+富山　　弘幸	5.40	0.21	3.4	１	4	G3	２		G3	５		IP	５		IP	５		G3	２	4	G3	３		IP	４		IP	３		IP	３		IP
+和田　　拓也	3.80	0.15	2.8	６		IP	６		IP	３		IP	３		IP	３		IP	６		IP	６		G1	６		IP	３		IP	４	5	IP

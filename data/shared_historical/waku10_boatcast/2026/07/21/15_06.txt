@@ -1,0 +1,8 @@
+data=
+1	0
+小池　　哲也	8.30	0.14	2.8	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	４		G2	１		IP	４		IP	１		IP
+寳田　　亮治	4.78	0.21	4.3	２	3	IP	３		IP	６		IP	エ		IP	６		IP	３		IP	３		IP	６		IP	２		IP	３		IP
+深水　慎一郎	6.00	0.15	3.2	２		IP	４		G3	２		G3	４		IP	５		IP	４		IP	２		IP	１		IP	２		IP	４		IP
+西岡　　蒼志	4.10	0.19	4.3	５		IP	２		IP	５		IP	１		IP	４		IP	４		IP	５		IP	４		IP	４	6	IP	６		IP
+石橋　　道友	4.60	0.16	3.1	３		IP	６		IP	６		IP	５		IP	３	4	IP	５		G1	４		G1	５		G1	２		IP	２		IP
+小川　　時光	2.40	0.15	3.3	５		IP	３		IP	６		IP	５		IP	６		IP	４		IP	４	5	IP	６		IP	６		IP	５	5	IP

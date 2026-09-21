@@ -1,0 +1,8 @@
+data=
+1	0
+米丸　　乃絵	9.70	0.14	3.2	４		G2	１		SG	１		IP	１		IP	１		G2	１		G2	１		G3	２		G3	１		G3	１		IP
+北村　　寧々	6.00	0.14	2.2	３		IP	１		IP	３		IP	５		IP	４		IP	３		IP	２		IP	１		IP	４		G2	５		G2
+井上　　未都	5.80	0.15	2.4	３		IP	５		IP	４		IP	１		IP	１		IP	２		IP	４		IP	２		IP	５		IP	４		IP
+山田　　理央	6.10	0.14	3.0	３		IP	５		IP	５		IP	４		IP	３		IP	１		IP	３		IP	３		IP	１		G2	２		IP
+小芦　るり華	5.20	0.16	2.2	２		IP	２		IP	３		IP	２	3	IP	３		IP	５		IP	５		G2	４		G2	５		G3	４	4	IP
+實森　　美祐	4.30	0.16	3.8	２		G2	５		IP	６		IP	４		IP	４		G1	６		G1	３		SG	５	5	SG	５		G2	４		G2

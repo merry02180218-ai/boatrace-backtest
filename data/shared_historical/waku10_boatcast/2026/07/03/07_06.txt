@@ -1,0 +1,8 @@
+data=
+1	0
+有山　　　望	5.67	0.12	3.4	５		IP	Ｆ		IP	１		IP	１		IP	５		IP	１		IP												IP
+横田　　海人	2.10	0.18	2.9	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	２		IP	４		IP	６		IP
+大島　隆乃介	5.20	0.14	3.6	２		IP	５		IP	２		IP	５		IP	４		IP	３		IP	３		IP	４		IP	３		IP	３		IP
+松田　　真実	3.80	0.17	3.8	１		IP	６		IP	５		IP	５		IP	４		IP	５		G3	４		IP	２		IP	４		IP	６		IP
+野田　なづき	5.60	0.23	4.0	２		IP	４		G2	５		IP	４		G3	４		G3	３		G3	２		IP	２		IP	６		IP	１		G3
+恵良　　琴美	2.00	0.21	4.5	５		IP	６		IP	６		IP	６		IP	４		IP	４		IP	６		IP	６		IP	４		IP	６		IP

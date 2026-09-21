@@ -1,0 +1,8 @@
+data=
+1	0
+黒崎　　竜也	9.00	0.13	3.3	１		G2	１		IP	１		IP	１		G3	１		G3	１		G3	１		IP	２		IP	１		IP	６		IP
+近江　　翔吾	7.70	0.14	2.4	３		G2	３		G2	２		IP	４		IP	１		IP	１	3	IP	２	3	IP	４		IP	１		IP	２		G1
+安達　　裕樹	6.78	0.14	2.8	２		G2	４		G2	転		IP	１		G2	２		G2	４		G2	４		IP	３	2	IP	２		IP	４		IP
+江本　　真治	6.30	0.14	3.0	３		IP	４		IP	２		IP	６		IP	２	5	IP	１		IP	１		IP	１		G3	５		IP	４		IP
+市川　　哲也	3.20	0.14	3.6	６	4	G2	３		IP	３		IP	５		IP	６		IP	５	1	IP	６		IP	５		IP	３		G2	５		G2
+中田　　元泰	5.10	0.18	3.7	６		G2	４		IP	５		IP	２		IP	６		IP	３	5	IP	３		IP	２		IP	１	5	IP	４		IP

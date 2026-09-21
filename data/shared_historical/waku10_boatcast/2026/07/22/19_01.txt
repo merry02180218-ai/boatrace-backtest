@@ -1,0 +1,8 @@
+data=
+1	0
+藤本　紗弥香	3.60	0.22	4.4	３		IP	６		IP	Ｆ		IP	２		IP	６		IP	２		IP	１		G3	６		IP	Ｆ		IP	６		G3
+渡辺　　千草	5.60	0.14	2.9	２		G3	２		IP	４		IP	３		IP	５		IP	４		IP	３		IP	３		IP	３		IP	３		IP
+五反田　　忍	4.90	0.14	2.3	６		G3	６		IP	４		G3	４		IP	２		IP	１		G3	１		G3	２		IP	６		IP	５		IP
+矢野　真梨菜	2.60	0.17	2.7	４		G3	５		IP	３		IP	５		IP	６		IP	５		IP	５		IP	６		IP	５		IP	４		G3
+水口　　由紀	3.40	0.19	3.9	５		IP	２		IP	４		IP	５		IP	３		IP	４		IP	６		IP	４		IP	６		G3	５		G3
+宮城　　那菜	2.10	0.10	2.6	６		G3	４		G3	４		G3	６		IP	５		IP	４		IP	５		IP	６		IP	６		IP	６		IP

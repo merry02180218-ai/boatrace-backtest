@@ -1,0 +1,8 @@
+data=
+1	0
+浅井　　　翼	3.40	0.20	3.4	２		IP	６		IP	６	2	IP	６		IP	６		IP	６		IP	６		IP	４		IP	２		IP	２		IP
+安河内　　健	7.90	0.11	2.5	３		IP	２		IP	３		IP	１		IP	３		IP	２		IP	２		IP	１	3	IP	２		IP	２	3	IP
+佐口　　達也	4.70	0.14	3.2	１		IP	４	5	IP	１		IP	５		IP	４		IP	３		IP	６		IP	５		IP	４		IP	４		IP
+妹尾　　忠幸	5.10	0.18	3.9	３		IP	３		IP	６		IP	４		IP	２		IP	２		IP	２		IP	４		IP	５		IP	４	5	IP
+佐藤　　太亮	4.20	0.15	3.7	３		IP	２		IP	５		IP	６		IP	５		IP	６		IP	３		IP	４		IP	２		IP	４		IP
+西尾　　亮輔	3.30	0.19	4.3	４		IP	２		IP	転		IP	４		IP	６		IP	５		IP	５		IP	３	5	IP	４		IP	５		IP

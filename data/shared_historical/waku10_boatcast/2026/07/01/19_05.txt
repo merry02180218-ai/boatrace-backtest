@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　　豪	9.60	0.15	3.5	２		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+中井　　俊祐	4.70	0.21	4.3	６		IP	２		IP	２		IP	６		IP	３		IP	２		IP	６		IP	５		IP	３		IP	４		IP
+永松　　良教	4.10	0.13	2.6	５		IP	５		IP	２		IP	３		IP	Ｆ		IP	３		IP	Ｆ		IP	２		IP	６		IP	２		IP
+峰重　　侑治	6.60	0.17	3.4	５		IP	３		IP	３		IP	２		IP	３		IP	３		IP	４		IP	２		G3	１		G3	１		G3
+吉川　　貴仁	6.70	0.16	3.5	１		IP	５		IP	２		IP	６		IP	３		IP	３		IP	３		IP	２		IP	２		IP	１		IP
+畔柳　　俊吾	3.30	0.21	4.7	２		IP	５		IP	４		IP	５		IP	４	5	IP	５		IP	５		IP	５		IP	３	4	IP	６		IP

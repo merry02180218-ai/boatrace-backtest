@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　宏典	6.80	0.15	2.9	３		IP	２		IP	２		IP	１		IP	１		IP	１		IP	５		IP	５		IP	５		IP	１		IP
+春園　　功太	5.70	0.15	2.7	６		IP	２		IP	６		IP	１		IP	３		IP	６		IP	５		IP	１		IP	２		IP	１		IP
+郷原　　章平	7.40	0.12	2.1	６		IP	１		IP	３		IP	３		IP	１		IP	４		IP	１		IP	１		IP	２		IP	２		IP
+金子　　貴志	4.70	0.17	4.2	４		IP	３		IP	３		IP	６		IP	２		IP	４		IP	１		IP	５	5	IP	５		IP	４	3	IP
+石田　　政吾	2.40	0.17	3.5	４		IP	６		IP	４		IP	３		IP	６		IP	４	6	IP	６		IP	６		IP	６		IP	６		IP
+柳橋　　宏紀	3.60	0.16	3.1	５		IP	４		IP	３		G3	２		G3	６		IP	２		IP	６		IP	５		G3	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+桑原　　　悠	10.40	0.13	2.0	１		IP	１		IP	１		IP	１		G1	１		G1	１		G1	１		G1	１		IP	１		IP	１		IP
+廣中　　良一	5.10	0.13	2.8	２		IP	２		IP	４		IP	３		G3	６		G3	２		IP	４		IP	５		IP	４	3	IP	３		IP
+石川　　吉鎬	4.40	0.19	4.6	５		IP	３		IP	５		IP	Ｆ		IP	５		IP	３	4	IP	５		IP	１		IP	２	4	IP	３		IP
+松尾　　宣邦	4.40	0.16	3.5	４		IP	２	5	G3	２		G3	５		IP	５		IP	２		G3	４		G3	６		IP	３		IP	６		IP
+百武　　　翔	5.90	0.19	4.7	２		IP	３	4	IP	１		IP	４		IP	３	3	IP	２		IP	５		IP	４		IP	１		G3	６		IP
+香川　　陽太	2.00	0.18	3.6	５		IP	３		IP	６		IP	５		IP	５		IP	５		IP	６		IP	５		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+佐竹　　恒彦	8.10	0.13	2.7	１		IP	１		IP	６		IP	３		IP	１		IP	１		IP	２		IP	３		IP	１		G3	１		G3
+堀本　　翔太	5.10	0.17	3.6	４		IP	１		IP	３		IP	４		IP	３		IP	４		IP	３		IP	欠		IP	１		IP	６		IP
+羽野　　直也	8.50	0.14	3.2	２		G2	２		G1	３		G1	１		G1	２		IP	１		IP	２		IP	３		G1	３		G2	２		G2
+香川　　颯太	4.00	0.16	3.2	２		IP	５		IP	１		IP	４		IP	２		IP	５		IP	５	5	IP	６		IP	６	6	IP	５		IP
+花本　　夏樹	1.70	0.21	5.0	６		IP	５		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	４		IP	５		IP
+吉田　　一心	3.80	0.12	3.3	２		G3	６		G3	４		IP	２		IP	４		IP	６		IP	５		IP	４		IP	転		IP	３		IP

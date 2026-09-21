@@ -1,0 +1,8 @@
+data=
+1	0
+木下　　翔太	9.70	0.15	3.0	１		IP	２		IP	１		G2	４		G2	１		G2	１		G2	１		G2	１		IP	２		IP	１		G2
+片橋　　幸貴	4.50	0.14	3.1	３	4	IP	２		IP	５	3	IP	４		IP	４		IP	２		IP	転		IP	２		IP	４		IP	６		IP
+中村　　晃朋	6.70	0.14	2.8	２		IP	１		IP	１		IP	２		IP	４		IP	２		G1	６		G1	３		IP	６		IP	２		IP
+香月　　大輝	2.90	0.11	2.4	４	5	IP	４		IP	６		IP	４	5	IP	５		IP	３		IP	６		IP	３		IP	Ｆ		IP	６		IP
+古賀　　繁輝	5.10	0.13	2.5	２		IP	３		IP	３		IP	３		IP	６		IP	２		IP	３		IP	５		G1	６		G1	４		G2
+長野　壮志郎	4.00	0.15	3.2	４		IP	３		IP	６		IP	４		IP	６		IP	５		IP	２		IP	３		IP	４	5	IP	４		IP

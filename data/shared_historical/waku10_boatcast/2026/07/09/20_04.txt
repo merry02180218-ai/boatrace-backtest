@@ -1,0 +1,8 @@
+data=
+1	0
+川島　　拓郎	7.00	0.14	3.0	１		G3	１		IP	６		IP	５		G3	１		IP	１		IP	６		IP	１		IP	１		IP	３		IP
+山下　　和彦	5.70	0.15	2.7	６		IP	４		G3	１		IP	４		IP	３		IP	１		IP	５		IP	５		IP	２		IP	１		G3
+大野　　芳顕	5.60	0.12	2.1	２		IP	転		IP	５		IP	４		IP	５		IP	２		IP	３		IP	１		IP	２		IP	２		IP
+橋本　　久和	5.50	0.15	3.2	２		IP	４		IP	６		IP	１		IP	４		IP	４		IP	１		IP	４	3	IP	２	5	G3	５		IP
+吉田　　裕平	7.20	0.14	2.7	５		SG	４		G1	３		SG	２		G1	３	4	IP	２		IP	２		IP	１		G1	２		G1	６		G1
+後藤　　隼之	3.70	0.19	4.4	４		G3	３	5	IP	６		IP	３	5	IP	５		IP	５		IP	３		IP	３	5	IP	５		IP	５	5	IP

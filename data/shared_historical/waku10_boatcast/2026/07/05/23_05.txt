@@ -1,0 +1,8 @@
+data=
+1	0
+菊池　　宏志	6.50	0.14	2.4	１		IP	４		IP	６		IP	５		IP	１		IP	１		IP	２		IP	２		IP	５		IP	１		IP
+大賀　龍之介	6.60	0.17	3.3	３		IP	４		IP	２		IP	１		IP	５		IP	２		IP	２		IP	３		IP	１		IP	４	3	IP
+鈴木　　秀茉	5.50	0.13	2.8	３		IP	２		IP	５		IP	２	4	IP	５		IP	６	4	IP	２		IP	２		IP	４		IP	２		G3
+高山　　智至	4.60	0.18	3.1	２		IP	５		IP	５		IP	３		IP	５		IP	５		IP	２		IP	４		IP	３		IP	３		IP
+西丸　　敦基	3.90	0.10	2.0	４		IP	５		IP	３		IP	６		IP	３	6	IP	４		IP	４		IP	５	6	IP	５		G3	２		G3
+松尾　　昂明	4.10	0.16	3.2	４		IP	２		IP	３		IP	３		IP	４		IP	５		IP	５		IP	４		IP	６	5	IP	４		IP

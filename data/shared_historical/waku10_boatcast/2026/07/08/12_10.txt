@@ -1,0 +1,8 @@
+data=
+1	0
+武田　　信一	6.60	0.19	3.1	１		IP	Ｆ		IP	１		IP	４		IP	４		IP	１		IP	２		IP	５		IP	２		IP	１		IP
+佐々木　和伸	6.40	0.15	3.5	１		IP	２		IP	１		IP	２		IP	４		IP	２		IP	２		IP	６		IP	３		IP	６		IP
+寺田　　千恵	7.20	0.14	2.3	１		IP	４		IP	１		IP	３		IP	１		IP	３		IP	１		IP	３		IP	４		G2	４	4	G1
+杉山　　正樹	6.80	0.17	3.8	２		IP	３		IP	３		G1	２	5	IP	３		G2	４		IP	４		IP	２		G1	３		G1	２		IP
+宮嵜　隆太郎	4.50	0.13	2.3	６		IP	１	6	IP	１		G3	６		IP	５		IP	４		IP	２	6	IP	５		IP	６		IP	３		IP
+天野　　友和	4.10	0.15	3.5	５		IP	５	5	IP	１		IP	４		IP	３		IP	５		IP	３		IP	６		IP	３		IP	５		IP

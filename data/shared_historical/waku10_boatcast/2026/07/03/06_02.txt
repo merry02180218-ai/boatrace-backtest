@@ -1,0 +1,8 @@
+data=
+1	0
+米田　　隆弘	9.40	0.17	2.7	１		IP	１		IP	１		IP	２		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP
+上村　　宏太	3.80	0.14	3.1	６	1	IP	２		IP	４		IP	６		IP	１	3	IP	５		IP	３		IP	６		IP	４		IP	６		IP
+安部　　慎一	4.40	0.20	3.4	３		IP	５		IP	４	4	IP	３		IP	６	2	IP	６		IP	３		G3	３		IP	２		IP	４		IP
+一色　　凌雅	6.60	0.15	3.1	２		IP	３		IP	３	5	IP	２		IP	２		IP	４		IP	３		IP	２	3	IP	２		IP	４		IP
+金子　　順一	3.60	0.13	4.0	６		IP	４	2	IP	４		IP	３		IP	４	4	IP	５		IP	３		IP	５		IP	６		IP	３		IP
+小坂　　尚哉	4.89	0.14	3.3	３		IP	３		IP	３		G1	５		IP	３		IP	エ		IP	６		IP	４		IP	３	5	IP	３		IP

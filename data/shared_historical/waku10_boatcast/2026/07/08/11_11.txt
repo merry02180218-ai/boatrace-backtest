@@ -1,0 +1,8 @@
+data=
+1	0
+井上　　遥妃	8.40	0.12	2.8	１		IP	１		IP	１		IP	２		IP	６		IP	１		IP	６		SG	１		G2	１		G2	１		IP
+片岡　　恵里	6.60	0.15	2.7	４		IP	５		IP	２	3	IP	２		IP	１		G3	１		G3	５		IP	２		G3	２		IP	３		IP
+湯淺　　紀香	5.00	0.19	3.9	２		IP	４		IP	２		IP	２		IP	６		IP	５		G2	４		G3	１		G3	５		IP	５		IP
+海野　ゆかり	4.50	0.12	3.2	４		IP	３		G3	４		G3	エ		IP	４		IP	３		IP	１		G3	３		G3	５		G3	５		G2
+谷川　　里江	2.20	0.16	3.7	５		IP	６		IP	３		IP	５		G3	６		G3	Ｆ	4	IP	３		G3	５		G3	６		IP	６		IP
+中川　　りな	3.90	0.19	3.3	５		IP	６		IP	５		G3	１	5	IP	３	5	IP	６		G3	４		IP	６		IP	４		IP	２		IP

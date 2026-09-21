@@ -1,0 +1,8 @@
+data=
+1	0
+後藤　　美翼	6.20	0.17	3.9	１		IP	６		IP	１		IP	４		IP	４		IP	１		G3	２		G3	１		IP	６		G3	４		G3
+笠野　友紀恵	5.00	0.23	4.7	５		IP	４		G3	３		IP	４		G3	４		G3	１		IP	３		IP	２		G3	５		G3	４		IP
+中村　紋夕梨	3.00	0.21	4.8	６		IP	４		IP	５		IP	５		IP	３		IP															IP
+前田　　紗希	6.60	0.14	1.8	３		G3	Ｆ		IP	２		G2	２		G2	６		G3	２		G3	１	5	G3	１		G3	１		G3	６		IP
+深川　麻奈美	6.00	0.19	4.7	４	6	IP	２		IP	１		IP	３		IP	５		IP	２		IP	３		IP	３		IP	４		IP	４		IP
+長野　　未来	1.50	0.21	4.2	６		IP	４		IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

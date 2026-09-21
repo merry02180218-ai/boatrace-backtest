@@ -1,0 +1,8 @@
+data=
+1	0
+眞崎　　武蔵	3.80	0.23	4.9	１		IP	５		IP	６		IP	６		IP	３		IP	６	2	IP	４		IP	３		IP	３		IP	６		IP
+長谷川　雅和	5.40	0.17	4.7	２		IP	６		IP	４		IP	１		IP	５	3	IP	３		IP	３	3	IP	６		IP	２		G3	２		IP
+畑田　　汰一	6.80	0.09	2.6	２		IP	１		G2	２		IP	３		IP	６	2	IP	３		IP	１	4	IP	１		IP	４		G1	５		G1
+上平　　真二	5.00	0.17	4.2	２		IP	６		G1	５		G1	転		IP	４		IP	３		IP	３		IP	５		G1	３		G1	３		IP
+石井　　裕美	2.90	0.19	3.7	６		G3	４		IP	４	6	IP	３		G3	６		IP	４		G3	５		G3	６		IP	５		G3	４		G3
+茶谷　　信次	4.00	0.25	4.9	４		IP	５	5	IP	５		IP	４		IP	５		IP	３		IP	３		IP	５		IP	３		IP	３		IP

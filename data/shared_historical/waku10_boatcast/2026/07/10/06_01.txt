@@ -1,0 +1,8 @@
+data=
+1	0
+倉田　　郁美	6.00	0.23	3.4	１		G3	３		G3	６	2	IP	４		IP	６		IP	４		IP	２		IP	２		IP	２		IP	１		IP
+渡邉　真奈美	5.00	0.15	2.9	１		IP	３		IP	３		IP	５		IP	６		IP	１		G3	６		G3	３		G3	４		IP	４		IP
+内山　　七海	6.10	0.15	3.6	２		IP	２		IP	３		IP	３		IP	５		IP	１		G3	２		G3	４		G2	６		G2	３		IP
+本田　　　愛	4.20	0.19	4.1	５		IP	５		IP	４		IP	４		IP	１		IP	２		IP	２	5	IP	５		IP	６		IP	６		IP
+藤原　　早菜	4.60	0.18	4.3	２		IP	２		IP	６	6	IP	３		IP	３		IP	３		IP	３		IP	転		IP	６		IP	４		IP
+三嶌　こころ	3.40	0.23	5.3	３		IP	５		IP	２		IP	５		IP	４		IP	６		IP	６		IP	５		IP	４		IP	４		IP

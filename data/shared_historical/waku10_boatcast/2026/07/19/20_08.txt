@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　和之	7.20	0.13	2.1	６		G2	転		IP	２		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	４		IP
+上田　　龍星	8.30	0.12	2.7	２		G2	２		G2	３		G1	３		G1	４		G2	３		G2	２		IP	１		IP	１		IP	１		IP
+牧　　　宏次	7.20	0.14	1.7	２		IP	１		IP	２		IP	１		IP	４		IP	３		IP	２		IP	４		IP	２		IP	３		IP
+野田部　宏子	3.50	0.15	3.1	４		IP	６	6	IP	６	5	IP	６		IP	５		IP	６		IP	３		IP	１		IP	６		IP	２		IP
+栗山　　繁洋	3.30	0.16	3.7	５		IP	５		IP	４		IP	３		IP	６		IP	４		IP	４		IP	５		IP	５		IP	３		IP
+知念　　伶奈	1.90	0.29	5.1	６		IP	２		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５	5	IP	５		IP

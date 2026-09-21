@@ -1,0 +1,8 @@
+data=
+1	0
+渡辺　　真至	8.70	0.13	3.1	１		IP	３		IP	１		IP	２		IP	１		IP	３		IP	１		IP	２		IP	１		IP	２		IP
+庄司　樹良々	6.10	0.16	4.1	３		IP	３		IP	３		IP	２		IP	１		IP	３		IP	１		IP	５		IP	３		IP	６		IP
+岡村　　慶太	6.50	0.14	2.8	２		IP	３		IP	５	4	IP	５		IP	欠		IP	１		IP	１		IP	３		IP	１		IP	１	4	IP
+川島　　圭司	5.40	0.13	2.0	３		IP	３		IP	Ｆ	5	IP	１		IP	１		IP	４		IP	５		IP	６		G2	４		IP	１		IP
+伊藤　　紘章	4.80	0.19	4.1	１		IP	５	6	IP	２		IP	５		IP	５		IP	６	6	IP	３		IP	６		IP	３		IP	１		IP
+北川　　敏弘	3.50	0.16	3.5	４		IP	４		IP	６		IP	５		IP	２		IP	３		IP	５		IP	６		IP	４		IP	６		IP

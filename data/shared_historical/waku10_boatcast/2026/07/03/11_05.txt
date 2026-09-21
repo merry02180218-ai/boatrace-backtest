@@ -1,0 +1,8 @@
+data=
+1	0
+鳥居塚　孝博	7.90	0.13	2.3	３		IP	１		IP	１		G2	１		IP	１		IP	４		IP	１		IP	１		IP	２		IP	Ｆ		IP
+桑原　　　啓	4.80	0.19	3.7	３		IP	２		IP	６		IP	６		IP	６		G3	１		IP	１		IP	２	3	IP	５	3	IP	６		IP
+市川　　健太	3.90	0.17	3.3	６		IP	５		IP	６		IP	１		IP	６		IP	２		IP	３	4	IP	６		IP	６		IP	２		IP
+渡辺　　空依	4.30	0.18	3.5	４		IP	２		IP	５	5	IP	５	5	IP	２		IP	６		IP	５		IP	４		IP	３		IP	３		IP
+中山　　翔太	5.80	0.11	2.8	２		IP	５		G2	４		G2	３		IP	４		IP	３		IP	２		IP	２		IP	２		IP	６		G1
+山崎　　善庸	1.60	0.26	5.5	６		IP	６		IP	５		IP	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP	５		IP

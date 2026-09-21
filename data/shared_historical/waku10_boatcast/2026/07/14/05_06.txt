@@ -1,0 +1,8 @@
+data=
+1	0
+岡瀬　　正人	6.90	0.15	3.3	１		IP	２		IP	１		IP	６		IP	１		IP	１		IP	４		IP	５		IP	１		IP	４		IP
+中村　　駿平	3.40	0.17	3.5	３		IP	５		IP	４	3	IP	６		IP	６		IP	３		IP	４	3	IP	５		IP	５		IP	３		IP
+寺島　　美里	4.40	0.14	3.0	５		IP	１		IP	６		IP	５	4	IP	５		IP	５		IP	２		IP	３		G1	３		IP	４		IP
+上條　　嘉嗣	6.60	0.21	3.7	２		IP	１	3	IP	６	2	IP	２	2	IP	６		IP	２		IP	３		IP	１		IP	２		IP	３		G3
+中井　　俊祐	3.40	0.11	2.5	５	6	IP	６		IP	４		IP	４		IP	６		IP	５		IP	１		IP	５	6	IP	３		IP	５		IP
+村上　宗太郎	4.50	0.25	5.3	３	4	IP	２	3	IP	４		IP	３		IP	５		IP	４	5	IP	３		IP	５		IP	６		IP	４		IP

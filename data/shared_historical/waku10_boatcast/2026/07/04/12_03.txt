@@ -1,0 +1,8 @@
+data=
+1	0
+富澤　　祐作	7.40	0.09	1.9	５		IP	１		IP	１		IP	１		IP	２		IP	５		IP	１		IP	４		IP	１		IP	２		IP
+天野　　友和	6.40	0.15	2.5	３		IP	１	1	IP	５		IP	２		IP	３		IP	５		IP	２		IP	２	3	IP	３		IP	２		IP
+小山　　　勉	6.20	0.18	3.1	４		IP	４		IP	４		IP	２		IP	３		IP	１		IP	３		IP	２		IP	１		IP	５		IP
+村田　　　敦	2.80	0.14	3.4	２	6	IP	５		IP	３		IP	４	6	IP	５		IP	６		IP	６	6	IP	６	5	IP	６		IP	５	6	IP
+高橋　　英之	5.20	0.14	3.2	３		IP	３		IP	５		IP	６		IP	４		IP	１	4	IP	２		IP	３		IP	６		IP	２		IP
+森　　　智哉	4.60	0.20	4.0	５		IP	３		IP	３		IP	５		IP	４		IP	３		IP	４		IP	３		IP	３		IP	４		IP

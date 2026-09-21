@@ -1,0 +1,8 @@
+data=
+1	0
+山口　　修路	6.11	0.22	3.9	１		IP	２		IP	１		IP	１		IP	６	3	G3	１		IP	６		IP	６		G3	４		IP	欠		IP
+長岡　　良也	6.60	0.16	3.2	３		IP	３		IP	３		IP	２		IP	３		IP	２		IP	１	4	IP	２		IP	２		IP	Ｆ		G1
+石川　　真二	5.30	0.10	2.2	１	1	IP	５	2	IP	２	1	IP	３	2	IP	４	2	IP	５	2	G3	４	2	G3	１	2	G3	４	2	G3	６	2	IP
+富永　　正人	3.30	0.22	4.7	２		G3	５		IP	５		IP	妨		IP	５		IP	６		IP	３		IP	４		IP	４		IP	４		IP
+渡部　　　悟	2.90	0.14	3.1	３		IP	２		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	４		IP	４		IP
+高橋　　嗣穏	1.30	0.21	4.0	５		IP	６		IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

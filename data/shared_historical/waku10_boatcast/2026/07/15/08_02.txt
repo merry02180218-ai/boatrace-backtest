@@ -1,0 +1,8 @@
+data=
+1	0
+奥平　　拓也	4.22	0.22	3.9	６		IP	２		IP	転		IP	３		IP	３		IP	３		IP	４		IP	６		G3	５		IP	４		IP
+小林　　文彦	6.10	0.18	2.7	１		IP	４		IP	１		IP	１		IP	５		IP	２	3	IP	４		IP	５		IP	６		IP	１		IP
+川田　　正人	4.30	0.16	3.4	６		IP	３		IP	３		IP	５	4	IP	４		IP	５		IP	５		IP	１	4	IP	４	4	IP	３		IP
+倉富　　大誠	6.40	0.17	2.5	２		IP	２		IP	４		IP	３	5	IP	３		IP	２		IP	５		IP	４		IP	１		IP	２		IP
+木下　　雄介	5.70	0.20	3.5	１		IP	３		IP	４		IP	５		IP	２		IP	３		IP	６	6	IP	５		IP	１		IP	２		IP
+宇土　　泰就	2.50	0.15	4.2	６	5	IP	５		IP	４		IP	５		IP	６		IP	３		IP	６		IP	５		IP	５		IP	４		IP

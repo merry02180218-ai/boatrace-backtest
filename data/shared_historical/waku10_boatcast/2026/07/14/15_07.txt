@@ -1,0 +1,8 @@
+data=
+1	0
+末永　　祐輝	8.40	0.11	2.5	３		IP	２		IP	３		G3	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+砂長　　知輝	7.40	0.12	2.4	３	3	IP	２		IP	２		IP	２		IP	２		IP	２		IP	５		IP	２		IP	２		IP	１		IP
+吉川　　勇作	2.80	0.15	2.3	５		IP	３		IP	４		IP	５		IP	６		IP	４		IP	４		IP	５	4	IP	５		IP	６		IP
+日高　龍之介	2.50	0.18	3.3	４		IP	５		IP	５		IP	６		IP	４		IP	Ｆ	5	IP	６		IP	５		IP	６		IP	２		IP
+高橋　　真吾	2.10	0.12	2.9	６	6	IP	６		G3	６		G3	５		IP	６		IP	４		IP	２		IP	６		IP	６	6	IP	６		IP
+大久保信一郎	4.40	0.20	4.2	２		IP	３		IP	５		IP	５		IP	４		IP	６		G3	３		IP	３		IP	５		IP	３	5	IP

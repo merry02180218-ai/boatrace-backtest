@@ -1,0 +1,8 @@
+data=
+1	0
+小芦　るり華	9.60	0.13	2.2	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	２		IP
+垂水　　　悠	4.80	0.11	2.1	６		G3	５		IP	２		IP	３		IP	４		IP	３		IP	６		IP	３		IP	１		IP	４		IP
+定松　　勇樹	8.30	0.10	2.8	４		SG	４		G1	３		SG	２	2	IP	５		G1	２		G1	１		G1	１		SG	１		G2	２		G1
+土井　　歩夢	5.40	0.15	3.4	４		IP	３		IP	３		IP	２		IP	４		IP	１		IP	４		IP	３	5	IP	４		IP	５	5	IP
+野田　　彩加	4.30	0.18	3.0	４	6	IP	２		IP	６		IP	３		IP	５		IP	６		G3	４		G3	３		G3	５		G2	３		G3
+谷口　　知優	3.00	0.14	2.7	５		IP	４		IP	５		G3	５		IP	６		IP	２		IP	２	5	IP	６		IP	６		IP	６		IP

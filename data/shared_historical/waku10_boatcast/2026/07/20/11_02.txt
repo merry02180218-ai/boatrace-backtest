@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　光雄	8.20	0.16	3.0	１		IP	５		IP	１		IP	３		G3	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP
+重富　　伸也	5.00	0.15	3.4	３		IP	４		IP	２		IP	５		IP	６		IP	１		IP	６		IP	２		IP	４	6	IP	３		IP
+飯島　　　誠	5.20	0.14	2.7	６		IP	２		IP	３		IP	４		IP	４		IP	６		IP	３		IP	３		IP	１		IP	４		IP
+野長瀬　正孝	5.50	0.14	4.1	２		IP	１		G3	４		IP	２	3	IP	３	5	IP	４		IP	４		IP	５		IP	６		IP	２		IP
+浮田　　圭浩	4.00	0.19	3.8	４		IP	６		IP	４		IP	４		IP	３		IP	３		IP	２		IP	４		IP	５		IP	６	6	IP
+米田　　隆弘	2.70	0.16	3.7	５		IP	５		IP	４	5	IP	６		IP	４		IP	６		IP	３		IP	４		IP	６		IP	５		IP

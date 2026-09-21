@@ -1,0 +1,8 @@
+data=
+1	0
+高井　　雄基	8.10	0.18	3.0	１		IP	１		IP	１		IP	２		IP	５		IP	１		IP	１		IP	１		IP	１		IP	６		G3
+岸本　　　隆	5.60	0.15	3.0	１		IP	４		IP	４		G3	４		IP	４		IP	５		IP	３		IP	１		IP	１	3	G3	５		IP
+藤田　　竜弘	5.70	0.15	3.2	４		IP	４		IP	３		IP	３		IP	５		IP	１		IP	３		IP	３		IP	１		IP	５		IP
+渡邊　　雄斗	3.00	0.20	4.0	６		IP	６		IP	４	5	IP	６	6	IP	６		IP	４		IP	３		IP	３		IP	５		IP	４		IP
+松尾　　光広	2.78	0.17	4.8	４		IP	欠		IP	２		IP	６		IP	６		IP	６		IP	６		IP	４		IP	４		IP	６		IP
+宮内　　直哉	3.60	0.23	4.8	４		IP	３		IP	４		IP	３		IP	５		IP	３		IP	５		IP	６		IP	４		IP	６		IP

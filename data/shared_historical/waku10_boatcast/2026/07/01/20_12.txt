@@ -1,0 +1,8 @@
+data=
+1	0
+刑部　亜里紗	8.70	0.16	3.3	２		IP	１		IP	１		IP	２		IP	１		G3	２		G3	１		IP	１		IP	５		G2	１		IP
+真子　奈津実	4.20	0.15	3.1	５		IP	６		G3	４		G3	２		IP	５	3	IP	４		IP	５		IP	２		IP	１		IP	６		IP
+黒澤　めぐみ	5.40	0.20	3.7	５		IP	４		IP	３		IP	３		IP	３		IP	３		IP	４		IP	２		IP	２		IP	４		IP
+喜多　那由夏	4.30	0.22	3.5	５		IP	２		G3	３		IP	５		IP	２		G3	４	3	IP	６		IP	５		IP	５		IP	２		IP
+三松　　直美	1.89	0.17	4.5	６		IP	６	6	IP	６		G3	６	6	G3	６	6	IP	５		IP	５		G3	５		G3	３		G3	転		G3
+犬童　　千秋	3.60	0.13	2.3	４		G3	６		G3	５		G3	５		IP	６		G3	４	5	IP	５	5	IP	４		IP	１		G3	３		IP

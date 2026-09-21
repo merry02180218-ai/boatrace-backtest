@@ -1,0 +1,8 @@
+data=
+1	0
+間嶋　　仁志	7.60	0.16	3.1	３		IP	２		IP	３		IP	５		IP	１		IP	１		IP	３		G3	１		IP	２		IP	１		IP
+亀山　　雅幸	7.30	0.16	3.1	３		IP	１		IP	３		IP	５		IP	５		IP	２		IP	１		IP	１		IP	２		IP	１		IP
+土山　　卓也	6.80	0.16	3.1	１	4	IP	１		IP	１		IP	６		IP	３		IP	１	4	IP	２		IP	１		IP	５		IP	６		IP
+出穂　　和鼓	3.10	0.19	3.4	４		G3	６		G3	落		G3	２		G3	６		G3	６		IP	５		IP	２		IP	４	6	IP	５	5	IP
+岡村　　慶太	5.60	0.12	3.1	４		IP	４	4	IP	２		IP	４		IP	５		IP	５		IP	２		IP	２		IP	１		IP	３		IP
+齋藤　　智裕	1.40	0.19	3.2	６		IP	６		IP	５		IP	５		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+三苫　　晃幸	8.00	0.14	3.1	２		IP	３		IP	１		IP	１		IP	２		IP	６		IP	２		IP	２		IP	１		IP	１		IP
+山崎　　　祥	6.50	0.17	4.4	３		IP	２		IP	２		IP	１		IP	６		IP	３		IP	２		IP	２		IP	４		IP	３		IP
+牟田　　奨太	6.30	0.13	2.4	２		IP	６		IP	１		IP	４		IP	２		IP	１		IP	３		IP	４	4	IP	５		IP	１		IP
+伏田　　裕隆	6.70	0.18	2.8	１		IP	３		IP	３		IP	１		IP	４	6	IP	３		IP	６		IP	１		IP	３		IP	２		IP
+片岡　　秀樹	3.70	0.14	3.1	６	6	IP	３		IP	５		IP	４		IP	４		IP	４		IP	２		IP	３		IP	Ｆ		IP	５	6	IP
+山口　　隼人	1.50	0.16	3.4	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP

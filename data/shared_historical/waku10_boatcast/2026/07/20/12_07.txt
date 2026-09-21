@@ -1,0 +1,8 @@
+data=
+1	0
+大原　　祥昌	7.10	0.13	2.7	６		IP	２		IP	５		IP	１		IP	１		IP	２		IP	３		IP	３		IP	１		IP	１		IP
+花本　　　剛	3.80	0.18	4.3	５		IP	４		IP	２	3	IP	５		IP	４		IP	５		IP	５		IP	５		IP	５		IP	１		IP
+古賀　　繁輝	5.00	0.14	2.8	５		IP	１		IP	５		IP	６		IP	４		IP	２		IP	１		IP	３		IP	３		IP	６		IP
+山田　　真聖	4.70	0.16	2.9	４		IP	３		IP	５		IP	４		IP	５	5	IP	２		IP	６		IP	３		IP	２	5	IP	３		IP
+嶋田　　貴支	4.70	0.15	3.5	４		IP	３		IP	６		IP	２		IP	４		IP	３	6	IP	４		IP	４		IP	４		IP	３		IP
+小坂　　尚哉	4.89	0.15	3.2	３		IP	３		IP	４		IP	３		IP	３		IP	３		G1	５		IP	３		IP	エ		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+松江　　秀徳	7.40	0.16	2.3	１		IP	１		IP	Ｆ		G3	１		IP	２		IP	５		IP	１		IP	２		IP	１		IP	３		IP
+森高　　一真	5.80	0.14	4.0	１		IP	５		IP	４		SG	５		SG	２		G1	４		G1	３		SG	４		G1	６		G1	３		G1
+安達　　裕樹	6.89	0.13	2.6	４		G2	転		IP	１		G2	２		G2	４		G2	４		IP	３	2	IP	２		IP	４		IP	１		IP
+村上　　　遼	5.20	0.13	2.8	５		G2	４		G2	２		G2	２		G2	５		IP	５		G1	３		IP	５		IP	６		G1	２		G1
+谷津　　幸宏	3.70	0.10	3.0	５		G2	Ｆ		G2	５		G2	６		G2	５		IP	３	4	IP	６		IP	３		IP	３		IP	２		IP
+峰　　　竜太	7.20	0.13	3.0	６		SG	３		SG	４		G1	３		G1	３		SG	３		SG	４		G1	１	3	IP	３		G1	２		G1

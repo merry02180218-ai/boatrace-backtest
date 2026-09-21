@@ -1,0 +1,8 @@
+data=
+1	0
+海野　ゆかり	8.80	0.19	3.6	１		IP	３		IP	１		IP	１		IP	２		IP	１		G3	１		G3	４		IP	１		IP	１		G3
+今井　　美亜	6.30	0.15	2.6	２		G2	４		G2	４		IP	３		IP	１		G3	３		G3	１		G3	６		G3	３		G2	４		G2
+土屋　　　南	5.90	0.14	2.8	１		IP	４		IP	４		IP	６		IP	２		IP	２		IP	２		IP	４		IP	４		IP	２		IP
+孫崎　　百世	3.40	0.24	4.5	５		IP	４		IP	５		IP	４		IP	６		IP	６		IP	１		IP	５		IP	３		IP	５		IP
+松田　　真実	3.80	0.22	4.6	５	4	IP	６		IP	３		IP	５		IP	６		IP	３	4	IP	２		IP	５		G3	３		G3	４		IP
+大山　　千広	3.40	0.14	2.6	４		IP	５		IP	６		IP	６		IP	５		IP	２		IP	４		IP	６		IP	３		IP	６		IP

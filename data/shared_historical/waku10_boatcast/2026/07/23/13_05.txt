@@ -1,0 +1,8 @@
+data=
+1	0
+福田　　宗平	9.60	0.16	3.1	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+沼田　　大都	4.00	0.21	5.3	３		IP	３		IP	６		IP	３		IP	５		IP	４		IP	３		IP	５		IP	６		IP	３		IP
+石川　　真二	5.30	0.10	2.2	５	2	IP	２	1	IP	３	2	IP	４	2	IP	５	2	G3	４	2	G3	１	2	G3	４	2	G3	６	2	IP	１	2	G3
+堀本　　和也	6.50	0.12	2.1	１		IP	１		IP	１	3	IP	５		IP	２		IP	４		IP	３		IP	１		IP	６		IP	４		IP
+石田　　政吾	3.10	0.17	3.3	２		IP	４		IP	６		IP	４		IP	３		IP	６		IP	４	6	IP	６		IP	６		IP	６		IP
+森　　　智哉	4.30	0.19	3.7	６		IP	５		IP	３		IP	３		IP	５		IP	４		IP	３		IP	４		IP	３		IP	３		IP

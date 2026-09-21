@@ -1,0 +1,8 @@
+data=
+1	0
+谷口　　知優	8.00	0.14	2.6	５		IP	１		IP	３		IP	１		G3	１		IP	２		IP	１		IP	１		IP	４		IP	１		IP
+安田　　吉宏	5.70	0.19	4.0	１		IP	４		IP	２	3	IP	２		IP	２		IP	３		IP	４		IP	６		IP	３		IP	５		IP
+栗原　　一馬	6.30	0.14	3.6	６		IP	１		IP	２		IP	４		IP	２		IP	３	4	IP	１		IP	５		IP	３		IP	２		IP
+深澤　　達徳	4.80	0.18	4.1	５		IP	４		G3	３		IP	４		IP	５		IP	５		IP	３	5	IP	１		IP	２		IP	４	5	G3
+澁澤　　周羽	1.20	0.23	4.3	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	転	6	IP	６	6	IP	６	6	IP	５	6	IP
+渡邉　　和将	5.90	0.15	2.7	３		IP	２	3	IP	２		IP	１		IP	３		IP	３	5	IP	３		IP	４		IP	５		G1	６		G1

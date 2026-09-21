@@ -1,0 +1,8 @@
+data=
+1	0
+桑原　　将光	6.60	0.16	3.7	２	2	IP	１		IP	４		IP	１		IP	３		IP	Ｆ		IP	３		IP	３	2	G3	３		G3	１		IP
+坂井　　康嗣	5.50	0.19	3.5	４		IP	６		IP	２		IP	２		IP	２		IP	４		IP	２		IP	５		IP	２		IP	４	3	IP
+本村　　　大	3.60	0.16	2.8	４		IP	５		IP	５		IP	１		IP	２		IP	６		IP	３		IP	転		IP	６		IP	５	4	IP
+早川　　颯太	1.80	0.22	4.0	５	5	IP	６		IP	５		IP	４		IP	５		IP	６		IP	６		IP	５		IP	６		IP	５		IP
+大串　　重幸	4.20	0.16	3.2	６		IP	２	6	G2	２		G2	６		G2	５		G2	５		IP	４		IP	５		IP	４		IP	３		IP
+川辺　　郭人	2.80	0.26	4.0	６		IP	５	5	IP	５	5	IP	６		IP	３		IP	５		IP	５		IP	５		IP	２	5	IP	５	5	IP

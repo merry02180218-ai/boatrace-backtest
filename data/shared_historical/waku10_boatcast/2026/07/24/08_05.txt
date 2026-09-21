@@ -1,0 +1,8 @@
+data=
+1	0
+金田　　幸子	7.50	0.16	3.6	１		G3	２		IP	１		IP	１		G3	２		IP	５		IP	６		IP	１		G3	２		G3	２		G3
+土屋　実沙希	6.00	0.14	2.8	１		IP	３		IP	４		IP	２		IP	４		IP	１		IP	３		IP	４		IP	欠		IP	２		IP
+木村　紗友希	3.80	0.16	2.6	４	4	IP	４		IP	６		IP	４		IP	２		IP	５		IP	４		IP	６		IP	２		G3	５		G3
+守田　　俊介	5.40	0.10	2.7	２		G2	１		IP	６		SG	５		G1	４		SG	２		SG	６		G1	４		IP	エ		G1	３		IP
+藤井　　公人	4.89	0.11	2.6	３		IP	３		IP	２		IP	転		IP	３	6	IP	６		IP	３		IP	６		IP	５		IP	２	6	IP
+庄司　　孝輔	4.90	0.15	2.9	６		G3	６		G3	１		IP	２		IP	２		IP	３		IP	４		IP	６	5	IP	４	5	IP	３		G3

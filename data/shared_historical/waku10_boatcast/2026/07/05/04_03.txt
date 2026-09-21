@@ -1,0 +1,8 @@
+data=
+1	0
+齋藤　　達希	7.40	0.16	3.3	４		G3	１		IP	２	2	IP	１		IP	３		IP	１		IP	１		IP	４		IP	２		IP	４		G3
+数原　　　魁	7.33	0.14	3.1	３		IP	２		IP	落		IP	２		IP	２		IP	１		IP	３		IP	２		IP	４		IP	２		IP
+國弘　　翔平	4.50	0.15	3.1	３		IP	２		IP	６		IP	６		IP	３		IP	５		IP	１		IP	６		IP	４		IP	３		IP
+福島　　勇樹	6.40	0.13	2.3	３		IP	２	5	IP	３		IP	４		IP	６		IP	１		IP	２		G1	２		IP	１	3	IP	５		IP
+森清　　友翔	3.40	0.15	3.2	５		IP	２		IP	３		IP	４	6	IP	６		IP	６		IP	５		IP	６		IP	３		IP	５		G2
+木下　虎之輔	1.80	0.18	3.6	２		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP

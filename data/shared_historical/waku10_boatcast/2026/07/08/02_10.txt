@@ -1,0 +1,8 @@
+data=
+1	0
+上條　　暢嵩	10.50	0.13	3.6	１		SG	１		SG	１		G1	１		G1	４		SG	１		G1	１		G1	１		IP	１		IP	１		IP
+中田　　竜太	8.00	0.17	3.3	１		SG	１		IP	２		G2	２		IP	６		G1	３		G1	４		G1	１		G1	３		G2	２		G1
+磯部　　　誠	7.10	0.13	1.9	４		SG	４		G1	３		G1	１		SG	５		G1	４		G1	２		G1	２		IP	２		G1	３		G1
+遠藤　　エミ	7.30	0.16	3.5	１		SG	６		SG	２		G1	６		G1	４		SG	１		SG	１		IP	１		IP	３		G2	６		G2
+益田　　啓司	5.10	0.14	2.3	５		IP	１		IP	４		IP	６		IP	３		IP	５		IP	２		IP	６		IP	２		IP	２		IP
+前沢　　丈史	4.00	0.16	3.9	３	5	IP	５		IP	５		IP	５		IP	４		G2	３		IP	３		IP	６		IP	３		IP	５		IP

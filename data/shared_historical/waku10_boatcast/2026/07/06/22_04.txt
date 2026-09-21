@@ -1,0 +1,8 @@
+data=
+1	0
+木山　　和幸	8.20	0.15	3.1	２		IP	１		IP	１		IP	２		IP	１		G3	４		G3	１		IP	３		IP	３		G3	１		G3
+齊藤　　　仁	5.40	0.15	3.7	５		IP	４	3	G3	３	3	G3	２		G1	３		G1	Ｆ		G3	２		IP	２		IP	６		IP	２		G1
+佐藤　　　悠	5.67	0.15	2.7	３		IP	エ		IP	５	4	IP	３	4	IP	４	4	IP	３		IP	２		IP	２		G2	３		IP	６	4	G2
+中本　　大樹	3.50	0.20	4.4	６		IP	４	5	IP	６		IP	５		IP	１		IP	４		IP	４		IP	６		IP	３	5	IP	５		IP
+渡邉　　英児	5.20	0.15	3.6	４		IP	３		IP	３		IP	３		IP	３		IP	５		IP	４		IP	５		IP	２		IP	２		IP
+久保　　翔耶	2.30	0.21	4.1	２		IP	６		IP	６		IP	５		IP	６		IP	３		IP	６		IP	６		IP	６		IP	６		IP

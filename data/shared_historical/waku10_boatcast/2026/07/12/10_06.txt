@@ -1,0 +1,8 @@
+data=
+1	0
+津留　浩一郎	7.10	0.14	2.2	２		G3	１		IP	１		IP	３		IP	２		IP	６		IP	２		IP	４		IP	１		IP	３	2	IP
+浦田　　信義	4.10	0.18	3.4	３		G3	５		IP	３		IP	３		IP	４		IP	５		IP	３		IP	４		IP	６		IP	４		IP
+竹腰　　正樹	5.20	0.13	2.6	３	4	G3	６		IP	３		IP	３		IP	３		IP	２		IP	３	4	IP	４		IP	２		IP	６		IP
+福田　　雅一	5.20	0.17	2.8	５		G3	５		IP	２		IP	４		IP	５		IP	４		IP	２		IP	４		IP	２		IP	１		IP
+仲口　　博崇	6.30	0.19	3.8	４	4	G3	１	3	G3	２	3	G3	２		IP	２	2	IP	２	4	G3	５		IP	６	4	IP	３	2	IP	２	3	IP
+富永　　正人	4.00	0.23	5.2	３		G3	３		IP	４		IP	４		IP	６		IP	３		IP	５		IP	４		IP	３		IP	６		IP

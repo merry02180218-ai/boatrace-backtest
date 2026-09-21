@@ -1,0 +1,8 @@
+data=
+1	0
+畑　　　和宏	6.20	0.15	3.0	３		IP	５		IP	１		IP	４		IP	Ｆ		IP	２		IP	３		IP	３		IP	１		IP	１		IP
+黒柳　　浩孝	6.40	0.15	3.2	１		IP	２		IP	２		IP	１		IP	４	3	IP	４		IP	４	1	IP	５		G2	３		G2	３		IP
+瀬川　　大地	3.80	0.14	3.1	２		IP	４		IP	２		IP	５		IP	４		IP	５		IP	３		IP	５		IP	６		IP	６		IP
+酒見　　峻介	5.50	0.14	2.7	６		IP	５		IP	２		IP	３		G2	３		G2	４		IP	２		IP	５		IP	２		IP	２		IP
+佐藤　　　悠	4.90	0.15	2.4	２		IP	５		IP	４		IP	３		IP	４		IP	３		IP	６		IP	１		G2	３		IP	６		IP
+谷口　　健一	1.90	0.21	4.4	６		IP	６		IP	４	5	IP	５		IP	６		IP	６		IP	５		IP	４		IP	５		IP	６	5	IP

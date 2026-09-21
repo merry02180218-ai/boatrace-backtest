@@ -1,0 +1,8 @@
+data=
+1	0
+藤原　啓史朗	9.50	0.16	2.7	５		G2	１		IP	１		IP	１		IP	１		IP	１		G1	２		G2	１		G2	１		IP	１		IP
+宮嵜　隆太郎	2.10	0.12	3.1	１		IP	６		G3	５		G3	５		IP	６		IP	欠		IP	６		IP	６	3	IP	５		IP	６		IP
+浜野　　孝志	4.40	0.15	3.2	３		G3	６		G2	４		G2	５		IP	４	4	IP	３	5	IP	１		IP	４		IP	６		IP	４		IP
+谷口　　　丞	5.40	0.12	2.6	３	5	IP	３		IP	１		IP	３		IP	５		IP	１		IP	６		IP	２		IP	６		IP	４		IP
+板倉　　敦史	3.70	0.17	4.8	４		IP	４		IP	４		IP	４		IP	２		IP	６		IP	５		IP	５		IP	４		IP	４		G3
+森定　　晃史	4.20	0.21	5.1	２		IP	４		IP	４		IP	５		IP	４		IP	５		IP	５		IP	３		IP	２	5	IP	５		IP

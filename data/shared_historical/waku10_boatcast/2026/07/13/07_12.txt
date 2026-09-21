@@ -1,0 +1,8 @@
+data=
+1	0
+池田　　浩二	10.20	0.11	2.5	１		SG	１		G1	１		G1	１		G1	４		SG	１		SG	２		G1	１		G1	２		IP	１		IP
+松井　　　繁	7.50	0.14	2.9	２		IP	１		SG	５		SG	２		IP	６		IP	１		IP	１		IP	４		SG	４		SG	２		IP
+瓜生　　正義	5.70	0.12	2.8	６		IP	１		IP	５		SG	６		SG	３		G1	６		G1	４		G1	４		G1	３		SG	１		SG
+峰　　　竜太	7.00	0.14	2.4	５		SG	３		G1	５		SG	１		G1	２	2	IP	１	2	IP	２	3	G1	１		SG	４		G1	落		G1
+篠崎　　仁志	5.20	0.14	2.3	４		G2	５		G1	４		G1	４		G1	４		G1	２		IP	２		IP	４		IP	５		IP	４		G1
+佐藤　隆太郎	4.80	0.11	2.7	２		IP	５		IP	６		IP	２		SG	６		SG	６		G1	３		G1	３		G2	４		IP	４		IP

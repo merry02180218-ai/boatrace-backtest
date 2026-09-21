@@ -1,0 +1,8 @@
+data=
+1	0
+藤井　　　徹	6.40	0.17	3.4	５		IP	１		IP	１		IP	１		IP	５		IP	２		IP	４		IP	２		IP	４		IP	３		IP
+佐藤　　　翼	5.40	0.14	3.4	１		G2	４		SG	４		SG	４		G1	６		SG	２		G1	３		G1	６		IP	５		G1	５		G1
+大塚　　康雅	5.50	0.17	3.2	５		IP	４		IP	２		IP	６		IP	２		IP	４		IP	２		IP	１		IP	４		IP	３		IP
+吉田　　　光	4.30	0.18	4.0	３		IP	１		IP	５		IP	４		IP	６	6	IP	２		IP	３		IP	５		IP	５	6	IP	５	3	IP
+三嶌　　誠司	5.00	0.17	3.4	３		IP	６		IP	５		IP	２		IP	４		IP	２		IP	４		IP	６		IP	３		IP	１		IP
+村松　　栄太	4.30	0.15	3.2	６	5	IP	２	5	IP	４		IP	４		IP	２	5	IP	２		IP	５		IP	６		IP	３		IP	６		IP

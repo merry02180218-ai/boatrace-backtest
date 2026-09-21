@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　辰彦	8.40	0.18	3.6	３		IP	２		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	５		IP	１		IP
+川崎　　公靖	4.40	0.19	3.0	４		IP	５		IP	４	3	IP	３		IP	２		IP	５		IP	４		IP	４		IP	３		IP	４	3	IP
+大場　　恒季	5.40	0.16	3.8	１		IP	２		IP	６		IP	２		IP	５		IP	４		IP	６		IP	２		IP	４		IP	３		IP
+菊池　　宏志	4.30	0.16	2.3	２		IP	４		IP	３		IP	３		IP	４		IP	５		IP	６		IP	６		IP	１		IP	６		G3
+谷口　　　丞	3.40	0.14	3.3	４		IP	５		IP	６	6	IP	４		IP	３		IP	６		IP	４		IP	４		IP	５	4	IP	３		IP
+柴田　　友和	3.00	0.20	4.1	４		IP	５		IP	４		IP	４		IP	５		IP	５		IP	４		IP	４		IP	５		IP	５		IP

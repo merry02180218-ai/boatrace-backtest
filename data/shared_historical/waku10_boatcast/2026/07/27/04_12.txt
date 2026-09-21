@@ -1,0 +1,8 @@
+data=
+1	0
+細川　　裕子	8.10	0.21	4.8	１		IP	２		G3	２		G3	６		IP	１		IP	１		IP	１		IP	１		G3	１		G3	４		G3
+小林　　愛実	4.90	0.16	3.0	１		IP	５		IP	６		IP	３		IP	１		IP	４		IP	４		IP	２		IP	４		IP	Ｆ		IP
+倉持　　莉々	6.30	0.13	2.4	１		IP	２		IP	２		IP	２		IP	４		G3	１		IP	３	4	IP	４		G2	６		G2	５		IP
+大豆生田　蒼	5.40	0.22	3.8	３		IP	６		IP	２		IP	３		IP	４		IP	２		IP	３		IP	２		IP	３		IP	６		IP
+寺島　　美里	4.30	0.16	3.1	４		IP	３		IP	４		IP	３		IP	４		IP	６		IP	３		IP	４		IP	４		IP	４		IP
+鈴木　　成美	1.70	0.19	4.1	６		IP	３		IP	６		G3	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP

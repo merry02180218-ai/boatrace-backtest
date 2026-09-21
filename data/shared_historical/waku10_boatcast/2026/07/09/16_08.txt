@@ -1,0 +1,8 @@
+data=
+1	0
+福田　　　理	5.90	0.18	3.0	６		G3	５		IP	２		IP	１		IP	１		IP	２		IP	４		IP	４		IP	３		IP	３		IP
+大町　　利克	5.10	0.20	3.8	３		IP	５		IP	３		IP	２		IP	３		IP	６		IP	３		IP	３		IP	３		IP	４	3	IP
+赤松　　咲香	1.33	0.19	3.7	６		IP	６		IP	５	5	IP	５		G3	６		G3	６		G3												IP
+鈴木　　唯央	4.60	0.17	3.4	３	5	IP	３		IP	５		IP	５		IP	３		IP	１		IP	４		IP	５		IP	４		IP	４		IP
+川原　　正明	4.60	0.19	2.4	４		IP	４		IP	４		G3	１		IP	１	4	IP	６	6	IP	６		G3	６		G3	１	4	IP	６		IP
+半田　　尚也	2.70	0.21	4.8	５		IP	６		IP	６		IP	５		IP	５		IP	６		IP	２	5	IP	５		IP	３		IP	５	5	IP

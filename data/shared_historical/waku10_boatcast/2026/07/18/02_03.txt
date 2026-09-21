@@ -1,0 +1,8 @@
+data=
+1	0
+岩川　　仁士	7.60	0.13	3.3	１		IP	２		IP	３		IP	５		G3	１		IP	４		IP	１		IP	２		IP	１		IP	２		IP
+田村　　隆信	6.40	0.15	3.3	５		IP	５		IP	２		G2	５		G1	２		IP	５		IP	１		IP	１		IP	２		IP	１		IP
+齋藤　　智裕	3.40	0.21	4.9	４		IP	４		IP	５		IP	２		IP	４		IP	５		IP	５		IP	６		IP	６		IP	３		IP
+野間　　大樹	3.10	0.19	3.8	転		IP	６		IP	４		G3	４		G3	Ｆ		IP	６		IP	６		IP	５		IP	２		IP	１		IP
+塚越　　陸斗	1.50	0.18	3.5	５		IP	６		IP	５		IP	５	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	６	6	IP
+出畑　　孝典	3.10	0.17	4.2	６		G3	６		IP	３	5	IP	２		IP	４	5	IP	４		IP	４		IP	６		IP	６		IP	６		IP

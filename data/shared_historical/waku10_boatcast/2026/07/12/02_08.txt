@@ -1,0 +1,8 @@
+data=
+1	0
+西橋　　奈未	9.00	0.12	2.8	４		G2	Ｆ		G2	２		IP	１		IP	１		IP	１		SG	１		G2	１		G2	１		G2	１		G3
+今井　　美亜	5.90	0.15	3.0	４		G2	４		IP	３		IP	１		G3	３		G3	１		G3	６		G3	３		G2	４		G2	４		G2
+村上　　奈穂	4.20	0.18	2.6	６		G2	２		IP	２		IP	４	2	IP	６	6	IP	４		IP	４		IP	６	2	IP	５		IP	２		IP
+米丸　　乃絵	4.70	0.16	3.7	４		G2	６		SG	６		SG	５		IP	２		IP	２		G2	６		G3	３		G3	４		IP	３		IP
+櫻本　あゆみ	3.70	0.19	3.9	４		G2	６		IP	５		IP	５		IP	５		G3	３		G3	６		IP	４		IP	３	4	IP	２		IP
+田上　　　凜	1.60	0.26	5.5	６		G2	６		G2	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	４		IP

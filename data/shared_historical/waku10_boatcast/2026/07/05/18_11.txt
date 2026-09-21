@@ -1,0 +1,8 @@
+data=
+1	0
+谷川　　将太	8.60	0.15	1.9	１		IP	１		IP	３		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	４	2	IP
+大場　　広孝	6.80	0.15	3.9	２		IP	２		IP	５	4	IP	１		IP	３		IP	４		IP	１		IP	３		IP	２		IP	３		IP
+伏田　　裕隆	3.70	0.20	4.4	５		IP	２		IP	２		IP	５	6	IP	５	6	IP	４		IP	４		IP	５		IP	５		IP	５		IP
+江本　　真治	6.70	0.16	2.8	２		IP	６		IP	２	5	IP	１		IP	１		IP	１		G3	５		IP	４		IP	２		IP	３		IP
+牟田　　奨太	2.90	0.13	2.9	妨	6	IP	４		IP	５		IP	４		IP	６	3	IP	５		IP	１		IP	６		IP	４		IP	６		IP
+水摩　　　敦	6.20	0.16	2.5	３		IP	１		IP	４		IP	６		IP	６		IP	２	2	IP	１	4	IP	２		IP	２		IP	３		IP

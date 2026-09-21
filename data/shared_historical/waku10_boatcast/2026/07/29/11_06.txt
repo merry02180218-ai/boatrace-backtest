@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　優美	9.40	0.19	3.3	２		G3	３		G3	１		G3	１		IP	１		IP	１		G2	１		G2	２		IP	１		IP	１		IP
+西岡　　顕心	7.70	0.09	2.4	１		IP	３		IP	１		IP	４		G1	４		SG	３		G2	１		G2	５		IP	１		G1	２		G1
+佐藤　隆太郎	8.80	0.13	1.7	２		IP	２	2	G2	２		IP	２		IP	４		SG	１		G1	２		G1	３		SG	２		SG	１		G2
+白井　　英治	6.80	0.13	2.6	２		IP	３		IP	６		G2	６		G2	２		SG	２		G1	３		G1	５		SG	２		G1	１		G1
+湯川　　浩司	4.50	0.12	2.8	落		G2	６		G2	４		IP	３		IP	５		G1	４	2	G1	６		G1	２		G2	４		G2	２	4	IP
+入海　　　馨	4.90	0.19	3.8	３		IP	４		IP	３		G2	６		IP	３		G1	５		IP	６		G1	５		G1	１		IP	３		IP

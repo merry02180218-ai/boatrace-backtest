@@ -1,0 +1,8 @@
+data=
+1	0
+西尾　　亮輔	6.10	0.18	3.2	５		IP	１		IP	４		IP	４		IP	１		IP	６		IP	２		IP	１		IP	２		IP	４		IP
+栗山　　繁洋	5.20	0.14	3.4	５		IP	３		IP	２		IP	２		IP	４		IP	２		IP	１	3	IP	５		IP	５		IP	５		IP
+森林　　　太	4.50	0.16	3.4	４		IP	６		IP	５		IP	３		IP	４		IP	２		IP	４		IP	４		IP	２		IP	４		IP
+大西　　隆洋	3.80	0.20	3.7	６		IP	５		IP	２		IP	１		IP	５		IP	５		IP	６		IP	３		IP	４		IP	５		IP
+松下　　誉士	3.20	0.18	4.2	６	6	IP	６		IP	４		IP	６		IP	１		IP	２		IP	６		IP	６	6	IP	６		IP	４	6	IP
+市川　　瑚幸	1.90	0.20	4.9	５		IP	６		IP	５		IP	６		IP	４		IP	６		IP	６		IP	４		IP	５		IP	６		IP

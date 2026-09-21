@@ -1,0 +1,8 @@
+data=
+1	0
+宮野　　　仁	6.30	0.14	3.4	２		IP	６		IP	２		IP	３		IP	２		IP	５		IP	５		IP	１		IP	１		IP	２		IP
+内山　　峻輔	4.70	0.17	2.9	６		IP	５		IP	３		IP	６		IP	２		IP	４		IP	１	4	IP	２		IP	６		IP	３		IP
+佐口　　達也	4.50	0.17	3.4	４	5	IP	１		IP	５		IP	４		IP	３		IP	６		IP	５		IP	４		IP	４		IP	２		IP
+石井　　伸長	5.40	0.17	2.7	２		IP	２	5	IP	４		IP	４		IP	４		IP	２		IP	６		IP	３		IP	１		IP	６		IP
+東　　　健介	2.70	0.15	3.1	３		IP	６		G3	５	6	G3	６		IP	４		IP	６		IP	６	6	IP	６		IP	４	3	IP	３	2	IP
+君島　　秀三	4.10	0.16	3.0	３		IP	５		G3	４		IP	４		IP	４		IP	３		IP	４		IP	５		G1	４		IP	４	5	IP

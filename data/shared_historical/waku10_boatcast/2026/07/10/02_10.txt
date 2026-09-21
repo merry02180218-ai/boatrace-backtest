@@ -1,0 +1,8 @@
+data=
+1	0
+井口　　佳典	9.00	0.19	4.5	１		SG	１		G1	４		G1	２		G3	１		G3	１		G3	２		G1	４		G1	１		G1	２		G2
+大峯　　　豊	8.80	0.13	2.9	３		SG	２		SG	１		G1	４		G1	２		IP	２		G2	２		G2	２		G3	１		G3	１		IP
+新開　　　航	6.90	0.13	3.2	６		SG	４		G1	１		IP	３		G1	５		G1	１		IP	２		IP	１		IP	３		G1	４		G1
+小林　　　泰	4.90	0.17	3.4	１		IP	２		IP	６		G2	６		G2	５		IP	３		IP	４	5	IP	４		IP	１		IP	６		IP
+吉川　　元浩	5.80	0.14	2.5	４		IP	３		G2	４		G1	２		G1	３		G3	３		G1	６		G1	２		IP	３		G1	５		G1
+遠藤　　エミ	4.10	0.14	3.8	４		SG	５		G1	６		G1	５		SG	２		IP	６		G2	６		IP	３		IP	４		G2	６		G2

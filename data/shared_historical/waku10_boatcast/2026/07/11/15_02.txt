@@ -1,0 +1,8 @@
+data=
+1	0
+川上　　聡介	7.10	0.13	2.2	６		IP	２	2	IP	１		IP	３		IP	１		IP	Ｆ		IP	１		IP	１		IP	２		IP	２		IP
+小倉　　康典	4.40	0.18	4.6	４		IP	１		IP	６		IP	５		IP	３		IP	４		IP	６		IP	４		IP	３		IP	３	3	IP
+岡本　　　大	5.20	0.15	2.8	５		IP	１		IP	２		IP	沈		IP	３		IP	５		IP	２		IP	４		IP	２		IP	４		IP
+加藤　　雅之	2.10	0.22	4.2	５		IP	６		IP	５		IP	４		IP	４		IP	６		IP	５		IP	５		IP	６		IP	５		IP
+長谷川　親王	3.20	0.21	5.3	５		IP	６	6	IP	４	6	IP	４		IP	５		G3	５		IP	６	6	IP	５		IP	３		IP	２		IP
+石岡　　将太	3.70	0.16	4.0	５		IP	６		IP	５		IP	３		IP	３		IP	５		IP	５		IP	３	5	IP	３	5	IP	４		IP

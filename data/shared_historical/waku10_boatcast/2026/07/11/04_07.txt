@@ -1,0 +1,8 @@
+data=
+1	0
+高石　　梨菜	7.70	0.13	2.8	１		IP	１		G3	１		IP	１		IP	２		G3	６		G3	４		IP	４		IP	１		IP	１		IP
+福山　恵里奈	6.50	0.15	2.7	３	3	IP	１		IP	３		G3	２		IP	４		IP	２		IP	２		G3	３	3	IP	２		IP	６		IP
+武井　莉里佳	5.20	0.20	3.5	２		IP	２		IP	５		IP	４		IP	３		G3	５		G3	４		G2	１		IP	６		IP	３		IP
+西田　　和加	1.50	0.22	4.6	６		IP	６	5	IP	５		IP	６	5	IP	６		IP	５		IP	５		IP	５		G3	５		IP	６		IP
+島倉　　　都	2.90	0.19	2.8	２		IP	４		IP	６		IP	６		IP	６		IP	５		IP	５		IP	４		IP	４		G3	５		G3
+刑部　亜里紗	5.60	0.15	3.7	３		IP	１	5	IP	４		IP	１		G3	４	5	G3	５		IP	３		G2	３		G2	５		IP	５		IP

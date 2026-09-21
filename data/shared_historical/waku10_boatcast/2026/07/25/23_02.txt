@@ -1,0 +1,8 @@
+data=
+1	0
+沢田　　昭宏	7.90	0.19	4.8	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	６	3	IP	２		IP	５		IP
+土屋　　智則	6.67	0.10	2.7	６		IP	２	3	G3	３		G3	３		SG	１		G1	転		G1	３		G1	２		G1	３	3	IP	４		IP
+日高　龍之介	4.00	0.06	1.0	４		IP																											IP
+土井　　祥伍	5.10	0.17	4.5	５		IP	６		IP	４		IP	２		IP	３		IP	４		IP	２		IP	３		IP	３	6	IP	３	3	IP
+木村　　亮太	4.20	0.12	2.5	３		IP	４		IP	６	6	IP	２		IP	３		IP	５		IP	３		IP	３		IP	５		IP	６		IP
+田中　　きら	1.10	0.20	4.3	６		IP	６		IP	６		IP	６		IP	５	5	IP	６		IP	６		IP	６		IP	６		IP	６		IP

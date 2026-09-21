@@ -1,0 +1,8 @@
+data=
+1	0
+鐘ヶ江　真司	7.00	0.13	2.3	５		IP	１		IP	４		IP	２		IP	２		IP	１		IP	１		IP	１		IP	２		IP	落		IP
+古川　　　健	5.50	0.14	2.9	２		IP	２		IP	３		IP	４		IP	２		IP	４		IP	６		IP	２	3	IP	５	4	IP	３		IP
+松下　　哲也	4.70	0.16	2.8	３		IP	２		IP	４		IP	５		IP	３	4	IP	５		IP	２		IP	６		IP	４		IP	３		IP
+庄島　　潤成	2.60	0.17	4.2	４		IP	４	5	IP	４	5	IP	５		IP	６	6	IP	５		IP	４		IP	６		IP	４		IP	転		IP
+松下　　知幸	2.20	0.20	4.4	３		IP	５	6	IP	５		IP	５		IP	６		IP	４		IP	６	6	IP	６		IP	５		IP	６		IP
+橋本　　年光	3.70	0.20	4.9	６		IP	３	5	IP	６		IP	４		IP	５		IP	５		IP	５		IP	２		IP	３		IP	４		IP

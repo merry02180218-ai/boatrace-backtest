@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　龍斗	8.60	0.18	3.7	２		IP	２		IP	１		IP	１		IP	３		IP	１		IP	２		IP	２		IP	２		IP	１		IP
+大塚　　浩二	4.70	0.18	3.4	４		IP	５		IP	４		IP	２		IP	３		IP	５		IP	４		IP	３		IP	１		IP	６		IP
+小澤　　　学	5.50	0.22	5.4	６		IP	５		IP	４		IP	２		IP	４		IP	５		IP	１		IP	１		IP	３		IP	２		IP
+出穂　　和鼓	2.50	0.21	4.7	５		IP	２		IP	４	6	IP	５	5	IP	６		IP	５		IP	６		G3	５		G3	５		IP	６	6	IP
+青木　　　蓮	5.80	0.12	3.0	２		IP	３		IP	２		IP	妨		IP	２		IP	４		IP	２		IP	３		IP	２		IP	５		IP
+小玉　　啓太	2.30	0.20	4.3	５		IP	４		IP	６		IP	５		IP	６		IP	３		IP	６		IP	５		IP	５		IP	５		IP

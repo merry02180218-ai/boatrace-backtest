@@ -1,0 +1,8 @@
+data=
+1	0
+篠崎　　仁志	10.00	0.14	2.8	１		G2	１		G2	２		G2	１		G1	３		G1	１		IP	１		IP	１		IP	１		IP	１		IP
+金子　　　萌	7.20	0.11	2.6	２		G2	１		IP	３		IP	２		IP	２		IP	５		IP	１		IP	６		IP	２		IP	２		IP
+中島　　秀治	6.60	0.17	2.9	２		G2	２		G2	４		IP	３		IP	３		IP	３		IP	４		IP	１		IP	５		IP	１		IP
+宮之原　輝紀	8.00	0.12	2.7	４		G2	５		G2	２		G2	２		G2	２		IP	２		IP	１		IP	２	3	IP	１		G1	３		G1
+板橋　　侑我	4.67	0.18	3.4	３		G2	２		IP	３		IP	５		IP	４		IP	３		IP	エ		G1	４		G1	６		G1	５		G3
+篠原　　晟弥	5.70	0.13	3.0	１		G2	２		IP	５		IP	３		IP	３		IP	６		IP	４		IP	３		IP	３		IP	４		G2

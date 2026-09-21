@@ -1,0 +1,8 @@
+data=
+1	0
+赤池　　修平	5.10	0.20	4.6	１		IP	６		IP	３		IP	１		IP	２		IP	４		IP	５		IP	３		IP	５		IP	５		IP
+福田　　宗平	5.40	0.15	3.5	５		IP	３		IP	５		IP	５		IP	４		IP	１		IP	２		IP	２		IP	３		IP	３		IP
+松尾　　宣邦	4.70	0.17	3.7	５		IP	４	4	IP	６		IP	３		IP	２		G3	４		IP	３		G3	４		IP	４		IP	２		IP
+黒崎　　竜也	5.80	0.11	2.5	４	5	G2	１		IP	４	5	G3	２		G3	３		IP	２		IP	２		IP	３		IP	６		IP	５		IP
+信濃　　由行	2.80	0.16	4.0	６		G3	６		G3	４		IP	５		IP	１		IP	６		IP	４		IP	５		IP	５		IP	６		IP
+鶴本　　崇文	3.70	0.21	4.8	４	5	IP	５		IP	５		IP	４		IP	４		IP	５		IP	３		IP	３		IP	６		IP	４		IP

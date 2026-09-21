@@ -1,0 +1,8 @@
+data=
+1	0
+清水　　愛海	9.70	0.16	3.5	１		IP	１		IP	１		IP	１		IP	３		SG	１		SG	３		IP	１		IP	１		G2	１		IP
+倉持　　莉々	6.80	0.15	2.9	２		IP	３		IP	５		IP	３		IP	３		G3	１		G3	３	3	IP	１		IP	１		G2	５		G2
+香川　　素子	7.60	0.12	2.5	１		IP	２		IP	１		IP	１		G3	２		G3	３		IP	２		IP	３		IP	５		IP	２		IP
+山田　　理央	6.50	0.12	2.5	５		IP	５		IP	４		IP	３		IP	１		IP	３		IP	３		IP	１		G2	２		IP	１		IP
+田口　　節子	7.10	0.15	3.0	１		IP	４		IP	３		G3	２		IP	２	4	G2	３		G1	２		G1	２		G3	３		G3	４		IP
+北村　　寧々	3.30	0.12	2.8	６		IP	１	5	IP	４		IP	５		IP	５		IP	６		G2	６		G2	６		IP	２		IP	６		IP

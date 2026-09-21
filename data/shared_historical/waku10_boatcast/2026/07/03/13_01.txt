@@ -1,0 +1,8 @@
+data=
+1	0
+橋本　　　明	9.20	0.16	2.6	２		IP	１		IP	１		G3	３		G3	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+冨成　　謙児	6.30	0.14	3.2	３		IP	１		IP	２		IP	６		IP	２		IP	４		IP	５		IP	２		IP	２		IP	２		IP
+渡邉　　雄朗	6.80	0.13	2.4	６		IP	３		IP	２		IP	２		IP	１		IP	２		IP	２		IP	２		IP	２		IP	５		G1
+原村　　拓也	3.00	0.17	3.3	５		IP	６		IP	３		IP	４		IP	５		IP	５		IP	６		IP	４		IP	３		IP	５		IP
+登　　みひ果	4.60	0.16	2.2	４		IP	４		IP	４		IP	３		G3	４		G3	２		G2	５	4	G2	４		IP	５		IP	３		G3
+榮田　　将彦	1.80	0.16	3.0	５		IP	４		IP	６		IP	５	3	IP	６		IP	５		IP	６		IP	５		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+瓜生　　正義	8.40	0.13	2.7	３		G2	１		IP	２		IP	４		SG	２		G1	２		G1	１		G1	１		SG	２		SG	６		G1
+岡　　　祐臣	6.60	0.15	3.1	１	1	G2	２		IP	２		IP	３		IP	６		IP	２		IP	３		IP	５		IP	１	3	IP	４		IP
+守田　　俊介	5.40	0.12	2.7	３		G2	１		IP	１		SG	５		G1	４	4	SG	４		G1	５		G1	６		IP	６		IP	３		IP
+稲田　　浩二	6.50	0.09	1.6	２		G2	５		IP	１		IP	６		G1	４		IP	３		G1	２		IP	３		IP	１		IP	３		IP
+豊田　健士郎	4.90	0.14	3.1	５		G2	６		G2	１		G2	３	4	IP	２	4	IP	６		G1	５		G2	５		G3	３		IP	３		IP
+篠崎　　仁志	6.00	0.15	3.7	３		G2	３		G2	４		G2	４		G2	３		G1	５		G1	２		IP	３	5	IP	４		G1	３		G1

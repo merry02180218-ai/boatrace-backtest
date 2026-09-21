@@ -1,0 +1,8 @@
+data=
+1	0
+大上　　卓人	10.60	0.15	2.7	１		IP	１		SG	１		G1	１		G1	１		G1	１		G1	１		IP	１		IP	１		IP	１		IP
+角谷　　健吾	5.50	0.14	3.1	３		IP	３		IP	５		IP	２		IP	１		IP	６		IP	４		IP	３		IP	５		IP	１		IP
+細川　　明人	4.70	0.15	2.9	２		IP	２		IP	４		IP	５	4	IP	２		IP	４		IP	６		IP	５		IP	５		IP	２		IP
+櫻井　　　優	4.40	0.15	4.4	３		IP	２		IP	６		IP	３		IP	５		IP	３		IP	４	5	IP	６		IP	５		IP	２		IP
+小倉　　康典	3.40	0.19	3.9	６	6	IP	４	4	IP	５		IP	４		IP	１		IP	６		IP	３		IP	６		IP	４		IP	６		IP
+日高　龍之介	2.70	0.20	3.9	３		IP	３		IP	６		IP	６		IP	６		IP	２		IP	６		IP	６		IP	６		IP	６		IP

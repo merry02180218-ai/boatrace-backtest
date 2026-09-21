@@ -1,0 +1,8 @@
+data=
+1	0
+菅沼　　佳昭	3.70	0.21	4.3	３		IP	５		IP	２		IP	６		IP	５		IP	４		IP	６		IP	１		IP	６		IP	５		IP
+上田　　健太	6.40	0.15	3.8	２		IP	５		G2	６		G2	６		IP	３		IP	１		IP	３		IP	１		IP	１		IP	２		IP
+大森　　　翼	3.90	0.19	3.7	６		IP	３		IP	４		IP	５		IP	５		IP	４		IP	３	2	IP	２		IP	４		IP	５		IP
+荒井　　翔伍	5.40	0.15	3.5	４		IP	４		IP	１		IP	２		IP	４		IP	３		IP	４		G2	３		IP	３		IP	６		IP
+吉岡　　　誠	1.90	0.19	4.4	６		IP	４		IP	６	6	G3	５		IP	５		IP	５		IP	６		IP	６		IP	４		IP	６		IP
+新田　　泰章	4.40	0.21	4.0	３		IP	５		IP	１		IP	５		G1	６		IP	４	5	IP	５		IP	５		IP	４		IP	３		IP

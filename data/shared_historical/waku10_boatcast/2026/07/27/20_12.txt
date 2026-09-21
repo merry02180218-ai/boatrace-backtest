@@ -1,0 +1,8 @@
+data=
+1	0
+小野　　生奈	9.50	0.14	3.1	１		IP	２		G3	１		G3	３		G2	１		G2	２		G3	１		G3	１		G3	１		G3	１		IP
+原田　　佑実	7.00	0.16	2.3	１		IP	４		IP	４		IP	２		IP	１		IP	３		IP	５		IP	１		IP	２		IP	２		G3
+池田　　浩美	5.60	0.13	2.4	６		G3	２		IP	３		IP	２		IP	１		G3	５		IP	６		IP	２		G3	４		G3	２		IP
+蜂須　　瑞生	4.80	0.14	2.7	５		IP	２		IP	４		IP	４		IP	１	6	IP	５		IP	４		IP	３		IP	Ｆ		IP	２		IP
+岩崎　　麗子	2.50	0.15	2.6	６		IP	５		G3	４		IP	４		IP	２	4	IP	６		IP	６		G3	６		IP	５		IP	６		G3
+増本　　杏珠	2.70	0.25	5.2	５		IP	６		IP	４		IP	３		IP	３		IP	５		IP	５		IP	６	5	IP	６		IP	５		IP

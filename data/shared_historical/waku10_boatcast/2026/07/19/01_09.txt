@@ -1,0 +1,8 @@
+data=
+1	0
+喜多　那由夏	3.70	0.20	3.3	６		IP	３		IP	３		G3	６		IP	６		IP	６		G3	４		G3	６		IP	２		IP	２		IP
+池田　奈津美	5.40	0.15	2.5	５		IP	２		IP	４		IP	５		IP	１		IP	３		IP	３		IP	４		G3	３		G3	３		IP
+上田　　紗奈	6.20	0.16	3.3	１		IP	６		IP	５		IP	４		IP	２		IP	１	4	IP	１		IP	２		IP	２		IP	６		IP
+坂野　さくら	4.90	0.19	3.6	４		IP	３		IP	１		IP	１		IP	４		IP	５		G3	５		G3	３		IP	６		IP	４	6	IP
+黒澤　めぐみ	6.00	0.13	3.3	４		IP	３		IP	３		IP	１		IP	４		IP	３	4	IP	１		IP	４		IP	４		IP	３		IP
+志賀　　美優	1.90	0.20	3.8	６		IP	６		IP	３		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	４		IP

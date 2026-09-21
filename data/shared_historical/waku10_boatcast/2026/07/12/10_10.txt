@@ -1,0 +1,8 @@
+data=
+1	0
+濱崎　　　誠	7.70	0.13	2.4	３		G3	Ｆ		IP	１		IP	２		IP	１		IP	１		IP	３		IP	２		G3	１		G3	２		G3
+仲口　　博崇	6.20	0.19	4.2	４		G3	１		G3	２		G3	３		IP	４		IP	４		G3	１	1	IP	３		IP	３		IP	４		IP
+室田　　泰史	6.20	0.12	2.8	２		G3	５		G3	１		G3	４		IP	１		IP	４		IP	３		IP	４		IP	３		IP	２		IP
+平石　　和男	5.30	0.17	4.5	３	3	G3	４		IP	３		IP	６		IP	２		IP	４		IP	５		IP	３		IP	３		IP	１		IP
+中嶋　誠一郎	4.10	0.14	2.2	４		G3	４		IP	５		IP	３		IP	３		IP	４		G3	５		G3	６		IP	２		IP	４		IP
+長野　　道臣	2.70	0.18	3.2	６		G3	４		G3	５		IP	５		G3	５		G3	５		IP	２	5	IP	４		IP	６		IP	６		IP

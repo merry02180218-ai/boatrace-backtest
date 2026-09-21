@@ -1,0 +1,8 @@
+data=
+1	0
+平川　　香織	7.30	0.19	4.3	１		IP	３		G3	２		G3	２		IP	２		IP	５		IP	１		IP	Ｆ		IP	１		IP	１		IP
+大橋　栄里佳	6.00	0.19	3.7	２		G3	４		G3	４		IP	４		IP	４		G3	２		G3	３		IP	１		G3	２		G3	４		G3
+吉田　　一郎	6.50	0.14	2.5	３	1	IP	３		IP	１		IP	２		IP	６		IP	３		IP	２		IP	２	4	IP	４		IP	２		IP
+渡邉　　　翼	6.30	0.13	2.2	３		IP	３		IP	２		IP	１		IP	２		IP	３		IP	４		IP	６		IP	３		IP	２		IP
+大澤　　大夢	4.10	0.19	3.4	３		IP	４	4	IP	４	6	IP	２		IP	５	4	IP	２		IP	６		IP	６		IP	３		IP	６		IP
+星田　　夢結	1.50	0.14	2.8	６		IP	６		IP	５		IP	６		IP	４	5	IP	６		IP	５		IP	６		IP	６		IP	６		IP

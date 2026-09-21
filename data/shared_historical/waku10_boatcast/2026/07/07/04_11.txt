@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　隆太郎	7.60	0.18	2.8	３		IP	１		IP	１		IP	３		SG	３		SG	１		SG	６		G1	６		SG	３		G2	１		IP
+井本　　昌也	7.20	0.15	2.6	２		IP	２		IP	１		IP	２		IP	５		IP	１		IP	５		IP	１		IP	２		IP	３		IP
+中里　　英夫	5.40	0.14	3.2	６		IP	３		IP	３		IP	２		IP	２		IP	３		IP	６		IP	３		IP	４		IP	２		IP
+数原　　　魁	5.70	0.14	3.2	４		IP	３	5	IP	３		IP	２		IP	４		IP	２		IP	６		IP	２		IP	２		IP	４		IP
+渡部　　　悟	3.30	0.15	3.0	２		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	４		IP	４		IP	１		IP
+塚越　　海斗	3.90	0.14	3.4	６		IP	５		IP	４		IP	３		IP	３		IP	３		IP	４		G3	２		G3	６		IP	６	4	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+小松　　卓司	9.00	0.15	3.5	２		IP	２		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	２		IP	１		IP
+妻鳥　　晋也	3.90	0.23	4.7	３		IP	６		IP	２		IP	６		G3	５		G3	６		IP	５		IP	２		IP	４		IP	３		IP
+松尾　　　拓	6.00	0.16	2.4	２		IP	４		IP	１		IP	５		IP	２		IP	６		IP	２		IP	１		IP	６		IP	２		IP
+三角　　哲男	7.00	0.14	2.9	３		G3	４		IP	２		IP	５		IP	１		IP	１		IP	２		IP	５		IP	１		IP	１		IP
+木山　　大聖	3.50	0.14	2.3	５		IP	１	4	IP	落		IP	６		IP	３		IP	４		IP	６		IP	５		IP	６	6	IP	２		IP
+笠　　　雅雄	4.50	0.17	2.7	４		IP	５		IP	１	5	IP	２		IP	４		IP	５		IP	３		IP	３		IP	６	5	IP	５		IP

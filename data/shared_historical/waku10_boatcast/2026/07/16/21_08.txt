@@ -1,0 +1,8 @@
+data=
+1	0
+藤田　　美代	5.30	0.20	3.7	６		IP	６		IP	２		IP	５		G3	２		G3	５		IP	１		IP	６		IP	１		IP	１		IP
+北中　　元樹	4.90	0.20	4.4	２		IP	１		IP	５		IP	５		IP	４		IP	３		IP	４		IP	２		IP	４		IP	６		IP
+富永　　大一	5.60	0.19	3.0	６		IP	２		IP	２		IP	６		IP	５	4	IP	２		IP	３		IP	２		IP	２		IP	４		IP
+橋本　　　明	5.20	0.13	2.6	２		IP	４		IP	３		IP	４		IP	４		IP	３		G3	２		IP	４		IP	４	5	IP	４		IP
+田中　信一郎	5.90	0.12	2.9	１		IP	１		IP	５		IP	６		IP	３		G1	５		G1	２		G1	３		IP	４	4	IP	３		IP
+伊藤　　将吉	3.60	0.15	3.4	３		IP	５		IP	５		IP	４		IP	３		IP	３		IP	６		IP	４		IP	５		G1	６		G1

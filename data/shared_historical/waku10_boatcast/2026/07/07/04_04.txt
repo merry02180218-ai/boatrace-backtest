@@ -1,0 +1,8 @@
+data=
+1	0
+野見山　拓己	5.60	0.09	1.3	２		IP	Ｆ		G3	１		IP	３		IP	５		G3	３		IP	妨		IP	１		IP	２		IP	３		IP
+渡部　　　悟	4.80	0.13	3.5	４		IP	２		IP	５		IP	５	3	IP	１		IP	５		IP	３		IP	３		IP	４		IP	４		IP
+数原　　　魁	6.20	0.17	3.6	４		IP	４		IP	２		IP	５		IP	１		IP	１		IP	４		IP	５		IP	２		IP	１		IP
+長岡　　良也	4.50	0.17	3.9	３		IP	５		IP	３		IP	５		IP	５		IP	６		IP	４		IP	２		IP	４		IP	１		IP
+宮崎　心之介	3.10	0.18	3.5	５		IP	４	6	IP	２		IP	５		IP	４		IP	５		IP	６		IP	５		IP	５		IP	４		IP
+福西　広太郎	1.90	0.18	4.5	４		IP	６		IP	転		IP	５	5	IP	６		IP	６		IP	６		IP	６		IP	３		IP	５		IP

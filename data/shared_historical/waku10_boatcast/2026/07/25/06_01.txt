@@ -1,0 +1,8 @@
+data=
+1	0
+石原　　　光	8.10	0.13	2.6	４		G3	１		IP	２		G3	１		IP	６		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+土屋　　太朗	6.10	0.17	3.5	２	3	IP	１		IP	３		IP	６		IP	４		IP	３	3	IP	４		IP	１		IP	４		G3	２		IP
+胡本　　悟志	3.70	0.15	2.9	３		IP	４		IP	３		IP	５	4	IP	５	4	IP	４		IP	５		G3	３		G3	４		IP	６		IP
+藤田　　康生	3.50	0.12	3.5	４	5	IP	３		IP	４	5	IP	６		IP	１		IP	４		IP	５		IP	５		IP	６		IP	６	6	IP
+佐藤　ほのか	1.40	0.24	4.0	６		IP	５		IP	６		G3	５		G3	Ｆ		IP	５		IP	６		IP	６		G3	５		G3	５		IP
+澁澤　　周羽	1.30	0.16	2.9	６		IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP

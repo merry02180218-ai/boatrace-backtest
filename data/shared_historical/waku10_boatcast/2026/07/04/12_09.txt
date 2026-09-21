@@ -1,0 +1,8 @@
+data=
+1	0
+村田　　　敦	6.10	0.19	3.7	１		IP	２		IP	１		IP	５		IP	３		IP	３		IP	４		IP	３		IP	２		IP	６		IP
+市川　　哲也	7.25	0.15	3.0	２		IP	１		IP	３		IP	欠		IP	２		IP	３		IP	欠		IP	１	1	IP	２		IP	６	1	G2
+高濱　　芳久	5.20	0.16	3.7	６		IP	２		IP	４		IP	３		IP	２		IP	５	4	IP	２		IP	６		IP	３		IP	２		IP
+中村　　有裕	7.10	0.16	2.7	５		IP	１		IP	４		IP	１		IP	１		IP	２		IP	２		IP	２		IP	６		IP	１	5	IP
+秋山　　広一	4.80	0.19	4.4	２		G2	３		G2	３		IP	４		IP	６		G3	６		G3	４		IP	５		IP	１		IP	４		IP
+大久保　佑香	1.80	0.21	4.3	６		IP	６		G2	５		G2	５		G2	４		G3	６		G3	６		IP	６		IP	６		G3	６		IP

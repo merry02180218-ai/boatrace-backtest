@@ -1,0 +1,8 @@
+data=
+1	0
+大崎　　　翔	6.80	0.13	1.5	５	2	IP	４		IP	５		IP	１		IP	２		IP	３		IP	２		IP	２		IP	１		IP	１		IP
+國分　将太郎	7.30	0.10	2.1	１		IP	３		IP	１		IP	１		IP	３		IP	２		IP	１		IP	４		IP	５		IP	３		IP
+竹之内　　極	7.20	0.11	2.5	２		IP	３		IP	３	5	IP	１	4	IP	１		IP	２		IP	１		IP	５		IP	４		IP	２		IP
+佐藤　　大介	6.20	0.20	4.8	３		IP	３		IP	３		IP	１	3	IP	２		IP	１	3	IP	４		IP	５		IP	４		IP	３		IP
+下河　　雅史	3.80	0.16	3.6	３		IP	６		IP	４		IP	５		IP	３		IP	５		IP	３		IP	４		IP	３		IP	６		IP
+前出　　達吉	5.50	0.16	3.4	５		IP	２		IP	５		IP	２	5	IP	４		IP	４		IP	１	5	IP	６		IP	３	5	IP	２	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+田中　信一郎	9.70	0.14	2.3	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+浜野　　孝志	6.30	0.17	4.3	３		IP	２	3	G3	１		G3	２	3	IP	１		G2	４	3	IP	５		IP	５	3	IP	４		IP	２		IP
+寺田　　　祥	7.10	0.14	2.1	３	4	IP	２		G2	１		IP	２		IP	３		IP	５		G2	４		G2	３		IP	２		G1	２		G1
+國分　将太郎	5.20	0.16	3.5	１		IP	３		IP	４		IP	４		IP	４		IP	５	3	IP	３		IP	４		IP	４		IP	２		IP
+榮田　　将彦	3.70	0.11	2.5	３		IP	５		IP	３		IP	６	6	IP	４		IP	３	3	IP	６		IP	４	6	IP	３		IP	６		IP
+仲本　　　舜	3.60	0.17	4.1	５	5	IP	３	5	IP	４		IP	５		IP	２		IP	６		IP	５		IP	４		IP	６		IP	３		IP

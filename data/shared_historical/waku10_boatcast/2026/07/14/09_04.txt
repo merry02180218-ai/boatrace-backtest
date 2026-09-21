@@ -1,0 +1,8 @@
+data=
+1	0
+網代　　良芽	6.70	0.15	2.3	３		IP	１		IP	１		IP	５		IP	１		IP	１		IP	２		IP	６		IP	２		IP	５		IP
+藤原　　碧生	6.10	0.12	3.3	３		IP	Ｆ		G2	１		G3	３		G1	４		G1	２		G1	５		G1	３		IP	３		G1	３		G1
+新出　　浩司	4.30	0.15	2.6	３		IP	３		IP	３		IP	６		IP	５		G3	２		IP	５		IP	５		IP	４		IP	３	2	IP
+山道　　諄也	2.78	0.17	3.1	落	6	IP	Ｆ	6	IP	５		IP	４		IP	エ		IP	１		IP	５		IP	６		IP	５		IP	４		IP
+高井　　雄基	4.20	0.23	4.9	５	6	IP	３		IP	５		IP	６		IP	６		IP	４		IP	３		IP	２		G3	４		G3	２		G3
+澁澤　　周羽	1.70	0.15	3.2	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	３		IP	６		IP

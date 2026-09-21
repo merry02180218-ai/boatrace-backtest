@@ -1,0 +1,8 @@
+data=
+1	0
+細川　　裕子	8.10	0.21	5.0	２		G3	２		G3	６		IP	１		IP	１		IP	１		IP	１		G3	１		G3	４		G3	１		G3
+滝沢　　織寧	2.90	0.18	2.9	５		IP	６		IP	４		IP	５		IP	４		IP	４		IP	４		IP	５		IP	４		IP	５		IP
+神里　　琴音	6.20	0.15	2.9	落		G3	３		IP	５		IP	１		IP	１		IP	３		IP	３		G2	３		G2	２		G3	３		IP
+浜田　亜理沙	7.70	0.18	3.3	３		G3	２		IP	２		IP	２		IP	２		G3	２		G3	３		G3	２		G2	２		G2	３		IP
+渡邉　真奈美	5.50	0.15	3.0	６		IP	２		IP	１	3	IP	３		IP	５		IP	２		IP	５		G3	４		G3	１		IP	４		IP
+畑田　　希咲	1.30	0.23	4.6	５	5	G3	落		IP	６		G3	５		G3	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+石野　　貴之	9.20	0.11	1.7	１		G2	２		IP	１		G1	１		G1	３		SG	２		SG	１		G1	１		IP	１		IP	６		G1
+島田　　賢人	7.40	0.18	3.9	６		G2	１		IP	１		IP	２		IP	２		IP	２		IP	２		IP	３		IP	３		IP	２		IP
+江本　　真治	4.70	0.17	3.3	６	5	G2	３		IP	２		IP	６		IP	５		IP	４		IP	２		G3	５		IP	３		IP	２		IP
+服部　　幸男	4.60	0.16	3.3	５		IP	４		IP	４		IP	５		IP	４		SG	６		SG	２		IP	５		IP	３	5	G1	２		IP
+今泉　　友吾	5.90	0.14	2.6	４		G2	４		IP	４		G1	３		G1	２		IP	２		IP	３	3	IP	３		IP	４		IP	３		IP
+谷野　　錬志	3.80	0.18	3.2	５		G2	３		SG	１		IP	６		IP	３	5	IP	６	5	G1	６		G1	５		IP	６		G1	６		G1

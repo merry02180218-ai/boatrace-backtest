@@ -1,0 +1,8 @@
+data=
+1	0
+齋藤　　智裕	5.70	0.21	3.6	１		IP	１		IP	５		IP	６		IP	３		IP	５		IP	２		IP	５		IP	２		IP	２		IP
+中越　　博紀	4.80	0.18	3.6	１		IP	５		IP	３		IP	３		IP	４		IP	２		IP	６		IP	２		IP	６		IP	５		IP
+柴田　　直哉	5.30	0.15	3.2	５	6	IP	６		IP	３		IP	４		IP	３		IP	４	4	IP	２	5	IP	１	4	IP	３		IP	３		IP
+宇野　　博之	3.00	0.20	3.9	５		IP	５		IP	５		IP	６		IP	５		IP	３		IP	６		IP	４		IP	４		IP	３		IP
+川添　　英正	2.90	0.21	4.6	４		IP	５		IP	５		IP	６		IP	４		IP	４	3	IP	６		IP	５		IP	６		IP	２		IP
+堀内　　亜海	1.10	0.18	4.6	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５	5	IP

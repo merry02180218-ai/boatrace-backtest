@@ -1,0 +1,8 @@
+data=
+1	0
+橋口　　真樹	4.30	0.24	5.2	６		G3	１		IP	４		IP	５		IP	６		IP	４		IP	２		IP	４		IP	２		IP	６		IP
+中嶋　誠一郎	4.40	0.17	4.0	３		IP	５		IP	６		IP	２		IP	４		IP	５		IP	２		G3	６		G3	３	3	IP	３		IP
+高橋　　　勲	5.40	0.16	3.2	５		G3	４		IP	５		G3	５		G3	４		IP	１		IP	４		IP	２		IP	１		IP	２		IP
+森林　　　太	5.20	0.16	3.2	３		G3	４		IP	２		IP	４		IP	４		IP	５		IP	２		IP	１		IP	５		IP	４		IP
+信濃　　由行	2.90	0.17	3.8	４		IP	５		IP	１		IP	６		IP	４		IP	５		IP	５		IP	６		IP	５		IP	６	4	IP
+三角　　哲男	4.40	0.22	4.6	３		G3	３		IP	５		IP	３		IP	４		IP	５		IP	３		IP	３		IP	５	5	IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+宇野　　博之	5.40	0.20	4.1	４		IP	３		IP	６		IP	６		IP	１		IP	１		IP	１		IP	５		IP	４		IP	３		IP
+松浦　　　勝	2.20	0.16	3.0	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	４		IP	３	3	IP	５		IP	５		IP
+上條　　嘉嗣	8.20	0.17	3.4	６		IP	１		IP	２		IP	１		IP	３	2	IP	１	2	IP	２	2	IP	２		IP	１	2	IP	１	2	IP
+飯島　　　誠	5.60	0.15	3.3	３		IP	４		IP	３		IP	６	5	IP	２		IP	６		IP	１		IP	２		IP	４		IP	２		IP
+甲斐　　貴大	3.10	0.14	3.0	６	6	IP	３		IP	３	6	IP	６		IP	６		IP	５		IP	２	6	IP	６	6	IP	４	6	IP	６	6	IP
+今村　　暢孝	4.50	0.14	2.5	６	2	IP	５	2	G3	６	2	G3	３	1	IP	１	1	IP	４	1	IP	３	2	IP	１	2	IP	６	2	IP	４	2	IP

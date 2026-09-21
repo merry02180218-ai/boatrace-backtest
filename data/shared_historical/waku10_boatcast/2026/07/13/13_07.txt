@@ -1,0 +1,8 @@
+data=
+1	0
+山川　　波乙	7.80	0.16	2.7	１		IP	３		IP	６		IP	１		IP	１		IP	１		IP	１		IP	１		IP	６		IP	１		IP
+小野　　生奈	6.90	0.17	3.4	２		G2	３		G3	４		IP	１		G3	２		G2	４		G2	３		G3	４		G3	４		G3	１		G3
+登　　みひ果	5.30	0.13	2.7	２		IP	４		IP	１		IP	３		IP	２		IP	５		IP	５		IP	２		IP	６		G3	５		G3
+樋江井　　舞	4.00	0.12	2.6	５		IP	５		IP	３		IP	転		IP	４		IP	６		G3	４		IP	２		IP	６		IP	２		IP
+三嶌　さらら	4.10	0.18	3.0	５		IP	３		IP	６		IP	４		IP	３		IP	３	4	IP	５	6	IP	４		IP	３		IP	４		IP
+原　　加央理	3.40	0.14	3.2	４	5	IP	１	5	IP	６		IP	５		IP	６		IP	５		G3	５		IP	５		IP	３		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　　勝	8.10	0.19	3.6	２		IP	６		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	３		IP
+烏野　　賢太	4.80	0.15	2.9	３		IP	３		IP	６		G3	５		IP	４		IP	６		IP	２		IP	３		IP	１		IP	４		IP
+三宅　　健太	5.40	0.18	3.8	５		IP	１		IP	４		IP	１		IP	３		IP	２		IP	Ｆ		IP	４		IP	２		IP	５		IP
+新田　　泰章	5.00	0.16	3.0	４		IP	４	5	IP	３		IP	６		G1	２		G1	６		IP	２		IP	３		IP	３		IP	４		IP
+川北　　浩貴	4.00	0.18	3.1	３		IP	５	6	IP	４		IP	６	6	IP	４		IP	５		IP	６		IP	２		IP	１		IP	５		IP
+大森　　　翼	3.40	0.15	3.5	５		IP	３		IP	６		IP	３		IP	３		IP	５		IP	４		IP	５		IP	６		IP	４		IP

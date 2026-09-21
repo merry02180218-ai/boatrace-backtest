@@ -1,0 +1,8 @@
+data=
+1	0
+白井　　友晴	8.60	0.16	4.2	１		IP	５		IP	１		IP	１		IP	２		IP	２		IP	１		IP	２		IP	１	2	IP	１		IP
+待鳥　　雄紀	5.60	0.15	3.0	３		IP	２		IP	１		IP	４		G3	５	3	IP	３		IP	３		IP	２		G3	４		G3	５		IP
+赤岩　　善生	5.40	0.13	2.6	６		SG	４		G1	５		G1	３		G1	３		G1	４		G3	２	2	IP	４		IP	３		G1	４	2	IP
+服部　　幸男	4.80	0.16	3.3	４		IP	４		IP	５		IP	４		SG	６		SG	２		IP	５		IP	３	5	G1	２		IP	４		IP
+星野　　太郎	3.60	0.19	3.8	４		IP	５		IP	３		IP	３		IP	３		IP	３		IP	５		IP	６		IP	５		IP	６		IP
+野村　　羽玖	3.40	0.16	4.0	４		IP	４		IP	５		IP	６		IP	３		IP	５		IP	３		IP	６		IP	３		IP	５		IP

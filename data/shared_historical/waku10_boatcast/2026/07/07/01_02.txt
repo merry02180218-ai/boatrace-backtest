@@ -1,0 +1,8 @@
+data=
+1	0
+生方　　靖亜	8.67	0.13	2.3	４		IP	１		IP	欠		IP	１		IP	２		IP	３		G3	１		IP	１		IP	１		IP	１		IP
+小黒　　竜吾	5.30	0.15	2.7	３		IP	３		IP	３		G3	４		G3	５		IP	１	3	IP	３		IP	６		IP	４		IP	２		IP
+小林　　一樹	5.70	0.11	1.7	２		IP	４		IP	４		IP	２		IP	２		IP	６		IP	２	4	IP	３		IP	４		IP	３		IP
+鶴田　　勇雄	6.20	0.21	3.4	３		IP	３		IP	２		IP	２		IP	２		IP	２		IP	２		IP	４		IP	５		G3	４		G3
+立具　　敬司	3.20	0.15	3.0	Ｆ		IP	５		IP	３		IP	４		IP	５		IP	５		IP	３		IP	５		IP	４		IP	４		G3
+麻生　　慎介	4.80	0.12	3.0	１		IP	４		IP	５	5	IP	４	5	IP	５		IP	１	5	IP	５		IP	２		IP	６		G1	５		IP

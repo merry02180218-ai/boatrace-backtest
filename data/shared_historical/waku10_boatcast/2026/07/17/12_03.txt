@@ -1,0 +1,8 @@
+data=
+1	0
+花本　　　剛	5.90	0.17	3.0	５		IP	５		IP	２		IP	１		IP	６		IP	３		IP	１		IP	４		IP	３		IP	１		IP
+村田　　修次	6.00	0.16	3.2	５		IP	２		IP	５		IP	２		IP	１		IP	３		IP	４		IP	３		IP	１		IP	４		IP
+古結　　　宏	7.10	0.11	2.8	５		IP	１		IP	２		IP	１		IP	１		IP	３		IP	３		IP	３		G1	５	1	G1	２		IP
+鈴木　　章司	3.80	0.21	3.6	２	3	IP	６		IP	４		IP	４	5	IP	４		IP	２		IP	５		IP	６		IP	５	5	IP	４		IP
+近藤　　来希	1.67	0.18	3.6	６		IP	５		IP	６		IP	４	6	IP	６		IP	６		IP	６		IP	４	6	IP	落		IP	落		IP
+岡谷　　健吾	4.22	0.14	3.1	６		IP	４		IP	５	5	IP	２		IP	６		IP	転		IP	３		IP	３	5	IP	４		IP	３		IP

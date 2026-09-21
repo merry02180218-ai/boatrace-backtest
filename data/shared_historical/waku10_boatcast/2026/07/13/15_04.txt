@@ -1,0 +1,8 @@
+data=
+1	0
+下田　　哲也	4.20	0.17	4.0	１		IP	３	2	IP	４		IP	６		IP	５		IP	４		IP	２		IP	５		IP	６		IP	４		IP
+吉川　　勇作	3.10	0.11	2.2	６		IP	４		IP	５		IP	６		IP	５		IP	５		IP	６		IP	３		IP	５		IP	１		IP
+高村　　　諒	2.00	0.16	3.6	６		IP	５		IP	４		IP	５	4	IP	６		IP															IP
+後藤　　正宗	4.80	0.16	3.6	３		IP	２		IP	６		IP	５		IP	３		IP	６		IP	３		IP	３		IP	５		IP	２		IP
+秋末　　秦悟	2.90	0.09	2.7	６		IP	３		IP	６		IP	１		IP	５		IP	５		IP	５		IP	５		IP	５		IP	６		IP
+大久保信一郎	3.80	0.20	4.0	３		IP	５		IP	５		IP	４		IP	６		G3	３		IP	３		IP	５		IP	３	5	IP	５		IP

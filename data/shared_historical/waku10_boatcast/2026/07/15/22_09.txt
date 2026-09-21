@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　京介	8.40	0.10	1.9	２		IP	１		IP	２		IP	３		IP	３		IP	２		IP	２		IP	１		G3	１		IP	１		IP
+小松　　卓司	6.60	0.19	3.6	３		IP	２		IP	２		IP	２		IP	５		IP	２		IP	３		IP	３		IP	２		IP	３		IP
+笠　　　雅雄	5.00	0.17	3.3	４		IP	３		IP	２		IP	２		IP	４		IP	５		IP	３		IP	５		IP	４		IP	３		IP
+古賀　　智之	4.90	0.15	2.9	５		IP	２		IP	２		IP	５		IP	５		IP	５		IP	３		IP	２		IP	１	5	IP	６		IP
+田中　　宏樹	4.00	0.16	2.7	４		IP	３		IP	３		IP	欠		IP	４		IP	５		IP	５	6	IP	５		IP	２		G3	５		G3
+植田　　太一	3.80	0.14	3.5	４		IP	４		IP	６		IP	５		IP	４		IP	２		IP	３		IP	６		IP	４		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+原田　　幸哉	9.60	0.08	1.5	５		G2	２		IP	１		IP	１		IP	１		IP	２		SG	１		SG	１		G1	１		G1	２		SG
+黒崎　　竜也	6.40	0.15	3.5	１	3	IP	３		IP	１		G3	２	3	G3	２		G3	４		IP	４		IP	３		IP	４	3	IP	４		IP
+松江　　秀徳	5.00	0.12	2.6	６		G2	５		IP	３		IP	欠		G3	２		IP	３		IP	２		IP	４	4	IP	２		IP	３		IP
+金子　　賢志	6.30	0.12	2.7	４		G2	６		G2	３		G2	１		IP	３		IP	５		IP	２		IP	６		IP	１		G1	１		G1
+村上　　　遼	5.30	0.16	3.1	１		G2	１	4	IP	５		G1	３		IP	３		IP	６		G1	６		IP	５		IP	４	4	IP	２		IP
+永田　　秀二	5.90	0.18	4.2	３		G2	２		IP	４		IP	３		IP	２		IP	６		IP	２		G2	４	5	IP	３		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+吉村　　正明	9.60	0.13	2.1	２		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		G3	１		IP	１		IP
+三浦　洋次朗	7.00	0.17	3.9	２		IP	４		IP	２		IP	６		G2	１		IP	２		IP	１		IP	３		IP	１		IP	４		IP
+濱崎　　直矢	8.40	0.12	1.6	２		IP	１		IP	２		IP	１		IP	３		SG	４	4	IP	１		IP	４		IP	２		IP	１		IP
+石倉　　洋行	7.00	0.11	2.4	４		IP	１		IP	３		IP	１		IP	３		IP	２		IP	２		IP	２		IP	３		IP	６		G1
+安藤　　瑠希	3.78	0.16	2.5	３		IP	５		IP	５		IP	転		IP	４	6	IP	６		IP	３		IP	６		IP	３		IP	３		IP
+籾山　　佳岳	4.50	0.15	3.4	３	5	IP	６		IP	３		IP	１		IP	３		IP	４		IP	５		IP	５		IP	３		IP	５	5	IP

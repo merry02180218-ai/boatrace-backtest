@@ -1,0 +1,8 @@
+data=
+1	0
+森野　　正弘	7.20	0.13	3.1	２		IP	１		IP	１		IP	５		IP	５		IP	２		IP	４		IP	１		G3	２		G3	１		IP
+寺田　　空詩	6.40	0.15	3.1	２		IP	１		IP	５		IP	１		IP	２		G3	２		G3	２		G3	３		IP	４		IP	落	3	IP
+小林　　愛実	3.00	0.18	3.0	６		IP	５		IP	１		IP	５		IP	２		IP	４		IP	６		IP	６		IP	エ		IP	６		IP
+城間　　盛渚	4.30	0.19	3.2	５		IP	１		IP	６		IP	３		IP	２		IP	６		IP	６	5	IP	４		IP	５		IP	２		IP
+前川　　守嗣	4.80	0.12	2.7	２		IP	５		IP	５	6	IP	２		IP	４		IP	２	6	IP	５		IP	５		IP	１		IP	５		IP
+岡本　　　大	2.40	0.22	4.7	５		IP	６		IP	６		IP	５		IP	６		IP	３		IP	６		IP	５	5	IP	４		IP	４	5	IP

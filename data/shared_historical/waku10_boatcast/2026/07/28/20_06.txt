@@ -1,0 +1,8 @@
+data=
+1	0
+久田　　敏之	10.10	0.12	1.6	１		IP	１		IP	１		IP	１		IP	１		IP	１		G3	１		G3	２		G3	１		G1	１		G1
+小澤　　　学	5.00	0.27	5.8	２		IP	４		IP	３		IP	４		IP	３		IP	２		IP	４		IP	３		IP	５		IP	５		IP
+冨田　　秀幸	3.90	0.20	4.2	３		IP	６		IP	４	4	IP	５		IP	４		IP	５		IP	４		IP	４		IP	４		IP	２		IP
+増本　　杏珠	2.90	0.20	4.0	５		IP	６		IP	２		IP	６		IP	５		IP	５		IP	４		IP	４		IP	６		IP	４		IP
+大場　　　敏	3.90	0.16	3.4	４		IP	３		IP	３		IP	４	4	G3	３		G3	５	4	IP	４		IP	４		IP	６		IP	５		IP
+前田　　将太	6.50	0.12	3.2	３		IP	３		IP	１		IP	３		IP	６		SG	２		IP	２	5	IP	３		IP	２		IP	６		G1

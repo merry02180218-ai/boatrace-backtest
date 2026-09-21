@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　良昭	6.80	0.15	2.1	４		IP	２		IP	２		IP	２		IP	４		IP	１		IP	１		IP	２		IP	５		IP	３		IP
+中北　　将史	6.20	0.15	2.6	５		IP	２		IP	２		IP	４		IP	２		IP	３		IP	４		IP	４		IP	２		IP	１		IP
+百武　　　翔	7.00	0.14	2.7	４		IP	２		IP	２		IP	１		IP	２		IP	１		IP	２		IP	Ｆ		IP	３		G3	２		G3
+郷原　　章平	5.00	0.16	2.9	５		IP	５		IP	１		IP	５		IP	４		IP	３		IP	１		IP	３		IP	３		IP	５		IP
+田中　　宏典	3.60	0.21	3.7	６		IP	４		IP	転		IP	２		IP	６		IP	３	6	IP	５		IP	４	4	IP	２		IP	５	6	IP
+若林　　　将	4.56	0.13	2.3	５		IP	６		IP	４		G1	４		IP	２		IP	２		IP	エ		G3	３		IP	３		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+古田　　祐貴	8.20	0.12	1.8	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	５		G3	２		G3	１		IP
+津留　浩一郎	4.70	0.20	3.9	３		G3	２		IP	３		IP	２		IP	４		IP	６		IP	４		IP	６		IP	６		IP	２	3	IP
+本吉　　正樹	5.40	0.19	2.9	３		IP	６		IP	６		IP	４		IP	１		IP	２		IP	５		IP	３		IP	３		IP	１		IP
+牧山　　敦也	3.60	0.17	4.4	６		IP	５		IP	２		IP	５		IP	３		IP	４		IP	３		G3	６		IP	５		IP	４		IP
+鈴木　　唯央	3.50	0.12	3.2	５		IP	３		IP	３		IP	５		IP	５		IP	２		IP	Ｆ		IP	６		IP	５		IP	３		IP
+牧村　　俊輝	1.80	0.21	5.0	６		IP	６		IP	６		IP	５		IP	４		IP	４		IP	６		IP	５		IP	６		IP	６		IP

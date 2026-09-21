@@ -1,0 +1,8 @@
+data=
+1	0
+吉原　　聖人	7.20	0.19	3.4	２		IP	１		IP	６		G3	１		G3	２		IP	６		IP	２		IP	２		IP	１		IP	２		IP
+平石　　和男	7.20	0.19	4.8	３		IP	１		IP	４		IP	２		IP	１		IP	３		IP	２		IP	５	3	IP	１		IP	２		IP
+室田　　泰史	6.60	0.12	2.3	１		G3	４		IP	１		IP	４		IP	３		IP	４		IP	３		IP	２		IP	３		IP	２		IP
+高橋　　　勲	3.70	0.14	3.4	６		G3	４		G3	５		G3	３		IP	６		G3	５		G3	３		G3	６		IP	１		IP	４		IP
+廣中　　良一	1.80	0.15	3.1	６		IP	６		IP	６		G3	６		G3	５		IP	４		IP	５		IP	６		IP	６		IP	４		G3
+萩原　　秀人	5.60	0.16	3.7	１	5	G3	４		SG	４		IP	３		IP	３		IP	５		G1	１		IP	６		G1	６		G1	３		IP

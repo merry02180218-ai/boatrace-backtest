@@ -1,0 +1,8 @@
+data=
+1	0
+羽田　　妃希	6.40	0.25	5.0	５		IP	３		IP	１		IP	４		IP	２		IP	１		IP	４		IP	１		IP	４		IP	３		IP
+中村　　桃佳	7.78	0.13	3.0	２		IP	１		IP	３		IP	３		IP	１		IP	２		IP	１		IP	５		IP	１		IP	転		IP
+内山　　七海	5.70	0.17	3.5	３		IP	３		IP	５		IP	１		G3	２		G3	４		G2	６		G2	３		IP	５		IP	１		IP
+恵良　　琴美	2.00	0.18	4.7	６		IP	６	6	IP	６		IP	５	6	IP	６		IP	６		IP	３		IP	６		IP	４	5	IP	５		IP
+長嶋　　万記	4.50	0.13	2.7	４		IP	５		IP	５		G3	６		G2	５		G2	２		IP	２		IP	２		IP	３		IP	５	4	IP
+松尾　　夏海	6.90	0.16	2.5	２		IP	１		IP	２		IP	３		G2	３		IP	２		IP	４		IP	６		IP	１		IP	３		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+常盤　　海心	5.20	0.21	4.2	３	2	IP	６		IP	１		IP	３		IP	６		IP	４		IP	１		IP	２		IP	４		IP	５		IP
+抹香　　雄三	6.40	0.18	4.4	２		IP	５		IP	３		IP	２		IP	４		IP	１		IP	５		IP	３		IP	２		IP	１		IP
+松尾　　宣邦	4.70	0.15	3.4	４	4	IP	６		IP	３		IP	２		G3	４		IP	３		G3	４		IP	４		IP	２		IP	５		IP
+田路　　朋史	4.20	0.18	3.1	４		IP	６	5	IP	５	5	IP	３	5	IP	５		IP	３		IP	２		IP	４		IP	６		IP	３		IP
+今泉　　博人	1.30	0.27	5.0	６	6	IP	５	6	IP	５	6	IP	落	6	IP	６	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP
+上野　真之介	6.50	0.12	3.0	３		SG	４		SG	５		G1	３		G1	３		SG	３		IP	１	5	IP	４		IP	５		G1	１	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+小畑　　実成	5.30	0.24	4.1	Ｆ		IP	２		IP	４		IP	４		IP	３		IP	１		IP	３		IP	３		IP	６		IP	２		IP
+國弘　　翔平	4.80	0.16	3.0	３		IP	３		IP	３		IP	２		IP	４		IP	５		IP	４		IP	妨		IP	３		IP	３		IP
+桐本　　康臣	6.40	0.16	3.0	４		IP	２		IP	４		IP	５		IP	１		IP	１		IP	４		IP	１		IP	５		IP	１		IP
+宮崎　心之介	6.00	0.11	2.2	４		IP	１		IP	１		IP	１	5	IP	４	5	IP	３		IP	２		IP	３		IP	Ｆ		IP	５		IP
+平見　　真彦	3.40	0.18	3.0	５	6	G3	３		IP	４	6	IP	６		IP	６		IP	３	4	IP	４		IP	４		IP	４		IP	５		IP
+須藤　　博倫	3.90	0.15	3.5	６		IP	４		IP	６		IP	５		IP	５	5	IP	５		IP	２		G2	２	5	IP	４		IP	４	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+池田　　雷太	6.80	0.16	4.4	４		IP	４		IP	４		IP	３		IP	４		IP	１		IP	１		IP	１		IP	３		IP	１		IP
+泉　　　啓文	4.80	0.20	3.7	３		IP	２		G3	４	3	G3	４		IP	２		IP	３	3	IP	５		IP	５		IP	４	3	IP	４		IP
+佐々木　翔斗	5.10	0.20	4.0	３		IP	４		IP	４		IP	２		IP	１		IP	２		IP	Ｆ		IP	３		IP	５		IP	５		G2
+野田　　昇吾	2.22	0.19	3.6	６		IP	６		IP	３	5	IP	５		IP	６		IP	６		IP	５	5	IP	４	5	IP	５		IP	転	5	IP
+川合　　理司	2.10	0.16	3.1	６		IP	５		IP	６	6	IP	６		IP	６		IP	６		IP	４		IP	４		IP	４		IP	５		IP
+久田　　　武	2.30	0.18	3.8	４	5	IP	５		IP	５		IP	６		IP	５		IP	６		IP	５		IP	５		IP	６		IP	３	5	IP

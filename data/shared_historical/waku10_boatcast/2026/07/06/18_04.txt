@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　一郎	8.60	0.14	2.3	１		IP	１		IP	５		IP	２		IP	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP
+水摩　　　敦	6.67	0.17	4.0	２		IP	２		IP	５		IP	転		IP	３		IP	２		IP	１		IP	５	3	IP	２		IP	２		IP
+宮内　由紀英	2.00	0.20	4.0	５		IP	６		IP	６		IP	５		IP	６		IP	５		IP	５		IP	４		IP	６		IP	４		IP
+吉田　　　光	4.10	0.18	3.8	１		IP	５		IP	４		IP	６	6	IP	２		IP	３		IP	５		IP	５	6	IP	５	3	IP	４		IP
+松田　　憲幸	3.70	0.18	3.7	４		IP	２		IP	２		IP	６		IP	５		IP	４		IP	５		IP	５		IP	４	4	IP	５		IP
+竹之内　　極	3.40	0.17	3.9	４		IP	５		IP	５		IP	５		IP	２		IP	２		IP	５		IP	５		IP	５		IP	５		IP

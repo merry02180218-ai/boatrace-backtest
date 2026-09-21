@@ -1,0 +1,8 @@
+data=
+1	0
+片岡　　恵里	7.20	0.15	3.0	１		G3	１		G3	１		IP	１		IP	Ｆ		IP	３		IP	１		IP	１		IP	５		IP	４		IP
+櫻本　あゆみ	7.20	0.15	2.7	１		G3	５		G2	３		IP	１	4	IP	２		IP	３		IP	２		G3	５		IP	１		IP	２		IP
+喜井　つかさ	7.60	0.12	2.0	１		G3	３		IP	１		IP	２		IP	３		IP	３		G3	４		G3	２		G3	１		G3	２		IP
+佐々木　裕美	4.20	0.14	2.0	１		G3	５		G3	６		IP	３		IP	２		IP	６		IP	５		IP	３		G3	４		G3	５		G3
+稲生　　夏季	4.20	0.22	4.6	３		G3	４		IP	２		IP	５	6	G3	４		G3	６		G3	４		IP	３		IP	６		IP	３		IP
+今井　　美亜	4.30	0.14	1.8	５		G3	６		G2	２		IP	３		IP	６		G3	６		G3	４		G2	３		G2	３		IP	４	5	IP

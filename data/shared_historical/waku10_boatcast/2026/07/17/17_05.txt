@@ -1,0 +1,8 @@
+data=
+1	0
+前原　　　哉	6.30	0.16	3.8	３		IP	１		IP	５		IP	２		G3	１		G3	１		IP	３		IP	３		IP	４		IP	６		IP
+西村　美智子	5.30	0.17	2.8	５		IP	１		IP	５		IP	４		IP	２		IP	３		IP	６		IP	２		IP	２	3	IP	４		IP
+中尾　　彩香	4.70	0.17	2.7	３		IP	１		IP	５		IP	２		IP	４		IP	５		IP	転		IP	３		IP	６	4	IP	２		IP
+平山　　智加	5.10	0.16	2.9	５		IP	６		IP	６		IP	３		IP	３		IP	４		IP	３		IP	２		IP	３		IP	１		G2
+長尾　　萌加	4.20	0.16	3.2	４		IP	４		IP	３		IP	５		IP	４		IP	５		IP	４		IP	５		IP	５		IP	１		IP
+長嶺　真李愛	1.00	0.20	5.4	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

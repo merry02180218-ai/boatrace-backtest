@@ -1,0 +1,8 @@
+data=
+1	0
+藤原　啓史朗	9.30	0.16	3.0	２		IP	５		G2	１		IP	１		IP	１		IP	１		IP	１		G1	２		G2	１		G2	１		IP
+内山　　峻輔	4.20	0.16	3.3	５		IP	Ｆ		IP	６		IP	５		IP	３		IP	６		IP	２		IP	４		IP	１	4	IP	２		IP
+北中　　元樹	4.90	0.14	2.9	６		IP	４		IP	２		IP	２		IP	３		IP	２		IP	２		IP	５		IP	４		IP	転	4	IP
+眞田　　英二	4.90	0.20	4.2	２		IP	３	5	IP	６		IP	１		IP	６		IP	６		IP	３		IP	４		IP	３		IP	３		G3
+藤田　　美代	3.10	0.17	3.9	５		IP	６		IP	４		IP	６		IP	５		G3	６		G3	１		G3	３		G3	５		IP	５		IP
+水摩　　　敦	5.50	0.14	2.5	３		IP	６		IP	３		IP	３		IP	１		IP	４		IP	６		IP	６		IP	２	2	IP	１	4	IP

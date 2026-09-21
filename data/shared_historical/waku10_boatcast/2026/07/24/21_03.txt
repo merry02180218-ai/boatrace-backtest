@@ -1,0 +1,8 @@
+data=
+1	0
+南　　　佑典	8.70	0.12	2.1	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	４		IP	２		IP	１		G2
+表　　　健太	4.40	0.15	2.3	４		IP	４		IP	３		IP	５		IP	６		IP	６		IP	４		IP	１		IP	３		IP	３		IP
+深井　　利寿	6.60	0.15	2.4	３		IP	３	2	IP	１	4	G3	３		IP	５		G2	３		IP	４		IP	３		IP	１		IP	２		IP
+上野　　俊樹	5.10	0.13	2.2	４		IP	３		IP	６		G3	３		G3	３		IP	３		IP	１		IP	５		IP	４		G3	４	3	IP
+吉川　　昭男	5.50	0.17	3.6	４	3	IP	２	2	IP	２	3	IP	３	2	IP	６	4	IP	４	2	IP	１	3	IP	５	4	IP	４	4	IP	２	2	IP
+植木　　美帆	1.20	0.24	4.7	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		G3	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+松本　　弓雄	5.30	0.18	4.2	３	2	IP	１		IP	１		IP	６		IP	４		IP	３		IP	４		IP	１		IP	６		IP	６		IP
+川崎　　誠志	6.30	0.20	5.2	１		IP	２		IP	３		IP	３		IP	３		IP	３		IP	４		IP	３		IP	６		IP	１		IP
+中　　　亮太	6.70	0.14	2.7	４	4	IP	２		IP	４		G2	１		G2	２		G2	４		IP	１		IP	６		G2	２		G3	３		IP
+森安　　弘雅	5.78	0.16	4.5	２		IP	３		IP	転		IP	４		IP	３		IP	５		IP	３		IP	３		IP	１		IP	４		IP
+原村　　拓也	3.50	0.19	4.8	４		IP	５		IP	５		IP	５	6	IP	５		IP	３		IP	６		IP	３		IP	４		IP	３		IP
+船岡　洋一郎	3.80	0.18	4.4	５		IP	２		IP	４		G3	４		G3	４		G3	６		G1	４		G2	５		IP	５		IP	４		G1

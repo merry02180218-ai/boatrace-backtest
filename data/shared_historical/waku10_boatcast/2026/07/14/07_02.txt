@@ -1,0 +1,8 @@
+data=
+1	0
+安達　　裕樹	8.90	0.13	1.6	１		G2	２		G2	１		IP	３		G2	１		G2	１		IP	６		IP	１		IP	１		IP	１		IP
+岡崎　　恭裕	7.30	0.14	2.6	６		IP	２		IP	２		G1	２		G1	１		IP	１	1	G1	３		IP	２		IP	６		IP	１		IP
+丸岡　　正典	6.40	0.15	2.6	Ｆ		G2	２		G2	３		G2	２		IP	４		G2	１		IP	３		IP	３		IP	３		IP	３		IP
+海野　康志郎	6.70	0.17	3.9	１		IP	２		IP	５		SG	５	3	G1	５		G1	１		G1	２		IP	４		IP	３	3	IP	２		IP
+藤山　　翔大	4.00	0.22	4.5	６		IP	４		IP	２	2	IP	５		IP	６	6	IP	５		IP	３		IP	２	3	IP	４		IP	４		IP
+瓜生　　正義	4.60	0.16	3.9	５	4	IP	６	5	SG	５		G1	３		G1	４		SG	３		G1	２	4	IP	４	5	G1	５		G1	６		G1

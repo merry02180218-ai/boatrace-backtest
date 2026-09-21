@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　将吉	9.20	0.11	2.5	１		IP	１		IP	１		IP	６		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1
+仲本　　　舜	3.90	0.14	2.4	４		IP	３		IP	６		IP	欠		IP	５		IP	５		IP	１		IP	４		IP	５		IP	２		IP
+森定　　晃史	5.70	0.13	3.0	６		IP	３		IP	４		IP	３		IP	３		IP	４		IP	２		IP	１		IP	２		IP	４		IP
+國分　将太郎	5.40	0.18	3.7	４		IP	４		IP	４		IP	５	3	IP	３		IP	４		IP	４		IP	２		IP	２		IP	１	5	IP
+中辻　　博訓	3.70	0.09	1.7	１		IP	６		IP	２		IP	６		IP	６		IP	５		IP	４		IP	３	3	IP	５		IP	５		G3
+原田　　雄次	4.40	0.21	4.5	３		IP	５		IP	４		IP	５		IP	３		IP	３		IP	４		IP	１	5	IP	６		IP	６		IP

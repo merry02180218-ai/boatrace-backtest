@@ -1,0 +1,8 @@
+data=
+1	0
+細川　　裕子	8.50	0.20	4.5	６		IP	１		IP	１		IP	１		IP	１		G3	１		G3	４		G3	１		G3	１		IP	１		IP
+浜田　亜理沙	7.70	0.16	3.4	３		IP	１		IP	２		IP	１		IP	２		G3	３		G3	２		G3	２		G2	６		IP	２		G1
+筒井　　美琴	1.80	0.19	3.8	６		IP	４		IP	５		IP	５		IP	６		IP	６		IP	５		G3	５		G3	５		G3	６		IP
+岩崎　　芳美	4.10	0.15	3.0	６		IP	３		IP	４		G3	６		G2	５		IP	２	5	IP	４		IP	３		IP	５		IP	３		G3
+畑田　　希咲	1.70	0.25	4.9	５		IP	５		IP	６		G3	４		IP	５		IP	５		IP	６	6	IP	６		IP	６	6	IP	６		IP
+大廣　　咲季	2.20	0.18	3.5	３	4	IP	５		IP	４		IP	６	4	IP	５		IP	６		G3	６		G3	５		G3	６		IP	５		IP

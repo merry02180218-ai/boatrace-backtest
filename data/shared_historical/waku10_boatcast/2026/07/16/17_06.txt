@@ -1,0 +1,8 @@
+data=
+1	0
+塩崎　　優司	6.60	0.15	2.1	３		IP	５		IP	３		IP	１		IP	１		IP	４	2	IP	５		IP	２		IP	１		IP	２		IP
+野末　　智一	6.80	0.20	4.1	２		IP	１		IP	４	3	IP	３		IP	２		IP	４		IP	４		IP	２		IP	３		IP	１	1	IP
+横田　　海人	2.00	0.19	4.1	３		IP	６		IP	５		IP	５		IP	６		IP	６		IP	５		IP	６		IP	Ｆ	6	IP	４		IP
+竹田　　和哉	6.40	0.16	3.2	４		IP	２		IP	３		IP	４		G1	４		G1	１		IP	３		IP	６		G3	２		IP	２		IP
+小林　　甘寧	6.50	0.12	2.2	１		IP	２		IP	４		IP	５		IP	１		IP	２		IP	３		IP	１		IP	３		IP	６		IP
+小野　　勇作	3.30	0.21	4.7	４	5	IP	６		G3	３	5	IP	６		IP	３		IP	２	5	IP	６		IP	５		IP	５		IP	５		IP

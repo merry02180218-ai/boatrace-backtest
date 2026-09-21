@@ -1,0 +1,8 @@
+data=
+1	0
+中谷　　朋子	8.10	0.19	4.0	１		G3	１		G3	２		G3	１		IP	２		IP	１		G3	２		G3	３		G3	１		G3	Ｆ		G3
+向井田　真紀	3.40	0.21	3.7	６		IP	３		IP	５	1	IP	３		IP	５		IP	５		IP	５		IP	６		IP	４		IP	２		IP
+清水　　愛海	5.30	0.17	3.7	Ｆ		G3	２		IP	１		IP	１		IP	４	4	SG	６		IP	６		IP	３		G2	５		IP	２		IP
+飯塚　　　響	2.67	0.19	3.6	５		IP	落		IP	６		G3	６		G3	４	3	IP	５		IP	２		IP	６		IP	６		IP	４		G3
+倉田　　郁美	2.80	0.20	3.9	６		IP	２		IP	５		G3	５		G3	５		G3	５		IP	４		IP	５		IP	６		IP	４		IP
+三嶌　こころ	4.00	0.23	5.2	２		IP	３		IP	３		IP	５		IP	２		IP	５		IP	４		IP	６		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+市川　　哲也	8.10	0.12	3.3	２		G2	Ｆ		IP	２		IP	１		IP	１		IP	１		IP	３		IP	１		IP	２		IP	１		IP
+坂井　　康嗣	5.70	0.18	3.1	６		IP	２		IP	２		IP	２		IP	４		IP	２		IP	５		IP	２		IP	４	3	IP	３		IP
+小倉　　康典	5.00	0.18	3.0	４		IP	２		IP	４		IP	３		IP	２		IP	２		IP	２		IP	６		IP	６	4	IP	５		IP
+大塚　　浩二	4.30	0.19	3.8	４		IP	５		IP	２		IP	５		IP	４		IP	３		IP	４		IP	３		IP	６		IP	３		IP
+吉武　　真也	3.22	0.21	4.6	５		IP	４	4	IP	６		IP	不		IP	５		IP	４		IP	５		IP	３		IP	４		IP	４		IP
+早川　　颯太	1.90	0.17	3.1	６		IP	６		IP	６		IP	５		IP	５		IP	５		IP	６		IP	３		IP	６		IP	５		IP

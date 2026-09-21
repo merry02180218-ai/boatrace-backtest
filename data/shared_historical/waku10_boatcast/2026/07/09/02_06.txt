@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　直哉	7.10	0.19	3.6	３		IP	１		IP	４		IP	６		G3	３		IP	２		IP	１		IP	１		IP	３		IP	１		IP
+多田　　有佑	3.70	0.20	4.2	５		IP	５		IP	３		IP	３		IP	５		IP	４		IP	４		IP	６		IP	５		IP	２		IP
+佐藤　　　翼	6.30	0.14	4.0	５		SG	２		G1	４		G1	２		SG	１	4	G1	５		IP	１		G1	５		G1	６		SG	４		G1
+関　　　浩哉	6.20	0.12	2.5	４		SG	３		SG	３		G1	２		G1	５		SG	５		G1	３		G1	１		IP	４	6	G1	５		G1
+新開　　　航	7.50	0.14	3.3	６		SG	３		G1	１	4	IP	２		G1	２		G1	１		IP	２		IP	３		G1	５		G1	２		G2
+山口　　　剛	6.10	0.13	4.6	３		SG	３		G1	３		G1	４		SG	５		SG	６		G1	６		G1	２		IP	３		SG	２		G1

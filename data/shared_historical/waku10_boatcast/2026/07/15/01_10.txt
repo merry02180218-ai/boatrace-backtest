@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　竜一	8.00	0.12	1.7	１		IP	３		IP	２		IP	４		IP	１		IP	４		IP	１		IP	１		IP	１		IP	２		IP
+山崎　　　郡	6.90	0.14	3.1	２		IP	４		SG	２		SG	２		G1	４		G1	１	3	G1	３	1	G1	５		SG	５		SG	４		G1
+田中　　孝明	3.50	0.18	4.4	４		IP	５		IP	４		IP	６		IP	３		IP	５		IP	４		IP	５		IP	５		IP	２		IP
+池田　奈津美	5.90	0.15	3.0	２	2	IP	５	2	IP	３	2	IP	５	2	IP	１	2	IP	３	2	IP	６	2	G3	２	2	IP	３	2	IP	１	2	IP
+佐藤　　大介	5.80	0.17	3.8	５		IP	２		IP	５		IP	２		IP	３		IP	２		IP	４		IP	３		IP	２		IP	３		IP
+西舘　　　健	2.30	0.18	4.3	６		IP	４		IP	５		IP	６		IP	５		IP	４		IP	６		IP	３		IP	６		IP	６		IP

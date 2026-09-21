@@ -1,0 +1,8 @@
+data=
+1	0
+市川　　哲也	9.20	0.15	3.5	２		IP	１		IP	１		IP	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+森高　　一真	5.30	0.15	4.3	５		IP	４		SG	５		SG	２		G1	４		G1	３		SG	４		G1	６		G1	３		G1	４		G1
+渡邉　　優美	5.80	0.10	2.7	３	4	IP	２		IP	３		G2	２		G2	３		IP	５		IP	４		IP	６		G2	１		G2	５		G2
+深井　　利寿	5.20	0.13	2.7	２		IP	３		G3	５		G3	３		G2	３		G2	４		IP	５		IP	３		IP	３		IP	４		IP
+大瀧　明日香	3.40	0.16	2.9	４		IP	４		IP	５		IP	５		IP	４		G3	６		G3	４		IP	２		IP	５		IP	６		IP
+片岡　　大地	5.00	0.13	2.4	５		IP	５		IP	５		IP	２		IP	３		IP	３		IP	３		IP	１	5	IP	５	5	IP	３		IP

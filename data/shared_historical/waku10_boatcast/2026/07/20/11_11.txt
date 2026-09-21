@@ -1,0 +1,8 @@
+data=
+1	0
+米田　　隆弘	8.30	0.17	2.8	２		IP	６		IP	１		IP	１		IP	１		IP	２		IP	１		IP	３		IP	１		IP	１		IP
+秋山　　広一	9.40	0.14	3.3	３		IP	１		IP	３		IP	１	3	IP	１		G2	１	3	IP	１		IP	１		IP	１		IP	１		G3
+小野寺　智洋	5.00	0.18	3.1	２		IP	２		IP	４		IP	６		IP	６		IP	５		IP	３		IP	３		IP	４		IP	１		IP
+久富　　政弘	5.10	0.16	4.3	６		IP	２		IP	３		IP	３		IP	６		IP	６	3	IP	１		IP	２		IP	４		IP	３		IP
+内山　　文典	4.00	0.15	3.2	２		IP	５		IP	２		IP	５		IP	６		IP	６		IP	６		IP	６		IP	３	6	IP	１		IP
+宇佐見　　淳	3.50	0.17	3.4	４		IP	４	5	IP	４		G3	５		IP	４		IP	５		IP	２		IP	６		IP	４		IP	５		G3

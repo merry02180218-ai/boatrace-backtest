@@ -1,0 +1,8 @@
+data=
+1	0
+畑　　　竜生	8.10	0.19	3.8	１		G2	４		IP	４		IP	１		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+澁川　　　夏	6.90	0.17	3.3	６		IP	５		IP	１		IP	１		IP	１		IP	３		IP	２		IP	３		IP	２		IP	２		IP
+大澤　　普司	6.80	0.15	3.0	３		IP	３	4	IP	２		G3	１		G3	２		G3	３		IP	３		IP	３		G3	２	5	G3	４		IP
+北川　　敏弘	2.40	0.16	2.5	５		IP	５		IP	４		IP	４		IP	６		IP	６	5	IP	５		IP	４	5	IP	５		IP	５		IP
+吉島　　祥之	7.10	0.17	2.6	６		IP	２		IP	３		IP	１		IP	２	4	IP	１		IP	１		IP	１		IP	５		IP	３		IP
+鈴木　　柊介	2.10	0.14	3.6	６		IP	４		IP	４		IP	６		IP	５		IP	６		IP	５		IP	５		IP	５		IP	５		IP

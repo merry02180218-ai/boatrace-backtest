@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　隆太郎	8.00	0.18	3.0	１		IP	１		IP	３		SG	３		SG	１		SG	６		G1	６		SG	３		G2	１		IP	１		IP
+福島　　勇樹	6.90	0.12	1.9	３		IP	Ｆ		IP	２		IP	５		IP	１	1	IP	２		IP	２		IP	３		IP	１		IP	２		G1
+瓜生　　正義	5.80	0.13	3.3	１		IP	５		SG	６		SG	３		G1	６		G1	４		G1	４		G1	３		SG	１		SG	６		G1
+中里　　英夫	4.60	0.17	4.0	４		IP	５		IP	４		IP	４		IP	４		IP	４		IP	２		IP	２		IP	５		IP	３		IP
+森清　　友翔	3.50	0.14	3.0	４		IP	５		IP	２		IP	３		IP	４	6	IP	６		IP	６		IP	５		IP	６		IP	３		IP
+数原　　　魁	4.40	0.18	4.0	３		IP	６		IP	６		IP	３		IP	６		IP	４		IP	１	5	IP	４		IP	１		IP	６		IP

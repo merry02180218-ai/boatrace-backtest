@@ -1,0 +1,8 @@
+data=
+1	0
+増田　　　進	5.60	0.16	2.4	２		IP	２		IP	５		IP	３		IP	６		IP	１		IP	２		IP	５		IP	１		IP	６		IP
+鹿島　　敏弘	5.80	0.16	3.5	２		IP	３		G2	２		IP	６		IP	５		IP	４		IP	１		IP	４	3	IP	２		IP	３		IP
+松下　　直也	5.60	0.16	3.1	５	4	IP	３		IP	２		IP	２		IP	２		IP	３		IP	４		IP	３		IP	５		IP	３		IP
+三木　　晴斗	3.80	0.14	3.5	４		G3	６	6	G3	３		IP	３		IP	５		IP	６		IP	５		IP	４	5	IP	１	3	IP	５		IP
+大塚　　雅治	3.50	0.18	4.2	４		IP	６		IP	１		IP	６	6	IP	６		IP	４		IP	４		IP	５		G3	４	6	G3	４		IP
+田頭　　　実	5.70	0.18	3.5	４	2	IP	１	2	IP	２	2	G3	５	2	G3	４	2	IP	４	2	G3	１	2	G3	２	2	IP	３	2	IP	６	2	IP

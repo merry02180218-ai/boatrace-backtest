@@ -1,0 +1,8 @@
+data=
+1	0
+宮崎　　　奨	7.80	0.16	2.7	３		IP	２		IP	１		IP	１		IP	３		IP	１		IP	２		IP	５		G3	１		IP	２		IP
+廣部　　大明	1.60	0.23	4.6	５		IP	６		IP	５		IP	転		IP	５		IP	６		IP	５		IP	５		IP	５		IP	５		IP
+武田　　正紀	4.10	0.14	2.8	６		IP	６		IP	４		IP	６		IP	１		IP	３		IP	５		IP	３	2	IP	２		IP	５		IP
+田中　信一郎	6.20	0.14	2.2	２		IP	３		IP	１		IP	１		IP	３		IP	５		IP	６		G1	１	5	G1	６		G1	４		G1
+齊藤　　　仁	4.80	0.17	3.6	３		G3	３		G3	４		G1	６		G1	３		G3	１		IP	５		IP	５		IP	３	6	G1	５		IP
+鈴木　　智啓	2.90	0.18	3.7	４		IP	５		IP	３		IP	６		IP	４		IP	４		IP	６		IP	６		IP	５		IP	４		IP

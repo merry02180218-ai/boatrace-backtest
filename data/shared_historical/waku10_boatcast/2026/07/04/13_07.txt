@@ -1,0 +1,8 @@
+data=
+1	0
+山川　　雄大	6.20	0.22	4.1	４		IP	１		IP	５		IP	３		IP	１		IP	５		IP	２		IP	５		IP	１		IP	２		IP
+松山　　裕基	5.40	0.19	3.8	５		IP	１		IP	２		IP	１		IP	２		IP	４		IP	４		IP	４		IP	５		IP	５		IP
+白水　　勝也	6.56	0.18	3.2	２	2	IP	１		IP	４		IP	２		IP	６		IP	４		IP	エ	2	IP	１	2	IP	２		IP	３		IP
+榮田　　将彦	3.80	0.14	2.6	２		IP	５		IP	６		IP	３		IP	３		IP	６		IP	５		IP	６		IP	６		IP	１		IP
+堀内　　亜海	1.00	0.19	4.2	６	6	IP	６		IP	６	6	IP	Ｆ	6	IP	５	6	G3	６	6	G3	６	6	G3	６		G3	６	6	IP	６		IP
+平山　　智加	5.10	0.17	4.2	５		IP	２		IP	３		IP	４		IP	４		G2	２		G3	４		G3	３		IP	５		G1	４		G1

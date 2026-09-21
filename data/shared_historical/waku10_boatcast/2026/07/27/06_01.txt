@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　茂正	7.90	0.17	2.6	１		IP	２		IP	３		IP	６		IP	１		IP	１		IP	３		IP	２		IP	１		IP	１		IP
+胡本　　悟志	4.50	0.15	2.9	３		IP	２		IP	４		IP	１		IP	５		IP	５		IP	５		G3	６		G3	３		IP	４		IP
+山下　　心一	2.10	0.19	4.0	５		IP	３	4	G3	５		IP	６		IP	３		IP	６		IP	６		IP	妨		IP	６		IP	６		IP
+高石　　梨菜	4.20	0.19	3.3	５		IP	５		G3	６		IP	４		IP	３		G3	１		IP	５		IP	２		IP	３		IP	６		IP
+澁澤　　周羽	1.10	0.19	3.1	６	6	IP	６	6	IP	６	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	転	6	IP
+石原　　　光	2.50	0.19	4.1	３		G3	６		IP	６		IP	５		G3	６		G3	４		IP	５		IP	５		IP	５		IP	５		IP

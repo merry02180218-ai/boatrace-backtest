@@ -1,0 +1,8 @@
+data=
+1	0
+谷川　　里江	5.80	0.18	3.3	２		IP	４		IP	１		IP	３		IP	５		G3	３		G3	６		G3	１		G3	６		IP	１		IP
+水口　　由紀	4.20	0.20	3.8	３		IP	６		IP	４		IP	２		IP	５	3	IP	６		IP	２		IP	３		IP	４		IP	５		G3
+鈴木　祐美子	4.00	0.19	4.5	６		IP	４		IP	６		IP	２		IP	２		IP	３		IP	６		IP	４		IP	６		G3	３		G3
+寺田　　空詩	6.90	0.13	3.0	６		IP	３		IP	５		IP	１		IP	４		G3	１		G3	２		IP	１		IP	１		IP	３		IP
+龍田　　真白	2.40	0.12	1.8	２		IP	５	6	IP	４		IP	５		IP	６		IP	Ｆ		IP	５		IP	６		IP	５		IP	５		IP
+西岡　　育未	2.50	0.16	3.8	４	4	IP	６		IP	５		IP	６		IP	６		IP	６		IP	４		G3	５	5	G3	２		G3	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+上村　慎太郎	6.60	0.21	3.8	１		IP	２		IP	１		IP	３		IP	１		IP	５		IP	５		IP	２		IP	２		IP	５		IP
+杉江　　浩明	5.80	0.20	4.6	３		IP	２		G3	６		G3	３		IP	２		IP	１		IP	２		IP	２		IP	５		IP	６		IP
+橋本　　英一	5.20	0.18	3.3	１		IP	１		IP	６		IP	３	4	IP	転		IP	３		IP	３		IP	６		IP	２	4	IP	４		IP
+國分　将太郎	5.10	0.19	3.7	４		IP	４		IP	５	3	IP	３		IP	４		IP	４		IP	２		IP	２		IP	１	5	IP	６		G3
+安部　　慎一	2.20	0.20	3.5	４		IP	５		IP	６		IP	５		IP	６		IP	５		IP	５		G3	４		IP	５		IP	５		IP
+川崎　　誠志	3.00	0.24	5.2	６		IP	２		IP	４	5	IP	５		IP	４		IP	４		IP	６		IP	６		IP	４		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+豊田　　　結	7.60	0.18	2.7	３		IP	３		IP	３		IP	１		IP	１		IP	１		G3	２		G3	４		IP	３		IP	１		IP
+山川　　波乙	5.30	0.19	4.1	４		IP	３		IP	６		IP	３		IP	３		IP	２		IP	２		IP	２		IP	４		IP	５		IP
+松田　　真実	3.50	0.20	3.3	６		IP	２	4	IP	４		IP	６		IP	２		G3	５		IP	２		IP	６		IP	６		IP	６		IP
+三浦　　永理	7.50	0.14	3.0	５	5	IP	２		IP	３		IP	３		G3	２		G3	２		G2	１		G3	２		IP	３		G3	１		IP
+井澤　　聖奈	2.20	0.22	4.8	５		IP	６		IP	４		IP	５		IP	６		IP	６		IP	６		IP	５		IP	５		IP	３		IP
+廣中　智紗衣	4.90	0.20	4.8	４		IP	４		G3	２	5	IP	６		IP	２		IP	６		IP	２		IP	４		IP	３		G3	４		G1

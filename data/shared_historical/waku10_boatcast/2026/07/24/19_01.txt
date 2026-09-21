@@ -1,0 +1,8 @@
+data=
+1	0
+渡辺　　千草	5.30	0.17	4.1	５		G3	５		IP	１		IP	３		IP	２	2	IP	２		IP	２		IP	５		G3	６		G3	３		IP
+石原　　凪紗	4.80	0.19	3.7	２		G3	６		IP	５		IP	５		IP	３		G3	６		IP	３		IP	２		IP	２		IP	３		G3
+福島　　陽子	3.70	0.17	4.1	５		G3	６		G3	４		IP	４		G3	２		G3	３		G3	５		G3	５		G3	５		IP	３		IP
+出穂　　和鼓	2.80	0.19	3.6	６		G3	落		G3	２		G3	６		G3	６		IP	５		IP	２		IP	４	6	IP	５	5	IP	６		IP
+宮城　　那菜	2.60	0.13	2.5	５		G3	５		G3	６	6	IP	５	6	IP	３		IP	５		IP	５	6	IP	５	6	IP	６	6	IP	３		IP
+森田　　梨湖	1.90	0.20	3.7	４		IP	４	5	IP	６		IP	５		IP	５	5	G3	６		G3	６		G3	６		G3	５		IP	６		IP

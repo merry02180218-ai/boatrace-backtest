@@ -1,0 +1,8 @@
+data=
+1	0
+三宅　　　潤	8.40	0.18	3.5	２		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP	２		IP	４		IP	１		IP
+上瀧　　絢也	4.80	0.16	3.5	６		IP	３		IP	２		IP	６		IP	３		IP	２		IP	２		IP	３		IP	５		IP	５		IP
+金子　　龍斗	5.10	0.15	3.2	６		IP	５		IP	５		IP	４		IP	４		IP	２		IP	３		IP	１		IP	１		IP	４		IP
+後藤　　美翼	5.30	0.20	3.9	５		IP	２		IP	１		IP	２		IP	４		G3	４		G3	４		IP	２		G3	６		IP	４		IP
+前田　　聖文	5.00	0.16	4.3	４		IP	４		IP	４		IP	４		IP	欠		IP	２		IP	４		IP	５		IP	３		G1	２		IP
+出穂　　和鼓	1.40	0.15	3.1	５		IP	６		IP	６		IP	６		IP	６		IP	６		G3	５		G3	５		G3	６		IP	５		IP

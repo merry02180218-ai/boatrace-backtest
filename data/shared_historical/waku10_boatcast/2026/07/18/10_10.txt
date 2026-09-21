@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　孝弘	6.30	0.14	3.3	２		IP	３		IP	３		IP	１		IP	１		IP	４		IP	６		G3	Ｆ		IP	１		IP	２		IP
+相原　　利章	6.50	0.12	2.3	４		IP	４		IP	２		IP	４		IP	１		IP	２		IP	１		IP	２		IP	６		IP	２		IP
+片岡　　雅裕	5.40	0.12	2.7	４		SG	４		G1	４		G1	２		IP	３		G2	６		G2	４		IP	４		G1	５		G1	２		G1
+秋田　健太郎	3.90	0.16	3.0	５	5	IP	１		IP	４		IP	４		IP	６		IP	４		IP	４		IP	３		IP	５		IP	５		IP
+西川　新太郎	4.56	0.15	3.5	５		IP	４		IP	５		IP	４		IP	１		IP	転		IP	６		IP	３		IP	２		IP	４		IP
+藤山　　雅弘	3.70	0.21	4.6	５		IP	５		IP	２		IP	２	5	IP	６		IP	６		IP	３		IP	５		G3	３		IP	６		IP

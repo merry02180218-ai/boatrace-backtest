@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　英児	7.80	0.18	4.0	１		IP	１		IP	１		IP	２		IP	２		IP	４		IP	２		IP	５		IP	１		IP	２		IP
+佐藤　　　悠	6.33	0.13	2.6	Ｌ		IP	１		IP	２		IP	５		IP	１		IP	４		G2	４		G2	２		IP	４		G2	４		IP
+松井　　貫太	4.20	0.23	5.1	２		IP	５		IP	２		IP	２		IP	２		IP	６		IP	６		IP	６		IP	６		IP	４		IP
+竹内　　　来	1.30	0.21	3.7	５		IP	６	5	IP	５	6	IP	６		IP	６		IP	６		IP	５	5	IP	６		IP	６		IP	６		IP
+豊田　　訓靖	4.10	0.18	3.2	５	6	G3	５	6	G3	６		G3	２	6	G3	３		IP	６		IP	４		IP	２		IP	２		IP	６		IP
+中村　　　楓	2.20	0.24	4.7	６		IP	５		IP	６		IP	４		IP	５		IP	５		IP	４		IP	６		IP	４		IP	６		IP

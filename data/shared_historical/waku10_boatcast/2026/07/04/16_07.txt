@@ -1,0 +1,8 @@
+data=
+1	0
+和田　　兼輔	9.56	0.13	2.6	１		G2	１		IP	１		IP	２		IP	３		IP	１		IP	１		IP	１		IP	１		IP	Ｌ		G1
+品川　二千翔	6.40	0.14	2.8	２		IP	５		IP	６		IP	２		IP	２		IP	２		IP	５		IP	３		IP	１		IP	１		IP
+興津　　　藍	6.70	0.13	2.9	２		IP	１		IP	６		G3	１		IP	５		IP	１		IP	３		IP	４		IP	２		IP	２		IP
+津久井　拓也	4.70	0.15	2.8	４	3	G2	２		G2	５		G2	３		IP	４		IP	５		IP	４		IP	２		IP	５		G2	６		IP
+松尾　　　祭	3.50	0.20	4.9	６		IP	６		IP	６		IP	３		IP	転		IP	５		G2	２		G2	２		IP	５		IP	４		IP
+前原　　大道	3.40	0.15	4.0	６		G2	２		IP	６		IP	６		G1	３		IP	５		IP	５		IP	５		IP	５		G1	３		IP

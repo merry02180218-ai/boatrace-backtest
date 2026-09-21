@@ -1,0 +1,8 @@
+data=
+1	0
+刑部　亜里紗	8.80	0.16	3.6	１		IP	１		IP	４		IP	２		IP	１		IP	１		IP	２		IP	１		G3	２		G3	１		IP
+鈴木　　孝明	6.30	0.18	4.1	４		IP	５	3	IP	５		IP	１		IP	２		IP	２		IP	５		IP	１		IP	２		IP	２		IP
+仲道　　大輔	5.90	0.16	2.7	１		IP	１		IP	３		IP	２		IP	５	2	IP	６	4	IP	５		IP	３	2	IP	３		IP	２		IP
+畑田　　汰一	5.60	0.14	2.0	２	3	IP	３		IP	２		IP	４		G2	５		IP	５		IP	２		IP	２		IP	２		IP	６	2	IP
+塚越　　海斗	6.10	0.14	2.4	６		IP	２	3	IP	２		IP	４	6	G3	３		G3	３	4	IP	２		IP	５		IP	３		IP	２		IP
+藤田　　俊祐	4.40	0.19	4.2	５		IP	６		IP	２		IP	３		IP	５		IP	３	5	IP	２		IP	６		IP	４		IP	３		IP

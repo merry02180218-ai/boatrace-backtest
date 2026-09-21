@@ -1,0 +1,8 @@
+data=
+1	0
+堀之内紀代子	8.40	0.15	3.5	１		IP	２		IP	５		IP	１		IP	１		G3	３		G3	２		G3	１		G3	１		G3	１		G3
+濱野谷　憲吾	7.10	0.14	2.8	３		IP	２		G2	５		G2	２		IP	４		G2	１		G2	３		G1	５		SG	３		G1	２		G1
+山田　　佑樹	4.50	0.17	3.6	６		IP	５		IP	２		IP	２		IP	２		IP	２		IP	４		IP	６		IP	４		IP	６		IP
+守田　　俊介	5.70	0.11	2.9	１		IP	２		G2	１		IP	６		SG	５		G1	４		SG	２		SG	６		G1	４		IP	エ		G1
+深澤　　達徳	4.20	0.18	4.2	３	4	IP	６		IP	６		G3	５		G3	５		IP	１		IP	４		IP	２	4	IP	５		G3	３		G3
+郷原　　章平	3.00	0.18	3.6	４		IP	４	4	IP	４	4	IP	１		IP	５	5	IP	６		IP	６		IP	５		IP	６		IP	６		IP

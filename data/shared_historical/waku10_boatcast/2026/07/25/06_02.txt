@@ -1,0 +1,8 @@
+data=
+1	0
+堤　　　啓輔	8.60	0.18	3.2	１		IP	２		IP	５		IP	１		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP
+庄司　樹良々	6.40	0.15	3.7	４		IP	３		IP	３		IP	３		IP	２		IP	１		IP	３		IP	１		IP	５		IP	３		IP
+花田　　和明	3.90	0.19	3.2	５		G3	３		IP	４		G3	５		IP	４		IP	３		IP	２		IP	５		IP	４		IP	６		IP
+伊藤　　喜智	6.20	0.17	3.5	３		IP	２		IP	１		IP	４		IP	４		IP	２		IP	５		IP	１		IP	４		IP	３		IP
+石丸　　海渡	6.60	0.13	2.6	２		IP	１		G1	６		G1	１		IP	５		IP	１		IP	３		G1	４		G1	４		G1	３		IP
+山道　　諄也	2.60	0.17	3.4	５	5	IP	５		IP	４	5	IP	５		IP	６		IP	５		IP	４		IP	３		IP	５		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+佐々木　和伸	8.40	0.13	1.7	１		IP	２		IP	１		IP	２		IP	４		IP	１		IP	１		IP	２		IP	２		IP	２		IP
+大澤　　大夢	5.70	0.18	3.2	１		IP	５	3	IP	４		IP	３		IP	２	3	IP	４		IP	１		IP	２		IP	６		IP	５		IP
+今井　　貴士	7.40	0.14	2.9	１		IP	２		IP	２		IP	２		IP	４	2	IP	１		IP	３		IP	３		IP	２		IP	３		IP
+作間　　　章	6.70	0.17	3.0	２		IP	１		IP	２		IP	１		IP	４	5	G3	２		G3	５		IP	２		IP	６		IP	３		IP
+森　　　貴洋	5.00	0.11	2.7	５		IP	２		IP	２		IP	１		IP	４		IP	５		IP	５	4	IP	３		IP	３		IP	５		IP
+藤原　　　駿	1.40	0.16	3.3	６		IP	６		IP	６		IP	４		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP

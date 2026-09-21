@@ -1,0 +1,8 @@
+data=
+1	0
+森　　　雄利	6.90	0.14	3.3	２		IP	６		IP	１		IP	５		IP	１		IP	１		IP	２		IP	２		IP	５		IP	１		IP
+登玉　　隼百	4.90	0.16	2.8	３		IP	３		IP	４		IP	４		IP	２		IP	３		IP	２		IP	４	3	IP	６		IP	５		IP
+飛田　　江己	6.70	0.07	1.5	１		IP	６		IP	２		IP	３		IP	１		IP	４		IP	４		G2	１		G2	１		IP	５		IP
+有山　　　望	4.50	0.15	3.0	５		IP	４		IP	４		IP	４		IP	３		IP	６		IP	２		IP	４		IP	１		IP	５		IP
+真田　　聖也	1.30	0.13	2.7	６		IP	６	6	IP	５		IP	６		IP	５	6	IP	６		IP	５		IP	６	6	IP	６	6	IP	６	6	IP
+横田　　海人	1.90	0.19	4.5	５	5	IP	３		IP	６		IP	６		IP	５		IP	６		IP	６		IP	５	5	IP	５		IP	６		IP

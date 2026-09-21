@@ -1,0 +1,8 @@
+data=
+1	0
+白井　　英治	10.56	0.09	1.8	１		G2	１		SG	２		SG	１		G1	欠		G1	１		SG	１		G1	４		G1	１		G1	１		G1
+島村　　隆幸	7.50	0.16	2.9	３	3	G2	２		IP	３		G2	２		G2	２		IP	１		G2	２		IP	１		IP	６		IP	３		IP
+仲谷　　颯仁	6.30	0.15	2.6	５	4	G2	４		SG	６		IP	１		SG	４		G1	５		G1	１		IP	２		G1	２		IP	３		IP
+桑原　　　悠	6.70	0.13	2.6	６		IP	４		G1	１		G1	２	3	G1	３		G1	１		G1	１		IP	４		IP	４		IP	６		IP
+前沢　　丈史	6.70	0.13	2.8	３		G2	Ｆ		IP	３		IP	２		IP	３		IP	１		IP	２		IP	１		IP	２		IP	５		G2
+佐竹　　友樹	2.20	0.14	4.1	５		IP	６		IP	３		IP	６		IP	５		IP	４		IP	５	5	IP	６		IP	５		IP	６		IP

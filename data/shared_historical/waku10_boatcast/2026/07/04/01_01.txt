@@ -1,0 +1,8 @@
+data=
+1	0
+今泉　　　徹	6.00	0.18	3.1	２		IP	３		IP	３	2	IP	２		IP	２		IP	５		IP	１		IP	５		IP	３		IP	４		IP
+林　　　祐介	6.00	0.17	3.8	１		IP	１		IP	１		IP	３		IP	２		IP	３		IP	６		IP	６		IP	５		IP	３		IP
+小黒　　竜吾	5.30	0.17	3.0	６	6	IP	４		IP	３		G3	５		G3	１		IP	４		IP	２		IP	３		IP	４		IP	２		IP
+山本　　幸也	3.50	0.15	3.3	４	5	IP	５		IP	６	5	IP	５		IP	４		IP	４		IP	４		IP	１		IP	５		IP	５	6	IP
+佐竹　　恒彦	3.70	0.16	4.4	４		IP	４		IP	４		IP	２		IP	４		IP	５		G3	４		G3	６		IP	５		IP	４		IP
+岡田　　憲行	5.00	0.15	3.0	５		IP	４	3	IP	３	4	IP	５		IP	４		IP	４	3	IP	１	3	IP	３		IP	１	5	IP	５		IP

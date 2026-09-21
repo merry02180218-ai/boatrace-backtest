@@ -1,0 +1,8 @@
+data=
+1	0
+森下　　愛梨	5.40	0.16	2.9	５		G3	１		IP	５		IP	５		IP	４		IP	１		IP	４		IP	２		IP	１		IP	５	2	IP
+櫻井　　　優	5.80	0.16	3.5	５		G3	２		IP	５	4	IP	１		IP	４		IP	２		IP	５		IP	２		IP	２		IP	４		IP
+若林　　義人	5.90	0.14	2.4	６		G3	２		IP	５		IP	１		IP	５		IP	３	2	IP	１		IP	３		IP	２	2	IP	４		IP
+山本　稔太朗	2.50	0.15	3.7	５		IP	６		IP	４		G3	４		G3	６	3	IP	４		IP	５		IP	６		IP	４		IP	５		IP
+一色　　凌雅	3.80	0.16	4.2	６		G3	５		IP	６	4	IP	２		IP	４		IP	５	6	IP	２	6	IP	３		IP	５		IP	５		IP
+中村　　魁生	5.80	0.12	3.0	１		IP	４		IP	３	5	IP	３		IP	３		IP	５		IP	３		IP	２		IP	２	5	IP	５		IP

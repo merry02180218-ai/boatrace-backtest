@@ -1,0 +1,8 @@
+data=
+1	0
+石岡　　将太	7.33	0.16	2.9	１		IP	転		IP	３		IP	２		IP	１		IP	５		IP	３		IP	２		IP	３		IP	１		IP
+笠原　　　亮	7.80	0.15	3.1	３		IP	２		IP	２		IP	１		IP	２		G1	２		G1	１		IP	４		IP	２		IP	４		G2
+柳瀬　　興志	4.10	0.17	3.3	５		IP	３		IP	４		G3	４		G3	４		IP	２		IP	３		IP	５		IP	４		IP	６		IP
+富田　　恕生	2.90	0.18	3.0	６		IP	６		IP	３		IP	５		IP	妨		IP	４		IP	６	3	IP	３		IP	転		IP	２		IP
+上岡　　巧汰	2.30	0.18	3.6	３		IP	５		IP	６		IP	６		IP	４		IP	４		IP	５		IP	６		IP	６	6	IP	６	6	IP
+森作　　雄大	2.40	0.14	3.4	２		IP	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		G2	５		IP

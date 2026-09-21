@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　　世那	6.00	0.18	4.2	１		IP	５		IP	３		IP	４		IP	１		IP	５		IP	４		IP	１		IP	１		IP	５		IP
+深川　麻奈美	6.20	0.12	2.9	１		IP	２		IP	２		IP	２		IP	２		IP	５		IP	６		IP	６		G2	２		G2	３		IP
+佐藤　　　悠	6.11	0.14	2.4	３		IP	３		IP	エ		IP	５	4	IP	３	4	IP	４	4	IP	３		IP	２		IP	２		G2	３		IP
+天野　　友和	5.80	0.13	2.4	１		IP	４		IP	５		IP	４		IP	４		IP	４		IP	２		IP	２		IP	３		IP	２	3	IP
+河合　　三弘	4.20	0.19	4.0	３		IP	６		IP	２		IP	４		IP	３		IP	３		IP	４		IP	５		IP	４		IP	６		G3
+間嶋　　仁志	3.00	0.16	3.2	２	2	IP	６	2	IP	５	4	IP	６	2	IP	４	2	G3	６	2	G3	５	4	IP	３	2	IP	６	3	IP	５	2	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+田中　信一郎	9.90	0.15	3.5	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+木山　　和幸	5.10	0.16	4.0	５		IP	３		IP	６		G3	２		IP	３		G3	３		IP	５		IP	５		IP	１		IP	２		IP
+久永　　祥平	6.20	0.17	2.7	３		IP	３		IP	欠		IP	１		IP	１		IP	２		G3	３		IP	２		IP	３		IP	５		IP
+中岡　　　駿	2.90	0.18	3.3	５		IP	２		IP	６		IP	２		IP	４		IP	６		IP	６		IP	６		IP	５		IP	６		IP
+柴田　　朋哉	3.20	0.13	2.3	４		IP	４		IP	２		IP	５		IP	転		IP	５		IP	５		IP	５		IP	５		IP	３		IP
+高橋　　正男	5.30	0.22	3.2	６		IP	４		IP	５		G1	６	5	IP	４		IP	３	5	IP	２		IP	２		IP	２		IP	１		IP

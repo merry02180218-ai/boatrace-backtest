@@ -1,0 +1,8 @@
+data=
+1	0
+鹿島　　敏弘	7.60	0.17	3.0	１		IP	２		IP	１		IP	２		IP	５		IP	２		IP	５		IP	１		IP	１		IP	２		IP
+松田　　祐季	6.00	0.18	4.1	３		IP	２		IP	４	3	IP	２	3	IP	６		G1	６		G1	１		IP	４		IP	３		IP	１		IP
+平本　　真之	6.80	0.13	2.9	３		SG	６		SG	３		G1	３		G1	２		G1	２		G1	３		SG	３		SG	６		G1	３		IP
+井口　　佳典	6.10	0.16	3.6	６		SG	２		SG	３		G1	２		G1	２		G3	１		G3	転		G1	６		G1	６		G1	２		G2
+佐藤　　　翼	6.50	0.14	4.4	２		SG	６		SG	５		G1	１		SG	５		G1	３		IP	３		G1	６		G1	２		SG	２		G1
+門間　　雄大	4.40	0.17	2.5	３		G3	５		IP	３	5	IP	２		IP	４		IP	４		IP	転		IP	３		IP	３		IP	５		IP

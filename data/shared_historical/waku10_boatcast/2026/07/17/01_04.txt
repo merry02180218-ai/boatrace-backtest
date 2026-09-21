@@ -1,0 +1,8 @@
+data=
+1	0
+高井　　駿弥	4.80	0.17	3.6	４		IP	３		IP	５		IP	３		IP	４		IP	３		IP	６		IP	６		IP	２		IP	１		IP
+山崎　　　郡	7.40	0.13	3.0	１	3	IP	２		IP	４		SG	２		SG	２		G1	４		G1	１	3	G1	３	1	G1	５		SG	５		SG
+後藤　　孝義	3.67	0.15	2.7	５		IP	６		IP	４		IP	６		IP	２		IP	４		IP	６		IP	４		IP	欠		IP	２		IP
+松尾　　昂明	3.50	0.17	3.4	２		IP	３		IP	３		IP	６		IP	６		IP	４		IP	４		IP	５		IP	６		IP	５		IP
+志賀　　美優	1.20	0.18	4.1	６	6	IP	５		IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	５		IP	６	6	IP	６		IP	６	6	IP
+若林　　　麗	1.80	0.21	4.6	３		IP	６		IP	５		IP	６		IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+平石　　和男	7.80	0.16	3.6	３		IP	１		IP	３		IP	１		IP	２		IP	２		IP	５		IP	１		IP	２		IP	１		IP
+高橋　　　勲	7.40	0.17	3.1	３		G3	２		IP	２		IP	２		G3	２		G3	４		IP	２		IP	２		IP	２		IP	２		IP
+佐々木　康幸	4.78	0.13	2.6	５		G3	３		G3	４		IP	転		G3	３		IP	２		IP	３		IP	５		G1	６	4	G1	４		G1
+竹腰　　正樹	5.20	0.15	3.4	１		IP	３		IP	４		IP	５		IP	３		IP	３		IP	４		IP	４	3	IP	４		IP	３		IP
+山本　　兼士	3.10	0.18	3.5	５		IP	３		IP	５		IP	４		IP	５		IP	３		IP	６		IP	６		IP	６		IP	３		IP
+桑原　　　啓	2.60	0.17	4.4	４		IP	５	5	IP	６		IP	６		G3	３	5	IP	５		IP	３	5	IP	５		IP	６		IP	６		IP

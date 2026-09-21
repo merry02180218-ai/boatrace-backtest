@@ -1,0 +1,8 @@
+data=
+1	0
+安東　　幸治	7.60	0.17	3.4	３		IP	１		IP	４		IP	１		IP	２		IP	５		IP	２		IP	１		IP	２		IP	１		IP
+佐口　　達也	4.60	0.16	3.4	６		IP	６		IP	３		IP	４		IP	４		IP	４		IP	３		IP	３		IP	４		IP	１		IP
+坪井　　康晴	7.00	0.15	3.3	２		IP	２		IP	１		G2	２		IP	５		G2	１		IP	３	2	IP	３		IP	５		IP	３		IP
+金田　　大輔	5.40	0.15	2.5	４	5	IP	２		IP	３		IP	３		IP	４		IP	５		IP	３		IP	１		IP	５		IP	３		IP
+横田　　貴満	5.60	0.14	2.7	１	3	IP	４	4	IP	３		IP	５		IP	２		IP	３		IP	４		IP	３		G2	Ｆ	2	IP	３		IP
+遠藤　　圭吾	3.20	0.19	4.9	５		IP	３		IP	４		IP	６		IP	３		IP	６		IP	４		IP	４	5	IP	５		IP	５		IP

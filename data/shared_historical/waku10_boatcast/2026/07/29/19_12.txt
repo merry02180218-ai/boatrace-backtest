@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　　歩	7.80	0.18	3.4	２		G3	１		G3	１		IP	２		IP	Ｆ		IP	２		IP	１		IP	１		IP	２		IP	３		IP
+平山　　智加	8.50	0.19	3.4	５		IP	１		IP	４		IP	１		IP	２		IP	１		IP	２	3	IP	１		IP	１		G2	１		G3
+西村　美智子	5.90	0.13	2.3	４		IP	３		IP	３		IP	４		IP	３		IP	２		IP	１		IP	６		IP	４		IP	１		IP
+平川　　香織	6.80	0.19	4.1	３		IP	３		G3	１		IP	２		IP	２		IP	３		IP	１		IP	１		IP	５		IP	５		IP
+大橋　栄里佳	3.70	0.21	3.9	３		G3	４		G3	３		IP	５		G3	４		G3	６		IP	４		G3	２		G3	６		IP	６		IP
+出穂　　和鼓	1.90	0.17	3.5	６		IP	２		G3	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		G3	５		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+枝尾　　　賢	8.50	0.15	2.8	１		G2	３		G2	２		IP	２		IP	１		IP	１		IP	４		IP	１		IP	２		IP	２		G2
+吉田　　俊彦	7.60	0.15	3.2	５		IP	３		IP	２		IP	１		IP	２		IP	２		IP	１		IP	１		G3	１		G3	４		G3
+島田　　賢人	5.38	0.15	2.9	６		IP	落		IP	３		IP	４	4	IP	１		IP	転		IP	３		IP	２	5	IP	５		IP	３	4	IP
+赤岩　　善生	7.00	0.16	3.0	２	2	IP	２		SG	３		SG	５		G1	３	2	G1	５		G1	６	3	G3	１	3	G3	１	2	IP	１	3	IP
+石野　　貴之	8.40	0.12	3.8	２	4	IP	３		SG	１		SG	３	3	G1	６	4	SG	２	2	SG	２		G1	２		G1	２		G1	２		IP
+岡　　　祐臣	4.40	0.15	3.6	６		IP	２	5	IP	２		IP	２		IP	４		IP	６		IP	５		IP	６		IP	３	5	IP	４		IP

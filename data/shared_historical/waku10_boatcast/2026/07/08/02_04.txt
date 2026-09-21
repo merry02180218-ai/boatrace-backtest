@@ -1,0 +1,8 @@
+data=
+1	0
+山口　　　剛	10.40	0.12	2.7	１		SG	２		SG	１		G1	１		G1	５		G1	１		G1	１		SG	１		SG	１		G1	１		G1
+飯山　　　泰	6.60	0.12	2.9	２		IP	２		IP	２		IP	３		IP	２		IP	５		G2	４		G2	４		IP	１		IP	３		IP
+毒島　　　誠	7.60	0.16	2.2	２		IP	３		IP	１		IP	１		IP	２		IP	５	4	IP	２		IP	３		SG	１		SG	５		IP
+島村　　隆幸	7.90	0.17	3.6	２		IP	５		G2	２		IP	２		IP	１		G2	３		G2	２		IP	２		IP	２		IP	１		IP
+田上　　　凜	4.30	0.11	1.8	６	6	IP	Ｆ		IP	２	6	G2	１	4	IP	６	6	IP	１	4	IP	５		IP	５		IP	４		IP	４		IP
+中田　　竜太	5.90	0.20	4.2	３		SG	２		IP	６		G2	５		G2	３		IP	３		IP	３	5	G1	３		G1	４		G2	３		G2

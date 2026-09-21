@@ -1,0 +1,8 @@
+data=
+1	0
+常住　　　蓮	10.10	0.11	2.1	１		G3	１		G2	１		G2	１		G2	１		G2	１		G2	１		G1	１		G1	６		SG	１		IP
+井上　　遥妃	6.60	0.16	3.4	４		G3	２		G3	１		IP	３		IP	２		IP	１		IP	５		G1	５		SG	５		G2	１		IP
+登玉　　隼百	6.60	0.15	3.2	２		G3	２		IP	４		IP	１	4	IP	３		IP	２	6	IP	２		IP	３		IP	３		IP	５		IP
+安河内鈴之介	5.70	0.13	2.0	５		G3	５	6	IP	３		IP	１		IP	１		IP	３		IP	６		IP	２		IP	３		IP	３		IP
+井上　　未都	3.70	0.16	2.9	４		G3	５		G3	６		IP	４		IP	４		IP	２		IP	３		IP	５		IP	５		IP	４		IP
+實森　　美祐	3.90	0.17	4.3	６		G3	２		G2	５		IP	６		IP	４		IP	４		G1	６		G1	３		SG	５	5	SG	５		G2

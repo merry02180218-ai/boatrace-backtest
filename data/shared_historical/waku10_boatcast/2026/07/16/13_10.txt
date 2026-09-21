@@ -1,0 +1,8 @@
+data=
+1	0
+鎌倉　　　涼	9.60	0.12	2.0	１		G3	Ｆ		IP	１		G1	１		G1	１		SG	１		IP	１		IP	１		IP	１		G2	１		G2
+原　　加央理	7.10	0.16	2.6	２		G3	６		IP	２		IP	２		IP	３		IP	３		IP	１		G3	１		G3	３		IP	２		IP
+伊藤　　玲奈	5.33	0.20	3.3	欠		IP	４		IP	３		IP	２		IP	１		IP	５		IP	３		IP	４		IP	４		G3	４		IP
+嶋田　　有里	4.60	0.19	3.2	６		IP	４		IP	５		G3	２		IP	２		IP	２		IP	４		IP	６		IP	３		IP	４		IP
+坂　　咲友理	4.10	0.16	3.6	４	4	IP	３		G3	３		G3	４		G3	６	4	IP	４		G3	５		IP	４		IP	３		IP	４		IP
+寺田　　千恵	4.80	0.17	3.4	５		IP	３		IP	３		IP	３	5	IP	３		IP	４		IP	３		IP	３		G2	６		G1	５		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+藤森　　拓海	5.90	0.19	4.1	５		IP	５		IP	１		IP	１		IP	２		IP	３		IP	４		IP	２		IP	２		IP	６		IP
+佐藤　　駿介	4.50	0.19	3.7	５		IP	６		IP	４		IP	４		IP	５		IP	２		IP	２		IP	３		IP	５		IP	２		IP
+宮内　由紀英	2.00	0.21	3.3	４		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	５		IP	５		IP	４		IP
+田中　　孝明	3.50	0.23	4.9	６		IP	６	5	IP	１		IP	３		IP	４		IP	３		IP	５		IP	６		IP	５		IP	５		IP
+伊藤　　喜智	5.70	0.16	3.1	３		IP	３		IP	２		IP	３		IP	３		IP	５	6	IP	２		IP	５		IP	３	4	IP	３		IP
+山田　　竜一	3.40	0.17	4.6	４		IP	５		IP	６		IP	５		IP	４		IP	５		IP	２	5	IP	６		IP	４		IP	３		IP

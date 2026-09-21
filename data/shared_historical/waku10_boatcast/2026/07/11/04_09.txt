@@ -1,0 +1,8 @@
+data=
+1	0
+末永　　由楽	7.80	0.10	1.8	３		G2	６		G2	１		IP	１		IP	１		IP	２		G2	１		G2	５		G2	１		IP	３		IP
+山崎　　裕司	5.20	0.16	3.4	４		IP	３		IP	４		IP	２		IP	６		IP	５		IP	２		IP	１		IP	２		IP	６		IP
+伊倉　　　光	6.00	0.15	2.6	２		IP	３		IP	２		IP	２		IP	３	4	G3	４		G3	３		G3	４		IP	４		IP	３		IP
+木場　　悠介	4.50	0.11	1.9	４		IP	４		IP	６		IP	４		IP	１		IP	６		IP	１	5	IP	４		IP	６	6	IP	３	5	IP
+堀本　　和也	6.30	0.11	3.0	１	4	IP	２	4	IP	２		IP	２	4	IP	２		IP	３		IP	５		IP	４		IP	３		IP	５		IP
+岡部　　大輔	3.20	0.20	4.8	４		IP	４		IP	６		IP	６		IP	２		IP	６		IP	３		IP	５		IP	６		IP	４		IP

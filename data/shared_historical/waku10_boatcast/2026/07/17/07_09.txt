@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　裕也	9.20	0.16	2.6	１		G2	２		IP	１		IP	１		IP	１		IP	１		G3	４		IP	１		IP	２		IP	１		IP
+赤岩　　善生	5.44	0.14	2.8	２		G2	４		IP	３		SG	４		SG	６		G1	２		G1	３		G1	落		G3	５		G3	５		IP
+丸岡　　正典	6.90	0.15	2.6	１		G2	Ｆ		G2	２		G2	３		G2	２		IP	４		G2	１		IP	３		IP	３		IP	３		IP
+羽野　　直也	6.90	0.15	3.6	２		G2	３		G1	６		G1	１		IP	１		IP	５		G1	３		G1	３		G2	２		G2	４		G1
+須藤　　博倫	7.10	0.12	2.5	４		G2	２		IP	３		IP	２		IP	３		IP	２		IP	２		IP	２		IP	４		IP	１	4	IP
+池田　　浩二	4.90	0.10	2.9	５		G2	４		SG	３		G1	３		G1	４		SG	６		G1	２	4	IP	４		G1	６		G1	６		SG

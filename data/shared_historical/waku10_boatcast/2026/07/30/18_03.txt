@@ -1,0 +1,8 @@
+data=
+1	0
+渡辺　　浩司	9.20	0.13	1.8	３		IP	１		IP	２		IP	２		IP	２		SG	１		G1	１		IP	２		IP	１		IP	１		IP
+森　　　雄利	3.60	0.17	3.6	５		IP	６	3	IP	６		IP	３		IP	２		IP	２		IP	５		IP	５		IP	４		IP	５		IP
+中　　　亮太	6.90	0.15	2.7	１		G3	３		IP	４	4	IP	２		IP	４		G2	１		G2	２		G2	４		IP	１		IP	６		G2
+青木　　　蓮	6.70	0.12	2.3	１		G3	２	5	G3	６		IP	３		IP	３		IP	１		IP	１		IP	３		IP	３		IP	４		IP
+高野　　心吾	2.50	0.17	4.8	６		IP	４		IP	５	6	IP	４		IP	４		IP	６	4	IP	５		IP	５		IP	４		IP	６		IP
+森林　　　太	2.78	0.20	4.9	６		IP	６		IP	４		IP	欠		G3	３	5	G3	６		IP	５		IP	４		IP	４	5	IP	５		IP

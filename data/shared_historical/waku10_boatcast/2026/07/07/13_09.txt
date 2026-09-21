@@ -1,0 +1,8 @@
+data=
+1	0
+富田　　恕生	7.20	0.17	3.4	１		IP	３		IP	１		IP	４		IP	１		IP	１		IP	６		IP	６		IP	１		G3	１		IP
+西川　新太郎	5.70	0.14	3.2	５		IP	１		IP	１		IP	４		IP	２		IP	３	1	IP	２		IP	６		IP	５		IP	３		IP
+鈴木　　雅希	6.50	0.16	3.2	３		IP	１		G3	４		G3	４		IP	３		IP	６		IP	２		IP	２		IP	２		IP	１		IP
+中村　かなえ	5.40	0.12	2.0	２		IP	２		IP	４		IP	４		IP	２		IP	６		IP	２		IP	６		IP	２		IP	４		IP
+三嶌　さらら	3.70	0.18	3.2	６		IP	４		IP	３		IP	３	4	IP	５	6	IP	４		IP	３		IP	４		IP	５		IP	５		IP
+登　　みひ果	3.20	0.16	3.1	５		IP	６		IP	５		IP	Ｆ		IP	６		IP	４		IP	２	5	G3	１		G2	５		IP	６		IP

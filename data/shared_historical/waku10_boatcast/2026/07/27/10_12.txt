@@ -1,0 +1,8 @@
+data=
+1	0
+篠崎　　元志	9.40	0.13	2.1	１		IP	１		IP	１		IP	１		G3	１		G3	２		G3	２		SG	１		IP	１		IP	３		IP
+河村　　　了	6.50	0.13	3.2	３		G3	２		G3	５		IP	１		G3	２		IP	１		IP	２		IP	２		IP	６	3	IP	４		IP
+白水　　勝也	6.90	0.21	3.5	３		IP	２	2	IP	３		IP	３		IP	１		IP	２	2	IP	１		IP	４		IP	２		IP	６		IP
+下出　　卓矢	4.20	0.16	3.0	６		IP	６		G2	２		G2	５		IP	６	6	IP	６		IP	１		IP	２		IP	３		IP	５		IP
+馬場　　　剛	5.60	0.13	3.2	３		IP	４		IP	４		IP	３		IP	２		IP	４		IP	２		G2	２		G2	４		IP	６		IP
+吉川　　貴仁	4.90	0.17	4.3	６		IP	１		IP	４		IP	３	5	IP	５		IP	５		IP	５		IP	３	5	IP	３		IP	１		IP

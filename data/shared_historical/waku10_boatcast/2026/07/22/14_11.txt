@@ -1,0 +1,8 @@
+data=
+1	0
+松崎　祐太郎	8.60	0.16	2.9	１		IP	１		IP	３		IP	４		G3	３		G3	１		G3	１		IP	１		IP	１		IP	１		IP
+谷野　　錬志	4.60	0.13	3.9	６		G2	５		G2	５		SG	２		IP	４		IP	５		IP	３		IP	２		IP	３		IP	５		G1
+岡　　　祐臣	7.50	0.15	3.3	２		G2	６		IP	４		IP	２	4	IP	２		IP	２		IP	１	4	IP	２		IP	１		IP	２		IP
+興津　　　藍	5.00	0.12	2.1	６		G2	３		G2	６		IP	２	5	IP	２		IP	５		IP	２		G3	５		G3	３		IP	４	3	IP
+松田　　祐季	5.78	0.18	3.8	３		G2	５		IP	２		IP	３		IP	２		IP	５		G1	４	4	IP	２		IP	落	4	IP	３		IP
+有賀　　達也	3.30	0.15	3.4	４		IP	４		IP	６		G3	５		G3	５		IP	３		IP	４		G1	４		G1	４		IP	妨		IP

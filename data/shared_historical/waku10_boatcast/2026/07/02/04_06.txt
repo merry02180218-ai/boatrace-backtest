@@ -1,0 +1,8 @@
+data=
+1	0
+新田　　智彰	5.60	0.17	3.1	３		IP	６		IP	１		G3	２		IP	２		IP	３		IP	３		IP	６		IP	２		IP	５		IP
+茅原　　悠紀	6.60	0.16	3.6	４		SG	５		SG	２		IP	２		IP	５		SG	１		IP	２		IP	４		G1	６		G1	２		SG
+後藤　　孝義	4.00	0.17	3.1	４		IP	６		IP	２		IP	４		IP	６		IP	４		IP	欠		IP	２		IP	４	5	IP	５		IP
+國弘　　翔平	3.10	0.17	4.2	５		IP	５		IP	６	5	IP	４		IP	５	5	IP	２		IP	５		IP	５	5	IP	４		IP	４	5	IP
+長岡　　良也	4.00	0.17	3.7	２		IP	３		IP	４		IP	６		IP	６		IP	５		IP	４		G1	４		IP	２		IP	６		IP
+小林　　基樹	2.60	0.24	5.3	６		IP	６		IP	３		IP	５	3	IP	４		IP	６		IP	４		IP	４	5	IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+今村　　暢孝	8.20	0.13	2.0	５		IP	４		IP	２		G3	２		G3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+古川　　　健	4.90	0.12	2.7	２		IP	３		IP	４		IP	２		IP	４		IP	６		IP	２	3	IP	５	4	IP	３		IP	５		IP
+松下　　知幸	5.50	0.17	3.2	６		IP	３		IP	５		IP	１		IP	２		IP	４		IP	５		IP	１		IP	３		IP	３		IP
+小林　　甘寧	7.60	0.14	2.7	１		IP	１		IP	２		IP	２		IP	２		IP	３		IP	４		IP	３		IP	２		IP	２		IP
+恵良　　琴美	1.90	0.20	3.8	６		IP	６		IP	５		IP	５		IP	５	4	IP	５	6	IP	６		IP	６		IP	６		IP	３		IP
+今坂　　晃広	1.50	0.21	5.7	５		IP	６		IP	６		G3	６		IP	６		IP	６		IP	６		IP	６		IP	４		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+豊田　健士郎	9.30	0.13	3.6	１		IP	１		IP	４		IP	２		G1	１		IP	１		G2	２		G2	１		G3	１		G3	１		IP
+森　　　悠稀	5.80	0.14	3.1	２		IP	３		IP	５		G2	３		G2	５		IP	４		IP	２		IP	３		IP	２		IP	３		IP
+谷津　　幸宏	5.90	0.13	1.7	１		IP	３		IP	２		IP	４		IP	１		IP	３		IP	５		IP	４		IP	２		IP	６		IP
+平尾　　崇典	6.20	0.14	3.2	３		IP	５		IP	４		IP	３		IP	１		IP	１		G2	６		IP	２		IP	４		G1	２		G1
+丸岡　　正典	5.80	0.16	3.6	１		G2	３		G2	２	4	IP	３		IP	２		IP	５		IP	４		IP	６		G2	５	4	IP	２		IP
+坂元　　浩仁	4.50	0.15	4.1	６		G2	４		IP	３		IP	４		G2	１		G2	６		IP	５		IP	３		IP	５		IP	４		IP

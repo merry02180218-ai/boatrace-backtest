@@ -1,0 +1,8 @@
+data=
+1	0
+喜多　那由夏	3.80	0.20	3.6	３		IP	３		G3	６		IP	６		IP	６		G3	４		G3	６		IP	２		IP	２		IP	５		IP
+前出　　達吉	6.20	0.15	3.0	２		IP	５		IP	３		IP	５		IP	３		IP	２		IP	２	3	IP	３		IP	２		G3	２		IP
+松尾　　昂明	5.10	0.16	3.0	５		IP	６		IP	１		IP	４		IP	３		IP	２		IP	５		IP	４		IP	４		IP	１		IP
+梅木　　敬太	4.30	0.15	3.5	３		IP	６		IP	４		IP	５		IP	３		IP	４		IP	３		IP	４		IP	４		IP	３		IP
+金児　　隆太	4.40	0.17	3.1	５		IP	４		IP	３		IP	２		IP	６		IP	２		IP	４	4	G3	３		G3	６		IP	４		IP
+田中　　孝明	2.70	0.20	5.3	５		IP	４		IP	５	5	IP	４		IP	５		IP	６		IP	６		IP	６		IP	４		IP	３		IP

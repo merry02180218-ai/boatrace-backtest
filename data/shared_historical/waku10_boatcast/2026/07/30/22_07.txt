@@ -1,0 +1,8 @@
+data=
+1	0
+柳瀬　　興志	7.20	0.15	3.9	４		IP	１		G3	１		G3	４		IP	１		IP	１		IP	５		IP	１		IP	３		IP	３		IP
+牟田　　奨太	4.10	0.13	2.7	３	4	IP	５		IP	５	4	IP	３		IP	６		IP	６		IP	２		IP	２		IP	６	4	IP	４	3	IP
+上原　健次郎	4.50	0.17	4.3	６		G2	４		G2	４		IP	５		IP	２		IP	３		IP	４		IP	４		IP	３		IP	４		IP
+川崎　　公靖	4.90	0.14	3.1	５		IP	４		IP	１		IP	２		IP	３		IP	５		IP	２	6	IP	３		IP	６		IP	５		IP
+黒野　　元基	6.30	0.11	1.6	６		IP	３		IP	１		IP	５		G3	２		G3	２		G3	５		IP	３		IP	２	4	IP	１	4	IP
+松尾　　基成	1.80	0.19	4.5	６	4	IP	５		IP	４	5	IP	６		IP	４		IP	６		IP	６		IP	６	5	IP	６		IP	５	4	IP

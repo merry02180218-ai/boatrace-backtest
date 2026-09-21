@@ -1,0 +1,8 @@
+data=
+1	0
+高倉　　孝太	8.40	0.15	3.1	２		IP	５		IP	２		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+古賀　　繁輝	5.80	0.18	3.7	３		IP	３		IP	５		IP	６		IP	２	3	IP	６		IP	１		IP	２		IP	２		IP	２	4	IP
+高橋　　二朗	3.20	0.25	4.9	４		IP	３		IP	４		IP	５		IP	６		IP	４		IP	４		IP	４		IP	５		IP	６		IP
+海野　康志郎	6.20	0.18	3.9	３		G2	５		G2	１		IP	２		IP	５		SG	５	3	G1	５		G1	１		G1	２		IP	４		IP
+酒井　　俊弘	3.80	0.16	3.1	１		IP	５	6	IP	３		IP	５		IP	５		IP	５		IP	５	6	IP	３	6	IP	４	6	IP	５		IP
+池田　　雷太	2.10	0.16	3.8	６		IP	４		IP	５		IP	６		IP	６		IP	６		IP	５		IP	５	3	IP	６		IP	３		IP

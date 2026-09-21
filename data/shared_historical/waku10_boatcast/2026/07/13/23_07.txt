@@ -1,0 +1,8 @@
+data=
+1	0
+石倉　　拓美	4.20	0.19	3.8	１		IP	５		IP	４		IP	６		IP	５		IP	６		IP	４		IP	Ｆ		IP	２		IP	１		IP
+宮崎　　　奨	8.00	0.14	2.8	２		IP	１		IP	２		IP	２		IP	３		IP	３		IP	２		IP	１		IP	２		IP	２		IP
+中村　　辰也	5.50	0.15	2.4	２		IP	２		IP	２		IP	５		IP	３		IP	６		IP	２		IP	４		IP	５		IP	２		IP
+渡邉　　　翼	6.10	0.13	2.3	１		IP	２		IP	３		IP	４		IP	６		IP	３		IP	２		IP	４		IP	２		IP	３		IP
+田路　　朋史	4.30	0.12	2.8	５		IP	５		IP	５		IP	１		IP	４		IP	４		IP	２		IP	４	4	IP	４		IP	６		IP
+福田　　柊人	1.10	0.23	4.9	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+木下　　翔太	9.30	0.14	3.3	４		G2	１		G2	１		G2	１		G2	１		IP	２		IP	１		G2	１		G2	４		IP	１		IP
+金田　　智博	5.40	0.15	2.9	５		G2	２		IP	２		IP	４	3	IP	６		IP	１	1	IP	２		G2	５		IP	６		IP	２		IP
+山本　　英志	5.70	0.14	3.1	１		IP	６		IP	４		IP	４		G3	転		G3	１		G3	３		IP	３		IP	１		IP	３		IP
+野中　　一平	4.90	0.12	2.3	５		G2	５		IP	２		IP	４		IP	２		IP	４		G1	２		IP	４		IP	６		IP	４	3	IP
+畑　　　竜生	3.90	0.13	3.1	５		G2	５		IP	６		IP	２		IP	４		IP	４		IP	５	4	IP	１		IP	４		IP	６		IP
+大串　　重幸	4.00	0.19	4.4	５		G2	４		G2	４	5	IP	３		IP	４	4	IP	３		IP	５		IP	３		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+藤井　　　徹	6.60	0.17	3.4	１		IP	１		IP	１		IP	５		IP	２		IP	４		IP	２		IP	４		IP	３		IP	４		IP
+小川　日紀太	3.80	0.19	4.0	２		IP	２		IP	３		IP	４		IP	５		IP	６		IP	４		IP	５		IP	５		IP	６		IP
+妹尾　　忠幸	6.70	0.16	2.9	３		IP	１		IP	１	4	IP	４		IP	３		IP	５		IP	１		IP	６		IP	２		IP	１		IP
+加藤　　優弥	5.60	0.12	2.3	３		IP	２		IP	２		IP	１		IP	４		IP	３		IP	２		IP	６		IP	６		IP	４		IP
+中山　　翔太	5.56	0.11	3.1	５		G2	４		G2	３		IP	４		IP	３		IP	２		IP	２		IP	２		IP	６		G1	転		IP
+近藤　　来希	1.90	0.25	5.2	５		IP	５		IP	６		IP	６		IP	５		IP	５		IP	４		IP	５		IP	５		IP	６		IP

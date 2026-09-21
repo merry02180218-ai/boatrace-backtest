@@ -1,0 +1,8 @@
+data=
+1	0
+新開　　　航	9.30	0.18	2.8	１		G2	２		G2	１		SG	１		G1	２		G1	４		IP	２	2	IP	３		G1	１		IP	１		IP
+貫地谷　直人	3.00	0.22	4.4	６		IP	４	3	IP	２		IP	５		IP	３		IP	５		IP	６		IP	６		IP	６		IP	４		IP
+吉田　　　光	4.30	0.21	4.4	３		IP	４		IP	３		IP	２		IP	５		IP	６		IP	３		IP	３		IP	５		IP	５		IP
+佐竹　　友樹	3.70	0.18	3.4	６		IP	５	5	G2	５		G2	２		IP	５		IP	１		IP	４		IP	６		IP	４		IP	６	5	IP
+梶原　　　正	2.70	0.14	3.7	６		IP	５		G3	６		G3	４		G3	６		G3	６		IP	２		IP	３		IP	５		IP	６		IP
+森作　　雄大	1.70	0.15	3.7	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		G2	５		IP	６		IP

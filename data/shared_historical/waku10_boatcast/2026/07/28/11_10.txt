@@ -1,0 +1,8 @@
+data=
+1	0
+丸野　　一樹	10.90	0.10	1.8	２		G2	１		SG	１		SG	１		G1	３		G1	１		SG	１		SG	１		SG	１		G1	１		IP
+長田　　頼宗	6.20	0.15	4.2	３	3	IP	６		SG	６		SG	３		IP	１		G2	３		G2	４		IP	２		G1	２		G1	６		IP
+瓜生　　正義	5.00	0.13	3.1	４		G2	６		IP	１		IP	５		SG	６		SG	３		G1	６		G1	４		G1	４		G1	３		SG
+鎌倉　　　涼	5.50	0.17	4.2	３		G3	２		G3	１	2	IP	５		G1	５		G1	２		SG	６		SG	６		IP	２		IP	５		G2
+平本　　真之	6.50	0.15	3.2	１		IP	２	4	G2	２		G2	５		SG	２		G1	５		G1	６		G1	４		SG	２		SG	５	4	G1
+佐藤　　　翼	4.70	0.18	5.1	２	5	IP	５		G2	６		SG	４		G1	４		G1	５		SG	４		SG	４		G1	５	5	IP	４		IP

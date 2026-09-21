@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　拓也	9.00	0.17	3.3	１		IP	４		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP
+中村　　辰也	4.30	0.18	3.0	５		IP	５		IP	３		IP	５		IP	４		IP	２		IP	３		IP	６		IP	３	3	IP	３		IP
+渡邉　　　翼	6.60	0.13	2.0	４		IP	２		IP	３		IP	５		IP	１		IP	４		IP	４		IP	１		IP	１		IP	２		IP
+高倉　　孝太	4.00	0.13	3.4	６		IP	５		IP	４	3	IP	６		IP	３		IP	５		IP	４		IP	３		IP	１		IP	４		IP
+永嶋　　裕一	4.90	0.17	2.9	６		IP	４		IP	２	4	IP	３		IP	３		IP	４		IP	欠		IP	１		IP	５		IP	２		IP
+大崎　　　翔	3.67	0.17	3.6	転		IP	６		IP	６		IP	２	5	IP	５	5	IP	３		IP	３		IP	６		IP	５		IP	３		IP

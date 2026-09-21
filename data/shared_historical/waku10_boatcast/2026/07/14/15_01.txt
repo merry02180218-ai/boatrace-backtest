@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　佑樹	8.20	0.13	2.7	５		IP	１		IP	２		IP	２		IP	２		IP	２		IP	１		IP	１		IP	１		IP	２		IP
+高村　　　諒	1.67	0.20	5.0	６		IP	５		IP	５	4	IP																					IP
+齋藤　　　勇	4.80	0.15	3.3	４		IP	５		IP	６		IP	４		IP	２		IP	２		IP	６		IP	２		IP	２		IP	４		IP
+鈴木　　雄登	3.20	0.17	3.3	４	6	IP	５		IP	２		IP	Ｆ		IP	５		IP	３		IP	６	6	IP	３		IP	６	6	IP	５	6	IP
+星　　　栄爾	2.20	0.15	3.8	５		IP	５		G3	５		G3	６		IP	４		IP	６		IP	６	6	IP	３		IP	６	6	IP	５		IP
+加藤　　雅之	2.30	0.20	4.9	６		IP	３		IP	５		IP	５		IP	４		IP	６		IP	５		IP	６		IP	５		IP	５		IP

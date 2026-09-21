@@ -1,0 +1,8 @@
+data=
+1	0
+木村　　浩士	6.00	0.16	3.5	１		IP	１		IP	５		IP	４		IP	６		IP	６		IP	１		IP	１		IP	４		IP	２		IP
+小林　　基樹	3.80	0.17	3.9	３		IP	５		IP	６		IP	５		IP	４		IP	３		IP	６		IP	１		IP	５		IP	４		IP
+藤岡　　俊介	7.00	0.10	2.2	２		IP	２		IP	２		IP	５		IP	３		IP	２		IP	３		IP	１		IP	２		IP	４		IP
+藤原　　　駿	1.30	0.21	4.9	６	5	IP	６	5	IP	６		IP	６		IP	４		IP	６	6	IP	６	6	IP	６		IP	６		IP	６	6	IP
+渡邉　　睦広	4.00	0.15	3.8	４		IP	６		IP	３		IP	４		IP	６	4	G3	３		IP	４		IP	５		IP	１		IP	５		IP
+國崎　　良春	5.50	0.17	3.1	１		IP	２		IP	４		IP	２		IP	３		IP	５		IP	５		G3	６		G3	３		G3	２		IP

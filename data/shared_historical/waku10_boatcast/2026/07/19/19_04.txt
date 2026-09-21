@@ -1,0 +1,8 @@
+data=
+1	0
+渡辺　　千草	5.70	0.18	3.9	５		IP	１		IP	３		IP	２	2	IP	２		IP	２		IP	５		G3	６		G3	３		IP	３		G3
+羽田　　妃希	4.60	0.25	5.5	２		IP	４		IP	５		IP	３		IP	３		IP	６		IP	５		IP	６		IP	１		IP	３		IP
+櫻本　あゆみ	5.30	0.14	2.1	５		G2	５		IP	４	5	IP	４		IP	４		IP	１		IP	２		G3	３		IP	４		IP	３		IP
+藤本　紗弥香	4.10	0.16	3.0	５		IP	２		IP	６		IP	４		IP	６		IP	５		IP	６		IP	３		IP	１		IP	３		IP
+大山　　千広	6.80	0.16	2.5	１		IP	１	4	IP	２		IP	４		IP	３		IP	５		IP	３		IP	２		IP	２		IP	３		IP
+小畑　　楓夏	1.20	0.20	4.7	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP

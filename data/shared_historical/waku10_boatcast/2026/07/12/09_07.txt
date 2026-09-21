@@ -1,0 +1,8 @@
+data=
+1	0
+松竹　　大輔	9.60	0.16	2.5	１		IP	１		G3	１		G3	１		IP	２		IP	２		IP	１		IP	１		IP	１		G3	１		IP
+安河内鈴之介	6.60	0.13	3.6	１		IP	１		IP	２		IP	１		IP	３		IP	落		IP	２		IP	３		IP	４		IP	４		IP
+中村　　守成	4.00	0.20	4.0	３		IP	４		IP	６		IP	２	4	IP	落	5	IP	１		IP	４		IP	４		IP	６		IP	５		IP
+藤井　　太雅	4.00	0.25	5.2	５	5	IP	６		IP	Ｆ		IP	１		IP	５		IP	２		IP	４		IP	１		IP	６		IP	５		IP
+藤原　　碧生	6.00	0.14	3.4	６		G2	４		G3	６		G1	２		SG	４		G1	１		IP	３		IP	３		G1	２		IP	３		IP
+中島　　浩哉	2.60	0.17	3.8	５		G3	５		IP	６		IP	６		IP	５		IP	３		G3	５		IP	６		IP	６		IP	３		IP

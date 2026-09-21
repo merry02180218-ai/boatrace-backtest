@@ -1,0 +1,8 @@
+data=
+1	0
+中島　　秀治	7.50	0.17	4.0	３		G2	２		G2	５		G2	１		IP	３		IP	１		IP	１		IP	１		IP	５		IP	２		IP
+栗城　　　匠	6.30	0.16	3.6	４		IP	１		IP	２		IP	５		IP	１	3	IP	２		IP	３		IP	２		IP	５		G2	５		IP
+小林　　礼央	6.00	0.13	2.4	３		IP	２		IP	５		IP	３		IP	２		IP	５		IP	２		IP	２		IP	３		IP			IP
+榎　　　幸司	4.80	0.19	4.8	４		IP	２		IP	５		IP	４		IP	６		G2	６		IP	２		IP	１		IP	５		IP	３		IP
+上村　慎太郎	2.67	0.27	5.1	４		IP	５		IP	６		IP	３		IP	５		IP	６		IP	欠		IP	４		IP	５		IP	５		IP
+中　　　亮太	4.00	0.16	3.2	４		G3	６		IP	２		IP	６		IP	３		G2	６		IP	４		G2	２		G3	６		G3	４		IP

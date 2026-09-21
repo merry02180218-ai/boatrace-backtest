@@ -1,0 +1,8 @@
+data=
+1	0
+青木　　玄太	9.20	0.15	3.2	１		IP	４		IP	１		IP	２		G1	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+石川　　真二	6.90	0.17	3.5	１		IP	２		G3	１	1	IP	５		IP	３		G3	１	1	G3	６	1	G3	２		IP	３		IP	２	1	IP
+茶谷　　信次	4.90	0.14	3.4	２		IP	４		IP	２		IP	５		IP	６		IP	３		IP	５		IP	５		IP	２		IP	２		IP
+若林　　義人	6.40	0.14	2.5	１		IP	１		IP	６	3	IP	１	3	IP	１	3	IP	５		IP	２		IP	５		IP	５		IP	３		G1
+藤原　　菜希	4.50	0.21	3.3	６		IP	３		IP	３	4	IP	４		IP	４		G1	２		G1	６		G3	２		IP	４		G3	６		IP
+小川　　時光	2.30	0.16	3.4	３		IP	６		IP	５		IP	６		IP	４		IP	４	5	IP	６		IP	６		IP	５	5	IP	６		IP

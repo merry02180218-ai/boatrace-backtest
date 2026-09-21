@@ -1,0 +1,8 @@
+data=
+1	0
+森　　　智也	7.40	0.16	2.8	１		IP	１		IP	５		IP	１		IP	３		IP	４		IP	３		IP	１		G3	２	2	IP	２		IP
+大江　　　純	5.10	0.11	2.9	５		IP	３		IP	３		IP	６	3	G3	４	3	G3	３		IP	２		IP	２		IP	３		IP	４		IP
+山ノ内　雅人	6.10	0.17	3.5	２		IP	１		IP	３		IP	４		IP	２		IP	３		IP	５		IP	３		IP	１		IP	６		IP
+石渡　翔一郎	4.90	0.16	3.2	５		IP	４		IP	１		IP	３		IP	３		IP	１		IP	５		IP	４		IP	４		IP	６		IP
+岩井　　　繁	3.30	0.15	3.4	５		IP	４	4	IP	５		IP	４	6	G3	２		IP	５		IP	５		IP	４		IP	４		IP	６		IP
+尾上　　雅也	3.80	0.14	3.9	５		IP	４		IP	６		IP	６		G1	４		IP	２	5	IP	４		IP	３		IP	４		G3	６		IP

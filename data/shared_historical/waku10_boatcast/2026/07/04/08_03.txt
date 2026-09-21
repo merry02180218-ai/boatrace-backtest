@@ -1,0 +1,8 @@
+data=
+1	0
+岡　　　祐臣	8.90	0.12	2.1	１		IP	１		IP	２		IP	３		IP	１		IP	２		IP	１		IP	１		IP	２		IP	２		G1
+松下　　誉士	4.30	0.22	5.4	３		IP	５		IP	６		IP	２		IP	６		IP	４		IP	４		IP	２		IP	２		IP	６		IP
+根岸　　真優	0.90	0.17	3.3	６		IP	６		IP	６		IP	６		IP	６		IP	転		IP	６	4	IP	６		IP	６		IP	６		IP
+眞鳥　　章太	5.40	0.14	2.8	４		IP	２		G2	１		G2	２		IP	４		IP	５		IP	３		IP	５	5	IP	４		IP	４		IP
+樋江井　　舞	3.80	0.14	2.8	５		IP	６		IP	５		IP	５		IP	４		G3	２		G3	６	6	IP	１		IP	４		IP	４		IP
+豊田　　祥生	1.80	0.21	3.9	６		IP	６		IP	５		IP	６		IP	４		IP	６		IP	５		IP	５		IP	Ｆ		IP	４	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+岡谷　　健吾	7.80	0.18	4.0	１		IP	１		IP	１		IP	５		IP	２		IP	４		IP	１		IP	４		IP	１		IP	１		IP
+香月　　大輝	5.50	0.14	2.4	１		IP	６		IP	６		IP	３		IP	３		IP	２		IP	３		IP	６		IP	２		IP	２		IP
+中村　　晃朋	6.80	0.13	2.6	２		IP	５		IP	２		IP	１		IP	１		IP	２		IP	４		IP	２		G1	６		G1	３		IP
+別府　　昌樹	4.40	0.12	2.1	１		IP	３		IP	４		IP	４		IP	２		IP	５		IP	４		IP	４		IP	６		IP	６		IP
+鈴木　　雅希	4.00	0.15	3.1	５		IP	５		IP	４		IP	４		IP	２		G3	４		G3	５		IP	５		IP	２		IP	４		IP
+都築　　正治	4.10	0.15	3.6	３		IP	２		IP	３		IP	４		IP	５		IP	３		IP	６		IP	５		IP	５		IP	４		IP

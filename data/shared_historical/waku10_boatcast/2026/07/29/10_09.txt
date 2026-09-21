@@ -1,0 +1,8 @@
+data=
+1	0
+諏訪　　玲奈	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+下出　　卓矢	5.80	0.09	2.2	２		IP	１		IP	３		G2	６		G2	４		G2	３		IP	２		IP	４		IP	３		IP	５		IP
+深尾　　巴恵	5.30	0.16	3.2	５		IP	６		IP	３		IP	３		IP	１		IP	３		IP	５		IP	４		IP	３		IP	１		IP
+島川　　光男	4.60	0.16	3.3	４		IP	２		IP	５		IP	５		IP	１		IP	３		IP	４	3	IP	落		IP	３	5	IP	４		IP
+門間　　雄大	3.50	0.10	1.9	３		G3	３		G2	４	6	G2	４		G3	６		G3	４		IP	６		IP	６		IP	５		IP	４		IP
+山ノ内　雅人	4.40	0.12	2.9	３		IP	６		IP	６		IP	５		IP	３		IP	３		IP	５		IP	３		IP	４		IP	２		IP

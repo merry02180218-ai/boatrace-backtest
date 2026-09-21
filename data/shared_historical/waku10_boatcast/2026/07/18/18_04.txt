@@ -1,0 +1,8 @@
+data=
+1	0
+石塚　　久也	9.60	0.17	2.9	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+笠原　　　亮	7.70	0.15	2.9	２		IP	１		IP	２		G1	２		G1	１		IP	４		IP	２		IP	４		G2	２		G3	３		G3
+吉永　　浩則	2.00	0.17	4.1	５		IP	５		IP	５		IP	５		IP	６		IP	６		IP	６		IP	５		IP	３		IP	６		IP
+藤原　　　駿	1.40	0.21	4.7	５	5	IP	６	5	IP	６	5	IP	６		IP	６		IP	４		IP	６	6	IP	６	6	IP	６		IP	６		IP
+坂口　　貴彦	6.40	0.18	3.0	４		IP	４		IP	３		IP	４		IP	２		IP	１		IP	２		IP	３		IP	３		IP	３	6	IP
+松下　　誉士	3.80	0.23	4.2	４		IP	３		IP	１		IP	６		IP	４		IP	６		IP	３		IP	５		IP	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+河合　　三弘	7.60	0.20	3.7	２		IP	１		IP	４		IP	２		IP	１		IP	２		IP	３		IP	２		IP	１		IP	４		IP
+柳瀬　　興志	3.70	0.19	4.2	５		IP	２		G3	４		IP	６		IP	５		IP	４		IP	２		IP	６		IP	６		IP	３		IP
+寺嶋　　　雄	4.30	0.19	3.9	４		IP	６		IP	１		IP	５		IP	４		IP	４		IP	３		IP	４		IP	５		IP	３	4	IP
+出畑　　孝典	3.30	0.15	3.9	３	5	G3	５		G3	６		IP	５		IP	３		IP	３	2	IP	６		IP	５	5	IP	４		IP	５		IP
+板頭　　里緒	1.00	0.22	5.3	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP												IP
+松本　　浩貴	3.20	0.21	4.4	６		IP	２		IP	５		IP	６	5	IP	５		IP	６	5	IP	４		IP	２	4	IP	６		IP	４	5	IP

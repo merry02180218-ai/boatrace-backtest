@@ -1,0 +1,8 @@
+data=
+1	0
+黒崎　　竜也	8.70	0.14	3.4	１		IP	１		IP	１		G3	１		G3	１		G3	１		IP	２		IP	１		IP	６		IP	２		IP
+市川　　哲也	8.00	0.16	3.2	２		IP	２		IP	１		IP	３		IP	欠		IP	２		IP	３		IP	欠		IP	１	1	IP	２		IP
+松井　　　繁	6.60	0.13	3.4	６		IP	３		SG	４		SG	３		IP	２	4	SG	２		IP	３		IP	４		G1	３		G1	２		G1
+重野　　哲之	5.80	0.10	1.8	３		IP	１		IP	３		IP	２		IP	５		IP	２		IP	３		IP	６		IP	１		IP	６		IP
+荒井　　輝年	5.90	0.16	3.0	４		G2	３		IP	５		IP	２		IP	３		IP	２		IP	２		IP	１		IP	５		IP	４		IP
+岩瀬　　裕亮	6.50	0.13	2.8	２		IP	２	5	IP	３		G1	３		G1	１		G2	３		IP	４		IP	１		IP	６		G1	６		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　啓太	6.33	0.13	2.4	２		IP	１		IP	欠		IP	１		IP	６		IP	５		IP	２		IP	２		IP	５		IP	２		IP
+松本　　博昭	6.50	0.18	3.6	２		IP	６		IP	２		IP	４		IP	１	4	IP	４	3	IP	４		IP	２		IP	２		IP	１		IP
+星野　　太郎	4.40	0.18	3.9	２		IP	４		IP	５	4	IP	４		IP	１		IP	４		IP	６		IP	６		IP	３		IP	４		IP
+松下　　哲也	5.00	0.14	3.0	３	5	IP	５		IP	３		IP	５		IP	３		IP	４		IP	５		IP	５		IP	１		IP	１		IP
+守田　　俊介	6.20	0.12	2.9	３		SG	６		G1	５		G1	１		SG	２		G1	２	3	IP	５		G1	３		G1	４		IP	３		IP
+貫地谷　直人	3.50	0.21	5.4	６		IP	２	5	IP	５		IP	４		IP	６		IP	６		IP	４		IP	４		IP	３		IP	４		IP

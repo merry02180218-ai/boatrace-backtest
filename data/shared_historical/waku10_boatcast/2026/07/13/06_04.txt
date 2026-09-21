@@ -1,0 +1,8 @@
+data=
+1	0
+三嶌　こころ	5.30	0.18	4.9	４		IP	５		IP	１		IP	５		IP	２		IP	１		IP	５		IP	６		IP	２		IP	３		IP
+塩崎　　桐加	5.10	0.18	3.4	３		IP	５		G3	３		G3	３		G3	１		G3	６		IP	２		IP	４		IP	５		IP	３		IP
+平田　さやか	7.40	0.15	2.4	１	2	IP	１		IP	３		G3	３		G3	３		G3	２		G3	３	2	IP	２		IP	３		IP	２		IP
+野田　　彩加	3.10	0.16	3.4	６		IP	３		IP	５		IP	４		IP	３		G3	５		G2	転		G2	６		IP	５		G3	３		G3
+川井　　　萌	4.70	0.18	4.0	３		IP	２		IP	５		IP	２		IP	６		IP	５		IP	Ｆ		G1	６		G1	１		IP	２		IP
+松瀬　　弘美	2.60	0.19	4.5	５		IP	４		IP	５		IP	５		G3	６		G3	５		IP	６		IP	３		IP	４		G3	５		IP

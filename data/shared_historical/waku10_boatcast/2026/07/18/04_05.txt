@@ -1,0 +1,8 @@
+data=
+1	0
+富澤　　祐作	7.60	0.11	2.4	１		IP	５		IP	１		IP	１		IP	１		IP	２		IP	５		IP	１		IP	４		IP	１		IP
+若林　　樹蘭	6.40	0.16	3.2	１		IP	５		IP	３		IP	３		IP	４		IP	２		IP	４		IP	２		IP	１		IP	３		IP
+山ノ内　雅人	6.40	0.17	3.4	４		IP	２		IP	１		IP	３		IP	４		IP	２		IP	３		IP	５		IP	３		IP	１		IP
+近藤　　稔也	3.60	0.20	4.4	５		IP	４		IP	５		IP	５		IP	５		IP	３		IP	３		IP	５		IP	５		IP	２		IP
+貫地谷　直人	3.90	0.22	4.1	５		IP	５		IP	５		IP	２		IP	４	4	IP	２	3	IP	６		IP	３		IP	４		IP	５		IP
+中澤　　和志	4.80	0.12	3.0	４		IP	２		IP	２		IP	５	5	IP	５		IP	１		IP	５		IP	４		IP	４		IP	４		IP

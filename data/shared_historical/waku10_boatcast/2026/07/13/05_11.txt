@@ -1,0 +1,8 @@
+data=
+1	0
+君島　　秀三	7.80	0.14	2.6	１		IP	１		IP	１		IP	５		G3	１		IP	３		IP	５	2	IP	１		IP	１		IP	２		IP
+入海　　　馨	5.80	0.16	3.6	１		G2	１		IP	転		IP	５		G1	４		G1	２		IP	２		IP	６		G1	６		G1	２		G1
+出口　舞有子	6.20	0.13	3.3	１		IP	５		IP	２		IP	１		IP	２		IP	３		IP	５	4	IP	１		G3	４		G3	５		IP
+藤本　　元輝	3.30	0.29	4.8	３		IP	６	5	IP	５		IP	４		IP	２		IP	６		IP	３		IP	Ｆ		IP	４		IP	６		IP
+有賀　　達也	4.40	0.17	2.7	５		IP	５		G3	３		IP	４		IP	５		IP	転		G1	５		G1	２		G1	２		IP	２		IP
+渡邉　　　健	2.60	0.16	3.2	３		IP	４		IP	３		IP	６		IP	６		IP	Ｆ		IP	５		IP	６		G3	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+上村　　宏太	4.40	0.18	4.4	４		IP	６		IP	６		IP	５		IP	４		IP	５		IP	２		IP	２		IP	３		IP	２		IP
+本田　　　愛	5.30	0.19	3.7	４		IP	５		IP	１		IP	２		IP	３		IP	５		IP	１	5	IP	６		IP	２		IP	５		IP
+松江　　秀徳	4.60	0.13	3.1	６		G2	６		G2	５		IP	３		IP	欠		G3	２		IP	３		IP	２		IP	４	4	IP	２		IP
+花田　　凱成	3.60	0.19	4.8	６	5	IP	３		IP	５		IP	６		IP	４		IP	５		IP	３		IP	３		IP	５		IP	３		IP
+岡崎　　凪汰	2.10	0.15	2.1	５	4	IP	６		IP	６		IP	４		IP	６		IP	５		IP	３		IP	６		IP	６	6	IP	５		IP
+藤田　　靖弘	4.30	0.15	3.8	５		IP	６	5	IP	２	5	IP	４		G3	４		IP	２		IP	２		IP	５		IP	５		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+林　　　恵祐	9.20	0.15	2.9	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP
+中岡　　　駿	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+今井　　貴士	7.20	0.13	3.1	４		IP	１		IP	２		IP	２		IP	２		IP	４	2	IP	１		IP	３		IP	３		IP	２		IP
+大場　　　敏	5.20	0.12	2.5	４		IP	６		IP	６		IP	２		IP	１		IP	５		IP	３		G3	１		IP	２		IP	５		IP
+久保　　翔耶	2.20	0.15	3.1	４	6	IP	５	6	IP	４	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	４	6	IP	５	6	IP	６	6	IP
+大平　誉史明	4.56	0.17	4.0	欠		IP	３	5	IP	４		IP	２		G3	３		IP	５		IP	６		IP	４		IP	２		IP	５		IP

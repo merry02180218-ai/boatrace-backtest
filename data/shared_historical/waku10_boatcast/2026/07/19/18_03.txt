@@ -1,0 +1,8 @@
+data=
+1	0
+大場　　　敏	9.00	0.17	2.1	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	６		IP	２		G3	１		G3
+丹下　　　健	5.10	0.15	3.5	３		IP	４		IP	２		IP	４		IP	２		IP	３		IP	５		IP	３		IP	６		IP	３		IP
+佐々木　和伸	6.60	0.13	2.0	３		IP	４		IP	３		IP	４	2	IP	３		IP	２		IP	３		IP	３		IP	１		IP	１		IP
+牧原　　　崇	5.40	0.12	2.7	３		IP	３		IP	３		IP	２		IP	５		IP	４		IP	４		IP	２		IP	３		IP	４		IP
+久保　　翔耶	2.30	0.13	3.1	５	6	IP	４	6	IP	５	6	IP	４	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	４	6	IP	５	6	IP
+笠原　　　亮	5.50	0.17	3.8	２	5	IP	３		IP	１	5	IP	６		G1	４		IP	５		G2	５		G2	２		G3	３		G3	４	5	G1

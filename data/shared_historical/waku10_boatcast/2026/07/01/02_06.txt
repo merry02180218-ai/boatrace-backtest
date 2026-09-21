@@ -1,0 +1,8 @@
+data=
+1	0
+樋口　　範政	9.00	0.16	3.8	１		IP	２		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	２		IP	３		IP
+高山　　弘斗	2.80	0.17	3.3	５		IP	４		IP	６		IP	６		IP	６		IP	３		IP	４		IP	６		IP	４		IP	４		IP
+小坂　　風太	3.20	0.19	3.3	６	4	IP	Ｆ		IP	３		IP	２		IP	５		IP	３		IP	６		IP	５		IP	５		IP	４		IP
+川原　　正明	5.70	0.12	3.0	３		G3	２		G3	３	5	IP	４		IP	６		G3	１		IP	３		IP	１		IP	４		IP	５		IP
+野長瀬　正孝	4.60	0.16	3.8	５	4	IP	３	3	IP	３	3	IP	５		IP	３		IP	Ｆ		IP	４	4	IP	２		IP	４	3	IP	２	4	IP
+乙津　　康志	3.50	0.19	4.3	５		IP	６		IP	６		IP	３		IP	３		IP	４		IP	３		IP	６		IP	４		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+吉永　　泰弘	8.60	0.16	2.6	３		IP	２		IP	１		G3	１		G3	１		IP	１		IP	４		IP	１		IP	１		IP	２		IP
+大場　　　敏	7.80	0.13	1.4	１	1	IP	２		IP	２		IP	２		G3	２		G3	５		IP	２		IP	２		IP	１		IP	２		IP
+関野　　　文	6.40	0.13	2.4	１		IP	３		IP	４		IP	２		IP	２		IP	３		IP	２		IP	３		IP	５		IP	３		G3
+今村　天次朗	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+中澤　　宏奈	4.80	0.17	3.1	４		IP	３		G3	２		G3	２		G3	５		G3	４		IP	６		IP	２		IP	３		IP	６		IP
+幸田　　智裕	3.00	0.19	4.0	６		IP	５		IP	４		IP	６		IP	３		IP	５		IP	５		IP	５		IP	４	5	IP	３		IP

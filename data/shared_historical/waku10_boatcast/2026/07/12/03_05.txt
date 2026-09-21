@@ -1,0 +1,8 @@
+data=
+1	0
+遠藤　　圭吾	6.30	0.21	4.1	１		IP	５		IP	１		IP	２		IP	３		IP	４		IP	６		IP	２		IP	４		IP	１		IP
+川崎　　智稔	3.60	0.15	3.5	３		IP	６		IP	２		IP	４		IP	４		IP	２		IP	５		IP	６	3	IP	６		G3	６		G3
+安東　　幸治	4.20	0.16	3.0	４		IP	６		IP	６		IP	３		IP	１		IP	５		IP	２		IP	４		IP	４		IP	５		IP
+福西　広太郎	2.11	0.20	4.0	６		IP	５		IP	６		IP	３		IP	６		IP	６		IP	５		IP	エ		IP	６		IP	４		IP
+金子　　拓矢	5.90	0.14	3.2	５		IP	４		IP	２		G2	３		IP	３		IP	５		G1	３		IP	４		IP	２		IP	１		IP
+樋口　　喜彦	1.70	0.13	3.7	６		IP	４	5	IP	６		IP	６		IP	５		IP	６		IP	６		IP	４	5	IP	６		IP	６		IP

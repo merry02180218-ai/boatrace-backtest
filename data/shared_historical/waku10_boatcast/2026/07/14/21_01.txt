@@ -1,0 +1,8 @@
+data=
+1	0
+桐本　　康臣	8.20	0.18	3.1	１		IP	４		IP	２		IP	２		IP	２		IP	１		IP	４		IP	１		IP	１		IP	１		IP
+眞田　　英二	4.90	0.16	4.4	２		IP	４		IP	４		IP	１		IP	２		IP	６		IP	５		IP	６		IP	１		IP	６		IP
+榮田　　将彦	4.80	0.16	3.2	３		IP	３		IP	６		IP	６		IP	１	1	IP	４	2	IP	２		IP	５		IP	３		IP	４	4	IP
+永井　　聖美	5.60	0.15	3.0	２		IP	２		IP	５		IP	４		G3	５		G3	３		G3	２		IP	３		IP	１		IP	５		IP
+高橋　　英之	4.80	0.13	2.8	４		IP	３		IP	３		IP	５		IP	６		IP	４		IP	１	4	IP	２		IP	３		IP	６		IP
+仲本　　　舜	3.50	0.17	4.5	３	5	IP	４		IP	５		IP	２		IP	６		IP	５		IP	４		IP	６		IP	３		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+浜野　　孝志	5.80	0.18	3.6	１		IP	５		IP	３		IP	１		G3	４		IP	５		IP	６		G2	１		IP	５		IP	１		IP
+松本　　一毅	4.80	0.17	3.1	２		IP	２		IP	２		IP	６		IP	４		IP	５		IP	２		IP	５		IP	３		IP	６	3	IP
+富永　　大一	6.00	0.19	3.1	２		IP	６		IP	２		IP	２		IP	６		IP	５	4	IP	２		IP	３		IP	２		IP	２		IP
+内山　　峻輔	5.10	0.17	3.5	１		IP	４		IP	５		IP	１		IP	４	5	IP	６		IP	５		IP	２		IP	４		IP	３		IP
+犬童　　千秋	4.30	0.17	2.8	２		IP	５		IP	４		IP	２		IP	２		G3	４		G3	４		G3	５		G3	５		IP	６		IP
+芹澤　　克彦	3.40	0.19	3.9	４		IP	３		IP	４		G3	４		G3	３	5	IP	５		IP	６		IP	６		IP	４		IP	５		IP

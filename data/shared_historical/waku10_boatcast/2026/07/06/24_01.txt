@@ -1,0 +1,8 @@
+data=
+1	0
+重富　　伸也	6.30	0.14	3.3	３		IP	１		IP	２		IP	６		IP	５		IP	２		IP	２		G3	５	2	IP	２		IP	１		IP
+竹田　　広樹	4.10	0.24	4.8	６		IP	３		IP	６		IP	６		IP	５	3	IP	２		IP	４		IP	１		IP	３		IP	５		IP
+深川　麻奈美	5.00	0.19	3.5	２		IP	６		IP	４		IP	１		IP	４	2	IP	５		G2	３		IP	３		IP	５		IP	３		IP
+齋藤　　智裕	3.00	0.19	3.5	４		IP	３		IP	４	6	IP	５		IP	６		IP	５		IP	６	6	IP	４		IP	５		IP	４		IP
+星田　　夢結	2.60	0.19	4.6	５	6	IP	６		IP	６	6	IP	３	6	IP	６	6	IP	４	6	IP	４	6	IP	６	6	IP	５	6	IP	４	6	IP
+崎　　　利仁	4.70	0.18	4.4	３		IP	４		IP	３		IP	６		IP	３		IP	５		IP	２		IP	２		IP	５		IP	４		IP

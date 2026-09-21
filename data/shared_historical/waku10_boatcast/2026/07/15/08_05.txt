@@ -1,0 +1,8 @@
+data=
+1	0
+木下　　陽介	5.20	0.18	3.0	５		IP	５		IP	４		IP	６		IP	１		IP	６		IP	４		IP	１		IP	１		IP	２		IP
+佐竹　　恒彦	7.20	0.15	2.7	４		IP	４	4	IP	２		IP	３		IP	１		IP	２		G3	４		IP	２		IP	１		IP	１		IP
+鈴谷　　一平	5.30	0.13	2.8	１		IP	１		IP	２		IP	５		IP	５		IP	５		G1	６		G1	４		IP	３	1	IP	３		IP
+今村　天次朗	3.00	0.13	2.5	４	6	IP	５	6	IP																								IP
+宮下　　元胤	3.50	0.18	4.8	３		IP	４		IP	３		IP	６		IP	４		IP	５		IP	５	4	IP	４		IP	４		IP	５		IP
+待鳥　　雄紀	2.30	0.17	4.4	６		IP	６	5	IP	４		IP	４		G3	６		IP	３	5	IP	６		G3	５		IP	６		IP	５		IP

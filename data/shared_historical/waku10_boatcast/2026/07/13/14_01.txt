@@ -1,0 +1,8 @@
+data=
+1	0
+向後　　龍一	8.60	0.14	3.1	１		IP	１		IP	１		IP	２		IP	５		G2	２		G2	２		IP	１		IP	１		IP	２		IP
+小澤　　　学	4.30	0.26	5.8	４		IP	３		IP	４		IP	３		IP	２		IP	４		IP	３		IP	５		IP	５		IP	６		IP
+深見　亜由美	3.30	0.19	3.3	４		IP	６	4	IP	６		IP	転		IP	４		IP	２		IP	４	4	G3	２		IP	５	4	IP	６		IP
+藤山　　湧太	2.50	0.18	4.3	５		IP	５		IP	３		IP	３		IP	４		IP	６		IP	６	5	IP	６		IP	６	6	IP	６		IP
+山浦　　　槙	1.30	0.19	4.1	６	6	IP	５	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	６	6	IP	６	6	IP
+金子　　龍斗	2.50	0.19	3.0	６	5	IP	５		IP	５		IP	４		IP	６		IP	Ｆ		IP	１		IP	４		IP	６	5	IP	転		IP

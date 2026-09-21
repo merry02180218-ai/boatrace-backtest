@@ -1,0 +1,8 @@
+data=
+1	0
+佐藤　隆太郎	8.00	0.16	2.7	１		G2	１		IP	３		IP	１		IP	１		IP	３		SG	３		SG	１		SG	６		G1	６		SG
+今泉　　友吾	5.80	0.18	3.9	４	3	G2	１		IP	１		IP	２		G1	６		G1	４		IP	５		IP	４		IP	３	3	IP	３		IP
+谷野　　錬志	7.50	0.15	3.1	３	4	G2	３		SG	３		SG	１		IP	２		IP	１		G1	５	4	G1	４		G1	４		G1	１		IP
+廣瀬　　将亨	5.60	0.14	3.2	４		G2	２		IP	２		IP	５		G2	６		G2	３		IP	５		IP	２		IP	１		IP	４		IP
+岩瀬　　裕亮	6.30	0.15	4.3	４		G2	２	4	IP	１		IP	４		IP	５		G1	３		G1	２		G1	２		G2	４		IP	４		IP
+藤山　　翔大	4.60	0.24	3.8	５	5	G2	Ｆ		G2	３	5	IP	５		IP	６		IP	３	5	IP	２	3	IP	１	4	IP	２	3	IP	５		IP

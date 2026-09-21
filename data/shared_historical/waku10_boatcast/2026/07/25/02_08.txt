@@ -1,0 +1,8 @@
+data=
+1	0
+齋藤　　達希	7.20	0.16	3.4	５		IP	２		IP	４		G3	１		IP	２	2	IP	１		IP	３		IP	１		IP	１		IP	４		IP
+倉尾　　大介	7.11	0.17	3.4	１		IP	４		IP	５		IP	３		IP	２		IP	２		IP	２		IP	２		IP	欠		IP	１		IP
+谷本　　幸司	4.60	0.20	3.9	５		IP	１		IP	５		IP	４		IP	５	4	IP	３		IP	５	2	IP	５		IP	２		IP	２		IP
+福来　　　剛	5.90	0.13	2.8	４		G2	５		G2	２		IP	３		IP	転		IP	２		IP	４		G2	３		IP	１		IP	２		IP
+鈴木　　柊介	2.20	0.19	2.7	５		IP	５		IP	５	6	IP	４		IP	６		IP	６		IP	６	6	IP	５	6	IP	３	6	IP	６		IP
+桐本　　康臣	3.80	0.19	3.8	５		IP	６		IP	４		IP	５		IP	５		IP	４		IP	６		IP	２		IP	２		IP	３	4	IP

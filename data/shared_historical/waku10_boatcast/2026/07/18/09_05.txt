@@ -1,0 +1,8 @@
+data=
+1	0
+伊久間　陽優	8.80	0.11	1.9	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	３		IP	３		IP	２		IP
+澤田　　尚也	6.10	0.10	2.2	３		IP	２		IP	１		IP	６		G1	６		G1	２		G2	６		G2	２		IP	４		IP	１		IP
+鰐部　太空海	5.50	0.14	2.8	３		IP	３		G1	４		G1	３		IP	３		SG	６		SG	１		IP	６		IP	２		IP	６		IP
+若林　　義人	7.70	0.13	2.5	２		IP	１	3	IP	３		IP	１		IP	１		IP	６	3	IP	１	3	IP	１	3	IP	５		IP	２		IP
+平川　　香織	5.90	0.24	4.2	２		IP	４		IP	３		IP	３		IP	２	4	IP	３		IP	２		IP	４		IP	２		IP	６		IP
+仲　　　航太	3.10	0.21	4.2	２		IP	５		IP	６		IP	５		IP	３		IP	５	5	IP	５		IP	４		IP	５		IP	５		IP

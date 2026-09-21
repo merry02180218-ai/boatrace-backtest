@@ -1,0 +1,8 @@
+data=
+1	0
+森林　　　太	7.20	0.17	3.8	５		IP	２		IP	２		G3	２		G3	２		IP	１		IP	４		IP	３		IP	２		IP	１		IP
+中村　　晃朋	5.40	0.16	3.2	５		IP	１		IP	２		IP	２		IP	６		G1	６		G1	１		IP	３		G3	４		IP	５		IP
+宮武　　英司	4.20	0.17	2.8	６		IP	６		IP	５	4	IP	３		IP	３	4	G3	４		IP	４		IP	２		IP	３		IP	４		IP
+高橋　　二朗	2.20	0.22	4.1	６		IP	４	3	IP	４	5	IP	５		IP	５	6	IP	４		IP	５		IP	６		IP	６		IP	６		IP
+北川　　太一	5.40	0.14	3.0	５		IP	４		G3	２		G3	１	3	IP	３	3	IP	２		IP	３		IP	６		G3	２		IP	６		IP
+坂口　　諒宗	1.30	0.21	4.8	６		IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP

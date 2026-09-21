@@ -1,0 +1,8 @@
+data=
+1	0
+浦田　　晃嗣	6.30	0.13	2.9	２		IP	３		IP	４		IP	６		IP	２		IP	３		IP	１		IP	１		IP	２		IP	５		IP
+秋末　　秦悟	4.60	0.16	3.2	２		IP	４		IP	３		IP	４		IP	２		IP	６		IP	３		IP	４		IP	６		IP	４		IP
+後藤　　正宗	5.00	0.13	2.7	６		IP	４		IP	４	4	IP	６		IP	１	4	IP	５		IP	３		IP	３		IP	３		IP	１		G3
+角谷　　健吾	5.11	0.16	3.0	１		IP	３		IP	４		IP	欠		IP	４		IP	３		IP	５		IP	３		IP	５		IP	３		IP
+渡邊　伸太郎	3.80	0.21	4.2	４		IP	４		IP	Ｆ		IP	３		IP	４		IP	５		IP	４		IP	２		IP	５		IP	４		IP
+早川　　理稀	2.80	0.17	3.0	３		IP	５		IP	５		IP	６		IP	３		IP	６		IP	６		IP	６		IP	３		IP	５		IP

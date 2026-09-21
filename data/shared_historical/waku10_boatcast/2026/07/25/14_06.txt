@@ -1,0 +1,8 @@
+data=
+1	0
+増田　　　進	5.80	0.16	2.5	２		IP	５		IP	３		IP	６		IP	１		IP	２		IP	５		IP	１		IP	６		IP	１		IP
+有賀　　達也	7.60	0.12	3.2	４		IP	３		IP	２		IP	１		IP	１		G3	４		G3	２		IP	２		IP	１		IP	２		IP
+田頭　　　実	7.40	0.12	2.6	５	2	G3	１	2	G3	１	2	IP	４	2	G3	１	2	G3	５	1	IP	３	2	IP	１	2	IP	２	2	IP	１		IP
+上野　　秀和	4.20	0.17	3.5	６		IP	３	5	IP	３		IP	４		IP	３	5	IP	５		IP	４		IP	３		IP	３		IP	６		IP
+長谷川　親王	2.20	0.22	5.5	５		IP	５		IP	５		IP	６	6	IP	４	6	IP	４		IP	５		G3	５		IP	６	6	IP	５		IP
+竹腰　　正樹	2.30	0.13	3.4	４		G3	６		G3	４	5	IP	５		IP	６		IP	３	5	IP	６		IP	５		IP	６		IP	６		IP

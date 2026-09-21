@@ -1,0 +1,8 @@
+data=
+1	0
+土屋　　太朗	6.60	0.20	4.0	２		IP	１		IP	２		IP	６		IP	２		IP	２		IP	６		IP	５		IP	１		IP	１		IP
+佐藤　　博亮	7.10	0.14	2.8	４		IP	１		IP	１		IP	２		IP	１		G3	２		G3	６		IP	３		IP	３		IP	２		IP
+南　　　佑典	3.80	0.19	2.4	４	2	IP	６		IP	３		IP	３		IP	２		IP	５		IP	５		G2	５		G2	６		IP	４		IP
+北川　　敏弘	3.00	0.16	2.7	５		IP	４		IP	４		IP	６		IP	６	5	IP	５		IP	４	5	IP	５		IP	５		IP	２		IP
+橋本　　英一	3.20	0.16	4.0	２		IP	５		IP	４		IP	４		IP	６		IP	４		IP	５		IP	３		IP	６		IP	Ｆ		IP
+川島　　圭司	3.50	0.20	4.3	３		IP	６		IP	６		IP	４	5	IP	６		IP	５		IP	４		IP	４		IP	３		IP	３		IP

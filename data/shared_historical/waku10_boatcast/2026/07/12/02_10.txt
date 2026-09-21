@@ -1,0 +1,8 @@
+data=
+1	0
+桑原　　　悠	10.30	0.16	2.5	１		G2	２		IP	１		IP	１		IP	１		IP	１		G1	１		G1	１		G1	１		G1	１		IP
+池永　　　太	7.20	0.13	2.7	３		G2	６		IP	１		IP	３		G2	１		G2	２		IP	２		IP	２		IP	３		G1	４		G1
+丸野　　一樹	8.10	0.14	2.6	２		G2	１		SG	１	2	SG	１		G1	６		G1	５		G1	１		IP	１		IP	５		G1	２		G1
+中田　　竜太	7.30	0.16	3.6	４		G2	３		SG	５		SG	１		IP	２		G2	３		G2	３		IP	２		IP	３		IP	１		IP
+遠藤　　エミ	6.30	0.11	2.6	３		G2	１		SG	２		G1	５		SG	３		SG	３		IP	３		G2	５		G2	５		IP	４		G2
+新開　　　航	5.44	0.16	3.8	転		G2	５		SG	５		SG	２		G1	１		IP	６		G1	４		IP	５		IP	２		IP	３		IP

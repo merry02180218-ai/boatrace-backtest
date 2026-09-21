@@ -1,0 +1,8 @@
+data=
+1	0
+小山　　　勉	9.60	0.15	3.5	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP
+待鳥　　雄紀	6.20	0.15	2.7	３		IP	３	3	IP	３		IP	２		IP	１		IP	４		G3	５	3	IP	３		IP	３		IP	２		G3
+鈴木　　　猛	4.89	0.13	2.8	３		IP	５		IP	４		G3	３		G3	転		IP	４		IP	３		IP	４		IP	１		IP	５		IP
+八木　　治樹	3.90	0.12	1.9	４		IP	２		IP	５		IP	５		IP	４		IP	６		IP	５		IP	４		IP	３		IP	３		IP
+宇野　　博之	3.40	0.12	2.8	５		IP	１		IP	６		IP	６	6	IP	４		IP	６		IP	２		IP	５		IP	４		IP	６		IP
+小林　　文彦	4.40	0.23	5.0	２		IP	３	5	IP	３		IP	５		IP	６		IP	４		IP	５		IP	３		IP	４	4	IP	５		IP

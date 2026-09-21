@@ -1,0 +1,8 @@
+data=
+1	0
+杉山　　勝匡	7.30	0.13	2.8	１		IP	１		IP	５		IP	３		IP	１		IP	１		IP	３		IP	６		IP	２		IP	１		IP
+岩崎　　芳美	7.00	0.15	2.9	４		IP	４		G3	３		G3	１		G2	２		IP	３		IP	２		IP	４		G3	１		G3	２		G1
+廣瀬　　　凜	7.50	0.16	3.1	１		IP	２		IP	２		IP	３		IP	２		G2	２		IP	４	4	IP	２		IP	５	4	IP	１		IP
+小川　　知行	4.40	0.14	2.2	６		IP	３		IP	２		IP	５		IP	５		IP	６	5	IP	５		IP	１		IP	２		IP	４	5	IP
+高木　　圭大	2.60	0.17	3.2	５		IP	１		IP	６		IP	５		IP	５		IP	４		IP	６		IP	６		IP	６		IP	５		IP
+田村　　美和	1.60	0.21	3.7	６		IP	５		G3	３		G3	６		IP	６		IP	６		G3	転		IP	６		IP	５		IP	６		G3

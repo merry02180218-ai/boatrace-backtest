@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　理央	7.60	0.20	3.6	１		IP	１		IP	３	2	IP	１		IP	１		IP	３		IP	Ｆ		IP	１		IP	３		IP	２		IP
+藤堂　　里香	3.40	0.17	2.9	３		IP	２		IP	６		G3	５		G3	４		IP	４		G3	転		G3	４		IP	４		IP	６		IP
+中川　　りな	6.10	0.14	3.1	４		IP	１		IP	４		G3	２		G3	２		G3	６		IP	３		G3	２		IP	３		IP	３		IP
+根岸　　真優	1.70	0.19	3.0	６		IP	６	5	IP	５		IP	５		IP	６		IP	５		IP	６		IP	４		IP	５		IP	６		IP
+龍田　　真白	3.20	0.13	1.8	１		IP	２		IP	５	6	IP	４		IP	５		IP	６		IP	Ｆ		IP	５		IP	６		IP	５		IP
+小林　　愛実	2.10	0.22	4.5	落		IP	６		IP	６		IP	３		IP	５		IP	５		IP	６		IP	５		IP	４		IP	５		IP

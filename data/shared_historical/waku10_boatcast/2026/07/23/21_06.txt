@@ -1,0 +1,8 @@
+data=
+1	0
+小野　　信樹	6.00	0.18	3.6	５		IP	２		IP	４		IP	２		IP	１		IP	４		IP	４		IP	４		IP	３		IP	１		IP
+眞崎　　武蔵	3.40	0.17	4.6	３		IP	２		IP	５		IP	５		IP	３		IP	６		IP	４		IP	５		IP	５		IP	６		IP
+柘植　　政浩	5.40	0.15	2.1	２		IP	４	4	IP	３		IP	３		IP	２		IP	３	2	IP	５		IP	３		IP	３		IP	５		IP
+表　　　健太	3.50	0.16	3.9	６		IP	５		IP	３		IP	５	5	IP	４	6	IP	５		IP	５	5	IP	３		IP	２		IP	５		IP
+本田　　　愛	4.80	0.16	3.4	１		IP	４		IP	２	6	IP	６		IP	４		IP	３		IP	３	4	IP	６		IP	５		IP	３		IP
+深川　　真二	7.90	0.15	3.5	２	2	IP	２	2	IP	１	2	IP	６	2	IP	２	2	IP	２	2	IP	２	2	IP	１	2	IP	２	2	IP	２	2	IP

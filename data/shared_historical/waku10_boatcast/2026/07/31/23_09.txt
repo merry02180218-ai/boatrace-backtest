@@ -1,0 +1,8 @@
+data=
+1	0
+嘉手苅　徹哉	5.60	0.16	3.8	３		IP	欠		IP	４		IP	２		IP	５		IP	１		IP	４		IP	１		IP	１		IP	５	4	IP
+角谷　　健吾	6.10	0.13	3.0	２		IP	２		IP	２		IP	３		IP	３		IP	５		IP	２		IP	１		IP	６		IP	４		IP
+末永　　祐輝	5.00	0.15	2.7	５		IP	２		IP	２		IP	４		IP	５		G3	４		G3	３		IP	４		IP	３		IP	３		IP
+松山　　裕基	2.70	0.15	3.2	６		IP	３		IP	５		IP	６		IP	４		IP	６		IP	２		IP	６	6	IP	５		IP	６		IP
+宇佐見　　淳	4.00	0.17	3.3	６		IP	４		IP	３		IP	３		G3	４		G3	６		IP	２	3	IP	４		IP	４	6	G3	５	4	IP
+小野寺　智洋	3.20	0.12	2.7	３		IP	６		IP	４		IP	６		IP	４		IP	４		IP	５	5	IP	５		IP	５		IP	３		IP

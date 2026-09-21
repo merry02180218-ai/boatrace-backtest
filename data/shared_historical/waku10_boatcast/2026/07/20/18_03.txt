@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　睦広	7.20	0.15	2.8	２		IP	２		IP	１		IP	４		IP	５		IP	１		G3	１		G3	１		IP	２		IP	５		IP
+長畑　　友輔	4.20	0.16	3.7	１		IP	２		IP	４		IP	３		IP	６		IP	６		IP	６		IP	６		IP	５		IP	２		IP
+大場　　　敏	4.80	0.11	2.4	４		IP	５		IP	５		IP	２		IP	１		IP	３		IP	４		G3	４		G3	４		G3	４		IP
+中岡　　　駿	3.40	0.14	3.1	５		IP	３		IP	６		IP	５		IP	２		IP	６		IP	２		IP	４		IP	６		IP	６		IP
+川原　　祐明	5.50	0.13	2.8	５		IP	３		IP	３		IP	３		IP	３		IP	２		IP	２		IP	１		IP	６		IP	５		IP
+小川　　晃司	3.30	0.19	4.6	６		IP	６		IP	５		IP	２		IP	３		IP	５		IP	５		IP	４		IP	６		IP	３		IP

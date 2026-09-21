@@ -1,0 +1,8 @@
+data=
+1	0
+別府　　昌樹	6.90	0.14	3.0	１		IP	３		IP	１		IP	３		IP	１	2	IP	１		IP	６		IP	４		IP	５		IP	１		IP
+井上　　　茂	4.60	0.13	3.3	３		IP	４		IP	４		IP	３		IP	４		IP	４		IP	４		IP	４		IP	３		IP	４	3	IP
+柳沢　　　一	5.80	0.13	1.6	１		IP	２		IP	３		IP	５		G1	３		IP	２		IP	５		IP	６		IP	２		IP	３		IP
+中村　　晃朋	5.50	0.12	3.1	２		IP	１		IP	６		G1	２		IP	２		IP	６		IP	６		G3	２		IP	４		G1	４		IP
+竹田　　広樹	3.50	0.20	3.8	３		IP	６		IP	１		IP	６		IP	５		IP	１	4	IP	６		IP	６		IP	５		IP	６		IP
+近藤　　来希	1.60	0.22	5.0	５		IP	５		IP	５		IP	６		IP	５		IP	６		IP	５		IP	５		IP	６		IP	６		IP

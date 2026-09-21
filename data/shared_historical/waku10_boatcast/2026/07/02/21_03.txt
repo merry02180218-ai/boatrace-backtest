@@ -1,0 +1,8 @@
+data=
+1	0
+秦　　　英悟	9.90	0.11	1.7	１		IP	１		G1	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+北川　　幸典	7.20	0.18	2.5	３		IP	２		IP	３		IP	１		IP	２		IP	４		IP	１		IP	４		IP	３		IP	１		IP
+榎　　　幸司	5.40	0.18	3.8	６		G2	６		IP	４		IP	２		IP	２		IP	１		IP	４		IP	３		IP	１		IP	６		IP
+田中　太一郎	3.60	0.18	3.9	４		IP	４		IP	６	5	IP	５		IP	６		IP	６		IP	２		IP	６		IP	３		IP	２		IP
+山崎　　　祥	4.50	0.22	3.5	５		IP	３		IP	４		IP	４		IP	６		IP	２		IP	４		IP	３		IP	３	6	IP	４		IP
+吉原　　快誓	1.70	0.13	2.3	５		IP	６		IP	４	5	IP	６		IP	６		IP	５		IP	６		IP	５		IP	６		IP	５		IP

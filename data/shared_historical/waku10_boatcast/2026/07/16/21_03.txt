@@ -1,0 +1,8 @@
+data=
+1	0
+水摩　　　敦	7.70	0.15	2.5	１		IP	３		IP	２		IP	２		IP	１		IP	１		IP	３		IP	１		IP	６		IP	２		IP
+永井　　聖美	7.70	0.17	2.9	１		IP	１		IP	２		IP	６		IP	４		G3	１		IP	１		IP	２		IP	２		IP	２		IP
+藤原　啓史朗	7.90	0.13	2.0	１		G2	４		IP	２		G1	１		G2	４		IP	５		IP	１		IP	２		G1	２		G1	２		SG
+西原　　明生	3.60	0.22	4.8	４		IP	３		IP	２		IP	３		IP	６		IP	６		IP	５		IP	５		IP	５		IP	４		IP
+松尾　　　祭	3.30	0.20	4.7	６		G2	６		IP	６		IP	６		IP	３		IP	転		IP	５		G2	２		G2	２		IP	５		IP
+岡部　　貴司	4.30	0.16	2.9	４		IP	６		IP	１		IP	４		IP	５		IP	３		IP	５		IP	５		IP	４		IP	２	5	IP

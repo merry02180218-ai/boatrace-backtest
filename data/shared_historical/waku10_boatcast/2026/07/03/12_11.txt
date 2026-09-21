@@ -1,0 +1,8 @@
+data=
+1	0
+佐々木　大河	10.00	0.12	1.5	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+中村　　有裕	5.60	0.16	3.2	３		IP	３		IP	２		IP	５		IP	１		IP	３		IP	２		IP	４		IP	５		IP	５		IP
+秋山　　広一	6.00	0.16	3.4	３		G2	２		G2	４		G2	４		IP	６		IP	４		IP	１		IP	２		IP	５		IP	１	4	G3
+倉田　　茂将	2.90	0.16	2.9	５		G3	６	3	G3	５		IP	４		IP	４	5	IP	６		IP	６		IP	５		IP	２	5	IP	４		IP
+金児　　隆太	4.30	0.17	3.4	３		IP	２		IP	６		IP	２		IP	４	4	G3	３		G3	６		IP	４		IP	４		IP	６	4	IP
+深井　　利寿	3.00	0.17	3.5	４		G3	５		G3	４		IP	６		IP	４		IP	４		G2	５		G2	６	5	IP	４		IP	５		IP

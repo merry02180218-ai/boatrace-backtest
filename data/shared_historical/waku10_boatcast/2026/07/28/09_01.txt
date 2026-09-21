@@ -1,0 +1,8 @@
+data=
+1	0
+田中　　辰彦	9.10	0.17	3.6	１		IP	１		IP	１		IP	２		IP	３		IP	２		IP	１		IP	１		IP	２		IP	１		IP
+幸田　　智裕	4.40	0.16	4.0	６		IP	６		IP	３		IP	２		IP	４		IP	２		IP	２		IP	５		IP	４		IP	５		IP
+加藤　　優弥	5.90	0.13	1.8	１		IP	６		IP	４		IP	２		IP	１		IP	２		IP	５	4	IP	４		IP	５		IP	１		IP
+酒井　　陽祐	5.00	0.11	2.6	３		IP	６		IP	２		IP	２		IP	３		IP	６		G3	５		G3	３		IP	３		IP	３	5	G3
+齋藤　　和政	2.40	0.20	4.1	６	6	IP	６	4	IP	５		IP	４	6	IP	５		G3	６		G3	３		IP	４		IP	５		IP	６		IP
+後藤　　　浩	1.30	0.18	3.7	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	５		IP	６		IP	６		IP

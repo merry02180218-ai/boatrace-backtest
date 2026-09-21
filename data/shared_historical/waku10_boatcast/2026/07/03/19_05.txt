@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　将吉	9.20	0.11	2.6	１		IP	１		IP	６		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1	１		IP
+下河　　雅史	6.40	0.18	3.4	２		IP	３		IP	２		IP	４		IP	３		IP	２		IP	４	3	IP	２		IP	２		IP	４		IP
+松田　　竜馬	5.10	0.15	3.0	２		IP	３		IP	３		IP	５		IP	５		IP	３		IP	３		IP	６		IP	２		IP	３		IP
+田中　　　豪	6.40	0.15	2.4	５		IP	５		IP	１		IP	３		IP	３		IP	２		IP	３		IP	３	5	IP	２		IP	１	3	IP
+加藤　　　翔	3.20	0.18	3.7	４		IP	６		IP	５		IP	５	6	IP	５		IP	３		IP	３		IP	５		IP	３		IP	６		IP
+中村　　　尊	3.40	0.20	4.7	５	5	IP	５		IP	５		IP	５		IP	４		IP	２		IP	３		IP	５		G1	５		G1	６		G1

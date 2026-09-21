@@ -1,0 +1,8 @@
+data=
+1	0
+梶原　　　正	8.00	0.16	2.5	１		IP	１		G3	１		G3	２		IP	２		IP	４		IP	１		IP	３		IP	４		IP	１		IP
+井田　　涼介	2.10	0.20	4.1	５		IP	４		IP	６		IP	６		IP	６	3	IP	６		IP	３		IP	５	5	IP	６		IP	５		IP
+松浦　　　勝	2.70	0.25	3.3	６		IP	６		IP	６		IP	６		IP	５	4	IP	２		IP	４	4	IP	４		IP	４	5	IP	６	4	IP
+品田　　直樹	4.50	0.15	3.3	３		IP	５		IP	６		IP	３		IP	３		IP	３		IP	２		IP	５		IP	３		IP	５	3	IP
+藤井　　　徹	3.60	0.22	4.2	４		IP	３	4	IP	６		IP	３		IP	３	4	IP	５	2	IP	６		IP	５		IP	３		IP	５		IP
+中越　　博紀	4.80	0.17	3.4	４		IP	３		IP	４		IP	６		IP	２		IP	４	5	IP	２		IP	６		IP	２		IP	４		IP

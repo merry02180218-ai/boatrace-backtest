@@ -1,0 +1,8 @@
+data=
+1	0
+山本　　兼士	6.10	0.16	3.4	１		G3	２		IP	４		IP	６		IP	３		IP	１		IP	４		IP	３		IP	３		IP	３		IP
+齊藤　　　廉	5.60	0.18	3.3	１		IP	２		IP	２	3	IP	３		IP	６		IP	２		IP	５		IP	６		IP	２		IP	４		IP
+大橋　純一郎	7.20	0.14	2.0	２		IP	３		IP	２		IP	６		IP	２		IP	２		IP	２		IP	２		IP	２	2	IP	２		IP
+岩下　　巧斗	5.13	0.13	3.1	４		IP	落		IP	３		IP	３		IP	３		IP	４		IP	１		IP	６		IP	落		IP	４		IP
+本村　　　大	3.50	0.18	3.6	２		IP	３		IP	５		IP	４		IP	５		IP	６		IP	４		IP	５		IP	５		IP	４		IP
+桑原　　将光	4.44	0.20	4.4	４		IP	３		IP	４		IP	５		IP	転		IP	３		IP	４		IP	３		G3	４		G3	４		IP

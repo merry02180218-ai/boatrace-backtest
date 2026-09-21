@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　和佐	6.80	0.15	2.5	３		IP	６		IP	２		IP	１		IP	２		IP	１		IP	１		IP	６		IP	４		IP	１		IP
+丹下　　　将	5.10	0.15	3.6	５		IP	１		IP	５		IP	３		IP	６		IP	２		IP	３		IP	１		IP	４		IP	５		IP
+福田　　翔吾	6.20	0.10	1.9	２		IP	２		IP	３		IP	５	4	IP	１		IP	２		IP	３	5	IP	３		IP	５		IP	３		IP
+大神　　康司	5.50	0.11	2.1	３	2	IP	４	2	IP	６	3	IP	２	2	IP	１	2	IP	４	2	IP	１	2	IP	５	2	IP	５	3	IP	２	2	IP
+坂口　　　周	5.50	0.17	3.0	２		IP	２		IP	４		IP	６		G2	５		G2	２		G3	４		G3	５		IP	１		IP	３	4	IP
+阿波　　勝哉	3.10	0.20	4.1	４		IP	６		IP	妨		IP	４		IP	５		IP	３		IP	６		IP	６		IP	４		IP	２		IP

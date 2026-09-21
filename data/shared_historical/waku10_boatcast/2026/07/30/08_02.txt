@@ -1,0 +1,8 @@
+data=
+1	0
+沼田　　大都	6.40	0.18	3.8	２		IP	５		IP	３		IP	１		IP	２		IP	６		IP	１		IP	１		IP	２		IP	６		IP
+西岡　　蒼志	5.50	0.20	4.3	６		IP	４		IP	２		IP	２		IP	５		IP	３		IP	２		IP	２		IP	４		IP	３		IP
+津田　　陸翔	4.78	0.18	3.3	６		G3	不		G3	５		G3	３		IP	３	4	IP	３		IP	４		IP	４		IP	３		IP	２		IP
+中野　　仁照	6.70	0.20	2.9	５		IP	３	3	IP	２		IP	３		IP	１		IP	１		IP	５		IP	１	5	IP	１		IP	５	5	IP
+島川　　海輝	4.40	0.15	3.4	６		G3	５		G3	３		IP	２		G3	４		IP	６		IP	２	4	IP	４		IP	２		IP	５		IP
+宮崎　心之介	4.50	0.18	4.2	３		G3	２		IP	３		IP	４		IP	３		IP	５		IP	５		IP	２		IP	６		IP	５		IP

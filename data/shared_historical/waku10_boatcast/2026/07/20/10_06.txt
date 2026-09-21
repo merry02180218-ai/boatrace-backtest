@@ -1,0 +1,8 @@
+data=
+1	0
+澤　　　大介	6.80	0.17	3.5	１		IP	３		IP	５		IP	１		IP	３		IP	５		G3	３		IP	１		IP	２		IP	２		IP
+藤山　　雅弘	6.00	0.17	3.0	２		IP	４		IP	６		IP	１		IP	３		IP	４	4	IP	２		IP	１		IP	２		IP	６		IP
+加藤　　政彦	7.30	0.14	2.1	１		IP	２		IP	１		IP	３		IP	５		IP	２	5	IP	２		IP	２		IP	３		IP	３		IP
+萩原　丈太朗	3.00	0.14	2.8	５		IP	４	5	IP	３		IP	２	5	IP	６		IP	転		IP	３	6	IP	６		IP	６		IP	６		IP
+是澤　　孝宏	5.40	0.18	3.9	１		IP	２		IP	４		IP	５		IP	３		IP	３		IP	５		G2	４		G2	２		IP	６		IP
+森　　　悠稀	3.30	0.14	3.2	２		G2	６		IP	４		IP	６		IP	６		G2	５		IP	５		IP	３		IP	５		IP	５	5	IP

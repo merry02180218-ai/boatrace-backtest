@@ -1,0 +1,8 @@
+data=
+1	0
+木幡　　純也	5.70	0.20	3.6	４		IP	３		IP	２		IP	６		IP	３		IP	２		IP	５		IP	１		IP	４		IP	２		IP
+中島　　　航	5.00	0.20	3.9	４		IP	２		IP	４		IP	２		IP	５		IP	２		G3	５		G3	５		IP	２		IP	４		IP
+加藤　　　翔	3.30	0.20	3.1	５		IP	５	4	IP	４		IP	２		IP	４		IP	４		IP	４		IP	６	5	IP	５		IP	５		IP
+浦野　　　海	3.50	0.23	3.9	３		IP	５	5	IP	４		IP	６	6	IP	４	3	IP	５		IP	３		IP	２		IP	６		IP	６		IP
+松竹　　大輔	5.40	0.17	2.8	３		IP	１		IP	５		IP	１		IP	４		G3	６		G3	２		IP	４		IP	６		IP	２		IP
+増本　　杏珠	2.90	0.26	5.2	４		IP	５		IP	６		IP	４		IP	３		IP	３		IP	５		IP	５		IP	６	5	IP	６		IP

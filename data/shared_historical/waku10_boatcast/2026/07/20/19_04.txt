@@ -1,0 +1,8 @@
+data=
+1	0
+五反田　　忍	5.30	0.16	3.7	１		IP	１		IP	６		G3	１		IP	６		IP	６		G3	１		IP	２		IP	６		IP	６		IP
+角　　ひとみ	4.10	0.18	4.3	６		IP	６		IP	５		IP	３	1	IP	４		IP	４		IP	３		G3	６		G3	２		G3	２	1	IP
+深見　亜由美	3.40	0.19	3.6	５		IP	４		IP	６	4	IP	６		IP	転		IP	４		IP	２		IP	４	4	G3	２		IP	５	4	IP
+田村　　美和	4.20	0.13	2.8	６	5	IP	２		IP	４		G3	５		G3	６	6	G3	４		IP	５		G3	２		G3	３		IP	３	5	IP
+出穂　　和鼓	1.60	0.17	3.4	４		IP	５		IP	５		IP	５		IP	６		IP	６	6	IP	６		IP	６		IP	６		IP	６		IP
+今井　　美亜	4.20	0.14	1.9	６		G2	２		IP	３		IP	６		G3	６		G3	４		G2	３		G2	３		IP	４	5	IP	６		IP

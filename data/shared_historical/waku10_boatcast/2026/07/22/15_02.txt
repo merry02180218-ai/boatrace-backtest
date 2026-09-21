@@ -1,0 +1,8 @@
+data=
+1	0
+田代　　達也	3.80	0.19	3.5	６		IP	転		IP	３		IP	１		IP	５		IP	３	2	IP	５		IP	６		IP	５		IP	２		IP
+亀本　　勇樹	5.00	0.16	3.3	４		IP	４		IP	５		IP	３		IP	３		IP	４		IP	２		IP	４		IP	２		IP	４		IP
+岩永　　節也	4.30	0.16	2.9	４		IP	１		IP	５		IP	２		IP	６		IP	４		IP	５		IP	５		IP	２		IP	５		IP
+寳田　　亮治	1.90	0.23	4.2	５		IP	６		IP	５		IP	５		IP	６		IP	４		IP	５		IP	６		IP	５		IP	５		IP
+野口　　勝弘	6.20	0.15	2.7	５		IP	４		IP	１		IP	４		IP	３		IP	４		IP	３		IP	３		IP	２		IP	１	4	IP
+青木　幸太郎	2.20	0.15	3.8	５		IP	６		IP	５		IP	５		IP	４		IP	３		IP	６		IP	６		IP	５		IP	６		IP

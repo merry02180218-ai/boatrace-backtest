@@ -1,0 +1,8 @@
+data=
+1	0
+下出　　卓矢	8.90	0.15	2.5	３		G2	１		G2	１		G2	１		IP	５		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+山田　　晃大	5.90	0.14	3.0	６		G2	２		IP	３		IP	４		IP	５		IP	１		IP	４		IP	６	3	IP	１	3	IP	１		IP
+金子　　　萌	8.10	0.13	2.4	４		IP	４		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	４		IP	１		IP
+南野　　利騰	4.10	0.16	2.2	２		IP	４		IP	６		IP	３		IP	５		IP	４		IP	４	5	IP	２		IP	５		IP	５		IP
+馬野　　　耀	5.33	0.13	2.8	欠		IP	３		IP	５		IP	３		IP	５		IP	３		IP	３		G2	２		G2	３		IP	４		IP
+君島　　秀三	4.50	0.16	3.0	２		IP	３		IP	５		G3	４		IP	４		IP	４		IP	３		IP	４		IP	５		G1	４		IP

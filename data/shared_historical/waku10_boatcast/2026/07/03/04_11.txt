@@ -1,0 +1,8 @@
+data=
+1	0
+井本　　昌也	9.30	0.13	3.0	１		IP	１		IP	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+瓜生　　正義	8.40	0.12	2.9	２		SG	５		G1	２		G1	２		G1	２		G1	３		SG	３		G1	１		IP	２		IP	１	3	G1
+羽野　　　諒	4.78	0.14	2.4	４		IP	５		IP	６		IP	５		IP	落		IP	２		IP	２		IP	３		IP	４		G3	２		IP
+松井　　洪弥	5.80	0.11	2.8	４		IP	２		IP	２		IP	３		IP	２		IP	４	5	IP	４		IP	３		IP	５		G1	４		G1
+森定　　晃史	4.60	0.18	3.5	５		IP	５		IP	５		IP	４		IP	２		IP	２		IP	５		IP	５		IP	１		IP	３		IP
+新田　　智彰	4.10	0.20	4.2	３		IP	５		IP	５		G3	５		IP	４		IP	６		IP	３	5	IP	５		IP	２		IP	２	5	IP

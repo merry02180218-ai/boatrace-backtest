@@ -1,0 +1,8 @@
+data=
+1	0
+荒木　　颯斗	8.30	0.10	1.8	１	2	G3	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	６		G3	４		IP	１		IP
+小林　　孝彰	5.40	0.14	3.5	４	3	G3	１		IP	５		IP	２		IP	２		IP	５		IP	２		IP	２		IP	５		IP	５		IP
+石渡　翔一郎	4.20	0.15	2.6	欠		G3	５		IP	３		IP	３		IP	６		IP	１		IP	６		IP	５		IP	４		IP	１		IP
+仲道　　大輔	5.33	0.15	3.1	３		G3	５		IP	４		IP	２	3	IP	３	5	IP	４		IP	転		IP	４		IP	２		IP	３		IP
+畑田　　汰一	6.00	0.14	3.1	６		G3	３		IP	１		IP	３		IP	６		G2	４	4	G2	４		IP	１	4	IP	２		IP	２		IP
+生方　　靖亜	4.00	0.20	4.8	４		G3	５		IP	３		IP	５		IP	４		IP	６		IP	６		IP	３		IP	２		IP	３		IP

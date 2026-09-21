@@ -1,0 +1,8 @@
+data=
+1	0
+鳥居塚　嶺王	10.00	0.11	1.5	１		IP	１		IP																								IP
+吉島　　祥之	4.20	0.22	4.7	４		IP	３		IP	６		IP	４		IP	３		IP	４		IP	２		IP	Ｆ	1	IP	６		IP	２		IP
+松田　　祐季	6.22	0.15	3.6	６		IP	２		IP	２		G1	２		IP	３		IP	落		IP	１		IP	４		IP	４		IP	４		G1
+野田　　亜湖	1.00	0.26	5.5	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		G3	６		G3	６		G3
+豊田　　祥生	2.70	0.16	3.1	４		IP	５		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	２		IP	３		IP
+山崎　　裕司	2.20	0.21	4.1	５		IP	５		IP	４	5	IP	６		IP	５	5	IP	６		IP	６		IP	４		IP	６		IP	５		IP

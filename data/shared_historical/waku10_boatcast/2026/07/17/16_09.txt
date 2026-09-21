@@ -1,0 +1,8 @@
+data=
+1	0
+大庭　　元明	8.20	0.14	3.2	１		IP	５		IP	１		IP	２		IP	４		IP	１		IP	１		IP	２		IP	１		IP	１		IP
+荒井　　翔伍	5.70	0.14	2.8	３		IP	３		IP	１		IP	４		IP	３		IP	５		IP	３		IP	２		G2	４		IP	４		IP
+池田　　雄祐	5.50	0.18	2.8	５		G3	５		G3	２	4	G3	３		IP	５		IP	１		IP	６		IP	２		IP	３		IP	１		IP
+金子　　猛志	3.90	0.14	3.3	６		IP	３		IP	５	5	G3	６		G3	４		IP	５		IP	４		IP	１	5	IP	２		IP	６		IP
+原村　　拓也	3.10	0.18	4.5	５	6	IP	４		IP	５		IP	５		IP	５	6	IP	５		IP	３		IP	６		IP	３		IP	４		IP
+三木　　晴斗	3.10	0.20	4.2	６		IP	５		IP	４		IP	６		IP	５		IP	４		IP	４		IP	１		IP	５		IP	６		IP

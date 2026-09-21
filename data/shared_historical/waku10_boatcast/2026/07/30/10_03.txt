@@ -1,0 +1,8 @@
+data=
+1	0
+下出　　卓矢	9.10	0.15	2.6	１		IP	１		IP	１		IP	３		G2	１		G2	１		G2	１		IP	５		IP	１		IP	１		IP
+佐竹　　太一	6.40	0.19	3.9	５		IP	３		IP	２		G3	４		G3	３		IP	３		G3	１		IP	４		IP	２		IP	１		IP
+向後　　龍一	7.40	0.15	3.0	４		IP	４		G3	２		IP	１		IP	１		IP	２		IP	４		IP	２		IP	１		G2	４		G2
+安田　　吉宏	6.80	0.16	3.2	１		IP	２		IP	３		IP	４		IP	３		IP	２	5	IP	３		IP	１		IP	４		IP	３		IP
+諏訪　　玲奈	3.70	0.18	3.7	６	6	IP	３		IP	４		IP	４		IP	４		IP	１		IP	４		IP	５		IP	６		IP	６		IP
+向所　　浩二	3.00	0.17	3.8	５	4	IP	６		IP	５	5	IP	４		IP	５		IP	４		IP	４		IP	６		IP	５		IP	２		IP

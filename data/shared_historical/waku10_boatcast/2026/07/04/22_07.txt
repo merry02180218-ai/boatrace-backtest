@@ -1,0 +1,8 @@
+data=
+1	0
+齊藤　　　仁	8.70	0.16	4.1	１		IP	１		G3	３		G3	１		G3	１		G1	４		IP	１		IP	１		IP	３		IP	１		IP
+前出　　達吉	6.20	0.15	3.1	５		IP	３		IP	５		IP	３		IP	２		IP	２	3	IP	３		IP	２		G3	２		IP	２		IP
+武田　　正紀	4.50	0.15	2.7	３		IP	６		IP	６		IP	４		IP	６		IP	１		IP	３		IP	５		IP	３	2	IP	２		IP
+藤原　　孝斗	3.10	0.20	3.6	４		IP	６	5	IP	５		IP	３		IP	５		IP	２	5	IP	４		IP	６		IP	６		IP	５	6	IP
+田中　　大輝	1.22	0.21	5.0	５	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP			IP
+佐藤　　世那	2.70	0.19	4.1	６		IP	５		IP	６		IP	転		IP	３		IP	６		IP	４		IP	５		IP	５		IP	２		IP

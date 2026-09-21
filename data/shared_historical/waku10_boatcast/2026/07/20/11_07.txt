@@ -1,0 +1,8 @@
+data=
+1	0
+武田　　正紀	6.20	0.13	3.0	１		IP	２		IP	３		IP	２		IP	５		IP	２		IP	２		IP	２		IP	５		IP	５		IP
+安藤　　裕貴	3.80	0.16	3.3	３		IP	５		IP	４		IP	４		IP	３		IP	２		IP	４		IP	６		IP	５		IP	６		IP
+久富　　政弘	6.80	0.13	2.6	３		IP	１		IP	５	5	IP	３		IP	３		IP	１		IP	３		IP	２		IP	３		IP	２		IP
+川合　　理司	2.40	0.14	4.2	４		IP	５		IP	５	5	IP	６	6	IP	６	5	IP	６	6	IP	５		IP	６		IP	４		IP	３		IP
+夏山　　亮平	2.40	0.14	3.6	５		IP	２		IP	６		IP	５		IP	５		G3	６		G3	６		IP	４		IP	５		IP	６		IP
+篠崎　　元志	5.40	0.18	3.8	３		IP	４		G3	１	5	G3	６		SG	４		IP	６		SG	４		SG	２	4	IP	３		IP	４	4	IP

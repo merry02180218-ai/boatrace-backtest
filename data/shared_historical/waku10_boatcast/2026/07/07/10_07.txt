@@ -1,0 +1,8 @@
+data=
+1	0
+西田　　　靖	7.10	0.16	2.9	２		IP	１		IP	１		IP	６		IP	２		IP	３		IP	１		IP	４		IP	４		IP	１		G3
+中村　　　真	7.20	0.16	2.8	１		G3	２		G3	２		IP	４		IP	２		IP	３		IP	２		IP	１		IP	３		IP	４		IP
+堂原　　洋史	4.00	0.16	3.0	４		IP	１		IP	６		IP	３		IP	３		IP	４		IP	６		IP	５		IP	転		IP	５	4	IP
+富山　　弘幸	5.00	0.18	3.4	６		IP	４		G3	３		G3	６		IP	２		IP	５		IP	２		IP	３		IP	２		IP	３		IP
+飯山　　晃三	3.50	0.21	5.0	５		IP	６		IP	５	6	IP	５		IP	６		IP	２		IP	５		IP	６	6	IP	２		IP	２		IP
+田頭　　　実	5.00	0.18	3.8	４	2	IP	４	2	G3	１	2	G3	２	2	IP	３	2	IP	６	2	IP	５	2	IP	１	2	IP	４	2	IP	６	2	IP

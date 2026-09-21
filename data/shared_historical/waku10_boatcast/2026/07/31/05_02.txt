@@ -1,0 +1,8 @@
+data=
+1	0
+泉　　　具巳	5.60	0.20	3.6	２		IP	６		IP	５		IP	１		IP	２		IP	２		IP	１		IP	Ｆ		IP	２		IP	６		IP
+泥谷　　一毅	7.20	0.15	3.6	２		IP	４		IP	２		IP	５		IP	２		IP	２		IP	１		IP	３		IP	２		IP	１		IP
+長谷川　晴哉	6.70	0.16	4.0	３		G3	１		G3	３		IP	１		IP	１		IP	５		IP	２		IP	３		IP	６		IP	２		IP
+今泉　　友吾	7.80	0.19	4.1	３		G2	２		IP	１		IP	３		IP	２		G1	４		G1	３	5	IP	２		IP	２		IP	１		IP
+藤田　　康生	3.60	0.13	2.8	４		IP	３	6	IP	５		IP	２		IP	３		IP	６		IP	４		IP	５		IP	６		IP	５		IP
+吉田　慎二郎	4.70	0.18	4.1	６		IP	２		IP	Ｆ		IP	２		IP	６		IP	６		IP	３		G3	３		IP	２		IP	４		IP

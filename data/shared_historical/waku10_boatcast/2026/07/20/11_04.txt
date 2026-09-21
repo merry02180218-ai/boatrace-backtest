@@ -1,0 +1,8 @@
+data=
+1	0
+佐竹　　太一	6.30	0.17	2.9	１		IP	３		G3	３		IP	６		IP	４		G3	４		IP	１		IP	１		IP	５		IP	１		IP
+國弘　　翔平	4.60	0.14	2.6	４		IP	３		IP	３		IP	３		IP	３		IP	２		IP	４		IP	５		IP	４		IP	妨		IP
+麻生　　慎介	6.20	0.12	2.0	１		IP	１		IP	５		IP	３		IP	２		IP	５		IP	３		IP	２		IP	３		IP	４		IP
+杉山　　勝匡	4.30	0.15	3.2	４	5	IP	５		IP	３		IP	５		IP	Ｆ		IP	１		IP	３		IP	１	5	IP	６	6	IP	５		IP
+高村　　　諒	2.90	0.12	2.2	６		IP	３		IP	４	6	IP	５		IP	２	6	IP	５		IP	５		IP	５		IP	６	6	IP	６		IP
+松村　　康太	4.00	0.18	4.2	５		IP	４		IP	４		IP	４		IP	５		IP	４		IP	２		IP	３		IP	３	4	IP	エ	5	IP

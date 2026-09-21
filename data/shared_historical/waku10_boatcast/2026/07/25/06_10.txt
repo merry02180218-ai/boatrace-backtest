@@ -1,0 +1,8 @@
+data=
+1	0
+福田　　雅一	8.70	0.15	4.1	１		G3	１		IP	２		IP	１		IP	１		IP	２		IP	６		IP	１		IP	１		IP	１		IP
+石丸　　海渡	7.50	0.13	2.9	１		IP	２		IP	２		G1	３		IP	２		IP	５		IP	２		IP	５		G1	２		G1	１		IP
+土屋　　太朗	4.90	0.15	3.5	３		IP	３	4	IP	３		IP	２		IP	４		IP	６		IP	５		IP	３	2	IP	４		IP	３		IP
+清水　　攻二	5.20	0.18	4.0	３		IP	３		IP	４		IP	３		IP	５		IP	４		IP	３		IP	３		IP	２		IP	４		IP
+濱崎　　直矢	4.50	0.19	3.6	３		IP	転		IP	２		IP	６		IP	６	6	IP	２		IP	３		IP	６		IP	２		IP	４		IP
+村松　　遥輝	2.30	0.19	3.9	４	5	G3	６		IP	５		IP	６		IP	４		IP	６		IP	６		IP	４		IP	６		IP	４		IP

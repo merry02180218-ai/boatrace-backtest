@@ -1,0 +1,8 @@
+data=
+1	0
+濱崎　　直矢	9.40	0.14	2.7	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	１	2	SG	１		IP	１		IP
+胡本　　悟志	4.50	0.18	3.4	２		IP	４		IP	１		IP	５		IP	５		IP	５		G3	６		G3	３		IP	４		IP	３		IP
+山下　　心一	2.00	0.19	3.9	３	4	G3	５		IP	６		IP	３		IP	６		IP	６		IP	妨		IP	６		IP	６		IP	６		IP
+田中　信一郎	6.80	0.13	2.2	１		IP	４		IP	１		IP	２		IP	３		IP	１		IP	１		IP	３		IP	５		IP	６		G1
+村松　　遥輝	4.10	0.14	2.1	３		G3	２		G3	３		IP	５		IP	５		IP	５		IP	５		IP	２		IP	４	6	IP	６		IP
+渡辺　　真至	2.80	0.14	4.2	３		IP	４		IP	６		IP	６		IP	６		IP	５		IP	４		IP	４		IP	６		IP	４		IP

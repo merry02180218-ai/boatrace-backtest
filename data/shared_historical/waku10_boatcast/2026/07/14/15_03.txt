@@ -1,0 +1,8 @@
+data=
+1	0
+川上　　聡介	7.30	0.15	2.4	１		IP	２		IP	６		IP	２	2	IP	１		IP	３		IP	１		IP	Ｆ		IP	１		IP	１		IP
+荒川　　健太	6.60	0.13	2.7	３		IP	２		IP	３		IP	２		IP	４		IP	５		G3	３		IP	２		IP	２		IP	１		IP
+豊田　　泰洋	2.40	0.17	3.4	６		IP	４		IP	５		IP	５	5	IP	５		IP	６	4	IP	４		IP	４		IP	５		IP	５		IP
+長谷川　親王	2.20	0.19	5.0	３		IP	５		IP	６		IP	６		G3	５		G3	５		IP	５		IP	５		IP	５		IP	５	5	IP
+石岡　　将太	3.70	0.16	3.3	４		IP	５		IP	４		IP	５		IP	６		IP	３		IP	５		IP	４		IP	３		IP	３		IP
+日高　龍之介	2.70	0.19	3.6	６		IP	３		IP	３		IP	６		IP	６		IP	６		IP	２		IP	６		IP	６		IP	６		IP

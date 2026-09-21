@@ -1,0 +1,8 @@
+data=
+1	0
+坪井　　康晴	7.50	0.11	2.3	５		IP	１		IP	１		IP	１		IP	１		IP	３		G2	１		IP	２		IP	５		G2	４		G2
+瓜生　　正義	8.40	0.14	3.3	２		G2	１		IP	１		IP	２		SG	５		G1	２		G1	２		G1	２		G1	３		SG	３		G1
+権藤　　俊光	7.10	0.13	2.5	１		IP	５		IP	１		IP	１		IP	２		IP	３		G2	１		G2	５		IP	６		IP	１	4	IP
+稲田　　浩二	5.40	0.10	1.5	６		G2	５		G2	２		G2	５		IP	１		IP	６		G1	４		IP	３		G1	２		IP	３		IP
+丸野　　一樹	8.40	0.08	2.1	１		G2	３		SG	６		G1	２		G1	１		SG	３		G1	３		G1	１		IP	２		IP	１		IP
+仲谷　　颯仁	5.60	0.18	3.9	５		IP	３	5	G2	３		SG	６		SG	５		IP	４		SG	４		G1	５		G1	１	5	IP	１	5	IP

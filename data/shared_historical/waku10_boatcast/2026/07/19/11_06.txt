@@ -1,0 +1,8 @@
+data=
+1	0
+泉　　　啓文	5.60	0.17	4.6	６		IP	３		IP	４		IP	６		G3	１		IP	３		IP	１		IP	４	2	IP	２		IP	３		IP
+平石　　和男	7.20	0.19	5.0	４		IP	１		G3	３		G3	３		IP	１		IP	４		IP	２		IP	１		IP	３		IP	２		IP
+早川　　尚人	4.11	0.16	3.1	２		IP	５		IP	３		IP	５		IP	３		IP	転		IP	６	4	IP	３		IP	５		IP	４		IP
+夏山　　亮平	3.70	0.18	4.0	６		IP	２		IP	６		IP	５		G3	６	5	G3	５		IP	４		IP	２		IP	４		IP	３		IP
+麻生　　慎介	6.20	0.11	1.6	１		IP	４	6	IP	４		IP	４	4	IP	３		IP	４		IP	４		IP	３		IP	１		IP	１		IP
+高村　　　諒	2.20	0.15	3.3	６		IP	６		IP	３		IP	５		IP	５		IP	５		IP	６		IP	５		IP	４		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+川合　　理司	4.50	0.12	3.0	５		IP	６		IP	５		IP	３		IP	１		IP	４		IP	３		IP	２		IP	５		IP	４		IP
+佐々木　翔斗	4.80	0.15	3.3	４	1	IP	５		IP	３		IP	４		IP	１		IP	５		IP	４		IP	１		IP	４		IP	６		G2
+山地　　正樹	6.80	0.13	3.0	４		IP	３		IP	３		IP	２		IP	４		IP	１		IP	２		IP	４		IP	３		IP	１		IP
+渡辺　　真至	4.50	0.11	2.8	４		IP	５		IP	４		IP	６	5	IP	２		IP	Ｆ		IP	２		IP	４		IP	３		IP	２		IP
+佐藤　　　旭	4.20	0.17	4.8	５		IP	４		IP	３		IP	６	6	IP	４		IP	２		IP	６		G3	４	6	IP	２		IP	４		IP
+岩橋　　裕馬	2.70	0.17	3.5	４		IP	３		IP	４		IP	６		G3	６	5	IP	６		IP	５		IP	５		IP	４		IP	５		G3

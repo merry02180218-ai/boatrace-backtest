@@ -1,0 +1,8 @@
+data=
+1	0
+下河　　雅史	6.67	0.16	3.4	１		IP	４		IP	５		IP	１		IP	５		IP	エ		IP	１		IP	１		IP	１		IP	５		IP
+上野　　俊樹	5.90	0.15	3.2	２	4	G3	３		IP	６		IP	３		IP	転		IP	２		IP	１		IP	１		IP	５		G3	２		G3
+高倉　　和士	7.00	0.10	2.2	３	4	G3	１		IP	２		IP	１		IP	５		G1	４		IP	２		IP	２		IP	５		G1	２		G1
+長尾　京志郎	4.90	0.15	3.2	６		IP	２		IP	３		IP	２		IP	３		IP	５		IP	３		IP	３		IP	エ	6	IP	３		IP
+丸山　　祐也	2.70	0.24	4.8	６		IP	３		IP	６	6	IP	４		IP	６		IP	５		IP	５		IP	４		IP	５		IP	４		IP
+田中　　京介	4.30	0.15	4.0	６		IP	６	5	IP	６		IP	３	5	IP	２	5	IP	５		G3	４	5	IP	３		IP	４		IP	１		IP

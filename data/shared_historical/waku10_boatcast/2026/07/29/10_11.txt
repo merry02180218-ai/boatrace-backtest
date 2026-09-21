@@ -1,0 +1,8 @@
+data=
+1	0
+安田　　吉宏	5.40	0.15	2.8	４		IP	１		IP	１		IP	５		IP	１		IP	２		IP	３		IP	６		IP	６		IP	５		IP
+中島　　昂章	6.20	0.22	4.5	４		G3	６		G3	１		IP	２		IP	１	1	IP	６		IP	３		IP	１		IP	３		IP	３		IP
+吉川　　貴仁	6.50	0.12	2.5	２		IP	２		IP	転		IP	１		IP	２		IP	２		IP	５		IP	２		IP	６		IP	１		IP
+島田　　賢人	5.60	0.15	3.2	３	5	G2	１		IP	５		IP	６		IP	５		IP	３		IP	４		IP	１		IP	１		IP	５		IP
+村松　　将平	3.30	0.16	2.8	５		IP	４		IP	５		IP	６		IP	Ｆ	6	IP	５		IP	２		IP	３		IP	２	6	IP	Ｆ		IP
+野村　　　誠	4.30	0.15	2.7	４		IP	３		IP	３		IP	３		IP	４		IP	６	5	IP	４		IP	６		IP	６		IP	１		IP

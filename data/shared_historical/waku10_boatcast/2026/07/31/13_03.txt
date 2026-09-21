@@ -1,0 +1,8 @@
+data=
+1	0
+水野　　望美	7.80	0.17	3.3	１		IP	５		IP	２		IP	４		IP	３		IP	１		IP	１		G3	１		IP	１		IP	２		IP
+後藤　　翔之	7.30	0.13	2.2	３		IP	３		IP	２		IP	２		IP	２		IP	２		IP	１		IP	２		IP	３		IP	４		IP
+小澤　　和也	2.90	0.15	3.1	２		IP	５		IP	２		IP	４		IP	６		IP	６		IP	Ｆ	1	IP	５	2	IP	５		IP	６		IP
+奈須　　啓太	6.00	0.13	1.8	１	2	IP	１		IP	６		IP	３		IP	４		IP	３		IP	２		G3	６	5	G3	３		IP	２		IP
+藤本　　遼磨	1.86	0.24	4.3	５	6	IP	５	6	IP	４	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP									IP
+重木　　輝彦	5.60	0.21	5.0	５		IP	３		IP	４		IP	４		IP	２		IP	２		IP	４		IP	３		G1	４		G1	３		G1

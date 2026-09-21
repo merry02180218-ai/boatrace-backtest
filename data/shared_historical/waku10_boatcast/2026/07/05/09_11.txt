@@ -1,0 +1,8 @@
+data=
+1	0
+古結　　　宏	9.50	0.15	2.8	１		IP	１		IP	２		IP	２		IP	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+石野　　貴之	5.40	0.11	2.1	Ｆ		SG	３		G1	５		SG	５		G1	３		IP	１		IP	６		IP	４		G1	１	1	G1	３		G1
+樅山　　拓馬	5.30	0.14	1.7	２		IP	１		IP	４		IP	２		IP	４		IP	４		IP	５	4	IP	４		IP	２		IP	６		IP
+岡瀬　　正人	6.00	0.16	4.7	３		IP	２		IP	４		IP	３	5	IP	４	5	IP	２		IP	３		IP	４		IP	３		IP	２	3	IP
+加藤　　啓太	3.30	0.19	3.3	４		IP	４		IP	４		IP	２		IP	６		IP	３		IP	５		IP	６		IP	６		IP	５		IP
+松井　　賢治	4.10	0.17	4.0	５		IP	５		IP	４		IP	３		IP	６		IP	３		IP	２		IP	４		IP	３		IP	５		IP

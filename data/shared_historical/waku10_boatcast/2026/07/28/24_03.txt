@@ -1,0 +1,8 @@
+data=
+1	0
+天野　　　誠	5.60	0.18	3.3	３		IP	５		IP	１		IP	２		IP	５		IP	１		IP	５		IP	５		IP	４		IP	１		IP
+深川　麻奈美	6.60	0.13	2.7	１	3	IP	１		IP	２		IP	２		IP	２		IP	２		IP	５		IP	６		IP	６		G2	２		G2
+岡谷　　健吾	6.10	0.15	3.8	４		IP	２		IP	２	2	IP	４		IP	６	4	IP	５		IP	２		IP	１		IP	３		IP	１		IP
+中村　　魁生	6.70	0.12	2.9	４		G3	３		G3	Ｆ		G3	３		IP	２		IP	１	3	IP	１		IP	３		IP	３		IP	１		IP
+土井　　歩夢	4.80	0.12	1.8	２		G3	６		G3	３		IP	５		IP	３		IP	６		IP	２		IP	５		IP	２		IP	４		IP
+西野　　雄貴	5.50	0.22	3.0	６	5	IP	２		IP	５	5	IP	１		IP	４		IP	４		IP	３		IP	３	5	IP	２		IP	３		IP

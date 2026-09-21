@@ -1,0 +1,8 @@
+data=
+1	0
+柘植　　政浩	9.60	0.17	3.5	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP
+小野　　信樹	4.20	0.18	3.1	２		IP	３	4	IP	３		IP	６		IP	４		IP	４		IP	５		IP	５		IP	２		IP	６		IP
+岡崎　　凪汰	3.00	0.17	3.9	５		IP	４		IP	６		IP	５		IP	４		IP	４		IP	５		IP	５		IP	６		IP	２		IP
+下條　雄太郎	5.00	0.13	3.9	３		IP	３		IP	５		G2	５		G2	４		G1	４		IP	２		IP	５		G1	３		G1	４		G1
+高田　　　綾	2.60	0.17	4.1	６		IP	３		IP	３		IP	６		IP	６	4	IP	６		IP	５		IP	３	6	IP	６		IP	６		IP
+細川　　明人	1.60	0.19	4.6	４		IP	４		IP	６		IP	６		IP	６	5	IP	６		IP	６	4	IP	６		IP	６		IP	６		IP

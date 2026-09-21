@@ -1,0 +1,8 @@
+data=
+1	0
+武富　　智亮	9.30	0.12	2.4	２		IP	２		IP	１		G2	１		G2	３		G2	１		IP	１		IP	１		IP	１		IP	２		IP
+藤山　　雅弘	6.10	0.16	2.8	５		IP	２		IP	４		IP	６		IP	１		IP	３		IP	４	4	IP	２		IP	１		IP	２		IP
+川上　　清人	4.40	0.17	3.3	４	4	IP	３		IP	５		IP	１		IP	６		IP	４	4	IP	２		IP	６	4	IP	５		IP	３		IP
+加藤　　政彦	5.50	0.15	3.2	６		IP	４		IP	３		IP	４	5	IP	２		IP	２		IP	１		IP	５		IP	４		IP	２		IP
+坂口　　　周	5.50	0.15	3.1	３		G3	２		IP	２		IP	４		IP	６		G2	５		G2	２		G3	４		G3	５		IP	１		IP
+中野　　夢斗	4.10	0.20	3.6	６	5	IP	４		IP	３		IP	４		IP	４		IP	５		IP	６	5	IP	３		IP	２	5	IP	４		IP

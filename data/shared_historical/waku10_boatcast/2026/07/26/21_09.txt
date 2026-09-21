@@ -1,0 +1,8 @@
+data=
+1	0
+上野　　俊樹	6.00	0.18	2.8	５		IP	１		IP	２		G3	２		G3	４		IP	１	2	IP	１		IP	Ｆ		IP	４		IP	４		IP
+浜先　　真範	6.20	0.12	2.4	５		IP	２		IP	３		IP	１		IP	３		IP	１		IP	４		G1	６		G1	４		IP	２		IP
+眞崎　　武蔵	3.90	0.20	4.0	１		IP	４		IP	欠		IP	２		IP	５		IP	６		IP	２		IP	４		IP	６		IP	６		IP
+岡崎　　凪汰	3.50	0.13	2.9	５		IP	５		IP	１		IP	５		IP	妨		IP	４		IP	２		IP	５		IP	６	6	IP	４	3	IP
+森　　　竜也	2.80	0.17	3.4	５	4	IP	４	4	IP	６	3	IP	４	3	IP	５		IP	２		G3	６		G3	６		IP	６		IP	４		IP
+柘植　　政浩	4.70	0.16	1.9	４		IP	３		IP	４	5	IP	４		IP	５		IP	４	5	IP	３		IP	２		IP	２		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+乃村　　康友	6.00	0.17	3.4	２		IP	３		IP	３		IP	Ｆ		IP	１		IP	２		IP	３		G3	４		IP	５		IP	１		IP
+古川　　誠之	6.30	0.14	2.2	４		IP	１		IP	３		IP	４		G3	２		G3	１		G3	６		IP	５		IP	３		IP	１	3	IP
+滝沢　　　崚	3.10	0.19	3.5	６		IP	６		IP	３		IP	６	5	IP	６		IP	６		IP	５	5	IP	４		IP	３		IP	２		IP
+栗原　　一馬	3.30	0.16	2.7	４		IP	４		IP	１		IP	５		IP	５	5	IP	６	6	IP	５	5	IP	５	5	IP	５		IP	４		IP
+谷口　　知優	4.10	0.14	3.7	５		IP	４		IP	２		IP	５		G3	３		G3	３		IP	４		IP	４	4	IP	６		IP	４		IP
+西山　　　育	1.40	0.18	4.1	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	４		IP	６		IP	６		IP

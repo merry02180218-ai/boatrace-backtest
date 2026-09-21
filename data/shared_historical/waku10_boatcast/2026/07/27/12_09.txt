@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　礼央	7.00	0.14	2.8	１		IP	２		IP	転		IP	１		IP																		IP
+鈴谷　　一平	7.00	0.13	2.9	１		IP	３		IP	６		IP	１		IP	１		IP	３		G1	３		IP	２		IP	４		IP	２		IP
+石川　　哲秀	4.30	0.13	3.1	２		IP	５		IP	６	4	IP	４		IP	６		IP	５		IP	２		IP	２		IP	６		IP	２		IP
+池田　　雄一	5.30	0.17	3.6	２		IP	３		IP	３		IP	６		IP	６		IP	６		IP	３		IP	３		IP	２		IP	１		IP
+渡邉　　　健	2.00	0.14	3.0	５		IP	６		IP	３		IP	４		IP	６		IP	６		IP	５		IP	６		IP	６		G3	６	6	G3
+大西　　　賢	3.67	0.28	5.0	３		IP	３		IP	６		IP	４		IP	４		IP	転		IP	６		IP	４		IP	６		IP	３		IP

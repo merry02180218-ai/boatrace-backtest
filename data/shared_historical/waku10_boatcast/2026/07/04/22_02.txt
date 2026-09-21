@@ -1,0 +1,8 @@
+data=
+1	0
+武田　　正紀	6.00	0.14	3.1	２		IP	５		IP	２		IP	２		IP	２		IP	５		IP	５		IP	３		IP	２		IP	２		IP
+東　　　潤樹	6.20	0.19	5.1	２		IP	２		G3	３		G3	４		IP	２		IP	３		IP	５		G3	４		IP	１		IP	３		IP
+日笠　　勝弘	3.30	0.16	3.4	５		IP	３		IP	６		IP	４		IP	３		IP	５		IP	４		IP	４		IP	５		IP	５		IP
+石田　　章央	4.60	0.15	3.8	３		IP	２		IP	２		IP	１		IP	６		IP	５		IP	４		IP	４		IP	５		IP	６		IP
+竹内　　　来	2.60	0.17	3.0	５		IP	５		IP	６		IP	６		IP	３	6	IP	５		IP	６		IP	４		IP	３		IP	６		IP
+中岡　　　駿	1.70	0.14	3.7	６		IP	６		IP	６		IP	６		IP	４		IP	６		IP	４		IP	６		IP	５		IP	６		G3

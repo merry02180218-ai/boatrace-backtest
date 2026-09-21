@@ -1,0 +1,8 @@
+data=
+1	0
+加藤　　啓太	6.33	0.12	1.9	２		IP	２		IP	１		IP	欠		IP	１		IP	６		IP	５		IP	２		IP	２		IP	５		IP
+八木　　治樹	5.10	0.18	2.7	１		IP	３		IP	３		IP	２		IP	４		IP	３		IP	４		IP	５		IP	４		IP	６		IP
+広瀬　　聖仁	4.60	0.12	2.3	２		IP	５		IP	４		IP	４		IP	４		IP	１		IP	２		IP	５		IP	５		IP	５		IP
+小山　　　勉	8.30	0.13	3.3	１		IP	２		IP	１		IP	４		IP	１	5	IP	１		IP	３	6	IP	２		IP	２		IP	２		IP
+田中　　辰彦	5.20	0.16	3.0	３		IP	３		IP	２		IP	５		IP	４		IP	５		IP	３		IP	３		IP	４		IP	２	4	IP
+今村　天次朗	1.60	0.12	1.7	４		IP	６		IP	５		IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP

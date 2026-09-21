@@ -1,0 +1,8 @@
+data=
+1	0
+胡本　　悟志	6.20	0.14	3.5	５		IP	１		IP	２		IP	２		IP	４		G3	５		IP	１		IP	１		IP	４		IP	４		IP
+丸岡　　正典	7.90	0.14	3.7	２		G2	２		G2	２		G2	２		G2	１		IP	２		G2	４		IP	２		IP	３		IP	４		IP
+山田　　　丈	6.22	0.17	3.2	２		G2	５		G2	４		IP	１		IP	３		IP	１	4	IP	５		IP	４		IP	２		IP	落		IP
+大澤　　真菜	3.80	0.17	3.2	３		G3	５		IP	２		IP	６		IP	６		IP	４		IP	６		IP	６		IP	１		IP	４		IP
+藤田　　康生	2.90	0.13	2.9	５		IP	２		IP	３		IP	６		IP	４		IP	５		IP	６		IP	５		IP	６		IP	５	6	IP
+安河内　　将	5.20	0.14	3.2	３		IP	４		IP	４		IP	転		G2	２	3	IP	６		G3	３	5	IP	１	5	IP	１	4	IP	５		G1

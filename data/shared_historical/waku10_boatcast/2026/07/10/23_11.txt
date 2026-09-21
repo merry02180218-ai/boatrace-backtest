@@ -1,0 +1,8 @@
+data=
+1	0
+渡邉　　　翼	8.80	0.15	3.6	５		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	３		IP
+町田　　洸希	6.20	0.18	4.0	５		IP	２		IP	５	3	IP	２		IP	５		IP	２		IP	１	4	IP	１		IP	３		IP	３		IP
+永嶋　　裕一	4.30	0.19	3.1	６		IP	６		IP	２		IP	３		IP	４		IP	３		IP	２	2	IP	３		IP	５		IP	６		IP
+松尾　　　拓	6.60	0.12	2.4	６	5	IP	２		IP	１		IP	２		IP	５		IP	３		IP	１		IP	６	5	IP	２		IP	２		IP
+抹香　　雄三	3.80	0.14	3.5	３		IP	６		IP	４		IP	６		IP	４		IP	４		IP	５		IP	３		IP	３		IP	４		IP
+宮崎　　　奨	4.20	0.20	4.2	６		IP	６		IP	６		IP	４		IP	２		IP	６		IP	４		IP	１		IP	４		IP	３		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+鳥居塚　孝博	8.90	0.13	2.2	１		IP	３		IP	１		IP	１		G2	１		IP	１		IP	４		IP	１		IP	１		IP	２		IP
+森林　　　太	4.50	0.19	4.8	４		IP	３		IP	２		IP	５		IP	４		IP	２		IP	３		IP	５		IP	６		IP	４		IP
+飯山　　晃三	3.50	0.18	3.5	６		IP	３		IP	５		IP	５		IP	６		IP	４		IP	３		IP	６		IP	３		IP	３		IP
+岡部　　　哲	5.10	0.15	3.2	４		IP	３		IP	２		IP	５		IP	２		IP	６		IP	２		IP	２		IP	５		IP	４		IP
+富山　　弘幸	4.30	0.21	3.7	５		IP	５		IP	５		G3	２	4	G3	３		IP	４		IP	３		IP	３		IP	６		IP	３		IP
+佐々木　英樹	4.80	0.18	4.4	３		IP	２		IP	３		IP	４		IP	２	5	IP	６		G3	５		IP	６		IP	４		IP	２		IP

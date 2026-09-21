@@ -1,0 +1,8 @@
+data=
+1	0
+室田　　泰史	8.00	0.13	2.4	１		G3	１		IP	１		IP	４		IP	１		IP	３		IP	５		IP	２		IP	１		IP	１		IP
+坪口　　竜也	5.60	0.16	3.3	２		IP	２		IP	１	3	IP	３		G2	４		IP	４		IP	４	3	IP	６		IP	２		IP	５		IP
+石渡　　鉄兵	6.30	0.12	2.9	４		G2	３		SG	３		SG	２		IP	２	2	IP	３		IP	１		IP	６		G1	６		G1	３		IP
+中野　　和裕	2.50	0.15	3.0	４		IP	６		IP	６		IP	４		G3	２		IP	６		IP	６	5	IP	５		IP	５		IP	６		IP
+井田　　涼介	1.30	0.20	4.7	６		IP	６		IP	６		IP	５		IP	落		IP	５		IP	５		IP	５		IP	６		IP	６		IP
+片岡　　秀樹	2.70	0.15	3.2	４		IP	４		IP	６		IP	５		IP	４		IP	４		IP	６		IP	４		IP	６		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+高井　　駿弥	5.20	0.17	3.7	３		IP	５		IP	３		IP	４		IP	３		IP	６		IP	６		IP	２		IP	１		IP	２		IP
+西岡　　顕心	7.60	0.10	2.4	３		IP	１		IP	４		G1	４		SG	３		G2	１		G2	５		IP	１		G1	２		G1	２		G2
+小池　　哲也	4.60	0.16	3.7	５		IP	１		IP	３		IP	５		IP	１		IP	６		G2	５		IP	５		IP	４		IP	３		IP
+梶山　　涼斗	5.30	0.10	2.7	２	5	IP	２		IP	３		IP	５		IP	５		IP	１	5	G3	２		IP	３		IP	６		IP	５		IP
+大井　　清貴	4.70	0.17	3.2	２		IP	５		IP	４		IP	３		IP	２		IP	３	4	IP	４		IP	４	6	IP	４		IP	６		IP
+鈴木　　秀茉	4.80	0.17	3.7	３		IP	２		IP	４		IP	１	5	IP	６		IP	６		IP	３		IP	２		G3	６		IP	６		IP

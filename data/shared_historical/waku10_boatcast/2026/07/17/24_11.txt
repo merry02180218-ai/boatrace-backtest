@@ -1,0 +1,8 @@
+data=
+1	0
+森　　晋太郎	7.60	0.14	2.3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	５		IP	４		IP	Ｆ		IP	１		IP
+深川　　真二	5.30	0.13	3.3	３		IP	４		IP	２		IP	６		IP	２		IP	２		IP	６		IP	４		IP	３		IP	３		IP
+小林　　京平	5.50	0.17	4.4	１		IP	６		IP	４		IP	４		IP	１	4	IP	４		IP	５		IP	２		IP	５	2	IP	１		IP
+深井　　利寿	5.60	0.12	2.5	３		IP	２		IP	２		IP	３		G3	５		G3	３		G2	３		G2	４		IP	５		IP	３		IP
+山田　　亮太	5.00	0.14	3.1	３		IP	５		IP	２		IP	５		IP	４	6	IP	４		IP	５		IP	３		IP	４		G2	２		G2
+小林　　礼央	2.10	0.15	3.3	２		IP	６		IP	５		IP	６		IP	５		IP	６		IP	５		IP	６		IP	６		IP	５		IP

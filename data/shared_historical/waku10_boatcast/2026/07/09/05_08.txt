@@ -1,0 +1,8 @@
+data=
+1	0
+桑原　　将光	6.20	0.15	2.9	３		IP	Ｆ		IP	３		IP	３	2	G3	３		G3	１		IP	２		IP	５		IP	１		IP	２		IP
+間嶋　　仁志	4.10	0.19	4.4	５		IP	５		IP	４		IP	３		IP	５	1	G3	２		IP	５		IP	６	3	IP	２		IP	３		IP
+河合　　三弘	5.00	0.19	4.4	６		IP	４		IP	１		IP	５		IP	２		IP	１		IP	６		IP	２		IP	４		IP	５		IP
+森　　　弘行	4.50	0.14	2.7	３	3	IP	６		IP	３		IP	４	6	IP	３		IP	４		IP	２		IP	５		IP	５		IP	３		IP
+加藤　　高史	4.50	0.17	3.7	５	4	IP	２		IP	５		IP	４		IP	６		IP	２		IP	３		IP	３		IP	４		IP	４	6	IP
+成田　　華音	1.00	0.20	4.0	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

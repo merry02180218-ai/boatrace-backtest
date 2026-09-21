@@ -1,0 +1,8 @@
+data=
+1	0
+眞鳥　　章太	7.70	0.16	3.9	３		G2	３		IP	１		IP	１		IP	１		IP	２		IP	４		IP	５		IP	１		IP	１		IP
+西尾　　亮輔	3.60	0.12	3.3	５		IP	妨		IP	６		IP	５		IP	４		IP	１		IP	５		IP	６		IP	３		IP	２		IP
+梅木　　敬太	5.20	0.14	3.7	６		IP	５		IP	３	4	IP	２		IP	４		IP	６		IP	１		IP	４		IP	３		IP	１		IP
+松下　　誉士	4.00	0.17	4.5	５		IP	５	5	IP	３		IP	１	3	IP	４		IP	６		IP	４		IP	２		IP	６		IP	５		IP
+重成　　一人	3.60	0.14	3.6	５		G2	６	6	G2	５	6	IP	５	6	IP	２		IP	４	6	IP	６		IP	５		IP	６		G1	１		IP
+渡辺　　千草	2.50	0.18	3.8	４	4	IP	４		IP	６		IP	６		IP	６		IP	３		IP	５		IP	５		G3	５	5	G3	５	5	IP

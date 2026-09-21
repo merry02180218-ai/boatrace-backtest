@@ -1,0 +1,8 @@
+data=
+1	0
+長尾　京志郎	6.20	0.13	3.8	２		IP	２		IP	２		IP	６		IP	３		IP	６		IP	２		IP	１		IP	５		IP	１		IP
+森野　　正弘	7.10	0.15	2.5	２	1	G3	２		IP	２		IP	１		IP	３		G3	５		G3	１		IP	２		IP	３		IP	４		IP
+近江　　翔吾	5.70	0.17	3.7	４	4	G2	４		G2	２		IP	３		IP	４		IP	５		IP	２		IP	３		IP	２		IP	５		G1
+小倉　　康典	3.30	0.14	3.4	２		IP	６		IP	５		IP	６		IP	３		IP	６		IP	６		IP	１		IP	６		IP	５		IP
+大塚　　浩二	4.20	0.22	4.1	３	6	IP	４		IP	４		IP	６		IP	６		IP	４		IP	４		IP	２		IP	２		IP	５		IP
+坂井　　康嗣	1.80	0.16	3.1	６		IP	５		IP	５		IP	６		IP	６		IP	５	5	IP	５		IP	５	5	IP	４		IP	６		IP

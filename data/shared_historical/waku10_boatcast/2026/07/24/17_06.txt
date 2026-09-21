@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　将隆	8.20	0.11	2.2	１		G3	１		IP	５		IP	２		IP	２		IP	１		G3	２		IP	１		IP	２		IP	２		IP
+畑　　　和宏	7.00	0.15	2.4	１		IP	３		IP	３		IP	２		IP	２		IP	２		IP	３		IP	２		IP	３		IP	４		IP
+八木　　治樹	3.90	0.10	2.0	４		IP	５		IP	５		IP	５		IP	６		IP	１		IP	３		IP	４		IP	４		IP	４		IP
+長谷川　雅和	4.50	0.16	2.8	５		IP	３		IP	１		IP	３		IP	５		IP	３	5	IP	６	5	IP	５		IP	４		IP	３		IP
+里岡　　右貴	5.90	0.13	2.2	３		IP	３	4	IP	４		IP	１		IP	２		IP	３		IP	４		IP	２		IP	６		IP	３		IP
+瀬川　　大地	2.50	0.16	3.4	４	5	IP	５		IP	Ｆ		IP	４		IP	５		IP	５		IP	６		IP	４		IP	４		IP	５		IP

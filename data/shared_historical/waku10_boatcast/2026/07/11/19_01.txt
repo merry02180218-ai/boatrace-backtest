@@ -1,0 +1,8 @@
+data=
+1	0
+内田　　　圭	6.70	0.15	2.7	１		IP	２		IP	５		IP	４		IP	６		IP	１		IP	１		IP	４		IP	１		IP	２		IP
+酒見　　峻介	4.20	0.17	4.0	５		IP	３		IP	３		G2	４		G2	４		IP	５		IP	５		IP	５		IP	４		IP	２		IP
+亀本　　勇樹	4.10	0.17	3.1	４		IP	３		IP	２		IP	６		IP	５		IP	５		IP	４		IP	４		IP	５		IP	２		IP
+大田　　直弥	5.40	0.14	3.1	４		IP	１		IP	５		IP	１		IP	３		IP	６		IP	３		IP	２		IP	６		IP	３		IP
+山下　　智己	3.50	0.19	3.6	６		IP	６		IP	５		IP	２		IP	４		IP	５		IP	６		IP	５		IP	３		IP	２		IP
+照屋　　厚仁	4.30	0.15	3.6	４		IP	４		IP	３		G3	３		IP	３		IP	５		IP	２	5	IP	４		IP	５		IP	６		IP

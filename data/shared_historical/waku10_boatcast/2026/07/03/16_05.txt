@@ -1,0 +1,8 @@
+data=
+1	0
+宮之原　輝紀	9.70	0.13	1.9	１		G2	４		IP	１		IP	１		G1	１		IP	１		IP	２		IP	１		IP	１		G1	１		G1
+板橋　　侑我	6.20	0.15	3.4	２		IP	４		IP	１		IP	２		IP	５		G1	４		G1	６		G3	５		G1	１		G1	２		G1
+山田　　晃大	5.90	0.11	1.9	４		G2	２		IP	３		IP	４		IP	３		IP	６		IP	１		IP	１		IP	６		IP	２		IP
+小野　　生奈	6.20	0.15	3.4	２		G3	５		IP	５		IP	２		G3	３		G2	２		G2	３		G3	５		G3	２		G3	１		G3
+谷津　　幸宏	4.20	0.11	2.2	５		IP	３	4	IP	６		IP	３		IP	３		IP	２		IP	６		IP	５		IP	４		IP	３		IP
+末永　　由楽	3.80	0.13	3.8	６		G2	３		G2	４		IP	３	5	IP	６		G2	６		G2	５		G2	３		IP	５		IP	４		IP

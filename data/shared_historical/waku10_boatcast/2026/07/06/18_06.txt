@@ -1,0 +1,8 @@
+data=
+1	0
+坂井　　滉哉	7.20	0.18	3.5	３		IP	１		IP	１		IP	６		IP	１		IP	３		IP	２		IP	６		IP	１		IP	１		IP
+野末　　智一	6.60	0.21	4.0	１		IP	４	3	IP	３		IP	２		IP	４		IP	４		IP	２		IP	３		IP	１	1	IP	３		IP
+真庭　　明志	4.00	0.17	3.3	５		IP	５	2	G3	５	2	G3	５		IP	３		IP	６		IP	３		IP	２		IP	１		IP	６		IP
+牟田　　奨太	4.10	0.16	3.0	３	3	IP	２		IP	６	5	IP	３		IP	５		IP	６		IP	２		IP	３		IP	６		IP	５		IP
+尾崎　　雄二	3.80	0.14	3.3	６	6	G3	６		G3	４		IP	６		IP	６		IP	４		IP	１		IP	４		IP	４		IP	２		IP
+山口　　隼人	1.40	0.18	3.7	５		IP	６		IP	６		IP	４		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

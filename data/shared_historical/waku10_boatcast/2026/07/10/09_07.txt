@@ -1,0 +1,8 @@
+data=
+1	0
+網代　　良芽	6.50	0.16	2.3	１		IP	１		IP	５		IP	１		IP	１		IP	２		IP	６		IP	２		IP	５		IP	４		IP
+藤田　　靖弘	6.60	0.15	4.3	２		G3	３		G3	３		IP	６		IP	２		IP	１	3	IP	２		IP	３		IP	２		IP	４		IP
+藤山　　雅弘	3.90	0.14	3.0	５		IP	５		IP	６		IP	４		IP	３		IP	５		IP	４		IP	４		IP	２		IP	４		G3
+深澤　　達徳	4.70	0.19	4.5	４		G3	３		IP	４		IP	５		IP	５		IP	３	5	IP	１		IP	２		IP	４	5	G3	６		G3
+澁澤　　周羽	1.20	0.27	3.9	６	6	IP	６	6	IP	５	6	IP	転	6	IP	６	6	IP	６	6	IP	５	6	IP	６	6	IP	６	6	IP	５	6	IP
+野口　　勝弘	3.60	0.17	4.4	３	4	IP	５		IP	５		IP	２		IP	６		IP	６		IP	４		IP	５	5	IP	４		IP	３		IP

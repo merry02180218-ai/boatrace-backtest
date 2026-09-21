@@ -1,0 +1,8 @@
+data=
+1	0
+齋藤　　和政	4.80	0.15	3.5	６		IP	６	2	G3	３		IP	１		IP	４		IP	３		IP	５		IP	１		IP	５		IP	３		IP
+佐藤　　右京	5.60	0.17	3.4	６		IP	１	3	IP	５		IP	１		IP	１		IP	２		IP	４		IP	６		IP	３		IP	４		IP
+田中　　辰彦	5.40	0.14	2.6	２		IP	５		IP	１		IP	２		IP	５		IP	１		IP	４		IP	６		IP	２		IP	６	4	IP
+宇土　　泰就	3.30	0.16	3.8	６		IP	５		IP	５		IP	３		IP	５		IP	４		IP	５		IP	４		IP	２		IP	５		IP
+林　　　美憲	4.10	0.13	2.4	３		IP	６		IP	３	3	IP	２	2	IP	５	3	IP	４	4	IP	６	2	IP	４	2	IP	３	4	IP	５		G1
+中島　　真二	2.50	0.21	5.0	６		IP	５		IP	４		IP	６		IP	４		IP	４		IP	６		IP	６		IP	６		G3	３		G3

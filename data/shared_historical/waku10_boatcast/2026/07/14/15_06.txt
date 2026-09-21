@@ -1,0 +1,8 @@
+data=
+1	0
+重成　　一人	8.10	0.13	2.2	１		IP	２		IP	２		IP	６		IP	１		IP	１		G2	１		G2	５		IP	１		IP	１		IP
+角谷　　健吾	5.30	0.14	3.2	２		IP	３		IP	３		IP	５		IP	２		IP	１		IP	６		IP	４		IP	３		IP	５		IP
+高村　　　諒	2.00	0.15	3.5	５		IP	６		IP	５		IP	４		IP	５	4	IP	６		IP												IP
+坪井　　爽佑	3.50	0.17	3.4	６		IP	４		IP	５	3	IP	３		IP	４		IP	６		IP	６		IP	３		IP	２		IP	５		IP
+渡邊　伸太郎	4.00	0.20	4.2	３		IP	４		IP	４		IP	Ｆ		IP	３		IP	４		IP	５		IP	４		IP	２		IP	５		IP
+中野　　希一	3.60	0.16	3.7	３		IP	４		IP	Ｆ		IP	６		G3	６		G3	５		G3	５		IP	２		IP	４		IP	２		IP

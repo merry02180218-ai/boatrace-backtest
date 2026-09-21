@@ -1,0 +1,8 @@
+data=
+1	0
+若林　　　麗	5.80	0.18	3.0	４		IP	５		IP	１		IP	５		IP	２		IP	５		IP	Ｆ		IP	１		IP	１		IP	１		IP
+原　　　豊土	6.67	0.16	2.7	３		G3	４		G3	１		G3	２		G3	４		G3	２		G3	３	4	IP	３		IP	２		IP	転	3	IP
+原田　　雄次	6.30	0.13	2.3	６		IP	１		IP	３		IP	１		IP	５		IP	４		IP	３	4	IP	２		IP	２		IP	２		IP
+吉田　凌太朗	5.50	0.14	3.0	４		G2	６		IP	２		IP	１		IP	４		IP	６		G1	２		G1	１		IP	４		IP	５		IP
+数原　　　魁	3.78	0.15	3.8	２		G3	４		IP	５		IP	２		IP	欠		IP	３		IP	６		IP	５		IP	６		IP	５		IP
+今泉　　博人	1.70	0.23	4.3	４		IP	６		IP	６		IP	６		IP	６		IP	５		IP	４		IP	６		IP	６		IP	６		IP

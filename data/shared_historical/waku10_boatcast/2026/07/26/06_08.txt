@@ -1,0 +1,8 @@
+data=
+1	0
+伊藤　　喜智	6.90	0.16	4.3	１		IP	１		IP	５		IP	３		IP	１		IP	３		IP	３		IP	１		IP	６		IP	２		IP
+池田　奈津美	4.50	0.14	2.6	６		IP	５		IP	５		IP	２		IP	４		IP	５		IP	１		IP	３		IP	３		IP	４		G3
+鈴木　　茂正	5.70	0.15	2.8	６		IP	３		IP	４		IP	３		IP	２		IP	２		IP	３		IP	２		IP	４		IP	３		IP
+石丸　　海渡	6.30	0.09	2.2	３		IP	２		IP	５		G1	３		G1	２		IP	１		IP	４		G1	３		G1	６		IP	２		IP
+澁澤　　周羽	1.10	0.20	3.4	６	6	IP	６	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６	6	IP	５	6	IP	転	6	IP	６	6	IP
+金児　　隆太	4.10	0.17	4.1	５		IP	６	5	IP	２		IP	５		IP	３	4	IP	４		G3	５		IP	５		IP	４		IP	２		IP

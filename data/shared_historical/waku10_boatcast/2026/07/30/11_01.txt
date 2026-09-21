@@ -1,0 +1,8 @@
+data=
+1	0
+遠藤　　エミ	9.50	0.11	1.8	１		G3	１		G3	２		G3	２		G2	１		G2	１		SG	２		G1	１		G1	６		SG	１		SG
+齊藤　　　仁	5.60	0.18	4.1	５		G2	３	5	G2	１		IP	５		IP	４	3	G3	３	3	G3	２		G1	３		G1	Ｆ		G3	２		IP
+坪井　　康晴	7.40	0.16	3.1	１		IP	２		IP	２		IP	１		G2	２		IP	５		G2	１		IP	３	2	IP	３		IP	５		IP
+新開　　　航	6.90	0.16	3.1	１		IP	５		IP	１		G2	４		SG	２		G1	２		IP	３		G1	４		IP	１		IP	６		G1
+片岡　　雅裕	5.30	0.14	3.2	２		IP	４		IP	４		SG	４		SG	５		G1	２		IP	５		G2	５		G2	３		IP	４		IP
+関　　　浩哉	7.00	0.15	4.0	４		IP	６		G2	２		SG	２		G1	２		SG	５		SG	３		G1	１		IP	３		G1	４		G1

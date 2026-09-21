@@ -1,0 +1,8 @@
+data=
+1	0
+石原　　　光	7.90	0.15	3.0	２		G3	１		IP	６		IP	１		IP	２		IP	１		IP	１		IP	１		IP	５		IP	１		IP
+濱本　　優一	4.80	0.16	2.3	６		IP	４		IP	２		IP	２		IP	２		IP	６		IP	６		IP	１		IP	６		IP	４		IP
+高井　　雄基	4.10	0.22	4.5	４		IP	５		IP	３		IP	３		IP	１		IP	５	4	IP	４	5	IP	４		G3	６		IP	５		IP
+安河内鈴之介	6.60	0.13	2.1	１		IP	１		IP	３		IP	６		IP	２		IP	３		IP	３		IP	２		IP	２		IP	５		IP
+中島　　浩哉	3.90	0.16	3.4	４		G3	３		G3	５		IP	４		IP	３		IP	３		IP	５		IP	４		IP	４		IP	６	6	G3
+堀井　　涼平	2.70	0.15	3.8	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	１		IP	５		IP	２		IP	６		IP

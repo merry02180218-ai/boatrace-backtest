@@ -1,0 +1,8 @@
+data=
+1	0
+柴田　　百恵	7.90	0.14	3.9	３		G2	３		G3	２		G3	１		IP	２		IP	２		IP	２		G3	１		G3	４		IP	１		IP
+一色　　凌雅	5.22	0.16	2.9	１		IP	２		IP	５		IP	２		IP	４		IP	４		IP	欠		IP	３		IP	６		IP	４		IP
+竹間　　隆晟	6.20	0.12	2.6	５		IP	２		IP	１		IP	１		IP	２		IP	５		IP	３		IP	３		IP	４		IP	３		IP
+荒木　　颯斗	6.40	0.13	2.6	６		IP	１	6	IP	２		IP	１		IP	３		G3	２		IP	５		IP	１		IP	４		IP	４		IP
+廣瀬　　　凜	7.10	0.13	2.9	３		IP	３		IP	２		IP	２		IP	２		IP	５		IP	２		IP	２		G2	３		IP	１		IP
+大澤　　風葵	4.20	0.15	3.0	５		IP	１		IP	４		IP	１	5	IP	４		IP	５	5	IP	６		IP	４		IP	６		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+井芹　　大志	6.60	0.15	3.9	１		IP	２		IP	６		IP	２		IP	１		IP	１		IP	６		IP	５		IP	２	2	IP	２		IP
+花本　　　剛	3.20	0.19	4.7	４		IP	５		IP	４		IP	２	3	IP	５		IP	４		IP	５		IP	５		IP	５		IP	５		IP
+渡邉　　　翼	5.90	0.17	2.5	６	4	IP	４		IP	２		IP	３		IP	５		IP	１		IP	４		IP	４		IP	１		IP	１		IP
+飯島　　　誠	4.70	0.19	3.7	６		IP	２		IP	３		IP	３	5	IP	３		IP	４		IP	３		IP	６	5	IP	２		IP	６		IP
+星田　　夢結	2.30	0.19	4.1	６		IP	５		IP	５	6	IP	６		IP	６	6	IP	３	6	IP	６	6	IP	４	6	IP	４	6	IP	６	6	IP
+内山　　文典	3.60	0.17	4.0	６		IP	６		IP	６		IP	３		IP	３		IP	３		IP	６		IP	４		IP	４		IP	３	5	IP

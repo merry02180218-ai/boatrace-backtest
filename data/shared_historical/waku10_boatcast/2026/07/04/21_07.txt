@@ -1,0 +1,8 @@
+data=
+1	0
+山口　　隆史	7.70	0.15	2.6	６	2	IP	１		IP	４		IP	１		IP	２		IP	１		IP	２		IP	１		IP	３		IP	１		IP
+飯島　　　誠	7.20	0.17	3.3	２		IP	２		IP	１	3	IP	１		IP	２		IP	２		IP	３		IP	５		IP	４		IP	２		IP
+赤峰　　和也	3.30	0.16	2.8	１		IP	４		IP	５		IP	５		IP	４		IP	４		IP	５		IP	６		IP	５		IP	５		IP
+今坂　　晃広	4.40	0.22	3.9	４		IP	５		IP	５		IP	４	5	IP	３		G3	１		G3	５	5	IP	４		IP	３		IP	４		IP
+宇野　　博之	3.00	0.14	3.8	６		IP	６	6	IP	４		IP	６		IP	２		IP	５		IP	４		IP	６		IP	３		IP	５		IP
+内田　　　壮	1.20	0.16	4.3	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP

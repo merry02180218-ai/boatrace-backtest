@@ -1,0 +1,8 @@
+data=
+1	0
+深井　　利寿	9.20	0.15	2.3	３		IP	１		G3	２		G3	３		IP	１		IP	１		G2	１		G2	１		IP	１		IP	１		IP
+倉田　　茂将	3.30	0.15	3.5	４		IP	５	3	G3	６		IP	６		IP	３		IP	４		IP	６		IP	３		IP	３		IP	５		IP
+天野　　友和	4.80	0.15	3.2	３		IP	６		IP	２		IP	３		IP	４		IP	２		IP	３		IP	３		IP	６		IP	５		IP
+中村　　裕将	4.80	0.12	2.0	４		IP	６		IP	２		IP	４		IP	４		IP	２		IP	１		IP	５		IP	３		IP	６		IP
+倉尾　　大介	4.30	0.19	3.4	５		IP	６		IP	４		IP	３		IP	５		IP	２		IP	２		IP	４		IP	５		IP	３		IP
+市川　　哲也	3.40	0.12	2.2	３		IP	４		IP	５	5	IP	５		IP	４	3	IP	４	4	IP	６		IP	５		IP	４	4	G2	４	3	IP

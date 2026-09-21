@@ -1,0 +1,8 @@
+data=
+1	0
+西丸　侑太朗	9.00	0.19	3.0	１		IP	１		IP	１		IP	１		IP	２		IP	４		IP	１		IP	２		IP	１		IP	１		IP
+小野　　勇作	6.60	0.17	3.9	１		IP	４		G3	３		G3	４		IP	２		IP	４	3	IP	３		IP	１		IP	４		IP	１	3	IP
+金山　　立樹	4.60	0.14	1.8	４		IP	６		IP	４		IP	５	6	IP	４		IP	３		IP	６		IP	２		IP	１		IP	３		IP
+今村　　暢孝	6.00	0.15	2.9	３	1	G3	Ｆ	2	IP	２	1	IP	２	2	IP	３	2	IP	３	2	IP	１	2	IP	２	2	IP	不	2	IP	５	2	IP
+山口　　隆史	2.90	0.23	4.1	５	6	IP	６	6	IP	５	6	IP	６	6	IP	６		IP	４		IP	４		IP	３		IP	５		IP	３	6	IP
+北川　　敏弘	3.20	0.16	3.5	４		IP	６		IP	５		IP	２		IP	３		IP	５		IP	６		IP	４		IP	６		IP	６		IP

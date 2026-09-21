@@ -1,0 +1,8 @@
+data=
+1	0
+遠藤　　エミ	9.60	0.12	2.5	２		G2	１		G2	１		SG	２		G1	１		G1	６		SG	１		SG	１		IP	２		IP	１		G2
+田口　　節子	6.50	0.14	3.2	４		IP	１	3	IP	２		IP	３		G3	２		G3	２		IP	４		IP	３		G2	３		G1	５	4	G1
+竹井　　奈美	5.50	0.16	3.0	３		IP	２		IP	２		G3	５		IP	５	2	G3	５		G3	２		IP	６		IP	１		IP	２		IP
+今井　　美亜	4.60	0.19	3.7	６		G2	１		IP	６		G3	４		G3	２		G3	６		G2	４		G2	２		G2	４		IP	６		IP
+清水　　愛海	5.50	0.19	3.6	２		IP	４		IP	２		IP	４		SG	６		IP	２		G2	６		G2	１		IP	６	6	IP	３		IP
+櫻本　あゆみ	3.50	0.16	3.4	４		G2	エ		IP	６		IP	４		IP	２		IP	５		IP	３		G3	４		G3	４		IP	６		IP

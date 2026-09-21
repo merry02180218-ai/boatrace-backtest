@@ -1,0 +1,8 @@
+data=
+1	0
+濱野谷　憲吾	11.00	0.11	2.2	１		IP	１		IP	１		IP	１		G2	１		G2	１		G1	１		G1	１		SG	１		SG	１		G1
+桑原　　　悠	6.90	0.11	2.2	１	1	IP	４		G1	４		G1	６		G1	６		G1	１		IP	２		IP	２		IP	２		IP	１		IP
+丸野　　一樹	8.00	0.14	2.6	１		SG	１	2	SG	１		G1	６		G1	５		G1	１		IP	１		IP	５		G1	２		G1	３		SG
+鹿島　　敏弘	4.30	0.17	3.7	２		IP	４		IP	５		IP	６		IP	３		IP	４		IP	３	5	IP	３		IP	４		IP	５		IP
+磯部　　　誠	6.30	0.10	2.2	２		SG	５		SG	６		G1	５		G1	５		SG	５	6	SG	３		G1	１		IP	１		IP	２		G1
+米丸　　乃絵	3.80	0.21	4.5	５		SG	６		IP	３	5	G2	５		G2	３	5	G3	４		IP	６		IP	３		IP	４		IP	５		IP

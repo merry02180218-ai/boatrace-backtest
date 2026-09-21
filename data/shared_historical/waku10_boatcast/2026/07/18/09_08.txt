@@ -1,0 +1,8 @@
+data=
+1	0
+松田　　淳平	8.70	0.14	2.3	３		IP	１		IP	１		IP	１		IP	６		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+長谷川　晴哉	5.50	0.15	3.6	２		IP	３		IP	３		IP	２		IP	５		IP	３		IP	４		IP	２		IP	３		IP	６	3	IP
+宮崎　　安奈	2.40	0.16	2.6	５		IP	５		IP	４		IP	５		IP	５		G2	５		G2	３		IP	６		IP	６		IP	Ｆ	4	IP
+塚越　　海斗	6.60	0.13	2.4	１		IP	４		IP	６		IP	１		IP	６		G3	３		G3	１		IP	１		IP	２		IP	３		IP
+荒木　　颯斗	3.44	0.13	3.0	５		IP	１		IP	５		IP	４	6	IP	３		IP	欠		G3	６		IP	５		IP	５		IP	５		IP
+石渡　翔一郎	3.90	0.14	2.5	４		IP	２		IP	２	5	IP	６		IP	１		IP	６	5	IP	４		IP	６		IP	６		IP	６		IP

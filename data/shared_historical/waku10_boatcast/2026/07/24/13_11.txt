@@ -1,0 +1,8 @@
+data=
+1	0
+岡崎　　恭裕	8.90	0.12	1.9	１		G2	２		IP	１		IP	１		G1	２		IP	１		IP	６		G1	１		G1	１		IP	２		IP
+安河内　　健	8.10	0.11	2.1	１		IP	２		IP	３		IP	２		IP	３		IP	１		IP	３		IP	２		IP	２		IP	１	3	IP
+信濃　　由行	2.00	0.17	3.9	５		G3	５		G3	６	4	IP	６		IP	５		IP	４		IP	３		IP	６		IP	Ｆ		IP	６	4	IP
+渡部　　　悟	5.50	0.12	2.2	６		IP	１		IP	２		IP	２		IP	５	5	IP	３		IP	５		IP	２		IP	３		IP	４	5	IP
+松本　　純平	7.10	0.15	2.3	２		IP	５		IP	２		IP	３		IP	１		IP	２		IP	４		G1	２		G1	４		G1	１		IP
+川原　　　涼	3.40	0.18	4.2	５		IP	５		IP	５		IP	２		IP	６		IP	５		IP	４		IP	２		IP	５		IP	６		IP

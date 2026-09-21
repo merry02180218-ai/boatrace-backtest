@@ -1,0 +1,8 @@
+data=
+1	0
+清埜　　翔子	8.80	0.13	1.9	Ｆ		G3	２		G3	１		IP	１		IP	１		IP	１		IP	１		G3	１		G3	１		G3	１		G3
+今村　　暢孝	5.50	0.15	2.9	５		IP	２		IP	３		IP	３	1	G3	２		G3	６		IP	２	1	IP	１	1	IP	４		IP	５		IP
+藤井　　　徹	4.60	0.17	3.6	６		IP	５		IP	２		IP	４		IP	４		IP	２		IP	６		IP	５		IP	２		IP	２		IP
+谷口　　　丞	6.00	0.11	2.8	１		IP	３	5	IP	３		IP	１		IP	３		IP	５		IP	１		IP	６		IP	２		IP	６		IP
+松下　　一也	3.60	0.14	2.8	５		IP	３		IP	６		IP	６	6	IP	５		IP	６	6	IP	６		IP	１		IP	１		IP	５		IP
+佐藤　　　旭	2.90	0.18	4.2	１	5	IP	５		IP	５		IP	６		IP	６		IP	６		G3	６		G3	５		IP	６		IP	２	5	G3

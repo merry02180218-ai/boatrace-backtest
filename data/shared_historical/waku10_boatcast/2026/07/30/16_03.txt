@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　二朗	4.90	0.20	3.8	３		IP	１		IP	６		IP	５	2	IP	５		IP	２		IP	１		IP	５		IP	５		IP	３		IP
+松下　　一也	6.10	0.10	1.5	１	3	IP	１		IP	６		IP	２		IP	５	3	IP	４		IP	１		IP	２		IP	３		IP	５		IP
+杢野　　誓良	3.50	0.18	3.5	６		IP	４		IP	３		IP	４		IP	４		IP	４		IP	６		IP	４		IP	６		IP	３		IP
+内堀　　　学	5.60	0.14	2.5	６		IP	４	2	IP	５		IP	１		IP	４		IP	１		IP	１		IP	４		IP	６		IP	２		IP
+喜多　那由夏	4.30	0.17	3.8	５		IP	４		IP	６		IP	２		G3	６		G3	２		IP	６		IP	３		IP	２		G3	４		IP
+坪井　　爽佑	1.60	0.21	4.1	６		IP	６		IP	６		IP	５		IP	５		IP	６		IP	６		IP	６		IP	４		IP	５		IP

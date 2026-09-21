@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　有裕	9.50	0.12	1.6	１		IP	１		G2	１		IP	１		IP	１		IP	１	2	IP	２		IP	１		IP	１		IP	３		IP
+岡崎　　恭裕	6.20	0.15	3.2	４		IP	６		G2	６		G2	６		IP	２		IP	２		G1	２		G1	１		IP	１	1	G1	３		IP
+松本　　純平	7.40	0.15	3.2	２		IP	３		IP	２		IP	２		IP	３		G1	２		G1	２		IP	５		IP	２		IP	１		IP
+鶴本　　崇文	5.00	0.16	3.4	２		IP	６		IP	２		IP	５		IP	３		IP	６		IP	４		IP	３		IP	２		IP	３		IP
+長岡　　良也	4.50	0.15	3.4	３		IP	２		IP	２		IP	３		IP	４		IP	６		IP	６		IP	５		IP	４		G1	４		IP
+黒崎　　竜也	3.70	0.14	2.5	４		IP	４		G2	５		G2	５		IP	５		IP	２		G3	５		G3	５		G3	４		IP	６		IP

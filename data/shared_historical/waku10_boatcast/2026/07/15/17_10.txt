@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　雄太	9.20	0.15	1.4	１		IP	１		IP	１		IP	３		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+橋本　　年光	4.30	0.14	3.2	５		IP	３		IP	１		IP	６		IP	５		IP	５		IP	４		IP	４		IP	２		IP	４		IP
+長尾　　萌加	4.20	0.13	3.3	４		IP	４		IP	５		IP	６		IP	６		IP	５		IP	２		IP	３		IP	２		IP	３		IP
+鳥飼　　　眞	5.60	0.13	2.9	４		IP	１	3	IP	５	3	G3	３		G3	３		IP	４		IP	２		IP	３		IP	３	5	IP	４		IP
+鋤柄　　貴俊	4.80	0.16	3.7	２		IP	５		IP	６		IP	３		IP	４	6	G1	６		G1	４		IP	３		IP	３		IP	３		IP
+北川　　幸典	3.00	0.20	4.6	Ｆ	5	IP	６		IP	３	5	IP	３		IP	４	5	IP	３	5	IP	６		IP	６		IP	６		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　鉄平	7.10	0.14	3.1	２		IP	３		IP	１		IP	２		IP	１		IP	２		IP	Ｆ		IP	６		IP	１		IP	１		IP
+小野　　京平	3.40	0.21	3.8	６		IP	４		IP	５		IP	６		IP	１		IP	５		IP	４		IP	５		IP	３		IP	５		IP
+中田　　元泰	5.90	0.17	3.2	５		IP	１	2	IP	１		IP	６		IP	４		IP	４		IP	４		IP	２		IP	１		IP	４		IP
+大澤　　誠也	3.50	0.16	3.4	６		IP	６		IP	２		IP	５	5	IP	４		IP	５	5	IP	６		IP	４		IP	２		IP	４		IP
+亀本　　勇樹	2.50	0.17	4.1	６		IP	４		IP	６		IP	３		IP	４		IP	６	4	IP	５		IP	５	2	IP	５	6	IP	５	2	IP
+濱野　　斗馬	3.80	0.20	4.5	４		IP	４		IP	４		IP	５		G2	５		G2	６		IP	３		IP	４		IP	３		IP	５	5	G2

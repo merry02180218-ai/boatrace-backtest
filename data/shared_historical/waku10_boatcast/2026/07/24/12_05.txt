@@ -1,0 +1,8 @@
+data=
+1	0
+渡邊　雄一郎	10.00	0.15	3.0	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+小林　　礼央	5.00	0.16	4.0	５		IP	２		IP	４		IP	５		IP	３		IP	４		IP	３		IP	２		IP						IP
+大町　　利克	2.78	0.14	4.3	４		IP	５		IP	６		IP	６		IP	６		IP	２		IP	Ｌ	2	IP	３		IP	６	4	IP	６		IP
+渡邉　　　健	2.80	0.15	2.7	５		IP	５	5	IP	３		IP	３		IP	６		IP	６	6	IP	６		IP	５		G3	６		G3	３		IP
+森下　　　勇	2.00	0.25	4.0	５		IP	３		IP	６		IP	５		IP	６		IP	５		IP	６		IP	５		IP	６		IP	５		IP
+山田　　竜一	3.00	0.18	4.5	５		IP	４		IP	５		IP	６		IP	５		IP	４		IP	５		IP	２	5	IP	６		IP	４		IP

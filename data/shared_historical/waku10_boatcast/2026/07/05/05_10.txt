@@ -1,0 +1,8 @@
+data=
+1	0
+大平　誉史明	7.60	0.13	2.5	１		IP	１		IP	１		IP	２		IP	１		G3	１		G3	４		IP	５		IP	５		IP	１		IP
+岩川　　仁士	4.70	0.14	2.2	３		IP	４		G3	５		IP	２	3	IP	１	4	IP	６		IP	６		IP	３		IP	６		IP	２		IP
+川崎　　智幸	5.20	0.10	3.1	６		IP	２		IP	６		IP	５		IP	３		IP	１		IP	４		IP	１		IP	５		IP	２		IP
+寺本　　重宣	6.60	0.12	2.8	２		IP	４		IP	２		IP	３		IP	１		IP	４		IP	１		IP	４		IP	２		G3	５	5	G3
+岩橋　　裕馬	2.80	0.14	3.7	５		IP	４		IP	６	6	IP	３		IP	５	6	IP	５		IP	５		IP	４		IP	４		IP	６		G3
+間嶋　　仁志	3.10	0.16	3.1	５	4	IP	６	2	IP	４	2	G3	６	2	G3	５	4	IP	３	2	IP	６	3	IP	５	2	IP	３	4	IP	４	2	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+石渡　　鉄兵	8.80	0.11	2.5	４		G2	１		SG	２		IP	１		IP	２		IP	１		IP	５		IP	１		IP	１		IP	１		IP
+中澤　　和志	6.80	0.17	3.6	１		IP	１		IP	４		IP	６		IP	６		IP	１		IP	２		IP	３		IP	２		IP	２		IP
+赤坂　　俊輔	5.40	0.13	2.6	４		G3	３		G3	３		IP	４		IP	３		IP	３		IP	３		IP	３		IP	４		IP	３		IP
+新開　　　航	6.80	0.15	3.5	１		G2	４		SG	２		G1	２		IP	３		G1	４		IP	１		IP	６		G1	２		G1	６		G1
+佐藤　　　翼	6.70	0.13	4.3	１		G2	２		SG	６		SG	５		G1	１		SG	５		G1	３		IP	３		G1	６		G1	２		SG
+関　　　浩哉	7.10	0.15	4.2	６		G2	２		SG	２		G1	２		SG	５		SG	３		G1	１		IP	３		G1	４		G1	４		G1

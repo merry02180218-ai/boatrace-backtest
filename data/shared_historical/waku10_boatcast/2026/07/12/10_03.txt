@@ -1,0 +1,8 @@
+data=
+1	0
+谷　　　勝幸	6.10	0.15	2.8	２		G3	２		IP	３		IP	２		G3	２		G3	３		IP	６		IP	５		IP	１		IP	４		IP
+信濃　　由行	3.90	0.19	4.3	６		G3	５		IP	３		IP	５		IP	２		IP	４		IP	６		IP	３		IP	２		IP	６		IP
+平石　　和男	5.00	0.17	3.8	２		G3	２		G3	３		IP	６		IP	２		IP	６		IP	４		IP	４		IP	４		IP	３		IP
+飯山　　晃三	2.80	0.23	4.9	５		G3	６		IP	６		IP	６		IP	５		IP	３		IP	２		IP	４		IP	６	5	IP	５	5	IP
+濱崎　　　誠	4.90	0.21	4.2	５		G3	２	6	G3	５		IP	４		IP	２		IP	４		IP	６		IP	２		IP	５		IP	１		G3
+桑原　　　啓	2.70	0.17	4.2	５		G3	４		IP	５	5	IP	６		IP	６		G3	３	5	IP	５		IP	３	5	IP	５		IP	６		IP

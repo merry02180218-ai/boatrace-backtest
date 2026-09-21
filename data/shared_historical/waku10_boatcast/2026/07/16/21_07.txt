@@ -1,0 +1,8 @@
+data=
+1	0
+原田　　雄次	6.40	0.15	3.2	１		IP	１		IP	１		IP	６		IP	６		IP	１		IP	妨		IP	１		IP	４		IP	２	2	IP
+谷口　　　丞	4.70	0.18	3.1	２		IP	２		IP	４		IP	３		IP	６		IP	６		IP	４		IP	１		IP	６		IP	４		IP
+松本　　一毅	6.22	0.14	2.4	５		IP	２		IP	転		IP	１		IP	１		IP	３		IP	３		IP	２		IP	４		IP	５		IP
+仲本　　　舜	3.20	0.17	3.6	４		IP	５		IP	１		IP	５		IP	６		IP	３	5	IP	５	5	IP	６	5	IP	５		IP	５		IP
+永井　　聖美	3.10	0.20	3.7	３		IP	３		G3	５	4	IP	６		IP	５		IP	４		IP	６		IP	６		IP	３		IP	５		G3
+犬童　　千秋	3.20	0.14	2.3	５	5	IP	４		G3	６		G3	５		G3	５		IP	６		G3	４	5	IP	５	5	IP	４		IP	１		G3

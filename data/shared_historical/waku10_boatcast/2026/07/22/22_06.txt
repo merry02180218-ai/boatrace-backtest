@@ -1,0 +1,8 @@
+data=
+1	0
+武井　莉里佳	7.50	0.18	3.7	１		IP	３		IP	５		IP	６		G3	１		G3	４		G3	１		G3	１		G2	１		G2	１		IP
+水谷　　理人	6.60	0.13	3.1	１		IP	２		IP	５		IP	２		IP	３		G3	１		IP	４		IP	２		IP	５		IP	２		IP
+登玉　　隼百	6.40	0.15	3.3	２		IP	４		IP	１	4	IP	３		IP	２	6	IP	２		IP	３		IP	３		IP	５		IP	３		IP
+谷口　　知優	5.70	0.17	3.5	３	3	IP	５		IP	６		G3	３		G3	４		IP	１		IP	４		IP	３		IP	１	3	IP	２		IP
+安河内鈴之介	5.20	0.13	2.5	１		IP	２		IP	４		IP	６		IP	３		IP	６		IP	４		IP	２		IP	２		IP	５		IP
+米丸　　乃絵	4.10	0.20	4.3	４		G2	５		SG	６		IP	３	5	G2	５		G2	３	5	G3	４		IP	６		IP	３		IP	４		IP

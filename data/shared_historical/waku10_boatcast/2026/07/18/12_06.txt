@@ -1,0 +1,8 @@
+data=
+1	0
+香月　　大輝	6.00	0.17	3.0	１		IP	３		IP	４		IP	５		IP	２		IP	５		IP	５		IP	１		IP	１		IP			IP
+北川　　太一	7.30	0.12	2.7	４		G3	１		IP	２		IP	１		IP	６		IP	１		G3	３		IP	３		IP	１		IP	２		IP
+宮武　　英司	4.50	0.17	2.8	６		IP	５	4	IP	３		IP	３	4	G3	４		IP	４		IP	２		IP	３		IP	４		IP	４		IP
+畔柳　　俊吾	4.00	0.19	5.2	４		IP	５	5	IP	２		IP	３		IP	３		IP	６		IP	４		IP	５		IP	３		IP	６		IP
+柳沢　　　一	6.10	0.14	3.2	３		IP	２		IP	５		G1	１		IP	３		IP	３		IP	４		IP	４		IP	３		IP	２		IP
+坂口　　諒宗	1.00	0.18	3.8	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	５		IP	転		IP	Ｆ		IP	６		IP

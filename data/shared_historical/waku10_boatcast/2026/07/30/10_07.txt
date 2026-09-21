@@ -1,0 +1,8 @@
+data=
+1	0
+柴田　　朋哉	7.30	0.13	2.5	４		G3	１		IP	１		IP	１		IP	１		IP	４		IP	１		IP	２		IP	６		IP	４		IP
+松村　　康太	4.40	0.19	4.0	５		IP	４		IP	２		IP	１		IP	５		IP	４		IP	４	1	IP	５		IP	４		IP	４		IP
+三松　　直美	2.20	0.18	3.4	６		IP	５	5	IP	３		IP	６		G3	６		G3	６		IP	６		IP	５		IP	３		G3	６		G3
+篠崎　　元志	6.70	0.14	2.7	３		IP	２		G3	４		SG	２		SG	２		IP	３		IP	６	3	SG	２	3	IP	５		IP	２	3	IP
+深尾　　巴恵	5.00	0.17	1.9	１		IP	３		IP	５		G3	５		IP	１		IP	２		IP	４		IP	５		IP	５		IP	４		IP
+島川　　光男	4.90	0.17	3.2	６		IP	２		IP	２	5	IP	５		IP	３		IP	４		IP	５		IP	１		IP	３		IP	５		IP

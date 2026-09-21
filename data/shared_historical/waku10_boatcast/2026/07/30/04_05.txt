@@ -1,0 +1,8 @@
+data=
+1	0
+前原　　　哉	7.00	0.19	3.9	１		IP	５		IP	３		IP	１		IP	５		IP	２		G3	１		G3	１		IP	３		IP	３		IP
+鈴木　　成美	2.90	0.17	3.2	４		IP	５		IP	２		IP	６		IP	４		G3	４		G3	６		IP	６		IP	５		IP	５		IP
+大久保　佑香	4.22	0.14	3.3	６		IP	５		IP	６		IP	２		IP	４		IP	４		IP	Ｌ	5	IP	３		G3	４		G3	２		IP
+神里　　琴音	4.70	0.14	2.5	６		IP	４	3	IP	４		G3	５		IP	２		IP	２		G2	３		G2	３		G3	４		IP	５		IP
+野田　　亜湖	1.10	0.25	5.3	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP	６	6	IP	６		IP	６		IP
+山下　　友貴	4.50	0.16	3.6	４		IP	３		IP	３		IP	２		IP	５		IP	４		G3	５		G3	１	5	G3	５		G3	６		IP

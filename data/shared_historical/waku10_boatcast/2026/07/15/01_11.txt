@@ -1,0 +1,8 @@
+data=
+1	0
+坂本　　雄紀	7.78	0.15	3.2	１		IP	３		IP	３		IP	２		IP	２		IP	３		IP	欠		IP	１		IP	３	2	IP	１		IP
+吉村　　正明	6.40	0.14	3.1	３		IP	４		IP	４		IP	４		IP	２	1	IP	１		IP	１		G3	４		IP	３		IP	２		IP
+上田　　紗奈	6.10	0.16	3.5	５		IP	４		IP	２		IP	１	4	IP	１		IP	２		IP	２		IP	６		IP	２		IP	５		IP
+池田　　雄一	5.50	0.17	3.6	３		IP	３		IP	６		IP	６		IP	６		IP	３		IP	３		IP	２		IP	１		IP	１		IP
+籾山　　佳岳	4.30	0.16	3.5	１	6	IP	６		IP	３		IP	４		IP	５		IP	１		IP	４		IP	６	6	IP	６		IP	４		IP
+松尾　　昂明	4.30	0.15	3.2	３		IP	４		IP	２		IP	３		IP	３		IP	４		IP	５		IP	５		IP	４		IP	６	5	IP

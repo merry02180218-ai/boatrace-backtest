@@ -1,0 +1,8 @@
+data=
+1	0
+下河　　誉史	7.00	0.21	4.1	１		IP	５		G3	１		IP	６		IP	２		IP	６		IP	２		IP	１		IP	１		IP	１		IP
+藤井　　公人	5.20	0.15	3.0	３		IP	２		IP	３	5	IP	４		IP	４		IP	５		IP	２		IP	５		IP	２		IP	４		IP
+上野　　俊樹	5.89	0.11	1.6	２		IP	１		G3	４		IP	６		IP	欠		IP	２		IP	１		IP	６		G2	３		IP	４		IP
+木下　　大將	6.00	0.11	3.0	３		IP	６	2	G3	４		G3	１		IP	４		IP	２		IP	３		IP	１		IP	１		IP	６		IP
+下河　　雅史	3.60	0.15	3.4	６		IP	４		IP	５		IP	３		IP	５		IP	３		IP	４		IP	３		IP	６		IP	４		IP
+奈須　　啓太	3.30	0.12	3.2	６		IP	５	5	IP	５		IP	５	4	IP	５		G3	２	5	IP	４	5	IP	５		IP	３		IP	４		IP

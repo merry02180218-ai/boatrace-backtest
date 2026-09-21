@@ -1,0 +1,8 @@
+data=
+1	0
+木谷　　賢太	9.40	0.12	1.9	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP
+杉田　　篤光	4.60	0.19	4.1	４		IP	１		IP	４		IP	６		G3	３		G3	４		IP	５		IP	２		IP	３		IP	６		IP
+照屋　　厚仁	3.20	0.12	2.6	５		IP	転		IP	３		IP	５		G3	３		IP	５		IP	６		IP	３		IP	６		IP	３		IP
+木山　　誠一	4.10	0.13	2.4	６		IP	６		IP	５		IP	２		IP	６		IP	１		IP	３		IP	２		IP	５	5	IP	５		IP
+宮崎　心之介	3.20	0.15	3.2	５		IP	４		IP	６		IP	５		IP	４	6	IP	２		IP	５		IP	４		IP	５		IP	６		IP
+羽野　　　諒	3.40	0.13	2.9	６		IP	５		IP	３		IP	５		IP	５		IP	３		IP	２		IP	５		IP	６		IP	４	5	IP

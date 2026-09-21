@@ -1,0 +1,8 @@
+data=
+1	0
+長野　壮志郎	8.00	0.12	2.7	１		IP	１		IP	４		IP	１		IP	１		IP	５		IP	１		IP	２		IP	３		IP	１		IP
+木山　　和幸	5.30	0.14	3.5	４		IP	１		IP	２		IP	５		IP	３		IP	６		G3	２		IP	３		G3	３		IP	５		IP
+柴田　　友和	5.60	0.15	3.1	２		IP	３		IP	２		IP	４		IP	４	4	IP	５		IP	４		IP	２		IP	１		IP	５		IP
+籾山　　佳岳	5.70	0.16	2.7	１		IP	２		IP	４		IP	１		IP	４		IP	５		IP	５		IP	１		IP	６		IP	３		IP
+寺島　　吉彦	3.80	0.17	3.2	３		IP	４		IP	１		IP	５	6	IP	６	6	IP	４		IP	５		IP	６		IP	３		IP	５		IP
+田中　　　堅	2.60	0.21	5.0	５		IP	５		IP	５	5	IP	５		IP	４		IP	３		IP	６		IP	６		IP	４		IP	５		IP

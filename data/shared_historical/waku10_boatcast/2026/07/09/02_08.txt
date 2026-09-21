@@ -1,0 +1,8 @@
+data=
+1	0
+池永　　　太	8.70	0.13	2.7	１		IP	２		IP	１		IP	４		G2	１		IP	１		IP	４		G1	２		G1	１		IP	１		IP
+梅原　　祥平	4.50	0.11	2.9	６		IP	５		IP	３		IP	４		IP	４		IP	５		IP	２		IP	２		IP	４		IP	３		IP
+上條　　暢嵩	7.70	0.12	2.9	３		SG	５		G1	３		SG	２		SG	５		G1	２		G1	２		IP	１	2	IP	２	4	G1	３		G1
+飯山　　　泰	5.50	0.15	3.0	３		IP	２		IP	３		IP	５		IP	４		IP	２		IP	２		IP	４		IP	６		G2	３		IP
+新田　　雄史	8.90	0.12	3.2	５	6	SG	２		G1	２		G1	２		G1	２		SG	２		G1	１		IP	２		G1	２		G1	２		SG
+鹿島　　敏弘	2.80	0.18	5.0	５		IP	５		IP	６		IP	４		IP	６		IP	５		IP	４		IP	５		IP	３		IP	４		IP

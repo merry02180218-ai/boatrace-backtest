@@ -1,0 +1,8 @@
+data=
+1	0
+和田　　兼輔	9.33	0.13	2.7	１		IP	１		IP	２		IP	３		IP	１		IP	１		IP	１		IP	１		IP	Ｌ		G1	２		G1
+興津　　　藍	7.10	0.12	2.1	２		IP	１		IP	２		IP	１		G3	３		G3	２		IP	６		IP	４		IP	２		IP	２		IP
+常住　　　蓮	6.40	0.12	2.6	３		G2	３		G2	３		G1	３		SG	３		IP	５		IP	３		IP	２		IP	４		IP	２		G1
+板橋　　侑我	6.10	0.12	2.6	２		IP	１		IP	１		IP	６		IP	３		IP	３		G1	Ｆ		G3	３		G1	２		G1	６		G1
+松田　大志郎	5.60	0.15	4.0	２	4	G2	２		IP	５		IP	１		G1	４		G1	４		G1	４		IP	４		IP	４		G1	５		G1
+森　　　悠稀	2.80	0.14	3.0	６		IP	４		IP	６		IP	６		G2	５		IP	５		IP	３		IP	５		IP	５	5	IP	４		IP

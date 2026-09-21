@@ -1,0 +1,8 @@
+data=
+1	0
+齋藤　　智裕	5.10	0.22	4.0	１		IP	５		IP	６		IP	３		IP	５		IP	２		IP	５		IP	２		IP	２		IP	４		IP
+伊達　　正利	4.30	0.18	3.0	２		IP	３		IP	５		IP	２	3	IP	６		IP	６		IP	５		IP	１		IP	４		IP	６		IP
+市川　　美宏	4.10	0.17	3.1	６		IP	４		IP	２		IP	５		IP	３		IP	６		IP	３		IP	３		IP	３		IP	６		IP
+井上　　尚悟	4.50	0.17	3.2	４		IP	４		IP	１		IP	３		IP	５		IP	４		IP	５	3	IP	３		IP	６		IP	４		IP
+小川　　知行	2.90	0.13	2.5	６		IP	４		IP	４		IP	４		IP	６		IP	５		IP	３		IP	６		IP	５		IP	４		IP
+武田　　信一	3.60	0.15	3.8	５		IP	３		IP	４		IP	３		IP	２		IP	５		IP	５		IP	６		IP	４		IP	６		IP

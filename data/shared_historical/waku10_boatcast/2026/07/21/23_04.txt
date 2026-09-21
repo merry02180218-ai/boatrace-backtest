@@ -1,0 +1,8 @@
+data=
+1	0
+横田　　　茂	7.90	0.14	3.0	４		IP	１		IP	１		IP	２		IP	１		IP	６		IP	２		IP	１		IP	２		IP	１		IP
+石本　　裕武	7.10	0.14	3.3	１		G1	転		SG	２		G1	２		G1	１		IP	３		IP	Ｆ		IP	１		IP	１		G1	４		G1
+川島　　圭司	6.44	0.16	1.8	２		IP	２		IP	３		IP	３		IP	２		IP	転		IP	１		IP	６		IP	４		G2	３		IP
+星　　　栄爾	3.90	0.17	3.1	４		IP	６		IP	６		IP	４		G3	３	3	IP	３		IP	６	5	IP	５		IP	３		IP	２		IP
+日高　龍之介	2.60	0.18	3.5	６	6	IP	６		IP	５		IP	５		IP	５		IP	１		IP	６		IP	４	6	IP	６		IP	５		IP
+戸敷　　晃美	4.60	0.19	3.9	２		G3	５		IP	２		IP	５		IP	２		IP	５		IP	５	5	IP	３		IP	３		IP	５		IP

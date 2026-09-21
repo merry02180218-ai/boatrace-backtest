@@ -1,0 +1,8 @@
+data=
+1	0
+小池　　修平	9.70	0.12	2.6	２		G3	１		G3	１		IP	２		IP	１		G1	１		G1	１		G1	２		G1	１		IP	２		IP
+若林　　　将	8.00	0.14	2.6	２		IP	１	3	IP	１		IP	１		IP	５		G1	４		G1	６		IP	１		IP	１		IP	１		G3
+赤岩　　善生	6.30	0.12	2.7	２		G2	３	2	IP	１	2	IP	６		SG	４		G1	５		G1	３		G1	３		G1	４		G3	２	2	IP
+永井　　彪也	5.70	0.11	2.4	２		IP	６		G3	５	5	G3	２		G1	６		G1	５		G1	１		IP	２		IP	２		G3	３		IP
+船岡　洋一郎	4.80	0.16	3.1	３		IP	５		IP	４		G3	６		G1	６		G1	４		G2	２	4	G2	５		IP	１		IP	３		IP
+山田　　哲也	3.50	0.11	1.9	５		IP	６		IP	５		IP	５		G3	３		G1	４		G1	３		G1	６		G1	６		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+柳瀬　　幹太	5.30	0.18	3.9	６		G3	４		G3	６		IP	１		IP	１		IP	２		IP	２		IP	６		G3	２		G3	５		IP
+黄金井　力良	4.90	0.12	2.2	３		G3	３		IP	３		IP	５		IP	３		IP	５		IP	６		IP	５		IP	１	1	IP	２		G3
+高山　　敬悟	7.00	0.13	2.5	５		G3	４	4	IP	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP	２		IP	５		IP
+戸塚　　邦好	5.50	0.11	2.6	５		G3	４		IP	３		IP	４	5	IP	２	6	IP	２	5	G3	３		G3	１		IP	６		IP	４		IP
+柴田　　大輔	4.30	0.16	3.7	５		G3	５		G3	６		IP	３		IP	２		IP	４		IP	４		IP	２		IP	４		IP	４		IP
+杉山　　裕也	3.80	0.15	2.6	５		G3	５		G2	６		IP	５		IP	６		G3	４	5	IP	２		IP	１	5	IP	３		IP	６		IP

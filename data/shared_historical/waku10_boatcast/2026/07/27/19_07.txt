@@ -1,0 +1,8 @@
+data=
+1	0
+岡田　　憲行	8.00	0.20	3.3	１		IP	１		IP	１		IP	３		IP	１		IP	３		IP	５		IP	３		IP	１		IP	１		IP
+毒島　　　誠	7.00	0.13	2.8	２		IP	２		IP	４		G2	４		G2	４		IP	５		IP	２		IP	２		IP	１		IP	１		IP
+仲本　　　舜	4.20	0.13	2.5	２		IP	６		IP	４		IP	５	4	IP	５		IP	５		IP	１		IP	６		IP	４		IP	２		IP
+大澤　　大夢	5.00	0.14	3.0	３		IP	４		IP	２		IP	３	3	IP	５		IP	５		IP	４		IP	２		IP	３		IP	４	5	IP
+坪口　　竜也	5.50	0.16	3.9	５		IP	５		IP	４		IP	３		G2	２		IP	２		IP	２		IP	４	4	IP	２		IP	４		IP
+星田　　夢結	1.40	0.15	3.2	６		IP	４	5	IP	６		IP	５		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

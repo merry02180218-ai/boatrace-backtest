@@ -1,0 +1,8 @@
+data=
+1	0
+高井　　雄基	7.20	0.17	3.0	１		IP	２		IP	５		IP	１		IP	１		IP	１		IP	１		IP	６		G3	６		G3	１		IP
+山道　　諄也	3.00	0.18	3.0	６	3	IP	６		IP	５		IP	２		IP	４		IP	５		IP												IP
+中嶋　健一郎	6.10	0.12	2.7	２		IP	３		IP	３		G1	４		G1	３		G1	２		G1	５		G1	４		IP	１		IP	６		G1
+守屋　　大地	4.40	0.23	4.5	２		IP	２		IP	２		IP	５		IP	６		IP	４	3	IP	６		IP	３		IP	５		IP	４		G3
+木幡　　純也	4.10	0.16	3.8	６		IP	６		IP	４		IP	４		IP	５		IP	３		IP	６		IP	１		IP	２		IP	４		IP
+渡邉　　和将	5.80	0.14	2.7	２	3	IP	２		IP	１		IP	３		IP	３	5	IP	３		IP	４		IP	５		G1	６		G1	４		G1

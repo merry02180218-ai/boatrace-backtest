@@ -1,0 +1,8 @@
+data=
+1	0
+榎　　　幸司	7.80	0.14	2.6	２		IP	４		G2	３		IP	１		IP	２		IP	１		IP	１		IP	６		IP	１		IP	１		IP
+渡邉　　睦広	5.70	0.13	3.2	２		IP	３		IP	２		G3	６		IP	６		IP	１		IP	２		IP	３		IP	２		IP	６		IP
+黒田　　誠司	3.90	0.18	3.4	４		IP	５		G3	３		IP	３		IP	４		IP	４		IP	５		IP	５		IP	２		IP	６		IP
+東本　　勝利	6.00	0.17	4.2	落		IP	４		IP	３		IP	４		G3	４		G3	３		IP	４	5	IP	１		IP	３		IP	２	5	IP
+山本　　浩輔	4.70	0.20	3.2	２		IP	６	4	IP	４		IP	３		IP	４		IP	６		IP	６		IP	４		IP	２		IP	１		IP
+内田　　　壮	1.70	0.15	3.8	３		IP	５		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP	６		IP

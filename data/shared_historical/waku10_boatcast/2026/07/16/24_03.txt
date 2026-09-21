@@ -1,0 +1,8 @@
+data=
+1	0
+戸塚　　邦好	9.60	0.14	2.4	１		IP	１		G3	２		G3	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	１		IP
+渡辺　　真至	6.40	0.16	3.1	１		IP	１		IP	１		IP	妨		IP	１		IP	２		IP	６		IP	６		IP	２		IP	３		IP
+森　　　弘行	3.22	0.16	4.0	３	4	IP	４		IP	欠		IP	６		IP	３		IP	５		IP	３		IP	５		IP	６		IP	６		IP
+有山　　　望	4.70	0.14	3.0	４		IP	５		IP	４		IP	４		IP	４		IP	３		IP	６		IP	２		IP	４		IP	１		IP
+上野　　秀和	3.30	0.11	3.1	４		IP	４		IP	４		IP	４		IP	５		IP	３		IP	４		IP	５		IP	６		IP	５	4	IP
+森　　晋太郎	3.10	0.15	4.2	６		IP	４		IP	５		IP	４	5	IP	５		IP	２		IP	５		IP	５		IP	４		IP	５		IP

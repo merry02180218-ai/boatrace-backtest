@@ -1,0 +1,8 @@
+data=
+1	0
+野見山　拓己	5.20	0.09	1.3	Ｆ		G3	１		IP	３		IP	５		G3	３		IP	妨		IP	１		IP	２		IP	３		IP	４		IP
+新田　　智彰	5.44	0.17	3.2	転		IP	６		IP	６		IP	６	4	G3	１		IP	３		IP	１		IP	４		IP	１		IP	３		IP
+長野　壮志郎	5.90	0.15	3.7	２		IP	６		IP	２		IP	２		IP	５		IP	３		IP	６		IP	２		IP	２		IP	２	4	IP
+福西　広太郎	2.22	0.21	4.2	６		IP	３		IP	６		IP	６		IP	５		IP	エ		IP	６		IP	４		IP	５		IP	５		IP
+板倉　　敦史	4.30	0.17	3.8	４		IP	４		IP	２		IP	６		IP	５		IP	５		IP	４		IP	４		G3	３		G3	２		G3
+中村　　晃朋	5.50	0.14	3.4	１		IP	３		IP	３		G1	６		G1	３		IP	５		G3	３		G3	落	5	IP	３		IP	１		IP

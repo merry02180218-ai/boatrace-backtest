@@ -1,0 +1,8 @@
+data=
+1	0
+萩原　　秀人	8.78	0.11	1.9	３		G3	１		G3	１		G3	１		G3	１		SG	５		IP	２		IP	転		IP	１		IP	１		IP
+板橋　　侑我	6.20	0.14	3.6	２		G2	２		IP	４		IP	１		IP	２		IP	５		G1	４		G1	６		G3	５		G1	１		G1
+三嶌　こころ	3.70	0.21	4.3	３		IP	２		IP	３	4	IP	５		IP	４		IP	５		IP	６	6	IP	５		IP	４		IP	５		IP
+金子　　和之	5.20	0.15	3.0	３		G2	５		IP	１		IP	４		IP	６		IP	５	5	IP	１		IP	２		IP	４		IP	４		IP
+香川　　陽太	3.50	0.18	4.1	５		IP	４		IP	５		IP	６		IP	３	4	IP	３		IP	６	6	IP	５	6	IP	６		IP	２	4	IP
+知念　　伶奈	1.90	0.27	5.1	２		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５	5	IP	５		IP	６		IP

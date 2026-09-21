@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　怜央	0.00	-	-			IP			IP			IP			IP			IP			IP			IP			IP			IP			IP
+若林　　樹蘭	6.40	0.16	3.1	３		IP	１		IP	５		IP	３		IP	３		IP	４		IP	２		IP	４		IP	２		IP	１		IP
+藤井　　太雅	2.80	0.22	4.4	６		IP	６		IP	４		IP	４		IP	６		IP	６		IP	６		IP	４		IP	６		IP	１		IP
+廣部　　大明	4.80	0.18	3.6	４	5	IP	１	5	IP	３		IP	５		IP	５		IP	４		IP	３		IP	５	6	IP	３		IP	３		IP
+尾道　　佳諭	3.40	0.12	2.1	４		IP	４		IP	４		IP	６	4	IP	５		IP	３		IP	６		IP	３		IP	４		IP	５	4	IP
+前田　　篤哉	5.30	0.15	3.1	２		G3	４		G3	２		IP	６		IP	５		IP	６		G1	６		G1	１		IP	２		IP	２	4	IP

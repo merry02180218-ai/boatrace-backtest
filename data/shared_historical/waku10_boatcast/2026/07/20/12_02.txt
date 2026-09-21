@@ -1,0 +1,8 @@
+data=
+1	0
+高橋　　二朗	4.50	0.20	4.0	１		IP	６		IP	５	2	IP	５		IP	２		IP	１		IP	５		IP	５		IP	３		IP	５		IP
+池田　　雷太	3.30	0.19	4.0	５		IP	２		IP	２		IP	４	3	IP	５		IP	５		IP	５		IP	５		IP	６		IP	５		IP
+上村　慎太郎	4.00	0.20	4.7	５		IP	４		IP	２		IP	４		IP	６		IP	３		IP	４		IP	３		IP	６		IP	４		IP
+松井　　賢治	5.30	0.17	3.5	３		IP	２		IP	２		IP	４		IP	２		IP	４		IP	６		IP	５		IP	３		IP	３		IP
+香月　　大輝	4.60	0.19	3.2	５		IP	３		IP	６		IP	２	4	IP	４		IP	３		IP	６		IP	５		IP	２	6	IP	２		IP
+吉原　　快誓	2.60	0.13	3.1	６		IP	６		IP	６		IP	３		IP	４		IP	４		IP	５		IP	５		IP	６		IP	４	5	IP

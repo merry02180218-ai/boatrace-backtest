@@ -1,0 +1,8 @@
+data=
+1	0
+椎名　　　豊	9.40	0.13	2.3	１		IP	１		IP	１		IP	２		IP	１		IP	２		IP	１		IP	２		G3	１		G3	１		IP
+前田　　　滉	6.50	0.15	3.8	１		IP	４		IP	２		IP	１		IP	１		IP	５		IP	２		IP	６	6	SG	４	3	SG	５		IP
+若林　　義人	7.20	0.14	2.1	１		IP	５		IP	３	2	IP	１		IP	３		IP	２	2	IP	４		IP	１		IP	３		IP	１		IP
+荒牧　　凪沙	4.90	0.17	3.7	４		IP	３		IP	５		IP	５		IP	３	5	IP	６		IP	１		IP	１		IP	４		IP	４		IP
+高野　　哲史	6.80	0.18	3.4	２		IP	２	3	IP	４		IP	５		IP	３		IP	４		IP	３		IP	１		IP	１		IP	２		IP
+坂口　　貴彦	2.00	0.18	4.4	４		IP	６		IP	６		IP	５		IP	３		IP	６		IP	６		IP	５		IP	６		IP	６		IP

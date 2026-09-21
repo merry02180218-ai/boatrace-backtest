@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　順一	6.90	0.17	3.3	２		IP	４		IP	１		IP	２		IP	３		IP	１		IP	６		IP	４		IP	１		IP	２		IP
+安部　　慎一	5.80	0.15	3.5	５		IP	５		IP	３		IP	４		IP	１		G3	２		G3	２		IP	４		IP	３	3	IP	２		IP
+澤崎　　雄哉	5.90	0.14	2.8	２		G3	３		G3	３		IP	６		IP	２		IP	２		IP	１		IP	５		IP	４		IP	３		IP
+芹澤　　克彦	5.80	0.15	3.3	２		G3	３		G3	４		IP	４		IP	３		IP	１	3	IP	４		IP	４		IP	４		IP	２		IP
+大塚　　雅治	4.10	0.18	4.0	４		IP	４		IP	５		G3	４	6	G3	４		IP	６		IP	４		IP	３		IP	３		IP	３		IP
+高野　　哲史	3.60	0.17	3.6	６		IP	５		IP	２		IP	１	4	IP	６		IP	５		IP	６		IP	４	5	IP	６		IP	３		IP

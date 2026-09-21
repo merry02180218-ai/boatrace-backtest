@@ -1,0 +1,8 @@
+data=
+1	0
+小坂　　風太	3.10	0.23	4.1	６		IP	６		IP	３		IP	６		IP	１		IP	５		IP	６		IP	３		IP	６		IP	５		IP
+麻生　　慎介	7.60	0.13	2.7	３		IP	３		IP	１		IP	３		IP	１		IP	１		IP	１		IP	５		IP	３		IP	１		IP
+秋山　　広一	5.80	0.17	3.6	２		IP	３		G2	２		G2	４		G2	４		IP	６		IP	４		IP	１		IP	２		IP	５		IP
+浮田　　圭浩	4.80	0.22	3.8	２		IP	６		IP	５		IP	３		IP	４		IP	３		IP	２		IP	６		IP	４		IP	２		IP
+乙藤　　智史	6.20	0.18	3.8	４		IP	４		IP	３		IP	２		IP	５		IP	３		IP	３	6	IP	２		IP	１		IP	２		IP
+早川　　尚人	3.20	0.13	2.6	５		IP	５		IP	５		IP	３		IP	６	5	IP	２	5	IP	５		IP	５		IP	６		IP	３		IP

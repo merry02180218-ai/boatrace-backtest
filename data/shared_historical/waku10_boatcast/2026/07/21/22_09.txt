@@ -1,0 +1,8 @@
+data=
+1	0
+内山　　七海	9.10	0.11	2.3	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	１		G3	１		G2	３		IP
+竹下　　大樹	7.90	0.17	3.3	２	1	IP	２		IP	１		IP	３		IP	１		IP	４		IP	２		IP	４		IP	１		IP	１	3	IP
+品川　二千翔	7.10	0.17	3.2	６		G2	４		IP	２		IP	２		IP	２		IP	６		IP	２		IP	１		IP	１	5	IP	１		IP
+津田　　陸翔	6.70	0.17	3.1	２		G3	２		IP	３		IP	２		IP	２		IP	３	3	IP	３		IP	２		IP	５		G2	３		IP
+常住　　　蓮	6.00	0.13	2.4	１		G2	３		G2	４	4	G1	４		SG	４		IP	４		IP	２		IP	２		IP	５		G1	６		G1
+武井　莉里佳	4.11	0.15	3.2	１	4	IP	欠		IP	３	5	IP	４	5	IP	５		G3	６		G3	６		G3	５		G3	５		G2	２	5	IP

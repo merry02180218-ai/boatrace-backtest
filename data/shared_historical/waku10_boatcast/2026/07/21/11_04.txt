@@ -1,0 +1,8 @@
+data=
+1	0
+野長瀬　正孝	9.20	0.14	2.9	１		IP	１		G3	３		G3	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP	１		IP
+夏山　　亮平	5.20	0.14	2.8	６		IP	３		IP	２		IP	２	3	IP	２	3	IP	６	3	G3	３		G3	３		IP	６		IP	３		IP
+國弘　　翔平	4.20	0.14	2.7	３		IP	落		IP	５		IP	３		IP	２		IP	６		IP	６		IP	３		IP	５		IP	１		IP
+高山　　智至	4.40	0.17	3.3	５		IP	４		IP	２		IP	２		IP	５		IP	５		IP	３		IP	５		IP	５		IP	２		IP
+小野寺　智洋	3.40	0.14	3.3	２		IP	６		IP	５		IP	４		IP	５		IP	６		IP	５		IP	３		IP	２	6	IP	落		IP
+坂東　　　満	2.40	0.21	4.5	６		IP	６		IP	３		IP	６		IP	６		IP	６		IP	４		IP	５		IP	６		IP	３		IP

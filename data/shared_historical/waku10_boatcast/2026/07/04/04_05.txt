@@ -1,0 +1,8 @@
+data=
+1	0
+板倉　　敦史	6.20	0.16	3.1	５	2	IP	５		IP	１		IP	２		IP	１		IP	５		G3	２		IP	１		IP	４		IP	３		IP
+田頭　　虎親	7.80	0.13	2.7	１		IP	１		IP	２		IP	５		IP	１		IP	２		IP	４		IP	１		IP	１		IP	３		IP
+新田　　智彰	4.22	0.17	2.8	欠		IP	３		IP	５		IP	３		IP	５		IP	４		IP	１		IP	６		IP	６		IP	３		IP
+井本　　昌也	6.10	0.15	2.8	１		IP	３	3	IP	２		IP	４		IP	２		IP	１		IP	６		IP	４	3	IP	２		IP	６		G1
+木下　虎之輔	2.70	0.16	3.0	４		IP	６	6	IP	４		IP	６	6	IP	４	6	IP	６		IP	４		IP	３		IP	６	6	IP	６	6	IP
+茅原　　悠紀	5.50	0.12	3.7	３		SG	５		SG	３		IP	５		IP	４	5	IP	２		SG	４		SG	２	5	IP	５		G1	５		G1

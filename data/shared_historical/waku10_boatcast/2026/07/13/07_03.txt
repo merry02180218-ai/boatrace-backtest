@@ -1,0 +1,8 @@
+data=
+1	0
+江本　　真治	8.00	0.18	4.6	２		IP	１		IP	２		IP	３		IP	１		IP	１		IP	２		IP	１		IP	２		G3	５		G3
+岩瀬　　裕亮	7.10	0.12	2.6	４		IP	１		IP	２		G1	６		G1	３		G1	２		G2	５		IP	１	1	IP	３		G1	１		G1
+守田　　俊介	4.90	0.12	2.9	１		IP	１		SG	５		G1	４	4	SG	４		G1	５		G1	６		IP	６		IP	３		IP	６		G1
+金子　　賢志	6.80	0.12	2.6	６		G2	３		G2	１		IP	３		IP	５		IP	２		IP	６		IP	１		G1	１		G1	１		IP
+永田　　秀二	5.00	0.21	4.6	３		IP	３		IP	４		IP	２	6	IP	１		G2	３		IP	５		IP	５		IP	６		IP	４		IP
+市川　　哲也	3.40	0.14	2.2	２		IP	６		IP	３		IP	４		IP	５	5	IP	５		IP	４	3	IP	４	4	IP	６		IP	５		IP

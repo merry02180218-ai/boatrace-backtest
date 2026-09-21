@@ -1,0 +1,8 @@
+data=
+1	0
+古賀　　繁輝	8.40	0.17	3.4	３		IP	１		IP	２		IP	１		IP	１		IP	１		IP	５		IP	２		IP	１		IP	１		IP
+藤丸　　光一	4.90	0.24	4.6	５		IP	１		IP	２		IP	４		IP	５		IP	４		IP	３		IP	５		IP	６		IP	１		IP
+森林　　　太	3.40	0.16	3.2	４		IP	６		G3	５		G3	５		IP	４		IP	６		IP	５		IP	３		IP	４		IP	２		IP
+嶋田　　貴支	5.80	0.18	3.7	１		IP	５		IP	１		IP	５		IP	２		IP	４		IP	３		IP	４		IP	４		IP	２		IP
+山口　　晃朋	4.00	0.13	2.4	２		IP	５	6	G3	３	6	IP	６		IP	６		IP	４		IP	４		IP	３		IP	４		IP	４		IP
+吉原　　快誓	2.60	0.13	3.0	６		IP	６		IP	３		IP	４		IP	４		IP	５		IP	５		IP	６		IP	４	5	IP	６		IP

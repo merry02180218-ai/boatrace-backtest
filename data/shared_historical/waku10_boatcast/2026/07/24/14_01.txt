@@ -1,0 +1,8 @@
+data=
+1	0
+白神　　　優	8.50	0.11	2.6	３		G1	６		G1	３		G1	１		G1	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP
+岸蔭　　　亮	3.90	0.19	4.6	６		IP	５		IP	３		IP	４		IP	５		IP	３		IP	３		IP	３		IP	４		IP	５		IP
+鹿島　　敏弘	5.30	0.13	3.1	５		G2	４		G2	３		IP	２		IP	３		IP	４		IP	６		IP	５	4	IP	２		IP	１	4	IP
+竹腰　　正樹	4.90	0.16	3.3	３		G3	６		G3	１		IP	３		IP	４		IP	５		IP	３		IP	３		IP	４		IP	４	3	IP
+金子　　良昭	3.50	0.18	3.2	５	2	IP	６		IP	４	3	IP	６		IP	６		IP	３		IP	１	3	IP	４	4	IP	５		IP	４	3	IP
+森安　　弘雅	2.50	0.22	5.8	６		IP	６		IP	５		IP	５	5	IP	６		IP	５		IP	２		IP	６	5	IP	６		IP	３		IP

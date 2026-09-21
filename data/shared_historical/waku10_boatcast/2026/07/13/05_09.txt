@@ -1,0 +1,8 @@
+data=
+1	0
+赤羽　　克也	9.40	0.15	3.1	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP
+加藤　　優弥	5.40	0.11	2.2	Ｆ	3	IP	４		IP	３		IP	１		IP	６		IP	２		IP	３		IP	１		IP	２		IP	６		IP
+吉田　　彩乃	5.11	0.20	4.0	３		IP	４	4	IP	不		IP	６		G3	３		G3	２		IP	３		IP	４		IP	６		IP	１		IP
+平尾　　崇典	5.50	0.15	3.2	６	3	G2	４		G2	３		IP	５		IP	４		IP	３		IP	１		IP	１		G2	６		IP	２		IP
+川尻　　泰輔	4.70	0.14	3.2	２		IP	５		IP	６		IP	４	4	IP	２	6	IP	２		IP	３		IP	６		IP	２		IP	６		IP
+谷本　　幸司	2.80	0.17	4.7	３		IP	６		IP	４		IP	５		IP	５		IP	５		IP	５		IP	４		IP	４		IP	６	5	IP

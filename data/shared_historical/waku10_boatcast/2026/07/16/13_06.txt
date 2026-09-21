@@ -1,0 +1,8 @@
+data=
+1	0
+原　　加央理	8.80	0.20	4.0	１		IP	１		IP	３		IP	４		IP	１		IP	１		G3	１		G3	１		IP	１		IP	２		IP
+福岡　　泉水	4.60	0.21	4.8	５		IP	３		IP	２		IP	５		IP	６		IP	３		IP	２		IP	４		IP	２		IP	６		IP
+田中　　博子	3.40	0.20	3.6	５		G3	４		IP	５		IP	４		IP	２		G3	５		IP	４		IP	５		IP	４		IP	５	6	IP
+三浦　　永理	7.50	0.14	3.0	１		IP	５	5	IP	２		IP	３		IP	３		G3	２		G3	２		G2	１		G3	２		IP	３		G3
+池田　　美優	1.70	0.26	5.2	６	6	G3	６	6	IP	６	6	IP	５	6	IP	５	6	G3	５	6	G3	４	6	G3	６	6	IP	５	6	IP	６	6	IP
+大橋　栄里佳	4.60	0.20	4.4	２		IP	５		IP	５		G3	６		IP	４		IP	２		IP	５		IP	２		G3	４		G3	４		G3

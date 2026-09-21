@@ -1,0 +1,8 @@
+data=
+1	0
+福田　　翔吾	6.70	0.16	3.6	１		IP	１		IP	エ		IP	２		IP	２		IP	３		IP	１		IP	１		IP	６		IP	４		IP
+山崎　　義明	7.10	0.17	4.0	３		IP	４		IP	２		IP	１		IP	２		G3	２		IP	１		IP	２		IP	２		IP	６		G3
+黄金井　力良	7.00	0.14	1.9	２		IP	３		IP	２		IP	３		IP	４		IP	３		IP	１	5	IP	３		IP	２		G3	２		G3
+松竹　　大輔	5.00	0.15	3.0	４		G3	３		IP	５	6	IP	２		IP	２	5	IP	４		IP	２		IP	５		G3	４		G3	４		G3
+杉山　　貴博	3.20	0.20	4.1	３		IP	４	4	IP	３	6	IP	３		G3	５		G3	６		IP	６		IP	４		IP	６		IP	６		IP
+濱野谷　憲吾	4.60	0.17	4.0	３		G2	３		G1	６		SG	６		SG	３		SG	４		G1	４		IP	４		IP	５		G1	６		G1

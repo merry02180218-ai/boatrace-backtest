@@ -1,0 +1,8 @@
+data=
+1	0
+西岡　　顕心	8.70	0.17	3.3	１		IP	２		IP	４		IP	１		IP	１		IP	２		G1	２		SG	４		G2	１		G2	１		IP
+古賀　　繁輝	5.80	0.15	3.8	６		IP	２	3	IP	６		IP	１		IP	２		IP	２		IP	２	4	IP	４	3	IP	６		IP	２		IP
+大場　　恒季	5.80	0.14	3.4	１		IP	１		IP	２		IP	６		IP	２		IP	５		IP	４		IP	６		IP	２		IP	４		IP
+有賀　　達也	6.60	0.13	2.5	５		IP	４		G3	４		G3	１	2	IP	１		IP	５		IP	２		IP	１		IP	１		IP	４		G1
+谷口　　　丞	3.20	0.14	3.3	４		IP	４		IP	５		IP	６	6	IP	４		IP	３		IP	６		IP	４		IP	４		IP	５	4	IP
+大賀　龍之介	3.30	0.21	4.5	３		IP	４		IP	４		IP	３		IP	５		IP	４		IP	６		IP	６		IP	５		IP	６		IP

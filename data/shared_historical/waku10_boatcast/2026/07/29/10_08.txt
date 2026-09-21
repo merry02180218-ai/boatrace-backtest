@@ -1,0 +1,8 @@
+data=
+1	0
+三松　　直美	4.90	0.13	2.9	３		IP	３		G3	６		IP	３		IP	１		G3	５		G3	６		G3	３		G3	６		G3	１		IP
+白水　　勝也	7.20	0.16	3.6	１		IP	２		IP	２		IP	５		IP	３		IP	３		IP	２		IP	２		IP	３		IP	１		IP
+藤本　　佳史	4.50	0.12	2.8	３		IP	２		IP	２		IP	３		IP	５		IP	６		IP	３		IP	５		IP	４		IP	５		IP
+尾崎　　雄二	6.30	0.13	2.5	５		IP	５		IP	２		IP	３		G3	４		G3	１		IP	１		IP	６		IP	１		IP	１		IP
+鈴木　　峻佑	4.80	0.16	2.7	４		IP	４		IP	２		IP	５		IP	４		IP	５		IP	１		IP	５	4	IP	２		IP	４		IP
+稗田　　聖也	3.50	0.15	2.8	５		IP	４		IP	５		IP	３	5	IP	４		IP	４		IP	４		IP	５		IP	３		IP	６		IP

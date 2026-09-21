@@ -1,0 +1,8 @@
+data=
+1	0
+羽野　　直也	10.00	0.15	3.3	１		G1	１		G1	欠		G1	１		G1	１		G1	１		IP	１		IP	１		IP	２		IP	２		IP
+廣瀬　　将亨	4.70	0.16	3.0	５		IP	４		IP	２		IP	３		IP	６		IP	３		IP	６		G2	６		G2	２		IP	２		IP
+峰　　　竜太	6.40	0.14	2.7	６		SG	３		SG	２		G1	４		G1	４		SG	２		G1	２	2	IP	５	2	G1	４		G1	３		SG
+原田　　幸哉	8.70	0.09	2.3	３		IP	２		SG	１		G1	１		SG	４		SG	３		G1	１		G1	２		IP	３		G1	２		G1
+岡　　　祐臣	5.20	0.15	3.2	５		IP	２		IP	５		IP	２		IP	１		IP	４		IP	５		G1	５		G1	５		G1	３		G1
+江本　　真治	5.00	0.19	3.7	１		IP	３	5	IP	５		IP	５		IP	１		IP	Ｆ		IP	３		IP	５		G3	４		G3	２	5	IP

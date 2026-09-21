@@ -1,0 +1,8 @@
+data=
+1	0
+前田　　篤哉	9.50	0.12	3.4	１		G3	１		IP	１		IP	２		IP	１		IP	２		G1	２		IP	１		IP	１		IP	１		IP
+若林　　義人	3.80	0.13	2.7	４		G3	５		G3	５		IP	２		IP	５		IP	３		IP	６		IP	１		IP	６		IP	５		IP
+鈴木　　孝明	7.10	0.13	3.5	３	4	G3	２		G3	６		IP	１		IP	１		IP	１		IP	４		IP	４		IP	１		IP	２		IP
+中野　　希一	6.30	0.13	2.3	５	6	G3	４		G3	１		IP	３	5	G3	６		G3	１	3	IP	２		IP	２		IP	３		IP	２		IP
+塚越　　海斗	5.20	0.14	2.5	６		G3	４		G3	６		IP	２	3	IP	２		IP	４	6	G3	３		G3	３	4	IP	２		IP	５		IP
+廣瀬　　　凜	3.30	0.20	4.2	４	5	G3	５		IP	３		IP	５		IP	４		IP	４		IP	５		G2	６		G2	６		G2	５		IP

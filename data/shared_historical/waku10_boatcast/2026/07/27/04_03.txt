@@ -1,0 +1,8 @@
+data=
+1	0
+豊田　　　結	7.60	0.18	2.8	２		IP	２		IP	４		IP	３		IP	３		IP	３		IP	１		IP	１		IP	１		G3	２		G3
+神里　　琴音	6.10	0.14	2.9	４		IP	２		G3	４		IP	３		IP	５		G2	３		G3	３		G3	２		G3	３		IP	１		IP
+原　　加央理	5.20	0.12	1.9	３		G3	４		G3	３		IP	３		IP	５		IP	１		IP	２		IP	４		IP	４		IP	５		G3
+平田　さやか	5.60	0.17	2.5	１		IP	５		IP	２		IP	転	3	IP	３		G3	４		G3	４		G3	３		IP	２	2	IP	２	3	IP
+滝沢　　織寧	3.20	0.18	3.0	６		IP	４		IP	Ｆ		IP	３	4	IP	５		IP	２		IP	５		IP	３		IP	６		IP	５		IP
+中澤　　宏奈	3.80	0.18	4.3	３		IP	５		IP	５		IP	４		IP	６		G3	４		G3	４		G3	２		IP	４		IP	６		IP

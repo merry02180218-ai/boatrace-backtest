@@ -1,0 +1,8 @@
+data=
+1	0
+中　　　亮太	8.20	0.14	3.0	１		IP	６		IP	１		IP	１		IP	２		G2	１		IP	２		G2	３		G2	２		G3	２		G3
+宮村　　勇哉	6.10	0.14	2.6	２		IP	１		IP	３		IP	６		IP	１		IP	１		IP	５		IP	２		IP	５		IP	４		IP
+町田　　洸希	4.80	0.15	3.3	５		IP	４		IP	３		IP	４		IP	２		IP	３		IP	３		IP	３		IP	４		IP	５	6	IP
+深山　　祐二	3.60	0.15	2.5	５		IP	５		IP	５		IP	５		IP	６		IP	５		IP	３		IP	６		IP	２		IP	１		IP
+石倉　　拓美	2.50	0.16	2.8	５	6	IP	６		IP	６		IP	６		IP	６		IP	６		IP	５	6	IP	５		IP	１		IP	４		IP
+抹香　　雄三	3.90	0.15	3.1	３		IP	６		IP	４		IP	１		IP	４	5	IP	５	5	IP	５		IP	３		IP	５		IP	５		IP

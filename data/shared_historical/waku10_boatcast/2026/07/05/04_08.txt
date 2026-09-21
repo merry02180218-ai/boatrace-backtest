@@ -1,0 +1,8 @@
+data=
+1	0
+森定　　晃史	8.40	0.11	2.2	１		IP	２		IP	２		IP	１		IP	１		IP	１		IP	５		IP	１		IP	１		IP	３		IP
+田中　　　堅	4.90	0.15	3.8	４		IP	２		IP	４		IP	２		IP	４		IP	６		IP	３		IP	２		IP	４		IP	５		IP
+杉山　　喜一	5.10	0.16	3.6	３		IP	６		IP	２		IP	３		IP	５	6	IP	１		IP	４		G3	３		G3	４		G3	４		G3
+茅原　　悠紀	6.50	0.12	3.0	３		SG	２		IP	６		IP	１		IP	３		IP	３		SG	２		IP	２		IP	４		G1	５		G1
+林　　　恵祐	2.70	0.17	3.7	５		IP	４		IP	６	6	IP	６		IP	５		IP	４		IP	４		IP	６		IP	３		IP	５		IP
+國弘　　翔平	1.90	0.26	5.5	６		IP	５		IP	６		IP	６		IP	５		IP	３		IP	６		IP	５	5	IP	６		IP	５		IP

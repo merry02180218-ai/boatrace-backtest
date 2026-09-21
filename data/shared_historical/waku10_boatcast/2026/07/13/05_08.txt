@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　　萌	9.50	0.12	1.4	１		G2	１		IP	２		IP	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP
+峰重　　侑治	3.00	0.26	4.8	５		IP	４		IP	５		IP	３		IP	４		IP	６		IP	Ｆ		IP	６		IP	３		IP	４		IP
+大橋　　由珠	4.40	0.16	2.6	３		IP	２		IP	５		IP	３		IP	２		IP	５		IP	５		IP	３		IP	５		IP	５		IP
+成貞　　琳平	3.50	0.23	4.2	６		IP	４		IP	６		IP	４		IP	４		IP	６		IP	４		IP	５		IP	１		IP	４	6	IP
+下出　　卓矢	4.50	0.17	4.0	５	6	G2	６		G2	５		G2	５		G2	４		IP	２	1	IP	１		IP	４		IP	３		IP	５		IP
+酒井　　陽祐	3.10	0.15	3.4	２	5	IP	４		IP	４		IP	４		IP	６		G3	３	5	IP	６		IP	６		G3	６		G3	６		IP

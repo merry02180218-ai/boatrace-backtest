@@ -1,0 +1,8 @@
+data=
+1	0
+石川　　哲秀	4.40	0.18	3.5	２		IP	２		IP	６		IP	５		IP	１		IP	６		IP	３		IP	６		IP	３		IP	６		IP
+四宮　　与寛	7.56	0.12	2.5	１	4	G3	３		G3	転		IP	１		IP	２		IP	２		IP	１		IP	４		IP	１		IP	５		IP
+佐藤　　　航	6.10	0.14	3.3	２		IP	５		G2	５		G2	５		IP	１		IP	２		IP	１		IP	５		IP	３	4	IP	２		IP
+岩下　　巧斗	5.67	0.13	2.7	３		IP	３		IP	３		IP	４		IP	１		IP	６		IP	落		IP	４		IP	４		IP	１		IP
+茶谷　　信次	4.80	0.19	3.9	４		IP	４		IP	３		IP	４		IP	３		IP	５		IP	４		IP	３		IP	４		IP	２		IP
+田中　　　結	1.50	0.17	4.1	６		IP	６		IP	４		IP	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+横田　　　茂	8.50	0.13	2.9	１		IP	１		IP	２		IP	１		IP	６		IP	２		IP	１		IP	２		IP	１		IP	１		IP
+西岡　　成美	5.30	0.16	3.8	４		IP	４		IP	５		G1	１		IP	５		IP	３		IP	５		IP	２		IP	３		IP	２		IP
+石原　　　翼	7.80	0.10	2.1	２		IP	２		IP	２		G2	１		G2	３		G2	６		G2	１		IP	１		IP	２		G2	５		G2
+中渡　　修作	4.00	0.16	3.1	４		IP	５	5	IP	６		IP	２		IP	５		IP	２	3	IP	３		IP	６		IP	３		IP	５		IP
+折下　　寛法	4.40	0.16	2.9	４		IP	２		IP	４		IP	３	4	IP	４		IP	３	4	IP	５		IP	５		IP	４	6	IP	４		IP
+藤山　　湧太	2.30	0.20	3.9	４		IP	６		IP	６		IP	５		IP	５		IP	６		IP	５		IP	２		IP	６		IP	６		IP

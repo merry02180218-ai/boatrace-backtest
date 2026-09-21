@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　晃大	9.70	0.13	1.7	１		G2	１		IP	１		IP	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+大谷　　健太	5.60	0.14	3.5	４	4	IP	３		IP	３		IP	３		IP	１		IP	１		IP	１		IP	６		IP	５		IP	６		IP
+谷口　　健一	3.80	0.16	3.5	６		IP	２		IP	６		IP	５		IP	４		IP	４		IP	６	4	IP	６		IP	２		IP	２		IP
+渡邉　　　健	2.80	0.15	2.9	５	5	IP	３		IP	３		IP	６		IP	６	6	IP	６		IP	５		G3	６		G3	３		IP	５		IP
+宇田川　信一	4.40	0.15	3.4	６		IP	２		IP	３		IP	５		IP	４		IP	６		IP	５		IP	３		IP	２		IP	３	6	IP
+入海　　　馨	4.80	0.20	4.0	３		G2	６		IP	３		G1	５		IP	６		G1	５		G1	１		IP	３		IP	４		IP	３		IP

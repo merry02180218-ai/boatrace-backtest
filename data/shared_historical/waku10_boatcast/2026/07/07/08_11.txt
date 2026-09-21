@@ -1,0 +1,8 @@
+data=
+1	0
+葛原　　大陽	8.40	0.15	2.8	１		G3	１		G3	１		IP	２		IP	２		IP	２		IP	２		IP	３		IP	３		IP	１		IP
+清埜　　翔子	5.20	0.17	3.2	３		IP	４		IP	４		IP	１		IP	１		G3	５		G3	５		IP	５		IP	１		IP	５		IP
+中越　　博紀	6.80	0.16	3.9	３		IP	３	2	IP	１		IP	６		IP	６		IP	２	5	IP	２		IP	２		IP	１		IP	１		IP
+荻野　　裕介	3.90	0.21	4.6	３		G3	４		IP	６		IP	６		IP	６		IP	２		IP	２		IP	５		IP	４		G3	４		G3
+烏野　　賢太	3.20	0.15	3.6	５		G3	沈		IP	５		IP	４		IP	４		IP	５		IP	３		IP	５		IP	３		IP	４		G3
+上田　　健太	2.90	0.19	4.6	５		G2	６		IP	３	5	IP	５		IP	３		IP	６		IP	６		IP	６		IP	５		IP	４		G3

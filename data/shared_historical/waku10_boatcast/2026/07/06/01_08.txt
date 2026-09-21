@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　一樹	7.30	0.12	3.0	１		IP	１		IP	２		IP	２		IP	５		IP	２		IP	３		IP	６		IP	１		IP	１		IP
+幸野　　史明	5.20	0.16	2.6	３		IP	４		IP	５		IP	３		IP	５		IP	５		IP	１		IP	１		IP	５		IP	２		IP
+小柳　　勝希	5.20	0.15	3.2	３		IP	５		IP	３		IP	５	4	IP	１		IP															IP
+今泉　　　徹	2.20	0.16	3.5	６		IP	６		IP	６		IP	４		IP	４		IP	５	5	IP	５		IP	５		IP	４		IP	６		IP
+竹田　　和哉	5.80	0.19	4.1	３		IP	３		IP	６		G1	４		G1	２	4	IP	２		G3	３		IP	１		IP	６		IP	３		IP
+米本　　圭佑	2.78	0.22	4.4	６	5	IP	５		IP	４		IP	５		IP	４	5	IP	４		IP	６		IP	３		IP	転		IP	６		IP

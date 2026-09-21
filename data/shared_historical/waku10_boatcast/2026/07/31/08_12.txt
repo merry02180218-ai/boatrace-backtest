@@ -1,0 +1,8 @@
+data=
+1	0
+廣瀬　　　凜	9.78	0.15	2.9	不		G3	１		G3	１		IP	３		IP	１		IP	１		IP	１		IP	１		G2	１		G2	１		IP
+三馬　　崇史	5.50	0.12	1.9	６	3	G3	６		G3	１		IP	２		IP	１		IP	３	3	IP	２		IP	５		IP	２		IP	６		IP
+荒木　　颯斗	6.20	0.15	3.0	５		G3	５		G3	１		IP	２		IP	４		IP	３		IP	１		IP	４		IP	２		IP	２		IP
+若林　　義人	7.50	0.12	2.5	３		G3	２		IP	１	3	IP	３		IP	１		IP	１		IP	６	3	IP	１	3	IP	１	3	IP	５		IP
+森口　　和紀	3.80	0.14	2.6	２		G3	５		G3	５		IP	５		IP	５		IP	６		IP	４		IP	３		IP	１		IP	６		IP
+篠原　　晟弥	4.50	0.14	2.9	５		G3	５		G2	Ｆ		G2	１		G2	２		IP	５		IP	３		IP	３		IP	６		IP	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+越智　　照浩	8.60	0.16	2.4	１		IP	１		IP	１		IP	５		G3	１		IP	１		IP	１		IP	４		IP	１		IP	１		IP
+久永　　祥平	6.60	0.12	3.0	１		IP	２		IP	４		IP	３		IP	４		IP	３		IP	１		IP	２		G3	６		G3	２		IP
+牧原　　　崇	3.40	0.17	3.4	５		IP	５		IP	４		IP	６		IP	４		IP	４	4	IP	５		IP	４		IP	１		IP	６		IP
+大場　　　敏	5.40	0.14	2.5	６		IP	６		IP	２		IP	１		IP	５		IP	３		G3	１		IP	２		IP	５		IP	３		IP
+和田　　兼輔	5.60	0.12	3.0	４		G2	４	4	IP	４		IP	３	4	IP	２		IP	２	6	G1	３		G1	５		IP	２		IP	５		G1
+出口　　飛龍	1.00	0.21	5.4	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

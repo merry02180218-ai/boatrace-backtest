@@ -1,0 +1,8 @@
+data=
+1	0
+桑原　　　啓	6.70	0.18	3.3	５		IP	２		IP	６	4	IP	１		G3	２		IP	２		IP	１		IP	４		IP	２		IP	２		IP
+室田　　泰史	6.10	0.10	1.5	３		IP	５		IP	３		IP	４		IP	１	3	IP	２		IP	６		IP	１		IP	２		IP	３		IP
+信濃　　由行	1.80	0.17	4.0	６	4	IP	６		IP	５		IP	４		IP	３		IP	６		IP	Ｆ		IP	６	4	IP	６		IP	６		IP
+繁野谷　圭介	4.60	0.20	4.1	３		IP	１	3	G3	５		IP	２		IP	５	3	IP	５		IP	４		IP	３		IP	４		IP	５		IP
+富永　　正人	4.30	0.18	4.0	２		IP	６	6	IP	３		IP	６	6	IP	４	6	IP	３		IP	６		IP	４		IP	４		IP	２		IP
+池本　　輝明	2.70	0.23	5.2	５		IP	５		IP	３		IP	３		IP	６		IP	６		IP	６		IP	５		IP	５		IP	４	4	IP

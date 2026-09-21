@@ -1,0 +1,8 @@
+data=
+1	0
+貫地谷　直人	3.50	0.18	3.9	５		IP	４		IP	５		IP	５		IP	３		IP	５		IP	３		IP	６		IP	２		IP	５	2	IP
+近藤　　稔也	4.10	0.19	4.5	５		IP	５		IP	３		IP	３		IP	６		IP	４		IP	２		IP	３		IP	４		IP	５		IP
+岩田　　　凌	4.44	0.19	4.0	３		IP	４		IP	４		IP	４		IP	５	4	IP	エ		IP	４		IP	５		IP	１		IP	４		IP
+室田　　泰史	4.40	0.13	2.6	４		IP	５		G3	４		G3	４		G3	４		IP	３		IP	３		IP	３		IP	５		IP	３		IP
+中野　　和裕	3.20	0.15	2.7	６		IP	６		IP	４		IP	５		IP	３		G3	６	6	G3	１	4	IP	６		IP	５		IP	４		IP
+高木　　圭大	3.10	0.16	3.9	３		IP	６		IP	４		IP	５		IP	５		IP	２		IP	６		IP	６		IP	４		IP	５		IP

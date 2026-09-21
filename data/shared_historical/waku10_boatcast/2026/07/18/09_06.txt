@@ -1,0 +1,8 @@
+data=
+1	0
+湯淺　　紀香	8.50	0.19	3.4	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	２		IP	２		IP	４		G2	２		G3
+宇留田　翔平	7.60	0.17	2.4	３		IP	１	1	IP	６		IP	１		IP	２		IP	２		IP	１	3	IP	１		IP	５		IP	１		IP
+櫻井　　　優	5.70	0.15	2.7	６		IP	２		IP	１		IP	１		IP	２		IP	５		IP	３		IP	３		IP	５		IP	４		IP
+廣瀬　　　凜	5.30	0.17	3.5	３		IP	落		IP	２		IP	３		IP	１		IP	５		IP	２		IP	２		IP	５		IP	５	5	IP
+砂長　　知輝	5.00	0.16	3.6	２		IP	３		IP	３		IP	５		IP	１	3	IP	３		IP	６		G1	３		G1	Ｆ		G1	６		SG
+杉山　　喜一	3.40	0.20	4.8	５		IP	４		IP	２		IP	５		IP	４		IP	３		IP	５		IP	５		IP	５		G3	５	5	G3

@@ -1,0 +1,8 @@
+data=
+1	0
+上原　　　崚	8.00	0.14	2.7	１		IP	３		G2	２		G3	６		G3	１		IP	１		IP	４		G2	１		G2	１		IP	２		IP
+大崎　　　翔	5.20	0.11	3.2	３		IP	３		IP	２		IP	１		IP	１		IP	５		IP	５		IP	３		IP	６		IP	６		IP
+松本　　真広	5.10	0.19	3.8	３		G3	３		IP	５		IP	４		IP	４		IP	３		IP	６		IP	３		IP	２		IP	２		IP
+黄金井　力良	6.00	0.15	2.3	５		IP	２		IP	４		IP	３		IP	４		IP	１		IP	４		IP	２		IP	２		G3	３		IP
+渡辺　　　崇	3.67	0.15	3.1	Ｆ		G3	２		IP	転		G3	５		G3	６		IP	５		IP	２		IP	４	6	IP	３		IP	５		IP
+赤岩　　善生	5.40	0.15	3.3	５	3	G2	２	2	IP	６		SG	５	2	G1	６	2	G1	１	3	G3	３	3	G3	３	3	IP	１	2	IP	５	5	G1

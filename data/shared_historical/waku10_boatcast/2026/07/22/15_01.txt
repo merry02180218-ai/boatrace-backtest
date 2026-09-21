@@ -1,0 +1,8 @@
+data=
+1	0
+吉原　　聖人	6.80	0.19	3.7	４		G3	２		IP	１		IP	６		G3	１		G3	２		IP	６		IP	２		IP	２		IP	１		IP
+新井　　英孝	5.60	0.15	2.8	３		IP	３	3	IP	４		G3	１	3	IP	２		IP	２		IP	５		IP	３		IP	４		IP	５		IP
+一柳　　和孝	4.30	0.14	3.5	５	5	G3	５		IP	４		IP	２		IP	４		IP	６		G3	３		IP	４		IP	３		IP	３		IP
+上岡　　巧汰	2.20	0.20	4.9	２		IP	６	6	IP	６	6	IP	５	6	IP	６	6	IP	６	6	IP	６	6	IP	６		IP	５	5	IP	４	6	IP
+宮崎　　　奨	5.22	0.15	4.6	３		IP	３		IP	４		IP	６		IP	４		IP	２		IP	２		IP	２		IP	欠		IP	５		IP
+佐藤　謙史朗	3.50	0.20	3.6	５		IP	４		IP	５		IP	６		IP	４		IP	２		IP	２		IP	６		IP	６		IP	４		IP

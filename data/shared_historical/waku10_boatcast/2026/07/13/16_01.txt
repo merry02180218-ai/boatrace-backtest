@@ -1,0 +1,8 @@
+data=
+1	0
+喜井　つかさ	7.40	0.16	2.5	１		IP	５		IP	１		G3	１		G3	１		G3	１		IP	１		IP	５		G3	２		G3	５		G3
+諏訪　　玲奈	6.00	0.32	6.0	３		IP																											IP
+赤池　　修平	3.40	0.19	3.6	３		IP	６	4	IP	６		IP	６		IP	１		IP	４		IP	６	5	IP	２		IP	６		IP	６		IP
+小川　　時光	4.20	0.15	3.3	５		IP	２		IP	２	3	IP	４		IP	４		IP	５		IP	４		IP	３		IP	５	5	IP	５		IP
+眞崎　　武蔵	1.90	0.19	4.0	６		IP	欠		IP	５		IP	２	6	IP	６		IP	５		IP	６	6	IP	６		IP	５		IP	６	6	IP
+岩下　　巧斗	2.80	0.15	3.4	４		IP	６		IP	５		IP	６		IP	２		IP	５	5	IP	５		IP	５		IP	５		IP	４	5	IP

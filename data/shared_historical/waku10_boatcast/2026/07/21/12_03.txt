@@ -1,0 +1,8 @@
+data=
+1	0
+山田　　真聖	8.10	0.15	2.9	５		IP	１		IP	１		IP	１		IP	１		IP	６		IP	１		IP	２		IP	１		IP	１		IP
+岡谷　　健吾	5.80	0.20	3.8	１		IP	５		IP	３		IP	２		IP	５		IP	２		IP	４		IP	３		IP	３		IP	３		IP
+鈴木　　雅希	6.50	0.13	2.7	２		IP	１		IP	３		IP	１		G3	４		G3	４		IP	３		IP	６		IP	２		IP	２		IP
+嶋田　　貴支	5.60	0.16	3.4	３		IP	１		IP	５		IP	１		IP	５		IP	２		IP	４		IP	３		IP	４		IP	４		IP
+北村　　征嗣	4.80	0.14	3.6	３		IP	５		IP	５		G3	２		G3	４		IP	２		IP	４		G3	５		G3	３		G3	４		IP
+池田　　雷太	2.20	0.18	3.8	４		IP	５		IP	６		IP	６		IP	６		IP	５		IP	５	3	IP	６		IP	３		IP	５		IP

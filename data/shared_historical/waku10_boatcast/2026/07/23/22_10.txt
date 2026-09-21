@@ -1,0 +1,8 @@
+data=
+1	0
+定松　　勇樹	10.30	0.16	2.9	１		G3	２		SG	１		SG	１		SG	３		G1	１		IP	１		IP	２		G1	１		G1	１		SG
+山崎　　　祥	7.10	0.17	4.2	１		G3	３		IP	３		IP	２		IP	２		IP	１		IP	６		IP	３		IP	２		IP	２		IP
+前原　　大道	8.50	0.15	3.0	３		G3	２		IP	１		IP	１		G1	３		G1	３	2	IP	２		IP	１		IP	１		IP	２		G1
+西丸　　敦基	5.80	0.10	1.7	２	5	IP	２		IP	２		IP	６		IP	１		IP	２		IP	４		IP	４		IP	３		IP	６		IP
+加藤　　翔馬	5.70	0.14	2.1	６		G3	４		IP	１		IP	２		IP	２		G1	３		IP	３		IP	５		IP	３		IP	４		IP
+登玉　　隼百	3.22	0.13	3.8	６		G3	６		IP	転		IP	５		IP	３		IP	６		IP	４		IP	４		IP	６		IP	２		IP

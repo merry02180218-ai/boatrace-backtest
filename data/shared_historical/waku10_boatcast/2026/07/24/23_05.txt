@@ -1,0 +1,8 @@
+data=
+1	0
+高岡　　竜也	9.20	0.14	3.0	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	４		IP	１		IP	１		IP	１		IP
+岡本　　　大	5.30	0.17	3.4	２		IP	４		IP	４		IP	３		IP	２		IP	２		IP	２		IP	５		IP	６		IP	４		IP
+河野　　主樹	6.40	0.13	2.4	２		IP	１		IP	３		IP	４		IP	１		IP	３		IP	４		IP	２		IP	５		IP	３		IP
+森永　　　淳	5.90	0.12	2.5	１		IP	４		IP	３		G3	５		G1	４		IP	２		IP	１		IP	６		IP	４		G1	２		IP
+廣中　　良一	1.50	0.15	3.0	６		G3	６		IP	６		IP	６		G3	６		G3	５		IP	４		IP	５		IP	６		IP	６		IP
+薮内　　瑞希	3.00	0.17	4.7	６		G3	６		G3	５		G3	４		G3	６		G3	４		G3	３		IP	６		IP	５		IP	２		IP

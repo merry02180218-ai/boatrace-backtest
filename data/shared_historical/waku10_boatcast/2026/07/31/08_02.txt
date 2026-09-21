@@ -1,0 +1,8 @@
+data=
+1	0
+牧村　　俊輝	5.30	0.18	2.7	５		IP	２		IP	６		IP	６		IP	３		IP	２		IP	３		IP	１		IP	６		IP	１		IP
+篠原　　晟弥	6.50	0.17	3.2	２		G3	３		G3	４		G2	４		IP	１		IP	４		IP	１		IP	３		IP	５		IP	１		IP
+仲　　　航太	4.20	0.15	2.6	６		G3	２		IP	６		IP	２		IP	３		IP	５		IP	２		IP	４		IP	４		IP	落		IP
+津田　　陸翔	7.10	0.16	3.2	１		G3	２		G3	２		IP	３		IP	２		IP	２		IP	３	3	IP	３		IP	２		IP	５		G2
+吉田　　一心	5.20	0.18	2.9	５		IP	４	6	G3	３		IP	１		IP	２		IP	２		IP	６		IP	４		IP	２		IP	６		IP
+小林　　甘寧	4.80	0.16	3.6	３	5	IP	５		IP	５		IP	４		IP	５		IP	３		IP	２	4	IP	３		IP	２		IP	４		IP

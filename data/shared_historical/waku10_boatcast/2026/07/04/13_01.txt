@@ -1,0 +1,8 @@
+data=
+1	0
+小池　　礼乃	8.80	0.13	2.5	１		IP	２		IP	１		IP	３		IP	１		IP	２		IP	１		IP	１		IP	２		IP	２		IP
+西川　新太郎	6.10	0.14	3.1	１		IP	１		IP	４		IP	２		IP	３	1	IP	２		IP	６		IP	５		IP	３		IP	３		IP
+吉田　　俊彦	6.40	0.16	3.1	５		IP	２		IP	１		G3	２		IP	２		IP	３		IP	３		IP	４		IP	３		IP	３		IP
+寺嶋　　　雄	4.80	0.15	3.4	４		IP	４		IP	３		IP	５		IP	４		IP	３		IP	３		IP	４		IP	１		IP	５		IP
+堤　　　啓輔	4.50	0.15	3.6	４	3	IP	２		IP	２		IP	６	2	IP	３		IP	５		IP	３		IP	３	4	IP	５	6	IP	５	6	IP
+堀内　　亜海	1.10	0.18	3.6	６		IP	６		IP	６		IP	６		IP	６		IP	５	5	IP	６		IP	６		IP	６		G3	６		G3

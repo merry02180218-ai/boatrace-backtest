@@ -1,0 +1,8 @@
+data=
+1	0
+谷口　　　丞	8.00	0.13	3.1	１		IP	１		IP	１		IP	５		IP	１		IP	２		IP	１		IP	２		IP	１		IP	５		IP
+菊池　　宏志	5.30	0.18	3.6	５		IP	５		IP	５		IP	２		IP	６		IP	５		IP	２		IP	２		IP	１	3	IP	１		IP
+渡辺　　　豊	5.10	0.20	4.2	３		IP	３	4	IP	６		IP	３		IP	３		IP	５		IP	３		IP	２		IP	３		IP	４		IP
+木村　　光宏	4.10	0.16	3.0	５		IP	２		G3	４		IP	５		IP	３		IP	３		IP	５		IP	３		IP	６		IP	４		IP
+高山　　智至	4.00	0.18	3.8	４		IP	６		IP	３		IP	５		IP	４		IP	３		IP	４		IP	５		IP	６		IP	１		IP
+西岡　　顕心	5.40	0.14	3.2	２		IP	２		IP	４		G1	１		G2	６		G2	３		IP	４	5	IP	４		IP	５		G1	５		G1

@@ -1,0 +1,8 @@
+data=
+1	0
+明石　　正之	5.90	0.14	2.4	Ｆ		IP	３		IP	３		IP	１		IP	４		IP	１		IP	５		IP	１		IP	１		IP	６		G3
+今井　　美亜	6.60	0.16	2.6	２		G3	２		G2	４		G2	４		IP	３		IP	１		G3	３		G3	１		G3	６		G3	３		G2
+古賀　　繁輝	5.90	0.13	2.3	１		IP	５		IP	１		IP	５		IP	６		IP	４		IP	２		IP	１		IP	３		IP	３		IP
+今村　　暢孝	6.10	0.14	2.6	６	2	IP	２	1	IP	３	2	IP	３	1	G3	Ｆ	2	IP	２	1	IP	２	2	IP	３	2	IP	３	2	IP	１	2	IP
+齋藤　　真之	4.00	0.21	4.0	３		IP	５		IP	６		IP	５		IP	３		IP	３	4	IP	６		IP	４		IP	４		IP	２		IP
+池田　　美優	1.80	0.27	4.7	３		IP	５		IP	５		G3	６		G3	６		G3	６		G3	６		IP	６		IP	６		IP	５		IP

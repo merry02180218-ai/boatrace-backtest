@@ -1,0 +1,8 @@
+data=
+1	0
+中村　かなえ	6.60	0.10	2.2	５		IP	１		IP	１		IP	５		IP	２		IP	１		IP	１		G3	２		IP	５		IP	４		IP
+今泉　　友吾	5.80	0.17	3.9	２		G1	６		G1	４		IP	５		IP	４		IP	３	3	IP	３		IP	３		IP	１	3	IP	２		G1
+白水　　勝也	7.00	0.19	3.4	１		IP	２	2	IP	１		IP	４		IP	２		IP	６		IP	４		IP	エ	2	IP	１	2	IP	２		IP
+塩崎　　優司	3.80	0.15	2.9	６		IP	５		IP	１		IP	５		IP	４		IP	２		IP	５	5	IP	３		IP	５	3	IP	６		IP
+柴田　　直哉	2.90	0.24	4.6	５		IP	３		IP	４		IP	６		IP	５		IP	４		IP	５	6	IP	５		IP	５		IP	４	6	IP
+堀内　　亜海	1.10	0.19	3.8	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５	5	IP	６		IP	６		IP	６		G3

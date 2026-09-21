@@ -1,0 +1,8 @@
+data=
+1	0
+吉田　　宗弘	6.80	0.14	2.8	４		IP	４		IP	Ｆ		IP	２		IP	１		IP	１		IP	１		IP	４		IP	１		IP	２		IP
+葛原　　大陽	5.50	0.15	3.3	転		IP	６		IP	３		IP	３		IP	５	4	G3	３		IP	１		IP	３		IP	２		IP	１		IP
+大森　　　翼	4.70	0.14	3.0	４		IP	１	4	IP	２		IP	３		IP	６		IP	３		IP	４		IP	５		IP	５		IP	４		IP
+荒川　　健太	4.60	0.20	3.9	５	5	IP	４		IP	４		IP	３		IP	３		IP	３		IP	４		G3	３		IP	５		IP	３		IP
+野長瀬　正孝	3.90	0.17	3.4	５	4	IP	３		G3	６	3	G3	２		IP	５	4	IP	３	3	IP	３	3	IP	５		IP	３		IP	Ｆ		IP
+海野　ゆかり	2.90	0.25	5.2	６		IP	３		G3	４		IP	４		IP	５		G3	５		IP	４		G3	６		G2	５		IP	５		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+原田　才一郎	10.00	0.10	2.1	１		IP	１		G3	１		G3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+濱野　　斗馬	6.50	0.12	3.2	２		G3	４		G3	１		IP	２		IP	４		IP	２		IP	６		IP	４		IP	２		IP	１		IP
+西丸　侑太朗	6.10	0.15	2.1	２		G3	３		G3	６		IP	４		IP	２		IP	３		IP	４		IP	４		IP	２		IP	１		G3
+峰重　　力也	6.50	0.13	2.0	４		IP	４		IP	１		IP	３		IP	６		IP	２		IP	３		IP	１		IP	１		IP	３		IP
+深川　麻奈美	6.40	0.17	4.1	３		IP	３		IP	４	6	IP	２		IP	１		IP	３		IP	５		IP	２		IP	３		IP	３		IP
+鈴木　　雅希	3.30	0.22	4.8	４		IP	３		IP	６		IP	６		G3	６		IP	２		IP	６		IP	４	5	IP	３		IP	６		IP

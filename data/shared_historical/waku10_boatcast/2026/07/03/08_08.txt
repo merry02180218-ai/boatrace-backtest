@@ -1,0 +1,8 @@
+data=
+1	0
+安河内　　健	7.90	0.10	2.9	１		IP	６		G3	１		IP	２		IP	１		IP	１		IP	１		IP	４		IP	３		IP	１		IP
+安東　　幸治	6.80	0.14	2.6	２		IP	３		IP	３		IP	２		IP	２		IP	２		IP	４		IP	２		IP	２		IP	４		IP
+田村　　　慶	2.40	0.19	4.1	５		IP	６	4	IP	４		IP	６		IP	６		IP	５		IP	６		IP	５		IP	４		IP	３		IP
+松下　　誉士	4.20	0.16	4.4	４		IP	５		IP	５	5	IP	３		IP	１	3	IP	４		IP	６		IP	４		IP	２		IP	６		IP
+西原　　明生	2.40	0.25	5.0	４		IP	６		IP	５		IP	５		IP	５	6	IP	５		IP	６		IP	４		IP	５		IP	４		IP
+吉島　　祥之	2.40	0.22	5.4	６		IP	５		IP	６		IP	２	5	IP	５		IP	６		IP	６		IP	５		IP	４	5	IP	５		IP

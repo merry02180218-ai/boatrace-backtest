@@ -1,0 +1,8 @@
+data=
+1	0
+西川　　拓利	9.30	0.13	2.4	３		IP	１		G3	１		IP	１		IP	１		IP	２		IP	１		IP	１		IP	２		IP	１		IP
+福田　　　理	3.80	0.13	3.0	４		IP	４		G3	６		G3	５		IP	２		IP	４		IP	６		IP	４		IP	４		IP	３		IP
+小川　　時光	4.00	0.15	3.0	５		IP	６		IP	４		IP	３	4	IP	３	2	IP	５		IP	２		IP	転		IP	３		IP	６		IP
+上平　　真二	4.33	0.16	3.9	６		IP	３		IP	２		IP	６		G1	５		G1	転		IP	４		IP	３		IP	３		IP	５		G1
+大町　　利克	3.10	0.20	3.9	５		IP	４		IP	５		IP	６		IP	６		IP	３		IP	５		IP	４		IP	６		IP	２	4	IP
+山下　　奈緒	5.00	0.22	4.8	５		IP	１		IP	３		IP	転		IP	４		G3	２		IP	５		IP	４		IP	１		IP	４		IP

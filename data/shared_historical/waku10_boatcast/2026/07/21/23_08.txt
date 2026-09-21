@@ -1,0 +1,8 @@
+data=
+1	0
+村岡　　　賢	6.10	0.19	3.9	３		IP	４		IP	６		IP	２		IP	１		IP	２		IP	３		IP	３		IP	５		IP	１		IP
+土井　　祥伍	6.00	0.21	4.1	２		IP	１		IP	４	5	IP	６		IP	２		IP	４		IP	６	3	IP	２		IP	２	3	IP	２		IP
+廣中　　良一	3.20	0.17	3.8	４		G3	５		G3	２		IP	６	6	IP	３		G3	４		G3	６	5	IP	６		IP	４		IP	６		IP
+森永　　　淳	5.60	0.12	2.5	４		IP	３		G3	５		G1	４		IP	２		IP	１		IP	６		IP	４		G1	２		IP	３		IP
+豊田　　泰洋	2.80	0.21	4.2	５		IP	５		IP	５		IP	４	6	IP	４		IP	６		IP	３		IP	５		IP	６		IP	４		IP
+中西　　月輝	1.60	0.21	5.1	５		IP	６		IP	６		IP	６		IP	５		IP	６		IP	５		IP	４		IP	６		IP	６		IP

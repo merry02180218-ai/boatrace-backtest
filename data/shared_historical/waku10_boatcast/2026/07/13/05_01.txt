@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　聖司	4.50	0.16	3.3	５		IP	４		IP	５		IP	６		IP	３		IP	４		IP	１		IP	１		IP	３		IP	Ｆ		IP
+谷本　　幸司	3.20	0.21	3.8	５		IP	５		IP	４		IP	３		IP	２		IP	５		IP	６		IP	６	3	IP	４		IP	５		IP
+山田　　晃大	5.40	0.11	2.1	５		G2	４		G2	２		IP	３		IP	４		IP	３		IP	６		IP	１		IP	１		IP	６		IP
+中井　　俊祐	5.90	0.13	2.2	２		IP	１		IP	２		IP	２		IP	１		IP	５		IP	５		IP	３		IP	４		IP	６		IP
+山下　　大輝	6.70	0.15	3.3	１		IP	２		IP	２		IP	１		IP	３		IP	２	4	IP	４		IP	６		IP	４		IP	３		IP
+寺島　　美里	3.90	0.25	4.8	５		IP	５		IP	２		IP	５		IP	３		IP	４		IP	４		IP	２		IP	５	5	IP	６		IP

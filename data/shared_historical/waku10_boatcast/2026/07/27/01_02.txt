@@ -1,0 +1,8 @@
+data=
+1	0
+山口　　広樹	6.00	0.17	3.2	５		IP	２		IP	１		IP	Ｆ		IP	３		IP	３		IP	５		IP	２		IP	１		G3	２		IP
+岩下　　巧斗	6.00	0.17	4.3	４		IP	３		IP	２		IP	４		IP	２		IP	５		IP	３		IP	２		IP	３		IP	２		IP
+大塚　　浩二	3.40	0.18	3.2	３		IP	４		IP	５		IP	５		IP	４		IP	５		IP	３		IP	３		IP	６		IP	６		IP
+吉田　　祐貴	2.44	0.19	4.4	４	5	IP	転		IP	４	5	IP	６		IP	５		IP	４	5	IP	６		IP	５		IP	５		IP	５		IP
+長尾　京志郎	3.70	0.17	4.1	６	6	IP	４		IP	５		IP	６		IP	２		IP	５		IP	２		IP	４	6	IP	３		IP	６		IP
+松尾　　　祭	3.30	0.17	4.3	４		IP	６	4	IP	５		IP	６		G2	５		IP	２		IP	４		IP	５		G2	５		G2	４		IP

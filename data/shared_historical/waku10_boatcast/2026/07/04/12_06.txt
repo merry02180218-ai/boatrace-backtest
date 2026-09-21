@@ -1,0 +1,8 @@
+data=
+1	0
+占部　　一真	7.00	0.13	2.8	１		IP	１		IP	１		IP	１		IP	２		IP	１		IP	５		IP	５		IP	３		IP	５		G3
+寺田　　千恵	6.20	0.15	3.7	１		IP	２		IP	２		IP	２		IP	６		IP	３		G2	３		G1	５	3	G1	４		G3	３		G3
+中村　　裕将	4.90	0.11	2.2	３	5	IP	３		IP	２		IP	２	4	IP	５		IP	４		IP	５		IP	４		IP	２		IP	６		IP
+金児　　隆太	4.30	0.18	3.9	４		IP	２		IP	５	2	IP	２		IP	３		G3	６		G3	６		IP	２		IP	４		IP	６		IP
+田村　　隆信	4.20	0.16	4.5	５		G2	６		G1	６		G2	６		IP	１		IP	５		IP	３		IP	５		IP	１		IP	４	6	IP
+小川　　晃司	3.80	0.16	3.8	４		IP	６	5	IP	４		IP	５		IP	６		IP	３		IP	５		IP	３		IP	３		IP	３	5	IP

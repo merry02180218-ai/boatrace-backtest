@@ -1,0 +1,8 @@
+data=
+1	0
+河野　　　大	9.20	0.13	2.4	１		IP	２		IP	５		G2	１		G2	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+高橋　　英之	5.70	0.12	2.3	４		IP	５		IP	２		IP	２		IP	６		IP	４		IP	３		IP	２		IP	３		IP	１		IP
+仲本　　　舜	4.00	0.13	2.5	６		IP	４		IP	５	4	IP	５		IP	５		IP	１		IP	６		IP	４		IP	２		IP	３		IP
+岡部　　貴司	4.50	0.15	3.7	４		IP	３	2	IP	３		IP	３		IP	２		IP	４		IP	６		IP	５		IP	３		IP	５		IP
+永井　　聖美	3.00	0.19	3.7	６		IP	３		IP	３		G3	５	4	IP	６		IP	５		IP	４		IP	６		IP	６		IP	３		IP
+高野　　哲史	3.30	0.17	3.5	５		IP	５		IP	６		IP	５		IP	２		IP	１	4	IP	６		IP	５		IP	６		IP	４	5	IP

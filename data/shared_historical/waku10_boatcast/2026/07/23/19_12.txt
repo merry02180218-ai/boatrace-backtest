@@ -1,0 +1,8 @@
+data=
+1	0
+山口　真喜子	8.20	0.14	2.5	１		G3	１		IP	３		IP	２		IP	５		IP	１		IP	１		IP	３		IP	１		IP	１		IP
+島倉　　　都	3.40	0.15	4.2	５		G3	６		IP	２		IP	３		IP	５		IP	４		IP	６		IP	４	3	IP	４		IP	５		IP
+清埜　　翔子	7.00	0.18	3.0	３		G3	２		IP	３		IP	２		IP	２		IP	５		IP	２		IP	３		IP	２		G3	１		G3
+来田　　衣織	4.90	0.15	3.1	落		G3	５		IP	４		IP	４		IP	２		IP	１		IP	１		IP	２		IP	５		IP	６		IP
+深見　亜由美	2.50	0.22	3.9	６		G3	４		IP	５		IP	６		IP	３	4	IP	４		IP	６		G3	６	6	G3	４		IP	６		IP
+松田　　真実	4.00	0.20	3.8	３	5	G3	３		IP	６		IP	３		IP	６	5	IP	４	5	IP	５		IP	４		IP	５		G3	２		G3

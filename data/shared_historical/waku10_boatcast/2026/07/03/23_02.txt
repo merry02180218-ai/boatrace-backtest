@@ -1,0 +1,8 @@
+data=
+1	0
+宗行　　治哉	9.90	0.09	1.9	１		G2	１		G2	１		IP	１		G2	１		IP	１		IP	１		IP	１		IP	３		IP	１		IP
+田中　　辰彦	6.10	0.20	3.6	１		IP	３		IP	１		IP	１		IP	５		IP	２		IP	２	3	IP	６		IP	５		IP	４		IP
+大賀　龍之介	6.80	0.14	2.8	１		IP	Ｆ		IP	１		IP	２		IP	４		IP	１		IP	２		IP	３		IP	５		IP	２		IP
+鈴木　　秀茉	5.70	0.17	2.3	２		IP	１		IP	４		IP	３		IP	１	5	IP	６		IP	２		IP	４	5	IP	４		IP	５		IP
+出穂　　和鼓	1.30	0.18	4.0	６		IP	６		IP	６		IP	６		IP	５		G3	６		G3	５		G3	６		G3	６	6	IP	５	6	IP
+古賀　　千晶	2.70	0.16	3.4	５		G3	５		IP	４		G3	５		G3	５	5	G3	５	5	G3	５		G3	４	5	IP	６		IP	３		IP

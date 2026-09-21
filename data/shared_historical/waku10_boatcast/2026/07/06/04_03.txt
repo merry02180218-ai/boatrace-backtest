@@ -1,0 +1,8 @@
+data=
+1	0
+今出　　晋二	5.50	0.14	3.4	２		IP	２		IP	２		IP	６		IP	３		IP	４		IP	４		IP	４		IP	４		IP	２		IP
+森清　　友翔	5.90	0.18	3.5	１		IP	３		IP	５		IP	３		IP	２		IP	４		IP	４		IP	２		IP	６		IP	１		IP
+中村　　魁生	7.20	0.17	3.0	１		IP	５		IP	１		IP	２		IP	２		IP	２		IP	２		IP	４		IP	３		IP	２		IP
+齋藤　　達希	3.50	0.19	3.9	６		IP	５		G3	６		G3	５		IP	３		IP	３		IP	３		IP	３		IP	４		G3	６	5	G3
+長岡　　良也	4.70	0.16	3.3	２		IP	２		IP	３		IP	４		IP	６		IP	６		IP	５		IP	４		G1	４		IP	２		IP
+佐藤　隆太郎	5.00	0.12	2.8	６		IP	２		SG	６		SG	６		G1	３		G1	３		G2	４		IP	４		IP	３		IP	３		IP

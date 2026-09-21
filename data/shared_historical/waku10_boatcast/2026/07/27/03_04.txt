@@ -1,0 +1,8 @@
+data=
+1	0
+國分　将太郎	8.80	0.16	2.3	２		G3	３		IP	１		IP	１		IP	１		IP	２		IP	１		IP	３		IP	１		IP	１		IP
+長野　　道臣	6.00	0.17	3.2	１		G3	３		G3	２		IP	２	3	G3	４		G3	５		IP	２		IP	２	4	IP	４		IP	５		IP
+小原　　聡将	5.50	0.17	3.1	３		G3	５		IP	４		IP	３		IP	４		G2	３		IP	２		IP	５		IP	２		IP	３		IP
+小林　　京平	3.80	0.16	3.1	２		G3	５		IP	転		IP	５		IP	５	6	IP	３		IP	３		IP	２		IP	５	6	IP	５		IP
+柴田　　大輔	4.10	0.15	3.6	５		G3	６		IP	３		IP	２		IP	４		IP	４		IP	２		IP	４		IP	４		IP	Ｆ		IP
+松本　　真広	3.00	0.21	5.2	６		G3	６		G3	６		G3	５		IP	５		IP	４		IP	３		IP	５		IP	６		IP	１		IP

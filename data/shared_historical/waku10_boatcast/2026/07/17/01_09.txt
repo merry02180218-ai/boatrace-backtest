@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　遼太	8.60	0.14	2.5	３		IP	１		IP	３		G3	１		G3	１		IP	２		IP	２		IP	２		IP	１		G3	１		G3
+梅木　　敬太	5.00	0.17	3.4	６		IP	２		IP	４		IP	４		IP	４		IP	６		IP	２		IP	４		IP	２		IP	２		IP
+石田　　章央	7.60	0.13	2.6	１	4	IP	４		IP	２		IP	２		IP	２		IP	１		IP	１		IP	５		IP	１		IP	３		IP
+山田　　竜一	5.00	0.13	2.9	２		IP	３		IP	１		IP	５		IP	５		IP	６		IP	６		IP	２		IP	３		IP	３		IP
+西舘　　　健	5.00	0.15	3.7	３		IP	４		IP	４		IP	３		IP	４		IP	４		IP	４		IP	１		IP	５		IP	３		IP
+上田　　紗奈	4.10	0.15	3.5	６		IP	６		IP	２		IP	１	5	IP	５		IP	２		IP	４		IP	４	5	IP	６		IP	５		IP

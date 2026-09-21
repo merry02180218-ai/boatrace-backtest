@@ -1,0 +1,8 @@
+data=
+1	0
+星野　　太郎	7.40	0.12	3.1	１		IP	１		IP	１		IP	２		IP	５		IP	４		IP	１		IP	Ｆ		IP	１		IP	１		IP
+都築　　正治	5.60	0.13	3.0	５		IP	１		IP	２		IP	３		IP	５		IP	５		IP	２		IP	３		IP	１		IP	５		IP
+西村　　豪洋	3.70	0.15	2.7	３		IP	３		IP	５		IP	４		IP	４		IP	５		G3	６		IP	４		IP	３	4	IP	５		IP
+土井　　祥伍	5.00	0.21	4.6	３		IP	４		IP	２		IP	３		IP	３	6	IP	３	3	IP	４		IP	４		IP	４		IP	５		IP
+金子　　猛志	4.90	0.14	2.7	６		IP	５		G3	４		G3	４		IP	１		IP	５		IP	５		IP	３		IP	２		IP	１		IP
+伊藤　　啓三	2.78	0.15	3.0	３		IP	６		IP	３		IP	５		IP	６		IP	４		IP	５		IP	不		IP	６		IP	５		IP

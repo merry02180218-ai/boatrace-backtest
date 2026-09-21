@@ -1,0 +1,8 @@
+data=
+1	0
+柴田　　朋哉	7.70	0.13	2.4	１		IP	１		IP	４		IP	１		IP	２		IP	６		IP	４		IP	２		IP	１		IP	１		IP
+柳沢　　　一	6.20	0.15	3.5	２		IP	２		IP	６		G1	５		G1	２		IP	１		IP	６		IP	３		IP	２		IP	２		IP
+中本　　大樹	6.90	0.15	3.5	６		IP	１	2	IP	３		IP	１		IP	１		IP	５		IP	４		IP	２	6	IP	２		IP	１		IP
+渡邉　　英児	5.20	0.14	3.3	２		IP	１		IP	２		IP	５		IP	１	3	IP	落		IP	６		IP	３		IP	３		IP	６		IP
+安藤　　瑠希	3.22	0.13	2.2	転		IP	４	6	IP	６		IP	３		IP	６		IP	３		IP	３		IP	６	6	IP	５		IP	５		IP
+藤原　　孝斗	2.60	0.19	3.5	４	5	IP	５		IP	６		IP	５		IP	４	5	IP	６		IP	６		IP	６		IP	５		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+鈴木　　　猛	7.20	0.19	2.9	２		IP	４		G3	１		IP	５		IP	１		IP	３		IP	１		IP	２		IP	３		IP	２		IP
+島川　　光男	4.90	0.18	4.2	５		IP	５		IP	３		IP	３		IP	４		IP	１		IP	６		IP	２		IP	４		IP	３		IP
+上田　　洋平	4.50	0.15	3.0	６	4	IP	３		IP	３		IP	６		IP	３		IP	３		IP	３		IP	３		IP	３		IP	６		IP
+林　　　美憲	3.20	0.19	3.5	２		IP	６		IP	２		IP	５		IP	６		IP	４		IP	４		IP	６		IP	５	3	IP	６		IP
+川田　　正人	4.30	0.18	4.2	５		IP	１		IP	４		IP	Ｆ		IP	１		IP	３		IP	６		IP	４		IP	５		IP	４	4	IP
+齋藤　　和政	2.00	0.21	4.9	６		IP	６		G3	６		G3	６		IP	５		IP	５		IP	６		IP	３		IP	６		IP	４		IP

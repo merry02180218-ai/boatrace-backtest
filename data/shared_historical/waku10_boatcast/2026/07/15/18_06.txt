@@ -1,0 +1,8 @@
+data=
+1	0
+崎　　　利仁	5.90	0.18	2.9	３		IP	２		IP	２		IP	２		IP	１		IP	４		IP	３		IP	３		IP	５	2	IP	６		IP
+今井　　貴士	7.70	0.15	2.8	１		IP	４		IP	１		IP	４		IP	１		IP	１		IP	６		IP	２		IP	２		IP	２		IP
+田村　　　慶	2.60	0.18	4.0	３		IP	３		IP	５		IP	６	4	IP	４		IP	６		IP	６		IP	５		IP	６		IP	５		IP
+越智　　照浩	3.50	0.14	3.8	４		IP	３		IP	４		IP	３		G3	５	6	G3	６		IP	５		IP	３		IP	５		IP	５		IP
+松尾　　　充	6.70	0.14	2.8	３		IP	２		IP	３		IP	２		G1	６	6	G1	２		G1	４		G1	２		IP	３		G3	２		IP
+出口　　飛龍	1.00	0.21	5.3	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+山崎　　　祥	8.20	0.18	4.2	１		IP	１		IP	２		IP	２		IP	２		IP	２		IP	１		IP	４		IP	３		IP	１		IP
+榎　　　幸司	7.80	0.16	3.6	６		G2	１		IP	２		IP	１		IP	２		IP	２		IP	４		IP	２		IP	１		IP	２		IP
+小林　　甘寧	5.14	0.16	3.0	２		IP	２	4	IP	２		IP	転		IP	３		IP	５		IP	４		IP									IP
+内田　　　壮	2.44	0.16	3.6	１		IP	５		IP	５		IP	６		IP	６		IP	６		IP	４		IP	６		IP	転	6	IP			IP
+宇土　　泰就	4.30	0.13	2.4	３		IP	２		IP	５		IP	４		IP	６		IP	３		IP	４		IP	４		IP	３		IP	５		IP
+西丸　侑太朗	4.40	0.16	3.5	３		IP	４		IP	４	5	IP	３		IP	１		IP	５		G3	６		G3	４		IP	４		IP	５		G1

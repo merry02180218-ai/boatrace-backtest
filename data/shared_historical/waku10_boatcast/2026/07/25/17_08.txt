@@ -1,0 +1,8 @@
+data=
+1	0
+広次　　　修	7.00	0.17	3.6	１		IP	３		IP	１		IP	５		IP	１		IP	５		IP	２		IP	３		IP	３		IP	１		IP
+八木　　治樹	5.40	0.19	2.8	４		IP	１		IP	３		IP	３		IP	２		IP	４		IP	３		IP	４		IP	５		IP	４		IP
+宮村　　勇哉	3.60	0.14	3.6	５	6	IP	６	4	IP	４	4	IP	６		IP	４		IP	３		IP	５		IP	５		IP	２		IP	３		IP
+南野　　利騰	4.70	0.15	2.6	１		IP	不		IP	２		IP	４		IP	６		IP	３		IP	５		IP	４		IP	４	5	IP	２		IP
+和田　　兼輔	5.30	0.12	3.1	Ｆ		IP	４		G2	４	4	IP	４		IP	３	4	IP	２		IP	２	6	G1	３		G1	５		IP	２		IP
+山田　　陽翔	1.00	0.22	4.9	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	欠		IP	６		IP	５	5	IP	６		IP

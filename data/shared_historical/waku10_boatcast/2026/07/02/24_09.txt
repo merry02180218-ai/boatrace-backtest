@@ -1,0 +1,8 @@
+data=
+1	0
+松江　　秀徳	7.40	0.17	2.7	１		IP	Ｆ		G3	１		IP	２		IP	５		IP	１		IP	２		IP	１		IP	３		IP	１		IP
+前田　　　翔	7.90	0.16	4.1	３		IP	２		IP	１		IP	２		IP	１		IP	３		IP	２	3	IP	２		IP	３		IP	２		IP
+渡　　　修平	4.60	0.19	4.3	３		IP	３		IP	３		IP	６		G3	６		G3	５		IP	２		IP	５		IP	２		IP	３		IP
+山本　　浩次	3.00	0.19	4.2	６		IP	４		IP	４		IP	５		IP	６		IP	５		IP	６		IP	１		IP	４		G3	６		G3
+照屋　　厚仁	4.20	0.13	3.0	３		IP	４	6	G3	５		G3	４		G3	４		IP	４		IP	４		IP	４	6	IP	４		IP	３		IP
+阿波　　勝哉	2.90	0.20	4.1	６		IP	妨		IP	４		IP	５		IP	３		IP	６		IP	６		IP	４		IP	２		IP	５		IP

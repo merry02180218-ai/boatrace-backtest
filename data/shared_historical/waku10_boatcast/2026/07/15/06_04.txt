@@ -1,0 +1,8 @@
+data=
+1	0
+川井　　　萌	7.20	0.16	3.2	１		IP	４		IP	１		IP	２		IP	１		IP	４		IP	５		IP	１		IP	３		IP	２		IP
+倉田　　郁美	4.60	0.18	3.6	３		IP	４		G3	２		G3	４		G3	６		IP	４		IP	６		IP	４		IP	２		IP	３		IP
+内山　　七海	5.60	0.16	3.4	６	5	IP	２		IP	２		IP	３		IP	３		IP	５		IP	１		G3	２		G3	４		G2	６		G2
+松瀬　　弘美	4.40	0.14	3.3	４		IP	５		IP	２		IP	３		IP	４		IP	６		G3	２		IP	４		IP	３		G3	６		G3
+加藤　　奈月	2.90	0.20	4.7	６		IP	３		IP	４		IP	４	6	IP	５		G3	５		G3	４	6	G3	４		G3	６		G3	６		IP
+加藤　　　綾	2.90	0.18	3.5	６	5	IP	２		IP	５		IP	４		IP	６		IP	６		IP	５		IP	４		IP	５	5	IP	４		IP

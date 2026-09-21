@@ -1,0 +1,8 @@
+data=
+1	0
+西村　　豪洋	6.00	0.21	3.9	５		IP	１		IP	４		IP	４		IP	１		IP	１		IP	３		IP	５		IP	１		G3	５		IP
+樋口　　　亮	4.60	0.18	3.3	６		G2	４		IP	４		IP	４		IP	２		IP	５		IP	１		IP	５		IP	３		IP	４		IP
+佐藤　　博亮	6.90	0.13	2.5	４		IP	４		IP	１		G3	４		G3	２		IP	３		IP	２	4	IP	１		IP	２	4	IP	３		IP
+大神　　康司	5.70	0.11	2.3	２	2	G3	４	3	G3	３	2	IP	４	2	IP	６	3	IP	２	2	IP	１	2	IP	４	2	IP	１	2	IP	５	2	IP
+北川　　敏弘	3.60	0.18	3.7	３		IP	３		IP	５		IP	４		IP	４	6	IP	５		IP	４		IP	５		IP	５		IP	４		IP
+中村　　将隆	2.50	0.18	4.6	６		G3	４		IP	５		IP	Ｆ		IP	６		IP	５		IP	４		G3	３		IP	４		IP	６		IP

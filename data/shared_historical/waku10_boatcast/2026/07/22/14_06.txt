@@ -1,0 +1,8 @@
+data=
+1	0
+常盤　　海心	5.40	0.21	4.2	４		IP	３	2	IP	６		IP	１		IP	３		IP	６		IP	４		IP	１		IP	２		IP	４		IP
+竹田　　辰也	7.30	0.13	2.7	２		IP	１		IP	２		IP	６		IP	２	3	IP	１		IP	２		IP	１		G3	６		IP	２		IP
+竹腰　　正樹	5.90	0.12	2.2	２	4	G3	３	4	G3	６		IP	３		IP	３		IP	３		IP	２		IP	３	4	IP	４		IP	２		IP
+出畑　　孝成	5.67	0.17	3.0	６		IP	３		IP	４	5	IP	３		IP	５		IP	２		IP	３		IP	２		IP	落		IP	１		IP
+谷野　　錬志	5.40	0.15	4.2	４		G2	３		SG	３		SG	２		IP	３		IP	４		G1	３		G1	６		G1	５	6	G1	６		G1
+原田　　朱理	1.10	0.26	4.9	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５		IP	６		IP

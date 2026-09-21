@@ -1,0 +1,8 @@
+data=
+1	0
+上條　　暢嵩	9.80	0.13	3.3	５		G2	１		SG	１		SG	１		G1	１		G1	４		SG	１		G1	１		G1	１		IP	１		IP
+白井　　英治	7.00	0.16	3.8	４		IP	１		G2	６		SG	３		SG	２	3	G1	５		G1	２		SG	３		SG	４		G1	２		G1
+平本　　真之	7.00	0.12	2.9	４		IP	３		G2	３		SG	６		SG	３		G1	３		G1	２		G1	２		G1	３		SG	３		SG
+木下　　翔太	6.80	0.14	2.5	１		IP	２		IP	２		IP	５		G2	３		G2	３	5	IP	２		IP	４		G2	３		G2	４		IP
+上野　真之介	7.20	0.12	3.7	２	6	IP	３		SG	５		G1	３		G1	１		G1	１		SG	５		SG	３	3	IP	３		IP	３		IP
+瓜生　　正義	5.30	0.16	3.8	２		G2	５	4	IP	６	5	SG	５		G1	３		G1	４		SG	３		G1	２	4	IP	４	5	G1	５		G1

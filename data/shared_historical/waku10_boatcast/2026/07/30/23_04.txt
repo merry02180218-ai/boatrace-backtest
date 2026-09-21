@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　孝弘	6.30	0.14	3.2	２		IP	２		IP	３		IP	３		IP	１		IP	１		IP	４		IP	６		G3	Ｆ		IP	１		IP
+宇佐見　　淳	6.00	0.16	2.5	３		IP	２		IP	３		IP	４		G3	１		G3	２		IP	２		IP	６		IP	２		G3	６		IP
+木下　　大將	5.70	0.14	2.6	２		IP	５		IP	２		IP	２		G3	４		IP	３		IP	６		IP	２		IP	２		IP	４		IP
+泉　　　啓文	2.80	0.15	3.7	４		IP	５		IP	５	3	IP	６		IP	５		IP	４		G3	５		G3	２		IP	５		IP	６		IP
+宮野　　　仁	3.30	0.19	4.0	２		G3	６		IP	３		IP	５		IP	６		IP	３		IP	５	4	IP	６	4	IP	５		IP	４		IP
+田中　　宏樹	3.60	0.17	4.4	５		IP	５		IP	３		IP	４		IP	６		IP	３		IP	６		IP	３		IP	４		IP	４		G3

@@ -1,0 +1,8 @@
+data=
+1	0
+松江　　秀徳	7.50	0.17	2.6	３		G2	１		IP	１		IP	Ｆ		G3	１		IP	２		IP	５		IP	１		IP	２		IP	１		IP
+下條　雄太郎	8.10	0.15	3.2	１		IP	２		IP	１		G2	２		G1	２		IP	４		G1	３		G1	１	3	G1	４		IP	２		IP
+本田　　　愛	7.80	0.14	2.6	１		IP	１		IP	２		IP	３		IP	３		IP	３		IP	２		IP	２		IP	１		IP	３		IP
+藤田　　靖弘	7.20	0.16	2.9	２		IP	２		IP	３		G3	２		IP	２		IP	３	5	IP	６		IP	２		IP	２		IP	１		IP
+松田　　竜馬	3.30	0.16	3.4	２		G2	６		IP	４		IP	６		IP	４		IP	４		IP	５		IP	４		IP	４		IP	転		IP
+渋谷　　明憲	4.70	0.21	3.5	３		IP	５		IP	３		IP	６		IP	２	5	IP	４		IP	５		IP	５		IP	３	5	IP	１	5	IP

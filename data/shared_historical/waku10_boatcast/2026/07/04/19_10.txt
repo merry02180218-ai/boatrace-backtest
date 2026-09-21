@@ -1,0 +1,8 @@
+data=
+1	0
+清水　　敦揮	8.90	0.17	2.7	１		IP	２		IP	１		IP	１		IP	１		IP	６		IP	１		IP	１		IP	１		IP	１		IP
+宮脇　　遼太	6.30	0.13	2.4	１		IP	１	3	IP	２		IP	４		IP	５		IP	４		IP	３		IP	１		IP	２		IP	６		IP
+松井　　友汰	6.20	0.18	3.1	１		IP	２		IP	１		IP	３		IP	５		IP	Ｆ		IP	５		IP	２		IP	３		IP	１		IP
+下河　　雅史	5.30	0.16	2.8	４		IP	４		IP	２		IP	６		IP	５		IP	２		IP	２	3	IP	４		IP	４		IP	１		IP
+岡崎　　恭裕	4.80	0.19	3.7	２		IP	３		G1	４		G1	３		IP	６		G1	４		IP	４		IP	３		IP	５		IP	４		IP
+春園　　功太	3.40	0.17	3.5	３		IP	６		IP	３		IP	２	5	IP	４		IP	６		IP	５		IP	６		IP	６		IP	４		IP

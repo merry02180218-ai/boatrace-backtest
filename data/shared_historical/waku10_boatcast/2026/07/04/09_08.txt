@@ -1,0 +1,8 @@
+data=
+1	0
+松下　　哲也	7.00	0.17	2.6	３		IP	１		IP	１		IP	１		IP	１		IP	１		IP	４		IP	５	2	IP	３		IP	５		IP
+松尾　　　充	6.10	0.14	4.1	２	3	IP	３		G1	６		G1	５	3	G1	３		G1	３		IP	２		G3	２		IP	４		G1	３		G1
+上田　　洋平	5.00	0.15	3.1	３		IP	３		IP	６		IP	３		IP	３		IP	３		IP	３		IP	３		IP	６		IP	３		IP
+抹香　　雄三	4.90	0.14	3.2	３		IP	２		IP	５		IP	３		IP	４		IP	６		IP	４	5	IP	２		IP	３		IP	４		IP
+赤岩　　善生	6.00	0.19	3.9	４	2	SG	５	4	G1	４	2	G1	２	2	G1	５	2	G1	２	6	G3	５	3	G3	１	2	IP	２	2	IP	３	2	IP
+岡瀬　　正人	3.30	0.16	4.7	４		IP	５		IP	４		IP	３	5	IP	５		IP	４		IP	５		IP	５		IP	６		IP	３		IP

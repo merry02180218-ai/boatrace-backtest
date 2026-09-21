@@ -1,0 +1,8 @@
+data=
+1	0
+中澤　　和志	9.00	0.11	1.5	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP	４		IP	１		IP	１		IP
+梶原　　　正	4.40	0.11	2.5	４		IP	６		IP	６		IP	４		G3	２		G3	２		G3	４		G3	２		IP	５		IP	４		IP
+若林　　樹蘭	5.60	0.13	2.4	４		IP	２		IP	４		IP	４		IP	２		IP	４		IP	４		IP	２		IP	３		IP	３		IP
+幸野　　史明	3.50	0.20	3.4	５		IP	４		IP	１		IP	５		IP	５		IP	５	6	IP	４		IP	６		IP	５		IP	３		IP
+吉田　　宗弘	3.70	0.13	1.8	４		IP	５		IP	３		IP	３		IP	６		IP	４		IP	２		IP	５		IP	５		IP	５		IP
+品田　　直樹	3.20	0.23	4.2	６		IP	６		IP	６		IP	５		IP	４		IP	４		IP	６		IP	３		IP	５		IP	２	5	IP

@@ -1,0 +1,8 @@
+data=
+1	0
+中村　　泰平	10.00	0.10	2.0	１		IP	２		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP
+國崎　　良春	5.10	0.18	3.6	６		IP	５		IP	２		IP	２		IP	５		IP	３		IP	３		IP	３		IP	２		G3	４		G3
+広次　　　修	3.20	0.14	3.2	５		IP	６		IP	５		IP	６		IP	２		IP	２		IP	６		IP	６	2	IP	５		IP	３		IP
+小柳　　勝希	4.20	0.19	3.7	６		IP	６	5	IP	３		IP	２	5	IP	３		IP	２	5	IP	３		IP	６		IP	４		IP	６		IP
+山本　　幸也	4.50	0.18	3.2	４		IP	２		IP	６		IP	４	6	IP	３		IP	４		IP	４		IP	５		IP	２		IP	４		IP
+栗城　　　匠	4.67	0.12	3.6	５		IP	５	5	IP	欠		IP	３		IP	４		IP	２		IP	４		IP	５		G2	３		G1	４		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+海老澤　泰行	6.40	0.17	3.6	４	2	G3	５		IP	１		IP	１		IP	３		G3	５		IP	１		IP	４		IP	２		IP	２		IP
+三苫　　晃幸	7.50	0.14	2.6	２		IP	２		IP	２		IP	４		IP	１		IP	２	1	IP	２		IP	４		IP	１		IP	３		IP
+小林　　礼央	6.00	0.13	2.4	２		IP	５		IP	３		IP	２		IP	５		IP	２		IP	２		IP	３		IP						IP
+谷村　　一哉	6.40	0.17	3.6	４		IP	２		IP	３		G2	５		G2	３		IP	５		IP	１	6	IP	１		IP	２		IP	３		IP
+山田　　竜一	3.30	0.15	3.7	３	4	IP	５		IP	５		IP	４		IP	４		IP	４		IP	３		IP	５	6	IP	６		IP	５		IP
+豊田　　訓靖	2.90	0.20	4.3	５		IP	４		IP	４		IP	２		G3	５		G3	５		IP	６		IP	６		IP	４		IP	６		IP

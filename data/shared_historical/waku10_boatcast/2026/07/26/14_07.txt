@@ -1,0 +1,8 @@
+data=
+1	0
+金子　　良昭	7.00	0.14	1.7	５		IP	２		IP	２		IP	４		IP	２		IP	２		IP	２		IP	４		IP	１		IP	１		IP
+樋口　　喜彦	3.60	0.19	3.4	６		IP	２		IP	６		IP	６		IP	４		IP	６		IP	３		IP	５		IP	３		IP	３		IP
+長谷川　親王	3.60	0.18	3.4	５		IP	４		IP	３		IP	４		IP	３		G3	５		G3	５		IP	５		IP	４		IP	４	4	IP
+出畑　　孝成	5.90	0.15	3.0	２		IP	１		IP	６		IP	３		IP	４	5	IP	３		IP	５		IP	２		IP	３		IP	２		IP
+堤　　　　昇	4.60	0.12	2.1	３		IP	４	4	G3	６		IP	６		G3	１		G3	４	3	IP	２		IP	２		IP	転		IP	４		IP
+田頭　　　実	5.50	0.18	3.7	１	2	IP	２	2	G3	５	2	G3	４	2	IP	４	2	G3	１	2	G3	２	2	IP	３	2	IP	６	2	IP	５	2	IP

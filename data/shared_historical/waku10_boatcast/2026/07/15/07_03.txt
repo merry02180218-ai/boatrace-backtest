@@ -1,0 +1,8 @@
+data=
+1	0
+齊藤　　　仁	8.70	0.17	4.2	１		IP	１		IP	１		G3	３		G3	１		G3	１		G1	４		IP	１		IP	１		IP	３		IP
+重野　　哲之	6.00	0.13	3.3	１		IP	２		IP	４		IP	２		IP	４		IP	２		IP	５		IP	Ｆ		IP	２		IP	２		IP
+市川　　哲也	4.90	0.12	2.6	３		IP	２		IP	３		IP	３		IP	３		IP	５		IP	６		IP	４		IP	２		IP	５		IP
+辻　　　栄蔵	6.20	0.16	2.9	２		IP	４		IP	３		IP	４		G1	４		G1	６		G1	３	5	IP	１		G1	４		G1	１		IP
+赤岩　　善生	6.40	0.18	4.2	１	3	IP	４	2	SG	５	4	G1	４	2	G1	２	2	G1	５	2	G1	２	6	G3	５	3	G3	１	2	IP	２	2	IP
+永田　　秀二	5.40	0.16	4.0	２		IP	４		IP	３		IP	２		IP	６		IP	２		G2	４	5	IP	３		IP	３		IP	５		IP

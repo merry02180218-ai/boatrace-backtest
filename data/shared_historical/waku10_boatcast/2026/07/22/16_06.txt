@@ -1,0 +1,8 @@
+data=
+1	0
+尾上　　雅也	10.10	0.12	3.0	１		G3	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		IP	１		G1	１		IP
+樅山　　拓馬	5.10	0.20	4.1	３		G3	３		IP	２		IP	２		IP	４		IP	４		IP	３		IP	３		IP	５		IP	６		IP
+石原　　　光	5.20	0.14	2.9	４		G3	４		IP	６		G3	３		IP	３		IP	３		IP	２		IP	１		IP	６		IP	３		IP
+角山　　雄哉	5.10	0.13	2.5	１		G3	６		G3	１		IP	２		IP	２		IP	６		IP	４		IP	３	5	IP	５	5	IP	６		IP
+大庭　　元明	2.60	0.19	3.6	６	6	G3	４		IP	６		IP	２		IP	４		IP	５		IP	５	4	IP	６		IP	５		IP	６		IP
+河村　　　了	5.20	0.18	4.2	３		G3	５		IP	２		G3	３		G3	５		IP	１	5	IP	３		IP	４		IP	５		IP	３		IP

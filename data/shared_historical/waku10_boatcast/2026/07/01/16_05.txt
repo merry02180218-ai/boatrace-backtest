@@ -1,0 +1,8 @@
+data=
+1	0
+上田　　龍星	10.20	0.09	1.5	１		G2	１		G2	１		G1	１		G2	１		IP	１		IP	１		IP	１		IP	１		IP	２		IP
+外崎　　　悟	6.20	0.14	3.2	２		IP	２		IP	転	3	IP	２		G3	１		IP	１		IP	２		IP	４		IP	５		IP	４		IP
+下出　　卓矢	7.11	0.16	2.8	１		G2	５		G2	１		IP	２		IP	２		IP	４		IP	１		IP	２		IP	５		IP	欠		IP
+山本　　英志	6.70	0.16	2.9	１		IP	２		IP	３		IP	１		G3	２		G3	３		IP	１		IP	４		IP	６		IP	５		IP
+守屋　　美穂	6.10	0.17	3.7	５		IP	２		IP	６		G1	６		SG	１		IP	２		IP	２		IP	１	4	IP	３		G3	４		G3
+山田　　晃大	2.80	0.10	2.4	６		IP	５		IP	５		IP	４		IP	５		IP	４		IP	６		IP	５		IP	４		IP	３		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+河村　　　了	9.10	0.15	3.1	１		IP	１		IP	３		G3	１		G3	１		G3	１		IP	１		IP	５		IP	１		IP	１		IP
+山一　　鉄也	7.00	0.15	3.1	２		G3	３		G3	１		IP	２		IP	５		IP	２		IP	５		IP	１		IP	１		IP	３		IP
+谷川　　祐一	7.00	0.13	3.1	１		IP	４		G3	２		G3	４	4	IP	２		IP	２		G3	２		G3	４		IP	２		IP	２		IP
+中島　　昂章	5.00	0.19	4.3	５		IP	２		IP	妨		IP	３		IP	２		IP	４		IP	２		IP	３		IP	５		IP	３	3	IP
+杉田　　篤光	4.10	0.20	4.1	５		IP	５		IP	３		IP	３		G3	４		G3	５	6	IP	６		IP	３		IP	４		IP	２		IP
+門間　　雄大	4.50	0.17	2.5	５		G2	３		G3	５		IP	３	5	IP	２		IP	４		IP	４		IP	転		IP	３		IP	３		IP

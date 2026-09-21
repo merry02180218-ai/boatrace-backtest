@@ -1,0 +1,8 @@
+data=
+1	0
+常住　　　蓮	9.70	0.11	2.2	１		G2	１		G2	１		G2	１		G2	１		G2	１		G1	１		G1	６		SG	１		IP	３		IP
+定松　　勇樹	7.40	0.11	2.1	２		SG	４		G1	６		SG	１		SG	５		G1	５		G1	１	1	IP	２		IP	２		G1	２		G1
+前原　　大道	8.80	0.13	2.8	２		IP	１		IP	１		G1	３		G1	３	2	IP	２		IP	１		IP	１		IP	２		G1	２		G1
+西岡　　顕心	7.70	0.11	2.9	２		IP	２		IP	２		IP	４		G1	３		SG	２		SG	３		IP	３		IP	２		G1	２		G1
+田中　　駿兵	6.30	0.12	2.3	１		IP	６		IP	６	6	G1	１		IP	２		IP	３		IP	５		IP	２		IP	１		IP	３		IP
+藤原　　碧生	4.20	0.21	4.5	４		IP	５		IP	６		G2	２		G2	５		G2	２		G3	４		G3	４		G3	６		G1	５		G1

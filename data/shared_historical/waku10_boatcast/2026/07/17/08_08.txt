@@ -1,0 +1,8 @@
+data=
+1	0
+花本　　夏樹	7.00	0.18	3.7	４		IP	１		IP	１		IP	４		IP	３		IP	３		IP	２		IP	２		IP	１		IP	４		IP
+黒田　　誠司	3.40	0.20	3.5	４		IP	６		IP	２		G3	５	3	G3	２		IP	５		IP	４		IP	５	3	IP	６		IP	５		IP
+八木　　治樹	3.90	0.10	1.9	５		IP	５		IP	５		IP	６		IP	１		IP	３		IP	４		IP	４		IP	４		IP	４		IP
+鈴谷　　一平	5.40	0.15	2.8	３		IP	６		IP	２		IP	４		IP	６		G1	４	5	G1	４	5	IP	１		IP	３		IP	２		IP
+島川　　光男	5.40	0.15	2.3	５		IP	３		IP	４		IP	４		IP	４		IP	２		IP	３		IP	５		IP	２		IP	１		IP
+宇野　　博之	2.80	0.20	4.2	５		IP	６		IP	４		IP	５		IP	１	5	IP	６		IP	Ｆ		IP	４	5	IP	５		IP	５		IP

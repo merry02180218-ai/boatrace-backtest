@@ -1,0 +1,8 @@
+data=
+1	0
+堤　　　　昇	7.80	0.16	2.2	２		G3	５		G3	１		IP	４		IP	１		G3	２		G3	１		IP	１		IP	３		IP	１		IP
+竹腰　　正樹	4.20	0.12	2.8	１	3	G3	２		IP	３		IP	２		IP	５		IP	６		IP	６		IP	６		IP	６		IP	４	3	IP
+樋口　　範政	6.60	0.17	2.2	２		G3	１		G3	２		IP	５		IP	３		IP	４		IP	３		IP	３		IP	３		IP	１		IP
+竹田　　辰也	4.40	0.16	3.2	３		IP	４		IP	１		IP	５		IP	５		IP	２		IP	２	3	IP	６		IP	６		IP	５		IP
+有賀　　達也	4.20	0.15	2.5	３		IP	５		IP	５		G3	３		IP	４		IP	５		IP	転		G1	５		G1	２		G1	２		IP
+興津　　　藍	3.40	0.18	4.7	６		G2	４		G2	２		IP	４		IP	５		IP	４		G3	５		IP	５		IP	６		IP	４		IP

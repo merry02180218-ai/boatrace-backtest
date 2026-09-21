@@ -1,0 +1,8 @@
+data=
+1	0
+白水　　勝也	8.00	0.12	1.8	５		IP	１		IP	３		IP	２		IP	１		IP	１		IP	３		IP	２		IP	１		IP	１		IP
+原村　　拓也	5.40	0.17	3.6	５		IP	２		IP	２		IP	５		IP	４		IP	２		IP	４		IP	３		IP	４		IP	２		IP
+海野　康志郎	7.10	0.11	2.3	２		IP	１		SG	４	2	G1	２		G1	３		G1	１		IP	４		IP	３		IP	６		IP	２		IP
+宮下　　元胤	4.90	0.17	3.8	５		IP	３		IP	２	3	IP	４	5	IP	２		IP	３		IP	４		IP	５	3	IP	２		IP	６		IP
+西川　新太郎	4.56	0.15	3.5	４		IP	５		IP	４		IP	１		IP	転		IP	６		IP	３		IP	２		IP	４		IP	５		IP
+堀内　　亜海	1.10	0.18	4.2	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	６		IP	５	5	IP	６		IP	６		IP

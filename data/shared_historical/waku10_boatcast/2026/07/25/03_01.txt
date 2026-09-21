@@ -1,0 +1,8 @@
+data=
+1	0
+小林　　　泰	8.40	0.10	2.2	１		G2	１		IP	２		IP	１		IP	５		IP	１		IP	１		IP	５		G2	１		IP	１		IP
+高山　　敬悟	4.30	0.16	3.4	３		IP	６		IP	６		IP	１		IP	４		IP	２		IP	５		IP	４		IP	６		IP	３		IP
+西舘　　　健	4.40	0.13	2.3	３		IP	６		IP	６		IP	２		IP	５		IP	４		IP	１		IP	３		IP	４		IP	５		IP
+鈴木　　秀茉	5.60	0.16	3.1	６		IP	３		IP	５		IP	２		IP	１		IP	４		IP	３		IP	１	5	IP	６		IP	２		IP
+黄金井　力良	5.90	0.16	3.0	５		IP	３		IP	６		IP	２		IP	２	6	IP	１		IP	３		IP	３		IP	３		IP	３		IP
+宮地　　博士	2.70	0.24	5.1	５		G3	５		IP	６		IP	５		IP	４		IP	６		IP	２		IP	４	5	IP	５	5	IP	６		IP

@@ -1,0 +1,8 @@
+data=
+1	0
+池田　　浩美	7.10	0.14	2.7	１		IP	４		IP	２		G3	２		G3	５		IP	１		G3	１		IP	２		IP	６		IP	１		IP
+伊藤　　玲奈	4.00	0.19	3.8	５		IP	２		IP	５		IP	３		IP	６		IP	５		IP	４		IP	１		G3	４		IP	６		IP
+高田　ひかる	7.20	0.16	3.5	３		IP	１		IP	４		G2	１		IP	３		IP	２		IP	１		IP	５		G1	２		IP	３		IP
+登　　みひ果	4.50	0.19	2.5	３		IP	６		IP	３		IP	５		IP	１		IP	１		IP	５		G3	６		G3	５		G2	４		IP
+廣中　智紗衣	5.20	0.18	4.1	６		IP	３		IP	４		G3	２		G3	６		IP	３		IP	４		IP	３		IP	２		IP	２		IP
+門田　　　栞	3.90	0.15	2.5	５		IP	３		IP	３		IP	６		IP	４		IP	５		G2	４		IP	２	5	IP	４		G3	６		G3
