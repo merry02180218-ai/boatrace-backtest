@@ -30,7 +30,8 @@ def main():
   x,r,audit=w20.build_pre_enhanced(a,b,True); rr[k]=(x,r)
  fr={k:w20.prep_month(x,r) for k,(x,r) in rr.items()}
  all_hist=pd.concat([fr[k] for k in ['oct','nov','dec','jan','feb']],ignore_index=True,sort=False)
- _,enh,_=w20.choose_features(all_hist)
+ from run_3head_funsite_broad50_wave16 import choose_features
+ _,enh,_=choose_features(all_hist)
  mx,mr,ma=w20.build_pre_enhanced('2026-03-01','2026-03-31',False)
  if len(mr): raise RuntimeError('March result rows unexpectedly loaded')
  rows=[]
@@ -38,8 +39,12 @@ def main():
   day=pd.Timestamp(dayv); today=mx[mx.date.dt.normalize()==day].copy()
   tr=all_hist[(all_hist.date<day)&(all_hist.date>=day-pd.Timedelta(days=42))].copy()
   if len(tr)<500 or tr.y.nunique()<2: continue
-  model=w20.make_pipeline(w20.SimpleImputer(strategy='median'),w20.StandardScaler(),
-      w20.LogisticRegression(C=.08,class_weight='balanced',solver='liblinear',max_iter=1800,random_state=161))
+  from sklearn.pipeline import make_pipeline
+  from sklearn.impute import SimpleImputer
+  from sklearn.preprocessing import StandardScaler
+  from sklearn.linear_model import LogisticRegression
+  model=make_pipeline(SimpleImputer(strategy='median'),StandardScaler(),
+      LogisticRegression(C=.08,class_weight='balanced',solver='liblinear',max_iter=1800,random_state=161))
   model.fit(tr[enh],tr.y)
   ptr=model.predict_proba(tr[enh])[:,1]; pred=model.predict_proba(today[enh])[:,1]
   z=today[['rc','date','venue','race_no']].copy(); z['pre_score']=w20.pct_ref(ptr,pred); rows.append(z)
