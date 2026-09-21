@@ -136,3 +136,7 @@ Correction after user noted water temperature should be available at BET time: c
 
 ## Water LIVE verification failure fixed
 Push-triggered validate-4head-env-context-live Run 35667738176 / Job 106557131447 failed in verify_4head_env_context_live.py because the old bc_sui fixture had only 7 columns and expected the old 3-value parser. This was a stale test fixture caused by the water parser extension, not a live-source/model failure. Updated fixture to explicit pinned layout HHMM,status/weather,wind-dir,wind-speed,wave,air,water and updated parser/build assertions including water_c=30.5 and pre-race source kind. Fix commit 7d8ce60f9d2eabf8543fd10e22dfc13f8be1717a. Refetch checks passed. The push should trigger a fresh validate workflow; inspect it before declaring operational. September outcomes UNREAD; production decision unchanged.
+
+
+## Water parser validation green
+Fresh push validation completed SUCCESS: Run 35667902979 / Job 106557630567, head 7d8ce60f9d2eabf8543fd10e22dfc13f8be1717a. Logs: PASS verify_4head_env_context_live; PASS verify_4head_env_entry_auto_live; PASS verify_4head_full_auto_live. This closes the stale-fixture failure from Run 35667738176. Current static/contract validation confirms pre-race bc_sui water parsing is wired without result/payout use. Remaining operational check is one real current-race HEAD4 fast/BET-path execution that reaches bc_sui and Waku10 rel4_b3 SR/ST fields; do not call the signal operational until that passes. September outcome labels remain UNREAD; production selection unchanged.
