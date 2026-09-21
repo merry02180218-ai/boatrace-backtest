@@ -242,3 +242,10 @@ F. Preserve v288 native opponent/ticket/staking identity; do not retroactively l
 - This proves tolerance must NOT be applied to the frozen old/canonical side: it also admits a July boundary race that frozen semantics excluded. The earlier canonical old replay was 94R with Jul13. Therefore Run 35585691549 is diagnostic only, not a new baseline.
 - Correct next fix: preserve old build with exact <= v.WAKU34; apply numerical stabilization only to reconstructed restored Waku values (e.g. canonical rounding/value normalization before comparison), then require restored membership == frozen old 94R exactly.
 - June missing row remains 202606080501; Waku10 row exists but boat4 枠番別平均ST is '-' and requires exact race_features national-ST fallback reconstruction.
+
+
+## 2026-09-21 — restored-side-only numeric stabilization prepared
+- Patched audit in commit 4adddf4af2ef622e1fc8c4a7a8e20c54082a2d90.
+- Frozen old side now explicitly uses eps=0.0 (exact original <= WAKU34 semantics). Reconstructed restored side alone uses eps=1e-12 to neutralize representation noise such as 0.49999999999999994 vs 0.4999999999999999 without changing model threshold.
+- Policy output records old_semantics_untouched=true and restored_numeric_eps=1e-12. Source re-fetched after commit and exact lines verified.
+- Next: fresh manual workflow dispatch; target is old_selected=94 and restored_selected=94 with no added/removed membership. June fallback row 202606080501 remains separately unresolved until exact nationwide-ST fallback is reconstructed; no outcomes may be read.
