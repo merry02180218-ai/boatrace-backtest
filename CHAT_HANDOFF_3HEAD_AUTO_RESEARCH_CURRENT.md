@@ -273,3 +273,11 @@ F. Preserve v288 native opponent/ticket/staking identity; do not retroactively l
 - Script freezes CORE=v288 and EXPANDED=A+.60 membership before settlement; overlap CORE priority. EXPANDED uses frozen V221 Top6 + protected SECOND4 turn>=.50 exact-six. February settlement only after membership/tickets frozen. Sep-2026 never loaded. No threshold tuning.
 - Deliberately does NOT approximate CORE native variable 5-10 ticket / 10k Dutch ROI yet. This run first confirms integrated head union plus EXPANDED protected-six opponent capture. If successful, next stage is exact CORE native replay + EXPANDED exact-six closing-odds settlement for integrated ROI.
 - Source re-fetched after creation: no literal backslash-n contamination, no 202609 token, success marker present.
+
+
+## 2026-09-21 — CORE native February replay workflow prepared
+- Added .github/workflows/research-3head-dual-feb-core-native-replay.yml.
+- Initial commit 727eb3a3e562dd48d35a3cffdfab9124ea156967; immediately audited and found the static September grep would self-match its own pattern. Removed that faulty self-check before dispatch in commit 6ae2e20d8b5bfbf7e64910c38187d00aee3442c2.
+- Workflow reconstructs exact February CORE 8R membership from frozen v243 source, resolves only their dates, prepares historical PRE inputs, builds month-frozen v288 cache with history cutoff 2026-01-31, and replays native v288 variable-ticket/10k Dutch settlement.
+- Uses --force-full-cache so dates are fully modeled even if original daily PRE scan is empty; final replay still applies native v288 decision logic.
+- Next: user manually dispatch workflow; verify Run/Job/artifact and exact CORE bet rows. Only after CORE native replay succeeds, add EXPANDED exact-six official-closing-odds settlement and UNION ROI.
