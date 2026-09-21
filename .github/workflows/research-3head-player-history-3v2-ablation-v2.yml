@@ -1,0 +1,56 @@
+name: research-3head-player-history-3v2-ablation-v2
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas numpy scikit-learn joblib
+      - name: Preflight
+        run: |
+          python -m py_compile analyze_3head_player_history_3v2_ablation_v2.py
+          python - <<'PY'
+          from pathlib import Path
+          s=Path('analyze_3head_player_history_3v2_ablation_v2.py').read_text()
+          assert r'\n' not in s
+          assert "SEPTEMBER_OUTCOMES_READ':False" in s
+          assert "threshold_tuning':False" in s
+          assert "PRODUCTION_CHANGED':False" in s
+          print('PREFLIGHT_OK')
+          PY
+      - name: Download proven v233 Waku source
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 34324515336
+          name: v233-waku10-coverage-backfill
+          path: /tmp/v233
+      - name: Materialize restored Waku10
+        env:
+          V233_DIR: /tmp/v233
+        run: |
+          python - <<'PY'
+          import analyze_v234_3head_waku10_restored_replay as v
+          c=v.reconstruct()
+          assert len(c)==274 and not (c.source=='missing').any()
+          print('WAKU_READY',len(c),int(c.rows.sum()))
+          PY
+      - name: Run 3v2 ablation
+        env:
+          V233_DIR: /tmp/v233
+        run: python analyze_3head_player_history_3v2_ablation_v2.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: research-3head-player-history-3v2-ablation-v2
+          path: |
+            analysis_3head_player_history_3v2_ablation_v2.csv
+            analysis_3head_player_history_3v2_ablation_v2_meta.json
+            summary_3head_player_history_3v2_ablation_v2.md
