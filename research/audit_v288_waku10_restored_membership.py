@@ -42,7 +42,7 @@ def restored(code):
  r=mp.get(code)
  if not r and m=="07": r=native_day(day).get(code)
  if not r:return None
- try:return float(r["艇3_枠番別平均ST"])-float(r["艇4_枠番別平均ST"])
+ try:\n  s3=float(r["艇3_枠番別平均ST"]); s4=float(r["艇4_枠番別平均ST"])\n  return clamp((.24-s3)/.14)-clamp((.24-s4)/.14)
  except:return None
 def build_membership(q,wcol):
  q=q.copy();q["month"]=q.date.astype(str).str[:7];q["_target"]=v.target(q).astype(int)
