@@ -209,3 +209,12 @@ Do not fire again until this dependency is located/restored and the whole workfl
 - On 2/17 native 171607 is itself a valid frozen CORE row and replaces frozen 171911 on the same day, suggesting the native day replay path may collapse to one selected candidate/day while frozen membership can contain two on one date.
 - Conclusion: do not tune route thresholds. Audit prepare_v288_historical_pre_input.py plus operational cache/day selection semantics against frozen v243 membership, especially one-race-per-day behavior and historical PRE reconstruction creating races outside v243 universe.
 - September remains UNREAD. Next: lightweight code/semantic audit before any heavy rerun.
+
+
+## 2026-09-22 — user decision: current Waku10 accepted; start 3HEAD PLAYER_HISTORY research
+- User accepts the currently audited/restored Waku10 as the working historical Waku basis; stop spending research time on exact frozen-v243 identity reproduction unless a new correctness issue appears.
+- New priority: research shared causal PLAYER_HISTORY for 3HEAD, explicitly using 4HEAD findings/methodology as reference.
+- Shared PLAYER_HISTORY is 30 causal prior-only features: 6 boats x {all_win, all_p2, frame_win, frame_p2, recent_p2}; independent 4HEAD audit had 715,650 cells / 0 mismatches, strict prior-date.
+- 4HEAD reference: b4_pl_all_p2 was strongest standardized BASE coefficient (+0.484267); hard gating later was not robust, so 3HEAD should test as model/ranking features first, not a hard threshold.
+- 3HEAD experiment plan: fixed current safe-Waku baseline; add (A) boat3 own 5, (B) boat3+boat2 wall features and 3-2 relatives, (C) boat3+boat4 attack/wall features and 3-4 relatives, (D) all 30 PLAYER_HISTORY. Chronological prior-only evaluation; compare head rate, selected volume, AUC/Brier/logloss and settlement ROI where already frozen/available. No September outcomes, no production change, no threshold tuning on holdout.
+- Existing references to reuse rather than reinvent: analyze_v220_3head_history_player.py and analyze_v263_4head_3head_features_player_history.py, plus shared feature implementation/audit from rebuild_4head_v93_all_parent.py / audit_4head_player_history_v10.py.
