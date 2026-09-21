@@ -20,35 +20,27 @@ jobs:
         run: |
           gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
           cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
-      - name: Download frozen v234 Waku10 reconstruction
+      - name: Materialize frozen v234 Waku10 reconstruction
         env:
           GH_TOKEN: ${{ github.token }}
+          V233_DIR: /tmp/v233
         run: |
-          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --pattern 'v234*' --dir golden_v234 || true
-          if ! test -s analysis_v234_waku10_reconstruction_coverage.csv; then
-            gh run download 34324515336 --repo merry02180218-ai/boatrace-backtest --name v233-waku10-coverage-backfill --dir /tmp/v233
-            V233_DIR=/tmp/v233 python analyze_v234_3head_waku10_restored_replay.py
-          fi
+          rm -rf /tmp/v233 data/audit/v234_waku10
+          gh run download 34324515336 --repo merry02180218-ai/boatrace-backtest --name v233-waku10-coverage-backfill --dir /tmp/v233
+          python - <<'PY'
+          import pandas as pd
+          import analyze_v234_3head_waku10_restored_replay as v234
+          q=v234.reconstruct()
+          q['date']=q['date'].astype(str)
+          chk=q[(q.date>='2025-12-01')&(q.date<='2026-01-31')].copy()
+          assert len(chk)==62, len(chk)
+          assert not (chk.source=='missing').any(), chk[chk.source=='missing'].to_dict('records')
+          assert (chk.rows>0).all(), chk[chk.rows<=0].to_dict('records')
+          assert v234.COV.exists() and v234.COV.stat().st_size>0
+          print('V234_WAKU_READY',len(q),'frozen_history_days',len(chk),'rows',int(chk.rows.sum()))
+          PY
           test -s analysis_v234_waku10_reconstruction_coverage.csv
-          cp canonical_waku10_coverage.csv analysis_v234_waku10_reconstruction_coverage.csv
-          python - <<'PY'
-          import pandas as pd
-          p='analysis_v234_waku10_reconstruction_coverage.csv';q=pd.read_csv(p)
-          if 'source' not in q.columns:
-              q['source']=q.apply(lambda r:'published' if float(r.get('coverage_pct',0))>=100 else ('missing' if float(r.get('restored_rows',0))<=0 and float(r.get('expected_card_races',0))>0 else 'recovered'),axis=1)
-          q.to_csv(p,index=False)
-          assert not (q[(q.date>='2025-12-01')&(q.date<='2026-02-28')].source=='missing').any()
-          print('WAKU_COVERAGE_READY',len(q))
-          PY
-          cp canonical_waku10_coverage.csv analysis_v234_waku10_reconstruction_coverage.csv
-          python - <<'PY'
-          import pandas as pd
-          p='analysis_v234_waku10_reconstruction_coverage.csv';q=pd.read_csv(p)
-          if 'source' not in q.columns: q['source']='published'
-          q.loc[q['source'].isna(),'source']='published'
-          q.to_csv(p,index=False)
-          print('WAKU10_COVERAGE_READY',len(q),q.columns.tolist())
-          PY
+          test -d data/audit/v234_waku10/restored
       - name: Resolve frozen February CORE dates
         run: |
           python verify_v288_operational_pre_replay.py >/tmp/v288.txt
