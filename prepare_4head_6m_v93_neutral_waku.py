@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
-"""Prepare six-month all-race v93-compatible opponent primitives without Waku10 backfill.
-Missing historical Waku10 is represented by an empty same-race row so race-card fallbacks apply.
-No future/result-derived Waku reconstruction is allowed. September blocked.
-"""
-import os
+"""Prepare six-month v93 primitives with shared historical Boatcast Waku10. No result-derived Waku reconstruction; September blocked."""
+import os,csv
 from pathlib import Path
 import pandas as pd
 import build_4head_clean_long_dataset as clean
@@ -15,14 +12,29 @@ out=Path("/tmp/head4_6m_parent");out.mkdir(exist_ok=True)
 pp=out/"parent.csv";parent.to_csv(pp,index=False);os.environ["PARENT_EXHIBITION"]=str(pp)
 import rebuild_4head_v93_all_parent as reb
 orig=reb.rows
-def safe_rows(rel):
+def shared_rows(rel):
     z=orig(rel)
     if z or "data/programs/waku10/" not in rel:return z
-    cardrel=rel.replace("data/programs/waku10/","data/programs/race_cards/")
-    cards=orig(cardrel)
-    return [{"レースコード":x.get("レースコード","")} for x in cards]
-reb.rows=safe_rows
-reb.ex.rows=safe_rows
+    p=rel.split("/")
+    if len(p)>=6 and p[3]=="2026" and p[4] in {"03","04","05","06"}:
+        month,day=p[4],Path(p[5]).stem
+        root=Path("data/shared_historical/waku10_boatcast/2026")/month/day
+        out=[]
+        for fp in sorted(root.glob("*.txt")):
+            lines=fp.read_text(encoding="utf-8-sig",errors="ignore").splitlines()
+            if len(lines)<8 or not lines[0].startswith("data="): continue
+            jo,rr=map(int,fp.stem.split("_")); row={"レースコード":f"2026{month}{day}{jo:02d}{rr:02d}"}
+            for b,line in enumerate(lines[2:8],1):
+                a=line.split("\t")
+                if len(a)<34: continue
+                row[f"艇{b}_選手名"]=a[0];row[f"艇{b}_枠番別勝率"]=a[1];row[f"艇{b}_枠番別平均ST"]=a[2];row[f"艇{b}_枠番別平均スタート順"]=a[3]
+                for k in range(10):
+                    q=4+k*3;row[f"艇{b}_過去{k+1}走_着順"]=a[q];row[f"艇{b}_過去{k+1}走_進入"]=a[q+1];row[f"艇{b}_過去{k+1}走_グレード"]=a[q+2]
+            out.append(row)
+        return out
+    return z
+reb.rows=shared_rows
+reb.ex.rows=shared_rows
 reb.A=reb.date(2026,3,1)
 reb.main()
 z=pd.read_csv("/tmp/head4_v93_all_parent/v93_all_parent.csv",dtype={"race_code":str})
