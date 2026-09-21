@@ -156,3 +156,14 @@ Artifact audit: 33 selected races / 33 decisions / 18 protected swaps. Every bas
 March predictions are now FROZEN in Artifact 10621281342. Do not alter threshold/features/ticket replacement before March one-shot settlement. March remains UNREAD at this point.
 Next: build a separate settlement-only evaluator that consumes the frozen artifact decisions and March official outcomes, without recomputing predictions. Preflight must verify artifact/prediction identity before revealing outcomes.
 
+### March one-shot settlement SUCCESS / opponent rule evidence update
+Run 35559071435 / Job 106208304825 / Artifact 10621551141 SUCCESS; head SHA 32cddc1ecffcdc41c6a839f25129ef7dd1939593. Frozen predictions verified against Artifact 10621281342: n=33, swaps=18, threshold=.50. March settlement coverage 33/33. boat3 wins=15. V221 base Top6=10/15=66.67%; protected Top6=11/15=73.33%; rescued=1, lost=0, net=+1. March is now READ and must never again be described as pristine/UNREAD. Sep-2026 remains UNREAD.
+
+Descriptive combined evidence for the already-frozen rule (no retuning):
+- Dec-Jan development: base 25/41=60.98%, protected 29/41=70.73%, net +4.
+- Feb one-shot: base 6/12=50.00%, protected 6/12=50.00%, net 0.
+- March one-shot: base 10/15=66.67%, protected 11/15=73.33%, net +1.
+- Feb+March forward only: base 16/27=59.26%, protected 17/27=62.96%, net +1.
+- Dec-Mar descriptive total: base 41/68=60.29%, protected 46/68=67.65%, net +5.
+Do not threshold-tune on Feb or March after reveal. Preserve threshold=.50 protected SECOND=4 fixed-six rule as the frozen candidate. Next research should audit the single March rescue and combined lost/rescued structure, or move toward production shadow validation without using Sep-2026 outcomes.
+
