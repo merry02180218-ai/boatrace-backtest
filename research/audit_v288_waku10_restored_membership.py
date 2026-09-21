@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Audit restored historical Waku10 against frozen v288 source, without outcomes.
-Replaces only f__c_b3_minus_b4_waku_st from shared/native Waku10. No threshold tuning.
+Reconstructs exact v222/v288 normalized Waku10 edge from shared/native Waku10. No threshold tuning.
 """
 from pathlib import Path
 import csv,json,sys
@@ -35,7 +35,8 @@ def shared_day(day):
 def native_day(day):
  p=Path("data/programs/waku10")/day[:4]/day[4:6]/f"{day[6:8]}.csv"
  return {rc(r.get("レースコード")):r for r in read_csv_rows(p)}
-def clamp(x,a=0,b=1): return max(a,min(b,x))\ndef restored(code):
+def clamp(x,a=0,b=1): return max(a,min(b,x))
+def restored(code):
  day=code[:8]; m=code[4:6]
  mp=shared_day(day) if m in {"03","04","05","06","07"} else native_day(day)
  r=mp.get(code)
