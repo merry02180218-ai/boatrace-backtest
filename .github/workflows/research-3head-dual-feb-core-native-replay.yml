@@ -20,6 +20,15 @@ jobs:
         run: |
           gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
           cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
+          cp canonical_waku10_coverage.csv analysis_v234_waku10_reconstruction_coverage.csv
+          python - <<'PY'
+          import pandas as pd
+          p='analysis_v234_waku10_reconstruction_coverage.csv';q=pd.read_csv(p)
+          if 'source' not in q.columns: q['source']='published'
+          q.loc[q['source'].isna(),'source']='published'
+          q.to_csv(p,index=False)
+          print('WAKU10_COVERAGE_READY',len(q),q.columns.tolist())
+          PY
       - name: Resolve frozen February CORE dates
         run: |
           python verify_v288_operational_pre_replay.py >/tmp/v288.txt
