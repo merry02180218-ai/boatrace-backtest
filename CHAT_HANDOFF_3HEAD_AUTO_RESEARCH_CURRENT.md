@@ -109,3 +109,16 @@ For one-shot/holdout validation, a failed run that does not reach settlement doe
 - Run 35550190379 therefore did **not** reach February settlement; February outcomes remain unrevealed by this validation path.
 - Next action: perform the mandatory full execution-path audit first, then patch. Do not trigger until that audit is complete.
 
+## FEB ONE-SHOT RESULT — SUCCESS (2026-09-21)
+Run 35555440389 / Job 106198082962 / Artifact 10620315572 / head 460c5c01ca90070bf02041d284b385aa7d62a47b.
+Strict preflight SUCCESS; one-shot SUCCESS; artifact SUCCESS.
+Frozen pre-settlement cohort: 32 races. Decisions were frozen before February settlement; 13 protected swaps.
+February settlement: 32/32; boat3 wins 12.
+V221 baseline Top6: 6/12 = 50.00%.
+Protected SECOND=4 / turn>=0.50 fixed-six: 6/12 = 50.00%.
+rescued=0, lost=0, net=0.
+Therefore the protected rule's Nov-Jan development lift (25/41 -> 29/41) did NOT forward-replicate in February; it was neutral, not harmful, on this holdout.
+Do not tune threshold or rule using February. February is now READ and must never again be treated as pristine holdout.
+March remains UNREAD and reserved as final one-shot only. September 2026 remains UNREAD.
+Before any March trigger, mandatory full preflight/audit rule above applies.
+
