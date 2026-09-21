@@ -1,0 +1,43 @@
+name: research-v288-waku10-restored-membership
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn requests
+      - name: Preflight compile and safety audit
+        run: |
+          python -m py_compile research/audit_v288_waku10_restored_membership.py verify_v288_operational_pre_replay.py
+          python - <<'PY'
+          from pathlib import Path
+          s=Path("research/audit_v288_waku10_restored_membership.py").read_text()
+          assert 'data/results' not in s and 'payout' not in s and 'odds' not in s
+          assert 'thresholds_changed":False' in s
+          assert 'sep2026_read":False' in s
+          assert 'f__c_b3_minus_b4_waku_st' in s and '_restored_waku34' in s
+          print("STATIC_SAFETY_OK")
+          PY
+          python -c "import sys;sys.path.insert(0,'.');import verify_v288_operational_pre_replay;print('V288_IMPORT_OK')"
+      - name: Download frozen canonical v243 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 35467021760 -n research-3head-a-opponent-reference-audit || true
+          find . -type f | head -100
+          test -f analysis_v243_3head_expand_feature_audit.csv || { echo "missing canonical source"; exit 1; }
+      - name: Run outcome-free restored Waku10 membership audit
+        run: python research/audit_v288_waku10_restored_membership.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-v288-waku10-restored-membership
+          path: research_v288_waku10_restored_membership.json
+          if-no-files-found: warn
