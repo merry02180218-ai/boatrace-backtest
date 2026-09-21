@@ -43,15 +43,32 @@ def main():
 
  # Canonical V221 features; do not attach any settlement yet.
  raw=pd.read_csv(v221.SRC,dtype={'race_code':str}); dc=v221.v165.pc(raw,['date','race_date','ymd'])
- y,_=v221.v165.target(raw); raw['_date']=pd.to_datetime(raw[dc].astype(str),errors='coerce'); raw['_y']=y
- raw=raw[raw._date.notna()&raw._y.notna()&(raw._date<v221.CONTAM)].copy(); d=v221.build(raw,dc)
+ raw['_date']=pd.to_datetime(raw[dc].astype(str),errors='coerce')
+ raw=raw[raw._date.notna()&(raw._date<FEB_END)].copy()
+ # Hard-bound V221 fetches to Feb-28; March+ result files must never be fetched.
+ from datetime import date,timedelta
+ v221.END=date(2026,2,28)
+ d=v221.build(raw,dc)
  d['race_code']=d.race_code.astype(str).str.zfill(12)
  d['_date']=pd.to_datetime(d.race_code.str.slice(0,8),format='%Y%m%d',errors='coerce')
  feb=d[(d._date>=FEB_START)&(d._date<FEB_END)&d.race_code.isin(codes)].copy()
  if len(feb)!=len(codes): raise RuntimeError(f'February feature coverage mismatch {len(feb)}/{len(codes)}')
  # Fit V221 direct pair using only rows strictly before February.
  train=d[d._date<FEB_START].copy()
- # V221 fit_pair requires historical settlement labels. Attach labels to TRAIN ONLY; February stays unlabeled until decisions freeze.\n from datetime import date,timedelta\n hist_settled=[]; day=date(2025,10,1)\n while day<=date(2026,1,31):\n  try:\n   for rr0 in v221.rows(f\"data/results/realtime/{day.strftime('%Y/%m/%d')}.csv\"):\n    code=str(rr0.get('レースコード','')).zfill(12); a=[str(rr0.get(f'{i}着_艇番','')).strip() for i in (1,2,3)]\n    if code.isdigit() and all(x in '123456' and len(x)==1 for x in a): hist_settled.append({'race_code':code,'actual_combo':'-'.join(a),'valid_result':1})\n  except Exception: pass\n  day+=timedelta(days=1)\n hs=pd.DataFrame(hist_settled).drop_duplicates('race_code')\n train=train.drop(columns=['actual_combo','valid_result'],errors='ignore').merge(hs,on='race_code',how='left',validate='many_to_one')\n direct,ntrain=v221.fit_pair(train,True)\n if ntrain<100: raise RuntimeError(f'V221 training too small {ntrain}')
+ # V221 fit_pair requires historical settlement labels. Attach labels to TRAIN ONLY.
+ from datetime import date,timedelta
+ hist_settled=[]; day=date(2025,10,1)
+ while day<=date(2026,1,31):
+  try:
+   for rr0 in v221.rows(f"data/results/realtime/{day.strftime('%Y/%m/%d')}.csv"):
+    code=str(rr0.get('レースコード','')).zfill(12); a3=[str(rr0.get(f'{i}着_艇番','')).strip() for i in (1,2,3)]
+    if code.isdigit() and all(x in '123456' and len(x)==1 for x in a3): hist_settled.append({'race_code':code,'actual_combo':'-'.join(a3),'valid_result':1})
+  except Exception: pass
+  day+=timedelta(days=1)
+ hs=pd.DataFrame(hist_settled).drop_duplicates('race_code')
+ train=train.drop(columns=['actual_combo','valid_result'],errors='ignore').merge(hs,on='race_code',how='left',validate='many_to_one')
+ direct,ntrain=v221.fit_pair(train,True)
+ if ntrain<100: raise RuntimeError(f'V221 training too small {ntrain}')
  decisions={}
  for _,r in feb.iterrows():
   order=v221.order(r,direct,True)
