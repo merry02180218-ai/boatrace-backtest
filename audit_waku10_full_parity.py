@@ -4,7 +4,7 @@ BASE="https://raw.githubusercontent.com/BoatraceCSV/boatracecsv.github.io/main/d
 def get(u):
  try:return urllib.request.urlopen(urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0"}),timeout=20).read().decode("utf-8-sig","ignore")
  except:return None
-def norm(x): return (x or "").replace("　"," ").strip()
+def norm_text(x): return " ".join((x or "").replace("　"," ").split())\ndef norm_num(x):\n try: return str(float(x))\n except: return (x or "").strip()
 tot=mis=files=0; examples=[]
 day=datetime.date(2026,7,19); end=datetime.date(2026,8,31)
 while day<=end:
@@ -17,10 +17,10 @@ while day<=end:
   if not b or not b.startswith("data="): mis+=1; examples.append((ds,jo,rr,"missing")); continue
   lines=b.splitlines()[2:8]
   for lane,line in enumerate(lines,1):
-   cols=line.split("\t"); checks=[(norm(cols[0]),norm(row[f"艇{lane}_選手名"])),(cols[1],row[f"艇{lane}_枠番別勝率"]),(cols[2],row[f"艇{lane}_枠番別平均ST"]),(cols[3],row[f"艇{lane}_枠番別平均スタート順"])]
+   cols=line.split("\t"); checks=[("text",cols[0],row[f"艇{lane}_選手名"]),("num",cols[1],row[f"艇{lane}_枠番別勝率"]),("num",cols[2],row[f"艇{lane}_枠番別平均ST"]),("num",cols[3],row[f"艇{lane}_枠番別平均スタート順"])]
    for k in range(10):
     base=4+k*3
-    checks += [(cols[base].translate(str.maketrans("１２３４５６７８９ＦＬ","123456789FL")),row[f"艇{lane}_過去{k+1}走_着順"]),(cols[base+1],row[f"艇{lane}_過去{k+1}走_進入"]),(cols[base+2],row[f"艇{lane}_過去{k+1}走_グレード"])]
+    checks += [("text",cols[base].translate(str.maketrans("１２３４５６７８９ＦＬ","123456789FL")),row[f"艇{lane}_過去{k+1}走_着順"]),("text",cols[base+1],row[f"艇{lane}_過去{k+1}走_進入"]),("text",cols[base+2],row[f"艇{lane}_過去{k+1}走_グレード"])]
    for a,z in checks:
     tot+=1
     if norm(a)!=norm(z):
