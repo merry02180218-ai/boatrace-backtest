@@ -234,3 +234,11 @@ F. Preserve v288 native opponent/ticket/staking identity; do not retroactively l
 - Conclusion: do NOT treat 202605040103 as a genuine corrected-Waku removal. Need deterministic boundary handling/tolerance or canonical rounding so mathematically equal 0.5 reproduces frozen semantics; thresholds themselves must not be tuned.
 - Single June missing restored row identified: 202606080501 (2026-06-08), frozen old Waku34=-0.0714285714285715. This is a source-coverage/fallback issue; investigate exact native/national-ST fallback before final membership freeze.
 - No results/payout/odds/Sep outcomes read. September remains UNREAD.
+
+
+## 2026-09-21 — tolerance rerun exposes baseline-side boundary issue (Run 35585691549)
+- Run 35585691549 / Job 106288381084 SUCCESS, outcome-free and Sep UNREAD.
+- With <= WAKU34+1e-12 applied generically inside build_membership, BOTH old and restored become 95R, identical membership, not the intended frozen 94R. Monthly both: Feb8 Mar12 Apr12 May16 Jun14 Jul14 Aug19.
+- This proves tolerance must NOT be applied to the frozen old/canonical side: it also admits a July boundary race that frozen semantics excluded. The earlier canonical old replay was 94R with Jul13. Therefore Run 35585691549 is diagnostic only, not a new baseline.
+- Correct next fix: preserve old build with exact <= v.WAKU34; apply numerical stabilization only to reconstructed restored Waku values (e.g. canonical rounding/value normalization before comparison), then require restored membership == frozen old 94R exactly.
+- June missing row remains 202606080501; Waku10 row exists but boat4 枠番別平均ST is '-' and requires exact race_features national-ST fallback reconstruction.
