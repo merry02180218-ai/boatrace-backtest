@@ -140,7 +140,7 @@ def _wind_code(text: str) -> int:
     raise EnvContextBuildError(f'unsupported/missing wind direction: {s!r}')
 
 
-def parse_sui_weather(body: str) -> tuple[int, float, str]:
+def parse_sui_weather(body: str) -> tuple[int, float, float, float, float, str]:
     """Use only pre-race bc_sui; never post-race bc_rs1_2.
 
     Pinned layout: [0]=HHMM, [3]=wind direction text, [4]=wind speed.
@@ -156,9 +156,14 @@ def parse_sui_weather(body: str) -> tuple[int, float, str]:
     cols = valid[-1]
     wc = _wind_code(cols[3])
     ws = _num('wind_speed', cols[4])
-    if ws < 0:
-        raise EnvContextBuildError('negative wind_speed')
-    return wc, ws, cols[0].strip()
+    wave = _num('wave_cm', cols[5])
+    air = _num('air_c', cols[6])
+    if len(cols) <= 7:
+        raise EnvContextBuildError('bc_sui water temperature missing')
+    water = _num('water_c', cols[7])
+    if ws < 0 or wave < 0:
+        raise EnvContextBuildError('negative weather metric')
+    return wc, ws, wave, air, water, cols[0].strip()
 
 
 def _read_csv(path: str) -> list[dict[str, str]]:
@@ -261,7 +266,7 @@ def build_from_sources(
     hist = build_history_before(target, venue, player)
     course = parse_stt_courses(stt_text)[4]
     tilt = parse_tkz_tilt4(tkz_text)
-    wc, ws, weather_hhmm = parse_sui_weather(sui_text)
+    wc, ws, wave, air, water, weather_hhmm = parse_sui_weather(sui_text)
 
     out: dict[str, Any] = {
         'schema': 'head4_env_context_live_v1',
@@ -279,12 +284,16 @@ def build_from_sources(
         'entry_course_preview': int(course),
         'wind_code': int(wc),
         'wind_speed': float(ws),
+        'wave_cm': float(wave),
+        'air_c': float(air),
+        'water_c': float(water),
         'tilt': float(tilt),
         'has_orig': 1,
         'has_stt': 1,
         'has_tkz': 1,
         'weather_snapshot_hhmm': weather_hhmm,
         'weather_source_kind': 'boatcast_bc_sui_prerace_only',
+        'water_source_kind': 'boatcast_bc_sui_prerace_only',
         'entry_source_kind': 'boatcast_bc_j_stt',
         'tilt_source_kind': 'boatcast_bc_j_tkz',
     }
