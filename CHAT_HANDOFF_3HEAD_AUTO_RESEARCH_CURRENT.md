@@ -225,3 +225,12 @@ F. Preserve v288 native opponent/ticket/staking identity; do not retroactively l
 ## 2026-09-21 — next pre-outcome audit started
 - After successful exact normalized Waku10 membership Run 35583037910, next task is outcome-free diagnosis only: identify why race 202605040103 is removed and identify the single June row whose restored Waku10 is missing.
 - Must print old/restored Waku34, relevant frozen S/A/B gate inputs, old/new route, source/fallback provenance. No results/payout/odds and no Sep outcomes. Thresholds remain frozen.
+
+
+## 2026-09-21 — discrepancy diagnosis result (Run 35583599502)
+- Run 35583599502 / Job 106281753935 / Artifact 10631342313 SUCCESS. All safety/preflight/canonical-source/main steps passed; outcome-free only.
+- Removed race 202605040103 is NOT a real Waku10 data difference. Frozen old edge=0.4999999999999999, restored exact edge=0.49999999999999994. Both represent mathematical 0.5; floating-point noise around frozen S threshold WAKU34=0.5 caused route membership to flip.
+- Its other pre-only values: ST34=0.4, meetST=0.6250000000000001, wall12_weak=0.3137500000000001, motor32=-0.3466857142857143, inside_nst=0.2857142857142858, bet=1. It cannot be rescued by A/B after the floating boundary flip, hence apparent 94->93.
+- Conclusion: do NOT treat 202605040103 as a genuine corrected-Waku removal. Need deterministic boundary handling/tolerance or canonical rounding so mathematically equal 0.5 reproduces frozen semantics; thresholds themselves must not be tuned.
+- Single June missing restored row identified: 202606080501 (2026-06-08), frozen old Waku34=-0.0714285714285715. This is a source-coverage/fallback issue; investigate exact native/national-ST fallback before final membership freeze.
+- No results/payout/odds/Sep outcomes read. September remains UNREAD.
