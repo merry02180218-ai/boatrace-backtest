@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from pathlib import Path
-import json, numpy as np, pandas as pd
+import sys, json, numpy as np, pandas as pd
+ROOT=Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path: sys.path.insert(0,str(ROOT))
 import verify_v288_operational_pre_replay as v
 
 SRC=Path("analysis_v243_3head_expand_feature_audit.csv")
