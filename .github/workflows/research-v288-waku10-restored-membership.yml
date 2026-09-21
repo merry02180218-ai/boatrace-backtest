@@ -25,7 +25,7 @@ jobs:
           assert "data/odds" not in code
           assert 'thresholds_changed":False' in s
           assert 'sep2026_read":False' in s
-          assert 'f__c_b3_minus_b4_waku_st' in s and '_restored_waku34' in s
+          assert 'f__c_b3_minus_b4_waku_st' in s and '_restored_waku34' in s\n          assert 'clamp((.24-s3)/.14)-clamp((.24-s4)/.14)' in s
           print("STATIC_SAFETY_OK")
           PY
           python -c "import sys;sys.path.insert(0,'.');import verify_v288_operational_pre_replay;print('V288_IMPORT_OK')"
