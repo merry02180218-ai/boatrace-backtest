@@ -1,0 +1,10 @@
+name: audit-waku10-full-parity
+on:
+  workflow_dispatch:
+jobs:
+  parity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - run: python audit_waku10_full_parity.py
