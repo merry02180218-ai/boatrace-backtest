@@ -76,3 +76,9 @@ Run 35611769092 / Job 106372395453 completed FAILURE at the final 2025 coverage 
 
 ## v17 repair ready to fire
 Patched empty prior-year coverage handling in commit 56cff90e1abca32a4ff87699dc90ca9caf21da38. Current script blob 3c63ab09883371fe5b42bb2f68accf090c7b1365; workflow blob unchanged 1252a600b9fdb69d7d029c86203d2375942154f1. Refetched both from main: threshold_tuning=false, SEPTEMBER_OUTCOMES_READ=false, PRODUCTION_CHANGED=false, workflow_dispatch present, timeout 60, py_compile preflight present, literal escaped newline absent, empty coverage now emits 2025_JUL_AUG_ENV_COVERAGE_EMPTY instead of crashing. Need fresh workflow_dispatch on current main; do NOT rerun old Run 35611769092 because that is pinned to old head e10752e. After fresh run, parse 2026 Jul-Aug water-band x SR/ST and confirm 2025 coverage status. Production unchanged; September UNREAD.
+
+
+## v17 SUCCESS / next falsification start
+Fresh Run 35615915964 / Job 106386465229 / Artifact 10645954075 completed SUCCESS on head cb47cb97a92db38548a45102ba854de620b2d851. HEAD4_SEASON_FALSIFY_V17_OK. Jul-Aug BASE 127/63=49.6063%. Water <25 20/9=45.0%; 25-30 70/33=47.1429%; 30+ 37/21=56.7568%. At 30+: fixed zero-sign rel4_b3_sr GT0 25/17=68.0% vs LE0 12/4=33.3333%; rel4_b3_st same 25/17=68.0% vs 12/4=33.3333%. 2025_JUL_AUG_ENV_COVERAGE_EMPTY confirmed. September outcomes UNREAD; threshold_tuning=false; production unchanged.
+
+Next research starts by locating the actual historical BoatraceCSV environment-data layout for 2025 rather than assuming data absence. If historical environment truly cannot be recovered, perform a fixed-rule 2026 falsification comparing high-water vs lower-water periods/venues without tuning thresholds. Do not adopt the 30C gate from 37R alone. Before any new workflow dispatch, follow mandatory full preflight.
