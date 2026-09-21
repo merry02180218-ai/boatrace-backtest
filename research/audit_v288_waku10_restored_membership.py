@@ -82,12 +82,12 @@ def main():
             "exact_1e9":int(((g._old-g._new).abs()<=1e-9)[both].sum())}
  oldsel=build_membership(q,"f__c_b3_minus_b4_waku_st",0.0); newsel=build_membership(q,"_restored_waku34",1e-12)
  missing=q[(q.date.astype(str).str[:7]=="2026-06") & q["_restored_waku34"].isna()][["race_code","date","f__c_b3_minus_b4_waku_st"]].to_dict("records")
- focus=q[q.race_code.eq("202605040103")][["race_code","date","f__c_b3_minus_b4_waku_st","_restored_waku34","f__c_b3_minus_b4_st","f__c_b3_meetst","f__c_wall12_weak","f__c_b3_minus_b2_motor","f__c_b3_inside_nst","bet"]].to_dict("records")
+ focus=q[q.race_code.eq("202605040103")][["race_code","date","f__c_b3_minus_b4_waku_st","_restored_waku34","f__c_b3_minus_b4_st","f__c_b3_meetst","f__c_wall12_weak","f__c_b3_minus_b2_motor","f__c_b3_inside_nst","bet"]].to_dict("records")\n focus2=q[q.race_code.isin(["202605040103","202607222309"])][["race_code","date","f__c_b3_minus_b4_waku_st","_restored_waku34","f__c_b3_minus_b4_st","f__c_b3_meetst","f__c_wall12_weak","f__c_b3_minus_b2_motor","f__c_b3_inside_nst","bet"]].copy(); focus2["delta"]=focus2["_restored_waku34"]-focus2["f__c_b3_minus_b4_waku_st"]; focus2=focus2.to_dict("records")
  o=set(oldsel.race_code);n=set(newsel.race_code)
  out={"policy":{"thresholds_changed":False,"old_semantics_untouched":True,"restored_numeric_eps":1e-12,"outcomes_read":False,"sep2026_read":False,"waku_formula":"clamp((0.24-ST3)/0.14)-clamp((0.24-ST4)/0.14), exact v222 normalized-strength edge"},
       "coverage":audit,"old_selected":len(o),"restored_selected":len(n),"added":sorted(n-o),"removed":sorted(o-n),
       "old_monthly":oldsel.groupby("month").size().to_dict(),"restored_monthly":newsel.groupby("month").size().to_dict(),
       "restored_routes":newsel.groupby(["month","route"]).size().unstack(fill_value=0).to_dict("index"),
-      "june_missing_restored":missing,"removed_focus_preonly":focus}
+      "june_missing_restored":missing,"removed_focus_preonly":focus,"boundary_pair_preonly":focus2}
  OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2)+chr(10),encoding="utf-8");print(json.dumps(out,ensure_ascii=False,indent=2));print("V288_WAKU10_RESTORED_MEMBERSHIP_OK")
 if __name__=="__main__":main()
