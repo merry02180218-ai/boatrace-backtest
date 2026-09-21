@@ -196,3 +196,199 @@ Mandatory sequence:
 8. Record failure cause, fix, pre-fire checks, run/job/artifact IDs and result in this handoff.
 
 Permanent project rule: repeated literal `\\n` failures are zero-tolerance; always verify the actual GitHub file before firing.
+
+
+## 2026-09-21 — Boatcast Waku10 historical reconstruction / 6M coverage / Waku10 head-model v1
+
+### User direction
+- User first wanted the frozen 4-head model six-month official-closing-odds audit.
+- After discovering Waku10 historical coverage was incomplete, user explicitly requested historical Waku10 reconstruction, leak checking, and shared storage usable by ANY model.
+- User later changed research priority: before opponent/2nd-place model work, improve the 4-head HEAD model itself using Waku10.
+- Production remains unchanged. September 2026 outcomes remain UNREAD.
+
+### Historical Waku10 source investigation
+- BoatraceCSV Waku10 source was traced to Boatcast:
+  https://race.boatcast.jp/hp_txt/{jo:02d}/bc_j_waku10_{YYYYMMDD}_{jo:02d}_{race:02d}.txt
+- Boatcast historical files were confirmed available for Mar-Jun 2026.
+- Kyoteibiyori player_kako10 was tested and rejected as a substitute because it did not semantically match BoatraceCSV Waku10.
+- Boatcast format: player name, frame-specific win rate, frame-specific average ST, frame-specific average start rank, then up to 10 prior runs x finish/course/grade.
+
+### Leakage / lineage audit
+- audit_boatcast_waku10_leak.py + workflow were added.
+- Run 35527070792 SUCCESS:
+  - tested 5 historical targets
+  - repeated fetches identical
+  - no direct result fields
+  - LEAK_AUDIT_OK
+- Important wording: this is strong evidence of no leakage indicators, NOT mathematical proof that Boatcast never rewrote a historical file after race day.
+- Full semantic parity audit against BoatraceCSV existing Waku10 for 2026-07-19 through 2026-08-31 eventually succeeded:
+  - Run 35558286203
+  - 44 CSV days
+  - 1,424,736 cells
+  - 0 semantic mismatches
+  - RESULT_FILES_READ False
+  - SEPTEMBER_OUTCOMES_READ False
+  - FULL_PARITY_OK
+- Semantic normalization allowed harmless representation differences: whitespace in names, 6.40 vs 6.4, '-' vs blank missing numeric.
+- Therefore reconstructed historical Boatcast data has strong same-source/data-lineage evidence with BoatraceCSV Waku10.
+
+### Reconstruction history
+- First sequential Mar-Jun reconstruction Run 35527152093 was CANCELLED after 2h; artifact step never ran, so runner partial files were lost.
+- Fast monthly reconstruction was created with 24 threads, monthly matrix, 45-min timeout, and always-upload partial artifacts.
+- Run 35547108828 SUCCESS:
+  - Mar REQUESTED/SAVED 4607/4607, missing 0
+  - Apr 4244/4244, missing 0
+  - May 4832/4832, missing 0
+  - Jun 4488/4488, missing 0
+  - total 18,171 files, missing 0
+  - result files not read; September outcomes not read
+- Validation Run 35547394740 SUCCESS:
+  - FILES 18171
+  - FORMAT_BAD 0
+  - SOURCE_SAMPLES 40 / MISMATCH 0
+  - known Jul19 match true
+  - VALIDATION_OK
+- Shared promotion Run 35561996464 SUCCESS.
+- Shared Mar-Jun commit:
+  6410b14d209eb7247cce2770693a73b6f3f7cc04
+  message: data: add shared historical Boatcast Waku10 Mar-Jun 2026
+- Canonical shared path:
+  data/shared_historical/waku10_boatcast/2026/MM/DD/JJ_RR.txt
+
+### July reconstruction / shared storage
+- July-only reconstruction workflow commit:
+  bfab0925d4fc57e4099114fa991e57adc48a2214
+- Run 35568270269 SUCCESS:
+  - MONTH 07 REQUESTED 4920 SAVED 4920 MISSING 0
+  - MONTH_RECONSTRUCT_OK
+- July shared promotion workflow commit:
+  1da2cfdd9dbf5cf8fae61590968c038cd4842fb3
+- Promotion Run 35570488453 SUCCESS:
+  - JULY_SHARED_WAKU10_FILES 4920
+  - RESULT_FILES_READ False
+  - SEPTEMBER_OUTCOMES_READ False
+  - PROMOTE_JULY_OK
+- July shared data commit:
+  edcb7be33d35b1fc5a50b8635f36bd5685028cf3
+  message: data: add shared historical Boatcast Waku10 July 2026
+- Shared Boatcast Waku10 is therefore available Mar-Jul and intended as common input for all models, not 4HEAD-only.
+
+### Six-month Waku10 loader bug and fix
+- prepare_4head_6m_v93_neutral_waku.py was wired to shared historical Waku10.
+- Initial coverage failures:
+  - Run 35563549072: V93 21195/23855
+  - diagnostic Run 35564294166: 20698/23855
+  - missing by month then: Mar123 Apr74 May196 Jun104 Jul2660
+- July 2660 was mainly because shared July was not yet connected.
+- After July connection commit bb81828c924da0d9017b548203f9de3e36bc1614:
+  - Run 35571710194 failed at 23220/23855 = 97.338%
+  - missing Mar123 Apr74 May196 Jun104 Jul138
+  - SHARED_DIAG_20260303 returned only 12 rows and missed known race codes.
+- Root cause found: nested day directory loader bug.
+  Actual path is e.g.
+  data/shared_historical/waku10_boatcast/2026/03/03/04_01.txt
+  but after entering /03/03 the loader incorrectly searched for 03_*.txt instead of *.txt.
+- Fixed in commit:
+  44231256976040596f30b859158073b1ae278046
+  by using root.glob("*.txt") for the day directory.
+- Pre-fire inspection after fix: literal escaped newline false, old bad pattern absent, shared path correct, Python preflight present, September guard present.
+
+### Final six-month complete-Waku audit
+- Run 35572435087 SUCCESS at head SHA 44231256976040596f30b859158073b1ae278046.
+- Waku coverage:
+  - parent_R 23855
+  - v93_R 23855
+  - MISSING_BY_MONTH {}
+  - 100% coverage
+  - rebuilt monthly: Mar3550 Apr3282 May4260 Jun4049 Jul4487 Aug4227
+  - shared_historical_waku10_used True
+  - waku10_backfill_used False
+  - source: Boatcast shared historical Mar-Jul + BoatraceCSV existing Jul-Aug
+  - September outcomes false
+- Official closing odds six-month current-ticket audit also completed:
+  - strict_R 23855
+  - decision_R 17649
+  - production_BET_R 233
+  - mean 2.099 bets/day, median2, max5
+  - head4 106 / 233 = 45.49%
+  - trifecta hits 52
+  - stake 2,330,000 JPY
+  - payout 2,075,330 JPY
+  - profit -254,670 JPY
+  - ROI 89.069957%
+  - max drawdown 531,530 JPY
+  - max losing streak 20
+  - base120_BET_R 183
+  - newfeature_add_BET_R 41
+  - closing_odds_used true
+  - production unchanged
+  - September UNREAD
+- Monthly examples preserved from audit:
+  - Mar 32R / head4 13 / hits9 / ROI100.49375 / +1,580
+  - Apr 33R / head4 17 / hits10 / ROI113.81818 / +45,600
+  - previous audit monthly totals for May-Aug remain in earlier section/logs.
+- Key conclusion: Waku10 coverage uncertainty is now removed. Current ticket ROI is still below 100%; opponent selection remains a later bottleneck, but user explicitly wants HEAD model Waku research first.
+
+### Current research priority: Waku10 HEAD model improvement
+User explicitly said:
+「ていうかまずwaku10使った頭モデル改善したい」
+So DO NOT jump to the 2nd-place/opponent model yet.
+
+Baseline/frozen reference:
+- frozen head candidate: p>=.36 + ORIG>=-.06
+- complete six-month current-ticket audit selection: 233 bets, 106 head4 = 45.49%
+- earlier frozen Jul-Aug head-only audit was ~49.61%, but threshold/orig research history means do not treat it as pristine untouched validation.
+- Goal: test whether Waku10 can improve head selection while retaining useful race volume; avoid tiny-sample 50% gates.
+
+### Waku10 head-model v1 implementation
+Created:
+- research_4head_waku10_headmodel_v1.py
+  commit 3189418e4698a36552651efaf4596d9bc7c2f77f
+- .github/workflows/research-4head-waku10-headmodel-v1.yml
+  commit 7088580afa02f124bbe1c9578d5c9c2e71e88fe5
+
+v1 design:
+- rebuild complete Waku parent first using prepare_4head_6m_v93_neutral_waku.py
+- compare BASE vs BASE_WAKU
+- DEV = Mar-May
+- VAL = Jun
+- HOLD = Jul-Aug
+- threshold selected from June only, requiring >=50 selected races
+- Jul-Aug holdout is never used for threshold selection
+- obvious outcome/result/payout/odds/finish columns forbidden from predictors
+- result path direct reference absent in v1 research script
+- September outcomes UNREAD
+- production unchanged
+- Python compile preflight
+- literal escaped newline checked false before firing
+
+### CURRENT ACTIVE RUN — NEXT CHAT START HERE
+User fired Waku10 head-model v1.
+Current Run:
+- Run 35576576982
+- workflow: research-4head-waku10-headmodel-v1
+- head SHA: 7088580afa02f124bbe1c9578d5c9c2e71e88fe5
+- status at handoff write time: IN_PROGRESS
+- conclusion: not yet available
+
+NEXT ACTION:
+1. Fetch Run 35576576982 status/jobs/logs.
+2. If FAILURE: obey mandatory rule — inspect full logs + actual committed script/workflow + inputs, identify root cause, fix, refetch actual GitHub files, full pre-fire inspection, only then ask/fire again. Never blind rerun.
+3. If SUCCESS: inspect BASE vs BASE_WAKU DEV/VAL/HOLD results carefully.
+4. Check actual feature list/count and ensure the identified Waku columns really are Waku10-derived rather than unrelated frame-named columns.
+5. Evaluate Jul-Aug HOLD without using it to tune. Report R, head4, head rate and volume change.
+6. If Waku improves robustly, next research should inspect individual Waku families and relative wall features (4 vs 1/2/3), using train/validation only for selection and preserving holdout.
+7. Do not modify production without explicit user adoption.
+8. Keep September UNREAD.
+
+### Permanent pre-fire rule reminder
+Before EVERY workflow dispatch/rerun:
+- refetch actual committed workflow and all edited/used scripts from main
+- inspect complete relevant files
+- literal escaped newline check
+- YAML/quoting/indentation/syntax/env/path/dependency/permissions/artifact IDs/timeout checks
+- Python syntax/preflight
+- verify leakage guards and September UNREAD
+- only then fire/ask user to fire
+- on failure inspect logs/source/inputs before any rerun
+- record cause/fix/run/job/artifact/result in handoff
