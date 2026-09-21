@@ -1,0 +1,42 @@
+name: research-3head-a-opponent-mar-oneshot
+on:
+  workflow_dispatch:
+jobs:
+  oneshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy scikit-learn requests
+      - name: Strict frozen-prediction preflight
+        run: |
+          python -m py_compile research/run_3head_a_opponent_mar_oneshot.py analyze_v221_3head_scenario_pair.py
+          python - <<'PY'
+          import json
+          p='research/frozen_3head_mar_predictions_10621281342.json'
+          x=json.load(open(p,encoding='utf-8')); d=x['decisions']
+          assert x['artifact_id']==10621281342
+          assert x['threshold']==0.5
+          assert len(d)==33
+          assert sum(v['promoted'] is not None for v in d.values())==18
+          assert all(len(v['base'])==len(set(v['base']))==6 for v in d.values())
+          assert all(len(v['protected'])==len(set(v['protected']))==6 for v in d.values())
+          print('FROZEN PREFLIGHT OK',len(d))
+          PY
+          grep -q "predictions_recomputed':False" research/run_3head_a_opponent_mar_oneshot.py
+          grep -q "threshold_tuned_on_march':False" research/run_3head_a_opponent_mar_oneshot.py
+          grep -q "EXPECTED_N=33" research/run_3head_a_opponent_mar_oneshot.py
+          grep -q "EXPECTED_SWAPS=18" research/run_3head_a_opponent_mar_oneshot.py
+      - name: March one-shot settlement
+        run: cd research && python run_3head_a_opponent_mar_oneshot.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-3head-a-opponent-mar-oneshot
+          path: |
+            research/research_3head_a_opponent_mar_oneshot.json
+            research/research_3head_a_opponent_mar_oneshot.csv
+          if-no-files-found: warn
