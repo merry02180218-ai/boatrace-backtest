@@ -76,6 +76,5 @@ def main():
       "coverage":audit,"old_selected":len(o),"restored_selected":len(n),"added":sorted(n-o),"removed":sorted(o-n),
       "old_monthly":oldsel.groupby("month").size().to_dict(),"restored_monthly":newsel.groupby("month").size().to_dict(),
       "restored_routes":newsel.groupby(["month","route"]).size().unstack(fill_value=0).to_dict("index")}
- OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"
-",encoding="utf-8");print(json.dumps(out,ensure_ascii=False,indent=2));print("V288_WAKU10_RESTORED_MEMBERSHIP_OK")
+ OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2)+chr(10),encoding="utf-8");print(json.dumps(out,ensure_ascii=False,indent=2));print("V288_WAKU10_RESTORED_MEMBERSHIP_OK")
 if __name__=="__main__":main()
