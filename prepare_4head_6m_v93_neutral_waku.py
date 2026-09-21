@@ -40,6 +40,10 @@ reb.ex.rows=shared_rows
 reb.A=reb.date(2026,3,1)
 reb.main()
 z=pd.read_csv("/tmp/head4_v93_all_parent/v93_all_parent.csv",dtype={"race_code":str})
+missing=parent[~parent.race_code.isin(set(z.race_code.astype(str).str.zfill(12)))].copy()
+print("MISSING_BY_MONTH",missing.groupby("month").size().to_dict())
+print("REBUILT_BY_MONTH",z.assign(month=z.race_code.astype(str).str[:6].str[:4]+"-"+z.race_code.astype(str).str[4:6]).groupby("month").size().to_dict())
+print("MISSING_SAMPLE",missing.race_code.head(30).tolist())
 meta={"parent_R":int(len(parent)),"v93_R":int(len(z)),"shared_historical_waku10_used":True,"waku10_backfill_used":False,"waku_source":"Boatcast shared historical Mar-Jun + BoatraceCSV existing Jul-Aug","SEPTEMBER_OUTCOMES_READ":False}
 Path("/tmp/head4_v93_all_parent/6m_meta.json").write_text(__import__("json").dumps(meta,ensure_ascii=False,indent=2)+"\n")
 print("SIX_MONTH_V93_READY",meta)
