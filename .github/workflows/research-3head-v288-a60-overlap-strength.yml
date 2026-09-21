@@ -15,6 +15,8 @@ jobs:
         run: |
           python -m py_compile research/run_3head_v288_a60_overlap_strength.py verify_v288_operational_pre_replay.py research/run_3head_a_purchase_gate_dev.py research/run_3head_wave20_manual_gate.py
           grep -F '2026,2,28' research/run_3head_v288_a60_overlap_strength.py
+          grep -F 'MONTHS=["feb"]' research/run_3head_v288_a60_overlap_strength.py
+          grep -F 'between("20260201","20260228")' research/run_3head_v288_a60_overlap_strength.py
           grep -F '>=.60' research/run_3head_v288_a60_overlap_strength.py
           ! grep -E '2026[-/, ]*09|202609' research/run_3head_v288_a60_overlap_strength.py
       - name: Download frozen canonical v243 artifact
