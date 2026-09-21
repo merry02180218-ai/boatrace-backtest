@@ -59,7 +59,7 @@ def add_player_history(d):
     return d.join(pd.DataFrame.from_dict(extra,orient='index'),how='left')
 
 def metrics(g):
-    y=g._y.astype(int);p=g._p
+    y=g.y.astype(int);p=g.p
     return (roc_auc_score(y,p) if y.nunique()>1 else np.nan,brier_score_loss(y,p),log_loss(y,np.clip(p,1e-6,1-1e-6),labels=[0,1]))
 
 def main():
