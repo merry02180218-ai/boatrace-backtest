@@ -98,12 +98,18 @@ def main():
  print('FROZEN_RULE',{'threshold':THRESHOLD,'protected_second4':True,'tickets':6},flush=True)
  print('MAR_PRESETTLEMENT_COHORT',{'selected_codes':len(codes)},flush=True)
 
- # Canonical V221 features; do not attach any settlement yet.
+ # Canonical V221 features. Monkeypatch day_fetch so March results are NEVER requested.
  raw=pd.read_csv(v221.SRC,dtype={'race_code':str}); dc=v221.v165.pc(raw,['date','race_date','ymd'])
  raw['_date']=pd.to_datetime(raw[dc].astype(str),errors='coerce')
  raw=raw[raw._date.notna()&(raw._date<MAR_END)].copy()
  # Hard-bound V221 fetches to Feb-28; March+ result files must never be fetched.
  from datetime import date,timedelta
+ _orig_day_fetch=v221.day_fetch
+ def _safe_day_fetch(day):
+  dd,z=_orig_day_fetch(day)
+  if dd>=date(2026,3,1): z['res']=[]
+  return dd,z
+ v221.day_fetch=_safe_day_fetch
  v221.END=date(2026,3,31)
  d=v221.build(raw,dc)
  d['race_code']=d.race_code.astype(str).str.zfill(12)
