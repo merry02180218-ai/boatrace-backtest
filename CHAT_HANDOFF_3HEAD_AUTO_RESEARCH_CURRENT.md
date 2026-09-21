@@ -178,3 +178,10 @@ Do not fire again until this dependency is located/restored and the whole workfl
 - 2026-02-16 native candidate 202602160712 was ERROR_NO_BET because archived pre-race tkz/stt were missing. Genuine NO_BETs: 202602150806, 202602071602, 202602270807. Native BETs: 202602171607 (hit, +23,840), 202602120601 (miss), 202602191910 (miss).
 - This means the positive aggregate ROI is not valid evidence for frozen CORE itself; it is only the native v288 output on the seven CORE dates.
 - Next required work: build an identity diagnostic that exports frozen CORE membership and each date's native pre_scan/daily_manifest, then explains why each of the 6 non-overlap frozen CORE codes fails to appear (feature reconstruction/source drift vs PRE grade/threshold vs missing input). Do not compare A+.60/OVERLAP or adopt based on ROI until this is resolved.
+
+
+## 2026-09-22 — CORE identity diagnostic START
+- Work start recorded before code changes per project rule.
+- Goal: explain exact 8 frozen CORE codes vs native operational PRE/cache identity, not optimize on February outcomes.
+- Diagnostic will reuse the frozen v243 membership reconstruction and February month cutoff, export frozen CORE codes, then for each of seven dates build historical PRE inputs + operational month cache and classify each frozen code as native_pre_candidate / present_not_candidate / missing_input. It will also export same-date native candidates and PRE score/grade fields for source/threshold drift inspection.
+- No result/payout fields are used for classification. September 2026 outcomes remain UNREAD.
