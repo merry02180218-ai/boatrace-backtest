@@ -1,6 +1,6 @@
 name: audit-4head-waku-sr-st-v15
-'on':
-  workflow_dispatch: {}
+on:
+  workflow_dispatch:
 jobs:
   audit:
     runs-on: ubuntu-latest
