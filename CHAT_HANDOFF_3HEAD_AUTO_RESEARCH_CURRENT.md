@@ -167,3 +167,6 @@ Descriptive combined evidence for the already-frozen rule (no retuning):
 - Dec-Mar descriptive total: base 41/68=60.29%, protected 46/68=67.65%, net +5.
 Do not threshold-tune on Feb or March after reveal. Preserve threshold=.50 protected SECOND=4 fixed-six rule as the frozen candidate. Next research should audit the single March rescue and combined lost/rescued structure, or move toward production shadow validation without using Sep-2026 outcomes.
 
+### Protected SECOND=4 decision
+Current frozen candidate is retained unchanged: turn4>=.50, promote highest-ranked 3-4-X outside V221 Top6, never drop an existing 3-4-X, drop weakest non-4-second ticket, exactly six tickets. Evidence: Dec-Jan +4 net; Feb one-shot 0; March one-shot +1; Dec-Mar +5 (46/68 vs 41/68), forward Feb-Mar +1 (17/27 vs 16/27). Because Feb/March are now READ, do not mine them for a new threshold or additional filter. Move this rule to SHADOW/production comparison as-is; Sep-2026 outcomes remain UNREAD.
+
