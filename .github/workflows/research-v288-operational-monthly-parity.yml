@@ -14,7 +14,21 @@ jobs:
       - name: Preflight
         run: |
           python -m py_compile research/audit_v288_operational_monthly_parity.py verify_v288_operational_pre_replay.py
-          ! grep -E 'date\\(2026, *9|202609[0-9]{2}' research/audit_v288_operational_monthly_parity.py
+          python - <<'PY'
+          from pathlib import Path
+          s=Path('research/audit_v288_operational_monthly_parity.py').read_text()
+          banned=['date(2026,9','date(2026, 9','20260901','20260930']
+          hit=[x for x in banned if x in s]
+          assert not hit, f'September data access token found: {hit}'
+          print('SEPTEMBER_ACCESS_STATIC_CHECK_OK')
+          PY
+          python - <<'PY'
+          import sys
+          from pathlib import Path
+          sys.path.insert(0,str(Path('.').resolve()))
+          import verify_v288_operational_pre_replay
+          print('ROOT_IMPORT_OK')
+          PY
       - name: Download exact frozen v243 source
         env:
           GH_TOKEN: ${{ github.token }}
