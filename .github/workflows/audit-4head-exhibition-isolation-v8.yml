@@ -1,0 +1,31 @@
+name: audit-4head-exhibition-isolation-v8
+
+'on':
+  workflow_dispatch: {}
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pandas numpy scikit-learn
+      - name: Preflight
+        run: |
+          python -m py_compile audit_4head_exhibition_isolation_v8.py build_4head_clean_long_dataset.py analyze_4head_exhibition_original_trainonly.py
+          ! grep -q 'data/results' analyze_4head_exhibition_original_trainonly.py
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: boatracecsv
+      - name: Isolation audit
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/boatracecsv
+        run: python audit_4head_exhibition_isolation_v8.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-exhibition-isolation-v8
+          path: /tmp/head4_exhibition_isolation_v8
