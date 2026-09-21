@@ -168,3 +168,13 @@ Do not fire again until this dependency is located/restored and the whole workfl
 - Important: frozen membership is 8 races but native replay output contains 7 rows and only 3 BETs. Therefore this run validates that the native operational pipeline can reproduce a positive-ROI subset, but it is NOT an 8/8 identity proof. Before using this as final evidence for dual-model adoption, audit the missing CORE race and the five non-BET/missing decisions against frozen CORE membership.
 - September 2026 outcomes remained UNREAD throughout this audit.
 - Next resume point: inspect Artifact 10645188056/core_native_feb_replay.csv and per-day summaries to map all 8 frozen CORE codes to native replay status; explain 8 -> 7 rows -> 3 BETs, then compare against A+.60 EXPANDED/OVERLAP without changing production v288.
+
+
+## 2026-09-21 — CORE native replay identity audit
+- Inspected Artifact 10645188056 in detail. The prior aggregate ROI 112.8% MUST NOT be treated as an 8R CORE validation.
+- Frozen CORE codes: 202602150404, 202602071007, 202602191910, 202602161108, 202602171911, 202602120606, 202602270507, 202602171607.
+- Native operational replay rows actually produced: 202602150806, 202602160712, 202602171607, 202602071602, 202602120601, 202602270807, 202602191910.
+- Exact overlap is only 2/8 frozen CORE races: 202602171607 and 202602191910. Therefore 6/8 frozen CORE identities were NOT reproduced by native PRE selection. The 7-row aggregate is mostly different races from the same dates.
+- 2026-02-16 native candidate 202602160712 was ERROR_NO_BET because archived pre-race tkz/stt were missing. Genuine NO_BETs: 202602150806, 202602071602, 202602270807. Native BETs: 202602171607 (hit, +23,840), 202602120601 (miss), 202602191910 (miss).
+- This means the positive aggregate ROI is not valid evidence for frozen CORE itself; it is only the native v288 output on the seven CORE dates.
+- Next required work: build an identity diagnostic that exports frozen CORE membership and each date's native pre_scan/daily_manifest, then explains why each of the 6 non-overlap frozen CORE codes fails to appear (feature reconstruction/source drift vs PRE grade/threshold vs missing input). Do not compare A+.60/OVERLAP or adopt based on ROI until this is resolved.
