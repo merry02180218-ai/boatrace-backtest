@@ -1,0 +1,33 @@
+name: research-3head-v288-a60-overlap-date-audit
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/audit_v288_source_dates_for_overlap.py'
+      - '.github/workflows/research-3head-v288-a60-overlap-date-audit.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas
+      - name: Compile
+        run: python -m py_compile research/audit_v288_source_dates_for_overlap.py
+      - name: Download frozen canonical v243 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
+          test -s golden_v243/analysis_v243_3head_expand_feature_audit.csv
+          cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
+      - name: Audit dates only
+        run: python research/audit_v288_source_dates_for_overlap.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-3head-v288-a60-overlap-date-audit
+          path: research_v288_source_date_audit.json
