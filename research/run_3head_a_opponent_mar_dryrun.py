@@ -111,9 +111,12 @@ def main():
  from datetime import date,timedelta
  _orig_day_fetch=v221.day_fetch
  def _safe_day_fetch(day):
-  dd,z=_orig_day_fetch(day)
-  if dd>=date(2026,3,1): z['res']=[]
-  return dd,z
+  if day>=date(2026,3,1):
+   ymd=day.strftime('%Y/%m/%d')
+   return day,{'cards':v221.rows(f'data/programs/race_cards/{ymd}.csv'),
+               'tkz':v221.rows(f'data/previews/tkz/{ymd}.csv'),
+               'orig':v221.rows(f'data/previews/original_exhibition/{ymd}.csv'),'res':[]}
+  return _orig_day_fetch(day)
  v221.day_fetch=_safe_day_fetch
  v221.END=date(2026,3,31)
  d=v221.build(raw,dc)
