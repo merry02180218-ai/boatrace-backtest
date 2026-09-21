@@ -170,3 +170,31 @@ Do not threshold-tune on Feb or March after reveal. Preserve threshold=.50 prote
 ### Protected SECOND=4 decision
 Current frozen candidate is retained unchanged: turn4>=.50, promote highest-ranked 3-4-X outside V221 Top6, never drop an existing 3-4-X, drop weakest non-4-second ticket, exactly six tickets. Evidence: Dec-Jan +4 net; Feb one-shot 0; March one-shot +1; Dec-Mar +5 (46/68 vs 41/68), forward Feb-Mar +1 (17/27 vs 16/27). Because Feb/March are now READ, do not mine them for a new threshold or additional filter. Move this rule to SHADOW/production comparison as-is; Sep-2026 outcomes remain UNREAD.
 
+
+## 2026-09-21 — PRODUCTION DIRECTION FREEZE: v288 CORE + A+.60 EXPANDED (WORK START)
+User approved retaining v288 as the high-precision CORE and adding the newly adopted A+.60 family as EXPANDED coverage rather than replacing v288.
+
+Frozen architecture intent:
+- CORE = existing v288 production semantics remain unchanged: PRE S+A -> LIVE v243/v288 S>A>B -> v242 variable 5-10 tickets / 10,000-yen Dutch.
+- EXPANDED = adopted A head gate -> purchase gate post_motor_inner_rank_edge >= +0.60 -> V221 ordered-pair ranking -> protected SECOND=4 correction -> exactly 6 unique tickets.
+- Protected rule is frozen at turn4 >= 0.50: promote highest-ranked 3-4-X outside V221 Top6; never drop an existing Top6 3-4-X; drop weakest Top6 ticket whose SECOND != 4; if safe replacement is impossible, keep base Top6.
+- Missing turn4 must NOT be imputed to 0.50; fail safe / no protected swap.
+- If the same race qualifies for CORE and EXPANDED, do not double-buy; classify it as CORE. This preserves v288 priority and lets EXPANDED add only incremental coverage.
+- Do not loosen or retune v288 thresholds from this integration.
+- Do not retune A+.60 or protected threshold from Feb/March; both are READ.
+- September 2026 outcomes remain UNREAD for the new EXPANDED production path and must not be fetched/used in decision construction.
+
+Evidence/context:
+- v288 production-compatible pre-Sep replay: 94R / 52 heads = 55.32%; historical adopted 100R / 56 heads = 56.00%.
+- A+.60 development cohort: 118R / 54 heads = 45.76%.
+- A+.60 protected opponent capture among boat3-head races: Dec-Mar 46/68 = 67.65% vs V221 base 41/68 = 60.29%; Feb+Mar forward-only protected 17/27 vs base 16/27.
+- The reason EXPANDED exists is coverage: v288 remains the precision CORE; the new family is intended to recover additional races, not replace it.
+
+Implementation rule before any trigger:
+1. Inspect latest v288 production runner/workflows and current A/V221 pre-settlement builders from fresh main.
+2. Keep CORE code path behavior unchanged.
+3. Implement EXPANDED as a separate deterministic path with explicit CORE-overlap suppression.
+4. Audit syntax/imports/contracts/types, exact-six invariant, missing turn behavior, current-day result blindness, deadline/input completeness, artifact paths and workflow YAML.
+5. Do not trigger until the full mandatory preflight passes. Record implementation commit and validation Run/Job/Artifact after completion.
+
+Current action: inspect production files and design the combined runner; no workflow trigger has been authorized/executed at this point.
