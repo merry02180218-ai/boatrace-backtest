@@ -249,3 +249,11 @@ F. Preserve v288 native opponent/ticket/staking identity; do not retroactively l
 - Frozen old side now explicitly uses eps=0.0 (exact original <= WAKU34 semantics). Reconstructed restored side alone uses eps=1e-12 to neutralize representation noise such as 0.49999999999999994 vs 0.4999999999999999 without changing model threshold.
 - Policy output records old_semantics_untouched=true and restored_numeric_eps=1e-12. Source re-fetched after commit and exact lines verified.
 - Next: fresh manual workflow dispatch; target is old_selected=94 and restored_selected=94 with no added/removed membership. June fallback row 202606080501 remains separately unresolved until exact nationwide-ST fallback is reconstructed; no outcomes may be read.
+
+
+## 2026-09-21 — resume model-improvement research after Waku10 restoration
+- User explicitly accepted the remaining 202607222309 discrepancy as original-exhibition-related and instructed to continue improvement research; do not spend more cycles forcing restored Waku10 membership to equal 94 solely for that race.
+- Waku10 restoration investigation is therefore closed for model-research purposes with the frozen v288 baseline identity preserved; no threshold tuning was justified by the restoration audit.
+- Resume from the previously frozen two-tier direction: CORE=v288 native semantics; EXPANDED=A+.60 + V221 Top6 + protected SECOND4 .50 exact-six; overlap CORE only.
+- Next research goal: improve head selection / purchase gating without unnecessarily shrinking race count. First run a fresh causal, leakage-audited pre-trigger scan around the frozen PRE/head gates using restored historical Waku10 where available, preserving Sep-2026 outcome UNREAD and reporting monthly race count/head rate before any adoption.
+- Work-start rule: inspect current main and existing 3head research workflows/scripts before creating a new scan; reuse causal walk-forward infrastructure and do not use outcome-derived same-month features.
