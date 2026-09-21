@@ -82,3 +82,30 @@ Exactly 6 tickets:
 ### Next action
 Build a **separate one-shot February validation path**. Do not tune thresholds/features using February. Apply the frozen rule first from pre-settlement features, then attach February settlement only for scoring. Do not touch March.
 
+## MANDATORY OPERATING RULE — NEVER TRIGGER BEFORE FULL PREFLIGHT
+This is a permanent rule for this project and must be followed by every continuation/chat/agent.
+
+**Do not patch and immediately trigger GitHub Actions.**
+Before every trigger/rerun, inspect the fresh latest files and verify the complete execution path, not only the line that failed.
+
+Required pre-trigger audit:
+1. Python syntax/compile for the target script and directly imported local modules.
+2. Confirm every imported module/file exists at its real repository path.
+3. Inspect called-function contracts and hidden input requirements (required dict keys/months, columns, return shapes, types).
+4. Trace the execution path through all stages that occur before settlement/result reveal.
+5. Validate month/data scopes and frozen cohorts; ensure no unintended March or September-2026 outcome access.
+6. Validate V221 ordering types/format and protected fixed-six replacement logic.
+7. Validate JSON/CSV output construction and artifact paths.
+8. Check workflow YAML, trigger path, dependencies, timeout and artifact upload behavior.
+9. Inspect adjacent failure risks exposed by the previous error; never fix only the first exception.
+10. Only after the above audit passes may a trigger commit be created.
+11. After a run, verify actual Job/log/artifact/race-level output before claiming success.
+
+For one-shot/holdout validation, a failed run that does not reach settlement does NOT consume the holdout. Record whether settlement was reached.
+
+### Current Feb one-shot status
+- Run 35550024261 failed in preflight due to an incorrect assumed V221 file path; settlement not reached.
+- Run 35550190379 passed workflow preflight but failed before cohort scoring because `make_pre_scores()` requires frames for oct/nov/dec/jan/feb and the one-shot script supplied only feb.
+- Run 35550190379 therefore did **not** reach February settlement; February outcomes remain unrevealed by this validation path.
+- Next action: perform the mandatory full execution-path audit first, then patch. Do not trigger until that audit is complete.
+
