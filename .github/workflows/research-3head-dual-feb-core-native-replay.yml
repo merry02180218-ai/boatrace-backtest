@@ -24,6 +24,16 @@ jobs:
           python - <<'PY'
           import pandas as pd
           p='analysis_v234_waku10_reconstruction_coverage.csv';q=pd.read_csv(p)
+          if 'source' not in q.columns:
+              q['source']=q.apply(lambda r:'published' if float(r.get('coverage_pct',0))>=100 else ('missing' if float(r.get('restored_rows',0))<=0 and float(r.get('expected_card_races',0))>0 else 'recovered'),axis=1)
+          q.to_csv(p,index=False)
+          assert not (q[(q.date>='2025-12-01')&(q.date<='2026-02-28')].source=='missing').any()
+          print('WAKU_COVERAGE_READY',len(q))
+          PY
+          cp canonical_waku10_coverage.csv analysis_v234_waku10_reconstruction_coverage.csv
+          python - <<'PY'
+          import pandas as pd
+          p='analysis_v234_waku10_reconstruction_coverage.csv';q=pd.read_csv(p)
           if 'source' not in q.columns: q['source']='published'
           q.loc[q['source'].isna(),'source']='published'
           q.to_csv(p,index=False)
