@@ -65,7 +65,7 @@ def metrics(g):
 def main():
     # Current accepted restored-Waku10 feature basis.
     if not v234.REST.exists(): raise RuntimeError('v234 restored Waku10 not materialized')
-    d,dc,vc,basefs=v234.build_restored(); d=add_player_history(d)
+    d,dc,vc,basefs=v234.build_restored()\n    existing=[f'b{b}_pl_{k}' for b in range(1,7) for k in NAMES if f'b{b}_pl_{k}' in d.columns]\n    if len(existing)==30:\n        print('PLAYER_HISTORY_ALREADY_PRESENT',len(existing))\n    else:\n        d=add_player_history(d)
     own=[f'b3_pl_{k}' for k in NAMES]
     b2=[f'b2_pl_{k}' for k in NAMES];b4=[f'b4_pl_{k}' for k in NAMES]
     for k in NAMES:
