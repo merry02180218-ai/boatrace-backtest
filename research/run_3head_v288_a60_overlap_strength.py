@@ -11,7 +11,7 @@ import run_3head_wave20_manual_gate as w20
 SRC=Path("analysis_v243_3head_expand_feature_audit.csv")
 OUT=Path("research_3head_v288_a60_overlap_strength.json")
 CSV=Path("research_3head_v288_a60_overlap_strength.csv")
-MONTHS=["dec","jan","feb"]
+MONTHS=["feb"]
 RANGES={"oct":("2025-10-01","2025-10-31"),"nov":("2025-11-01","2025-11-30"),
         "dec":("2025-12-01","2025-12-31"),"jan":("2026-01-01","2026-01-31"),"feb":("2026-02-01","2026-02-28")}
 
@@ -61,14 +61,14 @@ def metric(z):
 def main():
     v=build_v288_codes(); a=build_a60()
     # Common period only. v288 frozen source starts Dec-2025; A+.60 frozen comparable cohort here is Dec-Feb.
-    v=v[v.race_code.str[:8].between("20251201","20260228")].copy()
-    a=a[a.race_code.str[:8].between("20251201","20260228")].copy()
+    v=v[v.race_code.str[:8].between("20260201","20260228")].copy()
+    a=a[a.race_code.str[:8].between("20260201","20260228")].copy()
     z=a.merge(v,on="race_code",how="outer",indicator=True)
     # Outcome is sourced only from the A+.60 causal cohort; v288-only outcomes are attached from official result files below.
     z["bucket"]=z["_merge"].map({"left_only":"A60_ONLY","right_only":"V288_ONLY","both":"BOTH"}).astype(str)
     # Attach official outcomes for V288_ONLY after membership is frozen. Hard stop Feb-28.
     from datetime import date,timedelta
-    settled={}; day=date(2025,12,1)
+    settled={}; day=date(2026,2,1)
     import analyze_v221_3head_scenario_pair as v221
     while day<=date(2026,2,28):
         try:
@@ -84,7 +84,7 @@ def main():
         raise RuntimeError("A60 outcome cross-check mismatch")
     z["a60_head"]=z.winner.eq(3).astype(int)
     if z.winner.isna().any(): raise RuntimeError(f"settlement missing {int(z.winner.isna().sum())}")
-    out={"policy":{"window":"2025-12-01..2026-02-28","race_membership_frozen_before_settlement":True,
+    out={"policy":{"window":"2026-02-01..2026-02-28","race_membership_frozen_before_settlement":True,
                    "v288_operational_semantics":True,"a60_frozen_gate":True,"sep2026_used":False,
                    "threshold_tuning":False},
          "counts":{"v288":int(len(v)),"a60":int(len(a)),"union":int(len(z))},
