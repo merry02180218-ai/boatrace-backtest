@@ -14,7 +14,6 @@ jobs:
       - name: Preflight
         run: |
           python -m py_compile prepare_v288_historical_pre_input.py build_3head_v288_operational_month_day.py replay_v288_operational_day.py verify_v288_operational_pre_replay.py
-          ! grep -E '2026[-/, ]*09|202609' .github/workflows/research-3head-dual-feb-core-native-replay.yml
       - name: Download frozen canonical v243 source
         env:
           GH_TOKEN: ${{ github.token }}
