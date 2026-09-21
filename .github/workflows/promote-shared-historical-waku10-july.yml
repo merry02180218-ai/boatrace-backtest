@@ -1,0 +1,39 @@
+name: promote-shared-historical-waku10-july
+on:
+  workflow_dispatch:
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: boatcast-waku10-2026-07
+          path: /tmp/waku07
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: "35568270269"
+      - name: Validate and promote
+        run: |
+          set -euo pipefail
+          test "$(find /tmp/waku07 -type f -name '*.txt' | wc -l)" -eq 4920
+          mkdir -p data/shared_historical/waku10_boatcast/2026/07
+          cp -a /tmp/waku07/. data/shared_historical/waku10_boatcast/2026/07/
+          test "$(find data/shared_historical/waku10_boatcast/2026/07 -type f -name '*.txt' | wc -l)" -eq 4920
+      - name: Commit July shared Waku10
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/shared_historical/waku10_boatcast/2026/07
+          git diff --cached --quiet || git commit -m "data: add shared historical Boatcast Waku10 July 2026"
+          git push
+      - name: Safety markers
+        run: |
+          echo "RESULT_FILES_READ False"
+          echo "SEPTEMBER_OUTCOMES_READ False"
+          echo "JULY_SHARED_WAKU10_FILES 4920"
+          echo "PROMOTE_JULY_OK"
