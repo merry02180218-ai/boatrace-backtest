@@ -144,3 +144,9 @@ Leak firewall:
 Workflow commit: 5f99fe39331de1bdbc442af119fe89af030d8fbc.
 Do not trigger until final fresh-file audit passes.
 
+### March dry-run failed-run audit / strengthened firewall
+Run 35556371118 / Job 106200674093 failed before March settlement access: AttributeError on nonexistent w20.choose_features. No artifact. March remains UNREAD.
+Follow-up static audit found and fixed nonexistent w20.pct_ref reference.
+Critical firewall fix: previous wrapper called original V221 day_fetch before clearing res, which could still request March result files. Commit 4d66a4ae749e61bd3594f96727e538a2e0823a4d now bypasses original day_fetch entirely for dates >= 2026-03-01 and directly requests cards/tkz/original only with res=[].
+Workflow preflight strengthened in eec4c7e9d5aac9682f92ceaad6aa35d61a587ffc. Do not claim March UNREAD after any future run unless logs/code confirm this firewall was the executed revision.
+
