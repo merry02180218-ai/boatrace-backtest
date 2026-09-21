@@ -1,0 +1,21 @@
+name: reconstruct-boatcast-waku10-mar-jun-fast
+on:
+  workflow_dispatch:
+jobs:
+  reconstruct:
+    strategy:
+      fail-fast: false
+      matrix:
+        month: ["03","04","05","06"]
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch month in parallel
+        env:
+          MONTH: ${{ matrix.month }}
+        run: python reconstruct_boatcast_waku10_month.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: boatcast-waku10-2026-${{ matrix.month }}
+          path: data/reconstructed_waku10_boatcast/2026/${{ matrix.month }}
