@@ -61,14 +61,15 @@ jobs:
           s=final&core;p=u.bet==1;a=p&(~s)&(n('f__c_b3_minus_b4_st')>=v.A_ST34)&(n('f__c_wall12_weak')<=v.A_WALL);b=p&(~s)&(~a)&(n('f__c_b3_minus_b2_motor')>=v.B_MOTOR)&(n('f__c_b3_inside_nst')<=v.B_NST)
           z=u[(s|a|b)&u.month.eq('2026-02')].copy()
           assert len(z)==8,len(z)
-          dates=sorted(set(z.race_code.astype(str).str[:8]))
-          open('/tmp/core_dates','w').write('\n'.join(dates)+'\n')
-          print('CORE_CODES',z.race_code.astype(str).tolist());print('CORE_DATES',dates)
+          codes=z.race_code.astype(str).str.zfill(12).tolist()
+          dates=sorted(set(x[:8] for x in codes))
+          open('/tmp/core_dates','w').write(chr(10).join(dates)+chr(10))
+          open('/tmp/core_codes','w').write(chr(10).join(codes)+chr(10))
+          print('CORE_CODES',codes);print('CORE_DATES',dates)
           PY
       - name: Native v288 replay on CORE dates
         run: |
           mkdir -p core_replay identity_manifests
-          cp /tmp/core_codes /tmp/core_codes_frozen 2>/dev/null || true
           while read d8; do
             d="${d8:0:4}-${d8:4:2}-${d8:6:2}"
             python prepare_v288_historical_pre_input.py --date "$d"
