@@ -392,3 +392,18 @@ Before EVERY workflow dispatch/rerun:
 - only then fire/ask user to fire
 - on failure inspect logs/source/inputs before any rerun
 - record cause/fix/run/job/artifact/result in handoff
+
+
+## 2026-09-21 — Run 35576576982 FAILURE / v1 fix BEFORE rerun
+- Run 35576576982 / Job 106259664802: FAILURE at Research Waku10 head model.
+- Build complete Waku10 parent succeeded: parent_R=23855, rebuilt_R=23855, coverage=100%, MISSING_BY_MONTH={}, September UNREAD.
+- Root cause: research script incorrectly assumed the pre-result v93 parent contained actual_head4/head4. rebuild_4head_v93_all_parent.py intentionally contains no target, so RuntimeError: NO_HEAD4_TARGET.
+- No artifact was uploaded because research step failed before upload.
+- Fix commit c2d6a26a1d43033a6f8470ceb857577a38763b7f:
+  - attach head4 target from /tmp/head4_clean_long_dataset/dataset.csv after pre-result v93 predictor parent is frozen;
+  - target is never included in predictors;
+  - Waku10 feature family narrowed to actual v93 Waku10 primitives only: opp_waku_b* (removes unrelated frame/past-name false positives);
+  - meta records exact Waku feature names and target source.
+- Pre-fire actual-main inspection: literal \\n=false; target merge=true; Waku-only=true; result direct ref in research=false; workflow_dispatch=true; py_compile=true; September guard present.
+- Production unchanged. September outcomes remain UNREAD.
+- NEXT: rerun only after this full inspection; then compare BASE vs BASE_WAKU DEV/Jun VAL/Jul-Aug HOLD and do not tune on HOLD.
