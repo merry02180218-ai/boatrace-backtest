@@ -51,10 +51,10 @@ def main():
  if len(feb)!=len(codes): raise RuntimeError(f'February feature coverage mismatch {len(feb)}/{len(codes)}')
  # Fit V221 direct pair using only rows strictly before February.
  train=d[d._date<FEB_START].copy()
- direct,ntrain=v221.fit_pair(train,True)
+ # V221 fit_pair requires historical settlement labels. Attach labels to TRAIN ONLY; February stays unlabeled until decisions freeze.\n from datetime import date,timedelta\n hist_settled=[]; day=date(2025,10,1)\n while day<=date(2026,1,31):\n  try:\n   for rr0 in v221.rows(f\"data/results/realtime/{day.strftime('%Y/%m/%d')}.csv\"):\n    code=str(rr0.get('レースコード','')).zfill(12); a=[str(rr0.get(f'{i}着_艇番','')).strip() for i in (1,2,3)]\n    if code.isdigit() and all(x in '123456' and len(x)==1 for x in a): hist_settled.append({'race_code':code,'actual_combo':'-'.join(a),'valid_result':1})\n  except Exception: pass\n  day+=timedelta(days=1)\n hs=pd.DataFrame(hist_settled).drop_duplicates('race_code')\n train=train.drop(columns=['actual_combo','valid_result'],errors='ignore').merge(hs,on='race_code',how='left',validate='many_to_one')\n direct,ntrain=v221.fit_pair(train,True)\n if ntrain<100: raise RuntimeError(f'V221 training too small {ntrain}')
  decisions={}
  for _,r in feb.iterrows():
-  order=[f'3-{s}-{t}' for _,s,t in v221.pair_order(r,direct,True)]
+  order=v221.order(r,direct,True)
   old=order[:6]; new=list(old)
   turn4=pd.to_numeric(pd.Series([v221.xtra(r,4,'vh_p12_turn')]),errors='coerce').iloc[0]
   promoted=dropped=None
