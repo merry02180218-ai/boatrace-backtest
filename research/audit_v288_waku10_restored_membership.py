@@ -56,7 +56,7 @@ def restored(code):
   if s3 is None or s4 is None:return None
   return clamp((.24-s3)/.14)-clamp((.24-s4)/.14)
  except:return None
-def build_membership(q,wcol):
+def build_membership(q,wcol,eps=0.0):
  q=q.copy();q["month"]=q.date.astype(str).str[:7];q["_target"]=v.target(q).astype(int)
  ms=sorted(q.month.unique());cs=v.precols(q);pred=[]
  for i,m in enumerate(ms):
@@ -65,7 +65,7 @@ def build_membership(q,wcol):
   te["_score"]=v.score_with(tr,te,fs); st=float(ts.quantile(v.S_Q));at=float(ts.quantile(v.A_Q))
   te["grade"]=__import__("numpy").where(te._score>=st,"S",__import__("numpy").where(te._score>=at,"A","B"));pred.append(te)
  u=pd.concat(pred,ignore_index=True);u=u[u.grade.isin(["S","A"])].copy()
- final=u._target.eq(1);core=(num(u,wcol)<=v.WAKU34+1e-12)&(num(u,"f__c_b3_minus_b4_st")>=v.ST34)&(num(u,"f__c_b3_meetst")<=v.MEETST)
+ final=u._target.eq(1);core=(num(u,wcol)<=v.WAKU34+eps)&(num(u,"f__c_b3_minus_b4_st")>=v.ST34)&(num(u,"f__c_b3_meetst")<=v.MEETST)
  s=final&core;p=u.bet.eq(1)
  a=p&(~s)&(num(u,"f__c_b3_minus_b4_st")>=v.A_ST34)&(num(u,"f__c_wall12_weak")<=v.A_WALL)
  b=p&(~s)&(~a)&(num(u,"f__c_b3_minus_b2_motor")>=v.B_MOTOR)&(num(u,"f__c_b3_inside_nst")<=v.B_NST)
@@ -80,11 +80,11 @@ def main():
   both=g._old.notna()&g._new.notna()
   audit[m]={"rows":len(g),"restored":int(g._new.notna().sum()),"old_present":int(g._old.notna().sum()),"both":int(both.sum()),
             "exact_1e9":int(((g._old-g._new).abs()<=1e-9)[both].sum())}
- oldsel=build_membership(q,"f__c_b3_minus_b4_waku_st"); newsel=build_membership(q,"_restored_waku34")
+ oldsel=build_membership(q,"f__c_b3_minus_b4_waku_st",0.0); newsel=build_membership(q,"_restored_waku34",1e-12)
  missing=q[(q.date.astype(str).str[:7]=="2026-06") & q["_restored_waku34"].isna()][["race_code","date","f__c_b3_minus_b4_waku_st"]].to_dict("records")
  focus=q[q.race_code.eq("202605040103")][["race_code","date","f__c_b3_minus_b4_waku_st","_restored_waku34","f__c_b3_minus_b4_st","f__c_b3_meetst","f__c_wall12_weak","f__c_b3_minus_b2_motor","f__c_b3_inside_nst","bet"]].to_dict("records")
  o=set(oldsel.race_code);n=set(newsel.race_code)
- out={"policy":{"thresholds_changed":False,"outcomes_read":False,"sep2026_read":False,"waku_formula":"clamp((0.24-ST3)/0.14)-clamp((0.24-ST4)/0.14), exact v222 normalized-strength edge"},
+ out={"policy":{"thresholds_changed":False,"old_semantics_untouched":True,"restored_numeric_eps":1e-12,"outcomes_read":False,"sep2026_read":False,"waku_formula":"clamp((0.24-ST3)/0.14)-clamp((0.24-ST4)/0.14), exact v222 normalized-strength edge"},
       "coverage":audit,"old_selected":len(o),"restored_selected":len(n),"added":sorted(n-o),"removed":sorted(o-n),
       "old_monthly":oldsel.groupby("month").size().to_dict(),"restored_monthly":newsel.groupby("month").size().to_dict(),
       "restored_routes":newsel.groupby(["month","route"]).size().unstack(fill_value=0).to_dict("index"),
