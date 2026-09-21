@@ -67,13 +67,42 @@ jobs:
           PY
       - name: Native v288 replay on CORE dates
         run: |
-          mkdir -p core_replay
+          mkdir -p core_replay identity_manifests
+          cp /tmp/core_codes /tmp/core_codes_frozen 2>/dev/null || true
           while read d8; do
             d="${d8:0:4}-${d8:4:2}-${d8:6:2}"
             python prepare_v288_historical_pre_input.py --date "$d"
             python build_3head_v288_operational_month_day.py --date "$d" --month-first 2026-02-01 --month-next 2026-03-01 --history-cutoff 2026-01-31 --bias-start 2025-10-01 --force-full-cache
+            cp "live_outputs/v288_operational/$d8/pre_scan.csv" "identity_manifests/$d8-pre_scan.csv" 2>/dev/null || true
+            cp "live_outputs/v288_operational/$d8/daily_manifest.json" "identity_manifests/$d8-daily_manifest.json"
             python replay_v288_operational_day.py --date "$d" --cache "live_outputs/v288_operational/$d8/live_cache.joblib" --outdir "core_replay/$d8" --history-cutoff 2026-01-31
           done </tmp/core_dates
+      - name: Audit frozen CORE identity
+        run: |
+          python - <<'PY'
+          import json,pandas as pd
+          from pathlib import Path
+          frozen=[x.strip().zfill(12) for x in Path('/tmp/core_codes').read_text().splitlines() if x.strip()]
+          rows=[]
+          for code in frozen:
+              d8=code[:8]; mp=Path('identity_manifests')/f'{d8}-daily_manifest.json'; m=json.loads(mp.read_text())
+              native=[str(x).zfill(12) for x in m.get('pre_candidate_race_codes',[])]
+              p=Path('identity_manifests')/f'{d8}-pre_scan.csv'
+              q=pd.read_csv(p,dtype={'race_code':str}) if p.exists() and p.stat().st_size else pd.DataFrame()
+              rec={'frozen_core_code':code,'date':d8,'native_pre_candidate':code in native,'native_candidates':'|'.join(native),'pre_candidate_count':len(native),'manifest_force_full_cache':m.get('force_full_cache'),'result_or_payout_used':m.get('result_or_payout_used')}
+              if not q.empty and 'race_code' in q:
+                  hit=q[q.race_code.astype(str).str.zfill(12).eq(code)]
+                  rec['present_in_pre_scan']=not hit.empty
+                  if not hit.empty:
+                      for col in ['grade','score','pre_grade','pre_score','route','decision']:
+                          if col in hit: rec[col]=hit.iloc[0][col]
+              else: rec['present_in_pre_scan']=False
+              rows.append(rec)
+          z=pd.DataFrame(rows);z.to_csv('core_identity_audit.csv',index=False)
+          summary={'frozen_core':len(z),'exact_native_pre_matches':int(z.native_pre_candidate.sum()),'mismatches':int((~z.native_pre_candidate).sum()),'result_or_payout_used_any':bool(z.result_or_payout_used.fillna(False).any())}
+          Path('core_identity_summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+chr(10))
+          print(z.to_string(index=False));print(json.dumps(summary,ensure_ascii=False,indent=2));print('CORE_IDENTITY_AUDIT_OK')
+          PY
       - name: Aggregate CORE native replay
         run: |
           python - <<'PY'
@@ -98,3 +127,6 @@ jobs:
             core_native_feb_summary.json
             core_native_feb_replay.csv
             core_replay/**/day_summary.json
+            core_identity_audit.csv
+            core_identity_summary.json
+            identity_manifests/*
