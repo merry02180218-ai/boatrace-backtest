@@ -264,3 +264,12 @@ F. Preserve v288 native opponent/ticket/staking identity; do not retroactively l
 - Immediate integration target: CORE=v288 operational head membership + EXPANDED=A+.60 independent head gate. Union counts once; overlap routes to CORE only.
 - Existing script/workflow confirmed: research/run_3head_v288_a60_overlap_strength.py and .github/workflows/research-3head-v288-a60-overlap-strength.yml. Current workflow is intentionally Feb-only frozen overlap strength audit and keeps Sep-2026 unused.
 - Next action: rerun/inspect this frozen February overlap audit as the clean starting point, then extend the already-frozen union forward without retuning gates. After head-union behavior is fixed, attach CORE native opponent/ticket/staking and EXPANDED V221 Top6 + protected SECOND4 .50 exact-six for integrated ROI.
+
+
+## 2026-09-21 — dual-head February integration audit prepared
+- Existing overlap Run 35589996777 / Job 106301987443 SUCCESS: Feb CORE v288 8R/6 heads=75%; EXPANDED A+.60 32R/12 heads=37.5%; overlap 0; union 40R/18 heads=45.0%. Threshold tuning false, Sep unused.
+- Prepared exact next-stage integration script: research/run_3head_dual_head_feb_integration.py (commit cda3eb5bd133c7013576cd43dfb49ddca8fdeaac).
+- Prepared workflow .github/workflows/research-3head-dual-head-feb-integration.yml (commit b0f5fd1c66b275250317d415693f2ca2f2cc6cff).
+- Script freezes CORE=v288 and EXPANDED=A+.60 membership before settlement; overlap CORE priority. EXPANDED uses frozen V221 Top6 + protected SECOND4 turn>=.50 exact-six. February settlement only after membership/tickets frozen. Sep-2026 never loaded. No threshold tuning.
+- Deliberately does NOT approximate CORE native variable 5-10 ticket / 10k Dutch ROI yet. This run first confirms integrated head union plus EXPANDED protected-six opponent capture. If successful, next stage is exact CORE native replay + EXPANDED exact-six closing-odds settlement for integrated ROI.
+- Source re-fetched after creation: no literal backslash-n contamination, no 202609 token, success marker present.
