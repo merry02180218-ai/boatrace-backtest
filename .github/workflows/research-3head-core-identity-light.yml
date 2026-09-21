@@ -72,6 +72,25 @@ jobs:
           summary={'frozen_core':len(frozen_codes),'native_codes':len(native),'exact_matches':int(out.exact_native_match.sum()),'mismatches':int((~out.exact_native_match).sum()),'heavy_cache_rebuild':False,'source_run':35607152183,'source_artifact':10645188056}
           Path('core_identity_light_summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+chr(10))
           print(out.to_string(index=False));print(json.dumps(summary,ensure_ascii=False,indent=2));print('CORE_IDENTITY_LIGHT_OK')
+          # Feature/grade/route diagnostic: frozen CORE vs same-date native replacement.
+          keep=['race_code','date','grade','_score','_target','bet','f__c_b3_minus_b4_waku_st','f__c_b3_minus_b4_st','f__c_b3_meetst','f__c_wall12_weak','f__c_b3_minus_b2_motor','f__c_b3_inside_nst']
+          diag=[]
+          for r in rows:
+              fc=r['frozen_core_code']; same=[x for x in native if x[:8]==fc[:8]]
+              for role,code in [('frozen',fc)]+[('native',x) for x in same]:
+                  hit=u[u.race_code.astype(str).str.zfill(12).eq(code)]
+                  rec={'pair_date':fc[:8],'role':role,'race_code':code,'present_in_v243_operational_universe':not hit.empty}
+                  if not hit.empty:
+                      h=hit.iloc[0]
+                      for col in keep[2:]:
+                          if col in hit.columns: rec[col]=h[col]
+                      sm=bool(sr.loc[h.name]) if h.name in sr.index else False
+                      am=bool(ar.loc[h.name]) if h.name in ar.index else False
+                      bm=bool(br.loc[h.name]) if h.name in br.index else False
+                      rec['v288_route']='S' if sm else ('A' if am else ('B' if bm else 'NO_BET'))
+                  diag.append(rec)
+          dz=pd.DataFrame(diag);dz.to_csv('core_identity_feature_diff.csv',index=False)
+          print(dz.to_string(index=False));print('CORE_IDENTITY_FEATURE_DIFF_OK')
           PY
       - uses: actions/upload-artifact@v4
         with:
@@ -79,3 +98,4 @@ jobs:
           path: |
             core_identity_light.csv
             core_identity_light_summary.json
+            core_identity_feature_diff.csv
