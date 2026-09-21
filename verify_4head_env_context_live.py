@@ -30,7 +30,7 @@ def tkz_fixture() -> str:
 
 
 def sui_fixture() -> str:
-    return '0900\t1\t2\t北西 (追い)\t3.5\t+24.0\t+22.0\n0930\t1\t2\t南東 (向い)\t4.0\t+25.0\t+22.5\n'
+    return '0900\t1\t2\t北西 (追い)\t3.5\t2.0\t+24.0\t+22.0\n0930\t1\t2\t南東 (向い)\t4.0\t3.0\t+25.0\t+30.5\n'
 
 
 def write_card(path: Path) -> None:
@@ -45,8 +45,8 @@ def main() -> None:
     c = m.parse_stt_courses(stt_fixture())
     assert c[1] == 2 and c[2] == 1 and c[4] == 4, c
     assert m.parse_tkz_tilt4(tkz_fixture()) == 0.5
-    wc, ws, hhmm = m.parse_sui_weather(sui_fixture())
-    assert wc == 4 and ws == 4.0 and hhmm == '0930', (wc, ws, hhmm)
+    wc, ws, wave, air, water, hhmm = m.parse_sui_weather(sui_fixture())
+    assert wc == 4 and ws == 4.0 and wave == 3.0 and air == 25.0 and water == 30.5 and hhmm == '0930', (wc, ws, wave, air, water, hhmm)
 
     # Exact pinned source URL families. Fetch code must actually call only the
     # current pre-race TKZ/STT/SUI URLs; explanatory comments are irrelevant.
@@ -84,6 +84,8 @@ def main() -> None:
             assert z['september_outcomes_used'] is False
             assert z['entry_course_preview'] == 4
             assert z['wind_code'] == 4 and z['wind_speed'] == 4.0
+            assert z['wave_cm'] == 3.0 and z['air_c'] == 25.0 and z['water_c'] == 30.5
+            assert z['water_source_kind'] == 'boatcast_bc_sui_prerace_only'
             assert z['tilt'] == .5
             assert z['has_orig'] == z['has_stt'] == z['has_tkz'] == 1
             assert z['history_end'] == '2026-09-13'
