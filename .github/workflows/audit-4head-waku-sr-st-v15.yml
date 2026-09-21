@@ -1,0 +1,27 @@
+name: audit-4head-waku-sr-st-v15
+'on':
+  workflow_dispatch: {}
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install pandas numpy scikit-learn
+      - name: Preflight
+        run: |
+          python -m py_compile prepare_4head_6m_v93_neutral_waku.py audit_4head_clean_6m_exhibition.py audit_4head_waku10_rel43_regime_v6.py audit_4head_frozen_ph_rel43_v13.py audit_4head_waku_sr_st_v15.py
+          grep -q 'jun_aug_used_for_rule_selection.*False' audit_4head_waku_sr_st_v15.py
+          grep -q 'SEPTEMBER_OUTCOMES_READ.*False' audit_4head_waku_sr_st_v15.py
+      - uses: actions/checkout@v4
+        with: {repository: BoatraceCSV/boatracecsv.github.io, path: boatracecsv}
+      - name: Build causal parent
+        env: {BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/boatracecsv}
+        run: python prepare_4head_6m_v93_neutral_waku.py
+      - name: Fixed SR ST validation
+        env: {BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/boatracecsv}
+        run: python audit_4head_waku_sr_st_v15.py
+      - uses: actions/upload-artifact@v4
+        with: {name: head4-waku-sr-st-v15, path: /tmp/head4_waku_sr_st_v15}
