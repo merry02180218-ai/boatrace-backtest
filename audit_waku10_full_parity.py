@@ -4,7 +4,13 @@ BASE="https://raw.githubusercontent.com/BoatraceCSV/boatracecsv.github.io/main/d
 def get(u):
  try:return urllib.request.urlopen(urllib.request.Request(u,headers={"User-Agent":"Mozilla/5.0"}),timeout=20).read().decode("utf-8-sig","ignore")
  except:return None
-def norm_text(x): return " ".join((x or "").replace("　"," ").split())\ndef norm_num(x):\n try: return str(float(x))\n except: return (x or "").strip()
+def norm_text(x):
+ return " ".join((x or "").replace("　"," ").split())
+def norm_num(x):
+ try:
+  return str(float(x))
+ except:
+  return (x or "").strip()
 tot=mis=files=0; examples=[]
 day=datetime.date(2026,7,19); end=datetime.date(2026,8,31)
 while day<=end:
