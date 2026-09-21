@@ -44,3 +44,6 @@
 - Existing v288 operational parity remains frozen reference: 94R total, Feb8/Mar12/Apr12/May16/Jun14/Jul13/Aug19. Do not alter thresholds/routes while measuring Waku10 source effect.
 - February fair overlap audit Run 35563969125 was SUCCESS: v288 8R/6 heads=75%, A+.60 32R/12 heads=37.5%, BOTH=0; Sep-2026 unused; no threshold tuning.
 - Next: build a source-only Waku10 audit for v288. Compare frozen v288 reference vs restored historical Waku10 with all v288 thresholds unchanged. Measure changed Waku34 values, candidate additions/removals, route changes, race count/head rate; only after membership freeze inspect outcomes. September 2026 outcomes remain UNREAD.
+
+- Waku10 audit Run 35579065473 / Job 106267460878 FAILED before main audit. Preflight passed. Root cause: workflow downloaded wrong artifact Run 35467021760 / research-3head-a-opponent-reference-audit, which contains only reference JSON and not analysis_v243_3head_expand_feature_audit.csv. Main audit was skipped; no outcomes read.
+- Verified canonical source path from successful v288 parity workflow: Run 34383567078 artifact v243-3head-expand-feature-audit / analysis_v243_3head_expand_feature_audit.csv. Workflow fixed to use this exact source and added required-column contract check. Fix commit 5af7a5b4440923c15ad50b4c9f36da8510963da7. Do not rerun old failed attempt unchanged.
