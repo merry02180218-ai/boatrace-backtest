@@ -20,6 +20,16 @@ jobs:
         run: |
           gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
           cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
+      - name: Download frozen v234 Waku10 reconstruction
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --pattern 'v234*' --dir golden_v234 || true
+          if ! test -s analysis_v234_waku10_reconstruction_coverage.csv; then
+            gh run download 34324515336 --repo merry02180218-ai/boatrace-backtest --name v233-waku10-coverage-backfill --dir /tmp/v233
+            V233_DIR=/tmp/v233 python analyze_v234_3head_waku10_restored_replay.py
+          fi
+          test -s analysis_v234_waku10_reconstruction_coverage.csv
           cp canonical_waku10_coverage.csv analysis_v234_waku10_reconstruction_coverage.csv
           python - <<'PY'
           import pandas as pd
