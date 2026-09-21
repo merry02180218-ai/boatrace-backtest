@@ -37,3 +37,23 @@
 - `research_v289_3head_addon.json`
 - `research_v289_3head_addon.md`
 
+
+
+## 2026-09-22 — AFTER: PLAYER_HISTORY shadow v1 SUCCESS
+- Workflow: research-3head-player-history-shadow-v1
+- Run: 35667249381
+- Job: 106555642663
+- Artifact: 10670660826
+- Run head SHA: d45172b9e64e081030dcec5fc6ac9a4e0f31c4c4
+- SUCCESS. Existing 30 PLAYER_HISTORY columns were present and reused.
+- Guards: strict prior-date PLAYER_HISTORY; September outcomes UNREAD; production unchanged; no threshold tuning.
+- Equal-volume aggregate Mar-Aug (1849 selected each):
+  - SAFE_WAKU_BASE 697/1849 = 37.70%, AUC .7216
+  - PLUS_OWN3 701/1849 = 37.91%, AUC .7224
+  - PLUS_3V2 714/1849 = 38.62%, AUC .7232  <-- strongest head-rate result
+  - PLUS_3V4 705/1849 = 38.13%, AUC .7228
+  - PLUS_ALL30 708/1849 = 38.29%, AUC .7232
+- PLUS_3V2 gain vs BASE: +17 heads at same 1849 races, +0.92 percentage point head rate. It also improves Brier .10331 -> .10316 and LogLoss .34872 -> .34810.
+- Monthly PLUS_3V2: Mar 41.10%, Apr 43.02%, May 35.40%, Jun 38.33%, Jul 36.73%, Aug 38.12%. Jul/Aug remain NON-PRISTINE descriptive shadow.
+- Interpretation: 4HEAD lesson transfers: PLAYER_HISTORY is useful as a model/ranking feature, especially boat3 + boat2 wall relationship; all-30 does not beat targeted 3-vs-2 set. Do NOT hard-gate yet.
+- Next: isolate the 3-vs-2 PLAYER_HISTORY components/relative features, test stability on pristine months and then apply to the current dual-head CORE/A+.60 same-universe experiment; settlement ROI only after membership is frozen.
