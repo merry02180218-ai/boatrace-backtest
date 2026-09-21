@@ -37,3 +37,48 @@
 - `research_v289_3head_addon.json`
 - `research_v289_3head_addon.md`
 
+## 2026-09-21 — 3HEAD opponent protected Top6 freeze (BEFORE FEB OUTCOME REVEAL)
+
+### Frozen upstream gates
+- HEAD: adopted A gate.
+- Purchase: `post_motor_inner_rank_edge >= +0.60`.
+- Opponent baseline: V221 direct ordered-pair ranking.
+- Development opponent evaluation: Dec 2025 + Jan 2026 only, 41 boat3-head wins.
+- Nov role split: cold-start / not evaluated.
+- February outcomes: **UNREAD FOR OPPONENT RULE AT FREEZE**.
+- March outcomes: **UNREAD / ONE-SHOT RESERVED**.
+- September 2026 outcomes: **UNREAD**.
+
+### Frozen candidate opponent rule
+Exactly 6 tickets:
+1. Start from V221 ordered-pair Top6.
+2. Read pre-settlement 4号艇 turn metric `vh_p12_turn`.
+3. If `turn4 >= 0.50`, find the highest V221-ranked `3-4-X` pair outside Top6.
+4. Protect every existing Top6 `3-4-X`; never drop one.
+5. Among Top6 tickets whose SECOND is not 4, drop the weakest / lowest V221-ranked slot.
+6. Insert the selected `3-4-X`. Keep exactly six tickets.
+7. If no promotable `3-4-X` or no droppable non-4 SECOND slot exists, leave V221 Top6 unchanged.
+
+### Frozen development evidence
+- V221 baseline Top6: 25/41 = 60.98%.
+- Protected turn4>=0.50: 29/41 = 70.73%.
+- rescued +5 / lost -1 / net +4.
+- 0.45 and 0.50 were identical on development; **0.50 is frozen as the more conservative candidate**.
+- No further threshold tuning from February is permitted if February is consumed as forward validation.
+
+### Pre-FEB availability audit
+- Run 35547462348 / Job 106175856772: SUCCESS.
+- Nov/Dec/Jan selected counts = 30/40/48; frozen total remains 118.
+- February selected codes = 32; feature rows = 32.
+- February outcomes were not used for opponent-rule selection in this audit.
+- March used=false; September 2026 used=false; odds used=false.
+
+### Freeze provenance
+- Candidate implementation file: `research/run_3head_a_opponent_rolesplit_dev.py`.
+- Candidate implementation content SHA at freeze: `ed5db03cf26c1998a74199a4a2bb8543528733be`.
+- Latest syntax/cohort-audit fix commit before freeze: `4614fd6e29a5c3a1d8e59e9444db14c569e93121`.
+- Successful pre-FEB audit trigger: `e65b41b51dca787444d2a58e7fa7aa4fbb57808d`.
+
+### Next action
+Build a **separate one-shot February validation path**. Do not tune thresholds/features using February. Apply the frozen rule first from pre-settlement features, then attach February settlement only for scoring. Do not touch March.
+
