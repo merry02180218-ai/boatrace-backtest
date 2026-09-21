@@ -24,6 +24,9 @@ jobs:
           grep -q "day<=date(2026,1,31)" research/run_3head_a_opponent_feb_oneshot.py
           grep -q "order=v221.order" research/run_3head_a_opponent_feb_oneshot.py
           grep -q "make_pre_scores frame contract" research/run_3head_a_opponent_feb_oneshot.py
+          grep -q "v221.END=date(2026,2,28)" research/run_3head_a_opponent_feb_oneshot.py
+          grep -q "direct,ntrain=v221.fit_pair" research/run_3head_a_opponent_feb_oneshot.py
+          if grep -Fq '\\n from datetime' research/run_3head_a_opponent_feb_oneshot.py; then echo "literal newline escape found"; exit 1; fi
           if grep -q "date(2026,3" research/run_3head_a_opponent_feb_oneshot.py; then echo "March access forbidden"; exit 1; fi
       - name: One-shot February validation
         run: cd research && python run_3head_a_opponent_feb_oneshot.py
