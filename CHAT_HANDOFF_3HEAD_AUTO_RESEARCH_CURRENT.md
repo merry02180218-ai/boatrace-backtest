@@ -202,3 +202,11 @@ F. Preserve v288 native opponent/ticket/staking identity; do not retroactively l
 
 ### Exact next-chat restart instruction
 “Read `CHAT_HANDOFF_3HEAD_AUTO_RESEARCH_CURRENT.md` and latest GitHub. The corrected normalized-v288-Waku10 audit was manually fired after commit `5ad85dbc`. First identify/check that fresh Actions Run, verify Job/log/artifact and outcome-free guardrails, then freeze the corrected membership. Do not use Run 35580738921’s 94->96 result as canonical because it used raw ST3-ST4. September 2026 outcomes stay UNREAD.”
+
+
+## 2026-09-21 — corrected Waku10 audit Run 35582576531 failure + repair
+- Fresh manual dispatch after 5ad85dbc identified as Run 35582576531 / Job 106278568971, head 5ad85dbcfbd248ac79e964856ba5e387488c26e5.
+- Run FAILED at Preflight compile only. Canonical artifact download and main outcome-free audit were skipped; no outcomes/payout/odds/Sep-2026 outcomes were read. Upload step found no JSON artifact.
+- Exact error: research/audit_v288_waku10_restored_membership.py line 79 had an unterminated string literal in OUT.write_text(...+" newline "), left by earlier newline patching.
+- Repaired output newline without escape-sensitive text by using +chr(10). Fix commit: 4306cf8779ed3dab3108dc1bf69dafa59c09cfad.
+- Re-fetched committed source after repair; normalized Waku10 formula remains unchanged. Next action is manual fresh dispatch of research-v288-waku10-restored-membership from current main, then verify preflight/static safety/canonical v243 source/main audit/artifact before freezing membership. Run 35580738921 94->96 remains non-canonical. September 2026 outcomes remain UNREAD.
