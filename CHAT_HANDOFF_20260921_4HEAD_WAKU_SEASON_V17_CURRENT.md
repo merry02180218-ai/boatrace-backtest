@@ -69,3 +69,7 @@ User fired v17 then said エラー, but last verified state was NOT failed: Run 
 5. Scientific question: within SAME Jul-Aug, does high water preserve/amplify 4-vs-3 SR/ST advantage? If yes, environment hypothesis strengthens; otherwise calendar/composition/regime effect is more likely.
 6. If 2025 Jul-Aug coverage is sufficient, next safe step is independent 2025 comparison only if the same causal Waku/frozen inputs exist. Never fabricate historical inputs.
 7. Jul-Aug 2026 remains NON-PRISTINE retrospective. September 2026 remains UNREAD. Production unchanged.
+
+
+## 2026-09-21 v17 failure recovery start
+Run 35611769092 / Job 106372395453 completed FAILURE at the final 2025 coverage summary, after the 2026 within-season tables had already printed. Root cause: prior-year coverage list was empty, so pd.DataFrame(cov) had no month column and groupby("month") raised KeyError. This is a reporting/coverage-empty handling bug, not a model calculation failure. Before rerun: patch v17 to handle empty 2025 coverage explicitly, then refetch script/workflow, inspect full files, py_compile, literal escaped-newline/YAML/dependency/path/leakage/September guards, and only then rerun. Production unchanged; September 2026 remains UNREAD.
