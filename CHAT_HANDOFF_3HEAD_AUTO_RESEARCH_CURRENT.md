@@ -220,3 +220,8 @@ F. Preserve v288 native opponent/ticket/staking identity; do not retroactively l
 - Exact restored-vs-old Waku feature matches every comparable row in Dec-May, Jul, Aug; June 72/73 comparable rows all exact, with one restored-source missing row. Therefore prior 94->96 result from Run 35580738921 is definitively invalid and must not be used.
 - Restored routes: Feb S7/A1/B0; Mar S7/A3/B2; Apr S7/A4/B1; May S8/A3/B4; Jun S4/A6/B4; Jul S5/A4/B4; Aug S14/A2/B3. Some S/A route relabels occur while total membership stays same because corrected Waku edge affects S core but A can rescue.
 - Membership is now frozen outcome-free at 93R subject to investigating the single June missing source/fallback and explaining removed race 202605040103 pre-race values. Do not read outcomes yet for those investigations. September 2026 outcomes remain UNREAD.
+
+
+## 2026-09-21 — next pre-outcome audit started
+- After successful exact normalized Waku10 membership Run 35583037910, next task is outcome-free diagnosis only: identify why race 202605040103 is removed and identify the single June row whose restored Waku10 is missing.
+- Must print old/restored Waku34, relevant frozen S/A/B gate inputs, old/new route, source/fallback provenance. No results/payout/odds and no Sep outcomes. Thresholds remain frozen.
