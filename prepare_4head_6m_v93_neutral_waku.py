@@ -22,7 +22,7 @@ def shared_rows(rel):
         if not root.is_dir():
             root=Path("data/shared_historical/waku10_boatcast/2026")/month
         out=[]
-        for fp in sorted(root.glob(f"{day}_*.txt") if root.name==month else root.glob("*.txt")):
+        for fp in sorted(root.glob("*.txt")):
             lines=fp.read_text(encoding="utf-8-sig",errors="ignore").splitlines()
             if len(lines)<8 or not lines[0].startswith("data="): continue
             jo,rr=map(int,fp.stem.split("_")); row={"レースコード":f"2026{month}{day}{jo:02d}{rr:02d}"}
@@ -45,6 +45,6 @@ missing=parent[~parent.race_code.isin(set(z.race_code.astype(str).str.zfill(12))
 print("MISSING_BY_MONTH",missing.groupby("month").size().to_dict())
 print("REBUILT_BY_MONTH",z.assign(month=z.race_code.astype(str).str[:6].str[:4]+"-"+z.race_code.astype(str).str[4:6]).groupby("month").size().to_dict())
 print("MISSING_SAMPLE",missing.race_code.head(30).tolist())
-meta={"parent_R":int(len(parent)),"v93_R":int(len(z)),"shared_historical_waku10_used":True,"waku10_backfill_used":False,"waku_source":"Boatcast shared historical Mar-Jun + BoatraceCSV existing Jul-Aug","SEPTEMBER_OUTCOMES_READ":False}
+meta={"parent_R":int(len(parent)),"v93_R":int(len(z)),"shared_historical_waku10_used":True,"waku10_backfill_used":False,"waku_source":"Boatcast shared historical Mar-Jul + BoatraceCSV existing Jul-Aug","SEPTEMBER_OUTCOMES_READ":False}
 Path("/tmp/head4_v93_all_parent/6m_meta.json").write_text(__import__("json").dumps(meta,ensure_ascii=False,indent=2)+"\n")
 print("SIX_MONTH_V93_READY",meta)
