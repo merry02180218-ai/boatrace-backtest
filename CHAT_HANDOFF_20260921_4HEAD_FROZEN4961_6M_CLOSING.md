@@ -436,3 +436,28 @@ Pre-fire refetch checks:
 - holdout_used_for_selection false present
 - workflow preflight includes py_compile and guards
 Next: fire research-4head-waku10-headmodel-v2, then inspect full logs/artifact. Do not adopt based only on June; compare untouched HOLD and volume.
+
+
+## Waku10 head model v2 result / v3 start
+Run 35579550465 / Job 106268983656 / Artifact 10629323720 SUCCESS.
+- BASE: DEV 77/195=39.487%, VAL 28/59=47.458%, HOLD 70/140=50.000%, cut .35
+- OWN4: DEV 71/182=39.011%, VAL 31/60=51.667%, HOLD 64/133=48.120%, cut .36
+- REL_INSIDE: VAL 28/60=46.667%, HOLD 55/124=44.355%
+- OWN4_REL_INSIDE: VAL 26/52=50.000%, HOLD 49/112=43.750%
+- ALL_WAKU: VAL 26/53=49.057%, HOLD 54/125=43.200%
+Interpretation: OWN4 improved June without volume loss, but did not beat untouched HOLD baseline. Relative/all-Waku families worsened HOLD. No adoption.
+Leakage/state: holdout selection false; September UNREAD; production unchanged; Waku source Boatcast shared historical Mar-Jul + BoatraceCSV existing Jul-Aug.
+
+v3 created to decompose OWN4 only:
+- singles: WR, ST, SR, PASTWIN
+- all six 2-way combinations
+- ALL4 and BASE
+- threshold/family evaluation protocol remains June-only >=50; Jul-Aug HOLD evaluation only.
+Commits: script e68a0aff7f387014fa1839de7670d07e183de7fb; workflow 7f070affa3c47b44dc4cb55d935edfd90dda6214.
+Pre-fire actual-main refetch:
+- literal escaped newline false
+- script direct data/results reference false
+- workflow_dispatch present
+- September flag and holdout_used_for_selection false present
+- combinations(own,2) present
+Next: fire research-4head-waku10-headmodel-v3 and inspect all single/pair families. Do not choose final family from HOLD.
