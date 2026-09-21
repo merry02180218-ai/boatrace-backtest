@@ -131,3 +131,16 @@ Evidence available without opening March:
 Interpretation: February did not reproduce the development lift, but it also produced no protected-rule damage. Evidence is therefore weaker than the Dec-Jan development result and not sufficient to justify changing the frozen rule.
 Next research action before any March reveal: build/inspect a March **pre-settlement-only dry run** that freezes the March cohort and all six-ticket decisions, validates invariants and writes a prediction artifact WITHOUT loading March settlement. Only after that dry run succeeds and is audited may the separate March settlement one-shot be triggered. March threshold/features must remain unchanged.
 
+## 2026-09-21 — March dry-run PRETRIGGER audit
+March settlement remains UNREAD. Added dedicated dry-run script and workflow, but trigger is intentionally withheld until workflow/static contracts are audited.
+Leak firewall:
+- March PRE uses build_pre_enhanced(..., False), so no March result rows.
+- PRE training labels end Feb-28.
+- Motor state is reconstructed through Feb-28 and then frozen; March fetch kinds exclude results/realtime.
+- V221 historical fit labels end Feb-28.
+- V221 day_fetch is wrapped so dates >= 2026-03-01 force res=[].
+- March cards/tkz/stt/original_exhibition may be read because they are pre-settlement inputs.
+- March settlement and September-2026 outcomes remain unread.
+Workflow commit: 5f99fe39331de1bdbc442af119fe89af030d8fbc.
+Do not trigger until final fresh-file audit passes.
+
