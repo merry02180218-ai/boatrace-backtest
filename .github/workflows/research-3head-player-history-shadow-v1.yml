@@ -1,0 +1,57 @@
+name: research-3head-player-history-shadow-v1
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -q pandas numpy scikit-learn joblib
+      - name: Preflight
+        run: |
+          python -m py_compile analyze_3head_player_history_shadow_v1.py
+          python - <<'PY'
+          from pathlib import Path
+          s=Path('analyze_3head_player_history_shadow_v1.py').read_text()
+          assert "2026-09" not in s
+          assert "SEPTEMBER_OUTCOMES_READ':False" in s
+          assert "threshold_tuning':False" in s
+          print('PREFLIGHT_OK')
+          PY
+      - name: Download proven v233 Waku source
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 34324515336
+          name: v233-waku10-coverage-backfill
+          path: /tmp/v233
+      - name: Materialize current accepted restored Waku10
+        env:
+          V233_DIR: /tmp/v233
+        run: |
+          python - <<'PY'
+          import analyze_v234_3head_waku10_restored_replay as v
+          c=v.reconstruct()
+          assert len(c)==274
+          assert not (c.source=='missing').any()
+          print('WAKU_READY',len(c),int(c.rows.sum()))
+          PY
+      - name: Run PLAYER_HISTORY shadow
+        env:
+          V233_DIR: /tmp/v233
+        run: python analyze_3head_player_history_shadow_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: research-3head-player-history-shadow-v1
+          path: |
+            analysis_3head_player_history_shadow_v1.csv
+            analysis_3head_player_history_shadow_v1_meta.json
+            summary_3head_player_history_shadow_v1.md
