@@ -148,3 +148,11 @@ Do not fire again until this dependency is located/restored and the whole workfl
 - User manually dispatches workflows.
 - Next error: inspect thoroughly, not repeated trial-and-error.
 - Keep September 2026 results UNREAD for this research.
+
+
+## 2026-09-21 — CORE native replay dependency repair START
+- Resumed from commit b6f773816bf5c7b8773fd53c31bf9ea45f666e36.
+- Before redispatch, audited the full current workflow plus prepare/build/replay scripts.
+- Found the current v234 step unsafe/inconsistent: it generated/checked v234 coverage and then overwrote it twice from canonical_waku10_coverage.csv; build_3head_v288_operational_month_day.py also needs v234.local_rows(), so coverage CSV alone is insufficient.
+- Repair plan frozen before dispatch: download the proven v233 backfill artifact from Run 34324515336, call only analyze_v234_3head_waku10_restored_replay.reconstruct() to materialize BOTH data/audit/v234_waku10/restored and analysis_v234_waku10_reconstruction_coverage.csv, assert all 62 frozen-history days 2025-12-01..2026-01-31 are non-missing/nonzero, then proceed. Do not run v234 model replay and do not overwrite its coverage with another schema.
+- September 2026 outcomes remain UNREAD. No dispatch until workflow text and downstream dependencies are rechecked.
