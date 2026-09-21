@@ -19,8 +19,10 @@ def shared_rows(rel):
     if len(p)>=6 and p[3]=="2026" and p[4] in {"03","04","05","06"}:
         month,day=p[4],Path(p[5]).stem
         root=Path("data/shared_historical/waku10_boatcast/2026")/month/day
+        if not root.is_dir():
+            root=Path("data/shared_historical/waku10_boatcast/2026")/month
         out=[]
-        for fp in sorted(root.glob("*.txt")):
+        for fp in sorted(root.glob(f"{day}_*.txt") if root.name==month else root.glob("*.txt")):
             lines=fp.read_text(encoding="utf-8-sig",errors="ignore").splitlines()
             if len(lines)<8 or not lines[0].startswith("data="): continue
             jo,rr=map(int,fp.stem.split("_")); row={"レースコード":f"2026{month}{day}{jo:02d}{rr:02d}"}
