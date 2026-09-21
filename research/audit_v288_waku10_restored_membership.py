@@ -42,7 +42,9 @@ def restored(code):
  r=mp.get(code)
  if not r and m=="07": r=native_day(day).get(code)
  if not r:return None
- try:\n  s3=float(r["艇3_枠番別平均ST"]); s4=float(r["艇4_枠番別平均ST"])\n  return clamp((.24-s3)/.14)-clamp((.24-s4)/.14)
+ try:
+  s3=float(r["艇3_枠番別平均ST"]); s4=float(r["艇4_枠番別平均ST"])
+  return clamp((.24-s3)/.14)-clamp((.24-s4)/.14)
  except:return None
 def build_membership(q,wcol):
  q=q.copy();q["month"]=q.date.astype(str).str[:7];q["_target"]=v.target(q).astype(int)
@@ -74,5 +76,6 @@ def main():
       "coverage":audit,"old_selected":len(o),"restored_selected":len(n),"added":sorted(n-o),"removed":sorted(o-n),
       "old_monthly":oldsel.groupby("month").size().to_dict(),"restored_monthly":newsel.groupby("month").size().to_dict(),
       "restored_routes":newsel.groupby(["month","route"]).size().unstack(fill_value=0).to_dict("index")}
- OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8");print(json.dumps(out,ensure_ascii=False,indent=2));print("V288_WAKU10_RESTORED_MEMBERSHIP_OK")
+ OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"
+",encoding="utf-8");print(json.dumps(out,ensure_ascii=False,indent=2));print("V288_WAKU10_RESTORED_MEMBERSHIP_OK")
 if __name__=="__main__":main()
