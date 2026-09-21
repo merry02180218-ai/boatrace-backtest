@@ -33,6 +33,7 @@ def shared_rows(rel):
                 for k in range(10):
                     q=4+k*3;row[f"艇{b}_過去{k+1}走_着順"]=a[q];row[f"艇{b}_過去{k+1}走_進入"]=a[q+1];row[f"艇{b}_過去{k+1}走_グレード"]=a[q+2]
             out.append(row)
+        if day=="03" and month=="03": print("SHARED_DIAG_20260303",len(out),[x.get("レースコード") for x in out if x.get("レースコード") in {"202603030401","202603030601","202603030701"}])
         return out
     return z
 reb.rows=shared_rows
