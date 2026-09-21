@@ -33,7 +33,7 @@ def main():
     rr=list(csv.DictReader(f))
    vals=pd.to_numeric(pd.Series([r.get("水温(℃)") for r in rr]),errors="coerce")
    cov.append({"month":m,"day":d,"rows":len(rr),"water_n":int(vals.notna().sum()),"water_mean":float(vals.mean()) if vals.notna().any() else None})
- pd.DataFrame(cov).to_csv(OUT/"prior_year_env_coverage.csv",index=False)
+ cov_df=pd.DataFrame(cov,columns=["month","day","rows","water_n","water_mean"]);cov_df.to_csv(OUT/"prior_year_env_coverage.csv",index=False)
  meta={"fixed_water_bands":["<25","25-30","30+"],"fixed_sr_st_split":"zero sign","jul_aug_within_season_test":True,"prior_year_outcomes_analyzed":False,"threshold_tuning":False,"SEPTEMBER_OUTCOMES_READ":False,"PRODUCTION_CHANGED":False}
- (OUT/"meta.json").write_text(json.dumps(meta,indent=2)+"\n");print(pd.DataFrame(rec).to_string(index=False));print(pd.DataFrame(vr).to_string(index=False));print(pd.DataFrame(cov).groupby("month").agg(days=("day","count"),rows=("rows","sum"),water_n=("water_n","sum"),water_mean=("water_mean","mean")).to_string());print(json.dumps(meta));print("HEAD4_SEASON_FALSIFY_V17_OK");print("SEPTEMBER_UNREAD")
+ (OUT/"meta.json").write_text(json.dumps(meta,indent=2)+"\n");print(pd.DataFrame(rec).to_string(index=False));print(pd.DataFrame(vr).to_string(index=False));print(cov_df.groupby("month").agg(days=("day","count"),rows=("rows","sum"),water_n=("water_n","sum"),water_mean=("water_mean","mean")).to_string() if len(cov_df) else "2025_JUL_AUG_ENV_COVERAGE_EMPTY");print(json.dumps(meta));print("HEAD4_SEASON_FALSIFY_V17_OK");print("SEPTEMBER_UNREAD")
 if __name__=="__main__":main()
