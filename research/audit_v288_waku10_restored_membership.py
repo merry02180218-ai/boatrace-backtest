@@ -35,7 +35,7 @@ def shared_day(day):
 def native_day(day):
  p=Path("data/programs/waku10")/day[:4]/day[4:6]/f"{day[6:8]}.csv"
  return {rc(r.get("レースコード")):r for r in read_csv_rows(p)}
-def restored(code):
+def clamp(x,a=0,b=1): return max(a,min(b,x))\ndef restored(code):
  day=code[:8]; m=code[4:6]
  mp=shared_day(day) if m in {"03","04","05","06","07"} else native_day(day)
  r=mp.get(code)
@@ -69,7 +69,7 @@ def main():
             "exact_1e9":int(((g._old-g._new).abs()<=1e-9)[both].sum())}
  oldsel=build_membership(q,"f__c_b3_minus_b4_waku_st"); newsel=build_membership(q,"_restored_waku34")
  o=set(oldsel.race_code);n=set(newsel.race_code)
- out={"policy":{"thresholds_changed":False,"outcomes_read":False,"sep2026_read":False,"waku_formula":"boat3 frame-average-ST minus boat4 frame-average-ST"},
+ out={"policy":{"thresholds_changed":False,"outcomes_read":False,"sep2026_read":False,"waku_formula":"clamp((0.24-ST3)/0.14)-clamp((0.24-ST4)/0.14), exact v222 normalized-strength edge"},
       "coverage":audit,"old_selected":len(o),"restored_selected":len(n),"added":sorted(n-o),"removed":sorted(o-n),
       "old_monthly":oldsel.groupby("month").size().to_dict(),"restored_monthly":newsel.groupby("month").size().to_dict(),
       "restored_routes":newsel.groupby(["month","route"]).size().unstack(fill_value=0).to_dict("index")}
