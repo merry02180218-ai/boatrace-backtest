@@ -1,0 +1,72 @@
+name: research-3head-core-identity-light
+on:
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas
+      - name: Download prior successful native replay artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir prior
+          gh run download 35607152183 --repo merry02180218-ai/boatrace-backtest --name research-3head-dual-feb-core-native-replay --dir prior
+          find prior -maxdepth 4 -type f -print
+      - name: Download frozen v243 membership source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir golden
+          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden
+          cp golden/analysis_v243_3head_expand_feature_audit.csv .
+      - name: Build lightweight identity audit
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import pandas as pd
+          import verify_v288_operational_pre_replay as v
+          q=pd.read_csv('analysis_v243_3head_expand_feature_audit.csv',dtype={'race_code':str})
+          q.date=q.date.astype(str);q['month']=q.date.str[:7];q['_target']=v.target(q).astype(int)
+          def n(c): return pd.to_numeric(q[c],errors='coerce')
+          p=q._target.eq(1)
+          s=p&(n('f__c_b3_head_prob')>=v.S_HEAD)&(n('f__c_b3_minus_b2_motor')>=v.S_MOTOR)&(n('f__c_b3_inside_nst')<=v.S_NST)
+          a=p&(~s)&(n('f__c_b3_head_prob')>=v.A_HEAD)&(n('f__c_b3_minus_b2_motor')>=v.A_MOTOR)&(n('f__c_wall12_weak')<=v.A_WALL)
+          b=p&(~s)&(~a)&(n('f__c_b3_minus_b2_motor')>=v.B_MOTOR)&(n('f__c_b3_inside_nst')<=v.B_NST)
+          frozen=q[(s|a|b)&q.month.eq('2026-02')].copy()
+          frozen_codes=frozen.race_code.astype(str).str.zfill(12).tolist()
+          native=[]
+          for f in Path('prior').glob('core_replay/**/day_summary.json'):
+              j=json.loads(f.read_text())
+              for key in ['rows','decisions','races','bets']:
+                  x=j.get(key)
+                  if isinstance(x,list):
+                      for r in x:
+                          if isinstance(r,dict) and r.get('race_code') is not None: native.append(str(r['race_code']).zfill(12))
+          if not native and Path('prior/core_native_feb_replay.csv').exists():
+              z=pd.read_csv('prior/core_native_feb_replay.csv',dtype={'race_code':str});native=z.race_code.astype(str).str.zfill(12).tolist()
+          native=sorted(set(native))
+          rows=[]
+          for code in frozen_codes:
+              same=[x for x in native if x[:8]==code[:8]]
+              rows.append({'frozen_core_code':code,'exact_native_match':code in native,'same_date_native_codes':'|'.join(same),'same_date_native_count':len(same)})
+          out=pd.DataFrame(rows);out.to_csv('core_identity_light.csv',index=False)
+          summary={'frozen_core':len(frozen_codes),'native_codes':len(native),'exact_matches':int(out.exact_native_match.sum()),'mismatches':int((~out.exact_native_match).sum()),'heavy_cache_rebuild':False,'source_run':35607152183,'source_artifact':10645188056}
+          Path('core_identity_light_summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+chr(10))
+          print(out.to_string(index=False));print(json.dumps(summary,ensure_ascii=False,indent=2));print('CORE_IDENTITY_LIGHT_OK')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: research-3head-core-identity-light
+          path: |
+            core_identity_light.csv
+            core_identity_light_summary.json
