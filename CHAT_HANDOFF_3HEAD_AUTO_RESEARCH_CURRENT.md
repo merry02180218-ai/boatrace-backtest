@@ -57,3 +57,12 @@
 - Monthly PLUS_3V2: Mar 41.10%, Apr 43.02%, May 35.40%, Jun 38.33%, Jul 36.73%, Aug 38.12%. Jul/Aug remain NON-PRISTINE descriptive shadow.
 - Interpretation: 4HEAD lesson transfers: PLAYER_HISTORY is useful as a model/ranking feature, especially boat3 + boat2 wall relationship; all-30 does not beat targeted 3-vs-2 set. Do NOT hard-gate yet.
 - Next: isolate the 3-vs-2 PLAYER_HISTORY components/relative features, test stability on pristine months and then apply to the current dual-head CORE/A+.60 same-universe experiment; settlement ROI only after membership is frozen.
+
+
+## 2026-09-22 — START: PLAYER_HISTORY 3-vs-2 component ablation
+- Continue from shadow v1 Run 35667249381.
+- Objective: identify which causal PLAYER_HISTORY pieces inside the winning PLUS_3V2 bundle carry the gain, before touching CORE/A+.60.
+- Fixed basis: current accepted restored Waku10; same walk-forward fit and same monthly volume-match as v1.
+- Compare nested/atomic groups: b3 own each metric, b2 wall each metric, matching 3-2 relative metric, all own3, all b2, all relative 3-2, and selected combinations.
+- Primary pristine interpretation uses Mar-Jun 2026; Jul/Aug descriptive NON-PRISTINE only. September outcomes remain UNREAD.
+- No production change; no hard gate; no holdout threshold tuning; settlement ROI deferred until a feature bundle is frozen.
