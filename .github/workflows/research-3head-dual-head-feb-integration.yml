@@ -1,0 +1,34 @@
+name: research-3head-dual-head-feb-integration
+on:
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn requests
+      - name: Preflight
+        run: |
+          python -m py_compile research/run_3head_dual_head_feb_integration.py
+          grep -F 'threshold_tuning":False' research/run_3head_dual_head_feb_integration.py
+          grep -F 'sep2026_used":False' research/run_3head_dual_head_feb_integration.py
+          grep -F 'turn4>=opp.THRESHOLD' research/run_3head_dual_head_feb_integration.py
+          ! grep -E '2026[-/, ]*09|202609' research/run_3head_dual_head_feb_integration.py
+      - name: Download frozen canonical v243 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden_v243
+          test -s golden_v243/analysis_v243_3head_expand_feature_audit.csv
+          cp golden_v243/analysis_v243_3head_expand_feature_audit.csv .
+      - name: Run dual-head integration
+        run: python research/run_3head_dual_head_feb_integration.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-3head-dual-head-feb-integration
+          path: research_3head_dual_head_feb_integration.json
