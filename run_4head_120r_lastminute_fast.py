@@ -26,6 +26,8 @@ from build_4head_v283_current_exhibition_live import parse_boatcast_st,parse_boa
 from backtest_v3 import CORR
 from backtest_v51_lane_corrected_tickets import rank_scores,norm_metric
 from head4_original_venue_schema import ORIG_REQUIRED,required_orig,publishes_original
+from build_4head_env_context_live import boatcast_sui_url, parse_sui_weather
+from head4_high_water_shadow import high_water_shadow
 from build_4head_v93_primitives_live import build as build_v93
 from build_4head_v283_rows_live import derive
 from head4_v291_downstream_inference import load_artifact,score_second,score_conditional_third,v283_top4,BOATS
@@ -191,27 +193,30 @@ def build_exhibition_boatcast(hd,jcd,rno,tkz_text,st_text,orig_text,bias):
       'result_blind':True,'odds_used':False}
 
 def fetch_current(hd,jcd,rno,timeout):
-    tu=boatcast_tkz_url(hd,jcd,rno);su=boatcast_st_url(hd,jcd,rno);ou=boatcast_orig_url(hd,jcd,rno)
-    with ThreadPoolExecutor(max_workers=3) as ex:
+    tu=boatcast_tkz_url(hd,jcd,rno);su=boatcast_st_url(hd,jcd,rno);ou=boatcast_orig_url(hd,jcd,rno);wu=boatcast_sui_url(hd,jcd)
+    with ThreadPoolExecutor(max_workers=4) as ex:
         ft=ex.submit(_get_fast,tu,timeout,2)
         fs=ex.submit(_get_fast,su,timeout,2)
         fo=ex.submit(_get_fast,ou,timeout,2)
-        tkz=ft.result();st=fs.result()
+        fw=ex.submit(_get_fast,wu,timeout,2)
+        tkz=ft.result();st=fs.result();sui=fw.result()
         try:
             orig=fo.result()
         except Exception:
             if required_orig(jcd):
                 raise
             orig=None
-        return tkz,st,orig
+        return tkz,st,orig,sui
 
 def wait_exhibition_ready(hd,jcd,rno,bias,deadline,timeout=4,poll_interval=2.0,safety_seconds=75,max_wait_seconds=30):
     attempts=0; last=''; started=time.perf_counter()
     while True:
         attempts+=1
         try:
-            tkz,st,orig=fetch_current(hd,jcd,rno,timeout)
+            tkz,st,orig,sui=fetch_current(hd,jcd,rno,timeout)
             exh=build_exhibition_boatcast(hd,jcd,rno,tkz,st,orig,bias)
+            wc,ws,wave,air,water,weather_hhmm=parse_sui_weather(sui)
+            exh['prerace_weather']={'wind_code':wc,'wind_speed':ws,'wave_cm':wave,'air_c':air,'water_c':water,'snapshot_hhmm':weather_hhmm,'source':'BOATCAST bc_sui pre-race only'}
             return exh,attempts,last
         except Exception as e:
             last=f'{type(e).__name__}: {e}'
@@ -729,6 +734,18 @@ def main():
         persist_no_bet_not_ready(a,code,deadline,'NEWFEATURE_STATE',e,total0,stages,monitored,hp,state)
         return
     wallshadow=wall3_open_shadow(hp,mass,comp,exh,d['selected'])
+    # SHADOW only: Waku10 4-vs-3 SR/ST values are already causal pre-race inputs.
+    wr=waku[code]
+    def _wv(*names):
+        for name in names:
+            if name in wr and str(wr.get(name,'')).strip()!='':
+                try:return float(wr[name])
+                except Exception:pass
+        return None
+    rel43_sr=_wv('w10_rel4_b3_sr','rel4_b3_sr','艇4vs3_SR','4vs3_SR')
+    rel43_st=_wv('w10_rel4_b3_st','rel4_b3_st','艇4vs3_ST','4vs3_ST')
+    water_c=(exh.get('prerace_weather') or {}).get('water_c')
+    highwater=high_water_shadow(water_c,rel43_sr,rel43_st)
     if a.performance_benchmark:
         now=datetime.now(JST)
     else:
@@ -746,6 +763,8 @@ def main():
       **d,'decision':('PERFORMANCE_BENCHMARK_ONLY' if a.performance_benchmark else ('BET' if d['selected'] and monitored else ('BENCHMARK_ONLY' if not monitored else 'PASS'))),
       'selection_policy_artifact':'artifacts/head4_newfeature_fixed156_production.json',
       'wall3_open_shadow':wallshadow,
+      'prerace_weather':exh.get('prerace_weather'),
+      'high_water_shadow':highwater,
       'daily_state_history_end':state.get('history_end'),'september_prior_history_allowed':True,
       'target_race_result_used':False,'payout_used':False,'current_exhibition_used':True,'predeadline_odds_used':(not a.performance_benchmark),'performance_benchmark':bool(a.performance_benchmark),'odds_source':meta.get('source'),
       'exhibition_attempts':ex_attempts,'exhibition_last_retry_error':ex_last,'odds_attempts':od_attempts,'odds_last_retry_error':od_last,
