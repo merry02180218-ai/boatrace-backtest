@@ -25,7 +25,14 @@ jobs:
           assert "PRODUCTION_CHANGED':False" in s
           print('PREFLIGHT_OK')
           PY
+      - name: Reuse cached v234 restored Waku10
+        id: cache-waku
+        uses: actions/cache@v4
+        with:
+          path: data/audit/v234_waku10/restored
+          key: v234-restored-waku10-20251201-20260831-v1
       - name: Download proven v233 Waku source
+        if: steps.cache-waku.outputs.cache-hit != 'true'
         uses: actions/download-artifact@v4
         with:
           github-token: ${{ github.token }}
@@ -34,6 +41,7 @@ jobs:
           name: v233-waku10-coverage-backfill
           path: /tmp/v233
       - name: Materialize restored Waku10
+        if: steps.cache-waku.outputs.cache-hit != 'true'
         env:
           V233_DIR: /tmp/v233
         run: |
