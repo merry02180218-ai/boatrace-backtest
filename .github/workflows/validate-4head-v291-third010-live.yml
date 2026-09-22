@@ -1,6 +1,11 @@
 name: validate-4head-v291-third010-live
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'run_4head_v291_third010_live.py'
+      - 'verify_4head_v291_third010_live.py'
+      - '.github/workflows/validate-4head-v291-third010-live.yml'
 jobs:
   verify:
     runs-on: ubuntu-latest
