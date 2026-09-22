@@ -13,7 +13,8 @@ jobs:
       - run: pip install -q numpy pandas scikit-learn requests
       - name: Preflight
         run: |
-          python -m py_compile research/run_3head_a60_full3v2_curve_julaug_v4.py analyze_3head_player_history_3v2_ablation_v2.py research/run_3head_a60_playerhistory_curve_v1.py research/run_3head_wave20_manual_gate.py research/run_3head_wave19_motor_exhibition_gate.py\n          python -c "import ast,pathlib; p=pathlib.Path('research/run_3head_a60_full3v2_curve_julaug_v4.py'); ast.parse(p.read_text()); print('STATIC_PREFLIGHT_OK')"
+          python -m py_compile research/run_3head_a60_full3v2_curve_julaug_v4.py analyze_3head_player_history_3v2_ablation_v2.py research/run_3head_a60_playerhistory_curve_v1.py research/run_3head_wave20_manual_gate.py research/run_3head_wave19_motor_exhibition_gate.py
+          python -c "import ast,pathlib; p=pathlib.Path('research/run_3head_a60_full3v2_curve_julaug_v4.py'); ast.parse(p.read_text()); print('STATIC_PREFLIGHT_OK')"
           grep -F 'core_unchanged' research/run_3head_a60_full3v2_curve_julaug_v4.py
           grep -F 'full3v2_strict_prior' research/run_3head_a60_full3v2_curve_julaug_v4.py
           grep -F 'HIST_START=pd.Timestamp("2025-10-01")' research/run_3head_a60_full3v2_curve_julaug_v4.py
