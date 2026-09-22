@@ -709,7 +709,12 @@ def main():
     code=f'{a.date}{a.jcd:02d}{a.race:02d}'
     cards=bycode(rows_local(a.race_cards));waku=bycode(rows_local(a.waku10));pre=bycode(rows_local(a.pre_all))
     if code not in cards or code not in waku or code not in pre:raise Fast120Error(f'missing current row {code}')
-    prow=pre[code]\n    # PH5 v31 is exhibition-dependent, so PRE head_prob is intentionally blank.\n    # Use NaN only as a pre-exhibition placeholder; ph5_head_prob_live() overwrites it immediately after exhibition is built.\n    raw_hp=str(prow.get('head_prob','')).strip()\n    hp=float(raw_hp) if raw_hp else float('nan')\n    monitored=int(float(prow['monitoring_parent']))==1
+    prow=pre[code]
+    # PH5 v31 is exhibition-dependent, so PRE head_prob is intentionally blank.
+    # Use NaN only as a pre-exhibition placeholder; ph5_head_prob_live() overwrites it immediately after exhibition is built.
+    raw_hp=str(prow.get('head_prob','')).strip()
+    hp=float(raw_hp) if raw_hp else float('nan')
+    monitored=int(float(prow['monitoring_parent']))==1
     if not monitored and not a.allow_unmonitored_benchmark:raise Fast120Error('race not in monitoring parent')
     state=json.loads(Path(a.daily_state).read_text())
     if state.get('target_date')!=f'{a.date[:4]}-{a.date[4:6]}-{a.date[6:8]}':raise Fast120Error('daily-state target mismatch')
