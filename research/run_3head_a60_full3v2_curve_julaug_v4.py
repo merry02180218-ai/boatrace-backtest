@@ -40,13 +40,17 @@ def main():
             z=today[["rc","date","venue","race_no","y"]].copy(); z["pre_score"]=w20.make_pre_scores.__globals__['pct_ref'](ptr,pp); out.append(z)
         if not out: raise RuntimeError(f"NO_PRE_PREDICTIONS month={k} target={len(target)} hist42_max={max([len(hist_all[(hist_all.date<pd.Timestamp(v))&(hist_all.date>=pd.Timestamp(v)-pd.Timedelta(days=42))]) for v in target.date.dt.normalize().unique()] or [0])}")
         scores[k]=pd.concat(out,ignore_index=True).drop_duplicates("rc")
-    # wave19 helper is frozen at Feb; extend its runtime end to Aug for this descriptive Jul/Aug audit.\n    w20.prefetch_sources.__globals__['END']='2026-08-31'\n    days,cache=w20.prefetch_sources();post,post_audit=w20.build_motor_exhibition(days,cache)\n    print('POST_AUDIT',post_audit,'post_date_max',str(post.date.max()) if len(post) else None)
+    # wave19 helper is frozen at Feb; extend its runtime end to Aug for this descriptive Jul/Aug audit.
+    w20.prefetch_sources.__globals__['END']='2026-08-31'
+    days,cache=w20.prefetch_sources();post,post_audit=w20.build_motor_exhibition(days,cache)
+    print('POST_AUDIT',post_audit,'post_date_max',str(post.date.max()) if len(post) else None)
     allrows=[]
     for k in ["jul","aug"]:
         q=scores[k].merge(post,on=["rc","date"],how="left",validate="one_to_one")
         q["race_code"]=q.rc.astype("int64").astype(str).str.zfill(12);q["month"]=k
         allrows.append(q)
     d=pd.concat(allrows,ignore_index=True)
+    print("PRE_POST_COVERAGE",{"rows":len(d),"months":d.month.value_counts().to_dict(),"motor_nonnull":int(n(d.post_motor_inner_rank_edge).notna().sum())})
     # Add independently defined strict-prior PLAYER_HISTORY; this reads outcomes only after each day's features are frozen.
     d=ph.add_player_history(d)
     names=ph.NAMES
