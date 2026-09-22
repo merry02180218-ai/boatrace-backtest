@@ -7,6 +7,7 @@ on:
       - 'head4_original_venue_schema.py'
       - 'run_4head_120r_lastminute_fast.py'
       - 'audit_4head_venue_aware_original.py'
+      - 'audit_4head_newfeature_production_leakage.py'
       - '.github/workflows/test-4head-venue-aware-original.yml'
 
 permissions:
