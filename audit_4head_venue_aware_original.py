@@ -87,7 +87,7 @@ def unit_contract():
         return url
     live._get_fast=optional_fail
     try:
-        _,_,o=live.fetch_current('20260919',3,4,1)
+        _,_,o,_=live.fetch_current('20260919',3,4,1)
         must(o is None,'JCD03 optional original failure did not degrade to None')
         must(len(seen)==3 and any('oriten' in u for u in seen),f'JCD03 optional original was not attempted: {seen}')
     finally:
