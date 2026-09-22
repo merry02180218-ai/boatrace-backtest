@@ -15,6 +15,7 @@ on:
       - '.github/workflows/live-4head-newfeature-pre-daily.yml'
       - 'scan_4head_120r_pre_live.py'
       - 'build_4head_newfeature_watchlist.py'
+      - 'artifacts/head4_ph5_production_v31_20260831.json'
 
 permissions:
   contents: write
