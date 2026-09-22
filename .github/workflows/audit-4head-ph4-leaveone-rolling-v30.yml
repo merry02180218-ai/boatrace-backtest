@@ -15,7 +15,7 @@ jobs:
         run: |
           python -m py_compile prepare_4head_6m_v93_neutral_waku.py research_4head_player_waku_soft_ablation_v23.py audit_4head_ph4_leaveone_rolling_v30.py
           grep -q "CUT=.36;C=.5" audit_4head_ph4_leaveone_rolling_v30.py
-          grep -q "DROP_.*UPPER" audit_4head_ph4_leaveone_rolling_v30.py
+          grep -Fq "SPECS" audit_4head_ph4_leaveone_rolling_v30.py
           grep -q "no_future_month_in_training.*True" audit_4head_ph4_leaveone_rolling_v30.py
           grep -q "SEPTEMBER_OUTCOMES_READ.*False" audit_4head_ph4_leaveone_rolling_v30.py
           grep -q "retuning.*False" audit_4head_ph4_leaveone_rolling_v30.py
