@@ -1,0 +1,30 @@
+name: verify-4head-ph5-production-v31
+'on':
+  workflow_dispatch: {}
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pandas numpy scikit-learn requests
+      - name: Static and artifact verification
+        run: |
+          python -m py_compile scan_4head_120r_pre_live.py run_4head_120r_lastminute_fast.py build_4head_player_history_live.py build_4head_v93_primitives_live.py
+          python - <<'PY'
+          import json
+          a=json.load(open('artifacts/head4_ph5_production_v31_20260831.json'))
+          assert a['id']=='HEAD4_PH5_PRODUCTION_V31_20260831'
+          assert a['feature_count']==35==len(a['features'])==len(a['coef'])==len(a['imputer_median'])==len(a['scaler_mean'])==len(a['scaler_scale'])
+          assert a['cut']==.36 and a['C']==.5
+          assert a['player_history_features']==['b4_pl_all_win','b4_pl_all_p2','b4_pl_frame_win','b4_pl_frame_p2','b4_pl_recent_p2']
+          assert a['same_day_results_used'] is False and a['september_labels_used'] is False
+          s=open('run_4head_120r_lastminute_fast.py').read()
+          assert "hp=ph5_head_prob_live(cards[code],waku[code],exh,pf)" in s
+          assert "head4_ph5_production_v31_20260831.json" in s
+          pre=open('scan_4head_120r_pre_live.py').read()
+          assert "head4_racecard_headprob_frozen_20260630.json" not in pre
+          print('HEAD4_PH5_V31_PRODUCTION_WIRING_OK')
+          PY
