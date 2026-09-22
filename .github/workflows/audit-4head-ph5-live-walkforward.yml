@@ -25,6 +25,7 @@ jobs:
             data/previews/tkz
             data/previews/stt
             data/previews/original_exhibition
+            data/previews/od3
       - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
       - name: Preflight
         run: |
