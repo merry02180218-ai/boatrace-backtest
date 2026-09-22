@@ -1,0 +1,36 @@
+name: freeze-4head-ph5-production-v31
+'on':
+  workflow_dispatch: {}
+jobs:
+  freeze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pandas numpy scikit-learn
+      - name: Full preflight
+        run: |
+          python -m py_compile prepare_4head_6m_v93_neutral_waku.py research_4head_player_waku_soft_ablation_v23.py freeze_4head_ph5_production_v31.py
+          grep -Fq "CUT=.36;C=.5" freeze_4head_ph5_production_v31.py
+          grep -Fq "PH_FULL5" freeze_4head_ph5_production_v31.py
+          grep -Fq "HEAD4_PH5_PRODUCTION_V31_20260831" freeze_4head_ph5_production_v31.py
+          grep -Fq "'september_labels_used':False" freeze_4head_ph5_production_v31.py
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: boatracecsv
+      - name: Build frozen parent
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/boatracecsv
+        run: python prepare_4head_6m_v93_neutral_waku.py
+      - name: Freeze adopted PH5 model
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/boatracecsv
+        run: python freeze_4head_ph5_production_v31.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-ph5-production-freeze-v31
+          path: /tmp/head4_ph5_production_freeze_v31
