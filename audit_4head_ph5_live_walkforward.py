@@ -314,7 +314,7 @@ def main():
     pp=st if (not a) else 0.0; hh=0
     for x in plan:
      if actual and x["combo"]==actual: pp=float(x["stake"])*float(x["odds"]); hh=1
-    pay+=pp; hits+=hh; eval_rows.append({"date":str(r.date),"jcd":str(r.race_code)[:2],"hit":hh,"stake":st,"payout":pp,"base120":int(r.base120_selected),"newfeature":int(r.newfeature_expansion)})
+    pay+=pp; hits+=hh; eval_rows.append({"date":str(r.date),"jcd":str(r.race_code)[:2],"hit":hh,"stake":st,"payout":pp,"base120":int(r.get("base120",0)),"newfeature":int(r.get("newfeature_add",0))})
    R=int((d.production_bet==1).sum()); expected=R*BANK; feasible=(stake==expected); rr=pd.DataFrame(eval_rows)
    monthly=[]; venue=[]; maxdd=0.0; maxls=0
    if len(rr):
