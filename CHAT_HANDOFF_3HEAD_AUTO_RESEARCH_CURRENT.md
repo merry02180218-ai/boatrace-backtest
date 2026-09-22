@@ -37,3 +37,21 @@
 - `research_v289_3head_addon.json`
 - `research_v289_3head_addon.md`
 
+
+
+## 2026-09-22 — AFTER: PLAYER_HISTORY 3-vs-2 component ablation v2 SUCCESS
+- Run 35670403984 / Job 106565354725 / Artifact 10671018125 / head 57044cc293865b03dd0e186a4e5af2d645c41b84.
+- Cache saved: v234-restored-waku10-20251201-20260831-v1 (future related runs can skip Waku materialization).
+- Equal-volume Mar-Aug, 1849 selected:
+  - BASE 697 = 37.70%
+  - FULL_3V2 714 = 38.62% (+17 heads, +0.92pp)
+  - REL32_ALL 712 = 38.51%
+  - OWN3_B2 712 = 38.51%
+  - OWN3_REL32 710 = 38.40%
+  - B2_REL32 706 = 38.18%
+- Best single/atomic selected-head result: OWN3_frame_win 708 = 38.29%; TRIO_frame_win 709 = 38.35%. REL32_all_win / all_p2 each 706/705. recent_p2 and frame_p2 weak.
+- Important: unlike 4HEAD, raw all_p2 alone is not the main 3HEAD driver. The useful signal is distributed, with 3-vs-2 relative bundle and boat3 frame-win especially useful.
+- Pristine Mar-Jun FULL_3V2 monthly: 41.10%, 43.02%, 35.40%, 38.33%; BASE 40.13%,42.25%,35.10%,36.59%. Improvement in all four pristine months.
+- Jul/Aug descriptive only: FULL_3V2 36.73%,38.12% vs BASE 34.01%,38.67%.
+- September UNREAD; production unchanged; no hard gate / no threshold tuning.
+- Next: independent falsification of compact bundles (REL32_ALL, OWN3_B2, FULL_3V2, compact frame_win + relative all_win/all_p2) using fixed same-volume rules; then freeze candidate and test CORE/A+.60 membership + settlement ROI.
