@@ -1,0 +1,38 @@
+name: audit-4head-ph4-compact-v25
+
+'on':
+  workflow_dispatch: {}
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pandas numpy scikit-learn
+      - name: Full preflight
+        run: |
+          python -m py_compile prepare_4head_6m_v93_neutral_waku.py research_4head_player_waku_soft_ablation_v23.py audit_4head_ph4_compact_v25.py
+          grep -q "SEPTEMBER_OUTCOMES_READ.*False" audit_4head_ph4_compact_v25.py
+          grep -q "evaluation.*Jun-Aug only; no selection" audit_4head_ph4_compact_v25.py
+          grep -q "COMPACT_C01" audit_4head_ph4_compact_v25.py
+          grep -q "DROP_MOTOR_C025" audit_4head_ph4_compact_v25.py
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: boatracecsv
+      - name: Build frozen parent
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/boatracecsv
+        run: python prepare_4head_6m_v93_neutral_waku.py
+      - name: Fixed falsification
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/boatracecsv
+        run: python audit_4head_ph4_compact_v25.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-ph4-compact-v25
+          path: /tmp/head4_ph4_compact_v25
