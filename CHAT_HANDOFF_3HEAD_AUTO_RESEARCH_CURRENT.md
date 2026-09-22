@@ -74,3 +74,13 @@
 - Next experiment freezes FULL_3V2 membership logic; no further feature/threshold search.
 - Apply BASE vs FULL_3V2 to the current CORE/A+.60 same-universe structure and measure membership changes, head capture, ticket/capture diagnostics and settlement ROI only from available historical closing odds.
 - September outcomes remain UNREAD. Jul/Aug descriptive only. Production unchanged until integration audit passes.
+
+
+## 2026-09-22 — START: A+.60 + PLAYER_HISTORY expansion research
+- User decision: keep v288 CORE as the high-precision anchor; focus PLAYER_HISTORY research on the independent A+.60 / EXPANDED side.
+- Goal: increase total buyable race count without unnecessarily weakening CORE.
+- Freeze CORE semantics. Do not tune CORE thresholds in this phase.
+- Add audited causal PLAYER_HISTORY to A+.60 ranking/gating research, starting with the proven FULL_3V2 family (boat3 + boat2 + 3-minus-2 relatives).
+- Evaluate fixed race-count / head-rate curves for expanded side before settlement ROI; avoid choosing a single threshold from Jul/Aug outcomes.
+- Primary evidence remains cleaner pre-Jul window; Jul/Aug descriptive NON-PRISTINE only. September outcomes remain UNREAD.
+- Production unchanged until independent validation and settlement audit pass.
