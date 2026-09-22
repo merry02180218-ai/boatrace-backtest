@@ -84,3 +84,5 @@
 - Evaluate fixed race-count / head-rate curves for expanded side before settlement ROI; avoid choosing a single threshold from Jul/Aug outcomes.
 - Primary evidence remains cleaner pre-Jul window; Jul/Aug descriptive NON-PRISTINE only. September outcomes remain UNREAD.
 - Production unchanged until independent validation and settlement audit pass.
+
+- Additional user decision: opponent selection should preserve/use BOTH families rather than force one globally: CORE keeps its native v242 variable 5-10 ticket opponent logic; A+.60/EXPANDED keeps the V221 Top6 + protected SECOND4 logic. Compare each route with its own frozen opponent policy, then union with CORE priority on overlap. Do not merge/tune opponent rules from outcomes in this phase.
