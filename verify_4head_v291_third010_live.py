@@ -4,7 +4,7 @@ from datetime import timedelta
 import run_4head_v291_third010_live as r
 
 def probs(second_close=False, third_close=False):
-    p2={1:.40,2:.30,3:(.20 if second_close else .15),5:(.07 if second_close else .10),6:(.03 if second_close else .05)}
+    p2={1:.45,2:.30,3:(.20 if second_close else .10),5:(.03 if second_close else .09),6:(.02 if second_close else .06)}
     pc={}
     for s in r.BOATS:
         rem=[t for t in r.BOATS if t!=s]
