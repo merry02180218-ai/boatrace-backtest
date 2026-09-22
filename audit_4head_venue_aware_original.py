@@ -89,7 +89,7 @@ def unit_contract():
     try:
         _,_,o,_=live.fetch_current('20260919',3,4,1)
         must(o is None,'JCD03 optional original failure did not degrade to None')
-        must(len(seen)==3 and any('oriten' in u for u in seen),f'JCD03 optional original was not attempted: {seen}')
+        must(len(seen)==4 and any('oriten' in u for u in seen) and any('bc_sui_' in u for u in seen),f'JCD03 optional original/weather fetch contract drift: {seen}')
     finally:
         live._get_fast=orig_get
 
@@ -98,11 +98,11 @@ def unit_contract():
         seen.append(url); return url
     live._get_fast=all_ok
     try:
-        _,_,o9=live.fetch_current('20260919',9,4,1)
+        _,_,o9,_=live.fetch_current('20260919',9,4,1)
         must(o9 is not None and any('oriten' in u for u in seen),'JCD09 optional original success was not consumed')
         seen.clear()
-        _,_,o4=live.fetch_current('20260919',4,4,1)
-        must(o4 is not None and len(seen)==3 and any('oriten' in u for u in seen),f'JCD04 original fetch missing: {seen}')
+        _,_,o4,_=live.fetch_current('20260919',4,4,1)
+        must(o4 is not None and len(seen)==4 and any('oriten' in u for u in seen) and any('bc_sui_' in u for u in seen),f'JCD04 original/weather fetch missing: {seen}')
     finally:
         live._get_fast=orig_get
 
