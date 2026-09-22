@@ -276,6 +276,40 @@ def main():
   oppmiss.to_csv(OUT/"opponent_miss_decomposition.csv",index=False)
   print("OPPONENT_MISS_COUNTS",json.dumps(oppmiss.reason.value_counts().to_dict(),ensure_ascii=False))
   print("OPPONENT_RANK_COUNTS",json.dumps({"second":oppmiss.second_rank.value_counts().sort_index().to_dict(),"third":oppmiss.third_rank.value_counts().sort_index().to_dict()},ensure_ascii=False))
+ # Fast counterfactual grid: reuse frozen p2/pc/odds already computed; no model refit/rebuild per threshold.
+ grid=[]
+ for sg in (0.05,0.10,0.15,0.20,0.25,0.30):
+  for tg in (0.05,0.10,0.15,0.20,0.25):
+   stake=pay=hits=pts=0
+   for _,r in d[d.production_bet==1].iterrows():
+    z=json.loads(r.opponent_diag); sr=[int(x) for x in z["second_rank"]]; tr0=str(r.tickets).split("|"); ts=list(tr0)
+    # add SECOND rank3 only when close to rank2; give it top2 THIRDs
+    s3=sr[2]; s2=sr[1]
+    if float(z["p2"][str(s2)])-float(z["p2"][str(s3)])<=sg:
+     for t in [int(x) for x in z["third_rank"][str(s3)]][:2]:
+      x=f"4-{s3}-{t}"
+      if x not in ts: ts.append(x)
+    # for every selected SECOND, add THIRD rank3 when close to rank2
+    secs=sorted({int(x.split("-")[1]) for x in ts})
+    for s in secs:
+     trk=[int(x) for x in z["third_rank"][str(s)]]
+     if float(z["pc"][f"{s}>{trk[1]}"])-float(z["pc"][f"{s}>{trk[2]}"])<=tg:
+      x=f"4-{s}-{trk[2]}"
+      if x not in ts: ts.append(x)
+    ovs=[om[r.race_code][x] for x in ts]
+    # keep exact JPY10k Dutch semantics; skip pathological over-wide rows unsupported by production helper
+    try: plan=live.dutch(ts,ovs)
+    except Exception: continue
+    st=sum(x["stake"] for x in plan); stake+=st; pts+=len(ts)
+    a=tr.get(r.race_code); actual=f"{a[0]}-{a[1]}-{a[2]}" if a else ""
+    pp=st if (not a) else 0.0; hh=0
+    for x in plan:
+     if actual and x["combo"]==actual: pp=float(x["stake"])*float(x["odds"]); hh=1
+    pay+=pp; hits+=hh
+   grid.append({"second_gap":sg,"third_gap":tg,"R":int((d.production_bet==1).sum()),"hits":hits,"avg_points":pts/max(1,int((d.production_bet==1).sum())),
+                "stake":stake,"payout":pay,"profit":pay-stake,"roi":100*pay/stake if stake else 0})
+ pd.DataFrame(grid).sort_values(["roi","hits"],ascending=[False,False]).to_csv(OUT/"opponent_gap_grid.csv",index=False)
+ print("OPPONENT_GAP_GRID_TOP",json.dumps(sorted(grid,key=lambda x:(x["roi"],x["hits"]),reverse=True)[:10],ensure_ascii=False))
  b=d[d.production_bet==1].copy().sort_values(["date","race_code"])
  equity=b.profit.cumsum(); peak=equity.cummax().clip(lower=0); dd=peak-equity
  loss=mx=0
