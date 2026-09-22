@@ -297,19 +297,32 @@ def main():
       x=f"4-{s}-{trk[2]}"
       if x not in ts: ts.append(x)
     ovs=[om[r.race_code][x] for x in ts]
-    # keep exact JPY10k Dutch semantics; skip pathological over-wide rows unsupported by production helper
-    try: plan=live.dutch(ts,ovs)
-    except Exception: continue
-    st=sum(x["stake"] for x in plan); stake+=st; pts+=len(ts)
+    # Counterfactual can exceed production helper's 4..6 ticket invariant.
+    # Preserve JPY10k inverse-odds Dutch semantics with JPY100 Hamilton rounding for any feasible ticket count.
+    inv=np.asarray([1.0/max(float(o),1e-12) for o in ovs],dtype=float); raw=BANK*inv/inv.sum()
+    units=np.floor(raw/100.0).astype(int); remain=BANK//100-int(units.sum())
+    frac=raw/100.0-units
+    for ii in np.argsort(-frac)[:remain]: units[ii]+=1
+    # Every added ticket must receive a positive stake; otherwise this threshold is not feasible at JPY10k.
+    if np.any(units<=0):
+     plan=[]; st=0
+    else:
+     plan=[{"combo":t,"odds":float(o),"stake":int(u*100)} for t,o,u in zip(ts,ovs,units)]
+     st=sum(x["stake"] for x in plan)
+    stake+=st; pts+=len(ts)
     a=tr.get(r.race_code); actual=f"{a[0]}-{a[1]}-{a[2]}" if a else ""
     pp=st if (not a) else 0.0; hh=0
     for x in plan:
      if actual and x["combo"]==actual: pp=float(x["stake"])*float(x["odds"]); hh=1
     pay+=pp; hits+=hh
-   grid.append({"second_gap":sg,"third_gap":tg,"R":int((d.production_bet==1).sum()),"hits":hits,"avg_points":pts/max(1,int((d.production_bet==1).sum())),
-                "stake":stake,"payout":pay,"profit":pay-stake,"roi":100*pay/stake if stake else 0})
+   R=int((d.production_bet==1).sum()); expected=R*BANK; feasible=(stake==expected)
+   grid.append({"second_gap":sg,"third_gap":tg,"R":R,"hits":hits,"avg_points":pts/max(1,R),
+                "stake":stake,"expected_stake":expected,"all_races_feasible":feasible,
+                "payout":pay,"profit":pay-stake,"roi":100*pay/stake if feasible and stake else None})
  pd.DataFrame(grid).sort_values(["roi","hits"],ascending=[False,False]).to_csv(OUT/"opponent_gap_grid.csv",index=False)
- print("OPPONENT_GAP_GRID_TOP",json.dumps(sorted(grid,key=lambda x:(x["roi"],x["hits"]),reverse=True)[:10],ensure_ascii=False))
+ valid=[x for x in grid if x["all_races_feasible"] and x["roi"] is not None]
+ print("OPPONENT_GAP_GRID_TOP",json.dumps(sorted(valid,key=lambda x:(x["roi"],x["hits"]),reverse=True)[:10],ensure_ascii=False))
+ print("OPPONENT_GAP_GRID_INVALID",sum(not x["all_races_feasible"] for x in grid))
  b=d[d.production_bet==1].copy().sort_values(["date","race_code"])
  equity=b.profit.cumsum(); peak=equity.cummax().clip(lower=0); dd=peak-equity
  loss=mx=0
