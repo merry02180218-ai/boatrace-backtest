@@ -278,9 +278,9 @@ def main():
   print("OPPONENT_RANK_COUNTS",json.dumps({"second":oppmiss.second_rank.value_counts().sort_index().to_dict(),"third":oppmiss.third_rank.value_counts().sort_index().to_dict()},ensure_ascii=False))
  # Fast counterfactual grid: reuse frozen p2/pc/odds already computed; no model refit/rebuild per threshold.
  grid=[]
- for sg in (0.05,0.10,0.15,0.20,0.25,0.30):
-  for tg in (0.05,0.10,0.15,0.20,0.25):
-   stake=pay=hits=pts=0
+ for sg in (0.06,0.07,0.08,0.09,0.10,0.11,0.12,0.13,0.14):
+  for tg in (0.14,0.16,0.18,0.20,0.22,0.24):
+   stake=pay=hits=pts=0; rows=[]
    for _,r in d[d.production_bet==1].iterrows():
     z=json.loads(r.opponent_diag); sr=[int(x) for x in z["second_rank"]]; tr0=str(r.tickets).split("|"); ts=list(tr0)
     # add SECOND rank3 only when close to rank2; give it top2 THIRDs
@@ -314,15 +314,23 @@ def main():
     pp=st if (not a) else 0.0; hh=0
     for x in plan:
      if actual and x["combo"]==actual: pp=float(x["stake"])*float(x["odds"]); hh=1
-    pay+=pp; hits+=hh
-   R=int((d.production_bet==1).sum()); expected=R*BANK; feasible=(stake==expected)
+    pay+=pp; hits+=hh; rows.append({"date":str(r.date),"jcd":str(r.race_code)[:2],"hit":hh,"stake":st,"payout":pp,"base120":int(r.base120_selected),"newfeature":int(r.newfeature_expansion)})
+   R=int((d.production_bet==1).sum()); expected=R*BANK; feasible=(stake==expected); rr=pd.DataFrame(rows)
+   monthly=[]; venue=[]; maxdd=0.0; maxls=0
+   if len(rr):
+    rr["month"]=rr.date.str[:7]; rr["profit"]=rr.payout-rr.stake; eq=rr.profit.cumsum(); maxdd=float((eq.cummax()-eq).max()); cur=0
+    for h in rr.hit: cur=0 if h else cur+1; maxls=max(maxls,cur)
+    monthly=[{"month":m,"R":len(g),"hits":int(g.hit.sum()),"roi":100*g.payout.sum()/g.stake.sum()} for m,g in rr.groupby("month")]
+    venue=[{"jcd":m,"R":len(g),"hits":int(g.hit.sum()),"roi":100*g.payout.sum()/g.stake.sum()} for m,g in rr.groupby("jcd")]
    grid.append({"second_gap":sg,"third_gap":tg,"R":R,"hits":hits,"avg_points":pts/max(1,R),
                 "stake":stake,"expected_stake":expected,"all_races_feasible":feasible,
-                "payout":pay,"profit":pay-stake,"roi":100*pay/stake if feasible and stake else None})
+                "payout":pay,"profit":pay-stake,"roi":100*pay/stake if feasible and stake else None,
+                "max_drawdown":maxdd,"max_losing_streak":maxls,"monthly":monthly,"venue":venue})
  pd.DataFrame(grid).sort_values(["roi","hits"],ascending=[False,False]).to_csv(OUT/"opponent_gap_grid.csv",index=False)
  valid=[x for x in grid if x["all_races_feasible"] and x["roi"] is not None]
  print("OPPONENT_GAP_GRID_TOP",json.dumps(sorted(valid,key=lambda x:(x["roi"],x["hits"]),reverse=True)[:10],ensure_ascii=False))
  print("OPPONENT_GAP_GRID_INVALID",sum(not x["all_races_feasible"] for x in grid))
+ print("OPPONENT_GAP_GRID_TOP_DETAIL",json.dumps(sorted(valid,key=lambda x:(x["roi"],x["hits"]),reverse=True)[:5],ensure_ascii=False))
  b=d[d.production_bet==1].copy().sort_values(["date","race_code"])
  equity=b.profit.cumsum(); peak=equity.cummax().clip(lower=0); dd=peak-equity
  loss=mx=0
