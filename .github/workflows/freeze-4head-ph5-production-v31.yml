@@ -22,6 +22,12 @@ jobs:
         with:
           repository: BoatraceCSV/boatracecsv.github.io
           path: boatracecsv
+      - name: Import smoke test
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/boatracecsv
+        run: |
+          test -d "${{ github.workspace }}/boatracecsv"
+          python -c "import freeze_4head_ph5_production_v31 as m; assert m.C == .5 and m.CUT == .36; assert len(m.SPECS['PH_FULL5']) == 5; print('V31_IMPORT_SMOKE_OK')"
       - name: Build frozen parent
         env:
           BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/boatracecsv
