@@ -107,8 +107,11 @@ def scan_live_deadline_contract():
     strict=STRICT.read_text(encoding='utf-8')
     watch=WATCH.read_text(encoding='utf-8')
     marker="head4-newfeature-daily-state-${TARGET_DATE}"
+    must(marker in strict,'strict: new state preference missing')
+    # Watchdog receives the already-resolved state artifact from its matrix.
+    must("STATE_RUN_ID: ${{ matrix.state_run_id }}" in watch and "STATE_ARTIFACT_NAME: ${{ matrix.state_artifact_name }}" in watch,
+         'watchdog: resolved state artifact contract missing')
     for name,src in [('strict',strict),('watchdog',watch)]:
-        must(marker in src,f'{name}: new state preference missing')
         must("HEAD4_NEWFEATURE_FIXED156_V1" in src,f'{name}: production profile contract missing')
         must("z.get('target_race_result_used') is False" in src,f'{name}: result contract missing')
         must("z.get('payout_used') is False" in src,f'{name}: payout contract missing')
