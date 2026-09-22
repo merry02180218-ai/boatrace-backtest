@@ -25,7 +25,7 @@ def main():
         x,r,audit=w20.build_pre_enhanced(a,b,True);raw[k]=(x,r)
     frames={k:w20.prep_month(x,r) for k,(x,r) in raw.items()}
     # make_pre_scores is hard-coded through Feb, so reproduce the same causal PRE scorer for Jul/Aug.
-    _,enh,_=w20.make_pre_scores.__globals__['choose_features'](pd.concat(list(frames.values()),ignore_index=True,sort=False))
+    _,enh,_=w20.make_pre_scores.__globals__['choose_features'](pd.concat(list(frames.values()),ignore_index=True,sort=False))\n    hist_all=pd.concat(list(frames.values()),ignore_index=True,sort=False)
     scores={}
     for k in ["jul","aug"]:
         target=frames[k].sort_values(["date","rc"]).copy(); out=[]
@@ -37,7 +37,7 @@ def main():
             model=make_pipeline(SimpleImputer(strategy="median"),StandardScaler(),LogisticRegression(C=.08,class_weight="balanced",solver="liblinear",max_iter=1800,random_state=161))
             model.fit(tr[enh],tr.y); ptr=model.predict_proba(tr[enh])[:,1]; pp=model.predict_proba(today[enh])[:,1]
             z=today[["rc","date","venue","race_no","y"]].copy(); z["pre_score"]=w20.make_pre_scores.__globals__['pct_ref'](ptr,pp); out.append(z)
-        scores[k]=pd.concat(out,ignore_index=True).drop_duplicates("rc")
+        if not out: raise RuntimeError(f"NO_PRE_PREDICTIONS month={k} target={len(target)} hist42_max={max([len(hist_all[(hist_all.date<pd.Timestamp(v))&(hist_all.date>=pd.Timestamp(v)-pd.Timedelta(days=42))]) for v in target.date.dt.normalize().unique()] or [0])}")\n        scores[k]=pd.concat(out,ignore_index=True).drop_duplicates("rc")
     days,cache=w20.prefetch_sources();post,_=w20.build_motor_exhibition(days,cache)
     allrows=[]
     for k in ["jul","aug"]:
