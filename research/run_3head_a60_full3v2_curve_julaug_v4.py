@@ -76,7 +76,6 @@ def main():
             rows.append({"month":mon,"variant":"FULL_3V2","target_R":target,"R":len(z),"heads":int(z.y.sum()),"head_rate":float(z.y.mean()) if len(z) else None})
     z=pd.DataFrame(rows);z.to_csv(CSV,index=False)
     out={"policy":{"core_unchanged":True,"full3v2_strict_prior":True,"history_start":"2025-10-01","rolling_window_days":None,"candidate_gate_except_inner_motor_frozen":True,"inner_motor_pool_min":0.0,"opponent_core":"native_v242_5to10","opponent_expanded":"V221_Top6_protected_SECOND4","sep2026_used":False,"jul_aug_non_pristine_descriptive_only":True,"production_changed":False},"rows":rows}
-    OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2)+"
-",encoding="utf-8")
+    OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2)+chr(10),encoding="utf-8")
     print(json.dumps(out,ensure_ascii=False,indent=2));print("A60_FULL3V2_CURVE_JULAUG_V4_OK");print("SEPTEMBER_UNREAD");print("PRODUCTION_UNCHANGED")
 if __name__=="__main__":main()
