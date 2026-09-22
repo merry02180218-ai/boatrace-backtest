@@ -62,4 +62,4 @@ jobs:
             analysis_3head_full3v2_membership_v4.csv
             analysis_3head_full3v2_membership_v4_meta.json
             summary_3head_full3v2_membership_v4.md
-          analysis_3head_full3v2_membership_delta_v4.csv
+            analysis_3head_full3v2_membership_delta_v4.csv
