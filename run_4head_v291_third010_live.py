@@ -22,10 +22,11 @@ from typing import Mapping, Sequence, Tuple, Dict, List
 import numpy as np
 import run_20260911_4head_v291_live as base
 
-POLICY = "HEAD4_V291_COMP7_THIRD010"
-THIRD_GAP = 0.10
+POLICY = "HEAD4_V291_COMP7_OPP_S011_T018"
+SECOND_GAP = 0.11
+THIRD_GAP = 0.18
 MIN_TICKETS = 4
-MAX_TICKETS = 6
+MAX_TICKETS = 9
 
 # Re-export frozen constants/helpers used by downstream code/verifier.
 BOATS = base.BOATS
@@ -48,10 +49,18 @@ persist_audit = base.persist_audit
 
 
 def production_tickets(p2: Mapping[int, float], pc: Mapping[Tuple[int, int], float]) -> List[str]:
-    """Frozen v283 Top4 plus approved per-SECOND THIRD rank3 close-margin additions."""
+    """Frozen v283 Top4 plus approved SECOND/THIRD close-margin rescue."""
     tickets = list(base.v283_top4(p2, pc))
     second_rank = sorted(BOATS, key=lambda s: (-float(p2[s]), s))
-    for s in second_rank[:2]:
+    s2, s3 = second_rank[1], second_rank[2]
+    if float(p2[s2]) - float(p2[s3]) <= SECOND_GAP:
+        thirds3 = sorted((t for t in BOATS if t != s3), key=lambda t: (-float(pc[(s3, t)]), t))
+        for t in thirds3[:2]:
+            extra = f"4-{s3}-{t}"
+            if extra not in tickets:
+                tickets.append(extra)
+    selected_seconds = sorted({int(x.split("-")[1]) for x in tickets})
+    for s in selected_seconds:
         thirds = sorted((t for t in BOATS if t != s), key=lambda t: (-float(pc[(s, t)]), t))
         gap23 = float(pc[(s, thirds[1])]) - float(pc[(s, thirds[2])])
         if gap23 <= THIRD_GAP:
@@ -59,15 +68,15 @@ def production_tickets(p2: Mapping[int, float], pc: Mapping[Tuple[int, int], flo
             if extra not in tickets:
                 tickets.append(extra)
     if not (MIN_TICKETS <= len(tickets) <= MAX_TICKETS):
-        raise RuntimeError(f"THIRD010 ticket-count invariant failed: {len(tickets)}")
+        raise RuntimeError(f"OPP_S011_T018 ticket-count invariant failed: {len(tickets)}")
     if len(set(tickets)) != len(tickets) or any(not x.startswith("4-") for x in tickets):
-        raise RuntimeError("THIRD010 ticket invariant failed")
+        raise RuntimeError("OPP_S011_T018 ticket invariant failed")
     return tickets
 
 
 def composite_odds(odds: Sequence[float]) -> float:
     if not (MIN_TICKETS <= len(odds) <= MAX_TICKETS):
-        raise RuntimeError(f"THIRD010 requires {MIN_TICKETS}..{MAX_TICKETS} odds")
+        raise RuntimeError(f"OPP_S011_T018 requires {MIN_TICKETS}..{MAX_TICKETS} odds")
     vals = [base._as_float(x, "odds") for x in odds]
     if any(x <= 0 for x in vals):
         raise RuntimeError("odds must be positive")
@@ -76,7 +85,7 @@ def composite_odds(odds: Sequence[float]) -> float:
 
 def dutch(tickets: Sequence[str], odds: Sequence[float]) -> List[dict]:
     if len(tickets) != len(odds) or not (MIN_TICKETS <= len(tickets) <= MAX_TICKETS):
-        raise RuntimeError("THIRD010 Dutch ticket-count mismatch")
+        raise RuntimeError("OPP_S011_T018 Dutch ticket-count mismatch")
     stakes = np.asarray(base.v234.v205.round_dutch(list(odds), BANK), dtype=int)
     if int(stakes.sum()) != BANK:
         raise RuntimeError(f"Dutch total != {BANK}")
@@ -111,8 +120,8 @@ def evaluate_market(inp: dict, odds_map: Mapping[str, float], odds_meta: dict, d
     return {
         "race_code": race_code, "policy": POLICY, "layer": "S", "eligible": True,
         "pair_model": {
-            "branch": "v283 independent + THIRD close-margin",
-            "mode": PAIR_MODE, "alpha2": ALPHA2, "third_gap": THIRD_GAP,
+            "branch": "v283 independent + SECOND/THIRD close-margin",
+            "mode": PAIR_MODE, "alpha2": ALPHA2, "second_gap": SECOND_GAP, "third_gap": THIRD_GAP,
             "base_top4_preserved": True, "v96_used": False,
         },
         "scores": {"PRE": pre, "POST": post, "ENV_ENTRY": env},
