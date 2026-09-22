@@ -332,3 +332,86 @@ Verification Run 35693008219 / Job 106633802811 SUCCESS on commit c3b9a9c16c1a8a
 3. On success fetch artifact and current .github/live/head4_120r_watchlist.json plus PRE outputs; report today's remaining PH5-era targets deadline-order.
 4. Then perform first real-race PH5 end-to-end operational smoke test on the next eligible race with exhibition available.
 5. Update this handoff again with Run/Job/Artifact IDs, exact hp/decision, any errors/fixes and next restart point.
+
+
+# CHAT HANDOFF UPDATE — 2026-09-22 PH5 FORMAL ADOPTION / LIVE INTEGRATION / TODAY RESCAN
+
+## User decisions in this chat
+- User asked to inspect v31 for errors before firing; exhaustive preflight was performed and strengthened.
+- User formally adopted PLAYER_HISTORY PH5 for HEAD4. Formal five boat-4 PH features remain: b4_pl_all_win, b4_pl_all_p2, b4_pl_frame_win, b4_pl_frame_p2, b4_pl_recent_p2.
+- Fixed model settings: LogisticRegression C=.5, selection cut=.36.
+- User wants current-day practical operation after formal adoption; asked "今日のレースどうなってる" and then approved a fresh PH5 rescan.
+
+## v31 freeze preflight hardening
+- Full workflow/script/parent builder refetched and inspected before dispatch.
+- Added post-BoatraceCSV-checkout import smoke test asserting C=.5, cut=.36 and exactly five PH features.
+- Hardening commit: 54bc29863663fbf8625d1dcb062e30fa3470f64a.
+- Static checks passed: no literal escaped-newline bug, py_compile present, checkout/env correct, same_day_results_used=False, september_labels_used=False.
+- Handoff preflight record commit was 9a42b7d7e3bfc2b470d76c5aa6662c09ccd2a210.
+
+## v31 formal freeze SUCCESS
+- Workflow: freeze-4head-ph5-production-v31.
+- Run 35692378750 SUCCESS.
+- Job 106631911557.
+- Artifact 10678742960, name head4-ph5-production-freeze-v31.
+- Artifact digest sha256:794fa223975c40a24f7a33bba383e884c3693e3b25336eee31a9119a3e362026.
+- Log markers: HEAD4_PH5_PRODUCTION_FREEZE_V31_OK / SEPTEMBER_UNREAD.
+- Rolling evidence reproduced exactly:
+  - Jun 48R / 25 heads = 52.0833%.
+  - Jul 59R / 28 heads = 47.4576%.
+  - Aug 62R / 32 heads = 51.6129%.
+  - Jun-Aug total 169R / 85 heads = 50.2959%, approx 56R/month.
+- September outcomes remained UNREAD.
+
+## Frozen production artifact committed
+- Repo artifact: artifacts/head4_ph5_production_v31_20260831.json.
+- Commit: 609c50f8678ef0348b6a239bf342929f083b1691.
+- Artifact contract: id HEAD4_PH5_PRODUCTION_V31_20260831, 35 features total = 30 v93 opponent primitives + five boat-4 PH features; fit Mar-Aug through 2026-08-31; C=.5; cut=.36; same-day results false; September labels false.
+
+## LIVE integration changes
+1. PRE scanner legacy-head cleanup
+- scan_4head_120r_pre_live.py no longer uses artifacts/head4_racecard_headprob_frozen_20260630.json.
+- Commit d68018c3bcc3b5f2ee75ae25d0867ca927fe1b2e.
+- Reason: v31 exact head model includes current-exhibition-dependent v93 direct features, so PRE cannot honestly compute exact v31 head probability before exhibition. Do not substitute old 78-feature racecard-only probability.
+
+2. Fast post-exhibition LIVE scorer
+- run_4head_120r_lastminute_fast.py now loads head4_ph5_production_v31_20260831.json and computes exact logistic probability in ph5_head_prob_live after current exhibition + causal player_flat are available.
+- Commit 746b32f4569f5bed0917098af94ad661a762e571.
+- Scoring reproduces frozen imputer medians, scaler mean/scale, coefficients/intercept and exact feature order.
+- Existing v283 opponent/ticket/newfeature downstream remains in place; head probability is overwritten by PH5 v31 after exhibition.
+
+3. Verification workflow
+- .github/workflows/verify-4head-ph5-production-v31.yml added, commit 8c637ca852cf993149bcd0c02cc381c85dc353df.
+- Run 35693008219 SUCCESS, Job 106633802811.
+- Log marker HEAD4_PH5_V31_PRODUCTION_WIRING_OK.
+- py_compile passed for PRE scanner, fast runner, player-history live builder and v93 primitives.
+- Artifact length/order invariants passed: 35 features/coef/imputer/scaler; C=.5; cut=.36; exact PH5; same-day false; September false.
+- Production code switch is therefore statically/artifact-wiring verified. First real current-race end-to-end execution remains an operational smoke test, not a research requirement.
+- Handoff completion commit at that point: 298aa0f121a9cacd5648e0a1164b9e8b00001424.
+
+## Today's 2026-09-22 operation
+- Before fresh PH5 rescan, latest old watchdog resolution at Run 35692883362 (14:59:44 JST) had two active old-watchlist targets:
+  - jcd20 race2, deadline 15:27, race_code 202609222002, class 超低頭確率Shadow, WATCH_ONLY.
+  - jcd16 race10, deadline 15:34, race_code 202609221610, class 内部ウォッチ, V250_RESCUE.
+- These were generated from the pre-PH5 daily artifact/run 35658088522 and must NOT be presented as fresh PH5 candidates without a new scan.
+- User approved fresh PH5 rescan for today.
+- live-4head-newfeature-pre-daily workflow trigger paths were updated to include artifacts/head4_ph5_production_v31_20260831.json, commit 07a284329133253693d0dfc227ef47a7946b4eb4, so a fresh push/manual run can rebuild today's PRE/watchlist under the new code.
+- User then said "発火してるよ" and asked "終わった？". At that point a GitHub runs lookup was initiated, but the tool result was interrupted by the user's handoff request before it was returned. Therefore the fresh PH5 rescan Run ID/status/result is UNKNOWN in this handoff and MUST be checked first in the next chat. Do not assume success/failure.
+
+## Immediate next restart point
+1. Query latest Actions runs for workflow name live-4head-newfeature-pre-daily.
+2. Identify the fresh run after commit 07a284329133253693d0dfc227ef47a7946b4eb4 / user's manual dispatch, and inspect status/conclusion.
+3. If SUCCESS, inspect full job logs and artifact/watchlist; verify TARGET_DAY_RESULTS_UNREAD and current_exhibition_used=False/current_odds_used=False at PRE stage.
+4. Extract today's fresh PH5 monitoring/watchlist targets and list them in deadline order. Do not reuse the two stale targets above unless the fresh artifact independently includes them.
+5. For races whose exhibition is available, run/inspect the new post-exhibition PH5 v31 fast final decision; this is also the first real-race operational smoke test.
+6. If the fresh scan failed, inspect full logs + committed sources and inputs, fix root cause, refetch all edited/used files, full preflight, then fresh dispatch. Never blind rerun.
+7. Keep September 2026 outcome labels UNREAD. Prior September completed results may only be causal history where the live-state contract explicitly allows it; never use today's target results.
+
+## Non-negotiable execution rules retained
+- Before every dispatch/rerun: refetch actual committed workflow and all used/edited scripts from main; inspect full files; compare YAML with known-successful workflow; check indentation/quoting/with/env/path/dependencies/timeout/artifact; reject literal escaped-newline; py_compile Python; verify input paths/leakage guards/September UNREAD/no result-derived Waku.
+- On any error: inspect complete logs + source + inputs first, fix root cause, then refetch and full-preflight before rerun.
+- Never claim a workflow is complete until actual Actions status/logs are checked.
+- User prefers Japanese, concise concrete progress, and actual GitHub work rather than speculative guidance.
+
+## Latest Actions snapshot captured while writing handoff
+[{"id":35694586176,"status":"completed","conclusion":"success","sha":"07a284329133253693d0dfc227ef47a7946b4eb4","created":"2026-09-22T06:23:07Z"},{"id":35692857947,"status":"completed","conclusion":"success","sha":"d68018c3bcc3b5f2ee75ae25d0867ca927fe1b2e","created":"2026-09-22T05:59:13Z"}]
