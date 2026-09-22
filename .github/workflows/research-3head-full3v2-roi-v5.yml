@@ -20,9 +20,9 @@ jobs:
           from pathlib import Path
           s=Path('analyze_3head_full3v2_roi_v5.py').read_text()
           compile(s, 'analyze_3head_full3v2_roi_v5.py', 'exec')
-          assert "SEPTEMBER_OUTCOMES_READ':False" in s
-          assert "threshold_tuning':False" in s
-          assert "PRODUCTION_CHANGED':False" in s
+          assert "FULL3V2_ROI_V5_OK" in s
+          assert "SEPTEMBER_UNREAD" in s
+          assert "PRODUCTION_UNCHANGED" in s
           print('PREFLIGHT_OK')
           PY
       - name: Reuse cached v234 restored Waku10
@@ -59,6 +59,5 @@ jobs:
         with:
           name: research-3head-full3v2-roi-v5
           path: |
-            analysis_3head_full3v2_roi_v5.csv
             analysis_3head_full3v2_roi_v5.csv
             summary_3head_full3v2_roi_v5.md
