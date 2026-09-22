@@ -1,0 +1,28 @@
+name: research-3head-a60-full3v2-curve-v2
+on:
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn requests
+      - name: Preflight
+        run: |
+          python -m py_compile research/run_3head_a60_full3v2_curve_v2.py analyze_3head_player_history_3v2_ablation_v2.py research/run_3head_a60_playerhistory_curve_v1.py
+          grep -F 'core_unchanged' research/run_3head_a60_full3v2_curve_v2.py
+          grep -F 'full3v2_strict_prior' research/run_3head_a60_full3v2_curve_v2.py
+          ! grep -E '2026[-/, ]*09|202609' research/run_3head_a60_full3v2_curve_v2.py
+      - name: Run
+        run: python research/run_3head_a60_full3v2_curve_v2.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-3head-a60-full3v2-curve-v2
+          path: |
+            research_3head_a60_full3v2_curve_v2.json
+            research_3head_a60_full3v2_curve_v2.csv
