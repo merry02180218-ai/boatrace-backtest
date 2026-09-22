@@ -86,3 +86,9 @@
 - Production unchanged until independent validation and settlement audit pass.
 
 - Additional user decision: opponent selection should preserve/use BOTH families rather than force one globally: CORE keeps its native v242 variable 5-10 ticket opponent logic; A+.60/EXPANDED keeps the V221 Top6 + protected SECOND4 logic. Compare each route with its own frozen opponent policy, then union with CORE priority on overlap. Do not merge/tune opponent rules from outcomes in this phase.
+
+### 2026-09-22 AFTER A+.60 baseline v1 / START FULL_3V2 integration
+- Run 35691601014 / Job 106629582853 / Artifact 10678941643: SUCCESS.
+- Frozen A+.60 baseline Nov-Feb = 150R / 66 heads = 44.00% (Nov 30/12 40.0%; Dec 40/17 42.5%; Jan 48/25 52.08%; Feb 32/12 37.5%).
+- CORE unchanged; September UNREAD; production unchanged.
+- Next: integrate strict-prior PLAYER_HISTORY FULL_3V2 into A+.60 candidate ranking, preserve both opponent families, and compare volume-matched expansion frontier before ROI settlement.
