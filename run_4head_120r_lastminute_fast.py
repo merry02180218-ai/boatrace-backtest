@@ -31,6 +31,7 @@ from head4_high_water_shadow import high_water_shadow
 from build_4head_v93_primitives_live import build as build_v93
 from build_4head_v283_rows_live import derive
 from head4_v291_downstream_inference import load_artifact,score_second,score_conditional_third,v283_top4,BOATS
+import run_4head_v291_third010_live as opponent_prod
 import fetch_live_trifecta_odds as official_odds
 
 JST=ZoneInfo('Asia/Tokyo')
@@ -39,7 +40,8 @@ ST=('raw','raw_strength','raw_rank','corr_strength','corr_rank')
 V93=('grade','national','local','motor','nst')
 CUR=('cur_ex','cur_st','cur_orig_lap','cur_orig_turn','cur_orig_straight','cur_orig_avg')
 ALPHA2=0.60
-THIRD_GAP=0.10
+THIRD_GAP=opponent_prod.THIRD_GAP
+SECOND_GAP=opponent_prod.SECOND_GAP
 
 class Fast120Error(RuntimeError):pass
 class Fast120NotReady(Fast120Error):pass
@@ -350,23 +352,15 @@ def require_before_deadline(deadline,stage):
 
 
 def production_tickets(p2,pc):
-    tickets=[f'4-{s}-{t}' for s,t in v283_top4(p2,pc)]
-    second_rank=sorted(BOATS,key=lambda s:(-float(p2[s]),s))
-    for s in second_rank[:2]:
-        thirds=sorted((t for t in BOATS if t!=s),key=lambda t:(-float(pc[(s,t)]),t))
-        gap23=float(pc[(s,thirds[1])])-float(pc[(s,thirds[2])])
-        if gap23<=THIRD_GAP:
-            extra=f'4-{s}-{thirds[2]}'
-            if extra not in tickets:
-                tickets.append(extra)
-    if not (4<=len(tickets)<=6) or len(set(tickets))!=len(tickets):
-        raise Fast120Error(f'ticket invariant failed: {tickets}')
-    return tickets
-
+    """Use the formally adopted production opponent policy (SECOND .11 / THIRD .18)."""
+    try:
+        return opponent_prod.production_tickets(p2,pc)
+    except Exception as e:
+        raise Fast120Error(f'opponent production ticket invariant failed: {e}') from e
 
 def composite_odds(vals):
     a=[float(x) for x in vals]
-    if not (4<=len(a)<=6) or any((not math.isfinite(x) or x<=0) for x in a):
+    if not (opponent_prod.MIN_TICKETS<=len(a)<=opponent_prod.MAX_TICKETS) or any((not math.isfinite(x) or x<=0) for x in a):
         raise Fast120Error(f'invalid odds list: {a}')
     return 1.0/sum(1.0/x for x in a)
 
