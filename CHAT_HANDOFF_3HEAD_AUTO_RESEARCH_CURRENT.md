@@ -55,3 +55,13 @@
 - Jul/Aug descriptive only: FULL_3V2 36.73%,38.12% vs BASE 34.01%,38.67%.
 - September UNREAD; production unchanged; no hard gate / no threshold tuning.
 - Next: independent falsification of compact bundles (REL32_ALL, OWN3_B2, FULL_3V2, compact frame_win + relative all_win/all_p2) using fixed same-volume rules; then freeze candidate and test CORE/A+.60 membership + settlement ROI.
+
+
+## 2026-09-22 — START: PLAYER_HISTORY compact falsification v3
+- Continue from v2 Run 35670403984.
+- Goal: falsify/confirm the apparent 3-vs-2 gain before CORE/A+.60 integration.
+- Fixed candidates only (no search): BASE, REL32_ALL, OWN3_B2, FULL_3V2, COMPACT = boat3 frame_win + rel32 all_win + rel32 all_p2.
+- Primary evidence: pristine Mar-Jun only; Jul-Aug descriptive only.
+- Same monthly volume as BASE p>=.30; no threshold tuning, no hard gate.
+- Add leave-one-pristine-month-out stability summary and delta-vs-BASE.
+- September outcomes UNREAD; production unchanged.
