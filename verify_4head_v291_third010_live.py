@@ -8,7 +8,7 @@ def probs(second_close=False, third_close=False):
     pc={}
     for s in r.BOATS:
         rem=[t for t in r.BOATS if t!=s]
-        w=[.50,.25,.08,.17] if not third_close else [.50,.25,.10,.15]
+        w=[.55,.30,.10,.05] if not third_close else [.50,.25,.10,.15]
         for t,v in zip(rem,w): pc[(s,t)]=v
     return p2,pc
 
@@ -19,9 +19,9 @@ def meta(): return {"source":"OFFLINE_TEST","fetched_at_jst":r.now_jst().isoform
 
 def main():
     assert r.SECOND_GAP==.11 and r.THIRD_GAP==.18 and r.MIN_TICKETS==4 and r.MAX_TICKETS==9
-    p2,pc=probs(False,False); base=r.production_tickets(p2,pc); assert len(base)==4
-    p2,pc=probs(True,False); t=r.production_tickets(p2,pc); assert len(t)==6
-    p2,pc=probs(False,True); t=r.production_tickets(p2,pc); assert len(t)==6
+    p2,pc=probs(False,False); base=r.production_tickets(p2,pc); assert len(base)==4, base
+    p2,pc=probs(True,False); t=r.production_tickets(p2,pc); assert len(t)==6, t
+    p2,pc=probs(False,True); t=r.production_tickets(p2,pc); assert len(t)==6, t
     p2,pc=probs(True,True); t=r.production_tickets(p2,pc); assert 6<=len(t)<=9 and len(set(t))==len(t)
     assert set(r.base.v283_top4(p2,pc)).issubset(set(t))
     n=len(t); odds={x:7.0*n for x in t}; dl=r.now_jst()+timedelta(hours=1)
