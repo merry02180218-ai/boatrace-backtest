@@ -40,7 +40,7 @@ def main():
             z=today[["rc","date","venue","race_no","y"]].copy(); z["pre_score"]=w20.make_pre_scores.__globals__['pct_ref'](ptr,pp); out.append(z)
         if not out: raise RuntimeError(f"NO_PRE_PREDICTIONS month={k} target={len(target)} hist42_max={max([len(hist_all[(hist_all.date<pd.Timestamp(v))&(hist_all.date>=pd.Timestamp(v)-pd.Timedelta(days=42))]) for v in target.date.dt.normalize().unique()] or [0])}")
         scores[k]=pd.concat(out,ignore_index=True).drop_duplicates("rc")
-    days,cache=w20.prefetch_sources();post,_=w20.build_motor_exhibition(days,cache)
+    # wave19 helper is frozen at Feb; extend its runtime end to Aug for this descriptive Jul/Aug audit.\n    w20.prefetch_sources.__globals__['END']='2026-08-31'\n    days,cache=w20.prefetch_sources();post,post_audit=w20.build_motor_exhibition(days,cache)\n    print('POST_AUDIT',post_audit,'post_date_max',str(post.date.max()) if len(post) else None)
     allrows=[]
     for k in ["jul","aug"]:
         q=scores[k].merge(post,on=["rc","date"],how="left",validate="one_to_one")
