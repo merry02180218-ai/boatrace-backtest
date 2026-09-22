@@ -212,3 +212,9 @@ Conclusion: corrected venue audit supports broad robustness of C=.1 aggregate; N
 
 ## v28 rolling-origin regularization audit ready
 Fixed FULL PH4 feature set; compare C=.5 vs C=.1 at cut=.36 under rolling origin: June train Mar-May; July train Mar-Jun; August train Mar-Jul. No future month enters each fit, no retuning, September UNREAD. Emits monthly and paired overlap/C05-only/C01-only diagnostics. Script 5f7a79f08340cda4654e095873a5cc0691e0820b; workflow 14e06fd172f3a87b3fc312ebe4e26eb2aa045cf9. Refetch preflight passed: compile, fixed cut, rolling schedule, no future training declaration, September UNREAD, no literal escaped-newline. Production unchanged. Next dispatch audit-4head-ph4-rolling-c-v28.
+
+
+## v28 SUCCESS — rolling-origin falsifies C=.1 advantage
+Run 35684094228 / Job 106607130022 / Artifact 10676072788 SUCCESS; digest sha256:3e77c3ce7a681f730bb4a2b6d2c971a579f11400947ff320ab5c7e7b2425100b. September UNREAD; no retuning; production unchanged.
+Rolling fixed cut .36: June C05 25/48=52.08%, C01 23/46=50.00%; July both 28/59=47.46%; August C05 32/62=51.61%, C01 31/60=51.67%. Paired aggregate overlap 165/82=49.70%; C05-only 4/3=75%; C01-only 0R. Therefore C=.1 does NOT show a robust rolling-origin advantage; it merely prunes four C05 selections, three of which were winners. Earlier fixed-fit August improvement from C=.1 was regime/fit dependent and should not be promoted as a general improvement.
+Research conclusion update: strongest robust result remains PLAYER_HISTORY PH4 itself. Do not claim stronger regularization as established improvement. FULL_C05 remains at least as defensible as C01 under rolling refits; production remains unchanged. Next research should isolate PH4 components (all_p2 was dominant in v9) under fixed rolling-origin ablation, comparing full PH4 vs compact PH subsets without tuning cut on Jun-Aug, to see whether PLAYER_HISTORY can be simplified/strengthened robustly.
