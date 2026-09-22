@@ -437,7 +437,26 @@ def legacy_decide(head_prob,mass,comp,exh):
     }
 
 
+PH5_HEAD_ARTIFACT=Path(__file__).resolve().parent/'artifacts'/'head4_ph5_production_v31_20260831.json'
 NEWFEATURE_ARTIFACT=Path(__file__).resolve().parent/'artifacts'/'head4_newfeature_fixed156_production.json'
+
+def ph5_head_prob_live(card,waku,exh,pflat):
+    a=json.loads(PH5_HEAD_ARTIFACT.read_text(encoding='utf-8'))
+    if a.get('id')!='HEAD4_PH5_PRODUCTION_V31_20260831' or a.get('feature_count')!=35:
+        raise Fast120Error('PH5 head artifact mismatch')
+    if a.get('september_labels_used') is not False or a.get('same_day_results_used') is not False:
+        raise Fast120Error('PH5 head artifact leakage contract mismatch')
+    vf=build_v93(card,waku,exh)['v93_flat']
+    row=dict(vf); row.update({k:float(v) for k,v in pflat.items()})
+    vals=[]
+    for i,k in enumerate(a['features']):
+        try:x=float(row.get(k))
+        except Exception:x=float(a['imputer_median'][i])
+        if not math.isfinite(x):x=float(a['imputer_median'][i])
+        vals.append((x-float(a['scaler_mean'][i]))/float(a['scaler_scale'][i]))
+    z=float(a['intercept'])+sum(float(b)*x for b,x in zip(a['coef'],vals))
+    p=1.0/(1.0+math.exp(-z))
+    return float(p)
 
 def _float_card(v):
     try:
@@ -713,7 +732,7 @@ def main():
         persist_no_bet_not_ready(a,code,deadline,'EXHIBITION',e,total0,stages,monitored,hp,state)
         return
     stages['fetch_and_build_exhibition_s']=time.perf_counter()-t
-    t=time.perf_counter(); pf=player_flat(cards[code],state); src=make_boats(cards[code],waku[code],exh,pf);stages['build_v283_inputs_s']=time.perf_counter()-t
+    t=time.perf_counter(); pf=player_flat(cards[code],state); hp=ph5_head_prob_live(cards[code],waku[code],exh,pf); src=make_boats(cards[code],waku[code],exh,pf);stages['build_v283_inputs_s']=time.perf_counter()-t
     art=load_artifact()
     t=time.perf_counter(); sr,cr=derive(src,art);p2=score_second(sr,art);pc=score_conditional_third(cr,art);tickets=production_tickets(p2,pc);pairs=[tuple(map(int,x.split('-')[1:])) for x in tickets];mass=pair_mass(p2,pc,pairs);stages['v283_inference_s']=time.perf_counter()-t
     t=time.perf_counter()
