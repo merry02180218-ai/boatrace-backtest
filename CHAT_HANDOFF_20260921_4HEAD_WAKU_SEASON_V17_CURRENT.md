@@ -267,3 +267,68 @@ Committed frozen artifact artifacts/head4_ph5_production_v31_20260831.json at 60
 
 ## PH5 v31 LIVE production switch VERIFIED COMPLETE
 Verification Run 35693008219 / Job 106633802811 SUCCESS on commit c3b9a9c16c1a8ab8cf1e680b68589be12297e47a. Log marker HEAD4_PH5_V31_PRODUCTION_WIRING_OK. py_compile passed for PRE scanner, fast last-minute runner, player-history live builder and v93 primitives. Artifact invariants passed: 35 features/coefficients/imputer/scaler aligned, C=.5, cut=.36, exact five PH features, same-day results false, September labels false. Runner wiring assertion confirms hp is overwritten by ph5_head_prob_live after exhibition + causal player_flat; PRE no longer references legacy 20260630 racecard-only head artifact. Therefore formal PH5 adoption is now complete through LIVE wiring verification. Research benchmark remains Jun-Aug 169R/85 heads=50.30% (~56R/month). Note: this verification is static/artifact wiring, not a real current-race end-to-end execution; first live race remains an operational smoke test, but the production code switch itself is verified.
+
+
+# 2026-09-22 CHAT END HANDOFF — PH5 FORMAL ADOPTION / LIVE SWITCH / TODAY RESCAN
+
+## User intent and decisions in this chat
+- User asked to continue 4号艇 HEAD research around PLAYER_HISTORY and ultimately explicitly decided to formally adopt PLAYER_HISTORY because it improved both head rate and usable race volume.
+- Formal adopted HEAD4 PH model is PH5: b4_pl_all_win, b4_pl_all_p2, b4_pl_frame_win, b4_pl_frame_p2, b4_pl_recent_p2.
+- Fixed research/production settings: LogisticRegression C=.5, selection cut=.36.
+- User explicitly asked to inspect for errors before firing; preflight must remain strict. Never blindly rerun failures. Refetch committed source/workflow, inspect full file/logs, py_compile, check literal escaped newline, YAML, paths/env/dependencies, leakage and September UNREAD first.
+
+## Research evidence immediately before adoption
+- v29 rolling PLAYER_HISTORY component audit SUCCESS: Run 35685339099 / Job 106610841909 / Artifact 10676218048. PH_FULL5 Jun-Aug 169R/85 heads=50.30%; Jun48/25=52.08%, Jul59/28=47.46%, Aug62/32=51.61%, about 56R/month. Same-cut no-PH BASE was only 9R/3 heads=33.33%, but this same-cut comparison is not calibration-fair.
+- v30 leave-one-feature-out SUCCESS after one preflight-only grep failure was fixed: Run 35689710826 / Job 106623891496 / Artifact 10678138186. DROP_ALL_P2 slightly higher aggregate 51.20% but month-dependent swaps and no robust reason to remove it; FULL5 retained. No further feature pruning requested.
+
+## v31 formal production freeze
+- freeze script: freeze_4head_ph5_production_v31.py
+- workflow: .github/workflows/freeze-4head-ph5-production-v31.yml
+- strengthened preflight commit 54bc29863663fbf8625d1dcb062e30fa3470f64a added import smoke test after BoatraceCSV checkout; assertions C=.5, cut=.36, exactly five PH features. Full inspection found no literal escaped-newline, compile command present, correct env/path, same-day false, September labels false.
+- Freeze Run 35692378750 SUCCESS / Job 106631911557 / Artifact 10678742960 / digest sha256:794fa223975c40a24f7a33bba383e884c3693e3b25336eee31a9119a3e362026.
+- Log reproduced PH_FULL5 Jun48/25, Jul59/28, Aug62/32, aggregate169/85=50.2959%; HEAD4_PH5_PRODUCTION_FREEZE_V31_OK; SEPTEMBER_UNREAD.
+- Frozen artifact ID HEAD4_PH5_PRODUCTION_V31_20260831, fit Mar-Aug through 2026-08-31, 35 features, C=.5, cut=.36, same_day_results_used=false, september_labels_used=false.
+- Frozen artifact committed to repo: artifacts/head4_ph5_production_v31_20260831.json at commit 609c50f8678ef0348b6a239bf342929f083b1691.
+
+## LIVE integration completed
+- Existing PRE scanner used obsolete artifacts/head4_racecard_headprob_frozen_20260630.json (78 racecard-only features). PH5 v31 requires current-exhibition-dependent v93 direct features, so it cannot honestly produce the final v31 head probability pre-exhibition.
+- PRE scanner scan_4head_120r_pre_live.py changed at commit d68018c3bcc3b5f2ee75ae25d0867ca927fe1b2e: legacy 20260630 head artifact removed from PRE path; PH5 artifact contract loaded, but PRE head probability is not falsely scored before exhibition. Monitoring remains available through the other PRE/watch logic.
+- Fast final runner run_4head_120r_lastminute_fast.py changed at commit 746b32f4569f5bed0917098af94ad661a762e571. Added PH5_HEAD_ARTIFACT and ph5_head_prob_live(). After current exhibition is fetched and causal player_flat is built, exact v93_flat + b4 PH5 are assembled in frozen feature order, artifact imputer/scaler/logistic parameters are applied, and hp is overwritten with the new PH5 v31 probability before downstream v283/opponent/ticket/newfeature decisions.
+- Existing opponent v283 and ticket/odds/newfeature policy were preserved; only HEAD probability source was switched.
+- Verification workflow .github/workflows/verify-4head-ph5-production-v31.yml added at commit 8c637ca852cf993149bcd0c02cc381c85dc353df.
+- Verification Run 35693008219 SUCCESS / Job 106633802811 on commit c3b9a9c16c1a8ab8cf1e680b68589be12297e47a. Log marker HEAD4_PH5_V31_PRODUCTION_WIRING_OK. py_compile passed for PRE scanner, fast runner, player-history live builder, v93 primitives. Artifact invariant checks passed: 35 feature arrays aligned, C=.5, cut=.36, exact PH5, same-day false, September labels false; runner PH5 wiring assertion passed; PRE legacy artifact absence passed.
+- Therefore PH5 formal production code switch is VERIFIED COMPLETE. Caveat: verification was static/artifact wiring, not yet a real current-race end-to-end smoke test.
+
+## Today 2026-09-22 live status and rescan
+- Before PH5 switch, latest watchdog Run 35692883362 SUCCESS / resolve Job showed at 14:59:44 JST two remaining OLD-watchlist targets:
+  1) race_code 202609222002 = jcd20 若松2R, deadline 15:27, operational_class 超低頭確率Shadow, pre_reason WATCH_ONLY.
+  2) race_code 202609221610 = jcd16 児島10R, deadline 15:34, operational_class 内部ウォッチ, pre_reason V250_RESCUE.
+- These came from old pre Run 35658088522 and must NOT automatically be treated as PH5 candidates.
+- User requested today be rescanned under PH5. To force fresh PRE workflow trigger, .github/workflows/live-4head-newfeature-pre-daily.yml push paths was updated to include artifacts/head4_ph5_production_v31_20260831.json; commit 07a284329133253693d0dfc227ef47a7946b4eb4.
+- User manually fired the workflow and then said it was firing / asked whether finished. IMPORTANT: the chat switched to handoff request before the assistant received/recorded the result of the latest fetch. Therefore NEXT CHAT MUST FIRST inspect the latest live-4head-newfeature-pre-daily run after commit 07a284... and determine status/result; do not assume success.
+- If SUCCESS: inspect full job logs and artifact, read today's fresh pre_monitoring_parent/watchlist/audit, confirm TARGET_DAY_RESULTS_UNREAD and PH5-related current code revision, then list remaining races in deadline order. For any race whose exhibition is ready, run/inspect the PH5 fast last-minute path and report exact new hp + downstream decision. Since time advances, do not repeat expired old candidates.
+- If FAILURE: inspect full logs + committed source/input, fix root cause, refetch/preflight, only then fresh dispatch.
+
+## Important semantics / leakage rules
+- September 2026 outcome labels remain UNREAD for research/model fitting/tuning. v31 artifact fit ends 2026-08-31.
+- Live causal daily state may use prior completed September races as historical state only if current production policy permits; target-day results are forbidden and daily state must assert target_date_results_used=false.
+- PLAYER_HISTORY is causal target_date-1 state. Same-day target outcomes must never enter PH features.
+- PH smoothing semantics in build_4head_player_history_live.py / fast runner _pstat: all_win=(w+2/6)/(n+2); all_p2=(p2+2/3)/(n+2); frame_win=(wf+3*.125)/(nf+3); frame_p2=(p2f+3*.25)/(nf+3); recent_p2=mean last30 top2 else1/3.
+- v31 exact frozen feature count is 35: 30 opponent v93 primitives (5 opponents x grade/national/local/motor/nst/direct) + b4 five PH features. Current exhibition is required because v93 direct is exhibition-dependent.
+
+## Commits/results from this chat worth retaining
+- preflight hardening 54bc29863663fbf8625d1dcb062e30fa3470f64a
+- v31 freeze Run 35692378750 / Job 106631911557 / Artifact 10678742960
+- artifact commit 609c50f8678ef0348b6a239bf342929f083b1691
+- PRE legacy-head removal d68018c3bcc3b5f2ee75ae25d0867ca927fe1b2e
+- fast runner PH5 wiring 746b32f4569f5bed0917098af94ad661a762e571
+- verification workflow 8c637ca852cf993149bcd0c02cc381c85dc353df
+- verification Run 35693008219 / Job 106633802811 SUCCESS
+- fresh PRE trigger commit 07a284329133253693d0dfc227ef47a7946b4eb4
+
+## Exact restart point
+1. Fetch latest Actions runs and locate newest live-4head-newfeature-pre-daily after 07a284329133253693d0dfc227ef47a7946b4eb4 / user's manual dispatch.
+2. Confirm completed status/conclusion and inspect job logs.
+3. On success fetch artifact and current .github/live/head4_120r_watchlist.json plus PRE outputs; report today's remaining PH5-era targets deadline-order.
+4. Then perform first real-race PH5 end-to-end operational smoke test on the next eligible race with exhibition available.
+5. Update this handoff again with Run/Job/Artifact IDs, exact hp/decision, any errors/fixes and next restart point.
