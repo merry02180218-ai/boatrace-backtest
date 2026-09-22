@@ -206,7 +206,22 @@ def main():
    "tickets":"|".join(tickets),"ticket_count":len(tickets),"stake":sum(x["stake"] for x in stakes),"stake_plan":json.dumps(stakes,ensure_ascii=False),"nf_score":score})
  d=pd.DataFrame(decisions)
  if not len(d):raise RuntimeError("NO_SIX_MONTH_DECISIONS")
- # Freeze complete. Only now join August truth.
+ # Month-by-month volume funnel. This diagnoses coverage/gate loss without reading outcomes.
+ funnel=[]
+ for mon in ("2026-06","2026-07","2026-08"):
+  key=mon.replace("-","")
+  scored={c for c in hm if c.startswith(key)}
+  hp36={c for c in scored if hm[c]>=.36}
+  hp36od={c for c in hp36 if c in om}
+  dm=d[d.date.str[:7].eq(mon)]
+  funnel.append({"month":mon,"v93_R":int((v.race_code.str.startswith(key)).sum()),"ph5_scored_R":len(scored),
+   "ph5_ge036_R":len(hp36),"ph5_ge036_odds_R":len(hp36od),"odds_decision_R":len(dm),
+   "orig_finite_R":int(pd.to_numeric(dm.orig,errors="coerce").notna().sum()) if "orig" in dm else 0,
+   "orig_ge_m006_R":int((pd.to_numeric(dm.orig,errors="coerce")>=-.06).sum()) if "orig" in dm else 0,
+   "selected_R":int(dm.selected.sum()),"base120_R":int(dm.base120.sum()),"newfeature_add_R":int(dm.newfeature_add.sum())})
+ (OUT/"volume_funnel.json").write_text(json.dumps(funnel,ensure_ascii=False,indent=2)+"\n")
+ print("VOLUME_FUNNEL",json.dumps(funnel,ensure_ascii=False))
+ # Freeze complete. Only now join truth.
  tr=truth(); missing_truth=set(d.race_code)-set(tr)
  # A missing top-3 result means 3連単 was not established. Refund the race stake.
  pays=[];hits=[];head=[]
