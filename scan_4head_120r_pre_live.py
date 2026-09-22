@@ -40,7 +40,7 @@ from analyze_v250_4head_rebuild_baseline import pre_features, make_model
 import scan_4head_v291_pre_live as v291pre
 
 ROOT=Path(__file__).resolve().parent
-HEAD_ART=ROOT/'artifacts'/'head4_racecard_headprob_frozen_20260630.json'
+HEAD_ART=ROOT/'artifacts'/'head4_ph5_production_v31_20260831.json'
 STATE_START=date(2025,10,1)
 STATE_END=date(2026,8,31)
 WIN_CUT=-0.0299361318939513
@@ -181,25 +181,18 @@ def raw_card_features(card):
 
 def load_head_model():
     a=json.loads(HEAD_ART.read_text())
-    assert a['feature_count']==78
-    assert a['fit_period']['max_date']=='2026-06-30'
-    assert a['jul_aug_labels_used_for_fit'] is False
-    assert a['september_labels_used'] is False
+    assert a['id']=='HEAD4_PH5_PRODUCTION_V31_20260831'
+    assert a['feature_count']==35 and len(a['features'])==35
+    assert a['fit_period']['max_date']=='2026-08-31'
+    assert a['cut']==.36 and a['C']==.5
+    assert a['september_labels_used'] is False and a['same_day_results_used'] is False
+    assert a['player_history_features']==['b4_pl_all_win','b4_pl_all_p2','b4_pl_frame_win','b4_pl_frame_p2','b4_pl_recent_p2']
     return a
 
-def frozen_head_prob(card,a):
-    raw=raw_card_features(card)
-    z=0.0
-    missing=0
-    for i,f in enumerate(a['features']):
-        v=raw.get(f,np.nan)
-        if not np.isfinite(v):
-            v=float(a['imputer_median'][i]); missing+=1
-        v=(v-float(a['scaler_mean'][i]))/float(a['scaler_scale'][i])
-        z+=float(a['coef'][i])*v
-    z+=float(a['intercept'])
-    p=1/(1+math.exp(-z))
-    return p,missing
+def ph5_head_prob(card,a,motor_hist,player_hist):
+    # v31 exact schema includes current-exhibition-dependent v93 direct features.
+    # PRE cannot score it causally before exhibition; final fast runner owns v31.
+    return np.nan, len(a['features'])
 
 def v250_scores(day,cards,waku):
     # Existing audited frozen fit: labels through Jun-30 only.
@@ -257,11 +250,11 @@ def main():
           'boat4_name':str(card.get('艇4_選手名','')).strip(),
         }
         row.update(frozen_parent_features(card,motor_hist,player_hist))
-        hp,miss=frozen_head_prob(card,ha)
+        hp,miss=ph5_head_prob(card,ha,motor_hist,player_hist)
         row['head_prob']=hp;row['headprob_missing_features']=miss
         row['v250_PRE']=float(p250.get(code,np.nan))
         display=(row['monitoring_parent']==1 and (
-            hp>=HEADPROB_DISPLAY or row['v250_PRE']>=V250_DISPLAY or miss>0
+            row['v250_PRE']>=V250_DISPLAY or miss>0
         ))
         row['display_candidate']=int(display)
         if row['parent_feature_missing']:
