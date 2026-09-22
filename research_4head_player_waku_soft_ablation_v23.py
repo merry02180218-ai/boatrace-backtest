@@ -66,6 +66,10 @@ def main():
  z=pd.read_csv(BASE,dtype={'race_code':str});z.race_code=z.race_code.astype(str).str.zfill(12);z['month']=z.race_code.str[:4]+"-"+z.race_code.str[4:6]
  t=pd.read_csv(TRUTH,usecols=['race_code','head4'],dtype={'race_code':str});t.race_code=t.race_code.astype(str).str.zfill(12)
  z=z.merge(t,on='race_code',how='left',validate='one_to_one');z=z[z.head4.isin([0,1])].copy()
+ # Parent may already contain PLAYER_HISTORY. Avoid pandas _x/_y collisions by using
+ # the independently rebuilt causal PH table as the canonical source.
+ phcols=[x for x in z.columns if '_pl_' in x]
+ if phcols:z=z.drop(columns=phcols)
  z=z.merge(w4.build_waku(z.race_code.tolist()),on='race_code',how='left',validate='one_to_one').merge(build_ph(),on='race_code',how='left',validate='one_to_one')
  forbidden=("actual","result","payout","odds","finish","着順","1着","2着","3着")
  numeric=[c for c in z if c not in {'head4','race_code','month'} and pd.to_numeric(z[c],errors='coerce').notna().mean()>=.25 and not any(k.lower() in c.lower() for k in forbidden)]
