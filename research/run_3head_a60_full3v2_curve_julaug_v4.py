@@ -55,15 +55,15 @@ def main():
     # Candidate pool deliberately only loosens A+.60 inner-motor threshold; all other A gate semantics stay frozen.
     rn=n(d.race_no);pre=n(d.pre_score)
     pool=(rn>=1)&(rn<=12)&(pre>=.925)&base.pg.mask(d,base.pg.A["conds"])&(n(d.post_motor_inner_rank_edge)>=0.0)
-    d=d.loc[pool].copy()
+    d=d.loc[pool].copy()\n    if d.empty: raise RuntimeError("EMPTY_CANDIDATE_POOL: inspect Jul/Aug post-feature coverage")
     # Causal rolling FULL_3V2 model. Training is strictly earlier dates.
     pred=[]
     for day in sorted(d.date.dt.normalize().unique()):
         te=d[d.date.dt.normalize()==day].copy();tr=d[(d.date<day)&(d.date>=HIST_START)].copy()
-        if len(tr)<20 or tr.y.nunique()<2:continue
+        if len(tr)<5 or tr.y.nunique()<2:continue
         model=make_pipeline(SimpleImputer(strategy="median"),StandardScaler(),LogisticRegression(C=.08,class_weight="balanced",solver="liblinear",max_iter=1800,random_state=322))
         model.fit(tr[full],tr.y.astype(int));te["ph_score"]=model.predict_proba(te[full])[:,1];pred.append(te)
-    p=pd.concat(pred,ignore_index=True)
+    \n    if not pred: raise RuntimeError(f"NO_PLAYER_HISTORY_PREDICTIONS pool={len(d)} months={d.month.value_counts().to_dict()} ph_nonnull={d[full].notna().sum().to_dict()}")\n    p=pd.concat(pred,ignore_index=True)
     rows=[]
     for mon,g in p.groupby("month"):
         frozen=g[n(g.post_motor_inner_rank_edge)>=.60]
