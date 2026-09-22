@@ -218,9 +218,15 @@ def main():
   expansion=(not base120) and st>=-.80 and orig>=-.35 and score>=thr
   selected=bool(hp>=.36 and orig>=-.06); shadow=False
   stakes=live.dutch(tickets,ovs) if selected else [{"combo":t,"odds":o,"stake":0} for t,o in zip(tickets,ovs)]
+  srank=sorted(BOATS,key=lambda s:(-float(p2[s]),s))
+  third_rank={s:sorted((t for t in BOATS if t!=s),key=lambda t:(-float(pc[(s,t)]),t)) for s in BOATS}
+  oppdiag={"p2":{str(s):float(p2[s]) for s in BOATS},"pc":{f"{s}>{t}":float(pc[(s,t)]) for s in BOATS for t in BOATS if t!=s},
+           "second_rank":srank,"third_rank":{str(s):third_rank[s] for s in BOATS},
+           "second_gap12":float(p2[srank[0]]-p2[srank[1]]),"second_gap23":float(p2[srank[1]]-p2[srank[2]])}
   decisions.append({"date":str(rr.date),"race_code":code,"jcd":code[8:10],"rno":int(code[10:12]),"head_prob":hp,"mass":mass,"comp":comp,
    "old164":int(old164),"baseformula":int(baseformula),"rescue082":int(old164 and comp>=2.5 and hp+1.5*mass>=.82),"base120":int(base120),"newfeature_add":int(expansion),"selected":int(selected),"shadow":int(shadow),"production_bet":int(selected),
-   "tickets":"|".join(tickets),"ticket_count":len(tickets),"stake":sum(x["stake"] for x in stakes),"stake_plan":json.dumps(stakes,ensure_ascii=False),"nf_score":score})
+   "tickets":"|".join(tickets),"ticket_count":len(tickets),"stake":sum(x["stake"] for x in stakes),"stake_plan":json.dumps(stakes,ensure_ascii=False),"nf_score":score,
+   "opponent_diag":json.dumps(oppdiag,ensure_ascii=False)})
  d=pd.DataFrame(decisions)
  if not len(d):raise RuntimeError("NO_SIX_MONTH_DECISIONS")
  # Month-by-month volume funnel. This diagnoses coverage/gate loss without reading outcomes.
@@ -251,6 +257,25 @@ def main():
     if x["combo"]==actual and int(x["stake"])>0:hit=1;pay=float(x["stake"])*float(x["odds"])
   hits.append(hit);pays.append(pay)
  d["head4"]=head;d["hit"]=hits;d["payout"]=pays;d["profit"]=d.payout-d.stake
+ # Outcome is joined only after all decisions are frozen. Classify opponent misses for research.
+ miss_rows=[]
+ for _,r in d[(d.production_bet==1)&(d.head4==1)].iterrows():
+  a=tr.get(r.race_code)
+  if not a: continue
+  s,t=int(a[1]),int(a[2]); z=json.loads(r.opponent_diag); sr=[int(x) for x in z["second_rank"]]; trk=[int(x) for x in z["third_rank"][str(s)]]
+  ticketset=set(str(r.tickets).split("|"))
+  if s not in sr[:2]: reason="SECOND_OUTSIDE_TOP2"
+  elif t not in trk[:2] and f"4-{s}-{t}" not in ticketset: reason="THIRD_OUTSIDE_SELECTED"
+  elif f"4-{s}-{t}" not in ticketset: reason="PAIR_CONSTRUCTION_MISS"
+  else: reason="COVERED"
+  miss_rows.append({"race_code":r.race_code,"date":r.date,"jcd":r.jcd,"actual_second":s,"actual_third":t,"reason":reason,
+                    "second_rank":sr.index(s)+1,"second_gap_to_top2":max(0.0,float(z["p2"][str(sr[1])])-float(z["p2"][str(s)])),
+                    "third_rank":trk.index(t)+1,"third_gap_to_top2":max(0.0,float(z["pc"][f"{s}>{trk[1]}"])-float(z["pc"][f"{s}>{t}"]))})
+ oppmiss=pd.DataFrame(miss_rows)
+ if len(oppmiss):
+  oppmiss.to_csv(OUT/"opponent_miss_decomposition.csv",index=False)
+  print("OPPONENT_MISS_COUNTS",json.dumps(oppmiss.reason.value_counts().to_dict(),ensure_ascii=False))
+  print("OPPONENT_RANK_COUNTS",json.dumps({"second":oppmiss.second_rank.value_counts().sort_index().to_dict(),"third":oppmiss.third_rank.value_counts().sort_index().to_dict()},ensure_ascii=False))
  b=d[d.production_bet==1].copy().sort_values(["date","race_code"])
  equity=b.profit.cumsum(); peak=equity.cummax().clip(lower=0); dd=peak-equity
  loss=mx=0
