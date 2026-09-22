@@ -12,5 +12,5 @@ jobs:
           python-version: '3.11'
       - name: Install dependencies
         run: pip install numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
-      - name: Verify approved THIRD0.10 production invariants
+      - name: Verify adopted SECOND0.11 THIRD0.18 production invariants
         run: python verify_4head_v291_third010_live.py
