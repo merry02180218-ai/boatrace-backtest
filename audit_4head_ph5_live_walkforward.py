@@ -130,7 +130,7 @@ def main():
  strict=pd.read_csv(os.environ["STRICT_ROWS"],dtype={"race_code":str});strict.race_code=strict.race_code.astype(str).str.zfill(12)
  strict=strict[(strict.month>="2026-06")&(strict.month<="2026-08")&strict.struct_ready.astype(str).str.lower().isin(["true","1"])].copy()
  if not len(strict):raise RuntimeError("NO_SIX_MONTH_STRUCT_READY")
- v=pd.read_csv(os.environ["V93_ROWS"],dtype={"race_code":str});v.race_code=v.race_code.astype(str).str.zfill(12);v=v[v.race_code.isin(set(strict.race_code))].copy()
+ v_all=pd.read_csv(os.environ["V93_ROWS"],dtype={"race_code":str});v_all.race_code=v_all.race_code.astype(str).str.zfill(12);v=v_all[v_all.race_code.isin(set(strict.race_code))].copy()
  if set(v.race_code)!=set(strict.race_code):raise RuntimeError(f"V93_COVERAGE_{v.race_code.nunique()}/{len(strict)}")
  # Build v283 long table from pre-result V93/player primitives, then current exhibition/scenario/relative transforms.
  long=v283build.build_long_all(v); long=add_start_features(long)
@@ -139,7 +139,7 @@ def main():
  # Exact PH5 feature family = v93 base features + five causal boat-4 PLAYER_HISTORY features.
  truth0=pd.read_csv("/tmp/head4_clean_long_dataset/dataset.csv",dtype={"race_code":str},usecols=["race_code","head4"])
  truth0.race_code=truth0.race_code.astype(str).str.zfill(12)
- hz=v.copy(); hz["month"]=hz.race_code.str[:4]+"-"+hz.race_code.str[4:6]
+ hz=v_all.copy(); hz["month"]=hz.race_code.str[:4]+"-"+hz.race_code.str[4:6]
  hz=hz.merge(truth0,on="race_code",how="left",validate="one_to_one")
  oldph=[c for c in hz if "_pl_" in c]
  if oldph: hz=hz.drop(columns=oldph)
