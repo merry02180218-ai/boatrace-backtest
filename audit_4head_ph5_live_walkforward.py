@@ -72,6 +72,23 @@ def add_start_features(long):
 
 def od3():
  out={}
+ # Prefer historical pre-deadline snapshots from BoatraceCSV (about 5 min before close).
+ for p in sorted(glob.glob(str(DATA_ROOT/"data/previews/od3/2026/*/*.csv"))):
+  try:q=pd.read_csv(p,dtype={"レースコード":str})
+  except:continue
+  for _,r in q.iterrows():
+   code=rc(r.get("レースコード",""))
+   if not ("202603010000" <= code <= "202608319999"):continue
+   m={}
+   for aa in range(1,7):
+    for bb in range(1,7):
+     if bb==aa:continue
+     for cc in range(1,7):
+      if cc in (aa,bb):continue
+      key=f"{aa}-{bb}-{cc}"; v=ff(r.get(f"3連単_{key}"))
+      if math.isfinite(v) and v>0:m[key]=v
+   if len(m)==120:out[code]=m
+ # Closing odds are fallback only when no pre-deadline snapshot exists.
  for p in sorted(glob.glob(str(ROOT/"data/official_closing_odds3t/2026/*/*.csv"))):
   q=pd.read_csv(p,dtype={"jcd":str})
   for _,r in q.iterrows():
@@ -85,7 +102,7 @@ def od3():
       if cc in (aa,bb):continue
       key=f"{aa}-{bb}-{cc}";v=pd.to_numeric(pd.Series([r.get(key)]),errors="coerce").iloc[0]
       if pd.notna(v) and float(v)>0:m[key]=float(v)
-   if len(m)==120:out[code]=m
+   if len(m)==120 and code not in out:out[code]=m
  return out
 
 def truth():
@@ -258,6 +275,6 @@ def main():
  diag["base120_headprob_ge018_R"]=int(((b.base120==1)&(b.head_prob>=.18)).sum())
  (OUT/"base120_diagnostic.json").write_text(json.dumps(diag,ensure_ascii=False,indent=2)+"\n")
  print("BASE120_DIAGNOSTIC",json.dumps(diag,ensure_ascii=False))
- out["monthly"]=out_monthly; out["closing_odds_used"]=True; out["waku10_backfill_used"]=False; (OUT/"result.json").write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n")
+ out["monthly"]=out_monthly; out["closing_odds_used"]=True; out["predeadline_od3_preferred"]=True; out["waku10_backfill_used"]=False; (OUT/"result.json").write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n")
  print(json.dumps(out,ensure_ascii=False,indent=2));print(monthly.to_string(index=False));print(venue.to_string(index=False));print("HEAD4_PH5_LIVE_WALKFORWARD_OK")
 if __name__=="__main__":main()
