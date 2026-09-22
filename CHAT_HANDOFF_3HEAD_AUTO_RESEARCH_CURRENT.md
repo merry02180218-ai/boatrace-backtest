@@ -65,3 +65,12 @@
 - Same monthly volume as BASE p>=.30; no threshold tuning, no hard gate.
 - Add leave-one-pristine-month-out stability summary and delta-vs-BASE.
 - September outcomes UNREAD; production unchanged.
+
+
+## 2026-09-22 — AFTER v3 / START: FULL_3V2 CORE/A+.60 same-universe integration
+- v3 success: Run 35681239039 / Job 106598437891 / Artifact 10675351417.
+- Fixed FULL_3V2 remains strongest selected head-rate candidate: 1849R/714 = 38.62% vs BASE 1849/697 = 37.70%.
+- Pristine Mar-Jun FULL_3V2 beats BASE in all four months.
+- Next experiment freezes FULL_3V2 membership logic; no further feature/threshold search.
+- Apply BASE vs FULL_3V2 to the current CORE/A+.60 same-universe structure and measure membership changes, head capture, ticket/capture diagnostics and settlement ROI only from available historical closing odds.
+- September outcomes remain UNREAD. Jul/Aug descriptive only. Production unchanged until integration audit passes.
