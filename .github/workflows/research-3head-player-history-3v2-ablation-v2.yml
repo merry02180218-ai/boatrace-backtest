@@ -19,7 +19,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           s=Path('analyze_3head_player_history_3v2_ablation_v2.py').read_text()
-          assert r'\n' not in s
+          compile(s, 'analyze_3head_player_history_3v2_ablation_v2.py', 'exec')
           assert "SEPTEMBER_OUTCOMES_READ':False" in s
           assert "threshold_tuning':False" in s
           assert "PRODUCTION_CHANGED':False" in s
