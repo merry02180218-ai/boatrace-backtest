@@ -280,7 +280,7 @@ def main():
  grid=[]
  for sg in (0.06,0.07,0.08,0.09,0.10,0.11,0.12,0.13,0.14):
   for tg in (0.14,0.16,0.18,0.20,0.22,0.24):
-   stake=pay=hits=pts=0; rows=[]
+   stake=pay=hits=pts=0; eval_rows=[]
    for _,r in d[d.production_bet==1].iterrows():
     z=json.loads(r.opponent_diag); sr=[int(x) for x in z["second_rank"]]; tr0=str(r.tickets).split("|"); ts=list(tr0)
     # add SECOND rank3 only when close to rank2; give it top2 THIRDs
@@ -314,8 +314,8 @@ def main():
     pp=st if (not a) else 0.0; hh=0
     for x in plan:
      if actual and x["combo"]==actual: pp=float(x["stake"])*float(x["odds"]); hh=1
-    pay+=pp; hits+=hh; rows.append({"date":str(r.date),"jcd":str(r.race_code)[:2],"hit":hh,"stake":st,"payout":pp,"base120":int(r.base120_selected),"newfeature":int(r.newfeature_expansion)})
-   R=int((d.production_bet==1).sum()); expected=R*BANK; feasible=(stake==expected); rr=pd.DataFrame(rows)
+    pay+=pp; hits+=hh; eval_rows.append({"date":str(r.date),"jcd":str(r.race_code)[:2],"hit":hh,"stake":st,"payout":pp,"base120":int(r.base120_selected),"newfeature":int(r.newfeature_expansion)})
+   R=int((d.production_bet==1).sum()); expected=R*BANK; feasible=(stake==expected); rr=pd.DataFrame(eval_rows)
    monthly=[]; venue=[]; maxdd=0.0; maxls=0
    if len(rr):
     rr["month"]=rr.date.str[:7]; rr["profit"]=rr.payout-rr.stake; eq=rr.profit.cumsum(); maxdd=float((eq.cummax()-eq).max()); cur=0
