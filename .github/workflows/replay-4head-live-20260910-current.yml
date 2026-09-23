@@ -2,9 +2,6 @@ name: replay-4head-live-20260910-current
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/replay-4head-live-20260910-current.yml'
 
 permissions:
   contents: read
