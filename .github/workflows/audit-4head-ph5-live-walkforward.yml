@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'audit_4head_ph5_live_walkforward.py'
-      - 'research_4head_opponent_player_waku_v1.py research_4head_opponent_second_rerank_v2.py'
+      - 'research_4head_opponent_player_waku_v1.py'
       - 'research_4head_opponent_second_rerank_v2.py'
       - '.github/workflows/audit-4head-ph5-live-walkforward.yml'
 permissions:
@@ -31,8 +31,8 @@ jobs:
       - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
       - name: Preflight
         run: |
-          python -m py_compile prepare_4head_6m_v93_neutral_waku.py audit_4head_ph5_live_walkforward.py research_4head_opponent_player_waku_v1.py
-          ! grep -n '\\\\n' audit_4head_ph5_live_walkforward.py
+          python -m py_compile prepare_4head_6m_v93_neutral_waku.py audit_4head_ph5_live_walkforward.py research_4head_opponent_player_waku_v1.py research_4head_opponent_second_rerank_v2.py
+          ! grep -n '\\\\n' audit_4head_ph5_live_walkforward.py research_4head_opponent_player_waku_v1.py research_4head_opponent_second_rerank_v2.py
       - name: Prepare historical LIVE primitives
         env:
           BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
