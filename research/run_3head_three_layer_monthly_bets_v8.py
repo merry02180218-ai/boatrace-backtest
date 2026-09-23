@@ -74,10 +74,21 @@ def main():
     
     if not pred: raise RuntimeError(f"NO_PLAYER_HISTORY_PREDICTIONS pool={len(d)} months={d.month.value_counts().to_dict()} ph_nonnull={d[full].notna().sum().to_dict()}")
     p=pd.concat(pred,ignore_index=True)
-    # CORE exact replay depends on a generated audit CSV that is not committed.
-    # This audit therefore reports A+.60 -> FULL_3V2 exact pure-add counts for Jul/Aug.
-    # CORE remains unchanged and is reported separately from its frozen production evidence.
-    core_codes=set()
+    # Reconstruct exact frozen v288 CORE membership from the downloaded v243 audit source.
+    core_path=Path("analysis_v243_3head_expand_feature_audit.csv")
+    if not core_path.exists(): raise RuntimeError("MISSING_FROZEN_V243_CORE_SOURCE")
+    uq=pd.read_csv(core_path,dtype={"race_code":str})
+    uq["race_code"]=uq["race_code"].astype(str).str.replace(".0","",regex=False).str.zfill(12)
+    uq["date"]=pd.to_datetime(uq["date"],errors="coerce")
+    uq["_target"]=v288.target(uq).astype(int)
+    core_mask=(uq["_target"].eq(1)) & (
+        ((n(uq["f__c_b3_minus_b4_waku_st"])<=v288.WAKU34)&(n(uq["f__c_b3_minus_b4_st"])>=v288.ST34)&(n(uq["f__c_b3_meetst"])<=v288.MEETST)) |
+        ((uq["bet"].eq(1))&(n(uq["f__c_b3_minus_b4_st"])>=v288.A_ST34)&(n(uq["f__c_wall12_weak"])<=v288.A_WALL)) |
+        ((uq["bet"].eq(1))&(n(uq["f__c_b3_minus_b2_motor"])>=v288.B_MOTOR)&(n(uq["f__c_b3_inside_nst"])<=v288.B_NST))
+    )
+    core=uq.loc[core_mask,["race_code","date"]].drop_duplicates("race_code")
+    core_codes=set(core.race_code)
+    print("FROZEN_CORE",{"total":len(core),"jul":int(core.date.dt.month.eq(7).sum()),"aug":int(core.date.dt.month.eq(8).sum())})
     rows=[]
     detail=[]
     for mon,g in p.groupby("month"):
@@ -105,7 +116,7 @@ def main():
     z=pd.DataFrame(rows);z.to_csv(CSV,index=False)
     out={"policy":{"core_unchanged":True,"full3v2_strict_prior":True,"history_start":"2025-10-01","rolling_window_days":None,"candidate_gate_except_inner_motor_frozen":True,"inner_motor_pool_min":0.0,"opponent_core":"native_v242_5to10","opponent_expanded":"V221_Top6_protected_SECOND4","sep2026_used":False,"jul_aug_non_pristine_descriptive_only":True,"priority":"CORE>A60>FULL3V2","core_exact_overlap_available":True,"core_source":"frozen v243 artifact run 34383567078","production_changed":False},"rows":rows}
     OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2)+chr(10),encoding="utf-8")
-    print(json.dumps(out,ensure_ascii=False,indent=2));print("THREE_LAYER_MONTHLY_BETS_V7_OK");print("SEPTEMBER_UNREAD");print("PRODUCTION_UNCHANGED")
+    print(json.dumps(out,ensure_ascii=False,indent=2));print("THREE_LAYER_MONTHLY_BETS_V8_OK");print("SEPTEMBER_UNREAD");print("PRODUCTION_UNCHANGED")
 if __name__=="__main__":main()
 
 # trigger exact layered audit v8
