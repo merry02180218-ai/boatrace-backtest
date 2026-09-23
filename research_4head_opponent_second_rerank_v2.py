@@ -23,6 +23,7 @@ ROOT=Path('/tmp/head4_ph5_live_walkforward')
 OUT=Path('/tmp/head4_opponent_second_rerank_v2'); OUT.mkdir(parents=True,exist_ok=True)
 BOATS=(1,2,3,5,6)
 ALPHAS=(0.0,0.15,0.25,0.35,0.50,0.70,1.0)
+MODES=('rerank','rescue','scenario')
 SECOND_GAP=.11
 THIRD_GAP=.18
 FEATURES=['logit_p2','pl_all_win','pl_all_p2','pl_frame_win','pl_frame_p2','pl_recent_p2','w10_wr','w10_st','w10_sr','w10_pastwin','w10_rel4_wr','w10_rel4_st','w10_rel4_sr','w10_rel4_pastwin']
@@ -82,6 +83,17 @@ def evaluate(z,score_col,label):
         rows.append({'race_code':rc,'month':r.month,'variant':label,'second_rank':rank.index(int(r.actual_second))+1,'second_top2':int(int(r.actual_second) in rank[:2]),'second_top3':int(int(r.actual_second) in rank[:3]),'trifecta_capture':int(actual in ts),'ticket_count':len(ts)})
     return pd.DataFrame(rows)
 
+def scenario_score(frame):
+    # Development-only expansion: use pre-race PLAYERHistory/Waku10 as an attack/wall scenario signal.
+    # No head/outcome fields enter this score.
+    x=frame.copy()
+    def z(s):
+        s=pd.to_numeric(s,errors='coerce'); med=s.median(); s=s.fillna(med)
+        sd=s.std(); return (s-s.mean())/(sd if pd.notna(sd) and sd>1e-9 else 1.0)
+    # Higher win/p2 and Waku10 win/straight-rate support an opponent surviving the 4 attack.
+    sig=(z(x.pl_frame_p2)+z(x.pl_recent_p2)+z(x.w10_wr)+z(x.w10_sr)+z(x.w10_rel4_wr))/5.0
+    return x.logit_p2 + 0.25*sig
+
 def main():
     z=build_long(); dev=z[z.month.eq('2026-06')].copy(); hold=z[z.month.isin(['2026-07','2026-08'])].copy()
     if dev.race_code.nunique()!=24 or hold.race_code.nunique()!=57: raise RuntimeError('MONTH_HEAD4_COUNTS_DRIFT')
@@ -100,10 +112,21 @@ def main():
         pp=m.predict_proba(frame[FEATURES])[:,1]; frame['ml_prob']=pp
         frame['rerank_score']=(1-alpha)*frame.logit_p2+alpha*np.log(np.clip(pp,1e-6,1-1e-6)/np.clip(1-pp,1e-6,1-1e-6))
         frame['baseline_score']=frame.logit_p2
-    detail=pd.concat([evaluate(dev,'baseline_score','baseline_dev'),evaluate(dev,'rerank_score','rerank_dev'),evaluate(hold,'baseline_score','baseline_holdout'),evaluate(hold,'rerank_score','rerank_holdout')],ignore_index=True)
+    for frame in (dev,hold): frame['scenario_score']=scenario_score(frame)
+    # Rescue-only variant: preserve production top2; use scenario signal only to choose the optional third SECOND.
+    def rescue_eval(frame,label):
+        rows=[]
+        for rc,g in frame.groupby('race_code',sort=False):
+            r=g.iloc[0]; base=score_group(g,'baseline_score'); cand=base[2:]; cand=sorted(cand,key=lambda b:(-float(g.loc[g.boat.eq(b),'scenario_score'].iloc[0]),b)); rank=base[:2]+cand
+            sm={int(b):float(g.loc[g.boat.eq(b),'baseline_score'].iloc[0]) for b in g.boat}
+            # Force rescue decision to production gap; scenario only determines which outsider is rescued.
+            diag=json.loads(r.opponent_diag); ts=tickets_for(diag,rank,sm); actual=f"4-{int(r.actual_second)}-{int(r.actual_third)}"
+            rows.append({'race_code':rc,'month':r.month,'variant':label,'second_rank':rank.index(int(r.actual_second))+1,'second_top2':int(int(r.actual_second) in rank[:2]),'second_top3':int(int(r.actual_second) in rank[:3]),'trifecta_capture':int(actual in ts),'ticket_count':len(ts)})
+        return pd.DataFrame(rows)
+    detail=pd.concat([evaluate(dev,'baseline_score','baseline_dev'),evaluate(dev,'rerank_score','rerank_dev'),evaluate(dev,'scenario_score','scenario_dev'),rescue_eval(dev,'rescue_dev'),evaluate(hold,'baseline_score','baseline_holdout'),evaluate(hold,'rerank_score','rerank_holdout'),evaluate(hold,'scenario_score','scenario_holdout'),rescue_eval(hold,'rescue_holdout')],ignore_index=True)
     summary=detail.groupby(['variant','month']).agg(R=('race_code','size'),second_top2=('second_top2','sum'),second_top3=('second_top3','sum'),trifecta_capture=('trifecta_capture','sum'),avg_points=('ticket_count','mean')).reset_index()
     cvdf.to_csv(OUT/'june_groupcv_alpha_grid.csv',index=False); detail.to_csv(OUT/'race_detail.csv',index=False); summary.to_csv(OUT/'summary.csv',index=False)
-    meta={'production_bets':163,'head4_R':81,'dev':'2026-06 only','holdout':['2026-07','2026-08'],'dev_head4_R':24,'holdout_head4_R':57,'selected_alpha':alpha,'features':FEATURES,'SECOND_GAP':SECOND_GAP,'THIRD_GAP':THIRD_GAP,'PLAYER_HISTORY':'causal prior-day','Waku10':'pre-race only','SEPTEMBER_OUTCOMES_READ':False,'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':False,'ROI_EVALUATED':False,'roi_note':'counterfactual newly-added ticket odds must be reconstructed before ROI claim'}
+    meta={'production_bets':163,'head4_R':81,'dev':'2026-06 only','holdout':['2026-07','2026-08'],'dev_head4_R':24,'holdout_head4_R':57,'selected_alpha':alpha,'features':FEATURES,'SECOND_GAP':SECOND_GAP,'THIRD_GAP':THIRD_GAP,'PLAYER_HISTORY':'causal prior-day','Waku10':'pre-race only','SEPTEMBER_OUTCOMES_READ':False,'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':False,'research_modes':['SECOND rerank','SECOND rescue','pre-race scenario/展開 proxy'],'ROI_EVALUATED':False,'roi_note':'counterfactual newly-added ticket odds must be reconstructed before ROI claim'}
     (OUT/'meta.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n')
     print('SECOND_RERANK_CV_TOP',cvdf.head(7).to_json(orient='records'))
     print('SECOND_RERANK_SUMMARY',summary.to_json(orient='records'))
