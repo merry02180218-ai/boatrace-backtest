@@ -78,7 +78,10 @@ def main():
   except Exception as e:
    frozen.append({'race_code':code,'status':'EXHIBITION_MISSING','reason':str(e)});continue
   pf=fast.player_flat(cards[code],state); hp=fast.ph5_head_prob_live(cards[code],waku[code],exh,pf); src=fast.make_boats(cards[code],waku[code],exh,pf)
-  sr,cr=fast.derive(src,art);p2=score_second(sr,art);pc=score_conditional_third(cr,art);tickets=fast.production_tickets(p2,pc);pairs=[tuple(map(int,x.split('-')[1:])) for x in tickets];mass=fast.pair_mass(p2,pc,pairs)
+  sr,cr=fast.derive(src,art);p2=score_second(sr,art);pc=score_conditional_third(cr,art);tickets=fast.production_tickets(p2,pc)
+  if code=='202609221007':
+   srank=sorted(fast.BOATS,key=lambda s:(-float(p2[s]),s)); diag={'p2':{str(k):float(v) for k,v in p2.items()},'second_rank':srank,'pc_for_3':{str(t):float(pc[(3,t)]) for t in fast.BOATS if t!=3},'tickets':tickets}; print('TOKONAME7_OPP_DIAG',json.dumps(diag,ensure_ascii=False))
+  pairs=[tuple(map(int,x.split('-')[1:])) for x in tickets];mass=fast.pair_mass(p2,pc,pairs)
   vals=[odds[code][x] for x in tickets];comp=fast.composite_odds(vals);d=fast.newfeature_decide(hp,mass,comp,exh,cards[code],state,int(t['jcd']));shadow=bool(hp<.10)
   sadv=fast.structural_advantages(exh)
   ph5_frozen_gate=bool(hp>=.36 and sadv['orig4_adv_inside'] is not None and sadv['orig4_adv_inside']>=-.06)
