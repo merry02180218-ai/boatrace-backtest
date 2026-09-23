@@ -18,7 +18,7 @@ OUT=Path("/tmp/head4_opponent_player_waku_v1"); OUT.mkdir(parents=True,exist_ok=
 BOATS=(1,2,3,5,6)
 
 def main():
-    d=pd.read_csv(ROOT/"decisions.csv",dtype={"race_code":str})
+    d=pd.read_csv(ROOT/"race_detail.csv",dtype={"race_code":str})
     d.race_code=d.race_code.astype(str).str.zfill(12)
     d=d[d.production_bet.eq(1)].copy()
     if d.empty: raise RuntimeError("NO_FROZEN_PRODUCTION_BETS")
