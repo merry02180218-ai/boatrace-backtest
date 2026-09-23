@@ -147,7 +147,7 @@ def main():
     else: base=None
     # Freeze one simple DEV-only rule before opening SUPPORT labels.
     frozen_feature='b1_pl_recent_p2'; frozen_side='ge'; frozen_threshold=0.533333333333
-    support=df[df['month'].isin(SUPPORT_MONTHS)].copy()
+    support=df[df['month'].isin(['2026-07','2026-08'])].copy()
     sel_support=support[support[frozen_feature]>=frozen_threshold]
     support_R=int(len(support)); support_heads=int(support['head_hit'].sum())
     support_sel_R=int(len(sel_support)); support_sel_heads=int(sel_support['head_hit'].sum())
