@@ -11,7 +11,6 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]));sys.path.insert(0,st
 import run_3head_a60_playerhistory_curve_v1 as base
 import analyze_3head_player_history_3v2_ablation_v2 as ph
 import run_3head_wave20_manual_gate as w20
-import run_3head_v288_a60_overlap_strength as v288ov
 
 OUT=Path("research_3head_three_layer_monthly_bets_v7.json"); CSV=Path("research_3head_three_layer_monthly_bets_v7.csv")
 TARGETS=[30,40,50,60,70,80]
@@ -74,8 +73,10 @@ def main():
     
     if not pred: raise RuntimeError(f"NO_PLAYER_HISTORY_PREDICTIONS pool={len(d)} months={d.month.value_counts().to_dict()} ph_nonnull={d[full].notna().sum().to_dict()}")
     p=pd.concat(pred,ignore_index=True)
-    # Freeze CORE membership independently, then apply priority CORE > A+.60 > FULL_3V2.
-    core=v288ov.build_v288_codes(); core_codes=set(core.race_code.astype(str))
+    # CORE exact replay depends on a generated audit CSV that is not committed.
+    # This audit therefore reports A+.60 -> FULL_3V2 exact pure-add counts for Jul/Aug.
+    # CORE remains unchanged and is reported separately from its frozen production evidence.
+    core_codes=set()
     rows=[]
     detail=[]
     for mon,g in p.groupby("month"):
@@ -101,7 +102,7 @@ def main():
             rows.append({"month":mon,"variant":"OVERLAP_A60_FULL3V2","target_R":target,"R":len(ov),"heads":int(ov.y.sum()),"head_rate":float(ov.y.mean()) if len(ov) else None})
             rows.append({"month":mon,"variant":"FULL3V2_INCREMENT_ONLY","target_R":target,"R":len(add),"heads":int(add.y.sum()),"head_rate":float(add.y.mean()) if len(add) else None})
     z=pd.DataFrame(rows);z.to_csv(CSV,index=False)
-    out={"policy":{"core_unchanged":True,"full3v2_strict_prior":True,"history_start":"2025-10-01","rolling_window_days":None,"candidate_gate_except_inner_motor_frozen":True,"inner_motor_pool_min":0.0,"opponent_core":"native_v242_5to10","opponent_expanded":"V221_Top6_protected_SECOND4","sep2026_used":False,"jul_aug_non_pristine_descriptive_only":True,"priority":"CORE>A60>FULL3V2","production_changed":False},"rows":rows}
+    out={"policy":{"core_unchanged":True,"full3v2_strict_prior":True,"history_start":"2025-10-01","rolling_window_days":None,"candidate_gate_except_inner_motor_frozen":True,"inner_motor_pool_min":0.0,"opponent_core":"native_v242_5to10","opponent_expanded":"V221_Top6_protected_SECOND4","sep2026_used":False,"jul_aug_non_pristine_descriptive_only":True,"priority":"A60>FULL3V2; CORE exact overlap pending generated v288 source","core_exact_overlap_available":False,"production_changed":False},"rows":rows}
     OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2)+chr(10),encoding="utf-8")
     print(json.dumps(out,ensure_ascii=False,indent=2));print("THREE_LAYER_MONTHLY_BETS_V7_OK");print("SEPTEMBER_UNREAD");print("PRODUCTION_UNCHANGED")
 if __name__=="__main__":main()
