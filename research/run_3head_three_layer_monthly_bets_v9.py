@@ -13,7 +13,7 @@ import analyze_3head_player_history_3v2_ablation_v2 as ph
 import run_3head_wave20_manual_gate as w20
 import verify_v288_operational_pre_replay as v288
 
-OUT=Path("research_3head_three_layer_monthly_bets_v9.json"); CSV=Path("research_3head_three_layer_monthly_bets_v8.csv")
+OUT=Path("research_3head_three_layer_monthly_bets_v9.json"); CSV=Path("research_3head_three_layer_monthly_bets_v9.csv")
 TARGETS=[30,40,50,60,70,80]
 PURE_MIN=[0,.10,.20,.30,.40,.50,.60]
 PRE_MIN=[.925,.94,.95,.96,.97]
