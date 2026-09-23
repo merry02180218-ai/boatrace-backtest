@@ -1,0 +1,128 @@
+name: research-3head-core-selection-stage-audit-v14
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - research/run_3head-core-selection-stage-audit-v14.trigger
+permissions:
+  actions: read
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas
+      - name: Download prior successful native replay artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir prior
+          gh run download 35607152183 --repo merry02180218-ai/boatrace-backtest --name research-3head-dual-feb-core-native-replay --dir prior
+          find prior -maxdepth 4 -type f -print
+      - name: Download frozen v243 membership source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir golden
+          gh run download 34383567078 --repo merry02180218-ai/boatrace-backtest --name v243-3head-expand-feature-audit --dir golden
+          cp golden/analysis_v243_3head_expand_feature_audit.csv .
+      - name: Build lightweight identity audit
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import pandas as pd
+          import verify_v288_operational_pre_replay as v
+          q=pd.read_csv('analysis_v243_3head_expand_feature_audit.csv',dtype={'race_code':str})
+          q.date=q.date.astype(str);q['month']=q.date.str[:7];q['_target']=v.target(q).astype(int)
+          ms=sorted(q.month.unique());pred=[];cs=v.precols(q)
+          for i,m in enumerate(ms):
+              if i<2: continue
+              tr=q[q.month.isin(ms[:i])].copy();te=q[q.month==m].copy();fs=v.learned_features(tr,cs)
+              tr_score=v.score_with(tr,tr,fs);te['_score']=v.score_with(tr,te,fs)
+              te['grade']=__import__('numpy').where(te._score>=float(tr_score.quantile(v.S_Q)),'S',__import__('numpy').where(te._score>=float(tr_score.quantile(v.A_Q)),'A','B'))
+              pred.append(te)
+          u=pd.concat(pred,ignore_index=True);u=u[u.grade.isin(['S','A'])].copy()
+          n=lambda d,c: pd.to_numeric(d[c],errors='coerce')
+          final=u._target.eq(1)
+          core=(n(u,'f__c_b3_minus_b4_waku_st')<=v.WAKU34)&(n(u,'f__c_b3_minus_b4_st')>=v.ST34)&(n(u,'f__c_b3_meetst')<=v.MEETST)
+          sr=final&core;purch=u.bet.eq(1)
+          ar=purch&(~sr)&(n(u,'f__c_b3_minus_b4_st')>=v.A_ST34)&(n(u,'f__c_wall12_weak')<=v.A_WALL)
+          br=purch&(~sr)&(~ar)&(n(u,'f__c_b3_minus_b2_motor')>=v.B_MOTOR)&(n(u,'f__c_b3_inside_nst')<=v.B_NST)
+          frozen=u[(sr|ar|br)&u.month.eq('2026-02')].copy()
+          frozen_codes=frozen.race_code.astype(str).str.zfill(12).tolist()
+          native=[]
+          for f in Path('prior').glob('core_replay/**/day_summary.json'):
+              j=json.loads(f.read_text())
+              for key in ['rows','decisions','races','bets']:
+                  x=j.get(key)
+                  if isinstance(x,list):
+                      for r in x:
+                          if isinstance(r,dict) and r.get('race_code') is not None: native.append(str(r['race_code']).zfill(12))
+          if not native and Path('prior/core_native_feb_replay.csv').exists():
+              z=pd.read_csv('prior/core_native_feb_replay.csv',dtype={'race_code':str});native=z.race_code.astype(str).str.zfill(12).tolist()
+          native=sorted(set(native))
+          rows=[]
+          for code in frozen_codes:
+              same=[x for x in native if x[:8]==code[:8]]
+              rows.append({'frozen_core_code':code,'exact_native_match':code in native,'same_date_native_codes':'|'.join(same),'same_date_native_count':len(same)})
+          out=pd.DataFrame(rows);out.to_csv('core_identity_light.csv',index=False)
+          summary={'frozen_core':len(frozen_codes),'native_codes':len(native),'exact_matches':int(out.exact_native_match.sum()),'mismatches':int((~out.exact_native_match).sum()),'heavy_cache_rebuild':False,'source_run':35607152183,'source_artifact':10645188056}
+          Path('core_identity_light_summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+chr(10))
+          print(out.to_string(index=False));print(json.dumps(summary,ensure_ascii=False,indent=2));print('CORE_IDENTITY_LIGHT_OK')
+          # Feature/grade/route diagnostic: frozen CORE vs same-date native replacement.
+          keep=['race_code','date','grade','_score','_target','bet','f__c_b3_minus_b4_waku_st','f__c_b3_minus_b4_st','f__c_b3_meetst','f__c_wall12_weak','f__c_b3_minus_b2_motor','f__c_b3_inside_nst']
+          diag=[]
+          for r in rows:
+              fc=r['frozen_core_code']; same=[x for x in native if x[:8]==fc[:8]]
+              for role,code in [('frozen',fc)]+[('native',x) for x in same]:
+                  hit=u[u.race_code.astype(str).str.zfill(12).eq(code)]
+                  rec={'pair_date':fc[:8],'role':role,'race_code':code,'present_in_v243_operational_universe':not hit.empty}
+                  if not hit.empty:
+                      h=hit.iloc[0]
+                      for col in keep[2:]:
+                          if col in hit.columns: rec[col]=h[col]
+                      sm=bool(sr.loc[h.name]) if h.name in sr.index else False
+                      am=bool(ar.loc[h.name]) if h.name in ar.index else False
+                      bm=bool(br.loc[h.name]) if h.name in br.index else False
+                      rec['v288_route']='S' if sm else ('A' if am else ('B' if bm else 'NO_BET'))
+                  diag.append(rec)
+          dz=pd.DataFrame(diag);dz.to_csv('core_identity_feature_diff.csv',index=False)
+          print(dz.to_string(index=False));print('CORE_IDENTITY_FEATURE_DIFF_OK')
+          PY
+      - name: Compare native day-selection stages
+        run: |
+          python - <<'PY'
+          import json,pandas as pd
+          from pathlib import Path
+          frozen=pd.read_csv('core_identity_light.csv',dtype={'frozen_core_code':str})
+          rows=[]
+          for _,r in frozen.iterrows():
+              fc=str(r.frozen_core_code).zfill(12); d8=fc[:8]
+              mp=next(Path('prior').glob(f'**/{d8}/day_summary.json'),None)
+              rp=next(Path('prior').glob(f'**/{d8}/day_replay.csv'),None)
+              native=[]
+              if rp and rp.exists():
+                  q=pd.read_csv(rp,dtype={'race_code':str})
+                  for _,x in q.iterrows():
+                      native.append({'race_code':str(x.race_code).zfill(12),'decision':x.get('decision'),'route':x.get('route'),'pre_grade':x.get('pre_grade'),'pre_score':x.get('pre_score')})
+              summary=json.loads(mp.read_text()) if mp and mp.exists() else {}
+              same=[x for x in native if x['race_code'][:8]==d8]
+              rows.append({'frozen_core_code':fc,'exact_in_native_replay':any(x['race_code']==fc for x in same),'same_date_native_count':len(same),'same_date_native':json.dumps(same,ensure_ascii=False),'day_summary_keys':'|'.join(sorted(summary.keys()))})
+          z=pd.DataFrame(rows);z.to_csv('core_selection_stage_audit_v14.csv',index=False)
+          print(z.to_string(index=False));print('CORE_SELECTION_STAGE_AUDIT_V14_OK')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: research-3head-core-selection-stage-audit-v14
+          path: |
+            core_identity_light.csv
+            core_identity_light_summary.json
+            core_identity_feature_diff.csv
+            core_selection_stage_audit_v14.csv
