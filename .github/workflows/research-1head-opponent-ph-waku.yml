@@ -1,6 +1,11 @@
 name: 1HEAD opponent PH Waku10 research
 on:
   workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'research_1head_opponent_player_waku_v1.py'
+      - '.github/workflows/research-1head-opponent-ph-waku.yml'
 permissions:
   contents: read
   actions: read
