@@ -1,5 +1,5 @@
 name: research-3head-three-layer-monthly-bets-v8
-on:
+'on':
   workflow_dispatch:
   push:
     paths:
