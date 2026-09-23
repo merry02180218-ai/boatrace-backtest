@@ -21,21 +21,26 @@ jobs:
       - name: Install research dependencies
         run: python -m pip install -q --disable-pip-version-check numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
       - name: Download frozen v360 prepared artifact
+        shell: powershell
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          set -euo pipefail
-          gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/10539401122/zip" > /tmp/v360.zip
-          mkdir -p /tmp/v360
-          unzip -q /tmp/v360.zip -d /tmp/v360
-          PREP=$(find /tmp/v360 -type f \( -name '*.pkl' -o -name '*.pickle' \) -print -quit)
-          test -n "$PREP"
-          echo "PREP=$PREP" >> "$GITHUB_ENV"
+          $ErrorActionPreference = 'Stop'
+          $root = Join-Path $env:RUNNER_TEMP 'v360'
+          $zip = Join-Path $env:RUNNER_TEMP 'v360.zip'
+          if (Test-Path $root) { Remove-Item -Recurse -Force $root }
+          New-Item -ItemType Directory -Force -Path $root | Out-Null
+          gh api "/repos/$env:GITHUB_REPOSITORY/actions/artifacts/10539401122/zip" --output $zip
+          Expand-Archive -LiteralPath $zip -DestinationPath $root -Force
+          $prep = Get-ChildItem -Path $root -Recurse -File | Where-Object { $_.Extension -in '.pkl', '.pickle' } | Select-Object -First 1
+          if (-not $prep) { throw 'No prepared pickle found in frozen v360 artifact' }
+          "PREP=$($prep.FullName)" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
       - name: Run causal PLAYER_HISTORY coverage audit
-        run: python run_1head_player_history_expansion.py --prepared "$PREP"
+        shell: powershell
+        run: python run_1head_player_history_expansion.py --prepared "$env:PREP"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: onehead-player-history-expansion-${{ github.run_id }}
-          path: /tmp/1head-player-history-expansion
+          path: ${{ runner.temp }}/1head-player-history-expansion
           retention-days: 30
