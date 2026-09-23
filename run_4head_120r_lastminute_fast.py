@@ -747,6 +747,13 @@ def main():
     vals=[float(odds[x]) for x in tickets];comp=composite_odds(vals)
     try:
         d=newfeature_decide(hp,mass,comp,exh,cards[code],state,a.jcd)
+        # Production parity: frozen PH5 standard head gate. Legacy/newfeature remains diagnostic only.
+        sadv=structural_advantages(exh)
+        ph5_standard_selected=bool(hp>=.36 and sadv['orig4_adv_inside'] is not None and sadv['orig4_adv_inside']>=-.06)
+        d['legacy_newfeature_selected']=bool(d['selected'])
+        d['selected']=ph5_standard_selected
+        d['ph5_standard_selected']=ph5_standard_selected
+        d['selection_policy']='PH5_V31_P036_ORIG_M006'
     except Fast120NotReady as e:
         stages['newfeature_state_s']=0.0
         persist_no_bet_not_ready(a,code,deadline,'NEWFEATURE_STATE',e,total0,stages,monitored,hp,state)
