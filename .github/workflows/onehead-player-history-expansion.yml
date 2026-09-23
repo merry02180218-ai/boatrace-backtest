@@ -2,10 +2,7 @@ name: 1HEAD PLAYER_HISTORY expansion audit
 on:
   push:
     branches: [ research/1head-player-history-expansion ]
-    paths:
-      - 'run_1head_player_history_expansion.py'
-      - 'build_4head_player_history_live.py'
-      - '.github/workflows/onehead-player-history-expansion.yml'
+  workflow_dispatch:
 permissions:
   contents: read
   actions: read
