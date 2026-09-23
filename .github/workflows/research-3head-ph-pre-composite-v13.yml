@@ -15,10 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
-        with: {python-version: '3.11'}
+        with:
+          python-version: '3.11'
       - run: pip install -q numpy pandas scikit-learn requests
       - name: Frozen CORE
-        env: {GH_TOKEN: ${{ github.token }}}
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p golden
           gh run download 34383567078 --repo ${{ github.repository }} --name v243-3head-expand-feature-audit --dir golden
