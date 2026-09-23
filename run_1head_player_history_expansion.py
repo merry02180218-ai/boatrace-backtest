@@ -145,6 +145,13 @@ def main():
         scans=sorted(scans,key=lambda z:(z['head_rate'],z['R']),reverse=True)
         pd.DataFrame(scans).to_csv(OUT/'dev_ph_threshold_scan.csv',index=False)
     else: base=None
+    # Freeze one simple DEV-only rule before opening SUPPORT labels.
+    frozen_feature='b1_pl_recent_p2'; frozen_side='ge'; frozen_threshold=0.533333333333
+    support=df[df['month'].isin(SUPPORT_MONTHS)].copy()
+    sel_support=support[support[frozen_feature]>=frozen_threshold]
+    support_R=int(len(support)); support_heads=int(support['head_hit'].sum())
+    support_sel_R=int(len(sel_support)); support_sel_heads=int(sel_support['head_hit'].sum())
+    support_sel_rate=(support_sel_heads/support_sel_R if support_sel_R else None)
     meta={
       'population':'H078_M375_MINUS_LIVE165','expected_R':71,
       'feature_R':int(len(df)),'missing_card_R':len(missing),
@@ -152,10 +159,15 @@ def main():
       'dev_months':DEV,'support_months':SUP,
       'player_history_features':list(REQUIRED),
       'selection_used_support_outcomes':False,
+      'frozen_rule_source':'DEV_ONLY_BEFORE_SUPPORT_OPEN',
+      'frozen_rule':{'feature':frozen_feature,'side':frozen_side,'threshold':frozen_threshold},
+      'support_opened_after_freeze':True,
+      'support_R':support_R,'support_heads':support_heads,'support_head_rate':support_heads/support_R if support_R else None,
+      'support_selected_R':support_sel_R,'support_selected_heads':support_sel_heads,'support_selected_head_rate':support_sel_rate,
       'september_outcomes_read':False,
       'production_changed':False,
       'result_or_payout_used_as_score_input':False,
-      'stage':'DEV_PH_UNIVARIATE_DIAGNOSTIC',
+      'stage':'FROZEN_DEV_RULE_SUPPORT_HOLDOUT',
       'dev_R':int(len(dev)),'dev_base_head_rate':base,
       'dev_scan_top10':scans[:10],
       'coverage_ok':len(missing)==0 and len(df)==71,
