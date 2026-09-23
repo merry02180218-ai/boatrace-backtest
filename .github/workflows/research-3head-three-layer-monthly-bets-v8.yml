@@ -1,6 +1,9 @@
 name: research-3head-three-layer-monthly-bets-v8
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'research/run_3head_three-layer-monthly-bets-v8.trigger'
 permissions:
   actions: read
   contents: read
