@@ -35,9 +35,9 @@ jobs:
           s=p.read_text()
           ast.parse(s)
           assert chr(92)+'n' not in s
-          tree=ast.parse(s)
           assert "MISSING_FROZEN_V243_CORE_SOURCE" in s
-          assert "core_exact_overlap_available" in s
+          assert "analysis_v243_3head_expand_feature_audit.csv" in s
+          assert "core_codes=set(core.race_code)" in s
           assert "CORE>A60>FULL3V2" in s
           print('STATIC_PREFLIGHT_OK')
           PY
