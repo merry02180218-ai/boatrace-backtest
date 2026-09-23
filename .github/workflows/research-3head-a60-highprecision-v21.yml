@@ -1,0 +1,109 @@
+name: research-3head-a60-highprecision-v21
+on:
+  push:
+    branches: [main]
+    paths:
+      - research/run_3head-a60-highprecision-v21.trigger
+permissions:
+  actions: read
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn requests
+      - name: Download exact accepted CORE and frozen source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 35892602362 --repo ${{ github.repository }} --name research-3head-newcore-fast-v20 --dir core
+          gh run download 34383567078 --repo ${{ github.repository }} --name v243-3head-expand-feature-audit --dir golden
+          test -s core/accepted_core_fast_v20.csv
+          test "$(($(wc -l < core/accepted_core_fast_v20.csv)-1))" -eq 107
+      - name: Preflight
+        run: |
+          python -m py_compile research/run_3head_three_layer_monthly_bets_v9.py
+          grep -F "SEPTEMBER_UNREAD" research/run_3head_three_layer_monthly_bets_v9.py
+      - name: High precision A+ scan
+        run: |
+          python - <<'PY'
+          import sys, pandas as pd, numpy as np
+          from pathlib import Path
+          sys.path.insert(0,'research'); sys.path.insert(0,'.')
+          import run_3head_three_layer_monthly_bets_v9 as v9
+          import run_3head_a60_playerhistory_curve_v1 as base
+          import analyze_3head_player_history_3v2_ablation_v2 as ph
+          import run_3head_wave20_manual_gate as w20
+          from sklearn.pipeline import make_pipeline
+          from sklearn.impute import SimpleImputer
+          from sklearn.preprocessing import StandardScaler
+          from sklearn.linear_model import LogisticRegression
+          n=lambda s:pd.to_numeric(s,errors='coerce')
+          ranges={'oct':('2025-10-01','2025-10-31'),'nov':('2025-11-01','2025-11-30'),'dec':('2025-12-01','2025-12-31'),'jan':('2026-01-01','2026-01-31'),'feb':('2026-02-01','2026-02-28'),'mar':('2026-03-01','2026-03-31'),'apr':('2026-04-01','2026-04-30'),'may':('2026-05-01','2026-05-31'),'jun':('2026-06-01','2026-06-30'),'jul':('2026-07-01','2026-07-31'),'aug':('2026-08-01','2026-08-31')}
+          raw={k:w20.build_pre_enhanced(a,b,True)[:2] for k,(a,b) in ranges.items()}
+          frames={k:w20.prep_month(x,r) for k,(x,r) in raw.items()}
+          _,enh,_=w20.make_pre_scores.__globals__['choose_features'](pd.concat(list(frames.values()),ignore_index=True,sort=False))
+          scores={}
+          hist=pd.concat(list(frames.values()),ignore_index=True,sort=False)
+          for k in ['jul','aug']:
+            target=frames[k].sort_values(['date','rc']).copy(); out=[]
+            for dayv in sorted(target.date.dt.normalize().unique()):
+              day=pd.Timestamp(dayv); today=target[target.date.dt.normalize()==day].copy()
+              tr=hist[(hist.date<day)&(hist.date>=day-pd.Timedelta(days=42))].copy()
+              if len(tr)<500 or tr.y.nunique()<2 or len(today)==0: continue
+              model=make_pipeline(SimpleImputer(strategy='median'),StandardScaler(),LogisticRegression(C=.08,class_weight='balanced',solver='liblinear',max_iter=1800,random_state=161))
+              model.fit(tr[enh],tr.y); ptr=model.predict_proba(tr[enh])[:,1]; pp=model.predict_proba(today[enh])[:,1]
+              z=today[['rc','date','venue','race_no','y']].copy(); z['pre_score']=w20.make_pre_scores.__globals__['pct_ref'](ptr,pp); out.append(z)
+            scores[k]=pd.concat(out,ignore_index=True).drop_duplicates('rc')
+          w20.prefetch_sources.__globals__['END']='2026-08-31'
+          days,cache=w20.prefetch_sources(); post,_=w20.build_motor_exhibition(days,cache)
+          d=[]
+          for k in ['jul','aug']:
+            q=scores[k].merge(post,on=['rc','date'],how='left',validate='one_to_one'); q['month']=k; d.append(q)
+          d=pd.concat(d,ignore_index=True); d=ph.add_player_history(d)
+          names=ph.NAMES; full=[]
+          for k in names:
+            rel=f'pl_rel3_2_{k}'; d[rel]=n(d[f'b3_pl_{k}'])-n(d[f'b2_pl_{k}']); full += [f'b3_pl_{k}',f'b2_pl_{k}',rel]
+          rn=n(d.race_no); pre=n(d.pre_score)
+          pool=(rn>=1)&(rn<=12)&(pre>=.925)&base.pg.mask(d,base.pg.A['conds'])&(n(d.post_motor_inner_rank_edge)>=.60)
+          d=d.loc[pool].copy(); d['race_code']=d.rc.astype('int64').astype(str).str.zfill(12)
+          # causal PH score
+          pred=[]
+          for day in sorted(d.date.dt.normalize().unique()):
+            te=d[d.date.dt.normalize()==day].copy(); tr=d[(d.date<day)&(d.date>=pd.Timestamp('2025-10-01'))].copy()
+            if len(tr)<5 or tr.y.nunique()<2: continue
+            model=make_pipeline(SimpleImputer(strategy='median'),StandardScaler(),LogisticRegression(C=.08,class_weight='balanced',solver='liblinear',max_iter=1800,random_state=322))
+            model.fit(tr[full],tr.y.astype(int)); te['ph_score']=model.predict_proba(te[full])[:,1]; pred.append(te)
+          p=pd.concat(pred,ignore_index=True)
+          core=pd.read_csv('core/accepted_core_fast_v20.csv',dtype={'race_code':str}); core.race_code=core.race_code.str.zfill(12)
+          assert len(core)==107 and core.race_code.nunique()==107
+          p=p[~p.race_code.isin(set(core.race_code))].copy()
+          rows=[]
+          for mot in [.60,.65,.70,.75,.80,.85,.90]:
+            for premin in [.925,.94,.95,.96,.97,.98]:
+              for phmin in [0,.4,.45,.5,.55,.6,.65,.7]:
+                z=p[(n(p.post_motor_inner_rank_edge)>=mot)&(n(p.pre_score)>=premin)&(n(p.ph_score)>=phmin)]
+                if not len(z): continue
+                rows.append({'scope':'ALL','motor_min':mot,'pre_min':premin,'ph_min':phmin,'R':len(z),'heads':int(z.y.sum()),'head_rate':float(z.y.mean())})
+                for mon,g in z.groupby('month'):
+                  rows.append({'scope':mon,'motor_min':mot,'pre_min':premin,'ph_min':phmin,'R':len(g),'heads':int(g.y.sum()),'head_rate':float(g.y.mean())})
+          out=pd.DataFrame(rows); out.to_csv('a60_highprecision_v21.csv',index=False)
+          allr=out[out.scope.eq('ALL')].sort_values(['head_rate','R'],ascending=[False,False])
+          print('EXACT_CORE',len(core))
+          print('A60_PURE_BASE',len(p),int(p.y.sum()),float(p.y.mean()) if len(p) else None)
+          print('TOP_WITH_MIN_R_5')
+          print(allr[allr.R>=5].head(30).to_string(index=False))
+          print('TOP_WITH_MIN_R_10')
+          print(allr[allr.R>=10].head(30).to_string(index=False))
+          print('V21_OK'); print('SEPTEMBER_UNREAD'); print('PRODUCTION_UNCHANGED')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-3head-a60-highprecision-v21
+          path: a60_highprecision_v21.csv
