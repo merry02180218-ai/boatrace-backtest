@@ -14,7 +14,9 @@ import run_3head_wave20_manual_gate as w20
 import verify_v288_operational_pre_replay as v288
 
 OUT=Path("research_3head_three_layer_monthly_bets_v9.json"); CSV=Path("research_3head_three_layer_monthly_bets_v8.csv")
-TARGETS=[30,40,50,60,70,80]\nPURE_MIN=[0,.10,.20,.30,.40,.50,.60]\nPRE_MIN=[.925,.94,.95,.96,.97]
+TARGETS=[30,40,50,60,70,80]
+PURE_MIN=[0,.10,.20,.30,.40,.50,.60]
+PRE_MIN=[.925,.94,.95,.96,.97]
 HIST_START=pd.Timestamp("2025-10-01")
 def n(s):return pd.to_numeric(s,errors="coerce")
 
