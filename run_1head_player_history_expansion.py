@@ -17,6 +17,8 @@ from pathlib import Path
 import argparse,json,pickle
 import pandas as pd
 import onehead_production_profile as prod
+import run_v299_1head_trifecta3_policy_search as v299
+import run_v365_1head_exact3_hit_push as v365
 from build_4head_player_history_live import REQUIRED, _bycode, _blank, _pstat, _ii
 from backtest import rows as _rows
 from backtest_v4 import clean_name
@@ -152,6 +154,32 @@ def main():
     support_R=int(len(support)); support_heads=int(support['head_hit'].sum())
     support_sel_R=int(len(sel_support)); support_sel_heads=int(sel_support['head_hit'].sum())
     support_sel_rate=(support_sel_heads/support_sel_R if support_sel_R else None)
+    # Exact-3 ROI audit for the frozen PH expansion, using the same formal HYBRID ticket policy as LIVE165/v389.
+    union=list(rr['LIVE165'])+added
+    v365.install_payout_cache(union); payouts=v365.payouts_for(union)
+    def ticket_metric(rows0, selected_codes=None):
+        n=hits=ret=0
+        for r in rows0:
+            code=str(r['race_code']).zfill(12)
+            if selected_codes is not None and code not in selected_codes: continue
+            p2,pc=v365.formal_post_five6(r); prob=v299.pair_prob(p2,pc,prod.TICKET_ALPHA)
+            formal=v299.STRATEGIES['HYBRID'](p2,pc,prob)[:3]
+            ts={f'1-{s}-{t}' for s,t in formal}; actual=str(r['actual_combo'])
+            n+=1
+            if actual in ts: hits+=1; ret+=int(payouts[code])
+        stake=n*300
+        return {'R':n,'hits':hits,'exact3_rate':hits/n if n else None,'stake':stake,'return':ret,
+                'profit':ret-stake,'roi':ret/stake if stake else None}
+    selected_codes=set(ph_selected['race_code'].astype(str))
+    live_ticket=ticket_metric(rr['LIVE165'])
+    ph_ticket=ticket_metric(added,selected_codes)
+    combined_ticket={'R':live_ticket['R']+ph_ticket['R'],'hits':live_ticket['hits']+ph_ticket['hits'],
+                     'stake':live_ticket['stake']+ph_ticket['stake'],'return':live_ticket['return']+ph_ticket['return']}
+    combined_ticket['exact3_rate']=combined_ticket['hits']/combined_ticket['R']
+    combined_ticket['profit']=combined_ticket['return']-combined_ticket['stake']
+    combined_ticket['roi']=combined_ticket['return']/combined_ticket['stake']
+    if (live_ticket['R'],live_ticket['hits'],live_ticket['return']) != (165,87,63700):
+        raise RuntimeError(f'LIVE ticket sentinel drift {live_ticket}')
     # Combined operating summary: formal LIVE165 remains untouched; PH is additive expansion only.
     ph_selected=df[df[frozen_feature]>=frozen_threshold].copy()
     ph_selected_R=int(len(ph_selected)); ph_selected_heads=int(ph_selected['head_hit'].sum())
@@ -175,6 +203,7 @@ def main():
       'support_selected_R':support_sel_R,'support_selected_heads':support_sel_heads,'support_selected_head_rate':support_sel_rate,
       'september_outcomes_read':False,
       'production_changed':False,
+      'ticket_roi_audit':{'formal_live':live_ticket,'ph_expansion':ph_ticket,'combined':combined_ticket},
       'formal_live_reference':{'R':formal_R,'heads':formal_heads,'head_rate':formal_heads/formal_R},
       'ph_expansion_selected_all71':{'R':ph_selected_R,'heads':ph_selected_heads,'head_rate':ph_selected_heads/ph_selected_R if ph_selected_R else None,'monthly':ph_monthly},
       'combined_formal_plus_ph':{'R':combined_R,'heads':combined_heads,'head_rate':combined_heads/combined_R if combined_R else None},
