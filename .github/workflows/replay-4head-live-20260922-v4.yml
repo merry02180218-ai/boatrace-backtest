@@ -1,0 +1,56 @@
+name: replay-4head-live-20260922-v4
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/replay-4head-live-20260922-v4.txt'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/previews/tkz
+            data/previews/stt
+            data/previews/original_exhibition
+            data/previews/od3
+            data/results/realtime
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml joblib
+      - name: Download frozen Sep22 inputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p seed
+          gh run download 35696309894 -n head4-newfeature-pre-live-20260922 -D seed
+          CARD="$(find seed -type f -path '*/current_input/v291/20260922/race_cards.csv' | head -1)"
+          WAKU="$(find seed -type f -path '*/current_input/v291/20260922/waku10.csv' | head -1)"
+          STATE="$(find seed -type f -name 'head4_daily_state.json' | head -1)"
+          WATCH="$(find seed -type f -name 'head4_120r_watchlist.json' | head -1)"
+          test -n "$CARD" && test -n "$WAKU" && test -n "$STATE" && test -n "$WATCH"
+          echo "CARD=$CARD" >> "$GITHUB_ENV"
+          echo "WAKU=$WAKU" >> "$GITHUB_ENV"
+          echo "STATE=$STATE" >> "$GITHUB_ENV"
+          echo "WATCH=$WATCH" >> "$GITHUB_ENV"
+      - name: Preflight
+        run: python -m py_compile audit_4head_live_replay_20260922_v3.py run_4head_120r_lastminute_fast.py run_4head_v291_third010_live.py
+      - name: Historical replay
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: python audit_4head_live_replay_20260922_v3.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-live-replay-20260922-v4
+          path: /tmp/head4_replay_20260922_v3/
