@@ -1,11 +1,6 @@
 name: replay-4head-live-20260922-v3
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'audit_4head_live_replay_20260922_v3.py'
-      - '.github/workflows/replay-4head-live-20260922-v3.yml'
-      - '.github/triggers/replay-4head-live-20260922-v3.txt'
 permissions:\n  contents: read\n  actions: read
 jobs:
   replay:
