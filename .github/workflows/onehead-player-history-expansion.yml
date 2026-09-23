@@ -36,8 +36,15 @@ jobs:
           $prep = Get-ChildItem -Path $root -Recurse -File | Where-Object { $_.Extension -in '.pkl', '.pickle' } | Select-Object -First 1
           if (-not $prep) { throw 'No prepared pickle found in frozen v360 artifact' }
           "PREP=$($prep.FullName)" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
       - name: Run causal PLAYER_HISTORY coverage audit
         shell: powershell
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
         run: python run_1head_player_history_expansion.py --prepared "$env:PREP"
       - uses: actions/upload-artifact@v4
         if: always()
