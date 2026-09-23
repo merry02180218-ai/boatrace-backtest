@@ -6,7 +6,7 @@ on:
       - 'audit_4head_live_replay_20260922_v3.py'
       - '.github/workflows/replay-4head-live-20260922-v3.yml'
       - '.github/triggers/replay-4head-live-20260922-v3.txt'
-permissions: {contents: read, actions: read}
+permissions:\n  contents: read\n  actions: read
 jobs:
   replay:
     runs-on: ubuntu-24.04
@@ -25,10 +25,10 @@ jobs:
             data/previews/od3
             data/results/realtime
       - uses: actions/setup-python@v5
-        with: {python-version: '3.11'}
+        with:\n          python-version: '3.11'
       - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml joblib
       - name: Frozen Sep22 inputs
-        env: {GH_TOKEN: ${{ github.token }}}
+        env:\n          GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p seed
           gh run download 35696309894 -n head4-newfeature-pre-live-20260922 -D seed
