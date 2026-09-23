@@ -115,6 +115,29 @@ def pattern_score(frame, pattern):
     else: raise ValueError(pattern)
     return base+0.20*bonus
 
+def race_inner_gate(frame):
+    """Race-level pre-race inner-survival strength. No result fields."""
+    q=frame.copy()
+    def med(s):
+        s=pd.to_numeric(s,errors='coerce')
+        return float(s.median()) if s.notna().any() else 0.0
+    rows=[]
+    for rc,g in q.groupby('race_code',sort=False):
+        inn=g[g.boat.isin([1,2,3])]; out=g[g.boat.isin([5,6])]
+        # Positive => inner boats look stronger/more likely to survive 4's attack.
+        strength=(med(inn.pl_frame_p2)-med(out.pl_frame_p2)) + (med(inn.pl_recent_p2)-med(out.pl_recent_p2)) + (med(inn.w10_wr)-med(out.w10_wr)) + (med(inn.w10_sr)-med(out.w10_sr)) - (med(inn.w10_rel4_wr)-med(out.w10_rel4_wr))
+        rows.append((rc,strength))
+    return dict(rows)
+
+def gated_inner_eval(frame, threshold, label):
+    gates=race_inner_gate(frame); rows=[]
+    for rc,g in frame.groupby('race_code',sort=False):
+        r=g.iloc[0]; use_inner=gates[rc]>=threshold; col='pattern_inner_survive' if use_inner else 'baseline_score'
+        rank=score_group(g,col); sm={int(b):float(g.loc[g.boat.eq(b),col].iloc[0]) for b in g.boat}
+        diag=json.loads(r.opponent_diag); ts=tickets_for(diag,rank,sm); actual=f"4-{int(r.actual_second)}-{int(r.actual_third)}"
+        rows.append({'race_code':rc,'month':r.month,'variant':label,'gate_inner':int(use_inner),'gate_strength':gates[rc],'second_rank':rank.index(int(r.actual_second))+1,'second_top2':int(int(r.actual_second) in rank[:2]),'second_top3':int(int(r.actual_second) in rank[:3]),'trifecta_capture':int(actual in ts),'ticket_count':len(ts)})
+    return pd.DataFrame(rows)
+
 def main():
     z=build_long(); dev=z[z.month.eq('2026-06')].copy(); hold=z[z.month.isin(['2026-07','2026-08'])].copy()
     if dev.race_code.nunique()!=24 or hold.race_code.nunique()!=57: raise RuntimeError('MONTH_HEAD4_COUNTS_DRIFT')
@@ -146,10 +169,23 @@ def main():
             diag=json.loads(r.opponent_diag); ts=tickets_for(diag,rank,sm); actual=f"4-{int(r.actual_second)}-{int(r.actual_third)}"
             rows.append({'race_code':rc,'month':r.month,'variant':label,'second_rank':rank.index(int(r.actual_second))+1,'second_top2':int(int(r.actual_second) in rank[:2]),'second_top3':int(int(r.actual_second) in rank[:3]),'trifecta_capture':int(actual in ts),'ticket_count':len(ts)})
         return pd.DataFrame(rows)
-    detail=pd.concat([evaluate(dev,'baseline_score','baseline_dev'),evaluate(dev,'rerank_score','rerank_dev'),evaluate(dev,'scenario_score','scenario_dev'),rescue_eval(dev,'rescue_dev')]+[evaluate(dev,'pattern_'+p,'pattern_'+p+'_dev') for p in ('inner_survive','wall23','five_follow','six_open')]+[evaluate(hold,'baseline_score','baseline_holdout'),evaluate(hold,'rerank_score','rerank_holdout'),evaluate(hold,'scenario_score','scenario_holdout'),rescue_eval(hold,'rescue_holdout')]+[evaluate(hold,'pattern_'+p,'pattern_'+p+'_holdout') for p in ('inner_survive','wall23','five_follow','six_open')],ignore_index=True)
+    # Tune only the ON/OFF inner-survival gate on June; July-August stay untouched holdout.
+    strengths=np.array(list(race_inner_gate(dev).values()),dtype=float)
+    thresholds=sorted(set(np.quantile(strengths,[0.2,0.35,0.5,0.65,0.8]).tolist()))
+    gate_dev=[]; gate_grid=[]
+    for th in thresholds:
+        e=gated_inner_eval(dev,float(th),f'gated_inner_dev_{th:.6g}'); gate_dev.append(e)
+        gate_grid.append({'threshold':float(th),'on_R':int(e.gate_inner.sum()),'capture':int(e.trifecta_capture.sum()),'avg_points':float(e.ticket_count.mean()),'top2':int(e.second_top2.sum()),'top3':int(e.second_top3.sum())})
+    # Development objective: capture first, then fewer points, then fewer ON races.
+    gg=pd.DataFrame(gate_grid).sort_values(['capture','avg_points','on_R'],ascending=[False,True,True])
+    best_th=float(gg.iloc[0].threshold)
+    gated_dev=gated_inner_eval(dev,best_th,'gated_inner_dev')
+    gated_hold=gated_inner_eval(hold,best_th,'gated_inner_holdout')
+    detail=pd.concat([evaluate(dev,'baseline_score','baseline_dev'),evaluate(dev,'rerank_score','rerank_dev'),evaluate(dev,'scenario_score','scenario_dev'),rescue_eval(dev,'rescue_dev')]+[evaluate(dev,'pattern_'+p,'pattern_'+p+'_dev') for p in ('inner_survive','wall23','five_follow','six_open')]+[gated_dev]+[evaluate(hold,'baseline_score','baseline_holdout'),evaluate(hold,'rerank_score','rerank_holdout'),evaluate(hold,'scenario_score','scenario_holdout'),rescue_eval(hold,'rescue_holdout')]+[evaluate(hold,'pattern_'+p,'pattern_'+p+'_holdout') for p in ('inner_survive','wall23','five_follow','six_open')]+[gated_hold],ignore_index=True)
+    gg.to_csv(OUT/'inner_gate_june_grid.csv',index=False)
     summary=detail.groupby(['variant','month']).agg(R=('race_code','size'),second_top2=('second_top2','sum'),second_top3=('second_top3','sum'),trifecta_capture=('trifecta_capture','sum'),avg_points=('ticket_count','mean')).reset_index()
     cvdf.to_csv(OUT/'june_groupcv_alpha_grid.csv',index=False); detail.to_csv(OUT/'race_detail.csv',index=False); summary.to_csv(OUT/'summary.csv',index=False)
-    meta={'production_bets':163,'head4_R':81,'dev':'2026-06 only','holdout':['2026-07','2026-08'],'dev_head4_R':24,'holdout_head4_R':57,'selected_alpha':alpha,'features':FEATURES,'SECOND_GAP':SECOND_GAP,'THIRD_GAP':THIRD_GAP,'PLAYER_HISTORY':'causal prior-day','Waku10':'pre-race only','SEPTEMBER_OUTCOMES_READ':False,'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':False,'research_modes':['SECOND rerank','SECOND rescue','pre-race scenario/展開 proxy','inner survive','2/3 wall survive','5 follow/makurisashi','6 open-lane'],'ROI_EVALUATED':False,'roi_note':'counterfactual newly-added ticket odds must be reconstructed before ROI claim'}
+    meta={'production_bets':163,'head4_R':81,'dev':'2026-06 only','holdout':['2026-07','2026-08'],'dev_head4_R':24,'holdout_head4_R':57,'selected_alpha':alpha,'features':FEATURES,'SECOND_GAP':SECOND_GAP,'THIRD_GAP':THIRD_GAP,'PLAYER_HISTORY':'causal prior-day','Waku10':'pre-race only','SEPTEMBER_OUTCOMES_READ':False,'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':False,'research_modes':['SECOND rerank','SECOND rescue','pre-race scenario/展開 proxy','inner survive','2/3 wall survive','5 follow/makurisashi','6 open-lane','June-tuned inner-survival ON/OFF gate'],'inner_gate_threshold':best_th,'ROI_EVALUATED':False,'roi_note':'counterfactual newly-added ticket odds must be reconstructed before ROI claim'}
     (OUT/'meta.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n')
     print('SECOND_RERANK_CV_TOP',cvdf.head(7).to_json(orient='records'))
     print('SECOND_RERANK_SUMMARY',summary.to_json(orient='records'))
