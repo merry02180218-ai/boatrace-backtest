@@ -77,7 +77,7 @@ def tickets_for(diag, second_rank, score_map):
 def evaluate(z,score_col,label):
     rows=[]
     for rc,g in z.groupby('race_code',sort=False):
-        r=g.iloc[0]; rank=score_group(g,score_col); sm={int(x.boat):float(getattr(x,score_col)) for x in g.itertuples()}; diag=json.loads(r.opponent_diag)
+        r=g.iloc[0]; rank=score_group(g,score_col); sm={int(x.boat):float(g.loc[g.boat.eq(int(x.boat)), score_col].iloc[0]) for x in g.itertuples()}; diag=json.loads(r.opponent_diag)
         ts=tickets_for(diag,rank,sm); actual=f"4-{int(r.actual_second)}-{int(r.actual_third)}"
         rows.append({'race_code':rc,'month':r.month,'variant':label,'second_rank':rank.index(int(r.actual_second))+1,'second_top2':int(int(r.actual_second) in rank[:2]),'second_top3':int(int(r.actual_second) in rank[:3]),'trifecta_capture':int(actual in ts),'ticket_count':len(ts)})
     return pd.DataFrame(rows)
