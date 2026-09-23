@@ -82,6 +82,20 @@ def main():
   h=int(e[hit].sum()); n=len(e); ret=int(e.loc[e[hit].eq(1),"payout"].sum()); stake=n*300
   return {"R":n,"hits":h,"rate":h/n if n else None,"return":ret,"stake":stake,"roi":ret/stake if stake else None}
  support_eval={"formal":met("formal_hit"),"ph_waku":met("new_hit"),"rescued":int(((e.formal_hit==0)&(e.new_hit==1)).sum()),"lost":int(((e.formal_hit==1)&(e.new_hit==0)).sum())}
+ # Conservative overlay: keep formal HYBRID and only use PH/Waku to score formal-ticket components.
+ # No wholesale replacement. DEV-derived boat score is used only to reorder the same formal 3 tickets.
+ # This cannot change ticket membership/hit count; it prepares targeted diagnostics for later one-ticket swaps.
+ overlay=[]
+ for r0 in rr["H078_M375"]:
+  code=str(r0["race_code"]).zfill(12)
+  if code not in byrank: continue
+  p2,pc=v365.formal_post_five6(r0); prob=v299.pair_prob(p2,pc,prod.TICKET_ALPHA)
+  formal=v299.STRATEGIES["HYBRID"](p2,pc,prob)[:3]
+  sm={int(x.boat):float(x.opp_score) for _,x in rank[rank.race_code.eq(code)].iterrows()}
+  scored=sorted(formal,key=lambda ab:sm.get(int(ab[0]),0)+sm.get(int(ab[1]),0),reverse=True)
+  overlay.append({"race_code":code,"month":code[:6],"formal":str(formal),"overlay_order":str(scored),
+                  "actual":str(r0["actual_combo"]),"formal_hit":int(str(r0["actual_combo"]) in {f"1-{a}-{b}" for a,b in formal})})
+ pd.DataFrame(overlay).to_csv(OUT/"formal_overlay_order.csv",index=False)
  (OUT/"support_eval.json").write_text(json.dumps(support_eval,ensure_ascii=False,indent=2))
  print("SUPPORT_EVAL",json.dumps(support_eval,ensure_ascii=False))
  coef=model.named_steps["lr"].coef_[0]
