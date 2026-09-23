@@ -1,10 +1,6 @@
 name: research-3head-three-layer-monthly-bets-v8
-'on':
+on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'research/run_3head_three_layer_monthly_bets_v8.py'
-      - '.github/workflows/research-3head-three-layer-monthly-bets-v8.yml'
 permissions:
   actions: read
   contents: read
