@@ -120,6 +120,12 @@ def main():
     df=pd.DataFrame(out)
     if len(df): df.to_csv(OUT/'features.csv',index=False)
 
+    # Gap audit is diagnostic only. Canonical shared PLAYER_HISTORY has already
+    # been independently parity-audited on the Mar-Aug parent population using
+    # registration-number keyed daily state. This local name-keyed tolerant
+    # rebuild is not allowed to promote a rule when its source gaps are large.
+    gap_safe=(len(all_gaps)==0)
+
     # DEV-only univariate threshold scan. SUPPORT labels are never read here.
     # This stage is diagnostic only: rank PH primitives by DEV lift/coverage.
     scans=[]
@@ -155,11 +161,15 @@ def main():
       'stage':'DEV_PH_UNIVARIATE_DIAGNOSTIC',
       'dev_R':int(len(dev)),'dev_base_head_rate':base,
       'dev_scan_top10':scans[:10],
-      'audit_ok':len(missing)==0 and len(df)==71,
+      'coverage_ok':len(missing)==0 and len(df)==71,
+      'gap_safe_for_selection':gap_safe,
+      'audit_ok':len(missing)==0 and len(df)==71 and gap_safe,
     }
     (OUT/'result.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2),encoding='utf-8')
     print(json.dumps(meta,ensure_ascii=False,indent=2))
-    if not meta['audit_ok']:
+    if not meta['coverage_ok']:
         raise RuntimeError('PLAYER_HISTORY coverage audit failed; fix causal card source before scoring')
+    if not meta['gap_safe_for_selection']:
+        raise RuntimeError(f'PLAYER_HISTORY historical result gaps={len(all_gaps)}; do not select thresholds from tolerant rebuild. Use canonical shared PH path.')
 
 if __name__=='__main__': main()
