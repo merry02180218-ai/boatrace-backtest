@@ -149,3 +149,240 @@ This procedure is shared operational guidance for 1HEAD/3HEAD/4HEAD/5HEAD resear
 - Research/holdout may keep September outcomes UNREAD for leakage-safe evaluation. This does NOT mean September prior results are excluded from LIVE causal learning.
 - Never change LIVE to blanket September UNREAD. LIVE = settled prior September allowed; research holdout = outcome masking per audit.
 - User explicitly confirmed this intended operational rule on 2026-09-24.
+
+
+# 4HEAD opponent-selection / regime-research handoff — 2026-09-24
+
+## Scope / authority
+This section records the full current 4HEAD opponent-selection research state from the latest chat. Latest GitHub/main remains authoritative. PH5 head selection is frozen; this work concerns SECOND/THIRD/ticket composition only unless explicitly stated otherwise.
+
+## Frozen production/research baseline
+- Repo: `merry02180218-ai/boatrace-backtest`
+- Frozen production population: 163 bets = June 47 / July 57 / August 59.
+- Among these, actual 4-head wins used for opponent truth research: 81 races = June 24 / July-August 57.
+- PH5 head model remains unchanged.
+- Research development: June only.
+- Holdout: July-August.
+- September outcomes remain UNREAD for this research.
+- LIVE is separate: settled prior September dates are allowed causally through D-1 per shared LIVE rule above.
+- PLAYERHistory = causal prior-day.
+- Waku10 = pre-race only.
+- Production SECOND gap = .11; THIRD gap = .18.
+
+## Adopted production opponent policy before this chat
+Policy: `HEAD4_OPP_INNER_SURVIVE_ALWAYS_V1`.
+Production adoption commit: `3f066c5795f24791661c93e3363a8cdd25d30a3c`.
+LIVE parity fix commit: `6b481b991639adef22ee774de6687a198f61b148`.
+Research metadata commit: `e6233b0...`; Run `35879285297`.
+
+Exact SECOND concept:
+- base = logit(p2)
+- bonus = (z(pl_frame_p2) + z(w10_wr) - z(w10_rel4_wr))/3
+- multiplier 1.0 for boats 1/2/3, -0.35 for 5/6
+- final = base + 0.20*bonus
+- race-local z scores over opponent boats 1,2,3,5,6.
+Current production THIRD remains conditional `pc[(second,third)]` based.
+
+Important holdout result for adopted SECOND:
+- baseline Jul-Aug capture = 36/57, avg points about 6.21.
+- always-on inner_survive Jul-Aug capture = 37/57, avg points about 5.89.
+- July = 18/27 at 5.704 avg points.
+- August = 19/30 at 6.067 avg points.
+Truth-conditioned pre-close od3 proxy on 37 races with odds:
+  baseline ROI 221.29%; inner_survive ROI 224.16%.
+This proxy is NOT all-163 production ROI.
+
+## Current production implementation
+`run_4head_120r_lastminute_fast.py`
+- `inner_survive_second_scores(...)` implements adopted SECOND formula.
+- `production_tickets(...)` requires PLAYERHistory and Waku10.
+- SECOND: top2, add rank3 if score gap <= .11.
+- THIRD: for each SECOND, rank by frozen conditional pc, top2, add rank3 if pc gap <= .18.
+- Thus PLAYERHistory/Waku10 directly adjust SECOND but not current production THIRD.
+
+## September current-LIVE replay evidence that motivated opponent research
+These completed dates used current LIVE causality (prior settled Sep allowed; target-day result joined only after decision freeze):
+- 9/10 Run 35887861368: BET2, head4 0, hits0, ROI0%.
+- 9/11 Run 35890535515: BET2, head4 2, hits1, ROI149.5%. 住之江7 head correct/ticket miss; 尼崎6 hit.
+- 9/12 Run 35891254548: BET1, head4 1, hits0. 戸田3 head correct/opponent miss.
+- 9/13 Run 35892079611: BET2, head4 1, hits0. 住之江3 head correct/opponent miss.
+- 9/14 Run 35892557622: BET3, head4 2, hits1, ROI100%. びわこ2 head correct/ticket miss; 福岡4 hit.
+Cumulative 9/10-9/14: BET10, head4 6/10=60%, trifecta 2/10=20%, stake100k, payout59.9k, ROI59.9%.
+Do NOT fit opponent research to these September outcomes.
+
+Production bug found during replay:
+- `NameError: np not defined` in inner-survive LIVE scorer.
+- fixed commit `d2bf8ff2584c99670730b72caea6882e9e29a166`.
+
+## THIRD PLAYERHistory + Waku10 soft rerank — rejected
+Research added to `research_4head_opponent_second_rerank_v2.py`.
+Initial commit `0dc7d478575ed94c57cb577d595bc436577aca03`.
+The first run failed because the newly inserted block contained literal escaped `\\n`, causing the block to be commented out and `third_dev` undefined.
+Failure Run: `35893644340`.
+Root error: `NameError: name 'third_dev' is not defined`.
+Fix commit: `cb537ec1a43be792afdc7c2f4862ce475494d95a`.
+Successful Run: `35897109109`.
+
+Design:
+- SECOND fixed to adopted always-on inner_survive.
+- THIRD soft score used conditional pc plus PLAYERHistory/Waku10.
+- alpha candidates selected on June only: 0,.10,.20,.30,.40,.60.
+- selected alpha = .30.
+Results:
+- June: current inner_survive capture 11/24; new THIRD soft rerank 8/24.
+- July: current 18/27; new 15/27.
+- August: current 19/30; new 13/30.
+- Jul-Aug current = 37/57 = 64.9%; new = 28/57 = 49.1%.
+- New avg points ~4.61 vs current ~5.89: tickets were reduced too aggressively and capture collapsed.
+Conclusion: REJECT. Do not production-adopt this THIRD soft rerank.
+
+## Conservative THIRD rank3 rescue — not adopted
+User wanted continued opponent improvement. Added a conservative rescue that does NOT reorder existing THIRD top2:
+commit `9bacf7a05a34f5b8aeb8b672aff3f6eda5f0642f`.
+Successful Run: `35900506220`.
+
+Design:
+- SECOND stays adopted inner_survive.
+- baseline conditional pc THIRD top2 untouched.
+- existing .18 rank3 rescue untouched.
+- only when normal rank3 is not already included, add rank3 if pre-race support is strong.
+- support = mean z(pl_frame_p2, pl_recent_p2, w10_wr, w10_sr, -w10_rel4_wr).
+- threshold tuned on June only.
+- selected rescue support cutoff = .75.
+Results:
+- June current 11/24 -> rescue 13/24.
+- July current 18/27 -> rescue 19/27.
+- August current 19/30 -> rescue 18/30.
+- Jul-Aug total current 37/57 -> rescue 37/57, no net capture gain.
+- avg points rescue Jul ~6.037, Aug ~6.033 vs current combined ~5.89.
+Conclusion: no clear holdout gain; NOT production-adopted. User explicitly felt this was not changing enough and requested a different research viewpoint.
+
+## Why research direction changed
+Repeated SECOND/THIRD direct ranking work has plateaued:
+- generic SECOND ML rerank selected alpha 0.0 / no gain.
+- rescue/scenario variants mostly no robust gain.
+- direct THIRD soft rerank was materially worse.
+- conservative THIRD rescue only shifted wins between July/August with no Jul-Aug total improvement.
+Older pair-ranking research also failed to show a robust direct-ranking breakthrough.
+
+Relevant older evidence reviewed:
+- `analysis_v276_4head_opponent_pair_family.csv`: direct pair models often underperformed v96 at holdout top ranks.
+- `analysis_v278_4head_opponent_current_exhibition_family.csv`: current-exhibition-only family was weak; BASE_CURRENT_PLAYER gave some top2 improvement but not broad ranking dominance.
+- `analysis_v280_4head_opponent_role_split.csv`: separate SECOND/THIRD role probabilities existed but did not solve production capture robustly.
+- v281/v282/v284 historical THIRD branches: independent THIRD, conditional THIRD, and INNER/OUTER regime conditional THIRD all showed some signal but no stable overall production improvement.
+
+## New research direction: development/regime first, tickets second
+User approved moving away from micro-tuning THIRD.
+Core idea:
+Do NOT first ask “which boat is 2nd/3rd?”.
+First ask: “when 4 wins, what development/formation occurs behind 4?”
+Candidate regimes:
+- INNER_REMAIN: inner boats 1/2/3 survive together.
+- FIVE_FOLLOW: boat5 follows / appears in opponent pair.
+- SIX_RISE: boat6 rises through open lane / appears in opponent pair.
+- MIXED / more detailed regime to be refined after descriptive discovery.
+Future classifier should use only pre-race information such as:
+- 1-3 wall strength.
+- 4 attack strength.
+- 5 follow strength.
+- 6 open-lane/rise strength.
+- exhibition ST.
+- corrected exhibition.
+- original exhibition.
+- motor type/strength.
+- PLAYERHistory.
+- Waku10.
+Then choose ticket structure conditional on predicted regime. This is intentionally different from directly ranking all 20 pairs.
+
+## New regime discovery v1
+Created new independent research file:
+`research_4head_opponent_regime_v1.py`
+Commit: `60ee2275df0d55ad58d2ea21263bd7e880cafc33`.
+
+v1 is intentionally descriptive before classifier fitting:
+- builds on frozen `base.build_long()`.
+- requires 81 actual head4 races.
+- requires June dev 24 and Jul-Aug holdout 57.
+- truth labels currently:
+  - INNER_REMAIN if both second and third are among 1/2/3.
+  - FIVE_FOLLOW if 5 appears.
+  - SIX_RISE if 6 appears.
+  - MIXED fallback.
+- extracts race-level PLAYERHistory/Waku10/p2 inner-vs-outer summaries and boat-level values.
+- outputs:
+  - `/tmp/head4_opponent_regime_v1/race_regime_features.csv`
+  - `regime_monthly.csv`
+  - `pair_monthly.csv`
+  - `meta.json`
+- meta asserts:
+  - head4_R 81
+  - dev June only
+  - holdout Jul-Aug
+  - September outcomes read false
+  - PH5 head model changed false
+  - production changed false
+  - stage DESCRIPTIVE_REGIME_DISCOVERY_ONLY.
+This first pass is meant to determine whether stable, useful regime labels exist before fitting a classifier. Do not jump straight to production.
+
+## Workflow wiring / operational safety
+Research workflow:
+`.github/workflows/audit-4head-ph5-live-walkforward.yml`
+
+Important user policy:
+- research/replay workflows must be MANUAL ONLY.
+- do NOT add temporary `push:` triggers.
+- do NOT use trigger-file commits.
+- user previously warned that workflow triggers can cause later side effects.
+- always preflight before asking user to fire.
+
+Workflow manual-only cleanup commit:
+`d55f8ca979bf2a03295a59a4087f5a8eb12795f0`.
+It leaves:
+`on: workflow_dispatch:`
+and no push trigger.
+
+The regime script was wired into preflight/artifact path, then a missed execution step was detected and fixed.
+Final wiring commit:
+`85f4dcf24e32cd11c2e9b612f9e79d868383680a`.
+Current workflow:
+- py_compile includes `research_4head_opponent_regime_v1.py`.
+- explicit step `Opponent regime discovery v1` runs the script after SECOND research.
+- artifact includes `/tmp/head4_opponent_regime_v1/`.
+- remains manual-only.
+
+## CURRENT RUN AT HANDOFF
+User manually fired the workflow after commit `85f4dcf`.
+Automatically discovered current Run:
+- Run ID: `35903045223`
+- head SHA: `85f4dcf24e32cd11c2e9b612f9e79d868383680a`
+- status at handoff creation: IN_PROGRESS
+- conclusion: none yet
+- URL: https://github.com/merry02180218-ai/boatrace-backtest/actions/runs/35903045223
+
+### Exact next action in new chat
+1. Read this handoff + latest GitHub/main.
+2. Check Run `35903045223` automatically; do not ask user for URL.
+3. If failure:
+   - inspect failed job logs first;
+   - fix root cause;
+   - preflight;
+   - keep workflow manual-only;
+   - then ask for one manual re-fire only if necessary.
+4. If success:
+   - inspect `REGIME_MONTHLY`, `PAIR_TOP`, meta and artifact CSVs.
+   - first judge label stability across June/July/August descriptively.
+   - inspect whether INNER_REMAIN/FIVE_FOLLOW/SIX_RISE definitions overlap conceptually. Current `classify_truth` gives FIVE precedence after INNER_REMAIN and SIX only if 5 absent; if this masks useful 5+6 combinations, refine labels before classifier fitting.
+   - analyze actual pair families (e.g. inner-inner, inner-5, inner-6, 5-6/6-5) rather than forcing a poor four-class taxonomy.
+   - only after stable target taxonomy is established, build leakage-safe pre-race regime classifier.
+5. For classifier stage:
+   - design/tune on June only.
+   - validate July and August separately and combined.
+   - September outcomes stay UNREAD.
+   - PH5 and production opponent policy stay unchanged until explicit adoption.
+   - compare regime-conditioned ticket capture, avg points, and if reconstructable pre-close od3 ROI against current `HEAD4_OPP_INNER_SURVIVE_ALWAYS_V1`.
+6. Do not revert to THIRD micro-reranking unless regime research clearly indicates it.
+
+## User preference / intent from latest exchange
+User said the THIRD rescue “doesn't seem to change much” and explicitly asked to research from a different viewpoint.
+User reacted positively to the regime/development idea and said it sounded good.
+Therefore continue regime-first research, not another small PLAYERHistory/Waku10 THIRD threshold sweep.
