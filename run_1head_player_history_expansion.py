@@ -18,10 +18,14 @@ import argparse,json,pickle
 import pandas as pd
 import onehead_production_profile as prod
 from build_4head_player_history_live import REQUIRED, _bycode, _blank, _pstat, _ii
-from backtest import rows
+from backtest import rows as _rows
 from backtest_v4 import clean_name
 from collections import defaultdict
 from datetime import timedelta
+_ROWS_CACHE={}
+def rows(path):
+    if path not in _ROWS_CACHE: _ROWS_CACHE[path]=_rows(path)
+    return _ROWS_CACHE[path]
 
 DEV=('2026-02','2026-03','2026-04','2026-05','2026-06')
 SUP=('2026-07','2026-08')
@@ -81,6 +85,9 @@ def main():
     # deliberately fail closed if they do not, rather than silently joining by
     # future/result-bearing data.
     out=[]; missing=[]; all_gaps=set()
+    # Cache PH by (date, six target names). The previous version rebuilt and re-downloaded
+    # the full historical calendar independently for every one of the 71 races.
+    ph_cache={}
     from datetime import date
     for r in added:
         code=str(r['race_code']).zfill(12)
@@ -93,7 +100,10 @@ def main():
         card=cards.get(code)
         if card is None or any(not card.get(f'艇{b}_選手名') for b in range(1,7)):
             missing.append(code); continue
-        flat,gaps=build_ph_tolerant(card,td,date.fromisoformat(a.history_start)); all_gaps.update(gaps)
+        key=(td.isoformat(),tuple(clean_name(card.get(f'艇{b}_選手名','')) for b in range(1,7)))
+        if key not in ph_cache:
+            ph_cache[key]=build_ph_tolerant(card,td,date.fromisoformat(a.history_start))
+        flat,gaps=ph_cache[key]; all_gaps.update(gaps)
         row={'race_code':code,'month':f'{code[:4]}-{code[4:6]}',
              'p_head':float(r['p_head']),'opp_mass':float(r['opp_mass'])}
         row.update(flat)
