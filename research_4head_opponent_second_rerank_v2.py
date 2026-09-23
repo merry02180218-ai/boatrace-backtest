@@ -138,6 +138,20 @@ def gated_inner_eval(frame, threshold, label):
         rows.append({'race_code':rc,'month':r.month,'variant':label,'gate_inner':int(use_inner),'gate_strength':gates[rc],'second_rank':rank.index(int(r.actual_second))+1,'second_top2':int(int(r.actual_second) in rank[:2]),'second_top3':int(int(r.actual_second) in rank[:3]),'trifecta_capture':int(actual in ts),'ticket_count':len(ts)})
     return pd.DataFrame(rows)
 
+def three_stage_inner_eval(frame, safe_th, attack_th, label):
+    """baseline / safe-inner / attack-inner. Thresholds are fixed from June only."""
+    gates=race_inner_gate(frame); rows=[]
+    for rc,g in frame.groupby('race_code',sort=False):
+        r=g.iloc[0]; s=gates[rc]
+        # attack = strongest inner-survival signal; safe = medium signal; otherwise production baseline
+        if s>=attack_th: stage='attack'; col='pattern_inner_survive'
+        elif s>=safe_th: stage='safe'; col='pattern_inner_survive'
+        else: stage='baseline'; col='baseline_score'
+        rank=score_group(g,col); sm={int(b):float(g.loc[g.boat.eq(b),col].iloc[0]) for b in g.boat}
+        diag=json.loads(r.opponent_diag); ts=tickets_for(diag,rank,sm); actual=f"4-{int(r.actual_second)}-{int(r.actual_third)}"
+        rows.append({'race_code':rc,'month':r.month,'variant':label,'stage':stage,'gate_strength':s,'second_top2':int(int(r.actual_second) in rank[:2]),'second_top3':int(int(r.actual_second) in rank[:3]),'trifecta_capture':int(actual in ts),'ticket_count':len(ts)})
+    return pd.DataFrame(rows)
+
 def main():
     z=build_long(); dev=z[z.month.eq('2026-06')].copy(); hold=z[z.month.isin(['2026-07','2026-08'])].copy()
     if dev.race_code.nunique()!=24 or hold.race_code.nunique()!=57: raise RuntimeError('MONTH_HEAD4_COUNTS_DRIFT')
@@ -181,11 +195,24 @@ def main():
     best_th=float(gg.iloc[0].threshold)
     gated_dev=gated_inner_eval(dev,best_th,'gated_inner_dev')
     gated_hold=gated_inner_eval(hold,best_th,'gated_inner_holdout')
-    detail=pd.concat([evaluate(dev,'baseline_score','baseline_dev'),evaluate(dev,'rerank_score','rerank_dev'),evaluate(dev,'scenario_score','scenario_dev'),rescue_eval(dev,'rescue_dev')]+[evaluate(dev,'pattern_'+p,'pattern_'+p+'_dev') for p in ('inner_survive','wall23','five_follow','six_open')]+[gated_dev]+[evaluate(hold,'baseline_score','baseline_holdout'),evaluate(hold,'rerank_score','rerank_holdout'),evaluate(hold,'scenario_score','scenario_holdout'),rescue_eval(hold,'rescue_holdout')]+[evaluate(hold,'pattern_'+p,'pattern_'+p+'_holdout') for p in ('inner_survive','wall23','five_follow','six_open')]+[gated_hold],ignore_index=True)
+    # Three-stage thresholds are selected on June only. Prefer capture, then fewer tickets.
+    qs=sorted(set(np.quantile(strengths,[0.2,0.35,0.5,0.65,0.8]).tolist()))
+    stage_grid=[]
+    for safe in qs:
+        for attack in qs:
+            if attack<=safe: continue
+            e=three_stage_inner_eval(dev,float(safe),float(attack),'three_stage_dev_grid')
+            stage_grid.append({'safe_th':float(safe),'attack_th':float(attack),'capture':int(e.trifecta_capture.sum()),'avg_points':float(e.ticket_count.mean()),'top2':int(e.second_top2.sum()),'top3':int(e.second_top3.sum()),'safe_R':int((e.stage=='safe').sum()),'attack_R':int((e.stage=='attack').sum())})
+    sg=pd.DataFrame(stage_grid).sort_values(['capture','avg_points','attack_R'],ascending=[False,True,True])
+    best_safe=float(sg.iloc[0].safe_th); best_attack=float(sg.iloc[0].attack_th)
+    three_dev=three_stage_inner_eval(dev,best_safe,best_attack,'three_stage_inner_dev')
+    three_hold=three_stage_inner_eval(hold,best_safe,best_attack,'three_stage_inner_holdout')
+    sg.to_csv(OUT/'three_stage_inner_june_grid.csv',index=False)
+    detail=pd.concat([evaluate(dev,'baseline_score','baseline_dev'),evaluate(dev,'rerank_score','rerank_dev'),evaluate(dev,'scenario_score','scenario_dev'),rescue_eval(dev,'rescue_dev')]+[evaluate(dev,'pattern_'+p,'pattern_'+p+'_dev') for p in ('inner_survive','wall23','five_follow','six_open')]+[gated_dev]+[evaluate(hold,'baseline_score','baseline_holdout'),evaluate(hold,'rerank_score','rerank_holdout'),evaluate(hold,'scenario_score','scenario_holdout'),rescue_eval(hold,'rescue_holdout')]+[evaluate(hold,'pattern_'+p,'pattern_'+p+'_holdout') for p in ('inner_survive','wall23','five_follow','six_open')]+[gated_hold,three_dev,three_hold],ignore_index=True)
     gg.to_csv(OUT/'inner_gate_june_grid.csv',index=False)
     summary=detail.groupby(['variant','month']).agg(R=('race_code','size'),second_top2=('second_top2','sum'),second_top3=('second_top3','sum'),trifecta_capture=('trifecta_capture','sum'),avg_points=('ticket_count','mean')).reset_index()
     cvdf.to_csv(OUT/'june_groupcv_alpha_grid.csv',index=False); detail.to_csv(OUT/'race_detail.csv',index=False); summary.to_csv(OUT/'summary.csv',index=False)
-    meta={'production_bets':163,'head4_R':81,'dev':'2026-06 only','holdout':['2026-07','2026-08'],'dev_head4_R':24,'holdout_head4_R':57,'selected_alpha':alpha,'features':FEATURES,'SECOND_GAP':SECOND_GAP,'THIRD_GAP':THIRD_GAP,'PLAYER_HISTORY':'causal prior-day','Waku10':'pre-race only','SEPTEMBER_OUTCOMES_READ':False,'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':False,'research_modes':['SECOND rerank','SECOND rescue','pre-race scenario/展開 proxy','inner survive','2/3 wall survive','5 follow/makurisashi','6 open-lane','June-tuned inner-survival ON/OFF gate'],'inner_gate_threshold':best_th,'ROI_EVALUATED':False,'roi_note':'counterfactual newly-added ticket odds must be reconstructed before ROI claim'}
+    meta={'production_bets':163,'head4_R':81,'dev':'2026-06 only','holdout':['2026-07','2026-08'],'dev_head4_R':24,'holdout_head4_R':57,'selected_alpha':alpha,'features':FEATURES,'SECOND_GAP':SECOND_GAP,'THIRD_GAP':THIRD_GAP,'PLAYER_HISTORY':'causal prior-day','Waku10':'pre-race only','SEPTEMBER_OUTCOMES_READ':False,'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':False,'research_modes':['SECOND rerank','SECOND rescue','pre-race scenario/展開 proxy','inner survive','2/3 wall survive','5 follow/makurisashi','6 open-lane','June-tuned inner-survival ON/OFF gate','June-tuned baseline/safe/attack inner gate'],'inner_gate_threshold':best_th,'three_stage_safe_threshold':best_safe,'three_stage_attack_threshold':best_attack,'ROI_EVALUATED':False,'roi_note':'counterfactual newly-added ticket odds must be reconstructed before ROI claim'}
     (OUT/'meta.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n')
     print('SECOND_RERANK_CV_TOP',cvdf.head(7).to_json(orient='records'))
     print('SECOND_RERANK_SUMMARY',summary.to_json(orient='records'))
