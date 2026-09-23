@@ -1,0 +1,111 @@
+#!/usr/bin/env python3
+"""Opponent research v2: leakage-safe SECOND soft rerank on frozen PH5 163R.
+
+Development: June only (race-group CV chooses alpha). Holdout: July-August, never used
+for alpha selection. PH5 head model / production BET population are immutable.
+PLAYERHistory is prior-day causal; Waku10 is pre-race only. September outcomes unread.
+Research only: no production mutation and no ROI claim until counterfactual odds audit.
+"""
+import json
+from pathlib import Path
+import numpy as np
+import pandas as pd
+from sklearn.impute import SimpleImputer
+from sklearn.linear_model import LogisticRegression
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import GroupKFold, cross_val_predict
+import audit_4head_ph5_live_walkforward as parent
+import research_4head_player_waku_soft_ablation_v23 as phsrc
+import research_4head_waku10_rel43_v4 as wsrc
+
+ROOT=Path('/tmp/head4_ph5_live_walkforward')
+OUT=Path('/tmp/head4_opponent_second_rerank_v2'); OUT.mkdir(parents=True,exist_ok=True)
+BOATS=(1,2,3,5,6)
+ALPHAS=(0.0,0.15,0.25,0.35,0.50,0.70,1.0)
+SECOND_GAP=.11
+THIRD_GAP=.18
+FEATURES=['logit_p2','pl_all_win','pl_all_p2','pl_frame_win','pl_frame_p2','pl_recent_p2','w10_wr','w10_st','w10_sr','w10_pastwin','w10_rel4_wr','w10_rel4_st','w10_rel4_sr','w10_rel4_pastwin']
+
+def logit(p):
+    p=float(np.clip(p,1e-6,1-1e-6)); return np.log(p/(1-p))
+
+def model():
+    return Pipeline([('imp',SimpleImputer(strategy='median',add_indicator=True)),('sc',StandardScaler()),('lr',LogisticRegression(C=.5,max_iter=2000,class_weight='balanced'))])
+
+def build_long():
+    d=pd.read_csv(ROOT/'race_detail.csv',dtype={'race_code':str}); d.race_code=d.race_code.astype(str).str.zfill(12)
+    d=d[d.production_bet.eq(1)].copy()
+    if len(d)!=163: raise RuntimeError(f'FROZEN_POPULATION_DRIFT {len(d)} != 163')
+    tr=parent.truth()
+    ph=phsrc.build_ph(); ph.race_code=ph.race_code.astype(str).str.zfill(12)
+    w=wsrc.build_waku(d.race_code.tolist()); w.race_code=w.race_code.astype(str).str.zfill(12)
+    wide=d[['race_code','date','head4','tickets','opponent_diag']].merge(ph,on='race_code',how='left',validate='one_to_one').merge(w,on='race_code',how='left',validate='one_to_one')
+    rows=[]
+    for _,r in wide.iterrows():
+        a=tr.get(r.race_code)
+        if not a or a[0]!=4: continue
+        diag=json.loads(r.opponent_diag); actual_s=int(a[1]); actual_t=int(a[2])
+        for b in BOATS:
+            rec={'race_code':r.race_code,'date':str(r.date),'month':str(r.date)[:7],'boat':b,'y_second':int(b==actual_s),'actual_second':actual_s,'actual_third':actual_t,'p2':float(diag['p2'][str(b)]),'logit_p2':logit(diag['p2'][str(b)]),'tickets':r.tickets,'opponent_diag':r.opponent_diag}
+            for k in ('all_win','all_p2','frame_win','frame_p2','recent_p2'): rec['pl_'+k]=pd.to_numeric(pd.Series([r.get(f'b{b}_pl_{k}')]),errors='coerce').iloc[0]
+            for k in ('wr','st','sr','pastwin','rel4_wr','rel4_st','rel4_sr','rel4_pastwin'):
+                col=f'w10_b{b}_{k}' if not k.startswith('rel4_') else f'w10_rel4_b{b}_{k[5:]}'
+                rec['w10_'+k]=pd.to_numeric(pd.Series([r.get(col)]),errors='coerce').iloc[0]
+            rows.append(rec)
+    z=pd.DataFrame(rows)
+    if z.race_code.nunique()!=81: raise RuntimeError(f'HEAD4_POPULATION_DRIFT {z.race_code.nunique()} != 81')
+    return z
+
+def score_group(g,score_col):
+    return list(g.sort_values([score_col,'boat'],ascending=[False,True]).boat.astype(int))
+
+def tickets_for(diag, second_rank, score_map):
+    pc={(int(k.split('>')[0]),int(k.split('>')[1])):float(v) for k,v in diag['pc'].items()}
+    out=[]; secs=second_rank[:2]
+    if score_map[second_rank[1]]-score_map[second_rank[2]]<=SECOND_GAP: secs=secs+[second_rank[2]]
+    for s in secs:
+        thirds=sorted((t for t in BOATS if t!=s),key=lambda t:(-pc[(s,t)],t))
+        for t in thirds[:2]:
+            x=f'4-{s}-{t}'
+            if x not in out: out.append(x)
+        if pc[(s,thirds[1])]-pc[(s,thirds[2])]<=THIRD_GAP:
+            x=f'4-{s}-{thirds[2]}'
+            if x not in out: out.append(x)
+    return out
+
+def evaluate(z,score_col,label):
+    rows=[]
+    for rc,g in z.groupby('race_code',sort=False):
+        r=g.iloc[0]; rank=score_group(g,score_col); sm={int(x.boat):float(getattr(x,score_col)) for x in g.itertuples()}; diag=json.loads(r.opponent_diag)
+        ts=tickets_for(diag,rank,sm); actual=f"4-{int(r.actual_second)}-{int(r.actual_third)}"
+        rows.append({'race_code':rc,'month':r.month,'variant':label,'second_rank':rank.index(int(r.actual_second))+1,'second_top2':int(int(r.actual_second) in rank[:2]),'second_top3':int(int(r.actual_second) in rank[:3]),'trifecta_capture':int(actual in ts),'ticket_count':len(ts)})
+    return pd.DataFrame(rows)
+
+def main():
+    z=build_long(); dev=z[z.month.eq('2026-06')].copy(); hold=z[z.month.isin(['2026-07','2026-08'])].copy()
+    if dev.race_code.nunique()!=24 or hold.race_code.nunique()!=57: raise RuntimeError('MONTH_HEAD4_COUNTS_DRIFT')
+    groups=dev.race_code.values; cv=GroupKFold(n_splits=min(6,dev.race_code.nunique()))
+    dev['ml_cv']=cross_val_predict(model(),dev[FEATURES],dev.y_second,groups=groups,cv=cv,method='predict_proba')[:,1]
+    cvrows=[]
+    for a in ALPHAS:
+        lp=np.log(np.clip(dev.ml_cv,1e-6,1-1e-6)/np.clip(1-dev.ml_cv,1e-6,1-1e-6))
+        dev[f'score_{a}']=(1-a)*dev.logit_p2+a*lp
+        ev=evaluate(dev,f'score_{a}',f'cv_a{a}')
+        cvrows.append({'alpha':a,'second_top2':int(ev.second_top2.sum()),'second_top3':int(ev.second_top3.sum()),'trifecta_capture':int(ev.trifecta_capture.sum()),'avg_points':float(ev.ticket_count.mean())})
+    cvdf=pd.DataFrame(cvrows).sort_values(['second_top2','trifecta_capture','second_top3','alpha'],ascending=[False,False,False,True])
+    alpha=float(cvdf.iloc[0].alpha)
+    m=model().fit(dev[FEATURES],dev.y_second)
+    for frame in (dev,hold):
+        pp=m.predict_proba(frame[FEATURES])[:,1]; frame['ml_prob']=pp
+        frame['rerank_score']=(1-alpha)*frame.logit_p2+alpha*np.log(np.clip(pp,1e-6,1-1e-6)/np.clip(1-pp,1e-6,1-1e-6))
+        frame['baseline_score']=frame.logit_p2
+    detail=pd.concat([evaluate(dev,'baseline_score','baseline_dev'),evaluate(dev,'rerank_score','rerank_dev'),evaluate(hold,'baseline_score','baseline_holdout'),evaluate(hold,'rerank_score','rerank_holdout')],ignore_index=True)
+    summary=detail.groupby(['variant','month']).agg(R=('race_code','size'),second_top2=('second_top2','sum'),second_top3=('second_top3','sum'),trifecta_capture=('trifecta_capture','sum'),avg_points=('ticket_count','mean')).reset_index()
+    cvdf.to_csv(OUT/'june_groupcv_alpha_grid.csv',index=False); detail.to_csv(OUT/'race_detail.csv',index=False); summary.to_csv(OUT/'summary.csv',index=False)
+    meta={'production_bets':163,'head4_R':81,'dev':'2026-06 only','holdout':['2026-07','2026-08'],'dev_head4_R':24,'holdout_head4_R':57,'selected_alpha':alpha,'features':FEATURES,'SECOND_GAP':SECOND_GAP,'THIRD_GAP':THIRD_GAP,'PLAYER_HISTORY':'causal prior-day','Waku10':'pre-race only','SEPTEMBER_OUTCOMES_READ':False,'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':False,'ROI_EVALUATED':False,'roi_note':'counterfactual newly-added ticket odds must be reconstructed before ROI claim'}
+    (OUT/'meta.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n')
+    print('SECOND_RERANK_CV_TOP',cvdf.head(7).to_json(orient='records'))
+    print('SECOND_RERANK_SUMMARY',summary.to_json(orient='records'))
+    print(json.dumps(meta,ensure_ascii=False)); print('HEAD4_OPPONENT_SECOND_RERANK_V2_OK'); print('SEPTEMBER_UNREAD')
+if __name__=='__main__': main()
