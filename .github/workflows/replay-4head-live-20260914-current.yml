@@ -1,0 +1,97 @@
+name: replay-4head-live-20260914-current
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards
+            data/programs/waku10
+            data/results/realtime
+            data/previews/tkz
+            data/previews/stt
+            data/previews/original_exhibition
+            data/previews/od3
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml joblib
+      - name: Preflight
+        run: |
+          python -m py_compile prepare_4head_120r_daily_state.py run_4head_120r_lastminute_fast.py audit_4head_live_replay_20260914_current.py run_4head_v291_third010_live.py
+          ! grep -n '\\\\n' prepare_4head_120r_daily_state.py run_4head_120r_lastminute_fast.py
+      - name: Build causal state through 2026-09-13
+        run: |
+          python prepare_4head_120r_daily_state.py --target-date 2026-09-14 --out /tmp/state.json --data-root brcsv
+          python - <<'PY'
+          import json
+          z=json.load(open('/tmp/state.json'))
+          assert z['history_end']=='2026-09-13',z
+          assert z['target_date_results_used'] is False,z
+          print('CAUSAL_STATE_OK',z['history_end'],z['stats'])
+          PY
+      - name: Historical LIVE-input inventory
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import pandas as pd, json
+          day='2026/09/14'
+          paths={
+            'card':Path('brcsv/data/programs/race_cards')/day/'10.csv',
+            'waku':Path('brcsv/data/programs/waku10')/day/'10.csv',
+            'stt':Path('brcsv/data/previews/stt')/day/'10.csv',
+            'orig':Path('brcsv/data/previews/original_exhibition')/day/'10.csv',
+            'od3':Path('brcsv/data/previews/od3')/day/'10.csv',
+          }
+          # BoatraceCSV uses one daily CSV in YYYY/MM/DD.csv, so fall back to that.
+          for k,p in list(paths.items()):
+            q=p.parent.parent/f'{p.parent.name}.csv'
+            if not p.exists() and q.exists(): paths[k]=q
+          info={}
+          for k,p in paths.items():
+            info[k]={'path':str(p),'exists':p.exists(),'rows':(len(pd.read_csv(p,dtype=str)) if p.exists() else 0)}
+          print('HISTORICAL_INPUTS',json.dumps(info,ensure_ascii=False))
+          missing=[k for k,v in info.items() if not v['exists']]
+          if missing: raise SystemExit('MISSING_HISTORICAL_LIVE_INPUTS '+','.join(missing))
+          PY
+      - name: Replay 2026-09-14 current LIVE
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+          STATE: /tmp/state.json
+          CARD: ${{ github.workspace }}/brcsv/data/programs/race_cards/2026/09/14.csv
+          WAKU: ${{ github.workspace }}/brcsv/data/programs/waku10/2026/09/14.csv
+          WATCH: /tmp/watch.json
+        run: |
+          python - <<'PY'
+          import csv,json
+          p='brcsv/data/programs/race_cards/2026/09/14.csv'
+          rows=list(csv.DictReader(open(p,encoding='utf-8-sig')))
+          seen=set(); targets=[]
+          for r in rows:
+            code=str(r.get('レースコード','')).strip()
+            if code.endswith('.0'): code=code[:-2]
+            code=code.zfill(12)
+            if not code.startswith('20260914') or code in seen: continue
+            seen.add(code); targets.append({'jcd':int(code[8:10]),'race':int(code[10:12])})
+          json.dump({'target_date':'2026-09-14','targets':targets},open('/tmp/watch.json','w'),ensure_ascii=False,indent=2)
+          print('WATCH_ALL_RACES',len(targets))
+          PY
+          python audit_4head_live_replay_20260914_current.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: replay-4head-live-20260914-current
+          path: |
+            /tmp/state.json
+            /tmp/head4_replay_20260914_current/
+          retention-days: 30
