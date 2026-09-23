@@ -118,7 +118,14 @@ def main():
                         if exrule=="EX2": zzz=zz[n(zz.post_ex_rank3)<=2]
                         elif exrule=="EXINNER": zzz=zz[n(zz.post_ex_inner_edge)>=0.0]
                         rows.append({"month":mon,"variant":"FULL_PURE_GATE","ph_min":phmin,"pre_min":premin,"motor_min":motmin,"ex_rule":exrule,"R":len(zzz),"heads":int(zzz.y.sum()),"head_rate":float(zzz.y.mean()) if len(zzz) else None})
-        # PH/PRE composite rescue scores to expand volume beyond rigid AND gates.\n        phv=n(full_only.ph_score); prev=n(full_only.pre_score)\n        for w in [0.25,0.5,0.75,1.0,1.25,1.5,2.0]:\n            sc=(phv-.30)+w*(prev-.965)\n            for cut in [-.05,-.025,0,.025,.05,.075]:\n                zz=full_only[sc>=cut]\n                rows.append({"month":mon,"variant":"FULL_PURE_COMPOSITE","pre_weight":w,"score_cut":cut,"R":len(zz),"heads":int(zz.y.sum()),"head_rate":float(zz.y.mean()) if len(zz) else None})\n        for target in TARGETS:
+        # PH/PRE composite rescue scores to expand volume beyond rigid AND gates.
+        phv=n(full_only.ph_score); prev=n(full_only.pre_score)
+        for w in [0.25,0.5,0.75,1.0,1.25,1.5,2.0]:
+            sc=(phv-.30)+w*(prev-.965)
+            for cut in [-.05,-.025,0,.025,.05,.075]:
+                zz=full_only[sc>=cut]
+                rows.append({"month":mon,"variant":"FULL_PURE_COMPOSITE","pre_weight":w,"score_cut":cut,"R":len(zz),"heads":int(zz.y.sum()),"head_rate":float(zz.y.mean()) if len(zz) else None})
+        for target in TARGETS:
             z=g.nlargest(min(target,len(g)),"ph_score")
             rows.append({"month":mon,"variant":"FULL_3V2","target_R":target,"R":len(z),"heads":int(z.y.sum()),"head_rate":float(z.y.mean()) if len(z) else None})
             ov=z[n(z.post_motor_inner_rank_edge)>=.60]
