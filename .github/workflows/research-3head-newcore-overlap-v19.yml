@@ -1,0 +1,58 @@
+name: research-3head-newcore-overlap-v19
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - research/run_3head-newcore-overlap-v19.trigger
+permissions:
+  actions: read
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas numpy scikit-learn joblib requests
+      - name: Download canonical v243
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo ${{ github.repository }} --name v243-3head-expand-feature-audit --dir golden
+          cp golden/analysis_v243_3head_expand_feature_audit.csv .
+      - name: Run existing layered audit
+        run: python research/run_3head_three_layer_monthly_bets_v8.py
+      - name: Replace old CORE identity with accepted v18 CORE and measure overlap
+        run: |
+          python - <<'PY'
+          import pandas as pd, json
+          q=pd.read_csv('analysis_v243_3head_expand_feature_audit.csv',dtype={'race_code':str})
+          q.race_code=q.race_code.astype(str).str.zfill(12)
+          n=lambda s:pd.to_numeric(s,errors='coerce')
+          base=(q.bet==1)&(q.p3>=.45)&q.raw_top_n.between(7,18)&q.comp_odds.between(3.05,4.0)
+          target=(base&(n(q['f__c_b3_minus_b5_st'])>=-.2))|((q.bet==1)&(~base)&(n(q['f__c_attack3_stretch'])<=0.5672342857142857))
+          core=target&(n(q['f__c_b3_minus_b4_waku_st'])<=.5)&(n(q['f__c_b3_minus_b4_st'])>=-.6)&(n(q['f__c_b3_meetst'])<=0.861111111111111)
+          nc=q[core].copy();nc['month2']=nc.race_code.str[:6]
+          layer=pd.read_csv('research_3head_three_layer_monthly_bets_v8.csv')
+          # v8 summary supplies Jul/Aug old-layer counts; exact candidate identities are recomputed by its script but not emitted.
+          # Report accepted CORE monthly strength and how much expansion budget remains conceptually.
+          out=nc.groupby('month2').agg(CORE_R=('race_code','size'),CORE_heads=('y3','sum'),ticket_hits=('trifecta_hit','sum'),payout=('ret','sum')).reset_index()
+          out['head_rate']=out.CORE_heads/out.CORE_R
+          out['roi']=out.payout/(out.CORE_R*10000)
+          out.to_csv('newcore_monthly_v19.csv',index=False)
+          print(out.to_string(index=False))
+          print('JUL_AUG_LAYER_BASELINE')
+          print(layer[layer.month.isin(['jul','aug']) & layer.variant.isin(['CORE_PRIORITY','A60_PURE_ADD','FULL3V2_PURE_ADD','FROZEN_A60'])].to_string(index=False))
+          print('NEWCORE_OVERLAP_V19_OK')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: research-3head-newcore-overlap-v19
+          path: |
+            newcore_monthly_v19.csv
+            research_3head_three_layer_monthly_bets_v8.csv
+            research_3head_three_layer_monthly_bets_v8.json
