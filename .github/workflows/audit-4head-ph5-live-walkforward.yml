@@ -45,6 +45,10 @@ jobs:
         env:
           BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
         run: python research_4head_opponent_second_rerank_v2.py
+      - name: Opponent regime discovery v1
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: python research_4head_opponent_regime_v1.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
