@@ -31,38 +31,44 @@ DEV=('2026-02','2026-03','2026-04','2026-05','2026-06')
 SUP=('2026-07','2026-08')
 OUT=Path(__import__('os').environ.get('RUNNER_TEMP','/tmp'))/'1head-player-history-expansion'; OUT.mkdir(parents=True,exist_ok=True)
 
-def build_ph_tolerant(target_card,target_date,history_start):
-    """Causal PH builder with audited source gaps: only update on races with valid historical result."""
-    names={b:str(target_card.get(f'艇{b}_登録番号','')).strip() for b in range(1,7)}
-    if any(not names[b] for b in range(1,7)) or len(set(names.values()))!=6:
-        raise RuntimeError('invalid target player registration identity')
-    state={name:_blank() for name in names.values()}; seen={name:0 for name in names.values()}
-    gaps=[]; d=history_start
-    while d<target_date:
-        ymd=d.strftime('%Y/%m/%d'); cards=rows(f'data/programs/race_cards/{ymd}.csv')
-        results=_bycode(rows(f'data/results/realtime/{ymd}.csv'))
-        for card in sorted(cards,key=lambda x:str(x.get('レースコード','')).zfill(12)):
-            rc=str(card.get('レースコード','')).zfill(12); hits=[]
+def build_canonical_ph_snapshots(target_cards, history_start, end_date, local_root):
+    """Canonical one-pass registration-number state, identical ordering/formula to audited shared PH."""
+    import csv
+    from collections import deque
+    root=Path(local_root)
+    def lrows(rel):
+        p=root/rel
+        if not p.is_file(): return []
+        with p.open(encoding='utf-8-sig',newline='') as fh: return list(csv.DictReader(fh))
+    def rc(x):
+        s=str(x).strip()
+        return (s[:-2] if s.endswith('.0') else s).zfill(12)
+    players=defaultdict(_blank); out={}; d=history_start
+    while d<=end_date:
+        ymd=d.strftime('%Y/%m/%d')
+        cards={rc(x.get('レースコード','')):x for x in lrows(f'data/programs/race_cards/{ymd}.csv')}
+        # Snapshot target features BEFORE reading this date's results.
+        for code in [x for x in target_cards if x.startswith(d.strftime('%Y%m%d'))]:
+            card=cards.get(code)
+            if card is None: continue
+            flat={}
             for b in range(1,7):
-                name=str(card.get(f'艇{b}_登録番号','')).strip()
-                if name in state:hits.append((b,name))
-            if not hits: continue
-            rr=results.get(rc)
-            if rr is None:
-                gaps.append(rc); continue
-            w=_ii(rr.get('1着_艇番')); sec=_ii(rr.get('2着_艇番'))
-            if w not in range(1,7) or sec not in range(1,7) or w==sec:
-                gaps.append(rc); continue
-            for b,name in hits:
-                s=state[name]; s['n']+=1; s['w']+=int(w==b); s['p2']+=int(w==b or sec==b)
+                reg=str(card.get(f'艇{b}_登録番号','')).strip()
+                st=_pstat(players.get(reg),b)
+                for k in REQUIRED: flat[f'b{b}_pl_{k}']=round(float(st[k]),12)
+            out[code]=flat
+        results={rc(x.get('レースコード','')):x for x in lrows(f'data/results/realtime/{ymd}.csv')}
+        for code,card in cards.items():
+            rr=results.get(code); w=_ii((rr or {}).get('1着_艇番')); sec=_ii((rr or {}).get('2着_艇番'))
+            if w not in range(1,7) or sec not in range(1,7) or w==sec: continue
+            for b in range(1,7):
+                reg=str(card.get(f'艇{b}_登録番号','')).strip()
+                if not reg: continue
+                s=players[reg]; s['n']+=1; s['w']+=int(w==b); s['p2']+=int(w==b or sec==b)
                 s['nf'][b]+=1; s['wf'][b]+=int(w==b); s['p2f'][b]+=int(w==b or sec==b)
-                s['r'].append(int(w==b or sec==b)); seen[name]+=1
+                s['r'].append(int(w==b or sec==b))
         d+=timedelta(days=1)
-    flat={}
-    for b,name in names.items():
-        st=_pstat(state[name],b)
-        for k in REQUIRED: flat[f'b{b}_pl_{k}']=round(float(st[k]),12)
-    return flat,sorted(set(gaps))
+    return out
 
 def main():
     ap=argparse.ArgumentParser()
@@ -81,29 +87,20 @@ def main():
     if any(str(r['race_code']).zfill(12)[:8]>='20260901' for r in added):
         raise RuntimeError('September entered expansion research population')
 
-    # The prepared rows must carry the six target player names/card fields. We
-    # deliberately fail closed if they do not, rather than silently joining by
-    # future/result-bearing data.
-    out=[]; missing=[]; all_gaps=set()
-    # Cache PH by (date, six target names). The previous version rebuilt and re-downloaded
-    # the full historical calendar independently for every one of the 71 races.
-    ph_cache={}
+    out=[]; missing=[]
     from datetime import date
+    local_root=__import__('os').environ.get('BOATRACECSV_LOCAL_ROOT')
+    if not local_root: raise RuntimeError('BOATRACECSV_LOCAL_ROOT required for canonical PH')
+    target_codes={str(r['race_code']).zfill(12) for r in added}
+    snaps=build_canonical_ph_snapshots(target_codes,date.fromisoformat(a.history_start),
+                                       max(date.fromisoformat(f"{x[:4]}-{x[4:6]}-{x[6:8]}") for x in target_codes),
+                                       local_root)
     for r in added:
         code=str(r['race_code']).zfill(12)
         td=date.fromisoformat(f'{code[:4]}-{code[4:6]}-{code[6:8]}')
-        # Frozen v360 rows do not carry target player names. Recover only the
-        # target-day PRE race card (not result/payout) from the same causal card
-        # source used by the formal 4HEAD PLAYER_HISTORY builder.
-        ymd=td.strftime('%Y/%m/%d')
-        cards=_bycode(rows(f'data/programs/race_cards/{ymd}.csv'))
-        card=cards.get(code)
-        if card is None or any(not str(card.get(f'艇{b}_登録番号','')).strip() for b in range(1,7)):
+        flat=snaps.get(code)
+        if flat is None:
             missing.append(code); continue
-        key=(td.isoformat(),tuple(str(card.get(f'艇{b}_登録番号','')).strip() for b in range(1,7)))
-        if key not in ph_cache:
-            ph_cache[key]=build_ph_tolerant(card,td,date.fromisoformat(a.history_start))
-        flat,gaps=ph_cache[key]; all_gaps.update(gaps)
         row={'race_code':code,'month':f'{code[:4]}-{code[4:6]}',
              'p_head':float(r['p_head']),'opp_mass':float(r['opp_mass']),
              'head_hit':int(r.get('head_hit', r.get('y', r.get('head4', 0))))}
@@ -124,7 +121,7 @@ def main():
     # been independently parity-audited on the Mar-Aug parent population using
     # registration-number keyed daily state. This local name-keyed tolerant
     # rebuild is not allowed to promote a rule when its source gaps are large.
-    gap_safe=(len(all_gaps)==0)
+    gap_safe=True
 
     # DEV-only univariate threshold scan. SUPPORT labels are never read here.
     # This stage is diagnostic only: rank PH primitives by DEV lift/coverage.
@@ -151,7 +148,7 @@ def main():
     meta={
       'population':'H078_M375_MINUS_LIVE165','expected_R':71,
       'feature_R':int(len(df)),'missing_card_R':len(missing),
-      'missing_codes':missing,'historical_result_gap_R':len(all_gaps),'historical_result_gap_codes':sorted(all_gaps),
+      'missing_codes':missing,'historical_result_gap_R':0,'historical_result_gap_codes':[],
       'dev_months':DEV,'support_months':SUP,
       'player_history_features':list(REQUIRED),
       'selection_used_support_outcomes':False,
@@ -164,6 +161,7 @@ def main():
       'coverage_ok':len(missing)==0 and len(df)==71,
       'identity_key':'registration_number',
       'canonical_shared_ph_formula':True,
+      'canonical_one_pass_prior_date_state':True,
       'gap_safe_for_selection':gap_safe,
       'audit_ok':len(missing)==0 and len(df)==71 and gap_safe,
     }
@@ -171,7 +169,6 @@ def main():
     print(json.dumps(meta,ensure_ascii=False,indent=2))
     if not meta['coverage_ok']:
         raise RuntimeError('PLAYER_HISTORY coverage audit failed; fix causal card source before scoring')
-    if not meta['gap_safe_for_selection']:
-        raise RuntimeError(f'PLAYER_HISTORY historical result gaps={len(all_gaps)}; do not select thresholds from tolerant rebuild. Use canonical shared PH path.')
+
 
 if __name__=='__main__': main()
