@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - research/run_3head_three-layer-monthly-bets-v9.trigger
+      - research/run_3head_a60_highprecision_v10.trigger
 permissions:
   actions: read
   contents: read
