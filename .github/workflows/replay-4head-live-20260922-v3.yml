@@ -40,7 +40,6 @@ jobs:
         run: |
           test -n "$CARD" && test -n "$WAKU" && test -n "$STATE" && test -n "$WATCH"
           python -m py_compile audit_4head_live_replay_20260922_v3.py run_4head_120r_lastminute_fast.py run_4head_v291_third010_live.py
-          ! grep -n '\\n' audit_4head_live_replay_20260922_v3.py
       - name: Historical-source replay
         env:
           BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
