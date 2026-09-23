@@ -152,6 +152,15 @@ def main():
     support_R=int(len(support)); support_heads=int(support['head_hit'].sum())
     support_sel_R=int(len(sel_support)); support_sel_heads=int(sel_support['head_hit'].sum())
     support_sel_rate=(support_sel_heads/support_sel_R if support_sel_R else None)
+    # Combined operating summary: formal LIVE165 remains untouched; PH is additive expansion only.
+    ph_selected=df[df[frozen_feature]>=frozen_threshold].copy()
+    ph_selected_R=int(len(ph_selected)); ph_selected_heads=int(ph_selected['head_hit'].sum())
+    ph_monthly=[]
+    for m,g in ph_selected.groupby('month'):
+        ph_monthly.append({'month':str(m),'R':int(len(g)),'heads':int(g['head_hit'].sum()),'head_rate':float(g['head_hit'].mean())})
+    formal_R=165; formal_heads=140
+    combined_R=formal_R+ph_selected_R
+    combined_heads=formal_heads+ph_selected_heads
     meta={
       'population':'H078_M375_MINUS_LIVE165','expected_R':71,
       'feature_R':int(len(df)),'missing_card_R':len(missing),
@@ -166,6 +175,9 @@ def main():
       'support_selected_R':support_sel_R,'support_selected_heads':support_sel_heads,'support_selected_head_rate':support_sel_rate,
       'september_outcomes_read':False,
       'production_changed':False,
+      'formal_live_reference':{'R':formal_R,'heads':formal_heads,'head_rate':formal_heads/formal_R},
+      'ph_expansion_selected_all71':{'R':ph_selected_R,'heads':ph_selected_heads,'head_rate':ph_selected_heads/ph_selected_R if ph_selected_R else None,'monthly':ph_monthly},
+      'combined_formal_plus_ph':{'R':combined_R,'heads':combined_heads,'head_rate':combined_heads/combined_R if combined_R else None},
       'result_or_payout_used_as_score_input':False,
       'stage':'FROZEN_DEV_RULE_SUPPORT_HOLDOUT',
       'dev_R':int(len(dev)),'dev_base_head_rate':base,
