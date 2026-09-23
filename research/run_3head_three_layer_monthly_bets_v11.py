@@ -15,8 +15,8 @@ import verify_v288_operational_pre_replay as v288
 
 OUT=Path("research_3head_three_layer_monthly_bets_v11.json"); CSV=Path("research_3head_three_layer_monthly_bets_v11.csv")
 TARGETS=[30,40,50,60,70,80]
-PURE_MIN=[0,.10,.20,.30,.40,.50,.60]
-PRE_MIN=[.925,.94,.95,.96,.97]
+PURE_MIN=[.20,.25,.30,.35,.40]
+PRE_MIN=[.955,.96,.965,.97,.975,.98]
 HIST_START=pd.Timestamp("2025-10-01")
 def n(s):return pd.to_numeric(s,errors="coerce")
 
