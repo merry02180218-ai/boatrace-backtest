@@ -224,6 +224,43 @@ def third_variant_eval(frame, alpha, label):
         rows.append({'race_code':rc,'month':r.month,'variant':label,'trifecta_capture':int(actual in ts),'ticket_count':len(ts)})
     return pd.DataFrame(rows)
 
+def third_rescue_eval(frame, bonus_cut, label):
+    """Keep adopted SECOND + baseline conditional THIRD top2; rescue baseline rank3 only."""
+    rows=[]
+    for rc,g0 in frame.groupby('race_code',sort=False):
+        r=g0.iloc[0]; diag=json.loads(r.opponent_diag); g=g0.copy()
+        g['pattern_inner_survive']=pattern_score(g,'inner_survive')
+        rank=score_group(g,'pattern_inner_survive')
+        sm={int(b):float(g.loc[g.boat.eq(b),'pattern_inner_survive'].iloc[0]) for b in g.boat}
+        secs=rank[:2]
+        if sm[rank[1]]-sm[rank[2]]<=SECOND_GAP: secs=secs+[rank[2]]
+        pc={(int(k.split('>')[0]),int(k.split('>')[1])):float(v) for k,v in diag['pc'].items()}
+        ts=[]
+        for second in secs:
+            thirds=sorted((t for t in BOATS if t!=second),key=lambda t:(-pc[(second,t)],t))
+            for t in thirds[:2]:
+                x=f'4-{second}-{t}'
+                if x not in ts: ts.append(x)
+            # Production .18 rescue remains untouched.
+            if pc[(second,thirds[1])]-pc[(second,thirds[2])]<=THIRD_GAP:
+                x=f'4-{second}-{thirds[2]}'
+                if x not in ts: ts.append(x)
+            else:
+                # Extra rescue only when rank3 has strong pre-race PH/Waku support.
+                q=g[g.boat.ne(second)].copy()
+                def zz(col):
+                    x=pd.to_numeric(q[col],errors='coerce'); x=x.fillna(x.median()); sd=x.std()
+                    return (x-x.mean())/(sd if pd.notna(sd) and sd>1e-9 else 1.0)
+                support=(zz('pl_frame_p2')+zz('pl_recent_p2')+zz('w10_wr')+zz('w10_sr')-zz('w10_rel4_wr'))/5.0
+                sup={int(b):float(v) for b,v in zip(q.boat,support)}
+                t3=thirds[2]
+                if sup[t3]>=bonus_cut:
+                    x=f'4-{second}-{t3}'
+                    if x not in ts: ts.append(x)
+        actual=f"4-{int(r.actual_second)}-{int(r.actual_third)}"
+        rows.append({'race_code':rc,'month':r.month,'variant':label,'trifecta_capture':int(actual in ts),'ticket_count':len(ts)})
+    return pd.DataFrame(rows)
+
 def main():
     z=build_long(); dev=z[z.month.eq('2026-06')].copy(); hold=z[z.month.isin(['2026-07','2026-08'])].copy()
     if dev.race_code.nunique()!=24 or hold.race_code.nunique()!=57: raise RuntimeError('MONTH_HEAD4_COUNTS_DRIFT')
@@ -255,6 +292,16 @@ def main():
             diag=json.loads(r.opponent_diag); ts=tickets_for(diag,rank,sm); actual=f"4-{int(r.actual_second)}-{int(r.actual_third)}"
             rows.append({'race_code':rc,'month':r.month,'variant':label,'second_rank':rank.index(int(r.actual_second))+1,'second_top2':int(int(r.actual_second) in rank[:2]),'second_top3':int(int(r.actual_second) in rank[:3]),'trifecta_capture':int(actual in ts),'ticket_count':len(ts)})
         return pd.DataFrame(rows)
+    # THIRD rank3 rescue: tune support threshold on June only.
+    rescue_grid=[]
+    for cut in (-0.50,-0.25,0.0,0.25,0.50,0.75,1.0):
+        e=third_rescue_eval(dev,cut,f'third_rescue_dev_{cut}')
+        rescue_grid.append({'bonus_cut':cut,'capture':int(e.trifecta_capture.sum()),'avg_points':float(e.ticket_count.mean())})
+    rg=pd.DataFrame(rescue_grid).sort_values(['capture','avg_points','bonus_cut'],ascending=[False,True,False])
+    rescue_cut=float(rg.iloc[0].bonus_cut)
+    third_rescue_dev=third_rescue_eval(dev,rescue_cut,'third_rescue_dev')
+    third_rescue_hold=third_rescue_eval(hold,rescue_cut,'third_rescue_holdout')
+    rg.to_csv(OUT/'third_rescue_june_grid.csv',index=False)
     # THIRD-only research: choose alpha on June only; July-August are untouched holdout.
     third_grid=[]
     for ta in (0.0,0.10,0.20,0.30,0.40,0.60):
@@ -290,14 +337,14 @@ def main():
     three_dev=three_stage_inner_eval(dev,best_safe,best_attack,'three_stage_inner_dev')
     three_hold=three_stage_inner_eval(hold,best_safe,best_attack,'three_stage_inner_holdout')
     sg.to_csv(OUT/'three_stage_inner_june_grid.csv',index=False)
-    detail=pd.concat([evaluate(dev,'baseline_score','baseline_dev'),evaluate(dev,'rerank_score','rerank_dev'),evaluate(dev,'scenario_score','scenario_dev'),rescue_eval(dev,'rescue_dev')]+[evaluate(dev,'pattern_'+p,'pattern_'+p+'_dev') for p in ('inner_survive','wall23','five_follow','six_open')]+[gated_dev]+[evaluate(hold,'baseline_score','baseline_holdout'),evaluate(hold,'rerank_score','rerank_holdout'),evaluate(hold,'scenario_score','scenario_holdout'),rescue_eval(hold,'rescue_holdout')]+[evaluate(hold,'pattern_'+p,'pattern_'+p+'_holdout') for p in ('inner_survive','wall23','five_follow','six_open')]+[gated_hold,three_dev,three_hold,third_dev,third_hold],ignore_index=True)
+    detail=pd.concat([evaluate(dev,'baseline_score','baseline_dev'),evaluate(dev,'rerank_score','rerank_dev'),evaluate(dev,'scenario_score','scenario_dev'),rescue_eval(dev,'rescue_dev')]+[evaluate(dev,'pattern_'+p,'pattern_'+p+'_dev') for p in ('inner_survive','wall23','five_follow','six_open')]+[gated_dev]+[evaluate(hold,'baseline_score','baseline_holdout'),evaluate(hold,'rerank_score','rerank_holdout'),evaluate(hold,'scenario_score','scenario_holdout'),rescue_eval(hold,'rescue_holdout')]+[evaluate(hold,'pattern_'+p,'pattern_'+p+'_holdout') for p in ('inner_survive','wall23','five_follow','six_open')]+[gated_hold,three_dev,three_hold,third_dev,third_hold,third_rescue_dev,third_rescue_hold],ignore_index=True)
     gg.to_csv(OUT/'inner_gate_june_grid.csv',index=False)
     summary=detail.groupby(['variant','month']).agg(R=('race_code','size'),second_top2=('second_top2','sum'),second_top3=('second_top3','sum'),trifecta_capture=('trifecta_capture','sum'),avg_points=('ticket_count','mean')).reset_index()
     roi=pd.DataFrame([odds_roi(detail,z,'baseline_dev'),odds_roi(detail,z,'pattern_inner_survive_dev'),odds_roi(detail,z,'baseline_holdout'),odds_roi(detail,z,'pattern_inner_survive_holdout')])
     roi.to_csv(OUT/'od3_roi_proxy.csv',index=False)
     print('OD3_ROI_PROXY',roi.to_json(orient='records'))
     cvdf.to_csv(OUT/'june_groupcv_alpha_grid.csv',index=False); detail.to_csv(OUT/'race_detail.csv',index=False); summary.to_csv(OUT/'summary.csv',index=False)
-    meta={'production_bets':163,'head4_R':81,'dev':'2026-06 only','holdout':['2026-07','2026-08'],'dev_head4_R':24,'holdout_head4_R':57,'selected_alpha':alpha,'features':FEATURES,'SECOND_GAP':SECOND_GAP,'THIRD_GAP':THIRD_GAP,'PLAYER_HISTORY':'causal prior-day','Waku10':'pre-race only','SEPTEMBER_OUTCOMES_READ':False,'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':True,'research_modes':['SECOND rerank','SECOND rescue','pre-race scenario/展開 proxy','inner survive','2/3 wall survive','5 follow/makurisashi','6 open-lane','June-tuned inner-survival ON/OFF gate','June-tuned baseline/safe/attack inner gate'],'inner_gate_threshold':best_th,'three_stage_safe_threshold':best_safe,'three_stage_attack_threshold':best_attack,'ROI_EVALUATED':'pre-close od3 proxy only','roi_note':'counterfactual newly-added ticket odds must be reconstructed before ROI claim','ADOPTED_OPPONENT_POLICY':'HEAD4_OPP_INNER_SURVIVE_ALWAYS_V1','ADOPTION_COMMIT':'6b481b991639adef22ee774de6687a198f61b148','NEXT_CANDIDATE':'THIRD PLAYERHistory+Waku10 conditional soft-rerank research','third_selected_alpha':third_alpha}
+    meta={'production_bets':163,'head4_R':81,'dev':'2026-06 only','holdout':['2026-07','2026-08'],'dev_head4_R':24,'holdout_head4_R':57,'selected_alpha':alpha,'features':FEATURES,'SECOND_GAP':SECOND_GAP,'THIRD_GAP':THIRD_GAP,'PLAYER_HISTORY':'causal prior-day','Waku10':'pre-race only','SEPTEMBER_OUTCOMES_READ':False,'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':True,'research_modes':['SECOND rerank','SECOND rescue','pre-race scenario/展開 proxy','inner survive','2/3 wall survive','5 follow/makurisashi','6 open-lane','June-tuned inner-survival ON/OFF gate','June-tuned baseline/safe/attack inner gate'],'inner_gate_threshold':best_th,'three_stage_safe_threshold':best_safe,'three_stage_attack_threshold':best_attack,'ROI_EVALUATED':'pre-close od3 proxy only','roi_note':'counterfactual newly-added ticket odds must be reconstructed before ROI claim','ADOPTED_OPPONENT_POLICY':'HEAD4_OPP_INNER_SURVIVE_ALWAYS_V1','ADOPTION_COMMIT':'6b481b991639adef22ee774de6687a198f61b148','NEXT_CANDIDATE':'THIRD PLAYERHistory+Waku10 conditional soft-rerank research','third_selected_alpha':third_alpha,'third_rescue_bonus_cut':rescue_cut}
     (OUT/'meta.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n')
     print('SECOND_RERANK_CV_TOP',cvdf.head(7).to_json(orient='records'))
     print('SECOND_RERANK_SUMMARY',summary.to_json(orient='records'))
