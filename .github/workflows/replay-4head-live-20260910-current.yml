@@ -31,7 +31,7 @@ jobs:
       - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml joblib
       - name: Preflight
         run: |
-          python -m py_compile prepare_4head_120r_daily_state.py run_4head_120r_lastminute_fast.py
+          python -m py_compile prepare_4head_120r_daily_state.py run_4head_120r_lastminute_fast.py audit_4head_live_replay_20260910_current.py prepare_4head_6m_v93_neutral_waku.py
           ! grep -n '\\\\n' prepare_4head_120r_daily_state.py run_4head_120r_lastminute_fast.py
       - name: Build causal state through 2026-09-09
         run: |
@@ -67,9 +67,21 @@ jobs:
           missing=[k for k,v in info.items() if not v['exists']]
           if missing: raise SystemExit('MISSING_HISTORICAL_LIVE_INPUTS '+','.join(missing))
           PY
+      - name: Prepare audited historical primitives
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: python prepare_4head_6m_v93_neutral_waku.py
+      - name: Replay 2026-09-10 current LIVE
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+          STRICT_ROWS: /tmp/head4_clean_long_dataset/dataset.csv
+          V93_ROWS: /tmp/head4_v93_all_parent/v93_all_parent.csv
+        run: python audit_4head_live_replay_20260910_current.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: replay-4head-live-20260910-current
-          path: /tmp/state.json
+          path: |
+            /tmp/state.json
+            /tmp/head4_ph5_live_walkforward/
           retention-days: 30
