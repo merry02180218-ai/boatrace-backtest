@@ -17,7 +17,8 @@ from pathlib import Path
 import argparse,json,pickle
 import pandas as pd
 import onehead_production_profile as prod
-from build_4head_player_history_live import build, REQUIRED
+from build_4head_player_history_live import build, REQUIRED, _bycode
+from backtest import rows
 
 DEV=('2026-02','2026-03','2026-04','2026-05','2026-06')
 SUP=('2026-07','2026-08')
@@ -47,15 +48,15 @@ def main():
     from datetime import date
     for r in added:
         code=str(r['race_code']).zfill(12)
-        card={'レースコード':code}
-        ok=True
-        for b in range(1,7):
-            v=r.get(f'艇{b}_選手名')
-            if not v: ok=False
-            card[f'艇{b}_選手名']=v or ''
-        if not ok:
-            missing.append(code); continue
         td=date.fromisoformat(f'{code[:4]}-{code[4:6]}-{code[6:8]}')
+        # Frozen v360 rows do not carry target player names. Recover only the
+        # target-day PRE race card (not result/payout) from the same causal card
+        # source used by the formal 4HEAD PLAYER_HISTORY builder.
+        ymd=td.strftime('%Y/%m/%d')
+        cards=_bycode(rows(f'data/programs/race_cards/{ymd}.csv'))
+        card=cards.get(code)
+        if card is None or any(not card.get(f'艇{b}_選手名') for b in range(1,7)):
+            missing.append(code); continue
         z=build(card,td,date.fromisoformat(a.history_start))
         row={'race_code':code,'month':f'{code[:4]}-{code[4:6]}',
              'p_head':float(r['p_head']),'opp_mass':float(r['opp_mass'])}
