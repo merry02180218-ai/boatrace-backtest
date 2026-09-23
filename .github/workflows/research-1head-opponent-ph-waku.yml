@@ -5,6 +5,7 @@ on:
     branches: [ main ]
     paths:
       - 'research_1head_opponent_player_waku_v1.py'
+      - 'run_1head_player_history_expansion.py'
       - '.github/workflows/research-1head-opponent-ph-waku.yml'
 permissions:
   contents: read
