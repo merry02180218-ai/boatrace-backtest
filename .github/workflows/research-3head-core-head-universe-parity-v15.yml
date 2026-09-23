@@ -1,0 +1,54 @@
+name: research-3head-core-head-universe-parity-v15
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - research/run_3head-core-head-universe-parity-v15.trigger
+permissions:
+  actions: read
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn requests beautifulsoup4 joblib
+      - name: Download frozen v243 source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo ${{ github.repository }} --name v243-3head-expand-feature-audit --dir golden
+          cp golden/analysis_v243_3head_expand_feature_audit.csv .
+      - name: Download native replay identity manifests
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 35607152183 --repo ${{ github.repository }} --name research-3head-dual-feb-core-native-replay --dir prior
+      - name: Audit
+        run: |
+          python - <<'PY'
+          import json,pandas as pd
+          from pathlib import Path
+          q=pd.read_csv('analysis_v243_3head_expand_feature_audit.csv',dtype={'race_code':str})
+          q['race_code']=q.race_code.astype(str).str.zfill(12); q['date8']=q.race_code.str[:8]
+          core_dates=['20260215','20260207','20260219','20260216','20260217','20260212','20260227']
+          rows=[]
+          for d8 in core_dates:
+              frozen=q[q.date8.eq(d8)].sort_values('p3',ascending=False)
+              mp=next(Path('prior').glob(f'**/{d8}-daily_manifest.json'),None)
+              if mp is None: mp=next(Path('prior').glob(f'**/{d8}/daily_manifest.json'),None)
+              m=json.loads(mp.read_text()) if mp else {}
+              native=[str(x).zfill(12) for x in m.get('pre_candidate_race_codes',[])]
+              rows.append({'date8':d8,'frozen_v243_count':len(frozen),'frozen_codes':'|'.join(frozen.race_code.tolist()),'frozen_p3':'|'.join(f'{x:.6f}' for x in frozen.p3),'native_pre_count':len(native),'native_pre_codes':'|'.join(native),'force_full_cache':m.get('force_full_cache')})
+          z=pd.DataFrame(rows);z.to_csv('core_head_universe_parity_v15.csv',index=False)
+          print(z.to_string(index=False));print('CORE_HEAD_UNIVERSE_PARITY_V15_OK')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: research-3head-core-head-universe-parity-v15
+          path: core_head_universe_parity_v15.csv
