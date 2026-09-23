@@ -12,10 +12,13 @@ jobs:
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+      - name: Verify runner Python
+        run: |
+          set -euo pipefail
+          python3 --version
+          python3 -c "import sys; print(sys.executable)"
+      - name: Install research dependencies
+        run: python3 -m pip install -q --disable-pip-version-check numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
       - name: Download frozen v360 prepared artifact
         env:
           GH_TOKEN: ${{ github.token }}
@@ -28,7 +31,7 @@ jobs:
           test -n "$PREP"
           echo "PREP=$PREP" >> "$GITHUB_ENV"
       - name: Run causal PLAYER_HISTORY coverage audit
-        run: python run_1head_player_history_expansion.py --prepared "$PREP"
+        run: python3 run_1head_player_history_expansion.py --prepared "$PREP"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
