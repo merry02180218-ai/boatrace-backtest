@@ -1,0 +1,148 @@
+name: replay-4head-live-20260922-v2
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/replay-4head-live-20260922-v2.txt'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/previews/od3
+            data/results/realtime
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml joblib
+      - name: Download frozen Sep22 PRE inputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p seed
+          gh run download 35696309894 -n head4-newfeature-pre-live-20260922 -D seed
+          CARD="$(find seed -type f -path '*/current_input/v291/20260922/race_cards.csv' | head -1)"
+          WAKU="$(find seed -type f -path '*/current_input/v291/20260922/waku10.csv' | head -1)"
+          PRE="$(find seed -type f -path '*/live_outputs/head4_120r_pre/20260922/pre_all.csv' | head -1)"
+          STATE="$(find seed -type f -name 'head4_daily_state.json' | head -1)"
+          WATCH="$(find seed -type f -name 'head4_120r_watchlist.json' | head -1)"
+          test -n "$CARD" && test -n "$WAKU" && test -n "$PRE" && test -n "$STATE" && test -n "$WATCH"
+          echo "CARD=$CARD" >> "$GITHUB_ENV"; echo "WAKU=$WAKU" >> "$GITHUB_ENV"; echo "PRE=$PRE" >> "$GITHUB_ENV"; echo "STATE=$STATE" >> "$GITHUB_ENV"; echo "WATCH=$WATCH" >> "$GITHUB_ENV"
+      - name: Preflight archived odds
+        run: |
+          python -m py_compile run_4head_120r_lastminute_fast.py run_4head_v291_third010_live.py
+          find brcsv/data/previews/od3/2026/09 -type f | head
+          python - <<'PY'
+          import glob,pandas as pd
+          n=0
+          for p in glob.glob('brcsv/data/previews/od3/2026/09/*.csv'):
+              q=pd.read_csv(p,dtype={'レースコード':str})
+              n+=q['レースコード'].astype(str).str.zfill(12).str.startswith('20260922').sum()
+          print('SEP22_OD3_ROWS',n)
+          if n==0: raise SystemExit('NO_SEP22_ARCHIVED_OD3')
+          PY
+      - name: Replay current LIVE decision with archived Sep22 odds
+        run: |
+          mkdir -p /tmp/head4_replay_20260922_v2/decisions
+          python - <<'PY'
+          import json,os
+          z=json.load(open(os.environ['WATCH']))
+          with open('/tmp/targets.tsv','w') as f:
+              for x in z['targets']: print(x['jcd'],x['race'],x['deadline_jst'],sep='\t',file=f)
+          PY
+          while IFS=$'\t' read -r JCD RACE DEADLINE; do
+            OUT="/tmp/head4_replay_20260922_v2/decisions/${JCD}_${RACE}.json"
+            python run_4head_120r_lastminute_fast.py --date 20260922 --jcd "$JCD" --race "$RACE" --deadline-jst '2099-01-01T23:59:59+09:00' --race-cards "$CARD" --waku10 "$WAKU" --pre-all "$PRE" --daily-state "$STATE" --performance-benchmark --timeout 6 --max-exhibition-wait-seconds 1 --max-odds-wait-seconds 1 --out "$OUT" || true
+          done < /tmp/targets.tsv
+      - name: Replace benchmark odds with archived predeadline OD3 and recompute LIVE gate
+        run: |
+          python - <<'PY'
+          import csv,glob,json,math,os
+          import pandas as pd
+          import run_4head_120r_lastminute_fast as fast
+          import run_4head_v291_third010_live as live
+          odds={}
+          for p in glob.glob('brcsv/data/previews/od3/2026/09/*.csv'):
+              q=pd.read_csv(p,dtype={'レースコード':str})
+              for _,r in q.iterrows():
+                  code=str(r.get('レースコード','')).replace('.0','').zfill(12)
+                  if not code.startswith('20260922'): continue
+                  m={}
+                  for a in range(1,7):
+                    for b in range(1,7):
+                      if b==a: continue
+                      for c in range(1,7):
+                        if c in (a,b): continue
+                        k=f'{a}-{b}-{c}'
+                        try:v=float(r.get('3連単_'+k))
+                        except:continue
+                        if math.isfinite(v) and v>0:m[k]=v
+                  if len(m)==120: odds[code]=m
+          rows=[]
+          for p in glob.glob('/tmp/head4_replay_20260922_v2/decisions/*.json'):
+              z=json.load(open(p)); code=str(z.get('race_code','')).zfill(12)
+              if code not in odds: continue
+              tickets=z.get('tickets') or []
+              if not tickets: continue
+              vals=[odds[code][t] for t in tickets]
+              comp=live.composite_odds(vals); hp=float(z['head_prob']); mass=float(z['opponent_mass'])
+              raw=z.get('newfeature_raw') or {}
+              old164=(float(z.get('st4_adv_inside',raw.get('st',-99)))>=-.6000000000000001 and z.get('orig4_adv_inside',raw.get('orig')) is not None and float(z.get('orig4_adv_inside',raw.get('orig')))>=-.057777777777777706)
+              baseformula=(comp>=7 and mass>=.425) or (comp<7 and hp>=.22 and mass>=.375 and comp>=3)
+              base120=old164 and (baseformula or (comp>=2.5 and hp+1.5*mass>=.82))
+              # Re-score fixed newfeature: only market_conf changes when archived odds replace current benchmark odds.
+              art=fast.load_newfeature_artifact(); rr=dict(raw); rr['market_conf']=-math.log(max(comp,1e-12))
+              score,ranks=fast.score_newfeature_raw(rr,art)
+              gate=art.get('explicit_expansion_structural_gate') or {}; st=float(rr['st']); orig=rr.get('orig')
+              expansion=(not base120) and orig is not None and st>=float(gate.get('st4_adv_inside_min',-.80)) and float(orig)>=float(gate.get('orig4_adv_inside_min',-.35)) and score>=float(art['production_threshold'])
+              selected=bool(base120 or expansion)
+              plan=live.dutch(tickets,vals) if selected else []
+              rows.append({'race_code':code,'jcd':code[8:10],'race':int(code[10:12]),'head_prob':hp,'opponent_mass':mass,'composite_odds':comp,'old164':int(old164),'base120':int(base120),'newfeature_add':int(expansion),'selected':int(selected),'tickets':'|'.join(tickets),'ticket_count':len(tickets),'stake_plan':json.dumps(plan,ensure_ascii=False),'stake':sum(int(x['stake']) for x in plan),'nf_score':score,'odds_source':'BoatraceCSV predeadline od3'})
+          rows.sort(key=lambda x:x['race_code'])
+          if not rows: raise SystemExit('NO_REPLAY_ROWS')
+          with open('/tmp/head4_replay_20260922_v2/decision_frozen.csv','w',newline='',encoding='utf-8') as f:
+              w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+          print('DECISIONS_FROZEN',len(rows),'BET',sum(x['selected'] for x in rows))
+          PY
+      - name: Join truth only after decisions frozen
+        run: |
+          python - <<'PY'
+          import csv,json,os,pandas as pd
+          p='brcsv/data/results/realtime/2026/09/22.csv';q=pd.read_csv(p,dtype={'レースコード':str})
+          rcc=next(x for x in q.columns if 'レース' in str(x) and 'コード' in str(x));c1=next(x for x in q.columns if '1着' in str(x) and '艇' in str(x));c2=next(x for x in q.columns if '2着' in str(x) and '艇' in str(x));c3=next(x for x in q.columns if '3着' in str(x) and '艇' in str(x))
+          truth={}
+          for _,r in q.iterrows():
+              code=str(r[rcc]).replace('.0','').zfill(12)
+              try:truth[code]=(int(float(r[c1])),int(float(r[c2])),int(float(r[c3])))
+              except:pass
+          rows=list(csv.DictReader(open('/tmp/head4_replay_20260922_v2/decision_frozen.csv',encoding='utf-8')))
+          for x in rows:
+              a=truth.get(x['race_code']); actual='-'.join(map(str,a)) if a else ''; plan=json.loads(x['stake_plan']); stake=int(float(x['stake']));pay=0.;hit=0
+              if int(x['selected']) and actual:
+                  for y in plan:
+                      if y['combo']==actual and int(y['stake'])>0:hit=1;pay=float(y['stake'])*float(y['odds'])
+              x.update(actual=actual,head4=int(bool(a and a[0]==4)),hit=hit,payout=pay,profit=pay-stake)
+          with open('/tmp/head4_replay_20260922_v2/race_detail.csv','w',newline='',encoding='utf-8') as f:
+              w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+          b=[x for x in rows if int(x['selected'])];stake=sum(int(float(x['stake'])) for x in b);pay=sum(float(x['payout']) for x in b)
+          out={'target_date':'2026-09-22','watchlist_R':len(rows),'BET_R':len(b),'head4_R':sum(int(x['head4']) for x in b),'hits':sum(int(x['hit']) for x in b),'stake':stake,'payout':pay,'profit':pay-stake,'roi':100*pay/stake if stake else None,'base120_R':sum(int(x['base120']) for x in b),'newfeature_add_R':sum(int(x['newfeature_add']) for x in b),'policy':'current LIVE + PH5 + newfeature + SECOND011 THIRD018','odds':'BoatraceCSV archived predeadline od3','truth_joined_after_freeze':True}
+          open('/tmp/head4_replay_20260922_v2/result.json','w').write(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
+          print(json.dumps(out,ensure_ascii=False,indent=2));print('BET_DETAIL')
+          for x in b: print({k:x[k] for k in ['race_code','head_prob','opponent_mass','composite_odds','ticket_count','actual','hit','stake','payout','profit']})
+          print('HEAD4_SEP22_LIVE_REPLAY_V2_OK')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-live-replay-20260922-v2
+          path: /tmp/head4_replay_20260922_v2/
