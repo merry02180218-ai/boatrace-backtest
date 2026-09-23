@@ -1,0 +1,53 @@
+name: research-3head-newcore-fast-v20
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - research/run_3head-newcore-fast-v20.trigger
+permissions:
+  actions: read
+  contents: read
+jobs:
+  fast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas
+      - name: Download frozen sources only
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo ${{ github.repository }} --name v243-3head-expand-feature-audit --dir v243
+          gh run download 35853810850 --repo ${{ github.repository }} --name research-3head-three-layer-monthly-bets-v8 --dir layer || true
+          find v243 layer -type f -maxdepth 3 -print 2>/dev/null || true
+      - name: Fast accepted CORE summary without model rebuild
+        run: |
+          python - <<'PY'
+          import pandas as pd
+          q=pd.read_csv('v243/analysis_v243_3head_expand_feature_audit.csv',dtype={'race_code':str})
+          q.race_code=q.race_code.astype(str).str.zfill(12)
+          n=lambda s:pd.to_numeric(s,errors='coerce')
+          base=(q.bet==1)&(q.p3>=.45)&q.raw_top_n.between(7,18)&q.comp_odds.between(3.05,4.0)
+          target=(base&(n(q['f__c_b3_minus_b5_st'])>=-.2))|((q.bet==1)&(~base)&(n(q['f__c_attack3_stretch'])<=0.5672342857142857))
+          core=target&(n(q['f__c_b3_minus_b4_waku_st'])<=.5)&(n(q['f__c_b3_minus_b4_st'])>=-.6)&(n(q['f__c_b3_meetst'])<=0.861111111111111)
+          z=q[core].copy();z['month2']=z.race_code.str[:6]
+          keep=['race_code','month2','y3','trifecta_hit','ret']
+          z[keep].to_csv('accepted_core_fast_v20.csv',index=False)
+          m=z.groupby('month2').agg(R=('race_code','size'),heads=('y3','sum'),ticket_hits=('trifecta_hit','sum'),payout=('ret','sum')).reset_index()
+          m['head_rate']=m.heads/m.R;m['roi']=m.payout/(m.R*10000)
+          m.to_csv('accepted_core_fast_monthly_v20.csv',index=False)
+          print('FAST_CORE',len(z),int(z.y3.sum()),float(z.y3.mean()),float(z.ret.sum()/(len(z)*10000)))
+          print(m.to_string(index=False))
+          print('FAST_V20_OK')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: research-3head-newcore-fast-v20
+          path: |
+            accepted_core_fast_v20.csv
+            accepted_core_fast_monthly_v20.csv
