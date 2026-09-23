@@ -5,6 +5,10 @@ Frozen H078/M375 parent only. No production mutation. September outcomes unread.
 import argparse,json,pickle,os
 from pathlib import Path
 import pandas as pd
+from sklearn.impute import SimpleImputer
+from sklearn.linear_model import LogisticRegression
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
 import run_1head_player_history_expansion as phbase
 import research_4head_waku10_rel43_v4 as wsrc
 OUT=Path(os.environ.get("RUNNER_TEMP","/tmp"))/"1head-opponent-ph-waku-v1"; OUT.mkdir(parents=True,exist_ok=True)
@@ -44,6 +48,20 @@ def main():
  s=pd.DataFrame(sig)
  if len(s): s=s.sort_values("delta",key=lambda x:x.abs(),ascending=False)
  s.to_csv(OUT/"dev_signal.csv",index=False)
- meta={"stage":"DEV_SIGNAL_ONLY","parent_R":int(z.race_code.nunique()),"dev_R":int(z[z.month.isin(DEV)].race_code.nunique()),"support_R":int(z[z.month.isin(SUP)].race_code.nunique()),"selection_used_support_outcomes":False,"september_outcomes_read":False,"production_changed":False,"ph_missing":int(z["b1_pl_recent_p2"].isna().sum()),"waku_columns":int(len(w.columns)-1),"top":s.head(20).to_dict("records") if len(s) else []}
+ # DEV-only transparent opponent-membership reranker. SUPPORT labels remain unopened here.
+ feats=[x for x in q.columns if x.startswith("pl_") or x.startswith("waku__")]
+ usable=[x for x in feats if pd.to_numeric(dev[x],errors="coerce").notna().sum()>=30]
+ X=dev[usable].apply(pd.to_numeric,errors="coerce"); y=dev.actual_opponent.astype(int)
+ model=Pipeline([("imp",SimpleImputer(strategy="median")),("sc",StandardScaler()),("lr",LogisticRegression(C=.25,max_iter=2000,class_weight="balanced"))])
+ model.fit(X,y)
+ q["opp_score"]=model.predict_proba(q[usable].apply(pd.to_numeric,errors="coerce"))[:,1]
+ # Result-free frozen ranking output; evaluation of SUPPORT will be a separate next stage.
+ rank=q.sort_values(["race_code","opp_score"],ascending=[True,False]).copy()
+ rank["opp_rank"]=rank.groupby("race_code").cumcount()+1
+ rank.to_csv(OUT/"frozen_opponent_ranking.csv",index=False)
+ coef=model.named_steps["lr"].coef_[0]
+ cf=pd.DataFrame({"feature":usable,"coef":coef}).sort_values("coef",key=lambda s:s.abs(),ascending=False)
+ cf.to_csv(OUT/"dev_model_coefficients.csv",index=False)
+ meta={"stage":"DEV_MODEL_FROZEN","parent_R":int(z.race_code.nunique()),"dev_R":int(z[z.month.isin(DEV)].race_code.nunique()),"support_R":int(z[z.month.isin(SUP)].race_code.nunique()),"selection_used_support_outcomes":False,"september_outcomes_read":False,"production_changed":False,"ph_missing":int(z["b1_pl_recent_p2"].isna().sum()),"waku_columns":int(len(w.columns)-1),"model_features":len(usable),"top_model_coefficients":cf.head(20).to_dict("records"),"top":s.head(20).to_dict("records") if len(s) else []}
  (OUT/"meta.json").write_text(json.dumps(meta,ensure_ascii=False,indent=2)); print(json.dumps(meta,ensure_ascii=False))
 if __name__=="__main__": main()
