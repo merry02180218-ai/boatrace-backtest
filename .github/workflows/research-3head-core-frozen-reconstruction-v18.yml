@@ -1,0 +1,55 @@
+name: research-3head-core-frozen-reconstruction-v18
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - research/run_3head-core-frozen-reconstruction-v18.trigger
+permissions:
+  actions: read
+  contents: read
+jobs:
+  reconstruct:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas numpy
+      - name: Download canonical frozen v243 source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo ${{ github.repository }} --name v243-3head-expand-feature-audit --dir golden
+          cp golden/analysis_v243_3head_expand_feature_audit.csv .
+      - name: Reconstruct CORE from frozen v243 operational universe
+        run: |
+          python - <<'PY'
+          import pandas as pd,numpy as np,json
+          q=pd.read_csv('analysis_v243_3head_expand_feature_audit.csv',dtype={'race_code':str})
+          q['race_code']=q.race_code.astype(str).str.zfill(12)
+          num=lambda c:pd.to_numeric(q[c],errors='coerce')
+          KEEP=-0.1999999999999999;RESCUE=0.5672342857142857
+          WAKU34=0.4999999999999999;ST34=-0.6;MEETST=0.861111111111111
+          base=(q.bet==1)&(q.p3>=.45)&q.raw_top_n.between(7,18)&q.comp_odds.between(3.05,4.0)
+          target=(base&(num('f__c_b3_minus_b5_st')>=KEEP))|((q.bet==1)&(~base)&(num('f__c_attack3_stretch')<=RESCUE))
+          core=target&(num('f__c_b3_minus_b4_waku_st')<=WAKU34)&(num('f__c_b3_minus_b4_st')>=ST34)&(num('f__c_b3_meetst')<=MEETST)
+          z=q[core].copy().sort_values(['date','race_code'])
+          cols=['month','date','race_code','p3','bet','trifecta_hit','ret','profit','f__c_b3_minus_b4_waku_st','f__c_b3_minus_b4_st','f__c_b3_meetst']
+          z[cols].to_csv('core_frozen_reconstruction_v18.csv',index=False)
+          monthly=z.groupby('month').agg(R=('race_code','size'),heads=('y3','sum'),ticket_hits=('trifecta_hit','sum'),payout=('ret','sum')).reset_index()
+          monthly['head_rate']=monthly.heads/monthly.R
+          monthly['roi']=monthly.payout/(monthly.R*10000)
+          monthly.to_csv('core_frozen_monthly_v18.csv',index=False)
+          print('CORE_R',len(z),'HEADS',int(z.y3.sum()),'HEAD_RATE',float(z.y3.mean()),'TICKET_HITS',int(z.trifecta_hit.sum()),'PAYOUT',float(z.ret.sum()),'ROI',float(z.ret.sum()/(len(z)*10000)))
+          print(monthly.to_string(index=False))
+          print('CORE_FROZEN_RECONSTRUCTION_V18_OK')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: research-3head-core-frozen-reconstruction-v18
+          path: |
+            core_frozen_reconstruction_v18.csv
+            core_frozen_monthly_v18.csv
