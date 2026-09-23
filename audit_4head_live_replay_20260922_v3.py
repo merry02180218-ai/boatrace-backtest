@@ -80,10 +80,11 @@ def main():
   pf=fast.player_flat(cards[code],state); hp=fast.ph5_head_prob_live(cards[code],waku[code],exh,pf); src=fast.make_boats(cards[code],waku[code],exh,pf)
   sr,cr=fast.derive(src,art);p2=score_second(sr,art);pc=score_conditional_third(cr,art);tickets=fast.production_tickets(p2,pc);pairs=[tuple(map(int,x.split('-')[1:])) for x in tickets];mass=fast.pair_mass(p2,pc,pairs)
   vals=[odds[code][x] for x in tickets];comp=fast.composite_odds(vals);d=fast.newfeature_decide(hp,mass,comp,exh,cards[code],state,int(t['jcd']));shadow=bool(hp<.10)
-  ph5_frozen_gate=bool(hp>=.36 and float(exh.get('orig4_adv_inside', float('-inf')))>=-.06)
+  sadv=fast.structural_advantages(exh)
+  ph5_frozen_gate=bool(hp>=.36 and sadv['orig4_adv_inside'] is not None and sadv['orig4_adv_inside']>=-.06)
   production_bet=ph5_frozen_gate
   plan=live.dutch(tickets,vals) if production_bet else []
-  frozen.append({'race_code':code,'status':'OK','head_prob':hp,'opponent_mass':mass,'composite_odds':comp,'base120':int(d['base120_selected']),'newfeature_add':int(d['newfeature_expanded_added']),'selected':int(d['selected']),'shadow':int(shadow),'ph5_frozen_gate':int(ph5_frozen_gate),'production_bet':int(production_bet),'tickets':'|'.join(tickets),'ticket_count':len(tickets),'stake_plan':json.dumps(plan,ensure_ascii=False),'stake':sum(int(x['stake']) for x in plan)})
+  frozen.append({'race_code':code,'status':'OK','head_prob':hp,'opponent_mass':mass,'composite_odds':comp,'base120':int(d['base120_selected']),'newfeature_add':int(d['newfeature_expanded_added']),'selected':int(d['selected']),'shadow':int(shadow),'orig4_adv_inside':sadv['orig4_adv_inside'],'ph5_frozen_gate':int(ph5_frozen_gate),'production_bet':int(production_bet),'tickets':'|'.join(tickets),'ticket_count':len(tickets),'stake_plan':json.dumps(plan,ensure_ascii=False),'stake':sum(int(x['stake']) for x in plan)})
  out=Path('/tmp/head4_replay_20260922_v3');out.mkdir(exist_ok=True)
  pd.DataFrame(frozen).to_csv(out/'decision_frozen.csv',index=False)
  print('FROZEN',len(frozen),'OK',sum(x['status']=='OK' for x in frozen),'BET',sum(x.get('production_bet',0) for x in frozen))
