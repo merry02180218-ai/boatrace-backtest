@@ -92,7 +92,7 @@ def main():
  pd.DataFrame(frozen).to_csv(out/'decision_frozen.csv',index=False)
  print('FROZEN',len(frozen),'OK',sum(x['status']=='OK' for x in frozen),'BET',sum(x.get('production_bet',0) for x in frozen))
  # truth only after freeze
- q=pd.read_csv(ROOT/'data/results/realtime/2026/09/12.csv',dtype={'レースコード':str});rcc=next(x for x in q if 'レース' in str(x) and 'コード' in str(x));c1=next(x for x in q if '1着' in str(x) and '艇' in str(x));c2=next(x for x in q if '2着' in str(x) and '艇' in str(x));c3=next(x for x in q if '3着' in str(x) and '艇' in str(x));truth={}
+ q=pd.read_csv(ROOT/'data/results/realtime/2026/09/13.csv',dtype={'レースコード':str});rcc=next(x for x in q if 'レース' in str(x) and 'コード' in str(x));c1=next(x for x in q if '1着' in str(x) and '艇' in str(x));c2=next(x for x in q if '2着' in str(x) and '艇' in str(x));c3=next(x for x in q if '3着' in str(x) and '艇' in str(x));truth={}
  for _,r in q.iterrows():
   try:truth[rc(r[rcc])]=(int(float(r[c1])),int(float(r[c2])),int(float(r[c3])))
   except:pass
