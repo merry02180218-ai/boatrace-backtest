@@ -28,7 +28,8 @@ jobs:
           test -s analysis_v243_3head_expand_feature_audit.csv
       - name: Preflight
         run: |
-          ! grep -nF '\n' research/run_3head_ph_pre_composite_v13.py
+          ! grep -nF '
+' research/run_3head_ph_pre_composite_v13.py
           ! grep -E '2026[-/, ]*09|202609' research/run_3head_ph_pre_composite_v13.py
           python -m py_compile research/run_3head_ph_pre_composite_v13.py research/run_3head_a60_playerhistory_curve_v1.py analyze_3head_player_history_3v2_ablation_v2.py research/run_3head_wave20_manual_gate.py verify_v288_operational_pre_replay.py
           grep -F 'FULL_PURE_COMPOSITE' research/run_3head_ph_pre_composite_v13.py
