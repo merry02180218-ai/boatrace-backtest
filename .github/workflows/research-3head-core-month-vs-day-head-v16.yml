@@ -1,0 +1,66 @@
+name: research-3head-core-month-vs-day-head-v16
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - research/run_3head-core-month-vs-day-head-v16.trigger
+permissions:
+  actions: read
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas
+      - name: Download frozen v243 and native replay
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo ${{ github.repository }} --name v243-3head-expand-feature-audit --dir golden
+          cp golden/analysis_v243_3head_expand_feature_audit.csv .
+          gh run download 35607152183 --repo ${{ github.repository }} --name research-3head-dual-feb-core-native-replay --dir prior
+          find prior -type f -maxdepth 4 -print
+      - name: Compare monthly v243 universe with native daily PRE selection
+        run: |
+          python - <<'PY'
+          import json,pandas as pd
+          from pathlib import Path
+          q=pd.read_csv('analysis_v243_3head_expand_feature_audit.csv',dtype={'race_code':str})
+          q['race_code']=q.race_code.astype(str).str.zfill(12);q['date8']=q.race_code.str[:8]
+          frozen_core=['202602150404','202602071007','202602191910','202602161108','202602171911','202602120606','202602270507','202602171607']
+          rows=[]
+          for fc in frozen_core:
+              d8=fc[:8]
+              v=q[q.date8.eq(d8)].sort_values('p3',ascending=False)
+              # Native replay artifact contains one replay CSV per date.
+              rp=next(Path('prior').glob(f'**/{d8}/day_replay.csv'),None)
+              native=[]
+              if rp:
+                  z=pd.read_csv(rp,dtype={'race_code':str})
+                  native=z[z.decision.eq('BET')].race_code.astype(str).str.zfill(12).tolist() if 'decision' in z else z.race_code.astype(str).str.zfill(12).tolist()
+              # Also recover the PRE candidate count from day_summary.
+              sp=next(Path('prior').glob(f'**/{d8}/day_summary.json'),None)
+              sm=json.loads(sp.read_text()) if sp else {}
+              rows.append({
+                'frozen_core':fc,'date8':d8,'v243_month_selected_n_that_day':len(v),
+                'v243_month_codes':'|'.join(v.race_code.tolist()),
+                'v243_p3':'|'.join(f'{x:.6f}' for x in v.p3),
+                'native_replay_bet_n':len(native),'native_replay_bets':'|'.join(native),
+                'native_pre_candidates_summary':sm.get('pre_candidates'),
+                'frozen_core_present_in_v243':fc in set(v.race_code),
+                'frozen_core_present_in_native_bets':fc in set(native)
+              })
+          out=pd.DataFrame(rows);out.to_csv('core_month_vs_day_head_v16.csv',index=False)
+          print(out.to_string(index=False))
+          print('CORE_MONTH_VS_DAY_HEAD_V16_OK')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: research-3head-core-month-vs-day-head-v16
+          path: core_month_vs_day_head_v16.csv
