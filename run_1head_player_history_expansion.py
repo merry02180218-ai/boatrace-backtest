@@ -154,6 +154,8 @@ def main():
     support_R=int(len(support)); support_heads=int(support['head_hit'].sum())
     support_sel_R=int(len(sel_support)); support_sel_heads=int(sel_support['head_hit'].sum())
     support_sel_rate=(support_sel_heads/support_sel_R if support_sel_R else None)
+    # Freeze PH selection before ticket ROI audit.
+    ph_selected=df[df[frozen_feature]>=frozen_threshold].copy()
     # Exact-3 ROI audit for the frozen PH expansion, using the same formal HYBRID ticket policy as LIVE165/v389.
     union=list(rr['LIVE165'])+added
     v365.install_payout_cache(union); payouts=v365.payouts_for(union)
@@ -181,7 +183,6 @@ def main():
     if (live_ticket['R'],live_ticket['hits'],live_ticket['return']) != (165,87,63700):
         raise RuntimeError(f'LIVE ticket sentinel drift {live_ticket}')
     # Combined operating summary: formal LIVE165 remains untouched; PH is additive expansion only.
-    ph_selected=df[df[frozen_feature]>=frozen_threshold].copy()
     ph_selected_R=int(len(ph_selected)); ph_selected_heads=int(ph_selected['head_hit'].sum())
     ph_monthly=[]
     for m,g in ph_selected.groupby('month'):
