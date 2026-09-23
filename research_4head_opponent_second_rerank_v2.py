@@ -152,6 +152,41 @@ def three_stage_inner_eval(frame, safe_th, attack_th, label):
         rows.append({'race_code':rc,'month':r.month,'variant':label,'stage':stage,'gate_strength':s,'second_top2':int(int(r.actual_second) in rank[:2]),'second_top3':int(int(r.actual_second) in rank[:3]),'trifecta_capture':int(actual in ts),'ticket_count':len(ts)})
     return pd.DataFrame(rows)
 
+def load_od3(race_codes):
+    root=Path(__import__('os').environ.get('BOATRACECSV_LOCAL_ROOT','brcsv'))
+    want=set(str(x).zfill(12) for x in race_codes); rows=[]
+    for rc in sorted(want):
+        day=rc[:8]; p=root/'data'/'previews'/'od3'/day[:4]/day[4:6]/f'{day[6:8]}.csv'
+        if not p.exists(): continue
+        d=pd.read_csv(p,dtype=str); code_col=next((x for x in d.columns if 'レースコード' in x),None)
+        if code_col is None: continue
+        q=d[d[code_col].astype(str).str.zfill(12).eq(rc)]
+        if len(q): rows.append(q.iloc[-1])
+    return pd.DataFrame(rows)
+
+def odds_roi(detail, z, variant):
+    """JPY10k equal-stake proxy using pre-close od3 snapshots; research only."""
+    sub=detail[detail.variant.eq(variant)].copy(); od=load_od3(sub.race_code)
+    if od.empty: return {'variant':variant,'R':len(sub),'odds_R':0}
+    code_col=next(x for x in od.columns if 'レースコード' in x)
+    om={str(r[code_col]).zfill(12):r for _,r in od.iterrows()}
+    zz=z.drop_duplicates('race_code').set_index('race_code'); stake=payout=0; used=hits=0
+    for _,r in sub.iterrows():
+        rc=str(r.race_code).zfill(12)
+        if rc not in om or rc not in zz.index: continue
+        g=z[z.race_code.eq(rc)]; col='pattern_inner_survive' if 'pattern_inner_survive' in variant else 'baseline_score'
+        rank=score_group(g,col); sm={int(b):float(g.loc[g.boat.eq(b),col].iloc[0]) for b in g.boat}
+        ts=tickets_for(json.loads(zz.loc[rc].opponent_diag),rank,sm)
+        if not ts: continue
+        per=(10000//len(ts)//100)*100; race_stake=per*len(ts); stake+=race_stake; used+=1
+        actual=f"4-{int(zz.loc[rc].actual_second)}-{int(zz.loc[rc].actual_third)}"
+        if actual in ts:
+            colname='3連単_'+actual
+            try: odd=float(om[rc].get(colname,np.nan))
+            except: odd=np.nan
+            if pd.notna(odd) and odd>0: payout+=int(round(per*odd)); hits+=1
+    return {'variant':variant,'R':len(sub),'odds_R':used,'hits_with_odds':hits,'stake':stake,'payout':payout,'profit':payout-stake,'ROI':(100*payout/stake if stake else None),'staking':'JPY10000 equal per ticket, rounded down to JPY100','odds_source':'BoatraceCSV od3 pre-close snapshot'}
+
 def main():
     z=build_long(); dev=z[z.month.eq('2026-06')].copy(); hold=z[z.month.isin(['2026-07','2026-08'])].copy()
     if dev.race_code.nunique()!=24 or hold.race_code.nunique()!=57: raise RuntimeError('MONTH_HEAD4_COUNTS_DRIFT')
@@ -211,8 +246,11 @@ def main():
     detail=pd.concat([evaluate(dev,'baseline_score','baseline_dev'),evaluate(dev,'rerank_score','rerank_dev'),evaluate(dev,'scenario_score','scenario_dev'),rescue_eval(dev,'rescue_dev')]+[evaluate(dev,'pattern_'+p,'pattern_'+p+'_dev') for p in ('inner_survive','wall23','five_follow','six_open')]+[gated_dev]+[evaluate(hold,'baseline_score','baseline_holdout'),evaluate(hold,'rerank_score','rerank_holdout'),evaluate(hold,'scenario_score','scenario_holdout'),rescue_eval(hold,'rescue_holdout')]+[evaluate(hold,'pattern_'+p,'pattern_'+p+'_holdout') for p in ('inner_survive','wall23','five_follow','six_open')]+[gated_hold,three_dev,three_hold],ignore_index=True)
     gg.to_csv(OUT/'inner_gate_june_grid.csv',index=False)
     summary=detail.groupby(['variant','month']).agg(R=('race_code','size'),second_top2=('second_top2','sum'),second_top3=('second_top3','sum'),trifecta_capture=('trifecta_capture','sum'),avg_points=('ticket_count','mean')).reset_index()
+    roi=pd.DataFrame([odds_roi(detail,z,'baseline_dev'),odds_roi(detail,z,'pattern_inner_survive_dev'),odds_roi(detail,z,'baseline_holdout'),odds_roi(detail,z,'pattern_inner_survive_holdout')])
+    roi.to_csv(OUT/'od3_roi_proxy.csv',index=False)
+    print('OD3_ROI_PROXY',roi.to_json(orient='records'))
     cvdf.to_csv(OUT/'june_groupcv_alpha_grid.csv',index=False); detail.to_csv(OUT/'race_detail.csv',index=False); summary.to_csv(OUT/'summary.csv',index=False)
-    meta={'production_bets':163,'head4_R':81,'dev':'2026-06 only','holdout':['2026-07','2026-08'],'dev_head4_R':24,'holdout_head4_R':57,'selected_alpha':alpha,'features':FEATURES,'SECOND_GAP':SECOND_GAP,'THIRD_GAP':THIRD_GAP,'PLAYER_HISTORY':'causal prior-day','Waku10':'pre-race only','SEPTEMBER_OUTCOMES_READ':False,'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':False,'research_modes':['SECOND rerank','SECOND rescue','pre-race scenario/展開 proxy','inner survive','2/3 wall survive','5 follow/makurisashi','6 open-lane','June-tuned inner-survival ON/OFF gate','June-tuned baseline/safe/attack inner gate'],'inner_gate_threshold':best_th,'three_stage_safe_threshold':best_safe,'three_stage_attack_threshold':best_attack,'ROI_EVALUATED':False,'roi_note':'counterfactual newly-added ticket odds must be reconstructed before ROI claim','NEXT_CANDIDATE':'pattern_inner_survive always-on; reconstruct official closing trifecta odds before adoption'}
+    meta={'production_bets':163,'head4_R':81,'dev':'2026-06 only','holdout':['2026-07','2026-08'],'dev_head4_R':24,'holdout_head4_R':57,'selected_alpha':alpha,'features':FEATURES,'SECOND_GAP':SECOND_GAP,'THIRD_GAP':THIRD_GAP,'PLAYER_HISTORY':'causal prior-day','Waku10':'pre-race only','SEPTEMBER_OUTCOMES_READ':False,'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':False,'research_modes':['SECOND rerank','SECOND rescue','pre-race scenario/展開 proxy','inner survive','2/3 wall survive','5 follow/makurisashi','6 open-lane','June-tuned inner-survival ON/OFF gate','June-tuned baseline/safe/attack inner gate'],'inner_gate_threshold':best_th,'three_stage_safe_threshold':best_safe,'three_stage_attack_threshold':best_attack,'ROI_EVALUATED':'pre-close od3 proxy only','roi_note':'counterfactual newly-added ticket odds must be reconstructed before ROI claim','NEXT_CANDIDATE':'pattern_inner_survive always-on; reconstruct official closing trifecta odds before adoption'}
     (OUT/'meta.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2)+'\n')
     print('SECOND_RERANK_CV_TOP',cvdf.head(7).to_json(orient='records'))
     print('SECOND_RERANK_SUMMARY',summary.to_json(orient='records'))
