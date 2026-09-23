@@ -101,6 +101,5 @@ def main():
  pd.DataFrame(detail).to_csv(out/'race_detail.csv',index=False)
  b=[x for x in detail if x.get('production_bet')];stake=sum(int(x['stake']) for x in b);pay=sum(float(x['payout']) for x in b)
  res={'target_date':'2026-09-22','watchlist_R':len(watch['targets']),'frozen_R':len(frozen),'valid_R':sum(x['status']=='OK' for x in frozen),'BET_R':len(b),'head4_R':sum(x['head4'] for x in b),'hits':sum(x['hit'] for x in b),'stake':stake,'payout':pay,'profit':pay-stake,'roi':100*pay/stake if stake else None,'base120_R':sum(x['base120'] for x in b),'newfeature_add_R':sum(x['newfeature_add'] for x in b),'truth_joined_after_freeze':True,'odds_source':'BoatraceCSV archived predeadline od3'}
- (out/'result.json').write_text(json.dumps(res,ensure_ascii=False,indent=2)+'
-');print(json.dumps(res,ensure_ascii=False,indent=2));print('BET_DETAIL');[print({k:x[k] for k in ['race_code','head_prob','opponent_mass','composite_odds','ticket_count','actual','hit','stake','payout','profit']}) for x in b];print('HEAD4_SEP22_HISTORICAL_REPLAY_V3_OK')
+ (out/'result.json').write_text(json.dumps(res,ensure_ascii=False,indent=2)+chr(10));print(json.dumps(res,ensure_ascii=False,indent=2));print('BET_DETAIL');[print({k:x[k] for k in ['race_code','head_prob','opponent_mass','composite_odds','ticket_count','actual','hit','stake','payout','profit']}) for x in b];print('HEAD4_SEP22_HISTORICAL_REPLAY_V3_OK')
 if __name__=='__main__':main()
