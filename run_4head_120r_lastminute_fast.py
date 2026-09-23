@@ -352,31 +352,42 @@ def require_before_deadline(deadline,stage):
 
 
 def inner_survive_second_scores(p2, pflat, waku):
-    """Adopted always-on inner-survival SECOND score.
+    """Exact LIVE port of research pattern_score(..., 'inner_survive').
 
-    Mirrors the leakage-safe research pattern_inner_survive signal using only
-    current pre-race PLAYERHistory/Waku10 plus frozen v283 p2.
+    Research semantics are race-local z-scores across BOATS=(1,2,3,5,6):
+      bonus=(z(pl_frame_p2)+z(w10_wr)-z(w10_rel4_wr))/3
+      inner 1/2/3 multiplier=1.0; outer 5/6 multiplier=-0.35
+      final=logit(p2)+0.20*bonus
     """
     def lg(p):
         p=min(max(float(p),1e-6),1-1e-6)
         return math.log(p/(1-p))
-    def val(name,b,default=0.0):
-        keys=[f'w10_b{b}_{name}', f'b{b}_{name}', f'艇{b}_{name}']
-        for k in keys:
+    def raw_waku(b, rel=False):
+        names=([f'w10_rel4_b{b}_wr',f'rel4_b{b}_wr'] if rel else
+               [f'w10_b{b}_wr',f'b{b}_wr'])
+        for k in names:
             try:
                 x=float(waku.get(k,''))
                 if math.isfinite(x): return x
             except Exception: pass
-        return default
+        return float('nan')
+    def zmap(vals):
+        a=[float(vals[b]) for b in BOATS if math.isfinite(float(vals[b]))]
+        med=float(np.median(a)) if a else 0.0
+        filled={b:(float(vals[b]) if math.isfinite(float(vals[b])) else med) for b in BOATS}
+        arr=np.asarray([filled[b] for b in BOATS],dtype=float)
+        sd=float(np.std(arr,ddof=1))
+        mu=float(np.mean(arr))
+        return {b:(filled[b]-mu)/(sd if math.isfinite(sd) and sd>1e-9 else 1.0) for b in BOATS}
+    pl={b:float(pflat[f'b{b}_pl_frame_p2']) for b in BOATS}
+    wr={b:raw_waku(b,False) for b in BOATS}
+    rel={b:raw_waku(b,True) for b in BOATS}
+    zp,zw,zr=zmap(pl),zmap(wr),zmap(rel)
     out={}
     for b in BOATS:
-        bonus=0.0
-        if b in (1,2,3):
-            bonus += .35*float(pflat[f'b{b}_pl_frame_p2']) + .20*float(pflat[f'b{b}_pl_recent_p2'])
-            bonus += .25*val('wr',b) + .20*val('sr',b)
-        else:
-            bonus -= .10*val('wr',b) + .10*val('sr',b)
-        out[b]=lg(p2[b]) + .20*bonus
+        bonus=(zp[b]+zw[b]-zr[b])/3.0
+        bonus*=1.0 if b in (1,2,3) else -0.35
+        out[b]=lg(p2[b])+0.20*bonus
     return out
 
 def production_tickets(p2,pc,pflat=None,waku=None):
