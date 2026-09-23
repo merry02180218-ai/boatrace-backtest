@@ -21,6 +21,7 @@ from typing import Any
 from zoneinfo import ZoneInfo
 
 import requests
+import numpy as np
 from build_4head_post_live import boatcast_st_url,boatcast_orig_url,BOATCAST,UA
 from build_4head_v283_current_exhibition_live import parse_boatcast_st,parse_boatcast_original,original_corrected,_rank_strength
 from backtest_v3 import CORR
