@@ -18,10 +18,8 @@ def text_from_csv_row(kind,r):
  # Convert archived CSV row to the exact parser-friendly BOATCAST text shape.
  if kind=='tkz':
   out=['data=','1']
-  for b in range(1,7): out.append(f"{b}\t{r.get(f'艇{b}_展示タイム','')}")
-  return '
-'.join(out)+'
-'
+  for b in range(1,7): out.append(f"{b}\\t{r.get(f'艇{b}_展示タイム','')}")
+  return chr(10).join(out)+chr(10)
  raise RuntimeError(kind)
 def archived_exhibition(code,state):
  ds=f'{code[:4]}/{code[4:6]}/{code[6:8]}'; j=int(code[8:10]);rn=int(code[10:12])
