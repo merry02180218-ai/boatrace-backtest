@@ -11,7 +11,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]));sys.path.insert(0,st
 import run_3head_a60_playerhistory_curve_v1 as base
 import analyze_3head_player_history_3v2_ablation_v2 as ph
 import run_3head_wave20_manual_gate as w20
-import run_3head_v288_a60_overlap_strength as ov
+import run_3head_v288_a60_overlap_strength as v288ov
 
 OUT=Path("research_3head_three_layer_monthly_bets_v7.json"); CSV=Path("research_3head_three_layer_monthly_bets_v7.csv")
 TARGETS=[30,40,50,60,70,80]
@@ -75,7 +75,7 @@ def main():
     if not pred: raise RuntimeError(f"NO_PLAYER_HISTORY_PREDICTIONS pool={len(d)} months={d.month.value_counts().to_dict()} ph_nonnull={d[full].notna().sum().to_dict()}")
     p=pd.concat(pred,ignore_index=True)
     # Freeze CORE membership independently, then apply priority CORE > A+.60 > FULL_3V2.
-    core=ov.build_v288_codes(); core_codes=set(core.race_code.astype(str))
+    core=v288ov.build_v288_codes(); core_codes=set(core.race_code.astype(str))
     rows=[]
     detail=[]
     for mon,g in p.groupby("month"):
