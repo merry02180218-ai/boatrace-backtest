@@ -45,7 +45,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           import pandas as pd, json
-          day='2026/09/11'
+          day='2026/09/12'
           paths={
             'card':Path('brcsv/data/programs/race_cards')/day/'10.csv',
             'waku':Path('brcsv/data/programs/waku10')/day/'10.csv',
@@ -68,13 +68,13 @@ jobs:
         env:
           BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
           STATE: /tmp/state.json
-          CARD: ${{ github.workspace }}/brcsv/data/programs/race_cards/2026/09/11.csv
-          WAKU: ${{ github.workspace }}/brcsv/data/programs/waku10/2026/09/11.csv
+          CARD: ${{ github.workspace }}/brcsv/data/programs/race_cards/2026/09/12.csv
+          WAKU: ${{ github.workspace }}/brcsv/data/programs/waku10/2026/09/12.csv
           WATCH: /tmp/watch.json
         run: |
           python - <<'PY'
           import csv,json
-          p='brcsv/data/programs/race_cards/2026/09/11.csv'
+          p='brcsv/data/programs/race_cards/2026/09/12.csv'
           rows=list(csv.DictReader(open(p,encoding='utf-8-sig')))
           seen=set(); targets=[]
           for r in rows:
