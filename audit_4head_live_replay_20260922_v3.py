@@ -79,11 +79,11 @@ def main():
    frozen.append({'race_code':code,'status':'EXHIBITION_MISSING','reason':str(e)});continue
   pf=fast.player_flat(cards[code],state); hp=fast.ph5_head_prob_live(cards[code],waku[code],exh,pf); src=fast.make_boats(cards[code],waku[code],exh,pf)
   sr,cr=fast.derive(src,art);p2=score_second(sr,art);pc=score_conditional_third(cr,art);tickets=fast.production_tickets(p2,pc);pairs=[tuple(map(int,x.split('-')[1:])) for x in tickets];mass=fast.pair_mass(p2,pc,pairs)
-  vals=[odds[code][x] for x in tickets];comp=fast.composite_odds(vals);d=fast.newfeature_decide(hp,mass,comp,exh,cards[code],state,int(t['jcd']));plan=live.dutch(tickets,vals) if d['selected'] else []
-  frozen.append({'race_code':code,'status':'OK','head_prob':hp,'opponent_mass':mass,'composite_odds':comp,'base120':int(d['base120_selected']),'newfeature_add':int(d['newfeature_expanded_added']),'selected':int(d['selected']),'tickets':'|'.join(tickets),'ticket_count':len(tickets),'stake_plan':json.dumps(plan,ensure_ascii=False),'stake':sum(int(x['stake']) for x in plan)})
+  vals=[odds[code][x] for x in tickets];comp=fast.composite_odds(vals);d=fast.newfeature_decide(hp,mass,comp,exh,cards[code],state,int(t['jcd']));shadow=bool(hp<.10)\n  production_bet=bool(d['selected'] and not shadow)\n  plan=live.dutch(tickets,vals) if production_bet else []
+  frozen.append({'race_code':code,'status':'OK','head_prob':hp,'opponent_mass':mass,'composite_odds':comp,'base120':int(d['base120_selected']),'newfeature_add':int(d['newfeature_expanded_added']),'selected':int(d['selected']),'shadow':int(shadow),'production_bet':int(production_bet),'tickets':'|'.join(tickets),'ticket_count':len(tickets),'stake_plan':json.dumps(plan,ensure_ascii=False),'stake':sum(int(x['stake']) for x in plan)})
  out=Path('/tmp/head4_replay_20260922_v3');out.mkdir(exist_ok=True)
  pd.DataFrame(frozen).to_csv(out/'decision_frozen.csv',index=False)
- print('FROZEN',len(frozen),'OK',sum(x['status']=='OK' for x in frozen),'BET',sum(x.get('selected',0) for x in frozen))
+ print('FROZEN',len(frozen),'OK',sum(x['status']=='OK' for x in frozen),'BET',sum(x.get('production_bet',0) for x in frozen))
  # truth only after freeze
  q=pd.read_csv(ROOT/'data/results/realtime/2026/09/22.csv',dtype={'レースコード':str});rcc=next(x for x in q if 'レース' in str(x) and 'コード' in str(x));c1=next(x for x in q if '1着' in str(x) and '艇' in str(x));c2=next(x for x in q if '2着' in str(x) and '艇' in str(x));c3=next(x for x in q if '3着' in str(x) and '艇' in str(x));truth={}
  for _,r in q.iterrows():
@@ -92,12 +92,12 @@ def main():
  detail=[]
  for x in frozen:
   y=dict(x);a=truth.get(x['race_code']);actual='-'.join(map(str,a)) if a else '';pay=0.;hit=0
-  if x.get('selected') and actual:
+  if x.get('production_bet') and actual:
    for z in json.loads(x['stake_plan']):
     if z['combo']==actual:hit=1;pay=float(z['stake'])*float(z['odds'])
   y.update(actual=actual,head4=int(bool(a and a[0]==4)),hit=hit,payout=pay,profit=pay-int(x.get('stake',0)));detail.append(y)
  pd.DataFrame(detail).to_csv(out/'race_detail.csv',index=False)
- b=[x for x in detail if x.get('selected')];stake=sum(int(x['stake']) for x in b);pay=sum(float(x['payout']) for x in b)
+ b=[x for x in detail if x.get('production_bet')];stake=sum(int(x['stake']) for x in b);pay=sum(float(x['payout']) for x in b)
  res={'target_date':'2026-09-22','watchlist_R':len(watch['targets']),'frozen_R':len(frozen),'valid_R':sum(x['status']=='OK' for x in frozen),'BET_R':len(b),'head4_R':sum(x['head4'] for x in b),'hits':sum(x['hit'] for x in b),'stake':stake,'payout':pay,'profit':pay-stake,'roi':100*pay/stake if stake else None,'base120_R':sum(x['base120'] for x in b),'newfeature_add_R':sum(x['newfeature_add'] for x in b),'truth_joined_after_freeze':True,'odds_source':'BoatraceCSV archived predeadline od3'}
  (out/'result.json').write_text(json.dumps(res,ensure_ascii=False,indent=2)+'\n');print(json.dumps(res,ensure_ascii=False,indent=2));print('BET_DETAIL');[print({k:x[k] for k in ['race_code','head_prob','opponent_mass','composite_odds','ticket_count','actual','hit','stake','payout','profit']}) for x in b];print('HEAD4_SEP22_HISTORICAL_REPLAY_V3_OK')
 if __name__=='__main__':main()
