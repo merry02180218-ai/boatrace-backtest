@@ -33,9 +33,9 @@ OUT=Path(__import__('os').environ.get('RUNNER_TEMP','/tmp'))/'1head-player-histo
 
 def build_ph_tolerant(target_card,target_date,history_start):
     """Causal PH builder with audited source gaps: only update on races with valid historical result."""
-    names={b:clean_name(target_card.get(f'艇{b}_選手名','')) for b in range(1,7)}
+    names={b:str(target_card.get(f'艇{b}_登録番号','')).strip() for b in range(1,7)}
     if any(not names[b] for b in range(1,7)) or len(set(names.values()))!=6:
-        raise RuntimeError('invalid target player identity')
+        raise RuntimeError('invalid target player registration identity')
     state={name:_blank() for name in names.values()}; seen={name:0 for name in names.values()}
     gaps=[]; d=history_start
     while d<target_date:
@@ -44,7 +44,7 @@ def build_ph_tolerant(target_card,target_date,history_start):
         for card in sorted(cards,key=lambda x:str(x.get('レースコード','')).zfill(12)):
             rc=str(card.get('レースコード','')).zfill(12); hits=[]
             for b in range(1,7):
-                name=clean_name(card.get(f'艇{b}_選手名',''))
+                name=str(card.get(f'艇{b}_登録番号','')).strip()
                 if name in state:hits.append((b,name))
             if not hits: continue
             rr=results.get(rc)
@@ -98,9 +98,9 @@ def main():
         ymd=td.strftime('%Y/%m/%d')
         cards=_bycode(rows(f'data/programs/race_cards/{ymd}.csv'))
         card=cards.get(code)
-        if card is None or any(not card.get(f'艇{b}_選手名') for b in range(1,7)):
+        if card is None or any(not str(card.get(f'艇{b}_登録番号','')).strip() for b in range(1,7)):
             missing.append(code); continue
-        key=(td.isoformat(),tuple(clean_name(card.get(f'艇{b}_選手名','')) for b in range(1,7)))
+        key=(td.isoformat(),tuple(str(card.get(f'艇{b}_登録番号','')).strip() for b in range(1,7)))
         if key not in ph_cache:
             ph_cache[key]=build_ph_tolerant(card,td,date.fromisoformat(a.history_start))
         flat,gaps=ph_cache[key]; all_gaps.update(gaps)
@@ -162,6 +162,8 @@ def main():
       'dev_R':int(len(dev)),'dev_base_head_rate':base,
       'dev_scan_top10':scans[:10],
       'coverage_ok':len(missing)==0 and len(df)==71,
+      'identity_key':'registration_number',
+      'canonical_shared_ph_formula':True,
       'gap_safe_for_selection':gap_safe,
       'audit_ok':len(missing)==0 and len(df)==71 and gap_safe,
     }
