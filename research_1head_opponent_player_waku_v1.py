@@ -11,12 +11,17 @@ OUT=Path(os.environ.get("RUNNER_TEMP","/tmp"))/"1head-opponent-ph-waku-v1"; OUT.
 DEV=("2026-02","2026-03","2026-04","2026-05","2026-06"); SUP=("2026-07","2026-08")
 def main():
  ap=argparse.ArgumentParser(); ap.add_argument("--prepared",required=True,type=Path); a=ap.parse_args()
- rows=pickle.load(open(a.prepared,"rb"))
- if isinstance(rows,dict): rows=rows.get("rows",rows.get("data",rows))
- d=pd.DataFrame(rows); d["race_code"]=d.race_code.astype(str).str.zfill(12)
- d=d[(pd.to_numeric(d.p_head)>=.78)&(pd.to_numeric(d.opp_mass)>=.375)&d.month.astype(str).isin(DEV+SUP)].copy()
- cards=phbase.recover_target_cards(d)
- ph=phbase.build_canonical_ph_snapshots(cards,pd.Timestamp("2025-10-01"),pd.Timestamp("2026-08-31"),Path(os.environ["BOATRACECSV_LOCAL_ROOT"]))
+ x=pickle.load(open(a.prepared,"rb")); rr=x["rows"]
+ if len(rr["LIVE165"])!=165 or len(rr["H078_M375"])!=236: raise RuntimeError("frozen universe drift")
+ live={str(r["race_code"]).zfill(12) for r in rr["LIVE165"]}
+ # Start from the full H078/M375 universe; formal/PH head selection remains frozen downstream.
+ d=pd.DataFrame(rr["H078_M375"]); d["race_code"]=d.race_code.astype(str).str.zfill(12)
+ d["month"]=d.race_code.str.slice(0,4)+"-"+d.race_code.str.slice(4,6)
+ d=d[d.month.isin(DEV+SUP)].copy()
+ target_codes=set(d.race_code)
+ from datetime import date
+ phrows=phbase.build_canonical_ph_snapshots(target_codes,date(2025,10,1),date(2026,8,31),os.environ["BOATRACECSV_LOCAL_ROOT"])
+ ph=pd.DataFrame([{"race_code":k,**v} for k,v in phrows.items()])
  ph["race_code"]=ph.race_code.astype(str).str.zfill(12)
  w=wsrc.build_waku(d.race_code.tolist()); w["race_code"]=w.race_code.astype(str).str.zfill(12)
  z=d.merge(ph,on="race_code",how="left",validate="one_to_one",suffixes=("","_ph")).merge(w,on="race_code",how="left",validate="one_to_one")
