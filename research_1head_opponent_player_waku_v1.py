@@ -11,6 +11,9 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 import run_1head_player_history_expansion as phbase
 import research_4head_waku10_rel43_v4 as wsrc
+import run_v299_1head_trifecta3_policy_search as v299
+import run_v365_1head_exact3_hit_push as v365
+import onehead_production_profile as prod
 OUT=Path(os.environ.get("RUNNER_TEMP","/tmp"))/"1head-opponent-ph-waku-v1"; OUT.mkdir(parents=True,exist_ok=True)
 DEV=("2026-02","2026-03","2026-04","2026-05","2026-06"); SUP=("2026-07","2026-08")
 def main():
@@ -59,6 +62,28 @@ def main():
  rank=q.sort_values(["race_code","opp_score"],ascending=[True,False]).copy()
  rank["opp_rank"]=rank.groupby("race_code").cumcount()+1
  rank.to_csv(OUT/"frozen_opponent_ranking.csv",index=False)
+ # Open SUPPORT only after DEV model is frozen. Evaluate a simple 3-ticket ordered-pair policy:
+ # top-2 opponent scores produce (A,B),(B,A), plus (A,C). Compare formal HYBRID on same support races.
+ support_codes=set(q[q.month.isin(SUP)].race_code)
+ byrank={k:g.sort_values("opp_score",ascending=False).boat.astype(int).tolist() for k,g in rank.groupby("race_code")}
+ v365.install_payout_cache(rr["H078_M375"]); payouts=v365.payouts_for(rr["H078_M375"])
+ ev=[]
+ for r0 in rr["H078_M375"]:
+  code=str(r0["race_code"]).zfill(12)
+  if code not in support_codes: continue
+  p2,pc=v365.formal_post_five6(r0); prob=v299.pair_prob(p2,pc,prod.TICKET_ALPHA)
+  formal=v299.STRATEGIES["HYBRID"](p2,pc,prob)[:3]
+  bs=byrank[code]; new=[(bs[0],bs[1]),(bs[1],bs[0]),(bs[0],bs[2])]
+  actual=str(r0["actual_combo"]); fh=int(actual in {f"1-{a}-{b}" for a,b in formal}); nh=int(actual in {f"1-{a}-{b}" for a,b in new})
+  pay=int(payouts.get(code,0))
+  ev.append({"race_code":code,"month":code[:6],"actual":actual,"formal":str(formal),"new":str(new),"formal_hit":fh,"new_hit":nh,"payout":pay})
+ e=pd.DataFrame(ev); e.to_csv(OUT/"support_ticket_compare.csv",index=False)
+ def met(hit):
+  h=int(e[hit].sum()); n=len(e); ret=int(e.loc[e[hit].eq(1),"payout"].sum()); stake=n*300
+  return {"R":n,"hits":h,"rate":h/n if n else None,"return":ret,"stake":stake,"roi":ret/stake if stake else None}
+ support_eval={"formal":met("formal_hit"),"ph_waku":met("new_hit"),"rescued":int(((e.formal_hit==0)&(e.new_hit==1)).sum()),"lost":int(((e.formal_hit==1)&(e.new_hit==0)).sum())}
+ (OUT/"support_eval.json").write_text(json.dumps(support_eval,ensure_ascii=False,indent=2))
+ print("SUPPORT_EVAL",json.dumps(support_eval,ensure_ascii=False))
  coef=model.named_steps["lr"].coef_[0]
  cf=pd.DataFrame({"feature":usable,"coef":coef}).sort_values("coef",key=lambda s:s.abs(),ascending=False)
  cf.to_csv(OUT/"dev_model_coefficients.csv",index=False)
