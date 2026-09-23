@@ -107,3 +107,5 @@ def main():
     OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2)+chr(10),encoding="utf-8")
     print(json.dumps(out,ensure_ascii=False,indent=2));print("THREE_LAYER_MONTHLY_BETS_V7_OK");print("SEPTEMBER_UNREAD");print("PRODUCTION_UNCHANGED")
 if __name__=="__main__":main()
+
+# trigger exact layered audit v8
