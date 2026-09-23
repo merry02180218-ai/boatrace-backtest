@@ -5,6 +5,7 @@ on:
     paths:
       - research/run_3head-a60-highprecision-v21.trigger
       - research/run_3head-a60-highprecision-v21-fix.trigger
+      - research/run_3head-a60-highprecision-v21-9m.trigger
 permissions:
   actions: read
   contents: read
@@ -51,7 +52,7 @@ jobs:
           _,enh,_=w20.make_pre_scores.__globals__['choose_features'](pd.concat(list(frames.values()),ignore_index=True,sort=False))
           scores={}
           hist=pd.concat(list(frames.values()),ignore_index=True,sort=False)
-          for k in ['jul','aug']:
+          for k in ['dec','jan','feb','mar','apr','may','jun','jul','aug']:
             target=frames[k].sort_values(['date','rc']).copy(); out=[]
             for dayv in sorted(target.date.dt.normalize().unique()):
               day=pd.Timestamp(dayv); today=target[target.date.dt.normalize()==day].copy()
@@ -64,7 +65,7 @@ jobs:
           w20.prefetch_sources.__globals__['END']='2026-08-31'
           days,cache=w20.prefetch_sources(); post,_=w20.build_motor_exhibition(days,cache)
           d=[]
-          for k in ['jul','aug']:
+          for k in ['dec','jan','feb','mar','apr','may','jun','jul','aug']:
             q=scores[k].merge(post,on=['rc','date'],how='left',validate='one_to_one'); q['month']=k; q['race_code']=q.rc.astype('int64').astype(str).str.zfill(12); d.append(q)
           d=pd.concat(d,ignore_index=True); d=ph.add_player_history(d)
           names=ph.NAMES; full=[]
@@ -97,6 +98,8 @@ jobs:
           allr=out[out.scope.eq('ALL')].sort_values(['head_rate','R'],ascending=[False,False])
           print('EXACT_CORE',len(core))
           print('A60_PURE_BASE',len(p),int(p.y.sum()),float(p.y.mean()) if len(p) else None)
+          print('A60_PURE_BASE_MONTHLY')
+          print(p.groupby('month').y.agg(['size','sum','mean']).to_string())
           print('TOP_WITH_MIN_R_5')
           print(allr[allr.R>=5].head(30).to_string(index=False))
           print('TOP_WITH_MIN_R_10')
