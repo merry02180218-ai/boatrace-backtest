@@ -1,0 +1,124 @@
+name: replay-4head-live-20260922
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/replay-4head-live-20260922.txt'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml joblib
+      - name: Download frozen Sep22 PRE inputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p seed
+          gh run download 35696309894 -n head4-newfeature-pre-live-20260922 -D seed
+          CARD="$(find seed -type f -path '*/current_input/v291/20260922/race_cards.csv' | head -1)"
+          WAKU="$(find seed -type f -path '*/current_input/v291/20260922/waku10.csv' | head -1)"
+          PRE="$(find seed -type f -path '*/live_outputs/head4_120r_pre/20260922/pre_all.csv' | head -1)"
+          STATE="$(find seed -type f -name 'head4_daily_state.json' | head -1)"
+          WATCH="$(find seed -type f -name 'head4_120r_watchlist.json' | head -1)"
+          test -n "$CARD" && test -n "$WAKU" && test -n "$PRE" && test -n "$STATE" && test -n "$WATCH"
+          echo "CARD=$CARD" >> "$GITHUB_ENV"
+          echo "WAKU=$WAKU" >> "$GITHUB_ENV"
+          echo "PRE=$PRE" >> "$GITHUB_ENV"
+          echo "STATE=$STATE" >> "$GITHUB_ENV"
+          echo "WATCH=$WATCH" >> "$GITHUB_ENV"
+      - name: Preflight
+        run: |
+          python -m py_compile run_4head_120r_lastminute_fast.py run_4head_v291_third010_live.py
+          python - <<'PY'
+          from pathlib import Path
+          for p in ['run_4head_120r_lastminute_fast.py','run_4head_v291_third010_live.py']:
+              s=Path(p).read_text()
+              bad=[(i+1,x) for i,x in enumerate(s.splitlines()) if '\\n' in x and not ('write_text' in x or "+'\\\\n'" in x or '"\\\\n"' in x)]
+              if bad: raise SystemExit(f'LITERAL_ESCAPED_NEWLINE_SUSPECT {p} {bad[:5]}')
+          print('PREFLIGHT_OK')
+          PY
+      - name: Replay frozen LIVE watchlist with archived date
+        shell: bash
+        run: |
+          mkdir -p /tmp/head4_replay_20260922/decisions
+          python - <<'PY' > /tmp/targets.tsv
+          import json,os
+          z=json.load(open(os.environ['WATCH']))
+          for x in z['targets']:
+              print(x['jcd'],x['race'],x['deadline_jst'],sep='\t')
+          PY
+          while IFS=$'\t' read -r JCD RACE DEADLINE; do
+            OUT="/tmp/head4_replay_20260922/decisions/${JCD}_${RACE}.json"
+            python run_4head_120r_lastminute_fast.py \
+              --date 20260922 --jcd "$JCD" --race "$RACE" \
+              --deadline-jst '2099-01-01T23:59:59+09:00' \
+              --race-cards "$CARD" --waku10 "$WAKU" --pre-all "$PRE" --daily-state "$STATE" \
+              --performance-benchmark --timeout 6 --max-exhibition-wait-seconds 1 --max-odds-wait-seconds 1 \
+              --out "$OUT" || true
+          done < /tmp/targets.tsv
+      - name: Fetch Sep22 truth and aggregate
+        run: |
+          python - <<'PY'
+          import csv,glob,json,os,requests,math
+          import run_4head_v291_third010_live as live
+          from io import StringIO
+          url='https://boatracecsv.github.io/data/results/realtime/2026/09/22.csv'
+          r=requests.get(url,timeout=20); r.raise_for_status()
+          q=list(csv.DictReader(StringIO(r.text)))
+          def rc(v):
+              s=str(v or '').strip()
+              if s.endswith('.0'): s=s[:-2]
+              return s.zfill(12)
+          if not q: raise SystemExit('NO_TRUTH_ROWS')
+          cols=q[0].keys()
+          rcc=next(x for x in cols if 'レース' in x and 'コード' in x)
+          c1=next(x for x in cols if '1着' in x and '艇' in x)
+          c2=next(x for x in cols if '2着' in x and '艇' in x)
+          c3=next(x for x in cols if '3着' in x and '艇' in x)
+          truth={}
+          for x in q:
+              try: truth[rc(x[rcc])]=(int(float(x[c1])),int(float(x[c2])),int(float(x[c3])))
+              except: pass
+          rows=[]
+          for p in glob.glob('/tmp/head4_replay_20260922/decisions/*.json'):
+              try: z=json.load(open(p))
+              except: continue
+              code=rc(z.get('race_code'))
+              sel=bool(z.get('selected'))
+              tickets=z.get('tickets') or []
+              odds=z.get('ticket_odds') or {}
+              plan=live.dutch(tickets,[float(odds[t]) for t in tickets]) if sel and tickets and all(t in odds for t in tickets) else []
+              stake=sum(int(x['stake']) for x in plan)
+              a=truth.get(code); actual='-'.join(map(str,a)) if a else ''
+              hit=0; payout=0.0
+              if sel and actual:
+                  for x in plan:
+                      if x['combo']==actual and int(x['stake'])>0:
+                          hit=1; payout=float(x['stake'])*float(x['odds'])
+              rows.append({'race_code':code,'jcd':code[8:10],'race':int(code[10:12]),'head_prob':z.get('head_prob'),'opponent_mass':z.get('opponent_mass'),'composite_odds':z.get('composite_odds'),'selected':int(sel),'tickets':'|'.join(tickets),'ticket_count':len(tickets),'stake':stake,'actual':actual,'head4':int(bool(a and a[0]==4)),'hit':hit,'payout':payout,'profit':payout-stake,'odds_source':z.get('odds_source'),'benchmark':z.get('performance_benchmark')})
+          rows.sort(key=lambda x:x['race_code'])
+          os.makedirs('/tmp/head4_replay_20260922',exist_ok=True)
+          with open('/tmp/head4_replay_20260922/race_detail.csv','w',newline='',encoding='utf-8') as f:
+              w=csv.DictWriter(f,fieldnames=list(rows[0].keys()));w.writeheader();w.writerows(rows)
+          b=[x for x in rows if x['selected']]
+          stake=sum(x['stake'] for x in b); pay=sum(x['payout'] for x in b)
+          out={'target_date':'2026-09-22','watchlist_R':len(rows),'BET_R':len(b),'head4_R':sum(x['head4'] for x in b),'hits':sum(x['hit'] for x in b),'stake':stake,'payout':pay,'profit':pay-stake,'roi':100*pay/stake if stake else None,'failed_or_missing_R':len(json.load(open(os.environ['WATCH']))['targets'])-len(rows),'policy':'current LIVE + SECOND011 THIRD018','note':'retrospective uses archived-date fetch; odds are not guaranteed to equal the exact predeadline snapshot seen live'}
+          open('/tmp/head4_replay_20260922/result.json','w').write(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+          print('BET_DETAIL')
+          for x in b: print(x)
+          print('HEAD4_SEP22_LIVE_REPLAY_OK')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-live-replay-20260922
+          path: /tmp/head4_replay_20260922/
