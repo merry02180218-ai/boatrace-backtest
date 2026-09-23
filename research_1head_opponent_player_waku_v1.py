@@ -123,6 +123,35 @@ def main():
   scans.append({"gap":t,"swap_R":n,"old_hits":old,"new_hits":new,"net_hits":new-old})
  pd.DataFrame(scans).to_csv(OUT/"dev_ticket3_swap_scan.csv",index=False)
  print("DEV_SWAP_SCAN",json.dumps(scans,ensure_ascii=False))
+ # Frozen before SUPPORT: swap only formal ticket #3 when PH/Waku alternative score gap >= .20.
+ frozen_gap=.20
+ hs=[]
+ for r0 in rr["H078_M375"]:
+  code=str(r0["race_code"]).zfill(12); month=code[:4]+"-"+code[4:6]
+  if month not in SUP or code not in byrank: continue
+  p2,pc=v365.formal_post_five6(r0); prob=v299.pair_prob(p2,pc,prod.TICKET_ALPHA)
+  formal=v299.STRATEGIES["HYBRID"](p2,pc,prob)[:3]; fs=set(formal); bs=byrank[code]
+  sm={int(x.boat):float(x.opp_score) for _,x in rank[rank.race_code.eq(code)].iterrows()}
+  alts=[(a,b) for a in bs for b in bs if a!=b and (a,b) not in fs]
+  alts=sorted(alts,key=lambda ab:sm.get(ab[0],0)+sm.get(ab[1],0),reverse=True)
+  alt=alts[0] if alts else None
+  oldscore=sm.get(int(formal[2][0]),0)+sm.get(int(formal[2][1]),0)
+  gap=(sm.get(int(alt[0]),0)+sm.get(int(alt[1]),0)-oldscore) if alt else -999
+  new=list(formal); swapped=bool(alt and gap>=frozen_gap)
+  if swapped:new[2]=alt
+  actual=str(r0["actual_combo"]); oh=int(actual in {f"1-{a}-{b}" for a,b in formal}); nh=int(actual in {f"1-{a}-{b}" for a,b in new})
+  pay=int(payouts.get(code,0))
+  hs.append({"race_code":code,"month":month,"swapped":int(swapped),"gap":gap,"formal_hit":oh,"overlay_hit":nh,"payout":pay,"actual":actual,"formal":str(formal),"overlay":str(new)})
+ h=pd.DataFrame(hs); h.to_csv(OUT/"support_frozen_gap020.csv",index=False)
+ def hm(col):
+  n=len(h); hits=int(h[col].sum()); ret=int(h.loc[h[col].eq(1),"payout"].sum()); stake=n*300
+  return {"R":n,"hits":hits,"rate":hits/n if n else None,"return":ret,"stake":stake,"roi":ret/stake if stake else None}
+ hold={"frozen_gap":frozen_gap,"swap_R":int(h.swapped.sum()),"formal":hm("formal_hit"),"overlay":hm("overlay_hit"),
+       "rescued":int(((h.formal_hit==0)&(h.overlay_hit==1)).sum()),"lost":int(((h.formal_hit==1)&(h.overlay_hit==0)).sum()),
+       "selection_used_support_outcomes":False,"september_outcomes_read":False}
+ (OUT/"support_frozen_gap020.json").write_text(json.dumps(hold,ensure_ascii=False,indent=2))
+ print("FROZEN_GAP020_HOLDOUT",json.dumps(hold,ensure_ascii=False))
+
 
  (OUT/"support_eval.json").write_text(json.dumps(support_eval,ensure_ascii=False,indent=2))
  print("SUPPORT_EVAL",json.dumps(support_eval,ensure_ascii=False))
