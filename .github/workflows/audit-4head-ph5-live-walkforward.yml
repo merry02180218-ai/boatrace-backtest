@@ -4,7 +4,8 @@ on:
   push:
     paths:
       - 'audit_4head_ph5_live_walkforward.py'
-      - 'research_4head_opponent_player_waku_v1.py'
+      - 'research_4head_opponent_player_waku_v1.py research_4head_opponent_second_rerank_v2.py'
+      - 'research_4head_opponent_second_rerank_v2.py'
       - '.github/workflows/audit-4head-ph5-live-walkforward.yml'
 permissions:
   contents: read
@@ -46,6 +47,10 @@ jobs:
         env:
           BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
         run: python research_4head_opponent_player_waku_v1.py
+      - name: Opponent SECOND rerank v2
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: python research_4head_opponent_second_rerank_v2.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -53,4 +58,5 @@ jobs:
           path: |
             /tmp/head4_ph5_live_walkforward/
             /tmp/head4_opponent_player_waku_v1/
+            /tmp/head4_opponent_second_rerank_v2/
           retention-days: 30
