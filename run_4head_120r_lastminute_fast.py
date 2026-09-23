@@ -351,12 +351,55 @@ def require_before_deadline(deadline,stage):
     return now
 
 
-def production_tickets(p2,pc):
-    """Use the formally adopted production opponent policy (SECOND .11 / THIRD .18)."""
-    try:
-        return opponent_prod.production_tickets(p2,pc)
-    except Exception as e:
-        raise Fast120Error(f'opponent production ticket invariant failed: {e}') from e
+def inner_survive_second_scores(p2, pflat, waku):
+    """Adopted always-on inner-survival SECOND score.
+
+    Mirrors the leakage-safe research pattern_inner_survive signal using only
+    current pre-race PLAYERHistory/Waku10 plus frozen v283 p2.
+    """
+    def lg(p):
+        p=min(max(float(p),1e-6),1-1e-6)
+        return math.log(p/(1-p))
+    def val(name,b,default=0.0):
+        keys=[f'w10_b{b}_{name}', f'b{b}_{name}', f'艇{b}_{name}']
+        for k in keys:
+            try:
+                x=float(waku.get(k,''))
+                if math.isfinite(x): return x
+            except Exception: pass
+        return default
+    out={}
+    for b in BOATS:
+        bonus=0.0
+        if b in (1,2,3):
+            bonus += .35*float(pflat[f'b{b}_pl_frame_p2']) + .20*float(pflat[f'b{b}_pl_recent_p2'])
+            bonus += .25*val('wr',b) + .20*val('sr',b)
+        else:
+            bonus -= .10*val('wr',b) + .10*val('sr',b)
+        out[b]=lg(p2[b]) + .20*bonus
+    return out
+
+def production_tickets(p2,pc,pflat=None,waku=None):
+    """Adopted opponent policy: always-on inner-survival SECOND ordering + .11/.18 rescue."""
+    if pflat is None or waku is None:
+        raise Fast120Error('inner-survive production requires PLAYERHistory and Waku10')
+    score=inner_survive_second_scores(p2,pflat,waku)
+    rank=sorted(BOATS,key=lambda b:(-float(score[b]),b))
+    tickets=list(base.v283_top4(p2,pc)) if False else []
+    secs=rank[:2]
+    if float(score[rank[1]])-float(score[rank[2]])<=SECOND_GAP:
+        secs=secs+[rank[2]]
+    for s in secs:
+        thirds=sorted((t for t in BOATS if t!=s),key=lambda t:(-float(pc[(s,t)]),t))
+        for t in thirds[:2]:
+            x=f'4-{s}-{t}'
+            if x not in tickets:tickets.append(x)
+        if float(pc[(s,thirds[1])])-float(pc[(s,thirds[2])])<=THIRD_GAP:
+            x=f'4-{s}-{thirds[2]}'
+            if x not in tickets:tickets.append(x)
+    if not (opponent_prod.MIN_TICKETS<=len(tickets)<=opponent_prod.MAX_TICKETS):
+        raise Fast120Error(f'inner-survive ticket-count invariant failed: {len(tickets)}')
+    return tickets
 
 def composite_odds(vals):
     a=[float(x) for x in vals]
@@ -733,7 +776,7 @@ def main():
     stages['fetch_and_build_exhibition_s']=time.perf_counter()-t
     t=time.perf_counter(); pf=player_flat(cards[code],state); hp=ph5_head_prob_live(cards[code],waku[code],exh,pf); src=make_boats(cards[code],waku[code],exh,pf);stages['build_v283_inputs_s']=time.perf_counter()-t
     art=load_artifact()
-    t=time.perf_counter(); sr,cr=derive(src,art);p2=score_second(sr,art);pc=score_conditional_third(cr,art);tickets=production_tickets(p2,pc);pairs=[tuple(map(int,x.split('-')[1:])) for x in tickets];mass=pair_mass(p2,pc,pairs);stages['v283_inference_s']=time.perf_counter()-t
+    t=time.perf_counter(); sr,cr=derive(src,art);p2=score_second(sr,art);pc=score_conditional_third(cr,art);tickets=production_tickets(p2,pc,pf,waku[code]);pairs=[tuple(map(int,x.split('-')[1:])) for x in tickets];mass=pair_mass(p2,pc,pairs);stages['v283_inference_s']=time.perf_counter()-t
     t=time.perf_counter()
     try:
         odds,meta,od_attempts,od_last=wait_odds_ready(
