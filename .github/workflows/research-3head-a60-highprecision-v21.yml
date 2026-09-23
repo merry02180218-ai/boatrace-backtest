@@ -6,6 +6,7 @@ on:
       - research/run_3head-a60-highprecision-v21.trigger
       - research/run_3head-a60-highprecision-v21-fix.trigger
       - research/run_3head-a60-highprecision-v21-9m.trigger
+      - research/run_3head-a60-highprecision-v21-monthly.trigger
 permissions:
   actions: read
   contents: read
@@ -100,6 +101,10 @@ jobs:
           print('A60_PURE_BASE',len(p),int(p.y.sum()),float(p.y.mean()) if len(p) else None)
           print('A60_PURE_BASE_MONTHLY')
           print(p.groupby('month').y.agg(['size','sum','mean']).to_string())
+          sel=p[(n(p.post_motor_inner_rank_edge)>=.60)&(n(p.pre_score)>=.970)&(n(p.ph_score)>=.50)].copy()
+          print('SELECTED_100_MONTHLY_PRE097_PH050_MOTOR060')
+          print(sel.groupby('month').y.agg(['size','sum','mean']).to_string())
+          print('SELECTED_TOTAL',len(sel),int(sel.y.sum()),float(sel.y.mean()) if len(sel) else None)
           print('TOP_WITH_MIN_R_5')
           print(allr[allr.R>=5].head(30).to_string(index=False))
           print('TOP_WITH_MIN_R_10')
