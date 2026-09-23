@@ -64,7 +64,7 @@ jobs:
           days,cache=w20.prefetch_sources(); post,_=w20.build_motor_exhibition(days,cache)
           d=[]
           for k in ['jul','aug']:
-            q=scores[k].merge(post,on=['rc','date'],how='left',validate='one_to_one'); q['month']=k; d.append(q)
+            q=scores[k].merge(post,on=['rc','date'],how='left',validate='one_to_one'); q['month']=k; q['race_code']=q.rc.astype('int64').astype(str).str.zfill(12); d.append(q)
           d=pd.concat(d,ignore_index=True); d=ph.add_player_history(d)
           names=ph.NAMES; full=[]
           for k in names:
