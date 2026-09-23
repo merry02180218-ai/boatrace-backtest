@@ -96,6 +96,34 @@ def main():
   overlay.append({"race_code":code,"month":code[:6],"formal":str(formal),"overlay_order":str(scored),
                   "actual":str(r0["actual_combo"]),"formal_hit":int(str(r0["actual_combo"]) in {f"1-{a}-{b}" for a,b in formal})})
  pd.DataFrame(overlay).to_csv(OUT/"formal_overlay_order.csv",index=False)
+ # DEV-only one-ticket weakness study. Keep first two formal tickets fixed and inspect only ticket #3.
+ # Candidate replacement comes from the best PH/Waku ordered pair not already in formal.
+ swap=[]
+ for r0 in rr["H078_M375"]:
+  code=str(r0["race_code"]).zfill(12); month=code[:4]+"-"+code[4:6]
+  if month not in DEV or code not in byrank: continue
+  p2,pc=v365.formal_post_five6(r0); prob=v299.pair_prob(p2,pc,prod.TICKET_ALPHA)
+  formal=v299.STRATEGIES["HYBRID"](p2,pc,prob)[:3]; fs=set(formal); bs=byrank[code]
+  sm={int(x.boat):float(x.opp_score) for _,x in rank[rank.race_code.eq(code)].iterrows()}
+  alts=[(a,b) for a in bs for b in bs if a!=b and (a,b) not in fs]
+  alts=sorted(alts,key=lambda ab:sm.get(ab[0],0)+sm.get(ab[1],0),reverse=True)
+  alt=alts[0] if alts else None
+  actual=str(r0["actual_combo"]); f3=f"1-{formal[2][0]}-{formal[2][1]}"; astr=f"1-{alt[0]}-{alt[1]}" if alt else ""
+  swap.append({"race_code":code,"month":month,"formal3":f3,"alt":astr,
+    "formal3_hit":int(actual==f3),"alt_hit":int(actual==astr),
+    "formal3_score":sm.get(int(formal[2][0]),0)+sm.get(int(formal[2][1]),0),
+    "alt_score":(sm.get(int(alt[0]),0)+sm.get(int(alt[1]),0)) if alt else None,
+    "score_gap":((sm.get(int(alt[0]),0)+sm.get(int(alt[1]),0))-(sm.get(int(formal[2][0]),0)+sm.get(int(formal[2][1]),0))) if alt else None})
+ sw=pd.DataFrame(swap); sw.to_csv(OUT/"dev_ticket3_swap_diagnostic.csv",index=False)
+ scans=[]
+ for t in (.00,.05,.10,.15,.20,.25,.30,.40):
+  m=sw.score_gap>=t; n=int(m.sum())
+  if not n: continue
+  old=int(sw.loc[m,"formal3_hit"].sum()); new=int(sw.loc[m,"alt_hit"].sum())
+  scans.append({"gap":t,"swap_R":n,"old_hits":old,"new_hits":new,"net_hits":new-old})
+ pd.DataFrame(scans).to_csv(OUT/"dev_ticket3_swap_scan.csv",index=False)
+ print("DEV_SWAP_SCAN",json.dumps(scans,ensure_ascii=False))
+
  (OUT/"support_eval.json").write_text(json.dumps(support_eval,ensure_ascii=False,indent=2))
  print("SUPPORT_EVAL",json.dumps(support_eval,ensure_ascii=False))
  coef=model.named_steps["lr"].coef_[0]
