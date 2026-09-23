@@ -1,6 +1,9 @@
 name: replay-4head-live-20260922-v3
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/replay-4head-live-20260922-v3.txt'
 permissions:
   contents: read
   actions: read
