@@ -1,1 +1,1 @@
-fire after preflight; accepted v18 CORE research only
+refire after exact root cause: prior run hit 20-minute job timeout; workflow now 60 minutes
