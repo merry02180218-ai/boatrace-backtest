@@ -1,0 +1,53 @@
+name: research-3head-core-k-semantics-v17
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - research/run_3head-core-k-semantics-v17.trigger
+permissions:
+  actions: read
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas
+      - name: Download frozen v243 source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run download 34383567078 --repo ${{ github.repository }} --name v243-3head-expand-feature-audit --dir golden
+          cp golden/analysis_v243_3head_expand_feature_audit.csv .
+      - name: Audit k semantics
+        run: |
+          python - <<'PY'
+          import pandas as pd
+          q=pd.read_csv('analysis_v243_3head_expand_feature_audit.csv',dtype={'race_code':str})
+          q['race_code']=q.race_code.astype(str).str.zfill(12)
+          q['date8']=q.race_code.str[:8]
+          feb=q[q.date8.str.startswith('202602')].copy()
+          # v243 output is already the monthly nlargest(k) universe. Its February size is the canonical monthly k.
+          monthly_k=len(feb)
+          perday=feb.groupby('date8').size().sort_values(ascending=False)
+          core_dates=['20260207','20260212','20260215','20260216','20260217','20260219','20260227']
+          z=pd.DataFrame({'date8':core_dates})
+          z['v243_selected_that_day']=z.date8.map(perday).fillna(0).astype(int)
+          z['monthly_k']=monthly_k
+          z['wrong_daily_k_if_filter_before_nlargest']=1
+          z['semantic_diagnosis']='native filters target day before nlargest while v243 applies nlargest over full month'
+          z.to_csv('core_k_semantics_v17.csv',index=False)
+          print('FEB_V243_MONTHLY_K',monthly_k)
+          print('FEB_SELECTED_DAYS',int((perday>0).sum()),'MAX_PER_DAY',int(perday.max()),'MEAN_PER_SELECTED_DAY',float(perday.mean()))
+          print(z.to_string(index=False))
+          print('CORE_K_SEMANTICS_V17_OK')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: research-3head-core-k-semantics-v17
+          path: core_k_semantics_v17.csv
