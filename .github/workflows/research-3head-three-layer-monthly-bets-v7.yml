@@ -1,0 +1,27 @@
+name: research-3head-three-layer-monthly-bets-v7
+on:
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn requests
+      - name: Preflight
+        run: |
+          python -m py_compile research/run_3head_three_layer_monthly_bets_v7.py research/run_3head_v288_a60_overlap_strength.py research/run_3head_a60_playerhistory_curve_v1.py analyze_3head_player_history_3v2_ablation_v2.py research/run_3head_wave20_manual_gate.py
+          python -c "import ast,pathlib; p=pathlib.Path('research/run_3head_three_layer_monthly_bets_v7.py'); ast.parse(p.read_text()); assert chr(92)+'n' not in p.read_text(); print('STATIC_PREFLIGHT_OK')"
+          ! grep -E '2026[-/, ]*09|202609' research/run_3head_three_layer_monthly_bets_v7.py
+      - name: Run
+        run: python research/run_3head_three_layer_monthly_bets_v7.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-3head-three-layer-monthly-bets-v7
+          path: |
+            research_3head_three_layer_monthly_bets_v7.json
+            research_3head_three_layer_monthly_bets_v7.csv
