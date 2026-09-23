@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - research/run_3head-a60-highprecision-v21.trigger
+      - research/run_3head-a60-highprecision-v21-fix.trigger
 permissions:
   actions: read
   contents: read
