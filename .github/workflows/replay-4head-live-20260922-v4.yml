@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - '.github/triggers/replay-4head-live-20260922-v4.txt'
+      - '.github/triggers/replay-4head-live-20260922-v4.txt'\n      - '.github/triggers/replay-4head-live-20260922-v4-rerun.txt'
 permissions:
   contents: read
   actions: read
