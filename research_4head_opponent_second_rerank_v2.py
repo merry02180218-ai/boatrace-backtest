@@ -255,7 +255,17 @@ def main():
             diag=json.loads(r.opponent_diag); ts=tickets_for(diag,rank,sm); actual=f"4-{int(r.actual_second)}-{int(r.actual_third)}"
             rows.append({'race_code':rc,'month':r.month,'variant':label,'second_rank':rank.index(int(r.actual_second))+1,'second_top2':int(int(r.actual_second) in rank[:2]),'second_top3':int(int(r.actual_second) in rank[:3]),'trifecta_capture':int(actual in ts),'ticket_count':len(ts)})
         return pd.DataFrame(rows)
-    # THIRD-only research: choose alpha on June only; July-August are untouched holdout.\n    third_grid=[]\n    for ta in (0.0,0.10,0.20,0.30,0.40,0.60):\n        e=third_variant_eval(dev,ta,f'third_dev_a{ta}')\n        third_grid.append({'alpha':ta,'capture':int(e.trifecta_capture.sum()),'avg_points':float(e.ticket_count.mean())})\n    tg=pd.DataFrame(third_grid).sort_values(['capture','avg_points','alpha'],ascending=[False,True,True])\n    third_alpha=float(tg.iloc[0].alpha)\n    third_dev=third_variant_eval(dev,third_alpha,'third_player_waku_dev')\n    third_hold=third_variant_eval(hold,third_alpha,'third_player_waku_holdout')\n    tg.to_csv(OUT/'third_player_waku_june_grid.csv',index=False)\n    # Tune only the ON/OFF inner-survival gate on June; July-August stay untouched holdout.
+    # THIRD-only research: choose alpha on June only; July-August are untouched holdout.
+    third_grid=[]
+    for ta in (0.0,0.10,0.20,0.30,0.40,0.60):
+        e=third_variant_eval(dev,ta,f'third_dev_a{ta}')
+        third_grid.append({'alpha':ta,'capture':int(e.trifecta_capture.sum()),'avg_points':float(e.ticket_count.mean())})
+    tg=pd.DataFrame(third_grid).sort_values(['capture','avg_points','alpha'],ascending=[False,True,True])
+    third_alpha=float(tg.iloc[0].alpha)
+    third_dev=third_variant_eval(dev,third_alpha,'third_player_waku_dev')
+    third_hold=third_variant_eval(hold,third_alpha,'third_player_waku_holdout')
+    tg.to_csv(OUT/'third_player_waku_june_grid.csv',index=False)
+    # Tune only the ON/OFF inner-survival gate on June; July-August stay untouched holdout.
     strengths=np.array(list(race_inner_gate(dev).values()),dtype=float)
     thresholds=sorted(set(np.quantile(strengths,[0.2,0.35,0.5,0.65,0.8]).tolist()))
     gate_dev=[]; gate_grid=[]
