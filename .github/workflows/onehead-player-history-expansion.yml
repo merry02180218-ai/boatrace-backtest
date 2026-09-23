@@ -13,12 +13,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Verify runner Python
+        shell: powershell
         run: |
-          set -euo pipefail
-          python3 --version
-          python3 -c "import sys; print(sys.executable)"
+          $ErrorActionPreference = 'Stop'
+          python --version
+          python -c "import sys; print(sys.executable)"
       - name: Install research dependencies
-        run: python3 -m pip install -q --disable-pip-version-check numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
+        run: python -m pip install -q --disable-pip-version-check numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml
       - name: Download frozen v360 prepared artifact
         env:
           GH_TOKEN: ${{ github.token }}
@@ -31,7 +32,7 @@ jobs:
           test -n "$PREP"
           echo "PREP=$PREP" >> "$GITHUB_ENV"
       - name: Run causal PLAYER_HISTORY coverage audit
-        run: python3 run_1head_player_history_expansion.py --prepared "$PREP"
+        run: python run_1head_player_history_expansion.py --prepared "$PREP"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
