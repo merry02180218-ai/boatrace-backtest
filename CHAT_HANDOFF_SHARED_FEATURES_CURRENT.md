@@ -108,3 +108,32 @@ When resuming any head model, read:
 2. this `CHAT_HANDOFF_SHARED_FEATURES_CURRENT.md`;
 3. latest GitHub/main.
 Then decide whether that model is at the right research point to Shadow-test PLAYER_HISTORY/Waku10.
+
+
+## Shared GitHub Actions operation: automatic latest-Run discovery
+
+Verified 2026-09-23 during 1HEAD PLAYER_HISTORY expansion research.
+
+When a pushed research commit auto-triggers a workflow, do NOT ask the user to paste the Actions Run URL first. The GitHub connector generic fetch can list repository workflow runs directly through the approved REST collection endpoint, including branch filtering:
+
+`https://api.github.com/repos/merry02180218-ai/boatrace-backtest/actions/runs?branch=<URL-encoded-branch>&per_page=10`
+
+Verified example:
+- branch: `research/1head-player-history-expansion`
+- commit: `3ced5b1d5c1b2e3c7b8c63189e4b374b171db6cc`
+- automatically discovered Run: `35859504662`
+- event: push
+- status at discovery: in_progress
+- workflow: `1HEAD PLAYER_HISTORY expansion audit`
+
+Operational sequence for all model chats:
+1. After push/update, fetch `/actions/runs?branch=...&per_page=10`.
+2. Match `head_sha` to the commit just pushed and confirm the expected workflow/path.
+3. Use the returned Run ID with `fetch_workflow_run_jobs`.
+4. On failure, use `fetch_workflow_job_logs` / step inspection.
+5. On success, use `fetch_workflow_run_artifacts` and inspect/download the relevant artifact.
+6. Never claim RUNNING/SUCCESS/FAILURE without checking the current Run/job state.
+7. `fetch_commit_workflow_runs` is not sufficient for this purpose because that wrapper currently filters to pull-request-triggered runs; push-triggered research runs can therefore appear empty.
+8. Only ask the user for a Run URL if automatic REST run discovery actually fails.
+
+This procedure is shared operational guidance for 1HEAD/3HEAD/4HEAD/5HEAD research.
