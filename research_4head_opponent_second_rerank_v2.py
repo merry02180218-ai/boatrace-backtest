@@ -171,10 +171,13 @@ def odds_roi(detail, z, variant):
     code_col=next(x for x in od.columns if 'レースコード' in x)
     om={str(r[code_col]).zfill(12):r for _,r in od.iterrows()}
     zz=z.drop_duplicates('race_code').set_index('race_code'); stake=payout=0; used=hits=0
+    is_inner='pattern_inner_survive' in variant
     for _,r in sub.iterrows():
         rc=str(r.race_code).zfill(12)
         if rc not in om or rc not in zz.index: continue
-        g=z[z.race_code.eq(rc)]; col='pattern_inner_survive' if 'pattern_inner_survive' in variant else 'baseline_score'
+        g=z[z.race_code.eq(rc)].copy(); g['baseline_score']=g.logit_p2
+        if is_inner: g['pattern_inner_survive']=pattern_score(g,'inner_survive')
+        col='pattern_inner_survive' if is_inner else 'baseline_score'
         rank=score_group(g,col); sm={int(b):float(g.loc[g.boat.eq(b),col].iloc[0]) for b in g.boat}
         ts=tickets_for(json.loads(zz.loc[rc].opponent_diag),rank,sm)
         if not ts: continue
