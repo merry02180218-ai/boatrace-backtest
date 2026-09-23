@@ -137,3 +137,15 @@ Operational sequence for all model chats:
 8. Only ask the user for a Run URL if automatic REST run discovery actually fails.
 
 This procedure is shared operational guidance for 1HEAD/3HEAD/4HEAD/5HEAD research.
+
+
+## LIVE prior-result learning rule — fixed 2026-09-24
+
+- LIVE operation MUST use all settled prior-date results, including completed September 2026 races.
+- For target date D, causal daily state ends at D-1 (`history_end = target_date - 1 day`). Example: 2026-09-24 LIVE may use settled results through 2026-09-23.
+- Target-date results are never read before decisions (`target_date_results_used = false`).
+- Current 4HEAD implementation is compliant: `prepare_4head_120r_daily_state.py` loops only while `d < target`, records `september_prior_results_allowed: true`, and updates PLAYERHistory, motor history and ST lane-bias from settled prior dates.
+- `run_4head_120r_lastminute_fast.py` rejects contaminated state unless `target_date_results_used` is false.
+- Research/holdout may keep September outcomes UNREAD for leakage-safe evaluation. This does NOT mean September prior results are excluded from LIVE causal learning.
+- Never change LIVE to blanket September UNREAD. LIVE = settled prior September allowed; research holdout = outcome masking per audit.
+- User explicitly confirmed this intended operational rule on 2026-09-24.
