@@ -30,7 +30,8 @@ jobs:
           $zip = Join-Path $env:RUNNER_TEMP 'v360.zip'
           if (Test-Path $root) { Remove-Item -Recurse -Force $root }
           New-Item -ItemType Directory -Force -Path $root | Out-Null
-          gh api "/repos/$env:GITHUB_REPOSITORY/actions/artifacts/10539401122/zip" --output $zip
+          $headers = @{ Authorization = "Bearer $env:GH_TOKEN"; Accept = 'application/vnd.github+json'; 'X-GitHub-Api-Version' = '2022-11-28' }
+          Invoke-WebRequest -Uri "https://api.github.com/repos/$env:GITHUB_REPOSITORY/actions/artifacts/10539401122/zip" -Headers $headers -OutFile $zip
           Expand-Archive -LiteralPath $zip -DestinationPath $root -Force
           $prep = Get-ChildItem -Path $root -Recurse -File | Where-Object { $_.Extension -in '.pkl', '.pickle' } | Select-Object -First 1
           if (-not $prep) { throw 'No prepared pickle found in frozen v360 artifact' }
