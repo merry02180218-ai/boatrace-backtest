@@ -1,0 +1,41 @@
+name: research-3head-ph-pre-composite-v13
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - research/run_3head-ph-pre-composite-v13.trigger
+permissions:
+  actions: read
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scikit-learn requests
+      - name: Frozen CORE
+        env: {GH_TOKEN: ${{ github.token }}}
+        run: |
+          mkdir -p golden
+          gh run download 34383567078 --repo ${{ github.repository }} --name v243-3head-expand-feature-audit --dir golden
+          cp golden/analysis_v243_3head_expand_feature_audit.csv .
+          test -s analysis_v243_3head_expand_feature_audit.csv
+      - name: Preflight
+        run: |
+          ! grep -nF '\n' research/run_3head_ph_pre_composite_v13.py
+          ! grep -E '2026[-/, ]*09|202609' research/run_3head_ph_pre_composite_v13.py
+          python -m py_compile research/run_3head_ph_pre_composite_v13.py research/run_3head_a60_playerhistory_curve_v1.py analyze_3head_player_history_3v2_ablation_v2.py research/run_3head_wave20_manual_gate.py verify_v288_operational_pre_replay.py
+          grep -F 'FULL_PURE_COMPOSITE' research/run_3head_ph_pre_composite_v13.py
+      - name: Run
+        run: python research/run_3head_ph_pre_composite_v13.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-3head-ph-pre-composite-v13
+          path: |
+            research_3head_three_layer_monthly_bets_v13.json
+            research_3head_three_layer_monthly_bets_v13.csv
