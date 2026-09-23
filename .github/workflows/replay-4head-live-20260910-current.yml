@@ -28,7 +28,7 @@ jobs:
       - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml joblib
       - name: Preflight
         run: |
-          python -m py_compile prepare_4head_120r_daily_state.py run_4head_120r_lastminute_fast.py audit_4head_live_replay_20260910_current.py prepare_4head_6m_v93_neutral_waku.py
+          python -m py_compile prepare_4head_120r_daily_state.py run_4head_120r_lastminute_fast.py audit_4head_live_replay_20260910_current.py run_4head_v291_third010_live.py
           ! grep -n '\\\\n' prepare_4head_120r_daily_state.py run_4head_120r_lastminute_fast.py
       - name: Build causal state through 2026-09-09
         run: |
@@ -64,21 +64,34 @@ jobs:
           missing=[k for k,v in info.items() if not v['exists']]
           if missing: raise SystemExit('MISSING_HISTORICAL_LIVE_INPUTS '+','.join(missing))
           PY
-      - name: Prepare audited historical primitives
-        env:
-          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
-        run: python prepare_4head_6m_v93_neutral_waku.py
       - name: Replay 2026-09-10 current LIVE
         env:
           BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
-          STRICT_ROWS: /tmp/head4_clean_long_dataset/dataset.csv
-          V93_ROWS: /tmp/head4_v93_all_parent/v93_all_parent.csv
-        run: python audit_4head_live_replay_20260910_current.py
+          STATE: /tmp/state.json
+          CARD: ${{ github.workspace }}/brcsv/data/programs/race_cards/2026/09/10.csv
+          WAKU: ${{ github.workspace }}/brcsv/data/programs/waku10/2026/09/10.csv
+          WATCH: /tmp/watch.json
+        run: |
+          python - <<'PY'
+          import csv,json
+          p='brcsv/data/programs/race_cards/2026/09/10.csv'
+          rows=list(csv.DictReader(open(p,encoding='utf-8-sig')))
+          seen=set(); targets=[]
+          for r in rows:
+            code=str(r.get('レースコード','')).strip()
+            if code.endswith('.0'): code=code[:-2]
+            code=code.zfill(12)
+            if not code.startswith('20260910') or code in seen: continue
+            seen.add(code); targets.append({'jcd':int(code[8:10]),'race':int(code[10:12])})
+          json.dump({'target_date':'2026-09-10','targets':targets},open('/tmp/watch.json','w'),ensure_ascii=False,indent=2)
+          print('WATCH_ALL_RACES',len(targets))
+          PY
+          python audit_4head_live_replay_20260910_current.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: replay-4head-live-20260910-current
           path: |
             /tmp/state.json
-            /tmp/head4_ph5_live_walkforward/
+            /tmp/head4_replay_20260910_current/
           retention-days: 30
