@@ -1,4 +1,0 @@
-name: replay-4head-live-20260922-v3-disabled
-# Legacy 4HEAD replay intentionally disabled. No event triggers.
-on: {}
-jobs: {}
