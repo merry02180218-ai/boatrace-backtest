@@ -105,7 +105,8 @@ def main():
             ph_cache[key]=build_ph_tolerant(card,td,date.fromisoformat(a.history_start))
         flat,gaps=ph_cache[key]; all_gaps.update(gaps)
         row={'race_code':code,'month':f'{code[:4]}-{code[4:6]}',
-             'p_head':float(r['p_head']),'opp_mass':float(r['opp_mass'])}
+             'p_head':float(r['p_head']),'opp_mass':float(r['opp_mass']),
+             'head_hit':int(r.get('head_hit', r.get('y', r.get('head4', 0))))}
         row.update(flat)
         # Relative primitives: lane1 minus strongest opponent and lane1 minus
         # mean opponents. These are result-free at target time.
@@ -118,6 +119,29 @@ def main():
 
     df=pd.DataFrame(out)
     if len(df): df.to_csv(OUT/'features.csv',index=False)
+
+    # DEV-only univariate threshold scan. SUPPORT labels are never read here.
+    # This stage is diagnostic only: rank PH primitives by DEV lift/coverage.
+    scans=[]
+    dev=df[df.month.isin(DEV)].copy()
+    feature_cols=[x for x in df.columns if x.startswith('b1_pl_') or x.startswith('pl1_minus_')]
+    if len(dev):
+        base=float(dev.head_hit.mean())
+        for col in feature_cols:
+            vals=dev[col].dropna()
+            if vals.nunique()<4: continue
+            for q in (.20,.30,.40,.50,.60,.70,.80):
+                t=float(vals.quantile(q))
+                for side in ('ge','le'):
+                    m=(dev[col]>=t) if side=='ge' else (dev[col]<=t)
+                    n=int(m.sum())
+                    if n<8: continue
+                    h=int(dev.loc[m,'head_hit'].sum()); rate=h/n
+                    scans.append({'feature':col,'side':side,'q':q,'threshold':t,'R':n,'heads':h,
+                                  'head_rate':rate,'lift_pt':(rate-base)*100})
+        scans=sorted(scans,key=lambda z:(z['head_rate'],z['R']),reverse=True)
+        pd.DataFrame(scans).to_csv(OUT/'dev_ph_threshold_scan.csv',index=False)
+    else: base=None
     meta={
       'population':'H078_M375_MINUS_LIVE165','expected_R':71,
       'feature_R':int(len(df)),'missing_card_R':len(missing),
@@ -128,7 +152,9 @@ def main():
       'september_outcomes_read':False,
       'production_changed':False,
       'result_or_payout_used_as_score_input':False,
-      'stage':'COVERAGE_AND_CAUSAL_FEATURE_AUDIT',
+      'stage':'DEV_PH_UNIVARIATE_DIAGNOSTIC',
+      'dev_R':int(len(dev)),'dev_base_head_rate':base,
+      'dev_scan_top10':scans[:10],
       'audit_ok':len(missing)==0 and len(df)==71,
     }
     (OUT/'result.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2),encoding='utf-8')
