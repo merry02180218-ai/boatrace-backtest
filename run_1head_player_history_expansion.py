@@ -17,12 +17,48 @@ from pathlib import Path
 import argparse,json,pickle
 import pandas as pd
 import onehead_production_profile as prod
-from build_4head_player_history_live import build, REQUIRED, _bycode
+from build_4head_player_history_live import REQUIRED, _bycode, _blank, _pstat, _ii
 from backtest import rows
+from backtest_v4 import clean_name
+from collections import defaultdict
+from datetime import timedelta
 
 DEV=('2026-02','2026-03','2026-04','2026-05','2026-06')
 SUP=('2026-07','2026-08')
-OUT=Path('/tmp/1head-player-history-expansion'); OUT.mkdir(parents=True,exist_ok=True)
+OUT=Path(__import__('os').environ.get('RUNNER_TEMP','/tmp'))/'1head-player-history-expansion'; OUT.mkdir(parents=True,exist_ok=True)
+
+def build_ph_tolerant(target_card,target_date,history_start):
+    """Causal PH builder with audited source gaps: only update on races with valid historical result."""
+    names={b:clean_name(target_card.get(f'艇{b}_選手名','')) for b in range(1,7)}
+    if any(not names[b] for b in range(1,7)) or len(set(names.values()))!=6:
+        raise RuntimeError('invalid target player identity')
+    state={name:_blank() for name in names.values()}; seen={name:0 for name in names.values()}
+    gaps=[]; d=history_start
+    while d<target_date:
+        ymd=d.strftime('%Y/%m/%d'); cards=rows(f'data/programs/race_cards/{ymd}.csv')
+        results=_bycode(rows(f'data/results/realtime/{ymd}.csv'))
+        for card in sorted(cards,key=lambda x:str(x.get('レースコード','')).zfill(12)):
+            rc=str(card.get('レースコード','')).zfill(12); hits=[]
+            for b in range(1,7):
+                name=clean_name(card.get(f'艇{b}_選手名',''))
+                if name in state:hits.append((b,name))
+            if not hits: continue
+            rr=results.get(rc)
+            if rr is None:
+                gaps.append(rc); continue
+            w=_ii(rr.get('1着_艇番')); sec=_ii(rr.get('2着_艇番'))
+            if w not in range(1,7) or sec not in range(1,7) or w==sec:
+                gaps.append(rc); continue
+            for b,name in hits:
+                s=state[name]; s['n']+=1; s['w']+=int(w==b); s['p2']+=int(w==b or sec==b)
+                s['nf'][b]+=1; s['wf'][b]+=int(w==b); s['p2f'][b]+=int(w==b or sec==b)
+                s['r'].append(int(w==b or sec==b)); seen[name]+=1
+        d+=timedelta(days=1)
+    flat={}
+    for b,name in names.items():
+        st=_pstat(state[name],b)
+        for k in REQUIRED: flat[f'b{b}_pl_{k}']=round(float(st[k]),12)
+    return flat,sorted(set(gaps))
 
 def main():
     ap=argparse.ArgumentParser()
@@ -44,7 +80,7 @@ def main():
     # The prepared rows must carry the six target player names/card fields. We
     # deliberately fail closed if they do not, rather than silently joining by
     # future/result-bearing data.
-    out=[]; missing=[]
+    out=[]; missing=[]; all_gaps=set()
     from datetime import date
     for r in added:
         code=str(r['race_code']).zfill(12)
@@ -57,10 +93,10 @@ def main():
         card=cards.get(code)
         if card is None or any(not card.get(f'艇{b}_選手名') for b in range(1,7)):
             missing.append(code); continue
-        z=build(card,td,date.fromisoformat(a.history_start))
+        flat,gaps=build_ph_tolerant(card,td,date.fromisoformat(a.history_start)); all_gaps.update(gaps)
         row={'race_code':code,'month':f'{code[:4]}-{code[4:6]}',
              'p_head':float(r['p_head']),'opp_mass':float(r['opp_mass'])}
-        row.update(z['player_flat'])
+        row.update(flat)
         # Relative primitives: lane1 minus strongest opponent and lane1 minus
         # mean opponents. These are result-free at target time.
         for k in REQUIRED:
@@ -75,7 +111,7 @@ def main():
     meta={
       'population':'H078_M375_MINUS_LIVE165','expected_R':71,
       'feature_R':int(len(df)),'missing_card_R':len(missing),
-      'missing_codes':missing,
+      'missing_codes':missing,'historical_result_gap_R':len(all_gaps),'historical_result_gap_codes':sorted(all_gaps),
       'dev_months':DEV,'support_months':SUP,
       'player_history_features':list(REQUIRED),
       'selection_used_support_outcomes':False,
