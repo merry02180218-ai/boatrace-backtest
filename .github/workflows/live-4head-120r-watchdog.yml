@@ -107,7 +107,7 @@ jobs:
 
       - name: Install runtime
         if: env.SHOULD_RUN == '1'
-        run: pip install -q numpy requests beautifulsoup4 lxml
+        run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml joblib
 
       - name: Download frozen PRE and daily state
         if: env.SHOULD_RUN == '1'
