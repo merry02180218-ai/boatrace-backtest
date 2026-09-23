@@ -51,13 +51,28 @@ def main():
     pair=(races.assign(pair=races.actual_second.astype(str)+'-'+races.actual_third.astype(str))
           .groupby(['month','pair']).size().rename('R').reset_index()
           .sort_values(['month','R'],ascending=[True,False]))
+    # Pair-family taxonomy keeps 5/6 coexistence visible instead of masking it by precedence.
+    def pair_family(row):
+        s,t=int(row.actual_second),int(row.actual_third); inner={1,2,3}
+        if s in inner and t in inner: return 'INNER_INNER'
+        if s in inner and t==5: return 'INNER_5'
+        if s==5 and t in inner: return '5_INNER'
+        if s in inner and t==6: return 'INNER_6'
+        if s==6 and t in inner: return '6_INNER'
+        if {s,t}=={5,6}: return '5_6'
+        return 'OTHER'
+    races['pair_family']=races.apply(pair_family,axis=1)
+    fam=(races.groupby(['month','pair_family']).size().rename('R').reset_index())
+    fam['pct']=fam.R/fam.groupby('month').R.transform('sum')*100
+    fam.to_csv(OUT/'pair_family_monthly.csv',index=False)
+    print('PAIR_FAMILY_MONTHLY',fam.to_json(orient='records',force_ascii=False))
     races.to_csv(OUT/'race_regime_features.csv',index=False)
     pct.to_csv(OUT/'regime_monthly.csv',index=False)
     pair.to_csv(OUT/'pair_monthly.csv',index=False)
     meta={'head4_R':len(races),'dev':'2026-06 only','holdout':['2026-07','2026-08'],
           'dev_R':len(dev),'holdout_R':len(hold),'SEPTEMBER_OUTCOMES_READ':False,
           'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':False,
-          'stage':'DESCRIPTIVE_REGIME_DISCOVERY_ONLY'}
+          'stage':'DESCRIPTIVE_PAIR_FAMILY_DISCOVERY_V2'}
     (OUT/'meta.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2))
     print('REGIME_MONTHLY',pct.to_json(orient='records',force_ascii=False))
     print('PAIR_TOP',pair.groupby('month').head(8).to_json(orient='records',force_ascii=False))
