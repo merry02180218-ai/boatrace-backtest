@@ -1,0 +1,40 @@
+name: research-inner12-lag-high-precision-v2
+
+on:
+  workflow_dispatch:
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -q numpy requests
+      - name: Preflight syntax
+        run: |
+          python -m py_compile research/research_inner12_lag_high_precision_v2.py
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('research/research_inner12_lag_high_precision_v2.py')
+          s=p.read_text(encoding='utf-8')
+          assert '\\n' not in s.replace('"\\n"','').replace("'\\n'",''), 'suspicious literal escaped newline'
+          assert 'HOLD_START = date(2026, 7, 1)' in s
+          assert 'holdout_used_for_selection' in s
+          print('PREFLIGHT_OK')
+          PY
+      - name: Run INNER12 high-precision V2
+        env:
+          INNER12_V2_OUTDIR: /tmp/inner12_lag_high_precision_v2
+          PYTHONPATH: .
+        run: |
+          mkdir -p /tmp/inner12_lag_high_precision_v2
+          python research/research_inner12_lag_high_precision_v2.py | tee /tmp/inner12_lag_high_precision_v2/run.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: inner12-lag-high-precision-v2
+          path: /tmp/inner12_lag_high_precision_v2/
