@@ -181,9 +181,9 @@ def main():
    ab.append({"family":name,"race_code":code,"gap":gap,"old":int(actual==f"1-{formal[2][0]}-{formal[2][1]}"),"new":int(actual==f"1-{alt[0]}-{alt[1]}")})
  ad=pd.DataFrame(ab); rows=[]
  for name,g in ad.groupby("family"):
-  for q in (.70,.75,.80,.85,.90,.95):
-   t=float(g.gap.quantile(q)); m=g.gap>=t
-   rows.append({"family":name,"q":q,"threshold":t,"swap_R":int(m.sum()),"old_hits":int(g.loc[m,"old"].sum()),"new_hits":int(g.loc[m,"new"].sum()),"net_hits":int((g.loc[m,"new"]-g.loc[m,"old"]).sum())})
+  for quantile in (.70,.75,.80,.85,.90,.95):
+   t=float(g.gap.quantile(quantile)); m=g.gap>=t
+   rows.append({"family":name,"q":quantile,"threshold":t,"swap_R":int(m.sum()),"old_hits":int(g.loc[m,"old"].sum()),"new_hits":int(g.loc[m,"new"].sum()),"net_hits":int((g.loc[m,"new"]-g.loc[m,"old"]).sum())})
  pd.DataFrame(rows).to_csv(OUT/"dev_feature_family_ablation.csv",index=False)
  print("DEV_FAMILY_ABLATION",json.dumps(rows,ensure_ascii=False))
  # DEV-only blend study: PH/Waku is INCLUDED in the existing HYBRID pair score, never used as a replacement policy.
