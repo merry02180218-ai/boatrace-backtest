@@ -765,3 +765,85 @@ Build Stage-B V2 with explicit branch order:
 3. 3-family classifier
 4. 5-follow-through classifier
 Use walk-forward/month-specific stability checks and preserve September unread.
+
+
+## Novel non-overlap pivot — 2026-09-24
+User correctly noted that the strongest Stage-B 4-family finding was conceptually too similar to the existing production 4HEAD model.
+
+Research objective changed:
+- Do NOT build another generic "4 is stronger/faster" model.
+- Explicitly exclude races where the existing 4HEAD production model fires.
+- Research only incremental routes:
+  - 3 direct attack -> 3 head
+  - 3 attack -> 4 picks up the opening
+  - 3/4 attack -> 5 follows/picks up the opening
+  - 1-survival rejection
+- A 4-head outcome may remain only if the exact production 4HEAD model did not fire.
+
+Exact existing 4HEAD production reference:
+- source: `audit_4head_ph5_live_walkforward.py`
+- exact frozen decision: `selected=bool(hp>=.36 and orig>=-.06)`
+- policy: PH5 head_prob >= .36 AND orig4_adv_inside >= -.06
+
+Created:
+- `research/research_inner12_novel_nonoverlap_v1.py`
+- `.github/workflows/research-inner12-novel-nonoverlap-v1.yml`
+
+### Strict non-overlap definition
+A Stage-A race is used in rule discovery only when:
+1. it is present in the exact 4HEAD `race_detail.csv`, and
+2. `production_bet == 0`.
+
+Rows absent from the 4HEAD comparison output are reported as `not_comparable` and are NOT silently treated as nonfire.
+
+### Time split
+Because exact current 4HEAD walk-forward comparison is cleanly available for Jun-Aug:
+- June = train/search
+- July = validation
+- August = report-only confirmation
+- September outcomes remain unread
+
+August is prohibited from:
+- choosing features
+- choosing directions
+- choosing thresholds
+- choosing categories
+- choosing interactions
+- ranking/tie-breaking selected rules
+
+### Targets
+- route_3_family
+- route_4_family
+- route_5_family
+- route_outer_core
+- route_outer_wide
+- route_1_escape retained as survival diagnostic
+
+### Anti-duplication preference
+Generic boat4-strength-only factors are flagged:
+- boat4 WR/local/motor/Waku strength style fields
+- preferred_novel output removes rules composed only of generic 4-strength factors
+
+Mechanistic/novel axes remain allowed:
+- boat3 attack/ST/exhibition structure
+- boat3-vs-4 relative start/exhibition geometry
+- boat5 follow-through/local/context
+- inner weakness / 1-survival
+- environment/venue if reproducible
+
+### Workflow safety
+- manual-only `workflow_dispatch`
+- no push trigger
+- py_compile preflight
+- literal `\\n` guard
+- exact 4HEAD audit replay is rebuilt in the same workflow
+- three pipeline stages use `set -o pipefail`
+- exact 4HEAD `race_detail.csv` is merged; no approximate clone gate
+- production unchanged
+
+Next:
+- manually dispatch `research-inner12-novel-nonoverlap-v1`
+- inspect monthly incremental volume (how many additional races/month)
+- inspect 3/4/5 route precision after exact 4HEAD exclusion
+- prioritize rules >=40% in June+July with meaningful volume, then inspect August only as confirmation
+- if no robust >=40% remains, change the route decomposition rather than drifting back into the existing 4HEAD model.
