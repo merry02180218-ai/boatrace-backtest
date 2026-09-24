@@ -1,10 +1,7 @@
 name: manual-1head-v351-live
 
-on:
-  push:
-    branches: [ main ]
-    paths:
-      - 'live_requests/1head_v351.json'
+'on':
+  workflow_dispatch:
 
 permissions:
   contents: read
