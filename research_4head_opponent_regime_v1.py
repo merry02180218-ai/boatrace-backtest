@@ -94,6 +94,36 @@ def main():
         pred.to_csv(OUT/'major_family_classifier_v1.csv',index=False)
         print('MAJOR_FAMILY_CLASSIFIER',pred.to_json(orient='records',force_ascii=False))
         print('MAJOR_FAMILY_SELECTED_C',bestC)
+    # Stage v4: simpler binary target -- does boat 5 appear in 2nd/3rd when 4 wins?
+    races['five_in_pair']=((races.actual_second.eq(5)) | (races.actual_third.eq(5))).astype(int)
+    bin_features=[x for x in races.columns if x not in
+                  ['race_code','month','actual_second','actual_third','truth_regime','pair_family','five_in_pair']]
+    bin_features=[x for x in bin_features if pd.api.types.is_numeric_dtype(races[x])]
+    btrain=races[races.month.eq('2026-06')].copy()
+    btest=races[races.month.isin(['2026-07','2026-08'])].copy()
+    brows=[]
+    for C in [0.01,0.03,0.1,0.3,1.0]:
+        bm=make_pipeline(SimpleImputer(strategy='median'),StandardScaler(),
+                         LogisticRegression(C=C,max_iter=5000,class_weight='balanced'))
+        bm.fit(btrain[bin_features],btrain.five_in_pair)
+        for split,q in [('JUNE_DEV',btrain),('JUL_HOLDOUT',btest[btest.month.eq('2026-07')]),
+                        ('AUG_HOLDOUT',btest[btest.month.eq('2026-08')]),('JULAUG_HOLDOUT',btest)]:
+            prob=bm.predict_proba(q[bin_features])[:,list(bm.classes_).index(1)]
+            pred=(prob>=0.5).astype(int)
+            acc=float(np.mean(pred==q.five_in_pair))
+            # balanced accuracy avoids the ~58% positive base rate hiding a weak model.
+            pos=q.five_in_pair.eq(1); neg=~pos
+            tpr=float(np.mean(pred[pos]==1)) if pos.any() else np.nan
+            tnr=float(np.mean(pred[neg]==0)) if neg.any() else np.nan
+            bal=float(np.nanmean([tpr,tnr]))
+            brows.append({'C':C,'split':split,'R':len(q),'accuracy':acc,'balanced_accuracy':bal,
+                          'positive_rate':float(q.five_in_pair.mean())})
+    bdf=pd.DataFrame(brows)
+    bestBC=float(bdf[bdf.split.eq('JUNE_DEV')].sort_values(['balanced_accuracy','C'],ascending=[False,True]).iloc[0].C)
+    bdf['selected_C']=bestBC
+    bdf.to_csv(OUT/'five_binary_classifier_v1.csv',index=False)
+    print('FIVE_BINARY_CLASSIFIER',bdf.to_json(orient='records',force_ascii=False))
+    print('FIVE_BINARY_SELECTED_C',bestBC)
     fam=(races.groupby(['month','pair_family']).size().rename('R').reset_index())
     fam['pct']=fam.R/fam.groupby('month').R.transform('sum')*100
     fam.to_csv(OUT/'pair_family_monthly.csv',index=False)
@@ -104,7 +134,7 @@ def main():
     meta={'head4_R':len(races),'dev':'2026-06 only','holdout':['2026-07','2026-08'],
           'dev_R':len(dev),'holdout_R':len(hold),'SEPTEMBER_OUTCOMES_READ':False,
           'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':False,
-          'stage':'MAJOR_PAIR_FAMILY_CLASSIFIER_V1'}
+          'stage':'FIVE_BINARY_CLASSIFIER_V1'}
     (OUT/'meta.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2))
     print('REGIME_MONTHLY',pct.to_json(orient='records',force_ascii=False))
     print('PAIR_TOP',pair.groupby('month').head(8).to_json(orient='records',force_ascii=False))
