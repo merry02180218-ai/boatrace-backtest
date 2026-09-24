@@ -1,0 +1,105 @@
+name: validate-inner12-unseen-september-v7
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards
+            data/programs/waku10
+            data/previews/stt
+            data/previews/tkz
+            data/previews/original_exhibition
+            data/previews/od3
+            data/results/realtime
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+
+      - name: Preflight frozen contract
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/inner12_unseen_sep_v7
+          python -m py_compile             research/validate_inner12_unseen_sep_v7.py             research/research_inner12_stageb_route_discovery_v1.py             research/research_inner12_ticket_roi_v6.py             run_4head_120r_lastminute_fast.py             build_4head_v93_primitives_live.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import sys
+          sys.path.insert(0,'research')
+          import research_inner12_ticket_roi_v6 as v6
+
+          s=Path('research/validate_inner12_unseen_sep_v7.py').read_text(encoding='utf-8')
+          assert '\\n' not in s, 'literal escaped newline'
+          required=[
+              'VALIDATE_START=date(2026,9,1)',
+              '"2026-09-24"',
+              'STAGEA_WAKU_SR=3.7',
+              'STAGEA_PRIOR_ST=0.17811274129319477',
+              'STAGEA_LATE18=0.43497650793650783',
+              'B4_LATE20_MAX=.20',
+              'B5_LATE20_MIN=.40',
+              'A_GAP34_WAKU_ST=.038',
+              'B_PRED35_MAX=-.09',
+              'B_STRONG_RECENT3_GAP=.04',
+              'hp>=.36',
+              'orig4_adv_inside',
+              'SEPTEMBER_USED_FOR_TUNING_FALSE',
+              'DECISIONS_FROZEN_BEFORE_SAME_DAY_RESULTS',
+          ]
+          for x in required:
+              assert x in s, f'missing frozen marker: {x}'
+
+          art=json.loads(Path('artifacts/head4_ph5_production_v31_20260831.json').read_text())
+          assert art['id']=='HEAD4_PH5_PRODUCTION_V31_20260831'
+          assert art['cut']==.36
+          assert art['feature_count']==35
+          assert art['september_labels_used'] is False
+          assert art['same_day_results_used'] is False
+
+          assert v6.BANK==5000 and v6.COMP_CUT==5.0
+          assert len(v6.TICKETS['LEAN']['A'])==8 and len(v6.TICKETS['LEAN']['B'])==4
+          assert len(v6.TICKETS['BALANCED']['A'])==10 and len(v6.TICKETS['BALANCED']['B'])==5
+          assert len(v6.TICKETS['WIDE']['A'])==12 and len(v6.TICKETS['WIDE']['B'])==7
+
+          root=Path('brcsv')
+          assert (root/'data/programs/race_cards/2026/09/24.csv').exists(), 'missing Sep24 cards'
+          assert (root/'data/results/realtime/2026/09/24.csv').exists(), 'missing Sep24 results'
+          print('INNER12_SEPTEMBER_V7_PREFLIGHT_OK')
+          PY
+
+      - name: Run pristine September validation
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+          INNER12_SEP_OUTDIR: /tmp/inner12_unseen_sep_v7
+          INNER12_SEP_END: '2026-09-24'
+          PYTHONPATH: .
+        run: |
+          set -o pipefail
+          python research/validate_inner12_unseen_sep_v7.py             | tee /tmp/inner12_unseen_sep_v7/run.log
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: inner12-unseen-september-v7
+          path: /tmp/inner12_unseen_sep_v7/
+          retention-days: 30
