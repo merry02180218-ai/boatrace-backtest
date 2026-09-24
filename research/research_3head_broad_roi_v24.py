@@ -10,23 +10,19 @@ from sklearn.linear_model import LogisticRegression
 
 sys.path.insert(0,'research'); sys.path.insert(0,'.')
 
-# 1) Rebuild exact accepted Jul/Aug union identities + covered causal feature universe.
+# 1) Use the frozen accepted union identities from successful v15 audit.
+# Rebuild only the causal feature universe, then filter it to those exact frozen race codes.
 src=open('research/run_3head_three_layer_independent_core_v14.py',encoding='utf-8').read()
 needle="p=pd.concat(pred,ignore_index=True)"
 assert needle in src
 src=src.replace(needle,needle+"\n    p.to_csv('v24_feature_universe.csv',index=False)",1)
-needle2="yu=yy[yy.race_code.isin(union)]"
-assert needle2 in src
-src=src.replace(needle2,needle2+"\n        _aud=yu.copy(); _aud['month']=mon; _aud['models']=_aud.race_code.map(lambda rc:'+'.join(membership.get(rc,[]))); detail.extend(_aud[['month','race_code','y','models']].to_dict('records'))",1)
-needle3="z=pd.DataFrame(rows);z.to_csv(CSV,index=False)"
-assert needle3 in src
-src=src.replace(needle3,needle3+"\n    pd.DataFrame(detail).to_csv('v24_union_identity.csv',index=False)",1)
-open('/tmp/v24_union_builder.py','w',encoding='utf-8').write(src)
-runpy.run_path('/tmp/v24_union_builder.py',run_name='__main__')
+open('/tmp/v24_feature_builder.py','w',encoding='utf-8').write(src)
+runpy.run_path('/tmp/v24_feature_builder.py',run_name='__main__')
 
-ids=pd.read_csv('v24_union_identity.csv',dtype={'race_code':str})
+ids=pd.read_csv('union53/accepted_union_identity_v15.csv',dtype={'race_code':str})
 ids.race_code=ids.race_code.str.zfill(12)
-assert len(ids)==123 and ids.race_code.nunique()==123, f'UNION_ASSERT {len(ids)} {ids.race_code.nunique()}'
+assert len(ids)==123 and ids.race_code.nunique()==123, f'FROZEN_UNION_ASSERT {len(ids)} {ids.race_code.nunique()}'
+print('FROZEN_UNION_OK',len(ids),'MONTH',ids.month.value_counts().to_dict())
 
 u=pd.read_csv('v24_feature_universe.csv')
 u['race_code']=pd.to_numeric(u.rc,errors='coerce').astype('Int64').astype(str).str.zfill(12)
