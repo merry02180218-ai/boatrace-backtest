@@ -1,7 +1,7 @@
 name: audit-3head-opponent-recent-v1
 on:
   push:
-    paths: [research/run_3head_opponent_recent_v1.fire]
+    paths: [research/run_3head_opponent_recent_v1_retry.fire]
 jobs:
   audit:
     runs-on: ubuntu-latest
