@@ -25,8 +25,8 @@ jobs:
       - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
       - name: Preflight
         run: |
-          python -m py_compile prepare_4head_6m_v93_neutral_waku.py audit_4head_ph5_live_walkforward.py research_4head_opponent_player_waku_v1.py research_4head_opponent_second_rerank_v2.py research_4head_opponent_regime_v1.py research_4head_structural_broad_6m_v1.py
-          ! grep -n '\\\\n' audit_4head_ph5_live_walkforward.py research_4head_opponent_player_waku_v1.py research_4head_opponent_second_rerank_v2.py research_4head_structural_broad_6m_v1.py
+          python -m py_compile prepare_4head_6m_v93_neutral_waku.py audit_4head_ph5_live_walkforward.py research_4head_opponent_player_waku_v1.py research_4head_opponent_second_rerank_v2.py research_4head_opponent_regime_v1.py research_4head_structural_broad_6m_v1.py research_4head_three_survive_ticket_shadow_v1.py
+          ! grep -n '\\\\n' audit_4head_ph5_live_walkforward.py research_4head_opponent_player_waku_v1.py research_4head_opponent_second_rerank_v2.py research_4head_structural_broad_6m_v1.py research_4head_three_survive_ticket_shadow_v1.py
       - name: Prepare historical LIVE primitives
         env:
           BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
@@ -53,6 +53,10 @@ jobs:
         env:
           BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
         run: python research_4head_structural_broad_6m_v1.py
+      - name: 3-survival ticket shadow on adopted INNER_SURVIVE
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: python research_4head_three_survive_ticket_shadow_v1.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -63,4 +67,5 @@ jobs:
             /tmp/head4_opponent_second_rerank_v2/
             /tmp/head4_opponent_regime_v1/
             /tmp/head4_structural_broad_6m_v1/
+            /tmp/head4_three_survive_ticket_shadow_v1/
           retention-days: 30
