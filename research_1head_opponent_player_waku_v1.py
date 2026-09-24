@@ -151,6 +151,39 @@ def main():
        "selection_used_support_outcomes":False,"september_outcomes_read":False}
  (OUT/"support_frozen_gap020.json").write_text(json.dumps(hold,ensure_ascii=False,indent=2))
  print("FROZEN_GAP020_HOLDOUT",json.dumps(hold,ensure_ascii=False))
+ # DEV-only ablation: measure transparent feature families separately before any new SUPPORT opening.
+ # PLAYER_HISTORY p2 family is causal prior-date history; Waku ST/WR/pastwin families are evaluated independently.
+ fams={
+  "PH_P2":["pl_frame_p2","pl_all_p2","pl_recent_p2"],
+  "WAKU_ST":[x for x in feat_cols if x.endswith("_st")],
+  "WAKU_WR":[x for x in feat_cols if x.endswith("_wr")],
+  "WAKU_PASTWIN":[x for x in feat_cols if x.endswith("_pastwin")],
+ }
+ ab=[]
+ for name,cols0 in fams.items():
+  cols=[x for x in cols0 if x in feat_cols and train[x].notna().sum()>=30]
+  if not cols: continue
+  pipe=Pipeline([("imp",SimpleImputer(strategy="median")),("sc",StandardScaler()),("lr",LogisticRegression(C=.25,max_iter=2000,class_weight="balanced"))])
+  pipe.fit(train[cols],train["y"])
+  tmp=rank[rank.race_code.isin(dev_codes)].copy(); tmp["fs"]=pipe.predict_proba(tmp[cols])[:,1]
+  for code,g in tmp.groupby("race_code"):
+   r0=next((z for z in rr["H078_M375"] if str(z["race_code"]).zfill(12)==code),None)
+   if r0 is None: continue
+   p2,pc=v365.formal_post_five6(r0); prob=v299.pair_prob(p2,pc,prod.TICKET_ALPHA); formal=v299.STRATEGIES["HYBRID"](p2,pc,prob)[:3]; fs=set(formal)
+   sm={int(x.boat):float(x.fs) for _,x in g.iterrows()}; bs=sorted(sm,key=sm.get,reverse=True)
+   alts=[(a,b) for a in bs for b in bs if a!=b and (a,b) not in fs]
+   if not alts: continue
+   alt=max(alts,key=lambda q:sm.get(q[0],0)+sm.get(q[1],0)); gap=sm[alt[0]]+sm[alt[1]]-(sm.get(formal[2][0],0)+sm.get(formal[2][1],0))
+   actual=str(r0["actual_combo"])
+   ab.append({"family":name,"race_code":code,"gap":gap,"old":int(actual==f"1-{formal[2][0]}-{formal[2][1]}"),"new":int(actual==f"1-{alt[0]}-{alt[1]}")})
+ ad=pd.DataFrame(ab); rows=[]
+ for name,g in ad.groupby("family"):
+  for q in (.70,.75,.80,.85,.90,.95):
+   t=float(g.gap.quantile(q)); m=g.gap>=t
+   rows.append({"family":name,"q":q,"threshold":t,"swap_R":int(m.sum()),"old_hits":int(g.loc[m,"old"].sum()),"new_hits":int(g.loc[m,"new"].sum()),"net_hits":int((g.loc[m,"new"]-g.loc[m,"old"]).sum())})
+ pd.DataFrame(rows).to_csv(OUT/"dev_feature_family_ablation.csv",index=False)
+ print("DEV_FAMILY_ABLATION",json.dumps(rows,ensure_ascii=False))
+
 
 
  (OUT/"support_eval.json").write_text(json.dumps(support_eval,ensure_ascii=False,indent=2))
