@@ -1,14 +1,7 @@
 name: prepare-1head-v351-live-cache-20260915
-on:
-  workflow_run:
-    workflows: ['v351 1-head LIVE PRE SAB 20260915']
-    types: [completed]
+'on':
   workflow_dispatch:
-  push:
-    paths:
-      - 'prepare_1head_v351_live_cache.py'
-      - 'run_1head_v351_live_exhibition_gate.py'
-      - '.github/workflows/prepare-1head-v351-live-cache-20260915.yml'
+
 permissions: {contents: read, actions: read}
 jobs:
   cache:
