@@ -392,26 +392,18 @@ def inner_survive_second_scores(p2, pflat, waku):
     return out
 
 def production_tickets(p2,pc,pflat=None,waku=None):
-    """Adopted opponent policy: always-on inner-survival SECOND ordering + .11/.18 rescue."""
-    if pflat is None or waku is None:
-        raise Fast120Error('inner-survive production requires PLAYERHistory and Waku10')
-    score=inner_survive_second_scores(p2,pflat,waku)
-    rank=sorted(BOATS,key=lambda b:(-float(score[b]),b))
-    tickets=list(base.v283_top4(p2,pc)) if False else []
-    secs=rank[:2]
-    if float(score[rank[1]])-float(score[rank[2]])<=SECOND_GAP:
-        secs=secs+[rank[2]]
-    for s in secs:
-        thirds=sorted((t for t in BOATS if t!=s),key=lambda t:(-float(pc[(s,t)]),t))
-        for t in thirds[:2]:
-            x=f'4-{s}-{t}'
-            if x not in tickets:tickets.append(x)
-        if float(pc[(s,thirds[1])])-float(pc[(s,thirds[2])])<=THIRD_GAP:
-            x=f'4-{s}-{thirds[2]}'
-            if x not in tickets:tickets.append(x)
+    """Production opponent policy: frozen v291 raw-p2 SECOND + .11/.18 rescue.
+
+    pflat/waku are accepted only for backward-compatible call sites and are not
+    used by the production ticket selector.
+    """
+    try:
+        tickets=opponent_prod.production_tickets(p2,pc)
+    except Exception as e:
+        raise Fast120Error(f'v291 opponent ticket generation failed: {e}') from e
     if not (opponent_prod.MIN_TICKETS<=len(tickets)<=opponent_prod.MAX_TICKETS):
-        raise Fast120Error(f'inner-survive ticket-count invariant failed: {len(tickets)}')
-    return tickets
+        raise Fast120Error(f'v291 ticket-count invariant failed: {len(tickets)}')
+    return list(tickets)
 
 def composite_odds(vals):
     a=[float(x) for x in vals]
@@ -840,6 +832,7 @@ def main():
     out={
       'schema':'head4_120r_fast_lastminute_v1','race_code':code,'monitoring_parent':monitored,'benchmark_unmonitored':bool(a.allow_unmonitored_benchmark and not monitored),
       'head_prob':hp,'opponent_mass':mass,'tickets':tickets,'ticket_odds':dict(zip(tickets,vals)),'composite_odds':comp,
+      'opponent_policy':opponent_prod.POLICY,'opponent_second_gap':SECOND_GAP,'opponent_third_gap':THIRD_GAP,
       **d,'decision':('PERFORMANCE_BENCHMARK_ONLY' if a.performance_benchmark else ('BET' if d['selected'] and monitored else ('BENCHMARK_ONLY' if not monitored else 'PASS'))),
       'selection_policy_artifact':'artifacts/head4_ph5_production_v31_20260831.json',
       'standard_parity':{'standard_selected':bool(hp>=.36 and sadv['orig4_adv_inside'] is not None and sadv['orig4_adv_inside']>=-.06),'live_selected':bool(d['selected']),'match':bool(d['selected']==(hp>=.36 and sadv['orig4_adv_inside'] is not None and sadv['orig4_adv_inside']>=-.06)),'head_cut':.36,'orig_cut':-.06},
