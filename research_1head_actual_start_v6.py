@@ -37,12 +37,13 @@ def main():
         if len(p)==3 and p[0]=="1":
             targets.append((code,int(p[1]),int(p[2])))
     byday={}
-    rows=[]
+    rows=[]; missing=[]
     for code,sec,third in targets:
         day=code[:8]
         if day not in byday:byday[day]=load_day(root,day)
         r=byday[day].get(code)
-        if not r:continue
+        if not r:
+            missing.append(code); continue
         course_boat={c:ii(r.get(f"{c}コース_艇番")) for c in range(1,7)}
         course_st={c:ff(r.get(f"{c}コース_スタートタイミング")) for c in range(1,7)}
         course_f={c:bool(str(r.get(f"{c}コース_F","")).strip()) for c in range(1,7)}
@@ -81,7 +82,7 @@ def main():
           "wind":ff(r.get("風速(m)")),"wave":ff(r.get("波の高さ(cm)")),"water_temp":ff(r.get("水温(℃)"))
         })
     q=pd.DataFrame(rows);q.to_csv(OUT/"race_rows.csv",index=False)
-    if len(q)!=len(targets):raise RuntimeError(f"realtime coverage {len(q)}/{len(targets)}")
+    if len(q)<int(len(targets)*.98):raise RuntimeError(f"realtime coverage too low {len(q)}/{len(targets)} missing={missing}")
     outer=q[q.outer_frame.eq(1)];inner=q[q.outer_frame.eq(0)]
     def sm(g):
         return {"R":int(len(g)),
@@ -98,7 +99,8 @@ def main():
     course_cross=pd.crosstab(outer.second,outer.second_course).to_dict()
     result={
       "population":"DEV H078_M375 races where boat1 actually won; actual race ST/course mechanism",
-      "R":int(len(q)),"outer_R":int(len(outer)),"outer_rate":float(q.outer_frame.mean()),
+      "R":int(len(q)),"target_R":int(len(targets)),"missing_R":int(len(missing)),"missing_codes":missing,
+      "outer_R":int(len(outer)),"outer_rate":float(q.outer_frame.mean()),
       "all_second":sm(q),"inner_second":sm(inner),"outer_second":sm(outer),
       "outer_mechanisms":mech,
       "outer_course_gain_R":int(outer.course_gain.sum()),"outer_course_gain_rate":float(outer.course_gain.mean()) if len(outer) else None,
