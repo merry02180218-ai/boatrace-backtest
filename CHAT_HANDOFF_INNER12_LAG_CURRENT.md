@@ -1685,3 +1685,56 @@ Suggested shadow hierarchy:
 - hit-rate-oriented: WIDE ALL as alternate shadow
 - B-strong should remain separately tracked because it behaves materially differently from A-only.
 - Do not use COMP5 automatically for A-only; evaluate prospectively first.
+
+
+## September unseen validation authorized — 2026-09-25 JST
+
+User explicitly approved opening the previously unread September outcomes for a fixed, no-retune validation.
+
+Policy:
+- September outcomes may now be read for validation only.
+- No threshold, branch definition, head routing, ticket set, composite gate, or staking rule may change based on September during V7.
+- Jun-Aug logic stays frozen.
+- Production unchanged.
+
+Validation period:
+- 2026-09-01 through 2026-09-24.
+- 2026-09-25 excluded.
+
+Frozen replay:
+- GLOBAL Stage-A unchanged.
+- Existing 4HEAD exclusion uses exact frozen artifact HEAD4_PH5_PRODUCTION_V31_20260831.
+- Exact 4HEAD production overlap = head_prob >= .36 AND orig4_adv_inside >= -.06.
+- PH5 PLAYERHistory is causal through target_date-1.
+- Shadow V1/V2, Operational V4, and V6 LEAN/BALANCED/WIDE tickets are unchanged.
+- JPY5,000 Dutch; ALL and COMP>=5 both reported.
+
+Daily causal order:
+1. freeze candidate/head decisions from prior history + same-day pre-race/exhibition;
+2. freeze existing4 overlap, A/B branch, V4 action and tickets;
+3. load market odds;
+4. only then read target-day results;
+5. settle and update histories for the next day.
+
+Added:
+- research/validate_inner12_unseen_sep_v7.py
+  - bf14cc356cfbf6c16009059c0638c04ef79134c4
+  - c72e66b68c4e65faebe000840c9f559348fc9b07
+  - 72f39c1a206826762504148c181e0022cf6d903f
+- .github/workflows/validate-inner12-unseen-september-v7.yml
+  - c7e8f9fab5f4c0f56be73dd69cd32a06c7eae7da
+
+Workflow safeguards:
+- manual-only workflow_dispatch
+- py_compile
+- frozen threshold and ticket-count checks
+- PH5 artifact ID/cut/feature-count/leakage checks
+- requires Sep24 cards/results
+- set -o pipefail
+- artifact upload always
+- production unchanged
+
+Next:
+- manually dispatch validate-inner12-unseen-september-v7.
+- On success report Stage-A, existing4 overlap, V4 selected count, A/B head rates, fixed ticket hit rates, ALL/COMP5 ROI and odds coverage.
+- No September retuning.
