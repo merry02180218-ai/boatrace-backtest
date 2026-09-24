@@ -59,7 +59,7 @@ def main():
  model.fit(X,y)
  q["opp_score"]=model.predict_proba(q[usable].apply(pd.to_numeric,errors="coerce"))[:,1]
  # Result-free frozen ranking output; evaluation of SUPPORT will be a separate next stage.
- rank=q.sort_values(["race_code","opp_score"],ascending=[True,False]).copy()
+ rank=q.sort_values(["race_code","opp_score"],ascending=[True,False]).copy()\n dev_codes=set(q[q.month.isin(DEV)].race_code)
  rank["opp_rank"]=rank.groupby("race_code").cumcount()+1
  rank.to_csv(OUT/"frozen_opponent_ranking.csv",index=False)
  # Open SUPPORT only after DEV model is frozen. Evaluate a simple 3-ticket ordered-pair policy:
