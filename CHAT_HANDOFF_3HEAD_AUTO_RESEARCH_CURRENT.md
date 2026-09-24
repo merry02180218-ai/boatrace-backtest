@@ -48,3 +48,9 @@
 - User accepted current A+ working boundary; stop further A+ tuning for now.
 - Next: recompute layered CORE -> A+ -> FULL_3V2 with exact race-code dedup, target combined volume around 40 races/month.
 - September outcomes remain UNREAD. Production unchanged.
+
+
+## 2026-09-24 overlap handling update
+- User decision: model overlaps are NOT discard-only. Treat any race selected by 2+ of CORE / A+ / FULL_3V2 as 注目レース.
+- Monthly total volume counts a duplicated race once, but report overlap count and overlap combination separately.
+- Keep each model flag so overlap identity is visible in LIVE/research outputs.
