@@ -330,6 +330,67 @@ def main():
  (OUT/"dev_third_role_oof_top.json").write_text(json.dumps({"features":role_features,"oof":oof_meta,"top":role_top},ensure_ascii=False,indent=2))
  print("DEV_THIRD_ROLE_OOF_TOP",json.dumps(role_top,ensure_ascii=False))
 
+ # Re-audit the original 41-feature sparse PH/Waku model out-of-fold.
+ # This directly tests whether the earlier in-sample 100/190 survives month-held-out scoring.
+ def build_month_oof(target_col,feature_list):
+  scores=pd.Series(np.nan,index=q.index,dtype=float)
+  folds=[]
+  for held_month in DEV:
+   train_mask=q.month.isin([m for m in DEV if m!=held_month])
+   test_mask=q.month.eq(held_month)
+   fold_model=Pipeline([("imp",SimpleImputer(strategy="median")),("sc",StandardScaler()),
+                        ("lr",LogisticRegression(C=.25,max_iter=2000,class_weight="balanced"))])
+   fold_model.fit(q.loc[train_mask,feature_list].apply(pd.to_numeric,errors="coerce"),
+                  q.loc[train_mask,target_col].astype(int))
+   scores.loc[test_mask]=fold_model.predict_proba(
+       q.loc[test_mask,feature_list].apply(pd.to_numeric,errors="coerce"))[:,1]
+   folds.append({"held_month":held_month,"train_R":int(q.loc[train_mask,"race_code"].nunique()),
+                 "test_R":int(q.loc[test_mask,"race_code"].nunique())})
+  if scores.loc[q.month.isin(DEV)].isna().any():
+   raise RuntimeError("missing OOF predictions for "+target_col)
+  return scores,folds
+
+ legacy_oof_results={}
+ for legacy_target in ("actual_opponent","actual_third"):
+  legacy_scores,legacy_folds=build_month_oof(legacy_target,usable)
+  score_col="legacy41_oof_"+legacy_target
+  q[score_col]=legacy_scores
+  maps_raw={}; maps_z={}
+  for code,g in q[q.month.isin(DEV)].groupby("race_code"):
+   raw={int(row.boat):float(getattr(row,score_col)) for _,row in g.iterrows()}
+   vals=np.array(list(raw.values()),dtype=float); mu=float(vals.mean()); sdv=float(vals.std()) or 1.0
+   maps_raw[str(code)]=raw
+   maps_z[str(code)]={b:(v-mu)/sdv for b,v in raw.items()}
+  scans=[]
+  specs=[("raw",w) for w in (0.02,0.05,0.10,0.15,0.20,0.30,0.50)]
+  specs += [("z",w) for w in (0.01,0.02,0.05,0.08,0.10,0.15,0.20)]
+  for score_mode,legacy_w3 in specs:
+   score_maps=maps_raw if score_mode=="raw" else maps_z
+   hits=changed=rescued=lost=0; n=0; monthly={}
+   for r0 in rr["H078_M375"]:
+    code=str(r0["race_code"]).zfill(12); month=code[:4]+"-"+code[4:6]
+    if month not in DEV or code not in score_maps: continue
+    p2,pc=v365.formal_post_five6(r0); base=v299.pair_prob(p2,pc,prod.TICKET_ALPHA)
+    formal=v299.STRATEGIES["HYBRID"](p2,pc,base)[:3]
+    pairs=[(a,b) for a in (2,3,4,5,6) for b in (2,3,4,5,6) if a!=b]
+    adj={ab:float(np.log(max(base.get(ab,0.0),1e-12)))+legacy_w3*score_maps[code].get(ab[1],0.0) for ab in pairs}
+    top=v299.hybrid_order(p2,pc,adj)[:3]; actual=str(r0["actual_combo"])
+    old_hit=int(actual in {f"1-{a}-{b}" for a,b in formal}); new_hit=int(actual in {f"1-{a}-{b}" for a,b in top})
+    n+=1; hits+=new_hit; changed+=int(top!=formal)
+    rescued+=int(old_hit==0 and new_hit==1); lost+=int(old_hit==1 and new_hit==0)
+    ms=monthly.setdefault(month,{"R":0,"formal_hits":0,"new_hits":0,"changed_R":0,"rescued":0,"lost":0})
+    ms["R"]+=1; ms["formal_hits"]+=old_hit; ms["new_hits"]+=new_hit; ms["changed_R"]+=int(top!=formal)
+    ms["rescued"]+=int(old_hit==0 and new_hit==1); ms["lost"]+=int(old_hit==1 and new_hit==0)
+   scans.append({"target":legacy_target,"score_mode":score_mode,"w3":legacy_w3,"R":n,"hits":hits,
+                 "rate":hits/n if n else None,"delta_hits":hits-98,"changed_R":changed,
+                 "rescued":rescued,"lost":lost,"monthly":monthly})
+  top_scans=sorted(scans,key=lambda row:(row["hits"],-row["changed_R"]),reverse=True)[:10]
+  legacy_oof_results[legacy_target]={"folds":legacy_folds,"top":top_scans}
+  pd.DataFrame([{k:v for k,v in row.items() if k!="monthly"} for row in scans]).sort_values(
+      ["hits","changed_R"],ascending=[False,True]).to_csv(OUT/f"dev_legacy41_{legacy_target}_oof_scan.csv",index=False)
+ (OUT/"dev_legacy41_oof_top.json").write_text(json.dumps(legacy_oof_results,ensure_ascii=False,indent=2))
+ print("DEV_LEGACY41_OOF_TOP",json.dumps(legacy_oof_results,ensure_ascii=False))
+
 
  (OUT/"support_eval.json").write_text(json.dumps(support_eval,ensure_ascii=False,indent=2))
  print("SUPPORT_EVAL",json.dumps(support_eval,ensure_ascii=False))
