@@ -995,3 +995,123 @@ Recommended next step:
 - freeze this simple rounded Shadow rule as the first genuine non-overlap candidate.
 - next research should predict WHICH head among 3/4/5 inside this regime, rather than rediscovering whether 4 is strong.
 - 3-family should be the first branch because it is the largest component (19.58%).
+
+
+## Shadow V2 branch geometry — 2026-09-24 late session
+
+Starting point:
+- Frozen Shadow V1 = exact existing 4HEAD production nonfire
+- GLOBAL Stage-A candidate
+- b4 prior_late20_rate <= .20 OR b5 prior_late20_rate >= .40
+- historical Jun/Jul/Aug outer WIDE = 40.00% / 40.28% / 40.38%
+- 189R total, 76 WIDE = 40.21%
+- POSTHOC_SHADOW_ONLY; September unread; production unchanged.
+
+### New branch geometry discovery
+Two simple causal attack-geometry conditions were found inside the 189R Shadow:
+
+A:
+- `attack_gap_3minus4_waku_st >= .038`
+- meaning boat3 Waku10 mean ST is at least .038 slower than boat4.
+
+B:
+- `post_gap_b3_vs_b5_pred <= -.09`
+- meaning corrected predicted actual ST3 is at least .09 faster than ST5.
+
+Important:
+- these are not generic boat4 strength / motor / win-rate signals.
+- A uses course-specific start history.
+- B uses current exhibition ST corrected by prior-only player exhibition->actual ST bias.
+- same-day outcomes are not part of these features.
+
+### Historical branch anatomy
+A only:
+- 53R total
+- outer WIDE 29/53 = 54.72%
+- 3-family 12/53 = 22.64%
+- 4-family 13/53 = 24.53%
+- 5-family 4/53 = 7.55%
+- 1 escape 14/53 = 26.42%
+Monthly WIDE:
+- Jun 9/18 = 50.00%
+- Jul 9/16 = 56.25%
+- Aug 11/19 = 57.89%
+
+B only:
+- 32R total
+- outer WIDE 19/32 = 59.38%
+- 3-family 13/32 = 40.63%
+- 4-family 3/32 = 9.38%
+- 5-family 3/32 = 9.38%
+- 1 escape 7/32 = 21.88%
+Monthly WIDE:
+- Jun 6/11 = 54.55%
+- Jul 7/12 = 58.33%
+- Aug 6/9 = 66.67%
+Monthly 3-family:
+- Jun 4/11 = 36.36%
+- Jul 6/12 = 50.00%
+- Aug 3/9 = 33.33%
+
+Both A and B:
+- only 6R
+- outer WIDE 2/6 = 33.33%
+- 1 escape 3/6 = 50.00%
+- ambiguous/conflicting branch; reject.
+
+Neither:
+- 98R
+- outer WIDE 26/98 = 26.53%
+- 1 escape 43/98 = 43.88%
+- clearly weak external-attack geometry; reject.
+
+### Frozen Shadow V2 gate
+Use **A XOR B** only.
+
+Historical:
+- Jun 29R / 15 WIDE = 51.72%
+- Jul 28R / 16 WIDE = 57.14%
+- Aug 28R / 17 WIDE = 60.71%
+- total 85R / 48 WIDE = 56.47%
+- average ~28.3R/month
+- 1 escape total 21/85 = 24.71%
+- 3-family total 25/85 = 29.41%
+- 4-family total 16/85 = 18.82%
+- 5-family total 7/85 = 8.24%
+
+Interpretation:
+- B-only is the clearest 3-leaning branch.
+- A-only is a mixed 3/4 attack branch with a modest 4 lean.
+- both = conflict; reject.
+- neither = no strong external geometry; reject.
+
+### Code / workflow
+Created:
+- `research/research_inner12_shadow_branch_v2.py`
+  - commit `f89837d2b5006aa99e2fd7e93b39b997255f8ab6`
+- fast workflow:
+  - `.github/workflows/research-inner12-shadow-branch-v2.yml`
+  - commit `711a541a2afca8ad582ce200d25ed6e97badb2d0`
+
+Fast workflow does NOT rebuild 40+ minutes of history.
+It downloads pinned prior artifacts:
+- Stage-B Run 35992940551 / `inner12-stageb-route-v1`
+- exact 4HEAD replay Run 35998682116 / `inner12-novel-nonoverlap-v1`
+
+Preflight verified:
+- manual workflow_dispatch only
+- no push trigger
+- pinned artifact runs
+- expected files must exist
+- py_compile
+- literal `\\n` guard
+- pipefail
+- September unread
+- production unchanged
+
+Next:
+1. manually dispatch `research-inner12-shadow-branch-v2`.
+2. confirm frozen historical numbers match.
+3. Do NOT promote: this is posthoc shadow.
+4. Future unseen period should validate Shadow V2.
+5. For further research, B-only can be treated as a 3-leaning branch; A-only needs more work to separate 3 vs 4 without reverting to generic 4HEAD strength.
