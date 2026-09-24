@@ -200,13 +200,14 @@ def main():
    a=np.array(list(v.values()),dtype=float); mu=float(a.mean()); sd=float(a.std()) or 1.0
    return {k:(x-mu)/sd for k,x in v.items()}
   bz,pz=zscore_map(bv),zscore_map(pv); actual=str(r0["actual_combo"])
-  for wgt in (0.05,0.10,0.15,0.20,0.25,0.30):
+  formal=v299.STRATEGIES["HYBRID"](p2,pc,base)[:3]
+   for wgt in (0.00,0.05,0.10,0.15,0.20,0.25,0.30):
    mix={ab:bz[ab]+wgt*pz[ab] for ab in pairs}
    top=sorted(pairs,key=lambda ab:mix[ab],reverse=True)[:3]
-   blend_rows.append({"race_code":code,"w":wgt,"hit":int(actual in {f"1-{a}-{b}" for a,b in top}),"tickets":str(top)})
+   blend_rows.append({"race_code":code,"w":wgt,"hit":int(actual in {f"1-{a}-{b}" for a,b in top}),"tickets":str(top),"formal_tickets":str(formal),"parity":int(top==formal) if wgt==0 else None})
  bd=pd.DataFrame(blend_rows); blend=[]
  for wgt,g in bd.groupby("w"):
-  blend.append({"w":float(wgt),"R":int(len(g)),"hits":int(g.hit.sum()),"rate":float(g.hit.mean())})
+  blend.append({"w":float(wgt),"R":int(len(g)),"hits":int(g.hit.sum()),"rate":float(g.hit.mean()),"parity_R":int(g.parity.fillna(0).sum()) if wgt==0 else None})
  print("DEV_HYBRID_INCLUDED_BLEND",json.dumps(blend,ensure_ascii=False))
  pd.DataFrame(blend).to_csv(OUT/"dev_hybrid_included_blend.csv",index=False)
 
