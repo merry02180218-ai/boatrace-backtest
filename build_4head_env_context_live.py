@@ -140,11 +140,17 @@ def _wind_code(text: str) -> int:
     raise EnvContextBuildError(f'unsupported/missing wind direction: {s!r}')
 
 
-def parse_sui_weather(body: str) -> tuple[int, float, float, float, float, str]:
+def parse_sui_weather(body: str, *, allow_missing_water: bool = False) -> tuple[int, float, float, float, float | None, str]:
     """Use only pre-race bc_sui; never post-race bc_rs1_2.
 
     Pinned layout: [0]=HHMM, [3]=wind direction text, [4]=wind speed.
-    Select the last valid weather row exactly as the source's latest snapshot.
+    Wind/wave/air always come from the latest valid weather row.
+
+    Water temperature is strict by default for the full ENV builder. The
+    fast last-minute HEAD4 path may opt into allow_missing_water=True because
+    water is shadow-only there and must never block BET/PASS.
+    When opted in, use the most recent parseable pre-race water value; if none
+    exists, return None.
     """
     valid: list[list[str]] = []
     for raw in body.splitlines():
@@ -158,13 +164,28 @@ def parse_sui_weather(body: str) -> tuple[int, float, float, float, float, str]:
     ws = _num('wind_speed', cols[4])
     wave = _num('wave_cm', cols[5])
     air = _num('air_c', cols[6])
-    if len(cols) <= 7:
+
+    water = None
+    water_error: Exception | None = None
+    candidates = reversed(valid) if allow_missing_water else [cols]
+    for row in candidates:
+        if len(row) <= 7 or not _clean(row[7]):
+            water_error = EnvContextBuildError('bc_sui water temperature missing')
+            continue
+        try:
+            water = _num('water_c', row[7])
+            break
+        except EnvContextBuildError as e:
+            water_error = e
+            continue
+    if water is None and not allow_missing_water:
+        if water_error is not None:
+            raise water_error
         raise EnvContextBuildError('bc_sui water temperature missing')
-    water = _num('water_c', cols[7])
+
     if ws < 0 or wave < 0:
         raise EnvContextBuildError('negative weather metric')
     return wc, ws, wave, air, water, cols[0].strip()
-
 
 def _read_csv(path: str) -> list[dict[str, str]]:
     p = Path(path)
