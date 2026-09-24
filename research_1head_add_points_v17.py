@@ -146,7 +146,7 @@ def main():
               "roi":baseline_return/baseline_stake}
     modes=[]
     row_records=[]
-    for n in (1,2,3):
+    for n in (1,2,3,4):
         total_stake=0;total_return=0;hits=0;resc=0;added_tickets=0;added_return=0
         monthly={}
         for _,r in z.iterrows():
