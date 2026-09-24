@@ -283,3 +283,109 @@ Next action:
 - inspect especially NON_ST surprises that have lift >1 in train, June, and Jul-Aug
 - prioritize factors that reproduce across more than one simultaneous-lag label
 - only after the lag mechanism is understood, feed the robust factors into the >=40% route model.
+
+
+## Factor discovery V1 result — Run 35967044073 SUCCESS
+Run:
+- https://github.com/merry02180218-ai/boatrace-backtest/actions/runs/35967044073
+- 27,251 labeled races
+- September outcomes unread
+- same-day feature freeze preserved
+- production unchanged
+
+### Baseline simultaneous-lag rates
+- dual_abs20:
+  - train 13.20%
+  - June validation 13.81%
+  - Jul-Aug holdout 13.59%
+- dual_vs3_03:
+  - train 16.84%
+  - validation 16.97%
+  - holdout 16.41%
+- inner_vs_outer03:
+  - train 29.52%
+  - validation 30.53%
+  - holdout 30.18%
+
+### Stable non-ST finding: weak inner pair
+The strongest broadly reproducible non-ST factor was low 1/2 performance level.
+Examples:
+- pair minimum national win rate <=4.19, dual_abs20:
+  - train 18.53%, validation 18.94%, holdout 18.86%
+- pair mean national win rate <=4.90, dual_abs20:
+  - train 18.00%, validation 18.48%, holdout 19.64%
+- pair mean national win rate <=4.90, inner_vs_outer03:
+  - train 34.54%, validation 36.03%, holdout 34.84%
+- low 2-boat national win/2ren/3ren metrics reproduced across all three lag labels.
+
+Interpretation: racer quality is related not only to race result, but to simultaneous start-collapse risk. This is a real candidate feature family, not merely a head-strength feature.
+
+### Unexpected environmental finding
+Strong wind had a large effect on absolute simultaneous lateness:
+- relative headwind 5m+ (dual_abs20):
+  - train 22.17% (1.68x)
+  - validation 31.34% (2.27x)
+  - holdout 20.41% (1.50x)
+- left-crosswind 5m+:
+  - train 23.13%
+  - validation 21.43%
+  - holdout 19.36%
+- all 5m+:
+  - train 19.27%
+  - validation 19.92%
+  - holdout 14.93%
+
+Important distinction:
+- wind is much stronger for absolute late ST (both >=.20) than for relative lag versus boats3/4.
+- therefore wind may slow the whole start field rather than uniquely opening the 3/4 attack route. It should be a lag-context feature, not assumed to directly predict the route.
+
+### Venue effects reproduced
+- Kiryu, dual_abs20:
+  - train 19.95%, validation 19.81%, holdout 19.46%
+- Gamagori, dual_abs20:
+  - 20.81%, 20.56%, 15.89%
+- Amagasaki is especially strong on relative lag:
+  - dual_vs3_03: 23.45%, 25.86%, 24.39%
+  - inner_vs_outer03: 36.55%, 39.92%, 40.13%
+- Suminoe is especially strong on inner_vs_outer03:
+  - 38.11%, 45.07%, 38.90%
+
+### Grade-pair effects
+Weak inner grade combinations are reproducible:
+- B1-B1 dual_abs20: 17.92%, 17.27%, 18.48%
+- B1-B2 dual_abs20: 18.42%, 22.73%, 20.61%
+- B2-B1 dual_abs20: 22.13%, 19.12%, 17.36%
+B1/B2-heavy inner pairs also raise relative-lag labels.
+
+### Other weaker but reproducible non-ST candidates
+- poor prior standard exhibition / poor prior original exhibition
+- weak turnfoot / prior turn
+- poor motor2/motor3 in some relative-lag definitions
+- poor meeting finishes
+- boat1 age >=47 had a small stable dual_abs20 lift
+These are weaker than national-strength / venue / strong-wind effects but worth interaction tests.
+
+### Existing ST interaction remains very strong
+For inner_vs_outer03:
+- pair min Waku start rank >=3.1 AND boat2 prior ST mean >=0.17675:
+  - train 43.99%
+  - validation 46.84%
+  - holdout 41.85%
+This is already a >40% Stage-A relative-lag detector.
+
+### Exploratory category+numeric combinations worth strict V2 validation
+These were inspected after V1 and must NOT yet be treated as frozen/adopted rules because they need a clean train/validation-only selection workflow:
+- Suminoe + pair max local win rate <=5.33:
+  - inner_vs_outer03 Apr 51.9%, May 46.2%, Jun 53.1%, Jul 43.1%, Aug 48.1%
+- Amagasaki + pair mean national win rate <=4.9:
+  - Apr 38.2%, May 51.4%, Jun 53.1%, Jul 50.0%, Aug 52.9%
+- Suminoe + pair minimum motor2 <=20:
+  - Apr 48.1%, May 28.9%, Jun 58.8%, Jul 61.3%, Aug 57.1%
+- strong wind 5m+ + Kiryu, dual_abs20:
+  - Apr 23.6%, May 36.4%, Jun 37.5%, Jul 30.8%, Aug 26.9%
+
+Key conclusion:
+- There ARE unexpected start-collapse factors beyond ST averages.
+- The most promising relative-lag structure is venue + weak inner pair, with motor as a possible secondary interaction.
+- Strong wind is real for absolute lateness but should not be mistaken for direct route opening.
+- Stage A can already exceed 40% out-of-sample in several definitions; the remaining problem is Stage B: among those collapse races, discriminate 3-makuri vs 4-makuri-sashi so final route precision can approach the user's >=40% goal.
