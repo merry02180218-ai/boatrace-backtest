@@ -39,6 +39,10 @@ def main():
   for b in (2,3,4,5,6):
    q={"race_code":r.race_code,"month":str(r.month),"boat":b,"actual_opponent":int(b in actual)}
    for k in ("all_win","all_p2","frame_win","frame_p2","recent_p2"): q["pl_"+k]=r.get(f"b{b}_pl_{k}")
+   # Candidate-normalized Waku10 primitives for fine-grained opponent-role scans.
+   # Keep legacy sparse boat-specific columns below for comparability with prior opponent model.
+   for metric in ("wr","st","sr","pastwin"):
+    q["waku_own_"+metric]=r.get(f"w10_b{b}_{metric}")
    for col in w.columns:
     cl=col.lower()
     if col!="race_code" and (f"b{b}" in cl or f"_{b}_" in cl): q["waku__"+col]=r.get(col)
@@ -233,18 +237,23 @@ def main():
  # Fine-grained DEV-only feature scan focused on the third-place bonus inside the preserved HYBRID.
  # Each raw feature is standardized within each race across boats; no SUPPORT labels are used.
  fine=[]
- feature_cols=[x for x in q.columns if x.startswith("pl_") or x.startswith("waku__")]
+ # Fine scan must use candidate-normalized columns only. Legacy waku__w10_bN_* columns
+ # are intentionally excluded because they are sparse boat-identity columns, not comparable across boats.
+ feature_cols=[x for x in q.columns if x.startswith("pl_") or x.startswith("waku_own_")]
  for feat in feature_cols:
   qq=q[q.month.isin(DEV)][["race_code","boat",feat]].copy()
   qq[feat]=pd.to_numeric(qq[feat],errors="coerce")
   if qq[feat].notna().sum()<30: continue
-  fmap={}
+  fmap={}; varying_r=0
   for code,g in qq.groupby("race_code"):
    vals=g[feat].astype(float); med=float(vals.median()) if vals.notna().any() else 0.0; vals=vals.fillna(med)
-   sdv=float(vals.std(ddof=0)) or 1.0; muv=float(vals.mean())
+   sdv=float(vals.std(ddof=0))
+   if sdv>1e-12: varying_r+=1
+   sdv=sdv or 1.0; muv=float(vals.mean())
    fmap[str(code)]={int(b):float((v-muv)/sdv) for b,v in zip(g.boat,vals)}
+  if varying_r<30: continue
   for sign in (-1.0,1.0):
-   for w3 in (0.02,0.05,0.08,0.10,0.15):
+   for w3 in (0.02,0.05,0.08,0.10,0.15,0.20,0.30):
     hits=0; changed=0; n=0
     for r0 in rr["H078_M375"]:
      code=str(r0["race_code"]).zfill(12); month=code[:4]+"-"+code[4:6]
@@ -255,7 +264,7 @@ def main():
      adj={ab:float(np.log(max(base.get(ab,0.0),1e-12)))+sign*w3*fmap[code].get(ab[1],0.0) for ab in pairs}
      top=v299.hybrid_order(p2,pc,adj)[:3]; actual=str(r0["actual_combo"]); n+=1
      hits+=int(actual in {f"1-{a}-{b}" for a,b in top}); changed+=int(top!=formal)
-    fine.append({"feature":feat,"sign":int(sign),"w3":w3,"R":n,"hits":hits,"rate":hits/n if n else None,"changed_R":changed,"delta_hits":hits-98})
+    fine.append({"feature":feat,"sign":int(sign),"w3":w3,"R":n,"hits":hits,"rate":hits/n if n else None,"changed_R":changed,"delta_hits":hits-98,"varying_R":varying_r})
  fd=pd.DataFrame(fine).sort_values(["hits","changed_R"],ascending=[False,True])
  fd.to_csv(OUT/"dev_third_feature_fine_scan.csv",index=False)
  print("DEV_THIRD_FEATURE_FINE_TOP",json.dumps(fd.head(30).to_dict("records"),ensure_ascii=False))
