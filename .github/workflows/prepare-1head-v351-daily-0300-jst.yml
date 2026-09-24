@@ -1,21 +1,7 @@
 name: prepare-1head-v351-daily-0300-jst
 
-on:
-  schedule:
-    - cron: '0 18 * * *' # 03:00 JST
+'on':
   workflow_dispatch:
-  push:
-    branches: [ main ]
-    paths:
-      - 'fetch_1head_v351_biyori_cards.py'
-      - 'prepare_1head_v351_live_cache.py'
-      - 'run_1head_v351_live_finalize.py'
-      - 'onehead_five_second_topup.py'
-      - 'onehead_production_profile.py'
-      - 'run_1head_v351_live_expansion_shadow.py'
-      - 'build_1head_unified_pre_feed.py'
-      - 'fetch_boatrace_deadline.py'
-      - '.github/workflows/prepare-1head-v351-daily-0300-jst.yml'
 
 permissions:
   contents: read
