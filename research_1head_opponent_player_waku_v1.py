@@ -166,8 +166,8 @@ def main():
   train=rank[rank.race_code.isin(dev_codes)].copy()
   if not cols: continue
   pipe=Pipeline([("imp",SimpleImputer(strategy="median")),("sc",StandardScaler()),("lr",LogisticRegression(C=.25,max_iter=2000,class_weight="balanced"))])
-  pipe.fit(train[cols],train["y"])
-  tmp=rank[rank.race_code.isin(dev_codes)].copy(); tmp["fs"]=pipe.predict_proba(tmp[cols])[:,1]
+  pipe.fit(train[cols].apply(pd.to_numeric,errors="coerce"),train["actual_opponent"].astype(int))
+  tmp=rank[rank.race_code.isin(dev_codes)].copy(); tmp["fs"]=pipe.predict_proba(tmp[cols].apply(pd.to_numeric,errors="coerce"))[:,1]
   for code,g in tmp.groupby("race_code"):
    r0=next((z for z in rr["H078_M375"] if str(z["race_code"]).zfill(12)==code),None)
    if r0 is None: continue
