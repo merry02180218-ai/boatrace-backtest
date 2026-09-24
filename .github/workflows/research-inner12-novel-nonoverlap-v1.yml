@@ -98,12 +98,22 @@ jobs:
           set -o pipefail
           python research/research_inner12_novel_nonoverlap_v1.py             | tee /tmp/inner12_novel_nonoverlap_v1/run.log
 
+      - name: Evaluate frozen posthoc shadow
+        env:
+          INNER12_STAGEB_ROWS: /tmp/inner12_stageb_route_discovery_v1/factor_rows.csv
+          HEAD4_RACE_DETAIL: /tmp/head4_ph5_live_walkforward/race_detail.csv
+          INNER12_SHADOW_OUTDIR: /tmp/inner12_novel_shadow_v1
+        run: |
+          set -o pipefail
+          python research/research_inner12_novel_shadow_v1.py | tee /tmp/inner12_novel_shadow_v1/run.log
+
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: inner12-novel-nonoverlap-v1
           path: |
             /tmp/inner12_novel_nonoverlap_v1/
+            /tmp/inner12_novel_shadow_v1/
             /tmp/head4_ph5_live_walkforward/race_detail.csv
             /tmp/inner12_stageb_route_discovery_v1/meta.json
           retention-days: 30
