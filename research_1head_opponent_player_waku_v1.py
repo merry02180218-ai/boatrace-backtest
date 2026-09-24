@@ -230,6 +230,35 @@ def main():
   struct.append({"w2":float(w2),"w3":float(w3),"R":int(len(g)),"hits":int(g.hit.sum()),"rate":float(g.hit.mean()),"parity_R":int(g.parity.fillna(0).sum()) if w2==0 and w3==0 else None})
  print("DEV_HYBRID_STRUCTURE_PRESERVED",json.dumps(struct,ensure_ascii=False))
  pd.DataFrame(struct).to_csv(OUT/"dev_hybrid_structure_preserved.csv",index=False)
+ # Fine-grained DEV-only feature scan focused on the third-place bonus inside the preserved HYBRID.
+ # Each raw feature is standardized within each race across boats; no SUPPORT labels are used.
+ fine=[]
+ feature_cols=[x for x in q.columns if x.startswith("pl_") or x.startswith("waku__")]
+ for feat in feature_cols:
+  qq=q[q.month.isin(DEV)][["race_code","boat",feat]].copy()
+  qq[feat]=pd.to_numeric(qq[feat],errors="coerce")
+  if qq[feat].notna().sum()<30: continue
+  fmap={}
+  for code,g in qq.groupby("race_code"):
+   vals=g[feat].astype(float); med=float(vals.median()) if vals.notna().any() else 0.0; vals=vals.fillna(med)
+   sdv=float(vals.std(ddof=0)) or 1.0; muv=float(vals.mean())
+   fmap[str(code)]={int(b):float((v-muv)/sdv) for b,v in zip(g.boat,vals)}
+  for sign in (-1.0,1.0):
+   for w3 in (0.02,0.05,0.08,0.10,0.15):
+    hits=0; changed=0; n=0
+    for r0 in rr["H078_M375"]:
+     code=str(r0["race_code"]).zfill(12); month=code[:4]+"-"+code[4:6]
+     if month not in DEV or code not in fmap: continue
+     p2,pc=v365.formal_post_five6(r0); base=v299.pair_prob(p2,pc,prod.TICKET_ALPHA)
+     formal=v299.STRATEGIES["HYBRID"](p2,pc,base)[:3]
+     pairs=[(a,b) for a in (2,3,4,5,6) for b in (2,3,4,5,6) if a!=b]
+     adj={ab:float(np.log(max(base.get(ab,0.0),1e-12)))+sign*w3*fmap[code].get(ab[1],0.0) for ab in pairs}
+     top=v299.hybrid_order(p2,pc,adj)[:3]; actual=str(r0["actual_combo"]); n+=1
+     hits+=int(actual in {f"1-{a}-{b}" for a,b in top}); changed+=int(top!=formal)
+    fine.append({"feature":feat,"sign":int(sign),"w3":w3,"R":n,"hits":hits,"rate":hits/n if n else None,"changed_R":changed,"delta_hits":hits-98})
+ fd=pd.DataFrame(fine).sort_values(["hits","changed_R"],ascending=[False,True])
+ fd.to_csv(OUT/"dev_third_feature_fine_scan.csv",index=False)
+ print("DEV_THIRD_FEATURE_FINE_TOP",json.dumps(fd.head(30).to_dict("records"),ensure_ascii=False))
 
 
 
