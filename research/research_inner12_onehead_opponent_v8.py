@@ -13,7 +13,7 @@ Transferred from latest 1HEAD production (generic pieces only):
 - opponentCore SECOND coefficient = 0.45;
 - opponentCore THIRD coefficient = 1.00;
 - pair alpha = 0.70;
-- HYBRID3 order = best pair, another pair with same second, best pair with another second.
+- HYBRID ordering starts with best pair, another pair with same second, best pair with another second; keep top 6 per head.
 
 NOT transferred:
 - 1HEAD wall3, 5->6, or 1->5 top-up rules; those are head-1-specific mechanisms.
@@ -292,7 +292,7 @@ def score_head(raw,head,m2,m3,use_core=True):
             for t,v in q.items():z[(s,t)]=v
         pc=z
     prob=generic_pair_prob(p2,pc,boats,ALPHA)
-    pairs=hybrid_order(prob)[:3]
+    pairs=hybrid_order(prob)[:6]
     return p2,pc,pairs
 
 def load_odds_for(code):
@@ -412,7 +412,7 @@ def main():
                 "tickets":ts,
                 "base_no_core":bts,
             }
-        if len(tickets)!=(6 if r.action=="A_DUAL_3_4" else 3):raise RuntimeError("TICKET_COUNT_DRIFT")
+        if len(tickets)!=(12 if r.action=="A_DUAL_3_4" else 6):raise RuntimeError("TICKET_COUNT_DRIFT")
         a1,a2,a3=actual;act=f"{a1}-{a2}-{a3}"
         hit=int(act in tickets);base_hit=int(act in base_tickets)
         head_hit=int(a1 in heads)
