@@ -256,6 +256,35 @@ def main():
     bdf.to_csv(OUT/'structural_branch_v1.csv',index=False)
     print('STRUCTURAL_BRANCH_TICKET_V1',bdf.to_json(orient='records',force_ascii=False))
     print('STRUCTURAL_BRANCH_CUTS',json.dumps({'strong3_q':.75,'strong3_cut':strong3_cut,'break32_q':.50,'break32_cut':break32_cut}))
+    # Stage v9: conservative structural overlay candidate for current HYBRID.
+    # This does NOT replace production ranking. It only emits branch-specific priorities
+    # for a later ticket-level replay against the frozen 163-BET population.
+    def overlay_priority(r):
+        if r.struct_branch=='THREE_SURVIVES':
+            return 'BOOST_4_3'
+        if r.struct_branch=='THREE_TWO_BREAK':
+            return 'BOOST_4_5'
+        return 'NO_FORCED_BOOST'
+    races['hybrid_struct_overlay']=races.apply(overlay_priority,axis=1)
+    ov=[]
+    for split,dq in [('JUNE_DEV',races[races.month.eq('2026-06')]),
+                     ('JUL_HOLDOUT',races[races.month.eq('2026-07')]),
+                     ('AUG_HOLDOUT',races[races.month.eq('2026-08')]),
+                     ('JULAUG_HOLDOUT',races[races.month.isin(['2026-07','2026-08'])])]:
+        for o,g in dq.groupby('hybrid_struct_overlay'):
+            if o=='BOOST_4_3':
+                role_hit=g.actual_second.eq(3)
+            elif o=='BOOST_4_5':
+                role_hit=g.actual_second.eq(5)
+            else:
+                role_hit=pd.Series(False,index=g.index)
+            ov.append({'split':split,'overlay':o,'R':len(g),'role_hit_R':int(role_hit.sum()),
+                       'role_hit_rate':float(role_hit.mean()) if len(g) else np.nan,
+                       'three_any_rate':float(g.three_in_pair.mean()),
+                       'five_any_rate':float(g.five_in_pair.mean())})
+    odf=pd.DataFrame(ov)
+    odf.to_csv(OUT/'hybrid_structural_overlay_v1.csv',index=False)
+    print('HYBRID_STRUCTURAL_OVERLAY_V1',odf.to_json(orient='records',force_ascii=False))
     fam=(races.groupby(['month','pair_family']).size().rename('R').reset_index())
     fam['pct']=fam.R/fam.groupby('month').R.transform('sum')*100
     fam.to_csv(OUT/'pair_family_monthly.csv',index=False)
@@ -266,7 +295,7 @@ def main():
     meta={'head4_R':len(races),'dev':'2026-06 only','holdout':['2026-07','2026-08'],
           'dev_R':len(dev),'holdout_R':len(hold),'SEPTEMBER_OUTCOMES_READ':False,
           'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':False,
-          'stage':'STRUCTURAL_BRANCH_TICKET_V1'}
+          'stage':'HYBRID_STRUCTURAL_OVERLAY_V1'}
     (OUT/'meta.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2))
     print('REGIME_MONTHLY',pct.to_json(orient='records',force_ascii=False))
     print('PAIR_TOP',pair.groupby('month').head(8).to_json(orient='records',force_ascii=False))
