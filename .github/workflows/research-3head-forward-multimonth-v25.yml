@@ -1,0 +1,31 @@
+name: research-3head-forward-multimonth-v25
+on:
+  push:
+    paths: [research/run_3head_forward_multimonth_v25.fire]
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scikit-learn requests
+      - name: Download CORE107
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          mkdir -p core107
+          gh run download 35892602362 --repo ${{ github.repository }} --name research-3head-newcore-fast-v20 --dir core107
+      - run: python -m py_compile research/research_3head_forward_multimonth_v25.py
+      - name: Run strict forward multimonth
+        shell: bash
+        run: |
+          set -o pipefail
+          python research/research_3head_forward_multimonth_v25.py | tee forward_multimonth_v25.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-3head-forward-multimonth-v25
+          path: |
+            forward_multimonth_v25.log
+            forward_strong_multimonth_v25.csv
