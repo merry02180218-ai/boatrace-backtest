@@ -1,0 +1,83 @@
+name: research-inner12-shadow-branch-v2
+
+on:
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -q pandas numpy
+
+      - name: Download frozen Stage-B artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: inner12-stageb-route-v1
+          path: /tmp/stageb
+          github-token: ${{ github.token }}
+          repository: merry02180218-ai/boatrace-backtest
+          run-id: 35992940551
+
+      - name: Download exact 4HEAD replay artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: inner12-novel-nonoverlap-v1
+          path: /tmp/nonoverlap
+          github-token: ${{ github.token }}
+          repository: merry02180218-ai/boatrace-backtest
+          run-id: 35998682116
+
+      - name: Preflight
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/inner12_shadow_branch_v2
+          test -f /tmp/stageb/factor_rows.csv
+          test -f /tmp/nonoverlap/head4_ph5_live_walkforward/race_detail.csv
+          python -m py_compile research/research_inner12_shadow_branch_v2.py
+          python - <<'PY'
+          from pathlib import Path
+          s=Path('research/research_inner12_shadow_branch_v2.py').read_text(encoding='utf-8')
+          assert '\\n' not in s, 'literal escaped newline found'
+          required=[
+              'INNER12_NOVEL_NONOVERLAP_SHADOW_V2',
+              'GAP34_WAKU_ST_MIN=.038',
+              'PRED3_VS5_MAX=-.09',
+              'shadow_v2_selected',
+              'A_only',
+              'B_only',
+              '"status":"POSTHOC_SHADOW_ONLY"',
+              '"september_outcomes_read":False',
+              '"production_changed":False',
+          ]
+          for x in required:
+              assert x in s, f'missing marker: {x}'
+          print('INNER12_SHADOW_BRANCH_V2_PREFLIGHT_OK')
+          PY
+
+      - name: Evaluate frozen Shadow V2
+        env:
+          INNER12_STAGEB_ROWS: /tmp/stageb/factor_rows.csv
+          HEAD4_RACE_DETAIL: /tmp/nonoverlap/head4_ph5_live_walkforward/race_detail.csv
+          INNER12_BRANCH_OUTDIR: /tmp/inner12_shadow_branch_v2
+        run: |
+          set -o pipefail
+          python research/research_inner12_shadow_branch_v2.py | tee /tmp/inner12_shadow_branch_v2/run.log
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: inner12-shadow-branch-v2
+          path: /tmp/inner12_shadow_branch_v2/
+          retention-days: 30
