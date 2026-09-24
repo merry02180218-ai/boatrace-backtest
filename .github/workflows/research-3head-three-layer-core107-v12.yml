@@ -1,0 +1,47 @@
+name: research-3head-three-layer-core107-v12
+on:
+  push:
+    paths:
+      - research/run_3head_three_layer_core107_v12.fire
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn requests
+      - name: Download accepted CORE107
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p core107 golden
+          gh run download 35892602362 --repo ${{ github.repository }} --name research-3head-newcore-fast-v20 --dir core107
+          python - <<'PY'
+          import pandas as pd
+          q=pd.read_csv('core107/accepted_core_fast_v20.csv',dtype={'race_code':str})
+          assert len(q)==107 and q.race_code.astype(str).str.zfill(12).nunique()==107
+          print('CORE107_PREFLIGHT_OK',len(q))
+          PY
+      - name: Static preflight
+        run: |
+          python -m py_compile research/run_3head_three_layer_core107_v12.py
+          grep -q 'EXACT_ACCEPTED_CORE107' research/run_3head_three_layer_core107_v12.py
+          grep -q 'PRE>=.970 & PH>=.50 & motor>=.60' research/run_3head_three_layer_core107_v12.py
+          ! grep -q 'FROZEN_CORE' research/run_3head_three_layer_core107_v12.py
+      - name: Run exact layered audit
+        run: |
+          python research/run_3head_three_layer_core107_v12.py | tee core107_v12.log
+          grep -q 'EXACT_ACCEPTED_CORE107 107' core107_v12.log
+          grep -q 'SEPTEMBER_UNREAD' core107_v12.log
+          grep -q 'PRODUCTION_UNCHANGED' core107_v12.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-3head-three-layer-core107-v12
+          path: |
+            research_3head_three_layer_monthly_bets_v9.json
+            research_3head_three_layer_monthly_bets_v9.csv
+            core107_v12.log
