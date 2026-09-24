@@ -25,7 +25,7 @@ jobs:
       - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
       - name: Preflight
         run: |
-          python -m py_compile prepare_4head_6m_v93_neutral_waku.py audit_4head_ph5_live_walkforward.py research_4head_opponent_player_waku_v1.py research_4head_opponent_second_rerank_v2.py research_4head_opponent_regime_v1.py research_4head_structural_broad_6m_v1.py research_4head_three_survive_ticket_shadow_v1.py audit_4head_inner_adoption_parity_v1.py research_4head_v291_phwaku_additive_v1.py audit_4head_live_v291_restore_v1.py
+          python -m py_compile prepare_4head_6m_v93_neutral_waku.py audit_4head_ph5_live_walkforward.py research_4head_opponent_player_waku_v1.py research_4head_opponent_second_rerank_v2.py research_4head_opponent_regime_v1.py research_4head_structural_broad_6m_v1.py research_4head_three_survive_ticket_shadow_v1.py audit_4head_inner_adoption_parity_v1.py research_4head_v291_phwaku_additive_v1.py audit_4head_live_v291_restore_v1.py research_4head_v291_staking_audit_v1.py
           ! grep -n '\\\\n' audit_4head_ph5_live_walkforward.py research_4head_opponent_player_waku_v1.py research_4head_opponent_second_rerank_v2.py research_4head_structural_broad_6m_v1.py research_4head_three_survive_ticket_shadow_v1.py
       - name: Prepare historical LIVE primitives
         env:
@@ -41,6 +41,10 @@ jobs:
         env:
           BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
         run: python audit_4head_live_v291_restore_v1.py
+      - name: Frozen v291 staking audit
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: python research_4head_v291_staking_audit_v1.py
       - name: Opponent PLAYERHistory Waku10 research
         env:
           BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
@@ -83,4 +87,5 @@ jobs:
             /tmp/head4_inner_adoption_parity_v1/
             /tmp/head4_v291_phwaku_additive_v1/
             /tmp/head4_live_v291_restore_audit_v1/
+            /tmp/head4_v291_staking_audit_v1/
           retention-days: 30
