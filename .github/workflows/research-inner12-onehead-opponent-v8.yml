@@ -74,6 +74,8 @@ jobs:
               'G2=float(oneprod.OPPONENT_CORE_SECOND_G2)',
               'G3=float(oneprod.OPPONENT_CORE_THIRD_G3)',
               'best + same-second + other-second',
+              'hybrid_order(prob)[:6]',
+              '12 if r.action=="A_DUAL_3_4" else 6',
               'future_unseen_start',
               '2026-09-25',
               'production_changed',
