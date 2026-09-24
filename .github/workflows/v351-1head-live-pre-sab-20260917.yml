@@ -1,9 +1,7 @@
 name: v351 1-head LIVE PRE SAB 20260917
 
-on:
+'on':
   workflow_dispatch:
-  push:
-    paths: ['.github/workflows/v351-1head-live-pre-sab-20260917.yml']
 
 jobs:
   pre-scan:
