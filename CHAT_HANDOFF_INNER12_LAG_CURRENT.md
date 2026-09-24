@@ -1570,3 +1570,118 @@ Important:
 - Ticket sets remain frozen exactly as before; no ticket changes were made after viewing the invalid partial ROI.
 - September remains unread.
 - production unchanged.
+
+
+## V6 Run #2 full-coverage ROI results — authoritative descriptive result
+
+Run:
+- 36026915473
+- SUCCESS
+- SHA 302e3bbd06df11602906af223b56380b8a3fab35
+
+Critical audit:
+- ODDS_COVERAGE 68
+- frozen_missing 0
+- all 68 frozen V4 races have odds
+- 35 predeadline OD3
+- 33 official closing fallback
+- June: all 23 closing fallback
+- July: 11 predeadline / 10 closing fallback
+- August: all 24 predeadline
+- ticket sets remained frozen before odds/ROI
+- September unread
+- production unchanged
+- POSTHOC_SHADOW_ONLY
+
+### LEAN
+ALL:
+- 68R / 24 hits = 35.29%
+- stake 340,000
+- payout 1,194,970
+- profit +854,970
+- ROI 351.46%
+Monthly:
+- Jun 195.90%
+- Jul 541.75%
+- Aug 334.04%
+Branch:
+- A: 53R / 18 hits = 33.96%, ROI 211.94%
+- B: 15R / 6 hits = 40.00%, ROI 844.43%
+
+COMP>=5:
+- 59R / 17 hits = 28.81%
+- ROI 362.56%
+Monthly:
+- Jun 181.93%
+- Jul 580.47%
+- Aug 366.78%
+Branch:
+- A: ROI 198.29%
+- B: ROI 844.43%
+
+### BALANCED
+ALL:
+- 68R / 27 hits = 39.71%
+- ROI 306.09%
+Monthly:
+- Jun 191.92%
+- Jul 476.77%
+- Aug 266.15%
+Branch:
+- A ROI 197.03%
+- B ROI 691.44%
+
+COMP>=5:
+- 50R / 15 hits = 30.00%
+- ROI 322.69%
+Monthly:
+- Jun 136.24%
+- Jul 545.13%
+- Aug 313.42%
+Branch:
+- A ROI 168.81%
+- B ROI 760.66%
+
+### WIDE
+ALL:
+- 68R / 31 hits = 45.59%
+- ROI 290.95%
+Monthly:
+- Jun 189.77%
+- Jul 441.10%
+- Aug 256.55%
+Branch:
+- A: 53R / 22 hits = 41.51%, ROI 195.67%
+- B: 15R / 9 hits = 60.00%, ROI 627.61%
+
+COMP>=5:
+- 42R / 15 hits = 35.71%
+- ROI 329.44%
+Monthly:
+- Jun 115.21%
+- Jul 596.85%
+- Aug 316.34%
+Branch:
+- A ROI 178.70%
+- B ROI 754.25%
+
+### Interpretation
+- Lean maximizes descriptive ROI.
+- Wide maximizes exact-ticket hit rate and has the lowest losing-streak / drawdown profile among ALL variants.
+- Balanced is intermediate but not clearly dominant.
+- B-strong is exceptionally profitable in-sample/posthoc across all ticket widths, but only 15 races total.
+- A-only remains profitable descriptively at roughly 196–212% ALL ROI depending width.
+- Composite >=5 does not universally improve branch-level A performance; it removes races and often reduces A ROI.
+- For the whole set, COMP5 modestly improves headline ROI for Lean/Wide but not enough to erase the posthoc caveat.
+
+### Major caveat
+These ticket sets were derived from the same Jun-Aug outcome anatomy used for evaluation.
+Therefore these ROI values are POSTHOC DESCRIPTIVE, not out-of-sample validation.
+Also June uses closing odds only, so June is weaker evidence for LIVE parity than August.
+Do not production-promote based on these figures alone.
+
+Suggested shadow hierarchy:
+- ROI-oriented: LEAN ALL as primary shadow candidate
+- hit-rate-oriented: WIDE ALL as alternate shadow
+- B-strong should remain separately tracked because it behaves materially differently from A-only.
+- Do not use COMP5 automatically for A-only; evaluate prospectively first.
