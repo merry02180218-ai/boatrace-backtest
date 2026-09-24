@@ -29,8 +29,20 @@ jobs:
           CACHE_ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-cache-$DATE&per_page=20" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id // empty')
           if [ -n "$CACHE_ID" ]; then gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$CACHE_ID/zip" > /tmp/cache.zip; unzip -q /tmp/cache.zip -d /tmp/cache; fi
           BASE=$(find /tmp/cache -name "$RACE_CODE.json" -print -quit)
+          if [ -n "$BASE" ]; then
+            TOPUP_READY=$(python - "$BASE" <<'PY'
+import json,sys
+x=json.load(open(sys.argv[1]))
+print(1 if x.get('five_second_topup_cache_ready') and 'local_edge_5_minus_4' in x else 0)
+PY
+)
+            if [ "$TOPUP_READY" != 1 ]; then
+              echo "shared cache is pre-topup schema; rebuilding $RACE_CODE on demand"
+              BASE=""
+            fi
+          fi
           if [ -z "$BASE" ]; then
-            echo "shared cache has no $RACE_CODE; rebuilding causal base on demand"
+            echo "shared cache has no topup-ready $RACE_CODE; rebuilding causal base on demand"
             PRE_ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=v351-1head-live-pre-sab-$DATE-rolling&per_page=20" --jq '[.artifacts[]|select(.expired==false)]|sort_by(.created_at)|last|.id // empty')
             test -n "$PRE_ID"
             gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts/$PRE_ID/zip" > /tmp/pre.zip; unzip -q /tmp/pre.zip -d /tmp/pre
