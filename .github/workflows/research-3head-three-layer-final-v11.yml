@@ -4,6 +4,7 @@ on:
     paths:
       - research/run_3head_three_layer_exact_v10.trigger
       - research/run_3head_three_layer_final_v11.trigger
+      - research/run_3head_three_layer_core107_v12.trigger
 jobs:
   audit:
     runs-on: ubuntu-latest
@@ -14,6 +15,19 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install -q numpy pandas scikit-learn requests
+      - name: Download accepted exact CORE107 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p core107
+          gh run download 35892602362 --repo ${{ github.repository }} --name research-3head-newcore-fast-v20 --dir core107
+          test -s core107/accepted_core_fast_v20.csv
+          python - <<'PY'
+          import pandas as pd
+          q=pd.read_csv('core107/accepted_core_fast_v20.csv',dtype={'race_code':str})
+          assert len(q)==107, f'CORE must be 107, got {len(q)}'
+          print('EXACT_CORE107_PREFLIGHT_OK',len(q))
+          PY
       - name: Download frozen v243 CORE membership source
         env:
           GH_TOKEN: ${{ github.token }}
@@ -27,8 +41,28 @@ jobs:
           python -m py_compile research/run_3head_three_layer_monthly_bets_v9.py research/run_3head_a60_playerhistory_curve_v1.py analyze_3head_player_history_3v2_ablation_v2.py research/run_3head_wave20_manual_gate.py verify_v288_operational_pre_replay.py
           python -c "import ast,pathlib; s=pathlib.Path('research/run_3head_three_layer_monthly_bets_v9.py').read_text(); ast.parse(s); assert 'FULL_PURE_GATE' in s; assert 'SEPTEMBER_UNREAD' in s; print('STATIC_PREFLIGHT_OK')"
           ! grep -E '2026[-/, ]*09|202609' research/run_3head_three_layer_monthly_bets_v9.py
+      - name: Patch runner to exact accepted CORE107
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('research/run_3head_three_layer_monthly_bets_v9.py')
+          s=p.read_text()
+          needle="print('FROZEN_CORE'"
+          assert needle in s
+          # Inject accepted membership after legacy core construction; fail closed unless exact 107 is loaded.
+          marker="print('FROZEN_CORE'"
+          idx=s.index(marker)
+          line_start=s.rfind('\n',0,idx)+1
+          inject="""accepted_core=pd.read_csv('core107/accepted_core_fast_v20.csv',dtype={'race_code':str})\naccepted_core['race_code']=accepted_core['race_code'].astype(str).str.zfill(12)\nassert len(accepted_core)==107\ncore_codes=set(accepted_core.race_code)\nprint('EXACT_ACCEPTED_CORE107',len(core_codes))\n"""
+          s=s[:line_start]+inject+s[line_start:]
+          p.write_text(s)
+          PY
+          python -m py_compile research/run_3head_three_layer_monthly_bets_v9.py
       - name: Run
-        run: python research/run_3head_three_layer_monthly_bets_v9.py
+        run: |
+          python research/run_3head_three_layer_monthly_bets_v9.py | tee final_v12.log
+          grep -q "EXACT_ACCEPTED_CORE107 107" final_v12.log
+          grep -q "SEPTEMBER_UNREAD" final_v12.log
       - uses: actions/upload-artifact@v4
         if: always()
         with:
