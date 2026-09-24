@@ -1,0 +1,67 @@
+name: research-inner12-stageb-route-v1
+
+on:
+  workflow_dispatch:
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Preflight
+        run: |
+          mkdir -p /tmp/inner12_stageb_route_discovery_v1
+          python -m py_compile             research/research_inner12_stageb_route_discovery_v1.py             backtest.py backtest_v3.py backtest_v4.py
+          python - <<'PY'
+          from pathlib import Path
+          s=Path('research/research_inner12_stageb_route_discovery_v1.py').read_text(encoding='utf-8')
+          required=[
+              'INNER12_STAGEB_ROUTE_DISCOVERY_V1',
+              'stagea_global',
+              'pre_pair_mean_waku_sr',
+              '0.17811274129319477',
+              '0.43497650793650783',
+              '"dual_abs20","dual_vs3_03","inner_vs_outer03"',
+              '"route_labels_are_primary_targets":True',
+              '"outcome_columns_excluded_from_features":True',
+              '"holdout_used_for_selection":False',
+              'September outcome access blocked',
+              'for b in (1,2,3,4,5):',
+              'route_3_makurisashi',
+              'route_4_makuri',
+              'route_5_makurisashi',
+              'route_outer_wide',
+          ]
+          for x in required:
+              assert x in s, f'missing preflight marker: {x}'
+          assert '\\n        "stagea_rule_frozen"' not in s, 'literal escaped newline regression'
+          # Outcome columns must be excluded from numeric feature discovery.
+          meta=s[s.index('META_KEYS = {'):s.index('def ff')]
+          for x in ('dual_abs20','dual_vs3_03','inner_vs_outer03','route_target','actual_st1','actual_st4'):
+              assert x in meta, f'outcome leakage exclusion missing: {x}'
+          # Holdout may be reported but must not rank/select factors.
+          for bad in (
+              'key=lambda x:(x["floor_train_val_lift"],x["stable_all3"],x["hold_lift"])',
+              'key=lambda x:(x["floor_train_val_lift"],x["hold_lift"])',
+          ):
+              assert bad not in s, f'holdout ranking leak: {bad}'
+          print('STAGEB_PREFLIGHT_OK')
+          PY
+
+      - name: Run Stage-B route discovery
+        env:
+          INNER12_STAGEB_OUTDIR: /tmp/inner12_stageb_route_discovery_v1
+          PYTHONPATH: .
+        run: |
+          python research/research_inner12_stageb_route_discovery_v1.py             | tee /tmp/inner12_stageb_route_discovery_v1/run.log
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: inner12-stageb-route-v1
+          path: /tmp/inner12_stageb_route_discovery_v1/
