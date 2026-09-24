@@ -1,7 +1,7 @@
 name: research-3head-opponent-type-v16
 on:
   push:
-    paths: [research/run_3head_opponent_type_v16.fire]
+    paths: [research/run_3head_opponent_type_v16_retry.fire]
 jobs:
   research:
     runs-on: ubuntu-latest
@@ -18,7 +18,7 @@ jobs:
           gh run download 35892602362 --repo ${{ github.repository }} --name research-3head-newcore-fast-v20 --dir core107
           gh run download 35960039375 --repo ${{ github.repository }} --name audit-3head-union-head53-opponent-v15 --dir union53
       - run: python -m py_compile research/research_3head_opponent_type_v16.py
-      - run: python research/research_3head_opponent_type_v16.py | tee opponent_type_v16.log
+      - run: |\n          set -o pipefail\n          python research/research_3head_opponent_type_v16.py | tee opponent_type_v16.log
       - uses: actions/upload-artifact@v4
         if: always()
         with:
