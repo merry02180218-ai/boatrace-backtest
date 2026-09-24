@@ -154,7 +154,7 @@ od={}
 for rc in sel.race_code:
     row=archive_row(rc)
     if row is None:
-        vals=oc.parse(oc.fetch(oc.BASE.format(hd=rc[:8],jcd=int(rc[8:10]),rno=int(rc[10:12])))
+        vals=oc.parse(oc.fetch(oc.BASE.format(hd=rc[:8],jcd=int(rc[8:10]),rno=int(rc[10:12]))))
         if vals: row=vals
     if row is not None: od[rc]=row
 print('ODDS_COVERAGE',len(od),'OF',len(sel))
