@@ -34,7 +34,8 @@ jobs:
             Expand-Archive -LiteralPath $zip -DestinationPath $root -Force
             $prep=Get-ChildItem -Path $root -Recurse -File | Where-Object { $_.Extension -in '.pkl','.pickle' } | Select-Object -First 1
             if (-not $prep) { throw 'No prepared pickle' }
-            Copy-Item $prep.FullName (Join-Path $root 'prepared_rows.pkl') -Force
+            $dst=Join-Path $root 'prepared_rows.pkl'
+            if ([System.IO.Path]::GetFullPath($prep.FullName) -ne [System.IO.Path]::GetFullPath($dst)) { Copy-Item $prep.FullName $dst -Force }
           }
           "PREP=$(Join-Path $root 'prepared_rows.pkl')" | Out-File $env:GITHUB_ENV -Encoding utf8 -Append
       - uses: actions/checkout@v4
