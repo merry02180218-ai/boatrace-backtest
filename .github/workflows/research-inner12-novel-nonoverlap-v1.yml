@@ -86,7 +86,8 @@ jobs:
           V93_ROWS: /tmp/head4_v93_all_parent/v93_all_parent.csv
         run: |
           set -o pipefail
-          python audit_4head_ph5_live_walkforward.py             | tee /tmp/head4_ph5_live_walkforward/run.log
+          mkdir -p /tmp/head4_ph5_live_walkforward
+          python audit_4head_ph5_live_walkforward.py | tee /tmp/head4_ph5_live_walkforward/run.log
 
       - name: Research strict non-overlap routes
         env:
