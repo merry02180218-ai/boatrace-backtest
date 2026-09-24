@@ -2029,3 +2029,110 @@ Implementation:
 
 Bankroll note:
 - JPY5,000 Dutch remains feasible with 12 tickets because each can receive at least JPY100.
+
+
+## V8 six-ticket result — Run 36056529731
+
+Workflow:
+- research-inner12-onehead-opponent-v8
+- Run 36056529731
+- Job 107824830028
+- SUCCESS
+- Artifact 10831913795
+- head SHA 0dc1ca1bb8ae6ad1c21475de7b472b0852540dcc
+
+Preflight:
+- INNER12_ONEHEAD_V8_PREFLIGHT_OK
+- V4 head gate unchanged
+- Sep labels not used for fitting
+- future untouched period starts 2026-09-25
+- production unchanged
+
+Training:
+- Jun-Aug GLOBAL Stage-A, actual head3/4 only
+- train head races = 96
+- SECOND rows = 480
+- THIRD rows = 384
+- separate logistic SECOND / conditional THIRD
+- transferred current 1HEAD constants:
+  - alpha=.70
+  - G2=.45
+  - G3=1.00
+  - opponentCore EX .40 / ST .25 / straight .15 / orig avg .20
+- top6 HYBRID per head
+
+Sep1-24 diagnostic:
+- V4 selected R=19
+- head hits=10/19=52.63%
+- exact3 hits=7/19=36.84%
+- no-core baseline also 7 hits
+- correct-head SECOND top2 = 70%
+- correct-head THIRD top2 = 90%
+
+Ticket widths:
+- A-only: 12 tickets (6 for head3 + 6 for head4)
+- B-strong: 6 tickets (head3)
+
+ROI:
+Flat 100 yen/ticket:
+- stake 18,600
+- payout 20,750
+- profit +2,150
+- ROI 111.56%
+
+JPY5,000 Dutch:
+- stake 95,000
+- payout 152,670
+- profit +57,670
+- ROI 160.71%
+
+Branch:
+- A-only: 12R / exact3 2 hits = 16.67%
+- B-strong: 7R / exact3 5 hits = 71.43%
+
+B-strong is the standout:
+- all five Sep correct-head B races were exact3-captured by V8 top6:
+  - 3-1-2
+  - 3-2-6
+  - 3-4-2
+  - 3-2-6
+  - 3-1-5
+- therefore B went from 0/5 opponent capture in fixed V6 tickets to 5/5 among correct-head races in dynamic V8.
+
+A-only detailed diagnosis:
+Correct-head A races = 5:
+- hits:
+  - 3-5-6
+  - 3-1-4
+- misses:
+  - 4-3-6
+  - 4-6-5
+  - 3-4-6
+
+For all 3 A correct-head misses:
+- actual THIRD was within conditional THIRD top2 = 1
+- actual SECOND was NOT within SECOND top2 = 0
+
+Therefore current A failure is specifically SECOND ranking, not THIRD ranking.
+This is a strong attribution result:
+- THIRD model is already placing the eventual third boat well on these misses.
+- A-side SECOND selection needs redesign / branch-specific training.
+- Do not widen ticket count again before testing an A-specific SECOND model; the current 12 points already cover enough THIRD breadth.
+
+OpponentCore overlay:
+- exact3 hits with core = 7
+- base no-core exact3 hits = 7
+So the transferred 1HEAD core overlay is neutral on Sep1-24 in exact-hit count. It can remain for now, but no evidence yet that it adds hits.
+
+Status:
+- V8 is RESEARCH_SHADOW only.
+- Sep1-24 is diagnostic because V7 had already opened it.
+- prospective untouched shadow starts Sep25.
+- production unchanged.
+
+Next research priority:
+1. preserve B V8 unchanged;
+2. preserve V4 head gate;
+3. build A-only-specific SECOND model / reranker;
+4. use A branch geometry (actual candidate head3 vs head4, inside/outside relation, relative start, Waku10, PLAYERHistory, motor, current exhibition) to improve second-place rank;
+5. keep conditional THIRD largely fixed initially, because A miss attribution points to SECOND.
