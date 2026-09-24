@@ -189,10 +189,37 @@ jobs:
         run: |
           echo "HEAD4_SHADOW_NO_PRODUCTION_NOTIFICATION class=$OPERATIONAL_CLASS pre_reason=$PRE_REASON"
 
+      - name: Classify retry/completion artifact
+        if: env.SHOULD_RUN == '1' && always()
+        shell: bash
+        run: |
+          if [ -f "$OUT" ]; then
+            DECISION="$(python - <<'PY'
+          import json,os
+          try:
+              print(json.load(open(os.environ['OUT'],encoding='utf-8')).get('decision','UNKNOWN'))
+          except Exception:
+              print('UNKNOWN')
+          PY
+            )"
+          else
+            DECISION="UNKNOWN"
+          fi
+          echo "WATCHDOG_DECISION=$DECISION" >> "$GITHUB_ENV"
+          if [ "$DECISION" = "BET" ] || [ "$DECISION" = "PASS" ]; then
+            echo "UPLOAD_ARTIFACT_NAME=$ARTIFACT_NAME" >> "$GITHUB_ENV"
+            echo "HEAD4_WATCHDOG_TERMINAL_ARTIFACT $ARTIFACT_NAME decision=$DECISION"
+          else
+            # Important: resolver treats only the canonical ARTIFACT_NAME as completed.
+            # Keep diagnostics, but give retryable/not-ready attempts a unique non-canonical name.
+            echo "UPLOAD_ARTIFACT_NAME=${ARTIFACT_NAME}-retry-${GITHUB_RUN_ID}" >> "$GITHUB_ENV"
+            echo "HEAD4_WATCHDOG_RETRYABLE_ARTIFACT ${ARTIFACT_NAME}-retry-${GITHUB_RUN_ID} decision=$DECISION"
+          fi
+
       - uses: actions/upload-artifact@v4
         if: env.SHOULD_RUN == '1' && always()
         with:
-          name: ${{ env.ARTIFACT_NAME }}
+          name: ${{ env.UPLOAD_ARTIFACT_NAME }}
           path: |
             /tmp/head4_watchdog_*.json
             /tmp/head4_watchdog_*.log
