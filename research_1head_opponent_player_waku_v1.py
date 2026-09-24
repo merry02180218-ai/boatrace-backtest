@@ -155,13 +155,13 @@ def main():
  # PLAYER_HISTORY p2 family is causal prior-date history; Waku ST/WR/pastwin families are evaluated independently.
  fams={
   "PH_P2":["pl_frame_p2","pl_all_p2","pl_recent_p2"],
-  "WAKU_ST":[x for x in feat_cols if x.endswith("_st")],
-  "WAKU_WR":[x for x in feat_cols if x.endswith("_wr")],
-  "WAKU_PASTWIN":[x for x in feat_cols if x.endswith("_pastwin")],
+  "WAKU_ST":[x for x in rank.columns if x.startswith("waku__") and x.endswith("_st")],
+  "WAKU_WR":[x for x in rank.columns if x.startswith("waku__") and x.endswith("_wr")],
+  "WAKU_PASTWIN":[x for x in rank.columns if x.startswith("waku__") and x.endswith("_pastwin")],
  }
  ab=[]
  for name,cols0 in fams.items():
-  cols=[x for x in cols0 if x in feat_cols and train[x].notna().sum()>=30]
+  cols=[x for x in cols0 if x in train.columns and train[x].notna().sum()>=30]
   if not cols: continue
   pipe=Pipeline([("imp",SimpleImputer(strategy="median")),("sc",StandardScaler()),("lr",LogisticRegression(C=.25,max_iter=2000,class_weight="balanced"))])
   pipe.fit(train[cols],train["y"])
