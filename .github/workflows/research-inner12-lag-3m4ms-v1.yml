@@ -1,0 +1,35 @@
+name: research-inner12-lag-3m4ms-v1
+
+on:
+  workflow_dispatch:
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install -q numpy requests
+      - name: Preflight syntax
+        run: |
+          python -m py_compile research/research_inner12_lag_3m4ms_v1.py
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('research/research_inner12_lag_3m4ms_v1.py')
+          s=p.read_text(encoding='utf-8')
+          assert '\\n' not in s.replace('"\\n"','').replace("'\\n'",''), 'suspicious literal escaped newline'
+          print('PREFLIGHT_OK')
+          PY
+      - name: Run INNER12 lag model research v1
+        env:
+          INNER12_OUTDIR: /tmp/inner12_lag_3m4ms_v1
+        run: python research/research_inner12_lag_3m4ms_v1.py | tee /tmp/inner12_lag_3m4ms_v1/run.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: inner12-lag-3m4ms-v1
+          path: /tmp/inner12_lag_3m4ms_v1/
