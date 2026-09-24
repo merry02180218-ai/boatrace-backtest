@@ -4,6 +4,7 @@ import argparse,json,math,time
 from pathlib import Path
 import onehead_production_profile as prod
 import run_v299_1head_trifecta3_policy_search as v299
+import onehead_five_second_topup as five_topup
 
 BOATS=(2,3,4,5,6)
 
@@ -104,8 +105,9 @@ def main():
  ph=float(x['final_head_p']); mass=float(x['opp_mass'])
  head_pass=ph>=prod.LIVE_HEAD_CUTOFF and mass>=prod.LIVE_OPPONENT_MASS_MIN and bool(x['head_exhibition_pass'])
  watch_pass=head_pass and ph>=prod.WATCH_HEAD_CUTOFF and mass>=prod.WATCH_OPPONENT_MASS_MIN
- tickets=[];pre_wall3_tickets=[];pre_five6_tickets=[];final_pair_prob_map={};core={};shadow={'profile':prod.WALL3_LIVE_TICKET_PROFILE_NAME,'eligible':False,'applied':False,'risk':0.0,'wall_score':None,'attack4_score':None,'gaps':{},'tickets':[]}
+ tickets=[];pre_wall3_tickets=[];pre_five6_tickets=[];pre_five_second_topup_tickets=[];final_pair_prob_map={};core={};shadow={'profile':prod.WALL3_LIVE_TICKET_PROFILE_NAME,'eligible':False,'applied':False,'risk':0.0,'wall_score':None,'attack4_score':None,'gaps':{},'tickets':[]}
  five6={'profile':prod.FIVE6_LIVE_TICKET_PROFILE_NAME,'eligible':False,'applied':False,'score6':None,'st_gap_6_minus_5':None,'tickets':[]}
+ five_topup_meta={'profile':prod.FIVE_SECOND_TOPUP_PROFILE_NAME,'eligible':False,'regime_fired':False,'applied':False,'extra_tickets':[],'reason':'HEAD_DROP'}
  if head_pass:
   core=opponent_core(x['corrected_ex'],x['corrected_st'],x['corrected_straight'],x['corrected_orig_avg'])
   p2,pc=adjust(x['p2'],x['pc'],core)
@@ -140,10 +142,26 @@ def main():
     for t,v in q.items():tmp[(s,t)]=v
    final_pc=tmp
    if ticket_list(final_p2,final_pc)!=tickets: raise RuntimeError('five6 post-probability reconstruction drift')
+  pre_five_second_topup_tickets=tickets[:]
+  local_edge=float(x.get('local_edge_5_minus_4',float('nan')))
+  straight_edge=float(x['corrected_straight']['5'])-float(x['corrected_straight']['4'])
+  core_edge=float(core[5])-float(core[4])
+  rg=five_topup.regime_meta(final_p2,local_edge,straight_edge,core_edge,prod.FIVE_SECOND_TOPUP_P2_RATIO_MIN)
+  regime_fired=bool(rg.pop('applied'))
+  extras=five_topup.extra_tickets(final_pc,tickets,prod.FIVE_SECOND_TOPUP_EXTRA_TICKETS) if regime_fired else []
+  topup_applied=bool(prod.FIVE_SECOND_TOPUP_PROMOTED and regime_fired and extras)
+  if topup_applied:
+   tickets=tickets+extras
+  five_topup_meta={'profile':prod.FIVE_SECOND_TOPUP_PROFILE_NAME,'eligible':True,'regime_fired':regime_fired,
+                   'applied':topup_applied,'extra_tickets':extras if topup_applied else [],
+                   'max_extra_tickets':int(prod.FIVE_SECOND_TOPUP_EXTRA_TICKETS),
+                   'stake_yen_per_extra':int(prod.FIVE_SECOND_TOPUP_STAKE_YEN_PER_TICKET),
+                   'reason':'REGIME_PASS' if regime_fired else 'REGIME_DROP',**rg}
   final_pair_prob_map=ticket_pair_probs(final_p2,final_pc,tickets)
  out={k:x.get(k) for k in ['race_code','pre_class','legacy_pre_p','deadline_jst','evaluated_at_jst','minutes_to_deadline','training_cutoff','exhibition_hashes']}
  official_stakes=[prod.LIVE_OFFICIAL_STAKE_YEN_PER_TICKET for _ in tickets] if head_pass else []
- stake_shadow_signal=bool(head_pass and ((prod.WALL3_LIVE_TICKET_PROMOTED and shadow['applied']) or (prod.FIVE6_LIVE_TICKET_PROMOTED and five6['applied'])))
+ topup_official=bool(head_pass and five_topup_meta.get('applied'))
+ stake_shadow_signal=bool(head_pass and not topup_official and ((prod.WALL3_LIVE_TICKET_PROMOTED and shadow['applied']) or (prod.FIVE6_LIVE_TICKET_PROMOTED and five6['applied'])))
  stake_shadow_applied=bool(stake_shadow_signal)
  stake_shadow_stakes=([prod.LIVE_OFFICIAL_STAKE_YEN_PER_TICKET*prod.OVERLAY_STAKE_SHADOW_MULTIPLIER for _ in tickets]
                       if stake_shadow_applied else official_stakes[:])
@@ -152,6 +170,9 @@ def main():
  if not head_pass:
   allocation_shadow_signal='DROP'
   allocation_shadow_stakes=[]
+ elif topup_official:
+  allocation_shadow_signal='TOPUP_VARIABLE_TICKETS_DISABLED'
+  allocation_shadow_stakes=official_stakes[:]
  elif allocation_shadow_wall3:
   allocation_shadow_signal='WALL3_RANK3'
   allocation_shadow_stakes=list(prod.WALL3_RANK3_ALLOC_SHADOW_WALL3_STAKES_YEN)
@@ -161,7 +182,7 @@ def main():
  else:
   allocation_shadow_signal='NONE'
   allocation_shadow_stakes=list(prod.WALL3_RANK3_ALLOC_SHADOW_NONE_STAKES_YEN)
- allocation_shadow_applied=bool(allocation_shadow_wall3 or allocation_shadow_five6)
+ allocation_shadow_applied=bool((allocation_shadow_wall3 or allocation_shadow_five6) and not topup_official)
  out.update({
   'status':'PASS' if head_pass else 'DROP',
   'attention_level':'WATCH' if watch_pass else ('BASIC' if head_pass else 'DROP'),
@@ -181,7 +202,13 @@ def main():
   'ticket_pair_probs':final_pair_prob_map,
   'pre_wall3_tickets':pre_wall3_tickets,
   'pre_five6_tickets':pre_five6_tickets,
+  'pre_five_second_topup_tickets':pre_five_second_topup_tickets,
   'ticket_profile':(
+   prod.FIVE_SECOND_TOPUP_PROFILE_NAME if five_topup_meta.get('applied')
+   else (prod.FIVE6_LIVE_TICKET_PROFILE_NAME if (prod.FIVE6_LIVE_TICKET_PROMOTED and five6['applied'])
+   else (prod.WALL3_LIVE_TICKET_PROFILE_NAME if (prod.WALL3_LIVE_TICKET_PROMOTED and shadow['applied']) else prod.OPPONENT_CORE_VERSION))
+  ),
+  'base_ticket_profile':(
    prod.FIVE6_LIVE_TICKET_PROFILE_NAME if (prod.FIVE6_LIVE_TICKET_PROMOTED and five6['applied'])
    else (prod.WALL3_LIVE_TICKET_PROFILE_NAME if (prod.WALL3_LIVE_TICKET_PROMOTED and shadow['applied']) else prod.OPPONENT_CORE_VERSION)
   ),
@@ -206,6 +233,13 @@ def main():
   'five6_shadow_st_gap_6_minus_5':five6['st_gap_6_minus_5'],
   'five6_shadow_tickets':five6['tickets'],
   'five6_shadow_research_only':False,
+  'five_second_topup_promoted':bool(prod.FIVE_SECOND_TOPUP_PROMOTED),
+  'five_second_topup_profile':five_topup_meta['profile'],
+  'five_second_topup_eligible':bool(five_topup_meta.get('eligible')),
+  'five_second_topup_regime_fired':bool(five_topup_meta.get('regime_fired')),
+  'five_second_topup_applied':bool(five_topup_meta.get('applied')),
+  'five_second_topup_extra_tickets':five_topup_meta.get('extra_tickets',[]),
+  'five_second_topup_meta':five_topup_meta,
   'official_stakes_yen':official_stakes,
   'official_total_stake_yen':sum(official_stakes),
   'stake_shadow_profile':prod.OVERLAY_STAKE_SHADOW_PROFILE_NAME,
