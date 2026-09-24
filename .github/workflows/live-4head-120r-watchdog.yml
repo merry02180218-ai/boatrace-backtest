@@ -69,7 +69,7 @@ jobs:
     timeout-minutes: 45
     concurrency:
       group: head4-watchdog-${{ matrix.target_date }}-${{ matrix.jcd }}-${{ matrix.race }}
-      cancel-in-progress: false
+      cancel-in-progress: true
     env:
       TARGET_DATE: ${{ matrix.target_date }}
       JCD: ${{ matrix.jcd }}
@@ -151,7 +151,7 @@ jobs:
             --date "$TARGET_DATE" --jcd "$JCD" --race "$RACE" --deadline-jst "$DEADLINE_JST" \
             --race-cards "$CARD" --waku10 "$WAKU" --pre-all "$PRE" --daily-state "$STATE" \
             --poll-interval 2 \
-            --exhibition-safety-seconds 75 --max-exhibition-wait-seconds 1800 \
+            --exhibition-safety-seconds 75 --max-exhibition-wait-seconds 90 \
             --odds-safety-seconds 45 --max-odds-wait-seconds 15 \
             --decision-safety-seconds 60 \
             --out "$OUT" 2>&1 | tee "$LOG"
