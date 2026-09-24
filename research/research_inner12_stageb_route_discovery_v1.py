@@ -553,7 +553,7 @@ def main():
             em=ex_st_map(stt.get(rc,{}))
             if all(b in em for b in (1,2,3,4,5)):
                 pred={}
-                for b in (1,2,3,4):
+                for b in (1,2,3,4,5):
                     name=clean_name(card.get(f"艇{b}_選手名",""))
                     bias=ex_bias(player_ex_bias[name],global_ex_bias)
                     pred[b]=em[b][1]+bias
