@@ -20,6 +20,7 @@ import json, math
 from pathlib import Path
 import numpy as np
 import pandas as pd
+import audit_4head_ph5_live_walkforward as parent
 
 OUT=Path("/tmp/head4_v291_staking_audit_v1"); OUT.mkdir(parents=True,exist_ok=True)
 BASE=Path("/tmp/head4_ph5_live_walkforward/race_detail.csv")
@@ -67,45 +68,61 @@ def main():
     d=d[d.production_bet.eq(1)].copy().sort_values(["date","race_code"])
     if len(d)!=163: raise RuntimeError(f"FROZEN_163_DRIFT_{len(d)}")
 
+    # Freeze every staking plan first. No result/truth access is allowed above this point.
     frozen=[]
     for _,r in d.iterrows():
         plan=json.loads(r.stake_plan)
-        actual=None
-        # For hit rows, identify actual winning combo by exact historical payout relation.
-        # For miss rows the actual combo is irrelevant to staking settlement (payout=0).
-        if int(r.hit)==1:
-            matches=[]
-            for x in plan:
-                if abs(float(x["stake"])*float(x["odds"])-float(r.payout))<1e-6:
-                    matches.append(x["combo"])
-            if len(matches)!=1:
-                raise RuntimeError(f"WINNER_INFERENCE_{r.race_code}_{matches}")
-            actual=matches[0]
-
+        odds=[float(x["odds"]) for x in plan]
+        combos=[str(x["combo"]) for x in plan]
         strategies={
-            "DUTCH_ALPHA1":round_power([x["odds"] for x in plan],1.0),
+            "DUTCH_ALPHA1":round_power(odds,1.0),
             "EQUAL_FLOOR":equal_stakes(plan,"floor"),
             "EQUAL_FULL_ORDER":equal_stakes(plan,"order"),
             "EQUAL_FULL_LOW_ODDS":equal_stakes(plan,"low_odds"),
             "EQUAL_FULL_HIGH_ODDS":equal_stakes(plan,"high_odds"),
         }
         for a in POWER_GRID:
-            strategies[f"POWER_{a:+.2f}"]=round_power([x["odds"] for x in plan],a)
+            strategies[f"POWER_{a:+.2f}"]=round_power(odds,a)
 
         for name,st in strategies.items():
-            pay=0.0
-            if actual is not None:
-                i=next(i for i,x in enumerate(plan) if x["combo"]==actual)
-                pay=float(st[i])*float(plan[i]["odds"])
             frozen.append({
                 "date":str(r.date),"race_code":r.race_code,"month":str(r.date)[:7],
                 "strategy":name,"ticket_count":len(plan),"stake":int(st.sum()),
-                "payout":float(pay),"profit":float(pay-int(st.sum())),"hit":int(r.hit),
-                "winner_odds":float(plan[i]["odds"]) if actual is not None else np.nan,
-                "winner_stake":int(st[i]) if actual is not None else 0,
+                "combos_json":json.dumps(combos,ensure_ascii=False),
+                "odds_json":json.dumps(odds),
+                "stakes_json":json.dumps([int(x) for x in st]),
             })
 
-    z=pd.DataFrame(frozen)
+    # Attach outcomes only after all strategies/stakes are frozen.
+    truth=parent.truth()
+    settled=[]
+    for rec in frozen:
+        a=truth.get(rec["race_code"])
+        actual=f"{a[0]}-{a[1]}-{a[2]}" if a else ""
+        combos=json.loads(rec["combos_json"])
+        odds=json.loads(rec["odds_json"])
+        stakes=json.loads(rec["stakes_json"])
+        hit=int(actual in combos)
+        payout=0.0
+        winner_odds=np.nan
+        winner_stake=0
+        if hit:
+            i=combos.index(actual)
+            winner_odds=float(odds[i])
+            winner_stake=int(stakes[i])
+            payout=float(winner_stake)*winner_odds
+        out=dict(rec)
+        out.update({
+            "actual":actual,
+            "hit":hit,
+            "payout":float(payout),
+            "profit":float(payout-int(rec["stake"])),
+            "winner_odds":winner_odds,
+            "winner_stake":winner_stake,
+        })
+        settled.append(out)
+
+    z=pd.DataFrame(settled)
     z.to_csv(OUT/"detail.csv",index=False)
 
     periods={
@@ -165,6 +182,7 @@ def main():
         "holdout":"July-August",
         "SEPTEMBER_OUTCOMES_READ":False,
         "PRODUCTION_STAKING_CHANGED":False,
+        "settlement":"truth joined only after all staking plans frozen",
     }
     (OUT/"meta.json").write_text(json.dumps(meta,ensure_ascii=False,indent=2)+"\n")
     print("V291_STAKING_SUMMARY",summary.to_json(orient="records",force_ascii=False))
