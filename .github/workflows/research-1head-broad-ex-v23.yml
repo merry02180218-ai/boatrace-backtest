@@ -1,0 +1,35 @@
+name: 1HEAD broad exhibition v23
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'research_1head_broad_ex_v23.py'
+      - '.github/workflows/research-1head-broad-ex-v23.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+      - name: Dependencies
+        shell: bash
+        run: python -m pip install -q --disable-pip-version-check numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Broad exhibition v23
+        shell: pwsh
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: python research_1head_broad_ex_v23.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: onehead-broad-ex-v23-${{ github.run_id }}
+          path: ${{ runner.temp }}/1head-broad-five-v23
