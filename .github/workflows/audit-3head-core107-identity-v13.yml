@@ -1,0 +1,32 @@
+name: audit-3head-core107-identity-v13
+on:
+  push:
+    paths:
+      - research/run_core107_identity_v13.fire
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scikit-learn requests
+      - name: Download accepted CORE107
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          mkdir -p core107
+          gh run download 35892602362 --repo ${{ github.repository }} --name research-3head-newcore-fast-v20 --dir core107
+          python - <<'PY'
+          import pandas as pd
+          q=pd.read_csv('core107/accepted_core_fast_v20.csv',dtype=str)
+          assert len(q)==107
+          print('CORE107_OK',len(q))
+          PY
+      - run: python -m py_compile research/audit_3head_core107_identity_v13.py
+      - run: python research/audit_3head_core107_identity_v13.py | tee identity_v13.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: audit-3head-core107-identity-v13
+          path: identity_v13.log
