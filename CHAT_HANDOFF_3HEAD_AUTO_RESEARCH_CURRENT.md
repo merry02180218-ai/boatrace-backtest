@@ -54,3 +54,17 @@
 - User decision: model overlaps are NOT discard-only. Treat any race selected by 2+ of CORE / A+ / FULL_3V2 as 注目レース.
 - Monthly total volume counts a duplicated race once, but report overlap count and overlap combination separately.
 - Keep each model flag so overlap identity is visible in LIVE/research outputs.
+
+
+## 2026-09-24 正式採用: 3号艇 統合候補モデル
+- ユーザー承認により CORE107 + accepted A+ + FULL_3V2 の現行統合構成を正式採用。
+- CORE107 は独立維持。A+/FULL候補ゲートでCOREを削らない。
+- accepted A+ = PRE >= 0.970 AND PLAYERHistory >= 0.50 AND post_motor_inner_rank_edge >= 0.60。
+- FULL_3V2 は v14 の causal / strict-prior 構成を維持。
+- 出力は3モデルの union。重複レースは二重計上せず1レースとして表示。
+- 重複/注目レースの別枠表示はしない（ユーザー指定）。内部の model membership は研究・監査用に保持してよい。
+- v14 verified Run 35952378599 SUCCESS。
+- Jul: union 55R / 23 heads = 41.8182%; CORE 8R/3 heads。
+- Aug: union 68R / 30 heads = 44.1176%; CORE 18R/12 heads。
+- September outcomes remained UNREAD during adoption audit。
+- この採用時点までは production unchanged。今後LIVE/通知側へ統合する際も同一レースは1件表示とする。
