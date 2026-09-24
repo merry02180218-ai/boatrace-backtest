@@ -169,6 +169,39 @@ def main():
     wdf.to_csv(OUT/'inner_wall_five_v1.csv',index=False)
     print('INNER_WALL_FIVE_V1',wdf.to_json(orient='records',force_ascii=False))
     print('INNER_WALL_SELECTED_Q',bestQ)
+    # Stage v6: decompose the wall by lanes 3 -> 2 -> 1 and distinguish
+    # 5-follow (5 second) from 5-cutback (5 third).
+    lane_rows=[]
+    lane_cols=['p2','pl_frame_p2','pl_recent_p2','w10_wr','w10_sr','w10_rel4_wr']
+    for b in (1,2,3):
+        cols=[f'b{b}_{x}' for x in lane_cols if f'b{b}_{x}' in races.columns]
+        races[f'wall_b{b}_strength']=pd.concat([zsafe(races[x]) for x in cols],axis=1).mean(axis=1)
+        races[f'wall_b{b}_collapse']=-races[f'wall_b{b}_strength']
+    # Structural scores: 3 breaks first; 2-break extends the lane; 1 resistance can open cutback.
+    races['wall_3break']=races.wall_b3_collapse
+    races['wall_32break']=(races.wall_b3_collapse+races.wall_b2_collapse)/2
+    races['wall_321break']=(races.wall_b3_collapse+races.wall_b2_collapse+races.wall_b1_collapse)/3
+    races['five_follow_second']=races.actual_second.eq(5).astype(int)
+    races['five_cutback_third']=races.actual_third.eq(5).astype(int)
+    for score in ['wall_3break','wall_32break','wall_321break']:
+        june=races[races.month.eq('2026-06')]
+        for q in [0.4,0.5,0.6,0.75]:
+            cut=float(june[score].quantile(q))
+            for split,dq in [('JUNE_DEV',june),('JUL_HOLDOUT',races[races.month.eq('2026-07')]),
+                             ('AUG_HOLDOUT',races[races.month.eq('2026-08')]),('JULAUG_HOLDOUT',races[races.month.isin(['2026-07','2026-08'])])]:
+                hi=dq[dq[score].ge(cut)]; lo=dq[dq[score].lt(cut)]
+                lane_rows.append({'score':score,'q':q,'cut':cut,'split':split,'R':len(dq),'high_R':len(hi),
+                  'high_5_second':float(hi.five_follow_second.mean()) if len(hi) else np.nan,
+                  'low_5_second':float(lo.five_follow_second.mean()) if len(lo) else np.nan,
+                  'lift_5_second':float(hi.five_follow_second.mean()-lo.five_follow_second.mean()) if len(hi) and len(lo) else np.nan,
+                  'high_5_third':float(hi.five_cutback_third.mean()) if len(hi) else np.nan,
+                  'low_5_third':float(lo.five_cutback_third.mean()) if len(lo) else np.nan,
+                  'lift_5_third':float(hi.five_cutback_third.mean()-lo.five_cutback_third.mean()) if len(hi) and len(lo) else np.nan,
+                  'high_5_any':float(hi.five_in_pair.mean()) if len(hi) else np.nan,
+                  'low_5_any':float(lo.five_in_pair.mean()) if len(lo) else np.nan})
+    ldf=pd.DataFrame(lane_rows)
+    ldf.to_csv(OUT/'wall_lane_decomp_v1.csv',index=False)
+    print('WALL_LANE_DECOMP_V1',ldf.to_json(orient='records',force_ascii=False))
     fam=(races.groupby(['month','pair_family']).size().rename('R').reset_index())
     fam['pct']=fam.R/fam.groupby('month').R.transform('sum')*100
     fam.to_csv(OUT/'pair_family_monthly.csv',index=False)
@@ -179,7 +212,7 @@ def main():
     meta={'head4_R':len(races),'dev':'2026-06 only','holdout':['2026-07','2026-08'],
           'dev_R':len(dev),'holdout_R':len(hold),'SEPTEMBER_OUTCOMES_READ':False,
           'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':False,
-          'stage':'INNER_WALL_FIVE_V1'}
+          'stage':'WALL_LANE_DECOMP_V1'}
     (OUT/'meta.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2))
     print('REGIME_MONTHLY',pct.to_json(orient='records',force_ascii=False))
     print('PAIR_TOP',pair.groupby('month').head(8).to_json(orient='records',force_ascii=False))
