@@ -15,6 +15,7 @@ import research_4head_waku10_rel43_v4 as wsrc
 import run_v299_1head_trifecta3_policy_search as v299
 import run_v365_1head_exact3_hit_push as v365
 import onehead_production_profile as prod
+import analyze_v205_3head_operational_replay as v205
 OUT=Path(os.environ.get("RUNNER_TEMP","/tmp"))/"1head-opponent-ph-waku-v1"; OUT.mkdir(parents=True,exist_ok=True)
 DEV=("2026-02","2026-03","2026-04","2026-05","2026-06"); SUP=("2026-07","2026-08")
 def main():
@@ -590,6 +591,65 @@ def main():
  same_add_by_roi=sorted([row for row in same_add_scan if row["rescues"]>=2],
                         key=lambda row:(row["roi"],row["hits"],-row["added_R"]),reverse=True)
  pd.DataFrame([{k:v for k,v in row.items() if k!="monthly"} for row in same_add_by_hits]).to_csv(OUT/"dev_same_second_selective_add_scan.csv",index=False)
+
+ # DEV-only market-value gate for the same-second 4th ticket.
+ # Uses the repository's user-approved closing-odds series. HEAD floor .78 is conservative.
+ odds_df=v205.load_odds()
+ odds_idx=odds_df.set_index("race_code",drop=False) if not odds_df.empty else pd.DataFrame()
+ market_cases=[]; odds_covered=0
+ for case in all_dev_cases:
+  candidate=case["candidates"].get("same_second_next")
+  if candidate is None: continue
+  code=case["race_code"]; ticket=f"1-{candidate[0]}-{candidate[1]}"
+  if odds_df.empty or code not in odds_idx.index: continue
+  oddrow=odds_idx.loc[code]; oddrow=oddrow.iloc[-1] if isinstance(oddrow,pd.DataFrame) else oddrow
+  try: closing_odds=float(oddrow[ticket])
+  except: continue
+  if not np.isfinite(closing_odds) or closing_odds<=0: continue
+  odds_covered+=1
+  cand_prob=float(case["prob"].get(candidate,0.0))
+  t3_prob=float(case["prob"].get(case["formal"][2],0.0))
+  ratio3=cand_prob/max(t3_prob,1e-12)
+  ev_floor=.78*cand_prob*closing_odds
+  market_cases.append({"case":case,"candidate":candidate,"ticket":ticket,"closing_odds":closing_odds,
+                       "cand_prob":cand_prob,"ratio3":ratio3,"ev_floor":ev_floor})
+ market_specs=[]
+ for cut in (0.60,0.75,0.90,1.00,1.10,1.20,1.25,1.30,1.40,1.50,1.75,2.00):
+  market_specs.append(("ev_floor",cut,None))
+ for cut in (8,10,12,15,20,25,30,40,50):
+  market_specs.append(("odds",cut,None))
+ for ratio_cut in (1.00,1.10,1.20,1.25,1.30,1.40):
+  for ev_cut in (0.75,0.90,1.00,1.10,1.20,1.30):
+   market_specs.append(("ratio_ev",ratio_cut,ev_cut))
+ market_scan=[]
+ for gate_type,cut1,cut2 in market_specs:
+  added_count=rescues=added_return=0; monthly_stats={}
+  for mc in market_cases:
+   if gate_type=="ev_floor": use_add=mc["ev_floor"]>=float(cut1)
+   elif gate_type=="odds": use_add=mc["closing_odds"]>=float(cut1)
+   else: use_add=mc["ratio3"]>=float(cut1) and mc["ev_floor"]>=float(cut2)
+   if not use_add: continue
+   case=mc["case"]; added_count+=1
+   is_rescue=int(case["formal_hit"]==0 and case["actual_pair"]==mc["candidate"])
+   rescues+=is_rescue
+   if is_rescue: added_return+=case["payout"]
+   ms=monthly_stats.setdefault(case["month"],{"added_R":0,"rescues":0,"added_return":0})
+   ms["added_R"]+=1; ms["rescues"]+=is_rescue
+   if is_rescue: ms["added_return"]+=case["payout"]
+  total_hits=98+rescues; total_return=formal_dev_return+added_return; total_stake=57000+added_count*100
+  market_scan.append({"gate_type":gate_type,"cut1":cut1,"cut2":cut2,"odds_coverage_R":odds_covered,
+                      "added_R":added_count,"rescues":rescues,"hits":total_hits,"rate":total_hits/190,
+                      "added_return":added_return,"marginal_roi":added_return/(added_count*100) if added_count else None,
+                      "return":total_return,"stake":total_stake,"roi":total_return/total_stake if total_stake else None,
+                      "monthly":monthly_stats})
+ market_by_roi=sorted([row for row in market_scan if row["rescues"]>=2],
+                      key=lambda row:(row["roi"],row["hits"],-row["added_R"]),reverse=True)
+ market_by_hits=sorted(market_scan,key=lambda row:(row["hits"],row["roi"],-row["added_R"]),reverse=True)
+ pd.DataFrame([{k:v for k,v in row.items() if k!="monthly"} for row in market_by_roi]).to_csv(OUT/"dev_same_second_market_gate_scan.csv",index=False)
+ market_report={"coverage_R":odds_covered,"top_roi":market_by_roi[:20],"top_hits":market_by_hits[:20],
+                "closing_odds_selection":True,"september_outcomes_read":False,"production_changed":False}
+ (OUT/"dev_same_second_market_gate_report.json").write_text(json.dumps(market_report,ensure_ascii=False,indent=2))
+ print("DEV_SAME_SECOND_MARKET_GATE",json.dumps(market_report,ensure_ascii=False))
 
  pd.DataFrame([{k:v for k,v in row.items() if k!="monthly"} for row in rescue_sorted]).to_csv(OUT/"dev_hybrid_miss_rescue_swap_scan.csv",index=False)
  pd.DataFrame([{k:v for k,v in row.items() if k!="monthly"} for row in add_sorted]).to_csv(OUT/"dev_hybrid_miss_rescue_add_scan.csv",index=False)
