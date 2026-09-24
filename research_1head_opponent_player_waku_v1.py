@@ -439,6 +439,112 @@ def main():
  print("SUPPORT_FROZEN_LEGACY41_W3_005",json.dumps(frozen_support,ensure_ascii=False))
 
 
+ # DEV-only HYBRID miss anatomy and deterministic rescue candidates.
+ # No SUPPORT/September outcomes are used to choose or score these candidate rules.
+ miss_rows=[]; rescue_eval=[]
+ gate_values=(-0.50,-0.25,-0.10,0.00,0.10,0.25,0.50)
+ rule_names=("hybrid4","joint_next","same_second_next","other_second_next","reverse_t1")
+ all_dev_cases=[]
+ for r0 in rr["H078_M375"]:
+  rescue_code=str(r0["race_code"]).zfill(12); rescue_month=rescue_code[:4]+"-"+rescue_code[4:6]
+  if rescue_month not in DEV: continue
+  rescue_p2,rescue_pc=v365.formal_post_five6(r0)
+  rescue_prob=v299.pair_prob(rescue_p2,rescue_pc,prod.TICKET_ALPHA)
+  rescue_formal=v299.STRATEGIES["HYBRID"](rescue_p2,rescue_pc,rescue_prob)[:3]
+  rescue_full=v299.STRATEGIES["HYBRID"](rescue_p2,rescue_pc,rescue_prob)
+  rescue_joint=v299.joint_order(rescue_prob)
+  rescue_formal_set=set(rescue_formal)
+  rescue_actual=str(r0["actual_combo"])
+  rescue_parts=rescue_actual.split("-")
+  actual_pair=(int(rescue_parts[1]),int(rescue_parts[2])) if len(rescue_parts)==3 and rescue_parts[0]=="1" else None
+  formal_hit=int(actual_pair in rescue_formal_set) if actual_pair else 0
+  first_second=int(rescue_formal[0][0])
+  def first_not_formal(seq,pred=lambda pair:True):
+   return next((pair for pair in seq if pair not in rescue_formal_set and pred(pair)),None)
+  rescue_candidates={
+   "hybrid4": first_not_formal(rescue_full),
+   "joint_next": first_not_formal(rescue_joint),
+   "same_second_next": first_not_formal(rescue_joint,lambda pair:pair[0]==first_second),
+   "other_second_next": first_not_formal(rescue_joint,lambda pair:pair[0]!=first_second),
+   "reverse_t1": ((rescue_formal[0][1],rescue_formal[0][0])
+                  if (rescue_formal[0][1],rescue_formal[0][0]) not in rescue_formal_set else None),
+  }
+  case={"race_code":rescue_code,"month":rescue_month,"actual_pair":actual_pair,"formal":rescue_formal,
+        "formal_hit":formal_hit,"payout":int(payouts.get(rescue_code,0)),
+        "prob":rescue_prob,"candidates":rescue_candidates}
+  all_dev_cases.append(case)
+  if not formal_hit and actual_pair:
+   formal_seconds={int(a) for a,b in rescue_formal}; formal_thirds={int(b) for a,b in rescue_formal}
+   hybrid_rank=(rescue_full.index(actual_pair)+1) if actual_pair in rescue_full else None
+   joint_rank=(rescue_joint.index(actual_pair)+1) if actual_pair in rescue_joint else None
+   miss_rows.append({"race_code":rescue_code,"month":rescue_month,"actual_second":actual_pair[0],"actual_third":actual_pair[1],
+      "second_covered":int(actual_pair[0] in formal_seconds),"third_covered":int(actual_pair[1] in formal_thirds),
+      "both_components_covered":int(actual_pair[0] in formal_seconds and actual_pair[1] in formal_thirds),
+      "hybrid_rank":hybrid_rank,"joint_rank":joint_rank,
+      **{f"hit_{name}":int(pair==actual_pair) if pair else 0 for name,pair in rescue_candidates.items()}})
+ miss_df=pd.DataFrame(miss_rows); miss_df.to_csv(OUT/"dev_hybrid_miss_anatomy.csv",index=False)
+ miss_summary={
+  "miss_R":int(len(miss_df)),
+  "second_covered":int(miss_df.second_covered.sum()),
+  "third_covered":int(miss_df.third_covered.sum()),
+  "both_components_covered":int(miss_df.both_components_covered.sum()),
+  "hybrid_rank_counts":{str(k):int(v) for k,v in miss_df.hybrid_rank.value_counts().sort_index().items()},
+  "joint_rank_counts":{str(k):int(v) for k,v in miss_df.joint_rank.value_counts().sort_index().items()},
+  "candidate_direct_rescues":{name:int(miss_df[f"hit_{name}"].sum()) for name in rule_names}
+ }
+ # Always-swap and score-gap-gated swap of formal ticket #3.
+ for rule_name in rule_names:
+  for rescue_gate in gate_values:
+   total_hits=total_return=changed_count=rescued_count=lost_count=0
+   monthly_stats={}
+   for case in all_dev_cases:
+    candidate=case["candidates"].get(rule_name)
+    formal=list(case["formal"]); new=list(formal)
+    do_swap=False; score_gap=None
+    if candidate is not None:
+     old_score=float(case["prob"].get(formal[2],0.0)); cand_score=float(case["prob"].get(candidate,0.0))
+     score_gap=float(np.log(max(cand_score,1e-12))-np.log(max(old_score,1e-12)))
+     do_swap=score_gap>=rescue_gate
+    if do_swap:new[2]=candidate
+    new_hit=int(case["actual_pair"] in set(new)) if case["actual_pair"] else 0
+    old_hit=int(case["formal_hit"])
+    total_hits+=new_hit; changed_count+=int(do_swap and new!=formal)
+    rescued_count+=int(old_hit==0 and new_hit==1); lost_count+=int(old_hit==1 and new_hit==0)
+    if new_hit: total_return+=case["payout"]
+    ms=monthly_stats.setdefault(case["month"],{"R":0,"formal_hits":0,"new_hits":0,"changed_R":0,"rescued":0,"lost":0})
+    ms["R"]+=1; ms["formal_hits"]+=old_hit; ms["new_hits"]+=new_hit
+    ms["changed_R"]+=int(do_swap and new!=formal); ms["rescued"]+=int(old_hit==0 and new_hit==1); ms["lost"]+=int(old_hit==1 and new_hit==0)
+   rescue_eval.append({"rule":rule_name,"gate_loggap":rescue_gate,"R":len(all_dev_cases),"hits":total_hits,
+      "rate":total_hits/len(all_dev_cases),"delta_hits":total_hits-98,"changed_R":changed_count,
+      "rescued":rescued_count,"lost":lost_count,"return":total_return,"stake":len(all_dev_cases)*300,
+      "roi":total_return/(len(all_dev_cases)*300),"monthly":monthly_stats})
+ # Extra-ticket diagnostics: add deterministic 4th candidate instead of replacing.
+ add_eval=[]
+ for rule_name in ("hybrid4","joint_next","same_second_next","other_second_next","reverse_t1"):
+  hits=ret=added=0; monthly_stats={}
+  for case in all_dev_cases:
+   candidate=case["candidates"].get(rule_name)
+   tickets=list(case["formal"])
+   if candidate is not None and candidate not in tickets:
+    tickets.append(candidate); added+=1
+   hit=int(case["actual_pair"] in set(tickets)) if case["actual_pair"] else 0
+   hits+=hit
+   if hit:ret+=case["payout"]
+   ms=monthly_stats.setdefault(case["month"],{"R":0,"formal_hits":0,"new_hits":0,"added_R":0})
+   ms["R"]+=1; ms["formal_hits"]+=int(case["formal_hit"]); ms["new_hits"]+=hit
+   ms["added_R"]+=int(candidate is not None and candidate not in case["formal"])
+  stake=len(all_dev_cases)*300+added*100
+  add_eval.append({"rule":rule_name,"R":len(all_dev_cases),"hits":hits,"rate":hits/len(all_dev_cases),
+                   "delta_hits":hits-98,"added_R":added,"return":ret,"stake":stake,"roi":ret/stake if stake else None,
+                   "monthly":monthly_stats})
+ rescue_sorted=sorted(rescue_eval,key=lambda row:(row["hits"],row["roi"],-row["changed_R"]),reverse=True)
+ add_sorted=sorted(add_eval,key=lambda row:(row["hits"],row["roi"]),reverse=True)
+ pd.DataFrame([{k:v for k,v in row.items() if k!="monthly"} for row in rescue_sorted]).to_csv(OUT/"dev_hybrid_miss_rescue_swap_scan.csv",index=False)
+ pd.DataFrame([{k:v for k,v in row.items() if k!="monthly"} for row in add_sorted]).to_csv(OUT/"dev_hybrid_miss_rescue_add_scan.csv",index=False)
+ miss_report={"summary":miss_summary,"top_swap":rescue_sorted[:15],"add_ticket":add_sorted}
+ (OUT/"dev_hybrid_miss_rescue_report.json").write_text(json.dumps(miss_report,ensure_ascii=False,indent=2))
+ print("DEV_HYBRID_MISS_RESCUE",json.dumps(miss_report,ensure_ascii=False))
+
  (OUT/"support_eval.json").write_text(json.dumps(support_eval,ensure_ascii=False,indent=2))
  print("SUPPORT_EVAL",json.dumps(support_eval,ensure_ascii=False))
  coef=model.named_steps["lr"].coef_[0]
