@@ -42,7 +42,7 @@ def main():
         boat_st={b:course_st[c] for c,b in course_boat.items() if b is not None}
         p2,_=v365.formal_post_five6(pr)
         z={"race_code":code,"month":month,"third":third,"third_group":"INNER2" if third==2 else "INNER3" if third==3 else "OUTER",
-           "st2":boat_st.get(2,np.nan),"st3":boat_st.get(3,np.nan),"st4":boat_st.get(4,np.nan),
+           "actual_st2":boat_st.get(2,np.nan),"actual_st3":boat_st.get(3,np.nan),"actual_st4":boat_st.get(4,np.nan),
            "course4":boat_course.get(4),"kimarite":str(rr.get("決まり手","")).replace("　","").replace(" ",""),
            "four_beats2_st":int(ff(boat_st.get(4))<ff(boat_st.get(2))) if np.isfinite(ff(boat_st.get(4))) and np.isfinite(ff(boat_st.get(2))) else 0,
            "four_beats3_st":int(ff(boat_st.get(4))<ff(boat_st.get(3))) if np.isfinite(ff(boat_st.get(4))) and np.isfinite(ff(boat_st.get(3))) else 0,
@@ -63,7 +63,7 @@ def main():
              "four_beats3_actual_st":int(g.four_beats3_st.sum()),"four_beats3_actual_st_rate":float(g.four_beats3_st.mean()) if len(g) else None,
              "four_beats_both_actual_st":int(((g.four_beats2_st==1)&(g.four_beats3_st==1)).sum()),
              "four_beats_both_actual_st_rate":float(((g.four_beats2_st==1)&(g.four_beats3_st==1)).mean()) if len(g) else None,
-             "mean_st2":float(g.st2.mean()),"mean_st3":float(g.st3.mean()),"mean_st4":float(g.st4.mean()),
+             "mean_actual_st2":float(g.actual_st2.mean()),"mean_actual_st3":float(g.actual_st3.mean()),"mean_actual_st4":float(g.actual_st4.mean()),
              "p2_rank4_top1":int((g.p2_rank4==1).sum()),"p2_rank4_top2":int((g.p2_rank4<=2).sum())}
         for metric in ("score","core","ex","st","straight","avg"):
             out[f"{metric}_4_beats2"]=int(g[f"{metric}4_beats2"].sum())
