@@ -1516,3 +1516,57 @@ Next:
 - inspect ROI by Lean/Balanced/Wide, month, A/B branch
 - compare ALL vs COMP5
 - do not change ticket sets after seeing ROI in this evaluation.
+
+
+## V6 Run #1 completed but ROI INVALID due closing-odds path bug
+
+Run:
+- 36024005637
+- workflow research-inner12-ticket-roi-v6
+- GitHub conclusion SUCCESS
+- all steps SUCCESS
+- markers printed:
+  - INNER12_FIXED_TICKET_ROI_SHADOW_V6_OK
+  - TICKETS_FROZEN_BEFORE_ODDS_ROI
+  - POSTHOC_SHADOW_ONLY
+  - SEPTEMBER_UNREAD
+  - PRODUCTION_UNCHANGED
+
+However the ROI output from this run MUST NOT be used for model/ticket adoption.
+
+Observed:
+- only 35/68 frozen races had odds
+- June had 0 evaluated races
+- 33 races reported missing odds
+- all evaluated rows were predeadline OD3; closing_fallback_R=0
+
+Root cause:
+- V6 script lives under `research/`
+- it used `ROOT=Path(__file__).resolve().parent`
+- therefore closing fallback searched the wrong path:
+  `research/data/official_closing_odds3t/...`
+- actual committed data is under repository root:
+  `data/official_closing_odds3t/2026/06...`
+  and June closing-odds files are present.
+
+Fix:
+- commit `cc2e9dfd90f88207c2010d7d838fb5f10dc55164`
+- use `ROOT=Path(__file__).resolve().parents[1]`
+- add hard guard:
+  every one of the 68 frozen V4 races must exist in the combined odds map.
+- if even one frozen race lacks odds, V6 now fails instead of silently reporting partial ROI.
+- print ODDS_COVERAGE for audit.
+
+Verified after refetch:
+- repo_root_fix true
+- full_coverage_guard true
+- workflow remains manual-only
+- pipefail true
+- literal escaped-newline count 0
+
+Important:
+- Old Run 36024005637's displayed ROI numbers (300–1200% etc.) are invalid as evaluation because they are based on only 35/68 and exclude all June.
+- Do not rerun old SHA. Start a new workflow_dispatch run after commit cc2e9dfd.
+- Ticket sets remain frozen exactly as before; no ticket changes were made after viewing the invalid partial ROI.
+- September remains unread.
+- production unchanged.
