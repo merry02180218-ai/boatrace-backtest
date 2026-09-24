@@ -210,6 +210,26 @@ def main():
   blend.append({"w":float(wgt),"R":int(len(g)),"hits":int(g.hit.sum()),"rate":float(g.hit.mean()),"parity_R":int(g.parity.fillna(0).sum()) if wgt==0 else None})
  print("DEV_HYBRID_INCLUDED_BLEND",json.dumps(blend,ensure_ascii=False))
  pd.DataFrame(blend).to_csv(OUT/"dev_hybrid_included_blend.csv",index=False)
+ # Structure-preserving HYBRID inclusion. w2/w3=0 must reproduce formal HYBRID exactly.
+ struct_rows=[]
+ for r0 in rr["H078_M375"]:
+  code=str(r0["race_code"]).zfill(12); month=code[:4]+"-"+code[4:6]
+  if month not in DEV or code not in byrank: continue
+  p2,pc=v365.formal_post_five6(r0); base=v299.pair_prob(p2,pc,prod.TICKET_ALPHA)
+  formal=v299.STRATEGIES["HYBRID"](p2,pc,base)[:3]
+  sm={int(x.boat):float(x.opp_score) for _,x in rank[rank.race_code.eq(code)].iterrows()}
+  pairs=[(a,b) for a in (2,3,4,5,6) for b in (2,3,4,5,6) if a!=b]
+  logb={ab:float(np.log(max(base.get(ab,0.0),1e-12))) for ab in pairs}; actual=str(r0["actual_combo"])
+  for w2 in (0.00,0.05,0.10,0.15,0.20):
+   for w3 in (0.00,0.05,0.10,0.15,0.20):
+    adj={ab:logb[ab]+w2*sm.get(ab[0],0.0)+w3*sm.get(ab[1],0.0) for ab in pairs}
+    top=v299.hybrid_order(p2,pc,adj)[:3]
+    struct_rows.append({"race_code":code,"w2":w2,"w3":w3,"hit":int(actual in {f"1-{a}-{b}" for a,b in top}),"parity":int(top==formal) if w2==0 and w3==0 else None})
+ sd=pd.DataFrame(struct_rows); struct=[]
+ for (w2,w3),g in sd.groupby(["w2","w3"]):
+  struct.append({"w2":float(w2),"w3":float(w3),"R":int(len(g)),"hits":int(g.hit.sum()),"rate":float(g.hit.mean()),"parity_R":int(g.parity.fillna(0).sum()) if w2==0 and w3==0 else None})
+ print("DEV_HYBRID_STRUCTURE_PRESERVED",json.dumps(struct,ensure_ascii=False))
+ pd.DataFrame(struct).to_csv(OUT/"dev_hybrid_structure_preserved.csv",index=False)
 
 
 
