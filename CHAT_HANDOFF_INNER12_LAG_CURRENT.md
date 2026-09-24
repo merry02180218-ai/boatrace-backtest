@@ -643,3 +643,125 @@ Fixes:
 
 Do NOT rerun Run 35990165189 because it is pinned to the old head SHA.
 Start a fresh manual workflow_dispatch of `research-inner12-stageb-route-v1.yml`.
+
+
+## Stage-B route discovery V1 result — Run 35992940551 SUCCESS
+Run:
+- https://github.com/merry02180218-ai/boatrace-backtest/actions/runs/35992940551
+- run_number 4
+- SUCCESS
+- head SHA a9adef7670e3d698afd41990890b6f16633c4a5e
+- Preflight SUCCESS
+- Stage-B body SUCCESS
+- marker: INNER12_STAGEB_ROUTE_DISCOVERY_V1_OK
+- rows: 1290
+- September unread
+- production unchanged
+- artifact: 10805697327 / inner12-stageb-route-v1 / 2,653,260 bytes
+- digest sha256:1d84106496ee1b35d0eaeb0691216dc8702ed0bd907587cbb46466d20051b3f6
+
+### Baseline route rates inside frozen GLOBAL_STAGEA
+Train Apr-May / Validation Jun / Jul-Aug confirmation:
+- 1 escape: 37.24% / 41.54% / 38.39%
+- 3 makuri: 11.48% / 7.18% / 8.80%
+- 3 makuri-sashi: 5.62% / 5.13% / 7.09%
+- 4 makuri: 6.56% / 6.67% / 6.60%
+- 4 makuri-sashi: 7.49% / 3.59% / 3.67%
+- 5 makuri: 2.11% / 1.54% / 1.71%
+- 5 makuri-sashi: 4.45% / 7.69% / 2.69%
+- 3 family: 17.10% / 12.31% / 15.89%
+- 4 family: 14.05% / 10.26% / 10.27%
+- 5 family: 6.56% / 9.23% / 4.40%
+- outer CORE: 35.60% / 30.26% / 28.85%
+- outer WIDE: 37.70% / 31.79% / 30.56%
+
+### Important route findings
+
+#### 3-family
+Strong train+June interactions did NOT hold at 40% in Jul-Aug.
+Examples:
+- b3 vs b4 prior ST mean gap <= -0.0194 and b3 last ST <= .12:
+  - train 40.54%
+  - Jun 32.00%
+  - Jul-Aug 21.21%
+- b3 last ST <= .12 and b3 WR >= 5.91:
+  - 37.14% / 26.92% / 22.45%
+- b3 WR advantage over b4 >=1.23 and b3 last ST <=.12:
+  - 36.84% / 34.78% / 26.67%
+
+Conclusion: 3 route conversion is real but not yet precise enough.
+
+#### 4-family — strongest stable structural signal
+Most interesting rule:
+- attack_gap_3minus4_wr <= -1.18
+  => boat4 national WR is >=1.18 higher than boat3
+- AND attack_gap_3minus4_prior_recent12_st >= 0.02583
+  => boat3 recent12 ST is at least ~0.026 slower than boat4
+
+Results:
+- train: 13/40 = 32.50%
+- Jun: 6/16 = 37.50%
+- Jul-Aug: 12/37 = 32.43%
+This is a very strong lift over 4-family baseline ~10–14% and reproduces in Jul-Aug.
+
+Another stable 4-family rule:
+- b4 clearly stronger than b3 (WR gap)
+- b4 prior late18 rate <=0.3495
+Results:
+- 31.11% / 27.27% / 20.00%
+
+Conclusion:
+- 4 route has a clean mechanistic discriminator:
+  **4 stronger than 3 + 4 starts more reliably/faster than 3**.
+- This should be split next into 4-makuri vs 4-makuri-sashi.
+
+#### 5-family
+Best reproducible signal:
+- b5 local WR >=5.62
+- b5 current-meeting/first-race finish <=2
+Results:
+- train 20.45%
+- Jun 31.25%
+- Jul-Aug 14.29%
+Still too low for final head-route precision, but 5 route lift is genuine.
+
+### Outer attack grouped target
+Best CORE interaction:
+- b3 Waku WR >=6.1
+- b3 prior mean ST <=0.1549
+Results:
+- train 59.62%
+- Jun 55.00%
+- Jul-Aug 33.87%
+
+Best WIDE interaction:
+same structural b3 combination:
+- train 59.62%
+- Jun 60.00%
+- Jul-Aug 33.87%
+
+Other WIDE:
+- b3 late18 rate <=0.339 + b3 Waku WR >=6.1:
+  - 55.32% / 54.55% / 35.00%
+- weak b1 national+local:
+  - 51.79% / 58.33% / 34.15%
+
+Therefore:
+- >=40% can be achieved in Apr-Jun but not yet robustly in Jul-Aug.
+- The broad outer-attack target has substantial season/regime degradation in Jul-Aug.
+- Do NOT adopt the 50–60% Apr-Jun rules as final.
+- The strongest next research direction is the 4-family route because its relative-strength + relative-ST structure reproduces across all periods.
+
+### Recommended next step
+Build Stage-B V2 with explicit branch order:
+1. 1-escape survivor classifier
+2. 4-family classifier:
+   - b4 vs b3 strength gap
+   - b4 vs b3 recent ST reliability
+   - exhibition ST / corrected predicted ST
+   - 4 original exhibition stretch/turn balance
+   - venue / wind interactions
+   - then split 4-makuri vs 4-makuri-sashi
+3. 3-family classifier
+4. 5-follow-through classifier
+Use walk-forward/month-specific stability checks and preserve September unread.
