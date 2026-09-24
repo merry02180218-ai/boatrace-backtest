@@ -1,0 +1,38 @@
+name: research-3head-three-layer-monthly-bets-v9
+on:
+  push:
+    paths:
+      - research/run_3head_three_layer_exact_v10.trigger
+      - research/run_3head_three_layer_final_v11.trigger
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scikit-learn requests
+      - name: Download frozen v243 CORE membership source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p golden
+          gh run download 34383567078 --repo ${{ github.repository }} --name v243-3head-expand-feature-audit --dir golden
+          cp golden/analysis_v243_3head_expand_feature_audit.csv .
+          test -s analysis_v243_3head_expand_feature_audit.csv
+      - name: Preflight
+        run: |
+          python -m py_compile research/run_3head_three_layer_monthly_bets_v9.py research/run_3head_a60_playerhistory_curve_v1.py analyze_3head_player_history_3v2_ablation_v2.py research/run_3head_wave20_manual_gate.py verify_v288_operational_pre_replay.py
+          python -c "import ast,pathlib; s=pathlib.Path('research/run_3head_three_layer_monthly_bets_v9.py').read_text(); ast.parse(s); assert 'FULL_PURE_GATE' in s; assert 'SEPTEMBER_UNREAD' in s; print('STATIC_PREFLIGHT_OK')"
+          ! grep -E '2026[-/, ]*09|202609' research/run_3head_three_layer_monthly_bets_v9.py
+      - name: Run
+        run: python research/run_3head_three_layer_monthly_bets_v9.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-3head-three-layer-monthly-bets-v9
+          path: |
+            research_3head_three_layer_final_v11.json
+            research_3head_three_layer_monthly_bets_v9.csv
