@@ -67,6 +67,30 @@ def main():
 
     tickets=z.get("tickets") or []
     odds=z.get("ticket_odds") or {}
+
+    # 1レース上限5,000円。各買い目の払戻額ができるだけ揃うよう、
+    # 100円単位でオッズ逆数比例（dutching）して振り分ける。
+    budget=5000
+    unit=100
+    valid=[t for t in tickets if float(odds.get(t,0) or 0)>0]
+    inv={t:1.0/float(odds[t]) for t in valid}
+    denom=sum(inv.values())
+    allocation={t:0 for t in tickets}
+    if valid and denom>0:
+        raw={t:(budget*inv[t]/denom) for t in valid}
+        # まず100円単位に切り下げ、残額を端数の大きい順に配る。
+        for t in valid:
+            allocation[t]=max(unit,int(raw[t]//unit)*unit)
+        total=sum(allocation.values())
+        # 最低100円で予算超過した場合は高オッズ側から削る。
+        while total>budget:
+            candidates=[t for t in valid if allocation[t]>unit]
+            if not candidates: break
+            t=max(candidates,key=lambda x:(allocation[x],float(odds[x])))
+            allocation[t]-=unit; total-=unit
+        while total+unit<=budget:
+            t=max(valid,key=lambda x:(raw[x]-allocation[x],-float(odds[x])))
+            allocation[t]+=unit; total+=unit
     venue=VENUE.get(args.jcd, f"JCD{args.jcd:02d}")
     lines=[
         f"@{owner}",
@@ -90,7 +114,11 @@ def main():
         "## 買い目",
     ]
     for t in tickets:
-        lines.append(f"- **{t}** — {odds.get(t,'?')}倍")
+        amt=int(allocation.get(t,0))
+        o=odds.get(t,'?')
+        payout=(amt*float(o) if amt and o!='?' else 0)
+        lines.append(f"- **{t}** — {o}倍 — **{amt:,}円**（的中時 約{payout:,.0f}円）")
+    lines += ["", f"- 合計購入額: **{sum(allocation.values()):,}円**", "- 振分: オッズ逆数比例・100円単位（払戻均等化）"]
     lines += [
         "",
         f"- decision_time: `{z.get('decision_time_jst','')}`",
