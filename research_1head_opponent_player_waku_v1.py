@@ -391,6 +391,53 @@ def main():
  (OUT/"dev_legacy41_oof_top.json").write_text(json.dumps(legacy_oof_results,ensure_ascii=False,indent=2))
  print("DEV_LEGACY41_OOF_TOP",json.dumps(legacy_oof_results,ensure_ascii=False))
 
+ # Frozen SUPPORT evaluation for the best month-held-out DEV candidate:
+ # original 41-feature opponent-membership score, raw third-side bonus w3=.05.
+ frozen_support_w3=0.05
+ fs_rows=[]
+ for r0 in rr["H078_M375"]:
+  code=str(r0["race_code"]).zfill(12); month=code[:4]+"-"+code[4:6]
+  if month not in SUP: continue
+  p2,pc=v365.formal_post_five6(r0); base=v299.pair_prob(p2,pc,prod.TICKET_ALPHA)
+  formal=v299.STRATEGIES["HYBRID"](p2,pc,base)[:3]
+  sm={int(row.boat):float(row.opp_score) for _,row in q[q.race_code.eq(code)].iterrows()}
+  pairs=[(a,b) for a in (2,3,4,5,6) for b in (2,3,4,5,6) if a!=b]
+  adj={ab:float(np.log(max(base.get(ab,0.0),1e-12)))+frozen_support_w3*sm.get(ab[1],0.0) for ab in pairs}
+  new=v299.hybrid_order(p2,pc,adj)[:3]
+  actual=str(r0["actual_combo"])
+  old_hit=int(actual in {f"1-{a}-{b}" for a,b in formal})
+  new_hit=int(actual in {f"1-{a}-{b}" for a,b in new})
+  pay=int(payouts.get(code,0))
+  fs_rows.append({"race_code":code,"month":month,"actual":actual,"formal":str(formal),"new":str(new),
+                  "changed":int(new!=formal),"formal_hit":old_hit,"new_hit":new_hit,"payout":pay})
+ fs=pd.DataFrame(fs_rows); fs.to_csv(OUT/"support_frozen_legacy41_w3_005.csv",index=False)
+ monthly={}
+ for month,g in fs.groupby("month"):
+  monthly[month]={"R":int(len(g)),"formal_hits":int(g.formal_hit.sum()),"new_hits":int(g.new_hit.sum()),
+                  "changed_R":int(g.changed.sum()),
+                  "rescued":int(((g.formal_hit==0)&(g.new_hit==1)).sum()),
+                  "lost":int(((g.formal_hit==1)&(g.new_hit==0)).sum())}
+ def support_metrics(col):
+  n=len(fs); hits=int(fs[col].sum()); ret=int(fs.loc[fs[col].eq(1),"payout"].sum()); stake=n*300
+  return {"R":n,"hits":hits,"rate":hits/n if n else None,"return":ret,"stake":stake,
+          "roi":ret/stake if stake else None}
+ frozen_support={
+  "rule":"legacy41 actual_opponent model trained on DEV only; third-side raw bonus w3=.05",
+  "selection_basis":"best month-held-out DEV candidate frozen before this SUPPORT evaluation",
+  "w3":frozen_support_w3,
+  "formal":support_metrics("formal_hit"),
+  "new":support_metrics("new_hit"),
+  "changed_R":int(fs.changed.sum()),
+  "rescued":int(((fs.formal_hit==0)&(fs.new_hit==1)).sum()),
+  "lost":int(((fs.formal_hit==1)&(fs.new_hit==0)).sum()),
+  "monthly":monthly,
+  "support_used_for_selection":False,
+  "september_outcomes_read":False,
+  "production_changed":False
+ }
+ (OUT/"support_frozen_legacy41_w3_005.json").write_text(json.dumps(frozen_support,ensure_ascii=False,indent=2))
+ print("SUPPORT_FROZEN_LEGACY41_W3_005",json.dumps(frozen_support,ensure_ascii=False))
+
 
  (OUT/"support_eval.json").write_text(json.dumps(support_eval,ensure_ascii=False,indent=2))
  print("SUPPORT_EVAL",json.dumps(support_eval,ensure_ascii=False))
