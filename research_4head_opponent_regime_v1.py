@@ -327,6 +327,36 @@ def main():
     print('STRUCTURAL_TICKET_SHADOW_V1_MONTHLY',sm.to_json(orient='records',force_ascii=False))
     print('STRUCTURAL_TICKET_SHADOW_V1_ALL',allm.to_json(orient='records',force_ascii=False))
     print('STRUCTURAL_TICKET_SHADOW_V1_HOLDOUT',holdm.to_json(orient='records',force_ascii=False))
+    # Stage v11: decompose CURRENT misses in Jul-Aug holdout without tuning.
+    # Outcome is used only descriptively after the frozen CURRENT ticket set exists.
+    miss=sh[(sh.variant.eq('CURRENT')) & (sh.month.isin(['2026-07','2026-08'])) & (sh.hit.eq(0))].copy()
+    mrows=[]
+    for _,m in miss.iterrows():
+        rr=races[races.race_code.eq(m.race_code)].iloc[0]
+        base_row=z[z.race_code.eq(m.race_code)].iloc[0]
+        diag=json.loads(base_row.opponent_diag)
+        s,t=int(rr.actual_second),int(rr.actual_third)
+        sr=[int(x) for x in diag['second_rank']]
+        tr=[int(x) for x in diag['third_rank'][str(s)]]
+        cur=set(str(base_row.tickets).split('|'))
+        if s not in sr[:2]:
+            reason='SECOND_MISS'
+        elif f'4-{s}-{t}' not in cur:
+            reason='THIRD_OR_CONSTRUCTION_MISS'
+        else:
+            reason='OTHER'
+        mrows.append({'race_code':m.race_code,'month':m.month,'branch':rr.struct_branch,
+                      'actual_second':s,'actual_third':t,'pair':f'{s}-{t}','reason':reason,
+                      'second_rank':sr.index(s)+1,'third_rank':tr.index(t)+1,
+                      'second_is3':int(s==3),'second_is5':int(s==5),
+                      'third_is3':int(t==3),'third_is5':int(t==5)})
+    md=pd.DataFrame(mrows)
+    md.to_csv(OUT/'structural_miss_decomp_v1.csv',index=False)
+    ms=(md.groupby(['month','branch','reason']).size().rename('R').reset_index())
+    ps=(md.groupby(['pair']).size().rename('R').reset_index().sort_values('R',ascending=False))
+    print('STRUCTURAL_MISS_DECOMP_V1',ms.to_json(orient='records',force_ascii=False))
+    print('STRUCTURAL_MISS_PAIRS_V1',ps.to_json(orient='records',force_ascii=False))
+    print('STRUCTURAL_MISS_DETAIL_V1',md.to_json(orient='records',force_ascii=False))
     fam=(races.groupby(['month','pair_family']).size().rename('R').reset_index())
     fam['pct']=fam.R/fam.groupby('month').R.transform('sum')*100
     fam.to_csv(OUT/'pair_family_monthly.csv',index=False)
@@ -337,7 +367,7 @@ def main():
     meta={'head4_R':len(races),'dev':'2026-06 only','holdout':['2026-07','2026-08'],
           'dev_R':len(dev),'holdout_R':len(hold),'SEPTEMBER_OUTCOMES_READ':False,
           'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':False,
-          'stage':'STRUCTURAL_TICKET_SHADOW_V1'}
+          'stage':'STRUCTURAL_MISS_DECOMP_V1'}
     (OUT/'meta.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2))
     print('REGIME_MONTHLY',pct.to_json(orient='records',force_ascii=False))
     print('PAIR_TOP',pair.groupby('month').head(8).to_json(orient='records',force_ascii=False))
