@@ -222,17 +222,22 @@ def load_day_odds(d:date):
 
 def update_histories(cards,res,stt,stage_st,global_st,ex_bias_state,global_ex_bias,ph_state):
     # result-based histories are updated only AFTER today's decisions were frozen.
-    for code,card in cards.items():
-        rr=res.get(code,{})
+    # PH5 PLAYERHistory must match build_4head_player_history_live exactly:
+    # same-day cards are updated in race_code order.
+    for code in sorted(cards):
+        card=cards[code];rr=res.get(code,{})
         try:w=int(float(rr.get("1着_艇番"))); sec=int(float(rr.get("2着_艇番")))
         except Exception:w=sec=0
         if w in range(1,7) and sec in range(1,7) and w!=sec:
             for b in range(1,7):
                 reg=str(card.get(f"艇{b}_登録番号","")).strip()
                 if reg:
-                    s=ph_state[reg];s["n"]+=1;s["w"]+=int(w==b);s["p2"]+=int(w==b or sec==b)
-                    s["nf"][str(b)]+=1;s["wf"][str(b)]+=int(w==b);s["p2f"][str(b)]+=int(w==b or sec==b)
-                    s["recent_p2"].append(int(w==b or sec==b))
+                    st=ph_state[reg];st["n"]+=1;st["w"]+=int(w==b);st["p2"]+=int(w==b or sec==b)
+                    st["nf"][str(b)]+=1;st["wf"][str(b)]+=int(w==b);st["p2f"][str(b)]+=int(w==b or sec==b)
+                    st["recent_p2"].append(int(w==b or sec==b))
+    # INNER12 Stage-B ST/exhibition-bias lineage follows the source-row order.
+    for code,card in cards.items():
+        rr=res.get(code,{})
         am=actual_st_map(rr); em=ex_st_map(stt.get(code,{}))
         for b in range(1,7):
             if b not in am:continue
