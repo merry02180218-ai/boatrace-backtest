@@ -34,7 +34,7 @@ def oof(df,features,target):
         q["prob"]=p.predict_proba(te[features])[:,1];out.append(q)
     return pd.concat(out,ignore_index=True)
 
-def metric(q,target,kind):
+def eval_model(q,target,kind):
     y=q[target].to_numpy();p=q.prob.to_numpy()
     res={"R":len(q),"positive_R":int(y.sum()),"auc":float(roc_auc_score(y,p)),"ap":float(average_precision_score(y,p))}
     for frac in (.08,.10,.12,.15,.20):
@@ -99,8 +99,8 @@ def main():
     result={
       "population":"DEV head1 wins; mechanism-specific low-dimensional OOF",
       "baseline":{"R":len(d),"hits":int(d.baseline_hit.sum()),"rate":float(d.baseline_hit.mean())},
-      "four_foot":metric(q4f,"y4","4"),"four_start":metric(q4s,"y4","4"),
-      "five_six_start_base":metric(q56b,"y56","56"),"five_six_start_waku":metric(q56w,"y56","56"),
+      "four_foot":eval_model(q4f,"y4","4"),"four_start":eval_model(q4s,"y4","4"),
+      "five_six_start_base":eval_model(q56b,"y56","56"),"five_six_start_waku":eval_model(q56w,"y56","56"),
       "waku_coverage":{"b5_st":int(d.w10_b5_st.notna().sum()),"b6_st":int(d.w10_b6_st.notna().sum())},
       "support_outcomes_read":False,"september_outcomes_read":False,"production_changed":False}
     pd.concat([q4f.assign(model="FOUR_FOOT"),q4s.assign(model="FOUR_START"),
