@@ -1115,3 +1115,91 @@ Next:
 3. Do NOT promote: this is posthoc shadow.
 4. Future unseen period should validate Shadow V2.
 5. For further research, B-only can be treated as a 3-leaning branch; A-only needs more work to separate 3 vs 4 without reverting to generic 4HEAD strength.
+
+
+## Shadow V3 — B-only strong 3-head branch
+
+Parent:
+- Shadow V2 Run 36016060009 SUCCESS
+- exact reproduction:
+  - V2 selected 85R / outer WIDE 48 = 56.47%
+  - A-only 53R / WIDE 54.72%
+  - B-only 32R / WIDE 59.38%
+  - B-only 3-family 13/32 = 40.63%
+
+### Strong 3-head signal found inside B-only
+Fixed rounded prior-only rule:
+- `pre_pair_absdiff_prior_recent3_st >= .04`
+
+Meaning:
+- within the Stage-A dual-lag context, the prior causal recent-3 actual-ST histories of boats1 and2 differ by at least .04.
+
+Historical B-only results:
+- Jun: 5R / 3-family 3 = 60.00%
+- Jul: 5R / 3-family 4 = 80.00%
+- Aug: 5R / 3-family 3 = 60.00%
+- total: 15R / 10 = 66.67%
+- exactly 5R/month in these three months
+- 3 makuri = 5
+- 3 makuri-sashi = 5
+- no 1-escape among the 15
+- no 4-family / 5-family among the 15; the 5 misses were other routes (mostly boat2 head, plus one boat4 difference route not classed as 4M/4MS).
+
+Threshold robustness:
+- >=.030: 17R / 64.71%, monthly 50% / 83.33% / 60%
+- >=.035: 16R / 68.75%, monthly 60% / 83.33% / 60%
+- >=.040: 15R / 66.67%, monthly 60% / 80% / 60%
+- >=.045: 14R / 71.43%, monthly 75% / 80% / 60%
+- >=.050: 11R / 72.73%, monthly 75% / 75% / 66.67%
+Thus .04 is a reasonable rounded Shadow threshold, not an exact knife-edge quantile.
+
+### Current-exhibition confirmation
+Within B-only:
+- `post_b3_ex_st <= .10`
+gives:
+- Jun 8R / 3-head 4 = 50%
+- Jul 9R / 5 = 55.56%
+- Aug 6R / 3 = 50%
+- total 23R / 12 = 52.17%
+
+Combining strong prior rule + current exhibition confirmation:
+- prior inner recent3 ST absdiff >= .04
+- AND 3号艇 current exhibition ST <= .10
+results:
+- Jun 4R / 3 = 75%
+- Jul 4R / 4 = 100%
+- Aug 4R / 3 = 75%
+- total 12R / 10 = 83.33%
+- 3M 5 / 3MS 5
+- no 1 escape
+This is very small-N and remains diagnostic/Shadow only.
+
+A diagnostic veto was also observed:
+- one strong+exhibition miss was boat2 head when predicted ST2 beat ST3 by about .10.
+- do NOT freeze a boat2 veto yet; sample is too small and that would be overfit.
+
+### Code
+Created:
+- `research/research_inner12_shadow_3head_v3.py`
+  - commit `9045781599a44e3cd495a89294b9ce372071cf99`
+- `.github/workflows/research-inner12-shadow-3head-v3.yml`
+  - commit `e47b4b21996591f34e7c24d84bcfe0868ae64f50`
+
+Workflow:
+- manual only
+- downloads frozen V2 artifact from Run 36016060009
+- no historical rebuild
+- py_compile + literal-newline guard
+- pipefail
+- September unread
+- production unchanged
+
+Status:
+- POSTHOC_SHADOW_ONLY
+- not production approved
+- future unseen confirmation needed.
+
+Next:
+- fire the fast V3 workflow and confirm exact reproduction.
+- A-only exact 3-vs4 single-head classifier was explored; current predicted 3-vs4 ST alone was not good enough, so do not force it.
+- priority after V3 confirmation: study the 5 B-only/strong misses as an inner-2 survival/veto mechanism without overfitting.
