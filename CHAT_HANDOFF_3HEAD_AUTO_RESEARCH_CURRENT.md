@@ -37,3 +37,14 @@
 - `research_v289_3head_addon.json`
 - `research_v289_3head_addon.md`
 
+
+
+## 2026-09-24 A+ high-precision decision
+- Exact accepted CORE remains 107R.
+- A+ selected working boundary: PRE >= 0.970, PLAYERHistory >= 0.50, motor >= 0.60.
+- Dec 2025-Aug 2026, exact-CORE excluded: 97R / 47 heads = 48.4536%, avg 10.8R/month.
+- Monthly: Dec 6/4 66.67%; Jan 13/8 61.54%; Feb 11/2 18.18%; Mar 19/9 47.37%; Apr 10/4 40.00%; May 10/6 60.00%; Jun 8/5 62.50%; Jul 12/6 50.00%; Aug 8/3 37.50%.
+- Higher precision shadow candidate only (NOT adopted): motor >= .85, PRE >= .925, PH >= .65 => 21R/13 heads = 61.90%.
+- User accepted current A+ working boundary; stop further A+ tuning for now.
+- Next: recompute layered CORE -> A+ -> FULL_3V2 with exact race-code dedup, target combined volume around 40 races/month.
+- September outcomes remain UNREAD. Production unchanged.
