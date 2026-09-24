@@ -1993,3 +1993,39 @@ Next:
   - flat 100-yen and JPY5,000 Dutch ROI
   - A vs B split
 - do not promote from Sep1-24; prospective Sep25+ is the next untouched validation.
+
+
+## V8 ticket width updated by user — 2026-09-25 JST
+
+User direction:
+- "3点は少ないよ倍あっていいと思う"
+
+Operational interpretation adopted for V8 research:
+- use top 6 HYBRID-ranked tickets per selected head, not top 3.
+- A-only dual-head:
+  - head3 top6
+  - head4 top6
+  - maximum 12 tickets total
+- B-strong:
+  - head3 top6
+  - 6 tickets total
+
+Unchanged:
+- V4 head gate
+- separate SECOND / conditional THIRD models
+- 1HEAD opponentCore weights
+- G2=.45 / G3=1.00
+- alpha=.70
+- no fixed historical combo list
+- no COMP5 automatic gate
+- production unchanged
+
+Implementation:
+- research/research_inner12_onehead_opponent_v8.py
+  - commit cecae8daf0ca4d28aec6d875d99408d7630286f4
+- .github/workflows/research-inner12-onehead-opponent-v8.yml
+  - commit 3b9e493175d3c7cd230a9e055e5443a65a7ea1c5
+- preflight now explicitly asserts top6 and A12/B6 ticket counts.
+
+Bankroll note:
+- JPY5,000 Dutch remains feasible with 12 tickets because each can receive at least JPY100.
