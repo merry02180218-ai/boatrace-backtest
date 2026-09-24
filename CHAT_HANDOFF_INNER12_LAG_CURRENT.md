@@ -1268,3 +1268,134 @@ Next priority:
 - join result top3 only AFTER frozen V4 decisions are fixed.
 - derive second/third distributions and candidate ranking from causal pre-race features.
 - avoid using outcome frequencies to mutate the V4 head gate.
+
+
+## V4/V5 execution results — 2026-09-24
+
+### Operational Shadow V4
+Run:
+- 36021348905
+- SUCCESS
+- all steps SUCCESS
+Markers:
+- INNER12_OPERATIONAL_SHADOW_V4_OK
+- POSTHOC_SHADOW_ONLY
+- SEPTEMBER_UNREAD
+- PRODUCTION_UNCHANGED
+
+Monthly selected-head results:
+- Jun: 23R / 10 hit = 43.48%
+- Jul: 21R / 13 = 61.90%
+- Aug: 24R / 15 = 62.50%
+- total: 68R / 38 = 55.88%
+
+A dual-head:
+- 53R / 28 head hit = 52.83%
+B strong 3-head:
+- 15R / 10 = 66.67%
+
+### Opponent anatomy V5
+Run:
+- 36021366565
+- SUCCESS
+- all steps SUCCESS
+Markers:
+- INNER12_OPPONENT_ANATOMY_SHADOW_V5_OK
+- DECISION_FROZEN_BEFORE_RESULTS
+- SEPTEMBER_UNREAD
+- PRODUCTION_UNCHANGED
+
+Important: V4 decision is frozen before outcome join. V5 is descriptive opponent anatomy only.
+
+#### A-only when actual head = 3
+N=12
+Second:
+- 1: 6/12 = 50%
+- 4: 3/12 = 25%
+- 2: 2/12 = 16.67%
+- 5: 1/12 = 8.33%
+Third:
+- 4: 5/12 = 41.67%
+- 1: 2/12 = 16.67%
+- 2: 2/12 = 16.67%
+- 6: 2/12 = 16.67%
+- 5: 1/12 = 8.33%
+Most frequent exact pair:
+- 3-1-4: 4/12 = 33.33%
+Other repeated:
+- 3-4-2: 2/12 = 16.67%
+
+#### A-only when actual head = 4
+N=16
+Second:
+- 1: 5/16 = 31.25%
+- 5: 4/16 = 25%
+- 2: 3/16 = 18.75%
+- 6: 3/16 = 18.75%
+- 3: 1/16 = 6.25%
+Third:
+- 5: 5/16 = 31.25%
+- 1: 4/16 = 25%
+- 2: 3/16 = 18.75%
+- 6: 3/16 = 18.75%
+- 3: 1/16 = 6.25%
+Most frequent exact pairs:
+- 4-1-5: 3/16 = 18.75%
+- 4-6-1: 3/16 = 18.75%
+- 4-1-2: 2/16 = 12.5%
+- 4-2-5: 2/16 = 12.5%
+
+#### B-strong when actual head = 3
+N=10
+Second:
+- 1: 3/10 = 30%
+- 6: 3/10 = 30%
+- 4: 2/10 = 20%
+- 5: 2/10 = 20%
+Third:
+- 2: 3/10 = 30%
+- 6: 3/10 = 30%
+- 1: 2/10 = 20%
+- 4: 2/10 = 20%
+Exact pairs:
+- 3-1-4: 2/10 = 20%
+- 3-6-2: 2/10 = 20%
+- remaining six patterns 1 each
+
+### Opponent-any on head-hit rows
+A head-hit rows:
+- boat1 appears in 2nd/3rd: 17/56 slots = 30.36%
+- boat5: 11/56 = 19.64%
+- boat2: 10/56 = 17.86%
+- boat4: 8/56 = 14.29%
+- boat6: 8/56 = 14.29%
+- boat3: 2/56 = 3.57%
+
+B head-hit rows:
+- boat6: 6/20 slots = 30%
+- boat1: 5/20 = 25%
+- boat4: 4/20 = 20%
+- boat2: 3/20 = 15%
+- boat5: 2/20 = 10%
+
+### Immediate ticket-research implication
+Do not use one common opponent order across A and B.
+
+A, head3:
+- strongest structural anchor is 3-1-4.
+- second tier should preserve 4-2, plus 1-x variants.
+
+A, head4:
+- 1/5/6 dominate opponent anatomy.
+- promising core exact pairs: 4-1-5, 4-6-1, 4-1-2, 4-2-5.
+
+B, head3:
+- second is concentrated on 1 or 6.
+- third is concentrated on 2 or 6, with 1/4 secondary.
+- promising cores: 3-1-4 and 3-6-2.
+
+Next:
+- build ticket candidates separately for A-head3 / A-head4 / B-head3.
+- compare coverage vs point count.
+- then, only after a fixed ticket set exists, join historical predeadline/closing odds for ROI diagnostics.
+- do not change head gate from opponent outcomes.
