@@ -1,7 +1,7 @@
 name: manual-live-1head-v351-exhibition
 
 # Manual LIVE only: no cron/push. Any race_code may be requested.
-on:
+'on':
   workflow_dispatch:
     inputs:
       race_code:
