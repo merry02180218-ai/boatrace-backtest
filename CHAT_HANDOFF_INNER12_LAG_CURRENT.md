@@ -389,3 +389,62 @@ Key conclusion:
 - The most promising relative-lag structure is venue + weak inner pair, with motor as a possible secondary interaction.
 - Strong wind is real for absolute lateness but should not be mistaken for direct route opening.
 - Stage A can already exceed 40% out-of-sample in several definitions; the remaining problem is Stage B: among those collapse races, discriminate 3-makuri vs 4-makuri-sashi so final route precision can approach the user's >=40% goal.
+
+
+## Stage-A precision continuation — 2026-09-24
+
+After Factor Discovery V1, two fixed Stage-A candidates were prepared for independent causal replay.
+
+### A. SUMINOE_ULTRA
+Rule:
+- venue = Suminoe
+- min(b1_prior_late18_rate, b2_prior_late18_rate) >= 0.435
+- prior_late18 = prior-only smoothed rate of actual ST >= .18, with 4 pseudo-races at 35%
+
+Exploratory replay from factor_rows showed:
+- Mar: 28R / 60.7%
+- Apr: 19R / 68.4%
+- May: 16R / 50.0%
+- Jun: 31R / 67.7%
+- Jul: 20R / 60.0%
+- Aug: 9R / 55.6%
+Primary label is inner_vs_outer03.
+
+Independent validator:
+- `research/validate_inner12_stagea_suminoe_v1.py`
+
+### B. GLOBAL_STAGEA
+A non-venue-specific rule was found using only start-history/Waku structure:
+- pair_mean_waku_sr >= 3.7
+- pair_mean_prior_st_mean >= 0.17811274129319477
+- pair_min_prior_late18_rate >= 0.43497650793650783
+
+Exploratory replay:
+- Apr-May train combined: 432R / 51.39%
+- Jun validation: 201R / 50.25%
+- Jul-Aug confirmation: 411R / 50.36%
+- monthly:
+  - Mar 264R / 44.7%
+  - Apr 200R / 45.0%
+  - May 232R / 56.9%
+  - Jun 201R / 50.25%
+  - Jul 231R / 53.25%
+  - Aug 180R / 46.67%
+
+This is much higher-volume than Suminoe Ultra and remains around 50% over Jul-Aug combined.
+
+Independent validator:
+- `research/validate_inner12_stagea_global_v1.py`
+
+Combined manual workflow:
+- `.github/workflows/validate-inner12-stagea-v1.yml`
+- runs both fixed validators
+- manual-only
+- preflight checks both thresholds and September block
+- artifacts: both Stage-A validation directories
+
+Important methodology note:
+- Jul-Aug has already been observed during exploratory factor discovery. It is now confirmation/replay, not a pristine untouched holdout.
+- September outcomes remain unread and should be preserved for later prospective/fresh validation unless the user explicitly changes that policy.
+- Stage-A target is the start-collapse mechanism, NOT final 3-makuri/4-makuri-sashi route precision.
+- Next after validator SUCCESS: inspect final Stage-A parity and then build Stage-B route discriminator inside Stage-A candidates.
