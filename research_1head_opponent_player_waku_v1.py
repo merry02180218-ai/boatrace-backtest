@@ -539,9 +539,63 @@ def main():
                    "monthly":monthly_stats})
  rescue_sorted=sorted(rescue_eval,key=lambda row:(row["hits"],row["roi"],-row["changed_R"]),reverse=True)
  add_sorted=sorted(add_eval,key=lambda row:(row["hits"],row["roi"]),reverse=True)
+
+ # DEV-only selective 4th-ticket gates for same_second_next.
+ # Goal: keep most of its 8 rescues without paying for the 4th ticket on all 190 races.
+ formal_dev_return=sum(case["payout"] for case in all_dev_cases if case["formal_hit"])
+ same_add_scan=[]
+ gate_specs=[]
+ for rank_max in (4,5,6,7,8,10,12):
+  gate_specs.append(("joint_rank",rank_max))
+ for ratio3_min in (0.25,0.40,0.50,0.60,0.75,1.00,1.25,1.50):
+  gate_specs.append(("ratio_vs_t3",ratio3_min))
+ for ratio2_min in (0.25,0.40,0.50,0.60,0.70,0.80,0.90):
+  gate_specs.append(("ratio_vs_same2",ratio2_min))
+ for rank_max in (5,6,7,8):
+  for ratio3_min in (0.40,0.60,0.75,1.00):
+   gate_specs.append(("rank_and_ratio3",(rank_max,ratio3_min)))
+ for gate_type,gate_value in gate_specs:
+  added_count=rescues=added_return=0; monthly_stats={}
+  for case in all_dev_cases:
+   candidate=case["candidates"].get("same_second_next")
+   if candidate is None: continue
+   joint_seq=v299.joint_order(case["prob"])
+   candidate_rank=(joint_seq.index(candidate)+1) if candidate in joint_seq else 999
+   cand_prob=float(case["prob"].get(candidate,0.0))
+   formal3_prob=float(case["prob"].get(case["formal"][2],0.0))
+   formal2_prob=float(case["prob"].get(case["formal"][1],0.0))
+   ratio3=cand_prob/max(formal3_prob,1e-12)
+   ratio2=cand_prob/max(formal2_prob,1e-12)
+   if gate_type=="joint_rank": use_add=candidate_rank<=int(gate_value)
+   elif gate_type=="ratio_vs_t3": use_add=ratio3>=float(gate_value)
+   elif gate_type=="ratio_vs_same2": use_add=ratio2>=float(gate_value)
+   else:
+    rank_max,ratio3_min=gate_value
+    use_add=candidate_rank<=int(rank_max) and ratio3>=float(ratio3_min)
+   if not use_add: continue
+   added_count+=1
+   is_rescue=int(case["formal_hit"]==0 and case["actual_pair"]==candidate)
+   rescues+=is_rescue
+   if is_rescue: added_return+=case["payout"]
+   ms=monthly_stats.setdefault(case["month"],{"added_R":0,"rescues":0,"added_return":0})
+   ms["added_R"]+=1; ms["rescues"]+=is_rescue
+   if is_rescue: ms["added_return"]+=case["payout"]
+  total_hits=98+rescues; total_return=formal_dev_return+added_return; total_stake=57000+added_count*100
+  same_add_scan.append({"gate_type":gate_type,"gate_value":gate_value,"added_R":added_count,
+                        "rescues":rescues,"hits":total_hits,"rate":total_hits/190,
+                        "added_return":added_return,"marginal_roi":added_return/(added_count*100) if added_count else None,
+                        "return":total_return,"stake":total_stake,"roi":total_return/total_stake if total_stake else None,
+                        "monthly":monthly_stats})
+ same_add_by_hits=sorted(same_add_scan,key=lambda row:(row["hits"],row["roi"],-row["added_R"]),reverse=True)
+ same_add_by_roi=sorted([row for row in same_add_scan if row["rescues"]>=2],
+                        key=lambda row:(row["roi"],row["hits"],-row["added_R"]),reverse=True)
+ pd.DataFrame([{k:v for k,v in row.items() if k!="monthly"} for row in same_add_by_hits]).to_csv(OUT/"dev_same_second_selective_add_scan.csv",index=False)
+
  pd.DataFrame([{k:v for k,v in row.items() if k!="monthly"} for row in rescue_sorted]).to_csv(OUT/"dev_hybrid_miss_rescue_swap_scan.csv",index=False)
  pd.DataFrame([{k:v for k,v in row.items() if k!="monthly"} for row in add_sorted]).to_csv(OUT/"dev_hybrid_miss_rescue_add_scan.csv",index=False)
- miss_report={"summary":miss_summary,"top_swap":rescue_sorted[:15],"add_ticket":add_sorted}
+ miss_report={"summary":miss_summary,"top_swap":rescue_sorted[:15],"add_ticket":add_sorted,
+              "same_second_selective_top_hits":same_add_by_hits[:15],
+              "same_second_selective_top_roi":same_add_by_roi[:15]}
  (OUT/"dev_hybrid_miss_rescue_report.json").write_text(json.dumps(miss_report,ensure_ascii=False,indent=2))
  print("DEV_HYBRID_MISS_RESCUE",json.dumps(miss_report,ensure_ascii=False))
 
