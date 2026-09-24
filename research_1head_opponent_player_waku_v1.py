@@ -196,10 +196,10 @@ def main():
   sm={int(x.boat):float(x.opp_score) for _,x in rank[rank.race_code.eq(code)].iterrows()}
   pairs=[(a,b) for a in (2,3,4,5,6) for b in (2,3,4,5,6) if a!=b]
   bv={ab:float(base.get(ab,0.0)) for ab in pairs}; pv={ab:sm.get(ab[0],0)+sm.get(ab[1],0) for ab in pairs}
-  def z(v):
+  def zscore_map(v):
    a=np.array(list(v.values()),dtype=float); mu=float(a.mean()); sd=float(a.std()) or 1.0
    return {k:(x-mu)/sd for k,x in v.items()}
-  bz,pz=z(bv),z(pv); actual=str(r0["actual_combo"])
+  bz,pz=zscore_map(bv),zscore_map(pv); actual=str(r0["actual_combo"])
   for wgt in (0.05,0.10,0.15,0.20,0.25,0.30):
    mix={ab:bz[ab]+wgt*pz[ab] for ab in pairs}
    top=sorted(pairs,key=lambda ab:mix[ab],reverse=True)[:3]
@@ -217,6 +217,6 @@ def main():
  coef=model.named_steps["lr"].coef_[0]
  cf=pd.DataFrame({"feature":usable,"coef":coef}).sort_values("coef",key=lambda s:s.abs(),ascending=False)
  cf.to_csv(OUT/"dev_model_coefficients.csv",index=False)
- meta={"stage":"DEV_MODEL_FROZEN","parent_R":int(df.race_code.nunique()),"dev_R":int(df[df.month.isin(DEV)].race_code.nunique()),"support_R":int(df[df.month.isin(SUP)].race_code.nunique()),"selection_used_support_outcomes":False,"september_outcomes_read":False,"production_changed":False,"ph_missing":int(z["b1_pl_recent_p2"].isna().sum()),"waku_columns":int(len(w.columns)-1),"model_features":len(usable),"top_model_coefficients":cf.head(20).to_dict("records"),"top":s.head(20).to_dict("records") if len(s) else []}
+ meta={"stage":"DEV_MODEL_FROZEN","parent_R":int(z.race_code.nunique()),"dev_R":int(z[z.month.isin(DEV)].race_code.nunique()),"support_R":int(z[z.month.isin(SUP)].race_code.nunique()),"selection_used_support_outcomes":False,"september_outcomes_read":False,"production_changed":False,"ph_missing":int(z["b1_pl_recent_p2"].isna().sum()),"waku_columns":int(len(w.columns)-1),"model_features":len(usable),"top_model_coefficients":cf.head(20).to_dict("records"),"top":s.head(20).to_dict("records") if len(s) else []}
  (OUT/"meta.json").write_text(json.dumps(meta,ensure_ascii=False,indent=2)); print(json.dumps(meta,ensure_ascii=False))
 if __name__=="__main__": main()
