@@ -214,3 +214,72 @@ Next action:
 - inspect success/failure
 - if success, verify chosen stable/aggressive rules and Jul-Aug holdout precision/monthly stability
 - do not production-adopt unless the 40% target is supported out-of-sample.
+
+
+## Simultaneous-lag factor discovery — 2026-09-24
+User requested a broader search for unexpected reasons why boats 1 and 2 may BOTH be late at the start.
+
+Created:
+- `research/research_inner12_factor_discovery_v1.py`
+- `.github/workflows/research-inner12-factor-discovery-v1.yml`
+
+### Goal
+Do not start from the 3/4 head outcome. First explain/predict the inner-pair start collapse itself.
+
+### Labels
+- `dual_abs20`: actual ST1 >= .20 AND actual ST2 >= .20
+- `dual_vs3_03`: both ST1 and ST2 are >= .03 slower than actual ST3
+- `inner_vs_outer03`: faster of 1/2 is still >= .03 slower than faster of 3/4
+
+The final route endpoint (3 makuri OR 4 makuri-sashi) is recorded only as a secondary diagnostic and is NOT used to select lag factors.
+
+### Split / leakage contract
+- history bootstrap: 2025-10-01
+- Mar 2026: warm-up/research rows
+- Apr-May: train/search
+- Jun: validation used for factor screening
+- Jul-Aug: final holdout only
+- September outcomes unread
+- same-day result rows are loaded only after all target-day features are frozen
+- production unchanged
+
+### Broad feature families
+Known ST family:
+- national / Waku10 / meeting ST
+- prior actual-ST mean
+- recent3 / recent6 / recent12
+- prior ST volatility
+- late-start rates
+- last-start / recent drift
+- current exhibition ST and player-corrected predicted actual ST
+
+Unexpected/non-ST family:
+- motor 2/3ren and prior motor-history strength
+- prior original exhibition / turn / straight / standard display / foot type
+- current display time/rank
+- current original exhibition lap/turn/straight
+- tilt
+- wind speed / relative wind / wave / air/water temp / weather from cutoff snapshot where available
+- venue
+- race band
+- meeting day
+- 1/2 grade combination
+- selected raw pre-race race-card fields: F/L, accidents, age/weight, win/ren rates, meeting ST/finish and similar numeric context
+
+### Outputs
+- `factor_rows.csv`
+- `numeric_factor_ranking.csv`
+- `nonst_surprise_ranking.csv`
+- `categorical_factor_ranking.csv`
+- `interaction_ranking.csv`
+- `label_monthly.csv`
+- `meta.json`
+- `run.log`
+
+Numeric thresholds/directions are learned from Apr-May. June and Jul-Aug reuse those frozen thresholds. Pair interactions are chosen from train+June only; Jul-Aug never chooses a feature/rule.
+
+Next action:
+- dispatch `research-inner12-factor-discovery-v1`
+- inspect especially NON_ST surprises that have lift >1 in train, June, and Jul-Aug
+- prioritize factors that reproduce across more than one simultaneous-lag label
+- only after the lag mechanism is understood, feed the robust factors into the >=40% route model.
