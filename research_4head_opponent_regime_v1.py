@@ -231,6 +231,29 @@ def main():
     m3.to_csv(OUT/'three_survival_monthly.csv',index=False)
     print('THREE_SURVIVAL_MONTHLY',m3.to_json(orient='records',force_ascii=False))
     print('THREE_SURVIVAL_V1',tdf.to_json(orient='records',force_ascii=False))
+    # Stage v8: structural branch ticket simulation.
+    # June defines fixed q=.75 strong-3 and q=.50 3+2-collapse cuts; Jul/Aug are untouched holdout.
+    june=races[races.month.eq('2026-06')].copy()
+    strong3_cut=float(june.wall_b3_strength.quantile(.75))
+    break32_cut=float(june.wall_32break.quantile(.50))
+    def branch(r):
+        if r.wall_b3_strength>=strong3_cut: return 'THREE_SURVIVES'
+        if r.wall_32break>=break32_cut: return 'THREE_TWO_BREAK'
+        return 'MIXED_INNER'
+    races['struct_branch']=races.apply(branch,axis=1)
+    # Descriptive truth capture: does branch identify the expected opponent role?
+    br=[]
+    for split,dq in [('JUNE_DEV',june),('JUL_HOLDOUT',races[races.month.eq('2026-07')]),
+                     ('AUG_HOLDOUT',races[races.month.eq('2026-08')]),('JULAUG_HOLDOUT',races[races.month.isin(['2026-07','2026-08'])])]:
+        for b,g in dq.groupby('struct_branch'):
+            br.append({'split':split,'branch':b,'R':len(g),
+              'three_second_rate':float(g.three_second.mean()),'three_any_rate':float(g.three_in_pair.mean()),
+              'five_second_rate':float(g.five_follow_second.mean()),'five_third_rate':float(g.five_cutback_third.mean()),
+              'five_any_rate':float(g.five_in_pair.mean())})
+    bdf=pd.DataFrame(br)
+    bdf.to_csv(OUT/'structural_branch_v1.csv',index=False)
+    print('STRUCTURAL_BRANCH_TICKET_V1',bdf.to_json(orient='records',force_ascii=False))
+    print('STRUCTURAL_BRANCH_CUTS',json.dumps({'strong3_q':.75,'strong3_cut':strong3_cut,'break32_q':.50,'break32_cut':break32_cut}))
     fam=(races.groupby(['month','pair_family']).size().rename('R').reset_index())
     fam['pct']=fam.R/fam.groupby('month').R.transform('sum')*100
     fam.to_csv(OUT/'pair_family_monthly.csv',index=False)
@@ -241,7 +264,7 @@ def main():
     meta={'head4_R':len(races),'dev':'2026-06 only','holdout':['2026-07','2026-08'],
           'dev_R':len(dev),'holdout_R':len(hold),'SEPTEMBER_OUTCOMES_READ':False,
           'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':False,
-          'stage':'THREE_SURVIVAL_V1'}
+          'stage':'STRUCTURAL_BRANCH_TICKET_V1'}
     (OUT/'meta.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2))
     print('REGIME_MONTHLY',pct.to_json(orient='records',force_ascii=False))
     print('PAIR_TOP',pair.groupby('month').head(8).to_json(orient='records',force_ascii=False))
