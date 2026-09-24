@@ -1,0 +1,69 @@
+name: research-inner12-operational-shadow-v4
+
+on:
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -q pandas
+
+      - name: Download frozen Shadow V2 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: inner12-shadow-branch-v2
+          path: /tmp/v2
+          github-token: ${{ github.token }}
+          repository: merry02180218-ai/boatrace-backtest
+          run-id: 36016060009
+
+      - name: Preflight
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/inner12_operational_shadow_v4
+          test -f /tmp/v2/shadow_v2_all_base_rows.csv
+          python -m py_compile research/research_inner12_operational_shadow_v4.py
+          python - <<'PY'
+          from pathlib import Path
+          s=Path('research/research_inner12_operational_shadow_v4.py').read_text(encoding='utf-8')
+          assert '\\n' not in s
+          for x in [
+              'INNER12_NOVEL_OPERATIONAL_SHADOW_V4',
+              'A_DUAL_3_4',
+              'B_3HEAD',
+              'B_STRONG_GAP=.04',
+              '"status":"POSTHOC_SHADOW_ONLY"',
+              '"september_outcomes_read":False',
+              '"production_changed":False',
+          ]:
+              assert x in s, x
+          print('INNER12_OPERATIONAL_SHADOW_V4_PREFLIGHT_OK')
+          PY
+
+      - name: Evaluate operational Shadow V4
+        env:
+          INNER12_V2_ROWS: /tmp/v2/shadow_v2_all_base_rows.csv
+          INNER12_V4_OUTDIR: /tmp/inner12_operational_shadow_v4
+        run: |
+          set -o pipefail
+          python research/research_inner12_operational_shadow_v4.py | tee /tmp/inner12_operational_shadow_v4/run.log
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: inner12-operational-shadow-v4
+          path: /tmp/inner12_operational_shadow_v4/
+          retention-days: 30
