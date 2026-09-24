@@ -1,11 +1,7 @@
 name: auto-live-1head-v351-window
-on:
-  push:
-    paths:
-      - 'run_1head_v351_live_window.py'
-      - 'probe_1head_v351_boatcast_exhibition.py'
-      - '.github/workflows/auto-live-1head-v351-window.yml'
+'on':
   workflow_dispatch:
+
 permissions:
   contents: read
 jobs:
