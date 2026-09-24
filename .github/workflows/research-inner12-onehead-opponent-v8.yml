@@ -1,0 +1,108 @@
+name: research-inner12-onehead-opponent-v8
+
+on:
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards
+            data/programs/waku10
+            data/previews/stt
+            data/previews/tkz
+            data/previews/original_exhibition
+            data/previews/od3
+            data/results/realtime
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -q numpy pandas scipy scikit-learn
+
+      - name: Download frozen Stage-B rows
+        uses: actions/download-artifact@v4
+        with:
+          name: inner12-stageb-route-v1
+          path: /tmp/stageb
+          github-token: ${{ github.token }}
+          repository: merry02180218-ai/boatrace-backtest
+          run-id: 35992940551
+
+      - name: Download frozen September V7 decisions
+        uses: actions/download-artifact@v4
+        with:
+          name: inner12-unseen-september-v7
+          path: /tmp/sepv7
+          github-token: ${{ github.token }}
+          repository: merry02180218-ai/boatrace-backtest
+          run-id: 36053754347
+
+      - name: Preflight
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/inner12_onehead_opponent_v8
+          test -f /tmp/stageb/factor_rows.csv
+          test -f /tmp/sepv7/all_stagea_frozen.csv
+          test -f "${{ github.workspace }}/brcsv/data/results/realtime/2026/09/24.csv"
+          python -m py_compile             research/research_inner12_onehead_opponent_v8.py             research/research_inner12_ticket_roi_v6.py             onehead_production_profile.py
+          python - <<'PY'
+          from pathlib import Path
+          import onehead_production_profile as p
+          s=Path('research/research_inner12_onehead_opponent_v8.py').read_text(encoding='utf-8')
+          assert '\\n' not in s, 'literal escaped newline'
+          required=[
+              'INNER12_ONEHEAD_STYLE_OPPONENT_V8',
+              'ALPHA=float(oneprod.TICKET_ALPHA)',
+              'G2=float(oneprod.OPPONENT_CORE_SECOND_G2)',
+              'G3=float(oneprod.OPPONENT_CORE_THIRD_G3)',
+              'best + same-second + other-second',
+              'future_unseen_start',
+              '2026-09-25',
+              'production_changed',
+          ]
+          for x in required: assert x in s, x
+          assert p.TICKET_ALPHA==.70
+          assert p.OPPONENT_CORE_SECOND_G2==.45
+          assert p.OPPONENT_CORE_THIRD_G3==1.00
+          assert p.ATTACK_CORE_W_ONE_EX==.40
+          assert p.ATTACK_CORE_W_ONE_ST==.25
+          assert p.ATTACK_CORE_W_ONE_STRAIGHT==.15
+          assert p.ATTACK_CORE_W_ONE_ORIG_AVG==.20
+          print('INNER12_ONEHEAD_V8_PREFLIGHT_OK')
+          PY
+
+      - name: Run V8
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+          INNER12_STAGEB_ROWS: /tmp/stageb/factor_rows.csv
+          INNER12_SEP_V7_ROWS: /tmp/sepv7/all_stagea_frozen.csv
+          INNER12_V8_OUTDIR: /tmp/inner12_onehead_opponent_v8
+          PYTHONPATH: .
+        run: |
+          set -o pipefail
+          python research/research_inner12_onehead_opponent_v8.py             | tee /tmp/inner12_onehead_opponent_v8/run.log
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: inner12-onehead-opponent-v8
+          path: /tmp/inner12_onehead_opponent_v8/
+          retention-days: 30
