@@ -48,7 +48,7 @@ jobs:
         if: env.MODE == 'validate'
         run: |
           set -euo pipefail
-          python -m py_compile probe_1head_v351_boatcast_exhibition.py run_1head_v351_live_exhibition_gate.py run_1head_v351_live_finalize.py
+          python -m py_compile probe_1head_v351_boatcast_exhibition.py run_1head_v351_live_exhibition_gate.py run_1head_v351_live_finalize.py onehead_five_second_topup.py
           python - <<'PY'
           import json
           import onehead_production_profile as p
@@ -136,7 +136,7 @@ jobs:
           import json, os
           x=json.load(open('/tmp/result/'+os.environ['RACE_CODE']+'.json'))
           assert x['result_or_payout_used'] is False and x['chronology_guard'] is True
-          print('MANUAL_LIVE_FINAL',json.dumps({'race_code':x['race_code'],'status':x['status'],'final_head_p':x['final_head_p'],'opp_mass':x['opp_mass'],'head_exhibition_pass':x['head_exhibition_pass'],'tickets':x['tickets'],'result_or_payout_used':False,'chronology_guard':True},ensure_ascii=False))
+          print('MANUAL_LIVE_FINAL',json.dumps({'race_code':x['race_code'],'status':x['status'],'final_head_p':x['final_head_p'],'opp_mass':x['opp_mass'],'head_exhibition_pass':x['head_exhibition_pass'],'tickets':x['tickets'],'official_stakes_yen':x.get('official_stakes_yen',[]),'official_total_stake_yen':x.get('official_total_stake_yen',0),'five_second_topup_applied':x.get('five_second_topup_applied',False),'five_second_topup_extra_tickets':x.get('five_second_topup_extra_tickets',[]),'result_or_payout_used':False,'chronology_guard':True},ensure_ascii=False))
           PY
 
       - name: Evaluate 1HEAD expansion Shadow
