@@ -847,3 +847,151 @@ Next:
 - inspect 3/4/5 route precision after exact 4HEAD exclusion
 - prioritize rules >=40% in June+July with meaningful volume, then inspect August only as confirmation
 - if no robust >=40% remains, change the route decomposition rather than drifting back into the existing 4HEAD model.
+
+
+## Strict non-overlap salvage + clean posthoc candidate — 2026-09-24
+
+Run:
+- 35998682116
+- workflow: research-inner12-novel-nonoverlap-v1
+- displayed FAILURE
+
+Root cause:
+- Stage-B rebuild: SUCCESS
+- exact 4HEAD historical primitive prep: SUCCESS
+- exact 4HEAD replay itself completed and printed `HEAD4_PH5_LIVE_WALKFORWARD_OK`
+- the shell step failed only because `tee` tried to open `/tmp/head4_ph5_live_walkforward/run.log` before that directory existed:
+  `tee: /tmp/head4_ph5_live_walkforward/run.log: No such file or directory`
+- exact `race_detail.csv` was nevertheless generated and uploaded in artifact 10809251848.
+
+Workflow fix:
+- commit `273b8d2cd038e0a227b29fd6cc1fe6d0cdc80bb7`
+- creates `/tmp/head4_ph5_live_walkforward` before tee.
+
+Search hygiene fix:
+- numeric venue code had accidentally been eligible as a numeric feature.
+- commit `a300dc6911b898cf74f04931256732a4b3325ec7`
+- venue is now categorical only.
+
+### Artifact salvage analysis
+Used exact artifacts:
+- Stage-B completed artifact from Run 35992940551 / artifact 10805697327
+- exact 4HEAD replay artifact from Run 35998682116 / artifact 10809251848
+
+Strict non-overlap means:
+- race is present in exact 4HEAD race_detail
+- existing 4HEAD `production_bet == 0`
+
+Monthly strict non-overlap universe:
+- Jun: Stage-A 195 / strict non-overlap 173 / existing4 overlap 5 / not comparable 17
+- Jul: Stage-A 229 / strict non-overlap 214 / existing4 overlap 4 / not comparable 11
+- Aug: Stage-A 180 / strict non-overlap 146 / existing4 overlap 6 / not comparable 28
+
+Baseline in strict non-overlap:
+- outer WIDE:
+  - Jun 31.21%
+  - Jul 30.37%
+  - Aug 33.56%
+- outer CORE:
+  - Jun 29.48%
+  - Jul 28.50%
+  - Aug 31.51%
+
+### Rejected apparent rule
+An apparent high-volume rule using `pre_pair_absdiff_stretch` looked strong, but audit found that `stretch` can default to 0.5 when prior preview data is unavailable.
+About one-third of selected rows had both inner boats at default 0.5.
+After removing both-default rows, the August rate fell below 40%.
+Therefore this branch is REJECTED as missing-default contaminated.
+
+### Clean posthoc Shadow candidate
+After removing missing-default-driven ideas and generic 4-strength ideas, the simplest stable candidate was:
+
+- existing 4HEAD production NONFIRE
+- GLOBAL Stage-A already satisfied
+- `boat4 prior_late20_rate <= 0.20`
+  OR
+- `boat5 prior_late20_rate >= 0.40`
+
+Interpretation:
+- boat4 has a reliable prior-only start history,
+  OR
+- boat5 has a distinctly late prior-start profile.
+This is a field/start-configuration signal, not a generic "boat4 is strong" signal.
+
+These are prior-only causal player-ST history features from `player_stats`; same-day outcomes are not used to construct them.
+
+Historical rates in the exact 4HEAD NONFIRE universe:
+- Jun: 65R / outer WIDE 26 = **40.00%**
+- Jul: 72R / outer WIDE 29 = **40.28%**
+- Aug: 52R / outer WIDE 21 = **40.38%**
+- total: 189R / 76 = **40.21%**
+- average volume: 63R/month
+
+Outer WIDE definition:
+- 3 makuri
+- 3 makuri-sashi
+- 4 makuri
+- 4 makuri-sashi
+- 5 makuri
+- 5 makuri-sashi
+
+Aggregate route composition in 189R:
+- 3 family: 37/189 = **19.58%**
+  - 3 makuri 20 = 10.58%
+  - 3 makuri-sashi 17 = 8.99%
+- 4 family: 29/189 = **15.34%**
+  - 4 makuri 17 = 8.99%
+  - 4 makuri-sashi 12 = 6.35%
+- 5 family: 10/189 = **5.29%**
+  - 5 makuri 2 = 1.06%
+  - 5 makuri-sashi 8 = 4.23%
+- outer CORE (excludes 5 makuri): 74/189 = 39.15%
+- 1 escape: 67/189 = 35.45%
+
+Monthly composition:
+Jun 65R:
+- WIDE 40.00%
+- CORE 38.46%
+- 1 escape 36.92%
+- 3 family 18.46%
+- 4 family 10.77%
+- 5 family 10.77%
+
+Jul 72R:
+- WIDE 40.28%
+- CORE 40.28%
+- 1 escape 31.94%
+- 3 family 22.22%
+- 4 family 16.67%
+- 5 family 1.39%
+
+Aug 52R:
+- WIDE 40.38%
+- CORE 38.46%
+- 1 escape 38.46%
+- 3 family 17.31%
+- 4 family 19.23%
+- 5 family 3.85%
+
+This is materially different from the existing 4HEAD production model:
+- existing 4HEAD fires are explicitly excluded.
+- 3-family is the largest head component overall.
+- target is a 3/4/5 external-attack regime, not 4-head alone.
+
+### Threshold robustness
+Nearby rounded thresholds were also checked.
+Example:
+- b4 late20 <= .20 OR b5 late20 >= .40:
+  40.00 / 40.28 / 40.38 by month.
+This is not a knife-edge exact-quantile result.
+
+Important caveat:
+- August had already been seen by the time this cleanup/salvage analysis was done.
+- Therefore this candidate is **POSTHOC_SHADOW_ONLY**, not a newly pristine validated production rule.
+- September outcomes remain unread and must not be used casually.
+- production remains unchanged.
+
+Recommended next step:
+- freeze this simple rounded Shadow rule as the first genuine non-overlap candidate.
+- next research should predict WHICH head among 3/4/5 inside this regime, rather than rediscovering whether 4 is strong.
+- 3-family should be the first branch because it is the largest component (19.58%).
