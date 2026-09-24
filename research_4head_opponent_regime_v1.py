@@ -357,6 +357,39 @@ def main():
     print('STRUCTURAL_MISS_DECOMP_V1',ms.to_json(orient='records',force_ascii=False))
     print('STRUCTURAL_MISS_PAIRS_V1',ps.to_json(orient='records',force_ascii=False))
     print('STRUCTURAL_MISS_DETAIL_V1',md.to_json(orient='records',force_ascii=False))
+    # Stage v12: THREE_TWO_BREAK SECOND rescue diagnostics.
+    # Candidate rescue rules are fixed/mechanical, not tuned on Jul-Aug outcomes.
+    # We test whether promoting 5/6/3 into the SECOND candidate set can recover misses.
+    br=[]
+    for _,r in races.iterrows():
+        base_row=z[z.race_code.eq(r.race_code)].iloc[0]
+        diag=json.loads(base_row.opponent_diag); sr=[int(x) for x in diag['second_rank']]
+        current_secs=sr[:2]
+        if float(diag['p2'][str(sr[1])])-float(diag['p2'][str(sr[2])])<=0.11:
+            current_secs=current_secs+[sr[2]]
+        actual_s=int(r.actual_second)
+        for rule in ['CURRENT','ADD5','ADD56','ADD563']:
+            secs=list(current_secs)
+            if r.struct_branch=='THREE_TWO_BREAK':
+                adds={'CURRENT':[],'ADD5':[5],'ADD56':[5,6],'ADD563':[5,6,3]}[rule]
+                for b in adds:
+                    if b not in secs:secs.append(b)
+            br.append({'race_code':r.race_code,'month':r.month,'branch':r.struct_branch,'rule':rule,
+                       'actual_second':actual_s,'captured':int(actual_s in secs),
+                       'second_candidates':','.join(map(str,secs)),'candidate_count':len(secs)})
+    bd=pd.DataFrame(br)
+    bd.to_csv(OUT/'break_second_rescue_v1_detail.csv',index=False)
+    bsum=(bd.groupby(['month','rule']).agg(R=('race_code','size'),second_capture=('captured','sum'),
+          avg_second_candidates=('candidate_count','mean')).reset_index())
+    bh=bd[bd.month.isin(['2026-07','2026-08'])]
+    bhold=(bh.groupby('rule').agg(R=('race_code','size'),second_capture=('captured','sum'),
+           avg_second_candidates=('candidate_count','mean')).reset_index())
+    bbreak=bh[bh.branch.eq('THREE_TWO_BREAK')]
+    bbreaksum=(bbreak.groupby('rule').agg(R=('race_code','size'),second_capture=('captured','sum'),
+                avg_second_candidates=('candidate_count','mean')).reset_index())
+    print('BREAK_SECOND_RESCUE_V1_MONTHLY',bsum.to_json(orient='records',force_ascii=False))
+    print('BREAK_SECOND_RESCUE_V1_HOLDOUT',bhold.to_json(orient='records',force_ascii=False))
+    print('BREAK_SECOND_RESCUE_V1_BREAK_HOLDOUT',bbreaksum.to_json(orient='records',force_ascii=False))
     fam=(races.groupby(['month','pair_family']).size().rename('R').reset_index())
     fam['pct']=fam.R/fam.groupby('month').R.transform('sum')*100
     fam.to_csv(OUT/'pair_family_monthly.csv',index=False)
@@ -367,7 +400,7 @@ def main():
     meta={'head4_R':len(races),'dev':'2026-06 only','holdout':['2026-07','2026-08'],
           'dev_R':len(dev),'holdout_R':len(hold),'SEPTEMBER_OUTCOMES_READ':False,
           'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':False,
-          'stage':'STRUCTURAL_MISS_DECOMP_V1'}
+          'stage':'BREAK_SECOND_RESCUE_V1'}
     (OUT/'meta.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2))
     print('REGIME_MONTHLY',pct.to_json(orient='records',force_ascii=False))
     print('PAIR_TOP',pair.groupby('month').head(8).to_json(orient='records',force_ascii=False))
