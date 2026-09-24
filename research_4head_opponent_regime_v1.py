@@ -124,6 +124,51 @@ def main():
     bdf.to_csv(OUT/'five_binary_classifier_v1.csv',index=False)
     print('FIVE_BINARY_CLASSIFIER',bdf.to_json(orient='records',force_ascii=False))
     print('FIVE_BINARY_SELECTED_C',bestBC)
+    # Stage v5: structure-first test. Does collapse/weakness of the inner wall (1-3)
+    # explain when boat 5 follows the successful 4-corner attack?
+    # All ingredients are pre-race causal. Thresholds are selected on June only.
+    def zsafe(s):
+        x=pd.to_numeric(s,errors='coerce')
+        sd=x.std(ddof=0)
+        return (x-x.mean())/(sd if pd.notna(sd) and sd>1e-12 else 1.0)
+    wall_parts=[]
+    # High p2 / player frame+recent / Waku WR-SR imply a stronger surviving inner wall.
+    for col in ['p2','pl_frame_p2','pl_recent_p2','w10_wr','w10_sr']:
+        vals=[]
+        for _,r in races.iterrows():
+            vv=[r.get(f'b{b}_{col}',np.nan) for b in (1,2,3)]
+            vals.append(float(np.nanmean(vv)) if np.isfinite(pd.to_numeric(pd.Series(vv),errors='coerce')).any() else np.nan)
+        races[f'wall_{col}']=vals
+        wall_parts.append(f'wall_{col}')
+    # Relative-to-4 Waku WR: larger inner relative value means a harder wall for 4/5.
+    if all(f'b{b}_w10_rel4_wr' in races.columns for b in (1,2,3)):
+        races['wall_rel4_wr']=races[[f'b{b}_w10_rel4_wr' for b in (1,2,3)]].mean(axis=1)
+        wall_parts.append('wall_rel4_wr')
+    # Standardize globally only for descriptive scoring; threshold selection remains June-only.
+    # No outcomes enter this score.
+    races['inner_wall_strength']=pd.concat([zsafe(races[x]) for x in wall_parts],axis=1).mean(axis=1)
+    races['inner_wall_collapse']=-races.inner_wall_strength
+    rows=[]
+    june=races[races.month.eq('2026-06')].copy()
+    qs=[0.25,0.40,0.50,0.60,0.75]
+    cuts=[float(june.inner_wall_collapse.quantile(q)) for q in qs]
+    for q,cut in zip(qs,cuts):
+        for split,dq in [('JUNE_DEV',june),('JUL_HOLDOUT',races[races.month.eq('2026-07')]),
+                         ('AUG_HOLDOUT',races[races.month.eq('2026-08')]),('JULAUG_HOLDOUT',races[races.month.isin(['2026-07','2026-08'])])]:
+            hi=dq[dq.inner_wall_collapse.ge(cut)]
+            lo=dq[dq.inner_wall_collapse.lt(cut)]
+            rows.append({'q':q,'cut':cut,'split':split,'R':len(dq),
+                         'high_collapse_R':len(hi),'high_five_rate':float(hi.five_in_pair.mean()) if len(hi) else np.nan,
+                         'low_R':len(lo),'low_five_rate':float(lo.five_in_pair.mean()) if len(lo) else np.nan,
+                         'lift':float(hi.five_in_pair.mean()-lo.five_in_pair.mean()) if len(hi) and len(lo) else np.nan})
+    wdf=pd.DataFrame(rows)
+    # choose June threshold by lift, requiring at least 6 races on each side to avoid tiny-cell fitting
+    cand=wdf[(wdf.split.eq('JUNE_DEV')) & (wdf.high_collapse_R.ge(6)) & (wdf.low_R.ge(6))]
+    bestQ=float(cand.sort_values(['lift','q'],ascending=[False,True]).iloc[0].q)
+    wdf['selected_q']=bestQ
+    wdf.to_csv(OUT/'inner_wall_five_v1.csv',index=False)
+    print('INNER_WALL_FIVE_V1',wdf.to_json(orient='records',force_ascii=False))
+    print('INNER_WALL_SELECTED_Q',bestQ)
     fam=(races.groupby(['month','pair_family']).size().rename('R').reset_index())
     fam['pct']=fam.R/fam.groupby('month').R.transform('sum')*100
     fam.to_csv(OUT/'pair_family_monthly.csv',index=False)
@@ -134,7 +179,7 @@ def main():
     meta={'head4_R':len(races),'dev':'2026-06 only','holdout':['2026-07','2026-08'],
           'dev_R':len(dev),'holdout_R':len(hold),'SEPTEMBER_OUTCOMES_READ':False,
           'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':False,
-          'stage':'FIVE_BINARY_CLASSIFIER_V1'}
+          'stage':'INNER_WALL_FIVE_V1'}
     (OUT/'meta.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2))
     print('REGIME_MONTHLY',pct.to_json(orient='records',force_ascii=False))
     print('PAIR_TOP',pair.groupby('month').head(8).to_json(orient='records',force_ascii=False))
