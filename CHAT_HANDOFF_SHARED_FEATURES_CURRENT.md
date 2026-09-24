@@ -386,3 +386,39 @@ Automatically discovered current Run:
 User said the THIRD rescue “doesn't seem to change much” and explicitly asked to research from a different viewpoint.
 User reacted positively to the regime/development idea and said it sounded good.
 Therefore continue regime-first research, not another small PLAYERHistory/Waku10 THIRD threshold sweep.
+
+
+## 統合LIVE自動運用の共通仕様（2026-09-24追記）
+
+今後、1号艇・3号艇・4号艇など他の頭モデルも、4号艇で確立したLIVE運用方式に揃えて統合する予定。各モデルを統合する際は以下を共通仕様として扱う。
+
+### 自動運用フロー
+1. 朝の事前スキャンで候補レースを抽出し、result-blindなwatchlistへ登録する。
+2. watchdogを定期自動起動し、候補ごとに展示後の直前データ・締切前オッズを取得する。
+3. 直前判定は BET / PASS / NO_BET_DATA_NOT_READY を明示する。
+4. PASSは通知しない。BETだけ通知する。
+5. NO_BET_DATA_NOT_READYは「完了」にしない。診断artifactは残してよいがcanonical完了artifact名を使わず、安全時間内なら次のscheduler tickで自動再試行する。
+6. BET/PASSに到達した時だけcanonical完了artifactを作り、同一レースの重複実行を防ぐ。
+7. target raceの結果・払戻は判定前に絶対に読まない。target_race_result_used=false / payout_used=false を維持する。
+
+### BET通知の共通仕様
+BET通知には最低限、以下を含める。
+- モデル名 / 対象場 / R / 締切
+- BET判定に使った主要指標
+- 3連単の買い目
+- 各買い目の締切前取得オッズ
+- 各買い目への購入金額振分
+- 合計購入額
+- 各買い目の的中時想定払戻
+
+資金配分の現行標準は「1レース上限5,000円、100円単位」。4号艇では取得オッズの逆数比例（dutching）で、買い目間の的中時払戻ができるだけ均等になるよう自動配分する。今後ほかのモデルを統合する際も、特別な検証済みstaking policyがない限り、この方式を共通の初期仕様とする。
+
+### 4号艇での基準実装
+- watchdog: `.github/workflows/live-4head-120r-watchdog.yml`
+- 直前判定: `run_4head_120r_lastminute_fast.py`
+- BET通知: `notify_head4_bet_github_issue.py`
+- 2026-09-24に NO_BET_DATA_NOT_READY を再試行可能に修正: commit `a21b1c2283ada5c6485658b07b57c75be44f7dcf`
+- BET通知へ買い目・5,000円振分・想定払戻を追加: commit `0d7c2fd78498e0b61b691587181ad42f0c918cbf`
+
+### 将来の統合時の注意
+各頭モデル固有の「頭判定」「相手選び」「採用閾値」は勝手に共通化しない。共通化するのはLIVEの監視・再試行・通知・資金配分インターフェース。モデル固有ロジックはそれぞれの正式採用版を保持したまま、最終的に同じ統合watchdog/通知形式へ接続する。
