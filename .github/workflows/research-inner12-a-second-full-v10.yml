@@ -1,0 +1,68 @@
+name: research-inner12-a-second-full-v10
+on:
+  workflow_dispatch:
+permissions:
+  actions: read
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards
+            data/programs/waku10
+            data/previews/stt
+            data/previews/tkz
+            data/previews/original_exhibition
+            data/previews/od3
+            data/results/realtime
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scipy scikit-learn
+      - uses: actions/download-artifact@v4
+        with:
+          name: inner12-stageb-route-v1
+          path: /tmp/stageb
+          github-token: ${{ github.token }}
+          repository: merry02180218-ai/boatrace-backtest
+          run-id: 35992940551
+      - uses: actions/download-artifact@v4
+        with:
+          name: inner12-unseen-september-v7
+          path: /tmp/sepv7
+          github-token: ${{ github.token }}
+          repository: merry02180218-ai/boatrace-backtest
+          run-id: 36053754347
+      - name: Preflight
+        run: |
+          set -euo pipefail
+          python -m py_compile research/research_inner12_onehead_opponent_v8_feature_export.py research/research_inner12_a_second_full_v10.py
+          grep -q 'production_changed.*False' research/research_inner12_a_second_full_v10.py
+          grep -q 'B_changed.*False' research/research_inner12_a_second_full_v10.py
+      - name: Rebuild V8 and export raw features
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+          INNER12_STAGEB_ROWS: /tmp/stageb/factor_rows.csv
+          INNER12_SEP_V7_ROWS: /tmp/sepv7/all_stagea_frozen.csv
+          INNER12_V8_OUTDIR: /tmp/v8x
+          PYTHONPATH: .
+        run: python research/research_inner12_onehead_opponent_v8_feature_export.py | tee /tmp/v8x.log
+      - name: Run V10
+        env: {PYTHONPATH: .}
+        run: python research/research_inner12_a_second_full_v10.py | tee /tmp/v10.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: inner12-a-second-full-v10
+          path: |
+            /tmp/inner12_a_second_full_v10/
+            /tmp/v8x/sep_candidate_features.csv
+            /tmp/v10.log
+          retention-days: 30
