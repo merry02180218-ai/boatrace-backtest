@@ -520,3 +520,105 @@ Monthly inner_vs_outer03:
 - Therefore the next problem is specifically Stage B:
   **given that inner12 collapse risk is high, identify when 3 can convert it into makuri or 4 can convert it into makuri-sashi.**
 - Do not add more generic 1/2-lag filters blindly; the bottleneck has shifted from detecting collapse to predicting conversion/route.
+
+
+## Stage-B route discovery V1 — prepared 2026-09-24
+
+User asked to continue after adding 4-corner makuri and other attack patterns.
+
+Created:
+- `research/research_inner12_stageb_route_discovery_v1.py`
+- `.github/workflows/research-inner12-stageb-route-v1.yml`
+
+Workflow is manual-only.
+
+### Frozen Stage-A input
+Only GLOBAL_STAGEA_V1 candidates enter Stage B:
+- pair_mean_waku_sr >= 3.7
+- pair_mean_prior_st_mean >= 0.17811274129319477
+- pair_min_prior_late18_rate >= 0.43497650793650783
+
+Suminoe Ultra membership is recorded as a diagnostic flag.
+
+### Stage-B primary route labels
+Individual:
+- 1 escape
+- 3 makuri
+- 3 makuri-sashi
+- 4 makuri
+- 4 makuri-sashi
+- 5 makuri
+- 5 makuri-sashi
+
+Grouped:
+- 3 family = 3M + 3MS
+- 4 family = 4M + 4MS
+- 5 family = 5M + 5MS
+- outer CORE = 3M + 3MS + 4M + 4MS + 5MS
+- outer WIDE = CORE + 5M
+
+Exploratory baseline from previously generated factor_rows inside GLOBAL Stage-A:
+- Apr-May:
+  - outer CORE ~35.88%
+  - outer WIDE ~37.96%
+- June:
+  - CORE ~30.35%
+  - WIDE ~31.84%
+- Jul-Aug:
+  - CORE ~28.71%
+  - WIDE ~30.41%
+
+Thus the grouped outer-attack target starts close enough to 40% that a reproducible Stage-B conversion filter may be feasible.
+
+### Added Stage-B feature families
+For boats 3/4/5:
+- national / local strength
+- motor2 / motor3
+- Waku10 ST / win / start rank
+- meeting ST
+- prior actual-ST mean / recent ST / volatility / late rates
+- prior motor / exhibition / turn / straight / display / foot
+- current exhibition ST and player-corrected predicted actual ST
+- current display time/rank
+- current tilt
+- current original exhibition lap/turn/straight/avg
+- raw bounded pre-race fields
+
+Relative attack geometry:
+- boat3 minus boat4 feature gaps
+- boat4 minus boat5 gaps
+- boat3 minus boat5 gaps
+- predicted-ST gaps 3 vs 4, 4 vs 5, 3 vs 5
+- inner-fast vs attack-fast predicted ST
+
+Environment / venue categories remain available.
+
+### Leakage corrections made before dispatch
+Important preflight finding:
+1. initial generated source had a literal escaped `\n` in meta JSON source.
+2. more importantly, lag outcome columns were not initially inside META_KEYS and could have entered numeric feature discovery.
+
+Both were fixed BEFORE workflow dispatch:
+- outcome columns excluded:
+  - actual_st*
+  - dual_abs20
+  - dual_vs3_03
+  - inner_vs_outer03
+  - route_target
+  - all route labels
+- holdout is not used for threshold direction, category choice, interaction candidate choice, or ranking tie-breaks.
+- Jul-Aug remains report-only.
+- September outcomes unread.
+- production unchanged.
+
+Workflow preflight explicitly checks these leakage guards plus py_compile.
+
+Next action:
+- manually dispatch `research-inner12-stageb-route-v1`
+- on SUCCESS inspect:
+  - route baselines
+  - individual route differentiators
+  - outer CORE/WIDE rules with >=40% train+June if any
+  - Jul-Aug report-only reproduction
+  - which 3/4/5 features actually matter
+- do not adopt a final route rule until the conversion structure is understood.
