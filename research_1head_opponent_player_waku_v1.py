@@ -651,6 +651,67 @@ def main():
  (OUT/"dev_same_second_market_gate_report.json").write_text(json.dumps(market_report,ensure_ascii=False,indent=2))
  print("DEV_SAME_SECOND_MARKET_GATE",json.dumps(market_report,ensure_ascii=False))
 
+ # Frozen one-shot SUPPORT check for the selected DEV market gate.
+ # Selection rule was frozen before opening Jul-Aug outcomes:
+ # same_second_next + ratio_vs_formal3 >= 1.40 + EV floor (.78 * pair_prob * closing_odds) >= .75.
+ frozen_ratio_cut=1.40; frozen_ev_cut=.75
+ support_market_rows=[]
+ for r0 in rr["H078_M375"]:
+  code=str(r0["race_code"]).zfill(12); month=code[:4]+"-"+code[4:6]
+  if month not in SUP: continue
+  p2_s,pc_s=v365.formal_post_five6(r0); prob_s=v299.pair_prob(p2_s,pc_s,prod.TICKET_ALPHA)
+  formal_s=v299.STRATEGIES["HYBRID"](p2_s,pc_s,prob_s)[:3]; formal_set_s=set(formal_s)
+  first_second_s=int(formal_s[0][0])
+  joint_s=v299.joint_order(prob_s)
+  candidate_s=next((pair for pair in joint_s if pair not in formal_set_s and pair[0]==first_second_s),None)
+  closing_odds_s=None; ratio3_s=None; ev_floor_s=None; add_s=False
+  if candidate_s is not None and not odds_df.empty and code in odds_idx.index:
+   odds_row_s=odds_idx.loc[code]; odds_row_s=odds_row_s.iloc[-1] if isinstance(odds_row_s,pd.DataFrame) else odds_row_s
+   ticket_s=f"1-{candidate_s[0]}-{candidate_s[1]}"
+   try: closing_odds_s=float(odds_row_s[ticket_s])
+   except: closing_odds_s=None
+   if closing_odds_s is not None and np.isfinite(closing_odds_s) and closing_odds_s>0:
+    cand_prob_s=float(prob_s.get(candidate_s,0.0))
+    formal3_prob_s=float(prob_s.get(formal_s[2],0.0))
+    ratio3_s=cand_prob_s/max(formal3_prob_s,1e-12)
+    ev_floor_s=.78*cand_prob_s*closing_odds_s
+    add_s=bool(ratio3_s>=frozen_ratio_cut and ev_floor_s>=frozen_ev_cut)
+  actual_s=str(r0["actual_combo"])
+  actual_parts_s=actual_s.split("-")
+  actual_pair_s=(int(actual_parts_s[1]),int(actual_parts_s[2])) if len(actual_parts_s)==3 and actual_parts_s[0]=="1" else None
+  formal_hit_s=int(actual_pair_s in formal_set_s) if actual_pair_s else 0
+  rescue_hit_s=int(add_s and candidate_s==actual_pair_s) if actual_pair_s else 0
+  new_hit_s=int(formal_hit_s or rescue_hit_s)
+  pay_s=int(payouts.get(code,0))
+  support_market_rows.append({"race_code":code,"month":month,"formal_hit":formal_hit_s,"rescue_hit":rescue_hit_s,
+      "new_hit":new_hit_s,"added":int(add_s),"candidate":str(candidate_s),"closing_odds":closing_odds_s,
+      "ratio3":ratio3_s,"ev_floor":ev_floor_s,"payout":pay_s})
+ support_market=pd.DataFrame(support_market_rows)
+ support_market.to_csv(OUT/"support_frozen_same_second_market_gate.csv",index=False)
+ support_monthly={}
+ for month,g in support_market.groupby("month"):
+  support_monthly[month]={"R":int(len(g)),"formal_hits":int(g.formal_hit.sum()),"new_hits":int(g.new_hit.sum()),
+                          "added_R":int(g.added.sum()),"rescues":int(g.rescue_hit.sum()),
+                          "return":int(g.loc[g.new_hit.eq(1),"payout"].sum())}
+ support_formal_return=int(support_market.loc[support_market.formal_hit.eq(1),"payout"].sum())
+ support_new_return=int(support_market.loc[support_market.new_hit.eq(1),"payout"].sum())
+ support_added_R=int(support_market.added.sum()); support_R=len(support_market)
+ support_market_result={
+   "rule":"same_second_next fourth ticket; ratio_vs_formal3 >= 1.40; EV_floor(.78*pair_prob*closing_odds) >= .75",
+   "selection_basis":"DEV-only frozen before SUPPORT outcome evaluation",
+   "R":support_R,
+   "formal":{"hits":int(support_market.formal_hit.sum()),"return":support_formal_return,
+             "stake":support_R*300,"roi":support_formal_return/(support_R*300) if support_R else None},
+   "new":{"hits":int(support_market.new_hit.sum()),"return":support_new_return,
+          "stake":support_R*300+support_added_R*100,
+          "roi":support_new_return/(support_R*300+support_added_R*100) if support_R else None},
+   "added_R":support_added_R,"rescues":int(support_market.rescue_hit.sum()),
+   "monthly":support_monthly,"support_used_for_selection":False,
+   "september_outcomes_read":False,"production_changed":False
+ }
+ (OUT/"support_frozen_same_second_market_gate.json").write_text(json.dumps(support_market_result,ensure_ascii=False,indent=2))
+ print("SUPPORT_FROZEN_SAME_SECOND_MARKET_GATE",json.dumps(support_market_result,ensure_ascii=False))
+
  pd.DataFrame([{k:v for k,v in row.items() if k!="monthly"} for row in rescue_sorted]).to_csv(OUT/"dev_hybrid_miss_rescue_swap_scan.csv",index=False)
  pd.DataFrame([{k:v for k,v in row.items() if k!="monthly"} for row in add_sorted]).to_csv(OUT/"dev_hybrid_miss_rescue_add_scan.csv",index=False)
  miss_report={"summary":miss_summary,"top_swap":rescue_sorted[:15],"add_ticket":add_sorted,
