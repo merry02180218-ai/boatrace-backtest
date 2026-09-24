@@ -34,7 +34,7 @@ for day in pd.date_range('2026-07-01','2026-08-31'):
         if first!='3': continue
         second=str(rr.get('2着_艇番','')).strip()
         third=str(rr.get('3着_艇番','')).strip()
-        if second not in '12456' or third not in '12456': continue
+        if second not in {'1','2','4','5','6'} or third not in {'1','2','4','5','6'}: continue
         rows.append({'date':day.date(),'race_code':rc,'second':int(second),'third':int(third),'core':rc in core_codes})
 d=pd.DataFrame(rows)
 print('RESULT_COL_BASELINE_ROWS',len(d))
