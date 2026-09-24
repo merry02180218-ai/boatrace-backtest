@@ -14,8 +14,9 @@ jobs:
       - name: Download CORE107
         env: {GH_TOKEN: "${{ github.token }}"}
         run: |
-          mkdir -p core107
+          mkdir -p core107 union53
           gh run download 35892602362 --repo ${{ github.repository }} --name research-3head-newcore-fast-v20 --dir core107
+          gh run download 35960039375 --repo ${{ github.repository }} --name audit-3head-union-head53-opponent-v15 --dir union53
       - run: python -m py_compile research/research_3head_broad_roi_v24.py
       - name: Run BROAD closing-odds ROI
         shell: bash
