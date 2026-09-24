@@ -161,7 +161,7 @@ def main():
  }
  ab=[]
  for name,cols0 in fams.items():
-  cols=[x for x in cols0 if x in train.columns and train[x].notna().sum()>=30]
+  cols=[x for x in cols0 if x in rank.columns and rank.loc[rank.race_code.isin(dev_codes),x].notna().sum()>=30]\n  train=rank[rank.race_code.isin(dev_codes)].copy()
   if not cols: continue
   pipe=Pipeline([("imp",SimpleImputer(strategy="median")),("sc",StandardScaler()),("lr",LogisticRegression(C=.25,max_iter=2000,class_weight="balanced"))])
   pipe.fit(train[cols],train["y"])
