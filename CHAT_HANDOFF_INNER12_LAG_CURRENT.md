@@ -448,3 +448,75 @@ Important methodology note:
 - September outcomes remain unread and should be preserved for later prospective/fresh validation unless the user explicitly changes that policy.
 - Stage-A target is the start-collapse mechanism, NOT final 3-makuri/4-makuri-sashi route precision.
 - Next after validator SUCCESS: inspect final Stage-A parity and then build Stage-B route discriminator inside Stage-A candidates.
+
+
+## Frozen Stage-A validation result — Run 35971699925 SUCCESS
+Run:
+- https://github.com/merry02180218-ai/boatrace-backtest/actions/runs/35971699925
+- head SHA: 44b356bab4379bc364f76e32909f8617c8dc867a
+- both validators SUCCESS
+- September outcomes unread
+- same-day result leakage: false
+- production unchanged
+
+### SUMINOE_ULTRA authoritative replay
+Rule:
+- venue Suminoe
+- min(b1_prior_late18_rate,b2_prior_late18_rate) >= 0.435
+
+Overall Mar-Aug:
+- 123R / inner_vs_outer03 76 = **61.79%**
+- dual_abs20 37/123 = 30.08%
+- dual_vs3_03 38/123 = 30.89%
+- final route endpoint (3 makuri OR 4 makuri-sashi) 19/123 = 15.45%
+
+Monthly inner_vs_outer03:
+- Mar 17/28 = 60.71%
+- Apr 13/19 = 68.42%
+- May 8/16 = 50.00%
+- Jun 21/31 = 67.74%
+- Jul 12/20 = 60.00%
+- Aug 5/9 = 55.56%
+
+Jul-Aug route endpoint:
+- Jul 7/20 = 35.0%
+- Aug 2/9 = 22.22%
+- combined 9/29 = **31.03%**
+  - 3-makuri 6/29 = 20.69%
+  - 4-makuri-sashi 3/29 = 10.34%
+
+### GLOBAL_STAGEA authoritative replay
+Rule:
+- pair_mean_waku_sr >= 3.7
+- pair_mean_prior_st_mean >= 0.17811274129319477
+- pair_min_prior_late18_rate >= 0.43497650793650783
+
+Apr-Jun:
+- 622R / inner_vs_outer03 317 = **50.96%**
+- final route endpoint 102/622 = **16.40%**
+  - 3-makuri 63 = 10.13%
+  - 4-makuri-sashi 39 = 6.27%
+
+Jul-Aug confirmation:
+- 409R / inner_vs_outer03 205 = **50.12%**
+- final route endpoint 51/409 = **12.47%**
+  - 3-makuri 36 = 8.80%
+  - 4-makuri-sashi 15 = 3.67%
+
+Monthly inner_vs_outer03:
+- Mar 45.56%
+- Apr 45.23%
+- May 56.58%
+- Jun 50.26%
+- Jul 52.84%
+- Aug 46.67%
+
+### Interpretation
+- Stage A is now validated as a real start-collapse detector:
+  - GLOBAL ~50%
+  - SUMINOE ~62%
+- Stage A alone is NOT the final route model.
+- The final route rate remains 12.47% on Jul-Aug for GLOBAL and 31.03% for Jul-Aug SUMINOE.
+- Therefore the next problem is specifically Stage B:
+  **given that inner12 collapse risk is high, identify when 3 can convert it into makuri or 4 can convert it into makuri-sashi.**
+- Do not add more generic 1/2-lag filters blindly; the bottleneck has shifted from detecting collapse to predicting conversion/route.
