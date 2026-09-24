@@ -39,7 +39,7 @@ jobs:
           ]
           for x in required:
               assert x in s, f'missing preflight marker: {x}'
-          assert '\\n        "stagea_rule_frozen"' not in s, 'literal escaped newline regression'
+          assert '\\n' not in s, 'literal escaped newline found anywhere in Stage-B source'
           # Outcome columns must be excluded from numeric feature discovery.
           meta=s[s.index('META_KEYS = {'):s.index('def ff')]
           for x in ('dual_abs20','dual_vs3_03','inner_vs_outer03','route_target','actual_st1','actual_st4'):
