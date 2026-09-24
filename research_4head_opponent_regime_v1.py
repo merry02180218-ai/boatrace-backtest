@@ -62,6 +62,38 @@ def main():
         if {s,t}=={5,6}: return '5_6'
         return 'OTHER'
     races['pair_family']=races.apply(pair_family,axis=1)
+
+    # Stage v3: leakage-safe pre-race classification of the three dominant families.
+    # Fit/tune on June only; July and August are untouched holdouts.
+    from sklearn.impute import SimpleImputer
+    from sklearn.preprocessing import StandardScaler
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.pipeline import make_pipeline
+    major=['5_INNER','INNER_5','INNER_INNER']
+    feature_cols=[x for x in races.columns if x not in
+                  ['race_code','month','actual_second','actual_third','truth_regime','pair_family']]
+    feature_cols=[x for x in feature_cols if pd.api.types.is_numeric_dtype(races[x])]
+    train=races[(races.month.eq('2026-06')) & races.pair_family.isin(major)].copy()
+    tests=races[(races.month.isin(['2026-07','2026-08'])) & races.pair_family.isin(major)].copy()
+    pred_rows=[]
+    if train.pair_family.nunique()==3:
+        for C in [0.03,0.1,0.3,1.0,3.0]:
+            model=make_pipeline(SimpleImputer(strategy='median'),StandardScaler(),
+                                LogisticRegression(C=C,max_iter=5000,class_weight='balanced'))
+            model.fit(train[feature_cols],train.pair_family)
+            for split,q in [('JUNE_DEV',train),('JUL_HOLDOUT',tests[tests.month.eq('2026-07')]),
+                            ('AUG_HOLDOUT',tests[tests.month.eq('2026-08')]),('JULAUG_HOLDOUT',tests)]:
+                if len(q)==0: continue
+                pr=model.predict(q[feature_cols])
+                acc=float(np.mean(pr==q.pair_family))
+                pred_rows.append({'C':C,'split':split,'R':len(q),'accuracy':acc})
+        pred=pd.DataFrame(pred_rows)
+        # C is selected strictly by June development accuracy, with smaller C as tie-break.
+        bestC=float(pred[pred.split.eq('JUNE_DEV')].sort_values(['accuracy','C'],ascending=[False,True]).iloc[0].C)
+        pred['selected_C']=bestC
+        pred.to_csv(OUT/'major_family_classifier_v1.csv',index=False)
+        print('MAJOR_FAMILY_CLASSIFIER',pred.to_json(orient='records',force_ascii=False))
+        print('MAJOR_FAMILY_SELECTED_C',bestC)
     fam=(races.groupby(['month','pair_family']).size().rename('R').reset_index())
     fam['pct']=fam.R/fam.groupby('month').R.transform('sum')*100
     fam.to_csv(OUT/'pair_family_monthly.csv',index=False)
@@ -72,7 +104,7 @@ def main():
     meta={'head4_R':len(races),'dev':'2026-06 only','holdout':['2026-07','2026-08'],
           'dev_R':len(dev),'holdout_R':len(hold),'SEPTEMBER_OUTCOMES_READ':False,
           'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':False,
-          'stage':'DESCRIPTIVE_PAIR_FAMILY_DISCOVERY_V2'}
+          'stage':'MAJOR_PAIR_FAMILY_CLASSIFIER_V1'}
     (OUT/'meta.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2))
     print('REGIME_MONTHLY',pct.to_json(orient='records',force_ascii=False))
     print('PAIR_TOP',pair.groupby('month').head(8).to_json(orient='records',force_ascii=False))
