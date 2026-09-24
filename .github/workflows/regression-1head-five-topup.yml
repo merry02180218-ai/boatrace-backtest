@@ -1,0 +1,79 @@
+name: regression 1HEAD promoted 1-5 topup
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - 'onehead_five_second_topup.py'
+      - 'onehead_production_profile.py'
+      - 'prepare_1head_v351_live_cache.py'
+      - 'run_1head_v351_live_finalize.py'
+      - 'run_1head_five_second_topup_regression.py'
+      - '.github/workflows/regression-1head-five-topup.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile production entrypoints
+        run: python -m py_compile onehead_five_second_topup.py onehead_production_profile.py prepare_1head_v351_live_cache.py run_1head_v351_live_finalize.py
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+      - name: Dependencies
+        run: python -m pip install -q --disable-pip-version-check numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Download frozen v360 prepared
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $root=Join-Path $env:RUNNER_TEMP 'v360';$zip=Join-Path $env:RUNNER_TEMP 'v360.zip'
+          New-Item -ItemType Directory -Force -Path $root | Out-Null
+          $h=@{Authorization="Bearer $env:GH_TOKEN";Accept='application/vnd.github+json';'X-GitHub-Api-Version'='2022-11-28'}
+          Invoke-WebRequest -Uri "https://api.github.com/repos/$env:GITHUB_REPOSITORY/actions/artifacts/10539401122/zip" -Headers $h -OutFile $zip
+          Expand-Archive -LiteralPath $zip -DestinationPath $root -Force
+          $p=Get-ChildItem $root -Recurse -File|Where-Object{$_.Extension -in '.pkl','.pickle'}|Select-Object -First 1
+          "PREP=$($p.FullName)"|Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+      - name: Frozen DEV parity
+        run: python run_1head_five_second_topup_regression.py --prepared "$PREP" --csv-root "$GITHUB_WORKSPACE/brcsv"
+      - name: Synthetic LIVE finalizer variable-ticket smoke
+        run: |
+          python - <<'PY'
+          import json,tempfile,subprocess,sys
+          import onehead_production_profile as p
+          pc={}
+          for s in range(2,7):
+              vals=[t for t in range(2,7) if t!=s]
+              weights={t:float(7-t) for t in vals};z=sum(weights.values())
+              for t in vals:pc[f'{s}-{t}']=weights[t]/z
+          x={
+            'race_code':'202609250101','production_profile':p.PROFILE_NAME,
+            'live_operation_profile':p.LIVE_OPERATION_PROFILE_NAME,
+            'final_head_p':.81,'opp_mass':.40,'head_exhibition_pass':True,'exhibition_ready':True,
+            'p2':{'2':.40,'3':.30,'4':.15,'5':.10,'6':.05},'pc':pc,
+            'corrected_ex':{'2':.5,'3':.5,'4':.45,'5':.55,'6':.4},
+            'corrected_st':{'2':.5,'3':.5,'4':.48,'5':.52,'6':.3},
+            'corrected_straight':{'2':.5,'3':.5,'4':.45,'5':.55,'6':.4},
+            'corrected_orig_avg':{'2':.5,'3':.5,'4':.48,'5':.52,'6':.4},
+            'local_edge_5_minus_4':.50,'five_second_topup_cache_ready':True,
+            'result_or_payout_used':False,'chronology_guard':True
+          }
+          inp='/tmp/topup_input.json';out='/tmp/topup_final.json'
+          json.dump(x,open(inp,'w'))
+          subprocess.check_call([sys.executable,'run_1head_v351_live_finalize.py','--input',inp,'--out',out])
+          y=json.load(open(out))
+          assert y['status']=='PASS'
+          assert y['five_second_topup_regime_fired'] is True
+          assert y['five_second_topup_applied'] is True
+          assert 4 <= len(y['tickets']) <= 6
+          assert len(y['tickets'])==len(y['official_stakes_yen'])
+          assert y['official_total_stake_yen']<=600
+          assert y['result_or_payout_used'] is False and y['chronology_guard'] is True
+          print('LIVE_TOPUP_SMOKE',json.dumps({'tickets':y['tickets'],'stakes':y['official_stakes_yen'],'total':y['official_total_stake_yen']},ensure_ascii=False))
+          PY
