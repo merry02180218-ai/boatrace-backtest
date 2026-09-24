@@ -285,6 +285,48 @@ def main():
     odf=pd.DataFrame(ov)
     odf.to_csv(OUT/'hybrid_structural_overlay_v1.csv',index=False)
     print('HYBRID_STRUCTURAL_OVERLAY_V1',odf.to_json(orient='records',force_ascii=False))
+    # Stage v10: ticket-level SHADOW on actual head4 races only.
+    # Conservative overlays: add one branch-priority SECOND family using the existing
+    # conditional THIRD ranking. Replacement drops the last current ticket only when needed.
+    shadow=[]
+    for _,r in races.iterrows():
+        base_row=z[z.race_code.eq(r.race_code)].iloc[0]
+        current=[x for x in str(base_row.tickets).split('|') if x]
+        diag=json.loads(base_row.opponent_diag)
+        pc={(int(k.split('>')[0]),int(k.split('>')[1])):float(v) for k,v in diag['pc'].items()}
+        target_s=3 if r.struct_branch=='THREE_SURVIVES' else (5 if r.struct_branch=='THREE_TWO_BREAK' else None)
+        rescue=[]
+        if target_s is not None:
+            thirds=sorted((t for t in [1,2,3,5,6] if t!=target_s),key=lambda t:(-pc[(target_s,t)],t))
+            rescue=[f'4-{target_s}-{t}' for t in thirds[:2]]
+        add=list(current)
+        for x in rescue:
+            if x not in add:add.append(x)
+        repl=list(current)
+        for x in rescue:
+            if x not in repl:
+                if repl: repl[-1]=x
+                else: repl.append(x)
+        # de-duplicate while preserving order
+        repl=list(dict.fromkeys(repl))
+        actual=f"4-{int(r.actual_second)}-{int(r.actual_third)}"
+        for variant,ts in [('CURRENT',current),('ADD',add),('REPLACE_LAST',repl)]:
+            shadow.append({'race_code':r.race_code,'month':r.month,'branch':r.struct_branch,'variant':variant,
+                           'hit':int(actual in ts),'ticket_count':len(ts),'actual':actual,
+                           'tickets':'|'.join(ts)})
+    sh=pd.DataFrame(shadow)
+    sm=(sh.groupby(['month','variant']).agg(R=('race_code','size'),hits=('hit','sum'),
+          avg_points=('ticket_count','mean')).reset_index())
+    allm=(sh.groupby('variant').agg(R=('race_code','size'),hits=('hit','sum'),
+          avg_points=('ticket_count','mean')).reset_index())
+    holdsh=sh[sh.month.isin(['2026-07','2026-08'])]
+    holdm=(holdsh.groupby('variant').agg(R=('race_code','size'),hits=('hit','sum'),
+           avg_points=('ticket_count','mean')).reset_index())
+    sh.to_csv(OUT/'structural_ticket_shadow_v1_detail.csv',index=False)
+    sm.to_csv(OUT/'structural_ticket_shadow_v1_monthly.csv',index=False)
+    print('STRUCTURAL_TICKET_SHADOW_V1_MONTHLY',sm.to_json(orient='records',force_ascii=False))
+    print('STRUCTURAL_TICKET_SHADOW_V1_ALL',allm.to_json(orient='records',force_ascii=False))
+    print('STRUCTURAL_TICKET_SHADOW_V1_HOLDOUT',holdm.to_json(orient='records',force_ascii=False))
     fam=(races.groupby(['month','pair_family']).size().rename('R').reset_index())
     fam['pct']=fam.R/fam.groupby('month').R.transform('sum')*100
     fam.to_csv(OUT/'pair_family_monthly.csv',index=False)
@@ -295,7 +337,7 @@ def main():
     meta={'head4_R':len(races),'dev':'2026-06 only','holdout':['2026-07','2026-08'],
           'dev_R':len(dev),'holdout_R':len(hold),'SEPTEMBER_OUTCOMES_READ':False,
           'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':False,
-          'stage':'HYBRID_STRUCTURAL_OVERLAY_V1'}
+          'stage':'STRUCTURAL_TICKET_SHADOW_V1'}
     (OUT/'meta.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2))
     print('REGIME_MONTHLY',pct.to_json(orient='records',force_ascii=False))
     print('PAIR_TOP',pair.groupby('month').head(8).to_json(orient='records',force_ascii=False))
