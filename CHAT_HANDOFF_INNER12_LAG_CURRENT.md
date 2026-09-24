@@ -1399,3 +1399,120 @@ Next:
 - compare coverage vs point count.
 - then, only after a fixed ticket set exists, join historical predeadline/closing odds for ROI diagnostics.
 - do not change head gate from opponent outcomes.
+
+
+## V6 fixed-ticket ROI setup — 2026-09-25 JST
+
+Based on V5 opponent anatomy, fixed posthoc ticket sets were frozen BEFORE odds/ROI evaluation.
+
+### LEAN
+A-only (8 pts):
+- 3-1-4
+- 3-4-2
+- 4-1-2
+- 4-1-5
+- 4-2-5
+- 4-2-6
+- 4-5-1
+- 4-6-1
+
+B-strong (4 pts):
+- 3-1-4
+- 3-4-6
+- 3-5-6
+- 3-6-2
+
+Historical exact-ticket coverage before odds:
+- total 24/68 = 35.29%
+- Jun 8/23 = 34.78%
+- Jul 8/21 = 38.10%
+- Aug 8/24 = 33.33%
+- A 18/53 = 33.96%
+- B 6/15 = 40.00%
+
+### BALANCED
+A-only (10 pts):
+- 3-1-4
+- 3-1-6
+- 3-4-2
+- 4-1-2
+- 4-1-5
+- 4-2-5
+- 4-2-6
+- 4-3-6
+- 4-5-1
+- 4-6-1
+
+B-strong (5 pts):
+- 3-1-4
+- 3-1-6
+- 3-4-6
+- 3-5-6
+- 3-6-2
+
+Coverage before odds:
+- total 27/68 = 39.71%
+- Jun 9/23 = 39.13%
+- Jul 9/21 = 42.86%
+- Aug 9/24 = 37.50%
+- A 20/53 = 37.74%
+- B 7/15 = 46.67%
+
+### WIDE
+A-only (12 pts):
+- 3-1-4
+- 3-1-5
+- 3-1-6
+- 3-4-2
+- 4-1-2
+- 4-1-5
+- 4-2-5
+- 4-2-6
+- 4-3-6
+- 4-5-1
+- 4-5-2
+- 4-6-1
+
+B-strong (7 pts):
+- 3-1-4
+- 3-1-6
+- 3-4-6
+- 3-5-2
+- 3-5-6
+- 3-6-1
+- 3-6-2
+
+Coverage before odds:
+- total 31/68 = 45.59%
+- Jun 10/23 = 43.48%
+- Jul 10/21 = 47.62%
+- Aug 11/24 = 45.83%
+- A 22/53 = 41.51%
+- B 9/15 = 60.00%
+
+### ROI evaluation policy
+Created:
+- research/research_inner12_ticket_roi_v6.py
+  - commit b707e1fa1e0795fe5b8eb3699dc1010631a74caf
+- .github/workflows/research-inner12-ticket-roi-v6.yml
+  - commit 7aec843cce8ff1221a180119510ea64d4fbba75a
+
+Frozen rules:
+- ticket sets above are fixed before odds/ROI
+- JPY5,000 per BET
+- 100-yen inverse-odds Dutch
+- evaluate ALL and composite odds >=5.0 gate
+- prefer historical BoatraceCSV predeadline OD3
+- official closing odds fallback only if predeadline snapshot absent
+- manual workflow only
+- V5 artifact pinned to Run 36021366565
+- py_compile/literal-newline guard/pipefail
+- September outcomes unread
+- production unchanged
+- POSTHOC_SHADOW_ONLY
+
+Next:
+- fire research-inner12-ticket-roi-v6
+- inspect ROI by Lean/Balanced/Wide, month, A/B branch
+- compare ALL vs COMP5
+- do not change ticket sets after seeing ROI in this evaluation.
