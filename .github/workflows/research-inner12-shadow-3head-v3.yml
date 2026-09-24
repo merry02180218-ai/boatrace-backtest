@@ -1,0 +1,70 @@
+name: research-inner12-shadow-3head-v3
+
+on:
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -q pandas numpy
+
+      - name: Download frozen Shadow V2 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: inner12-shadow-branch-v2
+          path: /tmp/v2
+          github-token: ${{ github.token }}
+          repository: merry02180218-ai/boatrace-backtest
+          run-id: 36016060009
+
+      - name: Preflight
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/inner12_shadow_3head_v3
+          test -f /tmp/v2/shadow_v2_all_base_rows.csv
+          python -m py_compile research/research_inner12_shadow_3head_v3.py
+          python - <<'PY'
+          from pathlib import Path
+          s=Path('research/research_inner12_shadow_3head_v3.py').read_text(encoding='utf-8')
+          assert '\\n' not in s, 'literal escaped newline found'
+          required=[
+              'INNER12_NOVEL_NONOVERLAP_3HEAD_SHADOW_V3',
+              'PRIOR_GAP_MIN=.04',
+              'EX3_MAX=.10',
+              'branch_name.eq("B_only")',
+              '"status":"POSTHOC_SHADOW_ONLY"',
+              '"september_outcomes_read":False',
+              '"production_changed":False',
+          ]
+          for x in required:
+              assert x in s, f'missing marker: {x}'
+          print('INNER12_3HEAD_SHADOW_V3_PREFLIGHT_OK')
+          PY
+
+      - name: Evaluate frozen 3-head Shadow V3
+        env:
+          INNER12_V2_ROWS: /tmp/v2/shadow_v2_all_base_rows.csv
+          INNER12_V3_OUTDIR: /tmp/inner12_shadow_3head_v3
+        run: |
+          set -o pipefail
+          python research/research_inner12_shadow_3head_v3.py | tee /tmp/inner12_shadow_3head_v3/run.log
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: inner12-shadow-3head-v3
+          path: /tmp/inner12_shadow_3head_v3/
+          retention-days: 30
