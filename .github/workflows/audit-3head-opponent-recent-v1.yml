@@ -1,0 +1,25 @@
+name: audit-3head-opponent-recent-v1
+on:
+  push:
+    paths: [research/run_3head_opponent_recent_v1.fire]
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scikit-learn requests
+      - name: Download CORE107
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          mkdir -p core107
+          gh run download 35892602362 --repo ${{ github.repository }} --name research-3head-newcore-fast-v20 --dir core107
+      - run: python -m py_compile research/audit_3head_opponent_recent_v1.py
+      - run: python research/audit_3head_opponent_recent_v1.py | tee opponent_v1.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: audit-3head-opponent-recent-v1
+          path: opponent_v1.log
