@@ -1738,3 +1738,162 @@ Next:
 - manually dispatch validate-inner12-unseen-september-v7.
 - On success report Stage-A, existing4 overlap, V4 selected count, A/B head rates, fixed ticket hit rates, ALL/COMP5 ROI and odds coverage.
 - No September retuning.
+
+
+## V7 pristine September validation — AUTHORITATIVE unseen result
+
+Run:
+- 36053754347
+- Job 107815507476
+- conclusion SUCCESS
+- validation period 2026-09-01 through 2026-09-24
+- artifact 10830784797 / inner12-unseen-september-v7
+
+Audit markers:
+- INNER12_SEPTEMBER_V7_PREFLIGHT_OK
+- INNER12_PRISTINE_SEPTEMBER_VALIDATION_V7_OK
+- SEPTEMBER_OUTCOMES_READ_TRUE
+- SEPTEMBER_USED_FOR_TUNING_FALSE
+- DECISIONS_FROZEN_BEFORE_SAME_DAY_RESULTS
+- PRODUCTION_UNCHANGED
+
+This is the first true unseen result for the frozen INNER12 Shadow V4/V6 logic.
+
+### Frozen head-gate result
+Stage-A:
+- 149R
+
+Exact existing 4HEAD overlap:
+- 5R excluded
+
+Frozen V4 selected:
+- 19R
+- all 19 settled
+
+Selected-head hit:
+- 10/19 = **52.63%**
+
+A-only dual head 3/4:
+- 12R
+- 5 selected-head hits
+- **41.67%**
+
+B-strong head3:
+- 7R
+- 5 head3 hits
+- **71.43%**
+
+Interpretation:
+- the HEAD/branch logic survived unseen September materially better than the fixed opponent tickets.
+- B-strong is especially promising, but only 7 unseen races.
+- A-only fell from the Jun-Aug posthoc 52.83% dual-head hit to 41.67%, but remains near the original >=40% target.
+- combined operational head selection is 52.63%.
+
+### Frozen ticket result — failed unseen validation
+
+All 19 selected races had real predeadline OD3:
+- predeadline_R = 19
+- closing fallback = 0
+- odds missing = 0
+
+LEAN ALL:
+- 19R / 1 exact trifecta
+- hit rate 5.26%
+- stake 95,000
+- payout 25,120
+- profit -69,880
+- **ROI 26.44%**
+
+LEAN COMP5:
+- 17R / 1 hit
+- ROI 29.55%
+
+BALANCED ALL:
+- 19R / 2 hits
+- hit rate 10.53%
+- stake 95,000
+- payout 41,670
+- profit -53,330
+- **ROI 43.86%**
+
+BALANCED COMP5:
+- 14R / 0 hit
+- ROI 0%
+
+WIDE ALL:
+- 19R / 2 hits
+- hit rate 10.53%
+- stake 95,000
+- payout 38,590
+- profit -56,410
+- **ROI 40.62%**
+
+WIDE COMP5:
+- 10R / 0 hit
+- ROI 0%
+
+Conclusion:
+- Jun-Aug posthoc ticket ROI did NOT validate.
+- Do not adopt LEAN/BALANCED/WIDE V6 ticket sets.
+- Do not use COMP5 gate for this branch based on current evidence.
+- The failure is opponent selection, not primarily head selection.
+
+### Opponent capture on the 10 unseen head-hit races
+Actual head-hit trifectas:
+- B: 3-1-2
+- A: 4-3-6
+- B: 3-2-6
+- B: 3-4-2
+- A: 3-5-6
+- A: 4-6-5
+- A: 3-1-4
+- A: 3-4-6
+- B: 3-2-6
+- B: 3-1-5
+
+Frozen ticket capture among those 10 correct-head races:
+- LEAN: 1/10 = **10%**
+- BALANCED: 2/10 = **20%**
+- WIDE: 2/10 = **20%**
+
+Branch split:
+- A head-hit rows: 5
+  - LEAN captured 1
+  - BALANCED/WIDE captured 2
+- B head-hit rows: 5
+  - all three frozen ticket policies captured **0/5**
+
+This is the central failure.
+
+Especially B-strong:
+- head3 itself validated very well: 5/7 = 71.43%
+- but fixed B opponent tickets missed all five correct-head trifectas:
+  - 3-1-2
+  - 3-2-6
+  - 3-4-2
+  - 3-2-6
+  - 3-1-5
+- Jun-Aug B tickets were therefore strongly overfit to old opponent anatomy.
+
+A unseen correct-head shapes also shifted:
+- 4-3-6
+- 3-5-6
+- 4-6-5
+- 3-1-4
+- 3-4-6
+Only 3-1-4 was captured by LEAN; BALANCED/WIDE also captured 4-3-6.
+
+### Research implication
+Preserve/freeze the V4 head gate for further shadow observation.
+Reject V6 fixed opponent ticket sets.
+
+Next opponent research should NOT start from old Jun-Aug exact combo frequencies.
+Instead:
+1. treat the selected head as fixed;
+2. rank 2nd and 3rd using causal pre-race features per race;
+3. specifically study B-strong where head3 is strong but 2nd/3rd ordering failed completely;
+4. use PLAYERHistory, Waku10, current exhibition, motor, and relative structure for opponent ranking;
+5. use September only as validation/diagnostic now that it has been opened; do not fit/tune on it if another unseen period is desired;
+6. if continuing model development, fit on pre-September data and reserve post-2026-09-24 future races as the next untouched shadow validation.
+
+Production remains unchanged.
