@@ -73,6 +73,28 @@ jobs:
           test -f /tmp/cache/v351_exhibition_train.csv || { echo 'EXHIBITION_TRAIN_CACHE_NOT_FOUND'; exit 22; }
           echo "CACHE_ARTIFACT_ID=${ART_ID}" >> "$GITHUB_ENV"
 
+      - name: Ensure promoted 1-5 topup-ready cache
+        if: env.MODE == 'judge'
+        run: |
+          set -euo pipefail
+          READY=$(python - <<'PY'
+          import json,os
+          p='/tmp/cache/'+os.environ['RACE_CODE']+'.json'
+          x=json.load(open(p))
+          print(1 if x.get('five_second_topup_cache_ready') and 'local_edge_5_minus_4' in x else 0)
+          PY
+          )
+          if [ "$READY" != 1 ]; then
+            echo "stale pre-topup cache; rebuilding $RACE_CODE on demand"
+            ISO_DATE="${DATE:0:4}-${DATE:4:2}-${DATE:6:2}"
+            mkdir -p /tmp/topup-rebuild /tmp/topup-cache
+            python fetch_1head_v351_biyori_cards.py --date "$DATE" --out /tmp/topup-rebuild/race_cards.csv
+            python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
+            python prepare_1head_v351_live_cache.py --date "$ISO_DATE" --cards /tmp/topup-rebuild/race_cards.csv --race-code "$RACE_CODE" --out /tmp/topup-cache
+            cp "/tmp/topup-cache/$RACE_CODE.json" "/tmp/cache/$RACE_CODE.json"
+            cp /tmp/topup-cache/v351_exhibition_train.csv /tmp/cache/v351_exhibition_train.csv
+          fi
+
       - name: Guard LIVE window
         if: env.MODE == 'judge'
         run: |
