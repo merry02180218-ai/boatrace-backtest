@@ -32,7 +32,7 @@ import pandas as pd
 
 V5=Path(os.environ.get("INNER12_V5_ROWS","/tmp/v5/frozen_decisions_with_results.csv"))
 BRC=Path(os.environ["BOATRACECSV_LOCAL_ROOT"])
-ROOT=Path(__file__).resolve().parent
+ROOT=Path(__file__).resolve().parents[1]
 OUT=Path(os.environ.get("INNER12_V6_OUTDIR","/tmp/inner12_ticket_roi_v6"))
 OUT.mkdir(parents=True,exist_ok=True)
 
@@ -207,6 +207,10 @@ def main():
     if len(d)!=68:raise RuntimeError(f"EXPECTED_68_FROZEN_RACES_GOT_{len(d)}")
 
     odds,source=load_odds()
+    missing_frozen=sorted(set(d.race_code)-set(odds))
+    if missing_frozen:
+        raise RuntimeError(f"MISSING_ODDS_FOR_FROZEN_RACES_{len(missing_frozen)}_{missing_frozen[:10]}")
+    print("ODDS_COVERAGE",len(d),len(odds),"frozen_missing",len(missing_frozen))
     records=[]
     for policy,branches in TICKETS.items():
         for r in d.itertuples():
