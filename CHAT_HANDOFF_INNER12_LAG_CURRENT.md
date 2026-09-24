@@ -176,3 +176,41 @@ For route split, keep 3/4 raw strength low-weight. Prefer structural variables f
 - PLAYERHistory/Waku10 only where they describe start/development role rather than generic strength.
 
 Do not production-adopt V1 yet. It is a validated mechanism gate, not yet a complete betting model.
+
+
+## User precision requirement — 2026-09-24
+User rejected ~20% class precision as insufficient and set a practical target of **at least 40%** for the combined endpoint (3-makuri OR 4-makuri-sashi). Lower race volume is acceptable if necessary.
+
+### V2 created for high precision
+Files:
+- `research/research_inner12_lag_high_precision_v2.py`
+- `.github/workflows/research-inner12-lag-high-precision-v2.yml`
+
+Research split:
+- Apr-May 2026: search/train
+- Jun 2026: validation used for candidate selection
+- Jul-Aug 2026: final holdout only
+- September outcomes remain unread
+- same-day results never used in features
+- production unchanged
+
+V2 mechanism remains start/development based; generic 3/4 class/motor strength is not used.
+New structural requirements/search axes:
+- both inner boats' `dual_late_post`
+- minimum predicted actual ST of boats 1 and 2
+- boat3 start margin over boat2 (`pred2 - pred3`)
+- boat3 start margin over boat1 (`pred1 - pred3`)
+- boat4 follow distance behind boat3 (`pred4 - pred3`)
+- independent start-lag evidence count for both boats 1 and 2
+- standard 1-2-3-4 exhibition course order as optional strict gate
+
+Two tracks:
+- STABLE: train >=24R and June validation >=10R
+- AGGRESSIVE: train >=12R and June validation >=6R
+Selection first looks for >=40% in both train and validation. Jul-Aug never participates in selection.
+
+Next action:
+- manually dispatch `research-inner12-lag-high-precision-v2`
+- inspect success/failure
+- if success, verify chosen stable/aggressive rules and Jul-Aug holdout precision/monthly stability
+- do not production-adopt unless the 40% target is supported out-of-sample.
