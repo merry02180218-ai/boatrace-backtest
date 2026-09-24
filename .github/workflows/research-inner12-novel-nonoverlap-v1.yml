@@ -1,0 +1,108 @@
+name: research-inner12-novel-nonoverlap-v1
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards
+            data/programs/waku10
+            data/results/realtime
+            data/previews/tkz
+            data/previews/stt
+            data/previews/original_exhibition
+            data/previews/od3
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+
+      - name: Preflight
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/inner12_stageb_route_discovery_v1
+          mkdir -p /tmp/inner12_novel_nonoverlap_v1
+          python -m py_compile             research/research_inner12_stageb_route_discovery_v1.py             research/research_inner12_novel_nonoverlap_v1.py             prepare_4head_6m_v93_neutral_waku.py             audit_4head_ph5_live_walkforward.py             backtest.py backtest_v3.py backtest_v4.py
+          python - <<'PY'
+          from pathlib import Path
+          a=Path('research/research_inner12_stageb_route_discovery_v1.py').read_text(encoding='utf-8')
+          b=Path('research/research_inner12_novel_nonoverlap_v1.py').read_text(encoding='utf-8')
+          for name,s in [('stageb',a),('novel',b)]:
+              assert '\\n' not in s, f'literal escaped newline in {name}'
+          required=[
+              'INNER12_NOVEL_NONOVERLAP_V1',
+              'production_bet==0',
+              'PH5 head_prob>=.36 AND orig4_adv_inside>=-.06',
+              'TRAIN_MONTH="2026-06"',
+              'VAL_MONTH="2026-07"',
+              'CONF_MONTH="2026-08"',
+              '"august_used_for_selection":False',
+              '"september_outcomes_read":False',
+              'generic4_strength_only',
+          ]
+          for x in required:
+              assert x in b, f'missing novel preflight marker: {x}'
+          # Outcome labels must never enter the numeric feature list.
+          assert 'if c in skip or c in META_EXCLUDE or c.startswith("cat_") or c.startswith(bad_prefix)' in b
+          # Exact existing 4HEAD decisions, not an approximate clone, must be merged.
+          assert 'HEAD4_RACE_DETAIL' in b and 'head4_production_bet' in b
+          print('INNER12_NOVEL_PREFLIGHT_OK')
+          PY
+
+      - name: Rebuild causal Stage-B factor rows
+        env:
+          INNER12_STAGEB_OUTDIR: /tmp/inner12_stageb_route_discovery_v1
+          PYTHONPATH: .
+        run: |
+          set -o pipefail
+          python research/research_inner12_stageb_route_discovery_v1.py             | tee /tmp/inner12_stageb_route_discovery_v1/run.log
+
+      - name: Prepare exact 4HEAD historical LIVE primitives
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: python prepare_4head_6m_v93_neutral_waku.py
+
+      - name: Replay exact existing 4HEAD production
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+          STRICT_ROWS: /tmp/head4_clean_long_dataset/dataset.csv
+          V93_ROWS: /tmp/head4_v93_all_parent/v93_all_parent.csv
+        run: |
+          set -o pipefail
+          python audit_4head_ph5_live_walkforward.py             | tee /tmp/head4_ph5_live_walkforward/run.log
+
+      - name: Research strict non-overlap routes
+        env:
+          INNER12_STAGEB_ROWS: /tmp/inner12_stageb_route_discovery_v1/factor_rows.csv
+          HEAD4_RACE_DETAIL: /tmp/head4_ph5_live_walkforward/race_detail.csv
+          INNER12_NOVEL_OUTDIR: /tmp/inner12_novel_nonoverlap_v1
+        run: |
+          set -o pipefail
+          python research/research_inner12_novel_nonoverlap_v1.py             | tee /tmp/inner12_novel_nonoverlap_v1/run.log
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: inner12-novel-nonoverlap-v1
+          path: |
+            /tmp/inner12_novel_nonoverlap_v1/
+            /tmp/head4_ph5_live_walkforward/race_detail.csv
+            /tmp/inner12_stageb_route_discovery_v1/meta.json
+          retention-days: 30
