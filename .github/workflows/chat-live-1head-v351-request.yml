@@ -1,9 +1,7 @@
 name: chat-live-1head-v351-request
 
-on:
-  push:
-    paths:
-      - 'live_requests/1head_v351.txt'
+'on':
+  workflow_dispatch:
 
 permissions:
   contents: read
