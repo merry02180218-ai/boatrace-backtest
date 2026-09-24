@@ -36,8 +36,11 @@ def main():
  rows=[]
  for _,r in z.iterrows():
   parts=str(r.actual_combo).split("-"); actual=set(map(int,parts[1:])) if len(parts)==3 and parts[0]=="1" else set()
+  actual_second=int(parts[1]) if len(parts)==3 and parts[0]=="1" else -1
+  actual_third=int(parts[2]) if len(parts)==3 and parts[0]=="1" else -1
   for b in (2,3,4,5,6):
-   q={"race_code":r.race_code,"month":str(r.month),"boat":b,"actual_opponent":int(b in actual)}
+   q={"race_code":r.race_code,"month":str(r.month),"boat":b,"actual_opponent":int(b in actual),
+      "actual_second":int(b==actual_second),"actual_third":int(b==actual_third)}
    for k in ("all_win","all_p2","frame_win","frame_p2","recent_p2"): q["pl_"+k]=r.get(f"b{b}_pl_{k}")
    # Candidate-normalized Waku10 primitives for fine-grained opponent-role scans.
    # Keep legacy sparse boat-specific columns below for comparability with prior opponent model.
@@ -269,6 +272,63 @@ def main():
  fd.to_csv(OUT/"dev_third_feature_fine_scan.csv",index=False)
  print("DEV_THIRD_FEATURE_FINE_TOP",json.dumps(fd.head(30).to_dict("records"),ensure_ascii=False))
 
+ # Role-specific third-place model using only candidate-normalized pre-result features.
+ # Generate month-held-out OOF predictions: each DEV month is scored by a model that never trained on that month.
+ role_features=[x for x in q.columns if x.startswith("pl_") or x.startswith("waku_own_")]
+ third_oof=pd.Series(np.nan,index=q.index,dtype=float)
+ oof_meta=[]
+ for held_month in DEV:
+  train_mask=q.month.isin([m for m in DEV if m!=held_month])
+  test_mask=q.month.eq(held_month)
+  role_model=Pipeline([("imp",SimpleImputer(strategy="median")),("sc",StandardScaler()),
+                       ("lr",LogisticRegression(C=.25,max_iter=2000,class_weight="balanced"))])
+  role_model.fit(q.loc[train_mask,role_features].apply(pd.to_numeric,errors="coerce"),
+                 q.loc[train_mask,"actual_third"].astype(int))
+  third_oof.loc[test_mask]=role_model.predict_proba(
+      q.loc[test_mask,role_features].apply(pd.to_numeric,errors="coerce"))[:,1]
+  oof_meta.append({"held_month":held_month,"train_R":int(q.loc[train_mask,"race_code"].nunique()),
+                   "test_R":int(q.loc[test_mask,"race_code"].nunique())})
+ if q.loc[q.month.isin(DEV),"third_oof_score"].notna().any() if "third_oof_score" in q.columns else False:
+  raise RuntimeError("third_oof_score unexpectedly pre-existing")
+ q["third_oof_score"]=third_oof
+ if q.loc[q.month.isin(DEV),"third_oof_score"].isna().any():
+  raise RuntimeError("missing third OOF predictions")
+
+ third_maps_raw={}; third_maps_z={}
+ for code,g in q[q.month.isin(DEV)].groupby("race_code"):
+  raw={int(row.boat):float(row.third_oof_score) for _,row in g.iterrows()}
+  vals=np.array(list(raw.values()),dtype=float); mu=float(vals.mean()); sdv=float(vals.std()) or 1.0
+  third_maps_raw[str(code)]=raw
+  third_maps_z[str(code)]={b:(v-mu)/sdv for b,v in raw.items()}
+
+ role_scan=[]
+ role_specs=[("raw",w) for w in (0.02,0.05,0.10,0.15,0.20,0.30,0.50)]
+ role_specs += [("z",w) for w in (0.01,0.02,0.05,0.08,0.10,0.15,0.20)]
+ for score_mode,role_w3 in role_specs:
+  hits=changed=rescued=lost=0; n=0; month_stats={}
+  score_maps=third_maps_raw if score_mode=="raw" else third_maps_z
+  for r0 in rr["H078_M375"]:
+   code=str(r0["race_code"]).zfill(12); month=code[:4]+"-"+code[4:6]
+   if month not in DEV or code not in score_maps: continue
+   p2,pc=v365.formal_post_five6(r0); base=v299.pair_prob(p2,pc,prod.TICKET_ALPHA)
+   formal=v299.STRATEGIES["HYBRID"](p2,pc,base)[:3]
+   pairs=[(a,b) for a in (2,3,4,5,6) for b in (2,3,4,5,6) if a!=b]
+   adj={ab:float(np.log(max(base.get(ab,0.0),1e-12)))+role_w3*score_maps[code].get(ab[1],0.0) for ab in pairs}
+   top=v299.hybrid_order(p2,pc,adj)[:3]; actual=str(r0["actual_combo"])
+   old_hit=int(actual in {f"1-{a}-{b}" for a,b in formal}); new_hit=int(actual in {f"1-{a}-{b}" for a,b in top})
+   n+=1; hits+=new_hit; changed+=int(top!=formal); rescued+=int(old_hit==0 and new_hit==1); lost+=int(old_hit==1 and new_hit==0)
+   ms=month_stats.setdefault(month,{"R":0,"formal_hits":0,"new_hits":0,"changed_R":0,"rescued":0,"lost":0})
+   ms["R"]+=1; ms["formal_hits"]+=old_hit; ms["new_hits"]+=new_hit; ms["changed_R"]+=int(top!=formal)
+   ms["rescued"]+=int(old_hit==0 and new_hit==1); ms["lost"]+=int(old_hit==1 and new_hit==0)
+  role_scan.append({"score_mode":score_mode,"w3":role_w3,"R":n,"hits":hits,"rate":hits/n if n else None,
+                    "delta_hits":hits-98,"changed_R":changed,"rescued":rescued,"lost":lost,
+                    "monthly":month_stats})
+ role_df=pd.DataFrame([{k:v for k,v in row.items() if k!="monthly"} for row in role_scan])
+ role_df=role_df.sort_values(["hits","changed_R"],ascending=[False,True])
+ role_df.to_csv(OUT/"dev_third_role_oof_scan.csv",index=False)
+ role_top=sorted(role_scan,key=lambda row:(row["hits"],-row["changed_R"]),reverse=True)[:10]
+ (OUT/"dev_third_role_oof_top.json").write_text(json.dumps({"features":role_features,"oof":oof_meta,"top":role_top},ensure_ascii=False,indent=2))
+ print("DEV_THIRD_ROLE_OOF_TOP",json.dumps(role_top,ensure_ascii=False))
 
 
  (OUT/"support_eval.json").write_text(json.dumps(support_eval,ensure_ascii=False,indent=2))
