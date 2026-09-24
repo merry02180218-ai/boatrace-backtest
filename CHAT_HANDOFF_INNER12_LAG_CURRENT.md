@@ -1897,3 +1897,99 @@ Instead:
 6. if continuing model development, fit on pre-September data and reserve post-2026-09-24 future races as the next untouched shadow validation.
 
 Production remains unchanged.
+
+
+## V8 opponent redesign — reference latest 1HEAD production
+
+User direction:
+- "相手選びは最新の1号艇モデル参考にして"
+
+Latest 1HEAD main was inspected on 2026-09-25.
+Relevant current production architecture:
+- separate SECOND and conditional THIRD models;
+- production opponentCore overlay:
+  - EX 0.40
+  - corrected ST 0.25
+  - original straight 0.15
+  - original average 0.20
+- SECOND opponentCore coefficient G2 = 0.45
+- THIRD opponentCore coefficient G3 = 1.00
+- ticket pair alpha = 0.70
+- HYBRID3 ticket structure:
+  1. global best ordered pair
+  2. another pair with the same second-place boat
+  3. best pair with a different second-place boat
+- latest 1HEAD also has wall3 / 5->6 / 1->5 top-up rules, but these are head-1-specific and are NOT blindly transferred.
+
+Latest production evidence inspected:
+- onehead_production_profile.py
+- run_1head_v351_live_finalize.py
+- run_v317_1head_opponent_error_features.py
+- run_v318_1head_opponent_third_rebuild.py
+- run_v299_1head_trifecta3_policy_search.py
+- latest strong-signal production commit exists, but it concerns the 1HEAD 1->5 regime and is not a generic INNER12 opponent rule.
+
+### INNER12 V8 design
+Head gate remains exactly frozen V4:
+- A-only -> heads 3 and 4
+- B-strong -> head 3
+- no head-gate retuning
+
+New dynamic opponent model:
+- training universe = Jun-Aug GLOBAL Stage-A races with actual winner 3 or 4
+- September is NOT used for fitting
+- SECOND and conditional THIRD are separate logistic models
+- causal candidate features include:
+  - grade
+  - national/local strength
+  - motor
+  - Waku10 WR/ST/start-rank
+  - national ST strength
+  - prior PLAYERHistory all_win/all_p2/frame_win/frame_p2/recent_p2
+  - current corrected exhibition / ST / original turn / straight / avg
+  - opponentCore
+  - candidate-vs-head relative features
+  - conditional THIRD adds second/third relative features
+- fixed regularization C=.25 for SECOND and THIRD; not tuned on September
+- after base probabilities, apply exact latest 1HEAD opponentCore coefficients G2=.45 / G3=1.00
+- pair alpha=.70
+- exact HYBRID3 structure
+
+Ticket count:
+- A-only: 3 tickets for head3 + 3 tickets for head4 = 6 total
+- B-strong: 3 tickets for head3
+- no fixed historical combo list
+- no automatic COMP5 gate
+- no 1HEAD-specific top-up overlays yet
+
+September handling:
+- Sep1-24 has already been opened by V7, so V8 Sep1-24 is diagnostic only, not pristine model selection.
+- future untouched shadow begins Sep25.
+- do not alter V8 architecture based on Sep1-24 diagnostic if preserving Sep25+ prospective validation.
+
+Files:
+- research/research_inner12_onehead_opponent_v8.py
+  - commit 74e515ea39f2a92b3763fe6e92cccedf0a9fbb55
+- .github/workflows/research-inner12-onehead-opponent-v8.yml
+  - commit 110b2fae84ee6e52a837dc753ecc4da063eb112c
+
+Workflow safeguards verified:
+- manual-only workflow_dispatch
+- Stage-B artifact pinned Run 35992940551
+- September V7 frozen decisions pinned Run 36053754347
+- py_compile preflight
+- exact current 1HEAD alpha/G2/G3/core-weight assertions
+- set -o pipefail
+- September used for fit = false
+- production unchanged
+
+Next:
+- manually dispatch research-inner12-onehead-opponent-v8
+- inspect TRAIN row counts and Sep1-24 diagnostic:
+  - exact3 hits
+  - SECOND top2 on correct-head rows
+  - THIRD top2 conditional on actual second
+  - BASE-no-core vs onehead-style core
+  - flat 100-yen and JPY5,000 Dutch ROI
+  - A vs B split
+- do not promote from Sep1-24; prospective Sep25+ is the next untouched validation.
