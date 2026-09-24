@@ -32,6 +32,7 @@ jobs:
               '"holdout_used_for_selection":False',
               'September outcome access blocked',
               'for b in (1,2,3,4,5):',
+              'for b in (1,2,3,4,5):\n                    name=clean_name',
               'route_3_makurisashi',
               'route_4_makuri',
               'route_5_makurisashi',
@@ -54,11 +55,13 @@ jobs:
           PY
 
       - name: Run Stage-B route discovery
+        shell: bash
         env:
           INNER12_STAGEB_OUTDIR: /tmp/inner12_stageb_route_discovery_v1
           PYTHONPATH: .
         run: |
-          python research/research_inner12_stageb_route_discovery_v1.py             | tee /tmp/inner12_stageb_route_discovery_v1/run.log
+          set -o pipefail
+          python research/research_inner12_stageb_route_discovery_v1.py | tee /tmp/inner12_stageb_route_discovery_v1/run.log
 
       - uses: actions/upload-artifact@v4
         if: always()
