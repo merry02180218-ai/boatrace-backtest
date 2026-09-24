@@ -1,0 +1,55 @@
+name: validate-inner12-stagea-v1
+
+on:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Preflight
+        run: |
+          python -m py_compile             research/validate_inner12_stagea_suminoe_v1.py             research/validate_inner12_stagea_global_v1.py             backtest.py
+          python - <<'PY'
+          from pathlib import Path
+          checks=[
+            ('research/validate_inner12_stagea_suminoe_v1.py',['LATE18_CUT=0.435','VENUE_CODE=12','September outcome access blocked']),
+            ('research/validate_inner12_stagea_global_v1.py',['CUT_WAKU_SR_MEAN=3.7','CUT_PRIOR_ST_MEAN=0.17811274129319477','CUT_MIN_LATE18=0.43497650793650783','September outcome access blocked']),
+          ]
+          for path,need in checks:
+              s=Path(path).read_text(encoding='utf-8')
+              assert '\\n' not in s.replace('"\\n"','').replace("'\\n'",''), f'suspicious literal escaped newline: {path}'
+              for x in need:
+                  assert x in s, f'missing {x}: {path}'
+          print('PREFLIGHT_OK')
+          PY
+
+      - name: Validate Suminoe ultra-precision Stage-A
+        env:
+          INNER12_STAGEA_OUTDIR: /tmp/inner12_stagea_suminoe_v1
+          PYTHONPATH: .
+        run: |
+          mkdir -p /tmp/inner12_stagea_suminoe_v1
+          python research/validate_inner12_stagea_suminoe_v1.py             | tee /tmp/inner12_stagea_suminoe_v1/run.log
+
+      - name: Validate global Stage-A
+        env:
+          INNER12_STAGEA_GLOBAL_OUTDIR: /tmp/inner12_stagea_global_v1
+          PYTHONPATH: .
+        run: |
+          mkdir -p /tmp/inner12_stagea_global_v1
+          python research/validate_inner12_stagea_global_v1.py             | tee /tmp/inner12_stagea_global_v1/run.log
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: inner12-stagea-v1
+          path: |
+            /tmp/inner12_stagea_suminoe_v1/
+            /tmp/inner12_stagea_global_v1/
