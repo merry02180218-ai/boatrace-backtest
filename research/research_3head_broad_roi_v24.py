@@ -191,4 +191,18 @@ for pol,g in z.groupby('policy'):
         ii=gr.invest.sum();rr=gr['return'].sum()
         print('ROI_ROUTE',pol,route,'R',len(gr),'HIT',int(gr.hit.sum()),'ROI',round(100*rr/ii,2) if ii else None,'PROFIT',round(rr-ii,1))
 
+
+# 6) Forward-valid slice only: August predicted from July history/rules.
+# July LOMO uses August as train and is descriptive only, never production evidence.
+aug=z[z.month.eq('aug')].copy()
+print('FORWARD_VALID_SCOPE','train=jul test=aug only','RACES',aug.race_code.nunique())
+for pol,g in aug.groupby('policy'):
+    inv=g.invest.sum(); ret=g['return'].sum()
+    print('FORWARD_ROI',pol,'BET_RACES',int((g.invest>0).sum()),'HIT',int(g.hit.sum()),
+          'INVEST',int(inv),'RETURN',round(ret,1),'ROI',round(100*ret/inv,2) if inv else None,'PROFIT',round(ret-inv,1))
+    for route,gr in g[g.invest>0].groupby('route'):
+        ii=gr.invest.sum(); rr=gr['return'].sum()
+        print('FORWARD_ROUTE',pol,route,'R',len(gr),'HIT',int(gr.hit.sum()),
+              'ROI',round(100*rr/ii,2) if ii else None,'PROFIT',round(rr-ii,1))
+
 print('V24_ROI_OK')
