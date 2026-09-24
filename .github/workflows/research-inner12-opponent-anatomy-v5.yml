@@ -1,0 +1,78 @@
+name: research-inner12-opponent-anatomy-v5
+
+on:
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/results/realtime
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -q pandas
+
+      - name: Download frozen Shadow V2 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: inner12-shadow-branch-v2
+          path: /tmp/v2
+          github-token: ${{ github.token }}
+          repository: merry02180218-ai/boatrace-backtest
+          run-id: 36016060009
+
+      - name: Preflight
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/inner12_opponent_anatomy_v5
+          test -f /tmp/v2/shadow_v2_all_base_rows.csv
+          python -m py_compile research/research_inner12_opponent_anatomy_v5.py
+          python - <<'PY'
+          from pathlib import Path
+          s=Path('research/research_inner12_opponent_anatomy_v5.py').read_text(encoding='utf-8')
+          assert '\\n' not in s
+          for x in [
+              'INNER12_OPPONENT_ANATOMY_SHADOW_V5',
+              'decision_frozen_before_results',
+              'A_DUAL_3_4',
+              'B_3HEAD',
+              '"status":"POSTHOC_DESCRIPTIVE_ONLY"',
+              '"september_outcomes_read":False',
+              '"production_changed":False',
+          ]:
+              assert x in s, x
+          print('INNER12_OPPONENT_ANATOMY_V5_PREFLIGHT_OK')
+          PY
+
+      - name: Evaluate opponent anatomy
+        env:
+          INNER12_V2_ROWS: /tmp/v2/shadow_v2_all_base_rows.csv
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+          INNER12_OPP_OUTDIR: /tmp/inner12_opponent_anatomy_v5
+        run: |
+          set -o pipefail
+          python research/research_inner12_opponent_anatomy_v5.py | tee /tmp/inner12_opponent_anatomy_v5/run.log
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: inner12-opponent-anatomy-v5
+          path: /tmp/inner12_opponent_anatomy_v5/
+          retention-days: 30
