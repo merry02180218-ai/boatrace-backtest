@@ -201,7 +201,7 @@ def main():
    return {k:(x-mu)/sd for k,x in v.items()}
   bz,pz=zscore_map(bv),zscore_map(pv); actual=str(r0["actual_combo"])
   formal=v299.STRATEGIES["HYBRID"](p2,pc,base)[:3]
-   for wgt in (0.00,0.05,0.10,0.15,0.20,0.25,0.30):
+  for wgt in (0.00,0.05,0.10,0.15,0.20,0.25,0.30):
    mix={ab:bz[ab]+wgt*pz[ab] for ab in pairs}
    top=sorted(pairs,key=lambda ab:mix[ab],reverse=True)[:3]
    blend_rows.append({"race_code":code,"w":wgt,"hit":int(actual in {f"1-{a}-{b}" for a,b in top}),"tickets":str(top),"formal_tickets":str(formal),"parity":int(top==formal) if wgt==0 else None})
