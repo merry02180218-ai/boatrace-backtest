@@ -241,6 +241,8 @@ def main():
         if r.wall_32break>=break32_cut: return 'THREE_TWO_BREAK'
         return 'MIXED_INNER'
     races['struct_branch']=races.apply(branch,axis=1)
+    # Refresh June after assigning struct_branch; the earlier copy predates this column.
+    june=races[races.month.eq('2026-06')].copy()
     # Descriptive truth capture: does branch identify the expected opponent role?
     br=[]
     for split,dq in [('JUNE_DEV',june),('JUL_HOLDOUT',races[races.month.eq('2026-07')]),
