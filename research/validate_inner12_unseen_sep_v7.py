@@ -107,7 +107,9 @@ def pflat_for_card(card,ph_state):
     out={}
     for b in range(1,7):
         reg=str(card.get(f"艇{b}_登録番号","")).strip()
-        s=ph_state[reg] if reg else blank_ph()
+        if not reg:
+            raise RuntimeError(f"MISSING_PH5_REGISTRATION_BOAT_{b}")
+        s=ph_state[reg]
         n=s["n"]; nf=s["nf"][str(b)]; recent=list(s["recent_p2"])
         vals={
             "all_win":(s["w"]+2/6)/(n+2),
