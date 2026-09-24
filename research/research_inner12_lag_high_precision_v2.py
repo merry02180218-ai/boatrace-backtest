@@ -207,13 +207,12 @@ def rule_match(r, rule):
     return True
 
 def build_rules():
-    dual_cuts = [0.55, 0.60, 0.65, 0.70, 0.75]
-    inner_min_cuts = [0.16, 0.18, 0.20, 0.22]
-    margin23_cuts = [0.02, 0.04, 0.06, 0.08, 0.10]
-    margin13_cuts = [0.00, 0.02, 0.04, 0.06]
-    ev_cuts = [1, 2, 3]
+    dual_cuts = [0.60, 0.65, 0.70, 0.75]
+    inner_min_cuts = [0.18, 0.20, 0.22]
+    margin23_cuts = [0.04, 0.06, 0.08, 0.10]
+    margin13_cuts = [0.00, 0.03, 0.06]
+    ev_cuts = [2, 3]
     gap_bands = [
-        (-0.05, 0.03),
         (-0.03, 0.05),
         (-0.02, 0.08),
         (0.00, 0.08),
