@@ -228,10 +228,17 @@ def raw_numeric_boat_fields(card, boat):
         suf = str(k)[len(pre):]
         if any(x in suf for x in ("登録番号","モーター番号","ボート番号","R番号","選手名","支部","級別")):
             continue
+        # Broad but bounded whitelist: discover unexpected pre-race effects without
+        # exploding memory on IDs / administrative numeric fields.
+        allow = (
+            "ST","スタート","勝率","連対率","事故","F","L","フライング",
+            "体重","年齢","着順","展示","能力"
+        )
+        if not any(x in suf for x in allow):
+            continue
         val = ff(v)
         if val is None:
             continue
-        # Keep broad pre-race facts, including meeting history/ST/finish, F/L, age/weight if present.
         out["raw_"+sanitize(suf)] = val
     return out
 
@@ -506,8 +513,10 @@ def main():
                 rec[f"cat_b{b}_ptype"]=str(z.get("ptype","不明"))
                 raw=raw_numeric_boat_fields(card,b)
                 for k,v in raw.items():
-                    bfeat[b][k]=v
+                    rec[f"raw_b{b}_{k}"]=v
 
+            # Pair aggregates are restricted to the curated core feature family.
+            # Raw fields stay boat-specific and can still meet in the interaction search.
             add_pair_features(rec,"pre",bfeat[1],bfeat[2])
 
             em=ex_st_map(stt.get(rc,{}))
