@@ -202,6 +202,35 @@ def main():
     ldf=pd.DataFrame(lane_rows)
     ldf.to_csv(OUT/'wall_lane_decomp_v1.csv',index=False)
     print('WALL_LANE_DECOMP_V1',ldf.to_json(orient='records',force_ascii=False))
+    # Stage v7: 3-lane survival after a successful 4 attack.
+    # Test whether boat 3 remains second versus being displaced by 5.
+    races['three_second']=races.actual_second.eq(3).astype(int)
+    races['three_in_pair']=((races.actual_second.eq(3))|(races.actual_third.eq(3))).astype(int)
+    ts=[]
+    june=races[races.month.eq('2026-06')]
+    # Stronger b3 pre-race wall/survival score is the inverse of its collapse score.
+    score='wall_b3_strength'
+    for q in [0.25,0.4,0.5,0.6,0.75]:
+        cut=float(june[score].quantile(q))
+        for split,dq in [('JUNE_DEV',june),('JUL_HOLDOUT',races[races.month.eq('2026-07')]),
+                         ('AUG_HOLDOUT',races[races.month.eq('2026-08')]),('JULAUG_HOLDOUT',races[races.month.isin(['2026-07','2026-08'])])]:
+            hi=dq[dq[score].ge(cut)]; lo=dq[dq[score].lt(cut)]
+            ts.append({'q':q,'cut':cut,'split':split,'R':len(dq),'strong3_R':len(hi),
+              'strong3_second':float(hi.three_second.mean()) if len(hi) else np.nan,
+              'weak3_second':float(lo.three_second.mean()) if len(lo) else np.nan,
+              'strong3_in_pair':float(hi.three_in_pair.mean()) if len(hi) else np.nan,
+              'weak3_in_pair':float(lo.three_in_pair.mean()) if len(lo) else np.nan,
+              'strong3_five_any':float(hi.five_in_pair.mean()) if len(hi) else np.nan,
+              'weak3_five_any':float(lo.five_in_pair.mean()) if len(lo) else np.nan})
+    tdf=pd.DataFrame(ts)
+    tdf.to_csv(OUT/'three_survival_v1.csv',index=False)
+    # Descriptive 4-3 frequency by month, independent of threshold selection.
+    m3=races.groupby('month').agg(R=('month','size'),four_three=('three_second','sum'),three_any=('three_in_pair','sum')).reset_index()
+    m3['four_three_rate']=m3.four_three/m3.R
+    m3['three_any_rate']=m3.three_any/m3.R
+    m3.to_csv(OUT/'three_survival_monthly.csv',index=False)
+    print('THREE_SURVIVAL_MONTHLY',m3.to_json(orient='records',force_ascii=False))
+    print('THREE_SURVIVAL_V1',tdf.to_json(orient='records',force_ascii=False))
     fam=(races.groupby(['month','pair_family']).size().rename('R').reset_index())
     fam['pct']=fam.R/fam.groupby('month').R.transform('sum')*100
     fam.to_csv(OUT/'pair_family_monthly.csv',index=False)
@@ -212,7 +241,7 @@ def main():
     meta={'head4_R':len(races),'dev':'2026-06 only','holdout':['2026-07','2026-08'],
           'dev_R':len(dev),'holdout_R':len(hold),'SEPTEMBER_OUTCOMES_READ':False,
           'PH5_HEAD_MODEL_CHANGED':False,'PRODUCTION_CHANGED':False,
-          'stage':'WALL_LANE_DECOMP_V1'}
+          'stage':'THREE_SURVIVAL_V1'}
     (OUT/'meta.json').write_text(json.dumps(meta,ensure_ascii=False,indent=2))
     print('REGIME_MONTHLY',pct.to_json(orient='records',force_ascii=False))
     print('PAIR_TOP',pair.groupby('month').head(8).to_json(orient='records',force_ascii=False))
