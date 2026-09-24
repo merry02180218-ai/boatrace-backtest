@@ -1,0 +1,43 @@
+name: research-inner12-factor-discovery-v1
+
+on:
+  workflow_dispatch:
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Preflight
+        run: |
+          python -m py_compile             research/research_inner12_factor_discovery_v1.py             backtest.py backtest_v3.py backtest_v4.py
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('research/research_inner12_factor_discovery_v1.py')
+          s=p.read_text(encoding='utf-8')
+          assert '\\n' not in s.replace('"\\n"','').replace("'\\n'",''), 'suspicious literal escaped newline'
+          assert 'HOLD_START = date(2026, 7, 1)' in s
+          assert '"holdout_used_for_selection":False' in s
+          assert '"route_target_used_for_factor_selection":False' in s
+          assert 'September outcome access blocked' in s
+          print('PREFLIGHT_OK')
+          PY
+
+      - name: Run simultaneous-lag factor discovery
+        env:
+          INNER12_FACTOR_OUTDIR: /tmp/inner12_factor_discovery_v1
+          PYTHONPATH: .
+        run: |
+          mkdir -p /tmp/inner12_factor_discovery_v1
+          python research/research_inner12_factor_discovery_v1.py             | tee /tmp/inner12_factor_discovery_v1/run.log
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: inner12-factor-discovery-v1
+          path: /tmp/inner12_factor_discovery_v1/
