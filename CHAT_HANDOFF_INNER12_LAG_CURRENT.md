@@ -622,3 +622,24 @@ Next action:
   - Jul-Aug report-only reproduction
   - which 3/4/5 features actually matter
 - do not adopt a final route rule until the conversion structure is understood.
+
+
+## Stage-B Run 35990165189 false-success incident
+GitHub displayed SUCCESS because the research command was piped to `tee` without `set -o pipefail`.
+Actual script status: FAILED.
+
+Actual traceback:
+- `KeyError: 5`
+- at `post_inner_fast_vs_attack_fast_pred=min(pred[1],pred[2])-min(pred[3],pred[4],pred[5])`
+- the exhibition prediction loop still iterated `for b in (1,2,3,4)`, so `pred[5]` did not exist.
+
+Fixes:
+- source commit `59628b24c240b2d7b2fd2a55c842b328594a5bad`
+  - prediction loop now includes boats 1..5.
+- workflow commit `d8c7a4ecc532468f1bf1e271aeb7c2a9efded99e`
+  - adds `set -o pipefail`
+  - preflight now asserts the exact boat5 prediction loop exists.
+- therefore future Python failure can no longer be hidden by `tee`.
+
+Do NOT rerun Run 35990165189 because it is pinned to the old head SHA.
+Start a fresh manual workflow_dispatch of `research-inner12-stageb-route-v1.yml`.
