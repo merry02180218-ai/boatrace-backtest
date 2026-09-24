@@ -108,6 +108,7 @@ def main():
         if r.wall_32break>=break32_cut: return "THREE_TWO_BREAK"
         return "MIXED_INNER"
     x["struct_branch"]=x.apply(branch,axis=1)
+    x[["race_code","date","month","wall_b3_strength","wall_32break","struct_branch"]].to_csv(OUT/"branch_map.csv",index=False)
 
     # Only after branch freeze do we attach top-3 outcomes.
     truth=parent.truth()
