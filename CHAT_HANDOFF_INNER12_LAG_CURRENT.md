@@ -1203,3 +1203,68 @@ Next:
 - fire the fast V3 workflow and confirm exact reproduction.
 - A-only exact 3-vs4 single-head classifier was explored; current predicted 3-vs4 ST alone was not good enough, so do not force it.
 - priority after V3 confirmation: study the 5 B-only/strong misses as an inner-2 survival/veto mechanism without overfitting.
+
+
+## Operational Shadow V4 — A-only dual-head adoption
+
+User proposed:
+- A-only should not be forcibly classified into 3-head vs 4-head.
+- Buy both 3 and 4 heads.
+
+This is supported by the actual A-only winner distribution.
+
+A-only total 53R:
+- winner 3: 12
+- winner 4: 16
+- winner 3 or 4: 28/53 = 52.83%
+- winner 1: 16
+- winner 2: 3
+- winner 5: 5
+- winner 6: 1
+
+Monthly 3-or-4 head:
+- Jun: 7/18 = 38.89%
+- Jul: 9/16 = 56.25%
+- Aug: 12/19 = 63.16%
+
+Important:
+- 4-family (4M/4MS) was only 13/53.
+- Actual boat4 wins were 16/53 because there were additional 4差し/4抜き outcomes.
+- Therefore A-only should use **boat3 OR boat4 head**, not only the M/MS route labels.
+
+Combined operational routing frozen as Shadow V4:
+- A-only -> heads 3 and 4
+- B-only AND pre_pair_absdiff_prior_recent3_st >= .04 -> head 3 only
+- B-only without strong gap -> PASS
+- both -> PASS
+- neither -> PASS
+
+Combined historical race-level selected-head hit:
+- Jun: 23R / 10 = 43.48%
+- Jul: 21R / 13 = 61.90%
+- Aug: 24R / 15 = 62.50%
+- total: 68R / 38 = 55.88%
+- average selected volume = 22.67R/month
+
+Because A-only has two heads:
+- total head slots = 121
+- hit per head-slot = 38/121 = 31.40%
+This is NOT directly comparable to a single-head model's head probability.
+Opponent/ticket construction and ROI are still untested.
+
+Created:
+- `research/research_inner12_operational_shadow_v4.py`
+  - commit `4a9189f286844eacaff2147ece7e80000849ee33`
+- `.github/workflows/research-inner12-operational-shadow-v4.yml`
+  - commit `f932346a9d074faa0ba19f4dabee3761bf6ac958`
+
+Status:
+- POSTHOC_SHADOW_ONLY
+- September unread
+- production unchanged
+
+Next priority:
+- build opponent/ticket anatomy for A-only separately by actual head3 vs head4.
+- join result top3 only AFTER frozen V4 decisions are fixed.
+- derive second/third distributions and candidate ranking from causal pre-race features.
+- avoid using outcome frequencies to mutate the V4 head gate.
