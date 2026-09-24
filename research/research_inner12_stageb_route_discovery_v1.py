@@ -76,7 +76,10 @@ LABELS = (
 )
 META_KEYS = {
     "date","month","race_code","venue","venue_name","race_no","day_no","day_cat",
-    "route_target","winner","kimarite","actual_st1","actual_st2","actual_st3","actual_st4",
+    "route_target","winner","kimarite",
+    "actual_st1","actual_st2","actual_st3","actual_st4",
+    "dual_abs20","dual_vs3_03","inner_vs_outer03",
+    "stagea_suminoe_ultra",
     *LABELS
 }
 
@@ -756,7 +759,8 @@ def main():
         "holdout_used_for_selection":False,\n        "stagea_rule_frozen":True,\n        "stagea_gate":"GLOBAL_STAGEA_V1",
         "september_outcomes_read":False,
         "same_day_results_used_before_feature_freeze":False,
-        "route_target_used_for_factor_selection":False,
+        "route_labels_are_primary_targets":True,
+        "outcome_columns_excluded_from_features":True,
         "production_changed":False,
         "rows":len(frozen_rows),
         "labels":list(LABELS),
