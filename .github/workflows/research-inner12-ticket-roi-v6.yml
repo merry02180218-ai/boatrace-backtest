@@ -1,0 +1,82 @@
+name: research-inner12-ticket-roi-v6
+
+on:
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/previews/od3
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -q pandas numpy
+
+      - name: Download frozen opponent anatomy V5 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: inner12-opponent-anatomy-v5
+          path: /tmp/v5
+          github-token: ${{ github.token }}
+          repository: merry02180218-ai/boatrace-backtest
+          run-id: 36021366565
+
+      - name: Preflight
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/inner12_ticket_roi_v6
+          test -f /tmp/v5/frozen_decisions_with_results.csv
+          python -m py_compile research/research_inner12_ticket_roi_v6.py
+          python - <<'PY'
+          from pathlib import Path
+          s=Path('research/research_inner12_ticket_roi_v6.py').read_text(encoding='utf-8')
+          assert '\\n' not in s
+          required=[
+              'INNER12_FIXED_TICKET_ROI_SHADOW_V6',
+              'BANK=5000',
+              'COMP_CUT=5.0',
+              '"LEAN"',
+              '"BALANCED"',
+              '"WIDE"',
+              '"status":"POSTHOC_SHADOW_ONLY"',
+              '"tickets_frozen_before_odds_roi":True',
+              '"september_outcomes_read":False',
+              '"production_changed":False',
+          ]
+          for x in required:
+              assert x in s, x
+          print('INNER12_TICKET_ROI_V6_PREFLIGHT_OK')
+          PY
+
+      - name: Evaluate fixed tickets and ROI
+        env:
+          INNER12_V5_ROWS: /tmp/v5/frozen_decisions_with_results.csv
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+          INNER12_V6_OUTDIR: /tmp/inner12_ticket_roi_v6
+        run: |
+          set -o pipefail
+          python research/research_inner12_ticket_roi_v6.py | tee /tmp/inner12_ticket_roi_v6/run.log
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: inner12-ticket-roi-v6
+          path: /tmp/inner12_ticket_roi_v6/
+          retention-days: 30
