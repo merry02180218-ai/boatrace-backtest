@@ -185,6 +185,29 @@ def main():
    rows.append({"family":name,"q":q,"threshold":t,"swap_R":int(m.sum()),"old_hits":int(g.loc[m,"old"].sum()),"new_hits":int(g.loc[m,"new"].sum()),"net_hits":int((g.loc[m,"new"]-g.loc[m,"old"]).sum())})
  pd.DataFrame(rows).to_csv(OUT/"dev_feature_family_ablation.csv",index=False)
  print("DEV_FAMILY_ABLATION",json.dumps(rows,ensure_ascii=False))
+ # DEV-only blend study: PH/Waku is INCLUDED in the existing HYBRID pair score, never used as a replacement policy.
+ # Normalize the existing HYBRID ordered-pair score and PH/Waku opponent score within each race, then blend.
+ blend_rows=[]
+ for r0 in rr["H078_M375"]:
+  code=str(r0["race_code"]).zfill(12); month=code[:4]+"-"+code[4:6]
+  if month not in DEV or code not in byrank: continue
+  p2,pc=v365.formal_post_five6(r0); base=v299.pair_prob(p2,pc,prod.TICKET_ALPHA)
+  sm={int(x.boat):float(x.opp_score) for _,x in rank[rank.race_code.eq(code)].iterrows()}
+  pairs=[(a,b) for a in (2,3,4,5,6) for b in (2,3,4,5,6) if a!=b]
+  bv={ab:float(base.get(ab,0.0)) for ab in pairs}; pv={ab:sm.get(ab[0],0)+sm.get(ab[1],0) for ab in pairs}
+  def z(v):
+   a=np.array(list(v.values()),dtype=float); mu=float(a.mean()); sd=float(a.std()) or 1.0
+   return {k:(x-mu)/sd for k,x in v.items()}
+  bz,pz=z(bv),z(pv); actual=str(r0["actual_combo"])
+  for wgt in (0.05,0.10,0.15,0.20,0.25,0.30):
+   mix={ab:bz[ab]+wgt*pz[ab] for ab in pairs}
+   top=sorted(pairs,key=lambda ab:mix[ab],reverse=True)[:3]
+   blend_rows.append({"race_code":code,"w":wgt,"hit":int(actual in {f"1-{a}-{b}" for a,b in top}),"tickets":str(top)})
+ bd=pd.DataFrame(blend_rows); blend=[]
+ for wgt,g in bd.groupby("w"):
+  blend.append({"w":float(wgt),"R":int(len(g)),"hits":int(g.hit.sum()),"rate":float(g.hit.mean())})
+ print("DEV_HYBRID_INCLUDED_BLEND",json.dumps(blend,ensure_ascii=False))
+ pd.DataFrame(blend).to_csv(OUT/"dev_hybrid_included_blend.csv",index=False)
 
 
 
