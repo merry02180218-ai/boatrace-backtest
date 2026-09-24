@@ -16,12 +16,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Dependencies
-        shell: powershell
+        shell: pwsh
         run: |
           python -c "import numpy,pandas" 2>$null
           if ($LASTEXITCODE -ne 0) { python -m pip install -q --disable-pip-version-check numpy pandas }
       - name: Download frozen v360 prepared
-        shell: powershell
+        shell: pwsh
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -43,7 +43,7 @@ jobs:
           if ([System.IO.Path]::GetFullPath($prep.FullName) -ne [System.IO.Path]::GetFullPath($cachedPrep)) { Copy-Item $prep.FullName $cachedPrep -Force }
           "PREP=$cachedPrep" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
       - name: P2 miss mechanism v4
-        shell: powershell
+        shell: pwsh
         run: python research_1head_mechanism_discovery_v4.py --prepared "$env:PREP"
       - uses: actions/upload-artifact@v4
         if: always()
