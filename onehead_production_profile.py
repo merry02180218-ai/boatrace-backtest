@@ -86,6 +86,27 @@ FIVE6_SHADOW_SECOND_G2 = 0.00
 FIVE6_SHADOW_THIRD_G3 = 0.75
 
 
+# Promoted 1-5 additive ticket top-up, adopted 2026-09-25 after the
+# mechanism / nested-OOF / fixed-rule audits. This NEVER replaces the formal
+# HYBRID3 tickets. It only appends up to three 1-5-x tickets when the frozen
+# 5-second regime fires.
+FIVE_SECOND_TOPUP_PROMOTED = True
+FIVE_SECOND_TOPUP_PROFILE_NAME = "1HEAD_1TO5_TOPUP_20260925_LOCAL_STRAIGHT_CORE_R025_ADD3"
+FIVE_SECOND_TOPUP_P2_RATIO_MIN = 0.25
+FIVE_SECOND_TOPUP_EXTRA_TICKETS = 3
+FIVE_SECOND_TOPUP_STAKE_YEN_PER_TICKET = 100
+FIVE_SECOND_TOPUP_DEV_R = 190
+FIVE_SECOND_TOPUP_DEV_BASE_HITS = 98
+FIVE_SECOND_TOPUP_DEV_HITS = 102
+FIVE_SECOND_TOPUP_DEV_FIRES = 21
+FIVE_SECOND_TOPUP_DEV_RESCUES = 4
+FIVE_SECOND_TOPUP_DEV_BASE_ROI = 1.2319298245614034
+FIVE_SECOND_TOPUP_DEV_ROI = 1.3314375987361768
+FIVE_SECOND_TOPUP_DEV_EXTRA_TICKETS = 63
+FIVE_SECOND_TOPUP_SUPPORT_OUTCOMES_READ = False
+FIVE_SECOND_TOPUP_SEPTEMBER_OUTCOMES_READ = False
+
+
 # Research-only LIVE stake shadow from v374-v376.
 # Official stake remains 100 yen per formal ticket. When either already-formal
 # post-exhibition overlay fires, shadow only doubles all three formal tickets.
