@@ -101,3 +101,78 @@ After SUCCESS:
 ## Commits
 - script: `762d9ee1355bb9b30107d0f76701ea43ca2a3559`
 - manual workflow: `7724ad1e6a569ab913b4ac36c4a45256c53898fd`
+
+
+## V1 result — Run 35963686632 SUCCESS
+Run:
+- https://github.com/merry02180218-ai/boatrace-backtest/actions/runs/35963686632
+- commit: `f0517b84cbe93d30cd83bdd4567a4740ab13071f`
+- status: SUCCESS
+- rows: 28,011
+- September outcomes read: false
+- same-day results used for features: false
+- production changed: false
+
+### Baseline rates
+Development Apr-Jun:
+- PRE population: 13,564R / target 1,013 = 7.4683%
+- POST-available population: 12,377R / target 927 = 7.4897%
+
+Holdout Jul-Aug:
+- PRE population: 9,840R / target 762 = 7.7439%
+- POST-available population: 9,588R / target 743 = 7.7493%
+
+### Chosen PRE rule (selected on Apr-Jun only)
+`dual_late_pre >= .55`
+- Apr-Jun: 154R / target 25 = 16.2338% (lift 2.174x)
+  - 3 makuri: 17/154 = 11.0390%
+  - 4 makuri-sashi: 8/154 = 5.1948%
+- Jul-Aug holdout: 99R / target 10 = 10.1010% (lift 1.304x)
+  - 3 makuri: 7/99 = 7.0707%
+  - 4 makuri-sashi: 3/99 = 3.0303%
+- holdout volume: about 49.5 races/month.
+
+Monthly:
+- Jul: 50R / 5 target = 10.00%; all 5 were 3-makuri.
+- Aug: 49R / 5 target = 10.20%; 3-makuri 2, 4-makuri-sashi 3.
+
+### Chosen POST rule (selected on Apr-Jun only)
+`dual_late_post >= .70`
+- Apr-Jun: 124R / target 23 = 18.5484% (lift 2.477x)
+  - 3 makuri: 16/124 = 12.9032%
+  - 4 makuri-sashi: 7/124 = 5.6452%
+- Jul-Aug holdout: 105R / target 13 = 12.3810% (lift 1.598x)
+  - 3 makuri: 10/105 = 9.5238%
+  - 4 makuri-sashi: 3/105 = 2.8571%
+- holdout volume: about 52.5 races/month.
+
+Monthly:
+- Jul: 61R / 8 target = 13.11%; 3-makuri 6, 4-makuri-sashi 2.
+- Aug: 44R / 5 target = 11.36%; 3-makuri 4, 4-makuri-sashi 1.
+
+### Interpretation
+- The core hypothesis is supported out-of-sample: simultaneous boat1+boat2 start-lag risk raises the combined target rate.
+- POST is clearly stronger than PRE on Jul-Aug: 12.38% vs 10.10%, with similar volume.
+- Most robust signal is boat3 makuri:
+  - POST holdout 9.52% vs background POST 3-makuri rate 5.16%, about 1.84x.
+- Boat4 makuri-sashi signal is much weaker on holdout:
+  - POST holdout 2.86% vs background 2.59%, only a small lift.
+- Therefore V2 should not treat 3-makuri and 4-makuri-sashi as one homogeneous endpoint.
+
+## V2 recommended design
+Two-stage structure:
+1. Stage A = INNER12_LAG gate, keep POST `dual_late_post >= .70` as current research anchor.
+2. Stage B = route classifier:
+   - route 3_MAKURI
+   - route 4_MAKURI_SASHI
+
+For route split, keep 3/4 raw strength low-weight. Prefer structural variables first:
+- predicted ST ordering of boats 3 and 4 relative to 1/2;
+- 3-vs-4 predicted ST gap;
+- boat3 ability to cross boat2 / boat4 ability to take the opened lane;
+- boat3 turn/straight balance and boat4 turn entry only as minimum-viability/soft features;
+- 2 wall-collapse tendency and 3's likely trajectory;
+- current exhibition course changes;
+- PLAYERHistory/Waku10 only where they describe start/development role rather than generic strength.
+
+Do not production-adopt V1 yet. It is a validated mechanism gate, not yet a complete betting model.
