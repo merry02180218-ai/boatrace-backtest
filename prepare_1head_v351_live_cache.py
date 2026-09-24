@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse,json
 from pathlib import Path
 import pandas as pd
+import backtest as bt
 import onehead_production_profile as prod
 import run_v323_1head_frozen_live_adapter as live
 import run_v300_1head_trifecta3_feature_upgrade as v300
@@ -18,7 +19,7 @@ import run_v299_1head_trifecta3_policy_search as v299
 
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--date',required=True);ap.add_argument('--cards',type=Path,required=True);ap.add_argument('--pre',type=Path);ap.add_argument('--race-code',default='');ap.add_argument('--out',type=Path,required=True);a=ap.parse_args();target=pd.Timestamp(a.date).date();wanted=str(a.race_code).zfill(12) if a.race_code else ''
- cur0=live.current_static(live.load_cards(a.cards),target);cur,_,_=live.build_current_features(cur0);head=live.head_score(cur,prod.LIVE_HEAD_CUTOFF)
+ cards_raw=live.load_cards(a.cards);card_map={live.norm_code(x.get('レースコード','')):x for x in cards_raw};cur0=live.current_static(cards_raw,target);cur,_,_=live.build_current_features(cur0);head=live.head_score(cur,prod.LIVE_HEAD_CUTOFF)
  slim=pd.read_csv(live.PREP_SLIM,dtype={'race_code':str});slim.race_code=slim.race_code.astype(str).str.zfill(12);v300.setup_v298();sufs=v298.suffixes(slim);cc=cur.copy();cc['head_hit']=0;cc['actual_combo']=''
  for c in slim.columns:
   if c not in cc: cc[c]=float('nan')
@@ -39,7 +40,9 @@ def main():
   if code not in hm.index or code not in p2 or code not in pc or code not in base_p2 or code not in base_pc: continue
   mass=v300.base5(base_p2[code],base_pc[code])[1];probs=v299.pair_prob(p2[code],pc[code],prod.TICKET_ALPHA);top=v299.STRATEGIES['HYBRID'](p2[code],pc[code],probs)[:3];hp=float(hm.loc[code,'p_head'])
   operating_pre_class='WATCH_PRE' if hp>=prod.WATCH_HEAD_CUTOFF and float(mass)>=prod.WATCH_OPPONENT_MASS_MIN else ('BASIC_PRE' if hp>=prod.LIVE_HEAD_CUTOFF and float(mass)>=prod.LIVE_OPPONENT_MASS_MIN else 'NON_CANDIDATE')
-  obj={'race_code':code,'pre_class':m.get('pre_class','NON_CANDIDATE'),'operating_pre_class':operating_pre_class,'legacy_pre_p':float(m['legacy_pre_p']) if m.get('legacy_pre_p') not in (None,'') else hp,'final_head_p':hp,'opp_mass':float(mass),'p2':{str(k):float(v) for k,v in p2[code].items()},'pc':{f'{s}-{t}':float(v) for (s,t),v in pc[code].items()},'base_tickets':';'.join(f'1-{s}-{t}' for s,t in top),'production_profile':prod.PROFILE_NAME,'live_operation_profile':prod.LIVE_OPERATION_PROFILE_NAME,'training_cutoff':(target-pd.Timedelta(days=1)).isoformat(),'result_or_payout_used':False,'chronology_guard':True,'base_source':'ON_DEMAND_CAUSAL' if wanted else 'DAILY_ALL_RACE_CACHE'};(a.out/f'{code}.json').write_text(json.dumps(obj,ensure_ascii=False,indent=2));n+=1
+  card=card_map.get(code,{})
+  local4=float(bt.f(card.get('艇4_当地勝率'),0));local5=float(bt.f(card.get('艇5_当地勝率'),0))
+  obj={'race_code':code,'pre_class':m.get('pre_class','NON_CANDIDATE'),'operating_pre_class':operating_pre_class,'legacy_pre_p':float(m['legacy_pre_p']) if m.get('legacy_pre_p') not in (None,'') else hp,'final_head_p':hp,'opp_mass':float(mass),'p2':{str(k):float(v) for k,v in p2[code].items()},'pc':{f'{s}-{t}':float(v) for (s,t),v in pc[code].items()},'base_tickets':';'.join(f'1-{s}-{t}' for s,t in top),'local_winrate_4':local4,'local_winrate_5':local5,'local_edge_5_minus_4':local5-local4,'five_second_topup_cache_ready':True,'production_profile':prod.PROFILE_NAME,'live_operation_profile':prod.LIVE_OPERATION_PROFILE_NAME,'training_cutoff':(target-pd.Timedelta(days=1)).isoformat(),'result_or_payout_used':False,'chronology_guard':True,'base_source':'ON_DEMAND_CAUSAL' if wanted else 'DAILY_ALL_RACE_CACHE'};(a.out/f'{code}.json').write_text(json.dumps(obj,ensure_ascii=False,indent=2));n+=1
  if wanted and n!=1: raise RuntimeError(f'on-demand causal base could not be generated for {wanted}')
- meta={'date':a.date,'all_race_cache_R':n,'requested_race_code':wanted or None,'training_cutoff':(target-pd.Timedelta(days=1)).isoformat(),'production_profile':prod.PROFILE_NAME,'live_operation_profile':prod.LIVE_OPERATION_PROFILE_NAME,'result_or_payout_used':False,'chronology_guard':True};(a.out/'meta.json').write_text(json.dumps(meta,indent=2));print(json.dumps(meta))
+ meta={'date':a.date,'all_race_cache_R':n,'requested_race_code':wanted or None,'training_cutoff':(target-pd.Timedelta(days=1)).isoformat(),'production_profile':prod.PROFILE_NAME,'live_operation_profile':prod.LIVE_OPERATION_PROFILE_NAME,'five_second_topup_cache_ready':True,'result_or_payout_used':False,'chronology_guard':True};(a.out/'meta.json').write_text(json.dumps(meta,indent=2));print(json.dumps(meta))
 if __name__=='__main__':main()
