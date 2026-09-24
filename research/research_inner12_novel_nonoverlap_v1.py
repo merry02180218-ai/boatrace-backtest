@@ -69,7 +69,7 @@ def is_generic4_strength(name:str)->bool:
 
 def safe_num_features(df):
     bad_prefix=("route_","actual_","dual_")
-    skip={"race_code","date","month","venue_name","winner","kimarite"}
+    skip={"race_code","date","month","venue","venue_name","winner","kimarite"}
     out=[]
     for c in df.columns:
         if c in skip or c in META_EXCLUDE or c.startswith("cat_") or c.startswith(bad_prefix):
