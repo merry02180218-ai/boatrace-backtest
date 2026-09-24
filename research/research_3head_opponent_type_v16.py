@@ -63,7 +63,7 @@ for testm in ['jul','aug']:
         sc=float(means.max()-means.min())/(float(z.std())+1e-9)
         scores.append((sc,c))
     use=[c for _,c in sorted(scores,reverse=True)[:8]]
-    model=make_pipeline(SimpleImputer(strategy='median'),StandardScaler(),LogisticRegression(C=.08,class_weight='balanced',solver='liblinear',max_iter=2000,random_state=316))
+    model=make_pipeline(SimpleImputer(strategy='median'),StandardScaler(),LogisticRegression(C=.08,class_weight='balanced',solver='lbfgs',max_iter=2000,random_state=316))
     model.fit(tr[use],tr.opp_class)
     pr=model.predict(te[use])
     q=te[['month','race_code','second','third','opp_class']].copy();q['pred_class']=pr;q['correct']=q.pred_class.eq(q.opp_class);q['features']='|'.join(use);preds.append(q)
