@@ -1,7 +1,7 @@
 name: research-3head-opponent-type-v16
 on:
   push:
-    paths: [research/run_3head_opponent_type_v16_retry.fire]
+    paths: [research/run_3head_opponent_type_v16_retry2.fire]
 jobs:
   research:
     runs-on: ubuntu-latest
