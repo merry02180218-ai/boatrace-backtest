@@ -1,0 +1,40 @@
+{
+  "profile": "HEAD4_WALL3_BASE120_PASS_RESCUE_V1",
+  "source_run": 36121532552,
+  "source_detail_R": 1083,
+  "filter": "shadow==1 AND base120==0",
+  "three_month": {
+    "R": 304,
+    "head4": 39,
+    "head4_rate": 12.8289,
+    "exact3": 23,
+    "exact3_rate": 7.5658,
+    "equal_roi_snapshot": 54.6753,
+    "dutch_roi_snapshot": 60.7395,
+    "avg_comp": 11.6138
+  },
+  "monthly": {
+    "2026-06": {"R":98,"head4":13,"head4_rate":13.2653,"exact3":6,"exact3_rate":6.1224,"equal_roi_snapshot":27.4510,"dutch_roi_snapshot":40.7490,"avg_comp":12.7193},
+    "2026-07": {"R":111,"head4":18,"head4_rate":16.2162,"exact3":12,"exact3_rate":10.8108,"equal_roi_snapshot":76.4459,"dutch_roi_snapshot":90.6703,"avg_comp":10.8921},
+    "2026-08": {"R":95,"head4":8,"head4_rate":8.4211,"exact3":5,"exact3_rate":5.2632,"equal_roi_snapshot":57.3221,"dutch_roi_snapshot":46.3895,"avg_comp":11.3168}
+  },
+  "daily": {
+    "calendar_days": 92,
+    "mean_R_per_day": 3.3043,
+    "median_R_per_day": 3.0,
+    "max_R_per_day": 8,
+    "zero_days": 6
+  },
+  "sep25_1600_reproduction": {
+    "broad_wall3_R": 7,
+    "base120_already_selected_R": 4,
+    "base120_pass_rescue_R": 3,
+    "codes": ["202609250804","202609252204","202609252110"]
+  },
+  "notes": [
+    "Historical analogue of Sep-25 16:00 rescue semantics: monitoring parent + base120 PASS + wall ready/open + comp>=2.5 + shadow_quality>=0.82.",
+    "ROI fields use archived pre-deadline odds from source audit, not official final payout."
+  ],
+  "SEPTEMBER_OUTCOMES_READ_FOR_HISTORICAL_SELECTION": false,
+  "PRODUCTION_CHANGED": false
+}
