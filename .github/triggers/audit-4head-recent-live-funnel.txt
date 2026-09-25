@@ -1,1 +1,1 @@
-trigger recent 4head live funnel v1
+trigger recent 4head live funnel v2 missing-terminal
