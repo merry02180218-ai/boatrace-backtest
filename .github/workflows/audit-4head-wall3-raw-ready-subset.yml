@@ -1,0 +1,135 @@
+name: audit-4head-wall3-raw-ready-subset
+
+on:
+  push:
+    paths:
+      - '.github/triggers/audit-4head-wall3-raw-ready-subset.txt'
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: head4-wall3-live-rescue-3m
+          path: old
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: 36115251692
+
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/previews/original_exhibition
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install -q pandas
+
+      - name: Recheck exact LIVE raw original availability
+        run: |
+          python - <<'PY'
+          import csv,json,math
+          from pathlib import Path
+          import pandas as pd
+
+          src=next(Path('old').rglob('wall3_live_rescue_3m_detail.csv'))
+          d=pd.read_csv(src,dtype={'race_code':str})
+          d['race_code']=d.race_code.astype(str).str.zfill(12)
+
+          cache={}
+          def ff(x):
+              try:
+                  v=float(str(x).strip())
+                  return v if math.isfinite(v) else None
+              except Exception:
+                  return None
+
+          def raw_ready(code):
+              day=code[:8]
+              if day not in cache:
+                  p=Path('brcsv')/'data/previews/original_exhibition'/day[:4]/day[4:6]/f'{day[6:8]}.csv'
+                  rows={}
+                  if p.is_file():
+                      with p.open(encoding='utf-8-sig',newline='') as f:
+                          for r in csv.DictReader(f):
+                              c=str(r.get('レースコード','')).strip()
+                              if c.endswith('.0'): c=c[:-2]
+                              rows[c.zfill(12)]=r
+                  cache[day]=rows
+              r=cache[day].get(code)
+              if not r:
+                  return False,'RAW_ORIGINAL_ROW_MISSING'
+              metrics=[]
+              for k in (1,2,3):
+                  lab=str(r.get(f'計測項目{k}','')).strip().replace(' ','')
+                  vals=[ff(r.get(f'艇{b}_値{k}')) for b in range(1,7)]
+                  if lab or any(v is not None for v in vals):
+                      metrics.append((k,lab,vals))
+              if not metrics:
+                  return False,'NO_ORIGINAL_METRIC'
+              avg_all6=all(all(v is not None for v in vals) for _,_,vals in metrics)
+              straight_all6=any(('直線' in lab) and all(v is not None for v in vals) for _,lab,vals in metrics)
+              if not avg_all6:
+                  return False,'ORIGINAL_NOT_ALL6'
+              if not straight_all6:
+                  return False,'STRAIGHT_NOT_ALL6'
+              return True,'READY'
+
+          ready=[]; reason=[]
+          for code in d.race_code:
+              a,b=raw_ready(code); ready.append(int(a)); reason.append(b)
+          d['live_raw_wall_ready']=ready; d['live_raw_wall_reason']=reason
+          k=d[d.live_raw_wall_ready.eq(1)].copy()
+          k['month']=k.date.astype(str).str[:7]
+
+          def metrics(x):
+              stake=float(x.rescue_equal_stake.sum())
+              return {
+                  'R':int(len(x)),
+                  'head4':int(x.head4.sum()),
+                  'head4_rate':100*float(x.head4.mean()) if len(x) else None,
+                  'exact3':int(x.rescue_hit.sum()),
+                  'exact3_rate':100*float(x.rescue_hit.mean()) if len(x) else None,
+                  'equal_stake':stake,
+                  'equal_payout':float(x.rescue_payout_equal.sum()),
+                  'equal_roi':100*float(x.rescue_payout_equal.sum())/stake if stake else None,
+              }
+          out={
+              'profile':'HEAD4_WALL3_OLD1275_RAW_LIVE_READY_RECHECK',
+              'source_run':36115251692,
+              'source_R':int(len(d)),
+              'raw_live_ready_R':int(len(k)),
+              'removed_R':int(len(d)-len(k)),
+              'removed_rate':100*float((1-d.live_raw_wall_ready).mean()),
+              'overall':metrics(k),
+              'monthly':{m:metrics(g) for m,g in k.groupby('month')},
+              'removed_by_reason':d.loc[d.live_raw_wall_ready.eq(0),'live_raw_wall_reason'].value_counts().to_dict(),
+              'removed_by_jcd':d.loc[d.live_raw_wall_ready.eq(0),'jcd'].astype(str).str.zfill(2).value_counts().to_dict(),
+              'SEPTEMBER_OUTCOMES_READ':False,
+              'PRODUCTION_CHANGED':False,
+              'note':'This only corrects raw LIVE original-data readiness inside the old 1275 shadow set; full corrected funnel is a separate replay.'
+          }
+          Path('artifacts/research_wall3_raw_ready_subset.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          d.to_csv('artifacts/research_wall3_raw_ready_subset_detail.csv',index=False)
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+          PY
+
+      - name: Persist result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add artifacts/research_wall3_raw_ready_subset.json artifacts/research_wall3_raw_ready_subset_detail.csv
+          git commit -m "research: recheck wall3 raw LIVE readiness in old rescue set"
+          git push
