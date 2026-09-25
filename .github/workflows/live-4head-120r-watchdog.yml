@@ -84,7 +84,7 @@ jobs:
             echo 'matrix={"include":[]}' >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          gh run download "$RUN_ID" -n "$NAME" -D /tmp/head1_resolve/audit
+          gh run download "$RUN_ID" --repo "$GITHUB_REPOSITORY" -n "$NAME" -D /tmp/head1_resolve/audit
           WATCH="$(find /tmp/head1_resolve/audit -name watchlist.json -print -quit)"
           test -n "$WATCH"
           gh api "repos/$GITHUB_REPOSITORY/contents/resolve_1head_watchdog_targets.py?ref=$GITHUB_SHA" --jq '.content' | base64 -d > /tmp/head1_resolve/resolve.py
