@@ -1,0 +1,54 @@
+name: audit-4head-ph5-parent-recall
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/audit-4head-ph5-parent-recall.txt'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards
+            data/programs/waku10
+            data/results/realtime
+            data/previews/tkz
+            data/previews/stt
+            data/previews/original_exhibition
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn
+      - name: Preflight
+        run: |
+          python -m py_compile prepare_4head_6m_v93_neutral_waku.py audit_4head_ph5_parent_recall.py
+          grep -Fq 'SEPTEMBER_OUTCOMES_READ' audit_4head_ph5_parent_recall.py
+          grep -Fq 'ph5_selected' audit_4head_ph5_parent_recall.py
+          grep -Fq 'monitoring_parent_snapshots' audit_4head_ph5_parent_recall.py
+      - name: Prepare causal PH5 primitives
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: python prepare_4head_6m_v93_neutral_waku.py
+      - name: Audit PH5 recall through monitoring parent
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+          STRICT_ROWS: /tmp/head4_clean_long_dataset/dataset.csv
+          V93_ROWS: /tmp/head4_v93_all_parent/v93_all_parent.csv
+        run: python audit_4head_ph5_parent_recall.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-ph5-parent-recall
+          path: /tmp/head4_ph5_parent_recall/
+          retention-days: 14
