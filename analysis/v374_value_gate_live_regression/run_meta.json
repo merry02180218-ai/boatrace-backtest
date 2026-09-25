@@ -1,10 +1,10 @@
 {
-  "run_id": 36054626322,
-  "run_url": "https://github.com/merry02180218-ai/boatrace-backtest/actions/runs/36054626322",
-  "head_sha": "53c229045d389bbd4d82d7474279807a6bab5107",
+  "run_id": 36078530679,
+  "run_url": "https://github.com/merry02180218-ai/boatrace-backtest/actions/runs/36078530679",
+  "head_sha": "239d6024f880026557f4f44fd2a166f675d7a010",
   "jobs": [
     {
-      "id": 107818386443,
+      "id": 107895061542,
       "name": "audit",
       "status": "in_progress",
       "conclusion": null
@@ -12,8 +12,8 @@
   ],
   "artifacts": [
     {
-      "id": 10831239075,
-      "name": "v374-value-gate-live-regression-36054626322",
+      "id": 10840797668,
+      "name": "v374-value-gate-live-regression-36078530679",
       "size_in_bytes": 1691
     }
   ]
