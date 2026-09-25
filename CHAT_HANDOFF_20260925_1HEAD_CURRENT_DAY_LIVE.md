@@ -183,3 +183,56 @@ Do not claim full real-market LIVE validation until such a workflow_dispatch run
 - NO_BET_DATA_NOT_READY fail-closed.
 
 After one real active-race validation, only then consider wiring an automatic watchdog/schedule, and only if the user explicitly asks to restore automation.
+
+
+## Automatic schedule unified with HEAD4 — 2026-09-25 update
+User explicitly requested that 1HEAD automation use the same schedule as 4HEAD rather than a separate cron.
+
+Final architecture:
+- **No independent 1HEAD schedule exists.**
+- Morning 1HEAD preparation is called from `.github/workflows/live-4head-newfeature-pre-daily.yml`.
+  - same schedules as HEAD4 PRE: 05:30 JST primary / 06:30 JST refresh.
+  - reusable workflow: `.github/workflows/live-1head-current-day-audit.yml` via `workflow_call`.
+- Intraday 1HEAD monitoring is called from `.github/workflows/live-4head-120r-watchdog.yml`.
+  - same HEAD4 watchdog ticks: every 5 minutes during the existing operating window.
+  - `resolve_onehead` resolves only active 1HEAD WATCH races.
+  - `monitor_onehead` calls `.github/workflows/live-1head-current-day-monitor.yml` as a reusable workflow.
+
+Relevant commits:
+- `a42df963`: result-blind official deadline enrichment for 1HEAD watchlist.
+- `6de27453`: 1HEAD watchdog target resolver.
+- `79a40608`: make 1HEAD daily audit reusable.
+- `d57015f7` / `5d047f73`: make 1HEAD monitor reusable; serialize/idempotency guards and condition fix.
+- `cde474dc`: resolver emits ISO JST deadline for the final monitor.
+- `165320bc`: legacy watchlists without deadline data are safely skipped.
+- `d03b85e5`: add 1HEAD PRE to HEAD4 05:30/06:30 workflow.
+- `ce16ae76`: add 1HEAD resolver/monitor to HEAD4 5-minute watchdog workflow.
+- `ce46f5fc`: fix artifact download in checkout-free resolver by explicitly setting GitHub repository.
+- `86c56c62`: add real artifact integration contract.
+
+Idempotency / retry behavior:
+- canonical completion artifact: `head1-current-live-YYYYMMDD-JJ-R`.
+- BET/PASS create the canonical artifact and future ticks skip it.
+- NO_BET_DATA_NOT_READY uses a unique retry artifact, so the next shared HEAD4 tick can retry.
+- per-race reusable workflow concurrency is serialized with `cancel-in-progress: false`.
+- a second queued call rechecks the canonical artifact before doing work.
+
+Deadline handling:
+- morning WATCH artifact is enriched from BOAT RACE official `/race/racelist` only.
+- resolver activates a race inside the same 35-minute WATCH window.
+- final monitor receives a full ISO JST deadline.
+- odds acquisition remains fail-closed before/after official deadline.
+
+Validation:
+- Run `36138243239`: shared-schedule static/unit contract SUCCESS.
+- First real shared schedule Run `36138298239`: failed only in new `resolve_onehead` because `gh run download` was executed outside a git checkout.
+  - HEAD4 `resolve` itself was SUCCESS.
+  - root cause fixed by `ce46f5fc`.
+- Run `36138388521`: contract SUCCESS after download fix.
+- Run `36138388274`: existing HEAD4 watchdog parallel test SUCCESS after integration.
+- Run `36138471846`: strengthened contract SUCCESS including **actual same-day 1HEAD audit artifact download and resolver integration**.
+
+Important:
+- 1HEAD-specific workflows retain `workflow_dispatch` for manual diagnostics, but they have **no schedule block**.
+- automatic timing is owned only by the existing HEAD4 PRE/watchdog schedules.
+- model-specific HEAD/ticket logic remains separate; only scheduling, retry, idempotency and notification interface are shared.
