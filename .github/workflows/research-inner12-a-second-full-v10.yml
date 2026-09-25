@@ -55,7 +55,9 @@ jobs:
           PYTHONPATH: .
         run: python research/research_inner12_onehead_opponent_v8_feature_export.py | tee /tmp/v8x.log
       - name: Run V10
-        env: {PYTHONPATH: .}
+        env:
+          PYTHONPATH: .
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
         run: python research/research_inner12_a_second_full_v10.py | tee /tmp/v10.log
       - uses: actions/upload-artifact@v4
         if: always()
