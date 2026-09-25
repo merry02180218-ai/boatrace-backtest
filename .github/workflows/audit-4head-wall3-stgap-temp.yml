@@ -1,0 +1,130 @@
+name: audit-4head-wall3-stgap-temp
+
+on:
+  push:
+    paths:
+      - '.github/workflows/audit-4head-wall3-stgap-temp.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards
+            data/programs/waku10
+            data/results/realtime
+            data/previews/tkz
+            data/previews/stt
+            data/previews/original_exhibition
+            data/previews/od3
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+
+      - name: Preflight
+        run: |
+          python -m py_compile prepare_4head_6m_v93_neutral_waku.py audit_4head_ph5_live_walkforward.py
+          grep -q '"wall_st_gap":stgap' audit_4head_ph5_live_walkforward.py
+          grep -q 'SEPTEMBER_OUTCOMES_READ.*False' audit_4head_ph5_live_walkforward.py
+
+      - name: Rebuild causal Jun-Aug replay
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: python prepare_4head_6m_v93_neutral_waku.py
+
+      - name: Replay rescue
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+          STRICT_ROWS: /tmp/head4_clean_long_dataset/dataset.csv
+          V93_ROWS: /tmp/head4_v93_all_parent/v93_all_parent.csv
+        run: |
+          python audit_4head_ph5_live_walkforward.py > /tmp/wall3_stgap_replay.log
+          grep -q 'HEAD4_PH5_LIVE_WALKFORWARD_OK' /tmp/wall3_stgap_replay.log
+
+      - name: Analyze wall ST gap
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import pandas as pd
+
+          p=Path('/tmp/head4_ph5_live_walkforward/wall3_live_rescue_3m_detail.csv')
+          d=pd.read_csv(p,dtype={'race_code':str})
+          d=d[d.shadow.eq(1)].copy()
+          d['month']=d.date.astype(str).str[:7]
+
+          def one(name,mask):
+              g=d[mask].copy()
+              if not len(g): return None
+              def met(x):
+                  stake=float(x.rescue_equal_stake.sum())
+                  return {
+                    'R':int(len(x)),
+                    'head4':int(x.head4.sum()),
+                    'head4_rate':100*float(x.head4.mean()),
+                    'exact3':int(x.rescue_hit.sum()),
+                    'exact3_rate':100*float(x.rescue_hit.mean()),
+                    'equal_roi':100*float(x.rescue_payout_equal.sum())/stake if stake else None,
+                  }
+              z=met(g); z['name']=name
+              z['monthly']={m:met(x) for m,x in g.groupby('month')}
+              return z
+
+          rules=[]
+          rules.append(one('BASELINE',d.index==d.index))
+          for t in [0,-.025,-.05,-.075,-.10,-.15,-.20,-.25,-.30]:
+              rules.append(one(f'stgap<={t:+.3f}',d.wall_st_gap<=t))
+          for ct in [4,5,6,7,8,10]:
+              rules.append(one(f'stgap<0 & comp<={ct}',(d.wall_st_gap<0)&(d.comp<=ct)))
+          for nf in [12,13,14,15]:
+              rules.append(one(f'stgap<0 & nf>={nf}',(d.wall_st_gap<0)&(d.nf_score>=nf)))
+          for op in [.10,.15,.20,.25,.30,.40]:
+              rules.append(one(f'stgap<0 & open>={op}',(d.wall_st_gap<0)&(d.open_risk>=op)))
+          for hp in [.08,.10,.12,.14,.16,.18,.20]:
+              rules.append(one(f'stgap<0 & hp>={hp}',(d.wall_st_gap<0)&(d.head_prob>=hp)))
+          rules=[x for x in rules if x]
+          stable=[]
+          for x in rules:
+              ms=x['monthly']
+              if len(ms)==3 and min(v['R'] for v in ms.values())>=20:
+                  y=dict(x)
+                  y['min_month_head4_rate']=min(v['head4_rate'] for v in ms.values())
+                  y['min_month_R']=min(v['R'] for v in ms.values())
+                  stable.append(y)
+          stable.sort(key=lambda x:(x['min_month_head4_rate'],x['head4_rate'],x['R']),reverse=True)
+          out={
+            'profile':'HEAD4_WALL3_STGAP_RESEARCH_V1',
+            'period':'2026-06..2026-08',
+            'source_R':int(len(d)),
+            'SEPTEMBER_OUTCOMES_READ':False,
+            'PRODUCTION_CHANGED':False,
+            'rules':rules,
+            'stable_top10':stable[:10],
+          }
+          outp=Path('artifacts/research_head4_wall3_stgap_3m.json')
+          outp.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          cols=['date','race_code','head_prob','mass','comp','wall_ex_gap','wall_st_gap','wall_straight_gap','wall_avg_gap','wall_score','open_risk','shadow_quality','nf_score','head4','rescue_hit','rescue_payout_equal','rescue_equal_stake']
+          d[cols].to_csv('artifacts/research_head4_wall3_stgap_3m_detail.csv',index=False)
+          print(json.dumps(out['stable_top10'][:5],ensure_ascii=False,indent=2))
+          PY
+
+      - name: Commit research result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add artifacts/research_head4_wall3_stgap_3m.json artifacts/research_head4_wall3_stgap_3m_detail.csv
+          git commit -m "research: wall3 rescue ST-gap three-month audit"
+          git push
