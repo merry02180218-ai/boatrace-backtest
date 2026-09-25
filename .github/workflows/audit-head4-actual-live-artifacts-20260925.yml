@@ -24,14 +24,13 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p /tmp/live_artifacts/zips /tmp/live_artifacts/unpacked
-          gh api --paginate "repos/${GITHUB_REPOSITORY}/actions/artifacts?per_page=100" > /tmp/live_artifacts/pages.jsonl
+          gh api --paginate --slurp "repos/${GITHUB_REPOSITORY}/actions/artifacts?per_page=100" > /tmp/live_artifacts/pages.json
           python - <<'PY'
           import json,re
           from pathlib import Path
+          pages=json.loads(Path('/tmp/live_artifacts/pages.json').read_text())
           arts=[]
-          for line in Path('/tmp/live_artifacts/pages.jsonl').read_text().splitlines():
-              if not line.strip(): continue
-              z=json.loads(line)
+          for z in pages:
               arts.extend(z.get('artifacts',[]))
           pat=re.compile(r'^head4-120r-watchdog-20260925-\d{2}-\d+$')
           sel=[a for a in arts if pat.match(a.get('name','')) and not a.get('expired')]
