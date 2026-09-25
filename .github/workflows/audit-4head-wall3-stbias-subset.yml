@@ -1,0 +1,130 @@
+name: audit-4head-wall3-stbias-subset
+
+on:
+  push:
+    paths:
+      - '.github/triggers/audit-4head-wall3-stbias-subset.txt'
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: head4-wall3-live-rescue-3m
+          path: old
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          run-id: 36115251692
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/previews/tkz
+            data/previews/stt
+            data/previews/original_exhibition
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas numpy
+      - name: Recheck causal ST bias and wall
+        env:
+          PYTHONPATH: .
+        run: |
+          python - <<'PY'
+          import csv,json,math
+          from collections import defaultdict
+          from datetime import date,timedelta
+          from pathlib import Path
+          from statistics import mean
+          import pandas as pd
+          from backtest_v51_lane_corrected_tickets import corrected_direct,ff
+
+          ROOT=Path('brcsv')
+          src=next(Path('old').rglob('wall3_live_rescue_3m_detail.csv'))
+          d=pd.read_csv(src,dtype={'race_code':str})
+          d['race_code']=d.race_code.astype(str).str.zfill(12)
+          wanted=set(d.race_code)
+
+          def rows(rel):
+              p=ROOT/rel
+              if not p.is_file():return []
+              with p.open(encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
+          def rc(x):
+              s=str(x or '').strip()
+              if s.endswith('.0'):s=s[:-2]
+              return s.zfill(12)
+          def bycode(rel):
+              return {rc(r.get('レースコード')):r for r in rows(rel)}
+
+          sums=defaultdict(list); allv=[]; rec={}
+          day=date(2025,10,1)
+          while day<=date(2026,8,31):
+              ymd=day.strftime('%Y/%m/%d'); strows=rows(f'data/previews/stt/{ymd}.csv')
+              g=mean(allv) if allv else .15
+              bias={b:(mean(sums[b])-g if sums[b] else 0.0) for b in range(1,7)}
+              daycodes=[c for c in wanted if c.startswith(day.strftime('%Y%m%d'))]
+              if daycodes:
+                  tkz=bycode(f'data/previews/tkz/{ymd}.csv')
+                  stt={rc(r.get('レースコード')):r for r in strows}
+                  orig=bycode(f'data/previews/original_exhibition/{ymd}.csv')
+                  for code in daycodes:
+                      orow=orig.get(code,{})
+                      metrics=[]
+                      for k in (1,2,3,4):
+                          lab=str(orow.get(f'計測項目{k}','')).strip()
+                          vals=[ff(orow.get(f'艇{b}_値{k}')) for b in range(1,7)]
+                          if lab or any(v is not None for v in vals): metrics.append((k,lab,vals))
+                      avg_all6=bool(metrics) and all(all(v is not None for v in vals) for _,_,vals in metrics)
+                      straight_all6=any(('直線' in lab) and all(v is not None for v in vals) for _,lab,vals in metrics)
+                      raw_ready=bool(avg_all6 and straight_all6)
+                      try:
+                          ex,st,os=corrected_direct(code,tkz,stt,orig,bias)
+                          wall=.20*(ex[3]-ex[4])+.40*(st[3]-st[4])+.25*(os[3]['straight']-os[4]['straight'])+.15*(os[3]['avg']-os[4]['avg'])
+                          open_risk=max(0.0,-float(wall))
+                      except Exception:
+                          wall=float('nan');open_risk=0.0;raw_ready=False
+                      rec[code]={'raw_ready':int(raw_ready),'wall_score_causal':wall,'open_risk_causal':open_risk,
+                                 'st3_causal':st.get(3,float('nan')) if 'st' in locals() else float('nan'),
+                                 'st4_causal':st.get(4,float('nan')) if 'st' in locals() else float('nan')}
+              for r in strows:
+                  for b in range(1,7):
+                      v=ff(r.get(f'艇{b}_スタート展示'))
+                      if v is not None and -.30<v<1.0:
+                          sums[b].append(v);allv.append(v)
+              day+=timedelta(days=1)
+
+          q=d.copy()
+          for col in ('raw_ready','wall_score_causal','open_risk_causal','st3_causal','st4_causal'):
+              q[col]=q.race_code.map(lambda c:rec.get(c,{}).get(col,0 if col in ('raw_ready','open_risk_causal') else float('nan')))
+          q['shadow_quality_causal']=q.head_prob+1.5*q.mass+.10*q.open_risk_causal
+          q['shadow_causal_wall_only']=((q.raw_ready==1)&(q.comp>=2.5)&(q.open_risk_causal>0)&(q.shadow_quality_causal>=.82)).astype(int)
+          k=q[q.shadow_causal_wall_only.eq(1)].copy();k['month']=k.date.astype(str).str[:7]
+          def met(x):
+              stake=float(x.rescue_equal_stake.sum())
+              return {'R':int(len(x)),'head4':int(x.head4.sum()),'head4_rate':100*float(x.head4.mean()) if len(x) else None,
+                      'exact3':int(x.rescue_hit.sum()),'exact3_rate':100*float(x.rescue_hit.mean()) if len(x) else None,
+                      'equal_roi':100*float(x.rescue_payout_equal.sum())/stake if stake else None}
+          out={'profile':'HEAD4_WALL3_CAUSAL_ST_WALL_ONLY_RECHECK','source_R':int(len(q)),
+               'survive_R':int(len(k)),'removed_R':int(len(q)-len(k)),'overall':met(k),
+               'monthly':{m:met(g) for m,g in k.groupby('month')},
+               'note':'Recomputes raw wall readiness + wall score with exact D-1 LIVE ST lane bias, holding old hp/mass/comp/tickets fixed. Full model replay separate.',
+               'SEPTEMBER_OUTCOMES_READ':False,'PRODUCTION_CHANGED':False}
+          Path('artifacts/research_wall3_stbias_subset.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          q.to_csv('artifacts/research_wall3_stbias_subset_detail.csv',index=False)
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+          PY
+      - name: Persist
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add artifacts/research_wall3_stbias_subset.json artifacts/research_wall3_stbias_subset_detail.csv
+          git commit -m "research: persist wall3 causal-ST subset audit"
+          git push
