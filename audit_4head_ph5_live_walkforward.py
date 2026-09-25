@@ -336,7 +336,7 @@ def main():
   shadow_quality=float(hp)+1.50*float(mass)+.10*open_risk
   # Exact Sep-25 rescue semantics: only races missed by the frozen base120 gate are rescue candidates.
   # Do NOT use PH5 standard selected/pass here; that broadened the historical rescue universe.
-  shadow=bool(pm["monitoring_parent"] and (not base120) and wall_ready and comp>=2.5 and open_risk>0 and shadow_quality>=.82)
+  shadow=bool(pm["monitoring_parent"] and (not selected) and (not base120) and wall_ready and comp>=2.5 and open_risk>0 and shadow_quality>=.82)
   stakes=live.dutch(tickets,ovs) if selected else [{"combo":t,"odds":o,"stake":0} for t,o in zip(tickets,ovs)]
   rescue_dutch_feasible=True
   if shadow:
@@ -371,11 +371,11 @@ def main():
   hp36={c for c in scored if hm[c]>=.36}
   hp36od={c for c in hp36 if c in om}
   dm=d[d.date.str[:7].eq(mon)]
-  parent=dm.monitoring_parent.eq(1); passed=parent & dm.base120.eq(0); ready=passed & dm.wall_ready.eq(1)
+  parent=dm.monitoring_parent.eq(1); passed=parent & dm.selected.eq(0) & dm.base120.eq(0); ready=passed & dm.wall_ready.eq(1)
   opened=ready & dm.open_risk.gt(0); compok=opened & dm.comp.ge(2.5); quality=compok & dm.shadow_quality.ge(.82)
   funnel.append({"month":mon,"v93_R":int((v.race_code.str.startswith(key)).sum()),"ph5_scored_R":len(scored),
    "ph5_ge036_R":len(hp36),"ph5_ge036_odds_R":len(hp36od),"odds_decision_R":len(dm),
-   "monitoring_parent_R":int(parent.sum()),"base120_pass_R":int(passed.sum()),
+   "monitoring_parent_R":int(parent.sum()),"ph5_and_base120_pass_R":int(passed.sum()),
    "live_wall_ready_parent_pass_R":int(ready.sum()),"wall_open_parent_pass_R":int(opened.sum()),
    "comp250_parent_pass_R":int(compok.sum()),"quality082_parent_pass_R":int(quality.sum()),
    "rescue_R":int(dm.shadow.sum()),"selected_R":int(dm.selected.sum()),
