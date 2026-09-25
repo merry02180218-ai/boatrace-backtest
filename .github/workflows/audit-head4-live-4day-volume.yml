@@ -1,0 +1,94 @@
+name: audit-head4-live-4day-volume
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/audit-head4-live-4day-volume.txt'
+permissions:
+  actions: read
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - name: Download canonical watchdog artifacts Sep22-25
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/h4
+          gh api --paginate "/repos/$GITHUB_REPOSITORY/actions/artifacts?per_page=100" --slurp > /tmp/artifacts_pages.json
+          python - <<'PY'
+          import json,re,subprocess,os
+          pages=json.load(open('/tmp/artifacts_pages.json'))
+          arts=[]
+          for pg in pages:
+            arts.extend(pg.get('artifacts',[]))
+          pat=re.compile(r'^head4-120r-watchdog-(2026092[2-5])-([0-9]+)-([0-9]+)$')
+          # latest canonical artifact per name
+          by={}
+          for a in arts:
+            m=pat.match(a.get('name',''))
+            if not m or a.get('expired'): continue
+            n=a['name']
+            if n not in by or a['created_at']>by[n]['created_at']: by[n]=a
+          print('CANONICAL_ARTIFACTS',len(by))
+          for i,a in enumerate(by.values()):
+            dest=f"/tmp/h4/a{i}"
+            os.makedirs(dest,exist_ok=True)
+            subprocess.run(['gh','run','download',str(a['workflow_run']['id']),'-n',a['name'],'-D',dest],check=False,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+          PY
+      - name: Aggregate decisions
+        run: |
+          python - <<'PY'
+          import json,glob,os,collections,math
+          out={}
+          rows=[]
+          for p in glob.glob('/tmp/h4/**/*.json',recursive=True):
+            try:z=json.load(open(p))
+            except:continue
+            code=str(z.get('race_code',''))
+            if len(code)!=12 or code[:8] not in {'20260922','20260923','20260924','20260925'}:continue
+            d=str(z.get('decision',''))
+            if d not in {'BET','PASS','NO_BET_DATA_NOT_READY'}:continue
+            hp=z.get('head_prob')
+            rows.append({'date':code[:8],'code':code,'decision':d,'hp':hp,
+                         'orig':(z.get('standard_parity') or {}).get('orig4_adv_inside',z.get('orig4_adv_inside')),
+                         'selection_policy':z.get('selection_policy'),
+                         'monitoring_parent':z.get('monitoring_parent'),
+                         'legacy_selected':z.get('legacy_newfeature_selected'),
+                         'base120':z.get('base120_selected')})
+          # canonical artifact download can include duplicates from retry dirs; unique by code preferring BET/PASS over not-ready
+          rank={'BET':3,'PASS':2,'NO_BET_DATA_NOT_READY':1}
+          uniq={}
+          for r in rows:
+            if r['code'] not in uniq or rank[r['decision']]>rank[uniq[r['code']]['decision']]:uniq[r['code']]=r
+          rows=list(uniq.values())
+          for d in ['20260922','20260923','20260924','20260925']:
+            q=[r for r in rows if r['date']==d]
+            hp=[float(r['hp']) for r in q if r['hp'] is not None and math.isfinite(float(r['hp']))]
+            out[d]={
+              'terminal_R':len(q),
+              'BET':sum(r['decision']=='BET' for r in q),
+              'PASS':sum(r['decision']=='PASS' for r in q),
+              'NOT_READY':sum(r['decision']=='NO_BET_DATA_NOT_READY' for r in q),
+              'hp_max':max(hp) if hp else None,
+              'hp_ge036':sum(x>=.36 for x in hp),
+              'legacy_selected_R':sum(bool(r['legacy_selected']) for r in q),
+              'base120_R':sum(bool(r['base120']) for r in q),
+              'bet_codes':[r['code'] for r in q if r['decision']=='BET'],
+            }
+          res={'profile':'HEAD4_LIVE_4DAY_VOLUME_AUDIT','days':out,'rows':sorted(rows,key=lambda x:x['code'])}
+          os.makedirs('/tmp/head4_live_4day',exist_ok=True)
+          json.dump(res,open('/tmp/head4_live_4day/result.json','w'),ensure_ascii=False,indent=2)
+          print(json.dumps(res['days'],ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-live-4day-volume-audit
+          path: /tmp/head4_live_4day/
+          retention-days: 30
