@@ -36,6 +36,8 @@ def resolve(watchlist:dict, now:datetime, completed:set[str]|None=None, audit_ru
 
     out=[]
     for t in watchlist.get("targets",[]):
+        if not t.get("deadline_jst"):
+            continue
         raw_deadline=str(t["deadline_jst"])
         if "T" in raw_deadline:
             dl=datetime.fromisoformat(raw_deadline)
