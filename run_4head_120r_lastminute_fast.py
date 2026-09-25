@@ -650,53 +650,6 @@ def decide(head_prob,mass,comp,exh):
     return legacy_decide(head_prob,mass,comp,exh)
 
 
-def wall3_open_shadow(head_prob,mass,comp,exh,current_selected,base120_selected):
-    """Research-only 3-vs-4 open-path rescue diagnostic.
-
-    This never changes the official selected/BET/PASS decision.
-    Canonical profile is frozen from the 2026-09-18 retrospective audit.
-    Frozen wall research required orig straight + orig avg; otherwise no shadow.
-    """
-    if not bool(exh.get('wall_exhibition_ready',True)):
-        return {
-          'profile':'HEAD4_WALL3_OPEN_RESCUE_SHADOW_V1_BETA010_Q082_COMP250',
-          'research_only':True,'production_applied':False,
-          'eligible_current_pass':False,'would_rescue':False,
-          'wall_score':None,'open_risk':None,'attack4_score':None,
-          'base_quality':float(head_prob)+1.50*float(mass),'shadow_quality':None,
-          'thresholds':{'open_beta':.10,'quality':.82,'composite_odds':2.5},
-          'gaps':{},'not_ready_reason':'venue wall schema unavailable',
-        }
-    b3=exh['current_boats']['3']; b4=exh['current_boats']['4']
-    gaps={
-      'ex':float(b3['cur_ex'])-float(b4['cur_ex']),
-      'st':float(b3['cur_st'])-float(b4['cur_st']),
-      'straight':float(b3['cur_orig_straight'])-float(b4['cur_orig_straight']),
-      'orig_avg':float(b3['cur_orig_avg'])-float(b4['cur_orig_avg']),
-    }
-    wall=(.20*gaps['ex']+.40*gaps['st']+.25*gaps['straight']+.15*gaps['orig_avg'])
-    attack4=(.20*float(b4['cur_ex'])+.40*float(b4['cur_st'])+
-             .25*float(b4['cur_orig_straight'])+.15*float(b4['cur_orig_avg']))
-    open_risk=max(0.0,-wall)
-    base_quality=float(head_prob)+1.50*float(mass)
-    shadow_quality=base_quality+.10*open_risk
-    eligible=bool((not current_selected) and (not base120_selected) and float(comp)>=2.5 and open_risk>0)
-    rescue=bool(eligible and shadow_quality>=.82)
-    return {
-      'profile':'HEAD4_WALL3_OPEN_RESCUE_SHADOW_V1_BETA010_Q082_COMP250',
-      'research_only':True,
-      'production_applied':False,
-      'eligible_current_pass':eligible,
-      'would_rescue':rescue,
-      'wall_score':wall,
-      'open_risk':open_risk,
-      'attack4_score':attack4,
-      'base_quality':base_quality,
-      'shadow_quality':shadow_quality,
-      'thresholds':{'open_beta':.10,'quality':.82,'composite_odds':2.5},
-      'gaps':gaps,
-    }
-
 def parse_deadline_flexible(date8,s):
     v=str(s).strip()
     if len(v) in (5,8) and v[2]==':':
@@ -805,9 +758,6 @@ def main():
         stages['newfeature_state_s']=0.0
         persist_no_bet_not_ready(a,code,deadline,'NEWFEATURE_STATE',e,total0,stages,monitored,hp,state)
         return
-    # Exact Sep-25 rescue semantics: the race must be a PASS in both current PH5 and frozen base120.
-    wallshadow=wall3_open_shadow(hp,mass,comp,exh,d['selected'],d['base120_selected'])
-    wallshadow['reference_gate']='PH5_PASS_AND_BASE120_PASS'
     # SHADOW only: Waku10 4-vs-3 SR/ST values are already causal pre-race inputs.
     wr=waku[code]
     def _wv(*names):
@@ -838,7 +788,6 @@ def main():
       **d,'decision':('PERFORMANCE_BENCHMARK_ONLY' if a.performance_benchmark else ('BET' if d['selected'] and monitored else ('BENCHMARK_ONLY' if not monitored else 'PASS'))),
       'selection_policy_artifact':'artifacts/head4_ph5_production_v31_20260831.json',
       'standard_parity':{'standard_selected':bool(hp>=.36 and sadv['orig4_adv_inside'] is not None and sadv['orig4_adv_inside']>=-.06),'live_selected':bool(d['selected']),'match':bool(d['selected']==(hp>=.36 and sadv['orig4_adv_inside'] is not None and sadv['orig4_adv_inside']>=-.06)),'head_cut':.36,'orig_cut':-.06},
-      'wall3_open_shadow':wallshadow,
       'prerace_weather':exh.get('prerace_weather'),
       'high_water_shadow':highwater,
       'daily_state_history_end':state.get('history_end'),'september_prior_history_allowed':True,
