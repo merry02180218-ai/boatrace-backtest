@@ -111,8 +111,9 @@ jobs:
                     'cur_orig_turn':float(os[b]['turn']),'cur_orig_straight':float(os[b]['straight']),'cur_orig_avg':float(os[b]['avg'])}
                   sf[f'st_raw_b{b}']=st_raw[b];sf[f'st_raw_rank_b{b}']=rr[b];sf[f'st_corr_rank_b{b}']=cr[b]
                   sf[f'st_raw_strength_b{b}']=rs[b];sf[f'st_corr_strength_b{b}']=cs[b]
-              return {'race_code':code,'current_boats':boats,'st_flat':sf,'orig_avg_available':bool(avg_all6),
-                      'orig_straight_available':bool(straight_all6),'wall_exhibition_ready':bool(avg_all6 and straight_all6)},'OK'
+              return {'schema':'head4_historical_replay','race_code':code,'current_boats':boats,'st_flat':sf,'orig_avg_available':bool(avg_all6),
+                      'orig_straight_available':bool(straight_all6),'wall_exhibition_ready':bool(avg_all6 and straight_all6),
+                      'result_blind':True,'odds_used':False},'OK'
 
           def odds_map(row):
               out={}
