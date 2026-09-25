@@ -71,7 +71,7 @@ jobs:
               Path('.github/workflows/live-1head-current-day-monitor.yml'),
           ]:
               s=p.read_text()
-              for bad in ('data/results/realtime','data/results/payouts'):
+              for bad in ('data/results/'+'realtime','data/results/'+'payouts'):
                   assert bad not in s,(p,bad)
           print('RESULT_PAYOUT_SOURCE_GUARD_OK')
           PY
