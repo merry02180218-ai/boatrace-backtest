@@ -1,0 +1,70 @@
+{
+  "profile": "HEAD4_WALL3_OLD1275_RAW_LIVE_READY_RECHECK",
+  "source_run": 36115251692,
+  "source_R": 1275,
+  "raw_live_ready_R": 1089,
+  "removed_R": 186,
+  "removed_rate": 14.588235294117647,
+  "overall": {
+    "R": 1089,
+    "head4": 182,
+    "head4_rate": 16.712580348943984,
+    "exact3": 114,
+    "exact3_rate": 10.46831955922865,
+    "equal_stake": 10890000.0,
+    "equal_payout": 8605360.0,
+    "equal_roi": 79.02075298438935
+  },
+  "monthly": {
+    "2026-06": {
+      "R": 315,
+      "head4": 45,
+      "head4_rate": 14.285714285714285,
+      "exact3": 22,
+      "exact3_rate": 6.984126984126984,
+      "equal_stake": 3150000.0,
+      "equal_payout": 1087390.0,
+      "equal_roi": 34.52031746031746
+    },
+    "2026-07": {
+      "R": 380,
+      "head4": 77,
+      "head4_rate": 20.263157894736842,
+      "exact3": 52,
+      "exact3_rate": 13.684210526315791,
+      "equal_stake": 3800000.0,
+      "equal_payout": 3642810.0,
+      "equal_roi": 95.86342105263158
+    },
+    "2026-08": {
+      "R": 394,
+      "head4": 60,
+      "head4_rate": 15.228426395939088,
+      "exact3": 40,
+      "exact3_rate": 10.152284263959391,
+      "equal_stake": 3940000.0,
+      "equal_payout": 3875160.0,
+      "equal_roi": 98.35431472081218
+    }
+  },
+  "removed_by_reason": {
+    "STRAIGHT_NOT_ALL6": 165,
+    "ORIGINAL_NOT_ALL6": 21
+  },
+  "removed_by_jcd": {
+    "13": 79,
+    "18": 54,
+    "12": 33,
+    "20": 5,
+    "17": 3,
+    "24": 3,
+    "09": 3,
+    "10": 2,
+    "11": 2,
+    "05": 1,
+    "01": 1
+  },
+  "SEPTEMBER_OUTCOMES_READ": false,
+  "PRODUCTION_CHANGED": false,
+  "note": "This only corrects raw LIVE original-data readiness inside the old 1275 shadow set; full corrected funnel is a separate replay."
+}
