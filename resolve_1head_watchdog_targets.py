@@ -36,8 +36,15 @@ def resolve(watchlist:dict, now:datetime, completed:set[str]|None=None, audit_ru
 
     out=[]
     for t in watchlist.get("targets",[]):
-        hh,mm=map(int,str(t["deadline_jst"]).split(":"))
-        dl=now.replace(hour=hh,minute=mm,second=0,microsecond=0)
+        raw_deadline=str(t["deadline_jst"])
+        if "T" in raw_deadline:
+            dl=datetime.fromisoformat(raw_deadline)
+            if dl.tzinfo is None:
+                dl=dl.replace(tzinfo=JST)
+            dl=dl.astimezone(JST)
+        else:
+            hh,mm=map(int,raw_deadline.split(":"))
+            dl=now.replace(hour=hh,minute=mm,second=0,microsecond=0)
         start=dl-timedelta(minutes=float(t.get("watch_minutes_before",35)))
         safe=dl-timedelta(seconds=SAFETY_SECONDS)
         code=str(t.get("race_code","")).zfill(12)
@@ -49,7 +56,7 @@ def resolve(watchlist:dict, now:datetime, completed:set[str]|None=None, audit_ru
         if start<=now<safe:
             out.append({
                 "race_code":code,
-                "deadline_jst":str(t["deadline_jst"]),
+                "deadline_jst":dl.isoformat(),
                 "audit_run_id":str(audit_run_id),
                 "artifact_name":artifact,
                 "pre_band":str(t.get("pre_band","")),
