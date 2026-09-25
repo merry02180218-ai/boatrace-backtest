@@ -1,0 +1,32 @@
+name: research-3head-route2-player-band-v31
+on:
+  push:
+    paths: [research/run_3head_route2_player_band_v31.fire]
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scikit-learn requests
+      - name: Download CORE107
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          mkdir -p core107
+          gh run download 35892602362 --repo ${{ github.repository }} --name research-3head-newcore-fast-v20 --dir core107
+      - name: Preflight compile
+        run: python -m py_compile research/research_3head_route2_player_band_v31.py
+      - name: Run middle-strength study
+        shell: bash
+        run: |
+          set -o pipefail
+          python research/research_3head_route2_player_band_v31.py | tee route2_player_band_v31.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-3head-route2-player-band-v31
+          path: |
+            route2_player_band_v31.log
+            route2_player_band_v31.csv
