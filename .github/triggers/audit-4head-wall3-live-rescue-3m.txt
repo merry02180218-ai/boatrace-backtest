@@ -1,1 +1,1 @@
-trigger fixed-live-wall-ready v2
+trigger fixed-live-wall-ready-st-bias v3
