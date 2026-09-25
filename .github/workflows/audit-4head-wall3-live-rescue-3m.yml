@@ -2,6 +2,9 @@ name: audit-4head-wall3-live-rescue-3m
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/audit-4head-wall3-live-rescue-3m.txt'
 
 permissions:
   contents: read
