@@ -1,0 +1,66 @@
+name: audit-4head-wall3-old164-subset
+
+on:
+  push:
+    paths:
+      - '.github/triggers/audit-4head-wall3-old164-subset.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q pandas
+      - name: Filter frozen old164 universe only
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import pandas as pd
+
+          p=Path('artifacts/research_wall3_stbias_subset_detail.csv')
+          d=pd.read_csv(p,dtype={'race_code':str})
+          need={'old164','shadow_causal_wall_only','head4','rescue_hit','rescue_equal_stake','rescue_payout_equal','date'}
+          miss=need-set(d.columns)
+          if miss: raise RuntimeError(f'MISSING_COLUMNS {sorted(miss)}')
+          q=d[(pd.to_numeric(d.old164,errors='coerce').fillna(0).eq(1)) &
+              (pd.to_numeric(d.shadow_causal_wall_only,errors='coerce').fillna(0).eq(1))].copy()
+          q['month']=q.date.astype(str).str[:7]
+          def met(x):
+              stake=float(pd.to_numeric(x.rescue_equal_stake,errors='coerce').fillna(0).sum())
+              payout=float(pd.to_numeric(x.rescue_payout_equal,errors='coerce').fillna(0).sum())
+              return {
+                'R':int(len(x)),
+                'head4':int(pd.to_numeric(x.head4,errors='coerce').fillna(0).sum()),
+                'head4_rate':100*float(pd.to_numeric(x.head4,errors='coerce').fillna(0).mean()) if len(x) else None,
+                'exact3':int(pd.to_numeric(x.rescue_hit,errors='coerce').fillna(0).sum()),
+                'exact3_rate':100*float(pd.to_numeric(x.rescue_hit,errors='coerce').fillna(0).mean()) if len(x) else None,
+                'equal_roi':100*payout/stake if stake else None,
+              }
+          out={
+            'profile':'HEAD4_WALL3_OLD164_CAUSAL_ST_SUBSET',
+            'source_broad_R':int(len(d)),
+            'old164_rescue_R':int(len(q)),
+            'overall':met(q),
+            'monthly':{m:met(g) for m,g in q.groupby('month')},
+            'codes':q.race_code.astype(str).str.zfill(12).tolist(),
+            'PRODUCTION_CHANGED':False,
+            'note':'Lightweight correction: broad 1275 shadow set intersected with the frozen old164 gate and causal-ST/raw-ready wall recheck.'
+          }
+          Path('artifacts/research_wall3_old164_subset.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+          PY
+      - name: Persist
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add artifacts/research_wall3_old164_subset.json
+          git commit -m "research: persist corrected old164 wall3 subset"
+          git push
