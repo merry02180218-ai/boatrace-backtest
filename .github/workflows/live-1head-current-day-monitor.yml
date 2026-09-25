@@ -1,0 +1,222 @@
+name: live-1head-current-day-monitor
+
+# Manual validation first. No schedule is enabled here.
+on:
+  workflow_dispatch:
+    inputs:
+      race_code:
+        description: '12-digit race code YYYYMMDDJJRR'
+        required: true
+        type: string
+      audit_run_id:
+        description: 'Optional live-1head-current-day-audit run ID; blank = latest same-day artifact'
+        required: false
+        type: string
+      deadline_jst:
+        description: 'Optional official deadline HH:MM; blank = fetch'
+        required: false
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+  issues: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q requests beautifulsoup4 lxml numpy pandas scipy 'scikit-learn==1.6.1' joblib
+
+      - name: Resolve target
+        shell: bash
+        run: |
+          set -euo pipefail
+          CODE=$(printf '%s' '${{ inputs.race_code }}' | tr -d '[:space:]')
+          [[ "$CODE" =~ ^[0-9]{12}$ ]]
+          DATE=${CODE:0:8}
+          JCD=$((10#${CODE:8:2}))
+          RACE=$((10#${CODE:10:2}))
+          ISO="${DATE:0:4}-${DATE:4:2}-${DATE:6:2}"
+          echo "RACE_CODE=$CODE" >> "$GITHUB_ENV"
+          echo "TARGET_DAY=$DATE" >> "$GITHUB_ENV"
+          echo "TARGET_DATE=$ISO" >> "$GITHUB_ENV"
+          echo "JCD=$JCD" >> "$GITHUB_ENV"
+          echo "RACE=$RACE" >> "$GITHUB_ENV"
+          mkdir -p /tmp/onehead_monitor /tmp/onehead_audit
+
+      - name: Download current-day audited state
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          NAME="1head-current-day-audit-$TARGET_DAY"
+          RUN_ID=$(printf '%s' '${{ inputs.audit_run_id }}' | tr -d '[:space:]')
+          if [ -z "$RUN_ID" ]; then
+            RUN_ID=$(gh api "/repos/$GITHUB_REPOSITORY/actions/artifacts?name=$NAME&per_page=100" \
+              --jq '[.artifacts[] | select(.expired==false)] | sort_by(.created_at) | last | .workflow_run.id // empty')
+          fi
+          if [ -z "$RUN_ID" ]; then
+            echo "AUDIT_ARTIFACT_NOT_READY $NAME"
+            exit 20
+          fi
+          gh run download "$RUN_ID" -n "$NAME" -D /tmp/onehead_audit
+          echo "AUDIT_RUN_ID=$RUN_ID" >> "$GITHUB_ENV"
+          BASE=$(find /tmp/onehead_audit -path "*/cache/$RACE_CODE.json" -print -quit)
+          TRAIN=$(find /tmp/onehead_audit -name v351_exhibition_train.csv -print -quit)
+          STATE=$(find /tmp/onehead_audit -name shared_daily_state.json -print -quit)
+          CARDS=$(find /tmp/onehead_audit -name race_cards.csv -print -quit)
+          WATCH=$(find /tmp/onehead_audit -name watchlist.json -print -quit)
+          test -n "$BASE" -a -n "$TRAIN" -a -n "$STATE" -a -n "$CARDS" -a -n "$WATCH"
+          echo "BASE=$BASE" >> "$GITHUB_ENV"
+          echo "TRAIN=$TRAIN" >> "$GITHUB_ENV"
+          echo "STATE=$STATE" >> "$GITHUB_ENV"
+          echo "CARDS=$CARDS" >> "$GITHUB_ENV"
+          echo "WATCH=$WATCH" >> "$GITHUB_ENV"
+
+      - name: Audit target membership and causality
+        run: |
+          python - <<'PY'
+          import json,os
+          z=json.load(open(os.environ['WATCH']))
+          code=os.environ['RACE_CODE']
+          assert z['date']==os.environ['TARGET_DAY']
+          assert z['target_day_results_used'] is False and z['payouts_used'] is False
+          assert code in {str(x['race_code']).zfill(12) for x in z['targets']}, f'{code} is not in audited WATCH list'
+          s=json.load(open(os.environ['STATE']))
+          assert s['target_date']==os.environ['TARGET_DATE']
+          assert s['history_end'] < s['target_date']
+          assert s['target_date_results_used'] is False and s['payout_used'] is False
+          b=json.load(open(os.environ['BASE']))
+          assert b['result_or_payout_used'] is False and b['chronology_guard'] is True
+          assert b['training_cutoff']==s['history_end']
+          print('HEAD1_MONITOR_CAUSAL_AUDIT_OK',code,s['history_end'])
+          PY
+
+      - name: Resolve official deadline
+        shell: bash
+        run: |
+          set -euo pipefail
+          DL=$(printf '%s' '${{ inputs.deadline_jst }}' | tr -d '[:space:]')
+          if [ -z "$DL" ]; then
+            DL=$(python fetch_boatrace_deadline.py --date "$TARGET_DAY" --jcd "$JCD" --race "$RACE" \
+              --meta "/tmp/onehead_monitor/deadline_${RACE_CODE}.json" | tail -1)
+          fi
+          test -n "$DL"
+          echo "DEADLINE_JST=$DL" >> "$GITHUB_ENV"
+          python run_1head_v351_live_window.py --deadline-jst "$DL" > "/tmp/onehead_monitor/window_${RACE_CODE}.json"
+          MODE=$(python -c "import json;print(json.load(open('/tmp/onehead_monitor/window_${RACE_CODE}.json'))['mode'])")
+          if [ "$MODE" = "EXPIRED" ]; then
+            echo "TARGET_EXPIRED deadline=$DL"
+            exit 21
+          fi
+
+      - name: Acquire current exhibition
+        id: exhibition
+        shell: bash
+        run: |
+          set -euo pipefail
+          READY=0
+          for i in $(seq 1 12); do
+            if python probe_1head_v351_boatcast_exhibition.py \
+              --date "$TARGET_DAY" --jcd "$JCD" --race "$RACE" --deadline-jst "$DEADLINE_JST" \
+              > "/tmp/onehead_monitor/exhibition_${RACE_CODE}.json" \
+              2> "/tmp/onehead_monitor/exhibition_error_${RACE_CODE}.txt"; then
+              READY=1
+              break
+            fi
+            sleep 5
+          done
+          echo "ready=$READY" >> "$GITHUB_OUTPUT"
+          if [ "$READY" != 1 ]; then
+            python - <<'PY'
+          import json,os
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          out={
+            'schema':'1head-current-live-decision-v1',
+            'race_code':os.environ['RACE_CODE'],
+            'decision':'NO_BET_DATA_NOT_READY',
+            'reason':'EXHIBITION_NOT_READY',
+            'deadline_jst':os.environ['DEADLINE_JST'],
+            'decision_time_jst':datetime.now(ZoneInfo('Asia/Tokyo')).isoformat(),
+            'target_race_result_used':False,'payout_used':False,
+            'result_or_payout_used':False,'chronology_guard':True,
+          }
+          json.dump(out,open(f"/tmp/onehead_monitor/decision_{os.environ['RACE_CODE']}.json",'w'),ensure_ascii=False,indent=2)
+          PY
+          fi
+
+      - name: Final BET decision and 5000 yen allocation
+        if: steps.exhibition.outputs.ready == '1'
+        run: |
+          python run_1head_current_day_live_decision.py \
+            --base "$BASE" \
+            --probe "/tmp/onehead_monitor/exhibition_${RACE_CODE}.json" \
+            --train "$TRAIN" \
+            --daily-state "$STATE" \
+            --race-cards "$CARDS" \
+            --deadline-jst "$DEADLINE_JST" \
+            --out "/tmp/onehead_monitor/decision_${RACE_CODE}.json"
+
+      - name: Decision contract
+        id: decision_meta
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json,os
+          p=f"/tmp/onehead_monitor/decision_{os.environ['RACE_CODE']}.json"
+          z=json.load(open(p))
+          d=str(z.get('decision',''))
+          assert d in {'BET','PASS','NO_BET_DATA_NOT_READY'}, d
+          assert z.get('target_race_result_used') is False
+          assert z.get('payout_used') is False
+          if d=='BET':
+              assert z.get('tickets') and sum(z.get('live_stakes_yen') or [])==5000
+              assert z.get('ticket_odds')
+          print('HEAD1_DECISION_CONTRACT_OK',d)
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write(f"decision={d}\n")
+          PY
+          D=$(python -c "import json;print(json.load(open('/tmp/onehead_monitor/decision_${RACE_CODE}.json'))['decision'])")
+          if [ "$D" = "NO_BET_DATA_NOT_READY" ]; then
+            echo "FINAL_ARTIFACT_NAME=head1-current-live-${TARGET_DAY}-${JCD}-${RACE}-retry-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" >> "$GITHUB_ENV"
+          else
+            echo "FINAL_ARTIFACT_NAME=head1-current-live-${TARGET_DAY}-${JCD}-${RACE}" >> "$GITHUB_ENV"
+          fi
+
+      - name: BET notification
+        if: steps.decision_meta.outputs.decision == 'BET'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python notify_head1_bet_github_issue.py \
+            --decision-json "/tmp/onehead_monitor/decision_${RACE_CODE}.json"
+
+      - name: Static safety contract
+        run: |
+          python -m py_compile run_1head_current_day_live_decision.py notify_head1_bet_github_issue.py
+          python - <<'PY'
+          from pathlib import Path
+          for p in [Path('run_1head_current_day_live_decision.py'),Path('notify_head1_bet_github_issue.py')]:
+              s=p.read_text()
+              forbidden=['data/results/realtime','data/results/payouts']
+              assert not any(x in s for x in forbidden), (p,forbidden)
+          print('HEAD1_STATIC_RESULT_PAYOUT_GUARD_OK')
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ${{ env.FINAL_ARTIFACT_NAME || format('head1-current-live-{0}-{1}-{2}-diagnostic-{3}', env.TARGET_DAY, env.JCD, env.RACE, github.run_id) }}
+          retention-days: 14
+          if-no-files-found: warn
+          path: |
+            /tmp/onehead_monitor/
