@@ -1,0 +1,54 @@
+{
+  "profile": "HEAD4_MONITORING_PARENT_EXACT_REPLAY",
+  "thresholds": {
+    "motor_win_diff_min": -0.0299361318939513,
+    "motor_2ren_diff_min": -7.080000000000001,
+    "player4_all_win_min": 0.215605,
+    "missing_fail_open": true
+  },
+  "months": {
+    "2026-06": {
+      "days": 30,
+      "all_R": 4488,
+      "parent_R": 780,
+      "parent_per_day_mean": 26.0,
+      "parent_per_day_min": 0,
+      "parent_per_day_max": 42,
+      "parent_missing_R": 51
+    },
+    "2026-07": {
+      "days": 31,
+      "all_R": 4920,
+      "parent_R": 792,
+      "parent_per_day_mean": 25.548387096774192,
+      "parent_per_day_min": 17,
+      "parent_per_day_max": 35,
+      "parent_missing_R": 1
+    },
+    "2026-08": {
+      "days": 31,
+      "all_R": 4920,
+      "parent_R": 993,
+      "parent_per_day_mean": 32.03225806451613,
+      "parent_per_day_min": 14,
+      "parent_per_day_max": 54,
+      "parent_missing_R": 121
+    }
+  },
+  "three_month": {
+    "days": 92,
+    "parent_R": 2565,
+    "parent_per_day_mean": 27.880434782608695,
+    "parent_per_day_min": 0,
+    "parent_per_day_max": 54,
+    "days_parent_le_10": 1,
+    "days_parent_ge_30": 29
+  },
+  "today_2026_09_25": {
+    "all_R": 144,
+    "parent_R": 32,
+    "parent_missing_R": 0
+  },
+  "SEPTEMBER_TARGET_RESULTS_USED": false,
+  "PRODUCTION_CHANGED": false
+}
