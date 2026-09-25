@@ -1,7 +1,20 @@
 name: live-1head-current-day-monitor
 
-# Manual validation first. No schedule is enabled here.
+# No independent schedule. Called from the shared HEAD4 watchdog or manually.
 on:
+  workflow_call:
+    inputs:
+      race_code:
+        required: true
+        type: string
+      audit_run_id:
+        required: false
+        type: string
+        default: ''
+      deadline_jst:
+        required: false
+        type: string
+        default: ''
   workflow_dispatch:
     inputs:
       race_code:
@@ -21,6 +34,10 @@ permissions:
   contents: read
   actions: read
   issues: write
+
+concurrency:
+  group: head1-current-live-${{ inputs.race_code }}
+  cancel-in-progress: false
 
 jobs:
   monitor:
@@ -47,10 +64,26 @@ jobs:
           echo "TARGET_DAY=$DATE" >> "$GITHUB_ENV"
           echo "TARGET_DATE=$ISO" >> "$GITHUB_ENV"
           echo "JCD=$JCD" >> "$GITHUB_ENV"
+          echo "JCD_PAD=${CODE:8:2}" >> "$GITHUB_ENV"
           echo "RACE=$RACE" >> "$GITHUB_ENV"
           mkdir -p /tmp/onehead_monitor /tmp/onehead_audit
 
+      - name: Per-race idempotency guard
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          CANONICAL="head1-current-live-${TARGET_DAY}-${JCD_PAD}-${RACE}"
+          COUNT="$(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=$CANONICAL&per_page=20" --jq '.artifacts | map(select(.expired==false)) | length')"
+          if [ "$COUNT" -gt 0 ]; then
+            echo "HEAD1_ALREADY_COMPLETED $CANONICAL"
+            echo "SHOULD_RUN=0" >> "$GITHUB_ENV"
+          else
+            echo "SHOULD_RUN=1" >> "$GITHUB_ENV"
+          fi
+
       - name: Download current-day audited state
+        if: env.SHOULD_RUN == '1'
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
@@ -81,6 +114,7 @@ jobs:
           echo "WATCH=$WATCH" >> "$GITHUB_ENV"
 
       - name: Audit target membership and causality
+        if: env.SHOULD_RUN == '1'
         run: |
           python - <<'PY'
           import json,os
@@ -100,6 +134,7 @@ jobs:
           PY
 
       - name: Resolve official deadline
+        if: env.SHOULD_RUN == '1'
         shell: bash
         run: |
           set -euo pipefail
@@ -118,6 +153,7 @@ jobs:
           fi
 
       - name: Acquire current exhibition
+        if: env.SHOULD_RUN == '1'
         id: exhibition
         shell: bash
         run: |
@@ -154,6 +190,7 @@ jobs:
           fi
 
       - name: Final BET decision and 5000 yen allocation
+        if: env.SHOULD_RUN == '1'
         if: steps.exhibition.outputs.ready == '1'
         run: |
           python run_1head_current_day_live_decision.py \
@@ -166,6 +203,7 @@ jobs:
             --out "/tmp/onehead_monitor/decision_${RACE_CODE}.json"
 
       - name: Decision contract
+        if: env.SHOULD_RUN == '1'
         id: decision_meta
         shell: bash
         run: |
@@ -187,12 +225,13 @@ jobs:
           PY
           D=$(python -c "import json;print(json.load(open('/tmp/onehead_monitor/decision_${RACE_CODE}.json'))['decision'])")
           if [ "$D" = "NO_BET_DATA_NOT_READY" ]; then
-            echo "FINAL_ARTIFACT_NAME=head1-current-live-${TARGET_DAY}-${JCD}-${RACE}-retry-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" >> "$GITHUB_ENV"
+            echo "FINAL_ARTIFACT_NAME=head1-current-live-${TARGET_DAY}-${JCD_PAD}-${RACE}-retry-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" >> "$GITHUB_ENV"
           else
-            echo "FINAL_ARTIFACT_NAME=head1-current-live-${TARGET_DAY}-${JCD}-${RACE}" >> "$GITHUB_ENV"
+            echo "FINAL_ARTIFACT_NAME=head1-current-live-${TARGET_DAY}-${JCD_PAD}-${RACE}" >> "$GITHUB_ENV"
           fi
 
       - name: BET notification
+        if: env.SHOULD_RUN == '1'
         if: steps.decision_meta.outputs.decision == 'BET'
         env:
           GH_TOKEN: ${{ github.token }}
@@ -201,6 +240,7 @@ jobs:
             --decision-json "/tmp/onehead_monitor/decision_${RACE_CODE}.json"
 
       - name: Static safety contract
+        if: env.SHOULD_RUN == '1'
         run: |
           python -m py_compile run_1head_current_day_live_decision.py notify_head1_bet_github_issue.py
           python - <<'PY'
@@ -213,9 +253,9 @@ jobs:
           PY
 
       - uses: actions/upload-artifact@v4
-        if: always()
+        if: env.SHOULD_RUN == '1' && always()
         with:
-          name: ${{ env.FINAL_ARTIFACT_NAME || format('head1-current-live-{0}-{1}-{2}-diagnostic-{3}', env.TARGET_DAY, env.JCD, env.RACE, github.run_id) }}
+          name: ${{ env.FINAL_ARTIFACT_NAME || format('head1-current-live-{0}-{1}-{2}-diagnostic-{3}', env.TARGET_DAY, env.JCD_PAD, env.RACE, github.run_id) }}
           retention-days: 14
           if-no-files-found: warn
           path: |
