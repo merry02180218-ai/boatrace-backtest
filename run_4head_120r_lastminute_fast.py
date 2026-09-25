@@ -650,7 +650,7 @@ def decide(head_prob,mass,comp,exh):
     return legacy_decide(head_prob,mass,comp,exh)
 
 
-def wall3_open_shadow(head_prob,mass,comp,exh,base120_selected):
+def wall3_open_shadow(head_prob,mass,comp,exh,current_selected,base120_selected):
     """Research-only 3-vs-4 open-path rescue diagnostic.
 
     This never changes the official selected/BET/PASS decision.
@@ -680,7 +680,7 @@ def wall3_open_shadow(head_prob,mass,comp,exh,base120_selected):
     open_risk=max(0.0,-wall)
     base_quality=float(head_prob)+1.50*float(mass)
     shadow_quality=base_quality+.10*open_risk
-    eligible=bool((not base120_selected) and float(comp)>=2.5 and open_risk>0)
+    eligible=bool((not current_selected) and (not base120_selected) and float(comp)>=2.5 and open_risk>0)
     rescue=bool(eligible and shadow_quality>=.82)
     return {
       'profile':'HEAD4_WALL3_OPEN_RESCUE_SHADOW_V1_BETA010_Q082_COMP250',
@@ -805,9 +805,9 @@ def main():
         stages['newfeature_state_s']=0.0
         persist_no_bet_not_ready(a,code,deadline,'NEWFEATURE_STATE',e,total0,stages,monitored,hp,state)
         return
-    # Rescue semantics are anchored to the frozen base120 miss, not the PH5 standard gate.
-    wallshadow=wall3_open_shadow(hp,mass,comp,exh,d['base120_selected'])
-    wallshadow['reference_gate']='BASE120_PASS'
+    # Exact Sep-25 rescue semantics: the race must be a PASS in both current PH5 and frozen base120.
+    wallshadow=wall3_open_shadow(hp,mass,comp,exh,d['selected'],d['base120_selected'])
+    wallshadow['reference_gate']='PH5_PASS_AND_BASE120_PASS'
     # SHADOW only: Waku10 4-vs-3 SR/ST values are already causal pre-race inputs.
     wr=waku[code]
     def _wv(*names):
