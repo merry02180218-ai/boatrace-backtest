@@ -1,0 +1,41 @@
+name: audit-4head-sep24-25-full-ph5
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/audit-4head-sep24-25-full-ph5.txt'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards
+            data/programs/waku10
+            data/results/realtime
+            data/previews/tkz
+            data/previews/stt
+            data/previews/original_exhibition
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scipy scikit-learn
+      - name: Preflight
+        run: python -m py_compile audit_4head_sep24_25_full_ph5.py
+      - name: Full-universe PH5 replay
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: python audit_4head_sep24_25_full_ph5.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-sep24-25-full-ph5
+          path: /tmp/head4_sep24_25_full_ph5.json
+          retention-days: 30
