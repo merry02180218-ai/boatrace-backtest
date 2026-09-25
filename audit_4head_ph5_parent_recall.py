@@ -57,6 +57,9 @@ def main():
     parent=liveaudit.monitoring_parent_snapshots()
     v["monitoring_parent"]=v.race_code.map(lambda c:int((parent.get(c) or {}).get("monitoring_parent",0)))
     v["parent_feature_missing"]=v.race_code.map(lambda c:int((parent.get(c) or {}).get("parent_feature_missing",1)))
+    v["parent_motor_win_diff_4v3"]=v.race_code.map(lambda c:(parent.get(c) or {}).get("parent_motor_win_diff_4v3",float("nan")))
+    v["parent_motor_2ren_diff_4v3"]=v.race_code.map(lambda c:(parent.get(c) or {}).get("parent_motor_2ren_diff_4v3",float("nan")))
+    v["parent_player4_all_win_prior"]=v.race_code.map(lambda c:(parent.get(c) or {}).get("parent_player4_all_win_prior",float("nan")))
 
     rows=[]
     for mon,g in v.groupby("month"):
@@ -77,8 +80,41 @@ def main():
     allsel=v.ph5_selected
     allover=allsel & v.monitoring_parent.eq(1)
     allout=allsel & v.monitoring_parent.eq(0)
+    # Result-blind routing grid: find PRE supersets that retain PH5 selections.
+    # This optimizes only recall of the frozen model's own selections, never race outcomes.
+    win_cuts=[-0.20,-0.15,-0.12,-0.10,-0.08,-0.06,-0.05,-0.04,-0.03,-0.0299361318939513]
+    ren_cuts=[-25.0,-20.0,-15.0,-12.0,-10.0,-8.0,-7.08]
+    player_cuts=[0.10,0.12,0.14,0.16,0.18,0.20,0.215605]
+    grid=[]
+    miss=v.parent_feature_missing.eq(1)
+    sel=v.ph5_selected
+    for wc in win_cuts:
+      for rc in ren_cuts:
+        for pc in player_cuts:
+          gate=miss | (
+            pd.to_numeric(v.parent_motor_win_diff_4v3,errors="coerce").ge(wc) &
+            pd.to_numeric(v.parent_motor_2ren_diff_4v3,errors="coerce").ge(rc) &
+            pd.to_numeric(v.parent_player4_all_win_prior,errors="coerce").ge(pc)
+          )
+          inside=sel & gate
+          monthly_recall=[]
+          for mon in ["2026-06","2026-07","2026-08"]:
+            mm=v.month.eq(mon); den=int((sel&mm).sum()); num=int((inside&mm).sum())
+            monthly_recall.append(100*num/den if den else 100.0)
+          grid.append({
+            "win_cut":wc,"ren2_cut":rc,"player_cut":pc,
+            "parent_R":int(gate.sum()),"selected_inside_R":int(inside.sum()),
+            "recall_pct":100*int(inside.sum())/int(sel.sum()) if sel.sum() else 100.0,
+            "min_monthly_recall_pct":min(monthly_recall),
+            "monthly_recall_pct":monthly_recall,
+          })
+    best={}
+    for target in [95.0,98.0,100.0]:
+      q=[x for x in grid if x["min_monthly_recall_pct"]>=target-1e-12]
+      best[str(int(target))]=min(q,key=lambda x:(x["parent_R"],-x["recall_pct"])) if q else None
+
     out={
-      "profile":"HEAD4_PH5_PARENT_RECALL_AUDIT_V1",
+      "profile":"HEAD4_PH5_PARENT_RECALL_AUDIT_V2",
       "gate":"hp>=0.36 AND orig4_adv_inside>=-0.06",
       "period":"2026-06..2026-08",
       "ph5_selected_R":int(allsel.sum()),
@@ -87,10 +123,14 @@ def main():
       "parent_recall_pct":100*float(allover.sum())/int(allsel.sum()) if allsel.sum() else None,
       "monthly":rows,
       "outside_parent_codes":v.loc[allout,"race_code"].tolist(),
+      "routing_grid_best_min_monthly_recall":best,
+      "routing_grid_outcome_labels_used":False,
       "SEPTEMBER_OUTCOMES_READ":False,
       "PRODUCTION_CHANGED":False,
     }
-    v[["race_code","month","head_prob","orig4_adv_inside","ph5_selected","monitoring_parent","parent_feature_missing"]].to_csv(OUT/"detail.csv",index=False)
+    v[["race_code","month","head_prob","orig4_adv_inside","ph5_selected","monitoring_parent","parent_feature_missing",
+       "parent_motor_win_diff_4v3","parent_motor_2ren_diff_4v3","parent_player4_all_win_prior"]].to_csv(OUT/"detail.csv",index=False)
+    pd.DataFrame(grid).sort_values(["min_monthly_recall_pct","parent_R"],ascending=[False,True]).to_csv(OUT/"routing_grid.csv",index=False)
     (OUT/"result.json").write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n")
     print(json.dumps(out,ensure_ascii=False,indent=2))
     print("HEAD4_PH5_PARENT_RECALL_AUDIT_OK")
