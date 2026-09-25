@@ -1,0 +1,100 @@
+name: audit-head4-actual-live-artifacts-20260925
+
+on:
+  push:
+    paths:
+      - '.github/triggers/audit-head4-actual-live-artifacts-20260925.txt'
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download actual terminal watchdog artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/live_artifacts/zips /tmp/live_artifacts/unpacked
+          gh api --paginate "repos/${GITHUB_REPOSITORY}/actions/artifacts?per_page=100" > /tmp/live_artifacts/pages.jsonl
+          python - <<'PY'
+          import json,re
+          from pathlib import Path
+          arts=[]
+          for line in Path('/tmp/live_artifacts/pages.jsonl').read_text().splitlines():
+              if not line.strip(): continue
+              z=json.loads(line)
+              arts.extend(z.get('artifacts',[]))
+          pat=re.compile(r'^head4-120r-watchdog-20260925-\d{2}-\d+$')
+          sel=[a for a in arts if pat.match(a.get('name','')) and not a.get('expired')]
+          Path('/tmp/live_artifacts/artifacts.json').write_text(json.dumps(sel,ensure_ascii=False,indent=2))
+          print('CANONICAL_ARTIFACTS',len(sel))
+          for a in sel: print(a['id'],a['name'])
+          PY
+          python - <<'PY'
+          import json,subprocess,zipfile
+          from pathlib import Path
+          arts=json.loads(Path('/tmp/live_artifacts/artifacts.json').read_text())
+          for a in arts:
+              zp=Path('/tmp/live_artifacts/zips')/f"{a['id']}.zip"
+              with zp.open('wb') as f:
+                  subprocess.run(['gh','api',f"repos/{__import__('os').environ['GITHUB_REPOSITORY']}/actions/artifacts/{a['id']}/zip"],stdout=f,check=True)
+              out=Path('/tmp/live_artifacts/unpacked')/str(a['id']);out.mkdir(parents=True,exist_ok=True)
+              with zipfile.ZipFile(zp) as z:z.extractall(out)
+          PY
+      - name: Aggregate actual LIVE decisions
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          rows=[]
+          for p in Path('/tmp/live_artifacts/unpacked').rglob('*.json'):
+              try:z=json.loads(p.read_text(encoding='utf-8'))
+              except:continue
+              if str(z.get('race_code','')).startswith('20260925') and 'monitoring_parent' in z:
+                  sh=z.get('wall3_open_shadow') or {}
+                  rows.append({
+                    'race_code':str(z.get('race_code')),
+                    'decision':z.get('decision'),
+                    'head_prob':z.get('head_prob'),
+                    'mass':z.get('opponent_mass'),
+                    'comp':z.get('composite_odds'),
+                    'wall_ready':((z.get('wall3_open_shadow') or {}).get('not_ready_reason') is None),
+                    'would_rescue':bool(sh.get('would_rescue')),
+                    'eligible_current_pass':bool(sh.get('eligible_current_pass')),
+                    'wall_score':sh.get('wall_score'),
+                    'open_risk':sh.get('open_risk'),
+                    'shadow_quality':sh.get('shadow_quality'),
+                    'artifact_json':str(p),
+                  })
+          # canonical artifact names should yield one terminal JSON/race; dedupe defensively.
+          by={}
+          for r in rows: by[r['race_code']]=r
+          rows=[by[k] for k in sorted(by)]
+          out={
+            'profile':'HEAD4_ACTUAL_LIVE_ARTIFACT_AUDIT_20260925',
+            'terminal_R':len(rows),
+            'decision_counts':{},
+            'wall3_rescue_R':sum(r['would_rescue'] for r in rows),
+            'wall3_rescue_codes':[r['race_code'] for r in rows if r['would_rescue']],
+            'rows':rows,
+            'recomputed':False,
+            'source':'actual canonical watchdog terminal artifacts'
+          }
+          for r in rows: out['decision_counts'][r['decision']]=out['decision_counts'].get(r['decision'],0)+1
+          Path('/tmp/live_artifacts/result.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-actual-live-artifact-audit-20260925
+          path: /tmp/live_artifacts/result.json
+          retention-days: 7
