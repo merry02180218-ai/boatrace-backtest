@@ -30,7 +30,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install -q numpy pandas scipy scikit-learn
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml joblib
       - name: Preflight
         run: |
           python -m py_compile prepare_4head_6m_v93_neutral_waku.py audit_4head_ph5_parent_recall.py
