@@ -72,6 +72,7 @@ jobs:
                   rows.append({
                     'race_code':str(z.get('race_code')),
                     'decision':z.get('decision'),
+                    'decision_time_jst':z.get('decision_time_jst'),
                     'head_prob':hp,
                     'mass':mass,
                     'comp':comp,
@@ -99,9 +100,14 @@ jobs:
           by={}
           for r in rows: by[r['race_code']]=r
           rows=[by[k] for k in sorted(by)]
+          cutoff='2026-09-25T16:00:00+09:00'
+          before=[r for r in rows if str(r.get('decision_time_jst') or '') < cutoff]
           out={
             'profile':'HEAD4_ACTUAL_LIVE_ARTIFACT_AUDIT_20260925',
             'terminal_R':len(rows),
+            'before_1600_R':len(before),
+            'before_1600_broad_rescue_R':sum(r['would_rescue_broad'] for r in before),
+            'before_1600_broad_rescue_codes':[r['race_code'] for r in before if r['would_rescue_broad']],
             'decision_counts':{},
             'wall3_broad_rescue_R':sum(r['would_rescue_broad'] for r in rows),
             'wall3_broad_rescue_codes':[r['race_code'] for r in rows if r['would_rescue_broad']],
