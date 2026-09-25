@@ -251,8 +251,11 @@ def main():
   h4={k:ff(g.iloc[0].get("h4_"+k)) for k in ("cur_ex","cur_st","cur_orig_straight","cur_orig_avg")}
   wall_ready=all(math.isfinite(x) for x in h4.values()) and all(math.isfinite(ff(b3.get(k))) for k in ("cur_ex","cur_st","cur_orig_straight","cur_orig_avg"))
   attack4=(.20*h4["cur_ex"]+.40*h4["cur_st"]+.25*h4["cur_orig_straight"]+.15*h4["cur_orig_avg"]) if wall_ready else None
+  exgap=(ff(b3.get("cur_ex"))-h4["cur_ex"]) if wall_ready else None
   stgap=(ff(b3.get("cur_st"))-h4["cur_st"]) if wall_ready else None
-  wall=(.20*(ff(b3.get("cur_ex"))-h4["cur_ex"])+.40*stgap+.25*(ff(b3.get("cur_orig_straight"))-h4["cur_orig_straight"])+.15*(ff(b3.get("cur_orig_avg"))-h4["cur_orig_avg"])) if wall_ready else None
+  straightgap=(ff(b3.get("cur_orig_straight"))-h4["cur_orig_straight"]) if wall_ready else None
+  avggap=(ff(b3.get("cur_orig_avg"))-h4["cur_orig_avg"]) if wall_ready else None
+  wall=(.20*exgap+.40*stgap+.25*straightgap+.15*avggap) if wall_ready else None
   mp=motors.get(code,{3:None,4:None}); md=(mp.get(4)-mp.get(3)) if mp.get(4) is not None and mp.get(3) is not None else None
   # card motor 2-ren difference
   ds=f"{code[:4]}/{code[4:6]}/{code[6:8]}"; cards={rc(x.get("レースコード","")):x for x in rows(f"data/programs/race_cards/{ds}.csv")};card=cards.get(code,{})
@@ -285,7 +288,7 @@ def main():
            "second_rank":srank,"third_rank":{str(s):third_rank[s] for s in BOATS},
            "second_gap12":float(p2[srank[0]]-p2[srank[1]]),"second_gap23":float(p2[srank[1]]-p2[srank[2]])}
   decisions.append({"date":str(rr.date),"race_code":code,"jcd":code[8:10],"rno":int(code[10:12]),"head_prob":hp,"mass":mass,"comp":comp,
-   "orig4_adv_inside":orig,"wall_ready":int(wall_ready),"wall_score":wall,"open_risk":open_risk,"shadow_quality":shadow_quality,
+   "orig4_adv_inside":orig,"wall_ready":int(wall_ready),"wall_ex_gap":exgap,"wall_st_gap":stgap,"wall_straight_gap":straightgap,"wall_avg_gap":avggap,"attack4_score":attack4,"wall_score":wall,"open_risk":open_risk,"shadow_quality":shadow_quality,
    "monitoring_parent":int(pm["monitoring_parent"]),"parent_feature_missing":int(pm["parent_feature_missing"]),
    "parent_motor_win_diff_4v3":pm["parent_motor_win_diff_4v3"],"parent_motor_2ren_diff_4v3":pm["parent_motor_2ren_diff_4v3"],
    "parent_player4_all_win_prior":pm["parent_player4_all_win_prior"],
