@@ -403,7 +403,14 @@ def main():
         for head in heads:
             raw=feature_by_head.get((code,head))
             if raw is None:raise RuntimeError(f"MISSING_FEATURE_{code}_{head}")
-            p2,pc,pairs=score_head(raw,head,m2,m3,True)\n            for b in range(1,7):\n                if b==head: continue\n                rr={"race_code":code,"action":r.action,"head":head,"boat":b}\n                rr.update({k:raw[b][k] for k in SECOND_FEATURES})\n                rr["v8_p2"]=p2[b]\n                rawrec.append(rr)
+            p2,pc,pairs=score_head(raw,head,m2,m3,True)
+            for b in range(1,7):
+                if b==head:
+                    continue
+                rr={"race_code":code,"action":r.action,"head":head,"boat":b}
+                rr.update({k:raw[b][k] for k in SECOND_FEATURES})
+                rr["v8_p2"]=p2[b]
+                rawrec.append(rr)
             _,_,basepairs=score_head(raw,head,m2,m3,False)
             ts=[f"{head}-{s}-{t}" for s,t in pairs];bts=[f"{head}-{s}-{t}" for s,t in basepairs]
             tickets.extend(ts);base_tickets.extend(bts)
