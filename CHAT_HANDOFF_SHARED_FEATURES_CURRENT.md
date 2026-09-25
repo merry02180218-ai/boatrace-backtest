@@ -457,3 +457,37 @@ Latest strengthened contract:
   pre-deadline odds guard, YAML/syntax and result/payout source guard.
 
 Do not enable automatic 1HEAD watchdog/schedule until explicit user adoption after one real active-race manual validation.
+
+
+## 1HEAD automatic schedule now shares HEAD4 timing — 2026-09-25
+User decision: **do not create a separate 1HEAD cron.**
+
+Shared scheduling:
+- Morning PRE: `live-4head-newfeature-pre-daily.yml`
+  - 05:30 JST + 06:30 JST refresh.
+  - now also calls reusable `live-1head-current-day-audit.yml`.
+- Intraday watchdog: `live-4head-120r-watchdog.yml`
+  - existing HEAD4 every-5-minute schedule.
+  - now also resolves and calls reusable `live-1head-current-day-monitor.yml`.
+
+1HEAD-specific workflow files have no `schedule:`; manual `workflow_dispatch` remains available.
+
+Safety:
+- official racelist-only deadline enrichment.
+- WATCH begins 35 minutes before deadline.
+- target-day result/payout remain unread.
+- BET/PASS canonical artifact prevents duplicate processing.
+- NOT_READY remains retryable on the next shared watchdog tick.
+- per-race 1HEAD calls are serialized.
+
+Schedule integration commits:
+- `d03b85e5` shared morning PRE.
+- `ce16ae76` shared intraday watchdog.
+- `ce46f5fc` checkout-free artifact download fix.
+
+Validation:
+- shared schedule contract Run `36138243239`: SUCCESS.
+- first scheduled integration Run `36138298239`: HEAD4 resolve SUCCESS; 1HEAD resolver failed only on missing repo context for `gh run download`.
+- fix `ce46f5fc`.
+- real artifact resolver integration Run `36138471846`: SUCCESS.
+- HEAD4 watchdog parallel regression Run `36138388274`: SUCCESS.
