@@ -66,9 +66,9 @@ jobs:
                   base120=bool(z.get('base120_selected'))
                   wall_ready=(sh.get('not_ready_reason') is None)
                   open_risk=sh.get('open_risk')
-                  canonical=bool(old164 and (not base120) and wall_ready and comp is not None and float(comp)>=2.5
-                                 and open_risk is not None and float(open_risk)>0 and q is not None
-                                 and q+0.10*float(open_risk)>=.82)
+                  base120_rescue=bool((not base120) and wall_ready and comp is not None and float(comp)>=2.5
+                                      and open_risk is not None and float(open_risk)>0 and q is not None
+                                      and q+0.10*float(open_risk)>=.82)
                   rows.append({
                     'race_code':str(z.get('race_code')),
                     'decision':z.get('decision'),
@@ -84,7 +84,7 @@ jobs:
                     'base77':bool(z.get('base77')),
                     'wall_ready':wall_ready,
                     'would_rescue_broad':bool(sh.get('would_rescue')),
-                    'canonical_rescue':canonical,
+                    'base120_pass_rescue':base120_rescue,
                     'eligible_current_pass':bool(sh.get('eligible_current_pass')),
                     'wall_score':sh.get('wall_score'),
                     'wall_ex_gap':(sh.get('gaps') or {}).get('ex'),
@@ -108,11 +108,13 @@ jobs:
             'before_1600_R':len(before),
             'before_1600_broad_rescue_R':sum(r['would_rescue_broad'] for r in before),
             'before_1600_broad_rescue_codes':[r['race_code'] for r in before if r['would_rescue_broad']],
+            'before_1600_base120_pass_rescue_R':sum(r['base120_pass_rescue'] for r in before),
+            'before_1600_base120_pass_rescue_codes':[r['race_code'] for r in before if r['base120_pass_rescue']],
             'decision_counts':{},
             'wall3_broad_rescue_R':sum(r['would_rescue_broad'] for r in rows),
             'wall3_broad_rescue_codes':[r['race_code'] for r in rows if r['would_rescue_broad']],
-            'canonical_rescue_R':sum(r['canonical_rescue'] for r in rows),
-            'canonical_rescue_codes':[r['race_code'] for r in rows if r['canonical_rescue']],
+            'base120_pass_rescue_R':sum(r['base120_pass_rescue'] for r in rows),
+            'base120_pass_rescue_codes':[r['race_code'] for r in rows if r['base120_pass_rescue']],
             'rows':rows,
             'recomputed':False,
             'source':'actual canonical watchdog terminal artifacts'
