@@ -103,8 +103,12 @@ jobs:
           assert meta['training_cutoff']==state['history_end']
           js=list(cache.glob('20*.json'))
           assert len(js)==meta['all_race_cache_R'] and len(js)>0
+          assert p.PLAYER_HISTORY_EXPANSION_PROMOTED is True
+          assert p.PLAYER_HISTORY_EXPANSION_HEAD_MIN==0.78
+          assert p.PLAYER_HISTORY_EXPANSION_HEAD_MAX==0.79
           assert p.HEAD_VOLUME_EXPANSION_PROMOTED is True
           assert p.HEAD_VOLUME_EXPANSION_HEAD_MIN==0.75
+          assert p.HEAD_VOLUME_EXPANSION_HEAD_MAX==0.78
           assert p.HEAD_VOLUME_EXPANSION_ENV_PAIR_MAX==-0.34
           assert p.HEAD_VOLUME_OPPONENT_PICKUP_PROMOTED is True
           # PRE watch pool is intentionally broad: final ENV gate is post-exhibition.
@@ -113,10 +117,15 @@ jobs:
             z=json.load(open(fp))
             hp=float(z['final_head_p']); mass=float(z['opp_mass'])
             if hp>=p.HEAD_VOLUME_EXPANSION_HEAD_MIN and mass>=p.LIVE_OPPONENT_MASS_MIN:
+              band=('FORMAL_LIVE' if hp>=p.LIVE_HEAD_CUTOFF
+                    else ('PLAYER_HISTORY_BAND' if hp>=p.PLAYER_HISTORY_EXPANSION_HEAD_MIN
+                          else 'HEAD_VOLUME_BAND'))
               watch.append({'race_code':z['race_code'],'head_p':hp,'opp_mass':mass,
-                            'base_tickets':z['base_tickets'],'final_env_gate_pending':hp < p.LIVE_HEAD_CUTOFF})
+                            'base_tickets':z['base_tickets'],'pre_band':band,
+                            'player_history_gate_pending':band=='PLAYER_HISTORY_BAND',
+                            'volume_env_gate_pending':band=='HEAD_VOLUME_BAND'})
           watch.sort(key=lambda x:x['race_code'])
-          out={'schema':'1head-current-day-audit-v1','date':day,'card_R':len(cards),'cache_R':len(js),
+          out={'schema':'1head-current-day-audit-v2','date':day,'card_R':len(cards),'cache_R':len(js),
                'watch_R':len(watch),'history_end':state['history_end'],
                'target_day_results_used':False,'payouts_used':False,
                'expansion_env_gate':'env_pair<=-0.34 after exhibition',
@@ -126,8 +135,15 @@ jobs:
           PY
       - name: Static preflight
         run: |
-          python -m py_compile prepare_1head_v351_live_cache.py prepare_4head_120r_daily_state.py
-          grep -R '\\\\n' .github/workflows/live-1head-current-day-audit.yml && exit 1 || true
+          python -m py_compile prepare_1head_v351_live_cache.py prepare_4head_120r_daily_state.py run_1head_current_day_live_decision.py notify_head1_bet_github_issue.py
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('.github/workflows/live-1head-current-day-audit.yml')
+          needle=chr(92)+'n'
+          bad=[(i+1,line) for i,line in enumerate(p.read_text().splitlines()) if needle in line]
+          assert not bad, bad[:10]
+          print('ONEHEAD_WORKFLOW_LITERAL_BACKSLASH_N_GUARD_OK')
+          PY
       - uses: actions/upload-artifact@v4
         if: always()
         with:
