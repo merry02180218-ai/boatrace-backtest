@@ -396,6 +396,7 @@ def main():
 
     rec=[]
     rawrec=[]
+    pairrec=[]
     for _,r in sep_sel.sort_values(["date","race_code"]).iterrows():
         code=str(r.race_code).zfill(12);actual=truth.get(code)
         if not actual:continue
@@ -405,6 +406,8 @@ def main():
             raw=feature_by_head.get((code,head))
             if raw is None:raise RuntimeError(f"MISSING_FEATURE_{code}_{head}")
             p2,pc,pairs=score_head(raw,head,m2,m3,True)
+            for (sec,third),pv in pc.items():
+                pairrec.append({"race_code":code,"action":r.action,"head":head,"second":sec,"third":third,"v8_pc":pv,"v8_p2":p2.get(sec,float("nan"))})
             for b in range(1,7):
                 if b==head:
                     continue
@@ -456,6 +459,7 @@ def main():
     if len(z)!=len(sep_sel):raise RuntimeError(f"SEP_SELECTED_COVERAGE_{len(z)}/{len(sep_sel)}")
     z.to_csv(OUT/"sep_v8_detail.csv",index=False)
     pd.DataFrame(rawrec).to_csv(OUT/"sep_candidate_features.csv",index=False)
+    pd.DataFrame(pairrec).to_csv(OUT/"sep_pair_scores.csv",index=False)
     s2df.to_csv(OUT/"train_second_rows.csv",index=False)
     s3df.to_csv(OUT/"train_third_rows.csv",index=False)
 
