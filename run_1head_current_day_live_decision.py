@@ -43,6 +43,31 @@ def _load_json(path:Path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def _parse_jst(value:str)->datetime:
+    x=datetime.fromisoformat(str(value))
+    if x.tzinfo is None:
+        x=x.replace(tzinfo=JST)
+    return x.astimezone(JST)
+
+
+def _require_predeadline(deadline_jst:str, now:datetime|None=None)->float:
+    deadline=_parse_jst(deadline_jst)
+    cur=(now or datetime.now(JST)).astimezone(JST)
+    remain=(deadline-cur).total_seconds()
+    if remain<=0:
+        raise RuntimeError(f"deadline expired before odds fetch remain_sec={remain:.3f}")
+    return float(remain)
+
+
+def _require_odds_timestamp_predeadline(fetched_at_jst:str|None, deadline_jst:str):
+    if not fetched_at_jst:
+        raise RuntimeError("official odds timestamp missing")
+    fetched=_parse_jst(fetched_at_jst)
+    deadline=_parse_jst(deadline_jst)
+    if fetched>=deadline:
+        raise RuntimeError(f"official odds were not captured pre-deadline fetched={fetched.isoformat()} deadline={deadline.isoformat()}")
+
+
 def _cards_by_code(path:Path):
     with path.open(encoding="utf-8-sig",newline="") as f:
         rows=list(csv.DictReader(f))
@@ -311,6 +336,7 @@ def main():
         if not tickets:
             raise RuntimeError("selected lane has no tickets")
         try:
+            remaining_before_odds=_require_predeadline(a.deadline_jst)
             if a.odds_json:
                 raw=_load_json(a.odds_json)
                 odds_map=raw.get("odds",raw)
@@ -319,6 +345,7 @@ def main():
             else:
                 market=fetch_odds3t(code[:8],code[8:10],int(code[10:12]))
                 odds_map=market["odds"]; fetched=market.get("fetched_at_jst"); source=market.get("source","boatrace_official_live")
+                _require_odds_timestamp_predeadline(fetched,a.deadline_jst)
             miss=[t for t in tickets if t not in odds_map or float(odds_map[t])<=0]
             if miss:
                 raise RuntimeError(f"current odds missing selected tickets {miss}")
@@ -334,6 +361,8 @@ def main():
                 "composite_odds":1.0/sum(1.0/float(ticket_odds[t]) for t in tickets),
                 "odds_source":source,
                 "odds_fetched_at_jst":fetched,
+                "seconds_to_deadline_before_odds":remaining_before_odds,
+                "odds_predeadline_verified":bool(source!="boatrace_official_live" or fetched),
                 "odds_used":True,
             })
         except Exception as e:
