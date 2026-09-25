@@ -1,6 +1,13 @@
 name: live-1head-current-day-audit
 
 on:
+  workflow_call:
+    inputs:
+      target_date:
+        description: 'Target date YYYY-MM-DD (blank = today JST)'
+        required: false
+        type: string
+        default: ''
   workflow_dispatch:
     inputs:
       target_date:
@@ -133,9 +140,25 @@ jobs:
           json.dump(out,open('/tmp/onehead_day/watchlist.json','w'),ensure_ascii=False,indent=2)
           print('ONEHEAD_DAY_AUDIT_OK',json.dumps({k:out[k] for k in ('date','card_R','cache_R','watch_R','history_end')},ensure_ascii=False))
           PY
+      - name: Add official result-blind deadlines
+        run: |
+          python enrich_1head_watchlist_deadlines.py \
+            --watchlist /tmp/onehead_day/watchlist.json \
+            --watch-minutes-before 35
+          python - <<'PY'
+          import json
+          z=json.load(open('/tmp/onehead_day/watchlist.json',encoding='utf-8'))
+          assert z['target_count']==len(z['targets'])
+          assert z['target_day_results_used'] is False and z['payouts_used'] is False
+          assert z['deadline_result_endpoint_requested'] is False
+          assert z['deadline_payout_endpoint_requested'] is False
+          assert all('deadline_jst' in x and 'jcd' in x and 'race' in x for x in z['targets'])
+          print('ONEHEAD_WATCHLIST_DEADLINE_CONTRACT_OK',z['target_count'])
+          PY
+
       - name: Static preflight
         run: |
-          python -m py_compile prepare_1head_v351_live_cache.py prepare_4head_120r_daily_state.py run_1head_current_day_live_decision.py notify_head1_bet_github_issue.py
+          python -m py_compile prepare_1head_v351_live_cache.py prepare_4head_120r_daily_state.py enrich_1head_watchlist_deadlines.py run_1head_current_day_live_decision.py notify_head1_bet_github_issue.py
           python - <<'PY'
           from pathlib import Path
           p=Path('.github/workflows/live-1head-current-day-audit.yml')
