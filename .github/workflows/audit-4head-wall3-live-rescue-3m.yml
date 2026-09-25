@@ -40,6 +40,8 @@ jobs:
           grep -q 'monitoring_parent_snapshots' audit_4head_ph5_live_walkforward.py
           grep -q 'shadow_quality=float(hp)+1.50\*float(mass)+.10\*open_risk' audit_4head_ph5_live_walkforward.py
           grep -q 'comp>=2.5 and open_risk>0 and shadow_quality>=.82' audit_4head_ph5_live_walkforward.py
+          grep -q 'rescue_dutch_feasible=True' audit_4head_ph5_live_walkforward.py
+          grep -q 'dutch_infeasible_R' audit_4head_ph5_live_walkforward.py
           grep -q 'SEPTEMBER_OUTCOMES_READ.*False' audit_4head_ph5_live_walkforward.py
 
       - name: Prepare causal historical LIVE primitives
