@@ -1,0 +1,138 @@
+name: live-1head-current-day-audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_date:
+        description: 'Target date YYYY-MM-DD (blank = today JST)'
+        required: false
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  prepare-audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Resolve target date
+        shell: bash
+        run: |
+          D='${{ inputs.target_date }}'
+          if [ -z "$D" ]; then D=$(TZ=Asia/Tokyo date +%F); fi
+          echo "TARGET_DATE=$D" >> "$GITHUB_ENV"
+          echo "TARGET_DAY=${D//-/}" >> "$GITHUB_ENV"
+          mkdir -p /tmp/onehead_day
+      - name: Sparse checkout causal history once
+        uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards/2025/10
+            data/programs/race_cards/2025/11
+            data/programs/race_cards/2025/12
+            data/programs/race_cards/2026/01
+            data/programs/race_cards/2026/02
+            data/programs/race_cards/2026/03
+            data/programs/race_cards/2026/04
+            data/programs/race_cards/2026/05
+            data/programs/race_cards/2026/06
+            data/programs/race_cards/2026/07
+            data/programs/race_cards/2026/08
+            data/programs/race_cards/2026/09
+            data/results/realtime/2025/10
+            data/results/realtime/2025/11
+            data/results/realtime/2025/12
+            data/results/realtime/2026/01
+            data/results/realtime/2026/02
+            data/results/realtime/2026/03
+            data/results/realtime/2026/04
+            data/results/realtime/2026/05
+            data/results/realtime/2026/06
+            data/results/realtime/2026/07
+            data/results/realtime/2026/08
+            data/results/realtime/2026/09
+            data/previews/stt/2025/10
+            data/previews/stt/2025/11
+            data/previews/stt/2025/12
+            data/previews/stt/2026/01
+            data/previews/stt/2026/02
+            data/previews/stt/2026/03
+            data/previews/stt/2026/04
+            data/previews/stt/2026/05
+            data/previews/stt/2026/06
+            data/previews/stt/2026/07
+            data/previews/stt/2026/08
+            data/previews/stt/2026/09
+      - run: pip install -q requests beautifulsoup4 lxml numpy pandas scipy 'scikit-learn==1.6.1' joblib
+      - name: Fetch today's race cards
+        run: |
+          python fetch_1head_v351_biyori_cards.py --date "$TARGET_DAY" --out /tmp/onehead_day/race_cards.csv
+      - name: Build shared causal state through D-1
+        run: |
+          python prepare_4head_120r_daily_state.py --target-date "$TARGET_DATE" --data-root brcsv --out /tmp/onehead_day/shared_daily_state.json
+      - name: Build causal 1HEAD preparation and all-race cache
+        run: |
+          python run_v321_1head_julaug_nonpristine_validation.py --stage prepare
+          python prepare_1head_v351_live_cache.py --date "$TARGET_DATE" --cards /tmp/onehead_day/race_cards.csv --out /tmp/onehead_day/cache
+      - name: Race acquisition + leakage + production audit
+        shell: bash
+        run: |
+          python - <<'PY'
+          import csv,json,os
+          from pathlib import Path
+          import onehead_production_profile as p
+          day=os.environ['TARGET_DAY']; iso=os.environ['TARGET_DATE']
+          cards=list(csv.DictReader(open('/tmp/onehead_day/race_cards.csv',encoding='utf-8-sig')))
+          codes=[str(r.get('レースコード','')).zfill(12) for r in cards]
+          assert cards and len(codes)==len(set(codes)), 'empty/duplicate race cards'
+          assert all(c[:8]==day for c in codes), 'wrong target date in cards'
+          state=json.load(open('/tmp/onehead_day/shared_daily_state.json'))
+          assert state['target_date']==iso and state['target_date_results_used'] is False
+          cache=Path('/tmp/onehead_day/cache')
+          meta=json.load(open(cache/'meta.json'))
+          assert meta['result_or_payout_used'] is False and meta['chronology_guard'] is True
+          assert meta['training_cutoff']==state['history_end']
+          js=list(cache.glob('20*.json'))
+          assert len(js)==meta['all_race_cache_R'] and len(js)>0
+          assert p.HEAD_VOLUME_EXPANSION_PROMOTED is True
+          assert p.HEAD_VOLUME_EXPANSION_HEAD_MIN==0.75
+          assert p.HEAD_VOLUME_EXPANSION_ENV_PAIR_MAX==-0.34
+          assert p.HEAD_VOLUME_OPPONENT_PICKUP_PROMOTED is True
+          # PRE watch pool is intentionally broad: final ENV gate is post-exhibition.
+          watch=[]
+          for fp in js:
+            z=json.load(open(fp))
+            hp=float(z['final_head_p']); mass=float(z['opp_mass'])
+            if hp>=p.HEAD_VOLUME_EXPANSION_HEAD_MIN and mass>=p.LIVE_OPPONENT_MASS_MIN:
+              watch.append({'race_code':z['race_code'],'head_p':hp,'opp_mass':mass,
+                            'base_tickets':z['base_tickets'],'final_env_gate_pending':hp < p.LIVE_HEAD_CUTOFF})
+          watch.sort(key=lambda x:x['race_code'])
+          out={'schema':'1head-current-day-audit-v1','date':day,'card_R':len(cards),'cache_R':len(js),
+               'watch_R':len(watch),'history_end':state['history_end'],
+               'target_day_results_used':False,'payouts_used':False,
+               'expansion_env_gate':'env_pair<=-0.34 after exhibition',
+               'targets':watch}
+          json.dump(out,open('/tmp/onehead_day/watchlist.json','w'),ensure_ascii=False,indent=2)
+          print('ONEHEAD_DAY_AUDIT_OK',json.dumps({k:out[k] for k in ('date','card_R','cache_R','watch_R','history_end')},ensure_ascii=False))
+          PY
+      - name: Static preflight
+        run: |
+          python -m py_compile prepare_1head_v351_live_cache.py prepare_4head_120r_daily_state.py
+          grep -R '\\\\n' .github/workflows/live-1head-current-day-audit.yml && exit 1 || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: 1head-current-day-audit-${{ env.TARGET_DAY }}
+          retention-days: 7
+          if-no-files-found: error
+          path: |
+            /tmp/onehead_day/
