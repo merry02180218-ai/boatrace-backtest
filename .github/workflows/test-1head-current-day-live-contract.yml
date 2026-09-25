@@ -16,6 +16,7 @@ on:
 
 permissions:
   contents: read
+  actions: read
 
 jobs:
   contract:
@@ -126,6 +127,23 @@ jobs:
           assert early['count']==0,early
           print('SHARED_HEAD4_1HEAD_SCHEDULE_CONTRACT_OK')
           PY
+
+      - name: Shared resolver artifact integration
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          DAY=$(TZ=Asia/Tokyo date +%Y%m%d)
+          NAME="1head-current-day-audit-$DAY"
+          RUN_ID="$(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=$NAME&per_page=100" --jq '[.artifacts[] | select(.expired==false)] | sort_by(.created_at) | last | .workflow_run.id // empty')"
+          test -n "$RUN_ID"
+          mkdir -p /tmp/head1_contract_artifact
+          gh run download "$RUN_ID" --repo "$GITHUB_REPOSITORY" -n "$NAME" -D /tmp/head1_contract_artifact
+          WATCH="$(find /tmp/head1_contract_artifact -name watchlist.json -print -quit)"
+          test -n "$WATCH"
+          python resolve_1head_watchdog_targets.py             --watchlist "$WATCH" --audit-run-id "$RUN_ID"             --now-jst "$(TZ=Asia/Tokyo date --iso-8601=seconds)"             --out /tmp/head1_contract_resolved.json
+          test -s /tmp/head1_contract_resolved.json
+          echo "SHARED_RESOLVER_ARTIFACT_INTEGRATION_OK run=$RUN_ID"
 
       - name: Existing v351 finalizer bridge contract
         run: |
