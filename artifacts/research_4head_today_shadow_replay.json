@@ -1,0 +1,31 @@
+{
+  "profile": "HEAD4_20260925_ARCHIVED_CURRENT_FORMULA_REPLAY",
+  "target_R": 32,
+  "OK_R": 29,
+  "wall_ready_R": 25,
+  "selected_R": 0,
+  "rescue_R": 17,
+  "rescue_codes": [
+    "202609251102",
+    "202609250804",
+    "202609250906",
+    "202609252204",
+    "202609252110",
+    "202609252205",
+    "202609251012",
+    "202609250810",
+    "202609252002",
+    "202609251112",
+    "202609252004",
+    "202609250512",
+    "202609252005",
+    "202609251905",
+    "202609252006",
+    "202609252007",
+    "202609252008"
+  ],
+  "rescue_head4": 3,
+  "odds_note": "BoatraceCSV archived pre-deadline od3 snapshot; may differ slightly from exact LIVE fetch timestamp",
+  "target_results_joined_only_after_decisions": true,
+  "PRODUCTION_CHANGED": false
+}
