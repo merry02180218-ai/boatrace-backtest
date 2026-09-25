@@ -64,6 +64,9 @@ jobs:
                 'hp':z.get('head_prob'),
                 'orig':z.get('orig4_adv_inside'),
                 'selected':z.get('selected'),
+                'legacy_selected':z.get('legacy_newfeature_selected'),
+                'base120_selected':z.get('base120_selected'),
+                'newfeature_expanded_added':z.get('newfeature_expanded_added'),
                 'parity_match':(z.get('standard_parity') or {}).get('match'),
                 'policy':z.get('selection_policy'),
                 'not_ready_stage':z.get('not_ready_stage'),
@@ -85,8 +88,14 @@ jobs:
               orig_fail=sum(r['orig'] is not None and float(r['orig'])<-.06 for r in passq)
               hp_close=sum(r['hp'] is not None and .34<=float(r['hp'])<.36 for r in passq)
               orig_close=sum(r['orig'] is not None and -.08<=float(r['orig'])<-.06 for r in passq)
+              old_sel=[r for r in q if r.get('legacy_selected') is True]
+              old_only=[r for r in q if r.get('decision')=='PASS' and r.get('legacy_selected') is True]
               out[day]={
                 'terminal_R':len(q),**counts,
+                'max_head_prob':max([float(r['hp']) for r in q if r['hp'] is not None],default=None),
+                'legacy_selected_R':len(old_sel),
+                'legacy_selected_but_current_PASS_R':len(old_only),
+                'legacy_selected_but_current_PASS_codes':[r['race_code'] for r in old_only],
                 'bet_codes':[r['race_code'] for r in q if r['decision']=='BET'],
                 'pass_hp_below_036_R':hp_fail,
                 'pass_orig_below_m006_R':orig_fail,
