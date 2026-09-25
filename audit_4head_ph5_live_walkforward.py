@@ -62,6 +62,37 @@ def historical_live_wall_ready():
    out[code]=bool(avg_all6 and straight_all6)
  return out
 
+def causal_st_bias_map():
+ """Exact D-1 ST lane-bias snapshots used by current LIVE daily state."""
+ hist={b:[] for b in range(1,7)}; allv=[]; out={}
+ for ds in pd.date_range("2025-10-01","2026-08-31"):
+  d=str(ds.date())
+  g=float(np.mean(allv)) if allv else .15
+  out[d]={b:(float(np.mean(hist[b]))-g if hist[b] else 0.0) for b in range(1,7)}
+  for r in rows(f"data/previews/stt/{d.replace('-','/')}.csv"):
+   for b in range(1,7):
+    v=ff(r.get(f"艇{b}_スタート展示"))
+    if math.isfinite(v) and -.30<v<1.0:
+     hist[b].append(v); allv.append(v)
+ return out
+
+def add_current_live_causal(z,biasmap):
+ """Historical current-exhibition primitives using the exact LIVE D-1 ST bias."""
+ q=z.copy(); cache={}; vals=[]
+ for _,r in q.iterrows():
+  ds=str(r.date); code=str(r.race_code).zfill(12); b=int(r.boat); ymd=ds.replace('-','/')
+  if ds not in cache:
+   def bc(rel):
+    return {rc(x.get("レースコード","")):x for x in rows(rel)}
+   cache[ds]=(bc(f"data/previews/tkz/{ymd}.csv"),bc(f"data/previews/stt/{ymd}.csv"),bc(f"data/previews/original_exhibition/{ymd}.csv"))
+  tkz,stt,orig=cache[ds]
+  ex,st,os=v283build.v278.corrected_direct(code,tkz,stt,orig,biasmap.get(ds,{i:0.0 for i in range(1,7)}))
+  zz=os.get(b,{"lap":.5,"turn":.5,"straight":.5,"avg":.5})
+  vals.append((ex.get(b,np.nan),st.get(b,np.nan),zz.get("lap",np.nan),zz.get("turn",np.nan),zz.get("straight",np.nan),zz.get("avg",np.nan)))
+ for j,k in enumerate(("cur_ex","cur_st","cur_orig_lap","cur_orig_turn","cur_orig_straight","cur_orig_avg")):
+  q[k]=[x[j] for x in vals]
+ return q
+
 def add_start_features(long):
  q=long.copy(); cache={}; vals={}; hist={b:[] for b in range(1,7)}; allv=[]
  # Build prior-only lane bias through July, then update chronologically in August.
@@ -219,8 +250,15 @@ def main():
  if not len(strict):raise RuntimeError("NO_SIX_MONTH_STRUCT_READY")
  v_all=pd.read_csv(os.environ["V93_ROWS"],dtype={"race_code":str});v_all.race_code=v_all.race_code.astype(str).str.zfill(12);v=v_all[v_all.race_code.isin(set(strict.race_code))].copy()
  if set(v.race_code)!=set(strict.race_code):raise RuntimeError(f"V93_COVERAGE_{v.race_code.nunique()}/{len(strict)}")
- # Build v283 long table from pre-result V93/player primitives, then current exhibition/scenario/relative transforms.
- long=v283build.build_long_all(v); long=add_start_features(long)
+ # Build v283 long table with the exact LIVE D-1 ST lane-bias before scenario/relative transforms.
+ st_bias_by_date=causal_st_bias_map()
+ _orig_add_current=v283build.v278.add_current
+ v283build.v278.add_current=lambda z:add_current_live_causal(z,st_bias_by_date)
+ try:
+  long=v283build.build_long_all(v)
+ finally:
+  v283build.v278.add_current=_orig_add_current
+ long=add_start_features(long)
  art=load_artifact(); sf=list(art["v283_SECOND"]["features"]);cf=list(art["v283_COND_THIRD"]["features"])
  # PH5 LIVE head probability: rolling-origin fit, never a future-month frozen artifact.
  # Exact PH5 feature family = v93 base features + five causal boat-4 PLAYER_HISTORY features.
