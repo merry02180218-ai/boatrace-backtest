@@ -38,6 +38,30 @@ def ff(x,d=np.nan):
   v=float(x); return v if math.isfinite(v) else d
  except:return d
 
+def historical_live_wall_ready():
+ """Replay the LIVE wall-data availability contract from raw archived original exhibition.
+
+ LIVE wall3 needs both orig_avg_available and orig_straight_available. Do not
+ infer readiness from transformed/imputed cur_orig_* columns.
+ """
+ out={}
+ for ds in pd.date_range("2026-06-01","2026-08-31"):
+  ymd=str(ds.date()).replace("-","/")
+  for r in rows(f"data/previews/original_exhibition/{ymd}.csv"):
+   code=rc(r.get("レースコード",""))
+   published=[]
+   for k in range(1,7):
+    lab=str(r.get(f"計測項目{k}","")).strip().replace(" ","")
+    if lab: published.append((k,lab))
+   if not published:
+    out[code]=False; continue
+   def all6(k):
+    return all(math.isfinite(ff(r.get(f"艇{b}_値{k}"))) for b in range(1,7))
+   avg_all6=all(all6(k) for k,_ in published)
+   straight_all6=any(("直線" in lab) and all6(k) for k,lab in published)
+   out[code]=bool(avg_all6 and straight_all6)
+ return out
+
 def add_start_features(long):
  q=long.copy(); cache={}; vals={}; hist={b:[] for b in range(1,7)}; allv=[]
  # Build prior-only lane bias through July, then update chronologically in August.
@@ -221,7 +245,7 @@ def main():
   mdl.fit(tr[fs],tr.head4); pp=mdl.predict_proba(te[fs])[:,1]
   hm.update(dict(zip(te.race_code,pp)))
  print("PH5_WALKFORWARD_HEAD_SCORES",len(hm),"features",len(fs))
- om=od3(); motors=motor_priors(); parent_snap=monitoring_parent_snapshots()
+ om=od3(); motors=motor_priors(); parent_snap=monitoring_parent_snapshots(); live_wall_ready=historical_live_wall_ready()
  nf=json.loads((ROOT/"artifacts/head4_newfeature_fixed156_production.json").read_text())
  refs=nf["ecdf_sorted_reference"]; weights=nf["weights"]; thr=float(nf["production_threshold"]); missing=float(nf.get("score_transform",{}).get("missing_value_rank",.5))
  pre=strict.set_index("race_code"); decisions=[]
@@ -249,7 +273,8 @@ def main():
   by={int(r.boat):r for _,r in g.iterrows()};b3=by[3];b4=by.get(4)
   # Boat 4 row is not in opponent long table; derive head current values from opponent scenario h4_* columns.
   h4={k:ff(g.iloc[0].get("h4_"+k)) for k in ("cur_ex","cur_st","cur_orig_straight","cur_orig_avg")}
-  wall_ready=all(math.isfinite(x) for x in h4.values()) and all(math.isfinite(ff(b3.get(k))) for k in ("cur_ex","cur_st","cur_orig_straight","cur_orig_avg"))
+  transformed_wall_ready=all(math.isfinite(x) for x in h4.values()) and all(math.isfinite(ff(b3.get(k))) for k in ("cur_ex","cur_st","cur_orig_straight","cur_orig_avg"))
+  wall_ready=bool(live_wall_ready.get(code,False) and transformed_wall_ready)
   attack4=(.20*h4["cur_ex"]+.40*h4["cur_st"]+.25*h4["cur_orig_straight"]+.15*h4["cur_orig_avg"]) if wall_ready else None
   exgap=(ff(b3.get("cur_ex"))-h4["cur_ex"]) if wall_ready else None
   stgap=(ff(b3.get("cur_st"))-h4["cur_st"]) if wall_ready else None
@@ -306,11 +331,15 @@ def main():
   hp36={c for c in scored if hm[c]>=.36}
   hp36od={c for c in hp36 if c in om}
   dm=d[d.date.str[:7].eq(mon)]
+  parent=dm.monitoring_parent.eq(1); passed=parent & dm.selected.eq(0); ready=passed & dm.wall_ready.eq(1)
+  opened=ready & dm.open_risk.gt(0); compok=opened & dm.comp.ge(2.5); quality=compok & dm.shadow_quality.ge(.82)
   funnel.append({"month":mon,"v93_R":int((v.race_code.str.startswith(key)).sum()),"ph5_scored_R":len(scored),
    "ph5_ge036_R":len(hp36),"ph5_ge036_odds_R":len(hp36od),"odds_decision_R":len(dm),
-   "orig_finite_R":int(pd.to_numeric(dm.orig,errors="coerce").notna().sum()) if "orig" in dm else 0,
-   "orig_ge_m006_R":int((pd.to_numeric(dm.orig,errors="coerce")>=-.06).sum()) if "orig" in dm else 0,
-   "selected_R":int(dm.selected.sum()),"base120_R":int(dm.base120.sum()),"newfeature_add_R":int(dm.newfeature_add.sum())})
+   "monitoring_parent_R":int(parent.sum()),"parent_pass_R":int(passed.sum()),
+   "live_wall_ready_parent_pass_R":int(ready.sum()),"wall_open_parent_pass_R":int(opened.sum()),
+   "comp250_parent_pass_R":int(compok.sum()),"quality082_parent_pass_R":int(quality.sum()),
+   "rescue_R":int(dm.shadow.sum()),"selected_R":int(dm.selected.sum()),
+   "base120_R":int(dm.base120.sum()),"newfeature_add_R":int(dm.newfeature_add.sum())})
  (OUT/"volume_funnel.json").write_text(json.dumps(funnel,ensure_ascii=False,indent=2)+"\n")
  print("VOLUME_FUNNEL",json.dumps(funnel,ensure_ascii=False))
  # Freeze complete. Only now join truth.
