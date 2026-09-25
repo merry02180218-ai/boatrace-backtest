@@ -29,7 +29,7 @@ jobs:
           import json,re
           best={}
           for line in open('/tmp/artifacts.jsonl'):
-              a=json.loads(json.loads(line))
+              a=json.loads(line)
               n=a.get('name','')
               m=re.fullmatch(r'head4-120r-watchdog-(2026092[2-5])-([0-9]{2})-([0-9]+)',n)
               if not m or a.get('expired'): continue
