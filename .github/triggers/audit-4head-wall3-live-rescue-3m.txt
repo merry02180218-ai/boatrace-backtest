@@ -1,1 +1,1 @@
-trigger fixed-live-wall-ready
+trigger fixed-live-wall-ready v2
