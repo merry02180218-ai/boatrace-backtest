@@ -1,0 +1,185 @@
+name: audit-4head-today-shadow-replay
+
+on:
+  push:
+    paths:
+      - '.github/triggers/audit-4head-today-shadow-replay.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards
+            data/programs/waku10
+            data/results/realtime
+            data/previews/tkz
+            data/previews/stt
+            data/previews/original_exhibition
+            data/previews/od3
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
+      - name: Build exact D-1 LIVE state
+        run: |
+          python prepare_4head_120r_daily_state.py --target-date 2026-09-25 --out /tmp/head4_state_20260925.json --data-root "${{ github.workspace }}/brcsv"
+      - name: Replay today's watchlist with current production formulas
+        env:
+          PYTHONPATH: .
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: |
+          python - <<'PY'
+          import csv,json,math
+          from pathlib import Path
+          import pandas as pd
+          import run_4head_120r_lastminute_fast as fast
+          from backtest_v3 import CORR
+          from backtest_v51_lane_corrected_tickets import rank_scores
+          from build_4head_v283_current_exhibition_live import _rank_strength,original_corrected
+          from head4_v291_downstream_inference import load_artifact,score_second,score_conditional_third
+
+          ROOT=Path('brcsv'); DATE='20260925'
+          state=json.loads(Path('/tmp/head4_state_20260925.json').read_text())
+          watch=json.loads(Path('.github/live/head4_120r_watchlist.json').read_text())
+          targets=[t for t in watch['targets'] if t['race_code'].startswith(DATE)]
+
+          def rows(rel):
+              p=ROOT/rel
+              if not p.is_file():return []
+              with p.open(encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
+          def rc(x):
+              s=str(x or '').strip()
+              if s.endswith('.0'):s=s[:-2]
+              return s.zfill(12)
+          def bycode(rel):
+              return {rc(r.get('レースコード')):r for r in rows(rel)}
+
+          cards=bycode('data/programs/race_cards/2026/09/25.csv')
+          waku=bycode('data/programs/waku10/2026/09/25.csv')
+          tkz=bycode('data/previews/tkz/2026/09/25.csv')
+          stt=bycode('data/previews/stt/2026/09/25.csv')
+          orig=bycode('data/previews/original_exhibition/2026/09/25.csv')
+          od3=bycode('data/previews/od3/2026/09/25.csv')
+          bias={int(k):float(v) for k,v in state['st_bias'].items()}
+          art=load_artifact()
+
+          def f(v):
+              try:
+                  x=float(str(v).strip())
+                  return x if math.isfinite(x) else None
+              except:return None
+
+          def exhibition(code):
+              tr=tkz.get(code); sr=stt.get(code); orr=orig.get(code)
+              if not tr or not sr:return None,'MISSING_TKZ_STT'
+              disp={b:f(tr.get(f'艇{b}_展示タイム')) for b in range(1,7)}
+              st_raw={b:f(sr.get(f'艇{b}_スタート展示')) for b in range(1,7)}
+              if any(v is None for v in disp.values()) or any(v is None for v in st_raw.values()):return None,'INCOMPLETE_BASIC'
+              exraw={b:disp[b]+CORR[b]['展示'] for b in range(1,7)}
+              ex=rank_scores(exraw,True)
+              st_corr={b:st_raw[b]-bias.get(b,0.) for b in range(1,7)}
+              rr,rs=_rank_strength(st_raw); cr,cs=_rank_strength(st_corr)
+
+              labels=[]; raw={b:[] for b in range(1,7)}
+              avg_all6=False; straight_all6=False
+              if orr:
+                  metrics=[]
+                  for k in (1,2,3):
+                      lab=str(orr.get(f'計測項目{k}','')).strip().replace(' ','')
+                      vals=[f(orr.get(f'艇{b}_値{k}')) for b in range(1,7)]
+                      if lab or any(v is not None for v in vals):
+                          metrics.append((lab,vals))
+                          labels.append(lab)
+                          for b in range(1,7):raw[b].append(vals[b-1])
+                  avg_all6=bool(metrics) and all(all(v is not None for v in vals) for _,vals in metrics)
+                  straight_all6=any(('直線' in lab) and all(v is not None for v in vals) for lab,vals in metrics)
+              os=original_corrected(labels,raw) if labels and all(len(raw[b])==len(labels) for b in range(1,7)) else {b:{'lap':.5,'turn':.5,'straight':.5,'avg':.5} for b in range(1,7)}
+              boats={};sf={}
+              for b in range(1,7):
+                  boats[str(b)]={'cur_ex':float(ex[b]),'cur_st':float(cs[b]),'cur_orig_lap':float(os[b]['lap']),
+                    'cur_orig_turn':float(os[b]['turn']),'cur_orig_straight':float(os[b]['straight']),'cur_orig_avg':float(os[b]['avg'])}
+                  sf[f'st_raw_b{b}']=st_raw[b];sf[f'st_raw_rank_b{b}']=rr[b];sf[f'st_corr_rank_b{b}']=cr[b]
+                  sf[f'st_raw_strength_b{b}']=rs[b];sf[f'st_corr_strength_b{b}']=cs[b]
+              return {'race_code':code,'current_boats':boats,'st_flat':sf,'orig_avg_available':bool(avg_all6),
+                      'orig_straight_available':bool(straight_all6),'wall_exhibition_ready':bool(avg_all6 and straight_all6)},'OK'
+
+          def odds_map(row):
+              out={}
+              if not row:return out
+              for a in range(1,7):
+                  for b in range(1,7):
+                      if b==a:continue
+                      for c in range(1,7):
+                          if c in (a,b):continue
+                          k=f'{a}-{b}-{c}';v=f(row.get(f'3連単_{k}'))
+                          if v is not None and v>0:out[k]=v
+              return out
+
+          frozen=[]
+          for t in targets:
+              code=t['race_code']
+              if code not in cards or code not in waku:
+                  frozen.append({'race_code':code,'status':'MISSING_CARD_WAKU'});continue
+              exh,status=exhibition(code)
+              if exh is None:
+                  frozen.append({'race_code':code,'status':status});continue
+              odds=odds_map(od3.get(code))
+              if len(odds)!=120:
+                  frozen.append({'race_code':code,'status':'MISSING_ODDS','wall_ready':int(exh['wall_exhibition_ready'])});continue
+              pf=fast.player_flat(cards[code],state)
+              hp=fast.ph5_head_prob_live(cards[code],waku[code],exh,pf)
+              src=fast.make_boats(cards[code],waku[code],exh,pf)
+              sr,cr=fast.derive(src,art);p2=score_second(sr,art);pc=score_conditional_third(cr,art)
+              tickets=fast.production_tickets(p2,pc,pf,waku[code])
+              pairs=[tuple(map(int,x.split('-')[1:])) for x in tickets]
+              mass=fast.pair_mass(p2,pc,pairs)
+              comp=fast.composite_odds([odds[x] for x in tickets])
+              sadv=fast.structural_advantages(exh)
+              selected=bool(hp>=.36 and sadv['orig4_adv_inside'] is not None and sadv['orig4_adv_inside']>=-.06)
+              sh=fast.wall3_open_shadow(hp,mass,comp,exh,selected)
+              frozen.append({'race_code':code,'status':'OK','deadline_jst':t['deadline_jst'],'head_prob':hp,'mass':mass,'comp':comp,
+                'orig4_adv_inside':sadv['orig4_adv_inside'],'selected':int(selected),'wall_ready':int(exh['wall_exhibition_ready']),
+                'wall_score':sh.get('wall_score'),'open_risk':sh.get('open_risk'),'shadow_quality':sh.get('shadow_quality'),
+                'would_rescue':int(bool(sh.get('would_rescue'))),'tickets':'|'.join(tickets)})
+
+          # Freeze complete; truth only now.
+          rm=bycode('data/results/realtime/2026/09/25.csv')
+          for x in frozen:
+              rr=rm.get(x['race_code'])
+              if rr:
+                  try:
+                      a=(int(float(rr['1着_艇番'])),int(float(rr['2着_艇番'])),int(float(rr['3着_艇番'])))
+                      x['actual']='-'.join(map(str,a));x['head4']=int(a[0]==4)
+                  except:pass
+
+          q=pd.DataFrame(frozen)
+          ok=q[q.status.eq('OK')].copy() if 'status' in q else pd.DataFrame()
+          out={'profile':'HEAD4_20260925_ARCHIVED_CURRENT_FORMULA_REPLAY','target_R':len(targets),
+               'OK_R':int(len(ok)),'wall_ready_R':int(ok.wall_ready.sum()) if len(ok) else 0,
+               'selected_R':int(ok.selected.sum()) if len(ok) else 0,'rescue_R':int(ok.would_rescue.sum()) if len(ok) else 0,
+               'rescue_codes':ok.loc[ok.would_rescue.eq(1),'race_code'].tolist() if len(ok) else [],
+               'rescue_head4':int(ok.loc[ok.would_rescue.eq(1),'head4'].fillna(0).sum()) if len(ok) and 'head4' in ok else None,
+               'odds_note':'BoatraceCSV archived pre-deadline od3 snapshot; may differ slightly from exact LIVE fetch timestamp',
+               'target_results_joined_only_after_decisions':True,'PRODUCTION_CHANGED':False}
+          Path('artifacts/research_4head_today_shadow_replay.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
+          q.to_csv('artifacts/research_4head_today_shadow_replay_detail.csv',index=False)
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+          PY
+      - name: Persist
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add artifacts/research_4head_today_shadow_replay.json artifacts/research_4head_today_shadow_replay_detail.csv
+          git commit -m "research: persist Sep25 4head shadow replay"
+          git push
