@@ -270,7 +270,15 @@ def main():
   shadow_quality=float(hp)+1.50*float(mass)+.10*open_risk
   shadow=bool(pm["monitoring_parent"] and (not selected) and wall_ready and comp>=2.5 and open_risk>0 and shadow_quality>=.82)
   stakes=live.dutch(tickets,ovs) if selected else [{"combo":t,"odds":o,"stake":0} for t,o in zip(tickets,ovs)]
-  rescue_plan=live.dutch(tickets,ovs) if shadow else [{"combo":t,"odds":o,"stake":0} for t,o in zip(tickets,ovs)]
+  rescue_dutch_feasible=True
+  if shadow:
+   try:
+    rescue_plan=live.dutch(tickets,ovs)
+   except RuntimeError:
+    rescue_dutch_feasible=False
+    rescue_plan=[{"combo":t,"odds":o,"stake":0} for t,o in zip(tickets,ovs)]
+  else:
+   rescue_plan=[{"combo":t,"odds":o,"stake":0} for t,o in zip(tickets,ovs)]
   srank=sorted(BOATS,key=lambda s:(-float(p2[s]),s))
   third_rank={s:sorted((t for t in BOATS if t!=s),key=lambda t:(-float(pc[(s,t)]),t)) for s in BOATS}
   oppdiag={"p2":{str(s):float(p2[s]) for s in BOATS},"pc":{f"{s}>{t}":float(pc[(s,t)]) for s in BOATS for t in BOATS if t!=s},
@@ -283,7 +291,7 @@ def main():
    "parent_player4_all_win_prior":pm["parent_player4_all_win_prior"],
    "old164":int(old164),"baseformula":int(baseformula),"rescue082":int(old164 and comp>=2.5 and hp+1.5*mass>=.82),"base120":int(base120),"newfeature_add":int(expansion),"selected":int(selected),"shadow":int(shadow),"production_bet":int(selected),
    "tickets":"|".join(tickets),"ticket_count":len(tickets),"stake":sum(x["stake"] for x in stakes),"stake_plan":json.dumps(stakes,ensure_ascii=False),
-   "rescue_stake":sum(x["stake"] for x in rescue_plan),"rescue_stake_plan":json.dumps(rescue_plan,ensure_ascii=False),"nf_score":score,
+   "rescue_dutch_feasible":int(rescue_dutch_feasible),"rescue_stake":sum(x["stake"] for x in rescue_plan),"rescue_stake_plan":json.dumps(rescue_plan,ensure_ascii=False),"nf_score":score,
    "opponent_diag":json.dumps(oppdiag,ensure_ascii=False)})
  d=pd.DataFrame(decisions)
  if not len(d):raise RuntimeError("NO_SIX_MONTH_DECISIONS")
@@ -320,14 +328,18 @@ def main():
  for _,r in d.iterrows():
   a=tr.get(r.race_code); actual=f"{a[0]}-{a[1]}-{a[2]}" if a else ""
   plan=json.loads(r.rescue_stake_plan); hh=0; pay=0.0; eqpay=0.0
+  ticket_list=str(r.tickets).split("|") if str(r.tickets) else []
+  odds_list=[om[r.race_code][t] for t in ticket_list]
   if int(r.shadow)==1 and actual:
-   for x in plan:
-    if x["combo"]==actual and int(x["stake"])>0:
-     hh=1; pay=float(x["stake"])*float(x["odds"])
-   n=len(plan); base=(BANK//(100*n))*100; est=[base]*n; rem=(BANK-sum(est))//100
+   hh=int(actual in ticket_list)
+   if int(r.rescue_dutch_feasible)==1:
+    for x in plan:
+     if x["combo"]==actual and int(x["stake"])>0:
+      pay=float(x["stake"])*float(x["odds"])
+   n=len(ticket_list); base=(BANK//(100*n))*100; est=[base]*n; rem=(BANK-sum(est))//100
    for i in range(min(rem,n)): est[i]+=100
-   for i,x in enumerate(plan):
-    if x["combo"]==actual: eqpay=float(est[i])*float(x["odds"])
+   for i,t in enumerate(ticket_list):
+    if t==actual: eqpay=float(est[i])*float(odds_list[i])
   rh.append(hh); rp.append(pay); rep.append(eqpay); ree.append(BANK if int(r.shadow)==1 else 0)
  d["rescue_hit"]=rh; d["rescue_payout_dutch"]=rp; d["rescue_payout_equal"]=rep; d["rescue_equal_stake"]=ree
  # Outcome is joined only after all decisions are frozen. Classify opponent misses for research.
@@ -431,16 +443,23 @@ def main():
  rescue=d[d.shadow.eq(1)].copy()
  rmonthly=[]
  for mo,g in rescue.groupby(rescue.date.str[:7]):
-  st=int(g.rescue_stake.sum()); dst=float(g.rescue_payout_dutch.sum()); est=int(g.rescue_equal_stake.sum()); ep=float(g.rescue_payout_equal.sum())
+  gf=g[g.rescue_dutch_feasible.eq(1)]
+  st=int(gf.rescue_stake.sum()); dst=float(gf.rescue_payout_dutch.sum()); est=int(g.rescue_equal_stake.sum()); ep=float(g.rescue_payout_equal.sum())
   rmonthly.append({"month":mo,"R":int(len(g)),"head4":int(g.head4.sum()),"head4_rate":100*float(g.head4.mean()),"exact3":int(g.rescue_hit.sum()),
-                   "dutch_stake":st,"dutch_payout":dst,"dutch_roi":100*dst/st if st else None,
+                   "exact3_rate":100*float(g.rescue_hit.mean()) if len(g) else None,
+                   "dutch_feasible_R":int(len(gf)),"dutch_infeasible_R":int(len(g)-len(gf)),
+                   "dutch_stake":st,"dutch_payout":dst,"dutch_roi_feasible_only":100*dst/st if st else None,
                    "equal_stake":est,"equal_payout":ep,"equal_roi":100*ep/est if est else None})
- rst=int(rescue.rescue_stake.sum()); rdst=float(rescue.rescue_payout_dutch.sum()); rest=int(rescue.rescue_equal_stake.sum()); rep=float(rescue.rescue_payout_equal.sum())
+ rf=rescue[rescue.rescue_dutch_feasible.eq(1)]
+ rst=int(rf.rescue_stake.sum()); rdst=float(rf.rescue_payout_dutch.sum()); rest=int(rescue.rescue_equal_stake.sum()); rep=float(rescue.rescue_payout_equal.sum())
  rescue_out={"profile":"HEAD4_WALL3_OPEN_RESCUE_SHADOW_V1_BETA010_Q082_COMP250",
              "period":"2026-06..2026-08","monitoring_parent_replayed_exactly":True,
              "R":int(len(rescue)),"head4":int(rescue.head4.sum()),"head4_rate":100*float(rescue.head4.mean()) if len(rescue) else None,
-             "exact3":int(rescue.rescue_hit.sum()),"dutch_stake":rst,"dutch_payout":rdst,"dutch_roi":100*rdst/rst if rst else None,
+             "exact3":int(rescue.rescue_hit.sum()),"exact3_rate":100*float(rescue.rescue_hit.mean()) if len(rescue) else None,
+             "dutch_feasible_R":int(len(rf)),"dutch_infeasible_R":int(len(rescue)-len(rf)),
+             "dutch_stake":rst,"dutch_payout":rdst,"dutch_roi_feasible_only":100*rdst/rst if rst else None,
              "equal_stake":rest,"equal_payout":rep,"equal_roi":100*rep/rest if rest else None,
+             "dutch_note":"exact production Dutch can be infeasible when a ticket would receive < JPY100; infeasible races excluded from Dutch ROI only",
              "monthly":rmonthly,"SEPTEMBER_OUTCOMES_READ":False,"PRODUCTION_CHANGED":False}
  rescue.to_csv(OUT/"wall3_live_rescue_3m_detail.csv",index=False)
  (OUT/"wall3_live_rescue_3m_result.json").write_text(json.dumps(rescue_out,ensure_ascii=False,indent=2)+"\n")
