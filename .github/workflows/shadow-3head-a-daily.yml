@@ -7,9 +7,6 @@ on:
         required: false
         default: ''
         type: string
-  schedule:
-    - cron: '5 21 * * *'
-    - cron: '35 21 * * *'
 permissions:
   contents: read
   actions: read
