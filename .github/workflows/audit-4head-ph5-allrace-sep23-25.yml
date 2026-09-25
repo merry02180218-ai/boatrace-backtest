@@ -1,0 +1,71 @@
+name: audit-4head-ph5-allrace-sep23-25
+
+on:
+  push:
+    paths:
+      - 'audit_4head_ph5_allrace_sep23_25.py'
+      - '.github/workflows/audit-4head-ph5-allrace-sep23-25.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/previews/tkz/2026/09
+            data/previews/stt/2026/09
+            data/previews/original_exhibition/2026/09
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q numpy pandas scipy 'scikit-learn==1.6.1' requests beautifulsoup4 lxml joblib
+      - name: Preflight
+        run: |
+          python -m py_compile audit_4head_ph5_allrace_sep23_25.py run_4head_120r_lastminute_fast.py
+          grep -q 'result_or_payout_used":False' audit_4head_ph5_allrace_sep23_25.py
+          grep -q 'ph5_selected=int(sel)' audit_4head_ph5_allrace_sep23_25.py
+      - name: Download frozen PRE/state artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          declare -A RUNS=( [20260923]=35787598924 [20260924]=35923458235 [20260925]=36062472606 )
+          for D in 20260923 20260924 20260925; do
+            RAW="/tmp/raw_$D"; SEED="/tmp/seed_$D"; mkdir -p "$RAW" "$SEED"
+            gh run download "${RUNS[$D]}" -n "head4-newfeature-pre-live-$D" -D "$RAW"
+            CARD="$(find "$RAW" -type f -path "*/current_input/v291/$D/race_cards.csv" | head -1)"
+            WAKU="$(find "$RAW" -type f -path "*/current_input/v291/$D/waku10.csv" | head -1)"
+            STATE="$(find "$RAW" -type f -name 'head4_daily_state.json' | head -1)"
+            PRE="$(find "$RAW" -type f -path "*/live_outputs/head4_120r_pre/$D/pre_all.csv" | head -1)"
+            test -n "$CARD" && test -n "$WAKU" && test -n "$STATE" && test -n "$PRE"
+            cp "$CARD" "$SEED/race_cards.csv"; cp "$WAKU" "$SEED/waku10.csv"
+            cp "$STATE" "$SEED/head4_daily_state.json"; cp "$PRE" "$SEED/pre_all.csv"
+            echo "SEED_$D=$SEED" >> "$GITHUB_ENV"
+          done
+      - name: Run all-race PH5 parent coverage audit
+        env:
+          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
+        run: |
+          python audit_4head_ph5_allrace_sep23_25.py | tee /tmp/ph5_allrace.log
+          grep -q 'HEAD4_PH5_ALLRACE_PARENT_COVERAGE_OK' /tmp/ph5_allrace.log
+          grep -q 'TARGET_DAY_RESULTS_UNREAD' /tmp/ph5_allrace.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-ph5-allrace-sep23-25
+          path: |
+            /tmp/head4_ph5_allrace_sep23_25/
+            /tmp/ph5_allrace.log
+          retention-days: 14
