@@ -453,7 +453,8 @@ def main():
 
     z=pd.DataFrame(rec)
     if len(z)!=len(sep_sel):raise RuntimeError(f"SEP_SELECTED_COVERAGE_{len(z)}/{len(sep_sel)}")
-    z.to_csv(OUT/"sep_v8_detail.csv",index=False)\n    pd.DataFrame(rawrec).to_csv(OUT/"sep_candidate_features.csv",index=False)
+    z.to_csv(OUT/"sep_v8_detail.csv",index=False)
+    pd.DataFrame(rawrec).to_csv(OUT/"sep_candidate_features.csv",index=False)
     s2df.to_csv(OUT/"train_second_rows.csv",index=False)
     s3df.to_csv(OUT/"train_third_rows.csv",index=False)
 
