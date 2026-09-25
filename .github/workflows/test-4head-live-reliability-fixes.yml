@@ -1,0 +1,42 @@
+name: test-4head-live-reliability-fixes
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/test-4head-live-reliability-fixes.txt'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -q requests numpy pandas scipy scikit-learn beautifulsoup4 lxml joblib
+      - name: Compile and calm-wind regression
+        run: |
+          python -m py_compile build_4head_env_context_live.py run_4head_120r_lastminute_fast.py resolve_4head_watchdog_targets.py
+          python - <<'PY'
+          from build_4head_env_context_live import _wind_code
+          assert _wind_code('無風 (無 風)',allow_calm=True)==0
+          assert _wind_code('無風',allow_calm=True)==0
+          assert _wind_code('北西')==8
+          try:
+              _wind_code('無風 (無 風)')
+          except Exception:
+              pass
+          else:
+              raise AssertionError('strict parser semantics changed')
+          print('HEAD4_CALM_WIND_REGRESSION_OK')
+          PY
+          grep -q -- '--max-exhibition-wait-seconds 1800' .github/workflows/live-4head-120r-watchdog.yml
+          grep -q -- '--poll-interval 10' .github/workflows/live-4head-120r-watchdog.yml
+          grep -q 'cancel-in-progress: true' .github/workflows/live-4head-120r-watchdog.yml
+          ! grep -q 'wall3_open_shadow' run_4head_120r_lastminute_fast.py
+          echo HEAD4_LIVE_RELIABILITY_STATIC_OK
