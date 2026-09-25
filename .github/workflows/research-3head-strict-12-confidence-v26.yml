@@ -1,0 +1,32 @@
+name: research-3head-strict-12-confidence-v26
+on:
+  push:
+    paths: [research/run_3head_strict_12_confidence_v26.fire]
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: pip install -q numpy pandas scikit-learn requests
+      - name: Download CORE107
+        env: {GH_TOKEN: "${{ github.token }}"}
+        run: |
+          mkdir -p core107
+          gh run download 35892602362 --repo ${{ github.repository }} --name research-3head-newcore-fast-v20 --dir core107
+      - name: Preflight compile
+        run: python -m py_compile research/research_3head_strict_12_confidence_v26.py
+      - name: Run strict 3-1 / 3-2 confidence validation
+        shell: bash
+        run: |
+          set -o pipefail
+          python research/research_3head_strict_12_confidence_v26.py | tee strict_12_confidence_v26.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: research-3head-strict-12-confidence-v26
+          path: |
+            strict_12_confidence_v26.log
+            forward_12_confidence_v26.csv
