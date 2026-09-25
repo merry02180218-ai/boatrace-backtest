@@ -143,6 +143,52 @@ def ecdf(x,refs,missing=.5):
  if x is None or not math.isfinite(float(x)) or not refs:return missing
  return bisect.bisect_right(refs,float(x))/len(refs)
 
+def monitoring_parent_snapshots():
+ """Exact historical replay of the current LIVE PRE monitoring-parent gate.
+
+ Histories are frozen at D-1 before each target date D, matching
+ scan_4head_120r_pre_live.py / prepare_4head_120r_daily_state.py semantics.
+ Missing parent features fail open exactly as LIVE does.
+ """
+ WIN=-0.0299361318939513; REN2=-7.080000000000001; PLAYER=.215605
+ mh=defaultdict(lambda:[0,0]); ph=defaultdict(lambda:[0,0]); out={}
+ for ds in pd.date_range("2025-10-01","2026-08-31"):
+  d=str(ds.date()); ymd=d.replace("-","/")
+  cards={rc(r.get("レースコード","")):r for r in rows(f"data/programs/race_cards/{ymd}.csv")}
+  if d>="2026-06-01":
+   for code,card in cards.items():
+    j=code[8:10]
+    vals={}
+    for b in (3,4):
+     mno=str(card.get(f"艇{b}_モーター番号","")).strip()
+     n,w=mh[(j,mno)]
+     vals[b]=(w/n if n else float("nan"))
+    mwd=vals[4]-vals[3] if math.isfinite(vals[4]) and math.isfinite(vals[3]) else float("nan")
+    m2d=ff(str(card.get("艇4_モーター2連対率","")).replace("%",""))-ff(str(card.get("艇3_モーター2連対率","")).replace("%",""))
+    reg4=str(card.get("艇4_登録番号","")).strip(); pn,pw=ph[reg4]
+    p4=(pw/pn if pn else float("nan"))
+    missing=not (math.isfinite(mwd) and math.isfinite(m2d) and math.isfinite(p4))
+    parent=bool(missing or (mwd>=WIN and m2d>=REN2 and p4>=PLAYER))
+    out[code]={"monitoring_parent":int(parent),"parent_feature_missing":int(missing),
+               "parent_motor_win_diff_4v3":mwd,"parent_motor_2ren_diff_4v3":m2d,
+               "parent_player4_all_win_prior":p4}
+  rm={rc(r.get("レースコード","")):r for r in rows(f"data/results/realtime/{ymd}.csv")}
+  for code,card in cards.items():
+   rr=rm.get(code)
+   if not rr:continue
+   try:winner=int(float(rr.get("1着_艇番")))
+   except:continue
+   if winner not in range(1,7):continue
+   j=code[8:10]
+   for b in range(1,7):
+    mno=str(card.get(f"艇{b}_モーター番号","")).strip()
+    if mno:
+     mh[(j,mno)][0]+=1; mh[(j,mno)][1]+=int(winner==b)
+    reg=str(card.get(f"艇{b}_登録番号","")).strip()
+    if reg:
+     ph[reg][0]+=1; ph[reg][1]+=int(winner==b)
+ return out
+
 def main():
  strict=pd.read_csv(os.environ["STRICT_ROWS"],dtype={"race_code":str});strict.race_code=strict.race_code.astype(str).str.zfill(12)
  strict=strict[(strict.month>="2026-06")&(strict.month<="2026-08")&strict.struct_ready.astype(str).str.lower().isin(["true","1"])].copy()
@@ -175,7 +221,7 @@ def main():
   mdl.fit(tr[fs],tr.head4); pp=mdl.predict_proba(te[fs])[:,1]
   hm.update(dict(zip(te.race_code,pp)))
  print("PH5_WALKFORWARD_HEAD_SCORES",len(hm),"features",len(fs))
- om=od3(); motors=motor_priors()
+ om=od3(); motors=motor_priors(); parent_snap=monitoring_parent_snapshots()
  nf=json.loads((ROOT/"artifacts/head4_newfeature_fixed156_production.json").read_text())
  refs=nf["ecdf_sorted_reference"]; weights=nf["weights"]; thr=float(nf["production_threshold"]); missing=float(nf.get("score_transform",{}).get("missing_value_rank",.5))
  pre=strict.set_index("race_code"); decisions=[]
@@ -216,16 +262,28 @@ def main():
        "attack4":attack4,"stwall_center":(-abs(stgap-.10) if stgap is not None else None),"wall_rev":(-wall if wall is not None else None)}
   score=sum(float(weights[k])*ecdf(raw.get(k),refs.get(k) or [],missing) for k in weights)
   expansion=(not base120) and st>=-.80 and orig>=-.35 and score>=thr
-  selected=bool(hp>=.36 and orig>=-.06); shadow=False
+  selected=bool(hp>=.36 and orig>=-.06)
+  pm=parent_snap.get(code,{"monitoring_parent":0,"parent_feature_missing":1,
+                           "parent_motor_win_diff_4v3":float("nan"),"parent_motor_2ren_diff_4v3":float("nan"),
+                           "parent_player4_all_win_prior":float("nan")})
+  open_risk=max(0.0,-float(wall)) if wall_ready and wall is not None else 0.0
+  shadow_quality=float(hp)+1.50*float(mass)+.10*open_risk
+  shadow=bool(pm["monitoring_parent"] and (not selected) and wall_ready and comp>=2.5 and open_risk>0 and shadow_quality>=.82)
   stakes=live.dutch(tickets,ovs) if selected else [{"combo":t,"odds":o,"stake":0} for t,o in zip(tickets,ovs)]
+  rescue_plan=live.dutch(tickets,ovs) if shadow else [{"combo":t,"odds":o,"stake":0} for t,o in zip(tickets,ovs)]
   srank=sorted(BOATS,key=lambda s:(-float(p2[s]),s))
   third_rank={s:sorted((t for t in BOATS if t!=s),key=lambda t:(-float(pc[(s,t)]),t)) for s in BOATS}
   oppdiag={"p2":{str(s):float(p2[s]) for s in BOATS},"pc":{f"{s}>{t}":float(pc[(s,t)]) for s in BOATS for t in BOATS if t!=s},
            "second_rank":srank,"third_rank":{str(s):third_rank[s] for s in BOATS},
            "second_gap12":float(p2[srank[0]]-p2[srank[1]]),"second_gap23":float(p2[srank[1]]-p2[srank[2]])}
   decisions.append({"date":str(rr.date),"race_code":code,"jcd":code[8:10],"rno":int(code[10:12]),"head_prob":hp,"mass":mass,"comp":comp,
+   "orig4_adv_inside":orig,"wall_ready":int(wall_ready),"wall_score":wall,"open_risk":open_risk,"shadow_quality":shadow_quality,
+   "monitoring_parent":int(pm["monitoring_parent"]),"parent_feature_missing":int(pm["parent_feature_missing"]),
+   "parent_motor_win_diff_4v3":pm["parent_motor_win_diff_4v3"],"parent_motor_2ren_diff_4v3":pm["parent_motor_2ren_diff_4v3"],
+   "parent_player4_all_win_prior":pm["parent_player4_all_win_prior"],
    "old164":int(old164),"baseformula":int(baseformula),"rescue082":int(old164 and comp>=2.5 and hp+1.5*mass>=.82),"base120":int(base120),"newfeature_add":int(expansion),"selected":int(selected),"shadow":int(shadow),"production_bet":int(selected),
-   "tickets":"|".join(tickets),"ticket_count":len(tickets),"stake":sum(x["stake"] for x in stakes),"stake_plan":json.dumps(stakes,ensure_ascii=False),"nf_score":score,
+   "tickets":"|".join(tickets),"ticket_count":len(tickets),"stake":sum(x["stake"] for x in stakes),"stake_plan":json.dumps(stakes,ensure_ascii=False),
+   "rescue_stake":sum(x["stake"] for x in rescue_plan),"rescue_stake_plan":json.dumps(rescue_plan,ensure_ascii=False),"nf_score":score,
    "opponent_diag":json.dumps(oppdiag,ensure_ascii=False)})
  d=pd.DataFrame(decisions)
  if not len(d):raise RuntimeError("NO_SIX_MONTH_DECISIONS")
@@ -257,6 +315,21 @@ def main():
     if x["combo"]==actual and int(x["stake"])>0:hit=1;pay=float(x["stake"])*float(x["odds"])
   hits.append(hit);pays.append(pay)
  d["head4"]=head;d["hit"]=hits;d["payout"]=pays;d["profit"]=d.payout-d.stake
+ # Exact current LIVE wall3 rescue settlement, joined only after all shadow decisions are frozen.
+ rh=[]; rp=[]; rep=[]; ree=[]
+ for _,r in d.iterrows():
+  a=tr.get(r.race_code); actual=f"{a[0]}-{a[1]}-{a[2]}" if a else ""
+  plan=json.loads(r.rescue_stake_plan); hh=0; pay=0.0; eqpay=0.0
+  if int(r.shadow)==1 and actual:
+   for x in plan:
+    if x["combo"]==actual and int(x["stake"])>0:
+     hh=1; pay=float(x["stake"])*float(x["odds"])
+   n=len(plan); base=(BANK//(100*n))*100; est=[base]*n; rem=(BANK-sum(est))//100
+   for i in range(min(rem,n)): est[i]+=100
+   for i,x in enumerate(plan):
+    if x["combo"]==actual: eqpay=float(est[i])*float(x["odds"])
+  rh.append(hh); rp.append(pay); rep.append(eqpay); ree.append(BANK if int(r.shadow)==1 else 0)
+ d["rescue_hit"]=rh; d["rescue_payout_dutch"]=rp; d["rescue_payout_equal"]=rep; d["rescue_equal_stake"]=ree
  # Outcome is joined only after all decisions are frozen. Classify opponent misses for research.
  miss_rows=[]
  for _,r in d[(d.production_bet==1)&(d.head4==1)].iterrows():
@@ -355,6 +428,24 @@ def main():
  diag["base120_headprob_ge018_R"]=int(((b.base120==1)&(b.head_prob>=.18)).sum())
  (OUT/"base120_diagnostic.json").write_text(json.dumps(diag,ensure_ascii=False,indent=2)+"\n")
  print("BASE120_DIAGNOSTIC",json.dumps(diag,ensure_ascii=False))
+ rescue=d[d.shadow.eq(1)].copy()
+ rmonthly=[]
+ for mo,g in rescue.groupby(rescue.date.str[:7]):
+  st=int(g.rescue_stake.sum()); dst=float(g.rescue_payout_dutch.sum()); est=int(g.rescue_equal_stake.sum()); ep=float(g.rescue_payout_equal.sum())
+  rmonthly.append({"month":mo,"R":int(len(g)),"head4":int(g.head4.sum()),"head4_rate":100*float(g.head4.mean()),"exact3":int(g.rescue_hit.sum()),
+                   "dutch_stake":st,"dutch_payout":dst,"dutch_roi":100*dst/st if st else None,
+                   "equal_stake":est,"equal_payout":ep,"equal_roi":100*ep/est if est else None})
+ rst=int(rescue.rescue_stake.sum()); rdst=float(rescue.rescue_payout_dutch.sum()); rest=int(rescue.rescue_equal_stake.sum()); rep=float(rescue.rescue_payout_equal.sum())
+ rescue_out={"profile":"HEAD4_WALL3_OPEN_RESCUE_SHADOW_V1_BETA010_Q082_COMP250",
+             "period":"2026-06..2026-08","monitoring_parent_replayed_exactly":True,
+             "R":int(len(rescue)),"head4":int(rescue.head4.sum()),"head4_rate":100*float(rescue.head4.mean()) if len(rescue) else None,
+             "exact3":int(rescue.rescue_hit.sum()),"dutch_stake":rst,"dutch_payout":rdst,"dutch_roi":100*rdst/rst if rst else None,
+             "equal_stake":rest,"equal_payout":rep,"equal_roi":100*rep/rest if rest else None,
+             "monthly":rmonthly,"SEPTEMBER_OUTCOMES_READ":False,"PRODUCTION_CHANGED":False}
+ rescue.to_csv(OUT/"wall3_live_rescue_3m_detail.csv",index=False)
+ (OUT/"wall3_live_rescue_3m_result.json").write_text(json.dumps(rescue_out,ensure_ascii=False,indent=2)+"\n")
+ print("WALL3_LIVE_RESCUE_3M",json.dumps(rescue_out,ensure_ascii=False))
+ out["wall3_live_rescue_3m"]=rescue_out
  out["monthly"]=out_monthly; out["closing_odds_used"]=True; out["predeadline_od3_preferred"]=True; out["waku10_backfill_used"]=False; (OUT/"result.json").write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n")
  print(json.dumps(out,ensure_ascii=False,indent=2));print(monthly.to_string(index=False));print(venue.to_string(index=False));print("HEAD4_PH5_LIVE_WALKFORWARD_OK")
 if __name__=="__main__":main()
