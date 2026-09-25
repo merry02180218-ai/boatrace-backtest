@@ -190,8 +190,7 @@ jobs:
           fi
 
       - name: Final BET decision and 5000 yen allocation
-        if: env.SHOULD_RUN == '1'
-        if: steps.exhibition.outputs.ready == '1'
+        if: env.SHOULD_RUN == '1' && steps.exhibition.outputs.ready == '1'
         run: |
           python run_1head_current_day_live_decision.py \
             --base "$BASE" \
@@ -231,8 +230,7 @@ jobs:
           fi
 
       - name: BET notification
-        if: env.SHOULD_RUN == '1'
-        if: steps.decision_meta.outputs.decision == 'BET'
+        if: env.SHOULD_RUN == '1' && steps.decision_meta.outputs.decision == 'BET'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
