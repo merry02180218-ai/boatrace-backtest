@@ -218,7 +218,7 @@ def wait_exhibition_ready(hd,jcd,rno,bias,deadline,timeout=4,poll_interval=2.0,s
         try:
             tkz,st,orig,sui=fetch_current(hd,jcd,rno,timeout)
             exh=build_exhibition_boatcast(hd,jcd,rno,tkz,st,orig,bias)
-            wc,ws,wave,air,water,weather_hhmm=parse_sui_weather(sui,allow_missing_water=True)
+            wc,ws,wave,air,water,weather_hhmm=parse_sui_weather(sui,allow_missing_water=True,allow_calm_wind=True)
             exh['prerace_weather']={'wind_code':wc,'wind_speed':ws,'wave_cm':wave,'air_c':air,'water_c':water,'snapshot_hhmm':weather_hhmm,'source':'BOATCAST bc_sui pre-race only'}
             return exh,attempts,last
         except Exception as e:
