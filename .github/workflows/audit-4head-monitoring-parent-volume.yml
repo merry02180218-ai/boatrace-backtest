@@ -1,0 +1,128 @@
+name: audit-4head-monitoring-parent-volume
+
+on:
+  push:
+    paths:
+      - '.github/triggers/audit-4head-monitoring-parent-volume.txt'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: BoatraceCSV/boatracecsv.github.io
+          path: brcsv
+          fetch-depth: 1
+          sparse-checkout: |
+            data/programs/race_cards
+            data/results/realtime
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Replay exact monitoring parent
+        run: |
+          python - <<'PY'
+          import csv,json,math
+          from collections import defaultdict
+          from datetime import date,timedelta
+          from pathlib import Path
+
+          ROOT=Path('brcsv')
+          START=date(2025,10,1); END=date(2026,9,25)
+          WIN=-0.0299361318939513; REN2=-7.080000000000001; PLAYER=.215605
+
+          def rows(rel):
+              p=ROOT/rel
+              if not p.is_file(): return []
+              with p.open(encoding='utf-8-sig',newline='') as f:return list(csv.DictReader(f))
+          def rc(x):
+              s=str(x or '').strip()
+              if s.endswith('.0'):s=s[:-2]
+              return s.zfill(12)
+          def ff(x):
+              try:
+                  v=float(str(x).replace('%','').strip())
+                  return v if math.isfinite(v) else float('nan')
+              except:return float('nan')
+          mh=defaultdict(lambda:[0,0]); ph=defaultdict(lambda:[0,0])
+          daily={}; missing_daily={}
+          d=START
+          while d<=END:
+              ymd=d.strftime('%Y/%m/%d')
+              cards={rc(r.get('レースコード')):r for r in rows(f'data/programs/race_cards/{ymd}.csv')}
+              if d>=date(2026,6,1):
+                  n=miss=0
+                  for code,card in cards.items():
+                      j=code[8:10]; vals={}
+                      for b in (3,4):
+                          mno=str(card.get(f'艇{b}_モーター番号','')).strip()
+                          nn,ww=mh[(j,mno)]
+                          vals[b]=(ww/nn if nn else float('nan'))
+                      mwd=vals[4]-vals[3] if math.isfinite(vals[4]) and math.isfinite(vals[3]) else float('nan')
+                      m2d=ff(card.get('艇4_モーター2連対率'))-ff(card.get('艇3_モーター2連対率'))
+                      reg4=str(card.get('艇4_登録番号','')).strip(); pn,pw=ph[reg4]
+                      p4=(pw/pn if pn else float('nan'))
+                      missing=not (math.isfinite(mwd) and math.isfinite(m2d) and math.isfinite(p4))
+                      parent=missing or (mwd>=WIN and m2d>=REN2 and p4>=PLAYER)
+                      n+=int(parent); miss+=int(parent and missing)
+                  daily[str(d)]={'all_R':len(cards),'parent_R':n,'parent_missing_R':miss}
+              if d<END:
+                  rm={rc(r.get('レースコード')):r for r in rows(f'data/results/realtime/{ymd}.csv')}
+                  for code,card in cards.items():
+                      rr=rm.get(code)
+                      if not rr:continue
+                      try:w=int(float(rr.get('1着_艇番')))
+                      except:continue
+                      if w not in range(1,7):continue
+                      j=code[8:10]
+                      for b in range(1,7):
+                          mno=str(card.get(f'艇{b}_モーター番号','')).strip()
+                          if mno:
+                              mh[(j,mno)][0]+=1; mh[(j,mno)][1]+=int(w==b)
+                          reg=str(card.get(f'艇{b}_登録番号','')).strip()
+                          if reg:
+                              ph[reg][0]+=1; ph[reg][1]+=int(w==b)
+              d+=timedelta(days=1)
+
+          months={}
+          for mon in ('2026-06','2026-07','2026-08'):
+              vals=[v for k,v in daily.items() if k.startswith(mon)]
+              pr=[v['parent_R'] for v in vals]
+              months[mon]={
+                  'days':len(vals),'all_R':sum(v['all_R'] for v in vals),
+                  'parent_R':sum(pr),'parent_per_day_mean':sum(pr)/len(pr) if pr else None,
+                  'parent_per_day_min':min(pr) if pr else None,'parent_per_day_max':max(pr) if pr else None,
+                  'parent_missing_R':sum(v['parent_missing_R'] for v in vals)
+              }
+          hist=[v['parent_R'] for k,v in daily.items() if '2026-06-01'<=k<='2026-08-31']
+          out={
+              'profile':'HEAD4_MONITORING_PARENT_EXACT_REPLAY',
+              'thresholds':{'motor_win_diff_min':WIN,'motor_2ren_diff_min':REN2,'player4_all_win_min':PLAYER,'missing_fail_open':True},
+              'months':months,
+              'three_month':{
+                  'days':len(hist),'parent_R':sum(hist),
+                  'parent_per_day_mean':sum(hist)/len(hist),
+                  'parent_per_day_min':min(hist),'parent_per_day_max':max(hist),
+                  'days_parent_le_10':sum(x<=10 for x in hist),
+                  'days_parent_ge_30':sum(x>=30 for x in hist)
+              },
+              'today_2026_09_25':daily.get('2026-09-25'),
+              'SEPTEMBER_TARGET_RESULTS_USED':False,
+              'PRODUCTION_CHANGED':False
+          }
+          Path('artifacts/research_4head_monitoring_parent_volume.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+          PY
+      - name: Persist
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add artifacts/research_4head_monitoring_parent_volume.json
+          git commit -m "research: persist 4head monitoring-parent volume audit"
+          git push
