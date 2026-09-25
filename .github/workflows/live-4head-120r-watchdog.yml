@@ -58,6 +58,67 @@ jobs:
           echo "HEAD4_WATCHDOG_ACTIVE_COUNT=$COUNT"
           cat /tmp/resolved.json
 
+  resolve_onehead:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    outputs:
+      count: ${{ steps.targets.outputs.count }}
+      matrix: ${{ steps.targets.outputs.matrix }}
+    steps:
+      - name: Resolve active 1HEAD targets from latest daily audit
+        id: targets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          DAY=$(TZ=Asia/Tokyo date +%Y%m%d)
+          NAME="1head-current-day-audit-$DAY"
+          mkdir -p /tmp/head1_resolve
+          ART_ID="$(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=$NAME&per_page=100" --jq '[.artifacts[] | select(.expired==false)] | sort_by(.created_at) | last | .id // empty')"
+          RUN_ID="$(gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?name=$NAME&per_page=100" --jq '[.artifacts[] | select(.expired==false)] | sort_by(.created_at) | last | .workflow_run.id // empty')"
+          if [ -z "$ART_ID" ] || [ -z "$RUN_ID" ]; then
+            echo "HEAD1_WATCHDOG_DAILY_AUDIT_NOT_READY name=$NAME"
+            echo 'count=0' >> "$GITHUB_OUTPUT"
+            echo 'matrix={"include":[]}' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          gh run download "$RUN_ID" -n "$NAME" -D /tmp/head1_resolve/audit
+          WATCH="$(find /tmp/head1_resolve/audit -name watchlist.json -print -quit)"
+          test -n "$WATCH"
+          gh api "repos/$GITHUB_REPOSITORY/contents/resolve_1head_watchdog_targets.py?ref=$GITHUB_SHA" --jq '.content' | base64 -d > /tmp/head1_resolve/resolve.py
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?per_page=100" --jq '.artifacts[] | select(.expired==false) | .name' > /tmp/head1_resolve/artifact_names.txt
+          python /tmp/head1_resolve/resolve.py             --watchlist "$WATCH"             --audit-run-id "$RUN_ID"             --completed-names /tmp/head1_resolve/artifact_names.txt             --out /tmp/head1_resolve/resolved.json
+          COUNT="$(python - <<'PY'
+          import json
+          print(json.load(open('/tmp/head1_resolve/resolved.json'))['count'])
+          PY
+          )"
+          MATRIX="$(python - <<'PY'
+          import json
+          z=json.load(open('/tmp/head1_resolve/resolved.json'))
+          print(json.dumps({'include':z['include']},separators=(',',':')))
+          PY
+          )"
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
+          echo "HEAD1_WATCHDOG_ACTIVE_COUNT=$COUNT"
+          cat /tmp/head1_resolve/resolved.json
+
+  monitor_onehead:
+    needs: resolve_onehead
+    if: needs.resolve_onehead.outputs.count != '0'
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix: ${{ fromJSON(needs.resolve_onehead.outputs.matrix) }}
+    uses: ./.github/workflows/live-1head-current-day-monitor.yml
+    with:
+      race_code: ${{ matrix.race_code }}
+      audit_run_id: ${{ matrix.audit_run_id }}
+      deadline_jst: ${{ matrix.deadline_jst }}
+
   monitor:
     needs: resolve
     if: needs.resolve.outputs.count != '0'
