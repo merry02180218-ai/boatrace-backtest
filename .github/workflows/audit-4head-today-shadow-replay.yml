@@ -148,11 +148,15 @@ jobs:
               comp=fast.composite_odds([odds[x] for x in tickets])
               sadv=fast.structural_advantages(exh)
               selected=bool(hp>=.36 and sadv['orig4_adv_inside'] is not None and sadv['orig4_adv_inside']>=-.06)
+              old164=bool(sadv['st4_adv_inside'] is not None and sadv['orig4_adv_inside'] is not None and
+                          sadv['st4_adv_inside']>=-.6000000000000001 and sadv['orig4_adv_inside']>=-.057777777777777706)
               sh=fast.wall3_open_shadow(hp,mass,comp,exh,selected)
               frozen.append({'race_code':code,'status':'OK','deadline_jst':t['deadline_jst'],'head_prob':hp,'mass':mass,'comp':comp,
-                'orig4_adv_inside':sadv['orig4_adv_inside'],'selected':int(selected),'wall_ready':int(exh['wall_exhibition_ready']),
+                'st4_adv_inside':sadv['st4_adv_inside'],'orig4_adv_inside':sadv['orig4_adv_inside'],'old164':int(old164),
+                'selected':int(selected),'wall_ready':int(exh['wall_exhibition_ready']),
                 'wall_score':sh.get('wall_score'),'open_risk':sh.get('open_risk'),'shadow_quality':sh.get('shadow_quality'),
-                'would_rescue':int(bool(sh.get('would_rescue'))),'tickets':'|'.join(tickets)})
+                'would_rescue':int(bool(sh.get('would_rescue'))),
+                'would_rescue_old164':int(bool(old164 and sh.get('would_rescue'))),'tickets':'|'.join(tickets)})
 
           # Freeze complete; truth only now.
           rm=bycode('data/results/realtime/2026/09/25.csv')
@@ -168,9 +172,11 @@ jobs:
           ok=q[q.status.eq('OK')].copy() if 'status' in q else pd.DataFrame()
           out={'profile':'HEAD4_20260925_ARCHIVED_CURRENT_FORMULA_REPLAY','target_R':len(targets),
                'OK_R':int(len(ok)),'wall_ready_R':int(ok.wall_ready.sum()) if len(ok) else 0,
-               'selected_R':int(ok.selected.sum()) if len(ok) else 0,'rescue_R':int(ok.would_rescue.sum()) if len(ok) else 0,
-               'rescue_codes':ok.loc[ok.would_rescue.eq(1),'race_code'].tolist() if len(ok) else [],
-               'rescue_head4':int(ok.loc[ok.would_rescue.eq(1),'head4'].fillna(0).sum()) if len(ok) and 'head4' in ok else None,
+               'selected_R':int(ok.selected.sum()) if len(ok) else 0,'broad_rescue_R':int(ok.would_rescue.sum()) if len(ok) else 0,
+               'old164_R':int(ok.old164.sum()) if len(ok) else 0,
+               'rescue_R':int(ok.would_rescue_old164.sum()) if len(ok) else 0,
+               'rescue_codes':ok.loc[ok.would_rescue_old164.eq(1),'race_code'].tolist() if len(ok) else [],
+               'rescue_head4':int(ok.loc[ok.would_rescue_old164.eq(1),'head4'].fillna(0).sum()) if len(ok) and 'head4' in ok else None,
                'odds_note':'BoatraceCSV archived pre-deadline od3 snapshot; may differ slightly from exact LIVE fetch timestamp',
                'target_results_joined_only_after_decisions':True,'PRODUCTION_CHANGED':False}
           Path('artifacts/research_4head_today_shadow_replay.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
