@@ -395,6 +395,7 @@ def main():
     }
 
     rec=[]
+    rawrec=[]
     for _,r in sep_sel.sort_values(["date","race_code"]).iterrows():
         code=str(r.race_code).zfill(12);actual=truth.get(code)
         if not actual:continue
