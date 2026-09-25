@@ -40,6 +40,8 @@ jobs:
           python -m py_compile prepare_4head_6m_v93_neutral_waku.py audit_4head_ph5_live_walkforward.py
           ! grep -n '\\n' audit_4head_ph5_live_walkforward.py
           grep -q 'HEAD4_WALL3_OPEN_RESCUE_SHADOW_V1_BETA010_Q082_COMP250' audit_4head_ph5_live_walkforward.py
+          grep -q 'not base120' audit_4head_ph5_live_walkforward.py
+          grep -q "wall3_open_shadow(hp,mass,comp,exh,d\['base120_selected'\])" run_4head_120r_lastminute_fast.py
           grep -q 'monitoring_parent_snapshots' audit_4head_ph5_live_walkforward.py
           grep -q 'shadow_quality=float(hp)+1.50\*float(mass)+.10\*open_risk' audit_4head_ph5_live_walkforward.py
           grep -q 'comp>=2.5 and open_risk>0 and shadow_quality>=.82' audit_4head_ph5_live_walkforward.py
