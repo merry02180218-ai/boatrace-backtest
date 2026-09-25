@@ -422,3 +422,38 @@ BET通知には最低限、以下を含める。
 
 ### 将来の統合時の注意
 各頭モデル固有の「頭判定」「相手選び」「採用閾値」は勝手に共通化しない。共通化するのはLIVEの監視・再試行・通知・資金配分インターフェース。モデル固有ロジックはそれぞれの正式採用版を保持したまま、最終的に同じ統合watchdog/通知形式へ接続する。
+
+
+## 1HEAD current-day LIVE wiring — 2026-09-25
+Detailed handoff:
+- `CHAT_HANDOFF_20260925_1HEAD_CURRENT_DAY_LIVE.md`
+
+Validated daily audit:
+- Run 36124801250 / Artifact 10859279916
+- 2026-09-25 cards 144R / causal cache 144R / WATCH 11R
+- D-1 history_end=2026-09-24
+- target-day result=false / payout=false
+- old run's overall FAILURE was only a self-matching static grep; core audit was SUCCESS.
+- preflight fix: `9fc47376b06eb9c8eb452ae1985dc32e3cab391c`
+
+1HEAD final LIVE lanes remain model-specific:
+- formal: HEAD>=.790 + mass>=.375 + standard exhibition .05/.70
+- PH expansion: .780<=HEAD<.790 + mass>=.375 + b1 recent_p2>=.533333333333 + standard exhibition
+- relaxed volume expansion: .750<=HEAD<.780 + mass>=.375 + relaxed exhibition .10/.65 + env_pair<=-.34
+
+Manual monitor:
+- `.github/workflows/live-1head-current-day-monitor.yml`
+- workflow_dispatch only; **no schedule restored**
+- uses audited daily artifact directly
+- BET / PASS / NO_BET_DATA_NOT_READY
+- BET only notification
+- 5,000 yen total Dutch allocation in 100-yen units
+- target result/payout forbidden
+- official odds must be verified pre-deadline both before and after fetch
+
+Latest strengthened contract:
+- Run 36127372755 SUCCESS
+- verifies promoted lanes, existing v351 finalizer bridge, BET notification dry-run,
+  pre-deadline odds guard, YAML/syntax and result/payout source guard.
+
+Do not enable automatic 1HEAD watchdog/schedule until explicit user adoption after one real active-race manual validation.
