@@ -1,0 +1,126 @@
+name: audit-4head-recent-live-funnel
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/triggers/audit-4head-recent-live-funnel.txt'
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Download canonical 4HEAD terminal artifacts Sep22-25
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/head4_recent/raw /tmp/head4_recent/unpacked
+          gh api --paginate "repos/$GITHUB_REPOSITORY/actions/artifacts?per_page=100"             --jq '.artifacts[] | [.id,.name,.created_at,(.workflow_run.head_sha // "")] | @tsv'             > /tmp/head4_recent/all.tsv
+          : > /tmp/head4_recent/selected.tsv
+          for day in 20260922 20260923 20260924 20260925; do
+            grep -E "^[0-9]+[[:space:]]+head4-120r-watchdog-${day}-[0-9]+-[0-9]+[[:space:]]" /tmp/head4_recent/all.tsv               | grep -Ev -- '-retry-' >> /tmp/head4_recent/selected.tsv || true
+          done
+          while IFS=$'\t' read -r id name created sha; do
+            [ -n "$id" ] || continue
+            dir="/tmp/head4_recent/unpacked/$id"
+            mkdir -p "$dir"
+            gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/$id/zip" > "/tmp/head4_recent/raw/$id.zip"
+            unzip -q -o "/tmp/head4_recent/raw/$id.zip" -d "$dir"
+            printf '%s\t%s\t%s\t%s\n' "$id" "$name" "$created" "$sha" > "$dir/meta.tsv"
+          done < /tmp/head4_recent/selected.tsv
+
+      - name: Aggregate decision funnel
+        run: |
+          python - <<'PY'
+          import csv,json,re
+          from pathlib import Path
+          root=Path('/tmp/head4_recent/unpacked')
+          rows=[]
+          for d in sorted(root.iterdir()):
+              if not d.is_dir(): continue
+              meta=(d/'meta.tsv').read_text().strip().split('\t')
+              aid,name,created,sha=(meta+['','','',''])[:4]
+              m=re.fullmatch(r'head4-120r-watchdog-(\d{8})-(\d+)-(\d+)',name)
+              if not m: continue
+              day,jcd,race=m.groups()
+              js=list(d.rglob('*.json'))
+              if not js: continue
+              # Prefer final watchdog JSON; ignore odds/deadline diagnostics if any.
+              z=None
+              for p in js:
+                  try:
+                      q=json.loads(p.read_text(encoding='utf-8'))
+                  except Exception:
+                      continue
+                  if str(q.get('race_code','')).zfill(12)==f'{day}{int(jcd):02d}{int(race):02d}' and q.get('decision'):
+                      z=q; break
+              if z is None: continue
+              hp=z.get('head_prob')
+              sadv=(z.get('standard_parity') or {})
+              orig=sadv.get('orig4_adv_inside', z.get('orig4_adv_inside'))
+              # old artifacts may not expose orig in standard_parity; structural field is top-level in current payload.
+              if orig is None:
+                  orig=z.get('orig4_adv_inside')
+              # Reconstruct canonical structural orig from legacy/newfeature fields when present.
+              if orig is None:
+                  for k in ('legacy_orig4_adv_inside','structural_orig4_adv_inside'):
+                      if z.get(k) is not None: orig=z.get(k); break
+              ph5_recalc=(hp is not None and orig is not None and float(hp)>=.36 and float(orig)>=-.06)
+              legacy=z.get('legacy_newfeature_selected')
+              if legacy is None:
+                  legacy=z.get('selected') if not z.get('ph5_standard_selected') else None
+              rows.append({
+                  'day':day,'race_code':str(z.get('race_code')),
+                  'decision':z.get('decision'),'head_prob':hp,'orig4_adv_inside':orig,
+                  'ph5_recalc':int(bool(ph5_recalc)),
+                  'selected_field':int(bool(z.get('selected'))),
+                  'ph5_standard_selected':z.get('ph5_standard_selected'),
+                  'legacy_newfeature_selected':legacy,
+                  'base120_selected':z.get('base120_selected'),
+                  'standard_match':(z.get('standard_parity') or {}).get('match'),
+                  'artifact_id':aid,'artifact_created_at':created,'head_sha':sha,
+              })
+          out=Path('/tmp/head4_recent')
+          with (out/'detail.csv').open('w',newline='',encoding='utf-8') as f:
+              w=csv.DictWriter(f,fieldnames=list(rows[0]) if rows else ['day'])
+              w.writeheader(); w.writerows(rows)
+          summary={}
+          for day in ['20260922','20260923','20260924','20260925']:
+              q=[r for r in rows if r['day']==day]
+              summary[day]={
+                  'terminal_R':len(q),
+                  'BET_R':sum(r['decision']=='BET' for r in q),
+                  'PASS_R':sum(r['decision']=='PASS' for r in q),
+                  'NO_BET_NOT_READY_R':sum(r['decision']=='NO_BET_DATA_NOT_READY' for r in q),
+                  'ph5_recalc_R':sum(r['ph5_recalc'] for r in q),
+                  'legacy_newfeature_true_R':sum(r['legacy_newfeature_selected'] is True for r in q),
+                  'base120_true_R':sum(r['base120_selected'] is True for r in q),
+                  'hp_ge_036_R':sum(r['head_prob'] is not None and float(r['head_prob'])>=.36 for r in q),
+                  'hp_max':max([float(r['head_prob']) for r in q if r['head_prob'] is not None],default=None),
+                  'standard_mismatch_R':sum(r['standard_match'] is False for r in q),
+              }
+          (out/'summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n')
+          print(json.dumps(summary,ensure_ascii=False,indent=2))
+          print('HEAD4_RECENT_LIVE_FUNNEL_OK')
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: head4-recent-live-funnel
+          path: |
+            /tmp/head4_recent/summary.json
+            /tmp/head4_recent/detail.csv
+            /tmp/head4_recent/selected.tsv
+          retention-days: 14
