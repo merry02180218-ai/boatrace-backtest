@@ -60,6 +60,25 @@ jobs:
           stakes=m._dutch(tickets,odds)
           assert sum(stakes)==5000 and all(x>=100 and x%100==0 for x in stakes),stakes
           print('PROMOTED_LANES_AND_DUTCH_OK',stakes)
+
+          from datetime import datetime,timedelta
+          from zoneinfo import ZoneInfo
+          J=ZoneInfo('Asia/Tokyo')
+          now=datetime(2026,9,25,20,0,0,tzinfo=J)
+          future=(now+timedelta(seconds=30)).isoformat()
+          assert m._require_predeadline(future,now)>29
+          try:
+              m._require_predeadline((now-timedelta(seconds=1)).isoformat(),now)
+              raise AssertionError('expired deadline accepted')
+          except RuntimeError:
+              pass
+          m._require_odds_timestamp_predeadline((now+timedelta(seconds=10)).isoformat(),future)
+          try:
+              m._require_odds_timestamp_predeadline(future,future)
+              raise AssertionError('post-deadline odds accepted')
+          except RuntimeError:
+              pass
+          print('PREDEADLINE_ODDS_GUARD_OK')
           PY
       - name: Existing v351 finalizer bridge contract
         run: |
