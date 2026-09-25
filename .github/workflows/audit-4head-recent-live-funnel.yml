@@ -111,6 +111,29 @@ jobs:
                   'hp_max':max([float(r['head_prob']) for r in q if r['head_prob'] is not None],default=None),
                   'standard_mismatch_R':sum(r['standard_match'] is False for r in q),
               }
+          wp=Path('.github/live/head4_120r_watchlist.json')
+          if wp.is_file():
+              wz=json.loads(wp.read_text(encoding='utf-8'))
+              if str(wz.get('date') or wz.get('target_date') or '').replace('-','')=='20260925':
+                  all_names=[]
+                  for line in Path('/tmp/head4_recent/all.tsv').read_text().splitlines():
+                      a=line.split('\t')
+                      if len(a)>=2: all_names.append(a[1])
+                  canon={r['race_code'] for r in rows if r['day']=='20260925'}
+                  missing=[]
+                  for t in wz.get('targets',[]):
+                      code=str(t.get('race_code','')).zfill(12)
+                      if code in canon: continue
+                      base=f"head4-120r-watchdog-20260925-{int(t['jcd'])}-{int(t['race'])}"
+                      retries=[n for n in all_names if n.startswith(base+'-retry-')]
+                      missing.append({'race_code':code,'deadline_jst':t.get('deadline_jst'),'artifact_base':base,
+                                      'retry_R':len(retries),'retry_names':retries})
+                  summary['_sep25_watchlist_coverage']={
+                      'watchlist_R':len(wz.get('targets',[])),
+                      'canonical_terminal_R':len(canon),
+                      'missing_terminal_R':len(missing),
+                      'missing':missing,
+                  }
           (out/'summary.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n')
           print(json.dumps(summary,ensure_ascii=False,indent=2))
           print('HEAD4_RECENT_LIVE_FUNNEL_OK')
