@@ -1,0 +1,105 @@
+name: audit-live-bet-volume-20260922-25
+
+on:
+  push:
+    paths:
+      - '.github/workflows/audit-live-bet-volume-20260922-25.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect canonical 4HEAD terminal artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/h4
+          gh api --paginate "repos/$GITHUB_REPOSITORY/actions/artifacts?per_page=100" \
+            --jq '.artifacts[] | @json' > /tmp/artifacts.jsonl
+          python - <<'PY'
+          import json,re
+          best={}
+          for line in open('/tmp/artifacts.jsonl'):
+              a=json.loads(json.loads(line))
+              n=a.get('name','')
+              m=re.fullmatch(r'head4-120r-watchdog-(2026092[2-5])-([0-9]{2})-([0-9]+)',n)
+              if not m or a.get('expired'): continue
+              if n not in best or a.get('created_at','')>best[n].get('created_at',''): best[n]=a
+          with open('/tmp/selected.jsonl','w') as f:
+              for a in sorted(best.values(),key=lambda x:(x['name'],x['created_at'])):
+                  f.write(json.dumps(a)+'\n')
+          print('CANONICAL_ARTIFACTS',len(best))
+          PY
+          while IFS= read -r line; do
+            RUN=$(python -c 'import json,sys;print(json.loads(sys.stdin.read())["workflow_run"]["id"])' <<< "$line")
+            NAME=$(python -c 'import json,sys;print(json.loads(sys.stdin.read())["name"])' <<< "$line")
+            DIR="/tmp/h4/$NAME"
+            mkdir -p "$DIR"
+            gh run download "$RUN" -n "$NAME" -D "$DIR" >/dev/null 2>&1 || true
+          done < /tmp/selected.jsonl
+      - name: Aggregate actual decisions
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json,glob,os,re,statistics
+          rows=[]
+          for p in glob.glob('/tmp/h4/**/*.json',recursive=True):
+              try:z=json.load(open(p))
+              except:continue
+              code=str(z.get('race_code','')).zfill(12)
+              if not re.fullmatch(r'2026092[2-5][0-9]{4}',code): continue
+              d=z.get('decision')
+              if d not in {'BET','PASS','NO_BET_DATA_NOT_READY'}: continue
+              rows.append({
+                'date':code[:8],'race_code':code,'decision':d,
+                'hp':z.get('head_prob'),
+                'orig':z.get('orig4_adv_inside'),
+                'selected':z.get('selected'),
+                'parity_match':(z.get('standard_parity') or {}).get('match'),
+                'policy':z.get('selection_policy'),
+                'not_ready_stage':z.get('not_ready_stage'),
+                'artifact':p,
+              })
+          # dedupe race_code preferring terminal BET/PASS over retry
+          rank={'BET':3,'PASS':2,'NO_BET_DATA_NOT_READY':1}
+          by={}
+          for r in rows:
+              c=r['race_code']
+              if c not in by or rank[r['decision']]>rank[by[c]['decision']]:by[c]=r
+          rows=sorted(by.values(),key=lambda r:r['race_code'])
+          out={}
+          for day in ['20260922','20260923','20260924','20260925']:
+              q=[r for r in rows if r['date']==day]
+              counts={k:sum(r['decision']==k for r in q) for k in ['BET','PASS','NO_BET_DATA_NOT_READY']}
+              passq=[r for r in q if r['decision']=='PASS']
+              hp_fail=sum(r['hp'] is not None and float(r['hp'])<.36 for r in passq)
+              orig_fail=sum(r['orig'] is not None and float(r['orig'])<-.06 for r in passq)
+              hp_close=sum(r['hp'] is not None and .34<=float(r['hp'])<.36 for r in passq)
+              orig_close=sum(r['orig'] is not None and -.08<=float(r['orig'])<-.06 for r in passq)
+              out[day]={
+                'terminal_R':len(q),**counts,
+                'bet_codes':[r['race_code'] for r in q if r['decision']=='BET'],
+                'pass_hp_below_036_R':hp_fail,
+                'pass_orig_below_m006_R':orig_fail,
+                'pass_hp_034_036_R':hp_close,
+                'pass_orig_m008_m006_R':orig_close,
+                'parity_mismatch_R':sum(r['parity_match'] is False for r in q),
+                'not_ready_stages':sorted({str(r['not_ready_stage']) for r in q if r['decision']=='NO_BET_DATA_NOT_READY'})
+              }
+          print(json.dumps({'profile':'LIVE_BET_VOLUME_20260922_25','by_day':out,'rows':rows},ensure_ascii=False,indent=2))
+          open('/tmp/live_bet_volume.json','w').write(json.dumps({'profile':'LIVE_BET_VOLUME_20260922_25','by_day':out,'rows':rows},ensure_ascii=False,indent=2)+'\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: live-bet-volume-20260922-25
+          path: /tmp/live_bet_volume.json
+          retention-days: 14
