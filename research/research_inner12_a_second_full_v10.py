@@ -20,14 +20,14 @@ FEATURES=["boat","head","pos_inside_head","pos_outside_head","pos_distance_head"
 "rel_core_head","rel_motor_head","rel_waku_st_head","rel_pl_p2_head"]
 # 3HEAD route-inspired interactions, all pre-race.
 for df in (train,cand):
-    df["outer"]=pd.to_numeric(df.boat)>pd.to_numeric(df.head)
-    df["inner"]=pd.to_numeric(df.boat)<pd.to_numeric(df.head)
+    df["outer"]=pd.to_numeric(df["boat"],errors="coerce")>pd.to_numeric(df["head"],errors="coerce")
+    df["inner"]=pd.to_numeric(df["boat"],errors="coerce")<pd.to_numeric(df["head"],errors="coerce")
     df["outer_ph"]=df.outer.astype(float)*pd.to_numeric(df.pl_frame_p2,errors="coerce")
     df["outer_motor"]=df.outer.astype(float)*pd.to_numeric(df.motor,errors="coerce")
     df["outer_core"]=df.outer.astype(float)*pd.to_numeric(df.opponent_core,errors="coerce")
     df["inner_ph"]=df.inner.astype(float)*pd.to_numeric(df.pl_frame_p2,errors="coerce")
-    df["route32"]=((pd.to_numeric(df.head)==3)&(pd.to_numeric(df.boat)==2)).astype(float)*pd.to_numeric(df.pl_frame_p2,errors="coerce")
-    df["route31"]=((pd.to_numeric(df.head)==3)&(pd.to_numeric(df.boat)==1)).astype(float)*pd.to_numeric(df.pl_frame_win,errors="coerce")
+    df["route32"]=((pd.to_numeric(df["head"],errors="coerce")==3)&(pd.to_numeric(df["boat"],errors="coerce")==2)).astype(float)*pd.to_numeric(df.pl_frame_p2,errors="coerce")
+    df["route31"]=((pd.to_numeric(df.head)==3)&(pd.to_numeric(df["boat"],errors="coerce")==1)).astype(float)*pd.to_numeric(df.pl_frame_win,errors="coerce")
 FEATURES += ["outer_ph","outer_motor","outer_core","inner_ph","route32","route31"]
 
 def model(C):
