@@ -27,7 +27,7 @@ for df in (train,cand):
     df["outer_core"]=df.outer.astype(float)*pd.to_numeric(df.opponent_core,errors="coerce")
     df["inner_ph"]=df.inner.astype(float)*pd.to_numeric(df.pl_frame_p2,errors="coerce")
     df["route32"]=((pd.to_numeric(df["head"],errors="coerce")==3)&(pd.to_numeric(df["boat"],errors="coerce")==2)).astype(float)*pd.to_numeric(df.pl_frame_p2,errors="coerce")
-    df["route31"]=((pd.to_numeric(df.head)==3)&(pd.to_numeric(df["boat"],errors="coerce")==1)).astype(float)*pd.to_numeric(df.pl_frame_win,errors="coerce")
+    df["route31"]=((pd.to_numeric(df["head"])==3)&(pd.to_numeric(df["boat"],errors="coerce")==1)).astype(float)*pd.to_numeric(df.pl_frame_win,errors="coerce")
 FEATURES += ["outer_ph","outer_motor","outer_core","inner_ph","route32","route31"]
 
 def model(C):
