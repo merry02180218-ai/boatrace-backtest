@@ -207,7 +207,7 @@ jobs:
           from pathlib import Path
           for p in [Path('run_1head_current_day_live_decision.py'),Path('notify_head1_bet_github_issue.py')]:
               s=p.read_text()
-              forbidden=['data/results/realtime','data/results/payouts']
+              forbidden=['data/results/'+'realtime','data/results/'+'payouts']
               assert not any(x in s for x in forbidden), (p,forbidden)
           print('HEAD1_STATIC_RESULT_PAYOUT_GUARD_OK')
           PY
