@@ -241,3 +241,15 @@ HEAD_VOLUME_PICKUP_PROMOTED = True
 HEAD_VOLUME_PICKUP_PROFILE_NAME = "1HEAD_RELAXED_PICKUP_ENV_M034_AND_SECEX_M035"
 HEAD_VOLUME_PICKUP_SEC_EX_MEAN_MARGIN_MAX = -0.35
 # Intersection audit: 78R / 69 heads = 88.46%. This is a pickup/highlight tag, not a separate duplicate BET.
+
+
+# 2026-09-25 promoted opponent-strength pickup for relaxed ENV expansion only.
+# Keep the existing HYBRID ticket set/count unchanged; this is a display/strength tag only.
+HEAD_VOLUME_OPPONENT_PICKUP_PROMOTED = True
+HEAD_VOLUME_OPPONENT_PICKUP_PROFILE_NAME = "1HEAD_RELAXED_OPP_PICKUP_TURNWEAK_OR_V332"
+HEAD_VOLUME_OPPONENT_PICKUP_SCOPE = "HEAD_VOLUME_EXPANSION_ONLY"
+HEAD_VOLUME_OPPONENT_PICKUP_TURNWEAK_MIN = -0.60
+HEAD_VOLUME_OPPONENT_PICKUP_V332_MIN = 0.831813
+HEAD_VOLUME_OPPONENT_PICKUP_LOGIC = "OR"
+# Audit within promoted 95R expansion: 72R / 64 heads = 88.89%; exact3 32/72 = 44.44%; monthly minimum exact3 rate 30%.
+# Baseline expansion exact3: 33/95 = 34.74%. No extra tickets and no HYBRID replacement.
