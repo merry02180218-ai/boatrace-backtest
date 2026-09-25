@@ -6,7 +6,7 @@ on:
       - '.github/triggers/audit-4head-today-shadow-replay.txt'
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   audit:
@@ -183,10 +183,11 @@ jobs:
           q.to_csv('artifacts/research_4head_today_shadow_replay_detail.csv',index=False)
           print(json.dumps(out,ensure_ascii=False,indent=2))
           PY
-      - name: Persist
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add artifacts/research_4head_today_shadow_replay.json artifacts/research_4head_today_shadow_replay_detail.csv
-          git commit -m "research: persist Sep25 4head shadow replay"
-          git push
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: head4-today-shadow-replay
+          path: |
+            artifacts/research_4head_today_shadow_replay.json
+            artifacts/research_4head_today_shadow_replay_detail.csv
+          retention-days: 7
