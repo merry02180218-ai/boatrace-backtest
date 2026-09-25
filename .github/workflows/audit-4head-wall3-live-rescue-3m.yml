@@ -1,81 +1,15 @@
-name: audit-4head-wall3-live-rescue-3m
+name: audit-4head-wall3-live-rescue-3m-retired
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/triggers/audit-4head-wall3-live-rescue-3m.txt'
 
 permissions:
   contents: read
 
 jobs:
-  audit:
+  retired:
     runs-on: ubuntu-24.04
-    timeout-minutes: 60
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/checkout@v4
-        with:
-          repository: BoatraceCSV/boatracecsv.github.io
-          path: brcsv
-          fetch-depth: 1
-          sparse-checkout: |
-            data/programs/race_cards
-            data/programs/waku10
-            data/results/realtime
-            data/previews/tkz
-            data/previews/stt
-            data/previews/original_exhibition
-            data/previews/od3
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - run: pip install -q numpy pandas scipy scikit-learn requests beautifulsoup4 lxml
-
-      - name: Preflight exact LIVE rescue replay
-        run: |
-          python -m py_compile prepare_4head_6m_v93_neutral_waku.py audit_4head_ph5_live_walkforward.py
-          ! grep -n '\\n' audit_4head_ph5_live_walkforward.py
-          grep -q 'HEAD4_WALL3_OPEN_RESCUE_SHADOW_V1_BETA010_Q082_COMP250' audit_4head_ph5_live_walkforward.py
-          grep -q 'not selected.*not base120' audit_4head_ph5_live_walkforward.py
-          grep -q "wall3_open_shadow(hp,mass,comp,exh,d\['selected'\],d\['base120_selected'\])" run_4head_120r_lastminute_fast.py
-          grep -q 'monitoring_parent_snapshots' audit_4head_ph5_live_walkforward.py
-          grep -q 'shadow_quality=float(hp)+1.50\*float(mass)+.10\*open_risk' audit_4head_ph5_live_walkforward.py
-          grep -q 'comp>=2.5 and open_risk>0 and shadow_quality>=.82' audit_4head_ph5_live_walkforward.py
-          grep -q 'rescue_dutch_feasible=True' audit_4head_ph5_live_walkforward.py
-          grep -q 'dutch_infeasible_R' audit_4head_ph5_live_walkforward.py
-          grep -q 'SEPTEMBER_OUTCOMES_READ.*False' audit_4head_ph5_live_walkforward.py
-
-      - name: Prepare causal historical LIVE primitives
-        env:
-          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
-        run: python prepare_4head_6m_v93_neutral_waku.py
-
-      - name: Replay current LIVE wall3 rescue on Jun-Aug
-        env:
-          BOATRACECSV_LOCAL_ROOT: ${{ github.workspace }}/brcsv
-          STRICT_ROWS: /tmp/head4_clean_long_dataset/dataset.csv
-          V93_ROWS: /tmp/head4_v93_all_parent/v93_all_parent.csv
-        run: |
-          python audit_4head_ph5_live_walkforward.py | tee /tmp/head4-wall3-live-rescue-3m.log
-          grep 'WALL3_LIVE_RESCUE_3M' /tmp/head4-wall3-live-rescue-3m.log
-          grep -q 'HEAD4_PH5_LIVE_WALKFORWARD_OK' /tmp/head4-wall3-live-rescue-3m.log
-
-      - name: Show rescue result
-        if: always()
-        run: |
-          cat /tmp/head4_ph5_live_walkforward/wall3_live_rescue_3m_result.json 2>/dev/null || true
-          cat /tmp/head4_ph5_live_walkforward/volume_funnel.json 2>/dev/null || true
-
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: head4-wall3-live-rescue-3m
-          path: |
-            /tmp/head4_ph5_live_walkforward/wall3_live_rescue_3m_result.json
-            /tmp/head4_ph5_live_walkforward/wall3_live_rescue_3m_detail.csv
-            /tmp/head4-wall3-live-rescue-3m.log
-          retention-days: 30
+      - run: |
+          echo "RETIRED: wall3 Rescue was removed from 4HEAD LIVE on 2026-09-25."
+          echo "No production or research replay is executed by this workflow."
