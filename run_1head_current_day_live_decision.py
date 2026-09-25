@@ -215,8 +215,13 @@ def _call_existing_finalizer(base:dict,ex:dict,selected:bool,lane:str,deadline:s
     tmp_in.write_text(json.dumps(merged,ensure_ascii=False,indent=2),encoding="utf-8")
     cp=subprocess.run(
         [sys.executable,"run_1head_v351_live_finalize.py","--input",str(tmp_in),"--out",str(tmp_out)],
-        check=True,text=True,capture_output=True
+        check=False,text=True,capture_output=True
     )
+    if cp.returncode != 0:
+        raise RuntimeError(
+            "existing v351 finalizer failed "
+            f"rc={cp.returncode} stdout={cp.stdout[-2000:]} stderr={cp.stderr[-4000:]}"
+        )
     formal=_load_json(tmp_out)
     if selected and formal.get("status")!="PASS":
         raise RuntimeError(f"selected promoted lane failed existing finalizer: {formal.get('status')} {cp.stdout[-500:]}")
