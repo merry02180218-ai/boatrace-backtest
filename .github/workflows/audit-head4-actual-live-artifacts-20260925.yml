@@ -60,17 +60,34 @@ jobs:
               except:continue
               if str(z.get('race_code','')).startswith('20260925') and 'monitoring_parent' in z:
                   sh=z.get('wall3_open_shadow') or {}
+                  hp=z.get('head_prob'); mass=z.get('opponent_mass'); comp=z.get('composite_odds')
+                  q=(float(hp)+1.5*float(mass)) if hp is not None and mass is not None else None
+                  old164=bool(z.get('old164_struct'))
+                  base120=bool(z.get('base120_selected'))
+                  wall_ready=(sh.get('not_ready_reason') is None)
+                  open_risk=sh.get('open_risk')
+                  canonical=bool(old164 and (not base120) and wall_ready and comp is not None and float(comp)>=2.5
+                                 and open_risk is not None and float(open_risk)>0 and q is not None
+                                 and q+0.10*float(open_risk)>=.82)
                   rows.append({
                     'race_code':str(z.get('race_code')),
                     'decision':z.get('decision'),
-                    'head_prob':z.get('head_prob'),
-                    'mass':z.get('opponent_mass'),
-                    'comp':z.get('composite_odds'),
-                    'wall_ready':((z.get('wall3_open_shadow') or {}).get('not_ready_reason') is None),
-                    'would_rescue':bool(sh.get('would_rescue')),
+                    'head_prob':hp,
+                    'mass':mass,
+                    'comp':comp,
+                    'st4_adv_inside':z.get('st4_adv_inside'),
+                    'orig4_adv_inside':z.get('orig4_adv_inside'),
+                    'orig_avg_available':z.get('orig_avg_available'),
+                    'old164_struct':old164,
+                    'base120_selected':base120,
+                    'base77':bool(z.get('base77')),
+                    'wall_ready':wall_ready,
+                    'would_rescue_broad':bool(sh.get('would_rescue')),
+                    'canonical_rescue':canonical,
                     'eligible_current_pass':bool(sh.get('eligible_current_pass')),
                     'wall_score':sh.get('wall_score'),
-                    'open_risk':sh.get('open_risk'),
+                    'open_risk':open_risk,
+                    'base_quality':q,
                     'shadow_quality':sh.get('shadow_quality'),
                     'artifact_json':str(p),
                   })
@@ -82,8 +99,10 @@ jobs:
             'profile':'HEAD4_ACTUAL_LIVE_ARTIFACT_AUDIT_20260925',
             'terminal_R':len(rows),
             'decision_counts':{},
-            'wall3_rescue_R':sum(r['would_rescue'] for r in rows),
-            'wall3_rescue_codes':[r['race_code'] for r in rows if r['would_rescue']],
+            'wall3_broad_rescue_R':sum(r['would_rescue_broad'] for r in rows),
+            'wall3_broad_rescue_codes':[r['race_code'] for r in rows if r['would_rescue_broad']],
+            'canonical_rescue_R':sum(r['canonical_rescue'] for r in rows),
+            'canonical_rescue_codes':[r['race_code'] for r in rows if r['canonical_rescue']],
             'rows':rows,
             'recomputed':False,
             'source':'actual canonical watchdog terminal artifacts'
