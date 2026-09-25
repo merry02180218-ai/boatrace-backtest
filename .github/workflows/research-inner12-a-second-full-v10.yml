@@ -70,5 +70,6 @@ jobs:
           path: |
             /tmp/inner12_a_second_full_v10/
             /tmp/v8x/sep_candidate_features.csv
+          /tmp/v8x/sep_pair_scores.csv
             /tmp/v10.log
           retention-days: 30
