@@ -1,0 +1,43 @@
+{
+  "profile": "HEAD4_WALL3_CAUSAL_ST_WALL_ONLY_RECHECK",
+  "source_R": 1275,
+  "survive_R": 1080,
+  "removed_R": 195,
+  "overall": {
+    "R": 1080,
+    "head4": 182,
+    "head4_rate": 16.85185185185185,
+    "exact3": 114,
+    "exact3_rate": 10.555555555555555,
+    "equal_roi": 79.67925925925925
+  },
+  "monthly": {
+    "2026-06": {
+      "R": 308,
+      "head4": 45,
+      "head4_rate": 14.61038961038961,
+      "exact3": 22,
+      "exact3_rate": 7.142857142857142,
+      "equal_roi": 35.30487012987013
+    },
+    "2026-07": {
+      "R": 379,
+      "head4": 77,
+      "head4_rate": 20.316622691292878,
+      "exact3": 52,
+      "exact3_rate": 13.720316622691293,
+      "equal_roi": 96.11635883905014
+    },
+    "2026-08": {
+      "R": 393,
+      "head4": 60,
+      "head4_rate": 15.267175572519085,
+      "exact3": 40,
+      "exact3_rate": 10.178117048346055,
+      "equal_roi": 98.60458015267176
+    }
+  },
+  "note": "Recomputes raw wall readiness + wall score with exact D-1 LIVE ST lane bias, holding old hp/mass/comp/tickets fixed. Full model replay separate.",
+  "SEPTEMBER_OUTCOMES_READ": false,
+  "PRODUCTION_CHANGED": false
+}
