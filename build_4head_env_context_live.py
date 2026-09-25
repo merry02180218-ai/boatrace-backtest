@@ -132,15 +132,18 @@ def parse_stt_courses(body: str) -> dict[int, int]:
     return out
 
 
-def _wind_code(text: str) -> int:
+def _wind_code(text: str, *, allow_calm: bool = False) -> int:
     s = _clean(text)
+    compact = s.replace(' ', '')
+    if allow_calm and ('無風' in compact or compact in {'', '-'}):
+        return 0
     for label, code in WIND_DIRECTION_TO_CODE:
         if label in s:
             return code
     raise EnvContextBuildError(f'unsupported/missing wind direction: {s!r}')
 
 
-def parse_sui_weather(body: str, *, allow_missing_water: bool = False) -> tuple[int, float, float, float, float | None, str]:
+def parse_sui_weather(body: str, *, allow_missing_water: bool = False, allow_calm_wind: bool = False) -> tuple[int, float, float, float, float | None, str]:
     """Use only pre-race bc_sui; never post-race bc_rs1_2.
 
     Pinned layout: [0]=HHMM, [3]=wind direction text, [4]=wind speed.
@@ -160,7 +163,7 @@ def parse_sui_weather(body: str, *, allow_missing_water: bool = False) -> tuple[
     if not valid:
         raise EnvContextBuildError('bc_sui weather row missing')
     cols = valid[-1]
-    wc = _wind_code(cols[3])
+    wc = _wind_code(cols[3], allow_calm=allow_calm_wind)
     ws = _num('wind_speed', cols[4])
     wave = _num('wave_cm', cols[5])
     air = _num('air_c', cols[6])
