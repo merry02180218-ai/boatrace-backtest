@@ -8,7 +8,7 @@ manifest showing when files were obtained (minimum 3 minutes to deadline).
 A mere current/day-archive CSV with no timestamp does NOT meet the contract.
 """
 from __future__ import annotations
-import argparse,csv,gzip,hashlib,json,math,sys
+import argparse,csv,gzip,hashlib,json,math,subprocess,sys
 from datetime import date,datetime,timedelta,timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -110,6 +110,7 @@ def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--date",required=True)
     ap.add_argument("--cards",required=True,type=Path)
+    ap.add_argument("--github-source",required=True,type=Path)
     ap.add_argument("--manifest",required=True,type=Path)
     ap.add_argument("--head-history",required=True,type=Path)
     ap.add_argument("--opponent-history",required=True,type=Path)
@@ -151,6 +152,14 @@ def main():
         "blocked_R":len(observed)-len(ready),
         "odds_used":False,"payouts_used":False,"results_used_for_prediction":False}
     if selected:
+        source_dir=a.github_source.resolve()
+        if not (source_dir/"run_v323_1head_frozen_live_adapter.py").is_file():
+            raise ValueError("pinned original GitHub source unavailable")
+        rev=subprocess.run(["git","-C",str(source_dir),"rev-parse","HEAD"],
+            capture_output=True,text=True,check=True).stdout.strip()
+        if rev!="9fdd307c5a2207adb46a68ff406fbf9b292c28d1":
+            raise ValueError("GitHub original v351 source SHA mismatch")
+        sys.path.insert(0,str(source_dir))
         import run_v323_1head_frozen_live_adapter as gh
         import pandas as pd
         cur=gh.current_static(selected,target)
