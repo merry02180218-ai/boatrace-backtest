@@ -8,7 +8,7 @@ manifest showing when files were obtained (minimum 3 minutes to deadline).
 A mere current/day-archive CSV with no timestamp does NOT meet the contract.
 """
 from __future__ import annotations
-import argparse,csv,hashlib,json,math,sys
+import argparse,csv,gzip,hashlib,json,math,sys
 from datetime import date,datetime,timedelta,timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -39,7 +39,8 @@ def check_history(path,target):
     months=set()
     seen=0
     latest=""
-    with Path(path).open(encoding="utf-8-sig",newline="") as f:
+    opener=gzip.open if str(path).endswith(".gz") else open
+    with opener(path,"rt",encoding="utf-8-sig",newline="") as f:
         for r in csv.DictReader(f):
             seen+=1
             day=str(r.get("date") or "").strip()
