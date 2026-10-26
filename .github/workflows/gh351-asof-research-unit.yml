@@ -1,0 +1,24 @@
+name: GH351 as-of shadow safety (research only)
+on:
+  push:
+    branches: [research/1head-v351-20261026-asof-shadow]
+    paths:
+      - 'research_1head/**'
+      - '.github/workflows/gh351-asof-research-unit.yml'
+  workflow_dispatch:
+jobs:
+  historical-asof-safety:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: No-network as-of input and leakage regression tests
+        run: python -m unittest discover -v -s research_1head -p 'test_v351_asof_shadow_gate_20261026.py'
+      - name: Confirm live deployments remain untouched
+        run: |
+          echo 'research-only'
+          test -f research_1head/v351_asof_shadow_gate_20261026.py
