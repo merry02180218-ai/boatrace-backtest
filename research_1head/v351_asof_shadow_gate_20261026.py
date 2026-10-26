@@ -127,6 +127,13 @@ def main():
     hist_opp=check_history(a.opponent_history,target)
     observed=[validate_race_manifest(r,target,a.manifest.parent) for r in items]
     ready={r["race_code"] for r in observed if r["ready"]}
+    # Score the exact immutable card bytes certified by the capture manifest:
+    # a later-downloaded card file cannot silently replace the input.
+    card_hash=sha_file(a.cards)
+    for r in items:
+        if r["race_code"] in ready:
+            if str(r["sources"]["race_cards"]["sha256"]).lower()!=card_hash:
+                raise ValueError("scored cards file differs from certified pre-cutoff snapshot")
     with a.cards.open(encoding="utf-8-sig",newline="") as f:
         cards=list(csv.DictReader(f))
     selected=[r for r in cards
