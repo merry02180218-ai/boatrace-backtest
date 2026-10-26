@@ -85,9 +85,12 @@ def validate_race_manifest(race,target,root,slack_min=3):
                 raise ValueError("observed-date differs")
             if observed>cutoff:
                 raise ValueError("captured after deadline-3min")
-            path=Path(root)/str(item["file"])
-            if path.is_absolute() or not path.is_file():
-                raise ValueError("snapshot missing or absolute path")
+            relative=Path(str(item["file"]))
+            if relative.is_absolute() or ".." in relative.parts:
+                raise ValueError("snapshot outside evidence root")
+            path=Path(root)/relative
+            if not path.is_file():
+                raise ValueError("snapshot missing")
             # Reject traversal beyond the evidence-root.
             path.resolve().relative_to(Path(root).resolve())
             expected=str(item["sha256"]).lower()
