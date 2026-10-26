@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """No-network fail-closed tests for original GH v351 PRE as-of replay harness."""
-import csv,hashlib,tempfile,unittest
+import csv,gzip,hashlib,tempfile,unittest
 from datetime import date
 from pathlib import Path
 from v351_asof_shadow_gate_20261026 import validate_race_manifest,check_history,parse_jst,KIND_REQUIRED,sha_file
@@ -73,6 +73,15 @@ class AsOfTests(unittest.TestCase):
     def test_prior_month_history_passes(self):
         file=self.history()
         v=check_history(file,self.target)
+        self.assertEqual(v["records"],1001)
+        self.assertEqual(v["latest_training_date"],"2026-08-20")
+
+    def test_gzipped_prior_history_passes(self):
+        file=self.history()
+        gz=self.root/"slim.csv.gz"
+        with file.open("rb") as src, gzip.open(gz,"wb") as dst:
+            dst.write(src.read())
+        v=check_history(gz,self.target)
         self.assertEqual(v["records"],1001)
         self.assertEqual(v["latest_training_date"],"2026-08-20")
 
